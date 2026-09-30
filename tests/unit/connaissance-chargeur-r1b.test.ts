@@ -13,7 +13,7 @@ import {
 } from "../../scripts/charger-connaissance-socle.mjs";
 import { sectionsDeMarkdown } from "../../scripts/charger-connaissance-decoupe.mjs";
 import { analyserEtiquette, canoniqueBrut } from "../../scripts/charger-connaissance-medicaments.mjs";
-import { sqlChunk, sqlSource } from "../../scripts/charger-connaissance-sql.mjs";
+import { sqlChunk, sqlSource, sqlTrouverCollisions } from "../../scripts/charger-connaissance-sql.mjs";
 
 // NOTE M08 : voir connaissance-backfill-r3.test.ts (allowJs local au
 // programme de test). Zero effet runtime ; signatures propriete M07.
@@ -70,5 +70,10 @@ describe("SQL quarantaine : jamais active", () => {
   });
   it("textes normalises", () => {
     expect(normaliserTexte("  a  b ")).toBe("a b");
+  });
+  it("garde collisions inter-sources : aucun ecrasement silencieux", () => {
+    const sql = sqlTrouverCollisions();
+    expect(sql).toContain("source_id <> $2");
+    expect(sql).toContain("id = ANY ($1)");
   });
 });

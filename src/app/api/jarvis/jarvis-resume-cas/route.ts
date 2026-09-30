@@ -78,6 +78,10 @@ export async function POST(req: Request): Promise<Response> {
   // portes voient donc `auth.uid()` et la RLS arbitre comme avant.
   const client = clientSql(userId);
 
+  // Jalon §15 — posé AVANT la première lecture pour que `msEspace` couvre
+  // réellement la porte `get_patient_workspace` (durées seules, §37).
+  const tDebut = Date.now();
+
   // ── Lecture par LA PORTE auditée (trace « fiche », RLS de l'appelante). ──
   const { data: wsRows, error: erreurWs } = await client.rpc("get_patient_workspace", {
     p_id: corps.patientId,
@@ -141,6 +145,10 @@ export async function POST(req: Request): Promise<Response> {
 
   const sourceState = etatSource(espace);
 
+  // Jalons §15 — durées seules (ms), jamais de contenu. `console.info`, pas
+  // `console.error` : une lenteur n'est pas une panne.
+  const tApresEspace = Date.now();
+
   // ═══ LA MÉMOIRE LONGITUDINALE (067) ═══
   //
   // C'est ici que la chaîne se ferme : consultation → analyse persistée →
@@ -157,10 +165,24 @@ export async function POST(req: Request): Promise<Response> {
   // Un échec n'interrompt rien : le résumé se génère alors sur les seules
   // données structurées, comme avant. Une mémoire absente appauvrit la
   // synthèse ; elle ne doit pas la supprimer.
-  const { data: analysesRows } = await client.rpc("get_recent_session_analyses", {
-    p_patient_id: corps.patientId,
-    p_limit: 5,
-  });
+  //
+  // Audit Slice 1 — les DEUX lectures ci-dessous ne dépendent que de
+  // `patientId`, jamais l'une de l'autre : elles partent EN PARALLÈLE au
+  // lieu de se succéder. Avant : latence = workspace + analyses + contexte ;
+  // après : workspace + max(analyses, contexte). La tolérance d'échec de la
+  // mémoire (ci-dessus) et le caractère bloquant du contexte (ci-dessous)
+  // sont INCHANGÉS — seul l'ordonnancement change, pas la sémantique.
+  const [memoire, socleContexte] = await Promise.all([
+    client.rpc("get_recent_session_analyses", {
+      p_patient_id: corps.patientId,
+      p_limit: 5,
+    }),
+    client.rpc("build_case_context", {
+      p_id: corps.patientId,
+    }),
+  ]);
+  const tApresLectures = Date.now();
+  const { data: analysesRows } = memoire;
   const analyses = analysesAnterieures(analysesRows);
 
   // Les séances analysées sont citables PAR LEUR CONSULTATION — un domaine que
@@ -175,9 +197,7 @@ export async function POST(req: Request): Promise<Response> {
   // dossier de 50 séances de tenir dans 11 Ko (mesuré :
   // `scripts/checkpoint-longitudinal.sql`) au lieu de plus de 100 Ko de notes
   // brutes — et le coût ne croît plus avec l'ancienneté du dossier.
-  const { data: contexteRows, error: erreurContexte } = await client.rpc("build_case_context", {
-    p_id: corps.patientId,
-  });
+  const { data: contexteRows, error: erreurContexte } = socleContexte;
   if (erreurContexte !== null) {
     return echec("indisponible", "Résumé indisponible.");
   }
@@ -272,7 +292,10 @@ export async function POST(req: Request): Promise<Response> {
   // sur ce modèle pendant que l'audit inscrivait le REPLI de la passerelle :
   // une trace qui nommait un modèle non utilisé, ce qui est pire qu'une trace
   // absente. On lit désormais `resolveModel()`, la seule source de vérité.
-  const modele = resolveModel();
+  // Audit Slice 1 — le purpose suit l'usage réel (`llm({purpose:
+  // "resume-cas"})` ci-dessus) : si `JARVIS_RESUME_MODEL` est posé, l'audit
+  // nomme CE modèle, pas le global. Voir `resolveModel` dans la passerelle.
+  let modele = resolveModel("resume-cas");
 
   const premier = await llm({
     purpose: "resume-cas",
@@ -280,10 +303,18 @@ export async function POST(req: Request): Promise<Response> {
     promptHash,
     sessionToken: crypto.randomUUID(),
     messages,
+    // Audit Slice 1 — le client peut partir (navigation, Stop) : sans ce
+    // relais, le `fetch` OpenRouter courait jusqu'au timeout de 10 s pour
+    // une réponse que plus personne ne lisait, immobilisant une connexion.
+    // L'abandon reste une issue NOMMÉE côté passerelle, jamais un silence.
+    signal: req.signal,
+    besoin: { tache: "resume", json: true },
   });
+  const tApresLlm1 = Date.now();
   if (!premier.ok) {
-    return echec(premier.error.code, premier.error.message);
+    return echec(premier.error.code === "indisponible" ? "analyse-indisponible" : premier.error.code, premier.error.message);
   }
+  modele = premier.inference?.model ?? modele;
 
   let brut: unknown;
   try {
@@ -307,10 +338,14 @@ export async function POST(req: Request): Promise<Response> {
             "Le format n'était pas respecté. Réponds STRICTEMENT avec l'objet JSON demandé, sans texte hors du JSON.",
         },
       ],
+      // Même relais d'abandon que le premier appel (voir ci-dessus).
+      signal: req.signal,
+      besoin: { tache: "resume", json: true },
     });
     if (!reformulation.ok) {
-      return echec(reformulation.error.code, reformulation.error.message);
+      return echec(reformulation.error.code === "indisponible" ? "analyse-indisponible" : reformulation.error.code, reformulation.error.message);
     }
+    modele = reformulation.inference?.model ?? modele;
     try {
       brut = JSON.parse(retirerCloture(reformulation.data));
     } catch {
@@ -354,6 +389,17 @@ export async function POST(req: Request): Promise<Response> {
   if (resume === undefined || resume === null) {
     return echec("regle-metier", "Ce dossier n'ouvre pas de résumé.");
   }
+
+  // Audit Slice 1 (§15/§37) — jalons du résumé, durées seules : aucun
+  // identifiant, aucun contenu clinique, aucun `patientId`. `info`, pas
+  // `error` : c'est une mesure, pas une panne.
+  console.info(JSON.stringify({
+    event: "resume.durees",
+    msEspace: tApresEspace - tDebut,
+    msLecturesParalleles: tApresLectures - tApresEspace,
+    msLlm1: tApresLlm1 - tApresLectures,
+    msTotal: Date.now() - tDebut,
+  }));
 
   return new Response(
     JSON.stringify({

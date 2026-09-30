@@ -50,12 +50,12 @@
  */
 
 import { clientSql, type ClientSql } from "@/server/jarvis/client-sql";
-import { env } from "@/server/env";
+import { env, jevActif } from "@/server/env";
 
 import { echec, identite } from "../_commun";
 
 import type { LlmMessage } from "@/server/egress/external-call";
-import { llm, llmStream, resolveModel } from "@/server/egress/external-call";
+import { decisions, JEV_MODEL_DEFAUT, llm, llmStream, resolveModel } from "@/server/egress/external-call";
 import {
   classerCharge,
   MESSAGE_REFUS_FRONTIERE,
@@ -67,13 +67,20 @@ import {
   INTENT_PROMPT_VERSION,
   type ResultatClassification,
 } from "@/server/jarvis/classifieur-intentions";
+import {
+  devraitSauterM01,
+  JEV_PROMPT_VERSION,
+  QUESTIONS_JEV,
+  routerRapideJev,
+  TIMEOUT_MS_JEV,
+  type TransportJev,
+} from "@/server/jarvis/classifieur-jev";
 import { intentionChaineeOperationnelle } from "@/server/jarvis/intention-chainee";
 import { assertSafe, BoundaryViolation, pseudonymize, rehydrate } from "@/server/jarvis/pseudonymize";
 import { lireProposition } from "@/server/jarvis/proposition";
-import { recupererPreuves, recupererPreuvesLivresAvecDiagnostic } from "@/server/jarvis/preuves-recherche";
-import { estQuestionMedicale } from "@/server/jarvis/domaine-medical";
-import { reponseLivres } from "@/server/jarvis/reponse-livres";
-import { AUCUNE_PREUVE_LIVRES } from "@/i18n/connaissance";
+import { recupererPreuves } from "@/server/jarvis/preuves-recherche";
+import { verifierCitations } from "@/server/knowledge/citations";
+import { CITATION_INVALIDE } from "@/i18n/connaissance";
 import { construireBlocPreuves } from "@/shared/jarvis/preuves";
 import {
   estPropositionCompatible,
@@ -217,6 +224,34 @@ interface IntentionDuTour {
 }
 
 /**
+ * Adaptateur JEV → `TransportJev` (spike Slice 2, derrière `JARVIS_JEV_ENABLED`).
+ *
+ * Le `state` est la demande SEULE — comme M01, jamais un dossier, jamais un
+ * historique (le motif-garde de `routerRapideJev` a déjà écarté tél/courriel
+ * avant tout réseau). `sessionToken = runId` : l'audit chaine le
+ * franchissement Decisions comme il chaine le franchissement NLU.
+ * `promptHash` est l'empreinte des questions canoniques, pas celle du prompt
+ * M01 : deux objets versionnés, deux empreintes.
+ */
+function transportJevDecisions(hashQuestionsJev: string, runId: string): TransportJev {
+  return {
+    questionner: async (etat, opts) => {
+      const r = await decisions({
+        purpose: "jarvis",
+        promptVersion: JEV_PROMPT_VERSION,
+        promptHash: hashQuestionsJev,
+        sessionToken: runId,
+        state: etat,
+        questions: QUESTIONS_JEV,
+        timeoutMs: opts.timeoutMs,
+      });
+      if (!r.ok) return { reponses: null, modele: env().JEV_MODEL ?? JEV_MODEL_DEFAUT };
+      return { reponses: r.data, modele: env().JEV_MODEL ?? JEV_MODEL_DEFAUT };
+    },
+  };
+}
+
+/**
  * Appelle le classifieur quand c'est son tour : jamais sur commit, jamais si
  * coupe par l'exploitation. Rend `null` = chemin historique, sans intention.
  * `turnId` reprend le `clientTurnId` (exige en flux) ou `sans-tour` en
@@ -239,6 +274,23 @@ async function classifierIntentSiUtile(
   // meme filtre en profondeur ; cette sortie precoce evite le cout.
   if (messagePorteUnSignalPatient(message)) {
     return { classification: null, runId };
+  }
+  // Slice 2 — PRE-ROUTAGE JEV, strictement BORNÉ : double `connaissance`
+  // (déterministe + JEV confiant, sans signal) → on saute l'appel LLM de
+  // M01 et on rend le chemin historique, comme M01 l'aurait fait sans
+  // intention. Tout le reste (désaccord, signal, panne, flag OFF) retombe
+  // sur M01 nominal ci-dessous. JEV ne monte jamais un dossier, ne tranche
+  // jamais un commit (exclu ci-dessus), ne remplace jamais M01 en entier.
+  if (chemin === "connaissance" && jevActif()) {
+    const hashJev = await empreinte(JSON.stringify(QUESTIONS_JEV));
+    const rapide = await routerRapideJev(
+      message,
+      transportJevDecisions(hashJev, runId),
+      { timeoutMs: TIMEOUT_MS_JEV },
+    );
+    if (devraitSauterM01(rapide, chemin)) {
+      return { classification: null, runId };
+    }
   }
   const classification = await classifierIntent(
     message,
@@ -654,6 +706,11 @@ function rehydraterProfond(valeur: unknown, map: Record<string, string>): unknow
  * une panne de base de données à chaque fois.
  */
 function codeEchecLlm(code: string): string {
+  // Audit Slice 1 — `configuration` (clé modèle absente/invalide) est un
+  // échec du MODÈLE, pas des données : sans cette requalification, la
+  // praticienne contrôlait la base alors qu'il faut contrôler la
+  // configuration du modèle. Miroir côté client dans `classerCodeEdge`.
+  if (code === "configuration") return "analyse-indisponible";
   return code === "indisponible" ? "analyse-indisponible" : code;
 }
 
@@ -924,18 +981,11 @@ export async function POST(req: Request): Promise<Response> {
     }
 
     if (routage.chemin === "connaissance" && !escaladeChainee) {
-      if (estQuestionMedicale(message)) {
-        const { preuves, diagnostic } = await recupererPreuvesLivresAvecDiagnostic(client, message);
-        return reponseOk(req, {
-          chemin: "connaissance" satisfies Chemin, type: "texte",
-          reponse: reponseLivres(preuves, diagnostic), registre: "connaissance-generale", preuves,
-        });
-      }
       // M07 — preuves gouvernées AVANT le modèle (hybride-live slice 3 :
       // lexical + BGE-M3 local, calibration A3 ; modèle absent → lexical
       // seul, dégradation honnête vers vide). Le bloc est une DONNÉE, pas une instruction.
-      const preuves = await recupererPreuves(client, message);
-      const bloc = construireBlocPreuves(preuves);
+      const { preuves, etat } = await recupererPreuves(client, message);
+      const bloc = construireBlocPreuves(preuves, etat);
       const systemeConnaissance =
         bloc === "" ? PROMPT_CONNAISSANCE : `${PROMPT_CONNAISSANCE}\n\n${bloc}`;
       // Empreinte du texte système EXACT (prompt + bloc de preuves).
@@ -959,15 +1009,21 @@ export async function POST(req: Request): Promise<Response> {
       if (!resultat.ok) {
         return echec(codeEchecLlm(resultat.error.code), resultat.error.message);
       }
-      const reponse = estQuestionMedicale(resultat.data) ? AUCUNE_PREUVE_LIVRES : resultat.data;
+      // Vérification déterministe des citations (dernier lien non vérifié) :
+      // toute source revendiquée doit désigner une preuve DE CE TOUR, avec
+      // édition compatible. Sinon échec fermé — jamais de réponse partielle
+      // portant une attribution non confirmée.
+      if (verifierCitations(resultat.data, preuves).verdict === "rejete") {
+        return echec("citation-invalide", CITATION_INVALIDE);
+      }
       return reponseOk(req, {
         chemin: "connaissance" satisfies Chemin,
         type: "texte",
-        reponse,
+        reponse: resultat.data,
         /** Le registre est RENDU par l'interface, pas produit par le modèle. */
         registre: "connaissance-generale",
         /** M07 — preuves gouvernées (fil), validées par le client. */
-        preuves: reponse === resultat.data ? preuves : [],
+        preuves,
       });
     }
 
@@ -1024,20 +1080,10 @@ export async function POST(req: Request): Promise<Response> {
       }
 
       if (routage.chemin === "connaissance" && !escaladeChainee) {
-        if (estQuestionMedicale(message)) {
-          const { preuves, diagnostic } = await recupererPreuvesLivresAvecDiagnostic(client, message);
-          const texte = reponseLivres(preuves, diagnostic);
-          const persiste = await persisterReponse(client, corps.conversationId, tourId, "connaissance", texte, "connaissance-generale");
-          ecriture.envoyer({ t: "fin", payload: {
-            chemin: "connaissance" satisfies Chemin, type: "texte", reponse: texte,
-            registre: "connaissance-generale", preuves,
-          }, persiste });
-          return;
-        }
         // M07 — preuves gouvernées AVANT le modèle (même discipline qu'en
         // historique : hybride-live slice 3, dégradation honnête vers vide).
-        const preuves = await recupererPreuves(client, message);
-        const bloc = construireBlocPreuves(preuves);
+        const { preuves, etat } = await recupererPreuves(client, message);
+        const bloc = construireBlocPreuves(preuves, etat);
         const systemeConnaissanceFlux =
           bloc === "" ? PROMPT_CONNAISSANCE : `${PROMPT_CONNAISSANCE}\n\n${bloc}`;
         const hash = await empreinte(systemeConnaissanceFlux);
@@ -1082,8 +1128,7 @@ export async function POST(req: Request): Promise<Response> {
               const { done, value } = await lecteur.read();
               if (done) break;
               complet += value;
-              // Buffer until the server checks the completed answer. A streamed
-              // unsupported medical claim cannot be withdrawn from the screen.
+              ecriture.envoyer({ t: "delta", v: value });
             }
           } catch (erreurLecture) {
             // Flux rompu en cours : abandon CLIENT (req.signal a tué le fetch
@@ -1095,35 +1140,40 @@ export async function POST(req: Request): Promise<Response> {
             if (!clientParti) {
               ecriture.envoyer({
                 t: "erreur",
-                code: "indisponible",
+                code: "analyse-indisponible",
                 message: "Le modèle a interrompu sa réponse.",
               });
             }
             // Le partiel est noté INTERROMPU, jamais complet — et il est noté
             // MÊME quand c'est le client qui est parti : la conversation doit
             // montrer ce qui a été produit avant la coupure.
-            if (complet.length > 0 && !estQuestionMedicale(complet)) {
+            if (complet.length > 0) {
               await persisterReponse(client, corps.conversationId, tourId, "connaissance", complet.slice(0, 12_000), undefined, "interrompu");
             }
             void erreurLecture;
             return;
           }
 
-          const reponse = estQuestionMedicale(complet) ? AUCUNE_PREUVE_LIVRES : complet;
-          const preuvesFinales = reponse === complet ? preuves : [];
-          ecriture.envoyer({ t: "delta", v: reponse });
+          // Vérification déterministe des citations sur le texte assemblé
+          // (même contrat qu'en historique) : en échec, événement `erreur`
+          // au lieu de `fin` — le client écarte l'aperçu (réalignement
+          // documenté) et rien d'invalidé n'est persisté ni livré.
+          if (verifierCitations(complet, preuves).verdict === "rejete") {
+            ecriture.envoyer({ t: "erreur", code: "citation-invalide", message: CITATION_INVALIDE });
+            return;
+          }
           const persiste = await persisterReponse(
-            client, corps.conversationId, tourId, "connaissance", reponse, "connaissance-generale",
+            client, corps.conversationId, tourId, "connaissance", complet, "connaissance-generale",
           );
           ecriture.envoyer({
             t: "fin",
             payload: {
               chemin: "connaissance" satisfies Chemin,
               type: "texte",
-              reponse,
+              reponse: complet,
               registre: "connaissance-generale",
               /** M07 — preuves gouvernées (fil), validées par le client. */
-              preuves: preuvesFinales,
+              preuves,
             },
             persiste,
           });
@@ -1220,9 +1270,10 @@ async function appelerModeleClassifieur(
     sessionToken: runId,
     messages,
     timeoutMs,
+    besoin: { tache: "intentions", json: true },
   });
-  if (!r.ok) return { texte: null, modele: resolveModel() };
-  return { texte: r.data, modele: resolveModel() };
+  if (!r.ok) return { texte: null, modele: resolveModel("jarvis") };
+  return { texte: r.data, modele: r.inference?.model ?? resolveModel("jarvis") };
 }
 
 async function cheminPatientPayload(
@@ -1369,6 +1420,7 @@ ${corps.capacites ?? DESCRIPTION_OUTILS}${blocIntention}`;
     promptHash: hash,
     sessionToken: crypto.randomUUID(),
     messages,
+    besoin: { tache: "intentions", json: true },
   });
 
   if (!resultat.ok) {

@@ -37,6 +37,7 @@ export type CodeErreurAlexa =
   | "DB_ERROR"
   | "MODEL_TIMEOUT"
   | "MODEL_ERROR"
+  | "KNOWLEDGE_UNAVAILABLE"
   | "INVALID_TOOL_ARGUMENT"
   | "PERMISSION_DENIED"
   | "SENSITIVE_DATA_BLOCKED"
@@ -101,6 +102,8 @@ const LIBELLES: Readonly<Record<CodeErreurAlexa, string>> = {
     "Le modèle met trop de temps à répondre. Reformulez ou réessayez.",
   MODEL_ERROR:
     "Le service d'analyse est indisponible. Réessayez dans un instant.",
+  KNOWLEDGE_UNAVAILABLE:
+    "La recherche documentaire est indisponible pour l'instant. Le dossier reste accessible.",
   INVALID_TOOL_ARGUMENT:
     "La demande est incomplète. Pouvez-vous préciser ?",
   PERMISSION_DENIED:
@@ -191,6 +194,8 @@ export function classerAppError(code: AppErrorCode): CodeErreurAlexa {
       return "TTS_ERROR";
     case "analyse":
       return "MODEL_ERROR";
+    case "connaissance":
+      return "KNOWLEDGE_UNAVAILABLE";
     case "inattendu":
       return "DB_ERROR";
     default: {

@@ -1,11 +1,26 @@
 {
-  "empreinte": "957d52e63b33eb20",
+  "empreinte": "8ea00790146c4bd2",
   "rapport": [
     {
       "chemin": "/connexion",
       "arrivee": "/connexion",
-      "total": 7,
-      "echecs": [],
+      "total": 9,
+      "echecs": [
+        {
+          "texte": "Cette instance est une base de développeme",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(78, 52, 46)",
+          "taille": 14
+        },
+        {
+          "texte": "ADR-016",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(109, 76, 65)",
+          "taille": 12
+        }
+      ],
       "mobilier": {
         "rail": {
           "present": false
@@ -14,29 +29,227 @@
           "present": false
         },
         "orbe": {
-          "trouve": false
+          "trouve": true,
+          "image": "radial-gradient(560px 300px at 82% 0%, rgba(255, 255, 255, 0"
         },
         "heros": {
           "present": false
         },
         "fondPage": "rgba(0, 0, 0, 0)",
-        "fonteUi": "Inter, \"Inter Fallback\", Geist, \"Geist Fallback\", \"Geist San"
+        "fonteUi": "Montserrat, sans-serif"
       },
       "preuve": "checkpoints\\v3-preuves\\_connexion.png"
     },
     {
       "chemin": "/",
       "arrivee": "/patients",
-      "total": 39,
-      "echecs": [],
+      "total": 36,
+      "echecs": [
+        {
+          "texte": "Cette instance est une base de développeme",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(78, 52, 46)",
+          "taille": 14
+        },
+        {
+          "texte": "ADR-016",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(109, 76, 65)",
+          "taille": 12
+        },
+        {
+          "texte": "MindCare",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(240, 235, 229)",
+          "taille": 16
+        },
+        {
+          "texte": "Cabinet de psychiatrie",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 11
+        },
+        {
+          "texte": "Menu",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 11
+        },
+        {
+          "texte": "Tableau de bord",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.82)",
+          "taille": 14
+        },
+        {
+          "texte": "Alexa",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.82)",
+          "taille": 14
+        },
+        {
+          "texte": "Clinique",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 11
+        },
+        {
+          "texte": "Agenda",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.82)",
+          "taille": 14
+        },
+        {
+          "texte": "Messages",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 14
+        },
+        {
+          "texte": "bientôt",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 12
+        },
+        {
+          "texte": "Documents",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.82)",
+          "taille": 14
+        },
+        {
+          "texte": "Traitements",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 14
+        },
+        {
+          "texte": "bientôt",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 12
+        },
+        {
+          "texte": "Suivi",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 14
+        },
+        {
+          "texte": "bientôt",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 12
+        },
+        {
+          "texte": "Gestion",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 11
+        },
+        {
+          "texte": "Finances",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.82)",
+          "taille": 14
+        },
+        {
+          "texte": "Statistiques",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 14
+        },
+        {
+          "texte": "bientôt",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 12
+        },
+        {
+          "texte": "Système",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 11
+        },
+        {
+          "texte": "Agents",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 14
+        },
+        {
+          "texte": "bientôt",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 12
+        },
+        {
+          "texte": "Journal d'activité",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 14
+        },
+        {
+          "texte": "bientôt",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 12
+        },
+        {
+          "texte": "Paramètres",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.82)",
+          "taille": 14
+        },
+        {
+          "texte": "Larbi N",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(240, 235, 229)",
+          "taille": 14
+        },
+        {
+          "texte": "Se déconnecter",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.82)",
+          "taille": 14
+        }
+      ],
       "mobilier": {
         "rail": {
           "present": true,
-          "fond": "linear-gradient(160deg, rgb(15, 46, 42), rgb(29, 92, 84) 55%, rgb(42, ",
-          "ombre": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0",
-          "largeur": 248,
-          "entrees": 12,
-          "bientot": 9
+          "fond": "linear-gradient(rgb(10, 31, 12) 0%, rgb(28, 42, 31) 52%, rgb(46, 125, ",
+          "ombre": "none",
+          "largeur": 232,
+          "entrees": 13,
+          "bientot": 6
         },
         "actif": {
           "present": true,
@@ -45,31 +258,403 @@
         },
         "orbe": {
           "trouve": true,
-          "image": "radial-gradient(circle at 30% 30%, rgb(124, 181, 172) 0%, rg"
+          "image": "radial-gradient(520px 360px at 18% 0%, rgba(200, 230, 201, 0"
         },
         "heros": {
           "present": true,
-          "fond": "linear-gradient(135deg, rgb(22, 68, 62), rgb(42, 122, 112) 48%, rgb(62",
-          "rayon": "20px"
+          "fond": "none",
+          "rayon": "0px"
         },
         "fondPage": "rgba(0, 0, 0, 0)",
-        "fonteUi": "Inter, \"Inter Fallback\", Geist, \"Geist Fallback\", \"Geist San"
+        "fonteUi": "Montserrat, sans-serif"
       },
       "preuve": "checkpoints\\v3-preuves\\_patients.png"
     },
     {
       "chemin": "/patients",
       "arrivee": "/patients",
-      "total": 39,
-      "echecs": [],
+      "total": 186,
+      "echecs": [
+        {
+          "texte": "Cette instance est une base de développeme",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(78, 52, 46)",
+          "taille": 14
+        },
+        {
+          "texte": "ADR-016",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(109, 76, 65)",
+          "taille": 12
+        },
+        {
+          "texte": "MindCare",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(240, 235, 229)",
+          "taille": 16
+        },
+        {
+          "texte": "Cabinet de psychiatrie",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 11
+        },
+        {
+          "texte": "Menu",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 11
+        },
+        {
+          "texte": "Tableau de bord",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.82)",
+          "taille": 14
+        },
+        {
+          "texte": "Alexa",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.82)",
+          "taille": 14
+        },
+        {
+          "texte": "Clinique",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 11
+        },
+        {
+          "texte": "Agenda",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.82)",
+          "taille": 14
+        },
+        {
+          "texte": "Messages",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 14
+        },
+        {
+          "texte": "bientôt",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 12
+        },
+        {
+          "texte": "Documents",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.82)",
+          "taille": 14
+        },
+        {
+          "texte": "Traitements",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 14
+        },
+        {
+          "texte": "bientôt",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 12
+        },
+        {
+          "texte": "Suivi",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 14
+        },
+        {
+          "texte": "bientôt",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 12
+        },
+        {
+          "texte": "Gestion",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 11
+        },
+        {
+          "texte": "Finances",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.82)",
+          "taille": 14
+        },
+        {
+          "texte": "Statistiques",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 14
+        },
+        {
+          "texte": "bientôt",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 12
+        },
+        {
+          "texte": "Système",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 11
+        },
+        {
+          "texte": "Agents",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 14
+        },
+        {
+          "texte": "bientôt",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 12
+        },
+        {
+          "texte": "Journal d'activité",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 14
+        },
+        {
+          "texte": "bientôt",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 12
+        },
+        {
+          "texte": "Paramètres",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.82)",
+          "taille": 14
+        },
+        {
+          "texte": "Larbi N",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(240, 235, 229)",
+          "taille": 14
+        },
+        {
+          "texte": "Se déconnecter",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.82)",
+          "taille": 14
+        },
+        {
+          "texte": "AB",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(10, 31, 12)",
+          "taille": 14
+        },
+        {
+          "texte": "MB",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(10, 31, 12)",
+          "taille": 14
+        },
+        {
+          "texte": "NB",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(10, 31, 12)",
+          "taille": 14
+        },
+        {
+          "texte": "MB",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(10, 31, 12)",
+          "taille": 14
+        },
+        {
+          "texte": "SB",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(10, 31, 12)",
+          "taille": 14
+        },
+        {
+          "texte": "MB",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(10, 31, 12)",
+          "taille": 14
+        },
+        {
+          "texte": "NB",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(10, 31, 12)",
+          "taille": 14
+        },
+        {
+          "texte": "YB",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(10, 31, 12)",
+          "taille": 14
+        },
+        {
+          "texte": "AC",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(10, 31, 12)",
+          "taille": 14
+        },
+        {
+          "texte": "NC",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(10, 31, 12)",
+          "taille": 14
+        },
+        {
+          "texte": "KD",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(10, 31, 12)",
+          "taille": 14
+        },
+        {
+          "texte": "KD",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(10, 31, 12)",
+          "taille": 14
+        },
+        {
+          "texte": "LK",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(10, 31, 12)",
+          "taille": 14
+        },
+        {
+          "texte": "SM",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(10, 31, 12)",
+          "taille": 14
+        },
+        {
+          "texte": "SM",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(10, 31, 12)",
+          "taille": 14
+        },
+        {
+          "texte": "CP",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(10, 31, 12)",
+          "taille": 14
+        },
+        {
+          "texte": "CP",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(10, 31, 12)",
+          "taille": 14
+        },
+        {
+          "texte": "CP",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(10, 31, 12)",
+          "taille": 14
+        },
+        {
+          "texte": "SP",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(10, 31, 12)",
+          "taille": 14
+        },
+        {
+          "texte": "SP",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(10, 31, 12)",
+          "taille": 14
+        },
+        {
+          "texte": "MS",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(10, 31, 12)",
+          "taille": 14
+        },
+        {
+          "texte": "MS",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(10, 31, 12)",
+          "taille": 14
+        },
+        {
+          "texte": "MS",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(10, 31, 12)",
+          "taille": 14
+        },
+        {
+          "texte": "MS",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(10, 31, 12)",
+          "taille": 14
+        },
+        {
+          "texte": "CT",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(10, 31, 12)",
+          "taille": 14
+        }
+      ],
       "mobilier": {
         "rail": {
           "present": true,
-          "fond": "linear-gradient(160deg, rgb(15, 46, 42), rgb(29, 92, 84) 55%, rgb(42, ",
-          "ombre": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0",
-          "largeur": 248,
-          "entrees": 12,
-          "bientot": 9
+          "fond": "linear-gradient(rgb(10, 31, 12) 0%, rgb(28, 42, 31) 52%, rgb(46, 125, ",
+          "ombre": "none",
+          "largeur": 232,
+          "entrees": 13,
+          "bientot": 6
         },
         "actif": {
           "present": true,
@@ -78,31 +663,369 @@
         },
         "orbe": {
           "trouve": true,
-          "image": "radial-gradient(circle at 30% 30%, rgb(124, 181, 172) 0%, rg"
+          "image": "radial-gradient(520px 360px at 18% 0%, rgba(200, 230, 201, 0"
         },
         "heros": {
           "present": true,
-          "fond": "linear-gradient(135deg, rgb(22, 68, 62), rgb(42, 122, 112) 48%, rgb(62",
-          "rayon": "20px"
+          "fond": "none",
+          "rayon": "0px"
         },
         "fondPage": "rgba(0, 0, 0, 0)",
-        "fonteUi": "Inter, \"Inter Fallback\", Geist, \"Geist Fallback\", \"Geist San"
+        "fonteUi": "Montserrat, sans-serif"
       },
       "preuve": "checkpoints\\v3-preuves\\_patients.png"
     },
     {
       "chemin": "/agenda",
       "arrivee": "/agenda",
-      "total": 164,
-      "echecs": [],
+      "total": 221,
+      "echecs": [
+        {
+          "texte": "Cette instance est une base de développeme",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(78, 52, 46)",
+          "taille": 14
+        },
+        {
+          "texte": "ADR-016",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(109, 76, 65)",
+          "taille": 12
+        },
+        {
+          "texte": "MindCare",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(240, 235, 229)",
+          "taille": 16
+        },
+        {
+          "texte": "Cabinet de psychiatrie",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 11
+        },
+        {
+          "texte": "Menu",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 11
+        },
+        {
+          "texte": "Tableau de bord",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.82)",
+          "taille": 14
+        },
+        {
+          "texte": "Alexa",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.82)",
+          "taille": 14
+        },
+        {
+          "texte": "Clinique",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 11
+        },
+        {
+          "texte": "Patients",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.82)",
+          "taille": 14
+        },
+        {
+          "texte": "Messages",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 14
+        },
+        {
+          "texte": "bientôt",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 12
+        },
+        {
+          "texte": "Documents",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.82)",
+          "taille": 14
+        },
+        {
+          "texte": "Traitements",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 14
+        },
+        {
+          "texte": "bientôt",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 12
+        },
+        {
+          "texte": "Suivi",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 14
+        },
+        {
+          "texte": "bientôt",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 12
+        },
+        {
+          "texte": "Gestion",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 11
+        },
+        {
+          "texte": "Finances",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.82)",
+          "taille": 14
+        },
+        {
+          "texte": "Statistiques",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 14
+        },
+        {
+          "texte": "bientôt",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 12
+        },
+        {
+          "texte": "Système",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 11
+        },
+        {
+          "texte": "Agents",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 14
+        },
+        {
+          "texte": "bientôt",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 12
+        },
+        {
+          "texte": "Journal d'activité",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 14
+        },
+        {
+          "texte": "bientôt",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 12
+        },
+        {
+          "texte": "Paramètres",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.82)",
+          "taille": 14
+        },
+        {
+          "texte": "Larbi N",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(240, 235, 229)",
+          "taille": 14
+        },
+        {
+          "texte": "Se déconnecter",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.82)",
+          "taille": 14
+        },
+        {
+          "texte": "Séances cette semaine",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(78, 52, 46)",
+          "taille": 12
+        },
+        {
+          "texte": "14",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(62, 39, 35)",
+          "taille": 28
+        },
+        {
+          "texte": "Créneaux libres",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(78, 52, 46)",
+          "taille": 12
+        },
+        {
+          "texte": "68",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(62, 39, 35)",
+          "taille": 28
+        },
+        {
+          "texte": "Demandes en attente",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(78, 52, 46)",
+          "taille": 12
+        },
+        {
+          "texte": "0",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(62, 39, 35)",
+          "taille": 28
+        },
+        {
+          "texte": "dim.",
+          "surDegrade": false,
+          "ok": false,
+          "ratio": 4.26,
+          "plancher": 4.5,
+          "couleur": "rgb(46, 125, 50)",
+          "taille": 12
+        },
+        {
+          "texte": "Terminé",
+          "surDegrade": false,
+          "ok": false,
+          "ratio": 4.45,
+          "plancher": 4.5,
+          "couleur": "rgb(46, 125, 50)",
+          "taille": 12
+        },
+        {
+          "texte": "Terminé",
+          "surDegrade": false,
+          "ok": false,
+          "ratio": 4.45,
+          "plancher": 4.5,
+          "couleur": "rgb(46, 125, 50)",
+          "taille": 12
+        },
+        {
+          "texte": "Terminé",
+          "surDegrade": false,
+          "ok": false,
+          "ratio": 4.45,
+          "plancher": 4.5,
+          "couleur": "rgb(46, 125, 50)",
+          "taille": 12
+        },
+        {
+          "texte": "Terminé",
+          "surDegrade": false,
+          "ok": false,
+          "ratio": 4.45,
+          "plancher": 4.5,
+          "couleur": "rgb(46, 125, 50)",
+          "taille": 12
+        },
+        {
+          "texte": "Terminé",
+          "surDegrade": false,
+          "ok": false,
+          "ratio": 4.45,
+          "plancher": 4.5,
+          "couleur": "rgb(46, 125, 50)",
+          "taille": 12
+        },
+        {
+          "texte": "Terminé",
+          "surDegrade": false,
+          "ok": false,
+          "ratio": 4.45,
+          "plancher": 4.5,
+          "couleur": "rgb(46, 125, 50)",
+          "taille": 12
+        },
+        {
+          "texte": "Terminé",
+          "surDegrade": false,
+          "ok": false,
+          "ratio": 4.45,
+          "plancher": 4.5,
+          "couleur": "rgb(46, 125, 50)",
+          "taille": 12
+        },
+        {
+          "texte": "Terminé",
+          "surDegrade": false,
+          "ok": false,
+          "ratio": 4.45,
+          "plancher": 4.5,
+          "couleur": "rgb(46, 125, 50)",
+          "taille": 12
+        },
+        {
+          "texte": "Terminé",
+          "surDegrade": false,
+          "ok": false,
+          "ratio": 4.45,
+          "plancher": 4.5,
+          "couleur": "rgb(46, 125, 50)",
+          "taille": 12
+        },
+        {
+          "texte": "Terminé",
+          "surDegrade": false,
+          "ok": false,
+          "ratio": 4.45,
+          "plancher": 4.5,
+          "couleur": "rgb(46, 125, 50)",
+          "taille": 12
+        }
+      ],
       "mobilier": {
         "rail": {
           "present": true,
-          "fond": "linear-gradient(160deg, rgb(15, 46, 42), rgb(29, 92, 84) 55%, rgb(42, ",
-          "ombre": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0",
-          "largeur": 248,
-          "entrees": 12,
-          "bientot": 9
+          "fond": "linear-gradient(rgb(10, 31, 12) 0%, rgb(28, 42, 31) 52%, rgb(46, 125, ",
+          "ombre": "none",
+          "largeur": 232,
+          "entrees": 13,
+          "bientot": 6
         },
         "actif": {
           "present": true,
@@ -111,31 +1034,312 @@
         },
         "orbe": {
           "trouve": true,
-          "image": "radial-gradient(circle at 30% 30%, rgb(124, 181, 172) 0%, rg"
+          "image": "radial-gradient(520px 360px at 18% 0%, rgba(200, 230, 201, 0"
         },
         "heros": {
           "present": true,
-          "fond": "linear-gradient(135deg, rgb(22, 68, 62), rgb(42, 122, 112) 48%, rgb(62",
-          "rayon": "20px"
+          "fond": "none",
+          "rayon": "0px"
         },
         "fondPage": "rgba(0, 0, 0, 0)",
-        "fonteUi": "Inter, \"Inter Fallback\", Geist, \"Geist Fallback\", \"Geist San"
+        "fonteUi": "Montserrat, sans-serif"
       },
       "preuve": "checkpoints\\v3-preuves\\_agenda.png"
     },
     {
       "chemin": "/finances",
       "arrivee": "/finances",
-      "total": 259,
-      "echecs": [],
+      "total": 212,
+      "echecs": [
+        {
+          "texte": "Cette instance est une base de développeme",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(78, 52, 46)",
+          "taille": 14
+        },
+        {
+          "texte": "ADR-016",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(109, 76, 65)",
+          "taille": 12
+        },
+        {
+          "texte": "MindCare",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(240, 235, 229)",
+          "taille": 16
+        },
+        {
+          "texte": "Cabinet de psychiatrie",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 11
+        },
+        {
+          "texte": "Menu",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 11
+        },
+        {
+          "texte": "Tableau de bord",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.82)",
+          "taille": 14
+        },
+        {
+          "texte": "Alexa",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.82)",
+          "taille": 14
+        },
+        {
+          "texte": "Clinique",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 11
+        },
+        {
+          "texte": "Patients",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.82)",
+          "taille": 14
+        },
+        {
+          "texte": "Agenda",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.82)",
+          "taille": 14
+        },
+        {
+          "texte": "Messages",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 14
+        },
+        {
+          "texte": "bientôt",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 12
+        },
+        {
+          "texte": "Documents",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.82)",
+          "taille": 14
+        },
+        {
+          "texte": "Traitements",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 14
+        },
+        {
+          "texte": "bientôt",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 12
+        },
+        {
+          "texte": "Suivi",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 14
+        },
+        {
+          "texte": "bientôt",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 12
+        },
+        {
+          "texte": "Gestion",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 11
+        },
+        {
+          "texte": "Statistiques",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 14
+        },
+        {
+          "texte": "bientôt",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 12
+        },
+        {
+          "texte": "Système",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 11
+        },
+        {
+          "texte": "Agents",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 14
+        },
+        {
+          "texte": "bientôt",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 12
+        },
+        {
+          "texte": "Journal d'activité",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 14
+        },
+        {
+          "texte": "bientôt",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 12
+        },
+        {
+          "texte": "Paramètres",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.82)",
+          "taille": 14
+        },
+        {
+          "texte": "Larbi N",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(240, 235, 229)",
+          "taille": 14
+        },
+        {
+          "texte": "Se déconnecter",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.82)",
+          "taille": 14
+        },
+        {
+          "texte": "Aujourd'hui",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(78, 52, 46)",
+          "taille": 12
+        },
+        {
+          "texte": "0 DZD",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(62, 39, 35)",
+          "taille": 28
+        },
+        {
+          "texte": "11 séances",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(109, 76, 65)",
+          "taille": 12
+        },
+        {
+          "texte": "Cette semaine",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(78, 52, 46)",
+          "taille": 12
+        },
+        {
+          "texte": "35 000 DZD",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(62, 39, 35)",
+          "taille": 22
+        },
+        {
+          "texte": "Panier moyen 3 182 DZD",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(109, 76, 65)",
+          "taille": 12
+        },
+        {
+          "texte": "Ce mois",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(78, 52, 46)",
+          "taille": 12
+        },
+        {
+          "texte": "35 000 DZD",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(62, 39, 35)",
+          "taille": 22
+        },
+        {
+          "texte": "11 séances",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(109, 76, 65)",
+          "taille": 12
+        },
+        {
+          "texte": "Charges",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(78, 52, 46)",
+          "taille": 12
+        },
+        {
+          "texte": "106 500 DZD",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(62, 39, 35)",
+          "taille": 22
+        },
+        {
+          "texte": "6 charges récurrentes",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(109, 76, 65)",
+          "taille": 12
+        }
+      ],
       "mobilier": {
         "rail": {
           "present": true,
-          "fond": "linear-gradient(160deg, rgb(15, 46, 42), rgb(29, 92, 84) 55%, rgb(42, ",
-          "ombre": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0",
-          "largeur": 248,
-          "entrees": 12,
-          "bientot": 9
+          "fond": "linear-gradient(rgb(10, 31, 12) 0%, rgb(28, 42, 31) 52%, rgb(46, 125, ",
+          "ombre": "none",
+          "largeur": 232,
+          "entrees": 13,
+          "bientot": 6
         },
         "actif": {
           "present": true,
@@ -144,31 +1348,228 @@
         },
         "orbe": {
           "trouve": true,
-          "image": "radial-gradient(circle at 30% 30%, rgb(124, 181, 172) 0%, rg"
+          "image": "radial-gradient(520px 360px at 18% 0%, rgba(200, 230, 201, 0"
         },
         "heros": {
           "present": true,
-          "fond": "linear-gradient(135deg, rgb(22, 68, 62), rgb(42, 122, 112) 48%, rgb(62",
-          "rayon": "20px"
+          "fond": "none",
+          "rayon": "0px"
         },
         "fondPage": "rgba(0, 0, 0, 0)",
-        "fonteUi": "Inter, \"Inter Fallback\", Geist, \"Geist Fallback\", \"Geist San"
+        "fonteUi": "Montserrat, sans-serif"
       },
       "preuve": "checkpoints\\v3-preuves\\_finances.png"
     },
     {
       "chemin": "/agenda/nouveau",
       "arrivee": "/agenda/nouveau",
-      "total": 43,
-      "echecs": [],
+      "total": 41,
+      "echecs": [
+        {
+          "texte": "Cette instance est une base de développeme",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(78, 52, 46)",
+          "taille": 14
+        },
+        {
+          "texte": "ADR-016",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(109, 76, 65)",
+          "taille": 12
+        },
+        {
+          "texte": "MindCare",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(240, 235, 229)",
+          "taille": 16
+        },
+        {
+          "texte": "Cabinet de psychiatrie",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 11
+        },
+        {
+          "texte": "Menu",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 11
+        },
+        {
+          "texte": "Tableau de bord",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.82)",
+          "taille": 14
+        },
+        {
+          "texte": "Alexa",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.82)",
+          "taille": 14
+        },
+        {
+          "texte": "Clinique",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 11
+        },
+        {
+          "texte": "Patients",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.82)",
+          "taille": 14
+        },
+        {
+          "texte": "Messages",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 14
+        },
+        {
+          "texte": "bientôt",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 12
+        },
+        {
+          "texte": "Documents",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.82)",
+          "taille": 14
+        },
+        {
+          "texte": "Traitements",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 14
+        },
+        {
+          "texte": "bientôt",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 12
+        },
+        {
+          "texte": "Suivi",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 14
+        },
+        {
+          "texte": "bientôt",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 12
+        },
+        {
+          "texte": "Gestion",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 11
+        },
+        {
+          "texte": "Finances",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.82)",
+          "taille": 14
+        },
+        {
+          "texte": "Statistiques",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 14
+        },
+        {
+          "texte": "bientôt",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 12
+        },
+        {
+          "texte": "Système",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 11
+        },
+        {
+          "texte": "Agents",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 14
+        },
+        {
+          "texte": "bientôt",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 12
+        },
+        {
+          "texte": "Journal d'activité",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 14
+        },
+        {
+          "texte": "bientôt",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.6)",
+          "taille": 12
+        },
+        {
+          "texte": "Paramètres",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.82)",
+          "taille": 14
+        },
+        {
+          "texte": "Larbi N",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgb(240, 235, 229)",
+          "taille": 14
+        },
+        {
+          "texte": "Se déconnecter",
+          "surDegrade": true,
+          "ok": false,
+          "couleur": "rgba(240, 235, 229, 0.82)",
+          "taille": 14
+        }
+      ],
       "mobilier": {
         "rail": {
           "present": true,
-          "fond": "linear-gradient(160deg, rgb(15, 46, 42), rgb(29, 92, 84) 55%, rgb(42, ",
-          "ombre": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0",
-          "largeur": 248,
-          "entrees": 12,
-          "bientot": 9
+          "fond": "linear-gradient(rgb(10, 31, 12) 0%, rgb(28, 42, 31) 52%, rgb(46, 125, ",
+          "ombre": "none",
+          "largeur": 232,
+          "entrees": 13,
+          "bientot": 6
         },
         "actif": {
           "present": true,
@@ -177,15 +1578,15 @@
         },
         "orbe": {
           "trouve": true,
-          "image": "radial-gradient(circle at 30% 30%, rgb(124, 181, 172) 0%, rg"
+          "image": "radial-gradient(520px 360px at 18% 0%, rgba(200, 230, 201, 0"
         },
         "heros": {
           "present": true,
-          "fond": "linear-gradient(135deg, rgb(22, 68, 62), rgb(42, 122, 112) 48%, rgb(62",
-          "rayon": "20px"
+          "fond": "none",
+          "rayon": "0px"
         },
         "fondPage": "rgba(0, 0, 0, 0)",
-        "fonteUi": "Inter, \"Inter Fallback\", Geist, \"Geist Fallback\", \"Geist San"
+        "fonteUi": "Montserrat, sans-serif"
       },
       "preuve": "checkpoints\\v3-preuves\\_agenda_nouveau.png"
     }
@@ -196,13 +1597,13 @@
   },
   "repli": {
     "mesure": true,
-    "largeur": 72,
+    "largeur": 64,
     "present": true
   },
   "clavier": {
-    "arretsRail": 4,
+    "arretsRail": 8,
     "sansFocusVisible": 0,
-    "premier": "Patients",
-    "couleur": "rgb(255, 255, 255)"
+    "premier": "Tableau de bord",
+    "couleur": "rgb(46, 125, 50)"
   }
 }

@@ -15,6 +15,7 @@ import { describe, expect, it } from "vitest";
 
 import {
   COLONNES_CHUNK,
+  COLONNES_LIGNEE,
   FILTRE_AUTORITE_SQL,
   GARDE_LIGNEE_SQL,
   INDEX_HNSW_SQL,
@@ -25,6 +26,7 @@ import {
   sqlPorteLexicalePropose,
   sqlPorteVectoriellePropose,
   TABLES,
+  validerLignePorte,
 } from "../../src/server/knowledge/stockage";
 
 describe("autorité source dans le SQL (matrice n°11, H1)", () => {
@@ -48,6 +50,8 @@ describe("autorité source dans le SQL (matrice n°11, H1)", () => {
     it(`porte ${nom} : bornée, colonnes fermées + attestation, rien de patient`, () => {
       expect(sql).toMatch(/LIMIT LEAST\(GREATEST\(\$\d::int, 1\), 20\)/);
       for (const colonne of COLONNES_CHUNK) expect(sql).toContain(colonne);
+      // D3-A : la lignée voyage avec chaque chunk (nullable côté base).
+      for (const colonne of COLONNES_LIGNEE) expect(sql).toContain(colonne);
       // Défense en profondeur : l'attestation voyage avec chaque chunk.
       expect(sql).toContain("source_statut");
       expect(sql).toContain("source_classification");
@@ -142,5 +146,52 @@ describe("appels de portes (contrat DbPort.rpc)", () => {
     expect(appel.porte).toBe(PORTES.VECTORIELLE);
     expect(typeof appel.args["p_embedding_json"]).toBe("string");
     expect(appel.args["p_limite"]).toBe(20);
+  });
+});
+
+describe("D3-A : lignée optionnelle validée strictement, jamais exigée", () => {
+  const ligneValide = () => ({
+    chunk_id: "taylor-abcdef12",
+    source_id: "9c2fd184-297e-504e-8c95-ffd06896e420",
+    source_titre: "The Maudsley Prescribing Guidelines in Psychiatry",
+    source_version: "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+    section: "X",
+    version_chunk: "taylor-units-v1-proposed",
+    langue: "en",
+    texte: "extrait",
+    score: 0.5,
+    source_statut: "active",
+    source_classification: "C4",
+    source_approuvee_le: "2026-09-26T00:00:00.000Z",
+    source_approuvee_par: "fixture",
+    source_revue_a_jour: true,
+    source_remplacee_par: null,
+  });
+
+  it("lignée absente : ligne acceptée, lignée null (rétro-compatibilité v1)", () => {
+    const l = validerLignePorte(ligneValide());
+    expect(l).not.toBeNull();
+    expect(l?.unit_id).toBeNull();
+    expect(l?.enfant_index).toBeNull();
+  });
+
+  it("lignée complète : transportée telle quelle", () => {
+    const l = validerLignePorte({
+      ...ligneValide(),
+      unit_id: "tu-fc961d09",
+      parent_texte_hash: "abcdef12",
+      enfant_index: 1,
+      enfants_total: 3,
+    });
+    expect(l?.unit_id).toBe("tu-fc961d09");
+    expect(l?.enfant_index).toBe(1);
+    expect(l?.enfants_total).toBe(3);
+  });
+
+  it("lignée corrompue : ligne écartée (sens fermé, jamais de lignée bricolée)", () => {
+    expect(validerLignePorte({ ...ligneValide(), unit_id: 42 })).toBeNull();
+    expect(validerLignePorte({ ...ligneValide(), enfant_index: -1 })).toBeNull();
+    expect(validerLignePorte({ ...ligneValide(), enfant_index: 1.5 })).toBeNull();
+    expect(validerLignePorte({ ...ligneValide(), enfants_total: "3" })).toBeNull();
   });
 });

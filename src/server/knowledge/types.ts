@@ -29,7 +29,6 @@ export type ChunkId = string;
 /**
  * Langue D'ORIGINE du chunk, préservée à l'ingestion. M07 ne traduit jamais :
  * une requête darija récupère la source FR/AR pertinente telle quelle (§13).
- * `en` : incrément ADR-038 (ICD-11, Maudsley) — même règle, aucune traduction.
  */
 export type Langue = "fr" | "ar" | "darija" | "en";
 
@@ -106,6 +105,11 @@ export interface RetrievedEvidence {
   readonly langue: Langue;
   readonly evidence_relevance: number;
   readonly texte: string;
+  /** D3-A (migration 111) : lignée unité/parent — `null` = inconnue, jamais devinée. */
+  readonly unitId: string | null;
+  readonly parentTexteHash: string | null;
+  readonly enfantIndex: number | null;
+  readonly enfantsTotal: number | null;
 }
 
 /**

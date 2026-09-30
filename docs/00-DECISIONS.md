@@ -1198,4 +1198,56 @@ les citations « ADR-022 » du code désignent §4.2 repris par ADR-025.
 
 ---
 
+---
+
+## M08 HUMAN DECISION GATE — Taylor 2021 (ouvert, en attente de décisions humaines)
+
+**Date.** 2026-09-26. **Statut.** GATE OUVERT — aucune décision D1–D8 n'est enregistrée ci-dessous ; aucune n'est présumée.
+**Objet.** Taylor 2021 canonique (`ba8383e…`, FROZEN / PENDING_APPROVAL, replay vert) vers M08 (chunk → embed → promote → evaluate).
+**Règle.** Chat/contexte ≠ approbation. Aucune case ne peut être cochée par un agent ; seul le signataire humain tranche, avec identité + date.
+Références : rapport de readiness M08 (18 sections, statut `READY FOR HUMAN DECISION`), paquet de décisions d'architecture M08, formulaire `M08-HUMAN-DECISION-GATE.md` (racine du dépôt).
+
+### D1 — Instrument d'approbation Taylor
+Question : source-row only / approval package only / les deux (identité du signataire + méthode d'horodatage requises).
+Prouvé : l'approbation = acte source-row (`statut→active` + `approved_at/by` uuid + `reviewed_*` + échéance), chargeur fail-closed, exclusion in-SQL ; le précédent STRUCT-V2 est contradictoire (revendication contextuelle vs `signature_claim: False`).
+Inconnu : instrument accepté par le médecin/propriétaire.
+Choix : (a) source-row only — minimal, correspond aux portes ; (b) package only — cérémoniel sans chargeur lecteur ; (c) les deux — fichier lisible + ligne machine (recommandé, non approuvé).
+Débloque : Gate H puis vérification de promotion. Interdit jusque-là : toute marque d'approbation, activation, promotion.
+
+### D2 — Admission de l'anglais
+Question : admettre formellement Taylor `en` ; si oui, élargir les contraintes existantes ou tables EN isolées.
+Prouvé : triple blocage (`CHECK` 092 ×2, union `Langue`, `validerLignePorte` écarte `en`) ; R9 s'applique (01-SCHEMA muet sur knowledge) ; ADR-038 sans migration applicable (100 supprimée) ; FTS `simple` agnostique ; `p_langue` déjà paramétré ; golden v2 zéro cas EN.
+Inconnu : admission oui/non ; élargir vs isoler.
+Débloque : ADR + migration + alignement TS + périmètre EN. Interdit jusque-là : tout élargissement silencieux, toute traduction.
+
+### D3 — Atterrissage de la provenance
+Question : UNE architecture — A. étendre 092 / B. projection 0NN / C. jointure à la réponse. Pas d'hybridation silencieuse.
+Prouvé : 092 ne peut pas porter pages/unités/tables/mapping ; la forme 100–107 est absente mais réutilisable comme modèle ; la jointure à la réponse est non prouvée (parité d'autorité, latence).
+Débloque : migration/projection + chargeur + format de citation. Interdit jusque-là : forcer Taylor en 092 (perte irréversible).
+
+### D4 — Contrat de chunking Taylor
+Question : chunker + version (v1 / v1.1 / nouveau contrat unit-following versionné). v1/v1.1/v2 ne sont PAS équivalents.
+Prouvé : v1/v1.1 déchiquettent unités et perdent pages + liaison de revue ; v2 est DSM-5-only ; la revue existe au grain record canonique.
+Débloque : chunker + amendement de recette + suite de déterminisme. Interdit jusque-là : ré-étiqueter un chunker existant comme suffisant.
+
+### D5 — Suite golden EN
+Question : autorité d'auteur, nombre/périmètre des cas (miroir v2 ou suite séparée), seuils (wrong-dose 0 % repris), cross-encoder requis ou non.
+Prouvé : schéma v2, seuils ADR-037, harnais lecture-seule ; zéro cas EN aujourd'hui.
+Débloque : Gate G, vérification de promotion. Interdit jusque-là : toute allégation d'évaluation EN.
+
+### D6 — Gouvernance de la revue (~6,2k items)
+Question : sign-off par item / par classe + échantillonnage / par source ; identité du relecteur ; persistance ; échantillonnage ; re-revue/quarantaine.
+Prouvé : file = listes d'IDs pré-chunk (dose/contra/interaction/monitoring/seuils/tables/algorithmes/segments/pages/hyphens/conflits) ; aucun état de revue modélisé en base ; aucun outillage de workflow.
+Débloque : evidences de Gate H, preuve d'audit. Interdit jusque-là : approbation par échantillon non déclaré.
+
+### D7 — Relation au workstream 100–107
+Question : A. converger / B. réutiliser le modèle uniquement / C. diverger formellement.
+Prouvé : 100–107 absents des migrations déployables ; présents comme spec de retrait + lots + sorties + staging Stahl/DSM-5 ; restauration interdite sans ADR.
+Débloque : frontière de dépendance pour D3. Interdit jusque-là : restaurer 100–107, dupliquer la pile.
+
+### D8 — Pattern « approval by context »
+Question : A. accepté par règle formelle / B. explicitement répudié.
+Prouvé : contradiction interne au dépôt (revendication vs déni de signature) ; la Constitution exige actes signés et preuve non supposée.
+Débloque : forme finale de D1. Interdit jusque-là : trancher par interprétation.
+
 *Fin du document. Prochain livrable : `01-SCHEMA.md`.*

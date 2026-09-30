@@ -17,6 +17,8 @@ import type { SessionInfo } from "./db/port";
 import { logFieldsFor } from "./errors";
 import { log } from "./log";
 import { err, ok, type Result } from "./result";
+import { annulerDictee, arreterLecture } from "./jarvis-voix";
+import { effacerCible } from "./jarvis-contexte";
 
 export interface SignInInput {
   readonly email: string;
@@ -42,6 +44,7 @@ export async function signIn(input: SignInInput): Promise<Result<SessionInfo>> {
 
 /** Ferme la session courante. */
 export async function signOut(): Promise<Result<void>> {
+  annulerDictee(); arreterLecture(); effacerCible();
   const result = await db().signOut();
   if (!result.ok) {
     log.error("auth.signOut", logFieldsFor(result.error));

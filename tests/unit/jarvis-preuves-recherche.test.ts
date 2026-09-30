@@ -4,7 +4,8 @@
  * ═══ CE QUI EST ÉPROUVÉ ═══
  * Porte appelée sous sa forme allowlistée, orchestration partagée (issue +
  * mapping fil + plafond 800), gouvernance (révoqué écarté), panne porte →
- * [] honnête (jamais d'exception, jamais de preuve partielle).
+ * état `panne` honnête (jamais d'exception, jamais de preuve partielle).
+ * M08-A : le retour est `{ preuves, etat }` (`ok` | `faible` | `sans-preuve` | `panne`).
  * Slice 3 (hybride-live) : jambe vectorielle via rpc injecté + vecteur
  * injecté (le défaut de production — 1 Go de modèle — ne charge JAMAIS en
  * unit : chaque appel passe un vecteur explicite), calibration A3 (voisin
@@ -63,10 +64,11 @@ const FAUX_VECTEUR = async (): Promise<readonly number[] | null> => [0.1, 0.2, 0
 describe("recupererPreuves", () => {
   it("appelle la porte lexicale allowlistée et mappe le fil", async () => {
     const faux = fauxRpc([LIGNE]);
-    const preuves = await recupererPreuves(faux, "sertraline 50 mg", SANS_VECTEUR);
+    const { preuves, etat } = await recupererPreuves(faux, "sertraline 50 mg", SANS_VECTEUR);
     expect(faux.appels).toEqual([
       { nom: "search_knowledge_lexical", args: { p_requete: "sertraline 50 mg", p_langue: "toutes", p_limite: 20 } },
     ]);
+    expect(etat).toBe("ok");
     expect(preuves.length).toBeGreaterThan(0);
     expect(preuves[0]).toEqual({
       titre: "Catalogue medicaments",
@@ -78,25 +80,26 @@ describe("recupererPreuves", () => {
 
   it("écarte le révoqué (gouvernance) sans compter", async () => {
     const faux = fauxRpc([{ ...LIGNE, source_statut: "revoked" }]);
-    expect(await recupererPreuves(faux, "sertraline", SANS_VECTEUR)).toEqual([]);
+    expect(await recupererPreuves(faux, "sertraline", SANS_VECTEUR)).toEqual({ preuves: [], etat: "sans-preuve" });
   });
 
-  it("panne porte → [] honnête, jamais d'exception", async () => {
+  it("panne porte → état panne honnête, jamais d'exception", async () => {
     const panne: RpcPreuves = {
       rpc: async () => ({ data: null, error: { message: "panne" } }),
     };
-    expect(await recupererPreuves(panne, "sertraline", SANS_VECTEUR)).toEqual([]);
+    expect(await recupererPreuves(panne, "sertraline", SANS_VECTEUR)).toEqual({ preuves: [], etat: "panne" });
     const levee: RpcPreuves = {
       rpc: async () => {
         throw new Error("rupture");
       },
     };
-    expect(await recupererPreuves(levee, "sertraline", SANS_VECTEUR)).toEqual([]);
+    expect(await recupererPreuves(levee, "sertraline", SANS_VECTEUR)).toEqual({ preuves: [], etat: "panne" });
   });
 
   it("plafonne l'extrait à 800 caractères", async () => {
     const faux = fauxRpc([{ ...LIGNE, texte: `SERTRALINE EG — 50 mg ${"x".repeat(2000)}` }]);
-    const preuves = await recupererPreuves(faux, "sertraline", SANS_VECTEUR);
+    const { preuves, etat } = await recupererPreuves(faux, "sertraline", SANS_VECTEUR);
+    expect(etat).toBe("ok");
     expect(preuves.length).toBe(1);
     expect(preuves[0]?.extrait.length).toBeLessThanOrEqual(800);
   });
@@ -107,8 +110,9 @@ describe("recupererPreuves", () => {
     const faux = fauxRpc([
       { ...LIGNE, vec: true, chunk_id: "c-vec", texte: "SERTRALINE EG — 50 mg comprime secable", score: 0.73 },
     ]);
-    const preuves = await recupererPreuves(faux, "sertralin 50 mg", FAUX_VECTEUR);
+    const { preuves, etat } = await recupererPreuves(faux, "sertralin 50 mg", FAUX_VECTEUR);
     expect(faux.appels.map((a) => a.nom)).toEqual(["search_knowledge_lexical", "search_knowledge_vector"]);
+    expect(etat).toBe("ok");
     expect(preuves).toHaveLength(1);
     expect(preuves[0]).toMatchObject({ titre: "Catalogue medicaments", version: "2026-09-15" });
   });
@@ -119,7 +123,25 @@ describe("recupererPreuves", () => {
     const faux = fauxRpc([
       { ...LIGNE, vec: true, chunk_id: "c-vec", texte: "La paroxétine 20 mg est un ISRS souvent prescrit.", score: 0.62 },
     ]);
-    expect(await recupererPreuves(faux, "sertraline ou paroxétine", FAUX_VECTEUR)).toEqual([]);
+    expect(await recupererPreuves(faux, "sertraline ou paroxétine", FAUX_VECTEUR)).toEqual({
+      preuves: [],
+      etat: "sans-preuve",
+    });
+  });
+
+  it("faible propagé : issue faible → etat faible, preuves conservées", async () => {
+    // 2/5 jetons couverts → 0.55·0.4 = 0.22 ∈ [0.15, 0.4) : faible, pas silence.
+    // Section/titre sans jeton apparié → aucun bonus.
+    const faux = fauxRpc([
+      { ...LIGNE, chunk_id: "c-faible", texte: "La sertraline impose un suivi rapproche" },
+    ]);
+    const { preuves, etat } = await recupererPreuves(
+      faux,
+      "sertraline posologie sevrage suivi ordonnance",
+      SANS_VECTEUR,
+    );
+    expect(etat).toBe("faible");
+    expect(preuves).toHaveLength(1);
   });
 
   it("hybride : panne vecteur ou porte vectorielle → lexical seul, jamais d'exception", async () => {
@@ -127,7 +149,8 @@ describe("recupererPreuves", () => {
     const explose = async (): Promise<readonly number[] | null> => {
       throw new Error("modele");
     };
-    const preuves = await recupererPreuves(faux, "sertraline 50 mg", explose);
+    const { preuves, etat } = await recupererPreuves(faux, "sertraline 50 mg", explose);
+    expect(etat).toBe("ok");
     expect(preuves).toHaveLength(1);
     const porteEnPanne: RpcPreuves = {
       rpc: async <T,>(nom: string) => {
@@ -135,6 +158,16 @@ describe("recupererPreuves", () => {
         return { data: [LIGNE] as T, error: null };
       },
     };
-    expect(await recupererPreuves(porteEnPanne, "sertraline 50 mg", FAUX_VECTEUR)).toHaveLength(1);
+    expect(await recupererPreuves(porteEnPanne, "sertraline 50 mg", FAUX_VECTEUR)).toEqual({
+      preuves: [
+        {
+          titre: "Catalogue medicaments",
+          section: "Catalogue",
+          version: "2026-09-15",
+          extrait: "SERTRALINE EG — 50 mg comprime secable",
+        },
+      ],
+      etat: "ok",
+    });
   });
 });

@@ -49,7 +49,12 @@ controle("gratuit (pricing prompt+completion = 0)", gratuit,
 controle("contexte déclaré", typeof vise.context_length === "number" && vise.context_length >= 8_000,
   `context_length=${vise.context_length}`);
 const params = new Set(vise.supported_parameters ?? []);
-controle("streaming supporté", params.has("streaming"), [...params].join(","));
+// Audit Slice 1 — `supported_parameters` ne contient JAMAIS le littéral
+// "streaming" (3/3 modèles relevés le 2026-09-30, dont gemini-3.8-flash) :
+// le streaming est un drapeau de requête chat/completions, pas un paramètre
+// de modèle. L'ancien test rendait donc ROUGE tous les modèles, y compris
+// les bons. On vérifie `max_tokens`, présent sur tout modèle de chat.
+controle("streaming supporté (modèle de chat : max_tokens déclaré)", params.has("max_tokens"), [...params].join(","));
 // Capacités NON requises cette session (couche d'actions gelée) — relevées,
 // jamais exigées :
 const info = {

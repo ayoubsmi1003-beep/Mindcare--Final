@@ -17,6 +17,10 @@
  * ici : retrieval seul, deterministe).
  *
  *   node scripts/eval-knowledge-db.mjs [--db <nom-base>] [--vecteur] [--dossier <modeles>]
+ *   node scripts/eval-knowledge-db.mjs --golden tests/eval/knowledge.golden.d5-2026-09-27.json
+ * `--golden` = suite alternative (défaut : golden PROD) ; même seuils, même
+ * lecture des cas (D5 : cas FR/AR/Darija instruits par l'agent sur ordre
+ * explicite, ors vérifiés vivants, revue médecin en attente).
  * Mode DEFAUT : lexical seul (configuration cablee en production, M07
  * slice 2). `--vecteur` tente l'hybride BGE-M3 local (coherence-gatee) :
  * mesure instrumentee, pas porte de production.
@@ -35,7 +39,6 @@ import {
 } from "./embeddings-runtime.mjs";
 
 const RACINE = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const GOLDEN = join(RACINE, "tests", "eval", "knowledge.golden.prod-2026-09-15.json");
 
 const args = process.argv.slice(2);
 function option(nom) {
@@ -44,6 +47,7 @@ function option(nom) {
   const valeur = args[i + 1];
   return valeur !== undefined && !valeur.startsWith("--") ? valeur : "";
 }
+const GOLDEN = join(RACINE, option("--golden") ?? join("tests", "eval", "knowledge.golden.prod-2026-09-15.json"));
 const base = option("--db") ?? "mindcare";
 
 // Calibration mesuree (M07 slice 3) : `--calib <nom>` ne change JAMAIS les

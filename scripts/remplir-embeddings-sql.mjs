@@ -21,13 +21,41 @@ export const PARAMETRES_RECETTE = [
 ];
 
 /**
- * Découpeurs acceptés (décision humaine struct-v1.1) : `struct-v1` historique
- * (corpus-a/b, 15 666 lignes — jamais ré-embarquées) + `struct-v1.1`
- * (resplit des longs OCR par `couperLong` verbatim, même modèle, même
- * normalisation, vecteurs comparables). Liste FERMÉE — tout autre découpeur
- * = dérive = saut journalisé, jamais ré-embedding aveugle.
+ * Découpeurs acceptés : `struct-v1` historique (corpus-a/b, 15 666 lignes —
+ * jamais ré-embarquées) + `struct-v1.1` (resplit des longs OCR par
+ * `couperLong` verbatim, même modèle, même normalisation, vecteurs
+ * comparables) + `taylor-units-v1-proposed` (contrat historique Taylor,
+ * D4 ACCEPT 2026-09-26 sur audit : unités canoniques → chunks, ids
+ * `taylor-[0-9a-f]{8}`, version FROZEN — jamais renommée ni réinterprétée)
+ * + `taylor-units-v2-candidate` (D4-bis LOAD + D1-V2 2026-09-27 : scission
+ * verbatim des mêmes parents, ids disjoints, verrou testé).
+ * Liste FERMÉE — tout autre découpeur = dérive = saut journalisé, jamais
+ * ré-embedding aveugle. `struct-v2` (quarantaine DSM) reste EXCLU.
  */
-export const CHUNKERS_ACCEPTES = ["struct-v1", "struct-v1.1"];
+export const CHUNKERS_ACCEPTES = ["struct-v1", "struct-v1.1", "taylor-units-v1-proposed", "taylor-units-v2-candidate"];
+
+/**
+ * Exception G1-A (décision humaine 2026-09-27, DSM uniquement) : la source
+ * DSM active peut recevoir ses embeddings, sous double clé — (1) le flag
+ * opérateur `--exception-dsm-active`, (2) l'uuid ci-dessous, épinglé ici et
+ * jamais pris depuis l'appelant. Toute autre source, tout autre uuid :
+ * les rails historiques s'appliquent intacts. `struct-v2` n'entre dans la
+ * sélection QUE par cette exception (la liste globale reste fermée).
+ */
+export const EXCEPTION_DSM_SOURCE_ID = "9ed1c042-fd2b-5599-a470-8c93b0566739";
+export const CHUNKER_STRUCT_V2 = "struct-v2";
+
+function validerExceptionDsm(portee) {
+  const active = portee.exceptionDsmActive === true;
+  if (!active) return false;
+  if (portee.sourceId === undefined || portee.sourceId === null || portee.sourceId === "") {
+    throw new Error("Exception DSM refusée : --source <uuid DSM> exigé avec --exception-dsm-active.");
+  }
+  if (validerUuidSource(portee.sourceId) !== EXCEPTION_DSM_SOURCE_ID) {
+    throw new Error("Exception DSM refusée : uuid hors périmètre (DSM seul).");
+  }
+  return true;
+}
 
 function predicatDerive(debut) {
   // IS DISTINCT FROM : NULL-safe (une recette absente EST une dérive).
@@ -69,22 +97,44 @@ function paramsRecette(r) {
  * `exclure` (ids vus en dérive découpeur ce run) évite la re-sélection
  * en boucle d'une pochette non-embarquable.
  */
-export function sqlSelectionLot(limite, r, exclure = []) {
+export function sqlSelectionLot(limite, r, exclure = [], portee = {}) {
   const exclusion = exclure.length === 0 ? "" : "\n   AND NOT (id = ANY($11))";
+  // Portée explicite (`--source <uuid>`, ex. Taylor) : prédicat source en
+  // PLUS du filtre non-active (jamais à la place). Absente par défaut :
+  // le SQL sans portée est byte-identique à l'historique (tests R3).
+  let clausePortee = "";
+  let paramsPortee = [];
+  if (portee.sourceId !== undefined && portee.sourceId !== null && portee.sourceId !== "") {
+    clausePortee = `\n   AND source_id = $${11 + (exclure.length === 0 ? 0 : 1)}::uuid`;
+    paramsPortee = [validerUuidSource(portee.sourceId)];
+  }
   // Scoping R3 (décision humaine) : JAMAIS les sources `active` — le filtre
   // vit DANS la sélection (pas de lot actif constructible), doublé par
   // `sqlGardeLotActif` par lot et l'empreinte pré/post-passe. La garde
   // globale historique (`sources_active = 0`) est remplacée : les 6 R1
   // actives coexistent avec le backfill quarantaine, intouchées et prouvées.
+  // Exception G1-A : `portee.exceptionDsmActive` (double clé validée) lève
+  // le filtre actif POUR LA SEULE source DSM épinglée et admet `struct-v2`
+  // dans le tableau chunkers. Sans elle : texte historique à l'octet près.
+  const exception = validerExceptionDsm(portee);
+  const chunkers = exception ? [...r.chunkers, CHUNKER_STRUCT_V2] : [...r.chunkers];
+  const numeroExemption = 11 + (exclure.length === 0 ? 0 : 1) + (clausePortee === "" ? 0 : 1);
+  const filtreActif = exception
+    ? `AND (NOT EXISTS (SELECT 1 FROM app.knowledge_sources s
+    WHERE s.id = app.knowledge_chunks.source_id AND s.statut = 'active')
+    OR app.knowledge_chunks.source_id = $${numeroExemption}::uuid)`
+    : `AND NOT EXISTS (SELECT 1 FROM app.knowledge_sources s
+    WHERE s.id = app.knowledge_chunks.source_id AND s.statut = 'active')`;
   const texte = `SELECT id, texte, chunker_version FROM app.knowledge_chunks
 WHERE (embedding IS NULL
-   OR ${predicatDerive(2)})${exclusion}
-  AND NOT EXISTS (SELECT 1 FROM app.knowledge_sources s
-    WHERE s.id = app.knowledge_chunks.source_id AND s.statut = 'active')
+   OR ${predicatDerive(2)})${exclusion}${clausePortee}
+  ${filtreActif}
 ORDER BY id ASC LIMIT $1`;
-  const params = [limite, ...paramsRecette(r)];
+  const params = [limite, ...paramsRecette({ ...r, chunkers })];
   if (exclure.length > 0) params.push([...exclure]);
-  return { texte, params };
+  const tousParams = [...params, ...paramsPortee];
+  if (exception) tousParams.push(EXCEPTION_DSM_SOURCE_ID);
+  return { texte, params: tousParams };
 }
 
 /**
@@ -92,8 +142,23 @@ ORDER BY id ASC LIMIT $1`;
  * lot — échec fermé AVANT tout calcul (jamais d'embedding actif, même
  * jetable). Complète le filtre de sélection (défense en profondeur).
  */
-export function sqlGardeLotActif(ids) {
+export function sqlGardeLotActif(ids, exceptionSourceId = null) {
   for (const id of ids) validerIdChunk(id);
+  // Exception G1-A : l'uuid DSM épinglé (et lui seul) est exempté du compte.
+  // Sans elle, ou avec tout autre uuid : texte historique à l'octet près.
+  if (exceptionSourceId !== null && exceptionSourceId !== undefined) {
+    if (validerUuidSource(exceptionSourceId) !== EXCEPTION_DSM_SOURCE_ID) {
+      throw new Error("Exception garde refusée : uuid hors périmètre (DSM seul).");
+    }
+    return {
+      texte: `SELECT count(*)::int AS n FROM app.knowledge_sources s
+WHERE s.statut = 'active'
+  AND s.id <> $2::uuid
+  AND EXISTS (SELECT 1 FROM app.knowledge_chunks c
+    WHERE c.source_id = s.id AND c.id = ANY($1))`,
+      params: [[...ids], EXCEPTION_DSM_SOURCE_ID],
+    };
+  }
   return {
     texte: `SELECT count(*)::int AS n FROM app.knowledge_sources s
 WHERE s.statut = 'active'
@@ -101,6 +166,48 @@ WHERE s.statut = 'active'
     WHERE c.source_id = s.id AND c.id = ANY($1))`,
     params: [[...ids]],
   };
+}
+
+/**
+ * Invariant d'empreinte sous exception G1-A : toutes les sources actives
+ * sauf DSM sont IDENTIQUES pré/post ; DSM croît EXACTEMENT du nombre
+ * d'écritures du run. `avant`/`apres` = lignes "id|n" de
+ * `sqlEmpreinteActive`. Tout écart = refus (même discipline que l'égalité
+ * stricte historique).
+ */
+export function verifierEmpreinteException(avant, apres, ecrits) {
+  const lire = (texte) => {
+    const carte = new Map();
+    for (const ligne of String(texte ?? "").split("\n")) {
+      const nette = ligne.trim();
+      if (nette === "") continue;
+      const [id, n] = nette.split("|");
+      carte.set(id, Number.parseInt(n, 10));
+    }
+    return carte;
+  };
+  const mAvant = lire(avant);
+  const mApres = lire(apres);
+  if (!mAvant.has(EXCEPTION_DSM_SOURCE_ID) || !mApres.has(EXCEPTION_DSM_SOURCE_ID)) {
+    throw new Error("Empreinte exception refusée : source DSM absente de l'empreinte.");
+  }
+  for (const [id, n] of mAvant) {
+    if (id === EXCEPTION_DSM_SOURCE_ID) continue;
+    if (mApres.get(id) !== n) {
+      throw new Error(`Empreinte exception refusée : source ${id} modifiée hors périmètre.`);
+    }
+  }
+  for (const [id] of mApres) {
+    if (id === EXCEPTION_DSM_SOURCE_ID) continue;
+    if (!mAvant.has(id)) {
+      throw new Error(`Empreinte exception refusée : source ${id} apparue hors périmètre.`);
+    }
+  }
+  const delta = (mApres.get(EXCEPTION_DSM_SOURCE_ID) ?? 0) - (mAvant.get(EXCEPTION_DSM_SOURCE_ID) ?? 0);
+  if (delta !== ecrits) {
+    throw new Error(`Empreinte exception refusée : delta DSM=${delta}, écrits=${ecrits}.`);
+  }
+  return true;
 }
 
 /**
@@ -196,11 +303,30 @@ export function sqlInventaire() {
 }
 
 /** Lignes embarquées à recette dérivée (cible 0 en fin de passe). */
-export function sqlUniformiteRecette(r) {
+export function sqlUniformiteRecette(r, portee = {}) {
+  const clausePortee =
+    portee.sourceId === undefined || portee.sourceId === null || portee.sourceId === ""
+      ? ""
+      : `\n  AND source_id = '${validerUuidSource(portee.sourceId)}'::uuid`;
   const texte = `SELECT count(*)::int AS n FROM app.knowledge_chunks
-WHERE embedding IS NOT NULL
+WHERE embedding IS NOT NULL${clausePortee}
   AND (${predicatDerive(1)})`;
   return { texte, params: paramsRecette(r) };
+}
+
+/**
+ * Pré-vol de portée (`--source <uuid>`) : UNE ligne, que des comptes et des
+ * métadonnées de gouvernance (aucun texte, aucune PII). L'opérateur refuse
+ * une source inconnue (0 ligne) ou `active` (jamais d'embedding cibli sur
+ * une source active — la sélection l'exclurait de toute façon).
+ */
+export function sqlPreflightPortee(sourceId) {
+  const texte = `SELECT s.id::text AS id, s.statut AS statut, s.langue AS langue,
+  (SELECT count(*)::int FROM app.knowledge_chunks c WHERE c.source_id = s.id) AS chunks,
+  (SELECT count(*)::int FROM app.knowledge_chunks c WHERE c.source_id = s.id AND c.embedding IS NULL) AS sans_embedding,
+  (SELECT string_agg(DISTINCT c.chunker_version, ',' ORDER BY c.chunker_version) FROM app.knowledge_chunks c WHERE c.source_id = s.id) AS chunkers
+FROM app.knowledge_sources s WHERE s.id = $1::uuid`;
+  return { texte, params: [validerUuidSource(sourceId)] };
 }
 
 // ─── Transport socket R3-P2 (superuser local, sans URL admin) ───────────────
@@ -211,12 +337,27 @@ WHERE embedding IS NOT NULL
 // socket VÉRIFIÉ plutôt que confiant : interpolation testée + appariement
 // prouvé par RETURNING, jamais supposé.
 
-/** Alphabet des ids de chunks (FNV-1a hex 8, `hacherTexte`) — tout autre = refus. */
+/** Alphabet des ids de chunks (FNV-1a hex 8, `hacherTexte`, `dsm5-` + 8-hex
+ * pour le corpus DSM namespacé anti-collision, `taylor-` + 8-hex pour le
+ * corpus Taylor namespacé anti-collision — D4 ACCEPT 2026-09-26, même
+ * pattern que `dsm5-`, périmètre Taylor uniquement) — tout autre = refus. */
 export function validerIdChunk(id) {
-  if (typeof id !== "string" || !/^[0-9a-f]{8}$/.test(id)) {
+  if (typeof id !== "string" || !/^(?:[0-9a-f]{8}|dsm5-[0-9a-f]{8}|taylor-[0-9a-f]{8})$/.test(id)) {
     throw new Error(`Id de chunk inattendu (refus d'interpolation) : ${String(id).slice(0, 40)}`);
   }
   return id;
+}
+
+/**
+ * Identifiant de source portée (`--source`) : uuid strict (jamais de slug,
+ * jamais d'interpolation libre — le slug `corpus-taylor` est résolu en uuid
+ * déterministe côté opérateur AVANT l'appel).
+ */
+export function validerUuidSource(id) {
+  if (typeof id !== "string" || !/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(id)) {
+    throw new Error(`Identifiant de source inattendu (uuid exigé) : ${String(id).slice(0, 40)}`);
+  }
+  return id.toLowerCase();
 }
 
 /** Échappement strict d'un littéral SQL (texte entre quotes, anti-injection). */
@@ -263,8 +404,8 @@ export function lierParams(texte, params) {
  * côté SQL + décodage testé côté client). Les ids restent validés par
  * `validerIdChunk` avant tout usage.
  */
-export function sqlSelectionLotBase64(limite, r, exclure = []) {
-  const base = sqlSelectionLot(limite, r, exclure);
+export function sqlSelectionLotBase64(limite, r, exclure = [], portee = {}) {
+  const base = sqlSelectionLot(limite, r, exclure, portee);
   const texte = base.texte
     .replace("SELECT id, texte, chunker_version FROM", "SELECT id, chunker_version, replace(encode(convert_to(texte,'UTF8'),'base64'), chr(10), '') AS texte_b64 FROM");
   return { texte, params: base.params };

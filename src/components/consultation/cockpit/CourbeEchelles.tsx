@@ -49,11 +49,11 @@ export function CourbeEchelles({
   return (
     <section
       aria-label={fr.consultation.evolutionTitre}
-      className="flex flex-col gap-4 rounded-2xl border border-rule bg-card p-5 shadow-carte"
+      className="flex scroll-mt-28 flex-col gap-3 rounded-2xl border border-rule bg-card p-4 shadow-douce"
     >
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-3">
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-violet-100 bg-tuile-lavande text-violet-700 shadow-douce">
+          <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-violet-100 bg-tuile-lavande text-violet-700">
             <Icone nom="statistiques" taille={20} />
           </span>
           <h2 className="font-ui text-heading font-bold text-ink-900">

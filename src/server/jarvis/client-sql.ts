@@ -137,11 +137,20 @@ export function clientSql(userId: string): ClientSql {
         // `withCaller` ne lève que si la connexion est perdue. On rend la même
         // forme que pour un échec applicatif : l'appelant n'a pas à distinguer,
         // et surtout il ne doit pas avoir à écrire un `try/catch` de plus.
+        //
+        // Audit Slice 1 — le `technical` nomme la cause SANS la décrire : le
+        // `.name` d'une `Error` (ex. `Error`, `TimeoutError`) n'identifie
+        // personne, là où `.message` porterait régulièrement une valeur de
+        // ligne (règle 1). Avant, ce chemin rendait un `indisponible` nu,
+        // indiscernable d'un refus de porte en télémétrie.
+        const nomCause =
+          brut instanceof Error ? brut.name : typeof brut;
         return {
           data: null,
           error: {
             code: "indisponible",
             message: "Le service de données est momentanément indisponible.",
+            technical: `connexion-perdue:${nomCause}`,
             context: `jarvis.${nom}`,
             ...(brut !== undefined && { cause: brut }),
           },

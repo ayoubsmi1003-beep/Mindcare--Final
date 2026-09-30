@@ -13,7 +13,7 @@ export function pipelineCorpusA(racine, entrees, rapport) {
   const candidats = [];
   for (const e of entrees) {
     if (e.source_id === "corpus-b-medicaments") continue;
-    if (e.source_id.startsWith("corpus-ocr-")) continue; // route corpus-ocr (pipeline dedie R2)
+    if (e.source_id === "corpus-dsm5") continue;
     rapport.decouverts += 1;
     if (FIXTURE_IDS.has(e.source_id)) {
       rapport.rejetes.push({ source_id: e.source_id, motif: "fixture-interdite" });

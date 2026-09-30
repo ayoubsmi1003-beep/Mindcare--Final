@@ -79,6 +79,7 @@ import * as React from "react";
 import { fr } from "@/i18n/fr";
 
 import { DonutChart, type DonutChartSegment } from "./donut-chart";
+import { echelleBarres, echelleNette, graduations } from "./echelle";
 
 /* ═══════════════════════════════════════════════════════════════════════════
  * LA PALETTE DE SÉRIE
@@ -149,8 +150,19 @@ export function couleurTrait(famille: Famille): string {
 
 /* ═══════════════════════════════════════════════════════════════════════════
  * OUTILS D'ÉCHELLE
- * ═══════════════════════════════════════════════════════════════════════════ */
-
+ * ═══════════════════════════════════════════════════════════════════════════
+ *
+ * ⚠️ `echelleSignee` SERT LES AIRES, LES LIGNES ET L'ÉTINCELLE. Elle est
+ * conservée telle quelle : ces trois formes partagent une seule règle, et leur
+ * domaine est celui de leurs propres valeurs.
+ *
+ * Les BARRES GROUPÉES, elles, n'utilisent PAS cette échelle — voir `./echelle.ts`
+ * et le bandeau de `BarresGroupees`. La raison tient en une phrase : une
+ * différence (le résultat net) n'a pas de hauteur comparable à celle d'une
+ * recette, et faire tenir les deux sur la même règle écrasait les barres.
+ * `echelleSignee` reste donc pour ses trois appelants légitimes ; `echelleBarres`
+ * et `echelleNette` ont pris le relais pour la carte combinée.
+ */
 interface Echelle {
   /** Ordonnée d'une valeur, en % depuis le HAUT de l'aire de tracé. */
   readonly y: (valeur: number) => number;
@@ -338,6 +350,218 @@ export function Aire({
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
+ * LIGNES MULTIPLES — plusieurs séries continues sur le même axe
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+/**
+ * Une ligne éparse du croisement jour × type, telle que la porte la rend.
+ * `nb` est un NOMBRE de séances (entier), jamais un montant.
+ */
+export interface LigneTypeJour {
+  readonly jour_iso: string;
+  readonly cle: string;
+  readonly nb: number;
+}
+
+export interface CourbeAlignee {
+  readonly cle: string;
+  readonly valeurs: readonly number[];
+}
+
+/**
+ * Aligne les lignes éparses sur les jours : une valeur par jour et par clé,
+ * ZÉRO quand le couple est absent, lignes hors périmètre ignorées, ordre des
+ * clés préservé (l'ordre SQL : non-rattaché en dernier).
+ *
+ * GÉOMÉTRIE, pas comptabilité : aucun total, aucune part, aucune moyenne —
+ * les nombres sont RANGÉS, jamais calculés.
+ */
+export function alignerCourbesTypes(
+  lignes: readonly LigneTypeJour[],
+  jours: readonly string[],
+  cles: readonly string[],
+): CourbeAlignee[] {
+  const rangJour = new Map(jours.map((j, i) => [j, i] as const));
+  const series = new Map(cles.map((c) => [c, new Array<number>(jours.length).fill(0)]));
+  for (const l of lignes) {
+    const serie = series.get(l.cle);
+    const i = rangJour.get(l.jour_iso);
+    if (serie === undefined || i === undefined) continue;
+    serie[i] = l.nb;
+  }
+  return cles.map((c) => ({ cle: c, valeurs: series.get(c) ?? [] }));
+}
+
+export interface SerieLigne {
+  readonly cle: string;
+  readonly label: string;
+  readonly valeurs: readonly number[];
+  readonly famille: Famille;
+}
+
+/**
+ * Plusieurs courbes sur UN SEUL axe — la reprise du look 21st.dev SANS
+ * recharts (budget, jetons, a11y : voir l'en-tête du fichier).
+ *
+ * Le look repris : axe Y gradué à gauche, grille pointillée, abscisses
+ * discrètes, infobulle carte au survol, légende basse à pastilles annulaires.
+ * Les règles maison survivent : segments DROITS (une spline inventerait des
+ * valeurs), UN SEUL axe pour toutes les séries, points HTML (jamais de
+ * `<circle>` étiré), tableau équivalent masqué, aire `aria-hidden`.
+ */
+export function LignesMultiples({
+  series,
+  labelsX,
+  titreTableau,
+  colonneLabel,
+  formaterCompte,
+  hauteurClasse = "h-44",
+  graduationsX = 6,
+}: {
+  readonly series: readonly SerieLigne[];
+  readonly labelsX: readonly string[];
+  readonly titreTableau: string;
+  readonly colonneLabel: string;
+  /** « 1 séance » / « 3 séances » — le singulier français vit ici, pas en dur. */
+  readonly formaterCompte: (valeur: number) => string;
+  readonly hauteurClasse?: string;
+  readonly graduationsX?: number;
+}): React.JSX.Element {
+  if (series.length === 0 || labelsX.length === 0) {
+    return <p className="font-ui text-body text-ink-500">{fr.graphes.aucunPoint}</p>;
+  }
+
+  const ech = echelleSignee(series.flatMap((s) => [...s.valeurs]));
+  const n = labelsX.length;
+  const pas = 100 / Math.max(1, n - 1);
+  const x = (i: number): number => (n === 1 ? 50 : i * pas);
+
+  // Cinq graduations, du plafond au plancher — des COMPTES entiers, jamais
+  // des pourcentages : l'axe nomme l'échelle partagée, il ne recalcule rien.
+  const graduations = [0, 1, 2, 3, 4].map((i) => ({
+    top: (i * 100) / 4,
+    valeur: Math.round(ech.plafond - ((ech.plafond - ech.bas) * i) / 4),
+  }));
+
+  const modulo = Math.max(1, Math.ceil(n / graduationsX));
+
+  const infobulle = (i: number): string =>
+    `${labelsX[i]} · ${series
+      .map((s) => `${s.label} ${formaterCompte(s.valeurs[i] ?? 0)}`)
+      .join(" · ")}`;
+
+  return (
+    <div className="flex min-w-0 flex-col gap-3">
+      <div className="flex min-w-0 items-stretch gap-2">
+        {/* L'axe Y : les ordres de grandeur, gris et tabulaires. */}
+        <div className={["relative w-11 shrink-0", hauteurClasse].join(" ")} aria-hidden="true">
+          {graduations.map((g, i) => (
+            <span
+              key={i}
+              className="absolute right-0 -translate-y-1/2 font-num text-eyebrow tabular-nums text-ink-500"
+              style={{ top: `${g.top}%` }}
+            >
+              {FORMATER_AXE.format(g.valeur)}
+            </span>
+          ))}
+        </div>
+
+        <div className={["relative min-w-0 flex-1", hauteurClasse].join(" ")} aria-hidden="true">
+          {/* La grille pointillée de la maquette : un filet par graduation. */}
+          {graduations.map((g, i) => (
+            <div
+              key={i}
+              className="absolute inset-x-0 border-t border-dashed border-rule opacity-disabled"
+              style={{ top: `${g.top}%` }}
+            />
+          ))}
+          <div className="absolute inset-x-0 border-t border-rule" style={{ top: `${ech.zero}%` }} />
+
+          <svg
+            className="absolute inset-0 h-full w-full"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+            focusable="false"
+          >
+            {series.map((s) => (
+              <polyline
+                key={s.cle}
+                fill="none"
+                stroke={TRAIT[s.famille]}
+                strokeWidth="2"
+                strokeLinejoin="round"
+                strokeLinecap="round"
+                vectorEffect="non-scaling-stroke"
+                points={s.valeurs.map((v, i) => `${x(i)},${ech.y(v)}`).join(" ")}
+              />
+            ))}
+          </svg>
+
+          {/* Les repères du dernier point : des blocs HTML, PAS des `<circle>`. */}
+          {series.map((s) => (
+            <span
+              key={`p-${s.cle}`}
+              className="absolute h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-card shadow-douce"
+              style={{
+                left: `${x(n - 1)}%`,
+                top: `${ech.y(s.valeurs[n - 1] ?? 0)}%`,
+                backgroundColor: TRAIT[s.famille],
+              }}
+            />
+          ))}
+
+          {/* La bande de survol : une colonne invisible par abscisse, qui porte
+              l'infobulle native avec TOUTES les séries — l'équivalent du
+              `CustomTooltip` de la maquette, sans panneau flottant fait main. */}
+          <div className="absolute inset-0 flex">
+            {labelsX.map((label, i) => (
+              <div
+                key={`${label}-${i}`}
+                title={infobulle(i)}
+                className="min-w-0 flex-1 transition duration-quick ease-out hover:bg-sunken hover:opacity-disabled"
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Les quantièmes sous l'aire — du vrai texte, échantillonné. */}
+      <div className="flex min-w-0 items-baseline gap-2" aria-hidden="true">
+        <span className="w-11 shrink-0" />
+        {labelsX.map((label, i) => (
+          <span key={`${label}-${i}`} className="min-w-0 flex-1 truncate text-center font-num text-eyebrow tabular-nums text-ink-500">
+            {i % modulo === 0 || i === n - 1 ? label : ""}
+          </span>
+        ))}
+      </div>
+
+      {/* La légende basse à pastilles annulaires, comme la maquette : un anneau
+          (fond carte + bordure couleur) par courbe, libellé gris. */}
+      <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2" aria-hidden="true">
+        {series.map((s) => (
+          <span key={`l-${s.cle}`} className="flex items-center gap-2">
+            <span
+              className="size-3.5 rounded-full border-4 bg-card"
+              style={{ borderColor: TRAIT[s.famille] }}
+            />
+            <span className="font-ui text-body text-ink-500">{s.label}</span>
+          </span>
+        ))}
+      </div>
+
+      <TableauEquivalent
+        titre={titreTableau}
+        colonnes={[colonneLabel, ...series.map((s) => s.label)]}
+        lignes={labelsX.map((label, i) => [
+          label,
+          ...series.map((s) => formaterCompte(s.valeurs[i] ?? 0)),
+        ])}
+      />
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
  * ÉTINCELLE — la sparkline d'une tuile
  * ═══════════════════════════════════════════════════════════════════════════ */
 
@@ -414,19 +638,38 @@ export interface GroupeBarres {
 }
 
 /**
- * Deux barres accolées par groupe, plus une ligne nette par-dessus.
+ * Deux séries de barres, puis — DANS SA PROPRE BANDE — la ligne du résultat net.
  *
- * ⚠️ UN SEUL AXE POUR LES DEUX SÉRIES. Deux axes distincts feraient paraître
- * 8 000 DZD de charges plus haut que 40 000 DZD de recette — l'erreur de
- * lecture la plus coûteuse qu'un graphique d'argent puisse produire.
+ * ═══════════════════════════════════════════════════════════════════════════
+ * LA BOÎTE : DEUX BANDES, DEUX ÉCHELLES, UNE SEULE COMPARAISON
+ * ═══════════════════════════════════════════════════════════════════════════
  *
- * Habillage « barres groupées » (maquette 21st.dev : légende en haut à droite,
- * axe Y gradué à gauche, grille pointillée, barres pleines arrondies en haut
- * uniquement). Rendu SANS dépendance — mêmes blocs HTML + SVG étiré que le
- * reste du fichier, couleurs pleines `TRAIT` (vert l'argent qui entre, ambre
- * celui qui sort), pas de dégradé sur les barres. La ligne du résultat net est
- * conservée : la maquette de démo (trafic, toujours positif) n'en a pas, mais
- * sur un graphique d'argent un mois déficitaire sans ligne serait un mensonge.
+ * ⚠️ LE RÉSULTAT NET N'EST PAS SUR L'ÉCHELLE DES BARRES. Ce n'est pas un
+ * détail de dessin, c'est une erreur de catégorie. Une différence n'a pas de
+ * hauteur comparable à celle d'une recette : −130 000 DZD de résultat n'est pas
+ * « plus grand » que 40 000 DZD de recette, et les mettre sur la même règle
+ * affirmait l'inverse à l'écran. Pire, le domaine devait alors englober les
+ * négatifs, ce qui étirait l'aire vers le bas et écrasait les deux barres — les
+ * seules choses, elles, qui doivent se comparer.
+ *
+ * D'où deux bandes qui partagent les MÊMES mois et la MÊME grille verticale,
+ * mais aucun pixel :
+ *
+ *   · la bande haute — recettes et charges, un domaine positif commun, des
+ *     graduations rondes. C'est là que se joue la comparaison qui compte ;
+ *   · la bande basse — le résultat net, un domaine signé et symétrique autour
+ *     de zéro. Sa hauteur ne dit pas « combien », elle dit « à quelle distance
+ *     de l'équilibre », et c'est exactement la bonne question à se poser.
+ *
+ * ⚠️ LA COMPARAISON 8 000 CONTRE 40 000 RESTE EXACTE. Les deux séries de barres
+ * partagent UN SEUL domaine. Leur donner un chacune ferait paraître 8 000 DZD
+ * de charges plus haut que 40 000 DZD de recette — l'erreur de lecture la plus
+ * coûteuse qu'un graphique d'argent puisse produire.
+ *
+ * Habillage « barres groupées » : légende en haut à droite, axe gradué à
+ * gauche, filets pleins et discrets, barres pleines arrondies en haut
+ * uniquement, deux barres fines par groupe et un vide net entre deux mois.
+ * Rendu SANS dépendance — mêmes blocs HTML + SVG étiré que le reste du fichier.
  */
 export function BarresGroupees({
   groupes,
@@ -438,6 +681,7 @@ export function BarresGroupees({
   titreTableau,
   colonneLabel,
   hauteurClasse = "h-44",
+  hauteurNetteClasse = "h-14",
 }: {
   readonly groupes: readonly GroupeBarres[];
   readonly familleA?: Famille;
@@ -448,28 +692,36 @@ export function BarresGroupees({
   readonly titreTableau: string;
   readonly colonneLabel: string;
   readonly hauteurClasse?: string;
+  readonly hauteurNetteClasse?: string;
 }): React.JSX.Element {
   if (groupes.length === 0) {
     return <p className="font-ui text-body text-ink-500">{fr.graphes.aucunPoint}</p>;
   }
 
-  const ech = echelleSignee(
-    groupes.flatMap((g) => [g.a, g.b, g.ligne]),
-  );
+  // DEUX ÉCHELLES, DEUX QUESTIONS. `echelleBarres` ne voit que les deux séries de
+  // barres — c'est lui qui garantit que leurs hauteurs se comparent. La ligne
+  // est mesurée ailleurs, sur sa propre bande.
+  const ech = echelleBarres(groupes.flatMap((g) => [g.a, g.b]));
+  const net = echelleNette(groupes.map((g) => g.ligne));
 
-  // Les 5 graduations de l'axe Y, du plafond au plancher — l'équivalent des
-  // repères 0/85/170/255/340 de la maquette. Positions GÉOMÉTRIQUES lues sur
-  // l'échelle signée partagée, jamais des montants recalculés : l'axe ne fait
-  // que nommer l'échelle que les barres utilisent déjà.
-  const graduations = [0, 1, 2, 3, 4].map((i) => ({
-    top: (i * 100) / 4,
-    valeur: Math.round(ech.plafond - ((ech.plafond - ech.bas) * i) / 4),
-  }));
+  // Les repères de l'axe des barres. `ech.plafond` EST déjà un multiple du pas,
+  // donc `graduations` rend ici exactement les paliers qu'il annonce, du zéro
+  // (en bas) au plafond (en haut) — aucun nombre arbitraire sur l'axe.
+  const reperes = graduations(0, ech.plafond);
+
+  // La grille de COLONNES, partagée par les deux bandes et par les mois : c'est
+  // elle qui aligne la barre d'un mois sur la ligne de ce même mois en dessous.
+  // `minmax(0, 1fr)` et non `1fr` : sans le minimum à zéro, un libellé de mois
+  // large ferait déborder sa cellule, et le tracé avec.
+  const colonnes: React.CSSProperties = {
+    gridTemplateColumns: `repeat(${groupes.length}, minmax(0, 1fr))`,
+  };
 
   return (
     <div className="flex min-w-0 flex-col gap-3">
-      {/* La légende en haut à droite, comme la maquette : pastilles pleines +
-          libellés gris. `Legende` reste la source unique des pastilles. */}
+      {/* La légende en haut à droite : pastilles pleines + libellés gris.
+          `Legende` reste la source unique des pastilles. La troisième entrée, le
+          trait, annonce la ligne de la bande basse. */}
       <div className="flex justify-end">
         <Legende
           entrees={[
@@ -481,88 +733,58 @@ export function BarresGroupees({
       </div>
 
       <div className="flex min-w-0 items-stretch gap-2">
-        {/* L'axe Y : les ordres de grandeur, gris et tabulaires. Sans lui,
-            aucune barre n'a d'échelle — la maquette le porte à gauche. */}
+        {/* L'axe Y : les ordres de grandeur, gris et tabulaires.
+            ⚠️ 64 px, ET NON 44. La gouttière précédente ne contenait pas
+            « 185 380 » : le repère le plus haut sortait de la carte par la
+            gauche, et c'était le défaut le plus visible de l'ancien rendu. */}
         <div
-          className={["relative w-11 shrink-0", hauteurClasse].join(" ")}
+          className={["relative w-16 shrink-0", hauteurClasse].join(" ")}
           aria-hidden="true"
         >
-          {graduations.map((g, i) => (
+          {reperes.map((v) => (
             <span
-              key={i}
+              key={v}
               className="absolute right-0 -translate-y-1/2 font-num text-eyebrow tabular-nums text-ink-500"
-              style={{ top: `${g.top}%` }}
+              style={{ top: `${ech.y(v)}%` }}
             >
-              {FORMATER_AXE.format(g.valeur)}
+              {FORMATER_AXE.format(v)}
             </span>
           ))}
         </div>
 
         <div className={["relative min-w-0 flex-1", hauteurClasse].join(" ")} aria-hidden="true">
-          {/* La grille pointillée de la maquette : un filet par graduation. */}
-          {graduations.map((g, i) => (
+          {/* Les filets : des LIGNES, pas des pointillés. Le pointillé se lisait
+              comme un trait de mesure et se confondait avec la ligne du résultat
+              net, qui était elle-même en pointillé — trois encres sur la même
+              bande. Le filet plein, discret, ne demande rien à l'œil. */}
+          {reperes.map((v) => (
             <div
-              key={i}
-              className="absolute inset-x-0 border-t border-dashed border-rule opacity-disabled"
-              style={{ top: `${g.top}%` }}
+              key={v}
+              className="absolute inset-x-0 border-t border-rule opacity-disabled"
+              style={{ top: `${ech.y(v)}%` }}
             />
           ))}
-          {/* La ligne de ZÉRO, pleine : sans elle, une barre au-dessus et une
-              barre en dessous se ressemblent. */}
-          <div className="absolute inset-x-0 border-t border-rule" style={{ top: `${ech.zero}%` }} />
 
           {/* Les barres — pleines, arrondies en haut uniquement (rayon 4 de la
-              maquette), largeur bornée à 36. En pourcentage de hauteur, donc
-              rien n'est déformé. Une barre arrondie en bas flotterait au lieu
-              de reposer sur son axe. */}
-          <div className="absolute inset-0 flex items-stretch gap-2">
+              maquette). En pourcentage de hauteur, donc rien n'est déformé. Une
+              barre arrondie en bas flotterait au lieu de reposer sur son axe. */}
+          <div className="absolute inset-0 grid" style={colonnes}>
             {groupes.map((g) => (
-              <div key={g.cle} className="relative flex min-w-0 flex-1 justify-center gap-1">
+              <div
+                key={g.cle}
+                className="relative flex min-w-0 items-stretch justify-center gap-1 px-1"
+              >
                 <Barre
                   famille={familleA}
-                  hautPct={Math.max(0, ech.zero - ech.y(g.a))}
-                  basPct={100 - ech.zero}
+                  hauteurPct={ech.y(0) - ech.y(g.a)}
+                  estZero={g.a === 0}
                   titre={`${g.label} · ${libelleA} ${g.aLisible}`}
                 />
                 <Barre
                   famille={familleB}
-                  hautPct={Math.max(0, ech.zero - ech.y(g.b))}
-                  basPct={100 - ech.zero}
+                  hauteurPct={ech.y(0) - ech.y(g.b)}
+                  estZero={g.b === 0}
                   titre={`${g.label} · ${libelleB} ${g.bLisible}`}
-                />
-              </div>
-            ))}
-          </div>
-
-          <svg
-            className="absolute inset-0 h-full w-full"
-            viewBox="0 0 100 100"
-            preserveAspectRatio="none"
-            focusable="false"
-          >
-            <polyline
-              fill="none"
-              stroke="var(--ink-700)"
-              strokeWidth="2"
-              strokeLinejoin="round"
-              strokeDasharray="4 3"
-              vectorEffect="non-scaling-stroke"
-              points={groupes
-                .map((g, i) => {
-                  const largeur = 100 / groupes.length;
-                  return `${i * largeur + largeur / 2},${ech.y(g.ligne)}`;
-                })
-                .join(" ")}
-            />
-          </svg>
-
-          <div className="absolute inset-0 flex items-stretch gap-2">
-            {groupes.map((g) => (
-              <div key={`p-${g.cle}`} className="relative min-w-0 flex-1">
-                <span
-                  className="absolute left-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-card bg-ink-700"
-                  style={{ top: `${ech.y(g.ligne)}%` }}
-                  title={`${g.label} · ${libelleLigne} ${g.ligneLisible}`}
                 />
               </div>
             ))}
@@ -570,18 +792,98 @@ export function BarresGroupees({
         </div>
       </div>
 
-      {/* Les mois sous l'aire — du vrai texte gris uniforme, comme la maquette.
-          Le décalage à gauche compense la gouttière de l'axe Y. */}
-      <div className="flex min-w-0 items-baseline gap-2" aria-hidden="true">
-        <span className="w-11 shrink-0" />
-        {groupes.map((g) => (
-          <span
-            key={`l-${g.cle}`}
-            className="min-w-0 flex-1 truncate text-center font-ui text-eyebrow text-ink-500"
+      {/* Les mois, SOUS LA BANDE DES BARRES — l'axe des X de la bande principale.
+          Ce n'est pas un détail d'alignement : les libellés nomment les BARRES,
+          alors que la bande du dessous ne porte qu'un résumé. */}
+      <div className="-mt-2 flex min-w-0 items-baseline gap-2" aria-hidden="true">
+        <span className="w-16 shrink-0" />
+        <div className="grid min-w-0 flex-1" style={colonnes}>
+          {groupes.map((g) => (
+            <span
+              key={`l-${g.cle}`}
+              className="min-w-0 truncate px-1 text-center font-ui text-eyebrow text-ink-500"
+            >
+              {g.label}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* ═══ LA BANDE DU RÉSULTAT NET ═══════════════════════════════════════
+          Sa propre échelle, sa propre règle d'équilibre. Aucun fond : le
+          contrat du fichier interdit de porter une valeur sur un dégradé, et un
+          aplat teinté ajouterait une couleur qui ne veut rien dire. */}
+      <div className="flex min-w-0 flex-col gap-1">
+        <span className="font-ui text-eyebrow text-ink-300">{libelleLigne}</span>
+        <div className="flex min-w-0 items-stretch gap-2">
+          <div
+            className={["relative w-16 shrink-0", hauteurNetteClasse].join(" ")}
+            aria-hidden="true"
           >
-            {g.label}
-          </span>
-        ))}
+            {/* Le SEUL repère de la bande : l'équilibre. `echelleNette` place les
+                deux autres bornes à égale distance du zéro, donc « 0 » au milieu
+                suffit à nommer toute l'échelle. */}
+            <span
+              className="absolute right-0 -translate-y-1/2 font-num text-eyebrow tabular-nums text-ink-500"
+              style={{ top: `${net.zero}%` }}
+            >
+              {FORMATER_AXE.format(0)}
+            </span>
+          </div>
+
+          <div
+            className={["relative min-w-0 flex-1", hauteurNetteClasse].join(" ")}
+            aria-hidden="true"
+          >
+            {/* La RÈGLE D'ÉQUILIBRE, pleine. Sans elle, un mois bénéficiaire et
+                un mois déficitaire se ressemblent. */}
+            <div
+              className="absolute inset-x-0 border-t border-rule"
+              style={{ top: `${net.zero}%` }}
+            />
+
+            <svg
+              className="absolute inset-0 h-full w-full"
+              viewBox="0 0 100 100"
+              preserveAspectRatio="none"
+              focusable="false"
+            >
+              {/* L'APLAIT entre la ligne et l'équilibre. Un aplat UNIFORME, pas
+                  un dégradé : il donne la distance à l'équilibre, donc le SENS de
+                  lecture — au-dessus, en dessous — sans introduire de vert ni de
+                  rouge qui concurrenceraient les deux séries. */}
+              <polygon
+                fill="var(--ink-300)"
+                fillOpacity="0.14"
+                points={aplatLigne(groupes, net.y, net.zero)}
+              />
+              <polyline
+                fill="none"
+                stroke="var(--ink-700)"
+                strokeWidth="2"
+                strokeLinejoin="round"
+                strokeLinecap="round"
+                vectorEffect="non-scaling-stroke"
+                points={ligneNet(groupes, net.y)}
+              />
+            </svg>
+
+            {/* Les points, en HTML : un cercle étiré par
+                `preserveAspectRatio="none"` deviendrait un ovale, et un ovale se
+                lit comme un défaut de rendu. */}
+            <div className="absolute inset-0 grid" style={colonnes}>
+              {groupes.map((g) => (
+                <div key={`p-${g.cle}`} className="relative min-w-0">
+                  <span
+                    className="absolute left-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-card bg-ink-700"
+                    style={{ top: `${net.y(g.ligne)}%` }}
+                    title={`${g.label} · ${libelleLigne} ${g.ligneLisible}`}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
 
       <TableauEquivalent
@@ -593,15 +895,54 @@ export function BarresGroupees({
   );
 }
 
+/**
+ * Les points d'une ligne, en pourcentage — le même `viewBox` étiré que les
+ * autres formes, donc les mêmes conventions.
+ *
+ * ⚠️ L'ABSCISSE EST LE CENTRE DU GROUPE, jamais celui de la cellule entière :
+ * c'est ce qui aligne la ligne sur les deux barres du mois, et non entre elles.
+ * Les positions sont arrondies : une série de `toFixed(4)` s'accumule, et
+ * `15.000000000000002` dans un attribut `points` n'est pas un défaut visible mais
+ * n'est pas propre non plus.
+ */
+function ligneNet(
+  groupes: readonly GroupeBarres[],
+  y: (valeur: number) => number,
+): string {
+  const largeur = 100 / groupes.length;
+  return groupes
+    .map((g, i) => `${(i * largeur + largeur / 2).toFixed(4)},${y(g.ligne).toFixed(4)}`)
+    .join(" ");
+}
+
+/**
+ * Le même tracé, fermé par les DEUX coins de la bande d'équilibre — sans quoi
+ * l'aplai est un triangle, et non la distance que le mois a parcourue.
+ */
+function aplatLigne(
+  groupes: readonly GroupeBarres[],
+  y: (valeur: number) => number,
+  zero: number,
+): string {
+  const largeur = 100 / groupes.length;
+  const equi = zero.toFixed(4);
+  return [
+    ligneNet(groupes, y),
+    `${((groupes.length - 1) * largeur + largeur / 2).toFixed(4)},${equi}`,
+    `${(largeur / 2).toFixed(4)},${equi}`,
+  ].join(" ");
+}
+
 function Barre({
   famille,
-  hautPct,
-  basPct,
+  hauteurPct,
+  estZero,
   titre,
 }: {
   readonly famille: Famille;
-  readonly hautPct: number;
-  readonly basPct: number;
+  readonly hauteurPct: number;
+  /** La valeur vaut zéro : on pose une amorce, pas une barre. */
+  readonly estZero: boolean;
   readonly titre: string;
 }): React.JSX.Element {
   // Barre PLEINE à la couleur du trait — la maquette porte des aplats (vert /
@@ -610,13 +951,23 @@ function Barre({
     <span
       title={titre}
       className="relative min-w-0 flex-1"
-      style={{ maxWidth: "var(--barre-largeur)" }}
+      style={{
+        maxWidth: "var(--barre-largeur)",
+        // Le plancher vient d'un jeton : `eslint` interdit la valeur numérique
+        // en dur dans un `style` — React la sérialiserait en px sans que rien
+        // ne le dise, et la valeur serait la seule chose non pilotée par
+        // `tokens.css`.
+        minWidth: "var(--barre-largeur-min)",
+      }}
     >
       <span
-        className="absolute inset-x-0 transition duration-quick ease-out"
+        className="absolute inset-x-0 bottom-0 transition duration-quick ease-out"
         style={{
-          bottom: `${basPct}%`,
-          height: `${hautPct}%`,
+          // ⚠️ L'AMORCE DE ZÉRO. Un mois à 0 DZD ne MESURE pas une absence :
+          // sans rien, la cellule se lisait comme un trou de rendu, et l'œil
+          // cherchait pourquoi ce mois manquait. Deux pixels de la couleur de
+          // la série disent « 0, compté », sans jamais mentir sur une hauteur.
+          height: estZero ? "2px" : `${Math.max(0, hauteurPct)}%`,
           backgroundColor: TRAIT[famille],
           borderRadius: "4px 4px 0 0",
         }}

@@ -5,5 +5,13 @@
   "plugin": [
     "superpowers@git+https://github.com/obra/superpowers.git"
   ],
-  "snapshot": false
+  "snapshot": false,
+  "mcp": {
+    "citra": {
+      "type": "local",
+      "command": ["npx", "-y", "@sylphx/citra@6.0.0"],
+      "enabled": true,
+      "timeout": 120000
+    }
+  }
 }

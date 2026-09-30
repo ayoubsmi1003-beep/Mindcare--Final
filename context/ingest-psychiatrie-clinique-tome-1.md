@@ -1,0 +1,9 @@
+TASK:        create the canonical package for Psychiatrie clinique — Approche bio-psycho-sociale, Tome 1
+DOMAIN:      knowledge
+OBJECTIVE:   Produce a source-locked, page-traceable, reproducible, reviewable canonical package for one book, with no extraction loss, no invented page mappings, and no downstream indexing.
+ALLOWED_FILES: context/ingest-psychiatrie-clinique-tome-1.md; knowledge/canonical-v2/psychiatrie-clinique-tome-1-2016-tc-media/sha256-ff1c745bd7cd8d35c748cb95a796b779e859ef79d517a5a23699528841d7ab82/**
+REQUIRED_CONTEXT: AGENTS.md; CLAUDE.md rules; the original Tome 1 PDF; this manifest; the book-local KNOWLEDGE_INGESTION_PLAN.md; only the files explicitly required by the book-local plan
+FORBIDDEN_CONTEXT: Tome 2 and its canonical directory; the root KNOWLEDGE_INGESTION_PLAN.md; old OCR and graphify ingestion artifacts; shared ingestion code; PostgreSQL migrations; database writes; chunks; embeddings; retrieval; STATE.md; docs/archive/**; fr.ts; unrelated patient data
+SECURITY_CONSTRAINTS: Local source only; no external upload; no cloud PDF service; no OCR; no translation; no silent medical repair; no shared script modification; no database write; no clinical activation
+VALIDATION:   TOME1-001 uses qpdf --check; local SHA-256 and 1220-page verification; per-page immutable raw output; per-page hashes and terminal checkpoints; source-to-output traceability schema; deterministic replay of the raw layer. Future stages require the book-local plan's QA gates and must stop before chunking, embeddings, retrieval, or activation.
+STOP_CONDITION: TOME1-001 is complete only when source-lock.json, run-manifest.json, book.json, raw/page-0000.json through raw/page-1219.json, page-records.jsonl, and the raw extraction checkpoints exist and validate. No repair, mapping, structure, assertion, QA freeze, chunking, embedding, database projection, or activation may occur in TOME1-001.

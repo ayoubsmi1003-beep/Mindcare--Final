@@ -18,10 +18,13 @@ import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 
 import { NOM_COOKIE, fermerSession } from "@/server/auth/session";
+import { createHash } from "node:crypto";
+import { arreterVoixNative } from "@/server/voice/runtime";
 
 export async function POST(): Promise<NextResponse> {
   const magasin = await cookies();
   const jeton = magasin.get(NOM_COOKIE)?.value;
+  if (jeton) arreterVoixNative(createHash("sha256").update(jeton).digest("hex"));
 
   try {
     await fermerSession(jeton);

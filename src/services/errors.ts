@@ -35,6 +35,14 @@ export type AppErrorCode =
   | "transcription"
   | "synthese"
   | "analyse"
+  // ── QUATRIÈME CODE DE PASSERELLE — audit Alexa/Jarvis Slice 1 ──
+  // `citation-invalide` (preuves gouvernées rejetées par `verifierCitations`)
+  // tombait dans le repli `indisponible` : l'écran annonçait une panne du
+  // « service de données » alors que la base allait bien et que c'était la
+  // recherche documentaire qui refusait de cautionner la réponse. Même
+  // règle que les trois autres : le CODE gagne en précision, le message
+  // reste tiré d'`fr.erreurs`, jamais de la passerelle (règle 1).
+  | "connaissance"
   | "inattendu";
 
 export interface AppError {
@@ -338,6 +346,23 @@ export function classerCodeEdge(code: string | undefined): AppErrorCode {
       return "synthese";
     case "analyse-indisponible":
       return "analyse";
+    // Audit Slice 1 — deux organes mal nommés, deux corrections :
+    // · `citation-invalide` : la base va bien, c'est la recherche
+    //   documentaire qui refuse de cautionner (preuves rejetées par
+    //   `verifierCitations`). Annoncer « données » envoyait la praticienne
+    //   chercher une panne de base inexistante (même défaut que le 2026-08-27).
+    // · `configuration` : clé modèle absente/invalide — organe d'analyse,
+    //   pas organe de données. Le message « données » faisait contrôler la
+    //   base alors qu'il faut contrôler la configuration du modèle.
+    case "citation-invalide":
+      return "connaissance";
+    case "configuration":
+      return "analyse";
+    // `hors-ligne` (réseau local coupé entre le poste et le fournisseur)
+    // traversait le repli et devenait « service de données » : la conduite
+    // à tenir n'est pas la même (rien n'est perdu, la consultation continue).
+    case "hors-ligne":
+      return "hors-ligne";
     default:
       return "indisponible";
   }

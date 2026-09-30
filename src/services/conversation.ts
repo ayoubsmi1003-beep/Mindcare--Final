@@ -1006,7 +1006,13 @@ export async function envoyer(messageBrut: string): Promise<void> {
   interne.etat = "envoi";
   publier();
 
+  // Audit Slice 1 (§15/§36) — jalons PII-safe du tour : durées et codes
+  // fermés uniquement, jamais de contenu. `msSession` couvre la porte 058 ;
+  // `msPremierEvenement` dit que la passerelle a répondu ; `msPremierDelta`
+  // est le TTFT réel côté écran. Absent = étape non atteinte = diagnostic.
+  const tAvantSession = Date.now();
   const demarrage = await assurerConversation();
+  const msSession = Date.now() - tAvantSession;
   if (!demarrage.ok) {
     interne.erreur = demarrage.error;
     interne.etat = "erreur";
@@ -1022,15 +1028,19 @@ export async function envoyer(messageBrut: string): Promise<void> {
 
   // M09 slice 3 · début du tour (durée live ; horodatage seul, jamais clinique).
   const debutTour = Date.now();
+  let msPremierEvenement: number | undefined;
+  let msPremierDelta: number | undefined;
   const bilan = await executerTour(
     // M02 : le miroir revalidé (ou `null`) — la boucle chaîne ou ignore.
     { message, conversationId: demarrage.data, travail: lireTravailValide(demarrage.data) },
     {
       onChemin: () => {
+        if (msPremierEvenement === undefined) msPremierEvenement = Date.now() - debutTour;
         interne.etat = "flux";
         publier();
       },
       onDelta: (fragment) => {
+        if (msPremierDelta === undefined) msPremierDelta = Date.now() - debutTour;
         const courant = interne.tours.find((t) => t.id === tourJarvis.id);
         remplacerTour(tourJarvis.id, { texte: (courant?.texte ?? "") + fragment });
         publier();
@@ -1072,6 +1082,9 @@ export async function envoyer(messageBrut: string): Promise<void> {
       nbAppels: 0,
       chemin: "inconnu",
       code: classerAppError(bilan.error.code),
+      msSession,
+      ...(msPremierEvenement !== undefined && { msPremierEvenement }),
+      ...(msPremierDelta !== undefined && { msPremierDelta }),
     });
     publier();
     return;
@@ -1085,6 +1098,9 @@ export async function envoyer(messageBrut: string): Promise<void> {
     nbAppels: r.appels.length,
     chemin: r.chemin ?? "inconnu",
     code: r.resolution === undefined ? "OK" : classerVerdict(r.resolution.verdict.etat),
+    msSession,
+    ...(msPremierEvenement !== undefined && { msPremierEvenement }),
+    ...(msPremierDelta !== undefined && { msPremierDelta }),
   });
 
   // M09 slice 3 · couture live : le bilan PII-safe vers l'anneau, rien d'autre.

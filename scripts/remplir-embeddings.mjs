@@ -4,11 +4,22 @@
  *
  *   node scripts/remplir-embeddings.mjs --inventaire [--socket]
  *   node scripts/remplir-embeddings.mjs --ecrire [--limite N] [--dossier P] [--socket]
++ *   node scripts/remplir-embeddings.mjs --ecrire --source <uuid> --socket
++ *   node scripts/remplir-embeddings.mjs --ecrire --source <uuid-DSM> --exception-dsm-active --socket
++ * `--exception-dsm-active` = exception G1-A (décision humaine 2026-09-27) :
++ * backfill ciblé sur la source DSM ACTIVE (uuid épinglé
++ * `EXCEPTION_DSM_SOURCE_ID`, jamais un uuid libre), `struct-v2` admis,
++ * empreinte pré/post vérifiée en delta (autres actives identiques, DSM
++ * +écritures). Sans ce flag : rails historiques intacts.
++ * `--source` = portée stricte (ex. Taylor) : la sélection ajoute
++ * `AND source_id = $N` EN PLUS du filtre non-active (jamais à la place) ;
++ * le pré-vol refuse une source inconnue ou `active`, et journalise
++ * sélectionnés/exclus dans le rapport (reproductible machine).
  * `--socket` = transport superuser local mc-p3 (docker exec + fichier),
  * sans URL admin ; preuve d'écriture par RETURNING (identité prouvée).
  * `--lots K` borne les lots (garde-fou : jamais de passe non bornée).
  *
- * Règles (plan R3 §4) : lots de 8 séquentiels, ordre `id` stable, UNE
+ * Règles (plan R3 §4) : lots séquentiels de `--lot` (défaut 8), ordre `id`
  * instruction UPDATE par lot (tout ou rien), reprise = les lignes conformes
  * sont sautées par le prédicat (re-jouer est un no-op), arrêt SIGINT = fin de
  * lot puis sortie, 5 échecs de lot consécutifs = abandon. N'écrit JAMAIS
@@ -29,16 +40,21 @@ import {
 import { execSocket, lignesSocket as lignesSocketTransport } from "./transport-socket.mjs";
 import {
   CHUNKERS_ACCEPTES,
+  CHUNKER_STRUCT_V2,
   decoderTexteB64,
+  EXCEPTION_DSM_SOURCE_ID,
   sqlEmpreinteActive,
   sqlGardeGlobaleActive,
   sqlGardeLotActif,
   sqlInventaire,
   sqlMiseAJourLotReturning,
+  sqlPreflightPortee,
   sqlSelectionLot,
   sqlSelectionLotBase64,
   sqlUniformiteRecette,
   validerIdChunk,
+  validerUuidSource,
+  verifierEmpreinteException,
   verifierRetourLot,
 } from "./remplir-embeddings-sql.mjs";
 
@@ -70,6 +86,51 @@ let maxLots = null;
 }
 const limiteBrute = option("--limite");
 const limite = limiteBrute === null ? null : Math.max(0, Number.parseInt(limiteBrute, 10));
+// Taille de lot d'INFERENCE `--lot-inference N` (défaut 8 = R2) : prouvé
+// sans effet sur les octets (sonde-determinisme-lot.mjs : 16 textes Taylor,
+// lot 8 vs 64 bit-identiques) — pur levier débit, jamais de dérive recette.
+const lotInfBrut = option("--lot-inference");
+let tailleLotInference = null;
+if (lotInfBrut !== null) {
+  tailleLotInference = Number.parseInt(lotInfBrut, 10);
+  if (!Number.isInteger(tailleLotInference) || tailleLotInference < 1 || tailleLotInference > 256) {
+    console.error("ROUGE — --lot-inference exige un entier 1..256.");
+    process.exit(2);
+  }
+}
+const OPT_INFERENCE = tailleLotInference === null ? {} : { tailleLot: tailleLotInference };
+// (UNE instruction UPDATE, tout ou rien) ne dépend PAS de N ; N ne change
+// ni la sélection (ORDER BY id), ni la reprise (prédicat), ni les gardes.
+// Justification : le coût fixe par lot (transport socket) domine à N=8
+// (~45 s/lot mesurés → ~12 h pour Taylor) ; N=64 ramène la passe à ~2 h.
+const lotBrut = option("--lot");
+let tailleLot = 8;
+if (lotBrut !== null) {
+  tailleLot = Number.parseInt(lotBrut, 10);
+  if (!Number.isInteger(tailleLot) || tailleLot < 1 || tailleLot > 256) {
+    console.error("ROUGE — --lot exige un entier 1..256.");
+    process.exit(2);
+  }
+}
+// Portée stricte `--source <uuid>` (ex. Taylor) : validée AVANT tout
+// (uuid strict, jamais de slug) ; absente = comportement historique.
+const porteeBrute = option("--source");
+let porteeSourceId = null;
+if (porteeBrute !== null) {
+  try {
+    porteeSourceId = validerUuidSource(porteeBrute);
+  } catch {
+    console.error("ROUGE — --source exige un uuid de source valide.");
+    process.exit(2);
+  }
+}
+const PORTEE = porteeSourceId === null ? {} : { sourceId: porteeSourceId };
+// Exception G1-A (décision humaine 2026-09-27) : `--exception-dsm-active`
+// lève les rails sources-active POUR LA SEULE source DSM épinglée
+// (double clé : ce flag + uuid constant validé côté SQL). Sans lui, ou sur
+// toute autre source : comportement historique intact.
+const exceptionDsmDemandee = args.includes("--exception-dsm-active");
+if (exceptionDsmDemandee) PORTEE.exceptionDsmActive = true;
 
 if (!inventaireSeul && !ecrire) {
   console.error("ROUGE — usage : --inventaire | --ecrire [--limite N] [--dossier P]. Rien n'a été fait.");
@@ -120,6 +181,9 @@ process.on("SIGINT", () => {
 
 const rapport = {
   debut: new Date().toISOString(),
+  portee: porteeSourceId === null ? { mode: "globale-historique" } : { mode: "source", source_id: porteeSourceId },
+  taille_lot: tailleLot,
+  taille_lot_inference: tailleLotInference,
   lots: 0,
   ecrits: 0,
   sautes_decoupeur: 0,
@@ -151,8 +215,9 @@ const RECETTE_SQL = {
   instruction_requete: config.instruction_requete,
   instruction_document: config.instruction_document,
   distance: config.distance,
-  // Liste FERMÉE (décision humaine struct-v1.1) : jamais `config.versionChunk`
-  // seul — sinon les enfants v1.1 seraient exclus et les R1 ré-embarqués.
+  // Liste FERMÉE (struct-v1.1 + D4 Taylor 2026-09-26) : jamais
+  // `config.versionChunk` seul — sinon les enfants v1.1 seraient exclus
+  // et les R1 ré-embarqués ; `struct-v2` (DSM) reste exclu.
   chunkers: [...CHUNKERS_ACCEPTES],
 };
 
@@ -161,8 +226,22 @@ chargerEnv();
 // ── transport : pg (défaut) ou socket superuser local (--socket) ────────────
 // Module partagé `transport-socket.mjs` (fichier + ON_ERROR_STOP, nettoyage
 // en finally). La preuve d'écriture vient de RETURNING, pas du shell.
+// Namespacement anti-collision inter-sessions (incident G1-A : deux
+// backfills concurrents partageaient `knowledge/.lot-socket.sql` ET
+// `/tmp/r3-lot.sql` — preuve RETURNING lue tronquée, STOP conservateur à
+// tort alors que l'écriture était complète et correcte). `R3_LOT_NS=dsm`
+// isole les fichiers temporaires de CETTE passe ; absent = historique.
+const NS_LOT = (process.env.R3_LOT_NS ?? "").trim();
+if (NS_LOT !== "" && !/^[a-z0-9-]{1,16}$/.test(NS_LOT)) {
+  console.error("ROUGE — R3_LOT_NS exige [a-z0-9-] 1..16 car.");
+  process.exit(2);
+}
 function lignesSocket(requete) {
-  return lignesSocketTransport(RACINE, requete);
+  if (NS_LOT === "") return lignesSocketTransport(RACINE, requete);
+  return lignesSocketTransport(RACINE, requete, {
+    fichierHost: join(RACINE, "knowledge", `.lot-socket-${NS_LOT}.sql`),
+    fichierConteneur: `/tmp/r3-lot-${NS_LOT}.sql`,
+  });
 }
 
 const url =
@@ -202,6 +281,55 @@ try {
   );
   if ((inv.migration_092 ?? 0) < 1) rouge("migration 092 absente — STOP.");
   if ((inv.ext_vector ?? 0) < 1) rouge("extension pgvector absente — STOP.");
+  // ── pré-vol de portée (`--source`) : machine-vérifiable, AVANT modèle ───
+  if (porteeSourceId !== null) {
+    const pfq = sqlPreflightPortee(porteeSourceId);
+    const pfBrut = viaSocket
+      ? lignesSocket(pfq)
+      : (await client.query(pfq.texte, pfq.params)).rows;
+    const ligne = viaSocket ? (pfBrut[0] ?? "") : pfBrut[0];
+    if (ligne === undefined || ligne === "") rouge(`pré-vol : source inconnue (${porteeSourceId}) — STOP.`);
+    const pf = viaSocket
+      ? (() => {
+          const [id, statut, langue, chunks, sans_embedding, chunkers] = String(ligne).split("|");
+          return { id, statut, langue, chunks: Number(chunks), sans_embedding: Number(sans_embedding), chunkers };
+        })()
+      : ligne;
+    const exceptionDsmOk =
+      exceptionDsmDemandee && pf.id === EXCEPTION_DSM_SOURCE_ID;
+    if (pf.statut === "active" && !exceptionDsmOk) {
+      rouge(`pré-vol : source ${porteeSourceId} active — portée d'embedding ciblée refusée.`);
+    }
+    if (pf.statut === "active" && exceptionDsmOk) {
+      rapport.exception = {
+        decision: "G1-A",
+        source_id: EXCEPTION_DSM_SOURCE_ID,
+        chunker: CHUNKER_STRUCT_V2,
+        statut_source: "active",
+      };
+      console.log(
+        `EXCEPTION G1-A — backfill ciblé sur source ACTIVE (DSM seul, uuid épinglé). Journalisé au rapport.`,
+      );
+    }
+    rapport.portee = {
+      mode: "source",
+      source_id: pf.id,
+      statut: pf.statut,
+      langue: pf.langue,
+      chunks: Number(pf.chunks),
+      selectionnes_sans_embedding: Number(pf.sans_embedding),
+      chunkers_source: String(pf.chunkers ?? ""),
+      exclus_hors_portee: Number(inv.sans_embedding) - Number(pf.sans_embedding),
+      recette: { provider: RECETTE_SQL.provider, modele: RECETTE_SQL.modele, version: RECETTE_SQL.version, dimensions: RECETTE_SQL.dimensions, chunkers: [...RECETTE_SQL.chunkers] },
+    };
+    ecrireRapport();
+    console.log(
+      `pre-vol — source=${pf.id} statut=${pf.statut} langue=${pf.langue} chunks=${pf.chunks} selectionnes=${pf.sans_embedding} exclus_hors_portee=${rapport.portee.exclus_hors_portee} chunkers=[${pf.chunkers}]`,
+    );
+    console.log(
+      `pre-vol — recette ${RECETTE_SQL.provider}/${RECETTE_SQL.modele}@${String(RECETTE_SQL.version).slice(0, 7)}… ${RECETTE_SQL.dimensions}d`,
+    );
+  }
   if (inventaireSeul) {
     if (!viaSocket) await client.end();
     process.exit(0);
@@ -243,7 +371,7 @@ try {
     },
   );
   verifierPariteTokens(local, prete.tokenizer, "Quelle est la posologie de la sertraline en premiere intention ?");
-  const inference = local.inferenceDepuisSession({ Tensor: ort.Tensor }, prete.session, prete.tokenizer);
+  const inference = local.inferenceDepuisSession({ Tensor: ort.Tensor }, prete.session, prete.tokenizer, OPT_INFERENCE);
   const fournisseur = new embeddings.FournisseurLocalOnnx(config, inference);
   console.log(`modele — ${dossier} (témoin tokens ok)`);
 
@@ -262,18 +390,18 @@ try {
       break;
     }
     if (restants !== null && restants <= 0) break;
-    const tailleLecture = restants === null ? 8 : Math.min(8, restants);
+    const tailleLecture = restants === null ? tailleLot : Math.min(tailleLot, restants);
     let lignesLues;
     if (viaSocket) {
       // UNE requête, ordre id garanti, texte en base64 (retours-ligne et
       // `|` neutralisés) — jamais deux requêtes à recoller par position.
-      const sel = sqlSelectionLotBase64(tailleLecture, RECETTE_SQL, exclus);
+      const sel = sqlSelectionLotBase64(tailleLecture, RECETTE_SQL, exclus, PORTEE);
       lignesLues = lignesSocket(sel).map((ligne) => {
         const [id, version, b64] = ligne.split("|");
         return { id: validerIdChunk(id), chunker_version: version, texte: decoderTexteB64(b64 ?? "") };
       });
     } else {
-      const sel = sqlSelectionLot(tailleLecture, RECETTE_SQL, exclus);
+      const sel = sqlSelectionLot(tailleLecture, RECETTE_SQL, exclus, PORTEE);
       const res = await client.query(sel.texte, sel.params);
       lignesLues = res.rows;
     }
@@ -284,9 +412,10 @@ try {
     }
     // Garde par lot PRÉ-INFÉRENCE : aucun chunk du lot ne doit appartenir
     // à une source `active` (le filtre de sélection + ce garde = 2 verrous).
+    // Exception G1-A : la source DSM épinglée est exemptée du compte.
     {
       const ids = res.rows.map((l) => String(l.id));
-      const garde = sqlGardeLotActif(ids);
+      const garde = sqlGardeLotActif(ids, exceptionDsmDemandee ? EXCEPTION_DSM_SOURCE_ID : null);
       const n = viaSocket
         ? Number.parseInt((lignesSocket(garde)[0] ?? "1").trim(), 10)
         : (await client.query(garde.texte, garde.params)).rows[0]?.n;
@@ -294,7 +423,12 @@ try {
     }
     const exploitables = [];
     for (const ligne of res.rows) {
-      if (!CHUNKERS_ACCEPTES.includes(ligne.chunker_version)) {
+      // Exception G1-A : `struct-v2` admis pour la seule source DSM (la
+      // sélection SQL l'a déjà restreint ; ici simple non-saut).
+      const decoupeurOk =
+        CHUNKERS_ACCEPTES.includes(ligne.chunker_version) ||
+        (exceptionDsmDemandee && ligne.chunker_version === CHUNKER_STRUCT_V2);
+      if (!decoupeurOk) {
         rapport.sautes_decoupeur += 1;
         rapport.echecs.push({ id: ligne.id, motif: "decoupeur-derive-saut" });
         exclus.push(String(ligne.id));
@@ -360,7 +494,13 @@ try {
   // ── post-vérifications : uniformité (si épuisé) + empreinte active ───────
   // L'uniformité n'est exigible qu'en fin de BALAYAGE complet : un run borné
   // (--limite) ou interrompu laisse par construction des dérives à reprendre.
-  const uni = await uneLigne(sqlUniformiteRecette(RECETTE_SQL));
+  // Exception G1-A : l'uniformité s'apprécie avec le périmètre chunkers de
+  // l'exception — sinon chaque ligne DSM conforme serait comptée « dérive ».
+  const RECETTE_UNI =
+    exceptionDsmDemandee && porteeSourceId === EXCEPTION_DSM_SOURCE_ID
+      ? { ...RECETTE_SQL, chunkers: [...RECETTE_SQL.chunkers, CHUNKER_STRUCT_V2] }
+      : RECETTE_SQL;
+  const uni = await uneLigne(sqlUniformiteRecette(RECETTE_UNI, PORTEE));
   const empreinteApres = await empreinteActive();
   const garde = await uneLigne(sqlGardeGlobaleActive());
   rapport.termine = true;
@@ -369,7 +509,19 @@ try {
     `fin — ecrits=${rapport.ecrits} sautes_decoupeur=${rapport.sautes_decoupeur} echecs=${rapport.echecs.length} derive_restante=${uni.n} sources_active=${garde.n} epuise=${epuise}`,
   );
   if (epuise && (uni.n ?? 1) !== 0) rouge(`uniformité : ${uni.n} ligne(s) à recette dérivée.`);
-  if (empreinteApres !== empreinteAvant) rouge("empreinte active modifiée pendant la passe — STOP (écriture sur source active suspectée).");
+  // Exception G1-A : l'empreinte DSM croît exactement des écritures du run,
+  // toutes les autres sources actives restent identiques (même discipline
+  // que l'égalité stricte historique, adaptée au périmètre d'exception).
+  if (exceptionDsmDemandee) {
+    try {
+      verifierEmpreinteException(empreinteAvant, empreinteApres, rapport.ecrits);
+    } catch (err) {
+      rouge(`empreinte exception refusée : ${String(err.message ?? err).slice(0, 200)}`);
+    }
+    console.log(`empreinte exception OK — DSM +${rapport.ecrits}, autres sources actives identiques.`);
+  } else if (empreinteApres !== empreinteAvant) {
+    rouge("empreinte active modifiée pendant la passe — STOP (écriture sur source active suspectée).");
+  }
   if (!viaSocket) await client.end();
   process.exit(0);
 } catch (err) {

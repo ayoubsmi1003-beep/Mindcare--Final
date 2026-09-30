@@ -76,14 +76,14 @@ export function EtatClinique({
     return (
       <section
         aria-label={cockpit.etatTitre}
-        className="flex flex-col gap-4 rounded-2xl border border-rule bg-card p-5 shadow-carte"
+        className="flex scroll-mt-28 flex-col gap-3 rounded-2xl border border-dashed border-ink-300 bg-layer-surface p-4"
       >
         <div className="flex items-center gap-3">
-          <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-azure-100 bg-tuile-azur text-azure-700 shadow-douce">
+          <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-azure-100 bg-tuile-azur text-azure-700">
             <Icone nom="suivi" taille={20} />
           </span>
           <div className="flex min-w-0 flex-col">
-            <h2 className="font-ui text-heading font-semibold text-ink-900">{cockpit.etatTitre}</h2>
+            <h2 className="font-ui text-heading font-bold text-ink-900">{cockpit.etatTitre}</h2>
             <p className="m-0 font-ui text-label font-medium text-ink-500">Échelles du dossier — Inscrire recopie en Objectif</p>
           </div>
         </div>
@@ -102,14 +102,14 @@ export function EtatClinique({
   return (
     <section
       aria-label={cockpit.etatTitre}
-      className="flex flex-col gap-4 rounded-2xl border border-rule bg-card p-5 shadow-carte"
+      className="flex scroll-mt-28 flex-col gap-3 rounded-2xl border border-rule bg-card p-4 shadow-douce"
     >
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-3">
-          <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-azure-100 bg-tuile-azur text-azure-700 shadow-douce">
+          <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-azure-100 bg-tuile-azur text-azure-700">
             <Icone nom="suivi" taille={20} />
           </span>
-          <h2 className="font-ui text-heading font-semibold text-ink-900">{cockpit.etatTitre}</h2>
+          <h2 className="font-ui text-heading font-bold text-ink-900">{cockpit.etatTitre}</h2>
         </div>
         <p className="font-ui text-label tabular-nums text-ink-500">
           {cockpit.echellesTitre} · {String(echelles.length)}

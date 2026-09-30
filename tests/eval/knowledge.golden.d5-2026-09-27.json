@@ -1,0 +1,189 @@
+{
+  "$comment": "D5 2026-09-27 — cas FR/AR/Darija instruits par l'agent sur ordre explicite de l'utilisateur (pas d'anglais sur ordre). AUCUNE authorship clinique : chaque or a été vérifié vivant contre les portes gouvernées avant écriture ; seuils repris du golden v2 (dont dose erronée 0 %) ; revue médecin en attente. N'ajoute que des cas, ne modifie aucun jugement existant.",
+  "$meta": {
+    "artefact": "knowledge.golden.d5-2026-09-27.json",
+    "derive_de": "portes gouvernées live (mindcare) + corpus A+B actif",
+    "corpus_version": "2026-09-15 + taylor-quarantaine-invisible",
+    "auteur": "agent (délégation explicite utilisateur 2026-09-27, FR/AR/Darija, pas d'anglais)",
+    "revue_medecin": "en-attente",
+    "langues": [
+      "fr",
+      "ar",
+      "darija"
+    ]
+  },
+  "cas": [
+    {
+      "citation_contient": "SERTRALINE",
+      "expected_no_answer": false,
+      "expected_version": "2026-09-15",
+      "forbidden": [],
+      "gold": {
+        "section": "Catalogue",
+        "source": "e214a52c-ca50-5e5b-be02-ce29faaf0d91"
+      },
+      "hard_negatives": [],
+      "id": "FR-D5-01",
+      "issue": "pertinent",
+      "langue": "fr",
+      "motif": "D5-agent : discrimination dose (25 mg) vérifiée vivante top-1 ; or vivant constaté, pas supposé",
+      "requete": "sertraline 25 mg"
+    },
+    {
+      "citation_contient": "ARIPIPRAZOLE",
+      "expected_no_answer": false,
+      "expected_version": "2026-09-15",
+      "forbidden": [],
+      "gold": {
+        "section": "Catalogue",
+        "source": "e214a52c-ca50-5e5b-be02-ce29faaf0d91"
+      },
+      "hard_negatives": [],
+      "id": "FR-D5-02",
+      "issue": "pertinent",
+      "langue": "fr",
+      "motif": "D5-agent : second médicament discriminant (anti wrong-drug : top-1 ARIPIPRAZOLE constaté vivant, pas SERTRALINE)",
+      "requete": "aripiprazole 15 mg"
+    },
+    {
+      "citation_contient": null,
+      "expected_no_answer": false,
+      "expected_version": null,
+      "forbidden": [],
+      "gold": {
+        "section": "Section II — Critères diagnostiques et codes › Troubles dépressifs › Trouble dépressif persistant (dysthymie) › Caractéristiques diagnostiques",
+        "source": "9ed1c042-fd2b-5599-a470-8c93b0566739"
+      },
+      "hard_negatives": [],
+      "id": "FR-D5-03",
+      "issue": "pertinent",
+      "langue": "fr",
+      "motif": "D5-agent : question calée sur le contenu exact (top-1 vivant) ; nuance connue : la formulation critères seule privilégie une sous-section voisine (limite ranking, non cachée)",
+      "requete": "caractéristiques diagnostiques dysthymie"
+    },
+    {
+      "citation_contient": null,
+      "expected_no_answer": false,
+      "expected_version": null,
+      "forbidden": [],
+      "gold": {
+        "section": "Section II — Critères diagnostiques et codes › Troubles liés à une substance et troubles addictifs › Sevrage d’un sédatif, hypnotique ou anxiolytique",
+        "source": "9ed1c042-fd2b-5599-a470-8c93b0566739"
+      },
+      "hard_negatives": [],
+      "id": "FR-D5-04",
+      "issue": "pertinent",
+      "langue": "fr",
+      "motif": "D5-agent : question précisée sur le contenu réel (sevrage sédatif) ; or = sous-section exacte relevée vivante top-1",
+      "requete": "sevrage sédatif hypnotique anxiolytique"
+    },
+    {
+      "citation_contient": null,
+      "expected_no_answer": true,
+      "expected_version": null,
+      "forbidden": [],
+      "gold": null,
+      "hard_negatives": [],
+      "id": "FR-D5-05",
+      "issue": "aucune",
+      "langue": "fr",
+      "motif": "D5-agent : posologie introuvable par construction (catalogue = libellés seuls, miroir FR-01) ; 0 ligne constatée vivante",
+      "requete": "posologie aripiprazole"
+    },
+    {
+      "citation_contient": "MELATONINE",
+      "expected_no_answer": false,
+      "expected_version": "2026-09-15",
+      "forbidden": [],
+      "gold": {
+        "section": "Catalogue",
+        "source": "e214a52c-ca50-5e5b-be02-ce29faaf0d91"
+      },
+      "hard_negatives": [],
+      "id": "FR-D5-06",
+      "issue": "pertinent",
+      "langue": "fr",
+      "motif": "D5-agent : troisième médicament discriminant vérifié vivant top-1",
+      "requete": "mélatonine 2 mg"
+    },
+    {
+      "citation_contient": null,
+      "expected_no_answer": true,
+      "expected_version": null,
+      "forbidden": [],
+      "gold": null,
+      "hard_negatives": [],
+      "id": "AR-D5-01",
+      "issue": "aucune",
+      "langue": "ar",
+      "motif": "D5-agent : aucun corpus AR — vide honnête constaté vivant (0 ligne), jamais une devinette",
+      "requete": "ما هي جرعة دواء سيرترالين؟"
+    },
+    {
+      "citation_contient": null,
+      "expected_no_answer": true,
+      "expected_version": null,
+      "forbidden": [],
+      "gold": null,
+      "hard_negatives": [],
+      "id": "AR-D5-02",
+      "issue": "aucune",
+      "langue": "ar",
+      "motif": "D5-agent : aucun corpus AR — vide honnête constaté vivant (0 ligne)",
+      "requete": "ما هي معايير نوبة الهوس؟"
+    },
+    {
+      "citation_contient": null,
+      "expected_no_answer": true,
+      "expected_version": null,
+      "forbidden": [],
+      "gold": null,
+      "hard_negatives": [],
+      "id": "AR-D5-03",
+      "issue": "aucune",
+      "langue": "ar",
+      "motif": "D5-agent : mixte AR/FR sans corpus AR — vide honnête constaté vivant (miroir ARFR-01)",
+      "requete": "سيرترالين dose"
+    },
+    {
+      "citation_contient": null,
+      "expected_no_answer": true,
+      "expected_version": null,
+      "forbidden": [],
+      "gold": null,
+      "hard_negatives": [],
+      "id": "DJ-D5-01",
+      "issue": "aucune",
+      "langue": "darija",
+      "motif": "D5-agent : darija sans corpus — vide honnête constaté vivant (0 ligne lexicale)",
+      "requete": "dwa sertraline ?"
+    },
+    {
+      "citation_contient": null,
+      "expected_no_answer": true,
+      "expected_version": null,
+      "forbidden": [],
+      "gold": null,
+      "hard_negatives": [],
+      "id": "DJ-D5-02",
+      "issue": "aucune",
+      "langue": "darija",
+      "motif": "D5-agent : darija sans corpus — vide honnête constaté vivant",
+      "requete": "kifach naqas dwa bchwiya ?"
+    },
+    {
+      "citation_contient": null,
+      "expected_no_answer": true,
+      "expected_version": null,
+      "forbidden": [],
+      "gold": null,
+      "hard_negatives": [],
+      "id": "DJ-D5-03",
+      "issue": "aucune",
+      "langue": "darija",
+      "motif": "D5-agent : darija sans corpus — vide honnête constaté vivant",
+      "requete": "sevrage dwa ?"
+    }
+  ],
+  "interdites": []
+}

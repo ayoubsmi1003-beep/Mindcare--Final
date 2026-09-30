@@ -534,7 +534,21 @@
     --s-44: 176px;
     --s-48: 192px;
     --s-56: 224px;
-    --barre-largeur: 36px;
+    /* La largeur d'une barre du graphique « Évolution ».
+     *
+     * ⚠️ 36 px ÉTAIT TROP LARGE. Sur six groupes, deux barres de 36 px et leur
+     * gouttière de 4 px occupaient 76 px d'une cellule d'environ 100 : les
+     * rectangles se touchaient presque, se lisaient comme des blocs, et la
+     * dernière débordait du cadre. 22 px laisse au groupe la respiration de la
+     * maquette — deux barres fines et un vide net entre deux mois — tout en
+     * gardant la barre lisible sur un écran de portable. La largeur reste une
+     * borne HAUTE : sur une carte large, la barre suit la cellule et ne devient
+     * pas un bâton perdu dans le vide. */
+    --barre-largeur: 22px;
+    /* Le plancher de largeur d'une barre. Sans lui, un mois dont le montant est
+     * minuscule produit une barre d'un pixel — undistinguable d'un filament, et
+     * donc illisible. 3 px : assez pour être vu, trop peu pour mentir. */
+    --barre-largeur-min: 3px;
 
     /* Profondeur teintée verte */
     --ombre-douce: 0 1px 2px rgba(62, 39, 35, 0.05), 0 4px 12px -6px rgba(27, 94, 32, 0.08);

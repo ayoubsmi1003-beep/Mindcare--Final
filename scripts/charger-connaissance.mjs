@@ -9,10 +9,10 @@ import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { pipelineCorpusA } from "./charger-connaissance-corpus-a.mjs";
 import { pipelineCorpusB } from "./charger-connaissance-corpus-b.mjs";
-import { pipelineCorpusOcr } from "./charger-connaissance-corpus-ocr.mjs";
-import { argsChargeur, sqlSource } from "./charger-connaissance-sql.mjs";
+import { pipelineCorpusDSM } from "./charger-connaissance-corpus-dsm.mjs";
+import { argsChargeur, sqlSource, sqlTrouverCollisions } from "./charger-connaissance-sql.mjs";
 import { lierParams, verifierRetourLot } from "./remplir-embeddings-sql.mjs";
-import { execSocket } from "./transport-socket.mjs";
+import { execSocket, lignesSocket } from "./transport-socket.mjs";
 
 const RACINE = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const VIA_SOCKET = process.argv.slice(2).includes("--socket");
@@ -21,9 +21,10 @@ const opt = argsChargeur(process.argv.slice(2), {
   sortie: join(RACINE, "knowledge", ".sortie-chargeur.json"),
 });
 const manifeste = JSON.parse(readFileSync(opt.manifeste, "utf8"));
-const entrees = [...(manifeste.sources ?? [])].sort((a, b) => (a.source_id < b.source_id ? -1 : 1));
+const entreesToutes = [...(manifeste.sources ?? [])].sort((a, b) => (a.source_id < b.source_id ? -1 : 1));
+const entrees = opt.sources.length > 0 ? entreesToutes.filter((e) => opt.sources.includes(e.source_id)) : entreesToutes;
 const rapport = { manifeste: opt.manifeste, ecrire: opt.ecrire, decouverts: 0, acceptes: [], rejetes: [], medicaments: { total: 0, uniques: 0, doublons: 0, libelles: 0, rejetes: 0 }, chunks: 0, ecrits: { sources: 0, chunks: 0 } };
-const candidats = [...pipelineCorpusA(RACINE, entrees, rapport), ...pipelineCorpusB(RACINE, entrees, rapport, opt.limite), ...pipelineCorpusOcr(RACINE, entrees, rapport)];
+const candidats = [...pipelineCorpusA(RACINE, entrees, rapport), ...pipelineCorpusB(RACINE, entrees, rapport, opt.limite), ...pipelineCorpusDSM(RACINE, entrees, rapport)];
 mkdirSync(dirname(opt.sortie), { recursive: true });
 writeFileSync(opt.sortie, JSON.stringify(rapport, null, 2) + "\n", "utf8");
 if (!opt.ecrire) {
@@ -50,6 +51,8 @@ if (VIA_SOCKET) {
   const preuves = [];
   for (const c of candidats) {
     if (c.entree.statut === "active") throw new Error("activation interdite en R1");
+    const collisions = lignesSocket(RACINE, { texte: sqlTrouverCollisions(), params: [c.chunks.map((ch) => ch.chunkId), c.sourceUuid] });
+    if (collisions.length > 0) throw new Error(`collision inter-sources : ${collisions.length} id(s) existent deja (${String(collisions[0]).slice(0, 40)}…) — STOP`);
     etapes.push({
       texte: sqlSource(),
       params: [c.sourceUuid, c.entree.titre, c.entree.version, c.entree.langue, c.statut, c.entree.review_due_at ?? null, c.entree.emetteur, c.entree.reference, c.hash],
@@ -63,8 +66,11 @@ if (VIA_SOCKET) {
         if (ch.statut !== "active" && ch.statut !== "inactive") {
           throw new Error(`statut chunk refusé : ${String(ch.statut).slice(0, 40)}`);
         }
-        if (ch.versionChunk !== "struct-v1" && ch.versionChunk !== "struct-v1.1") {
+        if (ch.versionChunk !== "struct-v1" && ch.versionChunk !== "struct-v1.1" && ch.versionChunk !== "struct-v2") {
           throw new Error(`découpeur refusé : ${String(ch.versionChunk).slice(0, 40)}`);
+        }
+        if (ch.versionChunk === "struct-v2" && ch.statut !== "inactive") {
+          throw new Error("struct-v2 exige statut inactive (quarantaine)");
         }
         if (!Number.isInteger(ch.occurrence) || ch.occurrence < 0) {
           throw new Error(`occurrence invalide pour ${String(ch.chunkId).slice(0, 12)}`);
@@ -130,6 +136,8 @@ try {
   await client.query("BEGIN");
   for (const c of candidats) {
     if (c.entree.statut === "active") throw new Error("activation interdite en R1");
+    const collisions = await client.query(sqlTrouverCollisions(), [c.chunks.map((ch) => ch.chunkId), c.sourceUuid]);
+    if ((collisions.rows?.length ?? 0) > 0) throw new Error(`collision inter-sources : ${collisions.rows.length} id(s) existent deja — STOP`);
     await client.query(sqlSource(), [c.sourceUuid, c.entree.titre, c.entree.version, c.entree.langue, c.statut, c.entree.review_due_at ?? null, c.entree.emetteur, c.entree.reference, c.hash]);
     rapport.ecrits.sources += 1;
     // Batch de 400 lignes (7 params/ligne → 2800 < 65535) : 15k chunks ne
@@ -145,8 +153,11 @@ try {
         if (ch.statut !== "active" && ch.statut !== "inactive") {
           throw new Error(`statut chunk refusé : ${String(ch.statut).slice(0, 40)}`);
         }
-        if (ch.versionChunk !== "struct-v1" && ch.versionChunk !== "struct-v1.1") {
+        if (ch.versionChunk !== "struct-v1" && ch.versionChunk !== "struct-v1.1" && ch.versionChunk !== "struct-v2") {
           throw new Error(`découpeur refusé : ${String(ch.versionChunk).slice(0, 40)}`);
+        }
+        if (ch.versionChunk === "struct-v2" && ch.statut !== "inactive") {
+          throw new Error("struct-v2 exige statut inactive (quarantaine)");
         }
         if (!Number.isInteger(ch.occurrence) || ch.occurrence < 0) {
           throw new Error(`occurrence invalide pour ${String(ch.chunkId).slice(0, 12)}`);

@@ -76,15 +76,35 @@
       "id": "FR-03",
       "requete": "critères d'un épisode maniaque",
       "langue": "fr",
-      "issue": "aucune",
-      "gold": null,
+      "issue": "pertinent",
+      "gold": {
+        "source": "9ed1c042-fd2b-5599-a470-8c93b0566739",
+        "section": "Section II — Critères diagnostiques et codes › Troubles bipolaires et apparentés › Trouble bipolaire de type II › Critères diagnostiques"
+      },
       "acceptable": [],
       "hard_negatives": [],
       "forbidden": [],
-      "expected_no_answer": true,
-      "expected_version": null,
-      "citation_contient": null,
-      "motif": "aucun contenu clinique au corpus A+B (5 fiches operationnelles + libelles medicaments)"
+      "expected_no_answer": false,
+      "expected_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "citation_contient": "Trouble bipolaire de type II — Critères diagnostiques",
+      "motif": "aucun contenu clinique au corpus A+B (5 fiches operationnelles + libelles medicaments) | M08 : DSM actif — top-1 DSM : chunk sur les critères du trouble bipolaire de type II contenant « maniaque » (pos. 237) ; 10267 car., servi tronqué au budget 8000 avec provenance exacte (M08-A)",
+      "m08": {
+        "ancien": {
+          "issue": "aucune",
+          "gold": null,
+          "expected_no_answer": true,
+          "expected_version": null,
+          "citation_contient": null,
+          "motif": "aucun contenu clinique au corpus A+B (5 fiches operationnelles + libelles medicaments)"
+        },
+        "nouveau": "pertinent + gold DSM",
+        "motif_changement": "activation gouvernée DSM (M08) : le corpus actif fournit une preuve DSM réelle",
+        "source": "9ed1c042-fd2b-5599-a470-8c93b0566739",
+        "version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "chunk_top1": "dsm5-017294f1",
+        "preuve": "top-1 DSM : chunk sur les critères du trouble bipolaire de type II contenant « maniaque » (pos. 237) ; 10267 car., servi tronqué au budget 8000 avec provenance exacte (M08-A)",
+        "limite": "7 cas lexicaux préexistants inchangés (faute-frappe, seuils faible) — voir rapport M08"
+      }
     },
     {
       "id": "FR-04",
@@ -372,15 +392,35 @@
       "id": "GV-04",
       "requete": "sédation",
       "langue": "fr",
-      "issue": "aucune",
-      "gold": null,
+      "issue": "pertinent",
+      "gold": {
+        "source": "9ed1c042-fd2b-5599-a470-8c93b0566739",
+        "section": "Section II — Critères diagnostiques et codes › Troubles liés à une substance et troubles addictifs"
+      },
       "acceptable": [],
       "hard_negatives": [],
       "forbidden": [],
-      "expected_no_answer": true,
-      "expected_version": null,
-      "citation_contient": null,
-      "motif": "aucun contenu sedation ; forbidden ancien-protocole : source-fixture sans contrepartie en production (jamais ingestee, ADR-037)"
+      "expected_no_answer": false,
+      "expected_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "citation_contient": "Trouble de l’usage du cannabis",
+      "motif": "aucun contenu sedation ; forbidden ancien-protocole : source-fixture sans contrepartie en production (jamais ingestee, ADR-037) | M08 : DSM actif — top-1 DSM : « sédation » présent dans le chunk (pos. 286, 971 car.), chapitre substances",
+      "m08": {
+        "ancien": {
+          "issue": "aucune",
+          "gold": null,
+          "expected_no_answer": true,
+          "expected_version": null,
+          "citation_contient": null,
+          "motif": "aucun contenu sedation ; forbidden ancien-protocole : source-fixture sans contrepartie en production (jamais ingestee, ADR-037)"
+        },
+        "nouveau": "pertinent + gold DSM",
+        "motif_changement": "activation gouvernée DSM (M08) : le corpus actif fournit une preuve DSM réelle",
+        "source": "9ed1c042-fd2b-5599-a470-8c93b0566739",
+        "version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "chunk_top1": "dsm5-1c397c72",
+        "preuve": "top-1 DSM : « sédation » présent dans le chunk (pos. 286, 971 car.), chapitre substances",
+        "limite": "7 cas lexicaux préexistants inchangés (faute-frappe, seuils faible) — voir rapport M08"
+      }
     },
     {
       "id": "IJ-01",
@@ -428,29 +468,69 @@
       "id": "FW-01",
       "requete": "sevrage",
       "langue": "fr",
-      "issue": "aucune",
-      "gold": null,
+      "issue": "pertinent",
+      "gold": {
+        "source": "9ed1c042-fd2b-5599-a470-8c93b0566739",
+        "section": "Section II — Critères diagnostiques et codes › Troubles liés à une substance et troubles addictifs › Sevrage d’un sédatif, hypnotique ou anxiolytique"
+      },
       "acceptable": [],
       "hard_negatives": [],
       "forbidden": [],
-      "expected_no_answer": true,
-      "expected_version": null,
-      "citation_contient": null,
-      "motif": "mot sevrage absent du corpus"
+      "expected_no_answer": false,
+      "expected_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "citation_contient": "Sevrage d’un sédatif, hypnotique ou anxiolytique",
+      "motif": "mot sevrage absent du corpus | M08 : DSM actif — top-1 DSM : rubrique « Sevrage d’un sédatif, hypnotique ou anxiolytique », « sevrage » en tête (2070 car.)",
+      "m08": {
+        "ancien": {
+          "issue": "aucune",
+          "gold": null,
+          "expected_no_answer": true,
+          "expected_version": null,
+          "citation_contient": null,
+          "motif": "mot sevrage absent du corpus"
+        },
+        "nouveau": "pertinent + gold DSM",
+        "motif_changement": "activation gouvernée DSM (M08) : le corpus actif fournit une preuve DSM réelle",
+        "source": "9ed1c042-fd2b-5599-a470-8c93b0566739",
+        "version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "chunk_top1": "dsm5-1e28f30e",
+        "preuve": "top-1 DSM : rubrique « Sevrage d’un sédatif, hypnotique ou anxiolytique », « sevrage » en tête (2070 car.)",
+        "limite": "7 cas lexicaux préexistants inchangés (faute-frappe, seuils faible) — voir rapport M08"
+      }
     },
     {
       "id": "FW-02",
       "requete": "angoisse",
       "langue": "fr",
-      "issue": "aucune",
-      "gold": null,
+      "issue": "pertinent",
+      "gold": {
+        "source": "9ed1c042-fd2b-5599-a470-8c93b0566739",
+        "section": "Section II — Critères diagnostiques et codes › Troubles anxieux › Anxiété de séparation › Caractéristiques diagnostiques"
+      },
       "acceptable": [],
       "hard_negatives": [],
       "forbidden": [],
-      "expected_no_answer": true,
-      "expected_version": null,
-      "citation_contient": null,
-      "motif": "aucun contenu clinique au corpus A+B (5 fiches operationnelles + libelles medicaments)"
+      "expected_no_answer": false,
+      "expected_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+      "citation_contient": "Anxiété de séparation — Caractéristiques diagnostiques",
+      "motif": "aucun contenu clinique au corpus A+B (5 fiches operationnelles + libelles medicaments) | M08 : DSM actif — top-1 DSM : « angoisse » présent dans le chunk (pos. 501, 3726 car.), chapitre troubles anxieux",
+      "m08": {
+        "ancien": {
+          "issue": "aucune",
+          "gold": null,
+          "expected_no_answer": true,
+          "expected_version": null,
+          "citation_contient": null,
+          "motif": "aucun contenu clinique au corpus A+B (5 fiches operationnelles + libelles medicaments)"
+        },
+        "nouveau": "pertinent + gold DSM",
+        "motif_changement": "activation gouvernée DSM (M08) : le corpus actif fournit une preuve DSM réelle",
+        "source": "9ed1c042-fd2b-5599-a470-8c93b0566739",
+        "version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+        "chunk_top1": "dsm5-1c955d5a",
+        "preuve": "top-1 DSM : « angoisse » présent dans le chunk (pos. 501, 3726 car.), chapitre troubles anxieux",
+        "limite": "7 cas lexicaux préexistants inchangés (faute-frappe, seuils faible) — voir rapport M08"
+      }
     },
     {
       "id": "FW-03",

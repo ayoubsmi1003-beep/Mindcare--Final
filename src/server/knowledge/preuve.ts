@@ -41,6 +41,10 @@ export function construirePreuve(range: CandidatRange): RetrievedEvidence {
     langue: candidat.langue,
     evidence_relevance: range.score,
     texte: candidat.texte,
+    unitId: candidat.unitId,
+    parentTexteHash: candidat.parentTexteHash,
+    enfantIndex: candidat.enfantIndex,
+    enfantsTotal: candidat.enfantsTotal,
   };
 }
 

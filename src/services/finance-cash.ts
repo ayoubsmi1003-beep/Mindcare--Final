@@ -114,6 +114,25 @@ const JOUR = z.object({
   a_impaye: z.boolean(),
 });
 
+// 119 · UNE LIGNE DU CROISEMENT JOUR × TYPE. `nb` est un NOMBRE de séances
+// (entier), jamais un montant. Seuls les couples (jour, courbe retenue)
+// existent — l'écran aligne, il ne somme pas.
+const LIGNE_TYPE_JOUR = z.object({
+  jour_iso: z.string(),
+  cle: z.string(),
+  nb: NOMBRE,
+});
+
+const TYPE_COURBE = z.object({
+  cle: z.string(),
+  libelle: z.string(),
+});
+
+const CALENDRIER_PAR_TYPE = z.object({
+  types: z.array(TYPE_COURBE),
+  lignes: z.array(LIGNE_TYPE_JOUR),
+});
+
 const ECHEANCE = z.object({
   intitule: z.string(),
   montant: NOMBRE,
@@ -132,6 +151,7 @@ const APERCU = z.object({
     charges_par_categorie: z.array(PART_CHARGE),
   }),
   calendrier: z.array(JOUR),
+  calendrier_par_type: CALENDRIER_PAR_TYPE,
   attention: z.object({
     impayes_total: NOMBRE,
     impayes_count: NOMBRE,
@@ -145,6 +165,9 @@ export type SeauMois = z.infer<typeof SEAU_MOIS>;
 export type PartRevenu = z.infer<typeof PART_REVENU>;
 export type PartCharge = z.infer<typeof PART_CHARGE>;
 export type JourCaisse = z.infer<typeof JOUR>;
+export type LigneTypeJour = z.infer<typeof LIGNE_TYPE_JOUR>;
+export type TypeCourbe = z.infer<typeof TYPE_COURBE>;
+export type CalendrierParType = z.infer<typeof CALENDRIER_PAR_TYPE>;
 export type Echeance = z.infer<typeof ECHEANCE>;
 export type ApercuCaisse = z.infer<typeof APERCU>;
 

@@ -29,17 +29,6 @@ const PREUVE: PreuveConnnaissance = {
 };
 
 describe("validerPreuve", () => {
-  it("accepts book evidence only with a server ID and a physical page", () => {
-    const book = { ...PREUVE, id: "11111111-1111-4111-8111-111111111111",
-      livre: { numero: 1, edition: "Édition vérifiée", ocrReviewStatus: "accepted", pages: [
-        { splitId: "volume.pdf", physicalPage: 4, globalPhysicalPage: 4, printedPage: null },
-      ] } };
-    expect(validerPreuve(book)).toEqual(book);
-    expect(validerPreuve({ ...book, livre: { ...book.livre, ocrReviewStatus: "unreviewed" } })).toBeNull();
-    expect(validerPreuve({ ...book, id: "invented" })).toBeNull();
-    expect(validerPreuve({ ...book, livre: { ...book.livre, pages: [] } })).toBeNull();
-    expect(validerPreuve({ ...book, livre: { ...book.livre, pages: [{ ...book.livre.pages[0], printedPage: 3 }] } })).toBeNull();
-  });
   it("accepte une preuve bien formée", () => {
     expect(validerPreuve({ ...PREUVE })).toEqual(PREUVE);
   });
@@ -73,8 +62,10 @@ describe("validerPreuves", () => {
 });
 
 describe("construireBlocPreuves", () => {
-  it("vide quand sans source (pas d'excuse inventée)", () => {
-    expect(construireBlocPreuves([])).toBe("");
+  it("absence nommée quand sans source (pas d'excuse inventée, jamais un vide ambigu)", () => {
+    const bloc = construireBlocPreuves([], "sans-preuve");
+    expect(bloc).toContain("AUCUNE_PREUVE");
+    expect(bloc).not.toContain("SERTRALINE");
   });
 
   it("marqueurs stables + citation exigée", () => {
@@ -84,6 +75,17 @@ describe("construireBlocPreuves", () => {
     expect(bloc).toContain("Catalogue medicaments");
     expect(bloc).toContain("2026-09-15");
     expect(bloc).toContain("SERTRALINE EG — 50 mg");
+  });
+
+  it("faible : marqueur PREUVES_FAIBLES, preuves conservées (pas de silence)", () => {
+    const bloc = construireBlocPreuves([PREUVE], "faible");
+    expect(bloc).toContain("PREUVES_FAIBLES");
+    expect(bloc).toContain("SERTRALINE EG — 50 mg");
+  });
+
+  it("ok : aucun marqueur de faiblesse", () => {
+    const bloc = construireBlocPreuves([PREUVE], "ok");
+    expect(bloc).not.toContain("PREUVES_FAIBLES");
   });
 
   it("le contenu reste une DONNÉE (balises internes non interprétées)", () => {

@@ -16,6 +16,7 @@
  *   une capacité, elle la constate.
  */
 
+import { encoderPCM16 } from "@/shared/jarvis/pcm";
 import { fr } from "@/i18n/fr";
 
 import { db } from "./db";
@@ -62,9 +63,17 @@ interface DicteeEnCours {
   fragments: Blob[];
   /** Horodatage de départ — sert la seule métrique de durée, jamais l'audio. */
   debut: number;
+  generation: number;
+  runId: string;
+  utteranceId: string;
 }
 
 let dictee: DicteeEnCours | null = null;
+let generationDictee = 0;
+let controleTranscription: AbortController | null = null;
+let generationLecture = 0;
+let referenceAudio: { samples: Float32Array; taux: number } | null = null;
+let controleLecture: AbortController | null = null;
 
 /**
  * Démarre l'enregistrement. Le micro ne s'allume QUE sur un geste explicite ;
@@ -77,6 +86,8 @@ export async function demarrerDictee(): Promise<Result<true>> {
     return err({ code: "indisponible", message: fr.jarvis.voix.microIndisponible });
   }
 
+  controleTranscription?.abort();
+  const generation = ++generationDictee;
   // ⚠️ LE MICRO VIENT DU COURTIER. Ouvrir un second `getUserMedia` pendant que
   // le détecteur de mot de réveil tient déjà le sien fait redemander la
   // permission sous Firefox et peut échouer sous Safari — au moment précis où
@@ -84,6 +95,7 @@ export async function demarrerDictee(): Promise<Result<true>> {
   const acces = await prendreMicro();
   if (!acces.ok) return err(acces.error);
   const prise = acces.data;
+  if (generation !== generationDictee) { prise.rendre(); return err({ code: "indisponible", message: fr.jarvis.voix.indisponible }); }
 
   const capacites = detecterCapacitesVoix();
   let recorder: MediaRecorder;
@@ -104,7 +116,7 @@ export async function demarrerDictee(): Promise<Result<true>> {
   };
   recorder.start(250); // fragment toutes les 250 ms — stop net, pas de queue perdue
 
-  dictee = { recorder, prise, fragments, debut: Date.now() };
+  dictee = { recorder, prise, fragments, debut: Date.now(), generation, runId: crypto.randomUUID(), utteranceId: crypto.randomUUID() };
 
   // ⚠️ DIAGNOSTIC : DES MÉTADONNÉES, JAMAIS UN ÉCHANTILLON.
   // Ce qui a manqué le 2026-08-27 n'était pas l'audio — c'était de savoir si
@@ -168,21 +180,37 @@ export async function arreterEtTranscrire(): Promise<Result<string>> {
     return err({ code: "regle-metier", message: fr.jarvis.voix.tropLongue });
   }
 
-  const base64 = await blobEnBase64(blob);
-  const resultat = await db().invokeFunction<{ texte: string }>("jarvis-voice-in", {
-    audioBase64: base64,
-    mimeType: blob.type,
-  });
+
+  const controle = new AbortController(); controleTranscription = controle;
+  let pcmBase64: string;
+  try {
+    const contexte = new OfflineAudioContext(1, 1, 16000);
+    const tampon = await contexte.decodeAudioData(await blob.arrayBuffer());
+    const channels = Array.from({ length: Math.min(2, tampon.numberOfChannels) }, (_, i) => tampon.getChannelData(i));
+    const bytes = encoderPCM16(channels, tampon.sampleRate);
+    let binary = ""; for (const byte of bytes) binary += String.fromCharCode(byte);
+    pcmBase64 = btoa(binary);
+  } catch {
+    return err({ code: "transcription", message: fr.jarvis.voix.indisponible });
+  }
+  if (controle.signal.aborted || enCours.generation !== generationDictee) return err({ code: "indisponible", message: fr.jarvis.voix.indisponible });
+  const resultat = await db().invokeFunction<{ texte: string; runId: string; utteranceId: string }>("jarvis-voice-in", {
+    pcmBase64, sampleRate: 16000, runId: enCours.runId, utteranceId: enCours.utteranceId, langue: "auto",
+  }, controle.signal);
+  if (controleTranscription === controle) controleTranscription = null;
+  if (controle.signal.aborted || enCours.generation !== generationDictee) return err({ code: "indisponible", message: fr.jarvis.voix.indisponible });
 
   if (!resultat.ok) {
     log.warn("jarvis.voix.dictation", logFieldsFor(resultat.error));
     return err(resultat.error);
   }
+  if (resultat.data.runId !== enCours.runId || resultat.data.utteranceId !== enCours.utteranceId) return err({ code: "transcription", message: fr.jarvis.voix.indisponible });
   return ok(resultat.data.texte);
 }
 
 /** Annule sans envoyer : le fragment jeté, le micro rendu. */
 export function annulerDictee(): void {
+  generationDictee += 1; controleTranscription?.abort(); controleTranscription = null;
   const enCours = dictee;
   if (enCours === null) return;
   dictee = null;
@@ -192,23 +220,6 @@ export function annulerDictee(): void {
     // déjà arrêté
   }
   enCours.prise.rendre();
-}
-
-function blobEnBase64(blob: Blob): Promise<string> {
-  return new Promise((resoudre, rejeter) => {
-    const lecteur = new FileReader();
-    lecteur.onloadend = () => {
-      const brut = lecteur.result;
-      if (typeof brut !== "string") {
-        rejeter(new Error("lecture-audio-vide"));
-        return;
-      }
-      const virgule = brut.indexOf(",");
-      resoudre(virgule >= 0 ? brut.slice(virgule + 1) : "");
-    };
-    lecteur.onerror = () => rejeter(new Error("lecture-audio"));
-    lecteur.readAsDataURL(blob);
-  });
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -292,6 +303,8 @@ export function sourceLectureActive(): SourceLecture | null {
 
 /** Stoppe toute lecture en cours et révoque le blob — avant d'en lancer une autre. */
 export function arreterLecture(): void {
+  referenceAudio = null;
+  generationLecture += 1; controleLecture?.abort(); controleLecture = null;
   // La synthèse LOCALE aussi : « Stop » doit couper la voix quelle qu'en soit
   // la source. Une seule des deux coupées, et l'orbe afficherait « arrêté »
   // pendant que Jarvis continue de parler.
@@ -334,32 +347,6 @@ export function arreterLecture(): void {
  * belle est un inconvénient ; un nom de patiente chez un fournisseur tiers est
  * une infraction à la règle 1. Le sens du défaut n'est pas discutable.
  */
-function synthetiseurLocalDisponible(): boolean {
-  return typeof window !== "undefined" && "speechSynthesis" in window;
-}
-
-async function lireEnLocal(texte: string): Promise<Result<true>> {
-  if (!synthetiseurLocalDisponible()) {
-    // Ni voix externe (interdite ici — le texte porte une identité), ni voix
-    // locale. On le DIT, on ne dégrade pas vers l'externe en silence.
-    return err({ code: "indisponible", message: fr.jarvis.voix.localeIndisponible });
-  }
-  return await new Promise<Result<true>>((resoudre) => {
-    const enonce = new SpeechSynthesisUtterance(texte);
-    enonce.lang = "fr-FR";
-    enonce.onstart = () => publierLecture(true, "local");
-    enonce.onend = () => {
-      publierLecture(false);
-      resoudre(ok(true));
-    };
-    enonce.onerror = () => {
-      publierLecture(false);
-      resoudre(err({ code: "indisponible", message: fr.jarvis.voix.indisponible }));
-    };
-    window.speechSynthesis.speak(enonce);
-  });
-}
-
 /**
  * Lit un texte à voix haute.
  *
@@ -370,7 +357,7 @@ async function lireEnLocal(texte: string): Promise<Result<true>> {
  */
 export async function lireTexte(
   texte: string,
-  porteUneIdentite = false,
+  _porteUneIdentite = false,
 ): Promise<Result<true>> {
   arreterLecture(); // un seul son à la fois — relire A remplace B, sans doublon
 
@@ -383,27 +370,29 @@ export async function lireTexte(
     return err({ code: "regle-metier", message: fr.jarvis.voix.indisponible });
   }
 
-  // ── LA BASCULE ──
-  // Interrupteur d'exploitation : tout en local, quel que soit le contenu.
-  const toutEnLocal =
-    typeof process !== "undefined" &&
-    process.env["NEXT_PUBLIC_JARVIS_TTS_LOCAL_ONLY"] === "true";
-  if (porteUneIdentite || toutEnLocal) {
-    return await lireEnLocal(texte);
-  }
 
-  const flux = await db().invokeFunctionStream("jarvis-voice-out", { texte: texte.slice(0, 2000) });
+  const generation = generationLecture;
+  const controle = new AbortController(); controleLecture = controle;
+  const runId = crypto.randomUUID(), utteranceId = crypto.randomUUID();
+  const flux = await db().invokeFunctionStream("jarvis-voice-out", { texte, runId, utteranceId }, controle.signal);
+  if (controle.signal.aborted || generation !== generationLecture) return err({ code: "indisponible", message: fr.jarvis.voix.indisponible });
   if (!flux.ok) return err(flux.error);
 
   try {
     const tampon = await new Response(flux.data).arrayBuffer();
-    // ElevenLabs rend du MP3 ; la passerelle ne change pas le conteneur.
+    if (controle.signal.aborted || generation !== generationLecture) return err({ code: "indisponible", message: fr.jarvis.voix.indisponible });
     if (tampon.byteLength === 0) {
       // ⚠️ UN FLUX VIDE N'EST PAS UNE LECTURE RÉUSSIE. Le déclarer tel quel
       // ferait dire à l'orbe que Jarvis parle alors que rien ne sortira jamais.
       return err({ code: "indisponible", message: fr.jarvis.voix.indisponible });
     }
-    const url = URL.createObjectURL(new Blob([tampon], { type: "audio/mpeg" }));
+    try {
+      const contexte = new OfflineAudioContext(1, 1, 16000);
+      const ref = await contexte.decodeAudioData(tampon.slice(0));
+      if (generation !== generationLecture || controle.signal.aborted) return err({ code: "indisponible", message: fr.jarvis.voix.indisponible });
+      referenceAudio = { samples: ref.getChannelData(0), taux: ref.sampleRate };
+    } catch { referenceAudio = null; }
+    const url = URL.createObjectURL(new Blob([tampon], { type: "audio/wav" }));
     const audio = new Audio(url);
     lectureEnCours = { audio, url };
 
@@ -411,7 +400,8 @@ export async function lireTexte(
     // commentaire d'`abonnerLecture`.
     const demarre = new Promise<boolean>((resoudre) => {
       audio.onplaying = () => {
-        publierLecture(true, "cloud");
+        if (generation !== generationLecture || controle.signal.aborted) { resoudre(false); return; }
+        publierLecture(true, "local");
         resoudre(true);
       };
       audio.onerror = () => resoudre(false);
@@ -419,17 +409,19 @@ export async function lireTexte(
       // absent — laisserait cette promesse en suspens et la machine bloquée.
       setTimeout(() => resoudre(false), DELAI_PREMIER_SON_MS);
     });
-    audio.onended = () => arreterLecture();
-    audio.onpause = () => publierLecture(false);
+    audio.onended = () => { if (generation === generationLecture) arreterLecture(); };
+    audio.onpause = () => { if (generation === generationLecture) publierLecture(false); };
 
     await audio.play();
-    if (!(await demarre)) {
+    if (!(await demarre) || generation !== generationLecture || controle.signal.aborted) {
+      if (generation !== generationLecture || controle.signal.aborted) return err({ code: "indisponible", message: fr.jarvis.voix.indisponible });
       arreterLecture();
       log.warn("jarvis.voix.jamaisDemarree", { code: "indisponible" });
       return err({ code: "indisponible", message: fr.jarvis.voix.indisponible });
     }
     return ok(true);
   } catch (cause) {
+    if (generation !== generationLecture || controle.signal.aborted) return err({ code: "indisponible", message: fr.jarvis.voix.indisponible });
     arreterLecture();
     // Autoplay bloqué sans geste utilisateur : erreur nommée, pas un aveu.
     if (cause instanceof DOMException && cause.name === "NotAllowedError") {
@@ -439,4 +431,15 @@ export async function lireTexte(
     log.warn("jarvis.voix.lecture", logFieldsFor(echec));
     return err(echec);
   }
+}
+
+/** Known playback reference, aligned to the actual audio clock; missing reference fails closed. */
+export function referencesLecture(longueur: number, taux: number): readonly Float32Array[] {
+ const ref = referenceAudio, lecture = lectureEnCours;
+ if (!ref || !lecture || !enLecture || longueur <= 0 || !Number.isFinite(lecture.audio.currentTime)) return [];
+ return [0, 64, 128, 192, 256, 320].map((delai) => {
+  const out = new Float32Array(longueur), fin = lecture.audio.currentTime - delai / 1000;
+  for (let i = 0; i < longueur; i++) { const index = Math.floor((fin - (longueur - i) / taux) * ref.taux); out[i] = ref.samples[index] ?? 0; }
+  return out;
+ });
 }

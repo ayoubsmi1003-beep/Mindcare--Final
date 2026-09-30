@@ -1,11 +1,13 @@
 "use client";
 
+import { fr } from "@/i18n/fr";
+
 import { SelecteurEchelle } from "./SelecteurEchelle";
 
 /**
  * Mesures de séance 1–10 — Anxiété / Sommeil / Humeur.
  *
- * V10 : les 3 premières options du Focus deviennent de vrais instruments.
+ * V11 : UNE carte, TROIS lignes compactes (curseur + 1-clic), UNE aide.
  * N'écrit RIEN seule : `onMesurer(cle, valeur)` remonte, la page inscrit
  * `« Anxiété : 6/10 »` dans Subjectif via `saveNote` (même chemin que Focus).
  * Label texte obligatoire, teinte unique verte — pas de gradient sévérité.
@@ -21,20 +23,30 @@ export function MesuresSeance({
   readonly onMesurer: (cle: CleMesure, valeur: number) => void;
   readonly modifiable: boolean;
 }): React.JSX.Element {
+  const cockpit = fr.consultation.cockpit;
+  const renseignees = [valeurs.anxiete, valeurs.sommeil, valeurs.humeur].filter(
+    (v) => v !== null,
+  ).length;
   return (
     <section
-      aria-label="Mesures de la séance"
-      className="flex flex-col gap-3 rounded-2xl border border-rule bg-card p-5 shadow-carte"
+      aria-label={cockpit.mesuresTitre}
+      className="flex scroll-mt-28 flex-col gap-1 rounded-2xl border border-rule bg-card p-5 shadow-elevee"
     >
-      <div className="flex items-center justify-between gap-3">
-        <h2 className="font-ui text-heading font-semibold text-ink-900">
-          Mesures de la séance
-        </h2>
-        <p className="m-0 shrink-0 font-ui text-label font-medium tabular-nums text-ink-500">
-          1–10
+      <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+        <div className="flex min-w-0 items-baseline gap-3">
+          <h2 className="text-balance font-ui text-title font-bold text-ink-900">
+            {cockpit.mesuresTitre}
+          </h2>
+          <span className="shrink-0 rounded-full bg-layer-surface px-2.5 py-0.5 font-ui text-label font-semibold tabular-nums text-ink-700">
+            {cockpit.mesuresEchelle}
+          </span>
+        </div>
+        <p className="m-0 shrink-0 font-ui text-label font-semibold tabular-nums text-ink-500">
+          {renseignees}/3
         </p>
       </div>
-      <div className="grid grid-cols-1 gap-3 tablet:grid-cols-3">
+      <p className="m-0 font-ui text-label text-ink-500">{cockpit.mesuresAide}</p>
+      <div className="divide-y divide-rule">
         <SelecteurEchelle
           id="mesure-anxiete"
           libelle="Anxiété"

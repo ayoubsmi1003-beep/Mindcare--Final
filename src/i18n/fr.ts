@@ -1072,6 +1072,29 @@ export const fr = {
       courbeVide: "Pas assez d'historique pour tracer une courbe.",
       prochainTitre: "Prochain rendez-vous",
       brutTitre: "Brouillon de séance",
+      /* V11 — refonte consultation : uniquement additif, aucune clé renommée. */
+      mesuresTitre: "Mesures de la séance",
+      mesuresEchelle: "1–10",
+      mesuresAide: "Curseur ou flèches — la valeur s'inscrit dans Subjectif.",
+      mesuresNonMesure: "Non mesuré",
+      mesuresValeurRetenu: "Valeur retenue",
+      mesureSurDix: "sur 10",
+      mesureDiminuer: "Diminuer",
+      mesureAugmenter: "Augmenter",
+      focusSousTitre: "Un clic = sélectionné — Inscrire recopie dans Subjectif.",
+      focusCompteurUn: "sujet sélectionné",
+      focusCompteurPlus: "sujets sélectionnés",
+      dureeSeance: "Durée de séance",
+      seanceEnCours: "En cours",
+      seanceTermineeLibelle: "Séance terminée",
+      tarifInlineTitre: "Tarif",
+      tarifDevise: "DA",
+      tarifSaisieIndication: "Dinars entiers. 0 = séance offerte.",
+      progressionTitre: "Avancée de la note",
+      travailTitre: "Travail de séance",
+      contexteUtileTitre: "Contexte utile",
+      accesDossierTitre: "Dossier",
+      accesDossierIndication: "Séances passées et résumé — un clic, sans quitter la séance.",
     },
   },
 
@@ -1416,11 +1439,14 @@ export const fr = {
 
     calendrier: {
       titre: "Calendrier",
-      aide: "Intensité de l'argent encaissé, jour par jour.",
+      aide: "Nombre de consultations par type, jour par jour.",
       cellule: "{date} · {montant} · {n} séances",
       celluleImpaye: "{date} · {montant} · {n} séances · impayé",
       moins: "moins",
       plus: "plus",
+      tableauTypes: "Consultations par type et par jour, en tableau",
+      autres: "Autres",
+      aucunType: "Aucune ventilation par type sur la période.",
     },
 
     tableauCharges: {
@@ -1594,6 +1620,12 @@ export const fr = {
       "La réponse est prête, mais je n'arrive pas à la lire à voix haute. Le texte reste affiché ci-dessus. Réessayez la lecture dans quelques instants.",
     analyse:
       "Le service d'analyse est momentanément indisponible. Aucune donnée n'a été modifiée. Réessayez dans quelques instants.",
+    // Audit Alexa/Jarvis Slice 1 — quatrième organe nommé (`citation-invalide`
+    // côté passerelle). Même structure en trois temps : ce qui s'est passé ·
+    // ce qui est préservé · quoi faire. Ne cite jamais la citation rejetée
+    // (règle 1 : le contenu gouverné ne fuit pas dans un message d'interface).
+    connaissance:
+      "La recherche documentaire est momentanément indisponible. Aucune donnée n'a été perdue : le dossier et la conversation restent utilisables. Réessayez dans quelques instants.",
     inattendu:
       "Une erreur inattendue s'est produite. Aucune donnée n'a été modifiée. Réessayez ; si cela se reproduit, signalez-le avec l'heure exacte.",
   },

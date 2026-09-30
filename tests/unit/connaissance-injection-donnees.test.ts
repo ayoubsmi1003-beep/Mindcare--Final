@@ -185,9 +185,11 @@ describe("chaîne empoisonnée de bout en bout, hors ligne (H0.6)", () => {
     const evidences = reranker("override", fusion).map((r) => construirePreuve(r));
     // Aucun champ d'autorisation n'existe sur l'évidence : il n'y a rien à
     // détourner — le modèle ne reçoit que du texte entre deux balises.
+    // D3-A : la lignée (unitId…) voyage avec l'évidence — données de
+    // provenance, jamais d'autorisation, jamais d'instruction.
     for (const evidence of evidences) {
       expect(Object.keys(evidence).sort()).toEqual(
-        ["chunkId", "evidence_relevance", "langue", "section", "sourceId", "sourceTitre", "sourceVersion", "texte", "versionChunk"].sort(),
+        ["chunkId", "evidence_relevance", "langue", "section", "sourceId", "sourceTitre", "sourceVersion", "texte", "versionChunk", "unitId", "parentTexteHash", "enfantIndex", "enfantsTotal"].sort(),
       );
     }
     // Jambe LLM : NON PROUVABLE hors ligne (cf. eval-jarvis-injection,

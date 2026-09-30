@@ -13,11 +13,6 @@
 
 "use client";
 
-import {
-  AUCUNE_PREUVE_LIVRES, EXTRAIT_SOURCE, LIVRE_NUMERO, NOMS_DOSSIERS_LIVRES, OCR_NON_RELU,
-  PAGE_IMPRIMEE, PAGE_IMPRIMEE_INDISPONIBLE, PAGE_PDF, PASSAGES_LIVRES, TITRE_IMPRIME,
-} from "@/i18n/connaissance";
-
 import { useCallback, useEffect, useRef, useState } from "react";
 
 import { SiriOrb } from "@/components/ui/siri-orb";
@@ -123,10 +118,10 @@ export function FilJarvis({
 
         // ── Bulle Jarvis ──
         const enLecture = lectureId === tour.id;
-        const lisible = tour.texte.trim().length > 0 && tour.texte.trim().length <= 2000;
+        const lisible = !tour.interrompu && tour.statut !== "refuse" && tour.texte.trim().length > 0 && tour.texte.trim().length <= 2000;
         return (
           <div key={tour.id} className="flex flex-col gap-1">
-            {tour.registre === "connaissance-generale" && tour.texte !== AUCUNE_PREUVE_LIVRES && (
+            {tour.registre === "connaissance-generale" && (
               <span className="inline-flex items-center gap-1 pl-1 font-ui text-label tracking-label text-ai-600">
                 <span aria-hidden className="inline-flex h-4 w-4 shrink-0 items-center justify-center overflow-hidden rounded-full">
                   <SiriOrb
@@ -134,34 +129,19 @@ export function FilJarvis({
                     animationDuration={18}
                   />
                 </span>
-                {(tour.preuves ?? []).some((p) => p.livre !== undefined) ? PASSAGES_LIVRES : fr.jarvis.registreConnaissance}
+                {fr.jarvis.registreConnaissance}
               </span>
             )}
             {/* M07 — preuves gouvernées : titre + section + version (données
                 C4, jamais d'identifiant). Absentes = réponse sans source. */}
-            {(tour.preuves ?? []).map((preuve) => preuve.livre === undefined ? (
-              <span key={`${preuve.titre}-${preuve.version}-${preuve.section ?? "?"}`}
-                className="pl-1 font-ui text-label tracking-label text-ink-500">
-                {preuve.titre}{preuve.section === null ? "" : ` · ${preuve.section}`} · v{preuve.version}
+            {(tour.preuves ?? []).map((preuve) => (
+              <span
+                key={`${preuve.titre}-${preuve.version}-${preuve.section ?? "?"}`}
+                className="pl-1 font-ui text-label tracking-label text-ink-500"
+              >
+                {preuve.titre}
+                {preuve.section === null ? "" : ` · ${preuve.section}`} · v{preuve.version}
               </span>
-            ) : (
-              <details key={preuve.id} className="pl-1 font-ui text-label text-ink-700">
-                <summary className="cursor-pointer">
-                  {LIVRE_NUMERO} B{String(preuve.livre.numero).padStart(2, "0")} · {NOMS_DOSSIERS_LIVRES[preuve.livre.numero] ?? preuve.titre} · {preuve.livre.edition}
-                  {preuve.section === null ? "" : ` · ${preuve.section}`}
-                </summary>
-                <div className="mt-1 pl-3 text-ink-500">
-                  <p className="m-0">{TITRE_IMPRIME} : {preuve.titre}</p>
-                  {preuve.livre.pages.map((page) => (
-                    <p key={`${page.splitId}-${page.physicalPage}`} className="m-0">
-                      {page.splitId} · {PAGE_PDF} {page.physicalPage} · {page.printedPage === null
-                        ? PAGE_IMPRIMEE_INDISPONIBLE : `${PAGE_IMPRIMEE} ${page.printedPage}`}
-                    </p>
-                  ))}
-                  {preuve.livre.ocrReviewStatus === "unreviewed" && <p className="m-0">{OCR_NON_RELU}</p>}
-                  <p className="mt-1 whitespace-pre-wrap">{EXTRAIT_SOURCE} : « {preuve.extrait} »</p>
-                </div>
-              </details>
             ))}
             <div className="flex items-end gap-1">
               <p

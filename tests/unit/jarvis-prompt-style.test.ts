@@ -54,7 +54,11 @@ describe("registre de réponse", () => {
     // v4.0 (2026-09-24) : refonte livres — le bloc est conservé, la version
     // avance avec le registre. Épinglée ici : tout changement de registre
     // EXIGE une version distincte, jamais silencieuse.
-    expect(PROMPT_VERSION).toBe("v4.0");
+    // v4.1 (M10-A) : clauses d'ancrage réponse — localisation non devinée,
+    // attribution sans déguisement, quantitatif ancré ou déclaré.
+    // v4.2 : transparence des désaccords entre sources (jamais de choix
+    // silencieux — l'interprétation appartient à la praticienne).
+    expect(PROMPT_VERSION).toBe("v4.2");
     expect(PROMPT_CONNAISSANCE).toMatch(/PREUVES_DOCUMENTAIRES/);
   });
 });

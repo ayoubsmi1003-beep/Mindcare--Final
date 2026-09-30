@@ -53,9 +53,6 @@ export const PORTES = {
   // que des littéraux nus, verifierAllowlist matche le proname nu.
   LEXICALE: "search_knowledge_lexical",
   VECTORIELLE: "search_knowledge_vector",
-  LIVRE_LEXICALE: "search_book_knowledge_lexical",
-  LIVRE_VECTORIELLE: "search_book_knowledge_vector",
-  LIVRE_DISPONIBILITE: "get_book_knowledge_availability",
 } as const;
 
 /**
@@ -97,6 +94,18 @@ export const COLONNES_CHUNK = [
   "version_chunk",
   "langue",
   "texte",
+] as const;
+
+/**
+ * D3-A (migration 111) : lignée exposée par les portes avec chaque chunk —
+ * `null` = inconnue. Whitelist fermée elle aussi : la lignée voyage, jamais
+ * `*`, jamais du patient.
+ */
+export const COLONNES_LIGNEE = [
+  "unit_id",
+  "parent_texte_hash",
+  "enfant_index",
+  "enfants_total",
 ] as const;
 
 /**
@@ -191,6 +200,7 @@ export function porteVectorielle(
 export function sqlPorteLexicalePropose(): string {
   return [
     `SELECT ${COLONNES_CHUNK.map((c) => `c.${c}`).join(", ")}, ${COLONNES_ATTESTATION_SQL},`,
+    `  ${COLONNES_LIGNEE.map((c) => `c.${c}`).join(", ")},`,
     "  ts_rank(c.document_tsv, plainto_tsquery('simple', app.immutable_unaccent($1))) AS score",
     `FROM ${TABLES.CHUNKS} c`,
     `JOIN ${TABLES.SOURCES} s ON s.id = c.source_id`,
@@ -213,6 +223,7 @@ export function sqlPorteLexicalePropose(): string {
 export function sqlPorteVectoriellePropose(): string {
   return [
     `SELECT ${COLONNES_CHUNK.map((c) => `c.${c}`).join(", ")}, ${COLONNES_ATTESTATION_SQL},`,
+    `  ${COLONNES_LIGNEE.map((c) => `c.${c}`).join(", ")},`,
     "  1 - (c.embedding OPERATOR(public.<=>) p.q) AS score",
     `FROM ${TABLES.CHUNKS} c`,
     `JOIN ${TABLES.SOURCES} s ON s.id = c.source_id`,
@@ -247,6 +258,11 @@ export interface LignePorte {
   readonly source_approuvee_par: string | null;
   readonly source_revue_a_jour: boolean;
   readonly source_remplacee_par: string | null;
+  /** D3-A (migration 111) : lignée — absente/`null` = inconnue, jamais exigée. */
+  readonly unit_id?: string | null;
+  readonly parent_texte_hash?: string | null;
+  readonly enfant_index?: number | null;
+  readonly enfants_total?: number | null;
 }
 
 /**
@@ -277,8 +293,6 @@ export function validerLignePorte(valeur: unknown): LignePorte | null {
     return null;
   }
   const langue = ligne["langue"];
-  // ADR-038 : `en` admis (migration 100) ; toute autre valeur reste écartée
-  // (sens fermé : une langue inconnue ne devient jamais récupérable).
   if (langue !== "fr" && langue !== "ar" && langue !== "darija" && langue !== "en") return null;
   const section = ligne["section"];
   if (section !== null && typeof section !== "string") return null;
@@ -295,6 +309,25 @@ export function validerLignePorte(valeur: unknown): LignePorte | null {
   if (typeof revueAJour !== "boolean") return null;
   const remplaceePar = ligne["source_remplacee_par"];
   if (remplaceePar !== null && typeof remplaceePar !== "string") return null;
+  // D3-A : lignée optionnelle — présente et typée, ou absente/nulle (inconnue).
+  // Un type inattendu (nombre là où un texte est attendu…) écarte la ligne :
+  // une lignée corrompue ne voyage jamais (sens fermé).
+  const unite = ligne["unit_id"];
+  if (unite !== undefined && unite !== null && typeof unite !== "string") return null;
+  const parentHash = ligne["parent_texte_hash"];
+  if (parentHash !== undefined && parentHash !== null && typeof parentHash !== "string") return null;
+  const enfantIndexBrut = ligne["enfant_index"];
+  const enfantIndex =
+    enfantIndexBrut === undefined || enfantIndexBrut === null ? null : enfantIndexBrut;
+  if (enfantIndex !== null && (typeof enfantIndex !== "number" || !Number.isInteger(enfantIndex) || enfantIndex < 0)) {
+    return null;
+  }
+  const enfantsTotalBrut = ligne["enfants_total"];
+  const enfantsTotal =
+    enfantsTotalBrut === undefined || enfantsTotalBrut === null ? null : enfantsTotalBrut;
+  if (enfantsTotal !== null && (typeof enfantsTotal !== "number" || !Number.isInteger(enfantsTotal) || enfantsTotal < 0)) {
+    return null;
+  }
   return {
     chunk_id: ligne["chunk_id"],
     source_id: ligne["source_id"],
@@ -311,6 +344,10 @@ export function validerLignePorte(valeur: unknown): LignePorte | null {
     source_approuvee_par: approuveePar,
     source_revue_a_jour: revueAJour,
     source_remplacee_par: remplaceePar,
+    unit_id: unite ?? null,
+    parent_texte_hash: parentHash ?? null,
+    enfant_index: enfantIndex ?? null,
+    enfants_total: enfantsTotal ?? null,
   };
 }
 

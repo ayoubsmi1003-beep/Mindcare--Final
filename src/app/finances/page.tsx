@@ -57,9 +57,9 @@ import { PanneauEtat, type EtatDonnees } from "@/components/finance/EtatPanneau"
 import { PanneauAttention } from "@/components/finance/PanneauAttention";
 import {
   CompositionV8,
+  CourbesTypes,
   EvolutionV8,
   PoulsV8,
-  SerieJournaliereV8,
 } from "@/components/finance/PanneauxV8";
 import { SelecteurPeriode } from "@/components/finance/SelecteurPeriode";
 import { TableauSeances } from "@/components/finance/TableauSeances";
@@ -408,18 +408,18 @@ function TuilesEtRangees({ apercu }: { readonly apercu: ApercuCaisse }): React.J
         <PoulsV8 pulse={apercu.pulse} calendrier={apercu.calendrier} />
       </div>
 
-      {/* RANGÉE 2 — LA SÉRIE JOURNALIÈRE, EN DOMINANTE.
-          Elle remplace la bande de 31 cases du bas de l'écran V6, qui disait
-          « plus » ou « moins » sans jamais dire COMBIEN. Elle passe en tête
-          parce qu'elle répond à la question du mois en cours ; l'évolution
-          sur six mois, elle, répond à une question de saison. */}
+      {/* RANGÉE 2 — LES COURBES PAR TYPE, EN DOMINANTE.
+          Une courbe par modalité (top-3 + Autres, comptés en SQL), en nombres
+          de séances par jour — le look 21st.dev sans recharts. Elle répond à
+          « quelles modalités, quels jours » ; le « combien » reste au pouls
+          et à l'évolution. Même panneau, même hauteur qu'avant. */}
       <PanneauFinance
         titre={t.calendrier.titre}
         aide={t.calendrier.aide}
         icone="finances"
         ton="menthe"
       >
-        <SerieJournaliereV8 jours={apercu.calendrier} />
+        <CourbesTypes ventilation={apercu.calendrier_par_type} />
       </PanneauFinance>
 
       {/* RANGÉE 3 — 40 / 32 / 28. Évolution · Composition · Attention.

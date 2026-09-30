@@ -90,6 +90,7 @@ const CODES_FRONTIERE: ReadonlySet<string> = new Set<AppErrorCode>([
   "transcription",
   "synthese",
   "analyse",
+  "connaissance",
   // ⚠️ « inattendu » N'EST PAS DANS CETTE LISTE, et son absence est le point.
   // Le contrôle V1.1 de `preflight.sh` interdit d'écrire ce code hors
   // d'`errors.ts` : « chaque échec porte sa cause réelle, jamais un aveu

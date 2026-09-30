@@ -1,39 +1,55 @@
 "use client";
 
+import { fr } from "@/i18n/fr";
+
 /**
- * En-tête compact du cockpit — UNE ligne calme, pas deux en-têtes qui se
- * concurrencent. La coquille porte déjà l'identité en persistant ; ici le nom
- * reste le `h1` (plan du document) suivi du contexte séance sur la même ligne
- * visuelle, chrono modeste à l'autre bout.
+ * En-tête cockpit V11 — la coquille porte déjà le NOM (Topbar), ici on ne
+ * répète jamais le nom : contexte séance + durée, sur UNE ligne calme.
  *
  * Le chrono arrive en `ReactNode` (`ChronoSeance` reste propriétaire de son
- * tick dans la page) et le retour aussi (`LienBouton` garde sa sémantique
- * de lien). `meta` est déjà composée par l'appelant (`type · date`) ou
- * `null` : aucun formatage ici, donc aucune décision ici.
+ * tick dans la page) et le retour aussi. `meta` est déjà composée par
+ * l'appelant (`type · date`) : aucun formatage ici, donc aucune décision ici.
  */
 export function CockpitHeader({
-  titre,
   meta,
   chrono,
   retour,
+  terminee,
 }: {
-  readonly titre: string;
   readonly meta: string | null;
   readonly chrono: React.ReactNode;
   readonly retour: React.ReactNode;
+  readonly terminee: boolean;
 }): React.JSX.Element {
+  const cockpit = fr.consultation.cockpit;
   return (
-    <header className="flex flex-wrap items-baseline justify-between gap-x-5 gap-y-1 border-b border-rule pb-3">
-      <div className="flex min-w-0 flex-wrap items-baseline gap-x-3">
+    <header className="flex flex-wrap items-center justify-between gap-x-5 gap-y-2 border-b border-rule pb-3">
+      <div className="flex min-w-0 flex-wrap items-center gap-x-3 gap-y-1">
         {retour}
         <span aria-hidden="true" className="h-6 w-px shrink-0 self-center bg-rule" />
-        <h1 className="truncate font-ui text-heading font-bold text-ink-900">{titre}</h1>
         {meta === null ? null : (
-          <p className="truncate font-ui text-label tabular-nums text-ink-500">{meta}</p>
+          <p className="text-balance font-ui text-body font-semibold tabular-nums text-ink-900">
+            {meta}
+          </p>
         )}
       </div>
-      <p className="flex shrink-0 items-center gap-2 font-num text-num font-semibold tabular-nums text-ink-900">
-        {chrono}
+      <p
+        aria-label={cockpit.dureeSeance}
+        className="flex shrink-0 items-center gap-2.5 rounded-full border border-rule bg-card py-1 pl-3 pr-4 shadow-douce"
+      >
+        <span
+          aria-hidden="true"
+          className={[
+            "h-2 w-2 rounded-full",
+            terminee ? "bg-ink-300" : "bg-positive animate-respire",
+          ].join(" ")}
+        />
+        <span className="font-ui text-label font-medium text-ink-500">
+          {terminee ? cockpit.seanceTermineeLibelle : cockpit.seanceEnCours}
+        </span>
+        <span className="font-num text-body font-bold tabular-nums text-ink-900">
+          {chrono}
+        </span>
       </p>
     </header>
   );

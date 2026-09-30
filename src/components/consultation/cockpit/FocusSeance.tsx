@@ -1,7 +1,6 @@
 "use client";
 
 import { Bouton, ChampTexte } from "@/components/ui";
-import { Icone } from "@/components/ui/Icones";
 import { fr } from "@/i18n/fr";
 
 /**
@@ -38,50 +37,69 @@ export function FocusSeance({
     );
   }
 
+  const compteur =
+    selection.length === 0
+      ? cockpit.focusSousTitre
+      : `${String(selection.length)} ${
+          selection.length === 1 ? cockpit.focusCompteurUn : cockpit.focusCompteurPlus
+        } — ${selection.join(", ")}`;
+
   return (
     <section
       aria-label={cockpit.focusTitre}
-      className="flex flex-col gap-4 rounded-2xl border border-rule bg-card p-5 shadow-carte"
+      className="flex scroll-mt-28 flex-col gap-3 rounded-2xl border border-rule bg-layer-surface p-5 shadow-douce"
     >
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <div className="flex items-center gap-3">
-          <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-ambre-100 bg-tuile-ambre text-ambre-700 shadow-douce">
-            <Icone nom="fleche" taille={20} />
-          </span>
-          <div className="flex min-w-0 flex-col">
-            <h2 className="font-ui text-heading font-semibold text-ink-900">{cockpit.focusTitre}</h2>
-            {selection.length === 0 ? (
-              <p className="m-0 font-ui text-label font-medium text-ink-500">
-                Sujets de la séance — un clic = sélectionné
-              </p>
-            ) : (
-              <p className="m-0 font-ui text-label tabular-nums text-ink-500">
-                {`${String(selection.length)} · ${selection.join(", ")}`}
-              </p>
-            )}
-          </div>
-        </div>
+      <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+        <h2 className="text-balance font-ui text-heading font-bold text-ink-900">
+          {cockpit.focusTitre}
+        </h2>
+        <p
+          aria-live="polite"
+          className="m-0 max-w-full truncate font-ui text-label font-medium tabular-nums text-ink-500"
+          title={compteur}
+        >
+          {compteur}
+        </p>
       </div>
 
-      <div className="flex flex-wrap gap-2">
-        {options.map((option) => (
-          <Bouton
-            key={option}
-            rang="secondaire"
-            taille="compact"
-            enfonce={selection.includes(option)}
-            onClick={() => basculer(option)}
-          >
-            <span className="truncate">{option}</span>
-          </Bouton>
-        ))}
+      <div role="group" aria-label={cockpit.focusTitre} className="flex flex-wrap gap-2">
+        {options.map((option) => {
+          const actif = selection.includes(option);
+          return (
+            <button
+              key={option}
+              type="button"
+              aria-pressed={actif}
+              onClick={() => basculer(option)}
+              className={[
+                "inline-flex min-h-target items-center rounded-full border px-4 py-2",
+                "font-ui text-body font-semibold",
+                "transition duration-quick ease-out active:scale-95",
+                "outline-none focus-visible:outline focus-visible:outline-action-600 focus-visible:outline-offset",
+                actif
+                  ? "border-action-600 bg-action-600 text-on-brand shadow-douce"
+                  : "border-rule bg-card text-ink-700 shadow-lift0 hover:border-action-600 hover:text-action-900",
+              ].join(" ")}
+            >
+              {actif ? (
+                <span aria-hidden="true" className="mr-1.5 font-bold">✓</span>
+              ) : null}
+              <span className="truncate">{option}</span>
+            </button>
+          );
+        })}
       </div>
 
-      <div className="flex flex-wrap items-end gap-2">
+      <div className="flex flex-wrap items-end gap-2 border-t border-rule pt-3">
         <span className="min-w-40 flex-1">
           <ChampTexte libelle={cockpit.focusLibre} valeur={libre} onChange={onLibre} />
         </span>
-        <Bouton rang="secondaire" onClick={onAppliquer} disabled={!peutAppliquer}>
+        <Bouton
+          rang={peutAppliquer ? "principal" : "secondaire"}
+          taille="compact"
+          onClick={onAppliquer}
+          disabled={!peutAppliquer}
+        >
           {cockpit.focusAppliquer}
         </Bouton>
       </div>

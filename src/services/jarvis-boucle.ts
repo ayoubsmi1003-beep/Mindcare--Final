@@ -87,6 +87,11 @@ import {
   propositionAutorisee,
 } from "./jarvis-routage-intentions";
 import type { NomIntention } from "@/shared/jarvis/intentions";
+import { COMPATIBLE } from "@/shared/jarvis/intentions";
+import { planifierLecturesLocales, poursuitIntention } from "@/shared/jarvis/lectures-locales";
+import { resoudreReferenceTemporelle } from "@/shared/jarvis/temporal";
+import { formaterLectureLocale } from "./jarvis-reponses-locales";
+import { alexa } from "@/i18n/alexa";
 import { log } from "./log";
 import { err, ok, type Result } from "./result";
 import type { AppError } from "./errors";
@@ -433,6 +438,7 @@ function nouvelIdentifiant(): string {
  * et la suite d'évaluation restera comparable de part et d'autre.
  */
 export interface DependancesBoucle {
+  readonly lecturesLocales?: boolean;
   readonly transport: typeof demanderAJarvisEnFlux;
   readonly registre: typeof capaciteLecture;
   readonly description: () => string;
@@ -451,6 +457,7 @@ export interface DependancesBoucle {
 }
 
 const DEPENDANCES_REELLES: DependancesBoucle = {
+  lecturesLocales: true,
   transport: demanderAJarvisEnFlux,
   registre: capaciteLecture,
   description: descriptionDesCapacites,
@@ -641,7 +648,7 @@ export async function executerTour(
       // jamais un contournement.
       const travail = params.travail ?? null;
       if (
-        travail !== null &&
+        travail !== null && poursuitIntention(params.message) &&
         travail.conversationId === params.conversationId &&
         travail.intentionPrecedente !== null &&
         travail.patientId !== null &&
@@ -660,6 +667,52 @@ export async function executerTour(
         }
       }
     }
+  }
+
+  const lectures = deps.lecturesLocales === true ? planifierLecturesLocales(params.message) : null;
+  if (lectures !== null) {
+    const appels: TraceAppel[] = [...tracesSonde];
+    const textes: string[] = [];
+    let ancreCandidate: BilanTour["ancreCandidate"] = null;
+    let intentionRetenu: NomIntention | null = null;
+    let localCarte = reinitialiserCarte();
+    for (const lecture of lectures) {
+      if (signal.aborted) return ok(bilanAveu(alexa.interrompu, runId, appels, [], null));
+      const nom = COMPATIBLE[lecture.name][0];
+      const capacite = nom === undefined ? null : deps.registre(nom);
+      if (nom === undefined || capacite === null) return err({ code: "indisponible", message: alexa.lectureIndisponible });
+      const cible = cibleValide();
+      if (estPatientSpecifique(capacite) && cible === null) return bilanClarificationM02(fr.jarvis.contexte.preciserPatient, verdict, null);
+      const args: Record<string, unknown> = {};
+      if (estPatientSpecifique(capacite) && cible !== null) args["patientId"] = localCarte.patient(cible.id, cible.libelle, [cible.libelle, cible.numeroDossier].filter(Boolean));
+      const temporal = resoudreReferenceTemporelle(lecture.entities.dateMention ?? "");
+      const jour = temporal?.type === "jour" ? temporal.jour : aujourdHui();
+      if (lecture.entities.dateMention !== undefined && temporal === null) return err({ code: "regle-metier", message: alexa.format });
+      if (lecture.name === "GET_TODAY_AGENDA" || lecture.name === "GET_DAY_REVENUE") args["jour"] = jour;
+      if (lecture.name === "GET_PERIOD_REVENUE") args["periode"] = /semaine|اسبوع/u.test(params.message) ? "semaine" : /annee|سنه/u.test(params.message) ? "annee" : "mois";
+      rappels.onCapacite?.(nom);
+      const { resultat, trace } = await executerCapacite(nom, args, { carte: localCarte, aujourdHui: jour }, signal, deps.registre);
+      appels.push(trace);
+      if (signal.aborted || cibleValide() !== cible || carteCourante() !== localCarte) return ok(bilanAveu(alexa.contexteChange, runId, appels, [], null));
+      if (!resultat.ok || resultat.donnees === null) return err({ code: resultat.motifEchec === "interdit" ? "interdit" : "indisponible", message: resultat.motifEchec === "interdit" ? fr.erreurs.interdit : alexa.lectureIndisponible });
+      textes.push(formaterLectureLocale(lecture.name, resultat.donnees)); intentionRetenu = lecture.name;
+      if (estPatientSpecifique(capacite) && cible !== null) ancreCandidate = { id: cible.id, libelle: cible.libelle };
+      if (lecture.name === "GET_NEXT_PATIENT" && "creneaux" in resultat.donnees && resultat.donnees.creneaux.length === 1) {
+        const ref = resultat.donnees.creneaux[0]?.patient;
+        const id = ref ? localCarte.resoudre(ref) : null;
+        const libelle = id ? localCarte.libellePourIdentifiant(id) : null;
+        if (id && libelle) {
+          ancreCandidate = { id, libelle };
+          // Explicit next-patient selection is read from the SQL gate, never guessed.
+          textes[textes.length - 1] = localCarte.rendre(textes[textes.length - 1]!);
+          adopterResolution({ etat: "explicite", cible: { id, libelle, numeroDossier: "", origine: "recherche" } }, Date.now());
+          localCarte = reinitialiserCarte();
+        } else if (lectures.length > 1) return bilanClarificationM02(fr.jarvis.contexte.preciserPatient, verdict, null);
+      }
+    }
+    return ok({ texte: textes.join("\n\n"), chemin: "patient", interrompu: false, persiste: false,
+      appels, runId, snapshots: [], preuves: [], propositionInconnue: null, ancreCandidate,
+      resolution: { verdict, intentionChainee: null, intentionRetenu } });
   }
 
   /**

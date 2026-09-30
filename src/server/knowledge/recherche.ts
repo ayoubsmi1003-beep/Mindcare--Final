@@ -48,6 +48,11 @@ export interface CandidatBrut {
   readonly texte: string;
   /** Similarité native de la branche (0..1), ou `null` si l'autre branche. */
   readonly score: number;
+  /** D3-A : lignée — `null` = inconnue. */
+  readonly unitId: string | null;
+  readonly parentTexteHash: string | null;
+  readonly enfantIndex: number | null;
+  readonly enfantsTotal: number | null;
 }
 
 /** Un candidat fusionné : les deux branches, ou une seule. */
@@ -62,6 +67,11 @@ export interface CandidatFusionne {
   readonly texte: string;
   readonly scoreLexical: number | null;
   readonly scoreVectoriel: number | null;
+  /** D3-A : lignée — `null` = inconnue (identique des deux branches, même chunk). */
+  readonly unitId: string | null;
+  readonly parentTexteHash: string | null;
+  readonly enfantIndex: number | null;
+  readonly enfantsTotal: number | null;
 }
 
 /**
@@ -87,6 +97,10 @@ export function fusionnerCandidats(
       texte: candidat.texte,
       scoreLexical: candidat.score,
       scoreVectoriel: null,
+      unitId: candidat.unitId,
+      parentTexteHash: candidat.parentTexteHash,
+      enfantIndex: candidat.enfantIndex,
+      enfantsTotal: candidat.enfantsTotal,
     });
   }
   for (const candidat of vectoriels.slice(0, LIMITES.VECTORIEL)) {
@@ -103,6 +117,10 @@ export function fusionnerCandidats(
         texte: candidat.texte,
         scoreLexical: null,
         scoreVectoriel: candidat.score,
+        unitId: candidat.unitId,
+        parentTexteHash: candidat.parentTexteHash,
+        enfantIndex: candidat.enfantIndex,
+        enfantsTotal: candidat.enfantsTotal,
       });
     } else {
       parChunk.set(candidat.chunkId, { ...existant, scoreVectoriel: candidat.score });
@@ -120,6 +138,13 @@ function meilleurScore(candidat: Pick<CandidatFusionne, "scoreLexical" | "scoreV
 /**
  * Applique le budget d'évidence : items entiers, on retire par la fin (les
  * moins bien rangés d'abord). Rend les retenues + si une coupe a eu lieu.
+ *
+ * M08-A — cohérence du contrat : quand la TÊTE seule dépasse le budget,
+ * servir son préfixe plutôt que de vider la réponse (une issue
+ * `pertinent`/`faible` avec `evidences` vides est un état incohérent :
+ * la passerelle le lirait `sans-preuve` et masquerait une preuve réelle).
+ * Provenance intacte, `tronque: true` dit la coupe. Au-delà de la tête :
+ * entiers ou rien, jamais de demi-preuve.
  */
 export function appliquerBudgetOctets<T extends { readonly texte: string }>(
   evidences: readonly T[],
@@ -129,6 +154,9 @@ export function appliquerBudgetOctets<T extends { readonly texte: string }>(
   const retenues: T[] = [];
   for (const evidence of evidences) {
     if (total + evidence.texte.length > budget) {
+      if (retenues.length === 0 && total === 0 && evidence.texte.length > budget && budget > 0) {
+        retenues.push({ ...evidence, texte: evidence.texte.slice(0, budget) });
+      }
       return { retenues, tronque: true };
     }
     total += evidence.texte.length;
@@ -149,6 +177,10 @@ export function versCandidat(ligne: LignePorte): CandidatBrut {
     langue: ligne.langue,
     texte: ligne.texte,
     score: ligne.score,
+    unitId: ligne.unit_id ?? null,
+    parentTexteHash: ligne.parent_texte_hash ?? null,
+    enfantIndex: ligne.enfant_index ?? null,
+    enfantsTotal: ligne.enfants_total ?? null,
   };
 }
 

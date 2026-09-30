@@ -37,7 +37,7 @@ const ROUTES = [
  * dans les commentaires : un nom de modèle cité dans une phrase documente une
  * mesure, il ne couple rien à un fournisseur.
  */
-const NOMS_DE_MODELE = /nemotron|gemini-2\.5|gpt-4|claude-3/;
+const NOMS_DE_MODELE = /nemotron|gemini-2\.5|gemini-3\.8|gpt-4|claude-3/;
 
 function lignesDeCode(chemin: string): readonly string[] {
   return readFileSync(join(process.cwd(), chemin), "utf8")
@@ -66,6 +66,8 @@ beforeEach(() => {
 afterEach(() => {
   delete process.env.OPENROUTER_MODEL;
   delete process.env.LLM_MODEL;
+  delete process.env.JARVIS_CHAT_MODEL;
+  delete process.env.JARVIS_RESUME_MODEL;
   if (urlPrecedente === undefined) delete process.env.MINDCARE_DATABASE_URL;
   else process.env.MINDCARE_DATABASE_URL = urlPrecedente;
   reinitialiserEnv();
@@ -123,5 +125,49 @@ describe("la précédence de configuration est celle de la passerelle", () => {
     for (const route of ROUTES) {
       expect(readFileSync(join(process.cwd(), route), "utf8")).not.toContain(repli);
     }
+  });
+
+  it("le repli courant est gemini-3.8-flash (décision Slice 1)", () => {
+    delete process.env.OPENROUTER_MODEL;
+    delete process.env.LLM_MODEL;
+    reinitialiserEnv();
+    expect(resolveModel()).toBe("google/gemini-3.8-flash");
+    expect(resolveModel("jarvis")).toBe("google/gemini-3.8-flash");
+    expect(resolveModel("resume-cas")).toBe("google/gemini-3.8-flash");
+  });
+});
+
+describe("la surcharge par usage ne fuit jamais sur l'autre usage", () => {
+  it("JARVIS_CHAT_MODEL ne change que le chemin jarvis", () => {
+    process.env.JARVIS_CHAT_MODEL = "essai/chat-libre";
+    reinitialiserEnv();
+    expect(resolveModel("jarvis")).toBe("essai/chat-libre");
+    // Le résumé garde le global — une surcharge de test ne peut pas
+    // silencieusement changer le modèle du dossier clinique.
+    expect(resolveModel("resume-cas")).toBe("google/gemini-3.8-flash");
+    expect(resolveModel()).toBe("google/gemini-3.8-flash");
+  });
+
+  it("JARVIS_RESUME_MODEL ne change que le chemin resume-cas", () => {
+    process.env.JARVIS_RESUME_MODEL = "essai/resume-libre";
+    reinitialiserEnv();
+    expect(resolveModel("resume-cas")).toBe("essai/resume-libre");
+    expect(resolveModel("jarvis")).toBe("google/gemini-3.8-flash");
+  });
+
+  it("OPENROUTER_MODEL reste le global quand aucune surcharge n'est posée", () => {
+    process.env.OPENROUTER_MODEL = "essai/global";
+    reinitialiserEnv();
+    expect(resolveModel()).toBe("essai/global");
+    expect(resolveModel("jarvis")).toBe("essai/global");
+    expect(resolveModel("resume-cas")).toBe("essai/global");
+  });
+
+  it("la surcharge prime sur le global pour son usage seul", () => {
+    process.env.OPENROUTER_MODEL = "essai/global";
+    process.env.JARVIS_CHAT_MODEL = "essai/chat-libre";
+    reinitialiserEnv();
+    expect(resolveModel("jarvis")).toBe("essai/chat-libre");
+    expect(resolveModel("resume-cas")).toBe("essai/global");
   });
 });

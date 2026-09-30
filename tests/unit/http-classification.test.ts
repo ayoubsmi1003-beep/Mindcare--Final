@@ -194,6 +194,27 @@ describe("http.invokeFunction — enveloppe Jarvis imbriquée", () => {
     // exactement la distinction d'organe motivée dans errors.ts.
     expect(erreur(r).code).toBe("transcription");
   });
+
+  // Audit Slice 1 — deux organes qui annonçaient « service de données ».
+  it("citation-invalide → connaissance, PAS indisponible", async () => {
+    repondre(
+      JSON.stringify({ ok: false, error: { code: "citation-invalide" } }),
+      { status: 200, headers: { "Content-Type": "application/json" } },
+    );
+    const r = await httpDbPort.invokeFunction("jarvis-chat", {});
+    expect(erreur(r).code).toBe("connaissance");
+    // Le message nomme la recherche documentaire, pas les données.
+    expect(erreur(r).message).toContain("recherche documentaire");
+  });
+
+  it("configuration (clé modèle) → analyse, PAS indisponible", async () => {
+    repondre(
+      JSON.stringify({ ok: false, error: { code: "configuration" } }),
+      { status: 200, headers: { "Content-Type": "application/json" } },
+    );
+    const r = await httpDbPort.invokeFunction("jarvis-chat", {});
+    expect(erreur(r).code).toBe("analyse");
+  });
 });
 
 describe("le contrat de `lireEnveloppe` sur des réponses natives", () => {

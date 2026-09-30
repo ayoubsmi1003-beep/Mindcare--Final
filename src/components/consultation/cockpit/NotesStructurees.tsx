@@ -3,7 +3,6 @@
 import { useState } from "react";
 
 import { Bouton, ChampTexte, ChampZoneTexte } from "@/components/ui";
-import { Icone } from "@/components/ui/Icones";
 import { fr } from "@/i18n/fr";
 import { CHAMPS_SOAP, type ChampSoap } from "@/services/consultations";
 
@@ -120,15 +119,12 @@ export function NotesStructurees({
   return (
     <section
       aria-label={cockpit.notesTitre}
-      className="flex flex-col gap-4 rounded-2xl border border-rule bg-card p-5 shadow-carte"
+      className="flex scroll-mt-28 flex-col gap-4 rounded-2xl border border-action-100 bg-card p-5 shadow-elevee sm:p-6"
     >
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <div className="flex items-center gap-3">
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-action-100 bg-tuile-menthe text-emeraude-700 shadow-douce">
-            <Icone nom="documents" taille={20} />
-          </span>
-          <h2 className="font-ui text-heading font-bold text-ink-900">{cockpit.notesTitre}</h2>
-        </div>
+        <h2 className="text-balance font-ui text-title font-bold text-ink-900">
+          {cockpit.notesTitre}
+        </h2>
         {action ?? null}
       </div>
 
@@ -194,19 +190,20 @@ export function NotesStructurees({
             valeur={soap[champ]}
             onChange={(v) => onChanger(champ, v)}
             zoneRef={refs[champ]}
-            lignes={5}
+            lignes={6}
             clinique
             action={modifiable && champ === actif ? micro(champ) : undefined}
           />
         </div>
       ))}
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-2">
         {modifiable ? (
-          <div className="flex flex-wrap gap-2">
+          <div className="-mx-1 flex gap-2 overflow-x-auto px-1 pb-1">
             {cockpit.pistes[actif].map((piste) => (
               <Bouton
                 key={piste}
                 rang="discret"
+                taille="compact"
                 onClick={() => onChanger(actif, ajouterPiste(soap[actif], piste))}
               >
                 {piste}

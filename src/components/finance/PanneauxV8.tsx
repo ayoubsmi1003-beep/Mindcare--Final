@@ -35,16 +35,21 @@
 
 import {
   Aire,
+  alignerCourbesTypes,
   Anneau,
   BarresGroupees,
+  FAMILLES,
+  LignesMultiples,
   type GroupeBarres,
   type PartAnneau,
   type PointSerie,
+  type SerieLigne,
 } from "@/components/ui/Graphes";
 import { Tuile, TuileVedette } from "@/components/ui/Tuile";
 import { fr } from "@/i18n/fr";
 import {
   formaterDzd,
+  type CalendrierParType,
   type JourCaisse,
   type PartCharge,
   type PartRevenu,
@@ -175,7 +180,13 @@ export function EvolutionV8({ serie }: { readonly serie: readonly SeauMois[] }):
 
   const groupes: GroupeBarres[] = serie.map((s) => ({
     cle: s.mois_iso,
-    label: s.mois_label.slice(0, 4),
+    // ⚠️ `mois_label` EST DÉJÀ UN LIBELLÉ D'AXE, et c'est Postgres qui l'écrit
+    // (`ARRAY['janv.','févr.','mars',…]`, migration 040). Le `.slice(0, 4)`
+    // d'avant ne servait qu'à le mutiler : « sept. » devenait « sept », sans
+    // point, et « janv. » devenait « janv ». Un mois français s'écrit avec son
+    // point, ou pas du tout. Aucune troncature ici — la largeur de cellule est
+    // déjà calculée pour que le mois tienne.
+    label: s.mois_label,
     a: s.revenu,
     b: s.charges,
     ligne: s.resultat_net,
@@ -341,6 +352,67 @@ export function SerieJournaliereV8({
       titreTableau={t.titre}
       colonneLabel={fr.graphes.colonneJour}
       colonneValeur={fr.graphes.colonneMontant}
+    />
+  );
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * LES COURBES PAR TYPE — le calendrier multi-lignes (look 21st.dev)
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+/**
+ * Une courbe par type de consultation, en NOMBRES de séances par jour.
+ *
+ * Remplace l'aire unique (montant encaissé) dans la Rangée 2 : la question du
+ * panneau n'est plus « combien » (le pouls et l'évolution y répondent) mais
+ * « quelles modalités, quels jours ». Le montant reste dans l'onglet Séances.
+ *
+ * ⚠️ AUCUNE ARITHMÉTIQUE ICI. `alignerCourbesTypes` RANGE les lignes SQL sur
+ * les jours (zéro quand absent) — aucun total, aucune part. Les libellés
+ * reprennent `libelleType`, la même que l'anneau Anatomie : les deux panneaux
+ * nomment les types pareil.
+ */
+export function CourbesTypes({
+  ventilation,
+}: {
+  readonly ventilation: CalendrierParType;
+}): React.JSX.Element {
+  const t = fr.finances.calendrier;
+  const tp = fr.finances.pulse;
+
+  if (ventilation.types.length === 0) {
+    return <p className="font-ui text-body text-ink-500">{t.aucunType}</p>;
+  }
+
+  // Les jours dans l'ordre de la porte (`ORDER BY jour`) — `Set` garde
+  // l'ordre d'insertion, donc aucun tri à refaire ici.
+  const jours = [...new Set(ventilation.lignes.map((l) => l.jour_iso))];
+  const courbes = alignerCourbesTypes(
+    ventilation.lignes,
+    jours,
+    ventilation.types.map((ty) => ty.cle),
+  );
+
+  const series: SerieLigne[] = courbes.map((c, i) => ({
+    cle: c.cle,
+    label: c.cle === "autres" ? t.autres : libelleType(c.cle),
+    valeurs: c.valeurs,
+    famille: FAMILLES[i % FAMILLES.length] ?? "emeraude",
+  }));
+
+  const formaterCompte = (v: number): string =>
+    v === 1 ? tp.uneSeance : tp.seances.replace("{n}", String(v));
+
+  return (
+    <LignesMultiples
+      series={series}
+      labelsX={jours.map((j) => j.slice(8, 10))}
+      titreTableau={t.tableauTypes}
+      colonneLabel={fr.graphes.colonneJour}
+      formaterCompte={formaterCompte}
+      /* `h-36`, comme l'aire remplacée : le budget vertical de la Rangée 2
+         (page.tsx) ne change pas d'un pixel. */
+      hauteurClasse="h-36"
     />
   );
 }

@@ -57,11 +57,32 @@ const Schema = z.object({
   JARVIS_ENABLED: z.string().optional(),
   JARVIS_STREAMING: z.string().optional(),
   JARVIS_VOICE_ENABLED: z.string().optional(),
+  ALEXA_LOCAL_VOICE: z.enum(["true", "false"]).default("true"),
+  ALEXA_VOICE_ASSETS: z.string().optional(),
+  ALEXA_VOICE_PYTHON: z.string().optional(),
+  ALEXA_VOICE_PACKAGES: z.string().optional(),
+  ALEXA_VOICE_WORKER_DIR: z.string().optional(),
+  // Audit Slice 1 — pré-routage JEV (modèle de décision TypeSafe via
+  // l'API Decisions, voir `decisions()` dans la passerelle). OFF par défaut :
+  // le classifieur LLM existant reste le chemin nominal tant que cet
+  // interrupteur n'est pas explicitement `"true"`. `JEV_MODEL` épingle le
+  // slug (repli : `JEV_MODEL_DEFAUT` dans la passerelle).
+  JARVIS_JEV_ENABLED: z.string().optional(),
+  JEV_MODEL: z.string().optional(),
 
   // ── Fournisseurs — tous facultatifs, voir l'en-tête ────────────────────
   OPENROUTER_API_KEY: z.string().optional(),
+  OPENROUTER_MODEL_TIMEOUT_MS: z.coerce.number().int().min(1000).max(10_000).optional(),
+  OPENROUTER_QUALIFICATION_FILE: z.string().optional(),
   OPENROUTER_MODEL: z.string().optional(),
   LLM_MODEL: z.string().optional(),
+  // Audit Slice 1 — surcharges par usage, JAMAIS en dur dans les routes.
+  // `JARVIS_CHAT_MODEL` (chemin `jarvis` : conversation, intentions) et
+  // `JARVIS_RESUME_MODEL` (chemin `resume-cas`) priment sur `OPENROUTER_MODEL`
+  // pour leur usage seul. Serveur uniquement, comme les autres (règle 2).
+  // Ex. tests gratuits : `…:free` ici, sans toucher la production.
+  JARVIS_CHAT_MODEL: z.string().optional(),
+  JARVIS_RESUME_MODEL: z.string().optional(),
   GROQ_API_KEY: z.string().optional(),
   STT_MODEL: z.string().optional(),
   ELEVENLABS_API_KEY: z.string().optional(),
@@ -141,4 +162,14 @@ export function jarvisFluxActif(): boolean {
 
 export function jarvisVoixActive(): boolean {
   return env().JARVIS_VOICE_ENABLED === "true";
+}
+
+/**
+ * Pré-routage JEV — même convention stricte que les autres interrupteurs :
+ * la chaîne `"true"` active, tout le reste désactive. OFF par défaut, et
+ * c'est voulu : JEV est payant et le classifieur LLM reste le nominal.
+ */
+export function jevActif(): boolean {
+  // The decisions endpoint is paid; the approved Jarvis mode is free-only.
+  return false;
 }

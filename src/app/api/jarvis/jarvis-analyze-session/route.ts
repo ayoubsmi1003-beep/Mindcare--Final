@@ -351,13 +351,15 @@ export async function POST(req: Request): Promise<Response> {
     messages,
     sessionToken,
     signal: req.signal,
+    besoin: { tache: "analyse", json: true },
   });
 
   if (!premierAppel.ok) {
-    return echec(premierAppel.error.code, premierAppel.error.message);
+    return echec(premierAppel.error.code === "indisponible" ? "analyse-indisponible" : premierAppel.error.code, premierAppel.error.message);
   }
 
   let validee = validerEtNettoyer(premierAppel.data);
+  let modeleUtilise = premierAppel.inference?.model ?? resolveModel("jarvis");
 
   if (validee === null) {
     // Même abandon sur la reformulation : un client déjà parti ne doit pas
@@ -368,6 +370,7 @@ export async function POST(req: Request): Promise<Response> {
       promptHash,
       sessionToken,
       signal: req.signal,
+      besoin: { tache: "analyse", json: true },
       messages: [
         ...messages,
         { role: "user" as const, content: "Le format n'était pas respecté. Réponds STRICTEMENT au format JSON demandé, sans aucun texte hors du JSON." },
@@ -375,9 +378,10 @@ export async function POST(req: Request): Promise<Response> {
     });
 
     if (!reformulation.ok) {
-      return echec(reformulation.error.code, reformulation.error.message);
+      return echec(reformulation.error.code === "indisponible" ? "analyse-indisponible" : reformulation.error.code, reformulation.error.message);
     }
     validee = validerEtNettoyer(reformulation.data);
+    modeleUtilise = reformulation.inference?.model ?? modeleUtilise;
   }
 
   if (validee === null) {
@@ -433,8 +437,9 @@ export async function POST(req: Request): Promise<Response> {
       p_content: JSON.stringify(resultat),
       p_source_state: JSON.stringify(etatSource),
       // Le modèle RÉELLEMENT résolu par la passerelle, pas une copie de sa
-      // chaîne de repli : l'audit doit nommer ce qui a servi.
-      p_model: resolveModel(),
+      // chaîne de repli : l'audit doit nommer ce qui a servi. Le purpose
+      // suit les appels `llm({purpose: "jarvis"})` de cette route (Slice 1).
+      p_model: modeleUtilise,
       p_prompt_version: PROMPT_VERSION,
       p_prompt_hash: promptHash,
     },

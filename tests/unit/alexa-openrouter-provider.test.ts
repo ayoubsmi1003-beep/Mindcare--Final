@@ -1,0 +1,47 @@
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import { openRouterProvider } from "../../src/server/egress/external-call";
+import { reinitialiserEnv } from "../../src/server/env";
+
+const originalFetch = globalThis.fetch;
+beforeEach(() => {
+  process.env.MINDCARE_DATABASE_URL = "postgresql://essai:essai@127.0.0.1:1/essai";
+  process.env.OPENROUTER_API_KEY = "synthetic-key"; reinitialiserEnv();
+});
+afterEach(() => { globalThis.fetch = originalFetch; delete process.env.OPENROUTER_API_KEY; reinitialiserEnv(); });
+const requete = { model: "essai/a:free", messages: [{ role: "user" as const, content: "Bonjour" }], timeoutMs: 100 };
+
+function sse(text: string): Response { return new Response(text, { headers: { "Content-Type": "text/event-stream" } }); }
+describe("transport OpenRouter réel, fault injection limitée à fetch", () => {
+  it("ne publie pas un faux succès sur EOF prématuré", async () => {
+    globalThis.fetch = vi.fn(async () => new Response(new ReadableStream<Uint8Array>({
+      start(c) { c.enqueue(new TextEncoder().encode('data: {"choices":[{"delta":{"content":"Bonjour"}}]}\n\n')); },
+      async pull(c) { await new Promise((r) => setTimeout(r, 10)); c.close(); },
+    })));
+    const flux = await openRouterProvider.stream(requete);
+    const reader = flux.deltas.getReader();
+    await expect(reader.read()).resolves.toMatchObject({ value: "Bonjour" });
+    await expect(reader.read()).rejects.toMatchObject({ code: "MALFORMED_RESPONSE" });
+    await expect(flux.usage).rejects.toMatchObject({ code: "MALFORMED_RESPONSE" });
+  });
+  it("HTTP 429 fournisseur conserve son code, sans réémettre le message brut", async () => {
+    globalThis.fetch = vi.fn(async () => Response.json({ error: { message: "private-body", metadata: { provider_name: "upstream" } } }, { status: 429 }));
+    await expect(openRouterProvider.complete(requete)).rejects.toMatchObject({ code: "MODEL_RATE_LIMIT", scope: "model" });
+  });
+  it("erreur SSE avant texte est rejetée avant retour du flux, donc rejouable", async () => {
+    globalThis.fetch = vi.fn(async () => sse('data: {"error":{"code":503,"message":"private-body"}}\n\n'));
+    await expect(openRouterProvider.stream(requete)).rejects.toMatchObject({ code: "PROVIDER_UNAVAILABLE" });
+  });
+  it("annulation avant requête ne contacte pas le fournisseur", async () => {
+    const fetch = vi.fn(async () => sse("data: [DONE]\n\n")); globalThis.fetch = fetch;
+    const c = new AbortController(); c.abort();
+    await expect(openRouterProvider.stream({ ...requete, signal: c.signal })).rejects.toMatchObject({ code: "CANCELLED" });
+    expect(fetch).not.toHaveBeenCalled();
+  });
+  it("la fin normale expose seulement les deltas de contenu et l'usage", async () => {
+    globalThis.fetch = vi.fn(async () => sse('data: {"choices":[{"delta":{"reasoning":"hidden"}}]}\n\ndata: {"choices":[{"delta":{"content":"Bonjour"}}]}\n\ndata: {"choices":[{"delta":{},"finish_reason":"stop"}],"usage":{"prompt_tokens":3,"completion_tokens":2}}\n\ndata: [DONE]\n\n'));
+    const flux = await openRouterProvider.stream(requete);
+    let text = ""; const r = flux.deltas.getReader();
+    for (;;) { const v = await r.read(); if (v.done) break; text += v.value; }
+    expect(text).toBe("Bonjour"); expect(await flux.usage).toEqual({ tokensIn: 3, tokensOut: 2 });
+  });
+});

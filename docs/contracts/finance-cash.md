@@ -9,6 +9,10 @@
 Paiement marqué encaissé + écriture de caisse, numérotation par compteur table
 (jamais `SEQUENCE`).
 
+Lecture `get_finance_overview` (119) : `calendrier_par_type` = `{ types,
+lignes }` — top-3 modalités + `autres` (somme SQL), `{ jour_iso, cle, nb }`
+entiers par (jour, courbe). L'écran aligne, il ne somme pas.
+
 ## AUTHORIZATION
 RLS + portes `029` (paiements), `036`/`039`–`041` (période, caisse, correctifs).
 Correction de montant possible uniquement AVANT encaissement ; `trg_audit` trace.

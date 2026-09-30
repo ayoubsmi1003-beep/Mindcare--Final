@@ -27,6 +27,7 @@ import {
   sqlSelectionLotBase64,
   sqlUniformiteRecette,
   validerIdChunk,
+  verifierEmpreinteException,
   verifierRetourLot,
 } from "../../scripts/remplir-embeddings-sql.mjs";
 
@@ -161,6 +162,27 @@ describe("gardes : active=0, inventaire, uniformité", () => {
     expect(texte).toContain("embedding IS NOT NULL");
     expect(params).toContain("BAAI/bge-m3");
   });
+
+  it("uniformité : portée source optionnelle (scopée, jamais globale par défaut changée)", () => {
+    const DSM = "9ed1c042-fd2b-5599-a470-8c93b0566739";
+    const sans = sqlUniformiteRecette(RECETTE);
+    expect(sans.texte).not.toContain("source_id");
+    const scopée = sqlUniformiteRecette(RECETTE, { sourceId: DSM });
+    expect(scopée.texte).toContain("source_id");
+    expect(scopée.texte).toContain(DSM);
+    expect(scopée.params).toEqual(sans.params);
+  });
+
+  it("uniformité exception : chunkers struct-v2 admis quand la recette d'exception le porte", () => {
+    const RECETTE_DSM = { ...RECETTE, chunkers: [...RECETTE.chunkers, "struct-v2"] };
+    const { texte, params } = sqlUniformiteRecette(RECETTE_DSM, {
+      sourceId: "9ed1c042-fd2b-5599-a470-8c93b0566739",
+    });
+    expect(params[8]).toEqual(["struct-v1", "struct-v1.1", "struct-v2"]);
+    const lie = lierParams(texte, params);
+    expect(lie).toContain('\'{"struct-v1","struct-v1.1","struct-v2"}\'');
+    expect(lie).not.toMatch(/\$\d/);
+  });
 });
 
 describe("transport socket R3-P2 : interpolation testée, appariement prouvé", () => {
@@ -188,9 +210,13 @@ describe("transport socket R3-P2 : interpolation testée, appariement prouvé", 
     expect(lierParams("SELECT $1::timestamptz, $2", [null, "x"])).toBe("SELECT NULL::timestamptz, 'x'");
   });
 
-  it("validerIdChunk : 8-hex seuls — tout autre alphabet refusé", () => {
+  it("validerIdChunk : 8-hex, dsm5-8-hex ou taylor-8-hex (D4 2026-09-26) — tout autre alphabet refusé", () => {
     expect(validerIdChunk("abcdef12")).toBe("abcdef12");
+    expect(validerIdChunk("dsm5-abcdef12")).toBe("dsm5-abcdef12");
+    expect(validerIdChunk("taylor-abcdef12")).toBe("taylor-abcdef12");
+    expect(() => validerIdChunk("taylor-abcdef1; DROP")).toThrow(/inattendu/);
     expect(() => validerIdChunk("chunk-0")).toThrow(/inattendu/);
+    expect(() => validerIdChunk("dsm5-abcdef1; DROP")).toThrow(/inattendu/);
     expect(() => validerIdChunk("abcdef1; DROP")).toThrow(/inattendu/);
     expect(() => validerIdChunk("")).toThrow(/inattendu/);
   });
@@ -275,5 +301,60 @@ describe("transport socket R3-P2 : interpolation testée, appariement prouvé", 
     expect(texte).toContain("statut = 'active'");
     expect(texte).toContain("GROUP BY s.id ORDER BY s.id");
     expect(params).toEqual([]);
+  });
+});
+
+describe("exception G1-A — DSM actif (double clé, rails intacts sans elle)", () => {
+  const DSM = "9ed1c042-fd2b-5599-a470-8c93b0566739";
+  const AUTRE = "00000000-0000-0000-0000-0000000000a1";
+
+  it("sans exception : sélection historique à l'octet (jamais de lot actif)", () => {
+    const { texte, params } = sqlSelectionLot(8, RECETTE);
+    expect(texte).toContain("NOT EXISTS");
+    expect(texte).not.toContain(DSM);
+    expect(params[9]).toEqual(["struct-v1", "struct-v1.1"]);
+  });
+
+  it("avec exception : struct-v2 admis + exemption DSM épinglée, source forcée", () => {
+    const { texte, params } = sqlSelectionLot(8, RECETTE, [], { sourceId: DSM, exceptionDsmActive: true });
+    expect(params[9]).toEqual(["struct-v1", "struct-v1.1", "struct-v2"]);
+    expect(texte).toContain(`source_id = $${params.length - 1}::uuid`);
+    expect(texte).toContain("OR app.knowledge_chunks.source_id");
+    expect(params[params.length - 1]).toBe(DSM);
+    expect(params[params.length - 2]).toBe(DSM);
+    const lie = lierParams(texte, params);
+    expect(lie).not.toMatch(/\$\d/);
+  });
+
+  it("exception sur autre uuid → refus (jamais d'exception libre)", () => {
+    expect(() => sqlSelectionLot(8, RECETTE, [], { sourceId: AUTRE, exceptionDsmActive: true })).toThrow(
+      /hors périmètre/,
+    );
+    expect(() => sqlSelectionLot(8, RECETTE, [], { exceptionDsmActive: true })).toThrow(/exigé/);
+  });
+
+  it("garde par lot : inchangée sans exception, exempte le seul DSM avec elle", () => {
+    const histo = sqlGardeLotActif(["abcdef12"]);
+    expect(histo.params).toEqual([["abcdef12"]]);
+    const excepte = sqlGardeLotActif(["abcdef12"], DSM);
+    expect(excepte.params).toEqual([["abcdef12"], DSM]);
+    expect(excepte.texte).toContain("s.id <> $2::uuid");
+    expect(() => sqlGardeLotActif(["abcdef12"], AUTRE)).toThrow(/hors périmètre/);
+  });
+
+  it("verifierEmpreinteException : autres identiques + DSM +écrits = ok", () => {
+    const avant = `aaa|10\n${DSM}|0\nbbb|5`;
+    const apres = `aaa|10\n${DSM}|64\nbbb|5`;
+    expect(verifierEmpreinteException(avant, apres, 64)).toBe(true);
+  });
+
+  it("verifierEmpreinteException : refuse source tierce modifiée, delta faux, DSM absent", () => {
+    expect(() => verifierEmpreinteException(`aaa|10\n${DSM}|0`, `aaa|11\n${DSM}|64`, 64)).toThrow(
+      /hors périmètre/,
+    );
+    expect(() => verifierEmpreinteException(`aaa|10\n${DSM}|0`, `aaa|10\n${DSM}|63`, 64)).toThrow(
+      /delta DSM/,
+    );
+    expect(() => verifierEmpreinteException("aaa|10", "aaa|10", 0)).toThrow(/absente/);
   });
 });

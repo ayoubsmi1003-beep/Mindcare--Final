@@ -28,10 +28,12 @@ export function sqlSource() {
  * rescindés voyagent `inactive` (traçabilité, zéro DELETE).
  */
 export const STATUTS_CHUNK = ["active", "inactive"];
-export const VERSIONS_CHUNKER = ["struct-v1", "struct-v1.1"];
+export const VERSIONS_CHUNKER = ["struct-v1", "struct-v1.1", "struct-v2"];
 export function sqlChunk({ statut = "active", versionChunk = "struct-v1" } = {}) {
   if (!STATUTS_CHUNK.includes(statut)) throw new Error(`Statut chunk refusé : ${statut}`);
   if (!VERSIONS_CHUNKER.includes(versionChunk)) throw new Error(`Découpeur refusé : ${versionChunk}`);
+  // struct-v2 (DSM-5) : quarantaine inactive uniquement — jamais actif en R1.
+  if (versionChunk === "struct-v2" && statut !== "inactive") throw new Error("struct-v2 exige statut inactive (quarantaine)");
   // Les 3 colonnes instruction_requete/instruction_document/distance portent
   // un DEFAULT ('', '', 'cosine') dans 092 — on les OMET : aucun embed
   // (porte B/R2), aucune recette inventee, contrainte recette_complete OK.
@@ -48,12 +50,20 @@ export function sqlChunk({ statut = "active", versionChunk = "struct-v1" } = {})
      texte_hash = EXCLUDED.texte_hash, occurrence = EXCLUDED.occurrence,
      statut = EXCLUDED.statut, chunker_version = EXCLUDED.chunker_version`;
 }
+export function sqlTrouverCollisions() {
+  // Garde anti-ecrasement inter-sources (incident DSM/corpus-b : collision
+  // FNV-32) : tout id demande qui existe deja sous une autre source bloque
+  // le chargement AVANT tout INSERT.
+  return `SELECT id FROM app.knowledge_chunks WHERE id = ANY ($1) AND source_id <> $2`;
+}
 export function argsChargeur(argv, defauts) {
-  const o = { ecrire: false, manifeste: defauts.manifeste, sortie: defauts.sortie, limite: null };
+  const o = { ecrire: false, manifeste: defauts.manifeste, sortie: defauts.sortie, limite: null, sources: [] };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
     if (a === "--ecrire") o.ecrire = true;
     else if (a === "--dry-run") o.ecrire = false;
+    else if (a === "--source" && argv[i + 1]) { i++; o.sources.push(argv[i]); }
+    else if (a.startsWith("--source=")) o.sources.push(a.slice(9));
     else if (a === "--manifeste" && argv[i + 1]) { i++; o.manifeste = argv[i]; }
     else if (a.startsWith("--manifeste=")) o.manifeste = a.slice(12);
     else if (a === "--sortie" && argv[i + 1]) { i++; o.sortie = argv[i]; }

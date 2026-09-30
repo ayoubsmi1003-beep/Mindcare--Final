@@ -26,7 +26,7 @@ function MiniChronologie({ dossier }: { readonly dossier: PatientWorkspace }): R
   const prochain = dossier.agenda.prochainRendezVous;
 
   return (
-    <div className="flex items-start gap-2 rounded-2xl border border-rule bg-card px-4 py-3 shadow-carte">
+    <div className="flex items-start gap-2 rounded-2xl border border-rule bg-card px-4 py-3 shadow-douce">
       <div className="flex min-w-0 flex-1 flex-col items-center gap-1 text-center">
         <span aria-hidden="true" className="h-2.5 w-2.5 rounded-full bg-action-600" />
         <span className="font-ui text-label font-medium tabular-nums text-ink-900">
@@ -165,14 +165,14 @@ export function RailContexte({
   const cockpit = fr.consultation.cockpit;
 
   return (
-    <aside aria-label={cockpit.railTitre} className="flex w-full flex-col gap-4">
+    <aside aria-label={cockpit.railTitre} className="flex w-full flex-col gap-3">
       <div>
-        <Bouton rang="discret" onClick={onBasculer} deploye={ouvert}>
+        <Bouton rang="discret" taille="compact" onClick={onBasculer} deploye={ouvert}>
           {ouvert ? cockpit.railReplier : cockpit.railDeplier}
         </Bouton>
       </div>
       {ouvert ? (
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-3">
           {erreurDossier !== undefined ? (
             <BlocErreur
               message={erreurDossier}
@@ -183,8 +183,8 @@ export function RailContexte({
             // (état partagé) — le rail dit l'attente au lieu de la dupliquer.
             // Aucune lecture ne part d'ici (O5) : `onCharger` n'est plus appelé
             // depuis ce rail.
-            <div className="flex flex-col gap-3 rounded-2xl border border-rule bg-card p-5 shadow-carte">
-              <p className="font-ui text-body text-ink-500">{cockpit.railAttente}</p>
+            <div className="flex flex-col gap-2 rounded-2xl border border-dashed border-ink-300 bg-layer-surface p-4">
+              <p className="m-0 font-ui text-body text-ink-500">{cockpit.railAttente}</p>
             </div>
           ) : dossier === null ? (
             <EtatVide message={cockpit.contexteInaccessible} icone="patients" />
@@ -193,7 +193,7 @@ export function RailContexte({
               <MiniChronologie dossier={dossier} />
 
               {patientId === null ? null : (
-                <div className="flex flex-col gap-4 rounded-2xl border border-rule bg-card p-5 shadow-carte">
+                <div className="flex flex-col gap-3 rounded-2xl border border-rule bg-card p-4 shadow-douce">
                   <TitreRail
                     icone="horloge"
                     teinte="border-azure-100 bg-tuile-azur text-azure-700"
@@ -219,7 +219,7 @@ export function RailContexte({
                   tudinale), jamais l'inverse. Pas de repli : chaque carte
                   porte déjà son propre contenant, les imbriquer serait deux
                   cartes l'une dans l'autre. */}
-              <div className="flex flex-col gap-4 rounded-2xl border border-rule bg-card p-5 shadow-carte">
+              <div className="flex flex-col gap-3 rounded-2xl border border-rule bg-card p-4 shadow-douce">
                 <TitreRail
                   icone="traitements"
                   teinte="border-emeraude-100 bg-tuile-menthe text-emeraude-700"

@@ -51,7 +51,6 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 import { AppShell } from "@/components/AppShell";
 import { heure, jourComplet, nomPatient } from "@/components/AgendaPieces";
-import { BlocTarif } from "@/components/BlocTarif";
 import {
   Badge,
   BandeauHorsLigne,
@@ -82,6 +81,7 @@ import { FocusSeance } from "@/components/consultation/cockpit/FocusSeance";
 import { MesuresSeance } from "@/components/consultation/cockpit/MesuresSeance";
 import { NotesStructurees } from "@/components/consultation/cockpit/NotesStructurees";
 import { RailContexte } from "@/components/consultation/cockpit/RailContexte";
+import { TarifInline } from "@/components/consultation/cockpit/TarifInline";
 import { ajouterPiste, appliquerFocus } from "@/components/consultation/cockpit/modele-cockpit";
 import { CarteIdentite } from "@/components/patients/CarteIdentite";
 import {
@@ -302,6 +302,49 @@ function ChronoSeance({
     return () => clearInterval(id);
   }, [close, endedAt]);
   return <span className={className}>{dureeAffichee(close, startedAt, endedAt, maintenant)}</span>;
+}
+
+/**
+ * Raccourcis dossier — les séances passées et le résumé à UN clic, sans
+ * quitter la séance en cours. Zéro lecture ici : les onglets cibles lisent
+ * à la demande (patron `dossier`), donc ce panneau ne coûte aucun appel.
+ * Les libellés sont ceux des onglets eux-mêmes — impossible de diverger.
+ */
+function RaccourcisDossier({
+  onAller,
+}: {
+  readonly onAller: (onglet: string) => void;
+}): React.JSX.Element {
+  const cockpit = fr.consultation.cockpit;
+  const onglets = fr.consultation.onglets;
+  const raccourcis = [
+    { cle: "historique", libelle: onglets.historique },
+    { cle: "resume", libelle: onglets.resume },
+    { cle: "traitement", libelle: onglets.traitement },
+    { cle: "documents", libelle: onglets.documents },
+  ];
+  return (
+    <nav
+      aria-label={cockpit.accesDossierTitre}
+      className="flex w-full flex-col gap-1.5 rounded-2xl border border-rule bg-card p-4 shadow-douce"
+    >
+      <p className="m-0 font-ui text-label font-semibold uppercase tracking-label text-ink-500">
+        {cockpit.accesDossierTitre}
+      </p>
+      {raccourcis.map((r) => (
+        <button
+          key={r.cle}
+          type="button"
+          onClick={() => onAller(r.cle)}
+          className="flex min-h-target w-full items-center justify-between gap-3 rounded-xl px-3 py-2 text-left font-ui text-body font-semibold text-ink-900 transition duration-quick ease-out hover:bg-layer-surface hover:text-action-900 focus-visible:outline focus-visible:outline-action-600 focus-visible:outline-offset"
+        >
+          <span className="truncate">{r.libelle}</span>
+          <span aria-hidden="true" className="shrink-0 text-ink-500">→</span>
+        </button>
+      ))}
+      <p className="m-0 font-ui text-label text-ink-500">{cockpit.accesDossierIndication}</p>
+    </nav>
+  );
 }
 
 /**
@@ -1065,10 +1108,10 @@ export default function PageConsultation(): React.JSX.Element {
     } catch {
       // Stockage indisponible : repli par défaut ci-dessous.
     }
-    return (
-      typeof window.matchMedia === "function" &&
-      window.matchMedia("(min-width: 1280px)").matches
-    );
+    // V11 — ouvert par défaut sur TOUS les écrans : le contexte se montre
+    // sans clic, la praticienne replie si elle veut. Seul un choix explicite
+    // `ferme` le referme.
+    return true;
   }
 
   function basculerRail(): void {
@@ -1084,12 +1127,15 @@ export default function PageConsultation(): React.JSX.Element {
   }
 
   /**
-   * Charge le dossier sur GESTE explicite (bouton du rail ou du centre).
-   * Même porte auditée que les onglets, même état partagé : ouvrir ensuite
-   * un onglet de contexte ne relit rien. Jamais appelée au montage — le
-   * budget d'ouverture (e2e O5) ne bouge pas.
+   * Charge le dossier — V11 : DÈS que la séance est lue, SANS geste.
+   *
+   * La praticienne a tranché : la carte patient de gauche et le rail de
+   * contexte se montrent directement, pas après un clic. Même porte auditée
+   * que les onglets (`get_patient_workspace`, 047), même état partagé : un
+   * seul appel, les onglets de contexte ne relisent rien ensuite. Le bouton
+   * « Charger » reste le geste de réessai en cas d'échec uniquement.
    */
-  function chargerContexte(): void {
+  const chargerContexte = useCallback((): void => {
     if (patientId === null || dossier !== undefined) return;
     setErreurDossier(undefined);
     void getPatientWorkspace(patientId).then((r) => {
@@ -1101,7 +1147,14 @@ export default function PageConsultation(): React.JSX.Element {
       setErreurDossier(undefined);
       setDossier(r.data);
     });
-  }
+  }, [patientId, dossier]);
+
+  // V11 — le dossier part dès que la séance est lue (voir `chargerContexte`).
+  // Un seul appel : le garde `dossier !== undefined` coupe la boucle, et les
+  // onglets de contexte réutilisent l'état sans relire.
+  useEffect(() => {
+    chargerContexte();
+  }, [chargerContexte]);
 
   function insererPiste(champ: ChampSoap, texte: string): void {
     if (!noteModifiable || seanceClose) return;
@@ -1132,12 +1185,12 @@ export default function PageConsultation(): React.JSX.Element {
   }
 
   function voirTarif(): void {
-    const bloc = document.getElementById("bloc-tarif");
-    if (bloc === null) return;
-    const reduit =
-      typeof window.matchMedia === "function" &&
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    bloc.scrollIntoView({ behavior: reduit ? "auto" : "smooth", block: "start" });
+    // V11 — le tarif vit DANS la barre (TarifInline) : « Voir » amène le
+    // curseur sur sa saisie plutôt que de scroller vers un bloc bas de page.
+    // Repli conservé : ce chemin ne s'affiche que sans le slot inline.
+    const saisie = document.getElementById("tarif-inline-saisie");
+    if (saisie === null) return;
+    saisie.focus();
   }
 
   // ── Rendu ────────────────────────────────────────────────────────────────
@@ -1195,24 +1248,24 @@ export default function PageConsultation(): React.JSX.Element {
     }
 
     return (
-      <div className="grid grid-cols-1 items-start gap-4 desktop:grid-cols-cockpit-consultation">
+      <div className="grid grid-cols-1 items-start gap-5 desktop:grid-cols-cockpit-consultation">
         {/*
-          LE COCKPIT — trois volets : patient / travail / contexte. La colonne
+          LE COCKPIT V11 — trois volets : patient / travail / contexte. La colonne
           patient existe AVANT tout chargement du dossier (chargeur + même geste
           que le rail, état partagé, zéro appel supplémentaire) : aucune
-          redistribution à l'arrivée des données.
+          redistribution à l'arrivée des données. Rails sticky, travail héro.
         */}
-        <div className="min-w-0 desktop:sticky desktop:top-6">
+        <div className="min-w-0 desktop:sticky desktop:top-4 desktop:pb-2">
           {erreurDossier !== undefined ? (
             <BlocErreur
               message={erreurDossier}
               action={<Bouton onClick={reessayerDossier}>{fr.actions.reessayer}</Bouton>}
             />
           ) : dossier === undefined ? (
-            <div className="flex flex-col gap-3 rounded-2xl border border-rule bg-card p-5 shadow-carte">
+            <div className="flex min-w-0 flex-col gap-3 rounded-2xl border border-dashed border-ink-300 bg-card p-5 shadow-douce">
               <Squelette lignes={2} />
-              <div>
-                <Bouton rang="secondaire" onClick={chargerContexte}>
+              <div className="min-w-0">
+                <Bouton rang="secondaire" taille="compact" pleineLargeur onClick={chargerContexte}>
                   {fr.consultation.cockpit.railCharger}
                 </Bouton>
               </div>
@@ -1223,10 +1276,13 @@ export default function PageConsultation(): React.JSX.Element {
               icone="patients"
             />
           ) : (
-            <ColonnePatient espace={dossier} />
+            <div className="flex min-w-0 flex-col gap-3">
+              <ColonnePatient espace={dossier} />
+              <RaccourcisDossier onAller={setOnglet} />
+            </div>
           )}
         </div>
-        <div className="flex min-w-0 flex-col gap-4">
+        <div className="mx-auto flex w-full min-w-0 max-w-lecture flex-col gap-5">
           <>
             {dossier === undefined || dossier === null ? null : (
               <>
@@ -1282,7 +1338,7 @@ export default function PageConsultation(): React.JSX.Element {
                   valeur={brut}
                   onChange={enregistrerBrut}
                   zoneRef={refBrut}
-                  lignes={4}
+                  lignes={5}
                   clinique
                   disabled={seanceClose}
                   placeholder={fr.consultation.cockpit.notesPlaceholder}
@@ -1493,7 +1549,7 @@ export default function PageConsultation(): React.JSX.Element {
             ) : null}
           </>
         </div>
-        <div className="min-w-0">
+        <div className="min-w-0 desktop:sticky desktop:top-4 desktop:pb-2">
           <RailContexte
             ouvert={railOuvert}
             onBasculer={basculerRail}
@@ -1510,7 +1566,7 @@ export default function PageConsultation(): React.JSX.Element {
                     séance (S6) s'ajoutent sans redécouper la page — et ils disent
                     honnêtement qu'ils sont vides (I19). Repliés dans le rail :
                     un vide honnête ne prend pas la place du travail. */}
-                <SectionPliable titre={fr.consultation.filSeance} replieParDefaut>
+                <SectionPliable titre={fr.consultation.filSeance}>
                   <EtatVide message={fr.consultation.filSeanceIndisponible} />
                 </SectionPliable>
 
@@ -1662,13 +1718,11 @@ export default function PageConsultation(): React.JSX.Element {
         {horsLigne || horsLigneSession ? <BandeauHorsLigne /> : null}
 
         {/*
-          L'EN-TÊTE COCKPIT — compact, toujours clair. L'identité est portée
-          une fois ici (et dans la barre supérieure) : nom, type et date se
-          lisent en une ligne, le chrono reste modeste à l'autre bout.
+          L'EN-TÊTE COCKPIT V11 — le NOM vit dans la Topbar (AppShell `titre`),
+          ici on ne le répète jamais : contexte séance + durée, une ligne calme.
         */}
         {seance == null ? null : (
           <CockpitHeader
-            titre={nomPatient(seance.firstName, seance.lastName) ?? fr.agenda.patientNonRattache}
             meta={
               [
                 seance.appointmentKind === null
@@ -1679,6 +1733,7 @@ export default function PageConsultation(): React.JSX.Element {
                 .filter((m): m is string => m !== null)
                 .join(" · ") || null
             }
+            terminee={seanceClose}
             chrono={
               <ChronoSeance
                 close={seanceClose}
@@ -1726,8 +1781,8 @@ export default function PageConsultation(): React.JSX.Element {
           />
         )}
 
-        {/* V10 — barre haute sticky : nav + secondaire + primaire, sous les
-            onglets, jamais en bas qui masquait la note. Même logique métier. */}
+        {/* V11 — barre haute sticky SANS recouvrement + tarif INLINE.
+            Même logique métier (`peutClore` tri-state inchangé). */}
         {seance == null || onglet !== "seance" ? null : (
           <BarreConsultation
             etatBrut={etatBrut}
@@ -1743,6 +1798,9 @@ export default function PageConsultation(): React.JSX.Element {
             enregistrer={enregistrerMaintenant}
             clore={clore}
             voirTarif={voirTarif}
+            tarifInline={
+              <TarifInline consultationId={seance.id} onEtatTarif={setTarifPresent} />
+            }
           />
         )}
 
@@ -1767,30 +1825,11 @@ export default function PageConsultation(): React.JSX.Element {
           <PanneauOnglet cle="seance">
           {contenu}
 
-        {/* ADR-010 : le tarif se saisit EN FIN DE SÉANCE, donc juste au-dessus
-            de la barre qui la termine. Le bloc reste visible après la clôture —
-            une séance close dont le tarif n'a pas été fixé est précisément le
-            cas où l'oubli coûte. Aucune décision de rôle ici : la porte 029
-            refuse la séance d'une consœur, et c'est elle qui a raison. */}
-        {seance == null ? null : (
-          <div id="bloc-tarif" className="scroll-mt-6">
-            <BlocTarif consultationId={seance.id} onEtatTarif={setTarifPresent} />
-          </div>
-        )}
-
-        {/* 037 : sans ligne de paiement, la clôture est REFUSÉE. Le refus
-            arrivait en P0001, donc en message générique — la praticienne
-            relançait le même bouton sans savoir quoi corriger. On dit la règle
-            ici, et on retire le bouton plutôt que de le proposer pour le
-            refuser : le geste à faire est juste au-dessus.
-            S1 tri-state : `tarifPresent === undefined` (chargement ou lecture
-            en échec) n'autorise jamais Terminer et n'affiche jamais le rappel
-            « sans tarif » — seul `true` autorise, seul `false` bloque. */}
-        {seance == null || seanceClose || tarifPresent !== false ? null : (
-          <PanneauInfo titre={fr.consultation.clotureSansTarifTitre} ton="attention">
-            <p className="font-ui text-body">{fr.consultation.clotureSansTarif}</p>
-          </PanneauInfo>
-        )}
+        {/* V11 — le tarif vit UNIQUEMENT dans la barre (TarifInline, mêmes
+            portes 029/037) : aucun bloc bas de page, aucun rappel jaune.
+            Le geste est sous les yeux pendant toute la séance ; le bouton
+            « Terminer » n'apparaît que lorsque le tarif existe (tri-state
+            `tarifPresent` inchangé : `undefined` n'autorise jamais). */}
           </PanneauOnglet>
         </div>
 

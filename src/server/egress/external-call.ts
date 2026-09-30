@@ -30,6 +30,12 @@
 import { withEgressGate } from "@/server/db/withCaller";
 import { classerCharge, MESSAGE_REFUS_FRONTIERE } from "@/server/egress/classification";
 import { env } from "@/server/env";
+import { mkdir, readFile, rename, writeFile } from "node:fs/promises";
+import { dirname, join } from "node:path";
+import { alexa } from "@/i18n/alexa";
+import { ErreurModele, classerErreurHttp, normaliserErreurModele, type CodeErreurModele, type TentativeInference } from "./erreurs-modele";
+import { PoolModelesGratuits, type BesoinModele, type QualificationModele, type ModeleGratuit } from "./modeles-gratuits";
+import { conduireInference } from "./tentatives-inference";
 
 export type BoundaryPurpose = "jarvis" | "voix-entree" | "voix-sortie" | "resume-cas" | "communication";
 
@@ -66,6 +72,10 @@ export interface LlmProvider {
     readonly messages: readonly LlmMessage[];
     readonly model: string;
     readonly timeoutMs: number;
+    readonly signal?: AbortSignal;
+    readonly json?: boolean;
+    readonly jsonMode?: boolean;
+    readonly maxOutputTokens?: number;
   }): Promise<{ readonly text: string; readonly tokensIn: number; readonly tokensOut: number }>;
   stream(req: {
     readonly messages: readonly LlmMessage[];
@@ -73,6 +83,10 @@ export interface LlmProvider {
     readonly timeoutMs: number;
     /** Abandon demandé par l'appelant (client parti, bouton Stop). */
     readonly signal?: AbortSignal;
+    readonly json?: boolean;
+    readonly jsonMode?: boolean;
+    readonly maxOutputTokens?: number;
+    readonly idleTimeoutMs?: number;
   }): Promise<FluxTexte>;
 }
 
@@ -132,8 +146,8 @@ export interface TtsProvider {
 }
 
 export type LlmResult<T> =
-  | { readonly ok: true; readonly data: T }
-  | { readonly ok: false; readonly error: { readonly code: LlmErrorCode; readonly message: string } };
+  | { readonly ok: true; readonly data: T; readonly inference?: { readonly model: string; readonly tentatives: readonly TentativeInference[] } }
+  | { readonly ok: false; readonly error: { readonly code: LlmErrorCode; readonly message: string; readonly diagnostic?: CodeErreurModele; readonly tentatives?: readonly TentativeInference[] } };
 
 export type LlmErrorCode =
   | "hors-ligne"
@@ -166,6 +180,11 @@ function llmErr<T>(code: LlmErrorCode, message: string): LlmResult<T> {
  * à `analyze_session` (STATE.md) : sortie JSON conforme, contenu clinique
  * correct, coût de l'ordre de 0,0002 USD par appel.
  *
+ * Audit Slice 1 (2026-09-30) — le repli passe à `google/gemini-3.8-flash`
+ * (GA 2026-09-02, vérifié au registre OpenRouter : slug exact, tarif
+ * 0,75/3,75 USD par million de jetons). L'ancien 2.5 reste valide si
+ * quelqu'un l'épingle explicitement via `OPENROUTER_MODEL`.
+ *
  * ⚠️ CE COMMENTAIRE A DIT LE CONTRAIRE, ET C'ÉTAIT FAUX. Il annonçait que
  * `02-SECURITY-BOUNDARY.md` §5.2 nommait `anthropic/claude-sonnet-4.5` pour
  * l'usage `jarvis`, et réclamait sa correction. Vérification faite le
@@ -178,7 +197,7 @@ function llmErr<T>(code: LlmErrorCode, message: string): LlmResult<T> {
  * Le choix reste un réglage de configuration, pas un changement de code :
  * `OPENROUTER_MODEL` prime toujours sur cette constante.
  */
-const DEFAULT_MODEL = "google/gemini-2.5-flash";
+const DEFAULT_MODEL = "google/gemini-3.8-flash";
 
 /**
  * ⚠️ EXPORTÉE PARCE QUE DEUX APPELANTS LA RECOPIAIENT, ET MAL.
@@ -200,8 +219,21 @@ const DEFAULT_MODEL = "google/gemini-2.5-flash";
  * sortie réseau ; c'est le point de sortie qui est gardé, pas la lecture d'un
  * nom de modèle.
  */
-export function resolveModel(): string {
-  return env().OPENROUTER_MODEL ?? env().LLM_MODEL ?? DEFAULT_MODEL;
+export function resolveModel(purpose?: "jarvis" | "resume-cas"): string {
+  // Audit Slice 1 — surcharge par usage AVANT le global : un modèle gratuit
+  // de test (`JARVIS_CHAT_MODEL=nvidia/…:free`) n'affecte que la conversation,
+  // jamais le résumé — et inversement. L'appel réel (`llm`/`llmStream`
+  // ci-dessous) passe TOUJOURS par ici avec le purpose de la requête : le
+  // modèle facturé et le modèle audité ne peuvent plus diverger (le défaut
+  // `resume-cas`/`LLM_MODEL` de 2026-08 ne peut pas revenir par ce chemin).
+  const e = env();
+  if (purpose === "resume-cas" && e.JARVIS_RESUME_MODEL !== undefined) {
+    return e.JARVIS_RESUME_MODEL;
+  }
+  if (purpose === "jarvis" && e.JARVIS_CHAT_MODEL !== undefined) {
+    return e.JARVIS_CHAT_MODEL;
+  }
+  return e.OPENROUTER_MODEL ?? e.LLM_MODEL ?? DEFAULT_MODEL;
 }
 
 /**
@@ -252,6 +284,10 @@ const TARIFS_USD_PAR_MILLION: Readonly<Record<string, { readonly in: number; rea
   // Source : GET /api/v1/models/google/gemini-2.5-flash/endpoints,
   // OpenRouter, relevé le 2026-08-05 — 0,0000003/0,0000025 USD par jeton.
   "google/gemini-2.5-flash": { in: 0.3, out: 2.5 },
+  // Audit Slice 1 — repli courant. Source : page OpenRouter
+  // `google/gemini-3.8-flash`, relevé le 2026-09-30 (tarif d'introduction
+  // jusqu'au 2026-12-31, puis 1,50/7,50 — à réviser à cette date).
+  "google/gemini-3.8-flash": { in: 0.75, out: 3.75 },
 };
 
 function estimateCostUsd(model: string, tokensIn: number, tokensOut: number): number | null {
@@ -275,256 +311,149 @@ function isOpenRouterResponse(value: unknown): value is OpenRouterResponse {
  * `AbortController` — un timeout renvoie une erreur typée, jamais une promesse
  * qui ne se résout pas.
  */
+/** A single network transport. Retries belong to the pool, never the provider. */
 export const openRouterProvider: LlmProvider = {
   name: "openrouter",
-
   async complete(req) {
-    const clef = env().OPENROUTER_API_KEY;
-    if (clef === undefined || clef === "") {
-      throw new Error("configuration: OPENROUTER_API_KEY absente");
-    }
-
-    const controller = new AbortController();
-    const minuteur = setTimeout(() => controller.abort(), req.timeoutMs);
-
+    const c = new AbortController();
+    const cancel = () => c.abort();
+    if (req.signal?.aborted) throw new ErreurModele("CANCELLED", false, "request");
+    req.signal?.addEventListener("abort", cancel, { once: true });
+    const timer = setTimeout(() => c.abort(), req.timeoutMs);
     try {
-      const reponse = await fetch("https://openrouter.ai/api/v1/chat/completions", {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${clef}`,
-          "Content-Type": "application/json",
-          // §5.3 de 02-SECURITY-BOUNDARY.md — désactive la journalisation des
-          // prompts côté fournisseur, en plus du réglage tableau de bord.
-          "HTTP-Referer": "http://localhost",
-          "X-Title": "MindCare",
-        },
-        body: JSON.stringify({
-          model: req.model,
-          messages: req.messages,
-          max_tokens: MAX_OUTPUT_TOKENS,
-        }),
-        signal: controller.signal,
-      });
-
-      if (!reponse.ok) {
-        // ⚠️ V-JARVIS-CORE : le 429 rejoint les 5xx côté transitoire, à
-        // l'image de ce que groqSttProvider et elevenLabsTtsProvider font
-        // déjà. Les modèles « :free » le rencontrent en régime normal —
-        // le classer permanent ferait de la limite de débit une panne.
-        const transitoire = reponse.status >= 500 || reponse.status === 429;
-        throw new Error(transitoire ? `transitoire: HTTP ${reponse.status}` : `permanent: HTTP ${reponse.status}`);
-      }
-
-      const corps: unknown = await reponse.json();
-      if (!isOpenRouterResponse(corps)) {
-        throw new Error("permanent: réponse OpenRouter de forme inattendue");
-      }
-
-      const texte = corps.choices?.[0]?.message?.content;
-      if (texte === undefined) {
-        throw new Error("permanent: réponse OpenRouter sans contenu");
-      }
-
-      return {
-        text: texte,
-        tokensIn: corps.usage?.prompt_tokens ?? 0,
-        tokensOut: corps.usage?.completion_tokens ?? 0,
-      };
+      const response = await envoyerChatOpenRouter(req, false, c.signal);
+      const body: unknown = await response.json().catch(() => null);
+      if (!response.ok) throw classerErreurHttp(response.status, body, response.headers);
+      if (!isOpenRouterResponse(body)) throw new ErreurModele("MALFORMED_RESPONSE", true);
+      const text = body.choices?.[0]?.message?.content;
+      if (typeof text !== "string" || text.trim() === "") throw new ErreurModele("MALFORMED_RESPONSE", true);
+      if (req.json) { try { JSON.parse(text); } catch { throw new ErreurModele("MALFORMED_RESPONSE", true); } }
+      return { text, tokensIn: body.usage?.prompt_tokens ?? 0, tokensOut: body.usage?.completion_tokens ?? 0 };
     } catch (cause) {
-      if (controller.signal.aborted) {
-        throw new Error("transitoire: timeout");
-      }
-      // Panne réseau (fetch qui lève) : transitoire, même famille que 5xx.
-      if (cause instanceof TypeError) {
-        throw new Error("transitoire: réseau");
-      }
-      throw cause;
-    } finally {
-      clearTimeout(minuteur);
-    }
+      if (c.signal.aborted && !req.signal?.aborted) throw new ErreurModele("MODEL_TIMEOUT", true);
+      throw normaliserErreurModele(cause, req.signal?.aborted);
+    } finally { clearTimeout(timer); req.signal?.removeEventListener("abort", cancel); }
   },
-
-  /**
-   * ═══ STREAM — V-JARVIS-CORE ═══
-   *
-   * CE QUI EST RÉEL ICI, ET POURQUOI ON NE SIMULE RIEN : la requête part avec
-   * `stream: true`, et les fragments sont lus TELS QUELS depuis le corps SSE
-   * du fournisseur. Aucun assemblage différé, aucune fausse animation côté
-   * client — l'instrument HTTP mesure l'intervalle entre fragments et
-   * détecterait un tamponnage par la plateforme.
-   *
-   * LE TIMEOUT CHANGE DE SENS SUR UN FLUX. Le même `timeoutMs` devient une
-   * échéance « premier octet PUIS inter-fragments » : armé au départ, il est
-   * réarmé à CHAQUE fragment reçu. Un modèle qui commence bien puis se tait
-   * est donc rattrapé aussi — le silence n'est jamais un état stable.
-   *
-   * L'ABANDON EST BOUT-EN-BOUT : `signal` (le `req.signal` Deno remonté par
-   * la passerelle) aborte le fetch fournisseur — la génération s'arrête
-   * vraiment, et le coût avec elle.
-   *
-   * LA PROMESSE D'USAGE EST LE CONTRAT DE FIN : résolue à la clôture propre
-   * du flux (usage final si le fournisseur l'a envoyé, nulls sinon),
-   * rejetée sur timeout, panne réseau ou abandon. `llmStream()` y branche la
-   * journalisation ; personne d'autre n'a besoin de savoir comment le flux
-   * s'est terminé.
-   */
   async stream(req) {
-    const clef = env().OPENROUTER_API_KEY;
-    if (clef === undefined || clef === "") {
-      throw new Error("configuration: OPENROUTER_API_KEY absente");
-    }
-
-    const controller = new AbortController();
-    const relaisAbandon = () => controller.abort();
-    req.signal?.addEventListener("abort", relaisAbandon, { once: true });
-
-    let usageFinal: UsageJeton = { tokensIn: null, tokensOut: null };
-
-    // La promesse d'usage est créée AVANT le pump, capturée par lui.
-    let resoudreUsage!: (u: UsageJeton) => void;
-    let rejeterUsage!: (cause: unknown) => void;
-    const usage = new Promise<UsageJeton>((resoudre, rejeter) => {
-      resoudreUsage = resoudre;
-      rejeterUsage = rejeter;
+    if (req.signal?.aborted) throw new ErreurModele("CANCELLED", false, "request");
+    const c = new AbortController();
+    const cancel = () => c.abort();
+    req.signal?.addEventListener("abort", cancel, { once: true });
+    let timer = setTimeout(() => c.abort(), req.timeoutMs);
+    let resolveUsage!: (usage: UsageJeton) => void;
+    let rejectUsage!: (cause: unknown) => void;
+    const usage = new Promise<UsageJeton>((resolve, reject) => { resolveUsage = resolve; rejectUsage = reject; });
+    void usage.catch(() => {}); // The caller attaches after the first content; never an unhandled rejection.
+    let firstResolve!: () => void;
+    let firstReject!: (cause: unknown) => void;
+    const first = new Promise<void>((resolve, reject) => { firstResolve = resolve; firstReject = reject; });
+    let delivered = false;
+    let cancelled = false;
+    let out!: ReadableStreamDefaultController<string>;
+    const deltas = new ReadableStream<string>({
+      start(controller) { out = controller; },
+      cancel() { cancelled = true; c.abort(); rejectUsage(new ErreurModele("CANCELLED", false, "request")); },
     });
-
     try {
-      const reponse = await fetch("https://openrouter.ai/api/v1/chat/completions", {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${clef}`,
-          "Content-Type": "application/json",
-          "HTTP-Referer": "http://localhost",
-          "X-Title": "MindCare",
-        },
-        body: JSON.stringify({
-          model: req.model,
-          messages: req.messages,
-          max_tokens: MAX_OUTPUT_TOKENS_FLUX,
-          stream: true,
-          usage: { include: true },
-        }),
-        signal: controller.signal,
-      });
-
-      if (!reponse.ok) {
-        const transitoire = reponse.status >= 500 || reponse.status === 429;
-        throw new Error(transitoire ? `transitoire: HTTP ${reponse.status}` : `permanent: HTTP ${reponse.status}`);
-      }
-      if (reponse.body === null) {
-        throw new Error("permanent: réponse OpenRouter sans corps de flux");
-      }
-
-      // ── Le pump ──
-      // Un seul flux de sortie ; le minuteur est réarmé à chaque octet utile.
-      // Toute issue (clôture propre, erreur, abandon) se termine par close()
-      // ou error() du contrôleur ET par la résolution/rejet d'`usage`.
-      const lecteur = reponse.body.getReader();
-      const decodeur = new TextDecoder();
-
-      let sortie!: ReadableStreamDefaultController<string>;
-      const deltas = new ReadableStream<string>({
-        start(c) {
-          sortie = c;
-        },
-        cancel() {
-          // Le consommateur a rompu : on coupe chez le fournisseur aussi.
-          controller.abort();
-          rejeterUsage(new Error("transitoire: abandon"));
-        },
-      });
-
+      const response = await envoyerChatOpenRouter(req, true, c.signal);
+      if (!response.ok) throw classerErreurHttp(response.status, await response.json().catch(() => null), response.headers);
+      if (!response.body) throw new ErreurModele("MALFORMED_RESPONSE", true);
+      const reader = response.body.getReader();
+      const decoder = new TextDecoder();
       void (async () => {
-        let tampon = "";
-        // Le minuteur unique : échéance « premier fragment », puis réarmé à
-        // CHAQUE fragment — le silence n'est jamais un état stable.
-        let minuteur = setTimeout(() => controller.abort(), req.timeoutMs);
-        const rearmeer = () => {
-          clearTimeout(minuteur);
-          minuteur = setTimeout(() => controller.abort(), req.timeoutMs);
-        };
+        let buffer = "";
+        let ended = false;
+        let finish = false;
+        let bytes = 0;
+        let finalUsage: UsageJeton = { tokensIn: null, tokensOut: null };
         try {
-          while (true) {
-            const { done, value } = await lecteur.read();
+          for (;;) {
+            const { done, value } = await reader.read();
             if (done) break;
-            tampon += decodeur.decode(value, { stream: true });
-            const lignes = tampon.split("\n");
-            tampon = lignes.pop() ?? "";
-            for (const ligne of lignes) {
-              const t = ligne.trim();
+            buffer += decoder.decode(value, { stream: true });
+            if (buffer.length > 1_000_000) throw new ErreurModele("MALFORMED_RESPONSE", true);
+            const lines = buffer.split("\n"); buffer = lines.pop() ?? "";
+            for (const line of lines) {
+              const t = line.trim();
               if (!t.startsWith("data:")) continue;
-              const donnees = t.slice(5).trim();
-              if (donnees === "[DONE]") continue;
-              let evenement: unknown;
-              try {
-                evenement = JSON.parse(donnees);
-              } catch {
-                continue; // ligne partielle ou keep-alive : ignorée, pas fatale
-              }
-              const o = evenement as {
-                choices?: ReadonlyArray<{ delta?: { content?: string } }>;
+              const data = t.slice(5).trim();
+              if (data === "[DONE]") { ended = true; continue; }
+              let raw: unknown;
+              try { raw = JSON.parse(data); } catch { throw new ErreurModele("MALFORMED_RESPONSE", true); }
+              if (typeof raw !== "object" || raw === null) throw new ErreurModele("MALFORMED_RESPONSE", true);
+              const event = raw as {
+                error?: { code?: number };
+                choices?: { delta?: { content?: unknown }; finish_reason?: string | null }[];
                 usage?: { prompt_tokens?: number; completion_tokens?: number };
-                error?: { message?: string };
               };
-              if (o.error !== undefined) {
-                throw new Error(`permanent: ${o.error.message ?? "flux fournisseur en erreur"}`);
+              if (event.error) throw classerErreurHttp(event.error.code ?? 502, raw, response.headers);
+              const choice = event.choices?.[0];
+              if (choice?.finish_reason === "error") throw new ErreurModele("PROVIDER_UNAVAILABLE", true);
+              if (choice?.finish_reason === "length") throw new ErreurModele("MALFORMED_RESPONSE", true);
+              if (choice?.finish_reason === "stop") finish = true;
+              const content = choice?.delta?.content;
+              if (typeof content === "string" && content.length > 0) {
+                bytes += content.length;
+                if (bytes > 40_000) throw new ErreurModele("MALFORMED_RESPONSE", true);
+                out.enqueue(content);
+                if (!delivered) { delivered = true; firstResolve(); }
+                clearTimeout(timer);
+                timer = setTimeout(() => c.abort(), req.idleTimeoutMs ?? 10_000);
               }
-              // ⚠️ LE WATCHDOG SE RÉARME SUR TOUT ÉVÉNEMENT, PAS SUR LE SEUL
-              // CONTENU — trouvé par mesure (sonde-variantes-nemotron) : le
-              // modèle courant raisonne AVANT d'écrire, et cette réflexion
-              // arrive en événements SSE que le contenu n'accompagne pas.
-              // Réarmer sur le seul texte couperait chaque réponse pendant
-              // sa phase muette. Le silence qui compte est celui du RÉSEAU,
-              // pas celui du texte.
-              rearmeer();
-              const frag = o.choices?.[0]?.delta?.content;
-              if (typeof frag === "string" && frag.length > 0) {
-                sortie.enqueue(frag);
-              }
-              if (o.usage !== undefined) {
-                usageFinal = {
-                  tokensIn: o.usage.prompt_tokens ?? null,
-                  tokensOut: o.usage.completion_tokens ?? null,
-                };
-              }
+              // Reasoning/keepalives never extend the first meaningful-token deadline.
+              if (event.usage) finalUsage = { tokensIn: event.usage.prompt_tokens ?? null, tokensOut: event.usage.completion_tokens ?? null };
             }
+            if (ended) break;
           }
-          clearTimeout(minuteur);
-          sortie.close();
-          resoudreUsage(usageFinal);
+          if (!delivered || (!ended && !finish)) throw new ErreurModele("MALFORMED_RESPONSE", true);
+          if (!cancelled) out.close(); resolveUsage(finalUsage);
         } catch (cause) {
-          clearTimeout(minuteur);
-          sortie.error(cause);
-          rejeterUsage(cause);
+          const error = c.signal.aborted && !req.signal?.aborted && !cancelled
+            ? new ErreurModele("MODEL_TIMEOUT", true) : normaliserErreurModele(cause, req.signal?.aborted || cancelled);
+          if (!delivered) firstReject(error);
+          if (!cancelled) out.error(error);
+          rejectUsage(error);
         } finally {
-          req.signal?.removeEventListener("abort", relaisAbandon);
-          lecteur.releaseLock();
+          clearTimeout(timer); req.signal?.removeEventListener("abort", cancel);
+          await reader.cancel().catch(() => {}); reader.releaseLock();
         }
       })();
-
+      await first;
       return { deltas, usage };
     } catch (cause) {
-      req.signal?.removeEventListener("abort", relaisAbandon);
-      // Échec AVANT tout fragment consommé : la promesse d'usage doit quand
-      // même être soldée pour ne pas fuir, et le message classé comme
-      // ailleurs dans ce fichier.
-      rejeterUsage(cause);
-      if (controller.signal.aborted) {
-        throw new Error("transitoire: timeout");
-      }
-      if (cause instanceof TypeError) {
-        throw new Error("transitoire: réseau");
-      }
-      throw cause;
+      clearTimeout(timer); c.abort(); req.signal?.removeEventListener("abort", cancel);
+      const error = normaliserErreurModele(cause, req.signal?.aborted);
+      rejectUsage(error);
+      // Consume a stream rejected before exposure so it cannot leave an unobserved failure.
+      await deltas.cancel().catch(() => {});
+      throw error;
     }
   },
 };
 
+interface RequeteTransport {
+  readonly messages: readonly LlmMessage[];
+  readonly model: string;
+  readonly json?: boolean;
+  readonly jsonMode?: boolean;
+  readonly maxOutputTokens?: number;
+}
+async function envoyerChatOpenRouter(req: RequeteTransport, stream: boolean, signal: AbortSignal): Promise<Response> {
+  const key = env().OPENROUTER_API_KEY;
+  if (!key) throw new ErreurModele("CONFIGURATION", false, "account");
+  if (!req.model.endsWith(":free")) throw new ErreurModele("CONFIGURATION", false, "request");
+  return fetch("https://openrouter.ai/api/v1/chat/completions", {
+    method: "POST", signal,
+    headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json", "HTTP-Referer": "http://localhost", "X-Title": "MindCare" },
+    body: JSON.stringify({ model: req.model, messages: req.messages,
+      max_tokens: req.maxOutputTokens ?? (stream ? MAX_OUTPUT_TOKENS_FLUX : MAX_OUTPUT_TOKENS),
+      provider: { data_collection: "deny", max_price: { prompt: 0, completion: 0 } },
+      ...(req.jsonMode ? { response_format: { type: "json_object" } } : {}),
+      ...(stream ? { stream: true, usage: { include: true } } : {}),
+    }),
+  });
+}
 
-/**
- * Fournisseur unique : OpenRouter. Un seul point de sortie, une seule clé
- * (`OPENROUTER_API_KEY`, `.env` serveur) — aucun routage par modèle.
- */
 export function resolveLlmProvider(_model: string): LlmProvider {
   return openRouterProvider;
 }
@@ -568,6 +497,7 @@ export interface LlmRequest {
    * octets gagnent toujours contre le recu (voir `classification.ts`).
    */
   readonly egress?: { readonly transformId?: string };
+  readonly besoin?: Partial<BesoinModele>;
   /**
    * V-JARVIS-CORE — abandon demandé en aval (client parti, bouton Stop).
    * Remonte jusqu'au fetch fournisseur : la génération s'arrête vraiment.
@@ -643,256 +573,237 @@ async function journaliser(entree: {
 }
 
 /**
- * Point d'entrée unique du fichier. Un seul retry (§3.4 n°9), uniquement sur
- * échec TRANSITOIRE (timeout, 5xx, réseau) — jamais sur un 4xx ni sur un échec
- * de validation, qui vit dans `jarvis-analyze-session/index.ts` et n'appelle
- * donc jamais cette fonction une seconde fois pour cette raison.
+ * Point d'entrée unique : trois modèles gratuits distincts au maximum,
+ * dans un budget commun. Aucun rejeu après publication d'un delta.
  *
  * M05 — LA FRONTIERE S'APPLIQUE ICI, AVANT TOUT FOURNISSEUR. `classerCharge`
  * tranche sur les octets serialises des messages : C1/C2/INCONNU et C3 sans
  * recu ne donnent JAMAIS lieu a un appel reseau (zero-byte invariant). Le
  * refus est honnete (`frontiere`) et journalise en metadonnees seules.
  */
-export async function llm(
-  req: LlmRequest,
-  provider?: LlmProvider,
-): Promise<LlmResult<string>> {
-  const model = resolveModel();
-  const effectiveProvider = provider ?? resolveLlmProvider(model);
-  const timeoutMs = req.timeoutMs ?? TIMEOUT_MS_DEFAUT;
-  const depart = Date.now();
+const poolOpenRouter = new PoolModelesGratuits();
+let catalogueDate = 0;
+let catalogueEnCours: Promise<void> | null = null;
+let qualificationEnCours: Promise<void> | null = null;
+let qualificationsChargees = false;
+const QUALIFICATION_VERSION = "alexa-free-multilingual-v2";
 
-  const transformId = req.egress?.transformId;
-  const verdict = classerCharge(
-    req.messages,
-    transformId === undefined ? null : { transformId },
-  );
-  if (verdict.decision === "BLOQUER") {
-    await journaliser({
-      purpose: req.purpose,
-      provider: effectiveProvider.name,
-      model,
-      promptVersion: req.promptVersion,
-      promptHash: req.promptHash,
-      sessionToken: req.sessionToken,
-      charsOut: null,
-      tokensIn: null,
-      tokensOut: null,
-      estimatedCostUsd: null,
-      outcome: "blocked",
-      latencyMs: Date.now() - depart,
-    });
-    return llmErr("frontiere", MESSAGE_REFUS_FRONTIERE);
-  }
-
-  let derniereErreur: unknown;
-  for (let tentative = 0; tentative < 2; tentative++) {
-    try {
-      const resultat = await effectiveProvider.complete({
-        messages: req.messages,
-        model,
-        timeoutMs,
-      });
-
-      await journaliser({
-        purpose: req.purpose,
-        provider: effectiveProvider.name,
-        model,
-        promptVersion: req.promptVersion,
-        promptHash: req.promptHash,
-        sessionToken: req.sessionToken,
-        charsOut: resultat.text.length,
-        tokensIn: resultat.tokensIn,
-        tokensOut: resultat.tokensOut,
-        estimatedCostUsd: estimateCostUsd(model, resultat.tokensIn, resultat.tokensOut),
-        outcome: "ok",
-        latencyMs: Date.now() - depart,
-      });
-
-      return llmOk(resultat.text);
-    } catch (cause) {
-      derniereErreur = cause;
-      if (tentative === 0 && estTransitoire(cause)) continue; // une seule relance
-      break;
+function fichierQualifications(): string {
+  return env().OPENROUTER_QUALIFICATION_FILE ?? join(process.cwd(), ".cache", "alexa", "openrouter-free-qualification.json");
+}
+async function chargerQualifications(): Promise<void> {
+  try {
+    const document: unknown = JSON.parse(await readFile(fichierQualifications(), "utf8"));
+    const d = document as { version?: string; at?: number; models?: { id: string; qualification: QualificationModele | null; health?: Partial<ModeleGratuit> }[] };
+    if (d.version !== QUALIFICATION_VERSION || typeof d.at !== "number" || Date.now() - d.at > 86_400_000 || !Array.isArray(d.models)) return;
+    for (const m of d.models) {
+      if (typeof m.id !== "string") continue;
+      if (m.health) poolOpenRouter.restaurerSante(m.id, m.health);
+      if (!m.qualification || typeof m.qualification.json !== "boolean"
+        || typeof m.qualification.streaming !== "boolean" || !Number.isFinite(m.qualification.latenceMs)) continue;
+      poolOpenRouter.qualifier(m.id, m.qualification);
+      if (m.health) poolOpenRouter.restaurerSante(m.id, m.health);
     }
-  }
-
-  const messageErreur = derniereErreur instanceof Error ? derniereErreur.message : "";
-  const estTimeout = messageErreur.includes("timeout");
-  const estConfiguration = messageErreur.startsWith("configuration:");
-
-  await journaliser({
-    purpose: req.purpose,
-    provider: effectiveProvider.name,
-    model,
-    promptVersion: req.promptVersion,
-    promptHash: req.promptHash,
-    sessionToken: req.sessionToken,
-    charsOut: null,
-    tokensIn: null,
-    tokensOut: null,
-    estimatedCostUsd: null,
-    outcome: estTimeout ? "timeout" : "error",
-    latencyMs: Date.now() - depart,
-  });
-
-  if (estConfiguration) {
-    return llmErr("configuration", "Assistant indisponible.");
-  }
-  return llmErr("indisponible", "Assistant indisponible.");
+  } catch { /* A missing/stale local qualification never authorizes a model. */ }
+}
+async function sauverQualifications(): Promise<void> {
+  const path = fichierQualifications();
+  const models = poolOpenRouter.instantane().map((m) => ({ id: m.modelId, qualification: m.qualification,
+    health: { failureCount: m.failureCount, cooldownUntil: m.cooldownUntil, latencyMs: m.latencyMs, lastFailureCode: m.lastFailureCode } }));
+  try {
+    await mkdir(dirname(path), { recursive: true });
+    const temp = `${path}.${crypto.randomUUID()}.tmp`;
+    await writeFile(temp, JSON.stringify({ version: QUALIFICATION_VERSION, at: Date.now(), models }), { mode: 0o600 });
+    await rename(temp, path);
+  } catch { /* Memory still works; diagnostics must not interrupt the EMR. */ }
 }
 
-/**
- * Point d'entrée STREAMING — V-JARVIS-CORE. Même patron que `llm()`, avec
- * trois différences assumées et documentées :
- *
- *   1. LE RETRY NE VIT QU'AVANT LE PREMIER FRAGMENT. Une fois le flux rendu
- *      à l'appelant, rejouer signifierait dupliquer des fragments déjà
- *      affichés — impossible à rétracter. Un échec en cours de flux est donc
- *      terminal ; c'est la passerelle qui décide alors de la persistance
- *      d'un éventuel partiel.
- *
- *   2. LA JOURNALISATION SE BRANCHE SUR LA PROMESSE D'USAGE, pas sur le
- *      retour de cette fonction : le franchissement n'est PAS terminé quand
- *      les en-têtes arrivent, il se termine quand le flux se termine. Elle
- *      compte les caractères réellement traversés par un TransformStream —
- *      `charsOut` mesure ce qui a été consommé, jamais une estimation.
- *
- *   3. L'ABANDON EST UNE ISSUE NOMMÉE : signal aborté → outcome "error",
- *      tokensOut tels que le fournisseur a pu les rendre (souvent null).
- *      La table 028 n'a pas de colonne « raison » ; on ne déguise pas une
- *      annulation en succès.
- */
-export async function llmStream(
-  req: LlmRequest,
-  provider?: LlmProvider,
-): Promise<LlmResult<FluxTexte>> {
-  const model = resolveModel();
-  const effectiveProvider = provider ?? resolveLlmProvider(model);
-  const timeoutMs = req.timeoutMs ?? TIMEOUT_MS_DEFAUT;
-  const depart = Date.now();
-
-  // M05 — meme frontiere que `llm()` : aucun flux ne s'ouvre sur un C1/C2.
-  const transformIdFlux = req.egress?.transformId;
-  const verdictFlux = classerCharge(
-    req.messages,
-    transformIdFlux === undefined ? null : { transformId: transformIdFlux },
-  );
-  if (verdictFlux.decision === "BLOQUER") {
-    await journaliser({
-      purpose: req.purpose,
-      provider: effectiveProvider.name,
-      model,
-      promptVersion: req.promptVersion,
-      promptHash: req.promptHash,
-      sessionToken: req.sessionToken,
-      charsOut: null,
-      tokensIn: null,
-      tokensOut: null,
-      estimatedCostUsd: null,
-      outcome: "blocked",
-      latencyMs: Date.now() - depart,
+async function rafraichirCatalogue(signal?: AbortSignal, timeoutMs = 3000): Promise<void> {
+  if (Date.now() - catalogueDate < 300_000) return;
+  if (catalogueEnCours !== null) return catalogueEnCours;
+  catalogueEnCours = (async () => {
+    const response = await fetch("https://openrouter.ai/api/v1/models", {
+      headers: { Accept: "application/json" },
+      signal: AbortSignal.timeout(Math.max(1, Math.min(3000, timeoutMs))),
     });
-    return llmErr("frontiere", MESSAGE_REFUS_FRONTIERE);
-  }
+    const body: unknown = await response.json().catch(() => null);
+    if (!response.ok) throw classerErreurHttp(response.status, body, response.headers);
+    const models = (body as { data?: unknown } | null)?.data;
+    if (!Array.isArray(models)) throw new ErreurModele("MALFORMED_RESPONSE", true);
+    poolOpenRouter.actualiser(models); catalogueDate = Date.now();
+    if (!qualificationsChargees) { await chargerQualifications(); qualificationsChargees = true; }
+  })().finally(() => { catalogueEnCours = null; });
+  if (signal?.aborted) throw new ErreurModele("CANCELLED", false, "request");
+  await catalogueEnCours;
+  if (signal?.aborted) throw new ErreurModele("CANCELLED", false, "request");
+}
 
-  let flux: FluxTexte;
-  try {
-    try {
-      flux = await effectiveProvider.stream({
-        messages: req.messages,
-        model,
-        timeoutMs,
-        // `exactOptionalPropertyTypes` distingue « clé absente » de « clé à
-        // undefined » ; Deno ne l'imposait pas. On étale conditionnellement,
-        // comme partout ailleurs dans ce dépôt.
-        ...(req.signal !== undefined && { signal: req.signal }),
-      });
-    } catch (premiere) {
-      // Une seule relance, uniquement transitoire, et TOUJOURS avant que le
-      // premier fragment ne soit parti — même discipline que `llm()`.
-      if (!estTransitoire(premiere)) throw premiere;
-      flux = await effectiveProvider.stream({
-        messages: req.messages,
-        model,
-        timeoutMs,
-        // `exactOptionalPropertyTypes` distingue « clé absente » de « clé à
-        // undefined » ; Deno ne l'imposait pas. On étale conditionnellement,
-        // comme partout ailleurs dans ce dépôt.
-        ...(req.signal !== undefined && { signal: req.signal }),
-      });
+/** Synthetic C4 qualification: real streaming, JSON and FR/Darija/mixed comprehension. */
+async function qualifierCandidats(timeoutMs: number, maxModels = 3, signal?: AbortSignal): Promise<void> {
+  if (qualificationEnCours !== null) return qualificationEnCours;
+  qualificationEnCours = (async () => {
+    const echeance = Date.now() + timeoutMs;
+    const besoin: BesoinModele = { json: true, streaming: true, outils: false, tokens: 8000, tache: "intentions" };
+    const candidats = [...poolOpenRouter.aQualifier(besoin)].sort((a, b) => Number(b.structuredOutput) - Number(a.structuredOutput));
+    let qualifies = poolOpenRouter.candidats(besoin).length;
+    for (const m of candidats.slice(0, 6)) {
+      if (qualifies >= maxModels || signal?.aborted || Date.now() >= echeance || poolOpenRouter.statutCompte().code !== null) break;
+      const depart = Date.now();
+      const quota = await lireQuotaOpenRouter();
+      if (quota.remaining !== null && quota.remaining <= 5) break;
+      const messages: LlmMessage[] = [
+        { role: "system", content: 'Classe les trois salutations. Réponds uniquement en JSON avec une clé intents, un tableau de trois étiquettes: HELLO ou THANKS. Ne réponds pas aux salutations.' },
+        { role: "user", content: 'bonjour\nيعطيك الصحة\nmerci بزاف' },
+      ];
+      if (classerCharge(messages, null).decision === "BLOQUER") throw new ErreurModele("SECURITY_BLOCK", false, "request");
+      try {
+        const budget = Math.min(10_000, Math.max(1, echeance - Date.now()));
+        const borne = AbortSignal.timeout(budget);
+        const flux = await openRouterProvider.stream({ messages, model: m.modelId,
+          timeoutMs: budget, maxOutputTokens: 512,
+          json: true, jsonMode: m.structuredOutput, signal: signal ? AbortSignal.any([signal, borne]) : borne });
+        let text = "";
+        const reader = flux.deltas.getReader();
+        try { for (;;) { const r = await reader.read(); if (r.done) break; text += r.value; if (text.length > 4000) throw new ErreurModele("MALFORMED_RESPONSE", true); } }
+        finally { await reader.cancel().catch(() => {}); reader.releaseLock(); }
+        const usage = await flux.usage;
+        const parsed = JSON.parse(text) as { intents?: unknown };
+        if (JSON.stringify(parsed.intents) !== JSON.stringify(["HELLO", "THANKS", "THANKS"])) throw new ErreurModele("MALFORMED_RESPONSE", true);
+        poolOpenRouter.qualifier(m.modelId, { json: true, streaming: true, qualite: 1, latenceMs: Date.now() - depart }); qualifies++;
+        await journaliser({ purpose: "jarvis", provider: "openrouter", model: m.modelId, promptVersion: QUALIFICATION_VERSION,
+          promptHash: "synthetic-multilingual-probe-v1", sessionToken: crypto.randomUUID(), charsOut: text.length,
+          tokensIn: usage.tokensIn, tokensOut: usage.tokensOut, estimatedCostUsd: 0, outcome: "ok", latencyMs: Date.now() - depart });
+      } catch (cause) {
+        const error = normaliserErreurModele(cause, signal?.aborted); poolOpenRouter.echouer(m.modelId, error);
+        await journaliser({ purpose: "jarvis", provider: "openrouter", model: m.modelId, promptVersion: QUALIFICATION_VERSION,
+          promptHash: "synthetic-multilingual-probe-v1", sessionToken: crypto.randomUUID(), charsOut: null,
+          tokensIn: null, tokensOut: null, estimatedCostUsd: null, outcome: error.code === "MODEL_TIMEOUT" ? "timeout" : "error", latencyMs: Date.now() - depart });
+      }
+      if (qualifies < maxModels && Date.now() + 3500 < echeance) await new Promise((r) => setTimeout(r, 3500));
     }
-  } catch (cause) {
-    const texte = cause instanceof Error ? cause.message : "";
-    await journaliser({
-      purpose: req.purpose,
-      provider: effectiveProvider.name,
-      model,
-      promptVersion: req.promptVersion,
-      promptHash: req.promptHash,
-      sessionToken: req.sessionToken,
-      charsOut: null,
-      tokensIn: null,
-      tokensOut: null,
-      estimatedCostUsd: null,
-      outcome: texte.includes("timeout") ? "timeout" : "error",
-      latencyMs: Date.now() - depart,
-    });
-    return llmErr("indisponible", "Assistant indisponible.");
+    await sauverQualifications();
+  })().finally(() => { qualificationEnCours = null; });
+  return qualificationEnCours;
+}
+
+export async function lireQuotaOpenRouter(): Promise<{ readonly remaining: number | null; readonly used: number | null; readonly limit: number | null }> {
+  const key = env().OPENROUTER_API_KEY;
+  if (!key) throw new ErreurModele("CONFIGURATION", false, "account");
+  const response = await fetch("https://openrouter.ai/api/v1/key", { headers: { Authorization: `Bearer ${key}` }, signal: AbortSignal.timeout(3000) });
+  const body: unknown = await response.json().catch(() => null);
+  if (!response.ok) throw classerErreurHttp(response.status, body, response.headers);
+  const quota = (body as { data?: { free_model_daily_requests?: { remaining?: unknown; used?: unknown; limit?: unknown } } } | null)?.data?.free_model_daily_requests;
+  const number = (v: unknown) => typeof v === "number" && Number.isFinite(v) ? v : null;
+  return { remaining: number(quota?.remaining), used: number(quota?.used), limit: number(quota?.limit) };
+}
+
+/** Server-only diagnostics; returns IDs and closed health metadata, never keys or prompts. */
+export async function preparerPoolModelesGratuits(opts: { readonly timeoutMs?: number; readonly maxModels?: number; readonly signal?: AbortSignal } = {}) {
+  await rafraichirCatalogue(opts.signal);
+  const quota = await lireQuotaOpenRouter();
+  if (quota.remaining !== null && quota.remaining <= 5) {
+    poolOpenRouter.echouer("", new ErreurModele("MODEL_QUOTA_EXHAUSTED", false, "account", 60_000));
+  } else {
+    await qualifierCandidats(Math.min(60_000, opts.timeoutMs ?? 30_000), Math.min(3, opts.maxModels ?? 3), opts.signal);
   }
+  return { quota, compte: poolOpenRouter.statutCompte(), modeles: poolOpenRouter.instantane() };
+}
 
-  // Comptage au passage + journalisation au terminus. Best-effort, comme
-  // partout dans ce fichier : une panne d'écriture d'audit ne fait jamais
-  // échouer ni réussir faussement le flux qu'elle documente.
-  let caracteres = 0;
-  const comptes = flux.deltas.pipeThrough(
-    new TransformStream<string, string>({
-      transform(frag, controle) {
-        caracteres += frag.length;
-        controle.enqueue(frag);
-      },
-    }),
-  );
+function besoinInference(req: LlmRequest, streaming: boolean): BesoinModele {
+  return { tache: req.besoin?.tache ?? (req.purpose === "resume-cas" ? "resume" : "conversation"),
+    json: req.besoin?.json ?? false, streaming, outils: req.besoin?.outils ?? false,
+    tokens: req.besoin?.tokens ?? Math.ceil(req.messages.reduce((n, m) => n + m.content.length, 0) / 2) + (streaming ? MAX_OUTPUT_TOKENS_FLUX : MAX_OUTPUT_TOKENS) };
+}
 
-  void flux.usage
-    .then((usage) =>
-      journaliser({
-        purpose: req.purpose,
-        provider: effectiveProvider.name,
-        model,
-        promptVersion: req.promptVersion,
-        promptHash: req.promptHash,
-        sessionToken: req.sessionToken,
-        charsOut: caracteres,
-        tokensIn: usage.tokensIn,
-        tokensOut: usage.tokensOut,
-        estimatedCostUsd:
-          usage.tokensIn !== null && usage.tokensOut !== null
-            ? estimateCostUsd(model, usage.tokensIn, usage.tokensOut)
-            : null,
-        outcome: "ok",
-        latencyMs: Date.now() - depart,
-      }),
-    )
-    .catch((cause) => {
-      const texte = cause instanceof Error ? cause.message : String(cause ?? "");
-      return journaliser({
-        purpose: req.purpose,
-        provider: effectiveProvider.name,
-        model,
-        promptVersion: req.promptVersion,
-        promptHash: req.promptHash,
-        sessionToken: req.sessionToken,
-        charsOut: caracteres > 0 ? caracteres : null,
-        tokensIn: null,
-        tokensOut: null,
-        estimatedCostUsd: null,
-        outcome: texte.includes("timeout") ? "timeout" : "error",
-        latencyMs: Date.now() - depart,
-      });
+async function candidatsInference(req: LlmRequest, streaming: boolean, provider: LlmProvider | undefined, echeance: number): Promise<readonly string[]> {
+  if (provider !== undefined) return [resolveModel(req.purpose)]; // Existing synthetic provider seam: no external network.
+  if (!env().OPENROUTER_API_KEY) throw new ErreurModele("CONFIGURATION", false, "account");
+  await rafraichirCatalogue(req.signal, echeance - Date.now());
+  const besoin = besoinInference(req, streaming);
+  if (poolOpenRouter.candidats(besoin).length === 0) await qualifierCandidats(Math.max(0, echeance - Date.now()), 3, req.signal);
+  const compte = poolOpenRouter.statutCompte();
+  if (compte.code !== null) throw new ErreurModele(compte.code, false, "account", compte.until - Date.now());
+  return poolOpenRouter.candidats(besoin, resolveModel(req.purpose)).map((m) => m.modelId);
+}
+
+function resultatErreur<T>(cause: unknown, signal?: AbortSignal): LlmResult<T> {
+  const error = normaliserErreurModele(cause, signal?.aborted);
+  const quota = error.code === "MODEL_QUOTA_EXHAUSTED" || (error.code === "MODEL_RATE_LIMIT" && error.scope === "account");
+  return { ok: false, error: { code: error.code === "CONFIGURATION" || error.code === "AUTH_FAILURE" ? "configuration"
+    : error.code === "SECURITY_BLOCK" ? "frontiere" : "indisponible",
+    message: quota ? alexa.quota : error.code === "CONFIGURATION" || error.code === "AUTH_FAILURE" ? alexa.configuration : alexa.modeleIndisponible,
+    diagnostic: error.code, tentatives: error.tentatives } };
+}
+
+async function autoriserInference(req: LlmRequest): Promise<boolean> {
+  const verdict = classerCharge(req.messages, req.egress?.transformId === undefined ? null : { transformId: req.egress.transformId });
+  if (verdict.decision !== "BLOQUER") return true;
+  await journaliser({ purpose: req.purpose, provider: "openrouter", model: "free-pool", promptVersion: req.promptVersion,
+    promptHash: req.promptHash, sessionToken: req.sessionToken, charsOut: null, tokensIn: null, tokensOut: null,
+    estimatedCostUsd: null, outcome: "blocked", latencyMs: 0 });
+  return false;
+}
+
+export async function llm(req: LlmRequest, provider?: LlmProvider): Promise<LlmResult<string>> {
+  const depart = Date.now();
+  if (!(await autoriserInference(req))) return llmErr("frontiere", MESSAGE_REFUS_FRONTIERE);
+  const budget = req.timeoutMs ?? env().OPENROUTER_MODEL_TIMEOUT_MS ?? TIMEOUT_MS_DEFAUT;
+  try {
+    const modeles = await candidatsInference(req, false, provider, depart + budget);
+    const resultat = await conduireInference(modeles, async (model, timeoutMs, signal) => {
+      const m = poolOpenRouter.instantane().find((candidate) => candidate.modelId === model);
+      return (provider ?? openRouterProvider).complete({ messages: req.messages, model, timeoutMs,
+        signal: req.signal ? AbortSignal.any([signal, req.signal]) : signal,
+        json: req.besoin?.json ?? false, jsonMode: (req.besoin?.json ?? false) && (m?.structuredOutput ?? false) });
+    }, { timeoutMs: Math.max(0, budget - (Date.now() - depart)), ...(req.signal ? { signal: req.signal } : {}),
+      ...(provider === undefined ? { reserver: (m: string) => poolOpenRouter.reserver(m) } : {}),
+      surEchec: (m, e) => poolOpenRouter.echouer(m, e),
+      surTentative: (t) => t.code === "OK" ? undefined : journaliser({ purpose: req.purpose, provider: (provider ?? openRouterProvider).name,
+        model: t.model, promptVersion: req.promptVersion, promptHash: req.promptHash, sessionToken: req.sessionToken,
+        charsOut: null, tokensIn: null, tokensOut: null, estimatedCostUsd: null, outcome: t.code === "MODEL_TIMEOUT" ? "timeout" : "error", latencyMs: t.ms }),
     });
+    poolOpenRouter.reussir(resultat.model, Date.now() - depart);
+    await journaliser({ purpose: req.purpose, provider: (provider ?? openRouterProvider).name, model: resultat.model,
+      promptVersion: req.promptVersion, promptHash: req.promptHash, sessionToken: req.sessionToken,
+      charsOut: resultat.data.text.length, tokensIn: resultat.data.tokensIn, tokensOut: resultat.data.tokensOut,
+      estimatedCostUsd: provider === undefined ? 0 : estimateCostUsd(resultat.model, resultat.data.tokensIn, resultat.data.tokensOut),
+      outcome: "ok", latencyMs: Date.now() - depart });
+    return { ok: true, data: resultat.data.text, inference: { model: resultat.model, tentatives: resultat.tentatives } };
+  } catch (cause) { return resultatErreur(cause, req.signal); }
+}
 
-  return llmOk({ deltas: comptes, usage: flux.usage });
+export async function llmStream(req: LlmRequest, provider?: LlmProvider): Promise<LlmResult<FluxTexte>> {
+  const depart = Date.now();
+  if (!(await autoriserInference(req))) return llmErr("frontiere", MESSAGE_REFUS_FRONTIERE);
+  const budget = req.timeoutMs ?? env().OPENROUTER_MODEL_TIMEOUT_MS ?? TIMEOUT_MS_DEFAUT;
+  try {
+    const modeles = await candidatsInference(req, true, provider, depart + budget);
+    const resultat = await conduireInference(modeles, (model, timeoutMs, signal) => (provider ?? openRouterProvider).stream({
+      messages: req.messages, model, timeoutMs, idleTimeoutMs: budget,
+      signal: req.signal ? AbortSignal.any([signal, req.signal]) : signal,
+    }), { timeoutMs: Math.max(0, budget - (Date.now() - depart)), ...(req.signal ? { signal: req.signal } : {}),
+      ...(provider === undefined ? { reserver: (m: string) => poolOpenRouter.reserver(m) } : {}),
+      surEchec: (m, e) => poolOpenRouter.echouer(m, e),
+      surTentative: (t) => t.code === "OK" ? undefined : journaliser({ purpose: req.purpose, provider: (provider ?? openRouterProvider).name,
+        model: t.model, promptVersion: req.promptVersion, promptHash: req.promptHash, sessionToken: req.sessionToken,
+        charsOut: null, tokensIn: null, tokensOut: null, estimatedCostUsd: null, outcome: t.code === "MODEL_TIMEOUT" ? "timeout" : "error", latencyMs: t.ms }),
+    });
+    const { model } = resultat; const flux = resultat.data;
+    let caracteres = 0;
+    const deltas = flux.deltas.pipeThrough(new TransformStream<string, string>({ transform(frag, controller) { caracteres += frag.length; controller.enqueue(frag); } }));
+    void flux.usage.then(async (usage) => {
+      poolOpenRouter.reussir(model, Date.now() - depart);
+      await journaliser({ purpose: req.purpose, provider: (provider ?? openRouterProvider).name, model, promptVersion: req.promptVersion,
+        promptHash: req.promptHash, sessionToken: req.sessionToken, charsOut: caracteres, tokensIn: usage.tokensIn,
+        tokensOut: usage.tokensOut, estimatedCostUsd: provider === undefined ? 0 : null, outcome: "ok", latencyMs: Date.now() - depart });
+    }).catch(async (cause) => {
+      const error = normaliserErreurModele(cause, req.signal?.aborted); poolOpenRouter.echouer(model, error);
+      await journaliser({ purpose: req.purpose, provider: (provider ?? openRouterProvider).name, model, promptVersion: req.promptVersion,
+        promptHash: req.promptHash, sessionToken: req.sessionToken, charsOut: caracteres || null, tokensIn: null,
+        tokensOut: null, estimatedCostUsd: null, outcome: error.code === "MODEL_TIMEOUT" ? "timeout" : "error", latencyMs: Date.now() - depart });
+    });
+    return { ok: true, data: { deltas, usage: flux.usage }, inference: { model, tentatives: resultat.tentatives } };
+  } catch (cause) { return resultatErreur(cause, req.signal); }
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -1821,8 +1732,7 @@ export async function listerOutilsComposio(
 }
 
 /** Extrait les slugs d'une enveloppe de forme inconnue, ou null. */
-function extraireSlugs(corps: unknown): readonly string[] | null {
-  let candidats: unknown = null;
+function extraireSlugs(corps: unknown): readonly string[] | null {  let candidats: unknown = null;
   if (Array.isArray(corps)) {
     candidats = corps;
   } else if (typeof corps === "object" && corps !== null) {
@@ -1853,4 +1763,176 @@ function extraireSlugs(corps: unknown): readonly string[] | null {
     }
   }
   return slugs;
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+ * JEV — MODÈLE DE DÉCISION TYPESAFE VIA L'API DECISIONS (audit Slice 1)
+ *
+ * `typesafe/jev-1.13` (vérifié au registre OpenRouter le 2026-09-30) N'EST
+ * PAS un LLM de conversation : il ne génère aucun texte. Il répond à des
+ * questions typées (`noul` probabilité oui/non, `choice` choix parmi des
+ * options, `score` position sur rubrique) via
+ * `POST https://openrouter.ai/api/alpha/decisions` — PAS via
+ * `/api/v1/chat/completions`. Le brancher dans `resolveModel()` enverrait
+ * des charges `messages` à un endpoint qui n'en veut pas : échec permanent
+ * garanti. D'où cette fonction DÉDIÉE, et rien d'autre.
+ *
+ * Rôle prévu (spike, `classifieur-jev.ts`) : pré-routage rapide M01 —
+ * `choice` sur la route + `noul` sur le signal patient, avec seuil de
+ * confiance et repli sur le classifieur LLM existant. Payant (0,042 USD par
+ * million de jetons d'entrée, sortie gratuite) : usage OFF par défaut
+ * (`JARVIS_JEV_ENABLED`), jamais sur le chemin critique sans repli.
+ *
+ * Même discipline que `llm()` : timeout 10 s + relais `signal`, un seul
+ * retry transitoire (5xx/429/timeout/réseau), journal `boundary_crossings`
+ * best-effort (purpose `jarvis`, jamais de contenu — `charsOut: null`,
+ * l'état et les questions ne sont pas des octets facturés en sortie).
+ * ════════════════════════════════════════════════════════════════════════ */
+
+/** Repli quand `JEV_MODEL` n'est pas posé — slug exact du registre. */
+export const JEV_MODEL_DEFAUT = "typesafe/jev-1.13";
+
+export interface QuestionDecision {
+  readonly type: "noul" | "choice" | "score";
+  readonly instructions: string;
+  readonly criteria?: unknown;
+}
+
+export type ReponseDecision =
+  | { readonly type: "noul"; readonly noul: number }
+  | {
+    readonly type: "choice";
+    readonly choice: string;
+    readonly confidence?: number;
+    readonly probabilities?: Readonly<Record<string, number>>;
+  }
+  | {
+    readonly type: "score";
+    readonly score: number;
+    readonly confidence?: number;
+    readonly probabilities?: Readonly<Record<string, number>>;
+  };
+
+export interface RequeteDecisions {
+  readonly purpose: Extract<BoundaryPurpose, "jarvis" | "resume-cas">;
+  readonly promptVersion: string;
+  readonly promptHash: string;
+  readonly sessionToken: string;
+  /** État applicatif (jamais d'identifiant : l'appelant a pseudonymisé). */
+  readonly state: unknown;
+  readonly questions: Readonly<Record<string, QuestionDecision>>;
+  readonly timeoutMs?: number;
+  readonly signal?: AbortSignal;
+  readonly modele?: string;
+}
+
+function estReponsesDecisions(value: unknown): value is Record<string, ReponseDecision> {
+  if (typeof value !== "object" || value === null) return false;
+  return Object.values(value as Record<string, unknown>).every(
+    (r) =>
+      typeof r === "object" &&
+      r !== null &&
+      (r as { type?: unknown }).type !== undefined &&
+      ["noul", "choice", "score"].includes((r as { type: unknown }).type as string),
+  );
+}
+
+export async function decisions(
+  req: RequeteDecisions,
+): Promise<LlmResult<Readonly<Record<string, ReponseDecision>>>> {
+  const model = req.modele ?? env().JEV_MODEL ?? JEV_MODEL_DEFAUT;
+  const timeoutMs = req.timeoutMs ?? TIMEOUT_MS_DEFAUT;
+  const depart = Date.now();
+
+  const journaliserDecisions = (
+    outcome: "ok" | "error" | "timeout",
+    tokensIn: number | null,
+    tokensOut: number | null,
+    cout: number | null,
+  ): Promise<void> =>
+    journaliser({
+      purpose: req.purpose,
+      provider: "openrouter-decisions",
+      model,
+      promptVersion: req.promptVersion,
+      promptHash: req.promptHash,
+      sessionToken: req.sessionToken,
+      charsOut: null,
+      tokensIn,
+      tokensOut,
+      estimatedCostUsd: cout,
+      outcome,
+      latencyMs: Date.now() - depart,
+    });
+
+  let derniereErreur: unknown;
+  for (let tentative = 0; tentative < 2; tentative++) {
+    const controller = new AbortController();
+    const minuteur = setTimeout(() => controller.abort(), timeoutMs);
+    const relais = (): void => controller.abort();
+    req.signal?.addEventListener("abort", relais, { once: true });
+    try {
+      const clef = env().OPENROUTER_API_KEY;
+      if (clef === undefined || clef === "") {
+        throw new Error("configuration: OPENROUTER_API_KEY absente");
+      }
+      const reponse = await fetch("https://openrouter.ai/api/alpha/decisions", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${clef}`,
+          "Content-Type": "application/json",
+          "HTTP-Referer": "http://localhost",
+          "X-Title": "MindCare",
+        },
+        body: JSON.stringify({ model, state: req.state, questions: req.questions }),
+        signal: controller.signal,
+      });
+      if (!reponse.ok) {
+        const transitoire = reponse.status >= 500 || reponse.status === 429;
+        throw new Error(transitoire ? `transitoire: HTTP ${reponse.status}` : `permanent: HTTP ${reponse.status}`);
+      }
+      const corps: unknown = await reponse.json();
+      const enveloppe = corps as {
+        readonly answers?: unknown;
+        readonly usage?: { readonly input_tokens?: number; readonly output_tokens?: number; readonly cost?: number };
+      };
+      if (!estReponsesDecisions(enveloppe.answers)) {
+        throw new Error("permanent: réponse Decisions sans answers");
+      }
+      const tokensIn = enveloppe.usage?.input_tokens ?? null;
+      const tokensOut = enveloppe.usage?.output_tokens ?? null;
+      const cout =
+        typeof enveloppe.usage?.cost === "number"
+          ? enveloppe.usage.cost
+          : tokensIn === null || tokensOut === null
+            ? null
+            : estimateCostUsd(model, tokensIn, tokensOut);
+      await journaliserDecisions("ok", tokensIn, tokensOut, cout);
+      return llmOk(enveloppe.answers);
+    } catch (cause) {
+      // Même normalisation que le fournisseur chat : un abandon (timeout
+      // local ou `signal` aval) devient `transitoire: timeout` — rejouable
+      // une fois, puis nommé `timeout` à l'audit. Sans cela, une
+      // `DOMException: AbortError` tomberait en `indisponible` générique.
+      if (controller.signal.aborted) {
+        derniereErreur = new Error("transitoire: timeout");
+      } else {
+        derniereErreur = cause;
+      }
+      if (tentative === 0 && estTransitoire(derniereErreur)) continue; // une seule relance
+      break;
+    } finally {
+      clearTimeout(minuteur);
+      req.signal?.removeEventListener("abort", relais);
+    }
+  }
+
+  const messageErreur = derniereErreur instanceof Error ? derniereErreur.message : "";
+  const estTimeout = messageErreur.includes("timeout") || messageErreur.includes("abandon");
+  const estConfiguration = messageErreur.startsWith("configuration:");
+  await journaliserDecisions(estTimeout ? "timeout" : "error", null, null, null);
+  if (estConfiguration) {
+    return llmErr("configuration", "Assistant indisponible.");
+  }
+  return llmErr("indisponible", "Assistant indisponible.");
 }

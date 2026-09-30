@@ -26,6 +26,16 @@ export interface MesureTour {
   readonly chemin: string;
   /** Tiroir §34, `OK` quand le tour a abouti. */
   readonly code: CodeErreurAlexa;
+  // ── ÉTAPES §15/§36 — audit Slice 1 ──
+  // Décalages en ms depuis le début du tour (nombres seuls, PII-safe comme
+  // le reste de l'anneau). Absents = étape non atteinte (ex. échec avant le
+  // premier événement) — l'absence est elle-même le diagnostic.
+  /** Conversation assurée (`assurerConversation` rendue). */
+  readonly msSession?: number;
+  /** Premier événement passerelle (`onChemin`) — la passerelle a répondu. */
+  readonly msPremierEvenement?: number;
+  /** Premier fragment de texte (`onDelta`) — TTFT réel côté écran. */
+  readonly msPremierDelta?: number;
 }
 
 /** Fenêtre bornée : au-delà, les plus anciennes tombent (pas de fuite mémoire). */
@@ -80,6 +90,36 @@ export interface DiagnosticMesures {
   readonly parCode: Readonly<Record<string, number>>;
   /** Durée moyenne par chemin (ms arrondie) — jamais de contenu, que des axes. */
   readonly moyenneParChemin: Readonly<Record<string, number>>;
+}
+
+/**
+ * Dernier tour + lecture §36 — « Pourquoi Alexa n'a-t-elle pas répondu ? »
+ * sans ouvrir un fichier. Nombres et codes fermés uniquement : aucun message,
+ * aucun nom, aucun identifiant ne peut en sortir puisqu'aucun n'y entre.
+ * `ttftMs: null` = aucun fragment reçu (panne avant le modèle ou modèle muet).
+ */
+export interface DernierDiagnostic {
+  readonly chemin: string;
+  readonly code: CodeErreurAlexa;
+  readonly msTotal: number;
+  readonly msSession: number | null;
+  readonly msPremierEvenement: number | null;
+  readonly ttftMs: number | null;
+  readonly nbAppels: number;
+}
+
+export function dernierDiagnostic(): DernierDiagnostic | null {
+  const m = anneau[anneau.length - 1];
+  if (m === undefined) return null;
+  return {
+    chemin: m.chemin,
+    code: m.code,
+    msTotal: m.msTotal,
+    msSession: m.msSession ?? null,
+    msPremierEvenement: m.msPremierEvenement ?? null,
+    ttftMs: m.msPremierDelta ?? m.msPremierEvenement ?? null,
+    nbAppels: m.nbAppels,
+  };
 }
 
 /**
