@@ -1,0 +1,160 @@
+{
+  "block_sequence_sha256": "64244188f64dec148c3d6c1cf772ec44294fb8d4e07a30808339bf5b7567391a",
+  "blocks": [
+    {
+      "bbox": [
+        54.0,
+        133.62344360351562,
+        418.7326354980469,
+        220.54531860351562
+      ],
+      "block_id": "page-1050-block-0001",
+      "order": 1,
+      "text": "Aspects psychiatriques\ndes soins palliatifs\n",
+      "text_sha256": "53269fb2f4c7282c83af63cdb2ed2a4b2889ad2f3ea3d5c70956dc842a14c25d"
+    },
+    {
+      "bbox": [
+        54.0,
+        280.30010986328125,
+        292.69854736328125,
+        362.893798828125
+      ],
+      "block_id": "page-1050-block-0002",
+      "order": 2,
+      "text": "Pierre R. Gagnon, M.D., FRCPC\nPsychiatre consultant en psychooncologie, en médecine\npsychosomatique et en gérontopsychiatrie, Centre hospitalier\nuniversitaire de Québec, Hôtel-Dieu de Québec et Maison\nMichel-Sarrazin (Québec)\nProfesseur titulaire, Faculté de pharmacie, Université Laval\n(Québec)\n",
+      "text_sha256": "5e126da672a0e7e577e017b2a3dc343982505d0c1f340778c61e2eb994696f53"
+    },
+    {
+      "bbox": [
+        312.0,
+        280.30010986328125,
+        544.1392211914062,
+        340.893798828125
+      ],
+      "block_id": "page-1050-block-0003",
+      "order": 3,
+      "text": "Jacynthe Rivest, M.D., FRCPC\nPsychiatre consultante en oncopsychiatrie et en gree\nd’organes, Centre hospitalier universitaire de Montréal\nProfesseure adjointe de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\n",
+      "text_sha256": "986bed92aeee14f93ee1e33ac1c3af3224742f52d56ec2450129942ec7ff2e56"
+    },
+    {
+      "bbox": [
+        54.0,
+        391.1244201660156,
+        297.02203369140625,
+        505.0472717285156
+      ],
+      "block_id": "page-1050-block-0004",
+      "order": 4,
+      "text": "46.1 Bases conceptuelles et théoriques..............................1034\n46.1.1 Réactions psychologiques face à l’anticipation\nde sa propre mort............................................. 1034\n46.1.2 Réactions normales et pathologiques .............1034\n46.1.3 Dignité en n de vie ......................................... 1035\n46.1.4 Obstacles au diagnostic de troubles\npsychiatriques en soins palliatifs..................... 1035\n46.1.5 Sourance en n de vie.................................... 1035\n46.1.6 Résilience en n de vie..................................... 1036\n46.1.7 Principaux dés pour les professionnels ........1036\n",
+      "text_sha256": "cb55a3008301852ae3e09cd91e823eb8342bbbef0d6c374a5cba6de50eaa4c6e"
+    },
+    {
+      "bbox": [
+        54.0,
+        509.12445068359375,
+        297.02203369140625,
+        589.0473022460938
+      ],
+      "block_id": "page-1050-block-0005",
+      "order": 5,
+      "text": "46.2 Troubles spéciques.....................................................1036\n46.2.1 Delirium............................................................ 1036\n46.2.2 Troubles psychotiques et autres troubles\norganiques......................................................... 1038\n46.2.3 Syndrome de démoralisation........................... 1038\n46.2.4 Dépression ........................................................ 1038\n46.2.5 Anxiété.............................................................. 1040\n",
+      "text_sha256": "fd3f5e45c17f7fdeb54475ece83759078def75e131623fd4c1f49a64752bc10b"
+    },
+    {
+      "bbox": [
+        54.0,
+        593.1244506835938,
+        297.02203369140625,
+        637.0473022460938
+      ],
+      "block_id": "page-1050-block-0006",
+      "order": 6,
+      "text": "46.3 Euthanasie et suicide assisté........................................1041\n46.3.1 Facteurs inuant sur la demande\nde devancer sa mort......................................... 1041\n46.3.2 Attitudes et interventions................................ 1042\n",
+      "text_sha256": "49e13d889a0d1538d98472eaffbbd35fbe358b25b0efa1762d07342449639f9e"
+    },
+    {
+      "bbox": [
+        312.0,
+        391.1244201660156,
+        554.9800415039062,
+        400.9681701660156
+      ],
+      "block_id": "page-1050-block-0007",
+      "order": 7,
+      "text": "46.4 Détresse existentielle en n de vie .............................1042\n",
+      "text_sha256": "1a7d277cf0028c1d423d5094ad276cae26adc8f974ce5a1e5c15364cad851a68"
+    },
+    {
+      "bbox": [
+        312.0,
+        405.1244201660156,
+        555.0220336914062,
+        471.0472717285156
+      ],
+      "block_id": "page-1050-block-0008",
+      "order": 8,
+      "text": "46.5 Besoins spirituels du patient en n de vie.................1042\n46.5.1 Transcendance et quête de sens...................... 1042\n46.5.2 Importance de la spiritualité\nen soins palliatifs .............................................. 1042\n46.5.3 Approches psychothérapeutiques\nen soins palliatifs .............................................. 1043\n",
+      "text_sha256": "2e11f1451f61d94cdde6d5af3e0d35557de0dff4c34191157b32a6f883c0e3cd"
+    },
+    {
+      "bbox": [
+        312.0,
+        475.1244201660156,
+        555.0220336914062,
+        519.0473022460938
+      ],
+      "block_id": "page-1050-block-0009",
+      "order": 9,
+      "text": "46.6 Réactions de deuil chez les proches ...........................1044\n46.6.1 Deuil pathologique........................................... 1045\n46.6.2 Interventions auprès des familles\nendeuillées ........................................................ 1045\n",
+      "text_sha256": "b85cdc5f48fce7d2f1f65f4d08c6bc9852a98df13388dfb8133e5dea9483240e"
+    },
+    {
+      "bbox": [
+        312.0,
+        523.1244506835938,
+        555.0220336914062,
+        601.0473022460938
+      ],
+      "block_id": "page-1050-block-0010",
+      "order": 10,
+      "text": "46.7 Enfant en soins palliatifs..............................................1046\n46.7.1 Compréhension par les enfants\nde leur maladie ................................................. 1046\n46.7.2 Réaction émotionnelle chez les enfants..........1046\n46.7.3 Besoins de la famille......................................... 1046\n46.7.4 Diagnostic et traitement des syndromes\nspéciques les plus fréquents.......................... 1046\n",
+      "text_sha256": "c2c0140114ce9a074ecc0fb08672badd3f995217f66e105852315992e0b1569c"
+    },
+    {
+      "bbox": [
+        312.0,
+        605.1244506835938,
+        554.9800415039062,
+        614.9682006835938
+      ],
+      "block_id": "page-1050-block-0011",
+      "order": 11,
+      "text": "Lectures complémentaires .....................................................1047\n",
+      "text_sha256": "96244a4888acdc621aa9371d577a4bd9f555af7d0d9ff02a77320022a9719537"
+    },
+    {
+      "bbox": [
+        257.1000061035156,
+        3.2810592651367188,
+        555.0,
+        123.28105163574219
+      ],
+      "block_id": "page-1050-block-0012",
+      "order": 12,
+      "text": "CHAPITRE46\n",
+      "text_sha256": "9ebb02c77630b0ae98859b53c30b435c49d8b7ff712a73f2c2399f8dd0084b1f"
+    }
+  ],
+  "coordinates_sha256": "33e016595399f2820f1b0d0f30f719a87eb791d0d3922c37e558a9f4dfc58e0b",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1050",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Aspects psychiatriques\ndes soins palliatifs\nPierre R. Gagnon, M.D., FRCPC\nPsychiatre consultant en psychooncologie, en médecine\npsychosomatique et en gérontopsychiatrie, Centre hospitalier\nuniversitaire de Québec, Hôtel-Dieu de Québec et Maison\nMichel-Sarrazin (Québec)\nProfesseur titulaire, Faculté de pharmacie, Université Laval\n(Québec)\nJacynthe Rivest, M.D., FRCPC\nPsychiatre consultante en oncopsychiatrie et en gree\nd’organes, Centre hospitalier universitaire de Montréal\nProfesseure adjointe de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\n46.1 Bases conceptuelles et théoriques..............................1034\n46.1.1 Réactions psychologiques face à l’anticipation\nde sa propre mort............................................. 1034\n46.1.2 Réactions normales et pathologiques .............1034\n46.1.3 Dignité en n de vie ......................................... 1035\n46.1.4 Obstacles au diagnostic de troubles\npsychiatriques en soins palliatifs..................... 1035\n46.1.5 Sourance en n de vie.................................... 1035\n46.1.6 Résilience en n de vie..................................... 1036\n46.1.7 Principaux dés pour les professionnels ........1036\n46.2 Troubles spéciques.....................................................1036\n46.2.1 Delirium............................................................ 1036\n46.2.2 Troubles psychotiques et autres troubles\norganiques......................................................... 1038\n46.2.3 Syndrome de démoralisation........................... 1038\n46.2.4 Dépression ........................................................ 1038\n46.2.5 Anxiété.............................................................. 1040\n46.3 Euthanasie et suicide assisté........................................1041\n46.3.1 Facteurs inuant sur la demande\nde devancer sa mort......................................... 1041\n46.3.2 Attitudes et interventions................................ 1042\n46.4 Détresse existentielle en n de vie .............................1042\n46.5 Besoins spirituels du patient en n de vie.................1042\n46.5.1 Transcendance et quête de sens...................... 1042\n46.5.2 Importance de la spiritualité\nen soins palliatifs .............................................. 1042\n46.5.3 Approches psychothérapeutiques\nen soins palliatifs .............................................. 1043\n46.6 Réactions de deuil chez les proches ...........................1044\n46.6.1 Deuil pathologique........................................... 1045\n46.6.2 Interventions auprès des familles\nendeuillées ........................................................ 1045\n46.7 Enfant en soins palliatifs..............................................1046\n46.7.1 Compréhension par les enfants\nde leur maladie ................................................. 1046\n46.7.2 Réaction émotionnelle chez les enfants..........1046\n46.7.3 Besoins de la famille......................................... 1046\n46.7.4 Diagnostic et traitement des syndromes\nspéciques les plus fréquents.......................... 1046\nLectures complémentaires .....................................................1047\nCHAPITRE46\n",
+  "raw_text_sha256": "baf2524993a086a66ba967053c9b07b4aa5abcf1a99fa0063a5e9ab4b1198c21",
+  "source_page_display": 1051,
+  "source_page_index": 1050
+}

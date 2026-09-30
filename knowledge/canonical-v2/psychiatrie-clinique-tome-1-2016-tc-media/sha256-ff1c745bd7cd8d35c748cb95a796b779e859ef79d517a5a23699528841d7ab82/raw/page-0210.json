@@ -1,0 +1,196 @@
+{
+  "block_sequence_sha256": "aed36e2c81ef35f6c935848b68108f6467dd0e18b2d3edd1f56416eb4835507f",
+  "blocks": [
+    {
+      "bbox": [
+        307.1000061035156,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0210-block-0001",
+      "order": 1,
+      "text": "Chapitre 8\nPsychophysiologie et neuropsychologie\n193\n",
+      "text_sha256": "35c3a79788aa2d0925ed5c40b33ea673d695f0997d1e94760b3373d164a3274c"
+    },
+    {
+      "bbox": [
+        312.0,
+        40.9658203125,
+        555.1087646484375,
+        62.95849609375
+      ],
+      "block_id": "page-0210-block-0002",
+      "order": 2,
+      "text": "la manière dont les hormones peuvent aecter le fonctionnement\ncognitif chez l’être humain.\n",
+      "text_sha256": "f61f01434cf546ec489155078e9d3337373528cfb8bc44cb81716d5b40101a62"
+    },
+    {
+      "bbox": [
+        312.0,
+        98.4658203125,
+        555.4393310546875,
+        212.45849609375
+      ],
+      "block_id": "page-0210-block-0003",
+      "order": 3,
+      "text": "Le clinicien œuvrant en psychiatrie doit avoir une connaissance\nsusante du fonctionnement du cerveau. Il est en même temps\nimpossible d’être complètement au fait des nouvelles connais-\nsances sur ce fonctionnement, car les neurosciences progressent\nde façon exponentielle et déplacent les frontières de ce que l’on\nconvenait d’appeler la neuropsychiatrie. Le cerveau-esprit et la\nstructure-fonction demeurent des couples que les scientiques\ntentent tantôt de rapprocher, tantôt de séparer. C’est au clinicien,\ndevant son patient, qu’est donnée l’occasion d’appliquer ce qu’il a\npu synthétiser de la psychophysiologie et de la neuropsychologie.\n",
+      "text_sha256": "cc1cf2862a2f3249ab85d08c2fbcddb05e3c2821fe553b8c8f34f231e31163c1"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.9658203125,
+        296.8664855957031,
+        97.45849609375
+      ],
+      "block_id": "page-0210-block-0004",
+      "order": 4,
+      "text": "les complications possibles, etc.). Il faut donc être conscient de\nce biais mnésique et s’assurer que le patient peut accéder à des\ninformations écrites ou encore qu’il pourra de nouveau entendre\nou lire ces mêmes informations lorsqu’il sera dans un état plus\ncalme et moins stressé.\n",
+      "text_sha256": "550311bb4b54f1804ce30960f77c7d77c900462d8da7289ef12159a990aaf3eb"
+    },
+    {
+      "bbox": [
+        54.0,
+        98.4658203125,
+        297.45501708984375,
+        212.45849609375
+      ],
+      "block_id": "page-0210-block-0005",
+      "order": 5,
+      "text": "En conclusion, les hormones de stress constituent un bon\nmoyen de nous informer sur le cerveau et plus particulièrement\nsur la cognition, en raison de la localisation de leurs récepteurs\ndans les régions qui sous-tendent plusieurs processus mnésiques.\nIl importe de prendre en considération divers facteurs dans le\ncadre d’études sur les eets des GCs sur la mémoire, comme le\nmoment de la journée, le type de population étudiée ainsi que la\nvalence émotionnelle des événements. En eectuant des études\nqui contrôlent ces facteurs ou qui les prennent en compte dans le\ndevis expérimental, il sera possible d’étudier de façon très précise\n",
+      "text_sha256": "a1638a744cd38677e220acf7b7c42f0d48c74da413a527e816ea4661a70625d5"
+    },
+    {
+      "bbox": [
+        54.0,
+        232.70938110351562,
+        222.91200256347656,
+        250.67813110351562
+      ],
+      "block_id": "page-0210-block-0006",
+      "order": 6,
+      "text": "Lectures complémentaires\n",
+      "text_sha256": "a63665748f6f6aa4046621ac3e5b53857ebef6bf2c2f475217e47dfa03f03493"
+    },
+    {
+      "bbox": [
+        54.0,
+        263.4886779785156,
+        212.82200622558594,
+        273.4291076660156
+      ],
+      "block_id": "page-0210-block-0007",
+      "order": 7,
+      "text": "B, M.F. & al. (2002) Neurosciences, À la\n",
+      "text_sha256": "aff9ea0630da20a167c9e1884b580bf8b38b9405c41161eea16daa5c3b6a1f03"
+    },
+    {
+      "bbox": [
+        54.0,
+        273.4886779785156,
+        205.96853637695312,
+        295.4291076660156
+      ],
+      "block_id": "page-0210-block-0008",
+      "order": 8,
+      "text": "découverte du cerveau, France, Pradel.\nC, R. & al. (2010) Le cerveau\n",
+      "text_sha256": "b7a224846e9073e501e61b5a5b434672901c8a97759897f9a8495e6bdb69c5f2"
+    },
+    {
+      "bbox": [
+        66.0,
+        295.4886779785156,
+        184.6009979248047,
+        315.4291076660156
+      ],
+      "block_id": "page-0210-block-0009",
+      "order": 9,
+      "text": "humain, Saint-Laurent, Québec,\nERPI.\n",
+      "text_sha256": "7fb093ca03c83e145a175c71c25e0e797aab79489e161457b8b7551b2c3c2df3"
+    },
+    {
+      "bbox": [
+        225.0,
+        263.4886779785156,
+        360.7380065917969,
+        273.4291076660156
+      ],
+      "block_id": "page-0210-block-0010",
+      "order": 10,
+      "text": "D, A. R. (1999). Le sentiment\n",
+      "text_sha256": "48a40f5921fd44f363c9dd1646d6fa993be565195aa323a972d486a279266ea6"
+    },
+    {
+      "bbox": [
+        225.0,
+        273.5414123535156,
+        378.09100341796875,
+        305.4291076660156
+      ],
+      "block_id": "page-0210-block-0011",
+      "order": 11,
+      "text": "même de soi : corps, émotions,\nconscience, Paris, France, Odile Jacob.\nH, P. & D, S. (2013). Électro-\n",
+      "text_sha256": "7ff28e6c166bec11d410b232c8bda6ef747b01038e5cc9b7fa7e23523e04784a"
+    },
+    {
+      "bbox": [
+        237.0,
+        305.4886779785156,
+        382.7945556640625,
+        315.4291076660156
+      ],
+      "block_id": "page-0210-block-0012",
+      "order": 12,
+      "text": "physiologie de la cognition, Paris, Dunod.\n",
+      "text_sha256": "adad53d8d19b680c1df24ea8b2af9d91a9a948c6f253029bdcb67d0b58b3bc30"
+    },
+    {
+      "bbox": [
+        396.0,
+        263.4886779785156,
+        539.2799682617188,
+        273.4291076660156
+      ],
+      "block_id": "page-0210-block-0013",
+      "order": 13,
+      "text": "L, S. (2010). Par amour du stress,\n",
+      "text_sha256": "81bde8808139f27c8672d942d6ab4c18393a353fc0899f74b6abb5988e78c3ba"
+    },
+    {
+      "bbox": [
+        396.0,
+        273.4886779785156,
+        540.1799926757812,
+        295.4291076660156
+      ],
+      "block_id": "page-0210-block-0014",
+      "order": 14,
+      "text": "Montréal, Éditions au Carré.\nP, D. & al. (2015). Neurosciences,\n",
+      "text_sha256": "89c905a687862eeb81a9b104e0447674bc7cf9e05bdbc93b7e949e33b0955e4a"
+    },
+    {
+      "bbox": [
+        408.0,
+        295.4886779785156,
+        550.5765380859375,
+        315.4291076660156
+      ],
+      "block_id": "page-0210-block-0015",
+      "order": 15,
+      "text": "Louvain-la-Neuve, Belgique, De Boeck\nSupérieur.\n",
+      "text_sha256": "f6d5165d408dcc548a7c3fa037781b7210a04d405709277470e94eac5c30c80d"
+    }
+  ],
+  "coordinates_sha256": "1670ef1b934337efedaabfe9c57b7dc2ab8a8ca6f2c1b1dae8d6eb51f6f9c872",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0210",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 8\nPsychophysiologie et neuropsychologie\n193\nla manière dont les hormones peuvent aecter le fonctionnement\ncognitif chez l’être humain.\nLe clinicien œuvrant en psychiatrie doit avoir une connaissance\nsusante du fonctionnement du cerveau. Il est en même temps\nimpossible d’être complètement au fait des nouvelles connais-\nsances sur ce fonctionnement, car les neurosciences progressent\nde façon exponentielle et déplacent les frontières de ce que l’on\nconvenait d’appeler la neuropsychiatrie. Le cerveau-esprit et la\nstructure-fonction demeurent des couples que les scientiques\ntentent tantôt de rapprocher, tantôt de séparer. C’est au clinicien,\ndevant son patient, qu’est donnée l’occasion d’appliquer ce qu’il a\npu synthétiser de la psychophysiologie et de la neuropsychologie.\nles complications possibles, etc.). Il faut donc être conscient de\nce biais mnésique et s’assurer que le patient peut accéder à des\ninformations écrites ou encore qu’il pourra de nouveau entendre\nou lire ces mêmes informations lorsqu’il sera dans un état plus\ncalme et moins stressé.\nEn conclusion, les hormones de stress constituent un bon\nmoyen de nous informer sur le cerveau et plus particulièrement\nsur la cognition, en raison de la localisation de leurs récepteurs\ndans les régions qui sous-tendent plusieurs processus mnésiques.\nIl importe de prendre en considération divers facteurs dans le\ncadre d’études sur les eets des GCs sur la mémoire, comme le\nmoment de la journée, le type de population étudiée ainsi que la\nvalence émotionnelle des événements. En eectuant des études\nqui contrôlent ces facteurs ou qui les prennent en compte dans le\ndevis expérimental, il sera possible d’étudier de façon très précise\nLectures complémentaires\nB, M.F. & al. (2002) Neurosciences, À la\ndécouverte du cerveau, France, Pradel.\nC, R. & al. (2010) Le cerveau\nhumain, Saint-Laurent, Québec,\nERPI.\nD, A. R. (1999). Le sentiment\nmême de soi : corps, émotions,\nconscience, Paris, France, Odile Jacob.\nH, P. & D, S. (2013). Électro-\nphysiologie de la cognition, Paris, Dunod.\nL, S. (2010). Par amour du stress,\nMontréal, Éditions au Carré.\nP, D. & al. (2015). Neurosciences,\nLouvain-la-Neuve, Belgique, De Boeck\nSupérieur.\n",
+  "raw_text_sha256": "6f1522b3860cb5dcbf7400e1a761cc468b0b5795e5b4deb4b73c9840d7fe23f4",
+  "source_page_display": 211,
+  "source_page_index": 210
+}

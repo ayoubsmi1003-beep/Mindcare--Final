@@ -1,0 +1,160 @@
+{
+  "block_sequence_sha256": "4c3c54aced761d1493c1d58e49ffff027a337a0a51a4a2dc0fde21b382ed2ea5",
+  "blocks": [
+    {
+      "bbox": [
+        54.0,
+        130.5734405517578,
+        537.37548828125,
+        175.4953155517578
+      ],
+      "block_id": "page-0094-block-0001",
+      "order": 1,
+      "text": "Évaluation neuropsychologique\n",
+      "text_sha256": "633dd2b61da759ebc84c52ad745204aabf82e3d0de4aa15ef6d9912b9b9b7cc5"
+    },
+    {
+      "bbox": [
+        54.0,
+        207.15733337402344,
+        248.95899963378906,
+        221.19541931152344
+      ],
+      "block_id": "page-0094-block-0002",
+      "order": 2,
+      "text": "CHRISTINE GROU, Ph. D. (psychologie), M.A. (bioéthique)\n",
+      "text_sha256": "f79031730cb7e8c15583785fa1df2356e6f9b0e8d0c0b63a1a736d52d3fcc700"
+    },
+    {
+      "bbox": [
+        54.0,
+        224.57725524902344,
+        273.6264953613281,
+        245.79380798339844
+      ],
+      "block_id": "page-0094-block-0003",
+      "order": 3,
+      "text": "Neuropsychologue, Institut universitaire en santé mentale\nde Montréal\n",
+      "text_sha256": "3b364e57ed7700447d0070625440f68dd936b2d95b9a2160fee86bfa93f4e0e0"
+    },
+    {
+      "bbox": [
+        54.0,
+        249.57723999023438,
+        295.8231201171875,
+        281.7937927246094
+      ],
+      "block_id": "page-0094-block-0004",
+      "order": 4,
+      "text": "Superviseure clinique, Départements de psychologie, Université\nde Montréal, Université du Québec à Montréal, Université du\nQuébec à Trois-Rivières et Université Laval (Québec)\n",
+      "text_sha256": "e89cd562df68de9b690225bd292be8450a991ecd6d007bb64167764260971d84"
+    },
+    {
+      "bbox": [
+        54.0,
+        285.5772399902344,
+        257.5748291015625,
+        306.7937927246094
+      ],
+      "block_id": "page-0094-block-0005",
+      "order": 5,
+      "text": "Présidente du Comité d’éthique appliquée de l’Institut\nUniversitaire de santé mentale de Montréal\n",
+      "text_sha256": "585f709d4b4b5e624b91667a39ad1ab71fb645b5664c5ec99a5646c08a5947e3"
+    },
+    {
+      "bbox": [
+        54.150001525878906,
+        345.8244323730469,
+        295.1399841308594,
+        417.7472839355469
+      ],
+      "block_id": "page-0094-block-0006",
+      "order": 6,
+      "text": "4.1 \nObjectifs de l’évaluation neuropsychologique..............78\n4.1.1 \nContribution au diagnostic ....................................78\n4.1.2 \nDiagnostic diérentiel et comorbidité .................78\n4.1.3 \nDescription des dysfonctions\net ressources cognitives...........................................79\n4.1.4 \nContribution au plan d’intervention ....................79\n",
+      "text_sha256": "8df2e8757b26ee7ec0f108c6d50e896a26d4a835ab6d1c716bbd826f7f392ec8"
+    },
+    {
+      "bbox": [
+        54.150001525878906,
+        422.72442626953125,
+        295.1399841308594,
+        471.64727783203125
+      ],
+      "block_id": "page-0094-block-0007",
+      "order": 7,
+      "text": "4.2 \nComposantes de l’évaluation neuropsychologique..... 80\n4.2.1 \nHistoire de cas...........................................................80\n4.2.2 \nObservations .............................................................81\n4.2.3 \nPassation des tests....................................................81\n",
+      "text_sha256": "a637dad17bb268d3096471ee6dcb925cd1d5bc417ae18d2786818937c8f44f34"
+    },
+    {
+      "bbox": [
+        54.150001525878906,
+        476.6244201660156,
+        295.1399841308594,
+        512.5472412109375
+      ],
+      "block_id": "page-0094-block-0008",
+      "order": 8,
+      "text": "4.3 \nFonctions examinées........................................................ 81\n4.3.1 \nFonctions attentionnelles........................................81\n4.3.2 \nFonctions mnésiques ...............................................82\n",
+      "text_sha256": "2d51ed660fd48f2edd86c7ea40f8a2833329afed9c0a432b035ef4cc1a91ba4c"
+    },
+    {
+      "bbox": [
+        336.1499938964844,
+        345.8859558105469,
+        553.1360473632812,
+        440.7472839355469
+      ],
+      "block_id": "page-0094-block-0009",
+      "order": 9,
+      "text": "4.3.3 \nFonctions visuoperceptuelles\net visuoconstructives...............................................83\n4.3.4 \nFonctions langagières et de calcul.........................83\n4.3.5 \nFonctions activatrices, autorégulatrices\net exécutives ..............................................................83\n4.3.6 \nFonctions intellectuelles..........................................85\n4.3.7 \nIntelligence sociale...................................................86\n4.3.8 \nCapacité à consentir au traitement.......................86\n",
+      "text_sha256": "d95836f5e3904ef8343f2264d64c53de3b503bb76504a7104b6ef641264c3587"
+    },
+    {
+      "bbox": [
+        312.1499938964844,
+        445.72442626953125,
+        553.1400756835938,
+        481.64727783203125
+      ],
+      "block_id": "page-0094-block-0010",
+      "order": 10,
+      "text": "4.4 \nAnalyse des données ....................................................... 88\n4.4.1 \nAnalyse quantitative et qualitative........................88\n4.4.2 \nAnalyse globale du fonctionnement.....................89\n",
+      "text_sha256": "1ec74c473d81474326d8473a1893b379c312be2f0a12733bdb43349e52c0e9e6"
+    },
+    {
+      "bbox": [
+        312.1499938964844,
+        486.6244201660156,
+        553.1400146484375,
+        496.4681701660156
+      ],
+      "block_id": "page-0094-block-0011",
+      "order": 11,
+      "text": "Lectures complémentaires........................................................ 91\n",
+      "text_sha256": "a502c3a89f4aa26ba41d6b337a6e6b0d7dbc25dcf871d962bb592761f3c47e08"
+    },
+    {
+      "bbox": [
+        325.5,
+        2.3810577392578125,
+        561.0,
+        122.38105773925781
+      ],
+      "block_id": "page-0094-block-0012",
+      "order": 12,
+      "text": "CHAPITRE4\n",
+      "text_sha256": "598447441c97a0478c2fdad550df598945db5d199844bee086e6f559e4d7a34f"
+    }
+  ],
+  "coordinates_sha256": "c92be8b14487438709301509dbce692ec2b55378d5d949ac28c04fd8d6e33541",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0094",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Évaluation neuropsychologique\nCHRISTINE GROU, Ph. D. (psychologie), M.A. (bioéthique)\nNeuropsychologue, Institut universitaire en santé mentale\nde Montréal\nSuperviseure clinique, Départements de psychologie, Université\nde Montréal, Université du Québec à Montréal, Université du\nQuébec à Trois-Rivières et Université Laval (Québec)\nPrésidente du Comité d’éthique appliquée de l’Institut\nUniversitaire de santé mentale de Montréal\n4.1 \nObjectifs de l’évaluation neuropsychologique..............78\n4.1.1 \nContribution au diagnostic ....................................78\n4.1.2 \nDiagnostic diérentiel et comorbidité .................78\n4.1.3 \nDescription des dysfonctions\net ressources cognitives...........................................79\n4.1.4 \nContribution au plan d’intervention ....................79\n4.2 \nComposantes de l’évaluation neuropsychologique..... 80\n4.2.1 \nHistoire de cas...........................................................80\n4.2.2 \nObservations .............................................................81\n4.2.3 \nPassation des tests....................................................81\n4.3 \nFonctions examinées........................................................ 81\n4.3.1 \nFonctions attentionnelles........................................81\n4.3.2 \nFonctions mnésiques ...............................................82\n4.3.3 \nFonctions visuoperceptuelles\net visuoconstructives...............................................83\n4.3.4 \nFonctions langagières et de calcul.........................83\n4.3.5 \nFonctions activatrices, autorégulatrices\net exécutives ..............................................................83\n4.3.6 \nFonctions intellectuelles..........................................85\n4.3.7 \nIntelligence sociale...................................................86\n4.3.8 \nCapacité à consentir au traitement.......................86\n4.4 \nAnalyse des données ....................................................... 88\n4.4.1 \nAnalyse quantitative et qualitative........................88\n4.4.2 \nAnalyse globale du fonctionnement.....................89\nLectures complémentaires........................................................ 91\nCHAPITRE4\n",
+  "raw_text_sha256": "29edfa4b383464dc2f2b01279f5fb3f702f44ce8ac3c2a85130b248b4dd72157",
+  "source_page_display": 95,
+  "source_page_index": 94
+}

@@ -1,0 +1,76 @@
+{
+  "block_sequence_sha256": "8303b5ed0c41a90348e4b4b5de85ba45c4daf8a5f02fa4bde910d149203e6818",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        180.42501831054688,
+        758.8693237304688
+      ],
+      "block_id": "page-1147-block-0001",
+      "order": 1,
+      "text": "F10\nFigures supplémentaires\n",
+      "text_sha256": "d2ac26f7011bc3962d25289b99b5fc34810ec269382c90ac69a4afcf07d097f0"
+    },
+    {
+      "bbox": [
+        50.35000228881836,
+        41.002296447753906,
+        139.6669921875,
+        53.320068359375
+      ],
+      "block_id": "page-1147-block-0002",
+      "order": 2,
+      "text": "FIGURE 14 Ventricules\n",
+      "text_sha256": "4020fe97c02d6dcab722983409a1dab87577be4da412121cd2cf2e33356a5c3d"
+    },
+    {
+      "bbox": [
+        48.25,
+        304.2406311035156,
+        449.1654357910156,
+        313.1088562011719
+      ],
+      "block_id": "page-1147-block-0003",
+      "order": 3,
+      "text": "Source : McKinley, M. P. & al. (2014). Anatomie et physiologie – Une approche intégrée, Montréal, Québec, McGraw-Hill/Chenelière Éducation.\n",
+      "text_sha256": "5160d0bcda2360bb501eb5687c86915a29c71f0bb1aec665345ef930c3b58e9a"
+    },
+    {
+      "bbox": [
+        50.29999923706055,
+        338.5022888183594,
+        128.2895965576172,
+        350.820068359375
+      ],
+      "block_id": "page-1147-block-0004",
+      "order": 4,
+      "text": "FIGURE 15 Cervelet\n",
+      "text_sha256": "bfa5406067ce89c2394def0cd3b411cff070a8377bf4e4a3770d55f7eef87cb8"
+    },
+    {
+      "bbox": [
+        48.25,
+        531.5906372070312,
+        463.390380859375,
+        540.3250122070312
+      ],
+      "block_id": "page-1147-block-0005",
+      "order": 5,
+      "text": "Macroscopiquement, le cervelet est constitué de deux parties : l’une superciellle, le cortex cérébelleux, et l’autre profonde, les noyaux cérébelleux.\n",
+      "text_sha256": "16494fa9b1cfe63b04b862e378ff4fad0b52d450dae4470736a10f469e8491c3"
+    }
+  ],
+  "coordinates_sha256": "21c649880c02a06127538d653cba4e95c9f8d25ff18469d6b0be2ea2d139b514",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1147",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "F10\nFigures supplémentaires\nFIGURE 14 Ventricules\nSource : McKinley, M. P. & al. (2014). Anatomie et physiologie – Une approche intégrée, Montréal, Québec, McGraw-Hill/Chenelière Éducation.\nFIGURE 15 Cervelet\nMacroscopiquement, le cervelet est constitué de deux parties : l’une superciellle, le cortex cérébelleux, et l’autre profonde, les noyaux cérébelleux.\n",
+  "raw_text_sha256": "54a9823b5d2ecd90faf45a0f42df0004d44e01625994bad1a2ad3524eb3b2b43",
+  "source_page_display": 1148,
+  "source_page_index": 1147
+}

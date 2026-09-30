@@ -1,0 +1,29 @@
+{
+  "book_id": "dsm5-fr-2015-elsevier",
+  "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+  "segment_file": "seg-1126-1150-v2.pdf",
+  "source_page_start": 1126,
+  "source_page_end": 1150,
+  "method": "pymupdf-fallback",
+  "citra_status": "failed: invalid content stream (page 12): inline image missing ID operator",
+  "citra_failed_segment_pages": [
+    12,
+    15
+  ],
+  "citra_failed_source_pages": [
+    1137,
+    1140
+  ],
+  "units_written": 108,
+  "carried_forward_units": 106,
+  "regenerated_source_pages": [
+    1137,
+    1140
+  ],
+  "records_outside_segment_omitted": 9,
+  "source_segment_sha256": "4bd2f8ebe255b49c66f3f516a869dc7332173081f6afebb9ab2986d9fc25e6fb",
+  "output_sha256": "b387f399c0c4943002e41e2fe9e774a3083bb8b6591f271efbde5a212941aad1",
+  "ocr_used": false,
+  "supersedes": "units-M.jsonl",
+  "canonical_merge_authorized": false
+}

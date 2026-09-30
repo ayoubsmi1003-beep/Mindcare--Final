@@ -1,0 +1,784 @@
+{
+  "block_sequence_sha256": "7a6e98beab9a192b381a586dade6f4179a28ed4338cc02a7de9e61c9b3bd3e7b",
+  "blocks": [
+    {
+      "bbox": [
+        476.20001220703125,
+        747.5753784179688,
+        555.0199584960938,
+        758.8693237304688
+      ],
+      "block_id": "page-1110-block-0001",
+      "order": 1,
+      "text": "Références\nR13\n",
+      "text_sha256": "e848ced9a20978589de65b83bb1665b391d8bec8b4b623b286be4da484500d3a"
+    },
+    {
+      "bbox": [
+        396.0,
+        40.68496322631836,
+        549.447509765625,
+        58.07343673706055
+      ],
+      "block_id": "page-1110-block-0002",
+      "order": 2,
+      "text": "Policy and Service Guidance Package), Genève, Organisa-\ntion mondiale de la santé.\n",
+      "text_sha256": "330978c7a1488ad114819c49233d1d33fea4755229ee17ae7fe11af614efa11f"
+    },
+    {
+      "bbox": [
+        396.0,
+        62.0849609375,
+        542.9415283203125,
+        79.4234390258789
+      ],
+      "block_id": "page-1110-block-0003",
+      "order": 3,
+      "text": "Papin, F. (2010). « Pourquoi cette crainte de dire : J’en ai\nassez ! », Actualité médicale, 31(21), p. 18-30.\n",
+      "text_sha256": "78c8c74483164b1e03a97413788d477f6dd152f292fa720a5b044d15c3aa9048"
+    },
+    {
+      "bbox": [
+        396.0,
+        83.4349594116211,
+        554.9826049804688,
+        119.1734390258789
+      ],
+      "block_id": "page-1110-block-0004",
+      "order": 4,
+      "text": "Sanderson, K. & Andrews, G. (2006). « Common mental\ndisorders in the workforce : Recent ndings from descriptive\nand social epidemiology », Canadian Journal of Psychiatry,\n51(2), p. 63-75.\n",
+      "text_sha256": "65b118682403d270d7567d5d689f1fb30e05b69bd89e5f4e8d9faa04117ff49e"
+    },
+    {
+      "bbox": [
+        396.0,
+        123.18496704101562,
+        554.460205078125,
+        140.5734405517578
+      ],
+      "block_id": "page-1110-block-0005",
+      "order": 5,
+      "text": "Service Canada. (2014). L’assurance-emploi, [en ligne], www.\nservicecanada.gc.ca.\n",
+      "text_sha256": "91c4741d50526f6a65b884b3762ef378ad01d791a356ccc89f7e7a16e443a9d2"
+    },
+    {
+      "bbox": [
+        396.0,
+        144.5849609375,
+        545.2512817382812,
+        180.3234405517578
+      ],
+      "block_id": "page-1110-block-0006",
+      "order": 6,
+      "text": "St-Amour, A. (2005). La difculté de concilier travail-\nfamille : ses impacts sur la santé physique et mentale\ndes familles québécoises, Québec, Institut national de\nsanté publique du Québec.\n",
+      "text_sha256": "7fe0617ec4d2630963ca95f1dbeab17151c5167140ae39762bc652f298225055"
+    },
+    {
+      "bbox": [
+        396.0,
+        184.3349609375,
+        551.11376953125,
+        220.0734405517578
+      ],
+      "block_id": "page-1110-block-0007",
+      "order": 7,
+      "text": "Statistique Canada. (2014). Enquête sur la santé dans les\ncollectivités canadiennes, cycle 1.2, Santé mentale et\nbien-être, Guide du fichier de microdonnées à grande\ndiffusion, Ottawa.\n",
+      "text_sha256": "f543971fdadff5e1b8020f45e2dda769940e4259995b7583163997867e5d54ba"
+    },
+    {
+      "bbox": [
+        396.0,
+        224.0849609375,
+        550.5,
+        241.42344665527344
+      ],
+      "block_id": "page-1110-block-0008",
+      "order": 8,
+      "text": "Sverke, M. & al. (2006). Job Insecurity : A Literature review,\nStockholm, National Institute for Working Life.\n",
+      "text_sha256": "e47d2b779a8011068fbc91255265dce7295336f1ad3fc8330672bd5c53018969"
+    },
+    {
+      "bbox": [
+        396.0,
+        245.43496704101562,
+        550.7826538085938,
+        281.1734313964844
+      ],
+      "block_id": "page-1110-block-0009",
+      "order": 9,
+      "text": "Vézina M. & al. (2008). Stress au travail et santé mentale\nchez les adultes québécois : enquête sur la santé dans les\ncollectivités canadiennes (cycle 1.2), Québec, Institut de la\nstatistique du Québec.\n",
+      "text_sha256": "a933d473086e5c9adaf15be31ee329e543050498993e7e5b9ff7331ca2968c14"
+    },
+    {
+      "bbox": [
+        396.0,
+        285.1849670410156,
+        553.4677124023438,
+        339.3234558105469
+      ],
+      "block_id": "page-1110-block-0010",
+      "order": 10,
+      "text": "Vézina M. & al. (2011). Enquête québécoise sur des\nconditions de travail, d’emploi, et de santé et de sécurité\ndu travail (EQCOTESST), rapport sommaire, Québec, Institut\nde recherche Robert-Sauvé en santé et sécurité du travail\n– Québec, Institut national de santé publique du Québec et\nInstitut de la statistique du Québec.\n",
+      "text_sha256": "d70705833af07595bcd8ee9197cf03930e5167a6fc7496625f7cc456f924ac41"
+    },
+    {
+      "bbox": [
+        396.0,
+        352.8203125,
+        552.8025512695312,
+        381.8734436035156
+      ],
+      "block_id": "page-1110-block-0011",
+      "order": 11,
+      "text": "Chapitre 13\nBastide, R. (1965). Sociologie des maladies mentales, Paris,\nChamps Flammarion.\n",
+      "text_sha256": "6cfa8d4f241ed97ea1c4557fdd9713e22a4aac6c938ff778cad8b19811b254f0"
+    },
+    {
+      "bbox": [
+        396.0,
+        385.8849792480469,
+        549.3776245117188,
+        403.2734375
+      ],
+      "block_id": "page-1110-block-0012",
+      "order": 12,
+      "text": "Becker, H. S. (1963). Outsiders : études de sociologie de la\ndéviance, Paris, Metailie.\n",
+      "text_sha256": "0816063e0845fd31533f282f44e91af751fef5b1943fd64686f938371ba7b494"
+    },
+    {
+      "bbox": [
+        396.0,
+        407.2349548339844,
+        551.0487060546875,
+        433.8234558105469
+      ],
+      "block_id": "page-1110-block-0013",
+      "order": 13,
+      "text": "Bibeau, G. (2008). « Entre mépris et vie nue, la souffrance\nsociale », dans Blais, L. (dir.), Vivre à la marge. Réexions\nautour de la souffrance sociale, Québec, PUL, p. 185-212.\n",
+      "text_sha256": "7399a578dba20f90a119fac5e93b1a6569f8e6d977a7231ef954cd1bb70ba155"
+    },
+    {
+      "bbox": [
+        396.0,
+        437.8349609375,
+        552.1475219726562,
+        464.3734436035156
+      ],
+      "block_id": "page-1110-block-0014",
+      "order": 14,
+      "text": "Blais, L. (1995). « Étiologie sociale et santé mentale : ouver-\ntures et fermetures des modèles explicatifs dominants »,\nReets, 1(2), p. 138-162.\n",
+      "text_sha256": "53732ddc2fb1d2c72f72d9c1197bddc758feb52a6955f8829cb06e3e28f0ee8c"
+    },
+    {
+      "bbox": [
+        396.0,
+        468.3849792480469,
+        551.0474853515625,
+        494.9234313964844
+      ],
+      "block_id": "page-1110-block-0015",
+      "order": 15,
+      "text": "Blais, L. (2006). « Savoir expert, savoirs ordinaires : qui dit\nvrai ? Vérité et pouvoir chez Foucault », Sociologie et socié-\ntés. Michel Foucault : sociologue ?, 38(2), p. 151-165.\n",
+      "text_sha256": "3d2163b3e47efa58885af09a95c4e80e896e9aac72de5a2e129f5c7db6d1b5dc"
+    },
+    {
+      "bbox": [
+        396.0,
+        498.9349670410156,
+        553.3662719726562,
+        534.6734619140625
+      ],
+      "block_id": "page-1110-block-0016",
+      "order": 16,
+      "text": "Blanchet, L. & Messier, M. (2001). « Réseaux et partenariat »,\nchap. 72, p. 1730-1745, dans Lalonde, P. & al. (dir.),\nPsychiatrie clinique : approche bio-psycho-sociale, tome 2,\nMontréal, Gaëtan Morin.\n",
+      "text_sha256": "1104c5e2a58cb58a7b2289ddb745b016cfc5444de322df365ba6229d3980a67b"
+    },
+    {
+      "bbox": [
+        396.0,
+        538.6849975585938,
+        541.0999755859375,
+        556.0734252929688
+      ],
+      "block_id": "page-1110-block-0017",
+      "order": 17,
+      "text": "Brenner, M. H. (1973). Mental Illness and the Economy,\nBoston, Harvard University Press.\n",
+      "text_sha256": "9add407a48babb745733017b16017ac2086e935266d2ffcf4ea61112de714135"
+    },
+    {
+      "bbox": [
+        396.0,
+        560.0849609375,
+        545.3499755859375,
+        577.4234619140625
+      ],
+      "block_id": "page-1110-block-0018",
+      "order": 18,
+      "text": "Castel, F. & al. (1979). La société psychiatrique avancée,\nle modèle américain, Paris, Grasset.\n",
+      "text_sha256": "dd85eb1d86caf6851bb61549ac99a81f0bbac69fdadd44c51a3cd4578c54bd8a"
+    },
+    {
+      "bbox": [
+        396.0,
+        581.4349975585938,
+        552.7000122070312,
+        598.8234252929688
+      ],
+      "block_id": "page-1110-block-0019",
+      "order": 19,
+      "text": "Corin, E. & al. (1989). Comprendre pour soigner autrement,\nMontréal, PUM.\n",
+      "text_sha256": "f530d5a67f16a33319480e2e0995d34f0228ff3527f07bc046781c4ffc079720"
+    },
+    {
+      "bbox": [
+        396.0,
+        602.8349609375,
+        555.021728515625,
+        629.3734741210938
+      ],
+      "block_id": "page-1110-block-0020",
+      "order": 20,
+      "text": "Corin, E. & al. (2011). Le mouvement de l’être – Paramètres\npour une approche alternative du traitement en santé\nmentale, Québec, Presses de l’Université du Québec.\n",
+      "text_sha256": "67e51b3d22efffca269ce8987f706a2ced95ab7a3b140c5ef35452dcbfdc5f79"
+    },
+    {
+      "bbox": [
+        396.0,
+        633.3849487304688,
+        554.6039428710938,
+        659.9234619140625
+      ],
+      "block_id": "page-1110-block-0021",
+      "order": 21,
+      "text": "Corporeal, L. & Brewer, M. (1990). « We ARE darwinians, and\nthis is what the fuss is all about », Motivation and Emotion,\n14(4), p. 287-293.\n",
+      "text_sha256": "da754f109b05bbb471b2b07b91c6593ea8eb5a6234a9e44da15dddf95d5069d9"
+    },
+    {
+      "bbox": [
+        396.0,
+        663.9349975585938,
+        542.25,
+        681.3234252929688
+      ],
+      "block_id": "page-1110-block-0022",
+      "order": 22,
+      "text": "Devereux, G. (1970). Essais d’ethnopsychiatrie générale,\nParis, Gallimard.\n",
+      "text_sha256": "865bf9d80b383c526120f44b4ca17cce2375524a7339fb5dbd3a2c818d115c41"
+    },
+    {
+      "bbox": [
+        396.0,
+        685.3349609375,
+        550.8330078125,
+        702.6734619140625
+      ],
+      "block_id": "page-1110-block-0023",
+      "order": 23,
+      "text": "Eisenberg, L. (1995). « The social construction of the human\nbrain », Am J Psychiatry, 152(11), p. 1563-1575.\n",
+      "text_sha256": "ed086164b8bdaab2d5390c940e78d9d2dfe179e0b8222dd0e530d51671964c55"
+    },
+    {
+      "bbox": [
+        396.0,
+        706.6849975585938,
+        552.0778198242188,
+        714.8734741210938
+      ],
+      "block_id": "page-1110-block-0024",
+      "order": 24,
+      "text": "Fassin, D. (1996). L’espace politique de la santé, Paris, PUF.\n",
+      "text_sha256": "5abcb071261497ba105f06f5bead754fbd6acc9b38991b9068661f96040f7f48"
+    },
+    {
+      "bbox": [
+        225.0,
+        40.68496322631836,
+        371.1750183105469,
+        58.0234375
+      ],
+      "block_id": "page-1110-block-0025",
+      "order": 25,
+      "text": "according to occupational category », American Journal\nof Industrial Medecine, 52, p. 141-152.\n",
+      "text_sha256": "34dc2ae4c6cde6cba8151f9c9d5301dfbbdc7b455bda2b03efb93f6575dff4eb"
+    },
+    {
+      "bbox": [
+        225.0,
+        61.984962463378906,
+        373.9950256347656,
+        79.2734375
+      ],
+      "block_id": "page-1110-block-0026",
+      "order": 26,
+      "text": "Collège des médecins du Québec. (2009). Douleur chronique\net opioïdes : l’essentiel, [en ligne], www.cmq.org.\n",
+      "text_sha256": "11186b7f937e82b917e26270d378186ec86099567681b8443db76c548d70d629"
+    },
+    {
+      "bbox": [
+        225.0,
+        83.2349624633789,
+        379.77001953125,
+        100.57344055175781
+      ],
+      "block_id": "page-1110-block-0027",
+      "order": 27,
+      "text": "Collège des médecins du Québec. (2010). Code de déontologie\ndes médecins, [en ligne], www.cmq.org.\n",
+      "text_sha256": "fac0621384fac343019d8d3bf214a4166cb58f31ce42affbca9bc2654eb8f0f6"
+    },
+    {
+      "bbox": [
+        225.0,
+        104.4849624633789,
+        383.95440673828125,
+        149.2234344482422
+      ],
+      "block_id": "page-1110-block-0028",
+      "order": 28,
+      "text": "Commission de la santé et de la sécurité du travail (CSST).\n(2014). Statistiques sur les lésions attribuables à la violence\nen milieu de travail: 2009-2012, Québec, Direction de la\ncomptabilité et de la gestion de l’information, [en ligne],\nwww.csst.qc.ca.\n",
+      "text_sha256": "62b46f43d62b5734d7603379662f1a323a2e08a02f2c30a6af52f249073f2177"
+    },
+    {
+      "bbox": [
+        225.0,
+        153.18496704101562,
+        364.95001220703125,
+        170.5234375
+      ],
+      "block_id": "page-1110-block-0029",
+      "order": 29,
+      "text": "Commission des normes du travail (CNT). (2002a). Article\n81.18, Québec, [en ligne], www.cnt.gouv.qc.ca.\n",
+      "text_sha256": "520a541a293163ccf92639b62d3ecbb4d06af8c307d976fd23399e5e90ca8461"
+    },
+    {
+      "bbox": [
+        225.0,
+        174.48497009277344,
+        365.1000061035156,
+        191.7734375
+      ],
+      "block_id": "page-1110-block-0030",
+      "order": 30,
+      "text": "Commission des normes du travail (CNT). (2002b). Article\n81.18, Québec, [en ligne], www.cnt.gouv.qc.ca.\n",
+      "text_sha256": "e3295eff29b503180e659141f17213be28f4df5ada9970f9f94e9c6c066b9fbb"
+    },
+    {
+      "bbox": [
+        225.0,
+        195.73497009277344,
+        382.197509765625,
+        222.17344665527344
+      ],
+      "block_id": "page-1110-block-0031",
+      "order": 31,
+      "text": "Cooper, P. & Dewe, C. (2008). « Well-being : absenteism, pre-\nsenteism, costs and challenges », Occupational Medicine,\n58(8), p. 522-524.\n",
+      "text_sha256": "16a247af36017d38e3d330948937a45131d10939f1fe7b46b60a1cc987f63aa2"
+    },
+    {
+      "bbox": [
+        225.0,
+        226.1349639892578,
+        382.2276611328125,
+        252.62344360351562
+      ],
+      "block_id": "page-1110-block-0032",
+      "order": 32,
+      "text": "Crompton, S. (2011). « Qu’est-ce qui stresse les stressés ?\nPrincipales sources de stress des travailleurs », Tendances\nsociales canadiennes, 11-008, Ottawa, Statistique Canada.\n",
+      "text_sha256": "d5f0647db75fdc0256d76652d0b730078a7e0441b364e13f63d14f9f156799b0"
+    },
+    {
+      "bbox": [
+        225.0,
+        256.53497314453125,
+        381.5802307128906,
+        292.1734313964844
+      ],
+      "block_id": "page-1110-block-0033",
+      "order": 33,
+      "text": "Dagenais, M. & Imbeau, D. (2011). Approche Toyota, santé\net sécurité des professionnels et sécurité des patients : y\na-t-il un lien ?, [en ligne], www.simagi.polymtl.ca/cigi2011/\narticles/_Dagenais-Approche.\n",
+      "text_sha256": "84ea418ed0a506d33ab9e2488d48bbb808e9e2c09f59f64afda0cf6b8b2e7a06"
+    },
+    {
+      "bbox": [
+        225.0,
+        296.0849609375,
+        380.79248046875,
+        322.5734558105469
+      ],
+      "block_id": "page-1110-block-0034",
+      "order": 34,
+      "text": "Delgènes, J.-C. & al. (2010). France Télécom : État des lieux\nsur le stress et les conditions de travail, Rapport nal, [en\nligne], www.observatoiredustressft.org.\n",
+      "text_sha256": "9313829fbb2f851f3443b4699c45a42e1ab7627cda1cd61185f8d8ee1a2d3292"
+    },
+    {
+      "bbox": [
+        225.0,
+        326.4849548339844,
+        381.2012939453125,
+        343.8234558105469
+      ],
+      "block_id": "page-1110-block-0035",
+      "order": 35,
+      "text": "Dewa, C. S. & al. (2004). « Nature and prevalence of mental\nillness in the workplace », Healthcare Papers, 5(2), p. 12-25.\n",
+      "text_sha256": "e806ca2c3aa61b1844245fa4a7346008d069d8bbf66902055580836ae326ccf8"
+    },
+    {
+      "bbox": [
+        225.0,
+        347.78497314453125,
+        375.56854248046875,
+        383.3734436035156
+      ],
+      "block_id": "page-1110-block-0036",
+      "order": 36,
+      "text": "Dewa, C. S. & al. (2007). « An International Perspective on\nWorker Mental Health Problems : Who Bears the burden\nand how are costs addressed ? », Canadian Journal of\nPsychiatry, 52(6), p. 346-356.\n",
+      "text_sha256": "dfd9010122545058faba561d03c57b39c301579955cff0bdca08a9cee048a6ae"
+    },
+    {
+      "bbox": [
+        225.0,
+        387.3349609375,
+        366.20257568359375,
+        404.6734313964844
+      ],
+      "block_id": "page-1110-block-0037",
+      "order": 37,
+      "text": "Erbès-Séguin, S. (2010). La sociologie du travail, Paris,\nLa Découverte.\n",
+      "text_sha256": "f347b9c13dabbef975be55d4d73ddea1a29ae38993c431a46db98eabdb4dd3aa"
+    },
+    {
+      "bbox": [
+        225.0,
+        408.5849609375,
+        378.54998779296875,
+        444.1734313964844
+      ],
+      "block_id": "page-1110-block-0038",
+      "order": 38,
+      "text": "Institut de la statistique du Québec. (2008). Stress au travail\net santé mentale chez les adultes québécois – Enquête\nsur la santé dans les collectivités canadiennes (cycle 1.2),\nQuébec, Institut de la statistique du Québec.\n",
+      "text_sha256": "c04efc61c0a2728a88e1fee0476ab58c3e567b26b9095f80d9fd453cebc41bbb"
+    },
+    {
+      "bbox": [
+        225.0,
+        448.1349792480469,
+        382.8999938964844,
+        474.6234436035156
+      ],
+      "block_id": "page-1110-block-0039",
+      "order": 39,
+      "text": "Institut de recherche Robert-Sauvé en santé et sécurité au travail.\n(2013a). Ça nous concerne tous, [en ligne], www.irsst.\nqc.ca.\n",
+      "text_sha256": "dcfb2b0e131697746b30ad3c8b872dbcb228af2c87f719bed2c199e567936731"
+    },
+    {
+      "bbox": [
+        225.0,
+        478.53497314453125,
+        382.8999938964844,
+        495.8734436035156
+      ],
+      "block_id": "page-1110-block-0040",
+      "order": 40,
+      "text": "Institut de recherche Robert-Sauvé en santé et sécurité au travail.\n(2013b). Facteurs de risques, [en ligne], www.irsst.qc.ca.\n",
+      "text_sha256": "f98d52f993dfe494b026b87a4e1985f1ed1c1225eb33e5c0757ae64948fda390"
+    },
+    {
+      "bbox": [
+        225.0,
+        499.8349609375,
+        382.8999938964844,
+        526.2734375
+      ],
+      "block_id": "page-1110-block-0041",
+      "order": 41,
+      "text": "Institut de recherche Robert-Sauvé en santé et sécurité au travail.\n(2013c). La prévention de la violence, [en ligne], www.irsst.\nqc.ca.\n",
+      "text_sha256": "e3b5ce2d569c9b62e374b964559b91b9334b159d8d948579eb03f808f599c174"
+    },
+    {
+      "bbox": [
+        225.0,
+        530.2349853515625,
+        384.44769287109375,
+        547.5734252929688
+      ],
+      "block_id": "page-1110-block-0042",
+      "order": 42,
+      "text": "Institut de recherche Robert-Sauvé en santé et sécurité au travail.\n(2013d). Un phénomène tenace, [en ligne], www.irsst.qc.ca.\n",
+      "text_sha256": "7984a44f14991423d18f090452cb4d4609016d75cc4ba6fb3ba14083fc076dd2"
+    },
+    {
+      "bbox": [
+        225.0,
+        551.4849853515625,
+        376.5799865722656,
+        587.1234741210938
+      ],
+      "block_id": "page-1110-block-0043",
+      "order": 43,
+      "text": "Kawachi, I. & al. (1996). « A prospective study of social\nnetworks in relation to total mortality and cardiovascular\ndisease in men in the USA », Journal of epidemiology and\nCommunity Health, 50(3), p. 245-251.\n",
+      "text_sha256": "8a42ee8145d0e1d72e82df833333b04b481838a773be3cfc230aa35853cd0212"
+    },
+    {
+      "bbox": [
+        225.0,
+        591.0349731445312,
+        383.8974914550781,
+        626.6734619140625
+      ],
+      "block_id": "page-1110-block-0044",
+      "order": 44,
+      "text": "Marmot, M. & al. (1999). « Health and the psychosocial envi-\nronment at work », dans Marmot, M. & Wilkinson, R. G.\n(dir.), Social Determinants of Health, New York, Oxford\nUniversity Press, p. 105-131.\n",
+      "text_sha256": "146dfa5a948f483cc51015ea91d762563f54749e8b1823669622916a43bfcc76"
+    },
+    {
+      "bbox": [
+        225.0,
+        630.5849609375,
+        382.5975036621094,
+        693.6234741210938
+      ],
+      "block_id": "page-1110-block-0045",
+      "order": 45,
+      "text": "Ministère du Travail, de la Solidarité et de la Fonction publique,\nDirection de l’animation de la recherche, des études et des statis-\ntiques (DARES). (2009). Indicateurs provisoires de facteurs\nde risques psychosociaux au travail, Collège d’expertise\nsur le suivi statistique des risques psychosociaux au\ntravail, Paris, Ministère du Travail, de la Solidarité et de\nla Fonction publique.\n",
+      "text_sha256": "130873ed5d6e35da8b11fbb49396f46f0b38eb0c25bfddbadb2a60a0c430b616"
+    },
+    {
+      "bbox": [
+        225.0,
+        697.5349731445312,
+        378.8045349121094,
+        714.8734741210938
+      ],
+      "block_id": "page-1110-block-0046",
+      "order": 46,
+      "text": "Organisation mondiale de la santé. (2005). Mental Health\nPolicies and Programmes in the Workplace (Mental Health\n",
+      "text_sha256": "8ea5a67e1bd7a8a2b59ff83cf13b11c4c6af80b11401c54e18390ed10928c62f"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.68496322631836,
+        202.5500030517578,
+        58.0234375
+      ],
+      "block_id": "page-1110-block-0047",
+      "order": 47,
+      "text": "Somali refugees », Culture, Medicine and Psychiatry, 22,\np. 385-411.\n",
+      "text_sha256": "1088392e6da4aa36229ebf0c719c842c6f4ac24ecd8fe2815c597a3d193fbaee"
+    },
+    {
+      "bbox": [
+        54.0,
+        61.984962463378906,
+        209.3300018310547,
+        97.57344055175781
+      ],
+      "block_id": "page-1110-block-0048",
+      "order": 48,
+      "text": "Rousseau, C. & al. (2000). « Living conditions and emotional\nproles of young Cambodians, Central Americans and\nQuébécois youth », Canadian Journal of Psychiatry, 45(10),\np. 905-911.\n",
+      "text_sha256": "1616a41075af40d7ab7e6e18f49ded87c9834636f881fd54382be31f27cbab53"
+    },
+    {
+      "bbox": [
+        54.0,
+        101.4849624633789,
+        209.2521209716797,
+        137.12344360351562
+      ],
+      "block_id": "page-1110-block-0049",
+      "order": 49,
+      "text": "Rousseau, C. & al. (2004). « Remaking family life : Strategies\nfor re-establishing continuity among Congolese refugees\nduring the family reunication process », Social Science &\nMedicine, 59(5), p. 1095-1108.\n",
+      "text_sha256": "1918b59295909a5f3cec4dcadf100f39ff6ef1b522d4b6c5e169a28f8d2960c1"
+    },
+    {
+      "bbox": [
+        54.0,
+        141.0349578857422,
+        200.4374237060547,
+        176.67344665527344
+      ],
+      "block_id": "page-1110-block-0050",
+      "order": 50,
+      "text": "Rousseau, C. & al. (2008). « Prevalence and correlates of\nconduct disorder and problem behavior in West Indian\nand Filipino immigrant adolescents », European Child +\nAdolescent Psychiatry, 17(5), p. 264-273.\n",
+      "text_sha256": "49c813ef326e32ef5f8c1298e91fcdaa4b221bd051b81e47ab7b6f7cfe8be789"
+    },
+    {
+      "bbox": [
+        54.0,
+        180.5849609375,
+        204.59756469726562,
+        225.3234405517578
+      ],
+      "block_id": "page-1110-block-0051",
+      "order": 51,
+      "text": "Rousseau, C. & al. (2011a). « Perceived discrimination\nand its association with psychological distress in newly\narrived immigrants before and after September 11,\n2001 », American Journal of Public Health, 101(5),\np. 909-915.\n",
+      "text_sha256": "3d76ac43dcc5aecb0a9be6960dae44cbe47a4abd99e156783ccd14842a0396a4"
+    },
+    {
+      "bbox": [
+        54.0,
+        229.2849578857422,
+        206.47145080566406,
+        274.0234375
+      ],
+      "block_id": "page-1110-block-0052",
+      "order": 52,
+      "text": "Rousseau, C. & al. (2011b). « Post traumatic stress disorder :\nevidence review for newly arriving immigrants and refugees\n– short version », Canadian Medical Association Journal,\n[en ligne], www.cmaj.ca/lookup/suppl/doi:10.1503/\ncmaj.090313/-/DC1.\n",
+      "text_sha256": "7a44189901194df5e560fc11e8f32ce2da08da61596172a1b7efb842689382a9"
+    },
+    {
+      "bbox": [
+        54.0,
+        277.9849548339844,
+        210.41250610351562,
+        304.4234313964844
+      ],
+      "block_id": "page-1110-block-0053",
+      "order": 53,
+      "text": "Simon, G. E. & al. (1999). « An international study of the\nrelation between somatic symptoms and depression », New\nEngland Journal of Medicine, 341(18), p. 1329-1335.\n",
+      "text_sha256": "7178a3b774a0ad67327b9d2ee53e97e824b5adc098f32936b9e42e49f932610e"
+    },
+    {
+      "bbox": [
+        54.0,
+        308.3849792480469,
+        205.32749938964844,
+        362.22344970703125
+      ],
+      "block_id": "page-1110-block-0054",
+      "order": 54,
+      "text": "Steel, Z. & al. (2009). « Association of torture and other\npotentially traumatic events with mental health outcomes\namong populations exposed to mass conict and\ndisplacement : A systematic review and meta-analysis »,\nJournal of the American Medical Association, 302(5),\np. 537-549.\n",
+      "text_sha256": "f3a0b6cd0382c863df341987e6cf8298a2cc718798ffd4426dcfbef934278e09"
+    },
+    {
+      "bbox": [
+        54.0,
+        366.1849670410156,
+        201.328125,
+        392.6734313964844
+      ],
+      "block_id": "page-1110-block-0055",
+      "order": 55,
+      "text": "Sue, D. W. (2001). « Multidimensional facets of cultural\ncompetence », The Counseling Psychologist, 29(6),\np. 790.\n",
+      "text_sha256": "47d474ad28c9702e51c2af19a7495b9eee08d336b327c9b5d62f0b7fb74d44a6"
+    },
+    {
+      "bbox": [
+        54.0,
+        396.5849609375,
+        210.61737060546875,
+        423.0734558105469
+      ],
+      "block_id": "page-1110-block-0056",
+      "order": 56,
+      "text": "Ustun, T. B. & al. (2004). « Global burden of depressive dis-\norders in the year 2000 », The British Journal of Psychiatry,\n184(5), p. 386.\n",
+      "text_sha256": "5ed7f382566a1612f7ae0933b0981a39f02c84298dd819d229f4b3fd33d167f7"
+    },
+    {
+      "bbox": [
+        54.0,
+        426.9849548339844,
+        203.1201629638672,
+        435.1734313964844
+      ],
+      "block_id": "page-1110-block-0057",
+      "order": 57,
+      "text": "Vinar, M. & Vinar, M. (1989). Exil et torture, Paris, Denoë.\n",
+      "text_sha256": "754c3f8695b3a6bce75ac973e01fa5521be9f798768e3adf3edbd61b041e7b80"
+    },
+    {
+      "bbox": [
+        54.0,
+        439.1349792480469,
+        208.19638061523438,
+        483.8734436035156
+      ],
+      "block_id": "page-1110-block-0058",
+      "order": 58,
+      "text": "Weinfeld, M. (1999). « The challenges of ethnic mathch :\nMinority origin professionals in health and social services »,\ndans Troper, H. et Weinfeld, M. (dir.), Ethnicity, Politics, and\nPublic Policy : Case Studies in Canadian Diversity, Toronto,\nUniversity of Toronto Press, p. 117-141.\n",
+      "text_sha256": "844ae60cc9296796142daabe3feeb9b5634c8e64edb84eae754b17572378bbe0"
+    },
+    {
+      "bbox": [
+        54.0,
+        497.3203125,
+        212.455078125,
+        535.4234619140625
+      ],
+      "block_id": "page-1110-block-0059",
+      "order": 59,
+      "text": "Chapitre 12\nAgence européenne pour la sécurité et la santé au travail. (2014).\nConseils à l’intention des travailleurs, [en ligne], https://\nosha.europa.eu.\n",
+      "text_sha256": "1e284b4bed3aab75d61de91a0ee0653bc1d02097b4f5b82cf886778c6771f237"
+    },
+    {
+      "bbox": [
+        54.0,
+        539.3849487304688,
+        213.4369354248047,
+        593.2234497070312
+      ],
+      "block_id": "page-1110-block-0060",
+      "order": 60,
+      "text": "Bernèche, F. (2010). « Santé mentale au travail », dans Institut\nde la statistique du Québec, Étude sur la santé mentale\net le bien-être des adultes québécois : une synthèse pour\nsoutenir l’action – Enquête sur la santé dans les collectivités\ncanadiennes (cycle 1.2), Québec, Gouvernement du\nQuébec, p. 31-37.\n",
+      "text_sha256": "ec369b8f4a0397b666a809ebbfdd7cbe1c9d087cebd0499aec33c248aaa45fbd"
+    },
+    {
+      "bbox": [
+        54.0,
+        597.1849975585938,
+        212.16006469726562,
+        623.6734619140625
+      ],
+      "block_id": "page-1110-block-0061",
+      "order": 61,
+      "text": "Bunel, M. & al. (2008). Formes d’organisation du travail et\nrelations de travail, rapport de recherche, France, Centre\nd’études de l’emploi, décembre 2008.\n",
+      "text_sha256": "272df9c56f71f40ffbce3250c7dae12af07f716403c341211baac4f577129c7d"
+    },
+    {
+      "bbox": [
+        54.0,
+        627.5849609375,
+        210.7376708984375,
+        663.1734619140625
+      ],
+      "block_id": "page-1110-block-0062",
+      "order": 62,
+      "text": "Bureau international du Travail. (2006). Changements dans\nle monde du travail, rapport I (C), Conférence internationale\ndu Travail, 95e session, Genève, Bureau international du\nTravail.\n",
+      "text_sha256": "ce432d0d2ca8ba48d31933652949b369f26d82556eb0a5b7099e0c7b5cd20e19"
+    },
+    {
+      "bbox": [
+        54.0,
+        667.1349487304688,
+        209.6075897216797,
+        693.6234741210938
+      ],
+      "block_id": "page-1110-block-0063",
+      "order": 63,
+      "text": "Caveen, M. & al. (2006). « The Inuence of Organizational\nFactors on Return-to-Work Outcomes », Canadian Journal\nof Community Mental Health Problems, 25(2), p. 121-414.\n",
+      "text_sha256": "386d77d9b6b4a5953a76753280c99a05bb185b1d78cba569d7d91de149370e2b"
+    },
+    {
+      "bbox": [
+        54.0,
+        697.5349731445312,
+        206.6400146484375,
+        714.8734741210938
+      ],
+      "block_id": "page-1110-block-0064",
+      "order": 64,
+      "text": "Cohidon, C. & al. (2009). « Prevalence of common\nmental disorders and their work consequences in France,\n",
+      "text_sha256": "ff3afc1dbc97275abddc2cb0abb2a8be203c6116b74be124c60bc889a7834163"
+    }
+  ],
+  "coordinates_sha256": "8ba3bea49f714fc422e849887e8d3425d2786b02995301f297582bbbf624fd0b",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1110",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Références\nR13\nPolicy and Service Guidance Package), Genève, Organisa-\ntion mondiale de la santé.\nPapin, F. (2010). « Pourquoi cette crainte de dire : J’en ai\nassez ! », Actualité médicale, 31(21), p. 18-30.\nSanderson, K. & Andrews, G. (2006). « Common mental\ndisorders in the workforce : Recent ndings from descriptive\nand social epidemiology », Canadian Journal of Psychiatry,\n51(2), p. 63-75.\nService Canada. (2014). L’assurance-emploi, [en ligne], www.\nservicecanada.gc.ca.\nSt-Amour, A. (2005). La difculté de concilier travail-\nfamille : ses impacts sur la santé physique et mentale\ndes familles québécoises, Québec, Institut national de\nsanté publique du Québec.\nStatistique Canada. (2014). Enquête sur la santé dans les\ncollectivités canadiennes, cycle 1.2, Santé mentale et\nbien-être, Guide du fichier de microdonnées à grande\ndiffusion, Ottawa.\nSverke, M. & al. (2006). Job Insecurity : A Literature review,\nStockholm, National Institute for Working Life.\nVézina M. & al. (2008). Stress au travail et santé mentale\nchez les adultes québécois : enquête sur la santé dans les\ncollectivités canadiennes (cycle 1.2), Québec, Institut de la\nstatistique du Québec.\nVézina M. & al. (2011). Enquête québécoise sur des\nconditions de travail, d’emploi, et de santé et de sécurité\ndu travail (EQCOTESST), rapport sommaire, Québec, Institut\nde recherche Robert-Sauvé en santé et sécurité du travail\n– Québec, Institut national de santé publique du Québec et\nInstitut de la statistique du Québec.\nChapitre 13\nBastide, R. (1965). Sociologie des maladies mentales, Paris,\nChamps Flammarion.\nBecker, H. S. (1963). Outsiders : études de sociologie de la\ndéviance, Paris, Metailie.\nBibeau, G. (2008). « Entre mépris et vie nue, la souffrance\nsociale », dans Blais, L. (dir.), Vivre à la marge. Réexions\nautour de la souffrance sociale, Québec, PUL, p. 185-212.\nBlais, L. (1995). « Étiologie sociale et santé mentale : ouver-\ntures et fermetures des modèles explicatifs dominants »,\nReets, 1(2), p. 138-162.\nBlais, L. (2006). « Savoir expert, savoirs ordinaires : qui dit\nvrai ? Vérité et pouvoir chez Foucault », Sociologie et socié-\ntés. Michel Foucault : sociologue ?, 38(2), p. 151-165.\nBlanchet, L. & Messier, M. (2001). « Réseaux et partenariat »,\nchap. 72, p. 1730-1745, dans Lalonde, P. & al. (dir.),\nPsychiatrie clinique : approche bio-psycho-sociale, tome 2,\nMontréal, Gaëtan Morin.\nBrenner, M. H. (1973). Mental Illness and the Economy,\nBoston, Harvard University Press.\nCastel, F. & al. (1979). La société psychiatrique avancée,\nle modèle américain, Paris, Grasset.\nCorin, E. & al. (1989). Comprendre pour soigner autrement,\nMontréal, PUM.\nCorin, E. & al. (2011). Le mouvement de l’être – Paramètres\npour une approche alternative du traitement en santé\nmentale, Québec, Presses de l’Université du Québec.\nCorporeal, L. & Brewer, M. (1990). « We ARE darwinians, and\nthis is what the fuss is all about », Motivation and Emotion,\n14(4), p. 287-293.\nDevereux, G. (1970). Essais d’ethnopsychiatrie générale,\nParis, Gallimard.\nEisenberg, L. (1995). « The social construction of the human\nbrain », Am J Psychiatry, 152(11), p. 1563-1575.\nFassin, D. (1996). L’espace politique de la santé, Paris, PUF.\naccording to occupational category », American Journal\nof Industrial Medecine, 52, p. 141-152.\nCollège des médecins du Québec. (2009). Douleur chronique\net opioïdes : l’essentiel, [en ligne], www.cmq.org.\nCollège des médecins du Québec. (2010). Code de déontologie\ndes médecins, [en ligne], www.cmq.org.\nCommission de la santé et de la sécurité du travail (CSST).\n(2014). Statistiques sur les lésions attribuables à la violence\nen milieu de travail: 2009-2012, Québec, Direction de la\ncomptabilité et de la gestion de l’information, [en ligne],\nwww.csst.qc.ca.\nCommission des normes du travail (CNT). (2002a). Article\n81.18, Québec, [en ligne], www.cnt.gouv.qc.ca.\nCommission des normes du travail (CNT). (2002b). Article\n81.18, Québec, [en ligne], www.cnt.gouv.qc.ca.\nCooper, P. & Dewe, C. (2008). « Well-being : absenteism, pre-\nsenteism, costs and challenges », Occupational Medicine,\n58(8), p. 522-524.\nCrompton, S. (2011). « Qu’est-ce qui stresse les stressés ?\nPrincipales sources de stress des travailleurs », Tendances\nsociales canadiennes, 11-008, Ottawa, Statistique Canada.\nDagenais, M. & Imbeau, D. (2011). Approche Toyota, santé\net sécurité des professionnels et sécurité des patients : y\na-t-il un lien ?, [en ligne], www.simagi.polymtl.ca/cigi2011/\narticles/_Dagenais-Approche.\nDelgènes, J.-C. & al. (2010). France Télécom : État des lieux\nsur le stress et les conditions de travail, Rapport nal, [en\nligne], www.observatoiredustressft.org.\nDewa, C. S. & al. (2004). « Nature and prevalence of mental\nillness in the workplace », Healthcare Papers, 5(2), p. 12-25.\nDewa, C. S. & al. (2007). « An International Perspective on\nWorker Mental Health Problems : Who Bears the burden\nand how are costs addressed ? », Canadian Journal of\nPsychiatry, 52(6), p. 346-356.\nErbès-Séguin, S. (2010). La sociologie du travail, Paris,\nLa Découverte.\nInstitut de la statistique du Québec. (2008). Stress au travail\net santé mentale chez les adultes québécois – Enquête\nsur la santé dans les collectivités canadiennes (cycle 1.2),\nQuébec, Institut de la statistique du Québec.\nInstitut de recherche Robert-Sauvé en santé et sécurité au travail.\n(2013a). Ça nous concerne tous, [en ligne], www.irsst.\nqc.ca.\nInstitut de recherche Robert-Sauvé en santé et sécurité au travail.\n(2013b). Facteurs de risques, [en ligne], www.irsst.qc.ca.\nInstitut de recherche Robert-Sauvé en santé et sécurité au travail.\n(2013c). La prévention de la violence, [en ligne], www.irsst.\nqc.ca.\nInstitut de recherche Robert-Sauvé en santé et sécurité au travail.\n(2013d). Un phénomène tenace, [en ligne], www.irsst.qc.ca.\nKawachi, I. & al. (1996). « A prospective study of social\nnetworks in relation to total mortality and cardiovascular\ndisease in men in the USA », Journal of epidemiology and\nCommunity Health, 50(3), p. 245-251.\nMarmot, M. & al. (1999). « Health and the psychosocial envi-\nronment at work », dans Marmot, M. & Wilkinson, R. G.\n(dir.), Social Determinants of Health, New York, Oxford\nUniversity Press, p. 105-131.\nMinistère du Travail, de la Solidarité et de la Fonction publique,\nDirection de l’animation de la recherche, des études et des statis-\ntiques (DARES). (2009). Indicateurs provisoires de facteurs\nde risques psychosociaux au travail, Collège d’expertise\nsur le suivi statistique des risques psychosociaux au\ntravail, Paris, Ministère du Travail, de la Solidarité et de\nla Fonction publique.\nOrganisation mondiale de la santé. (2005). Mental Health\nPolicies and Programmes in the Workplace (Mental Health\nSomali refugees », Culture, Medicine and Psychiatry, 22,\np. 385-411.\nRousseau, C. & al. (2000). « Living conditions and emotional\nproles of young Cambodians, Central Americans and\nQuébécois youth », Canadian Journal of Psychiatry, 45(10),\np. 905-911.\nRousseau, C. & al. (2004). « Remaking family life : Strategies\nfor re-establishing continuity among Congolese refugees\nduring the family reunication process », Social Science &\nMedicine, 59(5), p. 1095-1108.\nRousseau, C. & al. (2008). « Prevalence and correlates of\nconduct disorder and problem behavior in West Indian\nand Filipino immigrant adolescents », European Child +\nAdolescent Psychiatry, 17(5), p. 264-273.\nRousseau, C. & al. (2011a). « Perceived discrimination\nand its association with psychological distress in newly\narrived immigrants before and after September 11,\n2001 », American Journal of Public Health, 101(5),\np. 909-915.\nRousseau, C. & al. (2011b). « Post traumatic stress disorder :\nevidence review for newly arriving immigrants and refugees\n– short version », Canadian Medical Association Journal,\n[en ligne], www.cmaj.ca/lookup/suppl/doi:10.1503/\ncmaj.090313/-/DC1.\nSimon, G. E. & al. (1999). « An international study of the\nrelation between somatic symptoms and depression », New\nEngland Journal of Medicine, 341(18), p. 1329-1335.\nSteel, Z. & al. (2009). « Association of torture and other\npotentially traumatic events with mental health outcomes\namong populations exposed to mass conict and\ndisplacement : A systematic review and meta-analysis »,\nJournal of the American Medical Association, 302(5),\np. 537-549.\nSue, D. W. (2001). « Multidimensional facets of cultural\ncompetence », The Counseling Psychologist, 29(6),\np. 790.\nUstun, T. B. & al. (2004). « Global burden of depressive dis-\norders in the year 2000 », The British Journal of Psychiatry,\n184(5), p. 386.\nVinar, M. & Vinar, M. (1989). Exil et torture, Paris, Denoë.\nWeinfeld, M. (1999). « The challenges of ethnic mathch :\nMinority origin professionals in health and social services »,\ndans Troper, H. et Weinfeld, M. (dir.), Ethnicity, Politics, and\nPublic Policy : Case Studies in Canadian Diversity, Toronto,\nUniversity of Toronto Press, p. 117-141.\nChapitre 12\nAgence européenne pour la sécurité et la santé au travail. (2014).\nConseils à l’intention des travailleurs, [en ligne], https://\nosha.europa.eu.\nBernèche, F. (2010). « Santé mentale au travail », dans Institut\nde la statistique du Québec, Étude sur la santé mentale\net le bien-être des adultes québécois : une synthèse pour\nsoutenir l’action – Enquête sur la santé dans les collectivités\ncanadiennes (cycle 1.2), Québec, Gouvernement du\nQuébec, p. 31-37.\nBunel, M. & al. (2008). Formes d’organisation du travail et\nrelations de travail, rapport de recherche, France, Centre\nd’études de l’emploi, décembre 2008.\nBureau international du Travail. (2006). Changements dans\nle monde du travail, rapport I (C), Conférence internationale\ndu Travail, 95e session, Genève, Bureau international du\nTravail.\nCaveen, M. & al. (2006). « The Inuence of Organizational\nFactors on Return-to-Work Outcomes », Canadian Journal\nof Community Mental Health Problems, 25(2), p. 121-414.\nCohidon, C. & al. (2009). « Prevalence of common\nmental disorders and their work consequences in France,\n",
+  "raw_text_sha256": "f73b81766f1cf909484bcb52ce891fee3341165b343768160b8a0aa63a41d496",
+  "source_page_display": 1111,
+  "source_page_index": 1110
+}

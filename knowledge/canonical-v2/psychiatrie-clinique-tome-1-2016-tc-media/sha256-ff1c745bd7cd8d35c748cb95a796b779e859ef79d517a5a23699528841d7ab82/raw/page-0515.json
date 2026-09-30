@@ -1,0 +1,400 @@
+{
+  "block_sequence_sha256": "b2fcddb4187c08e234ce1ca3c45aea30a2eb534ae25413b33fcf7ab73f08319a",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.53765869140625,
+        758.8693237304688
+      ],
+      "block_id": "page-0515-block-0001",
+      "order": 1,
+      "text": "498\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "a0bb3fb4920e3285fdbb6522dbf3bea3663ff39b738b08ce26d3b466ccf90f7b"
+    },
+    {
+      "bbox": [
+        50.25,
+        41.002296447753906,
+        293.10980224609375,
+        53.320068359375
+      ],
+      "block_id": "page-0515-block-0002",
+      "order": 2,
+      "text": "TABLEAU 23.2 Critères diagnostiques du trouble stress aigu\n",
+      "text_sha256": "964fe3e9e6930bd3ecb2f41185a42c785376a041300eee30820b8f1720944e3b"
+    },
+    {
+      "bbox": [
+        63.25,
+        58.27412414550781,
+        457.76251220703125,
+        166.828125
+      ],
+      "block_id": "page-0515-block-0003",
+      "order": 3,
+      "text": "DSM-5\nDSM-IV-TR\n308.3 (F43.0) Trouble stress aigu\nÉtat de stress aigu\nSymptômes d’évitement\n8. Effort pour éviter les souvenirs, pensées ou sentiments concernant\nou étroitement associés à un ou plusieurs événements traumatiques\net provoquant un sentiment de détresse.\n9. Effort pour éviter les rappels externes (personnes, endroits, conver-\nsations, activités, objets, situations) qui réveillent des souvenirs, des\npensées ou des sentiments associés à un ou plusieurs événements\ntraumatiques et provoquant un sentiment de détresse.\n",
+      "text_sha256": "bd840fd1b3d3376f5eaf6a5a5a4e0e6d8b3232eb9fab85234bc38f80bf136672"
+    },
+    {
+      "bbox": [
+        302.25,
+        85.001953125,
+        544.1468505859375,
+        94.828125
+      ],
+      "block_id": "page-0515-block-0004",
+      "order": 4,
+      "text": "D. Évitement persistant des stimuli qui éveillent la mémoire du traumatisme\n",
+      "text_sha256": "5971433d6e2dbf31130b03ec3707a6bbe285a078ead2195a6b445c5b772ce64b"
+    },
+    {
+      "bbox": [
+        313.3999938964844,
+        95.001953125,
+        532.8367309570312,
+        104.828125
+      ],
+      "block_id": "page-0515-block-0005",
+      "order": 5,
+      "text": "(p. ex., pensées, sentiments, conversations, activités, endroits, gens).\n",
+      "text_sha256": "5a92817ed57e894bf09ab94a6854caacbd2b5260be024ef9b9957686d4d4d9d0"
+    },
+    {
+      "bbox": [
+        63.25,
+        171.32286071777344,
+        279.9726257324219,
+        266.2281188964844
+      ],
+      "block_id": "page-0515-block-0006",
+      "order": 6,
+      "text": "Symptômes d’éveil\n10. Perturbation du sommeil (p. ex. difculté d’endormissement ou\nsommeil interrompu ou agité).\n11. Comportement irritable ou accès de colère (avec peu ou pas de\nprovocation) qui s’expriment typiquement par une agressivité\nverbale ou physique envers des personnes ou des objets.\n12. Hypervigilance.\n13. Difcultés de concentration.\n14. Réaction de sursaut exagéré.\n",
+      "text_sha256": "5d3a07fab1f4a78857c36f03bb6f6374e65cab3c078f30624c2caa236cdee83c"
+    },
+    {
+      "bbox": [
+        302.25,
+        171.40196228027344,
+        527.802001953125,
+        181.22813415527344
+      ],
+      "block_id": "page-0515-block-0007",
+      "order": 7,
+      "text": "E. Présence de symptômes anxieux persistants ou bien manifestations\n",
+      "text_sha256": "ac371ed1a6beb69c63a538c7d03b313e5f4c3b1ec5a027b97c1933fd15f4f02a"
+    },
+    {
+      "bbox": [
+        312.5500183105469,
+        181.40196228027344,
+        458.6611328125,
+        191.22813415527344
+      ],
+      "block_id": "page-0515-block-0008",
+      "order": 8,
+      "text": "d’une activation neurovégétative, par exemple\n",
+      "text_sha256": "d40ab7cb2f9a319b08dc3ef7b460bbf98db97e937f3db35f8e21a9bef331dba1"
+    },
+    {
+      "bbox": [
+        314.25,
+        192.40196228027344,
+        409.79010009765625,
+        213.22813415527344
+      ],
+      "block_id": "page-0515-block-0009",
+      "order": 9,
+      "text": "• difcultés lors du sommeil ;\n• irritabilité ;\n",
+      "text_sha256": "224593ded4e0de4c1e5d089f783717abb251c61076d572b6aadd0028de36f82e"
+    },
+    {
+      "bbox": [
+        314.25,
+        245.40196228027344,
+        419.1250305175781,
+        288.2281188964844
+      ],
+      "block_id": "page-0515-block-0010",
+      "order": 10,
+      "text": "• difcultés de concentration ;\n• hypervigilance ;\n• réaction de sursaut exagérée ;\n• agitation motrice.\n",
+      "text_sha256": "4534a68c5e87d3034d9ffe13a9d03f5f81e489190c2b2258c09611f541ae719f"
+    },
+    {
+      "bbox": [
+        52.25,
+        292.8519592285156,
+        290.7438049316406,
+        302.6781311035156
+      ],
+      "block_id": "page-0515-block-0011",
+      "order": 11,
+      "text": "C. La durée de la perturbation (des symptômes du critère B) est de 3 jours\n",
+      "text_sha256": "d3b66ee8f99df9a22efaeeb5684884e117f77fdf821a895737bffb4f8678dbc8"
+    },
+    {
+      "bbox": [
+        63.20000076293945,
+        302.7728576660156,
+        291.93548583984375,
+        342.6781311035156
+      ],
+      "block_id": "page-0515-block-0012",
+      "order": 12,
+      "text": "à 1 mois après l’exposition au trauma. N.B.: Les symptômes débutent\ntypiquement immédiatement après le traumatisme, mais ils doivent\npersister pendant au moins 3 jours et jusqu’à 1 mois pour répondre aux\ncritères diagnostiques du trouble.\n",
+      "text_sha256": "a72e907907e7197764ec0714823045f469ad6f80afbd3b53f13660f91bac0fcf"
+    },
+    {
+      "bbox": [
+        302.25,
+        292.8519592285156,
+        516.2719116210938,
+        302.6781311035156
+      ],
+      "block_id": "page-0515-block-0013",
+      "order": 13,
+      "text": "G. La perturbation dure un minimum de 2 jours et un maximum de\n",
+      "text_sha256": "44703deb116b616ba030c1056f63cdd32739f6f2af62c70310a7809bb648d324"
+    },
+    {
+      "bbox": [
+        313.3999938964844,
+        302.8519592285156,
+        518.9514770507812,
+        322.6781311035156
+      ],
+      "block_id": "page-0515-block-0014",
+      "order": 14,
+      "text": "4 semaines et survient dans les 4 semaines suivant l’événement\ntraumatique.\n",
+      "text_sha256": "5daf14e3cd2a3f2e7352c0ddda1490116c047ee74bd14bb6619daf5da94273da"
+    },
+    {
+      "bbox": [
+        52.25,
+        347.251953125,
+        289.4102478027344,
+        357.078125
+      ],
+      "block_id": "page-0515-block-0015",
+      "order": 15,
+      "text": "D. La perturbation entraîne une détresse cliniquement signicative ou une\n",
+      "text_sha256": "bc475bfc8d73fb35a5dc2c94734d707d5c0caba029b41e717acd4a0b7327f542"
+    },
+    {
+      "bbox": [
+        63.400001525878906,
+        357.251953125,
+        276.796630859375,
+        377.078125
+      ],
+      "block_id": "page-0515-block-0016",
+      "order": 16,
+      "text": "altération du fonctionnement social, professionnel ou dans d’autres\ndomaines importants.\n",
+      "text_sha256": "ae7e0cc8b82dfbd43f3999754561e4561cd4c6247e69225aea82e30eb1197ba0"
+    },
+    {
+      "bbox": [
+        302.25,
+        347.251953125,
+        537.1318969726562,
+        357.078125
+      ],
+      "block_id": "page-0515-block-0017",
+      "order": 17,
+      "text": "F. La perturbation entraîne une détresse cliniquement signicative ou une\n",
+      "text_sha256": "1bba17c3ed7b43f24522b7a85d1e51a59a97fe843666eccb7428638f756b8d78"
+    },
+    {
+      "bbox": [
+        311.3999938964844,
+        357.251953125,
+        532.1201782226562,
+        407.078125
+      ],
+      "block_id": "page-0515-block-0018",
+      "order": 18,
+      "text": "altération du fonctionnement social, professionnel ou dans d’autres\ndomaines importants ou altère la capacité du sujet à mener à bien\ncertaines obligations, comme obtenir une assistance nécessaire ou\nmobiliser des ressources personnelles en parlant aux membres de sa\nfamille de l’expérience traumatique.\n",
+      "text_sha256": "23715f263667d2acb872c1c2e04a78b10715b14e18c1006e6c8a22031a35e947"
+    },
+    {
+      "bbox": [
+        52.25,
+        411.70196533203125,
+        282.1060485839844,
+        421.52813720703125
+      ],
+      "block_id": "page-0515-block-0019",
+      "order": 19,
+      "text": "E. La perturbation n’est pas due aux effets physiologiques directs d’une\n",
+      "text_sha256": "7e746bb835eeb15ae0931c5ea299d5af006c02558dfdb50656db38e09aebb8ed"
+    },
+    {
+      "bbox": [
+        62.54999923706055,
+        421.70196533203125,
+        286.4101867675781,
+        451.52813720703125
+      ],
+      "block_id": "page-0515-block-0020",
+      "order": 20,
+      "text": "substance (p. ex: médication ou alcool) ou à une affection médicale (p.\nex. lésion cérébrale traumatique légère), et n’est pas mieux expliquée\npar un trouble psychotique bref.\n",
+      "text_sha256": "31ea9156b2972a979a110dbfdc10f996d810e28f8a1b1a9d68e482ad28d00412"
+    },
+    {
+      "bbox": [
+        302.25,
+        411.70196533203125,
+        532.7371215820312,
+        421.52813720703125
+      ],
+      "block_id": "page-0515-block-0021",
+      "order": 21,
+      "text": "H. La perturbation n’est pas due aux effets physiologiques directs d’une\n",
+      "text_sha256": "64af15175b825181f4a6a4545cda69bd0b819b89c210cb7b2c294dcad4ab6915"
+    },
+    {
+      "bbox": [
+        313.20001220703125,
+        421.70196533203125,
+        543.5587768554688,
+        461.52813720703125
+      ],
+      "block_id": "page-0515-block-0022",
+      "order": 22,
+      "text": "substance (p. ex., une substance donnant lieu à abus, un médicament)\nou une affection médicale générale, n’est pas mieux expliquée par un\nTrouble psychotique bref et n’est pas uniquement une exacerbation d’un\ntrouble préexistant de l’axe I ou de l’axe II.\n",
+      "text_sha256": "a01b664e64b0ade27fa80cd58059b42e6eb40786590259baaf2de65757123a49"
+    },
+    {
+      "bbox": [
+        48.25,
+        468.2906188964844,
+        539.0558471679688,
+        507.0249938964844
+      ],
+      "block_id": "page-0515-block-0023",
+      "order": 23,
+      "text": "Source : APA (2015), p. 331-333 ; APA (2004a), p.544-545.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris,\n2015. All rights reserved.\n",
+      "text_sha256": "0d461d0e3f87c4b56f558dffdbca50dcb75fe456c4445ace3e09ee30ad0c7df4"
+    },
+    {
+      "bbox": [
+        48.25,
+        510.2906494140625,
+        548.705810546875,
+        528.0250244140625
+      ],
+      "block_id": "page-0515-block-0024",
+      "order": 24,
+      "text": "Traduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation, DSM-IV-TR - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\n",
+      "text_sha256": "09eb1d8be77faed7408fbe7e7ec5119775e0b544ad4bdeb64f9c90beb290783e"
+    },
+    {
+      "bbox": [
+        50.35000228881836,
+        538.102294921875,
+        347.1533508300781,
+        550.4201049804688
+      ],
+      "block_id": "page-0515-block-0025",
+      "order": 25,
+      "text": "TABLEAU 23.3 Critères diagnostiques du trouble stress post-traumatique\n",
+      "text_sha256": "98a79a8db5799ea0ad786229584e0f12dcdd0880812d4d26882f83e9f8572cb0"
+    },
+    {
+      "bbox": [
+        85.3499984741211,
+        555.3741455078125,
+        481.33636474609375,
+        578.7003173828125
+      ],
+      "block_id": "page-0515-block-0026",
+      "order": 26,
+      "text": "DSM-5\nDSM-IV-TR\n309.81 (F43.10) Trouble stress post-traumatique\nÉtat de stress post-traumatique\n",
+      "text_sha256": "e2587cc64267b3d4199af3eed4935b50664dd986a6ebbe2e2742009104bb333a"
+    },
+    {
+      "bbox": [
+        52.25,
+        584.0228881835938,
+        291.91339111328125,
+        624.9281616210938
+      ],
+      "block_id": "page-0515-block-0027",
+      "order": 27,
+      "text": "N.B. Les critères suivants s’appliquent aux adultes, aux adolescents et aux\nenfants âgés de plus de 6 ans. Pour les enfants de 6 ans et moins, cf. les\ncritères correspondant ci-dessous [voir l’encadré 23.1].\nA. Exposition à la mort effective ou à une menace de mort, à une bles-\n",
+      "text_sha256": "e5a483307b0c0203693cd52c63a9d038dee267376b179574d25f1804956fb000"
+    },
+    {
+      "bbox": [
+        63.10000228881836,
+        625.1019897460938,
+        294.1014099121094,
+        727.9281616210938
+      ],
+      "block_id": "page-0515-block-0028",
+      "order": 28,
+      "text": "sure grave ou à des violences sexuelles, d’une (ou plus) des façons\nsuivantes :\n1. En étant directement exposé à un ou plusieurs événements\ntraumatiques.\n2. En étant témoin direct d’un ou plusieurs événements traumatiques\nsurvenus à d’autres personnes.\n3. En apprenant qu’un ou plusieurs événements traumatiques est/sont arri-\nvés à un membre de la famille proche ou à un ami proche.N.B. : Dans les\ncas de mort effective ou de menace de mort de membre de la famille ou\nd’un ami, le ou les événements doivent avoir été violents ou accidentels.\n",
+      "text_sha256": "73c84eb64c9c8f1a3d2d3814a62384d2ac57409c839e799ed8e97af30bfdc500"
+    },
+    {
+      "bbox": [
+        302.25,
+        584.1019897460938,
+        541.4108276367188,
+        593.9281616210938
+      ],
+      "block_id": "page-0515-block-0029",
+      "order": 29,
+      "text": "A. Le sujet a été exposé à un événement traumatique dans lequel les deux\n",
+      "text_sha256": "21206ccde754daee62a4a87ab1b5a047a6cf1b5c2d0cfcd7c061c4419d98d140"
+    },
+    {
+      "bbox": [
+        313.1000061035156,
+        594.1019897460938,
+        541.411376953125,
+        614.9281616210938
+      ],
+      "block_id": "page-0515-block-0030",
+      "order": 30,
+      "text": "éléments suivants étaient présents :\n(1) Le sujet a vécu, a été témoin ou a été confronté à un événement ou\n",
+      "text_sha256": "c71f963d5b387b0095486d78057b82c452ff05576ced6800d771ddfdff84d519"
+    },
+    {
+      "bbox": [
+        326.0500183105469,
+        615.1019897460938,
+        541.0389404296875,
+        654.9281616210938
+      ],
+      "block_id": "page-0515-block-0031",
+      "order": 31,
+      "text": "à des événements durant lesquels des individus ont pu mourir ou\nêtre très gravement blessés ou bien ont été menacés de mort ou\nde grave blessure ou bien durant lesquels son intégrité physique ou\ncelle d’autrui a pu être menacée.\n",
+      "text_sha256": "cf2fed75a374bfe0536ee7dd04a8e981630750d150d1b38483b92923da6db1a6"
+    },
+    {
+      "bbox": [
+        294.70001220703125,
+        41.352294921875,
+        320.3342590332031,
+        53.320068359375
+      ],
+      "block_id": "page-0515-block-0032",
+      "order": 32,
+      "text": "(suite)\n",
+      "text_sha256": "c684d6dbcdfd50f0ada227f799b5c0fb30e817ac3da61b4cbf208decde7f907b"
+    }
+  ],
+  "coordinates_sha256": "03530c090183d612511119d68e3ac9ff17449dabbbeb6e50556ff25ef99a81d5",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0515",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "498\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nTABLEAU 23.2 Critères diagnostiques du trouble stress aigu\nDSM-5\nDSM-IV-TR\n308.3 (F43.0) Trouble stress aigu\nÉtat de stress aigu\nSymptômes d’évitement\n8. Effort pour éviter les souvenirs, pensées ou sentiments concernant\nou étroitement associés à un ou plusieurs événements traumatiques\net provoquant un sentiment de détresse.\n9. Effort pour éviter les rappels externes (personnes, endroits, conver-\nsations, activités, objets, situations) qui réveillent des souvenirs, des\npensées ou des sentiments associés à un ou plusieurs événements\ntraumatiques et provoquant un sentiment de détresse.\nD. Évitement persistant des stimuli qui éveillent la mémoire du traumatisme\n(p. ex., pensées, sentiments, conversations, activités, endroits, gens).\nSymptômes d’éveil\n10. Perturbation du sommeil (p. ex. difculté d’endormissement ou\nsommeil interrompu ou agité).\n11. Comportement irritable ou accès de colère (avec peu ou pas de\nprovocation) qui s’expriment typiquement par une agressivité\nverbale ou physique envers des personnes ou des objets.\n12. Hypervigilance.\n13. Difcultés de concentration.\n14. Réaction de sursaut exagéré.\nE. Présence de symptômes anxieux persistants ou bien manifestations\nd’une activation neurovégétative, par exemple\n• difcultés lors du sommeil ;\n• irritabilité ;\n• difcultés de concentration ;\n• hypervigilance ;\n• réaction de sursaut exagérée ;\n• agitation motrice.\nC. La durée de la perturbation (des symptômes du critère B) est de 3 jours\nà 1 mois après l’exposition au trauma. N.B.: Les symptômes débutent\ntypiquement immédiatement après le traumatisme, mais ils doivent\npersister pendant au moins 3 jours et jusqu’à 1 mois pour répondre aux\ncritères diagnostiques du trouble.\nG. La perturbation dure un minimum de 2 jours et un maximum de\n4 semaines et survient dans les 4 semaines suivant l’événement\ntraumatique.\nD. La perturbation entraîne une détresse cliniquement signicative ou une\naltération du fonctionnement social, professionnel ou dans d’autres\ndomaines importants.\nF. La perturbation entraîne une détresse cliniquement signicative ou une\naltération du fonctionnement social, professionnel ou dans d’autres\ndomaines importants ou altère la capacité du sujet à mener à bien\ncertaines obligations, comme obtenir une assistance nécessaire ou\nmobiliser des ressources personnelles en parlant aux membres de sa\nfamille de l’expérience traumatique.\nE. La perturbation n’est pas due aux effets physiologiques directs d’une\nsubstance (p. ex: médication ou alcool) ou à une affection médicale (p.\nex. lésion cérébrale traumatique légère), et n’est pas mieux expliquée\npar un trouble psychotique bref.\nH. La perturbation n’est pas due aux effets physiologiques directs d’une\nsubstance (p. ex., une substance donnant lieu à abus, un médicament)\nou une affection médicale générale, n’est pas mieux expliquée par un\nTrouble psychotique bref et n’est pas uniquement une exacerbation d’un\ntrouble préexistant de l’axe I ou de l’axe II.\nSource : APA (2015), p. 331-333 ; APA (2004a), p.544-545.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris,\n2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation, DSM-IV-TR - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\nTABLEAU 23.3 Critères diagnostiques du trouble stress post-traumatique\nDSM-5\nDSM-IV-TR\n309.81 (F43.10) Trouble stress post-traumatique\nÉtat de stress post-traumatique\nN.B. Les critères suivants s’appliquent aux adultes, aux adolescents et aux\nenfants âgés de plus de 6 ans. Pour les enfants de 6 ans et moins, cf. les\ncritères correspondant ci-dessous [voir l’encadré 23.1].\nA. Exposition à la mort effective ou à une menace de mort, à une bles-\nsure grave ou à des violences sexuelles, d’une (ou plus) des façons\nsuivantes :\n1. En étant directement exposé à un ou plusieurs événements\ntraumatiques.\n2. En étant témoin direct d’un ou plusieurs événements traumatiques\nsurvenus à d’autres personnes.\n3. En apprenant qu’un ou plusieurs événements traumatiques est/sont arri-\nvés à un membre de la famille proche ou à un ami proche.N.B. : Dans les\ncas de mort effective ou de menace de mort de membre de la famille ou\nd’un ami, le ou les événements doivent avoir été violents ou accidentels.\nA. Le sujet a été exposé à un événement traumatique dans lequel les deux\néléments suivants étaient présents :\n(1) Le sujet a vécu, a été témoin ou a été confronté à un événement ou\nà des événements durant lesquels des individus ont pu mourir ou\nêtre très gravement blessés ou bien ont été menacés de mort ou\nde grave blessure ou bien durant lesquels son intégrité physique ou\ncelle d’autrui a pu être menacée.\n(suite)\n",
+  "raw_text_sha256": "bd92daad34d68dab8f6bcab014344c9ee7ef111bd1a4fc7729960ec2e3861414",
+  "source_page_display": 516,
+  "source_page_index": 515
+}

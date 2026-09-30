@@ -1,0 +1,364 @@
+{
+  "block_sequence_sha256": "f84bcded1df3e343666431917a347afebd8c507c8ea7dd1f4a1a3f20cc121a89",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        477.3144836425781,
+        758.8693237304688
+      ],
+      "block_id": "page-0549-block-0001",
+      "order": 1,
+      "text": "532\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3\nSyndromes cliniques psychiatriques\n",
+      "text_sha256": "a22b3f43462a19cbe0056604415561205c891ccbe40924a4284076cbdb154c03"
+    },
+    {
+      "bbox": [
+        50.70000076293945,
+        41.05229568481445,
+        355.2845153808594,
+        53.320068359375
+      ],
+      "block_id": "page-0549-block-0002",
+      "order": 2,
+      "text": "TABLEAU 25.2 Catégories diagnostiques de la symptomatologie somatique\n",
+      "text_sha256": "53d211e908f843d85aa3abd9247efc595c4cc863ff8404d7f73f34e5e32cb1a3"
+    },
+    {
+      "bbox": [
+        62.400001525878906,
+        58.27412414550781,
+        201.60809326171875,
+        68.85029602050781
+      ],
+      "block_id": "page-0549-block-0003",
+      "order": 3,
+      "text": "Trouble à symptomatologie somatique\n",
+      "text_sha256": "b13aca8c0d98bc56c6f496fe6420e4e62adff46afd32c7285be4f060d6b2ee8b"
+    },
+    {
+      "bbox": [
+        116.9000015258789,
+        63.27412414550781,
+        542.3756103515625,
+        78.85029602050781
+      ],
+      "block_id": "page-0549-block-0004",
+      "order": 4,
+      "text": "(DSM-5)\nTroubles somatoformes (DSM-IV-TR)\nTroubles somatoformes et autres (CIM-10)\n",
+      "text_sha256": "adb55854b7fa6e178046ca0387304f7d750a1ea97dc3442b0b3e54b58ad09371"
+    },
+    {
+      "bbox": [
+        52.5,
+        82.20195770263672,
+        365.8769836425781,
+        125.02812957763672
+      ],
+      "block_id": "page-0549-block-0005",
+      "order": 5,
+      "text": "Trouble à symptomatologie somatique\n• Trouble de somatisation\n• Trouble somatoforme indifférencié\n• Trouble douloureux\n• Hypocondrie (avec symptômes somatiques)\n",
+      "text_sha256": "864a5b77df257ae7331869f4fa281ad40e7439664df5b12407b5d091c4921ee3"
+    },
+    {
+      "bbox": [
+        385.8500061035156,
+        82.20195770263672,
+        541.5770263671875,
+        125.02812957763672
+      ],
+      "block_id": "page-0549-block-0006",
+      "order": 6,
+      "text": "• Somatisation\n• Trouble somatoforme indifférencié\n• Syndrome douloureux somatoforme persistant\n• Trouble hypocondriaque\n",
+      "text_sha256": "fd4b79987a689b09a392d048edbb35114a4564f1b29ba33e39df9c712d7239f0"
+    },
+    {
+      "bbox": [
+        52.5,
+        129.65196228027344,
+        364.0500183105469,
+        149.47813415527344
+      ],
+      "block_id": "page-0549-block-0007",
+      "order": 7,
+      "text": "Crainte excessive d’avoir une maladie\n• Hypocondrie (sans symptômes somatiques\nprédominants)\n",
+      "text_sha256": "231df6f044e8a6d539a0a49f6fea2a354181bc2d4f44e4b2e433c511b10db9c5"
+    },
+    {
+      "bbox": [
+        385.8500061035156,
+        129.65196228027344,
+        513.1040649414062,
+        139.47813415527344
+      ],
+      "block_id": "page-0549-block-0008",
+      "order": 8,
+      "text": "• Trouble hypocondriaque (nosophobie)\n",
+      "text_sha256": "6aa6705ab4edc91df4d07045bd7c4c086687c51fbc2c8317842b30c3d38dfa28"
+    },
+    {
+      "bbox": [
+        52.5,
+        154.0519561767578,
+        204.7469940185547,
+        173.8781280517578
+      ],
+      "block_id": "page-0549-block-0009",
+      "order": 9,
+      "text": "Conversion (trouble à symptomatologie neurolo-\ngique fonctionnelle)\n",
+      "text_sha256": "e35e7074c514d21b2d08ad40c73d6962e2a245048b72b3151fe19517a1c8e830"
+    },
+    {
+      "bbox": [
+        219.15000915527344,
+        153.4513702392578,
+        511.77398681640625,
+        163.8781280517578
+      ],
+      "block_id": "page-0549-block-0010",
+      "order": 10,
+      "text": "• Trouble de conversion\n• Troubles dissociatifs (de conversion)1\n",
+      "text_sha256": "a8db66bcc3eded542c9fd7631e5fcb13d3a33499e98296244ab1b7a8d469240b"
+    },
+    {
+      "bbox": [
+        385.8500061035156,
+        165.0519561767578,
+        543.89990234375,
+        250.8781280517578
+      ],
+      "block_id": "page-0549-block-0011",
+      "order": 11,
+      "text": "• Troubles dissociatifs de la motricité et des\norganes de sens\n• Troubles moteurs dissociatifs\n• Convulsions dissociatives\n• Anesthésie dissociative et atteintes sensorielles\n• Troubles dissociatifs (de conversion) mixtes\n• Autres troubles dissociatifs (de conversion)\n• Troubles dissociatifs (de conversion) sans précision\n",
+      "text_sha256": "617804d924735ba17bade6b79e4b347ee01a22107ea39520e9ead244655247c1"
+    },
+    {
+      "bbox": [
+        52.5,
+        255.501953125,
+        192.792724609375,
+        275.328125
+      ],
+      "block_id": "page-0549-block-0012",
+      "order": 12,
+      "text": "Autres troubles spéciés à symptomatologie\nsomatique\n",
+      "text_sha256": "9532b22baa58dc2605a65bafdff4525639dbe12afcef1d3213334a47d35dc4a4"
+    },
+    {
+      "bbox": [
+        385.8500061035156,
+        255.501953125,
+        490.35003662109375,
+        265.328125
+      ],
+      "block_id": "page-0549-block-0013",
+      "order": 13,
+      "text": "• Autres troubles somatoformes\n",
+      "text_sha256": "2c41184ea5db1354f4385bf7c483f5f45d78a528103017db08cc9b0a98272cc8"
+    },
+    {
+      "bbox": [
+        52.5,
+        279.9019470214844,
+        185.34307861328125,
+        299.7281188964844
+      ],
+      "block_id": "page-0549-block-0014",
+      "order": 14,
+      "text": "Troubles non spéciés à symptomatologie\nsomatique\n",
+      "text_sha256": "6b97123d5d4d0b3f69953fecd305f4736c8a67060b2beda15215a3fdd2282d1f"
+    },
+    {
+      "bbox": [
+        219.15000915527344,
+        279.9019470214844,
+        509.7471008300781,
+        289.7281188964844
+      ],
+      "block_id": "page-0549-block-0015",
+      "order": 15,
+      "text": "• Trouble somatoforme non spécié\n• Trouble somatoforme sans précision\n",
+      "text_sha256": "ef8d720b60e581dd73b70dc7276a65c121d19656a537ffd3c550d2290f0e29f3"
+    },
+    {
+      "bbox": [
+        52.5,
+        304.3519592285156,
+        202.7469940185547,
+        324.1781311035156
+      ],
+      "block_id": "page-0549-block-0016",
+      "order": 16,
+      "text": "Facteurs psychologiques inuençant une affec-\ntion médicale\n",
+      "text_sha256": "e22e504fcc038ea8f46c0f0541e4465c333e7adbc0985435619b64f0a807f7c0"
+    },
+    {
+      "bbox": [
+        219.15000915527344,
+        304.3519592285156,
+        361.4032287597656,
+        324.1781311035156
+      ],
+      "block_id": "page-0549-block-0017",
+      "order": 17,
+      "text": "• Catégorie incluse dans « autres conditions\nd’intérêt clinique »\n",
+      "text_sha256": "2f16b0be25bcbe21d93ad35fd86ca7ce97a93e866a437126132bc43f8bea0d56"
+    },
+    {
+      "bbox": [
+        52.5,
+        328.751953125,
+        360.17108154296875,
+        348.578125
+      ],
+      "block_id": "page-0549-block-0018",
+      "order": 18,
+      "text": "Trouble factice\n• Catégorie spécique non incluse dans les\ntroubles somatoformes\n",
+      "text_sha256": "6e1c1cfe8f22ddd93061c3a426ba5b890b9387b24a71eb04b7b15fd1bf5c582f"
+    },
+    {
+      "bbox": [
+        385.8500061035156,
+        328.751953125,
+        536.8276977539062,
+        358.578125
+      ],
+      "block_id": "page-0549-block-0019",
+      "order": 19,
+      "text": "• Production intentionnelle ou simulation de\nsymptômes ou d’incapacités, soit physiques,\nsoit psychologiques (trouble factice)\n",
+      "text_sha256": "e34b28822613c035100c88919c79339bf9bed792929ee057ee9f796e8ca5b48f"
+    },
+    {
+      "bbox": [
+        52.5,
+        362.60137939453125,
+        502.3640441894531,
+        373.02813720703125
+      ],
+      "block_id": "page-0549-block-0020",
+      "order": 20,
+      "text": "Obsession d’une dysmorphie corporelle\n• Trouble dysmorphique corporel 2\n• Peur d’une dysmorphie corporelle\n",
+      "text_sha256": "fd770bee085362dd0983e9cb7b43de5787f244ba1fb1adc8e5d338c3fe62a7a4"
+    },
+    {
+      "bbox": [
+        48.5,
+        377.6962890625,
+        384.5462951660156,
+        386.9765625
+      ],
+      "block_id": "page-0549-block-0021",
+      "order": 21,
+      "text": "1. La conversion demeure incluse dans les troubles dissociatifs de la CIM en précisant son type de présentation.\n",
+      "text_sha256": "483037ef94d5772979e6c1092a51fdd786ec92d5683f14571bf1ad1c1339af8a"
+    },
+    {
+      "bbox": [
+        48.5,
+        391.7962951660156,
+        528.5791625976562,
+        410.5765686035156
+      ],
+      "block_id": "page-0549-block-0022",
+      "order": 22,
+      "text": "2. Le trouble dysmorphique corporel, qui faisait partie des troubles somatoformes dans le DSM-IV-TR, est déplacé dans les troubles obsessionnels et se nomme\n« obsession d’une dysmorphie corporelle » dans le DSM-5.\n",
+      "text_sha256": "bb5d7b67ea8c1ba5da318412ed31b9e90d7ff062e80e6cfb27efe82d25bb93eb"
+    },
+    {
+      "bbox": [
+        48.5,
+        417.3703308105469,
+        311.53411865234375,
+        426.2765808105469
+      ],
+      "block_id": "page-0549-block-0023",
+      "order": 23,
+      "text": "Sources: APA (2015) p. 367 ; APA (2004) p. 490 ; Organisation mondiale de la santé (2008).\n",
+      "text_sha256": "f4a3a1d5f5cf3364bc8d54b80d70b3a432b0faa2e518f4e51d332f47bf76427a"
+    },
+    {
+      "bbox": [
+        48.0,
+        438.9658203125,
+        291.1898193359375,
+        549.45849609375
+      ],
+      "block_id": "page-0549-block-0024",
+      "order": 24,
+      "text": "et les tenants d’un syndrome inuencé par des facteurs psy-\nchologiques. Il n’est pas rare de rencontrer une attribution\nsomatique, voire hypocondriaque, dans de tels syndromes.\nUne troisième catégorie implicite, celle utilisée en médecine\npour décrire des douleurs (le trouble douloureux), qui était\ndans le DSM-IV, n’est pas retenue dans le DSM-5.\n• Le trouble douloureux comporte deux sous-groupes :\n– avec des facteurs psychologiques ;\n– avec des facteurs mixtes (organiques et psychologiques).\n",
+      "text_sha256": "ceba422b860a95628d0180c5b47a2535797741951113ccc67820fb116afbb9d3"
+    },
+    {
+      "bbox": [
+        68.0,
+        557.72412109375,
+        266.2333984375,
+        588.80029296875
+      ],
+      "block_id": "page-0549-block-0025",
+      "order": 25,
+      "text": "Le trouble à symptomatologie somatique avec douleur\nprédominante est présenté en détail au chapitre 26,\nà la sous-section 26.9.1.\n",
+      "text_sha256": "43ed0a2f5ae2ff0c19ba0163fa0f6df80eabcc5e183bf31a253ce314163d5501"
+    },
+    {
+      "bbox": [
+        48.0,
+        597.4658203125,
+        291.3568115234375,
+        678.45849609375
+      ],
+      "block_id": "page-0549-block-0026",
+      "order": 26,
+      "text": "Cette classication a été source de confusion et de nombreuses\ncritiques au sein de la communauté scientique. Plusieurs méde-\ncins et chercheurs ont signalé qu’il était dicile de distinguer la\ndouleur causée par des facteurs psychologiques de celle causée\npar des problèmes physiques. On mentionnait que toute dou-\nleur était un phénomène global et fréquemment associé à une\ndétresse psychologique.\n",
+      "text_sha256": "de5045beefd6b6bf998ebf9fd094e4a2441c5b8fdf2c068f0fdbf2dcb2d5e568"
+    },
+    {
+      "bbox": [
+        48.0,
+        679.7158203125,
+        291.2912902832031,
+        725.45849609375
+      ],
+      "block_id": "page-0549-block-0027",
+      "order": 27,
+      "text": "Les propositions successives (DSM-III, DSM-IV) tentent de se\ndistancer du concept de « douleur psychogène » proposé initiale-\nment par le DSM-III et jugé inadéquat et suggèrent simplement\nle terme de « trouble douloureux ». Ce trouble se dénit comme\n",
+      "text_sha256": "2a21a1eb9c72f8c41547e72d559558c94324397ea1c0c71724a8af5748292eda"
+    },
+    {
+      "bbox": [
+        306.0,
+        438.9658203125,
+        549.2665405273438,
+        495.45849609375
+      ],
+      "block_id": "page-0549-block-0028",
+      "order": 28,
+      "text": "une douleur intense, persistante dans une ou plusieurs régions,\nd’une intensité susante pour requérir une attention clinique\net causer un dysfonctionnement signicatif. On mentionne que\nle début, la gravité, l’exacerbation et le maintien des symptômes\nsont reliés à des facteurs psychologiques.\n",
+      "text_sha256": "11ac67af0e8f697dd4b3d908ff0f531895264b1c7f1cdcc797630ebfe1f3e56c"
+    },
+    {
+      "bbox": [
+        306.0,
+        496.4658203125,
+        549.3380126953125,
+        725.45849609375
+      ],
+      "block_id": "page-0549-block-0029",
+      "order": 29,
+      "text": "De plus en plus, les médecins reconnaissent la diculté de\ndistinguer la douleur induite « psychologiquement » de celle\ninduite « physiologiquement ». Les dernières recherches montrent\nla présence de remaniements neuronaux traduisant une neuro-\nplasticité cérébrale chez les patients sourant de douleur chro-\nnique et contribuant ainsi au maintien de la douleur, et ce,\nmalgré l’absence de blessures périphériques. Ces différents\nremaniements indiquent l’intrication des structures cérébrales\ndans la cognition et les émotions, ce qui milite en faveur d’un\nmodèle bio-psycho-social de la douleur. Il vaut mieux éviter le\nrecours au terme « psychogène » (encore trop souvent mentionné)\nlorsque le médecin ne peut identier un substrat organique\nou qu’il se trouve devant un tableau clinique dont la physio-\npathologie est encore mal connue, comme la bromyalgie. Par\nexemple, les dernières compréhensions de la bromyalgie ont\nintégré comme processus physiopathologiques, les phénomènes\nd’hypersensibilisation centrale, expliquant ainsi la généralisation\nde la douleur à tout le corps, leurs étroites relations avec le vécu\némotionnel et les troubles aectifs. Cette hypersensibilisation\nserait en grande partie liée au décit de la voie inhibitrice de\n",
+      "text_sha256": "b729eb5adcf5fdda6e5c59f2de1d38aeced88a07b0d1e51d7f16a2f001c3aadc"
+    }
+  ],
+  "coordinates_sha256": "351275c6db1db835d4598f8719c661b3aa7af2e1b0da3a056c528d98a9b4154c",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0549",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "532\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3\nSyndromes cliniques psychiatriques\nTABLEAU 25.2 Catégories diagnostiques de la symptomatologie somatique\nTrouble à symptomatologie somatique\n(DSM-5)\nTroubles somatoformes (DSM-IV-TR)\nTroubles somatoformes et autres (CIM-10)\nTrouble à symptomatologie somatique\n• Trouble de somatisation\n• Trouble somatoforme indifférencié\n• Trouble douloureux\n• Hypocondrie (avec symptômes somatiques)\n• Somatisation\n• Trouble somatoforme indifférencié\n• Syndrome douloureux somatoforme persistant\n• Trouble hypocondriaque\nCrainte excessive d’avoir une maladie\n• Hypocondrie (sans symptômes somatiques\nprédominants)\n• Trouble hypocondriaque (nosophobie)\nConversion (trouble à symptomatologie neurolo-\ngique fonctionnelle)\n• Trouble de conversion\n• Troubles dissociatifs (de conversion)1\n• Troubles dissociatifs de la motricité et des\norganes de sens\n• Troubles moteurs dissociatifs\n• Convulsions dissociatives\n• Anesthésie dissociative et atteintes sensorielles\n• Troubles dissociatifs (de conversion) mixtes\n• Autres troubles dissociatifs (de conversion)\n• Troubles dissociatifs (de conversion) sans précision\nAutres troubles spéciés à symptomatologie\nsomatique\n• Autres troubles somatoformes\nTroubles non spéciés à symptomatologie\nsomatique\n• Trouble somatoforme non spécié\n• Trouble somatoforme sans précision\nFacteurs psychologiques inuençant une affec-\ntion médicale\n• Catégorie incluse dans « autres conditions\nd’intérêt clinique »\nTrouble factice\n• Catégorie spécique non incluse dans les\ntroubles somatoformes\n• Production intentionnelle ou simulation de\nsymptômes ou d’incapacités, soit physiques,\nsoit psychologiques (trouble factice)\nObsession d’une dysmorphie corporelle\n• Trouble dysmorphique corporel 2\n• Peur d’une dysmorphie corporelle\n1. La conversion demeure incluse dans les troubles dissociatifs de la CIM en précisant son type de présentation.\n2. Le trouble dysmorphique corporel, qui faisait partie des troubles somatoformes dans le DSM-IV-TR, est déplacé dans les troubles obsessionnels et se nomme\n« obsession d’une dysmorphie corporelle » dans le DSM-5.\nSources: APA (2015) p. 367 ; APA (2004) p. 490 ; Organisation mondiale de la santé (2008).\net les tenants d’un syndrome inuencé par des facteurs psy-\nchologiques. Il n’est pas rare de rencontrer une attribution\nsomatique, voire hypocondriaque, dans de tels syndromes.\nUne troisième catégorie implicite, celle utilisée en médecine\npour décrire des douleurs (le trouble douloureux), qui était\ndans le DSM-IV, n’est pas retenue dans le DSM-5.\n• Le trouble douloureux comporte deux sous-groupes :\n– avec des facteurs psychologiques ;\n– avec des facteurs mixtes (organiques et psychologiques).\nLe trouble à symptomatologie somatique avec douleur\nprédominante est présenté en détail au chapitre 26,\nà la sous-section 26.9.1.\nCette classication a été source de confusion et de nombreuses\ncritiques au sein de la communauté scientique. Plusieurs méde-\ncins et chercheurs ont signalé qu’il était dicile de distinguer la\ndouleur causée par des facteurs psychologiques de celle causée\npar des problèmes physiques. On mentionnait que toute dou-\nleur était un phénomène global et fréquemment associé à une\ndétresse psychologique.\nLes propositions successives (DSM-III, DSM-IV) tentent de se\ndistancer du concept de « douleur psychogène » proposé initiale-\nment par le DSM-III et jugé inadéquat et suggèrent simplement\nle terme de « trouble douloureux ». Ce trouble se dénit comme\nune douleur intense, persistante dans une ou plusieurs régions,\nd’une intensité susante pour requérir une attention clinique\net causer un dysfonctionnement signicatif. On mentionne que\nle début, la gravité, l’exacerbation et le maintien des symptômes\nsont reliés à des facteurs psychologiques.\nDe plus en plus, les médecins reconnaissent la diculté de\ndistinguer la douleur induite « psychologiquement » de celle\ninduite « physiologiquement ». Les dernières recherches montrent\nla présence de remaniements neuronaux traduisant une neuro-\nplasticité cérébrale chez les patients sourant de douleur chro-\nnique et contribuant ainsi au maintien de la douleur, et ce,\nmalgré l’absence de blessures périphériques. Ces différents\nremaniements indiquent l’intrication des structures cérébrales\ndans la cognition et les émotions, ce qui milite en faveur d’un\nmodèle bio-psycho-social de la douleur. Il vaut mieux éviter le\nrecours au terme « psychogène » (encore trop souvent mentionné)\nlorsque le médecin ne peut identier un substrat organique\nou qu’il se trouve devant un tableau clinique dont la physio-\npathologie est encore mal connue, comme la bromyalgie. Par\nexemple, les dernières compréhensions de la bromyalgie ont\nintégré comme processus physiopathologiques, les phénomènes\nd’hypersensibilisation centrale, expliquant ainsi la généralisation\nde la douleur à tout le corps, leurs étroites relations avec le vécu\némotionnel et les troubles aectifs. Cette hypersensibilisation\nserait en grande partie liée au décit de la voie inhibitrice de\n",
+  "raw_text_sha256": "b495633d4db5a67c702ec998b682833cd0c078dce964ec66794f2fd85a39e1bf",
+  "source_page_display": 550,
+  "source_page_index": 549
+}

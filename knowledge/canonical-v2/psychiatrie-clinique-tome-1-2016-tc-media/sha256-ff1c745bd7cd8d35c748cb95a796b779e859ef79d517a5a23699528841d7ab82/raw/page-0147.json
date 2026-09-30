@@ -1,0 +1,76 @@
+{
+  "block_sequence_sha256": "2a064b211ed37804ccc5bccfc414f84a6a0902714408fc295c66ebb6208a7749",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        471.6627197265625,
+        758.8693237304688
+      ],
+      "block_id": "page-0147-block-0001",
+      "order": 1,
+      "text": "130\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2 Déterminants bio-psycho-sociaux\n",
+      "text_sha256": "049ab26ae0534476519dbb0831eb7b9f964155bd45a74304c43917d6fdacebfb"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.3737182617188,
+        408.7585144042969
+      ],
+      "block_id": "page-0147-block-0002",
+      "order": 2,
+      "text": "Les récepteurs glutamatergiques canaux comprennent les\nrécepteurs de type :\n• NMDA (N-methyl-D-aspartate) ;\n• AMPA (α-amino-3-hydroxy-5-methyl-4-isozazole propionic acid) ;\n• KA (kainic acid).\nLeur nom vient de l’agoniste qui les active.\nLes récepteurs AMPA et KA sont regroupés sous le l’appel-\nlation de non-NMDA (voir la gure 6.14). Le récepteur NMDA\nlaisse passer les cations, particulièrement les ions calciques et\nune stimulation prolongée de ce récepteur peut s’avérer neuro-\ntoxique. Ce récepteur est complexe et son activation nécessite\nplusieurs actions :\n• Au repos, le magnésium (Mg++) bloque le canal ionique. Une\ndépolarisation membranaire, consécutive à l’activation du\nrécepteur AMPA, expulse le Mg++ du canal.\n• Lorsque le canal est ouvert, le glutamate active le récepteur ;\nmais cela est possible uniquement si la glycine ou la D-serine\nendogène, se lient au récepteur au même moment (voir la\ngure 6.15).\nL’activation des récepteurs NMDA (canaux calciques « détec-\nteurs de coïncidence ») par le glutamate est une étape essentielle\ndans le phénomène de potentialisation à long terme qui sous-tend\nl’apprentissage et la mémoire, mécanisme qui permet le renforce-\nment durable des synapses entre deux neurones qui sont activés\nsimultanément. Les décharges du neurone présynaptique sont\nsynchronisées avec celle du neurone postsynaptique. La nécessité\nde ces deux conditions simultanées lui confère des propriétés\nassociatives qui lui permettent de détecter la coïncidence de\ndeux événements et en fait l’élément clé de la potentialisation à\nlong terme. L’amplitude du potentiel excitateur enregistré dans\nces neurones est alors augmentée pour une longue période,\n",
+      "text_sha256": "8d9b707238afd7598e2361f137867378f264877b6cf2864dcc37af6acdb82135"
+    },
+    {
+      "bbox": [
+        48.0,
+        39.63300704956055,
+        291.41357421875,
+        260.7585144042969
+      ],
+      "block_id": "page-0147-block-0003",
+      "order": 3,
+      "text": "Glutamate\nLe glutamate (la forme ionisée de l’acide glutamique) est le prin-\ncipal neurotransmetteur excitateur dans le SNC. Quoiqu’ubiqui-\ntaire, sa concentration est principalement élevée dans le cortex\net dans l’hippocampe. Il joue un rôle majeur dans un grand\nnombre de fonctions nerveuses, dont l’information sensorielle,\nla coordination motrice, les émotions, la motivation, la mémoire\net l’apprentissage. On estime que 90 % des neurones dans le SNC\nutilisent le glutamate comme neurotransmetteur et que 80 à 90 %\ndes synapses sont glutamatergiques. Le glutamate est un acide\naminé non essentiel ; il est donc être synthétisé par les neurones,\npuisqu’il ne traverse pas la barrière hématoencéphalique. La\nglutamine, le précurseur principal, est transformée en glutamate\nsous l’action catalysante de la glutaminase. Le glutamate est alors\nemmagasiné dans les vésicules par trois transporteurs vésiculaires\nglutamatergiques (vesicular glutamatergic transporter) : VGluT1,\nVGluT2, VGluT3. Le VGluT1 et le VGluT2 sont localisés dans\nles neurones et dans les astrocytes, ce qui laisse entendre que\nces derniers participent à la neurotransmission glutamatergique.\n",
+      "text_sha256": "fcb159121b64063ab245a239f992e08181cf5afa319ef0fe34f5259209892cdd"
+    },
+    {
+      "bbox": [
+        48.0,
+        261.7658386230469,
+        291.247314453125,
+        408.7585144042969
+      ],
+      "block_id": "page-0147-block-0004",
+      "order": 4,
+      "text": "Une fois libéré, le glutamate est rapidement transporté hors de\nla synapse, soit dans la terminaison postsynaptique, soit dans un\nastrocyte. Cinq transporteurs (excitatory amino acid transporter)\nont été identiés à ce jour :\n1. Le EAAT1 est localisé uniquement dans les astrocytes ;\n2. Le EAAT2 est localisé dans les neurones et dans les astrocytes ;\n3. Le EAAT3 se trouve sur des terminaisons GABAergiques ;\n4. Le EAAT4 est localisé principalement dans les neurones ;\n5. Le EAAT5 se trouve exclusivement dans la rétine.\nIl existe deux classes de récepteurs glutamatergiques : des\nrécepteurs canaux et des récepteurs couplés aux protéines G ;\nchacune comprend trois sous-groupes.\n",
+      "text_sha256": "9feea86c5cbdfc08576df8f1569eb23e4448f3d37296745491916be41ac4aecd"
+    },
+    {
+      "bbox": [
+        50.35000228881836,
+        436.80230712890625,
+        365.5875549316406,
+        449.1200866699219
+      ],
+      "block_id": "page-0147-block-0005",
+      "order": 5,
+      "text": "FIGURE 6.14 Récepteurs glutamatergiques associés à des récepteurs-canaux\n",
+      "text_sha256": "7f58330f31e21fbf2965f72de07512434165d5026f9a07ec288d76418fd1f159"
+    }
+  ],
+  "coordinates_sha256": "1f517d5f002afbbb3d94552c91b40e9dd4948680a0ea739cb5137756675febd9",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0147",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "130\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2 Déterminants bio-psycho-sociaux\nLes récepteurs glutamatergiques canaux comprennent les\nrécepteurs de type :\n• NMDA (N-methyl-D-aspartate) ;\n• AMPA (α-amino-3-hydroxy-5-methyl-4-isozazole propionic acid) ;\n• KA (kainic acid).\nLeur nom vient de l’agoniste qui les active.\nLes récepteurs AMPA et KA sont regroupés sous le l’appel-\nlation de non-NMDA (voir la gure 6.14). Le récepteur NMDA\nlaisse passer les cations, particulièrement les ions calciques et\nune stimulation prolongée de ce récepteur peut s’avérer neuro-\ntoxique. Ce récepteur est complexe et son activation nécessite\nplusieurs actions :\n• Au repos, le magnésium (Mg++) bloque le canal ionique. Une\ndépolarisation membranaire, consécutive à l’activation du\nrécepteur AMPA, expulse le Mg++ du canal.\n• Lorsque le canal est ouvert, le glutamate active le récepteur ;\nmais cela est possible uniquement si la glycine ou la D-serine\nendogène, se lient au récepteur au même moment (voir la\ngure 6.15).\nL’activation des récepteurs NMDA (canaux calciques « détec-\nteurs de coïncidence ») par le glutamate est une étape essentielle\ndans le phénomène de potentialisation à long terme qui sous-tend\nl’apprentissage et la mémoire, mécanisme qui permet le renforce-\nment durable des synapses entre deux neurones qui sont activés\nsimultanément. Les décharges du neurone présynaptique sont\nsynchronisées avec celle du neurone postsynaptique. La nécessité\nde ces deux conditions simultanées lui confère des propriétés\nassociatives qui lui permettent de détecter la coïncidence de\ndeux événements et en fait l’élément clé de la potentialisation à\nlong terme. L’amplitude du potentiel excitateur enregistré dans\nces neurones est alors augmentée pour une longue période,\nGlutamate\nLe glutamate (la forme ionisée de l’acide glutamique) est le prin-\ncipal neurotransmetteur excitateur dans le SNC. Quoiqu’ubiqui-\ntaire, sa concentration est principalement élevée dans le cortex\net dans l’hippocampe. Il joue un rôle majeur dans un grand\nnombre de fonctions nerveuses, dont l’information sensorielle,\nla coordination motrice, les émotions, la motivation, la mémoire\net l’apprentissage. On estime que 90 % des neurones dans le SNC\nutilisent le glutamate comme neurotransmetteur et que 80 à 90 %\ndes synapses sont glutamatergiques. Le glutamate est un acide\naminé non essentiel ; il est donc être synthétisé par les neurones,\npuisqu’il ne traverse pas la barrière hématoencéphalique. La\nglutamine, le précurseur principal, est transformée en glutamate\nsous l’action catalysante de la glutaminase. Le glutamate est alors\nemmagasiné dans les vésicules par trois transporteurs vésiculaires\nglutamatergiques (vesicular glutamatergic transporter) : VGluT1,\nVGluT2, VGluT3. Le VGluT1 et le VGluT2 sont localisés dans\nles neurones et dans les astrocytes, ce qui laisse entendre que\nces derniers participent à la neurotransmission glutamatergique.\nUne fois libéré, le glutamate est rapidement transporté hors de\nla synapse, soit dans la terminaison postsynaptique, soit dans un\nastrocyte. Cinq transporteurs (excitatory amino acid transporter)\nont été identiés à ce jour :\n1. Le EAAT1 est localisé uniquement dans les astrocytes ;\n2. Le EAAT2 est localisé dans les neurones et dans les astrocytes ;\n3. Le EAAT3 se trouve sur des terminaisons GABAergiques ;\n4. Le EAAT4 est localisé principalement dans les neurones ;\n5. Le EAAT5 se trouve exclusivement dans la rétine.\nIl existe deux classes de récepteurs glutamatergiques : des\nrécepteurs canaux et des récepteurs couplés aux protéines G ;\nchacune comprend trois sous-groupes.\nFIGURE 6.14 Récepteurs glutamatergiques associés à des récepteurs-canaux\n",
+  "raw_text_sha256": "122f5975b8635ff572d2c15a648d0bd849dcf25957604af20da8db57782e4a1f",
+  "source_page_display": 148,
+  "source_page_index": 147
+}

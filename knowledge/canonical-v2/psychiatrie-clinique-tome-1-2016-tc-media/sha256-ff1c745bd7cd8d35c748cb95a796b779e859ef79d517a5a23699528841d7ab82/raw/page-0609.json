@@ -1,0 +1,160 @@
+{
+  "block_sequence_sha256": "84c804758acc728fd1fb034c45a6a2f898c09f6a7b99943e2fa3ec18fd7a7b3e",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0609-block-0001",
+      "order": 1,
+      "text": "592\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "2c363adfa2da1389c6784b23268075b725900b92f3ef861174e4679793a6f88b"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.2139282226562,
+        109.45849609375
+      ],
+      "block_id": "page-0609-block-0002",
+      "order": 2,
+      "text": "infarcissements corticaux ou sous-corticaux, à la leucoaraïose\net aux changements ischémiques sous-corticaux. L’échelle isché-\nmique d’Hachinski (voir le tableau 27.7) alloue 1 ou 2 points à\ncertaines caractéristiques cliniques. Avec un résultat ≥ à 7, elle\naide à distinguer la DV de la DTA (sensibilité et spécicité de\n90 % [Hachinski & al., 1975]).\n",
+      "text_sha256": "bd4e77474dc6b5337584a1672833a64ae27750356f14af1b95835004a123e758"
+    },
+    {
+      "bbox": [
+        306.0,
+        120.50230407714844,
+        549.2160034179688,
+        213.85850524902344
+      ],
+      "block_id": "page-0609-block-0003",
+      "order": 3,
+      "text": "Démence mixte\nLa démence mixte est définie comme une DTA couplée à\nune maladie cérébrovasculaire ou comme la combinaison\nd’une DTA et d’une DV. Une telle cooccurrence est fréquente,\npuisqu’à l’autopsie, 34 à 50 % des patients sourant de la DTA\nprésentent une pathologie vasculaire cérébrale et que le tiers\ndes patients sourant de DV montrent des signes pathologiques\nde la maladie d’Alzheimer (MA).\n",
+      "text_sha256": "1f56f6ac09adff77fcb11b76f642ac348981ea38481633402a5d8b8a70c5e20d"
+    },
+    {
+      "bbox": [
+        306.0,
+        229.8330078125,
+        549.2913208007812,
+        385.7585144042969
+      ],
+      "block_id": "page-0609-block-0004",
+      "order": 4,
+      "text": "Démence due à d’autres affections médicales\ngénérales\nLes critères pour le diagnostic de la démence due à d’autres\naffections médicales générales selon le DSM-IV-TR sont\nmentionnés dans le tableau 27.8. Le DSM-5 a établi des cri-\ntères spécifiques pour les troubles neurocognitifs majeurs\ndus aux affections médicales suivantes : trouble neuroco-\ngnitif frontotemporal majeur avec corps de Lewy, dû à une\nlésion cérébrale traumatique, induit par une substance ou un\nmédicament, dû à une infection par le VIH, dû à une mala-\ndie à prions, dû à la maladie de Parkinson, dû à la maladie\nde Huntington. Ces critères sont définis dans chacune des\nsous-sections concernées.\n",
+      "text_sha256": "554da8e5f850ef5d1f45ad7407f28728ba398c984f37f9eec80889cef4714a6b"
+    },
+    {
+      "bbox": [
+        306.0,
+        386.8658142089844,
+        549.2882080078125,
+        443.8085021972656
+      ],
+      "block_id": "page-0609-block-0005",
+      "order": 5,
+      "text": "Dans le DSM-IV-TR, la caractéristique essentielle de ce type\nde démence était la présence d’une démence considérée comme\nla conséquence physiopathologique directe de la maladie précisée.\nLe DSM-5 dénit de façon spécique chacun des troubles neuro-\ncognitifs majeurs selon la cause sous-jacente.\n",
+      "text_sha256": "921386ef12081aab8a8fc2386047c5d74969a75a3b06274b071342490b88309c"
+    },
+    {
+      "bbox": [
+        306.0,
+        454.80230712890625,
+        549.5061645507812,
+        571.4085083007812
+      ],
+      "block_id": "page-0609-block-0006",
+      "order": 6,
+      "text": "Démence à corps de Lewy\nLa démence à corps de Lewy (DCL) est la démence associée au\nparkinsonisme la plus fréquente et elle représente la deuxième\ncause de démence la plus commune après la DTA. Décrite en\n1960, les critères de consensus pour son diagnostic (voir l’encadré\n27.3) sont divisés en six sous-thèmes. Le diagnostic de la DCL\nrequiert la présence d’une démence et de deux des trois caracté-\nristiques essentielles (cognition uctuante, hallucinations visuelles\net parkinsonisme spontané). La séquence temporelle permet de\ndistinguer la DCL de la démence de la maladie de Parkinson.\n",
+      "text_sha256": "aae40f7b5c9b93d1bb3b086fa8764b7ecfe54bcd5b7338c855b24a36e93398dc"
+    },
+    {
+      "bbox": [
+        306.0,
+        572.5158081054688,
+        549.50732421875,
+        664.2584838867188
+      ],
+      "block_id": "page-0609-block-0007",
+      "order": 7,
+      "text": "La DCL ne se manifeste pas sous forme de troubles mnésiques\nprécoces, mais plutôt sous celle de troubles de l’attention et de\ndysfonctions exécutives et visuospatiales. Au MMSE, l’atteinte\nest au niveau de l’attention et de la praxie plutôt qu’au niveau de\nla mémoire et de l’orientation, comme dans la DTA. Les critères\ndu diagnostic de la démence à corps de Lewy selon le DSM-5 sont\nmentionnés dans l’encadré 27.4. La DCL n’était pas mentionnée\ndans le DSM-IV-TR.\n",
+      "text_sha256": "f6ac93305d4566de940724c68db4ef66d22ca13d58d6fa528776e5823f928ded"
+    },
+    {
+      "bbox": [
+        306.0,
+        665.3658447265625,
+        549.0090942382812,
+        687.45849609375
+      ],
+      "block_id": "page-0609-block-0008",
+      "order": 8,
+      "text": "Sur le plan neuropathologique, on observe des corps de\nLewy (composés principalement d’α-synucléine) (voir la\n",
+      "text_sha256": "791a5e5023f792a40fae0e6ca2ce21f66d200b7047cceb83e6cd9f5894537931"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.9658203125,
+        291.37286376953125,
+        190.95849609375
+      ],
+      "block_id": "page-0609-block-0009",
+      "order": 9,
+      "text": "de mémoire apparaissent plus tardivement et les patients\npeuvent sourir davantage de dysfonctions exécutives et de\nralentissement psychomoteur. Historiquement, on subdivise\nla démence en deux syndromes : la démence corticale, dont\ncertaines caractéristiques cliniques (amnésie, aphasie, apraxie,\nagnosie) laissent croire à une atteinte de régions cérébrales\nspéciques (cortex cérébral), et la démence sous-corticale, dont\nles caractéristiques cliniques distinctes (trouble de mémoire\namélioré par l’indiçage, ralentissement psychomoteur, apathie,\ntrouble des fonctions exécutives, syndrome aectif) font penser\nà une atteinte de la matière blanche et des structures profondes\nde la matière grise. Voici ces deux présentations plus en détail\n(Weiner & Lipton, 2009).\n",
+      "text_sha256": "e01a64baba41d2abed21696257e99f05d40bb1f18209c96da20f8c3ce696bb2a"
+    },
+    {
+      "bbox": [
+        48.0,
+        195.95230102539062,
+        290.8580322265625,
+        231.30850219726562
+      ],
+      "block_id": "page-0609-block-0010",
+      "order": 10,
+      "text": "Démences corticale et sous-corticale\nLes manifestations cliniques de la DV sont diverses, mais deux\npatrons classiques se démarquent.\n",
+      "text_sha256": "b8f09bbda285a7a79b7d3b658dd2bf921263d0d0142651edd7623c0b3efa4497"
+    },
+    {
+      "bbox": [
+        48.0,
+        232.4658203125,
+        291.3428649902344,
+        664.20849609375
+      ],
+      "block_id": "page-0609-block-0011",
+      "order": 11,
+      "text": "Dans la démence corticale, on observe des manifestations\ncliniques spéciques à la région aectée :\n• une atteinte frontomédiane se présente par une dysfonction\nexécutive, de l’aboulie (diminution, disparition de la volonté),\nde l’apathie et un mutisme akinétique s’il y a des lésions bila-\ntérales ;\n• une atteinte pariétale gauche peut se manifester par de l’aphasie,\nde l’apraxie et de l’agnosie ;\n• une lésion pariétale droite entraîne une héminégligence avec\nanosognosie et asomatognosie (absence de reconnaissance\nde parties de son corps), de la confusion, de l’agitation et des\ndicultés constructionnelles et visuospatiales ;\n• une atteinte temporale médiane peut se présenter par une\namnésie antérograde.\nDans la démence sous-corticale, ce sont les infarctus lacu-\nnaires et l’ischémie chronique qui aectent les noyaux cérébraux\nprofonds et les voies de la matière blanche, ce qui se traduit\npar un décit frontal ou par des interruptions des circuits\ncortico-sous-corticaux. On observe donc :\n• des signes moteurs focaux ;\n• un trouble précoce de la démarche (décrite comme à petits\npas, parkinsonienne, magnétique ou apraxique), des chutes\nfréquentes ;\n• des symptômes urinaires précoces (urgence et fréquence\nurinaires) inexpliqués par une pathologie urologique sous-\njacente ;\n• un changement de la personnalité et de l’humeur ;\n• de l’aboulie, de l’apathie, des symptômes dépressifs ;\n• une atteinte des fonctions exécutives (circuits fronto-sous-\ncorticaux) ;\n• de l’incontinence émotionnelle ou un aect pseudobulbaire\n(rires et pleurs spasmodiques, incontrôlables et inappro-\npriés).\nLe tableau 27.6 compare les atteintes cognitives corticales et\nsous-corticales.\n",
+      "text_sha256": "4ba5b6e7b1d629ab5e0b1b7f6b8e58b2e0a8e90a2eeb83026025b638718907fb"
+    },
+    {
+      "bbox": [
+        48.0,
+        665.3658447265625,
+        291.15185546875,
+        687.45849609375
+      ],
+      "block_id": "page-0609-block-0012",
+      "order": 12,
+      "text": "L’imagerie par tomographie axiale peut être suffisante\npour aider au diagnostic, mais l’IRM est plus sensible aux\n",
+      "text_sha256": "ee760df8292c91a08d99d203bc69916361640ca6cacd330e01845191dfe4bf17"
+    }
+  ],
+  "coordinates_sha256": "ccba3647ea6161ba888e6fc368022c7f01f40f265be40322c248fa9afa8b5d97",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0609",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "592\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\ninfarcissements corticaux ou sous-corticaux, à la leucoaraïose\net aux changements ischémiques sous-corticaux. L’échelle isché-\nmique d’Hachinski (voir le tableau 27.7) alloue 1 ou 2 points à\ncertaines caractéristiques cliniques. Avec un résultat ≥ à 7, elle\naide à distinguer la DV de la DTA (sensibilité et spécicité de\n90 % [Hachinski & al., 1975]).\nDémence mixte\nLa démence mixte est définie comme une DTA couplée à\nune maladie cérébrovasculaire ou comme la combinaison\nd’une DTA et d’une DV. Une telle cooccurrence est fréquente,\npuisqu’à l’autopsie, 34 à 50 % des patients sourant de la DTA\nprésentent une pathologie vasculaire cérébrale et que le tiers\ndes patients sourant de DV montrent des signes pathologiques\nde la maladie d’Alzheimer (MA).\nDémence due à d’autres affections médicales\ngénérales\nLes critères pour le diagnostic de la démence due à d’autres\naffections médicales générales selon le DSM-IV-TR sont\nmentionnés dans le tableau 27.8. Le DSM-5 a établi des cri-\ntères spécifiques pour les troubles neurocognitifs majeurs\ndus aux affections médicales suivantes : trouble neuroco-\ngnitif frontotemporal majeur avec corps de Lewy, dû à une\nlésion cérébrale traumatique, induit par une substance ou un\nmédicament, dû à une infection par le VIH, dû à une mala-\ndie à prions, dû à la maladie de Parkinson, dû à la maladie\nde Huntington. Ces critères sont définis dans chacune des\nsous-sections concernées.\nDans le DSM-IV-TR, la caractéristique essentielle de ce type\nde démence était la présence d’une démence considérée comme\nla conséquence physiopathologique directe de la maladie précisée.\nLe DSM-5 dénit de façon spécique chacun des troubles neuro-\ncognitifs majeurs selon la cause sous-jacente.\nDémence à corps de Lewy\nLa démence à corps de Lewy (DCL) est la démence associée au\nparkinsonisme la plus fréquente et elle représente la deuxième\ncause de démence la plus commune après la DTA. Décrite en\n1960, les critères de consensus pour son diagnostic (voir l’encadré\n27.3) sont divisés en six sous-thèmes. Le diagnostic de la DCL\nrequiert la présence d’une démence et de deux des trois caracté-\nristiques essentielles (cognition uctuante, hallucinations visuelles\net parkinsonisme spontané). La séquence temporelle permet de\ndistinguer la DCL de la démence de la maladie de Parkinson.\nLa DCL ne se manifeste pas sous forme de troubles mnésiques\nprécoces, mais plutôt sous celle de troubles de l’attention et de\ndysfonctions exécutives et visuospatiales. Au MMSE, l’atteinte\nest au niveau de l’attention et de la praxie plutôt qu’au niveau de\nla mémoire et de l’orientation, comme dans la DTA. Les critères\ndu diagnostic de la démence à corps de Lewy selon le DSM-5 sont\nmentionnés dans l’encadré 27.4. La DCL n’était pas mentionnée\ndans le DSM-IV-TR.\nSur le plan neuropathologique, on observe des corps de\nLewy (composés principalement d’α-synucléine) (voir la\nde mémoire apparaissent plus tardivement et les patients\npeuvent sourir davantage de dysfonctions exécutives et de\nralentissement psychomoteur. Historiquement, on subdivise\nla démence en deux syndromes : la démence corticale, dont\ncertaines caractéristiques cliniques (amnésie, aphasie, apraxie,\nagnosie) laissent croire à une atteinte de régions cérébrales\nspéciques (cortex cérébral), et la démence sous-corticale, dont\nles caractéristiques cliniques distinctes (trouble de mémoire\namélioré par l’indiçage, ralentissement psychomoteur, apathie,\ntrouble des fonctions exécutives, syndrome aectif) font penser\nà une atteinte de la matière blanche et des structures profondes\nde la matière grise. Voici ces deux présentations plus en détail\n(Weiner & Lipton, 2009).\nDémences corticale et sous-corticale\nLes manifestations cliniques de la DV sont diverses, mais deux\npatrons classiques se démarquent.\nDans la démence corticale, on observe des manifestations\ncliniques spéciques à la région aectée :\n• une atteinte frontomédiane se présente par une dysfonction\nexécutive, de l’aboulie (diminution, disparition de la volonté),\nde l’apathie et un mutisme akinétique s’il y a des lésions bila-\ntérales ;\n• une atteinte pariétale gauche peut se manifester par de l’aphasie,\nde l’apraxie et de l’agnosie ;\n• une lésion pariétale droite entraîne une héminégligence avec\nanosognosie et asomatognosie (absence de reconnaissance\nde parties de son corps), de la confusion, de l’agitation et des\ndicultés constructionnelles et visuospatiales ;\n• une atteinte temporale médiane peut se présenter par une\namnésie antérograde.\nDans la démence sous-corticale, ce sont les infarctus lacu-\nnaires et l’ischémie chronique qui aectent les noyaux cérébraux\nprofonds et les voies de la matière blanche, ce qui se traduit\npar un décit frontal ou par des interruptions des circuits\ncortico-sous-corticaux. On observe donc :\n• des signes moteurs focaux ;\n• un trouble précoce de la démarche (décrite comme à petits\npas, parkinsonienne, magnétique ou apraxique), des chutes\nfréquentes ;\n• des symptômes urinaires précoces (urgence et fréquence\nurinaires) inexpliqués par une pathologie urologique sous-\njacente ;\n• un changement de la personnalité et de l’humeur ;\n• de l’aboulie, de l’apathie, des symptômes dépressifs ;\n• une atteinte des fonctions exécutives (circuits fronto-sous-\ncorticaux) ;\n• de l’incontinence émotionnelle ou un aect pseudobulbaire\n(rires et pleurs spasmodiques, incontrôlables et inappro-\npriés).\nLe tableau 27.6 compare les atteintes cognitives corticales et\nsous-corticales.\nL’imagerie par tomographie axiale peut être suffisante\npour aider au diagnostic, mais l’IRM est plus sensible aux\n",
+  "raw_text_sha256": "a8c989d7781a1aaba17776f61ff90503260de16facf6d32e6980df1f46f807d3",
+  "source_page_display": 610,
+  "source_page_index": 609
+}

@@ -1,0 +1,76 @@
+{
+  "block_sequence_sha256": "f979945a5b4cf1a04fb9041a11e5332c443c038293cfc6f27703f0cb3a6e8f12",
+  "blocks": [
+    {
+      "bbox": [
+        422.8000183105469,
+        747.3754272460938,
+        554.97998046875,
+        758.6693725585938
+      ],
+      "block_id": "page-1146-block-0001",
+      "order": 1,
+      "text": "Figures supplémentaires\nF9\n",
+      "text_sha256": "12d9f693a0249dd2168e4cec7e84f7ac03ae6a20d0d7ebfc1d63cf2d2b664184"
+    },
+    {
+      "bbox": [
+        56.35000228881836,
+        300.0022888183594,
+        208.040771484375,
+        312.320068359375
+      ],
+      "block_id": "page-1146-block-0002",
+      "order": 2,
+      "text": "FIGURE 13 Formation hippocampique\n",
+      "text_sha256": "986578e79da0eb253a0653767e174d110d237600b39e5790c8aa7f81b88c6fb6"
+    },
+    {
+      "bbox": [
+        56.35000228881836,
+        41.002296447753906,
+        174.0277557373047,
+        53.320068359375
+      ],
+      "block_id": "page-1146-block-0003",
+      "order": 3,
+      "text": "FIGURE 12 Système limbique\n",
+      "text_sha256": "72821a8e7fa74d3db5918919373aad2a81493be480d69620db09c9ce295668d8"
+    },
+    {
+      "bbox": [
+        54.25,
+        245.3406219482422,
+        256.79913330078125,
+        254.0749969482422
+      ],
+      "block_id": "page-1146-block-0004",
+      "order": 4,
+      "text": "Sur la gure de droite, la zone en bleu correspond au système limbique.\n",
+      "text_sha256": "30947a856ed44d38f9158a793d19b8e866646b065acfffd468fb3984bf4803ba"
+    },
+    {
+      "bbox": [
+        54.25,
+        257.34063720703125,
+        338.6778869628906,
+        266.2088623046875
+      ],
+      "block_id": "page-1146-block-0005",
+      "order": 5,
+      "text": "Source : Pinel, J. P. J. (2008). Biopsychology, New York, NY, Pearson Education Inc. (gure à gauche).\n",
+      "text_sha256": "63866fc73a4a710149fca678817e62eaf05bbdba5c8648578a9a31184510f942"
+    }
+  ],
+  "coordinates_sha256": "a8e4c4cc2e7c230d890c69048ebc100802d756deb61c541d1c44d80cce7ddfda",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1146",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Figures supplémentaires\nF9\nFIGURE 13 Formation hippocampique\nFIGURE 12 Système limbique\nSur la gure de droite, la zone en bleu correspond au système limbique.\nSource : Pinel, J. P. J. (2008). Biopsychology, New York, NY, Pearson Education Inc. (gure à gauche).\n",
+  "raw_text_sha256": "c0541499fc5f39fdbc8ff411561aa0607bbfe2232d6c0017585f71d457a40e20",
+  "source_page_display": 1147,
+  "source_page_index": 1146
+}

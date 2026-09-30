@@ -1,0 +1,784 @@
+{
+  "block_sequence_sha256": "21fdac96ee64ef10ac86628edb91bfc868c090ea614b35b1a8e2024fadbfb22a",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        126.91150665283203,
+        758.8693237304688
+      ],
+      "block_id": "page-1129-block-0001",
+      "order": 1,
+      "text": "R32\nRéférences\n",
+      "text_sha256": "aa619a0884aa7a2eedaf4b9671072ede2f3caf8c3ef361e1e171cf66beb53445"
+    },
+    {
+      "bbox": [
+        390.0,
+        40.68496322631836,
+        542.6141967773438,
+        67.0234375
+      ],
+      "block_id": "page-1129-block-0002",
+      "order": 2,
+      "text": "Noblett, S. & Nelson, B. (2001). « A psychosocial approach\nto Arson : A case controlled study of female offenders »,\nMedicine, Science and the Law, 4(4), p. 325-330.\n",
+      "text_sha256": "8e763a8fc38fbde9f17c63ea6d2380ea16d022bc2e3bc57c6f000442e8813186"
+    },
+    {
+      "bbox": [
+        390.0,
+        70.9349594116211,
+        547.4500122070312,
+        97.2734375
+      ],
+      "block_id": "page-1129-block-0003",
+      "order": 3,
+      "text": "Odlaug, B. L. & Grant, J. E. (2010). « Pathologic skin\npicking », The American Journal of Alcohol and Drug Abuse,\n36(5), p. 296-303.\n",
+      "text_sha256": "c0974abf02d242a6b040f30229dce4a34a12e6e156bbb3b20c33a3d4fb4002ae"
+    },
+    {
+      "bbox": [
+        390.0,
+        101.13496398925781,
+        541.2750854492188,
+        136.5734405517578
+      ],
+      "block_id": "page-1129-block-0004",
+      "order": 4,
+      "text": "Odlaug, B. L. & al. (2010). « Motor inhibition and cognitive\nexibility in pathologic skin picking », Progress in Neuro-\nPsychopharmacology and Biological Psychiatry, 34(1),\np. 208-211.\n",
+      "text_sha256": "59748998b21e9091f2857ce97a8eefb087f5dd83369f6fc9454c2e31465070f7"
+    },
+    {
+      "bbox": [
+        390.0,
+        140.48497009277344,
+        540.693115234375,
+        166.8234405517578
+      ],
+      "block_id": "page-1129-block-0005",
+      "order": 5,
+      "text": "Pacan, P. & Grzesiak, M. (2009). « Onychophagia as a\nspectrum of obsessive-compulsive disorder »,Acta Dermato-\nvenereologica, 89(3), p. 278-280.\n",
+      "text_sha256": "eead7abec0c9d85e4a2951aa439512f7e641fba216518e8c53e9018e01e22f71"
+    },
+    {
+      "bbox": [
+        390.0,
+        170.68496704101562,
+        546.947509765625,
+        187.9734344482422
+      ],
+      "block_id": "page-1129-block-0006",
+      "order": 6,
+      "text": "Papadopoulos, A. J. & al. (2003). « Trichotillomania », Interna-\ntional Journal of Dermatology, 42(5), p. 330-334.\n",
+      "text_sha256": "1ff13823be17277b5210e264a0c3cd1b7fa98b57f52d493df82e83342e4e7561"
+    },
+    {
+      "bbox": [
+        390.0,
+        191.8349609375,
+        540.8150634765625,
+        218.2234344482422
+      ],
+      "block_id": "page-1129-block-0007",
+      "order": 7,
+      "text": "Shaffer, H. J. & Martin, R. (2011). « Disordered gambling :\nEtiology, trajectory, and clinical considerations », Annual\nReview of Clinical Psychology, 7, p. 483-510.\n",
+      "text_sha256": "57b80e57e3d13153e6a046eba532eafdf52df8d61a38646ceb8f4b4a06baafca"
+    },
+    {
+      "bbox": [
+        390.0,
+        222.0849609375,
+        546.8526000976562,
+        248.42344665527344
+      ],
+      "block_id": "page-1129-block-0008",
+      "order": 8,
+      "text": "Shaw, M. & Black, D. W. (2008). Internet addiction : Deni-\ntion, assessment, epidemiology and clinical management »,\nCNS Drugs, 22(5), p. 353-365.\n",
+      "text_sha256": "9d0d2e9d54d6cc27a62c35c6f8248f573c93e56d668220d531ba6c9b5fb80ef9"
+    },
+    {
+      "bbox": [
+        390.0,
+        252.3349609375,
+        536.2749633789062,
+        278.6734313964844
+      ],
+      "block_id": "page-1129-block-0009",
+      "order": 9,
+      "text": "Stea, J. N. & Hodgins, D. C. (2011). « A critical review of\ntreatment approaches for gambling disorders », Current\nDrug Abuse Reviews, 4(2), p. 67-80.\n",
+      "text_sha256": "96e271518a80d263b7a9c23398c279b5a774d1abfcc00e48b09e0f885ba8b5d7"
+    },
+    {
+      "bbox": [
+        390.0,
+        282.5849609375,
+        544.332763671875,
+        317.97344970703125
+      ],
+      "block_id": "page-1129-block-0010",
+      "order": 10,
+      "text": "Stein, D. J. & al. (2010). « Trichotillomania (hair pulling\ndisorder), skin picking disorder, and stereotypic movement\ndisorder : Toward DSM5 », Depression and Anxiety, 27(6),\np. 611-626.\n",
+      "text_sha256": "5d2f73a54543b5e751c4796b402fb02605747023cc15b4226868363180b2de04"
+    },
+    {
+      "bbox": [
+        390.0,
+        321.8849792480469,
+        546.452880859375,
+        348.22344970703125
+      ],
+      "block_id": "page-1129-block-0011",
+      "order": 11,
+      "text": "Swaffer, T. & al. (2001). « Mentally disordered re-setters :\nA structural intervention program », Clinical Psychology\nand Psychotherapy, 8(6), p. 468-475.\n",
+      "text_sha256": "b0cdf53c8d1267407c35e53d772bba86c86c56871473f8869d195712acbc7992"
+    },
+    {
+      "bbox": [
+        390.0,
+        352.0849609375,
+        544.782958984375,
+        387.5234375
+      ],
+      "block_id": "page-1129-block-0012",
+      "order": 12,
+      "text": "Wenzel, H. G. & Dahl, A. A. (2009). « Female pathological\ngamblers – A critical review of the clinical ndings »,\nInternational Journal of Mental Health and Addiction,\n7(1), p. 190-202.\n",
+      "text_sha256": "c7e44d3ca0714a7bcb0d07337655588316708a2ca9deac61b0fc502ff4f4334e"
+    },
+    {
+      "bbox": [
+        390.0,
+        391.4349670410156,
+        531.9874877929688,
+        417.7734375
+      ],
+      "block_id": "page-1129-block-0013",
+      "order": 13,
+      "text": "Wetterneck, C. T. & al. (2010). « Current issues in the\ntreatment of OC-spectrum conditions », Bulletin of the\nMenninger Clinic, 74(2), p. 141-166.\n",
+      "text_sha256": "52fe6de7e6916f572a78fb45ec73f49dcb1c4d5312b2e1dacff767d36806a3d4"
+    },
+    {
+      "bbox": [
+        390.0,
+        431.1203308105469,
+        542.6129760742188,
+        469.0734558105469
+      ],
+      "block_id": "page-1129-block-0014",
+      "order": 14,
+      "text": "Chapitre 37\nAlcooliques Anonymes. (2004). « Notre méthode », dans Les\nalcooliques anonymes : le Gros Livre, le texte de base des\nAA, 4e éd., New York, NY, AA World Services, p. 66-67.\n",
+      "text_sha256": "587a385645036a1d44aa2a0b9fc84f3fdafb9e8fc81cb17d8575064f673ff843"
+    },
+    {
+      "bbox": [
+        390.0,
+        472.9849548339844,
+        544.8853149414062,
+        508.3734436035156
+      ],
+      "block_id": "page-1129-block-0015",
+      "order": 15,
+      "text": "American Psychiatric Association (APA). (2004). DSM-IV-TR.\nCritères diagnostiques (Washington, DC, 2000). Traduction\nfrançaise par J.-D. Guelet al., Paris, France, Masson,\n384 p.\n",
+      "text_sha256": "19f5dac290edc241dc0411201f4c47257596f86873e130925cb6bcc8e914475e"
+    },
+    {
+      "bbox": [
+        390.0,
+        512.2849731445312,
+        546.6475219726562,
+        547.6734619140625
+      ],
+      "block_id": "page-1129-block-0016",
+      "order": 16,
+      "text": "American Psychiatric Association (APA). (2015). DSM-5.\nCritères diagnostiques (Washington, DC, 2013). Traduc-\ntion française par M.-A. Crocq, J.-D. Guelfi et al., Paris,\nMasson, 1 200 p.\n",
+      "text_sha256": "b576f5dd65eb429db42591742baa47a123040eef2079faaf505233afc3cfd348"
+    },
+    {
+      "bbox": [
+        390.0,
+        551.5849609375,
+        545.1771240234375,
+        568.8734741210938
+      ],
+      "block_id": "page-1129-block-0017",
+      "order": 17,
+      "text": "American Society of Addiction Medecine (ASAM). (2011). « Denition\nof Addiction », ASAM Newsletter,26(3), p. 1.\n",
+      "text_sha256": "3df81cbdf74a60873d510203ab27d0f503e8e416f025829b229bd6ded0262c68"
+    },
+    {
+      "bbox": [
+        390.0,
+        572.7349853515625,
+        547.257568359375,
+        608.1734619140625
+      ],
+      "block_id": "page-1129-block-0018",
+      "order": 18,
+      "text": "Anton, R. F. & al. (2006). « Combined pharmacotherapy\nand behavioral interventions for alcohol dependence. The\nCOMBINE study : A randomized controlled trial », Journal of\nthe American Medical Association, 295(17), p. 2003-1017.\n",
+      "text_sha256": "a3a0f71de22f0bd36d219d690418e9af37b96006ecd226f54d50396df63d358e"
+    },
+    {
+      "bbox": [
+        390.0,
+        612.0349731445312,
+        547.4974975585938,
+        638.4234619140625
+      ],
+      "block_id": "page-1129-block-0019",
+      "order": 19,
+      "text": "Babor, T. F. & al. (1992). « Types of alcoholics : Concurrent\nand predictive validity of some common classication sche-\nmes », British Journal of Addiction, 87, p. 1415–1431.\n",
+      "text_sha256": "f98088514ced338c9aca1915e3148d96f69cf0e4412971b545af1c710e35280b"
+    },
+    {
+      "bbox": [
+        390.0,
+        642.2849731445312,
+        548.3352661132812,
+        659.5734252929688
+      ],
+      "block_id": "page-1129-block-0020",
+      "order": 20,
+      "text": "Babor, T. & al. (2003). Alcohol : No Ordinary Commodity –\nResearch and Public Policy, Oxford, Oxford University Press.\n",
+      "text_sha256": "5b24a551da1ef5fbc96fd6f70d6bbea12332a8a398a582630299a84a97db5d45"
+    },
+    {
+      "bbox": [
+        390.0,
+        663.4349975585938,
+        544.5872192382812,
+        689.7734375
+      ],
+      "block_id": "page-1129-block-0021",
+      "order": 21,
+      "text": "Bouza, C. & al. (2004). « Efcacy and safety of naltrexone\nand acamprosate in the treatment of alcohol dependence :\nA systemic review », Addiction, 99(7), p. 811-828.\n",
+      "text_sha256": "04d097f6d5452fcc880ae58c6d1372cbe256b35d15d150044ed9a71193fa1acb"
+    },
+    {
+      "bbox": [
+        390.0,
+        693.6849975585938,
+        535.8704833984375,
+        720.0234375
+      ],
+      "block_id": "page-1129-block-0022",
+      "order": 22,
+      "text": "Calvao de Melo, R. & al. (2014). «A case of Psychosis in\nDisulram Treatment for Alcoholism », Case Reports in\nPsychiatry, 2014.\n",
+      "text_sha256": "0351dd7b944325f970f4fa8cfe2ea17c4fe42c4256f2e6d68363238705d7efc5"
+    },
+    {
+      "bbox": [
+        219.0,
+        40.68496322631836,
+        362.7541809082031,
+        67.1234359741211
+      ],
+      "block_id": "page-1129-block-0023",
+      "order": 23,
+      "text": "current gambling disorders among gamblers in the\ngeneral household population », Canadian Journal of\nPsychiatry, 55(2), p. 82-90.\n",
+      "text_sha256": "6585b4c5b29f5c50db98ad8f273a87457d81ce4afac12267ebbdf892a9a674f3"
+    },
+    {
+      "bbox": [
+        219.0,
+        71.03496551513672,
+        376.72747802734375,
+        88.3734359741211
+      ],
+      "block_id": "page-1129-block-0024",
+      "order": 24,
+      "text": "Geller, J. L. (1992a). « Communicative Arson », Hospital and\nCommunity Psychiatry, 43(1), p. 76-77.\n",
+      "text_sha256": "da2ea6056e211c897b96a7b398af260f0308a1af48d5438f2f1a730f7b0a05d8"
+    },
+    {
+      "bbox": [
+        219.0,
+        92.28496551513672,
+        374.58251953125,
+        109.6234359741211
+      ],
+      "block_id": "page-1129-block-0025",
+      "order": 25,
+      "text": "Geller, J. L. (1992b). « Arson in review », Psychiatric Clinics\nof North America, 15(3), p. 623-645.\n",
+      "text_sha256": "d6cc266013fc208a35852ff32178ebf68e314eac0c43bd96af3c52cdbe1cc65a"
+    },
+    {
+      "bbox": [
+        219.0,
+        113.53496551513672,
+        373.7149963378906,
+        139.9734344482422
+      ],
+      "block_id": "page-1129-block-0026",
+      "order": 26,
+      "text": "Grant, J. E. (2003). « Family history and psychiatric\ncomorbidity in persons with kleptomania », Comprehensive\nPsychiatry, 44(6), p. 437-441.\n",
+      "text_sha256": "f8e5ac3a43374cebb4e2d60016ccc761a2695e376856fb4ae8a3266200bac073"
+    },
+    {
+      "bbox": [
+        219.0,
+        143.8849639892578,
+        377.14990234375,
+        170.3234405517578
+      ],
+      "block_id": "page-1129-block-0027",
+      "order": 27,
+      "text": "Grant, J. E. & al. (2006). « The neurobiology of substance\nand behavioral addictions », CNS Spectrums, 11(12),\np. 924-930.\n",
+      "text_sha256": "c137469aa01cc1e413990273eaf5243f0729c5bf6d0a3d2f83bd3ddbf094a5fb"
+    },
+    {
+      "bbox": [
+        219.0,
+        174.2849578857422,
+        373.74749755859375,
+        200.7234344482422
+      ],
+      "block_id": "page-1129-block-0028",
+      "order": 28,
+      "text": "Grant, J. E, & al. (2010a). « A clinical comparison of patho-\nlogic skin picking and obsessive-compulsive disorder »,\nComprehensive Psychiatry, 51(3), p. 47-52.\n",
+      "text_sha256": "3f779aa10fa5ad7051df5d306e2fae4a6514d967d995ca2166da07655b8554de"
+    },
+    {
+      "bbox": [
+        219.0,
+        204.6349639892578,
+        377.3475036621094,
+        231.0734405517578
+      ],
+      "block_id": "page-1129-block-0029",
+      "order": 29,
+      "text": "Grant, J. E. & al. (2010b). « Introduction to behavioral addic-\ntions », The American Journal of Drug and Alcohol Abuse,\n36(5), p. 233-241.\n",
+      "text_sha256": "81e0f683ac24f3bf7076e02bec03b0dafff5368217ee8dfd39f7f4a5d0ed129f"
+    },
+    {
+      "bbox": [
+        219.0,
+        234.98497009277344,
+        374.5824279785156,
+        261.4234313964844
+      ],
+      "block_id": "page-1129-block-0030",
+      "order": 30,
+      "text": "Haden, S. C. & Scarpa, A. (2007). « Noradrenergic system and\nits involvement in aggressive behaviors », Aggression and\nViolent Behavior, 12(1), p. 1-15.\n",
+      "text_sha256": "0a5e17f09b17dc68da10cc948596147fab9b29676bf674b3e5dcd7237439340a"
+    },
+    {
+      "bbox": [
+        219.0,
+        265.3849792480469,
+        360.72998046875,
+        291.7734375
+      ],
+      "block_id": "page-1129-block-0031",
+      "order": 31,
+      "text": "Hautmann, G. & al. (2002). « Trichotillomania », Jour-\nnal of the American Academy of Dermatology, 46(6),\np. 807-821.\n",
+      "text_sha256": "399e3b5284953855abfde7c8a4f9b637d7b7237972de2555d3f26bad02acd599"
+    },
+    {
+      "bbox": [
+        219.0,
+        295.7349548339844,
+        369.6474914550781,
+        331.2734375
+      ],
+      "block_id": "page-1129-block-0032",
+      "order": 32,
+      "text": "Healy, D. & McMonagle, T. (1997). « The enhancement of\nsocial functioning as a therapeutic principle in the mana-\ngement of depression », Journal of Psychopharmacology,\n1(supp. 4), p. S25-S31.\n",
+      "text_sha256": "6cb84b5c2f93b4d9acd366848f51e864d0046bb6449adba5ce7bd08fd30dbc40"
+    },
+    {
+      "bbox": [
+        219.0,
+        335.2349548339844,
+        362.905029296875,
+        352.5234375
+      ],
+      "block_id": "page-1129-block-0033",
+      "order": 33,
+      "text": "Hodgins, D. C. & al. (2011). « Gambling disorders », The\nLancet, 378(9806), p. 1874-1884.\n",
+      "text_sha256": "01c9efe11f873df38403715e44bb1e5d6860f2d1b5d25c4e2b1dc9edd0adc822"
+    },
+    {
+      "bbox": [
+        219.0,
+        356.4349670410156,
+        366.9576721191406,
+        382.8734436035156
+      ],
+      "block_id": "page-1129-block-0034",
+      "order": 34,
+      "text": "Hollander, E. & Stein, D. J. (dir.). (2006). Clinical Manual\nof Impulse-Control Disorders, Washington DC, American\nPsychiatric Publishing.\n",
+      "text_sha256": "68eec7c60db669c3f8375b2198e6d0d16fa52827d53a86a935e57eaf2ef5da06"
+    },
+    {
+      "bbox": [
+        219.0,
+        386.8349609375,
+        365.3951416015625,
+        440.6234436035156
+      ],
+      "block_id": "page-1129-block-0035",
+      "order": 35,
+      "text": "Institut de la Statistique du Québec. (2013). L’Enquête\nquébécoise sur l’accès des ménages à Internet 2012.\nPrésentation et analyse des résultats, Québec, Québec,\n[en ligne], www.stat.gouv.qc.ca/statistiques/science-\ntechnologie-innovation/utilisation-Internet/menages-\nindividus/menage-Internet-2012.pdf.\n",
+      "text_sha256": "1e40c13cda35b13b63b2ee899c2b4872e7efb1b7c26d026ed81d862a30e3940b"
+    },
+    {
+      "bbox": [
+        219.0,
+        444.53497314453125,
+        373.7550964355469,
+        480.1234436035156
+      ],
+      "block_id": "page-1129-block-0036",
+      "order": 36,
+      "text": "Kessler, R. C. & al. (2006). « The prevalence and correlates\nof DSM-IV intermittent explosive disorder in the National\nComorbidity Survey Replication », Archives of General\nPsychiatry, 63(6), p. 669-678.\n",
+      "text_sha256": "3d8a061b39e028b5508d128f7590b5e7be77a808aaf807adb7ae5bc35042e99c"
+    },
+    {
+      "bbox": [
+        219.0,
+        484.03497314453125,
+        378.3275146484375,
+        510.47344970703125
+      ],
+      "block_id": "page-1129-block-0037",
+      "order": 37,
+      "text": "Keuthen, N. J. & al. (2001). « Longitudinal follow-up of natu-\nralistic treatment outcome in patients with trichotillomania »,\nJournal of Clinical Psychiatry, 62(2), p. 101-107.\n",
+      "text_sha256": "59382a4651ec9462f9c38975f07ec4ec48f0d22a1e5656b026da3fadb6033529"
+    },
+    {
+      "bbox": [
+        219.0,
+        514.3849487304688,
+        374.372314453125,
+        540.8234252929688
+      ],
+      "block_id": "page-1129-block-0038",
+      "order": 38,
+      "text": "Keuthen, N. J. & al. (2010). « The prevalence of pathological\nskin picking in US adults », Comprehensive Psychiatry,\n51(2), p. 183-186.\n",
+      "text_sha256": "d79fb09579163a172a2bce7ad3819e4900541b193d55638040dc3a00e1091a52"
+    },
+    {
+      "bbox": [
+        219.0,
+        544.7849731445312,
+        372.9250183105469,
+        580.3234252929688
+      ],
+      "block_id": "page-1129-block-0039",
+      "order": 39,
+      "text": "Le Sieur, H. R. & Blume, S. B. (1987). « The South Oak\nGambling Screen (SOGS) : A new instrument for the\nidentication of pathological gamblers », American Journal\nof Psychiatry, 144,(9), p. 1184-1188.\n",
+      "text_sha256": "fd242dcf2f816231a6fb8e4a20b71c33159c56dc50e497c2fc9c2deed6898ddd"
+    },
+    {
+      "bbox": [
+        219.0,
+        584.2349853515625,
+        361.1999816894531,
+        610.6734619140625
+      ],
+      "block_id": "page-1129-block-0040",
+      "order": 40,
+      "text": "Leung, K. S. & Cottler, L. B. (2009). « Treatment of\npathological gambling », Current Opinion in Psychiatry,\n22(1), p. 69-74.\n",
+      "text_sha256": "c5f1b22065316ffd151ae43fbbfc57460994739d8b601a616233c45dc2ea2e46"
+    },
+    {
+      "bbox": [
+        219.0,
+        614.6349487304688,
+        378.4250793457031,
+        650.1734619140625
+      ],
+      "block_id": "page-1129-block-0041",
+      "order": 41,
+      "text": "Lorains, F. K. & al. (2011). « Prevalence of comorbid\ndisorders in problem and pathological gambling : Systematic\nreview and meta-analysis of population surveys », Addiction,\n106(3), p. 490-498.\n",
+      "text_sha256": "c352958010aef4240deb67c96491bdba345e6c1434f722b81a5462dd750bca19"
+    },
+    {
+      "bbox": [
+        219.0,
+        654.0849609375,
+        368.80999755859375,
+        680.5234375
+      ],
+      "block_id": "page-1129-block-0042",
+      "order": 42,
+      "text": "McGuire, R. J. & al. (1965). « Sexual deviations as condi-\ntioned behavior : A hypothesis », Behaviour Research and\nTherapy, 2(2-4), p. 185-190.\n",
+      "text_sha256": "15c85477d6bd148e4308c1233c486687f57c3f544851da7d35f454d8af0bbe96"
+    },
+    {
+      "bbox": [
+        219.0,
+        684.4849853515625,
+        371.6499938964844,
+        720.0234375
+      ],
+      "block_id": "page-1129-block-0043",
+      "order": 43,
+      "text": "Meyer-Lindenberg, A. & al. (2006). «Neural mechanisms\nof genetic risk for impulsivity and violence in humans »,\nProceedings of the National Academy of Sciences of USA,\n103(16), p. 6269-6274.\n",
+      "text_sha256": "18ca1a06698f346d5ba21de4f29618ec2c4a0b59338d2778a01d139ad11447ff"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.68496322631836,
+        200.22999572753906,
+        76.1234359741211
+      ],
+      "block_id": "page-1129-block-0044",
+      "order": 44,
+      "text": "Werner, J. & Milanez Werner, M. C. (2008). « Child sexual\nabuse in clinical and forensic psychiatry : A review of\nrecent literature », Current Opinions in Psychiatry, 21(5),\np. 499-504.\n",
+      "text_sha256": "b4087261dc74dbc731df58c7d5b2ba2fadb7610bf139b45e8b96b083b8946075"
+    },
+    {
+      "bbox": [
+        48.0,
+        79.9849624633789,
+        202.94749450683594,
+        97.2734375
+      ],
+      "block_id": "page-1129-block-0045",
+      "order": 45,
+      "text": "Wiebking, C. & Northoff, G. (2013). « Neuroimaging in pedo-\nphilia », Current Psychiatry Reports, 15(4), p. 351.\n",
+      "text_sha256": "000697c177c6eb46d0355c1571a18384251b7cfb16adb61cfcf9c6b75a0a1b2d"
+    },
+    {
+      "bbox": [
+        48.0,
+        101.13496398925781,
+        192.44764709472656,
+        136.5734405517578
+      ],
+      "block_id": "page-1129-block-0046",
+      "order": 46,
+      "text": "Wong, S. C. P. & al. (2003). Violence Risk Scale-Sexual\nOffender Version (VRS-SO), Saskatoon, Saskatchewan,\nRegional Psychiatric Centre and University of\nSaskatchewan.\n",
+      "text_sha256": "396795cb872a3d08434caccc8957ce1518ae4a4d120eca9824afcd2c28958b3e"
+    },
+    {
+      "bbox": [
+        48.0,
+        149.97032165527344,
+        186.19764709472656,
+        178.8234405517578
+      ],
+      "block_id": "page-1129-block-0047",
+      "order": 47,
+      "text": "Chapitre 36\nAboujaoude, E. (2010). « Problematic Internet use : An\noverview », World Psychiatry, 9(2), p. 85-90.\n",
+      "text_sha256": "6847dc508fa808a9379f15756506b0b7e84121f16f1503920cad5933fc1dd08b"
+    },
+    {
+      "bbox": [
+        48.0,
+        182.68496704101562,
+        205.37249755859375,
+        209.0234375
+      ],
+      "block_id": "page-1129-block-0048",
+      "order": 48,
+      "text": "Afifi, T. O. & al. (2010). « Demographic and social variables\nassociated with problem gambling among men and women\nin Canada », Psychiatry Research, 178(2), p. 395-400.\n",
+      "text_sha256": "e7d695bf9857b50b1afc160b68866ff08535b255fb5d5e552ae47786a538da59"
+    },
+    {
+      "bbox": [
+        48.0,
+        212.93496704101562,
+        202.88526916503906,
+        239.2734375
+      ],
+      "block_id": "page-1129-block-0049",
+      "order": 49,
+      "text": "American Psychiatric Association (APA). (2004). DSM-IV-TR.\nCritères diagnostiques (Washington, DC, 2000). Traduction\nfrançaise par J.-D. Guelet al., Paris, France, Masson.\n",
+      "text_sha256": "59168a3cdb232a529352a11b7676441df0533ef4b0978ce40ab950cd265635c4"
+    },
+    {
+      "bbox": [
+        48.0,
+        243.18496704101562,
+        201.5,
+        278.5734558105469
+      ],
+      "block_id": "page-1129-block-0050",
+      "order": 50,
+      "text": "American Psychiatric Association (APA). (2015). DSM-5 –\nManuel Diagnostique et Statistique des Troubles Mentaux.\nTraduction française par M.-A. Crocq, J.-D. Guelet al.,\nElsevier Masson SAS, Paris.\n",
+      "text_sha256": "9abdc7221827d2e516286759fe28a6461976091b7d5dc8ffca72c446615d7dc3"
+    },
+    {
+      "bbox": [
+        48.0,
+        282.4849548339844,
+        191.64935302734375,
+        308.8234558105469
+      ],
+      "block_id": "page-1129-block-0051",
+      "order": 51,
+      "text": "Berman, M. E. & al. (2009). « Serotonine augmentation\nreduces response to attack in aggressive individuals »,\nPsychological Science, 20(6), p. 714-720.\n",
+      "text_sha256": "c2bb8b5c56f5483e9ff967f81a85755f7e6b84540f9a19c11d4679e5d8d14a78"
+    },
+    {
+      "bbox": [
+        48.0,
+        312.7349548339844,
+        202.1571044921875,
+        348.1234436035156
+      ],
+      "block_id": "page-1129-block-0052",
+      "order": 52,
+      "text": "Bernardi, S. & Pallanti, S. (2009). « Internet addiction : A\ndescriptive clinical study focusing on comorbidities and\ndissociative symptoms », Comprehensive Psychiatry,\n50(6), p. 510-516.\n",
+      "text_sha256": "076fc941b41e7ec14b0a9c00d89b665914ce1bab93cf87f7f5ef6fbdbf22c09f"
+    },
+    {
+      "bbox": [
+        48.0,
+        352.03497314453125,
+        206.60000610351562,
+        387.47344970703125
+      ],
+      "block_id": "page-1129-block-0053",
+      "order": 53,
+      "text": "Best, M. & al. (2002). « Evidence for a dysfunctional\nprefrontal circuit in patients with an impulsive aggressive\ndisorder », Proceedings of the National Academy of Science,\n99(12), p. 8448-8453.\n",
+      "text_sha256": "d54a78180d0cc1f971af669023dae01459f098c3052b7e8ffc2c3087e4f271b5"
+    },
+    {
+      "bbox": [
+        48.0,
+        391.3349609375,
+        203.22265625,
+        417.6734313964844
+      ],
+      "block_id": "page-1129-block-0054",
+      "order": 54,
+      "text": "Blinn-Pike, L. & al. (2010). « Adolescent gambling : A review\nof an emerging eld of research », Journal of Adolescent\nHealth, 47(3), p. 223-236.\n",
+      "text_sha256": "253b75ead73ee0a2cbe8f179fe8a8c74afa74c2a4243ca19046e4d42997e1aec"
+    },
+    {
+      "bbox": [
+        48.0,
+        421.5849609375,
+        205.605224609375,
+        456.97344970703125
+      ],
+      "block_id": "page-1129-block-0055",
+      "order": 55,
+      "text": "Burton, P. R. S. & al. (2012). « Firesetting, arson, pyromania,\nand the forensic mental health expert »,Journal of the\nAmerican Academy of Psychiatry and the Law, 40(3),\np. 355-365.\n",
+      "text_sha256": "968d22358ceade6d15751095222b9d94eaf141187562b455da65b3bec7e63c08"
+    },
+    {
+      "bbox": [
+        48.0,
+        460.8849792480469,
+        200.28001403808594,
+        487.22344970703125
+      ],
+      "block_id": "page-1129-block-0056",
+      "order": 56,
+      "text": "Chamberlain, S. R. & al. (2007). « Lifting the veil on\ntrichotillomania », American Journal of Psychiatry, 164(4),\np. 568-574.\n",
+      "text_sha256": "949d020d2e2e0c2005e85e7df35265d01a2b02315f033797ab2121814aceb269"
+    },
+    {
+      "bbox": [
+        48.0,
+        491.1349792480469,
+        197.01751708984375,
+        517.4734497070312
+      ],
+      "block_id": "page-1129-block-0057",
+      "order": 57,
+      "text": "Chamberlain, S. R. & al. (2009). « Trichotillomania : Neu-\nrobiology and treatment », Neuroscience & Biobehavioral\nReviews, 33(6), p. 831-842.\n",
+      "text_sha256": "815d3f35ecfc0290daa329675dc0cb66d7ac50011b2a9f893ba065bf83d634fd"
+    },
+    {
+      "bbox": [
+        48.0,
+        521.3349609375,
+        205.16751098632812,
+        547.6734619140625
+      ],
+      "block_id": "page-1129-block-0058",
+      "order": 58,
+      "text": "Coccaro, E. F. & al. (2005). « Prevalence and features of\nintermittent explosive disorder in a clinical setting »,Journal\nof Clinical Psychiatry, 66(10), p. 1221-1227.\n",
+      "text_sha256": "555a15d25e91091528a73bb0a6131a244c4652f1f085f3d981c97b5c9c220233"
+    },
+    {
+      "bbox": [
+        48.0,
+        551.5849609375,
+        203.3000030517578,
+        587.0234375
+      ],
+      "block_id": "page-1129-block-0059",
+      "order": 59,
+      "text": "Coccaro, E. F. & al. (2009). « A double-blind, randomized,\nplacebo-controlled trial of uoxetine in patients with inter-\nmittent explosive disorder », Journal of Clinical Psychiatry,\n70(5), p. 653-662.\n",
+      "text_sha256": "6b62479a0feb726ac2b0e498fb8485f6d851b083cbc974d58abfccb9636c0e6d"
+    },
+    {
+      "bbox": [
+        48.0,
+        590.8849487304688,
+        203.2675018310547,
+        626.3234252929688
+      ],
+      "block_id": "page-1129-block-0060",
+      "order": 60,
+      "text": "Coccaro, E. F. & al. (2010). « Inverse relationship between\nnumbers of 5-HT transporter binding sites and life history\nof aggression and intermittent explosive disorder », Journal\nof Psychiatric Research, 44(3), p. 137-142.\n",
+      "text_sha256": "a10a86f5e2b3056143c0d6cc22c643238dc41f3b40e483b37b36c9a9f91f240e"
+    },
+    {
+      "bbox": [
+        48.0,
+        630.2349853515625,
+        186.0800018310547,
+        656.5734252929688
+      ],
+      "block_id": "page-1129-block-0061",
+      "order": 61,
+      "text": "Duke, D. C. & al.(2010). « Trichotillomania : A cur-\nrent review », Clinical and Psychology Review, 30(2),\np. 181-193.\n",
+      "text_sha256": "2101d7a6b8d889686c854162185d1fec68b3cffe057524b41f96256544fe5c99"
+    },
+    {
+      "bbox": [
+        48.0,
+        660.4349975585938,
+        188.0526580810547,
+        677.7234497070312
+      ],
+      "block_id": "page-1129-block-0062",
+      "order": 62,
+      "text": "Durst, R. & al. (2001). « Kleptomania : Diagnostic and\ntreatment options », CNS Drug, 15(3), p. 185-195.\n",
+      "text_sha256": "ab072fa426ee44779f985ab8e8188a7f90337c3680ecbfdc536d5c748669928a"
+    },
+    {
+      "bbox": [
+        48.0,
+        681.5849609375,
+        200.760009765625,
+        698.8734741210938
+      ],
+      "block_id": "page-1129-block-0063",
+      "order": 63,
+      "text": "Freud, S. (1932). « The acquisition of power », International\nJournal of Psychoanalysis, 13, p. 405-410.\n",
+      "text_sha256": "2fb3c03a6b7740ded36c8afc5d9735f2a10cf5f22a9ef1ed74bec26be82fadfe"
+    },
+    {
+      "bbox": [
+        48.0,
+        702.7349853515625,
+        196.583984375,
+        720.0234375
+      ],
+      "block_id": "page-1129-block-0064",
+      "order": 64,
+      "text": "Gebauer, L. & al. (2010). « Optimizing DSM-IV classi-\ncation accuracy : A brief biosocial screen for detecting\n",
+      "text_sha256": "c84b6bd629cf355f47d9af20515ddf92cdbba00869981a1609cad0986d4066b4"
+    }
+  ],
+  "coordinates_sha256": "1adb0a4a8c6175aff804c5ee31fc2e78095891e84d1f44bbfe89e6ba8a3fcbb8",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1129",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "R32\nRéférences\nNoblett, S. & Nelson, B. (2001). « A psychosocial approach\nto Arson : A case controlled study of female offenders »,\nMedicine, Science and the Law, 4(4), p. 325-330.\nOdlaug, B. L. & Grant, J. E. (2010). « Pathologic skin\npicking », The American Journal of Alcohol and Drug Abuse,\n36(5), p. 296-303.\nOdlaug, B. L. & al. (2010). « Motor inhibition and cognitive\nexibility in pathologic skin picking », Progress in Neuro-\nPsychopharmacology and Biological Psychiatry, 34(1),\np. 208-211.\nPacan, P. & Grzesiak, M. (2009). « Onychophagia as a\nspectrum of obsessive-compulsive disorder »,Acta Dermato-\nvenereologica, 89(3), p. 278-280.\nPapadopoulos, A. J. & al. (2003). « Trichotillomania », Interna-\ntional Journal of Dermatology, 42(5), p. 330-334.\nShaffer, H. J. & Martin, R. (2011). « Disordered gambling :\nEtiology, trajectory, and clinical considerations », Annual\nReview of Clinical Psychology, 7, p. 483-510.\nShaw, M. & Black, D. W. (2008). Internet addiction : Deni-\ntion, assessment, epidemiology and clinical management »,\nCNS Drugs, 22(5), p. 353-365.\nStea, J. N. & Hodgins, D. C. (2011). « A critical review of\ntreatment approaches for gambling disorders », Current\nDrug Abuse Reviews, 4(2), p. 67-80.\nStein, D. J. & al. (2010). « Trichotillomania (hair pulling\ndisorder), skin picking disorder, and stereotypic movement\ndisorder : Toward DSM5 », Depression and Anxiety, 27(6),\np. 611-626.\nSwaffer, T. & al. (2001). « Mentally disordered re-setters :\nA structural intervention program », Clinical Psychology\nand Psychotherapy, 8(6), p. 468-475.\nWenzel, H. G. & Dahl, A. A. (2009). « Female pathological\ngamblers – A critical review of the clinical ndings »,\nInternational Journal of Mental Health and Addiction,\n7(1), p. 190-202.\nWetterneck, C. T. & al. (2010). « Current issues in the\ntreatment of OC-spectrum conditions », Bulletin of the\nMenninger Clinic, 74(2), p. 141-166.\nChapitre 37\nAlcooliques Anonymes. (2004). « Notre méthode », dans Les\nalcooliques anonymes : le Gros Livre, le texte de base des\nAA, 4e éd., New York, NY, AA World Services, p. 66-67.\nAmerican Psychiatric Association (APA). (2004). DSM-IV-TR.\nCritères diagnostiques (Washington, DC, 2000). Traduction\nfrançaise par J.-D. Guelet al., Paris, France, Masson,\n384 p.\nAmerican Psychiatric Association (APA). (2015). DSM-5.\nCritères diagnostiques (Washington, DC, 2013). Traduc-\ntion française par M.-A. Crocq, J.-D. Guelfi et al., Paris,\nMasson, 1 200 p.\nAmerican Society of Addiction Medecine (ASAM). (2011). « Denition\nof Addiction », ASAM Newsletter,26(3), p. 1.\nAnton, R. F. & al. (2006). « Combined pharmacotherapy\nand behavioral interventions for alcohol dependence. The\nCOMBINE study : A randomized controlled trial », Journal of\nthe American Medical Association, 295(17), p. 2003-1017.\nBabor, T. F. & al. (1992). « Types of alcoholics : Concurrent\nand predictive validity of some common classication sche-\nmes », British Journal of Addiction, 87, p. 1415–1431.\nBabor, T. & al. (2003). Alcohol : No Ordinary Commodity –\nResearch and Public Policy, Oxford, Oxford University Press.\nBouza, C. & al. (2004). « Efcacy and safety of naltrexone\nand acamprosate in the treatment of alcohol dependence :\nA systemic review », Addiction, 99(7), p. 811-828.\nCalvao de Melo, R. & al. (2014). «A case of Psychosis in\nDisulram Treatment for Alcoholism », Case Reports in\nPsychiatry, 2014.\ncurrent gambling disorders among gamblers in the\ngeneral household population », Canadian Journal of\nPsychiatry, 55(2), p. 82-90.\nGeller, J. L. (1992a). « Communicative Arson », Hospital and\nCommunity Psychiatry, 43(1), p. 76-77.\nGeller, J. L. (1992b). « Arson in review », Psychiatric Clinics\nof North America, 15(3), p. 623-645.\nGrant, J. E. (2003). « Family history and psychiatric\ncomorbidity in persons with kleptomania », Comprehensive\nPsychiatry, 44(6), p. 437-441.\nGrant, J. E. & al. (2006). « The neurobiology of substance\nand behavioral addictions », CNS Spectrums, 11(12),\np. 924-930.\nGrant, J. E, & al. (2010a). « A clinical comparison of patho-\nlogic skin picking and obsessive-compulsive disorder »,\nComprehensive Psychiatry, 51(3), p. 47-52.\nGrant, J. E. & al. (2010b). « Introduction to behavioral addic-\ntions », The American Journal of Drug and Alcohol Abuse,\n36(5), p. 233-241.\nHaden, S. C. & Scarpa, A. (2007). « Noradrenergic system and\nits involvement in aggressive behaviors », Aggression and\nViolent Behavior, 12(1), p. 1-15.\nHautmann, G. & al. (2002). « Trichotillomania », Jour-\nnal of the American Academy of Dermatology, 46(6),\np. 807-821.\nHealy, D. & McMonagle, T. (1997). « The enhancement of\nsocial functioning as a therapeutic principle in the mana-\ngement of depression », Journal of Psychopharmacology,\n1(supp. 4), p. S25-S31.\nHodgins, D. C. & al. (2011). « Gambling disorders », The\nLancet, 378(9806), p. 1874-1884.\nHollander, E. & Stein, D. J. (dir.). (2006). Clinical Manual\nof Impulse-Control Disorders, Washington DC, American\nPsychiatric Publishing.\nInstitut de la Statistique du Québec. (2013). L’Enquête\nquébécoise sur l’accès des ménages à Internet 2012.\nPrésentation et analyse des résultats, Québec, Québec,\n[en ligne], www.stat.gouv.qc.ca/statistiques/science-\ntechnologie-innovation/utilisation-Internet/menages-\nindividus/menage-Internet-2012.pdf.\nKessler, R. C. & al. (2006). « The prevalence and correlates\nof DSM-IV intermittent explosive disorder in the National\nComorbidity Survey Replication », Archives of General\nPsychiatry, 63(6), p. 669-678.\nKeuthen, N. J. & al. (2001). « Longitudinal follow-up of natu-\nralistic treatment outcome in patients with trichotillomania »,\nJournal of Clinical Psychiatry, 62(2), p. 101-107.\nKeuthen, N. J. & al. (2010). « The prevalence of pathological\nskin picking in US adults », Comprehensive Psychiatry,\n51(2), p. 183-186.\nLe Sieur, H. R. & Blume, S. B. (1987). « The South Oak\nGambling Screen (SOGS) : A new instrument for the\nidentication of pathological gamblers », American Journal\nof Psychiatry, 144,(9), p. 1184-1188.\nLeung, K. S. & Cottler, L. B. (2009). « Treatment of\npathological gambling », Current Opinion in Psychiatry,\n22(1), p. 69-74.\nLorains, F. K. & al. (2011). « Prevalence of comorbid\ndisorders in problem and pathological gambling : Systematic\nreview and meta-analysis of population surveys », Addiction,\n106(3), p. 490-498.\nMcGuire, R. J. & al. (1965). « Sexual deviations as condi-\ntioned behavior : A hypothesis », Behaviour Research and\nTherapy, 2(2-4), p. 185-190.\nMeyer-Lindenberg, A. & al. (2006). «Neural mechanisms\nof genetic risk for impulsivity and violence in humans »,\nProceedings of the National Academy of Sciences of USA,\n103(16), p. 6269-6274.\nWerner, J. & Milanez Werner, M. C. (2008). « Child sexual\nabuse in clinical and forensic psychiatry : A review of\nrecent literature », Current Opinions in Psychiatry, 21(5),\np. 499-504.\nWiebking, C. & Northoff, G. (2013). « Neuroimaging in pedo-\nphilia », Current Psychiatry Reports, 15(4), p. 351.\nWong, S. C. P. & al. (2003). Violence Risk Scale-Sexual\nOffender Version (VRS-SO), Saskatoon, Saskatchewan,\nRegional Psychiatric Centre and University of\nSaskatchewan.\nChapitre 36\nAboujaoude, E. (2010). « Problematic Internet use : An\noverview », World Psychiatry, 9(2), p. 85-90.\nAfifi, T. O. & al. (2010). « Demographic and social variables\nassociated with problem gambling among men and women\nin Canada », Psychiatry Research, 178(2), p. 395-400.\nAmerican Psychiatric Association (APA). (2004). DSM-IV-TR.\nCritères diagnostiques (Washington, DC, 2000). Traduction\nfrançaise par J.-D. Guelet al., Paris, France, Masson.\nAmerican Psychiatric Association (APA). (2015). DSM-5 –\nManuel Diagnostique et Statistique des Troubles Mentaux.\nTraduction française par M.-A. Crocq, J.-D. Guelet al.,\nElsevier Masson SAS, Paris.\nBerman, M. E. & al. (2009). « Serotonine augmentation\nreduces response to attack in aggressive individuals »,\nPsychological Science, 20(6), p. 714-720.\nBernardi, S. & Pallanti, S. (2009). « Internet addiction : A\ndescriptive clinical study focusing on comorbidities and\ndissociative symptoms », Comprehensive Psychiatry,\n50(6), p. 510-516.\nBest, M. & al. (2002). « Evidence for a dysfunctional\nprefrontal circuit in patients with an impulsive aggressive\ndisorder », Proceedings of the National Academy of Science,\n99(12), p. 8448-8453.\nBlinn-Pike, L. & al. (2010). « Adolescent gambling : A review\nof an emerging eld of research », Journal of Adolescent\nHealth, 47(3), p. 223-236.\nBurton, P. R. S. & al. (2012). « Firesetting, arson, pyromania,\nand the forensic mental health expert »,Journal of the\nAmerican Academy of Psychiatry and the Law, 40(3),\np. 355-365.\nChamberlain, S. R. & al. (2007). « Lifting the veil on\ntrichotillomania », American Journal of Psychiatry, 164(4),\np. 568-574.\nChamberlain, S. R. & al. (2009). « Trichotillomania : Neu-\nrobiology and treatment », Neuroscience & Biobehavioral\nReviews, 33(6), p. 831-842.\nCoccaro, E. F. & al. (2005). « Prevalence and features of\nintermittent explosive disorder in a clinical setting »,Journal\nof Clinical Psychiatry, 66(10), p. 1221-1227.\nCoccaro, E. F. & al. (2009). « A double-blind, randomized,\nplacebo-controlled trial of uoxetine in patients with inter-\nmittent explosive disorder », Journal of Clinical Psychiatry,\n70(5), p. 653-662.\nCoccaro, E. F. & al. (2010). « Inverse relationship between\nnumbers of 5-HT transporter binding sites and life history\nof aggression and intermittent explosive disorder », Journal\nof Psychiatric Research, 44(3), p. 137-142.\nDuke, D. C. & al.(2010). « Trichotillomania : A cur-\nrent review », Clinical and Psychology Review, 30(2),\np. 181-193.\nDurst, R. & al. (2001). « Kleptomania : Diagnostic and\ntreatment options », CNS Drug, 15(3), p. 185-195.\nFreud, S. (1932). « The acquisition of power », International\nJournal of Psychoanalysis, 13, p. 405-410.\nGebauer, L. & al. (2010). « Optimizing DSM-IV classi-\ncation accuracy : A brief biosocial screen for detecting\n",
+  "raw_text_sha256": "2a647426c8448386f693814b027fa33c4b9721302b7f6da8bb4fb70c2d6d2064",
+  "source_page_display": 1130,
+  "source_page_index": 1129
+}

@@ -1,0 +1,376 @@
+{
+  "block_sequence_sha256": "9a38b0f80cfd051c2fa56d7cbb341f4adcb354adbd920415ecba69e1b5ab22a6",
+  "blocks": [
+    {
+      "bbox": [
+        305.8500061035156,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0766-block-0001",
+      "order": 1,
+      "text": "Chapitre 32\nTroubles du sommeil et de la vigilance\n749\n",
+      "text_sha256": "0e7c3fce8d0e31bd257a331f91c7aac9956cdc4e667db6390311d35f4d21862b"
+    },
+    {
+      "bbox": [
+        56.25,
+        41.002296447753906,
+        344.630615234375,
+        53.320068359375
+      ],
+      "block_id": "page-0766-block-0002",
+      "order": 2,
+      "text": "TABLEAU 32.15 Critères diagnostiques des troubles du sommeil induits\n",
+      "text_sha256": "5528a76995a8290f8c8c81dc08a237fd6721d4410b9eae5c2287584c47bfdab6"
+    },
+    {
+      "bbox": [
+        176.15000915527344,
+        62.874122619628906,
+        458.93798828125,
+        73.4502944946289
+      ],
+      "block_id": "page-0766-block-0003",
+      "order": 3,
+      "text": "DSM-5\nDSM-IV-TR\n",
+      "text_sha256": "67d368c78be7842a2bc99b149901566bcadf3c9d62623ea48bafcc32b3563ffb"
+    },
+    {
+      "bbox": [
+        103.5,
+        82.3741226196289,
+        521.9108276367188,
+        103.9502944946289
+      ],
+      "block_id": "page-0766-block-0004",
+      "order": 4,
+      "text": "292.8x (F1x.x8x) Trouble du sommeil induit par\nune substance/un médicament\nTrouble du sommeil induit par une substance\n",
+      "text_sha256": "495826d7bd70c516056ae367e3a0403f9965659c1950169f05820bae44f83925"
+    },
+    {
+      "bbox": [
+        58.25,
+        109.4019546508789,
+        303.3768615722656,
+        119.2281265258789
+      ],
+      "block_id": "page-0766-block-0005",
+      "order": 5,
+      "text": "C. La perturbation n’est pas mieux expliquée par un trouble du sommeil non\n",
+      "text_sha256": "21f5c2e90fa87ee6e6dfcf794d6e75d38c54ae6f9f99e42e7de33fff36d7dd6c"
+    },
+    {
+      "bbox": [
+        70.25,
+        119.4019546508789,
+        319.0632629394531,
+        212.22813415527344
+      ],
+      "block_id": "page-0766-block-0006",
+      "order": 6,
+      "text": "induit par une substance/un médicament. Des preuves d’un trouble du som-\nmeil indépendant pourraient être les suivantes :\n• les symptômes précèdent le début de l’usage de la substance/médicament ;\n• les symptômes persistent longtemps (p. ex., environ 1 mois) après la n du\nsevrage aigu ou d’une intoxication grave ;\n• mise en évidence d’éléments suggérant l’existence indépendante d’un\ntrouble du sommeil non induit par une substance/un médicament (p. ex.,\nantécédents d’épisodes répétés de trouble du sommeil non lié à l’utilisation\nd’une substance/un médicament).\n",
+      "text_sha256": "d846affbe2c3b1e0a76e50e5f46858c30f06ed060413e06219bfb58856174962"
+    },
+    {
+      "bbox": [
+        327.0,
+        109.4019546508789,
+        387.819091796875,
+        119.2281265258789
+      ],
+      "block_id": "page-0766-block-0007",
+      "order": 7,
+      "text": "C. Idem à DSM-5.\n",
+      "text_sha256": "e3115c8f08f85dfc1a8c901e597d6628d9cc927dde450ccede1ca1ec3dd04b8e"
+    },
+    {
+      "bbox": [
+        58.25,
+        216.85195922851562,
+        318.9849548339844,
+        226.67813110351562
+      ],
+      "block_id": "page-0766-block-0008",
+      "order": 8,
+      "text": "D. La perturbation ne survient pas exclusivement au cours d’un état confusionnel\n",
+      "text_sha256": "9b772d8584e9dbd1edc77761a8cd0f80aaf0088f9002e3baf96598ff08d729af"
+    },
+    {
+      "bbox": [
+        70.25,
+        226.85195922851562,
+        101.87600708007812,
+        236.67813110351562
+      ],
+      "block_id": "page-0766-block-0009",
+      "order": 9,
+      "text": "(delirium).\n",
+      "text_sha256": "2d68de1f94481d1b452a6dc19aeb8bb81980e775d9a522f09c60ea839ee3d88e"
+    },
+    {
+      "bbox": [
+        327.0,
+        216.85195922851562,
+        387.8310852050781,
+        226.67813110351562
+      ],
+      "block_id": "page-0766-block-0010",
+      "order": 10,
+      "text": "D. Idem à DSM-5.\n",
+      "text_sha256": "a25093c4e73c5e7e67b3176a2cccc790e8fc03ace507127f5b4c7ba5e37fc007"
+    },
+    {
+      "bbox": [
+        58.25,
+        241.251953125,
+        299.86029052734375,
+        251.078125
+      ],
+      "block_id": "page-0766-block-0011",
+      "order": 11,
+      "text": "E. La perturbation provoque une détresse cliniquement signicative ou une\n",
+      "text_sha256": "86e4e94e2faf41a39c2982fc78cfaa65467a1a2f18dda25c78862a1343416cc7"
+    },
+    {
+      "bbox": [
+        70.25,
+        251.251953125,
+        316.7216491699219,
+        271.078125
+      ],
+      "block_id": "page-0766-block-0012",
+      "order": 12,
+      "text": "altération du fonctionnement social, professionnel ou dans d’autres domaines\nimportants.\n",
+      "text_sha256": "2132e70179a87b4ad4a2bec2e36848f232cf55b26a6f58817c4817b94824b7f6"
+    },
+    {
+      "bbox": [
+        327.0,
+        241.251953125,
+        387.8440856933594,
+        251.078125
+      ],
+      "block_id": "page-0766-block-0013",
+      "order": 13,
+      "text": "E. Idem à DSM-5.\n",
+      "text_sha256": "623c5ec74498d33a47207c86c1d4b8bb5aae0042d0559cf373e98ababace68cc"
+    },
+    {
+      "bbox": [
+        58.25,
+        275.70196533203125,
+        314.6470031738281,
+        389.52813720703125
+      ],
+      "block_id": "page-0766-block-0014",
+      "order": 14,
+      "text": "Spécier le type :\nType insomnie : Caractérisé par des difcultés d’endormissement ou de maintien\ndu sommeil, des réveils nocturnes fréquents, ou un sommeil non réparateur.\nType somnolence diurne : Caractérisé par des plaintes prédominantes de som-\nnolence excessive/fatigue pendant les heures de veille ou, plus rarement,\npar une longue période de sommeil.\nType parasomnie : Caractérisé par des comportements anormaux pendant le\nsommeil.\nType mixte : Caractérisé par un problème du sommeil induit par une substance/\nun médicament, caractérisée par plusieurs types de symptômes du sommeil,\nmais aucun symptôme ne prédomine nettement.\n",
+      "text_sha256": "c2ecb05cceddefc3e43bced397ca7364e8626e31266a46de359c09a997f60bcd"
+    },
+    {
+      "bbox": [
+        327.0,
+        275.70196533203125,
+        546.0796508789062,
+        306.52813720703125
+      ],
+      "block_id": "page-0766-block-0015",
+      "order": 15,
+      "text": "Spécier le type :\nType insomnie : si la perturbation du sommeil prédominante est une\ninsomnie\n",
+      "text_sha256": "eddbf92b7b50b9ea5a1e478798454efe2ab6d91d501b309d7b1192b7e3621322"
+    },
+    {
+      "bbox": [
+        327.0,
+        318.62286376953125,
+        545.4055786132812,
+        338.52813720703125
+      ],
+      "block_id": "page-0766-block-0016",
+      "order": 16,
+      "text": "Type hypersomnie : si la perturbation du sommeil prédominante est\nune hypersomnie\n",
+      "text_sha256": "89f7d901ae9382e7a151e1504b9a912652ce6d57de884cb40f342390da0f5b33"
+    },
+    {
+      "bbox": [
+        327.0,
+        349.62286376953125,
+        541.4055786132812,
+        390.52813720703125
+      ],
+      "block_id": "page-0766-block-0017",
+      "order": 17,
+      "text": "Type parasomnie : si la perturbation du sommeil prédominante est\nune parasomnie\nType mixte : si plusieurs perturbations du sommeil sont présentes,\naucune d’entre elles n’étant prédominante\n",
+      "text_sha256": "a826bfc202647a4d6976ca21f81961b84fb5016a49b05a7479c3be9f6157462d"
+    },
+    {
+      "bbox": [
+        58.25,
+        395.1019592285156,
+        308.89276123046875,
+        476.9281311035156
+      ],
+      "block_id": "page-0766-block-0018",
+      "order": 18,
+      "text": "Spécier le type :\nAvec début au cours d’une intoxication : Cette spécication doit être utilisée\nsi les critères de l’intoxication par la substance/le médicament sont remplis et\nsi les symptômes apparaissent durant la période d’intoxication.\nAvec début au cours d’un sevrage/d’un arrêt : Cette spécication doit être\nutilisée si les critères de sevrage/d’arrêt de la substance/du médicament sont\nremplis et si les symptômes apparaissent durant, ou un peu de temps après,\nl’arrêt de la substance/du médicament.\n",
+      "text_sha256": "580615b40a9ac5773f6d1a5c5bde60893bd713d981792798dfbe2548a123652e"
+    },
+    {
+      "bbox": [
+        327.0,
+        395.1019592285156,
+        549.1929931640625,
+        466.9281311035156
+      ],
+      "block_id": "page-0766-block-0019",
+      "order": 19,
+      "text": "Spécier si applicable à la substance :\nPendant l’intoxication : si les critères de l’intoxication à la substance\nsont remplis et si les symptômes apparaissent durant le syndrome\nd’intoxication.\nPendant le sevrage : si les critères de sevrage à la substance sont\nremplis et si les symptômes apparaissent durant, ou peu de temps\naprès, un syndrome de sevrage.\n",
+      "text_sha256": "c197567076ee8202bdc958f245bc7ba7c82b9f446a65cacaf7c237dd20a79713"
+    },
+    {
+      "bbox": [
+        54.25,
+        483.7406311035156,
+        545.1941528320312,
+        552.4750366210938
+      ],
+      "block_id": "page-0766-block-0020",
+      "order": 20,
+      "text": "Sources : APA (2015), p. 487-488 ; APA (2004), p. 763-764.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004.\nAll rights reserved.\n",
+      "text_sha256": "55dbae0b1190b0bf3ea195493a5b5761e504aeda951cee5c85f3330a92d30066"
+    },
+    {
+      "bbox": [
+        54.0,
+        647.359375,
+        222.91200256347656,
+        665.328125
+      ],
+      "block_id": "page-0766-block-0021",
+      "order": 21,
+      "text": "Lectures complémentaires\n",
+      "text_sha256": "a63665748f6f6aa4046621ac3e5b53857ebef6bf2c2f475217e47dfa03f03493"
+    },
+    {
+      "bbox": [
+        54.0,
+        679.0518798828125,
+        203.37522888183594,
+        688.0518798828125
+      ],
+      "block_id": "page-0766-block-0022",
+      "order": 22,
+      "text": "B, M. & D, Y. (2012).\n",
+      "text_sha256": "40ae33d3bc20175cbfa5a4f0b41f136feadc2899157000dfbeefa5b57a0cefa5"
+    },
+    {
+      "bbox": [
+        66.0,
+        686.0518798828125,
+        202.68064880371094,
+        708.0518798828125
+      ],
+      "block_id": "page-0766-block-0023",
+      "order": 23,
+      "text": "Les troubles du sommeil, 2e éd., Paris,\nFrance, Masson.\n",
+      "text_sha256": "510d7f94965257cf33b6806c96ac87e0d0d0cf277ed587b7049a55f2a287aec9"
+    },
+    {
+      "bbox": [
+        225.0,
+        678.19140625,
+        371.5890197753906,
+        688.0518798828125
+      ],
+      "block_id": "page-0766-block-0024",
+      "order": 24,
+      "text": "K, M. & al. (2011). Principles and\n",
+      "text_sha256": "f2b3876fa9edb2bf497a42d258d016f9b515ca141191e846c2eebd0839c14e8a"
+    },
+    {
+      "bbox": [
+        237.0,
+        686.0518798828125,
+        377.5199890136719,
+        708.0518798828125
+      ],
+      "block_id": "page-0766-block-0025",
+      "order": 25,
+      "text": "Practice of Sleep Medicine, 5e éd., New\nYork, NY, Elsevier.\n",
+      "text_sha256": "265a5d60343ad66f73e985eeddeab76e74545879ae3eba1a3cb0bf0ca6b5763d"
+    },
+    {
+      "bbox": [
+        396.0,
+        679.0518798828125,
+        544.0559692382812,
+        688.0518798828125
+      ],
+      "block_id": "page-0766-block-0026",
+      "order": 26,
+      "text": "M, L. J. & Rz, B. D. (2011).\n",
+      "text_sha256": "3f2e58e0e7338a2054493f9cb711c2f2feda00d9e783f1681b08ffacab9129ae"
+    },
+    {
+      "bbox": [
+        408.0,
+        689.0518798828125,
+        551.5986328125,
+        728.0518798828125
+      ],
+      "block_id": "page-0766-block-0027",
+      "order": 27,
+      "text": "« Behavioral treatment of insomnia : A\nproposal for a stepped-care approach\nto promote public health », Nature and\nScience of Sleep, 3, p. 87-99.\n",
+      "text_sha256": "04e29744ab4bf86a538381515d77d274e85c1a3f834087d272bb766a8aa9c5d0"
+    },
+    {
+      "bbox": [
+        346.4000244140625,
+        41.40229415893555,
+        372.03424072265625,
+        53.37006759643555
+      ],
+      "block_id": "page-0766-block-0028",
+      "order": 28,
+      "text": "(suite)\n",
+      "text_sha256": "c684d6dbcdfd50f0ada227f799b5c0fb30e817ac3da61b4cbf208decde7f907b"
+    },
+    {
+      "bbox": [
+        54.0,
+        587.329833984375,
+        297.12298583984375,
+        631.329833984375
+      ],
+      "block_id": "page-0766-block-0029",
+      "order": 29,
+      "text": "Le sommeil est un état naturel, cyclique et réversible de\nrepos qui nécessite la contribution du cerveau : le sommeil\nn’est donc pas un état passif. Ce chapitre a exploré les hauts\net les bas de ce parcours quotidien en rassemblant les pistes\n",
+      "text_sha256": "dc788a6cb666a63768bb1c6cec26df66c8c1e1b92f25a023924872e3d671fbf6"
+    },
+    {
+      "bbox": [
+        312.0,
+        587.2798461914062,
+        555.093994140625,
+        631.2798461914062
+      ],
+      "block_id": "page-0766-block-0030",
+      "order": 30,
+      "text": "diagnostiques et thérapeutiques qui s’offrent au clinicien.\nBeaucoup de progrès restent à faire dans le domaine, mais\nles connaissances répertoriées ici devraient permettre une\npratique éclairée.\n",
+      "text_sha256": "2184b6291bbc6aef98f46f65fef50acf9f971988a14796fc9217de8ce1f9db11"
+    }
+  ],
+  "coordinates_sha256": "2eceee183e9d3f645f9b03a3ad84c75f036cc5df9bb1e23efefe23f699b5599d",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0766",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 32\nTroubles du sommeil et de la vigilance\n749\nTABLEAU 32.15 Critères diagnostiques des troubles du sommeil induits\nDSM-5\nDSM-IV-TR\n292.8x (F1x.x8x) Trouble du sommeil induit par\nune substance/un médicament\nTrouble du sommeil induit par une substance\nC. La perturbation n’est pas mieux expliquée par un trouble du sommeil non\ninduit par une substance/un médicament. Des preuves d’un trouble du som-\nmeil indépendant pourraient être les suivantes :\n• les symptômes précèdent le début de l’usage de la substance/médicament ;\n• les symptômes persistent longtemps (p. ex., environ 1 mois) après la n du\nsevrage aigu ou d’une intoxication grave ;\n• mise en évidence d’éléments suggérant l’existence indépendante d’un\ntrouble du sommeil non induit par une substance/un médicament (p. ex.,\nantécédents d’épisodes répétés de trouble du sommeil non lié à l’utilisation\nd’une substance/un médicament).\nC. Idem à DSM-5.\nD. La perturbation ne survient pas exclusivement au cours d’un état confusionnel\n(delirium).\nD. Idem à DSM-5.\nE. La perturbation provoque une détresse cliniquement signicative ou une\naltération du fonctionnement social, professionnel ou dans d’autres domaines\nimportants.\nE. Idem à DSM-5.\nSpécier le type :\nType insomnie : Caractérisé par des difcultés d’endormissement ou de maintien\ndu sommeil, des réveils nocturnes fréquents, ou un sommeil non réparateur.\nType somnolence diurne : Caractérisé par des plaintes prédominantes de som-\nnolence excessive/fatigue pendant les heures de veille ou, plus rarement,\npar une longue période de sommeil.\nType parasomnie : Caractérisé par des comportements anormaux pendant le\nsommeil.\nType mixte : Caractérisé par un problème du sommeil induit par une substance/\nun médicament, caractérisée par plusieurs types de symptômes du sommeil,\nmais aucun symptôme ne prédomine nettement.\nSpécier le type :\nType insomnie : si la perturbation du sommeil prédominante est une\ninsomnie\nType hypersomnie : si la perturbation du sommeil prédominante est\nune hypersomnie\nType parasomnie : si la perturbation du sommeil prédominante est\nune parasomnie\nType mixte : si plusieurs perturbations du sommeil sont présentes,\naucune d’entre elles n’étant prédominante\nSpécier le type :\nAvec début au cours d’une intoxication : Cette spécication doit être utilisée\nsi les critères de l’intoxication par la substance/le médicament sont remplis et\nsi les symptômes apparaissent durant la période d’intoxication.\nAvec début au cours d’un sevrage/d’un arrêt : Cette spécication doit être\nutilisée si les critères de sevrage/d’arrêt de la substance/du médicament sont\nremplis et si les symptômes apparaissent durant, ou un peu de temps après,\nl’arrêt de la substance/du médicament.\nSpécier si applicable à la substance :\nPendant l’intoxication : si les critères de l’intoxication à la substance\nsont remplis et si les symptômes apparaissent durant le syndrome\nd’intoxication.\nPendant le sevrage : si les critères de sevrage à la substance sont\nremplis et si les symptômes apparaissent durant, ou peu de temps\naprès, un syndrome de sevrage.\nSources : APA (2015), p. 487-488 ; APA (2004), p. 763-764.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004.\nAll rights reserved.\nLectures complémentaires\nB, M. & D, Y. (2012).\nLes troubles du sommeil, 2e éd., Paris,\nFrance, Masson.\nK, M. & al. (2011). Principles and\nPractice of Sleep Medicine, 5e éd., New\nYork, NY, Elsevier.\nM, L. J. & Rz, B. D. (2011).\n« Behavioral treatment of insomnia : A\nproposal for a stepped-care approach\nto promote public health », Nature and\nScience of Sleep, 3, p. 87-99.\n(suite)\nLe sommeil est un état naturel, cyclique et réversible de\nrepos qui nécessite la contribution du cerveau : le sommeil\nn’est donc pas un état passif. Ce chapitre a exploré les hauts\net les bas de ce parcours quotidien en rassemblant les pistes\ndiagnostiques et thérapeutiques qui s’offrent au clinicien.\nBeaucoup de progrès restent à faire dans le domaine, mais\nles connaissances répertoriées ici devraient permettre une\npratique éclairée.\n",
+  "raw_text_sha256": "d6427ca772d90ec2d353676ba4cc5997881225bafb3595c757ffca8f84cf4853",
+  "source_page_display": 767,
+  "source_page_index": 766
+}

@@ -1,0 +1,52 @@
+{
+  "block_sequence_sha256": "3e0fc6fd2b791fe6b90859d5342a5e59de278149cae32e46f6cd3faaab4cc0d7",
+  "blocks": [
+    {
+      "bbox": [
+        422.8000183105469,
+        747.3754272460938,
+        554.97998046875,
+        758.6693725585938
+      ],
+      "block_id": "page-1148-block-0001",
+      "order": 1,
+      "text": "Figures supplémentaires\nF11\n",
+      "text_sha256": "3398e42ae6a65d2f910ef98a6a47f5046e446fdcca71b3445bde6e4eec4f00d2"
+    },
+    {
+      "bbox": [
+        56.29999923706055,
+        41.002296447753906,
+        285.1919860839844,
+        53.320068359375
+      ],
+      "block_id": "page-1148-block-0002",
+      "order": 2,
+      "text": "FIGURE 16 Circulation du liquide céphalorachidien (LCR)\n",
+      "text_sha256": "8808e17a5daccb72e6dabffdaa55f2be33f0d143bae328c771b872a66af29015"
+    },
+    {
+      "bbox": [
+        54.25,
+        630.2406616210938,
+        432.0638732910156,
+        663.10888671875
+      ],
+      "block_id": "page-1148-block-0003",
+      "order": 3,
+      "text": "Les citernes sont des espaces sous-arachnoïdiens entre l’arachnoïde et le cerveau.\nLes èches indiquent le sens de la circulation du liquide céphalorachidien.\nSource : Adapté de McKinley, M. P. & al. (2014). Anatomie et physiologie – Une approche intégrée, McGraw-Hill/Chenelière Éducation.\n",
+      "text_sha256": "62cf405c3dcda57cec7c76f951c407f18af585c63791f9c76102879e302b63f4"
+    }
+  ],
+  "coordinates_sha256": "1551562b53bcc4f0a21777324f1d87bf8419f9a6055de8ae974281d99ef8e9fd",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1148",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Figures supplémentaires\nF11\nFIGURE 16 Circulation du liquide céphalorachidien (LCR)\nLes citernes sont des espaces sous-arachnoïdiens entre l’arachnoïde et le cerveau.\nLes èches indiquent le sens de la circulation du liquide céphalorachidien.\nSource : Adapté de McKinley, M. P. & al. (2014). Anatomie et physiologie – Une approche intégrée, McGraw-Hill/Chenelière Éducation.\n",
+  "raw_text_sha256": "7fffad3af71f70d34d0ec6cd0680367bc787711ebdb7edd3dd6106cdd916fdfb",
+  "source_page_display": 1149,
+  "source_page_index": 1148
+}

@@ -1,0 +1,569 @@
+[
+ {
+  "kind": "unit",
+  "id": "icd11rg-u-1-001",
+  "reason": "needs_review/certain",
+  "printed_pages": [
+   "1",
+   "2"
+  ]
+ },
+ {
+  "kind": "unit",
+  "id": "icd11rg-u-114-001",
+  "reason": "needs_review/certain",
+  "printed_pages": [
+   "114",
+   "114"
+  ]
+ },
+ {
+  "kind": "unit",
+  "id": "icd11rg-u-116-001",
+  "reason": "needs_review/certain",
+  "printed_pages": [
+   "116",
+   "122"
+  ]
+ },
+ {
+  "kind": "unit",
+  "id": "icd11rg-u-123-002",
+  "reason": "needs_review/certain",
+  "printed_pages": [
+   "123",
+   "123"
+  ]
+ },
+ {
+  "kind": "unit",
+  "id": "icd11rg-u-123-003",
+  "reason": "needs_review/certain",
+  "printed_pages": [
+   "123",
+   "124"
+  ]
+ },
+ {
+  "kind": "unit",
+  "id": "icd11rg-u-124-002",
+  "reason": "needs_review/certain",
+  "printed_pages": [
+   "124",
+   "128"
+  ]
+ },
+ {
+  "kind": "unit",
+  "id": "icd11rg-u-129-005",
+  "reason": "needs_review/certain",
+  "printed_pages": [
+   "129",
+   "134"
+  ]
+ },
+ {
+  "kind": "unit",
+  "id": "icd11rg-u-134-001",
+  "reason": "needs_review/certain",
+  "printed_pages": [
+   "134",
+   "136"
+  ]
+ },
+ {
+  "kind": "unit",
+  "id": "icd11rg-u-136-001",
+  "reason": "needs_review/certain",
+  "printed_pages": [
+   "136",
+   "138"
+  ]
+ },
+ {
+  "kind": "unit",
+  "id": "icd11rg-u-138-003",
+  "reason": "needs_review/certain",
+  "printed_pages": [
+   "138",
+   "139"
+  ]
+ },
+ {
+  "kind": "unit",
+  "id": "icd11rg-u-139-002",
+  "reason": "needs_review/certain",
+  "printed_pages": [
+   "139",
+   "148"
+  ]
+ },
+ {
+  "kind": "unit",
+  "id": "icd11rg-u-23-001",
+  "reason": "needs_review/certain",
+  "printed_pages": [
+   "23",
+   "23"
+  ]
+ },
+ {
+  "kind": "unit",
+  "id": "icd11rg-u-23-002",
+  "reason": "needs_review/certain",
+  "printed_pages": [
+   "23",
+   "23"
+  ]
+ },
+ {
+  "kind": "unit",
+  "id": "icd11rg-u-48-003",
+  "reason": "needs_review/certain",
+  "printed_pages": [
+   "48",
+   "48"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:100:1",
+  "reason": "needs_review",
+  "printed_pages": [
+   "100",
+   "100"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:100:2",
+  "reason": "needs_review",
+  "printed_pages": [
+   "100",
+   "100"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:101:1",
+  "reason": "needs_review",
+  "printed_pages": [
+   "101",
+   "101"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:101:2",
+  "reason": "needs_review",
+  "printed_pages": [
+   "101",
+   "101"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:101:3",
+  "reason": "needs_review",
+  "printed_pages": [
+   "101",
+   "101"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:101:4",
+  "reason": "needs_review",
+  "printed_pages": [
+   "101",
+   "101"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:102:1",
+  "reason": "needs_review",
+  "printed_pages": [
+   "102",
+   "102"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:103:1",
+  "reason": "needs_review",
+  "printed_pages": [
+   "103",
+   "103"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:103:2",
+  "reason": "needs_review",
+  "printed_pages": [
+   "103",
+   "103"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:103:3",
+  "reason": "needs_review",
+  "printed_pages": [
+   "103",
+   "103"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:104:1",
+  "reason": "needs_review",
+  "printed_pages": [
+   "104",
+   "104"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:104:2",
+  "reason": "needs_review",
+  "printed_pages": [
+   "104",
+   "104"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:112:1",
+  "reason": "needs_review",
+  "printed_pages": [
+   "112",
+   "114"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:117:1",
+  "reason": "needs_review",
+  "printed_pages": [
+   "117",
+   "117"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:117:2",
+  "reason": "needs_review",
+  "printed_pages": [
+   "117",
+   "117"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:117:3",
+  "reason": "needs_review",
+  "printed_pages": [
+   "117",
+   "117"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:117:4",
+  "reason": "needs_review",
+  "printed_pages": [
+   "117",
+   "117"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:118:1",
+  "reason": "needs_review",
+  "printed_pages": [
+   "118",
+   "118"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:118:2",
+  "reason": "needs_review",
+  "printed_pages": [
+   "118",
+   "118"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:118:3",
+  "reason": "needs_review",
+  "printed_pages": [
+   "118",
+   "118"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:118:4",
+  "reason": "needs_review",
+  "printed_pages": [
+   "118",
+   "118"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:119:1",
+  "reason": "needs_review",
+  "printed_pages": [
+   "119",
+   "120"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:120:1",
+  "reason": "needs_review",
+  "printed_pages": [
+   "120",
+   "120"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:121:1",
+  "reason": "needs_review",
+  "printed_pages": [
+   "121",
+   "121"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:121:2",
+  "reason": "needs_review",
+  "printed_pages": [
+   "121",
+   "121"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:122:1",
+  "reason": "needs_review",
+  "printed_pages": [
+   "122",
+   "122"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:123:1",
+  "reason": "needs_review",
+  "printed_pages": [
+   "123",
+   "123"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:123:2",
+  "reason": "needs_review",
+  "printed_pages": [
+   "123",
+   "123"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:124:1",
+  "reason": "needs_review",
+  "printed_pages": [
+   "124",
+   "124"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:124:2",
+  "reason": "needs_review",
+  "printed_pages": [
+   "124",
+   "124"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:125:1",
+  "reason": "needs_review",
+  "printed_pages": [
+   "125",
+   "125"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:125:2",
+  "reason": "needs_review",
+  "printed_pages": [
+   "125",
+   "125"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:125:3",
+  "reason": "needs_review",
+  "printed_pages": [
+   "125",
+   "125"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:126:1",
+  "reason": "needs_review",
+  "printed_pages": [
+   "126",
+   "126"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:127:1",
+  "reason": "needs_review",
+  "printed_pages": [
+   "127",
+   "127"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:127:2",
+  "reason": "needs_review",
+  "printed_pages": [
+   "127",
+   "127"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:127:3",
+  "reason": "needs_review",
+  "printed_pages": [
+   "127",
+   "127"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:128:1",
+  "reason": "needs_review",
+  "printed_pages": [
+   "128",
+   "128"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:128:2",
+  "reason": "needs_review",
+  "printed_pages": [
+   "129",
+   "129"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:129:2",
+  "reason": "needs_review",
+  "printed_pages": [
+   "129",
+   "129"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:130:1",
+  "reason": "needs_review",
+  "printed_pages": [
+   "130",
+   "130"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:130:2",
+  "reason": "needs_review",
+  "printed_pages": [
+   "130",
+   "130"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:130:3",
+  "reason": "needs_review",
+  "printed_pages": [
+   "130",
+   "130"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:23:1",
+  "reason": "needs_review",
+  "printed_pages": [
+   "23",
+   "23"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:24:1",
+  "reason": "needs_review",
+  "printed_pages": [
+   "24",
+   "26"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:32:1",
+  "reason": "needs_review",
+  "printed_pages": [
+   "32",
+   "32"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:38:1",
+  "reason": "needs_review",
+  "printed_pages": [
+   "38",
+   "38"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:38:2",
+  "reason": "needs_review",
+  "printed_pages": [
+   "38",
+   "38"
+  ]
+ },
+ {
+  "kind": "table",
+  "id": "icd11rg:table:99:1",
+  "reason": "needs_review",
+  "printed_pages": [
+   "99",
+   "99"
+  ]
+ }
+]

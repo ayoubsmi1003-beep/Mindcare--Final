@@ -1,0 +1,88 @@
+{
+  "block_sequence_sha256": "238a5a4041b0c5850a21e01b1db26379db9d0e7a900613220fa6317c18601244",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        180.42501831054688,
+        758.8693237304688
+      ],
+      "block_id": "page-1149-block-0001",
+      "order": 1,
+      "text": "F12\nFigures supplémentaires\n",
+      "text_sha256": "e6bb8673c8b80428cc3870ffc4668e1032057e33c35bddc5af9cc732aaad91b2"
+    },
+    {
+      "bbox": [
+        50.35000228881836,
+        41.002296447753906,
+        184.66876220703125,
+        53.320068359375
+      ],
+      "block_id": "page-1149-block-0002",
+      "order": 2,
+      "text": "FIGURE 17 Cortex visuel primaire\n",
+      "text_sha256": "b7baf7807ac0c636dc56ba4b8243cf7430620bea32111fb74d4d72c36b93fa94"
+    },
+    {
+      "bbox": [
+        50.29999923706055,
+        316.0022888183594,
+        220.52981567382812,
+        328.320068359375
+      ],
+      "block_id": "page-1149-block-0003",
+      "order": 3,
+      "text": "FIGURE 18 Centres du langage et audition\n",
+      "text_sha256": "0b11161a94226a9a6031706bb1d64dd094959ed33d658706530d3ca45fd9092c"
+    },
+    {
+      "bbox": [
+        48.25,
+        520.390625,
+        392.0719909667969,
+        529.2588500976562
+      ],
+      "block_id": "page-1149-block-0004",
+      "order": 4,
+      "text": "Source : Le cerveau à tous les niveaux : http://lecerveau.mcgill.ca/ash/a/a_10/a_10_cr/a_10_cr_lan/a_10_cr_lan.html.\n",
+      "text_sha256": "e4232992abfb0df0b9afe6725316d88b4398fbff32cfdbd2e1118439ab6a7a54"
+    },
+    {
+      "bbox": [
+        50.29999923706055,
+        539.0023193359375,
+        266.65899658203125,
+        551.320068359375
+      ],
+      "block_id": "page-1149-block-0005",
+      "order": 5,
+      "text": "FIGURE 19 Régions du cerveau activées par les mots\n",
+      "text_sha256": "2163373212b4a40945767d4648a82291cd86038b2ebf36da9d422056ffd9a9a1"
+    },
+    {
+      "bbox": [
+        48.25,
+        725.9406127929688,
+        298.1833190917969,
+        734.808837890625
+      ],
+      "block_id": "page-1149-block-0006",
+      "order": 6,
+      "text": "Source : Posner & Raichle. (1994). Image of Mind, New York, Scientic American Library.\n",
+      "text_sha256": "59091c608f4a510bb909d057b4beebf7acfaf2c8f8c7b05b2f087af2d240df46"
+    }
+  ],
+  "coordinates_sha256": "6f3ec0bd6ff798d139bedb23d2b9b627c2624187a747fc31088acfa8449c5e95",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1149",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "F12\nFigures supplémentaires\nFIGURE 17 Cortex visuel primaire\nFIGURE 18 Centres du langage et audition\nSource : Le cerveau à tous les niveaux : http://lecerveau.mcgill.ca/ash/a/a_10/a_10_cr/a_10_cr_lan/a_10_cr_lan.html.\nFIGURE 19 Régions du cerveau activées par les mots\nSource : Posner & Raichle. (1994). Image of Mind, New York, Scientic American Library.\n",
+  "raw_text_sha256": "75a344dc0b26849b7dc815d653a023cb852ebb32b082400d517c4ad798ae401f",
+  "source_page_display": 1150,
+  "source_page_index": 1149
+}

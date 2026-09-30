@@ -1,0 +1,160 @@
+{
+  "block_sequence_sha256": "4703e03a89d5360c9f0a951ef2cf98964aa21b22d9f9f3c25151b7684e5ab77e",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        448.98931884765625,
+        758.8693237304688
+      ],
+      "block_id": "page-0107-block-0001",
+      "order": 1,
+      "text": "90\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 1 Introduction à la psychiatrie\n",
+      "text_sha256": "544b8328dbd29986b517b6fa7f19e96ac2e2ed0d68f333f22531604bc3e19b85"
+    },
+    {
+      "bbox": [
+        50.5,
+        41.002296447753906,
+        294.9342346191406,
+        53.52006912231445
+      ],
+      "block_id": "page-0107-block-0002",
+      "order": 2,
+      "text": "(suite)\nTABLEAU 4.4 Évaluation neuropsychologique : synthèse\n",
+      "text_sha256": "b936ebf21c2161d54e0fc86495596a856369013d3cb64b34cb94abcc49068759"
+    },
+    {
+      "bbox": [
+        248.85000610351562,
+        59.12285614013672,
+        348.1587829589844,
+        69.14238739013672
+      ],
+      "block_id": "page-0107-block-0003",
+      "order": 3,
+      "text": "Composantes de l’évaluation\n",
+      "text_sha256": "23eae6862dd5a20a6862f0bdb920f4e64810efd1fee7e628e1e5bc17b5129610"
+    },
+    {
+      "bbox": [
+        52.25,
+        75.6019515991211,
+        102.71101379394531,
+        95.4281234741211
+      ],
+      "block_id": "page-0107-block-0004",
+      "order": 4,
+      "text": "Histoire de cas :\nQuestionnaire\n",
+      "text_sha256": "e3f7ac99ad10f15b5487c012919036490f6bd72bca52d2755be68843abde7823"
+    },
+    {
+      "bbox": [
+        133.0,
+        75.6019515991211,
+        475.7830810546875,
+        169.42813110351562
+      ],
+      "block_id": "page-0107-block-0005",
+      "order": 5,
+      "text": "• Histoire de la maladie actuelle, symptômes et compréhension qu’a le patient de son état, de sa situation\n• Antécédents psychiatriques personnels et familiaux\n• Antécédents médicaux contributifs\n• Antécédents neurodéveloppementaux\n• Histoire personnelle et familiale\n• Histoire relationnelle et sociale\n• Scolarisation et histoire professionnelle\n• Événements traumatiques et stresseurs psychosociaux\n",
+      "text_sha256": "b7fa480da4046c1d7d8af11fff1145e2e14dd2ac16a2e5699e898df945c8e31d"
+    },
+    {
+      "bbox": [
+        52.25,
+        178.0519561767578,
+        544.6640014648438,
+        355.8781433105469
+      ],
+      "block_id": "page-0107-block-0006",
+      "order": 6,
+      "text": "Observations\n• Orientation dans le temps, l’espace, la personne\n• Présentation et attitude\n• Collaboration, contexte et état d’esprit du patient\n• Vigilance et mobilisation attentionnelle, sensibilité aux distracteurs, tolérance à l’effort cognitif\n• Langage : vocabulaire, déviations paraphasiques, élocution, débit, prosodie, compréhension\n• Mémoire autobiographique : faits récents et anciens\n• Activation : apathie, inertie, prosodie, vitesse psychomotrice, affect\n• Fonctions exécutives : capacité d’organisation du discours et des idées, pensée abstraite, élaboration des objectifs de vie,\nplanication des actions, anticipation des conséquences, capacité d’analyse et de raisonnement logique, capacité d’envisager\ndes alternatives (exibilité)\n• Autorégulation : impulsivité, inhibition, tolérance à la frustration, stabilité de l’humeur, réactions émotionnelles inappropriées,\nnon-respect des règles ou conventions sociales, égocentrisme, défaut d’empathie, rigidité, immaturité, comportements et\nleurs conséquences, défauts d’autocritique et du jugement\n• Intelligence sociale, théorie de l’esprit : décodage du discours non verbal (implicite et émotionnel), interprétation des expres-\nsions faciales ou émotionnelles, des gestes ou verbalisations en fonction d’un contexte, expression d’un contenu émotionnel,\nmanifestation d’un contenu émotionnel de façon appropriée, intérêt pour la relation ou l’interaction\n",
+      "text_sha256": "d6a797faea5fd9f87c32238de85245ee6cc1365782f56ec24b5dd16d3fe9f292"
+    },
+    {
+      "bbox": [
+        182.6999969482422,
+        362.37286376953125,
+        414.57537841796875,
+        372.39239501953125
+      ],
+      "block_id": "page-0107-block-0007",
+      "order": 7,
+      "text": "Fonctions examinées et quelques instruments couramment utilisés\n",
+      "text_sha256": "44a3af35cf9bcdd7ce1e82c2b437fb67b9726439cd885d8816dacbba74c58329"
+    },
+    {
+      "bbox": [
+        52.25,
+        378.9019470214844,
+        98.38399505615234,
+        398.7281188964844
+      ],
+      "block_id": "page-0107-block-0008",
+      "order": 8,
+      "text": "Fonctions\nattentionnelles\n",
+      "text_sha256": "cc584af3a3285c25812ff2939a91cef4bf3a2f700b68c3f8bce78e741ba876b4"
+    },
+    {
+      "bbox": [
+        133.0,
+        378.9019470214844,
+        434.9250793457031,
+        472.7281188964844
+      ],
+      "block_id": "page-0107-block-0009",
+      "order": 9,
+      "text": "• Traçage de pistes A et B (Trail Making Test)\n• Test de Stroop\n• Repérage de lettres et de cibles parmi d’autres items\n• Ruff 2/7 – Détecter la séquence des chiffres 2 et 7 parmi des séries de chiffres\n• D-2 (test attentionnel de repérage de cibles parmi d’autres)\n•\nContinuous Performance Test (CPT)\n•\nTest of Everyday Attention\n• Test de Brown-Peterson : se rappeler pour un court délai de trois éléments (lettres ou mots)\n",
+      "text_sha256": "e72755d746ec7a3384f37ea64142b5ea3cbab1babee871d150bfefb43d7da1db"
+    },
+    {
+      "bbox": [
+        52.25,
+        481.3019714355469,
+        452.86651611328125,
+        575.1281127929688
+      ],
+      "block_id": "page-0107-block-0010",
+      "order": 10,
+      "text": "Fonctions mnésiques\n• Questionnaire d’autoévaluation\n•\nCalifornia Verbal Learning Test\n•\nRey Auditory Verbal Learning Test\n• Figure complexe de Rey : dessin géométrique complexe à recopier, puis à reproduire de mémoire\n• Grober-Buschke : rappel libre et indicé de 16 mots appartenant à 16 catégories sémantiques\n• Échelle de mémoire de Wechsler\n•\nBrief Visual Memory Test (BVMT)\n• Test de mémoire visuelle de Benton\n",
+      "text_sha256": "5f69c3c871d5ab9beeebcd102daeef7c060aff1409643e30f0be7dee09a8065b"
+    },
+    {
+      "bbox": [
+        52.25,
+        583.751953125,
+        111.03800201416016,
+        603.578125
+      ],
+      "block_id": "page-0107-block-0011",
+      "order": 11,
+      "text": "Fonctions\nvisuoperceptuelles\n",
+      "text_sha256": "ca0908cb7b247d345b12b064a8c7efbea35561d2adaf9568123fdc7466202676"
+    },
+    {
+      "bbox": [
+        133.0,
+        583.751953125,
+        462.5832824707031,
+        689.578125
+      ],
+      "block_id": "page-0107-block-0012",
+      "order": 12,
+      "text": "• Test de discrimination visuelle de Benton\n• Dessins avec blocs (WAIS-IV)\n• Matrices (WAIS-IV)\n• Casse-têtes visuels (WAIS-IV)\n• Test d’organisation visuelle de Hooper\n• Figures enchevêtrées\n• Figures lacunaires de Rey\n• Orientation de lignes\n• Dessin de l’horloge – dessiner une horloge avec tous les chiffres, puis placer les aiguilles à 11 h 10\n",
+      "text_sha256": "d253ef41c4286af0420a3cf73b23a9a65376c058f1e60a91f62c88a47274449b"
+    }
+  ],
+  "coordinates_sha256": "ec50ea99990adbc1334a544e81c1c0b50ccaa594903fa28ddd061bf6a97d17ae",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0107",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "90\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 1 Introduction à la psychiatrie\n(suite)\nTABLEAU 4.4 Évaluation neuropsychologique : synthèse\nComposantes de l’évaluation\nHistoire de cas :\nQuestionnaire\n• Histoire de la maladie actuelle, symptômes et compréhension qu’a le patient de son état, de sa situation\n• Antécédents psychiatriques personnels et familiaux\n• Antécédents médicaux contributifs\n• Antécédents neurodéveloppementaux\n• Histoire personnelle et familiale\n• Histoire relationnelle et sociale\n• Scolarisation et histoire professionnelle\n• Événements traumatiques et stresseurs psychosociaux\nObservations\n• Orientation dans le temps, l’espace, la personne\n• Présentation et attitude\n• Collaboration, contexte et état d’esprit du patient\n• Vigilance et mobilisation attentionnelle, sensibilité aux distracteurs, tolérance à l’effort cognitif\n• Langage : vocabulaire, déviations paraphasiques, élocution, débit, prosodie, compréhension\n• Mémoire autobiographique : faits récents et anciens\n• Activation : apathie, inertie, prosodie, vitesse psychomotrice, affect\n• Fonctions exécutives : capacité d’organisation du discours et des idées, pensée abstraite, élaboration des objectifs de vie,\nplanication des actions, anticipation des conséquences, capacité d’analyse et de raisonnement logique, capacité d’envisager\ndes alternatives (exibilité)\n• Autorégulation : impulsivité, inhibition, tolérance à la frustration, stabilité de l’humeur, réactions émotionnelles inappropriées,\nnon-respect des règles ou conventions sociales, égocentrisme, défaut d’empathie, rigidité, immaturité, comportements et\nleurs conséquences, défauts d’autocritique et du jugement\n• Intelligence sociale, théorie de l’esprit : décodage du discours non verbal (implicite et émotionnel), interprétation des expres-\nsions faciales ou émotionnelles, des gestes ou verbalisations en fonction d’un contexte, expression d’un contenu émotionnel,\nmanifestation d’un contenu émotionnel de façon appropriée, intérêt pour la relation ou l’interaction\nFonctions examinées et quelques instruments couramment utilisés\nFonctions\nattentionnelles\n• Traçage de pistes A et B (Trail Making Test)\n• Test de Stroop\n• Repérage de lettres et de cibles parmi d’autres items\n• Ruff 2/7 – Détecter la séquence des chiffres 2 et 7 parmi des séries de chiffres\n• D-2 (test attentionnel de repérage de cibles parmi d’autres)\n•\nContinuous Performance Test (CPT)\n•\nTest of Everyday Attention\n• Test de Brown-Peterson : se rappeler pour un court délai de trois éléments (lettres ou mots)\nFonctions mnésiques\n• Questionnaire d’autoévaluation\n•\nCalifornia Verbal Learning Test\n•\nRey Auditory Verbal Learning Test\n• Figure complexe de Rey : dessin géométrique complexe à recopier, puis à reproduire de mémoire\n• Grober-Buschke : rappel libre et indicé de 16 mots appartenant à 16 catégories sémantiques\n• Échelle de mémoire de Wechsler\n•\nBrief Visual Memory Test (BVMT)\n• Test de mémoire visuelle de Benton\nFonctions\nvisuoperceptuelles\n• Test de discrimination visuelle de Benton\n• Dessins avec blocs (WAIS-IV)\n• Matrices (WAIS-IV)\n• Casse-têtes visuels (WAIS-IV)\n• Test d’organisation visuelle de Hooper\n• Figures enchevêtrées\n• Figures lacunaires de Rey\n• Orientation de lignes\n• Dessin de l’horloge – dessiner une horloge avec tous les chiffres, puis placer les aiguilles à 11 h 10\n",
+  "raw_text_sha256": "d2c6ec80258a599ba9671299571dc7460bd24227734d132658f3f7c6544e8e76",
+  "source_page_display": 108,
+  "source_page_index": 107
+}

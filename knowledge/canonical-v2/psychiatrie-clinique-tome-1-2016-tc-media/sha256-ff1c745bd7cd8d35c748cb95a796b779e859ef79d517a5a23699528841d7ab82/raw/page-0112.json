@@ -1,0 +1,76 @@
+{
+  "block_sequence_sha256": "043f6d2d3f7d9e7b25230e8fb383be0f42b1e2c64b4583a254f4f0275b90be5b",
+  "blocks": [
+    {
+      "bbox": [
+        420.6000061035156,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0112-block-0001",
+      "order": 1,
+      "text": "Chapitre 5\nGénétique\n95\n",
+      "text_sha256": "7de6088dfef8a8422ba8eea2f39792666e5ff5908543282adba8957b2e471568"
+    },
+    {
+      "bbox": [
+        312.0,
+        40.9658203125,
+        555.4313354492188,
+        237.95849609375
+      ],
+      "block_id": "page-0112-block-0002",
+      "order": 2,
+      "text": "adénine par une cytosine. Les polymorphismes représentent\nplus de 90 % de toutes les diérences entre les individus. Ces\nSNP peuvent être situés n’importe où dans le génome, dans\ndes régions codantes (un gène) ou non. De plus, même au sein\nd’un gène, du fait de la redondance du code génétique, le rem-\nplacement d’une base nucléotidique par une autre peut ne rien\nchanger à l’acide aminé codé. Les SNP sont des phénomènes\nnaturels qui se produisent dans l’ADN. Leur analyse permet\nde comprendre la survenue de maladies ; c’est pourquoi ces\nSNP constituent désormais un outil indispensable des études\ngénétiques modernes, car il est possible de les relier à des\ndiérences de phénotypes entre deux individus et ainsi aider\nà démêler les causes génétiques des maladies complexes.\n• Le codon est une séquence de trois nucléotides adjacents dans\nun ARN messager (ARNm) qui est spéciquement associée\nà l’un des 20 acides aminés impliqués dans les protéines. Il\nexiste 64 codons diérents, trois codons (UAG, UGA et UAA)\n",
+      "text_sha256": "a96ba643ed2e00b14f1462aad5c51bde4e228d4b78869299152c78d4bae7911f"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.9658203125,
+        297.3367919921875,
+        237.95849609375
+      ],
+      "block_id": "page-0112-block-0003",
+      "order": 3,
+      "text": "variations dans la séquence peuvent servir à identier les\nespèces, voire même distinguer des individus entre eux.\n• Un locus désigne la localisation d’une séquence d’ADN. Il peut\ncontenir un ou plusieurs gènes ou des marqueurs génétiques\n(voir la gure 5.2). Un locus peut contenir plusieurs allèles,\nplusieurs marqueurs génétiques, ou même une séquence qui\nne sert pas à la synthèse de protéines.\n• L’ADN est formé par l’agencement de quatre nucléotides\nportant soit :\n– une base purique : adénine, guanine ;\n– une base pyrimidique : thymine, cytosine.\n• Un polymorphisme nucléotidique simple (single nucleotide\npolymorhpism– SNP) constitue la forme la plus abondante de\nvariations génétiques dans le génome humain. Elle découle du\nremplacement d’un nucléotide par une autre dans le génome\nentre deux personnes, par exemple le remplacement d’une\n",
+      "text_sha256": "50153c0e9452875d0630ac636fd21a6ce452d9bd81f21f27545476d255c6abf4"
+    },
+    {
+      "bbox": [
+        56.25,
+        257.7023010253906,
+        335.4175109863281,
+        270.02008056640625
+      ],
+      "block_id": "page-0112-block-0004",
+      "order": 4,
+      "text": "FIGURE 5.2 Représentation des loci identiés sur le chromosome 13\n",
+      "text_sha256": "16666e28f8a831840b784af9b3b863f199bde17c7552abd104c0e519109c204c"
+    },
+    {
+      "bbox": [
+        54.25,
+        681.5463256835938,
+        546.0458374023438,
+        724.3265991210938
+      ],
+      "block_id": "page-0112-block-0005",
+      "order": 5,
+      "text": "p : bras court du chromosome\nq : bras long du chromosome\nLes loci (indiqués par leurs numéros, à gauche du chromosome) sont des régions chromosomiques spéciques qui contiennent un gèn e (indiqué en gras et italique,\nà droite du chromosome) ou des marqueurs génétiques (annotés par des codes commençant par D, à droite du chromosome).\n",
+      "text_sha256": "004071fedd33e7ea3b9fe87c6285aa55625d065ca788b2e1c03a4196468564df"
+    }
+  ],
+  "coordinates_sha256": "8fa0ce90a7783ee7a662342f929791e97510c622bac73a74d40551c36f539ce2",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0112",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 5\nGénétique\n95\nadénine par une cytosine. Les polymorphismes représentent\nplus de 90 % de toutes les diérences entre les individus. Ces\nSNP peuvent être situés n’importe où dans le génome, dans\ndes régions codantes (un gène) ou non. De plus, même au sein\nd’un gène, du fait de la redondance du code génétique, le rem-\nplacement d’une base nucléotidique par une autre peut ne rien\nchanger à l’acide aminé codé. Les SNP sont des phénomènes\nnaturels qui se produisent dans l’ADN. Leur analyse permet\nde comprendre la survenue de maladies ; c’est pourquoi ces\nSNP constituent désormais un outil indispensable des études\ngénétiques modernes, car il est possible de les relier à des\ndiérences de phénotypes entre deux individus et ainsi aider\nà démêler les causes génétiques des maladies complexes.\n• Le codon est une séquence de trois nucléotides adjacents dans\nun ARN messager (ARNm) qui est spéciquement associée\nà l’un des 20 acides aminés impliqués dans les protéines. Il\nexiste 64 codons diérents, trois codons (UAG, UGA et UAA)\nvariations dans la séquence peuvent servir à identier les\nespèces, voire même distinguer des individus entre eux.\n• Un locus désigne la localisation d’une séquence d’ADN. Il peut\ncontenir un ou plusieurs gènes ou des marqueurs génétiques\n(voir la gure 5.2). Un locus peut contenir plusieurs allèles,\nplusieurs marqueurs génétiques, ou même une séquence qui\nne sert pas à la synthèse de protéines.\n• L’ADN est formé par l’agencement de quatre nucléotides\nportant soit :\n– une base purique : adénine, guanine ;\n– une base pyrimidique : thymine, cytosine.\n• Un polymorphisme nucléotidique simple (single nucleotide\npolymorhpism– SNP) constitue la forme la plus abondante de\nvariations génétiques dans le génome humain. Elle découle du\nremplacement d’un nucléotide par une autre dans le génome\nentre deux personnes, par exemple le remplacement d’une\nFIGURE 5.2 Représentation des loci identiés sur le chromosome 13\np : bras court du chromosome\nq : bras long du chromosome\nLes loci (indiqués par leurs numéros, à gauche du chromosome) sont des régions chromosomiques spéciques qui contiennent un gèn e (indiqué en gras et italique,\nà droite du chromosome) ou des marqueurs génétiques (annotés par des codes commençant par D, à droite du chromosome).\n",
+  "raw_text_sha256": "35212f15ed57552b56f5b33d9cb6caf450126748690a86c364f64a178f030f02",
+  "source_page_display": 113,
+  "source_page_index": 112
+}

@@ -1,0 +1,280 @@
+{
+  "block_sequence_sha256": "2116814472369087b35e2e045afeba0eebda7c10f70c9507c2c96007626d1942",
+  "blocks": [
+    {
+      "bbox": [
+        374.20001220703125,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0056-block-0001",
+      "order": 1,
+      "text": "Chapitre 3\nExamen psychiatrique\n39\n",
+      "text_sha256": "2616cbada0c28efd73a58107991f58ceef6b1fe79dfe68941e8ece85aec98b6b"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.9658203125,
+        297.0733642578125,
+        120.45849609375
+      ],
+      "block_id": "page-0056-block-0002",
+      "order": 2,
+      "text": "ou de son entourage, etc.). Cet entretien permet de considé-\nrer systématiquement l’ensemble des symptômes selon des\nhypothèses diagnostiques plausibles et d’exclure les diagnostics\nmoins probables : chaque domaine de trouble mental (médical,\ntoxique, cognitif, psychotique, aectif, anxieux) est abordé sépa-\nrément. Relativement longue, cette forme d’entretien se prête\nbien aux contextes d’évaluation diagnostique ou d’expertise.\n",
+      "text_sha256": "fbab5f4927089e41b02b2f0ccb055d6ed342951f149acdcf122179feadf28275"
+    },
+    {
+      "bbox": [
+        312.0,
+        40.9658203125,
+        555.3167724609375,
+        166.45849609375
+      ],
+      "block_id": "page-0056-block-0003",
+      "order": 3,
+      "text": "Elle permet aussi de maintenir l’attention du patient sur la\nsymptomatologie et les circonstances actuelles, ce qui la rend\nutile avec des patients désorganisés ou ayant tendance à être\ncirconstanciels. Cette approche permet également d’aborder,\ndans l’ordre, l’ensemble des sections de l’évaluation psychia-\ntrique. Elle peut donc être utile avec des patients obsession-\nnels dont le discours détaillé et abondant peut faire dériver\nl’entretien, ou dans le contexte d’évaluations supervisées à des\nns de formation. Cependant, une telle méthode peut donner\nl’impression d’être un interrogatoire et nuire à l’alliance théra-\npeutique si elle est trop rigide.\n",
+      "text_sha256": "d1e713674dbf14671db1b5901307a23205dfdc945680913fe9c66d99b29a3fa9"
+    },
+    {
+      "bbox": [
+        312.0,
+        175.3330078125,
+        555.2659301757812,
+        304.45849609375
+      ],
+      "block_id": "page-0056-block-0004",
+      "order": 4,
+      "text": "Entretien semi-structuré\nL’entretien semi-structuré se caractérise par une alternance de\nquestions ouvertes et de questions fermées (voir le tableau 3.1).\nLa première partie de l’entretien est souvent moins directive,\nlaissant plus d’espace au patient pour exprimer ses problèmes et sa\nperception de la situation : des questions plus ouvertes sont alors\nutilisées (« Qu’est-ce qui vous amène à consulter aujourd’hui ? »).\nLa deuxième partie vise à préciser, à l’aide de questions plus ou\nmoins fermées, les symptômes soulevés par le patient. Il s’agit d’une\napproche souple qui se prête bien à de multiples contextes, incluant\nl’évaluation diagnostique, à l’urgence, pendant l’hospitalisation, etc.\n",
+      "text_sha256": "11dff0a7220de099cd43a6658e0ca2f6aa38d1cf9870509ec7754951f653bb7c"
+    },
+    {
+      "bbox": [
+        314.20001220703125,
+        320.602294921875,
+        547.6257934570312,
+        332.9700622558594
+      ],
+      "block_id": "page-0056-block-0005",
+      "order": 5,
+      "text": "TABLEAU 3.1 Exemples de questions ouvertes et fermées\n",
+      "text_sha256": "178526f4a4bea79896359193d30471689c9912797eba6dbf04057b2849a946e5"
+    },
+    {
+      "bbox": [
+        325.0500183105469,
+        342.7741394042969,
+        420.49462890625,
+        363.3503112792969
+      ],
+      "block_id": "page-0056-block-0006",
+      "order": 6,
+      "text": "Questions ouvertes (qui\nincitent à une élaboration)\n",
+      "text_sha256": "942decb1564d4e23e7dcb707b4d16dabb1378c024817aeab59eb3b98e2d15891"
+    },
+    {
+      "bbox": [
+        450.3500061035156,
+        337.7741394042969,
+        537.2343139648438,
+        358.3503112792969
+      ],
+      "block_id": "page-0056-block-0007",
+      "order": 7,
+      "text": "Questions fermées (qui\nse répondent en un mot\n",
+      "text_sha256": "96db34e8a93c1114172cb1d251e888f5f76e4db94fc5c014c84342d28b950070"
+    },
+    {
+      "bbox": [
+        316.25,
+        357.7741394042969,
+        527.6260375976562,
+        381.578125
+      ],
+      "block_id": "page-0056-block-0008",
+      "order": 8,
+      "text": "ou quelques mots)\n• Qu’est-ce qui vous amène ici ?\n• Qui vous amène ici ?\n",
+      "text_sha256": "773e5e1b9d4f439f3ca26cc407886c8e4c7382055251983dfd41c5abf72e7265"
+    },
+    {
+      "bbox": [
+        316.25,
+        386.1519470214844,
+        426.2600402832031,
+        415.9781188964844
+      ],
+      "block_id": "page-0056-block-0009",
+      "order": 9,
+      "text": "• Vous parlez de tristesse,\ncomment ressentez-vous cette\ntristesse ?\n",
+      "text_sha256": "ee49215dae222ca697e05724d210e188e05a4a1ab4bf89dc8c3fb2b036fdc419"
+    },
+    {
+      "bbox": [
+        437.25,
+        386.1519470214844,
+        550.4550170898438,
+        405.9781188964844
+      ],
+      "block_id": "page-0056-block-0010",
+      "order": 10,
+      "text": "• Depuis quand vous sentez-vous\ntriste ?\n",
+      "text_sha256": "aaf81be757cab08f77a6a2ab7a1345a016ad40231d1cb45e3acfe6aabee721bd"
+    },
+    {
+      "bbox": [
+        316.25,
+        420.6019592285156,
+        426.33599853515625,
+        450.4281311035156
+      ],
+      "block_id": "page-0056-block-0011",
+      "order": 11,
+      "text": "• Quelles sont les conséquences\nde vos symptômes sur votre\nquotidien ?\n",
+      "text_sha256": "ff2e07a1c3b805db8c26386dc18b71dd40312da9f425deb09fe760621c77e4a6"
+    },
+    {
+      "bbox": [
+        437.25,
+        420.6019592285156,
+        539.2435913085938,
+        440.4281311035156
+      ],
+      "block_id": "page-0056-block-0012",
+      "order": 12,
+      "text": "• Est-ce que la tristesse limite\nvos activités ?\n",
+      "text_sha256": "3117fda9403f65f49f14257475b74b1505b5aef5de1e59480b035402a5eceb0d"
+    },
+    {
+      "bbox": [
+        316.25,
+        455.001953125,
+        512.2949829101562,
+        474.828125
+      ],
+      "block_id": "page-0056-block-0013",
+      "order": 13,
+      "text": "• Parlez-moi de votre sommeil.\n• À quelle heure vous\ncouchez-vous ?\n",
+      "text_sha256": "6a13d697da6eaa961b6b8207e6e065bcf72b68d4ee373814731bba4b17cb7282"
+    },
+    {
+      "bbox": [
+        312.0,
+        496.2158203125,
+        555.3442993164062,
+        713.70849609375
+      ],
+      "block_id": "page-0056-block-0014",
+      "order": 14,
+      "text": "Cette approche qui suit le discours du patient paraît plus\nnaturelle, plus souple et rejoint davantage ses motifs de consulta-\ntion plutôt que la démarche du médecin. Ainsi, on peut aborder\ndirectement l’histoire de la maladie actuelle après avoir posé\ndes questions sur la raison de consultation. Une telle méthode\nest particulièrement préconisée avec des patients présentant\nun trouble de la pensée qui les empêche de fournir un récit\ndétaillé et chronologique de leur vie. L’histoire de la maladie\nactuelle prend alors plus d’importance que le reste de l’histoire\nde cas, qui doit être complétée avec le dossier antérieur et\nles informations collatérales. D’ailleurs, les patients psychotiques\ntolèrent mal les entretiens prolongés, et le médecin doit alors\nprioriser les questions les plus pertinentes pour arriver à un\ndiagnostic et planier un traitement. Par ailleurs, il ne faut pas\nconfondre le déroulement de l’entretien (qui doit être souple)\navec la rédaction de l’histoire de cas (qui doit être structurée).\nAinsi, peu importe l’ordre dans lequel on les a recueillis, chacun\ndes éléments de l’évaluation doit être présenté dans sa section\nrespective lors de la rédaction de l’histoire de cas.\n",
+      "text_sha256": "01921a0f4addc046a9b9cf7dfd8adc453340a2c86509552ec11a02a4ac3bed33"
+    },
+    {
+      "bbox": [
+        56.400001525878906,
+        138.20230102539062,
+        210.30426025390625,
+        150.570068359375
+      ],
+      "block_id": "page-0056-block-0015",
+      "order": 15,
+      "text": "ENCADRÉ 3.2 Plan de l’histoire de cas\n",
+      "text_sha256": "3558912f32359fc07ac2e12f7f3d35c0a51b4410eaaac039d2c9ff8a4250e810"
+    },
+    {
+      "bbox": [
+        58.25,
+        158.65196228027344,
+        139.20501708984375,
+        201.47813415527344
+      ],
+      "block_id": "page-0056-block-0016",
+      "order": 16,
+      "text": "1. Questionnaire\nIdentication\nRaison de consultation\nAntécédents :\n",
+      "text_sha256": "75ce0ba67d098ca20f71c7097d9c66a07da3ad9ccad554f29606ca878ecd844f"
+    },
+    {
+      "bbox": [
+        67.25,
+        202.65196228027344,
+        272.33624267578125,
+        256.4781494140625
+      ],
+      "block_id": "page-0056-block-0017",
+      "order": 17,
+      "text": "Antécédents psychiatriques personnels\nAntécédents médicochirurgicaux personnels (s’il y a lieu)\nAntécédents judiciaires\nAntécédents familiaux (psychiatriques et médicaux pertinents)\nHabitudes\n",
+      "text_sha256": "b1877205fdce6f481fdfebb1603d39d5a4a91aded25e07c8c92820f16e92f881"
+    },
+    {
+      "bbox": [
+        67.25,
+        257.6519470214844,
+        266.96368408203125,
+        300.4781188964844
+      ],
+      "block_id": "page-0056-block-0018",
+      "order": 18,
+      "text": "Alcool, tabac, drogues, café et autres boissons énergisantes\nJeu pathologique, loterie\nExercice, sports et diète particulière\nMédicaments\n",
+      "text_sha256": "6e81fc552d7b16523102a667db934beba6517cb5f764a0f878450de1b0af1e59"
+    },
+    {
+      "bbox": [
+        67.25,
+        301.6519470214844,
+        222.80979919433594,
+        344.4781188964844
+      ],
+      "block_id": "page-0056-block-0019",
+      "order": 19,
+      "text": "Médicaments sous ordonnance, en vente libre\nProduits naturels\nHistoire de la maladie actuelle\nHistoire personnelle longitudinale\n",
+      "text_sha256": "70ed4d0ac5aae77681ce89d1a888cff430caf9cc619fc415269d27564a1c8f0b"
+    },
+    {
+      "bbox": [
+        58.25,
+        345.6519470214844,
+        291.1654968261719,
+        531.4781494140625
+      ],
+      "block_id": "page-0056-block-0020",
+      "order": 20,
+      "text": "Naissance, petite enfance et milieu familial\nPériode scolaire\nEnfance et adolescence\nRelations avec les pairs, les amis, les adultes\nÉtudes, travail, loisirs\nVie sentimentale et conjugale\nVie adulte et vieillissement\n2. Examen mental\nApparence générale\nCollaboration et abilité\nDisposition, attitude\nActivité psychomotrice, comportement\nLangage\nÉmotions, humeur, affect\nPensée : cours, forme, contenu, délires, idées auto et hétéroagressives\nPerception : hallucinations, dissociation\nFonctions cognitives\n",
+      "text_sha256": "c094fcd340b660ec3f91161b56779c08314a61b9f782a3d88138065ae944ba1a"
+    },
+    {
+      "bbox": [
+        58.25,
+        532.6519775390625,
+        282.6861267089844,
+        608.4781494140625
+      ],
+      "block_id": "page-0056-block-0021",
+      "order": 21,
+      "text": "Sensorium, orientation, attention, mémoire\nIntelligence, abstraction, jugement, autocritique et introspection\n3. Formulation de synthèse\n4. Diagnostic\nSeuil de signication, spécicateurs\nDimensions\nÉvaluation de l’invalidité avec le World Health Organization Disability\n",
+      "text_sha256": "327ea815403d7787d4bcb13aedb8b0b1c2331926f9d7cf965156986132341a84"
+    },
+    {
+      "bbox": [
+        58.25,
+        608.6519775390625,
+        206.14801025390625,
+        706.4781494140625
+      ],
+      "block_id": "page-0056-block-0022",
+      "order": 22,
+      "text": "Assessment Schedule (WHODAS)\nFormulation culturelle\nProjet Signature (voir la sous-section 3.8.6)\n5. Plan d’intervention\nAspects administratifs\nAspects biologiques\nAspects psychologiques\nAspects sociaux\n6. Évolution et pronostic\n",
+      "text_sha256": "65bc4c3b22fe5a8b97dd1ed9f240def29445f37e4e91f6df95607dcb5ac20bf1"
+    }
+  ],
+  "coordinates_sha256": "a18465f29c56cd6e41b95046a8fe7c4d71b396f01ba0a836b3928949ce719ac7",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0056",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 3\nExamen psychiatrique\n39\nou de son entourage, etc.). Cet entretien permet de considé-\nrer systématiquement l’ensemble des symptômes selon des\nhypothèses diagnostiques plausibles et d’exclure les diagnostics\nmoins probables : chaque domaine de trouble mental (médical,\ntoxique, cognitif, psychotique, aectif, anxieux) est abordé sépa-\nrément. Relativement longue, cette forme d’entretien se prête\nbien aux contextes d’évaluation diagnostique ou d’expertise.\nElle permet aussi de maintenir l’attention du patient sur la\nsymptomatologie et les circonstances actuelles, ce qui la rend\nutile avec des patients désorganisés ou ayant tendance à être\ncirconstanciels. Cette approche permet également d’aborder,\ndans l’ordre, l’ensemble des sections de l’évaluation psychia-\ntrique. Elle peut donc être utile avec des patients obsession-\nnels dont le discours détaillé et abondant peut faire dériver\nl’entretien, ou dans le contexte d’évaluations supervisées à des\nns de formation. Cependant, une telle méthode peut donner\nl’impression d’être un interrogatoire et nuire à l’alliance théra-\npeutique si elle est trop rigide.\nEntretien semi-structuré\nL’entretien semi-structuré se caractérise par une alternance de\nquestions ouvertes et de questions fermées (voir le tableau 3.1).\nLa première partie de l’entretien est souvent moins directive,\nlaissant plus d’espace au patient pour exprimer ses problèmes et sa\nperception de la situation : des questions plus ouvertes sont alors\nutilisées (« Qu’est-ce qui vous amène à consulter aujourd’hui ? »).\nLa deuxième partie vise à préciser, à l’aide de questions plus ou\nmoins fermées, les symptômes soulevés par le patient. Il s’agit d’une\napproche souple qui se prête bien à de multiples contextes, incluant\nl’évaluation diagnostique, à l’urgence, pendant l’hospitalisation, etc.\nTABLEAU 3.1 Exemples de questions ouvertes et fermées\nQuestions ouvertes (qui\nincitent à une élaboration)\nQuestions fermées (qui\nse répondent en un mot\nou quelques mots)\n• Qu’est-ce qui vous amène ici ?\n• Qui vous amène ici ?\n• Vous parlez de tristesse,\ncomment ressentez-vous cette\ntristesse ?\n• Depuis quand vous sentez-vous\ntriste ?\n• Quelles sont les conséquences\nde vos symptômes sur votre\nquotidien ?\n• Est-ce que la tristesse limite\nvos activités ?\n• Parlez-moi de votre sommeil.\n• À quelle heure vous\ncouchez-vous ?\nCette approche qui suit le discours du patient paraît plus\nnaturelle, plus souple et rejoint davantage ses motifs de consulta-\ntion plutôt que la démarche du médecin. Ainsi, on peut aborder\ndirectement l’histoire de la maladie actuelle après avoir posé\ndes questions sur la raison de consultation. Une telle méthode\nest particulièrement préconisée avec des patients présentant\nun trouble de la pensée qui les empêche de fournir un récit\ndétaillé et chronologique de leur vie. L’histoire de la maladie\nactuelle prend alors plus d’importance que le reste de l’histoire\nde cas, qui doit être complétée avec le dossier antérieur et\nles informations collatérales. D’ailleurs, les patients psychotiques\ntolèrent mal les entretiens prolongés, et le médecin doit alors\nprioriser les questions les plus pertinentes pour arriver à un\ndiagnostic et planier un traitement. Par ailleurs, il ne faut pas\nconfondre le déroulement de l’entretien (qui doit être souple)\navec la rédaction de l’histoire de cas (qui doit être structurée).\nAinsi, peu importe l’ordre dans lequel on les a recueillis, chacun\ndes éléments de l’évaluation doit être présenté dans sa section\nrespective lors de la rédaction de l’histoire de cas.\nENCADRÉ 3.2 Plan de l’histoire de cas\n1. Questionnaire\nIdentication\nRaison de consultation\nAntécédents :\nAntécédents psychiatriques personnels\nAntécédents médicochirurgicaux personnels (s’il y a lieu)\nAntécédents judiciaires\nAntécédents familiaux (psychiatriques et médicaux pertinents)\nHabitudes\nAlcool, tabac, drogues, café et autres boissons énergisantes\nJeu pathologique, loterie\nExercice, sports et diète particulière\nMédicaments\nMédicaments sous ordonnance, en vente libre\nProduits naturels\nHistoire de la maladie actuelle\nHistoire personnelle longitudinale\nNaissance, petite enfance et milieu familial\nPériode scolaire\nEnfance et adolescence\nRelations avec les pairs, les amis, les adultes\nÉtudes, travail, loisirs\nVie sentimentale et conjugale\nVie adulte et vieillissement\n2. Examen mental\nApparence générale\nCollaboration et abilité\nDisposition, attitude\nActivité psychomotrice, comportement\nLangage\nÉmotions, humeur, affect\nPensée : cours, forme, contenu, délires, idées auto et hétéroagressives\nPerception : hallucinations, dissociation\nFonctions cognitives\nSensorium, orientation, attention, mémoire\nIntelligence, abstraction, jugement, autocritique et introspection\n3. Formulation de synthèse\n4. Diagnostic\nSeuil de signication, spécicateurs\nDimensions\nÉvaluation de l’invalidité avec le World Health Organization Disability\nAssessment Schedule (WHODAS)\nFormulation culturelle\nProjet Signature (voir la sous-section 3.8.6)\n5. Plan d’intervention\nAspects administratifs\nAspects biologiques\nAspects psychologiques\nAspects sociaux\n6. Évolution et pronostic\n",
+  "raw_text_sha256": "106744171cf5fa18307f23d3b73a192cde080fafa2cc6812586770522cbb8d62",
+  "source_page_display": 57,
+  "source_page_index": 56
+}

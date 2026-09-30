@@ -1,0 +1,76 @@
+{
+ "book_id": "stahl-prescribers-guide-7e-cup",
+ "source_version": "sha256:cf23ef7b70e7c6e099a5a43d994adb2f34ef06718643932611f5e91eeba180e3",
+ "ingestion_version": "canonical-v2.1",
+ "overall": "WARNING",
+ "counts": {
+  "units": 2662,
+  "tables": 0,
+  "concepts": 152,
+  "xrefs": 1073,
+  "meds": 152
+ },
+ "checks": [
+  {
+   "check": "meds-review-closed",
+   "status": "PASS",
+   "detail": "152 meds rows, all needs_review"
+  },
+  {
+   "check": "meds-units-linked",
+   "status": "PASS",
+   "detail": "all meds link >=1 unit"
+  },
+  {
+   "check": "meds-encoding-clean",
+   "status": "PASS",
+   "detail": "no U+FFFD in dose fields"
+  },
+  {
+   "check": "schema-units",
+   "status": "PASS",
+   "detail": "2662 units conform"
+  },
+  {
+   "check": "unit-id-unique",
+   "status": "PASS",
+   "detail": "2662 unique"
+  },
+  {
+   "check": "dual-page-consistency",
+   "status": "PASS",
+   "detail": "offset 0 holds for all units"
+  },
+  {
+   "check": "page-uncertainty-surfaced",
+   "status": "PASS",
+   "detail": "all unit pages certain"
+  },
+  {
+   "check": "structure-coverage",
+   "status": "PASS",
+   "detail": "152/152 sections covered (100.0%); gaps: 0"
+  },
+  {
+   "check": "concept-refs-resolve",
+   "status": "PASS",
+   "detail": "ok"
+  },
+  {
+   "check": "concepts-referenced",
+   "status": "PASS",
+   "detail": "all concepts carry >=1 valid source_ref"
+  },
+  {
+   "check": "xrefs-resolved",
+   "status": "WARNING",
+   "detail": "24/1073 unresolved"
+  },
+  {
+   "check": "tables-reviewed",
+   "status": "PASS",
+   "detail": "ok"
+  }
+ ],
+ "review_queue_size": 1100
+}

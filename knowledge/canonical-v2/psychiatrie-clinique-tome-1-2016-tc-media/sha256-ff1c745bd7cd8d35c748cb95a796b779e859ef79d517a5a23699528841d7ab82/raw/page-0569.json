@@ -1,0 +1,160 @@
+{
+  "block_sequence_sha256": "b6b992a5413f76d1f4eb444db75095cedce0722611277b1d7571720d755a5cb8",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0569-block-0001",
+      "order": 1,
+      "text": "552\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "87882698fabb517c954eef737dc0d9dbdc51f65b61b9dd172ddf7fa128525582"
+    },
+    {
+      "bbox": [
+        306.0,
+        39.33681869506836,
+        495.7360534667969,
+        71.5293960571289
+      ],
+      "block_id": "page-0569-block-0002",
+      "order": 2,
+      "text": "26.2.2 Transmission descendante\net analgésie endogène\n",
+      "text_sha256": "ebc2adec42170f983bb6c530b8a173fe780bc0c6aa233db9d7938b45c1da3887"
+    },
+    {
+      "bbox": [
+        306.0,
+        74.8658218383789,
+        549.351318359375,
+        212.1584930419922
+      ],
+      "block_id": "page-0569-block-0003",
+      "order": 3,
+      "text": "Plusieurs voies descendantes inuencent la nociception. La\nvoie descendante la mieux comprise actuellement prend son ori-\ngine de la substance grise périaqueducale du mésencéphale. C’est\nle système opioïde endogène. Il produit des endorphines et des\nenképhalines inhibant la réponse douloureuse, il module également\nl’homéostasie, la fonction immunitaire et la réponse normale au\nstress. L’absence de douleur peut donc résulter de l’absence de\nnociception (absence de stimulus douloureux) ou de l’activation\ndes systèmes descendants inhibiteurs de la douleur. En contrepar-\ntie, la présence d’une douleur neuropathique peut s’expliquer par\nl’hyperactivité nociceptive spinale, par la décience des systèmes\ndescendants inhibiteurs ou par une combinaison des deux.\n",
+      "text_sha256": "544d131da2bebd9de84e218d9840454270135ec5bcbcbb3911ed836c80173c16"
+    },
+    {
+      "bbox": [
+        306.0,
+        213.1658172607422,
+        549.2651977539062,
+        431.15850830078125
+      ],
+      "block_id": "page-0569-block-0004",
+      "order": 4,
+      "text": "L’inhibition descendante se déclenche automatiquement\npar la stimulation de la voie spinothalamique. L’activation de\nla substance grise périaqueducale et des noyaux du raphé, sous\nl’inuence des centres eérents centraux, libère des neuro-\ntransmetteurs sérotoninergiques et noradrénergiques vers les\ninterneurones spinaux qui produisent à leur tour une inhibition\ndiuse à plusieurs niveaux de la colonne vertébrale. Certaines\naections cliniques (p. ex., la bromyalgie, les céphalées de\ntension, le syndrome du côlon irritable et l’ostéoarthrite) impli-\nqueraient un décit de ces systèmes endogènes se traduisant par\ndes douleurs spontanées et une hyperalgésie diuse généralisée.\nLa faible concentration en sérotonine et en noradrénaline dans\nle liquide céphalorachidien de ces patients donne à penser à\nl’existence d’une possible décience des mécanismes inhibiteurs\n(voir la gure 26.2). En outre, leurs niveaux d’opioïdes endogènes\net de liaison aux récepteurs opioïdes (opioid-receptor-binding)\nsont élevés, signiant une activité nociceptive endogène anor-\nmalement élevée et une douleur réfractaire aux analgésiques\nopioïdes exogènes.\n",
+      "text_sha256": "53596d3a4ba278742e9e9c7e2cdf8ee97004f6ce0af9183697fdc416b9900092"
+    },
+    {
+      "bbox": [
+        306.0,
+        432.16583251953125,
+        549.529541015625,
+        546.4085083007812
+      ],
+      "block_id": "page-0569-block-0005",
+      "order": 5,
+      "text": "C’est au moment de sa transmission supraspinale jusqu’aux\nzones cérébrales sensorielles discriminatives que la douleur\ndevient une expérience subjective. Elle se modie en fonction\nde l’état interne de la personne en relation avec l’environnement.\nPar exemple, lorsqu’on se coupe la peau sans s’en apercevoir, la\ndouleur augmente subitement à la vue du sang qui coule. Il faut\ndonc prendre conscience de la blessure pour que la sensation\nde douleur soit perçue cognitivement. L’état hypnotique, en\ncontre-partie, induit une sorte d’indiérence par rapport à la\nperception de la douleur.\n",
+      "text_sha256": "c9043197b776014d19b104740ebd68bb6edfc5d773c40555a146e7b9a1bf8b45"
+    },
+    {
+      "bbox": [
+        306.0,
+        556.9368286132812,
+        455.69598388671875,
+        573.0794067382812
+      ],
+      "block_id": "page-0569-block-0006",
+      "order": 6,
+      "text": "26.2.3 Théorie du portillon\n",
+      "text_sha256": "cb914c6cc2f002a51b6deaa14fa972d09fd2a1176671d2a9b69f0a20a3d8646e"
+    },
+    {
+      "bbox": [
+        306.0,
+        576.4658203125,
+        549.3508911132812,
+        690.6585083007812
+      ],
+      "block_id": "page-0569-block-0007",
+      "order": 7,
+      "text": "La douleur est une expérience subjective aux multiples dimensions,\ntant sensoridiscriminatives qu’aectives et cognitives. Il n’est donc\npas étonnant de découvrir qu’un simple stimulus nociceptif active\nplusieurs structures cérébrales qui interagissent pour construire\nune sensation douloureuse particulière. La douleur demeure un\nphénomène subjectif, modulé par les expériences antérieures,\nl’endurance et la détermination à accomplir une tâche en dépit\nde douleurs ressenties, ainsi que les capacités d’anticipation des\nindividus. Par exemple, on peut se blesser en courant et quand\nmême terminer la course.\n",
+      "text_sha256": "0fe04393ab74df197ea8087d9cb7e51bb635eff1364910907447a1d5d734f256"
+    },
+    {
+      "bbox": [
+        306.0,
+        691.7158203125,
+        549.5061645507812,
+        725.2584838867188
+      ],
+      "block_id": "page-0569-block-0008",
+      "order": 8,
+      "text": "« Il est clair que la connaissance du rôle important des facteurs\npsychologiques dans la douleur ne doit pas nous empêcher de\nconserver une attitude mesurée. Le terme “psychologie” implique\n",
+      "text_sha256": "3078b296c1b011eb42326682ca16cbaf13b98ae9ef51c56cc43bd501d22572cc"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.9658203125,
+        291.2444152832031,
+        166.45849609375
+      ],
+      "block_id": "page-0569-block-0009",
+      "order": 9,
+      "text": "articulations, les os, les viscères. Ils sont activés par des piqûres,\ndes brûlures, des morsures, des décharges électriques ou des\nmatières toxiques. Les nocicepteurs sont des récepteurs senso-\nriels à haut seuil : ils ne répondent qu’à des stimulations à haute\nintensité. La stimulation peut être d’emblée douloureuse (p. ex.,\nen posant le doigt sur une plaque brûlante) ou correspondre à\nune stimulation qui devient douloureuse lorsqu’elle se prolonge\n(p. ex., l’engelure provoquée par une exposition prolongée au\nfroid intense). On parle alors de nociception, c’est-à-dire que le\ncerveau interprète ces signaux sensoriels comme des sensations\ndouloureuses, nocives.\n",
+      "text_sha256": "9e60fc5437aecc13fa9e578ad2e8401ff152db8c36e668dbac8beedbbe58854b"
+    },
+    {
+      "bbox": [
+        48.0,
+        167.4658203125,
+        291.28759765625,
+        511.95849609375
+      ],
+      "block_id": "page-0569-block-0010",
+      "order": 10,
+      "text": "La transmission du signal nociceptif se fait par l’entremise\nde substances dites algogènes2, les unes excitatrices et les autres\ninhibitrices, libérées par les tissus endommagés. Ce sont les\nmédiateurs neurochimiques de l’inammation :\n• la bradykinine, responsable d’une augmentation de la per-\nméabilité capillaire ;\n• les ions K+ et H+, issus des lésions tissulaires ;\n• l’histamine, libérée des granules des mastocytes ;\n• la substance P, à l’origine d’une vasodilatation et de la dégra-\nnulation des mastocytes ;\n• les prostaglandines et les leucotriènes, qui sont les médiateurs\nlors de la sensibilisation persistante des récepteurs sous l’action\ndes autres substances algogènes.\nLa corne dorsale de la moelle épinière constitue le relais spinal\nde la modulation des signaux nociceptifs. C’est le carrefour des\nvoies ascendantes qui intègre la somme des décharges avant la\ntransmission vers les structures supraspinales. Sur le plan neuro -\nchimique, l’activation spinale dépend des récepteurs AMPA\n(α-amino-3-hydroxy-5-methyl-4-isoxazolepropionic acid) et du\nglutamate. Cette activation nociceptive est passagère. Les signaux\nvoyagent ensuite principalement par la voie spinothalamique\nlatérale jusqu’au thalamus et activent les cortex somatosensoriels\n(voir la gure 26.1). Des voies ascendantes médianes activent des\nrégions du tronc cérébral, des régions sous-corticales, des voies\nlimbiques ainsi que d’autres régions corticales du cerveau. Ce\nréseau neuronal fortement interconnecté module la discrimination\ntactile, la réactivité autonomique, les émotions, les cognitions,\nl’attention dirigée et la planication motrice en relation avec la\nperception douloureuse (Basbaum & Jessell, 2000).\n",
+      "text_sha256": "57604462e3e90e199bed600a15da0fd6adb1363dca207b080124adf35029a21f"
+    },
+    {
+      "bbox": [
+        48.0,
+        512.9658203125,
+        291.429931640625,
+        684.45849609375
+      ],
+      "block_id": "page-0569-block-0011",
+      "order": 11,
+      "text": "La sensibilisation spinale consiste en une sommation (wind\nup) graduelle des décharges nociceptives au niveau de la corne\ndorsale de la moelle épinière. C’est l’amplication du signal dou-\nloureux sur une courte période qui survient indépendamment\nde tout stimulus nociceptif. En réponse à une telle sensibilisation\nspinale, les récepteurs NMDA (N-methyl-D-aspartic acid) et\nNK1 (natural killer) sont activés par la libération additionnelle de\nglutamate et de substance P. Ce phénomène est à l’origine d’une\nplasticité au niveau cellulaire qui s’exprime par la modication\ndes circuits excitateurs au détriment des circuits inhibiteurs. Elle\nse traduit par une prolifération anarchique des dendrites, de la\nmicroglie et une expansion du territoire nociceptif. C’est l’un des\nmécanismes lésionnels de la douleur chronique les mieux étudiés.\nPour plusieurs situations de douleur aiguë, un traitement rapide\net adéquat permet d’éviter cette activation des récepteurs NMDA.\n",
+      "text_sha256": "bb33d39e8b381142c4d9c793d318b4b9034a307b83c5f496a2e6a51eb2619a77"
+    },
+    {
+      "bbox": [
+        48.0,
+        715.388671875,
+        281.1324157714844,
+        725.3291015625
+      ],
+      "block_id": "page-0569-block-0012",
+      "order": 12,
+      "text": "2. Algos (douleur) et gène (génère) = qui produit de la douleur.\n",
+      "text_sha256": "3bfd7d92ffc3457939b01e243aa2aed26f921610a3acb79c7e5de166ab545147"
+    }
+  ],
+  "coordinates_sha256": "504a53092ac0832a92f33805096e4eb3638cf1fee9c8339d5e98258319cdad56",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0569",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "552\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n26.2.2 Transmission descendante\net analgésie endogène\nPlusieurs voies descendantes inuencent la nociception. La\nvoie descendante la mieux comprise actuellement prend son ori-\ngine de la substance grise périaqueducale du mésencéphale. C’est\nle système opioïde endogène. Il produit des endorphines et des\nenképhalines inhibant la réponse douloureuse, il module également\nl’homéostasie, la fonction immunitaire et la réponse normale au\nstress. L’absence de douleur peut donc résulter de l’absence de\nnociception (absence de stimulus douloureux) ou de l’activation\ndes systèmes descendants inhibiteurs de la douleur. En contrepar-\ntie, la présence d’une douleur neuropathique peut s’expliquer par\nl’hyperactivité nociceptive spinale, par la décience des systèmes\ndescendants inhibiteurs ou par une combinaison des deux.\nL’inhibition descendante se déclenche automatiquement\npar la stimulation de la voie spinothalamique. L’activation de\nla substance grise périaqueducale et des noyaux du raphé, sous\nl’inuence des centres eérents centraux, libère des neuro-\ntransmetteurs sérotoninergiques et noradrénergiques vers les\ninterneurones spinaux qui produisent à leur tour une inhibition\ndiuse à plusieurs niveaux de la colonne vertébrale. Certaines\naections cliniques (p. ex., la bromyalgie, les céphalées de\ntension, le syndrome du côlon irritable et l’ostéoarthrite) impli-\nqueraient un décit de ces systèmes endogènes se traduisant par\ndes douleurs spontanées et une hyperalgésie diuse généralisée.\nLa faible concentration en sérotonine et en noradrénaline dans\nle liquide céphalorachidien de ces patients donne à penser à\nl’existence d’une possible décience des mécanismes inhibiteurs\n(voir la gure 26.2). En outre, leurs niveaux d’opioïdes endogènes\net de liaison aux récepteurs opioïdes (opioid-receptor-binding)\nsont élevés, signiant une activité nociceptive endogène anor-\nmalement élevée et une douleur réfractaire aux analgésiques\nopioïdes exogènes.\nC’est au moment de sa transmission supraspinale jusqu’aux\nzones cérébrales sensorielles discriminatives que la douleur\ndevient une expérience subjective. Elle se modie en fonction\nde l’état interne de la personne en relation avec l’environnement.\nPar exemple, lorsqu’on se coupe la peau sans s’en apercevoir, la\ndouleur augmente subitement à la vue du sang qui coule. Il faut\ndonc prendre conscience de la blessure pour que la sensation\nde douleur soit perçue cognitivement. L’état hypnotique, en\ncontre-partie, induit une sorte d’indiérence par rapport à la\nperception de la douleur.\n26.2.3 Théorie du portillon\nLa douleur est une expérience subjective aux multiples dimensions,\ntant sensoridiscriminatives qu’aectives et cognitives. Il n’est donc\npas étonnant de découvrir qu’un simple stimulus nociceptif active\nplusieurs structures cérébrales qui interagissent pour construire\nune sensation douloureuse particulière. La douleur demeure un\nphénomène subjectif, modulé par les expériences antérieures,\nl’endurance et la détermination à accomplir une tâche en dépit\nde douleurs ressenties, ainsi que les capacités d’anticipation des\nindividus. Par exemple, on peut se blesser en courant et quand\nmême terminer la course.\n« Il est clair que la connaissance du rôle important des facteurs\npsychologiques dans la douleur ne doit pas nous empêcher de\nconserver une attitude mesurée. Le terme “psychologie” implique\narticulations, les os, les viscères. Ils sont activés par des piqûres,\ndes brûlures, des morsures, des décharges électriques ou des\nmatières toxiques. Les nocicepteurs sont des récepteurs senso-\nriels à haut seuil : ils ne répondent qu’à des stimulations à haute\nintensité. La stimulation peut être d’emblée douloureuse (p. ex.,\nen posant le doigt sur une plaque brûlante) ou correspondre à\nune stimulation qui devient douloureuse lorsqu’elle se prolonge\n(p. ex., l’engelure provoquée par une exposition prolongée au\nfroid intense). On parle alors de nociception, c’est-à-dire que le\ncerveau interprète ces signaux sensoriels comme des sensations\ndouloureuses, nocives.\nLa transmission du signal nociceptif se fait par l’entremise\nde substances dites algogènes2, les unes excitatrices et les autres\ninhibitrices, libérées par les tissus endommagés. Ce sont les\nmédiateurs neurochimiques de l’inammation :\n• la bradykinine, responsable d’une augmentation de la per-\nméabilité capillaire ;\n• les ions K+ et H+, issus des lésions tissulaires ;\n• l’histamine, libérée des granules des mastocytes ;\n• la substance P, à l’origine d’une vasodilatation et de la dégra-\nnulation des mastocytes ;\n• les prostaglandines et les leucotriènes, qui sont les médiateurs\nlors de la sensibilisation persistante des récepteurs sous l’action\ndes autres substances algogènes.\nLa corne dorsale de la moelle épinière constitue le relais spinal\nde la modulation des signaux nociceptifs. C’est le carrefour des\nvoies ascendantes qui intègre la somme des décharges avant la\ntransmission vers les structures supraspinales. Sur le plan neuro -\nchimique, l’activation spinale dépend des récepteurs AMPA\n(α-amino-3-hydroxy-5-methyl-4-isoxazolepropionic acid) et du\nglutamate. Cette activation nociceptive est passagère. Les signaux\nvoyagent ensuite principalement par la voie spinothalamique\nlatérale jusqu’au thalamus et activent les cortex somatosensoriels\n(voir la gure 26.1). Des voies ascendantes médianes activent des\nrégions du tronc cérébral, des régions sous-corticales, des voies\nlimbiques ainsi que d’autres régions corticales du cerveau. Ce\nréseau neuronal fortement interconnecté module la discrimination\ntactile, la réactivité autonomique, les émotions, les cognitions,\nl’attention dirigée et la planication motrice en relation avec la\nperception douloureuse (Basbaum & Jessell, 2000).\nLa sensibilisation spinale consiste en une sommation (wind\nup) graduelle des décharges nociceptives au niveau de la corne\ndorsale de la moelle épinière. C’est l’amplication du signal dou-\nloureux sur une courte période qui survient indépendamment\nde tout stimulus nociceptif. En réponse à une telle sensibilisation\nspinale, les récepteurs NMDA (N-methyl-D-aspartic acid) et\nNK1 (natural killer) sont activés par la libération additionnelle de\nglutamate et de substance P. Ce phénomène est à l’origine d’une\nplasticité au niveau cellulaire qui s’exprime par la modication\ndes circuits excitateurs au détriment des circuits inhibiteurs. Elle\nse traduit par une prolifération anarchique des dendrites, de la\nmicroglie et une expansion du territoire nociceptif. C’est l’un des\nmécanismes lésionnels de la douleur chronique les mieux étudiés.\nPour plusieurs situations de douleur aiguë, un traitement rapide\net adéquat permet d’éviter cette activation des récepteurs NMDA.\n2. Algos (douleur) et gène (génère) = qui produit de la douleur.\n",
+  "raw_text_sha256": "8835f7ece5742ea31bf25ce42aaf2162541396652924703e4a5819a094b9db0d",
+  "source_page_display": 570,
+  "source_page_index": 569
+}

@@ -1,0 +1,280 @@
+{
+  "block_sequence_sha256": "7354881dacaa0de9fde051f4dd274be2ecd9e912d32b27a6fa159fd71fc4722f",
+  "blocks": [
+    {
+      "bbox": [
+        54.0,
+        139.5734405517578,
+        210.6712646484375,
+        184.4953155517578
+      ],
+      "block_id": "page-0110-block-0001",
+      "order": 1,
+      "text": "Génétique\n",
+      "text_sha256": "d94b93a816f2ab587b059a489986c6a956a6cd3db83cb10918a9c485b56b61fe"
+    },
+    {
+      "bbox": [
+        54.0,
+        243.05010986328125,
+        169.07159423828125,
+        255.55010986328125
+      ],
+      "block_id": "page-0110-block-0002",
+      "order": 2,
+      "text": "Michel Maziade, M.D., FRCPC\n",
+      "text_sha256": "98408135bb8a7f14e7a89b15106c2bd41b5e865b894b3e54ada96aac015d951c"
+    },
+    {
+      "bbox": [
+        54.0,
+        259.42724609375,
+        268.28143310546875,
+        291.643798828125
+      ],
+      "block_id": "page-0110-block-0003",
+      "order": 3,
+      "text": "Psychiatre, titulaire de la Chaire de recherche du Canada\nen génétique des troubles neuropsychiatriques, Centre\nhospitalier universitaire de Québec\n",
+      "text_sha256": "6082857ab7edbcf74b5ef72b52171c12796cb5a89ac5fa75e97700e92c207a05"
+    },
+    {
+      "bbox": [
+        54.0,
+        295.42724609375,
+        255.5148162841797,
+        327.643798828125
+      ],
+      "block_id": "page-0110-block-0004",
+      "order": 4,
+      "text": "Professeur titulaire, Département de psychiatrie et\nneuro sciences, Faculté de médecine, Université Laval\n(Québec)\n",
+      "text_sha256": "4865c4ad0bb8309e4f1f0070fcdf5173424732e488354a058bab8404bc3a80b5"
+    },
+    {
+      "bbox": [
+        54.0,
+        337.55010986328125,
+        205.65899658203125,
+        350.05010986328125
+      ],
+      "block_id": "page-0110-block-0005",
+      "order": 5,
+      "text": "Chantal Mérette, Ph. D. (biostatistiques)\n",
+      "text_sha256": "d3ebe8bf738cbc3bdf3c9e9e1192912457f1646db7ab315a27c951d6abce8732"
+    },
+    {
+      "bbox": [
+        54.0,
+        353.92724609375,
+        261.3800354003906,
+        386.143798828125
+      ],
+      "block_id": "page-0110-block-0006",
+      "order": 6,
+      "text": "Directrice, Laboratoire de biostatistiques et psychiatrie\ngénétique, Centre de recherche, Institut universitaire\nen santé mentale de Québec\n",
+      "text_sha256": "eecfa7a7ec34672f3cf24d12a2fd0e52d28c0155d91ecfdf5ce64db06e207775"
+    },
+    {
+      "bbox": [
+        54.0,
+        389.92724609375,
+        269.5113830566406,
+        411.143798828125
+      ],
+      "block_id": "page-0110-block-0007",
+      "order": 7,
+      "text": "Professeure titulaire de statistiques, Faculté de médecine,\nUniversité Laval (Québec)\n",
+      "text_sha256": "959227cc95361055bc1394f0984c8e2a495e65158fd53c1bc350be527abd4366"
+    },
+    {
+      "bbox": [
+        312.0,
+        243.05010986328125,
+        470.3385009765625,
+        255.55010986328125
+      ],
+      "block_id": "page-0110-block-0008",
+      "order": 8,
+      "text": "Yvon Chagnon, Ph. D. (biologie moléculaire)\n",
+      "text_sha256": "2d6082b108976a49124c52bde2854cfb20c8fb94fccbc33be63de3ded175c40d"
+    },
+    {
+      "bbox": [
+        312.0,
+        259.42724609375,
+        535.4857177734375,
+        280.643798828125
+      ],
+      "block_id": "page-0110-block-0009",
+      "order": 9,
+      "text": "Directeur, Laboratoire de génomique, Centre de recherche,\nInstitut universitaire en santé mentale de Québec\n",
+      "text_sha256": "71a91deb46138ca5e11e18f6c6e82d7c6d775cb41547f6c50242a5cb7e80c897"
+    },
+    {
+      "bbox": [
+        312.0,
+        284.42724609375,
+        513.5148315429688,
+        316.643798828125
+      ],
+      "block_id": "page-0110-block-0010",
+      "order": 10,
+      "text": "Professeur associé, Département de psychiatrie et\nneuro sciences, Faculté de médecine, Université Laval\n(Québec)\n",
+      "text_sha256": "c1ff2be30765a5aef36746766b441666e569c7bd6d28909b87d3f530cdae1720"
+    },
+    {
+      "bbox": [
+        312.0,
+        326.55010986328125,
+        517.408203125,
+        339.05010986328125
+      ],
+      "block_id": "page-0110-block-0011",
+      "order": 11,
+      "text": "Thomas Paccalet, Ph. D. (biologie cellulaire et biochimie)\n",
+      "text_sha256": "84f324629b5faec847743eaef5f140eb7516324e5aaf987770fe0b203a5bf7f8"
+    },
+    {
+      "bbox": [
+        312.0,
+        342.92724609375,
+        544.725341796875,
+        364.143798828125
+      ],
+      "block_id": "page-0110-block-0012",
+      "order": 12,
+      "text": "Chercheur associé, Centre de recherche, Institut universitaire\nen santé mentale de Québec\n",
+      "text_sha256": "7e2e99369531758df50e5644856af0fa271401edebb7a029278355aeff780cfc"
+    },
+    {
+      "bbox": [
+        312.0,
+        374.05010986328125,
+        513.8160400390625,
+        386.55010986328125
+      ],
+      "block_id": "page-0110-block-0013",
+      "order": 13,
+      "text": "Marc-André Roy, M.D., FRCPC, M. SC. (épidémiologie)\n",
+      "text_sha256": "cba7846c4697f642bd9c6f43d312bbda86018e8d8b1d1950dcd7e0ee45c9dea6"
+    },
+    {
+      "bbox": [
+        312.0,
+        390.42724609375,
+        536.7814331054688,
+        422.643798828125
+      ],
+      "block_id": "page-0110-block-0014",
+      "order": 14,
+      "text": "Psychiatre chercheur, Clinique Notre-Dame des Victoires,\nCentre de recherche, Institut universitaire en santé mentale\nde Québec\n",
+      "text_sha256": "4703a73aefa057794efce0338b605cc01c9545a029e1d8d1318b7b95085e090b"
+    },
+    {
+      "bbox": [
+        312.0,
+        426.42724609375,
+        513.5148315429688,
+        458.643798828125
+      ],
+      "block_id": "page-0110-block-0015",
+      "order": 15,
+      "text": "Professeur agrégé, Département de psychiatrie et\nneuro sciences, Faculté de médecine, Université Laval\n(Québec)\n",
+      "text_sha256": "aa7bca13d212c537432a22094e02eb5a204129473f5528bad82d8a2c6f6d29ec"
+    },
+    {
+      "bbox": [
+        54.0,
+        509.87445068359375,
+        294.98602294921875,
+        519.7973022460938
+      ],
+      "block_id": "page-0110-block-0016",
+      "order": 16,
+      "text": "5.1 \nConcepts de base .............................................................94\n",
+      "text_sha256": "0dce2485bebda6c35aa9ab029c74412701a415def2ed282e21484aa9f71a4d7a"
+    },
+    {
+      "bbox": [
+        54.0,
+        524.8744506835938,
+        294.98602294921875,
+        622.7973022460938
+      ],
+      "block_id": "page-0110-block-0017",
+      "order": 17,
+      "text": "5.2 \nÉpidémiologie génétique .................................................... 96\n5.2.1 \nÉtudes familiales...................................................... 96\n5.2.2 \nÉtudes d’adoption.................................................... 96\n5.2.3 \nÉtudes de jumeaux .................................................. 96\n5.2.4 \nRésultats des études en épidémiologie\ngénétique................................................................... 97\n5.2.5 \nSpécicité des facteurs génétiques ...................... 97\n5.2.6 \nMode de transmission............................................ 98\n",
+      "text_sha256": "e75f8a60623d201f53261816fd87ad190287001650cb2b2ad258ce1de229c82b"
+    },
+    {
+      "bbox": [
+        54.0,
+        627.8744506835938,
+        295.0040283203125,
+        663.7973022460938
+      ],
+      "block_id": "page-0110-block-0018",
+      "order": 18,
+      "text": "5.3 \nIdentication des gènes de susceptibilité..................... 98\n5.3.1 \nMéthodes d’identication...................................... 99\n5.3.2 \nDés méthodologiques........................................ 102\n",
+      "text_sha256": "2d213f583a16a48ff3a64492fc952d2b8f84c3e262ae7c88feeb10c717c8a57d"
+    },
+    {
+      "bbox": [
+        312.0,
+        509.87445068359375,
+        553.0040283203125,
+        519.7973022460938
+      ],
+      "block_id": "page-0110-block-0019",
+      "order": 19,
+      "text": "5.4 \nIntervention des mécanismes épigénétiques ............. 105\n",
+      "text_sha256": "914e6c75535568725ba4c1fb3053067ab0372f62e01ab3818d030669b1ca0b5a"
+    },
+    {
+      "bbox": [
+        312.0,
+        524.8744506835938,
+        553.0040283203125,
+        616.7973022460938
+      ],
+      "block_id": "page-0110-block-0020",
+      "order": 20,
+      "text": "5.5 \nTendances fondées sur des données probantes ......... 107\n5.5.1 \nLocalisation de sites ou de gènes\nde susceptibilité ..................................................... 107\n5.5.2 \nPartage de mécanismes génétiques\npar diérents syndromes ..................................... 107\n5.5.3 \nDéterminants précoces de la trajectoire\npathologique........................................................... 107\n5.5.4 \nImpacts présents et futurs de la recherche ...... 108\n",
+      "text_sha256": "daffcb49b2631cc4be61ed690bc0499c003befeed37e10cb0c987e52c094e673"
+    },
+    {
+      "bbox": [
+        312.0,
+        621.8744506835938,
+        553.0100708007812,
+        631.7182006835938
+      ],
+      "block_id": "page-0110-block-0021",
+      "order": 21,
+      "text": "Lectures complémentaires...................................................... 108\n",
+      "text_sha256": "3ac51d137baf48fd37fef6e32f827a60a6c1e068190968d85214bb61c84aa2bf"
+    },
+    {
+      "bbox": [
+        325.8999938964844,
+        2.3810577392578125,
+        557.6000366210938,
+        122.38105773925781
+      ],
+      "block_id": "page-0110-block-0022",
+      "order": 22,
+      "text": "CHAPITRE5\n",
+      "text_sha256": "1bbd7c2d867b4c797474eff5ae5fa9ddbc3d7abf37227a4a525e4df815836e8c"
+    }
+  ],
+  "coordinates_sha256": "cdf0a066a30285000942ae14ad997565fa39d54f8a693271ee8cf23171107a97",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0110",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Génétique\nMichel Maziade, M.D., FRCPC\nPsychiatre, titulaire de la Chaire de recherche du Canada\nen génétique des troubles neuropsychiatriques, Centre\nhospitalier universitaire de Québec\nProfesseur titulaire, Département de psychiatrie et\nneuro sciences, Faculté de médecine, Université Laval\n(Québec)\nChantal Mérette, Ph. D. (biostatistiques)\nDirectrice, Laboratoire de biostatistiques et psychiatrie\ngénétique, Centre de recherche, Institut universitaire\nen santé mentale de Québec\nProfesseure titulaire de statistiques, Faculté de médecine,\nUniversité Laval (Québec)\nYvon Chagnon, Ph. D. (biologie moléculaire)\nDirecteur, Laboratoire de génomique, Centre de recherche,\nInstitut universitaire en santé mentale de Québec\nProfesseur associé, Département de psychiatrie et\nneuro sciences, Faculté de médecine, Université Laval\n(Québec)\nThomas Paccalet, Ph. D. (biologie cellulaire et biochimie)\nChercheur associé, Centre de recherche, Institut universitaire\nen santé mentale de Québec\nMarc-André Roy, M.D., FRCPC, M. SC. (épidémiologie)\nPsychiatre chercheur, Clinique Notre-Dame des Victoires,\nCentre de recherche, Institut universitaire en santé mentale\nde Québec\nProfesseur agrégé, Département de psychiatrie et\nneuro sciences, Faculté de médecine, Université Laval\n(Québec)\n5.1 \nConcepts de base .............................................................94\n5.2 \nÉpidémiologie génétique .................................................... 96\n5.2.1 \nÉtudes familiales...................................................... 96\n5.2.2 \nÉtudes d’adoption.................................................... 96\n5.2.3 \nÉtudes de jumeaux .................................................. 96\n5.2.4 \nRésultats des études en épidémiologie\ngénétique................................................................... 97\n5.2.5 \nSpécicité des facteurs génétiques ...................... 97\n5.2.6 \nMode de transmission............................................ 98\n5.3 \nIdentication des gènes de susceptibilité..................... 98\n5.3.1 \nMéthodes d’identication...................................... 99\n5.3.2 \nDés méthodologiques........................................ 102\n5.4 \nIntervention des mécanismes épigénétiques ............. 105\n5.5 \nTendances fondées sur des données probantes ......... 107\n5.5.1 \nLocalisation de sites ou de gènes\nde susceptibilité ..................................................... 107\n5.5.2 \nPartage de mécanismes génétiques\npar diérents syndromes ..................................... 107\n5.5.3 \nDéterminants précoces de la trajectoire\npathologique........................................................... 107\n5.5.4 \nImpacts présents et futurs de la recherche ...... 108\nLectures complémentaires...................................................... 108\nCHAPITRE5\n",
+  "raw_text_sha256": "a0fad197e7077f548d4f230362e5eb5084970ef495fc5d5b6733d9c8d1505121",
+  "source_page_display": 111,
+  "source_page_index": 110
+}

@@ -1,0 +1,328 @@
+{
+  "block_sequence_sha256": "078fd227ecfd2cd5795414fff23a5991a5f52241ac3f4ebf11d59332afac3397",
+  "blocks": [
+    {
+      "bbox": [
+        315.3500061035156,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0720-block-0001",
+      "order": 1,
+      "text": "Chapitre 31\nTroubles des conduites alimentaires\n703\n",
+      "text_sha256": "cfa6befa511fe2480d82eb5d06f51a36e89c97118cf757af7c625c1e0f796b27"
+    },
+    {
+      "bbox": [
+        56.25,
+        41.002296447753906,
+        266.8390197753906,
+        53.320068359375
+      ],
+      "block_id": "page-0720-block-0002",
+      "order": 2,
+      "text": "TABLEAU 31.2 Critères diagnostiques de la boulimie\n",
+      "text_sha256": "3cf30877384e12337c776588d5ffa9db8b58de39a0e7f307ea2fc8c1b5814262"
+    },
+    {
+      "bbox": [
+        103.30000305175781,
+        58.27412414550781,
+        478.21051025390625,
+        81.60029602050781
+      ],
+      "block_id": "page-0720-block-0003",
+      "order": 3,
+      "text": "DSM-5\nDSM-IV-TR\n307.51 (F50.2) Boulimie (bulimia nervosa)\nBoulimie (bulimia nervosa)\n",
+      "text_sha256": "0c3ff05bd0c603cf924003e2b0ff51382c41004f5de01d538bcaefec39341f51"
+    },
+    {
+      "bbox": [
+        58.25,
+        86.001953125,
+        300.3343200683594,
+        95.828125
+      ],
+      "block_id": "page-0720-block-0004",
+      "order": 4,
+      "text": "A. Survenue récurrente d’accès hyperphagiques (crises de gloutonnerie (binge –\n",
+      "text_sha256": "1ce426ade97f0349a0cd46173e44f66850f8563952b536edaeaff01887be68b5"
+    },
+    {
+      "bbox": [
+        68.45000457763672,
+        96.001953125,
+        300.7669677734375,
+        177.828125
+      ],
+      "block_id": "page-0720-block-0005",
+      "order": 5,
+      "text": "eating). Un accès hyperphagique répond aux deux caractéristiques suivantes :\n1. Absorption, en une période de temps limité (p. ex., moins de 2\nheures), d’une quantité de nourriture largement supérieure à ce que\nla plupart des gens absorberaient en une période de temps similaire\net dans les mêmes circonstances.\n2. Sentiment d’une perte de contrôle sur le comportement alimentaire pen-\ndant la crise (p. ex., sentiment de ne pas pouvoir s’arrêter de manger, ou de\nne pas pouvoir contrôler ce que l’on mange, ou la quantité que l’on mange).\n",
+      "text_sha256": "2497743a4532d40810533897fdaad0db1f1dcca6e6bbc35297787b4b12a09342"
+    },
+    {
+      "bbox": [
+        308.5,
+        86.001953125,
+        368.1481018066406,
+        95.828125
+      ],
+      "block_id": "page-0720-block-0006",
+      "order": 6,
+      "text": "A. Idem à DSM-5.\n",
+      "text_sha256": "17d5989bc13bdc24966ef82f371e7b88392c4ebe1bd8cdcdcd635723e9a91a6c"
+    },
+    {
+      "bbox": [
+        58.25,
+        184.40196228027344,
+        283.37298583984375,
+        194.22813415527344
+      ],
+      "block_id": "page-0720-block-0007",
+      "order": 7,
+      "text": "B. Comportements compensatoires inappropriés et récurrents visant à\n",
+      "text_sha256": "1d4cc1acc9a964e8c9979df2dc0e27af90ecd7e5c4f32b43370e8c8cc45ceddd"
+    },
+    {
+      "bbox": [
+        69.0999984741211,
+        194.40196228027344,
+        290.73626708984375,
+        224.22813415527344
+      ],
+      "block_id": "page-0720-block-0008",
+      "order": 8,
+      "text": "prévenir la prise de poids, tels que : vomissements provoqués ; emploi\nabusif de laxatifs, diurétiques, lavements ou autres médicaments ;\njeûne ; exercice physique excessif.\n",
+      "text_sha256": "2426554d0ef583e6dae392fb803e682e18fec052ba8371c955caf1ee0a3aa824"
+    },
+    {
+      "bbox": [
+        308.5,
+        184.40196228027344,
+        368.1481018066406,
+        194.22813415527344
+      ],
+      "block_id": "page-0720-block-0009",
+      "order": 9,
+      "text": "B. Idem à DSM-5.\n",
+      "text_sha256": "703f62df8ee835b259dd8e94c2103cd979d0ac69c184c555aa261a5bff070302"
+    },
+    {
+      "bbox": [
+        58.25,
+        230.85195922851562,
+        280.62823486328125,
+        240.67813110351562
+      ],
+      "block_id": "page-0720-block-0010",
+      "order": 10,
+      "text": "C. Les accès hyperphagiques (de gloutonnerie) et les comportements\n",
+      "text_sha256": "9d9fda8e30bc5b08fc9a29ee8e3bddc3d3e4c7c53448cae76b5713286624c374"
+    },
+    {
+      "bbox": [
+        69.25,
+        240.85195922851562,
+        289.6417541503906,
+        260.6781311035156
+      ],
+      "block_id": "page-0720-block-0011",
+      "order": 11,
+      "text": "compensatoires inappropriés surviennent tous les deux, en moyenne,\nau moins une fois par semaine pendant 3 mois.\n",
+      "text_sha256": "b10a88bdc90e6145f50ad318d466740544fedbf04c97ca279070fa7bec09bd7c"
+    },
+    {
+      "bbox": [
+        308.5,
+        230.85195922851562,
+        534.4791870117188,
+        240.67813110351562
+      ],
+      "block_id": "page-0720-block-0012",
+      "order": 12,
+      "text": "C. Idem à DSM-5, au moins deux fois par semaine pendant trois mois.\n",
+      "text_sha256": "e33890378e5e01b29fe4892b6f4b2934e5270d4a397cff0b5a76066ec61acfb1"
+    },
+    {
+      "bbox": [
+        58.25,
+        267.251953125,
+        281.558349609375,
+        277.078125
+      ],
+      "block_id": "page-0720-block-0013",
+      "order": 13,
+      "text": "D. L’estime de soi est inuencée de manière excessive par le poids et\n",
+      "text_sha256": "4d066bca1c10435f1d262e158a02c0a74b1615969c91ed45296f8358051756b7"
+    },
+    {
+      "bbox": [
+        69.4000015258789,
+        277.251953125,
+        131.37400817871094,
+        287.078125
+      ],
+      "block_id": "page-0720-block-0014",
+      "order": 14,
+      "text": "la forme corporelle.\n",
+      "text_sha256": "c704e0501e961a97c10f981964b269f9a8ff426f1b4872c15ce4caf8e014495e"
+    },
+    {
+      "bbox": [
+        308.5,
+        267.251953125,
+        368.4810791015625,
+        277.078125
+      ],
+      "block_id": "page-0720-block-0015",
+      "order": 15,
+      "text": "D. Idem à DSM-5.\n",
+      "text_sha256": "a25093c4e73c5e7e67b3176a2cccc790e8fc03ace507127f5b4c7ba5e37fc007"
+    },
+    {
+      "bbox": [
+        58.25,
+        293.70196533203125,
+        270.3565979003906,
+        303.52813720703125
+      ],
+      "block_id": "page-0720-block-0016",
+      "order": 16,
+      "text": "E. Le trouble ne survient pas exclusivement pendant des épisodes\n",
+      "text_sha256": "3b0552a9f39dda401740878d6c8ab768782606ecd5bbda3b2444c4d5c8f19df8"
+    },
+    {
+      "bbox": [
+        68.55000305175781,
+        303.70196533203125,
+        191.5080108642578,
+        313.52813720703125
+      ],
+      "block_id": "page-0720-block-0017",
+      "order": 17,
+      "text": "d’anoxerie mentale (anorexia nervosa).\n",
+      "text_sha256": "7f702222b96de94b456ccbb4be99a7829881cb822311884e0c3382c03d983891"
+    },
+    {
+      "bbox": [
+        308.5,
+        293.70196533203125,
+        367.64410400390625,
+        303.52813720703125
+      ],
+      "block_id": "page-0720-block-0018",
+      "order": 18,
+      "text": "E. Idem à DSM-5.\n",
+      "text_sha256": "623c5ec74498d33a47207c86c1d4b8bb5aae0042d0559cf373e98ababace68cc"
+    },
+    {
+      "bbox": [
+        58.25,
+        320.1019592285156,
+        96.51700592041016,
+        329.9281311035156
+      ],
+      "block_id": "page-0720-block-0019",
+      "order": 19,
+      "text": "Spécier si :\n",
+      "text_sha256": "9f4d6b666fae8b9a4b5e824d34891426b7291ac2aec8c230225d1feee4be1389"
+    },
+    {
+      "bbox": [
+        67.25,
+        331.0228576660156,
+        146.2160186767578,
+        352.0423889160156
+      ],
+      "block_id": "page-0720-block-0020",
+      "order": 20,
+      "text": "En rémission partielle\nEn rémission complète\n",
+      "text_sha256": "7700a963534f9a3ebc3e87cd8811466ef8c8c847aa6febec47fbbd75cc7d4cb5"
+    },
+    {
+      "bbox": [
+        58.25,
+        358.5519714355469,
+        299.9916687011719,
+        463.3781433105469
+      ],
+      "block_id": "page-0720-block-0021",
+      "order": 21,
+      "text": "Spécifier la sévérité actuelle :\n[...]\nLégère : Une moyenne de 1-3 épisodes de comportements compensatoires\ninappropriés par semaine.\nMoyenne : Une moyenne de 4-7 épisodes de comportements\ncompensatoires inappropriés par semaine.\nGrave : Une moyenne de 8-13 épisodes de comportements compensatoires\ninappropriés par semaine.\nExtrême : Une moyenne d’au moins 14 épisodes de comportements\ncompensatoires inappropriés par semaine.\n",
+      "text_sha256": "2519896b5f9362c7466aef09967648c5ff6077d2cc731d5a12688de07b92eb53"
+    },
+    {
+      "bbox": [
+        308.5,
+        469.95196533203125,
+        550.1585083007812,
+        561.7781372070312
+      ],
+      "block_id": "page-0720-block-0022",
+      "order": 22,
+      "text": "Spécier le type :\nType avec vomissements ou prise de purgatifs (purging type) : Pendant\nl’épisode actuel de Boulimie, le sujet a eu régulièrement recours aux vomis-\nsements provoqués ou à l’emploi abusif de laxatifs, diurétiques, lavements.\nType sans vomissements ni prise de purgatifs (non purging type):\nPendant l’épisode actuel de Boulimie, le sujet a présenté d’autres comporte-\nments compensatoires inappropriés, tels que le jeûne ou l’exercice physique\nexcessif, mais n’a pas eu régulièrement recours aux vomissements\nprovoqués ou à l’emploi abusif de laxatifs, diurétiques, lavements.\n",
+      "text_sha256": "a3d90c104d642ef6a6e5fbb0787be5227053b2ab02ae0119ea9394d11ec2ec64"
+    },
+    {
+      "bbox": [
+        54.25,
+        569.5906372070312,
+        553.4320068359375,
+        629.3250122070312
+      ],
+      "block_id": "page-0720-block-0023",
+      "order": 23,
+      "text": "Sources : APA (2015), p. 406-407 ; APA (2004), p. 687-688.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelfi et al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelfi et al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\n",
+      "text_sha256": "95693c77e48d8efc12449b904d8bf4976cae3a574c0015ef2678b70ba476314b"
+    },
+    {
+      "bbox": [
+        54.0,
+        642.5868530273438,
+        295.5447998046875,
+        675.2794189453125
+      ],
+      "block_id": "page-0720-block-0024",
+      "order": 24,
+      "text": "31.4.4 Troubles des conduites alimentaires\nnon spéciés\n",
+      "text_sha256": "c3531d3f8f1a7fbd61b93fee52cf2b1928be2fe3682acc3bad58c2fc0fda37b0"
+    },
+    {
+      "bbox": [
+        54.0,
+        679.1158447265625,
+        297.2929382324219,
+        725.70849609375
+      ],
+      "block_id": "page-0720-block-0025",
+      "order": 25,
+      "text": "Le DSM-5 regroupe sous cette rubrique les TCA qui ne\nrépondent pas à tous les critères de l’anorexie, de la boulimie\nou des accès hyperphagiques. La majorité des individus qui\nconsultent un professionnel pour un trouble alimentaire, et\n",
+      "text_sha256": "614fc9d7711c2345b3b67ea32be131d4cb191c304ce35f941e190e82e816ab54"
+    },
+    {
+      "bbox": [
+        312.0,
+        644.2158203125,
+        555.2939453125,
+        725.70849609375
+      ],
+      "block_id": "page-0720-block-0026",
+      "order": 26,
+      "text": "particulièrement les moins de 18 ans, font partie de cette\ncatégorie (ce qui inclut l’hyperphagie boulimique alors classée\nparmi les troubles non spéciés selon le DSM-IV-TR). En voici\ndes exemples :\n• tous les critères de la boulimie ou de l’hyperphagie sont pré-\nsents, mais à une fréquence inférieure à une crise par semaine,\nou pendant une période de moins de trois mois ;\n",
+      "text_sha256": "933c14dce621b06db17ecc6e2cd8a3cf8cbd4ca8fa1f4541b472b84b3da2d1cc"
+    }
+  ],
+  "coordinates_sha256": "4bfee9a2e0f79fd0145ddcf18a3b6cd8d6b07a1ea9942e4e14acc10f01f78857",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0720",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 31\nTroubles des conduites alimentaires\n703\nTABLEAU 31.2 Critères diagnostiques de la boulimie\nDSM-5\nDSM-IV-TR\n307.51 (F50.2) Boulimie (bulimia nervosa)\nBoulimie (bulimia nervosa)\nA. Survenue récurrente d’accès hyperphagiques (crises de gloutonnerie (binge –\neating). Un accès hyperphagique répond aux deux caractéristiques suivantes :\n1. Absorption, en une période de temps limité (p. ex., moins de 2\nheures), d’une quantité de nourriture largement supérieure à ce que\nla plupart des gens absorberaient en une période de temps similaire\net dans les mêmes circonstances.\n2. Sentiment d’une perte de contrôle sur le comportement alimentaire pen-\ndant la crise (p. ex., sentiment de ne pas pouvoir s’arrêter de manger, ou de\nne pas pouvoir contrôler ce que l’on mange, ou la quantité que l’on mange).\nA. Idem à DSM-5.\nB. Comportements compensatoires inappropriés et récurrents visant à\nprévenir la prise de poids, tels que : vomissements provoqués ; emploi\nabusif de laxatifs, diurétiques, lavements ou autres médicaments ;\njeûne ; exercice physique excessif.\nB. Idem à DSM-5.\nC. Les accès hyperphagiques (de gloutonnerie) et les comportements\ncompensatoires inappropriés surviennent tous les deux, en moyenne,\nau moins une fois par semaine pendant 3 mois.\nC. Idem à DSM-5, au moins deux fois par semaine pendant trois mois.\nD. L’estime de soi est inuencée de manière excessive par le poids et\nla forme corporelle.\nD. Idem à DSM-5.\nE. Le trouble ne survient pas exclusivement pendant des épisodes\nd’anoxerie mentale (anorexia nervosa).\nE. Idem à DSM-5.\nSpécier si :\nEn rémission partielle\nEn rémission complète\nSpécifier la sévérité actuelle :\n[...]\nLégère : Une moyenne de 1-3 épisodes de comportements compensatoires\ninappropriés par semaine.\nMoyenne : Une moyenne de 4-7 épisodes de comportements\ncompensatoires inappropriés par semaine.\nGrave : Une moyenne de 8-13 épisodes de comportements compensatoires\ninappropriés par semaine.\nExtrême : Une moyenne d’au moins 14 épisodes de comportements\ncompensatoires inappropriés par semaine.\nSpécier le type :\nType avec vomissements ou prise de purgatifs (purging type) : Pendant\nl’épisode actuel de Boulimie, le sujet a eu régulièrement recours aux vomis-\nsements provoqués ou à l’emploi abusif de laxatifs, diurétiques, lavements.\nType sans vomissements ni prise de purgatifs (non purging type):\nPendant l’épisode actuel de Boulimie, le sujet a présenté d’autres comporte-\nments compensatoires inappropriés, tels que le jeûne ou l’exercice physique\nexcessif, mais n’a pas eu régulièrement recours aux vomissements\nprovoqués ou à l’emploi abusif de laxatifs, diurétiques, lavements.\nSources : APA (2015), p. 406-407 ; APA (2004), p. 687-688.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelfi et al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelfi et al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\n31.4.4 Troubles des conduites alimentaires\nnon spéciés\nLe DSM-5 regroupe sous cette rubrique les TCA qui ne\nrépondent pas à tous les critères de l’anorexie, de la boulimie\nou des accès hyperphagiques. La majorité des individus qui\nconsultent un professionnel pour un trouble alimentaire, et\nparticulièrement les moins de 18 ans, font partie de cette\ncatégorie (ce qui inclut l’hyperphagie boulimique alors classée\nparmi les troubles non spéciés selon le DSM-IV-TR). En voici\ndes exemples :\n• tous les critères de la boulimie ou de l’hyperphagie sont pré-\nsents, mais à une fréquence inférieure à une crise par semaine,\nou pendant une période de moins de trois mois ;\n",
+  "raw_text_sha256": "405245924d781ef97734e873ab43fe65f246c0df2f852e0364ad5988634e4e32",
+  "source_page_display": 721,
+  "source_page_index": 720
+}

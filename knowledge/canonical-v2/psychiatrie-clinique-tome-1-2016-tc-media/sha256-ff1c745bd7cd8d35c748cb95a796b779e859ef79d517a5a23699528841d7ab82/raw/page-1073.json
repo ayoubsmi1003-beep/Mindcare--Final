@@ -1,0 +1,196 @@
+{
+  "block_sequence_sha256": "a70004f6f5cb97ef88af22fea9d96d881739b2927802f57a75fdce15ee293031",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        425.7200012207031,
+        758.8693237304688
+      ],
+      "block_id": "page-1073-block-0001",
+      "order": 1,
+      "text": "1056\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 4\nOrganisation des soins\n",
+      "text_sha256": "7d554f96ca0fa081184d132616152dd70a01c96a9132d5b17a82a252360ff569"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.2578125,
+        232.02500915527344
+      ],
+      "block_id": "page-1073-block-0002",
+      "order": 2,
+      "text": "Au cours des dernières années, les principales visites d’ins-\npection professionnelle ont porté sur (Robert, 2012) :\n• des informations reçues. Par exemple, le comité d’inspection\nprofessionnelle (CIP) peut avoir reçu des demandes de visite\nde la part du directeur des services professionnels (DSP) ou\nd’un chef de département, voire d’un pharmacien, etc. dans\nle but d’évaluer la qualité de la pratique d’un médecin ;\n• des demandes de la direction des enquêtes (syndic). Lorsque\nle syndic est sollicité pour évaluer une plainte, il se limite à\nl’étude du dossier en question. À la suite de son évaluation\net s’il le juge pertinent, le syndic peut demander une visite\nd’inspection professionnelle du CIP an d’évaluer la pratique\nd’un ou plusieurs médecins d’un établissement. Lors de ces\nvisites, l’étude peut s’étendre à un grand nombre de dossiers,\nvoire sur les diérents aspects de la qualité des soins du ou\ndes médecins de cet établissement, par exemple :\n",
+      "text_sha256": "e441d02d24f42553c0e83c6083f52ab38e87a3cd77a40e2c62163ec9b1e8fe9d"
+    },
+    {
+      "bbox": [
+        318.0,
+        235.4158172607422,
+        549.37255859375,
+        245.8249969482422
+      ],
+      "block_id": "page-1073-block-0003",
+      "order": 3,
+      "text": "– la pertinence de prescrire de psychotropes par le ou les\n",
+      "text_sha256": "d208a5d1cbff52c6929abd123ccf81a2d841d35c16ada6c5e31075cfb93cb990"
+    },
+    {
+      "bbox": [
+        330.0,
+        247.1658172607422,
+        441.0492858886719,
+        257.57501220703125
+      ],
+      "block_id": "page-1073-block-0004",
+      "order": 4,
+      "text": "médecins de l’établissement ;\n",
+      "text_sha256": "07bef6c02a9f341e4cca5c9e584942fbcf20ae3e5a22a37699a70b2ce5b467e1"
+    },
+    {
+      "bbox": [
+        318.0,
+        260.9658203125,
+        505.5638427734375,
+        271.375
+      ],
+      "block_id": "page-1073-block-0005",
+      "order": 5,
+      "text": "– les médecins diplômés depuis plus de 35 ans ;\n",
+      "text_sha256": "d9fb4cb7bedb3d8e941705083eb73c9acabaca88000f08a71d170f2886143c59"
+    },
+    {
+      "bbox": [
+        318.0,
+        274.7158203125,
+        549.0573120117188,
+        285.125
+      ],
+      "block_id": "page-1073-block-0006",
+      "order": 6,
+      "text": "– les médecins spécialistes consacrant plus de 30 % de leur\n",
+      "text_sha256": "c3da6adbd311d0538be25de9809f37b8b75b5e9d51ab4bfa9b502ff2909a548b"
+    },
+    {
+      "bbox": [
+        330.0,
+        286.5158386230469,
+        478.5425720214844,
+        296.9250183105469
+      ],
+      "block_id": "page-1073-block-0007",
+      "order": 7,
+      "text": "exercice à des activités hors spécialité ;\n",
+      "text_sha256": "3b92c9283f83b6f8bf476e0bc87e961dfdbee1bb966457c666c394b34d39cbe5"
+    },
+    {
+      "bbox": [
+        318.0,
+        300.2658386230469,
+        548.9915161132812,
+        310.6750183105469
+      ],
+      "block_id": "page-1073-block-0008",
+      "order": 8,
+      "text": "– les omnipraticiens consacrant plus de 25 % de leur exercice\n",
+      "text_sha256": "03c2544714953b28ceee46986ed56a1664c5d260276af1b82f4e7ef4690ef4fe"
+    },
+    {
+      "bbox": [
+        330.0,
+        312.0658264160156,
+        459.9706726074219,
+        322.4750061035156
+      ],
+      "block_id": "page-1073-block-0009",
+      "order": 9,
+      "text": "à des activités de psychothérapie ;\n",
+      "text_sha256": "08fabb6c32b4057da292b41198e48e97f5019bf4d7b4f82f9d6c3ba117ba4f87"
+    },
+    {
+      "bbox": [
+        306.0,
+        325.8658142089844,
+        549.0175170898438,
+        467.82501220703125
+      ],
+      "block_id": "page-1073-block-0010",
+      "order": 10,
+      "text": "– les médecins exerçant en cabinet seulement.\nÀ l’issue d’une visite d’inspection professionnelle, les méde-\ncins enquêteurs soumettent un rapport au comité d’inspection\nprofessionnelle (CIP) qui, au besoin, transmet au médecin\ndes recommandations afin de l’aider à améliorer la qualité\nde son exercice médical. Ces recommandations portent sur\ndivers sujets, comme la tenue du cabinet, la tenue de dossiers,\nla qualité de l’exercice professionnel et la participation à des\nactivités d’éducation médicale continue. Certains établis-\nsements visités reçoivent également des recommandations\nen vue d’améliorer la qualité des soins médicaux qui y sont\nofferts (Robert, 2012).\n",
+      "text_sha256": "1878160427ff3273cf11cd98a9156f1fb0f5d20ce45226e1c86bf815908f32bc"
+    },
+    {
+      "bbox": [
+        306.0,
+        469.16583251953125,
+        549.290283203125,
+        656.2750244140625
+      ],
+      "block_id": "page-1073-block-0011",
+      "order": 11,
+      "text": "Dans les situations où les recommandations du CIP ne suf-\nsent pas à améliorer l’exercice d’un médecin, une évaluation\napprofondie de sa compétence est eectuée à l’aide d’une entrevue\nstructurée. Au cours de cette évaluation, le médecin est exposé\nà des cas cliniques choisis et élaborés en fonction de leur fré-\nquence et de leur importance dans son type de pratique. Ces cas\nsont présentés sous forme de vignettes cliniques ou de mises en\nsituation réalisées avec des patients simulés et le médecin doit\nproposer des solutions à ces problèmes. À la lumière des résultats\nobtenus ou des constatations eectuées à la suite d’une visite\nd’inspection professionnelle, la Direction de l’amélioration de\nl’exercice (DAE) établit une prescription pédagogique person-\nnalisée. Ainsi, un programme de lectures dirigées, un tutorat\nclinique, un stage de perfectionnement ou d’autres activités\npeuvent être oerts aux médecins dont la compétence ou les\nhabilités doivent être améliorées.\n",
+      "text_sha256": "85950ea4a0fd66471bf66b503dd2c7d06edd9d554eabb7fe4330a4e9840d5ea9"
+    },
+    {
+      "bbox": [
+        306.0,
+        667.1368408203125,
+        515.6806030273438,
+        699.5794067382812
+      ],
+      "block_id": "page-1073-block-0012",
+      "order": 12,
+      "text": "47.1.8 Normes d’Agrément Canada,\névaluation des établissements\n",
+      "text_sha256": "4b69c8bdbb8ad1f47cb74dbc9547f7760cbe39c72d9b2477c225b34df65c65bd"
+    },
+    {
+      "bbox": [
+        306.0,
+        703.1658325195312,
+        549.2705688476562,
+        725.375
+      ],
+      "block_id": "page-1073-block-0013",
+      "order": 13,
+      "text": "Les normes d’Agrément Canada relatives aux secteurs et aux\nservices aident les diérents établissements à évaluer la qualité\n",
+      "text_sha256": "0cfa779e372f2b743ffacfbdda29f0adf85e02e1e0293561b113e991b226e64e"
+    },
+    {
+      "bbox": [
+        48.0,
+        39.63300704956055,
+        291.2183837890625,
+        326.4250183105469
+      ],
+      "block_id": "page-1073-block-0014",
+      "order": 14,
+      "text": "Outils d’amélioration de la qualité des soins\nLa DAE ore une information à jour portant sur des sujets\nd’intérêt pour la profession médicale. En ce qui concerne la\npsychiatrie, elle a publié plusieurs guides de pratique, des lignes\ndirectrices sur la pratique clinique et des énoncés de position\nvisant l’amélioration de l’exercice dans divers domaines. Voici\nquelques exemples de thèmes de discussion :\n• l’utilisation prolongée de benzodiazépines ;\n• le syndrome de fatigue chronique ;\n• le traitement de la schizophrénie ;\n• l’utilisation de la méthadone dans le traitement de la toxico-\nmanie aux opiacés ;\n• le trouble décit de l’attention avec hyperactivité et l’utilisation\nde stimulants du système nerveux central ;\n• la complémentarité interétablissements dans les services\nd’urgence ;\n• l’électroconvulsivothérapie.\nCes documents sont préparés par des groupes d’experts sous\nla coordination de membres de la DAE. Ils sont élaborés à la\nsuite d’une revue de la documentation scientique ou, lorsque\ncelle-ci n’est pas concluante, à partir d’un consensus d’experts.\nIls sont diusés auprès des médecins et des hôpitaux concernés\npar le sujet.\n",
+      "text_sha256": "8e0dc7dc02fa8b4fc6ce147496084af4dcd5690e84bf0905a533c2e171985bc2"
+    },
+    {
+      "bbox": [
+        48.0,
+        335.53302001953125,
+        291.27264404296875,
+        725.375
+      ],
+      "block_id": "page-1073-block-0015",
+      "order": 15,
+      "text": "Comité d’inspection professionnelle\nLe Comité d’inspection professionnelle (CIP) fait des visites\nd’inspection professionnelle partout au Québec, sur une base\nrégulière et aléatoire. Les médecins inspecteurs enquêteurs\nde la DAE se rendent dans les cabinets médicaux et dans les\nétablissements partout au Québec, parfois accompagnés d’un\nmédecin expert. Dans les cabinets, ils inspectent les lieux,\nrévisent les dossiers médicaux et procèdent à une entrevue avec\nle médecin. Dans les établissements, ils évaluent certains comités\ndu CMDP et rencontrent des médecins et des membres de la\ndirection générale. Récemment, le CIP (Gervais & iault,\n2011) a mis en place un outil d’évaluation du raisonnement\nclinique lors des visites d’inspection professionnelle, ce qui\npermet d’évaluer la démarche clinique qui repose sur une\nprogression d’étapes englobant plusieurs compétences. Le\nraisonnement clinique est déni comme un élément essentiel\nde l’expertise médicale en tant que compétence spécique que\ntout médecin doit posséder. Les grands aspects évalués du\nraisonnement clinique sont :\n• la base des connaissances ;\n• l’organisation des connaissances en vue du raisonnement\nclinique :\n– la capacité à formuler des hypothèses ;\n– la cohérence des hypothèses diagnostiques ;\n– la capacité à établir des liens explicatifs ;\n– la prise de décision pour le diagnostic et le traitement.\nPour mener à bien sa mission, qui est de promouvoir une\nmédecine de qualité au service du public, le CMQ s’est doté de\nrèglements, plus particulièrement d’un code de déontologie.\nPour assurer l’application de ces règlements, le Collège a recours\nà l’intervention d’un syndic (directeur des enquêtes) et de neuf\nsyndics adjoints pour procéder aux enquêtes.\n",
+      "text_sha256": "40668f186670d699cb40af64fb37bb5a4b2ec310e20e11fed57d149585be1473"
+    }
+  ],
+  "coordinates_sha256": "a1e9048c52c3a1ed261cd09a9ba7400c5f88fe2349a1042ec7192cf8c9f8a7c8",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1073",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "1056\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 4\nOrganisation des soins\nAu cours des dernières années, les principales visites d’ins-\npection professionnelle ont porté sur (Robert, 2012) :\n• des informations reçues. Par exemple, le comité d’inspection\nprofessionnelle (CIP) peut avoir reçu des demandes de visite\nde la part du directeur des services professionnels (DSP) ou\nd’un chef de département, voire d’un pharmacien, etc. dans\nle but d’évaluer la qualité de la pratique d’un médecin ;\n• des demandes de la direction des enquêtes (syndic). Lorsque\nle syndic est sollicité pour évaluer une plainte, il se limite à\nl’étude du dossier en question. À la suite de son évaluation\net s’il le juge pertinent, le syndic peut demander une visite\nd’inspection professionnelle du CIP an d’évaluer la pratique\nd’un ou plusieurs médecins d’un établissement. Lors de ces\nvisites, l’étude peut s’étendre à un grand nombre de dossiers,\nvoire sur les diérents aspects de la qualité des soins du ou\ndes médecins de cet établissement, par exemple :\n– la pertinence de prescrire de psychotropes par le ou les\nmédecins de l’établissement ;\n– les médecins diplômés depuis plus de 35 ans ;\n– les médecins spécialistes consacrant plus de 30 % de leur\nexercice à des activités hors spécialité ;\n– les omnipraticiens consacrant plus de 25 % de leur exercice\nà des activités de psychothérapie ;\n– les médecins exerçant en cabinet seulement.\nÀ l’issue d’une visite d’inspection professionnelle, les méde-\ncins enquêteurs soumettent un rapport au comité d’inspection\nprofessionnelle (CIP) qui, au besoin, transmet au médecin\ndes recommandations afin de l’aider à améliorer la qualité\nde son exercice médical. Ces recommandations portent sur\ndivers sujets, comme la tenue du cabinet, la tenue de dossiers,\nla qualité de l’exercice professionnel et la participation à des\nactivités d’éducation médicale continue. Certains établis-\nsements visités reçoivent également des recommandations\nen vue d’améliorer la qualité des soins médicaux qui y sont\nofferts (Robert, 2012).\nDans les situations où les recommandations du CIP ne suf-\nsent pas à améliorer l’exercice d’un médecin, une évaluation\napprofondie de sa compétence est eectuée à l’aide d’une entrevue\nstructurée. Au cours de cette évaluation, le médecin est exposé\nà des cas cliniques choisis et élaborés en fonction de leur fré-\nquence et de leur importance dans son type de pratique. Ces cas\nsont présentés sous forme de vignettes cliniques ou de mises en\nsituation réalisées avec des patients simulés et le médecin doit\nproposer des solutions à ces problèmes. À la lumière des résultats\nobtenus ou des constatations eectuées à la suite d’une visite\nd’inspection professionnelle, la Direction de l’amélioration de\nl’exercice (DAE) établit une prescription pédagogique person-\nnalisée. Ainsi, un programme de lectures dirigées, un tutorat\nclinique, un stage de perfectionnement ou d’autres activités\npeuvent être oerts aux médecins dont la compétence ou les\nhabilités doivent être améliorées.\n47.1.8 Normes d’Agrément Canada,\névaluation des établissements\nLes normes d’Agrément Canada relatives aux secteurs et aux\nservices aident les diérents établissements à évaluer la qualité\nOutils d’amélioration de la qualité des soins\nLa DAE ore une information à jour portant sur des sujets\nd’intérêt pour la profession médicale. En ce qui concerne la\npsychiatrie, elle a publié plusieurs guides de pratique, des lignes\ndirectrices sur la pratique clinique et des énoncés de position\nvisant l’amélioration de l’exercice dans divers domaines. Voici\nquelques exemples de thèmes de discussion :\n• l’utilisation prolongée de benzodiazépines ;\n• le syndrome de fatigue chronique ;\n• le traitement de la schizophrénie ;\n• l’utilisation de la méthadone dans le traitement de la toxico-\nmanie aux opiacés ;\n• le trouble décit de l’attention avec hyperactivité et l’utilisation\nde stimulants du système nerveux central ;\n• la complémentarité interétablissements dans les services\nd’urgence ;\n• l’électroconvulsivothérapie.\nCes documents sont préparés par des groupes d’experts sous\nla coordination de membres de la DAE. Ils sont élaborés à la\nsuite d’une revue de la documentation scientique ou, lorsque\ncelle-ci n’est pas concluante, à partir d’un consensus d’experts.\nIls sont diusés auprès des médecins et des hôpitaux concernés\npar le sujet.\nComité d’inspection professionnelle\nLe Comité d’inspection professionnelle (CIP) fait des visites\nd’inspection professionnelle partout au Québec, sur une base\nrégulière et aléatoire. Les médecins inspecteurs enquêteurs\nde la DAE se rendent dans les cabinets médicaux et dans les\nétablissements partout au Québec, parfois accompagnés d’un\nmédecin expert. Dans les cabinets, ils inspectent les lieux,\nrévisent les dossiers médicaux et procèdent à une entrevue avec\nle médecin. Dans les établissements, ils évaluent certains comités\ndu CMDP et rencontrent des médecins et des membres de la\ndirection générale. Récemment, le CIP (Gervais & iault,\n2011) a mis en place un outil d’évaluation du raisonnement\nclinique lors des visites d’inspection professionnelle, ce qui\npermet d’évaluer la démarche clinique qui repose sur une\nprogression d’étapes englobant plusieurs compétences. Le\nraisonnement clinique est déni comme un élément essentiel\nde l’expertise médicale en tant que compétence spécique que\ntout médecin doit posséder. Les grands aspects évalués du\nraisonnement clinique sont :\n• la base des connaissances ;\n• l’organisation des connaissances en vue du raisonnement\nclinique :\n– la capacité à formuler des hypothèses ;\n– la cohérence des hypothèses diagnostiques ;\n– la capacité à établir des liens explicatifs ;\n– la prise de décision pour le diagnostic et le traitement.\nPour mener à bien sa mission, qui est de promouvoir une\nmédecine de qualité au service du public, le CMQ s’est doté de\nrèglements, plus particulièrement d’un code de déontologie.\nPour assurer l’application de ces règlements, le Collège a recours\nà l’intervention d’un syndic (directeur des enquêtes) et de neuf\nsyndics adjoints pour procéder aux enquêtes.\n",
+  "raw_text_sha256": "cd4382e0116168a1924cd5aeb000827e34248841a01a9c86a88603dfbeb57fe7",
+  "source_page_display": 1074,
+  "source_page_index": 1073
+}

@@ -1,0 +1,244 @@
+{
+  "block_sequence_sha256": "461424b5afc77bc610cd4d40afd6d3a93d1ad8b5e024d614088c267cc422287c",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        471.6627197265625,
+        758.8693237304688
+      ],
+      "block_id": "page-0313-block-0001",
+      "order": 1,
+      "text": "296\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2 Déterminants bio-psycho-sociaux\n",
+      "text_sha256": "38d10962d388a58c417a535d73afd3d3c5b74992bed467801f8438b7f61e22c8"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.3081665039062,
+        121.20849609375
+      ],
+      "block_id": "page-0313-block-0002",
+      "order": 2,
+      "text": "Il est souvent impossible d’éliminer l’eet de tous les facteurs\nde confusion dans le devis d’une étude. Dans ce cas, on peut\nrecourir à diérentes méthodes au moment des analyses. La\nméthode la plus couramment utilisée consiste à comparer les\ngroupes par rapport aux facteurs de confusion, et si des dié-\nrences sont détectées, des analyses multivariées peuvent souvent\néliminer leur inuence.\n",
+      "text_sha256": "64fd7151c800dd7916c0610dd49a95dc762a126152d4a692d6cf3ef6880f0e49"
+    },
+    {
+      "bbox": [
+        306.0,
+        130.88682556152344,
+        483.6685791015625,
+        147.02940368652344
+      ],
+      "block_id": "page-0313-block-0003",
+      "order": 3,
+      "text": "14.3.6 Dénition de la causalité\n",
+      "text_sha256": "20fbb7a25b0c9b5c5c0845598c40369c98ba12b91bf428197596b8d7c223a622"
+    },
+    {
+      "bbox": [
+        306.0,
+        150.4658203125,
+        549.49169921875,
+        725.45849609375
+      ],
+      "block_id": "page-0313-block-0004",
+      "order": 4,
+      "text": "Une association ou corrélation entre un facteur de risque hypo-\nthétique et une maladie n’est pas automatiquement garante de\nla causalité de cette association. Traditionnellement, la causalité\nétait établie exclusivement selon le postulat de Koch (1890)\n(le découvreur du bacille de Koch, agent causal de la tuberculose) :\n• l’agent infectieux est toujours présent dans les cas où la maladie\nest présente ;\n• lorsque l’agent infectieux est présent, la maladie est présente ;\n• l’élimination de l’agent infectieux entraîne la guérison.\nCependant, ces critères ne peuvent s’appliquer dans le cas de\nmaladies chroniques comme les psychopathologies. Hill (1965)\na alors proposé les critères suivants pour juger de la causalité\nd’une association :\n• Si l’association est très forte, elle risque moins d’être fortuite\nou de reéter un biais. Ainsi, un facteur qui augmente de\n10 fois le risque d’une maladie est plus susceptible d’entraîner\nréellement la maladie qu’un facteur qui n’augmente le risque\nque de 1,5 fois.\n• La vraisemblance biologique est aussi un critère utile, quoique\nsouvent dicile à établir. Par exemple, plusieurs études laissent\nentendre que des infections à Inuenza survenant au cours\ndu deuxième trimestre de la grossesse augmentent le risque\nque l’enfant soure plus tard de schizophrénie ; le fait que\ncette période constitue un moment critique dans le déve-\nloppement du système nerveux central du fœtus soutient la\nvraisemblance biologique d’une association causale entre\nla schizophrénie et l’infection à Inuenza chez la femme\nenceinte (Brown & al., 2004).\n• La reproduction de l’association par plusieurs études indépen-\ndantes est primordiale pour établir la causalité. En eet, si ces\nétudes en arrivent aux mêmes conclusions, il est peu probable\nque ces dernières soient erronées ou découlent des mêmes\nproblèmes méthodologiques. Un exemple frappant de constance\nest fourni par les études de jumeaux, d’adoption et d’agrégation\nfamiliale, qui concordent pour étayer l’importance des facteurs\ngénétiques dans la schizophrénie (Van Os & al., 2008).\n• Une relation entre le degré d’exposition au facteur de risque et\nla probabilité d’avoir la maladie apparaît elle aussi signicative.\nPar exemple, diérentes études ont montré que la probabilité\nde faire une dépression augmente avec le nombre d’événe-\nments de vie stressants auxquels une personne est exposée\n(Dohrenwend & Dohrenwend, 1974).\n• L’exposition doit précéder le début de la maladie ; la relation\nentre les infections à Inuenza chez la femme enceinte et la\nschizophrénie de son enfant satisfait à ce critère. En eet,\nces infections surviennent pendant la grossesse, alors que\nles premiers symptômes de la schizophrénie se manifestent\ngénéralement deux décennies plus tard.\n",
+      "text_sha256": "d6873d5e19f8d83c45a49c83c1c0d971176c9e99a2edad12d0f30ea59e6c5eb5"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.9658203125,
+        291.372314453125,
+        86.25849914550781
+      ],
+      "block_id": "page-0313-block-0005",
+      "order": 5,
+      "text": "peut alors être porté à juger systématiquement les familles de sujets\nanorexiques plus dysfonctionnelles qu’elles ne le sont en réalité.\nCe biais peut mener à la conclusion, éventuellement erronée, que\nles familles de sujets anorexiques sont plus dysfonctionnelles.\n",
+      "text_sha256": "a58c330cbf51bc6f791a682fa28364d62e3712b6695a417136d6a85baae310be"
+    },
+    {
+      "bbox": [
+        48.0,
+        87.3658218383789,
+        291.2849426269531,
+        196.6584930419922
+      ],
+      "block_id": "page-0313-block-0006",
+      "order": 6,
+      "text": "Le risque d’introduire des biais d’information peut être réduit\nde diverses façons :\n• en standardisant la collecte et la cotation de l’information, ce\nqui restreint la subjectivité ;\n• en gardant les sujets et l’évaluateur dans l’ignorance des hy-\npothèses de recherche ;\n• en évitant que l’évaluateur sache à quel groupe (groupe des\nmalades ou des témoins) appartient le sujet interrogé. C’est\nce qu’on appelle une recherche à double insu (double blind).\n",
+      "text_sha256": "eff5874ca81bd50be788d653a3a571a2f500c9407b37b13b834ad8ce515141dd"
+    },
+    {
+      "bbox": [
+        48.0,
+        208.2868194580078,
+        212.31832885742188,
+        224.4293975830078
+      ],
+      "block_id": "page-0313-block-0007",
+      "order": 7,
+      "text": "14.3.5 Facteurs de confusion\n",
+      "text_sha256": "db7ad51563772ccb4dd762a1f6d74ef1da3191a6b1467592e6b5173c7ec15b59"
+    },
+    {
+      "bbox": [
+        48.0,
+        227.86582946777344,
+        291.4638366699219,
+        524.8585205078125
+      ],
+      "block_id": "page-0313-block-0008",
+      "order": 8,
+      "text": "En plus des biais de sélection et d’information, il faut, dans l’inter-\nprétation des résultats, tenir compte du rôle de facteurs de confusion\nentraînant de fausses associations ou masquant des associations\nvalides (confounding factors, une expression souvent traduite par\nl’anglicisme « facteur confondant »). Pour être dit de confusion, un\nfacteur doit être corrélé avec la variable considérée et doit repré-\nsenter un risque accru pour la maladie, indépendamment de sa\nrelation avec le facteur de risque. Par exemple, un chercheur veut\nétudier la relation entre la taille (comme facteur de risque) et la\nschizophrénie. Pour comparer, il forme un groupe témoin de sujets\nanorexiques. La composition selon les sexes des deux groupes est\nfort diérente (facteur de confusion), car 70 % des patients atteints\nde schizophrénie sont des hommes, comparativement au groupe\ndes patients anorexiques, composé de 90% de femmes. De plus,\nles hommes sont en moyenne plus grands que les femmes. Si le\nchercheur ne tient pas compte du rôle du sexe comme facteur\nde confusion, il peut conclure de façon erronée qu’une grande\ntaille est un facteur de risque pour la schizophrénie. Dans ce cas,\nle sexe remplit les conditions d’un facteur de confusion puisque :\n• le sexe masculin est associé à une plus grande taille ;\n• le sexe masculin est un facteur de risque pour la schizophrénie ;\n• une grande taille n’est pas ce qui explique la relation entre la\nschizophrénie et le sexe masculin.\nIl existe des méthodes pour prévenir l’eet des facteurs de\nconfusion sur la validité d’une étude (voir le tableau 14.3).\n",
+      "text_sha256": "a733736bb082cd548172877c7c8d35d1089a33669fb5af1253ab07b1539f87c3"
+    },
+    {
+      "bbox": [
+        50.25,
+        537.3023071289062,
+        208.94236755371094,
+        549.320068359375
+      ],
+      "block_id": "page-0313-block-0009",
+      "order": 9,
+      "text": "TABLEAU 14.3 Trois stratégies à utiliser\n",
+      "text_sha256": "df2dc0aaf92c12e68cf6c0f49727a189d223861961b0a33ccff77f0a58d1e0fa"
+    },
+    {
+      "bbox": [
+        107.0999984741211,
+        548.9523315429688,
+        221.3295135498047,
+        560.9201049804688
+      ],
+      "block_id": "page-0313-block-0010",
+      "order": 10,
+      "text": "pour la collecte de données\n",
+      "text_sha256": "c5731be14382d959913642289efdbf17c5d5b3305167eef9c56df49521f3b857"
+    },
+    {
+      "bbox": [
+        92.3499984741211,
+        576.1741333007812,
+        125.42900085449219,
+        586.7503051757812
+      ],
+      "block_id": "page-0313-block-0011",
+      "order": 11,
+      "text": "Stratégie\n",
+      "text_sha256": "8cbec0f4ad423290b9e920426711158435639adf8d47a9b317be649f8b14234a"
+    },
+    {
+      "bbox": [
+        190.10000610351562,
+        566.1741333007812,
+        270.21710205078125,
+        586.7503051757812
+      ],
+      "block_id": "page-0313-block-0012",
+      "order": 12,
+      "text": "Lien avec l’exemple\n(relation entre la taille\n",
+      "text_sha256": "411f1678e64457ca90c7ceb1053e81e2b6f24bdb6933b00d427a6e09bed2c1eb"
+    },
+    {
+      "bbox": [
+        194.5,
+        586.1741333007812,
+        265.7374572753906,
+        596.7503051757812
+      ],
+      "block_id": "page-0313-block-0013",
+      "order": 13,
+      "text": "et la schizophrénie)\n",
+      "text_sha256": "d5f56cecbff60c9ba836c1e4546419dd475059151991f9e588c79f52be5a10e3"
+    },
+    {
+      "bbox": [
+        52.25,
+        601.9019775390625,
+        163.64874267578125,
+        641.7281494140625
+      ],
+      "block_id": "page-0313-block-0014",
+      "order": 14,
+      "text": "Assigner les patients de façon\naléatoire à l’un ou l’autre des trai-\ntements comparés (randomisation)\ns’il s’agit d’un essai thérapeutique.\n",
+      "text_sha256": "92d8ae3e275c00a80269bccba6977dbc98e205020f0aaedb2cd2d3c5c434e162"
+    },
+    {
+      "bbox": [
+        173.5,
+        601.9019775390625,
+        279.55389404296875,
+        651.7281494140625
+      ],
+      "block_id": "page-0313-block-0015",
+      "order": 15,
+      "text": "Les sujets masculins et féminins\npourraient faire partie des deux\ngroupes, sans égard à leur taille\nou la présence ou non d’anorexie\nou de schizophrénie.\n",
+      "text_sha256": "17b24538cfcaeeaafc86b7cb8a2bab525e892c08d32b7005ca415169393e2cd9"
+    },
+    {
+      "bbox": [
+        52.25,
+        660.3019409179688,
+        140.30325317382812,
+        680.1281127929688
+      ],
+      "block_id": "page-0313-block-0016",
+      "order": 16,
+      "text": "Limiter l’étude à des patients\nremplissant certains critères.\n",
+      "text_sha256": "f7e895895ab97a1ffacc2f735e7a906944dfdd94a59de9e2fc2733711f00097f"
+    },
+    {
+      "bbox": [
+        173.5,
+        660.3019409179688,
+        286.9549865722656,
+        680.1281127929688
+      ],
+      "block_id": "page-0313-block-0017",
+      "order": 17,
+      "text": "Les deux groupes pourraient contenir\nseulement des patients masculins.\n",
+      "text_sha256": "73dc695557b198b87792e7406e7f2758f8a168dda29146187ff655c0463f1775"
+    },
+    {
+      "bbox": [
+        52.25,
+        688.751953125,
+        158.21603393554688,
+        708.578125
+      ],
+      "block_id": "page-0313-block-0018",
+      "order": 18,
+      "text": "Apparier les deux groupes selon\ndes caractéristiques importantes.\n",
+      "text_sha256": "8910c7b4d42bfea80467b9c9b7af6470d759699dd0ca18bf1d72283e63ffc7db"
+    },
+    {
+      "bbox": [
+        173.5,
+        688.751953125,
+        288.163818359375,
+        718.578125
+      ],
+      "block_id": "page-0313-block-0019",
+      "order": 19,
+      "text": "Le chercheur pourrait s’assurer\nque chacun des groupes compte le\nmême nombre de patients masculins.\n",
+      "text_sha256": "7ec797d25ef886053943e09ae585dfd6cb3008df420ffbb22df7ea9d37f118bd"
+    }
+  ],
+  "coordinates_sha256": "d3912d9fca00552117efdd1692188a9aafde3f0cbb7f3532e2524e69d0bc2894",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0313",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "296\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2 Déterminants bio-psycho-sociaux\nIl est souvent impossible d’éliminer l’eet de tous les facteurs\nde confusion dans le devis d’une étude. Dans ce cas, on peut\nrecourir à diérentes méthodes au moment des analyses. La\nméthode la plus couramment utilisée consiste à comparer les\ngroupes par rapport aux facteurs de confusion, et si des dié-\nrences sont détectées, des analyses multivariées peuvent souvent\néliminer leur inuence.\n14.3.6 Dénition de la causalité\nUne association ou corrélation entre un facteur de risque hypo-\nthétique et une maladie n’est pas automatiquement garante de\nla causalité de cette association. Traditionnellement, la causalité\nétait établie exclusivement selon le postulat de Koch (1890)\n(le découvreur du bacille de Koch, agent causal de la tuberculose) :\n• l’agent infectieux est toujours présent dans les cas où la maladie\nest présente ;\n• lorsque l’agent infectieux est présent, la maladie est présente ;\n• l’élimination de l’agent infectieux entraîne la guérison.\nCependant, ces critères ne peuvent s’appliquer dans le cas de\nmaladies chroniques comme les psychopathologies. Hill (1965)\na alors proposé les critères suivants pour juger de la causalité\nd’une association :\n• Si l’association est très forte, elle risque moins d’être fortuite\nou de reéter un biais. Ainsi, un facteur qui augmente de\n10 fois le risque d’une maladie est plus susceptible d’entraîner\nréellement la maladie qu’un facteur qui n’augmente le risque\nque de 1,5 fois.\n• La vraisemblance biologique est aussi un critère utile, quoique\nsouvent dicile à établir. Par exemple, plusieurs études laissent\nentendre que des infections à Inuenza survenant au cours\ndu deuxième trimestre de la grossesse augmentent le risque\nque l’enfant soure plus tard de schizophrénie ; le fait que\ncette période constitue un moment critique dans le déve-\nloppement du système nerveux central du fœtus soutient la\nvraisemblance biologique d’une association causale entre\nla schizophrénie et l’infection à Inuenza chez la femme\nenceinte (Brown & al., 2004).\n• La reproduction de l’association par plusieurs études indépen-\ndantes est primordiale pour établir la causalité. En eet, si ces\nétudes en arrivent aux mêmes conclusions, il est peu probable\nque ces dernières soient erronées ou découlent des mêmes\nproblèmes méthodologiques. Un exemple frappant de constance\nest fourni par les études de jumeaux, d’adoption et d’agrégation\nfamiliale, qui concordent pour étayer l’importance des facteurs\ngénétiques dans la schizophrénie (Van Os & al., 2008).\n• Une relation entre le degré d’exposition au facteur de risque et\nla probabilité d’avoir la maladie apparaît elle aussi signicative.\nPar exemple, diérentes études ont montré que la probabilité\nde faire une dépression augmente avec le nombre d’événe-\nments de vie stressants auxquels une personne est exposée\n(Dohrenwend & Dohrenwend, 1974).\n• L’exposition doit précéder le début de la maladie ; la relation\nentre les infections à Inuenza chez la femme enceinte et la\nschizophrénie de son enfant satisfait à ce critère. En eet,\nces infections surviennent pendant la grossesse, alors que\nles premiers symptômes de la schizophrénie se manifestent\ngénéralement deux décennies plus tard.\npeut alors être porté à juger systématiquement les familles de sujets\nanorexiques plus dysfonctionnelles qu’elles ne le sont en réalité.\nCe biais peut mener à la conclusion, éventuellement erronée, que\nles familles de sujets anorexiques sont plus dysfonctionnelles.\nLe risque d’introduire des biais d’information peut être réduit\nde diverses façons :\n• en standardisant la collecte et la cotation de l’information, ce\nqui restreint la subjectivité ;\n• en gardant les sujets et l’évaluateur dans l’ignorance des hy-\npothèses de recherche ;\n• en évitant que l’évaluateur sache à quel groupe (groupe des\nmalades ou des témoins) appartient le sujet interrogé. C’est\nce qu’on appelle une recherche à double insu (double blind).\n14.3.5 Facteurs de confusion\nEn plus des biais de sélection et d’information, il faut, dans l’inter-\nprétation des résultats, tenir compte du rôle de facteurs de confusion\nentraînant de fausses associations ou masquant des associations\nvalides (confounding factors, une expression souvent traduite par\nl’anglicisme « facteur confondant »). Pour être dit de confusion, un\nfacteur doit être corrélé avec la variable considérée et doit repré-\nsenter un risque accru pour la maladie, indépendamment de sa\nrelation avec le facteur de risque. Par exemple, un chercheur veut\nétudier la relation entre la taille (comme facteur de risque) et la\nschizophrénie. Pour comparer, il forme un groupe témoin de sujets\nanorexiques. La composition selon les sexes des deux groupes est\nfort diérente (facteur de confusion), car 70 % des patients atteints\nde schizophrénie sont des hommes, comparativement au groupe\ndes patients anorexiques, composé de 90% de femmes. De plus,\nles hommes sont en moyenne plus grands que les femmes. Si le\nchercheur ne tient pas compte du rôle du sexe comme facteur\nde confusion, il peut conclure de façon erronée qu’une grande\ntaille est un facteur de risque pour la schizophrénie. Dans ce cas,\nle sexe remplit les conditions d’un facteur de confusion puisque :\n• le sexe masculin est associé à une plus grande taille ;\n• le sexe masculin est un facteur de risque pour la schizophrénie ;\n• une grande taille n’est pas ce qui explique la relation entre la\nschizophrénie et le sexe masculin.\nIl existe des méthodes pour prévenir l’eet des facteurs de\nconfusion sur la validité d’une étude (voir le tableau 14.3).\nTABLEAU 14.3 Trois stratégies à utiliser\npour la collecte de données\nStratégie\nLien avec l’exemple\n(relation entre la taille\net la schizophrénie)\nAssigner les patients de façon\naléatoire à l’un ou l’autre des trai-\ntements comparés (randomisation)\ns’il s’agit d’un essai thérapeutique.\nLes sujets masculins et féminins\npourraient faire partie des deux\ngroupes, sans égard à leur taille\nou la présence ou non d’anorexie\nou de schizophrénie.\nLimiter l’étude à des patients\nremplissant certains critères.\nLes deux groupes pourraient contenir\nseulement des patients masculins.\nApparier les deux groupes selon\ndes caractéristiques importantes.\nLe chercheur pourrait s’assurer\nque chacun des groupes compte le\nmême nombre de patients masculins.\n",
+  "raw_text_sha256": "af95cbfc8281b73183dc6aaf4b91ed867ef2fa88fcbf0cd5a655532196174dc8",
+  "source_page_display": 314,
+  "source_page_index": 313
+}

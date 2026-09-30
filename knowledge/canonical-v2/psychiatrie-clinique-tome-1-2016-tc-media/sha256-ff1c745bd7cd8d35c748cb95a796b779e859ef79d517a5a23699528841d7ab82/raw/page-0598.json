@@ -1,0 +1,388 @@
+{
+  "block_sequence_sha256": "62e02f497705326deff3bf41e524c663f17779b49235ce0dc03961a8a20d5859",
+  "blocks": [
+    {
+      "bbox": [
+        362.5,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0598-block-0001",
+      "order": 1,
+      "text": "Chapitre 27\nTroubles neurocognitifs\n581\n",
+      "text_sha256": "fa0b99b0624e0a66611bf452ac9e6aa7b4cdd94d8dbf99b2bc4192b772db0328"
+    },
+    {
+      "bbox": [
+        312.0,
+        369.23681640625,
+        462.9937744140625,
+        385.37939453125
+      ],
+      "block_id": "page-0598-block-0002",
+      "order": 2,
+      "text": "27.1.6 Outils diagnostiques\n",
+      "text_sha256": "811e27ccef592ad45267fd61c8751a1d1bcd1f0c6e2b8afb4ae9e634cb559d7d"
+    },
+    {
+      "bbox": [
+        312.0,
+        388.7158203125,
+        555.5652465820312,
+        725.70849609375
+      ],
+      "block_id": "page-0598-block-0003",
+      "order": 3,
+      "text": "Les critères diagnostiques du DSM-5 (APA, 2015) demeurent la\nréférence pour le diagnostic du delirium. Les critères du DSM-\nIV-TR montraient une sensibilité de 100 % et une spécicité de\n91 % (Trzepacz & al., 2005). Le DSM-5 distingue sept catégories :\n• dû à une intoxication par une substance ;\n• dû au sevrage d’une substance ;\n• induit par un médicament ;\n• dû à une autre aection médicale ;\n• dû à des étiologies multiples ;\n• syndrome de delirium atténué ;\n• delirium non spécié (APA, 2015).\nLe Mini-Mental State Examination (MMSE) de Folstein\net ses collaborateurs (1975) est important pour dépister et\ndocumenter la présence de troubles neurocognitifs (sensibilité\nde 96 %), mais il ne permet pas de distinguer le delirium de la\ndémence (spécicité de 38 %) (Trzepacz & al., 2005). Ce test\ns’eectue rapidement, en moyenne en sept minutes. Il mesure\nl’orientation, l’enregistrement, l’attention et le calcul, la réten-\ntion mnésique, le langage et la praxie de construction. Même\ns’il évalue mal les fonctions exécutives, il fait partie des outils\nvalides et ables que l’on peut utiliser pour évaluer le delirium\net la démence. Un score inférieur à 25 suggère la présence\nd’une démence ou d’un delirium. Les sphères cognitives les plus\ntouchées sont l’orientation, l’attention, la mémoire, la praxie de\nconstruction et les fonctions exécutives. Le MMSE permet aussi\nde suivre l’évolution des troubles neurocognitifs et l’ecacité\ndu traitement instauré. Les informations fournies par les tiers\naident à déterminer si le patient présentait déjà une atteinte des\n",
+      "text_sha256": "7faf5cef86556dec2171d5900ee831d2d09cd1dd6c0efa71ec614b71b873ad17"
+    },
+    {
+      "bbox": [
+        54.0,
+        371.0658264160156,
+        297.4582214355469,
+        427.5585021972656
+      ],
+      "block_id": "page-0598-block-0004",
+      "order": 4,
+      "text": "tremblements accompagnant cet état, il se présente typiquement\navec une hyperactivité autonomique (tachycardie, hypertension\nartérielle [HTA], èvre et diaphorèse) et des hallucinations\nvisuelles ou tactiles (vision de bestioles qui volent ou se promènent\nsur le lit ou sur la peau).\n",
+      "text_sha256": "94ea52a39fb0f96344117e6e9e7cc663b4712f851a65f0f52f95e8df6d28827f"
+    },
+    {
+      "bbox": [
+        54.0,
+        438.0868225097656,
+        149.9910430908203,
+        454.2294006347656
+      ],
+      "block_id": "page-0598-block-0005",
+      "order": 5,
+      "text": "27.1.5 Évaluation\n",
+      "text_sha256": "290c9f41ad0a287faf9d82161013073593fbcbc49b6a5de661173f869d25dd20"
+    },
+    {
+      "bbox": [
+        54.0,
+        457.5658264160156,
+        297.2134094238281,
+        514.0584716796875
+      ],
+      "block_id": "page-0598-block-0006",
+      "order": 6,
+      "text": "La prise en charge du delirium nécessite un bilan médical complet\ndicté par les observations pertinentes de l’examen physique et\nune étude attentive des informations collatérales (dossiers actuel\net antérieur, notes inrmières, questionnement des proches\nsignicatifs). Le bilan est détaillé au tableau 27.2.\n",
+      "text_sha256": "7b25225b28807f7f129253e3865b73270175efe54294133cd4343f143d0ba106"
+    },
+    {
+      "bbox": [
+        58.25,
+        58.85527801513672,
+        532.8671875,
+        95.62812805175781
+      ],
+      "block_id": "page-0598-block-0007",
+      "order": 7,
+      "text": "DSM-5\nDSM-IV-TR\n29x.xx (F1x.xx) État confusionnel aigu (delirium) dû à…\nDelirium dû à… (indiquez l’affection médicale générale)\nA. Une perturbation de l’attention (c.-à-d. diminution de la capacité de diriger,\n",
+      "text_sha256": "b731aeaff8826c1ee7f32f16747ea0776de951015dba3cacdeae63919253980a"
+    },
+    {
+      "bbox": [
+        66.75,
+        95.80195617675781,
+        306.0592956542969,
+        115.62812805175781
+      ],
+      "block_id": "page-0598-block-0008",
+      "order": 8,
+      "text": "focaliser, soutenir et déplacer son attention) et de la conscience (diminution\nde l’orientation dans l’environnement).\n",
+      "text_sha256": "d3cccc8da64975ae177976796c3753dd8ade7ea433d3414270f9e4002f9bb355"
+    },
+    {
+      "bbox": [
+        321.75,
+        85.80195617675781,
+        520.6051635742188,
+        95.62812805175781
+      ],
+      "block_id": "page-0598-block-0009",
+      "order": 9,
+      "text": "A. Perturbation de la conscience (c.-à-d. baisse d’une prise de\n",
+      "text_sha256": "1d3a97526e32dc472131534b161015d8119ba89eae46e2ef2a0168ecf33872e3"
+    },
+    {
+      "bbox": [
+        330.25,
+        95.80195617675781,
+        548.905029296875,
+        115.62812805175781
+      ],
+      "block_id": "page-0598-block-0010",
+      "order": 10,
+      "text": "conscience claire de l’environnement) avec diminution de la capacité\nà diriger, focaliser, soutenir ou mobiliser l’attention.\n",
+      "text_sha256": "996b6dfea30c0f45d4de744158f2a77478b1df548d56f2c998865bd72c197f62"
+    },
+    {
+      "bbox": [
+        58.25,
+        120.20195007324219,
+        311.4866638183594,
+        130.0281219482422
+      ],
+      "block_id": "page-0598-block-0011",
+      "order": 11,
+      "text": "B. La perturbation s’installe en un temps court (habituellement quelques heures\n",
+      "text_sha256": "140138a6edb8610742a897aaa59f268e06bdc43839ae83c8d351f1385f93ac79"
+    },
+    {
+      "bbox": [
+        66.75,
+        130.2019500732422,
+        313.9963073730469,
+        150.0281219482422
+      ],
+      "block_id": "page-0598-block-0012",
+      "order": 12,
+      "text": "ou quelques jours), représente un changement par rapport à l’attention et à la\nconscience de base et tend à uctuer en sévérité tout au long de la journée.\n",
+      "text_sha256": "c9ee8de480686ad5a5dcb37371a3edb6713c741868d916e0c706aa18d79339af"
+    },
+    {
+      "bbox": [
+        321.75,
+        120.20195007324219,
+        520.2694702148438,
+        130.0281219482422
+      ],
+      "block_id": "page-0598-block-0013",
+      "order": 13,
+      "text": "C. La perturbation s’installe en un temps court (habituellement\n",
+      "text_sha256": "cd3ad54ef2a0ee23fca7fcaa90ac8ec53f28ef3968e77fedc64c0999fb2e1669"
+    },
+    {
+      "bbox": [
+        330.3999938964844,
+        130.2019500732422,
+        535.9902954101562,
+        150.0281219482422
+      ],
+      "block_id": "page-0598-block-0014",
+      "order": 14,
+      "text": "quelques heures ou quelques jours) et tend à avoir une évolution\nuctuante tout au long de la journée.\n",
+      "text_sha256": "b0edde69692de4469e3d45ca25273bbb2b6cccfd73f63bc652846e8aedd13439"
+    },
+    {
+      "bbox": [
+        58.25,
+        154.65196228027344,
+        313.74700927734375,
+        164.47813415527344
+      ],
+      "block_id": "page-0598-block-0015",
+      "order": 15,
+      "text": "C. Une autre perturbation cognitive (p. ex., un décit de la mémoire, de l’orienta-\n",
+      "text_sha256": "97ad4855e68f6cbbf9efc52b3759457af44075e9b2ddcb4aa48e50e22cce30f1"
+    },
+    {
+      "bbox": [
+        66.9000015258789,
+        164.65196228027344,
+        277.19244384765625,
+        174.47813415527344
+      ],
+      "block_id": "page-0598-block-0016",
+      "order": 16,
+      "text": "tion, du langage, des habiletés visuospatiales ou des perceptions).\n",
+      "text_sha256": "db73e44549f59c2cdf825e1c45f6fc27de21b1582029568e2d596fce88648a40"
+    },
+    {
+      "bbox": [
+        321.75,
+        154.65196228027344,
+        532.56982421875,
+        164.47813415527344
+      ],
+      "block_id": "page-0598-block-0017",
+      "order": 17,
+      "text": "B. Modication du fonctionnement cognitif (telle qu’un décit de la\n",
+      "text_sha256": "f8c3eacc0b6f5f3344ab28053dffc5b914b320f5eeefdfbf3122fb0c5a4f568d"
+    },
+    {
+      "bbox": [
+        58.25,
+        164.65196228027344,
+        545.8154296875,
+        194.47813415527344
+      ],
+      "block_id": "page-0598-block-0018",
+      "order": 18,
+      "text": "mémoire, une désorientation, une perturbation du langage) ou bien\nsurvenue d’une perturbation des perceptions qui n’est pas mieux\nexpliquée par une démence préexistante, stabilisée ou en évolution.\nD. Les perturbations des critères A et C ne sont pas mieux expliquées par un\n",
+      "text_sha256": "26d8c1b3764dae254071edbb79de2c04c732e47a70e1ae4700922fe1dcc71280"
+    },
+    {
+      "bbox": [
+        67.05000305175781,
+        189.0519561767578,
+        306.5802917480469,
+        218.8781280517578
+      ],
+      "block_id": "page-0598-block-0019",
+      "order": 19,
+      "text": "trouble neurocognitif préexistant, stabilisé ou en évolution et ne doivent pas\nsurvenir dans le contexte d’un niveau de vigilance très réduit, comme dans\nun coma.\n",
+      "text_sha256": "e69dfa2871b7db7f57046912f9f9c5e232b1c95542c1a83981d9eb96b20fae33"
+    },
+    {
+      "bbox": [
+        58.25,
+        223.501953125,
+        300.3470153808594,
+        233.328125
+      ],
+      "block_id": "page-0598-block-0020",
+      "order": 20,
+      "text": "E. Mise en évidence d’après les antécédents, l’examen physique ou les exa-\n",
+      "text_sha256": "31b2451732ce78f2ebdb7b653fb3af2e91ccbf134ff3d207d01a43cff9d1c906"
+    },
+    {
+      "bbox": [
+        66.25,
+        233.501953125,
+        312.0658874511719,
+        273.328125
+      ],
+      "block_id": "page-0598-block-0021",
+      "order": 21,
+      "text": "mens complémentaires que la perturbation est la conséquence physiologique\ndirecte d’une autre affection médicale, d’une intoxication ou d’un sevrage\nd’une substance (c.-à-d. une drogue ou un médicament) ou d’une exposition\nà un produit toxique, ou est due à de multiples causes.\n",
+      "text_sha256": "960e5e4cacb8d14c82b5d55e747fa3f8a2fec6e2407b62c929ab716bc7b263ea"
+    },
+    {
+      "bbox": [
+        321.75,
+        223.501953125,
+        537.0469970703125,
+        233.328125
+      ],
+      "block_id": "page-0598-block-0022",
+      "order": 22,
+      "text": "D. Mise en évidence, d’après l’histoire de la maladie, l’examen phy-\n",
+      "text_sha256": "61e582d561fcf80d48ca176e3401fc8dbbb0a7e8f5aaac3b5ac7bdc5f187f80d"
+    },
+    {
+      "bbox": [
+        330.5500183105469,
+        233.501953125,
+        546.4242553710938,
+        263.328125
+      ],
+      "block_id": "page-0598-block-0023",
+      "order": 23,
+      "text": "sique ou les examens complémentaires que la perturbation est due\naux conséquences physiologiques directes d’une affection médicale\ngénérale.\n",
+      "text_sha256": "7b07f904a3c71c8a089ff86c58adbfe16c921b900a63ab1862ddc873efde9bed"
+    },
+    {
+      "bbox": [
+        56.0,
+        41.002296447753906,
+        254.29026794433594,
+        54.02006912231445
+      ],
+      "block_id": "page-0598-block-0024",
+      "order": 24,
+      "text": "TABLEAU 27.1 Critères diagnostiques du delirium\n",
+      "text_sha256": "f2a5e0940a08ffcb34483dd65233b11e5196ea5074ad3e300de80178ebfc9a67"
+    },
+    {
+      "bbox": [
+        54.0,
+        283.09063720703125,
+        215.54830932617188,
+        291.9588623046875
+      ],
+      "block_id": "page-0598-block-0025",
+      "order": 25,
+      "text": "Sources : APA (2015), p. 704 ; APA (2004a), p. 165-166.\n",
+      "text_sha256": "984a7af16b08e88cf3ac3667c6b4008fb4ec2970bc5c26df6232ad8e0d413b71"
+    },
+    {
+      "bbox": [
+        54.0,
+        298.09063720703125,
+        544.9441528320312,
+        354.82501220703125
+      ],
+      "block_id": "page-0598-block-0026",
+      "order": 26,
+      "text": "Traduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004.\nAll rights reserved.\n",
+      "text_sha256": "0352d9903985e6b7f02b2deb2d2203be5950df7943799e00cca0b4ea277a8b9b"
+    },
+    {
+      "bbox": [
+        56.0,
+        530.5523071289062,
+        202.43775939941406,
+        542.8700561523438
+      ],
+      "block_id": "page-0598-block-0027",
+      "order": 27,
+      "text": "TABLEAU 27.2 Bilan dans le delirium\n",
+      "text_sha256": "70e2c79b15a382c4e3fe4954aac5b59eb7e0c8063af04b6e808c36e7f4fca43b"
+    },
+    {
+      "bbox": [
+        94.4000015258789,
+        550.5741577148438,
+        280.02349853515625,
+        561.1503295898438
+      ],
+      "block_id": "page-0598-block-0028",
+      "order": 28,
+      "text": "Bilan de base\nBilan complémentaire\n",
+      "text_sha256": "839b7840384db9d584857a9ea7bf8de5f550735d1bac1c08fd52c10191d29a6b"
+    },
+    {
+      "bbox": [
+        59.75,
+        568.5519409179688,
+        175.90818786621094,
+        711.6163940429688
+      ],
+      "block_id": "page-0598-block-0029",
+      "order": 29,
+      "text": "• Signes vitaux\n• Saturation en oxygène\n• Formule sanguine complète\n• Sodium, potassium, magnésium,\nphosphore, calcium\n• Albumine, créatinine, urée\n• Tests des fonctions hépatiques\n• Glycémie\n• Tests de fonction thyroïdienne\n• Analyse d’urine\n• Bilan toxicologique\n• Dosage de médicaments\n• Vitamine B12, acide folique\n",
+      "text_sha256": "a7010d34555edf8e37f25ddd371e7e700d5fe9647de29d92cf281c0f0b8d744e"
+    },
+    {
+      "bbox": [
+        189.25,
+        568.5519409179688,
+        282.06103515625,
+        633.3781127929688
+      ],
+      "block_id": "page-0598-block-0030",
+      "order": 30,
+      "text": "• Hémoculture\n• Radiographie pulmonaire\n• Radiographie abdominale\n• Tomographie du crâne\n• Électrocardiogramme\n• Électroencéphalogramme\n",
+      "text_sha256": "19bddc236f3ee30bc48766a4c6f8c63a0ffd7c1b41cbb07fdfd0aee7c125d087"
+    },
+    {
+      "bbox": [
+        54.0,
+        715.890625,
+        250.3020782470703,
+        724.7588500976562
+      ],
+      "block_id": "page-0598-block-0031",
+      "order": 31,
+      "text": "Sources : Adapté de Yudofsky & Hales (2008) ; CCSMH (2006), p. 33.\n",
+      "text_sha256": "1900db307faab423839ed67366a6523d727c8c96981784f100faaf3f97f8f081"
+    }
+  ],
+  "coordinates_sha256": "654723a2d31a64baf2f9ca9fc465b906add8d42b2ae30c3400b8abff0b66cb0c",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0598",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 27\nTroubles neurocognitifs\n581\n27.1.6 Outils diagnostiques\nLes critères diagnostiques du DSM-5 (APA, 2015) demeurent la\nréférence pour le diagnostic du delirium. Les critères du DSM-\nIV-TR montraient une sensibilité de 100 % et une spécicité de\n91 % (Trzepacz & al., 2005). Le DSM-5 distingue sept catégories :\n• dû à une intoxication par une substance ;\n• dû au sevrage d’une substance ;\n• induit par un médicament ;\n• dû à une autre aection médicale ;\n• dû à des étiologies multiples ;\n• syndrome de delirium atténué ;\n• delirium non spécié (APA, 2015).\nLe Mini-Mental State Examination (MMSE) de Folstein\net ses collaborateurs (1975) est important pour dépister et\ndocumenter la présence de troubles neurocognitifs (sensibilité\nde 96 %), mais il ne permet pas de distinguer le delirium de la\ndémence (spécicité de 38 %) (Trzepacz & al., 2005). Ce test\ns’eectue rapidement, en moyenne en sept minutes. Il mesure\nl’orientation, l’enregistrement, l’attention et le calcul, la réten-\ntion mnésique, le langage et la praxie de construction. Même\ns’il évalue mal les fonctions exécutives, il fait partie des outils\nvalides et ables que l’on peut utiliser pour évaluer le delirium\net la démence. Un score inférieur à 25 suggère la présence\nd’une démence ou d’un delirium. Les sphères cognitives les plus\ntouchées sont l’orientation, l’attention, la mémoire, la praxie de\nconstruction et les fonctions exécutives. Le MMSE permet aussi\nde suivre l’évolution des troubles neurocognitifs et l’ecacité\ndu traitement instauré. Les informations fournies par les tiers\naident à déterminer si le patient présentait déjà une atteinte des\ntremblements accompagnant cet état, il se présente typiquement\navec une hyperactivité autonomique (tachycardie, hypertension\nartérielle [HTA], èvre et diaphorèse) et des hallucinations\nvisuelles ou tactiles (vision de bestioles qui volent ou se promènent\nsur le lit ou sur la peau).\n27.1.5 Évaluation\nLa prise en charge du delirium nécessite un bilan médical complet\ndicté par les observations pertinentes de l’examen physique et\nune étude attentive des informations collatérales (dossiers actuel\net antérieur, notes inrmières, questionnement des proches\nsignicatifs). Le bilan est détaillé au tableau 27.2.\nDSM-5\nDSM-IV-TR\n29x.xx (F1x.xx) État confusionnel aigu (delirium) dû à…\nDelirium dû à… (indiquez l’affection médicale générale)\nA. Une perturbation de l’attention (c.-à-d. diminution de la capacité de diriger,\nfocaliser, soutenir et déplacer son attention) et de la conscience (diminution\nde l’orientation dans l’environnement).\nA. Perturbation de la conscience (c.-à-d. baisse d’une prise de\nconscience claire de l’environnement) avec diminution de la capacité\nà diriger, focaliser, soutenir ou mobiliser l’attention.\nB. La perturbation s’installe en un temps court (habituellement quelques heures\nou quelques jours), représente un changement par rapport à l’attention et à la\nconscience de base et tend à uctuer en sévérité tout au long de la journée.\nC. La perturbation s’installe en un temps court (habituellement\nquelques heures ou quelques jours) et tend à avoir une évolution\nuctuante tout au long de la journée.\nC. Une autre perturbation cognitive (p. ex., un décit de la mémoire, de l’orienta-\ntion, du langage, des habiletés visuospatiales ou des perceptions).\nB. Modication du fonctionnement cognitif (telle qu’un décit de la\nmémoire, une désorientation, une perturbation du langage) ou bien\nsurvenue d’une perturbation des perceptions qui n’est pas mieux\nexpliquée par une démence préexistante, stabilisée ou en évolution.\nD. Les perturbations des critères A et C ne sont pas mieux expliquées par un\ntrouble neurocognitif préexistant, stabilisé ou en évolution et ne doivent pas\nsurvenir dans le contexte d’un niveau de vigilance très réduit, comme dans\nun coma.\nE. Mise en évidence d’après les antécédents, l’examen physique ou les exa-\nmens complémentaires que la perturbation est la conséquence physiologique\ndirecte d’une autre affection médicale, d’une intoxication ou d’un sevrage\nd’une substance (c.-à-d. une drogue ou un médicament) ou d’une exposition\nà un produit toxique, ou est due à de multiples causes.\nD. Mise en évidence, d’après l’histoire de la maladie, l’examen phy-\nsique ou les examens complémentaires que la perturbation est due\naux conséquences physiologiques directes d’une affection médicale\ngénérale.\nTABLEAU 27.1 Critères diagnostiques du delirium\nSources : APA (2015), p. 704 ; APA (2004a), p. 165-166.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004.\nAll rights reserved.\nTABLEAU 27.2 Bilan dans le delirium\nBilan de base\nBilan complémentaire\n• Signes vitaux\n• Saturation en oxygène\n• Formule sanguine complète\n• Sodium, potassium, magnésium,\nphosphore, calcium\n• Albumine, créatinine, urée\n• Tests des fonctions hépatiques\n• Glycémie\n• Tests de fonction thyroïdienne\n• Analyse d’urine\n• Bilan toxicologique\n• Dosage de médicaments\n• Vitamine B12, acide folique\n• Hémoculture\n• Radiographie pulmonaire\n• Radiographie abdominale\n• Tomographie du crâne\n• Électrocardiogramme\n• Électroencéphalogramme\nSources : Adapté de Yudofsky & Hales (2008) ; CCSMH (2006), p. 33.\n",
+  "raw_text_sha256": "5bc3cd59a2f12cc4f76d2307eff0285ed51fae14ff7aee3926fa65691214fb92",
+  "source_page_display": 599,
+  "source_page_index": 598
+}

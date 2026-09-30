@@ -1,0 +1,112 @@
+{
+  "block_sequence_sha256": "9914a1e3e622a34f609c38a839522971c42f1ca738a2df2683fd962c95984ac0",
+  "blocks": [
+    {
+      "bbox": [
+        420.6000061035156,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0116-block-0001",
+      "order": 1,
+      "text": "Chapitre 5\nGénétique\n99\n",
+      "text_sha256": "42f6c155d65e06b8aa314c0eb3c7fb74edbeac994e5c292ec819f37b61686bac"
+    },
+    {
+      "bbox": [
+        312.0,
+        398.4658203125,
+        555.1070556640625,
+        420.65850830078125
+      ],
+      "block_id": "page-0116-block-0002",
+      "order": 2,
+      "text": "fécondé par le spermatozoïde, et le processus de développement\ndu fœtus débute.\n",
+      "text_sha256": "285d31f598ac64c7f6b41d30f8babd09417e75887691530465eb28f981a132c0"
+    },
+    {
+      "bbox": [
+        312.0,
+        421.91583251953125,
+        555.2422485351562,
+        596.5084838867188
+      ],
+      "block_id": "page-0116-block-0003",
+      "order": 3,
+      "text": "L’analyse de liaison génétique examine ce phénomène de\nliaison à l’intérieur de familles dont certains membres sont\naectés par une maladie et d’autres non. Ainsi, on étudie la\ncoségrégation d’un marqueur génétique, dont on connaît le\nlocus, avec une maladie, dont on ne connaît pas le locus. On\ndétermine si un allèle de ce marqueur génétique est fréquem-\nment transmis chez les personnes sourant de la maladie dans\nune famille. Si tel est le cas, on conclut alors que le gène de la\nmaladie se trouve à proximité du marqueur. C’est en observant\nune telle liaison génétique entre la chorée de Huntington et\ndes marqueurs localisés sur le bras court du chromosome 4\n(en l’occurrence une répétition du trinucléotide CAG [cyto-\nsine-adénine-guanine]) qu’il a été possible de conclure que le\ngène responsable de cette chorée était situé dans cette région\nchromosomique.\n",
+      "text_sha256": "7c07bd4cc143b63d0014dbd5cbc0b32a02dd3013c57b53215eb03247d2c50334"
+    },
+    {
+      "bbox": [
+        312.0,
+        597.7158203125,
+        555.6089477539062,
+        725.45849609375
+      ],
+      "block_id": "page-0116-block-0004",
+      "order": 4,
+      "text": "Ce processus est illustré par les génogrammes ctifs de la\ngure 5.5, où sont représentés des membres de trois familles\nsourant ou non d’une maladie donnée, ainsi que les allèles\ndu marqueur utilisé, ce marqueur ayant six allèles diérents,\nnumérotés de 1 à 6. Pour la famille 1, la maladie est transmise à\nl’origine par la grand-mère (génération 1), à deux de ses enfants\n(génération 2), qui la transmettent, à leur tour, à certains de\nleurs enfants (génération 3). L’allèle 2 du marqueur est lui aussi\ntransmis des parents aux enfants, chaque fois que la maladie a,\nelle aussi, été transmise. De la même façon, dans la famille 2,\ntous les individus présentant la maladie ont reçu l’allèle 4 du\n",
+      "text_sha256": "89b0e53193dc31ca6b842bbef632872d31406699d67f4c30bbecdc214b64de9d"
+    },
+    {
+      "bbox": [
+        54.0,
+        396.8368225097656,
+        228.30499267578125,
+        412.9794006347656
+      ],
+      "block_id": "page-0116-block-0005",
+      "order": 5,
+      "text": "5.3.1 Méthodes d’identication\n",
+      "text_sha256": "d6a060f8de4d7668b867e48401faa502591069be1a91113b8d460e198d67fdfc"
+    },
+    {
+      "bbox": [
+        54.0,
+        416.3158264160156,
+        297.33367919921875,
+        472.8085021972656
+      ],
+      "block_id": "page-0116-block-0006",
+      "order": 6,
+      "text": "An de circonscrire les régions du génome qui contiennent les\ngènes de susceptibilité et trouver ceux-ci, on a recours à deux\ngrandes stratégies d’analyses génétiques, à savoir les analyses de\nliaison (linkage) et les analyses d’associations. Cette seconde caté-\ngorie de stratégies est décrite en détail dans les lignes qui suivent.\n",
+      "text_sha256": "6236d585923f8199f6e8935520eba571aec40bacba0aef80ac76769ba5a1ed79"
+    },
+    {
+      "bbox": [
+        54.0,
+        473.8158264160156,
+        297.5093994140625,
+        725.8085327148438
+      ],
+      "block_id": "page-0116-block-0007",
+      "order": 7,
+      "text": "Les analyses de liaison génétique portent sur des familles\naectées par une maladie. Elles se basent sur le processus de la\nméiose, par lequel les cellules germinales du père deviennent des\nspermatozoïdes et celles de la mère deviennent des ovules. Au\ndébut de la méiose (voir la gure 5.4a), les cellules germinales\n(c.-à-d. les cellules qui servent à la reproduction) du père et de\nla mère sont encore diploïdes, c’est-à-dire qu’à ce moment, elles\ncontiennent encore leurs 23 paires de chromosomes, comme\nn’importe quelle autre cellule de l’organisme. Au cours de la\nméiose, ces chromosomes sont copiés et, durant cette copie, il\npeut se produire des recombinaisons au cours desquelles des\nmorceaux de chacune de ces copies de chromosomes peuvent\nêtre échangés. Il en résulte éventuellement une nouvelle orga-\nnisation des allèles le long des chromosomes (voir la gure 5.4).\nPar exemple, le premier chromosome contient les allèles A, B\net C (aux loci 1, 2 et 3, respectivement) au début de la méiose,\nalors qu’à la n, il contient les allèles a, B et C. À l’issue de la\nméiose, les paires de chromosomes se séparent et chaque gamète\n(spermatozoïde ou ovule) n’hérite que d’un seul exemplaire de\nchaque chromosome (on passe donc de 2n chromosomes à n\nchromosomes dans chaque gamète) et donc d’un lot unique\nd’allèles, à la suite des recombinaisons. Par la suite, l’ovule est\n",
+      "text_sha256": "7df9245e748b1d8520a8ef11ad80c9ccb3efd668bda09bafc502fdd3567a06ac"
+    },
+    {
+      "bbox": [
+        56.29999923706055,
+        41.002296447753906,
+        356.2709655761719,
+        53.320068359375
+      ],
+      "block_id": "page-0116-block-0008",
+      "order": 8,
+      "text": "FIGURE 5.3 Modèle de transmission mendélienne dominante et récessive\n",
+      "text_sha256": "0957ace579c19fbd8ac3ea81c6e80e834ae2b5673d2b286829d68aae269c1318"
+    }
+  ],
+  "coordinates_sha256": "e183a2c3ee50ad9df28490ac1e8772f36a39cfee079bb5873c8c42bc7cd7b687",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0116",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 5\nGénétique\n99\nfécondé par le spermatozoïde, et le processus de développement\ndu fœtus débute.\nL’analyse de liaison génétique examine ce phénomène de\nliaison à l’intérieur de familles dont certains membres sont\naectés par une maladie et d’autres non. Ainsi, on étudie la\ncoségrégation d’un marqueur génétique, dont on connaît le\nlocus, avec une maladie, dont on ne connaît pas le locus. On\ndétermine si un allèle de ce marqueur génétique est fréquem-\nment transmis chez les personnes sourant de la maladie dans\nune famille. Si tel est le cas, on conclut alors que le gène de la\nmaladie se trouve à proximité du marqueur. C’est en observant\nune telle liaison génétique entre la chorée de Huntington et\ndes marqueurs localisés sur le bras court du chromosome 4\n(en l’occurrence une répétition du trinucléotide CAG [cyto-\nsine-adénine-guanine]) qu’il a été possible de conclure que le\ngène responsable de cette chorée était situé dans cette région\nchromosomique.\nCe processus est illustré par les génogrammes ctifs de la\ngure 5.5, où sont représentés des membres de trois familles\nsourant ou non d’une maladie donnée, ainsi que les allèles\ndu marqueur utilisé, ce marqueur ayant six allèles diérents,\nnumérotés de 1 à 6. Pour la famille 1, la maladie est transmise à\nl’origine par la grand-mère (génération 1), à deux de ses enfants\n(génération 2), qui la transmettent, à leur tour, à certains de\nleurs enfants (génération 3). L’allèle 2 du marqueur est lui aussi\ntransmis des parents aux enfants, chaque fois que la maladie a,\nelle aussi, été transmise. De la même façon, dans la famille 2,\ntous les individus présentant la maladie ont reçu l’allèle 4 du\n5.3.1 Méthodes d’identication\nAn de circonscrire les régions du génome qui contiennent les\ngènes de susceptibilité et trouver ceux-ci, on a recours à deux\ngrandes stratégies d’analyses génétiques, à savoir les analyses de\nliaison (linkage) et les analyses d’associations. Cette seconde caté-\ngorie de stratégies est décrite en détail dans les lignes qui suivent.\nLes analyses de liaison génétique portent sur des familles\naectées par une maladie. Elles se basent sur le processus de la\nméiose, par lequel les cellules germinales du père deviennent des\nspermatozoïdes et celles de la mère deviennent des ovules. Au\ndébut de la méiose (voir la gure 5.4a), les cellules germinales\n(c.-à-d. les cellules qui servent à la reproduction) du père et de\nla mère sont encore diploïdes, c’est-à-dire qu’à ce moment, elles\ncontiennent encore leurs 23 paires de chromosomes, comme\nn’importe quelle autre cellule de l’organisme. Au cours de la\nméiose, ces chromosomes sont copiés et, durant cette copie, il\npeut se produire des recombinaisons au cours desquelles des\nmorceaux de chacune de ces copies de chromosomes peuvent\nêtre échangés. Il en résulte éventuellement une nouvelle orga-\nnisation des allèles le long des chromosomes (voir la gure 5.4).\nPar exemple, le premier chromosome contient les allèles A, B\net C (aux loci 1, 2 et 3, respectivement) au début de la méiose,\nalors qu’à la n, il contient les allèles a, B et C. À l’issue de la\nméiose, les paires de chromosomes se séparent et chaque gamète\n(spermatozoïde ou ovule) n’hérite que d’un seul exemplaire de\nchaque chromosome (on passe donc de 2n chromosomes à n\nchromosomes dans chaque gamète) et donc d’un lot unique\nd’allèles, à la suite des recombinaisons. Par la suite, l’ovule est\nFIGURE 5.3 Modèle de transmission mendélienne dominante et récessive\n",
+  "raw_text_sha256": "d3f459b3985d9dc38fe84efc8bd18aa8a3c91fb59a464efb07e55f98d3010ee1",
+  "source_page_display": 117,
+  "source_page_index": 116
+}

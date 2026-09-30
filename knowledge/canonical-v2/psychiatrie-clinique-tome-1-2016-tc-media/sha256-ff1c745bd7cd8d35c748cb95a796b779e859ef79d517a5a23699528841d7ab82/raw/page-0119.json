@@ -1,0 +1,148 @@
+{
+  "block_sequence_sha256": "dc26bb71f0de98e523afd8f33a6b0fbf809ecfcbfe72cebe98c0509ef79d4c6e",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        470.3879699707031,
+        758.8693237304688
+      ],
+      "block_id": "page-0119-block-0001",
+      "order": 1,
+      "text": "102\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2\nDéterminants bio-psycho-sociaux\n",
+      "text_sha256": "e89ece1997fc27c533f276d4df33b7e5d025e74874be49aee6995075d9025611"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.0921020507812,
+        200.95849609375
+      ],
+      "block_id": "page-0119-block-0002",
+      "order": 2,
+      "text": "comporte des dicultés. Ces études bénécieront donc tout\nparticulièrement du développement des connaissances de la\nphysiopathologie des maladies psychiatriques, notamment\ndans le domaine de la neurogenèse et de la neuroplasticité.\nLes nouvelles technologies d’analyse de l’ADN ont permis de\nnombreux progrès dans la dernière décennie (Purcell & al.,\n2009). Le nombre croissant de marqueurs permet de saturer\nprogressivement les 23 paires de chromosomes. La localisation\nchromosomique de ces marqueurs étant connue, il devient alors\npossible de parcourir systématiquement le génome humain avec\nune plus grande précision. Ces marqueurs peuvent ensuite être\nsoumis à des analyses de liaison ou à des analyses d’association.\nLe séquençage du génome, devenant techniquement plus facile,\nrecèle aussi de grandes promesses.\n",
+      "text_sha256": "b7d49ea9ee1d8c1abea1db2b76809f065c744e31af0b66cb7137c92d9abcf930"
+    },
+    {
+      "bbox": [
+        306.0,
+        201.9658203125,
+        549.2440795898438,
+        506.45849609375
+      ],
+      "block_id": "page-0119-block-0003",
+      "order": 3,
+      "text": "L’épidémiologie génétique peut renseigner sur les dés métho-\ndologiques reliés à la complexité des maladies psychiatriques\nmajeures. En eet, les études d’épidémiologie génétique ont\nmontré la certitude d’une composante héréditaire dans le cas\nde la plupart des troubles psychiatriques. Cependant, jusqu’ici,\ncertains doutes subsistent quant à la reproductibilité des résultats\ndes diverses études mettant en évidence des gènes candidats (des\ngènes pour lesquels on a des raisons de penser a priori qu’ils sont\nen cause dans la maladie) dans la schizophrénie et les troubles\nbipolaires. Parmi les gènes candidats les mieux établis pour ces\ndeux maladies, on a identié de nombreuses protéines, parmi\nlesquelles :\n• ZNF804A (zinc nger binding protein 804A, protéine de liaison\nà doigt de zinc 804A) ;\n• DISC1 (disrupted-in-schizophrenia-1) ;\n• NRG1 (neuréguline) ;\n• reelin ;\n• BDNF (brain-derived neurotrophic factor, facteur neurotro-\nphique dérivé du cerveau) ;\n• DRD2 (récepteur dopaminergique D2) ;\n• HTR2A (5-hydroxy-tryptamine receptor 2A, récepteur séro-\ntoninergique) ;\n• CACNA1C (canaux calciques, voltage dépendants de\ntype L, sous-unité alpha 1C) ;\n• ANK3 (ankyrine 3, nœud de Ranvier).\n",
+      "text_sha256": "ad5f10b318029ad6a10e0669b51b83b8237553a8ebe761f15b5d7071ff7c7a69"
+    },
+    {
+      "bbox": [
+        306.0,
+        515.3330078125,
+        549.3306884765625,
+        655.95849609375
+      ],
+      "block_id": "page-0119-block-0004",
+      "order": 4,
+      "text": "Pléiotropie\nLa pléiotropie est la tendance de certains gènes à s’exprimer\nde diérentes façons, dans diérents phénotypes, c’est-à-dire\nlorsqu’un même gène intervient dans plusieurs phénotypes dif-\nférents. Chez l’être humain, le gène responsable de l’albinisme\ncomplet serait un exemple de pléiotropie. Quand ce gène mute,\nil cause non seulement l’absence de pigmentation de la peau,\nmais il réduit aussi le développement du système pileux. Un\nautre exemple de pléiotropie associé aux maladies psychiatriques\ntient au fait que les mêmes gènes pourraient intervenir dans les\ndépressions majeures récurrentes, les troubles bipolaires et la\nschizophrénie (Lee & al., 2013 ; Smoller & al., 2013).\n",
+      "text_sha256": "169cc2111c11988c4e25c2ab5d8ee7cfea454cd13bdd3b93c8d285076a75580b"
+    },
+    {
+      "bbox": [
+        306.0,
+        656.9658203125,
+        549.0701904296875,
+        713.45849609375
+      ],
+      "block_id": "page-0119-block-0005",
+      "order": 5,
+      "text": "Ce phénomène de pléiotropie complique les études de liaison\ngénétique, car il rend dicile la détermination des diagnostics\nreprésentant l’expression observable du gène recherché. Par\nexemple, les mécanismes communs de la schizophrénie et les\ntroubles bipolaires devraient-ils amener à inclure le phénotype\n",
+      "text_sha256": "7f71a4d6721cd936cce4f0d208d857cb56d49fb932653fc3f1f806be19e8fa11"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.9658203125,
+        291.2630615234375,
+        272.0585021972656
+      ],
+      "block_id": "page-0119-block-0006",
+      "order": 6,
+      "text": "rapporté sous forme de lod score (logarithme décimal),\nde sorte que toute augmentation du lod score d’un point\nmultiplie en réalité par 10 la probabilité de liaison (un lod\nscore de 1 est 10 fois plus probable). Dans le cas de maladies\nà transmission mendélienne, on a convenu qu’un lod score\nde 3 (donc une probabilité 1000 fois supérieure) est le seuil\nstatistique à partir duquel on conclut à la présence probable\nd’un gène de susceptibilité dans la région chromosomique\nétudiée (Strachan & Read, 1999).\nAprès avoir établi l’existence d’une telle liaison génétique,\non identie plus précisément le gène de susceptibilité par les\ntechniques de biologie moléculaire. Les grands projets de car-\ntographie du génome humain, dont le Généthon et le Human\nGenome projet, ont permis la couverture de l’ensemble du\ngénome humain en augmentant considérablement le nombre de\nmarqueurs disponibles, constitués de polymorphismes nucléo-\ntides simples (SNP) et de séquences microsatellites (séquences\nde quelques nucléotides qui forment un motif répété dans\nl’ADN ; leur abondance dans tout le génome permet d’en faire\ndes marqueurs génétiques que l’on peut étudier).\n",
+      "text_sha256": "8a7e3ead8bfeabd1c4bd9c1c37710866ae8128a3ba12c05ba039a7fae8891753"
+    },
+    {
+      "bbox": [
+        53.20000076293945,
+        277.5,
+        281.901123046875,
+        308.7002868652344
+      ],
+      "block_id": "page-0119-block-0007",
+      "order": 7,
+      "text": "i\nUn supplément d’information sur le Généthon est disponible\nau www.genethon.fr, et un supplément d’information sur le\nHuman Genome Project est disponible au www.genome.gov.\n",
+      "text_sha256": "42932b70bb46b11ab663835f780ef0fcdbed442a0310de695a9366176bf9d088"
+    },
+    {
+      "bbox": [
+        48.0,
+        317.1158142089844,
+        291.4991455078125,
+        408.15850830078125
+      ],
+      "block_id": "page-0119-block-0008",
+      "order": 8,
+      "text": "Quant aux analyses d’association génétique, elles portent sur\nde grands échantillons de malades non reliés génétiquement\n(c.-à-d. n’ayant aucun lien de parenté) que l’on compare à des\nsujets témoins sains, eux aussi sans aucun lien. Cette analyse vise\nessentiellement à identier un allèle particulier, commun à tous\nles malades et qui serait lié au risque de développer la maladie.\nCet allèle devrait donc être plus fréquent chez les malades que\nchez les témoins en bonne santé.\n",
+      "text_sha256": "ba4294407ff34cd1aead76c489f6b689e1fa504d8976938635737e507595327f"
+    },
+    {
+      "bbox": [
+        48.0,
+        418.68682861328125,
+        209.7435760498047,
+        434.82940673828125
+      ],
+      "block_id": "page-0119-block-0009",
+      "order": 9,
+      "text": "5.3.2 Dés méthodologiques\n",
+      "text_sha256": "db7e478a0691545ded569cb0d83475c9a681d39898ed64acd15f08d19cb70b91"
+    },
+    {
+      "bbox": [
+        48.0,
+        438.16583251953125,
+        291.2255554199219,
+        690.3085327148438
+      ],
+      "block_id": "page-0119-block-0010",
+      "order": 10,
+      "text": "Idéalement, avant d’entreprendre des analyses de liaison géné-\ntique, il est avantageux de connaître la physiopathologie de la\nmaladie étudiée, car une telle connaissance permet d’orienter\nles recherches sur certains gènes précis. De tels gènes, pour\nlesquels on a, a priori, des raisons de croire qu’ils sont impli-\nqués dans la maladie, sont appelés « gènes candidats ». Ainsi,\nles gènes inuant sur le métabolisme de certains neurotrans-\nmetteurs (p. ex., la dopamine ou la sérotonine) ou la quantité\nde leurs récepteurs, sont des gènes candidats pour les maladies\npsychiatriques. Un exemple de ces études est l’analyse des\ngènes intervenant dans le système sérotoninergique lors de\nla dépression, étant donné la participation probable d’un tel\nsystème dans la physiopathologie de cette maladie. De plus, il\nest pertinent de s’intéresser au rôle des gènes inuant sur le\ndéveloppement du système nerveux central dans la schizophré-\nnie, étant donné les preuves scientiques de perturbations du\ndéveloppement du cerveau dans cette maladie. Par exemple,\nles gènes aectant la neuroplasticité (BDNF, DISC1, NCAM,\nZNF804A, NRG1, reelin, AKT, etc.) sont des gènes candidats\ndans la schizophrénie, étant donné le rôle de ces protéines\nissues de ces gènes dans la neurogenèse (mise en place des\ncircuits neuronaux).\n",
+      "text_sha256": "884f6af871a5dcdfe801cd1b8639b73bd6bd1a6bcd59fd786dc21d5b8788589e"
+    },
+    {
+      "bbox": [
+        48.0,
+        691.3158569335938,
+        291.01751708984375,
+        713.3585205078125
+      ],
+      "block_id": "page-0119-block-0011",
+      "order": 11,
+      "text": "Comme la physiopathologie exacte des maladies psychia-\ntriques est encore méconnue, l’identication de gènes candidats\n",
+      "text_sha256": "019e5a37ba220e2cb65758357c1a05a6b983670b46c49c78d227bcaf97f3d87b"
+    }
+  ],
+  "coordinates_sha256": "b46d3c5c76ef023d24d4b9ec6ef1d72bb3fe34aa40ccd70cc719f2cc10accd43",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0119",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "102\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2\nDéterminants bio-psycho-sociaux\ncomporte des dicultés. Ces études bénécieront donc tout\nparticulièrement du développement des connaissances de la\nphysiopathologie des maladies psychiatriques, notamment\ndans le domaine de la neurogenèse et de la neuroplasticité.\nLes nouvelles technologies d’analyse de l’ADN ont permis de\nnombreux progrès dans la dernière décennie (Purcell & al.,\n2009). Le nombre croissant de marqueurs permet de saturer\nprogressivement les 23 paires de chromosomes. La localisation\nchromosomique de ces marqueurs étant connue, il devient alors\npossible de parcourir systématiquement le génome humain avec\nune plus grande précision. Ces marqueurs peuvent ensuite être\nsoumis à des analyses de liaison ou à des analyses d’association.\nLe séquençage du génome, devenant techniquement plus facile,\nrecèle aussi de grandes promesses.\nL’épidémiologie génétique peut renseigner sur les dés métho-\ndologiques reliés à la complexité des maladies psychiatriques\nmajeures. En eet, les études d’épidémiologie génétique ont\nmontré la certitude d’une composante héréditaire dans le cas\nde la plupart des troubles psychiatriques. Cependant, jusqu’ici,\ncertains doutes subsistent quant à la reproductibilité des résultats\ndes diverses études mettant en évidence des gènes candidats (des\ngènes pour lesquels on a des raisons de penser a priori qu’ils sont\nen cause dans la maladie) dans la schizophrénie et les troubles\nbipolaires. Parmi les gènes candidats les mieux établis pour ces\ndeux maladies, on a identié de nombreuses protéines, parmi\nlesquelles :\n• ZNF804A (zinc nger binding protein 804A, protéine de liaison\nà doigt de zinc 804A) ;\n• DISC1 (disrupted-in-schizophrenia-1) ;\n• NRG1 (neuréguline) ;\n• reelin ;\n• BDNF (brain-derived neurotrophic factor, facteur neurotro-\nphique dérivé du cerveau) ;\n• DRD2 (récepteur dopaminergique D2) ;\n• HTR2A (5-hydroxy-tryptamine receptor 2A, récepteur séro-\ntoninergique) ;\n• CACNA1C (canaux calciques, voltage dépendants de\ntype L, sous-unité alpha 1C) ;\n• ANK3 (ankyrine 3, nœud de Ranvier).\nPléiotropie\nLa pléiotropie est la tendance de certains gènes à s’exprimer\nde diérentes façons, dans diérents phénotypes, c’est-à-dire\nlorsqu’un même gène intervient dans plusieurs phénotypes dif-\nférents. Chez l’être humain, le gène responsable de l’albinisme\ncomplet serait un exemple de pléiotropie. Quand ce gène mute,\nil cause non seulement l’absence de pigmentation de la peau,\nmais il réduit aussi le développement du système pileux. Un\nautre exemple de pléiotropie associé aux maladies psychiatriques\ntient au fait que les mêmes gènes pourraient intervenir dans les\ndépressions majeures récurrentes, les troubles bipolaires et la\nschizophrénie (Lee & al., 2013 ; Smoller & al., 2013).\nCe phénomène de pléiotropie complique les études de liaison\ngénétique, car il rend dicile la détermination des diagnostics\nreprésentant l’expression observable du gène recherché. Par\nexemple, les mécanismes communs de la schizophrénie et les\ntroubles bipolaires devraient-ils amener à inclure le phénotype\nrapporté sous forme de lod score (logarithme décimal),\nde sorte que toute augmentation du lod score d’un point\nmultiplie en réalité par 10 la probabilité de liaison (un lod\nscore de 1 est 10 fois plus probable). Dans le cas de maladies\nà transmission mendélienne, on a convenu qu’un lod score\nde 3 (donc une probabilité 1000 fois supérieure) est le seuil\nstatistique à partir duquel on conclut à la présence probable\nd’un gène de susceptibilité dans la région chromosomique\nétudiée (Strachan & Read, 1999).\nAprès avoir établi l’existence d’une telle liaison génétique,\non identie plus précisément le gène de susceptibilité par les\ntechniques de biologie moléculaire. Les grands projets de car-\ntographie du génome humain, dont le Généthon et le Human\nGenome projet, ont permis la couverture de l’ensemble du\ngénome humain en augmentant considérablement le nombre de\nmarqueurs disponibles, constitués de polymorphismes nucléo-\ntides simples (SNP) et de séquences microsatellites (séquences\nde quelques nucléotides qui forment un motif répété dans\nl’ADN ; leur abondance dans tout le génome permet d’en faire\ndes marqueurs génétiques que l’on peut étudier).\ni\nUn supplément d’information sur le Généthon est disponible\nau www.genethon.fr, et un supplément d’information sur le\nHuman Genome Project est disponible au www.genome.gov.\nQuant aux analyses d’association génétique, elles portent sur\nde grands échantillons de malades non reliés génétiquement\n(c.-à-d. n’ayant aucun lien de parenté) que l’on compare à des\nsujets témoins sains, eux aussi sans aucun lien. Cette analyse vise\nessentiellement à identier un allèle particulier, commun à tous\nles malades et qui serait lié au risque de développer la maladie.\nCet allèle devrait donc être plus fréquent chez les malades que\nchez les témoins en bonne santé.\n5.3.2 Dés méthodologiques\nIdéalement, avant d’entreprendre des analyses de liaison géné-\ntique, il est avantageux de connaître la physiopathologie de la\nmaladie étudiée, car une telle connaissance permet d’orienter\nles recherches sur certains gènes précis. De tels gènes, pour\nlesquels on a, a priori, des raisons de croire qu’ils sont impli-\nqués dans la maladie, sont appelés « gènes candidats ». Ainsi,\nles gènes inuant sur le métabolisme de certains neurotrans-\nmetteurs (p. ex., la dopamine ou la sérotonine) ou la quantité\nde leurs récepteurs, sont des gènes candidats pour les maladies\npsychiatriques. Un exemple de ces études est l’analyse des\ngènes intervenant dans le système sérotoninergique lors de\nla dépression, étant donné la participation probable d’un tel\nsystème dans la physiopathologie de cette maladie. De plus, il\nest pertinent de s’intéresser au rôle des gènes inuant sur le\ndéveloppement du système nerveux central dans la schizophré-\nnie, étant donné les preuves scientiques de perturbations du\ndéveloppement du cerveau dans cette maladie. Par exemple,\nles gènes aectant la neuroplasticité (BDNF, DISC1, NCAM,\nZNF804A, NRG1, reelin, AKT, etc.) sont des gènes candidats\ndans la schizophrénie, étant donné le rôle de ces protéines\nissues de ces gènes dans la neurogenèse (mise en place des\ncircuits neuronaux).\nComme la physiopathologie exacte des maladies psychia-\ntriques est encore méconnue, l’identication de gènes candidats\n",
+  "raw_text_sha256": "fb3cc01fbe1a7109bb8e9738586d060bff235217e6b801641cd9a16ed90a8dfc",
+  "source_page_display": 120,
+  "source_page_index": 119
+}

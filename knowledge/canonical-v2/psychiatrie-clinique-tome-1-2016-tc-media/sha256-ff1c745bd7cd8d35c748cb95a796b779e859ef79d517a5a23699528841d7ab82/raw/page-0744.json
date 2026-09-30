@@ -1,0 +1,76 @@
+{
+  "block_sequence_sha256": "8e85436a1e981af60d1ff5c7a750723ee914b861826d5ea0cdc017f8ffdaef66",
+  "blocks": [
+    {
+      "bbox": [
+        305.8500061035156,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0744-block-0001",
+      "order": 1,
+      "text": "Chapitre 32\nTroubles du sommeil et de la vigilance\n727\n",
+      "text_sha256": "8e7cc690e1b1d22d6fe43152a04733c08b159df66705ba120024616ff2c93d32"
+    },
+    {
+      "bbox": [
+        56.400001525878906,
+        152.1522979736328,
+        231.1797637939453,
+        164.47007751464844
+      ],
+      "block_id": "page-0744-block-0002",
+      "order": 2,
+      "text": "FIGURE 32.7 Rapport de polysomnographie\n",
+      "text_sha256": "ae5c6fce49bfcefbf0492fda307432292d5f11b96840f42cf4977cdc4d7afb62"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.9658203125,
+        297.2233581542969,
+        100.3084945678711
+      ],
+      "block_id": "page-0744-block-0003",
+      "order": 3,
+      "text": "L’oxymétrie suggère que les apnées entraînent des désatura-\ntions pouvant aller sous 90 % pendant plus de 14 minutes (0,04 %\nde 360 minutes) ; le seuil critique de 4% est franchi 65 fois, soit\n10,8 fois par heure d’enregistrement pour une durée moyenne\nde 18 secondes.\n",
+      "text_sha256": "ead6265611bb92f54687784b623299e4c27a87d702203867085d50d974f8a390"
+    },
+    {
+      "bbox": [
+        54.0,
+        102.01582336425781,
+        297.0698547363281,
+        136.95849609375
+      ],
+      "block_id": "page-0744-block-0004",
+      "order": 4,
+      "text": "Les événements respiratoires se produisent principalement\nen position dorsale et deux fois moins souvent lorsque le patient\nest couché sur le côté gauche.\n",
+      "text_sha256": "ba161ea6f0223cb4a0ef9fc3685383848f5fb09a6283548d81cf0ac4307e53ac"
+    },
+    {
+      "bbox": [
+        312.0,
+        40.9658203125,
+        555.1074829101562,
+        136.95849609375
+      ],
+      "block_id": "page-0744-block-0005",
+      "order": 5,
+      "text": "Les graphiques dans la deuxième moitié du rapport illustrent\nles données en fonction du moment de la nuit pour :\n• le volume de ronement ;\n• la saturation en oxygène (SpO2) ;\n• le pouls ;\n• les événements respiratoires : apnées obstructives (OA),\ncentrales (CA), mixtes (MA), les apnées de faible amplitude\n(hypopnées : HY) ;\n",
+      "text_sha256": "511d67952203e5851ade1009092ff7e3df810ccdf2e665fea2e3bbd15aea096b"
+    }
+  ],
+  "coordinates_sha256": "80ac67f40d082a34fd530b0fc8306f74b0c92a985ebf10a3109202f5a3a59557",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0744",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 32\nTroubles du sommeil et de la vigilance\n727\nFIGURE 32.7 Rapport de polysomnographie\nL’oxymétrie suggère que les apnées entraînent des désatura-\ntions pouvant aller sous 90 % pendant plus de 14 minutes (0,04 %\nde 360 minutes) ; le seuil critique de 4% est franchi 65 fois, soit\n10,8 fois par heure d’enregistrement pour une durée moyenne\nde 18 secondes.\nLes événements respiratoires se produisent principalement\nen position dorsale et deux fois moins souvent lorsque le patient\nest couché sur le côté gauche.\nLes graphiques dans la deuxième moitié du rapport illustrent\nles données en fonction du moment de la nuit pour :\n• le volume de ronement ;\n• la saturation en oxygène (SpO2) ;\n• le pouls ;\n• les événements respiratoires : apnées obstructives (OA),\ncentrales (CA), mixtes (MA), les apnées de faible amplitude\n(hypopnées : HY) ;\n",
+  "raw_text_sha256": "52d6c01fee9057ce2f4f0e2f30128480f8369878c2a4963e01fd7b6d880b1770",
+  "source_page_display": 745,
+  "source_page_index": 744
+}

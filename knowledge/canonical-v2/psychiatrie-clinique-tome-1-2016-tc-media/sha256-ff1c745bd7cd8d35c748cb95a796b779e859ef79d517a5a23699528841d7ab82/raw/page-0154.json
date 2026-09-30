@@ -1,0 +1,148 @@
+{
+  "block_sequence_sha256": "aca220871e4861de2ef7cf9a0b43ee55ce2ce0daf458f172e40aa763ef35409b",
+  "blocks": [
+    {
+      "bbox": [
+        405.1000061035156,
+        747.3754272460938,
+        555.0,
+        758.6693725585938
+      ],
+      "block_id": "page-0154-block-0001",
+      "order": 1,
+      "text": "CHAPITRE 6\nNeurobiologie\n137\n",
+      "text_sha256": "ae5574cd59f7fd8ddb5dc0fb9e77622d8763b6bfc19f41a0bc03211ea6bc83a1"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.9658203125,
+        297.48699951171875,
+        85.95849609375
+      ],
+      "block_id": "page-0154-block-0002",
+      "order": 2,
+      "text": "aux avancées de la biologie moléculaire, on se rapproche d’un\ntraitement pharmacologique adapté au métabolisme particulier\nd’un patient donné (pharmacogénétique, pharmacogénomique).\nLe dé des prochaines décennies en psychiatrie est d’assurer le\n",
+      "text_sha256": "d2597cd30f5252faadcddb99e992d34fc7cae336acfce1deb075abad2b9ef0b2"
+    },
+    {
+      "bbox": [
+        312.0,
+        40.9658203125,
+        554.9844970703125,
+        85.95849609375
+      ],
+      "block_id": "page-0154-block-0003",
+      "order": 3,
+      "text": "transfert des connaissances de la neurobiologie en psychiatrie\net de rendre accessibles des outils biologiques qui aideront le\nmédecin à préciser le diagnostic, le pronostic et à optimiser\nle traitement des patients.\n",
+      "text_sha256": "a909d830b8639307ad24ba75d7e971c35b97acf23361f60d7b74b9daa838a9cc"
+    },
+    {
+      "bbox": [
+        54.0,
+        104.5093765258789,
+        222.91200256347656,
+        122.4781265258789
+      ],
+      "block_id": "page-0154-block-0004",
+      "order": 4,
+      "text": "Lectures complémentaires\n",
+      "text_sha256": "a63665748f6f6aa4046621ac3e5b53857ebef6bf2c2f475217e47dfa03f03493"
+    },
+    {
+      "bbox": [
+        54.0,
+        135.28868103027344,
+        199.19200134277344,
+        145.22911071777344
+      ],
+      "block_id": "page-0154-block-0005",
+      "order": 5,
+      "text": "B, M. F. & al. (2002). Neurosciences.\n",
+      "text_sha256": "cf4845bb4bf10cee70be7ffed2aa5d198762825e6a4d17fe8df1676dbf529358"
+    },
+    {
+      "bbox": [
+        66.0,
+        145.28868103027344,
+        197.55899047851562,
+        165.22911071777344
+      ],
+      "block_id": "page-0154-block-0006",
+      "order": 6,
+      "text": "À la découverture du cerveau, Paris,\nPradel.\n",
+      "text_sha256": "d3fe90ebb00f44efb44ff80fb39d5a2deef8495c3d8d60abb6cf0908601b7ce9"
+    },
+    {
+      "bbox": [
+        226.0,
+        135.28868103027344,
+        357.0369873046875,
+        145.22911071777344
+      ],
+      "block_id": "page-0154-block-0007",
+      "order": 7,
+      "text": "C, R. & al. (2010). Le cerveau\n",
+      "text_sha256": "12a47fe8cc69106927ee49d23296a5099cf7d5da0b352b602a407f3306d59221"
+    },
+    {
+      "bbox": [
+        226.0,
+        145.28868103027344,
+        370.1800231933594,
+        167.22911071777344
+      ],
+      "block_id": "page-0154-block-0008",
+      "order": 8,
+      "text": "humain Montréal, Québec, ERPI.\nP, D. & al. (2011). Neurosciences,\n",
+      "text_sha256": "8051271f7052a25081d87510effe86f676e0341d76c4aa0b2027fa4578dc2a70"
+    },
+    {
+      "bbox": [
+        238.0,
+        167.28868103027344,
+        344.9726257324219,
+        177.22911071777344
+      ],
+      "block_id": "page-0154-block-0009",
+      "order": 9,
+      "text": "Louvain-la-Neuve, de Boeck.\n",
+      "text_sha256": "302df98b77d4131fb6538496ad2ca9f4f6c301358a308672c86fdf0207a43449"
+    },
+    {
+      "bbox": [
+        398.0,
+        135.28868103027344,
+        538.8410034179688,
+        145.22911071777344
+      ],
+      "block_id": "page-0154-block-0010",
+      "order": 10,
+      "text": "S, S. (2009). Stahl’s Essential Psy-\n",
+      "text_sha256": "be9b70363acc1c77130cb89d8f3e7cd4f9624402eb488f644e0b8cb94d9ead4c"
+    },
+    {
+      "bbox": [
+        410.0,
+        142.28868103027344,
+        541.9871215820312,
+        165.22911071777344
+      ],
+      "block_id": "page-0154-block-0011",
+      "order": 11,
+      "text": "chopharmacology, 3e éd., New York,\nCambridge University Press.\n",
+      "text_sha256": "8798a1a2be5c83f7c3f770a471e5044079ee50c51dbe6251bee097ac6c2c57e7"
+    }
+  ],
+  "coordinates_sha256": "f14d1cb023be2a99800b91770cf03d3282007eb79d4c22054b80e9739481e9f4",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0154",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "CHAPITRE 6\nNeurobiologie\n137\naux avancées de la biologie moléculaire, on se rapproche d’un\ntraitement pharmacologique adapté au métabolisme particulier\nd’un patient donné (pharmacogénétique, pharmacogénomique).\nLe dé des prochaines décennies en psychiatrie est d’assurer le\ntransfert des connaissances de la neurobiologie en psychiatrie\net de rendre accessibles des outils biologiques qui aideront le\nmédecin à préciser le diagnostic, le pronostic et à optimiser\nle traitement des patients.\nLectures complémentaires\nB, M. F. & al. (2002). Neurosciences.\nÀ la découverture du cerveau, Paris,\nPradel.\nC, R. & al. (2010). Le cerveau\nhumain Montréal, Québec, ERPI.\nP, D. & al. (2011). Neurosciences,\nLouvain-la-Neuve, de Boeck.\nS, S. (2009). Stahl’s Essential Psy-\nchopharmacology, 3e éd., New York,\nCambridge University Press.\n",
+  "raw_text_sha256": "6c77f1937b9823c8790f8d94748a92f03a0a60d841b8948f84cc71559b6814a5",
+  "source_page_display": 155,
+  "source_page_index": 154
+}

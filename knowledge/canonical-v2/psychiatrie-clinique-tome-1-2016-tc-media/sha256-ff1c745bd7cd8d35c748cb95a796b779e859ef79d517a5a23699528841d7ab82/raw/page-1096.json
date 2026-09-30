@@ -1,0 +1,988 @@
+{
+  "block_sequence_sha256": "a1830dd2fe10fb0f2d2b9a93c9bc410332eb1ebcf504e78905cfa7cbc5a88f26",
+  "blocks": [
+    {
+      "bbox": [
+        310.6000061035156,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-1096-block-0001",
+      "order": 1,
+      "text": "Chapitre 48\nÉvolution des services psychiatriques\n1079\n",
+      "text_sha256": "37df8c535ef7c3da7a1e984d49753904e56436ba426c92730c0e64e4d67ae27f"
+    },
+    {
+      "bbox": [
+        117.80229949951172,
+        461.09771728515625,
+        130.17007446289062,
+        720.6500244140625
+      ],
+      "block_id": "page-1096-block-0002",
+      "order": 2,
+      "text": "TABLEAU 48.2 Évolution des services psychiatriques au Québec\n",
+      "text_sha256": "b8477dd52f8233414193d4dac3e1e050dbd21970ec4341533b4af17af36afde1"
+    },
+    {
+      "bbox": [
+        156.12413024902344,
+        585.9464721679688,
+        166.70030212402344,
+        642.5
+      ],
+      "block_id": "page-1096-block-0003",
+      "order": 3,
+      "text": "Période asilaire\n",
+      "text_sha256": "a0e87c8edace614f8a37542bc698a4c594f615063feb602f72c65dd0b97bb165"
+    },
+    {
+      "bbox": [
+        166.12413024902344,
+        588.8510131835938,
+        176.70030212402344,
+        639.6000366210938
+      ],
+      "block_id": "page-1096-block-0004",
+      "order": 4,
+      "text": "et apparentée\n",
+      "text_sha256": "a36d43dda7f129f8b58a0bba48980cfdd4a70fc940f9c4f23b6fe4d160dc2180"
+    },
+    {
+      "bbox": [
+        176.12413024902344,
+        591.905029296875,
+        186.70030212402344,
+        636.6500244140625
+      ],
+      "block_id": "page-1096-block-0005",
+      "order": 5,
+      "text": "(1845-1910)\n",
+      "text_sha256": "26b9660c7dd1b233ed0eb4f41401bf6cdbadb084733fca8f19f8c7bf2685bcae"
+    },
+    {
+      "bbox": [
+        155.62413024902344,
+        487.097412109375,
+        166.20030212402344,
+        566.1500244140625
+      ],
+      "block_id": "page-1096-block-0006",
+      "order": 6,
+      "text": "Hôpital psychiatrique,\n",
+      "text_sha256": "2c50f2ab4ebf36ed3d17fcdc019288ef15f58c32d538b77ac8603a638794395d"
+    },
+    {
+      "bbox": [
+        165.62413024902344,
+        485.81951904296875,
+        176.20030212402344,
+        567.7000122070312
+      ],
+      "block_id": "page-1096-block-0007",
+      "order": 7,
+      "text": "afliation universitaire\n",
+      "text_sha256": "528865054c8881756991d18f83a475397d713501ee394b3018a9bac5291e343f"
+    },
+    {
+      "bbox": [
+        176.62413024902344,
+        504.5049743652344,
+        187.20030212402344,
+        549.25
+      ],
+      "block_id": "page-1096-block-0008",
+      "order": 8,
+      "text": "(1910-1960)\n",
+      "text_sha256": "53affba5bb6c2178dc2e385dee324801c85e4728523d5a49f147497a64a7074c"
+    },
+    {
+      "bbox": [
+        155.62413024902344,
+        381.97052001953125,
+        166.20030212402344,
+        471.8500061035156
+      ],
+      "block_id": "page-1096-block-0009",
+      "order": 9,
+      "text": "Système psychiatrique à\n",
+      "text_sha256": "74d5b3c43ab9ee0715e0ac226e790f8b59bf10d6f187dd2458870c8af34237b5"
+    },
+    {
+      "bbox": [
+        165.62413024902344,
+        384.676513671875,
+        176.20030212402344,
+        469.3500061035156
+      ],
+      "block_id": "page-1096-block-0010",
+      "order": 10,
+      "text": "multiples composantes\n",
+      "text_sha256": "08a4f9a49817bc132d5fb5523bcb90a00dc8d519a72f7a1de872d35f7a07164e"
+    },
+    {
+      "bbox": [
+        176.62413024902344,
+        415.4889831542969,
+        187.20030212402344,
+        438.6499938964844
+      ],
+      "block_id": "page-1096-block-0011",
+      "order": 11,
+      "text": "(1962)\n",
+      "text_sha256": "3b74a29d7ff17eaffecdd14acd6247d0e88ee25b7dec27bcd10fda571f2266a5"
+    },
+    {
+      "bbox": [
+        155.62413024902344,
+        265.29302978515625,
+        166.20030212402344,
+        369.1499938964844
+      ],
+      "block_id": "page-1096-block-0012",
+      "order": 12,
+      "text": "Système global intégrant les\n",
+      "text_sha256": "5abb5ab734221a240765e85eeae650df7b107a6b69c6318c482cd40288e982c5"
+    },
+    {
+      "bbox": [
+        165.62413024902344,
+        266.494140625,
+        176.20030212402344,
+        368.0500183105469
+      ],
+      "block_id": "page-1096-block-0013",
+      "order": 13,
+      "text": "soins physiques et mentaux\n",
+      "text_sha256": "410973aa84d6edf0290ef29cfa173dd63593719e56313929cd85aa7a2eede2aa"
+    },
+    {
+      "bbox": [
+        176.62413024902344,
+        305.6889953613281,
+        187.20030212402344,
+        328.8500061035156
+      ],
+      "block_id": "page-1096-block-0014",
+      "order": 14,
+      "text": "(1966)\n",
+      "text_sha256": "602d55108e9fcfed39be3c0e67696c0c4926421768962f0a427e8ead4e093ca2"
+    },
+    {
+      "bbox": [
+        135.12413024902344,
+        158.9532470703125,
+        145.70030212402344,
+        256.0
+      ],
+      "block_id": "page-1096-block-0015",
+      "order": 15,
+      "text": "Politique de santé mentale\n",
+      "text_sha256": "0c5d59ae71d2500db9f51af4ffac1af86650586316e9315a954858af97630eae"
+    },
+    {
+      "bbox": [
+        145.12413024902344,
+        159.09182739257812,
+        155.70030212402344,
+        255.75
+      ],
+      "block_id": "page-1096-block-0016",
+      "order": 16,
+      "text": "pour un partenariat élargi :\n",
+      "text_sha256": "add676dabbde152a2db79962baf4cf895bdc72a5566fb41c33e4f7feda9392e0"
+    },
+    {
+      "bbox": [
+        156.12413024902344,
+        167.32200622558594,
+        166.70030212402344,
+        247.35000610351562
+      ],
+      "block_id": "page-1096-block-0017",
+      "order": 17,
+      "text": "association du réseau\n",
+      "text_sha256": "4c54f53d748e6901f25dadc2b12b0e73f95ba021f9667c7bd6ee95dc12f423ec"
+    },
+    {
+      "bbox": [
+        166.12413024902344,
+        156.58792114257812,
+        176.70030212402344,
+        258.20001220703125
+      ],
+      "block_id": "page-1096-block-0018",
+      "order": 18,
+      "text": "ofciel avec les organismes\n",
+      "text_sha256": "f2f07db6fa029ad1df9d2fba54a47a25a466ed615e75fad4a86ae09911a5dda3"
+    },
+    {
+      "bbox": [
+        176.12413024902344,
+        169.25039672851562,
+        186.70030212402344,
+        245.5
+      ],
+      "block_id": "page-1096-block-0019",
+      "order": 19,
+      "text": "communautaires, les\n",
+      "text_sha256": "d3a93f9b639364e289c9c63c91b35ca25c9ca3a963d2cedfd407fcee0206984f"
+    },
+    {
+      "bbox": [
+        186.12413024902344,
+        166.20193481445312,
+        196.70030212402344,
+        248.65000915527344
+      ],
+      "block_id": "page-1096-block-0020",
+      "order": 20,
+      "text": "familles et les proches\n",
+      "text_sha256": "01224b981258e6cd3e9f66fc40abbae7e02d2a3bd560e1894c619d694db46c05"
+    },
+    {
+      "bbox": [
+        197.12413024902344,
+        185.10501098632812,
+        207.70030212402344,
+        229.85000610351562
+      ],
+      "block_id": "page-1096-block-0021",
+      "order": 21,
+      "text": "(1989-1998)\n",
+      "text_sha256": "55c1671bd48aeef54f847f267164289f53158eff752b7edad40684be46192a2e"
+    },
+    {
+      "bbox": [
+        146.12413024902344,
+        60.241371154785156,
+        156.70030212402344,
+        135.10000610351562
+      ],
+      "block_id": "page-1096-block-0022",
+      "order": 22,
+      "text": "Plan d’action pour la\n",
+      "text_sha256": "8d652a1684c08bf8ca57db69eec232a12c98096d38eeb17df8532ae206fa7106"
+    },
+    {
+      "bbox": [
+        156.12413024902344,
+        46.7504997253418,
+        166.70030212402344,
+        148.60000610351562
+      ],
+      "block_id": "page-1096-block-0023",
+      "order": 23,
+      "text": "transformation des services\n",
+      "text_sha256": "7f50d4f15e78b4097c7b72cc186f338774d052d0a43dee1915665b3b007b5de0"
+    },
+    {
+      "bbox": [
+        166.12413024902344,
+        62.3074951171875,
+        176.70030212402344,
+        132.75
+      ],
+      "block_id": "page-1096-block-0024",
+      "order": 24,
+      "text": "en santé mentale –\n",
+      "text_sha256": "4f849891271d3585fb861b23ab5dac0340ef3b074a29aa17434aa5ebb76a2064"
+    },
+    {
+      "bbox": [
+        176.12413024902344,
+        57.753997802734375,
+        186.70030212402344,
+        137.25
+      ],
+      "block_id": "page-1096-block-0025",
+      "order": 25,
+      "text": "Le virage ambulatoire\n",
+      "text_sha256": "159efe17354252d73b2a864bb430cfa4360b92e68e71ad67c8e772ac12813bbd"
+    },
+    {
+      "bbox": [
+        186.12413024902344,
+        75.25499725341797,
+        196.70030212402344,
+        120.0
+      ],
+      "block_id": "page-1096-block-0026",
+      "order": 26,
+      "text": "(1998-2005)\n",
+      "text_sha256": "9af4f02632cec3a5334b0d224fc8e03553951e10e79636d4fd8804b97241caac"
+    },
+    {
+      "bbox": [
+        212.7228546142578,
+        666.4240112304688,
+        222.7423858642578,
+        718.75
+      ],
+      "block_id": "page-1096-block-0027",
+      "order": 27,
+      "text": "Représentation\n",
+      "text_sha256": "feced738e1542d4d69599e17e187b5a2e33ae3005c416b3d4f5729bf34f373d6"
+    },
+    {
+      "bbox": [
+        222.7228546142578,
+        663.781982421875,
+        232.7423858642578,
+        718.75
+      ],
+      "block_id": "page-1096-block-0028",
+      "order": 28,
+      "text": "sociale des per-\n",
+      "text_sha256": "72108e594f1b4240447fbf5dcb8ef19ab5f0619ecb32d856dcf3904c95a79cc1"
+    },
+    {
+      "bbox": [
+        232.7228546142578,
+        661.0150146484375,
+        242.7423858642578,
+        718.75
+      ],
+      "block_id": "page-1096-block-0029",
+      "order": 29,
+      "text": "sonnes soignées\n",
+      "text_sha256": "7606a9ba8c801adafdb09831aa7895f0c8e10be23b2eeda3082d82cb259bcfa0"
+    },
+    {
+      "bbox": [
+        212.8019561767578,
+        85.18699645996094,
+        232.6281280517578,
+        652.7999877929688
+      ],
+      "block_id": "page-1096-block-0030",
+      "order": 30,
+      "text": "• Fous, aliénés,\npensionnaires\n• Idem et malades\nmentaux\n• Patients, malades\n• Clients, bénéciaires\n• Usagers, clients\n• Clientèles cibles\n",
+      "text_sha256": "d99480e38155bae3b74172a99ad559948aca068425418327c9131ffd45ab47b2"
+    },
+    {
+      "bbox": [
+        251.1728515625,
+        665.5150146484375,
+        261.1923828125,
+        718.75
+      ],
+      "block_id": "page-1096-block-0031",
+      "order": 31,
+      "text": "Conception des\n",
+      "text_sha256": "49c05d285dd4796e58e7aff81a1f91bf910ef4609056256ebffd6f916f0fa343"
+    },
+    {
+      "bbox": [
+        261.1728515625,
+        675.2620239257812,
+        271.1923828125,
+        718.75
+      ],
+      "block_id": "page-1096-block-0032",
+      "order": 32,
+      "text": "causes de la\n",
+      "text_sha256": "10bcd669a602c2c9ac806ca4f20593821705ac88828fe40322404cc39e08528c"
+    },
+    {
+      "bbox": [
+        271.1728515625,
+        664.15283203125,
+        281.1923828125,
+        718.75
+      ],
+      "block_id": "page-1096-block-0033",
+      "order": 33,
+      "text": "folie, aliénation,\n",
+      "text_sha256": "b36b9ecd0a882093c117d6a9e7148bb90a1aa971d53b85753b0118f3bb0ab4bd"
+    },
+    {
+      "bbox": [
+        281.1728515625,
+        661.0239868164062,
+        291.1923828125,
+        718.75
+      ],
+      "block_id": "page-1096-block-0034",
+      "order": 34,
+      "text": "maladie mentale\n",
+      "text_sha256": "9733475a575d99c7ee4fedb8a497720ca87c7af03ac138af089604bfdc51b9d5"
+    },
+    {
+      "bbox": [
+        251.251953125,
+        576.7709350585938,
+        282.078125,
+        652.7999877929688
+      ],
+      "block_id": "page-1096-block-0035",
+      "order": 35,
+      "text": "• Biologique : hérédité\n• Psychologique : par\nexemple mauvaises\n",
+      "text_sha256": "334e758e59749c1f9dbcf90a2db0a10c565458ea0cab59361e565019e881ae75"
+    },
+    {
+      "bbox": [
+        282.251953125,
+        577.2030029296875,
+        292.078125,
+        640.7999877929688
+      ],
+      "block_id": "page-1096-block-0036",
+      "order": 36,
+      "text": "habitudes, intempé-\n",
+      "text_sha256": "ff13e232d22f0f38f9e70ccf69177cdf5d81c0d6122b76111cf6a4d4df0dcbf6"
+    },
+    {
+      "bbox": [
+        292.251953125,
+        577.2098999023438,
+        302.078125,
+        640.7999877929688
+      ],
+      "block_id": "page-1096-block-0037",
+      "order": 37,
+      "text": "rance, masturbation\n",
+      "text_sha256": "9d3323621edab11bee3b7e03c02b3d0de9d8366f789ee0ef37290a5e53b0e845"
+    },
+    {
+      "bbox": [
+        303.251953125,
+        580.5089721679688,
+        323.078125,
+        652.7999877929688
+      ],
+      "block_id": "page-1096-block-0038",
+      "order": 38,
+      "text": "• Sociale : dissi-\ndence religieuse et\n",
+      "text_sha256": "4032386fa07c78221d91a4108d6ef34673604c49414f6d05c06d898368e7bb89"
+    },
+    {
+      "bbox": [
+        323.251953125,
+        613.3049926757812,
+        333.078125,
+        640.7999877929688
+      ],
+      "block_id": "page-1096-block-0039",
+      "order": 39,
+      "text": "pauvreté\n",
+      "text_sha256": "cfdf1cef1dfc40f3af47e18297641772ce130ce3c2b9274b1abc7d2579358769"
+    },
+    {
+      "bbox": [
+        251.251953125,
+        503.4329833984375,
+        271.078125,
+        567.75
+      ],
+      "block_id": "page-1096-block-0040",
+      "order": 40,
+      "text": "• Hérédité :\ndégénérescence\n",
+      "text_sha256": "04bf24205bf1860b6debebc4b39b32f5dfc65749fd859e69e8cae989374f2911"
+    },
+    {
+      "bbox": [
+        272.251953125,
+        514.6199951171875,
+        292.078125,
+        567.75
+      ],
+      "block_id": "page-1096-block-0041",
+      "order": 41,
+      "text": "• Fatalisme\nneurologique\n",
+      "text_sha256": "b635c302933e1ceda4f33ab5db5d8b12f9f480ac2406fa2fbf1002e3ceecad1e"
+    },
+    {
+      "bbox": [
+        251.251953125,
+        403.2380065917969,
+        283.078125,
+        477.95001220703125
+      ],
+      "block_id": "page-1096-block-0042",
+      "order": 42,
+      "text": "• Hérédité\n• Histoire personnelle\n• Contexte social\n",
+      "text_sha256": "8735cb2bb336d1e4068144cc7f7c8eb579f0ef1ae017c46ef6a0f025dfbf0393"
+    },
+    {
+      "bbox": [
+        251.251953125,
+        275.2140197753906,
+        271.078125,
+        368.1499938964844
+      ],
+      "block_id": "page-1096-block-0043",
+      "order": 43,
+      "text": "• Vision globale de la santé\nbasée sur l’interaction du\n",
+      "text_sha256": "2b7f70aefb79435f0087a36006fc5c7be2fee7bf839e1b76fa48331fe0f98cf6"
+    },
+    {
+      "bbox": [
+        271.251953125,
+        273.2818908691406,
+        281.078125,
+        356.1499938964844
+      ],
+      "block_id": "page-1096-block-0044",
+      "order": 44,
+      "text": "physique, du psychique et\n",
+      "text_sha256": "0242d0c02747d0706cd95a3a9ec0d931af42ec1c76649ec9fa6bd1026b0564c5"
+    },
+    {
+      "bbox": [
+        281.251953125,
+        327.76397705078125,
+        291.078125,
+        356.1499938964844
+      ],
+      "block_id": "page-1096-block-0045",
+      "order": 45,
+      "text": "du social\n",
+      "text_sha256": "913c1148152fbd8e2a420546be956a7fd9cc1b66e6fd7a38b5ab1f904978772a"
+    },
+    {
+      "bbox": [
+        292.251953125,
+        275.08697509765625,
+        312.078125,
+        368.1499938964844
+      ],
+      "block_id": "page-1096-block-0046",
+      "order": 46,
+      "text": "• Émergence d’organismes\ncommunautaires\n",
+      "text_sha256": "2dedf363eef08e7d6889934969a307cd3b64a40ecce7c188f1c2f52c3b495cfb"
+    },
+    {
+      "bbox": [
+        251.251953125,
+        162.21099853515625,
+        271.078125,
+        258.3500061035156
+      ],
+      "block_id": "page-1096-block-0047",
+      "order": 47,
+      "text": "• Vision bio-psycho-sociale ;\nla santé est une respon-\n",
+      "text_sha256": "cb9e29f317d24672daf329086a2fcea2d505f3deff47c5a4513543c3932bc76c"
+    },
+    {
+      "bbox": [
+        271.251953125,
+        178.28298950195312,
+        281.078125,
+        246.35000610351562
+      ],
+      "block_id": "page-1096-block-0048",
+      "order": 48,
+      "text": "sabilité individuelle et\n",
+      "text_sha256": "b545582f213eb4e316dfe4f610669859848c34a9bfbd49404aacadd164103b5c"
+    },
+    {
+      "bbox": [
+        281.251953125,
+        217.0550079345703,
+        291.078125,
+        246.35000610351562
+      ],
+      "block_id": "page-1096-block-0049",
+      "order": 49,
+      "text": "collective\n",
+      "text_sha256": "1720b4c6777de5f92309a29acd1de77c880daa158ca41d2660197300bc972938"
+    },
+    {
+      "bbox": [
+        251.251953125,
+        52.41099166870117,
+        271.078125,
+        148.5500030517578
+      ],
+      "block_id": "page-1096-block-0050",
+      "order": 50,
+      "text": "• Vision bio-psycho-sociale ;\nla santé est une respon-\n",
+      "text_sha256": "cb9e29f317d24672daf329086a2fcea2d505f3deff47c5a4513543c3932bc76c"
+    },
+    {
+      "bbox": [
+        271.251953125,
+        68.48300170898438,
+        281.078125,
+        136.5500030517578
+      ],
+      "block_id": "page-1096-block-0051",
+      "order": 51,
+      "text": "sabilité individuelle et\n",
+      "text_sha256": "b545582f213eb4e316dfe4f610669859848c34a9bfbd49404aacadd164103b5c"
+    },
+    {
+      "bbox": [
+        281.251953125,
+        51.81744384765625,
+        291.078125,
+        136.5500030517578
+      ],
+      "block_id": "page-1096-block-0052",
+      "order": 52,
+      "text": "collective : « Je ne suis pas\n",
+      "text_sha256": "fc43c4f1f8fcd55b7547524fa380e8e2418f7d131662f3a214fb6ae2bca7f4cc"
+    },
+    {
+      "bbox": [
+        291.251953125,
+        59.27220153808594,
+        301.078125,
+        136.5500030517578
+      ],
+      "block_id": "page-1096-block-0053",
+      "order": 53,
+      "text": "une maladie, je suis une\n",
+      "text_sha256": "7d88ca37a89724d61f453780343d4670a416cccd058ee65e666dea46186f756a"
+    },
+    {
+      "bbox": [
+        301.251953125,
+        100.72691345214844,
+        311.078125,
+        136.5500030517578
+      ],
+      "block_id": "page-1096-block-0054",
+      "order": 54,
+      "text": "personne. »\n",
+      "text_sha256": "fb340ba1084ebe99d8b4141be266411a05f41f98c4b68d330a6c82667bcf698a"
+    },
+    {
+      "bbox": [
+        341.5728454589844,
+        669.18701171875,
+        351.5923767089844,
+        718.75
+      ],
+      "block_id": "page-1096-block-0055",
+      "order": 55,
+      "text": "Conception du\n",
+      "text_sha256": "34fb293c16a2a0cf68df5cb07edd3a4d7cac2866a4847b45d1b07f0d3dc6b1f8"
+    },
+    {
+      "bbox": [
+        341.6519470214844,
+        575.7659912109375,
+        372.4781188964844,
+        718.75
+      ],
+      "block_id": "page-1096-block-0056",
+      "order": 56,
+      "text": "traitement\n• Milieu thérapeutique\n• Travail chassant les\nidées morbides\n",
+      "text_sha256": "37d12d22aa34c4ecd0a6fc30cb2dce9ab07b33f3b4607432607c658c88be2bdd"
+    },
+    {
+      "bbox": [
+        373.6519470214844,
+        598.3380126953125,
+        404.4781188964844,
+        652.7999877929688
+      ],
+      "block_id": "page-1096-block-0057",
+      "order": 57,
+      "text": "• Compassion\n• Rituels de vie\nrassurants\n",
+      "text_sha256": "eb5bf8caba0f44490e58240cca658373956b2e26ce2fe7c66d63c74bead13898"
+    },
+    {
+      "bbox": [
+        405.6519470214844,
+        592.552978515625,
+        425.4781188964844,
+        652.7999877929688
+      ],
+      "block_id": "page-1096-block-0058",
+      "order": 58,
+      "text": "• Valeurs : obéis-\nsance, charité,\n",
+      "text_sha256": "450f7ecf897fbcafe17473ac84d66c4292ecdaeb1ddf7621c333ef81955fd226"
+    },
+    {
+      "bbox": [
+        425.6519470214844,
+        613.7999877929688,
+        435.4781188964844,
+        640.7999877929688
+      ],
+      "block_id": "page-1096-block-0059",
+      "order": 59,
+      "text": "chasteté\n",
+      "text_sha256": "528d8406ef7af4dbb1a63b6afa0d2a6fe3281458435c5291645be2ee1f1b80c4"
+    },
+    {
+      "bbox": [
+        341.6519470214844,
+        490.6029968261719,
+        351.4781188964844,
+        567.75
+      ],
+      "block_id": "page-1096-block-0060",
+      "order": 60,
+      "text": "Comme l’époque précé-\n",
+      "text_sha256": "ec2d40026202bcc79c96bd68e50a2e0a3882eeee033973edbef8db268433bfe7"
+    },
+    {
+      "bbox": [
+        351.6519470214844,
+        529.3619384765625,
+        361.4781188964844,
+        567.75
+      ],
+      "block_id": "page-1096-block-0061",
+      "order": 61,
+      "text": "dente, plus :\n",
+      "text_sha256": "8e4b154d077f40d0dd4059afcb66202a1ba61fe848b64cb65692654f65a9d2e6"
+    },
+    {
+      "bbox": [
+        362.6519470214844,
+        510.4509582519531,
+        383.4781188964844,
+        567.75
+      ],
+      "block_id": "page-1096-block-0062",
+      "order": 62,
+      "text": "• ECT\n• Tranquillisants\n",
+      "text_sha256": "8bc2de0eee8850ad1aff24f07642566cbed8cc23501c1e7c67b08b1dbcb23f6a"
+    },
+    {
+      "bbox": [
+        341.6519470214844,
+        392.0908508300781,
+        394.4781188964844,
+        477.95001220703125
+      ],
+      "block_id": "page-1096-block-0063",
+      "order": 63,
+      "text": "• Neuroleptiques\n• Psychothérapie\n• Visites à domicile\n• Travail social : lien avec\nle milieu d’origine ou\n",
+      "text_sha256": "56e11bc77b840d93da0c7002f470dbea1ad200f456850370fb32fa6a3e1338fa"
+    },
+    {
+      "bbox": [
+        394.6519470214844,
+        416.3059997558594,
+        404.4781188964844,
+        465.95001220703125
+      ],
+      "block_id": "page-1096-block-0064",
+      "order": 64,
+      "text": "d’appartenance\n",
+      "text_sha256": "4124912ae576bf3830c538b5ea005bd6f64481bc489db1d46c74f29977f6b87f"
+    },
+    {
+      "bbox": [
+        341.6519470214844,
+        306.48797607421875,
+        394.4781188964844,
+        368.1499938964844
+      ],
+      "block_id": "page-1096-block-0065",
+      "order": 65,
+      "text": "• Neuroleptiques\n• Psychothérapie\n• Soutien social\n• Développement\ncommunautaire\n",
+      "text_sha256": "44e136afe4973f4c9349fbd36728daa7087f01d375bf27a0adc8fa4bceadcf29"
+    },
+    {
+      "bbox": [
+        341.6519470214844,
+        164.03897094726562,
+        351.4781188964844,
+        258.3500061035156
+      ],
+      "block_id": "page-1096-block-0066",
+      "order": 66,
+      "text": "Comme l’époque précédente,\n",
+      "text_sha256": "7e0dec547719f07ac76d0abbb1b20350866cd48df41b64a658b033062d9dfe5a"
+    },
+    {
+      "bbox": [
+        351.6519470214844,
+        241.89100646972656,
+        361.4781188964844,
+        258.3500061035156
+      ],
+      "block_id": "page-1096-block-0067",
+      "order": 67,
+      "text": "plus :\n",
+      "text_sha256": "d4ece6ddfc093e6438dea9069157bae0dac2ecc65138df6e70112c9206548086"
+    },
+    {
+      "bbox": [
+        362.6519470214844,
+        177.3199920654297,
+        382.4781188964844,
+        258.3500061035156
+      ],
+      "block_id": "page-1096-block-0068",
+      "order": 68,
+      "text": "• Responsabilisation de\nl’individu\n",
+      "text_sha256": "942d9aa3f0996d4909a6e05d8be0a47fe8273624ce2e3cd43b34fc0f9dd6b42b"
+    },
+    {
+      "bbox": [
+        383.6519470214844,
+        164.65301513671875,
+        403.4781188964844,
+        258.3500061035156
+      ],
+      "block_id": "page-1096-block-0069",
+      "order": 69,
+      "text": "• Intervention de divers sec-\nteurs ministériels : emploi,\n",
+      "text_sha256": "a38b79c7d00aa9999f123b304f3dccbba65f002dd538aaf65425a425c83839b3"
+    },
+    {
+      "bbox": [
+        403.6519470214844,
+        182.0125732421875,
+        413.4781188964844,
+        246.35000610351562
+      ],
+      "block_id": "page-1096-block-0070",
+      "order": 70,
+      "text": "éducation, habitation\n",
+      "text_sha256": "81683db70764e49be506c7fb73ad59162e74543d482912e783da261683e1b166"
+    },
+    {
+      "bbox": [
+        414.6519470214844,
+        169.80300903320312,
+        434.4781188964844,
+        258.3500061035156
+      ],
+      "block_id": "page-1096-block-0071",
+      "order": 71,
+      "text": "• Coordination autour de\nplans de services indivi-\n",
+      "text_sha256": "577846d2944d7d90c7475652b1b0f81626956b01655473721af70dbe5b76ec60"
+    },
+    {
+      "bbox": [
+        434.6519470214844,
+        165.69546508789062,
+        444.4781188964844,
+        246.35000610351562
+      ],
+      "block_id": "page-1096-block-0072",
+      "order": 72,
+      "text": "dualisés dont le client est\n",
+      "text_sha256": "b52954faba0e54db6c43b65882a4efa179226a06ec2345c0d910c2dc0cbe9c89"
+    },
+    {
+      "bbox": [
+        444.6519470214844,
+        198.6320037841797,
+        454.4781188964844,
+        246.35000610351562
+      ],
+      "block_id": "page-1096-block-0073",
+      "order": 73,
+      "text": "l’acteur central\n",
+      "text_sha256": "354f6415c9bed73aefc25d3368d514889ba34671b05fc74cc0fefc57a530739e"
+    },
+    {
+      "bbox": [
+        455.6519470214844,
+        200.45001220703125,
+        475.4781188964844,
+        258.3500061035156
+      ],
+      "block_id": "page-1096-block-0074",
+      "order": 74,
+      "text": "• Importance du\nconsentement\n",
+      "text_sha256": "f6d1d3c4b7c970b640f8e8c0b2c1064f389ffc58c5d9096854dd920a8c6d93a9"
+    },
+    {
+      "bbox": [
+        341.6519470214844,
+        54.23897933959961,
+        351.4781188964844,
+        148.5500030517578
+      ],
+      "block_id": "page-1096-block-0075",
+      "order": 75,
+      "text": "Comme l’époque précédente,\n",
+      "text_sha256": "7e0dec547719f07ac76d0abbb1b20350866cd48df41b64a658b033062d9dfe5a"
+    },
+    {
+      "bbox": [
+        351.6519470214844,
+        132.09100341796875,
+        361.4781188964844,
+        148.5500030517578
+      ],
+      "block_id": "page-1096-block-0076",
+      "order": 76,
+      "text": "plus :\n",
+      "text_sha256": "d4ece6ddfc093e6438dea9069157bae0dac2ecc65138df6e70112c9206548086"
+    },
+    {
+      "bbox": [
+        362.6519470214844,
+        54.60498046875,
+        382.4781188964844,
+        148.5500030517578
+      ],
+      "block_id": "page-1096-block-0077",
+      "order": 77,
+      "text": "• Accent sur l’appropriation\ndu pouvoir\n",
+      "text_sha256": "ca26ae3eae3d794ef35925c23d5b2ec779c46e7595e0fc3b633504440f6ad649"
+    },
+    {
+      "bbox": [
+        383.6519470214844,
+        59.35698699951172,
+        403.4781188964844,
+        148.5500030517578
+      ],
+      "block_id": "page-1096-block-0078",
+      "order": 78,
+      "text": "• Épisode de soins auquel\ncorrespond un échelon\n",
+      "text_sha256": "d8cd0afb5d03228b907c460a5ad254057416b457a8989aca17143ebd17278fe8"
+    },
+    {
+      "bbox": [
+        403.6519470214844,
+        53.275611877441406,
+        413.4781188964844,
+        136.5500030517578
+      ],
+      "block_id": "page-1096-block-0079",
+      "order": 79,
+      "text": "dans la hiérarchie de lieux\n",
+      "text_sha256": "77b54df15abc8967d4474c2538114d0348febf2fc89a1932a52bb9ab244e0ab7"
+    },
+    {
+      "bbox": [
+        413.6519470214844,
+        83.32400512695312,
+        423.4781188964844,
+        136.5500030517578
+      ],
+      "block_id": "page-1096-block-0080",
+      "order": 80,
+      "text": "et d’intervenants\n",
+      "text_sha256": "995685309515d1e8d286e71657006dd9a41b5784714a41daf48949942770ee72"
+    },
+    {
+      "bbox": [
+        118.45230102539062,
+        432.165771484375,
+        130.42007446289062,
+        457.8500061035156
+      ],
+      "block_id": "page-1096-block-0081",
+      "order": 81,
+      "text": "(suite)\n",
+      "text_sha256": "c684d6dbcdfd50f0ada227f799b5c0fb30e817ac3da61b4cbf208decde7f907b"
+    }
+  ],
+  "coordinates_sha256": "9e42bafc374dbbe99ce9b7277af26711965482d40eab62eea5f14dbf19bc4588",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1096",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 48\nÉvolution des services psychiatriques\n1079\nTABLEAU 48.2 Évolution des services psychiatriques au Québec\nPériode asilaire\net apparentée\n(1845-1910)\nHôpital psychiatrique,\nafliation universitaire\n(1910-1960)\nSystème psychiatrique à\nmultiples composantes\n(1962)\nSystème global intégrant les\nsoins physiques et mentaux\n(1966)\nPolitique de santé mentale\npour un partenariat élargi :\nassociation du réseau\nofciel avec les organismes\ncommunautaires, les\nfamilles et les proches\n(1989-1998)\nPlan d’action pour la\ntransformation des services\nen santé mentale –\nLe virage ambulatoire\n(1998-2005)\nReprésentation\nsociale des per-\nsonnes soignées\n• Fous, aliénés,\npensionnaires\n• Idem et malades\nmentaux\n• Patients, malades\n• Clients, bénéciaires\n• Usagers, clients\n• Clientèles cibles\nConception des\ncauses de la\nfolie, aliénation,\nmaladie mentale\n• Biologique : hérédité\n• Psychologique : par\nexemple mauvaises\nhabitudes, intempé-\nrance, masturbation\n• Sociale : dissi-\ndence religieuse et\npauvreté\n• Hérédité :\ndégénérescence\n• Fatalisme\nneurologique\n• Hérédité\n• Histoire personnelle\n• Contexte social\n• Vision globale de la santé\nbasée sur l’interaction du\nphysique, du psychique et\ndu social\n• Émergence d’organismes\ncommunautaires\n• Vision bio-psycho-sociale ;\nla santé est une respon-\nsabilité individuelle et\ncollective\n• Vision bio-psycho-sociale ;\nla santé est une respon-\nsabilité individuelle et\ncollective : « Je ne suis pas\nune maladie, je suis une\npersonne. »\nConception du\ntraitement\n• Milieu thérapeutique\n• Travail chassant les\nidées morbides\n• Compassion\n• Rituels de vie\nrassurants\n• Valeurs : obéis-\nsance, charité,\nchasteté\nComme l’époque précé-\ndente, plus :\n• ECT\n• Tranquillisants\n• Neuroleptiques\n• Psychothérapie\n• Visites à domicile\n• Travail social : lien avec\nle milieu d’origine ou\nd’appartenance\n• Neuroleptiques\n• Psychothérapie\n• Soutien social\n• Développement\ncommunautaire\nComme l’époque précédente,\nplus :\n• Responsabilisation de\nl’individu\n• Intervention de divers sec-\nteurs ministériels : emploi,\néducation, habitation\n• Coordination autour de\nplans de services indivi-\ndualisés dont le client est\nl’acteur central\n• Importance du\nconsentement\nComme l’époque précédente,\nplus :\n• Accent sur l’appropriation\ndu pouvoir\n• Épisode de soins auquel\ncorrespond un échelon\ndans la hiérarchie de lieux\net d’intervenants\n(suite)\n",
+  "raw_text_sha256": "4ea2e6d5e5d8144c3c6ae4350acb21bfe89d5d20da4b5dc898c23768ab95e883",
+  "source_page_display": 1097,
+  "source_page_index": 1096
+}

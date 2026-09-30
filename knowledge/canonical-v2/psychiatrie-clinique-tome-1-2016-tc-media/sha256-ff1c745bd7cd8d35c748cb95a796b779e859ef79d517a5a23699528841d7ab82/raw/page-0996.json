@@ -1,0 +1,76 @@
+{
+  "block_sequence_sha256": "3465f26c2b08b6fc81e14807c8d5cd3a4ddffbc591ca8e6ec088a2fdf1678fd0",
+  "blocks": [
+    {
+      "bbox": [
+        398.8999938964844,
+        -50.99560546875,
+        658.9000244140625,
+        758.3859252929688
+      ],
+      "block_id": "page-0996-block-0001",
+      "order": 1,
+      "text": "9794\n",
+      "text_sha256": "526ac5e4e9060d1622222942906dbca02ba75b7e9d7639e7e569cf9392a748ab"
+    },
+    {
+      "bbox": [
+        84.0,
+        394.7660217285156,
+        300.04998779296875,
+        460.2035217285156
+      ],
+      "block_id": "page-0996-block-0002",
+      "order": 2,
+      "text": "42 Interdisciplinarité et travail d’équipe...... 980\n43 Réseaux et partenariats............................. 992\n44 Soins en collaboration .............................. 1004\n45 Maladie psychiatrique sévère\net persistante .............................................. 1020\n",
+      "text_sha256": "5dc7194999965794a9acb2c2897a0cb0e23334c9d6438faad164bfac0b0868f7"
+    },
+    {
+      "bbox": [
+        331.5,
+        394.7660217285156,
+        547.5,
+        456.7035217285156
+      ],
+      "block_id": "page-0996-block-0003",
+      "order": 3,
+      "text": "46 Aspects psychiatriques\ndes soins palliatifs...................................... 1033\n47 Évaluation de la qualité des soins\net maintien de la compétence................... 1048\n48 Évolution des services psychiatriques..... 1066\n",
+      "text_sha256": "999ea67fb58d8b063fa029b35f226c7538398017f9b7b17e1c2ca295065f3ac7"
+    },
+    {
+      "bbox": [
+        48.0,
+        170.7292938232422,
+        290.00018310546875,
+        278.88165283203125
+      ],
+      "block_id": "page-0996-block-0004",
+      "order": 4,
+      "text": "Organisation\ndes soins\n",
+      "text_sha256": "1811bb4a09a4e675eed6c37cb81449416aa638533af3f0506db45a54769e7f75"
+    },
+    {
+      "bbox": [
+        240.60000610351562,
+        70.84444427490234,
+        385.2432556152344,
+        108.84444427490234
+      ],
+      "block_id": "page-0996-block-0005",
+      "order": 5,
+      "text": "PARTIE\n",
+      "text_sha256": "0e054fd62c9a877920b13d9a515f145b5819af2695746e6dfd91efa1e2c5806b"
+    }
+  ],
+  "coordinates_sha256": "42e2939b29121ff2c1ea23b8aaa20a3f5afc694a9aa77478f4da10a6632bceba",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0996",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "9794\n42 Interdisciplinarité et travail d’équipe...... 980\n43 Réseaux et partenariats............................. 992\n44 Soins en collaboration .............................. 1004\n45 Maladie psychiatrique sévère\net persistante .............................................. 1020\n46 Aspects psychiatriques\ndes soins palliatifs...................................... 1033\n47 Évaluation de la qualité des soins\net maintien de la compétence................... 1048\n48 Évolution des services psychiatriques..... 1066\nOrganisation\ndes soins\nPARTIE\n",
+  "raw_text_sha256": "1e48bfca1f2bf4163ea508a11e413a1e563670772546f9edf6e36e6c3b32309c",
+  "source_page_display": 997,
+  "source_page_index": 996
+}

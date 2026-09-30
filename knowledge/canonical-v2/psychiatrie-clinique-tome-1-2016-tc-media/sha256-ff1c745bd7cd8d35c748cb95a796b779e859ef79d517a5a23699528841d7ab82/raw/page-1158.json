@@ -1,0 +1,124 @@
+{
+  "block_sequence_sha256": "8ee58f8b62f1e7bc66b818f8394437e655d48c21c6f35ede2f372bc483f67381",
+  "blocks": [
+    {
+      "bbox": [
+        422.8000183105469,
+        747.3754272460938,
+        554.97998046875,
+        758.6693725585938
+      ],
+      "block_id": "page-1158-block-0001",
+      "order": 1,
+      "text": "Figures supplémentaires\nF21\n",
+      "text_sha256": "b5df1a4b163d730d8f4b93d7d6e985f184d606dccc67497a281f46dcdb74ae6e"
+    },
+    {
+      "bbox": [
+        56.35000228881836,
+        41.002296447753906,
+        230.97940063476562,
+        53.320068359375
+      ],
+      "block_id": "page-1158-block-0002",
+      "order": 2,
+      "text": "FIGURE 39 Individu âgé normal versus DTA\n",
+      "text_sha256": "4f456ee3405e766c426bb818ad7c37fad68a96778326ac605140ceca510a6f9b"
+    },
+    {
+      "bbox": [
+        54.25,
+        298.0406188964844,
+        150.0797576904297,
+        306.7749938964844
+      ],
+      "block_id": "page-1158-block-0003",
+      "order": 3,
+      "text": "DTA : Démence de type Alzheimer.\n",
+      "text_sha256": "ca73563fa89f19397f2d8a440e30d491efb79df6c47bc8193d5f5dd75cacbd60"
+    },
+    {
+      "bbox": [
+        54.25,
+        311.0406188964844,
+        451.6140441894531,
+        319.7749938964844
+      ],
+      "block_id": "page-1158-block-0004",
+      "order": 4,
+      "text": "Dans la démence de type Alzheimer (DTA), le cerveau est considérablement rétréci (zones rouges) en raison d’une dégénérescence cellulaire.\n",
+      "text_sha256": "c7754cde3ce8a6ce66e0ffb6b9fd596b1e84f4e505090d49f837653ccad7cd36"
+    },
+    {
+      "bbox": [
+        54.25,
+        324.0406188964844,
+        207.53286743164062,
+        332.7749938964844
+      ],
+      "block_id": "page-1158-block-0005",
+      "order": 5,
+      "text": "Les sillons à la surface du cerveau sont plus profonds.\n",
+      "text_sha256": "f51368af869ddf66e8ddff209e8f0e1d995d672dfa70162df84ed8a92c984f6b"
+    },
+    {
+      "bbox": [
+        54.25,
+        337.0406188964844,
+        469.6141662597656,
+        345.9088439941406
+      ],
+      "block_id": "page-1158-block-0006",
+      "order": 6,
+      "text": "Source : Duara, R. & al. (2008). « Medial temporal lobe atrophy on MRI scans and the diagnosis of Alzheimer disease », Neurology, 71(24), p. 1988.\n",
+      "text_sha256": "16a04c4535ce94fbfb72e5de6e65e465658258a0c530ac33e9601fe4e8d32e1e"
+    },
+    {
+      "bbox": [
+        56.25,
+        379.0022888183594,
+        510.95184326171875,
+        391.320068359375
+      ],
+      "block_id": "page-1158-block-0007",
+      "order": 7,
+      "text": "FIGURE 40 Zones corticales d’hyperactivation et d’hypoactivation dans le trouble du spectre de l’autisme (TSA)\n",
+      "text_sha256": "36846d0a49aa6c2a63c058c0ec0890e47bd0b0f6dce76da1cfe8b1c8dc8576c7"
+    },
+    {
+      "bbox": [
+        54.25,
+        516.2406616210938,
+        549.2525634765625,
+        562.9750366210938
+      ],
+      "block_id": "page-1158-block-0008",
+      "order": 8,
+      "text": "Régions corticales où se trouvent des hypo- (bleu) et hyperactivations (orange) chez les personnes avec un TSA comparativement aux personnes sans TSA lors du traitement\nd’informations visuelles. Résultats extraits d’une méta-analyse synthétisant les données de 26 études de neuro-imagerie où de l’information visuelle (lettre, objet, visage) était\nprésentée à un total de 357 individus avec un TSA et 370 sans TSA. Les individus avec TSA montrent plus d’activité dans les régions associées au traitement perceptif (èches\norangées ; cortex visuel, gyrus fusiforme) tandis que les régions frontales de préparation motrice, contrôle cognitif, de prise de décision (èches bleues ; cortex moteur et\nprémoteur, gyrus frontal inférieur, gyrus frontal moyen) sont plus fortement impliquées chez les individus sans TSA, et ce, pour un niveau de performance équivalent.\n",
+      "text_sha256": "fa121833fa32275514efb97b2994cad7c357eddf82b14d0df04759e00b124781"
+    },
+    {
+      "bbox": [
+        54.25,
+        567.2406616210938,
+        465.568115234375,
+        576.10888671875
+      ],
+      "block_id": "page-1158-block-0009",
+      "order": 9,
+      "text": "Source : Samson, F. & al. (2012). « Zefro enhanced visual functioning in autism : an ALE meta-analysis », Hum Brain Mapp, 33(7), p. 1553-1581.\n",
+      "text_sha256": "782a4dc40ba0e8f3d8f34a7b8650a8f32389c17ec841c77d0d9e32bed3102e93"
+    }
+  ],
+  "coordinates_sha256": "11852f8f65880791785d89ce938c535e4d3c179456700787292f5c767d5f1256",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1158",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Figures supplémentaires\nF21\nFIGURE 39 Individu âgé normal versus DTA\nDTA : Démence de type Alzheimer.\nDans la démence de type Alzheimer (DTA), le cerveau est considérablement rétréci (zones rouges) en raison d’une dégénérescence cellulaire.\nLes sillons à la surface du cerveau sont plus profonds.\nSource : Duara, R. & al. (2008). « Medial temporal lobe atrophy on MRI scans and the diagnosis of Alzheimer disease », Neurology, 71(24), p. 1988.\nFIGURE 40 Zones corticales d’hyperactivation et d’hypoactivation dans le trouble du spectre de l’autisme (TSA)\nRégions corticales où se trouvent des hypo- (bleu) et hyperactivations (orange) chez les personnes avec un TSA comparativement aux personnes sans TSA lors du traitement\nd’informations visuelles. Résultats extraits d’une méta-analyse synthétisant les données de 26 études de neuro-imagerie où de l’information visuelle (lettre, objet, visage) était\nprésentée à un total de 357 individus avec un TSA et 370 sans TSA. Les individus avec TSA montrent plus d’activité dans les régions associées au traitement perceptif (èches\norangées ; cortex visuel, gyrus fusiforme) tandis que les régions frontales de préparation motrice, contrôle cognitif, de prise de décision (èches bleues ; cortex moteur et\nprémoteur, gyrus frontal inférieur, gyrus frontal moyen) sont plus fortement impliquées chez les individus sans TSA, et ce, pour un niveau de performance équivalent.\nSource : Samson, F. & al. (2012). « Zefro enhanced visual functioning in autism : an ALE meta-analysis », Hum Brain Mapp, 33(7), p. 1553-1581.\n",
+  "raw_text_sha256": "eac8923d44d4bc30cfd4117bece65a62ad7bf0ccf0137165e9b56fda5d97d821",
+  "source_page_display": 1159,
+  "source_page_index": 1158
+}

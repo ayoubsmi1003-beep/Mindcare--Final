@@ -1,0 +1,412 @@
+{
+  "block_sequence_sha256": "8a840cadeb7f3eeaf865f4b0bdb92d90be25db485b8f8c81ec5671004864d48a",
+  "blocks": [
+    {
+      "bbox": [
+        301.45001220703125,
+        747.525390625,
+        555.0,
+        758.8193359375
+      ],
+      "block_id": "page-0556-block-0001",
+      "order": 1,
+      "text": "Chapitre 25\nTroubles à symptomatologie somatique\n539\n",
+      "text_sha256": "9e78dc463bdfb47ac8b9e9ce8b466ceb2295991a593bb0c0b29b90a17e7f4375"
+    },
+    {
+      "bbox": [
+        56.400001525878906,
+        198.45230102539062,
+        387.882568359375,
+        210.72007751464844
+      ],
+      "block_id": "page-0556-block-0002",
+      "order": 2,
+      "text": "TABLEAU 25.5 Critères diagnostiques de la crainte excessive d’avoir une maladie\n",
+      "text_sha256": "74d70a56b8834cbddd5863dc2ae5f90a4ccc7a0b3f381f11010982c0d14191dd"
+    },
+    {
+      "bbox": [
+        82.80000305175781,
+        215.6741180419922,
+        477.4520263671875,
+        239.0002899169922
+      ],
+      "block_id": "page-0556-block-0003",
+      "order": 3,
+      "text": "DSM-5\nDSM-IV-TR\n300.7 (F45.21) Crainte excessive d’avoir une maladie\n300.7 (F45.2) Hypocondrie\n",
+      "text_sha256": "32cbc2fecbf3f150a3c573594f3bb6e69c7f93a29800dbf7da15dbee5bba552d"
+    },
+    {
+      "bbox": [
+        58.29999923706055,
+        243.40196228027344,
+        293.47662353515625,
+        253.22813415527344
+      ],
+      "block_id": "page-0556-block-0004",
+      "order": 4,
+      "text": "A. Préoccupation concernant le fait d’avoir ou de développer une maladie\n",
+      "text_sha256": "428aa505955957be50afff9527e289c21e3d13ac24b2a236d346fe35bf9ecf40"
+    },
+    {
+      "bbox": [
+        69.1500015258789,
+        253.40194702148438,
+        88.8060073852539,
+        263.2281188964844
+      ],
+      "block_id": "page-0556-block-0005",
+      "order": 5,
+      "text": "grave.\n",
+      "text_sha256": "00c031ba9bba9a4d9714c1dc695bef136910e5696f23471220fdf22abe6c4701"
+    },
+    {
+      "bbox": [
+        308.3000183105469,
+        243.40196228027344,
+        546.7470092773438,
+        253.22813415527344
+      ],
+      "block_id": "page-0556-block-0006",
+      "order": 6,
+      "text": "A. Préoccupation centrée sur la crainte ou l’idée d’être atteint d’une mala-\n",
+      "text_sha256": "fb1577141fd7e36907a581b355a203bf8ab3bb7bc0395a95654d2e3ae7487491"
+    },
+    {
+      "bbox": [
+        319.1499938964844,
+        253.40194702148438,
+        547.1542358398438,
+        273.2281188964844
+      ],
+      "block_id": "page-0556-block-0007",
+      "order": 7,
+      "text": "die grave, fondée sur l’interprétation erronée par le sujet de symptômes\nphysiques.\n",
+      "text_sha256": "21951fd617a412b4528398a66279b14803097961570558f7e3c8b88e40a38f14"
+    },
+    {
+      "bbox": [
+        58.29999923706055,
+        279.8019714355469,
+        296.50225830078125,
+        289.6281433105469
+      ],
+      "block_id": "page-0556-block-0008",
+      "order": 8,
+      "text": "B. Les symptômes somatiques sont absents ou s’ils sont présents, ils sont\n",
+      "text_sha256": "e5c265cc3026d54334f3b963faaf1103bbebb30df3cf355e12ce9e01b2be41ca"
+    },
+    {
+      "bbox": [
+        69.1500015258789,
+        289.8019714355469,
+        300.2171630859375,
+        329.6281433105469
+      ],
+      "block_id": "page-0556-block-0009",
+      "order": 9,
+      "text": "d’intensité mineure. Si un autre problème médical est présent ou en cas\nde risque notable de développement d’une affection médicale (p. ex., du\nfait de la présence d’antécédents familiaux importants), la préoccupation\nest clairement excessive ou disproportionnée.\n",
+      "text_sha256": "699143ed7c17e7150946608588b3cd635c71aa6e70fde8a61ab3693a2313c479"
+    },
+    {
+      "bbox": [
+        308.3000183105469,
+        336.251953125,
+        520.2582397460938,
+        346.078125
+      ],
+      "block_id": "page-0556-block-0010",
+      "order": 10,
+      "text": "B. La préoccupation persiste malgré un bilan médical approprié et\n",
+      "text_sha256": "53062636f9753ea85170b74a8236bd5bc07ed1cb9ddbe4ce104a22d6f63c5765"
+    },
+    {
+      "bbox": [
+        319.1499938964844,
+        346.251953125,
+        351.1449890136719,
+        356.078125
+      ],
+      "block_id": "page-0556-block-0011",
+      "order": 11,
+      "text": "rassurant.\n",
+      "text_sha256": "bc59e0c51650ab249b6cab3d4975e8a0cb2e19588f3bec85a244159cf5fac9cc"
+    },
+    {
+      "bbox": [
+        58.29999923706055,
+        362.6519470214844,
+        299.38165283203125,
+        372.4781188964844
+      ],
+      "block_id": "page-0556-block-0012",
+      "order": 12,
+      "text": "C. Il existe un degré important d’anxiété concernant la santé et la personne\n",
+      "text_sha256": "464fe8148f741d7722aac11efa2f28fc45f4ec077bdfa106892460207431c9dd"
+    },
+    {
+      "bbox": [
+        69.30000305175781,
+        372.6519470214844,
+        237.81167602539062,
+        382.4781188964844
+      ],
+      "block_id": "page-0556-block-0013",
+      "order": 13,
+      "text": "s’inquiète facilement de son état de santé personnel.\n",
+      "text_sha256": "e6c2f2e93597ae2897361d36b77d2ee0e899059e15f0bd58e9b9b17a119b8864"
+    },
+    {
+      "bbox": [
+        308.3000183105469,
+        362.6519470214844,
+        549.2470092773438,
+        372.4781188964844
+      ],
+      "block_id": "page-0556-block-0014",
+      "order": 14,
+      "text": "D. La préoccupation est à l’origine d’une souffrance cliniquement signica-\n",
+      "text_sha256": "fac977f97c91312af87b0714ce3c643cb99d7c109416949fac1146bddd2dd8e1"
+    },
+    {
+      "bbox": [
+        319.45001220703125,
+        372.6519470214844,
+        548.1198120117188,
+        392.4781188964844
+      ],
+      "block_id": "page-0556-block-0015",
+      "order": 15,
+      "text": "tive ou d’une altération du fonctionnement social, professionnel ou dans\nd’autres domaines importants.\n",
+      "text_sha256": "fd31f51e1464c65ce98c1003dd8ff88ded72d3783b18ee1b2719ce453ea78544"
+    },
+    {
+      "bbox": [
+        58.29999923706055,
+        399.1019592285156,
+        278.94122314453125,
+        408.9281311035156
+      ],
+      "block_id": "page-0556-block-0016",
+      "order": 16,
+      "text": "D. La personne présente des comportements excessifs par rapport à\n",
+      "text_sha256": "46ecf39c1ab8f9e21a1b5a770c7caae87c2364d5b0d45de9268ee6925fb377bc"
+    },
+    {
+      "bbox": [
+        69.45000457763672,
+        409.1019592285156,
+        299.4656066894531,
+        438.9281311035156
+      ],
+      "block_id": "page-0556-block-0017",
+      "order": 17,
+      "text": "sa santé (p. ex., effectue des vérications répétées de son corps à la\nrecherche des signes d’une maladie) ou présente un évitement inadapté\n(p. ex., évite les rendez-vous médicaux et les hôpitaux).\n",
+      "text_sha256": "15800813f2552bdec6cd3f19c023f702829984f630112d59aa2bf33a44ed2464"
+    },
+    {
+      "bbox": [
+        58.29999923706055,
+        445.501953125,
+        285.0854187011719,
+        455.328125
+      ],
+      "block_id": "page-0556-block-0018",
+      "order": 18,
+      "text": "E. Les préoccupations concernant la maladie sont présentes depuis au\n",
+      "text_sha256": "8987c52fe7bdd98c7a99632802f32bfa53f6fb6386828595fdbd043e0b035f65"
+    },
+    {
+      "bbox": [
+        68.5999984741211,
+        455.501953125,
+        277.941162109375,
+        475.328125
+      ],
+      "block_id": "page-0556-block-0019",
+      "order": 19,
+      "text": "moins 6 mois mais la nature de la maladie qui est spéciquement\nanticipée peut avoir changé durant cette période de temps.\n",
+      "text_sha256": "46904f1dead92a9e0e7631b2838c16f69887779cb269c141ed47ae7cea379984"
+    },
+    {
+      "bbox": [
+        308.3000183105469,
+        445.501953125,
+        480.2355041503906,
+        455.328125
+      ],
+      "block_id": "page-0556-block-0020",
+      "order": 20,
+      "text": "E. La durée de la perturbation est d’au moins 6 mois.\n",
+      "text_sha256": "39085cccd05ec6e6d9c456a6a20d84db1e1e72df87102e59ec8e3abf9a3722b5"
+    },
+    {
+      "bbox": [
+        58.29999923706055,
+        481.95196533203125,
+        298.9107360839844,
+        491.77813720703125
+      ],
+      "block_id": "page-0556-block-0021",
+      "order": 21,
+      "text": "F. La préoccupation relative aux maladies n’est pas mieux expliquée par un\n",
+      "text_sha256": "4130f3a9500bf0e0b9a108a9084731671d050501b03534d9cc200b5a4cddc06b"
+    },
+    {
+      "bbox": [
+        67.45000457763672,
+        491.95196533203125,
+        158.94686889648438,
+        501.77813720703125
+      ],
+      "block_id": "page-0556-block-0022",
+      "order": 22,
+      "text": "autre trouble mental tel que :\n",
+      "text_sha256": "ca4181c447cbb0b73efe983ace120c7da5f7be48f338006ddaa6f51c61438ea7"
+    },
+    {
+      "bbox": [
+        68.30000305175781,
+        502.95196533203125,
+        208.9757843017578,
+        567.7781372070312
+      ],
+      "block_id": "page-0556-block-0023",
+      "order": 23,
+      "text": "• un trouble à symptomatologie somatique,\n• un trouble panique,\n• une anxiété généralisée,\n• une obsession de dysmorphie corporelle,\n• un trouble obsessionnel-compulsif,\n• un trouble délirant à type somatique.\n",
+      "text_sha256": "884cdc3ce7ca96c110ca97242d51489170ea13d2626823df3915e92a34bb876b"
+    },
+    {
+      "bbox": [
+        308.3000183105469,
+        481.95196533203125,
+        524.44140625,
+        491.77813720703125
+      ],
+      "block_id": "page-0556-block-0024",
+      "order": 24,
+      "text": "C. La croyance exposée dans le critère A ne revêt pas une intensité\n",
+      "text_sha256": "262b1774ef4ae9df6df95c7c751a8946c4a8cee7ac38a0d1471fa26be5efa8db"
+    },
+    {
+      "bbox": [
+        308.3000183105469,
+        491.95196533203125,
+        547.90283203125,
+        532.7781372070312
+      ],
+      "block_id": "page-0556-block-0025",
+      "order": 25,
+      "text": "délirante (comme dans le Trouble délirant, type somatique) et ne se\nlimite pas à une préoccupation centrée sur l’apparence (comme dans le\nTrouble : peur d’une dysmorphie corporelle).\nF. La préoccupation n’est pas mieux expliquée par :\n",
+      "text_sha256": "97698c3b6e5d595e53749c19506525ff36b779e0e1a563b8bb46e746119a0dad"
+    },
+    {
+      "bbox": [
+        318.3000183105469,
+        533.9519653320312,
+        439.5010986328125,
+        598.7781372070312
+      ],
+      "block_id": "page-0556-block-0026",
+      "order": 26,
+      "text": "• une Anxiété généralisée,\n• un Trouble obsessionnel-compulsif,\n• un Trouble panique,\n• un Épisode dépressif majeur,\n• une Angoisse de séparation,\n• un autre Trouble somatoforme.\n",
+      "text_sha256": "f231078be016b79bb24f0847265dbea6dbf3503fcfb7d45312576d89d924236d"
+    },
+    {
+      "bbox": [
+        58.29999923706055,
+        605.4019775390625,
+        297.30072021484375,
+        657.3424072265625
+      ],
+      "block_id": "page-0556-block-0027",
+      "order": 27,
+      "text": "Spécier le type :\nÀ type de demande de soins: Les soins médicaux incluant les visites\nchez des médecins ou les examens complémentaires sont utilisés de façon\nfréquente.\nÀ type évitant les soins: les soins médicaux sont rarement utilisés.\n",
+      "text_sha256": "f26af2e43244bf31977c84acb98bc81cc0fe53cbce74810640afe0ba1ef19ffb"
+    },
+    {
+      "bbox": [
+        308.3000183105469,
+        605.4019775390625,
+        548.4989624023438,
+        646.2281494140625
+      ],
+      "block_id": "page-0556-block-0028",
+      "order": 28,
+      "text": "Spéciez si :\nAvec peu de prise de conscience: si, la plupart du temps au cours de\nl’épisode actuel, le sujet ne reconnaît pas que sa préoccupation concernant\nle fait d’avoir une maladie grave est excessive ou déraisonnable\n",
+      "text_sha256": "1c633134d7e32c5d9499fd4ff7311bb12dc62913f8fad1981419f358071efbc3"
+    },
+    {
+      "bbox": [
+        54.29999923706055,
+        664.9203491210938,
+        553.8338623046875,
+        724.4249877929688
+      ],
+      "block_id": "page-0556-block-0029",
+      "order": 29,
+      "text": "Sources: APA (2015), p. 372 ; APA (2004), p. 507.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris,\n2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation, DSM-IV-TR - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\n",
+      "text_sha256": "8ebf83b48f2ee561ddaf1dad30bb10b81f76ad5901df35c1d5ea7bfe26a85676"
+    },
+    {
+      "bbox": [
+        66.0,
+        40.9658203125,
+        296.924072265625,
+        62.95849609375
+      ],
+      "block_id": "page-0556-block-0030",
+      "order": 30,
+      "text": "d’une affection médicale sérieuse non diagnostiquée. Le\ntableau 25.5 présente les critères diagnostiques.\n",
+      "text_sha256": "3d12711c3740e89ef9b04b4a1a30442a5eff06424d8b03d38ea8f1f244add7e6"
+    },
+    {
+      "bbox": [
+        54.0,
+        73.8330078125,
+        297.10479736328125,
+        179.95849609375
+      ],
+      "block_id": "page-0556-block-0031",
+      "order": 31,
+      "text": "Description clinique\nLes préoccupations sont excessives, obsédantes ou dispropor-\ntionnées concernant la crainte voire la suspicion d’avoir une\nmaladie sérieuse et perturbant le fonctionnement du patient.\nLes symptômes somatiques sont absents, sinon minimes. On\nne retrouve pas d’autres inquiétudes telles que rencontrées dans\nun trouble d’anxiété généralisée (soucis multiples, insécurité\nnancière, intolérance à l’incertitude) et la crainte demeure\ncirconscrite à la santé. On y rencontre les caractéristiques d’une\n",
+      "text_sha256": "cde2ba37bc05884f2627babf9925d465cbf062a969f1b2f9bd3d59e99c6de336"
+    },
+    {
+      "bbox": [
+        312.0,
+        40.9658203125,
+        555.1747436523438,
+        90.00849914550781
+      ],
+      "block_id": "page-0556-block-0032",
+      "order": 32,
+      "text": "phobie liée à la maladie, à la mort, etc. Des comportements\nobsessionnels sont présents : comportements de vérication\n(auto-examen), des consultations à répétition, des demandes\nd’examen, etc.\n",
+      "text_sha256": "d3af06936e2af0d2e05d54b2778ba45c09a08bb5f48b24f1e3e9ebf160a6d544"
+    },
+    {
+      "bbox": [
+        312.0,
+        92.3658218383789,
+        555.3563232421875,
+        179.95849609375
+      ],
+      "block_id": "page-0556-block-0033",
+      "order": 33,
+      "text": "Il est dicile de rassurer le patient et il demeure préoccupé.\nCela le porte à être hypervigilant, à surveiller des signaux cor-\nporels (T°, pouls, selles, etc.). Certains sont tellement anxieux\net craintifs du verdict médical qu’ils adoptent un comportement\nd’évitement de toute consultation ou de toute investigation,\npréférant maintenir leurs préoccupations, de crainte qu’une\nanomalie grave leur soit conrmée.\n",
+      "text_sha256": "4f85acb704a9165c246c4ce753a06d8d9496bb993d5acc64da8318b59ffe5d12"
+    }
+  ],
+  "coordinates_sha256": "c57d33609fdd7bfecb6b1e4eac1c118cae09990fbb107d50b715f77ba61fb9e1",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0556",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 25\nTroubles à symptomatologie somatique\n539\nTABLEAU 25.5 Critères diagnostiques de la crainte excessive d’avoir une maladie\nDSM-5\nDSM-IV-TR\n300.7 (F45.21) Crainte excessive d’avoir une maladie\n300.7 (F45.2) Hypocondrie\nA. Préoccupation concernant le fait d’avoir ou de développer une maladie\ngrave.\nA. Préoccupation centrée sur la crainte ou l’idée d’être atteint d’une mala-\ndie grave, fondée sur l’interprétation erronée par le sujet de symptômes\nphysiques.\nB. Les symptômes somatiques sont absents ou s’ils sont présents, ils sont\nd’intensité mineure. Si un autre problème médical est présent ou en cas\nde risque notable de développement d’une affection médicale (p. ex., du\nfait de la présence d’antécédents familiaux importants), la préoccupation\nest clairement excessive ou disproportionnée.\nB. La préoccupation persiste malgré un bilan médical approprié et\nrassurant.\nC. Il existe un degré important d’anxiété concernant la santé et la personne\ns’inquiète facilement de son état de santé personnel.\nD. La préoccupation est à l’origine d’une souffrance cliniquement signica-\ntive ou d’une altération du fonctionnement social, professionnel ou dans\nd’autres domaines importants.\nD. La personne présente des comportements excessifs par rapport à\nsa santé (p. ex., effectue des vérications répétées de son corps à la\nrecherche des signes d’une maladie) ou présente un évitement inadapté\n(p. ex., évite les rendez-vous médicaux et les hôpitaux).\nE. Les préoccupations concernant la maladie sont présentes depuis au\nmoins 6 mois mais la nature de la maladie qui est spéciquement\nanticipée peut avoir changé durant cette période de temps.\nE. La durée de la perturbation est d’au moins 6 mois.\nF. La préoccupation relative aux maladies n’est pas mieux expliquée par un\nautre trouble mental tel que :\n• un trouble à symptomatologie somatique,\n• un trouble panique,\n• une anxiété généralisée,\n• une obsession de dysmorphie corporelle,\n• un trouble obsessionnel-compulsif,\n• un trouble délirant à type somatique.\nC. La croyance exposée dans le critère A ne revêt pas une intensité\ndélirante (comme dans le Trouble délirant, type somatique) et ne se\nlimite pas à une préoccupation centrée sur l’apparence (comme dans le\nTrouble : peur d’une dysmorphie corporelle).\nF. La préoccupation n’est pas mieux expliquée par :\n• une Anxiété généralisée,\n• un Trouble obsessionnel-compulsif,\n• un Trouble panique,\n• un Épisode dépressif majeur,\n• une Angoisse de séparation,\n• un autre Trouble somatoforme.\nSpécier le type :\nÀ type de demande de soins: Les soins médicaux incluant les visites\nchez des médecins ou les examens complémentaires sont utilisés de façon\nfréquente.\nÀ type évitant les soins: les soins médicaux sont rarement utilisés.\nSpéciez si :\nAvec peu de prise de conscience: si, la plupart du temps au cours de\nl’épisode actuel, le sujet ne reconnaît pas que sa préoccupation concernant\nle fait d’avoir une maladie grave est excessive ou déraisonnable\nSources: APA (2015), p. 372 ; APA (2004), p. 507.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris,\n2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation, DSM-IV-TR - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\nd’une affection médicale sérieuse non diagnostiquée. Le\ntableau 25.5 présente les critères diagnostiques.\nDescription clinique\nLes préoccupations sont excessives, obsédantes ou dispropor-\ntionnées concernant la crainte voire la suspicion d’avoir une\nmaladie sérieuse et perturbant le fonctionnement du patient.\nLes symptômes somatiques sont absents, sinon minimes. On\nne retrouve pas d’autres inquiétudes telles que rencontrées dans\nun trouble d’anxiété généralisée (soucis multiples, insécurité\nnancière, intolérance à l’incertitude) et la crainte demeure\ncirconscrite à la santé. On y rencontre les caractéristiques d’une\nphobie liée à la maladie, à la mort, etc. Des comportements\nobsessionnels sont présents : comportements de vérication\n(auto-examen), des consultations à répétition, des demandes\nd’examen, etc.\nIl est dicile de rassurer le patient et il demeure préoccupé.\nCela le porte à être hypervigilant, à surveiller des signaux cor-\nporels (T°, pouls, selles, etc.). Certains sont tellement anxieux\net craintifs du verdict médical qu’ils adoptent un comportement\nd’évitement de toute consultation ou de toute investigation,\npréférant maintenir leurs préoccupations, de crainte qu’une\nanomalie grave leur soit conrmée.\n",
+  "raw_text_sha256": "6194f84f47b93e45b1009d143cdd21ae9881d6d5fadb9e5dd3299e2d831cfafc",
+  "source_page_display": 557,
+  "source_page_index": 556
+}

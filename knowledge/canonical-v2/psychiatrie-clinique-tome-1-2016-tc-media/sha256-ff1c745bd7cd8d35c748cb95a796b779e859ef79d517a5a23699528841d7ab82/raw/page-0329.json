@@ -1,0 +1,244 @@
+{
+  "block_sequence_sha256": "76a416b162fae8cab35291da706cef7c3b8d3bcd6342c58888af52558de5fd23",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        129.5734405517578,
+        335.47998046875,
+        174.4953155517578
+      ],
+      "block_id": "page-0329-block-0001",
+      "order": 1,
+      "text": "Troubles délirants\n",
+      "text_sha256": "242ef33e65472ad9979f398c0d888e79952ff3487ac6a790757748a6b85b00e5"
+    },
+    {
+      "bbox": [
+        48.0,
+        224.25010681152344,
+        162.12159729003906,
+        236.75010681152344
+      ],
+      "block_id": "page-0329-block-0002",
+      "order": 2,
+      "text": "Pierre Lalonde, M.D., FRCPC\n",
+      "text_sha256": "9ca5397e139e015697ab74975ca4e07b345a207ec29d335320d1a95fbc9c3514"
+    },
+    {
+      "bbox": [
+        48.0,
+        240.6272430419922,
+        267.9187316894531,
+        261.84381103515625
+      ],
+      "block_id": "page-0329-block-0003",
+      "order": 3,
+      "text": "Psychiatre, programme des troubles psychotiques, Institut\nuniversitaire en santé mentale de Montréal\n",
+      "text_sha256": "762186758b5e26910e68bbebb456fba17afb098a7a46708839f50136c9d037b0"
+    },
+    {
+      "bbox": [
+        48.0,
+        265.62725830078125,
+        260.17864990234375,
+        286.84381103515625
+      ],
+      "block_id": "page-0329-block-0004",
+      "order": 4,
+      "text": "Professeur émérite, Département de psychiatrie, Faculté\nde médecine, Université de Montréal\n",
+      "text_sha256": "61e0e173924508280b5b20666a2cfdf3897628ef05998e726e631aa67c149bae"
+    },
+    {
+      "bbox": [
+        306.0,
+        224.25010681152344,
+        432.1216125488281,
+        236.75010681152344
+      ],
+      "block_id": "page-0329-block-0005",
+      "order": 5,
+      "text": "Georges F. Pinard, M.D., FRCPC\n",
+      "text_sha256": "f14ca6ad2a9b48f7f40eac17c02d1ff9d82eb1bb97eb28ced111cb1cb0e5c23d"
+    },
+    {
+      "bbox": [
+        306.0,
+        240.6272430419922,
+        500.9377136230469,
+        261.84381103515625
+      ],
+      "block_id": "page-0329-block-0006",
+      "order": 6,
+      "text": "Psychiatre, Service de clinique ambulatoire, Hôpital\nMaisonneuve-Rosemont (Montréal)\n",
+      "text_sha256": "b856990d3d02587cbdbaa1bd1f4f85b2f6446905729dc8507d345781bf57a13f"
+    },
+    {
+      "bbox": [
+        306.0,
+        265.62725830078125,
+        527.9392700195312,
+        286.84381103515625
+      ],
+      "block_id": "page-0329-block-0007",
+      "order": 7,
+      "text": "Professeur agrégé de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\n",
+      "text_sha256": "f4bc23aed99fa29e8f7410379c6cebea846c1188b4a600c871ae8a6f9bc4dde5"
+    },
+    {
+      "bbox": [
+        48.0,
+        347.4244079589844,
+        289.010009765625,
+        357.2681579589844
+      ],
+      "block_id": "page-0329-block-0008",
+      "order": 8,
+      "text": "16.1\nHistorique et dénition.................................................313\n",
+      "text_sha256": "9ac345a67876cb4c5f63fd48db504cbac928976891c2ec4b567ad8bb891e5f6b"
+    },
+    {
+      "bbox": [
+        48.0,
+        362.4244079589844,
+        289.010009765625,
+        372.2681579589844
+      ],
+      "block_id": "page-0329-block-0009",
+      "order": 9,
+      "text": "16.2\nÉpidémiologie ................................................................. 314\n",
+      "text_sha256": "4f2b3df3f330353e0d080f147bb91681d5076abba29f49ccd995ea5b04ca25a1"
+    },
+    {
+      "bbox": [
+        48.0,
+        377.4244079589844,
+        289.010009765625,
+        426.3472595214844
+      ],
+      "block_id": "page-0329-block-0010",
+      "order": 10,
+      "text": "16.3\nÉtiologies ......................................................................... 314\n16.3.1 Étiologies biologiques........................................... 314\n16.3.2 Étiologies psychologiques.................................... 316\n16.3.3 Étiologies sociales.................................................. 317\n",
+      "text_sha256": "7226995cba6d1bf7ac133bfcf77666f899d2185acac525e68029862f329d577f"
+    },
+    {
+      "bbox": [
+        48.0,
+        431.4244079589844,
+        289.010009765625,
+        441.2681579589844
+      ],
+      "block_id": "page-0329-block-0011",
+      "order": 11,
+      "text": "16.4\nDescription clinique ...................................................... 318\n",
+      "text_sha256": "fc52f3e2dfd3e0f838d38291da0e052d17861ea852b946ba030087558614a0a6"
+    },
+    {
+      "bbox": [
+        48.0,
+        446.4244079589844,
+        289.010009765625,
+        534.3472900390625
+      ],
+      "block_id": "page-0329-block-0012",
+      "order": 12,
+      "text": "16.5 Variété diagnostique ...................................................... 318\n16.5.1 Type de persécution.............................................. 318\n16.5.2 Type somatique...................................................... 318\n16.5.3 Type érotomane..................................................... 320\n16.5.4 Type mégalomane ................................................. 320\n16.5.5 Type de jalousie ..................................................... 320\n16.5.6 Type mixte ou non spécié ................................. 320\n",
+      "text_sha256": "7bd619d140b29b95e38c3eb7d6e8352ce6a2d04600f88ab43c115083049b0608"
+    },
+    {
+      "bbox": [
+        306.0,
+        347.4244079589844,
+        547.010009765625,
+        357.2681579589844
+      ],
+      "block_id": "page-0329-block-0013",
+      "order": 13,
+      "text": "16.6 Évaluation........................................................................ 320\n",
+      "text_sha256": "0f123ea671ede44419c1ec011ceb18928e8507a476b5277ca33c60b8d54a9581"
+    },
+    {
+      "bbox": [
+        306.0,
+        362.4244079589844,
+        547.010009765625,
+        372.2681579589844
+      ],
+      "block_id": "page-0329-block-0014",
+      "order": 14,
+      "text": "16.7 Outils diagnostiques...................................................... 321\n",
+      "text_sha256": "df291453098d8110ea017c15fa3e79be2ba989dba91f985907ec8453426ed21b"
+    },
+    {
+      "bbox": [
+        306.0,
+        377.4244079589844,
+        547.010009765625,
+        413.3472595214844
+      ],
+      "block_id": "page-0329-block-0015",
+      "order": 15,
+      "text": "16.8 Diagnostic diérentiel...................................................321\n16.8.1 Causes médicales................................................... 322\n16.8.2 Maladies mentales associées............................... 322\n",
+      "text_sha256": "18b618c67f7816b4f7314c005a4ba8fb7a210feef2107e9f84f20585e283418d"
+    },
+    {
+      "bbox": [
+        306.0,
+        418.4244079589844,
+        547.010009765625,
+        454.3472595214844
+      ],
+      "block_id": "page-0329-block-0016",
+      "order": 16,
+      "text": "16.9 Traitements ..................................................................... 323\n16.9.1 Traitements biologiques ...................................... 323\n16.9.2 Approche psychothérapeutique du délire........ 324\n",
+      "text_sha256": "fac5892413de62eb77c0a636a996d6634e052244c7602ecc16c59e85457ef442"
+    },
+    {
+      "bbox": [
+        306.0,
+        459.4244079589844,
+        547.010009765625,
+        469.2681579589844
+      ],
+      "block_id": "page-0329-block-0017",
+      "order": 17,
+      "text": "16.10 Évolution et pronostic ...................................................325\n",
+      "text_sha256": "b3775fba31612472a51254ab8fe7c07cbe8e57f08ad02f130aaaea999ff5157b"
+    },
+    {
+      "bbox": [
+        306.0,
+        474.4244079589844,
+        547.010009765625,
+        484.2681579589844
+      ],
+      "block_id": "page-0329-block-0018",
+      "order": 18,
+      "text": "Lectures complémentaires....................................................... 326\n",
+      "text_sha256": "264819818eca2d31f7c5f7421598cf5a50c20c6561e658f51022dc62b08d3c45"
+    },
+    {
+      "bbox": [
+        257.1000061035156,
+        2.3810577392578125,
+        555.0,
+        122.38105773925781
+      ],
+      "block_id": "page-0329-block-0019",
+      "order": 19,
+      "text": "CHAPITRE16\n",
+      "text_sha256": "7bf2d76256e31f9cd35e240a3046e2b717648daab81e7180f13d73fca22cf51b"
+    }
+  ],
+  "coordinates_sha256": "2556d3ec2ec0a10583748d0ae578e4a8d5e01ada8244c3236e862c3281e338b8",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0329",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Troubles délirants\nPierre Lalonde, M.D., FRCPC\nPsychiatre, programme des troubles psychotiques, Institut\nuniversitaire en santé mentale de Montréal\nProfesseur émérite, Département de psychiatrie, Faculté\nde médecine, Université de Montréal\nGeorges F. Pinard, M.D., FRCPC\nPsychiatre, Service de clinique ambulatoire, Hôpital\nMaisonneuve-Rosemont (Montréal)\nProfesseur agrégé de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\n16.1\nHistorique et dénition.................................................313\n16.2\nÉpidémiologie ................................................................. 314\n16.3\nÉtiologies ......................................................................... 314\n16.3.1 Étiologies biologiques........................................... 314\n16.3.2 Étiologies psychologiques.................................... 316\n16.3.3 Étiologies sociales.................................................. 317\n16.4\nDescription clinique ...................................................... 318\n16.5 Variété diagnostique ...................................................... 318\n16.5.1 Type de persécution.............................................. 318\n16.5.2 Type somatique...................................................... 318\n16.5.3 Type érotomane..................................................... 320\n16.5.4 Type mégalomane ................................................. 320\n16.5.5 Type de jalousie ..................................................... 320\n16.5.6 Type mixte ou non spécié ................................. 320\n16.6 Évaluation........................................................................ 320\n16.7 Outils diagnostiques...................................................... 321\n16.8 Diagnostic diérentiel...................................................321\n16.8.1 Causes médicales................................................... 322\n16.8.2 Maladies mentales associées............................... 322\n16.9 Traitements ..................................................................... 323\n16.9.1 Traitements biologiques ...................................... 323\n16.9.2 Approche psychothérapeutique du délire........ 324\n16.10 Évolution et pronostic ...................................................325\nLectures complémentaires....................................................... 326\nCHAPITRE16\n",
+  "raw_text_sha256": "bb9b483f35e9b13e91ea7d39976344c1fc71e06b6bb2273ee6a6e9c3ed7698f3",
+  "source_page_display": 330,
+  "source_page_index": 329
+}

@@ -1,0 +1,208 @@
+{
+  "block_sequence_sha256": "8b5f0c720253e6dfa56d649880be3839fcfe110deef3e3f2eb5b8077513fb932",
+  "blocks": [
+    {
+      "bbox": [
+        54.0,
+        441.7744140625,
+        295.010009765625,
+        516.697265625
+      ],
+      "block_id": "page-0634-block-0001",
+      "order": 1,
+      "text": "28.1 Comorbidités médicales et psychiatriques ............... 618\n28.1.1 Épidémiologie ........................................................ 618\n28.1.2 Objectifs des interventions.................................. 619\n28.1.3 Situations d’urgence.............................................. 619\n28.1.4 Situations non urgentes........................................ 620\n28.1.5 Variétés de comorbidités ..................................... 620\n",
+      "text_sha256": "b0f82b57819d15c0e75197092f928af1abb723277101716864bdc341e6f7c625"
+    },
+    {
+      "bbox": [
+        54.0,
+        522.7744140625,
+        295.010009765625,
+        597.697265625
+      ],
+      "block_id": "page-0634-block-0002",
+      "order": 2,
+      "text": "28.2 Troubles mentaux dus à une aection médicale....... 620\n28.2.1 Évolution du concept............................................ 620\n28.2.2 Description clinique ............................................. 621\n28.2.3 Évaluation clinique................................................ 623\n28.2.4 Outils diagnostiques ............................................. 631\n28.2.5 Principes de traitement........................................ 635\n",
+      "text_sha256": "a9ea45b4660c17d880f9458cb64cac5f117b70c1120a060c89c274af86f79364"
+    },
+    {
+      "bbox": [
+        54.0,
+        603.7744140625,
+        295.010009765625,
+        652.697265625
+      ],
+      "block_id": "page-0634-block-0003",
+      "order": 3,
+      "text": "28.3 Troubles mentaux spéciques ..................................... 636\n28.3.1 Catatonie................................................................. 636\n28.3.2 Modication de la personnalité.......................... 638\n28.3.3 Troubles mentaux dus à la corticothérapie...... 640\n",
+      "text_sha256": "87d58f288c28e9771892a156c54729ef2ac00da78219e7cdb3ea6082f9a46ab0"
+    },
+    {
+      "bbox": [
+        312.0,
+        441.7744140625,
+        553.010009765625,
+        542.697265625
+      ],
+      "block_id": "page-0634-block-0004",
+      "order": 4,
+      "text": "28.4 Aections médicales spéciques................................. 642\n28.4.1 Maladies cardiovasculaires.................................. 642\n28.4.2 VIH/sida et hépatites............................................ 644\n28.4.3 Lupus érythémateux disséminé.......................... 650\n28.4.4 Épilepsie .................................................................. 652\n28.4.5 Sclérose en plaques............................................... 656\n28.4.6 Trauma crânien...................................................... 657\n28.4.7 Cancer...................................................................... 659\n",
+      "text_sha256": "2ac10632edd8bae3d4ce747de1b176f8b600093a6667f1a7d6ca838e93893750"
+    },
+    {
+      "bbox": [
+        312.0,
+        550.2744140625,
+        553.0100708007812,
+        560.1181640625
+      ],
+      "block_id": "page-0634-block-0005",
+      "order": 5,
+      "text": "Lectures complémentaires...................................................... 663\n",
+      "text_sha256": "2c9f47d88f9e781bdcf23f15ece12328d57c065ac438dd14b452d12a16a1efac"
+    },
+    {
+      "bbox": [
+        54.0,
+        258.6501159667969,
+        175.27159118652344,
+        271.1501159667969
+      ],
+      "block_id": "page-0634-block-0006",
+      "order": 6,
+      "text": "Laury Chamelian, M.D., FRCPC\n",
+      "text_sha256": "6fe3e0cbbbcf9fa41faf333c53699b3dfcb3aea578f674c8d1e0f0e31da7dec3"
+    },
+    {
+      "bbox": [
+        54.0,
+        275.0272521972656,
+        288.57745361328125,
+        296.2438049316406
+      ],
+      "block_id": "page-0634-block-0007",
+      "order": 7,
+      "text": "Psychiatre, Service de psychiatrie médicale, Centre hospitalier\nde l’Université de Montréal\n",
+      "text_sha256": "f2f6d2f8fc7ddf8c4f23e2b7e16c915cd204e84a3e2225a6bd7430eb11e8a938"
+    },
+    {
+      "bbox": [
+        54.0,
+        300.0272521972656,
+        286.1392822265625,
+        321.2438049316406
+      ],
+      "block_id": "page-0634-block-0008",
+      "order": 8,
+      "text": "Professeure adjointe de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\n",
+      "text_sha256": "e24fd9e5fcb63577553120c1928554deab7ca02fcc29176ad48a834a1a0f4c09"
+    },
+    {
+      "bbox": [
+        54.0,
+        331.1501159667969,
+        296.6590270996094,
+        343.6501159667969
+      ],
+      "block_id": "page-0634-block-0009",
+      "order": 9,
+      "text": "Monique Desjardins, M.D., FRCPC, M. Sc. (sciences biomédicales)\n",
+      "text_sha256": "5c85e96dd6b74c234d8040cea9c571baeee6d4ec0009b8cf957e4cdacf4211e1"
+    },
+    {
+      "bbox": [
+        54.0,
+        347.5272521972656,
+        271.4618225097656,
+        368.7438049316406
+      ],
+      "block_id": "page-0634-block-0010",
+      "order": 10,
+      "text": "Psychiatre, Service de médecine psychosomatique et de\nconsultation-liaison, Hôpital du Sacré-Cœur de Montréal\n",
+      "text_sha256": "c5c161cbb499c899d5df9dcaa404ed670fb58764444a4ee3e14b72ad640fb0fe"
+    },
+    {
+      "bbox": [
+        54.0,
+        372.5272521972656,
+        286.1392822265625,
+        393.7438049316406
+      ],
+      "block_id": "page-0634-block-0011",
+      "order": 11,
+      "text": "Professeure adjointe de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\n",
+      "text_sha256": "e24fd9e5fcb63577553120c1928554deab7ca02fcc29176ad48a834a1a0f4c09"
+    },
+    {
+      "bbox": [
+        312.0,
+        258.6501159667969,
+        437.72161865234375,
+        271.1501159667969
+      ],
+      "block_id": "page-0634-block-0012",
+      "order": 12,
+      "text": "Nicolas Bergeron, M.D., FRCPC\n",
+      "text_sha256": "c44a5b2efedf6c7aedab090c3f7587992593de73e1e429c73cca0cbc43e09225"
+    },
+    {
+      "bbox": [
+        312.0,
+        275.0272521972656,
+        546.5774536132812,
+        296.2438049316406
+      ],
+      "block_id": "page-0634-block-0013",
+      "order": 13,
+      "text": "Psychiatre, Service de psychiatrie médicale, Centre hospitalier\nde l’Université de Montréal\n",
+      "text_sha256": "f2f6d2f8fc7ddf8c4f23e2b7e16c915cd204e84a3e2225a6bd7430eb11e8a938"
+    },
+    {
+      "bbox": [
+        312.0,
+        300.0272521972656,
+        535.8391723632812,
+        321.2438049316406
+      ],
+      "block_id": "page-0634-block-0014",
+      "order": 14,
+      "text": "Professeur adjoint de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\n",
+      "text_sha256": "55794a101d286e95c09a0e659ed59983b705db069bfa7912758e835ca36bd33a"
+    },
+    {
+      "bbox": [
+        54.0,
+        129.5734405517578,
+        441.27374267578125,
+        216.4953155517578
+      ],
+      "block_id": "page-0634-block-0015",
+      "order": 15,
+      "text": "Troubles mentaux dus\nà une affection médicale\n",
+      "text_sha256": "86cadab77dccd9ed40f43245d63e30df5822e6415915ff3463fbf3d6e3cc0f44"
+    },
+    {
+      "bbox": [
+        263.1000061035156,
+        2.3810577392578125,
+        561.0,
+        122.38105773925781
+      ],
+      "block_id": "page-0634-block-0016",
+      "order": 16,
+      "text": "CHAPITRE28\n",
+      "text_sha256": "c228ea631c905a774d4cd627fa5ac7c6a47498caef8d6c2f9df029150309aeeb"
+    }
+  ],
+  "coordinates_sha256": "183b5e9738ab7a4f8a4451bbf69e10be5c44c9691c677e8d8826cb04394ec842",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0634",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "28.1 Comorbidités médicales et psychiatriques ............... 618\n28.1.1 Épidémiologie ........................................................ 618\n28.1.2 Objectifs des interventions.................................. 619\n28.1.3 Situations d’urgence.............................................. 619\n28.1.4 Situations non urgentes........................................ 620\n28.1.5 Variétés de comorbidités ..................................... 620\n28.2 Troubles mentaux dus à une aection médicale....... 620\n28.2.1 Évolution du concept............................................ 620\n28.2.2 Description clinique ............................................. 621\n28.2.3 Évaluation clinique................................................ 623\n28.2.4 Outils diagnostiques ............................................. 631\n28.2.5 Principes de traitement........................................ 635\n28.3 Troubles mentaux spéciques ..................................... 636\n28.3.1 Catatonie................................................................. 636\n28.3.2 Modication de la personnalité.......................... 638\n28.3.3 Troubles mentaux dus à la corticothérapie...... 640\n28.4 Aections médicales spéciques................................. 642\n28.4.1 Maladies cardiovasculaires.................................. 642\n28.4.2 VIH/sida et hépatites............................................ 644\n28.4.3 Lupus érythémateux disséminé.......................... 650\n28.4.4 Épilepsie .................................................................. 652\n28.4.5 Sclérose en plaques............................................... 656\n28.4.6 Trauma crânien...................................................... 657\n28.4.7 Cancer...................................................................... 659\nLectures complémentaires...................................................... 663\nLaury Chamelian, M.D., FRCPC\nPsychiatre, Service de psychiatrie médicale, Centre hospitalier\nde l’Université de Montréal\nProfesseure adjointe de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\nMonique Desjardins, M.D., FRCPC, M. Sc. (sciences biomédicales)\nPsychiatre, Service de médecine psychosomatique et de\nconsultation-liaison, Hôpital du Sacré-Cœur de Montréal\nProfesseure adjointe de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\nNicolas Bergeron, M.D., FRCPC\nPsychiatre, Service de psychiatrie médicale, Centre hospitalier\nde l’Université de Montréal\nProfesseur adjoint de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\nTroubles mentaux dus\nà une affection médicale\nCHAPITRE28\n",
+  "raw_text_sha256": "bd9ace002d2e6c304beb1bb16a690bbf53c209f5d8450cd394ecd0a99c5ea40b",
+  "source_page_display": 635,
+  "source_page_index": 634
+}

@@ -1,0 +1,28 @@
+{
+  "block_sequence_sha256": "44a3c78f2c6fbda8360dc377a5592108519e28f8eaa92a4fdfbaf40e716a7a2a",
+  "blocks": [
+    {
+      "bbox": [
+        422.8000183105469,
+        747.3754272460938,
+        554.97998046875,
+        758.6693725585938
+      ],
+      "block_id": "page-1142-block-0001",
+      "order": 1,
+      "text": "Figures supplémentaires\nF5\n",
+      "text_sha256": "1473e659e0b18f55fc7e13b78c716271542e6ecbbe01b41e71c052abed413ff9"
+    }
+  ],
+  "coordinates_sha256": "11836e257bf1e8936851ed173cf8843b689a5ded27e239000d5c59f1b0897703",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1142",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Figures supplémentaires\nF5\n",
+  "raw_text_sha256": "1473e659e0b18f55fc7e13b78c716271542e6ecbbe01b41e71c052abed413ff9",
+  "source_page_display": 1143,
+  "source_page_index": 1142
+}

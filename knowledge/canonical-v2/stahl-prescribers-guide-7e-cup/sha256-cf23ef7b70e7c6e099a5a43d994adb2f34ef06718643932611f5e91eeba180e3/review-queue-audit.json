@@ -1,0 +1,96 @@
+{
+ "phase": "canonical review (pre-chunking)",
+ "queue": {
+  "total": 1100,
+  "by_category": {
+   "med/dose-bearing": 152,
+   "unit/dose-therapeutic": 366,
+   "unit/drug-interaction": 98,
+   "unit/precaution-safety": 248,
+   "unit/pregnancy-lactation": 236
+  }
+ },
+ "atomization": {
+  "units_total": 2662,
+  "content_units": 2563,
+  "index_units": 99,
+  "depth3": 2662,
+  "title_matches_path": 2662,
+  "atoms_complete": 2662,
+  "page_ranges_valid": 2662,
+  "units_past_2682": 0,
+  "short_evidence_lt40": 241,
+  "short_by_type": {
+   "definition": 207,
+   "list": 11,
+   "prose": 3,
+   "index-entry": 20
+  },
+  "duplicate_evidence_groups": 42,
+  "duplicate_rows_involved": 351,
+  "capital_see_uncovered": 0,
+  "lowercase_see_uncovered_units": 164,
+  "lowercase_see_words": {
+   "index": 150,
+   "may": 4,
+   "maximum": 2,
+   "full": 2,
+   "section": 2,
+   "fluphenazine": 1,
+   "following": 1,
+   "if": 1
+  }
+ },
+ "xrefs": {
+  "total": 1073,
+  "resolved": 1049,
+  "unresolved": 24,
+  "unresolved_by_class": {
+   "intra-book/pointer-resolved-within-same-unit": 12,
+   "intra-book/table-caption-in-same-unit": 7,
+   "intra-book/target-section-not-atomized": 5
+  },
+  "unresolved_cross_book": 0,
+  "cross_book_rows": [],
+  "dangling_from_units": 0,
+  "dangling_med_targets": 0,
+  "dangling_unit_targets": 0
+ },
+ "concepts": {
+  "total": 152,
+  "with_aliases": 152,
+  "total_trade_aliases": 1465
+ },
+ "meds": {
+  "total": 152,
+  "with_brand_names": 152,
+  "with_indications": 152,
+  "with_drug_class": 152,
+  "dangling_unit_refs": 0,
+  "needs_review": 152
+ },
+ "provenance": {
+  "source_versions": {
+   "units.jsonl": [
+    "sha256-cf23ef7b70e7c6e099a5a43d994adb2f34ef06718643932611f5e91eeba180e3",
+    "sha256:cf23ef7b70e7c6e099a5a43d994adb2f34ef06718643932611f5e91eeba180e3"
+   ],
+   "meds.jsonl": [
+    "(absent)"
+   ],
+   "concepts.jsonl": [
+    "(absent)"
+   ]
+  },
+  "u_fffd_total": 0,
+  "page_span_all_units": [
+   13,
+   2682
+  ],
+  "idx_pages_included": [
+   2628,
+   2682
+  ],
+  "src_2683_2697_units": 0
+ }
+}

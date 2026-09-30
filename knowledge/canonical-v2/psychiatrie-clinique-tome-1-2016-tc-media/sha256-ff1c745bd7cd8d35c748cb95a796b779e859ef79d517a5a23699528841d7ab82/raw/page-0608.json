@@ -1,0 +1,112 @@
+{
+  "block_sequence_sha256": "5c4339738431a3f771f0d173f713b0500a3509a6243722509cd3dab54112d76f",
+  "blocks": [
+    {
+      "bbox": [
+        362.5,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0608-block-0001",
+      "order": 1,
+      "text": "Chapitre 27\nTroubles neurocognitifs\n591\n",
+      "text_sha256": "5956d1deddaae72597623319e1bc501c21fbb6d6d21067d84983608c7e478582"
+    },
+    {
+      "bbox": [
+        58.25,
+        61.02412414550781,
+        468.1209716796875,
+        293.578125
+      ],
+      "block_id": "page-0608-block-0002",
+      "order": 2,
+      "text": "Lobe atteint\nSymptômes cognitifs et neurologiques focaux\nLésions frontales\n• Atteinte des fonctions exécutives\n• Atteinte de la mémoire immédiate\n• Ralentissement du processus et de l’activité cognitifs\n• Concentration faible\n• Atteinte du jugement, de l’autocritique et du contrôle du comportement\n• Changements de la personnalité : apathie ou comportements inappropriés et désinhibés\n• Persévération de mots, de sons ou de comportements\n• Réexes désinhibés, réexes primitifs\n• Parésie ou hémiplégie controlatérale\n• Aphasie de Broca (non uente) si lésion du lobe dominant\n• Dysprosodie (atteinte de la modulation du discours) si lésion du lobe non dominant\n• Atteinte de la coordination des mouvements oculaires\n• Paralysie pseudobulbaire (incontinence émotionnelle) si lésions bilatérales\nLésions préfrontales dorsolatérales\n• Dysfonction exécutive\nLésions orbitofrontales\n• Désinhibition\n• Labilité, impulsivité, distractibilité\n• Persévération\n• Anosmie\nLésions médiofrontales et/ou\ncingulaires antérieures\n",
+      "text_sha256": "995d03fb7fab9b9907dbd17a0c18d5cb7aa7c63800aa7307e3cef277296f6df1"
+    },
+    {
+      "bbox": [
+        58.25,
+        273.751953125,
+        531.7880249023438,
+        458.8781433105469
+      ],
+      "block_id": "page-0608-block-0003",
+      "order": 3,
+      "text": "• Apathie, difculté à mener à terme une tâche\n• Émoussement de la personnalité\n• Mutisme akinétique\nLésions pariétales\n• Atteinte sensitive (hémianesthésie avec lésions importantes)\n• Hémiparésie légère\n• Hémianopsie homonyme\nLésions au lobe pariétal dominant\n• Agraphie\n• Acalculie\n• Trouble de la lecture et/ou dyslexie\n• Confusion droite-gauche\n• Aphasie (uente)\n• Apraxie idéomotrice (tâches simples ; idéationnelle, tâches complexes)\n• Astéréognosie (trouble de la reconnaissance tactile des objets)\n• Syndrome de Gertsmann (agraphie, confusion droite-gauche, agnosie digitale, alexie, acalculie, causées par\nune lésion pariétale postérieure au lobe dominant et/ou au gyrus angulaire)\nLésions au lobe pariétal\nnon dominant\n",
+      "text_sha256": "a7877e3374e7385f49b6659584989654acb4b4b93b0d7d079cff07279f13294f"
+    },
+    {
+      "bbox": [
+        58.25,
+        439.0519714355469,
+        545.9749755859375,
+        579.7281494140625
+      ],
+      "block_id": "page-0608-block-0004",
+      "order": 4,
+      "text": "• Trouble et apraxie visuospatiaux et visuoconstructifs\n• Apraxie à l’habillage\n• Autotopoagnosie (négligence du côté dominant)\n• Anosognosie (négligence ou déni de la maladie)\nLésions temporales\n• Atteinte du traitement de la mémoire (hippocampe, lobe temporal médian)\n• Trouble de l’audition (lésions du gyrus d’Heschl)\n• Hallucinations (dans toutes les modalités)\n• Modications de l’expression émotionnelle et comportementale (atteinte limbique)\n• Syndrome de Klüver-Bucy (apathie, placidité, comportements exploratoires oraux, hypersexualité ou hyperphagie\ndus à des lésions bilatérales)\n• Quadranopsie homonyme supérieure\nLésions au lobe temporal\ndominant\n",
+      "text_sha256": "00e214de06cd386ac868534663ee4490ebadcb486f1a799c4f6d8577dd975189"
+    },
+    {
+      "bbox": [
+        58.25,
+        559.9019775390625,
+        283.76116943359375,
+        602.1281127929688
+      ],
+      "block_id": "page-0608-block-0005",
+      "order": 5,
+      "text": "• Aphasie de Wernicke (uente)\n• Amusie\nLésions au lobe temporal\nnon dominant\n",
+      "text_sha256": "c4f407b5734e3e59737e282a2ee88f96891430f9f28a511476c61277977d24f3"
+    },
+    {
+      "bbox": [
+        58.25,
+        582.3019409179688,
+        510.3906555175781,
+        713.578125
+      ],
+      "block_id": "page-0608-block-0006",
+      "order": 6,
+      "text": "• Agnosie du son\n• Dysprosodie (trouble de la production et de l’interprétation de la modulation du langage)\nLésions occipitales\n• Agnosies visuelles des objets, couleurs, visages\n• Trouble de la lecture et/ou dyslexie\n• Trouble visuel panoramique\n• Hémianopsie homonyme\n• Illusions ou hallucinations visuelles (formes, couleurs)\n• Épilepsie occipitale avec auras visuelles\n• Alexie sans agraphie (lésion au lobe dominant ou au corps calleux)\n• Syndrome de Balint (inattention visuelle et atteinte de la poursuite visuelle dues à des lésions bilatérales)\n• Syndrome d’Anton (anosognosie visuelle et déni de cécité)\n• Cécité corticale\n",
+      "text_sha256": "4084b31412ff62f7d0740579f3403e688a70b292f172469841eeeba01cdc0e27"
+    },
+    {
+      "bbox": [
+        56.0,
+        41.002296447753906,
+        441.37353515625,
+        54.02006912231445
+      ],
+      "block_id": "page-0608-block-0007",
+      "order": 7,
+      "text": "TABLEAU 27.5 Symptômes neuropsychiatriques d’un AVC cortical en fonction de la localisation\n",
+      "text_sha256": "77404d1fc9726f0a5062154f34a7a2823e7a5e7337f6beb8e83ad0c44e247466"
+    },
+    {
+      "bbox": [
+        54.0,
+        719.640625,
+        190.28939819335938,
+        728.5088500976562
+      ],
+      "block_id": "page-0608-block-0008",
+      "order": 8,
+      "text": "Source : Adapté de Agronin (2008), p. 128-142.\n",
+      "text_sha256": "b569dfe1208efa3550f07a1aad504fdf53475fcd0eaea3198df136b506939fe6"
+    }
+  ],
+  "coordinates_sha256": "ef2c2be8f52ccff448efa12f2132edeff5bf201661a56cb3fe7f773abb686a66",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0608",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 27\nTroubles neurocognitifs\n591\nLobe atteint\nSymptômes cognitifs et neurologiques focaux\nLésions frontales\n• Atteinte des fonctions exécutives\n• Atteinte de la mémoire immédiate\n• Ralentissement du processus et de l’activité cognitifs\n• Concentration faible\n• Atteinte du jugement, de l’autocritique et du contrôle du comportement\n• Changements de la personnalité : apathie ou comportements inappropriés et désinhibés\n• Persévération de mots, de sons ou de comportements\n• Réexes désinhibés, réexes primitifs\n• Parésie ou hémiplégie controlatérale\n• Aphasie de Broca (non uente) si lésion du lobe dominant\n• Dysprosodie (atteinte de la modulation du discours) si lésion du lobe non dominant\n• Atteinte de la coordination des mouvements oculaires\n• Paralysie pseudobulbaire (incontinence émotionnelle) si lésions bilatérales\nLésions préfrontales dorsolatérales\n• Dysfonction exécutive\nLésions orbitofrontales\n• Désinhibition\n• Labilité, impulsivité, distractibilité\n• Persévération\n• Anosmie\nLésions médiofrontales et/ou\ncingulaires antérieures\n• Apathie, difculté à mener à terme une tâche\n• Émoussement de la personnalité\n• Mutisme akinétique\nLésions pariétales\n• Atteinte sensitive (hémianesthésie avec lésions importantes)\n• Hémiparésie légère\n• Hémianopsie homonyme\nLésions au lobe pariétal dominant\n• Agraphie\n• Acalculie\n• Trouble de la lecture et/ou dyslexie\n• Confusion droite-gauche\n• Aphasie (uente)\n• Apraxie idéomotrice (tâches simples ; idéationnelle, tâches complexes)\n• Astéréognosie (trouble de la reconnaissance tactile des objets)\n• Syndrome de Gertsmann (agraphie, confusion droite-gauche, agnosie digitale, alexie, acalculie, causées par\nune lésion pariétale postérieure au lobe dominant et/ou au gyrus angulaire)\nLésions au lobe pariétal\nnon dominant\n• Trouble et apraxie visuospatiaux et visuoconstructifs\n• Apraxie à l’habillage\n• Autotopoagnosie (négligence du côté dominant)\n• Anosognosie (négligence ou déni de la maladie)\nLésions temporales\n• Atteinte du traitement de la mémoire (hippocampe, lobe temporal médian)\n• Trouble de l’audition (lésions du gyrus d’Heschl)\n• Hallucinations (dans toutes les modalités)\n• Modications de l’expression émotionnelle et comportementale (atteinte limbique)\n• Syndrome de Klüver-Bucy (apathie, placidité, comportements exploratoires oraux, hypersexualité ou hyperphagie\ndus à des lésions bilatérales)\n• Quadranopsie homonyme supérieure\nLésions au lobe temporal\ndominant\n• Aphasie de Wernicke (uente)\n• Amusie\nLésions au lobe temporal\nnon dominant\n• Agnosie du son\n• Dysprosodie (trouble de la production et de l’interprétation de la modulation du langage)\nLésions occipitales\n• Agnosies visuelles des objets, couleurs, visages\n• Trouble de la lecture et/ou dyslexie\n• Trouble visuel panoramique\n• Hémianopsie homonyme\n• Illusions ou hallucinations visuelles (formes, couleurs)\n• Épilepsie occipitale avec auras visuelles\n• Alexie sans agraphie (lésion au lobe dominant ou au corps calleux)\n• Syndrome de Balint (inattention visuelle et atteinte de la poursuite visuelle dues à des lésions bilatérales)\n• Syndrome d’Anton (anosognosie visuelle et déni de cécité)\n• Cécité corticale\nTABLEAU 27.5 Symptômes neuropsychiatriques d’un AVC cortical en fonction de la localisation\nSource : Adapté de Agronin (2008), p. 128-142.\n",
+  "raw_text_sha256": "404dc960b7e35c965075fe0c49bb196102982c13837637044e04b1dbda08f01e",
+  "source_page_display": 609,
+  "source_page_index": 608
+}

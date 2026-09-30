@@ -1,0 +1,280 @@
+{
+  "block_sequence_sha256": "a28737bd3b9dbae7ee74a4679ee056b1f8c67e96b0c98354f662722165bc2512",
+  "blocks": [
+    {
+      "bbox": [
+        374.20001220703125,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0066-block-0001",
+      "order": 1,
+      "text": "Chapitre 3\nExamen psychiatrique\n49\n",
+      "text_sha256": "eae993096f89e84beb82fe32d6f2d5f339e3d04df6184f329f20394dd44c4947"
+    },
+    {
+      "bbox": [
+        57.25,
+        58.42412567138672,
+        140.3560028076172,
+        69.00029754638672
+      ],
+      "block_id": "page-0066-block-0002",
+      "order": 2,
+      "text": "Activité psychomotrice\n",
+      "text_sha256": "ddefc35830ea5a3c2f3f526360bb5a66e6e038cc2e4373eaa2899a0c77327aaa"
+    },
+    {
+      "bbox": [
+        58.25,
+        74.3228530883789,
+        115.81400299072266,
+        94.3423843383789
+      ],
+      "block_id": "page-0066-block-0003",
+      "order": 3,
+      "text": "Niveau d’activité\npsychomotrice\n",
+      "text_sha256": "32da7ad3926c2cc848d4b72d3cf40bbaadc90c65a5e439c7ca3d1338745f78e6"
+    },
+    {
+      "bbox": [
+        152.25,
+        74.4019546508789,
+        530.6431274414062,
+        128.22811889648438
+      ],
+      "block_id": "page-0066-block-0004",
+      "order": 4,
+      "text": "• Augmenté, accru :\n– animé, énergique, expressif, excité\n– hypervigilant, sursaut\n– hyperactivité : bouge tout le temps, bouge la jambe, gigote, tape des pieds, s’impatiente, s’exaspère\n– agitation psychomotrice (décrire les comportements agités : marche de long en large (pacing), sautille, trépigne,\n",
+      "text_sha256": "99fea40d2a9e9c9877e1bd5c207cf4c7ded53ff105a1778de511907703cf255d"
+    },
+    {
+      "bbox": [
+        164.25,
+        128.40196228027344,
+        533.3184814453125,
+        159.22813415527344
+      ],
+      "block_id": "page-0066-block-0005",
+      "order": 5,
+      "text": "danse, heurte les objets ou les personnes en marchant, frappe du poing, tambourine, gesticule, quitte le bureau,\nclaque la porte, etc.)\n– agressivité (décrire les comportements agressifs : donne un coup dans le mur, hausse le ton, menace, tente de\n",
+      "text_sha256": "ffacec6b1dfa76df09faf5d009bf37443321c12f8abe8ef3e0a128ce574b3ce6"
+    },
+    {
+      "bbox": [
+        152.25,
+        159.40196228027344,
+        497.5871887207031,
+        257.2281494140625
+      ],
+      "block_id": "page-0066-block-0006",
+      "order": 6,
+      "text": "frapper, lance des objets, etc.)\n– akathisie\n– fureur catatonique\n• Diminué :\n– bradykinésie, akinésie\n– faciès gé, inexpressif, immobile\n– ralentissement psychomoteur, latence des réponses (longs délais entre les questions et les réponses)\n– paraît fatigué, abattu, accablé, exténué, asthénique\n– catalepsie (absence de mouvements spontanés accompagnée de rigidité, associée à la catatonie)\n",
+      "text_sha256": "6f6f29ace7e87837b48d2b0f21e61635d7fc14a7188938ee3161a4c471b19a4e"
+    },
+    {
+      "bbox": [
+        58.25,
+        265.7228698730469,
+        491.0523681640625,
+        286.6281433105469
+      ],
+      "block_id": "page-0066-block-0007",
+      "order": 7,
+      "text": "Mouvements surajoutés\n• Tics, rictus, grimaces, stéréotypies, maniérismes, compulsions, rituels, prend des poses, automatismes\n• Mimétisme ou échopraxie\n",
+      "text_sha256": "2de44a8269699ebdaec4227e441f7744c96f27f5ef6a2979c18806cf67cc589c"
+    },
+    {
+      "bbox": [
+        58.25,
+        295.1728515625,
+        503.6744384765625,
+        338.078125
+      ],
+      "block_id": "page-0066-block-0008",
+      "order": 8,
+      "text": "Démarche\n• Accélérée, sautillante, conante,\n• À petits pas, traînante, ralentie, robotique, titubante, chancelante, vacillante, hésitante, ataxique, antalgique\n• Polygone de sustentation élargi (marche les jambes écartées)\n• Mouvements spontanés des bras (augmentés ou diminués)\n",
+      "text_sha256": "5f3adfe6cdf42d170fa14900982b8b7298230eb1e6e2ef3648a3f00801e9be7a"
+    },
+    {
+      "bbox": [
+        58.25,
+        346.5728454589844,
+        529.47802734375,
+        378.4781188964844
+      ],
+      "block_id": "page-0066-block-0009",
+      "order": 9,
+      "text": "Tonus musculaire\n• Diminué : hypotonique, asque, amorphe\n• Cataplexie : perte soudaine de tonus musculaire, sur le coup d’une émotion, sans altération de l’état de conscience\n• Augmenté : rigidité, spasticité, roue dentée\n",
+      "text_sha256": "53c280c3a571900cedd7763b9290f2574c9d009b7140a384e8fd575b6787fcbf"
+    },
+    {
+      "bbox": [
+        58.25,
+        387.0228576660156,
+        308.2781677246094,
+        407.9281311035156
+      ],
+      "block_id": "page-0066-block-0010",
+      "order": 10,
+      "text": "Tremblements\n• De repos, parkinsonien,posturaux, d’intention\n• Intensité : discrets, légers, modérés, sévères\n",
+      "text_sha256": "a86b092e5708adca10faa000bc073b3f32bedb0f47215fb8ad3a8b46f309a65e"
+    },
+    {
+      "bbox": [
+        58.25,
+        416.4228515625,
+        330.1361999511719,
+        448.328125
+      ],
+      "block_id": "page-0066-block-0011",
+      "order": 11,
+      "text": "Dyskinésies\n• Mouvements choréoathétosiques\n• Orofaciales, des extrémités, des doigts, de la langue\n• Intensité : discrets, légers, modérés, sévères\n",
+      "text_sha256": "1dc7907b8cf3eb1dd94bba5212a30b9e5d60d532038ddb2f805d49427d71e48d"
+    },
+    {
+      "bbox": [
+        58.25,
+        456.87286376953125,
+        344.2680358886719,
+        466.89239501953125
+      ],
+      "block_id": "page-0066-block-0012",
+      "order": 12,
+      "text": "Dystonies\n• Blépharospasme, torticolis, crise oculogyre, opisthotonos\n",
+      "text_sha256": "832cd552c3c32ee9254cb940a6699ae46b41e71530425c97d5b0dfa8cb1b5514"
+    },
+    {
+      "bbox": [
+        57.25,
+        472.17413330078125,
+        88.37200164794922,
+        482.75030517578125
+      ],
+      "block_id": "page-0066-block-0013",
+      "order": 13,
+      "text": "Langage\n",
+      "text_sha256": "4a1393ae239c3c0966665d912af17019296b4dfff8725def74d4bcf14091a153"
+    },
+    {
+      "bbox": [
+        58.25,
+        488.0728454589844,
+        321.2804260253906,
+        498.0923767089844
+      ],
+      "block_id": "page-0066-block-0014",
+      "order": 14,
+      "text": "Prosodie (ton)\n• Modulée, martelée, monocorde, discours robotisé\n",
+      "text_sha256": "ae104237127571a1dc69a06d6e1f22b660c976bcffdfbc9648c23cee5d96ab3b"
+    },
+    {
+      "bbox": [
+        58.25,
+        506.47283935546875,
+        343.6868591308594,
+        538.3781127929688
+      ],
+      "block_id": "page-0066-block-0015",
+      "order": 15,
+      "text": "Expression\n• Trouble d’élocution, dysarthrie, discours ébrieux\n• Bégaiement, bredouillement, balbutiement\n• Marmonnement, murmure, à voix basse, à peine audible\n",
+      "text_sha256": "b704f744a1c812c8e9bd9496efec08c01e94050f2ac3dc11bd948dae7adfd527"
+    },
+    {
+      "bbox": [
+        58.25,
+        546.9228515625,
+        546.3479614257812,
+        577.828125
+      ],
+      "block_id": "page-0066-block-0016",
+      "order": 16,
+      "text": "Quantité\n• Augmentée : discours élaboré, éloquent, passionné, abondant, loquace, volubile, circonstanciel, tangentiel, verbigération,\nlogorrhée, diarrhée verbale\n• Diminuée : discours pauvre, ralenti, taciturne, mutisme\n",
+      "text_sha256": "0f5a9d2c45dcdb2f5a5723e27788c3fe162736d499ada8f7301690a0a547fcbc"
+    },
+    {
+      "bbox": [
+        58.25,
+        586.3228759765625,
+        311.7066345214844,
+        607.2281494140625
+      ],
+      "block_id": "page-0066-block-0017",
+      "order": 17,
+      "text": "Fluidité\n• Langage spontané, uide, clair, élaboré, précis\n• Langage accéléré, précipité, sous pression\n",
+      "text_sha256": "346d45ab06db89becb39e63dd29196ee441236e9deb9c542fd3d74f53600e298"
+    },
+    {
+      "bbox": [
+        58.25,
+        615.7728881835938,
+        436.56964111328125,
+        647.6781616210938
+      ],
+      "block_id": "page-0066-block-0018",
+      "order": 18,
+      "text": "Syntaxe et structure\n• Aphasie, dysphasie, paraphasie, manque du mot\n• Acataphasie, schizophasie, glossolalie, écholalie\n• Incohérent, confus, embrouillé, éparpillé, désorganisé, fuite des idées, salade de mots\n",
+      "text_sha256": "3a846d29a63adde145eb6d01ae3f3078b7697482557b16db0ced403f9cae4cff"
+    },
+    {
+      "bbox": [
+        57.25,
+        653.1241455078125,
+        86.09200286865234,
+        663.7003173828125
+      ],
+      "block_id": "page-0066-block-0019",
+      "order": 19,
+      "text": "Humeur\n",
+      "text_sha256": "4a590b99ca14fae1f3960b91a8613aa8d4fdfb28e5af1417678b01d058646f1a"
+    },
+    {
+      "bbox": [
+        58.25,
+        668.9728393554688,
+        526.4696044921875,
+        678.9923706054688
+      ],
+      "block_id": "page-0066-block-0020",
+      "order": 20,
+      "text": "Tristesse\n• Triste, déçu, terne, morose, nostalgique, morne, taciturne, tourmenté, mélancolique, découragé, éploré, désespéré\n",
+      "text_sha256": "8a20b1d75fd221dec63ed9991bd70dac8c3b02dea88bc89533ab08eee7b4386d"
+    },
+    {
+      "bbox": [
+        58.25,
+        687.4228515625,
+        521.0610961914062,
+        707.328125
+      ],
+      "block_id": "page-0066-block-0021",
+      "order": 21,
+      "text": "Anxiété\n• Perplexe, timoré, nerveux, craintif, effarouché, tendu, à eur de peau, inquiet, anxieux, désarroi, détresse, effaré,\nangoissé, effrayé, apeuré, terrié\n",
+      "text_sha256": "6278215a016b0fde9aab26528f71909552880ed8311080033b04d2b9d32024cf"
+    },
+    {
+      "bbox": [
+        56.0,
+        41.002296447753906,
+        324.3842468261719,
+        53.320068359375
+      ],
+      "block_id": "page-0066-block-0022",
+      "order": 22,
+      "text": "TABLEAU 3.3 Structure et terminologie de l’examen mental (suite)\n",
+      "text_sha256": "c99f3986556adb6d6c5ca07fc3f205da395cbdbe73f2793e5598837401e5d574"
+    }
+  ],
+  "coordinates_sha256": "28e688c354faed9c825eab15c209475e995d92dd6a96c213e80518e0befb5d6e",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0066",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 3\nExamen psychiatrique\n49\nActivité psychomotrice\nNiveau d’activité\npsychomotrice\n• Augmenté, accru :\n– animé, énergique, expressif, excité\n– hypervigilant, sursaut\n– hyperactivité : bouge tout le temps, bouge la jambe, gigote, tape des pieds, s’impatiente, s’exaspère\n– agitation psychomotrice (décrire les comportements agités : marche de long en large (pacing), sautille, trépigne,\ndanse, heurte les objets ou les personnes en marchant, frappe du poing, tambourine, gesticule, quitte le bureau,\nclaque la porte, etc.)\n– agressivité (décrire les comportements agressifs : donne un coup dans le mur, hausse le ton, menace, tente de\nfrapper, lance des objets, etc.)\n– akathisie\n– fureur catatonique\n• Diminué :\n– bradykinésie, akinésie\n– faciès gé, inexpressif, immobile\n– ralentissement psychomoteur, latence des réponses (longs délais entre les questions et les réponses)\n– paraît fatigué, abattu, accablé, exténué, asthénique\n– catalepsie (absence de mouvements spontanés accompagnée de rigidité, associée à la catatonie)\nMouvements surajoutés\n• Tics, rictus, grimaces, stéréotypies, maniérismes, compulsions, rituels, prend des poses, automatismes\n• Mimétisme ou échopraxie\nDémarche\n• Accélérée, sautillante, conante,\n• À petits pas, traînante, ralentie, robotique, titubante, chancelante, vacillante, hésitante, ataxique, antalgique\n• Polygone de sustentation élargi (marche les jambes écartées)\n• Mouvements spontanés des bras (augmentés ou diminués)\nTonus musculaire\n• Diminué : hypotonique, asque, amorphe\n• Cataplexie : perte soudaine de tonus musculaire, sur le coup d’une émotion, sans altération de l’état de conscience\n• Augmenté : rigidité, spasticité, roue dentée\nTremblements\n• De repos, parkinsonien,posturaux, d’intention\n• Intensité : discrets, légers, modérés, sévères\nDyskinésies\n• Mouvements choréoathétosiques\n• Orofaciales, des extrémités, des doigts, de la langue\n• Intensité : discrets, légers, modérés, sévères\nDystonies\n• Blépharospasme, torticolis, crise oculogyre, opisthotonos\nLangage\nProsodie (ton)\n• Modulée, martelée, monocorde, discours robotisé\nExpression\n• Trouble d’élocution, dysarthrie, discours ébrieux\n• Bégaiement, bredouillement, balbutiement\n• Marmonnement, murmure, à voix basse, à peine audible\nQuantité\n• Augmentée : discours élaboré, éloquent, passionné, abondant, loquace, volubile, circonstanciel, tangentiel, verbigération,\nlogorrhée, diarrhée verbale\n• Diminuée : discours pauvre, ralenti, taciturne, mutisme\nFluidité\n• Langage spontané, uide, clair, élaboré, précis\n• Langage accéléré, précipité, sous pression\nSyntaxe et structure\n• Aphasie, dysphasie, paraphasie, manque du mot\n• Acataphasie, schizophasie, glossolalie, écholalie\n• Incohérent, confus, embrouillé, éparpillé, désorganisé, fuite des idées, salade de mots\nHumeur\nTristesse\n• Triste, déçu, terne, morose, nostalgique, morne, taciturne, tourmenté, mélancolique, découragé, éploré, désespéré\nAnxiété\n• Perplexe, timoré, nerveux, craintif, effarouché, tendu, à eur de peau, inquiet, anxieux, désarroi, détresse, effaré,\nangoissé, effrayé, apeuré, terrié\nTABLEAU 3.3 Structure et terminologie de l’examen mental (suite)\n",
+  "raw_text_sha256": "c5b183db1f095ab9412080ed459d96f1b6969a96e0686341285db9e57b8464e3",
+  "source_page_display": 67,
+  "source_page_index": 66
+}

@@ -1,0 +1,220 @@
+{
+  "block_sequence_sha256": "dbe407e225863dc0cc3cc7137de3f8416694bf906ab505f62cfa0fc4daef1b54",
+  "blocks": [
+    {
+      "bbox": [
+        209.25,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-1072-block-0001",
+      "order": 1,
+      "text": "Chapitre 47\nÉvaluation de la qualité des soins et maintien de la compétence\n1055\n",
+      "text_sha256": "54d373547e7526c444d7b9eecf3d2556405a744cac49986516b0664ed01a2205"
+    },
+    {
+      "bbox": [
+        312.0,
+        40.72441482543945,
+        555.5540161132812,
+        559.4085083007812
+      ],
+      "block_id": "page-1072-block-0002",
+      "order": 2,
+      "text": "• la tenue de dossiers et le suivi pharmacothérapeutique pour\ndes soins de longue durée en CHSLD ;\n• le fonctionnement des départements hospitaliers de psychiatrie\n(indicateurs cliniques et administratifs). Il s’agit d’indicateurs\nde processus permettant de comparer les départements de\npsychiatrie entre eux. Par exemple, il est possible de comparer\nla durée moyenne de séjour par diagnostic (p. ex., la schizo-\nphrénie ou la dépression) entre diérents établissements et,\nen cas de disparité importante, on peut eectuer une étude\nde processus. Autre exemple : les listes d’attente pour un\nrendez-vous en clinique ambulatoire peuvent être comparées\nd’un établissement à l’autre.\nIl revient au comité d’inspection professionnelle du CMQ de\ndéterminer le programme de surveillance par indicateurs, après\nconsultation des diérents organismes (p. ex., les CMDP des\ncentres hospitaliers, les CSSS, les CHSLD). Il choisit les thèmes sur\nlesquels porteront les programmes en fonction de divers critères :\n• la faisabilité du programme ; la collecte de données doit être\nfacilement réalisable (p. ex., utilisation prolongée de benzo-\ndiazépines (BZD) chez les personnes âgées) ;\n• les informations faisant état d’une surutilisation ou d’une\nutilisation sous-optimale d’une intervention diagnostique ou\nthérapeutique, d’un médicament ou d’une classe de médica-\nments (p. ex., prescription de benzodiazépines à haute dose ou\nencore utilisation insusante de la clozapine compte tenu du\nnombre de schizophrénies réfractaires dans l’établissement) ;\n• l’inuence sur la qualité des soins et la santé des Québécois\n(p. ex., la réduction des BZD chez les patients âgés peut\nentraîner la diminution des troubles cognitifs et des chutes).\nAprès consultation des associations professionnelles concer-\nnées, un groupe d’experts nommés par le CMQ détermine les\nindicateurs de qualité pour chaque spécialité et élabore le pro-\ngramme de surveillance. La Direction de l’amélioration de l’exercice\n(DAE) procède alors à la collecte des données auprès d’organismes\ngouvernementaux, par exemple la Régie de l’assurance-maladie\ndu Québec ou la banque de données MED-ÉCHO1, qui contient\nles données relatives aux séjours hospitaliers. La DAE analyse\nensuite les données obtenues et les compare aux standards de\npratique. Enn, les médecins ou les établissements visés par un\nprogramme sont informés de leur performance respective et de\ncelle de l’ensemble des médecins ou des établissements visés. La\nprésentation de ces données n’est pas nominative, c’est-à-dire\nque l’on ne nomme pas les individus, mais plutôt les groupes\nou établissements.\n",
+      "text_sha256": "410c533df69f93bd71df7f0aa7936e0f52717bf9ccaccef5302a82390b6c3b27"
+    },
+    {
+      "bbox": [
+        312.0,
+        560.4158325195312,
+        555.3017578125,
+        697.4085083007812
+      ],
+      "block_id": "page-1072-block-0003",
+      "order": 3,
+      "text": "Cette rétroaction accompagnée d’informations sur les stan-\ndards de pratique permet aux médecins ou aux établissements\nde se situer par rapport à eux-mêmes, à leurs collègues et aux\nnormes d’un exercice de qualité. Dans certains programmes,\nnotamment ceux qui portent sur l’utilisation des benzodiazépines\nchez les personnes âgées, la DAE transmet de l’information\nsur les activités d’ÉMC disponibles. De 12 à 18 mois après\navoir informé les médecins ou les établissements de leur per-\nformance, la DAE eectue une nouvelle mesure des données\nan de vérier si le programme a permis une amélioration.\nElle communique également ses résultats aux médecins et aux\nétablissements visés.\n",
+      "text_sha256": "683e0a26acb67b4d97c5a9cc9a80ba0c1f6c56212cb739aad89907b3cccd9064"
+    },
+    {
+      "bbox": [
+        312.0,
+        715.388671875,
+        537.3717041015625,
+        725.3291015625
+      ],
+      "block_id": "page-1072-block-0004",
+      "order": 4,
+      "text": "1. MED-ÉCHO : Médical – étude de la clientèle hospitalière.\n",
+      "text_sha256": "917e1623d2aed3ddcea076f3db6bf8b70368d56d045007bcbefd7a85a100f200"
+    },
+    {
+      "bbox": [
+        74.1500015258789,
+        58.52412414550781,
+        231.57200622558594,
+        69.10029602050781
+      ],
+      "block_id": "page-1072-block-0005",
+      "order": 5,
+      "text": "Domaine\nIndicateurs\n",
+      "text_sha256": "22cb980bf4bad97284224370d7d035232c01150ccb4a656397073a10231e74d6"
+    },
+    {
+      "bbox": [
+        58.25,
+        74.45195770263672,
+        120.04700469970703,
+        94.27812957763672
+      ],
+      "block_id": "page-1072-block-0006",
+      "order": 6,
+      "text": "Indicateurs de qua-\nlité du traitement\n",
+      "text_sha256": "da5fd6ae31abc716d3c76ab5122121f316751db5846034b4fd95ed860af99d08"
+    },
+    {
+      "bbox": [
+        130.25,
+        74.45195770263672,
+        291.2825927734375,
+        219.2781219482422
+      ],
+      "block_id": "page-1072-block-0007",
+      "order": 7,
+      "text": "• Consultation en phase aiguë dans le traitement\nde la dépression\n• Réhospitalisation de patients en phase psycho-\ntique (La réadmission peut être un indice de\nsortie prématurée ou d’un défaut de coordina-\ntion avec les soins ambulatoires.)\n• Durée du traitement des personnes présentant\ndes troubles liés à l’utilisation de substances\n• Utilisation de médicaments antidépresseurs\nanticholinergiques chez les patients âgés\n• Prescription d’antidépresseur de façon continue,\nen phase aiguë\n• Prescription d’antidépresseur de façon continue,\nen phase d’entretien\n",
+      "text_sha256": "2a0440ea0ad856738907135c2133bff5e0022a4ebc21c3bd8f8b8ef869cefe31"
+    },
+    {
+      "bbox": [
+        58.25,
+        227.90196228027344,
+        121.53800201416016,
+        247.72813415527344
+      ],
+      "block_id": "page-1072-block-0008",
+      "order": 8,
+      "text": "Indicateurs de\ncontinuité des soins\n",
+      "text_sha256": "9311c1d40c3e3e477aea6fb66e1be435789ce2bf0a578f7cd501ecd435b2b6de"
+    },
+    {
+      "bbox": [
+        130.25,
+        227.90196228027344,
+        291.5970153808594,
+        320.7281188964844
+      ],
+      "block_id": "page-1072-block-0009",
+      "order": 9,
+      "text": "• Délai avant le suivi ambulatoire après une hospi-\ntalisation pour un trouble mental\n• Continuité du suivi après une hospitalisation\npour un trouble mental\n• Continuité du suivi après une hospitalisation\npour cooccurrence de trouble psychiatrique et\nde trouble lié à l’utilisation de substances\n• Disparité raciale et ethnique des taux de suivi\nen santé mentale\n",
+      "text_sha256": "f502dd90000a7d36d95debfb9081fc74ed2d63b4c7f37c5486fe79b5418fe6cf"
+    },
+    {
+      "bbox": [
+        58.25,
+        329.3019714355469,
+        121.20500183105469,
+        349.1281433105469
+      ],
+      "block_id": "page-1072-block-0010",
+      "order": 10,
+      "text": "Indicateur concer-\nnant la coordination\n",
+      "text_sha256": "4d4c66eacc0d8bde4820f80ef6a67910ea9d3d42891d4d4e9c623867a9581f3f"
+    },
+    {
+      "bbox": [
+        130.25,
+        329.3019714355469,
+        272.3738708496094,
+        349.1281433105469
+      ],
+      "block_id": "page-1072-block-0011",
+      "order": 11,
+      "text": "• Prise en charge de troubles psychiatriques\ngraves\n",
+      "text_sha256": "82ed11989ad8238f7c32b60c1d45ecee43252b0ce47c5e9c7fedefc34acdb0f3"
+    },
+    {
+      "bbox": [
+        58.25,
+        357.751953125,
+        99.63200378417969,
+        377.578125
+      ],
+      "block_id": "page-1072-block-0012",
+      "order": 12,
+      "text": "Indicateur de\nrésultat\n",
+      "text_sha256": "66eb42729e74c63863c9475c11957e39be44d2e615a200e3c59d223bf0ea0cc8"
+    },
+    {
+      "bbox": [
+        130.25,
+        357.751953125,
+        268.3863830566406,
+        377.578125
+      ],
+      "block_id": "page-1072-block-0013",
+      "order": 13,
+      "text": "• Mortalité chez les personnes souffrant de\ntroubles psychiatriques graves\n",
+      "text_sha256": "54573a562c75565aa234bab91c4c47672ea7efe16ce09a4299174218fe97e956"
+    },
+    {
+      "bbox": [
+        54.25,
+        386.34063720703125,
+        173.48199462890625,
+        395.2088623046875
+      ],
+      "block_id": "page-1072-block-0014",
+      "order": 14,
+      "text": "Source : Adapté de Hermann & al. (2006).\n",
+      "text_sha256": "4e94b54949a3d0e84c774977e2fe2636aebe375fdfc4f548c81893778ddb1062"
+    },
+    {
+      "bbox": [
+        56.20000076293945,
+        41.002296447753906,
+        210.30575561523438,
+        53.320068359375
+      ],
+      "block_id": "page-1072-block-0015",
+      "order": 15,
+      "text": "TABLEAU 47.3 Domaines d’indicateurs\n",
+      "text_sha256": "bd9cfa5ab14df5fd9c713e05aac21f90e5a938bc140a2e4781889b4f08f186b2"
+    },
+    {
+      "bbox": [
+        54.0,
+        415.22442626953125,
+        297.3572998046875,
+        581.3585205078125
+      ],
+      "block_id": "page-1072-block-0016",
+      "order": 16,
+      "text": "• le troisième niveau préconise une évaluation plus appro-\nfondie des besoins pour des médecins potentiellement en\nplus grande diculté, ce qui peut déboucher sur des stages\nde perfectionnement ou d’autres modalités permettant une\namélioration de la qualité des soins.\nPuisque tout médecin souhaite exercer une médecine de\nqualité, la Direction de l’amélioration de l’exercice (DAE) a fait\ndu processus de rétroaction à chacune des étapes d’évaluation\nl’élément central de son système. Les médecins sont informés de\nleur performance et de la façon de l’améliorer. Le cas échéant,\ndes outils d’amélioration sont également mis à leur disposition\n(p. ex., les guides de pratique, les activités d’éducation médicale\ncontinue (ÉMC), les tutorats cliniques) en vue d’améliorer la\nqualité des soins qu’ils prodiguent.\n",
+      "text_sha256": "4a6eb9023d5f2bb28c6f241e498db87e791c2d7bd3fba3327d1988213a8d7ded"
+    },
+    {
+      "bbox": [
+        54.0,
+        590.4330444335938,
+        297.59674072265625,
+        725.45849609375
+      ],
+      "block_id": "page-1072-block-0017",
+      "order": 17,
+      "text": "Programmes de surveillance par indicateurs\nLes programmes de 1er niveau portent sur diérents aspects de la\npratique, tant en cabinet qu’en établissement et visent à la fois les\nmédecins généralistes aussi bien que les médecins spécialistes.\nCes dernières années, de nombreux programmes de ce type ont\nété instaurés sur diérents sujets de la médecine. Voici quelques\nexemples pertinents à la pratique de la psychiatrie :\n• l’utilisation prolongée des benzodiazépines chez les per -\nsonnes âgées ;\n• le protocole pré-ECT et les recommandations de modalités\nde suivi ;\n",
+      "text_sha256": "108a9f001d40a6b0cbb5f66164c78015f932e5f06bef98835140d2702cdeccde"
+    }
+  ],
+  "coordinates_sha256": "476525349106128ba8531d643cc3e11ece2b568e68fa6e7e7137941c2afc82ec",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1072",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 47\nÉvaluation de la qualité des soins et maintien de la compétence\n1055\n• la tenue de dossiers et le suivi pharmacothérapeutique pour\ndes soins de longue durée en CHSLD ;\n• le fonctionnement des départements hospitaliers de psychiatrie\n(indicateurs cliniques et administratifs). Il s’agit d’indicateurs\nde processus permettant de comparer les départements de\npsychiatrie entre eux. Par exemple, il est possible de comparer\nla durée moyenne de séjour par diagnostic (p. ex., la schizo-\nphrénie ou la dépression) entre diérents établissements et,\nen cas de disparité importante, on peut eectuer une étude\nde processus. Autre exemple : les listes d’attente pour un\nrendez-vous en clinique ambulatoire peuvent être comparées\nd’un établissement à l’autre.\nIl revient au comité d’inspection professionnelle du CMQ de\ndéterminer le programme de surveillance par indicateurs, après\nconsultation des diérents organismes (p. ex., les CMDP des\ncentres hospitaliers, les CSSS, les CHSLD). Il choisit les thèmes sur\nlesquels porteront les programmes en fonction de divers critères :\n• la faisabilité du programme ; la collecte de données doit être\nfacilement réalisable (p. ex., utilisation prolongée de benzo-\ndiazépines (BZD) chez les personnes âgées) ;\n• les informations faisant état d’une surutilisation ou d’une\nutilisation sous-optimale d’une intervention diagnostique ou\nthérapeutique, d’un médicament ou d’une classe de médica-\nments (p. ex., prescription de benzodiazépines à haute dose ou\nencore utilisation insusante de la clozapine compte tenu du\nnombre de schizophrénies réfractaires dans l’établissement) ;\n• l’inuence sur la qualité des soins et la santé des Québécois\n(p. ex., la réduction des BZD chez les patients âgés peut\nentraîner la diminution des troubles cognitifs et des chutes).\nAprès consultation des associations professionnelles concer-\nnées, un groupe d’experts nommés par le CMQ détermine les\nindicateurs de qualité pour chaque spécialité et élabore le pro-\ngramme de surveillance. La Direction de l’amélioration de l’exercice\n(DAE) procède alors à la collecte des données auprès d’organismes\ngouvernementaux, par exemple la Régie de l’assurance-maladie\ndu Québec ou la banque de données MED-ÉCHO1, qui contient\nles données relatives aux séjours hospitaliers. La DAE analyse\nensuite les données obtenues et les compare aux standards de\npratique. Enn, les médecins ou les établissements visés par un\nprogramme sont informés de leur performance respective et de\ncelle de l’ensemble des médecins ou des établissements visés. La\nprésentation de ces données n’est pas nominative, c’est-à-dire\nque l’on ne nomme pas les individus, mais plutôt les groupes\nou établissements.\nCette rétroaction accompagnée d’informations sur les stan-\ndards de pratique permet aux médecins ou aux établissements\nde se situer par rapport à eux-mêmes, à leurs collègues et aux\nnormes d’un exercice de qualité. Dans certains programmes,\nnotamment ceux qui portent sur l’utilisation des benzodiazépines\nchez les personnes âgées, la DAE transmet de l’information\nsur les activités d’ÉMC disponibles. De 12 à 18 mois après\navoir informé les médecins ou les établissements de leur per-\nformance, la DAE eectue une nouvelle mesure des données\nan de vérier si le programme a permis une amélioration.\nElle communique également ses résultats aux médecins et aux\nétablissements visés.\n1. MED-ÉCHO : Médical – étude de la clientèle hospitalière.\nDomaine\nIndicateurs\nIndicateurs de qua-\nlité du traitement\n• Consultation en phase aiguë dans le traitement\nde la dépression\n• Réhospitalisation de patients en phase psycho-\ntique (La réadmission peut être un indice de\nsortie prématurée ou d’un défaut de coordina-\ntion avec les soins ambulatoires.)\n• Durée du traitement des personnes présentant\ndes troubles liés à l’utilisation de substances\n• Utilisation de médicaments antidépresseurs\nanticholinergiques chez les patients âgés\n• Prescription d’antidépresseur de façon continue,\nen phase aiguë\n• Prescription d’antidépresseur de façon continue,\nen phase d’entretien\nIndicateurs de\ncontinuité des soins\n• Délai avant le suivi ambulatoire après une hospi-\ntalisation pour un trouble mental\n• Continuité du suivi après une hospitalisation\npour un trouble mental\n• Continuité du suivi après une hospitalisation\npour cooccurrence de trouble psychiatrique et\nde trouble lié à l’utilisation de substances\n• Disparité raciale et ethnique des taux de suivi\nen santé mentale\nIndicateur concer-\nnant la coordination\n• Prise en charge de troubles psychiatriques\ngraves\nIndicateur de\nrésultat\n• Mortalité chez les personnes souffrant de\ntroubles psychiatriques graves\nSource : Adapté de Hermann & al. (2006).\nTABLEAU 47.3 Domaines d’indicateurs\n• le troisième niveau préconise une évaluation plus appro-\nfondie des besoins pour des médecins potentiellement en\nplus grande diculté, ce qui peut déboucher sur des stages\nde perfectionnement ou d’autres modalités permettant une\namélioration de la qualité des soins.\nPuisque tout médecin souhaite exercer une médecine de\nqualité, la Direction de l’amélioration de l’exercice (DAE) a fait\ndu processus de rétroaction à chacune des étapes d’évaluation\nl’élément central de son système. Les médecins sont informés de\nleur performance et de la façon de l’améliorer. Le cas échéant,\ndes outils d’amélioration sont également mis à leur disposition\n(p. ex., les guides de pratique, les activités d’éducation médicale\ncontinue (ÉMC), les tutorats cliniques) en vue d’améliorer la\nqualité des soins qu’ils prodiguent.\nProgrammes de surveillance par indicateurs\nLes programmes de 1er niveau portent sur diérents aspects de la\npratique, tant en cabinet qu’en établissement et visent à la fois les\nmédecins généralistes aussi bien que les médecins spécialistes.\nCes dernières années, de nombreux programmes de ce type ont\nété instaurés sur diérents sujets de la médecine. Voici quelques\nexemples pertinents à la pratique de la psychiatrie :\n• l’utilisation prolongée des benzodiazépines chez les per -\nsonnes âgées ;\n• le protocole pré-ECT et les recommandations de modalités\nde suivi ;\n",
+  "raw_text_sha256": "82becbc69542bf7d1f2183de13f020241eeeff8f6962dd72346a73f61afcec18",
+  "source_page_display": 1073,
+  "source_page_index": 1072
+}

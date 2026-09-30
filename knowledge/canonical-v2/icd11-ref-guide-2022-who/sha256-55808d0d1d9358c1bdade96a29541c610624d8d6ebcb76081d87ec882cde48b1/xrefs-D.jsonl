@@ -1,0 +1,8 @@
+{"from_unit": "icd11rg-u-100-001", "target_text": "See Mortality Annex 3.14.8 for a list of the conditions that can cause diabetes", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-104-002", "target_text": "except those listed in Section (2.19.1.2.1)", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-105-002", "target_text": "injury priority list in the Mortality Annex (3.14.5)", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-109-001", "target_text": "injury priority list in the Mortality Annex (3.14.5)", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-111-003", "target_text": "Section 2.19.2.11 Pneumonia", "target_unit": "icd11rg-u-109-001", "status": "resolved"}
+{"from_unit": "icd11rg-u-111-004", "target_text": "Mortality Annex (3.14.9 List of conditions to be considered obvious consequences of surgery and other invasive medical procedures)", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-112-001", "target_text": "injury priority list in the Mortality Annex (3.14.5)", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-123-001", "target_text": "Step SP8 Conditions unlikely to cause death", "target_unit": null, "status": "unresolved"}

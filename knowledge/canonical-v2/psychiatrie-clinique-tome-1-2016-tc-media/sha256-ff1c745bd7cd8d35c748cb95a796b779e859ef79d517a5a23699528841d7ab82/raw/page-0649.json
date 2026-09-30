@@ -1,0 +1,412 @@
+{
+  "block_sequence_sha256": "bfffb3665c912af72c5d7296f13b1cb01ef74c5819d48ba0a4d0325f5e2138ae",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0649-block-0001",
+      "order": 1,
+      "text": "632\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "c883c5959679b6d55f071453fdacdeab9548a81e50d24197b8b308781b97e8d8"
+    },
+    {
+      "bbox": [
+        50.35000228881836,
+        41.002296447753906,
+        189.08888244628906,
+        53.320068359375
+      ],
+      "block_id": "page-0649-block-0002",
+      "order": 2,
+      "text": "TABLEAU 28.8 Tests de laboratoire\n",
+      "text_sha256": "a7ce45f1801fea09f398c60454053069ff02e2b8d65e3fb43c16c7b76ce2d9cc"
+    },
+    {
+      "bbox": [
+        115.20000457763672,
+        79.47412109375,
+        134.0336151123047,
+        90.05029296875
+      ],
+      "block_id": "page-0649-block-0003",
+      "order": 3,
+      "text": "Tests\n",
+      "text_sha256": "5c17754674b09233565c65903b8d354ec3cca1f61acc15f1bdf6a6442a6395c7"
+    },
+    {
+      "bbox": [
+        205.87413024902344,
+        78.65049743652344,
+        216.45030212402344,
+        109.25
+      ],
+      "block_id": "page-0649-block-0004",
+      "order": 4,
+      "text": "Delirium\n",
+      "text_sha256": "88a5dc3974e38b9f2d0589ea59c3527dc472f7c18540d8988c005c98e7a09120"
+    },
+    {
+      "bbox": [
+        225.87413024902344,
+        74.95500183105469,
+        236.45030212402344,
+        109.25
+      ],
+      "block_id": "page-0649-block-0005",
+      "order": 5,
+      "text": "Démence\n",
+      "text_sha256": "2da7f19b79997312c3471d52ba7bf0f711145fecadc783fb5c022b8e8557fc83"
+    },
+    {
+      "bbox": [
+        245.87413024902344,
+        86.91549682617188,
+        256.4503173828125,
+        109.25
+      ],
+      "block_id": "page-0649-block-0006",
+      "order": 6,
+      "text": "Manie\n",
+      "text_sha256": "739784c4b857c5ec8cca4fbad6d2670cf699625678197061aae9940246a793d2"
+    },
+    {
+      "bbox": [
+        265.8741149902344,
+        68.43798828125,
+        276.4502868652344,
+        109.25
+      ],
+      "block_id": "page-0649-block-0007",
+      "order": 7,
+      "text": "Dépression\n",
+      "text_sha256": "f43471125c51aee269efb041ee2e7024459ec74ca1022e28b638c22ef0ff35af"
+    },
+    {
+      "bbox": [
+        285.8741149902344,
+        82.16549682617188,
+        296.4502868652344,
+        109.25
+      ],
+      "block_id": "page-0649-block-0008",
+      "order": 8,
+      "text": "Fatigue\n",
+      "text_sha256": "e320931ff63fd59e597007acf3250ce7d68ed09d23db62047b0084f1ca70b55b"
+    },
+    {
+      "bbox": [
+        355.45001220703125,
+        79.47412109375,
+        494.35833740234375,
+        90.05029296875
+      ],
+      "block_id": "page-0649-block-0009",
+      "order": 9,
+      "text": "Affections recherchées/commentaires\n",
+      "text_sha256": "5ab68264f975bf102fd6d38d95b430cf29f216af9c2e296cb5a06321048c7d05"
+    },
+    {
+      "bbox": [
+        51.25,
+        114.87285614013672,
+        115.90511322021484,
+        124.89238739013672
+      ],
+      "block_id": "page-0649-block-0010",
+      "order": 10,
+      "text": "Tests de dépistage\n",
+      "text_sha256": "c41d149246c1ef02b135f03062937929dd66349ba173e38e889830ae4a879981"
+    },
+    {
+      "bbox": [
+        52.25,
+        130.7019500732422,
+        533.6678466796875,
+        204.5281219482422
+      ],
+      "block_id": "page-0649-block-0011",
+      "order": 11,
+      "text": "Formule sanguine complète\n\n\n\n\n\n• Infection (leucocytose)\n• Inammation\n• Anémie\n• Décits en vitamines du complexe B (macrocytose)\n• Alcoolisme souvent associé à leucopénie, thrombopénie, anémie et\nmacrocytose, mais attention aux autres facteurs inuençant le volume\nglobulaire moyen (VGM)\n",
+      "text_sha256": "23b75712e527c96d6113ae0deddd6a3c680305647a1901ba6ceace1327e3b601"
+    },
+    {
+      "bbox": [
+        52.25,
+        211.10195922851562,
+        414.70361328125,
+        231.92813110351562
+      ],
+      "block_id": "page-0649-block-0012",
+      "order": 12,
+      "text": "Glycémie\n\n\n\n\n\n• Hyperglycémie/hypoglycémie\n• Diabète inconnu ou mal contrôlé\n",
+      "text_sha256": "910afb84d5a92a619e20e841bee9adcc8f4f451000253945fff9a6f229278f70"
+    },
+    {
+      "bbox": [
+        52.25,
+        237.9513702392578,
+        497.5656433105469,
+        269.3781433105469
+      ],
+      "block_id": "page-0649-block-0013",
+      "order": 13,
+      "text": "Électrolytes (Na+, Cl-, K+)\n\n\n\n\n\n• Les déséquilibres électrolytiques brusques peuvent induire\ndes symptômes psychiatriques\n• Hypokaliémie allonge le QTc\n",
+      "text_sha256": "cdab25af38a2beb10ff92e430948b5666a7173da8acccb030cf6f68df5d2c10f"
+    },
+    {
+      "bbox": [
+        52.25,
+        275.95196533203125,
+        396.134033203125,
+        296.77813720703125
+      ],
+      "block_id": "page-0649-block-0014",
+      "order": 14,
+      "text": "Fonction rénale (urée, créatinine)\n\n\n\n\n\n• Insufsance rénale/urémie\n• Déshydratation\n",
+      "text_sha256": "728f9358d072f1bbc5a485959508e60e2d351cd07520ad1dcef736a323cdeb2f"
+    },
+    {
+      "bbox": [
+        52.25,
+        303.70196533203125,
+        194.98715209960938,
+        323.52813720703125
+      ],
+      "block_id": "page-0649-block-0015",
+      "order": 15,
+      "text": "Fonction hépatique (AST, ALT, γGT, bilirubine,\nphosphatase alcaline)\n",
+      "text_sha256": "639d6cf37732123f2e42a7218fafc0a24370238085a55faad12f899deb011e6d"
+    },
+    {
+      "bbox": [
+        207.4499969482422,
+        303.4019470214844,
+        465.39898681640625,
+        324.5658264160156
+      ],
+      "block_id": "page-0649-block-0016",
+      "order": 16,
+      "text": "\n\n\n\n\n• Hépatopathie\n• Prise d’alcool récente (2AST / 1ALT, γGT élevée)\n",
+      "text_sha256": "e7b02ee595b079a979fb3c37ba04bca1f22e84ea90985c5214a385190849ab3c"
+    },
+    {
+      "bbox": [
+        52.25,
+        330.8019714355469,
+        450.5646667480469,
+        362.6281433105469
+      ],
+      "block_id": "page-0649-block-0017",
+      "order": 17,
+      "text": "Albumine – protéines totales\n\n\n\n\n\n• Dénutrition\n• Insufsance hépatique\n• Indice sur la fraction libre des médicaments\n",
+      "text_sha256": "2113b4e205e1dca2196cb5b26aad9b86d30d776ffdc16a43027eada87c60624c"
+    },
+    {
+      "bbox": [
+        52.25,
+        369.251953125,
+        346.04901123046875,
+        390.078125
+      ],
+      "block_id": "page-0649-block-0018",
+      "order": 18,
+      "text": "Analyse d’urine\n\n\n\n\n\n• Infection\n• Protéinurie\n",
+      "text_sha256": "70db05f5da197c6ad2f3295f92b47235e89b9e5efba019d0ce5769e2775250db"
+    },
+    {
+      "bbox": [
+        52.25,
+        396.6519470214844,
+        427.724609375,
+        406.7320251464844
+      ],
+      "block_id": "page-0649-block-0019",
+      "order": 19,
+      "text": "Dépistage urinaire de drogues\n\n\n\n• À corroborer avec le tableau clinique\n",
+      "text_sha256": "8ec30de48f3cb408ee2ce012fa695640552cdf3923ea87d4b78af2d40e39203d"
+    },
+    {
+      "bbox": [
+        52.25,
+        413.6019592285156,
+        385.8470153808594,
+        434.4281311035156
+      ],
+      "block_id": "page-0649-block-0020",
+      "order": 20,
+      "text": "Dosage sérique d’alcool ou de drogues\n\n\n• Gravité de l’intoxication\n• Aspects médicolégaux\n",
+      "text_sha256": "05668d83c4cba2d01f332156e87d17c8f3ece39bc60035fd42a4b4339533a82b"
+    },
+    {
+      "bbox": [
+        52.25,
+        441.001953125,
+        182.88600158691406,
+        460.828125
+      ],
+      "block_id": "page-0649-block-0021",
+      "order": 21,
+      "text": "Fonction thyroïdienne (thyroid stimulating\nhormone ou TSH)\n",
+      "text_sha256": "e792b204df421a1cbfebc2eb94110f4887ca639f529c9536b7000e51a4e273b9"
+    },
+    {
+      "bbox": [
+        207.4499969482422,
+        441.001953125,
+        418.3846740722656,
+        451.1320495605469
+      ],
+      "block_id": "page-0649-block-0022",
+      "order": 22,
+      "text": "\n\n\n\n\n• TSH seule suft pour le dépistage\n",
+      "text_sha256": "3c7df1150bc9f37d93b716bec09c1cac9eeb98289306b9356a2ccd91dc5b0ea9"
+    },
+    {
+      "bbox": [
+        52.25,
+        467.45196533203125,
+        540.4852294921875,
+        487.27813720703125
+      ],
+      "block_id": "page-0649-block-0023",
+      "order": 23,
+      "text": "Vitamine B12 – acide folique (B9)\n\n\n\n\n\n• Les décits en vitamines du complexe B ont des impacts sur le système\nnerveux central\n",
+      "text_sha256": "0cddeec86dd4615aac9d5e6083e5966464df5b6efd375a03df15405e42c74f93"
+    },
+    {
+      "bbox": [
+        52.25,
+        493.8519592285156,
+        460.64654541015625,
+        503.9820251464844
+      ],
+      "block_id": "page-0649-block-0024",
+      "order": 24,
+      "text": "Syphilis (EIA, RPR ou VDRL)\n\n\n\n• ITSS – atteinte neuropsychiatrique tardivement\n",
+      "text_sha256": "355b43753452dc127f51c8664999502e9cdb78624c50661f2fcdc1c5c6acf67a"
+    },
+    {
+      "bbox": [
+        52.25,
+        510.80194091796875,
+        533.2630004882812,
+        540.6281127929688
+      ],
+      "block_id": "page-0649-block-0025",
+      "order": 25,
+      "text": "Test de grossesse\n\n\n\n• Une fatigue inhabituelle, un sommeil perturbé, des nausées matinales\net des changements de l’humeur sont des symptômes précoces\nd’une grossesse\n",
+      "text_sha256": "a51488c1304adbe13bcdea19c52453d837de05c202a3cdd1841f1f110769cc36"
+    },
+    {
+      "bbox": [
+        52.25,
+        547.1728515625,
+        146.89308166503906,
+        557.1923828125
+      ],
+      "block_id": "page-0649-block-0026",
+      "order": 26,
+      "text": "Tests courants additionnels\n",
+      "text_sha256": "b2f4f59bac863178e14b1f850de5b3acc9da60d5a8cb5486874717ec424f4576"
+    },
+    {
+      "bbox": [
+        52.25,
+        563.6519775390625,
+        518.552001953125,
+        595.4781494140625
+      ],
+      "block_id": "page-0649-block-0027",
+      "order": 27,
+      "text": "Gaz artériel – saturation en oxygène\n\n\n\n• Hypoxémie\n• Hypercapnie\n• Syndrome d’apnées-hypopnées du sommeil (oxymétrie nocturne)\n",
+      "text_sha256": "2276ccaa709c0c84dd97558b5cd9a9e07777d60b9f0eb991a48dedccad294b95"
+    },
+    {
+      "bbox": [
+        52.25,
+        601.5014038085938,
+        123.66999816894531,
+        614.1664428710938
+      ],
+      "block_id": "page-0649-block-0028",
+      "order": 28,
+      "text": "Électrolytes (Ca2+, PO4\n",
+      "text_sha256": "61746369d6404f6266c8a251ac3d4a3452db5cab6875b4ea5f4b0fb7cf307ae7"
+    },
+    {
+      "bbox": [
+        123.70000457763672,
+        601.5014038085938,
+        476.32000732421875,
+        633.9281616210938
+      ],
+      "block_id": "page-0649-block-0029",
+      "order": 29,
+      "text": "3-, Mg2+)\n\n\n\n\n\n• Hypercalcémie dans un syndrome para/néoplasique\n• Hypocalcémie allonge le QTc\n• Hypomagnésémie dans l’alcoolisme\n",
+      "text_sha256": "89912d70cf6a658d2d650e11ab69692fbffc2ff9c55d49fdb07957c56bfc9877"
+    },
+    {
+      "bbox": [
+        52.25,
+        640.501953125,
+        104.91999816894531,
+        652.56640625
+      ],
+      "block_id": "page-0649-block-0030",
+      "order": 30,
+      "text": "Ammonium (NH4\n",
+      "text_sha256": "4bbaa4a9bc796def5fba4b79b8ea875078b72416230a1c154491f31acfc9f423"
+    },
+    {
+      "bbox": [
+        104.95000457763672,
+        639.9013671875,
+        519.03271484375,
+        661.328125
+      ],
+      "block_id": "page-0649-block-0031",
+      "order": 31,
+      "text": "+)\n\n\n• Insufsance hépatique (dosage plus recommandé, car peu able)\n• Effet indésirable de l’acide valproïque\n",
+      "text_sha256": "1df31d80006a62c257359edbaed208d89324d96feca4de3540c70ba29cc7867d"
+    },
+    {
+      "bbox": [
+        52.25,
+        667.9519653320312,
+        186.14700317382812,
+        697.7781372070312
+      ],
+      "block_id": "page-0649-block-0032",
+      "order": 32,
+      "text": "Bilan de fer (fer sérique, ferritine, transfer-\nrine, saturation et capacité de xation\nde la transferrine)\n",
+      "text_sha256": "0fc4442e7c07503780e3cbf24967060bffc2a1445995f2b759b8be2db17fcda1"
+    },
+    {
+      "bbox": [
+        267.45001220703125,
+        667.9519653320312,
+        512.310546875,
+        709.7781372070312
+      ],
+      "block_id": "page-0649-block-0033",
+      "order": 33,
+      "text": "\n\n• Recherche d’une cause d’une anémie\n• Hémosidérose\n• Un fer sérique bas est associé avec la catatonie et le syndrome\ndes jambes sans repos\n",
+      "text_sha256": "509e99230256f591b9da5dab2f01bd8fdb067a2bb032e7edd8f4c88e557c3795"
+    }
+  ],
+  "coordinates_sha256": "f0265df3dc32fc0c849d35d77323b047bffa5cda8d2d9d39b392656ecc7093f1",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0649",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "632\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nTABLEAU 28.8 Tests de laboratoire\nTests\nDelirium\nDémence\nManie\nDépression\nFatigue\nAffections recherchées/commentaires\nTests de dépistage\nFormule sanguine complète\n\n\n\n\n\n• Infection (leucocytose)\n• Inammation\n• Anémie\n• Décits en vitamines du complexe B (macrocytose)\n• Alcoolisme souvent associé à leucopénie, thrombopénie, anémie et\nmacrocytose, mais attention aux autres facteurs inuençant le volume\nglobulaire moyen (VGM)\nGlycémie\n\n\n\n\n\n• Hyperglycémie/hypoglycémie\n• Diabète inconnu ou mal contrôlé\nÉlectrolytes (Na+, Cl-, K+)\n\n\n\n\n\n• Les déséquilibres électrolytiques brusques peuvent induire\ndes symptômes psychiatriques\n• Hypokaliémie allonge le QTc\nFonction rénale (urée, créatinine)\n\n\n\n\n\n• Insufsance rénale/urémie\n• Déshydratation\nFonction hépatique (AST, ALT, γGT, bilirubine,\nphosphatase alcaline)\n\n\n\n\n\n• Hépatopathie\n• Prise d’alcool récente (2AST / 1ALT, γGT élevée)\nAlbumine – protéines totales\n\n\n\n\n\n• Dénutrition\n• Insufsance hépatique\n• Indice sur la fraction libre des médicaments\nAnalyse d’urine\n\n\n\n\n\n• Infection\n• Protéinurie\nDépistage urinaire de drogues\n\n\n\n• À corroborer avec le tableau clinique\nDosage sérique d’alcool ou de drogues\n\n\n• Gravité de l’intoxication\n• Aspects médicolégaux\nFonction thyroïdienne (thyroid stimulating\nhormone ou TSH)\n\n\n\n\n\n• TSH seule suft pour le dépistage\nVitamine B12 – acide folique (B9)\n\n\n\n\n\n• Les décits en vitamines du complexe B ont des impacts sur le système\nnerveux central\nSyphilis (EIA, RPR ou VDRL)\n\n\n\n• ITSS – atteinte neuropsychiatrique tardivement\nTest de grossesse\n\n\n\n• Une fatigue inhabituelle, un sommeil perturbé, des nausées matinales\net des changements de l’humeur sont des symptômes précoces\nd’une grossesse\nTests courants additionnels\nGaz artériel – saturation en oxygène\n\n\n\n• Hypoxémie\n• Hypercapnie\n• Syndrome d’apnées-hypopnées du sommeil (oxymétrie nocturne)\nÉlectrolytes (Ca2+, PO4\n3-, Mg2+)\n\n\n\n\n\n• Hypercalcémie dans un syndrome para/néoplasique\n• Hypocalcémie allonge le QTc\n• Hypomagnésémie dans l’alcoolisme\nAmmonium (NH4\n+)\n\n\n• Insufsance hépatique (dosage plus recommandé, car peu able)\n• Effet indésirable de l’acide valproïque\nBilan de fer (fer sérique, ferritine, transfer-\nrine, saturation et capacité de xation\nde la transferrine)\n\n\n• Recherche d’une cause d’une anémie\n• Hémosidérose\n• Un fer sérique bas est associé avec la catatonie et le syndrome\ndes jambes sans repos\n",
+  "raw_text_sha256": "7b265203400d50d36cd735c15da496df78f891173f9922d94c6cac7554320515",
+  "source_page_display": 650,
+  "source_page_index": 649
+}

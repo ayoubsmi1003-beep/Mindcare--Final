@@ -1,0 +1,100 @@
+{
+  "block_sequence_sha256": "282a1c9a8e7ca833218665012f630b526b97116d27e03008c8a6f65179e753ab",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        180.42501831054688,
+        758.8693237304688
+      ],
+      "block_id": "page-1155-block-0001",
+      "order": 1,
+      "text": "F18\nFigures supplémentaires\n",
+      "text_sha256": "01eb6b7c940e4d64d39a07b065711a2e58fc65b0bea19726eeade8f56a32117c"
+    },
+    {
+      "bbox": [
+        50.25,
+        41.002296447753906,
+        309.3545227050781,
+        53.320068359375
+      ],
+      "block_id": "page-1155-block-0002",
+      "order": 2,
+      "text": "FIGURE 32 Activation du réseau commun en mémoire de travail\n",
+      "text_sha256": "ab52b8561752cdad09f7d1e3e781c604da485960ae960862bcdd82daf37237cc"
+    },
+    {
+      "bbox": [
+        48.25,
+        274.4906311035156,
+        541.8724975585938,
+        321.2250061035156
+      ],
+      "block_id": "page-1155-block-0003",
+      "order": 3,
+      "text": "Cette gure illustre l’activation en IRMf du réseau commun en mémoire de travail à partir d’une méta-analyse de 189 études. Ces effets révèlent des activations bilatérales\nd’un réseau frontopariétal. Celles-ci sont observées symétriquement dans les deux hémisphères dans les zones frontales (BA44/45), l’insula antérieure, le cortex dorsal\nprémoteur et le gyrus frontal inférieur (cortex prémoteur ventral), s’étendant dans l’aire BA44. L’activation bilatérale a été en outre observée dans l’aire motrice supplémentaire\n(BA6) ainsi que dans le lobule pariétal supérieur (aire BA7Pc et 7A) et l’aire pariétale antérieure (aire BA2). De plus, le cortex préfrontal a montré une activation bilatérale. Une\nactivation bilatérale a été mise en évidence dans le cortex visuel ventral ainsi que dans le lobule antérieur du cervelet (aire VI).\n",
+      "text_sha256": "8825371b78d766a44c37a9a643220c6b896c8cc8e43c40926efde4b38240357f"
+    },
+    {
+      "bbox": [
+        48.25,
+        325.4906311035156,
+        519.8759765625,
+        343.2250061035156
+      ],
+      "block_id": "page-1155-block-0004",
+      "order": 4,
+      "text": "Source : Rottschy, C. & al. (2012). Modelling neural correlates of working memory : a coordinate-based meta-analysis. Neuroimage. Mar;60(1):830-46. doi : 10.1016/j.\nneuroimage.2011.11.050.\n",
+      "text_sha256": "7411f16bde6c7789cc95c08a665f4b17f334c091e96bfed692a65ab70e592b32"
+    },
+    {
+      "bbox": [
+        50.25,
+        368.0022888183594,
+        388.39056396484375,
+        380.320068359375
+      ],
+      "block_id": "page-1155-block-0005",
+      "order": 5,
+      "text": "FIGURE 33 Aires de traitement des fonctions langagières et des concepts abstraits\n",
+      "text_sha256": "dd95ca08b55a583c571691818b8987511a619378cfd1ff4fe7eb9f398c6089b5"
+    },
+    {
+      "bbox": [
+        48.25,
+        611.6906127929688,
+        529.3162231445312,
+        677.4249877929688
+      ],
+      "block_id": "page-1155-block-0006",
+      "order": 6,
+      "text": "Représentation de l’hémisphère gauche indiquant les zones ayant démontré un effet positif principal de tâches liées aux niveaux d’abstraction (valeurs T indiquées par la\nbarre de couleur). Les régions d’intérêt sont superposées (postérieures à antérieures, cortex moteur primaire, cortex prémoteur, cortex préfrontal dorsolatéral médian et\ncortex orbitofrontal). Ces activations correspondraient étroitement aux régions associées à des niveaux d’abstraction progressifs frontaux (plus les concepts sont abstraits,\nplus ils sont traités antérieurement). Ainsi, le cortex moteur primaire est essentiel pour initier des mouvements. Le cortex prémoteur est important pour l’apprentissage par\nimitation, les cognitions sociales et l’empathie. Le cortex préfrontal, qui inclut le cortex frontal dorsolatéral médian et le cortex orbitofrontal, joue un rôle important dans les\nfonctions cérébrales supérieures. C’est une partie essentielle du système exécutif, qui se réfère à la planication, au raisonnement et au jugement. Il participe également\nà la personnalité et aux émotions en contribuant à l’évaluation et au contrôle des comportements sociaux appropriés.\n",
+      "text_sha256": "bf28cab80f3bb1b3965768ed284e3d4c752b5bfac880c122cc2d5041c305ae06"
+    },
+    {
+      "bbox": [
+        48.25,
+        681.6906127929688,
+        449.6960754394531,
+        690.558837890625
+      ],
+      "block_id": "page-1155-block-0007",
+      "order": 7,
+      "text": "Source : Badre, D., Kayser, A. S. & D’Esposito, M. (2010). « Frontal cortex and the discovery of abstract action rules », Neuron, 66, p. 315-326.\n",
+      "text_sha256": "ecd02fd79379f88869cba31e5cffb3dbce119be86d4cbfea107d7ef7548d8617"
+    }
+  ],
+  "coordinates_sha256": "fdfc4cb58c6eff9b95cf46cc59f7d1e311ec5f48c7b77614608f35077b7982a5",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1155",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "F18\nFigures supplémentaires\nFIGURE 32 Activation du réseau commun en mémoire de travail\nCette gure illustre l’activation en IRMf du réseau commun en mémoire de travail à partir d’une méta-analyse de 189 études. Ces effets révèlent des activations bilatérales\nd’un réseau frontopariétal. Celles-ci sont observées symétriquement dans les deux hémisphères dans les zones frontales (BA44/45), l’insula antérieure, le cortex dorsal\nprémoteur et le gyrus frontal inférieur (cortex prémoteur ventral), s’étendant dans l’aire BA44. L’activation bilatérale a été en outre observée dans l’aire motrice supplémentaire\n(BA6) ainsi que dans le lobule pariétal supérieur (aire BA7Pc et 7A) et l’aire pariétale antérieure (aire BA2). De plus, le cortex préfrontal a montré une activation bilatérale. Une\nactivation bilatérale a été mise en évidence dans le cortex visuel ventral ainsi que dans le lobule antérieur du cervelet (aire VI).\nSource : Rottschy, C. & al. (2012). Modelling neural correlates of working memory : a coordinate-based meta-analysis. Neuroimage. Mar;60(1):830-46. doi : 10.1016/j.\nneuroimage.2011.11.050.\nFIGURE 33 Aires de traitement des fonctions langagières et des concepts abstraits\nReprésentation de l’hémisphère gauche indiquant les zones ayant démontré un effet positif principal de tâches liées aux niveaux d’abstraction (valeurs T indiquées par la\nbarre de couleur). Les régions d’intérêt sont superposées (postérieures à antérieures, cortex moteur primaire, cortex prémoteur, cortex préfrontal dorsolatéral médian et\ncortex orbitofrontal). Ces activations correspondraient étroitement aux régions associées à des niveaux d’abstraction progressifs frontaux (plus les concepts sont abstraits,\nplus ils sont traités antérieurement). Ainsi, le cortex moteur primaire est essentiel pour initier des mouvements. Le cortex prémoteur est important pour l’apprentissage par\nimitation, les cognitions sociales et l’empathie. Le cortex préfrontal, qui inclut le cortex frontal dorsolatéral médian et le cortex orbitofrontal, joue un rôle important dans les\nfonctions cérébrales supérieures. C’est une partie essentielle du système exécutif, qui se réfère à la planication, au raisonnement et au jugement. Il participe également\nà la personnalité et aux émotions en contribuant à l’évaluation et au contrôle des comportements sociaux appropriés.\nSource : Badre, D., Kayser, A. S. & D’Esposito, M. (2010). « Frontal cortex and the discovery of abstract action rules », Neuron, 66, p. 315-326.\n",
+  "raw_text_sha256": "8cf6832ed9ff651bfb2c7812be5433e91bcbd834ddc6375950e678bcfcefe713",
+  "source_page_display": 1156,
+  "source_page_index": 1155
+}

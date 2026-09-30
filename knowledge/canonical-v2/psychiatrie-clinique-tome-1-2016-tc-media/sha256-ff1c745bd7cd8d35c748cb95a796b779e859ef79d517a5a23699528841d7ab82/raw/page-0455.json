@@ -1,0 +1,52 @@
+{
+  "block_sequence_sha256": "3fcdd2a91e3d11d5f15f16c4022c430cf174f73b6d45cffadc17a427fbdcd750",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        477.3144836425781,
+        758.8693237304688
+      ],
+      "block_id": "page-0455-block-0001",
+      "order": 1,
+      "text": "438\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3\nSyndromes cliniques psychiatriques\n",
+      "text_sha256": "3f2da4f0c1de464b2f97a95731c173adc68f7d0da7b69e714bebff7fd6badbd5"
+    },
+    {
+      "bbox": [
+        48.0,
+        715.9406127929688,
+        157.24000549316406,
+        724.808837890625
+      ],
+      "block_id": "page-0455-block-0002",
+      "order": 2,
+      "text": "Source : Swinson & al. (2006), p. 12S.\n",
+      "text_sha256": "bd14c1d74e2c63258b5c848c74f38ab0cb28312e62c102f1bbf0ca07f505672a"
+    },
+    {
+      "bbox": [
+        50.10000228881836,
+        41.002296447753906,
+        404.9024963378906,
+        53.320068359375
+      ],
+      "block_id": "page-0455-block-0003",
+      "order": 3,
+      "text": "FIGURE 20.2 Principales étapes décisionnelles dans le traitement des troubles anxieux\n",
+      "text_sha256": "650022ee5053e6064065d39f22af7346b19144cb05bcf6a40e5754a6d74ddb03"
+    }
+  ],
+  "coordinates_sha256": "04cf2be1651d78c5dc2b75c5ede80469c921e29b2fc657954413748448266560",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0455",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "438\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3\nSyndromes cliniques psychiatriques\nSource : Swinson & al. (2006), p. 12S.\nFIGURE 20.2 Principales étapes décisionnelles dans le traitement des troubles anxieux\n",
+  "raw_text_sha256": "169309c431ecb48d35df6916fa4f3fa2954d828353b575b3ac31c8e998512f3f",
+  "source_page_display": 456,
+  "source_page_index": 455
+}

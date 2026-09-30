@@ -1,0 +1,328 @@
+{
+  "block_sequence_sha256": "45f7c0a924c1ab3c396067cc5280138b0731323ad28a320faa03816ab74ba01b",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.53765869140625,
+        758.8693237304688
+      ],
+      "block_id": "page-0535-block-0001",
+      "order": 1,
+      "text": "518\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "e488a191dfe98d65cb7d853ae871676ac1df77f9a41ab7a40ba02fb295c5fe6f"
+    },
+    {
+      "bbox": [
+        50.35000228881836,
+        347.05230712890625,
+        349.5745544433594,
+        359.3700866699219
+      ],
+      "block_id": "page-0535-block-0002",
+      "order": 2,
+      "text": "ENCADRÉ 24.1 Critères diagnostiques de autre trouble dissociatif spécié\n",
+      "text_sha256": "411488d7637c3c4741c9606cf4d812cbd34c752125f6a7340ff9c1d9354bea94"
+    },
+    {
+      "bbox": [
+        214.6999969482422,
+        365.4228515625,
+        382.1459045410156,
+        386.4423828125
+      ],
+      "block_id": "page-0535-block-0003",
+      "order": 3,
+      "text": "DSM-5\n300.15 (F44.89) Autre trouble dissociatif spécié\n",
+      "text_sha256": "b9a058ba7bb8667a4c6c3da2f2d651472fac479d32eb983268e35316a03cec51"
+    },
+    {
+      "bbox": [
+        52.25,
+        391.9019470214844,
+        517.8980102539062,
+        462.7281188964844
+      ],
+      "block_id": "page-0535-block-0004",
+      "order": 4,
+      "text": "Cette catégorie s’applique aux tableaux cliniques où prédominent des symptômes caractéristiques d’un trouble dissociatif, entraînant une détresse\ncliniquement signicative ou une altération du fonctionnement social, professionnel ou dans d’autres domaines importants, sans toutefois remplir\ncomplètement les critères de l’un des troubles du chapitre des troubles dissociatifs. La catégorie « autre trouble dissociatif spécié » est utilisée\ndans des situations où le clinicien choisit de communiquer la raison particulière pour laquelle le tableau clinique ne remplit les critères d’aucun\ntrouble spécique de ce chapitre. Cela se fait en enregistrant « autre trouble dissociatif spécié » suivi de la raison particulière (p. ex. « transe\ndissociative »).\nDes exemples de tableaux cliniques qui peuvent être qualié par la désignation « autre trouble spécié » sont les suivants :\n",
+      "text_sha256": "f68b23b643adfed91aa58df2b96d0d561b00cc8ead6cbbe56035724825230c56"
+    },
+    {
+      "bbox": [
+        52.25,
+        469.2728576660156,
+        536.3316650390625,
+        499.1781311035156
+      ],
+      "block_id": "page-0535-block-0005",
+      "order": 5,
+      "text": "1. Syndromes chroniques et récurrents de symptômes dissociatifs mixtes: Cette catégorie inclut des perturbations de l’identité associées à des\nfailles non graves dans le sens du soi et de l’agencivité, ou à des altérations de l’identité ou à des épisodes de possession chez une personne qui ne\nrapporte pas une amnésie dissociative.\n",
+      "text_sha256": "a4fd3742f624fa412cebaf27b5466fb6d6496965944dde70a9abcad11564264f"
+    },
+    {
+      "bbox": [
+        52.25,
+        505.6728515625,
+        530.5343627929688,
+        545.578125
+      ],
+      "block_id": "page-0535-block-0006",
+      "order": 6,
+      "text": "2. Perturbations de l’identité dues à des environnements de persuasion coercitive intense et prolongée: Les personnes qui ont été soumises\nà des environnements de persuasion coercitive intense (p. ex. lavage de cerveau, rééducation idéologique, endoctrinement chez des prisonniers,\ntorture, emprisonnement politique prolongé) peuvent présenter des modications durables ou des questionnements conscients concernant leur\nidentité.\n",
+      "text_sha256": "7a4134974b84f2c0f804c7a72f7b56ea29fcffacdf9bca11edf1ce587218ba22"
+    },
+    {
+      "bbox": [
+        52.25,
+        552.1228637695312,
+        519.5239868164062,
+        602.0281372070312
+      ],
+      "block_id": "page-0535-block-0007",
+      "order": 7,
+      "text": "3. Réactions aiguës dissociatives à des événements stressants: Cette catégorie s’adresse à des situations aiguës et transitoires qui durent\ntypiquement moins d’un mois, et parfois seulement quelques heures ou quelques jours. Ces situations sont caractérisées par une restriction du\nchamp de conscience, de la dépersonnalisation, de la déréalisation, des perturbations des perceptions (p. ex. ralentissement du temps,\nmacropsie), des micro-amnésies, une stupeur transitoire et/ou des altérations du fonctionnement sensori-moteur (p. ex. analgésie,\nparalysie).\n",
+      "text_sha256": "075e3713a1be50fa4a16b690a8facf3a1bdd4ecfa57067b28ca29f074f4ae3f9"
+    },
+    {
+      "bbox": [
+        52.25,
+        608.5228881835938,
+        543.0859985351562,
+        658.4281616210938
+      ],
+      "block_id": "page-0535-block-0008",
+      "order": 8,
+      "text": "4. Transe dissociative: Cette situation est caractérisée par une restriction aiguë ou une perte complète de la conscience de son environnement immé-\ndiat, ce qui se manifeste par un manque profond de réactivité ou une insensibilité aux stimuli environnementaux. Ce manque de réactivité peut être\naccompagné par des comportements stéréotypés mineurs (p. ex. mouvement des doigts) dont la personne n’est pas consciente ou qu’elle ne peut pas\ncontrôler, ainsi que par des paralysies ou une perte de connaissance transitoire. La transe dissociative ne fait pas partie des pratiques religieuses ou\nculturelles collectives généralement admises.\n",
+      "text_sha256": "af4ff737dc9cc19415518705232ed956d98329023e4c04aa7c2884b1baa9b42c"
+    },
+    {
+      "bbox": [
+        48.25,
+        666.1906127929688,
+        544.9080810546875,
+        704.9249877929688
+      ],
+      "block_id": "page-0535-block-0009",
+      "order": 9,
+      "text": "Source : APA (2015), p. 363-364.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guel et al., Elsevier Masson SAS, Paris,\n2015. All rights reserved.\n",
+      "text_sha256": "084187a76cdda0739bcd6cf79897dba2a9500eda1b758a20efab95f37dc4f4f3"
+    },
+    {
+      "bbox": [
+        50.25,
+        41.002296447753906,
+        341.34478759765625,
+        53.320068359375
+      ],
+      "block_id": "page-0535-block-0010",
+      "order": 10,
+      "text": "TABLEAU 24.3 Critères diagnostiques du trouble dissociatif de l’identité\n",
+      "text_sha256": "76c51bcd4b01061faec33f6a77b39399752981203d2f9f100be5f13ee861dc29"
+    },
+    {
+      "bbox": [
+        92.3499984741211,
+        58.27412414550781,
+        536.517822265625,
+        81.14238739013672
+      ],
+      "block_id": "page-0535-block-0011",
+      "order": 11,
+      "text": "DSM-5\nDSM-IV-TR\n300.14 (F44.81) Trouble dissociatif de l’identité\nTrouble dissociatif de l’identité (auparavant personnalité multiple)\n",
+      "text_sha256": "54acba8d5bd5e38d9895a0fed8115645643b943747c1c0b340fcfd6839018a53"
+    },
+    {
+      "bbox": [
+        52.25,
+        86.4019546508789,
+        285.1986389160156,
+        96.2281265258789
+      ],
+      "block_id": "page-0535-block-0012",
+      "order": 12,
+      "text": "B. Fréquents trous de mémoire dans le rappel d’événements quotidiens,\n",
+      "text_sha256": "3dc5c7209c6a40ab456c3be4b9a8c8d83bff72f27fbbd847852d4240221d0919"
+    },
+    {
+      "bbox": [
+        64.25,
+        96.4019546508789,
+        284.8470153808594,
+        116.2281265258789
+      ],
+      "block_id": "page-0535-block-0013",
+      "order": 13,
+      "text": "d’informations personnelles importantes et/ou d’événements trauma-\ntiques, qui ne peuvent pas être des oublis ordinaires.\n",
+      "text_sha256": "fb9e740349563972ebd3f103c81a3728826cae7faca3e9853ab73ac82208184d"
+    },
+    {
+      "bbox": [
+        302.25,
+        86.4019546508789,
+        532.447021484375,
+        96.2281265258789
+      ],
+      "block_id": "page-0535-block-0014",
+      "order": 14,
+      "text": "C. Incapacité à évoquer des souvenirs personnels importants, trop mar-\n",
+      "text_sha256": "d86d610343dc0dfbf994cbc028e1a0f98b88c0863dd341d3624dfa9f8e6b948b"
+    },
+    {
+      "bbox": [
+        314.25,
+        96.4019546508789,
+        506.356689453125,
+        106.2281265258789
+      ],
+      "block_id": "page-0535-block-0015",
+      "order": 15,
+      "text": "quée pour s’expliquer par une simple « mauvaise mémoire ».\n",
+      "text_sha256": "70ef347571444d437e067ca44d238e0b441dad30bc7684f828507805b65f9eeb"
+    },
+    {
+      "bbox": [
+        52.25,
+        124.80195617675781,
+        286.74700927734375,
+        134.6281280517578
+      ],
+      "block_id": "page-0535-block-0016",
+      "order": 16,
+      "text": "C. Les symptômes sont à l’origine d’une détresse cliniquement signica-\n",
+      "text_sha256": "bf5e3e87833bf9911bb272b891730cb38c61afaec2ef51bfbf55c1b597a77832"
+    },
+    {
+      "bbox": [
+        64.25,
+        134.8019561767578,
+        292.9198303222656,
+        154.6281280517578
+      ],
+      "block_id": "page-0535-block-0017",
+      "order": 17,
+      "text": "tive ou d’une altération du fonctionnement social, professionnel ou dans\nd’autres domaines importants.\n",
+      "text_sha256": "fd31f51e1464c65ce98c1003dd8ff88ded72d3783b18ee1b2719ce453ea78544"
+    },
+    {
+      "bbox": [
+        52.25,
+        163.251953125,
+        290.4609069824219,
+        173.078125
+      ],
+      "block_id": "page-0535-block-0018",
+      "order": 18,
+      "text": "D. La perturbation ne fait pas partie d’une pratique culturelle ou religieuse\n",
+      "text_sha256": "9c15c8f92f77eb9e0e77519041fa77b513322135a066aa688eaad92ca2caeaa4"
+    },
+    {
+      "bbox": [
+        52.25,
+        173.251953125,
+        288.197021484375,
+        204.078125
+      ],
+      "block_id": "page-0535-block-0019",
+      "order": 19,
+      "text": "largement admise.\nN.B. : Chez l’enfant, les symptômes ne s’expliquent pas par la représenta-\ntion de camarades de jeu imaginaires ou d’autres jeux d’imagination.\n",
+      "text_sha256": "237441f1dbec17951dace8858b3cd3db8d18dadad381f791a872ad8d92317704"
+    },
+    {
+      "bbox": [
+        302.25,
+        163.1552734375,
+        530.0128784179688,
+        183.078125
+      ],
+      "block_id": "page-0535-block-0020",
+      "order": 20,
+      "text": "N.B. : Chez l’enfant, les symptômes ne peuvent pas être attribués à des\njeux d’imagination ou à l’évocation de camarades imaginaires.\n",
+      "text_sha256": "deafcb5a13389b03be64491ab83f8e376fb70ead369884efb7058b39af251bdd"
+    },
+    {
+      "bbox": [
+        52.25,
+        212.65196228027344,
+        292.5657043457031,
+        222.47813415527344
+      ],
+      "block_id": "page-0535-block-0021",
+      "order": 21,
+      "text": "E. Les symptômes ne sont pas imputables aux effets physiologiques d’une\n",
+      "text_sha256": "04838d233a9d6f32d1d55d7cf0c575754a45610e2782efee7a0975ca35ca2806"
+    },
+    {
+      "bbox": [
+        64.25,
+        222.65196228027344,
+        288.0795593261719,
+        252.47813415527344
+      ],
+      "block_id": "page-0535-block-0022",
+      "order": 22,
+      "text": "substance (p. ex. les trous de mémoire ou les comportements chao-\ntiques au cours d’une intoxication par l’alcool) ou à une autre affection\nmédicale (p. ex. des crises comitiales partielles complexes).\n",
+      "text_sha256": "23dca7cd25087e0b39d98b3f3769d3d038908d67533573655781614a751612e0"
+    },
+    {
+      "bbox": [
+        302.25,
+        212.65196228027344,
+        533.8058471679688,
+        222.47813415527344
+      ],
+      "block_id": "page-0535-block-0023",
+      "order": 23,
+      "text": "D. La perturbation n’est pas due aux effets physiologiques directs d’une\n",
+      "text_sha256": "653aa6b2a086258fe2603528fcb3b034535e678dd7c832d00efc6b80129831dd"
+    },
+    {
+      "bbox": [
+        314.25,
+        222.65196228027344,
+        538.6326904296875,
+        252.47813415527344
+      ],
+      "block_id": "page-0535-block-0024",
+      "order": 24,
+      "text": "substance (p. ex., les trous de mémoire ou le comportement chaotique\nau cours d’une Intoxication alcoolique) ou d’une affection médicale\ngénérale (p. ex., les crises comitiales partielles complexes).\n",
+      "text_sha256": "f779fcad094cb8a34bca6e0edf1bef10104dbcc3acfc058c3337ecd2ac5d9509"
+    },
+    {
+      "bbox": [
+        48.25,
+        261.2406311035156,
+        546.0681762695312,
+        329.9750061035156
+      ],
+      "block_id": "page-0535-block-0025",
+      "order": 25,
+      "text": "Sources : APA (2015), p. 346 ; APA (2004), p. 611.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris,\n2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All\nrights reserved.\n",
+      "text_sha256": "c001115dec395ac97609f243ae27e048aa862db8ed63b3f61d6356496cbccd34"
+    },
+    {
+      "bbox": [
+        343.3000183105469,
+        41.05229568481445,
+        368.9842529296875,
+        53.02006912231445
+      ],
+      "block_id": "page-0535-block-0026",
+      "order": 26,
+      "text": "(suite)\n",
+      "text_sha256": "c684d6dbcdfd50f0ada227f799b5c0fb30e817ac3da61b4cbf208decde7f907b"
+    }
+  ],
+  "coordinates_sha256": "6863a674cdd238cf13e331f9f7ef8618f03fa7a053abd7737f3f90d532ef49a3",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0535",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "518\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nENCADRÉ 24.1 Critères diagnostiques de autre trouble dissociatif spécié\nDSM-5\n300.15 (F44.89) Autre trouble dissociatif spécié\nCette catégorie s’applique aux tableaux cliniques où prédominent des symptômes caractéristiques d’un trouble dissociatif, entraînant une détresse\ncliniquement signicative ou une altération du fonctionnement social, professionnel ou dans d’autres domaines importants, sans toutefois remplir\ncomplètement les critères de l’un des troubles du chapitre des troubles dissociatifs. La catégorie « autre trouble dissociatif spécié » est utilisée\ndans des situations où le clinicien choisit de communiquer la raison particulière pour laquelle le tableau clinique ne remplit les critères d’aucun\ntrouble spécique de ce chapitre. Cela se fait en enregistrant « autre trouble dissociatif spécié » suivi de la raison particulière (p. ex. « transe\ndissociative »).\nDes exemples de tableaux cliniques qui peuvent être qualié par la désignation « autre trouble spécié » sont les suivants :\n1. Syndromes chroniques et récurrents de symptômes dissociatifs mixtes: Cette catégorie inclut des perturbations de l’identité associées à des\nfailles non graves dans le sens du soi et de l’agencivité, ou à des altérations de l’identité ou à des épisodes de possession chez une personne qui ne\nrapporte pas une amnésie dissociative.\n2. Perturbations de l’identité dues à des environnements de persuasion coercitive intense et prolongée: Les personnes qui ont été soumises\nà des environnements de persuasion coercitive intense (p. ex. lavage de cerveau, rééducation idéologique, endoctrinement chez des prisonniers,\ntorture, emprisonnement politique prolongé) peuvent présenter des modications durables ou des questionnements conscients concernant leur\nidentité.\n3. Réactions aiguës dissociatives à des événements stressants: Cette catégorie s’adresse à des situations aiguës et transitoires qui durent\ntypiquement moins d’un mois, et parfois seulement quelques heures ou quelques jours. Ces situations sont caractérisées par une restriction du\nchamp de conscience, de la dépersonnalisation, de la déréalisation, des perturbations des perceptions (p. ex. ralentissement du temps,\nmacropsie), des micro-amnésies, une stupeur transitoire et/ou des altérations du fonctionnement sensori-moteur (p. ex. analgésie,\nparalysie).\n4. Transe dissociative: Cette situation est caractérisée par une restriction aiguë ou une perte complète de la conscience de son environnement immé-\ndiat, ce qui se manifeste par un manque profond de réactivité ou une insensibilité aux stimuli environnementaux. Ce manque de réactivité peut être\naccompagné par des comportements stéréotypés mineurs (p. ex. mouvement des doigts) dont la personne n’est pas consciente ou qu’elle ne peut pas\ncontrôler, ainsi que par des paralysies ou une perte de connaissance transitoire. La transe dissociative ne fait pas partie des pratiques religieuses ou\nculturelles collectives généralement admises.\nSource : APA (2015), p. 363-364.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guel et al., Elsevier Masson SAS, Paris,\n2015. All rights reserved.\nTABLEAU 24.3 Critères diagnostiques du trouble dissociatif de l’identité\nDSM-5\nDSM-IV-TR\n300.14 (F44.81) Trouble dissociatif de l’identité\nTrouble dissociatif de l’identité (auparavant personnalité multiple)\nB. Fréquents trous de mémoire dans le rappel d’événements quotidiens,\nd’informations personnelles importantes et/ou d’événements trauma-\ntiques, qui ne peuvent pas être des oublis ordinaires.\nC. Incapacité à évoquer des souvenirs personnels importants, trop mar-\nquée pour s’expliquer par une simple « mauvaise mémoire ».\nC. Les symptômes sont à l’origine d’une détresse cliniquement signica-\ntive ou d’une altération du fonctionnement social, professionnel ou dans\nd’autres domaines importants.\nD. La perturbation ne fait pas partie d’une pratique culturelle ou religieuse\nlargement admise.\nN.B. : Chez l’enfant, les symptômes ne s’expliquent pas par la représenta-\ntion de camarades de jeu imaginaires ou d’autres jeux d’imagination.\nN.B. : Chez l’enfant, les symptômes ne peuvent pas être attribués à des\njeux d’imagination ou à l’évocation de camarades imaginaires.\nE. Les symptômes ne sont pas imputables aux effets physiologiques d’une\nsubstance (p. ex. les trous de mémoire ou les comportements chao-\ntiques au cours d’une intoxication par l’alcool) ou à une autre affection\nmédicale (p. ex. des crises comitiales partielles complexes).\nD. La perturbation n’est pas due aux effets physiologiques directs d’une\nsubstance (p. ex., les trous de mémoire ou le comportement chaotique\nau cours d’une Intoxication alcoolique) ou d’une affection médicale\ngénérale (p. ex., les crises comitiales partielles complexes).\nSources : APA (2015), p. 346 ; APA (2004), p. 611.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris,\n2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All\nrights reserved.\n(suite)\n",
+  "raw_text_sha256": "0e0cc3397c6066415afa86a49d4172f38eabb991ef26e23c5bbd4e541e618534",
+  "source_page_display": 536,
+  "source_page_index": 535
+}

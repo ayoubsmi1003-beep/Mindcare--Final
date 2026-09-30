@@ -1,0 +1,580 @@
+{
+  "block_sequence_sha256": "aedd7be06ad39e4e2e6fdd37873d3f763d96688bd9a64ec0862e3214aee5a854",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        106.5719985961914,
+        758.8693237304688
+      ],
+      "block_id": "page-1193-block-0001",
+      "order": 1,
+      "text": "I32\nIndex\n",
+      "text_sha256": "d461b45d8f2764581e4547a98f65f6b79d31110e3d4c470868c1b5968a50c8c7"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.82011795043945,
+        207.03712463378906,
+        77.41728973388672
+      ],
+      "block_id": "page-1193-block-0002",
+      "order": 2,
+      "text": "électrophysiologie, 161, 163, 177, 184\nélectrorétinographie, 333\némotion(s), 54-60, 55t, 175-178,\n",
+      "text_sha256": "1fe3aca0a2abfdfefe738b18d8588b7542bc7e4e7bb5c61164ec7a7a1e7fcb5e"
+    },
+    {
+      "bbox": [
+        57.0,
+        78.32012176513672,
+        193.25894165039062,
+        114.91728973388672
+      ],
+      "block_id": "page-1193-block-0003",
+      "order": 3,
+      "text": "508, 1743\nanorexie et __, 700\nexprimées (EE), 332f, 340, 1676,\n",
+      "text_sha256": "6ca8ea90e4a001e75abbd5e7e374c3b703779f44c8ac1c590c696b02ca92b44a"
+    },
+    {
+      "bbox": [
+        57.0,
+        115.82012176513672,
+        179.72401428222656,
+        164.9172821044922
+      ],
+      "block_id": "page-1193-block-0004",
+      "order": 4,
+      "text": "1694\nface à la maladie, 674-675\nneurobiologie et __, 176-177\ntroubles reliés au traitement\n",
+      "text_sha256": "2bef9e9c12740f0febf31f47c82a2dbb4793dd5922d62193fa507e956dd91ba0"
+    },
+    {
+      "bbox": [
+        48.0,
+        165.8201141357422,
+        186.64151000976562,
+        189.9172821044922
+      ],
+      "block_id": "page-1193-block-0005",
+      "order": 5,
+      "text": "des __, 178-178\nencéphale, 110, voir aussi gures\n",
+      "text_sha256": "4bf43e520159f6092d9067fdb267cf5f398b275de282c7ed012d538a36e0383d"
+    },
+    {
+      "bbox": [
+        48.0,
+        190.8816375732422,
+        206.61000061035156,
+        214.9172821044922
+      ],
+      "block_id": "page-1193-block-0006",
+      "order": 6,
+      "text": "supplémentaires\nencéphalite, 432t, 615-616, 627, 634t,\n",
+      "text_sha256": "f69b2d2cb96710dbda9ba682f10edf54b8ee6bec6055febd96b1c418d0b8b727"
+    },
+    {
+      "bbox": [
+        48.0,
+        215.8201141357422,
+        176.34950256347656,
+        289.91729736328125
+      ],
+      "block_id": "page-1193-block-0007",
+      "order": 7,
+      "text": "635, 733, 829, 1327, 1328t\nencoprésie, 1357-1362, 1360t\nendocannabinoïdes, 132-133\nendocrinopathies, 314, 404\nendophénotypes, 107\nenfant\n",
+      "text_sha256": "3d45fafb14b7d37998d618b1bed302e2a06b06e3a0fbe8630398e984df0972ee"
+    },
+    {
+      "bbox": [
+        57.0,
+        290.82012939453125,
+        195.3107452392578,
+        302.41729736328125
+      ],
+      "block_id": "page-1193-block-0008",
+      "order": 8,
+      "text": "abus d’__, 71, 237, 395, 476, 497,\n",
+      "text_sha256": "6e43e006d689bb5d51935568a56ab1e9199036dc59cacbd24b8b9bc51f9f5d66"
+    },
+    {
+      "bbox": [
+        57.0,
+        303.32012939453125,
+        193.1105499267578,
+        339.91729736328125
+      ],
+      "block_id": "page-1193-block-0009",
+      "order": 9,
+      "text": "499, 513-515, 527, 533, 688,\n793, 1411, 1159t, 1301\nanxiété et __, 12, 317, 380, 393,\n",
+      "text_sha256": "fdfda920bd14c4b1d3bc4c732555227ac94847faa0c302c19e467866265cecaa"
+    },
+    {
+      "bbox": [
+        48.0,
+        340.82012939453125,
+        199.79905700683594,
+        414.91729736328125
+      ],
+      "block_id": "page-1193-block-0010",
+      "order": 10,
+      "text": "421, 429-432, 445, 502, 1363-\n1378\ndéveloppement de l’__, 513\nen soins palliatifs, 1046-1047\nengagement amoureux, 753\nenjeux\n",
+      "text_sha256": "93b68dd3945e5ad1a1d0eed15d4d1c05216db06e465a9593d946ac9996b2d4bf"
+    },
+    {
+      "bbox": [
+        48.0,
+        415.82012939453125,
+        179.8094024658203,
+        452.41729736328125
+      ],
+      "block_id": "page-1193-block-0011",
+      "order": 11,
+      "text": "aectifs, 950\ndéveloppementaux, 195, 210\nentraînement\n",
+      "text_sha256": "5c626f9cd969a1b55f823c576c151dc40faba7fba3d7e051691bcfdaa7750afd"
+    },
+    {
+      "bbox": [
+        57.0,
+        453.32012939453125,
+        180.36953735351562,
+        464.91729736328125
+      ],
+      "block_id": "page-1193-block-0012",
+      "order": 12,
+      "text": "à la résolution de problèmes,\n",
+      "text_sha256": "c2babd4ea9d104468cdfe2f95d65d3af788ed60f9981944d461f8df8865c54d1"
+    },
+    {
+      "bbox": [
+        57.0,
+        465.82012939453125,
+        186.94850158691406,
+        502.41729736328125
+      ],
+      "block_id": "page-1193-block-0013",
+      "order": 13,
+      "text": "1324, voir aussi résolution\nde problèmes\naux habiletés sociales et de\n",
+      "text_sha256": "64a084ffa61ea80607e5db522adb0b52ed26fb37ab6b96b213e82b1dc424c3cd"
+    },
+    {
+      "bbox": [
+        48.0,
+        503.32012939453125,
+        182.11199951171875,
+        552.4172973632812
+      ],
+      "block_id": "page-1193-block-0014",
+      "order": 14,
+      "text": "communication (coping),\n332f, 1635-1636, 1693,\n1776, voir aussi coping\nentretien\n",
+      "text_sha256": "05f2de3c810d14e8d28153c42afb9a3993e10bec96000b97d7211f0d1b39b9fc"
+    },
+    {
+      "bbox": [
+        48.0,
+        553.3201293945312,
+        181.2109375,
+        602.4172973632812
+      ],
+      "block_id": "page-1193-block-0015",
+      "order": 15,
+      "text": "associatif, 40\nmotivationnel, 1708\npsychiatrique, 36-38\nentrevue, 38, 40, 40-41t, 58, 71,\n",
+      "text_sha256": "aa17db148d27b690f249dafb94ef0ea822ecb50f946f4d04aaa8c931fa872870"
+    },
+    {
+      "bbox": [
+        48.0,
+        603.3201293945312,
+        202.0753631591797,
+        714.9172973632812
+      ],
+      "block_id": "page-1193-block-0016",
+      "order": 16,
+      "text": "80-81, 89, 256, 291, 293, 354,\n364, 520-523, 600, 623t, 707,\n724, 781-782, 799, 863, 922,\n951, 951-952t, 1084-1085, 1093,\n1100, 1104, 1107, 1109, 1190,\n1276, 1440-1441, 1600, 1642,\n1699-1700, 1712-1713, 1789\nénurésie, 1357-1362, 1359t\nenvironnement, 71\n",
+      "text_sha256": "b1440d335c067299ee43eeac36c228d72b456c2cb0f960da7ba8e28d3aec7806"
+    },
+    {
+      "bbox": [
+        57.0,
+        715.8201293945312,
+        194.148193359375,
+        727.4172973632812
+      ],
+      "block_id": "page-1193-block-0017",
+      "order": 17,
+      "text": "caractéristiques de l’__, 198-200\n",
+      "text_sha256": "64a8812a219b39f66257ff3f9b664f4c9f14549cf506a41c644f48eebe37a9b7"
+    },
+    {
+      "bbox": [
+        228.0,
+        40.82011795043945,
+        364.99578857421875,
+        102.41728973388672
+      ],
+      "block_id": "page-1193-block-0018",
+      "order": 18,
+      "text": "culturel, 225, 1705\nmultifactoriel, 195\npsychosocial, 503, 1304\nrestructuration de l’__, 1613\nsocial, 6, 235, 324-325, 476, 480,\n",
+      "text_sha256": "23016782aebc3eb9035f331f202da7a228e069d727815850b94bacc392d89d1d"
+    },
+    {
+      "bbox": [
+        219.0,
+        103.32012176513672,
+        370.4092102050781,
+        164.9172821044922
+      ],
+      "block_id": "page-1193-block-0019",
+      "order": 19,
+      "text": "690, 844, 854, 869, 903, 1025,\n1047, 1226, 1243, 1323-1325,\n1374, 1693, 1755\néonisme, 815\népidémiologie, 290-300\n",
+      "text_sha256": "7133d8689d7de773fbd2f00c7fd61024c94642fd54f75cdd6ee53db1af46ecd0"
+    },
+    {
+      "bbox": [
+        219.0,
+        165.5945281982422,
+        356.5325012207031,
+        189.9172821044922
+      ],
+      "block_id": "page-1193-block-0020",
+      "order": 20,
+      "text": "génétique, 94, 96-98, 102-107\népigénétique(s), 94, 98, 197, voir\n",
+      "text_sha256": "41061edd676d85a0d2ef1ef2da33b18a43ea88099a37b385b7f47fb27cb1026a"
+    },
+    {
+      "bbox": [
+        219.0,
+        190.8201141357422,
+        372.9510192871094,
+        227.4172821044922
+      ],
+      "block_id": "page-1193-block-0021",
+      "order": 21,
+      "text": "aussi épidémiologie (génétique)\nschizophrénie et __, 331\népilepsie, 60, 175, 355, 432t, 540,\n",
+      "text_sha256": "98922a36229ff99e1c187794749717b18ede4b8d90b1a6e67a6f5c3752f73d0a"
+    },
+    {
+      "bbox": [
+        219.0,
+        228.0945281982422,
+        368.1749572753906,
+        289.91729736328125
+      ],
+      "block_id": "page-1193-block-0022",
+      "order": 22,
+      "text": "606, 616, 626-627, 629t, 652-\n656, 763, 829, 860, 1274, 1277,\n1311, 1530, 1557, 1561-1564\nbenzodiazépines et __, 1447\népisode(s)\n",
+      "text_sha256": "8fd753b03c053d92b3aa3e1596ddec9f56b766690eed7caa2d133ad8aaf1bc0c"
+    },
+    {
+      "bbox": [
+        219.0,
+        290.82012939453125,
+        370.7912292480469,
+        364.91729736328125
+      ],
+      "block_id": "page-1193-block-0023",
+      "order": 23,
+      "text": "de décompensation, 81\nmaniaque, 376\npsychotique, 354, 357-358\népithalamus, 110f, 115\népreuves cognitives, 81\népuisement professionnel, 274-275,\n",
+      "text_sha256": "955c239c38c78acea1eaee13cc27bfe0fd98bcb6d82e20c09ee00a267fddb899"
+    },
+    {
+      "bbox": [
+        219.0,
+        365.82012939453125,
+        283.26300048828125,
+        389.91729736328125
+      ],
+      "block_id": "page-1193-block-0024",
+      "order": 24,
+      "text": "1036, 1575\néquipe(s)\n",
+      "text_sha256": "5963ac7224184475ccb0182b4c78c1f9248a01d58987eb9840994982156239e0"
+    },
+    {
+      "bbox": [
+        219.0,
+        387.32012939453125,
+        368.29949951171875,
+        452.41729736328125
+      ],
+      "block_id": "page-1193-block-0025",
+      "order": 25,
+      "text": "de 1re ligne, 1012-1014, 1073\ninterdisciplinaires, 981-991, 981t\nmobile d’intervention, 1392\nmobiles de crise, 981\nergothérapie, 1276-1277, 1349,\n",
+      "text_sha256": "136d99f0308e40cdcbf30af1762e880ca47a287d36544257f063867691cec374"
+    },
+    {
+      "bbox": [
+        219.0,
+        453.32012939453125,
+        355.6255187988281,
+        502.41729736328125
+      ],
+      "block_id": "page-1193-block-0026",
+      "order": 26,
+      "text": "1353, 1407\nérotisme (Éros), 213, 753\nérythrophobie, 413\nespace interne (inscape ou third\n",
+      "text_sha256": "f7ba88e2c5dca248fb28101ce66f2b66c9867ab5785cdb6941052c911cbffc23"
+    },
+    {
+      "bbox": [
+        219.0,
+        503.32012939453125,
+        367.70941162109375,
+        539.9172973632812
+      ],
+      "block_id": "page-1193-block-0027",
+      "order": 27,
+      "text": "reality), 515\nesprit, 350, 1274, 1290, 1675\nessais cliniques, 19, 299, 760, 1431,\n",
+      "text_sha256": "a89fccf1e5722079918e815ce7bfb8d0b01d978802f9ce29bc6d0bd9a1ef3585"
+    },
+    {
+      "bbox": [
+        219.0,
+        540.8201293945312,
+        325.75042724609375,
+        564.9172973632812
+      ],
+      "block_id": "page-1193-block-0028",
+      "order": 28,
+      "text": "1503, 1583, 1586\nestime de soi, 1234, 1304\n",
+      "text_sha256": "04cd17bd559416d261d6fb428fe297cfa0b45f1b94a4db72cb3f016ae9a6fa1f"
+    },
+    {
+      "bbox": [
+        228.0,
+        565.8201293945312,
+        365.1833190917969,
+        577.4172973632812
+      ],
+      "block_id": "page-1193-block-0029",
+      "order": 29,
+      "text": "amélioration de l’__, 1777-1778,\n",
+      "text_sha256": "68059956d7dde121f2d522a003c950e8d10dba941f3e8212e09de11a04a75a5e"
+    },
+    {
+      "bbox": [
+        219.0,
+        578.3201293945312,
+        351.69769287109375,
+        639.9172973632812
+      ],
+      "block_id": "page-1193-block-0030",
+      "order": 30,
+      "text": "1778f\ndépression et __, 395\ndouleur chronique et __, 559\nperte d’__, 1127\nétat(s)\n",
+      "text_sha256": "c875f946fa4baf810798069d1dc28a35f8c9804907bc15a56858c47774529f26"
+    },
+    {
+      "bbox": [
+        228.0,
+        640.8201293945312,
+        354.5950012207031,
+        677.4172973632812
+      ],
+      "block_id": "page-1193-block-0031",
+      "order": 31,
+      "text": "anxiodépressif, 402\nconfusionnel, 303\nd’équilibre (steady state), 770,\n",
+      "text_sha256": "e149ef64c3669d9ee69d7aeb9ecfdd76e74d7a8e6cedb5562abf25a160b950d1"
+    },
+    {
+      "bbox": [
+        228.0,
+        678.3201293945312,
+        370.5765380859375,
+        727.4172973632812
+      ],
+      "block_id": "page-1193-block-0032",
+      "order": 32,
+      "text": "1462, 1493, 1495, 1513, 1536,\n1538\ndépressif, 199\nhypnoïdes, 514\n",
+      "text_sha256": "e5cb62f77001de74082368dbeb50d66fb0fb71dfc1d5cbc7ff8c0d8177bfc345"
+    },
+    {
+      "bbox": [
+        390.0,
+        40.82011795043945,
+        508.5994873046875,
+        89.91728973388672
+      ],
+      "block_id": "page-1193-block-0033",
+      "order": 33,
+      "text": "mental, 1189, 1192, 1192t\nparanoïde, 318\npsychiques, 675-676\néthique\n",
+      "text_sha256": "0f0630940fce45f2a791b6e4772d39cb63ec4c857eb69aadb10168497db16f2b"
+    },
+    {
+      "bbox": [
+        399.0,
+        90.82012176513672,
+        529.1025390625,
+        114.91728973388672
+      ],
+      "block_id": "page-1193-block-0034",
+      "order": 34,
+      "text": "comité d’__, 1207-1208\nde la recherche en psychiatrie,\n",
+      "text_sha256": "01451fe902e4078699ef1a2ed18af42b11d0f1a8ee4c010836cf7e8ed2cdb735"
+    },
+    {
+      "bbox": [
+        390.0,
+        115.82012176513672,
+        538.9127807617188,
+        189.9172821044922
+      ],
+      "block_id": "page-1193-block-0035",
+      "order": 35,
+      "text": "1186, 1205\nenseignement de l’__, 1208-1209\npersonnelle, 24\npsychiatrie et __, 1201-1213\nEthos, 213\nétude(s)\n",
+      "text_sha256": "10d4f479be081b268ce4a46070dd6a16b791ef6829add11de739d723458f2013"
+    },
+    {
+      "bbox": [
+        399.0,
+        190.8201141357422,
+        546.6250610351562,
+        252.4172821044922
+      ],
+      "block_id": "page-1193-block-0036",
+      "order": 36,
+      "text": "Cochrane, 1520\nd’adoption, 96, 334\nd’association, 105, 107, 334\nd’épidémiologie sociale, 285\nd’imagerie cérébrale fonctionnelle,\n",
+      "text_sha256": "0166978d0b570112bba8d142b76bd72e9508b922c03bae2b35d4fcf54bde850a"
+    },
+    {
+      "bbox": [
+        399.0,
+        253.32012939453125,
+        541.5426635742188,
+        314.91729736328125
+      ],
+      "block_id": "page-1193-block-0037",
+      "order": 37,
+      "text": "139\nde cas témoins, 297, 297t\nde cohorte, 18, 297-298, 297t\nde génétique moléculaire, 374\nde jumeaux, 96-97, 103, 334, 374,\n",
+      "text_sha256": "943749b2ea4b9d27e3ccf7f8b1b34504c7ac85d86f9de6613889615f25d74a0e"
+    },
+    {
+      "bbox": [
+        399.0,
+        315.82012939453125,
+        452.9310302734375,
+        339.91729736328125
+      ],
+      "block_id": "page-1193-block-0038",
+      "order": 38,
+      "text": "699, 854\nde liaison\n",
+      "text_sha256": "6797dc8fbafd20a8a5a52ad8b174f549e1cdcae3407f6554d7e3bbd4125b8436"
+    },
+    {
+      "bbox": [
+        390.0,
+        341.85943603515625,
+        540.7334594726562,
+        427.41729736328125
+      ],
+      "block_id": "page-1193-block-0039",
+      "order": 39,
+      "text": "génétique, 107\nspécique, 143, 151t\ndu ot sanguin, 141-142, 144\nécologiques, 297\nfamiliales, 96, 334\npost-mortem du cerveau, 134\neuthanasie, 1034, 1041-1042, 1209-\n",
+      "text_sha256": "59834fbbd0aaaf2361c34cb638bd4844313f7cb33494596024727e5860d0b1e8"
+    },
+    {
+      "bbox": [
+        390.0,
+        428.32012939453125,
+        541.3660888671875,
+        452.41729736328125
+      ],
+      "block_id": "page-1193-block-0040",
+      "order": 40,
+      "text": "1212, 1387, 1430\névaluation, 36, 81, 1029, 1157, 1392\n",
+      "text_sha256": "98dd95f79349671e234f739f6636ed5fc0685e186ffb9017645e35ca3086c6c5"
+    },
+    {
+      "bbox": [
+        399.0,
+        453.32012939453125,
+        548.6600341796875,
+        489.91729736328125
+      ],
+      "block_id": "page-1193-block-0041",
+      "order": 41,
+      "text": "culturelle 71-72, 256\nde l’enfant, 1231f\nde la qualité des soins, 1049-1060,\n",
+      "text_sha256": "4c51654efe4d911641014ef79eedf86487dabde25721c52d6fb930b659d8fdfb"
+    },
+    {
+      "bbox": [
+        399.0,
+        490.82012939453125,
+        539.2593994140625,
+        514.9172973632812
+      ],
+      "block_id": "page-1193-block-0042",
+      "order": 42,
+      "text": "1052t\ndes soins de collaboration, 1002-\n",
+      "text_sha256": "9376a11ee7961b5592c0d2046c09b75fe161a4f0eb23015f3e851f0ad15f7945"
+    },
+    {
+      "bbox": [
+        399.0,
+        515.8201293945312,
+        543.363037109375,
+        564.9172973632812
+      ],
+      "block_id": "page-1193-block-0043",
+      "order": 43,
+      "text": "1003\nen situation d’urgence, 1084-1088\ngérontopsychiatrique, 1393-1395\nneuropsychologique, 78-91,\n",
+      "text_sha256": "d6ced6234ae14baa99731339911b072c5919362a8d9b9a569a1520ecd1393556"
+    },
+    {
+      "bbox": [
+        399.0,
+        565.8201293945312,
+        546.4315185546875,
+        627.4172973632812
+      ],
+      "block_id": "page-1193-block-0044",
+      "order": 44,
+      "text": "89-91t\nen pédopsychiatrie, 1230-1237\npédopsychiatrique, 1215-1228\nprésentencielle, 1193-1194\npsychiatrique, 39, 74-76\n",
+      "text_sha256": "13b755baf282765beb236a238f66ed7d2da4edd64b8fa803a34e166945a615d3"
+    },
+    {
+      "bbox": [
+        408.0,
+        628.0945434570312,
+        540.1594848632812,
+        639.8594360351562
+      ],
+      "block_id": "page-1193-block-0045",
+      "order": 45,
+      "text": "psychiatrie légale et __, 1189-\n",
+      "text_sha256": "4607d40e9095f6d6095e13c4aad3bf67d214fd00afb3de3c2c293a6832b3788f"
+    },
+    {
+      "bbox": [
+        390.0,
+        640.5945434570312,
+        534.8929443359375,
+        702.4172973632812
+      ],
+      "block_id": "page-1193-block-0046",
+      "order": 46,
+      "text": "1195\nsuicide et __, 620\npsychosociale, 1029\nsuicide et __, 1092-1093\névénements de vie, 196f, 198, 200,\n",
+      "text_sha256": "eb8487b08600a1cc1c5fa97edb967e418386a51ee3824051b6c4b277dff7d617"
+    },
+    {
+      "bbox": [
+        408.0,
+        703.3201293945312,
+        548.3485107421875,
+        727.4172973632812
+      ],
+      "block_id": "page-1193-block-0047",
+      "order": 47,
+      "text": "203, 285, 340, 376, 389, 533f,\n675, 707, 1092, 1125, 1134, 1771f\n",
+      "text_sha256": "3bfb2eb796ede2f3a21ec6fd9f8726b42c83e7050264cde31430b188a72526c7"
+    }
+  ],
+  "coordinates_sha256": "157884460355c2db15235c9224045940b7befbb6c5c21694c2b5efeb789dbdc3",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1193",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "I32\nIndex\nélectrophysiologie, 161, 163, 177, 184\nélectrorétinographie, 333\némotion(s), 54-60, 55t, 175-178,\n508, 1743\nanorexie et __, 700\nexprimées (EE), 332f, 340, 1676,\n1694\nface à la maladie, 674-675\nneurobiologie et __, 176-177\ntroubles reliés au traitement\ndes __, 178-178\nencéphale, 110, voir aussi gures\nsupplémentaires\nencéphalite, 432t, 615-616, 627, 634t,\n635, 733, 829, 1327, 1328t\nencoprésie, 1357-1362, 1360t\nendocannabinoïdes, 132-133\nendocrinopathies, 314, 404\nendophénotypes, 107\nenfant\nabus d’__, 71, 237, 395, 476, 497,\n499, 513-515, 527, 533, 688,\n793, 1411, 1159t, 1301\nanxiété et __, 12, 317, 380, 393,\n421, 429-432, 445, 502, 1363-\n1378\ndéveloppement de l’__, 513\nen soins palliatifs, 1046-1047\nengagement amoureux, 753\nenjeux\naectifs, 950\ndéveloppementaux, 195, 210\nentraînement\nà la résolution de problèmes,\n1324, voir aussi résolution\nde problèmes\naux habiletés sociales et de\ncommunication (coping),\n332f, 1635-1636, 1693,\n1776, voir aussi coping\nentretien\nassociatif, 40\nmotivationnel, 1708\npsychiatrique, 36-38\nentrevue, 38, 40, 40-41t, 58, 71,\n80-81, 89, 256, 291, 293, 354,\n364, 520-523, 600, 623t, 707,\n724, 781-782, 799, 863, 922,\n951, 951-952t, 1084-1085, 1093,\n1100, 1104, 1107, 1109, 1190,\n1276, 1440-1441, 1600, 1642,\n1699-1700, 1712-1713, 1789\nénurésie, 1357-1362, 1359t\nenvironnement, 71\ncaractéristiques de l’__, 198-200\nculturel, 225, 1705\nmultifactoriel, 195\npsychosocial, 503, 1304\nrestructuration de l’__, 1613\nsocial, 6, 235, 324-325, 476, 480,\n690, 844, 854, 869, 903, 1025,\n1047, 1226, 1243, 1323-1325,\n1374, 1693, 1755\néonisme, 815\népidémiologie, 290-300\ngénétique, 94, 96-98, 102-107\népigénétique(s), 94, 98, 197, voir\naussi épidémiologie (génétique)\nschizophrénie et __, 331\népilepsie, 60, 175, 355, 432t, 540,\n606, 616, 626-627, 629t, 652-\n656, 763, 829, 860, 1274, 1277,\n1311, 1530, 1557, 1561-1564\nbenzodiazépines et __, 1447\népisode(s)\nde décompensation, 81\nmaniaque, 376\npsychotique, 354, 357-358\népithalamus, 110f, 115\népreuves cognitives, 81\népuisement professionnel, 274-275,\n1036, 1575\néquipe(s)\nde 1re ligne, 1012-1014, 1073\ninterdisciplinaires, 981-991, 981t\nmobile d’intervention, 1392\nmobiles de crise, 981\nergothérapie, 1276-1277, 1349,\n1353, 1407\nérotisme (Éros), 213, 753\nérythrophobie, 413\nespace interne (inscape ou third\nreality), 515\nesprit, 350, 1274, 1290, 1675\nessais cliniques, 19, 299, 760, 1431,\n1503, 1583, 1586\nestime de soi, 1234, 1304\namélioration de l’__, 1777-1778,\n1778f\ndépression et __, 395\ndouleur chronique et __, 559\nperte d’__, 1127\nétat(s)\nanxiodépressif, 402\nconfusionnel, 303\nd’équilibre (steady state), 770,\n1462, 1493, 1495, 1513, 1536,\n1538\ndépressif, 199\nhypnoïdes, 514\nmental, 1189, 1192, 1192t\nparanoïde, 318\npsychiques, 675-676\néthique\ncomité d’__, 1207-1208\nde la recherche en psychiatrie,\n1186, 1205\nenseignement de l’__, 1208-1209\npersonnelle, 24\npsychiatrie et __, 1201-1213\nEthos, 213\nétude(s)\nCochrane, 1520\nd’adoption, 96, 334\nd’association, 105, 107, 334\nd’épidémiologie sociale, 285\nd’imagerie cérébrale fonctionnelle,\n139\nde cas témoins, 297, 297t\nde cohorte, 18, 297-298, 297t\nde génétique moléculaire, 374\nde jumeaux, 96-97, 103, 334, 374,\n699, 854\nde liaison\ngénétique, 107\nspécique, 143, 151t\ndu ot sanguin, 141-142, 144\nécologiques, 297\nfamiliales, 96, 334\npost-mortem du cerveau, 134\neuthanasie, 1034, 1041-1042, 1209-\n1212, 1387, 1430\névaluation, 36, 81, 1029, 1157, 1392\nculturelle 71-72, 256\nde l’enfant, 1231f\nde la qualité des soins, 1049-1060,\n1052t\ndes soins de collaboration, 1002-\n1003\nen situation d’urgence, 1084-1088\ngérontopsychiatrique, 1393-1395\nneuropsychologique, 78-91,\n89-91t\nen pédopsychiatrie, 1230-1237\npédopsychiatrique, 1215-1228\nprésentencielle, 1193-1194\npsychiatrique, 39, 74-76\npsychiatrie légale et __, 1189-\n1195\nsuicide et __, 620\npsychosociale, 1029\nsuicide et __, 1092-1093\névénements de vie, 196f, 198, 200,\n203, 285, 340, 376, 389, 533f,\n675, 707, 1092, 1125, 1134, 1771f\n",
+  "raw_text_sha256": "926aa53bdf85cc5715482d72e9be7cc4f2645e9fadfc4f054506650fa1e60e36",
+  "source_page_display": 1194,
+  "source_page_index": 1193
+}

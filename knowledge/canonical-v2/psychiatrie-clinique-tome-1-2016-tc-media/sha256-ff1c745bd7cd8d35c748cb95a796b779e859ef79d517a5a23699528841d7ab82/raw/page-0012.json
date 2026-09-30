@@ -1,0 +1,664 @@
+{
+  "block_sequence_sha256": "32243a483d4367f896b23b42c5562fb99a8df3e10e855d0d589dcc75e64ccfda",
+  "blocks": [
+    {
+      "bbox": [
+        56.0,
+        41.97222137451172,
+        93.5,
+        51.97222137451172
+      ],
+      "block_id": "page-0012-block-0001",
+      "order": 1,
+      "text": "TOME 2\n",
+      "text_sha256": "c1cb85f9f5764320dcb9eff4cbe23ac939601aa4d3379362853cbe811c915de4"
+    },
+    {
+      "bbox": [
+        56.04999923706055,
+        71.00703430175781,
+        251.685302734375,
+        84.48359680175781
+      ],
+      "block_id": "page-0012-block-0002",
+      "order": 2,
+      "text": "PARTIE 5\nSpécialités psychiatriques\n",
+      "text_sha256": "b60df81be852dc622142efe5bfab403a928098847f2d10a7f82af7d26ac9728a"
+    },
+    {
+      "bbox": [
+        54.0,
+        91.04414367675781,
+        145.38522338867188,
+        103.40376281738281
+      ],
+      "block_id": "page-0012-block-0003",
+      "order": 3,
+      "text": "Situations de crise\n",
+      "text_sha256": "29273834c2c25691968f8362adf187af8d812fa18e0a2d2ac80c1abd91d68683"
+    },
+    {
+      "bbox": [
+        54.0,
+        108.58332824707031,
+        105.12449645996094,
+        119.08332824707031
+      ],
+      "block_id": "page-0012-block-0004",
+      "order": 4,
+      "text": "CHAPITRE\n",
+      "text_sha256": "36663b219db68c364045852d27f7a8cec2b30461eae0be833d6213825dc6ca58"
+    },
+    {
+      "bbox": [
+        74.0,
+        122.47666931152344,
+        220.07591247558594,
+        134.16612243652344
+      ],
+      "block_id": "page-0012-block-0005",
+      "order": 5,
+      "text": "49 \nUrgences psychiatriques\n",
+      "text_sha256": "b2901ef155a999656f2e656742710ce3273710b28e7383e2bd2c50be9a9e5b8a"
+    },
+    {
+      "bbox": [
+        74.0,
+        139.5266571044922,
+        150.71600341796875,
+        151.2161102294922
+      ],
+      "block_id": "page-0012-block-0006",
+      "order": 6,
+      "text": "50 \nSuicide\n",
+      "text_sha256": "09bd28703eb53daccba41eaec5461e7f555c1967aa8b0c05d50b3365a0baad95"
+    },
+    {
+      "bbox": [
+        74.0,
+        156.5266571044922,
+        259.3749084472656,
+        168.2161102294922
+      ],
+      "block_id": "page-0012-block-0007",
+      "order": 7,
+      "text": "51 \nAgression, violence et dangerosité\n",
+      "text_sha256": "71b44f24663b5addb4418a50d1036328aca20b1c6f93f816f73957e56b0f88e3"
+    },
+    {
+      "bbox": [
+        54.0,
+        178.244140625,
+        141.17625427246094,
+        190.603759765625
+      ],
+      "block_id": "page-0012-block-0008",
+      "order": 8,
+      "text": "Psychiatrie légale\n",
+      "text_sha256": "c3153810b4eed8ef91c3758d372ae8b2a658e496d531f6e012e34f84ede76cb7"
+    },
+    {
+      "bbox": [
+        54.0,
+        195.78334045410156,
+        105.12449645996094,
+        206.28334045410156
+      ],
+      "block_id": "page-0012-block-0009",
+      "order": 9,
+      "text": "CHAPITRE\n",
+      "text_sha256": "36663b219db68c364045852d27f7a8cec2b30461eae0be833d6213825dc6ca58"
+    },
+    {
+      "bbox": [
+        74.0,
+        209.67666625976562,
+        239.80044555664062,
+        221.36611938476562
+      ],
+      "block_id": "page-0012-block-0010",
+      "order": 10,
+      "text": "52 \nPsychiatrie légale – droit civil\n",
+      "text_sha256": "da037cf16fd3a15e6643ce632bf1f6c95a46f4e010a4cc092135998c475cba95"
+    },
+    {
+      "bbox": [
+        74.0,
+        226.72666931152344,
+        209.5072021484375,
+        249.41612243652344
+      ],
+      "block_id": "page-0012-block-0011",
+      "order": 11,
+      "text": "53 \nPsychiatrie légale –\ndroit criminel et pénal\n",
+      "text_sha256": "a54da801666375a5ef622676e93022a8b940b7467adf4731fe52cbd6079de0e9"
+    },
+    {
+      "bbox": [
+        74.0,
+        254.77667236328125,
+        208.26364135742188,
+        266.46612548828125
+      ],
+      "block_id": "page-0012-block-0012",
+      "order": 12,
+      "text": "54 \nÉthique et psychiatrie\n",
+      "text_sha256": "60a30bf2450612e98fced5efd252350b12be641e6e87abd0c4a885a485e8cb57"
+    },
+    {
+      "bbox": [
+        54.0,
+        272.494140625,
+        134.010009765625,
+        284.853759765625
+      ],
+      "block_id": "page-0012-block-0013",
+      "order": 13,
+      "text": "Pédopsychiatrie\n",
+      "text_sha256": "257b4cbb4657e7cfd689413b0448b4eeb2f5fb4d40d58a70d2f3eed819181655"
+    },
+    {
+      "bbox": [
+        54.0,
+        290.0333557128906,
+        105.12449645996094,
+        300.5333557128906
+      ],
+      "block_id": "page-0012-block-0014",
+      "order": 14,
+      "text": "CHAPITRE\n",
+      "text_sha256": "36663b219db68c364045852d27f7a8cec2b30461eae0be833d6213825dc6ca58"
+    },
+    {
+      "bbox": [
+        74.0,
+        303.9266662597656,
+        239.2652587890625,
+        315.6161193847656
+      ],
+      "block_id": "page-0012-block-0015",
+      "order": 15,
+      "text": "55 \nÉvaluation pédopsychiatrique\n",
+      "text_sha256": "f0b65eec09f738564c82b04af4f3921ab236caec59aba48fa513a979c7e3e81b"
+    },
+    {
+      "bbox": [
+        74.0,
+        320.9266662597656,
+        246.25086975097656,
+        343.6661071777344
+      ],
+      "block_id": "page-0012-block-0016",
+      "order": 16,
+      "text": "56 \nÉvaluation neuropsychologique\nen pédopsychiatrie\n",
+      "text_sha256": "8da19a26ca52cd19e9f9ed11ae59878634eb8181a42709aa78de54c86ed1969b"
+    },
+    {
+      "bbox": [
+        74.0,
+        349.02667236328125,
+        217.68504333496094,
+        360.71612548828125
+      ],
+      "block_id": "page-0012-block-0017",
+      "order": 17,
+      "text": "57 \nDécience intellectuelle\n",
+      "text_sha256": "d511c29712d547f7edc24fbd263bf54b947180a4c52f261bc3aae4da9ec1eec0"
+    },
+    {
+      "bbox": [
+        74.0,
+        366.07666015625,
+        158.30751037597656,
+        377.76611328125
+      ],
+      "block_id": "page-0012-block-0018",
+      "order": 18,
+      "text": "58 \nAutismes\n",
+      "text_sha256": "0148306432e54981e169d9719ac771ff0045622f0d8d5460de8500616bf60bc5"
+    },
+    {
+      "bbox": [
+        74.0,
+        383.07666015625,
+        225.4274444580078,
+        394.76611328125
+      ],
+      "block_id": "page-0012-block-0019",
+      "order": 19,
+      "text": "59 \nTroubles de l’attachement\n",
+      "text_sha256": "7e72096f58e50335940a94ab8d11884959310640036df63d1c85567cdde697b7"
+    },
+    {
+      "bbox": [
+        74.0,
+        400.1266784667969,
+        245.74436950683594,
+        433.9161071777344
+      ],
+      "block_id": "page-0012-block-0020",
+      "order": 20,
+      "text": "60 \nDécit de l’attention avec/sans\nhyperactivité, comportements\nperturbateurs et tics\n",
+      "text_sha256": "7f69b94b0806a2e898099116da3fe352f51bcf736f27e8ee3e6c297f8daa31b4"
+    },
+    {
+      "bbox": [
+        74.0,
+        439.27667236328125,
+        235.9062042236328,
+        450.96612548828125
+      ],
+      "block_id": "page-0012-block-0021",
+      "order": 21,
+      "text": "61 \nTroubles des apprentissages\n",
+      "text_sha256": "ac21d14bd1cc0b22d9eaa9a5bc476c4693463167473c49127f7d7c9631eeff69"
+    },
+    {
+      "bbox": [
+        74.0,
+        456.27667236328125,
+        242.9757537841797,
+        479.01611328125
+      ],
+      "block_id": "page-0012-block-0022",
+      "order": 22,
+      "text": "62 \nTroubles anxieux chez l’enfant\net l’adolescent\n",
+      "text_sha256": "c05886477bb7b4076df8d47fc6436cd6d82a257f8033605d0da364e9d8fd326c"
+    },
+    {
+      "bbox": [
+        54.0,
+        485.0441589355469,
+        150.82540893554688,
+        497.4037780761719
+      ],
+      "block_id": "page-0012-block-0023",
+      "order": 23,
+      "text": "Gérontopsychiatrie\n",
+      "text_sha256": "0e50f02f402e2fa846b694317e77c55b12969794f24d059e42361f0971bdf24f"
+    },
+    {
+      "bbox": [
+        54.0,
+        502.5833740234375,
+        105.12449645996094,
+        513.0833740234375
+      ],
+      "block_id": "page-0012-block-0024",
+      "order": 24,
+      "text": "CHAPITRE\n",
+      "text_sha256": "36663b219db68c364045852d27f7a8cec2b30461eae0be833d6213825dc6ca58"
+    },
+    {
+      "bbox": [
+        74.0,
+        516.4266967773438,
+        218.5460205078125,
+        528.1161499023438
+      ],
+      "block_id": "page-0012-block-0025",
+      "order": 25,
+      "text": "63 \nEnjeux du vieillissement\n",
+      "text_sha256": "a6f0289dff6198e5915de35c74d0d9bf499ea11c673c95a381cbb8b6dd8b94a6"
+    },
+    {
+      "bbox": [
+        74.0,
+        533.4766845703125,
+        246.86477661132812,
+        545.1661376953125
+      ],
+      "block_id": "page-0012-block-0026",
+      "order": 26,
+      "text": "64 \nApproche gérontopsychiatrique\n",
+      "text_sha256": "1d7c53a341d840e77e398acee549f5713ca0a8c445b0087eb4fa9e3a5e3f1cee"
+    },
+    {
+      "bbox": [
+        74.0,
+        550.5266723632812,
+        231.09353637695312,
+        562.2161254882812
+      ],
+      "block_id": "page-0012-block-0027",
+      "order": 27,
+      "text": "65 \nGérontopsychiatrie clinique\n",
+      "text_sha256": "8cc6d533dabac0865d1a98c7883a705454fc61c09e34a8a159b3ce2989cfde3d"
+    },
+    {
+      "bbox": [
+        314.0500183105469,
+        41.15703201293945,
+        442.180419921875,
+        54.63359451293945
+      ],
+      "block_id": "page-0012-block-0028",
+      "order": 28,
+      "text": "PARTIE 6\nTraitements\n",
+      "text_sha256": "4a6f8b636844e9c7fa0c0cf1eab876b7408b3b54459df708b6d66679eb8f5aa5"
+    },
+    {
+      "bbox": [
+        312.0,
+        63.594139099121094,
+        433.1973876953125,
+        75.9537582397461
+      ],
+      "block_id": "page-0012-block-0029",
+      "order": 29,
+      "text": "Traitements biologiques\n",
+      "text_sha256": "0940d9d265dfd5ad6f86b484cf17a047362c7f1c76f43b4c372ba7446b1bd541"
+    },
+    {
+      "bbox": [
+        312.0,
+        81.48333740234375,
+        363.12451171875,
+        91.98332977294922
+      ],
+      "block_id": "page-0012-block-0030",
+      "order": 30,
+      "text": "CHAPITRE\n",
+      "text_sha256": "36663b219db68c364045852d27f7a8cec2b30461eae0be833d6213825dc6ca58"
+    },
+    {
+      "bbox": [
+        332.0,
+        95.7266616821289,
+        467.61053466796875,
+        107.4161148071289
+      ],
+      "block_id": "page-0012-block-0031",
+      "order": 31,
+      "text": "66 \nPsychopharmacologie\n",
+      "text_sha256": "39b9c054461e396aba0aed314424240375e9da86fb7b4bd78afc675814cc9cdb"
+    },
+    {
+      "bbox": [
+        332.0,
+        113.12666320800781,
+        494.4736633300781,
+        124.81611633300781
+      ],
+      "block_id": "page-0012-block-0032",
+      "order": 32,
+      "text": "67 \nAnxiolytiques et hypnotiques\n",
+      "text_sha256": "99de9cfd1bc74c9d8f0a986d8c2fc2540ed39aafe1b200880dbd2f9f43b1b9b4"
+    },
+    {
+      "bbox": [
+        332.0,
+        130.5266571044922,
+        447.9859924316406,
+        142.2161102294922
+      ],
+      "block_id": "page-0012-block-0033",
+      "order": 33,
+      "text": "68 \nAntipsychotiques\n",
+      "text_sha256": "cbef9fae949c6683e871f504bdbe80fc6456ece6189bb4177a0dc3b91e5ff327"
+    },
+    {
+      "bbox": [
+        332.0,
+        147.92666625976562,
+        444.5,
+        159.61611938476562
+      ],
+      "block_id": "page-0012-block-0034",
+      "order": 34,
+      "text": "69 \nAntidépresseurs\n",
+      "text_sha256": "0a98a4fd8253149748c8ae24cf018e3221f2cbe5fff7c1f80d193231c195f066"
+    },
+    {
+      "bbox": [
+        332.0,
+        165.3766632080078,
+        523.2833251953125,
+        188.4661102294922
+      ],
+      "block_id": "page-0012-block-0035",
+      "order": 35,
+      "text": "70 \nPotentialisateurs cognitifs,\npsychostimulants et non-stimulants\n",
+      "text_sha256": "85d1d3a16e6170b69f74627c1fb7ccaeb6e330d445f8808da69435c86b8a00de"
+    },
+    {
+      "bbox": [
+        332.0,
+        194.17666625976562,
+        484.9725341796875,
+        205.86611938476562
+      ],
+      "block_id": "page-0012-block-0036",
+      "order": 36,
+      "text": "71 \nStabilisateurs de l’humeur\n",
+      "text_sha256": "41b0c5bbb479760cbcc019f290fe1c227f88753d18a71b0c3e5c6d5e58082af4"
+    },
+    {
+      "bbox": [
+        332.0,
+        211.57666015625,
+        482.78302001953125,
+        234.66612243652344
+      ],
+      "block_id": "page-0012-block-0037",
+      "order": 37,
+      "text": "72 \nÉlectroconvulsivothérapie\net neuromodulation\n",
+      "text_sha256": "f4ccaef491e32c7d25af9f8b49187db7d2e7aa24d85fd15cab9d22f0c4ced87e"
+    },
+    {
+      "bbox": [
+        312.0,
+        241.0441436767578,
+        447.8233947753906,
+        253.4037628173828
+      ],
+      "block_id": "page-0012-block-0038",
+      "order": 38,
+      "text": "Traitements psychosociaux\n",
+      "text_sha256": "980f51227ab83d68107bda55cdf8311f0ad2cc8cd21e1839de83c1fd992ba52f"
+    },
+    {
+      "bbox": [
+        312.0,
+        258.933349609375,
+        363.12451171875,
+        269.433349609375
+      ],
+      "block_id": "page-0012-block-0039",
+      "order": 39,
+      "text": "CHAPITRE\n",
+      "text_sha256": "36663b219db68c364045852d27f7a8cec2b30461eae0be833d6213825dc6ca58"
+    },
+    {
+      "bbox": [
+        332.0,
+        273.1766662597656,
+        514.8458251953125,
+        284.8661193847656
+      ],
+      "block_id": "page-0012-block-0040",
+      "order": 40,
+      "text": "73 \nFondements de la psychothérapie\n",
+      "text_sha256": "f651090565b303510eaee346d8aa7397e55eac887ab64fd9a07e15d096c437bc"
+    },
+    {
+      "bbox": [
+        332.0,
+        290.57666015625,
+        489.50018310546875,
+        302.26611328125
+      ],
+      "block_id": "page-0012-block-0041",
+      "order": 41,
+      "text": "74 \nThérapie psychodynamique\n",
+      "text_sha256": "605173b796376b32e5cff047ae040b513a1ee46c1be81c8e444eae6d7889c046"
+    },
+    {
+      "bbox": [
+        332.0,
+        307.9766540527344,
+        487.4063720703125,
+        319.6661071777344
+      ],
+      "block_id": "page-0012-block-0042",
+      "order": 42,
+      "text": "75 \nThérapie comportementale\n",
+      "text_sha256": "17676f42bb25234181d96e29acdaf9dcc45a7b4acd55c795f95ff99813bf056f"
+    },
+    {
+      "bbox": [
+        332.0,
+        325.3766784667969,
+        453.3305358886719,
+        337.0661315917969
+      ],
+      "block_id": "page-0012-block-0043",
+      "order": 43,
+      "text": "76 \nThérapie cognitive\n",
+      "text_sha256": "54f50572d348f7002495acb8ca50d11a5ae88b99683af5782918f1f1b7b0fd0a"
+    },
+    {
+      "bbox": [
+        332.0,
+        342.77667236328125,
+        468.6815185546875,
+        354.46612548828125
+      ],
+      "block_id": "page-0012-block-0044",
+      "order": 44,
+      "text": "77 \nRemédiation cognitive\n",
+      "text_sha256": "63e858f858515b48379983f3fa6b4698cf3969f2123eaba89ff23a50e29e34f5"
+    },
+    {
+      "bbox": [
+        332.0,
+        360.1766662597656,
+        482.300048828125,
+        371.8661193847656
+      ],
+      "block_id": "page-0012-block-0045",
+      "order": 45,
+      "text": "78 \nThérapie interpersonnelle\n",
+      "text_sha256": "9f1ab88e6ad0a77f2c3abad21b938bf7cae297c4b8521cffb9dc33a96846ed5d"
+    },
+    {
+      "bbox": [
+        332.0,
+        377.57666015625,
+        484.0977783203125,
+        389.26611328125
+      ],
+      "block_id": "page-0012-block-0046",
+      "order": 46,
+      "text": "79 \nThérapie psychoéducative\n",
+      "text_sha256": "4ce02817b5a620463c13b63a5fcf3856b2f17bb80494397bc004e63af39da1d0"
+    },
+    {
+      "bbox": [
+        332.0,
+        394.9766540527344,
+        478.26116943359375,
+        406.6661071777344
+      ],
+      "block_id": "page-0012-block-0047",
+      "order": 47,
+      "text": "80 \nThérapie motivationnelle\n",
+      "text_sha256": "997cd2d7c62d0f4c87eb5a01019207e8d17311e2cb9b1ba2fdf16467fd192726"
+    },
+    {
+      "bbox": [
+        332.0,
+        412.3766784667969,
+        451.3880310058594,
+        424.0661315917969
+      ],
+      "block_id": "page-0012-block-0048",
+      "order": 48,
+      "text": "81 \nThérapie familiale\n",
+      "text_sha256": "d012261697407ac06771de18d238963a030acea7e35dd87dd0760f05ed017df8"
+    },
+    {
+      "bbox": [
+        332.0,
+        429.82666015625,
+        517.2860107421875,
+        441.51611328125
+      ],
+      "block_id": "page-0012-block-0049",
+      "order": 49,
+      "text": "82 \nThérapie expérientielle-humaniste\n",
+      "text_sha256": "34ce3a878905b035d6b40d23253d6a2a9982dffbf27492a920cb2bca71b8e19f"
+    },
+    {
+      "bbox": [
+        332.0,
+        447.2266540527344,
+        506.7080383300781,
+        458.9161071777344
+      ],
+      "block_id": "page-0012-block-0050",
+      "order": 50,
+      "text": "83 \nRelaxation, hypnose, méditation\n",
+      "text_sha256": "df206a888b0a885e369374570a2ede9bde0b594425926e006f2184402b064473"
+    },
+    {
+      "bbox": [
+        332.0,
+        464.6266784667969,
+        504.9649353027344,
+        476.3161315917969
+      ],
+      "block_id": "page-0012-block-0051",
+      "order": 51,
+      "text": "84 \nRéadaptation et rétablissement\n",
+      "text_sha256": "bfef651bf06bbd40e20593448a6e762326ad2f012b682a2221f758069e66d77b"
+    },
+    {
+      "bbox": [
+        332.0,
+        482.02667236328125,
+        458.5254821777344,
+        493.71612548828125
+      ],
+      "block_id": "page-0012-block-0052",
+      "order": 52,
+      "text": "85 \nThérapie de soutien\n",
+      "text_sha256": "fb134a8f3c74e64d53cc5382fed4f15588f6df94eaf9321c987cb81171100d36"
+    },
+    {
+      "bbox": [
+        312.0,
+        500.1952209472656,
+        409.30401611328125,
+        562.1858520507812
+      ],
+      "block_id": "page-0012-block-0053",
+      "order": 53,
+      "text": "Références\nIndex des auteurs\nIndex des médicaments\nIndex des sujets\nCrédits\n",
+      "text_sha256": "b96ea930b45288267640f378bcdb478c5826beae1813bc00130cca460acc9c13"
+    },
+    {
+      "bbox": [
+        448.0,
+        746.2317504882812,
+        555.0,
+        759.7449340820312
+      ],
+      "block_id": "page-0012-block-0054",
+      "order": 54,
+      "text": "Table des matières\nxi\n",
+      "text_sha256": "fd05f76676763fea86ce84e26460abd6b084431ac0169a1c38b27d316a515daa"
+    }
+  ],
+  "coordinates_sha256": "2fce8ddb0d58e01d3251fadb2f72021917654014be15add4aba60e93852b89c6",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0012",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "TOME 2\nPARTIE 5\nSpécialités psychiatriques\nSituations de crise\nCHAPITRE\n49 \nUrgences psychiatriques\n50 \nSuicide\n51 \nAgression, violence et dangerosité\nPsychiatrie légale\nCHAPITRE\n52 \nPsychiatrie légale – droit civil\n53 \nPsychiatrie légale –\ndroit criminel et pénal\n54 \nÉthique et psychiatrie\nPédopsychiatrie\nCHAPITRE\n55 \nÉvaluation pédopsychiatrique\n56 \nÉvaluation neuropsychologique\nen pédopsychiatrie\n57 \nDécience intellectuelle\n58 \nAutismes\n59 \nTroubles de l’attachement\n60 \nDécit de l’attention avec/sans\nhyperactivité, comportements\nperturbateurs et tics\n61 \nTroubles des apprentissages\n62 \nTroubles anxieux chez l’enfant\net l’adolescent\nGérontopsychiatrie\nCHAPITRE\n63 \nEnjeux du vieillissement\n64 \nApproche gérontopsychiatrique\n65 \nGérontopsychiatrie clinique\nPARTIE 6\nTraitements\nTraitements biologiques\nCHAPITRE\n66 \nPsychopharmacologie\n67 \nAnxiolytiques et hypnotiques\n68 \nAntipsychotiques\n69 \nAntidépresseurs\n70 \nPotentialisateurs cognitifs,\npsychostimulants et non-stimulants\n71 \nStabilisateurs de l’humeur\n72 \nÉlectroconvulsivothérapie\net neuromodulation\nTraitements psychosociaux\nCHAPITRE\n73 \nFondements de la psychothérapie\n74 \nThérapie psychodynamique\n75 \nThérapie comportementale\n76 \nThérapie cognitive\n77 \nRemédiation cognitive\n78 \nThérapie interpersonnelle\n79 \nThérapie psychoéducative\n80 \nThérapie motivationnelle\n81 \nThérapie familiale\n82 \nThérapie expérientielle-humaniste\n83 \nRelaxation, hypnose, méditation\n84 \nRéadaptation et rétablissement\n85 \nThérapie de soutien\nRéférences\nIndex des auteurs\nIndex des médicaments\nIndex des sujets\nCrédits\nTable des matières\nxi\n",
+  "raw_text_sha256": "4b988ebb5b3dc2ce2ce16b95fb6fbf5c13ddb57cb143a4d475f2c0ff890947a9",
+  "source_page_display": 13,
+  "source_page_index": 12
+}

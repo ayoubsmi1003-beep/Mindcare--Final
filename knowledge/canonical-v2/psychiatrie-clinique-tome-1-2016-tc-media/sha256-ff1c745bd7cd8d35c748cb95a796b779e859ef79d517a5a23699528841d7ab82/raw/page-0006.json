@@ -1,0 +1,448 @@
+{
+  "block_sequence_sha256": "58403008e53a56e45e19df9917eed0890a835bf07f39e5852170cb4f94c74638",
+  "blocks": [
+    {
+      "bbox": [
+        54.0,
+        40.9658203125,
+        170.8094940185547,
+        51.45849609375
+      ],
+      "block_id": "page-0006-block-0001",
+      "order": 1,
+      "text": "Jacynthe Rivest, M.D., FRCPC\n",
+      "text_sha256": "8a567f5220f5583d5f1a988ba20fad15443a2987600d92508c84dbec0963dc40"
+    },
+    {
+      "bbox": [
+        54.0,
+        55.51581954956055,
+        182.82699584960938,
+        66.00849914550781
+      ],
+      "block_id": "page-0006-block-0002",
+      "order": 2,
+      "text": "Georges Robitaille, M.D., FRCPC\n",
+      "text_sha256": "753a7df242b28c497dbfa61f73277884b5bdd9739d626b681b1f67a3ebc3f8ce"
+    },
+    {
+      "bbox": [
+        54.0,
+        70.01582336425781,
+        297.0683288574219,
+        92.0584945678711
+      ],
+      "block_id": "page-0006-block-0003",
+      "order": 3,
+      "text": "Michelle Rochon, M.D., FRCPC, M. Sc. (orthophonie et\naudiologie)\n",
+      "text_sha256": "ea79f185625207fb097798919fcf541b8727b74f7163641efea81bc27a56447d"
+    },
+    {
+      "bbox": [
+        54.0,
+        96.1158218383789,
+        213.07447814941406,
+        106.6084976196289
+      ],
+      "block_id": "page-0006-block-0004",
+      "order": 4,
+      "text": "Pierre-Paul Rompré, Ph. D. (psychologie)\n",
+      "text_sha256": "4a45bdfbfa49fef24c0cd6f45b8d64e43b4c89d11853aecf813f417de5a4f7ae"
+    },
+    {
+      "bbox": [
+        54.0,
+        110.66582489013672,
+        220.76663208007812,
+        121.15850067138672
+      ],
+      "block_id": "page-0006-block-0005",
+      "order": 5,
+      "text": "Nancie Rouleau, Ph. D. (neuropsychologie)\n",
+      "text_sha256": "445c986baed9ce374388d414258aad83d3b3b7a28efd1eb15f17b59ea34194c9"
+    },
+    {
+      "bbox": [
+        54.0,
+        125.2158203125,
+        297.220703125,
+        135.70849609375
+      ],
+      "block_id": "page-0006-block-0006",
+      "order": 6,
+      "text": "Cécile Rousseau, M.D., FRCPC, M. Sc. (psychiatrie transculturelle)\n",
+      "text_sha256": "bb80977232d9f77c7179a9e1d788bbbc0c57bfd342352301c682896919ad6e6d"
+    },
+    {
+      "bbox": [
+        54.0,
+        139.7658233642578,
+        269.20849609375,
+        150.2584991455078
+      ],
+      "block_id": "page-0006-block-0007",
+      "order": 7,
+      "text": "Marc-André Roy, M.D., FRCPC, M. Sc. (épidémiologie)\n",
+      "text_sha256": "e358afb31a7fa12856bccabd157b97c43000cee98b491fb80688b7e0d8c36db6"
+    },
+    {
+      "bbox": [
+        54.0,
+        154.31582641601562,
+        279.3539123535156,
+        164.80850219726562
+      ],
+      "block_id": "page-0006-block-0008",
+      "order": 8,
+      "text": "Mario Roy, M.D., FRCPC, M. Sc. (sciences neurologiques)\n",
+      "text_sha256": "440f9c7f0db0cb32a12decd16ba3c66aad77f44a2ca12a6ab358ee1422300be7"
+    },
+    {
+      "bbox": [
+        54.0,
+        168.86582946777344,
+        151.67369079589844,
+        179.35850524902344
+      ],
+      "block_id": "page-0006-block-0009",
+      "order": 9,
+      "text": "Renée Roy, M.D., FRCPC\n",
+      "text_sha256": "8f3dd0969ce307a161aa8aaa894e6231940478df10aa2c17e5921eeaf810ae5a"
+    },
+    {
+      "bbox": [
+        54.0,
+        183.4158172607422,
+        192.60479736328125,
+        193.9084930419922
+      ],
+      "block_id": "page-0006-block-0010",
+      "order": 10,
+      "text": "Daniel Saint-Laurent, M.D., FRCPC\n",
+      "text_sha256": "5dcda7f935cb8a0b11b1b090e1335ddb1b9187980bf8b4e0390f1cfbf95c443e"
+    },
+    {
+      "bbox": [
+        54.0,
+        197.9158172607422,
+        171.4490203857422,
+        208.4084930419922
+      ],
+      "block_id": "page-0006-block-0011",
+      "order": 11,
+      "text": "Marc Sasseville, M.D., FRCPC\n",
+      "text_sha256": "bf937e38f503cefe5a158b868101f220e6e5796f3d9ea772272a07c28ee6e99f"
+    },
+    {
+      "bbox": [
+        54.0,
+        212.4658203125,
+        242.2751922607422,
+        222.95849609375
+      ],
+      "block_id": "page-0006-block-0012",
+      "order": 12,
+      "text": "Geneviève Sauvé, M. Sc. (sciences biomédicales)\n",
+      "text_sha256": "d1a47d8771222c28e977ff06cf17f92b20623d857cbf46489e3a65571d58be42"
+    },
+    {
+      "bbox": [
+        54.0,
+        227.0158233642578,
+        233.7242431640625,
+        237.5084991455078
+      ],
+      "block_id": "page-0006-block-0013",
+      "order": 13,
+      "text": "Monique Séguin, Ph. D. (psychologie clinique)\n",
+      "text_sha256": "77cb1848ba65f423db864b4c8f65a6fd9a09fe330ba03e30ae98be65900082f8"
+    },
+    {
+      "bbox": [
+        54.0,
+        241.56582641601562,
+        182.97962951660156,
+        252.05850219726562
+      ],
+      "block_id": "page-0006-block-0014",
+      "order": 14,
+      "text": "Nathalie Shamlian, M.D., FRCPC\n",
+      "text_sha256": "7e88589f3ae4c2d8fbf7927159bc46e11700d188fecf1ad82e82a9a8b4414573"
+    },
+    {
+      "bbox": [
+        54.0,
+        256.1158142089844,
+        137.82522583007812,
+        266.6084899902344
+      ],
+      "block_id": "page-0006-block-0015",
+      "order": 15,
+      "text": "Hugues Simard, M.D.\n",
+      "text_sha256": "b73cf1b86d1922b73ffc8ba90d29a93d00d04409234ca6c757e2ce5377db9a12"
+    },
+    {
+      "bbox": [
+        54.0,
+        270.66583251953125,
+        216.4033660888672,
+        281.15850830078125
+      ],
+      "block_id": "page-0006-block-0016",
+      "order": 16,
+      "text": "François Sirois, M.D., Ph. D. (philosophie)\n",
+      "text_sha256": "96d3630aa264391c16153f16012b30a1363f9b86300b97462017e5de85877009"
+    },
+    {
+      "bbox": [
+        54.0,
+        285.2158203125,
+        266.33221435546875,
+        295.70849609375
+      ],
+      "block_id": "page-0006-block-0017",
+      "order": 17,
+      "text": "Jean-Paul Soucy, M.D., FRCPC, M. Sc. (neurosciences)\n",
+      "text_sha256": "46f7b51e1eba467566246aab17fcfd28bc0487b8103d5c839de9f48e1a4fd35a"
+    },
+    {
+      "bbox": [
+        54.0,
+        299.7658386230469,
+        176.62965393066406,
+        310.2585144042969
+      ],
+      "block_id": "page-0006-block-0018",
+      "order": 18,
+      "text": "Martin St-André, M.D., FRCPC\n",
+      "text_sha256": "3168edf8fa8fd40f1b612179327ea1076388324636a9041c9066af2fc872f57e"
+    },
+    {
+      "bbox": [
+        312.0,
+        40.9658203125,
+        479.9769287109375,
+        51.45849609375
+      ],
+      "block_id": "page-0006-block-0019",
+      "order": 19,
+      "text": "Danielle St-Laurent, M. Sc. (épidémiologie)\n",
+      "text_sha256": "d0a11d0b08767e63dd72e405b0d736040a173e192d8964ef059c69bf50cfda17"
+    },
+    {
+      "bbox": [
+        312.0,
+        55.66582107543945,
+        554.9091796875,
+        66.15849304199219
+      ],
+      "block_id": "page-0006-block-0020",
+      "order": 20,
+      "text": "Emmanuel Stip, M.D., FRCPC, M. Sc. (sciences neurologiques)\n",
+      "text_sha256": "3767007a3d34964d2cb848c2727eea511a7be1f06d2a3d1b8981f1da9abd289a"
+    },
+    {
+      "bbox": [
+        312.0,
+        70.3658218383789,
+        436.5303955078125,
+        80.8584976196289
+      ],
+      "block_id": "page-0006-block-0021",
+      "order": 21,
+      "text": "Geneviève Tellier, M.D., FRCPC\n",
+      "text_sha256": "339c37c8f7345d5f7ee161fa4c0e754b3ad92c8cc7b5443dd9a4eca6bf4e8b7d"
+    },
+    {
+      "bbox": [
+        312.0,
+        85.0658187866211,
+        479.81622314453125,
+        95.5584945678711
+      ],
+      "block_id": "page-0006-block-0022",
+      "order": 22,
+      "text": "Christo Todorov, M.D., M. Sc. (psychiatrie)\n",
+      "text_sha256": "e1a4d3dcbda548a2609a92a8d0ecac5a16fce75c48834835be593fa60f9f7c80"
+    },
+    {
+      "bbox": [
+        312.0,
+        99.8158187866211,
+        555.365478515625,
+        110.3084945678711
+      ],
+      "block_id": "page-0006-block-0023",
+      "order": 23,
+      "text": "Smadar Valérie Tourjman, M.D., FRCPC, M. Sc. (pharmacologie)\n",
+      "text_sha256": "12ebcfb7f9b245a8fa30e1d959bd685a6ec4e80bc72198b4a7a70a65383afb8b"
+    },
+    {
+      "bbox": [
+        312.0,
+        114.51582336425781,
+        516.6915283203125,
+        125.00849914550781
+      ],
+      "block_id": "page-0006-block-0024",
+      "order": 24,
+      "text": "Julie Tremblay, M.D., FRCPC, M. Sc. (neurobiologie)\n",
+      "text_sha256": "8fe70caaf7de7b143c139b663621ded6c1f8e91aee0354711f170ddfa4fc4c82"
+    },
+    {
+      "bbox": [
+        312.0,
+        129.2158203125,
+        476.519775390625,
+        139.70849609375
+      ],
+      "block_id": "page-0006-block-0025",
+      "order": 25,
+      "text": "Dominique Trépanier, D. Ps. (psychologie)\n",
+      "text_sha256": "fa2f522b3b7b1450a2bc8685d261d6eb138986e2e775cb2726878684fdcafba3"
+    },
+    {
+      "bbox": [
+        312.0,
+        143.9158172607422,
+        555.2857055664062,
+        154.4084930419922
+      ],
+      "block_id": "page-0006-block-0026",
+      "order": 26,
+      "text": "Jean-François Trudel, M.D., FRCPC, M. Sc. (sciences biomédicales)\n",
+      "text_sha256": "d68b70b6a2fb75d4ab9d7369936eae2b39bca76b9b593b05174954d4affa1b5c"
+    },
+    {
+      "bbox": [
+        312.0,
+        158.61582946777344,
+        555.28369140625,
+        169.10850524902344
+      ],
+      "block_id": "page-0006-block-0027",
+      "order": 27,
+      "text": "Gustavo Turecki, M.D., FRCPC, Ph. D. (neurosciences ; génétique)\n",
+      "text_sha256": "6b6224fa674297e3e36b23135684e7dabf21c770ef0005cad8aef9eeb472aa46"
+    },
+    {
+      "bbox": [
+        312.0,
+        173.36582946777344,
+        423.9294128417969,
+        183.85850524902344
+      ],
+      "block_id": "page-0006-block-0028",
+      "order": 28,
+      "text": "Claude Vanier, M.D., FRCPC\n",
+      "text_sha256": "f2af61116e1a133a1629fc37a98eb6df9b3f589c5d2d88de191bd912f0395d1b"
+    },
+    {
+      "bbox": [
+        312.0,
+        188.06582641601562,
+        415.778564453125,
+        198.55850219726562
+      ],
+      "block_id": "page-0006-block-0029",
+      "order": 29,
+      "text": "Nancy Vasil, M.D., FRCPC\n",
+      "text_sha256": "a17f929801c68d16fcbc9837d62f82f6c060b08165d78fb187ba794e79debcc6"
+    },
+    {
+      "bbox": [
+        312.0,
+        202.7658233642578,
+        388.55859375,
+        213.2584991455078
+      ],
+      "block_id": "page-0006-block-0030",
+      "order": 30,
+      "text": "Pierre Verrier, M.D.\n",
+      "text_sha256": "f4737f23bb69497f56532c36ceef69a6c13bfac21bd447245668888aa101c61d"
+    },
+    {
+      "bbox": [
+        312.0,
+        217.4658203125,
+        444.8248291015625,
+        227.95849609375
+      ],
+      "block_id": "page-0006-block-0031",
+      "order": 31,
+      "text": "Pascale Vézina, B.A. (psychologie)\n",
+      "text_sha256": "b7eae275bb0e8ae9cce0fdee02d69eeb1af67d57bef1741e90a7b51ba61df169"
+    },
+    {
+      "bbox": [
+        312.0,
+        232.2158203125,
+        521.8616333007812,
+        242.70849609375
+      ],
+      "block_id": "page-0006-block-0032",
+      "order": 32,
+      "text": "Annick Vincent, M.D., FRCPC, M. Sc. (neurobiologie)\n",
+      "text_sha256": "a51992c85d5fdada589b7320b79a8a89114cdc31b2a452e6def7eec0020c7a12"
+    },
+    {
+      "bbox": [
+        312.0,
+        246.9158172607422,
+        544.4400634765625,
+        257.40850830078125
+      ],
+      "block_id": "page-0006-block-0033",
+      "order": 33,
+      "text": "Philippe Vincent, BCPP, M. Sc. (pharmacothérapie avancée)\n",
+      "text_sha256": "c8f412e23dbc885eb43128ce2862f9c73e0f387678d3037f76b2b5006fd3460e"
+    },
+    {
+      "bbox": [
+        312.0,
+        261.6158142089844,
+        554.7631225585938,
+        283.8085021972656
+      ],
+      "block_id": "page-0006-block-0034",
+      "order": 34,
+      "text": "Hubert Wallot, M.D., FRCPC, Ph. D. (management), MPH\n(santé publique)\n",
+      "text_sha256": "31b39dff5ce50fc025becc4e2670eb925bff127e7338e3ca9643f88d29a08770"
+    },
+    {
+      "bbox": [
+        312.0,
+        288.0158386230469,
+        526.9168090820312,
+        310.2585144042969
+      ],
+      "block_id": "page-0006-block-0035",
+      "order": 35,
+      "text": "Michel White, M.D., FRCPC, M. Mus., M. Sc. (sciences\nbiomédicales)\n",
+      "text_sha256": "19078b4723e99600ec5f0c50dbbce091bd824abb32f9c5ca0e2cbeebd10c2685"
+    },
+    {
+      "bbox": [
+        474.6499938964844,
+        747.6254272460938,
+        555.0199584960938,
+        758.9193725585938
+      ],
+      "block_id": "page-0006-block-0036",
+      "order": 36,
+      "text": "Les auteurs\nv\n",
+      "text_sha256": "0fd6d1b86964730acc4c952d95d0a6cb5546239dda4351efd185f4bb8c38803e"
+    }
+  ],
+  "coordinates_sha256": "d2ae669e0af531502fcd55ea84eeb06e33c1d166dd582d226f3aada57f49fde8",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0006",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Jacynthe Rivest, M.D., FRCPC\nGeorges Robitaille, M.D., FRCPC\nMichelle Rochon, M.D., FRCPC, M. Sc. (orthophonie et\naudiologie)\nPierre-Paul Rompré, Ph. D. (psychologie)\nNancie Rouleau, Ph. D. (neuropsychologie)\nCécile Rousseau, M.D., FRCPC, M. Sc. (psychiatrie transculturelle)\nMarc-André Roy, M.D., FRCPC, M. Sc. (épidémiologie)\nMario Roy, M.D., FRCPC, M. Sc. (sciences neurologiques)\nRenée Roy, M.D., FRCPC\nDaniel Saint-Laurent, M.D., FRCPC\nMarc Sasseville, M.D., FRCPC\nGeneviève Sauvé, M. Sc. (sciences biomédicales)\nMonique Séguin, Ph. D. (psychologie clinique)\nNathalie Shamlian, M.D., FRCPC\nHugues Simard, M.D.\nFrançois Sirois, M.D., Ph. D. (philosophie)\nJean-Paul Soucy, M.D., FRCPC, M. Sc. (neurosciences)\nMartin St-André, M.D., FRCPC\nDanielle St-Laurent, M. Sc. (épidémiologie)\nEmmanuel Stip, M.D., FRCPC, M. Sc. (sciences neurologiques)\nGeneviève Tellier, M.D., FRCPC\nChristo Todorov, M.D., M. Sc. (psychiatrie)\nSmadar Valérie Tourjman, M.D., FRCPC, M. Sc. (pharmacologie)\nJulie Tremblay, M.D., FRCPC, M. Sc. (neurobiologie)\nDominique Trépanier, D. Ps. (psychologie)\nJean-François Trudel, M.D., FRCPC, M. Sc. (sciences biomédicales)\nGustavo Turecki, M.D., FRCPC, Ph. D. (neurosciences ; génétique)\nClaude Vanier, M.D., FRCPC\nNancy Vasil, M.D., FRCPC\nPierre Verrier, M.D.\nPascale Vézina, B.A. (psychologie)\nAnnick Vincent, M.D., FRCPC, M. Sc. (neurobiologie)\nPhilippe Vincent, BCPP, M. Sc. (pharmacothérapie avancée)\nHubert Wallot, M.D., FRCPC, Ph. D. (management), MPH\n(santé publique)\nMichel White, M.D., FRCPC, M. Mus., M. Sc. (sciences\nbiomédicales)\nLes auteurs\nv\n",
+  "raw_text_sha256": "cc4d605e0670bd6a890a8e64b8fd64fcd3a907aef619d188aff98b47d1ddb720",
+  "source_page_display": 7,
+  "source_page_index": 6
+}

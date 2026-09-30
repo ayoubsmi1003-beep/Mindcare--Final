@@ -1,0 +1,172 @@
+{
+  "block_sequence_sha256": "b45fe36186a3f5733a44e85d73d2eb0e915f6cac21ad2799a532c9ddcbeeb9ba",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0411-block-0001",
+      "order": 1,
+      "text": "394\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "cc86bdb2f9d73e6b9e5695ce9bd2050df5504d82216418ccca83a4f04d3dfe0d"
+    },
+    {
+      "bbox": [
+        48.0,
+        39.33681869506836,
+        208.26309204101562,
+        55.47939682006836
+      ],
+      "block_id": "page-0411-block-0002",
+      "order": 2,
+      "text": "19.3.1 Étiologies biologiques\n",
+      "text_sha256": "0e0aead70738f690964e1011fb792a72b6cb0ab8320e8ac0219fe0bf6ff7ff07"
+    },
+    {
+      "bbox": [
+        48.0,
+        58.865821838378906,
+        290.9724426269531,
+        92.45849609375
+      ],
+      "block_id": "page-0411-block-0003",
+      "order": 3,
+      "text": "Les connaissances sur la biologie de la dépression procèdent\nde deux grands domaines intimement liés, la génétique et la\nneurophysiopathologie.\n",
+      "text_sha256": "b822e8f9e039ee6b15fd0ad50befe549d7a1d76f89f9bb7c3c4481b7e1a747a2"
+    },
+    {
+      "bbox": [
+        48.0,
+        101.38301086425781,
+        291.4556884765625,
+        458.40850830078125
+      ],
+      "block_id": "page-0411-block-0004",
+      "order": 4,
+      "text": "Génétique\nLe fait d’avoir un parent du premier degré qui soure de dépres-\nsion récurrente augmente de deux à quatre fois la probabilité\nd’en être aecté. À cet égard, la division clinique entre troubles\nunipolaires et troubles bipolaires n’émerge pas complètement\nintacte des études familiales, qui montrent souvent que ces\ndeux syndromes sont associés. En d’autres termes, une personne\nsourant d’un trouble unipolaire peut avoir des parents sourant\nd’un trouble bipolaire, et vice-versa. La transmission génétique\nn’est pas mendélienne classique, mais plutôt multifactorielle.\nLes études de jumeaux homozygotes montrent une concordance\nassez forte (autour de 35 à 40 %), mais elle n’est pas absolue. On\nestime donc que la part héritable de la dépression serait d’environ\n35 %, et que le reste serait attribuable aux aspects acquis (autant\npsychologiques, sociaux que biologiques) en cours de vie. Cette\npart héritée est probablement une vulnérabilité à la dépression\ncausée par une série de variations, ou polymorphismes, dans divers\ngènes (Fava & Kendler, 2000). Des études récentes portent sur :\n• le gène du transporteur de la sérotonine, un neurotransmet-\nteur qui interviendrait dans la cascade neurobiologique de la\ndépression ;\n• les gènes contrôlant la production du facteur neurotrophique\ndérivé du cerveau (brain-derived neurotrophic factor, ou\nBDNF), une protéine importante dans la croissance neuronale\net le développement des synapses tout au cours de la vie ;\n• des gènes codant pour des enzymes participant à la dégradation\ndes neurotransmetteurs (p. ex., les monoamine oxydases) ;\n• d’autres gènes intervenant dans la cascade hormonale du\nstress (axe hypothalamo-hypophyso-surrénalien) (Rot & al.,\n2009).\n",
+      "text_sha256": "028cb13cd4304900e88b9ef6ce88c49a7887ec6ce1be0bceb600143e529d62d2"
+    },
+    {
+      "bbox": [
+        68.0,
+        466.47412109375,
+        289.1728515625,
+        487.1003112792969
+      ],
+      "block_id": "page-0411-block-0005",
+      "order": 5,
+      "text": "L’inuence de la génétique dans les maladies psychiatriques\nest présentée en détail au chapitre 5.\n",
+      "text_sha256": "8123bfdf95cd260c1adfd241b5b2933af12a578c2f86f0e457dc0e272f361095"
+    },
+    {
+      "bbox": [
+        48.0,
+        495.5658264160156,
+        291.1429748535156,
+        552.2584838867188
+      ],
+      "block_id": "page-0411-block-0006",
+      "order": 6,
+      "text": "Plus une personne est âgée quand survient le premier épisode,\nplus faible est l’importance causale de la dimension génétique.\nToutefois, chez la personne âgée, certains facteurs de risque de\ndépression (maladie cardiovasculaire, anomalies métaboliques)\nont bien sûr des assises génétiques.\n",
+      "text_sha256": "bde7123d59d919beaa060f331c4d6f1b49fab5498b9c8b7e8b5ad04b23eaca3a"
+    },
+    {
+      "bbox": [
+        48.0,
+        553.3158569335938,
+        291.01751708984375,
+        598.45849609375
+      ],
+      "block_id": "page-0411-block-0007",
+      "order": 7,
+      "text": "Les prochaines années promettent d’être passionnantes, car\nde ces recherches fondamentales, des thérapeutiques radica-\nlement diérentes des médicaments antidépresseurs utilisés\nactuellement pourraient bien voir le jour.\n",
+      "text_sha256": "ec4501ca8e4906dad69708896c5b4a6cf44f8d7aa3008573d4c48a9cbf1c63d3"
+    },
+    {
+      "bbox": [
+        48.0,
+        607.3829956054688,
+        291.3765869140625,
+        725.45849609375
+      ],
+      "block_id": "page-0411-block-0008",
+      "order": 8,
+      "text": "Neurophysiopathologie\nLa contribution du stress se fait probablement par l’intermédiaire\nd’une activation de l’amygdale (structure cérébrale intervenant\ndans l’évaluation émotionnelle des événements), activation qui\nstimule à son tour les voies classiques de l’axe hypothalamo-\nhypophyso-surrénalien (HHS). On sait depuis les travaux de\nSelye que cette cascade hormonale est activée dans les réactions\nau stress ; on sait maintenant que cette cascade est également\nhyperactive chez les patients en dépression majeure. Un taux\nanormalement élevé de cortisol circulant a possiblement un eet\n",
+      "text_sha256": "298ef39f53cfac7332d90ffc314d404c9cf4765eab14c4cacd0e10bbb878efdc"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.1285400390625,
+        179.9084930419922
+      ],
+      "block_id": "page-0411-block-0009",
+      "order": 9,
+      "text": "neurotoxique sur certaines structures cérébrales, dont l’hippo-\ncampe (structure jouant un rôle important pour la mémoire\ncomme pour l’humeur), en inhibant la production de BDNF.\nCe facteur stimule la neurogenèse et l’arborisation dendritique\net son inhibition pourrait être à l’origine de la subtile atrophie\nde l’hippocampe et de structures préfrontales observée chez\nles patients atteints de dépression majeure. En somme, en s’ap-\npuyant entre autres sur l’imagerie fonctionnelle, la recherche\nfondamentale fait émerger un modèle de dysfonctionnement\ncérébral dans lequel cohabitent une hyperactivité de l’amygdale\net de l’axe HHS ainsi qu’une hypoactivité de l’hippocampe et du\ncortex préfrontal (Rot & al., 2009).\n",
+      "text_sha256": "4b9f7e06c2dc555536ff9ba616ebd096bfaed49bf76449d3139f1d19ab3d2661"
+    },
+    {
+      "bbox": [
+        306.0,
+        181.11582946777344,
+        549.4325561523438,
+        407.8085021972656
+      ],
+      "block_id": "page-0411-block-0010",
+      "order": 10,
+      "text": "L’inhibition du BDNF aurait un eet en cascade sur les\nneurotransmetteurs monoaminergiques (sérotonine, nora-\ndrénaline et, à un moindre degré, dopamine). Bien qu’ils ne\nreprésentent qu’une petite fraction des neurones, ces circuits\nnaissant dans le mésencéphale ont des projections importantes\ndans l’ensemble du cerveau. L’hypothèse voulant que ces neu-\nrotransmetteurs jouent un rôle important dans la genèse de la\ndépression a longtemps guidé le développement de la pharma-\ncologie antidépressive.\n• Le circuit noradrénergique a son origine dans le locus cœruleus\ndu mésencéphale et il intervient dans la vigilance, l’anxiété et\nles réactions au danger.\n• Le système sérotoninergique, qui prend son origine dans les\nnoyaux du raphé, joue un rôle dans l’humeur, l’anxiété, la\nsatiété et le cycle éveil-sommeil.\n• La dopamine, outre son rôle connu dans le contrôle du mou-\nvement, prend part à la perception du plaisir, à la motivation\net intervient dans les systèmes de récompense (noyau accum-\nbens, aire tegmentale ventrale) (Higgins & George, 2007).\n",
+      "text_sha256": "37dd90c732ba078404c3b4a8d2e8cfb9450497f7a1b3c9bfc6925a8e8627aab7"
+    },
+    {
+      "bbox": [
+        306.0,
+        413.0158386230469,
+        549.4677734375,
+        476.72607421875
+      ],
+      "block_id": "page-0411-block-0011",
+      "order": 11,
+      "text": "On peut être tenté de relier directement certains symptômes\ndépressifs à ces circuits :\n• anxiété et hypervigilance à la noradrénaline ;\n• inappétence et troubles du sommeil à la sérotonine ;\n• anhédonie et manque de motivation à la dopamine.\n",
+      "text_sha256": "3c7efbe86200dcd88a1b5536056e3a0cf91a6da0a081880474a0cfeaf1b9005c"
+    },
+    {
+      "bbox": [
+        306.0,
+        481.3658142089844,
+        549.2740478515625,
+        561.95849609375
+      ],
+      "block_id": "page-0411-block-0012",
+      "order": 12,
+      "text": "Mais l’état de nos connaissances ne permet pas d’en être\ncertain. L’action antidépressive des antidépresseurs, du lithium,\nde l’exercice et de l’électroconvulsivothérapie passerait non\nseulement par leur inuence sur ces neurotransmetteurs, mais\npar une « réactivation » du BDNF ; ces divers médicaments pro-\ntégeraient le cerveau contre les eets délétères du stress et de la\ndépression (Higgins & George, 2007).\n",
+      "text_sha256": "e492c3da731f5d8a05262e214192e8b96b1159f4933102318e27b90f3a1131d5"
+    },
+    {
+      "bbox": [
+        306.0,
+        563.1158447265625,
+        549.0381469726562,
+        725.45849609375
+      ],
+      "block_id": "page-0411-block-0013",
+      "order": 13,
+      "text": "Chez la personne âgée, les anomalies neurobiologiques\nprécédemment mentionnées demeurent pertinentes, mais le\nvieillissement du cerveau ajoute une contribution d’origine\nvasculaire étayée par plusieurs éléments : il existe une association\nentre la maladie vasculaire, ses facteurs de risque et la dépression\nà début tardif. L’imagerie par résonance magnétique a montré\nchez les personnes âgées la présence fréquente de lésions nes\nde la substance blanche périventriculaire et de la substance grise\nsous-corticale, lésions aussi associées à la maladie vasculaire\ncérébrale (Jacoby & al., 2008). Aussi, on a noté une association\nentre la dépression en âge avancé et le risque subséquent de\ndévelopper une démence ; plusieurs experts évoquent la possi-\nbilité qu’un processus neurodégénératif encore silencieux sur le\nplan des facultés cognitives augmente le risque dépressif, voire\n",
+      "text_sha256": "1c1e85b5d90ce1c35e7646b345b8fde62f5146f6c0a495cdf73476431189e2f5"
+    }
+  ],
+  "coordinates_sha256": "01ceb471c149c6ebc1b9ef3e3d588d4bc0cd02706e277566e2c8e017a1e442a5",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0411",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "394\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n19.3.1 Étiologies biologiques\nLes connaissances sur la biologie de la dépression procèdent\nde deux grands domaines intimement liés, la génétique et la\nneurophysiopathologie.\nGénétique\nLe fait d’avoir un parent du premier degré qui soure de dépres-\nsion récurrente augmente de deux à quatre fois la probabilité\nd’en être aecté. À cet égard, la division clinique entre troubles\nunipolaires et troubles bipolaires n’émerge pas complètement\nintacte des études familiales, qui montrent souvent que ces\ndeux syndromes sont associés. En d’autres termes, une personne\nsourant d’un trouble unipolaire peut avoir des parents sourant\nd’un trouble bipolaire, et vice-versa. La transmission génétique\nn’est pas mendélienne classique, mais plutôt multifactorielle.\nLes études de jumeaux homozygotes montrent une concordance\nassez forte (autour de 35 à 40 %), mais elle n’est pas absolue. On\nestime donc que la part héritable de la dépression serait d’environ\n35 %, et que le reste serait attribuable aux aspects acquis (autant\npsychologiques, sociaux que biologiques) en cours de vie. Cette\npart héritée est probablement une vulnérabilité à la dépression\ncausée par une série de variations, ou polymorphismes, dans divers\ngènes (Fava & Kendler, 2000). Des études récentes portent sur :\n• le gène du transporteur de la sérotonine, un neurotransmet-\nteur qui interviendrait dans la cascade neurobiologique de la\ndépression ;\n• les gènes contrôlant la production du facteur neurotrophique\ndérivé du cerveau (brain-derived neurotrophic factor, ou\nBDNF), une protéine importante dans la croissance neuronale\net le développement des synapses tout au cours de la vie ;\n• des gènes codant pour des enzymes participant à la dégradation\ndes neurotransmetteurs (p. ex., les monoamine oxydases) ;\n• d’autres gènes intervenant dans la cascade hormonale du\nstress (axe hypothalamo-hypophyso-surrénalien) (Rot & al.,\n2009).\nL’inuence de la génétique dans les maladies psychiatriques\nest présentée en détail au chapitre 5.\nPlus une personne est âgée quand survient le premier épisode,\nplus faible est l’importance causale de la dimension génétique.\nToutefois, chez la personne âgée, certains facteurs de risque de\ndépression (maladie cardiovasculaire, anomalies métaboliques)\nont bien sûr des assises génétiques.\nLes prochaines années promettent d’être passionnantes, car\nde ces recherches fondamentales, des thérapeutiques radica-\nlement diérentes des médicaments antidépresseurs utilisés\nactuellement pourraient bien voir le jour.\nNeurophysiopathologie\nLa contribution du stress se fait probablement par l’intermédiaire\nd’une activation de l’amygdale (structure cérébrale intervenant\ndans l’évaluation émotionnelle des événements), activation qui\nstimule à son tour les voies classiques de l’axe hypothalamo-\nhypophyso-surrénalien (HHS). On sait depuis les travaux de\nSelye que cette cascade hormonale est activée dans les réactions\nau stress ; on sait maintenant que cette cascade est également\nhyperactive chez les patients en dépression majeure. Un taux\nanormalement élevé de cortisol circulant a possiblement un eet\nneurotoxique sur certaines structures cérébrales, dont l’hippo-\ncampe (structure jouant un rôle important pour la mémoire\ncomme pour l’humeur), en inhibant la production de BDNF.\nCe facteur stimule la neurogenèse et l’arborisation dendritique\net son inhibition pourrait être à l’origine de la subtile atrophie\nde l’hippocampe et de structures préfrontales observée chez\nles patients atteints de dépression majeure. En somme, en s’ap-\npuyant entre autres sur l’imagerie fonctionnelle, la recherche\nfondamentale fait émerger un modèle de dysfonctionnement\ncérébral dans lequel cohabitent une hyperactivité de l’amygdale\net de l’axe HHS ainsi qu’une hypoactivité de l’hippocampe et du\ncortex préfrontal (Rot & al., 2009).\nL’inhibition du BDNF aurait un eet en cascade sur les\nneurotransmetteurs monoaminergiques (sérotonine, nora-\ndrénaline et, à un moindre degré, dopamine). Bien qu’ils ne\nreprésentent qu’une petite fraction des neurones, ces circuits\nnaissant dans le mésencéphale ont des projections importantes\ndans l’ensemble du cerveau. L’hypothèse voulant que ces neu-\nrotransmetteurs jouent un rôle important dans la genèse de la\ndépression a longtemps guidé le développement de la pharma-\ncologie antidépressive.\n• Le circuit noradrénergique a son origine dans le locus cœruleus\ndu mésencéphale et il intervient dans la vigilance, l’anxiété et\nles réactions au danger.\n• Le système sérotoninergique, qui prend son origine dans les\nnoyaux du raphé, joue un rôle dans l’humeur, l’anxiété, la\nsatiété et le cycle éveil-sommeil.\n• La dopamine, outre son rôle connu dans le contrôle du mou-\nvement, prend part à la perception du plaisir, à la motivation\net intervient dans les systèmes de récompense (noyau accum-\nbens, aire tegmentale ventrale) (Higgins & George, 2007).\nOn peut être tenté de relier directement certains symptômes\ndépressifs à ces circuits :\n• anxiété et hypervigilance à la noradrénaline ;\n• inappétence et troubles du sommeil à la sérotonine ;\n• anhédonie et manque de motivation à la dopamine.\nMais l’état de nos connaissances ne permet pas d’en être\ncertain. L’action antidépressive des antidépresseurs, du lithium,\nde l’exercice et de l’électroconvulsivothérapie passerait non\nseulement par leur inuence sur ces neurotransmetteurs, mais\npar une « réactivation » du BDNF ; ces divers médicaments pro-\ntégeraient le cerveau contre les eets délétères du stress et de la\ndépression (Higgins & George, 2007).\nChez la personne âgée, les anomalies neurobiologiques\nprécédemment mentionnées demeurent pertinentes, mais le\nvieillissement du cerveau ajoute une contribution d’origine\nvasculaire étayée par plusieurs éléments : il existe une association\nentre la maladie vasculaire, ses facteurs de risque et la dépression\nà début tardif. L’imagerie par résonance magnétique a montré\nchez les personnes âgées la présence fréquente de lésions nes\nde la substance blanche périventriculaire et de la substance grise\nsous-corticale, lésions aussi associées à la maladie vasculaire\ncérébrale (Jacoby & al., 2008). Aussi, on a noté une association\nentre la dépression en âge avancé et le risque subséquent de\ndévelopper une démence ; plusieurs experts évoquent la possi-\nbilité qu’un processus neurodégénératif encore silencieux sur le\nplan des facultés cognitives augmente le risque dépressif, voire\n",
+  "raw_text_sha256": "086fa9c8ae007bb709060874ee581d356cebb6b2dd54f86343314690b4fafae3",
+  "source_page_display": 412,
+  "source_page_index": 411
+}

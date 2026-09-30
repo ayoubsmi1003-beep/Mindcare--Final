@@ -1,0 +1,280 @@
+{
+  "block_sequence_sha256": "98c044d9772f08d0aaa7613cfe4072920cc9aa0e97165505679cd78f43b112c2",
+  "blocks": [
+    {
+      "bbox": [
+        292.5500183105469,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-1064-block-0001",
+      "order": 1,
+      "text": "Chapitre 46\nAspects psychiatriques des soins palliatifs\n1047\n",
+      "text_sha256": "80dc569e8ec4a3eefe047d853f9bead86324e0cba098307bcabc708400d5d7cc"
+    },
+    {
+      "bbox": [
+        54.0,
+        576.0093994140625,
+        222.91200256347656,
+        593.9781494140625
+      ],
+      "block_id": "page-1064-block-0002",
+      "order": 2,
+      "text": "Lectures complémentaires\n",
+      "text_sha256": "a63665748f6f6aa4046621ac3e5b53857ebef6bf2c2f475217e47dfa03f03493"
+    },
+    {
+      "bbox": [
+        54.0,
+        606.7886962890625,
+        198.6619873046875,
+        616.7291259765625
+      ],
+      "block_id": "page-1064-block-0003",
+      "order": 3,
+      "text": "B, W. & al. (2011). « Palliative\n",
+      "text_sha256": "0a062754dccde9fe35cf1539c6d51a9035b7c65e8979a11fe6e442e214c30394"
+    },
+    {
+      "bbox": [
+        66.0,
+        616.7886962890625,
+        201.97817993164062,
+        676.7291259765625
+      ],
+      "block_id": "page-1064-block-0004",
+      "order": 4,
+      "text": "care », dans Levenson, J. L., e\nAmerican Psychiatric Publishing\nTextbook of Psychosomatic Medicine :\nPsychiatric Care of the Medically Ill,\nArlington, VA, American Psychiatric\nPublishing, p. 1053-1084.\n",
+      "text_sha256": "9df722125269a74d75248e54342d9ef3a9a65ad17ab4ed7c6f9542a182b6c2aa"
+    },
+    {
+      "bbox": [
+        54.0,
+        680.7886962890625,
+        183.72500610351562,
+        690.7291259765625
+      ],
+      "block_id": "page-1064-block-0005",
+      "order": 5,
+      "text": "B R. W. & al. (2010). « Care\n",
+      "text_sha256": "e203711c0a06b8272c75ed05ae582f0385ce83b18bb98593b45eefe699d5f17f"
+    },
+    {
+      "bbox": [
+        66.0,
+        690.7886962890625,
+        191.94601440429688,
+        710.7291259765625
+      ],
+      "block_id": "page-1064-block-0006",
+      "order": 6,
+      "text": "at the end of life », dans Stern T.A.\n& al. (dir.), Massachusetts General\n",
+      "text_sha256": "e1809af22d08491c4769ed1bdc6f756d9cce4d1c6a0801c8430581c0b8e4c3e2"
+    },
+    {
+      "bbox": [
+        226.0,
+        606.8414306640625,
+        382.4082336425781,
+        648.7291259765625
+      ],
+      "block_id": "page-1064-block-0007",
+      "order": 7,
+      "text": "Hospital Handbook of General Hospital\nPsychiatry, 6e éd., Philadelphie, PA,\nSaunders Elsevier, p. 555-564.\nC, A. & G, L. (2011).\n",
+      "text_sha256": "64a0a301c986983a5faa5b46012ff5b1e677af3c4831b82ccd869f9f3f2017e1"
+    },
+    {
+      "bbox": [
+        226.0,
+        648.8414306640625,
+        364.0824890136719,
+        700.7291259765625
+      ],
+      "block_id": "page-1064-block-0008",
+      "order": 8,
+      "text": "Delirium : Acute Confusional\nStates in Palliative Medicine,\n2e éd., New York, NY, Oxford\nUniversity Press.\nG, P. R. (2008). « Treatment of\n",
+      "text_sha256": "45a121d9f6b604ffee051230ca5256f88725bc68801c47adf8bdd8097eedd1e1"
+    },
+    {
+      "bbox": [
+        238.0,
+        700.7886962890625,
+        371.2711486816406,
+        710.7291259765625
+      ],
+      "block_id": "page-1064-block-0009",
+      "order": 9,
+      "text": "delirium in supportive and palliative\n",
+      "text_sha256": "1012abcbe66849668136b119287dacc2aac0f60df77cea06c1609bb6f2d6eb85"
+    },
+    {
+      "bbox": [
+        398.0,
+        606.7886962890625,
+        550.8280029296875,
+        638.7291259765625
+      ],
+      "block_id": "page-1064-block-0010",
+      "order": 10,
+      "text": "care », Current Opinion in Supportive\nand Palliative Care, 2(1), p. 60-66.\nS, M. K. & al. (2011). « Complicated\n",
+      "text_sha256": "0723b6958f02728417fd2b82c22fcfd4d52a8e834bd10d416a9bc618e638390d"
+    },
+    {
+      "bbox": [
+        398.0,
+        638.7886962890625,
+        548.1300048828125,
+        680.7291259765625
+      ],
+      "block_id": "page-1064-block-0011",
+      "order": 11,
+      "text": "grief and related bereavement issues\nfor DSM-5 », Depression and Anxiety,\n28(2), p. 103-117.\nZ, S. & al. (2012). « e berea-\n",
+      "text_sha256": "0b10806a58f563f4583864412f98f5b90ea4c018c445296fe122e1a43922e924"
+    },
+    {
+      "bbox": [
+        410.0,
+        680.7886962890625,
+        526.960693359375,
+        710.7291259765625
+      ],
+      "block_id": "page-1064-block-0012",
+      "order": 12,
+      "text": "vement exclusion and DSM-5 »,\nDepression and Anxiety, 29(5),\np. 425-443.\n",
+      "text_sha256": "860611c696ca41a875ddc6d3a6cebe59bf7bb0f9c270d9fb85bb8f77bb9eecad"
+    },
+    {
+      "bbox": [
+        312.0,
+        40.9658203125,
+        555.1929931640625,
+        144.30850219726562
+      ],
+      "block_id": "page-1064-block-0013",
+      "order": 13,
+      "text": "Au plan pharmacologique, l’halopéridol a été utilisé avec\nsuccès et peut être administré par voie parentérale. Il est\négalement possible de recourir aux antipsychotiques atypiques\n(p. ex., la rispéridone), en particulier dans le delirium hypoactif.\nLes corticostéroïdes peuvent causer un delirium, mais parfois aussi\nle diminuer, s’ils permettent de réduire la pression intracrânienne\ndue à l’œdème occasionné par une tumeur cérébrale. Quant\naux benzodiazépines, elles peuvent exacerber la confusion et\nprovoquer davantage de désinhibition chez l’enfant.\n",
+      "text_sha256": "1af7a5f795ea59349f4b550049742daa9d6b2e38e9ae8c29de6de5b23fc49a03"
+    },
+    {
+      "bbox": [
+        312.0,
+        175.56582641601562,
+        555.0219116210938,
+        290.5085144042969
+      ],
+      "block_id": "page-1064-block-0014",
+      "order": 14,
+      "text": "Les patients en phase terminale présentent une détresse mul-\ntifactorielle. Le médecin doit s’assurer du traitement adéquat\ndes symptômes physiques qui inuent puissamment sur la\ndétresse psychique, le niveau fonctionnel et la qualité de vie.\nEn contrepartie, le vécu psychique, le soutien familial ainsi que\nl’environnement social et physique se répercutent aussi sur\nla perception des symptômes physiques, dont la douleur.\nL’interaction de ces facteurs crée une situation unique pour\nchaque patient vivant ce stresseur majeur, souvent le plus\nimportant dans une vie.\n",
+      "text_sha256": "585b27aabad5386cf58cae468eb56866809f9f3546af8866c832a4ad378884f6"
+    },
+    {
+      "bbox": [
+        312.0,
+        291.66583251953125,
+        555.170166015625,
+        395.0085144042969
+      ],
+      "block_id": "page-1064-block-0015",
+      "order": 15,
+      "text": "Les éléments existentiels, tels que la recherche de sens\net l’attitude face à la mort, deviennent souvent des thèmes\nimportants des psychothérapies proposées. La personne en\nphase terminale transcende le concept de « patient ». Ainsi, les\nconcepts de deuil normal, de résilience et d’accompagnement\nprennent tout leur sens et doivent faire partie du traitement. La\ncollaboration interprofessionnelle devient une modalité incon-\ntournable ; le clinicien œuvrant en soins palliatifs doit donc y\nêtre spéciquement formé.\n",
+      "text_sha256": "bcc43c4cde9e8863fd3009324fa273d562c80229446ab29b9fae58a263f527a3"
+    },
+    {
+      "bbox": [
+        312.0,
+        396.1158142089844,
+        555.1911010742188,
+        487.90850830078125
+      ],
+      "block_id": "page-1064-block-0016",
+      "order": 16,
+      "text": "La cible de l’intervention est la plupart du temps constituée de\nl’unité formée par le patient et sa famille. Il faut donc s’attarder à la\nréaction des proches aidants qui jouent souvent un rôle important\nde soutien, mais qui peuvent aussi présenter une grande détresse\npsychique. Cette détresse doit être systématiquement évaluée et\ntraitée. Le deuil demeure un concept important et omniprésent\nen soins palliatifs et en n de vie, autant pour le patient que pour\nles proches et les soignants.\n",
+      "text_sha256": "f77affec816b2b994336869e35b93d6259952313ec923c8e8322d8f22e51c1bf"
+    },
+    {
+      "bbox": [
+        312.0,
+        489.0158386230469,
+        555.3369140625,
+        545.95849609375
+      ],
+      "block_id": "page-1064-block-0017",
+      "order": 17,
+      "text": "Le clinicien œuvrant auprès des personnes en phase terminale\nqui y investit son intérêt et un peu de sa personne a le privilège\nde toucher de plus près le mystère du sens de la vie et de la mort.\nIl peut en être transformé et obtenir la gratication de se sentir\nun peu plus humain grâce à ce travail exigeant.\n",
+      "text_sha256": "b76a91ff4cc863520c2667420165f1f5c38ed4e49c90fa0714719c4efdf4b90a"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.9658203125,
+        297.0367736816406,
+        62.95849609375
+      ],
+      "block_id": "page-1064-block-0018",
+      "order": 18,
+      "text": "de communication, la diculté de discuter de la maladie avec les\nparents, de parler de la mort et la crainte d’être seul.\n",
+      "text_sha256": "2dbc924cc106f4fbc853bda1865a0aa3205931a45a0794eb596be3068a937e32"
+    },
+    {
+      "bbox": [
+        54.0,
+        71.8330078125,
+        297.1412048339844,
+        154.95849609375
+      ],
+      "block_id": "page-1064-block-0019",
+      "order": 19,
+      "text": "Anxiété\nL’anxiété est fréquente chez les enfants et peut se manifester\npar des symptômes somatiques. Il faut tenter d’intervenir sur\nla cause de l’anxiété, quand cela est possible. Par exemple, si on\nconclut qu’une médication, telle que les corticostéroïdes, génère\nun syndrome anxieux, on révisera alors le dosage ou l’indication\nde cette médication.\n",
+      "text_sha256": "bfe657d0a9cdb1744259e038d9c285588d5dec9bdddd52371768f51c125a1f44"
+    },
+    {
+      "bbox": [
+        54.0,
+        155.9658203125,
+        297.0814208984375,
+        246.95849609375
+      ],
+      "block_id": "page-1064-block-0020",
+      "order": 20,
+      "text": "Il faut essayer d’optimiser l’environnement en le rendant\naussi familier que possible, agréable et serein, et en intégrant\ndes activités et des périodes de contact avec les parents et la\nfamille. La continuité des soins demeure un aspect important. Les\ninterventions cognitivo-comportementales sont ecaces pour\ntraiter l’anxiété chez les enfants, alors que la désensibilisation\nsystématique et l’exposition peuvent être utiles pour traiter la\nphobie des aiguilles ou l’aversion à l’égard de certains aliments.\n",
+      "text_sha256": "73a4eb83f674819665b5bee47f229d7e763169944a3839530ef2fbac6b55db57"
+    },
+    {
+      "bbox": [
+        54.0,
+        247.9658203125,
+        297.4285888671875,
+        396.45849609375
+      ],
+      "block_id": "page-1064-block-0021",
+      "order": 21,
+      "text": "Sur le plan pharmacothérapeutique, les ISRS sont des médica-\nments de premier choix (la uvoxamine a montré une supériorité\npar rapport au placebo pour traiter l’anxiété chez les enfants,\nparticulièrement l’anxiété de séparation, l’anxiété sociale et\nl’anxiété généralisée) (Walkup & al., 2001). Si l’ISRS n’agit pas\nassez rapidement ou ne procure pas un soulagement susant,\nil peut y avoir lieu de traiter l’anxiété avec une benzodiazépine,\nun antipsychotique sédatif (quétiapine, olanzapine) ou un anti-\ndépresseur tricyclique à faible dose et avec une courte durée\nd’action (p. ex., l’amitriptyline). Les analgésiques ont souvent\naussi un eet anxiolytique adjuvant signicatif et peuvent être\nutilisés à cet eet (p. ex., la morphine) lorsqu’ils sont déjà pres-\ncrits pour la douleur.\n",
+      "text_sha256": "5a1f74fbe3f60220e5fb2519fa90c5cff5497e851b9d359e5ca61b4995608616"
+    },
+    {
+      "bbox": [
+        54.0,
+        405.3330078125,
+        297.4595031738281,
+        545.95849609375
+      ],
+      "block_id": "page-1064-block-0022",
+      "order": 22,
+      "text": "Delirium\nLe delirium survient chez les enfants et peut parfois être confondu\navec d’autres symptômes, comme chez l’adulte. Par exemple,\nalors que la famille et le personnel soignant tentent de donner\ndes explications psychologiques, un comportement inapproprié\net d’allure régressive chez un enfant peut être dû à un delirium.\nLe cerveau des enfants en soins palliatifs est parfois fragilisé\npar une atteinte neurologique préexistante, par une privation\nde sommeil ou par une surstimulation sensorielle. À l’instar du\ntraitement du delirium chez l’adulte, les interventions environ-\nnementales et comportementales sont importantes pour créer\nun environnement calme, familier et rassurant.\n",
+      "text_sha256": "246321b0c74b5f53169c6f8e7edfe34447f35622d870f520b1cde41a2543abb8"
+    }
+  ],
+  "coordinates_sha256": "49dad0f2e6d53f76dca651968c86fdbf972e9c0d9eaeac44805bb755f0db34b9",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1064",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 46\nAspects psychiatriques des soins palliatifs\n1047\nLectures complémentaires\nB, W. & al. (2011). « Palliative\ncare », dans Levenson, J. L., e\nAmerican Psychiatric Publishing\nTextbook of Psychosomatic Medicine :\nPsychiatric Care of the Medically Ill,\nArlington, VA, American Psychiatric\nPublishing, p. 1053-1084.\nB R. W. & al. (2010). « Care\nat the end of life », dans Stern T.A.\n& al. (dir.), Massachusetts General\nHospital Handbook of General Hospital\nPsychiatry, 6e éd., Philadelphie, PA,\nSaunders Elsevier, p. 555-564.\nC, A. & G, L. (2011).\nDelirium : Acute Confusional\nStates in Palliative Medicine,\n2e éd., New York, NY, Oxford\nUniversity Press.\nG, P. R. (2008). « Treatment of\ndelirium in supportive and palliative\ncare », Current Opinion in Supportive\nand Palliative Care, 2(1), p. 60-66.\nS, M. K. & al. (2011). « Complicated\ngrief and related bereavement issues\nfor DSM-5 », Depression and Anxiety,\n28(2), p. 103-117.\nZ, S. & al. (2012). « e berea-\nvement exclusion and DSM-5 »,\nDepression and Anxiety, 29(5),\np. 425-443.\nAu plan pharmacologique, l’halopéridol a été utilisé avec\nsuccès et peut être administré par voie parentérale. Il est\négalement possible de recourir aux antipsychotiques atypiques\n(p. ex., la rispéridone), en particulier dans le delirium hypoactif.\nLes corticostéroïdes peuvent causer un delirium, mais parfois aussi\nle diminuer, s’ils permettent de réduire la pression intracrânienne\ndue à l’œdème occasionné par une tumeur cérébrale. Quant\naux benzodiazépines, elles peuvent exacerber la confusion et\nprovoquer davantage de désinhibition chez l’enfant.\nLes patients en phase terminale présentent une détresse mul-\ntifactorielle. Le médecin doit s’assurer du traitement adéquat\ndes symptômes physiques qui inuent puissamment sur la\ndétresse psychique, le niveau fonctionnel et la qualité de vie.\nEn contrepartie, le vécu psychique, le soutien familial ainsi que\nl’environnement social et physique se répercutent aussi sur\nla perception des symptômes physiques, dont la douleur.\nL’interaction de ces facteurs crée une situation unique pour\nchaque patient vivant ce stresseur majeur, souvent le plus\nimportant dans une vie.\nLes éléments existentiels, tels que la recherche de sens\net l’attitude face à la mort, deviennent souvent des thèmes\nimportants des psychothérapies proposées. La personne en\nphase terminale transcende le concept de « patient ». Ainsi, les\nconcepts de deuil normal, de résilience et d’accompagnement\nprennent tout leur sens et doivent faire partie du traitement. La\ncollaboration interprofessionnelle devient une modalité incon-\ntournable ; le clinicien œuvrant en soins palliatifs doit donc y\nêtre spéciquement formé.\nLa cible de l’intervention est la plupart du temps constituée de\nl’unité formée par le patient et sa famille. Il faut donc s’attarder à la\nréaction des proches aidants qui jouent souvent un rôle important\nde soutien, mais qui peuvent aussi présenter une grande détresse\npsychique. Cette détresse doit être systématiquement évaluée et\ntraitée. Le deuil demeure un concept important et omniprésent\nen soins palliatifs et en n de vie, autant pour le patient que pour\nles proches et les soignants.\nLe clinicien œuvrant auprès des personnes en phase terminale\nqui y investit son intérêt et un peu de sa personne a le privilège\nde toucher de plus près le mystère du sens de la vie et de la mort.\nIl peut en être transformé et obtenir la gratication de se sentir\nun peu plus humain grâce à ce travail exigeant.\nde communication, la diculté de discuter de la maladie avec les\nparents, de parler de la mort et la crainte d’être seul.\nAnxiété\nL’anxiété est fréquente chez les enfants et peut se manifester\npar des symptômes somatiques. Il faut tenter d’intervenir sur\nla cause de l’anxiété, quand cela est possible. Par exemple, si on\nconclut qu’une médication, telle que les corticostéroïdes, génère\nun syndrome anxieux, on révisera alors le dosage ou l’indication\nde cette médication.\nIl faut essayer d’optimiser l’environnement en le rendant\naussi familier que possible, agréable et serein, et en intégrant\ndes activités et des périodes de contact avec les parents et la\nfamille. La continuité des soins demeure un aspect important. Les\ninterventions cognitivo-comportementales sont ecaces pour\ntraiter l’anxiété chez les enfants, alors que la désensibilisation\nsystématique et l’exposition peuvent être utiles pour traiter la\nphobie des aiguilles ou l’aversion à l’égard de certains aliments.\nSur le plan pharmacothérapeutique, les ISRS sont des médica-\nments de premier choix (la uvoxamine a montré une supériorité\npar rapport au placebo pour traiter l’anxiété chez les enfants,\nparticulièrement l’anxiété de séparation, l’anxiété sociale et\nl’anxiété généralisée) (Walkup & al., 2001). Si l’ISRS n’agit pas\nassez rapidement ou ne procure pas un soulagement susant,\nil peut y avoir lieu de traiter l’anxiété avec une benzodiazépine,\nun antipsychotique sédatif (quétiapine, olanzapine) ou un anti-\ndépresseur tricyclique à faible dose et avec une courte durée\nd’action (p. ex., l’amitriptyline). Les analgésiques ont souvent\naussi un eet anxiolytique adjuvant signicatif et peuvent être\nutilisés à cet eet (p. ex., la morphine) lorsqu’ils sont déjà pres-\ncrits pour la douleur.\nDelirium\nLe delirium survient chez les enfants et peut parfois être confondu\navec d’autres symptômes, comme chez l’adulte. Par exemple,\nalors que la famille et le personnel soignant tentent de donner\ndes explications psychologiques, un comportement inapproprié\net d’allure régressive chez un enfant peut être dû à un delirium.\nLe cerveau des enfants en soins palliatifs est parfois fragilisé\npar une atteinte neurologique préexistante, par une privation\nde sommeil ou par une surstimulation sensorielle. À l’instar du\ntraitement du delirium chez l’adulte, les interventions environ-\nnementales et comportementales sont importantes pour créer\nun environnement calme, familier et rassurant.\n",
+  "raw_text_sha256": "6ffef721976eea8e5f50eefecad45f2e58d2ec502432e8d0fb426bbadff0e6aa",
+  "source_page_display": 1065,
+  "source_page_index": 1064
+}

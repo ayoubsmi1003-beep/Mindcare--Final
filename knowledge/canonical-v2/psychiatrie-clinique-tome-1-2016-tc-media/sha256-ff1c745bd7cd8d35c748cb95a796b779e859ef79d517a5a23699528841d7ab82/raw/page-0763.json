@@ -1,0 +1,280 @@
+{
+  "block_sequence_sha256": "e8b1e369659e21aaa0e09f9d9d1e390e726c01e07c55198d16fcd1af3d357571",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0763-block-0001",
+      "order": 1,
+      "text": "746\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "5b0a5cd740cf52ab51b72dc119d01a8b782b53080ddf95859fb7a90336319ffe"
+    },
+    {
+      "bbox": [
+        306.0,
+        239.36582946777344,
+        549.63623046875,
+        387.8584899902344
+      ],
+      "block_id": "page-0763-block-0002",
+      "order": 2,
+      "text": "Le traitement du trouble anxieux est souvent accompagné d’une\namélioration du sommeil, et vice-versa. Une stratégie qui combine\nl’approche pharmacologique et l’approche comportementale\npour le traitement de l’insomnie chez le patient sourant d’un\ntrouble anxieux donne des résultats supérieurs à ceux que donne\nchacune de ces deux approches utilisées séparément. Les symp-\ntômes résiduels peuvent toutefois être importants et doivent être\névalués à leur juste mesure, car le risque de rechute du trouble\nanxieux est élevé si le problème de sommeil persiste. Entre\nautres, la cessation trop rapide d’un traitement pharmacologique\nanxiolytique, que ce soit une benzodiazépine ou une nouvelle\nmolécule « Z » (zolpidem, zopiclone) peut être accompagnée\nd’une recrudescence du trouble du sommeil et de cauchemars.\n",
+      "text_sha256": "e1097fe780ab86c6d1bb6fb6872c3e8603e449d36abc11f5e8b823f476ea1ec7"
+    },
+    {
+      "bbox": [
+        306.0,
+        396.3868103027344,
+        411.4777526855469,
+        412.5293884277344
+      ],
+      "block_id": "page-0763-block-0003",
+      "order": 3,
+      "text": "32.10.2 Dépression\n",
+      "text_sha256": "9e6b2923e018a89048e6d70573fea772804e0ce322a5a2c856bd894500b29b3f"
+    },
+    {
+      "bbox": [
+        306.0,
+        415.8658142089844,
+        549.38134765625,
+        506.8584899902344
+      ],
+      "block_id": "page-0763-block-0004",
+      "order": 4,
+      "text": "Parmi les diérentes catégories de troubles psychiatriques, la\ndépression a suscité le plus de recherches sur le sommeil. On\nrapporte que 50 à 90 % des patients déprimés se plaignent de leur\nsommeil, bien que cette plainte ne soit pas centrale comme elle\nl’est chez les patients insomniaques idiopathiques. Les deux tiers\ndes patients déprimés se plaignent d’un sommeil fragmenté et\nraccourci, que ce soit par un délai d’endormissement prolongé,\ndes réveils nocturnes ou un réveil matinal précoce.\n",
+      "text_sha256": "77d12c54283e51820e2950fd2802abb68a2920c0fe3a22602e7fabcd15f9aa79"
+    },
+    {
+      "bbox": [
+        306.0,
+        507.8658447265625,
+        549.48876953125,
+        679.3585205078125
+      ],
+      "block_id": "page-0763-block-0005",
+      "order": 5,
+      "text": "Dans 15 à 20 % des cas, le prol de sommeil est atypique, avec\nune somnolence diurne excessive ou un sommeil nocturne pro-\nlongé, parfois accompagné d’hyperphagie – ce qu’il faut distinguer\ndu syndrome de Kleine-Levin (voir la sous-section 32.5.2). Il existe\nune association positive entre la somnolence diurne des patients\ndéprimés et les idéations suicidaires. Les symptômes résiduels les\nplus typiques, à la suite d’un traitement ecace de la dépression,\nsont les troubles du sommeil et la fatigue. À l’inverse, l’insomnie\nprécède souvent la dépression et son traitement peut prévenir le\nrisque d’une dépression ultérieure. Ainsi, un traitement qui vise\nà la fois la dépression et les troubles du sommeil peut avoir une\necacité durable. Les recherches récentes montrent que l’utilisation\ncombinée d’approches pharmacologiques et comportementales de\nl’insomnie chez le patient déprimé augmente signicativement l’ef-\ncacité de l’une et l’autre comparativement à leur application isolée.\n",
+      "text_sha256": "17f8c3539cee34c5fc3c53ad34cf7e5f37771374f0db7ca2b20d15a97826cb87"
+    },
+    {
+      "bbox": [
+        306.0,
+        680.3658447265625,
+        549.0175170898438,
+        738.8585205078125
+      ],
+      "block_id": "page-0763-block-0006",
+      "order": 6,
+      "text": "Les signes prépondérants de troubles objectifs de l’organisation\ndu sommeil dans la dépression, mesurée par la polysomnogra-\nphie, sont :\n• un court délai d’apparition du sommeil paradoxal (autant\ndans la dépression unipolaire que bipolaire) ;\n",
+      "text_sha256": "1c1cace1890b13b01346fefbd97e730d39632a1763681e990664fa4750e0623b"
+    },
+    {
+      "bbox": [
+        48.0,
+        41.4658203125,
+        291.3145751953125,
+        261.40850830078125
+      ],
+      "block_id": "page-0763-block-0007",
+      "order": 7,
+      "text": "plus, on sait que la photothérapie peut faire basculer en phase\nmaniaque un patient sourant d’un trouble bipolaire qui était\nen phase dépressive.\n• L’administration de mélatonine est une approche inverse de\nla photothérapie : les niveaux de mélatonine sont inhibés par\nla lumière ; donc cette hormone commence à s’accumuler au\nmoment où la température centrale commence à chuter (voir\nla gure 32.1). La prise de mélatonine 3 mg le soir fait donc\navancer l’horloge circadienne interne et la prise de mélato-\nnine le matin, fait reculer l’horloge circadienne interne. Il\nsemble que la dose de mélatonine soit moins importante que\nle moment de son administration et que les conséquences\nd’un moment d’administration mal choisi puissent être moins\ndommageables que celles de l’administration de lumière vive.\nComme dans le traitement de l’insomnie, la combinaison\nde la mélatonine à un programme comportemental d’asso-\nciation à des synchroniseurs sociaux et environnementaux\nforts, comme l’heure du lever et l’heure des repas, donne les\nmeilleurs résultats.\n",
+      "text_sha256": "ac750950750af59d80b6e2789bbbb628385679332e358603f8e136f71cc2a777"
+    },
+    {
+      "bbox": [
+        55.0,
+        279.69317626953125,
+        236.40101623535156,
+        316.6689453125
+      ],
+      "block_id": "page-0763-block-0008",
+      "order": 8,
+      "text": "32.10\nTroubles du sommeil\net psychiatrie\n",
+      "text_sha256": "0f38a1fb40a2ee8af8541c24ce4f3c520752d4edba32e891ccb3d48ba700fce5"
+    },
+    {
+      "bbox": [
+        48.0,
+        330.4658203125,
+        291.1582946777344,
+        410.15850830078125
+      ],
+      "block_id": "page-0763-block-0009",
+      "order": 9,
+      "text": "Le problème particulier de l’insomnie en psychiatrie est abordé\nà la section 32.4. Nous discutons ici essentiellement des études\nsur l’organisation du sommeil menées chez l’adulte en fonction\ndes principaux troubles psychiatriques. Les données sont rares\nchez l’enfant et l’adolescent, même si la prévalence mesurée par\nquestionnaire des troubles du sommeil dans cette population est\ntrès élevée, comme le résume le tableau 32.13.\n",
+      "text_sha256": "393fa7fe90cc55c93ecf6de447a38c07ca7485c9112478d160e8218fc6e43612"
+    },
+    {
+      "bbox": [
+        48.0,
+        411.16583251953125,
+        291.3078918457031,
+        663.70849609375
+      ],
+      "block_id": "page-0763-block-0010",
+      "order": 10,
+      "text": "Comme chez les patients insomniaques primaires (idio-\npathiques), les évaluations subjectives (p. ex., questionnaires\nstandardisés, agendas) et objectives (p. ex., polysomnographie,\nactigraphie) du sommeil chez les personnes avec un trouble\nmental peuvent générer des résultats discordants. On ne consi-\ndère plus cette discordance comme étant un signe de « pseudo-\ninsomnie » (le patient pense qu’il dort mal alors qu’il dort bien)\nni même comme une « insomnie paradoxale » (ces deux types de\nmesures ont un poids égal). Le consensus qui émerge du DSM-5\nest clair à cet eet : la plainte d’un patient ou de ses proches à\npropos de son sommeil a nécessairement un fondement et c’est\nau clinicien d’en trouver le sens. Les parasomnies, les troubles\nde réveils nocturnes et les cauchemars sont des comportements\npathologiques qui surviennent rarement en laboratoire. Par\ncontre, les mesures objectives du sommeil en laboratoire peuvent\nquantier des phénomènes dont le patient n’a pas conscience,\npar exemple le délai d’apparition ou la proportion des stades\ndu sommeil, ou encore des troubles comme les mouvements\npériodiques des membres inférieurs ou le nombre d’apnées par\nnuit. La combinaison des deux approches (subjective et objec-\ntive) a permis de dégager certaines constantes sur le sommeil\ndes personnes avec un problème de santé mentale.\n",
+      "text_sha256": "6aaff6d7eafc021328454cd79186657eab146c72010e8eca56ea2ac348659f1e"
+    },
+    {
+      "bbox": [
+        48.0,
+        674.23681640625,
+        187.45191955566406,
+        690.37939453125
+      ],
+      "block_id": "page-0763-block-0011",
+      "order": 11,
+      "text": "32.10.1 Troubles anxieux\n",
+      "text_sha256": "275f731c540ea22049e13c38a6bfcbe4218fdbf31cf5d36412de32ad764e88cd"
+    },
+    {
+      "bbox": [
+        48.0,
+        693.7658081054688,
+        291.0411376953125,
+        738.8085327148438
+      ],
+      "block_id": "page-0763-block-0012",
+      "order": 12,
+      "text": "Chez les patients sourant d’un trouble anxieux, le niveau d’an-\nxiété est associé positivement au délai d’endormissement et à une\ncourte durée du sommeil. Le tableau 32.14 montre que les carac-\ntéristiques du sommeil varient selon les sous-groupes cliniques.\n",
+      "text_sha256": "4c13bbc7df1b576414b673fdca6bcdc7df173e8748f4f5df1beaf367269dab8e"
+    },
+    {
+      "bbox": [
+        308.25,
+        41.002296447753906,
+        540.9406127929688,
+        53.320068359375
+      ],
+      "block_id": "page-0763-block-0013",
+      "order": 13,
+      "text": "TABLEAU 32.13 Prévalence des troubles du sommeil chez\n",
+      "text_sha256": "edbbd5114f3695bb7aab08f7d6ec48bfdc824ccdfb0dd7c214fcb434cb4953da"
+    },
+    {
+      "bbox": [
+        369.0500183105469,
+        52.852294921875,
+        533.5357666015625,
+        76.320068359375
+      ],
+      "block_id": "page-0763-block-0014",
+      "order": 14,
+      "text": "l’enfant et l’adolescent pour quelques\ncatégories diagnostiques en psychiatrie\n",
+      "text_sha256": "194274fb032f08efbbfe1a6f0e7bb72f3ca78e3791c3c81d83638278b9b03f09"
+    },
+    {
+      "bbox": [
+        309.25,
+        81.27412414550781,
+        503.7799987792969,
+        91.85029602050781
+      ],
+      "block_id": "page-0763-block-0015",
+      "order": 15,
+      "text": "Catégories diagnostiques\nPrévalence\n",
+      "text_sha256": "12ba34cd9d44fdeecae233d18edf5a68b3c899a8f753963d0a28ed19f113c00b"
+    },
+    {
+      "bbox": [
+        310.25,
+        96.20195770263672,
+        497.7619934082031,
+        106.02812957763672
+      ],
+      "block_id": "page-0763-block-0016",
+      "order": 16,
+      "text": "Population générale\n10 à 35 %\n",
+      "text_sha256": "dceb88ebb2d47b95638eecc02d60249c46be1acd6b4ba278b830f9175976cced"
+    },
+    {
+      "bbox": [
+        310.25,
+        112.6519546508789,
+        419.0990905761719,
+        155.47813415527344
+      ],
+      "block_id": "page-0763-block-0017",
+      "order": 17,
+      "text": "Troubles anxieux\n• Anxiété grave\n• Trouble d’anxiété généralisée\n• Trouble obsessionnel-compulsif\n",
+      "text_sha256": "5ab09cbe757c6f914a800a80d65b0c86801d9c279b7bd878cebfeb812e9bf05f"
+    },
+    {
+      "bbox": [
+        464.5,
+        112.6519546508789,
+        497.7619934082031,
+        155.47813415527344
+      ],
+      "block_id": "page-0763-block-0018",
+      "order": 18,
+      "text": "50 à 70 %\n30 %\n30 %\n92 %\n",
+      "text_sha256": "cbf69299588a263160d0785754bb50cf59fa17d6e1d198774f81a5b564b33e0e"
+    },
+    {
+      "bbox": [
+        310.25,
+        162.0519561767578,
+        497.7619934082031,
+        171.8781280517578
+      ],
+      "block_id": "page-0763-block-0019",
+      "order": 19,
+      "text": "Décit de l’attention/hyperactivité (TDA/H)\n30 à 45 %\n",
+      "text_sha256": "af3ffbd71e02a7b5555728bcbf8eb2535ee35cc2b7c3b6fc7f537c6cc7b59983"
+    },
+    {
+      "bbox": [
+        310.25,
+        178.501953125,
+        497.7619934082031,
+        188.328125
+      ],
+      "block_id": "page-0763-block-0020",
+      "order": 20,
+      "text": "Autisme\n44 à 83 %\n",
+      "text_sha256": "2a60119cfe0b86910464c10b602db9b33d2cd15597c06e75598edc31879509ec"
+    },
+    {
+      "bbox": [
+        310.25,
+        194.90196228027344,
+        480.7879943847656,
+        204.72813415527344
+      ],
+      "block_id": "page-0763-block-0021",
+      "order": 21,
+      "text": "Dépression\n75 %\n",
+      "text_sha256": "ef9ae6f96f70b6e9b7ad9002ad8488501f5a18605aa341eb5dcb14cff7d8a2c8"
+    },
+    {
+      "bbox": [
+        310.25,
+        211.35195922851562,
+        497.7619934082031,
+        221.17813110351562
+      ],
+      "block_id": "page-0763-block-0022",
+      "order": 22,
+      "text": "Trouble bipolaire\n40 à 90 %\n",
+      "text_sha256": "9175e450dc3583f7818fd5a4e3bab63d3a7d1b1bcc446d9283bd57c4a1011d40"
+    }
+  ],
+  "coordinates_sha256": "b2662c7cb246166a32da0ceefb803e2b1e706dec37d30bdee81a19a144601c18",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0763",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "746\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nLe traitement du trouble anxieux est souvent accompagné d’une\namélioration du sommeil, et vice-versa. Une stratégie qui combine\nl’approche pharmacologique et l’approche comportementale\npour le traitement de l’insomnie chez le patient sourant d’un\ntrouble anxieux donne des résultats supérieurs à ceux que donne\nchacune de ces deux approches utilisées séparément. Les symp-\ntômes résiduels peuvent toutefois être importants et doivent être\névalués à leur juste mesure, car le risque de rechute du trouble\nanxieux est élevé si le problème de sommeil persiste. Entre\nautres, la cessation trop rapide d’un traitement pharmacologique\nanxiolytique, que ce soit une benzodiazépine ou une nouvelle\nmolécule « Z » (zolpidem, zopiclone) peut être accompagnée\nd’une recrudescence du trouble du sommeil et de cauchemars.\n32.10.2 Dépression\nParmi les diérentes catégories de troubles psychiatriques, la\ndépression a suscité le plus de recherches sur le sommeil. On\nrapporte que 50 à 90 % des patients déprimés se plaignent de leur\nsommeil, bien que cette plainte ne soit pas centrale comme elle\nl’est chez les patients insomniaques idiopathiques. Les deux tiers\ndes patients déprimés se plaignent d’un sommeil fragmenté et\nraccourci, que ce soit par un délai d’endormissement prolongé,\ndes réveils nocturnes ou un réveil matinal précoce.\nDans 15 à 20 % des cas, le prol de sommeil est atypique, avec\nune somnolence diurne excessive ou un sommeil nocturne pro-\nlongé, parfois accompagné d’hyperphagie – ce qu’il faut distinguer\ndu syndrome de Kleine-Levin (voir la sous-section 32.5.2). Il existe\nune association positive entre la somnolence diurne des patients\ndéprimés et les idéations suicidaires. Les symptômes résiduels les\nplus typiques, à la suite d’un traitement ecace de la dépression,\nsont les troubles du sommeil et la fatigue. À l’inverse, l’insomnie\nprécède souvent la dépression et son traitement peut prévenir le\nrisque d’une dépression ultérieure. Ainsi, un traitement qui vise\nà la fois la dépression et les troubles du sommeil peut avoir une\necacité durable. Les recherches récentes montrent que l’utilisation\ncombinée d’approches pharmacologiques et comportementales de\nl’insomnie chez le patient déprimé augmente signicativement l’ef-\ncacité de l’une et l’autre comparativement à leur application isolée.\nLes signes prépondérants de troubles objectifs de l’organisation\ndu sommeil dans la dépression, mesurée par la polysomnogra-\nphie, sont :\n• un court délai d’apparition du sommeil paradoxal (autant\ndans la dépression unipolaire que bipolaire) ;\nplus, on sait que la photothérapie peut faire basculer en phase\nmaniaque un patient sourant d’un trouble bipolaire qui était\nen phase dépressive.\n• L’administration de mélatonine est une approche inverse de\nla photothérapie : les niveaux de mélatonine sont inhibés par\nla lumière ; donc cette hormone commence à s’accumuler au\nmoment où la température centrale commence à chuter (voir\nla gure 32.1). La prise de mélatonine 3 mg le soir fait donc\navancer l’horloge circadienne interne et la prise de mélato-\nnine le matin, fait reculer l’horloge circadienne interne. Il\nsemble que la dose de mélatonine soit moins importante que\nle moment de son administration et que les conséquences\nd’un moment d’administration mal choisi puissent être moins\ndommageables que celles de l’administration de lumière vive.\nComme dans le traitement de l’insomnie, la combinaison\nde la mélatonine à un programme comportemental d’asso-\nciation à des synchroniseurs sociaux et environnementaux\nforts, comme l’heure du lever et l’heure des repas, donne les\nmeilleurs résultats.\n32.10\nTroubles du sommeil\net psychiatrie\nLe problème particulier de l’insomnie en psychiatrie est abordé\nà la section 32.4. Nous discutons ici essentiellement des études\nsur l’organisation du sommeil menées chez l’adulte en fonction\ndes principaux troubles psychiatriques. Les données sont rares\nchez l’enfant et l’adolescent, même si la prévalence mesurée par\nquestionnaire des troubles du sommeil dans cette population est\ntrès élevée, comme le résume le tableau 32.13.\nComme chez les patients insomniaques primaires (idio-\npathiques), les évaluations subjectives (p. ex., questionnaires\nstandardisés, agendas) et objectives (p. ex., polysomnographie,\nactigraphie) du sommeil chez les personnes avec un trouble\nmental peuvent générer des résultats discordants. On ne consi-\ndère plus cette discordance comme étant un signe de « pseudo-\ninsomnie » (le patient pense qu’il dort mal alors qu’il dort bien)\nni même comme une « insomnie paradoxale » (ces deux types de\nmesures ont un poids égal). Le consensus qui émerge du DSM-5\nest clair à cet eet : la plainte d’un patient ou de ses proches à\npropos de son sommeil a nécessairement un fondement et c’est\nau clinicien d’en trouver le sens. Les parasomnies, les troubles\nde réveils nocturnes et les cauchemars sont des comportements\npathologiques qui surviennent rarement en laboratoire. Par\ncontre, les mesures objectives du sommeil en laboratoire peuvent\nquantier des phénomènes dont le patient n’a pas conscience,\npar exemple le délai d’apparition ou la proportion des stades\ndu sommeil, ou encore des troubles comme les mouvements\npériodiques des membres inférieurs ou le nombre d’apnées par\nnuit. La combinaison des deux approches (subjective et objec-\ntive) a permis de dégager certaines constantes sur le sommeil\ndes personnes avec un problème de santé mentale.\n32.10.1 Troubles anxieux\nChez les patients sourant d’un trouble anxieux, le niveau d’an-\nxiété est associé positivement au délai d’endormissement et à une\ncourte durée du sommeil. Le tableau 32.14 montre que les carac-\ntéristiques du sommeil varient selon les sous-groupes cliniques.\nTABLEAU 32.13 Prévalence des troubles du sommeil chez\nl’enfant et l’adolescent pour quelques\ncatégories diagnostiques en psychiatrie\nCatégories diagnostiques\nPrévalence\nPopulation générale\n10 à 35 %\nTroubles anxieux\n• Anxiété grave\n• Trouble d’anxiété généralisée\n• Trouble obsessionnel-compulsif\n50 à 70 %\n30 %\n30 %\n92 %\nDécit de l’attention/hyperactivité (TDA/H)\n30 à 45 %\nAutisme\n44 à 83 %\nDépression\n75 %\nTrouble bipolaire\n40 à 90 %\n",
+  "raw_text_sha256": "8870238a91e703eef465d797ac636be9afb0b941a625277f36f43d095ab4a58b",
+  "source_page_display": 764,
+  "source_page_index": 763
+}

@@ -1,0 +1,532 @@
+{
+  "block_sequence_sha256": "9084f99028090f56f9bae771f99960ac9c3c69bbf8d78a703b5fba9554aa5034",
+  "blocks": [
+    {
+      "bbox": [
+        496.5,
+        747.5753784179688,
+        555.02001953125,
+        758.8693237304688
+      ],
+      "block_id": "page-1202-block-0001",
+      "order": 1,
+      "text": "Index\nI41\n",
+      "text_sha256": "2a5b0d119bbeafa97a0d3f3271c5718b5ebd6108a69253751dfffa0e82b1491a"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.82011795043945,
+        122.40750122070312,
+        52.41728591918945
+      ],
+      "block_id": "page-1202-block-0002",
+      "order": 2,
+      "text": "orientation, 168\n",
+      "text_sha256": "679570513fae1abfde3ef03e0ef07bf923efc261ea91990c9610c89fbc9990bf"
+    },
+    {
+      "bbox": [
+        54.0,
+        53.57011795043945,
+        203.56350708007812,
+        90.6172866821289
+      ],
+      "block_id": "page-1202-block-0003",
+      "order": 3,
+      "text": "sexuelle, 753, 754f, 754t, 785-787\northopédagogie, 1349, 1353\northophonie, 1276-1277, 1349\n",
+      "text_sha256": "be6b50e19e83ddb4972860891fe8a61331449ea3d6ebc8a425b02382ee7b481a"
+    },
+    {
+      "bbox": [
+        54.0,
+        96.3570327758789,
+        160.1498260498047,
+        162.81729125976562
+      ],
+      "block_id": "page-1202-block-0004",
+      "order": 4,
+      "text": "P\npair aidant, 988-989, 999\npanique, 412, 422\npanphobie, 414\nparadigme\n",
+      "text_sha256": "7fa467b91a65760d256749a690208b08114ca33791c2fe91844ecbcce5ac0645"
+    },
+    {
+      "bbox": [
+        54.0,
+        163.9201202392578,
+        198.13009643554688,
+        213.71728515625
+      ],
+      "block_id": "page-1202-block-0005",
+      "order": 5,
+      "text": "de la santé publique, 1074-1075\nhippocratique, 22\nparalogismes, 183\nparanoïa, 313, voir aussi delirium\n",
+      "text_sha256": "bf746634e80a64afece198092a0f796abcc4b5e5c7d52c544a742d30f5d0ef0a"
+    },
+    {
+      "bbox": [
+        54.0,
+        214.8701171875,
+        205.1995086669922,
+        251.9172821044922
+      ],
+      "block_id": "page-1202-block-0006",
+      "order": 6,
+      "text": "conjugale, 320\nlitigieuse ou quérulente, 318\nparanoïde, 313, 313t, 318, 344, 673t\n",
+      "text_sha256": "a667cf3d38315faf8ff9171feb5cb8a0dc7f0c6f064ada58385d7db92cadb5d1"
+    },
+    {
+      "bbox": [
+        54.0,
+        253.07012939453125,
+        157.4991912841797,
+        302.8672790527344
+      ],
+      "block_id": "page-1202-block-0007",
+      "order": 7,
+      "text": "état __, 318\ngrandiosité du __, 317\npsychose __, 318\nparaphilies, 807-826\n",
+      "text_sha256": "361da3ec272c0ecea0dae8f54a052fd80e2697e6754d81c010a10c392ee40ed5"
+    },
+    {
+      "bbox": [
+        63.0,
+        304.0201110839844,
+        192.97613525390625,
+        328.3172912597656
+      ],
+      "block_id": "page-1202-block-0008",
+      "order": 8,
+      "text": "culture et __, 807\nrisque de violence et __, 1155-\n",
+      "text_sha256": "ee15a96fd8bd20dbd2806169a67cb2d7f1f17e9ba738ae9c354d5e29694eed89"
+    },
+    {
+      "bbox": [
+        54.0,
+        329.4701232910156,
+        146.4338836669922,
+        353.8172912597656
+      ],
+      "block_id": "page-1202-block-0009",
+      "order": 9,
+      "text": "1157t\nparaphrénie, 313, 318\n",
+      "text_sha256": "0f097e729840530a52c6b5be7fe3e70065897bb344b4283d8c559cf44f93f09f"
+    },
+    {
+      "bbox": [
+        54.0,
+        354.9201354980469,
+        186.59950256347656,
+        430.16729736328125
+      ],
+      "block_id": "page-1202-block-0010",
+      "order": 10,
+      "text": "spectre paranoïde et __, 313t\ntardive, 322\nparasitophobie, 318\nparasomnies, 739-743\nparasthésie, 557t\nparents\n",
+      "text_sha256": "936afded343ff251014da3b0fa0c6db7ba712e49e6b5bf898835633b8ec33449"
+    },
+    {
+      "bbox": [
+        54.0,
+        431.32012939453125,
+        203.55772399902344,
+        519.3173217773438
+      ],
+      "block_id": "page-1202-block-0011",
+      "order": 11,
+      "text": "autocratiques, 229, 1727\nautoritaires, 1365, 1728\nfroids, 1365\nindiérents, 229\npermissifs, 229, 1728\nsurprotection et __, 1365\nparkinsonisme, 52-53, 56, 153-155,\n",
+      "text_sha256": "b2cc885e962be5cba91c9ce1f4386f8868d5b9cc358ddf1808fbc2019580a09f"
+    },
+    {
+      "bbox": [
+        54.0,
+        520.4701538085938,
+        190.1407012939453,
+        608.46728515625
+      ],
+      "block_id": "page-1202-block-0012",
+      "order": 12,
+      "text": "338, 436, 461, 592, 594-595,\n604t, 722, 1468t, 1472-1473\npartenaires intersectoriels, 999\npartenariats, 1001-1002, 1714\npassage à l’acte, 1593t\npathomimie, 690-691\npatient(s)\n",
+      "text_sha256": "8e37dc60854d7de0049b87218cba4c8ecf1a79702d03fe84cab8adc85c9ad4dd"
+    },
+    {
+      "bbox": [
+        63.0,
+        609.5701293945312,
+        148.9635009765625,
+        723.0673217773438
+      ],
+      "block_id": "page-1202-block-0013",
+      "order": 13,
+      "text": "actif, 1616\nagité, 1099-1101\nanxieux, 1105-1107\nautodestructeur, 31\nconfus, 1096-1097\ndépendant, 31\ndéprimé, 1107-1108\ndiciles, 30-31\ninquiet, 31\n",
+      "text_sha256": "6a5700ed54037979ae92b5d8c3d79c316ca0a94d69aadad9d52987e19f8184b1"
+    },
+    {
+      "bbox": [
+        234.0,
+        40.82011795043945,
+        350.1207275390625,
+        65.06729125976562
+      ],
+      "block_id": "page-1202-block-0014",
+      "order": 14,
+      "text": "intoxiqué, 1097-1099\nprésentant un trouble de la\n",
+      "text_sha256": "d5595d811118b44e52959eae90c398701aea26c6346f2b443e5a5f6ec8794a2d"
+    },
+    {
+      "bbox": [
+        234.0,
+        66.1201171875,
+        374.84259033203125,
+        141.0172882080078
+      ],
+      "block_id": "page-1202-block-0015",
+      "order": 15,
+      "text": "personnalité, 1108-1109\npsychotique, 1104-1105\nréticents à s’exprimer, 1102-1103\nrevendicateur, 31\nséducteur, 31\nsimulateur ou présentant un\n",
+      "text_sha256": "ed842efa92eaff22f9b56ec457379ec88185a1ea8cf367e53a2aed16afa5cdc0"
+    },
+    {
+      "bbox": [
+        225.0,
+        142.0701141357422,
+        363.51275634765625,
+        178.8544921875
+      ],
+      "block_id": "page-1202-block-0016",
+      "order": 16,
+      "text": "trouble factice, 1109-1110\nviolent, 1099-1101\npatterns\n",
+      "text_sha256": "eef7ac6c3920802d323924027e12d20c6ef4cc7f136aeaf16477904a4775442c"
+    },
+    {
+      "bbox": [
+        234.0,
+        180.02012634277344,
+        376.9100036621094,
+        191.61729431152344
+      ],
+      "block_id": "page-1202-block-0017",
+      "order": 17,
+      "text": "d’attachement, 1289, 1292, 1293t,\n",
+      "text_sha256": "bc09d4873675b8954d2ff6d36a7f72fbbee53be8113c8fe8c0fad374a465cd8f"
+    },
+    {
+      "bbox": [
+        234.0,
+        192.6701202392578,
+        364.8779296875,
+        229.56729125976562
+      ],
+      "block_id": "page-1202-block-0018",
+      "order": 18,
+      "text": "1295\nde fonctionnement, 45\ndysfonctionnels, 40, 480, 1580,\n",
+      "text_sha256": "07d5d04ee077d4d07d2b719a4398043cb04ef503b38ee3f7756810be67643a50"
+    },
+    {
+      "bbox": [
+        225.0,
+        230.6201171875,
+        365.31744384765625,
+        267.5173034667969
+      ],
+      "block_id": "page-1202-block-0019",
+      "order": 19,
+      "text": "1645\nrelationnels, 46, 211, 949, 1743\npauvreté, 237, 284-286, 906, 910,\n",
+      "text_sha256": "7c10290329bbfa9aa60900ac7310be8d5e99328ef5f38620d338190c0f4f59c7"
+    },
+    {
+      "bbox": [
+        225.0,
+        268.57012939453125,
+        369.7099914550781,
+        318.16729736328125
+      ],
+      "block_id": "page-1202-block-0020",
+      "order": 20,
+      "text": "913, 1091t, 1136, 1294, 1320,\n1326\ndouleur chronique et __, 559\npédophilie, 14, 807, 809-810, 817,\n",
+      "text_sha256": "ca65fba15e56f4e6f18d58a2aa39589ae62ea3be9a9762c250bb5ba6559c0ffe"
+    },
+    {
+      "bbox": [
+        225.0,
+        319.2201232910156,
+        336.3995056152344,
+        356.1172790527344
+      ],
+      "block_id": "page-1202-block-0021",
+      "order": 21,
+      "text": "818t, 820, 1146, 1157t\npédovestisme, 815\npénétration\n",
+      "text_sha256": "0cc2d5303d16e01f8fe3165923f27768125583f4ef6f7ffed8a2299c9a8d09d0"
+    },
+    {
+      "bbox": [
+        225.0,
+        357.1701354980469,
+        375.4776611328125,
+        394.0672912597656
+      ],
+      "block_id": "page-1202-block-0022",
+      "order": 22,
+      "text": "anale, 753\nvaginale, 753\npensée(s), 198, 208-209, 1222-1224\n",
+      "text_sha256": "a71ddc5fdaabb77cbfc9ec7eec2d2ca3079bfa832de9464700218a9d3d41b6c4"
+    },
+    {
+      "bbox": [
+        234.0,
+        395.1201171875,
+        372.1994934082031,
+        533.2672729492188
+      ],
+      "block_id": "page-1202-block-0023",
+      "order": 23,
+      "text": "abstraite, 209\nanimiste, 208\nautomatiques, 1644, 1649, 1650t\ndélirantes, 401\ndésorganisées, 1222\nimposées, 522\nnormale, 1222\nopératoire, 209\npauvreté de la __, 1222, 1223f\npsychosomatique, 666\nsuicidaires, voir aussi idée(s)\n",
+      "text_sha256": "d2896e77eab4b98872c52e2f2be97c857e5953c0beb393d5897c4e86adbd4c56"
+    },
+    {
+      "bbox": [
+        225.0,
+        534.3201293945312,
+        363.05767822265625,
+        583.8673095703125
+      ],
+      "block_id": "page-1202-block-0024",
+      "order": 24,
+      "text": "(suicidaire)\ndépression et __, 396\nvol de la __, 522\nperception, 60-66, 167-171, 206,\n",
+      "text_sha256": "5e00b6b711b25bff3a1f0c6199cf34fa8d57db7e41b42dcfb15a8924dd27b23c"
+    },
+    {
+      "bbox": [
+        225.0,
+        584.9201049804688,
+        378.05841064453125,
+        659.7672729492188
+      ],
+      "block_id": "page-1202-block-0025",
+      "order": 25,
+      "text": "1345\ndouloureuses, 551\ndu mouvement, 167-168\norientation spatiale et __, 168\nsociale du médecin, 22\nperformance, 62, 145, 182, 190-192,\n",
+      "text_sha256": "e54768dd48d4f08a3ab0f63343d1020dd1efb037b18dff8ae92c5b855e19d816"
+    },
+    {
+      "bbox": [
+        234.0,
+        660.8201293945312,
+        365.8600158691406,
+        685.0673217773438
+      ],
+      "block_id": "page-1202-block-0026",
+      "order": 26,
+      "text": "425-427, 996, 1323t\npression de performance, 332f,\n",
+      "text_sha256": "1b5bf5cb70ac8010ffc29e51d5585dea006eef94dfd127330843defbcca91108"
+    },
+    {
+      "bbox": [
+        225.0,
+        686.1201171875,
+        339.5848388671875,
+        723.0673217773438
+      ],
+      "block_id": "page-1202-block-0027",
+      "order": 27,
+      "text": "341\npéripartum, 402\npermanence de l’objet, 208\n",
+      "text_sha256": "90ba05c6e71fda18202baf4f0c1781abe7068673772f184f79f99180dc3ae159"
+    },
+    {
+      "bbox": [
+        396.0,
+        40.82011795043945,
+        548.4639892578125,
+        52.41728591918945
+      ],
+      "block_id": "page-1202-block-0028",
+      "order": 28,
+      "text": "personnalité, 515, voir aussi trouble\n",
+      "text_sha256": "1c55a81e8e137764ae70e78263a8894042d554d64dc810aec5833b6af0cf4085"
+    },
+    {
+      "bbox": [
+        405.0,
+        53.47011947631836,
+        553.9825439453125,
+        115.71728515625
+      ],
+      "block_id": "page-1202-block-0029",
+      "order": 29,
+      "text": "de la personnalité\ncaractéristiques de la __, 1125\nbéhaviorisme et __, 1612\ndépendante, 31, 673t\ndéveloppement de la __, voir déve-\n",
+      "text_sha256": "91257ee21e840bfc05b363c90d975e4b867715fe44aa208703d2546fed7b77c5"
+    },
+    {
+      "bbox": [
+        405.0,
+        116.7701187133789,
+        548.1704711914062,
+        141.0172882080078
+      ],
+      "block_id": "page-1202-block-0030",
+      "order": 30,
+      "text": "loppement de la personnalité\neet de la maladie sur la __, 762-\n",
+      "text_sha256": "e1f195417fcb0cf3bc37c0b7cc06e2ca8ead775ef3144e8cb9b216b1dd33a566"
+    },
+    {
+      "bbox": [
+        405.0,
+        142.0701141357422,
+        545.0333862304688,
+        204.2672882080078
+      ],
+      "block_id": "page-1202-block-0031",
+      "order": 31,
+      "text": "763\névaluation de la __, 936-938t\nhystérique, 673t\nmasochiste, 673t\nmodèle structural de la __ (selon\n",
+      "text_sha256": "573c84c77fd066c243ce188a03c445c35048cef60c5577ae5286216cc019babd"
+    },
+    {
+      "bbox": [
+        405.0,
+        205.3201141357422,
+        540.2100219726562,
+        229.56729125976562
+      ],
+      "block_id": "page-1202-block-0032",
+      "order": 32,
+      "text": "Freud), 217f\nmodication de la __, 638-640,\n",
+      "text_sha256": "ca49814af451e8f43017ab46339d8222b8d73f451c424a7a455117966dd883c0"
+    },
+    {
+      "bbox": [
+        405.0,
+        230.6201171875,
+        533.4559326171875,
+        267.5173034667969
+      ],
+      "block_id": "page-1202-block-0033",
+      "order": 33,
+      "text": "639t\nnarcissique, 673t\nniveau d’organisation de la __,\n",
+      "text_sha256": "39313093731440cbd9f808132100f8c55979876b3e04ddf03c7aa27857f7d128"
+    },
+    {
+      "bbox": [
+        405.0,
+        268.57012939453125,
+        515.7159423828125,
+        318.16729736328125
+      ],
+      "block_id": "page-1202-block-0034",
+      "order": 34,
+      "text": "1596-1598, 1597t\nobsessionnelle, 673t\nparanoïde, 673t\nperspectives orientales de\n",
+      "text_sha256": "2441d836aa7103a899852d55900eac55b6e1a046afbe4f28a2b427196d43f561"
+    },
+    {
+      "bbox": [
+        405.0,
+        319.2201232910156,
+        538.1931762695312,
+        343.46728515625
+      ],
+      "block_id": "page-1202-block-0035",
+      "order": 35,
+      "text": "la __, 224-226\nprémorbide, 305-306, 401, 449,\n",
+      "text_sha256": "8f977ee4686052813ed5e38de92424336291dae4097c1553084b25f0689d141b"
+    },
+    {
+      "bbox": [
+        396.0,
+        344.5201110839844,
+        550.2651977539062,
+        419.3672790527344
+      ],
+      "block_id": "page-1202-block-0036",
+      "order": 36,
+      "text": "466, 504, 608, 658, 1404, 1681\nschizoïde, 673t\ntraits de la __, 939-941t\ntype de __, 672-676\nvieillissement et __, 1384-1385\npersonne(s)\n",
+      "text_sha256": "822aa9485f15d629990953cec7ed091812e4cd0c5625962a8f4d0d1e35c93004"
+    },
+    {
+      "bbox": [
+        405.0,
+        420.4201354980469,
+        428.0054931640625,
+        432.0173034667969
+      ],
+      "block_id": "page-1202-block-0037",
+      "order": 37,
+      "text": "âgées\n",
+      "text_sha256": "66371d3a1839be42e548baad84892752a743cadb9c940fac9c4ba81ab8985482"
+    },
+    {
+      "bbox": [
+        414.0,
+        434.10943603515625,
+        526.6367797851562,
+        444.60943603515625
+      ],
+      "block_id": "page-1202-block-0038",
+      "order": 38,
+      "text": "symptômes psychotiques\n",
+      "text_sha256": "1d52acd11be40404c1b39a3be4fe636941373085cad13d4a43db90b449dc278a"
+    },
+    {
+      "bbox": [
+        405.0,
+        446.7594299316406,
+        480.1551818847656,
+        495.3172912597656
+      ],
+      "block_id": "page-1202-block-0039",
+      "order": 39,
+      "text": "et __, 1402\napte, 1169\ninapte, 1170\nincarcérées\n",
+      "text_sha256": "79abdca460abf5832f805ad95650e682b75c533442befd49e8ca2f9942fb8283"
+    },
+    {
+      "bbox": [
+        405.0,
+        497.409423828125,
+        544.1837768554688,
+        520.6173095703125
+      ],
+      "block_id": "page-1202-block-0040",
+      "order": 40,
+      "text": "schizophrénie et __, 1026\nmineure de 14 ans et plus, 1169-\n",
+      "text_sha256": "7a9364fa529142ec902f2ce684bd786f5d65a4c8cca08d696a4f14463b375f57"
+    },
+    {
+      "bbox": [
+        396.0,
+        521.6701049804688,
+        551.4320678710938,
+        583.8673095703125
+      ],
+      "block_id": "page-1202-block-0041",
+      "order": 41,
+      "text": "1170\nmineure de moins de 14 ans, 1169\nmineure émancipée, 1170\nperspective fonctionnaliste, 281-282\nperturbateurs (psychodysleptiques),\n",
+      "text_sha256": "ecf67211bae29903696bc00e7b891e654424831198d5c94733d77ee2b1ce6479"
+    },
+    {
+      "bbox": [
+        396.0,
+        584.9201049804688,
+        461.0369873046875,
+        609.1672973632812
+      ],
+      "block_id": "page-1202-block-0042",
+      "order": 42,
+      "text": "912\npeur, 412, 1290\n",
+      "text_sha256": "55b4a3ce672420d029a3d962223d4131fa296c249bc52e462af42e242296ba73"
+    },
+    {
+      "bbox": [
+        396.0,
+        610.2201538085938,
+        535.0838623046875,
+        723.0673217773438
+      ],
+      "block_id": "page-1202-block-0043",
+      "order": 43,
+      "text": "de l’abandon, 31, 969\nde l’engagement, 243, 661, 772\nde l’intimité, 772, 775, 782\nmorbide, 413\nneurocircuiterie de la __, 494\npharmacocinétique, 1433-1434\npharmacodynamie, 1432-1433\npharmacoéconomie, 1435\npharmacogénétique, 1434-1435\n",
+      "text_sha256": "ff5c22350b30a7a19b528cf1338a6f7a4094544321b285c5bce5247238eca88e"
+    }
+  ],
+  "coordinates_sha256": "45556347880cb1f273297d7d480ca88e3c553c773d0b6d0789ae34477ea64748",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1202",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Index\nI41\norientation, 168\nsexuelle, 753, 754f, 754t, 785-787\northopédagogie, 1349, 1353\northophonie, 1276-1277, 1349\nP\npair aidant, 988-989, 999\npanique, 412, 422\npanphobie, 414\nparadigme\nde la santé publique, 1074-1075\nhippocratique, 22\nparalogismes, 183\nparanoïa, 313, voir aussi delirium\nconjugale, 320\nlitigieuse ou quérulente, 318\nparanoïde, 313, 313t, 318, 344, 673t\nétat __, 318\ngrandiosité du __, 317\npsychose __, 318\nparaphilies, 807-826\nculture et __, 807\nrisque de violence et __, 1155-\n1157t\nparaphrénie, 313, 318\nspectre paranoïde et __, 313t\ntardive, 322\nparasitophobie, 318\nparasomnies, 739-743\nparasthésie, 557t\nparents\nautocratiques, 229, 1727\nautoritaires, 1365, 1728\nfroids, 1365\nindiérents, 229\npermissifs, 229, 1728\nsurprotection et __, 1365\nparkinsonisme, 52-53, 56, 153-155,\n338, 436, 461, 592, 594-595,\n604t, 722, 1468t, 1472-1473\npartenaires intersectoriels, 999\npartenariats, 1001-1002, 1714\npassage à l’acte, 1593t\npathomimie, 690-691\npatient(s)\nactif, 1616\nagité, 1099-1101\nanxieux, 1105-1107\nautodestructeur, 31\nconfus, 1096-1097\ndépendant, 31\ndéprimé, 1107-1108\ndiciles, 30-31\ninquiet, 31\nintoxiqué, 1097-1099\nprésentant un trouble de la\npersonnalité, 1108-1109\npsychotique, 1104-1105\nréticents à s’exprimer, 1102-1103\nrevendicateur, 31\nséducteur, 31\nsimulateur ou présentant un\ntrouble factice, 1109-1110\nviolent, 1099-1101\npatterns\nd’attachement, 1289, 1292, 1293t,\n1295\nde fonctionnement, 45\ndysfonctionnels, 40, 480, 1580,\n1645\nrelationnels, 46, 211, 949, 1743\npauvreté, 237, 284-286, 906, 910,\n913, 1091t, 1136, 1294, 1320,\n1326\ndouleur chronique et __, 559\npédophilie, 14, 807, 809-810, 817,\n818t, 820, 1146, 1157t\npédovestisme, 815\npénétration\nanale, 753\nvaginale, 753\npensée(s), 198, 208-209, 1222-1224\nabstraite, 209\nanimiste, 208\nautomatiques, 1644, 1649, 1650t\ndélirantes, 401\ndésorganisées, 1222\nimposées, 522\nnormale, 1222\nopératoire, 209\npauvreté de la __, 1222, 1223f\npsychosomatique, 666\nsuicidaires, voir aussi idée(s)\n(suicidaire)\ndépression et __, 396\nvol de la __, 522\nperception, 60-66, 167-171, 206,\n1345\ndouloureuses, 551\ndu mouvement, 167-168\norientation spatiale et __, 168\nsociale du médecin, 22\nperformance, 62, 145, 182, 190-192,\n425-427, 996, 1323t\npression de performance, 332f,\n341\npéripartum, 402\npermanence de l’objet, 208\npersonnalité, 515, voir aussi trouble\nde la personnalité\ncaractéristiques de la __, 1125\nbéhaviorisme et __, 1612\ndépendante, 31, 673t\ndéveloppement de la __, voir déve-\nloppement de la personnalité\neet de la maladie sur la __, 762-\n763\névaluation de la __, 936-938t\nhystérique, 673t\nmasochiste, 673t\nmodèle structural de la __ (selon\nFreud), 217f\nmodication de la __, 638-640,\n639t\nnarcissique, 673t\nniveau d’organisation de la __,\n1596-1598, 1597t\nobsessionnelle, 673t\nparanoïde, 673t\nperspectives orientales de\nla __, 224-226\nprémorbide, 305-306, 401, 449,\n466, 504, 608, 658, 1404, 1681\nschizoïde, 673t\ntraits de la __, 939-941t\ntype de __, 672-676\nvieillissement et __, 1384-1385\npersonne(s)\nâgées\nsymptômes psychotiques\net __, 1402\napte, 1169\ninapte, 1170\nincarcérées\nschizophrénie et __, 1026\nmineure de 14 ans et plus, 1169-\n1170\nmineure de moins de 14 ans, 1169\nmineure émancipée, 1170\nperspective fonctionnaliste, 281-282\nperturbateurs (psychodysleptiques),\n912\npeur, 412, 1290\nde l’abandon, 31, 969\nde l’engagement, 243, 661, 772\nde l’intimité, 772, 775, 782\nmorbide, 413\nneurocircuiterie de la __, 494\npharmacocinétique, 1433-1434\npharmacodynamie, 1432-1433\npharmacoéconomie, 1435\npharmacogénétique, 1434-1435\n",
+  "raw_text_sha256": "01ff033e06e9fc8078d3163fa1829dc9d5f067180566e62260ab62d00c2f611b",
+  "source_page_display": 1203,
+  "source_page_index": 1202
+}

@@ -1,0 +1,508 @@
+{
+  "block_sequence_sha256": "1260543be4751c879d4b5584c3130e75c0dc30537af13cc8f2bd2a10fc3fe002",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        126.91150665283203,
+        758.8693237304688
+      ],
+      "block_id": "page-1105-block-0001",
+      "order": 1,
+      "text": "R8\nRéférences\n",
+      "text_sha256": "56526e08bab696f3d1690109522e5319cbc0e7596edd78f743a214fb0d13d9ba"
+    },
+    {
+      "bbox": [
+        390.0,
+        40.68496322631836,
+        549.0726928710938,
+        134.37344360351562
+      ],
+      "block_id": "page-1105-block-0002",
+      "order": 2,
+      "text": "Tisch, S. & al. (2004). « The basal ganglia : Anatomy,\nphysiology, and pharmacology », Psychiatric Clinics of North\nAmerica, 27(4), p. 757-799.\nTowler, J. & Eimer, M. (2012). « Electrophysiological studies\nof face processing in developmental prosopagnosia :\nneuropsychological and neurodevelopmental perspectives »,\nCognitive Neuropsychology, 29(5-6), p. 503-529.\nUnterrainer, J. M. & Owen, A. M. (2006). « Planning and problem\nsolving : From neuropsychology to functional neuroimaging »,\nJournal of Physiology- Paris, 99(4-6), p. 308-317.\n",
+      "text_sha256": "33c8effa6176d02124ee89f8ec0ec933d989daaa21cab88dd6801c28205427a1"
+    },
+    {
+      "bbox": [
+        390.0,
+        138.2849578857422,
+        547.268798828125,
+        164.67344665527344
+      ],
+      "block_id": "page-1105-block-0003",
+      "order": 3,
+      "text": "Vallar, G. & Ronchi, R. (2009). « Somatoparaphrenia : A body\ndelusion. A review of the neuropsychological literature »,\nExperimental Brain Research, 192(3), p. 533-551.\n",
+      "text_sha256": "c02efb1238692ed214bac18e57fcf87656449a007b4eb0ecf5a3bf5769850c48"
+    },
+    {
+      "bbox": [
+        390.0,
+        168.5849609375,
+        545.4828491210938,
+        185.87344360351562
+      ],
+      "block_id": "page-1105-block-0004",
+      "order": 4,
+      "text": "Van Horn, J. D. & al. (2012). « Mapping connectivity damage in\nthe case of Phineas Gage », PLoS One, 7(5), p. e37454.\n",
+      "text_sha256": "3ffc3b51d24c61e2918fcb9af5c153a444bdcfeea32ad1b798c0f8cb3905a93e"
+    },
+    {
+      "bbox": [
+        390.0,
+        189.7849578857422,
+        547.9179077148438,
+        225.2734375
+      ],
+      "block_id": "page-1105-block-0005",
+      "order": 5,
+      "text": "Wager, T. D. & al. (2005). « Toward a taxonomy of attention\nshifting : individual differences in fMRI during multiple shift\ntypes », Cognitive Affective & Behaviral Neuroscience, 5(2),\np. 127-143.\n",
+      "text_sha256": "3dccba0f910dc33da63e921318887dd84f6095ebc127496bc85344bc1e196892"
+    },
+    {
+      "bbox": [
+        390.0,
+        229.18496704101562,
+        541.6273803710938,
+        255.5734405517578
+      ],
+      "block_id": "page-1105-block-0006",
+      "order": 6,
+      "text": "Wang, J. & al. (2010). « Neural representation of abstract\nand concrete concepts : A meta-analysis of neuroimaging\nstudies », Human Brain Mapping, 31(10), p. 1459-1468.\n",
+      "text_sha256": "254154c229b730c87850aa81cda220dc78035d3567e26abe6c19509fd1563bd2"
+    },
+    {
+      "bbox": [
+        390.0,
+        259.4849548339844,
+        547.0399780273438,
+        285.8734436035156
+      ],
+      "block_id": "page-1105-block-0007",
+      "order": 7,
+      "text": "Wang, K. & al. (2011). « Semantic processing disturbance in\npatients with schizophrenia : A meta-analysis of the N400\ncomponent », PLoS One, 6(10), p. e25435.\n",
+      "text_sha256": "5769c512a5190f07b91ff4fef55654b323dcb3c554cefa527256cb8ee9bde0ac"
+    },
+    {
+      "bbox": [
+        390.0,
+        289.78497314453125,
+        547.869384765625,
+        316.1734313964844
+      ],
+      "block_id": "page-1105-block-0008",
+      "order": 8,
+      "text": "Wardak, C. & al. (2006). « Contribution of the monkey frontal\neye eld to covert visual attention », Journal of Neuros-\ncience, 26(16), p. 4228-4235.\n",
+      "text_sha256": "d5d4bbd604bde4ab5866d3d1e6785859d7e911dc211ef661f4dcbfd4fcdb8afc"
+    },
+    {
+      "bbox": [
+        390.0,
+        320.0849609375,
+        548.447509765625,
+        346.47344970703125
+      ],
+      "block_id": "page-1105-block-0009",
+      "order": 9,
+      "text": "Watkins, L. H. & al. (2005). « Executive function in Tourette’s\nsyndrome and obsessive-compulsive disorder », Psychologi-\ncal Medicine, 35(4), p. 571-582.\n",
+      "text_sha256": "86092ea9b38f5101dd426962bd08ac63e54970bf9b90fe33102e34ef2bdac6a4"
+    },
+    {
+      "bbox": [
+        390.0,
+        350.3849792480469,
+        546.6500244140625,
+        376.7734375
+      ],
+      "block_id": "page-1105-block-0010",
+      "order": 10,
+      "text": "Webster, R. I. & Shevell, M. I. (2004). « Neurobiology of\nspecic language impairment », Journal of Child Neurology,\n19(7), p. 471-481.\n",
+      "text_sha256": "18d4978420c8fbd62fa9393623a66c5f627ead6fc0b164a2264bfe997a7fd826"
+    },
+    {
+      "bbox": [
+        390.0,
+        380.6849670410156,
+        544.1400146484375,
+        416.1234436035156
+      ],
+      "block_id": "page-1105-block-0011",
+      "order": 11,
+      "text": "Yang, Z. & al. (2014). « Association analysis of genes in\nserotonin pathway with attention and executive function in\npatients with bipolar affective disorder », Comprehensive\nPsychiatry, 55(8), p. 1785-1790.\n",
+      "text_sha256": "473022ee4b6309b32e204b7631d337c7f43fb95703cd7ddcb70463be3a48d988"
+    },
+    {
+      "bbox": [
+        390.0,
+        420.03497314453125,
+        549.1948852539062,
+        437.3234558105469
+      ],
+      "block_id": "page-1105-block-0012",
+      "order": 12,
+      "text": "Zalla, T. & al. (2011). « Moral judgment in adults with autism\nspectrum disorders », Cognition, 121(1), p. 115-126.\n",
+      "text_sha256": "5c6ccdb68d55315370203d2d938646d0bbe94441c2272584bc9f0ec241a2ad0a"
+    },
+    {
+      "bbox": [
+        390.0,
+        441.2349548339844,
+        549.0481567382812,
+        476.72344970703125
+      ],
+      "block_id": "page-1105-block-0013",
+      "order": 13,
+      "text": "Zang, Y. & al. (2003). « Functional organization of the primary\nmotor cortex characterized by event-related fMRI during\nmovement preparation and execution », Neuroscience\nLetters, 337(2), p. 69-72.\n",
+      "text_sha256": "6afed07dcf9d02fa3c75f03154d2679562f6e4855abbe58a980f4e6ccaedff3a"
+    },
+    {
+      "bbox": [
+        390.0,
+        480.6349792480469,
+        534.767578125,
+        516.1234741210938
+      ],
+      "block_id": "page-1105-block-0014",
+      "order": 14,
+      "text": "Zhu, Y. & al. (2010). « Reduced prefrontal activation\nduring Tower of London in rst-episode schizophrenia :\nA multi-channel near-infrared spectroscopy study »,\nNeuroscience Letters, 478(3), p. 136-140.\n",
+      "text_sha256": "0bb6ae3192717a8add503000dd36dc2a893b2e28099503378fe4432cff63ef8c"
+    },
+    {
+      "bbox": [
+        390.0,
+        529.5203247070312,
+        538.25,
+        558.4234619140625
+      ],
+      "block_id": "page-1105-block-0015",
+      "order": 15,
+      "text": "Chapitre 9\nAinsworth, M. D. S. & al. (1978). Patterns of Attachment,\nHillsdale, NJ, Erlbaum.\n",
+      "text_sha256": "b26165047035ab10d30ad454387c2e0500d45b87849548813cde0f4c6a3c9dca"
+    },
+    {
+      "bbox": [
+        390.0,
+        562.3349609375,
+        541.0999755859375,
+        579.6234741210938
+      ],
+      "block_id": "page-1105-block-0016",
+      "order": 16,
+      "text": "Bandura, A. (1997). Self-Efcacy : The Exercise of Control,\nNew York, NY, Freeman.\n",
+      "text_sha256": "360d43e766eb99b925a658ad971f5778aa727768cb42a3fb0be1dc59ddf01ad6"
+    },
+    {
+      "bbox": [
+        390.0,
+        583.5349731445312,
+        530.8875732421875,
+        609.9234619140625
+      ],
+      "block_id": "page-1105-block-0017",
+      "order": 17,
+      "text": "Bateman, A. & Fonagy, P. (2006). Mentalization-Based\nTreatment for Borderline Personality Disorder, Oxford,\nRoyaume-Uni, Oxford University Press.\n",
+      "text_sha256": "f8f7f64e1e63ad26add17634f221e6e606f50dcff19ca202e362313ed178c350"
+    },
+    {
+      "bbox": [
+        390.0,
+        613.8349609375,
+        547.2724609375,
+        631.1234741210938
+      ],
+      "block_id": "page-1105-block-0018",
+      "order": 18,
+      "text": "Beebe, B. & Lachman, F. M. (2002). Infant Research and Adult\nTreatment, Hillsdale, NJ, Analytic Press.\n",
+      "text_sha256": "7d4faaa2b673466f759f626a69e9ac2b08dd7c22216c857650e3872db49841da"
+    },
+    {
+      "bbox": [
+        390.0,
+        635.0349731445312,
+        530.552734375,
+        652.3234252929688
+      ],
+      "block_id": "page-1105-block-0019",
+      "order": 19,
+      "text": "Bowlby, J. (1982). Attachement et perte, vol. 1, Paris,\nFrance, Presses universitaires de France.\n",
+      "text_sha256": "d197d9052da2b120576465d0ba10095b16c1f1314a2eb9ab95a4841f2a3cc88a"
+    },
+    {
+      "bbox": [
+        390.0,
+        656.2349853515625,
+        546.6676025390625,
+        673.5234375
+      ],
+      "block_id": "page-1105-block-0020",
+      "order": 20,
+      "text": "Chester, E. (2002). Employing Generation Why?, Lakewood,\nCO, Tucker House Books.\n",
+      "text_sha256": "6cfa9259ed058ff7df6e590b6288095fd03671c84190c8b33fd22664f595f58f"
+    },
+    {
+      "bbox": [
+        390.0,
+        677.4349975585938,
+        546.947509765625,
+        703.8234252929688
+      ],
+      "block_id": "page-1105-block-0021",
+      "order": 21,
+      "text": "Cloninger, C. R. & al. (1993). « A psychobiological model of\ntemperament and character », Archives of General Psychia-\ntry, 50(12), 975-990.\n",
+      "text_sha256": "201186f25194b78e700d2239c35bb68b48228d29040ea397a6e034bd9217ef1a"
+    },
+    {
+      "bbox": [
+        390.0,
+        707.7349853515625,
+        537.3833618164062,
+        725.0234375
+      ],
+      "block_id": "page-1105-block-0022",
+      "order": 22,
+      "text": "Craik, K. J. W. (1947). « Theory of the human operator\nin control systems. I : The operator as an engineering\n",
+      "text_sha256": "f69d34e1cafdc3bc4ff8c601222260c9c6e168cd2124e0695c96b59ca283077f"
+    },
+    {
+      "bbox": [
+        219.0,
+        40.68496322631836,
+        378.4100036621094,
+        725.0234375
+      ],
+      "block_id": "page-1105-block-0023",
+      "order": 23,
+      "text": "Scott, W. A. (1962). « Cognitive complexity and cognitive\nexibility », Sociometry, 25(4), p. 405-414.\nSegaert, K. & al. (2012). « Shared syntax in language\nproduction and language comprehension – an FMRI study »,\nCerebral Cortex, 22(7), p. 1662-1670.\nSeghier, M. L. & Price, C. J. (2010). « Reading aloud boosts\nconnectivity through the putamen », Cerebral Cortex, 20(3),\np. 570-582.\nSevy, S. & al. (2007). « Iowa gambling task in schizophre-\nnia : a review and new data in patients with schizophrenia\nand co-occurring cannabis use disorders », Schizophrenia\nResearch, 92(1-3), p. 74-84.\nShad, M. U. & al. (2006). « Insight and frontal cortical func-\ntion in schizophrenia : A review », Schizophrenia Research,\n86(1-3), p. 54-70.\nShallice, T. (1982). « Specic impairments of planning »,\nPhilosophical Transactions of the Royal Society of London B :\nBiological Sciences, 298(1089), p. 199-209.\nShin, L.M. & al. (2006). « Amygdala, medial prefrontral\ncortex, and hippocampal function in PTSD », Ann N Y Acad\nSci, 1071, p. 67-79.\nShomstein, S. & Yantis, S. (2006). « Parietal cortex mediates\nvoluntary control of spatial and nonspatial auditory atten-\ntion », Journal of Neuroscience, 26(2), p. 435-439.\nSilverstein, S. M. & Keane, B. P. (2011). « Perceptual organi-\nzation impairment in schizophrenia and associated brain\nmechanisms : Review of research from 2005 to 2010 »,\nSchizophrenia Bulletin, 37(4), p. 690-699.\nSingh, S. & al. (2014). « Motor function decits in schizo-\nphrenia : An fMRI and VBM study », Neuroradiology, 56(5),\np. 413-422.\nSolomon, O. (2011). « Body in autism : A view from social\ninteraction », dans McPherron, P. & Ramanathan, V. (dir.),\nLanguage, Body and Health, New York, Mouton de Gruyter,\np. 105-142.\nSpaniol, J. & al. (2009). « Event-related fMRI studies of\nepisodic encoding and retrieval : Meta-analyses using\nactivation likelihood estimation », Neuropsychologia,\n47(8-9), p. 1765-1779.\nSumiyoshi, C. & al. (2014). « Language-dependent perfor-\nmance on the letter uency task in patients with schizoph-\nrenia », Schizophrenia Research, 152(2-3), p. 421-429.\nSumner, J. A. & al. (2010). « Overgeneral autobiographical\nmemory as a predictor of the course of depression : A\nmeta-analysis », Behavior Research and Therapy, 48(7),\np. 614-625.\nSutton, S. & al. (1965). « Evoked-potential correlates of\nstimulus uncertainty », Science, 150(3700), p. 1187-1188.\nSwann, A. C. & al. (2009). « Trait impulsivity and response\ninhibition in antisocial personality disorder », Journal of\nPsychiatric Research, 43(12,) p. 1057-1063.\nSzczepanski, S. & al. (2010). « Mechanisms of spatial\nattention control in frontal and parietal cortex »,Journal\nof Neuroscience, 30(1), p. 148-160.\nSzuromi, B. & al. (2011). « P300 decits in adults with\nattention decit hyperactivity disorder : A meta-analysis »,\nPsychological Medicine, 41(7), p. 1529-1538.\nTaylor, S. F. & al. (2012). « Meta-analysis of functional\nneuroimaging studies of emotion perception and experience\nin schizophrenia », Biological Psychiatry, 71(2), p. 136-145.\nTeixeira, S. & al. (2014). « Integrative parietal cortex pro-\ncesses : Neurological and psychiatric aspects », Journal\nof the Neurological Sciences, 338(1-2), p. 12-22.\nTemple, C. M. (2006). « Developmental and acquired\ndyslexias », Cortex, 42(6), p. 898-910.\nThomalla, G. & al. (2014). « Costs of control : Decreased\nmotor cortex engagement during a Go/NoGo task in\nTourette’s syndrome », Brain, 137(1), p. 122-136.\nTimmann, D. & al. (2010). « The human cerebellum\ncontributes to motor, emotional and cognitive associative\nlearning. A review », Cortex, 46(7), p. 845-857.\n",
+      "text_sha256": "411958abac82b00544bb44d199fa92fd07bdb7ac1d3627fc136ff53bad7dd960"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.68496322631836,
+        203.09750366210938,
+        57.97343826293945
+      ],
+      "block_id": "page-1105-block-0024",
+      "order": 24,
+      "text": "Raichle, M. E. (2009). « A brief history of human brain map-\nping », Trends in Neuroscience, 32(2), p. 118-126.\n",
+      "text_sha256": "c82528e62f957213d63d45f2b54971146cef7da7fc040ae9bf96236149d3c5dc"
+    },
+    {
+      "bbox": [
+        48.0,
+        61.8349609375,
+        199.14756774902344,
+        97.2734375
+      ],
+      "block_id": "page-1105-block-0025",
+      "order": 25,
+      "text": "Ramachandra, V.S. (1998). « Consciousness and body image :\nlessons from phantom limbs, Capgras syndrome and pain\nasymbolia », Philosophical Transaction B., 353(1377),\np. 1851-1859.\n",
+      "text_sha256": "9903bd10cd98d5a4e25c0429401a890575677a851ec5d92984695c61da07f15c"
+    },
+    {
+      "bbox": [
+        48.0,
+        101.13496398925781,
+        199.09730529785156,
+        127.47344207763672
+      ],
+      "block_id": "page-1105-block-0026",
+      "order": 26,
+      "text": "Ratiu, P. & Talos, I. F. (2004). « The tale of Phineas Gage,\nDigitally Remastered », New England Journal of Medicine,\n351(23), p. 21.\n",
+      "text_sha256": "df66ec350a4895b55cb1a45888075ac719e0eb31e1d1e8994b61cf3ed758c4b1"
+    },
+    {
+      "bbox": [
+        48.0,
+        131.3349609375,
+        206.94403076171875,
+        157.67344665527344
+      ],
+      "block_id": "page-1105-block-0027",
+      "order": 27,
+      "text": "Reber, P. J. (2013). « The neural basis of implicit learning and\nmemory : A review of neuropsychological and neuroimaging\nresearch », Neuropsychologia, 51(10), p. 2026-2042.\n",
+      "text_sha256": "d98d9cbd15a137e2352d218902f0f0d3250cb882fc5ff7ba4ec7a72db6df50f2"
+    },
+    {
+      "bbox": [
+        48.0,
+        161.5849609375,
+        200.31007385253906,
+        178.8234405517578
+      ],
+      "block_id": "page-1105-block-0028",
+      "order": 28,
+      "text": "Rey-Debove, J. (1997). Le métalangage : étude linguistique\ndu discours sur le langage, Paris, France, Armand Colin.\n",
+      "text_sha256": "5f5543df728e16df8905b3654457e5b1374830a55b6a87e70691161275caca66"
+    },
+    {
+      "bbox": [
+        48.0,
+        182.73497009277344,
+        191.01002502441406,
+        218.12344360351562
+      ],
+      "block_id": "page-1105-block-0029",
+      "order": 29,
+      "text": "Richard-Devantoy, S. & al. (2013). « A meta-analysis of\nneuropsychological markers of vulnerability to suicidal\nbehavior in mood disorders », Psychological Medicine,\n44(8), p. 1663-1673.\n",
+      "text_sha256": "48758d49207aef2e39e8061aae915ef387380136beef77868006fa718923f920"
+    },
+    {
+      "bbox": [
+        48.0,
+        222.0349578857422,
+        204.3175048828125,
+        248.37344360351562
+      ],
+      "block_id": "page-1105-block-0030",
+      "order": 30,
+      "text": "Robinson, L. J. & al. (2006). « A meta-analysis of cognitive\ndecits in euthymic patients with bipolar disorder »,Journal\nof Affective Disorders, 93, p. 105-116.\n",
+      "text_sha256": "9a6059f81959629f8300c8407772eff3c4340f4d0b7f528c3cb07a206739faa6"
+    },
+    {
+      "bbox": [
+        48.0,
+        252.23495483398438,
+        198.34376525878906,
+        278.5734558105469
+      ],
+      "block_id": "page-1105-block-0031",
+      "order": 31,
+      "text": "Robinson, S. & al. (2009). « Executive functions in children\nwith autism spectrum disorders », Brain and Cognition,\n71(3), p. 362-368.\n",
+      "text_sha256": "f73e4de4b671ea4bb4de2ebaeb9b040792c1cdb2e326336431f3f7aa6a081537"
+    },
+    {
+      "bbox": [
+        48.0,
+        282.4849548339844,
+        203.19749450683594,
+        308.8234558105469
+      ],
+      "block_id": "page-1105-block-0032",
+      "order": 32,
+      "text": "Rock, P. L. & al. (2013). « Cognitive impairment in depres-\nsion : a systematic review and meta-analysis », Psychologi-\ncal Medicine, 44(10), p. 2029-2040.\n",
+      "text_sha256": "f379c25075959b6d7344747d46e90a68c2f46b72d6ff42236e01548dadbc6e10"
+    },
+    {
+      "bbox": [
+        48.0,
+        312.6849670410156,
+        204.82498168945312,
+        339.0234375
+      ],
+      "block_id": "page-1105-block-0033",
+      "order": 33,
+      "text": "Roland, P. E. & al. (1980). « Supplementary motor area and\nother cortical areas in organization of voluntary movements\nin man », Journal of Neurophysiology, 43(1), p. 118-136.\n",
+      "text_sha256": "cd1216110834545c38bcb804be162355e9079f46b1f57d591cfe4ecea18ce047"
+    },
+    {
+      "bbox": [
+        48.0,
+        342.9349670410156,
+        202.6350860595703,
+        369.2734375
+      ],
+      "block_id": "page-1105-block-0034",
+      "order": 34,
+      "text": "Roozendaal, B. & al. (2008). « Adrenal stress hormones,\namygdala activation, and memory for emotionally arousing\nexperiences », Progress in Brain Research, 167, p. 79-97.\n",
+      "text_sha256": "455c592d516ab3e3e13394181b94c92053820836b6b1c72e6e347f1cc2cf453b"
+    },
+    {
+      "bbox": [
+        48.0,
+        373.1349792480469,
+        197.52737426757812,
+        399.47344970703125
+      ],
+      "block_id": "page-1105-block-0035",
+      "order": 35,
+      "text": "Rothwell, J. C. (2011). « The motor functions of the basal\nganglia », Journal of Integrative Neuroscience, 10(3),\np. 303-315.\n",
+      "text_sha256": "6529b612bf6d80c03b1ca927be832491db254a3b81b005c5a7e85cf5f90b79f0"
+    },
+    {
+      "bbox": [
+        48.0,
+        403.3849792480469,
+        197.67013549804688,
+        429.6734313964844
+      ],
+      "block_id": "page-1105-block-0036",
+      "order": 36,
+      "text": "Rottschy, C. & al. (2012). « Modelling neural correlates of\nworking memory : A coordinate-based meta-analysis »,\nNeuroimage, 60(1), p. 830-846.\n",
+      "text_sha256": "6b61d0f81be89c1899809b0b85dd23cf23d8aeb5f80657b7695da03258805784"
+    },
+    {
+      "bbox": [
+        48.0,
+        433.5849609375,
+        194.75357055664062,
+        468.97344970703125
+      ],
+      "block_id": "page-1105-block-0037",
+      "order": 37,
+      "text": "Rubin, G. J. & al. (2007). « Enduring consequences of\nterrorism : 7-month follow-up survey of reactions to the\nbombings in London on 7 July 2005 », British Journal of\nPsychiatry, 190, p. 350-356.\n",
+      "text_sha256": "2936d5607a8313876861bcdfa6913c51295430153a9057f524741213b8e784b7"
+    },
+    {
+      "bbox": [
+        48.0,
+        472.8849792480469,
+        204.54750061035156,
+        508.2734375
+      ],
+      "block_id": "page-1105-block-0038",
+      "order": 38,
+      "text": "Rummel-Kluge, C. & al. (2012). « Second-generation antipsy-\nchotic drugs and extrapyramidal side effects : A systematic\nreview and meta-analysis of head-to-head comparisons »,\nSchizophrenia Bulletin, 38(1), p. 167-177.\n",
+      "text_sha256": "a62defab332ffa00bea8ef903be55dc09cb2e97aef98acc4cf81e36d8f810ad9"
+    },
+    {
+      "bbox": [
+        48.0,
+        512.1849975585938,
+        203.44749450683594,
+        538.5234375
+      ],
+      "block_id": "page-1105-block-0039",
+      "order": 39,
+      "text": "Sakai, K. L. & al. (2005). « Sign and speech : amodal commo-\nnality in left hemisphere dominance for comprehension of\nsentences », Brain, 128(6), p. 1407-117.\n",
+      "text_sha256": "122b2ecaff6f199d8c94eee4e5f3c8d51d646de2cad2dbbb00bd7b05aae08150"
+    },
+    {
+      "bbox": [
+        48.0,
+        542.3849487304688,
+        204.94749450683594,
+        577.8234252929688
+      ],
+      "block_id": "page-1105-block-0040",
+      "order": 40,
+      "text": "Sanchez, M. M. & al. (2000). « Distribution of corticosteroid\nreceptors in the rhesus brain : relative absence of glucocor-\nticoid receptors in the hippocampal formation », Journal of\nNeuro science, 20(12), p. 4657-4668.\n",
+      "text_sha256": "04ce16a6939e2059e37b472658bab8f56182e634cfea7411356955fd61ee2648"
+    },
+    {
+      "bbox": [
+        48.0,
+        581.6849975585938,
+        206.42758178710938,
+        724.5234375
+      ],
+      "block_id": "page-1105-block-0041",
+      "order": 41,
+      "text": "Sandrone, S. & al. (2014). « Weighing brain activity with the\nbalance : Angelo Mosso’s original manuscripts come to\nlight », Brain, 137(2), p. 621-633.\nSavitz, J. & Drevets, W. C. (2009). « Bipolar and major\ndepressive disorder : Neuroimaging the developmen-\ntal-degenerative divide », Neuroscience and Biobehavioral\nReviews, 33(5), p. 699-771.\nSavla, G. N. & al. (2013). « Decits in domains of social\ncognition in schizophrenia : A meta-analysis of the empirical\nevidence », Schizophrenia Bulletin, 39(5), p. 979-992.\nSchank, R.C. & Abelson, R. (1977). Scripts, Plans, Goals,\nand Understanding, Hillsdale, NJ, Earlbaum.\nSchneider, K & al. (2013). « Neural correlates of moral\nreasoning in autism spectrum disorder », Social Cognitive\nand Affective Neuroscience, 8(6), p. 702-710.\n",
+      "text_sha256": "354d7a1aaff13d126e1fbaf9356d21c2d2c2725389a6fdd35c95968071259f71"
+    }
+  ],
+  "coordinates_sha256": "ce04b613ded401fb7ac32bd9ddc85dde3d5e771327e3c4986acd1c1fd94fcc79",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1105",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "R8\nRéférences\nTisch, S. & al. (2004). « The basal ganglia : Anatomy,\nphysiology, and pharmacology », Psychiatric Clinics of North\nAmerica, 27(4), p. 757-799.\nTowler, J. & Eimer, M. (2012). « Electrophysiological studies\nof face processing in developmental prosopagnosia :\nneuropsychological and neurodevelopmental perspectives »,\nCognitive Neuropsychology, 29(5-6), p. 503-529.\nUnterrainer, J. M. & Owen, A. M. (2006). « Planning and problem\nsolving : From neuropsychology to functional neuroimaging »,\nJournal of Physiology- Paris, 99(4-6), p. 308-317.\nVallar, G. & Ronchi, R. (2009). « Somatoparaphrenia : A body\ndelusion. A review of the neuropsychological literature »,\nExperimental Brain Research, 192(3), p. 533-551.\nVan Horn, J. D. & al. (2012). « Mapping connectivity damage in\nthe case of Phineas Gage », PLoS One, 7(5), p. e37454.\nWager, T. D. & al. (2005). « Toward a taxonomy of attention\nshifting : individual differences in fMRI during multiple shift\ntypes », Cognitive Affective & Behaviral Neuroscience, 5(2),\np. 127-143.\nWang, J. & al. (2010). « Neural representation of abstract\nand concrete concepts : A meta-analysis of neuroimaging\nstudies », Human Brain Mapping, 31(10), p. 1459-1468.\nWang, K. & al. (2011). « Semantic processing disturbance in\npatients with schizophrenia : A meta-analysis of the N400\ncomponent », PLoS One, 6(10), p. e25435.\nWardak, C. & al. (2006). « Contribution of the monkey frontal\neye eld to covert visual attention », Journal of Neuros-\ncience, 26(16), p. 4228-4235.\nWatkins, L. H. & al. (2005). « Executive function in Tourette’s\nsyndrome and obsessive-compulsive disorder », Psychologi-\ncal Medicine, 35(4), p. 571-582.\nWebster, R. I. & Shevell, M. I. (2004). « Neurobiology of\nspecic language impairment », Journal of Child Neurology,\n19(7), p. 471-481.\nYang, Z. & al. (2014). « Association analysis of genes in\nserotonin pathway with attention and executive function in\npatients with bipolar affective disorder », Comprehensive\nPsychiatry, 55(8), p. 1785-1790.\nZalla, T. & al. (2011). « Moral judgment in adults with autism\nspectrum disorders », Cognition, 121(1), p. 115-126.\nZang, Y. & al. (2003). « Functional organization of the primary\nmotor cortex characterized by event-related fMRI during\nmovement preparation and execution », Neuroscience\nLetters, 337(2), p. 69-72.\nZhu, Y. & al. (2010). « Reduced prefrontal activation\nduring Tower of London in rst-episode schizophrenia :\nA multi-channel near-infrared spectroscopy study »,\nNeuroscience Letters, 478(3), p. 136-140.\nChapitre 9\nAinsworth, M. D. S. & al. (1978). Patterns of Attachment,\nHillsdale, NJ, Erlbaum.\nBandura, A. (1997). Self-Efcacy : The Exercise of Control,\nNew York, NY, Freeman.\nBateman, A. & Fonagy, P. (2006). Mentalization-Based\nTreatment for Borderline Personality Disorder, Oxford,\nRoyaume-Uni, Oxford University Press.\nBeebe, B. & Lachman, F. M. (2002). Infant Research and Adult\nTreatment, Hillsdale, NJ, Analytic Press.\nBowlby, J. (1982). Attachement et perte, vol. 1, Paris,\nFrance, Presses universitaires de France.\nChester, E. (2002). Employing Generation Why?, Lakewood,\nCO, Tucker House Books.\nCloninger, C. R. & al. (1993). « A psychobiological model of\ntemperament and character », Archives of General Psychia-\ntry, 50(12), 975-990.\nCraik, K. J. W. (1947). « Theory of the human operator\nin control systems. I : The operator as an engineering\nScott, W. A. (1962). « Cognitive complexity and cognitive\nexibility », Sociometry, 25(4), p. 405-414.\nSegaert, K. & al. (2012). « Shared syntax in language\nproduction and language comprehension – an FMRI study »,\nCerebral Cortex, 22(7), p. 1662-1670.\nSeghier, M. L. & Price, C. J. (2010). « Reading aloud boosts\nconnectivity through the putamen », Cerebral Cortex, 20(3),\np. 570-582.\nSevy, S. & al. (2007). « Iowa gambling task in schizophre-\nnia : a review and new data in patients with schizophrenia\nand co-occurring cannabis use disorders », Schizophrenia\nResearch, 92(1-3), p. 74-84.\nShad, M. U. & al. (2006). « Insight and frontal cortical func-\ntion in schizophrenia : A review », Schizophrenia Research,\n86(1-3), p. 54-70.\nShallice, T. (1982). « Specic impairments of planning »,\nPhilosophical Transactions of the Royal Society of London B :\nBiological Sciences, 298(1089), p. 199-209.\nShin, L.M. & al. (2006). « Amygdala, medial prefrontral\ncortex, and hippocampal function in PTSD », Ann N Y Acad\nSci, 1071, p. 67-79.\nShomstein, S. & Yantis, S. (2006). « Parietal cortex mediates\nvoluntary control of spatial and nonspatial auditory atten-\ntion », Journal of Neuroscience, 26(2), p. 435-439.\nSilverstein, S. M. & Keane, B. P. (2011). « Perceptual organi-\nzation impairment in schizophrenia and associated brain\nmechanisms : Review of research from 2005 to 2010 »,\nSchizophrenia Bulletin, 37(4), p. 690-699.\nSingh, S. & al. (2014). « Motor function decits in schizo-\nphrenia : An fMRI and VBM study », Neuroradiology, 56(5),\np. 413-422.\nSolomon, O. (2011). « Body in autism : A view from social\ninteraction », dans McPherron, P. & Ramanathan, V. (dir.),\nLanguage, Body and Health, New York, Mouton de Gruyter,\np. 105-142.\nSpaniol, J. & al. (2009). « Event-related fMRI studies of\nepisodic encoding and retrieval : Meta-analyses using\nactivation likelihood estimation », Neuropsychologia,\n47(8-9), p. 1765-1779.\nSumiyoshi, C. & al. (2014). « Language-dependent perfor-\nmance on the letter uency task in patients with schizoph-\nrenia », Schizophrenia Research, 152(2-3), p. 421-429.\nSumner, J. A. & al. (2010). « Overgeneral autobiographical\nmemory as a predictor of the course of depression : A\nmeta-analysis », Behavior Research and Therapy, 48(7),\np. 614-625.\nSutton, S. & al. (1965). « Evoked-potential correlates of\nstimulus uncertainty », Science, 150(3700), p. 1187-1188.\nSwann, A. C. & al. (2009). « Trait impulsivity and response\ninhibition in antisocial personality disorder », Journal of\nPsychiatric Research, 43(12,) p. 1057-1063.\nSzczepanski, S. & al. (2010). « Mechanisms of spatial\nattention control in frontal and parietal cortex »,Journal\nof Neuroscience, 30(1), p. 148-160.\nSzuromi, B. & al. (2011). « P300 decits in adults with\nattention decit hyperactivity disorder : A meta-analysis »,\nPsychological Medicine, 41(7), p. 1529-1538.\nTaylor, S. F. & al. (2012). « Meta-analysis of functional\nneuroimaging studies of emotion perception and experience\nin schizophrenia », Biological Psychiatry, 71(2), p. 136-145.\nTeixeira, S. & al. (2014). « Integrative parietal cortex pro-\ncesses : Neurological and psychiatric aspects », Journal\nof the Neurological Sciences, 338(1-2), p. 12-22.\nTemple, C. M. (2006). « Developmental and acquired\ndyslexias », Cortex, 42(6), p. 898-910.\nThomalla, G. & al. (2014). « Costs of control : Decreased\nmotor cortex engagement during a Go/NoGo task in\nTourette’s syndrome », Brain, 137(1), p. 122-136.\nTimmann, D. & al. (2010). « The human cerebellum\ncontributes to motor, emotional and cognitive associative\nlearning. A review », Cortex, 46(7), p. 845-857.\nRaichle, M. E. (2009). « A brief history of human brain map-\nping », Trends in Neuroscience, 32(2), p. 118-126.\nRamachandra, V.S. (1998). « Consciousness and body image :\nlessons from phantom limbs, Capgras syndrome and pain\nasymbolia », Philosophical Transaction B., 353(1377),\np. 1851-1859.\nRatiu, P. & Talos, I. F. (2004). « The tale of Phineas Gage,\nDigitally Remastered », New England Journal of Medicine,\n351(23), p. 21.\nReber, P. J. (2013). « The neural basis of implicit learning and\nmemory : A review of neuropsychological and neuroimaging\nresearch », Neuropsychologia, 51(10), p. 2026-2042.\nRey-Debove, J. (1997). Le métalangage : étude linguistique\ndu discours sur le langage, Paris, France, Armand Colin.\nRichard-Devantoy, S. & al. (2013). « A meta-analysis of\nneuropsychological markers of vulnerability to suicidal\nbehavior in mood disorders », Psychological Medicine,\n44(8), p. 1663-1673.\nRobinson, L. J. & al. (2006). « A meta-analysis of cognitive\ndecits in euthymic patients with bipolar disorder »,Journal\nof Affective Disorders, 93, p. 105-116.\nRobinson, S. & al. (2009). « Executive functions in children\nwith autism spectrum disorders », Brain and Cognition,\n71(3), p. 362-368.\nRock, P. L. & al. (2013). « Cognitive impairment in depres-\nsion : a systematic review and meta-analysis », Psychologi-\ncal Medicine, 44(10), p. 2029-2040.\nRoland, P. E. & al. (1980). « Supplementary motor area and\nother cortical areas in organization of voluntary movements\nin man », Journal of Neurophysiology, 43(1), p. 118-136.\nRoozendaal, B. & al. (2008). « Adrenal stress hormones,\namygdala activation, and memory for emotionally arousing\nexperiences », Progress in Brain Research, 167, p. 79-97.\nRothwell, J. C. (2011). « The motor functions of the basal\nganglia », Journal of Integrative Neuroscience, 10(3),\np. 303-315.\nRottschy, C. & al. (2012). « Modelling neural correlates of\nworking memory : A coordinate-based meta-analysis »,\nNeuroimage, 60(1), p. 830-846.\nRubin, G. J. & al. (2007). « Enduring consequences of\nterrorism : 7-month follow-up survey of reactions to the\nbombings in London on 7 July 2005 », British Journal of\nPsychiatry, 190, p. 350-356.\nRummel-Kluge, C. & al. (2012). « Second-generation antipsy-\nchotic drugs and extrapyramidal side effects : A systematic\nreview and meta-analysis of head-to-head comparisons »,\nSchizophrenia Bulletin, 38(1), p. 167-177.\nSakai, K. L. & al. (2005). « Sign and speech : amodal commo-\nnality in left hemisphere dominance for comprehension of\nsentences », Brain, 128(6), p. 1407-117.\nSanchez, M. M. & al. (2000). « Distribution of corticosteroid\nreceptors in the rhesus brain : relative absence of glucocor-\nticoid receptors in the hippocampal formation », Journal of\nNeuro science, 20(12), p. 4657-4668.\nSandrone, S. & al. (2014). « Weighing brain activity with the\nbalance : Angelo Mosso’s original manuscripts come to\nlight », Brain, 137(2), p. 621-633.\nSavitz, J. & Drevets, W. C. (2009). « Bipolar and major\ndepressive disorder : Neuroimaging the developmen-\ntal-degenerative divide », Neuroscience and Biobehavioral\nReviews, 33(5), p. 699-771.\nSavla, G. N. & al. (2013). « Decits in domains of social\ncognition in schizophrenia : A meta-analysis of the empirical\nevidence », Schizophrenia Bulletin, 39(5), p. 979-992.\nSchank, R.C. & Abelson, R. (1977). Scripts, Plans, Goals,\nand Understanding, Hillsdale, NJ, Earlbaum.\nSchneider, K & al. (2013). « Neural correlates of moral\nreasoning in autism spectrum disorder », Social Cognitive\nand Affective Neuroscience, 8(6), p. 702-710.\n",
+  "raw_text_sha256": "8e882e9eb0f9caa16f82ad5d7060973db78142226b95d0765c42e594d56cda73",
+  "source_page_display": 1106,
+  "source_page_index": 1105
+}

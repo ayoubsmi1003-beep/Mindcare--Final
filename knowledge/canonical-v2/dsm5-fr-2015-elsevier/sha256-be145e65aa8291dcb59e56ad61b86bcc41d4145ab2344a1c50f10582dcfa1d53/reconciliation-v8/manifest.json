@@ -1,0 +1,106 @@
+{
+  "book_id": "dsm5-fr-2015-elsevier",
+  "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+  "ingestion_version": "canonical-v2.1",
+  "status": "BLOCKED",
+  "canonical_promotion_authorized": false,
+  "doctor_review_required": true,
+  "meds_excluded": true,
+  "input_reconciliation": "reconciliation-v5 + units-COV-v2.jsonl",
+  "structure_candidate": "structure-v2.candidate.json",
+  "normalizations": {
+    "source_version_fixed": 1457,
+    "segment_chain_fixed": 9644,
+    "uncertain_to_review": 6,
+    "legacy_units_added": 420,
+    "coverage_only_reclassified": 411,
+    "key_order": "enforced from WORKORDER.md",
+    "fallback_rule": "pymupdf-fallback => uncertain + needs_review"
+  },
+  "extractor_counts": {
+    "pymupdf-original-text-layer": 9046,
+    "u1-atomizer-rule-v1": 1613,
+    "pymupdf-fallback": 2111,
+    "citra-read-pdf": 50
+  },
+  "bad_extraction_status": [],
+  "invalid_concept_refs": [],
+  "invalid_table_unit_refs": [],
+  "invalid_unit_relation_refs": [
+    {
+      "id": "dsm5fr-u-873-K004",
+      "ref": "dsm5fr-u-876-K005"
+    },
+    {
+      "id": "dsm5fr-u-liv-B0001",
+      "ref": "dsm5fr-u-li-B0001"
+    }
+  ],
+  "invalid_xref_records": [
+    {
+      "from_unit": "dsm5fr-u-54-027",
+      "target_unit": "dsm5fr-u-45-012",
+      "status": "resolved"
+    },
+    {
+      "from_unit": "dsm5fr-u-55-030",
+      "target_unit": null,
+      "status": "unresolved"
+    },
+    {
+      "from_unit": "dsm5fr-u-55-030",
+      "target_unit": null,
+      "status": "unresolved"
+    },
+    {
+      "from_unit": "dsm5fr-u-57-031",
+      "target_unit": null,
+      "status": "unresolved"
+    },
+    {
+      "from_unit": "dsm5fr-u-57-031",
+      "target_unit": null,
+      "status": "unresolved"
+    },
+    {
+      "from_unit": "dsm5fr-u-57-032",
+      "target_unit": null,
+      "status": "unresolved"
+    },
+    {
+      "from_unit": "dsm5fr-u-62-035",
+      "target_unit": "dsm5fr-u-65-038",
+      "status": "resolved"
+    },
+    {
+      "from_unit": "dsm5fr-u-65-038",
+      "target_unit": "dsm5fr-u-54-028",
+      "status": "resolved"
+    }
+  ],
+  "unresolved_xrefs": 364,
+  "current_merged_units_not_in_candidate": 0,
+  "replacement_units_in_candidate": [
+    "dsm5fr-u-1078-M100",
+    "dsm5fr-u-1081-M105"
+  ],
+  "restored_concept_refs": 0,
+  "outputs": {
+    "units": {
+      "rows": 12820,
+      "sha256": "f4f390a9c58faca5e18950f294716ce57e057036362dde51e9338a2a9d8d8949"
+    },
+    "tables": {
+      "rows": 121,
+      "sha256": "d466304ae612d6551736fa401cc39b0378b924548395ab79270093d01086b520"
+    },
+    "concepts": {
+      "rows": 1921,
+      "sha256": "73d243a97882ef2ee066b61006b07d48437fd6d73eca1be117e43e13a8399cb6"
+    },
+    "xrefs": {
+      "rows": 509,
+      "sha256": "50d037df798d7088e047262930dfd2bbef1662696fb1dd3f87c5befc5d1422d9"
+    }
+  }
+}

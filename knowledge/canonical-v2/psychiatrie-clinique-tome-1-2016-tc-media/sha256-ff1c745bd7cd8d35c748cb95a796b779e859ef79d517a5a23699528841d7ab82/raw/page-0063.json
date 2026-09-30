@@ -1,0 +1,316 @@
+{
+  "block_sequence_sha256": "f3e4941f0cc8e87167263d62ab00e5fac614287a6164483666b93b06179202e7",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        447.807861328125,
+        758.8693237304688
+      ],
+      "block_id": "page-0063-block-0001",
+      "order": 1,
+      "text": "46\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 1\nIntroduction à la psychiatrie\n",
+      "text_sha256": "078477c7b6aeeaa35fd1fd18f32e3dc797602bde95bdbafcf9050816b555bc79"
+    },
+    {
+      "bbox": [
+        318.0500183105469,
+        40.9658203125,
+        549.2218017578125,
+        65.00849914550781
+      ],
+      "block_id": "page-0063-block-0002",
+      "order": 2,
+      "text": "organisation familiale ;\nréactions lors d’une séparation, d’un divorce ou du décès\n",
+      "text_sha256": "f46eeb2746f53ed7184e92e0dbee09e4d76e9da21dec3fea2e170ccfbfdcad07"
+    },
+    {
+      "bbox": [
+        306.0,
+        66.0658187866211,
+        549.400634765625,
+        371.7585144042969
+      ],
+      "block_id": "page-0063-block-0003",
+      "order": 3,
+      "text": "d’un enfant, du conjoint.\n• Vie adulte et vieillissement :\npertes signicatives, maladies ;\nloisirs, intérêts, sports ;\nengagement social, politique, religieux, bénévolat ;\nrelations avec les proches, les amis, le voisinage ;\n– réaction au départ des enfants ;\n– activités criminelles, démêlés avec la justice ;\n– enjeux reliés au vieillissement.\nLe questionnaire concernant l’histoire personnelle doit être\nadapté aux enjeux soulevés par la raison de consultation ou la\nmaladie actuelle ; divers éléments doivent faire l’objet de questions\nselon leur pertinence dans le contexte actuel du patient. Une\nimportance particulière doit être attachée aux souvenirs trauma-\ntiques, aux périodes diciles, aux situations ayant nécessité un\neort d’adaptation, aux réactions émotives lors des principales\nétapes de la vie ainsi qu’au pattern relationnel général (nombre de\npartenaires, périodes de célibat, conceptualisation des relations,\netc.). La perception et l’estime de soi peuvent aussi se reéter dans\nle regard que le patient jette sur sa vie et sa personne. Il est possible\nde suspecter un trouble de la personnalité à partir de ces éléments,\net certains critères peuvent être pris directement en considération\nà partir de la description de ces pathologies dans le DSM-5 : com-\nportements d’automutilation, manifestations d’impulsivité, crainte\ndu rejet, sensibilité aux critiques, souci de la perfection, etc.\n",
+      "text_sha256": "6ae22a65bf7465665340d1cbfceb4715805ae32029c4e7176b5d978a46cf316b"
+    },
+    {
+      "bbox": [
+        326.0,
+        377.8241271972656,
+        528.27294921875,
+        398.4502868652344
+      ],
+      "block_id": "page-0063-block-0004",
+      "order": 4,
+      "text": "Les troubles de la personnalité sont présentés en détail\nau chapitre 40.\n",
+      "text_sha256": "4da0753ea5e480648e726203ffd7bc75abca53ebbdb87087d363d28141a7b988"
+    },
+    {
+      "bbox": [
+        317.3000183105469,
+        423.9931640625,
+        469.9419860839844,
+        443.11895751953125
+      ],
+      "block_id": "page-0063-block-0005",
+      "order": 5,
+      "text": "3.5\nExamen physique\n",
+      "text_sha256": "dc1c2ee2e960e59c407212458f8ef8dda7f8afdce020af4d144968613f83a790"
+    },
+    {
+      "bbox": [
+        306.0,
+        456.9658203125,
+        549.3125610351562,
+        617.6585083007812
+      ],
+      "block_id": "page-0063-block-0006",
+      "order": 6,
+      "text": "Au Québec, les psychiatres n’eectuent que rarement un examen\nphysique complet. Ils procèdent plutôt à une recherche plus ciblée\nde signes physiques pertinents ou associés à la pathologie ou aux\ntraitements psychiatriques. Ainsi, une évaluation neurologique\nsommaire peut compléter l’examen mental, avec une attention\nparticulière portée à la démarche, aux signes extrapyramidaux ou\nneurologiques focaux. Il est utile que l’inrmière pèse le patient,\nmesure sa taille et prenne son tour de taille, car ces informations\nserviront au suivi métabolique qui doit être eectué lors de\nl’usage de plusieurs psychotropes. Les signes vitaux (tempéra-\nture, pouls, pression artérielle, rythme respiratoire) doivent être\nsurveillés à une fréquence déterminée par le contexte clinique,\nen collaboration avec l’omnipraticien ou le médecin traitant qui\npeut compléter l’examen physique.\n",
+      "text_sha256": "052fb4540d5b3f206a845a36519f724e65b4f5d0c5644fa8a5e1a8a9000dd53e"
+    },
+    {
+      "bbox": [
+        317.3999938964844,
+        635.7431640625,
+        456.09912109375,
+        654.9189453125
+      ],
+      "block_id": "page-0063-block-0007",
+      "order": 7,
+      "text": "3.6\nExamen mental\n",
+      "text_sha256": "2deeda3c99971438d36029e9d21462babcf16ec511e23427067bced666584c3f"
+    },
+    {
+      "bbox": [
+        306.0,
+        668.7658081054688,
+        549.0197143554688,
+        725.45849609375
+      ],
+      "block_id": "page-0063-block-0008",
+      "order": 8,
+      "text": "L’examen mental est l’équivalent en psychiatrie de l’examen\nphysique. Les symptômes subjectifs décrits par le patient\nsont notés dans l’histoire de la maladie actuelle, alors que\nles signes objectivés par le médecin durant tout l’entretien\nle sont dans la section Examen mental (voir la figure 3.1).\n",
+      "text_sha256": "906d07b682627489a0d4de68a70c38561e16f494c367743ef5d7d571514db8ae"
+    },
+    {
+      "bbox": [
+        60.04999923706055,
+        40.9658203125,
+        291.1612548828125,
+        76.8084945678711
+      ],
+      "block_id": "page-0063-block-0009",
+      "order": 9,
+      "text": "encoprésie), le langage, les comportements alimentaires,\nle tempérament ;\nrang dans la fratrie, prénom, âge et occupation actuelle\n",
+      "text_sha256": "e4c1a9b287a91bab960e3fecb465084bfe476f1c78e9b273d04d4f701eb4aa8d"
+    },
+    {
+      "bbox": [
+        60.04999923706055,
+        78.01582336425781,
+        290.771484375,
+        102.20849609375
+      ],
+      "block_id": "page-0063-block-0010",
+      "order": 10,
+      "text": "des frères et sœurs ;\nqualités des interactions avec les parents, la fratrie et le\n",
+      "text_sha256": "441b0d9ea7bfc448072057e892c8209c1c18f8a05ce1f150ddd086dabb4636dc"
+    },
+    {
+      "bbox": [
+        60.04999923706055,
+        103.41582489013672,
+        290.8420715332031,
+        141.30850219726562
+      ],
+      "block_id": "page-0063-block-0011",
+      "order": 11,
+      "text": "reste de la famille, à la garderie ;\nproblèmes de santé dans la petite enfance ;\nimpression générale du patient à propos de son enfance\n",
+      "text_sha256": "7e4cca8802616413af4f749210abb6d0e000f767d40685632d45c1a9533fd00f"
+    },
+    {
+      "bbox": [
+        60.04999923706055,
+        142.4658203125,
+        291.0924377441406,
+        178.35850524902344
+      ],
+      "block_id": "page-0063-block-0012",
+      "order": 12,
+      "text": "(heureuse ou malheureuse), comment il perçoit ses parents\n(leurs qualités et défauts), leurs occupations ;\ncontexte culturel (religieux, éducatif) dans lequel le patient\n",
+      "text_sha256": "e367dcb6958fa863c49b4003044231fe24079d44964e02b77244e388bd6c8ada"
+    },
+    {
+      "bbox": [
+        48.0,
+        179.56582641601562,
+        291.14593505859375,
+        217.45849609375
+      ],
+      "block_id": "page-0063-block-0013",
+      "order": 13,
+      "text": "a vécu et grandi.\n• Période scolaire :\nréactions à l’entrée à l’école et à la séparation d’avec les\n",
+      "text_sha256": "3084aeff9a039739903a7bb09528fb3fa0edd9f6953deae910a6d4e8c7f60eb3"
+    },
+    {
+      "bbox": [
+        60.04999923706055,
+        218.6658172607422,
+        291.273193359375,
+        242.80850219726562
+      ],
+      "block_id": "page-0063-block-0014",
+      "order": 14,
+      "text": "parents ;\nintérêt pour les études, dicultés d’apprentissage ou échec\n",
+      "text_sha256": "c16aa0a038bbb07acbbaf46418ff28887079035065bbcc3c6356bb629c5d2138"
+    },
+    {
+      "bbox": [
+        48.0,
+        244.0158233642578,
+        291.010986328125,
+        309.3085021972656
+      ],
+      "block_id": "page-0063-block-0015",
+      "order": 15,
+      "text": "rencontrés, succès, aptitudes particulières ;\nactivités parascolaires, sports ;\nrelations avec les enseignants et les autres élèves.\n• Enfance et adolescence :\nclimat familial, attitudes des parents durant cette période,\n",
+      "text_sha256": "7fc257525cb2ea4afd71c3983fb7025b8b8d0ad3f37d3ce0088082a62b5f521a"
+    },
+    {
+      "bbox": [
+        60.04999923706055,
+        310.5158386230469,
+        291.0462341308594,
+        334.65850830078125
+      ],
+      "block_id": "page-0063-block-0016",
+      "order": 16,
+      "text": "enfant choyé ou maltraité ;\nnégligence, violence familiale, maltraitance physique,\n",
+      "text_sha256": "d4664549432a3b8f9c3051c735d20f409831dc1240075003776d221c806a6b91"
+    },
+    {
+      "bbox": [
+        60.04999923706055,
+        335.8658142089844,
+        290.53076171875,
+        373.7585144042969
+      ],
+      "block_id": "page-0063-block-0017",
+      "order": 17,
+      "text": "sexuelle ;\nfonctionnement académique ;\nréactions personnelles à la puberté, premières règles,\n",
+      "text_sha256": "4e08e3122c9b20ef886d30ce0487c208ba164b28ac3df073d0430b5077651019"
+    },
+    {
+      "bbox": [
+        60.04999923706055,
+        374.9658203125,
+        291.1385803222656,
+        399.15850830078125
+      ],
+      "block_id": "page-0063-block-0018",
+      "order": 18,
+      "text": "éducation sexuelle, découverte de la sexualité ;\nproblèmes plus spéciques à cette période : l’acné, l’image\n",
+      "text_sha256": "ac6a96ccaf3030178416c0989a539c83d968a18713a926fae1788eccd5c91058"
+    },
+    {
+      "bbox": [
+        48.0,
+        400.3658142089844,
+        291.0675048828125,
+        479.3085021972656
+      ],
+      "block_id": "page-0063-block-0019",
+      "order": 19,
+      "text": "corporelle, les troubles alimentaires ;\névénements marquants, maladies ;\n• Relations avec les pairs, les amis, les adultes :\nparticipation à la vie de groupe, aux sports ;\nmodèles d’identication, relations avec les adultes ;\nfréquentation de milieux marginaux, vagabondage, pro-\n",
+      "text_sha256": "3f0b8fb7cef81cf72c982a9855b3d0c2ba94a0524786492161250702b4298921"
+    },
+    {
+      "bbox": [
+        48.0,
+        480.5158386230469,
+        291.0675048828125,
+        532.0585327148438
+      ],
+      "block_id": "page-0063-block-0020",
+      "order": 20,
+      "text": "blèmes avec la justice ;\nconsommation d’alcool, de drogues.\n• Scolarisation, travail, loisirs :\npoursuite des études collégiales ou universitaires, accom-\n",
+      "text_sha256": "4973d3d131c5f033fc9a25972ef72e8327d1b4e12a8bd58277452e89de3171a2"
+    },
+    {
+      "bbox": [
+        60.04999923706055,
+        533.2658081054688,
+        291.3118896484375,
+        557.45849609375
+      ],
+      "block_id": "page-0063-block-0021",
+      "order": 21,
+      "text": "plissements et échecs ;\nadaptation à la vie professionnelle, stabilité au travail, cause\n",
+      "text_sha256": "343ba33dc6dd2be42c401fa6f93a1dbe8592b08d5018b52dd585cacb986598ae"
+    },
+    {
+      "bbox": [
+        48.0,
+        558.6658325195312,
+        291.2696228027344,
+        651.3085327148438
+      ],
+      "block_id": "page-0063-block-0022",
+      "order": 22,
+      "text": "des arrêts de travail, chômage, retraite ;\nrelations avec les supérieurs, les collègues ;\namitiés, conits ;\ndivertissements, intérêts, loisirs (variété, intensité), sports ;\nsituation nancière ;\n• Vie sentimentale et conjugale :\ndébut et chronologie des relations amoureuses signica-\n",
+      "text_sha256": "990041e5eb72cc1f4e1bbf128963331fedee3606b86f8669d4cfa224deb6397b"
+    },
+    {
+      "bbox": [
+        60.04999923706055,
+        652.5158081054688,
+        291.0675048828125,
+        676.70849609375
+      ],
+      "block_id": "page-0063-block-0023",
+      "order": 23,
+      "text": "tives ;\nexpériences hétérosexuelles ou homosexuelles, orienta-\n",
+      "text_sha256": "df580b97c617c11b7eb18adf6a299883d299a85c6b514741b1822d1506c87050"
+    },
+    {
+      "bbox": [
+        60.04999923706055,
+        677.8658447265625,
+        291.1374816894531,
+        713.7584838867188
+      ],
+      "block_id": "page-0063-block-0024",
+      "order": 24,
+      "text": "tion sexuelle, identité de genre, satisfaction sexuelle et\naective ;\nadaptation à la vie de couple, stabilité et profondeur de\n",
+      "text_sha256": "0ad09deadedc14a5a84a9221be44f57ba007c8cd36999198df549f97e709ef8b"
+    },
+    {
+      "bbox": [
+        72.0,
+        714.9658203125,
+        202.67904663085938,
+        725.45849609375
+      ],
+      "block_id": "page-0063-block-0025",
+      "order": 25,
+      "text": "l’union, relations avec les enfants ;\n",
+      "text_sha256": "52d709143613d5fc2cd08775d8e2122fad0e3c3630dba838370f0e97b6825ae1"
+    }
+  ],
+  "coordinates_sha256": "84c222cccc0ce17c7dd37017546e78ce3c6ab853289bd3ffe3871efe58d71d65",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0063",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "46\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 1\nIntroduction à la psychiatrie\norganisation familiale ;\nréactions lors d’une séparation, d’un divorce ou du décès\nd’un enfant, du conjoint.\n• Vie adulte et vieillissement :\npertes signicatives, maladies ;\nloisirs, intérêts, sports ;\nengagement social, politique, religieux, bénévolat ;\nrelations avec les proches, les amis, le voisinage ;\n– réaction au départ des enfants ;\n– activités criminelles, démêlés avec la justice ;\n– enjeux reliés au vieillissement.\nLe questionnaire concernant l’histoire personnelle doit être\nadapté aux enjeux soulevés par la raison de consultation ou la\nmaladie actuelle ; divers éléments doivent faire l’objet de questions\nselon leur pertinence dans le contexte actuel du patient. Une\nimportance particulière doit être attachée aux souvenirs trauma-\ntiques, aux périodes diciles, aux situations ayant nécessité un\neort d’adaptation, aux réactions émotives lors des principales\nétapes de la vie ainsi qu’au pattern relationnel général (nombre de\npartenaires, périodes de célibat, conceptualisation des relations,\netc.). La perception et l’estime de soi peuvent aussi se reéter dans\nle regard que le patient jette sur sa vie et sa personne. Il est possible\nde suspecter un trouble de la personnalité à partir de ces éléments,\net certains critères peuvent être pris directement en considération\nà partir de la description de ces pathologies dans le DSM-5 : com-\nportements d’automutilation, manifestations d’impulsivité, crainte\ndu rejet, sensibilité aux critiques, souci de la perfection, etc.\nLes troubles de la personnalité sont présentés en détail\nau chapitre 40.\n3.5\nExamen physique\nAu Québec, les psychiatres n’eectuent que rarement un examen\nphysique complet. Ils procèdent plutôt à une recherche plus ciblée\nde signes physiques pertinents ou associés à la pathologie ou aux\ntraitements psychiatriques. Ainsi, une évaluation neurologique\nsommaire peut compléter l’examen mental, avec une attention\nparticulière portée à la démarche, aux signes extrapyramidaux ou\nneurologiques focaux. Il est utile que l’inrmière pèse le patient,\nmesure sa taille et prenne son tour de taille, car ces informations\nserviront au suivi métabolique qui doit être eectué lors de\nl’usage de plusieurs psychotropes. Les signes vitaux (tempéra-\nture, pouls, pression artérielle, rythme respiratoire) doivent être\nsurveillés à une fréquence déterminée par le contexte clinique,\nen collaboration avec l’omnipraticien ou le médecin traitant qui\npeut compléter l’examen physique.\n3.6\nExamen mental\nL’examen mental est l’équivalent en psychiatrie de l’examen\nphysique. Les symptômes subjectifs décrits par le patient\nsont notés dans l’histoire de la maladie actuelle, alors que\nles signes objectivés par le médecin durant tout l’entretien\nle sont dans la section Examen mental (voir la figure 3.1).\nencoprésie), le langage, les comportements alimentaires,\nle tempérament ;\nrang dans la fratrie, prénom, âge et occupation actuelle\ndes frères et sœurs ;\nqualités des interactions avec les parents, la fratrie et le\nreste de la famille, à la garderie ;\nproblèmes de santé dans la petite enfance ;\nimpression générale du patient à propos de son enfance\n(heureuse ou malheureuse), comment il perçoit ses parents\n(leurs qualités et défauts), leurs occupations ;\ncontexte culturel (religieux, éducatif) dans lequel le patient\na vécu et grandi.\n• Période scolaire :\nréactions à l’entrée à l’école et à la séparation d’avec les\nparents ;\nintérêt pour les études, dicultés d’apprentissage ou échec\nrencontrés, succès, aptitudes particulières ;\nactivités parascolaires, sports ;\nrelations avec les enseignants et les autres élèves.\n• Enfance et adolescence :\nclimat familial, attitudes des parents durant cette période,\nenfant choyé ou maltraité ;\nnégligence, violence familiale, maltraitance physique,\nsexuelle ;\nfonctionnement académique ;\nréactions personnelles à la puberté, premières règles,\néducation sexuelle, découverte de la sexualité ;\nproblèmes plus spéciques à cette période : l’acné, l’image\ncorporelle, les troubles alimentaires ;\névénements marquants, maladies ;\n• Relations avec les pairs, les amis, les adultes :\nparticipation à la vie de groupe, aux sports ;\nmodèles d’identication, relations avec les adultes ;\nfréquentation de milieux marginaux, vagabondage, pro-\nblèmes avec la justice ;\nconsommation d’alcool, de drogues.\n• Scolarisation, travail, loisirs :\npoursuite des études collégiales ou universitaires, accom-\nplissements et échecs ;\nadaptation à la vie professionnelle, stabilité au travail, cause\ndes arrêts de travail, chômage, retraite ;\nrelations avec les supérieurs, les collègues ;\namitiés, conits ;\ndivertissements, intérêts, loisirs (variété, intensité), sports ;\nsituation nancière ;\n• Vie sentimentale et conjugale :\ndébut et chronologie des relations amoureuses signica-\ntives ;\nexpériences hétérosexuelles ou homosexuelles, orienta-\ntion sexuelle, identité de genre, satisfaction sexuelle et\naective ;\nadaptation à la vie de couple, stabilité et profondeur de\nl’union, relations avec les enfants ;\n",
+  "raw_text_sha256": "20f142bdad19af2b62ba175fbcd14eaaa02b41ddbdf33017502d86c83cb949b2",
+  "source_page_display": 64,
+  "source_page_index": 63
+}

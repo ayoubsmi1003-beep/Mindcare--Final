@@ -1,0 +1,172 @@
+{
+  "block_sequence_sha256": "993cc8e886e486b35cacb252b3f43c682a7238fef663df7d21de840c0322c70c",
+  "blocks": [
+    {
+      "bbox": [
+        263.1000061035156,
+        2.3810577392578125,
+        561.0,
+        122.38105773925781
+      ],
+      "block_id": "page-0428-block-0001",
+      "order": 1,
+      "text": "CHAPITRE20\n",
+      "text_sha256": "15fee19996bd589e385d514e1f85fc8699f64f89b4b76fba0e34889945d39812"
+    },
+    {
+      "bbox": [
+        54.0,
+        132.67344665527344,
+        471.3530578613281,
+        219.59532165527344
+      ],
+      "block_id": "page-0428-block-0002",
+      "order": 2,
+      "text": "Troubles anxieux, panique,\nphobies\n",
+      "text_sha256": "c500587963a271dcfdee3c4606f7f2147045d1cea5b72a0602fc100f239a4ba6"
+    },
+    {
+      "bbox": [
+        54.0,
+        261.50732421875,
+        214.65899658203125,
+        275.54541015625
+      ],
+      "block_id": "page-0428-block-0003",
+      "order": 3,
+      "text": "Christo Todorov, M.D., M. SC. (psychiatrie)\n",
+      "text_sha256": "a283bfe264886de8bd1229700e4323364685dc750f64989f71a766b6b58cab44"
+    },
+    {
+      "bbox": [
+        54.0,
+        278.92724609375,
+        288.08245849609375,
+        311.143798828125
+      ],
+      "block_id": "page-0428-block-0004",
+      "order": 4,
+      "text": "Psychiatre, chef médical adjoint, programme des troubles\nanxieux et de l’humeur, Institut universitaire en santé mentale\nde Montréal\n",
+      "text_sha256": "94c49d9726f0cab5f31bc7a5f3ee93f5cea832f81bf1f2769bbd6de2ba840ab4"
+    },
+    {
+      "bbox": [
+        54.0,
+        314.92724609375,
+        275.9393005371094,
+        336.143798828125
+      ],
+      "block_id": "page-0428-block-0005",
+      "order": 5,
+      "text": "Professeur agrégé de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\n",
+      "text_sha256": "f4bc23aed99fa29e8f7410379c6cebea846c1188b4a600c871ae8a6f9bc4dde5"
+    },
+    {
+      "bbox": [
+        54.0,
+        346.05010986328125,
+        269.0775146484375,
+        358.55010986328125
+      ],
+      "block_id": "page-0428-block-0006",
+      "order": 6,
+      "text": "François Borgeat, M.D., FRCPC M. SC. (psychophysiologie)\n",
+      "text_sha256": "878c8b08fda9e7e84ca2d3d1d77a5a12f0436f02f503289cd5080f11fe0f556c"
+    },
+    {
+      "bbox": [
+        54.0,
+        362.42724609375,
+        288.08245849609375,
+        394.643798828125
+      ],
+      "block_id": "page-0428-block-0007",
+      "order": 7,
+      "text": "Psychiatre, chef médical adjoint, programme des troubles\nanxieux et de l’humeur, Institut universitaire en santé mentale\nde Montréal\n",
+      "text_sha256": "94c49d9726f0cab5f31bc7a5f3ee93f5cea832f81bf1f2769bbd6de2ba840ab4"
+    },
+    {
+      "bbox": [
+        54.0,
+        398.42724609375,
+        281.0921936035156,
+        419.643798828125
+      ],
+      "block_id": "page-0428-block-0008",
+      "order": 8,
+      "text": "Professeur titulaire de clinique, Département de psychiatrie,\nUniversité de Montréal\n",
+      "text_sha256": "77006faa95daa18e82dbe06f45f766c97c6f1c046ea584f092d24cb636c38a31"
+    },
+    {
+      "bbox": [
+        312.0,
+        261.50732421875,
+        452.9590148925781,
+        275.54541015625
+      ],
+      "block_id": "page-0428-block-0009",
+      "order": 9,
+      "text": "Joane Labrecque, Ph.D. (psychologie)\n",
+      "text_sha256": "ded7f6526deff09a69e23bec98ae128bdc91d0eb685071e4bfe01bd53edc982f"
+    },
+    {
+      "bbox": [
+        312.0,
+        278.92724609375,
+        547.2562866210938,
+        300.143798828125
+      ],
+      "block_id": "page-0428-block-0010",
+      "order": 10,
+      "text": "Psychologue, Clinique des troubles anxieux, Hôpital du Sacré-\nCœur de Montréal\n",
+      "text_sha256": "935feac49475139559c7254624e2fe99bdf82f21b72843d58333b6c6c7a3850c"
+    },
+    {
+      "bbox": [
+        312.0,
+        303.92724609375,
+        536.3682250976562,
+        325.143798828125
+      ],
+      "block_id": "page-0428-block-0011",
+      "order": 11,
+      "text": "Chargée de cours et superviseuse clinique, Département de\npsychologie, Université du Québec à Montréal\n",
+      "text_sha256": "72052997a14499f2bd5ce1481485191948d5dc43798eddc0c9ae38d5eadead46"
+    },
+    {
+      "bbox": [
+        54.0,
+        467.9244079589844,
+        295.010009765625,
+        724.8472900390625
+      ],
+      "block_id": "page-0428-block-0012",
+      "order": 12,
+      "text": "20.1 Historique et dénition.....................................................412\n20.1.1 Étymologie.............................................................. 412\n20.1.2 Mélancolie et anxiété............................................ 412\n20.1.3 Émergence des notions modernes ..................... 412\n20.1.4 Neurasthénie et névrose d’angoisse................... 413\n20.1.5 Psychasthénie de Janet ......................................... 413\n20.1.6 Vingtième siècle : avant et après le DSM-III .... 413\n20.1.7 Angoisse existentielle ........................................... 414\n20.2 Épidémiologie ......................................................................414\n20.3 Étiologies...............................................................................416\n20.3.1 Étiologies biologiques........................................... 416\n20.3.2 Étiologies psychologiques.................................... 420\n20.3.3 Étiologies sociales.................................................. 421\n20.4 Description clinique...........................................................421\n20.4.1 Anxiété normale et anxiété pathologique ........ 421\n20.4.2 Attaques de panique ............................................. 422\n20.4.3 Trouble panique..................................................... 422\n20.4.4 Agoraphobie........................................................... 422\n20.4.5 Anxiété sociale/phobie sociale ........................... 425\n20.4.6 Phobies spéciques ............................................... 427\n",
+      "text_sha256": "1cdfc2e68b32ed254d8de8b9386ab07966a5262e69db8f8d7746947c4999fd53"
+    },
+    {
+      "bbox": [
+        312.0,
+        467.9859313964844,
+        553.010009765625,
+        711.7681884765625
+      ],
+      "block_id": "page-0428-block-0013",
+      "order": 13,
+      "text": "20.4.7 Anxiété généralisée............................................... 429\n20.4.8 Anxiété de séparation........................................... 430\n20.4.9 Autres troubles anxieux....................................... 432\n20.5 Évaluation..............................................................................433\n20.5.1 Évaluation psychométrique................................. 434\n20.5.2 Autres investigations ............................................ 434\n20.6 Diagnostic diérentiel.......................................................434\n20.6.1 Troubles anxieux et troubles d’adaptation....... 434\n20.6.2 Trouble panique..................................................... 435\n20.6.3 Agoraphobie et phobies spéciques.................. 435\n20.6.4 Anxiété sociale....................................................... 435\n20.6.5 Anxiété généralisée............................................... 436\n20.6.6 Anxiété de séparation........................................... 436\n20.7 Traitements...........................................................................437\n20.7.1 Traitements pharmacologiques.......................... 437\n20.7.2 érapies psychologiques.................................... 442\n20.7.3 Prévention et interventions précoces................ 443\n20.8 Évolution et pronostic........................................................444\nLectures complémentaires.......................................................445\n",
+      "text_sha256": "f7107eec81ad00417a8e04398e1475f221e9fadb52d1ff87b2175ec36f5faa36"
+    }
+  ],
+  "coordinates_sha256": "6cfd2a2cb7fd226577ce2b35b17ea9cafc9d2f919aa0b70100eced550694d1eb",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0428",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "CHAPITRE20\nTroubles anxieux, panique,\nphobies\nChristo Todorov, M.D., M. SC. (psychiatrie)\nPsychiatre, chef médical adjoint, programme des troubles\nanxieux et de l’humeur, Institut universitaire en santé mentale\nde Montréal\nProfesseur agrégé de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\nFrançois Borgeat, M.D., FRCPC M. SC. (psychophysiologie)\nPsychiatre, chef médical adjoint, programme des troubles\nanxieux et de l’humeur, Institut universitaire en santé mentale\nde Montréal\nProfesseur titulaire de clinique, Département de psychiatrie,\nUniversité de Montréal\nJoane Labrecque, Ph.D. (psychologie)\nPsychologue, Clinique des troubles anxieux, Hôpital du Sacré-\nCœur de Montréal\nChargée de cours et superviseuse clinique, Département de\npsychologie, Université du Québec à Montréal\n20.1 Historique et dénition.....................................................412\n20.1.1 Étymologie.............................................................. 412\n20.1.2 Mélancolie et anxiété............................................ 412\n20.1.3 Émergence des notions modernes ..................... 412\n20.1.4 Neurasthénie et névrose d’angoisse................... 413\n20.1.5 Psychasthénie de Janet ......................................... 413\n20.1.6 Vingtième siècle : avant et après le DSM-III .... 413\n20.1.7 Angoisse existentielle ........................................... 414\n20.2 Épidémiologie ......................................................................414\n20.3 Étiologies...............................................................................416\n20.3.1 Étiologies biologiques........................................... 416\n20.3.2 Étiologies psychologiques.................................... 420\n20.3.3 Étiologies sociales.................................................. 421\n20.4 Description clinique...........................................................421\n20.4.1 Anxiété normale et anxiété pathologique ........ 421\n20.4.2 Attaques de panique ............................................. 422\n20.4.3 Trouble panique..................................................... 422\n20.4.4 Agoraphobie........................................................... 422\n20.4.5 Anxiété sociale/phobie sociale ........................... 425\n20.4.6 Phobies spéciques ............................................... 427\n20.4.7 Anxiété généralisée............................................... 429\n20.4.8 Anxiété de séparation........................................... 430\n20.4.9 Autres troubles anxieux....................................... 432\n20.5 Évaluation..............................................................................433\n20.5.1 Évaluation psychométrique................................. 434\n20.5.2 Autres investigations ............................................ 434\n20.6 Diagnostic diérentiel.......................................................434\n20.6.1 Troubles anxieux et troubles d’adaptation....... 434\n20.6.2 Trouble panique..................................................... 435\n20.6.3 Agoraphobie et phobies spéciques.................. 435\n20.6.4 Anxiété sociale....................................................... 435\n20.6.5 Anxiété généralisée............................................... 436\n20.6.6 Anxiété de séparation........................................... 436\n20.7 Traitements...........................................................................437\n20.7.1 Traitements pharmacologiques.......................... 437\n20.7.2 érapies psychologiques.................................... 442\n20.7.3 Prévention et interventions précoces................ 443\n20.8 Évolution et pronostic........................................................444\nLectures complémentaires.......................................................445\n",
+  "raw_text_sha256": "edf45cd48d0d0ada0ddaad0abb50a082f2baf7fd54963c500bfeb76ef939c78a",
+  "source_page_display": 429,
+  "source_page_index": 428
+}

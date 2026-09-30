@@ -1,0 +1,748 @@
+{
+  "block_sequence_sha256": "b012dab892bf1ec6a9190f7b9c7ac58a3cdf5f61e6c1a3b6e349be85dc7606ce",
+  "blocks": [
+    {
+      "bbox": [
+        476.20001220703125,
+        747.5753784179688,
+        555.0199584960938,
+        758.8693237304688
+      ],
+      "block_id": "page-1114-block-0001",
+      "order": 1,
+      "text": "Références\nR17\n",
+      "text_sha256": "90481bb63c08a0356b375ad8f32ab6bf6d5e8d78ce537ddd50501a2c8962a150"
+    },
+    {
+      "bbox": [
+        396.0,
+        40.68496322631836,
+        554.3028564453125,
+        66.9234390258789
+      ],
+      "block_id": "page-1114-block-0002",
+      "order": 2,
+      "text": "Santé Canada. (2002). Rapport sur les maladies mentales au\nCanada, Ottawa, Canada, [en ligne], www.phac-aspc.gc.ca/\npublicat/miic-mmac/pdf/men_ill_f.pdf.\n",
+      "text_sha256": "e8cc8fd09a2533b0013b45c8e410c6535aaf1dc2ae52870670f1beff82d17049"
+    },
+    {
+      "bbox": [
+        396.0,
+        70.78496551513672,
+        550.3175048828125,
+        97.0234375
+      ],
+      "block_id": "page-1114-block-0003",
+      "order": 3,
+      "text": "Segal, Z. V. & al. (2006). La thérapie cognitive basée sur la\npleine conscience pour la dépression, Bruxelles, Belgique,\nDe Boeck Université.\n",
+      "text_sha256": "adf95b203baede5f779e8963f62a79d87a808b7a9ab330401b428c77e05ac88a"
+    },
+    {
+      "bbox": [
+        396.0,
+        100.88496398925781,
+        554.1773071289062,
+        136.17344665527344
+      ],
+      "block_id": "page-1114-block-0004",
+      "order": 4,
+      "text": "Seidman, S. N. & al. (2009). « Effects of testosterone repla-\ncement in middle-aged men with dysthymia : a randomized,\nplacebo-controlled clinical trial », Journal of Clinical Psycho-\npharmacology, 29(3), p. 216-221.\n",
+      "text_sha256": "7a59b72265e405a124a22cad4eee2d444a247bab19266b3a904939c13012d370"
+    },
+    {
+      "bbox": [
+        396.0,
+        140.0349578857422,
+        542.7725219726562,
+        166.2734375
+      ],
+      "block_id": "page-1114-block-0005",
+      "order": 5,
+      "text": "Spitzer, R. L. & al. (2015). Questionnaire sur la santé du\npatient (PHQ-9), [en ligne], www.phqscreeners.com/\npdfs/02_PHQ-9/PHQ9_French%20for%20Canada.pdf.\n",
+      "text_sha256": "d80de629befb48510e0150ed26347c900b01066823fbdb0b679ce430a6593db6"
+    },
+    {
+      "bbox": [
+        396.0,
+        170.1349639892578,
+        553.6876831054688,
+        187.3234405517578
+      ],
+      "block_id": "page-1114-block-0006",
+      "order": 6,
+      "text": "Stern, T. A. & al. (2008). Massachusetts General Hospital\nComprehensive clinical Psychiatry, Philadelphie, PA, Mosby.\n",
+      "text_sha256": "a6b16003e2070f6b1229c63ff6daf7d057b9e784a640a7184a459c14af6bd409"
+    },
+    {
+      "bbox": [
+        396.0,
+        191.18496704101562,
+        550.2094116210938,
+        217.42344665527344
+      ],
+      "block_id": "page-1114-block-0007",
+      "order": 7,
+      "text": "Westrin, A. & Lam, R. (2007). « Seasonal affective disorder :\nA clinical update », Annals of Clinical Psychiatry, 19(4),\np. 239-246.\n",
+      "text_sha256": "8ae697199720ad66b54544219cc30328ab220805cc40fe0459036cc2a9689218"
+    },
+    {
+      "bbox": [
+        396.0,
+        221.2849578857422,
+        545.25,
+        247.5234375
+      ],
+      "block_id": "page-1114-block-0008",
+      "order": 8,
+      "text": "Whooley, M. A. & Simon, G. E. (2000). « Depression in\nmedical outpatients », New England Journal of Medicine,\n343(26), p. 1942-1950.\n",
+      "text_sha256": "d9fbfd6750650f03dc286bbd7c23d454ae86c874f856edcd7d9dd916a25ccdbb"
+    },
+    {
+      "bbox": [
+        396.0,
+        260.8703308105469,
+        548.2684936523438,
+        307.6734313964844
+      ],
+      "block_id": "page-1114-block-0009",
+      "order": 9,
+      "text": "Chapitre 20\nAderka, I. M. (2009). « Factors affecting treatment efcacy\nin social phobia : The use of video feedback and individual\nvs group formats », Journal of Anxiety Disorders, 23(1),\np. 12-17.\n",
+      "text_sha256": "2950b70b8c5362962c04f0aabf451626a8e7c82eb6196fac727f70d8c2a5c251"
+    },
+    {
+      "bbox": [
+        396.0,
+        311.53497314453125,
+        553.2564697265625,
+        346.8234558105469
+      ],
+      "block_id": "page-1114-block-0010",
+      "order": 10,
+      "text": "Allgulander, C. & Baldwin, D. S. (2013). « Pharmacotherapy\nof Generalized Anxiety Disorder », dans Baldwin, D. S. &\nLeonard, B. E., Anxiety Disorders, Switzerland, Karger,\np. 119-127.\n",
+      "text_sha256": "02d3915934f1e74c632c31fa77e5f8ca4220d2a3be0006bb506a849f44b16b7f"
+    },
+    {
+      "bbox": [
+        396.0,
+        350.6849670410156,
+        554.6024169921875,
+        376.9234313964844
+      ],
+      "block_id": "page-1114-block-0011",
+      "order": 11,
+      "text": "American Psychiatric Association (APA). (2004). DSM-IV-TR.\nCritères diagnostiques (Washington, DC, 2000). Traduction\nfrançaise par J.-D. Guelet al., Paris, France, Masson, 384 p.\n",
+      "text_sha256": "3dd57c3a61ddbe995c32ece8dff243018323ae9a88878ac5cac4e23caedb1cd5"
+    },
+    {
+      "bbox": [
+        396.0,
+        380.78497314453125,
+        545.7999877929688,
+        416.0234375
+      ],
+      "block_id": "page-1114-block-0012",
+      "order": 12,
+      "text": "American Psychiatric Association (APA). (2015). DSM-5 –\nManuel Diagnostique et Statistique des Troubles Mentaux.\nTraduction française par M.-A. Crocq, J.-D. Guelet al.,\nElsevier Masson SAS, Paris.\n",
+      "text_sha256": "9abdc7221827d2e516286759fe28a6461976091b7d5dc8ffca72c446615d7dc3"
+    },
+    {
+      "bbox": [
+        396.0,
+        419.8849792480469,
+        547.7725219726562,
+        446.1234436035156
+      ],
+      "block_id": "page-1114-block-0013",
+      "order": 13,
+      "text": "Association des pharmaciens du Canada. (2014). Compendium\ndes produits et spécialités pharmaceutiques, 11e éd.,\nOttawa, Canada.\n",
+      "text_sha256": "2ab98500980ff16f5fc3c37b5c0daaf12550181f176e67269dea2b2396e55d22"
+    },
+    {
+      "bbox": [
+        396.0,
+        449.9849548339844,
+        553.4752197265625,
+        503.3234558105469
+      ],
+      "block_id": "page-1114-block-0014",
+      "order": 14,
+      "text": "Baldwin, D. S. & al. (2014). «Evidence-based pharmaco-\nlogical treatment of anxiety disorders, post-traumatic stress\ndisorder and obsessive-compulsive disorder : A revision\nof the 2005 guidelines from the Bristish Association for\nPsychopharmacology », Journal of psychopharmacology,\n38(5), p. 403-439.\n",
+      "text_sha256": "b8686780d002da3679fb95ea080d3efcaa5cc7f5bf6c9c3fc1353e47de9a1e16"
+    },
+    {
+      "bbox": [
+        396.0,
+        507.18499755859375,
+        545.4598999023438,
+        533.4234619140625
+      ],
+      "block_id": "page-1114-block-0015",
+      "order": 15,
+      "text": "Bandelow, B. & al. (2013). «Pharmacological treatment\nof panic disorder », dans Baldwin, D. S. & Leonard, B. E.,\nAnxiety Disorders, Switzerland, Karger, p. 128-143.\n",
+      "text_sha256": "eeea8730d1a5f97812ec93c043f0f5eb9991c3969c9dd372c8097c76c83149ea"
+    },
+    {
+      "bbox": [
+        396.0,
+        537.2849731445312,
+        548.121826171875,
+        572.5734252929688
+      ],
+      "block_id": "page-1114-block-0016",
+      "order": 16,
+      "text": "Blanco, C. & al. (2010). « Pharmacotherapy for Social\nAnxiety Disorder », dans Stein, D. J. & al., Textbook of\nAnxiety Disorders, Washington, DC, American Psychiatric\nPublishing, p. 471-500.\n",
+      "text_sha256": "dcd3d381ac5690b4a7f2b224017b5c55c3111af7ff3d3a57cd711e5143e72338"
+    },
+    {
+      "bbox": [
+        396.0,
+        576.4349975585938,
+        551.5313720703125,
+        602.6734619140625
+      ],
+      "block_id": "page-1114-block-0017",
+      "order": 17,
+      "text": "Blanco, C. & al. (2014). « Risk factors for anxiety disorders :\nCommon and specic effects in a national sample »,\nDepression and anxiety, 31, p. 756-764.\n",
+      "text_sha256": "ce87b6127cd6fe52d6e0f437f2a48ab28c3b54b1de445d3b445dd50d244272fe"
+    },
+    {
+      "bbox": [
+        396.0,
+        606.4849853515625,
+        552.1275634765625,
+        632.7734375
+      ],
+      "block_id": "page-1114-block-0018",
+      "order": 18,
+      "text": "Bouvard, M. & Cottraux, J. (2005). Protocoles et échelles\nd’évaluation en psychiatrie et en psychologie, 4e éd., Paris,\nFrance, Masson.\n",
+      "text_sha256": "11298bced74baf8ab8f6e1f3974cd09b1b8b0a7f7de1d97ff91e664e6352526c"
+    },
+    {
+      "bbox": [
+        396.0,
+        636.5849609375,
+        548.5050048828125,
+        671.8734741210938
+      ],
+      "block_id": "page-1114-block-0019",
+      "order": 19,
+      "text": "Carlsson, K. & al. (2004). « Fear and the amygdala:\nManipulation of awareness generates differential cerebral\nresponses to phobic and fear-relevant (but nonfeared)\nstimuli », Emotion, 4(4), p. 340-353.\n",
+      "text_sha256": "004284b048f3990f3b8380397f42c1a9eba82915e0dd95da8075202a4ecb3cb2"
+    },
+    {
+      "bbox": [
+        396.0,
+        675.7349853515625,
+        543.6075439453125,
+        692.9734497070312
+      ],
+      "block_id": "page-1114-block-0020",
+      "order": 20,
+      "text": "Choy, Y. & al. (2007). « Treatment of specic phobia in\nadults », Clinical Psycho logy Review, 27(3), p. 266-286.\n",
+      "text_sha256": "7acf4998e246d0c844d43c736b4e1616ff81b68cb064fee5cfffd746ac8533cf"
+    },
+    {
+      "bbox": [
+        396.0,
+        696.7849731445312,
+        552.2974853515625,
+        714.0234375
+      ],
+      "block_id": "page-1114-block-0021",
+      "order": 21,
+      "text": "Comte-Sponville, A. (1995). «Bonjour l’angoisse ! », Confron-\ntations psychiatriques – L’anxiété, 36, p. 9-14.\n",
+      "text_sha256": "00829e9aeed240757b6e789daf9ca12d5a8576213ad6a936e27ff671a4c78f76"
+    },
+    {
+      "bbox": [
+        225.0,
+        40.68496322631836,
+        380.13385009765625,
+        66.9234390258789
+      ],
+      "block_id": "page-1114-block-0022",
+      "order": 22,
+      "text": "Flint, A. J. (1992). « The optimal duration of antidepressant\ntreatment in the elderly », International Journal of Geriatric\nPsychiatry, 19(9), p. 833-842.\n",
+      "text_sha256": "361bb55dbb387ce31a495e980cfbeeb1f1167facb210bea19796fc01eb5e7afa"
+    },
+    {
+      "bbox": [
+        225.0,
+        70.78496551513672,
+        367.2346496582031,
+        97.0234375
+      ],
+      "block_id": "page-1114-block-0023",
+      "order": 23,
+      "text": "Hatcher, S. (2008). « The STAR*D trial : the 300 lb\ngorilla is in the room, but does it block all the light ? »,\nEvidence-Based Mental Health, 11(4), p. 97-99.\n",
+      "text_sha256": "e0cd63fbdbb4822c144e0c6a3b1e622c5d33623830c13bd1cf6b222166021001"
+    },
+    {
+      "bbox": [
+        225.0,
+        100.88496398925781,
+        377.2778015136719,
+        127.1234359741211
+      ],
+      "block_id": "page-1114-block-0024",
+      "order": 24,
+      "text": "Higgins, E. S. & George, M. S. (2007). The Neuroscience of\nClinical Psychiatry, Philadelphie, PA, Lippincott Williams &\nWilkins.\n",
+      "text_sha256": "6adb7e03ebbbae04c46517f9c478d3e7b30dc32361b1caad44e797393c298bee"
+    },
+    {
+      "bbox": [
+        225.0,
+        130.98497009277344,
+        381.64361572265625,
+        166.2734375
+      ],
+      "block_id": "page-1114-block-0025",
+      "order": 25,
+      "text": "Hottin, P. & Trudel, J. F. (2007). « Dépression et troubles\naffectifs », dans Arcand, M. & Hébert, R. (dir.) Précis Pratique\nde Gériatrie, 3e éd., Saint-Hyacinthe-Paris, Edisem-Maloine,\np. 305-322.\n",
+      "text_sha256": "91d9e90ff8e7bdc1da33e41aec53707dc5c141d7ec0d31cad9df3241d4aa1f44"
+    },
+    {
+      "bbox": [
+        225.0,
+        170.0849609375,
+        381.697509765625,
+        187.3234405517578
+      ],
+      "block_id": "page-1114-block-0026",
+      "order": 26,
+      "text": "Jacoby, R. & al. (2008). Oxford Textbook of Old Age Psychia-\ntry, Oxford, Royaume-Uni, Oxford University Press.\n",
+      "text_sha256": "bda4078e71c2908d735abe44b707b66c18962045280621ded9d031e47c8536c1"
+    },
+    {
+      "bbox": [
+        225.0,
+        191.18496704101562,
+        379.8074951171875,
+        244.5234375
+      ],
+      "block_id": "page-1114-block-0027",
+      "order": 27,
+      "text": "Kavanagh, M. & al. (2006). La dépression majeure en\npremière ligne: Les impacts cliniques des stratégies\nd’intervention revue de la littérature, Agence de la santé\net des services sociaux de la Capitale-Nationale, Direction\nrégionale de la Santé Publique et Institut national de santé\npublique du Québec, [en ligne], www.inspq.qc.ca.\n",
+      "text_sha256": "4f42428f8d3d5f5ff31a466fdcf2b480189a84106d1388ceb8a837ff7c94a9df"
+    },
+    {
+      "bbox": [
+        225.0,
+        248.3849639892578,
+        383.45001220703125,
+        274.6234436035156
+      ],
+      "block_id": "page-1114-block-0028",
+      "order": 28,
+      "text": "Kennedy, S. H. (2008). « Core symptoms of major depressive\ndisorder : Relevance to diagnosis and treatment », Dialogues\nClinical Neurosciences, 10(3), p. 271-277.\n",
+      "text_sha256": "372bc65f6f8ad3e574088bee8f888a4e30953bf164d005e1dadd624ddb8ad763"
+    },
+    {
+      "bbox": [
+        225.0,
+        278.4349670410156,
+        375.5875244140625,
+        304.72344970703125
+      ],
+      "block_id": "page-1114-block-0029",
+      "order": 29,
+      "text": "Klein, D. F. & al. (1980). Diagnosis and Drug Treatment of\nPsychiatric Disorders : Adults and Children, 2e éd., Balti-\nmore, PA, Lippincott Williams & Wilkins.\n",
+      "text_sha256": "392aff594008627326cb76b258908530335747094d729b5172c1f5cd346f26ac"
+    },
+    {
+      "bbox": [
+        225.0,
+        308.53497314453125,
+        376.625,
+        334.8234558105469
+      ],
+      "block_id": "page-1114-block-0030",
+      "order": 30,
+      "text": "Kroenke, K. & Spitzer, R. L. (2002). « The PHQ-9 : A new\ndepression diagnostic and severity measure », Psychiatric\nAnnals, 32(9), p. 509-521.\n",
+      "text_sha256": "9e3f39e5fcc53067b0128499ab205543680a1cb1a3f8cf67aa66359795b57685"
+    },
+    {
+      "bbox": [
+        225.0,
+        338.6349792480469,
+        379.9750671386719,
+        355.8734436035156
+      ],
+      "block_id": "page-1114-block-0031",
+      "order": 31,
+      "text": "Linde, K. & al. (2008). « St John’s wort for major depres-\nsion », Cochrane Database System Review (4), CD000448.\n",
+      "text_sha256": "aa1d5e7cfb132aed5f232c0b47fa302e5db44fcece61a9845f44320e8b8663db"
+    },
+    {
+      "bbox": [
+        225.0,
+        359.7349548339844,
+        374.697509765625,
+        395.0234375
+      ],
+      "block_id": "page-1114-block-0032",
+      "order": 32,
+      "text": "Lippi, G. & al. (2009). « Mental depression and cardiovas-\ncular disease : A multifaceted, bidirectional association »,\nSeminar in Thrombosis and Hemostasis, 35(3),\np. 325-336.\n",
+      "text_sha256": "89efeb3f6b7c773aeab19f7df45d68fc41238c812f07bf07619d326459cea0de"
+    },
+    {
+      "bbox": [
+        225.0,
+        398.8349609375,
+        371.5,
+        425.0734558105469
+      ],
+      "block_id": "page-1114-block-0033",
+      "order": 33,
+      "text": "Malhi, G. S. & al. (2009). « Clinical practice recommen-\ndations for depression », Acta Psychiatrica Scandinavia,\n119 (suppl. 439), p. 8-26.\n",
+      "text_sha256": "c5a320a63f8808f73ae9727dc50c41cfef0e026f3008f76dfed40783055e65fa"
+    },
+    {
+      "bbox": [
+        225.0,
+        428.9349670410156,
+        362.12506103515625,
+        446.1734313964844
+      ],
+      "block_id": "page-1114-block-0034",
+      "order": 34,
+      "text": "Mead, G. E. & al. (2008). « Exercise for depression »,\nCochrane Database System Review (4), CD004366.\n",
+      "text_sha256": "2c5b193dfd61d05b9444b973068e75fe7d55b7e39150a32f4c0a51875798ca97"
+    },
+    {
+      "bbox": [
+        225.0,
+        449.9849548339844,
+        373.7710266113281,
+        485.2734375
+      ],
+      "block_id": "page-1114-block-0035",
+      "order": 35,
+      "text": "Mitchell, A. J. & Subramaniam, H. (2005). « Prognosis of\ndepression in old age compared to middle age : A syste-\nmatic review of comparative studies », American Journal\nof Psychiatry, 162(9), p. 1588-1601.\n",
+      "text_sha256": "ceedbbaa87513d9c74d88fd62f3d290f059c48eab5197b705e64449b81416560"
+    },
+    {
+      "bbox": [
+        225.0,
+        489.1349792480469,
+        372.00244140625,
+        524.4234619140625
+      ],
+      "block_id": "page-1114-block-0036",
+      "order": 36,
+      "text": "Mössner, R. & al. (2007). « Consensus paper of the WFSBP\ntask force on biological markers : Biological markers in\ndepression », World Journal of Biological Psychiatry, 8(3),\np. 141-174.\n",
+      "text_sha256": "0fc07a887bfc7024872a9c31a0548d1c3b904f1ad0b82f8a4d5ab56b4b5c16a6"
+    },
+    {
+      "bbox": [
+        225.0,
+        528.2349853515625,
+        364.010009765625,
+        554.5234375
+      ],
+      "block_id": "page-1114-block-0037",
+      "order": 37,
+      "text": "National Institute for Health and Care Excellence (NICE).\n(2007). Transcranial magnetic stimulation for severe\ndepression, [en ligne], www.nice.org.uk/ipg242.\n",
+      "text_sha256": "0a84a2c76ae943cb35df8b4f31d758e041db3ed1ee8be438461e88cda7dc0a88"
+    },
+    {
+      "bbox": [
+        225.0,
+        558.3349609375,
+        381.29998779296875,
+        584.6234741210938
+      ],
+      "block_id": "page-1114-block-0038",
+      "order": 38,
+      "text": "Organisation Mondiale de la Santé (OMS). (2001). Rapport sur\nla santé dans le monde 2001. La santé mentale : Nouvelle\nconception, nouveaux espoirs, Genève, Suisse, OMS.\n",
+      "text_sha256": "701cbce18ea1836cb2d5d354b59ae3b404d1137be22fdfcac4de4e61c63cbdc9"
+    },
+    {
+      "bbox": [
+        225.0,
+        588.4349975585938,
+        383.3150634765625,
+        623.7234497070312
+      ],
+      "block_id": "page-1114-block-0039",
+      "order": 39,
+      "text": "Papakostas, G. I. & al. (2011). «Assessment of a multi-assay,\nserum-based biological diagnostic test for major depressive\ndisorder : A pilot and replication study » Molecular Psychia-\ntry, 18(3), p. 332-339.\n",
+      "text_sha256": "75cf8716de60373babf1435696ce05bbefbc9693d31a45ae543207b4928e2b32"
+    },
+    {
+      "bbox": [
+        225.0,
+        627.5849609375,
+        373.5475158691406,
+        653.8234252929688
+      ],
+      "block_id": "page-1114-block-0040",
+      "order": 40,
+      "text": "Patten, S. B. & Barbui, C. (2004). « Drug-induced depres-\nsion : a systematic review to inform clinical practice »,\nPsychotherapy and Psychosomatics, 73(4), p. 207-215.\n",
+      "text_sha256": "274c29c999dcdc4fa77907417a614c1eeed269ecb1b4261d9f1c9984ad13205c"
+    },
+    {
+      "bbox": [
+        225.0,
+        657.6849975585938,
+        378.2875671386719,
+        683.9234619140625
+      ],
+      "block_id": "page-1114-block-0041",
+      "order": 41,
+      "text": "Rocha, T. M. R. & al. (2013). « Mood disorders in childhood\nand adolescence », Revista Brasileira de Psiquiatria, 35,\np. S22-S31.\n",
+      "text_sha256": "ea4a7522a3009d8ede82690b595bab3c0be4ba522d5bb6e9005bb999e164848b"
+    },
+    {
+      "bbox": [
+        225.0,
+        687.7849731445312,
+        381.6476135253906,
+        714.0234375
+      ],
+      "block_id": "page-1114-block-0042",
+      "order": 42,
+      "text": "Rot, M. A. H. & al. (2009). « Neurobiological mechanisms in\nmajor depressive disorder », Canadian Medical Association\nJournal, 180(3), p. 305-313.\n",
+      "text_sha256": "dec884678b8166881b34c3be7afad926e02849aecbb0eb268e54a8389f77528a"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.68496322631836,
+        202.5188446044922,
+        57.97343826293945
+      ],
+      "block_id": "page-1114-block-0043",
+      "order": 43,
+      "text": "Reinares, M. (2010). « Family psychoeducation for bipolar\ndisorder », European Psychiatry, 25(suppl. 1), p. 18.\n",
+      "text_sha256": "05ca7da1a0a9ab7c93828f556b481b5a738402e81f783c06859cd4b1af08b4f5"
+    },
+    {
+      "bbox": [
+        54.0,
+        61.8349609375,
+        211.54750061035156,
+        97.2734375
+      ],
+      "block_id": "page-1114-block-0044",
+      "order": 44,
+      "text": "Yatham, L. N. & al. (2005). « Canadian network for mood\nand anxiety treatments (CANMAT ) guidelines for the mana-\ngement of patients with bipolar disorder : Consensus and\ncontroversies », Bipolar Disorders, 7(suppl. 3), p. 5-69.\n",
+      "text_sha256": "dfbb963fa69985573ccb09d7f275015281cec62a908a2668b2c3e200f97faac6"
+    },
+    {
+      "bbox": [
+        54.0,
+        101.13496398925781,
+        201.9548797607422,
+        154.7234344482422
+      ],
+      "block_id": "page-1114-block-0045",
+      "order": 45,
+      "text": "Yatham, L. N. & al. (2013). « Canadian network for mood\nand anxiety treatments (CANMAT) and International\nsociety for bipolar disorders (ISBD) collaborative update\nfor CANMAT guidelines for the management of patients\nwith bipolar disorder : Update 2013 », Bipolar Disorders,\n15, p. 1-44.\n",
+      "text_sha256": "6b026084f6a164fcbe5cdf58d4499a587860d4bee9545eea337ff98d723b7df0"
+    },
+    {
+      "bbox": [
+        54.0,
+        158.6349639892578,
+        211.19012451171875,
+        184.9734344482422
+      ],
+      "block_id": "page-1114-block-0046",
+      "order": 46,
+      "text": "Yildiz, A. & al. (2008). « Protein kinase C inhibition in the\ntreatment of mania : a double-blind, placebo-controlled trial\nof tamoixifen », Arch Gen Psychiatry, 65(3), p. 255-263.\n",
+      "text_sha256": "54795a37352dc57c18f7f5128e62508fad29b384e0c32d8a1ddb0504ec9e67a2"
+    },
+    {
+      "bbox": [
+        54.0,
+        188.8349609375,
+        212.18991088867188,
+        215.2234344482422
+      ],
+      "block_id": "page-1114-block-0047",
+      "order": 47,
+      "text": "Zarate, C.A. & al. (2007). « Efcacy of a protein kinase C\ninhibitor (tamoxifen) in the treatment of acute mania : a pilot\nstudy », Bipolar Disorder, 9(6), p. 561-570.\n",
+      "text_sha256": "846c7d275060deb282b8f0e2645ef0f2b8757d574ededcc494c4f9d228c48292"
+    },
+    {
+      "bbox": [
+        54.0,
+        228.5703125,
+        208.35269165039062,
+        275.5734558105469
+      ],
+      "block_id": "page-1114-block-0048",
+      "order": 48,
+      "text": "Chapitre 19\nAgence d’évaluation des technologies et des modes d’intervention\nen santé (AETMIS). (2003). L’utilisation des électrochocs au\nQuébec. Québec, Québec, [en ligne], www.aetmis.gouv.\nqc.ca.\n",
+      "text_sha256": "c4e80bcac3452b6b43db65f77c4e35017358fcdaae40524f44778382ce2feb70"
+    },
+    {
+      "bbox": [
+        54.0,
+        279.4849548339844,
+        197.80502319335938,
+        305.8234558105469
+      ],
+      "block_id": "page-1114-block-0049",
+      "order": 49,
+      "text": "American Psychiatric Association (APA). (1980). DSM-III:\nDiagnostic and Statistical Manual of Mental Disorders,\nWashington, DC, American Psychiatric Association.\n",
+      "text_sha256": "4c1fda7499f571624102ad32ac167fd14ab71816c462c1bf822634010b4ac2af"
+    },
+    {
+      "bbox": [
+        54.0,
+        309.7349548339844,
+        212.0825958251953,
+        336.0734558105469
+      ],
+      "block_id": "page-1114-block-0050",
+      "order": 50,
+      "text": "American Psychiatric Association (APA). (2004). DSM-IV-TR.\nCritères diagnostiques (Washington, DC, 2000). Traduction\nfrançaise par J.-D. Guelet al., Paris, France, Masson.\n",
+      "text_sha256": "59168a3cdb232a529352a11b7676441df0533ef4b0978ce40ab950cd265635c4"
+    },
+    {
+      "bbox": [
+        54.0,
+        339.9349670410156,
+        207.5,
+        375.3734436035156
+      ],
+      "block_id": "page-1114-block-0051",
+      "order": 51,
+      "text": "American Psychiatric Association (APA). (2015). DSM-5 –\nManuel Diagnostique et Statistique des Troubles Mentaux.\nTraduction française par M.-A. Crocq, J.-D. Guelet al.,\nElsevier Masson SAS, Paris.\n",
+      "text_sha256": "9abdc7221827d2e516286759fe28a6461976091b7d5dc8ffca72c446615d7dc3"
+    },
+    {
+      "bbox": [
+        54.0,
+        379.28497314453125,
+        206.74749755859375,
+        423.7734375
+      ],
+      "block_id": "page-1114-block-0052",
+      "order": 52,
+      "text": "Anderson, I. M. & al. (2008). « Evidence-based guidelines\nfor treating depressive disorders with antidepressants :\nA revision of the 2000 British Association for Psychophar-\nmacology guideline », Journal of Psychopharmacology,\n22(4), p. 343-396.\n",
+      "text_sha256": "160372476e3e470d4ca0d1ad49b0e6e4406f8c77a57e900e000260fd5042d4ce"
+    },
+    {
+      "bbox": [
+        54.0,
+        427.6349792480469,
+        211.7201690673828,
+        453.97344970703125
+      ],
+      "block_id": "page-1114-block-0053",
+      "order": 53,
+      "text": "Andrews, G. & al. (2007). « Dimensionality and the category\nof major depressive episode », International Journal of\nMethods in Psychiatric Research, 16(suppl. 1), p. S41-S51.\n",
+      "text_sha256": "caeb77377938d8976bbeb26fb5a472cd72f5c299bb55b779741fff97513f6f7f"
+    },
+    {
+      "bbox": [
+        54.0,
+        457.8849792480469,
+        212.04750061035156,
+        493.3234558105469
+      ],
+      "block_id": "page-1114-block-0054",
+      "order": 54,
+      "text": "Barbui, C. & al. (2009). « Selective serotonin reuptake inhibi-\ntors and risk of suicide : A systematic review of observational\nstudies », Canadian Medical Association Journal, 180(3),\np. 291-297.\n",
+      "text_sha256": "b6861f67ac9036de71456093ed9358e03ff31c8bef2c80c9a87c24d7a714dff5"
+    },
+    {
+      "bbox": [
+        54.0,
+        497.1849670410156,
+        210.21273803710938,
+        541.6734619140625
+      ],
+      "block_id": "page-1114-block-0055",
+      "order": 55,
+      "text": "Bilsker, D. & Paterson, R. (2005). Guide d’autosoins pour la\ndépression, Centre for Applied Research in Mental Health\nand Addiction (CARMHA) et BC Mental Health & Addiction\nServices (BCMHAS), [en ligne], www.comh.ca/publications/\nresources/asw/SCDP-French.pdf.\n",
+      "text_sha256": "1022effcbe5efab557fd9798187a3bd0c9ce36a6ebd6f29388f12b5af1456345"
+    },
+    {
+      "bbox": [
+        54.0,
+        545.5849609375,
+        212.23597717285156,
+        581.0234375
+      ],
+      "block_id": "page-1114-block-0056",
+      "order": 56,
+      "text": "Birmaher, B. & al. (2007). « Practice parameter for the\nassessment and treatment of children and adolescents with\ndepressive disorders », Journal of the American Academy of\nChild & Adolescent Psychiatry, 46(11), p. 1503-1526.\n",
+      "text_sha256": "e68d98d91ed55666fde845574c7ed72691e00d17cf11039f7fc72bbda20b00f9"
+    },
+    {
+      "bbox": [
+        54.0,
+        584.8849487304688,
+        212.5800018310547,
+        611.2234497070312
+      ],
+      "block_id": "page-1114-block-0057",
+      "order": 57,
+      "text": "Celano, C. M. & al. (2011). « Depressogenic effects of\nmedications : A review », Dialogues in Clinical Neuroscience,\n13(1), p. 109-125.\n",
+      "text_sha256": "d107d853dcf03d404f72deb711b03ff39081497ae9531ff5d32743a4d6e83017"
+    },
+    {
+      "bbox": [
+        54.0,
+        615.1349487304688,
+        210.8450469970703,
+        632.4234619140625
+      ],
+      "block_id": "page-1114-block-0058",
+      "order": 58,
+      "text": "Coyne, J. (1985) Essential Papers on Depression, New York,\nNY, New York University Press.\n",
+      "text_sha256": "f495983d4e296c1a660a8bf2616e3226012b5e7343784d05a9f8d609111735b5"
+    },
+    {
+      "bbox": [
+        54.0,
+        636.2849731445312,
+        206.84750366210938,
+        653.5734252929688
+      ],
+      "block_id": "page-1114-block-0059",
+      "order": 59,
+      "text": "Fava, M. & Kendler, K. S. (2000). « Major Depressive Disor-\nder », Neuron, 28(2), p. 335-341.\n",
+      "text_sha256": "f55d6f6f7852ac3031a5896dc7c550898833f5da5bbc5176cb5ce24da17b31de"
+    },
+    {
+      "bbox": [
+        54.0,
+        657.4349975585938,
+        211.85020446777344,
+        674.7234497070312
+      ],
+      "block_id": "page-1114-block-0060",
+      "order": 60,
+      "text": "Ferron, J. (1972). Le Saint-Élias, Montréal, Québec, Éditions\ndu Jour.\n",
+      "text_sha256": "05bb5ce3aa3d1e6b01ad70e9a82dbcd156b27e99614e54ffc3962bae1a9f93fb"
+    },
+    {
+      "bbox": [
+        54.0,
+        678.5849609375,
+        207.625,
+        714.0234375
+      ],
+      "block_id": "page-1114-block-0061",
+      "order": 61,
+      "text": "Fitzgerald, P. & Daskalakis, Z. J. (2008). « The use of\nrepetitive transcranial magnetic stimulation and vagal\nnerve stimulation in the treatment of depression », Current\nOpinions in Psychiatry, 21(1), p. 25-29.\n",
+      "text_sha256": "251aa278322e2bc8651c7546810d19521c598aeea2712a564fe7b488fcba24c0"
+    }
+  ],
+  "coordinates_sha256": "f9b62939ad09e0c7fc59b65f61179e7e1bd09e21631de9962fcf7ee7832b5e43",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1114",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Références\nR17\nSanté Canada. (2002). Rapport sur les maladies mentales au\nCanada, Ottawa, Canada, [en ligne], www.phac-aspc.gc.ca/\npublicat/miic-mmac/pdf/men_ill_f.pdf.\nSegal, Z. V. & al. (2006). La thérapie cognitive basée sur la\npleine conscience pour la dépression, Bruxelles, Belgique,\nDe Boeck Université.\nSeidman, S. N. & al. (2009). « Effects of testosterone repla-\ncement in middle-aged men with dysthymia : a randomized,\nplacebo-controlled clinical trial », Journal of Clinical Psycho-\npharmacology, 29(3), p. 216-221.\nSpitzer, R. L. & al. (2015). Questionnaire sur la santé du\npatient (PHQ-9), [en ligne], www.phqscreeners.com/\npdfs/02_PHQ-9/PHQ9_French%20for%20Canada.pdf.\nStern, T. A. & al. (2008). Massachusetts General Hospital\nComprehensive clinical Psychiatry, Philadelphie, PA, Mosby.\nWestrin, A. & Lam, R. (2007). « Seasonal affective disorder :\nA clinical update », Annals of Clinical Psychiatry, 19(4),\np. 239-246.\nWhooley, M. A. & Simon, G. E. (2000). « Depression in\nmedical outpatients », New England Journal of Medicine,\n343(26), p. 1942-1950.\nChapitre 20\nAderka, I. M. (2009). « Factors affecting treatment efcacy\nin social phobia : The use of video feedback and individual\nvs group formats », Journal of Anxiety Disorders, 23(1),\np. 12-17.\nAllgulander, C. & Baldwin, D. S. (2013). « Pharmacotherapy\nof Generalized Anxiety Disorder », dans Baldwin, D. S. &\nLeonard, B. E., Anxiety Disorders, Switzerland, Karger,\np. 119-127.\nAmerican Psychiatric Association (APA). (2004). DSM-IV-TR.\nCritères diagnostiques (Washington, DC, 2000). Traduction\nfrançaise par J.-D. Guelet al., Paris, France, Masson, 384 p.\nAmerican Psychiatric Association (APA). (2015). DSM-5 –\nManuel Diagnostique et Statistique des Troubles Mentaux.\nTraduction française par M.-A. Crocq, J.-D. Guelet al.,\nElsevier Masson SAS, Paris.\nAssociation des pharmaciens du Canada. (2014). Compendium\ndes produits et spécialités pharmaceutiques, 11e éd.,\nOttawa, Canada.\nBaldwin, D. S. & al. (2014). «Evidence-based pharmaco-\nlogical treatment of anxiety disorders, post-traumatic stress\ndisorder and obsessive-compulsive disorder : A revision\nof the 2005 guidelines from the Bristish Association for\nPsychopharmacology », Journal of psychopharmacology,\n38(5), p. 403-439.\nBandelow, B. & al. (2013). «Pharmacological treatment\nof panic disorder », dans Baldwin, D. S. & Leonard, B. E.,\nAnxiety Disorders, Switzerland, Karger, p. 128-143.\nBlanco, C. & al. (2010). « Pharmacotherapy for Social\nAnxiety Disorder », dans Stein, D. J. & al., Textbook of\nAnxiety Disorders, Washington, DC, American Psychiatric\nPublishing, p. 471-500.\nBlanco, C. & al. (2014). « Risk factors for anxiety disorders :\nCommon and specic effects in a national sample »,\nDepression and anxiety, 31, p. 756-764.\nBouvard, M. & Cottraux, J. (2005). Protocoles et échelles\nd’évaluation en psychiatrie et en psychologie, 4e éd., Paris,\nFrance, Masson.\nCarlsson, K. & al. (2004). « Fear and the amygdala:\nManipulation of awareness generates differential cerebral\nresponses to phobic and fear-relevant (but nonfeared)\nstimuli », Emotion, 4(4), p. 340-353.\nChoy, Y. & al. (2007). « Treatment of specic phobia in\nadults », Clinical Psycho logy Review, 27(3), p. 266-286.\nComte-Sponville, A. (1995). «Bonjour l’angoisse ! », Confron-\ntations psychiatriques – L’anxiété, 36, p. 9-14.\nFlint, A. J. (1992). « The optimal duration of antidepressant\ntreatment in the elderly », International Journal of Geriatric\nPsychiatry, 19(9), p. 833-842.\nHatcher, S. (2008). « The STAR*D trial : the 300 lb\ngorilla is in the room, but does it block all the light ? »,\nEvidence-Based Mental Health, 11(4), p. 97-99.\nHiggins, E. S. & George, M. S. (2007). The Neuroscience of\nClinical Psychiatry, Philadelphie, PA, Lippincott Williams &\nWilkins.\nHottin, P. & Trudel, J. F. (2007). « Dépression et troubles\naffectifs », dans Arcand, M. & Hébert, R. (dir.) Précis Pratique\nde Gériatrie, 3e éd., Saint-Hyacinthe-Paris, Edisem-Maloine,\np. 305-322.\nJacoby, R. & al. (2008). Oxford Textbook of Old Age Psychia-\ntry, Oxford, Royaume-Uni, Oxford University Press.\nKavanagh, M. & al. (2006). La dépression majeure en\npremière ligne: Les impacts cliniques des stratégies\nd’intervention revue de la littérature, Agence de la santé\net des services sociaux de la Capitale-Nationale, Direction\nrégionale de la Santé Publique et Institut national de santé\npublique du Québec, [en ligne], www.inspq.qc.ca.\nKennedy, S. H. (2008). « Core symptoms of major depressive\ndisorder : Relevance to diagnosis and treatment », Dialogues\nClinical Neurosciences, 10(3), p. 271-277.\nKlein, D. F. & al. (1980). Diagnosis and Drug Treatment of\nPsychiatric Disorders : Adults and Children, 2e éd., Balti-\nmore, PA, Lippincott Williams & Wilkins.\nKroenke, K. & Spitzer, R. L. (2002). « The PHQ-9 : A new\ndepression diagnostic and severity measure », Psychiatric\nAnnals, 32(9), p. 509-521.\nLinde, K. & al. (2008). « St John’s wort for major depres-\nsion », Cochrane Database System Review (4), CD000448.\nLippi, G. & al. (2009). « Mental depression and cardiovas-\ncular disease : A multifaceted, bidirectional association »,\nSeminar in Thrombosis and Hemostasis, 35(3),\np. 325-336.\nMalhi, G. S. & al. (2009). « Clinical practice recommen-\ndations for depression », Acta Psychiatrica Scandinavia,\n119 (suppl. 439), p. 8-26.\nMead, G. E. & al. (2008). « Exercise for depression »,\nCochrane Database System Review (4), CD004366.\nMitchell, A. J. & Subramaniam, H. (2005). « Prognosis of\ndepression in old age compared to middle age : A syste-\nmatic review of comparative studies », American Journal\nof Psychiatry, 162(9), p. 1588-1601.\nMössner, R. & al. (2007). « Consensus paper of the WFSBP\ntask force on biological markers : Biological markers in\ndepression », World Journal of Biological Psychiatry, 8(3),\np. 141-174.\nNational Institute for Health and Care Excellence (NICE).\n(2007). Transcranial magnetic stimulation for severe\ndepression, [en ligne], www.nice.org.uk/ipg242.\nOrganisation Mondiale de la Santé (OMS). (2001). Rapport sur\nla santé dans le monde 2001. La santé mentale : Nouvelle\nconception, nouveaux espoirs, Genève, Suisse, OMS.\nPapakostas, G. I. & al. (2011). «Assessment of a multi-assay,\nserum-based biological diagnostic test for major depressive\ndisorder : A pilot and replication study » Molecular Psychia-\ntry, 18(3), p. 332-339.\nPatten, S. B. & Barbui, C. (2004). « Drug-induced depres-\nsion : a systematic review to inform clinical practice »,\nPsychotherapy and Psychosomatics, 73(4), p. 207-215.\nRocha, T. M. R. & al. (2013). « Mood disorders in childhood\nand adolescence », Revista Brasileira de Psiquiatria, 35,\np. S22-S31.\nRot, M. A. H. & al. (2009). « Neurobiological mechanisms in\nmajor depressive disorder », Canadian Medical Association\nJournal, 180(3), p. 305-313.\nReinares, M. (2010). « Family psychoeducation for bipolar\ndisorder », European Psychiatry, 25(suppl. 1), p. 18.\nYatham, L. N. & al. (2005). « Canadian network for mood\nand anxiety treatments (CANMAT ) guidelines for the mana-\ngement of patients with bipolar disorder : Consensus and\ncontroversies », Bipolar Disorders, 7(suppl. 3), p. 5-69.\nYatham, L. N. & al. (2013). « Canadian network for mood\nand anxiety treatments (CANMAT) and International\nsociety for bipolar disorders (ISBD) collaborative update\nfor CANMAT guidelines for the management of patients\nwith bipolar disorder : Update 2013 », Bipolar Disorders,\n15, p. 1-44.\nYildiz, A. & al. (2008). « Protein kinase C inhibition in the\ntreatment of mania : a double-blind, placebo-controlled trial\nof tamoixifen », Arch Gen Psychiatry, 65(3), p. 255-263.\nZarate, C.A. & al. (2007). « Efcacy of a protein kinase C\ninhibitor (tamoxifen) in the treatment of acute mania : a pilot\nstudy », Bipolar Disorder, 9(6), p. 561-570.\nChapitre 19\nAgence d’évaluation des technologies et des modes d’intervention\nen santé (AETMIS). (2003). L’utilisation des électrochocs au\nQuébec. Québec, Québec, [en ligne], www.aetmis.gouv.\nqc.ca.\nAmerican Psychiatric Association (APA). (1980). DSM-III:\nDiagnostic and Statistical Manual of Mental Disorders,\nWashington, DC, American Psychiatric Association.\nAmerican Psychiatric Association (APA). (2004). DSM-IV-TR.\nCritères diagnostiques (Washington, DC, 2000). Traduction\nfrançaise par J.-D. Guelet al., Paris, France, Masson.\nAmerican Psychiatric Association (APA). (2015). DSM-5 –\nManuel Diagnostique et Statistique des Troubles Mentaux.\nTraduction française par M.-A. Crocq, J.-D. Guelet al.,\nElsevier Masson SAS, Paris.\nAnderson, I. M. & al. (2008). « Evidence-based guidelines\nfor treating depressive disorders with antidepressants :\nA revision of the 2000 British Association for Psychophar-\nmacology guideline », Journal of Psychopharmacology,\n22(4), p. 343-396.\nAndrews, G. & al. (2007). « Dimensionality and the category\nof major depressive episode », International Journal of\nMethods in Psychiatric Research, 16(suppl. 1), p. S41-S51.\nBarbui, C. & al. (2009). « Selective serotonin reuptake inhibi-\ntors and risk of suicide : A systematic review of observational\nstudies », Canadian Medical Association Journal, 180(3),\np. 291-297.\nBilsker, D. & Paterson, R. (2005). Guide d’autosoins pour la\ndépression, Centre for Applied Research in Mental Health\nand Addiction (CARMHA) et BC Mental Health & Addiction\nServices (BCMHAS), [en ligne], www.comh.ca/publications/\nresources/asw/SCDP-French.pdf.\nBirmaher, B. & al. (2007). « Practice parameter for the\nassessment and treatment of children and adolescents with\ndepressive disorders », Journal of the American Academy of\nChild & Adolescent Psychiatry, 46(11), p. 1503-1526.\nCelano, C. M. & al. (2011). « Depressogenic effects of\nmedications : A review », Dialogues in Clinical Neuroscience,\n13(1), p. 109-125.\nCoyne, J. (1985) Essential Papers on Depression, New York,\nNY, New York University Press.\nFava, M. & Kendler, K. S. (2000). « Major Depressive Disor-\nder », Neuron, 28(2), p. 335-341.\nFerron, J. (1972). Le Saint-Élias, Montréal, Québec, Éditions\ndu Jour.\nFitzgerald, P. & Daskalakis, Z. J. (2008). « The use of\nrepetitive transcranial magnetic stimulation and vagal\nnerve stimulation in the treatment of depression », Current\nOpinions in Psychiatry, 21(1), p. 25-29.\n",
+  "raw_text_sha256": "d09dd0c0f6948d008aedee9d87323898c8a3405d2f490b7ba70f3020be8527f7",
+  "source_page_display": 1115,
+  "source_page_index": 1114
+}

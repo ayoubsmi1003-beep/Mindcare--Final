@@ -1,0 +1,352 @@
+{
+  "block_sequence_sha256": "2ae851df0dfb4947f31466dc8c5a831c07a374c5950949fdfd22e0a0e2edad03",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0629-block-0001",
+      "order": 1,
+      "text": "612\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "0d7b87953bebcd0bb4f43d49904910c72543755df863e721f706577d656bc9c5"
+    },
+    {
+      "bbox": [
+        306.0,
+        520.9658203125,
+        549.3567504882812,
+        565.95849609375
+      ],
+      "block_id": "page-0629-block-0002",
+      "order": 2,
+      "text": "en présence de l’APOE4 pourrait établir ce risque plus précisément\nque ne peut le faire le génotype APOE4 seul. Le polymorphisme\nBCHE-K en l’absence d’APOE4 pourrait être associé à une plus\nfaible progression (Lane & al., 2008).\n",
+      "text_sha256": "f8b1153b6e17f42e1eb799bcff77f98de8a86e1fb408cba3a42e801be13d96b5"
+    },
+    {
+      "bbox": [
+        306.0,
+        566.9658203125,
+        549.072509765625,
+        634.95849609375
+      ],
+      "block_id": "page-0629-block-0003",
+      "order": 3,
+      "text": "À l’autopsie, on observe un niveau intermédiaire de patho-\nlogie de type Alzheimer, le plus souvent une pathologie neu-\nrobrillaire dans le lobe temporal médian et une déposition\ndiuse d’amyloïde dans le néocortex. Le tiers des patients ont\nsubi un ou plusieurs infarcissements et 8 % présentent des\ncorps de Lewy.\n",
+      "text_sha256": "446f1e5c909505aeb355d2595d0b05798d5aebd9ee0decaf2be3373fb35de20f"
+    },
+    {
+      "bbox": [
+        306.0,
+        649.48681640625,
+        494.5736389160156,
+        665.62939453125
+      ],
+      "block_id": "page-0629-block-0004",
+      "order": 4,
+      "text": "27.3.2 Trouble postcommotionnel\n",
+      "text_sha256": "d0af2907d1a0fa51ca35011c5e1093b3b7ef5369783e413f8ec5d27637e48300"
+    },
+    {
+      "bbox": [
+        306.0,
+        668.9658203125,
+        549.1539916992188,
+        725.45849609375
+      ],
+      "block_id": "page-0629-block-0005",
+      "order": 5,
+      "text": "La principale caractéristique de ce trouble est une atteinte\nacquise des fonctions cognitives, accompagnée de symptômes\nneurocomportementaux spéciques qui sont la conséquence\nd’un trauma crânien fermé de gravité susante pour produire\nune commotion cérébrale.\n",
+      "text_sha256": "b38453357cdeff7b0412518fd421b1b0189a52112aaf6f61630623c36a786866"
+    },
+    {
+      "bbox": [
+        48.0,
+        519.7330322265625,
+        291.6533203125,
+        725.45849609375
+      ],
+      "block_id": "page-0629-block-0006",
+      "order": 6,
+      "text": "Évolution et pronostic\nLe TCL a une prévalence de 2 à 4 %. Le taux de progression vers\nla DTA pour la sous-classe amnésique est 3,1 fois plus élevé que\ncelui de la population normale, soit de 10 à 12 % par an. Ce ne sont\npas tous les patients atteints de TCL qui développent une DTA :\n• environ 5 % évoluent favorablement du TCL vers la normale ;\n• de 11 à 40 % présentent une amélioration sur une période de\nsuivi de huit ans (de 8 à 16 % par an) ;\n• certains s’améliorent initialement, puis déclinent subséquemment.\nLe facteur prédicteur le plus puissant de progression vers la\nDTA est l’âge. Parmi les autres facteurs à considérer, mentionnons\nla présence d’APOE4, la gravité clinique, le sous-type amnésique\nà domaines multiples, l’atrophie de l’hippocampe, une réduction\ndu volume cérébral total et des volumes ventriculaires révélée par\nl’IRM, des niveaux anormaux de protéines tau et de ß-amyloïdes\ndans le LCR. La variante K de la butyrylcholinestérase (BCHE-K)\n",
+      "text_sha256": "9dec7092a451c4d75006f5f6ac3a242767758948ca87944f31ea26d33d1b3e39"
+    },
+    {
+      "bbox": [
+        140.15000915527344,
+        60.52412414550781,
+        422.68798828125,
+        71.10029602050781
+      ],
+      "block_id": "page-0629-block-0007",
+      "order": 7,
+      "text": "DSM-5\nDSM-IV-TR\n",
+      "text_sha256": "67d368c78be7842a2bc99b149901566bcadf3c9d62623ea48bafcc32b3563ffb"
+    },
+    {
+      "bbox": [
+        106.25,
+        75.37285614013672,
+        479.7511901855469,
+        85.39238739013672
+      ],
+      "block_id": "page-0629-block-0008",
+      "order": 8,
+      "text": "Trouble neurocognitif léger\nTrouble cognitif léger (critères de recherche)\n",
+      "text_sha256": "2247be7575c30450958d37a6cddda833b42609d6d4a867544eef65304da0f710"
+    },
+    {
+      "bbox": [
+        52.75,
+        93.1519546508789,
+        237.16224670410156,
+        102.9781265258789
+      ],
+      "block_id": "page-0629-block-0009",
+      "order": 9,
+      "text": "A. Preuves d’un déclin cognitif signicatif par rapport à un\n",
+      "text_sha256": "e2b3141505124459e011ced4168d6eafe499886adfa255b05e7854c2367dba9e"
+    },
+    {
+      "bbox": [
+        61.25,
+        103.1519546508789,
+        252.2409210205078,
+        214.97813415527344
+      ],
+      "block_id": "page-0629-block-0010",
+      "order": 10,
+      "text": "niveau antérieur de fonctionnement dans un ou plusieurs\ndomaines cognitifs (attention complexe, fonctions exécu-\ntives, apprentissage et mémorisation, langage, activités\nperceptivomotrices ou cognition sociale) reposant sur :\n1. Une préoccupation du sujet, d’un informant faible, ou du\nclinicien concernant un déclin signicatif du fonctionne-\nment cognitif ; et\n2. Une altération importante des performances cognitives,\nidéalement documentée par un bilan neuropsychologique\nstandardisé ou, à défaut, par une évaluation clinique\nquantiée.\n",
+      "text_sha256": "2e59abd37fa441d5f0e422330485b039de68a67c89506f0582fe55a65efd9ad9"
+    },
+    {
+      "bbox": [
+        260.5500183105469,
+        93.1519546508789,
+        528.6976318359375,
+        102.9781265258789
+      ],
+      "block_id": "page-0629-block-0011",
+      "order": 11,
+      "text": "A. Altération du fonctionnement cognitif dans au moins deux des domaines suivants,\n",
+      "text_sha256": "3414cf88486302523e2672824b5710eb02705a453a01199aeba91d1273aef9a9"
+    },
+    {
+      "bbox": [
+        268.70001220703125,
+        103.1519546508789,
+        531.6953125,
+        122.9781265258789
+      ],
+      "block_id": "page-0629-block-0012",
+      "order": 12,
+      "text": "présente la plupart du temps pendant au moins deux semaines (selon ce que dit le\nsujet lui-même ou un informateur able) :\n",
+      "text_sha256": "917458270c825380703735702254dd9f9f34ea9cefdc24e777db8946c529ac9d"
+    },
+    {
+      "bbox": [
+        269.5500183105469,
+        124.15196228027344,
+        534.9186401367188,
+        133.97813415527344
+      ],
+      "block_id": "page-0629-block-0013",
+      "order": 13,
+      "text": "(1) altération de la mémoire consistant en une réduction de la capacité à apprendre\n",
+      "text_sha256": "ab935f4ae4a7986a2b76ebe4d32b72d7168c5c3964a2b5e155cbf491634270e8"
+    },
+    {
+      "bbox": [
+        269.5500183105469,
+        134.15196228027344,
+        519.2931518554688,
+        154.97813415527344
+      ],
+      "block_id": "page-0629-block-0014",
+      "order": 14,
+      "text": "des informations ou à se les rappeler ;\n(2) perturbation des fonctions exécutives (faire des projets, organiser, ordonner\n",
+      "text_sha256": "ba353feb1ebd6234742d2cec405507a5026ba5c9cb7a38be4a1979ac23d6d46e"
+    },
+    {
+      "bbox": [
+        260.5500183105469,
+        155.15196228027344,
+        534.3470458984375,
+        208.97813415527344
+      ],
+      "block_id": "page-0629-block-0015",
+      "order": 15,
+      "text": "dans le temps, avoir une pensée abstraite) ;\n(3) réduction de l’attention ou de la vitesse de traitement de l’information ;\n(4) altération des capacités perceptivomotrices ;\n(5) altération du langage (p. ex., compréhension, trouver ses mots).\nB. Mise en évidence objective, d’après l’examen physique ou les examens complémen-\n",
+      "text_sha256": "05f43fb9244a2630d6bdd37d0bfc410c7e15a84caec1d0dcd8d6f307d4b6bb78"
+    },
+    {
+      "bbox": [
+        260.5500183105469,
+        209.15196228027344,
+        544.697021484375,
+        239.97813415527344
+      ],
+      "block_id": "page-0629-block-0016",
+      "order": 16,
+      "text": "taires (notamment l’imagerie cérébrale) d’une affection neurologique ou médicale géné-\nrale que l’on peut considérer comme liée étiologiquement à la perturbation cognitive.\nC. Mise en évidence par les tests neuropsychologiques ou l’évaluation quantiée du\n",
+      "text_sha256": "ab70bea5f2eee18a3a1adb3109292a189b744f60b551a77c7900e8d309252d47"
+    },
+    {
+      "bbox": [
+        269.20001220703125,
+        240.15196228027344,
+        493.3032531738281,
+        249.97813415527344
+      ],
+      "block_id": "page-0629-block-0017",
+      "order": 17,
+      "text": "fonctionnement cognitif d’anomalies ou d’un déclin des performances.\n",
+      "text_sha256": "00b8827cc316fd21e11a919ae1efdd9866d418823f9362dd613c9d945d172509"
+    },
+    {
+      "bbox": [
+        52.75,
+        254.60195922851562,
+        251.58944702148438,
+        264.4281311035156
+      ],
+      "block_id": "page-0629-block-0018",
+      "order": 18,
+      "text": "B. Les décits cognitifs interfèrent avec l’autonomie dans les actes\n",
+      "text_sha256": "3b0bfdde60ddf2d561e22220354a7870b59302944f38716d3800ac54f0b0be80"
+    },
+    {
+      "bbox": [
+        60.650001525878906,
+        264.6019592285156,
+        252.6383819580078,
+        294.4281311035156
+      ],
+      "block_id": "page-0629-block-0019",
+      "order": 19,
+      "text": "quotidiens (c.-à-d. tout au moins une aide nécessaire dans les\nactivités instrumentales complexes de la vie quotidienne comme\npayer ses factures ou gérer la prise de ses médicaments).\n",
+      "text_sha256": "2c9b6ee0efeabfef3067ad1289d5eaf5532bd8de95937cacd83b91d549c3723b"
+    },
+    {
+      "bbox": [
+        260.5500183105469,
+        254.60195922851562,
+        537.384033203125,
+        264.4281311035156
+      ],
+      "block_id": "page-0629-block-0020",
+      "order": 20,
+      "text": "D. Les décits cognitifs sont à l’origine d’une souffrance importante ou d’une altération\n",
+      "text_sha256": "15f55c2354f0586d9214705a7de97e0330f975fa6b8fbbb7f2626b65a7c6d313"
+    },
+    {
+      "bbox": [
+        269.3500061035156,
+        264.6019592285156,
+        537.1685791015625,
+        284.4281311035156
+      ],
+      "block_id": "page-0629-block-0021",
+      "order": 21,
+      "text": "du fonctionnement social, professionnel ou dans d’autres domaines importants et ils\nreprésentent un déclin par rapport au niveau de fonctionnement antérieur.\n",
+      "text_sha256": "e1fb47e98b4c12e7b98dd78fc1cb5732e4d40f5639fb51b19d00749ab68086f7"
+    },
+    {
+      "bbox": [
+        52.75,
+        299.001953125,
+        236.13494873046875,
+        308.828125
+      ],
+      "block_id": "page-0629-block-0022",
+      "order": 22,
+      "text": "C. Les décits cognitifs ne surviennent pas exclusivement\n",
+      "text_sha256": "30f515bce521ba3224fd917369818b0f3d790c6a1c8eae06e1b908fc60db223c"
+    },
+    {
+      "bbox": [
+        52.75,
+        309.001953125,
+        237.90130615234375,
+        329.828125
+      ],
+      "block_id": "page-0629-block-0023",
+      "order": 23,
+      "text": "dans le contexte d’un état confusionnel (delirium).\nD. Les altérations cognitives ne sont pas mieux expliquées\n",
+      "text_sha256": "099c95be5b5392f9630759b802d4596f0288dd06cca432616d314c406f5eefc9"
+    },
+    {
+      "bbox": [
+        52.75,
+        330.001953125,
+        245.44699096679688,
+        424.9423828125
+      ],
+      "block_id": "page-0629-block-0024",
+      "order": 24,
+      "text": "par un autre trouble mental (p. ex., un trouble dépressif\ncaractérisé, une schizophrénie).\n[…]\nSpécier la sévérité actuelle:\nLéger : Difcultés dans les activités instrumentales de la vie\nquotidienne (p. ex., travaux ménagers, gestion de l’argent).\nMoyen : Difcultés dans les activités de base de la vie quoti-\ndienne (p. ex., manger, s’habiller).\nGrave : Dépendance complète.\n",
+      "text_sha256": "21f6245c0a58f7f015af5774274de1808b053815682dd10aff73e08a86558ca5"
+    },
+    {
+      "bbox": [
+        260.5500183105469,
+        299.001953125,
+        537.676513671875,
+        308.828125
+      ],
+      "block_id": "page-0629-block-0025",
+      "order": 25,
+      "text": "E. La perturbation cognitive ne répond pas aux critères diagnostiques du delirium, de la\n",
+      "text_sha256": "14d78d69e084f6fcab11fae472436afc4d8202dbc98561201cbeac45e4ea3a40"
+    },
+    {
+      "bbox": [
+        268.5500183105469,
+        309.001953125,
+        541.7698364257812,
+        328.828125
+      ],
+      "block_id": "page-0629-block-0026",
+      "order": 26,
+      "text": "démence, d’un trouble amnésique et elle ne peut pas être attribuée à un autre trouble\nmental (p. ex., un trouble lié à une substance, un trouble dépressif majeur).\n",
+      "text_sha256": "a01b6e0b6e9484ee449921e0195fe8b1f06ca80d94e60e23c4c90e30b592c901"
+    },
+    {
+      "bbox": [
+        50.5,
+        41.002296447753906,
+        304.70245361328125,
+        54.02006912231445
+      ],
+      "block_id": "page-0629-block-0027",
+      "order": 27,
+      "text": "TABLEAU 27.15 Critères diagnostiques du trouble cognitif léger\n",
+      "text_sha256": "12d71561356d05db3644330c2ac9065026c872b98f3a358676f59e306e667cca"
+    },
+    {
+      "bbox": [
+        48.5,
+        431.84063720703125,
+        539.4441528320312,
+        500.57501220703125
+      ],
+      "block_id": "page-0629-block-0028",
+      "order": 28,
+      "text": "Source : APA (2015), p. 711-714 ; APA (2004a), p. 878-879.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004.\nAll rights reserved.\n",
+      "text_sha256": "e97367a4c1d756df416174a345cfd9b195427bf5c19264fdf865b132fecb77e2"
+    }
+  ],
+  "coordinates_sha256": "40fd4e89babde0415127509c706ea8c35d33ea8647895e8c94774cb4a5a53714",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0629",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "612\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nen présence de l’APOE4 pourrait établir ce risque plus précisément\nque ne peut le faire le génotype APOE4 seul. Le polymorphisme\nBCHE-K en l’absence d’APOE4 pourrait être associé à une plus\nfaible progression (Lane & al., 2008).\nÀ l’autopsie, on observe un niveau intermédiaire de patho-\nlogie de type Alzheimer, le plus souvent une pathologie neu-\nrobrillaire dans le lobe temporal médian et une déposition\ndiuse d’amyloïde dans le néocortex. Le tiers des patients ont\nsubi un ou plusieurs infarcissements et 8 % présentent des\ncorps de Lewy.\n27.3.2 Trouble postcommotionnel\nLa principale caractéristique de ce trouble est une atteinte\nacquise des fonctions cognitives, accompagnée de symptômes\nneurocomportementaux spéciques qui sont la conséquence\nd’un trauma crânien fermé de gravité susante pour produire\nune commotion cérébrale.\nÉvolution et pronostic\nLe TCL a une prévalence de 2 à 4 %. Le taux de progression vers\nla DTA pour la sous-classe amnésique est 3,1 fois plus élevé que\ncelui de la population normale, soit de 10 à 12 % par an. Ce ne sont\npas tous les patients atteints de TCL qui développent une DTA :\n• environ 5 % évoluent favorablement du TCL vers la normale ;\n• de 11 à 40 % présentent une amélioration sur une période de\nsuivi de huit ans (de 8 à 16 % par an) ;\n• certains s’améliorent initialement, puis déclinent subséquemment.\nLe facteur prédicteur le plus puissant de progression vers la\nDTA est l’âge. Parmi les autres facteurs à considérer, mentionnons\nla présence d’APOE4, la gravité clinique, le sous-type amnésique\nà domaines multiples, l’atrophie de l’hippocampe, une réduction\ndu volume cérébral total et des volumes ventriculaires révélée par\nl’IRM, des niveaux anormaux de protéines tau et de ß-amyloïdes\ndans le LCR. La variante K de la butyrylcholinestérase (BCHE-K)\nDSM-5\nDSM-IV-TR\nTrouble neurocognitif léger\nTrouble cognitif léger (critères de recherche)\nA. Preuves d’un déclin cognitif signicatif par rapport à un\nniveau antérieur de fonctionnement dans un ou plusieurs\ndomaines cognitifs (attention complexe, fonctions exécu-\ntives, apprentissage et mémorisation, langage, activités\nperceptivomotrices ou cognition sociale) reposant sur :\n1. Une préoccupation du sujet, d’un informant faible, ou du\nclinicien concernant un déclin signicatif du fonctionne-\nment cognitif ; et\n2. Une altération importante des performances cognitives,\nidéalement documentée par un bilan neuropsychologique\nstandardisé ou, à défaut, par une évaluation clinique\nquantiée.\nA. Altération du fonctionnement cognitif dans au moins deux des domaines suivants,\nprésente la plupart du temps pendant au moins deux semaines (selon ce que dit le\nsujet lui-même ou un informateur able) :\n(1) altération de la mémoire consistant en une réduction de la capacité à apprendre\ndes informations ou à se les rappeler ;\n(2) perturbation des fonctions exécutives (faire des projets, organiser, ordonner\ndans le temps, avoir une pensée abstraite) ;\n(3) réduction de l’attention ou de la vitesse de traitement de l’information ;\n(4) altération des capacités perceptivomotrices ;\n(5) altération du langage (p. ex., compréhension, trouver ses mots).\nB. Mise en évidence objective, d’après l’examen physique ou les examens complémen-\ntaires (notamment l’imagerie cérébrale) d’une affection neurologique ou médicale géné-\nrale que l’on peut considérer comme liée étiologiquement à la perturbation cognitive.\nC. Mise en évidence par les tests neuropsychologiques ou l’évaluation quantiée du\nfonctionnement cognitif d’anomalies ou d’un déclin des performances.\nB. Les décits cognitifs interfèrent avec l’autonomie dans les actes\nquotidiens (c.-à-d. tout au moins une aide nécessaire dans les\nactivités instrumentales complexes de la vie quotidienne comme\npayer ses factures ou gérer la prise de ses médicaments).\nD. Les décits cognitifs sont à l’origine d’une souffrance importante ou d’une altération\ndu fonctionnement social, professionnel ou dans d’autres domaines importants et ils\nreprésentent un déclin par rapport au niveau de fonctionnement antérieur.\nC. Les décits cognitifs ne surviennent pas exclusivement\ndans le contexte d’un état confusionnel (delirium).\nD. Les altérations cognitives ne sont pas mieux expliquées\npar un autre trouble mental (p. ex., un trouble dépressif\ncaractérisé, une schizophrénie).\n[…]\nSpécier la sévérité actuelle:\nLéger : Difcultés dans les activités instrumentales de la vie\nquotidienne (p. ex., travaux ménagers, gestion de l’argent).\nMoyen : Difcultés dans les activités de base de la vie quoti-\ndienne (p. ex., manger, s’habiller).\nGrave : Dépendance complète.\nE. La perturbation cognitive ne répond pas aux critères diagnostiques du delirium, de la\ndémence, d’un trouble amnésique et elle ne peut pas être attribuée à un autre trouble\nmental (p. ex., un trouble lié à une substance, un trouble dépressif majeur).\nTABLEAU 27.15 Critères diagnostiques du trouble cognitif léger\nSource : APA (2015), p. 711-714 ; APA (2004a), p. 878-879.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004.\nAll rights reserved.\n",
+  "raw_text_sha256": "d49887ea543e5ebdf9513361c087bb3434a822d5dbc97c4aac38d79825fe5355",
+  "source_page_display": 630,
+  "source_page_index": 629
+}

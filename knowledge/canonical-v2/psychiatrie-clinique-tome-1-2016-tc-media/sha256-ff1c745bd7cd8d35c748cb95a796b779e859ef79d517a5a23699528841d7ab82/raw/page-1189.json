@@ -1,0 +1,664 @@
+{
+  "block_sequence_sha256": "8fa76089d8eb63ce94519ead68c7410c0b6a748d807390933a2ebfedc15510f3",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        106.5719985961914,
+        758.8693237304688
+      ],
+      "block_id": "page-1189-block-0001",
+      "order": 1,
+      "text": "I28\nIndex\n",
+      "text_sha256": "72f0e7f68afb489d77de037b46b7414c61a99c58355a5b7e7f434eb32977c8ed"
+    },
+    {
+      "bbox": [
+        57.0,
+        40.82011795043945,
+        139.4035186767578,
+        65.1172866821289
+      ],
+      "block_id": "page-1189-block-0002",
+      "order": 2,
+      "text": "instrumental, 1612\nlié à l’apprentissage\n",
+      "text_sha256": "707da55aa9d5d1bfe32667c2b6263a98e1a4367151ff6785f080c6dc3ca52803"
+    },
+    {
+      "bbox": [
+        48.0,
+        67.25942993164062,
+        190.6649932861328,
+        128.66729736328125
+      ],
+      "block_id": "page-1189-block-0003",
+      "order": 3,
+      "text": "paraphilies et __, 811\nopérant, 1612-1614, 1628-1635\nvicariant, 421\nconduites cognitives, 1352-1353\nconance, 29-30\n",
+      "text_sha256": "43468e059d04cc139f8f07c4aa7171278573ae4153ac54823b1a27cfc2a8b337"
+    },
+    {
+      "bbox": [
+        57.0,
+        129.77012634277344,
+        201.53378295898438,
+        141.36729431152344
+      ],
+      "block_id": "page-1189-block-0004",
+      "order": 4,
+      "text": "de base (fondamentale), 220, 316-\n",
+      "text_sha256": "67cba2781504857e6972748787776d13a5f23493179c41379dff5e12ddd06eff"
+    },
+    {
+      "bbox": [
+        57.0,
+        142.47012329101562,
+        201.59373474121094,
+        166.7672882080078
+      ],
+      "block_id": "page-1189-block-0005",
+      "order": 5,
+      "text": "317, 509, 1597\nlien de __, 22, 26, 36, 38, 248, 804,\n",
+      "text_sha256": "bcef71bd3baf33dbaae83923d16f683449c3d778f9c622bdbc2c5521d8504169"
+    },
+    {
+      "bbox": [
+        48.0,
+        167.8701171875,
+        196.94418334960938,
+        204.86729431152344
+      ],
+      "block_id": "page-1189-block-0006",
+      "order": 6,
+      "text": "922, 1094, 1103-1104, 1215,\n1283, 1570-1574\ncondentialité, 28-29, 38, 989, 998,\n",
+      "text_sha256": "c949745a8c0852b28d0bc87ce621cd50c87b5002b0fd7a5c40f6c9a7993420fc"
+    },
+    {
+      "bbox": [
+        48.0,
+        205.97012329101562,
+        189.87075805664062,
+        242.96728515625
+      ],
+      "block_id": "page-1189-block-0007",
+      "order": 7,
+      "text": "1011, 1064, 1084-1085, 1185,\n1204, 1699\nconits, 987-988, 988t\n",
+      "text_sha256": "82f245b639f8347833c1c82003f26b4080accef24c2acfe0da1c0b894c0a2346"
+    },
+    {
+      "bbox": [
+        57.0,
+        244.0701141357422,
+        187.5885009765625,
+        255.6672821044922
+      ],
+      "block_id": "page-1189-block-0008",
+      "order": 8,
+      "text": "interpersonnels, 266, 273, 275,\n",
+      "text_sha256": "661ed03f01f0e2be03a7c47df9c0924b47a10577cc4eb6043d1cdbf98eae9314"
+    },
+    {
+      "bbox": [
+        66.0,
+        256.82012939453125,
+        191.67649841308594,
+        293.7594299316406
+      ],
+      "block_id": "page-1189-block-0009",
+      "order": 9,
+      "text": "325, 656, 947, 988, 1575,\n1683-1685, 1796, 1798\npsychothérapie interperson-\n",
+      "text_sha256": "78c2c47d6674145a0f8903f6704fad05e08e1d6bba544e3a32db50217b946b74"
+    },
+    {
+      "bbox": [
+        57.0,
+        294.9816589355469,
+        198.22625732421875,
+        319.21728515625
+      ],
+      "block_id": "page-1189-block-0010",
+      "order": 10,
+      "text": "nelle et __, 1684, 1684t\nintrapsychiques, 932, 1582, 1588,\n",
+      "text_sha256": "59434349c7eb5d2c011c42980b87ebd1916889582933a41b26c305e35169ff15"
+    },
+    {
+      "bbox": [
+        48.0,
+        320.32012939453125,
+        192.75999450683594,
+        344.6172790527344
+      ],
+      "block_id": "page-1189-block-0011",
+      "order": 11,
+      "text": "1598, 1794, 1796\nconfrontation, 25-26, 38, 64, 428t,\n",
+      "text_sha256": "2bd67e505797fd89953ab495bc44d365b39dd944905250bd6a8885a8c2eca69e"
+    },
+    {
+      "bbox": [
+        48.0,
+        345.7201232910156,
+        201.21426391601562,
+        408.1172790527344
+      ],
+      "block_id": "page-1189-block-0012",
+      "order": 12,
+      "text": "1645, 1708, 1798\ntroubles factices et __, 695-696\nconfusion, 296, 522, 528, 1096-1097\ncongé parental, 228\nconscience, 206-207\n",
+      "text_sha256": "2c0e417d223d44793209d383d6353b1b0fcec5209c444f252faf6ba04c05d8bd"
+    },
+    {
+      "bbox": [
+        57.0,
+        409.2201232910156,
+        199.92381286621094,
+        420.8172912597656
+      ],
+      "block_id": "page-1189-block-0013",
+      "order": 13,
+      "text": "de soi, 87, 257, 477, 511-512, 936,\n",
+      "text_sha256": "bdb3e232d4f057561045369ab974198025b6ef6a3dd2da845c838936b4e7c9a7"
+    },
+    {
+      "bbox": [
+        57.0,
+        421.9201354980469,
+        202.83396911621094,
+        471.66729736328125
+      ],
+      "block_id": "page-1189-block-0014",
+      "order": 14,
+      "text": "1653\nmorale, 218\nobjection de conscience, 1202\npleine __ (mindfullness), 408, 1762-\n",
+      "text_sha256": "17444d762185fedb06b3a8d698037b4a49851cfaa1860d20a9cf902e4b3e1bd5"
+    },
+    {
+      "bbox": [
+        48.0,
+        472.7701110839844,
+        198.8579864501953,
+        535.1672973632812
+      ],
+      "block_id": "page-1189-block-0015",
+      "order": 15,
+      "text": "1763\nréexive, 1575-1576\nconscient, 217, 1588\nconseiller du majeur, 1073, 1173\nconsensus, 12-13, 17, 292, 483-484,\n",
+      "text_sha256": "c2cf0daf580c63b6da79d47cdba6fe1cdc368d47eb63cf9b7664baaf153ca4bf"
+    },
+    {
+      "bbox": [
+        48.0,
+        536.2701416015625,
+        194.66000366210938,
+        560.5673217773438
+      ],
+      "block_id": "page-1189-block-0016",
+      "order": 16,
+      "text": "594t, 1263\nconsentement, 27-28, 1168-1174,\n",
+      "text_sha256": "3f1a8c15a5dc076685a1c699c70d9c019bfa3e3f933c0617b193b7ec72493f08"
+    },
+    {
+      "bbox": [
+        57.0,
+        561.6701049804688,
+        194.169189453125,
+        585.96728515625
+      ],
+      "block_id": "page-1189-block-0017",
+      "order": 17,
+      "text": "1204, 1207, 1263\nà la participation à la recherche,\n",
+      "text_sha256": "74ac9f046e9d3e0069e60494e6fdba211facb434f1c951fa447e85bc35c95c2f"
+    },
+    {
+      "bbox": [
+        57.0,
+        587.0701293945312,
+        190.79293823242188,
+        636.8173217773438
+      ],
+      "block_id": "page-1189-block-0018",
+      "order": 18,
+      "text": "1205-1206\naptitude au __, 1035\naux soins, 1168, 1171t\néclairé, 16, 86-88, 87t, 610, 804,\n",
+      "text_sha256": "18d7770189865e09da839ac2c565017e555bf1866b889dd41d71ef786527ded5"
+    },
+    {
+      "bbox": [
+        57.0,
+        637.9201049804688,
+        193.68899536132812,
+        662.21728515625
+      ],
+      "block_id": "page-1189-block-0019",
+      "order": 19,
+      "text": "1263\nélectroconvulsivothérapie et __,\n",
+      "text_sha256": "f39a230fff1a7cd2360ded8348558f9b966c3b2ef2b2d088e2b8bcb5e19a6fa3"
+    },
+    {
+      "bbox": [
+        48.0,
+        663.3201293945312,
+        200.2790069580078,
+        700.3173217773438
+      ],
+      "block_id": "page-1189-block-0020",
+      "order": 20,
+      "text": "1555\nsubstitué aux soins, 1170-1171\nconsommation de substances, 849-\n",
+      "text_sha256": "e8089e3cd890b06a1bd228b75b5652f2d7f81ada23c86544c034b1911895e92c"
+    },
+    {
+      "bbox": [
+        57.0,
+        701.1945190429688,
+        160.0203399658203,
+        725.71728515625
+      ],
+      "block_id": "page-1189-block-0021",
+      "order": 21,
+      "text": "908, 875\nattitude face à la __, 914\n",
+      "text_sha256": "94e85d49d0567f41d76fafd2514e2362a73677b2fc46550ddcbf1f974ee0f5a8"
+    },
+    {
+      "bbox": [
+        228.0,
+        40.82011795043945,
+        356.551513671875,
+        77.8172836303711
+      ],
+      "block_id": "page-1189-block-0022",
+      "order": 22,
+      "text": "pendant la grossesse, 877, 931\npersonnes âgées et __, 1410\ntrouble(s)\n",
+      "text_sha256": "b1ac3b269915b2306ff6f2b23b192319099eff3561bdd7dee84c9b870a9e78e4"
+    },
+    {
+      "bbox": [
+        237.0,
+        79.0316390991211,
+        369.04949951171875,
+        90.50942993164062
+      ],
+      "block_id": "page-1189-block-0023",
+      "order": 23,
+      "text": "comorbides et __, 1780, 1780t\n",
+      "text_sha256": "86d64e0ba4f7dd70b7ef1a3d976abc1fff54a4384972ee5852cfc739df1c7e1a"
+    },
+    {
+      "bbox": [
+        237.0,
+        91.44453430175781,
+        360.5243835449219,
+        115.90943145751953
+      ],
+      "block_id": "page-1189-block-0024",
+      "order": 24,
+      "text": "909-924\nde décit de l’attention avec\n",
+      "text_sha256": "f010c7ff6c12f3d79423ae4c0c7079acc724974941a77da8da77e5d88a1eaf00"
+    },
+    {
+      "bbox": [
+        237.0,
+        118.10943603515625,
+        355.34429931640625,
+        154.0094451904297
+      ],
+      "block_id": "page-1189-block-0025",
+      "order": 25,
+      "text": "ou sans hyperactivité\n(TDA/H) et __, 1313\nde stress post-traumatique\n",
+      "text_sha256": "bdeea6a423f964001d4d51d65af22b70ad4978536d00de521e2d3a67ec41dd2a"
+    },
+    {
+      "bbox": [
+        228.0,
+        156.20944213867188,
+        356.42022705078125,
+        179.46728515625
+      ],
+      "block_id": "page-1189-block-0026",
+      "order": 26,
+      "text": "et __, 502\nurgences psychiatriques et __,\n",
+      "text_sha256": "6511afe38dd2a7f1428a757439ff25d9d6097f33316b107ff5a09a96e4cda789"
+    },
+    {
+      "bbox": [
+        219.0,
+        180.5701141357422,
+        357.54541015625,
+        204.86729431152344
+      ],
+      "block_id": "page-1189-block-0027",
+      "order": 27,
+      "text": "1086-1087, 1097-1099\nconsultation, 528-532, 617-663,\n",
+      "text_sha256": "ef08f1bd3d58470b60c99e666621986a8559ece29bfef5decfb5f4837286e30b"
+    },
+    {
+      "bbox": [
+        219.0,
+        205.97012329101562,
+        367.05999755859375,
+        242.96728515625
+      ],
+      "block_id": "page-1189-block-0028",
+      "order": 28,
+      "text": "1011-1012\nraison de la__, 42\ncontention, 896, 1022-1023, 1080t,\n",
+      "text_sha256": "cb43de9d1a4119ff9d557bf12aa6a41f4359d93e54342130c5dcc8eddcf96130"
+    },
+    {
+      "bbox": [
+        219.0,
+        244.0701141357422,
+        374.6930236816406,
+        268.41729736328125
+      ],
+      "block_id": "page-1189-block-0029",
+      "order": 29,
+      "text": "1099-1101\ncontexte socioculturel, 66, 196f, 200,\n",
+      "text_sha256": "9a59f821ffb31554a63bb10e5fb9ab858d73bb23cad649c2b0be37f71f727009"
+    },
+    {
+      "bbox": [
+        219.0,
+        269.5201110839844,
+        353.9332275390625,
+        293.8172912597656
+      ],
+      "block_id": "page-1189-block-0030",
+      "order": 30,
+      "text": "308, 424, 426, 428, 503, 508\ncontingences\n",
+      "text_sha256": "29e92d90a9da5b4299b5c26a92a00c606db0f1ffe9074ff485153e686df284bc"
+    },
+    {
+      "bbox": [
+        219.0,
+        294.9201354980469,
+        372.29949951171875,
+        331.91729736328125
+      ],
+      "block_id": "page-1189-block-0031",
+      "order": 31,
+      "text": "aménagement des __, 1628, 1632t\nopérantes, 1613f\ncontinuité des soins, 16, 357, 369,\n",
+      "text_sha256": "cc4947bcb054adce3a9893d296a8530e8ebea466986af72808b9d82c5aed2e2a"
+    },
+    {
+      "bbox": [
+        219.0,
+        333.0201110839844,
+        375.2590026855469,
+        370.0173034667969
+      ],
+      "block_id": "page-1189-block-0032",
+      "order": 32,
+      "text": "546, 989, 994, 1000, 1055t, 1095,\n1202\ncontrat\n",
+      "text_sha256": "bfdfa9e1e9b37ed5a92c7589f6ed74ba89fb7f61b6cff5803dd8859f90657aaa"
+    },
+    {
+      "bbox": [
+        219.0,
+        371.1201171875,
+        361.04388427734375,
+        408.1172790527344
+      ],
+      "block_id": "page-1189-block-0033",
+      "order": 33,
+      "text": "comportemental, 1631f\nthérapeutique, 1734\ncontre-transfert, 30, 52, 505, 525,\n",
+      "text_sha256": "f266a2198423b9ae5e227e11455fe93c7f2b51149ce4e7320dc8175709156433"
+    },
+    {
+      "bbox": [
+        219.0,
+        409.2201232910156,
+        368.4100036621094,
+        471.66729736328125
+      ],
+      "block_id": "page-1189-block-0034",
+      "order": 34,
+      "text": "932, 950, 954-955, 1043, 1093,\n1398, 1578, 1588-1589, 1597t,\n1602\nnégatif, 1093\ncontrôle\n",
+      "text_sha256": "56062d70dbda04b521199a3f9b0454a1e1146697750da0244da89083443cfe1c"
+    },
+    {
+      "bbox": [
+        228.0,
+        472.7701110839844,
+        364.55157470703125,
+        497.0672912597656
+      ],
+      "block_id": "page-1189-block-0035",
+      "order": 35,
+      "text": "croyances concernant le __, 558\nde la qualité par indicateurs,\n",
+      "text_sha256": "5d4b449101557b870aa717d9f06d99c4132a51f474ddc2a85a634f2abf42a52f"
+    },
+    {
+      "bbox": [
+        228.0,
+        498.1701354980469,
+        369.3426818847656,
+        522.46728515625
+      ],
+      "block_id": "page-1189-block-0036",
+      "order": 36,
+      "text": "1054-1056\nperte de __, 23, 65, 243, 507, 558,\n",
+      "text_sha256": "44d09dd4f5e43840d040a0e309b133b4cd5101f1dfe7cd9e932bdfe1ba647b7e"
+    },
+    {
+      "bbox": [
+        219.0,
+        523.5701293945312,
+        372.9747009277344,
+        560.5673217773438
+      ],
+      "block_id": "page-1189-block-0037",
+      "order": 37,
+      "text": "562, 668, 703-704t, 876, 888,\n914, 1736, 1758, 1790\nconvulsions, 131, 363, 524, 540-541,\n",
+      "text_sha256": "893c492c47a36cd1eb59ebc22aac1c0d443b9ddd528d7790ef88f47982b08d12"
+    },
+    {
+      "bbox": [
+        219.0,
+        561.6701049804688,
+        366.5751953125,
+        598.6672973632812
+      ],
+      "block_id": "page-1189-block-0038",
+      "order": 38,
+      "text": "652, 861, 891, 896, 1098, 1478,\n1480t, 1494, 1500, 1560\nconvulsivothérapie, voir électro-\n",
+      "text_sha256": "c0baa84854a90ff149d1a575ee95e7282e2f8be08bd91fcd07dee530cda9f7e8"
+    },
+    {
+      "bbox": [
+        219.0,
+        599.7701416015625,
+        365.73468017578125,
+        636.8173217773438
+      ],
+      "block_id": "page-1189-block-0039",
+      "order": 39,
+      "text": "convulsivothérapie\ncoordination des soins, 1007-1021\ncoping, 45, 71, 199t, 256, 332f,\n",
+      "text_sha256": "6f03cf2803a7d066d929af40e21608fa982548bbbc97698504c0249118f4caf9"
+    },
+    {
+      "bbox": [
+        219.0,
+        637.6945190429688,
+        363.70550537109375,
+        713.0172729492188
+      ],
+      "block_id": "page-1189-block-0040",
+      "order": 40,
+      "text": "364, 474-475, 479-485, 674,\n679t, 915, 1127, 1647,\n1705, 1765, 1771f, 1771-1772,\n1778-1779\ncoprophilie, 820\ncorps\n",
+      "text_sha256": "1d8a03bdc7791c51fef18a21a16dfdea157cd58eff4213a671f1778bbcca8051"
+    },
+    {
+      "bbox": [
+        228.0,
+        714.1201171875,
+        370.7984924316406,
+        725.71728515625
+      ],
+      "block_id": "page-1189-block-0041",
+      "order": 41,
+      "text": "calleux, 110f, 111, 170f, 335f, 336f\n",
+      "text_sha256": "dc08c34abb4df9f3e32d233896b0050914e94b23d12334b0c962867b1132f230"
+    },
+    {
+      "bbox": [
+        390.0,
+        40.82011795043945,
+        533.010009765625,
+        77.8172836303711
+      ],
+      "block_id": "page-1189-block-0042",
+      "order": 42,
+      "text": "géniculé, 168f\nmamillaires, 112f, 336f\ncortex, 111, 203, voir aussi gures\n",
+      "text_sha256": "aa3b6e39274216049b88d23ca612371df0392293a270b2f17f9b05bef3f76016"
+    },
+    {
+      "bbox": [
+        399.0,
+        79.0316390991211,
+        535.3615112304688,
+        128.66729736328125
+      ],
+      "block_id": "page-1189-block-0043",
+      "order": 43,
+      "text": "supplémentaires\nauditif, 162f\ncérébelleux, 580\ncérébral, 112, 129, 352, 407, 580,\n",
+      "text_sha256": "f44f90f8b6586281aedd3da74bc8fc81020efbc481b9910668e6ed3ebd61e9ea"
+    },
+    {
+      "bbox": [
+        399.0,
+        129.77012634277344,
+        543.358154296875,
+        154.06729125976562
+      ],
+      "block_id": "page-1189-block-0044",
+      "order": 44,
+      "text": "591\ncingulaire, 165-166, 448-449, 466,\n",
+      "text_sha256": "8afb410ab371d5786a8e7afefc4b612af2645d4a16563b43803225b0c61d2ffc"
+    },
+    {
+      "bbox": [
+        399.0,
+        155.1701202392578,
+        539.661376953125,
+        242.96728515625
+      ],
+      "block_id": "page-1189-block-0045",
+      "order": 45,
+      "text": "477, 555, 1304\nentorhinal, 335\nfrontal, 189f, 449, 1464\nfrontopariétal, 165\ninférotemporal, 167f, 168f\ninsulaire, 172, 555, 810\nlimbique, 111, 114-115, 176, 337,\n",
+      "text_sha256": "92bc1cb0cf2a84f362fc2df2c6631533dfcc5f19dc5676e83fd3466634d1613c"
+    },
+    {
+      "bbox": [
+        399.0,
+        244.0701141357422,
+        539.3599853515625,
+        319.21728515625
+      ],
+      "block_id": "page-1189-block-0046",
+      "order": 46,
+      "text": "416, 1688\nmoteur, 178, 202\noccipital, 167f, 168f, 417\noccipitotemporal, 167f, 169\nolfactif, 170f\norbitofrontal, 417, 448-449, 462f,\n",
+      "text_sha256": "a0973400e0689e04b903f8e61b32db30fe64d80b4cd53d5dd1ed3ab39c46fd13"
+    },
+    {
+      "bbox": [
+        399.0,
+        320.32012939453125,
+        547.4429321289062,
+        370.0173034667969
+      ],
+      "block_id": "page-1189-block-0047",
+      "order": 47,
+      "text": "810, 1148\npariétal, 164, 167f, 553f, 555\npiriforme, 114\npréfrontal, 165-166, 335f, 394, 417,\n",
+      "text_sha256": "9f0ebbd7e7431e840e79c28b114349efa14c3b07c969e068e8c030df84b14ba4"
+    },
+    {
+      "bbox": [
+        390.0,
+        371.1201171875,
+        539.7259521484375,
+        497.0672912597656
+      ],
+      "block_id": "page-1189-block-0048",
+      "order": 48,
+      "text": "466, 477, 494t, 495, 555, 832,\n835, 876, 1125, 1145, 1148,\n1365, 1409, 1446, 1464, 1484\nprémoteur, 164, 174f, 178-179\nrétrosplénial, 168\nsomatosensoriel, 206, 552, 555\nsurrénalien, 189f\nvisuel, 167f, 168, 168f\ncorticolibérine, 189f, 477\ncorticothérapie, 651-652, 662\n",
+      "text_sha256": "73631e904536811484739bfa1d49b92d274bb195f83d0c31d3029f0d8647268e"
+    },
+    {
+      "bbox": [
+        399.0,
+        498.1701354980469,
+        524.5556640625,
+        509.7673034667969
+      ],
+      "block_id": "page-1189-block-0049",
+      "order": 49,
+      "text": "troubles mentaux dus à la __,\n",
+      "text_sha256": "aaa31e2e0fac3417b940dcd2fa2859170332aea773fb5f9f9b4e7e558aac1a8a"
+    },
+    {
+      "bbox": [
+        390.0,
+        510.64453125,
+        533.41162109375,
+        585.96728515625
+      ],
+      "block_id": "page-1189-block-0050",
+      "order": 50,
+      "text": "640-642\ncortisol, 136, 188-193, 496\ncouples, 228-248\ncour, 1195\ncourbe sigmoïde, 1432, 1433f\ncoût(s), 33, 84, 260, 262, 268, 330,\n",
+      "text_sha256": "8627076011a98c8658d6fffacf57a5337502c5a109ec1c22a15a961e4f933b25"
+    },
+    {
+      "bbox": [
+        390.0,
+        587.0701293945312,
+        530.0618896484375,
+        611.3673095703125
+      ],
+      "block_id": "page-1189-block-0051",
+      "order": 51,
+      "text": "529, 559, 1435, 1688\ncriminalité, 14, 71, 798, 825, 845,\n",
+      "text_sha256": "1b7d3cf5d9e31a5aa7780aea4b90b20701fb94cc889b5c45c34e23617562f227"
+    },
+    {
+      "bbox": [
+        390.0,
+        612.4701538085938,
+        545.5653686523438,
+        649.5172729492188
+      ],
+      "block_id": "page-1189-block-0052",
+      "order": 52,
+      "text": "911, 998, 1145, 1194, 1301, 1319\ntoxicomanie et __, 911\ncrises\n",
+      "text_sha256": "9ae6d48c4edce19c0f99933307dc24be4a3c625dd9d52fc7ae11fcab7c9d27d4"
+    },
+    {
+      "bbox": [
+        399.0,
+        650.6201171875,
+        534.7769165039062,
+        662.21728515625
+      ],
+      "block_id": "page-1189-block-0053",
+      "order": 53,
+      "text": "centre de __, 487, 920, 953, 998,\n",
+      "text_sha256": "45b0ca89faa3aa0c3e9acbe2adc28752142860a764c2504dcdb8f1225dc16fb7"
+    },
+    {
+      "bbox": [
+        390.0,
+        663.3201293945312,
+        548.3323364257812,
+        725.71728515625
+      ],
+      "block_id": "page-1189-block-0054",
+      "order": 54,
+      "text": "1002, 1109, 1113, 1128, 1392,\n1797\nconvulsives, 860\ntransitionnelles, 1113\nCross-Cutting Symptoms Measures, 71\n",
+      "text_sha256": "29200f910e06e16098a08af01a274b2544be6eb62f3bf6ba69808006dfd8c4f4"
+    }
+  ],
+  "coordinates_sha256": "e66f82123fd9e7f624f58eae72312b5b2a951e59157ea6e2822489b9db3b6dc6",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1189",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "I28\nIndex\ninstrumental, 1612\nlié à l’apprentissage\nparaphilies et __, 811\nopérant, 1612-1614, 1628-1635\nvicariant, 421\nconduites cognitives, 1352-1353\nconance, 29-30\nde base (fondamentale), 220, 316-\n317, 509, 1597\nlien de __, 22, 26, 36, 38, 248, 804,\n922, 1094, 1103-1104, 1215,\n1283, 1570-1574\ncondentialité, 28-29, 38, 989, 998,\n1011, 1064, 1084-1085, 1185,\n1204, 1699\nconits, 987-988, 988t\ninterpersonnels, 266, 273, 275,\n325, 656, 947, 988, 1575,\n1683-1685, 1796, 1798\npsychothérapie interperson-\nnelle et __, 1684, 1684t\nintrapsychiques, 932, 1582, 1588,\n1598, 1794, 1796\nconfrontation, 25-26, 38, 64, 428t,\n1645, 1708, 1798\ntroubles factices et __, 695-696\nconfusion, 296, 522, 528, 1096-1097\ncongé parental, 228\nconscience, 206-207\nde soi, 87, 257, 477, 511-512, 936,\n1653\nmorale, 218\nobjection de conscience, 1202\npleine __ (mindfullness), 408, 1762-\n1763\nréexive, 1575-1576\nconscient, 217, 1588\nconseiller du majeur, 1073, 1173\nconsensus, 12-13, 17, 292, 483-484,\n594t, 1263\nconsentement, 27-28, 1168-1174,\n1204, 1207, 1263\nà la participation à la recherche,\n1205-1206\naptitude au __, 1035\naux soins, 1168, 1171t\néclairé, 16, 86-88, 87t, 610, 804,\n1263\nélectroconvulsivothérapie et __,\n1555\nsubstitué aux soins, 1170-1171\nconsommation de substances, 849-\n908, 875\nattitude face à la __, 914\npendant la grossesse, 877, 931\npersonnes âgées et __, 1410\ntrouble(s)\ncomorbides et __, 1780, 1780t\n909-924\nde décit de l’attention avec\nou sans hyperactivité\n(TDA/H) et __, 1313\nde stress post-traumatique\net __, 502\nurgences psychiatriques et __,\n1086-1087, 1097-1099\nconsultation, 528-532, 617-663,\n1011-1012\nraison de la__, 42\ncontention, 896, 1022-1023, 1080t,\n1099-1101\ncontexte socioculturel, 66, 196f, 200,\n308, 424, 426, 428, 503, 508\ncontingences\naménagement des __, 1628, 1632t\nopérantes, 1613f\ncontinuité des soins, 16, 357, 369,\n546, 989, 994, 1000, 1055t, 1095,\n1202\ncontrat\ncomportemental, 1631f\nthérapeutique, 1734\ncontre-transfert, 30, 52, 505, 525,\n932, 950, 954-955, 1043, 1093,\n1398, 1578, 1588-1589, 1597t,\n1602\nnégatif, 1093\ncontrôle\ncroyances concernant le __, 558\nde la qualité par indicateurs,\n1054-1056\nperte de __, 23, 65, 243, 507, 558,\n562, 668, 703-704t, 876, 888,\n914, 1736, 1758, 1790\nconvulsions, 131, 363, 524, 540-541,\n652, 861, 891, 896, 1098, 1478,\n1480t, 1494, 1500, 1560\nconvulsivothérapie, voir électro-\nconvulsivothérapie\ncoordination des soins, 1007-1021\ncoping, 45, 71, 199t, 256, 332f,\n364, 474-475, 479-485, 674,\n679t, 915, 1127, 1647,\n1705, 1765, 1771f, 1771-1772,\n1778-1779\ncoprophilie, 820\ncorps\ncalleux, 110f, 111, 170f, 335f, 336f\ngéniculé, 168f\nmamillaires, 112f, 336f\ncortex, 111, 203, voir aussi gures\nsupplémentaires\nauditif, 162f\ncérébelleux, 580\ncérébral, 112, 129, 352, 407, 580,\n591\ncingulaire, 165-166, 448-449, 466,\n477, 555, 1304\nentorhinal, 335\nfrontal, 189f, 449, 1464\nfrontopariétal, 165\ninférotemporal, 167f, 168f\ninsulaire, 172, 555, 810\nlimbique, 111, 114-115, 176, 337,\n416, 1688\nmoteur, 178, 202\noccipital, 167f, 168f, 417\noccipitotemporal, 167f, 169\nolfactif, 170f\norbitofrontal, 417, 448-449, 462f,\n810, 1148\npariétal, 164, 167f, 553f, 555\npiriforme, 114\npréfrontal, 165-166, 335f, 394, 417,\n466, 477, 494t, 495, 555, 832,\n835, 876, 1125, 1145, 1148,\n1365, 1409, 1446, 1464, 1484\nprémoteur, 164, 174f, 178-179\nrétrosplénial, 168\nsomatosensoriel, 206, 552, 555\nsurrénalien, 189f\nvisuel, 167f, 168, 168f\ncorticolibérine, 189f, 477\ncorticothérapie, 651-652, 662\ntroubles mentaux dus à la __,\n640-642\ncortisol, 136, 188-193, 496\ncouples, 228-248\ncour, 1195\ncourbe sigmoïde, 1432, 1433f\ncoût(s), 33, 84, 260, 262, 268, 330,\n529, 559, 1435, 1688\ncriminalité, 14, 71, 798, 825, 845,\n911, 998, 1145, 1194, 1301, 1319\ntoxicomanie et __, 911\ncrises\ncentre de __, 487, 920, 953, 998,\n1002, 1109, 1113, 1128, 1392,\n1797\nconvulsives, 860\ntransitionnelles, 1113\nCross-Cutting Symptoms Measures, 71\n",
+  "raw_text_sha256": "4cf2a552cbdc0fe453c5774a13c3b15d9fbf90e87246a393d8e41df35d9ceca3",
+  "source_page_display": 1190,
+  "source_page_index": 1189
+}

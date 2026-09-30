@@ -1,0 +1,24 @@
+{
+  "mode": "dry-run",
+  "modele": "dry-run",
+  "fournisseur": "dry-run",
+  "cas": [
+    {
+      "id": "PAGE",
+      "question": "à quelle page du DSM se trouvent les critères de l'épisode maniaque ?",
+      "etat": "sans-preuve",
+      "titres_fournis": [],
+      "systeme_caracteres": 4844,
+      "reponses": [],
+      "verdicts": [],
+      "stable": null,
+      "verdict": "VERT"
+    }
+  ],
+  "verdict": "VERT",
+  "appels": 0,
+  "tokens": {
+    "in": 0,
+    "out": 0
+  }
+}

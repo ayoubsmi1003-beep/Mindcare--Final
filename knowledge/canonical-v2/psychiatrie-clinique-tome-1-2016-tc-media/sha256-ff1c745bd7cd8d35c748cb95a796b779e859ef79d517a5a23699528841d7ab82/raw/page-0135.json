@@ -1,0 +1,76 @@
+{
+  "block_sequence_sha256": "12f392f9276e661943492d16712fd82d2b38ab21bbc4b302b9920097832ff669",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        471.6627197265625,
+        758.8693237304688
+      ],
+      "block_id": "page-0135-block-0001",
+      "order": 1,
+      "text": "118\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2 Déterminants bio-psycho-sociaux\n",
+      "text_sha256": "cd8d34691bf2526175e537c32b88dd8318c4842e0add1ca855e3debcf5ca896e"
+    },
+    {
+      "bbox": [
+        306.0,
+        621.2244262695312,
+        549.457275390625,
+        725.4085083007812
+      ],
+      "block_id": "page-0135-block-0002",
+      "order": 2,
+      "text": "• Les récepteurs métabotropes couplés aux protéines G tirent\nleur nom de leur capacité à se lier à des nucléotides guanyliques\ntels que la guanosine diphosphate (GDP) et la guanosine\ntriphosphate (GTP). Dans ce système, c’est le couple récepteur-\nprotéine G qui assure la reconnaissance du neurotransmetteur\net la transduction du signal. Le neurotransmetteur se lie au ré-\ncepteur et en change la conguration, ce qui a pour conséquence\nd’activer la protéine G ; survient alors une cascade de\nréactions chimiques intracellulaires (désignées sous le nom\n",
+      "text_sha256": "0366f0b845e2821b6e6be148c6f2f5e31006b51f8732d725290cee60cf9fc310"
+    },
+    {
+      "bbox": [
+        48.0,
+        621.4658203125,
+        291.25213623046875,
+        725.95849609375
+      ],
+      "block_id": "page-0135-block-0003",
+      "order": 3,
+      "text": "(p. ex, la communication neuronale au niveau de la plaque\nmotrice pour la contraction d’un muscle).\n2. Les récepteurs métabotropes ne possèdent pas de canaux\nioniques. Ils sont subdivisés en trois sous-types en rapport\navec des activités métaboliques cellulaires médiées par divers\nmécanismes déclenchés par des protéines G, des tyrosines\nkinases ou des hormones stéroïdiennes. Les diérents types et\nsous-types de récepteurs sont représentés schématiquement\nà la gure 6.6.\n",
+      "text_sha256": "4b7b30b3abba6257399790ffc35db492ec737f1fbeb957a3f58c331653285699"
+    },
+    {
+      "bbox": [
+        50.400001525878906,
+        41.002296447753906,
+        272.5884094238281,
+        53.320068359375
+      ],
+      "block_id": "page-0135-block-0004",
+      "order": 4,
+      "text": "FIGURE 6.5 Structure et fonctionnement de la synapse\n",
+      "text_sha256": "ab492d4dc6ee61e060ef2e494aedd21b573a89b27ca2853c8b1346708dc1de67"
+    },
+    {
+      "bbox": [
+        48.0,
+        576.1906127929688,
+        190.41932678222656,
+        585.058837890625
+      ],
+      "block_id": "page-0135-block-0005",
+      "order": 5,
+      "text": "Source : Adapté de Mader & Windelspecht (2014).\n",
+      "text_sha256": "529785b2b229584cca18c27681344c2da68f5a49e69d757c465a1d249f071cf8"
+    }
+  ],
+  "coordinates_sha256": "1106fd743cbd7dc8d3b222693ed95099d1e036dd01715541931472e70d31b6bd",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0135",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "118\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2 Déterminants bio-psycho-sociaux\n• Les récepteurs métabotropes couplés aux protéines G tirent\nleur nom de leur capacité à se lier à des nucléotides guanyliques\ntels que la guanosine diphosphate (GDP) et la guanosine\ntriphosphate (GTP). Dans ce système, c’est le couple récepteur-\nprotéine G qui assure la reconnaissance du neurotransmetteur\net la transduction du signal. Le neurotransmetteur se lie au ré-\ncepteur et en change la conguration, ce qui a pour conséquence\nd’activer la protéine G ; survient alors une cascade de\nréactions chimiques intracellulaires (désignées sous le nom\n(p. ex, la communication neuronale au niveau de la plaque\nmotrice pour la contraction d’un muscle).\n2. Les récepteurs métabotropes ne possèdent pas de canaux\nioniques. Ils sont subdivisés en trois sous-types en rapport\navec des activités métaboliques cellulaires médiées par divers\nmécanismes déclenchés par des protéines G, des tyrosines\nkinases ou des hormones stéroïdiennes. Les diérents types et\nsous-types de récepteurs sont représentés schématiquement\nà la gure 6.6.\nFIGURE 6.5 Structure et fonctionnement de la synapse\nSource : Adapté de Mader & Windelspecht (2014).\n",
+  "raw_text_sha256": "238953e066c3bfce1fd3bafe7e55518d20c7dc394da2ea3e65a98cc0601ea06f",
+  "source_page_display": 136,
+  "source_page_index": 135
+}

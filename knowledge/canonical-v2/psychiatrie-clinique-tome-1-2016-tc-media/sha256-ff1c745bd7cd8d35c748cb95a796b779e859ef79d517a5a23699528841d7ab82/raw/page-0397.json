@@ -1,0 +1,424 @@
+{
+  "block_sequence_sha256": "69c02f895575b834eff46496170f77fa90ab6911a4590eff22f3e0a16322e9f3",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        477.3144836425781,
+        758.8693237304688
+      ],
+      "block_id": "page-0397-block-0001",
+      "order": 1,
+      "text": "380\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3\nSyndromes cliniques psychiatriques\n",
+      "text_sha256": "6079dfe90a7df2643da92ccfaea46fe7bef528b1b89274ea5a9e526ea04903be"
+    },
+    {
+      "bbox": [
+        50.25,
+        360.2023010253906,
+        274.7270202636719,
+        372.570068359375
+      ],
+      "block_id": "page-0397-block-0002",
+      "order": 2,
+      "text": "TABLEAU 18.3 Critères diagnostiques de la cyclothymie\n",
+      "text_sha256": "9f9a1aa3f53ade6179cd1640d94bc417a9284d46521f9ef44b6bcde2021be6f6"
+    },
+    {
+      "bbox": [
+        160.75,
+        378.7741394042969,
+        443.53802490234375,
+        389.3503112792969
+      ],
+      "block_id": "page-0397-block-0003",
+      "order": 3,
+      "text": "DSM-5\nDSM-IV-TR\n",
+      "text_sha256": "67d368c78be7842a2bc99b149901566bcadf3c9d62623ea48bafcc32b3563ffb"
+    },
+    {
+      "bbox": [
+        108.70000457763672,
+        394.4228515625,
+        462.2183532714844,
+        404.4423828125
+      ],
+      "block_id": "page-0397-block-0004",
+      "order": 4,
+      "text": "301.13 (F34.0) Trouble cyclothymique\nTrouble cyclothymique\n",
+      "text_sha256": "71e5e092ec7eb47216e64046fbe9cbdb807e65a0c261a23d6bcf404fc510d3c7"
+    },
+    {
+      "bbox": [
+        52.25,
+        409.1519470214844,
+        283.8570556640625,
+        418.9781188964844
+      ],
+      "block_id": "page-0397-block-0005",
+      "order": 5,
+      "text": "A. Existence pendant au moins 2 ans (au moins 1 an chez les enfants et\n",
+      "text_sha256": "df03460f828d93906b5d3d267e407b552aebb35a56dbbab53ac9b2b19fe9c47d"
+    },
+    {
+      "bbox": [
+        63.10000228881836,
+        419.1519470214844,
+        291.947021484375,
+        468.9781188964844
+      ],
+      "block_id": "page-0397-block-0006",
+      "order": 6,
+      "text": "les adolescents) de nombreuses périodes pendant lesquelles des symp-\ntômes hypomaniaques sont présents sans que soient réunis les critères\nd’un épisode hypomaniaque et de nombreuses périodes pendant les-\nquelles des symptômes dépressifs sont présents sans que soient réunis\nles critères d’un épisode dépressif majeur.\n",
+      "text_sha256": "7dd67ec561f72b4802f88f3bbbf58507326999576eb6d8c0785b51b68b93c7ab"
+    },
+    {
+      "bbox": [
+        302.25,
+        409.1519470214844,
+        531.9751586914062,
+        418.9781188964844
+      ],
+      "block_id": "page-0397-block-0007",
+      "order": 7,
+      "text": "A. Existence, pendant au moins 2 ans, de nombreuses périodes pendant\n",
+      "text_sha256": "32cd7333e83806c0b433a3bd1c3165c8306b53b5af792b30ec903e8d8a53ae24"
+    },
+    {
+      "bbox": [
+        302.25,
+        419.1519470214844,
+        544.5469970703125,
+        469.9781188964844
+      ],
+      "block_id": "page-0397-block-0008",
+      "order": 8,
+      "text": "lesquelles des symptômes hypomaniaques sont présents et de nom-\nbreuses périodes pendant lesquelles des symptômes dépressifs sont pré-\nsents sans que soient réunis les critères d’un épisode dépressif majeur.\nN.B. : Chez les enfants et les adolescents, la durée doit être d’au moins\nun an.\n",
+      "text_sha256": "65d10ea5a16fc314bfbefeb1af4beced3e4f619db4276b0148d5fbcd4a5c6152"
+    },
+    {
+      "bbox": [
+        52.25,
+        474.6019592285156,
+        284.70782470703125,
+        484.4281311035156
+      ],
+      "block_id": "page-0397-block-0009",
+      "order": 9,
+      "text": "B. Durant la période de 2 ans décrite ci-dessus (1 an chez les enfants et\n",
+      "text_sha256": "c4f3d705d75a64ecab3ddf45ae6567444e288b6310e0166ee0e95581e60472ac"
+    },
+    {
+      "bbox": [
+        63.10000228881836,
+        484.6019592285156,
+        287.9173889160156,
+        514.4281616210938
+      ],
+      "block_id": "page-0397-block-0010",
+      "order": 10,
+      "text": "les adolescents), les périodes hypomaniaques et dépressives ont été\nprésentes pendant au moins la moitié du temps et la personne n’a pas\nconnu de période de plus de 2 mois consécutifs sans les symptômes.\n",
+      "text_sha256": "0f4e1f97bad7c34626b7419ac8bf5487b1cfdc7b1b398754c43b506064dd7bc3"
+    },
+    {
+      "bbox": [
+        302.25,
+        474.6019592285156,
+        361.8981018066406,
+        484.4281311035156
+      ],
+      "block_id": "page-0397-block-0011",
+      "order": 11,
+      "text": "B. Idem à DSM-5.\n",
+      "text_sha256": "703f62df8ee835b259dd8e94c2103cd979d0ac69c184c555aa261a5bff070302"
+    },
+    {
+      "bbox": [
+        52.25,
+        519.001953125,
+        267.3857116699219,
+        528.828125
+      ],
+      "block_id": "page-0397-block-0012",
+      "order": 12,
+      "text": "C. Les critères pour un épisode dépressif caractérisé, maniaque ou\n",
+      "text_sha256": "68f9aa649f0354145e7efece29d5b2eb078b2e1e4614e0cacbd3e4bdaf3e20a8"
+    },
+    {
+      "bbox": [
+        63.25,
+        529.001953125,
+        186.69744873046875,
+        538.828125
+      ],
+      "block_id": "page-0397-block-0013",
+      "order": 13,
+      "text": "hypomaniaque n’ont jamais été réunis.\n",
+      "text_sha256": "30e302ddc6b2e905832d8968bca35614c68c44210a96d51ecd53ca9a2336d03b"
+    },
+    {
+      "bbox": [
+        302.25,
+        519.001953125,
+        362.069091796875,
+        528.828125
+      ],
+      "block_id": "page-0397-block-0014",
+      "order": 14,
+      "text": "C. Idem à DSM-5.\n",
+      "text_sha256": "e3115c8f08f85dfc1a8c901e597d6628d9cc927dde450ccede1ca1ec3dd04b8e"
+    },
+    {
+      "bbox": [
+        52.25,
+        543.4519653320312,
+        291.1903991699219,
+        553.2781372070312
+      ],
+      "block_id": "page-0397-block-0015",
+      "order": 15,
+      "text": "D. Les symptômes du critère A ne sont pas mieux expliqués par un trouble\n",
+      "text_sha256": "82da788f50bfa75b1554c2b342dd075f2f0b3f0bb2554a92bcaa122c3d724ee9"
+    },
+    {
+      "bbox": [
+        63.400001525878906,
+        553.4519653320312,
+        281.03924560546875,
+        583.2781372070312
+      ],
+      "block_id": "page-0397-block-0016",
+      "order": 16,
+      "text": "schizoaffectif, une schizophrénie, un trouble schizophréniforme, un\ntrouble délirant ou par un trouble spécié ou non spécié du spectre\nde la schizophrénie ou un autre trouble psychotique.\n",
+      "text_sha256": "501d07533632ab34d96df3374e662b127a0f89a87d7f8a6a2313cd6b1cf0d8d7"
+    },
+    {
+      "bbox": [
+        302.25,
+        543.4519653320312,
+        362.2310791015625,
+        553.2781372070312
+      ],
+      "block_id": "page-0397-block-0017",
+      "order": 17,
+      "text": "D. Idem à DSM-5.\n",
+      "text_sha256": "a25093c4e73c5e7e67b3176a2cccc790e8fc03ace507127f5b4c7ba5e37fc007"
+    },
+    {
+      "bbox": [
+        52.25,
+        587.8519897460938,
+        290.8656921386719,
+        597.6781616210938
+      ],
+      "block_id": "page-0397-block-0018",
+      "order": 18,
+      "text": "E. Les symptômes ne sont pas imputables aux effets physiologiques d’une\n",
+      "text_sha256": "04838d233a9d6f32d1d55d7cf0c575754a45610e2782efee7a0975ca35ca2806"
+    },
+    {
+      "bbox": [
+        62.54999923706055,
+        597.8519897460938,
+        287.3379211425781,
+        617.6781616210938
+      ],
+      "block_id": "page-0397-block-0019",
+      "order": 19,
+      "text": "substance (p. ex., une substance donnant lieu à abus, médicament) ou\nà une autre affection médicale (p. ex., hyperthyroïdie).\n",
+      "text_sha256": "0c8076c25f96e4028c2e1052e9d2ef75ed17ef47cf6f133d106dc60640a15cd7"
+    },
+    {
+      "bbox": [
+        302.25,
+        587.8519897460938,
+        361.39410400390625,
+        597.6781616210938
+      ],
+      "block_id": "page-0397-block-0020",
+      "order": 20,
+      "text": "E. Idem à DSM-5.\n",
+      "text_sha256": "623c5ec74498d33a47207c86c1d4b8bb5aae0042d0559cf373e98ababace68cc"
+    },
+    {
+      "bbox": [
+        52.25,
+        622.3019409179688,
+        281.10394287109375,
+        632.1281127929688
+      ],
+      "block_id": "page-0397-block-0021",
+      "order": 21,
+      "text": "F. Les symptômes entraînent une détresse cliniquement signicative ou\n",
+      "text_sha256": "84f8d6cd872f9b3ee6884bd68596a90445f5efcd563d413678093606c88c7720"
+    },
+    {
+      "bbox": [
+        61.400001525878906,
+        632.3019409179688,
+        288.873779296875,
+        652.1281127929688
+      ],
+      "block_id": "page-0397-block-0022",
+      "order": 22,
+      "text": "une altération du fonctionnement social, professionnel ou dans d’autres\ndomaines importants.\n",
+      "text_sha256": "0dc44f1b30dd6f5068cbb1904cd5fa58dcbe67ff48d4ea19f0ac577e7fe2d461"
+    },
+    {
+      "bbox": [
+        302.25,
+        622.3019409179688,
+        360.5480041503906,
+        632.1281127929688
+      ],
+      "block_id": "page-0397-block-0023",
+      "order": 23,
+      "text": "F. Idem à DSM-5.\n",
+      "text_sha256": "27f350994248f7273de8065d110e782673c74b9f6edffd4b55718e7ebadc432a"
+    },
+    {
+      "bbox": [
+        48.25,
+        658.890625,
+        220.59071350097656,
+        667.7588500976562
+      ],
+      "block_id": "page-0397-block-0024",
+      "order": 24,
+      "text": "Sources : APA (2015), p. 163-164 ; APA (2004), p. 460-461.\n",
+      "text_sha256": "9ea34c83f5d7b7e84c0feb62642c78e81786b330fe83c4ad1d6d64060c770d7a"
+    },
+    {
+      "bbox": [
+        48.25,
+        673.890625,
+        529.4806518554688,
+        700.625
+      ],
+      "block_id": "page-0397-block-0025",
+      "order": 25,
+      "text": "Traduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved..\n",
+      "text_sha256": "9925ba7060625413ba8070d724ece76569ada6fb561fd00300a8e45873d6ffab"
+    },
+    {
+      "bbox": [
+        48.25,
+        706.890625,
+        548.705810546875,
+        724.625
+      ],
+      "block_id": "page-0397-block-0026",
+      "order": 26,
+      "text": "Traduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\n",
+      "text_sha256": "cbaf74623581d335442980f66ae048c6f58e3db311890ed7cd9feabfdd0d127b"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.9658203125,
+        291.3876953125,
+        143.45849609375
+      ],
+      "block_id": "page-0397-block-0027",
+      "order": 27,
+      "text": "plus fréquente chez les patients déprimés de type unipolaire.\nDes symptômes psychotiques peuvent aussi être présents, et\nplus fréquemment que chez les patients unipolaires. Il s’agit\nhabituellement d’idées délirantes de culpabilité, de persécution ou\nhypocondriaques. Par exemple, le patient peut se dire convaincu\nde « subir un châtiment de Dieu pour avoir menti à un professeur\nà l’école primaire » ou encore se sentir « dévoré par un cancer »\nmalgré un bilan physique tout à fait normal. Des hallucinations,\nle plus souvent auditives, sont plus rares.\n",
+      "text_sha256": "9b322adfd53617cb801ee50c0d80ca3b919108fad7e0839c1da5dab6fede9cc9"
+    },
+    {
+      "bbox": [
+        48.0,
+        153.98681640625,
+        157.4857177734375,
+        170.12939453125
+      ],
+      "block_id": "page-0397-block-0028",
+      "order": 28,
+      "text": "18.4.3 Cyclothymie\n",
+      "text_sha256": "433ea3ebcd3321d5e9affcefdaaaae373eef0aa5d11db1ec8ca8aba8294d136e"
+    },
+    {
+      "bbox": [
+        48.0,
+        173.4658203125,
+        291.1929626464844,
+        344.95849609375
+      ],
+      "block_id": "page-0397-block-0029",
+      "order": 29,
+      "text": "La cyclothymie est un trouble déni dans le DSM-5 par la survenue\npendant au moins deux ans de nombreuses périodes caractérisées\npar des symptômes d’hypomanie ou des symptômes dépressifs,\nmais sans que ceux-ci ne permettent de poser un diagnostic\nd’épisode dépressif majeur (voir le tableau 18.3). De plus, il ne faut\npas que le patient ait été sans symptômes pendant plus de deux\nmois consécutifs. Il s’agit donc d’un trouble de l’humeur de type\nbipolaire, mais dont les manifestations n’atteignent pas l’intensité\nd’un épisode dépressif majeur ou d’une manie. Cela explique\nque les patients atteints de cyclothymie soient rarement traités\net que les études portant sur ce trouble soient peu nombreuses.\nMais au-delà des critères diagnostiques du DSM, la notion de\ncyclothymie est importante. Elle renvoie notamment à la notion\nde « constitution » selon Kraepelin ou de « tempérament » selon\nAkiskal (1996), des états de base qui sous-tendent la genèse des\n",
+      "text_sha256": "82045dbe9fdee5fd51ffbeb776659a2a8577219783929d9c779e8789382ec9ac"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.13916015625,
+        74.45849609375
+      ],
+      "block_id": "page-0397-block-0030",
+      "order": 30,
+      "text": "troubles bipolaires (voir la sous-section 18.4.5). Un tempérament\ncyclothymique pourrait évoluer vers un trouble bipolaire de type\nI ou de type II.\n",
+      "text_sha256": "dfe3115f08d35444779a0e0f8ab1e63f0cfae4a411112cb99718059a42621908"
+    },
+    {
+      "bbox": [
+        306.0,
+        84.98681640625,
+        503.0137939453125,
+        101.12939453125
+      ],
+      "block_id": "page-0397-block-0031",
+      "order": 31,
+      "text": "18.4.4 Considérations particulières\n",
+      "text_sha256": "3c537b522314901a30619e1bff11011bd378410553db6da443b6b534d827aa09"
+    },
+    {
+      "bbox": [
+        306.0,
+        104.4658203125,
+        548.9661254882812,
+        126.45849609375
+      ],
+      "block_id": "page-0397-block-0032",
+      "order": 32,
+      "text": "Plusieurs nuances diagnostiques caractérisent les troubles de\nl’humeur.\n",
+      "text_sha256": "9aa4c49a73ee0685625700693ed02b068daf14cfd67c6bcccdfa9306f80b582c"
+    },
+    {
+      "bbox": [
+        306.0,
+        135.3330078125,
+        549.0401611328125,
+        305.97607421875
+      ],
+      "block_id": "page-0397-block-0033",
+      "order": 33,
+      "text": "Critères de spécication\nLe DSM-5 ajoute des spécicateurs qui peuvent s’appliquer à\ntous les types de troubles bipolaires ou dépressifs :\n• avec détresse anxieuse ;\n• avec caractéristiques mixtes ;\n• avec cycles rapides ;\n• avec caractéristiques mélancoliques ;\n• avec caractéristiques atypiques ;\n• avec caractéristiques psychotiques, congruentes ou non\ncongruentes à l’humeur ;\n• avec caractéristiques catatoniques ;\n• avec début lors du péripartum ;\n• avec caractère saisonnier.\n",
+      "text_sha256": "aac897cfb662369249cd3a48606e907feda8164f0eb98b771c6534456910c931"
+    },
+    {
+      "bbox": [
+        306.0,
+        310.4658203125,
+        548.7695922851562,
+        343.95849609375
+      ],
+      "block_id": "page-0397-block-0034",
+      "order": 34,
+      "text": "Parmi ceux-ci, certains sont très étroitement associés au\nTB : avec caractéristiques mixtes, avec cycles rapides et avec\ncaractère saisonnier.\n",
+      "text_sha256": "70f38bbfccc38a99d7b7ea0f0aa0024a4847fa16af97bcfae64437b5a89dffee"
+    }
+  ],
+  "coordinates_sha256": "8249e1685bba130ae315353aae02854b4eee7a4c2224909c763fc8ee552b33a1",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0397",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "380\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3\nSyndromes cliniques psychiatriques\nTABLEAU 18.3 Critères diagnostiques de la cyclothymie\nDSM-5\nDSM-IV-TR\n301.13 (F34.0) Trouble cyclothymique\nTrouble cyclothymique\nA. Existence pendant au moins 2 ans (au moins 1 an chez les enfants et\nles adolescents) de nombreuses périodes pendant lesquelles des symp-\ntômes hypomaniaques sont présents sans que soient réunis les critères\nd’un épisode hypomaniaque et de nombreuses périodes pendant les-\nquelles des symptômes dépressifs sont présents sans que soient réunis\nles critères d’un épisode dépressif majeur.\nA. Existence, pendant au moins 2 ans, de nombreuses périodes pendant\nlesquelles des symptômes hypomaniaques sont présents et de nom-\nbreuses périodes pendant lesquelles des symptômes dépressifs sont pré-\nsents sans que soient réunis les critères d’un épisode dépressif majeur.\nN.B. : Chez les enfants et les adolescents, la durée doit être d’au moins\nun an.\nB. Durant la période de 2 ans décrite ci-dessus (1 an chez les enfants et\nles adolescents), les périodes hypomaniaques et dépressives ont été\nprésentes pendant au moins la moitié du temps et la personne n’a pas\nconnu de période de plus de 2 mois consécutifs sans les symptômes.\nB. Idem à DSM-5.\nC. Les critères pour un épisode dépressif caractérisé, maniaque ou\nhypomaniaque n’ont jamais été réunis.\nC. Idem à DSM-5.\nD. Les symptômes du critère A ne sont pas mieux expliqués par un trouble\nschizoaffectif, une schizophrénie, un trouble schizophréniforme, un\ntrouble délirant ou par un trouble spécié ou non spécié du spectre\nde la schizophrénie ou un autre trouble psychotique.\nD. Idem à DSM-5.\nE. Les symptômes ne sont pas imputables aux effets physiologiques d’une\nsubstance (p. ex., une substance donnant lieu à abus, médicament) ou\nà une autre affection médicale (p. ex., hyperthyroïdie).\nE. Idem à DSM-5.\nF. Les symptômes entraînent une détresse cliniquement signicative ou\nune altération du fonctionnement social, professionnel ou dans d’autres\ndomaines importants.\nF. Idem à DSM-5.\nSources : APA (2015), p. 163-164 ; APA (2004), p. 460-461.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved..\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\nplus fréquente chez les patients déprimés de type unipolaire.\nDes symptômes psychotiques peuvent aussi être présents, et\nplus fréquemment que chez les patients unipolaires. Il s’agit\nhabituellement d’idées délirantes de culpabilité, de persécution ou\nhypocondriaques. Par exemple, le patient peut se dire convaincu\nde « subir un châtiment de Dieu pour avoir menti à un professeur\nà l’école primaire » ou encore se sentir « dévoré par un cancer »\nmalgré un bilan physique tout à fait normal. Des hallucinations,\nle plus souvent auditives, sont plus rares.\n18.4.3 Cyclothymie\nLa cyclothymie est un trouble déni dans le DSM-5 par la survenue\npendant au moins deux ans de nombreuses périodes caractérisées\npar des symptômes d’hypomanie ou des symptômes dépressifs,\nmais sans que ceux-ci ne permettent de poser un diagnostic\nd’épisode dépressif majeur (voir le tableau 18.3). De plus, il ne faut\npas que le patient ait été sans symptômes pendant plus de deux\nmois consécutifs. Il s’agit donc d’un trouble de l’humeur de type\nbipolaire, mais dont les manifestations n’atteignent pas l’intensité\nd’un épisode dépressif majeur ou d’une manie. Cela explique\nque les patients atteints de cyclothymie soient rarement traités\net que les études portant sur ce trouble soient peu nombreuses.\nMais au-delà des critères diagnostiques du DSM, la notion de\ncyclothymie est importante. Elle renvoie notamment à la notion\nde « constitution » selon Kraepelin ou de « tempérament » selon\nAkiskal (1996), des états de base qui sous-tendent la genèse des\ntroubles bipolaires (voir la sous-section 18.4.5). Un tempérament\ncyclothymique pourrait évoluer vers un trouble bipolaire de type\nI ou de type II.\n18.4.4 Considérations particulières\nPlusieurs nuances diagnostiques caractérisent les troubles de\nl’humeur.\nCritères de spécication\nLe DSM-5 ajoute des spécicateurs qui peuvent s’appliquer à\ntous les types de troubles bipolaires ou dépressifs :\n• avec détresse anxieuse ;\n• avec caractéristiques mixtes ;\n• avec cycles rapides ;\n• avec caractéristiques mélancoliques ;\n• avec caractéristiques atypiques ;\n• avec caractéristiques psychotiques, congruentes ou non\ncongruentes à l’humeur ;\n• avec caractéristiques catatoniques ;\n• avec début lors du péripartum ;\n• avec caractère saisonnier.\nParmi ceux-ci, certains sont très étroitement associés au\nTB : avec caractéristiques mixtes, avec cycles rapides et avec\ncaractère saisonnier.\n",
+  "raw_text_sha256": "f15cfa687eefd6fa25a891bb344e460651ff8e16132546b03ea6a4ac4c27dbb3",
+  "source_page_display": 398,
+  "source_page_index": 397
+}

@@ -1,0 +1,4047 @@
+{
+ "book_id": "icd11-ref-guide-2022-who",
+ "source_version": "sha256:55808d0d1d9358c1bdade96a29541c610624d8d6ebcb76081d87ec882cde48b1",
+ "hierarchy": "Book -> Part (0..3) -> numbered sections (depth = dot count)",
+ "toc_source_pages": "src 4(bottom)..24 = printed 2(bottom)..22",
+ "body_start_source_page": 25,
+ "heading_detection": "numbered pattern ^N(.N){0,5} Title; typography flat (Calibri 12pt everywhere, headings not bold/larger)",
+ "unlocated_sections": [],
+ "sections": [
+  {
+   "section_id": "0",
+   "title": "ICD-11 Reference Guide",
+   "depth": 0,
+   "source_page_start": 3,
+   "printed_page_start": "1",
+   "page_mapping_status": "certain",
+   "note": "heading observed on src 3 (printed 1) above copyright body"
+  },
+  {
+   "section_id": "0.1",
+   "title": "Copyright page",
+   "depth": 1,
+   "source_page_start": 3,
+   "printed_page_start": "1",
+   "page_mapping_status": "certain",
+   "note": "heading observed on src 3 (printed 1)"
+  },
+  {
+   "section_id": "0.2",
+   "title": "How to use this Reference Guide",
+   "depth": 1,
+   "source_page_start": 24,
+   "printed_page_start": "22",
+   "page_mapping_status": "certain",
+   "note": "CORRECTED by pilot seg-0001-0025: heading + body observed at end of src 24 (printed 22), immediately after TOC end; earlier src-4 lines were the TOC start"
+  },
+  {
+   "section_id": "0.3",
+   "title": "Table of Acronyms and Abbreviations",
+   "depth": 1,
+   "source_page_start": 25,
+   "printed_page_start": "23",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "0.4",
+   "title": "Glossary",
+   "depth": 1,
+   "source_page_start": 25,
+   "printed_page_start": "23",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1",
+   "title": "Part 1 - An Introduction to ICD-11",
+   "depth": 0,
+   "source_page_start": 28,
+   "printed_page_start": "26",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1.1",
+   "title": "International Classification of Diseases (ICD)",
+   "depth": 1,
+   "source_page_start": 28,
+   "printed_page_start": "26",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1.1.1",
+   "title": "Intended uses",
+   "depth": 2,
+   "source_page_start": 30,
+   "printed_page_start": "28",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1.1.2",
+   "title": "Classification",
+   "depth": 2,
+   "source_page_start": 30,
+   "printed_page_start": "28",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1.1.3",
+   "title": "ICD in the context of the WHO Family of International Classifications (WHO-FIC)",
+   "depth": 2,
+   "source_page_start": 30,
+   "printed_page_start": "28",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1.1.4",
+   "title": "WHO-FIC: Reference Classifications",
+   "depth": 2,
+   "source_page_start": 32,
+   "printed_page_start": "30",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1.1.4.1",
+   "title": "International Classification of Functioning, Disability & Health (ICF)",
+   "depth": 3,
+   "source_page_start": 32,
+   "printed_page_start": "30",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1.1.4.2",
+   "title": "The International Classification of Health Interventions (ICHI)",
+   "depth": 3,
+   "source_page_start": 33,
+   "printed_page_start": "31",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1.1.4.3",
+   "title": "WHO-FIC: Derived classifications",
+   "depth": 3,
+   "source_page_start": 34,
+   "printed_page_start": "32",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1.1.4.4",
+   "title": "Related classifications",
+   "depth": 3,
+   "source_page_start": 35,
+   "printed_page_start": "33",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1.1.5",
+   "title": "ICD use in health information systems",
+   "depth": 2,
+   "source_page_start": 35,
+   "printed_page_start": "33",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1.1.5.1",
+   "title": "Use of ICD–11 in a digital setting and with web services",
+   "depth": 3,
+   "source_page_start": 36,
+   "printed_page_start": "34",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1.1.5.2",
+   "title": "Use of ICD–11 in an analogue paper-based setting",
+   "depth": 3,
+   "source_page_start": 36,
+   "printed_page_start": "34",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1.1.5.3",
+   "title": "Electronic version",
+   "depth": 3,
+   "source_page_start": 36,
+   "printed_page_start": "34",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1.1.6",
+   "title": "Links with other Classifications and Terminologies",
+   "depth": 2,
+   "source_page_start": 36,
+   "printed_page_start": "34",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1.1.6.1",
+   "title": "Integrated use with Terminologies",
+   "depth": 3,
+   "source_page_start": 36,
+   "printed_page_start": "34",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1.1.6.2",
+   "title": "Functioning in ICD and joint use with ICF overview",
+   "depth": 3,
+   "source_page_start": 37,
+   "printed_page_start": "35",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1.2",
+   "title": "Structure and taxonomy of the ICD",
+   "depth": 1,
+   "source_page_start": 38,
+   "printed_page_start": "36",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1.2.1",
+   "title": "Taxonomy",
+   "depth": 2,
+   "source_page_start": 39,
+   "printed_page_start": "37",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1.2.1.1",
+   "title": "Content model and definition of disease",
+   "depth": 3,
+   "source_page_start": 39,
+   "printed_page_start": "37",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1.2.2",
+   "title": "ICD Chapter structure",
+   "depth": 2,
+   "source_page_start": 40,
+   "printed_page_start": "38",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1.2.3",
+   "title": "Guiding principles for classification of special concepts",
+   "depth": 2,
+   "source_page_start": 41,
+   "printed_page_start": "39",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1.2.4",
+   "title": "General features of ICD-11",
+   "depth": 2,
+   "source_page_start": 41,
+   "printed_page_start": "39",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1.2.4.1",
+   "title": "Code structure",
+   "depth": 3,
+   "source_page_start": 41,
+   "printed_page_start": "39",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1.2.4.2",
+   "title": "Uniform resource identifiers",
+   "depth": 3,
+   "source_page_start": 42,
+   "printed_page_start": "40",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1.2.4.3",
+   "title": "Block codes",
+   "depth": 3,
+   "source_page_start": 42,
+   "printed_page_start": "40",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1.2.4.4",
+   "title": "Stem codes",
+   "depth": 3,
+   "source_page_start": 42,
+   "printed_page_start": "40",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1.2.4.5",
+   "title": "Extension codes and postcoordination",
+   "depth": 3,
+   "source_page_start": 43,
+   "printed_page_start": "41",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1.2.4.6",
+   "title": "Other general features",
+   "depth": 3,
+   "source_page_start": 43,
+   "printed_page_start": "41",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1.2.5",
+   "title": "Foundation Component and Tabular lists of ICD–11",
+   "depth": 2,
+   "source_page_start": 43,
+   "printed_page_start": "41",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1.2.5.1",
+   "title": "Precoordination and Postcoordination in ICD-11",
+   "depth": 3,
+   "source_page_start": 44,
+   "printed_page_start": "42",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1.2.5.2",
+   "title": "Multiple parenting",
+   "depth": 3,
+   "source_page_start": 44,
+   "printed_page_start": "42",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1.2.6",
+   "title": "Language independent ICD entities",
+   "depth": 2,
+   "source_page_start": 44,
+   "printed_page_start": "42",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1.3",
+   "title": "Main uses of the ICD: Mortality",
+   "depth": 1,
+   "source_page_start": 44,
+   "printed_page_start": "42",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1.3.1",
+   "title": "What is coded: Causes of death",
+   "depth": 2,
+   "source_page_start": 45,
+   "printed_page_start": "43",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1.4",
+   "title": "Main uses of the ICD: Morbidity",
+   "depth": 1,
+   "source_page_start": 45,
+   "printed_page_start": "43",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1.4.1",
+   "title": "What is coded: patient conditions",
+   "depth": 2,
+   "source_page_start": 45,
+   "printed_page_start": "43",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1.5",
+   "title": "Traditional Medicine",
+   "depth": 1,
+   "source_page_start": 46,
+   "printed_page_start": "44",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1.6",
+   "title": "ICD maintenance",
+   "depth": 1,
+   "source_page_start": 46,
+   "printed_page_start": "44",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1.6.1",
+   "title": "Guiding principles of authoring process",
+   "depth": 2,
+   "source_page_start": 46,
+   "printed_page_start": "44",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1.6.2",
+   "title": "Improving user guidance",
+   "depth": 2,
+   "source_page_start": 47,
+   "printed_page_start": "45",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1.6.3",
+   "title": "Introduction to the ICD–11 Update Process",
+   "depth": 2,
+   "source_page_start": 48,
+   "printed_page_start": "46",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "1.6.4",
+   "title": "National Modifications for morbidity coding",
+   "depth": 2,
+   "source_page_start": 48,
+   "printed_page_start": "46",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2",
+   "title": "Part 2 - Using ICD-11",
+   "depth": 0,
+   "source_page_start": 49,
+   "printed_page_start": "47",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.1",
+   "title": "Basic coding and reporting guidelines",
+   "depth": 1,
+   "source_page_start": 49,
+   "printed_page_start": "47",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.2",
+   "title": "Tabular List, Special Tabulation Lists, Qualifiers, and Modifiers",
+   "depth": 1,
+   "source_page_start": 50,
+   "printed_page_start": "48",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.3",
+   "title": "Index",
+   "depth": 1,
+   "source_page_start": 50,
+   "printed_page_start": "48",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.4",
+   "title": "Reference Guide",
+   "depth": 1,
+   "source_page_start": 50,
+   "printed_page_start": "48",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.5",
+   "title": "Browser and coding tool",
+   "depth": 1,
+   "source_page_start": 50,
+   "printed_page_start": "48",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.6",
+   "title": "Coding step by step – clinical term",
+   "depth": 1,
+   "source_page_start": 50,
+   "printed_page_start": "48",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.7",
+   "title": "ICD–11 conventions",
+   "depth": 1,
+   "source_page_start": 51,
+   "printed_page_start": "49",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.7.1",
+   "title": "Inclusions",
+   "depth": 2,
+   "source_page_start": 51,
+   "printed_page_start": "49",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.7.2",
+   "title": "Exclusions",
+   "depth": 2,
+   "source_page_start": 51,
+   "printed_page_start": "49",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.7.2.1",
+   "title": "‘Code also’ and ‘Use additional code, if desired’ instructions",
+   "depth": 3,
+   "source_page_start": 52,
+   "printed_page_start": "50",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.7.3",
+   "title": "‘NEC’ and ‘NOS’",
+   "depth": 2,
+   "source_page_start": 52,
+   "printed_page_start": "50",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.7.3.1",
+   "title": "‘NEC’",
+   "depth": 3,
+   "source_page_start": 52,
+   "printed_page_start": "50",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.7.3.2",
+   "title": "‘NOS’",
+   "depth": 3,
+   "source_page_start": 52,
+   "printed_page_start": "50",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.7.4",
+   "title": "‘Certain’",
+   "depth": 2,
+   "source_page_start": 53,
+   "printed_page_start": "51",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.7.5",
+   "title": "Residual categories – ‘Other’ and ‘Unspecified’",
+   "depth": 2,
+   "source_page_start": 53,
+   "printed_page_start": "51",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.7.6",
+   "title": "Use of ‘And’ and ‘Or’",
+   "depth": 2,
+   "source_page_start": 53,
+   "printed_page_start": "51",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.7.7",
+   "title": "‘Due to’ and ‘Associated with’",
+   "depth": 2,
+   "source_page_start": 54,
+   "printed_page_start": "52",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.7.8",
+   "title": "Spelling, parentheses, grammar and other conventions",
+   "depth": 2,
+   "source_page_start": 54,
+   "printed_page_start": "52",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.7.9",
+   "title": "General features",
+   "depth": 2,
+   "source_page_start": 54,
+   "printed_page_start": "52",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.8",
+   "title": "Stem codes",
+   "depth": 1,
+   "source_page_start": 56,
+   "printed_page_start": "54",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.9",
+   "title": "Extension codes",
+   "depth": 1,
+   "source_page_start": 56,
+   "printed_page_start": "54",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.10",
+   "title": "Precoordination and postcoordination",
+   "depth": 1,
+   "source_page_start": 57,
+   "printed_page_start": "55",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.10.1",
+   "title": "Adding detail – postcoordination and cluster coding with multiple stem codes and extension codes",
+   "depth": 2,
+   "source_page_start": 59,
+   "printed_page_start": "57",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.10.2",
+   "title": "Combining stem codes and extension codes, and how to order these in a complex code cluster",
+   "depth": 2,
+   "source_page_start": 59,
+   "printed_page_start": "57",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.10.3",
+   "title": "Diagnosis Timing - ‘Present on admission’ vs. ‘Developed after admission’",
+   "depth": 2,
+   "source_page_start": 61,
+   "printed_page_start": "59",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.11",
+   "title": "Functioning section",
+   "depth": 1,
+   "source_page_start": 62,
+   "printed_page_start": "60",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.11.1",
+   "title": "Functioning assessment",
+   "depth": 2,
+   "source_page_start": 63,
+   "printed_page_start": "61",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.11.1.1",
+   "title": "WHO DAS 2.0: features and use cases",
+   "depth": 3,
+   "source_page_start": 63,
+   "printed_page_start": "61",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.11.1.2",
+   "title": "WHO DAS 2.0: representation and coding structure",
+   "depth": 3,
+   "source_page_start": 64,
+   "printed_page_start": "62",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.11.2",
+   "title": "Generic functioning entity",
+   "depth": 2,
+   "source_page_start": 65,
+   "printed_page_start": "63",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.11.2.1",
+   "title": "Functioning entities: features and use cases",
+   "depth": 3,
+   "source_page_start": 65,
+   "printed_page_start": "63",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.11.2.2",
+   "title": "Functioning entity: representation and coding structure",
+   "depth": 3,
+   "source_page_start": 65,
+   "printed_page_start": "63",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.12",
+   "title": "Electronic recording and reporting",
+   "depth": 1,
+   "source_page_start": 65,
+   "printed_page_start": "63",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.13",
+   "title": "Foundation Component and Tabular lists",
+   "depth": 1,
+   "source_page_start": 66,
+   "printed_page_start": "64",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.14",
+   "title": "Main uses of the ICD: Mortality",
+   "depth": 1,
+   "source_page_start": 67,
+   "printed_page_start": "65",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.15",
+   "title": "Mortality statistics",
+   "depth": 1,
+   "source_page_start": 67,
+   "printed_page_start": "65",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.15.1",
+   "title": "What is tabulated: Underlying cause of death",
+   "depth": 2,
+   "source_page_start": 68,
+   "printed_page_start": "66",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.15.2",
+   "title": "Data source: The international form of Medical Certificate of Cause of Death (MCCD)",
+   "depth": 2,
+   "source_page_start": 68,
+   "printed_page_start": "66",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.15.3",
+   "title": "Routine use and special cases",
+   "depth": 2,
+   "source_page_start": 70,
+   "printed_page_start": "68",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.15.3.1",
+   "title": "Routine cause of death reporting systems",
+   "depth": 3,
+   "source_page_start": 70,
+   "printed_page_start": "68",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.15.3.2",
+   "title": "Verbal autopsy",
+   "depth": 3,
+   "source_page_start": 70,
+   "printed_page_start": "68",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.16",
+   "title": "Basic concepts",
+   "depth": 1,
+   "source_page_start": 70,
+   "printed_page_start": "68",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.16.1",
+   "title": "Terminal cause of death",
+   "depth": 2,
+   "source_page_start": 71,
+   "printed_page_start": "69",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.16.2",
+   "title": "Causal relationship and sequence",
+   "depth": 2,
+   "source_page_start": 72,
+   "printed_page_start": "70",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.16.3",
+   "title": "Starting point",
+   "depth": 2,
+   "source_page_start": 73,
+   "printed_page_start": "71",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.16.4",
+   "title": "Duration",
+   "depth": 2,
+   "source_page_start": 74,
+   "printed_page_start": "72",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.16.5",
+   "title": "First-mentioned sequence",
+   "depth": 2,
+   "source_page_start": 74,
+   "printed_page_start": "72",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.16.6",
+   "title": "Underlying cause of death (UCOD)",
+   "depth": 2,
+   "source_page_start": 78,
+   "printed_page_start": "76",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.16.7",
+   "title": "Priority underlying condition",
+   "depth": 2,
+   "source_page_start": 79,
+   "printed_page_start": "77",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.16.8",
+   "title": "Modification",
+   "depth": 2,
+   "source_page_start": 80,
+   "printed_page_start": "78",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.17",
+   "title": "Coding instructions for mortality",
+   "depth": 1,
+   "source_page_start": 80,
+   "printed_page_start": "78",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.17.1",
+   "title": "Basic coding and multiple cause coding guidelines",
+   "depth": 2,
+   "source_page_start": 80,
+   "printed_page_start": "78",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.17.2",
+   "title": "Selecting the underlying cause of death",
+   "depth": 2,
+   "source_page_start": 81,
+   "printed_page_start": "79",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.17.3",
+   "title": "Find the starting point (Steps SP1 to SP8)",
+   "depth": 2,
+   "source_page_start": 73,
+   "printed_page_start": "71",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.17.4",
+   "title": "Step SP1 – Single cause on certificate",
+   "depth": 2,
+   "source_page_start": 83,
+   "printed_page_start": "81",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.17.5",
+   "title": "Step SP2 – First condition on the only line used",
+   "depth": 2,
+   "source_page_start": 83,
+   "printed_page_start": "81",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.17.6",
+   "title": "Step SP3 – First condition on the lowest used line causing all entries above",
+   "depth": 2,
+   "source_page_start": 84,
+   "printed_page_start": "82",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.17.7",
+   "title": "Step SP4 – Starting point of the first-mentioned sequence",
+   "depth": 2,
+   "source_page_start": 85,
+   "printed_page_start": "83",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.17.8",
+   "title": "Step SP5 – Terminal cause of death when no sequence",
+   "depth": 2,
+   "source_page_start": 86,
+   "printed_page_start": "84",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.17.9",
+   "title": "Step SP6 – Obvious cause",
+   "depth": 2,
+   "source_page_start": 86,
+   "printed_page_start": "84",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.17.10",
+   "title": "Step SP7 – Ill-defined conditions",
+   "depth": 2,
+   "source_page_start": 88,
+   "printed_page_start": "86",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.17.11",
+   "title": "Step SP8 – Conditions unlikely to cause death",
+   "depth": 2,
+   "source_page_start": 89,
+   "printed_page_start": "87",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.18",
+   "title": "Check for modifications of the starting point (Steps M1 to M4)",
+   "depth": 1,
+   "source_page_start": 90,
+   "printed_page_start": "88",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.18.1",
+   "title": "Step M1 – Special instructions",
+   "depth": 2,
+   "source_page_start": 90,
+   "printed_page_start": "88",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.18.2",
+   "title": "Step M2 – Specificity",
+   "depth": 2,
+   "source_page_start": 92,
+   "printed_page_start": "90",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.18.3",
+   "title": "Step M3 – Recheck Steps SP6, M1 and M2",
+   "depth": 2,
+   "source_page_start": 94,
+   "printed_page_start": "92",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.18.4",
+   "title": "Step M4 - Instructions on medical procedures, main injury, poisoning, and maternal deaths",
+   "depth": 2,
+   "source_page_start": 95,
+   "printed_page_start": "93",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19",
+   "title": "Special instructions on selecting the underlying cause of death",
+   "depth": 1,
+   "source_page_start": 96,
+   "printed_page_start": "94",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.1",
+   "title": "Special instructions on accepted and rejected sequences (Steps SP3 and SP4)",
+   "depth": 2,
+   "source_page_start": 96,
+   "printed_page_start": "94",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.1.1",
+   "title": "Conflicting durations",
+   "depth": 3,
+   "source_page_start": 97,
+   "printed_page_start": "95",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.1.2",
+   "title": "Infectious diseases due to other conditions Cholera and certain infectious diseases due to other conditions",
+   "depth": 3,
+   "source_page_start": 97,
+   "printed_page_start": "95",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.1.3",
+   "title": "Malignant neoplasms due to other conditions",
+   "depth": 3,
+   "source_page_start": 100,
+   "printed_page_start": "98",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.1.4",
+   "title": "Congenital or constitutional haemorrhagic condition due to other conditions",
+   "depth": 3,
+   "source_page_start": 101,
+   "printed_page_start": "99",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.1.5",
+   "title": "Anaphylaxis due to external causes",
+   "depth": 3,
+   "source_page_start": 101,
+   "printed_page_start": "99",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.1.6",
+   "title": "Diabetes due to other conditions",
+   "depth": 3,
+   "source_page_start": 102,
+   "printed_page_start": "100",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.1.7",
+   "title": "Rheumatic fever due to other conditions",
+   "depth": 3,
+   "source_page_start": 102,
+   "printed_page_start": "100",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.1.8",
+   "title": "Hypertension due to other conditions",
+   "depth": 3,
+   "source_page_start": 103,
+   "printed_page_start": "101",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.1.9",
+   "title": "Certain ischaemic heart disease due to other conditions",
+   "depth": 3,
+   "source_page_start": 103,
+   "printed_page_start": "101",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.1.10",
+   "title": "Atherosclerosis due to other conditions",
+   "depth": 3,
+   "source_page_start": 103,
+   "printed_page_start": "101",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.1.11",
+   "title": "Developmental anomalies due to other conditions",
+   "depth": 3,
+   "source_page_start": 104,
+   "printed_page_start": "102",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.1.12",
+   "title": "Unintentional cause of morbidity or mortality due to other conditions",
+   "depth": 3,
+   "source_page_start": 104,
+   "printed_page_start": "102",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.1.13",
+   "title": "Suicide due to other conditions",
+   "depth": 3,
+   "source_page_start": 105,
+   "printed_page_start": "103",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.1.14",
+   "title": "Obstetric conditions due to other conditions",
+   "depth": 3,
+   "source_page_start": 105,
+   "printed_page_start": "103",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.2",
+   "title": "Special instructions on obvious cause (Step SP6)",
+   "depth": 2,
+   "source_page_start": 106,
+   "printed_page_start": "104",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.2.1",
+   "title": "Complications of HIV Infectious diseases and HIV Malignant neoplasms and HIV Immune deficiency and HIV",
+   "depth": 3,
+   "source_page_start": 106,
+   "printed_page_start": "104",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.2.2",
+   "title": "Enterocolitis due to Clostridium difficile",
+   "depth": 3,
+   "source_page_start": 107,
+   "printed_page_start": "105",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.2.3",
+   "title": "Sepsis",
+   "depth": 3,
+   "source_page_start": 107,
+   "printed_page_start": "105",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.2.4",
+   "title": "Complications of diabetes",
+   "depth": 3,
+   "source_page_start": 107,
+   "printed_page_start": "105",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.2.5",
+   "title": "Dehydration",
+   "depth": 3,
+   "source_page_start": 108,
+   "printed_page_start": "106",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.2.6",
+   "title": "Dementia",
+   "depth": 3,
+   "source_page_start": 108,
+   "printed_page_start": "106",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.2.7",
+   "title": "Disorders of intellectual development",
+   "depth": 3,
+   "source_page_start": 109,
+   "printed_page_start": "107",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.2.8",
+   "title": "Heart failure and unspecified heart disease",
+   "depth": 3,
+   "source_page_start": 110,
+   "printed_page_start": "108",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.2.9",
+   "title": "Embolism",
+   "depth": 3,
+   "source_page_start": 110,
+   "printed_page_start": "108",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.2.10",
+   "title": "Oesophageal varices",
+   "depth": 3,
+   "source_page_start": 110,
+   "printed_page_start": "108",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.2.11",
+   "title": "Pneumonia",
+   "depth": 3,
+   "source_page_start": 111,
+   "printed_page_start": "109",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.2.12",
+   "title": "Pulmonary oedema",
+   "depth": 3,
+   "source_page_start": 111,
+   "printed_page_start": "109",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.2.13",
+   "title": "Nephritic syndrome",
+   "depth": 3,
+   "source_page_start": 112,
+   "printed_page_start": "110",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.2.14",
+   "title": "Pyelonephritis",
+   "depth": 3,
+   "source_page_start": 112,
+   "printed_page_start": "110",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.2.15",
+   "title": "Acute renal failure",
+   "depth": 3,
+   "source_page_start": 112,
+   "printed_page_start": "110",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.2.16",
+   "title": "Primary atelectasis of newborn",
+   "depth": 3,
+   "source_page_start": 112,
+   "printed_page_start": "110",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.2.17",
+   "title": "Premature rupture of membranes and oligohydramnios",
+   "depth": 3,
+   "source_page_start": 113,
+   "printed_page_start": "111",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.2.18",
+   "title": "Haemorrhage",
+   "depth": 3,
+   "source_page_start": 113,
+   "printed_page_start": "111",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.2.19",
+   "title": "Aspiration and inhalation",
+   "depth": 3,
+   "source_page_start": 113,
+   "printed_page_start": "111",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.2.20",
+   "title": "Surgery and other invasive medical procedures",
+   "depth": 3,
+   "source_page_start": 113,
+   "printed_page_start": "111",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.2.21",
+   "title": "Common secondary conditions",
+   "depth": 3,
+   "source_page_start": 114,
+   "printed_page_start": "112",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.2.22",
+   "title": "Secondary peritonitis",
+   "depth": 3,
+   "source_page_start": 116,
+   "printed_page_start": "114",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.2.23",
+   "title": "Neutropenia",
+   "depth": 3,
+   "source_page_start": 116,
+   "printed_page_start": "114",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.3",
+   "title": "Special instructions on linkages and other provisions (Step M1)",
+   "depth": 2,
+   "source_page_start": 117,
+   "printed_page_start": "115",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.3.1",
+   "title": "Special instructions on Chapter 01 Certain infectious or parasitic diseases",
+   "depth": 3,
+   "source_page_start": 118,
+   "printed_page_start": "116",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.3.2",
+   "title": "Special instructions on Chapter 02 Neoplasms",
+   "depth": 3,
+   "source_page_start": 125,
+   "printed_page_start": "123",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.3.3",
+   "title": "Special instructions on Chapter 03 Diseases of the blood or blood-forming organs",
+   "depth": 3,
+   "source_page_start": 125,
+   "printed_page_start": "123",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.3.4",
+   "title": "Special instructions on Chapter 04 Diseases of the immune system",
+   "depth": 3,
+   "source_page_start": 125,
+   "printed_page_start": "123",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.3.5",
+   "title": "Special instructions on Chapter 05 Endocrine, nutritional or metabolic diseases",
+   "depth": 3,
+   "source_page_start": 126,
+   "printed_page_start": "124",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.3.6",
+   "title": "Special instructions on Chapter 06 Mental, behavioural or neurodevelopmental disorders",
+   "depth": 3,
+   "source_page_start": 126,
+   "printed_page_start": "124",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.3.7",
+   "title": "Special instructions on Chapter 07 Sleep-wake disorders",
+   "depth": 3,
+   "source_page_start": 131,
+   "printed_page_start": "129",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.3.8",
+   "title": "Special instructions on Chapter 08 Diseases of the nervous system",
+   "depth": 3,
+   "source_page_start": 131,
+   "printed_page_start": "129",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.3.9",
+   "title": "Special instructions on Chapter 09 Diseases of the visual system",
+   "depth": 3,
+   "source_page_start": 131,
+   "printed_page_start": "129",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.3.10",
+   "title": "Special instructions on Chapter 10 Diseases of the ear or mastoid process",
+   "depth": 3,
+   "source_page_start": 131,
+   "printed_page_start": "129",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.3.11",
+   "title": "Special instructions on Chapter 11 Diseases of the circulatory system",
+   "depth": 3,
+   "source_page_start": 131,
+   "printed_page_start": "129",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.3.12",
+   "title": "Special instructions on Chapter 12 Diseases of the respiratory system",
+   "depth": 3,
+   "source_page_start": 136,
+   "printed_page_start": "134",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.3.13",
+   "title": "Special instructions on Chapter 13 Diseases of the digestive system",
+   "depth": 3,
+   "source_page_start": 138,
+   "printed_page_start": "136",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.3.14",
+   "title": "Special instructions on Chapter 14 Diseases of the skin",
+   "depth": 3,
+   "source_page_start": 140,
+   "printed_page_start": "138",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.3.15",
+   "title": "Special instructions on Chapter 15 Diseases of the musculoskeletal system or connective tissue",
+   "depth": 3,
+   "source_page_start": 140,
+   "printed_page_start": "138",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.3.16",
+   "title": "Special instructions on Chapter 16 Diseases of the genitourinary system",
+   "depth": 3,
+   "source_page_start": 140,
+   "printed_page_start": "138",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.3.17",
+   "title": "Special instructions on Chapter 17 Conditions related to sexual health",
+   "depth": 3,
+   "source_page_start": 141,
+   "printed_page_start": "139",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.3.18",
+   "title": "Special instructions on Chapter 18 Pregnancy, childbirth or the puerperium",
+   "depth": 3,
+   "source_page_start": 141,
+   "printed_page_start": "139",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.3.19",
+   "title": "Special instructions on Chapter 19 Certain conditions originating in the perinatal period",
+   "depth": 3,
+   "source_page_start": 150,
+   "printed_page_start": "148",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.3.20",
+   "title": "Special instructions on Chapter 20 Developmental anomalies",
+   "depth": 3,
+   "source_page_start": 150,
+   "printed_page_start": "148",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.3.21",
+   "title": "Special instructions on Chapter 21 Symptoms, signs or clinical findings, not elsewhere classified",
+   "depth": 3,
+   "source_page_start": 150,
+   "printed_page_start": "148",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.3.22",
+   "title": "Special instructions on Chapter 22 Injury, poisoning or certain other consequences of external causes",
+   "depth": 3,
+   "source_page_start": 150,
+   "printed_page_start": "148",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.3.23",
+   "title": "Special instructions on Chapter 23 External causes of morbidity or mortality",
+   "depth": 3,
+   "source_page_start": 150,
+   "printed_page_start": "148",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.3.24",
+   "title": "Codes not to be used for underlying cause of death",
+   "depth": 3,
+   "source_page_start": 150,
+   "printed_page_start": "148",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.3.25",
+   "title": "Codes not to be used if the underlying cause is known or other specific conditions apply",
+   "depth": 3,
+   "source_page_start": 161,
+   "printed_page_start": "159",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.4",
+   "title": "Special instructions on surgery and other medical procedures (Step M4)",
+   "depth": 2,
+   "source_page_start": 163,
+   "printed_page_start": "161",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.4.1",
+   "title": "Reason for the surgery or procedure stated",
+   "depth": 3,
+   "source_page_start": 163,
+   "printed_page_start": "161",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.4.2",
+   "title": "Reason for the surgery or procedure not stated, complication reported",
+   "depth": 3,
+   "source_page_start": 164,
+   "printed_page_start": "162",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.4.3",
+   "title": "Reason for the surgery or procedure not stated, no complication reported",
+   "depth": 3,
+   "source_page_start": 164,
+   "printed_page_start": "162",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.4.4",
+   "title": "Medical devices associated with adverse incidents due to external causes",
+   "depth": 3,
+   "source_page_start": 165,
+   "printed_page_start": "163",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.5",
+   "title": "Special instructions on main injury in deaths from external causes (Step M4)",
+   "depth": 2,
+   "source_page_start": 96,
+   "printed_page_start": "94",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.6",
+   "title": "Special instructions on poisoning by drugs, medications and biological substances (Step M4)",
+   "depth": 2,
+   "source_page_start": 168,
+   "printed_page_start": "166",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.6.1",
+   "title": "The drug most likely to have caused death is specified",
+   "depth": 3,
+   "source_page_start": 168,
+   "printed_page_start": "166",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.6.2",
+   "title": "The drug most likely to have caused death is not specified",
+   "depth": 3,
+   "source_page_start": 169,
+   "printed_page_start": "167",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.6.3",
+   "title": "Identification of the drug most likely to have caused death",
+   "depth": 3,
+   "source_page_start": 171,
+   "printed_page_start": "169",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.19.7",
+   "title": "Special instructions on maternal mortality (Step M4)",
+   "depth": 2,
+   "source_page_start": 172,
+   "printed_page_start": "170",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.20",
+   "title": "Mortality Rules - Knowledgebase",
+   "depth": 1,
+   "source_page_start": 174,
+   "printed_page_start": "172",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21",
+   "title": "Coding instructions for mortality: multiple cause coding and other specific instructions",
+   "depth": 1,
+   "source_page_start": 174,
+   "printed_page_start": "172",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.1",
+   "title": "Uncertain diagnosis",
+   "depth": 2,
+   "source_page_start": 175,
+   "printed_page_start": "173",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.1.1",
+   "title": "Either … or",
+   "depth": 3,
+   "source_page_start": 175,
+   "printed_page_start": "173",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.1.2",
+   "title": "One condition, either one site or another",
+   "depth": 3,
+   "source_page_start": 175,
+   "printed_page_start": "173",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.1.3",
+   "title": "One site or system, either one condition or another condition",
+   "depth": 3,
+   "source_page_start": 176,
+   "printed_page_start": "174",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.1.4",
+   "title": "Either one condition or another, different anatomical systems",
+   "depth": 3,
+   "source_page_start": 177,
+   "printed_page_start": "175",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.1.5",
+   "title": "Either disease or injury",
+   "depth": 3,
+   "source_page_start": 177,
+   "printed_page_start": "175",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.2",
+   "title": "Effect of connecting terms",
+   "depth": 2,
+   "source_page_start": 178,
+   "printed_page_start": "176",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.2.1",
+   "title": "Connecting terms implying a causal relationship ‘Due to’ written or implied by a similar term",
+   "depth": 3,
+   "source_page_start": 178,
+   "printed_page_start": "176",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.2.2",
+   "title": "Connecting terms not implying a causal relationship Diagnostic terms that do not stop at the end of the line",
+   "depth": 3,
+   "source_page_start": 179,
+   "printed_page_start": "177",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.3",
+   "title": "Duration of conditions",
+   "depth": 2,
+   "source_page_start": 181,
+   "printed_page_start": "179",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.3.1",
+   "title": "Single duration stated for multiple conditions",
+   "depth": 3,
+   "source_page_start": 181,
+   "printed_page_start": "179",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.3.2",
+   "title": "Modifying temporality of conditions by stated duration",
+   "depth": 3,
+   "source_page_start": 181,
+   "printed_page_start": "179",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.4",
+   "title": "‘Code also’ instructions in mortality use case",
+   "depth": 2,
+   "source_page_start": 181,
+   "printed_page_start": "179",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.5",
+   "title": "Malignant neoplasms Using the coding tool for neoplasms",
+   "depth": 2,
+   "source_page_start": 182,
+   "printed_page_start": "180",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.5.1",
+   "title": "Behaviour: malignant, in situ, benign, uncertain or unknown behaviour The term itself indicates behaviour",
+   "depth": 3,
+   "source_page_start": 183,
+   "printed_page_start": "181",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.5.2",
+   "title": "Malignant neoplasms: primary or secondary? Common sites of metastases Malignant neoplasm reported as primary",
+   "depth": 3,
+   "source_page_start": 184,
+   "printed_page_start": "182",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.5.3",
+   "title": "More than one primary malignant neoplasm",
+   "depth": 3,
+   "source_page_start": 195,
+   "printed_page_start": "193",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.5.4",
+   "title": "Site not clearly indicated",
+   "depth": 3,
+   "source_page_start": 196,
+   "printed_page_start": "194",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.5.5",
+   "title": "Primary site unknown",
+   "depth": 3,
+   "source_page_start": 197,
+   "printed_page_start": "195",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.5.6",
+   "title": "‘Metastatic’ cancer Malignant neoplasm ‘metastatic from’ a specified site some not",
+   "depth": 3,
+   "source_page_start": 199,
+   "printed_page_start": "197",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.6",
+   "title": "Sequelae",
+   "depth": 2,
+   "source_page_start": 202,
+   "printed_page_start": "200",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.6.1",
+   "title": "Conditions considered to be sequelae",
+   "depth": 3,
+   "source_page_start": 203,
+   "printed_page_start": "201",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.6.2",
+   "title": "Sequelae of tuberculosis",
+   "depth": 3,
+   "source_page_start": 203,
+   "printed_page_start": "201",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.6.3",
+   "title": "Sequelae of trachoma",
+   "depth": 3,
+   "source_page_start": 203,
+   "printed_page_start": "201",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.6.4",
+   "title": "Sequelae of viral encephalitis, diphtheria or other specified infectious diseases",
+   "depth": 3,
+   "source_page_start": 204,
+   "printed_page_start": "202",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.6.5",
+   "title": "Sequelae of malnutrition or certain specified nutritional deficiencies",
+   "depth": 3,
+   "source_page_start": 204,
+   "printed_page_start": "202",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.6.6",
+   "title": "Late effects of Chapter 22 and Chapter 23",
+   "depth": 3,
+   "source_page_start": 204,
+   "printed_page_start": "202",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.6.7",
+   "title": "Sequelae of leprosy",
+   "depth": 3,
+   "source_page_start": 204,
+   "printed_page_start": "202",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.6.8",
+   "title": "Sequelae of poliomyelitis",
+   "depth": 3,
+   "source_page_start": 205,
+   "printed_page_start": "203",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.7",
+   "title": "Consistency between sex of patient and diagnosis",
+   "depth": 2,
+   "source_page_start": 205,
+   "printed_page_start": "203",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.8",
+   "title": "Specific instructions on other ICD categories",
+   "depth": 2,
+   "source_page_start": 206,
+   "printed_page_start": "204",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.8.1",
+   "title": "Acute or chronic rheumatic heart diseases",
+   "depth": 3,
+   "source_page_start": 181,
+   "printed_page_start": "179",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.8.2",
+   "title": "Obstetric death of unspecified cause, Obstetric deaths 42 days–1 year after",
+   "depth": 3,
+   "source_page_start": 206,
+   "printed_page_start": "204",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.8.3",
+   "title": "Deaths due to Certain conditions originating in the perinatal period delivery",
+   "depth": 3,
+   "source_page_start": 209,
+   "printed_page_start": "207",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.8.4",
+   "title": "Special instructions on fetal deaths",
+   "depth": 3,
+   "source_page_start": 213,
+   "printed_page_start": "211",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.8.5",
+   "title": "Developmental anomalies",
+   "depth": 3,
+   "source_page_start": 213,
+   "printed_page_start": "211",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.8.6",
+   "title": "Multiple injuries in the same body region and Injuries involving multiple body regions",
+   "depth": 3,
+   "source_page_start": 214,
+   "printed_page_start": "212",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.8.7",
+   "title": "Complications of surgical and medical care",
+   "depth": 3,
+   "source_page_start": 214,
+   "printed_page_start": "212",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.8.8",
+   "title": "Intent of external causes Undetermined intent Intent not recorded or stated as unknown",
+   "depth": 3,
+   "source_page_start": 214,
+   "printed_page_start": "212",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.8.9",
+   "title": "Coding of transport injury events",
+   "depth": 3,
+   "source_page_start": 222,
+   "printed_page_start": "220",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.8.10",
+   "title": "Factors influencing health status or contact with health services",
+   "depth": 3,
+   "source_page_start": 223,
+   "printed_page_start": "221",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.8.11",
+   "title": "Infectious agents reported alone on a death certificate",
+   "depth": 3,
+   "source_page_start": 223,
+   "printed_page_start": "221",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.8.12",
+   "title": "Coding of sudden unexplained deaths",
+   "depth": 3,
+   "source_page_start": 224,
+   "printed_page_start": "222",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.8.13",
+   "title": "Special instructions on Dementia due to Alzheimer disease with early or late onset",
+   "depth": 3,
+   "source_page_start": 224,
+   "printed_page_start": "222",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.8.14",
+   "title": "Pathological fracture",
+   "depth": 3,
+   "source_page_start": 225,
+   "printed_page_start": "223",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.21.8.15",
+   "title": "Conditions that may have either a traumatic origin or a nontraumatic origin",
+   "depth": 3,
+   "source_page_start": 225,
+   "printed_page_start": "223",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.22",
+   "title": "Mortality digital end to end solution (forms, tools and training modules)",
+   "depth": 1,
+   "source_page_start": 232,
+   "printed_page_start": "230",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23",
+   "title": "Main uses of the ICD: Morbidity",
+   "depth": 1,
+   "source_page_start": 233,
+   "printed_page_start": "231",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.1",
+   "title": "ICD use in clinical care",
+   "depth": 2,
+   "source_page_start": 233,
+   "printed_page_start": "231",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.2",
+   "title": "ICD use for epidemiological purposes",
+   "depth": 2,
+   "source_page_start": 233,
+   "printed_page_start": "231",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.3",
+   "title": "ICD use in quality and patient safety",
+   "depth": 2,
+   "source_page_start": 234,
+   "printed_page_start": "232",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.3.1",
+   "title": "The quality and safety use case for ICD–11",
+   "depth": 3,
+   "source_page_start": 234,
+   "printed_page_start": "232",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.3.2",
+   "title": "Reporting on indicators of quality of care and patient safety",
+   "depth": 3,
+   "source_page_start": 234,
+   "printed_page_start": "232",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.3.3",
+   "title": "Functionality:",
+   "depth": 3,
+   "source_page_start": 235,
+   "printed_page_start": "233",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.3.4",
+   "title": "Additional information:",
+   "depth": 3,
+   "source_page_start": 235,
+   "printed_page_start": "233",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.3.5",
+   "title": "Recommendations for use and interpretation of coded data",
+   "depth": 3,
+   "source_page_start": 236,
+   "printed_page_start": "234",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.3.6",
+   "title": "ICD use for research purposes",
+   "depth": 3,
+   "source_page_start": 236,
+   "printed_page_start": "234",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.3.7",
+   "title": "ICD use in primary care",
+   "depth": 3,
+   "source_page_start": 236,
+   "printed_page_start": "234",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.3.8",
+   "title": "ICD use in Casemix groupings",
+   "depth": 3,
+   "source_page_start": 237,
+   "printed_page_start": "235",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.4",
+   "title": "What is coded: Patient conditions",
+   "depth": 2,
+   "source_page_start": 237,
+   "printed_page_start": "235",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.4.1",
+   "title": "Main condition",
+   "depth": 3,
+   "source_page_start": 237,
+   "printed_page_start": "235",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.4.2",
+   "title": "Multiple conditions contributing to need for admission",
+   "depth": 3,
+   "source_page_start": 238,
+   "printed_page_start": "236",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.4.3",
+   "title": "Other conditions",
+   "depth": 3,
+   "source_page_start": 238,
+   "printed_page_start": "236",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.5",
+   "title": "Health care practitioner documentation guidelines for morbidity coding",
+   "depth": 2,
+   "source_page_start": 238,
+   "printed_page_start": "236",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.5.1",
+   "title": "Documentation guidelines involving the term ‘Multiple’-For Single condition reporting",
+   "depth": 3,
+   "source_page_start": 239,
+   "printed_page_start": "237",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.5.2",
+   "title": "Specificity and detail",
+   "depth": 3,
+   "source_page_start": 240,
+   "printed_page_start": "238",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.5.3",
+   "title": "Unconfirmed diagnoses",
+   "depth": 3,
+   "source_page_start": 240,
+   "printed_page_start": "238",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.5.4",
+   "title": "Documentation of a ruled out condition",
+   "depth": 3,
+   "source_page_start": 240,
+   "printed_page_start": "238",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.5.5",
+   "title": "Contact with health services for reasons other than illness",
+   "depth": 3,
+   "source_page_start": 241,
+   "printed_page_start": "239",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.5.6",
+   "title": "Conditions due to external causes",
+   "depth": 3,
+   "source_page_start": 241,
+   "printed_page_start": "239",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.5.7",
+   "title": "Documentation of sequelae",
+   "depth": 3,
+   "source_page_start": 242,
+   "printed_page_start": "240",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.6",
+   "title": "Coder guidelines for selecting ‘main condition’ and ‘other conditions’ for coding purposes",
+   "depth": 2,
+   "source_page_start": 242,
+   "printed_page_start": "240",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.6.1",
+   "title": "MB1 - Several conditions recorded as ‘main condition’",
+   "depth": 3,
+   "source_page_start": 242,
+   "printed_page_start": "240",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.6.2",
+   "title": "MB2 - Condition recorded as ‘main condition’ is presenting symptom of diagnosed, treated condition",
+   "depth": 3,
+   "source_page_start": 244,
+   "printed_page_start": "242",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.6.3",
+   "title": "MB3 - Signs and symptoms recorded as ‘main condition’ with alternative conditions recorded as the cause",
+   "depth": 3,
+   "source_page_start": 245,
+   "printed_page_start": "243",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.7",
+   "title": "Coding using postcoordination in morbidity",
+   "depth": 2,
+   "source_page_start": 245,
+   "printed_page_start": "243",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.7.1",
+   "title": "Coder rule for use of extension codes",
+   "depth": 3,
+   "source_page_start": 246,
+   "printed_page_start": "244",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.8",
+   "title": "Coding from health care practitioner documentation of ‘causal relationships’",
+   "depth": 2,
+   "source_page_start": 246,
+   "printed_page_start": "244",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.9",
+   "title": "Coding of suspected conditions or symptoms, abnormal findings and non-illness situations",
+   "depth": 2,
+   "source_page_start": 247,
+   "printed_page_start": "245",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.10",
+   "title": "Coding using combination categories",
+   "depth": 2,
+   "source_page_start": 247,
+   "printed_page_start": "245",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.11",
+   "title": "Coding using external causes of morbidity",
+   "depth": 2,
+   "source_page_start": 248,
+   "printed_page_start": "246",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.12",
+   "title": "Coding of acute and chronic conditions recorded as main condition",
+   "depth": 2,
+   "source_page_start": 249,
+   "printed_page_start": "247",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.13",
+   "title": "Coding of injuries or harm arising from surgical or medical care",
+   "depth": 2,
+   "source_page_start": 249,
+   "printed_page_start": "247",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.14",
+   "title": "Coding of adverse events and circumstances in health care that do not cause actual injury or harm",
+   "depth": 2,
+   "source_page_start": 249,
+   "printed_page_start": "247",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.15",
+   "title": "Coding of chronic postprocedural conditions",
+   "depth": 2,
+   "source_page_start": 249,
+   "printed_page_start": "247",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.16",
+   "title": "Coding ‘History of’ and ‘Family history of’",
+   "depth": 2,
+   "source_page_start": 249,
+   "printed_page_start": "247",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.17",
+   "title": "Coding a “ruled out” condition",
+   "depth": 2,
+   "source_page_start": 250,
+   "printed_page_start": "248",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.18",
+   "title": "Coding of conditions documented as sequela (late effect)",
+   "depth": 2,
+   "source_page_start": 251,
+   "printed_page_start": "249",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.19",
+   "title": "Standards and coding instructions for injury events",
+   "depth": 2,
+   "source_page_start": 251,
+   "printed_page_start": "249",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.19.1",
+   "title": "Descriptions related to transport injury events",
+   "depth": 3,
+   "source_page_start": 252,
+   "printed_page_start": "250",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.19.2",
+   "title": "Classification and coding instructions for unintentional injury caused by transport",
+   "depth": 3,
+   "source_page_start": 256,
+   "printed_page_start": "254",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.20",
+   "title": "Conceptual model for quality and patient safety",
+   "depth": 2,
+   "source_page_start": 259,
+   "printed_page_start": "257",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.20.1",
+   "title": "Overview of code-set in ICD–11 for quality and patient safety",
+   "depth": 3,
+   "source_page_start": 260,
+   "printed_page_start": "258",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.20.2",
+   "title": "Causation in the context of quality and safety",
+   "depth": 3,
+   "source_page_start": 267,
+   "printed_page_start": "265",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.20.3",
+   "title": "Chronic postprocedural conditions",
+   "depth": 3,
+   "source_page_start": 270,
+   "printed_page_start": "268",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.20.4",
+   "title": "Adverse events and circumstances in health care that do not cause actual injury or harm",
+   "depth": 3,
+   "source_page_start": 271,
+   "printed_page_start": "269",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.20.5",
+   "title": "Recommendations for data capture and organisation",
+   "depth": 3,
+   "source_page_start": 272,
+   "printed_page_start": "270",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.21",
+   "title": "Chapter-specific notes",
+   "depth": 2,
+   "source_page_start": 273,
+   "printed_page_start": "271",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.21.1",
+   "title": "Chapter 1: Infectious and parasitic diseases",
+   "depth": 3,
+   "source_page_start": 273,
+   "printed_page_start": "271",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.21.2",
+   "title": "Chapter 2: Neoplasms",
+   "depth": 3,
+   "source_page_start": 274,
+   "printed_page_start": "272",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.21.3",
+   "title": "Chapter 3: Diseases of the blood or blood-forming organs",
+   "depth": 3,
+   "source_page_start": 276,
+   "printed_page_start": "274",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.21.4",
+   "title": "Chapter 5: Endocrine, nutritional or metabolic diseases",
+   "depth": 3,
+   "source_page_start": 277,
+   "printed_page_start": "275",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.21.5",
+   "title": "Chapter 6: Mental, behavioural or neurodevelopmental disorders",
+   "depth": 3,
+   "source_page_start": 277,
+   "printed_page_start": "275",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.21.6",
+   "title": "Chapter 8: Diseases of the nervous system",
+   "depth": 3,
+   "source_page_start": 277,
+   "printed_page_start": "275",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.21.7",
+   "title": "Chapter 9: Diseases of the visual system",
+   "depth": 3,
+   "source_page_start": 278,
+   "printed_page_start": "276",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.21.8",
+   "title": "Chapter 10: Diseases of the ear or mastoid process",
+   "depth": 3,
+   "source_page_start": 278,
+   "printed_page_start": "276",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.21.9",
+   "title": "Chapter 11: Diseases of the circulatory system",
+   "depth": 3,
+   "source_page_start": 278,
+   "printed_page_start": "276",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.21.10",
+   "title": "Chapter 15: Diseases of the musculoskeletal system or connective tissue",
+   "depth": 3,
+   "source_page_start": 278,
+   "printed_page_start": "276",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.21.11",
+   "title": "Chapter 18: Pregnancy, childbirth or the puerperium",
+   "depth": 3,
+   "source_page_start": 279,
+   "printed_page_start": "277",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.21.12",
+   "title": "Chapter 21: Symptoms, signs or clinical findings, not elsewhere classified",
+   "depth": 3,
+   "source_page_start": 281,
+   "printed_page_start": "279",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.21.13",
+   "title": "Chapter 22: Injury, poisoning or certain other consequences of external causes",
+   "depth": 3,
+   "source_page_start": 281,
+   "printed_page_start": "279",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.21.14",
+   "title": "Chapter 23: External causes of morbidity or mortality",
+   "depth": 3,
+   "source_page_start": 282,
+   "printed_page_start": "280",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.21.15",
+   "title": "Chapter 24: Factors influencing health status or contact with health services",
+   "depth": 3,
+   "source_page_start": 282,
+   "printed_page_start": "280",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.22",
+   "title": "Traditional Medicine Conditions - Module 1 (TM1)",
+   "depth": 2,
+   "source_page_start": 282,
+   "printed_page_start": "280",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.23",
+   "title": "Use in Traditional Medicine",
+   "depth": 2,
+   "source_page_start": 282,
+   "printed_page_start": "280",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.23.24",
+   "title": "Coding instructions for Traditional Medicine conditions - Module 1 (TM1)",
+   "depth": 2,
+   "source_page_start": 283,
+   "printed_page_start": "281",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.24",
+   "title": "General statistical recommendations",
+   "depth": 1,
+   "source_page_start": 285,
+   "printed_page_start": "283",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.24.1",
+   "title": "Data quality",
+   "depth": 2,
+   "source_page_start": 285,
+   "printed_page_start": "283",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.24.2",
+   "title": "Specificity versus ill-defined codes",
+   "depth": 2,
+   "source_page_start": 285,
+   "printed_page_start": "283",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.24.3",
+   "title": "Problems of a small population",
+   "depth": 2,
+   "source_page_start": 285,
+   "printed_page_start": "283",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.24.4",
+   "title": "‘Empty cells’ and cells with low frequencies",
+   "depth": 2,
+   "source_page_start": 286,
+   "printed_page_start": "284",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.24.5",
+   "title": "Precautions needed when tabulation lists include subtotals",
+   "depth": 2,
+   "source_page_start": 286,
+   "printed_page_start": "284",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.24.6",
+   "title": "Ethical Aspects",
+   "depth": 2,
+   "source_page_start": 286,
+   "printed_page_start": "284",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.24.7",
+   "title": "Avoidance of Potential Harm",
+   "depth": 2,
+   "source_page_start": 287,
+   "printed_page_start": "285",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.24.8",
+   "title": "Security of Privacy – Confidentiality",
+   "depth": 2,
+   "source_page_start": 287,
+   "printed_page_start": "285",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.25",
+   "title": "Recommendations in relation to statistical tables for international comparison",
+   "depth": 1,
+   "source_page_start": 288,
+   "printed_page_start": "286",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.25.1",
+   "title": "The recommended Special tabulation lists",
+   "depth": 2,
+   "source_page_start": 288,
+   "printed_page_start": "286",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.25.2",
+   "title": "International morbidity reporting",
+   "depth": 2,
+   "source_page_start": 289,
+   "printed_page_start": "287",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.25.2.1",
+   "title": "Minimum data set and markup for postcoordination",
+   "depth": 3,
+   "source_page_start": 290,
+   "printed_page_start": "288",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.25.3",
+   "title": "Presentation of statistical tables",
+   "depth": 2,
+   "source_page_start": 290,
+   "printed_page_start": "288",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.25.3.1",
+   "title": "Tabulation of causes of death",
+   "depth": 3,
+   "source_page_start": 291,
+   "printed_page_start": "289",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.25.3.2",
+   "title": "Injury mortality",
+   "depth": 3,
+   "source_page_start": 291,
+   "printed_page_start": "289",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.25.4",
+   "title": "Standards and reporting requirements for mortality in perinatal and neonatal periods",
+   "depth": 2,
+   "source_page_start": 292,
+   "printed_page_start": "290",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.25.4.1",
+   "title": "Terms used in perinatal and neonatal mortality",
+   "depth": 3,
+   "source_page_start": 292,
+   "printed_page_start": "290",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.25.4.2",
+   "title": "Definitions in perinatal and neonatal mortality Artificial termination of pregnancy",
+   "depth": 3,
+   "source_page_start": 293,
+   "printed_page_start": "291",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.25.4.3",
+   "title": "Other terminologies used in recording and presentation of perinatal or neonatal mortality Period of gestation",
+   "depth": 3,
+   "source_page_start": 295,
+   "printed_page_start": "293",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.25.4.4",
+   "title": "Certification of stillbirth and live births in the neonatal period Level of details for recording",
+   "depth": 3,
+   "source_page_start": 296,
+   "printed_page_start": "294",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.25.4.5",
+   "title": "Reporting criteria for fetal death, stillbirth and live birth Criteria for international reporting",
+   "depth": 3,
+   "source_page_start": 297,
+   "printed_page_start": "295",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.25.4.6",
+   "title": "Statistical presentation of perinatal, neonatal, infant or under-five mortality mortality statistics",
+   "depth": 3,
+   "source_page_start": 298,
+   "printed_page_start": "296",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.25.4.7",
+   "title": "Under-five mortality",
+   "depth": 3,
+   "source_page_start": 299,
+   "printed_page_start": "297",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.25.4.8",
+   "title": "Infant mortality",
+   "depth": 3,
+   "source_page_start": 299,
+   "printed_page_start": "297",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.25.5",
+   "title": "Standards and reporting requirements related for maternal mortality",
+   "depth": 2,
+   "source_page_start": 299,
+   "printed_page_start": "297",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.25.5.1",
+   "title": "Maternal death",
+   "depth": 3,
+   "source_page_start": 207,
+   "printed_page_start": "205",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.25.5.2",
+   "title": "Late Maternal death",
+   "depth": 3,
+   "source_page_start": 207,
+   "printed_page_start": "205",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.25.5.3",
+   "title": "Comprehensive maternal death",
+   "depth": 3,
+   "source_page_start": 207,
+   "printed_page_start": "205",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.25.5.4",
+   "title": "Direct and indirect obstetric deaths",
+   "depth": 3,
+   "source_page_start": 207,
+   "printed_page_start": "205",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.25.5.5",
+   "title": "Death occurring during pregnancy, childbirth and puerperium",
+   "depth": 3,
+   "source_page_start": 207,
+   "printed_page_start": "205",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.25.5.6",
+   "title": "Recording requirements of maternal mortality",
+   "depth": 3,
+   "source_page_start": 207,
+   "printed_page_start": "205",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.25.5.7",
+   "title": "International reporting of maternal mortality",
+   "depth": 3,
+   "source_page_start": 207,
+   "printed_page_start": "205",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "2.25.5.8",
+   "title": "Numerator, denominator, and ratios of published maternal mortality",
+   "depth": 3,
+   "source_page_start": 207,
+   "printed_page_start": "205",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3",
+   "title": "Part 3 - New in ICD-11",
+   "depth": 0,
+   "source_page_start": 301,
+   "printed_page_start": "299",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.1",
+   "title": "ICD-11 new conventions and terminology",
+   "depth": 1,
+   "source_page_start": 301,
+   "printed_page_start": "299",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.1.1",
+   "title": "Short Description",
+   "depth": 2,
+   "source_page_start": 304,
+   "printed_page_start": "302",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.1.2",
+   "title": "Additional Information",
+   "depth": 2,
+   "source_page_start": 304,
+   "printed_page_start": "302",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.1.3",
+   "title": "Code Structure",
+   "depth": 2,
+   "source_page_start": 304,
+   "printed_page_start": "302",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2",
+   "title": "Chapter Structure of ICD-11",
+   "depth": 1,
+   "source_page_start": 305,
+   "printed_page_start": "303",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.1",
+   "title": "Chapter 01 – Certain infectious or parasitic diseases",
+   "depth": 2,
+   "source_page_start": 305,
+   "printed_page_start": "303",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.1.1",
+   "title": "Chapter 01 – Structure of chapter 01",
+   "depth": 3,
+   "source_page_start": 305,
+   "printed_page_start": "303",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.1.2",
+   "title": "Chapter 01 – Rationale for chapter 01",
+   "depth": 3,
+   "source_page_start": 306,
+   "printed_page_start": "304",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.1.3",
+   "title": "Antimicrobial resistance",
+   "depth": 3,
+   "source_page_start": 306,
+   "printed_page_start": "304",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.2",
+   "title": "Chapter 02 – Neoplasms",
+   "depth": 2,
+   "source_page_start": 306,
+   "printed_page_start": "304",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.2.1",
+   "title": "Chapter 02 – Structure of chapter 02",
+   "depth": 3,
+   "source_page_start": 306,
+   "printed_page_start": "304",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.2.2",
+   "title": "Chapter 02 - Rationale for Chapter 02",
+   "depth": 3,
+   "source_page_start": 307,
+   "printed_page_start": "305",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.3",
+   "title": "Chapter 03 – Diseases of the blood or blood-forming organs",
+   "depth": 2,
+   "source_page_start": 307,
+   "printed_page_start": "305",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.3.1",
+   "title": "Chapter 03 – Structure of chapter 03",
+   "depth": 3,
+   "source_page_start": 307,
+   "printed_page_start": "305",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.3.2",
+   "title": "Chapter 03 – Rationale for chapter 03",
+   "depth": 3,
+   "source_page_start": 308,
+   "printed_page_start": "306",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.4",
+   "title": "Chapter 04 – Diseases of the immune system",
+   "depth": 2,
+   "source_page_start": 308,
+   "printed_page_start": "306",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.4.1",
+   "title": "Chapter 04 – Structure of chapter 04",
+   "depth": 3,
+   "source_page_start": 308,
+   "printed_page_start": "306",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.4.2",
+   "title": "Chapter 04 – Rationale for chapter 04",
+   "depth": 3,
+   "source_page_start": 308,
+   "printed_page_start": "306",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.5",
+   "title": "Chapter 05 – Endocrine, nutritional or metabolic diseases",
+   "depth": 2,
+   "source_page_start": 309,
+   "printed_page_start": "307",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.5.1",
+   "title": "Chapter 05 – Structure of Chapter 05",
+   "depth": 3,
+   "source_page_start": 309,
+   "printed_page_start": "307",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.5.2",
+   "title": "Chapter 05 – Rationale for Chapter 05",
+   "depth": 3,
+   "source_page_start": 309,
+   "printed_page_start": "307",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.6",
+   "title": "Chapter 06 – Mental, behavioural or neurodevelopmental disorders",
+   "depth": 2,
+   "source_page_start": 310,
+   "printed_page_start": "308",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.6.1",
+   "title": "Chapter 06 – Structure of Chapter 06",
+   "depth": 3,
+   "source_page_start": 310,
+   "printed_page_start": "308",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.6.2",
+   "title": "Chapter 06 – Rationale for Chapter 06",
+   "depth": 3,
+   "source_page_start": 310,
+   "printed_page_start": "308",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.7",
+   "title": "Chapter 07 – Sleep–wake disorders",
+   "depth": 2,
+   "source_page_start": 314,
+   "printed_page_start": "312",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.7.1",
+   "title": "Chapter 07 – Structure of Chapter 07",
+   "depth": 3,
+   "source_page_start": 314,
+   "printed_page_start": "312",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.7.2",
+   "title": "Chapter 07 – Rationale for Chapter 07",
+   "depth": 3,
+   "source_page_start": 314,
+   "printed_page_start": "312",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.8",
+   "title": "Chapter 08 – Diseases of the nervous system",
+   "depth": 2,
+   "source_page_start": 314,
+   "printed_page_start": "312",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.8.1",
+   "title": "Chapter 08 – Structure of Chapter 08",
+   "depth": 3,
+   "source_page_start": 314,
+   "printed_page_start": "312",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.8.2",
+   "title": "Chapter 08 – Rationale for Chapter 08",
+   "depth": 3,
+   "source_page_start": 314,
+   "printed_page_start": "312",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.9",
+   "title": "Chapter 09 – Diseases of the visual system",
+   "depth": 2,
+   "source_page_start": 315,
+   "printed_page_start": "313",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.9.1",
+   "title": "Chapter 09 – Structure of Chapter 09",
+   "depth": 3,
+   "source_page_start": 315,
+   "printed_page_start": "313",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.10",
+   "title": "Chapter 10 - Diseases of the ear or mastoid process",
+   "depth": 2,
+   "source_page_start": 315,
+   "printed_page_start": "313",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.10.1",
+   "title": "Chapter 10 – Structure of Chapter 10",
+   "depth": 3,
+   "source_page_start": 315,
+   "printed_page_start": "313",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.11",
+   "title": "Chapter 11 – Diseases of the circulatory system",
+   "depth": 2,
+   "source_page_start": 316,
+   "printed_page_start": "314",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.11.1",
+   "title": "Chapter 11 – Structure of Chapter 11",
+   "depth": 3,
+   "source_page_start": 316,
+   "printed_page_start": "314",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.11.2",
+   "title": "Chapter 11 – Rationale for Chapter 11",
+   "depth": 3,
+   "source_page_start": 316,
+   "printed_page_start": "314",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.12",
+   "title": "Chapter 12 – Diseases of the respiratory system",
+   "depth": 2,
+   "source_page_start": 317,
+   "printed_page_start": "315",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.12.1",
+   "title": "Chapter 12 – Structure of Chapter 12",
+   "depth": 3,
+   "source_page_start": 317,
+   "printed_page_start": "315",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.12.2",
+   "title": "Chapter 12 – Rationale for Chapter 12",
+   "depth": 3,
+   "source_page_start": 317,
+   "printed_page_start": "315",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.13",
+   "title": "Chapter 13 – Diseases of the digestive system",
+   "depth": 2,
+   "source_page_start": 318,
+   "printed_page_start": "316",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.13.1",
+   "title": "Chapter 13 – Structure of Chapter 13",
+   "depth": 3,
+   "source_page_start": 318,
+   "printed_page_start": "316",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.13.2",
+   "title": "Chapter 13 – Rationale for Chapter 13",
+   "depth": 3,
+   "source_page_start": 318,
+   "printed_page_start": "316",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.14",
+   "title": "Chapter 14 – Diseases of the skin",
+   "depth": 2,
+   "source_page_start": 320,
+   "printed_page_start": "318",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.14.1",
+   "title": "Chapter 14 – Structure of Chapter 14",
+   "depth": 3,
+   "source_page_start": 320,
+   "printed_page_start": "318",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.14.2",
+   "title": "Chapter 14 – Rationale for Chapter 14",
+   "depth": 3,
+   "source_page_start": 320,
+   "printed_page_start": "318",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.15",
+   "title": "Chapter 15 – Diseases of the musculoskeletal system or connective tissue",
+   "depth": 2,
+   "source_page_start": 320,
+   "printed_page_start": "318",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.15.1",
+   "title": "Chapter 15 – Structure of Chapter 15",
+   "depth": 3,
+   "source_page_start": 320,
+   "printed_page_start": "318",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.15.2",
+   "title": "Chapter 15 – Rationale for Chapter 15",
+   "depth": 3,
+   "source_page_start": 320,
+   "printed_page_start": "318",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.16",
+   "title": "Chapter 16 – Diseases of the genitourinary system",
+   "depth": 2,
+   "source_page_start": 321,
+   "printed_page_start": "319",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.16.1",
+   "title": "Chapter 16 – Structure of Chapter 16",
+   "depth": 3,
+   "source_page_start": 321,
+   "printed_page_start": "319",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.16.2",
+   "title": "Chapter 16 – Rationale for chapter 16",
+   "depth": 3,
+   "source_page_start": 321,
+   "printed_page_start": "319",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.17",
+   "title": "Chapter 17 – Conditions related to sexual health",
+   "depth": 2,
+   "source_page_start": 322,
+   "printed_page_start": "320",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.17.1",
+   "title": "Chapter 17 – Structure of Chapter 17",
+   "depth": 3,
+   "source_page_start": 322,
+   "printed_page_start": "320",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.17.2",
+   "title": "Chapter 17 – Rationale for Chapter 17",
+   "depth": 3,
+   "source_page_start": 322,
+   "printed_page_start": "320",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.18",
+   "title": "Chapter 18 – Pregnancy, childbirth or the puerperium",
+   "depth": 2,
+   "source_page_start": 322,
+   "printed_page_start": "320",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.18.1",
+   "title": "Chapter 18 – Structure of Chapter 18",
+   "depth": 3,
+   "source_page_start": 322,
+   "printed_page_start": "320",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.18.2",
+   "title": "Chapter 18 – Rationale for Chapter 18",
+   "depth": 3,
+   "source_page_start": 323,
+   "printed_page_start": "321",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.19",
+   "title": "Chapter 19 – Certain conditions originating in the perinatal period",
+   "depth": 2,
+   "source_page_start": 323,
+   "printed_page_start": "321",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.19.1",
+   "title": "Chapter 19 – Structure of Chapter 19",
+   "depth": 3,
+   "source_page_start": 323,
+   "printed_page_start": "321",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.20",
+   "title": "Chapter 20 – Developmental anomalies",
+   "depth": 2,
+   "source_page_start": 323,
+   "printed_page_start": "321",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.20.1",
+   "title": "Chapter 20 – Structure of Chapter 20",
+   "depth": 3,
+   "source_page_start": 323,
+   "printed_page_start": "321",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.20.2",
+   "title": "Chapter 20 – Rationale for Chapter 20",
+   "depth": 3,
+   "source_page_start": 324,
+   "printed_page_start": "322",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.21",
+   "title": "Chapter 21 – Symptoms, signs or clinical findings, not elsewhere classified",
+   "depth": 2,
+   "source_page_start": 325,
+   "printed_page_start": "323",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.21.1",
+   "title": "Chapter 21 – Structure of Chapter 21",
+   "depth": 3,
+   "source_page_start": 325,
+   "printed_page_start": "323",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.21.2",
+   "title": "Chapter 21 – Rationale for Chapter 21",
+   "depth": 3,
+   "source_page_start": 325,
+   "printed_page_start": "323",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.22",
+   "title": "Chapter 22 – Injury, poisoning or certain other consequences of external causes",
+   "depth": 2,
+   "source_page_start": 325,
+   "printed_page_start": "323",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.22.1",
+   "title": "Chapter 22 – Structure of Chapter 22",
+   "depth": 3,
+   "source_page_start": 325,
+   "printed_page_start": "323",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.22.2",
+   "title": "Chapter 22 – Rationale for Chapter 22",
+   "depth": 3,
+   "source_page_start": 325,
+   "printed_page_start": "323",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.23",
+   "title": "Chapter 23 – External causes of morbidity or mortality",
+   "depth": 2,
+   "source_page_start": 326,
+   "printed_page_start": "324",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.23.1",
+   "title": "Chapter 23 – Structure of Chapter 23",
+   "depth": 3,
+   "source_page_start": 326,
+   "printed_page_start": "324",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.23.2",
+   "title": "Chapter 23 – Rationale for Chapter 23",
+   "depth": 3,
+   "source_page_start": 326,
+   "printed_page_start": "324",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.24",
+   "title": "Chapter 24 – Factors influencing health status or contact with health services",
+   "depth": 2,
+   "source_page_start": 330,
+   "printed_page_start": "328",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.24.1",
+   "title": "Chapter 24 – Structure of Chapter 24",
+   "depth": 3,
+   "source_page_start": 330,
+   "printed_page_start": "328",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.24.2",
+   "title": "Chapter 24 – Rationale for Chapter 24",
+   "depth": 3,
+   "source_page_start": 330,
+   "printed_page_start": "328",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.25",
+   "title": "Chapter 25 – Codes for special purposes",
+   "depth": 2,
+   "source_page_start": 331,
+   "printed_page_start": "329",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.25.1",
+   "title": "Chapter 25 – Structure of Chapter 25",
+   "depth": 3,
+   "source_page_start": 331,
+   "printed_page_start": "329",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.26",
+   "title": "Chapter 26 - Supplementary Chapter Traditional Medicine Conditions - Module 1",
+   "depth": 2,
+   "source_page_start": 331,
+   "printed_page_start": "329",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.27",
+   "title": "Section V – Supplementary section for functioning assessment",
+   "depth": 2,
+   "source_page_start": 305,
+   "printed_page_start": "303",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.2.28",
+   "title": "Chapter X - Extension Codes",
+   "depth": 2,
+   "source_page_start": 334,
+   "printed_page_start": "332",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.3",
+   "title": "Multiple Parenting",
+   "depth": 1,
+   "source_page_start": 334,
+   "printed_page_start": "332",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.4",
+   "title": "The Content Model",
+   "depth": 1,
+   "source_page_start": 334,
+   "printed_page_start": "332",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.5",
+   "title": "Language independent ICD entities",
+   "depth": 1,
+   "source_page_start": 337,
+   "printed_page_start": "335",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.6",
+   "title": "Innovation to mortality coding in ICD-11",
+   "depth": 1,
+   "source_page_start": 337,
+   "printed_page_start": "335",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.7",
+   "title": "Innovation to morbidity coding in ICD-11",
+   "depth": 1,
+   "source_page_start": 342,
+   "printed_page_start": "340",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.8",
+   "title": "Functioning section",
+   "depth": 1,
+   "source_page_start": 342,
+   "printed_page_start": "340",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.9",
+   "title": "General features of ICD–11",
+   "depth": 1,
+   "source_page_start": 343,
+   "printed_page_start": "341",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.10",
+   "title": "Traditional Medicine conditions - Module 1 (TM1)",
+   "depth": 1,
+   "source_page_start": 343,
+   "printed_page_start": "341",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.11",
+   "title": "Preparations for the Eleventh Revision",
+   "depth": 1,
+   "source_page_start": 343,
+   "printed_page_start": "341",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.12",
+   "title": "Annex A: ICD-11 Updating and Maintenance",
+   "depth": 1,
+   "source_page_start": 344,
+   "printed_page_start": "342",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.12.1",
+   "title": "Background",
+   "depth": 2,
+   "source_page_start": 345,
+   "printed_page_start": "343",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.12.2",
+   "title": "Updating Cycle",
+   "depth": 2,
+   "source_page_start": 346,
+   "printed_page_start": "344",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.12.2.1",
+   "title": "Types of proposals for ICD-11-MMS maintenance",
+   "depth": 3,
+   "source_page_start": 346,
+   "printed_page_start": "344",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.12.3",
+   "title": "Proposal completeness",
+   "depth": 2,
+   "source_page_start": 349,
+   "printed_page_start": "347",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.12.4",
+   "title": "Proposal Timelines",
+   "depth": 2,
+   "source_page_start": 350,
+   "printed_page_start": "348",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.12.5",
+   "title": "Proposal Workflow",
+   "depth": 2,
+   "source_page_start": 351,
+   "printed_page_start": "349",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.12.6",
+   "title": "Changes that cannot be done during the normal updating process",
+   "depth": 2,
+   "source_page_start": 352,
+   "printed_page_start": "350",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.12.7",
+   "title": "Applicability and Intellectual Property",
+   "depth": 2,
+   "source_page_start": 353,
+   "printed_page_start": "351",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.13",
+   "title": "Annex B: History of the development of the ICD",
+   "depth": 1,
+   "source_page_start": 356,
+   "printed_page_start": "354",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.13.1",
+   "title": "Early history",
+   "depth": 2,
+   "source_page_start": 356,
+   "printed_page_start": "354",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.13.2",
+   "title": "Adoption of the International List of Causes of Death",
+   "depth": 2,
+   "source_page_start": 357,
+   "printed_page_start": "355",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.13.3",
+   "title": "The Fifth Decennial Revision Conference",
+   "depth": 2,
+   "source_page_start": 359,
+   "printed_page_start": "357",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.13.3.1",
+   "title": "International Lists of Diseases",
+   "depth": 3,
+   "source_page_start": 359,
+   "printed_page_start": "357",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.13.4",
+   "title": "Previous classifications of diseases for morbidity statistics",
+   "depth": 2,
+   "source_page_start": 360,
+   "printed_page_start": "358",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.13.5",
+   "title": "United States Committee on Joint Causes of Death",
+   "depth": 2,
+   "source_page_start": 361,
+   "printed_page_start": "359",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.13.6",
+   "title": "Sixth Revision of the International Lists",
+   "depth": 2,
+   "source_page_start": 362,
+   "printed_page_start": "360",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.13.7",
+   "title": "The Seventh and Eighth Revisions",
+   "depth": 2,
+   "source_page_start": 363,
+   "printed_page_start": "361",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.13.8",
+   "title": "The Ninth Revision",
+   "depth": 2,
+   "source_page_start": 364,
+   "printed_page_start": "362",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.13.9",
+   "title": "The Tenth Revision",
+   "depth": 2,
+   "source_page_start": 364,
+   "printed_page_start": "362",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.13.10",
+   "title": "The WHO Family of International Classifications",
+   "depth": 2,
+   "source_page_start": 366,
+   "printed_page_start": "364",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.13.11",
+   "title": "Updating of ICD between revisions",
+   "depth": 2,
+   "source_page_start": 367,
+   "printed_page_start": "365",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.13.12",
+   "title": "Major Steps in the ICD-11 Revision",
+   "depth": 2,
+   "source_page_start": 367,
+   "printed_page_start": "365",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.13.13",
+   "title": "Preparations for the Eleventh Revision",
+   "depth": 2,
+   "source_page_start": 368,
+   "printed_page_start": "366",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.13.14",
+   "title": "References for history of ICD",
+   "depth": 2,
+   "source_page_start": 369,
+   "printed_page_start": "367",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.14",
+   "title": "Annex C: Annexes for Mortality Coding",
+   "depth": 1,
+   "source_page_start": 205,
+   "printed_page_start": "203",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.14.1",
+   "title": "International form of medical certificate of cause of death",
+   "depth": 2,
+   "source_page_start": 370,
+   "printed_page_start": "368",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.14.2",
+   "title": "Quick reference guide for the International form of medical certificate of cause of death (MCCD flyer)",
+   "depth": 2,
+   "source_page_start": 371,
+   "printed_page_start": "369",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.14.3",
+   "title": "Suggested additional details of perinatal deaths",
+   "depth": 2,
+   "source_page_start": 374,
+   "printed_page_start": "372",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.14.4",
+   "title": "Workflow diagram of steps SP1 to SP8, and to Steps M1 to M4 for mortality coding",
+   "depth": 2,
+   "source_page_start": 376,
+   "printed_page_start": "374",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.14.5",
+   "title": "Priority ranking of Nature-of-Injury codes",
+   "depth": 2,
+   "source_page_start": 378,
+   "printed_page_start": "376",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.14.6",
+   "title": "List of ill-defined conditions",
+   "depth": 2,
+   "source_page_start": 88,
+   "printed_page_start": "86",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.14.7",
+   "title": "List of conditions that can cause HIV disease",
+   "depth": 2,
+   "source_page_start": 398,
+   "printed_page_start": "396",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.14.8",
+   "title": "List of conditions that can cause diabetes mellitus",
+   "depth": 2,
+   "source_page_start": 402,
+   "printed_page_start": "400",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.14.9",
+   "title": "List of conditions to be considered obvious consequences of surgery and other invasive medical procedures",
+   "depth": 2,
+   "source_page_start": 404,
+   "printed_page_start": "402",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.14.9.1",
+   "title": "List of conditions to be considered direct consequences of surgery",
+   "depth": 3,
+   "source_page_start": 406,
+   "printed_page_start": "404",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.14.9.2",
+   "title": "List of conditions to be considered direct consequences of other invasive medical procedures",
+   "depth": 3,
+   "source_page_start": 410,
+   "printed_page_start": "408",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.14.10",
+   "title": "List of conditions unlikely to cause death",
+   "depth": 2,
+   "source_page_start": 414,
+   "printed_page_start": "412",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.14.11",
+   "title": "List of categories limited to, or more likely to occur in, female persons",
+   "depth": 2,
+   "source_page_start": 205,
+   "printed_page_start": "203",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.14.12",
+   "title": "List of categories limited to, or more likely to occur in, male persons",
+   "depth": 2,
+   "source_page_start": 205,
+   "printed_page_start": "203",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.14.13",
+   "title": "Collection of instructions with coding examples related maternal mortality",
+   "depth": 2,
+   "source_page_start": 421,
+   "printed_page_start": "419",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.14.14",
+   "title": "Target list of causes of death for verbal autopsy",
+   "depth": 2,
+   "source_page_start": 438,
+   "printed_page_start": "436",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.15",
+   "title": "Annex D: Differences between ICD-10 and ICD-11",
+   "depth": 1,
+   "source_page_start": 441,
+   "printed_page_start": "439",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.15.1",
+   "title": "Chapter 01 – Differences between ICD–10 and ICD–11 in Chapter 01",
+   "depth": 2,
+   "source_page_start": 441,
+   "printed_page_start": "439",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.15.2",
+   "title": "Differences between ICD–10 and ICD–11 in Chapter 02",
+   "depth": 2,
+   "source_page_start": 442,
+   "printed_page_start": "440",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.15.3",
+   "title": "Differences between ICD–10 and ICD–11 in Chapter 03",
+   "depth": 2,
+   "source_page_start": 443,
+   "printed_page_start": "441",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.15.4",
+   "title": "Differences between ICD–10 and ICD–11 in Chapter 04",
+   "depth": 2,
+   "source_page_start": 444,
+   "printed_page_start": "442",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.15.5",
+   "title": "Differences between ICD–10 and ICD–11 in Chapter 05",
+   "depth": 2,
+   "source_page_start": 444,
+   "printed_page_start": "442",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.15.6",
+   "title": "Differences between ICD–10 and ICD–11 in Chapter 06",
+   "depth": 2,
+   "source_page_start": 446,
+   "printed_page_start": "444",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.15.7",
+   "title": "Chapter 07 is a new addition to ICD–11 and was not found in past editions",
+   "depth": 2,
+   "source_page_start": 448,
+   "printed_page_start": "446",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.15.8",
+   "title": "Differences between ICD–10 and ICD–11 in Chapter 08",
+   "depth": 2,
+   "source_page_start": 449,
+   "printed_page_start": "447",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.15.9",
+   "title": "Differences between ICD–10 and ICD–11 in Chapter 09",
+   "depth": 2,
+   "source_page_start": 450,
+   "printed_page_start": "448",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.15.10",
+   "title": "Differences between ICD–10 and ICD–11 in Chapter 10",
+   "depth": 2,
+   "source_page_start": 451,
+   "printed_page_start": "449",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.15.11",
+   "title": "Differences between ICD–10 and ICD–11 in Chapter 11",
+   "depth": 2,
+   "source_page_start": 452,
+   "printed_page_start": "450",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.15.12",
+   "title": "Differences between ICD–10 and ICD–11 in Chapter 12",
+   "depth": 2,
+   "source_page_start": 453,
+   "printed_page_start": "451",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.15.13",
+   "title": "Differences between ICD–10 and ICD–11 in Chapter 13",
+   "depth": 2,
+   "source_page_start": 454,
+   "printed_page_start": "452",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.15.14",
+   "title": "Differences between ICD–10 and ICD–11 in Chapter 14",
+   "depth": 2,
+   "source_page_start": 455,
+   "printed_page_start": "453",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.15.15",
+   "title": "Differences between ICD–10 and ICD–11 in Chapter 15",
+   "depth": 2,
+   "source_page_start": 456,
+   "printed_page_start": "454",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.15.16",
+   "title": "Differences between ICD–10 and ICD–11 in Chapter 16",
+   "depth": 2,
+   "source_page_start": 457,
+   "printed_page_start": "455",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.15.17",
+   "title": "Chapter 17 is a new addition to ICD–11 and was not found in past editions",
+   "depth": 2,
+   "source_page_start": 459,
+   "printed_page_start": "457",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.15.18",
+   "title": "Differences between ICD–10 and ICD–11 in Chapter 18",
+   "depth": 2,
+   "source_page_start": 459,
+   "printed_page_start": "457",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.15.19",
+   "title": "Differences between ICD–10 and ICD–11 in Chapter 19",
+   "depth": 2,
+   "source_page_start": 460,
+   "printed_page_start": "458",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.15.20",
+   "title": "Differences between ICD–10 and ICD–11 in Chapter 20",
+   "depth": 2,
+   "source_page_start": 461,
+   "printed_page_start": "459",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.15.21",
+   "title": "Differences between ICD–10 and ICD–11 in Chapter 21",
+   "depth": 2,
+   "source_page_start": 462,
+   "printed_page_start": "460",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.15.22",
+   "title": "Differences between ICD–10 and ICD–11 in Chapter 22",
+   "depth": 2,
+   "source_page_start": 464,
+   "printed_page_start": "462",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.15.23",
+   "title": "Differences between ICD–10 and ICD–11 in Chapter 23",
+   "depth": 2,
+   "source_page_start": 467,
+   "printed_page_start": "465",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.15.24",
+   "title": "Differences between ICD–10 and ICD–11 in Chapter 24",
+   "depth": 2,
+   "source_page_start": 468,
+   "printed_page_start": "466",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.15.25",
+   "title": "Differences between ICD–10 and ICD–11 in Chapter 25",
+   "depth": 2,
+   "source_page_start": 469,
+   "printed_page_start": "467",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "3.16",
+   "title": "Annex E: Referred Value Sets",
+   "depth": 1,
+   "source_page_start": 470,
+   "printed_page_start": "468",
+   "page_mapping_status": "certain"
+  }
+ ],
+ "manual_anchors": "sections 0/0.1 observed src 3; 0.2 corrected to src 24 by pilot (was mis-inferred to src 4)"
+}

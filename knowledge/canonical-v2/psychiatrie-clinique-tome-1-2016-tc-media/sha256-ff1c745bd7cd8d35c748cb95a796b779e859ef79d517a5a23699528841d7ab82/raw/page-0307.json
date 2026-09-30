@@ -1,0 +1,172 @@
+{
+  "block_sequence_sha256": "6fc3d62b06726cb708dfafcb2597895e99239c65c72d72bd183dcf3504d99e0e",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        471.6627197265625,
+        758.8693237304688
+      ],
+      "block_id": "page-0307-block-0001",
+      "order": 1,
+      "text": "290\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2 Déterminants bio-psycho-sociaux\n",
+      "text_sha256": "f79eaf31e1cd4d3e7b8d04b057fcef64239f134d83e1e47421a1177f5270837b"
+    },
+    {
+      "bbox": [
+        45.900001525878906,
+        34.49443435668945,
+        71.94248962402344,
+        81.32548522949219
+      ],
+      "block_id": "page-0307-block-0002",
+      "order": 2,
+      "text": "L’\n",
+      "text_sha256": "a3c9d23c8ba5c25faa47ede71990f790d2e77dc45600aa7f91c642aae5d014b5"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.91015625,
+        291.48468017578125,
+        373.3193359375
+      ],
+      "block_id": "page-0307-block-0003",
+      "order": 3,
+      "text": "épidémiologie, comme discipline fondamentale de la\nmédecine, a vu le jour au 19e siècle, notamment sous\nl’impulsion des travaux de John Snow (1813-1858) liant\nle choléra et la contamination de l’eau des puits, ou ceux de\nDurkheim (1858-1913) associant un taux de suicide plus élevé\nà certaines caractéristiques sociales, comme l’anomie (absence\nde loi, ordre, structure). Selon Zahner et ses collaborateurs\n(1995), l’épidémiologie consiste à étudier les relations entre les\nmaladies et divers facteurs de risque, tels le mode de vie, le milieu\nambiant ou social et les caractéristiques individuelles, suscep-\ntibles d’exercer une inuence sur la fréquence, la distribution et\nl’évolution de la santé physique ou mentale. Plus précisément,\nl’épidémiologie s’intéresse à la distribution géographique et\nsocio-économique, à la fréquence et à l’évolution des maladies\nen lien avec divers facteurs d’ordre individuel et environne-\nmental. Contrairement à d’autres disciplines de la médecine,\nelle s’intéresse aux niveaux et aux caractéristiques de la santé\nou des maladies observables au sein de groupes, et non à ceux\ndes individus comme tels. Les recherches épidémiologiques ont\npermis d’établir que plusieurs troubles mentaux sont multidéter-\nminés et que des facteurs sociaux interviennent fréquemment,\ndirectement ou indirectement, comme facteurs de risque ou de\nprotection. La psychiatrie a ainsi amplement intégré des connais-\nsances des sciences sociales et humaines à sa compréhension\ndes troubles mentaux et aux modèles d’interventions curatives\nou préventives. Puisque l’épidémiologie concerne l’ensemble de\nla recherche médicale portant sur l’humain, il est important\nde se familiariser avec ses principes pour comprendre l’évolution\ndes connaissances scientiques en psychiatrie.\n",
+      "text_sha256": "8679b8af719623ea880544d5349c2e305501f84ef52434f9215f29142c6adad9"
+    },
+    {
+      "bbox": [
+        55.0,
+        390.4931640625,
+        211.8260955810547,
+        409.6689453125
+      ],
+      "block_id": "page-0307-block-0004",
+      "order": 4,
+      "text": "14.1\nFidélité et validité\n",
+      "text_sha256": "bccb92868a01cb202c06d963cc094f51a6265d4a2d22f6cb06e4e7c3d22828e4"
+    },
+    {
+      "bbox": [
+        48.0,
+        423.4658203125,
+        291.4361877441406,
+        525.95849609375
+      ],
+      "block_id": "page-0307-block-0005",
+      "order": 5,
+      "text": "La délité et la validité des mesures en recherche sont des conditions\nde la qualité des connaissances scientiques. La délité renvoie à\nla reproductibilité d’une mesure et décrit donc la constance entre\ndeux temps de mesure de la même variable. Le chercheur lui-même\nou un chercheur indépendant devrait être à même de mesurer de\nnouveau le phénomène à l’étude auprès de la même population et\nobtenir des résultats identiques. Par analogie, si un pèse-personne\nne donne pas les mêmes résultats à la suite de mesures répétées,\non ne peut le considérer comme un instrument de mesure able.\n",
+      "text_sha256": "cfe2a7212b9ecf72f3f922f4cad241066115e148e31d457842192da363d0eac1"
+    },
+    {
+      "bbox": [
+        48.0,
+        526.9658203125,
+        291.47955322265625,
+        640.95849609375
+      ],
+      "block_id": "page-0307-block-0006",
+      "order": 6,
+      "text": "La validité désigne la propriété d’un instrument à mesurer\nce qu’il est censé mesurer. Ainsi, la délité est une condition\npréalable de la validité. Il serait en eet dicile de démontrer\nque ce pèse-personne est un instrument de mesure valide si\nnous sommes incapables d’obtenir une mesure constante d’une\npersonne. Cependant, validité n’est pas synonyme de délité. Par\nexemple, si les tirs sur une cible sont concentrés dans une zone\npériphérique, on peut dire alors qu’ils sont dèles, c’est-à-dire\nqu’ils sont regroupés. Mais ils ne sont pas valides, car ils sont\néloignés du centre de la cible, ce qui devrait être leur but idéal.\n",
+      "text_sha256": "eff00511011172c023045f7138ad1c9c68209e95bb65ad810fa992c1abf55b76"
+    },
+    {
+      "bbox": [
+        48.0,
+        650.48681640625,
+        199.6237030029297,
+        666.62939453125
+      ],
+      "block_id": "page-0307-block-0007",
+      "order": 7,
+      "text": "14.1.1 Mesure de la délité\n",
+      "text_sha256": "af644d6f1534add653456b5c32dd83b90712caf835ad5e661b6c36c20bec52c1"
+    },
+    {
+      "bbox": [
+        48.0,
+        669.9658203125,
+        291.0114440917969,
+        716.95849609375
+      ],
+      "block_id": "page-0307-block-0008",
+      "order": 8,
+      "text": "On évalue la fidélité en examinant la concordance de deux\nmesures de la même variable. On distingue :\n• la délité interjuge, qui est une mesure du taux d’accord\nentre des évaluateurs jugeant la même information. Elle est\n",
+      "text_sha256": "bbf1a61c9ee80b95a3451fd295a1e8412bda680c8e17c8d0bde16934f839f483"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.4921875,
+        182.55850219726562
+      ],
+      "block_id": "page-0307-block-0009",
+      "order": 9,
+      "text": "habituellement évaluée par au moins deux évaluateurs cotant\nla même information, ce qui permet de quantier la constance\navec laquelle ils appliquent les critères de cotation ;\n• la délité test-retest, qui est une estimation à la fois de la\nconstance de l’information fournie par cette personne et\nde la constance de la collecte de données. Par l’évaluation à\npartir d’un questionnaire par exemple, on questionne la même\npersonne sur la même variable en deux occasions diérentes.\nIl faut se rappeler que la délité d’un instrument de mesure peut\nvarier selon la formation des évaluateurs et selon la population\nétudiée ; le souci de favoriser et de mesurer la délité doit donc\nêtre présent dans toute recherche (voir l’encadré 14.1).\n",
+      "text_sha256": "cf132c2ec899f6b8c39ff62fe5a7540b0ea771f810a1ede492f037da252233c9"
+    },
+    {
+      "bbox": [
+        308.3999938964844,
+        201.6522979736328,
+        516.1057739257812,
+        213.97007751464844
+      ],
+      "block_id": "page-0307-block-0010",
+      "order": 10,
+      "text": "ENCADRÉ 14.1 Précautions pour améliorer la délité\n",
+      "text_sha256": "84de87694046940050377d9f7eb9e2053e6b55440627deaf99956087e7b68d20"
+    },
+    {
+      "bbox": [
+        310.25,
+        222.10195922851562,
+        529.6417846679688,
+        360.9281311035156
+      ],
+      "block_id": "page-0307-block-0011",
+      "order": 11,
+      "text": "• Utiliser des critères d’évaluation clairement dénis, qui laissent le\nmoins de place possible à la subjectivité (p. ex., critères diagnos-\ntiques du DSM-5 et échelles de sévérité des symptômes).\n• Former des évaluateurs pour qu’ils appliquent uniformément les\ncritères.\n• Employer des méthodes de collecte de données standardisées.\nPlusieurs grilles d’entrevue structurée ou semi-structurée ont été\nélaborées à cette n, dont :\n–\nPresent State Examination (PSE) ;\n–\nStructured Clinical Interview for DSM Disorders (SCID) ;\n–\nSchedule for Affective Disorders and Schizophrenia (SADS) ;\n–\nDiagnostic Interview Schedule (DIS) ;\n–\nComposite International Diagnostic Interview (CIDI).\n",
+      "text_sha256": "980449b92b2397ee1ba008ffa2c561a3324b5ef1736d3899a54ad66f538ce28d"
+    },
+    {
+      "bbox": [
+        306.0,
+        382.8658142089844,
+        549.319580078125,
+        601.3585205078125
+      ],
+      "block_id": "page-0307-block-0012",
+      "order": 12,
+      "text": "Une façon de mesurer la délité d’une variable catégorielle\n(p. ex., un diagnostic de dépression ou de schizophrénie, le\nsexe masculin ou féminin) est d’établir le taux d’accord entre\nles mesures obtenues au test et au retest. Malheureusement,\nle taux d’accord peut être trompeur, car il ne tient pas compte\ndu fait que des accords peuvent survenir par hasard. C’est pour\ncette raison que le taux d’accord pour des variables catégorielles\nest généralement quantié au moyen du coecient kappa, qui\npermet de tenir compte du fait que certains accords peuvent\nêtre le fruit du hasard. Un kappa de 1 indique une concordance\nparfaite, alors qu’un kappa de 0 indique une absence totale de\nconcordance, les valeurs étant en général comprises entre ces\ndeux extrêmes. Par exemple, Wittchen (1994) synthétisait les\nrésultats des études de délité et de validité du Composite Inter-\nnational Diagnostic Interview (CIDI) couvrant une vingtaine de\ndiagnostics et conrmait des coecients kappa variant de bons\nà excellents pour la plupart des diagnostics. Ces résultats sont\naussi conrmés dans le cadre de la réévaluation clinique du CIDI\nmenée par Haro et ses collaborateurs (2006).\n",
+      "text_sha256": "93d3ed5ea030f566436cf4f151e8cfdabc5e627fcba0a77780bf981a3abfe73f"
+    },
+    {
+      "bbox": [
+        306.0,
+        602.4158325195312,
+        549.32421875,
+        716.95849609375
+      ],
+      "block_id": "page-0307-block-0013",
+      "order": 13,
+      "text": "Les variables continues sont celles qui peuvent avoir un\nnombre illimité de valeurs (p. ex., la sévérité des symptômes\ndépressifs, la pression artérielle, la taille). Pour évaluer la\ndélité des variables continues, on détermine généralement\nle coecient de corrélation intraclasse. Par exemple, si l’on\ntrouve une corrélation de 1 entre deux praticiens évaluant la\nsévérité de symptômes dépressifs chez les patients déprimés,\non conclut à un accord parfait. Une corrélation de 0 dénote\nune absence totale d’accord. On obtient généralement des\nvaleurs intermédiaires.\n",
+      "text_sha256": "56e54146b00940a643c7e903d3aaf785609da27dd6c04c310ac9f9f3420ab33b"
+    }
+  ],
+  "coordinates_sha256": "312bf8b9a405a571c1fd858ad0becbbf60680135cdc25da7f7c04ec9aaeb1106",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0307",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "290\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2 Déterminants bio-psycho-sociaux\nL’\népidémiologie, comme discipline fondamentale de la\nmédecine, a vu le jour au 19e siècle, notamment sous\nl’impulsion des travaux de John Snow (1813-1858) liant\nle choléra et la contamination de l’eau des puits, ou ceux de\nDurkheim (1858-1913) associant un taux de suicide plus élevé\nà certaines caractéristiques sociales, comme l’anomie (absence\nde loi, ordre, structure). Selon Zahner et ses collaborateurs\n(1995), l’épidémiologie consiste à étudier les relations entre les\nmaladies et divers facteurs de risque, tels le mode de vie, le milieu\nambiant ou social et les caractéristiques individuelles, suscep-\ntibles d’exercer une inuence sur la fréquence, la distribution et\nl’évolution de la santé physique ou mentale. Plus précisément,\nl’épidémiologie s’intéresse à la distribution géographique et\nsocio-économique, à la fréquence et à l’évolution des maladies\nen lien avec divers facteurs d’ordre individuel et environne-\nmental. Contrairement à d’autres disciplines de la médecine,\nelle s’intéresse aux niveaux et aux caractéristiques de la santé\nou des maladies observables au sein de groupes, et non à ceux\ndes individus comme tels. Les recherches épidémiologiques ont\npermis d’établir que plusieurs troubles mentaux sont multidéter-\nminés et que des facteurs sociaux interviennent fréquemment,\ndirectement ou indirectement, comme facteurs de risque ou de\nprotection. La psychiatrie a ainsi amplement intégré des connais-\nsances des sciences sociales et humaines à sa compréhension\ndes troubles mentaux et aux modèles d’interventions curatives\nou préventives. Puisque l’épidémiologie concerne l’ensemble de\nla recherche médicale portant sur l’humain, il est important\nde se familiariser avec ses principes pour comprendre l’évolution\ndes connaissances scientiques en psychiatrie.\n14.1\nFidélité et validité\nLa délité et la validité des mesures en recherche sont des conditions\nde la qualité des connaissances scientiques. La délité renvoie à\nla reproductibilité d’une mesure et décrit donc la constance entre\ndeux temps de mesure de la même variable. Le chercheur lui-même\nou un chercheur indépendant devrait être à même de mesurer de\nnouveau le phénomène à l’étude auprès de la même population et\nobtenir des résultats identiques. Par analogie, si un pèse-personne\nne donne pas les mêmes résultats à la suite de mesures répétées,\non ne peut le considérer comme un instrument de mesure able.\nLa validité désigne la propriété d’un instrument à mesurer\nce qu’il est censé mesurer. Ainsi, la délité est une condition\npréalable de la validité. Il serait en eet dicile de démontrer\nque ce pèse-personne est un instrument de mesure valide si\nnous sommes incapables d’obtenir une mesure constante d’une\npersonne. Cependant, validité n’est pas synonyme de délité. Par\nexemple, si les tirs sur une cible sont concentrés dans une zone\npériphérique, on peut dire alors qu’ils sont dèles, c’est-à-dire\nqu’ils sont regroupés. Mais ils ne sont pas valides, car ils sont\néloignés du centre de la cible, ce qui devrait être leur but idéal.\n14.1.1 Mesure de la délité\nOn évalue la fidélité en examinant la concordance de deux\nmesures de la même variable. On distingue :\n• la délité interjuge, qui est une mesure du taux d’accord\nentre des évaluateurs jugeant la même information. Elle est\nhabituellement évaluée par au moins deux évaluateurs cotant\nla même information, ce qui permet de quantier la constance\navec laquelle ils appliquent les critères de cotation ;\n• la délité test-retest, qui est une estimation à la fois de la\nconstance de l’information fournie par cette personne et\nde la constance de la collecte de données. Par l’évaluation à\npartir d’un questionnaire par exemple, on questionne la même\npersonne sur la même variable en deux occasions diérentes.\nIl faut se rappeler que la délité d’un instrument de mesure peut\nvarier selon la formation des évaluateurs et selon la population\nétudiée ; le souci de favoriser et de mesurer la délité doit donc\nêtre présent dans toute recherche (voir l’encadré 14.1).\nENCADRÉ 14.1 Précautions pour améliorer la délité\n• Utiliser des critères d’évaluation clairement dénis, qui laissent le\nmoins de place possible à la subjectivité (p. ex., critères diagnos-\ntiques du DSM-5 et échelles de sévérité des symptômes).\n• Former des évaluateurs pour qu’ils appliquent uniformément les\ncritères.\n• Employer des méthodes de collecte de données standardisées.\nPlusieurs grilles d’entrevue structurée ou semi-structurée ont été\nélaborées à cette n, dont :\n–\nPresent State Examination (PSE) ;\n–\nStructured Clinical Interview for DSM Disorders (SCID) ;\n–\nSchedule for Affective Disorders and Schizophrenia (SADS) ;\n–\nDiagnostic Interview Schedule (DIS) ;\n–\nComposite International Diagnostic Interview (CIDI).\nUne façon de mesurer la délité d’une variable catégorielle\n(p. ex., un diagnostic de dépression ou de schizophrénie, le\nsexe masculin ou féminin) est d’établir le taux d’accord entre\nles mesures obtenues au test et au retest. Malheureusement,\nle taux d’accord peut être trompeur, car il ne tient pas compte\ndu fait que des accords peuvent survenir par hasard. C’est pour\ncette raison que le taux d’accord pour des variables catégorielles\nest généralement quantié au moyen du coecient kappa, qui\npermet de tenir compte du fait que certains accords peuvent\nêtre le fruit du hasard. Un kappa de 1 indique une concordance\nparfaite, alors qu’un kappa de 0 indique une absence totale de\nconcordance, les valeurs étant en général comprises entre ces\ndeux extrêmes. Par exemple, Wittchen (1994) synthétisait les\nrésultats des études de délité et de validité du Composite Inter-\nnational Diagnostic Interview (CIDI) couvrant une vingtaine de\ndiagnostics et conrmait des coecients kappa variant de bons\nà excellents pour la plupart des diagnostics. Ces résultats sont\naussi conrmés dans le cadre de la réévaluation clinique du CIDI\nmenée par Haro et ses collaborateurs (2006).\nLes variables continues sont celles qui peuvent avoir un\nnombre illimité de valeurs (p. ex., la sévérité des symptômes\ndépressifs, la pression artérielle, la taille). Pour évaluer la\ndélité des variables continues, on détermine généralement\nle coecient de corrélation intraclasse. Par exemple, si l’on\ntrouve une corrélation de 1 entre deux praticiens évaluant la\nsévérité de symptômes dépressifs chez les patients déprimés,\non conclut à un accord parfait. Une corrélation de 0 dénote\nune absence totale d’accord. On obtient généralement des\nvaleurs intermédiaires.\n",
+  "raw_text_sha256": "c172dd166e6f1bbf111f84d0b7bfec25fcc1ba4cd2fbfb36cfe7c923c5bc6dd0",
+  "source_page_display": 308,
+  "source_page_index": 307
+}

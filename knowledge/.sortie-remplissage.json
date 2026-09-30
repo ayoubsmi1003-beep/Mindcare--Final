@@ -1,0 +1,39 @@
+{
+  "debut": "2026-09-28T09:04:50.927Z",
+  "portee": {
+    "mode": "source",
+    "source_id": "9ed1c042-fd2b-5599-a470-8c93b0566739",
+    "statut": "active",
+    "langue": "fr",
+    "chunks": 12815,
+    "selectionnes_sans_embedding": 0,
+    "chunkers_source": "struct-v2",
+    "exclus_hors_portee": 0,
+    "recette": {
+      "provider": "local-onnx",
+      "modele": "BAAI/bge-m3",
+      "version": "5617a9f61b028005a4858fdac845db406aefb181",
+      "dimensions": 1024,
+      "chunkers": [
+        "struct-v1",
+        "struct-v1.1",
+        "taylor-units-v1-proposed",
+        "taylor-units-v2-candidate"
+      ]
+    }
+  },
+  "taille_lot": 64,
+  "taille_lot_inference": 8,
+  "lots": 0,
+  "ecrits": 0,
+  "sautes_decoupeur": 0,
+  "echecs": [],
+  "dernier_id": null,
+  "termine": true,
+  "exception": {
+    "decision": "G1-A",
+    "source_id": "9ed1c042-fd2b-5599-a470-8c93b0566739",
+    "chunker": "struct-v2",
+    "statut_source": "active"
+  }
+}

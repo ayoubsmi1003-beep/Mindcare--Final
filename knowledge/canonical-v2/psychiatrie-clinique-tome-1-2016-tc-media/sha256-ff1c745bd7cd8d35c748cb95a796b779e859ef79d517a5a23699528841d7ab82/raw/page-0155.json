@@ -1,0 +1,268 @@
+{
+  "block_sequence_sha256": "4c0e99de7bd6c325b9882790a05d7f57f2b4fc32f7a7cebd886465580baaf16c",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        132.5734405517578,
+        347.39996337890625,
+        177.4953155517578
+      ],
+      "block_id": "page-0155-block-0001",
+      "order": 1,
+      "text": "Imagerie cérébrale\n",
+      "text_sha256": "c28eff4853cb678a6ae46172772a0acce07cb67bc07a119396118b2207164522"
+    },
+    {
+      "bbox": [
+        48.0,
+        251.15731811523438,
+        248.62750244140625,
+        265.1954040527344
+      ],
+      "block_id": "page-0155-block-0002",
+      "order": 2,
+      "text": "Jean-Paul Soucy, M.D., FRCPC, M. SC. (neuroscience)\n",
+      "text_sha256": "9cc0d7b991526bdd99b3f44f9bdb1492e1ef1f5e3a1a706f7aa874485baa22f1"
+    },
+    {
+      "bbox": [
+        48.0,
+        268.5772399902344,
+        248.0126495361328,
+        289.7937927246094
+      ],
+      "block_id": "page-0155-block-0003",
+      "order": 3,
+      "text": "Spécialiste en médecine nucléaire, Centre hospitalier\nde l’Université de Montréal\n",
+      "text_sha256": "5efb903319a36987cc7000a6fb58a01340c7c36317aacdcd659f51ba411843a6"
+    },
+    {
+      "bbox": [
+        48.0,
+        293.5772399902344,
+        254.82228088378906,
+        314.7937927246094
+      ],
+      "block_id": "page-0155-block-0004",
+      "order": 4,
+      "text": "Directeur médical, Unité de tomographie par émission\nde positrons, Institut neurologique de Montréal\n",
+      "text_sha256": "441d497712e1bf7a9c885ecb6bf2ed878df2a5bba867f15a4766f2d9f32181f9"
+    },
+    {
+      "bbox": [
+        48.0,
+        318.5772399902344,
+        277.2075500488281,
+        350.7937927246094
+      ],
+      "block_id": "page-0155-block-0005",
+      "order": 5,
+      "text": "Professeur titulaire de clinique, Département de radiologie,\nradio-oncologie et médecine nucléaire, Faculté de médecine,\nUniversité de Montréal\n",
+      "text_sha256": "9f15058c5de86f7eedec514df1cb7f94b652c123799781d5b779af8ee17b84a8"
+    },
+    {
+      "bbox": [
+        48.0,
+        359.6573181152344,
+        157.37159729003906,
+        373.6954040527344
+      ],
+      "block_id": "page-0155-block-0006",
+      "order": 6,
+      "text": "Manon Bélair, M.D., FRCPC\n",
+      "text_sha256": "b7e6fe1f213039262aa5ffeebb9ba68485078eea6febe9dfbaff670baf9933ae"
+    },
+    {
+      "bbox": [
+        48.0,
+        377.0772399902344,
+        269.0144348144531,
+        387.2937927246094
+      ],
+      "block_id": "page-0155-block-0007",
+      "order": 7,
+      "text": "Radiologue, Centre hospitalier de l’Université de Montréal\n",
+      "text_sha256": "214b5f73fcaa960172b8a198f1bff3d7c1cac5fbe968bc54acb7a2a99599bc95"
+    },
+    {
+      "bbox": [
+        48.0,
+        391.0772399902344,
+        277.2075500488281,
+        423.2937927246094
+      ],
+      "block_id": "page-0155-block-0008",
+      "order": 8,
+      "text": "Professeure adjointe de clinique, Département de radiologie,\nradio-oncologie et médecine nucléaire, Faculté de médecine,\nUniversité de Montréal\n",
+      "text_sha256": "3599de186ef9f0572c9733f1ad3da60af2869509d45392432597ab4dfa800b63"
+    },
+    {
+      "bbox": [
+        306.0,
+        251.15731811523438,
+        407.171630859375,
+        265.1954040527344
+      ],
+      "block_id": "page-0155-block-0009",
+      "order": 9,
+      "text": "Céline Bard, M.D., FRCPC\n",
+      "text_sha256": "8dc6fab0888a0bc427d384b4d66244407d307d747656282b8017b1d8fcf19c60"
+    },
+    {
+      "bbox": [
+        306.0,
+        268.5772399902344,
+        527.0144653320312,
+        278.7937927246094
+      ],
+      "block_id": "page-0155-block-0010",
+      "order": 10,
+      "text": "Radiologue, Centre hospitalier de l’Université de Montréal\n",
+      "text_sha256": "214b5f73fcaa960172b8a198f1bff3d7c1cac5fbe968bc54acb7a2a99599bc95"
+    },
+    {
+      "bbox": [
+        306.0,
+        282.5772399902344,
+        535.20751953125,
+        314.7937927246094
+      ],
+      "block_id": "page-0155-block-0011",
+      "order": 11,
+      "text": "Professeure agrégée de clinique, Département de radiologie,\nradio-oncologie et médecine nucléaire, Faculté de médecine,\nUniversité de Montréal\n",
+      "text_sha256": "44471cf5dd00f668f57743a82567bdfb94aceda08c2961b6cad4487636cce3a7"
+    },
+    {
+      "bbox": [
+        306.0,
+        323.6573181152344,
+        470.1600036621094,
+        337.6954040527344
+      ],
+      "block_id": "page-0155-block-0012",
+      "order": 12,
+      "text": "Jean Maxime Leroux, BA (enseignement) †\n",
+      "text_sha256": "f7a4c316e8a06222f1f90c63d286db56150ae16c71ed1cdf03daa3a6e6af3771"
+    },
+    {
+      "bbox": [
+        306.0,
+        341.0772399902344,
+        524.26318359375,
+        351.2937927246094
+      ],
+      "block_id": "page-0155-block-0013",
+      "order": 13,
+      "text": "Chercheur, Centre hospitalier de l’Université de Montréal\n",
+      "text_sha256": "2dd5177c6a7cd8ecb1e483d69b076e478b095c0d6a66ca4facb5415bac7a447c"
+    },
+    {
+      "bbox": [
+        306.0,
+        355.0772399902344,
+        546.4385375976562,
+        387.2937927246094
+      ],
+      "block_id": "page-0155-block-0014",
+      "order": 14,
+      "text": "Coordonnateur de recherche IRMf, Département de radiologie,\nradio-oncologie et médecine nucléaire, Faculté de médecine,\nUniversité de Montréal\n",
+      "text_sha256": "9321124adc1d3b68b7d3e7bbe2df94470b926053061bf69358d8afa78a000220"
+    },
+    {
+      "bbox": [
+        319.5,
+        2.3810577392578125,
+        555.0,
+        122.38105773925781
+      ],
+      "block_id": "page-0155-block-0015",
+      "order": 15,
+      "text": "CHAPITRE7\n",
+      "text_sha256": "b652487017a73e7ef8650652fa9a62a941502442683fa39846a2a5e30e328b2d"
+    },
+    {
+      "bbox": [
+        48.0,
+        466.9244079589844,
+        289.010009765625,
+        486.7681579589844
+      ],
+      "block_id": "page-0155-block-0016",
+      "order": 16,
+      "text": "7.1 \nClassication des techniques\nd’imagerie cérébrale .......................................................139\n",
+      "text_sha256": "39c343a4a204a77140cdb69bc1b816ab16390552c9e2dccd4c05f9f4647aef6b"
+    },
+    {
+      "bbox": [
+        48.0,
+        491.9244079589844,
+        289.010009765625,
+        550.8472900390625
+      ],
+      "block_id": "page-0155-block-0017",
+      "order": 17,
+      "text": "7.2 \nTechniques de médecine nucléaire..............................139\n7.2.1 \nTypes d’acquisitions scintigraphiques............... 140\n7.2.2 \nÉtudes du ot sanguin et du métabolisme\nénergétique cérébraux.......................................... 141\n7.2.3 \nÉtudes de liaison spécique................................. 143\n",
+      "text_sha256": "4b0196710ef60bd7751c4b4ae3071b25372ecd72f9cc2584b0a53e4b70f563d7"
+    },
+    {
+      "bbox": [
+        48.0,
+        555.9244384765625,
+        289.010009765625,
+        601.8472900390625
+      ],
+      "block_id": "page-0155-block-0018",
+      "order": 18,
+      "text": "7.3 \nApplications de la médecine nucléaire\nen psychiatrie.................................................................. 143\n7.3.1 \nApplications cliniques .......................................... 144\n7.3.2 \nApplications en recherche .................................. 147\n",
+      "text_sha256": "bab7513116a6df81ace4b64d055699676e16501eef3a5d94ad3cf46051bb7cee"
+    },
+    {
+      "bbox": [
+        306.0,
+        466.9244079589844,
+        547.010009765625,
+        502.8472595214844
+      ],
+      "block_id": "page-0155-block-0019",
+      "order": 19,
+      "text": "7.4 \nTechniques radiologiques..............................................149\n7.4.1 \nTomodensitométrie .............................................. 149\n7.4.2 \nImagerie par résonance magnétique ................. 149\n",
+      "text_sha256": "a22bed052a462c2561250d99023fb6a6b5ebb54300b416c75376ec386fab7f5e"
+    },
+    {
+      "bbox": [
+        306.0,
+        507.9244384765625,
+        547.010009765625,
+        553.8472900390625
+      ],
+      "block_id": "page-0155-block-0020",
+      "order": 20,
+      "text": "7.5 \nApplications de l’imagerie par résonance\nmagnétique en psychiatrie ............................................150\n7.5.1 \nDémences................................................................ 150\n7.5.2 \nAutres troubles psychiatriques........................... 154\n",
+      "text_sha256": "5307c5a687ff190733113647599ee8034a268ad4618cf8beeeb5dc196cf43872"
+    },
+    {
+      "bbox": [
+        306.0,
+        558.9244384765625,
+        547.010009765625,
+        568.7681884765625
+      ],
+      "block_id": "page-0155-block-0021",
+      "order": 21,
+      "text": "Lectures complémentaires.......................................................157\n",
+      "text_sha256": "73520d80807b1093b3cc24b978c33f9abbf187110f5ddbe0bece5b37fb707eea"
+    }
+  ],
+  "coordinates_sha256": "a7f9a6f43b5ad002bf41d1e4fa1d67f9bf9ed3c95fcb7bdcab27b94d7a8f6beb",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0155",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Imagerie cérébrale\nJean-Paul Soucy, M.D., FRCPC, M. SC. (neuroscience)\nSpécialiste en médecine nucléaire, Centre hospitalier\nde l’Université de Montréal\nDirecteur médical, Unité de tomographie par émission\nde positrons, Institut neurologique de Montréal\nProfesseur titulaire de clinique, Département de radiologie,\nradio-oncologie et médecine nucléaire, Faculté de médecine,\nUniversité de Montréal\nManon Bélair, M.D., FRCPC\nRadiologue, Centre hospitalier de l’Université de Montréal\nProfesseure adjointe de clinique, Département de radiologie,\nradio-oncologie et médecine nucléaire, Faculté de médecine,\nUniversité de Montréal\nCéline Bard, M.D., FRCPC\nRadiologue, Centre hospitalier de l’Université de Montréal\nProfesseure agrégée de clinique, Département de radiologie,\nradio-oncologie et médecine nucléaire, Faculté de médecine,\nUniversité de Montréal\nJean Maxime Leroux, BA (enseignement) †\nChercheur, Centre hospitalier de l’Université de Montréal\nCoordonnateur de recherche IRMf, Département de radiologie,\nradio-oncologie et médecine nucléaire, Faculté de médecine,\nUniversité de Montréal\nCHAPITRE7\n7.1 \nClassication des techniques\nd’imagerie cérébrale .......................................................139\n7.2 \nTechniques de médecine nucléaire..............................139\n7.2.1 \nTypes d’acquisitions scintigraphiques............... 140\n7.2.2 \nÉtudes du ot sanguin et du métabolisme\nénergétique cérébraux.......................................... 141\n7.2.3 \nÉtudes de liaison spécique................................. 143\n7.3 \nApplications de la médecine nucléaire\nen psychiatrie.................................................................. 143\n7.3.1 \nApplications cliniques .......................................... 144\n7.3.2 \nApplications en recherche .................................. 147\n7.4 \nTechniques radiologiques..............................................149\n7.4.1 \nTomodensitométrie .............................................. 149\n7.4.2 \nImagerie par résonance magnétique ................. 149\n7.5 \nApplications de l’imagerie par résonance\nmagnétique en psychiatrie ............................................150\n7.5.1 \nDémences................................................................ 150\n7.5.2 \nAutres troubles psychiatriques........................... 154\nLectures complémentaires.......................................................157\n",
+  "raw_text_sha256": "67d5f9bc1af8416d981a625e328c9558421fa364beea3508cc60007fc258ed68",
+  "source_page_display": 156,
+  "source_page_index": 155
+}

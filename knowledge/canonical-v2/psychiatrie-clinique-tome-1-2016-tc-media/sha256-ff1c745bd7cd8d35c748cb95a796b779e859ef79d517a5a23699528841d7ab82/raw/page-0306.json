@@ -1,0 +1,220 @@
+{
+  "block_sequence_sha256": "d45fdfd1746aff4ee0e6662a58368b3b38155f3c0fe887c6ff4903a8a66736c8",
+  "blocks": [
+    {
+      "bbox": [
+        54.0,
+        130.7734375,
+        272.7726745605469,
+        175.6953125
+      ],
+      "block_id": "page-0306-block-0001",
+      "order": 1,
+      "text": "Épidémiologie\n",
+      "text_sha256": "dc60d7cc80502d253906813e21260d69b9eed1f65b5db99fb97ef31aebfbdd50"
+    },
+    {
+      "bbox": [
+        54.0,
+        224.7001190185547,
+        256.4590148925781,
+        237.2001190185547
+      ],
+      "block_id": "page-0306-block-0002",
+      "order": 2,
+      "text": "Marc-André Roy, M.D., FRCPC, M. SC. (épidémiologie)\n",
+      "text_sha256": "cba7846c4697f642bd9c6f43d312bbda86018e8d8b1d1950dcd7e0ee45c9dea6"
+    },
+    {
+      "bbox": [
+        54.0,
+        241.07725524902344,
+        296.6329650878906,
+        273.2937927246094
+      ],
+      "block_id": "page-0306-block-0003",
+      "order": 3,
+      "text": "Psychiatre, chercheur, directeur de la recherche intégrée aux\nsoins, Centre de recherche, Institut universitaire en santé mentale\nde Québec, Clinique Notre-Dame des Victoires (Québec)\n",
+      "text_sha256": "1d93ed92b33801f2a6ba57cfc5d8bb3993b4390a17267450e26f7e5b4f01c4c5"
+    },
+    {
+      "bbox": [
+        54.0,
+        277.0772399902344,
+        297.5887145996094,
+        298.2937927246094
+      ],
+      "block_id": "page-0306-block-0004",
+      "order": 4,
+      "text": "Professeur agrégé, Département de psychiatrie et neu rosciences,\nFaculté de médecine, Université Laval (Québec)\n",
+      "text_sha256": "60bb1f0a7c78a85c1d68ef12a9abb383e5659f19bcdb1944cfc8e93326fc5f77"
+    },
+    {
+      "bbox": [
+        54.0,
+        308.7001037597656,
+        171.67160034179688,
+        321.2001037597656
+      ],
+      "block_id": "page-0306-block-0005",
+      "order": 5,
+      "text": "Michel Maziade, M.D., FRCPC\n",
+      "text_sha256": "98408135bb8a7f14e7a89b15106c2bd41b5e865b894b3e54ada96aac015d951c"
+    },
+    {
+      "bbox": [
+        54.0,
+        325.0772399902344,
+        283.6262512207031,
+        346.2937927246094
+      ],
+      "block_id": "page-0306-block-0006",
+      "order": 6,
+      "text": "Psychiatre, chercheur, Centre de recherche, Institut universi-\ntaire en santé mentale de Québec\n",
+      "text_sha256": "3832ce3c37b8b05862e8881b69c45a04da9d272153798ae1643b791e2c5e02dd"
+    },
+    {
+      "bbox": [
+        54.0,
+        350.0772399902344,
+        297.5887145996094,
+        371.2937927246094
+      ],
+      "block_id": "page-0306-block-0007",
+      "order": 7,
+      "text": "Professeur agrégé, Département de psychiatrie et neurosciences,\nFaculté de médecine, Université Laval (Québec)\n",
+      "text_sha256": "52523c459b4b591a04f3a588fa511a655357ba182d040b433d8edd837a8f0a96"
+    },
+    {
+      "bbox": [
+        312.0,
+        224.7001190185547,
+        453.3590087890625,
+        237.2001190185547
+      ],
+      "block_id": "page-0306-block-0008",
+      "order": 8,
+      "text": "Richard Boyer, PH.D. (santé publique)\n",
+      "text_sha256": "f582acce8ea44b92de32e92d8c98006ca205ffc1f1e8e55e6147347ec463621d"
+    },
+    {
+      "bbox": [
+        312.0,
+        241.07725524902344,
+        515.049560546875,
+        262.2937927246094
+      ],
+      "block_id": "page-0306-block-0009",
+      "order": 9,
+      "text": "Chercheur, Centre de recherche, Institut universitaire\nen santé mentale de Montréal\n",
+      "text_sha256": "fceefeef6a1d6d3495328b54d31ad843f14f1abcc34239fd89fec62578c0dc0b"
+    },
+    {
+      "bbox": [
+        312.0,
+        266.0772399902344,
+        534.3515014648438,
+        287.2937927246094
+      ],
+      "block_id": "page-0306-block-0010",
+      "order": 10,
+      "text": "Professeur agrégé sous octroi, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\n",
+      "text_sha256": "33b60b31f65b9a03a2bc92862bac0c526ad7e11b11be813a5ccc43db8f82a31b"
+    },
+    {
+      "bbox": [
+        54.0,
+        419.1244201660156,
+        295.0099792480469,
+        468.0472717285156
+      ],
+      "block_id": "page-0306-block-0011",
+      "order": 11,
+      "text": "14.1 Fidélité et validité .......................................................... 290\n14.1.1 Mesure de la délité.............................................. 290\n14.1.2 Validité avec une mesure étalon......................... 291\n14.1.3 Validité sans mesure étalon................................. 291\n",
+      "text_sha256": "6b87b14655830b36299d823cb9e9ad9f0007c8b202945542d9cf7edc0c8a61fd"
+    },
+    {
+      "bbox": [
+        54.0,
+        473.1244201660156,
+        295.0099792480469,
+        509.0472717285156
+      ],
+      "block_id": "page-0306-block-0012",
+      "order": 12,
+      "text": "14.2 Épidémiologie descriptive............................................ 292\n14.2.1 Incidence................................................................. 292\n14.2.2 Prévalence............................................................... 293\n",
+      "text_sha256": "770fc21ee1248693a84f2f08b5b10141cf4fa287e875013992281dcc86fa75b8"
+    },
+    {
+      "bbox": [
+        54.0,
+        514.1244506835938,
+        295.0099792480469,
+        638.0473022460938
+      ],
+      "block_id": "page-0306-block-0013",
+      "order": 13,
+      "text": "14.3 Épidémiologie analytique............................................. 294\n14.3.1 Force d’une association ........................................ 294\n14.3.2 Rôle du hasard........................................................ 294\n14.3.3 Puissance statistique............................................. 295\n14.3.4 Biais.......................................................................... 295\n14.3.5 Facteurs de confusion........................................... 296\n14.3.6 Dénition de la causalité...................................... 296\n14.3.7 Possibilité de généraliser les résultats ............... 297\n14.3.8 Stratégies de recherche en épidémiologie\nanalytique................................................................ 297\n",
+      "text_sha256": "53378dbda029304ccb5aa630e5d7f1b3b25f32cf09a2b64ddb920534dda59793"
+    },
+    {
+      "bbox": [
+        263.1000061035156,
+        2.3810577392578125,
+        561.0,
+        122.38105773925781
+      ],
+      "block_id": "page-0306-block-0014",
+      "order": 14,
+      "text": "CHAPITRE14\n",
+      "text_sha256": "5f439ce39dbcdf16b8ba96461e1fadb33941fbab1ca9770e8097d1cdb0dd03ba"
+    },
+    {
+      "bbox": [
+        312.0,
+        419.1244201660156,
+        553.0100708007812,
+        455.0472717285156
+      ],
+      "block_id": "page-0306-block-0015",
+      "order": 15,
+      "text": "14.4 Épidémiologie expérimentale ...................................... 298\n14.4.1 Études de prévention primaire ........................... 298\n14.4.2 Études thérapeutiques.......................................... 298\n",
+      "text_sha256": "095dd384e956f6fa1b88ec648e1e2b7d2725c9225cbc458beef10cefd1eef78f"
+    },
+    {
+      "bbox": [
+        312.0,
+        460.1244201660156,
+        553.0150146484375,
+        522.0473022460938
+      ],
+      "block_id": "page-0306-block-0016",
+      "order": 16,
+      "text": "14.5 Lecture critique de la littérature scientique............ 299\n14.5.1 Introduction de l’article........................................ 299\n14.5.2 Description des méthodes................................... 299\n14.5.3 Discussion............................................................... 299\n14.5.4 Revues de littérature............................................. 300\n",
+      "text_sha256": "1d519247f89df001b6791f86fd6a6c5df96fee32082cafb84165bfbf04778052"
+    },
+    {
+      "bbox": [
+        312.0,
+        527.1244506835938,
+        553.0100708007812,
+        536.9682006835938
+      ],
+      "block_id": "page-0306-block-0017",
+      "order": 17,
+      "text": "Lectures complémentaires...................................................... 300\n",
+      "text_sha256": "0238b4dc7cd56f93af4c0cabb125bc74e2002782808f6e800376bb4c25eb1380"
+    }
+  ],
+  "coordinates_sha256": "9d342ea430560b481866f85f4b5fe2c29132da293397d55963dbed5aae2e487e",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0306",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Épidémiologie\nMarc-André Roy, M.D., FRCPC, M. SC. (épidémiologie)\nPsychiatre, chercheur, directeur de la recherche intégrée aux\nsoins, Centre de recherche, Institut universitaire en santé mentale\nde Québec, Clinique Notre-Dame des Victoires (Québec)\nProfesseur agrégé, Département de psychiatrie et neu rosciences,\nFaculté de médecine, Université Laval (Québec)\nMichel Maziade, M.D., FRCPC\nPsychiatre, chercheur, Centre de recherche, Institut universi-\ntaire en santé mentale de Québec\nProfesseur agrégé, Département de psychiatrie et neurosciences,\nFaculté de médecine, Université Laval (Québec)\nRichard Boyer, PH.D. (santé publique)\nChercheur, Centre de recherche, Institut universitaire\nen santé mentale de Montréal\nProfesseur agrégé sous octroi, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\n14.1 Fidélité et validité .......................................................... 290\n14.1.1 Mesure de la délité.............................................. 290\n14.1.2 Validité avec une mesure étalon......................... 291\n14.1.3 Validité sans mesure étalon................................. 291\n14.2 Épidémiologie descriptive............................................ 292\n14.2.1 Incidence................................................................. 292\n14.2.2 Prévalence............................................................... 293\n14.3 Épidémiologie analytique............................................. 294\n14.3.1 Force d’une association ........................................ 294\n14.3.2 Rôle du hasard........................................................ 294\n14.3.3 Puissance statistique............................................. 295\n14.3.4 Biais.......................................................................... 295\n14.3.5 Facteurs de confusion........................................... 296\n14.3.6 Dénition de la causalité...................................... 296\n14.3.7 Possibilité de généraliser les résultats ............... 297\n14.3.8 Stratégies de recherche en épidémiologie\nanalytique................................................................ 297\nCHAPITRE14\n14.4 Épidémiologie expérimentale ...................................... 298\n14.4.1 Études de prévention primaire ........................... 298\n14.4.2 Études thérapeutiques.......................................... 298\n14.5 Lecture critique de la littérature scientique............ 299\n14.5.1 Introduction de l’article........................................ 299\n14.5.2 Description des méthodes................................... 299\n14.5.3 Discussion............................................................... 299\n14.5.4 Revues de littérature............................................. 300\nLectures complémentaires...................................................... 300\n",
+  "raw_text_sha256": "9458ef70e03743d352088c15ea7617a57527055d8a0826ce0d19d7ad5222b76d",
+  "source_page_display": 307,
+  "source_page_index": 306
+}

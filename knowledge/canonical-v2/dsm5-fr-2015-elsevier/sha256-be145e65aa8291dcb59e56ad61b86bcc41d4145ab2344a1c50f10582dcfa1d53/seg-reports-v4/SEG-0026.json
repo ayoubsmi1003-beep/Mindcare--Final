@@ -1,0 +1,84 @@
+{
+  "book_id": "dsm5-fr-2015-elsevier",
+  "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+  "segment": "seg-0626-0650.pdf",
+  "source_page_start": 626,
+  "source_page_end": 650,
+  "page_count": 25,
+  "segment_sha256": "92fb91349a5256b7e202afb60c63a6fec1f955819e634ae0c6c23afaabbbadea",
+  "candidate_reconciliation": "reconciliation-v10",
+  "units": 220,
+  "tables": 2,
+  "concepts": 75,
+  "xrefs": 7,
+  "pages_with_no_text": [],
+  "uncertain": [
+    626,
+    627,
+    629,
+    630,
+    631,
+    632,
+    634,
+    635,
+    636,
+    638,
+    639,
+    641,
+    642,
+    643,
+    644,
+    646
+  ],
+  "fallback_pages": [
+    626,
+    627,
+    629,
+    630,
+    631,
+    632,
+    634,
+    635,
+    636,
+    638,
+    639,
+    641,
+    642,
+    643,
+    644,
+    646
+  ],
+  "extractors": {
+    "pymupdf-original-text-layer": 198,
+    "pymupdf-fallback": 22
+  },
+  "citra": {
+    "status": "mcp_timeout_unresponsive",
+    "failed_segment_pages": [],
+    "failed_source_pages": [],
+    "fallback_used": true
+  },
+  "line_counts": {
+    "units": 220,
+    "tables": 2,
+    "concepts": 75,
+    "xrefs": 7
+  },
+  "files": {
+    "units": "reconciliation-v10/units.jsonl",
+    "tables": "reconciliation-v10/tables.jsonl",
+    "concepts": "reconciliation-v10/concepts.jsonl",
+    "xrefs": "reconciliation-v10/xrefs.jsonl"
+  },
+  "structure_candidate": "structure-v2.candidate.json",
+  "status": "CANDIDATE_REVIEW_REQUIRED",
+  "canonical_promotion_authorized": false,
+  "summary_line": "SEG seg-0626-0650.pdf: units=220 tables=2 concepts=75 xrefs=7 | pages with no text: [] | uncertain: [626, 627, 629, 630, 631, 632, 634, 635, 636, 638, 639, 641, 642, 643, 644, 646] | citra-failed-pages: [] | notes: Citra was not replayed for this segment; report is manifest-only and does not claim a fresh Citra result.; Fallback pages are explicitly uncertain and routed to review.",
+  "fallback_verification": {
+    "method": "pymupdf-get_text",
+    "ocr_used": false,
+    "page_count": 25,
+    "empty_pages": [],
+    "segment_sha256": "92fb91349a5256b7e202afb60c63a6fec1f955819e634ae0c6c23afaabbbadea"
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "block_sequence_sha256": "f50df0b68fd49a306d6bde242b3781d18e733d5e3396726114a3efad57e819ba",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0355-block-0001",
+      "order": 1,
+      "text": "338\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "1afc4721c01d359bbda3ac26db3f250a69ebe9a41db3d947b2d3af9ccc22aee0"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.05229568481445,
+        549.3900756835938,
+        339.65850830078125
+      ],
+      "block_id": "page-0355-block-0002",
+      "order": 2,
+      "text": "Sérotonine\nUn nombre croissant d’études portent sur le rôle de la séroto-\nnine (appelée aussi 5-hydroxytryptamine [5-HT]) dans le fonc-\ntionnement cognitif. L’activité de la 5-HT et de la monoamine\noxydase (MAO) dans les plaquettes du sang est semblable à celle\nqu’elle remplit dans le cerveau, ce qui en rend l’étude beaucoup\nplus facile. La MAO est l’enzyme qui métabolise la 5-HT en\nacide 5-hydroxyindol acétique (5-HIAA). Plusieurs recherches\nmontrent une augmentation de la 5-HT plaquettaire dans la\nschizophrénie traitée ou non traitée. Par ailleurs, on a aussi\nnoté une diminution de la MAO chez les personnes atteintes\nde schizophrénie qui ont des hallucinations auditives. Le dié-\nthylamide de l’acide lysergique (LSD) produit des symptômes\npsychotiques en stimulant les récepteurs sérotoninergiques, et\nla clozapine réduit les symptômes négatifs possiblement par le\nblocage de ces récepteurs. Il y a une relation entre les neurones\nsérotoninergiques et les symptômes négatifs de schizophrénie\nliés au blocage dopaminergique. Le blocage de la 5-HT permet\nde lever l’inhibition des neurones dopaminergiques du faisceau\nmésocortical. Les neurones sérotoninergiques inhibent aussi les\nneurones dopaminergiques dans le striatum et la substance noire,\natténuant ainsi le parkinsonisme relié au blocage dopaminergique\nau niveau du faisceau nigrostrié. Un dysfonctionnement séro-\ntoninergique est également mis en cause dans la dépression et\ndans les comportements suicidaires et agressifs. Globalement la\nsérotonine peut avoir un eet modulateur de l’expression émotive.\n",
+      "text_sha256": "ab9cf0a917eaa28c1dc9e9aff160fd4676478542df09fc538ed628116bf6c837"
+    },
+    {
+      "bbox": [
+        306.0,
+        344.55230712890625,
+        549.4313354492188,
+        494.65850830078125
+      ],
+      "block_id": "page-0355-block-0003",
+      "order": 3,
+      "text": "Glutamate\nLa phencyclidine (PCP) produit des symptômes psychotiques\nressemblant à la schizophrénie (hallucinations, délires, agitation,\ncatatonie) à cause d’un eet antagoniste des récepteurs NMDA\n(N-méthyl-D-aspartate) sur le glutamate, qui est un neuro-\ntransmetteur excitateur. Il est possible que la surstimulation\nglutamatergique ait un eet toxique sur les neurones et cause une\ndégénérescence neuronale aboutissant à une hyperactivité dopa-\nminergique. On note de multiples interactions entre la dopamine\net le glutamate. Ainsi, la mauvaise régulation de la transmission\ndopaminergique serait la voie nale commune, sans nécessaire-\nment être l’origine neurochimique de la schizophrénie, qui semble\nplutôt en lien avec le système glutamatergique.\n",
+      "text_sha256": "c000fe7bfce5d3043cf9da46c28c8d3483c062fef128b4393c3745660e559f3e"
+    },
+    {
+      "bbox": [
+        306.0,
+        495.66583251953125,
+        549.4734497070312,
+        724.6585083007812
+      ],
+      "block_id": "page-0355-block-0004",
+      "order": 4,
+      "text": "La glycine a un eet antipsychotique en tant que facilitateur\nde l’eet du glutamate sur les récepteurs NMDA. L’hypofonction-\nnement de ces récepteurs cause une dégénérescence neuronale\nqui entraîne l’apparition de symptômes schizophréniques après\nla puberté puisque, avant la puberté, le cerveau est insensible à\ncet eet neurotoxique. Les bres glutamatergiques corticostriées\nont un eet stimulant et les bres dopaminergiques nigros-\ntriées ont un eet inhibiteur sur les neurones GABAergiques dans\nle striatum. La diminution des récepteurs GABAergiques dans le\nlobe temporal gauche laisse croire que la diminution du tonus\ninhibiteur GABAergique contribue au dysfonctionnement du\nlobe temporal et donc aux symptômes positifs (hallucinations et\ndélires). On pourrait ainsi obtenir un eet antipsychotique par\nune augmentation de l’activité glutamatergique, qui peut avoir\nle même eet qu’une diminution de la transmission dopaminer-\ngique au niveau des récepteurs GABA du striatum. Mais on ne\npeut pas donner de médicaments qui augmentent directement\nle glutamate cérébral, car ils causeraient une toxicité neuronale.\nIl faut donc augmenter indirectement le glutamate en donnant\ndes précurseurs comme la glycine ou d’autres acides aminés\n",
+      "text_sha256": "b5cbbe3b061b07bb86090f0cda512ff59d28c8888a006155bb1a22c20877b6f6"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.9658203125,
+        291.5364685058594,
+        375.6084899902344
+      ],
+      "block_id": "page-0355-block-0005",
+      "order": 5,
+      "text": "faisceaux dopaminergiques sont présentés dans les gures\nsupplémentaires.\nCe n’est qu’en 1963, quand on a compris le mécanisme d’action\ndes neuroleptiques, qu’a été formulée la théorie dopaminer-\ngique de la schizophrénie, 10 ans après la découverte fortuite\nde la chlorpromazine par le chirurgien H. Laborit. Pendant leur\npsychose, les personnes atteintes de schizophrénie présentent :\n• une plus grande de synthèse de DA ;\n• une décharge plus importante de DA en réponse à une sti-\nmulation ;\n• une plus grande quantité de DA dans les synapses.\nEn regroupant plusieurs recherches sur la physiologie de la\nDA, Kapur (2003) a associé la « saillance motivationnelle » à\nla sécrétion de DA dans les synapses. Normalement, la DA est\nle médiateur qui donne aux expériences une signication (sail-\nlance) appropriée selon le contexte, en alertant qu’un événement\nsaillant vient de survenir. La saillance découle de la pertinence\naccordée aux perceptions environnementales (p. ex., un sie-\nment) ou internes (p. ex., un gargouillis intestinal). La DA attri-\nbue une signication à toutes sortes de stimuli neutres pour en\nfaire des entités attrayantes ou inquiétantes. La DA du faisceau\nmésolimbique permet de porter attention à des événements ou\nà des pensées, et ce faisant, elle inue sur l’action à entreprendre\npour obtenir une récompense ou éviter une punition. Elle trans-\nforme la saillance en motivation pour l’action. La DA est donc\nun neurotransmetteur fondamental dans l’évaluation et l’utilité\ndes décisions dans tous les choix. C’est ainsi que se forme la\n« saillance motivationnelle ».\n",
+      "text_sha256": "293812bd5afc47927d4144f222c27c159cba3956b6164a17cdb4efe4e34b7d6b"
+    },
+    {
+      "bbox": [
+        48.0,
+        376.7158203125,
+        291.2676086425781,
+        573.3585205078125
+      ],
+      "block_id": "page-0355-block-0006",
+      "order": 6,
+      "text": "La génération des symptômes psychotiques à la suite d’une\nlibération erratique de DA dans les synapses sans égard au\ncontexte est illustrée à la gure 16.1. La vigilance augmente\net des perceptions banales engendrent une saillance aber-\nrante. Ainsi un événement normalement interprété comme\nnon signicatif (p. ex., un bruit inattendu) est perçu non pas\ncomme une coïncidence anodine, mais comme un événement\nd’une grande signication pour l’individu. Les délires sont alors\nune tentative d’expliquer les expériences inhabituelles, voire\nbizarres, et de résoudre la perplexité et la confusion. C’est habituel-\nlement quand la psychose altère le comportement que le patient\nconsulte en psychiatrie. La médication antipsychotique bloque la\ntransmission de la DA dans le faisceau mésolimbique et diminue\nainsi la signication (saillance) préoccupante des symptômes\npsychotiques, permettant de vivre des situations sans y accorder\nune importance excessive (la gure 16.1 présente un schéma du\nfonctionnement de la dopamine) (voir les gures supplémentaires).\n",
+      "text_sha256": "4260c7c7202d6e6c90120d59fef3069e6dccf8d822fc2349b9de66bb223f4c83"
+    },
+    {
+      "bbox": [
+        48.0,
+        574.5158081054688,
+        291.3931884765625,
+        724.6585083007812
+      ],
+      "block_id": "page-0355-block-0007",
+      "order": 7,
+      "text": "Cependant, environ 30 % des personnes sourant de schi-\nzophrénie répondent peu ou pas aux antipsychotiques, ce qui\nlaisse penser que, chez elles, la transmission dopaminergique\nn’est pas le seul processus pathophysiologique en cause. Il existe\nprobablement divers types biochimiques de schizophrénie. On\npense maintenant que les symptômes psychotiques peuvent être\natténués à la suite d’une modulation du système dopaminer-\ngique en interaction avec d’autres neurotransmetteurs comme\nla sérotonine, le glutamate, le GABA, etc. Avec les progrès de\nla recherche sur la biochimie cérébrale, on constate l’existence\nd’actions activatrice ou inhibitrice entre les divers neurones céré-\nbraux, ce qui appuie l’hypothèse d’un nécessaire équilibre entre\nles régions cérébrales pour permettre un fonctionne ment normal.\n",
+      "text_sha256": "44600c9759b68b80959436eb80d84f4abf30a868d409258489a8101c7f93a3d0"
+    }
+  ],
+  "coordinates_sha256": "528ab2efe091e8f8a1136e61da0ab4dbda7fc94f7c2d196160ff6f64758a52ef",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0355",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "338\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nSérotonine\nUn nombre croissant d’études portent sur le rôle de la séroto-\nnine (appelée aussi 5-hydroxytryptamine [5-HT]) dans le fonc-\ntionnement cognitif. L’activité de la 5-HT et de la monoamine\noxydase (MAO) dans les plaquettes du sang est semblable à celle\nqu’elle remplit dans le cerveau, ce qui en rend l’étude beaucoup\nplus facile. La MAO est l’enzyme qui métabolise la 5-HT en\nacide 5-hydroxyindol acétique (5-HIAA). Plusieurs recherches\nmontrent une augmentation de la 5-HT plaquettaire dans la\nschizophrénie traitée ou non traitée. Par ailleurs, on a aussi\nnoté une diminution de la MAO chez les personnes atteintes\nde schizophrénie qui ont des hallucinations auditives. Le dié-\nthylamide de l’acide lysergique (LSD) produit des symptômes\npsychotiques en stimulant les récepteurs sérotoninergiques, et\nla clozapine réduit les symptômes négatifs possiblement par le\nblocage de ces récepteurs. Il y a une relation entre les neurones\nsérotoninergiques et les symptômes négatifs de schizophrénie\nliés au blocage dopaminergique. Le blocage de la 5-HT permet\nde lever l’inhibition des neurones dopaminergiques du faisceau\nmésocortical. Les neurones sérotoninergiques inhibent aussi les\nneurones dopaminergiques dans le striatum et la substance noire,\natténuant ainsi le parkinsonisme relié au blocage dopaminergique\nau niveau du faisceau nigrostrié. Un dysfonctionnement séro-\ntoninergique est également mis en cause dans la dépression et\ndans les comportements suicidaires et agressifs. Globalement la\nsérotonine peut avoir un eet modulateur de l’expression émotive.\nGlutamate\nLa phencyclidine (PCP) produit des symptômes psychotiques\nressemblant à la schizophrénie (hallucinations, délires, agitation,\ncatatonie) à cause d’un eet antagoniste des récepteurs NMDA\n(N-méthyl-D-aspartate) sur le glutamate, qui est un neuro-\ntransmetteur excitateur. Il est possible que la surstimulation\nglutamatergique ait un eet toxique sur les neurones et cause une\ndégénérescence neuronale aboutissant à une hyperactivité dopa-\nminergique. On note de multiples interactions entre la dopamine\net le glutamate. Ainsi, la mauvaise régulation de la transmission\ndopaminergique serait la voie nale commune, sans nécessaire-\nment être l’origine neurochimique de la schizophrénie, qui semble\nplutôt en lien avec le système glutamatergique.\nLa glycine a un eet antipsychotique en tant que facilitateur\nde l’eet du glutamate sur les récepteurs NMDA. L’hypofonction-\nnement de ces récepteurs cause une dégénérescence neuronale\nqui entraîne l’apparition de symptômes schizophréniques après\nla puberté puisque, avant la puberté, le cerveau est insensible à\ncet eet neurotoxique. Les bres glutamatergiques corticostriées\nont un eet stimulant et les bres dopaminergiques nigros-\ntriées ont un eet inhibiteur sur les neurones GABAergiques dans\nle striatum. La diminution des récepteurs GABAergiques dans le\nlobe temporal gauche laisse croire que la diminution du tonus\ninhibiteur GABAergique contribue au dysfonctionnement du\nlobe temporal et donc aux symptômes positifs (hallucinations et\ndélires). On pourrait ainsi obtenir un eet antipsychotique par\nune augmentation de l’activité glutamatergique, qui peut avoir\nle même eet qu’une diminution de la transmission dopaminer-\ngique au niveau des récepteurs GABA du striatum. Mais on ne\npeut pas donner de médicaments qui augmentent directement\nle glutamate cérébral, car ils causeraient une toxicité neuronale.\nIl faut donc augmenter indirectement le glutamate en donnant\ndes précurseurs comme la glycine ou d’autres acides aminés\nfaisceaux dopaminergiques sont présentés dans les gures\nsupplémentaires.\nCe n’est qu’en 1963, quand on a compris le mécanisme d’action\ndes neuroleptiques, qu’a été formulée la théorie dopaminer-\ngique de la schizophrénie, 10 ans après la découverte fortuite\nde la chlorpromazine par le chirurgien H. Laborit. Pendant leur\npsychose, les personnes atteintes de schizophrénie présentent :\n• une plus grande de synthèse de DA ;\n• une décharge plus importante de DA en réponse à une sti-\nmulation ;\n• une plus grande quantité de DA dans les synapses.\nEn regroupant plusieurs recherches sur la physiologie de la\nDA, Kapur (2003) a associé la « saillance motivationnelle » à\nla sécrétion de DA dans les synapses. Normalement, la DA est\nle médiateur qui donne aux expériences une signication (sail-\nlance) appropriée selon le contexte, en alertant qu’un événement\nsaillant vient de survenir. La saillance découle de la pertinence\naccordée aux perceptions environnementales (p. ex., un sie-\nment) ou internes (p. ex., un gargouillis intestinal). La DA attri-\nbue une signication à toutes sortes de stimuli neutres pour en\nfaire des entités attrayantes ou inquiétantes. La DA du faisceau\nmésolimbique permet de porter attention à des événements ou\nà des pensées, et ce faisant, elle inue sur l’action à entreprendre\npour obtenir une récompense ou éviter une punition. Elle trans-\nforme la saillance en motivation pour l’action. La DA est donc\nun neurotransmetteur fondamental dans l’évaluation et l’utilité\ndes décisions dans tous les choix. C’est ainsi que se forme la\n« saillance motivationnelle ».\nLa génération des symptômes psychotiques à la suite d’une\nlibération erratique de DA dans les synapses sans égard au\ncontexte est illustrée à la gure 16.1. La vigilance augmente\net des perceptions banales engendrent une saillance aber-\nrante. Ainsi un événement normalement interprété comme\nnon signicatif (p. ex., un bruit inattendu) est perçu non pas\ncomme une coïncidence anodine, mais comme un événement\nd’une grande signication pour l’individu. Les délires sont alors\nune tentative d’expliquer les expériences inhabituelles, voire\nbizarres, et de résoudre la perplexité et la confusion. C’est habituel-\nlement quand la psychose altère le comportement que le patient\nconsulte en psychiatrie. La médication antipsychotique bloque la\ntransmission de la DA dans le faisceau mésolimbique et diminue\nainsi la signication (saillance) préoccupante des symptômes\npsychotiques, permettant de vivre des situations sans y accorder\nune importance excessive (la gure 16.1 présente un schéma du\nfonctionnement de la dopamine) (voir les gures supplémentaires).\nCependant, environ 30 % des personnes sourant de schi-\nzophrénie répondent peu ou pas aux antipsychotiques, ce qui\nlaisse penser que, chez elles, la transmission dopaminergique\nn’est pas le seul processus pathophysiologique en cause. Il existe\nprobablement divers types biochimiques de schizophrénie. On\npense maintenant que les symptômes psychotiques peuvent être\natténués à la suite d’une modulation du système dopaminer-\ngique en interaction avec d’autres neurotransmetteurs comme\nla sérotonine, le glutamate, le GABA, etc. Avec les progrès de\nla recherche sur la biochimie cérébrale, on constate l’existence\nd’actions activatrice ou inhibitrice entre les divers neurones céré-\nbraux, ce qui appuie l’hypothèse d’un nécessaire équilibre entre\nles régions cérébrales pour permettre un fonctionne ment normal.\n",
+  "raw_text_sha256": "680516fc0a2a4599781e66330a4b97b3b367cf89ccc87f073aa9d29c64139dc2",
+  "source_page_display": 356,
+  "source_page_index": 355
+}

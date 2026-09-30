@@ -1,0 +1,76 @@
+{
+  "block_sequence_sha256": "e7b8db00a6929dd7adadb26382ff0d8a0ac815f337d37cc61b8353db335a9d67",
+  "blocks": [
+    {
+      "bbox": [
+        392.8999938964844,
+        -50.99560546875,
+        652.9000244140625,
+        449.00439453125
+      ],
+      "block_id": "page-0109-block-0001",
+      "order": 1,
+      "text": "2\n",
+      "text_sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3"
+    },
+    {
+      "bbox": [
+        78.0,
+        394.7660217285156,
+        294.0040283203125,
+        463.7035217285156
+      ],
+      "block_id": "page-0109-block-0002",
+      "order": 2,
+      "text": "5 \nGénétique................................................................... 93\n6 \nNeurobiologie.......................................................... 109\n7 \nImagerie cérébrale................................................. 138\n8 \nPsychophysiologie et neurophysiologie ......158\n9 \nDéveloppement de la personnalité ................ 194\n",
+      "text_sha256": "b344371e80bcaaefa2fd2e3e908ba393a63e3041ec3a816e1b95df622109c66a"
+    },
+    {
+      "bbox": [
+        325.5,
+        394.7660217285156,
+        541.5040283203125,
+        463.7035217285156
+      ],
+      "block_id": "page-0109-block-0003",
+      "order": 3,
+      "text": "10 Couples et familles................................................. 227\n11 Culture et migration............................................. 250\n12 Travail et invalidité ............................................... 259\n13 Sociologie et maladies mentales ..................... 280\n14 Épidémiologie.......................................................... 289\n",
+      "text_sha256": "b382d6dff660757dbbe2badd08054efb74cf30f3c22bc168ebc48f1180bd5b76"
+    },
+    {
+      "bbox": [
+        42.0,
+        170.7292938232422,
+        416.9037170410156,
+        278.88165283203125
+      ],
+      "block_id": "page-0109-block-0004",
+      "order": 4,
+      "text": "Déterminants\nbio-psycho-sociaux\n",
+      "text_sha256": "5453a408d2a6fbd46704918daf614293ceaff17c3fce0408f7fc6d8d5fbf6353"
+    },
+    {
+      "bbox": [
+        234.60000610351562,
+        70.84444427490234,
+        379.2432556152344,
+        108.84444427490234
+      ],
+      "block_id": "page-0109-block-0005",
+      "order": 5,
+      "text": "PARTIE\n",
+      "text_sha256": "0e054fd62c9a877920b13d9a515f145b5819af2695746e6dfd91efa1e2c5806b"
+    }
+  ],
+  "coordinates_sha256": "61d4ca736df2894c1e831cd39bc77fe2a0ee761b94dd1817c50cce9d17377659",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0109",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "2\n5 \nGénétique................................................................... 93\n6 \nNeurobiologie.......................................................... 109\n7 \nImagerie cérébrale................................................. 138\n8 \nPsychophysiologie et neurophysiologie ......158\n9 \nDéveloppement de la personnalité ................ 194\n10 Couples et familles................................................. 227\n11 Culture et migration............................................. 250\n12 Travail et invalidité ............................................... 259\n13 Sociologie et maladies mentales ..................... 280\n14 Épidémiologie.......................................................... 289\nDéterminants\nbio-psycho-sociaux\nPARTIE\n",
+  "raw_text_sha256": "4a066dc93bd7ac5ad5d87d746973bfe76dd867ea6b645b90f8efa1b4457e14eb",
+  "source_page_display": 110,
+  "source_page_index": 109
+}

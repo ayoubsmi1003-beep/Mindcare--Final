@@ -1,0 +1,280 @@
+{
+  "block_sequence_sha256": "d84399969429a7e919112d0d7c0be2d16515c6d2dfa584e52a752c3b98dee7a7",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        130.5734405517578,
+        369.7135009765625,
+        175.4953155517578
+      ],
+      "block_id": "page-0801-block-0001",
+      "order": 1,
+      "text": "Dysphories de genre\n",
+      "text_sha256": "7f8b040fba989fedcda04f2c779ad379ad151aa3e96bf7086e06e23adc9fbb7f"
+    },
+    {
+      "bbox": [
+        48.0,
+        223.30010986328125,
+        138.12850952148438,
+        235.80010986328125
+      ],
+      "block_id": "page-0801-block-0002",
+      "order": 2,
+      "text": "Pierre Assalian, M.D.\n",
+      "text_sha256": "53bf0e46a463b970e88da19845d60b54fa577b55177dbb45d23185addbe33580"
+    },
+    {
+      "bbox": [
+        48.0,
+        239.67724609375,
+        276.8890686035156,
+        260.893798828125
+      ],
+      "block_id": "page-0801-block-0003",
+      "order": 3,
+      "text": "Psychiatre, directeur, Unité de sexualité, Centre universitaire\nde santé McGill, Hôpital général de Montréal\n",
+      "text_sha256": "65ccf704f78091f946a82cae16c9bc48a9853adaee7e691768e27d53b698f053"
+    },
+    {
+      "bbox": [
+        48.0,
+        264.67724609375,
+        267.16522216796875,
+        285.893798828125
+      ],
+      "block_id": "page-0801-block-0004",
+      "order": 4,
+      "text": "Professeur agrégé, Département de psychiatrie, Faculté de\nmédecine, Université McGill (Montréal)\n",
+      "text_sha256": "cd203acdfff17ee39d8f62bea9cbc5f8272be7ab9f1b9405cd95516be8290f88"
+    },
+    {
+      "bbox": [
+        48.0,
+        295.80010986328125,
+        181.38050842285156,
+        308.30010986328125
+      ],
+      "block_id": "page-0801-block-0005",
+      "order": 5,
+      "text": "Hélène Côté, T.C.F., M.A. (sexologie)\n",
+      "text_sha256": "5a49d43073769915af24e22cc266cc987a80affdfd3ed3aa1e81c22f69dec271"
+    },
+    {
+      "bbox": [
+        48.0,
+        312.17724609375,
+        285.5280456542969,
+        344.393798828125
+      ],
+      "block_id": "page-0801-block-0006",
+      "order": 6,
+      "text": "Psychothérapeute, thérapeute conjugale et familiale, Unité de\nsexualité, Centre universitaire de santé McGill, Hôpital général\nde Montréal\n",
+      "text_sha256": "a8ff5dd6d29c0d4372269407b71573af7ac2a7835aa0984c22247e8a5631cb80"
+    },
+    {
+      "bbox": [
+        48.0,
+        348.17724609375,
+        276.3380432128906,
+        369.393798828125
+      ],
+      "block_id": "page-0801-block-0007",
+      "order": 7,
+      "text": "Superviseure clinique, Département de sexologie, Université\ndu Québec à Montréal\n",
+      "text_sha256": "c1763a6ab6652b62d7d635ab540b693a45f0e5ce2eea57cf12e47a8022fccc02"
+    },
+    {
+      "bbox": [
+        306.0,
+        223.30010986328125,
+        455.1860046386719,
+        235.80010986328125
+      ],
+      "block_id": "page-0801-block-0008",
+      "order": 8,
+      "text": "Christiane Dufour, Ph. D. (psychologie)\n",
+      "text_sha256": "117fb4c0ff3193fe4ea1cdbf55d2137e806c6918ee8dc12ccaf56363f8d5328a"
+    },
+    {
+      "bbox": [
+        306.0,
+        239.67724609375,
+        529.0083618164062,
+        260.893798828125
+      ],
+      "block_id": "page-0801-block-0009",
+      "order": 9,
+      "text": "Psychologue, directrice adjointe, Unité de sexualité, Centre\nuniversitaire de santé McGill, Hôpital général de Montréal\n",
+      "text_sha256": "931e5c84496a6ac34208bbe8b966410719aa3d464b7181a5b581a5119fde4bb1"
+    },
+    {
+      "bbox": [
+        306.0,
+        270.80010986328125,
+        435.83050537109375,
+        283.30010986328125
+      ],
+      "block_id": "page-0801-block-0010",
+      "order": 10,
+      "text": "Vanessa Forgues, B.A. (sexologie)\n",
+      "text_sha256": "e908143405acea2f61302664be96eb45f3e3d085d0d311fb19a25830c02b809d"
+    },
+    {
+      "bbox": [
+        306.0,
+        287.17724609375,
+        532.3902587890625,
+        308.393798828125
+      ],
+      "block_id": "page-0801-block-0011",
+      "order": 11,
+      "text": "Sexologue, stagiaire, Unité de sexualité, Centre universitaire\nde santé McGill, Hôpital général de Montréal\n",
+      "text_sha256": "6e843b2253146d433e88c28bd162823953765839b3d6607cd4da3ac0890b8cbf"
+    },
+    {
+      "bbox": [
+        48.0,
+        429.6244201660156,
+        289.0099792480469,
+        439.4681701660156
+      ],
+      "block_id": "page-0801-block-0012",
+      "order": 12,
+      "text": "34.1 Évolution du concept .................................................... 785\n",
+      "text_sha256": "58410f0b036bd4f6425f84fe6d062180c9ca5324cbf995e23b7a26f2db391810"
+    },
+    {
+      "bbox": [
+        48.0,
+        444.5244140625,
+        289.0099792480469,
+        480.447265625
+      ],
+      "block_id": "page-0801-block-0013",
+      "order": 13,
+      "text": "34.2 Épidémiologie ................................................................ 787\n34.2.1 Adultes................................................................... 787\n34.2.2 Enfants et adolescents......................................... 788\n",
+      "text_sha256": "6e6260bbad1c62340e051a933fa5997896202c80cc275d59adcb76af70b2a44e"
+    },
+    {
+      "bbox": [
+        48.0,
+        485.4244079589844,
+        289.0099792480469,
+        534.3472900390625
+      ],
+      "block_id": "page-0801-block-0014",
+      "order": 14,
+      "text": "34.3 Étiologies ........................................................................ 788\n34.3.1 Étiologies biologiques.......................................... 788\n34.3.2 Étiologies psychologiques................................... 791\n34.3.3 Étiologies sociales................................................. 793\n",
+      "text_sha256": "c83bb8cdd5c039c7693d21299be2d47651cdfce7dc79aca9999144afcf2d064e"
+    },
+    {
+      "bbox": [
+        48.0,
+        539.3244018554688,
+        289.0099792480469,
+        549.1681518554688
+      ],
+      "block_id": "page-0801-block-0015",
+      "order": 15,
+      "text": "34.4 Description clinique...................................................... 794\n",
+      "text_sha256": "ca7224361ce9585254a4a87280396bc77d6867fcd741cca78295928c6bf4e90d"
+    },
+    {
+      "bbox": [
+        48.0,
+        554.2244262695312,
+        289.0099792480469,
+        603.1472778320312
+      ],
+      "block_id": "page-0801-block-0016",
+      "order": 16,
+      "text": "34.5 Évaluation....................................................................... 797\n34.5.1 Adultes.................................................................... 798\n34.5.2 Adolescents............................................................ 798\n34.5.3 Enfants.................................................................... 798\n",
+      "text_sha256": "a23aaceae4126c357d01fee2cd943a7ec67c0e4a998d39eac346c1ee8140c856"
+    },
+    {
+      "bbox": [
+        306.0,
+        429.6244201660156,
+        547.0100708007812,
+        439.4681701660156
+      ],
+      "block_id": "page-0801-block-0017",
+      "order": 17,
+      "text": "34.6 Outils diagnostiques ..................................................... 799\n",
+      "text_sha256": "a46b12c6ce706b2af4fc9f848f8bfa4dd6da2c79a26de185f41a4dc11a1115a1"
+    },
+    {
+      "bbox": [
+        306.0,
+        444.5244140625,
+        547.0100708007812,
+        454.3681640625
+      ],
+      "block_id": "page-0801-block-0018",
+      "order": 18,
+      "text": "34.7 Diagnostic diérentiel .................................................. 800\n",
+      "text_sha256": "71ed937dab121d08da5cc8921422ee5c03517bb45e22c9f272e4ec9dbe5e825f"
+    },
+    {
+      "bbox": [
+        306.0,
+        459.4244079589844,
+        547.0100708007812,
+        508.3472595214844
+      ],
+      "block_id": "page-0801-block-0019",
+      "order": 19,
+      "text": "34.8 Traitements .................................................................... 801\n34.8.1 Traitements psychologiques .............................. 802\n34.8.2 Interventions sociales.......................................... 802\n34.8.3 Traitements biologiques ..................................... 803\n",
+      "text_sha256": "a4021ba6f20e0b93210de1333e222eb5d987946540871c1dbf27cb1066b19074"
+    },
+    {
+      "bbox": [
+        306.0,
+        513.3244018554688,
+        547.0100708007812,
+        523.1681518554688
+      ],
+      "block_id": "page-0801-block-0020",
+      "order": 20,
+      "text": "34.9 Évolution et pronostic................................................... 803\n",
+      "text_sha256": "d84cefee491157ffb46835e8a2ba2acf21095e30e0d391564f782e92c65ed66c"
+    },
+    {
+      "bbox": [
+        306.0,
+        528.3244018554688,
+        547.0100708007812,
+        538.1681518554688
+      ],
+      "block_id": "page-0801-block-0021",
+      "order": 21,
+      "text": "Lectures complémentaires...................................................... 805\n",
+      "text_sha256": "c1b06b65fd5aa1efa996e914e6030817f14b731515cc3a7228ef7073c9fc87b3"
+    },
+    {
+      "bbox": [
+        257.1000061035156,
+        2.3810577392578125,
+        555.0,
+        122.38105773925781
+      ],
+      "block_id": "page-0801-block-0022",
+      "order": 22,
+      "text": "CHAPITRE34\n",
+      "text_sha256": "2a64ea79401cc9f9967898a2f31d7846549d023695ffbcb8578fc0441235e5fe"
+    }
+  ],
+  "coordinates_sha256": "325650c41d63bf71090d053cf4db57a130967632c6e773dfd2defc04e896c87d",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0801",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Dysphories de genre\nPierre Assalian, M.D.\nPsychiatre, directeur, Unité de sexualité, Centre universitaire\nde santé McGill, Hôpital général de Montréal\nProfesseur agrégé, Département de psychiatrie, Faculté de\nmédecine, Université McGill (Montréal)\nHélène Côté, T.C.F., M.A. (sexologie)\nPsychothérapeute, thérapeute conjugale et familiale, Unité de\nsexualité, Centre universitaire de santé McGill, Hôpital général\nde Montréal\nSuperviseure clinique, Département de sexologie, Université\ndu Québec à Montréal\nChristiane Dufour, Ph. D. (psychologie)\nPsychologue, directrice adjointe, Unité de sexualité, Centre\nuniversitaire de santé McGill, Hôpital général de Montréal\nVanessa Forgues, B.A. (sexologie)\nSexologue, stagiaire, Unité de sexualité, Centre universitaire\nde santé McGill, Hôpital général de Montréal\n34.1 Évolution du concept .................................................... 785\n34.2 Épidémiologie ................................................................ 787\n34.2.1 Adultes................................................................... 787\n34.2.2 Enfants et adolescents......................................... 788\n34.3 Étiologies ........................................................................ 788\n34.3.1 Étiologies biologiques.......................................... 788\n34.3.2 Étiologies psychologiques................................... 791\n34.3.3 Étiologies sociales................................................. 793\n34.4 Description clinique...................................................... 794\n34.5 Évaluation....................................................................... 797\n34.5.1 Adultes.................................................................... 798\n34.5.2 Adolescents............................................................ 798\n34.5.3 Enfants.................................................................... 798\n34.6 Outils diagnostiques ..................................................... 799\n34.7 Diagnostic diérentiel .................................................. 800\n34.8 Traitements .................................................................... 801\n34.8.1 Traitements psychologiques .............................. 802\n34.8.2 Interventions sociales.......................................... 802\n34.8.3 Traitements biologiques ..................................... 803\n34.9 Évolution et pronostic................................................... 803\nLectures complémentaires...................................................... 805\nCHAPITRE34\n",
+  "raw_text_sha256": "df6caf9e27ab8a185ec9e437260079741520a19bf512e735f0a911fd6d440f09",
+  "source_page_display": 802,
+  "source_page_index": 801
+}

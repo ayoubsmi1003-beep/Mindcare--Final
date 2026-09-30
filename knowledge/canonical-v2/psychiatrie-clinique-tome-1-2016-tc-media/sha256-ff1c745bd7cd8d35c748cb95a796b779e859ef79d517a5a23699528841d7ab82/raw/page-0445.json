@@ -1,0 +1,484 @@
+{
+  "block_sequence_sha256": "7e0eb087507a9d8887c5536ced46384e6f5dbd8ee723a3e5c5128165f6c23f97",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        477.3144836425781,
+        758.8693237304688
+      ],
+      "block_id": "page-0445-block-0001",
+      "order": 1,
+      "text": "428\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3\nSyndromes cliniques psychiatriques\n",
+      "text_sha256": "969944cebddcba846620c582ad4a4fda6b8866c7e34fdac24cc0e1c62b6e6787"
+    },
+    {
+      "bbox": [
+        50.79999923706055,
+        41.002296447753906,
+        253.38951110839844,
+        53.320068359375
+      ],
+      "block_id": "page-0445-block-0002",
+      "order": 2,
+      "text": "TABLEAU 20.7 Critères diagnostiques des phobies\n",
+      "text_sha256": "f9c3e658157d5fb47833818002c94b61b59e637b261103e70b11a67509177c69"
+    },
+    {
+      "bbox": [
+        161.15000915527344,
+        59.52412414550781,
+        443.68798828125,
+        70.10029602050781
+      ],
+      "block_id": "page-0445-block-0003",
+      "order": 3,
+      "text": "DSM-5\nDSM-IV-TR\n",
+      "text_sha256": "67d368c78be7842a2bc99b149901566bcadf3c9d62623ea48bafcc32b3563ffb"
+    },
+    {
+      "bbox": [
+        117.0,
+        75.4228515625,
+        502.5855712890625,
+        85.4423828125
+      ],
+      "block_id": "page-0445-block-0004",
+      "order": 4,
+      "text": "300.29 (F40.2) Phobie spécique\nPhobie spécique (auparavant phobie simple)\n",
+      "text_sha256": "7010c1f167bc18a5a09f991b096d195bd69fb74301d69b188a366e4d8b658830"
+    },
+    {
+      "bbox": [
+        52.650001525878906,
+        92.20195770263672,
+        293.16455078125,
+        102.02812957763672
+      ],
+      "block_id": "page-0445-block-0005",
+      "order": 5,
+      "text": "A. Peur ou anxiété intense à propos d’un objet ou d’une situation spécique\n",
+      "text_sha256": "81f74dbf39925db50771b89261681d50ad92ae2d8dd9da4331fd6e47b5586ccf"
+    },
+    {
+      "bbox": [
+        52.650001525878906,
+        102.20195770263672,
+        290.6492919921875,
+        133.1423797607422
+      ],
+      "block_id": "page-0445-block-0006",
+      "order": 6,
+      "text": "(p.ex. prendre l’avion, hauteurs, animaux, avoir une injection, voir du\nsang).\nN.B. : Chez les enfants, la peur ou l’anxiété peut s’exprimer par des pleurs,\n",
+      "text_sha256": "56bb1cc426276c8ab1aab7b1823ab1fb9ab3a269a84258e1a5a1f903ce411e1d"
+    },
+    {
+      "bbox": [
+        72.0,
+        133.2019500732422,
+        282.5372314453125,
+        143.0281219482422
+      ],
+      "block_id": "page-0445-block-0007",
+      "order": 7,
+      "text": "des accès de colère, des réactions de gement ou d’agrippement.\n",
+      "text_sha256": "b2dfa520c66e661a3b8fbb46b1d730df31852f200efc6dae51842dc5b7c68444"
+    },
+    {
+      "bbox": [
+        302.6499938964844,
+        92.20195770263672,
+        528.1983642578125,
+        102.02812957763672
+      ],
+      "block_id": "page-0445-block-0008",
+      "order": 8,
+      "text": "A. Peur persistante et intense à caractère irraisonné ou bien excessive,\n",
+      "text_sha256": "b1cb918cf5fc97c3f11e0788168aa687b5110bee3d20d957f5ab6a584eb1cb38"
+    },
+    {
+      "bbox": [
+        311.1499938964844,
+        102.20195770263672,
+        543.18017578125,
+        132.0281219482422
+      ],
+      "block_id": "page-0445-block-0009",
+      "order": 9,
+      "text": "déclenchée par la présence ou l’anticipation de la confrontation à un\nobjet ou une situation spécique (p. ex., prendre l’avion, les hauteurs, les\nanimaux, avoir une injection, voir du sang).\n",
+      "text_sha256": "e6934a47158185c21f16d9477a4bb904d0c633b2ad0751a33e2e54cef3899061"
+    },
+    {
+      "bbox": [
+        52.650001525878906,
+        151.60195922851562,
+        293.7264404296875,
+        161.42813110351562
+      ],
+      "block_id": "page-0445-block-0010",
+      "order": 10,
+      "text": "B. L’objet ou la situation phobogène provoque presque toujours une peur ou\n",
+      "text_sha256": "56a4102a024588df11235ecabf4db0b8d5e151cd31cf3c8cd4c61e567e13f9db"
+    },
+    {
+      "bbox": [
+        61.150001525878906,
+        161.60195922851562,
+        135.61602783203125,
+        171.42813110351562
+      ],
+      "block_id": "page-0445-block-0011",
+      "order": 11,
+      "text": "une anxiété immédiate.\n",
+      "text_sha256": "50541cd997bc37a9dff18a3819ebc344f1e20f460d8fce15b05d01a727d36f79"
+    },
+    {
+      "bbox": [
+        302.6499938964844,
+        151.60195922851562,
+        536.1470336914062,
+        161.42813110351562
+      ],
+      "block_id": "page-0445-block-0012",
+      "order": 12,
+      "text": "B. L’exposition au stimulus phobogène provoque de façon quasi systéma-\n",
+      "text_sha256": "2b2e0ac224a90841cdc05d15799b6b37d94b939878d8841c533302a7327c086b"
+    },
+    {
+      "bbox": [
+        302.6499938964844,
+        161.60195922851562,
+        540.5950927734375,
+        192.54238891601562
+      ],
+      "block_id": "page-0445-block-0013",
+      "order": 13,
+      "text": "tique une réaction anxieuse immédiate qui peut prendre la forme d’une\nattaque de panique liée à la situation ou facilitée par la situation.\nN.B. : Chez les enfants, l’anxiété peut s’exprimer par des pleurs, des accès\n",
+      "text_sha256": "855680addb408e9e957f11ff7677290bfce2c3afd2e777dd080415f6856cda25"
+    },
+    {
+      "bbox": [
+        322.0,
+        192.60195922851562,
+        539.1309814453125,
+        202.42813110351562
+      ],
+      "block_id": "page-0445-block-0014",
+      "order": 14,
+      "text": "de colère, des réactions d’immobilisation (freeze) ou d’agrippement.\n",
+      "text_sha256": "fcefee098920b27f8230cad49946b07d5e6ab6f1baef4dc27cba92535081d5ba"
+    },
+    {
+      "bbox": [
+        52.650001525878906,
+        211.0519561767578,
+        291.0668029785156,
+        220.8781280517578
+      ],
+      "block_id": "page-0445-block-0015",
+      "order": 15,
+      "text": "C. L’objet ou la situation phobogène est activement évité(e) ou vécu(e) avec\n",
+      "text_sha256": "924c5ba8cf30a1d56816e82162ab2b21acfac10ef3f9f61067a516b4eff1a63e"
+    },
+    {
+      "bbox": [
+        61.29999923706055,
+        221.0519561767578,
+        165.85043334960938,
+        230.8781280517578
+      ],
+      "block_id": "page-0445-block-0016",
+      "order": 16,
+      "text": "une peur ou une anxiété intense.\n",
+      "text_sha256": "6ac1a5f8f607948ac77f58b8d50354a0d6a6b32411e2ca9826274845a69819e3"
+    },
+    {
+      "bbox": [
+        302.6499938964844,
+        211.0519561767578,
+        544.7958984375,
+        220.8781280517578
+      ],
+      "block_id": "page-0445-block-0017",
+      "order": 17,
+      "text": "D. La (les) situation(s) phobogène(s) est (sont) évitée(s) ou vécue(s) avec une\n",
+      "text_sha256": "8f8c0095c010ca0579c7ae4b70002722942129cafd5eb4b6fb11f91498262dca"
+    },
+    {
+      "bbox": [
+        311.45001220703125,
+        221.0519561767578,
+        414.7917785644531,
+        230.8781280517578
+      ],
+      "block_id": "page-0445-block-0018",
+      "order": 18,
+      "text": "anxiété ou une détresse intense.\n",
+      "text_sha256": "4d7e1df0bab805a2fdb27280aa62e541a7e1d84e1a71fc83477328705590f28e"
+    },
+    {
+      "bbox": [
+        52.650001525878906,
+        239.4519500732422,
+        277.4010314941406,
+        249.2781219482422
+      ],
+      "block_id": "page-0445-block-0019",
+      "order": 19,
+      "text": "D. La peur ou l’anxiété est disproportionnée par rapport au danger réel\n",
+      "text_sha256": "162337e5448eb3b21c889f238d33584e92c0b18128d012a921ce3a72fc31bde7"
+    },
+    {
+      "bbox": [
+        61.45000076293945,
+        249.45196533203125,
+        291.42822265625,
+        269.27813720703125
+      ],
+      "block_id": "page-0445-block-0020",
+      "order": 20,
+      "text": "engendré par l’objet ou la situation spécique et par rapport au contexte\nsocioculturel.\n",
+      "text_sha256": "8812df45c2b74a963b9eee321905b4ae76d6e28ebbec83690efd2d85ffac58b6"
+    },
+    {
+      "bbox": [
+        302.6499938964844,
+        239.4519500732422,
+        514.6921997070312,
+        260.39239501953125
+      ],
+      "block_id": "page-0445-block-0021",
+      "order": 21,
+      "text": "C. Le sujet reconnaît le caractère excessif ou irrationnel de la peur.\nN.B. : Chez l’enfant, ce caractère peut être absent.\n",
+      "text_sha256": "58c5d01a033dda594a9ffc75f97806976423588bd6e4eca076826f5a3c9c2c8f"
+    },
+    {
+      "bbox": [
+        52.650001525878906,
+        277.9019470214844,
+        277.7428894042969,
+        287.7281188964844
+      ],
+      "block_id": "page-0445-block-0022",
+      "order": 22,
+      "text": "E. La peur, l’anxiété ou l’évitement est persistant, habituellement d’une\n",
+      "text_sha256": "a0081a88f5f82061d88b542426055ac571452379282cd2ad71d062ebdc711f09"
+    },
+    {
+      "bbox": [
+        60.650001525878906,
+        287.9019470214844,
+        140.23129272460938,
+        297.7281188964844
+      ],
+      "block_id": "page-0445-block-0023",
+      "order": 23,
+      "text": "durée de 6 mois ou plus.\n",
+      "text_sha256": "51d580fb6d1159d5a00f1f412838a73b431c0532c6f9362f532d7355c78f253a"
+    },
+    {
+      "bbox": [
+        302.6499938964844,
+        277.9019470214844,
+        536.7994384765625,
+        287.7281188964844
+      ],
+      "block_id": "page-0445-block-0024",
+      "order": 24,
+      "text": "F. Chez les individus de moins de 18 ans, la durée est d’au moins 6 mois.\n",
+      "text_sha256": "0108e894e60958ac9e1d8f0c83e758767af07dff4cf6459015c4c05cdcda95c1"
+    },
+    {
+      "bbox": [
+        52.650001525878906,
+        306.3019714355469,
+        280.2534484863281,
+        316.1281433105469
+      ],
+      "block_id": "page-0445-block-0025",
+      "order": 25,
+      "text": "F. La peur, l’anxiété ou l’évitement causent une souffrance cliniquement\n",
+      "text_sha256": "84c4a747816555c30f9219403aaaa77fbb6b74c1f13b5fea74bd01c5d3feb2cd"
+    },
+    {
+      "bbox": [
+        59.45000076293945,
+        316.3019714355469,
+        290.5435485839844,
+        336.1281433105469
+      ],
+      "block_id": "page-0445-block-0026",
+      "order": 26,
+      "text": "signicative ou une altération du fonctionnement social, professionnel ou\ndans d’autres domaines importants.\n",
+      "text_sha256": "0813f6764374bf73997a754113e216b87eeb4a175216bb963c7359c65e54e828"
+    },
+    {
+      "bbox": [
+        302.6499938964844,
+        306.3019714355469,
+        515.0081787109375,
+        316.1281433105469
+      ],
+      "block_id": "page-0445-block-0027",
+      "order": 27,
+      "text": "E. L’évitement, l’anticipation anxieuse ou la souffrance dans la (les)\n",
+      "text_sha256": "113ab84f52b60a27c4b991723a94720fe324ee8770a362d9c16869e9d0327f48"
+    },
+    {
+      "bbox": [
+        310.6499938964844,
+        316.3019714355469,
+        541.8853759765625,
+        356.1281433105469
+      ],
+      "block_id": "page-0445-block-0028",
+      "order": 28,
+      "text": "situation(s) redoutée(s) perturbent de façon importante les habitudes\nde l’individu, ses activités professionnelles (ou scolaires) ou bien ses\nactivités sociales ou ses relations avec autrui, ou bien le fait d’avoir cette\nphobie s’accompagne d’un sentiment de souffrance important.\n",
+      "text_sha256": "6267c1b58da239370e5fbc21d721105249853ec9f075eecd345e24bf451376df"
+    },
+    {
+      "bbox": [
+        52.650001525878906,
+        364.751953125,
+        271.38848876953125,
+        374.578125
+      ],
+      "block_id": "page-0445-block-0029",
+      "order": 29,
+      "text": "G. Le trouble n’est pas mieux expliqué par les symptômes d’un autre\n",
+      "text_sha256": "dca2d069c8dbe0ead359dcd027c1da20575da678b20636f59b02afc09025ac15"
+    },
+    {
+      "bbox": [
+        61.45000076293945,
+        374.751953125,
+        294.34881591796875,
+        478.578125
+      ],
+      "block_id": "page-0445-block-0030",
+      "order": 30,
+      "text": "trouble mental, comprenant la peur, l’anxiété et l’évitement de situations\nassociés à des symptômes semblables aux symptômes de panique ou\nd’autres symptômes d’incapacité (comme dans l’agoraphobie) ;\ndes objets ou situations liés à des obsessions (comme dans le trouble\nobsessionnel-compulsif) ;\ndes souvenirs d’événements traumatiques (comme dans le trouble stress\npost-traumatique) ;\nune séparation de la maison ou des gures d’attachement (comme dans\nle trouble anxiété de séparation) ;\nou des situations sociales (comme dans l’anxiété sociale).\n",
+      "text_sha256": "f11cb709ac4fb2c108e2aa861495db1cbbaf0ca9f6894e885981a4653bbe0fd2"
+    },
+    {
+      "bbox": [
+        302.6499938964844,
+        364.751953125,
+        529.9144287109375,
+        374.578125
+      ],
+      "block_id": "page-0445-block-0031",
+      "order": 31,
+      "text": "G. L’anxiété, les attaques de panique ou l’évitement phobique associé à\n",
+      "text_sha256": "c6a12e9bf4123bef10dc34fd9f2e1e4bc7355126b85a85714d90ae15a6d3115b"
+    },
+    {
+      "bbox": [
+        311.45001220703125,
+        374.751953125,
+        541.3925170898438,
+        489.578125
+      ],
+      "block_id": "page-0445-block-0032",
+      "order": 32,
+      "text": "l’objet ou à la situation spécique ne sont pas mieux expliqués par un\nautre trouble mental tel\n• un trouble obsessionnel-compulsif (p. ex., lors de l’exposition à la\nsaleté chez quelqu’un ayant une obsession de la contamination) ;\n• un état de stress post-traumatique (p. ex., en réponse à des stimuli\nassociés à un facteur de stress sévère) ;\n• un trouble anxiété de séparation (p. ex., évitement scolaire) ;\n• une phobie sociale (p. ex., évitement des situations sociales par peur\nd’être embarrassé) ;\n• un trouble panique avec agoraphobie ou une agoraphobie sans\nantécédents de trouble panique.\n",
+      "text_sha256": "818aff5c28da670dc7ff8df94e111d57cb150c01c7589ae71a3dd561d820afe3"
+    },
+    {
+      "bbox": [
+        52.650001525878906,
+        498.1519470214844,
+        228.27801513671875,
+        518.9781494140625
+      ],
+      "block_id": "page-0445-block-0033",
+      "order": 33,
+      "text": "Spécier si :\nLe code est déterminé à partir du stimulus phobogène :\n",
+      "text_sha256": "70775d8820d0029c9ee3fe72370cf28b883f7eec6c2567d6c0b289de2feff5fd"
+    },
+    {
+      "bbox": [
+        302.6499938964844,
+        498.1519470214844,
+        353.6080017089844,
+        507.9781188964844
+      ],
+      "block_id": "page-0445-block-0034",
+      "order": 34,
+      "text": "Spécier le type\n",
+      "text_sha256": "c485e50351dcb9b85d0d08ffc8d71efe56b11c8091b2c7608e2bb1d9a6c799ad"
+    },
+    {
+      "bbox": [
+        52.650001525878906,
+        527.5228881835938,
+        528.3031005859375,
+        547.4281616210938
+      ],
+      "block_id": "page-0445-block-0035",
+      "order": 35,
+      "text": "300.29 (F40.218) Animal (p. ex. araignées, insectes, chiens).\nType animal: si la peur est induite par les animaux ou les insectes. Ce\nsous-type a généralement un début dans l’enfance.\n",
+      "text_sha256": "405705da39218d801959ed9c472e4ec7c59ff82edfe1f9517124614338925144"
+    },
+    {
+      "bbox": [
+        52.650001525878906,
+        555.9228515625,
+        542.5973510742188,
+        585.828125
+      ],
+      "block_id": "page-0445-block-0036",
+      "order": 36,
+      "text": "300.29 (F40.228) Environnement naturel (p. ex. hauteurs, tonnerre, eau).\nType environnemental naturel: si la peur est induite par des éléments de\nl’environnement naturel tels les orages, les hauteurs ou l’eau. Ce sous-type\na généralement un début dans l’enfance.\n",
+      "text_sha256": "4efba46eeb68b108aaffcffa3cb4a3eedee9041c9116fe1c0bac0c1e85179853"
+    },
+    {
+      "bbox": [
+        52.650001525878906,
+        594.3728637695312,
+        286.49700927734375,
+        614.2781372070312
+      ],
+      "block_id": "page-0445-block-0037",
+      "order": 37,
+      "text": "300.29 (F40.23x) Sang-injection-accident (p. ex. aiguilles, actes médi-\ncaux invasifs).\n",
+      "text_sha256": "4795478bdf57ea50c5734e0dfd7e053972c01a318d7b61e77f87754256eb2c7a"
+    },
+    {
+      "bbox": [
+        302.6499938964844,
+        594.3728637695312,
+        539.1043701171875,
+        634.2781372070312
+      ],
+      "block_id": "page-0445-block-0038",
+      "order": 38,
+      "text": "Type sang – injection – accident: si la peur est induite par le fait de voir\ndu sang ou un accident ou d’avoir une injection ou toute autre procédure\nmédicale invasive. Ce sous-type est hautement familial et est souvent\ncaractérisé par une réponse vasovagale intense.\n",
+      "text_sha256": "0ea058b4595d266aa6d7dcc58bb003d7d506c031899c37d45556ae3ef21a3416"
+    },
+    {
+      "bbox": [
+        52.650001525878906,
+        642.7728881835938,
+        544.7620239257812,
+        712.6781616210938
+      ],
+      "block_id": "page-0445-block-0039",
+      "order": 39,
+      "text": "300.29 (F40.248) Situationnel (p. ex. avions, ascenseurs, endroits clos).\nType situationnel: si la peur est induite par une situation spécique comme\nles transports publics, les tunnels, les ponts, les ascenseurs, les voyages\naériens, le fait de conduire une voiture ou les endroits clos. Ce sous-type a\nune distribution bimodale d’âge de début avec un pic dans l’enfance et un\nautre pic entre 20 et 30 ans. Il semble être identique au Trouble panique\navec Agoraphobie en ce qui concerne sa répartition selon le sexe, ses\nmodalités d’agrégation familiale et son âge de début, caractéristiques.\n",
+      "text_sha256": "c21264a81398123bf9a86bb4551f05c55ce4b8cd309bf0bd352ff5e8da6cc4c8"
+    }
+  ],
+  "coordinates_sha256": "df6e7ed539e2b1d00684e042fd7b6e4f606ce29e24d5f25d999fd8e9ee4d841e",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0445",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "428\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3\nSyndromes cliniques psychiatriques\nTABLEAU 20.7 Critères diagnostiques des phobies\nDSM-5\nDSM-IV-TR\n300.29 (F40.2) Phobie spécique\nPhobie spécique (auparavant phobie simple)\nA. Peur ou anxiété intense à propos d’un objet ou d’une situation spécique\n(p.ex. prendre l’avion, hauteurs, animaux, avoir une injection, voir du\nsang).\nN.B. : Chez les enfants, la peur ou l’anxiété peut s’exprimer par des pleurs,\ndes accès de colère, des réactions de gement ou d’agrippement.\nA. Peur persistante et intense à caractère irraisonné ou bien excessive,\ndéclenchée par la présence ou l’anticipation de la confrontation à un\nobjet ou une situation spécique (p. ex., prendre l’avion, les hauteurs, les\nanimaux, avoir une injection, voir du sang).\nB. L’objet ou la situation phobogène provoque presque toujours une peur ou\nune anxiété immédiate.\nB. L’exposition au stimulus phobogène provoque de façon quasi systéma-\ntique une réaction anxieuse immédiate qui peut prendre la forme d’une\nattaque de panique liée à la situation ou facilitée par la situation.\nN.B. : Chez les enfants, l’anxiété peut s’exprimer par des pleurs, des accès\nde colère, des réactions d’immobilisation (freeze) ou d’agrippement.\nC. L’objet ou la situation phobogène est activement évité(e) ou vécu(e) avec\nune peur ou une anxiété intense.\nD. La (les) situation(s) phobogène(s) est (sont) évitée(s) ou vécue(s) avec une\nanxiété ou une détresse intense.\nD. La peur ou l’anxiété est disproportionnée par rapport au danger réel\nengendré par l’objet ou la situation spécique et par rapport au contexte\nsocioculturel.\nC. Le sujet reconnaît le caractère excessif ou irrationnel de la peur.\nN.B. : Chez l’enfant, ce caractère peut être absent.\nE. La peur, l’anxiété ou l’évitement est persistant, habituellement d’une\ndurée de 6 mois ou plus.\nF. Chez les individus de moins de 18 ans, la durée est d’au moins 6 mois.\nF. La peur, l’anxiété ou l’évitement causent une souffrance cliniquement\nsignicative ou une altération du fonctionnement social, professionnel ou\ndans d’autres domaines importants.\nE. L’évitement, l’anticipation anxieuse ou la souffrance dans la (les)\nsituation(s) redoutée(s) perturbent de façon importante les habitudes\nde l’individu, ses activités professionnelles (ou scolaires) ou bien ses\nactivités sociales ou ses relations avec autrui, ou bien le fait d’avoir cette\nphobie s’accompagne d’un sentiment de souffrance important.\nG. Le trouble n’est pas mieux expliqué par les symptômes d’un autre\ntrouble mental, comprenant la peur, l’anxiété et l’évitement de situations\nassociés à des symptômes semblables aux symptômes de panique ou\nd’autres symptômes d’incapacité (comme dans l’agoraphobie) ;\ndes objets ou situations liés à des obsessions (comme dans le trouble\nobsessionnel-compulsif) ;\ndes souvenirs d’événements traumatiques (comme dans le trouble stress\npost-traumatique) ;\nune séparation de la maison ou des gures d’attachement (comme dans\nle trouble anxiété de séparation) ;\nou des situations sociales (comme dans l’anxiété sociale).\nG. L’anxiété, les attaques de panique ou l’évitement phobique associé à\nl’objet ou à la situation spécique ne sont pas mieux expliqués par un\nautre trouble mental tel\n• un trouble obsessionnel-compulsif (p. ex., lors de l’exposition à la\nsaleté chez quelqu’un ayant une obsession de la contamination) ;\n• un état de stress post-traumatique (p. ex., en réponse à des stimuli\nassociés à un facteur de stress sévère) ;\n• un trouble anxiété de séparation (p. ex., évitement scolaire) ;\n• une phobie sociale (p. ex., évitement des situations sociales par peur\nd’être embarrassé) ;\n• un trouble panique avec agoraphobie ou une agoraphobie sans\nantécédents de trouble panique.\nSpécier si :\nLe code est déterminé à partir du stimulus phobogène :\nSpécier le type\n300.29 (F40.218) Animal (p. ex. araignées, insectes, chiens).\nType animal: si la peur est induite par les animaux ou les insectes. Ce\nsous-type a généralement un début dans l’enfance.\n300.29 (F40.228) Environnement naturel (p. ex. hauteurs, tonnerre, eau).\nType environnemental naturel: si la peur est induite par des éléments de\nl’environnement naturel tels les orages, les hauteurs ou l’eau. Ce sous-type\na généralement un début dans l’enfance.\n300.29 (F40.23x) Sang-injection-accident (p. ex. aiguilles, actes médi-\ncaux invasifs).\nType sang – injection – accident: si la peur est induite par le fait de voir\ndu sang ou un accident ou d’avoir une injection ou toute autre procédure\nmédicale invasive. Ce sous-type est hautement familial et est souvent\ncaractérisé par une réponse vasovagale intense.\n300.29 (F40.248) Situationnel (p. ex. avions, ascenseurs, endroits clos).\nType situationnel: si la peur est induite par une situation spécique comme\nles transports publics, les tunnels, les ponts, les ascenseurs, les voyages\naériens, le fait de conduire une voiture ou les endroits clos. Ce sous-type a\nune distribution bimodale d’âge de début avec un pic dans l’enfance et un\nautre pic entre 20 et 30 ans. Il semble être identique au Trouble panique\navec Agoraphobie en ce qui concerne sa répartition selon le sexe, ses\nmodalités d’agrégation familiale et son âge de début, caractéristiques.\n",
+  "raw_text_sha256": "7b9885673afa2131482a589a3dd399095efaa4e9eb3ebb617d216989981354dd",
+  "source_page_display": 446,
+  "source_page_index": 445
+}

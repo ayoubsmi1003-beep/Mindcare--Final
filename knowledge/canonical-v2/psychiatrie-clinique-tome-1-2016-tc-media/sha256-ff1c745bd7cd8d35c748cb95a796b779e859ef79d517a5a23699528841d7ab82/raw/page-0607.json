@@ -1,0 +1,400 @@
+{
+  "block_sequence_sha256": "483bb496f1231a350964eedaddf21852c6606d0c26f73589af537a457d0c98b1",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0607-block-0001",
+      "order": 1,
+      "text": "590\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "9e8b49b556a01bdeba4062de4c6a84e2d5b251d1c6cc11f7271bf1ca7e3d96c5"
+    },
+    {
+      "bbox": [
+        48.0,
+        657.3158569335938,
+        291.14306640625,
+        725.3085327148438
+      ],
+      "block_id": "page-0607-block-0002",
+      "order": 2,
+      "text": "D’autres formes plus rares d’atteintes vasculaires sont\nl’angiopathie amyloïde cérébrale (qui mène à de mul-\ntiples hémorragies et infarcissements) et l’artériopathie\ncérébrale autosomique dominante avec infarctus sous-\ncorticaux et leucoencéphalopathie (CADASIL), affection\nhéréditaire à transmission autosomique dominante, qui se\n",
+      "text_sha256": "5d9b439832d093252d16cdddec0225f6ef49da44021b9ae7dd49db3346ef20c1"
+    },
+    {
+      "bbox": [
+        306.0,
+        657.3158569335938,
+        548.9913330078125,
+        690.8085327148438
+      ],
+      "block_id": "page-0607-block-0003",
+      "order": 3,
+      "text": "manifeste par une démence vasculaire sous-corticale dont\nplusieurs membres d’une même famille sont affectés dès la\ncinquantaine.\n",
+      "text_sha256": "15be568952b44a936e804444b316e0d0b4a00c4756c73e9ba7026b9c848b0e4a"
+    },
+    {
+      "bbox": [
+        306.0,
+        691.8158569335938,
+        549.2422485351562,
+        725.3085327148438
+      ],
+      "block_id": "page-0607-block-0004",
+      "order": 4,
+      "text": "Dans la description traditionnelle de la démence, élaborée\ndans le contexte de la DTA, la perte de mémoire prédomine\net survient précocement. Dans la DV, cependant, les troubles\n",
+      "text_sha256": "c574a3c78a4d7d63985a363550b6b1dd88da367af32527828a6251f7ea4b078e"
+    },
+    {
+      "bbox": [
+        160.90000915527344,
+        59.124122619628906,
+        443.68798828125,
+        69.7002944946289
+      ],
+      "block_id": "page-0607-block-0005",
+      "order": 5,
+      "text": "DSM-5\nDSM-IV-TR\n",
+      "text_sha256": "67d368c78be7842a2bc99b149901566bcadf3c9d62623ea48bafcc32b3563ffb"
+    },
+    {
+      "bbox": [
+        77.25,
+        74.0228500366211,
+        269.4843444824219,
+        94.0423812866211
+      ],
+      "block_id": "page-0607-block-0006",
+      "order": 6,
+      "text": "290.40 (F01.5x) Trouble neurocognitif vasculaire majeur\nou léger\n",
+      "text_sha256": "bffcc05d81e8352e7f50b629d30cb94f453657cfdfc4c9da74a7b8ee4edbd9f0"
+    },
+    {
+      "bbox": [
+        309.0,
+        74.0228500366211,
+        538.5219116210938,
+        84.0423812866211
+      ],
+      "block_id": "page-0607-block-0007",
+      "order": 7,
+      "text": "Démence vasculaire (auparavant démence par infarctus multiples)\n",
+      "text_sha256": "39977c93740550909db82ef6b1cb19470f097199ad810d237a06266490b295b0"
+    },
+    {
+      "bbox": [
+        52.25,
+        98.501953125,
+        274.9244079589844,
+        108.328125
+      ],
+      "block_id": "page-0607-block-0008",
+      "order": 8,
+      "text": "A. Les critères d’un trouble neurocognitif majeur ou léger sont remplis\n",
+      "text_sha256": "b5474f64b4a7c23740ae0f21b745517d4b7c26d07ddbf356d3f4ea3c3f253a8e"
+    },
+    {
+      "bbox": [
+        60.75,
+        108.501953125,
+        128.25799560546875,
+        118.328125
+      ],
+      "block_id": "page-0607-block-0009",
+      "order": 9,
+      "text": "(voir l’encadré 27.1).\n",
+      "text_sha256": "cf14f362759e0da88c62f5bbd93725e9e002b1ee4de2d635a64f644d0f5235a9"
+    },
+    {
+      "bbox": [
+        302.5,
+        98.501953125,
+        543.0486450195312,
+        108.328125
+      ],
+      "block_id": "page-0607-block-0010",
+      "order": 10,
+      "text": "A. Apparition de décits cognitifs multiples, comme en témoignent à la fois :\n",
+      "text_sha256": "478f63c2527c41a5cfbf839ac90c70ca6d71f568506f711472f4111073077d73"
+    },
+    {
+      "bbox": [
+        311.5,
+        109.501953125,
+        534.3404541015625,
+        119.328125
+      ],
+      "block_id": "page-0607-block-0011",
+      "order": 11,
+      "text": "(1) une altération de la mémoire (altération de la capacité d’apprendre\n",
+      "text_sha256": "1b0822eebce3bb9c39a9fd121254daa6e637df3a472a792a3f34dedc4e6fae7e"
+    },
+    {
+      "bbox": [
+        311.5,
+        119.501953125,
+        542.19482421875,
+        150.328125
+      ],
+      "block_id": "page-0607-block-0012",
+      "order": 12,
+      "text": "des informations nouvelles ou à se rappeler les informations apprises\nantérieurement) ;\n(2) une (ou plusieurs) des perturbations cognitives suivantes :\n",
+      "text_sha256": "078fddc4210fb3e99d2082b61ed23a0ab637a3866376aac66cfb5ea592080341"
+    },
+    {
+      "bbox": [
+        320.5,
+        151.501953125,
+        529.9246826171875,
+        172.328125
+      ],
+      "block_id": "page-0607-block-0013",
+      "order": 13,
+      "text": "(a) aphasie (perturbation du langage),\n(b) apraxie (altération de la capacité à réaliser une activité motrice\n",
+      "text_sha256": "b608c2fd1ea214f8e629d847a1935044fe7e336e5bbb842bb96f3d13a633661b"
+    },
+    {
+      "bbox": [
+        320.5,
+        172.501953125,
+        526.9268188476562,
+        193.328125
+      ],
+      "block_id": "page-0607-block-0014",
+      "order": 14,
+      "text": "malgré des fonctions motrices intactes),\n(c) agnosie (impossibilité de reconnaître ou d’identier des objets\n",
+      "text_sha256": "199f7a8baa6eba2e99f11e6b109821748d6c9225519279a5fb3fc40167e953bf"
+    },
+    {
+      "bbox": [
+        320.5,
+        193.501953125,
+        539.5088500976562,
+        214.328125
+      ],
+      "block_id": "page-0607-block-0015",
+      "order": 15,
+      "text": "malgré des fonctions sensorielles intactes),\n(d) perturbation des fonctions exécutives (faire des projets, organiser,\n",
+      "text_sha256": "0e0cd132ffcdb008c6aebf54576e940044770dcfb3df327cf6356323c12850d3"
+    },
+    {
+      "bbox": [
+        330.6499938964844,
+        214.501953125,
+        498.5318908691406,
+        224.328125
+      ],
+      "block_id": "page-0607-block-0016",
+      "order": 16,
+      "text": "ordonner dans le temps, avoir une pensée abstraite).\n",
+      "text_sha256": "482573b37c1be311386bf7cad162aedbc3609061f894542723ce4dfaeea6ff1c"
+    },
+    {
+      "bbox": [
+        52.25,
+        228.9519500732422,
+        289.5470275878906,
+        238.7781219482422
+      ],
+      "block_id": "page-0607-block-0017",
+      "order": 17,
+      "text": "B. Les manifestations cliniques sont compatibles avec une étiologie vascu-\n",
+      "text_sha256": "c548b269f7e2888cb8bd78e790d845d3d0be93b98b663b7577c23e5ef3d8d1cf"
+    },
+    {
+      "bbox": [
+        60.75,
+        238.9519500732422,
+        293.0069580078125,
+        290.77813720703125
+      ],
+      "block_id": "page-0607-block-0018",
+      "order": 18,
+      "text": "laire, comme cela est suggéré par l’un des deux éléments suivants :\n1. La survenue des décits cognitifs est en relation temporelle avec un\nou plusieurs accidents cérébrovasculaires ;\n2. Mise en évidence d’un déclin notable de l’attention complexe (incluant\nla rapidité de traitement) et des fonctions exécutives frontales.\n",
+      "text_sha256": "2ed8614dc9a7e7c395ccbf1a7938619a571bd40aa03584c3afe2d35c7568fe42"
+    },
+    {
+      "bbox": [
+        302.5,
+        228.9519500732422,
+        537.9736328125,
+        238.7781219482422
+      ],
+      "block_id": "page-0607-block-0019",
+      "order": 19,
+      "text": "B. Les décits cognitifs des critères A1 et A2 sont tous les deux à l’origine\n",
+      "text_sha256": "c1aa556461d3b3fc1ca171546b00108ba52cc51cfa278e808edcc7da019637ad"
+    },
+    {
+      "bbox": [
+        311.0,
+        238.9519500732422,
+        536.3135986328125,
+        268.77813720703125
+      ],
+      "block_id": "page-0607-block-0020",
+      "order": 20,
+      "text": "d’une altération signicative du fonctionnement social ou professionnel\net représentent un déclin signicatif par rapport au niveau de fonction-\nnement antérieur.\n",
+      "text_sha256": "c50a172d4e61f59880a855ae2bcaf821a9342a9afd8bc15c35f5aca674b604c5"
+    },
+    {
+      "bbox": [
+        52.25,
+        295.3519592285156,
+        272.65350341796875,
+        305.1781311035156
+      ],
+      "block_id": "page-0607-block-0021",
+      "order": 21,
+      "text": "C. Mise en évidence d’après les antécédents, l’examen clinique et/ou\n",
+      "text_sha256": "8c68c90494acbc32575c7f8e138989c996fa48ec47b360934394c8f1437a41f4"
+    },
+    {
+      "bbox": [
+        60.900001525878906,
+        305.3519592285156,
+        287.2088623046875,
+        325.1781311035156
+      ],
+      "block_id": "page-0607-block-0022",
+      "order": 22,
+      "text": "la neuro-imagerie de la présence d’une maladie cérébrovasculaire\nconsidérée comme sufsante pour expliquer les décits neurocognitifs.\n",
+      "text_sha256": "51f97648c0ef0b925d5f85057a8996f7ca458708a8b28141e5d5e8d2d87c689a"
+    },
+    {
+      "bbox": [
+        302.5,
+        295.3519592285156,
+        530.0210571289062,
+        305.1781311035156
+      ],
+      "block_id": "page-0607-block-0023",
+      "order": 23,
+      "text": "C. Signes et symptômes neurologiques en foyer (p. ex., exagération des\n",
+      "text_sha256": "c85a0eea18476084d61f3b9c7b379edb62ac549ac46536605da874b90a89df9f"
+    },
+    {
+      "bbox": [
+        311.1499938964844,
+        305.3519592285156,
+        533.0301513671875,
+        365.1781311035156
+      ],
+      "block_id": "page-0607-block-0024",
+      "order": 24,
+      "text": "réexes ostéotendineux, réexe cutané plantaire en extension, paraly-\nsie pseudobulbaire, troubles de la marche, faiblesse d’une extrémité)\nou mise en évidence d’après les examens complémentaires d’une\nmaladie cérébrovasculaire (p. ex., infarctus multiples dans le cortex et\nla substance blanche sous-corticale) jugée liée étiologiquement à la\nperturbation.\n",
+      "text_sha256": "ce4ac7e9db16c4b504c2f85d473b1326b1e2c8ef1f397b2df83cca63f064750f"
+    },
+    {
+      "bbox": [
+        52.25,
+        369.8019714355469,
+        275.6288146972656,
+        379.6281433105469
+      ],
+      "block_id": "page-0607-block-0025",
+      "order": 25,
+      "text": "D. Les symptômes ne sont pas mieux expliqués par une autre maladie\n",
+      "text_sha256": "3ebcd641ac1d8617ba59df9f436e26e45c4e59d7186dc6a7c9f033acde2a2677"
+    },
+    {
+      "bbox": [
+        61.04999923706055,
+        379.8019714355469,
+        175.3536834716797,
+        389.6281433105469
+      ],
+      "block_id": "page-0607-block-0026",
+      "order": 26,
+      "text": "cérébrale ou un trouble systémique.\n",
+      "text_sha256": "4feb245b55400d9976ba56be35c4df814a561332449174e9d135a637c9715eb6"
+    },
+    {
+      "bbox": [
+        302.5,
+        369.8019714355469,
+        531.0744018554688,
+        379.6281433105469
+      ],
+      "block_id": "page-0607-block-0027",
+      "order": 27,
+      "text": "D. Les décits ne surviennent pas exclusivement au cours de l’évolution\n",
+      "text_sha256": "3eff2fb3031061343c0beb3e9f0f2e94dcc0f5d17d39e2cf5a8d7e8dea5d2222"
+    },
+    {
+      "bbox": [
+        311.3000183105469,
+        379.8019714355469,
+        355.3280334472656,
+        389.6281433105469
+      ],
+      "block_id": "page-0607-block-0028",
+      "order": 28,
+      "text": "d’un delirium.\n",
+      "text_sha256": "677ae707f5be22979bf30223fcc8b3128ead66028df566fabb60aba21f39c959"
+    },
+    {
+      "bbox": [
+        52.25,
+        394.12286376953125,
+        291.2431335449219,
+        548.0281372070312
+      ],
+      "block_id": "page-0607-block-0029",
+      "order": 29,
+      "text": "Un trouble neurocognitif vasculaire probable est diagnostiqué si l’un\ndes éléments suivants est présent ; sinon un trouble neurocognitif\nvasculaire possible sera le diagnostic retenu :\n1. Les critères cliniques sont étayés par la mise en évidence par neuro-\nimagerie d’atteintes parenchymateuses signicatives imputables à\nune maladie cérébrovasculaire (preuve de la neuro-imagerie) ;\n2. Le syndrome neurocognitif est en relation temporelle avec un ou\nplusieurs accidents cérébrovasculaires avérés.\n3. Mise en évidence à la fois clinique et génétique de la présence d’une\nmaladie cérébrovasculaire (p. ex., artériopathie cérébrale autosomique\ndominante avec infarctus sous-corticaux et leucoencéphalopathie).\nUn trouble neurocognitif vasculaire possible est diagnostiqué lorsque\nles critères cliniques sont présents mais que la neuro-imagerie n’est pas\ndisponible et que la relation temporelle directe avec un ou plusieurs acci-\ndents cérébrovasculaires n’est pas établie.\n",
+      "text_sha256": "21e343aae9e52e42dbd3655cffb6646873c5b9454f906da599527545cd544206"
+    },
+    {
+      "bbox": [
+        50.29999923706055,
+        41.002296447753906,
+        345.9692077636719,
+        54.02006912231445
+      ],
+      "block_id": "page-0607-block-0030",
+      "order": 30,
+      "text": "TABLEAU 27.4 Critères diagnostiques du trouble neurocognitif vasculaire\n",
+      "text_sha256": "a8039e09385f108b112d31424beb369a81cbcb0dffd75e8468a348ebb29ffba9"
+    },
+    {
+      "bbox": [
+        48.0,
+        555.390625,
+        209.54830932617188,
+        564.2588500976562
+      ],
+      "block_id": "page-0607-block-0031",
+      "order": 31,
+      "text": "Sources : APA (2015), p. 733 ; APA (2004a), p. 186-187.\n",
+      "text_sha256": "3356f7be48b33b7a3f61b824b4139a5f35b5bb86c1d308081784ee1e80d3cd17"
+    },
+    {
+      "bbox": [
+        48.0,
+        570.390625,
+        538.9441528320312,
+        627.125
+      ],
+      "block_id": "page-0607-block-0032",
+      "order": 32,
+      "text": "Traduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004.\nAll rights reserved.\n",
+      "text_sha256": "0352d9903985e6b7f02b2deb2d2203be5950df7943799e00cca0b4ea277a8b9b"
+    }
+  ],
+  "coordinates_sha256": "d2e7d78cc12cb156f705212990cf173960a378cd8710227894b2c530ce080ed5",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0607",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "590\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nD’autres formes plus rares d’atteintes vasculaires sont\nl’angiopathie amyloïde cérébrale (qui mène à de mul-\ntiples hémorragies et infarcissements) et l’artériopathie\ncérébrale autosomique dominante avec infarctus sous-\ncorticaux et leucoencéphalopathie (CADASIL), affection\nhéréditaire à transmission autosomique dominante, qui se\nmanifeste par une démence vasculaire sous-corticale dont\nplusieurs membres d’une même famille sont affectés dès la\ncinquantaine.\nDans la description traditionnelle de la démence, élaborée\ndans le contexte de la DTA, la perte de mémoire prédomine\net survient précocement. Dans la DV, cependant, les troubles\nDSM-5\nDSM-IV-TR\n290.40 (F01.5x) Trouble neurocognitif vasculaire majeur\nou léger\nDémence vasculaire (auparavant démence par infarctus multiples)\nA. Les critères d’un trouble neurocognitif majeur ou léger sont remplis\n(voir l’encadré 27.1).\nA. Apparition de décits cognitifs multiples, comme en témoignent à la fois :\n(1) une altération de la mémoire (altération de la capacité d’apprendre\ndes informations nouvelles ou à se rappeler les informations apprises\nantérieurement) ;\n(2) une (ou plusieurs) des perturbations cognitives suivantes :\n(a) aphasie (perturbation du langage),\n(b) apraxie (altération de la capacité à réaliser une activité motrice\nmalgré des fonctions motrices intactes),\n(c) agnosie (impossibilité de reconnaître ou d’identier des objets\nmalgré des fonctions sensorielles intactes),\n(d) perturbation des fonctions exécutives (faire des projets, organiser,\nordonner dans le temps, avoir une pensée abstraite).\nB. Les manifestations cliniques sont compatibles avec une étiologie vascu-\nlaire, comme cela est suggéré par l’un des deux éléments suivants :\n1. La survenue des décits cognitifs est en relation temporelle avec un\nou plusieurs accidents cérébrovasculaires ;\n2. Mise en évidence d’un déclin notable de l’attention complexe (incluant\nla rapidité de traitement) et des fonctions exécutives frontales.\nB. Les décits cognitifs des critères A1 et A2 sont tous les deux à l’origine\nd’une altération signicative du fonctionnement social ou professionnel\net représentent un déclin signicatif par rapport au niveau de fonction-\nnement antérieur.\nC. Mise en évidence d’après les antécédents, l’examen clinique et/ou\nla neuro-imagerie de la présence d’une maladie cérébrovasculaire\nconsidérée comme sufsante pour expliquer les décits neurocognitifs.\nC. Signes et symptômes neurologiques en foyer (p. ex., exagération des\nréexes ostéotendineux, réexe cutané plantaire en extension, paraly-\nsie pseudobulbaire, troubles de la marche, faiblesse d’une extrémité)\nou mise en évidence d’après les examens complémentaires d’une\nmaladie cérébrovasculaire (p. ex., infarctus multiples dans le cortex et\nla substance blanche sous-corticale) jugée liée étiologiquement à la\nperturbation.\nD. Les symptômes ne sont pas mieux expliqués par une autre maladie\ncérébrale ou un trouble systémique.\nD. Les décits ne surviennent pas exclusivement au cours de l’évolution\nd’un delirium.\nUn trouble neurocognitif vasculaire probable est diagnostiqué si l’un\ndes éléments suivants est présent ; sinon un trouble neurocognitif\nvasculaire possible sera le diagnostic retenu :\n1. Les critères cliniques sont étayés par la mise en évidence par neuro-\nimagerie d’atteintes parenchymateuses signicatives imputables à\nune maladie cérébrovasculaire (preuve de la neuro-imagerie) ;\n2. Le syndrome neurocognitif est en relation temporelle avec un ou\nplusieurs accidents cérébrovasculaires avérés.\n3. Mise en évidence à la fois clinique et génétique de la présence d’une\nmaladie cérébrovasculaire (p. ex., artériopathie cérébrale autosomique\ndominante avec infarctus sous-corticaux et leucoencéphalopathie).\nUn trouble neurocognitif vasculaire possible est diagnostiqué lorsque\nles critères cliniques sont présents mais que la neuro-imagerie n’est pas\ndisponible et que la relation temporelle directe avec un ou plusieurs acci-\ndents cérébrovasculaires n’est pas établie.\nTABLEAU 27.4 Critères diagnostiques du trouble neurocognitif vasculaire\nSources : APA (2015), p. 733 ; APA (2004a), p. 186-187.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004.\nAll rights reserved.\n",
+  "raw_text_sha256": "75f03463b01a152e0f7007f2f617bac0f8ee1d2053dbc19ea7b57c6f854aa25a",
+  "source_page_display": 608,
+  "source_page_index": 607
+}

@@ -1,0 +1,316 @@
+{
+  "block_sequence_sha256": "758f77e0982cafb684319662dd6567912ebf7f90d0e70438ed7b82f3e524558e",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0639-block-0001",
+      "order": 1,
+      "text": "622\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "673b6e4b0cb024a6d3a835919b344c54af35d455300a5fe71ed75d1db61eb1aa"
+    },
+    {
+      "bbox": [
+        50.25,
+        41.002296447753906,
+        302.82037353515625,
+        53.320068359375
+      ],
+      "block_id": "page-0639-block-0002",
+      "order": 2,
+      "text": "TABLEAU 28.2 Troubles mentaux dus à une affection médicale\n",
+      "text_sha256": "2dfc1d14665e3272f6b3dbcc25e557e6756433d72bb743247faf7981a88ca589"
+    },
+    {
+      "bbox": [
+        160.75,
+        60.27412414550781,
+        443.28802490234375,
+        70.85029602050781
+      ],
+      "block_id": "page-0639-block-0003",
+      "order": 3,
+      "text": "DSM-5\nDSM-IV-TR\n",
+      "text_sha256": "67d368c78be7842a2bc99b149901566bcadf3c9d62623ea48bafcc32b3563ffb"
+    },
+    {
+      "bbox": [
+        81.5,
+        78.37285614013672,
+        521.1126098632812,
+        88.39238739013672
+      ],
+      "block_id": "page-0639-block-0004",
+      "order": 4,
+      "text": "Troubles mentaux dus à une autre affection médicale\nTroubles mentaux dus à une affection médicale générale\n",
+      "text_sha256": "ddef747f09582e9a80ea802980e5aad6acd4e56f9ce5695aa8c5b96015d527e8"
+    },
+    {
+      "bbox": [
+        52.25,
+        95.9019546508789,
+        182.0623016357422,
+        127.7281265258789
+      ],
+      "block_id": "page-0639-block-0005",
+      "order": 5,
+      "text": "Trouble psychotique\n• 293.81 (F06.2) avec idées délirantes\n• 293.82 (F06.0) avec hallucinations\n",
+      "text_sha256": "c653762fb9df5aae355ce76bb05ade3e4d75da37eae5cf2fe61904fc8ad05921"
+    },
+    {
+      "bbox": [
+        302.25,
+        95.9019546508789,
+        381.21002197265625,
+        127.7281265258789
+      ],
+      "block_id": "page-0639-block-0006",
+      "order": 6,
+      "text": "Trouble psychotique\n• avec idées délirantes\n• avec hallucinations\n",
+      "text_sha256": "8358b6227808874948f95550e6354127893ca5597acff09750a88289ae293d64"
+    },
+    {
+      "bbox": [
+        52.25,
+        134.3019561767578,
+        364.6490783691406,
+        144.1281280517578
+      ],
+      "block_id": "page-0639-block-0007",
+      "order": 7,
+      "text": "293.89 (F06.1) Catatonie\nTrouble catatonique\n",
+      "text_sha256": "457038d6883ee6c3b745d958f53027b2d052df264e4c04c885c0313b23fc1d76"
+    },
+    {
+      "bbox": [
+        52.25,
+        150.751953125,
+        278.88201904296875,
+        193.578125
+      ],
+      "block_id": "page-0639-block-0008",
+      "order": 8,
+      "text": "Trouble bipolaire et troubles apparentés\n• 293.83 (F06.33) avec caractéristiques maniaques\n• 293.83 (F06.33) avec épisode d’allure maniaque ou hypomaniaque\n• 293.83 (F06.34) avec caractéristiques mixtes\n",
+      "text_sha256": "937abb6fb775e35a2d4f06cecdc60134caeee39f1566c38a1dbadca117fb3373"
+    },
+    {
+      "bbox": [
+        302.25,
+        150.751953125,
+        418.5420227050781,
+        182.578125
+      ],
+      "block_id": "page-0639-block-0009",
+      "order": 9,
+      "text": "Trouble de l’humeur\n• avec caractéristiques maniaques\n• avec caractéristiques mixtes\n",
+      "text_sha256": "50030470d82dbb1f0da10f0c79096725a3ed86b398c5c287af09c84f46680cce"
+    },
+    {
+      "bbox": [
+        52.25,
+        200.15196228027344,
+        456.4334411621094,
+        242.97813415527344
+      ],
+      "block_id": "page-0639-block-0010",
+      "order": 10,
+      "text": "Avec caractéristiques dépressives\n• avec épisode d’allure de dépression majeure\nTrouble dépressif\n• 293.83 (F06.31) avec caractéristiques dépressives\n• 293.83 (F06.32) avec épisode évoquant un épisode dépressif caractérisé\n• 293.83 (F06.34) avec caractéristiques mixtes\n",
+      "text_sha256": "5a2489c97da35ed7a6cd842f93500e9f7c86b7133e9bae51839a6ce20a8ee24a"
+    },
+    {
+      "bbox": [
+        52.25,
+        249.60195922851562,
+        351.64404296875,
+        259.4281311035156
+      ],
+      "block_id": "page-0639-block-0011",
+      "order": 11,
+      "text": "293.84 (F06.4) Trouble anxieux\nTrouble anxieux\n",
+      "text_sha256": "9d9f21c696322ddc7ef4dbc67d4cc0830b5ba5cd891efbaac6be934a638a03f5"
+    },
+    {
+      "bbox": [
+        52.25,
+        266.001953125,
+        272.37103271484375,
+        275.828125
+      ],
+      "block_id": "page-0639-block-0012",
+      "order": 12,
+      "text": "294.8 (F06.8) Trouble obsessionnel-compulsif et troubles apparentés\n",
+      "text_sha256": "fa1174658acac831c6315db5823fc8c54e684bf40dc8c8f0cb27607680ad9600"
+    },
+    {
+      "bbox": [
+        52.25,
+        282.45196533203125,
+        399.7740478515625,
+        292.27813720703125
+      ],
+      "block_id": "page-0639-block-0013",
+      "order": 13,
+      "text": "310.1 (F07.0) Modication de la personnalité\nModication de la personnalité\n",
+      "text_sha256": "a71f5755e60f003a92387b382dd2a55cb12340ea46de2f0ecfe0d6ba689c9727"
+    },
+    {
+      "bbox": [
+        52.25,
+        298.8519592285156,
+        364.73907470703125,
+        319.6781311035156
+      ],
+      "block_id": "page-0639-block-0014",
+      "order": 14,
+      "text": "307.42 (F51.01) Insomnie\n307.44 (F51.11) Hypersomnolence\nTrouble du sommeil\n",
+      "text_sha256": "1aac7be72f1fc1f194118b63405cf45435268313f6a03942dd198955b0f8f3b0"
+    },
+    {
+      "bbox": [
+        302.25,
+        326.3019714355469,
+        367.12200927734375,
+        336.1281433105469
+      ],
+      "block_id": "page-0639-block-0015",
+      "order": 15,
+      "text": "Dysfonction sexuelle\n",
+      "text_sha256": "647eae49d754c3964581254a06467e7a52422faa7c2d295384afd6a1fd93b08a"
+    },
+    {
+      "bbox": [
+        52.25,
+        344.70196533203125,
+        389.9750671386719,
+        370.9781188964844
+      ],
+      "block_id": "page-0639-block-0016",
+      "order": 16,
+      "text": "294.8 (F06.8) Autre trouble mental spécié\nTrouble mental non spécié\n300.9 (F99) Trouble mental non spécié\n",
+      "text_sha256": "67a6950ad4b76e6c9f5ab7e5fe859f3f8bf63d71b53281828c81c346803b1567"
+    },
+    {
+      "bbox": [
+        48.25,
+        378.7406311035156,
+        546.8839721679688,
+        444.4750061035156
+      ],
+      "block_id": "page-0639-block-0017",
+      "order": 17,
+      "text": "Sources : APA (2015) ; APA (2014).\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris,\n2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004.\nAll rights reserved.\n",
+      "text_sha256": "18a5cc52acd0a107173decee0ce4b3f56aee0404c7e67183812504ed736a9df4"
+    },
+    {
+      "bbox": [
+        50.25,
+        466.352294921875,
+        399.9093017578125,
+        478.7200622558594
+      ],
+      "block_id": "page-0639-block-0018",
+      "order": 18,
+      "text": "ENCADRÉ 28.2 Critères généraux du trouble mental dû à une autre affection médicale\n",
+      "text_sha256": "109e2a46cf9069b2dac724daa5e5747d0bdba6abfcfce377b86206b080bedc20"
+    },
+    {
+      "bbox": [
+        188.8000030517578,
+        484.6241149902344,
+        408.43267822265625,
+        506.0923767089844
+      ],
+      "block_id": "page-0639-block-0019",
+      "order": 19,
+      "text": "DSM-5\n29x.xx (F06.x) Trouble mental dû à une autre affection médicale\n",
+      "text_sha256": "4cb9f359a8a369d9de10738315adf1bc75f0fd91ad5722a4623e373dbec08748"
+    },
+    {
+      "bbox": [
+        52.25,
+        511.60198974609375,
+        544.7069702148438,
+        586.4281616210938
+      ],
+      "block_id": "page-0639-block-0020",
+      "order": 20,
+      "text": "1. Symptômes prédominants de la lignée\n• psychotique : hallucinations ou délires\n• maniaque : humeur euphorique, expansive ou irritable et activité ou énergie augmentées\n• dépressive : humeur dépressive ou anhédonie marquée\n• anxieuse : attaques de panique ou anxiété\n• obsessionnelle-compulsive : obsessions, compulsions, obsession d’une dysmorphie corporelle, amassage pathologique, comportements répétitifs liés\nau corps (trichotillomanie, dermatillomanie)\n",
+      "text_sha256": "63f2122120bce61118aa30e9163549253bb418cf2b9dcf1874d32c5a17a15933"
+    },
+    {
+      "bbox": [
+        52.25,
+        593.001953125,
+        526.823974609375,
+        612.828125
+      ],
+      "block_id": "page-0639-block-0021",
+      "order": 21,
+      "text": "2. Les antécédents, l’examen physique ou les examens complémentaires montrent clairement que la perturbation est la conséquence physiopathique\ndirecte d’une autre affection médicale.\n",
+      "text_sha256": "573e5825f44714be7ee0bb12af464966347071fd8d1844e52bca94469a669432"
+    },
+    {
+      "bbox": [
+        52.25,
+        619.4519653320312,
+        541.4852294921875,
+        639.2781372070312
+      ],
+      "block_id": "page-0639-block-0022",
+      "order": 22,
+      "text": "3. La perturbation ne s’explique pas mieux par un autre trouble mental (p. ex., un trouble de l’adaptation avec humeur dépressive en réponse au stress lié\nà une affection médicale grave).\n",
+      "text_sha256": "a5c1bb82a9a208779dfff40f06e188dc47d5eca41aeafcfcf045de9bb0e8da79"
+    },
+    {
+      "bbox": [
+        52.25,
+        645.8519897460938,
+        335.68133544921875,
+        655.6781616210938
+      ],
+      "block_id": "page-0639-block-0023",
+      "order": 23,
+      "text": "4. La perturbation ne survient pas uniquement au cours d’un état confusionnel (delirium).\n",
+      "text_sha256": "8bf2438e3c8dae377ca713bc206663e86546db0bad53dece12f3900a2956f56b"
+    },
+    {
+      "bbox": [
+        52.25,
+        662.3019409179688,
+        542.6400146484375,
+        682.1281127929688
+      ],
+      "block_id": "page-0639-block-0024",
+      "order": 24,
+      "text": "5. Les symptômes entraînent une détresse cliniquement signicative ou une altération du fonctionnement social, professionnel ou dans d’autres domaines\nimportants.\n",
+      "text_sha256": "3f181e1deab8c42b562088d9294adb0a3567795f0a0e8a9917a892b2661286ee"
+    },
+    {
+      "bbox": [
+        48.25,
+        688.890625,
+        529.4806518554688,
+        724.625
+      ],
+      "block_id": "page-0639-block-0025",
+      "order": 25,
+      "text": "Source : APA (2015), p. 136, 170, 211, 270, 307.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\n",
+      "text_sha256": "87f2f762838115cbc46347048308b44b61470d905d03dfff213ac8de9fe546ba"
+    }
+  ],
+  "coordinates_sha256": "554ddbc89869e752567a1f4d7e169c3dde26e43a51f4dd0f828ed1528780dce4",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0639",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "622\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nTABLEAU 28.2 Troubles mentaux dus à une affection médicale\nDSM-5\nDSM-IV-TR\nTroubles mentaux dus à une autre affection médicale\nTroubles mentaux dus à une affection médicale générale\nTrouble psychotique\n• 293.81 (F06.2) avec idées délirantes\n• 293.82 (F06.0) avec hallucinations\nTrouble psychotique\n• avec idées délirantes\n• avec hallucinations\n293.89 (F06.1) Catatonie\nTrouble catatonique\nTrouble bipolaire et troubles apparentés\n• 293.83 (F06.33) avec caractéristiques maniaques\n• 293.83 (F06.33) avec épisode d’allure maniaque ou hypomaniaque\n• 293.83 (F06.34) avec caractéristiques mixtes\nTrouble de l’humeur\n• avec caractéristiques maniaques\n• avec caractéristiques mixtes\nAvec caractéristiques dépressives\n• avec épisode d’allure de dépression majeure\nTrouble dépressif\n• 293.83 (F06.31) avec caractéristiques dépressives\n• 293.83 (F06.32) avec épisode évoquant un épisode dépressif caractérisé\n• 293.83 (F06.34) avec caractéristiques mixtes\n293.84 (F06.4) Trouble anxieux\nTrouble anxieux\n294.8 (F06.8) Trouble obsessionnel-compulsif et troubles apparentés\n310.1 (F07.0) Modication de la personnalité\nModication de la personnalité\n307.42 (F51.01) Insomnie\n307.44 (F51.11) Hypersomnolence\nTrouble du sommeil\nDysfonction sexuelle\n294.8 (F06.8) Autre trouble mental spécié\nTrouble mental non spécié\n300.9 (F99) Trouble mental non spécié\nSources : APA (2015) ; APA (2014).\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris,\n2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004.\nAll rights reserved.\nENCADRÉ 28.2 Critères généraux du trouble mental dû à une autre affection médicale\nDSM-5\n29x.xx (F06.x) Trouble mental dû à une autre affection médicale\n1. Symptômes prédominants de la lignée\n• psychotique : hallucinations ou délires\n• maniaque : humeur euphorique, expansive ou irritable et activité ou énergie augmentées\n• dépressive : humeur dépressive ou anhédonie marquée\n• anxieuse : attaques de panique ou anxiété\n• obsessionnelle-compulsive : obsessions, compulsions, obsession d’une dysmorphie corporelle, amassage pathologique, comportements répétitifs liés\nau corps (trichotillomanie, dermatillomanie)\n2. Les antécédents, l’examen physique ou les examens complémentaires montrent clairement que la perturbation est la conséquence physiopathique\ndirecte d’une autre affection médicale.\n3. La perturbation ne s’explique pas mieux par un autre trouble mental (p. ex., un trouble de l’adaptation avec humeur dépressive en réponse au stress lié\nà une affection médicale grave).\n4. La perturbation ne survient pas uniquement au cours d’un état confusionnel (delirium).\n5. Les symptômes entraînent une détresse cliniquement signicative ou une altération du fonctionnement social, professionnel ou dans d’autres domaines\nimportants.\nSource : APA (2015), p. 136, 170, 211, 270, 307.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\n",
+  "raw_text_sha256": "7be7670161d6921844911fe8c8005c2494be1d2d957ded40aab14aa78588f41a",
+  "source_page_display": 640,
+  "source_page_index": 639
+}

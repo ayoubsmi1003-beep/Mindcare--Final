@@ -1,0 +1,280 @@
+{
+  "block_sequence_sha256": "48f62ade979d26de4e9032a15a8664b2ac9c6256c6ee31d699065920e6d1932b",
+  "blocks": [
+    {
+      "bbox": [
+        374.20001220703125,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0068-block-0001",
+      "order": 1,
+      "text": "Chapitre 3\nExamen psychiatrique\n51\n",
+      "text_sha256": "bb38dac8192d4c88bc7e33d029ef063102ab42e367d3f3449cc394490d2d842b"
+    },
+    {
+      "bbox": [
+        57.25,
+        58.47412109375,
+        96.29501342773438,
+        69.05029296875
+      ],
+      "block_id": "page-0068-block-0002",
+      "order": 2,
+      "text": "Perception\n",
+      "text_sha256": "afcc243fa326ffa0a0e67f12771b43f9f085d4d784fd9b87ef8ac056f7c70704"
+    },
+    {
+      "bbox": [
+        58.25,
+        74.3228530883789,
+        544.7267456054688,
+        138.22813415527344
+      ],
+      "block_id": "page-0068-block-0003",
+      "order": 3,
+      "text": "Hallucinations\n• Auditives : bruits, voix, commentaires, agréables (compliments, humour), inquiétants (reproches, menaces, dénigrantes),\nvoix impérieuses (ou impératives) (mandatory)\n• Visuelles : simples, complexes, scènes en mouvement, lilliputiennes\n• Somatiques, cénesthésiques, formications\n• Gustatives, impression d’aliments empoisonnés\n• Olfactives, malodorantes\n",
+      "text_sha256": "cd31aa814d2976bf2ee27817c5cb8cda14d35ad26a4a8e3fbb6fc37ae8a85314"
+    },
+    {
+      "bbox": [
+        58.25,
+        146.77285766601562,
+        143.68309020996094,
+        176.79238891601562
+      ],
+      "block_id": "page-0068-block-0004",
+      "order": 4,
+      "text": "Indices d’hallucinations\n(à décrire dans l’examen\nmental)\n",
+      "text_sha256": "82bfd32a61f52d9f8d0251be0155f0421771fa3a1531971e0140e6fa3be4ec90"
+    },
+    {
+      "bbox": [
+        152.25,
+        146.85195922851562,
+        533.0570068359375,
+        166.67813110351562
+      ],
+      "block_id": "page-0068-block-0005",
+      "order": 5,
+      "text": "• Attitudes d’écoute, blocages de la pensée, soliloquie (parler seul), rires immotivés, réponses à côté, distractibilité, se\ndétourne en semblant regarder un personnage invisible, perplexité\n",
+      "text_sha256": "37b6f9372c98ddcd2d6091c05ec87d9ceee15998f0e3ae6d798045d61a2f16e4"
+    },
+    {
+      "bbox": [
+        58.25,
+        185.1728515625,
+        118.32501220703125,
+        205.1923828125
+      ],
+      "block_id": "page-0068-block-0006",
+      "order": 6,
+      "text": "Autres anomalies\nperceptuelles\n",
+      "text_sha256": "5568e0cab23cdab5083980c62ff410150e809f29da5ac21363f588715d8ccfa5"
+    },
+    {
+      "bbox": [
+        152.25,
+        185.251953125,
+        332.755126953125,
+        228.078125
+      ],
+      "block_id": "page-0068-block-0007",
+      "order": 7,
+      "text": "• Dissociation, dépersonnalisation, déréalisation\n• Illusions, fausse interprétation, sentiment d’étrangeté\n• Sentiment d’étrangeté, déjà-vu, jamais-vu, déjà-vécu\n• Prosopagnosie\n",
+      "text_sha256": "6293e0f2bc76a0bc819e5f697de03c50d8ab7d4d5622b1caee40524e54ade15f"
+    },
+    {
+      "bbox": [
+        57.25,
+        233.5241241455078,
+        132.08151245117188,
+        244.1002960205078
+      ],
+      "block_id": "page-0068-block-0008",
+      "order": 8,
+      "text": "Fonctions cognitives\n",
+      "text_sha256": "eae7ca26cb86d42b6c5c23c2d29ecb9cd6bc22f74e8f0f7510c09ee8b67f83ce"
+    },
+    {
+      "bbox": [
+        58.25,
+        249.37286376953125,
+        489.5617370605469,
+        281.27813720703125
+      ],
+      "block_id": "page-0068-block-0009",
+      "order": 9,
+      "text": "Sensorium\n• Clair, alerte, bien éveillé, orienté (temps, espace, personne)\n• Confus, somnolent, assoupi, léthargique, obnubilé, stuporeux, comateux\n• Léthargie, hébétude, torpeur, stupeur psychogène (catatonie, stupeur psychotique, stupeur dépressive)\n",
+      "text_sha256": "85aaa1399957082563c1385aff49f342fc7d672ebd7f01029d5394322de28851"
+    },
+    {
+      "bbox": [
+        58.25,
+        289.8228454589844,
+        420.6827697753906,
+        332.7281188964844
+      ],
+      "block_id": "page-0068-block-0010",
+      "order": 10,
+      "text": "Attention\n• Distractibilité, inattention, lunatique\n• Soutenue, uctuante\n• Primaire (test d’empan), secondaire (concentration), hypoprosexie, hyperprosexie\n• Persévération\n",
+      "text_sha256": "dcf47cbfdf5805e288dedc24df562381063a267f430680fa65f9f674190d30ab"
+    },
+    {
+      "bbox": [
+        58.25,
+        341.2228698730469,
+        542.4017944335938,
+        383.1281433105469
+      ],
+      "block_id": "page-0068-block-0011",
+      "order": 11,
+      "text": "Mémoire\n• Hypomnésie ou amnésie (préciser le type de mémoire atteinte : de travail, immédiate, court terme, long terme ; préciser\nle contenu scotomisé si suspicion d’amnésie psychogène)\n• Hypermnésie, dysmnésie, paramnésies, fausses reconnaissances\n• Mécanisme compensatoire : déni, fabulation, rationalisation, banalisation, réaction catastrophique\n",
+      "text_sha256": "830f77adeaf249a0aa3e22e1e0075de87cc910c0d48bb6ff54c7bdcda80801f8"
+    },
+    {
+      "bbox": [
+        58.25,
+        391.6728515625,
+        138.30499267578125,
+        411.6923828125
+      ],
+      "block_id": "page-0068-block-0012",
+      "order": 12,
+      "text": "Intelligence\n(appréciation générale)\n",
+      "text_sha256": "aa919473aae81ce843d3e4ff21730389f065fa6be87c10031c74c5b9e3ffb4a8"
+    },
+    {
+      "bbox": [
+        152.25,
+        391.751953125,
+        428.229248046875,
+        423.578125
+      ],
+      "block_id": "page-0068-block-0013",
+      "order": 13,
+      "text": "• Dans la moyenne (QI entre 90 et 100), sous la moyenne, au-dessus de la moyenne\n• Faible, moyenne, supérieure, vive\n• Spécicateurs de sévérité basés sur le fonctionnement adaptatif\n",
+      "text_sha256": "ee0e222091ceb3dbaaf9caef3804b2b10127ae313c962747a5e20753f6ff1b9c"
+    },
+    {
+      "bbox": [
+        58.25,
+        432.0728454589844,
+        401.6936950683594,
+        442.0923767089844
+      ],
+      "block_id": "page-0068-block-0014",
+      "order": 14,
+      "text": "Abstraction\n• Capacité d’abstraction présente ou absente (test des similitudes, proverbe)\n",
+      "text_sha256": "be8d44121ea5eace365b7578b5adb009629341fe808b82564c08414d1bc1b078"
+    },
+    {
+      "bbox": [
+        57.25,
+        447.42413330078125,
+        93.6445083618164,
+        458.00030517578125
+      ],
+      "block_id": "page-0068-block-0015",
+      "order": 15,
+      "text": "Jugement\n",
+      "text_sha256": "3e4365aad26b46d67123965ab5ff362456e274a4581d0b6e1f22b2302d76608f"
+    },
+    {
+      "bbox": [
+        58.25,
+        463.3228454589844,
+        525.3672485351562,
+        494.2281188964844
+      ],
+      "block_id": "page-0068-block-0016",
+      "order": 16,
+      "text": "Jugement\n• Préservé, altéré (par le délire, la dépression, l’impulsivité, etc.), absent, partiel\n• Spécier le type de jugement dont il est question (pratique, général ou social ; aptitude à consentir ; responsabilité\ndes actes qu’il peut poser, etc.)\n",
+      "text_sha256": "e1e1f32a2d5f1a012b9b26f2800471976c5ff3a23f76827b2b2a3378771a133e"
+    },
+    {
+      "bbox": [
+        57.25,
+        499.6241149902344,
+        200.71336364746094,
+        510.2002868652344
+      ],
+      "block_id": "page-0068-block-0017",
+      "order": 17,
+      "text": "Autocritique et capacité d’introspection\n",
+      "text_sha256": "1baf10afbb944191734829181f10349b129584c2886d2547d1902c474b8cc0ae"
+    },
+    {
+      "bbox": [
+        58.25,
+        515.5228881835938,
+        140.03099060058594,
+        535.5424194335938
+      ],
+      "block_id": "page-0068-block-0018",
+      "order": 18,
+      "text": "Autocritique, capacité\nd’introspection (insight)\n",
+      "text_sha256": "d4172ba616e73b93bdcc2de2778874bdab74d26dc196fbc0aa92b129ba9f86c4"
+    },
+    {
+      "bbox": [
+        152.25,
+        515.6019897460938,
+        508.4009094238281,
+        525.4281616210938
+      ],
+      "block_id": "page-0068-block-0019",
+      "order": 19,
+      "text": "• Absente, pauvre, supercielle, partielle, présente, bonne, intellectuelle (mais non ressentie), discours nuancé\n",
+      "text_sha256": "4866858e49bf95bdee4dcb095a799341741ae58525def6969548df30e8441c56"
+    },
+    {
+      "bbox": [
+        54.0,
+        551.7330322265625,
+        297.29296875,
+        727.3585205078125
+      ],
+      "block_id": "page-0068-block-0020",
+      "order": 20,
+      "text": "Collaboration et abilité\nLe degré de collaboration et la abilité du patient se reètent\nà travers sa disposition, son attitude, ses comportements et\nses propos durant l’entretien. Une bonne abilité dépend de\nplusieurs facteurs :\n• un sensorium clair ;\n• l’absence de troubles cognitifs signicatifs, de désorganisation\nimportante de la pensée ;\n• l’absence de troubles du langage ;\n• un patient qui veut donner une image exacte de son\nproblème ;\n• une bonne alliance dans la relation médecin-patient.\nIl est important de préciser le niveau de collaboration du\npatient durant l’entretien. Elle peut être franche, ouverte, mitigée,\n",
+      "text_sha256": "27385a3d19ca36cf8ae97cb162fb3d902d1cfdf579e4482e41a1690e606692c4"
+    },
+    {
+      "bbox": [
+        312.0,
+        552.8658447265625,
+        555.3111572265625,
+        727.3585205078125
+      ],
+      "block_id": "page-0068-block-0021",
+      "order": 21,
+      "text": "réservée, etc. Dans un cas où le patient est contraint à une éva-\nluation, il faut s’interroger sur la abilité :\n• Censure-t-il certains éléments ?\n• Recherche-t-il des gains secondaires ?\n• Répond-il volontiers à toutes les questions ou est-il réticent\nà se coner, particulièrement sur certains sujets ?\n• Minimise-t-il ou amplie-t-il certains aspects ?\n• Est-il méant, interprétatif ?\n• Donne-t-il de lui une image normalisée, banalisée ?\nUne attention particulière doit être portée aux discordances et\natypies dans le tableau clinique (telles que rapportées par le patient\nou son entourage), au manque d’authenticité de certains symptômes\nou à la dissimulation d’informations essentielles (p. ex., refuser de\ndonner un consentement pour transférer son dossier antérieur).\n",
+      "text_sha256": "c63ace9dc677c22d5f228e438e5c576c723cbbba8bee66c9c7e0559c7f6ab5a1"
+    },
+    {
+      "bbox": [
+        56.0,
+        41.002296447753906,
+        324.3842468261719,
+        53.320068359375
+      ],
+      "block_id": "page-0068-block-0022",
+      "order": 22,
+      "text": "TABLEAU 3.3 Structure et terminologie de l’examen mental (suite)\n",
+      "text_sha256": "c99f3986556adb6d6c5ca07fc3f205da395cbdbe73f2793e5598837401e5d574"
+    }
+  ],
+  "coordinates_sha256": "c9118697a6e76fd68b05d188824f35e999728bdb5e37f4215612f28870ccc5a4",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0068",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 3\nExamen psychiatrique\n51\nPerception\nHallucinations\n• Auditives : bruits, voix, commentaires, agréables (compliments, humour), inquiétants (reproches, menaces, dénigrantes),\nvoix impérieuses (ou impératives) (mandatory)\n• Visuelles : simples, complexes, scènes en mouvement, lilliputiennes\n• Somatiques, cénesthésiques, formications\n• Gustatives, impression d’aliments empoisonnés\n• Olfactives, malodorantes\nIndices d’hallucinations\n(à décrire dans l’examen\nmental)\n• Attitudes d’écoute, blocages de la pensée, soliloquie (parler seul), rires immotivés, réponses à côté, distractibilité, se\ndétourne en semblant regarder un personnage invisible, perplexité\nAutres anomalies\nperceptuelles\n• Dissociation, dépersonnalisation, déréalisation\n• Illusions, fausse interprétation, sentiment d’étrangeté\n• Sentiment d’étrangeté, déjà-vu, jamais-vu, déjà-vécu\n• Prosopagnosie\nFonctions cognitives\nSensorium\n• Clair, alerte, bien éveillé, orienté (temps, espace, personne)\n• Confus, somnolent, assoupi, léthargique, obnubilé, stuporeux, comateux\n• Léthargie, hébétude, torpeur, stupeur psychogène (catatonie, stupeur psychotique, stupeur dépressive)\nAttention\n• Distractibilité, inattention, lunatique\n• Soutenue, uctuante\n• Primaire (test d’empan), secondaire (concentration), hypoprosexie, hyperprosexie\n• Persévération\nMémoire\n• Hypomnésie ou amnésie (préciser le type de mémoire atteinte : de travail, immédiate, court terme, long terme ; préciser\nle contenu scotomisé si suspicion d’amnésie psychogène)\n• Hypermnésie, dysmnésie, paramnésies, fausses reconnaissances\n• Mécanisme compensatoire : déni, fabulation, rationalisation, banalisation, réaction catastrophique\nIntelligence\n(appréciation générale)\n• Dans la moyenne (QI entre 90 et 100), sous la moyenne, au-dessus de la moyenne\n• Faible, moyenne, supérieure, vive\n• Spécicateurs de sévérité basés sur le fonctionnement adaptatif\nAbstraction\n• Capacité d’abstraction présente ou absente (test des similitudes, proverbe)\nJugement\nJugement\n• Préservé, altéré (par le délire, la dépression, l’impulsivité, etc.), absent, partiel\n• Spécier le type de jugement dont il est question (pratique, général ou social ; aptitude à consentir ; responsabilité\ndes actes qu’il peut poser, etc.)\nAutocritique et capacité d’introspection\nAutocritique, capacité\nd’introspection (insight)\n• Absente, pauvre, supercielle, partielle, présente, bonne, intellectuelle (mais non ressentie), discours nuancé\nCollaboration et abilité\nLe degré de collaboration et la abilité du patient se reètent\nà travers sa disposition, son attitude, ses comportements et\nses propos durant l’entretien. Une bonne abilité dépend de\nplusieurs facteurs :\n• un sensorium clair ;\n• l’absence de troubles cognitifs signicatifs, de désorganisation\nimportante de la pensée ;\n• l’absence de troubles du langage ;\n• un patient qui veut donner une image exacte de son\nproblème ;\n• une bonne alliance dans la relation médecin-patient.\nIl est important de préciser le niveau de collaboration du\npatient durant l’entretien. Elle peut être franche, ouverte, mitigée,\nréservée, etc. Dans un cas où le patient est contraint à une éva-\nluation, il faut s’interroger sur la abilité :\n• Censure-t-il certains éléments ?\n• Recherche-t-il des gains secondaires ?\n• Répond-il volontiers à toutes les questions ou est-il réticent\nà se coner, particulièrement sur certains sujets ?\n• Minimise-t-il ou amplie-t-il certains aspects ?\n• Est-il méant, interprétatif ?\n• Donne-t-il de lui une image normalisée, banalisée ?\nUne attention particulière doit être portée aux discordances et\natypies dans le tableau clinique (telles que rapportées par le patient\nou son entourage), au manque d’authenticité de certains symptômes\nou à la dissimulation d’informations essentielles (p. ex., refuser de\ndonner un consentement pour transférer son dossier antérieur).\nTABLEAU 3.3 Structure et terminologie de l’examen mental (suite)\n",
+  "raw_text_sha256": "3da0c3e5436f1196be29c8ec43b4f36121d61261dcf1c8ff4a328f84a1d432b0",
+  "source_page_display": 69,
+  "source_page_index": 68
+}

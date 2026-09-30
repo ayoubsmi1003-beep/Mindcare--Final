@@ -1,0 +1,100 @@
+{
+  "block_sequence_sha256": "f7cfbddcf61b71c5244f73c473c103845aaabcfd462c54c77c98992fbd60542e",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        470.3879699707031,
+        758.8693237304688
+      ],
+      "block_id": "page-0173-block-0001",
+      "order": 1,
+      "text": "156\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2\nDéterminants bio-psycho-sociaux\n",
+      "text_sha256": "53256f9b4323f62e6dd43e5c62133a8293124a0e6f306304579b185c59797070"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        548.8624877929688,
+        74.65850067138672
+      ],
+      "block_id": "page-0173-block-0002",
+      "order": 2,
+      "text": "ont trouvé la mort. Cette étude est d’autant plus intéressante\nque les chercheurs ont suivi les survivants pendant cinq ans et\nconstaté que cette anomalie avait régressé progressivement.\n",
+      "text_sha256": "9ca3b20c738fe9aec1df94874cc7131bc05f5aa86cf8f12564db4dd6ec226444"
+    },
+    {
+      "bbox": [
+        306.0,
+        75.76582336425781,
+        549.6195678710938,
+        260.45849609375
+      ],
+      "block_id": "page-0173-block-0003",
+      "order": 3,
+      "text": "Le TSPT a aussi été étudié en imagerie fonctionnelle, mais,\nselon le paradigme utilisé, on obtient des résultats assez variables\nd’une étude à l’autre, et ce, chez un même individu. Dans l’en-\nsemble, les études ont montré une augmentation de l’activité dans\nl’amygdale et une diminution de l’activité dans le cortex préfrontal\n(Argawal & al., 2010). On sait que l’amygdale intervient dans la\nmémoire aective et dans la réponse à la peur en déclenchant\nune réaction immédiate, alors que le cortex préfrontal intervient\ndans l’inhibition de cette réponse spontanée de l’amygdale. Par\nexemple, quand une personne voit une couleuvre, l’amygdale\ninduit immédiatement une réaction d’éloignement, puis le cor-\ntex préfrontal reconnaît que ce serpent n’est pas dangereux et\nla réaction émotionnelle s’apaise. Ces résultats suggèrent que\ndans le TSPT, la peur engendre une augmentation de l’activité\nde l’amygdale et que le cortex préfrontal médian ne réussit pas\nà bloquer cette stimulation (Bremner, 2007).\n",
+      "text_sha256": "3cc569406a9f1872dba10732955c2abff1c214ed7854fdbb65602bde51cc3851"
+    },
+    {
+      "bbox": [
+        306.0,
+        271.4330139160156,
+        549.1436157226562,
+        657.1585083007812
+      ],
+      "block_id": "page-0173-block-0004",
+      "order": 4,
+      "text": "Trouble obsessionnel-compulsif\nLe trouble obsessionnel-compulsif (TOC) est communément\nassocié à une dysfonction du circuit orbitofrontostrié, mais de\nnombreuses études sont souvent contradictoires ou donnent\nà penser que les atteintes toucheraient des régions beaucoup\nplus étendues. De plus, contrairement à d’autres maladies, les\nétudes fonctionnelles dièrent des études structurales dans la\nlocalisation de ces atteintes. Ainsi, dans leur méta-analyse sur\nl’IRMf, Menzies et ses collaborateurs (2008) rapportent une\ndiérence signicative de l’activité dans le circuit orbitofron-\ntostrié, mais aussi dans le cortex frontal, le cortex cingulaire\nantérieur, le lobe occipital moyen et le cervelet. Ces chercheurs\ncroient que la participation de ces nombreuses régions est due\nà l’hétérogénéité des tâches auxquelles les patients ont été\nsoumis au cours de l’imagerie. Ils arment également que les\nétudes ne prennent pas en considération la comorbidité sou-\nvent présente chez ces patients, soit la dépression et l’anxiété,\nqui peuvent certainement inuer sur les résultats. Jusqu’à tout\nrécemment, les études structurales se concentraient sur des\nrégions circonscrites souvent guidées par les études fonction-\nnelles. Des techniques récemment mises au point, comme la\nVBM (Whole Brain Voxel Based Morphometry), permettent\nune étude globale et précise du volume du cerveau et de ses\ncomposantes. Dans une méta-analyse, Radua & Mataix-Cols\n(2009) ont montré une augmentation du volume des noyaux\nlenticulaires, plus précisément de la portion antérieure du\nputamen et des noyaux caudés bilatéralement, ainsi qu’une\ndiminution du volume du cortex du gyrus frontal dorsomédian\net du gyrus cingulaire antérieur chez les patients présentant un\nTOC. En s’appuyant sur leurs résultats, ces chercheurs émettent\nl’hypothèse que la participation du circuit orbitofrontostrié\nserait plutôt secondaire et que celui-ci interviendrait pour\ncompenser le décit.\n",
+      "text_sha256": "418dcbb7132fc4a52a771f643211dcbf94d5674093a3dcc469f09aca9d06cf9b"
+    },
+    {
+      "bbox": [
+        306.0,
+        658.3158569335938,
+        549.5038452148438,
+        715.2584838867188
+      ],
+      "block_id": "page-0173-block-0005",
+      "order": 5,
+      "text": "Comme plusieurs régions du cerveau sont mises en cause\ndans le TOC, des recherches avec la tractographie présentent\ncertainement une avenue intéressante, mais les études sont encore\npeu nombreuses. Chiu et ses collaborateurs (2011) ont montré\ndes anomalies du segment antérieur du faisceau cingulaire et des\n",
+      "text_sha256": "f503f9d08dc94b6384014b620090b98316e14edc0fc8f7791c30697194f22402"
+    },
+    {
+      "bbox": [
+        48.0,
+        39.63300704956055,
+        291.35516357421875,
+        473.7585144042969
+      ],
+      "block_id": "page-0173-block-0006",
+      "order": 6,
+      "text": "Troubles de l’humeur\nLes études eectuées sur les troubles de l’humeur ont permis\nd’établir la présence d’anomalies dans les circuits intervenant\ndans les dépressions (Argawal &al.,2010). Ces études présentent\nd’importantes diérences dans les résultats qui peuvent être\nimputées à des variations dues à l’âge, au traitement, à la diversité\ndes symptômes du groupe évalué et à la méthodologie de l’ana-\nlyse des résultats. L’étude de Järnum et ses collaborateurs (2011)\nrésume bien les découvertes les plus importantes, nouvelles et\nplus anciennes (et récurrentes) obtenues à partir de l’imagerie\nde patients sourant d’un épisode de dépression majeure. Les\nrésultats de ces chercheurs portent sur l’évaluation de 26 patients\nau moment du diagnostic et lors de leur rémission ou six mois\nplus tard. Ils ont montré que chez les patients qui ne répondent\npas au traitement, le volume du cortex cingulaire postérieur est\nplus petit, tout comme la perfusion du lobe frontal et du cortex\ncingulaire antérieur . La méta-analyse de Kempton et ses colla-\nborateurs (2011) rapporte :\n• une augmentation du volume du ventricule latéral ;\n• une diminution du volume de l’hippocampe, du cortex or-\nbitofrontal, du gyrus rectus, des noyaux gris centraux et du\nthalamus.\nPar ailleurs, on a remarqué des différences entre le groupe\natteint de dépression majeure et les patients bipolaires : les\nlésions hyperintenses de la matière blanche sont moins nom-\nbreuses, l’hippocampe et les noyaux gris centraux sont plus\npetits, tandis que le corps calleux est plus volumineux. Il est\nintéressant de noter que le volume de l’hippocampe (Kempton\n& al., 2011) et celui de l’amygdale (Hamilton & al., 2008)\nsont plus petits seulement durant les épisodes dépressifs et\nque ces structures reprennent leur volume normal durant le\ntraitement. Chez les patients dépressifs non traités soumis à\nun stimulus émotionnel, on note une augmentation de l’ac-\ntivité de l’amygdale et une diminution de l’activité du cortex\npréfrontal dorsolatéral (Siegle & al., 2007). On observe les\nrésultats inverses chez les patients traités avec un antidépres-\nseur (Delaveau & al., 2010).\n",
+      "text_sha256": "416fee27100e284b0fdc336dc694e4d0b5f42083935a73d962d74377baf11079"
+    },
+    {
+      "bbox": [
+        48.0,
+        482.6330261230469,
+        291.50146484375,
+        715.2584838867188
+      ],
+      "block_id": "page-0173-block-0007",
+      "order": 7,
+      "text": "Trouble de stress post-traumatique\nLa plupart des auteurs reconnaissent que les principales régions\ncérébrales impliquées dans le trouble de stress post-traumatique\n(TSPT) incluent l’hippocampe, l’amygdale, le cortex préfrontal\net plus précisément le cortex cingulaire. Woon et ses collabora-\nteurs (2010) ont comparé des patients exposés à un trauma et\nayant développé un TSPT avec d’autres patients exposés à un\ntrauma, mais n’ayant pas développé un TSPT ainsi qu’un autre\ngroupe témoin. Les deux groupes exposés au trauma ont mon-\ntré une diminution du volume de l’hippocampe, ce qui donne\nà penser que l’exposition au trauma produit une atrophie de\ncette région, mais l’apparition de l’atrophie n’est pas susante\npour induire un TSPT et d’autres facteurs inconnus doivent\njouer un rôle. D’autres auteurs ont étudié des régions cérébrales\nplus spéciques en faisant appel à des techniques de mesure et\nde segmentation plus sophistiquées. Ainsi, Lyoo et ses colla-\nborateurs (2011) rapportent une augmentation de l’épaisseur\ndu cortex dans la région dorsolatérale en préfrontal chez des\nrescapés de l’incendie d’origine criminelle survenu dans le métro\nde Daegu, en Corée du Sud, et au cours duquel 130 personnes\n",
+      "text_sha256": "429d05bd44c247f7b680a67bc642ab2321ee77aef97fd51b70892b1542561a31"
+    }
+  ],
+  "coordinates_sha256": "a600d4c8195088f000d891b5549e49d3b9768a8e8b9e6969554cd62e1966caca",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0173",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "156\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2\nDéterminants bio-psycho-sociaux\nont trouvé la mort. Cette étude est d’autant plus intéressante\nque les chercheurs ont suivi les survivants pendant cinq ans et\nconstaté que cette anomalie avait régressé progressivement.\nLe TSPT a aussi été étudié en imagerie fonctionnelle, mais,\nselon le paradigme utilisé, on obtient des résultats assez variables\nd’une étude à l’autre, et ce, chez un même individu. Dans l’en-\nsemble, les études ont montré une augmentation de l’activité dans\nl’amygdale et une diminution de l’activité dans le cortex préfrontal\n(Argawal & al., 2010). On sait que l’amygdale intervient dans la\nmémoire aective et dans la réponse à la peur en déclenchant\nune réaction immédiate, alors que le cortex préfrontal intervient\ndans l’inhibition de cette réponse spontanée de l’amygdale. Par\nexemple, quand une personne voit une couleuvre, l’amygdale\ninduit immédiatement une réaction d’éloignement, puis le cor-\ntex préfrontal reconnaît que ce serpent n’est pas dangereux et\nla réaction émotionnelle s’apaise. Ces résultats suggèrent que\ndans le TSPT, la peur engendre une augmentation de l’activité\nde l’amygdale et que le cortex préfrontal médian ne réussit pas\nà bloquer cette stimulation (Bremner, 2007).\nTrouble obsessionnel-compulsif\nLe trouble obsessionnel-compulsif (TOC) est communément\nassocié à une dysfonction du circuit orbitofrontostrié, mais de\nnombreuses études sont souvent contradictoires ou donnent\nà penser que les atteintes toucheraient des régions beaucoup\nplus étendues. De plus, contrairement à d’autres maladies, les\nétudes fonctionnelles dièrent des études structurales dans la\nlocalisation de ces atteintes. Ainsi, dans leur méta-analyse sur\nl’IRMf, Menzies et ses collaborateurs (2008) rapportent une\ndiérence signicative de l’activité dans le circuit orbitofron-\ntostrié, mais aussi dans le cortex frontal, le cortex cingulaire\nantérieur, le lobe occipital moyen et le cervelet. Ces chercheurs\ncroient que la participation de ces nombreuses régions est due\nà l’hétérogénéité des tâches auxquelles les patients ont été\nsoumis au cours de l’imagerie. Ils arment également que les\nétudes ne prennent pas en considération la comorbidité sou-\nvent présente chez ces patients, soit la dépression et l’anxiété,\nqui peuvent certainement inuer sur les résultats. Jusqu’à tout\nrécemment, les études structurales se concentraient sur des\nrégions circonscrites souvent guidées par les études fonction-\nnelles. Des techniques récemment mises au point, comme la\nVBM (Whole Brain Voxel Based Morphometry), permettent\nune étude globale et précise du volume du cerveau et de ses\ncomposantes. Dans une méta-analyse, Radua & Mataix-Cols\n(2009) ont montré une augmentation du volume des noyaux\nlenticulaires, plus précisément de la portion antérieure du\nputamen et des noyaux caudés bilatéralement, ainsi qu’une\ndiminution du volume du cortex du gyrus frontal dorsomédian\net du gyrus cingulaire antérieur chez les patients présentant un\nTOC. En s’appuyant sur leurs résultats, ces chercheurs émettent\nl’hypothèse que la participation du circuit orbitofrontostrié\nserait plutôt secondaire et que celui-ci interviendrait pour\ncompenser le décit.\nComme plusieurs régions du cerveau sont mises en cause\ndans le TOC, des recherches avec la tractographie présentent\ncertainement une avenue intéressante, mais les études sont encore\npeu nombreuses. Chiu et ses collaborateurs (2011) ont montré\ndes anomalies du segment antérieur du faisceau cingulaire et des\nTroubles de l’humeur\nLes études eectuées sur les troubles de l’humeur ont permis\nd’établir la présence d’anomalies dans les circuits intervenant\ndans les dépressions (Argawal &al.,2010). Ces études présentent\nd’importantes diérences dans les résultats qui peuvent être\nimputées à des variations dues à l’âge, au traitement, à la diversité\ndes symptômes du groupe évalué et à la méthodologie de l’ana-\nlyse des résultats. L’étude de Järnum et ses collaborateurs (2011)\nrésume bien les découvertes les plus importantes, nouvelles et\nplus anciennes (et récurrentes) obtenues à partir de l’imagerie\nde patients sourant d’un épisode de dépression majeure. Les\nrésultats de ces chercheurs portent sur l’évaluation de 26 patients\nau moment du diagnostic et lors de leur rémission ou six mois\nplus tard. Ils ont montré que chez les patients qui ne répondent\npas au traitement, le volume du cortex cingulaire postérieur est\nplus petit, tout comme la perfusion du lobe frontal et du cortex\ncingulaire antérieur . La méta-analyse de Kempton et ses colla-\nborateurs (2011) rapporte :\n• une augmentation du volume du ventricule latéral ;\n• une diminution du volume de l’hippocampe, du cortex or-\nbitofrontal, du gyrus rectus, des noyaux gris centraux et du\nthalamus.\nPar ailleurs, on a remarqué des différences entre le groupe\natteint de dépression majeure et les patients bipolaires : les\nlésions hyperintenses de la matière blanche sont moins nom-\nbreuses, l’hippocampe et les noyaux gris centraux sont plus\npetits, tandis que le corps calleux est plus volumineux. Il est\nintéressant de noter que le volume de l’hippocampe (Kempton\n& al., 2011) et celui de l’amygdale (Hamilton & al., 2008)\nsont plus petits seulement durant les épisodes dépressifs et\nque ces structures reprennent leur volume normal durant le\ntraitement. Chez les patients dépressifs non traités soumis à\nun stimulus émotionnel, on note une augmentation de l’ac-\ntivité de l’amygdale et une diminution de l’activité du cortex\npréfrontal dorsolatéral (Siegle & al., 2007). On observe les\nrésultats inverses chez les patients traités avec un antidépres-\nseur (Delaveau & al., 2010).\nTrouble de stress post-traumatique\nLa plupart des auteurs reconnaissent que les principales régions\ncérébrales impliquées dans le trouble de stress post-traumatique\n(TSPT) incluent l’hippocampe, l’amygdale, le cortex préfrontal\net plus précisément le cortex cingulaire. Woon et ses collabora-\nteurs (2010) ont comparé des patients exposés à un trauma et\nayant développé un TSPT avec d’autres patients exposés à un\ntrauma, mais n’ayant pas développé un TSPT ainsi qu’un autre\ngroupe témoin. Les deux groupes exposés au trauma ont mon-\ntré une diminution du volume de l’hippocampe, ce qui donne\nà penser que l’exposition au trauma produit une atrophie de\ncette région, mais l’apparition de l’atrophie n’est pas susante\npour induire un TSPT et d’autres facteurs inconnus doivent\njouer un rôle. D’autres auteurs ont étudié des régions cérébrales\nplus spéciques en faisant appel à des techniques de mesure et\nde segmentation plus sophistiquées. Ainsi, Lyoo et ses colla-\nborateurs (2011) rapportent une augmentation de l’épaisseur\ndu cortex dans la région dorsolatérale en préfrontal chez des\nrescapés de l’incendie d’origine criminelle survenu dans le métro\nde Daegu, en Corée du Sud, et au cours duquel 130 personnes\n",
+  "raw_text_sha256": "ae7d419e13ef4d3135f9a13e2919f4a2bbae390ba18dde8c21c634b707f8892d",
+  "source_page_display": 174,
+  "source_page_index": 173
+}

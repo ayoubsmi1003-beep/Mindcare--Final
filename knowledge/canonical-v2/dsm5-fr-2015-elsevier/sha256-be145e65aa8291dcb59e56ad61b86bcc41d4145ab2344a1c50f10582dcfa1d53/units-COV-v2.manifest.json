@@ -1,0 +1,13 @@
+{
+  "book_id": "dsm5-fr-2015-elsevier",
+  "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+  "source_file": "units.jsonl",
+  "selection": "IDs absent from reconciliation-v5/units.jsonl",
+  "rows": 420,
+  "coverage_only_reclassified_to_extracted": 411,
+  "source_version_fixed": 0,
+  "review_units_preserved": 420,
+  "output_sha256": "e43d44aa49cc0775cd98d44ec2f6825f3ed55f6115401b84d497138566906e79",
+  "canonical_promotion_authorized": false,
+  "provenance_note": "Legacy merged units are preserved; source-layer-only units remain needs_review and are not silently promoted."
+}

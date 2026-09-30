@@ -1,0 +1,141 @@
+{
+ "book_id": "icd11-ref-guide-2022-who",
+ "source_version": "sha256:55808d0d1d9358c1bdade96a29541c610624d8d6ebcb76081d87ec882cde48b1",
+ "ingestion_version": "canonical-v2.1",
+ "overall": "WARNING",
+ "counts": {
+  "units": 139,
+  "tables": 54,
+  "concepts": 47,
+  "xrefs": 35
+ },
+ "checks": [
+  {
+   "check": "schema-units",
+   "status": "PASS",
+   "detail": "139 units conform"
+  },
+  {
+   "check": "unit-id-unique",
+   "status": "PASS",
+   "detail": "139 unique"
+  },
+  {
+   "check": "dual-page-consistency",
+   "status": "PASS",
+   "detail": "offset -2 holds for all units"
+  },
+  {
+   "check": "page-uncertainty-surfaced",
+   "status": "PASS",
+   "detail": "all unit pages certain"
+  },
+  {
+   "check": "structure-coverage",
+   "status": "WARNING",
+   "detail": "0/51 sections covered (0.0%); gaps: 51"
+  },
+  {
+   "check": "concept-refs-resolve",
+   "status": "WARNING",
+   "detail": [
+    {
+     "icd11rg-c-causal-relationship": [
+      "icd11rg:table:24:1"
+     ]
+    },
+    {
+     "icd11rg-c-modification-rule": [
+      "icd11rg:table:24:1"
+     ]
+    },
+    {
+     "icd11rg-c-shoreline": [
+      "icd11rg:table:24:1"
+     ]
+    },
+    {
+     "icd11rg-c-starting-point": [
+      "icd11rg:table:24:1"
+     ]
+    },
+    {
+     "icd11rg-c-terminal-cause-of-death": [
+      "icd11rg:table:24:1"
+     ]
+    },
+    {
+     "icd11rg-c-verbal-autopsy": [
+      "icd11rg:table:24:1"
+     ]
+    }
+   ]
+  },
+  {
+   "check": "concepts-referenced",
+   "status": "PASS",
+   "detail": "all concepts carry >=1 valid source_ref"
+  },
+  {
+   "check": "xrefs-resolved",
+   "status": "WARNING",
+   "detail": "29/35 unresolved"
+  },
+  {
+   "check": "tables-reviewed",
+   "status": "WARNING",
+   "detail": [
+    "icd11rg:table:100:1",
+    "icd11rg:table:100:2",
+    "icd11rg:table:101:1",
+    "icd11rg:table:101:2",
+    "icd11rg:table:101:3",
+    "icd11rg:table:101:4",
+    "icd11rg:table:102:1",
+    "icd11rg:table:103:1",
+    "icd11rg:table:103:2",
+    "icd11rg:table:103:3",
+    "icd11rg:table:104:1",
+    "icd11rg:table:104:2",
+    "icd11rg:table:112:1",
+    "icd11rg:table:117:1",
+    "icd11rg:table:117:2",
+    "icd11rg:table:117:3",
+    "icd11rg:table:117:4",
+    "icd11rg:table:118:1",
+    "icd11rg:table:118:2",
+    "icd11rg:table:118:3",
+    "icd11rg:table:118:4",
+    "icd11rg:table:119:1",
+    "icd11rg:table:120:1",
+    "icd11rg:table:121:1",
+    "icd11rg:table:121:2",
+    "icd11rg:table:122:1",
+    "icd11rg:table:123:1",
+    "icd11rg:table:123:2",
+    "icd11rg:table:124:1",
+    "icd11rg:table:124:2",
+    "icd11rg:table:125:1",
+    "icd11rg:table:125:2",
+    "icd11rg:table:125:3",
+    "icd11rg:table:126:1",
+    "icd11rg:table:127:1",
+    "icd11rg:table:127:2",
+    "icd11rg:table:127:3",
+    "icd11rg:table:128:1",
+    "icd11rg:table:128:2",
+    "icd11rg:table:129:2",
+    "icd11rg:table:130:1",
+    "icd11rg:table:130:2",
+    "icd11rg:table:130:3",
+    "icd11rg:table:23:1",
+    "icd11rg:table:24:1",
+    "icd11rg:table:32:1",
+    "icd11rg:table:38:1",
+    "icd11rg:table:38:2",
+    "icd11rg:table:99:1"
+   ]
+  }
+ ],
+ "review_queue_size": 63
+}

@@ -1,0 +1,88 @@
+{
+  "block_sequence_sha256": "47bbe2716cc7979a713cce83d6630bc2d41d2fa6441332d6522d37c7730e694d",
+  "blocks": [
+    {
+      "bbox": [
+        195.0,
+        38.31171798706055,
+        315.4112854003906,
+        60.77265548706055
+      ],
+      "block_id": "page-0008-block-0001",
+      "order": 1,
+      "text": "Note au lecteur\n",
+      "text_sha256": "8f4a3c7d6325f162ad193c9c77711f97f02958c953a6aa8c232c6c541e56b5fb"
+    },
+    {
+      "bbox": [
+        195.0,
+        81.76582336425781,
+        555.0833129882812,
+        126.75849914550781
+      ],
+      "block_id": "page-0008-block-0002",
+      "order": 2,
+      "text": "Dans cet ouvrage, le masculin est utilisé comme représentant des deux sexes, sans\ndiscrimination à l’égard des hommes et des femmes, et dans le seul but d’alléger le texte.\nSauf quand le contexte l’exige autrement, la plupart des observations concernent autant les\nhommes que les femmes.\n",
+      "text_sha256": "4a1e2e68017253fe107e3544eead0766a1bdccd984d452f4eb13bc1d0a72b234"
+    },
+    {
+      "bbox": [
+        195.0,
+        133.7658233642578,
+        555.22509765625,
+        190.2584991455078
+      ],
+      "block_id": "page-0008-block-0003",
+      "order": 3,
+      "text": "Les descriptions cliniques des diverses psychopathologies dont traite ce manuel se fondent\nsur les critères diagnostiques établis dans la 5e édition du Diagnostic and Statistical Manual\n(DSM-5) de l’American Psychiatric Association. Pour chacune des psychopathologies, le\nlecteur peut aisément comparer les éléments des deux nosographies DSM-5/DSM-IV-TR, à\nla lumière desquelles le médecin pose un diagnostic psychiatrique.\n",
+      "text_sha256": "b1751da4ef861cfadb5c9753a1547eac3a38b16f06ef3598caf3910d06fbc9b0"
+    },
+    {
+      "bbox": [
+        195.0,
+        197.2658233642578,
+        555.2745971679688,
+        219.2584991455078
+      ],
+      "block_id": "page-0008-block-0004",
+      "order": 4,
+      "text": "Les cas présentés dans les mises en situation cliniques de cet ouvrage sont ctifs. Toute\nressemblance avec des personnes existantes ou ayant déjà existé n’est que pure coïncidence.\n",
+      "text_sha256": "7fc241458786ed7cc62b52ff001d9922f43ae5368c78a4da68e9bf30463ee321"
+    },
+    {
+      "bbox": [
+        195.0,
+        226.2658233642578,
+        555.4000854492188,
+        305.7585144042969
+      ],
+      "block_id": "page-0008-block-0005",
+      "order": 5,
+      "text": "Chaque chapitre a fait l’objet de plusieurs révisions méticuleuses an d’en vérier le\ncontenu. Toutefois, en raison des avancées rapides des sciences médicales, la recherche\net le développement produisent des données scientiques, des traitements et des\npharmacothérapies qui perfectionnent constamment la médecine et ses applications. Le\ncontenu du présent manuel est présenté à titre informatif uniquement. Il ne saurait constituer\nun avis médical. Il incombe au médecin prescripteur et non à cet ouvrage de déterminer la\nmédication et la posologie appropriées pour chaque patient en particulier.\n",
+      "text_sha256": "bff1b34c83afcef865ac2e3b2e173d63fa24319e315acaa47a1055cf1f1d3a49"
+    },
+    {
+      "bbox": [
+        195.0,
+        312.7658386230469,
+        555.2789916992188,
+        357.7585144042969
+      ],
+      "block_id": "page-0008-block-0006",
+      "order": 6,
+      "text": "Des marques de commerce sont mentionnées ou illustrées dans cet ouvrage. L’Éditeur\ntient à préciser qu’il n’a reçu aucun revenu ni avantage conséquemment à la présence de\nces marques. Celles-ci sont reproduites à la demande des auteurs ou des directeurs en vue\nd’appuyer le propos pédagogique ou scientique de l’ouvrage.\n",
+      "text_sha256": "298e0e857b182f738f8f1b83734924ff1560814d083758d18b26bb69e0f88dec"
+    }
+  ],
+  "coordinates_sha256": "b50c3519b84cf687bb90c6253e80f8e6fb8a086bbe35cd40358bf41303952f2d",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0008",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Note au lecteur\nDans cet ouvrage, le masculin est utilisé comme représentant des deux sexes, sans\ndiscrimination à l’égard des hommes et des femmes, et dans le seul but d’alléger le texte.\nSauf quand le contexte l’exige autrement, la plupart des observations concernent autant les\nhommes que les femmes.\nLes descriptions cliniques des diverses psychopathologies dont traite ce manuel se fondent\nsur les critères diagnostiques établis dans la 5e édition du Diagnostic and Statistical Manual\n(DSM-5) de l’American Psychiatric Association. Pour chacune des psychopathologies, le\nlecteur peut aisément comparer les éléments des deux nosographies DSM-5/DSM-IV-TR, à\nla lumière desquelles le médecin pose un diagnostic psychiatrique.\nLes cas présentés dans les mises en situation cliniques de cet ouvrage sont ctifs. Toute\nressemblance avec des personnes existantes ou ayant déjà existé n’est que pure coïncidence.\nChaque chapitre a fait l’objet de plusieurs révisions méticuleuses an d’en vérier le\ncontenu. Toutefois, en raison des avancées rapides des sciences médicales, la recherche\net le développement produisent des données scientiques, des traitements et des\npharmacothérapies qui perfectionnent constamment la médecine et ses applications. Le\ncontenu du présent manuel est présenté à titre informatif uniquement. Il ne saurait constituer\nun avis médical. Il incombe au médecin prescripteur et non à cet ouvrage de déterminer la\nmédication et la posologie appropriées pour chaque patient en particulier.\nDes marques de commerce sont mentionnées ou illustrées dans cet ouvrage. L’Éditeur\ntient à préciser qu’il n’a reçu aucun revenu ni avantage conséquemment à la présence de\nces marques. Celles-ci sont reproduites à la demande des auteurs ou des directeurs en vue\nd’appuyer le propos pédagogique ou scientique de l’ouvrage.\n",
+  "raw_text_sha256": "a971989ba347f09a7ace8b5c3e88e223f0a505f02b0c75192ccb9e2d891fc7e9",
+  "source_page_display": 9,
+  "source_page_index": 8
+}

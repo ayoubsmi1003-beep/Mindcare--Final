@@ -1,0 +1,100 @@
+{
+  "block_sequence_sha256": "fe9f9375729da058c4a583576fd2aa9d8d2236cdb43c44e7f66714f6949ea170",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        130.17344665527344,
+        421.1407470703125,
+        175.09532165527344
+      ],
+      "block_id": "page-1009-block-0001",
+      "order": 1,
+      "text": "Réseaux et partenariats\n",
+      "text_sha256": "eeee9f6032a3c1e7bf5f39d73be01d3934f9d174794d8551649b7962a311dc23"
+    },
+    {
+      "bbox": [
+        48.0,
+        224.00010681152344,
+        157.12159729003906,
+        236.50010681152344
+      ],
+      "block_id": "page-1009-block-0002",
+      "order": 2,
+      "text": "Jean Parratte, M.D., FRCPC\n",
+      "text_sha256": "0405704f3a5e3c41ade60b5915cdc00e3772d641d76ac49a520fb757dd483f6e"
+    },
+    {
+      "bbox": [
+        48.0,
+        240.3772430419922,
+        286.67626953125,
+        261.59381103515625
+      ],
+      "block_id": "page-1009-block-0003",
+      "order": 3,
+      "text": "Psychiatre, Clinique pour traumatismes liés au stress opération-\nnel, Hôpital Sainte-Anne, Sainte-Anne-de-Bellevue\n",
+      "text_sha256": "da5e1f777d2ac503f489799142d6b931fc69b3fe468cb095438dd05874a84f14"
+    },
+    {
+      "bbox": [
+        48.0,
+        265.37725830078125,
+        271.8392028808594,
+        286.59381103515625
+      ],
+      "block_id": "page-1009-block-0004",
+      "order": 4,
+      "text": "Professeur adjoint de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\n",
+      "text_sha256": "55794a101d286e95c09a0e659ed59983b705db069bfa7912758e835ca36bd33a"
+    },
+    {
+      "bbox": [
+        48.0,
+        348.0744323730469,
+        289.010009765625,
+        445.9972839355469
+      ],
+      "block_id": "page-1009-block-0005",
+      "order": 5,
+      "text": "43.1 Évolution des systèmes de santé...................................993\n43.1.1 Recommandations de l’OMS .............................. 993\n43.1.2 Politiques de santé mentale au Québec ............ 993\n43.2 Réseaux ............................................................................ 996\n43.2.1 Étendue du concept .............................................. 996\n43.2.2 éorisation dans le domaine\nsociologique ........................................................... 996\n43.2.3 Types de réseaux.................................................... 997\n",
+      "text_sha256": "532008a14143678e0ae45c7847422a462401a7e2e10951649fd7ca1a24c18a13"
+    },
+    {
+      "bbox": [
+        306.0,
+        348.0744323730469,
+        547.8800048828125,
+        445.9181823730469
+      ],
+      "block_id": "page-1009-block-0006",
+      "order": 6,
+      "text": "43.3 Partenariats ..................................................................1001\n43.3.1 Dénitions ............................................................ 1001\n43.3.2 Facteurs favorisant le partenariat..................... 1001\n43.3.3 Zones troubles du partenariat ......................... 1002\n43.3.4 Partenariat avec les omnipraticiens.................1002\n43.4 Recherches et évaluation des soins\nde collaboration ...........................................................1002\nLectures complémentaires ....................................................1003\n",
+      "text_sha256": "7974f235bfa49faf96bbe5301141b91eb240f32354c44b45a790a3cb9881bdb1"
+    },
+    {
+      "bbox": [
+        257.1000061035156,
+        1.4810562133789062,
+        555.0,
+        121.48104858398438
+      ],
+      "block_id": "page-1009-block-0007",
+      "order": 7,
+      "text": "CHAPITRE43\n",
+      "text_sha256": "fdfa4ed80c594f880373933412a96516158683e163832a437e7d34b99f63fd7a"
+    }
+  ],
+  "coordinates_sha256": "982f4a0f3311cda3b0cbdd8369974ce39153e2cffedde2d7ccfbac57020d7135",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1009",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Réseaux et partenariats\nJean Parratte, M.D., FRCPC\nPsychiatre, Clinique pour traumatismes liés au stress opération-\nnel, Hôpital Sainte-Anne, Sainte-Anne-de-Bellevue\nProfesseur adjoint de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\n43.1 Évolution des systèmes de santé...................................993\n43.1.1 Recommandations de l’OMS .............................. 993\n43.1.2 Politiques de santé mentale au Québec ............ 993\n43.2 Réseaux ............................................................................ 996\n43.2.1 Étendue du concept .............................................. 996\n43.2.2 éorisation dans le domaine\nsociologique ........................................................... 996\n43.2.3 Types de réseaux.................................................... 997\n43.3 Partenariats ..................................................................1001\n43.3.1 Dénitions ............................................................ 1001\n43.3.2 Facteurs favorisant le partenariat..................... 1001\n43.3.3 Zones troubles du partenariat ......................... 1002\n43.3.4 Partenariat avec les omnipraticiens.................1002\n43.4 Recherches et évaluation des soins\nde collaboration ...........................................................1002\nLectures complémentaires ....................................................1003\nCHAPITRE43\n",
+  "raw_text_sha256": "2b08965a4e8a8279f0cc4fa1a030b0ab3f6ac5e258fd2e6420e31bdbe61681e8",
+  "source_page_display": 1010,
+  "source_page_index": 1009
+}

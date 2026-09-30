@@ -1,0 +1,268 @@
+{
+  "block_sequence_sha256": "d904be3bfd3b5844ae59615e871b3968af63f648974c3311e7115e10eb7d9fa2",
+  "blocks": [
+    {
+      "bbox": [
+        381.75,
+        747.525390625,
+        555.0,
+        758.8193359375
+      ],
+      "block_id": "page-0578-block-0001",
+      "order": 1,
+      "text": "Chapitre 26\nDouleur chronique\n561\n",
+      "text_sha256": "72c195fc993e6cfa59548310af3313d992b7df9833d8a617e9be19e06b656f6d"
+    },
+    {
+      "bbox": [
+        56.35000228881836,
+        41.05229568481445,
+        350.5700378417969,
+        53.320068359375
+      ],
+      "block_id": "page-0578-block-0002",
+      "order": 2,
+      "text": "TABLEAU 26.5 Douleur chronique simple et douleur chronique complexe\n",
+      "text_sha256": "04c56c2f4d32378d12f956a8b7292c4ddd584814505a75af37a744b5cfb1c87f"
+    },
+    {
+      "bbox": [
+        132.5,
+        58.27412414550781,
+        481.6698303222656,
+        68.85029602050781
+      ],
+      "block_id": "page-0578-block-0003",
+      "order": 3,
+      "text": "Douleur chronique simple\nDouleur chronique complexe\n",
+      "text_sha256": "89ed8c039848a5263ee3cb2958e3d8ec8d595f7f8df762b46f3cccea7a76ac21"
+    },
+    {
+      "bbox": [
+        58.25,
+        74.20195770263672,
+        291.09332275390625,
+        114.02812957763672
+      ],
+      "block_id": "page-0578-block-0004",
+      "order": 4,
+      "text": "Exemple : une jeune femme consulte en psychiatrie de liaison pour une\nfatigue qui s’est intensiée depuis une poussée récente de sclérose en\nplaques s’accompagnant d’engourdissement et de douleur des membres\ninférieurs.\n",
+      "text_sha256": "d863e19b2a545818d1421fe8195c9dc90f166c417ef57e5961f2bb0ed8672559"
+    },
+    {
+      "bbox": [
+        308.25,
+        74.20195770263672,
+        550.1575927734375,
+        114.02812957763672
+      ],
+      "block_id": "page-0578-block-0005",
+      "order": 5,
+      "text": "Exemple : un homme en arrêt de travail à la suite d’une lombalgie chronique\nréfractaire à une intervention chirurgicale passe une partie de la nuit à\nréviser son dossier d’invalidité et néglige d’emmener sa lle le matin\nà l’école an de surveiller le facteur et l’arrivée d’une lettre de la CSST.\n",
+      "text_sha256": "e0528f0590bac9fa5137f210e6040598e6446981807f5155fa4d705b6c6479f6"
+    },
+    {
+      "bbox": [
+        58.25,
+        122.65196228027344,
+        208.72604370117188,
+        143.47813415527344
+      ],
+      "block_id": "page-0578-block-0006",
+      "order": 6,
+      "text": "La douleur est clairement dénie.\nL’adhésion au traitement est acquise d’emblée.\n",
+      "text_sha256": "45b0545c2fe3d24ddee37cf96d5f28cabacce01a67d40009ab72147fcc616fed"
+    },
+    {
+      "bbox": [
+        308.25,
+        122.65196228027344,
+        541.4457397460938,
+        153.47813415527344
+      ],
+      "block_id": "page-0578-block-0007",
+      "order": 7,
+      "text": "Les plaintes douloureuses sont multiples.\nLe patient est ambivalent face aux interventions de traitement proposées,\nson adhésion au traitement est uctuante.\n",
+      "text_sha256": "ed6d1f1c13eba0c3b3a07b457ecb64d7a22311124f254e60581bf31682316bb9"
+    },
+    {
+      "bbox": [
+        58.25,
+        162.0519561767578,
+        264.0278625488281,
+        182.8781280517578
+      ],
+      "block_id": "page-0578-block-0008",
+      "order": 8,
+      "text": "Le soutien de l’entourage est stable.\nLes facteurs psychologiques comorbides sont cernés facilement.\n",
+      "text_sha256": "c8c17cc39cad4941a00fdd77e4fe5ba391aadf83548b49358ad6f4d1aa2bb2b0"
+    },
+    {
+      "bbox": [
+        308.25,
+        162.0519561767578,
+        515.7913818359375,
+        182.8781280517578
+      ],
+      "block_id": "page-0578-block-0009",
+      "order": 9,
+      "text": "L’entourage du patient est instable et désengagé.\nPlusieurs facteurs psychologiques graves compliquent le tableau.\n",
+      "text_sha256": "af22b222689cbd346d72f9192d4d6dee5abdbf95e4eeee9f14be49170eadc95a"
+    },
+    {
+      "bbox": [
+        58.25,
+        191.501953125,
+        283.3360900878906,
+        232.328125
+      ],
+      "block_id": "page-0578-block-0010",
+      "order": 10,
+      "text": "La douleur répond complètement ou partiellement au traitement et aux\ninterventions.\nLe patient a recours à une psychothérapie à court terme, qui s’avère\nefcace et sufsante.\n",
+      "text_sha256": "b0007490bc93f6d3637446a713d4b157a5ef68cfdf649daf1b41f90126a2f72b"
+    },
+    {
+      "bbox": [
+        308.25,
+        191.501953125,
+        535.5732421875,
+        232.328125
+      ],
+      "block_id": "page-0578-block-0011",
+      "order": 11,
+      "text": "La douleur est réfractaire partiellement ou complètement au traitement\net aux interventions.\nLe patient peut avoir recours à une approche multidisciplinaire, incluant\ndes interventions psychiatriques et psychothérapeutiques.\n",
+      "text_sha256": "ceafbad866be748bc8f5d066fe96e18a5cf677a28fee15469b0e12d38b2292ea"
+    },
+    {
+      "bbox": [
+        58.25,
+        240.90196228027344,
+        298.0987854003906,
+        260.7281188964844
+      ],
+      "block_id": "page-0578-block-0012",
+      "order": 12,
+      "text": "La demande d’aide du patient n’est pas uniquement centrée sur l’obtention\nde prestations d’invalidité.\n",
+      "text_sha256": "f9eb52cf6cc7a6f437f3c34c274489ba88444f7387eefbf5295ff9fd5e89948e"
+    },
+    {
+      "bbox": [
+        308.25,
+        240.90196228027344,
+        534.813232421875,
+        260.7281188964844
+      ],
+      "block_id": "page-0578-block-0013",
+      "order": 13,
+      "text": "L’obtention de prestations d’invalidité est centrale à la démarche d’aide\ndu patient.\n",
+      "text_sha256": "e30b67ff2c8079ac1ebfcb6bf503cb01bac8122f403e8698d9465d7579e3c5e6"
+    },
+    {
+      "bbox": [
+        54.25,
+        269.4906311035156,
+        161.31532287597656,
+        278.3588562011719
+      ],
+      "block_id": "page-0578-block-0014",
+      "order": 14,
+      "text": "Source : Adapté de Leo (2007), p. 30.\n",
+      "text_sha256": "b548d8d0fe9c82f15883d8b6cc908c98a189bf146fa343eb133c6cdb25c6d246"
+    },
+    {
+      "bbox": [
+        54.0,
+        292.4658203125,
+        297.5511474609375,
+        420.2585144042969
+      ],
+      "block_id": "page-0578-block-0015",
+      "order": 15,
+      "text": "doit être vigilant dans cette partie de l’évaluation an de ne pas\nréfuter le modèle explicatif du patient sur sa maladie. En eet,\nhabitués à l’invalidation de leur détresse, ces patients restent\nsur leurs gardes dès que la sphère émotionnelle est abordée. Ils\nanticipent préjugés et incompréhension de la part des soignants.\nIls craignent que les explications psychologiques détournent\nl’attention des aspects physiques du traitement qu’ils espèrent.\nParadoxalement, la reconnaissance des émotions intenses liées\nà l’expérience douloureuse a un eet thérapeutique indéniable\nlorsque le médecin est aable et soutenant. Cette portion du\nquestionnaire crée et consolide l’alliance thérapeutique.\n",
+      "text_sha256": "b5bb87106917fb2ce991ea5aab069a35f6da3728484d63870e4089c7c67381f9"
+    },
+    {
+      "bbox": [
+        54.0,
+        421.4658203125,
+        297.3457336425781,
+        537.5585327148438
+      ],
+      "block_id": "page-0578-block-0016",
+      "order": 16,
+      "text": "La grande majorité des patients (60 à 100 %) présentent des\nsymptômes dépressifs (insomnie, anhédonie, ralentissement\npsychomoteur, tristesse). Toutefois, seulement un quart satisfait à\ntous les critères pour un diagnostic de trouble de l’humeur lié à la\ndouleur chronique. La dépression surajoutée peut être masquée\npar un déni ou une minimisation d’aects intenses, en particu-\nlier la colère. Le patient peut également utiliser une médication\nhautement sédative qui engendre une dépression iatrogénique.\nLa présence de dépression est plus prédictive d’invalidité que\nl’intensité ou la durée de la douleur.\n",
+      "text_sha256": "b82a877d330e325afaae3b6198217280f0977f150e141d681ee366168617c1a8"
+    },
+    {
+      "bbox": [
+        54.0,
+        538.8158569335938,
+        297.4530944824219,
+        666.6085205078125
+      ],
+      "block_id": "page-0578-block-0017",
+      "order": 17,
+      "text": "Il est impératif d’évaluer les souhaits de mort passive, les\nidéations, les plans et intentions suicidaires, car ces patients\nsont particulièrement vulnérables au désespoir. Le risque de\nsuicide augmente lorsque la maladie douloureuse s’accompagne\nd’une peur d’être déguré par les traitements à venir (p. ex.,\nrésection chirurgicale au niveau du visage, radiothérapie de la\nsphère ORL), de douleur irréductible, d’abus de substances, de\nperte d’autonomie et de dépression. Il faut en outre explorer les\ntentatives de suicide antérieures s’il y en a eu, la plus récente, le\nmode utilisé, les antécédents familiaux, la présence d’un réseau\nd’entraide et la volonté du patient à y recourir.\n",
+      "text_sha256": "8340d25de81e390ac04d2dcf232db6f9827781758765525d8f0d38f192a69f3f"
+    },
+    {
+      "bbox": [
+        54.0,
+        667.8658447265625,
+        297.2979736328125,
+        725.2584838867188
+      ],
+      "block_id": "page-0578-block-0018",
+      "order": 18,
+      "text": "On observe la présence de symptômes d’anxiété chez presque\nla moitié des patients. Or, seulement le tiers des personnes\naectées par une douleur irréductible répondent aux critères\ndiagnostiques pour un trouble d’anxiété généralisée, un trouble\npanique, l’agoraphobie ou un trouble de stress post-traumatique.\n",
+      "text_sha256": "88be6ef824ae4eb444212b1be3c684fe8981dc21ef6a5ebbbb8ad79ce15794d7"
+    },
+    {
+      "bbox": [
+        312.0,
+        292.4658203125,
+        555.649658203125,
+        385.0585021972656
+      ],
+      "block_id": "page-0578-block-0019",
+      "order": 19,
+      "text": "En outre, plus de la moitié de ces patients présentent des troubles\nmentaux concomitants tels que des épisodes de dépression et des\ntroubles liés à l’utilisation d’alcool ou de substances. La colère est\nfréquemment liée à l’anxiété, bien qu’elle soit typiquement niée et\ndéplacée en plaintes somatiques. L’insomnie, prédominante chez\nces patients, est responsable d’un état d’excitabilité exacerbant la\nréponse douloureuse. L’anxiété existentielle est ampliée lorsque\nla douleur est liée à un cancer, à sa récidive et en n de vie.\n",
+      "text_sha256": "30ca28baff405490cbf3bae6f0d87a78d7c5851b356888a5ee40e2c8bd8f54cf"
+    },
+    {
+      "bbox": [
+        312.0,
+        386.3158264160156,
+        555.2706298828125,
+        572.7584838867188
+      ],
+      "block_id": "page-0578-block-0020",
+      "order": 20,
+      "text": "Certains tableaux de douleur chronique sont fortement asso-\nciés à l’expression d’un trouble de stress post-traumatique. Chez\nles patients ayant vécu des traumatismes durant leur enfance, les\ndouleurs pelviennes, sexuelles ou abdominales et les céphalées sont\nles plaintes douloureuses les plus communes. Un déni protecteur\net l’incapacité à tolérer une proximité émotionnelle rendent le\ndiagnostic dicile à objectiver. Le traitement de ces traumatismes\nest une entreprise à long terme. Il nécessite une volonté soutenue\nde la part du patient et du thérapeute. Les signes typiques sugges-\ntifs d’un trouble dissociatif incluent les cauchemars, des périodes\nprolongées d’amnésie, de la panique ainsi que l’intolérance à des\nrelations personnelles intimes. À titre d’exemple, plus de la moitié\ndes patients atteints de bromyalgie rapportent des symptômes de\nstress post-traumatiques cliniquement signicatifs. La réduction de\nces symptômes, lorsqu’ils sont identiés et traités, s’associe à une\ndiminution de la douleur, de la détresse émotionnelle et de l’invalidité.\n",
+      "text_sha256": "1523b39dbf7a9709abf58485bdf192a32c0251210501b610502c539672792b35"
+    },
+    {
+      "bbox": [
+        312.0,
+        574.0158081054688,
+        555.4366455078125,
+        725.2584838867188
+      ],
+      "block_id": "page-0578-block-0021",
+      "order": 21,
+      "text": "Il est nécessaire de procéder au dépistage d’un trouble lié à\nl’utilisation de substances passé et présent, car un patient avec\ndes antécédents de toxicomanie risque d’abuser des analgésiques\nopioïdes. Un questionnaire positif ne doit pas priver ces patients\nd’un traitement adéquat, il permet plutôt d’identier les facteurs\nde risque accrus et d’assurer une évaluation plus complète, une\nprescription soignée et un suivi adapté. Dans un tel contexte, il\ndevient important de s’assurer que les doses sont objectivement\nsusantes et que la fréquence d’administration est ajustée en\nfonction de la demi-vie du médicament. En eet, l’insusance de\nla médication antalgique est plutôt la norme. L’OMS recense de\nnombreuses enquêtes dénonçant le traitement sous-optimal\nde la douleur chez les enfants, les personnes âgées, les malades\n",
+      "text_sha256": "547c6886d7ac6e9a34e730296b3ed0032e5a374f7e383634189f7808a09b03a1"
+    }
+  ],
+  "coordinates_sha256": "0e37870edc3a121db76c975f31fb85602b46f47485ff2f1d7630abfb88bdf462",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0578",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 26\nDouleur chronique\n561\nTABLEAU 26.5 Douleur chronique simple et douleur chronique complexe\nDouleur chronique simple\nDouleur chronique complexe\nExemple : une jeune femme consulte en psychiatrie de liaison pour une\nfatigue qui s’est intensiée depuis une poussée récente de sclérose en\nplaques s’accompagnant d’engourdissement et de douleur des membres\ninférieurs.\nExemple : un homme en arrêt de travail à la suite d’une lombalgie chronique\nréfractaire à une intervention chirurgicale passe une partie de la nuit à\nréviser son dossier d’invalidité et néglige d’emmener sa lle le matin\nà l’école an de surveiller le facteur et l’arrivée d’une lettre de la CSST.\nLa douleur est clairement dénie.\nL’adhésion au traitement est acquise d’emblée.\nLes plaintes douloureuses sont multiples.\nLe patient est ambivalent face aux interventions de traitement proposées,\nson adhésion au traitement est uctuante.\nLe soutien de l’entourage est stable.\nLes facteurs psychologiques comorbides sont cernés facilement.\nL’entourage du patient est instable et désengagé.\nPlusieurs facteurs psychologiques graves compliquent le tableau.\nLa douleur répond complètement ou partiellement au traitement et aux\ninterventions.\nLe patient a recours à une psychothérapie à court terme, qui s’avère\nefcace et sufsante.\nLa douleur est réfractaire partiellement ou complètement au traitement\net aux interventions.\nLe patient peut avoir recours à une approche multidisciplinaire, incluant\ndes interventions psychiatriques et psychothérapeutiques.\nLa demande d’aide du patient n’est pas uniquement centrée sur l’obtention\nde prestations d’invalidité.\nL’obtention de prestations d’invalidité est centrale à la démarche d’aide\ndu patient.\nSource : Adapté de Leo (2007), p. 30.\ndoit être vigilant dans cette partie de l’évaluation an de ne pas\nréfuter le modèle explicatif du patient sur sa maladie. En eet,\nhabitués à l’invalidation de leur détresse, ces patients restent\nsur leurs gardes dès que la sphère émotionnelle est abordée. Ils\nanticipent préjugés et incompréhension de la part des soignants.\nIls craignent que les explications psychologiques détournent\nl’attention des aspects physiques du traitement qu’ils espèrent.\nParadoxalement, la reconnaissance des émotions intenses liées\nà l’expérience douloureuse a un eet thérapeutique indéniable\nlorsque le médecin est aable et soutenant. Cette portion du\nquestionnaire crée et consolide l’alliance thérapeutique.\nLa grande majorité des patients (60 à 100 %) présentent des\nsymptômes dépressifs (insomnie, anhédonie, ralentissement\npsychomoteur, tristesse). Toutefois, seulement un quart satisfait à\ntous les critères pour un diagnostic de trouble de l’humeur lié à la\ndouleur chronique. La dépression surajoutée peut être masquée\npar un déni ou une minimisation d’aects intenses, en particu-\nlier la colère. Le patient peut également utiliser une médication\nhautement sédative qui engendre une dépression iatrogénique.\nLa présence de dépression est plus prédictive d’invalidité que\nl’intensité ou la durée de la douleur.\nIl est impératif d’évaluer les souhaits de mort passive, les\nidéations, les plans et intentions suicidaires, car ces patients\nsont particulièrement vulnérables au désespoir. Le risque de\nsuicide augmente lorsque la maladie douloureuse s’accompagne\nd’une peur d’être déguré par les traitements à venir (p. ex.,\nrésection chirurgicale au niveau du visage, radiothérapie de la\nsphère ORL), de douleur irréductible, d’abus de substances, de\nperte d’autonomie et de dépression. Il faut en outre explorer les\ntentatives de suicide antérieures s’il y en a eu, la plus récente, le\nmode utilisé, les antécédents familiaux, la présence d’un réseau\nd’entraide et la volonté du patient à y recourir.\nOn observe la présence de symptômes d’anxiété chez presque\nla moitié des patients. Or, seulement le tiers des personnes\naectées par une douleur irréductible répondent aux critères\ndiagnostiques pour un trouble d’anxiété généralisée, un trouble\npanique, l’agoraphobie ou un trouble de stress post-traumatique.\nEn outre, plus de la moitié de ces patients présentent des troubles\nmentaux concomitants tels que des épisodes de dépression et des\ntroubles liés à l’utilisation d’alcool ou de substances. La colère est\nfréquemment liée à l’anxiété, bien qu’elle soit typiquement niée et\ndéplacée en plaintes somatiques. L’insomnie, prédominante chez\nces patients, est responsable d’un état d’excitabilité exacerbant la\nréponse douloureuse. L’anxiété existentielle est ampliée lorsque\nla douleur est liée à un cancer, à sa récidive et en n de vie.\nCertains tableaux de douleur chronique sont fortement asso-\nciés à l’expression d’un trouble de stress post-traumatique. Chez\nles patients ayant vécu des traumatismes durant leur enfance, les\ndouleurs pelviennes, sexuelles ou abdominales et les céphalées sont\nles plaintes douloureuses les plus communes. Un déni protecteur\net l’incapacité à tolérer une proximité émotionnelle rendent le\ndiagnostic dicile à objectiver. Le traitement de ces traumatismes\nest une entreprise à long terme. Il nécessite une volonté soutenue\nde la part du patient et du thérapeute. Les signes typiques sugges-\ntifs d’un trouble dissociatif incluent les cauchemars, des périodes\nprolongées d’amnésie, de la panique ainsi que l’intolérance à des\nrelations personnelles intimes. À titre d’exemple, plus de la moitié\ndes patients atteints de bromyalgie rapportent des symptômes de\nstress post-traumatiques cliniquement signicatifs. La réduction de\nces symptômes, lorsqu’ils sont identiés et traités, s’associe à une\ndiminution de la douleur, de la détresse émotionnelle et de l’invalidité.\nIl est nécessaire de procéder au dépistage d’un trouble lié à\nl’utilisation de substances passé et présent, car un patient avec\ndes antécédents de toxicomanie risque d’abuser des analgésiques\nopioïdes. Un questionnaire positif ne doit pas priver ces patients\nd’un traitement adéquat, il permet plutôt d’identier les facteurs\nde risque accrus et d’assurer une évaluation plus complète, une\nprescription soignée et un suivi adapté. Dans un tel contexte, il\ndevient important de s’assurer que les doses sont objectivement\nsusantes et que la fréquence d’administration est ajustée en\nfonction de la demi-vie du médicament. En eet, l’insusance de\nla médication antalgique est plutôt la norme. L’OMS recense de\nnombreuses enquêtes dénonçant le traitement sous-optimal\nde la douleur chez les enfants, les personnes âgées, les malades\n",
+  "raw_text_sha256": "a7aee4c978c3a1e417d951033527cb776e81b46259d856c741f385b183799da3",
+  "source_page_display": 579,
+  "source_page_index": 578
+}

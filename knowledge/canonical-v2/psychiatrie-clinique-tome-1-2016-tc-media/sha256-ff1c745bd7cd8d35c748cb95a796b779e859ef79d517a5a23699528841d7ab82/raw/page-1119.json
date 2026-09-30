@@ -1,0 +1,832 @@
+{
+  "block_sequence_sha256": "ac6f787aaef3e6108f279efcb6554fec11add03d09daa169b46ca48046759fb7",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        126.91150665283203,
+        758.8693237304688
+      ],
+      "block_id": "page-1119-block-0001",
+      "order": 1,
+      "text": "R22\nRéférences\n",
+      "text_sha256": "9ee568d93b4a9d1aeb966ffb9e86bc6577b526f7d4c8b954a8fd366d3ea7dede"
+    },
+    {
+      "bbox": [
+        390.0,
+        40.68496322631836,
+        533.5,
+        67.07344055175781
+      ],
+      "block_id": "page-1119-block-0002",
+      "order": 2,
+      "text": "Hudson, J. L. & al. (2003). « Family study of affective\nspectrum disorder », Archives of General Psychiatry,\n60(2), p. 170-177.\n",
+      "text_sha256": "a29569df053d5d804af9a05fbd71610c9ccc488074648d5393d5f1751a92e8b9"
+    },
+    {
+      "bbox": [
+        390.0,
+        70.9849624633789,
+        547.0,
+        97.3734359741211
+      ],
+      "block_id": "page-1119-block-0003",
+      "order": 3,
+      "text": "Kato, K. & al. (2009). « A population-based twin study of\nfunctional somatic syndrome », Psychological Medicine, 39,\np. 497-505.\n",
+      "text_sha256": "e710359753e606e3d17b8ed58154c00e7fdf919cbaf8840b43c8ec5ea25d8308"
+    },
+    {
+      "bbox": [
+        390.0,
+        101.28496551513672,
+        548.6300048828125,
+        136.7734375
+      ],
+      "block_id": "page-1119-block-0004",
+      "order": 4,
+      "text": "Katon, W. & al. (2007). « The association of depression\nand anxiety with medical symptom burden in patients with\nchronic medical illness », General Hospital Psychiatry, 29(2),\np. 147-155.\n",
+      "text_sha256": "a58067c5c3178b7014de65baa7b0fb9b5cdb983f17824cf6dd4c3c995bf274ba"
+    },
+    {
+      "bbox": [
+        390.0,
+        140.68496704101562,
+        547.7090454101562,
+        167.0734405517578
+      ],
+      "block_id": "page-1119-block-0005",
+      "order": 5,
+      "text": "Katsamanis, M. & al. (2011). «Psycho physiologic treatment\nfor patients with medically unexplained symptoms »,\nPsychosomatics, 52(3), p. 218-229.\n",
+      "text_sha256": "99ecdbfac2a0f7cb07a349edadc1f35976d9aaa5ac41f877a843cd3697409783"
+    },
+    {
+      "bbox": [
+        390.0,
+        170.98497009277344,
+        541.6925048828125,
+        206.4734344482422
+      ],
+      "block_id": "page-1119-block-0006",
+      "order": 6,
+      "text": "Kroenke, K. (2003). « Patients presenting with complaints :\nEpidemiology psychiatric comorbidity and management »,\nInternational Journal of Methods in Psychiatric Research,\n12(1), p. 34-43.\n",
+      "text_sha256": "a859de93b11180dfa86c50db1f35cc8a43e28b1de564f9367e4835593e19121b"
+    },
+    {
+      "bbox": [
+        390.0,
+        210.3849639892578,
+        542.697509765625,
+        245.87344360351562
+      ],
+      "block_id": "page-1119-block-0007",
+      "order": 7,
+      "text": "Lieb, R. & al. (2007). « Epidemiology of the association\nbetween somatoform disorders and anxiety and depres-\nsive disorders : An update », Psychosomatic Medicine,\n69(8), p. 860-863.\n",
+      "text_sha256": "d5ba4fb1ad9528f6872bd640996247ff34376e036e202eca618bf034238db4fb"
+    },
+    {
+      "bbox": [
+        390.0,
+        249.78497314453125,
+        532.5249633789062,
+        267.0734558105469
+      ],
+      "block_id": "page-1119-block-0008",
+      "order": 8,
+      "text": "Lipowski, Z. J. (1990). «Somatization and depression »,\nPsychosomatics, 31(1), p. 13-21.\n",
+      "text_sha256": "77a7cf5f9dbac5e9e4922dad8d3d058eefcc7bb0c9af4c7b3c314afbff9c8e31"
+    },
+    {
+      "bbox": [
+        390.0,
+        270.9849548339844,
+        536.3475341796875,
+        306.47344970703125
+      ],
+      "block_id": "page-1119-block-0009",
+      "order": 9,
+      "text": "Lowe, B. & al. (2008). « Depression, anxiety and somati-\nzation in primary care : Syndrome overlap and functio-\nnal impairment », General Hospital Psychiatry, 30(3),\np. 191-199.\n",
+      "text_sha256": "94953dc22210b286febc4eccfa48ebdc4c4a973f7e54edb93bfc6461bfb4dadc"
+    },
+    {
+      "bbox": [
+        390.0,
+        310.3849792480469,
+        536.324951171875,
+        327.6734313964844
+      ],
+      "block_id": "page-1119-block-0010",
+      "order": 10,
+      "text": "Mayou, R. & al. (1995). Treatment of Functional Somatic\nSymptoms, Oxford, Oxford University Press.\n",
+      "text_sha256": "3b2a1ed10d879df3af393d59984918e040578c3158d7d334336204bed119a0fd"
+    },
+    {
+      "bbox": [
+        390.0,
+        331.5849609375,
+        529.5375366210938,
+        348.9234313964844
+      ],
+      "block_id": "page-1119-block-0011",
+      "order": 11,
+      "text": "Organisation mondiale de la santé. (2008). Classication\ninternationale des maladies, 10e éd., Paris, Masson.\n",
+      "text_sha256": "e515646b63bfb84dc5d02a5004bbbbd70e20c2c323f44f140cd565c60139eee9"
+    },
+    {
+      "bbox": [
+        390.0,
+        352.8349609375,
+        526.4000244140625,
+        370.1234436035156
+      ],
+      "block_id": "page-1119-block-0012",
+      "order": 12,
+      "text": "Parsons, T. (1964). Social Structure and Personality,\nLondres, Royaume-Uni, Collier-MacMillan.\n",
+      "text_sha256": "f663b7881951c9c4fe1d4007e8e6fe270228dc23a057d5af3ea2e57eca9a9120"
+    },
+    {
+      "bbox": [
+        390.0,
+        374.03497314453125,
+        545.6500244140625,
+        400.4234313964844
+      ],
+      "block_id": "page-1119-block-0013",
+      "order": 13,
+      "text": "Parsons, T. (1975) « The sick role and the role of the\nphysician reconsidered », Milbank Memorial Fund Quaterly,\n53, p. 257-278.\n",
+      "text_sha256": "2f384fb215287b54af5d3bdd484430309a85202bf43e53f075773c61cdb548f3"
+    },
+    {
+      "bbox": [
+        390.0,
+        404.3349609375,
+        545.7675170898438,
+        430.72344970703125
+      ],
+      "block_id": "page-1119-block-0014",
+      "order": 14,
+      "text": "Ritsner, M. (2003). « The attribution of somatization in schi-\nzophrenia patients : A naturalistic follow-up study », Journal\nof Clinical Psychiatry, 64, p. 1370-1378.\n",
+      "text_sha256": "527fa5fed3eb61f5475b77707950ff875543f768898109d9c0731b725e664c29"
+    },
+    {
+      "bbox": [
+        390.0,
+        434.6349792480469,
+        541.8374633789062,
+        461.0234375
+      ],
+      "block_id": "page-1119-block-0015",
+      "order": 15,
+      "text": "Sharpe, M. (2000). « Functional somatic symptoms :\nEtiology, diagnosis and treatment », Biological Psychiatric,\n53, p. 93-97.\n",
+      "text_sha256": "edd319b38615a93da544b5f8b3fe10c92e61ee1dbc9bd9838f66f5f6d19cde1b"
+    },
+    {
+      "bbox": [
+        390.0,
+        464.9349670410156,
+        547.12548828125,
+        491.3234558105469
+      ],
+      "block_id": "page-1119-block-0016",
+      "order": 16,
+      "text": "Sifneos, P. E. (1972). «The prevalence of “alexithymia”\ncharacteristics in psychosomatic », dans Freyberger, J. (dir.)\nTopics of Psychosomatic Research, Bâle, Suisse, Karger.\n",
+      "text_sha256": "0dd986812e1ac6b2bcb48c1d49d0ca65c0e4f7f9e00fc99da197363e16c2990a"
+    },
+    {
+      "bbox": [
+        390.0,
+        495.2349548339844,
+        548.306396484375,
+        530.7234497070312
+      ],
+      "block_id": "page-1119-block-0017",
+      "order": 17,
+      "text": "Stahl, S. M. (2008). «Pain and the treatment of bromyalgia\nand functional somatic syndrome », dans Stahl, S. M. & al.,\nStahl’s Essential Psychopharmacology, 3e éd., Cambridge,\nRoyaume-Uni, Cambridge University Press, p. 773-814.\n",
+      "text_sha256": "1517d7e570ad1d184d61a38381c4ba0169a6ab3addc910720c576a5a1c8d7512"
+    },
+    {
+      "bbox": [
+        390.0,
+        534.6349487304688,
+        542.3475341796875,
+        561.0234375
+      ],
+      "block_id": "page-1119-block-0018",
+      "order": 18,
+      "text": "Stern, T. & al. (2010). Massachusetts General Hospital\nhandbook of general hospital psychiatry, 6e éd., Philadel-\nphia, Saunders.\n",
+      "text_sha256": "5ceba82f71283ca4dd4dbfb064b59a8aee3a3021db39502a83979b52ca1dd274"
+    },
+    {
+      "bbox": [
+        390.0,
+        564.9349975585938,
+        541.4000244140625,
+        591.3234252929688
+      ],
+      "block_id": "page-1119-block-0019",
+      "order": 19,
+      "text": "Stuart, S. & Noyes, R. (1999). « Attachment and interper-\nsonal communication and somatization », Psychosomatic,\n40(1), p. 34-43.\n",
+      "text_sha256": "2f282568886d65d79aca426088474075d45d6ffae9a25e0e02cc8fe924f693da"
+    },
+    {
+      "bbox": [
+        390.0,
+        595.2349853515625,
+        543.4075317382812,
+        621.6234741210938
+      ],
+      "block_id": "page-1119-block-0020",
+      "order": 20,
+      "text": "Toone, B. K. (1990). « Disorders of hysterical conversion »,\ndans Bass, C. (dir.), Physical Symptoms and Psychological\nIllness, Boston, MA, Blackwell Scientic, p. 207-234.\n",
+      "text_sha256": "4cf8e31fbc4f05e8c63b3d754363156b96c7c68a65f5832962680dbc005bbff2"
+    },
+    {
+      "bbox": [
+        390.0,
+        625.5349731445312,
+        545.7850341796875,
+        651.9234619140625
+      ],
+      "block_id": "page-1119-block-0021",
+      "order": 21,
+      "text": "Woolfolk, R. L. & Allen, L. A. (2007). Treating somatization :\na cognitive- behavioral approach, New York, NY, Guilford\nPress.\n",
+      "text_sha256": "11800430bc716619cff1fe165b6f5583112245d707112eaa587e1b1af0f04c5f"
+    },
+    {
+      "bbox": [
+        390.0,
+        665.3203125,
+        547.2301025390625,
+        703.3234252929688
+      ],
+      "block_id": "page-1119-block-0022",
+      "order": 22,
+      "text": "Chapitre 26\nAmerican College of Rheumatology. (1990). Classication\nCriteria, [en ligne], www.rheumatology.org/Practice-Quality/\nClinical-Support/Criteria/ACR-Endorsed-Criteria.\n",
+      "text_sha256": "bd16c2ebbbd92f5c0151c961431d8f25ec80343abc7cf360ec58046790bf49b4"
+    },
+    {
+      "bbox": [
+        390.0,
+        707.2349853515625,
+        527.9000244140625,
+        724.5234375
+      ],
+      "block_id": "page-1119-block-0023",
+      "order": 23,
+      "text": "American College of Rheumatology. (2010). Preliminary\nDiagnostic Criteria, [en ligne], www.rheumatology.\n",
+      "text_sha256": "369b628f7ab5be51b93f1fc58aa26faa2d7870fc69e274a32d3ab947848e3470"
+    },
+    {
+      "bbox": [
+        219.0,
+        40.68496322631836,
+        375.74749755859375,
+        57.923439025878906
+      ],
+      "block_id": "page-1119-block-0024",
+      "order": 24,
+      "text": "Sierra, M. (2008). « Depersonalization disorder : pharmacolo-\ngical approaches », Expert Rev Neurother, 8(1), p. 19-26.\n",
+      "text_sha256": "8e4e413e3e382ce67e7300a86217bce32a2e14504b0277c64c1cb2b0e2a7fc42"
+    },
+    {
+      "bbox": [
+        219.0,
+        61.78496551513672,
+        376.24749755859375,
+        88.1234359741211
+      ],
+      "block_id": "page-1119-block-0025",
+      "order": 25,
+      "text": "Sierra, M. & David, A. S. (2011). « Depersonalization : A\nselective impairment of self-awareness », Conscious Cogni-\ntion, 20(1), p. 99-108.\n",
+      "text_sha256": "e774e9de27465dfbde9554c3028e77e745bb5281e5be7d8734de1fad5171078f"
+    },
+    {
+      "bbox": [
+        219.0,
+        91.9849624633789,
+        376.39520263671875,
+        118.2734375
+      ],
+      "block_id": "page-1119-block-0026",
+      "order": 26,
+      "text": "Silberg, J. L. (1998). The Dissociative Child : Diagnosis,\nTreatment and Management, 2e éd., Lutherville, MD, Sidran\nPress.\n",
+      "text_sha256": "15e150cc75bb21b2668eef6dd3a941c781dac58abad99b77a83293d45642c35e"
+    },
+    {
+      "bbox": [
+        219.0,
+        122.13496398925781,
+        372.9103088378906,
+        139.37344360351562
+      ],
+      "block_id": "page-1119-block-0027",
+      "order": 27,
+      "text": "Silberg, J. L. (2013). The Child Survivor : Healing Develop-\nmental Trauma and Dissociation, New York, NY, Routledge.\n",
+      "text_sha256": "e973810586d50aacfc33b3c7761a6f95540226818753508a38da2963cc39c208"
+    },
+    {
+      "bbox": [
+        219.0,
+        143.23497009277344,
+        359.25750732421875,
+        169.5234375
+      ],
+      "block_id": "page-1119-block-0028",
+      "order": 28,
+      "text": "Simeon, D. & Stein, D. J. (2009). « Cognitive-affective\nneuroscience of depersonalization », CNS Spectrums,\n14(9), p. 467-471.\n",
+      "text_sha256": "4862043b3feb3cbede223d064837bd029a124f779c7ec1103e125f78ff82913e"
+    },
+    {
+      "bbox": [
+        219.0,
+        173.3849639892578,
+        372.7439270019531,
+        190.67344665527344
+      ],
+      "block_id": "page-1119-block-0029",
+      "order": 29,
+      "text": "Spiegel, D. & al. (2011). « Dissociative disorders in DSM5 »,\nDepress Anxiety, 28(12), p. 17-45.\n",
+      "text_sha256": "858a4e2440bf4616ae59b57388491d7ff6f8c9a3cf0bc937917b252f089bf9eb"
+    },
+    {
+      "bbox": [
+        219.0,
+        194.5349578857422,
+        374.4850769042969,
+        220.8234405517578
+      ],
+      "block_id": "page-1119-block-0030",
+      "order": 30,
+      "text": "Stein, J. & al. (2013). « Dissociation in posttraumatic stress\ndisorder : Évidence from the world mental health surveys »,\nBiological Psychiatry, 73(4), p. 302-312.\n",
+      "text_sha256": "9574432b3085f4a55e638c530e835650762f74d763fc90aba97bb666652f8813"
+    },
+    {
+      "bbox": [
+        219.0,
+        224.68496704101562,
+        360.8387756347656,
+        250.9734344482422
+      ],
+      "block_id": "page-1119-block-0031",
+      "order": 31,
+      "text": "Steinberg, M. (1994). « Structured Clinical Interview for\nDSM-IV Dissociative » Disorders–Revised (SCID-D-R),\n2e éd., Washington, DC, American Psychiatric Press.\n",
+      "text_sha256": "89a160559c03f38ac818378e3aaca6db6e1ca0f59ee8985f1b11fff06a1fe833"
+    },
+    {
+      "bbox": [
+        219.0,
+        254.8349609375,
+        367.8077087402344,
+        281.1734313964844
+      ],
+      "block_id": "page-1119-block-0032",
+      "order": 32,
+      "text": "Steinberg, M. (1995). Handbook for the assessment of\ndissociation : A clinical guide, Washington, DC, American\nPsychiatric Press.\n",
+      "text_sha256": "d256d798d0991f2c4530404e8ead503591e0a4b8e27e6ad478c917efbed92082"
+    },
+    {
+      "bbox": [
+        219.0,
+        285.03497314453125,
+        372.697509765625,
+        311.3234558105469
+      ],
+      "block_id": "page-1119-block-0033",
+      "order": 33,
+      "text": "Taylor, M. & al. (2010). « Longitudinal outcomes of young\nhigh-risk adolescents with imaginary companions », Deve-\nlopmental Psychology, 46(6), p. 1632-1636.\n",
+      "text_sha256": "bad5df792e33f669b4fb26f7979e95b5e0f1590674250a8f819d1bcba67ee57d"
+    },
+    {
+      "bbox": [
+        219.0,
+        315.1849670410156,
+        368.0664978027344,
+        341.47344970703125
+      ],
+      "block_id": "page-1119-block-0034",
+      "order": 34,
+      "text": "Tezcan, E. & al. (2003). « Dissociative disorders in Turkish\ninpatients with conversion disorder », Comprehensive\nPsychiatry, 44(4), p. 324-330.\n",
+      "text_sha256": "a51bd7e01e7aa547cea762b889a0cf9277ce8b47eb234dcacf96f3261d6479b1"
+    },
+    {
+      "bbox": [
+        219.0,
+        345.3349609375,
+        377.9866027832031,
+        371.6234436035156
+      ],
+      "block_id": "page-1119-block-0035",
+      "order": 35,
+      "text": "Thompson, A. D. & al. (2013). « Sexual trauma increases the\nrisk of developing psychosis in an Ultra High Risk Prodromal\nPopulation », Schizophrenia Bulletin, 40(3), p. 697-706.\n",
+      "text_sha256": "37b0229559777eef6ce89a6f0a2cebc6e412e2519ee626f760fac849b54a3dcd"
+    },
+    {
+      "bbox": [
+        219.0,
+        375.53497314453125,
+        370.52117919921875,
+        401.8234558105469
+      ],
+      "block_id": "page-1119-block-0036",
+      "order": 36,
+      "text": "Trionfi, G. & Reese, E. (2009). « A good story : children with\nimaginary companions create richer narratives », Child\nDevelopment, 80(4), p. 1301-1313.\n",
+      "text_sha256": "189c3aac9deac3173153f929d37ec3d5ff03d15944bf50f8762eec23e2151b0d"
+    },
+    {
+      "bbox": [
+        219.0,
+        405.6849670410156,
+        377.1868896484375,
+        431.97344970703125
+      ],
+      "block_id": "page-1119-block-0037",
+      "order": 37,
+      "text": "Tutkun, H. & al. (1998). « Frequency of dissociative disorders\namong psychiatric inpatients in a Turkish university clinic »,\nAmerican Journal of Psychiatry, 155, p. 800-805.\n",
+      "text_sha256": "104584aa4df56c99c2399c14b1b8e25db2e1874ae104b1533936317790a42b75"
+    },
+    {
+      "bbox": [
+        219.0,
+        435.8349609375,
+        363.1499938964844,
+        462.1234436035156
+      ],
+      "block_id": "page-1119-block-0038",
+      "order": 38,
+      "text": "Van der Hart, O. & al. (1989). « Pierre Janet’s treatment\nof post-traumatic stress », Journal of Traumatic Stress, 2,\np. 379-395.\n",
+      "text_sha256": "a650c25e86ddf21a446071429fcefaa449b7e658a7ad4973aa7fb3c4700441d0"
+    },
+    {
+      "bbox": [
+        219.0,
+        465.9849548339844,
+        371.78009033203125,
+        492.3234558105469
+      ],
+      "block_id": "page-1119-block-0039",
+      "order": 39,
+      "text": "Van der Hart, O. & al. (2006). The Haunted Self : Structural\nDissociation and the Treatment of Chronic Traumatization,\nNew York, NY, Norton.\n",
+      "text_sha256": "083fcfbdb749f77e389f107ba2fcfd2444daa0118a99d51f9d0b16ec9bc3c4a9"
+    },
+    {
+      "bbox": [
+        219.0,
+        496.1849670410156,
+        370.64447021484375,
+        513.4234619140625
+      ],
+      "block_id": "page-1119-block-0040",
+      "order": 40,
+      "text": "Xiao, Z. & al. (2006). « Trauma and dissociation in China »,\nAmerican Journal of Psychiatry, 163(8), p. 1388-1391.\n",
+      "text_sha256": "ed1ad3fafad4f7dd0472b4c3273a6855e3334939e237e666c76b31d5c418372a"
+    },
+    {
+      "bbox": [
+        219.0,
+        517.2849731445312,
+        378.1636047363281,
+        552.6234741210938
+      ],
+      "block_id": "page-1119-block-0041",
+      "order": 41,
+      "text": "Zanarini, M. C. & Jager-Hyman, M. A. (2009). « Dissociation in\nborderline personality disorder », dans Dell, P. F., & O’Neil, J.\nA. (dir.), Dissociation and the Dissociative Disorders : DSM-V\nand Beyond, New York, NY, Routledge, p. 487-495.\n",
+      "text_sha256": "27be7127e558d2e4459f20ddf396772f50b6b3e04e8e29904cc30a597c68fe14"
+    },
+    {
+      "bbox": [
+        219.0,
+        565.9703369140625,
+        373.88525390625,
+        612.9234619140625
+      ],
+      "block_id": "page-1119-block-0042",
+      "order": 42,
+      "text": "Chapitre 25\nAmerican Psychiatric Association (APA). (2004) DSM-IV-TR.\nCritères diagnostiques (Washington, DC, 2000). Traduction\nfrançaise par J.-D. Guelet al., Paris, France, Masson,\n384 p.\n",
+      "text_sha256": "eebfc5dfb3cc3d901c57e411380070e3c51aa4ac6123f5db3960be6429231c2a"
+    },
+    {
+      "bbox": [
+        219.0,
+        616.7849731445312,
+        376.40252685546875,
+        643.0734252929688
+      ],
+      "block_id": "page-1119-block-0043",
+      "order": 43,
+      "text": "Cathébras, P. (2006). Troubles fonctionnels et somatisation.\nComment aborder les symptômes médicalement expliqués.\nParis, France, Masson.\n",
+      "text_sha256": "501bcca7192261142a435b303f69c7f0cf15ec643aebcde685e0f03ff3331307"
+    },
+    {
+      "bbox": [
+        219.0,
+        646.9349975585938,
+        377.3324890136719,
+        673.2234497070312
+      ],
+      "block_id": "page-1119-block-0044",
+      "order": 44,
+      "text": "Cloninger, C. R. & al. (1986). « A prospective follow-up and\nfamily study of somatization in men and women », American\nJournal of Psychiatry, 143, p. 873-878.\n",
+      "text_sha256": "5b806e582e131c79396b06604150b3663d4fe26290168e250f6beff152ba0d89"
+    },
+    {
+      "bbox": [
+        219.0,
+        677.1349487304688,
+        376.3751220703125,
+        703.4234619140625
+      ],
+      "block_id": "page-1119-block-0045",
+      "order": 45,
+      "text": "Creed, F. & al. (2011). Medically unexplained symptoms,\nsomatization and bodily distress, Cambridge, Royaume-Uni,\nCambridge, MA, Cambridge University Press.\n",
+      "text_sha256": "d5f86a25fb0c561a72df0ca227aefe19c73faa0b7724965f760961e37ed6f116"
+    },
+    {
+      "bbox": [
+        219.0,
+        707.2849731445312,
+        373.89178466796875,
+        724.5234375
+      ],
+      "block_id": "page-1119-block-0046",
+      "order": 46,
+      "text": "Engel, G. L. (1977). « The need for a new medical model : a\nchallenge for biomedicine », Science, 196, p. 129-136.\n",
+      "text_sha256": "22e2bf582991bd0c8670e09c75525d72a01c78fe5acd9fa1007d17793c8cc5b0"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.68496322631836,
+        194.38145446777344,
+        67.1734390258789
+      ],
+      "block_id": "page-1119-block-0047",
+      "order": 47,
+      "text": "Modestin, J. & al. (1996). « Dissociative experiences and\ndissociative disorders in acute psychiatric inpatients »,\nComprehensive Psychiatry, 37(5), p. 355-361.\n",
+      "text_sha256": "1ac8c56f5cf453c6e1f56ee1429642f8ebb7afcb5d8b72d115e45be31e14d362"
+    },
+    {
+      "bbox": [
+        48.0,
+        71.13496398925781,
+        204.2501678466797,
+        106.72344207763672
+      ],
+      "block_id": "page-1119-block-0048",
+      "order": 48,
+      "text": "Morgan, C. & Fisher, H. (2007). « Environment and schizo-\nphrenia : Environmental factors in schizophrenia : childhood\ntrauma, a critical review », Schizophrenia Bulletin, 33(1),\np. 3-10.\n",
+      "text_sha256": "53a3d17f2d906e726753acfe4a428900b4deb2d8a12478865c589678b97de274"
+    },
+    {
+      "bbox": [
+        48.0,
+        110.6849594116211,
+        206.2742462158203,
+        146.3234405517578
+      ],
+      "block_id": "page-1119-block-0049",
+      "order": 49,
+      "text": "Moskowitz, A. & Heim, G. (2011). « Eugen Bleuler’s Dementia\npraecox or the group of schizophrenias (1911) : A centenary\nappreciation and reconsideration », Schizophr Bull, 37(3),\np. 471-479.\n",
+      "text_sha256": "b5cc957715e4061e54545f94dd93fecfd62dd83250868a9818b2e710c4a8fbb6"
+    },
+    {
+      "bbox": [
+        48.0,
+        150.2849578857422,
+        206.15000915527344,
+        176.7734375
+      ],
+      "block_id": "page-1119-block-0050",
+      "order": 50,
+      "text": "Moskowitz, A. & al. (2008). Psychosis, Trauma, and Disso-\nciation : Emerging Perspectives on Severe Psychopathology,\nJohn Wiley and sons.\n",
+      "text_sha256": "cc8a10885a05220d55d42b9ceab3c05bc894307dfc62aaaec67a21febd579db8"
+    },
+    {
+      "bbox": [
+        48.0,
+        180.68496704101562,
+        205.04495239257812,
+        207.17344665527344
+      ],
+      "block_id": "page-1119-block-0051",
+      "order": 51,
+      "text": "Paris, J. (2012). « The rise and fall of dissociative disorder »,\nJournal of Nervous and Mental Diseases, 200(12),\np. 1076-1079.\n",
+      "text_sha256": "26c5a078ed3145e7ae9ec2804e70c1539d373e0a0ffc936a6277eafc172dbc87"
+    },
+    {
+      "bbox": [
+        48.0,
+        211.1349639892578,
+        206.8975067138672,
+        255.92344665527344
+      ],
+      "block_id": "page-1119-block-0052",
+      "order": 52,
+      "text": "Pascual, J. C. & al. (2010). « A naturalistic study of\nchanges in pharmacological prescription for borderline\npersonality disorder in clinical practice : From APA to\nNICE guidelines », International Clinical Psychopharmaco-\nlogy, 25(6), p. 349-355.\n",
+      "text_sha256": "a1d8e1ace67de7c98e8b257cd29d3c4d80482339c8b259718a4c63d29e1c5300"
+    },
+    {
+      "bbox": [
+        48.0,
+        259.8349609375,
+        206.6051788330078,
+        277.1734313964844
+      ],
+      "block_id": "page-1119-block-0053",
+      "order": 53,
+      "text": "Putnam, F. W. (1989). The Diagnosis and Treatment of Multiple\nPersonality Disorder, New York, NY, Guilford Press.\n",
+      "text_sha256": "c8b8413ed5a3914368ab96649a56f4a06836d15a151e89dfea9d6f388f036e18"
+    },
+    {
+      "bbox": [
+        48.0,
+        281.1349792480469,
+        204.8828125,
+        307.6234436035156
+      ],
+      "block_id": "page-1119-block-0054",
+      "order": 54,
+      "text": "Putnam, F. W. (1997). Dissociation in Children and Adoles-\ncents : A Developmental Perspective, New York, NY, Guilford\nPress.\n",
+      "text_sha256": "92d9c52d553a24d90acce4d3b831764c6e9140de49fc5eaf41a64f00c43d1310"
+    },
+    {
+      "bbox": [
+        48.0,
+        311.5849609375,
+        194.75,
+        338.0734558105469
+      ],
+      "block_id": "page-1119-block-0055",
+      "order": 55,
+      "text": "Rifkin, A. & al. (1998). « Dissociative identity disorder in\npsychiatric inpatients », American Journal of Psychiatry,\n155(6), p. 844-845.\n",
+      "text_sha256": "c26818223481f4f416f23bce4ae7fa1debc81a9c207324984ee88d120a496718"
+    },
+    {
+      "bbox": [
+        48.0,
+        341.9849548339844,
+        196.80633544921875,
+        368.47344970703125
+      ],
+      "block_id": "page-1119-block-0056",
+      "order": 56,
+      "text": "Ross, C. A. (1991). « Epidemiology of multiple personality\ndisorder and dissociation », Psychiatric Clinics of North\nAmerica, 14, p. 503-517.\n",
+      "text_sha256": "0f055f6605494f209c11acef3b1714894305724a38fcc8151fb042e53ce0e35f"
+    },
+    {
+      "bbox": [
+        48.0,
+        372.4349670410156,
+        205.93507385253906,
+        398.9234313964844
+      ],
+      "block_id": "page-1119-block-0057",
+      "order": 57,
+      "text": "Ross, C. A. (1997). Dissociative Identity Disorder : Diagnosis,\nClinical Features, and Treatment of Multiple Personality,\nNew York, NY, Wiley.\n",
+      "text_sha256": "5f633d55d084dfde2192d76a6d47dafe1b9ee978f398bff386caeeaac7599587"
+    },
+    {
+      "bbox": [
+        48.0,
+        402.8849792480469,
+        204.90000915527344,
+        438.47344970703125
+      ],
+      "block_id": "page-1119-block-0058",
+      "order": 58,
+      "text": "Ross, C. A. (2009). « The theory of a dissociative subtype of\nschizophrenia », dans Dell, P. F., & O’Neil, J. A. (dir.), Disso-\nciation and the Dissociative Disorders : DSM-V and Beyond,\nNew York, NY, Routledge, p. 557-568.\n",
+      "text_sha256": "21151e4aedb24a3776c18e91cc54a7d3f731b6e6cf453050a1913367c67de308"
+    },
+    {
+      "bbox": [
+        48.0,
+        442.4349670410156,
+        203.21766662597656,
+        468.9234313964844
+      ],
+      "block_id": "page-1119-block-0059",
+      "order": 59,
+      "text": "Ross, C. A. & al. (1990). « Structured interview data on 102\ncases of multiple personality disorder from four centers »,\nAmerican Journal of Psychiatry, 147, p. 596-601.\n",
+      "text_sha256": "d35da58887d48421569a04542b9c5437e3eb8b1a581d067bebd60dbe28a98eff"
+    },
+    {
+      "bbox": [
+        48.0,
+        472.8849792480469,
+        201.65765380859375,
+        499.3734436035156
+      ],
+      "block_id": "page-1119-block-0060",
+      "order": 60,
+      "text": "Sadock, B. J. & al. (2009). Kaplan & Sadock’s Comprehen-\nsive textbook of psychiatry, 9e éd., Philadelphia, Lippincott\nWilliams & Wilkins.\n",
+      "text_sha256": "21cec6517428a43152f37b30fb64274894c501e4256823630ce55a2dcc1efe36"
+    },
+    {
+      "bbox": [
+        48.0,
+        503.3349609375,
+        203.93251037597656,
+        529.7734375
+      ],
+      "block_id": "page-1119-block-0061",
+      "order": 61,
+      "text": "Sar, V. & al. (1996). « Structured interview data on 35\ncases of dissociative identity disorder in Turkey », American\nJournal of Psychiatry, 153(10), p. 1329-1333.\n",
+      "text_sha256": "628850fa4292ed5ee5d98d348ffef05ee27d763beda50995f85568ae73eea298"
+    },
+    {
+      "bbox": [
+        48.0,
+        533.7349853515625,
+        198.88722229003906,
+        560.2234497070312
+      ],
+      "block_id": "page-1119-block-0062",
+      "order": 62,
+      "text": "Sar, V. & al. (2007). « Prevalence of dissociative disorders\namong women in the general population »,Psychiatry\nResearch, 149, p. 169-176.\n",
+      "text_sha256": "780bddd5ba2951ee6e8740faf6dc2f77108c8fd6c930469cefd69c4047ff6847"
+    },
+    {
+      "bbox": [
+        48.0,
+        564.1849975585938,
+        202.87013244628906,
+        581.5234375
+      ],
+      "block_id": "page-1119-block-0063",
+      "order": 63,
+      "text": "Sar, V. & al. (2010). « Childhood trauma and dissociation in\nschizophrenia », Psychopathology, 43(1), p. 33-40.\n",
+      "text_sha256": "588f15467946691a710fb19512ab6430aeb9648b319e52bc477eac78ff895cc3"
+    },
+    {
+      "bbox": [
+        48.0,
+        585.4849853515625,
+        203.74749755859375,
+        611.9234619140625
+      ],
+      "block_id": "page-1119-block-0064",
+      "order": 64,
+      "text": "Saxe, G. N. & al. (1993). « Dissociative disorders in psychia-\ntric inpatients », American Journal of Psychiatry, 150(7),\np. 1037-1042.\n",
+      "text_sha256": "cef9b3066fb1a278fc2e0c9af6ad4b03d8da73d6137bc5163bffbf1cc012c812"
+    },
+    {
+      "bbox": [
+        48.0,
+        615.8849487304688,
+        202.5776824951172,
+        642.3734741210938
+      ],
+      "block_id": "page-1119-block-0065",
+      "order": 65,
+      "text": "Saunders, W. B. (2006) « Psychiatric clinics of North Ame-\nrica : dissociative disorders : an expanding window into the\npsychobiology of the mind », Psychiatric Clinics, 29(1).\n",
+      "text_sha256": "d0646fa95419692699a7dda3fdb10bfcc25233ee488141ff4e50c258bbc7a5d3"
+    },
+    {
+      "bbox": [
+        48.0,
+        643.8349609375,
+        188.22500610351562,
+        663.6734619140625
+      ],
+      "block_id": "page-1119-block-0066",
+      "order": 66,
+      "text": "Schneider, K. (1959). Clinical psychopathology, 5e éd.,\nNew York, NY, Grune and Stratton.\n",
+      "text_sha256": "048a121e5f44235c313ea17761bb5b0065cf12530afb1919877cb0ce919d52ce"
+    },
+    {
+      "bbox": [
+        48.0,
+        667.6349487304688,
+        171.3100128173828,
+        675.8234252929688
+      ],
+      "block_id": "page-1119-block-0067",
+      "order": 67,
+      "text": "Schreiber, F. R. (1973). Sybil, Chicago, Regnery.\n",
+      "text_sha256": "f364809d10362c3735e32ad6ee69227f387502416a32b930e43d5c1f4b236c0c"
+    },
+    {
+      "bbox": [
+        48.0,
+        679.7349853515625,
+        205.73306274414062,
+        724.5234375
+      ],
+      "block_id": "page-1119-block-0068",
+      "order": 68,
+      "text": "Schore, A. (2009). « Attachment trauma and the developing\nright brain : Origins of pathological dissociation », dans\nDell, P. F. & O’Neil, J.A. (dir.), Dissociation and the\nDissociative Disorders : DSM-V and Beyond, New York,\nNY, Routledge, p. 107-141.\n",
+      "text_sha256": "1fbcb9656d8ac630ca894dc24323528f8d6232753ada84e6bd89e1f6dd5f9596"
+    }
+  ],
+  "coordinates_sha256": "56db999c0d83a6c8365b037c62808c0487a6207e147256f1c26e271a6b1d28fa",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1119",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "R22\nRéférences\nHudson, J. L. & al. (2003). « Family study of affective\nspectrum disorder », Archives of General Psychiatry,\n60(2), p. 170-177.\nKato, K. & al. (2009). « A population-based twin study of\nfunctional somatic syndrome », Psychological Medicine, 39,\np. 497-505.\nKaton, W. & al. (2007). « The association of depression\nand anxiety with medical symptom burden in patients with\nchronic medical illness », General Hospital Psychiatry, 29(2),\np. 147-155.\nKatsamanis, M. & al. (2011). «Psycho physiologic treatment\nfor patients with medically unexplained symptoms »,\nPsychosomatics, 52(3), p. 218-229.\nKroenke, K. (2003). « Patients presenting with complaints :\nEpidemiology psychiatric comorbidity and management »,\nInternational Journal of Methods in Psychiatric Research,\n12(1), p. 34-43.\nLieb, R. & al. (2007). « Epidemiology of the association\nbetween somatoform disorders and anxiety and depres-\nsive disorders : An update », Psychosomatic Medicine,\n69(8), p. 860-863.\nLipowski, Z. J. (1990). «Somatization and depression »,\nPsychosomatics, 31(1), p. 13-21.\nLowe, B. & al. (2008). « Depression, anxiety and somati-\nzation in primary care : Syndrome overlap and functio-\nnal impairment », General Hospital Psychiatry, 30(3),\np. 191-199.\nMayou, R. & al. (1995). Treatment of Functional Somatic\nSymptoms, Oxford, Oxford University Press.\nOrganisation mondiale de la santé. (2008). Classication\ninternationale des maladies, 10e éd., Paris, Masson.\nParsons, T. (1964). Social Structure and Personality,\nLondres, Royaume-Uni, Collier-MacMillan.\nParsons, T. (1975) « The sick role and the role of the\nphysician reconsidered », Milbank Memorial Fund Quaterly,\n53, p. 257-278.\nRitsner, M. (2003). « The attribution of somatization in schi-\nzophrenia patients : A naturalistic follow-up study », Journal\nof Clinical Psychiatry, 64, p. 1370-1378.\nSharpe, M. (2000). « Functional somatic symptoms :\nEtiology, diagnosis and treatment », Biological Psychiatric,\n53, p. 93-97.\nSifneos, P. E. (1972). «The prevalence of “alexithymia”\ncharacteristics in psychosomatic », dans Freyberger, J. (dir.)\nTopics of Psychosomatic Research, Bâle, Suisse, Karger.\nStahl, S. M. (2008). «Pain and the treatment of bromyalgia\nand functional somatic syndrome », dans Stahl, S. M. & al.,\nStahl’s Essential Psychopharmacology, 3e éd., Cambridge,\nRoyaume-Uni, Cambridge University Press, p. 773-814.\nStern, T. & al. (2010). Massachusetts General Hospital\nhandbook of general hospital psychiatry, 6e éd., Philadel-\nphia, Saunders.\nStuart, S. & Noyes, R. (1999). « Attachment and interper-\nsonal communication and somatization », Psychosomatic,\n40(1), p. 34-43.\nToone, B. K. (1990). « Disorders of hysterical conversion »,\ndans Bass, C. (dir.), Physical Symptoms and Psychological\nIllness, Boston, MA, Blackwell Scientic, p. 207-234.\nWoolfolk, R. L. & Allen, L. A. (2007). Treating somatization :\na cognitive- behavioral approach, New York, NY, Guilford\nPress.\nChapitre 26\nAmerican College of Rheumatology. (1990). Classication\nCriteria, [en ligne], www.rheumatology.org/Practice-Quality/\nClinical-Support/Criteria/ACR-Endorsed-Criteria.\nAmerican College of Rheumatology. (2010). Preliminary\nDiagnostic Criteria, [en ligne], www.rheumatology.\nSierra, M. (2008). « Depersonalization disorder : pharmacolo-\ngical approaches », Expert Rev Neurother, 8(1), p. 19-26.\nSierra, M. & David, A. S. (2011). « Depersonalization : A\nselective impairment of self-awareness », Conscious Cogni-\ntion, 20(1), p. 99-108.\nSilberg, J. L. (1998). The Dissociative Child : Diagnosis,\nTreatment and Management, 2e éd., Lutherville, MD, Sidran\nPress.\nSilberg, J. L. (2013). The Child Survivor : Healing Develop-\nmental Trauma and Dissociation, New York, NY, Routledge.\nSimeon, D. & Stein, D. J. (2009). « Cognitive-affective\nneuroscience of depersonalization », CNS Spectrums,\n14(9), p. 467-471.\nSpiegel, D. & al. (2011). « Dissociative disorders in DSM5 »,\nDepress Anxiety, 28(12), p. 17-45.\nStein, J. & al. (2013). « Dissociation in posttraumatic stress\ndisorder : Évidence from the world mental health surveys »,\nBiological Psychiatry, 73(4), p. 302-312.\nSteinberg, M. (1994). « Structured Clinical Interview for\nDSM-IV Dissociative » Disorders–Revised (SCID-D-R),\n2e éd., Washington, DC, American Psychiatric Press.\nSteinberg, M. (1995). Handbook for the assessment of\ndissociation : A clinical guide, Washington, DC, American\nPsychiatric Press.\nTaylor, M. & al. (2010). « Longitudinal outcomes of young\nhigh-risk adolescents with imaginary companions », Deve-\nlopmental Psychology, 46(6), p. 1632-1636.\nTezcan, E. & al. (2003). « Dissociative disorders in Turkish\ninpatients with conversion disorder », Comprehensive\nPsychiatry, 44(4), p. 324-330.\nThompson, A. D. & al. (2013). « Sexual trauma increases the\nrisk of developing psychosis in an Ultra High Risk Prodromal\nPopulation », Schizophrenia Bulletin, 40(3), p. 697-706.\nTrionfi, G. & Reese, E. (2009). « A good story : children with\nimaginary companions create richer narratives », Child\nDevelopment, 80(4), p. 1301-1313.\nTutkun, H. & al. (1998). « Frequency of dissociative disorders\namong psychiatric inpatients in a Turkish university clinic »,\nAmerican Journal of Psychiatry, 155, p. 800-805.\nVan der Hart, O. & al. (1989). « Pierre Janet’s treatment\nof post-traumatic stress », Journal of Traumatic Stress, 2,\np. 379-395.\nVan der Hart, O. & al. (2006). The Haunted Self : Structural\nDissociation and the Treatment of Chronic Traumatization,\nNew York, NY, Norton.\nXiao, Z. & al. (2006). « Trauma and dissociation in China »,\nAmerican Journal of Psychiatry, 163(8), p. 1388-1391.\nZanarini, M. C. & Jager-Hyman, M. A. (2009). « Dissociation in\nborderline personality disorder », dans Dell, P. F., & O’Neil, J.\nA. (dir.), Dissociation and the Dissociative Disorders : DSM-V\nand Beyond, New York, NY, Routledge, p. 487-495.\nChapitre 25\nAmerican Psychiatric Association (APA). (2004) DSM-IV-TR.\nCritères diagnostiques (Washington, DC, 2000). Traduction\nfrançaise par J.-D. Guelet al., Paris, France, Masson,\n384 p.\nCathébras, P. (2006). Troubles fonctionnels et somatisation.\nComment aborder les symptômes médicalement expliqués.\nParis, France, Masson.\nCloninger, C. R. & al. (1986). « A prospective follow-up and\nfamily study of somatization in men and women », American\nJournal of Psychiatry, 143, p. 873-878.\nCreed, F. & al. (2011). Medically unexplained symptoms,\nsomatization and bodily distress, Cambridge, Royaume-Uni,\nCambridge, MA, Cambridge University Press.\nEngel, G. L. (1977). « The need for a new medical model : a\nchallenge for biomedicine », Science, 196, p. 129-136.\nModestin, J. & al. (1996). « Dissociative experiences and\ndissociative disorders in acute psychiatric inpatients »,\nComprehensive Psychiatry, 37(5), p. 355-361.\nMorgan, C. & Fisher, H. (2007). « Environment and schizo-\nphrenia : Environmental factors in schizophrenia : childhood\ntrauma, a critical review », Schizophrenia Bulletin, 33(1),\np. 3-10.\nMoskowitz, A. & Heim, G. (2011). « Eugen Bleuler’s Dementia\npraecox or the group of schizophrenias (1911) : A centenary\nappreciation and reconsideration », Schizophr Bull, 37(3),\np. 471-479.\nMoskowitz, A. & al. (2008). Psychosis, Trauma, and Disso-\nciation : Emerging Perspectives on Severe Psychopathology,\nJohn Wiley and sons.\nParis, J. (2012). « The rise and fall of dissociative disorder »,\nJournal of Nervous and Mental Diseases, 200(12),\np. 1076-1079.\nPascual, J. C. & al. (2010). « A naturalistic study of\nchanges in pharmacological prescription for borderline\npersonality disorder in clinical practice : From APA to\nNICE guidelines », International Clinical Psychopharmaco-\nlogy, 25(6), p. 349-355.\nPutnam, F. W. (1989). The Diagnosis and Treatment of Multiple\nPersonality Disorder, New York, NY, Guilford Press.\nPutnam, F. W. (1997). Dissociation in Children and Adoles-\ncents : A Developmental Perspective, New York, NY, Guilford\nPress.\nRifkin, A. & al. (1998). « Dissociative identity disorder in\npsychiatric inpatients », American Journal of Psychiatry,\n155(6), p. 844-845.\nRoss, C. A. (1991). « Epidemiology of multiple personality\ndisorder and dissociation », Psychiatric Clinics of North\nAmerica, 14, p. 503-517.\nRoss, C. A. (1997). Dissociative Identity Disorder : Diagnosis,\nClinical Features, and Treatment of Multiple Personality,\nNew York, NY, Wiley.\nRoss, C. A. (2009). « The theory of a dissociative subtype of\nschizophrenia », dans Dell, P. F., & O’Neil, J. A. (dir.), Disso-\nciation and the Dissociative Disorders : DSM-V and Beyond,\nNew York, NY, Routledge, p. 557-568.\nRoss, C. A. & al. (1990). « Structured interview data on 102\ncases of multiple personality disorder from four centers »,\nAmerican Journal of Psychiatry, 147, p. 596-601.\nSadock, B. J. & al. (2009). Kaplan & Sadock’s Comprehen-\nsive textbook of psychiatry, 9e éd., Philadelphia, Lippincott\nWilliams & Wilkins.\nSar, V. & al. (1996). « Structured interview data on 35\ncases of dissociative identity disorder in Turkey », American\nJournal of Psychiatry, 153(10), p. 1329-1333.\nSar, V. & al. (2007). « Prevalence of dissociative disorders\namong women in the general population »,Psychiatry\nResearch, 149, p. 169-176.\nSar, V. & al. (2010). « Childhood trauma and dissociation in\nschizophrenia », Psychopathology, 43(1), p. 33-40.\nSaxe, G. N. & al. (1993). « Dissociative disorders in psychia-\ntric inpatients », American Journal of Psychiatry, 150(7),\np. 1037-1042.\nSaunders, W. B. (2006) « Psychiatric clinics of North Ame-\nrica : dissociative disorders : an expanding window into the\npsychobiology of the mind », Psychiatric Clinics, 29(1).\nSchneider, K. (1959). Clinical psychopathology, 5e éd.,\nNew York, NY, Grune and Stratton.\nSchreiber, F. R. (1973). Sybil, Chicago, Regnery.\nSchore, A. (2009). « Attachment trauma and the developing\nright brain : Origins of pathological dissociation », dans\nDell, P. F. & O’Neil, J.A. (dir.), Dissociation and the\nDissociative Disorders : DSM-V and Beyond, New York,\nNY, Routledge, p. 107-141.\n",
+  "raw_text_sha256": "305812f4fd188f66edc4c7faaecbb7fdb946631a971aa192c241c91d27e26ba3",
+  "source_page_display": 1120,
+  "source_page_index": 1119
+}

@@ -1,0 +1,88 @@
+{
+  "block_sequence_sha256": "2cdf4b564c2c1bd66081e1fa528af29e507b29f97a7bbcd4d06a006048d98675",
+  "blocks": [
+    {
+      "bbox": [
+        420.6000061035156,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0120-block-0001",
+      "order": 1,
+      "text": "Chapitre 5\nGénétique\n103\n",
+      "text_sha256": "a460ee8dd8a2e6bef0fb4fd1ecf507b02b1ebc9a05144ac3e1811e178f494b5d"
+    },
+    {
+      "bbox": [
+        324.0,
+        40.9658203125,
+        555.0422973632812,
+        63.00849533081055
+      ],
+      "block_id": "page-0120-block-0002",
+      "order": 2,
+      "text": "comme des phénocopies, ainsi que des faux négatifs, qui sont\nconsidérés comme des cas de non-pénétrance.\n",
+      "text_sha256": "f911de7935ddcd6295ca0f867a59a59d222d71442ddf1acb2e45983b8b5b0ac1"
+    },
+    {
+      "bbox": [
+        312.0,
+        73.9830093383789,
+        555.551025390625,
+        499.8584899902344
+      ],
+      "block_id": "page-0120-block-0003",
+      "order": 3,
+      "text": "Phénocopies\nPuisque des facteurs environnementaux sont certainement\nen cause dans l’étiologie des maladies psychiatriques, il est\nvraisemblable que certaines personnes qui sourent de ces\nmaladies génétiques ont vu leurs gènes modiés directement\npar leur environnement, par des mécanismes épigénétiques.\nDans les analyses génétiques, de tels individus sont qualiés\nde « phénocopies ». Ce sont des faux positifs, puisqu’ils ne sont\npas porteurs des mutations de gènes causant la maladie. Ces\nindividus diminuent fortement l’évidence de liaison génétique\net, dans les faits, ils ont même un impact beaucoup plus impor-\ntant que celui des faux négatifs. Trois solutions à ce problème\npeuvent être envisagées :\n• Ajouter un paramètre dans les analyses qui permettrait d’in-\nclure la présence d’une certaine proportion de phénocopies,\nsans spécier les individus concernés. Comme lors de l’ajout\nd’un paramètre pour la pénétrance incomplète ou pour l’hété-\nrogénéité génétique, cette procédure présente le désavantage\nd’introduire un facteur d’incertitude supplémentaire, ce qui\ndiminue la puissance statistique.\n• Identier les patients sourant d’une étiologie environne-\nmentale de la maladie pour les exclure des analyses (p. ex. si\non en venait à montrer que des traumatismes peuvent, à eux\nseuls, causer la schizophrénie en l’absence de prédisposition\ngénétique, de tels patients entreraient dans cette catégorie).\nCette solution serait idéale. Il s’agit d’un exemple théorique, car\nles recherches actuelles ne permettent pas encore d’armer\nque la schizophrénie puisse être purement environnementale.\nPlusieurs stratégies ont été utilisées pour essayer d’identier\nde tels patients, mais elles sont demeurées vaines.\n• Faire appel à de grandes familles comprenant plusieurs per-\nsonnes malades pour réaliser les études de liaison. On réduit\nalors le risque de phénocopies puisque de tels cas avec une\nhistoire familiale très chargée présentent une plus forte pro-\nbabilité de sourir d’une forme génétique de la maladie plutôt\nque d’une forme environnementale.\n",
+      "text_sha256": "66786efe6455eeaeca62aec528d19be37a6f05d2cfd4ac903e9282157546cda9"
+    },
+    {
+      "bbox": [
+        312.0,
+        510.8330078125,
+        555.2786865234375,
+        712.95849609375
+      ],
+      "block_id": "page-0120-block-0004",
+      "order": 4,
+      "text": "Pénétrance incomplète et phénomènes\népigénétiques\nDans la schizophrénie, le fait que des jumeaux monozygotes\npuissent être discordants (Tandon & al., 2008) donne à penser\nque les gènes de susceptibilité intervenant dans les maladies\npsychiatriques ont fort probablement une pénétrance incomplète.\nDes études de jumeaux ont révélé un risque élevé de schizophré-\nnie chez les enfants de chacun des jumeaux, le risque pour les\nenfants du jumeau non aecté étant aussi élevé que celui des\nenfants du jumeau aecté (Gottesman & Bertelsen, 1989). L’ex-\nplication la plus plausible de ces observations est que le jumeau\nnon atteint est malgré tout porteur des gènes de susceptibilité,\net qu’il les a transmis à ses enfants sans avoir lui-même été tou-\nché par la schizophrénie. Il est donc probable que des facteurs\nenvironnementaux, biologiques ou psychosociaux contrôlent la\npénétrance des gènes de susceptibilité. Les individus porteurs de\nces gènes de susceptibilité qui n’ont pas développé la maladie sont\n",
+      "text_sha256": "3f4d7d3719bfed5dde570c81322b2a5d2e8e50ee6c5edb726651a1c3c7b85dce"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.9658203125,
+        297.71826171875,
+        522.9085083007812
+      ],
+      "block_id": "page-0120-block-0005",
+      "order": 5,
+      "text": "de bipolarité dans une étude de liaison génétique en schizo-\nphrénie ? Deux solutions à ce problème de pléiotropie ont été\nproposées :\n• La catégorisation du phénotype peut être élargie à un niveau\nhiérarchique regroupant plusieurs syndromes. On répète alors\nles analyses en faisant varier la catégorisation du phénotype. Par\nexemple, dans une étude de liaison génétique de la schizophrénie\n(Maziade &al.,2005 ; Maziade &al.,2009a ; Mérette &al.,2008),\ndans une première analyse, seules les personnes atteintes de schi-\nzophrénie sont classées dans le groupe des « individus aectés »\net sont comparées à des participants témoins sains. Une seconde\nanalyse regroupe les personnes atteintes de schizophrénie et\ncelles atteintes du trouble schizophréniforme ou du trouble de\npersonnalité schizotypique et les compare au groupe témoin.\nUne troisième analyse pour ajouter les personnes sourant de\ntroubles bipolaires et ainsi de suite.\n• La catégorisation du phénotype peut aussi être établie à partir\nd’un niveau continu de symptômes, telles les dimensions\npsychopathologiques, comme la symptomatologie positive et\nnégative de la schizophrénie, au lieu d’utiliser les catégories\ndiagnostiques proposées par le DSM et le ICD. L’utilisation\nde telles approches en est encore à ses débuts (Labbe & al.,\n2012).\nIl est possible de subdiviser la catégorie diagnostique en\nplusieurs composantes plus simples et hypothétiquement plus\nproches du gène à l’étude que ne l’est le diagnostic de la maladie\n(Szatmari & al., 2007). On utilise l’expression de « phénotype\nintermédiaire » (et parfois le terme d’endophénotype) pour\ndénir ces composantes prometteuses qui sont associées à la\nmaladie et qui peuvent être des sous-phénotypes biologiques\nou neurophysiologiques, comme l’onde évoquée auditive P-300\n(Van der Stelt & al., 2004) ou encore la réponse de la rétine à\ndes stimuli lumineux (Hébert & al., 2010). Des anomalies du\nfonctionnement cognitif ou neuropsychologique, observées\nchez des patients ainsi que chez leurs apparentés non aectés\npar la maladie permettent de distinguer les personnes malades\ndes personnes en santé (Bora & al., 2009 ; Maziade & al., 2011).\nEn se servant des phénotypes intermédiaires cognitifs dans les\nétudes en psychiatrie génétique, les chercheurs peuvent tenter\nde mieux comprendre les mécanismes génétiques sous-tendant\nles maladies psychiatriques.\n",
+      "text_sha256": "1d75d5a487c9444b34c7a92b0247135da048ad790d74ee57f5462036252fbea9"
+    },
+    {
+      "bbox": [
+        54.0,
+        531.8829956054688,
+        297.64129638671875,
+        712.95849609375
+      ],
+      "block_id": "page-0120-block-0006",
+      "order": 6,
+      "text": "Fiabilité imparfaite des diagnostics\nLe fait que la abilité des diagnostics psychiatriques DSM ou ICD\nsoit parfois insusante pour les études génétiques est particu-\nlièrement important, compte tenu de la sensibilité des analyses\ngénétiques aux erreurs diagnostiques. Plusieurs failles dans\nles méthodes diagnostiques utilisées dans les études de liaison\ngénétique des problèmes psychiatriques pourraient contribuer\nà rendre dicile l’identication des gènes de susceptibilité. Les\nsolutions à ce problème peuvent être :\n• d’améliorer la précision des diagnostics, par l’utilisation de\nplusieurs sources d’information, telles que des phénotypes\nintermédiaires (neuropsychologiques/cognitifs, neurophy-\nsiologiques, etc.) ;\n• de permettre, lors des analyses de liaison, la présence d’une\ncertaine proportion de faux positifs, qui sont alors considérés\n",
+      "text_sha256": "085ba4eb38485217d63059d486c54b6149476bd9968e62f609d47914210368e5"
+    }
+  ],
+  "coordinates_sha256": "0fbcd3383aa073e042235f16eaa1430dd845c901e9fb12c690778ba5ce6429e6",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0120",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 5\nGénétique\n103\ncomme des phénocopies, ainsi que des faux négatifs, qui sont\nconsidérés comme des cas de non-pénétrance.\nPhénocopies\nPuisque des facteurs environnementaux sont certainement\nen cause dans l’étiologie des maladies psychiatriques, il est\nvraisemblable que certaines personnes qui sourent de ces\nmaladies génétiques ont vu leurs gènes modiés directement\npar leur environnement, par des mécanismes épigénétiques.\nDans les analyses génétiques, de tels individus sont qualiés\nde « phénocopies ». Ce sont des faux positifs, puisqu’ils ne sont\npas porteurs des mutations de gènes causant la maladie. Ces\nindividus diminuent fortement l’évidence de liaison génétique\net, dans les faits, ils ont même un impact beaucoup plus impor-\ntant que celui des faux négatifs. Trois solutions à ce problème\npeuvent être envisagées :\n• Ajouter un paramètre dans les analyses qui permettrait d’in-\nclure la présence d’une certaine proportion de phénocopies,\nsans spécier les individus concernés. Comme lors de l’ajout\nd’un paramètre pour la pénétrance incomplète ou pour l’hété-\nrogénéité génétique, cette procédure présente le désavantage\nd’introduire un facteur d’incertitude supplémentaire, ce qui\ndiminue la puissance statistique.\n• Identier les patients sourant d’une étiologie environne-\nmentale de la maladie pour les exclure des analyses (p. ex. si\non en venait à montrer que des traumatismes peuvent, à eux\nseuls, causer la schizophrénie en l’absence de prédisposition\ngénétique, de tels patients entreraient dans cette catégorie).\nCette solution serait idéale. Il s’agit d’un exemple théorique, car\nles recherches actuelles ne permettent pas encore d’armer\nque la schizophrénie puisse être purement environnementale.\nPlusieurs stratégies ont été utilisées pour essayer d’identier\nde tels patients, mais elles sont demeurées vaines.\n• Faire appel à de grandes familles comprenant plusieurs per-\nsonnes malades pour réaliser les études de liaison. On réduit\nalors le risque de phénocopies puisque de tels cas avec une\nhistoire familiale très chargée présentent une plus forte pro-\nbabilité de sourir d’une forme génétique de la maladie plutôt\nque d’une forme environnementale.\nPénétrance incomplète et phénomènes\népigénétiques\nDans la schizophrénie, le fait que des jumeaux monozygotes\npuissent être discordants (Tandon & al., 2008) donne à penser\nque les gènes de susceptibilité intervenant dans les maladies\npsychiatriques ont fort probablement une pénétrance incomplète.\nDes études de jumeaux ont révélé un risque élevé de schizophré-\nnie chez les enfants de chacun des jumeaux, le risque pour les\nenfants du jumeau non aecté étant aussi élevé que celui des\nenfants du jumeau aecté (Gottesman & Bertelsen, 1989). L’ex-\nplication la plus plausible de ces observations est que le jumeau\nnon atteint est malgré tout porteur des gènes de susceptibilité,\net qu’il les a transmis à ses enfants sans avoir lui-même été tou-\nché par la schizophrénie. Il est donc probable que des facteurs\nenvironnementaux, biologiques ou psychosociaux contrôlent la\npénétrance des gènes de susceptibilité. Les individus porteurs de\nces gènes de susceptibilité qui n’ont pas développé la maladie sont\nde bipolarité dans une étude de liaison génétique en schizo-\nphrénie ? Deux solutions à ce problème de pléiotropie ont été\nproposées :\n• La catégorisation du phénotype peut être élargie à un niveau\nhiérarchique regroupant plusieurs syndromes. On répète alors\nles analyses en faisant varier la catégorisation du phénotype. Par\nexemple, dans une étude de liaison génétique de la schizophrénie\n(Maziade &al.,2005 ; Maziade &al.,2009a ; Mérette &al.,2008),\ndans une première analyse, seules les personnes atteintes de schi-\nzophrénie sont classées dans le groupe des « individus aectés »\net sont comparées à des participants témoins sains. Une seconde\nanalyse regroupe les personnes atteintes de schizophrénie et\ncelles atteintes du trouble schizophréniforme ou du trouble de\npersonnalité schizotypique et les compare au groupe témoin.\nUne troisième analyse pour ajouter les personnes sourant de\ntroubles bipolaires et ainsi de suite.\n• La catégorisation du phénotype peut aussi être établie à partir\nd’un niveau continu de symptômes, telles les dimensions\npsychopathologiques, comme la symptomatologie positive et\nnégative de la schizophrénie, au lieu d’utiliser les catégories\ndiagnostiques proposées par le DSM et le ICD. L’utilisation\nde telles approches en est encore à ses débuts (Labbe & al.,\n2012).\nIl est possible de subdiviser la catégorie diagnostique en\nplusieurs composantes plus simples et hypothétiquement plus\nproches du gène à l’étude que ne l’est le diagnostic de la maladie\n(Szatmari & al., 2007). On utilise l’expression de « phénotype\nintermédiaire » (et parfois le terme d’endophénotype) pour\ndénir ces composantes prometteuses qui sont associées à la\nmaladie et qui peuvent être des sous-phénotypes biologiques\nou neurophysiologiques, comme l’onde évoquée auditive P-300\n(Van der Stelt & al., 2004) ou encore la réponse de la rétine à\ndes stimuli lumineux (Hébert & al., 2010). Des anomalies du\nfonctionnement cognitif ou neuropsychologique, observées\nchez des patients ainsi que chez leurs apparentés non aectés\npar la maladie permettent de distinguer les personnes malades\ndes personnes en santé (Bora & al., 2009 ; Maziade & al., 2011).\nEn se servant des phénotypes intermédiaires cognitifs dans les\nétudes en psychiatrie génétique, les chercheurs peuvent tenter\nde mieux comprendre les mécanismes génétiques sous-tendant\nles maladies psychiatriques.\nFiabilité imparfaite des diagnostics\nLe fait que la abilité des diagnostics psychiatriques DSM ou ICD\nsoit parfois insusante pour les études génétiques est particu-\nlièrement important, compte tenu de la sensibilité des analyses\ngénétiques aux erreurs diagnostiques. Plusieurs failles dans\nles méthodes diagnostiques utilisées dans les études de liaison\ngénétique des problèmes psychiatriques pourraient contribuer\nà rendre dicile l’identication des gènes de susceptibilité. Les\nsolutions à ce problème peuvent être :\n• d’améliorer la précision des diagnostics, par l’utilisation de\nplusieurs sources d’information, telles que des phénotypes\nintermédiaires (neuropsychologiques/cognitifs, neurophy-\nsiologiques, etc.) ;\n• de permettre, lors des analyses de liaison, la présence d’une\ncertaine proportion de faux positifs, qui sont alors considérés\n",
+  "raw_text_sha256": "7e9d460a44306ad6962b28e149652591c93f0b8841acfefd830c43581efd3bde",
+  "source_page_display": 121,
+  "source_page_index": 120
+}

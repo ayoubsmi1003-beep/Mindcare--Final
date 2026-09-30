@@ -1,0 +1,340 @@
+{
+  "block_sequence_sha256": "963890543ce1df8ba189ad96b451b8a4ecd26a183621b6f07aa505826096a2c3",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0321-block-0001",
+      "order": 1,
+      "text": "304\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "ac9584ac7b5bbf16a590d6fc010f665f4327a781c4bf99d1d952e63191e650e3"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.2138061523438,
+        131.95849609375
+      ],
+      "block_id": "page-0321-block-0002",
+      "order": 2,
+      "text": "élevée chez les femmes. En eet, le diagnostic de TPB concerne\nles femmes dans une proportion de 60 à 86 %. Marneros et\nses collaborateurs (2003) constatent que ce trouble est 3,7 fois\nplus fréquent chez les femmes, alors que l’étude de Mojtabai\net de ses collaborateurs (2003) mentionne que le ratio est de\n1,7 femme pour 1 homme. Le tableau 15.1 présente l’incidence\ndes psychoses aiguës et transitoires pour 10 000 habitants selon\nle genre et le type de pays.\n",
+      "text_sha256": "6db5653fadd2da67a9158358ce0225950afd4f9a513760fc80cb46e1a1580cca"
+    },
+    {
+      "bbox": [
+        306.0,
+        142.48681640625,
+        420.9448547363281,
+        158.62939453125
+      ],
+      "block_id": "page-0321-block-0003",
+      "order": 3,
+      "text": "15.2.3 Âge du début\n",
+      "text_sha256": "e66f0a6366c2c7f16d9f046e91c7d1727a11439296700fc895fbd363cb6fae5a"
+    },
+    {
+      "bbox": [
+        306.0,
+        161.9658203125,
+        549.2216186523438,
+        218.45849609375
+      ],
+      "block_id": "page-0321-block-0004",
+      "order": 4,
+      "text": "Bien que le TPB puisse survenir à tout âge, les études\n(Marneros & al., 2003 ; Mojtabai & al., 2003) constatent un pic\nde début de la maladie vers la mi-trentaine. L’âge du début serait\ntoutefois un peu plus précoce dans les pays en voie de développe-\nment, soit la mi-vingtaine.\n",
+      "text_sha256": "eafbd226ec53c899fc2087dedeec54100b528e09e20e4a61eabecec6a61b7f84"
+    },
+    {
+      "bbox": [
+        306.0,
+        228.98681640625,
+        461.1531066894531,
+        245.12939453125
+      ],
+      "block_id": "page-0321-block-0005",
+      "order": 5,
+      "text": "15.2.4 Saison de naissance\n",
+      "text_sha256": "e4c111d610883631a956b50bff9082b6d3da358fa367cdf9adb501c80485f35e"
+    },
+    {
+      "bbox": [
+        306.0,
+        248.4658203125,
+        549.18505859375,
+        281.95849609375
+      ],
+      "block_id": "page-0321-block-0006",
+      "order": 6,
+      "text": "Les études n’ont établi aucun lien entre la saison de la naissance\net le TPB, alors qu’on retrouve un pic de naissances au printemps\ndans la schizophrénie.\n",
+      "text_sha256": "91afe15a66b759d034ae17eea07142d5e018e373444ac61b81e91bbe5d54ada8"
+    },
+    {
+      "bbox": [
+        306.0,
+        292.48681640625,
+        396.48077392578125,
+        308.62939453125
+      ],
+      "block_id": "page-0321-block-0007",
+      "order": 7,
+      "text": "15.2.5 Scolarité\n",
+      "text_sha256": "29d168b2c60848f79b1c88e43c6e08e975709cfdbfa00c393a7ca7da88b84070"
+    },
+    {
+      "bbox": [
+        306.0,
+        311.9658203125,
+        549.1426391601562,
+        379.95849609375
+      ],
+      "block_id": "page-0321-block-0008",
+      "order": 8,
+      "text": "Das et ses collaborateurs (2001) mentionnent que plus de la\nmoitié des patients sourant de TPB et un peu plus du tiers des\npatients sourant de schizophrénie détiennent une formation\npostsecondaire. Marneros et ses collaborateurs (2003) conr-\nment que le niveau de scolarité des patients sourant de TPAT\nest plus élevé que celui des patients sourant de schizophrénie.\n",
+      "text_sha256": "d600fe7894bcbd47a92ff1c2e4dc11406888bd9497ccaca53f8acdc6113205a9"
+    },
+    {
+      "bbox": [
+        306.0,
+        390.48681640625,
+        486.8013000488281,
+        406.62939453125
+      ],
+      "block_id": "page-0321-block-0009",
+      "order": 9,
+      "text": "15.2.6 Statut socio-économique\n",
+      "text_sha256": "98de850f18f5a22be71e52846d5ce9ef148912d21b521298167d6175719ca5a0"
+    },
+    {
+      "bbox": [
+        306.0,
+        409.9658203125,
+        549.4752197265625,
+        535.45849609375
+      ],
+      "block_id": "page-0321-block-0010",
+      "order": 10,
+      "text": "Un nombre signicativement plus élevé de patients sourant\nde TPB occupent un emploi, comparativement aux patients\nsourant de schizophrénie (Das & al., 2001). Marneros et ses\ncollaborateurs (2003) soulignent que les patients sourant de TPB\nprésentent un meilleur niveau socio-économique que celui des\npatients sourant de schizophrénie au début de la maladie, même\ns’il n’y avait aucune diérence quant au statut socio-économique\nde leur famille d’origine. Arranz et ses collaborateurs (2009)\nconstatent également un meilleur fonctionnement prémorbide\ndes patients sourant de TPB, comparativement aux patients\nsourant de schizophrénie.\n",
+      "text_sha256": "ab1ccc9923cfbcdae905653fae349c6b5b775a4aea2001844294fb79f8539fda"
+    },
+    {
+      "bbox": [
+        306.0,
+        545.98681640625,
+        464.0882568359375,
+        562.12939453125
+      ],
+      "block_id": "page-0321-block-0011",
+      "order": 11,
+      "text": "15.2.7 Stabilité relationnelle\n",
+      "text_sha256": "6297a7c00044ef798310cb5caa3fb9d2ba63b9ba60e392e34df0fc22e73e63ef"
+    },
+    {
+      "bbox": [
+        306.0,
+        565.4658203125,
+        549.0300903320312,
+        621.95849609375
+      ],
+      "block_id": "page-0321-block-0012",
+      "order": 12,
+      "text": "Les patients sourant de TPB ou de trouble schizoaectif\nseraient plus nombreux à maintenir davantage une relation\nconjugale stable avant le début de la maladie que les patients\nsourant de schizophrénie (Marneros & al., 2003 ; Pillman & al.,\n2003b).\n",
+      "text_sha256": "26332fc555cffdc2d5b310213417d3d2065ba9e8b804b093dc139ae427573789"
+    },
+    {
+      "bbox": [
+        306.0,
+        632.48681640625,
+        491.944091796875,
+        648.62939453125
+      ],
+      "block_id": "page-0321-block-0013",
+      "order": 13,
+      "text": "15.2.8 Expériences traumatiques\n",
+      "text_sha256": "4acf003e8cb6ee5654cc7e301b580249efbd9b12044bd2f7c9975a1e470d28b4"
+    },
+    {
+      "bbox": [
+        306.0,
+        651.9658203125,
+        549.4458618164062,
+        708.45849609375
+      ],
+      "block_id": "page-0321-block-0014",
+      "order": 14,
+      "text": "Bien que les traumatismes durant l’enfance aient été associés à\nplusieurs psychopathologies, jusqu’à maintenant, aucune étude\nn’a pu démontrer le rôle d’un traumatisme sévère (abus sexuel,\ncrime violent, situation mettant la vie en danger, etc.) dans\nl’apparition d’un TPB.\n",
+      "text_sha256": "778a72272ed67c6fd466a8724440feddb2364509996b1b43cade5ec626345caf"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.9658203125,
+        291.35089111328125,
+        177.95849609375
+      ],
+      "block_id": "page-0321-block-0015",
+      "order": 15,
+      "text": "diagnostiques permet de constater que le TPB du DSM-IV\nest passablement semblable au TAPT déni par la CIM-10\n(Marneros & al., 2005 ; Pillman & al., 2002). De plus, Jäger et\nses collaborateurs (2003a) constatent que la abilité interjuge\nest très élevée concernant le TPAT déni par la CIM-10 et qu’il\nse distingue des diagnostics de schizophrénie et de trouble\ndélirant. En raison de la spécicité de cette entité clinique, le\nDSM-5 maintient donc le diagnostic de trouble psychotique\nbref en s’appuyant sur les mêmes critères que ceux de l’édi-\ntion précédente. Le diagnostic de ce trouble est décrit dans le\nchapitre traitant des troubles du spectre de la schizophrénie\net des autres troubles psychotiques.\n",
+      "text_sha256": "62ff61fae3b29310aaf9cd46ab1343e28094769d26cb0dfdb40d0322f64bfbb8"
+    },
+    {
+      "bbox": [
+        55.0,
+        195.9931640625,
+        188.14675903320312,
+        215.1689453125
+      ],
+      "block_id": "page-0321-block-0016",
+      "order": 16,
+      "text": "15.2\nÉpidémiologie\n",
+      "text_sha256": "80f9c9a1df9f1da909ca44b612d07058579d24e3be9d2e4bfc828c90306593ad"
+    },
+    {
+      "bbox": [
+        48.0,
+        228.9658203125,
+        291.1732482910156,
+        273.95849609375
+      ],
+      "block_id": "page-0321-block-0017",
+      "order": 17,
+      "text": "L’intérêt grandissant manifesté par la communauté psychiatrique\nà l’égard des troubles psychotiques transitoires a conduit à des\nrecherches plus rigoureuses qui ont permis de dégager certaines\nparticularités épidémiologiques.\n",
+      "text_sha256": "c9b6714fbf0a081fb2668c143e00bb28f8484aad9ca1da34a46a91855ebc18c7"
+    },
+    {
+      "bbox": [
+        48.0,
+        284.48681640625,
+        146.99343872070312,
+        300.62939453125
+      ],
+      "block_id": "page-0321-block-0018",
+      "order": 18,
+      "text": "15.2.1 Fréquence\n",
+      "text_sha256": "c89520d41b7f45f18395cd6cde4690e8202bfa18d597935ce1f40b8b6de6a3f0"
+    },
+    {
+      "bbox": [
+        48.0,
+        303.9658203125,
+        291.45697021484375,
+        538.95849609375
+      ],
+      "block_id": "page-0321-block-0019",
+      "order": 19,
+      "text": "Susser & Wanderling (1994), lors des analyses de l’étude inter-\nnationale menée par l’Organisation mondiale de la santé (OMS)\nconcernant l’évolution des troubles mentaux sévères, constatent\nque les pays en voie de développement connaissent une fréquence\nplus élevée des TPB. Ceux-ci y seraient jusqu’à 10 fois plus\nfréquents que dans les pays industrialisés (voir le tableau 15.1),\ncomme semblent le conrmer les diérentes études épidémio-\nlogiques. Actuellement, on estime l’incidence de ce trouble à\n1,36 pour 100 000 (habitants) (Singh & al., 2004) :\n• 0,74 pour 100 000 (habitants) chez les hommes ;\n• 1,99 pour 100 000 (habitants) chez les femmes.\nSelon l’étude allemande de Marneros et de ses collaborateurs\n(2003), 8,5 % des patients suivis pour des troubles psychotiques\nnon organiques ont reçu un diagnostic de TPAT (CIM-10) et\n5 % d’entre eux, un diagnostic de TPB (DSM-IV). Ces chires\nsemblent correspondre aux résultats d’autres études eectuées\ndans les pays industrialisés. Reay et ses collaborateurs (2010)\nobservent que 19 % des patients sourant d’un premier épisode\npsychotique (toute catégorie diagnostique incluse) reçoivent un\ndiagnostic de TPAT.\n",
+      "text_sha256": "ebb39eeea6fd5ab0fe614126d9a4d00e702a3e715301e0697c750002769657bd"
+    },
+    {
+      "bbox": [
+        48.0,
+        549.48681640625,
+        122.09578704833984,
+        565.62939453125
+      ],
+      "block_id": "page-0321-block-0020",
+      "order": 20,
+      "text": "15.2.2 Genre\n",
+      "text_sha256": "b51868240c2f582ef4ea7d0b0a453d9ccd4f36fc84e8968bc2ecbf7396fcc501"
+    },
+    {
+      "bbox": [
+        48.0,
+        568.9658203125,
+        291.0223693847656,
+        590.95849609375
+      ],
+      "block_id": "page-0321-block-0021",
+      "order": 21,
+      "text": "La plupart des études (Das & al., 2001 ; Marneros & al., 2003 ;\nSajith & al., 2002) rapportent une fréquence beaucoup plus\n",
+      "text_sha256": "0cf047ce917a2d67b5475f361451025c7eb887c55552ab169ec2b440705abb7b"
+    },
+    {
+      "bbox": [
+        50.25,
+        614.5523071289062,
+        239.72476196289062,
+        626.8700561523438
+      ],
+      "block_id": "page-0321-block-0022",
+      "order": 22,
+      "text": "TABLEAU 15.1 Incidence des psychoses aiguës\n",
+      "text_sha256": "b12e4d70aefdb5e9857c332bdb9a1c5d739e4e72f2802e418b37af5691222bde"
+    },
+    {
+      "bbox": [
+        106.5,
+        626.4022827148438,
+        191.51100158691406,
+        638.3700561523438
+      ],
+      "block_id": "page-0321-block-0023",
+      "order": 23,
+      "text": "et transitoires (OMS)\n",
+      "text_sha256": "accdf05b35a14a9697a54afab1b1c1815dbc1fe5523834d1c454b06f9e8caeac"
+    },
+    {
+      "bbox": [
+        68.05000305175781,
+        643.3241577148438,
+        276.33349609375,
+        663.9003295898438
+      ],
+      "block_id": "page-0321-block-0024",
+      "order": 24,
+      "text": "Genre\nPays en voie de\ndéveloppement\nPays industrialisés\n",
+      "text_sha256": "41ba0058217d731eb1c2c1207727416f3d18d59d7cdf5f35807f1df1a22e6a78"
+    },
+    {
+      "bbox": [
+        52.25,
+        669.251953125,
+        80.43800354003906,
+        690.078125
+      ],
+      "block_id": "page-0321-block-0025",
+      "order": 25,
+      "text": "Hommes\nFemmes\n",
+      "text_sha256": "3123afb80b436ca18080d43e451b16f702e2ba55c0a115ffc0207614c362941a"
+    },
+    {
+      "bbox": [
+        113.25,
+        669.251953125,
+        243.04200744628906,
+        690.078125
+      ],
+      "block_id": "page-0321-block-0026",
+      "order": 26,
+      "text": "0,486/10 000\n0,878/10 000\n0,040/10 000\n0,104/10 000\n",
+      "text_sha256": "fffeba50f437d2aa3c48ac132a725b9d40903fadce8e0c4bfc0f44c050193bb1"
+    },
+    {
+      "bbox": [
+        48.25,
+        698.890625,
+        158.7324981689453,
+        707.7588500976562
+      ],
+      "block_id": "page-0321-block-0027",
+      "order": 27,
+      "text": "Source : Susser & Wandereling (1994).\n",
+      "text_sha256": "14775f8f80bb58c38ffa33dc23e835e46574f4cda8d3cad695fc5db697e8cf4e"
+    }
+  ],
+  "coordinates_sha256": "cc4b13c048bffbe8dd4e510227bd2b130efd5eb6b84959a2999b6b1d91a91af0",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0321",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "304\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nélevée chez les femmes. En eet, le diagnostic de TPB concerne\nles femmes dans une proportion de 60 à 86 %. Marneros et\nses collaborateurs (2003) constatent que ce trouble est 3,7 fois\nplus fréquent chez les femmes, alors que l’étude de Mojtabai\net de ses collaborateurs (2003) mentionne que le ratio est de\n1,7 femme pour 1 homme. Le tableau 15.1 présente l’incidence\ndes psychoses aiguës et transitoires pour 10 000 habitants selon\nle genre et le type de pays.\n15.2.3 Âge du début\nBien que le TPB puisse survenir à tout âge, les études\n(Marneros & al., 2003 ; Mojtabai & al., 2003) constatent un pic\nde début de la maladie vers la mi-trentaine. L’âge du début serait\ntoutefois un peu plus précoce dans les pays en voie de développe-\nment, soit la mi-vingtaine.\n15.2.4 Saison de naissance\nLes études n’ont établi aucun lien entre la saison de la naissance\net le TPB, alors qu’on retrouve un pic de naissances au printemps\ndans la schizophrénie.\n15.2.5 Scolarité\nDas et ses collaborateurs (2001) mentionnent que plus de la\nmoitié des patients sourant de TPB et un peu plus du tiers des\npatients sourant de schizophrénie détiennent une formation\npostsecondaire. Marneros et ses collaborateurs (2003) conr-\nment que le niveau de scolarité des patients sourant de TPAT\nest plus élevé que celui des patients sourant de schizophrénie.\n15.2.6 Statut socio-économique\nUn nombre signicativement plus élevé de patients sourant\nde TPB occupent un emploi, comparativement aux patients\nsourant de schizophrénie (Das & al., 2001). Marneros et ses\ncollaborateurs (2003) soulignent que les patients sourant de TPB\nprésentent un meilleur niveau socio-économique que celui des\npatients sourant de schizophrénie au début de la maladie, même\ns’il n’y avait aucune diérence quant au statut socio-économique\nde leur famille d’origine. Arranz et ses collaborateurs (2009)\nconstatent également un meilleur fonctionnement prémorbide\ndes patients sourant de TPB, comparativement aux patients\nsourant de schizophrénie.\n15.2.7 Stabilité relationnelle\nLes patients sourant de TPB ou de trouble schizoaectif\nseraient plus nombreux à maintenir davantage une relation\nconjugale stable avant le début de la maladie que les patients\nsourant de schizophrénie (Marneros & al., 2003 ; Pillman & al.,\n2003b).\n15.2.8 Expériences traumatiques\nBien que les traumatismes durant l’enfance aient été associés à\nplusieurs psychopathologies, jusqu’à maintenant, aucune étude\nn’a pu démontrer le rôle d’un traumatisme sévère (abus sexuel,\ncrime violent, situation mettant la vie en danger, etc.) dans\nl’apparition d’un TPB.\ndiagnostiques permet de constater que le TPB du DSM-IV\nest passablement semblable au TAPT déni par la CIM-10\n(Marneros & al., 2005 ; Pillman & al., 2002). De plus, Jäger et\nses collaborateurs (2003a) constatent que la abilité interjuge\nest très élevée concernant le TPAT déni par la CIM-10 et qu’il\nse distingue des diagnostics de schizophrénie et de trouble\ndélirant. En raison de la spécicité de cette entité clinique, le\nDSM-5 maintient donc le diagnostic de trouble psychotique\nbref en s’appuyant sur les mêmes critères que ceux de l’édi-\ntion précédente. Le diagnostic de ce trouble est décrit dans le\nchapitre traitant des troubles du spectre de la schizophrénie\net des autres troubles psychotiques.\n15.2\nÉpidémiologie\nL’intérêt grandissant manifesté par la communauté psychiatrique\nà l’égard des troubles psychotiques transitoires a conduit à des\nrecherches plus rigoureuses qui ont permis de dégager certaines\nparticularités épidémiologiques.\n15.2.1 Fréquence\nSusser & Wanderling (1994), lors des analyses de l’étude inter-\nnationale menée par l’Organisation mondiale de la santé (OMS)\nconcernant l’évolution des troubles mentaux sévères, constatent\nque les pays en voie de développement connaissent une fréquence\nplus élevée des TPB. Ceux-ci y seraient jusqu’à 10 fois plus\nfréquents que dans les pays industrialisés (voir le tableau 15.1),\ncomme semblent le conrmer les diérentes études épidémio-\nlogiques. Actuellement, on estime l’incidence de ce trouble à\n1,36 pour 100 000 (habitants) (Singh & al., 2004) :\n• 0,74 pour 100 000 (habitants) chez les hommes ;\n• 1,99 pour 100 000 (habitants) chez les femmes.\nSelon l’étude allemande de Marneros et de ses collaborateurs\n(2003), 8,5 % des patients suivis pour des troubles psychotiques\nnon organiques ont reçu un diagnostic de TPAT (CIM-10) et\n5 % d’entre eux, un diagnostic de TPB (DSM-IV). Ces chires\nsemblent correspondre aux résultats d’autres études eectuées\ndans les pays industrialisés. Reay et ses collaborateurs (2010)\nobservent que 19 % des patients sourant d’un premier épisode\npsychotique (toute catégorie diagnostique incluse) reçoivent un\ndiagnostic de TPAT.\n15.2.2 Genre\nLa plupart des études (Das & al., 2001 ; Marneros & al., 2003 ;\nSajith & al., 2002) rapportent une fréquence beaucoup plus\nTABLEAU 15.1 Incidence des psychoses aiguës\net transitoires (OMS)\nGenre\nPays en voie de\ndéveloppement\nPays industrialisés\nHommes\nFemmes\n0,486/10 000\n0,878/10 000\n0,040/10 000\n0,104/10 000\nSource : Susser & Wandereling (1994).\n",
+  "raw_text_sha256": "c77ac5ce7f9bed2a885769256c0442a7dcc3e03fd85f0883e185a43d2eca77be",
+  "source_page_display": 322,
+  "source_page_index": 321
+}

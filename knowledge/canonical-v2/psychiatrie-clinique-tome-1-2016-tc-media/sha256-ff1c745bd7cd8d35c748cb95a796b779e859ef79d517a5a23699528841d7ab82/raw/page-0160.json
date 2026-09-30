@@ -1,0 +1,136 @@
+{
+  "block_sequence_sha256": "a783438d5fa18e94bbf77171c56ca9c64cecf25e248ca39e23c9079acddb1c78",
+  "blocks": [
+    {
+      "bbox": [
+        388.75,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0160-block-0001",
+      "order": 1,
+      "text": "Chapitre 7\nImagerie cérébrale\n143\n",
+      "text_sha256": "d299814d2b1ec52eb523bf03ac64098a3224a7b9a1f73e08d3ad6e04d085de5a"
+    },
+    {
+      "bbox": [
+        312.0,
+        40.9658203125,
+        555.3056640625,
+        433.45849609375
+      ],
+      "block_id": "page-0160-block-0002",
+      "order": 2,
+      "text": "Les études mentionnées dans les paragraphes précédents\nsont toutes théoriquement capables de générer des résultats\ndécrivant le phénomène étudié de façon quantitative (Van den\nHof, 2005). On peut mesurer :\n• des densités de récepteurs d’un type donné sur une base\nrégionale (p. ex., en micromoles par milligrammes de tissu) ;\n• l’activité d’enzymes synthétisant ou catabolisant tel ou tel\nneurotransmetteur ;\n• des densités d’innervation (millions de terminaisons sy-\nnaptiques par millimètres cubes de tissu) par des systèmes\nchimiquement dénis (p. ex., les catécholamines) avec des\nligands des transporteurs vésiculaires ou membranaires\ndes neurotransmetteurs.\nCes examens se prêtent aussi à des études d’intervention\n(Laruelle, 2000) et permettent :\n• de déterminer la capacité d’un médicament à bloquer un\nrécepteur en mesurant le déplacement qu’il induit d’un ra-\ndiopharmaceutique se liant réversiblement à ce récepteur ;\n• de stimuler ou d’inhiber pharmacologiquement un système,\net mesurer les eets de ces modications sur la liaison d’un\nradiotraceur se liant à diverses composantes de ce système ;\non peut ainsi quantier la relâche d’un neurotransmetteur en\nmesurant les modications de liaison d’un traceur ciblant les\nrécepteurs ou les transporteurs de ce système.\nCependant, ces études quantitatives ou interventionnelles\nnécessitent des protocoles d’acquisition des données très com-\nplexes (p. ex., de multiples prises de sang artériel, ou des injections\nde radiopharmaceutique sur des périodes prolongées), et des\ntechniques d’analyse des données hautement sophistiquées. De\nplus, l’utilisation humaine clinique de ces radiopharmaceutiques\nn’est pas approuvée, à l’exception du 18FDG et de quelques agents\nde TEMP (99mTc-HMPAO, 99mTc-ECD) ; leurs applications se\nlimitent donc à la recherche.\n",
+      "text_sha256": "c8acfff8a0f1dde9220b48ba7f2551f38c413bcd8e7db5e9077ae65c9dc4b8da"
+    },
+    {
+      "bbox": [
+        324.1000061035156,
+        447.7431640625,
+        543.9736328125,
+        484.6689453125
+      ],
+      "block_id": "page-0160-block-0003",
+      "order": 3,
+      "text": "7.3\nApplications de la médecine\nnucléaire en psychiatrie\n",
+      "text_sha256": "37645fe9978341429f3fc9d207d3eb9d06de8c2a981442345eae6a97c65853d7"
+    },
+    {
+      "bbox": [
+        312.0,
+        498.4658203125,
+        555.4915771484375,
+        727.45849609375
+      ],
+      "block_id": "page-0160-block-0004",
+      "order": 4,
+      "text": "Dès ses débuts, la médecine nucléaire a contribué à l’évaluation\nde diverses aections du système nerveux central. Initialement,\nla plupart des maladies étudiées ne présentaient pas de mani-\nfestations psychiatriques. Les premières études en scintigraphie\ncérébrale conventionnelle ont surtout servi à mettre en évidence\ndes tumeurs cérébrales ou des lésions d’origine vasculaire\n(accidents vasculaires cérébraux, hématomes sous-duraux),\nparfois des infections (encéphalite herpétique en particulier),\nen révélant les bris de la barrière hématoencéphalique causés\npar ces maladies. Aujourd’hui, la scintigraphie cérébrale conven-\ntionnelle (étude planaire réalisée avec des radiotraceurs évaluant\nla fonction de la barrière hématoencéphalique) est remplacée\npar d’autres approches d’imagerie (tomodensitométrie, IRM,\nétudes TEMP du ot sanguin cérébral, etc.). L’avènement de\nla TEP et de la TEMP, capables d’évaluer la perfusion et le\nmétabolisme cérébraux et diverses composantes de la neuro-\ntransmission, a permis d’accroître le nombre d’applications de\nla médecine nucléaire à la psychiatrie, mais elles demeurent\nsurtout cantonnées à la recherche. Certaines sont cependant\nutilisées en clinique.\n",
+      "text_sha256": "84935d7abf67978cedc345fa404e7c7426eee30e07ab1e0e844401eb00427d2b"
+    },
+    {
+      "bbox": [
+        54.0,
+        39.33681869506836,
+        242.7880859375,
+        55.47939682006836
+      ],
+      "block_id": "page-0160-block-0005",
+      "order": 5,
+      "text": "7.2.3 Études de liaison spécique\n",
+      "text_sha256": "4d3fa4dbc07341b232c93f60d7e0911fdb5a1ce7ecdddc57ee25df5ec8fb9165"
+    },
+    {
+      "bbox": [
+        54.0,
+        58.865821838378906,
+        297.12091064453125,
+        138.7584991455078
+      ],
+      "block_id": "page-0160-block-0006",
+      "order": 6,
+      "text": "Ce terme désigne toute une gamme d’études dans lesquelles on\nutilise des molécules radiomarquées visant des cibles moléculaires\nspéciques. On pourrait objecter que ceci est le cas de tous les\nradiopharmaceutiques, en disant par exemple que le 18FDG est\nun radioligand dirigé vers les transporteurs du glucose, mais\nla portée de ce terme est limitée ici aux études où la cible est\ngénéralement moins largement et plus spéciquement distribuée.\n",
+      "text_sha256": "ec4955ac0a1e0bf750c36f804ffda488a0b0586c207ab2abbbf73d648dbf440a"
+    },
+    {
+      "bbox": [
+        54.0,
+        139.81582641601562,
+        297.2414245605469,
+        219.70849609375
+      ],
+      "block_id": "page-0160-block-0007",
+      "order": 7,
+      "text": "Les diérentes composantes de la neurotransmission ont\nfait l’objet du plus grand nombre d’études dans ce domaine. Et\nde ces diérentes composantes, les neurorécepteurs ont oert\nles principales cibles de ces études de liaison spécique. Cette\napproche a permis, surtout en recherche, de caractériser chez\nl’individu sain et chez le malade l’état de systèmes de neuro-\ntransmission multiples.\n",
+      "text_sha256": "0f68a003480c06c1090617fa3b2e4af376b8c47ce67ffcc58a92eff998c179a3"
+    },
+    {
+      "bbox": [
+        54.0,
+        220.81582641601562,
+        297.486328125,
+        345.3584899902344
+      ],
+      "block_id": "page-0160-block-0008",
+      "order": 8,
+      "text": "Des radiopharmaceutiques sont aussi disponibles pour cibler\nd’autres composantes de la neurotransmission et peuvent tous\nêtre étudiés en médecine nucléaire :\n• systèmes de recaptage des neurotransmetteurs ;\n• enzymes permettant leur synthèse ou leur catabolisme ;\n• transporteurs au niveau des vésicules synaptiques ;\n• seconds messagers.\nLa grande majorité de ces radiotraceurs demeure marquée\npar un émetteur de positrons, mais la liste de ceux utilisables\npar TEMP s’allonge progressivement.\n",
+      "text_sha256": "b5a4b515c7a213614d01bf4d2e37c76cf59a85ddd8b9a9d2e673575f804eeecc"
+    },
+    {
+      "bbox": [
+        54.0,
+        346.41583251953125,
+        297.6054992675781,
+        634.9085083007812
+      ],
+      "block_id": "page-0160-block-0009",
+      "order": 9,
+      "text": "On peut aussi évaluer par TEP (et parfois par TEMP) des\nprocessus métaboliques cérébraux autres que ceux du métabo-\nlisme énergétique ou de la neurotransmission :\n• le métabolisme des phospholipides (p. ex., avec du\n11C-palmitate) ;\n• le transport au niveau de la barrière hématoencéphalique des\nacides aminés ;\n• la synthèse de protéines (11C-méthionine, 18F-fluoro-\nethyltyrosine) ;\n• la présence de neuro-inammation, à l’aide de nombreux agents\nde nature très variable, allant de globules blancs radiomarqués\nà des marqueurs spéciques de l’activation gliale et au 18FDG,\nqui s’accumule dans les globules blancs activés. De tels agents\npeuvent s’avérer utiles en recherche pour caractériser diverses\nmaladies neurologiques dans lesquelles des phénomènes inam-\nmatoires jouent un rôle, tels la sclérose en plaques, plusieurs\nmaladies neurodégénératives, les accidents vasculaires cérébraux\n(AVC), et probablement bien d’autres aections ;\n• l’apoptose, au moyen de ligands utiles dans le cadre de l’étude\ndes maladies dégénératives, de l’évolution des AVC, de la\nréponse tumorale à divers traitements, etc.\nCette liste, non exhaustive, permet de constater qu’il est\npossible d’évaluer un grand nombre de voies métaboliques du\nsystème nerveux.\n",
+      "text_sha256": "dc6c1868a4f6f7c445c7f9d82971bc740ddc30e90d44b47bd32ab1bd2183c6de"
+    },
+    {
+      "bbox": [
+        54.0,
+        636.0158081054688,
+        297.4213562011719,
+        727.45849609375
+      ],
+      "block_id": "page-0160-block-0010",
+      "order": 10,
+      "text": "À ce jour, la TEP dispose de plusieurs centaines de radiophar-\nmaceutiques permettant d’étudier la neurotransmission ou divers\naspects du métabolisme cérébral. Toutefois, la majeure partie de\nces produits n’a jamais été utilisée chez l’humain, même à des ns\nde recherche, et encore moins en clinique. La plupart d’entre eux\nsont diciles à préparer, ou encore ils ont été préparés par un\ngroupe de recherche qui voulait répondre à une question précise\ndans le cadre d’un projet n’ayant pas trouvé de débouché clinique.\n",
+      "text_sha256": "65be0b1af409a724666ad62cb2fbc710baeabaa500c692a0577c63cf34def0a8"
+    }
+  ],
+  "coordinates_sha256": "371dc0a18d169015f8c468b5d016ce406b64749459671904cb9a631b3f062e40",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0160",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 7\nImagerie cérébrale\n143\nLes études mentionnées dans les paragraphes précédents\nsont toutes théoriquement capables de générer des résultats\ndécrivant le phénomène étudié de façon quantitative (Van den\nHof, 2005). On peut mesurer :\n• des densités de récepteurs d’un type donné sur une base\nrégionale (p. ex., en micromoles par milligrammes de tissu) ;\n• l’activité d’enzymes synthétisant ou catabolisant tel ou tel\nneurotransmetteur ;\n• des densités d’innervation (millions de terminaisons sy-\nnaptiques par millimètres cubes de tissu) par des systèmes\nchimiquement dénis (p. ex., les catécholamines) avec des\nligands des transporteurs vésiculaires ou membranaires\ndes neurotransmetteurs.\nCes examens se prêtent aussi à des études d’intervention\n(Laruelle, 2000) et permettent :\n• de déterminer la capacité d’un médicament à bloquer un\nrécepteur en mesurant le déplacement qu’il induit d’un ra-\ndiopharmaceutique se liant réversiblement à ce récepteur ;\n• de stimuler ou d’inhiber pharmacologiquement un système,\net mesurer les eets de ces modications sur la liaison d’un\nradiotraceur se liant à diverses composantes de ce système ;\non peut ainsi quantier la relâche d’un neurotransmetteur en\nmesurant les modications de liaison d’un traceur ciblant les\nrécepteurs ou les transporteurs de ce système.\nCependant, ces études quantitatives ou interventionnelles\nnécessitent des protocoles d’acquisition des données très com-\nplexes (p. ex., de multiples prises de sang artériel, ou des injections\nde radiopharmaceutique sur des périodes prolongées), et des\ntechniques d’analyse des données hautement sophistiquées. De\nplus, l’utilisation humaine clinique de ces radiopharmaceutiques\nn’est pas approuvée, à l’exception du 18FDG et de quelques agents\nde TEMP (99mTc-HMPAO, 99mTc-ECD) ; leurs applications se\nlimitent donc à la recherche.\n7.3\nApplications de la médecine\nnucléaire en psychiatrie\nDès ses débuts, la médecine nucléaire a contribué à l’évaluation\nde diverses aections du système nerveux central. Initialement,\nla plupart des maladies étudiées ne présentaient pas de mani-\nfestations psychiatriques. Les premières études en scintigraphie\ncérébrale conventionnelle ont surtout servi à mettre en évidence\ndes tumeurs cérébrales ou des lésions d’origine vasculaire\n(accidents vasculaires cérébraux, hématomes sous-duraux),\nparfois des infections (encéphalite herpétique en particulier),\nen révélant les bris de la barrière hématoencéphalique causés\npar ces maladies. Aujourd’hui, la scintigraphie cérébrale conven-\ntionnelle (étude planaire réalisée avec des radiotraceurs évaluant\nla fonction de la barrière hématoencéphalique) est remplacée\npar d’autres approches d’imagerie (tomodensitométrie, IRM,\nétudes TEMP du ot sanguin cérébral, etc.). L’avènement de\nla TEP et de la TEMP, capables d’évaluer la perfusion et le\nmétabolisme cérébraux et diverses composantes de la neuro-\ntransmission, a permis d’accroître le nombre d’applications de\nla médecine nucléaire à la psychiatrie, mais elles demeurent\nsurtout cantonnées à la recherche. Certaines sont cependant\nutilisées en clinique.\n7.2.3 Études de liaison spécique\nCe terme désigne toute une gamme d’études dans lesquelles on\nutilise des molécules radiomarquées visant des cibles moléculaires\nspéciques. On pourrait objecter que ceci est le cas de tous les\nradiopharmaceutiques, en disant par exemple que le 18FDG est\nun radioligand dirigé vers les transporteurs du glucose, mais\nla portée de ce terme est limitée ici aux études où la cible est\ngénéralement moins largement et plus spéciquement distribuée.\nLes diérentes composantes de la neurotransmission ont\nfait l’objet du plus grand nombre d’études dans ce domaine. Et\nde ces diérentes composantes, les neurorécepteurs ont oert\nles principales cibles de ces études de liaison spécique. Cette\napproche a permis, surtout en recherche, de caractériser chez\nl’individu sain et chez le malade l’état de systèmes de neuro-\ntransmission multiples.\nDes radiopharmaceutiques sont aussi disponibles pour cibler\nd’autres composantes de la neurotransmission et peuvent tous\nêtre étudiés en médecine nucléaire :\n• systèmes de recaptage des neurotransmetteurs ;\n• enzymes permettant leur synthèse ou leur catabolisme ;\n• transporteurs au niveau des vésicules synaptiques ;\n• seconds messagers.\nLa grande majorité de ces radiotraceurs demeure marquée\npar un émetteur de positrons, mais la liste de ceux utilisables\npar TEMP s’allonge progressivement.\nOn peut aussi évaluer par TEP (et parfois par TEMP) des\nprocessus métaboliques cérébraux autres que ceux du métabo-\nlisme énergétique ou de la neurotransmission :\n• le métabolisme des phospholipides (p. ex., avec du\n11C-palmitate) ;\n• le transport au niveau de la barrière hématoencéphalique des\nacides aminés ;\n• la synthèse de protéines (11C-méthionine, 18F-fluoro-\nethyltyrosine) ;\n• la présence de neuro-inammation, à l’aide de nombreux agents\nde nature très variable, allant de globules blancs radiomarqués\nà des marqueurs spéciques de l’activation gliale et au 18FDG,\nqui s’accumule dans les globules blancs activés. De tels agents\npeuvent s’avérer utiles en recherche pour caractériser diverses\nmaladies neurologiques dans lesquelles des phénomènes inam-\nmatoires jouent un rôle, tels la sclérose en plaques, plusieurs\nmaladies neurodégénératives, les accidents vasculaires cérébraux\n(AVC), et probablement bien d’autres aections ;\n• l’apoptose, au moyen de ligands utiles dans le cadre de l’étude\ndes maladies dégénératives, de l’évolution des AVC, de la\nréponse tumorale à divers traitements, etc.\nCette liste, non exhaustive, permet de constater qu’il est\npossible d’évaluer un grand nombre de voies métaboliques du\nsystème nerveux.\nÀ ce jour, la TEP dispose de plusieurs centaines de radiophar-\nmaceutiques permettant d’étudier la neurotransmission ou divers\naspects du métabolisme cérébral. Toutefois, la majeure partie de\nces produits n’a jamais été utilisée chez l’humain, même à des ns\nde recherche, et encore moins en clinique. La plupart d’entre eux\nsont diciles à préparer, ou encore ils ont été préparés par un\ngroupe de recherche qui voulait répondre à une question précise\ndans le cadre d’un projet n’ayant pas trouvé de débouché clinique.\n",
+  "raw_text_sha256": "eccc1a77a4a8bfd9e2dc3ac57622e37c1eaaf3d1ba072caf4460d617c4358035",
+  "source_page_display": 161,
+  "source_page_index": 160
+}

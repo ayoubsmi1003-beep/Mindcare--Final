@@ -1,0 +1,34 @@
+{
+  "manifeste": "C:\\Users\\ABC Informatique\\.claude\\projects\\Final mindcare\\knowledge\\manifest.json",
+  "ecrire": true,
+  "decouverts": 1,
+  "acceptes": [
+    {
+      "source_id": "corpus-dsm5",
+      "chunks": 12815,
+      "statut": "reviewed",
+      "approbation": "en-attente",
+      "hash": "b3d728d5e18f32639f90cc4f979fd84b2154bdee1fa6efba2592af09c30a0850",
+      "unites_patient_suspect_epurees": [
+        "dsm5fr-u-1175-N013",
+        "dsm5fr-u-152-C027",
+        "dsm5fr-u-590-COVER",
+        "dsm5fr-u-590-T40001",
+        "dsm5fr-u-590-U30184"
+      ]
+    }
+  ],
+  "rejetes": [],
+  "medicaments": {
+    "total": 0,
+    "uniques": 0,
+    "doublons": 0,
+    "libelles": 0,
+    "rejetes": 0
+  },
+  "chunks": 12815,
+  "ecrits": {
+    "sources": 1,
+    "chunks": 12815
+  }
+}

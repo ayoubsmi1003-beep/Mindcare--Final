@@ -1,0 +1,376 @@
+{
+  "block_sequence_sha256": "b5f3fb1ae4cc0f450fe42b102b49a3d896c93a2d81d4e87c7efc467ec9632dd9",
+  "blocks": [
+    {
+      "bbox": [
+        396.8000183105469,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0376-block-0001",
+      "order": 1,
+      "text": "Chapitre 17\nSchizophrénies\n359\n",
+      "text_sha256": "5b31217d49d2e590f2de9f98135b69a8513dea308dd94d3a718804e93785f2dc"
+    },
+    {
+      "bbox": [
+        55.85000228881836,
+        282.1523132324219,
+        348.1325988769531,
+        294.4700622558594
+      ],
+      "block_id": "page-0376-block-0002",
+      "order": 2,
+      "text": "TABLEAU 17.5 Posologie recommandée pour les antipsychotiques oraux\n",
+      "text_sha256": "67821dda33c726da1ad1647a86f377ddc89c2b0c1cb57b2d0f70b1dbd8851445"
+    },
+    {
+      "bbox": [
+        56.75,
+        299.42413330078125,
+        540.0115356445312,
+        322.3423767089844
+      ],
+      "block_id": "page-0376-block-0003",
+      "order": 3,
+      "text": "Nom scientique\nNom commercial\nDose orale approximative (mg/j)\nAdministration habituelle\nAntipsychotiques atypiques de 2e et 3e génération\n",
+      "text_sha256": "c6a55768d794a128048863cc6fd2737cabb2bc7c354f529dbd9334729516befd"
+    },
+    {
+      "bbox": [
+        273.1000061035156,
+        327.8019714355469,
+        407.1620178222656,
+        337.6281433105469
+      ],
+      "block_id": "page-0376-block-0004",
+      "order": 4,
+      "text": "Doses faibles\nDoses fortes\n",
+      "text_sha256": "8402fbe6a8c3451e2ea6dd809cd973666a88eebe2b0745eaa97ed9b803567b21"
+    },
+    {
+      "bbox": [
+        57.75,
+        345.6513671875,
+        470.05999755859375,
+        356.078125
+      ],
+      "block_id": "page-0376-block-0005",
+      "order": 5,
+      "text": "Rispéridone\nRisperdalMD\n1\n2\n4\n6\nHS ou BID\n",
+      "text_sha256": "f98455cf7b08b8539c4dde9cf2ea102b07ff3a8f4e3f5b8244ed16dc1ba00984"
+    },
+    {
+      "bbox": [
+        57.75,
+        364.0513610839844,
+        470.05999755859375,
+        374.4781188964844
+      ],
+      "block_id": "page-0376-block-0006",
+      "order": 6,
+      "text": "Palipéridone\nInvegaMD\n3\n6\n9\n12\nHS ou BID\n",
+      "text_sha256": "c348a0955f788d84ad78756dc8f501d740b5ca896f973598d0779dd96e8b7fcc"
+    },
+    {
+      "bbox": [
+        57.75,
+        382.5013732910156,
+        471.7430114746094,
+        392.9281311035156
+      ],
+      "block_id": "page-0376-block-0007",
+      "order": 7,
+      "text": "Asénapine\nSaphrisMD\n5\n10\n15\n20\nAM ou BID\n",
+      "text_sha256": "edac824ff1acb427454bfe0ca68796bd890dcfd0a4f87e70251e000403598686"
+    },
+    {
+      "bbox": [
+        57.75,
+        400.9013671875,
+        470.05999755859375,
+        411.328125
+      ],
+      "block_id": "page-0376-block-0008",
+      "order": 8,
+      "text": "Olanzapine\nZyprexaMD, ZydisMD\n5\n10\n20\n30\nHS ou BID\n",
+      "text_sha256": "23a1886a585bb5a882bc8b56376a60acc6539c35b6ae11f2ccde9975ac19cc1a"
+    },
+    {
+      "bbox": [
+        57.75,
+        419.35137939453125,
+        448.42401123046875,
+        429.77813720703125
+      ],
+      "block_id": "page-0376-block-0009",
+      "order": 9,
+      "text": "Aripiprazole\nAbilifyMD\n5\n10\n20\n30\nAM\n",
+      "text_sha256": "9b6406feb74cf60bc6cdf80f7fa1b50a5b9e57f61d1ef9e7282b84d4ed218951"
+    },
+    {
+      "bbox": [
+        57.75,
+        437.7513732910156,
+        527.1784057617188,
+        448.1781311035156
+      ],
+      "block_id": "page-0376-block-0010",
+      "order": 10,
+      "text": "Lurasidone\nLatudaMD\n40\n60\n80\n160\nAM ou BID pendant le repas\n",
+      "text_sha256": "0b33602fd12ec157e4a5a270aaa1ef17b67d8b6ccf53e0b068d8bb958adce6c7"
+    },
+    {
+      "bbox": [
+        57.75,
+        456.2013854980469,
+        527.1784057617188,
+        466.6281433105469
+      ],
+      "block_id": "page-0376-block-0011",
+      "order": 11,
+      "text": "Ziprasidone\nZeldoxMD\n40\n80\n120\n160\nAM ou BID pendant le repas\n",
+      "text_sha256": "1ca43a2f5676f7ebd7830b78ff1ebc0b3caa46f92484a9182031b41e9ae08c90"
+    },
+    {
+      "bbox": [
+        57.75,
+        474.60137939453125,
+        470.05999755859375,
+        485.02813720703125
+      ],
+      "block_id": "page-0376-block-0012",
+      "order": 12,
+      "text": "Quétiapine\nSeroquelMD\n100\n300\n600\n800\nHS ou BID\n",
+      "text_sha256": "60e561947f8f81f1322333bc6027ff554c793ed650bf747cc055b8ec9594158d"
+    },
+    {
+      "bbox": [
+        57.75,
+        493.0513610839844,
+        484.2450866699219,
+        503.4781188964844
+      ],
+      "block_id": "page-0376-block-0013",
+      "order": 13,
+      "text": "Clozapine\nClozarilMD\n100\n300\n600\n900\nHS, BID ou TID\n",
+      "text_sha256": "a15adadd574f0117ce038152e77eb4786db126a84770b99692ad61ebc548b6e1"
+    },
+    {
+      "bbox": [
+        56.75,
+        505.97283935546875,
+        298.48199462890625,
+        518.9923706054688
+      ],
+      "block_id": "page-0376-block-0014",
+      "order": 14,
+      "text": "Antipsychotiques typiques, classiques, 1re génération (neuroleptiques)\n",
+      "text_sha256": "06fe18d342d920623a01170d53f3143fdabab1c2f7ec503c22e6fafeab0f045c"
+    },
+    {
+      "bbox": [
+        273.1000061035156,
+        524.501953125,
+        407.1620178222656,
+        534.328125
+      ],
+      "block_id": "page-0376-block-0015",
+      "order": 15,
+      "text": "Doses faibles\nDoses fortes\n",
+      "text_sha256": "8402fbe6a8c3451e2ea6dd809cd973666a88eebe2b0745eaa97ed9b803567b21"
+    },
+    {
+      "bbox": [
+        57.75,
+        542.3013916015625,
+        484.2450866699219,
+        552.7281494140625
+      ],
+      "block_id": "page-0376-block-0016",
+      "order": 16,
+      "text": "Halopéridol\nHaldolMD\n2\n5\n10\n20\nHS, BID ou TID\n",
+      "text_sha256": "e71014aae01b75f28a8726a9de5e3c21b9101eaff99987becf9e4ed74af5dd75"
+    },
+    {
+      "bbox": [
+        57.75,
+        560.7514038085938,
+        470.05999755859375,
+        571.1781616210938
+      ],
+      "block_id": "page-0376-block-0017",
+      "order": 17,
+      "text": "Fluphénazine\nModitenMD\n2\n5\n10\n20\nHS ou BID\n",
+      "text_sha256": "7619067bb4d54aa1c3eef689cf1317a92f2bc3e640139a8518484fa790acb91b"
+    },
+    {
+      "bbox": [
+        57.75,
+        579.1513671875,
+        470.05999755859375,
+        589.578125
+      ],
+      "block_id": "page-0376-block-0018",
+      "order": 18,
+      "text": "Flupentixol\nFluanxolMD\n3\n6\n9\n12\nHS ou BID\n",
+      "text_sha256": "fb75338e3e2072f69a55b7e78f4f855406b3feceb9c5dba97e2fa2e98efdfcff"
+    },
+    {
+      "bbox": [
+        57.75,
+        597.6013793945312,
+        448.42401123046875,
+        608.0281372070312
+      ],
+      "block_id": "page-0376-block-0019",
+      "order": 19,
+      "text": "Pimozide\nOrapMD\n4\n8\n12\n20\nAM\n",
+      "text_sha256": "2f33398980f49073029e7644e3317f5c6b3fe957a67d923e7465bcd4fe95a64a"
+    },
+    {
+      "bbox": [
+        57.75,
+        616.0014038085938,
+        484.2450866699219,
+        626.4281616210938
+      ],
+      "block_id": "page-0376-block-0020",
+      "order": 20,
+      "text": "Perphénazine\nTrilafonMD\n4\n8\n16\n24\nHS, BID ou TID\n",
+      "text_sha256": "336bca599746e852ec713c2d585ed300caa9284fd794cf4e30bbbfc4a3df0f4e"
+    },
+    {
+      "bbox": [
+        57.75,
+        634.4513549804688,
+        470.05999755859375,
+        644.8781127929688
+      ],
+      "block_id": "page-0376-block-0021",
+      "order": 21,
+      "text": "Triuopérazine\nStelazineMD\n5\n10\n20\n30\nHS ou BID\n",
+      "text_sha256": "65110bae804e2e0d7aa860afd8f75a45e63b6ee83e1c57aaad5ed7024b1a8428"
+    },
+    {
+      "bbox": [
+        57.75,
+        652.9013671875,
+        470.05999755859375,
+        663.2781372070312
+      ],
+      "block_id": "page-0376-block-0022",
+      "order": 22,
+      "text": "Thiothixène\nNavaneMD\n5\n15\n30\n50\nHS ou BID\n",
+      "text_sha256": "8d6b7494378f31a572ba8febed602fbd47f4c5354cf39804de0ed919b45dd58d"
+    },
+    {
+      "bbox": [
+        57.75,
+        671.3013916015625,
+        484.2450866699219,
+        681.7281494140625
+      ],
+      "block_id": "page-0376-block-0023",
+      "order": 23,
+      "text": "Zuclopenthixol\nClopixolMD\n10\n25\n40\n60\nHS, BID ou TID\n",
+      "text_sha256": "abf5d35ccd8f7fc0365a72908b7e1cb26e52a74cb37f22d0733658f5df1c5905"
+    },
+    {
+      "bbox": [
+        57.75,
+        689.7514038085938,
+        484.2450866699219,
+        700.1281127929688
+      ],
+      "block_id": "page-0376-block-0024",
+      "order": 24,
+      "text": "Loxapine\nLoxapacMD\n25\n75\n150\n200\nHS, BID ou TID\n",
+      "text_sha256": "6646c6d79c4ba6ffb32ab6face50dc8953ebb7e10b6d8c6792665fb8fdd889c0"
+    },
+    {
+      "bbox": [
+        57.75,
+        708.1513671875,
+        484.74908447265625,
+        718.578125
+      ],
+      "block_id": "page-0376-block-0025",
+      "order": 25,
+      "text": "Chlorpromazine\nLargactilMD\n100\n300\n500\n800\nHS, TID ou QID\n",
+      "text_sha256": "8b6ffdc484654f06baaed4b8f78ca837872751e60dbea177a83b98862f0f1697"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.9658203125,
+        297.5343933105469,
+        63.90849685668945
+      ],
+      "block_id": "page-0376-block-0026",
+      "order": 26,
+      "text": "parce qu’elles peuvent être dangereuses et que leur ecacité n’a\npas été démontrée.\n",
+      "text_sha256": "cd4030bace409117517393acf2cce0f00a5d43a9db7439957adbe6475b8a8c10"
+    },
+    {
+      "bbox": [
+        54.0,
+        65.8658218383789,
+        297.5042724609375,
+        250.95849609375
+      ],
+      "block_id": "page-0376-block-0027",
+      "order": 27,
+      "text": "On prescrit maintenant de préférence pendant quelques\nsemaines, un seul antipsychotique atypique à dose minimale,\nqu’on augmente graduellement jusqu’à ce qu’il soit ecace. Il\nest généralement admis que, à des doses équivalentes, tous les\nantipsychotiques (sauf la clozapine) ont un eet similaire sur la\nréduction des symptômes. En début de traitement, le psychiatre\npeut donc proposer l’antipsychotique présentant le prol d’eets\nsecondaires le plus acceptable, voire recherché pour un patient\ndonné (p. ex., favoriser la sédation pour un patient angoissé ou\ninsomniaque ; éviter des perturbations lipidiques chez un patient\nprésentant un syndrome métabolique). Sauf pour la chlorproma-\nzine, l’halopéridol et l’aripiprazole, la plupart des monographies\nstipulent que la sécurité et l’ecacité n’ont pas été établies chez\nles enfants, mais en pratique, chez les enfants et les adolescents,\nla tendance est aussi d’utiliser les antipsychotiques atypiques en\n",
+      "text_sha256": "743aee1e1bc78a82d08f86c75550717ce69911ff13df5ce66b5e1849ba7ba116"
+    },
+    {
+      "bbox": [
+        312.0,
+        40.9658203125,
+        555.0175170898438,
+        63.15849685668945
+      ],
+      "block_id": "page-0376-block-0028",
+      "order": 28,
+      "text": "étant attentifs à la prise de poids rapide et au syndrome méta-\nbolique, qui est plus fréquent chez les jeunes.\n",
+      "text_sha256": "7b171893935a2b8e51b7785737d476e512767cfb78e794f544ee819f69658174"
+    },
+    {
+      "bbox": [
+        312.0,
+        64.41582489013672,
+        555.3809204101562,
+        133.60850524902344
+      ],
+      "block_id": "page-0376-block-0029",
+      "order": 29,
+      "text": "Les tableaux 17.5 et 17.6 listent la posologie recommandée\npour les divers antipsychotiques atypiques et typiques. Les doses\nmentionnées sont des suggestions d’équivalences, mais pour\nchacun de ces médicaments, il est aussi possible de prescrire des\ndoses plus basses, et parfois même des doses plus élevées selon\nla réponse et la tolérance au traitement.\n",
+      "text_sha256": "570d366933dd5ceafe79d3a2472ad3b534cdd1890ef1126f3a1aa0c934fdb7b4"
+    },
+    {
+      "bbox": [
+        312.0,
+        134.81582641601562,
+        555.3231811523438,
+        250.95849609375
+      ],
+      "block_id": "page-0376-block-0030",
+      "order": 30,
+      "text": "Les eets indésirables varient beaucoup d’un patient à l’autre\net d’un médicament à l’autre. Lorsqu’ils apparaissent, le médecin\ndoit être réceptif pour en discuter avec le patient et sa famille\net choisir la stratégie qui permette de réduire ces inconvénients\ntout en assurant une protection ecace contre les symptômes\npsychotiques. Dans le choix du médicament, il faut donc consi-\ndérer les eets indésirables prévisibles, en tenant compte de la\ndurée du traitement, des eets graves que ces eets peuvent\navoir sur la qualité et l’espérance de vie des patients ainsi que\nsur leur adhésion à la médication. Souvent les patients ne savent\n",
+      "text_sha256": "e9f68cd6f60b5d018a9b21a43a04ec9a080787e296550b5d5ea4399b6ec6e25c"
+    }
+  ],
+  "coordinates_sha256": "7534ff379de074916340c80f018466c243ec0ad89664c368eb1f3e02a5d4847f",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0376",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 17\nSchizophrénies\n359\nTABLEAU 17.5 Posologie recommandée pour les antipsychotiques oraux\nNom scientique\nNom commercial\nDose orale approximative (mg/j)\nAdministration habituelle\nAntipsychotiques atypiques de 2e et 3e génération\nDoses faibles\nDoses fortes\nRispéridone\nRisperdalMD\n1\n2\n4\n6\nHS ou BID\nPalipéridone\nInvegaMD\n3\n6\n9\n12\nHS ou BID\nAsénapine\nSaphrisMD\n5\n10\n15\n20\nAM ou BID\nOlanzapine\nZyprexaMD, ZydisMD\n5\n10\n20\n30\nHS ou BID\nAripiprazole\nAbilifyMD\n5\n10\n20\n30\nAM\nLurasidone\nLatudaMD\n40\n60\n80\n160\nAM ou BID pendant le repas\nZiprasidone\nZeldoxMD\n40\n80\n120\n160\nAM ou BID pendant le repas\nQuétiapine\nSeroquelMD\n100\n300\n600\n800\nHS ou BID\nClozapine\nClozarilMD\n100\n300\n600\n900\nHS, BID ou TID\nAntipsychotiques typiques, classiques, 1re génération (neuroleptiques)\nDoses faibles\nDoses fortes\nHalopéridol\nHaldolMD\n2\n5\n10\n20\nHS, BID ou TID\nFluphénazine\nModitenMD\n2\n5\n10\n20\nHS ou BID\nFlupentixol\nFluanxolMD\n3\n6\n9\n12\nHS ou BID\nPimozide\nOrapMD\n4\n8\n12\n20\nAM\nPerphénazine\nTrilafonMD\n4\n8\n16\n24\nHS, BID ou TID\nTriuopérazine\nStelazineMD\n5\n10\n20\n30\nHS ou BID\nThiothixène\nNavaneMD\n5\n15\n30\n50\nHS ou BID\nZuclopenthixol\nClopixolMD\n10\n25\n40\n60\nHS, BID ou TID\nLoxapine\nLoxapacMD\n25\n75\n150\n200\nHS, BID ou TID\nChlorpromazine\nLargactilMD\n100\n300\n500\n800\nHS, TID ou QID\nparce qu’elles peuvent être dangereuses et que leur ecacité n’a\npas été démontrée.\nOn prescrit maintenant de préférence pendant quelques\nsemaines, un seul antipsychotique atypique à dose minimale,\nqu’on augmente graduellement jusqu’à ce qu’il soit ecace. Il\nest généralement admis que, à des doses équivalentes, tous les\nantipsychotiques (sauf la clozapine) ont un eet similaire sur la\nréduction des symptômes. En début de traitement, le psychiatre\npeut donc proposer l’antipsychotique présentant le prol d’eets\nsecondaires le plus acceptable, voire recherché pour un patient\ndonné (p. ex., favoriser la sédation pour un patient angoissé ou\ninsomniaque ; éviter des perturbations lipidiques chez un patient\nprésentant un syndrome métabolique). Sauf pour la chlorproma-\nzine, l’halopéridol et l’aripiprazole, la plupart des monographies\nstipulent que la sécurité et l’ecacité n’ont pas été établies chez\nles enfants, mais en pratique, chez les enfants et les adolescents,\nla tendance est aussi d’utiliser les antipsychotiques atypiques en\nétant attentifs à la prise de poids rapide et au syndrome méta-\nbolique, qui est plus fréquent chez les jeunes.\nLes tableaux 17.5 et 17.6 listent la posologie recommandée\npour les divers antipsychotiques atypiques et typiques. Les doses\nmentionnées sont des suggestions d’équivalences, mais pour\nchacun de ces médicaments, il est aussi possible de prescrire des\ndoses plus basses, et parfois même des doses plus élevées selon\nla réponse et la tolérance au traitement.\nLes eets indésirables varient beaucoup d’un patient à l’autre\net d’un médicament à l’autre. Lorsqu’ils apparaissent, le médecin\ndoit être réceptif pour en discuter avec le patient et sa famille\net choisir la stratégie qui permette de réduire ces inconvénients\ntout en assurant une protection ecace contre les symptômes\npsychotiques. Dans le choix du médicament, il faut donc consi-\ndérer les eets indésirables prévisibles, en tenant compte de la\ndurée du traitement, des eets graves que ces eets peuvent\navoir sur la qualité et l’espérance de vie des patients ainsi que\nsur leur adhésion à la médication. Souvent les patients ne savent\n",
+  "raw_text_sha256": "74a321b1a40cfd56fb981dfd2f343de3d54a4589be6851fa7adc5358a4ca62c3",
+  "source_page_display": 377,
+  "source_page_index": 376
+}

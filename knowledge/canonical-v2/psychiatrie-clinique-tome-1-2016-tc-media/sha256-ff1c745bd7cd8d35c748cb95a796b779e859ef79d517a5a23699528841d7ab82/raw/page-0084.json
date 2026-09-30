@@ -1,0 +1,304 @@
+{
+  "block_sequence_sha256": "cfa90a7162cae3b9c877536d4370256672e916dd7943e1e5c8d676cc0ccc8b90",
+  "blocks": [
+    {
+      "bbox": [
+        374.20001220703125,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0084-block-0001",
+      "order": 1,
+      "text": "Chapitre 3\nExamen psychiatrique\n67\n",
+      "text_sha256": "504336efe95bd01c3f6c4aed244d0bcb53d9ffc12bea8633a3e43d1de3ff2059"
+    },
+    {
+      "bbox": [
+        56.0,
+        41.002296447753906,
+        293.4850158691406,
+        53.320068359375
+      ],
+      "block_id": "page-0084-block-0002",
+      "order": 2,
+      "text": "TABLEAU 3.8 Causes potentielles d’altération du jugement\n",
+      "text_sha256": "b25e8cf3cd2f9f3574680234872ac57be2581c38090d93ad6545f24e909f9a09"
+    },
+    {
+      "bbox": [
+        108.70000457763672,
+        52.852294921875,
+        225.12252807617188,
+        64.820068359375
+      ],
+      "block_id": "page-0084-block-0003",
+      "order": 3,
+      "text": "selon les psychopathologies\n",
+      "text_sha256": "4d25eb3ef80d757173bca4833b31d66c894713c8e642c2443c3acabb9240687f"
+    },
+    {
+      "bbox": [
+        62.04999923706055,
+        70.72412109375,
+        270.9914855957031,
+        86.30029296875
+      ],
+      "block_id": "page-0084-block-0004",
+      "order": 4,
+      "text": "Psychopathologies\nCauses possibles d’altération\n",
+      "text_sha256": "aaec57a0a545dcfc2aaec62748720203453384529f11f11272d6eccf6e00e5bd"
+    },
+    {
+      "bbox": [
+        194.5,
+        80.72412109375,
+        240.2995147705078,
+        91.30029296875
+      ],
+      "block_id": "page-0084-block-0005",
+      "order": 5,
+      "text": "du jugement\n",
+      "text_sha256": "8c317e7d3bd4c58138b0f9f7495bf257df97ee75c926e9bd62476f084af8a148"
+    },
+    {
+      "bbox": [
+        58.25,
+        96.5728530883789,
+        292.63323974609375,
+        192.47813415527344
+      ],
+      "block_id": "page-0084-block-0006",
+      "order": 6,
+      "text": "Psychose\n• Absence de contact avec la réalité\n• Hallucinations, possiblement impérieuses\n• Délires\n• Perturbation du cours et de la forme\nde la pensée\n• Altération de l’autocritique\n• Atteintes variables des fonctions cognitives,\ndont un décit de la théorie de l’esprit\n• Fiabilité réduite\n",
+      "text_sha256": "5add488e24a44b3b3165e72e69587ba2ef914bb7ad7fee71abf47738dec7f522"
+    },
+    {
+      "bbox": [
+        58.25,
+        201.02285766601562,
+        276.6159973144531,
+        284.9281311035156
+      ],
+      "block_id": "page-0084-block-0007",
+      "order": 7,
+      "text": "Manie\n• Distorsions cognitives donnant lieu à\nun optimisme exagéré\n• Diminution du contrôle pulsionnel\n(impulsivité, désinhibition)\n• Déni des conséquences associées aux\nactions (altération de l’autocritique)\n• Délires ou hallucinations associés\n• Fiabilité réduite\n",
+      "text_sha256": "1e389f5dc5d164a79ee4039a5fa41e229aa1bf74161e3a4061a22373f10872ba"
+    },
+    {
+      "bbox": [
+        58.25,
+        293.4228515625,
+        108.31700134277344,
+        323.4423828125
+      ],
+      "block_id": "page-0084-block-0008",
+      "order": 8,
+      "text": "Trouble lié\nà l’utilisation\nde substances\n",
+      "text_sha256": "aca57268b5cff866523d2138cfdc97c5185c67d572bf7fbcdb5ba240fb235e97"
+    },
+    {
+      "bbox": [
+        142.0,
+        293.501953125,
+        281.4077453613281,
+        367.328125
+      ],
+      "block_id": "page-0084-block-0009",
+      "order": 9,
+      "text": "• Altération du sensorium et de l’attention\n• Altération de l’autocritique\n• Diminution du contrôle pulsionnel\n(impulsivité, désinhibition)\n• Fiabilité réduite en état d’intoxication\nou de sevrage\n• Mauvaise évaluation d’une situation\n",
+      "text_sha256": "27bb1092c3ea3dd3675211d2a36e05025c92c467261eeaf45fdf995c7029a60a"
+    },
+    {
+      "bbox": [
+        58.25,
+        375.87286376953125,
+        281.5629577636719,
+        427.77813720703125
+      ],
+      "block_id": "page-0084-block-0010",
+      "order": 10,
+      "text": "Dépression\n• Distorsions cognitives donnant lieu\nà un pessimisme exagéré\n• Ralentissement des processus cognitifs,\ndiminution de la concentration\n• Délires ou hallucinations associés\n",
+      "text_sha256": "def5d57a0a040ae68b79076ac0015a397c654eda69266457820d64082a1369bf"
+    },
+    {
+      "bbox": [
+        58.25,
+        436.2728576660156,
+        291.8888244628906,
+        488.1781311035156
+      ],
+      "block_id": "page-0084-block-0011",
+      "order": 11,
+      "text": "Trouble neurocognitif\n• Atteintes cognitives, surtout de la mémoire,\nde l’abstraction, des fonctions exécutives\n• Diminution du contrôle pulsionnel\n(impulsivité, désinhibition)\n• Fiabilité réduite\n",
+      "text_sha256": "c35cb52c8337cfa5c48d535031a7c67f4fdddbb662c4a42ebc0eb29b9751bc18"
+    },
+    {
+      "bbox": [
+        58.25,
+        496.7228698730469,
+        281.4077453613281,
+        538.6281127929688
+      ],
+      "block_id": "page-0084-block-0012",
+      "order": 12,
+      "text": "Delirium\n• Altération du sensorium et de l’attention\n• Diminution du contrôle pulsionnel\n(impulsivité, désinhibition)\n• Fiabilité réduite\n",
+      "text_sha256": "13126b60ecc15aa62966b968db26ae795f6b96b67e70a28a27bab713b40f3dd8"
+    },
+    {
+      "bbox": [
+        58.25,
+        547.1228637695312,
+        109.48700714111328,
+        577.1423950195312
+      ],
+      "block_id": "page-0084-block-0013",
+      "order": 13,
+      "text": "Troubles de\nla personnalité\ndu groupe B\n",
+      "text_sha256": "4eed127acadd8562f7a4e34b2c4ccd3eefb7d5d6f72fa173bf36b833b6b12c34"
+    },
+    {
+      "bbox": [
+        142.0,
+        547.2019653320312,
+        260.0228271484375,
+        600.0281372070312
+      ],
+      "block_id": "page-0084-block-0014",
+      "order": 14,
+      "text": "• Diminution du contrôle pulsionnel\n(impulsivité)\n• Décits de mentalisation\n• Émotivité excessive\n• Fiabilité possiblement réduite\n",
+      "text_sha256": "428fb1674ab7fb1949d04ee4f55a208c372295d4f1b5a31fd6638521d734810d"
+    },
+    {
+      "bbox": [
+        58.25,
+        608.5728759765625,
+        112.73600769042969,
+        648.5924072265625
+      ],
+      "block_id": "page-0084-block-0015",
+      "order": 15,
+      "text": "Trouble de\nla personnalité\nobsessionnelle-\ncompulsive\n",
+      "text_sha256": "a75bd78c7a1337ab57ace80ef2619db5ad5e57087b6fa7bef29b2cf93b1cb6dd"
+    },
+    {
+      "bbox": [
+        142.0,
+        608.6519775390625,
+        259.64202880859375,
+        660.4781494140625
+      ],
+      "block_id": "page-0084-block-0016",
+      "order": 16,
+      "text": "• Rigidité cognitive\n• Surinvestissement du détail,\nalourdissement et ralentissement\ndu processus de réexion\n• Indécision\n",
+      "text_sha256": "669501af06f0f797d1ac7aea25bf46c0c7c2e5cb116a10d88fbd41fc9ad7c3ef"
+    },
+    {
+      "bbox": [
+        312.0,
+        40.9658203125,
+        555.1069946289062,
+        74.45849609375
+      ],
+      "block_id": "page-0084-block-0017",
+      "order": 17,
+      "text": "le jugement dans sa globalité, car la personne peut répondre ce\nqu’il serait normal de faire et non ce qu’elle ferait vraiment dans\ncette situation.\n",
+      "text_sha256": "7e333b335612944f78e36107534b6e3ad6ec134cb9bd8dd1262dd458ef845268"
+    },
+    {
+      "bbox": [
+        312.0,
+        80.3330078125,
+        555.4868774414062,
+        197.95849609375
+      ],
+      "block_id": "page-0084-block-0018",
+      "order": 18,
+      "text": "Autocritique et introspection\nL’autocritique décrit la capacité de poser un regard sur sa propre\npersonne an de reconnaître, dans la mesure du possible, son\nétat d’esprit et de santé. Cette faculté permet de réaliser son\nbesoin de modier certains comportements ou d’accepter l’aide\noerte. Elle favorise l’engagement du patient dans un proces-\nsus thérapeutique et assure une meilleure collaboration avec\nl’équipe traitante. La présence d’autocritique entraîne donc un\npronostic plus favorable. Elle est aussi essentielle pour formuler\nun consentement ou un refus éclairé.\n",
+      "text_sha256": "afa0b75aa251ad5e91c9e329e6ee2e0e8af2ac3732bf661d54f2d9491186b001"
+    },
+    {
+      "bbox": [
+        312.0,
+        198.9658203125,
+        555.2088623046875,
+        324.45849609375
+      ],
+      "block_id": "page-0084-block-0019",
+      "order": 19,
+      "text": "L’autocritique peut être altérée par une anosognosie, c’est-à-dire\nune incapacité à reconnaître son état de maladie. L’anosognosie\nest un terme utilisé pour décrire la non-reconnaissance de décits\nmoteurs ou sensitifs dans certaines conditions neurologiques\n(particulièrement les lésions du lobe pariétal droit ou des lobes\nfrontaux) mais on peut aussi y faire référence pour expliquer\nl’absence d’autocritique dans certaines psychopathologies, tels les\ntroubles neurocognitifs et la schizophrénie. En eet, une faible\nautocritique est un symptôme habituel de plusieurs troubles\nmentaux. Elle résulte d’une altération du jugement ou d’un déni\net, plus rarement, de décits cognitifs.\n",
+      "text_sha256": "9a6755d031b92ce4576675ec1f0ff3d2785e1f2c87e754327f7e5c4d68c4bb72"
+    },
+    {
+      "bbox": [
+        312.0,
+        325.4658203125,
+        555.0890502929688,
+        393.45849609375
+      ],
+      "block_id": "page-0084-block-0020",
+      "order": 20,
+      "text": "La présence d’autocritique se manifeste par un discours\nnuancé, dans lequel le patient reconnaît ses dicultés et son\nbesoin d’aide. Elle peut aussi faire l’objet de questions directes :\n« Que pensez-vous de ce qui vous arrive ? », « Comment expli-\nquez-vous ces voix ? », « Comment souhaitez-vous qu’on puisse\nvous aider ? ».\n",
+      "text_sha256": "cb48e064eb74f99ca812fa2a7fdaf589cafb34b798ca4a88e79a38c229d55295"
+    },
+    {
+      "bbox": [
+        312.0,
+        394.4658203125,
+        555.3414306640625,
+        531.45849609375
+      ],
+      "block_id": "page-0084-block-0021",
+      "order": 21,
+      "text": "Concept issu des théories psychodynamiques, la capacité d’in-\ntrospection (insight) constitue l’habileté à analyser les situations\npersonnelles et à établir des liens entre les faits, les pensées et\nles émotions ressenties. Elle suppose une bonne capacité d’abs-\ntraction. Sa présence favorise la prise de conscience de conits\nintrapsychiques pouvant entretenir certains symptômes, et permet\nl’engagement dans une démarche de thérapie exploratoire. Certains\nmécanismes de défense peuvent aecter la capacité d’introspec-\ntion.\nUn patient ayant une pauvre capacité d’introspection\na tendance à attribuer à autrui la responsabilité des dicultés\nqu’il vit ; il peut aussi avoir de la diculté à composer avec ses\némotions ou à poser un regard réexif sur son mode de pensée.\n",
+      "text_sha256": "8711c0b7cebe8ae2b6bd1048758a7cf7b28d2039f7efa29d88d291a9d796f459"
+    },
+    {
+      "bbox": [
+        332.0,
+        537.47412109375,
+        525.779296875,
+        558.05029296875
+      ],
+      "block_id": "page-0084-block-0022",
+      "order": 22,
+      "text": "Les mécanismes de défense sont présentés en détail\nau chapitre 74.\n",
+      "text_sha256": "0d77193e47cb70338674dd4c4537928832bab444aad5a20e431a64fde7d7d650"
+    },
+    {
+      "bbox": [
+        312.0,
+        566.4658203125,
+        555.2020874023438,
+        726.45849609375
+      ],
+      "block_id": "page-0084-block-0023",
+      "order": 23,
+      "text": "Concept élaboré par Fonagy et ses collaborateurs (2002), la\ncapacité de mentalisation facilite la capacité d’introspection. Elle\nconstitue la faculté d’établir des liens entre les attitudes d’autrui et\nson état psychique (ses besoins, ses sentiments, ses croyances, ses\ndésirs). En l’absence de capacité de mentalisation, l’individu est\nincapable de comprendre les motifs qui sous-tendent les actions\nou les décisions de l’autre. Il a alors de la diculté à concevoir une\nposition autre que la sienne dans un conit. En présence de capa-\ncité de mentalisation, il est capable de comprendre les réactions\nd’autrui et de moduler son attitude en fonction de celles-ci, voire\nreconnaître sa contribution au conit. Bien qu’on retrouve dans\nla population générale des niveaux de mentalisation variables,\nles patients ayant des troubles de la personnalité manifestent des\ndécits francs de façon caractéristique, en particulier ceux atteints\n",
+      "text_sha256": "c67dd2ad46fb888e76edc8c75035aacd0c2e9324db2726234245a1d8afa4d744"
+    },
+    {
+      "bbox": [
+        54.0,
+        680.4658203125,
+        297.37310791015625,
+        725.45849609375
+      ],
+      "block_id": "page-0084-block-0024",
+      "order": 24,
+      "text": "un portefeuille avec de l’argent ? » ou « comment réagiriez-vous\nsi une alarme de feu se déclenchait dans un cinéma ? ». Ces\nquestions hypothétiques sont susamment simples pour être\ncomprises par la plupart des gens et ne permettent pas d’évaluer\n",
+      "text_sha256": "03cbc0c518f98f5c41107f5b7422473a5056033c8f854b3be6701361cc0745be"
+    }
+  ],
+  "coordinates_sha256": "ef3a775d4f7cec4199ee498720ca26d1315fd06360d523aa236638cbaa1a7022",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0084",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 3\nExamen psychiatrique\n67\nTABLEAU 3.8 Causes potentielles d’altération du jugement\nselon les psychopathologies\nPsychopathologies\nCauses possibles d’altération\ndu jugement\nPsychose\n• Absence de contact avec la réalité\n• Hallucinations, possiblement impérieuses\n• Délires\n• Perturbation du cours et de la forme\nde la pensée\n• Altération de l’autocritique\n• Atteintes variables des fonctions cognitives,\ndont un décit de la théorie de l’esprit\n• Fiabilité réduite\nManie\n• Distorsions cognitives donnant lieu à\nun optimisme exagéré\n• Diminution du contrôle pulsionnel\n(impulsivité, désinhibition)\n• Déni des conséquences associées aux\nactions (altération de l’autocritique)\n• Délires ou hallucinations associés\n• Fiabilité réduite\nTrouble lié\nà l’utilisation\nde substances\n• Altération du sensorium et de l’attention\n• Altération de l’autocritique\n• Diminution du contrôle pulsionnel\n(impulsivité, désinhibition)\n• Fiabilité réduite en état d’intoxication\nou de sevrage\n• Mauvaise évaluation d’une situation\nDépression\n• Distorsions cognitives donnant lieu\nà un pessimisme exagéré\n• Ralentissement des processus cognitifs,\ndiminution de la concentration\n• Délires ou hallucinations associés\nTrouble neurocognitif\n• Atteintes cognitives, surtout de la mémoire,\nde l’abstraction, des fonctions exécutives\n• Diminution du contrôle pulsionnel\n(impulsivité, désinhibition)\n• Fiabilité réduite\nDelirium\n• Altération du sensorium et de l’attention\n• Diminution du contrôle pulsionnel\n(impulsivité, désinhibition)\n• Fiabilité réduite\nTroubles de\nla personnalité\ndu groupe B\n• Diminution du contrôle pulsionnel\n(impulsivité)\n• Décits de mentalisation\n• Émotivité excessive\n• Fiabilité possiblement réduite\nTrouble de\nla personnalité\nobsessionnelle-\ncompulsive\n• Rigidité cognitive\n• Surinvestissement du détail,\nalourdissement et ralentissement\ndu processus de réexion\n• Indécision\nle jugement dans sa globalité, car la personne peut répondre ce\nqu’il serait normal de faire et non ce qu’elle ferait vraiment dans\ncette situation.\nAutocritique et introspection\nL’autocritique décrit la capacité de poser un regard sur sa propre\npersonne an de reconnaître, dans la mesure du possible, son\nétat d’esprit et de santé. Cette faculté permet de réaliser son\nbesoin de modier certains comportements ou d’accepter l’aide\noerte. Elle favorise l’engagement du patient dans un proces-\nsus thérapeutique et assure une meilleure collaboration avec\nl’équipe traitante. La présence d’autocritique entraîne donc un\npronostic plus favorable. Elle est aussi essentielle pour formuler\nun consentement ou un refus éclairé.\nL’autocritique peut être altérée par une anosognosie, c’est-à-dire\nune incapacité à reconnaître son état de maladie. L’anosognosie\nest un terme utilisé pour décrire la non-reconnaissance de décits\nmoteurs ou sensitifs dans certaines conditions neurologiques\n(particulièrement les lésions du lobe pariétal droit ou des lobes\nfrontaux) mais on peut aussi y faire référence pour expliquer\nl’absence d’autocritique dans certaines psychopathologies, tels les\ntroubles neurocognitifs et la schizophrénie. En eet, une faible\nautocritique est un symptôme habituel de plusieurs troubles\nmentaux. Elle résulte d’une altération du jugement ou d’un déni\net, plus rarement, de décits cognitifs.\nLa présence d’autocritique se manifeste par un discours\nnuancé, dans lequel le patient reconnaît ses dicultés et son\nbesoin d’aide. Elle peut aussi faire l’objet de questions directes :\n« Que pensez-vous de ce qui vous arrive ? », « Comment expli-\nquez-vous ces voix ? », « Comment souhaitez-vous qu’on puisse\nvous aider ? ».\nConcept issu des théories psychodynamiques, la capacité d’in-\ntrospection (insight) constitue l’habileté à analyser les situations\npersonnelles et à établir des liens entre les faits, les pensées et\nles émotions ressenties. Elle suppose une bonne capacité d’abs-\ntraction. Sa présence favorise la prise de conscience de conits\nintrapsychiques pouvant entretenir certains symptômes, et permet\nl’engagement dans une démarche de thérapie exploratoire. Certains\nmécanismes de défense peuvent aecter la capacité d’introspec-\ntion.\nUn patient ayant une pauvre capacité d’introspection\na tendance à attribuer à autrui la responsabilité des dicultés\nqu’il vit ; il peut aussi avoir de la diculté à composer avec ses\némotions ou à poser un regard réexif sur son mode de pensée.\nLes mécanismes de défense sont présentés en détail\nau chapitre 74.\nConcept élaboré par Fonagy et ses collaborateurs (2002), la\ncapacité de mentalisation facilite la capacité d’introspection. Elle\nconstitue la faculté d’établir des liens entre les attitudes d’autrui et\nson état psychique (ses besoins, ses sentiments, ses croyances, ses\ndésirs). En l’absence de capacité de mentalisation, l’individu est\nincapable de comprendre les motifs qui sous-tendent les actions\nou les décisions de l’autre. Il a alors de la diculté à concevoir une\nposition autre que la sienne dans un conit. En présence de capa-\ncité de mentalisation, il est capable de comprendre les réactions\nd’autrui et de moduler son attitude en fonction de celles-ci, voire\nreconnaître sa contribution au conit. Bien qu’on retrouve dans\nla population générale des niveaux de mentalisation variables,\nles patients ayant des troubles de la personnalité manifestent des\ndécits francs de façon caractéristique, en particulier ceux atteints\nun portefeuille avec de l’argent ? » ou « comment réagiriez-vous\nsi une alarme de feu se déclenchait dans un cinéma ? ». Ces\nquestions hypothétiques sont susamment simples pour être\ncomprises par la plupart des gens et ne permettent pas d’évaluer\n",
+  "raw_text_sha256": "4840042d43638cd897833c008f048769775c28040babdce17de7b5b44d5033b2",
+  "source_page_display": 85,
+  "source_page_index": 84
+}

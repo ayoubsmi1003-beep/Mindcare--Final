@@ -1,0 +1,316 @@
+{
+  "block_sequence_sha256": "c0626bb5c13be1ec7d8033b74ed01443cec5cd38909d4093e48a253b87fc0d06",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0771-block-0001",
+      "order": 1,
+      "text": "754\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "bf66635c1688252f2e297582c198e253ef6b4c14aee96351cd188a26f21d28a2"
+    },
+    {
+      "bbox": [
+        50.35000228881836,
+        41.002296447753906,
+        275.6285095214844,
+        53.320068359375
+      ],
+      "block_id": "page-0771-block-0002",
+      "order": 2,
+      "text": "FIGURE 33.2 Échelle d’orientation hétéro/homosexuelle\n",
+      "text_sha256": "62131e2109717e2e69483109f46f9b3446df1ca1d0884ce7241d25e39c56bcd2"
+    },
+    {
+      "bbox": [
+        48.0,
+        285.7406311035156,
+        136.8915252685547,
+        294.6088562011719
+      ],
+      "block_id": "page-0771-block-0003",
+      "order": 3,
+      "text": "Source : Kinsey (1948), p. 638.\n",
+      "text_sha256": "fe7ad7fa8ff9bcef489f28b7a8181b1f8ca87d3331923e9f575c4a684d6f7d04"
+    },
+    {
+      "bbox": [
+        50.04999923706055,
+        311.55230712890625,
+        219.69276428222656,
+        323.820068359375
+      ],
+      "block_id": "page-0771-block-0004",
+      "order": 4,
+      "text": "TABLEAU 33.1 Grille d’orientation sexuelle\n",
+      "text_sha256": "1a26686a6e267a62c063dfbe2f68d9bcbf1a50c15fcbc60bca35c9eb38eea2a3"
+    },
+    {
+      "bbox": [
+        272.6000061035156,
+        333.7741394042969,
+        325.6195068359375,
+        344.3503112792969
+      ],
+      "block_id": "page-0771-block-0005",
+      "order": 5,
+      "text": "Passé (jusqu’à\n",
+      "text_sha256": "920f91a3cd27bb320fc5362b6202edf2bf49f5fb1ed29e750e596ee44688eeac"
+    },
+    {
+      "bbox": [
+        277.8999938964844,
+        343.7741394042969,
+        320.27923583984375,
+        354.3503112792969
+      ],
+      "block_id": "page-0771-block-0006",
+      "order": 6,
+      "text": "il y a un an)\n",
+      "text_sha256": "bf3b856d0a8cbc9d7f4a3ac2be9a60aabde0e626677de8733fb5ed5c0ccd50dc"
+    },
+    {
+      "bbox": [
+        347.75,
+        333.7741394042969,
+        411.74200439453125,
+        354.3503112792969
+      ],
+      "block_id": "page-0771-block-0007",
+      "order": 7,
+      "text": "Présent (les\n12 derniers mois)\n",
+      "text_sha256": "f88287c3bcba60b90bbd2a9b27c08f0c30f004852893741e49d4ca0deba92922"
+    },
+    {
+      "bbox": [
+        429.3999938964844,
+        328.7741394042969,
+        542.9622802734375,
+        349.3503112792969
+      ],
+      "block_id": "page-0771-block-0008",
+      "order": 8,
+      "text": "Idéal (ce que vous choisissez\nsi c’était une question de choix\n",
+      "text_sha256": "be8f8859f0cd2944792a3ea1c0d91faefce68f57dd0990f2523e49da370b5b06"
+    },
+    {
+      "bbox": [
+        460.3000183105469,
+        348.7741394042969,
+        512.008544921875,
+        359.3503112792969
+      ],
+      "block_id": "page-0771-block-0009",
+      "order": 9,
+      "text": "ou de volonté)\n",
+      "text_sha256": "fe807759ab2d6c8f3698dd3834b0c03ff68fd9a8f47b6b73d48275f5af0ee674"
+    },
+    {
+      "bbox": [
+        52.04999923706055,
+        364.70196533203125,
+        239.1283416748047,
+        374.52813720703125
+      ],
+      "block_id": "page-0771-block-0010",
+      "order": 10,
+      "text": "A) Attirance sexuelle : Vers qui va votre attirance sexuelle ?\n",
+      "text_sha256": "2c9dbf696a334bf663cde4b67ca079e35c68b737ba52aa1e00397829b767fe9c"
+    },
+    {
+      "bbox": [
+        52.04999923706055,
+        383.1519470214844,
+        253.63497924804688,
+        392.9781188964844
+      ],
+      "block_id": "page-0771-block-0011",
+      "order": 11,
+      "text": "B) Comportement sexuel : Avec qui avez-vous effectivement eu\n",
+      "text_sha256": "6db653de8c1597ada95f88bd7f9a717aa7e6f6b033b904f1c6b109f95900e6cd"
+    },
+    {
+      "bbox": [
+        63.04999923706055,
+        393.1519470214844,
+        139.989013671875,
+        402.9781188964844
+      ],
+      "block_id": "page-0771-block-0012",
+      "order": 12,
+      "text": "des relations sexuelles ?\n",
+      "text_sha256": "e227c5b8bbb85033b355562719e51b133c16037dbc99217b811b2c2017fb1dca"
+    },
+    {
+      "bbox": [
+        52.04999923706055,
+        411.5519714355469,
+        248.53778076171875,
+        421.3781433105469
+      ],
+      "block_id": "page-0771-block-0013",
+      "order": 13,
+      "text": "C) Fantasmes sexuels : Vers qui vont vos fantasmes sexuels ?\n",
+      "text_sha256": "7286fbd44b0f447fc84ad33341914a547b7c0090312db744131508cbe8ed6cb1"
+    },
+    {
+      "bbox": [
+        52.04999923706055,
+        430.001953125,
+        233.1151123046875,
+        439.828125
+      ],
+      "block_id": "page-0771-block-0014",
+      "order": 14,
+      "text": "D) Préférence émotionnelle : Par qui vous sentez-vous le\n",
+      "text_sha256": "8cffb842f776b6d258051a3f4578f0ad536d12c305508436b3c710a77defe7f3"
+    },
+    {
+      "bbox": [
+        63.400001525878906,
+        440.001953125,
+        99.94700622558594,
+        449.828125
+      ],
+      "block_id": "page-0771-block-0015",
+      "order": 15,
+      "text": "plus attiré ?\n",
+      "text_sha256": "a25e8a1c4d27a966f5cfeaba0081c7505f6cfaffb14fbd3289ab4e3238c66696"
+    },
+    {
+      "bbox": [
+        52.04999923706055,
+        458.4019470214844,
+        216.0330047607422,
+        468.2281188964844
+      ],
+      "block_id": "page-0771-block-0016",
+      "order": 16,
+      "text": "E) Préférence sociale : Avec quel genre nouez-vous\n",
+      "text_sha256": "b3ad1a0de008dae8e6b8c9f2d491b34c4daf45178390c022ead0da7217735ceb"
+    },
+    {
+      "bbox": [
+        62.54999923706055,
+        468.4019470214844,
+        108.09700012207031,
+        478.2281188964844
+      ],
+      "block_id": "page-0771-block-0017",
+      "order": 17,
+      "text": "des relations ?\n",
+      "text_sha256": "d3eb51318560f6fb7d45ff0faf30bc2f4dfa1c29d0f62160eb8a61604edbfd32"
+    },
+    {
+      "bbox": [
+        52.04999923706055,
+        486.8519592285156,
+        231.70736694335938,
+        496.6781311035156
+      ],
+      "block_id": "page-0771-block-0018",
+      "order": 18,
+      "text": "F) Préférences de vie : Dans quelle communauté aimez-\n",
+      "text_sha256": "ee38ffadb1431bce7870a2e02d92f8405d4ff2e9275c2d276d3d38dec4e2b877"
+    },
+    {
+      "bbox": [
+        62.400001525878906,
+        496.8519592285156,
+        246.51202392578125,
+        516.6781616210938
+      ],
+      "block_id": "page-0771-block-0019",
+      "order": 19,
+      "text": "vous passer votre temps ? Dans laquelle êtes-vous le plus\nà l’aise ?\n",
+      "text_sha256": "d79081e27e57253297d7398cfd4b5426a2f4224ce0d2aea6a56ea44fcc0979f1"
+    },
+    {
+      "bbox": [
+        52.04999923706055,
+        525.251953125,
+        232.1932373046875,
+        535.078125
+      ],
+      "block_id": "page-0771-block-0020",
+      "order": 20,
+      "text": "G) Auto-identication : Comment vous étiquetez-vous ou\n",
+      "text_sha256": "eecf7bc2d5d4abf476572c2a61a102608522d785337e409f5bec84c9e41184df"
+    },
+    {
+      "bbox": [
+        63.04999923706055,
+        535.251953125,
+        113.83499908447266,
+        545.078125
+      ],
+      "block_id": "page-0771-block-0021",
+      "order": 21,
+      "text": "identiez-vous ?\n",
+      "text_sha256": "a09d230bfd6d044f6fd2f9a19815c12c64b637280123d9f2aa631861ff889262"
+    },
+    {
+      "bbox": [
+        48.04999923706055,
+        553.890625,
+        110.0260009765625,
+        562.7588500976562
+      ],
+      "block_id": "page-0771-block-0022",
+      "order": 22,
+      "text": "Source : Klein (1993).\n",
+      "text_sha256": "3e18bff114d8cd1837b758fc8bf9e0d358c852286be6b17cbc8a2e26821bab5b"
+    },
+    {
+      "bbox": [
+        48.0,
+        581.4658203125,
+        291.5209045410156,
+        718.45849609375
+      ],
+      "block_id": "page-0771-block-0023",
+      "order": 23,
+      "text": "À l’âge adulte surviennent plusieurs interférences sur le\nplan de la sexualité en raison des changements signicatifs qui\narrivent à ce stade et qui peuvent engendrer de l’anxiété. C’est\nle cas, notamment, des relations amoureuses signicatives et de\nlongue durée – ou au contraire, supercielles et éphémères –,\nde l’engagement et de l’approfondissement d’une intimité, de\nl’engagement dans une carrière, d’une grossesse, de la présence\ndes enfants, des modications du cercle social ou d’un divorce.\nCette période mouvementée teste la capacité individuelle et\nrelationnelle des conjoints et inuence leur satisfaction sexuelle.\nChacun des partenaires doit apprendre à s’adapter à ces nouvelles\nréalités. Le professionnel de la santé qui considère l’importance\n",
+      "text_sha256": "e0a948523a117bb76127d35bcb60060af506ff8d4d6804d67eb9c32b91f0a559"
+    },
+    {
+      "bbox": [
+        306.0,
+        581.4658203125,
+        549.6069946289062,
+        626.45849609375
+      ],
+      "block_id": "page-0771-block-0024",
+      "order": 24,
+      "text": "de la sexualité de ses patients ou de ses patientes ne doit pas\nnégliger ces eets perturbateurs mais doit se montrer ouvert pour\nles accompagner à travers ces nombreuses transitions normales\net développementales de leur maturité sexuelle et relationnelle.\n",
+      "text_sha256": "2e10be0a1829ea9e53a19783e83381d3b0fd161a6f307d843ea2c8f8ecca6354"
+    },
+    {
+      "bbox": [
+        306.0,
+        627.4658203125,
+        549.6641845703125,
+        718.45849609375
+      ],
+      "block_id": "page-0771-block-0025",
+      "order": 25,
+      "text": "D’après Kadri (2013), partout dans le monde, et quel que soit\nleur âge, un grand nombre de personnes (près d’un tiers des per-\nsonnes interviewées) utilisent Internet dans le but de consommer\ndu matériel pornographique, de rencontrer des partenaires sexuels\nou de construire des relations intimes. Par ailleurs, cette étude\nindique que la moitié des moins de 18 ans se sont déjà, au moins\nune fois déshabillés devant une webcam ou ont envoyé des photos\nles montrant nus à des cyberinterlocuteurs qu’ils ne connaissaient\n",
+      "text_sha256": "9b76d23e9fd5f353ab9a3afa538d09826f69e20557f77cd70ea4a8b8c99b5fa5"
+    }
+  ],
+  "coordinates_sha256": "767ac1c49f30f68c8e9f139ea9e9b0896da6e9ec1694441a31962372c6943827",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0771",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "754\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nFIGURE 33.2 Échelle d’orientation hétéro/homosexuelle\nSource : Kinsey (1948), p. 638.\nTABLEAU 33.1 Grille d’orientation sexuelle\nPassé (jusqu’à\nil y a un an)\nPrésent (les\n12 derniers mois)\nIdéal (ce que vous choisissez\nsi c’était une question de choix\nou de volonté)\nA) Attirance sexuelle : Vers qui va votre attirance sexuelle ?\nB) Comportement sexuel : Avec qui avez-vous effectivement eu\ndes relations sexuelles ?\nC) Fantasmes sexuels : Vers qui vont vos fantasmes sexuels ?\nD) Préférence émotionnelle : Par qui vous sentez-vous le\nplus attiré ?\nE) Préférence sociale : Avec quel genre nouez-vous\ndes relations ?\nF) Préférences de vie : Dans quelle communauté aimez-\nvous passer votre temps ? Dans laquelle êtes-vous le plus\nà l’aise ?\nG) Auto-identication : Comment vous étiquetez-vous ou\nidentiez-vous ?\nSource : Klein (1993).\nÀ l’âge adulte surviennent plusieurs interférences sur le\nplan de la sexualité en raison des changements signicatifs qui\narrivent à ce stade et qui peuvent engendrer de l’anxiété. C’est\nle cas, notamment, des relations amoureuses signicatives et de\nlongue durée – ou au contraire, supercielles et éphémères –,\nde l’engagement et de l’approfondissement d’une intimité, de\nl’engagement dans une carrière, d’une grossesse, de la présence\ndes enfants, des modications du cercle social ou d’un divorce.\nCette période mouvementée teste la capacité individuelle et\nrelationnelle des conjoints et inuence leur satisfaction sexuelle.\nChacun des partenaires doit apprendre à s’adapter à ces nouvelles\nréalités. Le professionnel de la santé qui considère l’importance\nde la sexualité de ses patients ou de ses patientes ne doit pas\nnégliger ces eets perturbateurs mais doit se montrer ouvert pour\nles accompagner à travers ces nombreuses transitions normales\net développementales de leur maturité sexuelle et relationnelle.\nD’après Kadri (2013), partout dans le monde, et quel que soit\nleur âge, un grand nombre de personnes (près d’un tiers des per-\nsonnes interviewées) utilisent Internet dans le but de consommer\ndu matériel pornographique, de rencontrer des partenaires sexuels\nou de construire des relations intimes. Par ailleurs, cette étude\nindique que la moitié des moins de 18 ans se sont déjà, au moins\nune fois déshabillés devant une webcam ou ont envoyé des photos\nles montrant nus à des cyberinterlocuteurs qu’ils ne connaissaient\n",
+  "raw_text_sha256": "f9544182e3940fdb01a95f5ef4b55aaccaf4fd3bc7f4478e02b76b447435b04c",
+  "source_page_display": 772,
+  "source_page_index": 771
+}

@@ -1,0 +1,172 @@
+{
+  "block_sequence_sha256": "a98d45fce7d1ff9438cfc231656b5e37cc39c7861045bc5c0b1419e7049c5b65",
+  "blocks": [
+    {
+      "bbox": [
+        420.6000061035156,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0114-block-0001",
+      "order": 1,
+      "text": "Chapitre 5\nGénétique\n97\n",
+      "text_sha256": "7f8e7f77653aa4800fc735c8ae7b5a22d4d90d279e528d0b788e384d87adbf61"
+    },
+    {
+      "bbox": [
+        324.0,
+        40.9658203125,
+        555.1004638671875,
+        148.35850524902344
+      ],
+      "block_id": "page-0114-block-0002",
+      "order": 2,
+      "text": "la part des facteurs génétiques qui explique les diérences\nentre les individus (par opposition aux diérences dues aux\ninuences de l’environnement). Elle est calculée en décompo-\nsant le degré de ressemblance entre divers types d’apparentés.\nPar exemple, dans le cas des études de jumeaux, le coecient\nde ressemblance observé entre des jumeaux monozygotes\n(rMZ) est égal à a2 + c2, où :\n– a2 est la ressemblance familiale due aux facteurs génétiques ;\n– c2 est la ressemblance familiale due aux facteurs environ-\n",
+      "text_sha256": "14630671c12faa356aaab96be5bec3e4d9f09f476661602933ede272a06bb285"
+    },
+    {
+      "bbox": [
+        312.0,
+        149.5158233642578,
+        555.2722778320312,
+        243.30850219726562
+      ],
+      "block_id": "page-0114-block-0003",
+      "order": 3,
+      "text": "nementaux partagés par les deux membres d’une paire de\njumeaux.\nLe coecient de ressemblance des jumeaux dizygotes (rDZ),\nlui, est égal à 0,5 (a2 + c2). Le coecient de 0,5 est introduit chez\nles dizygotes parce qu’ils ne partagent que la moitié de leurs gènes.\nÀ partir des valeurs de rMZ et rDZ observées chez des paires\nde jumeaux, on peut alors obtenir facilement l’héritabilité (a2)\nen résolvant une équation à deux inconnues.\n",
+      "text_sha256": "782fcd63b36d612dab4814f94d4029313083f0d6cea82f78f1e09e1efe5c8da9"
+    },
+    {
+      "bbox": [
+        312.0,
+        244.4158172607422,
+        555.67578125,
+        371.0585021972656
+      ],
+      "block_id": "page-0114-block-0004",
+      "order": 4,
+      "text": "Dans les faits, le calcul de l’héritabilité est plus complexe, mais\ncet exposé reète adéquatement les principes permettant d’estimer\nl’héritabilité. Ainsi, l’héritabilité de la schizophrénie et des troubles\nbipolaires va de 2 % à 70 % selon le degré d’apparenté (Tandon &\nal., 2008). Par ailleurs, il faut préciser que l’héritabilité n’est pas\nune mesure directe du risque chez les apparentés d’une personne\nsourant de la maladie. Par exemple, le risque pour les parents\ndu premier degré de personnes sourant de troubles bipolaires\nest de 10 %. Un tel risque chez les parents du premier degré ne\ncontredit pas cette estimation de l’héritabilité, puisque ces parents\nde premier degré ne partagent que 50 % de leurs gènes.\n",
+      "text_sha256": "4c48cd1e3df47a2b33a05773de231db0e589ca2cea2b9e3d9671fa6748c352db"
+    },
+    {
+      "bbox": [
+        312.0,
+        372.2158203125,
+        555.5408935546875,
+        487.2585144042969
+      ],
+      "block_id": "page-0114-block-0005",
+      "order": 5,
+      "text": "Les facteurs environnementaux non partagés par les membres\nd’une fratrie sont importants, puisque le taux de concordance\ndes jumeaux monozygotes (MZ) est inférieur à 100 % pour tous\nles troubles psychiatriques. Donc, même si le code génétique\nest identique à 100 % pour des jumeaux MZ, la survenue d’une\nmaladie psychiatrique n’est pas de 100 %, car l’expression des\ngènes est modulée par l’environnement. Ainsi, les facteurs envi-\nronnementaux qui sont spéciques à l’individu qui développe\nla maladie sont plus pertinents à la recherche que les facteurs\ncommuns à tous les membres de la fratrie.\n",
+      "text_sha256": "bea2e9e0d67b92d107a556b6377fcdc7d27c1a3fc57f2962cab3284da867b403"
+    },
+    {
+      "bbox": [
+        312.0,
+        497.8868103027344,
+        542.4950561523438,
+        514.0294189453125
+      ],
+      "block_id": "page-0114-block-0006",
+      "order": 6,
+      "text": "5.2.5 Spécicité des facteurs génétiques\n",
+      "text_sha256": "006909679b05fc37db0e8e3044df2142e04cd577bc7590f73e67de7393cfd491"
+    },
+    {
+      "bbox": [
+        312.0,
+        517.4658203125,
+        555.4885864257812,
+        574.45849609375
+      ],
+      "block_id": "page-0114-block-0007",
+      "order": 7,
+      "text": "En plus d’analyser l’agrégation familiale, les études familiales ainsi\nque les études de jumeaux et d’adoption permettent d’identier la\nspécicité des facteurs génétiques dans le risque qu’ils confèrent, c’est-\nà-dire si la présence d’un trouble A chez une personne est associée\nou non à un risque plus élevé d’un trouble B chez ses apparentés.\n",
+      "text_sha256": "a162385b141a89c5d9ae3b46c7332bf3d19936fecfd1a4f575f832c8b787a0ee"
+    },
+    {
+      "bbox": [
+        312.0,
+        575.5658569335938,
+        555.30322265625,
+        702.20849609375
+      ],
+      "block_id": "page-0114-block-0008",
+      "order": 8,
+      "text": "À ce titre, il existe un certain degré de spécicité quant au\ntype de psychose transmis. Ainsi, certains facteurs génétiques\n(p. ex., des SNP) sont plus spéciques de la schizophrénie que de\nl’autisme (Lee &al.,2013). Cependant, les études d’épidémiologie\ngénétique révèlent aussi un certain degré de non-spécicité des\nfacteurs génétiques, ce qui donne à penser que certains syndromes\npsychiatriques s’inscrivent dans un continuum étiologique. C’est\nle cas notamment de la schizophrénie, du trouble schizoaectif,\ndu trouble schizophréniforme, du trouble de la personnalité\nschizotypique, des troubles bipolaires et de la dépression majeure\n(Lee & al., 2013).\n",
+      "text_sha256": "3c21993c00e17e9eccae66256055b4c2a76310bba26c559fc659186e7f4a88df"
+    },
+    {
+      "bbox": [
+        312.0,
+        703.3658447265625,
+        555.2232666015625,
+        725.45849609375
+      ],
+      "block_id": "page-0114-block-0009",
+      "order": 9,
+      "text": "De plus, certaines zones grises persistent. Par exemple, même si\nles études familiales sur la schizophrénie et les troubles bipolaires\n",
+      "text_sha256": "fd81f1bd3a42a4e9c8609fe700cb93f240b56930f5c7ac5dd5a28339be76e38b"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.9658203125,
+        297.413818359375,
+        191.5084991455078
+      ],
+      "block_id": "page-0114-block-0010",
+      "order": 10,
+      "text": "La réalisation d’études de jumeaux présente une diculté\nmajeure. Il est en eet dicile d’obtenir un échantillon de jumeaux\nde taille susante, même pour des maladies psychiatriques\nrelativement fréquentes, tels les troubles bipolaires ou la schi-\nzophrénie (dont la prévalence est d’environ 1 %) (Tandon & al.,\n2008). Comme la fréquence des jumeaux homozygotes n’est que\nde 1 sur 250 naissances (Société des obstétriciens et gyncologues\ndu Canada [SOGC], 2014), un jumeau monozygote sourant de\nces troubles provient donc de 1 naissance sur 33 000. Toutefois,\nla fréquence des problèmes psychiatriques chez les jumeaux\nétant semblable à celle de la population générale, il est permis de\npenser que des études de jumeaux ne présentent pas de problème\nde représentativité.\n",
+      "text_sha256": "15068d253e7634d44f9abadd0c77ed33182600ee4a9dc0170b4c8b3fb2eb1324"
+    },
+    {
+      "bbox": [
+        54.0,
+        192.7158203125,
+        297.2309265136719,
+        296.5585021972656
+      ],
+      "block_id": "page-0114-block-0011",
+      "order": 11,
+      "text": "Par ailleurs, la validité des études de jumeaux repose sur le\npostulat d’un degré de ressemblance de l’environnement des\njumeaux monozygotes et dizygotes. Ainsi, les critiques des études\nde jumeaux indiquent qu’il est possible d’expliquer la plus grande\nressemblance des jumeaux monozygotes en ce qui concerne les\ntraits psychiatriques ou psychologiques par la plus grande similarité\nde leur environnement. Cependant, de nombreuses études ont\nexaminé et réfuté cette proposition, appuyant ainsi la validité des\nconclusions tirées des études de jumeaux (Battaglia & al., 2009).\n",
+      "text_sha256": "668126a6c5300e1c0b7edef02e4dec98743b65acd56d56d32ad525c749d10fb0"
+    },
+    {
+      "bbox": [
+        54.0,
+        307.2868347167969,
+        241.87841796875,
+        339.57940673828125
+      ],
+      "block_id": "page-0114-block-0012",
+      "order": 12,
+      "text": "5.2.4 Résultats des études\nen épidémiologie génétique\n",
+      "text_sha256": "9dfbc9e6c30c5ed8c3e93f449794c668c9fcd6446f0b767f12535dd8031ad942"
+    },
+    {
+      "bbox": [
+        54.0,
+        343.1158142089844,
+        297.4527587890625,
+        725.45849609375
+      ],
+      "block_id": "page-0114-block-0013",
+      "order": 13,
+      "text": "Il existe deux façons de quantier les résultats des études en\népidémiologie génétique :\n• Pour des traits continus tels la gravité de symptômes dépressifs,\nla taille, le poids ou une caractéristique de la personnalité (p.\nex., l’introversion), la ressemblance familiale est quantiée\nsous forme de corrélation, une corrélation de 1 signiant\nune identité complète, et une corrélation de 0 signiant une\nabsence totale de ressemblance.\n• Pour des traits catégoriels tels que le sexe ou la présence\nou l’absence d’un diagnostic, la ressemblance familiale est\nquantiée en donnant le risque de présence de la maladie\nchez divers types d’apparentés (père, mère, fratrie, jumeaux\nmonozygotes, etc.) d’une personne souffrant ou non de\nla maladie. Cependant, même pour des traits catégoriels,\ncertaines procédures statistiques permettent d’exprimer le\ndegré de ressemblance familiale sous forme de coecient de\ncorrélation, tel que décrit ci-dessous.\nLes résultats des études familiales, d’adoption et de jumeaux\nsont remarquablement consistants en psychiatrie. Leurs prin-\ncipaux résultats sont :\n• La démonstration de l’agrégation (ou ressemblance) familiale\npour la plupart des maladies psychiatriques. Par exemple, le\nrisque de retrouver la schizophrénie est 10 fois plus élevé\nchez les parents du premier degré (père, mère, enfants, frères\net sœurs) de personnes atteintes de schizophrénie que dans\nle reste de la population (Tandon & al., 2008), et on observe\nune augmentation du risque de même magnitude dans le cas\ndes troubles bipolaires.\n• La démonstration par les études d’adoption et de jumeaux que\nla transmission familiale est d’origine essentiellement géné-\ntique dans la majorité des maladies psychiatriques. De plus,\nces études permettent de quantier l’héritabilité, c’est-à-dire\n",
+      "text_sha256": "72af69f9ba7532d1ea428d7624aab2151dc2f483c770d24e464a30a6dc79e621"
+    }
+  ],
+  "coordinates_sha256": "d48b68eaa341673fc84dae736faf4282927c28120e6794d62b5cae3fdaa33c5b",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0114",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 5\nGénétique\n97\nla part des facteurs génétiques qui explique les diérences\nentre les individus (par opposition aux diérences dues aux\ninuences de l’environnement). Elle est calculée en décompo-\nsant le degré de ressemblance entre divers types d’apparentés.\nPar exemple, dans le cas des études de jumeaux, le coecient\nde ressemblance observé entre des jumeaux monozygotes\n(rMZ) est égal à a2 + c2, où :\n– a2 est la ressemblance familiale due aux facteurs génétiques ;\n– c2 est la ressemblance familiale due aux facteurs environ-\nnementaux partagés par les deux membres d’une paire de\njumeaux.\nLe coecient de ressemblance des jumeaux dizygotes (rDZ),\nlui, est égal à 0,5 (a2 + c2). Le coecient de 0,5 est introduit chez\nles dizygotes parce qu’ils ne partagent que la moitié de leurs gènes.\nÀ partir des valeurs de rMZ et rDZ observées chez des paires\nde jumeaux, on peut alors obtenir facilement l’héritabilité (a2)\nen résolvant une équation à deux inconnues.\nDans les faits, le calcul de l’héritabilité est plus complexe, mais\ncet exposé reète adéquatement les principes permettant d’estimer\nl’héritabilité. Ainsi, l’héritabilité de la schizophrénie et des troubles\nbipolaires va de 2 % à 70 % selon le degré d’apparenté (Tandon &\nal., 2008). Par ailleurs, il faut préciser que l’héritabilité n’est pas\nune mesure directe du risque chez les apparentés d’une personne\nsourant de la maladie. Par exemple, le risque pour les parents\ndu premier degré de personnes sourant de troubles bipolaires\nest de 10 %. Un tel risque chez les parents du premier degré ne\ncontredit pas cette estimation de l’héritabilité, puisque ces parents\nde premier degré ne partagent que 50 % de leurs gènes.\nLes facteurs environnementaux non partagés par les membres\nd’une fratrie sont importants, puisque le taux de concordance\ndes jumeaux monozygotes (MZ) est inférieur à 100 % pour tous\nles troubles psychiatriques. Donc, même si le code génétique\nest identique à 100 % pour des jumeaux MZ, la survenue d’une\nmaladie psychiatrique n’est pas de 100 %, car l’expression des\ngènes est modulée par l’environnement. Ainsi, les facteurs envi-\nronnementaux qui sont spéciques à l’individu qui développe\nla maladie sont plus pertinents à la recherche que les facteurs\ncommuns à tous les membres de la fratrie.\n5.2.5 Spécicité des facteurs génétiques\nEn plus d’analyser l’agrégation familiale, les études familiales ainsi\nque les études de jumeaux et d’adoption permettent d’identier la\nspécicité des facteurs génétiques dans le risque qu’ils confèrent, c’est-\nà-dire si la présence d’un trouble A chez une personne est associée\nou non à un risque plus élevé d’un trouble B chez ses apparentés.\nÀ ce titre, il existe un certain degré de spécicité quant au\ntype de psychose transmis. Ainsi, certains facteurs génétiques\n(p. ex., des SNP) sont plus spéciques de la schizophrénie que de\nl’autisme (Lee &al.,2013). Cependant, les études d’épidémiologie\ngénétique révèlent aussi un certain degré de non-spécicité des\nfacteurs génétiques, ce qui donne à penser que certains syndromes\npsychiatriques s’inscrivent dans un continuum étiologique. C’est\nle cas notamment de la schizophrénie, du trouble schizoaectif,\ndu trouble schizophréniforme, du trouble de la personnalité\nschizotypique, des troubles bipolaires et de la dépression majeure\n(Lee & al., 2013).\nDe plus, certaines zones grises persistent. Par exemple, même si\nles études familiales sur la schizophrénie et les troubles bipolaires\nLa réalisation d’études de jumeaux présente une diculté\nmajeure. Il est en eet dicile d’obtenir un échantillon de jumeaux\nde taille susante, même pour des maladies psychiatriques\nrelativement fréquentes, tels les troubles bipolaires ou la schi-\nzophrénie (dont la prévalence est d’environ 1 %) (Tandon & al.,\n2008). Comme la fréquence des jumeaux homozygotes n’est que\nde 1 sur 250 naissances (Société des obstétriciens et gyncologues\ndu Canada [SOGC], 2014), un jumeau monozygote sourant de\nces troubles provient donc de 1 naissance sur 33 000. Toutefois,\nla fréquence des problèmes psychiatriques chez les jumeaux\nétant semblable à celle de la population générale, il est permis de\npenser que des études de jumeaux ne présentent pas de problème\nde représentativité.\nPar ailleurs, la validité des études de jumeaux repose sur le\npostulat d’un degré de ressemblance de l’environnement des\njumeaux monozygotes et dizygotes. Ainsi, les critiques des études\nde jumeaux indiquent qu’il est possible d’expliquer la plus grande\nressemblance des jumeaux monozygotes en ce qui concerne les\ntraits psychiatriques ou psychologiques par la plus grande similarité\nde leur environnement. Cependant, de nombreuses études ont\nexaminé et réfuté cette proposition, appuyant ainsi la validité des\nconclusions tirées des études de jumeaux (Battaglia & al., 2009).\n5.2.4 Résultats des études\nen épidémiologie génétique\nIl existe deux façons de quantier les résultats des études en\népidémiologie génétique :\n• Pour des traits continus tels la gravité de symptômes dépressifs,\nla taille, le poids ou une caractéristique de la personnalité (p.\nex., l’introversion), la ressemblance familiale est quantiée\nsous forme de corrélation, une corrélation de 1 signiant\nune identité complète, et une corrélation de 0 signiant une\nabsence totale de ressemblance.\n• Pour des traits catégoriels tels que le sexe ou la présence\nou l’absence d’un diagnostic, la ressemblance familiale est\nquantiée en donnant le risque de présence de la maladie\nchez divers types d’apparentés (père, mère, fratrie, jumeaux\nmonozygotes, etc.) d’une personne souffrant ou non de\nla maladie. Cependant, même pour des traits catégoriels,\ncertaines procédures statistiques permettent d’exprimer le\ndegré de ressemblance familiale sous forme de coecient de\ncorrélation, tel que décrit ci-dessous.\nLes résultats des études familiales, d’adoption et de jumeaux\nsont remarquablement consistants en psychiatrie. Leurs prin-\ncipaux résultats sont :\n• La démonstration de l’agrégation (ou ressemblance) familiale\npour la plupart des maladies psychiatriques. Par exemple, le\nrisque de retrouver la schizophrénie est 10 fois plus élevé\nchez les parents du premier degré (père, mère, enfants, frères\net sœurs) de personnes atteintes de schizophrénie que dans\nle reste de la population (Tandon & al., 2008), et on observe\nune augmentation du risque de même magnitude dans le cas\ndes troubles bipolaires.\n• La démonstration par les études d’adoption et de jumeaux que\nla transmission familiale est d’origine essentiellement géné-\ntique dans la majorité des maladies psychiatriques. De plus,\nces études permettent de quantier l’héritabilité, c’est-à-dire\n",
+  "raw_text_sha256": "5b3623dea2d142785d55edb6ffa5efa5869af6f4051e710424f2ceb8e84e77c2",
+  "source_page_display": 115,
+  "source_page_index": 114
+}

@@ -1,0 +1,256 @@
+{
+  "block_sequence_sha256": "0e845a84afb2270005151583447cb57f74aa01c7ee644bb9e657c3d439417d7b",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0755-block-0001",
+      "order": 1,
+      "text": "738\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "d5a9f5eced770938f2fb43413ee2d5795bf81398051094c3d3e21ec98c41e41b"
+    },
+    {
+      "bbox": [
+        50.35000228881836,
+        41.002296447753906,
+        354.7377624511719,
+        53.320068359375
+      ],
+      "block_id": "page-0755-block-0002",
+      "order": 2,
+      "text": "TABLEAU 32.6 Critères diagnostiques des apnées obstructives du sommeil\n",
+      "text_sha256": "d46d7ee327c14b0f68f44702600412888a200092a4c5cedd6a9345937f5d3b9a"
+    },
+    {
+      "bbox": [
+        52.25,
+        58.27412414550781,
+        508.3337707519531,
+        94.328125
+      ],
+      "block_id": "page-0755-block-0003",
+      "order": 3,
+      "text": "DSM-5\nDSM-IV-TR\n327.23 (G47.33) Apnée/hypopnée obstructive du sommeil\nTrouble du sommeil lié à la respiration\nA. Soit (1), soit (2) :\n",
+      "text_sha256": "f57c6b1f60143e319dcf23cdf8f7eb14aec4d842256a748c8ced4ace685d493c"
+    },
+    {
+      "bbox": [
+        64.25,
+        95.501953125,
+        309.94189453125,
+        126.328125
+      ],
+      "block_id": "page-0755-block-0004",
+      "order": 4,
+      "text": "1. Objectivation par polysomnographie d’au moins 5 apnées et/ou hypopnées par\nheure de sommeil et présence de l’un des symptômes suivants :\na. Trouble respiratoire nocturne : ronement, sensation d’étouffement ou\n",
+      "text_sha256": "7aa37d85ea586bf23351c7962716940cf8032781b58cdb42f6e0278757c2852e"
+    },
+    {
+      "bbox": [
+        76.25,
+        126.501953125,
+        317.4281311035156,
+        147.328125
+      ],
+      "block_id": "page-0755-block-0005",
+      "order": 5,
+      "text": "pauses respiratoires pendant le sommeil.\nb. Somnolence diurne, fatigue ou sommeil non réparateur survenant malgré\n",
+      "text_sha256": "a11705b2028dd3eee29c2f0b2dd0ff30ec88ff180c5f465d2bf9af6a6547bb54"
+    },
+    {
+      "bbox": [
+        64.25,
+        147.501953125,
+        322.99139404296875,
+        198.328125
+      ],
+      "block_id": "page-0755-block-0006",
+      "order": 6,
+      "text": "la possibilité de satisfaire à ses besoins en sommeil. Ces symptômes ne\nsont pas mieux expliqués par un autre trouble mental (y compris un trouble\ndu sommeil) et ne sont pas imputables à une autre affection médicale.\n2. Objectivation par polysomnographie d’au moins 15 apnées et/ou hypopnées\npar heure de sommeil quelle que soit la symptomatologie exprimée.\n",
+      "text_sha256": "4e4cdc5999762ece95bfe7d256019281edd13b5cd7c1ea404aa7a2fe507effd4"
+    },
+    {
+      "bbox": [
+        332.0,
+        84.501953125,
+        524.8875122070312,
+        94.328125
+      ],
+      "block_id": "page-0755-block-0007",
+      "order": 7,
+      "text": "A. Fractionnement du sommeil provoquant une somnolence\n",
+      "text_sha256": "7219c5f95d66f6b87497b57d43e6edab82cfc9758d6ec8f32dfdbb16e6f3c5f0"
+    },
+    {
+      "bbox": [
+        344.0,
+        94.501953125,
+        532.552734375,
+        134.328125
+      ],
+      "block_id": "page-0755-block-0008",
+      "order": 8,
+      "text": "excessive ou une insomnie, lié à une affection respiratoire\nen rapport avec le sommeil (p. ex., un syndrome d’apnées\nobstructives ou centrales ou un syndrome d’hypoventilation\nalvéolaire centrale).\n",
+      "text_sha256": "233d72ce4336e420024821bc0f7ef763330abd73b2a07d6864f20cb20f305444"
+    },
+    {
+      "bbox": [
+        332.0,
+        201.90196228027344,
+        542.5255737304688,
+        211.72813415527344
+      ],
+      "block_id": "page-0755-block-0009",
+      "order": 9,
+      "text": "B. La perturbation n’est pas mieux expliquée par un autre trouble\n",
+      "text_sha256": "2897f354484c14a79cf3955d47dccbad0d1be539707ab1d7f5ebbc08deb53609"
+    },
+    {
+      "bbox": [
+        52.25,
+        211.90196228027344,
+        544.4234008789062,
+        298.2923889160156
+      ],
+      "block_id": "page-0755-block-0010",
+      "order": 10,
+      "text": "mental et n’est pas liée aux effets physiologiques directs d’une\nsubstance (p. ex., une substance donnant lieu à abus, un\nmédicament) ou d’une autre affection médicale générale (autre\nqu’un trouble respiratoire).\nSpécier la sévérité actuelle :\nLéger : Index d’apnées/hypopnées inférieur à 15.\nMoyen : Index d’apnées/hypopnées entre 15 et 30.\nGrave : Index d’apnées/hypopnées supérieur à 30.\n",
+      "text_sha256": "c50c8f215703a834824a41360ad3e2737850ebb0618714942e9fa8a8d60a06f1"
+    },
+    {
+      "bbox": [
+        48.25,
+        304.4406433105469,
+        549.025634765625,
+        355.1750183105469
+      ],
+      "block_id": "page-0755-block-0011",
+      "order": 11,
+      "text": "Sources : APA (2015), p. 444 ; APA (2004), p. 720.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth edition (copyright 2013). American Psychiatric\nAssociation,DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation,DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\n",
+      "text_sha256": "7054e6e76406e741f7f17cbc74bad96283c2fbbfce5869253a52a23f7041c00b"
+    },
+    {
+      "bbox": [
+        50.45000076293945,
+        364.55230712890625,
+        380.4250793457031,
+        376.8700866699219
+      ],
+      "block_id": "page-0755-block-0012",
+      "order": 12,
+      "text": "TABLEAU 32.7 Critères diagnostiques des apnées centrales au cours du sommeil\n",
+      "text_sha256": "dd83daef85fa0d686dabadf2b561d29f66fed41bef9cee651c8f6332839e948c"
+    },
+    {
+      "bbox": [
+        52.25,
+        381.8241271972656,
+        493.5837707519531,
+        417.8781433105469
+      ],
+      "block_id": "page-0755-block-0013",
+      "order": 13,
+      "text": "DSM-5\nDSM-IV-TR\nApnées centrales du sommeil\nTrouble du sommeil lié à la respiration\nA. Objectivation par polysomnographie d’au moins 5 apnées centrales par\n",
+      "text_sha256": "b2f374ba9d83ad478c4b49275d79ea5a471c107bcf8d44c8d39c6bf19fc51f25"
+    },
+    {
+      "bbox": [
+        64.25,
+        418.0519714355469,
+        123.73101806640625,
+        427.8781433105469
+      ],
+      "block_id": "page-0755-block-0014",
+      "order": 14,
+      "text": "heure de sommeil.\n",
+      "text_sha256": "a8dd0e5de01b0d3988c9f5e0c9b0d452103c12affecb67271c5cc43f2ba11d7d"
+    },
+    {
+      "bbox": [
+        302.5,
+        408.0519714355469,
+        528.1205444335938,
+        417.8781433105469
+      ],
+      "block_id": "page-0755-block-0015",
+      "order": 15,
+      "text": "A. Fractionnement du sommeil provoquant une somnolence excessive\n",
+      "text_sha256": "c174b46805120f8daa37467761dd53e22f9a99d0285ad02ea357d146bb42da61"
+    },
+    {
+      "bbox": [
+        52.25,
+        418.0519714355469,
+        541.3441162109375,
+        461.27813720703125
+      ],
+      "block_id": "page-0755-block-0016",
+      "order": 16,
+      "text": "ou une insomnie, lié à une affection respiratoire en rapport avec le\nsommeil (p. ex., un syndrome d’apnées obstructives ou centrales ou un\nsyndrome d’hypoventilation alvéolaire centrale).\nB. Le trouble n’est pas mieux expliqué par la présence d’un autre trouble\n",
+      "text_sha256": "0ee2abc2ee903008cd13efd36899dc10b95a41c55d01a91beb77342a7a2e66b9"
+    },
+    {
+      "bbox": [
+        64.25,
+        461.45196533203125,
+        103.48100280761719,
+        471.27813720703125
+      ],
+      "block_id": "page-0755-block-0017",
+      "order": 17,
+      "text": "du sommeil.\n",
+      "text_sha256": "13a3c1512fd44f95558a43d972f50b6f015cd0189f644def1f1a81b8ad4a658f"
+    },
+    {
+      "bbox": [
+        302.5,
+        451.45196533203125,
+        536.9385986328125,
+        461.27813720703125
+      ],
+      "block_id": "page-0755-block-0018",
+      "order": 18,
+      "text": "B. La perturbation n’est pas mieux expliquée par un autre trouble mental\n",
+      "text_sha256": "8862dd08263527a285ec9c2c7b5dda81d74426e1602b89bcc2a4008695d8497e"
+    },
+    {
+      "bbox": [
+        52.25,
+        461.45196533203125,
+        534.7365112304688,
+        672.1281127929688
+      ],
+      "block_id": "page-0755-block-0019",
+      "order": 19,
+      "text": "et n’est pas liée aux effets physiologiques directs d’une substance\n(p. ex., une substance donnant lieu à abus, un médicament) ou d’une\nautre affection médicale générale (autre qu’un trouble respiratoire).\nSpécier le type :\n327.21 (G47.31) Apnées centrales du sommeil idiopathiques :\nCaractérisées par des épisodes répétés d’apnée et d’hypopnée pendant\nle sommeil induits par une variabilité de l’effort respiratoire, sans\npreuve d’une obstruction des voies aériennes.\n786.04 (R06.3) Respiration de Cheyne-Stokes : Une variation périodique du\nvolume courant selon un mode crescendo-decrescendo responsable d’au moins\n5 apnées et hypopnées centrales par heure liées à de fréquents microéveils.\n780.57 (G47.37) Apnées centrales du sommeil comorbides d’un usage\nd’opiacé : La pathogenèse de ce sous-type est attribuée aux effets des opia-\ncés sur le rythme respiratoire généré au niveau médullaire et sur les effets\ndifférenciés de l’hypoxie et de l’hypercapnie sur la commande respiratoire.\nSpécier la sévérité actuelle :\nLa sévérité de l’apnée centrale du sommeil est évaluée en fonction de la\nfréquence des perturbations respiratoires, ainsi que selon l’importance de\nla désaturation en oxygène associée et de la fragmentation du sommeil\nprovoquée par les perturbations respiratoires répétées.\n",
+      "text_sha256": "af763a6d809e45a7523dd3307869672c9af29423bf42a9627a03d82222e80d3f"
+    },
+    {
+      "bbox": [
+        48.25,
+        678.4406127929688,
+        549.1755981445312,
+        729.1749877929688
+      ],
+      "block_id": "page-0755-block-0020",
+      "order": 20,
+      "text": "Sources: APA (2015), p. 437-438 ; APA (2004), p. 720.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American Psychiatric\nAssociation,DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation,DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\n",
+      "text_sha256": "144523a2d5e01cc340d1c9260b57af9f75cce49e110aee6940ac18d16e637621"
+    }
+  ],
+  "coordinates_sha256": "8172b6684edd709f8f343074dee54c96c3f22cab439c13b0478ffb766c22135b",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0755",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "738\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nTABLEAU 32.6 Critères diagnostiques des apnées obstructives du sommeil\nDSM-5\nDSM-IV-TR\n327.23 (G47.33) Apnée/hypopnée obstructive du sommeil\nTrouble du sommeil lié à la respiration\nA. Soit (1), soit (2) :\n1. Objectivation par polysomnographie d’au moins 5 apnées et/ou hypopnées par\nheure de sommeil et présence de l’un des symptômes suivants :\na. Trouble respiratoire nocturne : ronement, sensation d’étouffement ou\npauses respiratoires pendant le sommeil.\nb. Somnolence diurne, fatigue ou sommeil non réparateur survenant malgré\nla possibilité de satisfaire à ses besoins en sommeil. Ces symptômes ne\nsont pas mieux expliqués par un autre trouble mental (y compris un trouble\ndu sommeil) et ne sont pas imputables à une autre affection médicale.\n2. Objectivation par polysomnographie d’au moins 15 apnées et/ou hypopnées\npar heure de sommeil quelle que soit la symptomatologie exprimée.\nA. Fractionnement du sommeil provoquant une somnolence\nexcessive ou une insomnie, lié à une affection respiratoire\nen rapport avec le sommeil (p. ex., un syndrome d’apnées\nobstructives ou centrales ou un syndrome d’hypoventilation\nalvéolaire centrale).\nB. La perturbation n’est pas mieux expliquée par un autre trouble\nmental et n’est pas liée aux effets physiologiques directs d’une\nsubstance (p. ex., une substance donnant lieu à abus, un\nmédicament) ou d’une autre affection médicale générale (autre\nqu’un trouble respiratoire).\nSpécier la sévérité actuelle :\nLéger : Index d’apnées/hypopnées inférieur à 15.\nMoyen : Index d’apnées/hypopnées entre 15 et 30.\nGrave : Index d’apnées/hypopnées supérieur à 30.\nSources : APA (2015), p. 444 ; APA (2004), p. 720.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth edition (copyright 2013). American Psychiatric\nAssociation,DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation,DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\nTABLEAU 32.7 Critères diagnostiques des apnées centrales au cours du sommeil\nDSM-5\nDSM-IV-TR\nApnées centrales du sommeil\nTrouble du sommeil lié à la respiration\nA. Objectivation par polysomnographie d’au moins 5 apnées centrales par\nheure de sommeil.\nA. Fractionnement du sommeil provoquant une somnolence excessive\nou une insomnie, lié à une affection respiratoire en rapport avec le\nsommeil (p. ex., un syndrome d’apnées obstructives ou centrales ou un\nsyndrome d’hypoventilation alvéolaire centrale).\nB. Le trouble n’est pas mieux expliqué par la présence d’un autre trouble\ndu sommeil.\nB. La perturbation n’est pas mieux expliquée par un autre trouble mental\net n’est pas liée aux effets physiologiques directs d’une substance\n(p. ex., une substance donnant lieu à abus, un médicament) ou d’une\nautre affection médicale générale (autre qu’un trouble respiratoire).\nSpécier le type :\n327.21 (G47.31) Apnées centrales du sommeil idiopathiques :\nCaractérisées par des épisodes répétés d’apnée et d’hypopnée pendant\nle sommeil induits par une variabilité de l’effort respiratoire, sans\npreuve d’une obstruction des voies aériennes.\n786.04 (R06.3) Respiration de Cheyne-Stokes : Une variation périodique du\nvolume courant selon un mode crescendo-decrescendo responsable d’au moins\n5 apnées et hypopnées centrales par heure liées à de fréquents microéveils.\n780.57 (G47.37) Apnées centrales du sommeil comorbides d’un usage\nd’opiacé : La pathogenèse de ce sous-type est attribuée aux effets des opia-\ncés sur le rythme respiratoire généré au niveau médullaire et sur les effets\ndifférenciés de l’hypoxie et de l’hypercapnie sur la commande respiratoire.\nSpécier la sévérité actuelle :\nLa sévérité de l’apnée centrale du sommeil est évaluée en fonction de la\nfréquence des perturbations respiratoires, ainsi que selon l’importance de\nla désaturation en oxygène associée et de la fragmentation du sommeil\nprovoquée par les perturbations respiratoires répétées.\nSources: APA (2015), p. 437-438 ; APA (2004), p. 720.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American Psychiatric\nAssociation,DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation,DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\n",
+  "raw_text_sha256": "e1e1a4bf406e9ec2418df7641d95c21cd35605f7c624391e4ddca47a07257752",
+  "source_page_display": 756,
+  "source_page_index": 755
+}

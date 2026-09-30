@@ -1,0 +1,148 @@
+{
+  "block_sequence_sha256": "633ef21a002c89221a69e6b78413ba9000e9e711521f8c25b7c15e433ff3b2b6",
+  "blocks": [
+    {
+      "bbox": [
+        307.1000061035156,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0208-block-0001",
+      "order": 1,
+      "text": "Chapitre 8\nPsychophysiologie et neuropsychologie\n191\n",
+      "text_sha256": "480b17b15c98d2c8999d76edff61f8977bd0e965bfe293f16758c3efde8af39c"
+    },
+    {
+      "bbox": [
+        312.0,
+        40.9658203125,
+        555.1921997070312,
+        86.25849914550781
+      ],
+      "block_id": "page-0208-block-0002",
+      "order": 2,
+      "text": "Diérentes études ont démontré les eets des GCs sur la\nmémoire de travail. On a notamment rapporté une relation positive\nentre la dose exogène de GCs et le décit de performance, ce qui\na aussi été répliqué avec un stresseur psychologique.\n",
+      "text_sha256": "ed2fb10bc236cd9e243db0b8419bd325ffe5e5b9abff5dc714284827171b5750"
+    },
+    {
+      "bbox": [
+        312.0,
+        95.2330093383789,
+        555.3777465820312,
+        291.3085021972656
+      ],
+      "block_id": "page-0208-block-0003",
+      "order": 3,
+      "text": "Glucocorticoïdes et mémoire déclarative\nLe processus de mémoire se déroule en trois étapes :\n• l’encodage, c’est-à-dire l’attention déployée à l’égard de l’in-\nformation à enregistrer, constitue la première étape vers le\nstockage de l’information en mémoire ;\n• la consolidation de la mémoire est le processus par lequel les\ninformations nouvellement encodées en mémoire à court\nterme se stabilisent éventuellement en mémoire à long terme\nlors de révision, de relecture et d’eorts de mémorisation ;\n• la récupération (le repêchage ou le rappel) des informations est\nle processus amorcé par le sujet lorsqu’il tente de se souvenir\nde ces informations stockées en mémoire à long terme pour\nrépondre à un examen, par exemple.\nDépendamment des étapes du processus mnésique, la modula-\ntion des hormones de stress doit donc être induite à des moments\ndistincts, ce qui aura des eets diérents sur la mémoire.\n",
+      "text_sha256": "86eb5c0ab6569d75ed9d48c9301f8cc8131bfc693fc66f1f8a7219049463b872"
+    },
+    {
+      "bbox": [
+        312.0,
+        292.41583251953125,
+        555.2285766601562,
+        407.3085021972656
+      ],
+      "block_id": "page-0208-block-0004",
+      "order": 4,
+      "text": "An d’évaluer si les GCs ont un eet au niveau de l’encodage\nde l’information, les études utilisent des protocoles dans lesquels\nles niveaux de GCs sont modulés (augmentés ou diminués) avant\nla présentation du matériel à apprendre. L’encodage, qui dépend\nprincipalement du lobe préfrontal, semble être sensible à une\naugmentation des niveaux de GCs puisque les niveaux de cortisol\ninuencent l’attention. En eet, il semble qu’une augmentation\nrapide des niveaux d’hormones de stress accroisse l’état général\nde vigilance, ce qui permet au sujet de détecter plus rapidement\nl’information pertinente de celle qui ne l’est pas.\n",
+      "text_sha256": "16dede5c456795ba65f7a9d1748d9e596f7c36068a757af96489976233fba2f4"
+    },
+    {
+      "bbox": [
+        312.0,
+        408.41583251953125,
+        555.4760131835938,
+        592.8585205078125
+      ],
+      "block_id": "page-0208-block-0005",
+      "order": 5,
+      "text": "En gardant intact le processus d’encodage et en modulant\nles niveaux de GCs immédiatement après l’encodage de l’infor-\nmation, il est possible d’évaluer les eets sur la consolidation\nde la mémoire. Habituellement, la performance est évaluée au\nmoins 24 heures après la modulation des niveaux de cortisol,\nan de s’assurer que la mémoire est consolidée. Donc, les niveaux\nde GCs sont modulés au début du processus de consolidation,\nmais ils retournent à leur niveau de base lorsque vient le temps\nd’évaluer leurs eets sur la consolidation de la mémoire. En\ngénéral, une élévation endogène ou exogène des niveaux de GCs\nfavorise le processus de consolidation de la mémoire. De plus,\nen diminuant les niveaux de GCs au moyen de la métyrapone,\non constate que ce processus de consolidation est amoindri. Les\nétudes donnent donc à penser que les GCs joueraient un rôle\nessentiel dans la stabilisation de l’information dans la mémoire\nà long terme (Maheu & al., 2004).\n",
+      "text_sha256": "8277e814c901fd1e324f93b8c73858b7378818dcad06098280cf0850fb31924b"
+    },
+    {
+      "bbox": [
+        312.0,
+        593.9658203125,
+        555.2900390625,
+        720.45849609375
+      ],
+      "block_id": "page-0208-block-0006",
+      "order": 6,
+      "text": "La récupération de l’information semble être un autre proces-\nsus mnésique sensible aux eets des GCs. An d’évaluer l’eet\ndes hormones sur ce rappel, les niveaux de GCs ne doivent être\nmodulés qu’une fois le processus de consolidation terminé.\nDonc, une fois l’information consolidée (généralement au moins\n24 heures suivant l’encodage), on demande au sujet de se souvenir\nde l’information, en prenant soin de faire varier les niveaux de\nGCs immédiatement avant le rappel. Contrairement au processus\nde consolidation, l’élévation des glucocorticoïdes semble nuire\nà la récupération des informations déjà consolidées. De plus, le\nfait de diminuer fortement les niveaux de GCs paraît également\n",
+      "text_sha256": "672c8000847b3f7a103eba49d85a891fa6ff678f413bfac57a386c41ba5d665d"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.9658203125,
+        297.686279296875,
+        361.95849609375
+      ],
+      "block_id": "page-0208-block-0007",
+      "order": 7,
+      "text": "mémoire. Si le décit de mémoire observé chez le groupe « aug-\nmentation/niveaux élevés » est causé par les niveaux élevés de GCs\nau moment du test, le fait de diminuer les niveaux de GCs, par\nl’utilisation de la métyrapone, devrait améliorer la performance\nmnésique et cet eet devrait disparaître en restaurant les niveaux\nde GCs. Par contre, si les décits de mémoire observés sont le\nrésultat d’une exposition à long terme à des niveaux élevés de\nGCs, cela veut dire qu’une forte variation des niveaux de GCs ne\npeut pas améliorer la performance de mémoire puisque les décits\nsemblent être « permanents ». Les résultats obtenus montrent\nque le traitement à la métyrapone (qui diminue les GCs) n’a\naucun eet bénéque sur la mémoire du groupe « augmentation/\nniveaux élevés ». Par contre, l’administration de la métyrapone\nchez le groupe « augmentation/niveaux modérés » diminue la\nperformance de mémoire et ce décit disparaît lorsqu’on restaure\nles niveaux de GCs. Ces résultats laissent donc entendre qu’une\nexposition chronique à des niveaux élevés de GCs peut entraîner\ndes décits de mémoire permanents, qui ne peuvent être modiés\npar un forte variation des niveaux de GCs. Par contre, les résultats\nobtenus montrent clairement qu’une certaine modulation de la\nperformance mnésique est possible chez les gens qui n’ont pas été\nexposés à des niveaux trop élevés de GCs durant une trop longue\npériode de temps. De plus, le fait que le groupe « diminution/\nniveaux modérés » présente un décit mnésique à la suite d’une\ndiminution signicative des niveaux de GCs donne à penser qu’un\ncertain niveau d’hormones de stress en circulation est bénéque\npour maintenir des capacités cognitives optimales (pour une\nrevue résumant ces données, voir Lupien, 2009).\n",
+      "text_sha256": "31976ba084b86f30261103c9985f3b4a18aaf8cff314458fd3d6e741fbdc5646"
+    },
+    {
+      "bbox": [
+        54.0,
+        376.48681640625,
+        254.8483123779297,
+        392.62939453125
+      ],
+      "block_id": "page-0208-block-0008",
+      "order": 8,
+      "text": "8.10.8 Glucocorticoïdes et mémoire\n",
+      "text_sha256": "48366dc69d724c0f6617dc4243f38d77d287f3e9cb1c27cf5d2ebd0fc116c136"
+    },
+    {
+      "bbox": [
+        54.0,
+        395.9658203125,
+        297.33563232421875,
+        417.95849609375
+      ],
+      "block_id": "page-0208-block-0009",
+      "order": 9,
+      "text": "Les variations de GCs produisent des eets sur plusieurs autres\ncatégories de mémoire.\n",
+      "text_sha256": "efb48a86b6a0fc60f57b44e346142185507afb820f9e44fbe4d89a4b85590013"
+    },
+    {
+      "bbox": [
+        54.0,
+        426.8330078125,
+        297.33831787109375,
+        535.45849609375
+      ],
+      "block_id": "page-0208-block-0010",
+      "order": 10,
+      "text": "Glucocorticoïdes et mémoire chez les jeunes\nadultes\nUne fois le lien établi entre les GCs et la performance mnésique\nchez les personnes âgées, les chercheurs ont tenté de comprendre\nsi le même genre de modulation se produisait chez de jeunes\nadultes. Ils ont aussi cherché à comprendre si les diérents\nstades de la mémoire, notamment l’encodage, la consolidation\net la récupération des informations, étaient tous aectés de la\nmême façon par une élévation des hormones de stress.\n",
+      "text_sha256": "952c95c1f12f651867b3c2aa262a4f77e585e6af0bb6237fc01c1a2614137013"
+    },
+    {
+      "bbox": [
+        54.0,
+        545.3330078125,
+        297.40570068359375,
+        720.45849609375
+      ],
+      "block_id": "page-0208-block-0011",
+      "order": 11,
+      "text": "Glucocorticoïdes et mémoire de travail\nPendant plusieurs années, les études se sont principalement inté-\nressées aux eets des GCs sur la mémoire déclarative, étant donné\nla très grande densité de récepteurs de GCs dans l’ hippocampe.\nPar contre, une étude chez les primates montre que le lobe frontal\ncontient un nombre important de récepteurs de type II (Sanchez\n& al., 2000). Les chercheurs ont donc postulé qu’une élévation\ndes niveaux d’hormones de stress pourrait inuencer les fonc-\ntions cognitives qui dépendent du lobe frontal. Plusieurs études\nneuropsychologiques donnent à penser que le lobe préfrontal\njouerait un rôle dans la mémoire de travail, qui fait référence au\nmécanisme cognitif permettant de garder active une quantité\nrestreinte d’informations pour un laps de temps limité. Les études\nen neuro-imagerie conrment que la mémoire de travail dépend\nde l’activité du lobe préfrontal.\n",
+      "text_sha256": "b30c29891f0b0b85cfd7888662fee6c92ea8b8da93927c856c5e794c1a854ec6"
+    }
+  ],
+  "coordinates_sha256": "d5e3c95ae0592fb818c00a25bbfbf33c9db876c2dd7e2ce5b01288ce350b0347",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0208",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 8\nPsychophysiologie et neuropsychologie\n191\nDiérentes études ont démontré les eets des GCs sur la\nmémoire de travail. On a notamment rapporté une relation positive\nentre la dose exogène de GCs et le décit de performance, ce qui\na aussi été répliqué avec un stresseur psychologique.\nGlucocorticoïdes et mémoire déclarative\nLe processus de mémoire se déroule en trois étapes :\n• l’encodage, c’est-à-dire l’attention déployée à l’égard de l’in-\nformation à enregistrer, constitue la première étape vers le\nstockage de l’information en mémoire ;\n• la consolidation de la mémoire est le processus par lequel les\ninformations nouvellement encodées en mémoire à court\nterme se stabilisent éventuellement en mémoire à long terme\nlors de révision, de relecture et d’eorts de mémorisation ;\n• la récupération (le repêchage ou le rappel) des informations est\nle processus amorcé par le sujet lorsqu’il tente de se souvenir\nde ces informations stockées en mémoire à long terme pour\nrépondre à un examen, par exemple.\nDépendamment des étapes du processus mnésique, la modula-\ntion des hormones de stress doit donc être induite à des moments\ndistincts, ce qui aura des eets diérents sur la mémoire.\nAn d’évaluer si les GCs ont un eet au niveau de l’encodage\nde l’information, les études utilisent des protocoles dans lesquels\nles niveaux de GCs sont modulés (augmentés ou diminués) avant\nla présentation du matériel à apprendre. L’encodage, qui dépend\nprincipalement du lobe préfrontal, semble être sensible à une\naugmentation des niveaux de GCs puisque les niveaux de cortisol\ninuencent l’attention. En eet, il semble qu’une augmentation\nrapide des niveaux d’hormones de stress accroisse l’état général\nde vigilance, ce qui permet au sujet de détecter plus rapidement\nl’information pertinente de celle qui ne l’est pas.\nEn gardant intact le processus d’encodage et en modulant\nles niveaux de GCs immédiatement après l’encodage de l’infor-\nmation, il est possible d’évaluer les eets sur la consolidation\nde la mémoire. Habituellement, la performance est évaluée au\nmoins 24 heures après la modulation des niveaux de cortisol,\nan de s’assurer que la mémoire est consolidée. Donc, les niveaux\nde GCs sont modulés au début du processus de consolidation,\nmais ils retournent à leur niveau de base lorsque vient le temps\nd’évaluer leurs eets sur la consolidation de la mémoire. En\ngénéral, une élévation endogène ou exogène des niveaux de GCs\nfavorise le processus de consolidation de la mémoire. De plus,\nen diminuant les niveaux de GCs au moyen de la métyrapone,\non constate que ce processus de consolidation est amoindri. Les\nétudes donnent donc à penser que les GCs joueraient un rôle\nessentiel dans la stabilisation de l’information dans la mémoire\nà long terme (Maheu & al., 2004).\nLa récupération de l’information semble être un autre proces-\nsus mnésique sensible aux eets des GCs. An d’évaluer l’eet\ndes hormones sur ce rappel, les niveaux de GCs ne doivent être\nmodulés qu’une fois le processus de consolidation terminé.\nDonc, une fois l’information consolidée (généralement au moins\n24 heures suivant l’encodage), on demande au sujet de se souvenir\nde l’information, en prenant soin de faire varier les niveaux de\nGCs immédiatement avant le rappel. Contrairement au processus\nde consolidation, l’élévation des glucocorticoïdes semble nuire\nà la récupération des informations déjà consolidées. De plus, le\nfait de diminuer fortement les niveaux de GCs paraît également\nmémoire. Si le décit de mémoire observé chez le groupe « aug-\nmentation/niveaux élevés » est causé par les niveaux élevés de GCs\nau moment du test, le fait de diminuer les niveaux de GCs, par\nl’utilisation de la métyrapone, devrait améliorer la performance\nmnésique et cet eet devrait disparaître en restaurant les niveaux\nde GCs. Par contre, si les décits de mémoire observés sont le\nrésultat d’une exposition à long terme à des niveaux élevés de\nGCs, cela veut dire qu’une forte variation des niveaux de GCs ne\npeut pas améliorer la performance de mémoire puisque les décits\nsemblent être « permanents ». Les résultats obtenus montrent\nque le traitement à la métyrapone (qui diminue les GCs) n’a\naucun eet bénéque sur la mémoire du groupe « augmentation/\nniveaux élevés ». Par contre, l’administration de la métyrapone\nchez le groupe « augmentation/niveaux modérés » diminue la\nperformance de mémoire et ce décit disparaît lorsqu’on restaure\nles niveaux de GCs. Ces résultats laissent donc entendre qu’une\nexposition chronique à des niveaux élevés de GCs peut entraîner\ndes décits de mémoire permanents, qui ne peuvent être modiés\npar un forte variation des niveaux de GCs. Par contre, les résultats\nobtenus montrent clairement qu’une certaine modulation de la\nperformance mnésique est possible chez les gens qui n’ont pas été\nexposés à des niveaux trop élevés de GCs durant une trop longue\npériode de temps. De plus, le fait que le groupe « diminution/\nniveaux modérés » présente un décit mnésique à la suite d’une\ndiminution signicative des niveaux de GCs donne à penser qu’un\ncertain niveau d’hormones de stress en circulation est bénéque\npour maintenir des capacités cognitives optimales (pour une\nrevue résumant ces données, voir Lupien, 2009).\n8.10.8 Glucocorticoïdes et mémoire\nLes variations de GCs produisent des eets sur plusieurs autres\ncatégories de mémoire.\nGlucocorticoïdes et mémoire chez les jeunes\nadultes\nUne fois le lien établi entre les GCs et la performance mnésique\nchez les personnes âgées, les chercheurs ont tenté de comprendre\nsi le même genre de modulation se produisait chez de jeunes\nadultes. Ils ont aussi cherché à comprendre si les diérents\nstades de la mémoire, notamment l’encodage, la consolidation\net la récupération des informations, étaient tous aectés de la\nmême façon par une élévation des hormones de stress.\nGlucocorticoïdes et mémoire de travail\nPendant plusieurs années, les études se sont principalement inté-\nressées aux eets des GCs sur la mémoire déclarative, étant donné\nla très grande densité de récepteurs de GCs dans l’ hippocampe.\nPar contre, une étude chez les primates montre que le lobe frontal\ncontient un nombre important de récepteurs de type II (Sanchez\n& al., 2000). Les chercheurs ont donc postulé qu’une élévation\ndes niveaux d’hormones de stress pourrait inuencer les fonc-\ntions cognitives qui dépendent du lobe frontal. Plusieurs études\nneuropsychologiques donnent à penser que le lobe préfrontal\njouerait un rôle dans la mémoire de travail, qui fait référence au\nmécanisme cognitif permettant de garder active une quantité\nrestreinte d’informations pour un laps de temps limité. Les études\nen neuro-imagerie conrment que la mémoire de travail dépend\nde l’activité du lobe préfrontal.\n",
+  "raw_text_sha256": "b8674889ecbeb18c23975ef3ce428280ae60ceaf2f2774ed78d1dc74e57939b9",
+  "source_page_display": 209,
+  "source_page_index": 208
+}

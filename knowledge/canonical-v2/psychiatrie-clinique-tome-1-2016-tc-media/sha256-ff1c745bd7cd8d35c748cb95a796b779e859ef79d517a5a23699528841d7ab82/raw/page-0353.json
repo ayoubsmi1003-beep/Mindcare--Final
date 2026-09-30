@@ -1,0 +1,88 @@
+{
+  "block_sequence_sha256": "6f5ad0df0c4999658f9cc21afbe0dbdf779ebf5dec293a4bf36e367ffbbe784f",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0353-block-0001",
+      "order": 1,
+      "text": "336\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "f579c1337bbe2abc6d249435aad7f61f326f32340a316baf3154cf6588a14818"
+    },
+    {
+      "bbox": [
+        306.0,
+        530.8658447265625,
+        549.512451171875,
+        575.8585205078125
+      ],
+      "block_id": "page-0353-block-0002",
+      "order": 2,
+      "text": "blanche et établissent un lien entre la diminution progressive de\nla matière grise et l’évolution de la maladie, notamment quant au\nnombre d’épisodes psychotiques et à la persistance des délires,\nce qui laisse croire qu’il s’agit d’une maladie neurodégénérative.\n",
+      "text_sha256": "fe7b81702c590bbf6691ad338017251e4da33d6c7116adba5bea6508710dfec4"
+    },
+    {
+      "bbox": [
+        306.0,
+        576.8658447265625,
+        549.6063232421875,
+        725.3585205078125
+      ],
+      "block_id": "page-0353-block-0003",
+      "order": 3,
+      "text": "Les études réalisées par le NIMH auprès des patients sourant\nde schizophrénie à début précoce montrent une perte progres-\nsive de matière grise, un retard de développement de la matière\nblanche et une diminution du volume du cervelet. On observe\négalement ce décit de matière grise au sein de la fratrie, mais il\nse normalise avec l’âge, contrairement aux personnes malades\n(Rapoport & Gogtay, 2011). À l’adolescence, un processus nor-\nmal, génétiquement programmé, entraîne l’élagage (pruning) des\nconnexions synaptiques cérébrales qui n’ont pas été utilisées.\nMais chez les adolescents qui sourent de schizophrénie, cet\nélagage semble anormal, sans que l’on sache toutefois s’il s’agit\nd’un processus développemental anormal (excessif, erratique)\nou de changements dégénératifs.\n",
+      "text_sha256": "498c33cb1c89048775bd3593c4f6ae3ce09b025e180e081d7b80107784906dc6"
+    },
+    {
+      "bbox": [
+        48.0,
+        530.8658447265625,
+        291.02423095703125,
+        587.3585205078125
+      ],
+      "block_id": "page-0353-block-0004",
+      "order": 4,
+      "text": "réside cependant pas tellement dans la dilatation des ventricules\nque dans l’hypodéveloppement de certaines structures du cortex\ncérébral, notamment l’hippocampe, l’amygdale et le thalamus\nainsi que les régions avoisinantes du lobe temporal, surtout à\ngauche. Les ventricules ne font alors qu’occuper l’espace vacant.\n",
+      "text_sha256": "47ae6ecb941746d2b4165dd6f593712a768ecbbe4cfea8dcfc8aa1c4c10f91d6"
+    },
+    {
+      "bbox": [
+        48.0,
+        588.3658447265625,
+        291.31500244140625,
+        725.3585205078125
+      ],
+      "block_id": "page-0353-block-0005",
+      "order": 5,
+      "text": "Par ailleurs, chez des personnes présentant un risque élevé\nde schizophrénie, des études ont montré que des anomalies neu-\nroanatomiques (p. ex., la réduction du volume de la matière grise)\nprécèdent l’apparition de la maladie, laissant croire qu’il pourrait\ns’agir de conséquences de dommages apparus durant la période\nprénatale ou périnatale. Pendant la période de transition vers le\npremier épisode psychotique, on observe une diminution supplé-\nmentaire de la matière grise. Certaines études donnent à penser\nque les altérations cérébrales ne progressent pas à mesure que la\nschizophrénie se chronicise et considèrent donc que cette maladie\nest de nature neurodéveloppementale. Pourtant, d’autres études\nmontrent des changements progressifs au niveau de la matière\n",
+      "text_sha256": "ddb28347d8f77d2232a3a16f8f2edbd64b2afde27794be5cb4cc92f5fcbe1bca"
+    },
+    {
+      "bbox": [
+        50.400001525878906,
+        41.002296447753906,
+        291.5182800292969,
+        53.320068359375
+      ],
+      "block_id": "page-0353-block-0006",
+      "order": 6,
+      "text": "FIGURE 17.4 Coupe transversale du cerveau sur deux plans\n",
+      "text_sha256": "eeb3093213a981bcae768f56e08b338a2f83d88ec36ee07381593b49b12a5aed"
+    }
+  ],
+  "coordinates_sha256": "472747c1942a8ede1dc3080b73cd67d720615446adf0b26c16bd2e7513325d8b",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0353",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "336\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nblanche et établissent un lien entre la diminution progressive de\nla matière grise et l’évolution de la maladie, notamment quant au\nnombre d’épisodes psychotiques et à la persistance des délires,\nce qui laisse croire qu’il s’agit d’une maladie neurodégénérative.\nLes études réalisées par le NIMH auprès des patients sourant\nde schizophrénie à début précoce montrent une perte progres-\nsive de matière grise, un retard de développement de la matière\nblanche et une diminution du volume du cervelet. On observe\négalement ce décit de matière grise au sein de la fratrie, mais il\nse normalise avec l’âge, contrairement aux personnes malades\n(Rapoport & Gogtay, 2011). À l’adolescence, un processus nor-\nmal, génétiquement programmé, entraîne l’élagage (pruning) des\nconnexions synaptiques cérébrales qui n’ont pas été utilisées.\nMais chez les adolescents qui sourent de schizophrénie, cet\nélagage semble anormal, sans que l’on sache toutefois s’il s’agit\nd’un processus développemental anormal (excessif, erratique)\nou de changements dégénératifs.\nréside cependant pas tellement dans la dilatation des ventricules\nque dans l’hypodéveloppement de certaines structures du cortex\ncérébral, notamment l’hippocampe, l’amygdale et le thalamus\nainsi que les régions avoisinantes du lobe temporal, surtout à\ngauche. Les ventricules ne font alors qu’occuper l’espace vacant.\nPar ailleurs, chez des personnes présentant un risque élevé\nde schizophrénie, des études ont montré que des anomalies neu-\nroanatomiques (p. ex., la réduction du volume de la matière grise)\nprécèdent l’apparition de la maladie, laissant croire qu’il pourrait\ns’agir de conséquences de dommages apparus durant la période\nprénatale ou périnatale. Pendant la période de transition vers le\npremier épisode psychotique, on observe une diminution supplé-\nmentaire de la matière grise. Certaines études donnent à penser\nque les altérations cérébrales ne progressent pas à mesure que la\nschizophrénie se chronicise et considèrent donc que cette maladie\nest de nature neurodéveloppementale. Pourtant, d’autres études\nmontrent des changements progressifs au niveau de la matière\nFIGURE 17.4 Coupe transversale du cerveau sur deux plans\n",
+  "raw_text_sha256": "5f26a111075e91922062792941b34c567438d0c340d80295d23114b996a7a7aa",
+  "source_page_display": 354,
+  "source_page_index": 353
+}

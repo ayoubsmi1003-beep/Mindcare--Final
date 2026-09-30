@@ -1,0 +1,3913 @@
+{
+  "book_id": "dsm5-fr-2015-elsevier",
+  "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+  "ingestion_version": "canonical-v2.1",
+  "status": "CANDIDATE_REVIEW_REQUIRED",
+  "canonical_promotion_authorized": false,
+  "doctor_review_required": true,
+  "meds_excluded": true,
+  "structure_candidate": "structure-v2.candidate.json",
+  "policy": {
+    "units": "units-M-v2 supersedes units-M",
+    "tables": "qa-report.table_variants kept_file/variant_file",
+    "concepts": "qa-report concept conflict metadata as candidate union; every source_ref must resolve to candidate unit set",
+    "xrefs": "exact row dedupe"
+  },
+  "inputs": {
+    "units": [
+      {
+        "file": "units-A.jsonl",
+        "sha256": "ce85c9859825c0a44ff51d42c67152dfdddbae9ad7a1d5b838c440e8b066ce08",
+        "rows": 64
+      },
+      {
+        "file": "units-B.jsonl",
+        "sha256": "d9c57db94f8e3ec68850db435db49ddee63be90f1f4bd4a61c3568e961629c6d",
+        "rows": 76
+      },
+      {
+        "file": "units-C.jsonl",
+        "sha256": "2b2b3b039609bcccc15c3747c564c45d7fcade70120430a927123fbcfd59f144",
+        "rows": 188
+      },
+      {
+        "file": "units-D.jsonl",
+        "sha256": "cf3f74aad5213f02bf4c762c414d93947e95939da7fea99ed226acb17156e562",
+        "rows": 194
+      },
+      {
+        "file": "units-E.jsonl",
+        "sha256": "063ba5df6189fd74b9708df871750453521ea2d0c61a94acbeb009c8919dcf8d",
+        "rows": 20
+      },
+      {
+        "file": "units-F.jsonl",
+        "sha256": "7193b30102ae90ab2fbf3c357f9a45ba808eb7a03652ffe515987ee679b8cdb9",
+        "rows": 42
+      },
+      {
+        "file": "units-G.jsonl",
+        "sha256": "a26a50c7f18503d205156c75ac6e9799b2df2aa92422087f09cc9d51f72d248f",
+        "rows": 45
+      },
+      {
+        "file": "units-H.jsonl",
+        "sha256": "3100ad8b1f3dd9a7b6fe9f01be26e2021e4a011e6b149e555cf778262259002a",
+        "rows": 33
+      },
+      {
+        "file": "units-I.jsonl",
+        "sha256": "8dca6cc84744f5e6afad665ecbef1520512d588e449d9e4efbc0de5c4eb45180",
+        "rows": 66
+      },
+      {
+        "file": "units-J.jsonl",
+        "sha256": "a4906730e450a9f9e49b3eaaac6805f1e32fd704326d58ca6ce083f26eafeddd",
+        "rows": 46
+      },
+      {
+        "file": "units-K.jsonl",
+        "sha256": "b300b41b62d32014db5c095aae6b35ce25a71386ac0e7b80c7aba51e339c1e42",
+        "rows": 80
+      },
+      {
+        "file": "units-L.jsonl",
+        "sha256": "29f044592c177a251d7c13f9353c8ab3ef590102c5a2f357a0f0909f1ab21f8e",
+        "rows": 155
+      },
+      {
+        "file": "units-M-v2.jsonl",
+        "sha256": "b387f399c0c4943002e41e2fe9e774a3083bb8b6591f271efbde5a212941aad1",
+        "rows": 108
+      },
+      {
+        "file": "units-N.jsonl",
+        "sha256": "c172235170134e12c966bc446bb243c1d044dd82f4cf24b947542ffc69aaec98",
+        "rows": 393
+      },
+      {
+        "file": "units-S1.jsonl",
+        "sha256": "a55ebc5227c3079b3fb2070c8eaaff41124c4556e7c2010ffa8bed82dfcd993c",
+        "rows": 802
+      },
+      {
+        "file": "units-S2.jsonl",
+        "sha256": "e594416e3d883e0cbcea26ac43c0cb45a594a2bdfff90f700c9bb30c2ef7a6d1",
+        "rows": 1239
+      },
+      {
+        "file": "units-S3.jsonl",
+        "sha256": "73b4691490140fb6ddb65153705589b70fc3cfdafd490b8d9a51945a548893bb",
+        "rows": 63
+      },
+      {
+        "file": "units-S4.jsonl",
+        "sha256": "a0b579378e357de9a35c0a64ac3a8c0351bf532815b04ec39f708ee0033d2458",
+        "rows": 473
+      },
+      {
+        "file": "units-S5.jsonl",
+        "sha256": "7110dfe216ebe7bbf29a95dfa36817a00546043e3719b709be7e636e8f31d26e",
+        "rows": 1078
+      },
+      {
+        "file": "units-S6.jsonl",
+        "sha256": "d194d3bb4abb8c13f04946ae737061752723ad03971ee23d1085f7a79a32115b",
+        "rows": 106
+      },
+      {
+        "file": "units-S7.jsonl",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rows": 0
+      },
+      {
+        "file": "units-T1.jsonl",
+        "sha256": "da4577789398bd950ae3d1dc4224183bcaeb1904ae9656095e7c0ad954068df3",
+        "rows": 20
+      },
+      {
+        "file": "units-T2.jsonl",
+        "sha256": "b438e060b3ec6e73010f73e00e74f76d1cbaa7eb19700e3d1218b7970898b498",
+        "rows": 1064
+      },
+      {
+        "file": "units-T3.jsonl",
+        "sha256": "9e2cc3835c422522d104a4987ea743de77fbb1a3dd7263b1f87e3c71d3e0736b",
+        "rows": 382
+      },
+      {
+        "file": "units-T4.jsonl",
+        "sha256": "daa1da9dd108357870206b24703f625a47151353fa5b91cb20eaece05f27b243",
+        "rows": 262
+      },
+      {
+        "file": "units-T5.jsonl",
+        "sha256": "17426d731fa0a8b4620f3f6823772e5daacfe46f1e2e080fc5b210c220a7a398",
+        "rows": 91
+      },
+      {
+        "file": "units-T6.jsonl",
+        "sha256": "2a561bc6833fac72efc25b1b4006158ed5b315edd9e5a76a022b7a531892e5e7",
+        "rows": 611
+      },
+      {
+        "file": "units-T7.jsonl",
+        "sha256": "a81598f8e809f55ec45c6f3e11eec61e44d1275aa61db3e332e8233bad638007",
+        "rows": 144
+      },
+      {
+        "file": "units-T8.jsonl",
+        "sha256": "03673c4b8c0f27882b18ca2263f97db0d97603eb3c1a676d4328b1eee5bd7d3e",
+        "rows": 21
+      },
+      {
+        "file": "units-U1.jsonl",
+        "sha256": "caa863e850e8da8e200223b0db29fc7c7f842d90acfb3872c1cd08cc7e1ff79c",
+        "rows": 1613
+      },
+      {
+        "file": "units-U2.jsonl",
+        "sha256": "adb91452f3cee7bc03759613450574a7de60312f732c3b8e3442592913ea3912",
+        "rows": 285
+      },
+      {
+        "file": "units-U3.jsonl",
+        "sha256": "665bea480fa0ec004c28fd04184f7402f8a5ab71579b98a24b73bc21d8e0ace2",
+        "rows": 658
+      },
+      {
+        "file": "units-U4.jsonl",
+        "sha256": "bcf0667f08235914fa52e371c1cdbed0bac0ca4998b9094516bd45dc43e222d8",
+        "rows": 1658
+      },
+      {
+        "file": "units-U5.jsonl",
+        "sha256": "2e5a0e40f1b5b3ac037a7092b7bf99e0ae40a8776e62a4614179fe247b7083b8",
+        "rows": 320
+      }
+    ],
+    "tables": [
+      {
+        "file": "tables-A.jsonl",
+        "sha256": "134060b01d98cb1c6199d5b925b9b94dc1146a39d3b708250593d2e98b4c2f43",
+        "rows": 1
+      },
+      {
+        "file": "tables-B.jsonl",
+        "sha256": "1814a11bd901b6ed5b7d94088764fcd309a66bbccc052c7538a2e03e25af6f7f",
+        "rows": 1
+      },
+      {
+        "file": "tables-C.jsonl",
+        "sha256": "f0b351f48e4de60d1b468d5ea83d6921b04eec7607c3f49d0fc4e59a8b12ef84",
+        "rows": 1
+      },
+      {
+        "file": "tables-D.jsonl",
+        "sha256": "05998b980d6cf7f14c0a3f661e7338878d230e9f8aefc421beb19d088eb508c6",
+        "rows": 3
+      },
+      {
+        "file": "tables-E.jsonl",
+        "sha256": "523f3b9e7ca33cf4cbaca55cc7bfc50fa9d2142490e83b9110f13f3338cefa2a",
+        "rows": 2
+      },
+      {
+        "file": "tables-F.jsonl",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rows": 0
+      },
+      {
+        "file": "tables-G.jsonl",
+        "sha256": "b20738179493528e0965edcabfdd294cca86cf42c8cda893e4973d1e54b8df67",
+        "rows": 1
+      },
+      {
+        "file": "tables-H.jsonl",
+        "sha256": "a98dcb0857160827a1c8e671aaa2bafa09aa8b0c12f148d52126225d974f1487",
+        "rows": 2
+      },
+      {
+        "file": "tables-I.jsonl",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rows": 0
+      },
+      {
+        "file": "tables-J.jsonl",
+        "sha256": "1daf004b8e15427db3b0aa0791d65dc24ee4709f529afa0232ff4fb6a4bfc53f",
+        "rows": 5
+      },
+      {
+        "file": "tables-K.jsonl",
+        "sha256": "d3a78a4a6bb5a3a3d9ea0c186f759ea4e29f2c19686e081b1c4ce711c55419a4",
+        "rows": 5
+      },
+      {
+        "file": "tables-L.jsonl",
+        "sha256": "e1d87c7ad2527f432d9b0068061926fe7f10a595160092c9a9bf05f4855c97f5",
+        "rows": 3
+      },
+      {
+        "file": "tables-M.jsonl",
+        "sha256": "dfb1e9ff1327d2d476fe32ca951b8c15902bb80f942cbf993d6b1391b496b4c4",
+        "rows": 69
+      },
+      {
+        "file": "tables-N.jsonl",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rows": 0
+      },
+      {
+        "file": "tables-S1.jsonl",
+        "sha256": "5903511d3dff378160c9c1537762064a07bbb1a133b66718060b93f4ccd195c0",
+        "rows": 1
+      },
+      {
+        "file": "tables-S2.jsonl",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rows": 0
+      },
+      {
+        "file": "tables-S3.jsonl",
+        "sha256": "515fd2c1bd52ff53af4d2eafaf12818cd4f7ba237ae99f98cb7c1dfc9cd0ed4c",
+        "rows": 1
+      },
+      {
+        "file": "tables-S4.jsonl",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rows": 0
+      },
+      {
+        "file": "tables-S5.jsonl",
+        "sha256": "65c890793b86483b5cd9cb860a3d31133f08edbe9064685be4f17acca2624710",
+        "rows": 1
+      },
+      {
+        "file": "tables-S6.jsonl",
+        "sha256": "dac5ad445a0c245fa5d5f515afdb85ced4feca8f849151d6642e96f2f28438a0",
+        "rows": 5
+      },
+      {
+        "file": "tables-S7.jsonl",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rows": 0
+      },
+      {
+        "file": "tables-T1.jsonl",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rows": 0
+      },
+      {
+        "file": "tables-T2.jsonl",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rows": 0
+      },
+      {
+        "file": "tables-T3.jsonl",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rows": 0
+      },
+      {
+        "file": "tables-T4.jsonl",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rows": 0
+      },
+      {
+        "file": "tables-T5.jsonl",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rows": 0
+      },
+      {
+        "file": "tables-T6.jsonl",
+        "sha256": "b5bee8ef73cba53f926a6dc7e38644ee722902385951a1490f3ac6f4ed0e5400",
+        "rows": 2
+      },
+      {
+        "file": "tables-T7.jsonl",
+        "sha256": "475a7fe5cb76fed80889cdcb10799c6a8dc16169f33b92a761768e5003c006f5",
+        "rows": 16
+      },
+      {
+        "file": "tables-T8.jsonl",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rows": 0
+      },
+      {
+        "file": "tables-U1.jsonl",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rows": 0
+      },
+      {
+        "file": "tables-U2.jsonl",
+        "sha256": "c67a1b59562aaf7b593b24338cbb5dd096965835a37223221b075f95e3513155",
+        "rows": 2
+      },
+      {
+        "file": "tables-U3.jsonl",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rows": 0
+      },
+      {
+        "file": "tables-U4.jsonl",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rows": 0
+      },
+      {
+        "file": "tables-U5.jsonl",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rows": 0
+      }
+    ],
+    "concepts": [
+      {
+        "file": "concepts-A.jsonl",
+        "sha256": "957c92e3c678b0d6c68c9cc37367a8bdd0833e55d734447e0d97b3298c9d788b",
+        "rows": 16
+      },
+      {
+        "file": "concepts-B.jsonl",
+        "sha256": "e0c77a3eb38f7c76c18c16a87cbea55787aac62542bc93e1430d225c6ce6f8f5",
+        "rows": 176
+      },
+      {
+        "file": "concepts-C.jsonl",
+        "sha256": "7c97032d35e5ca971dc2c732fb88fe8fd3dccce46c459bef8c4b764b67ebf1e0",
+        "rows": 98
+      },
+      {
+        "file": "concepts-CORR.jsonl",
+        "sha256": "a2c51cad54bde29af4e6bb280cca47bf61a4a552c7c8f5306c1309050d057a24",
+        "rows": 2
+      },
+      {
+        "file": "concepts-D.jsonl",
+        "sha256": "8868af4270feaff951e959f2c4efa5e08382326ed8697beb84647ea8e3f9a50e",
+        "rows": 72
+      },
+      {
+        "file": "concepts-E.jsonl",
+        "sha256": "c6f591e1149cebca07944d02488087e6615f41221e52d8ad5c64309e656c1aa3",
+        "rows": 105
+      },
+      {
+        "file": "concepts-F.jsonl",
+        "sha256": "ade205f3f259f209f38d3acd10fd7a13c71303ebf5b63b372c220d460d2019af",
+        "rows": 71
+      },
+      {
+        "file": "concepts-G.jsonl",
+        "sha256": "dcc964a02273ce0374d2a524ef0d8e3dfba801586fd06d915679fc3edc472238",
+        "rows": 141
+      },
+      {
+        "file": "concepts-H.jsonl",
+        "sha256": "caf748a3047e6aaffad55e927864864364f101674588fd246affc6e7652236d6",
+        "rows": 65
+      },
+      {
+        "file": "concepts-I.jsonl",
+        "sha256": "d9b53df238d6041d977fbc82d066c508f68ee2a004ee73b907accb4244f3514c",
+        "rows": 102
+      },
+      {
+        "file": "concepts-J.jsonl",
+        "sha256": "87d037430ab0eea1f7479163fa2e58dd064f1658d93384cfb3c75c3f7d3dded0",
+        "rows": 111
+      },
+      {
+        "file": "concepts-K.jsonl",
+        "sha256": "66531da0403d9a5fa509b04e07012b2f95fc5c2bcef40b6029a01d1e274f889c",
+        "rows": 219
+      },
+      {
+        "file": "concepts-L.jsonl",
+        "sha256": "c07032b309f60dc463e0380096ea983c272694a51cbb20804a970a151f7a847c",
+        "rows": 256
+      },
+      {
+        "file": "concepts-M.jsonl",
+        "sha256": "b867f0e7dfdaec18e9c9f5970c332fea21351c119994579d1d0bb6c503659c15",
+        "rows": 127
+      },
+      {
+        "file": "concepts-N.jsonl",
+        "sha256": "1dd7fe7643457ae19a761de9733cccdc48f50402cb6088bdf5a76dc3c04c564e",
+        "rows": 209
+      },
+      {
+        "file": "concepts-S1.jsonl",
+        "sha256": "5fb6a9591bd037885a8d75089e8cfb8eb6bc268996149155b537a0ceac6c08e2",
+        "rows": 125
+      },
+      {
+        "file": "concepts-S2.jsonl",
+        "sha256": "f343a09f5796981bc0cf8c1b92f052641760c4b9179eb978456e9d02f62a9226",
+        "rows": 78
+      },
+      {
+        "file": "concepts-S3.jsonl",
+        "sha256": "4a4e5f1971994490d989834f6995468509acf8ea64b2ceeeea2ff7b711418232",
+        "rows": 20
+      },
+      {
+        "file": "concepts-S4.jsonl",
+        "sha256": "2155bd5c9b22b6d321d46a7b7c431bca533fd057d74b29dd87337e563d5c7e4f",
+        "rows": 33
+      },
+      {
+        "file": "concepts-S5.jsonl",
+        "sha256": "af867d711fd9847e01ea843327de64be869fd5da832ba1f7bef3d08c8daff44d",
+        "rows": 253
+      },
+      {
+        "file": "concepts-S6.jsonl",
+        "sha256": "f95b1795d407b69f2e49497670c961171bc721c716d7e1e913fa3ab6e9c8817f",
+        "rows": 94
+      },
+      {
+        "file": "concepts-S7.jsonl",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rows": 0
+      },
+      {
+        "file": "concepts-T1.jsonl",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rows": 0
+      },
+      {
+        "file": "concepts-T2.jsonl",
+        "sha256": "4b9005b6d64db5e24c8dbb15d4a1628cfb8ffff493c8fe310a2e746df5aa5e3b",
+        "rows": 285
+      },
+      {
+        "file": "concepts-T3.jsonl",
+        "sha256": "640b9f6e3996351b1951fa3bb06483bbf21efc46ecde5e28bf06fd24381bc88a",
+        "rows": 40
+      },
+      {
+        "file": "concepts-T4.jsonl",
+        "sha256": "61125fbf42b42e5d09e922d2a34e3748ef36a9721608843b000b636de3fef94a",
+        "rows": 325
+      },
+      {
+        "file": "concepts-T5.jsonl",
+        "sha256": "fceba1d0273a7a93c140f697f37dcc8218d0cb36c64c2eb69a5a697e83ad63ec",
+        "rows": 76
+      },
+      {
+        "file": "concepts-T6.jsonl",
+        "sha256": "5f9c0d875187d48cfe29055987e9f08128cea284f59a5842fe61db137a2c324c",
+        "rows": 49
+      },
+      {
+        "file": "concepts-T7.jsonl",
+        "sha256": "f7d1d4fc22e6fa4359ade976198999ace7f880e9d94f561b6c1c5e0c2ee1201e",
+        "rows": 25
+      },
+      {
+        "file": "concepts-T8.jsonl",
+        "sha256": "0092e049710a0fc811803055184035380d58cba476f33d00746c506ced3e6628",
+        "rows": 6
+      },
+      {
+        "file": "concepts-U1.jsonl",
+        "sha256": "ec6273d57dd4c0e96ae6ab2544cc8af18f59464f89822111a0ce18fa56d8bf2c",
+        "rows": 5
+      },
+      {
+        "file": "concepts-U2.jsonl",
+        "sha256": "7d8dae30e7490ba47a22bfeefac18852d2f5803e04555c4eb7d911fe16edec24",
+        "rows": 4
+      },
+      {
+        "file": "concepts-U3.jsonl",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rows": 0
+      },
+      {
+        "file": "concepts-U4.jsonl",
+        "sha256": "cfb9ed57a3e006e44ecc7a9fa5236314c4541f2ba91f6892f06f52c57cd44cce",
+        "rows": 2
+      },
+      {
+        "file": "concepts-U5.jsonl",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rows": 0
+      }
+    ],
+    "xrefs": [
+      {
+        "file": "xrefs-A.jsonl",
+        "sha256": "d3bb7a69eab7d76756e148381ebec61158c6533793c910ced788b2682fdd8a09",
+        "rows": 8
+      },
+      {
+        "file": "xrefs-B.jsonl",
+        "sha256": "fdb57dac73f4cb519fb7544c9b0d9fcdab159c032e67c44da4d2bdf18ca3a7ad",
+        "rows": 32
+      },
+      {
+        "file": "xrefs-C.jsonl",
+        "sha256": "bfb5e6e132cab90105fa1fa5261139976b70fb77547d184437d696ef97b2e0e3",
+        "rows": 29
+      },
+      {
+        "file": "xrefs-D.jsonl",
+        "sha256": "b070918ec9b3c6443f695fd38b3bbb6d98b30cb311878d75fde79ce5380f0312",
+        "rows": 5
+      },
+      {
+        "file": "xrefs-E.jsonl",
+        "sha256": "eb720959de6ae85cf8219e3ffb46ba16e9c1733cf390cbfa44363d1db8181cb3",
+        "rows": 10
+      },
+      {
+        "file": "xrefs-F.jsonl",
+        "sha256": "c641b5920794662a7c5a21b403f739f7e9553baa2ef495e4ce5ba025f4512b8d",
+        "rows": 6
+      },
+      {
+        "file": "xrefs-G.jsonl",
+        "sha256": "e438bf89f579b2798ef77ff03abccf877df355cc4c1b362b76b7bf8457b7cb76",
+        "rows": 16
+      },
+      {
+        "file": "xrefs-H.jsonl",
+        "sha256": "2959c8f4adbdfcaa3b18351b0b0535d06a23e529f09be538290185cc3b17635f",
+        "rows": 4
+      },
+      {
+        "file": "xrefs-I.jsonl",
+        "sha256": "122eae6cc3fdffb34445f63dcef22cf1db1855914f936c03026b112b422e9b17",
+        "rows": 13
+      },
+      {
+        "file": "xrefs-J.jsonl",
+        "sha256": "c26f474373f761593cf1901b3cfdddcc4820b8408de162ade06ea5129b76674c",
+        "rows": 33
+      },
+      {
+        "file": "xrefs-K.jsonl",
+        "sha256": "031e09ec19a70a6725b0fb78f5bd7cd8f4617fa11e7812694db22ea28d817189",
+        "rows": 9
+      },
+      {
+        "file": "xrefs-L.jsonl",
+        "sha256": "360c7d4e72b7e66631d0688f5ce211b024fe4ccb481df10dec978ff7b4686335",
+        "rows": 20
+      },
+      {
+        "file": "xrefs-M.jsonl",
+        "sha256": "57963d803abc5f54a33c62b99d0ce30564cbbebd82edbbade4d8b0bd751446ae",
+        "rows": 12
+      },
+      {
+        "file": "xrefs-N.jsonl",
+        "sha256": "6b62d2fa0b7585ec4368c01fb24877eb1a5ea1951658387b9256486b1e765afa",
+        "rows": 38
+      },
+      {
+        "file": "xrefs-S1.jsonl",
+        "sha256": "3b630c37e198513b6484a12e05342e2b116e26f16185ed007fdba40fccdecab1",
+        "rows": 7
+      },
+      {
+        "file": "xrefs-S2.jsonl",
+        "sha256": "3e0664d9722d791f79fa5bcb862d222057bc0e0e11409465870996e0c5cf0f6d",
+        "rows": 1
+      },
+      {
+        "file": "xrefs-S3.jsonl",
+        "sha256": "3fceac69645b6edc03210041be50acaa9121d1e75ebfd3d36f0fec08504860b2",
+        "rows": 8
+      },
+      {
+        "file": "xrefs-S4.jsonl",
+        "sha256": "6a185b9c1a92b3ef80d14e82069dd15e1a672c733254e85b02666ecdac5175b3",
+        "rows": 3
+      },
+      {
+        "file": "xrefs-S5.jsonl",
+        "sha256": "8c450d08f64dfa1bc27a7b2934c707451965160c20de63301a10ad19e712b562",
+        "rows": 72
+      },
+      {
+        "file": "xrefs-S6.jsonl",
+        "sha256": "56af2a302a4ccf6a451417d07b7a69cdb7a2005c855ed07a13ff812bc8dff6b5",
+        "rows": 13
+      },
+      {
+        "file": "xrefs-S7.jsonl",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rows": 0
+      },
+      {
+        "file": "xrefs-T1.jsonl",
+        "sha256": "75208be493ee9962c61cc2332ae8864a5af3c7c6f3e19ab6189d74ea6703b202",
+        "rows": 1
+      },
+      {
+        "file": "xrefs-T2.jsonl",
+        "sha256": "cca28bb176d81b842d11fddcaf01996647e146564875809f9639f20c8807190d",
+        "rows": 6
+      },
+      {
+        "file": "xrefs-T3.jsonl",
+        "sha256": "b67ac627f5e61b628bf87ead910ba85c20d22fd9d2f78c0f938f3c16515eec44",
+        "rows": 13
+      },
+      {
+        "file": "xrefs-T4.jsonl",
+        "sha256": "d0b723942275bb52acae3297da1b3547643d6eafde466daf2544af65c599af65",
+        "rows": 4
+      },
+      {
+        "file": "xrefs-T5.jsonl",
+        "sha256": "0d98254f09c7f712b3b668ae32211872d3ffb39ce3fe1ff65c41cc0f307b1d1d",
+        "rows": 6
+      },
+      {
+        "file": "xrefs-T6.jsonl",
+        "sha256": "b72d4566f6cceaf4ca8ef3dcf7bc09bbd7a75de1699282126a5deea5837421b9",
+        "rows": 6
+      },
+      {
+        "file": "xrefs-T7.jsonl",
+        "sha256": "83676b4bbada08cd73a8dbdd8c25703b34516bd6e4efd6610e6d05e5487968c9",
+        "rows": 10
+      },
+      {
+        "file": "xrefs-T8.jsonl",
+        "sha256": "2361bdace225a35a67f56a013efd7db6767c76c9d30a3df4524ca412d5d09704",
+        "rows": 9
+      },
+      {
+        "file": "xrefs-U1.jsonl",
+        "sha256": "362e6e97bc9ea45e6760d054879d761787db7c1435ad8f4e456fda99df3dc31e",
+        "rows": 8
+      },
+      {
+        "file": "xrefs-U2.jsonl",
+        "sha256": "b0e414d95983adb962279f92100c99ef31e5978a46ef9a07fbe28fd2ce885c69",
+        "rows": 3
+      },
+      {
+        "file": "xrefs-U3.jsonl",
+        "sha256": "9521b55a1b7f9f00c39da1cecf6a0cc1c268836179a3ceb713305fdb328e76a8",
+        "rows": 15
+      },
+      {
+        "file": "xrefs-U4.jsonl",
+        "sha256": "62befa1d831e9d33dfcf96d20cacacd13d4f06947a1c4ef9dd3017797da7c789",
+        "rows": 7
+      },
+      {
+        "file": "xrefs-U5.jsonl",
+        "sha256": "727bf2a87e906a80b097efed4246fcb824b1aaf1d7719b15e5ec7fe3937f0f32",
+        "rows": 85
+      }
+    ]
+  },
+  "outputs": {
+    "units": {
+      "rows_in": 12400,
+      "rows_out": 12400,
+      "sha256": "67f481a3056695183c0749cee2b3b93431615c9c35eebd007cf9697321a13cf7"
+    },
+    "tables": {
+      "rows_in": 121,
+      "rows_out": 121,
+      "sha256": "d466304ae612d6551736fa401cc39b0378b924548395ab79270093d01086b520"
+    },
+    "concepts": {
+      "rows_in": 3190,
+      "rows_out": 1921,
+      "sha256": "73d243a97882ef2ee066b61006b07d48437fd6d73eca1be117e43e13a8399cb6"
+    },
+    "xrefs": {
+      "rows_in": 512,
+      "rows_out": 509,
+      "sha256": "50d037df798d7088e047262930dfd2bbef1662696fb1dd3f87c5befc5d1422d9"
+    }
+  },
+  "handled_collisions": {
+    "units": 0,
+    "tables": 8,
+    "concepts": 596,
+    "xrefs": 0
+  },
+  "unhandled_collisions": [],
+  "scalar_conflicts": [],
+  "dropped_concept_source_refs": [
+    {
+      "concept_id": "dsm5fr-c-aaidd",
+      "unit_id": "dsm5fr-u-44-008"
+    },
+    {
+      "concept_id": "dsm5fr-c-begaiement",
+      "unit_id": "dsm5fr-u-50-021"
+    },
+    {
+      "concept_id": "dsm5fr-c-begaiement",
+      "unit_id": "dsm5fr-u-51-022"
+    },
+    {
+      "concept_id": "dsm5fr-c-begaiement",
+      "unit_id": "dsm5fr-u-52-023"
+    },
+    {
+      "concept_id": "dsm5fr-c-begaiement",
+      "unit_id": "dsm5fr-u-52-024"
+    },
+    {
+      "concept_id": "dsm5fr-c-begaiement",
+      "unit_id": "dsm5fr-u-xix-018"
+    },
+    {
+      "concept_id": "dsm5fr-c-cim-11",
+      "unit_id": "dsm5fr-u-44-008"
+    },
+    {
+      "concept_id": "dsm5fr-c-dysarthrie",
+      "unit_id": "dsm5fr-u-50-020"
+    },
+    {
+      "concept_id": "dsm5fr-c-handicap-intellectuel",
+      "unit_id": "dsm5fr-u-42-001"
+    },
+    {
+      "concept_id": "dsm5fr-c-handicap-intellectuel",
+      "unit_id": "dsm5fr-u-42-002"
+    },
+    {
+      "concept_id": "dsm5fr-c-handicap-intellectuel",
+      "unit_id": "dsm5fr-u-42-003"
+    },
+    {
+      "concept_id": "dsm5fr-c-handicap-intellectuel",
+      "unit_id": "dsm5fr-u-43-004"
+    },
+    {
+      "concept_id": "dsm5fr-c-handicap-intellectuel",
+      "unit_id": "dsm5fr-u-43-005"
+    },
+    {
+      "concept_id": "dsm5fr-c-handicap-intellectuel",
+      "unit_id": "dsm5fr-u-43-006"
+    },
+    {
+      "concept_id": "dsm5fr-c-handicap-intellectuel",
+      "unit_id": "dsm5fr-u-44-007"
+    },
+    {
+      "concept_id": "dsm5fr-c-handicap-intellectuel",
+      "unit_id": "dsm5fr-u-xix-018"
+    },
+    {
+      "concept_id": "dsm5fr-c-mutisme-selectif",
+      "unit_id": "dsm5fr-u-50-020"
+    },
+    {
+      "concept_id": "dsm5fr-c-mutisme-selectif",
+      "unit_id": "dsm5fr-u-65-038"
+    },
+    {
+      "concept_id": "dsm5fr-c-retard-global-developpement",
+      "unit_id": "dsm5fr-u-44-009"
+    },
+    {
+      "concept_id": "dsm5fr-c-retard-global-developpement",
+      "unit_id": "dsm5fr-u-xix-018"
+    },
+    {
+      "concept_id": "dsm5fr-c-syndrome-asperger",
+      "unit_id": "dsm5fr-u-55-030"
+    },
+    {
+      "concept_id": "dsm5fr-c-syndrome-gilles-tourette",
+      "unit_id": "dsm5fr-u-52-024"
+    },
+    {
+      "concept_id": "dsm5fr-c-syndrome-gilles-tourette",
+      "unit_id": "dsm5fr-u-xxi-020"
+    },
+    {
+      "concept_id": "dsm5fr-c-syndrome-landau-kleffner",
+      "unit_id": "dsm5fr-u-47-015"
+    },
+    {
+      "concept_id": "dsm5fr-c-syndrome-landau-kleffner",
+      "unit_id": "dsm5fr-u-48-041"
+    },
+    {
+      "concept_id": "dsm5fr-c-syndrome-rett",
+      "unit_id": "dsm5fr-u-57-031"
+    },
+    {
+      "concept_id": "dsm5fr-c-syndrome-rett",
+      "unit_id": "dsm5fr-u-65-038"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-communication-non-specifie",
+      "unit_id": "dsm5fr-u-55-029"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-communication-non-specifie",
+      "unit_id": "dsm5fr-u-xx-019"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-communication-sociale",
+      "unit_id": "dsm5fr-u-53-025"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-communication-sociale",
+      "unit_id": "dsm5fr-u-53-026"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-communication-sociale",
+      "unit_id": "dsm5fr-u-54-027"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-communication-sociale",
+      "unit_id": "dsm5fr-u-54-028"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-communication-sociale",
+      "unit_id": "dsm5fr-u-xx-019"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-langage",
+      "unit_id": "dsm5fr-u-45-012"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-langage",
+      "unit_id": "dsm5fr-u-46-013"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-langage",
+      "unit_id": "dsm5fr-u-47-014"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-langage",
+      "unit_id": "dsm5fr-u-47-015"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-langage",
+      "unit_id": "dsm5fr-u-48-016"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-langage",
+      "unit_id": "dsm5fr-u-xix-018"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-phonation",
+      "unit_id": "dsm5fr-u-48-017"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-phonation",
+      "unit_id": "dsm5fr-u-49-018"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-phonation",
+      "unit_id": "dsm5fr-u-49-019"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-phonation",
+      "unit_id": "dsm5fr-u-50-020"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-phonation",
+      "unit_id": "dsm5fr-u-xix-018"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-spectre-autisme",
+      "unit_id": "dsm5fr-u-55-030"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-spectre-autisme",
+      "unit_id": "dsm5fr-u-57-031"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-spectre-autisme",
+      "unit_id": "dsm5fr-u-57-032"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-spectre-autisme",
+      "unit_id": "dsm5fr-u-59-033"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-spectre-autisme",
+      "unit_id": "dsm5fr-u-61-034"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-spectre-autisme",
+      "unit_id": "dsm5fr-u-62-035"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-spectre-autisme",
+      "unit_id": "dsm5fr-u-63-036"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-spectre-autisme",
+      "unit_id": "dsm5fr-u-64-037"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-spectre-autisme",
+      "unit_id": "dsm5fr-u-65-038"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-spectre-autisme",
+      "unit_id": "dsm5fr-u-66-039"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-spectre-autisme",
+      "unit_id": "dsm5fr-u-xx-019"
+    }
+  ],
+  "unhandled_collision_count": 0,
+  "legacy_merged_units_not_in_candidate": [
+    {
+      "id": "dsm5fr-u-1-COVER2",
+      "page_start": 60,
+      "page_end": 60,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-1000-COVER2",
+      "page_start": 1059,
+      "page_end": 1059,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-1001-COVER2",
+      "page_start": 1060,
+      "page_end": 1060,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-1003-COVER2",
+      "page_start": 1062,
+      "page_end": 1062,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-1010-COVER2",
+      "page_start": 1069,
+      "page_end": 1069,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-1042-COVER",
+      "page_start": 1100,
+      "page_end": 1100,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-1043-COVER",
+      "page_start": 1101,
+      "page_end": 1101,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-1044-COVER",
+      "page_start": 1102,
+      "page_end": 1102,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-1056-COVER",
+      "page_start": 1114,
+      "page_end": 1114,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-106-COVER",
+      "page_start": 164,
+      "page_end": 164,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-1076-COVER",
+      "page_start": 1134,
+      "page_end": 1134,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-1078-COVER2",
+      "page_start": 1137,
+      "page_end": 1137,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-108-COVER",
+      "page_start": 166,
+      "page_end": 166,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-1081-COVER2",
+      "page_start": 1140,
+      "page_end": 1140,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-1084-COVER",
+      "page_start": 1142,
+      "page_end": 1142,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-1085-COVER",
+      "page_start": 1143,
+      "page_end": 1143,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-1086-COVER",
+      "page_start": 1144,
+      "page_end": 1144,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-1087-COVER",
+      "page_start": 1145,
+      "page_end": 1145,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-1088-COVER",
+      "page_start": 1146,
+      "page_end": 1146,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-1092-M001",
+      "page_start": 1151,
+      "page_end": 1174,
+      "extraction_status": "extracted",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-1116-COVER",
+      "page_start": 1174,
+      "page_end": 1174,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-1117-M001",
+      "page_start": 1176,
+      "page_end": 1192,
+      "extraction_status": "extracted",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-1134-COVER",
+      "page_start": 1192,
+      "page_end": 1192,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-1135-M001",
+      "page_start": 1194,
+      "page_end": 1218,
+      "extraction_status": "extracted",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-1160-COVER",
+      "page_start": 1218,
+      "page_end": 1218,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-1161-M002",
+      "page_start": 1220,
+      "page_end": 1220,
+      "extraction_status": "extracted",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-1162-M003",
+      "page_start": 1221,
+      "page_end": 1221,
+      "extraction_status": "extracted",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-1163-M004",
+      "page_start": 1222,
+      "page_end": 1222,
+      "extraction_status": "extracted",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-1164-M005",
+      "page_start": 1223,
+      "page_end": 1223,
+      "extraction_status": "extracted",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-1165-M006",
+      "page_start": 1224,
+      "page_end": 1224,
+      "extraction_status": "extracted",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-1166-M007",
+      "page_start": 1225,
+      "page_end": 1225,
+      "extraction_status": "extracted",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-123-COVER",
+      "page_start": 181,
+      "page_end": 181,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-131-COVER",
+      "page_start": 189,
+      "page_end": 189,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-135-COVER",
+      "page_start": 193,
+      "page_end": 193,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-156-COVER",
+      "page_start": 214,
+      "page_end": 214,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-162-COVER",
+      "page_start": 220,
+      "page_end": 220,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-163-COVER",
+      "page_start": 221,
+      "page_end": 221,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-2-COVER2",
+      "page_start": 61,
+      "page_end": 61,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-267-COVER",
+      "page_start": 325,
+      "page_end": 325,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-269-COVER",
+      "page_start": 327,
+      "page_end": 327,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-270-COVER",
+      "page_start": 328,
+      "page_end": 328,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-271-COVER",
+      "page_start": 329,
+      "page_end": 329,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-274-COVER",
+      "page_start": 332,
+      "page_end": 332,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-275-COVER",
+      "page_start": 333,
+      "page_end": 333,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-276-COVER",
+      "page_start": 334,
+      "page_end": 334,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-278-COVER",
+      "page_start": 336,
+      "page_end": 336,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-279-COVER",
+      "page_start": 337,
+      "page_end": 337,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-28-COVER",
+      "page_start": 86,
+      "page_end": 86,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-280-COVER",
+      "page_start": 338,
+      "page_end": 338,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-281-COVER",
+      "page_start": 339,
+      "page_end": 339,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-283-COVER",
+      "page_start": 341,
+      "page_end": 341,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-284-COVER",
+      "page_start": 342,
+      "page_end": 342,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-285-COVER",
+      "page_start": 343,
+      "page_end": 343,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-288-COVER",
+      "page_start": 346,
+      "page_end": 346,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-289-COVER",
+      "page_start": 347,
+      "page_end": 347,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-291-COVER",
+      "page_start": 349,
+      "page_end": 349,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-292-COVER",
+      "page_start": 350,
+      "page_end": 350,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-293-COVER",
+      "page_start": 351,
+      "page_end": 351,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-294-COVER",
+      "page_start": 352,
+      "page_end": 352,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-295-COVER",
+      "page_start": 353,
+      "page_end": 353,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-296-COVER",
+      "page_start": 354,
+      "page_end": 354,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-297-COVER",
+      "page_start": 355,
+      "page_end": 355,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-298-COVER",
+      "page_start": 356,
+      "page_end": 356,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-299-COVER",
+      "page_start": 357,
+      "page_end": 357,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-300-COVER",
+      "page_start": 358,
+      "page_end": 358,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-303-COVER",
+      "page_start": 361,
+      "page_end": 361,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-304-COVER",
+      "page_start": 362,
+      "page_end": 362,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-305-COVER",
+      "page_start": 363,
+      "page_end": 363,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-306-COVER",
+      "page_start": 364,
+      "page_end": 364,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-307-COVER",
+      "page_start": 365,
+      "page_end": 365,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-31-COVER2",
+      "page_start": 90,
+      "page_end": 90,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-310-COVER",
+      "page_start": 368,
+      "page_end": 368,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-311-COVER",
+      "page_start": 369,
+      "page_end": 369,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-312-COVER",
+      "page_start": 370,
+      "page_end": 370,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-313-COVER",
+      "page_start": 371,
+      "page_end": 371,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-316-COVER",
+      "page_start": 374,
+      "page_end": 374,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-317-COVER",
+      "page_start": 375,
+      "page_end": 375,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-318-COVER",
+      "page_start": 376,
+      "page_end": 376,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-319-COVER",
+      "page_start": 377,
+      "page_end": 377,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-32-COVER2",
+      "page_start": 91,
+      "page_end": 91,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-321-COVER",
+      "page_start": 379,
+      "page_end": 379,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-322-COVER",
+      "page_start": 380,
+      "page_end": 380,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-323-COVER",
+      "page_start": 381,
+      "page_end": 381,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-325-COVER",
+      "page_start": 383,
+      "page_end": 383,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-326-COVER",
+      "page_start": 384,
+      "page_end": 384,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-329-COVER",
+      "page_start": 387,
+      "page_end": 387,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-330-COVER",
+      "page_start": 388,
+      "page_end": 388,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-333-COVER",
+      "page_start": 391,
+      "page_end": 391,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-334-COVER",
+      "page_start": 392,
+      "page_end": 392,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-337-COVER",
+      "page_start": 395,
+      "page_end": 395,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-338-COVER",
+      "page_start": 396,
+      "page_end": 396,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-339-COVER",
+      "page_start": 397,
+      "page_end": 397,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-340-COVER",
+      "page_start": 398,
+      "page_end": 398,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-341-COVER",
+      "page_start": 399,
+      "page_end": 399,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-342-COVER",
+      "page_start": 400,
+      "page_end": 400,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-345-COVER",
+      "page_start": 403,
+      "page_end": 403,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-346-COVER",
+      "page_start": 404,
+      "page_end": 404,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-349-COVER",
+      "page_start": 407,
+      "page_end": 407,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-354-COVER",
+      "page_start": 412,
+      "page_end": 412,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-355-COVER",
+      "page_start": 413,
+      "page_end": 413,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-356-COVER",
+      "page_start": 414,
+      "page_end": 414,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-357-COVER",
+      "page_start": 415,
+      "page_end": 415,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-358-COVER",
+      "page_start": 416,
+      "page_end": 416,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-359-COVER",
+      "page_start": 417,
+      "page_end": 417,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-360-COVER",
+      "page_start": 418,
+      "page_end": 418,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-364-COVER",
+      "page_start": 422,
+      "page_end": 422,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-365-COVER",
+      "page_start": 423,
+      "page_end": 423,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-366-COVER",
+      "page_start": 424,
+      "page_end": 424,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-374-COVER",
+      "page_start": 432,
+      "page_end": 432,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-375-COVER",
+      "page_start": 433,
+      "page_end": 433,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-376-COVER",
+      "page_start": 434,
+      "page_end": 434,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-377-COVER",
+      "page_start": 435,
+      "page_end": 435,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-378-COVER",
+      "page_start": 436,
+      "page_end": 436,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-379-COVER",
+      "page_start": 437,
+      "page_end": 437,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-382-COVER",
+      "page_start": 440,
+      "page_end": 440,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-383-COVER",
+      "page_start": 441,
+      "page_end": 441,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-384-COVER",
+      "page_start": 442,
+      "page_end": 442,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-389-COVER",
+      "page_start": 447,
+      "page_end": 447,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-394-COVER",
+      "page_start": 452,
+      "page_end": 452,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-395-COVER",
+      "page_start": 453,
+      "page_end": 453,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-398-COVER",
+      "page_start": 456,
+      "page_end": 456,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-399-COVER",
+      "page_start": 457,
+      "page_end": 457,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-400-COVER",
+      "page_start": 458,
+      "page_end": 458,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-401-COVER",
+      "page_start": 459,
+      "page_end": 459,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-402-COVER",
+      "page_start": 460,
+      "page_end": 460,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-403-COVER",
+      "page_start": 461,
+      "page_end": 461,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-404-COVER2",
+      "page_start": 463,
+      "page_end": 463,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-406-COVER",
+      "page_start": 464,
+      "page_end": 464,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-407-COVER",
+      "page_start": 465,
+      "page_end": 465,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-408-COVER",
+      "page_start": 466,
+      "page_end": 466,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-415-COVER",
+      "page_start": 473,
+      "page_end": 473,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-416-COVER",
+      "page_start": 474,
+      "page_end": 474,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-419-COVER",
+      "page_start": 477,
+      "page_end": 477,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-423-COVER",
+      "page_start": 481,
+      "page_end": 481,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-426-COVER",
+      "page_start": 484,
+      "page_end": 484,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-427-COVER",
+      "page_start": 485,
+      "page_end": 485,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-428-COVER",
+      "page_start": 486,
+      "page_end": 486,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-436-COVER",
+      "page_start": 494,
+      "page_end": 494,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-437-COVER",
+      "page_start": 495,
+      "page_end": 495,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-442-COVER",
+      "page_start": 500,
+      "page_end": 500,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-443-COVER",
+      "page_start": 501,
+      "page_end": 501,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-444-COVER",
+      "page_start": 502,
+      "page_end": 502,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-445-COVER",
+      "page_start": 503,
+      "page_end": 503,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-446-COVER",
+      "page_start": 504,
+      "page_end": 504,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-450-COVER",
+      "page_start": 508,
+      "page_end": 508,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-451-COVER",
+      "page_start": 509,
+      "page_end": 509,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-452-COVER",
+      "page_start": 510,
+      "page_end": 510,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-456-COVER",
+      "page_start": 514,
+      "page_end": 514,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-460-COVER",
+      "page_start": 518,
+      "page_end": 518,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-461-COVER",
+      "page_start": 519,
+      "page_end": 519,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-462-COVER2",
+      "page_start": 521,
+      "page_end": 521,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-463-COVER",
+      "page_start": 521,
+      "page_end": 521,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-464-COVER2",
+      "page_start": 523,
+      "page_end": 523,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-467-COVER",
+      "page_start": 525,
+      "page_end": 525,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-469-COVER",
+      "page_start": 527,
+      "page_end": 527,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-470-COVER",
+      "page_start": 528,
+      "page_end": 528,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-471-COVER",
+      "page_start": 529,
+      "page_end": 529,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-474-COVER",
+      "page_start": 532,
+      "page_end": 532,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-475-COVER",
+      "page_start": 533,
+      "page_end": 533,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-476-COVER",
+      "page_start": 534,
+      "page_end": 534,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-477-COVER",
+      "page_start": 535,
+      "page_end": 535,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-482-COVER",
+      "page_start": 540,
+      "page_end": 540,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-487-COVER",
+      "page_start": 545,
+      "page_end": 545,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-488-COVER",
+      "page_start": 546,
+      "page_end": 546,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-489-COVER",
+      "page_start": 547,
+      "page_end": 547,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-493-COVER",
+      "page_start": 551,
+      "page_end": 551,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-494-COVER",
+      "page_start": 552,
+      "page_end": 552,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-495-COVER",
+      "page_start": 553,
+      "page_end": 553,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-500-COVER",
+      "page_start": 558,
+      "page_end": 558,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-504-COVER",
+      "page_start": 562,
+      "page_end": 562,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-508-COVER",
+      "page_start": 566,
+      "page_end": 566,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-510-COVER",
+      "page_start": 568,
+      "page_end": 568,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-512-COVER",
+      "page_start": 570,
+      "page_end": 570,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-518-COVER",
+      "page_start": 576,
+      "page_end": 576,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-519-COVER",
+      "page_start": 577,
+      "page_end": 577,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-520-COVER",
+      "page_start": 578,
+      "page_end": 578,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-524-COVER",
+      "page_start": 582,
+      "page_end": 582,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-528-COVER",
+      "page_start": 586,
+      "page_end": 586,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-532-COVER",
+      "page_start": 590,
+      "page_end": 590,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-533-COVER",
+      "page_start": 591,
+      "page_end": 591,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-537-COVER",
+      "page_start": 595,
+      "page_end": 595,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-538-COVER",
+      "page_start": 596,
+      "page_end": 596,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-539-COVER",
+      "page_start": 597,
+      "page_end": 597,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-540-COVER",
+      "page_start": 598,
+      "page_end": 598,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-541-COVER",
+      "page_start": 599,
+      "page_end": 599,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-546-COVER",
+      "page_start": 604,
+      "page_end": 604,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-547-COVER",
+      "page_start": 605,
+      "page_end": 605,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-548-COVER",
+      "page_start": 606,
+      "page_end": 606,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-549-COVER",
+      "page_start": 607,
+      "page_end": 607,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-550-COVER",
+      "page_start": 608,
+      "page_end": 608,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-551-COVER",
+      "page_start": 609,
+      "page_end": 609,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-552-COVER",
+      "page_start": 610,
+      "page_end": 610,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-553-COVER",
+      "page_start": 611,
+      "page_end": 611,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-555-COVER",
+      "page_start": 613,
+      "page_end": 613,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-558-COVER",
+      "page_start": 616,
+      "page_end": 616,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-559-COVER",
+      "page_start": 617,
+      "page_end": 617,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-562-COVER",
+      "page_start": 620,
+      "page_end": 620,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-563-COVER",
+      "page_start": 621,
+      "page_end": 621,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-567-COVER",
+      "page_start": 625,
+      "page_end": 625,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-568-COVER",
+      "page_start": 626,
+      "page_end": 626,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-569-COVER",
+      "page_start": 627,
+      "page_end": 627,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-572-COVER",
+      "page_start": 630,
+      "page_end": 630,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-573-COVER",
+      "page_start": 631,
+      "page_end": 631,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-574-COVER",
+      "page_start": 632,
+      "page_end": 632,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-577-COVER",
+      "page_start": 635,
+      "page_end": 635,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-578-COVER",
+      "page_start": 636,
+      "page_end": 636,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-580-COVER",
+      "page_start": 638,
+      "page_end": 638,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-581-COVER",
+      "page_start": 639,
+      "page_end": 639,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-584-COVER",
+      "page_start": 642,
+      "page_end": 642,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-585-COVER",
+      "page_start": 643,
+      "page_end": 643,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-586-COVER",
+      "page_start": 644,
+      "page_end": 644,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-588-COVER",
+      "page_start": 646,
+      "page_end": 646,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-589-COVER",
+      "page_start": 647,
+      "page_end": 647,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-590-COVER",
+      "page_start": 648,
+      "page_end": 648,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-591-COVER",
+      "page_start": 649,
+      "page_end": 649,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-592-COVER",
+      "page_start": 650,
+      "page_end": 650,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-593-COVER",
+      "page_start": 651,
+      "page_end": 651,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-596-COVER",
+      "page_start": 654,
+      "page_end": 654,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-597-COVER",
+      "page_start": 655,
+      "page_end": 655,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-598-COVER",
+      "page_start": 656,
+      "page_end": 656,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-599-COVER",
+      "page_start": 657,
+      "page_end": 657,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-600-COVER",
+      "page_start": 658,
+      "page_end": 658,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-601-COVER",
+      "page_start": 659,
+      "page_end": 659,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-602-COVER",
+      "page_start": 660,
+      "page_end": 660,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-604-COVER",
+      "page_start": 662,
+      "page_end": 662,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-608-COVER",
+      "page_start": 666,
+      "page_end": 666,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-609-COVER",
+      "page_start": 667,
+      "page_end": 667,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-610-COVER",
+      "page_start": 668,
+      "page_end": 668,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-612-COVER",
+      "page_start": 670,
+      "page_end": 670,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-613-COVER",
+      "page_start": 671,
+      "page_end": 671,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-614-COVER",
+      "page_start": 672,
+      "page_end": 672,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-617-COVER",
+      "page_start": 675,
+      "page_end": 675,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-618-COVER",
+      "page_start": 676,
+      "page_end": 676,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-619-COVER",
+      "page_start": 677,
+      "page_end": 677,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-620-COVER",
+      "page_start": 678,
+      "page_end": 678,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-621-COVER",
+      "page_start": 679,
+      "page_end": 679,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-622-COVER",
+      "page_start": 680,
+      "page_end": 680,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-624-COVER",
+      "page_start": 682,
+      "page_end": 682,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-626-COVER",
+      "page_start": 684,
+      "page_end": 684,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-628-COVER",
+      "page_start": 686,
+      "page_end": 686,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-629-COVER",
+      "page_start": 687,
+      "page_end": 687,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-630-COVER",
+      "page_start": 688,
+      "page_end": 688,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-642-COVER",
+      "page_start": 700,
+      "page_end": 700,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-645-COVER",
+      "page_start": 703,
+      "page_end": 703,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-646-COVER",
+      "page_start": 704,
+      "page_end": 704,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-647-COVER",
+      "page_start": 705,
+      "page_end": 705,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-648-COVER",
+      "page_start": 706,
+      "page_end": 706,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-649-COVER",
+      "page_start": 707,
+      "page_end": 707,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-652-COVER",
+      "page_start": 710,
+      "page_end": 710,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-655-COVER",
+      "page_start": 713,
+      "page_end": 713,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-659-COVER",
+      "page_start": 717,
+      "page_end": 717,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-660-COVER",
+      "page_start": 718,
+      "page_end": 718,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-662-COVER",
+      "page_start": 720,
+      "page_end": 720,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-663-COVER",
+      "page_start": 721,
+      "page_end": 721,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-667-COVER",
+      "page_start": 725,
+      "page_end": 725,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-668-COVER",
+      "page_start": 726,
+      "page_end": 726,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-669-COVER",
+      "page_start": 727,
+      "page_end": 727,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-670-COVER",
+      "page_start": 728,
+      "page_end": 728,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-68-COVER",
+      "page_start": 126,
+      "page_end": 126,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-683-COVER",
+      "page_start": 741,
+      "page_end": 741,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-684-COVER",
+      "page_start": 742,
+      "page_end": 742,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-695-COVER",
+      "page_start": 753,
+      "page_end": 753,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-696-COVER",
+      "page_start": 754,
+      "page_end": 754,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-705-COVER",
+      "page_start": 763,
+      "page_end": 763,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-706-COVER",
+      "page_start": 764,
+      "page_end": 764,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-715-COVER",
+      "page_start": 773,
+      "page_end": 773,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-716-COVER",
+      "page_start": 774,
+      "page_end": 774,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-717-COVER",
+      "page_start": 775,
+      "page_end": 775,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-727-COVER",
+      "page_start": 785,
+      "page_end": 785,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-728-COVER",
+      "page_start": 786,
+      "page_end": 786,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-729-COVER",
+      "page_start": 787,
+      "page_end": 787,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-73-COVER",
+      "page_start": 131,
+      "page_end": 131,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-730-COVER",
+      "page_start": 788,
+      "page_end": 788,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-738-COVER",
+      "page_start": 796,
+      "page_end": 796,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-739-COVER",
+      "page_start": 797,
+      "page_end": 797,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-755-COVER",
+      "page_start": 813,
+      "page_end": 813,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-756-COVER",
+      "page_start": 814,
+      "page_end": 814,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-758-COVER",
+      "page_start": 816,
+      "page_end": 816,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-759-COVER",
+      "page_start": 817,
+      "page_end": 817,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-760-COVER",
+      "page_start": 818,
+      "page_end": 818,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-761-COVER",
+      "page_start": 819,
+      "page_end": 819,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-762-COVER",
+      "page_start": 820,
+      "page_end": 820,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-763-COVER",
+      "page_start": 821,
+      "page_end": 821,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-764-COVER",
+      "page_start": 822,
+      "page_end": 822,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-765-COVER",
+      "page_start": 823,
+      "page_end": 823,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-766-COVER",
+      "page_start": 824,
+      "page_end": 824,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-767-COVER",
+      "page_start": 825,
+      "page_end": 825,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-768-COVER",
+      "page_start": 826,
+      "page_end": 826,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-769-COVER",
+      "page_start": 827,
+      "page_end": 827,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-77-COVER",
+      "page_start": 135,
+      "page_end": 135,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-770-COVER",
+      "page_start": 828,
+      "page_end": 828,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-771-COVER",
+      "page_start": 829,
+      "page_end": 829,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-772-COVER",
+      "page_start": 830,
+      "page_end": 830,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-773-COVER",
+      "page_start": 831,
+      "page_end": 831,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-774-COVER",
+      "page_start": 832,
+      "page_end": 832,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-783-COVER",
+      "page_start": 841,
+      "page_end": 841,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-784-COVER",
+      "page_start": 842,
+      "page_end": 842,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-785-COVER",
+      "page_start": 843,
+      "page_end": 843,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-79-COVER",
+      "page_start": 137,
+      "page_end": 137,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-792-COVER",
+      "page_start": 850,
+      "page_end": 850,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-793-COVER",
+      "page_start": 851,
+      "page_end": 851,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-794-COVER",
+      "page_start": 852,
+      "page_end": 852,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-795-COVER",
+      "page_start": 853,
+      "page_end": 853,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-796-COVER",
+      "page_start": 854,
+      "page_end": 854,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-799-COVER",
+      "page_start": 857,
+      "page_end": 857,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-80-COVER",
+      "page_start": 138,
+      "page_end": 138,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-800-COVER",
+      "page_start": 858,
+      "page_end": 858,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-803-COVER",
+      "page_start": 861,
+      "page_end": 861,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-804-COVER",
+      "page_start": 862,
+      "page_end": 862,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-807-COVER",
+      "page_start": 865,
+      "page_end": 865,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-810-COVER",
+      "page_start": 868,
+      "page_end": 868,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-811-COVER",
+      "page_start": 869,
+      "page_end": 869,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-814-COVER",
+      "page_start": 872,
+      "page_end": 872,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-815-COVER",
+      "page_start": 873,
+      "page_end": 873,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-818-COVER",
+      "page_start": 876,
+      "page_end": 876,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-819-COVER",
+      "page_start": 877,
+      "page_end": 877,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-82-COVER",
+      "page_start": 140,
+      "page_end": 140,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-820-COVER",
+      "page_start": 878,
+      "page_end": 878,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-823-COVER",
+      "page_start": 881,
+      "page_end": 881,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-824-COVER",
+      "page_start": 882,
+      "page_end": 882,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-826-COVER",
+      "page_start": 884,
+      "page_end": 884,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-828-COVER",
+      "page_start": 886,
+      "page_end": 886,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-831-COVER",
+      "page_start": 889,
+      "page_end": 889,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-836-COVER",
+      "page_start": 894,
+      "page_end": 894,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-837-COVER",
+      "page_start": 895,
+      "page_end": 895,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-838-COVER",
+      "page_start": 896,
+      "page_end": 896,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-839-COVER",
+      "page_start": 897,
+      "page_end": 897,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-840-COVER",
+      "page_start": 898,
+      "page_end": 898,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-844-COVER",
+      "page_start": 902,
+      "page_end": 902,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-847-COVER",
+      "page_start": 905,
+      "page_end": 905,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-848-COVER",
+      "page_start": 906,
+      "page_end": 906,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-851-COVER",
+      "page_start": 909,
+      "page_end": 909,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-855-COVER",
+      "page_start": 913,
+      "page_end": 913,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-859-COVER",
+      "page_start": 917,
+      "page_end": 917,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-860-COVER",
+      "page_start": 918,
+      "page_end": 918,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-863-COVER",
+      "page_start": 921,
+      "page_end": 921,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-864-COVER",
+      "page_start": 922,
+      "page_end": 922,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-867-COVER",
+      "page_start": 925,
+      "page_end": 925,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-868-COVER",
+      "page_start": 926,
+      "page_end": 926,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-869-COVER",
+      "page_start": 927,
+      "page_end": 927,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-870-COVER",
+      "page_start": 928,
+      "page_end": 928,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-871-COVER",
+      "page_start": 929,
+      "page_end": 929,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-872-COVER",
+      "page_start": 930,
+      "page_end": 930,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-873-COVER",
+      "page_start": 931,
+      "page_end": 931,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-874-COVER",
+      "page_start": 932,
+      "page_end": 932,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-875-COVER",
+      "page_start": 933,
+      "page_end": 933,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-876-COVER",
+      "page_start": 934,
+      "page_end": 934,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-877-COVER",
+      "page_start": 935,
+      "page_end": 935,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-878-COVER",
+      "page_start": 936,
+      "page_end": 936,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-879-COVER",
+      "page_start": 937,
+      "page_end": 937,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-880-COVER",
+      "page_start": 938,
+      "page_end": 938,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-881-COVER",
+      "page_start": 939,
+      "page_end": 939,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-882-COVER",
+      "page_start": 940,
+      "page_end": 940,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-883-COVER",
+      "page_start": 941,
+      "page_end": 941,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-884-COVER",
+      "page_start": 942,
+      "page_end": 942,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-885-COVER",
+      "page_start": 943,
+      "page_end": 943,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-886-COVER",
+      "page_start": 944,
+      "page_end": 944,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-887-COVER",
+      "page_start": 945,
+      "page_end": 945,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-888-COVER",
+      "page_start": 946,
+      "page_end": 946,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-889-COVER",
+      "page_start": 947,
+      "page_end": 947,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-890-COVER",
+      "page_start": 948,
+      "page_end": 948,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-893-COVER",
+      "page_start": 951,
+      "page_end": 951,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-894-COVER",
+      "page_start": 952,
+      "page_end": 952,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-895-COVER",
+      "page_start": 953,
+      "page_end": 953,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-896-COVER",
+      "page_start": 954,
+      "page_end": 954,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-897-COVER",
+      "page_start": 955,
+      "page_end": 955,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-898-COVER",
+      "page_start": 956,
+      "page_end": 956,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-899-COVER",
+      "page_start": 957,
+      "page_end": 957,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-900-COVER",
+      "page_start": 958,
+      "page_end": 958,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-901-COVER",
+      "page_start": 959,
+      "page_end": 959,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-902-COVER",
+      "page_start": 960,
+      "page_end": 960,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-903-COVER",
+      "page_start": 961,
+      "page_end": 961,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-904-COVER",
+      "page_start": 962,
+      "page_end": 962,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-905-COVER",
+      "page_start": 963,
+      "page_end": 963,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-906-COVER",
+      "page_start": 964,
+      "page_end": 964,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-907-COVER",
+      "page_start": 965,
+      "page_end": 965,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-908-COVER",
+      "page_start": 966,
+      "page_end": 966,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-909-COVER",
+      "page_start": 967,
+      "page_end": 967,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-910-COVER",
+      "page_start": 968,
+      "page_end": 968,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-911-COVER",
+      "page_start": 969,
+      "page_end": 969,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-912-COVER",
+      "page_start": 970,
+      "page_end": 970,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-913-COVER",
+      "page_start": 971,
+      "page_end": 971,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-914-COVER",
+      "page_start": 972,
+      "page_end": 972,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-915-COVER",
+      "page_start": 973,
+      "page_end": 973,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-916-COVER",
+      "page_start": 974,
+      "page_end": 974,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-917-COVER",
+      "page_start": 975,
+      "page_end": 975,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-918-COVER",
+      "page_start": 976,
+      "page_end": 976,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-919-COVER",
+      "page_start": 977,
+      "page_end": 977,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-920-COVER",
+      "page_start": 978,
+      "page_end": 978,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-921-COVER",
+      "page_start": 979,
+      "page_end": 979,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-922-COVER",
+      "page_start": 980,
+      "page_end": 980,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-923-COVER",
+      "page_start": 981,
+      "page_end": 981,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-924-COVER",
+      "page_start": 982,
+      "page_end": 982,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-925-COVER",
+      "page_start": 983,
+      "page_end": 983,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-926-COVER",
+      "page_start": 984,
+      "page_end": 984,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-927-COVER",
+      "page_start": 985,
+      "page_end": 985,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-930-COVER",
+      "page_start": 988,
+      "page_end": 988,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-931-COVER2",
+      "page_start": 990,
+      "page_end": 990,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-932-COVER2",
+      "page_start": 991,
+      "page_end": 991,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-933-COVER",
+      "page_start": 991,
+      "page_end": 991,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-937-COVER",
+      "page_start": 995,
+      "page_end": 995,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-940-COVER",
+      "page_start": 998,
+      "page_end": 998,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-941-COVER",
+      "page_start": 999,
+      "page_end": 999,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-947-COVER",
+      "page_start": 1005,
+      "page_end": 1005,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-948-COVER",
+      "page_start": 1006,
+      "page_end": 1006,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-949-COVER",
+      "page_start": 1007,
+      "page_end": 1007,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-950-COVER",
+      "page_start": 1008,
+      "page_end": 1008,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-951-COVER",
+      "page_start": 1009,
+      "page_end": 1009,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-953-COVER",
+      "page_start": 1011,
+      "page_end": 1011,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-956-COVER",
+      "page_start": 1014,
+      "page_end": 1014,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-957-COVER",
+      "page_start": 1015,
+      "page_end": 1015,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-959-COVER",
+      "page_start": 1017,
+      "page_end": 1017,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-96-COVER",
+      "page_start": 154,
+      "page_end": 154,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-960-COVER",
+      "page_start": 1018,
+      "page_end": 1018,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-962-COVER",
+      "page_start": 1020,
+      "page_end": 1020,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-964-COVER",
+      "page_start": 1022,
+      "page_end": 1022,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-975-COVER2",
+      "page_start": 1034,
+      "page_end": 1034,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-976-COVER",
+      "page_start": 1034,
+      "page_end": 1034,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-977-COVER",
+      "page_start": 1035,
+      "page_end": 1035,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    },
+    {
+      "id": "dsm5fr-u-999-COVER2",
+      "page_start": 1058,
+      "page_end": 1058,
+      "extraction_status": "coverage_only",
+      "validation_status": "needs_review"
+    }
+  ],
+  "legacy_merged_units_not_in_candidate_count": 420,
+  "review_units_preserved_in_source": true,
+  "review_units_preserved_count": 7764
+}

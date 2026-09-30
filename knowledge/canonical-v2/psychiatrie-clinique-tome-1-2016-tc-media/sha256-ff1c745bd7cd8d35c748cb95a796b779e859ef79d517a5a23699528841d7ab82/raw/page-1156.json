@@ -1,0 +1,100 @@
+{
+  "block_sequence_sha256": "4dcf1261119f9113d37ab2f2b56d306121d3337c4a7c860ad44d3ae99b0aa91e",
+  "blocks": [
+    {
+      "bbox": [
+        422.8000183105469,
+        747.3754272460938,
+        554.97998046875,
+        758.6693725585938
+      ],
+      "block_id": "page-1156-block-0001",
+      "order": 1,
+      "text": "Figures supplémentaires\nF19\n",
+      "text_sha256": "e70ff5e29e145bdf8b34e1b47d08b25f5fcb512fe515c6901f6e7e052125234a"
+    },
+    {
+      "bbox": [
+        56.25,
+        41.002296447753906,
+        218.2232666015625,
+        53.320068359375
+      ],
+      "block_id": "page-1156-block-0002",
+      "order": 2,
+      "text": "FIGURE 34 Hydrocéphalie normotensive\n",
+      "text_sha256": "681b7b342109578e0d2ffd09bae8ade7757a504ff8d04885ef8fb90858c41e85"
+    },
+    {
+      "bbox": [
+        54.25,
+        271.59063720703125,
+        284.72369384765625,
+        325.82501220703125
+      ],
+      "block_id": "page-1156-block-0003",
+      "order": 3,
+      "text": "Clichés à 24 heures, montrant tardivement une accumulation résiduelle au niveau\ndes sites de résorption du LCR.\n• Flèche rouge : citernes de la base\n• Flèches jaunes : citernes sylviennes\n• Flèche bleue : citerne interhémisphérique\n",
+      "text_sha256": "285be770566ecaaf84ac0895e24accef168c927c4e3ed4185ffe65acbcae8611"
+    },
+    {
+      "bbox": [
+        326.5,
+        271.390625,
+        513.2852783203125,
+        289.625
+      ],
+      "block_id": "page-1156-block-0004",
+      "order": 4,
+      "text": "Reux intraventriculaire précoce (èches vertes ; série supérieure),\npersistant à 24 heures (série inférieure).\n",
+      "text_sha256": "275d1862d5b3eb6ec663fb1bc3233966879cbbc2c1d67d3a2b4d6a1de89c34e5"
+    },
+    {
+      "bbox": [
+        56.35000228881836,
+        348.8742980957031,
+        506.9382629394531,
+        361.52008056640625
+      ],
+      "block_id": "page-1156-block-0005",
+      "order": 5,
+      "text": "FIGURE 35 Étude chez le rat de la distribution dans le temps d’un radiopharmaceutique (le 18F-FE0BV) se liant\n",
+      "text_sha256": "37273f70365aef3c2f8a4f34abcc493883d9e3e1f3ab57ad8a4dc3ee858f5bc9"
+    },
+    {
+      "bbox": [
+        100.55000305175781,
+        361.05230712890625,
+        286.8260192871094,
+        373.02008056640625
+      ],
+      "block_id": "page-1156-block-0006",
+      "order": 6,
+      "text": "au transporteur vésiculaire de l’acétylcholine\n",
+      "text_sha256": "584bb71d10f9d58707e0741d82d41bbb6285442bcf38e4289996f3cf682808c7"
+    },
+    {
+      "bbox": [
+        54.25,
+        579.5734252929688,
+        546.3540649414062,
+        645.8250122070312
+      ],
+      "block_id": "page-1156-block-0007",
+      "order": 7,
+      "text": "Coupes sagittale (A), coronale (B) et transaxiale (C) du cerveau d’un rat ayant reçu une injection intraveineuse de 18F-FEOBV, puis évalué à l’aide d’une caméra TEP pour petits\nanimaux. Cette étude a été réalisée dans le cadre de la validation de cet agent en tant que marqueur des terminaisons neuronales cholinergiques (où se trouvent les vésicules\nsynaptiques contenant l’acétylcholine). De telles études permettent d’évaluer des animaux vivants, qui peuvent être soumis à plusieurs sessions d’imagerie, sans dommage\npour leur santé. Dans le passé, la validation de tels agents en phase préclinique (avant leur utilisation humaine) se faisait sur des cohortes de multiples animaux qui devaient\nêtre sacriés pour évaluation autoradiographique de la xation cérébrale du radiotraceur. Les études d’imagerie TEP permettent de réduire de façon importante le nombre\nd’animaux utilisés, entre autres parce que ces animaux peuvent être évalués dans des conditions multiples tout en servant eux-mêmes de contrôles pour des études durant\nlesquelles ils subiront diverses interventions pharmacologiques, chirurgicales ou autres.\n",
+      "text_sha256": "b36c963685235c0f74789bbec0ad601cbc4f133b792a9bb2bc643c125cafc547"
+    }
+  ],
+  "coordinates_sha256": "4bb52e7b38c30ecfabb78c61f863870b7165868df96ac89062015bec8befdac7",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1156",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Figures supplémentaires\nF19\nFIGURE 34 Hydrocéphalie normotensive\nClichés à 24 heures, montrant tardivement une accumulation résiduelle au niveau\ndes sites de résorption du LCR.\n• Flèche rouge : citernes de la base\n• Flèches jaunes : citernes sylviennes\n• Flèche bleue : citerne interhémisphérique\nReux intraventriculaire précoce (èches vertes ; série supérieure),\npersistant à 24 heures (série inférieure).\nFIGURE 35 Étude chez le rat de la distribution dans le temps d’un radiopharmaceutique (le 18F-FE0BV) se liant\nau transporteur vésiculaire de l’acétylcholine\nCoupes sagittale (A), coronale (B) et transaxiale (C) du cerveau d’un rat ayant reçu une injection intraveineuse de 18F-FEOBV, puis évalué à l’aide d’une caméra TEP pour petits\nanimaux. Cette étude a été réalisée dans le cadre de la validation de cet agent en tant que marqueur des terminaisons neuronales cholinergiques (où se trouvent les vésicules\nsynaptiques contenant l’acétylcholine). De telles études permettent d’évaluer des animaux vivants, qui peuvent être soumis à plusieurs sessions d’imagerie, sans dommage\npour leur santé. Dans le passé, la validation de tels agents en phase préclinique (avant leur utilisation humaine) se faisait sur des cohortes de multiples animaux qui devaient\nêtre sacriés pour évaluation autoradiographique de la xation cérébrale du radiotraceur. Les études d’imagerie TEP permettent de réduire de façon importante le nombre\nd’animaux utilisés, entre autres parce que ces animaux peuvent être évalués dans des conditions multiples tout en servant eux-mêmes de contrôles pour des études durant\nlesquelles ils subiront diverses interventions pharmacologiques, chirurgicales ou autres.\n",
+  "raw_text_sha256": "9a9fe4e107033add84fe79312f67bd5b56ef6412140c98dd12560591fadec887",
+  "source_page_display": 1157,
+  "source_page_index": 1156
+}

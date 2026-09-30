@@ -1,0 +1,664 @@
+{
+  "block_sequence_sha256": "35baf51d1c55967323ee727fb9d246078c0b32418e4723259ab67aa949859fd4",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0605-block-0001",
+      "order": 1,
+      "text": "588\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "633c6b7dff5f1c9bb3fdd936a45ffc62cc200664c79884a653403e30bcfc1fea"
+    },
+    {
+      "bbox": [
+        20.40229606628418,
+        393.420654296875,
+        32.720069885253906,
+        721.0
+      ],
+      "block_id": "page-0605-block-0002",
+      "order": 2,
+      "text": "TABLEAU 27.3 Critères diagnostiques du trouble neurocognitif de type Alzheimer\n",
+      "text_sha256": "6720b0ef0d052829ea012911302918f1e74eae24b1d4b56c6fab71e8ff354521"
+    },
+    {
+      "bbox": [
+        38.90556716918945,
+        192.31199645996094,
+        49.57451248168945,
+        565.3500366210938
+      ],
+      "block_id": "page-0605-block-0003",
+      "order": 3,
+      "text": "DSM-5\nDSM-IV-TR\n",
+      "text_sha256": "67d368c78be7842a2bc99b149901566bcadf3c9d62623ea48bafcc32b3563ffb"
+    },
+    {
+      "bbox": [
+        53.77285385131836,
+        136.441650390625,
+        63.79238510131836,
+        694.1500244140625
+      ],
+      "block_id": "page-0605-block-0004",
+      "order": 4,
+      "text": "291.1x (F02.8x) Trouble neurocognitif majeur ou léger dû à la maladie d’Alzheimer\nF00.xx [294.1x] Démence de type Alzheimer\n",
+      "text_sha256": "19cd177f60ad3d427f6e0c15bccc76ce6b8df0b7f8fd6b1839c2581f7c5006f4"
+    },
+    {
+      "bbox": [
+        66.80195617675781,
+        137.95132446289062,
+        76.62812805175781,
+        718.75
+      ],
+      "block_id": "page-0605-block-0005",
+      "order": 5,
+      "text": "A. Les critères d’un trouble neurocognitif majeur ou léger sont remplis (voir l’encadré 27.1).\nA. Apparition de décits cognitifs multiples, comme en témoignent à la fois :\n",
+      "text_sha256": "fab550ac322b4058d6843f9e3c34f51812db8d4813e03b7e82965e2fb355d157"
+    },
+    {
+      "bbox": [
+        76.30195617675781,
+        49.922637939453125,
+        86.12812805175781,
+        369.5
+      ],
+      "block_id": "page-0605-block-0006",
+      "order": 6,
+      "text": "(1) une altération de la mémoire (altération de la capacité à apprendre des informations nouvelles ou\n",
+      "text_sha256": "8ba2fd208d6c0f6ed8ef62cc0b94e9856c6b26ea69ccaa056848db23ac773081"
+    },
+    {
+      "bbox": [
+        85.80195617675781,
+        179.71922302246094,
+        95.62812805175781,
+        359.0
+      ],
+      "block_id": "page-0605-block-0007",
+      "order": 7,
+      "text": "à se rappeler les informations apprises antérieurement) ;\n",
+      "text_sha256": "4c534363ab9a4bee5a63b317f2bb63ec3b8a2cf55374b3451fb05be51ea9297d"
+    },
+    {
+      "bbox": [
+        95.30195617675781,
+        175.41966247558594,
+        105.12812805175781,
+        369.5
+      ],
+      "block_id": "page-0605-block-0008",
+      "order": 8,
+      "text": "(2) une (ou plusieurs) des perturbations cognitives suivantes :\n",
+      "text_sha256": "d9f76d56f0347002e6f0cb4294f3e489b64db3174d73a133664e5f559e292bfd"
+    },
+    {
+      "bbox": [
+        104.80195617675781,
+        241.0511932373047,
+        114.62812805175781,
+        360.0
+      ],
+      "block_id": "page-0605-block-0009",
+      "order": 9,
+      "text": "(a) aphasie (perturbation du langage),\n",
+      "text_sha256": "61534fbf273d5520b63e9de8e09e00b3a2c16f54466381d12c0a2233ca9fd181"
+    },
+    {
+      "bbox": [
+        114.30195617675781,
+        46.079776763916016,
+        124.12812805175781,
+        359.95001220703125
+      ],
+      "block_id": "page-0605-block-0010",
+      "order": 10,
+      "text": "(b) apraxie (altération de la capacité à réaliser une activité motrice malgré des fonctions motrices intactes),\n",
+      "text_sha256": "43fddb88425dd1137e2b59389bccf0eefa753be6b39cfebc678b54e14cb9bfcd"
+    },
+    {
+      "bbox": [
+        123.80195617675781,
+        61.15299987792969,
+        133.6281280517578,
+        360.79998779296875
+      ],
+      "block_id": "page-0605-block-0011",
+      "order": 11,
+      "text": "( c) agnosie (impossibilité de reconnaître ou d’identier des objets malgré des fonctions senso-\n",
+      "text_sha256": "a2dd63b2e9e3c10379dfba16de9f9c3cb64144159faee0e93b9e63b7942a6f4b"
+    },
+    {
+      "bbox": [
+        133.3019561767578,
+        300.2309875488281,
+        143.1281280517578,
+        350.1000061035156
+      ],
+      "block_id": "page-0605-block-0012",
+      "order": 12,
+      "text": "rielles intactes),\n",
+      "text_sha256": "a570e99284c3cfee5634122b99a6b162f5574ee3c0bdfe8e91598f9c8382b38c"
+    },
+    {
+      "bbox": [
+        142.8019561767578,
+        61.885562896728516,
+        152.6281280517578,
+        360.1499938964844
+      ],
+      "block_id": "page-0605-block-0013",
+      "order": 13,
+      "text": "(d) perturbation des fonctions exécutives (faire des projets, organiser, ordonner dans le temps,\n",
+      "text_sha256": "0174f104068b4a91ac8d0068f21cdf83227a665537cf0682b6be81bb96bf6ea3"
+    },
+    {
+      "bbox": [
+        152.3019561767578,
+        261.8199768066406,
+        162.1281280517578,
+        350.20001220703125
+      ],
+      "block_id": "page-0605-block-0014",
+      "order": 14,
+      "text": "avoir une pensée abstraite).\n",
+      "text_sha256": "d80f0ab30f1d36a7c478192eed817a5455540f6120070b5047564f3e02adcf19"
+    },
+    {
+      "bbox": [
+        164.7019500732422,
+        399.2684326171875,
+        174.5281219482422,
+        718.75
+      ],
+      "block_id": "page-0605-block-0015",
+      "order": 15,
+      "text": "B. Il y a début insidieux et une progression graduelle d’une altération dans un ou plusieurs domaines\n",
+      "text_sha256": "28cce06667cfe83ebd6b74eee6d4f4b5fdfb408091905a2f56c317e93ad58dbe"
+    },
+    {
+      "bbox": [
+        164.7019500732422,
+        52.00447082519531,
+        184.0281219482422,
+        710.25
+      ],
+      "block_id": "page-0605-block-0016",
+      "order": 16,
+      "text": "cognitifs (pour le trouble neurocognitif majeur, au moins deux domaines doivent être altérés).\nB. Les décits cognitifs des critères A1 et A2 sont tous les deux à l’origine d’une altération signicative\n",
+      "text_sha256": "114fd48851d2cbc1a3499055f3096a43949ad4648adb9dd58e851125e7143a8e"
+    },
+    {
+      "bbox": [
+        174.2019500732422,
+        49.353118896484375,
+        184.0281219482422,
+        370.0
+      ],
+      "block_id": "page-0605-block-0017",
+      "order": 17,
+      "text": "du fonctionnement social ou professionnel et représentent un déclin signicatif par rapport au niveau\n",
+      "text_sha256": "ecf87aad1b4b84e2fef6eced43b2aed31c1a3157cd73d8760040d27037814b00"
+    },
+    {
+      "bbox": [
+        183.7019500732422,
+        278.5187683105469,
+        193.5281219482422,
+        370.0
+      ],
+      "block_id": "page-0605-block-0018",
+      "order": 18,
+      "text": "de fonctionnement antérieur.\n",
+      "text_sha256": "42a5323be9651000ad8c4c486839f660e083dd2df05fabaf9a85d2b3d0ea732c"
+    },
+    {
+      "bbox": [
+        196.15196228027344,
+        424.36053466796875,
+        205.97813415527344,
+        718.75
+      ],
+      "block_id": "page-0605-block-0019",
+      "order": 19,
+      "text": "C. Les critères de maladie d’Alzheimer soit probable, soit possible, sont remplis comme suit :\n",
+      "text_sha256": "be7d53fe52460b1bcb7d45b54047ff197aec7b52c0adde30ba0af1b96bef0bb9"
+    },
+    {
+      "bbox": [
+        205.57286071777344,
+        582.1317749023438,
+        215.30235290527344,
+        710.25
+      ],
+      "block_id": "page-0605-block-0020",
+      "order": 20,
+      "text": "Pour le trouble neurocognitif majeur :\n",
+      "text_sha256": "611c6c394c8d67776f55a7ebc2dc55a918b065c12b7c4ba2abc669c1c0af4cfb"
+    },
+    {
+      "bbox": [
+        215.07286071777344,
+        398.5059509277344,
+        225.09239196777344,
+        710.25
+      ],
+      "block_id": "page-0605-block-0021",
+      "order": 21,
+      "text": "Une maladie d’Alzheimer probable est diagnostiquée si l’un des éléments suivants est présent ;\n",
+      "text_sha256": "f75c316417fecb2293a780e4cfaea4d026b7d34371a02c91e2215a2d8ea9a1ba"
+    },
+    {
+      "bbox": [
+        224.57286071777344,
+        490.6969909667969,
+        234.59239196777344,
+        710.25
+      ],
+      "block_id": "page-0605-block-0022",
+      "order": 22,
+      "text": "sinon une maladie d’Alzheimer possible sera le diagnostic retenu :\n",
+      "text_sha256": "c9881af96fbf9aa5dbbd0a1c4ed82493b8a4f96e2221894cef537c92a70d8a11"
+    },
+    {
+      "bbox": [
+        234.15196228027344,
+        392.70135498046875,
+        253.47813415527344,
+        710.25
+      ],
+      "block_id": "page-0605-block-0023",
+      "order": 23,
+      "text": "1. Mutation générique responsable de la maladie d’Alzheimer mise en évidence par les antécédents\nfamiliaux ou par un test génétique.\n",
+      "text_sha256": "19c3a77ccaca8b22aa0ce1780dae710ad38e66d28939530501bb9bd2b8c09d52"
+    },
+    {
+      "bbox": [
+        253.15194702148438,
+        408.89959716796875,
+        272.4781188964844,
+        710.25
+      ],
+      "block_id": "page-0605-block-0024",
+      "order": 24,
+      "text": "2. Les trois critères suivants sont présents :\na. Présence évidente d’un déclin se manifestant dans la mémoire et l’apprentissage et dans\n",
+      "text_sha256": "f60d0dc95ebda58a4fef0d86b980098eb2d3ee4503ed7c4158f61aa0b69be9dd"
+    },
+    {
+      "bbox": [
+        272.1519470214844,
+        405.9865417480469,
+        281.9781188964844,
+        693.4500122070312
+      ],
+      "block_id": "page-0605-block-0025",
+      "order": 25,
+      "text": "au moins un autre domaine cognitif (d’après une anamnèse détaillée ou une série de tests\n",
+      "text_sha256": "e325a1bab72ab18deadcf30d6fa0b812aac3e8aa6378170377b8f8f3a0898291"
+    },
+    {
+      "bbox": [
+        281.6519470214844,
+        622.3410034179688,
+        291.4781188964844,
+        693.4500122070312
+      ],
+      "block_id": "page-0605-block-0026",
+      "order": 26,
+      "text": "neuropsychologiques).\n",
+      "text_sha256": "90fa6bde9e53e97876877478d11649229f44291e7663098925f12627e80310a0"
+    },
+    {
+      "bbox": [
+        291.1519470214844,
+        415.2865295410156,
+        300.9781188964844,
+        701.0499877929688
+      ],
+      "block_id": "page-0605-block-0027",
+      "order": 27,
+      "text": "b. Déclin constant, progressif et graduel des fonctions cognitives sans plateaux prolongés.\n",
+      "text_sha256": "cf5c21b534e28d952d16beca138644cdf6b1a046fe5e2229949d413558cb94bf"
+    },
+    {
+      "bbox": [
+        300.6519470214844,
+        394.6529846191406,
+        310.4781188964844,
+        700.75
+      ],
+      "block_id": "page-0605-block-0028",
+      "order": 28,
+      "text": "c. Absence d’étiologies mixtes (c.-à-d. absence d’une autre maladie neurodégénérative ou céré-\n",
+      "text_sha256": "6bda76564381510695b763caa700e4fee80f84ec2d043157447107590b9b6bf1"
+    },
+    {
+      "bbox": [
+        310.1519470214844,
+        395.9573974609375,
+        319.9781188964844,
+        693.4500122070312
+      ],
+      "block_id": "page-0605-block-0029",
+      "order": 29,
+      "text": "brovasculaire, ou d’une autre maladie mentale, neurologique ou systémique ou de toute autre\n",
+      "text_sha256": "c916d6dfacb33a502033c682ba1e593e4f01f9edafc80243f0831b9dda3ad0ff"
+    },
+    {
+      "bbox": [
+        319.6519470214844,
+        543.9998168945312,
+        329.4781188964844,
+        693.4500122070312
+      ],
+      "block_id": "page-0605-block-0030",
+      "order": 30,
+      "text": "affection pouvant contribuer au déclin cognitif).\n",
+      "text_sha256": "bef5a62925b0d525b4a1ba47c523b2f507ad1fb4aa174a496a2d4c746fa911fa"
+    },
+    {
+      "bbox": [
+        196.15196228027344,
+        114.88568115234375,
+        205.97813415527344,
+        378.5
+      ],
+      "block_id": "page-0605-block-0031",
+      "order": 31,
+      "text": "C. L’évolution est caractérisée par un début progressif et un déclin cognitif continu.\n",
+      "text_sha256": "82b73fc43a2b6fb6f7dd3e0d463dc3c8c90121968a628f2dcd5b16449b022512"
+    },
+    {
+      "bbox": [
+        331.9728698730469,
+        597.3400268554688,
+        341.8781433105469,
+        718.75
+      ],
+      "block_id": "page-0605-block-0032",
+      "order": 32,
+      "text": "Pour le trouble neurocognitif léger:\n",
+      "text_sha256": "e7e4d72df08e77d0423cbd4786571c403c5e80d98abfb455ebd273fc0f243e27"
+    },
+    {
+      "bbox": [
+        341.4728698730469,
+        390.3058776855469,
+        351.4924011230469,
+        710.1500244140625
+      ],
+      "block_id": "page-0605-block-0033",
+      "order": 33,
+      "text": "Une maladie d’Alzheimer probable est diagnostiquée si une mutation génétique responsable de la\n",
+      "text_sha256": "3a9e33494126803e5efcf1837d820078ac7ead8f7c0359d6edb660f4c2aa8724"
+    },
+    {
+      "bbox": [
+        351.0519714355469,
+        399.0725402832031,
+        360.8781433105469,
+        710.1500244140625
+      ],
+      "block_id": "page-0605-block-0034",
+      "order": 34,
+      "text": "maladie d’Alzheimer est mise en évidence par les antécédents familiaux ou par un test génétique.\n",
+      "text_sha256": "6c585ee0ff2c3f3a9815d2229e0b35753cf4da20da9fd8de67656b10b4b8f386"
+    },
+    {
+      "bbox": [
+        360.4728698730469,
+        387.8951721191406,
+        370.4924011230469,
+        710.1500244140625
+      ],
+      "block_id": "page-0605-block-0035",
+      "order": 35,
+      "text": "Une maladie d’Alzheimer possible est diagnostiquée si aucune mutation génétique responsable de\n",
+      "text_sha256": "b249ec5a68dce5faed05803b8add9782799903b5418d7709c4bb5714ea4e253d"
+    },
+    {
+      "bbox": [
+        370.0519714355469,
+        387.308837890625,
+        379.8781433105469,
+        710.1500244140625
+      ],
+      "block_id": "page-0605-block-0036",
+      "order": 36,
+      "text": "la maladie d’Alzheimer n’est mise en évidence par les antécédents familiaux ou par un test génétique\n",
+      "text_sha256": "5a706ec032d5d8c6479013aa5959a10d9f612def581fc76439b42cdb5cd04fd0"
+    },
+    {
+      "bbox": [
+        379.5519714355469,
+        567.4057006835938,
+        389.3781433105469,
+        710.1500244140625
+      ],
+      "block_id": "page-0605-block-0037",
+      "order": 37,
+      "text": "et si les trois critères suivants sont présents :\n",
+      "text_sha256": "8bacdb508de699c327344ad6459403dcb3f7a06b86871a30472f5bb49bea924a"
+    },
+    {
+      "bbox": [
+        389.0519714355469,
+        402.11865234375,
+        427.3781433105469,
+        709.75
+      ],
+      "block_id": "page-0605-block-0038",
+      "order": 38,
+      "text": "1. Présence évidente d’un déclin de la mémoire et de l’apprentissage.\n2. Déclin constant, progressif et graduel des fonctions cognitives sans plateaux prolongés.\n3. Absence d’étiologies mixtes (c.-à-d. absence d’une autre maladie neurodégénérative ou céré-\nbrovasculaire, ou d’une autre maladie neurologique ou systémique, ou de toute autre affection\n",
+      "text_sha256": "7b588977680b03225a50616d0d049928d4575b19fcb63342c23b03b697aa70d4"
+    },
+    {
+      "bbox": [
+        427.0519714355469,
+        581.5505981445312,
+        436.8781433105469,
+        701.4500122070312
+      ],
+      "block_id": "page-0605-block-0039",
+      "order": 39,
+      "text": "pouvant contribuer au déclin cognitif).\n",
+      "text_sha256": "b9ad6ca5fc2049dcaee3d791c9894246378e578ede659c56ae1479ac4842b7be"
+    },
+    {
+      "bbox": [
+        439.501953125,
+        421.2067565917969,
+        449.328125,
+        718.75
+      ],
+      "block_id": "page-0605-block-0040",
+      "order": 40,
+      "text": "D. La perturbation ne peut être mieux expliquée par une maladie cérébrovasculaire, une autre\n",
+      "text_sha256": "20d995c6d19a8bc5f3c965c1a4cde884d246dcde925c973370cad8c5e1dac2cf"
+    },
+    {
+      "bbox": [
+        449.001953125,
+        404.16497802734375,
+        458.828125,
+        709.9500122070312
+      ],
+      "block_id": "page-0605-block-0041",
+      "order": 41,
+      "text": "maladie neurodégénérative, les effets d’une substance ou un autre trouble mental, neurologique\n",
+      "text_sha256": "7b756fa54831b422ad40a01d19d7c700e0100b7376bffe86c8baa86ef9bfec7b"
+    },
+    {
+      "bbox": [
+        458.501953125,
+        661.7190551757812,
+        468.328125,
+        709.9500122070312
+      ],
+      "block_id": "page-0605-block-0042",
+      "order": 42,
+      "text": "ou systémique.\n",
+      "text_sha256": "8f62a163049bb0791e21040cac1ba9d8f5507ecaa5333e2b9df48725d67cb2b6"
+    },
+    {
+      "bbox": [
+        439.501953125,
+        179.9632110595703,
+        449.328125,
+        378.5
+      ],
+      "block_id": "page-0605-block-0043",
+      "order": 43,
+      "text": "D. Les décits cognitifs des critères A1 et A2 ne sont pas dus :\n",
+      "text_sha256": "08a7ea7424ffaaf84f0a0dd63e3df3fd7248045c74b089187c39f240d99124f2"
+    },
+    {
+      "bbox": [
+        449.001953125,
+        59.851417541503906,
+        458.828125,
+        369.79998779296875
+      ],
+      "block_id": "page-0605-block-0044",
+      "order": 44,
+      "text": "(1) à d’autres affections du système nerveux central qui peuvent entraîner des décits progressifs\n",
+      "text_sha256": "d9a3edc8359b3d3672b7a20c061e116fab4cc2652efbfc35e18ff833b72bfcb0"
+    },
+    {
+      "bbox": [
+        458.501953125,
+        215.38710021972656,
+        468.328125,
+        359.6000061035156
+      ],
+      "block_id": "page-0605-block-0045",
+      "order": 45,
+      "text": "de la mémoire et du fonctionnement cognitif ;\n",
+      "text_sha256": "7cd86c897140e599c0d4691cd81ae727b4a61ad5c485fbf94a7596b251a54fdb"
+    },
+    {
+      "bbox": [
+        468.001953125,
+        168.9290313720703,
+        477.828125,
+        369.54998779296875
+      ],
+      "block_id": "page-0605-block-0046",
+      "order": 46,
+      "text": "(2) à des affections générales pouvant entraîner une démence ;\n",
+      "text_sha256": "28fb9ad98eb8658926c16ee9c84aed41b93ba19e89d6faafef8ac1df3b8c80f8"
+    },
+    {
+      "bbox": [
+        477.501953125,
+        218.4217071533203,
+        487.328125,
+        369.5
+      ],
+      "block_id": "page-0605-block-0047",
+      "order": 47,
+      "text": "(3) à des affections induites par une substance.\n",
+      "text_sha256": "8b30f322233b985e853d96cc431edfa5f6b04a71505182bd17cde8490b93479a"
+    },
+    {
+      "bbox": [
+        489.9019470214844,
+        91.16464233398438,
+        499.7281188964844,
+        378.5
+      ],
+      "block_id": "page-0605-block-0048",
+      "order": 48,
+      "text": "E. Les décits ne surviennent pas de façon exclusive au cours de l’évolution d’un delirium.\n",
+      "text_sha256": "8a90378534c44e7d3479259ec2bddf0349595e4c0d99d4868023ad901b7e9159"
+    },
+    {
+      "bbox": [
+        502.3519592285156,
+        156.63316345214844,
+        512.1781005859375,
+        378.5
+      ],
+      "block_id": "page-0605-block-0049",
+      "order": 49,
+      "text": "F. La perturbation n’est pas mieux expliquée par un trouble de l’Axe I.\n",
+      "text_sha256": "37912b5e329b9856ee426028b9dcc6764724b1ddb8f460db9e1421ae6c0ac034"
+    },
+    {
+      "bbox": [
+        516.2406616210938,
+        547.2512817382812,
+        525.10888671875,
+        723.0
+      ],
+      "block_id": "page-0605-block-0050",
+      "order": 50,
+      "text": "Sources : APA (2015), p. 721-722 ; APA (2004a), p. 182-183.\n",
+      "text_sha256": "4b61c372d86f18fba507595ca7f3db06ba51b4b40a951f9a9b514c55d32c9cde"
+    },
+    {
+      "bbox": [
+        528.2406616210938,
+        48.75101089477539,
+        536.9750366210938,
+        723.0
+      ],
+      "block_id": "page-0605-block-0051",
+      "order": 51,
+      "text": "Traduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American Psychiatric Association, DSM-5 – Manuel Diagnostique et Statistique\n",
+      "text_sha256": "76661d3cf6ac232226ce5dca02f1d54099358084b5c8589b9a47251364a9a52d"
+    },
+    {
+      "bbox": [
+        537.2406616210938,
+        347.6366882324219,
+        545.9750366210938,
+        723.0
+      ],
+      "block_id": "page-0605-block-0052",
+      "order": 52,
+      "text": "des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris, 2015. All rights reserved.\n",
+      "text_sha256": "c9c123d888cd4742ef48631a645edadb32ede4bc5e01265963bce7e75b9e3058"
+    },
+    {
+      "bbox": [
+        549.2406616210938,
+        62.92692565917969,
+        557.9750366210938,
+        723.0
+      ],
+      "block_id": "page-0605-block-0053",
+      "order": 53,
+      "text": "Traduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric Association, DSM-IV-TR – Manuel Diagnostique et\n",
+      "text_sha256": "2bcebf8f2476bccd6c7ac1c26d260a2cc137475011ca73e11dbc54bddd4dc59b"
+    },
+    {
+      "bbox": [
+        558.2406616210938,
+        353.8866882324219,
+        566.9750366210938,
+        723.0
+      ],
+      "block_id": "page-0605-block-0054",
+      "order": 54,
+      "text": "Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\n",
+      "text_sha256": "5025ca12a799f098669adfb633247cc19c567d7ee6433a99e44146b5ab63b0df"
+    }
+  ],
+  "coordinates_sha256": "1a9f7933ade8e85b176f29a5f41316c9e587a6877363edc4a68e7770cb8eca8d",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0605",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "588\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nTABLEAU 27.3 Critères diagnostiques du trouble neurocognitif de type Alzheimer\nDSM-5\nDSM-IV-TR\n291.1x (F02.8x) Trouble neurocognitif majeur ou léger dû à la maladie d’Alzheimer\nF00.xx [294.1x] Démence de type Alzheimer\nA. Les critères d’un trouble neurocognitif majeur ou léger sont remplis (voir l’encadré 27.1).\nA. Apparition de décits cognitifs multiples, comme en témoignent à la fois :\n(1) une altération de la mémoire (altération de la capacité à apprendre des informations nouvelles ou\nà se rappeler les informations apprises antérieurement) ;\n(2) une (ou plusieurs) des perturbations cognitives suivantes :\n(a) aphasie (perturbation du langage),\n(b) apraxie (altération de la capacité à réaliser une activité motrice malgré des fonctions motrices intactes),\n( c) agnosie (impossibilité de reconnaître ou d’identier des objets malgré des fonctions senso-\nrielles intactes),\n(d) perturbation des fonctions exécutives (faire des projets, organiser, ordonner dans le temps,\navoir une pensée abstraite).\nB. Il y a début insidieux et une progression graduelle d’une altération dans un ou plusieurs domaines\ncognitifs (pour le trouble neurocognitif majeur, au moins deux domaines doivent être altérés).\nB. Les décits cognitifs des critères A1 et A2 sont tous les deux à l’origine d’une altération signicative\ndu fonctionnement social ou professionnel et représentent un déclin signicatif par rapport au niveau\nde fonctionnement antérieur.\nC. Les critères de maladie d’Alzheimer soit probable, soit possible, sont remplis comme suit :\nPour le trouble neurocognitif majeur :\nUne maladie d’Alzheimer probable est diagnostiquée si l’un des éléments suivants est présent ;\nsinon une maladie d’Alzheimer possible sera le diagnostic retenu :\n1. Mutation générique responsable de la maladie d’Alzheimer mise en évidence par les antécédents\nfamiliaux ou par un test génétique.\n2. Les trois critères suivants sont présents :\na. Présence évidente d’un déclin se manifestant dans la mémoire et l’apprentissage et dans\nau moins un autre domaine cognitif (d’après une anamnèse détaillée ou une série de tests\nneuropsychologiques).\nb. Déclin constant, progressif et graduel des fonctions cognitives sans plateaux prolongés.\nc. Absence d’étiologies mixtes (c.-à-d. absence d’une autre maladie neurodégénérative ou céré-\nbrovasculaire, ou d’une autre maladie mentale, neurologique ou systémique ou de toute autre\naffection pouvant contribuer au déclin cognitif).\nC. L’évolution est caractérisée par un début progressif et un déclin cognitif continu.\nPour le trouble neurocognitif léger:\nUne maladie d’Alzheimer probable est diagnostiquée si une mutation génétique responsable de la\nmaladie d’Alzheimer est mise en évidence par les antécédents familiaux ou par un test génétique.\nUne maladie d’Alzheimer possible est diagnostiquée si aucune mutation génétique responsable de\nla maladie d’Alzheimer n’est mise en évidence par les antécédents familiaux ou par un test génétique\net si les trois critères suivants sont présents :\n1. Présence évidente d’un déclin de la mémoire et de l’apprentissage.\n2. Déclin constant, progressif et graduel des fonctions cognitives sans plateaux prolongés.\n3. Absence d’étiologies mixtes (c.-à-d. absence d’une autre maladie neurodégénérative ou céré-\nbrovasculaire, ou d’une autre maladie neurologique ou systémique, ou de toute autre affection\npouvant contribuer au déclin cognitif).\nD. La perturbation ne peut être mieux expliquée par une maladie cérébrovasculaire, une autre\nmaladie neurodégénérative, les effets d’une substance ou un autre trouble mental, neurologique\nou systémique.\nD. Les décits cognitifs des critères A1 et A2 ne sont pas dus :\n(1) à d’autres affections du système nerveux central qui peuvent entraîner des décits progressifs\nde la mémoire et du fonctionnement cognitif ;\n(2) à des affections générales pouvant entraîner une démence ;\n(3) à des affections induites par une substance.\nE. Les décits ne surviennent pas de façon exclusive au cours de l’évolution d’un delirium.\nF. La perturbation n’est pas mieux expliquée par un trouble de l’Axe I.\nSources : APA (2015), p. 721-722 ; APA (2004a), p. 182-183.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American Psychiatric Association, DSM-5 – Manuel Diagnostique et Statistique\ndes Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric Association, DSM-IV-TR – Manuel Diagnostique et\nStatistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\n",
+  "raw_text_sha256": "5c1a4653b92f983c1f581db1e6d56851de51bcfcfd3190c8cbd99aff306b91f5",
+  "source_page_display": 606,
+  "source_page_index": 605
+}

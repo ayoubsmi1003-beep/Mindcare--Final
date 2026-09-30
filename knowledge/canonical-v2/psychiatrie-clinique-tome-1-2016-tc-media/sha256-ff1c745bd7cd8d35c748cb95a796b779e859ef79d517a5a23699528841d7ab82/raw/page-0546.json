@@ -1,0 +1,184 @@
+{
+  "block_sequence_sha256": "ab9e8996902f91529dbd73cf9326dbd8285a844645208086b3696ab4dd92af34",
+  "blocks": [
+    {
+      "bbox": [
+        301.45001220703125,
+        747.525390625,
+        555.0,
+        758.8193359375
+      ],
+      "block_id": "page-0546-block-0001",
+      "order": 1,
+      "text": "Chapitre 25\nTroubles à symptomatologie somatique\n529\n",
+      "text_sha256": "2ff2a2c1e79fd3938a5cead10a5cc776d759ab8cd8c3edd66bfa034e2569dea4"
+    },
+    {
+      "bbox": [
+        312.0,
+        40.91582107543945,
+        555.4630737304688,
+        302.90850830078125
+      ],
+      "block_id": "page-0546-block-0002",
+      "order": 2,
+      "text": "le maintien d’appellations variées qui entretiennent une certaine\nconfusion : symptômes médicalement inexpliqués, trouble\nfonctionnel, trouble psychosomatique (voir l’encadré 25.1) ;\n• un seuil trop restrictif pour le trouble de somatisation et un seuil\ntrop bas pour le trouble somatoforme indiérencié et encore\nplus, pour le trouble somatoforme non spécié dans lesquels\non peut inclure une grande proportion des patients consultant\nen 1religne puisque leurs plaintes sont souvent non spéciques ;\n• un diagnostic d’exclusion qui repose sur des critères négatifs (ab-\nsence d’évidence de maladie organique identiable) et l’absence\nde critères psychologiques spéciques, somme toute nécessaires\nà une classication psychiatrique, ce qui perpétue un dualisme\nréductionniste corps-esprit (organique vs psychologique) ;\n• la présence de comorbidité signicative, tant au sein de la\ncatégorie des troubles somatoformes en tant que telle, qu’avec\nles troubles dépressifs ou anxieux, ce qui amène certains au-\nteurs à suggérer une physiopathologie commune aux troubles\nanxiodépressifs ;\n• un manque de consensus face aux conceptualisations théo-\nriques pour reéter la réalité clinique ;\n• la stigmatisation du trouble somatoforme soulevée par les\npatients et la mise en péril de la relation médecin-malade.\n",
+      "text_sha256": "d7fe230ee8d934bbebf9dcb2072c478971a0b6ae814f037516c2b88a2a340f2d"
+    },
+    {
+      "bbox": [
+        52.54999923706055,
+        34.49443435668945,
+        316.4389953613281,
+        81.32548522949219
+      ],
+      "block_id": "page-0546-block-0003",
+      "order": 3,
+      "text": "•\nC\n",
+      "text_sha256": "d384799c3a9c90159069290887a6299a08fbd39d708c209423696e1d891e6d3c"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.91015625,
+        297.3691101074219,
+        143.3193359375
+      ],
+      "block_id": "page-0546-block-0004",
+      "order": 4,
+      "text": "hez l’être humain, il y a une tendance universelle à expéri-\nmenter et à communiquer la détresse psychologique sous\nforme de symptômes physiques et à demander une atten-\ntion médicale pour ces symptômes. La notion de somatisation\n(Lipowski, 1990), utilisée par les cliniciens et les chercheurs pour\ncaractériser une grande variété de phénomènes et de processus,\nest souvent source de confusion. Il est donc nécessaire de se\ndonner une perspective globale des diérents syndromes qui\npeuvent s’exprimer par des manifestations somatiques.\n",
+      "text_sha256": "c3ac0a8a52b8302e344ec1891ffd77f4ef206c42816db9284296e4b18945d915"
+    },
+    {
+      "bbox": [
+        61.900001525878906,
+        161.7431640625,
+        252.96231079101562,
+        180.7189483642578
+      ],
+      "block_id": "page-0546-block-0005",
+      "order": 5,
+      "text": "25.1\nÉvolution des concepts\n",
+      "text_sha256": "ff949f23ea43e6b5fc6590c735c2a07d65486e00f1bb7515d5110c93ba6e44ef"
+    },
+    {
+      "bbox": [
+        54.0,
+        194.4658203125,
+        297.3070068359375,
+        250.95849609375
+      ],
+      "block_id": "page-0546-block-0006",
+      "order": 6,
+      "text": "Le DSM-5 a fait un travail signicatif pour tenter de mieux circons-\ncrire le statut psychopathologique des somatisations en proposant\nune nouvelle classication, mais la CIM-10 reète toute l’ambiguïté\nhistorique de cette catégorie F40-F48 Troubles névrotiques, troubles\nliés à des facteurs de stress et troubles somatoformes.\n",
+      "text_sha256": "70e971ed5946e98e4fcf3b1729249ee01112391ff16c825d645af4f63580f4f0"
+    },
+    {
+      "bbox": [
+        54.0,
+        263.48681640625,
+        152.632080078125,
+        279.62939453125
+      ],
+      "block_id": "page-0546-block-0007",
+      "order": 7,
+      "text": "25.1.1 Historique\n",
+      "text_sha256": "74c67ebe37ab08e6e164007c05b07fb6006da026d0971628fb0977d0c5065786"
+    },
+    {
+      "bbox": [
+        54.0,
+        282.9658203125,
+        297.60595703125,
+        560.45849609375
+      ],
+      "block_id": "page-0546-block-0008",
+      "order": 8,
+      "text": "Le DSM-5 propose la catégorie « troubles à symptomatologie\nsomatique » pour remplacer la catégorie des « troubles somato-\nformes » qui fut introduite pour la première fois dans le DSM-III\nen 1980 et complétée dans le DSM-III-TR (1987). Elle regroupait\ndiérents troubles se manifestant par un ensemble de symptômes\nsomatiques pour lesquels on ne pouvait démontrer de cause\norganique ou de maladie physique connue :\n• trouble de somatisation ;\n• trouble de conversion (névrose hystérique, type conversion) ;\n• douleur psychogène ou trouble douloureux somatoforme ;\n• hypocondrie (névrose hypocondriaque) ;\n• peur d’une dysmorphie corporelle (apparue dans le DSM-\nIV-TR en 1987) ;\n• trouble somatoforme atypique, trouble somatoforme indif-\nférencié et non spécié.\nLe DSM-III a regroupé de façon pragmatique ces diérents\ntroubles et le DSM-IV et le DSM-IV-TR n’ont apporté que des\nmodications mineures. Par souci d’homogénéité, la CIM-10\nreconnaît les troubles somatoformes tout en maintenant certaines\ndiérences : par exemple, la conversion est classée dans la catégorie\ndes « troubles dissociatifs » alors que la neurasthénie conserve un\nstatut marginal que le DSM-IV-TR place sous l’entité de « trouble\nsomatoforme indiérencié ».\n",
+      "text_sha256": "58a69f30068f00114af16cbcbb71d7adfcd335fb12ad0836b77dc5d7ec54e753"
+    },
+    {
+      "bbox": [
+        54.0,
+        561.4658203125,
+        297.32489013671875,
+        725.45849609375
+      ],
+      "block_id": "page-0546-block-0009",
+      "order": 9,
+      "text": "La catégorie des troubles somatoformes fut sujette à de\nnombreuses critiques récurrentes depuis son origine. Le DSM-5\npropose un changement majeur. Plusieurs médecins militaient\ntout simplement en faveur de l’abolition de la catégorie des\ntroubles somatoformes, qu’ils trouvaient trop imparfaite, alors\nque d’autres souhaitaient des remaniements importants. Aucun\nne désirait le statu quo. Les principales critiques signalaient :\n• l’impact arbitraire de l’approche catégorielle au détriment\nd’une approche dimensionnelle (critique générale adressée\nau DSM dans son ensemble), mais hautement signicative\nen ce qui concerne les troubles somatoformes ;\n• le faible usage du diagnostic de trouble somatoforme, tant par\nles médecins que les psychiatres, en dépit d’une prévalence\nélevée au sein de la population générale ;\n",
+      "text_sha256": "084f8161987fbfbddecf1bdec0cdad1349758084ec0264cc3d0bdfeba08c52f5"
+    },
+    {
+      "bbox": [
+        312.0,
+        532.1658325195312,
+        555.2426147460938,
+        613.3085327148438
+      ],
+      "block_id": "page-0546-block-0010",
+      "order": 10,
+      "text": "Ainsi les attentes sont grandes et les divers écrits des dernières\nannées reètent les dicultés à trouver un consensus au sein de\nla communauté scientique à propos de cette problématique très\nprévalente en 1re ligne et associée à des coûts socio-économiques\nimportants (examens médicaux et même chirurgies exploratrices\ninutiles, présentéisme, absentéisme, invalidité, sans oublier la détresse\npsychologique et somatique du patient et l’impact sur sa famille).\n",
+      "text_sha256": "d51edb619d3112a28851149747e4f5d9e0382cce368f1cbf216a194d7f24f302"
+    },
+    {
+      "bbox": [
+        312.0,
+        614.5658569335938,
+        555.3159790039062,
+        725.2584838867188
+      ],
+      "block_id": "page-0546-block-0011",
+      "order": 11,
+      "text": "Dans la catégorie des troubles à symptomatologie somatique\n(TSS), le DSM-5 propose donc sept grandes catégories dont le\nmode de présentation est constitué principalement de symptômes\nsomatiques et de préoccupations/distorsions cognitives face à la\nmaladie.\nOn y trouve :\n• le trouble à symptomatologie somatique ;\n• la crainte excessive d’avoir une maladie ;\n• la conversion ou le trouble à symptomatologie neurologique\nfonctionnelle ;\n",
+      "text_sha256": "edfcd82d5088053700a83f047aad141eae92bc3dc2662cc0ed2f9eef2be5ad2e"
+    },
+    {
+      "bbox": [
+        314.3500061035156,
+        317.4523010253906,
+        511.0321350097656,
+        329.77008056640625
+      ],
+      "block_id": "page-0546-block-0012",
+      "order": 12,
+      "text": "ENCADRÉ 25.1 Troubles somatiques fonctionnels\n",
+      "text_sha256": "50fcfe7963abad877d3fc53903eaf5a42629f9d69dd8b8a2f6f3f13cc5773588"
+    },
+    {
+      "bbox": [
+        372.45001220703125,
+        329.30230712890625,
+        446.4852600097656,
+        341.27008056640625
+      ],
+      "block_id": "page-0546-block-0013",
+      "order": 13,
+      "text": "les plus fréquents\n",
+      "text_sha256": "b6d51f28ab4719d2f4ba92f6a603d9e2e4e0e864264b15bb65421ec7d683eec8"
+    },
+    {
+      "bbox": [
+        316.25,
+        349.4019470214844,
+        551.0267333984375,
+        511.2281188964844
+      ],
+      "block_id": "page-0546-block-0014",
+      "order": 14,
+      "text": "• Céphalée de tension\n• Syndrome temporomandibulaire\n• Douleur thoracique non spéciée\n• Syndrome d’hyperventilation\n• Dyspepsie non ulcéreuse\n• Syndrome de l’intestin irritable\n• Lombalgie\n• Cystite interstitielle\n• Douleur pelvienne chronique\n• Syndrome prémenstruel\n• Fibromyalgie\n• Syndrome de fatigue chronique\n• Hypersensibilité environnementale idiopathique : sensibilité à plusieurs\nproduits (p. ex., parfums, produits de nettoyage) qui causent des\nréactions dans diverses parties de l’organisme\n",
+      "text_sha256": "2745102b4785794f3795dec703c792f1ab08c92e6328f7632af66822e60894f0"
+    }
+  ],
+  "coordinates_sha256": "83c9e4109024f69bce39fdd51f4dba7c46bb64d03356eecdc3e531b58b840072",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0546",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 25\nTroubles à symptomatologie somatique\n529\nle maintien d’appellations variées qui entretiennent une certaine\nconfusion : symptômes médicalement inexpliqués, trouble\nfonctionnel, trouble psychosomatique (voir l’encadré 25.1) ;\n• un seuil trop restrictif pour le trouble de somatisation et un seuil\ntrop bas pour le trouble somatoforme indiérencié et encore\nplus, pour le trouble somatoforme non spécié dans lesquels\non peut inclure une grande proportion des patients consultant\nen 1religne puisque leurs plaintes sont souvent non spéciques ;\n• un diagnostic d’exclusion qui repose sur des critères négatifs (ab-\nsence d’évidence de maladie organique identiable) et l’absence\nde critères psychologiques spéciques, somme toute nécessaires\nà une classication psychiatrique, ce qui perpétue un dualisme\nréductionniste corps-esprit (organique vs psychologique) ;\n• la présence de comorbidité signicative, tant au sein de la\ncatégorie des troubles somatoformes en tant que telle, qu’avec\nles troubles dépressifs ou anxieux, ce qui amène certains au-\nteurs à suggérer une physiopathologie commune aux troubles\nanxiodépressifs ;\n• un manque de consensus face aux conceptualisations théo-\nriques pour reéter la réalité clinique ;\n• la stigmatisation du trouble somatoforme soulevée par les\npatients et la mise en péril de la relation médecin-malade.\n•\nC\nhez l’être humain, il y a une tendance universelle à expéri-\nmenter et à communiquer la détresse psychologique sous\nforme de symptômes physiques et à demander une atten-\ntion médicale pour ces symptômes. La notion de somatisation\n(Lipowski, 1990), utilisée par les cliniciens et les chercheurs pour\ncaractériser une grande variété de phénomènes et de processus,\nest souvent source de confusion. Il est donc nécessaire de se\ndonner une perspective globale des diérents syndromes qui\npeuvent s’exprimer par des manifestations somatiques.\n25.1\nÉvolution des concepts\nLe DSM-5 a fait un travail signicatif pour tenter de mieux circons-\ncrire le statut psychopathologique des somatisations en proposant\nune nouvelle classication, mais la CIM-10 reète toute l’ambiguïté\nhistorique de cette catégorie F40-F48 Troubles névrotiques, troubles\nliés à des facteurs de stress et troubles somatoformes.\n25.1.1 Historique\nLe DSM-5 propose la catégorie « troubles à symptomatologie\nsomatique » pour remplacer la catégorie des « troubles somato-\nformes » qui fut introduite pour la première fois dans le DSM-III\nen 1980 et complétée dans le DSM-III-TR (1987). Elle regroupait\ndiérents troubles se manifestant par un ensemble de symptômes\nsomatiques pour lesquels on ne pouvait démontrer de cause\norganique ou de maladie physique connue :\n• trouble de somatisation ;\n• trouble de conversion (névrose hystérique, type conversion) ;\n• douleur psychogène ou trouble douloureux somatoforme ;\n• hypocondrie (névrose hypocondriaque) ;\n• peur d’une dysmorphie corporelle (apparue dans le DSM-\nIV-TR en 1987) ;\n• trouble somatoforme atypique, trouble somatoforme indif-\nférencié et non spécié.\nLe DSM-III a regroupé de façon pragmatique ces diérents\ntroubles et le DSM-IV et le DSM-IV-TR n’ont apporté que des\nmodications mineures. Par souci d’homogénéité, la CIM-10\nreconnaît les troubles somatoformes tout en maintenant certaines\ndiérences : par exemple, la conversion est classée dans la catégorie\ndes « troubles dissociatifs » alors que la neurasthénie conserve un\nstatut marginal que le DSM-IV-TR place sous l’entité de « trouble\nsomatoforme indiérencié ».\nLa catégorie des troubles somatoformes fut sujette à de\nnombreuses critiques récurrentes depuis son origine. Le DSM-5\npropose un changement majeur. Plusieurs médecins militaient\ntout simplement en faveur de l’abolition de la catégorie des\ntroubles somatoformes, qu’ils trouvaient trop imparfaite, alors\nque d’autres souhaitaient des remaniements importants. Aucun\nne désirait le statu quo. Les principales critiques signalaient :\n• l’impact arbitraire de l’approche catégorielle au détriment\nd’une approche dimensionnelle (critique générale adressée\nau DSM dans son ensemble), mais hautement signicative\nen ce qui concerne les troubles somatoformes ;\n• le faible usage du diagnostic de trouble somatoforme, tant par\nles médecins que les psychiatres, en dépit d’une prévalence\nélevée au sein de la population générale ;\nAinsi les attentes sont grandes et les divers écrits des dernières\nannées reètent les dicultés à trouver un consensus au sein de\nla communauté scientique à propos de cette problématique très\nprévalente en 1re ligne et associée à des coûts socio-économiques\nimportants (examens médicaux et même chirurgies exploratrices\ninutiles, présentéisme, absentéisme, invalidité, sans oublier la détresse\npsychologique et somatique du patient et l’impact sur sa famille).\nDans la catégorie des troubles à symptomatologie somatique\n(TSS), le DSM-5 propose donc sept grandes catégories dont le\nmode de présentation est constitué principalement de symptômes\nsomatiques et de préoccupations/distorsions cognitives face à la\nmaladie.\nOn y trouve :\n• le trouble à symptomatologie somatique ;\n• la crainte excessive d’avoir une maladie ;\n• la conversion ou le trouble à symptomatologie neurologique\nfonctionnelle ;\nENCADRÉ 25.1 Troubles somatiques fonctionnels\nles plus fréquents\n• Céphalée de tension\n• Syndrome temporomandibulaire\n• Douleur thoracique non spéciée\n• Syndrome d’hyperventilation\n• Dyspepsie non ulcéreuse\n• Syndrome de l’intestin irritable\n• Lombalgie\n• Cystite interstitielle\n• Douleur pelvienne chronique\n• Syndrome prémenstruel\n• Fibromyalgie\n• Syndrome de fatigue chronique\n• Hypersensibilité environnementale idiopathique : sensibilité à plusieurs\nproduits (p. ex., parfums, produits de nettoyage) qui causent des\nréactions dans diverses parties de l’organisme\n",
+  "raw_text_sha256": "c58ca5c7b5d560e69ed811b72d61f8946374e645117cccd3e9f0b6d2b4212dfb",
+  "source_page_display": 547,
+  "source_page_index": 546
+}

@@ -1,0 +1,496 @@
+{
+  "block_sequence_sha256": "d02401ff9e7134228b9e4f1919a565ec79c50ab4dfb522098f92a493381d6802",
+  "blocks": [
+    {
+      "bbox": [
+        317.1499938964844,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0458-block-0001",
+      "order": 1,
+      "text": "Chapitre 20\nTroubles anxieux, panique, phobies\n441\n",
+      "text_sha256": "0b1dae2ba9afc2508ef17da3f2d4bc4b3c0775da089eaf19896f76ff36ae9f9d"
+    },
+    {
+      "bbox": [
+        56.25,
+        41.002296447753906,
+        546.9035034179688,
+        53.320068359375
+      ],
+      "block_id": "page-0458-block-0002",
+      "order": 2,
+      "text": "TABLEAU 20.12 Doses recommandées par Santé Canada pour certains psychotropes d’usage courant dans le traitement\n",
+      "text_sha256": "a1d8293206908af71f23d56304cd595843b49f4f3c03075100e5b7b0a14e9487"
+    },
+    {
+      "bbox": [
+        116.95000457763672,
+        52.852294921875,
+        202.53076171875,
+        64.820068359375
+      ],
+      "block_id": "page-0458-block-0003",
+      "order": 3,
+      "text": "des troubles anxieux\n",
+      "text_sha256": "c0b46080a8e53d0745124473585232f507e66c884a4e95bcc3ad2d44978b24bc"
+    },
+    {
+      "bbox": [
+        57.25,
+        69.77412414550781,
+        544.0189208984375,
+        92.64238739013672
+      ],
+      "block_id": "page-0458-block-0004",
+      "order": 4,
+      "text": "Médicaments\nDose quotidienne (mg)\nISRS\nInitiale\nMaximale (en dose unique ou fractionnée)\n",
+      "text_sha256": "5c0b2958795c56bb8ae6b7430825ce06d08adc82dc1bafab98eb02cf8f278461"
+    },
+    {
+      "bbox": [
+        58.25,
+        97.5513687133789,
+        483.32000732421875,
+        107.9781265258789
+      ],
+      "block_id": "page-0458-block-0005",
+      "order": 5,
+      "text": "Citalopram (CelexaMD)\n20,00\n40,0\n",
+      "text_sha256": "7e68524f6522ca25116e46f2f5506c1f5d7122d955cfc50526f9a0d1b4bcf70d"
+    },
+    {
+      "bbox": [
+        58.25,
+        115.95137023925781,
+        483.32000732421875,
+        126.37812805175781
+      ],
+      "block_id": "page-0458-block-0006",
+      "order": 6,
+      "text": "Escitalopram (CipralexMD)\n5,00 à 10,00\n20,0\n",
+      "text_sha256": "5124b9ae684ad8ca362e9f0467c5544099080b5ffb9257f9476f740578b4ddba"
+    },
+    {
+      "bbox": [
+        58.25,
+        134.4013671875,
+        483.32000732421875,
+        144.828125
+      ],
+      "block_id": "page-0458-block-0007",
+      "order": 7,
+      "text": "Fluoxétine (ProzacMD)\n20,00\n80,0\n",
+      "text_sha256": "2fd49f2fa6bb6082ef14015ebb42b83a230937e1669187a6b7541022f2989406"
+    },
+    {
+      "bbox": [
+        58.25,
+        152.80137634277344,
+        483.3399963378906,
+        163.22813415527344
+      ],
+      "block_id": "page-0458-block-0008",
+      "order": 8,
+      "text": "Fluvoxamine (LuvoxMD)\n50,00\n300,0\n",
+      "text_sha256": "093b6e8e1ecd7e52cd62d73594cee86cffa43f082b137a578ee8a0fa3f610b4e"
+    },
+    {
+      "bbox": [
+        58.25,
+        171.25137329101562,
+        483.32000732421875,
+        181.67813110351562
+      ],
+      "block_id": "page-0458-block-0009",
+      "order": 9,
+      "text": "Paroxétine (PaxilMD)\n20,00\n60,0\n",
+      "text_sha256": "db0bf3b171d1c71cedbf09b41d534cea96a598dfe4e10ddb48a25edc4977f82f"
+    },
+    {
+      "bbox": [
+        58.25,
+        189.6513671875,
+        483.32000732421875,
+        200.078125
+      ],
+      "block_id": "page-0458-block-0010",
+      "order": 10,
+      "text": "Paroxétine CR (Paxil CRMD)\n25,00\n62,5\n",
+      "text_sha256": "fa517d5aa8cc98d7e5a6fe19c43aef3b1f515ec9c75ed7af7870f21e7624f4b3"
+    },
+    {
+      "bbox": [
+        58.25,
+        208.1013641357422,
+        483.3399963378906,
+        218.5281219482422
+      ],
+      "block_id": "page-0458-block-0011",
+      "order": 11,
+      "text": "Sertraline (ZoloftMD)\n50,00\n200,0\n",
+      "text_sha256": "16d30d576e717c1a64ddf68fffc4e06edf1487a6c5a34713ef0e68ec5b4ee85a"
+    },
+    {
+      "bbox": [
+        57.25,
+        224.02285766601562,
+        120.7540054321289,
+        234.04238891601562
+      ],
+      "block_id": "page-0458-block-0012",
+      "order": 12,
+      "text": "IMAO et/ou IRMAO\n",
+      "text_sha256": "c108e456b6c3e2dac527ee010807474168eef2f717e28d509bd6d71248c92566"
+    },
+    {
+      "bbox": [
+        58.25,
+        238.9513702392578,
+        483.3399963378906,
+        249.3781280517578
+      ],
+      "block_id": "page-0458-block-0013",
+      "order": 13,
+      "text": "Moclobémide (ManerixMD)\n300,00\n600,0\n",
+      "text_sha256": "881676185317aa238c7757b279a42322a38703b2fc8714cc4bbd06fa4d2a3fcb"
+    },
+    {
+      "bbox": [
+        58.25,
+        257.35137939453125,
+        483.32000732421875,
+        267.77813720703125
+      ],
+      "block_id": "page-0458-block-0014",
+      "order": 14,
+      "text": "Phénelzine (NardilMD)\n15,00\n90,0\n",
+      "text_sha256": "9681965aaf8deaf5c49eef596fbbb6853e457fadfc7602e88d6d881508bd4472"
+    },
+    {
+      "bbox": [
+        58.25,
+        275.8013610839844,
+        483.32000732421875,
+        286.2281188964844
+      ],
+      "block_id": "page-0458-block-0015",
+      "order": 15,
+      "text": "Tranylcypromine (ParnateMD)\n10,00\n30,0\n",
+      "text_sha256": "7cfdd40f5a7f60a544a6a257e7204363b8480e1a4586a8ad024feca03e60f014"
+    },
+    {
+      "bbox": [
+        57.25,
+        291.7228698730469,
+        155.4759979248047,
+        301.7424011230469
+      ],
+      "block_id": "page-0458-block-0016",
+      "order": 16,
+      "text": "Antidépresseurs tricycliques\n",
+      "text_sha256": "9a38b06071f7d674432c0c51466b9623b87c0c8aef7b28d574f979ab5ddf4fa1"
+    },
+    {
+      "bbox": [
+        58.25,
+        306.6513671875,
+        483.3399963378906,
+        317.078125
+      ],
+      "block_id": "page-0458-block-0017",
+      "order": 17,
+      "text": "Clomipramine (AnafranilMD)\n25,00\n200,0\n",
+      "text_sha256": "7fc2bce942d4049b50616a985e9ce7e6ad9a5d43a7ddd4d85bec22b400906c08"
+    },
+    {
+      "bbox": [
+        58.25,
+        325.0513610839844,
+        483.3399963378906,
+        335.4781188964844
+      ],
+      "block_id": "page-0458-block-0018",
+      "order": 18,
+      "text": "Imipramine (TofranilMD)\n25,00\n150,0\n",
+      "text_sha256": "fd5af550fb470fa8e8375cf480398181e64af133a5c059bae42d80fe3ae5ef5a"
+    },
+    {
+      "bbox": [
+        57.25,
+        341.0228576660156,
+        137.49400329589844,
+        351.0423889160156
+      ],
+      "block_id": "page-0458-block-0019",
+      "order": 19,
+      "text": "Autres antidépresseurs\n",
+      "text_sha256": "c61aed149f7dcbdfd980cf53fbbab056878977bb012137d258244339b3d7900d"
+    },
+    {
+      "bbox": [
+        58.25,
+        353.5519714355469,
+        483.3399963378906,
+        366.328125
+      ],
+      "block_id": "page-0458-block-0020",
+      "order": 20,
+      "text": "Bupropion SR (WellbutrinMD SR)\n100,00 à 150,00\n300,0\n",
+      "text_sha256": "60f29311e43c417de49ab28ddf3fd9481c7a6f329a771caecba11421b2c07557"
+    },
+    {
+      "bbox": [
+        58.25,
+        371.95196533203125,
+        483.3399963378906,
+        384.77813720703125
+      ],
+      "block_id": "page-0458-block-0021",
+      "order": 21,
+      "text": "Bupropion XL (WellbutrinMD XL)\n150,00\n300,0\n",
+      "text_sha256": "471b4ea00896bbc63bdccbd8fa673653900b41db1cce9cbd3468ba3a0f00ad1b"
+    },
+    {
+      "bbox": [
+        58.25,
+        392.8013610839844,
+        483.3399963378906,
+        403.2281188964844
+      ],
+      "block_id": "page-0458-block-0022",
+      "order": 22,
+      "text": "Desvenlafaxine (PristiqMD)\n50,00\n100,0\n",
+      "text_sha256": "2b61ba2d100d9fcd5dae80c0f80f21086e98be7bcce9f8f6f57a9c1ad1be3ce8"
+    },
+    {
+      "bbox": [
+        58.25,
+        411.2013854980469,
+        483.3699951171875,
+        421.6281433105469
+      ],
+      "block_id": "page-0458-block-0023",
+      "order": 23,
+      "text": "Duloxétine (CymbaltaMD)\n20,00\n60,0\n",
+      "text_sha256": "570190365898f6a9f720acd2fefe4b052529e4d53ff4d528973fbbc98bf3f410"
+    },
+    {
+      "bbox": [
+        58.25,
+        429.6513671875,
+        483.32000732421875,
+        440.078125
+      ],
+      "block_id": "page-0458-block-0024",
+      "order": 24,
+      "text": "Mirtazapine (RemeronMD)\n15,00\n45,0\n",
+      "text_sha256": "cc67a07ae4eaf37fb7d239108617dc8586050876ddcee2032602079341227a14"
+    },
+    {
+      "bbox": [
+        58.25,
+        445.6519470214844,
+        483.32000732421875,
+        458.4781188964844
+      ],
+      "block_id": "page-0458-block-0025",
+      "order": 25,
+      "text": "Mirtazapine RD (RemeronMD RD)\n15,00\n45,0\n",
+      "text_sha256": "af82495c8e86d8b001d2569bd45d928b1ed4f20f34453c492ccbdde6f5540bd2"
+    },
+    {
+      "bbox": [
+        58.25,
+        464.1019592285156,
+        483.3399963378906,
+        476.9281311035156
+      ],
+      "block_id": "page-0458-block-0026",
+      "order": 26,
+      "text": "Venlafaxine XR (EffexorMD XR)\n37,50 à 75,00\n225,0\n",
+      "text_sha256": "a153c7c7f34634f55f731ef2737efe0fe48aa1dceae7a0d8aacc5259e40ff782"
+    },
+    {
+      "bbox": [
+        57.25,
+        482.4228515625,
+        95.41000366210938,
+        492.4423828125
+      ],
+      "block_id": "page-0458-block-0027",
+      "order": 27,
+      "text": "Azapirones\n",
+      "text_sha256": "374ddbccaf0ffdbe36226a7f2b6b4b37f8bff7dc8389837d3886f9be5379322b"
+    },
+    {
+      "bbox": [
+        58.25,
+        497.35137939453125,
+        483.32000732421875,
+        507.77813720703125
+      ],
+      "block_id": "page-0458-block-0028",
+      "order": 28,
+      "text": "Buspirone (BusparMD)\n5,00\n30,0\n",
+      "text_sha256": "f43d4e045b4a64c6f0d23a34749b69bcfbacfbd22d4b7f28f8e157812f99d445"
+    },
+    {
+      "bbox": [
+        57.25,
+        513.2728881835938,
+        117.9010009765625,
+        523.2924194335938
+      ],
+      "block_id": "page-0458-block-0029",
+      "order": 29,
+      "text": "Anticonvulsivants\n",
+      "text_sha256": "64d26a4e06c927d2d12211f8454cc62a8c95ce0d98755c5685c8215fc9114f22"
+    },
+    {
+      "bbox": [
+        58.25,
+        528.2013549804688,
+        483.80999755859375,
+        538.6281127929688
+      ],
+      "block_id": "page-0458-block-0030",
+      "order": 30,
+      "text": "Gabapentine (NeurontinMD)\n900,00\n3 600,0\n",
+      "text_sha256": "ae3345dc4a8304be2851a614bb3d8ff2ac5ac33ee321779ca6ed5dd6ba1a4404"
+    },
+    {
+      "bbox": [
+        58.25,
+        546.6013793945312,
+        483.3399963378906,
+        557.0281372070312
+      ],
+      "block_id": "page-0458-block-0031",
+      "order": 31,
+      "text": "Lamotrigine (LamictalMD)\n25,00\n200,0\n",
+      "text_sha256": "dedd8047cc0ec45b3250a65137c8761039d285e11e537ca9e6a629d5394b1361"
+    },
+    {
+      "bbox": [
+        58.25,
+        565.0513916015625,
+        483.3399963378906,
+        575.4781494140625
+      ],
+      "block_id": "page-0458-block-0032",
+      "order": 32,
+      "text": "Prégabaline (LyricaMD)\n150,00\n600,0\n",
+      "text_sha256": "e4cd39e00a69a5a90db70a353c841c156e5632b401692e928b33ec0593b3c22b"
+    },
+    {
+      "bbox": [
+        58.25,
+        583.4513549804688,
+        483.3399963378906,
+        593.8781127929688
+      ],
+      "block_id": "page-0458-block-0033",
+      "order": 33,
+      "text": "Topiramate (TopamaxMD)\n25,00\n800,0\n",
+      "text_sha256": "3a0c8fd93828b5ef0d2dc368971723c36796f73c3aa56a52e9ce27ca0d77fc5d"
+    },
+    {
+      "bbox": [
+        57.25,
+        599.4228515625,
+        152.1370086669922,
+        609.4423828125
+      ],
+      "block_id": "page-0458-block-0034",
+      "order": 34,
+      "text": "Antipsychotiques atypiques\n",
+      "text_sha256": "5079817fbd3becd280741342bf5174799f262f90e1e77ceedf7008100285d7e9"
+    },
+    {
+      "bbox": [
+        58.25,
+        614.3013916015625,
+        483.32000732421875,
+        624.7281494140625
+      ],
+      "block_id": "page-0458-block-0035",
+      "order": 35,
+      "text": "Aripiprazole (AbilifyMD)\n2,00 à 5 ,00\n30,0\n",
+      "text_sha256": "76ec82d00d72ecc6417d227a6f21a440e46fbe83d41da9218a2f56c1ecc8b428"
+    },
+    {
+      "bbox": [
+        58.25,
+        632.7514038085938,
+        483.32000732421875,
+        643.1781616210938
+      ],
+      "block_id": "page-0458-block-0036",
+      "order": 36,
+      "text": "Olanzapine (ZyprexaMD)\n5,00\n20,0\n",
+      "text_sha256": "963c8b4a38d256dea1169dfb57e9deb7cc5f6cbed3714d605bb3dc50e81c19b5"
+    },
+    {
+      "bbox": [
+        58.25,
+        651.1513671875,
+        483.3399963378906,
+        661.578125
+      ],
+      "block_id": "page-0458-block-0037",
+      "order": 37,
+      "text": "Quétiapine (SeroquelMD)\n25,00 à 50,00\n800,0\n",
+      "text_sha256": "454be3965f4a8a1bdd7100d72808016157264cbd7e0e79fd68c8ea3407c082de"
+    },
+    {
+      "bbox": [
+        58.25,
+        669.6013793945312,
+        483.29998779296875,
+        680.0281372070312
+      ],
+      "block_id": "page-0458-block-0038",
+      "order": 38,
+      "text": "Rispéridone (RisperdalMD)\n0,25 à 0,50\n6,0\n",
+      "text_sha256": "8f214d6298f99010691c5539fc7dc629038e9031a5526a4ae1119f9655912f56"
+    },
+    {
+      "bbox": [
+        58.25,
+        688.0014038085938,
+        483.3399963378906,
+        698.4281616210938
+      ],
+      "block_id": "page-0458-block-0039",
+      "order": 39,
+      "text": "Ziprasidone (ZeldoxMD)\n20,00 à 40,00\n160,0\n",
+      "text_sha256": "98a8b978c72c20469db530a08cfcd82727322d61598f48251c0963770f133e23"
+    },
+    {
+      "bbox": [
+        54.25,
+        707.2406616210938,
+        171.3820037841797,
+        716.10888671875
+      ],
+      "block_id": "page-0458-block-0040",
+      "order": 40,
+      "text": "Source : Adapté de Swinson & al. (2006).\n",
+      "text_sha256": "02d9c48988d2a0d274bd078dcd8b0460861bbe56bf5685d5bd302d52936e5815"
+    }
+  ],
+  "coordinates_sha256": "073a3cf0283e73109959c0badb3f403fefae94b134af254b003f912e2a88ee51",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0458",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 20\nTroubles anxieux, panique, phobies\n441\nTABLEAU 20.12 Doses recommandées par Santé Canada pour certains psychotropes d’usage courant dans le traitement\ndes troubles anxieux\nMédicaments\nDose quotidienne (mg)\nISRS\nInitiale\nMaximale (en dose unique ou fractionnée)\nCitalopram (CelexaMD)\n20,00\n40,0\nEscitalopram (CipralexMD)\n5,00 à 10,00\n20,0\nFluoxétine (ProzacMD)\n20,00\n80,0\nFluvoxamine (LuvoxMD)\n50,00\n300,0\nParoxétine (PaxilMD)\n20,00\n60,0\nParoxétine CR (Paxil CRMD)\n25,00\n62,5\nSertraline (ZoloftMD)\n50,00\n200,0\nIMAO et/ou IRMAO\nMoclobémide (ManerixMD)\n300,00\n600,0\nPhénelzine (NardilMD)\n15,00\n90,0\nTranylcypromine (ParnateMD)\n10,00\n30,0\nAntidépresseurs tricycliques\nClomipramine (AnafranilMD)\n25,00\n200,0\nImipramine (TofranilMD)\n25,00\n150,0\nAutres antidépresseurs\nBupropion SR (WellbutrinMD SR)\n100,00 à 150,00\n300,0\nBupropion XL (WellbutrinMD XL)\n150,00\n300,0\nDesvenlafaxine (PristiqMD)\n50,00\n100,0\nDuloxétine (CymbaltaMD)\n20,00\n60,0\nMirtazapine (RemeronMD)\n15,00\n45,0\nMirtazapine RD (RemeronMD RD)\n15,00\n45,0\nVenlafaxine XR (EffexorMD XR)\n37,50 à 75,00\n225,0\nAzapirones\nBuspirone (BusparMD)\n5,00\n30,0\nAnticonvulsivants\nGabapentine (NeurontinMD)\n900,00\n3 600,0\nLamotrigine (LamictalMD)\n25,00\n200,0\nPrégabaline (LyricaMD)\n150,00\n600,0\nTopiramate (TopamaxMD)\n25,00\n800,0\nAntipsychotiques atypiques\nAripiprazole (AbilifyMD)\n2,00 à 5 ,00\n30,0\nOlanzapine (ZyprexaMD)\n5,00\n20,0\nQuétiapine (SeroquelMD)\n25,00 à 50,00\n800,0\nRispéridone (RisperdalMD)\n0,25 à 0,50\n6,0\nZiprasidone (ZeldoxMD)\n20,00 à 40,00\n160,0\nSource : Adapté de Swinson & al. (2006).\n",
+  "raw_text_sha256": "ff4853410d4bd31cb2ecf6c630f3831660d4fe6d831a40e06238abe8bcadb208",
+  "source_page_display": 459,
+  "source_page_index": 458
+}

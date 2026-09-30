@@ -1,0 +1,76 @@
+{
+  "block_sequence_sha256": "60c9a7e98653a0199c50a1443c89177ab2f68ac810799362399dc38bdbbf2442",
+  "blocks": [
+    {
+      "bbox": [
+        405.1000061035156,
+        747.3754272460938,
+        555.0,
+        758.6693725585938
+      ],
+      "block_id": "page-0140-block-0001",
+      "order": 1,
+      "text": "Chapitre 6\nNeurobiologie\n123\n",
+      "text_sha256": "5f60700eeff5130d45f35a7ba1e08dfb6a9bf2de36c61cd23ab95742d2d96183"
+    },
+    {
+      "bbox": [
+        56.25,
+        324.602294921875,
+        238.27626037597656,
+        336.9700622558594
+      ],
+      "block_id": "page-0140-block-0002",
+      "order": 2,
+      "text": "FIGURE 6.9 Métabolisme de la noradrénaline\n",
+      "text_sha256": "a5f0a589d4450718827f9a4157eb8a532354ef5351323ac1ee556851ba8ea5ee"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.72441482543945,
+        297.341796875,
+        258.25848388671875
+      ],
+      "block_id": "page-0140-block-0003",
+      "order": 3,
+      "text": "• B1 à B9, groupements sérotoninergiques ;\n• C1 à C3, groupements adrénergiques ;\n• Ch1 à Ch6, groupements cholinergiques.\nLes groupements noradrénergiques (A1 à A7) sont locali-\nsés dans le tronc cérébral, principalement au niveau du bulbe\nrachidien et de la protubérance. Le groupe A6, localisé dans\nle locus cœruleus (voir la gure 6.3), est le plus connu ; ces\nneurones donnent naissance à la majorité des voies effé-\nrentes noradrénergiques ascendantes qui constituent les fais-\nceaux noradrénergiques ventral et dorsal. Les axones des neurones\nnoradrénergiques sont extensivement ramiés tout au long de\nleurs projections qui innervent principalement le cortex, le\ndiencéphale, l’hippocampe, l’amygdale, le cervelet et la moelle\népinière. Les neurones noradrénergiques reçoivent des aérences\nd’un grand nombre de noyaux appartenant au système limbique\n(voir la sous-section 6.1.4) tels que l’hypothalamus, l’amygdale,\nles noyaux du raphé, ainsi que des régions corticales comme\nles cortex cingulaire et préfrontal.\n",
+      "text_sha256": "351fa7fa04dc87605604666c3ff827143d029e6685b83ee7fdfd880cde75be94"
+    },
+    {
+      "bbox": [
+        54.0,
+        259.4658203125,
+        297.2104187011719,
+        305.15850830078125
+      ],
+      "block_id": "page-0140-block-0004",
+      "order": 4,
+      "text": "Le groupe de neurones qui utilisent l’adrénaline (C1 à C3)\ncomme neurotransmetteur sont localisés dans le bulbe rachidien.\nIls envoient des projections vers le locus cœruleus et antérieu-\nrement, ils accompagnent les projections noradrénergiques.\n",
+      "text_sha256": "551de3c621cac063254fb59533224a84bf586d449fe953cc4fb0f293f5a83de4"
+    },
+    {
+      "bbox": [
+        312.0,
+        40.05229568481445,
+        555.3762817382812,
+        305.15850830078125
+      ],
+      "block_id": "page-0140-block-0005",
+      "order": 5,
+      "text": "Synthèse et métabolisme\nL’acide aminé non essentiel L-tyrosine (les acides aminés non\nessentiels sont synthétisés par l’organisme, au contraire des huit\nacides aminés essentiels (tryptophane, lysine, phénylalanine, etc.)\nqui doivent être apportés par l’alimentation) est le précurseur des\ncatécholamines. La tyrosine est un dérivé de la phénylalanine et\ndoit passer la barrière hématoencéphalique avant d’être captée\npar les neurones noradrénergiques. Il s’agit d’un processus actif\nqui nécessite l’action de l’ATP. La tyrosine est transformée en\nlévo-dihydroxy-phényl-alanine (L-DOPA) par l’enzyme tyrosine\nhydroxylase (voir la gure 6.9). Il existe quatre isoformes de\nl’enzyme tyrosine hydroxylase issues du même gène ; la distri-\nbution de ces diérentes isoformes varie selon le type de cellules\ncatécholaminergiques. Cette première étape limite la synthèse,\nce qui signie qu’une augmentation dans l’apport alimentaire de\nL-tyrosine ne se traduit pas nécessairement par une poten-\ntialisation de la synthèse de NA. La L-DOPA est convertie en\nDA par l’enzyme DOPA décarboxylase et la DA est convertie\nen NA par l’enzyme dopamine β-hydroxylase présente unique-\nment dans les vésicules des terminaisons présynaptiques. La DA\ndoit donc être transportée dans la vésicule par un transporteur\nvésiculaire avant d’être transformée en NA. Il existe deux trans-\nporteurs vésiculaires des monoamines (TVM) :\n",
+      "text_sha256": "7bf14c8f3314a1960befe2d15843f2bb2c48071ed2ed2792d5efdcabb7677001"
+    }
+  ],
+  "coordinates_sha256": "3b9c404ecc2dd0e2d94b6b7b32062cc54f2f2182bfbb1c9123684ea76b18e19a",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0140",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 6\nNeurobiologie\n123\nFIGURE 6.9 Métabolisme de la noradrénaline\n• B1 à B9, groupements sérotoninergiques ;\n• C1 à C3, groupements adrénergiques ;\n• Ch1 à Ch6, groupements cholinergiques.\nLes groupements noradrénergiques (A1 à A7) sont locali-\nsés dans le tronc cérébral, principalement au niveau du bulbe\nrachidien et de la protubérance. Le groupe A6, localisé dans\nle locus cœruleus (voir la gure 6.3), est le plus connu ; ces\nneurones donnent naissance à la majorité des voies effé-\nrentes noradrénergiques ascendantes qui constituent les fais-\nceaux noradrénergiques ventral et dorsal. Les axones des neurones\nnoradrénergiques sont extensivement ramiés tout au long de\nleurs projections qui innervent principalement le cortex, le\ndiencéphale, l’hippocampe, l’amygdale, le cervelet et la moelle\népinière. Les neurones noradrénergiques reçoivent des aérences\nd’un grand nombre de noyaux appartenant au système limbique\n(voir la sous-section 6.1.4) tels que l’hypothalamus, l’amygdale,\nles noyaux du raphé, ainsi que des régions corticales comme\nles cortex cingulaire et préfrontal.\nLe groupe de neurones qui utilisent l’adrénaline (C1 à C3)\ncomme neurotransmetteur sont localisés dans le bulbe rachidien.\nIls envoient des projections vers le locus cœruleus et antérieu-\nrement, ils accompagnent les projections noradrénergiques.\nSynthèse et métabolisme\nL’acide aminé non essentiel L-tyrosine (les acides aminés non\nessentiels sont synthétisés par l’organisme, au contraire des huit\nacides aminés essentiels (tryptophane, lysine, phénylalanine, etc.)\nqui doivent être apportés par l’alimentation) est le précurseur des\ncatécholamines. La tyrosine est un dérivé de la phénylalanine et\ndoit passer la barrière hématoencéphalique avant d’être captée\npar les neurones noradrénergiques. Il s’agit d’un processus actif\nqui nécessite l’action de l’ATP. La tyrosine est transformée en\nlévo-dihydroxy-phényl-alanine (L-DOPA) par l’enzyme tyrosine\nhydroxylase (voir la gure 6.9). Il existe quatre isoformes de\nl’enzyme tyrosine hydroxylase issues du même gène ; la distri-\nbution de ces diérentes isoformes varie selon le type de cellules\ncatécholaminergiques. Cette première étape limite la synthèse,\nce qui signie qu’une augmentation dans l’apport alimentaire de\nL-tyrosine ne se traduit pas nécessairement par une poten-\ntialisation de la synthèse de NA. La L-DOPA est convertie en\nDA par l’enzyme DOPA décarboxylase et la DA est convertie\nen NA par l’enzyme dopamine β-hydroxylase présente unique-\nment dans les vésicules des terminaisons présynaptiques. La DA\ndoit donc être transportée dans la vésicule par un transporteur\nvésiculaire avant d’être transformée en NA. Il existe deux trans-\nporteurs vésiculaires des monoamines (TVM) :\n",
+  "raw_text_sha256": "213fe74eaf17a0236b3c7a508d19015ef09b2ac37d490b2febe844751fa1e38d",
+  "source_page_display": 141,
+  "source_page_index": 140
+}

@@ -1,0 +1,124 @@
+{
+  "block_sequence_sha256": "a2e25904d64475b6ae709fc43dc5b55406c51e8e36643e60be616d8d9606a6a7",
+  "blocks": [
+    {
+      "bbox": [
+        263.1000061035156,
+        5.781059265136719,
+        561.0,
+        125.78105163574219
+      ],
+      "block_id": "page-0297-block-0001",
+      "order": 1,
+      "text": "CHAPITRE13\n",
+      "text_sha256": "0cbca61b231672184bdac68df2743ddc8f967a430fc3d227a98085ed6a94eb81"
+    },
+    {
+      "bbox": [
+        47.95000076293945,
+        279.0001220703125,
+        234.35899353027344,
+        291.5001220703125
+      ],
+      "block_id": "page-0297-block-0002",
+      "order": 2,
+      "text": "Louise Blais, PH. D. (sciences humaines appliquées)\n",
+      "text_sha256": "8ae21879dc61876ed5aba90348e11fd0920bc10fad81a9b3f377a4de7d6e1716"
+    },
+    {
+      "bbox": [
+        47.95000076293945,
+        295.37725830078125,
+        277.339111328125,
+        316.59381103515625
+      ],
+      "block_id": "page-0297-block-0003",
+      "order": 3,
+      "text": "Professeure titulaire (retraitée), Faculté des sciences sociales,\nÉcole de service social, Université d’Ottawa\n",
+      "text_sha256": "ca838cff6001d8f8a4a955221940673616cc308e5a092d667669fb89bb82fc7f"
+    },
+    {
+      "bbox": [
+        48.0,
+        373.8744201660156,
+        289.0099792480469,
+        468.7972717285156
+      ],
+      "block_id": "page-0297-block-0004",
+      "order": 4,
+      "text": "13.1 Perspective fonctionnaliste.......................................... 281\n13.1.1 Santé et conformité............................................... 281\n13.1.2 Maladie et déviance .............................................. 281\n13.1.3 Relativité des notions de santé\net de normalité....................................................... 282\n13.1.4 Intervention et recherche.................................... 282\n13.1.5 Limites et possibilités de la perspective\nfonctionnaliste ....................................................... 282\n",
+      "text_sha256": "b6749e937e2096e9c50ba91eb00306336794686f5621e7d38bd6d8ee8ca0236b"
+    },
+    {
+      "bbox": [
+        48.0,
+        473.8744201660156,
+        289.0099792480469,
+        558.7973022460938
+      ],
+      "block_id": "page-0297-block-0005",
+      "order": 5,
+      "text": "13.2 Interactionnisme ........................................................... 282\n13.2.1 éorie de l’étiquetage.......................................... 283\n13.2.2 Action déviante comme processus social......... 283\n13.2.3 Causalité sociale ou dérive sociale..................... 284\n13.2.4 Intervention et recherche.................................... 284\n13.2.5 Limites et possibilités\nde l’interactionnisme ............................................ 284\n",
+      "text_sha256": "29942d2b633a8b0b257b67c458b0e27c675a348241a39367e84943872b9cceb5"
+    },
+    {
+      "bbox": [
+        306.0,
+        373.8744201660156,
+        547.0100708007812,
+        435.7972717285156
+      ],
+      "block_id": "page-0297-block-0006",
+      "order": 6,
+      "text": "13.3 Structuralisme ............................................................... 284\n13.3.1 Genèse sociale des maladies................................ 285\n13.3.2 Médicalisation du social ...................................... 285\n13.3.3 Intervention et recherche.................................... 286\n13.3.4 Limites et possibilités du structuralisme.......... 286\n",
+      "text_sha256": "0c3031f91216ddb86fe93bbc49fe6ce146ff08a587a84ec228284f30508e89fb"
+    },
+    {
+      "bbox": [
+        306.0,
+        440.8744201660156,
+        547.0100708007812,
+        519.7973022460938
+      ],
+      "block_id": "page-0297-block-0007",
+      "order": 7,
+      "text": "13.4 Sociobiologie.................................................................. 286\n13.4.1 Bases biologiques des comportements\nsociaux..................................................................... 286\n13.4.2 Normalité en tant qu’adaptation\nà l’ordre social......................................................... 287\n13.4.3 Limites et possibilités\nde la sociobiologie................................................. 287\n",
+      "text_sha256": "97331b30c69f70d12415145e372625f91084c312e4949fdaede0ec15b1dddedd"
+    },
+    {
+      "bbox": [
+        306.0,
+        524.1244506835938,
+        547.0100708007812,
+        533.9682006835938
+      ],
+      "block_id": "page-0297-block-0008",
+      "order": 8,
+      "text": "Lectures complémentaires...................................................... 288\n",
+      "text_sha256": "623125c524814959585da6dc4bccb4e0b5098d5fad1dbfcd724fa6d53a34a417"
+    },
+    {
+      "bbox": [
+        48.0,
+        143.5734405517578,
+        342.3116149902344,
+        230.4953155517578
+      ],
+      "block_id": "page-0297-block-0009",
+      "order": 9,
+      "text": "Sociologie et\nmaladies mentales\n",
+      "text_sha256": "305fcb118b229d69e009e71b96125a83f338e4fdaa0f5ac6375a06f8109511b1"
+    }
+  ],
+  "coordinates_sha256": "481b4fb6a04b13aaea62355b8601498c4f97f84ddaaf37f227f1f9b9a24f9a49",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0297",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "CHAPITRE13\nLouise Blais, PH. D. (sciences humaines appliquées)\nProfesseure titulaire (retraitée), Faculté des sciences sociales,\nÉcole de service social, Université d’Ottawa\n13.1 Perspective fonctionnaliste.......................................... 281\n13.1.1 Santé et conformité............................................... 281\n13.1.2 Maladie et déviance .............................................. 281\n13.1.3 Relativité des notions de santé\net de normalité....................................................... 282\n13.1.4 Intervention et recherche.................................... 282\n13.1.5 Limites et possibilités de la perspective\nfonctionnaliste ....................................................... 282\n13.2 Interactionnisme ........................................................... 282\n13.2.1 éorie de l’étiquetage.......................................... 283\n13.2.2 Action déviante comme processus social......... 283\n13.2.3 Causalité sociale ou dérive sociale..................... 284\n13.2.4 Intervention et recherche.................................... 284\n13.2.5 Limites et possibilités\nde l’interactionnisme ............................................ 284\n13.3 Structuralisme ............................................................... 284\n13.3.1 Genèse sociale des maladies................................ 285\n13.3.2 Médicalisation du social ...................................... 285\n13.3.3 Intervention et recherche.................................... 286\n13.3.4 Limites et possibilités du structuralisme.......... 286\n13.4 Sociobiologie.................................................................. 286\n13.4.1 Bases biologiques des comportements\nsociaux..................................................................... 286\n13.4.2 Normalité en tant qu’adaptation\nà l’ordre social......................................................... 287\n13.4.3 Limites et possibilités\nde la sociobiologie................................................. 287\nLectures complémentaires...................................................... 288\nSociologie et\nmaladies mentales\n",
+  "raw_text_sha256": "93201e450b8acceb22e5ce70a15675f36682afa9508bd86927d76720490b9d33",
+  "source_page_display": 298,
+  "source_page_index": 297
+}

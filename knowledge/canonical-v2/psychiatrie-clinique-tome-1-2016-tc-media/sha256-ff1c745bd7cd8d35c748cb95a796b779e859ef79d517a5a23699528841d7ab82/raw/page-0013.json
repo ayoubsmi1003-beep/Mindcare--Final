@@ -1,0 +1,640 @@
+{
+  "block_sequence_sha256": "1d773209bb195a64b04479bd675dd7ffdd26dad4779e1956efeaf72e39019496",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        38.31171798706055,
+        147.54000854492188,
+        60.77265548706055
+      ],
+      "block_id": "page-0013-block-0001",
+      "order": 1,
+      "text": "Abréviations\n",
+      "text_sha256": "6b8b7688e77df2d6b9903acaad684c145bb76445669f25e28199bcec17fe5916"
+    },
+    {
+      "bbox": [
+        48.0,
+        82.51171875,
+        204.95750427246094,
+        203.85850524902344
+      ],
+      "block_id": "page-0013-block-0002",
+      "order": 2,
+      "text": "3MS: Modied mini-mental state\n5-HIAA: 5-hydroxy-indol-acetic acid,\nacide 5-hydroxyindol acétique\n5-HT: 5-hydroxytryptamine\n(sérotonine)\nA1G: Antipsychotique de 1re génération\nA2G: Antipsychotique de 2e génération\nA3G: Antipsychotique de 3e génération\nAA: Alcooliques Anonymes\nAAMR : American Association on\n",
+      "text_sha256": "5598d3f06aa8d98978cdbc6d7d81aa304b7b0ecf8038cc78b43a75661b2aa58f"
+    },
+    {
+      "bbox": [
+        48.0,
+        205.0158233642578,
+        200.30702209472656,
+        264.6084899902344
+      ],
+      "block_id": "page-0013-block-0003",
+      "order": 3,
+      "text": "Mental Retardation, association\naméricaine pour le retard mental\nAAI: Adult attachment interview\nAC: Activation comportementale\nACBT: Aective cognitive behavioral\n",
+      "text_sha256": "fcc676ad33f83fee4b967abd0342cc407b615cddcbf0068f44c4b7025af02cc3"
+    },
+    {
+      "bbox": [
+        48.0,
+        265.7658386230469,
+        186.71798706054688,
+        337.0085144042969
+      ],
+      "block_id": "page-0013-block-0004",
+      "order": 4,
+      "text": "erapy, thérapie cognitivo-\ncomportementale centrée sur\nl’émotion\nACh: Acétylcholine\nAChE: Acétylcholinestérase\nACR: American College of\n",
+      "text_sha256": "a85b3cd7253339b00093670be28261cd43fe409d090fe1fc41856ec0ea202c43"
+    },
+    {
+      "bbox": [
+        48.0,
+        338.2158203125,
+        196.62826538085938,
+        373.65850830078125
+      ],
+      "block_id": "page-0013-block-0005",
+      "order": 5,
+      "text": "Rhumatology\nACS: American College of Surgeons\nACT: Assertive community treatment,\n",
+      "text_sha256": "85ee0fb895cbf207f3748c23b452f829b454e02e3c61a97c08723d0211e07e58"
+    },
+    {
+      "bbox": [
+        48.0,
+        374.8158264160156,
+        196.5399932861328,
+        397.7585144042969
+      ],
+      "block_id": "page-0013-block-0006",
+      "order": 6,
+      "text": "suivi communautaire intensif\nACTH: Adrenocorticotropic hormone,\n",
+      "text_sha256": "6336d4e5ef633b7fac86cc86131fde90b19975e9d1f93653fc4f233369e7d63e"
+    },
+    {
+      "bbox": [
+        48.0,
+        398.9658203125,
+        198.16749572753906,
+        458.5585021972656
+      ],
+      "block_id": "page-0013-block-0007",
+      "order": 7,
+      "text": "hormone corticotrope hypophy-\nsaire, adrénocorticotrophine\nADH: Alcool déshydrogénase\nADN: Acide désoxyribonucléique\nADOS: Autism diagnosis observation\n",
+      "text_sha256": "644a340599b303e28ad0facec2786825b56627c2146f4691f3c1139d40942614"
+    },
+    {
+      "bbox": [
+        48.0,
+        459.771484375,
+        183.488037109375,
+        482.65850830078125
+      ],
+      "block_id": "page-0013-block-0008",
+      "order": 8,
+      "text": "schedule\nAETMIS: Agence d’évaluation des\n",
+      "text_sha256": "e50c2b2b6c95349bc99151e918ae88c0669c46df327d5cc1008c0e6117c878ce"
+    },
+    {
+      "bbox": [
+        48.0,
+        483.8658142089844,
+        204.5675048828125,
+        518.5084838867188
+      ],
+      "block_id": "page-0013-block-0009",
+      "order": 9,
+      "text": "technologies et des modes d’inter-\nvention en santé\nAIMS: Abnormal involuntary move-\n",
+      "text_sha256": "2a510ecb52f91a7d4f3658983ccfaf184ce2c38030d5527765c6fba8fad803e7"
+    },
+    {
+      "bbox": [
+        48.0,
+        519.7214965820312,
+        197.71749877929688,
+        542.6085205078125
+      ],
+      "block_id": "page-0013-block-0010",
+      "order": 10,
+      "text": "ment scale\nAINS: Anti-inammatoire non stéroï-\n",
+      "text_sha256": "9dc3245127d0bb055e15a964d6d642784c10256da1da6a1dde234c8ea6ed6884"
+    },
+    {
+      "bbox": [
+        48.0,
+        543.8158569335938,
+        183.0675048828125,
+        591.70849609375
+      ],
+      "block_id": "page-0013-block-0011",
+      "order": 11,
+      "text": "dien\nALDH: Aldéhyde déshydrogénase\nALT: Alanine aminotransférase\nAMC : Association médicale cana-\n",
+      "text_sha256": "5f22fed761944cb6c5b2c2508834872b4a4fa64a831a51ce433b657d88304d7b"
+    },
+    {
+      "bbox": [
+        48.0,
+        592.9158325195312,
+        199.3040008544922,
+        640.8085327148438
+      ],
+      "block_id": "page-0013-block-0012",
+      "order": 12,
+      "text": "dienne\nAMH: Adult mental health\nAMH: Hormone antimüllérienne\nAMLFC: Association des médecins de\n",
+      "text_sha256": "ffc1b555777839a4b5605302d80d3b05e584815bd89490d119db7f6ea142b67e"
+    },
+    {
+      "bbox": [
+        48.0,
+        641.9658203125,
+        187.18289184570312,
+        677.4085083007812
+      ],
+      "block_id": "page-0013-block-0013",
+      "order": 13,
+      "text": "langue française du Canada\nAMP: Adénosine monophosphate\nAMPc: Adénosine monophosphate\n",
+      "text_sha256": "a17a80bf2c115730108e522d18f95c040e4217dc6a0f5ebad98bf42bb724febb"
+    },
+    {
+      "bbox": [
+        48.0,
+        678.5658569335938,
+        199.84365844726562,
+        701.5585327148438
+      ],
+      "block_id": "page-0013-block-0014",
+      "order": 14,
+      "text": "cyclique\nAMPA : Α-amino-3-hydroxy-5-methyl-\n",
+      "text_sha256": "f754c66b5e0e149e1afa1c453b30a0e100247832e230e87500ff294eebfd1cf7"
+    },
+    {
+      "bbox": [
+        48.0,
+        702.771484375,
+        170.69497680664062,
+        725.70849609375
+      ],
+      "block_id": "page-0013-block-0015",
+      "order": 15,
+      "text": "4-isoxazolepropionic acid\nAMPH: Amphétamine\n",
+      "text_sha256": "171d735e2014cd65c5ef5c017d1e011228e6f3eb482d2a3c189fd17f0d2da848"
+    },
+    {
+      "bbox": [
+        220.0,
+        82.51171875,
+        355.66650390625,
+        93.20849609375
+      ],
+      "block_id": "page-0013-block-0016",
+      "order": 16,
+      "text": "AMPQ: Association des médecins\n",
+      "text_sha256": "5ee25941b5cd436b746545c8e7d4695ff12a02865e534c8f10fe7ccb32ecabbb"
+    },
+    {
+      "bbox": [
+        220.0,
+        94.41582489013672,
+        349.37237548828125,
+        117.3584976196289
+      ],
+      "block_id": "page-0013-block-0017",
+      "order": 17,
+      "text": "psychiatres du Québec\nAMPS: Assessment of Motor and\n",
+      "text_sha256": "f7b5d5743b647eeb25528dbe42759a392fe6115a32edd41f7c2bc3ee6ab88e22"
+    },
+    {
+      "bbox": [
+        220.0,
+        118.57148742675781,
+        359.3965148925781,
+        141.5084991455078
+      ],
+      "block_id": "page-0013-block-0018",
+      "order": 18,
+      "text": "Process Skills\nAMRP: Association mondiale pour\n",
+      "text_sha256": "7b75088c50808a45394ee2e700d36ae290e8f028b2014487f74c91515129763f"
+    },
+    {
+      "bbox": [
+        220.0,
+        142.6658172607422,
+        376.5347900390625,
+        190.55850219726562
+      ],
+      "block_id": "page-0013-block-0019",
+      "order": 19,
+      "text": "la réadaptation psychosociale\nANOVA: Analyse de la variance\nAPA: American Psychiatric Association\nAPA: American Psychological\n",
+      "text_sha256": "485b8866c3da6f8b29f2397a02deadc98092e567acc47721d47873dd82d03f65"
+    },
+    {
+      "bbox": [
+        220.0,
+        191.7658233642578,
+        352.20953369140625,
+        214.70849609375
+      ],
+      "block_id": "page-0013-block-0020",
+      "order": 20,
+      "text": "Association\nAPC: Association des psychiatres\n",
+      "text_sha256": "9ba5191344e2cd2b444810572e87fd25cb9fca3606bef242dfe60224d5879780"
+    },
+    {
+      "bbox": [
+        220.0,
+        215.9158172607422,
+        369.9015197753906,
+        251.30850219726562
+      ],
+      "block_id": "page-0013-block-0021",
+      "order": 21,
+      "text": "du Canada\nAPS : American Pain Society\nAQPPEP: Association québécoise des\n",
+      "text_sha256": "489392084d2d1093bf9b7e30b5fa3491e240339de6a8abdcd0722e61d0f5bf7c"
+    },
+    {
+      "bbox": [
+        220.0,
+        252.51583862304688,
+        374.69854736328125,
+        299.6084899902344
+      ],
+      "block_id": "page-0013-block-0022",
+      "order": 22,
+      "text": "programmes pour les premiers\népisodes psychotiques\nARN: Acide ribonucléique\nASAM: American Society of Addiction\n",
+      "text_sha256": "6924c1f09ef5cab1caef4f9e33f4b1dc9110c396c521da2206de680113ca1c1e"
+    },
+    {
+      "bbox": [
+        220.0,
+        300.8158264160156,
+        367.6654968261719,
+        373.65850830078125
+      ],
+      "block_id": "page-0013-block-0023",
+      "order": 23,
+      "text": "Medicine\nASEX: Arizona sexual experience\nAST: Aspartate aminotransférase\nATP: Adénosine triphosphate\nATC: Antidépresseurs tricycliques\nAUDIT: Alcohol use disorder identi-\n",
+      "text_sha256": "641eeb70cc08d8c48ad597e9f17e9db553c15c1278f0fa7b11d30474f2aebec9"
+    },
+    {
+      "bbox": [
+        220.0,
+        374.8714904785156,
+        367.45489501953125,
+        435.20849609375
+      ],
+      "block_id": "page-0013-block-0024",
+      "order": 24,
+      "text": "cation test\nAVC: Accident vasculaire cérébral\nAVD: Activités de la vie domestique\nAVQ: Activités de la vie quotidienne\nBADS: Behavioural Assessment of the\n",
+      "text_sha256": "e67e84b52487cd129d9ca73a8959ef964c6222bda91ebbe6ea49ff0fe2c0b3d8"
+    },
+    {
+      "bbox": [
+        220.0,
+        436.4214782714844,
+        361.11749267578125,
+        471.8085021972656
+      ],
+      "block_id": "page-0013-block-0025",
+      "order": 25,
+      "text": "Dysexecutive Syndrome\nBCG: Bacille Calmette-Guérin\nBCM: Bilan comparatif des médica-\n",
+      "text_sha256": "76140ee6bd0424c7a9537778ca96ee51e48d969594a2b172a3fa846de9b5c680"
+    },
+    {
+      "bbox": [
+        220.0,
+        472.9658203125,
+        353.1400146484375,
+        495.95849609375
+      ],
+      "block_id": "page-0013-block-0026",
+      "order": 26,
+      "text": "ments\nBCT: Behavioural couple therapy,\n",
+      "text_sha256": "c83100f03dd32528ffc818b0e04df8b1bcac2c45b39074a81744632c32b85975"
+    },
+    {
+      "bbox": [
+        220.0,
+        497.1158142089844,
+        375.9175109863281,
+        544.20849609375
+      ],
+      "block_id": "page-0013-block-0027",
+      "order": 27,
+      "text": "thérapie conjugale comportemen-\ntale\nBDI: Beck depression inventory\nBDNF: Brain-derived neurotropic\n",
+      "text_sha256": "aa662d7270fd1217883d11cfc0caaa2e9758772ba340dcfc4f6128a7482b7f09"
+    },
+    {
+      "bbox": [
+        220.0,
+        545.4158325195312,
+        370.0516357421875,
+        605.0084838867188
+      ],
+      "block_id": "page-0013-block-0028",
+      "order": 28,
+      "text": "factor, facteur neurotrophique\ndérivé du cerveau\nBID: Bis in die, deux fois par jour\nBPAP: Bilevel positive airway pressure\nBPQ: Borderline personality question-\n",
+      "text_sha256": "8257ec09ce97c1f4cac3aaf6d2c7f9a54b091e420f21645d1622728f93bd36ba"
+    },
+    {
+      "bbox": [
+        220.0,
+        606.2214965820312,
+        361.9329833984375,
+        666.5585327148438
+      ],
+      "block_id": "page-0013-block-0029",
+      "order": 29,
+      "text": "naire\nBPRS: Brief psychiatric rating scale\nBUN: Blood urea nitrogen, azotémie\nC.c.Q: Code civil du Québec\nCADASIL: Cerebral autosomal\n",
+      "text_sha256": "01b800213d59782f6d6b07df71fefee337ce423eaf277da3fc9c8561dc030ea1"
+    },
+    {
+      "bbox": [
+        220.0,
+        667.771484375,
+        372.9654846191406,
+        714.0084838867188
+      ],
+      "block_id": "page-0013-block-0030",
+      "order": 30,
+      "text": "dominant arteriopathy with\nsub-cortical infarcts and leukoen-\ncephalopathy\nCAGE: Cut down, annoyed, guilty, eye-\n",
+      "text_sha256": "50b66654fe2a375f9674cd3159f6a36ac9c0922091d941761576e85c441939b2"
+    },
+    {
+      "bbox": [
+        244.0,
+        715.271484375,
+        269.8399963378906,
+        725.6064453125
+      ],
+      "block_id": "page-0013-block-0031",
+      "order": 31,
+      "text": "opener\n",
+      "text_sha256": "0ee7fef721d26b1166aecad2323be0d9843de25b6ac7493af5d73df939a5b164"
+    },
+    {
+      "bbox": [
+        392.0,
+        82.51171875,
+        527.91455078125,
+        93.20849609375
+      ],
+      "block_id": "page-0013-block-0032",
+      "order": 32,
+      "text": "CANMAT: Canadian Network for\n",
+      "text_sha256": "20136bf107aed75cf6bd2267a468b1b71da7baa186823a12906648ed52511044"
+    },
+    {
+      "bbox": [
+        392.0,
+        94.66582489013672,
+        541.521484375,
+        117.95849609375
+      ],
+      "block_id": "page-0013-block-0033",
+      "order": 33,
+      "text": "Mood and Anxiety Treatments\nCANTAB: Cambridge neuropsycholo-\n",
+      "text_sha256": "83ea9fab5e62f77a76aa4f8ab18402258090e693805c0d79be4e1316e03ae427"
+    },
+    {
+      "bbox": [
+        392.0,
+        119.47148895263672,
+        540.7155151367188,
+        142.6584930419922
+      ],
+      "block_id": "page-0013-block-0034",
+      "order": 34,
+      "text": "gical test automated battery\nCBIS : Cognitive behavioural interper-\n",
+      "text_sha256": "afc2dd47bb6e8dac9ae14af9d92b5e2d03cd5a894d2f489fc5b575a2ce284cb3"
+    },
+    {
+      "bbox": [
+        392.0,
+        144.17149353027344,
+        541.5348510742188,
+        167.4084930419922
+      ],
+      "block_id": "page-0013-block-0035",
+      "order": 35,
+      "text": "sonal skills\nCCAÉS: Conseil canadien d’agrément\n",
+      "text_sha256": "9a4c6987bada0571f7c0c7d23748cad1367cbb35af839f276d18a76d2fcf6326"
+    },
+    {
+      "bbox": [
+        392.0,
+        168.86582946777344,
+        538.0348510742188,
+        192.10850524902344
+      ],
+      "block_id": "page-0013-block-0036",
+      "order": 36,
+      "text": "des établissements de santé\nCCAH: Conseil canadien d’agrément\n",
+      "text_sha256": "79c17363c6e944ee70b2256bb1e3fc17af9f6140fe3e719350bfedccde6cd463"
+    },
+    {
+      "bbox": [
+        392.0,
+        193.56582641601562,
+        540.9848022460938,
+        216.85850524902344
+      ],
+      "block_id": "page-0013-block-0037",
+      "order": 37,
+      "text": "des hôpitaux\nCCASS: Conseil canadien d’agrément\n",
+      "text_sha256": "f845be2e46a06442df346aaa074cfe9d63e2a5d75927f5ea49fcc546ffc069f7"
+    },
+    {
+      "bbox": [
+        392.0,
+        218.31582641601562,
+        520.3081665039062,
+        254.30850219726562
+      ],
+      "block_id": "page-0013-block-0038",
+      "order": 38,
+      "text": "des services de santé\nCCK: Cholécystokinine\nCCMHI: Canadian collaborative\n",
+      "text_sha256": "b0f4bec24c8c4013196d4662ba66775886dda9e538011b2392e3bf2d12cf72fc"
+    },
+    {
+      "bbox": [
+        392.0,
+        255.81582641601562,
+        533.2628173828125,
+        304.5585021972656
+      ],
+      "block_id": "page-0013-block-0039",
+      "order": 39,
+      "text": "mental health initiative\nCDI: Clinical diagnostic interview\nCDR: Clinical dementia rating scale\nCDT: Carbohydrate decient trans-\n",
+      "text_sha256": "5b8c1287ec00f667043ca0f101810032b5a50f959a5c362b8671dec385e4c523"
+    },
+    {
+      "bbox": [
+        392.0,
+        306.0658264160156,
+        547.1597900390625,
+        341.2585144042969
+      ],
+      "block_id": "page-0013-block-0040",
+      "order": 40,
+      "text": "ferrin, transferrine déciente en\nhydrate de carbone\nCEMCQ: Conseil d’éducation médicale\n",
+      "text_sha256": "610d2f494316ed79f1aefab7f6bdb86df4ee4682207743d0dd6e5ce49a722274"
+    },
+    {
+      "bbox": [
+        392.0,
+        342.7158203125,
+        542.7034912109375,
+        366.0085144042969
+      ],
+      "block_id": "page-0013-block-0041",
+      "order": 41,
+      "text": "continue du Québec\nCFTMEA: Classication française des\n",
+      "text_sha256": "a2d5ef95380cbc5b1b595919a7f1d1e563e3622c18f9ea6f2bc52d65a0ae7dfe"
+    },
+    {
+      "bbox": [
+        392.0,
+        367.4658203125,
+        547.8300170898438,
+        453.70849609375
+      ],
+      "block_id": "page-0013-block-0042",
+      "order": 42,
+      "text": "troubles mentaux de l’enfant et de\nl’adolescent\nCGI: Clinical global impression\nCH: Centre hospitalier\nCHA: Centre hospitalier alié\nChAT: Choline-acétyltransférase\nCHSGS: Centres hospitaliers de soins\n",
+      "text_sha256": "64319abc178da8421fcab693742eec018a5ffd3dad63d1c545877e8eb7d80161"
+    },
+    {
+      "bbox": [
+        392.0,
+        455.2158203125,
+        538.2139282226562,
+        478.45849609375
+      ],
+      "block_id": "page-0013-block-0043",
+      "order": 43,
+      "text": "généraux et spécialisés\nCHSLD: Centre d’hébergement et de\n",
+      "text_sha256": "c864a16fb365f070567e66e022bd2410b9760c3553540511179b4888e4cb4f3a"
+    },
+    {
+      "bbox": [
+        392.0,
+        479.91583251953125,
+        540.1317138671875,
+        515.95849609375
+      ],
+      "block_id": "page-0013-block-0044",
+      "order": 44,
+      "text": "soins de longue durée\nCHU: Centre hospitalier universitaire\nCIDI: Composite international dia-\n",
+      "text_sha256": "4258483bb2fc5db866e780914670978616d7bc5fec3269602ab83326141164f0"
+    },
+    {
+      "bbox": [
+        392.0,
+        517.4714965820312,
+        521.7957763671875,
+        540.6585083007812
+      ],
+      "block_id": "page-0013-block-0045",
+      "order": 45,
+      "text": "gnostic interview\nCIDN: Contrôle inhibiteur dius\n",
+      "text_sha256": "b751ef806290d3a54bab62321ba42f53d3bb410d57cef45459557426f0b70b6b"
+    },
+    {
+      "bbox": [
+        392.0,
+        542.1158447265625,
+        540.9915161132812,
+        565.4085083007812
+      ],
+      "block_id": "page-0013-block-0046",
+      "order": 46,
+      "text": "nociceptif\nCIM: Classication internationale des\n",
+      "text_sha256": "4d1f9c64c050c3dc49c2e7d614d8db375ec050502114ada7df0434ceca30bb54"
+    },
+    {
+      "bbox": [
+        392.0,
+        566.8658447265625,
+        538.5675659179688,
+        590.1085205078125
+      ],
+      "block_id": "page-0013-block-0047",
+      "order": 47,
+      "text": "maladies\nCIP: Comité d’inspection profession-\n",
+      "text_sha256": "8adaba03aaa9ad0db8e0aacab58d08f85027d2fca6ddd337b7ac8c9b2fc12c5a"
+    },
+    {
+      "bbox": [
+        392.0,
+        591.5658569335938,
+        519.6121826171875,
+        614.8085327148438
+      ],
+      "block_id": "page-0013-block-0048",
+      "order": 48,
+      "text": "nelle\nCIWA-AR: Clinical Institute for\n",
+      "text_sha256": "0502aa4229b5d9d035a1a50b10cd1918fafea9a8cba9ead809e57dc4494d3a2d"
+    },
+    {
+      "bbox": [
+        392.0,
+        616.3158569335938,
+        541.4655151367188,
+        651.5084838867188
+      ],
+      "block_id": "page-0013-block-0049",
+      "order": 49,
+      "text": "Withdrawal Assessment for\nAlcohol Revised\nCLPS: Collaborative longitudinal per-\n",
+      "text_sha256": "85d639dcee62620a959d47920835667259c60ab89557cd9313490215b520870b"
+    },
+    {
+      "bbox": [
+        392.0,
+        653.021484375,
+        536.7675170898438,
+        676.2584838867188
+      ],
+      "block_id": "page-0013-block-0050",
+      "order": 50,
+      "text": "sonality study\nCLSC: Centre local de services com-\n",
+      "text_sha256": "293abad17b81cdc79ba7840f4a9af57b1882276e11ea7525caa5a940312efc73"
+    },
+    {
+      "bbox": [
+        392.0,
+        677.7158203125,
+        533.0675659179688,
+        713.70849609375
+      ],
+      "block_id": "page-0013-block-0051",
+      "order": 51,
+      "text": "munautaires\nCmax:Concentration maximale\nCMDP: Conseil des médecins, den-\n",
+      "text_sha256": "e6f7aa96ed7ef49bd311d25e227cb00fdbc7d0792f6b2bb1eb5ce345e68c09ea"
+    },
+    {
+      "bbox": [
+        416.0,
+        715.2158203125,
+        498.1085205078125,
+        725.70849609375
+      ],
+      "block_id": "page-0013-block-0052",
+      "order": 52,
+      "text": "tistes et pharmaciens\n",
+      "text_sha256": "bb828229893964f4260705e3b4f0a0cb25d33decd2c1db4fcab9774cda01c296"
+    }
+  ],
+  "coordinates_sha256": "e662053efaa9304a3358ce702a06d57ddd3bd6f2854c2a91d236e454fa77d2ff",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0013",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Abréviations\n3MS: Modied mini-mental state\n5-HIAA: 5-hydroxy-indol-acetic acid,\nacide 5-hydroxyindol acétique\n5-HT: 5-hydroxytryptamine\n(sérotonine)\nA1G: Antipsychotique de 1re génération\nA2G: Antipsychotique de 2e génération\nA3G: Antipsychotique de 3e génération\nAA: Alcooliques Anonymes\nAAMR : American Association on\nMental Retardation, association\naméricaine pour le retard mental\nAAI: Adult attachment interview\nAC: Activation comportementale\nACBT: Aective cognitive behavioral\nerapy, thérapie cognitivo-\ncomportementale centrée sur\nl’émotion\nACh: Acétylcholine\nAChE: Acétylcholinestérase\nACR: American College of\nRhumatology\nACS: American College of Surgeons\nACT: Assertive community treatment,\nsuivi communautaire intensif\nACTH: Adrenocorticotropic hormone,\nhormone corticotrope hypophy-\nsaire, adrénocorticotrophine\nADH: Alcool déshydrogénase\nADN: Acide désoxyribonucléique\nADOS: Autism diagnosis observation\nschedule\nAETMIS: Agence d’évaluation des\ntechnologies et des modes d’inter-\nvention en santé\nAIMS: Abnormal involuntary move-\nment scale\nAINS: Anti-inammatoire non stéroï-\ndien\nALDH: Aldéhyde déshydrogénase\nALT: Alanine aminotransférase\nAMC : Association médicale cana-\ndienne\nAMH: Adult mental health\nAMH: Hormone antimüllérienne\nAMLFC: Association des médecins de\nlangue française du Canada\nAMP: Adénosine monophosphate\nAMPc: Adénosine monophosphate\ncyclique\nAMPA : Α-amino-3-hydroxy-5-methyl-\n4-isoxazolepropionic acid\nAMPH: Amphétamine\nAMPQ: Association des médecins\npsychiatres du Québec\nAMPS: Assessment of Motor and\nProcess Skills\nAMRP: Association mondiale pour\nla réadaptation psychosociale\nANOVA: Analyse de la variance\nAPA: American Psychiatric Association\nAPA: American Psychological\nAssociation\nAPC: Association des psychiatres\ndu Canada\nAPS : American Pain Society\nAQPPEP: Association québécoise des\nprogrammes pour les premiers\népisodes psychotiques\nARN: Acide ribonucléique\nASAM: American Society of Addiction\nMedicine\nASEX: Arizona sexual experience\nAST: Aspartate aminotransférase\nATP: Adénosine triphosphate\nATC: Antidépresseurs tricycliques\nAUDIT: Alcohol use disorder identi-\ncation test\nAVC: Accident vasculaire cérébral\nAVD: Activités de la vie domestique\nAVQ: Activités de la vie quotidienne\nBADS: Behavioural Assessment of the\nDysexecutive Syndrome\nBCG: Bacille Calmette-Guérin\nBCM: Bilan comparatif des médica-\nments\nBCT: Behavioural couple therapy,\nthérapie conjugale comportemen-\ntale\nBDI: Beck depression inventory\nBDNF: Brain-derived neurotropic\nfactor, facteur neurotrophique\ndérivé du cerveau\nBID: Bis in die, deux fois par jour\nBPAP: Bilevel positive airway pressure\nBPQ: Borderline personality question-\nnaire\nBPRS: Brief psychiatric rating scale\nBUN: Blood urea nitrogen, azotémie\nC.c.Q: Code civil du Québec\nCADASIL: Cerebral autosomal\ndominant arteriopathy with\nsub-cortical infarcts and leukoen-\ncephalopathy\nCAGE: Cut down, annoyed, guilty, eye-\nopener\nCANMAT: Canadian Network for\nMood and Anxiety Treatments\nCANTAB: Cambridge neuropsycholo-\ngical test automated battery\nCBIS : Cognitive behavioural interper-\nsonal skills\nCCAÉS: Conseil canadien d’agrément\ndes établissements de santé\nCCAH: Conseil canadien d’agrément\ndes hôpitaux\nCCASS: Conseil canadien d’agrément\ndes services de santé\nCCK: Cholécystokinine\nCCMHI: Canadian collaborative\nmental health initiative\nCDI: Clinical diagnostic interview\nCDR: Clinical dementia rating scale\nCDT: Carbohydrate decient trans-\nferrin, transferrine déciente en\nhydrate de carbone\nCEMCQ: Conseil d’éducation médicale\ncontinue du Québec\nCFTMEA: Classication française des\ntroubles mentaux de l’enfant et de\nl’adolescent\nCGI: Clinical global impression\nCH: Centre hospitalier\nCHA: Centre hospitalier alié\nChAT: Choline-acétyltransférase\nCHSGS: Centres hospitaliers de soins\ngénéraux et spécialisés\nCHSLD: Centre d’hébergement et de\nsoins de longue durée\nCHU: Centre hospitalier universitaire\nCIDI: Composite international dia-\ngnostic interview\nCIDN: Contrôle inhibiteur dius\nnociceptif\nCIM: Classication internationale des\nmaladies\nCIP: Comité d’inspection profession-\nnelle\nCIWA-AR: Clinical Institute for\nWithdrawal Assessment for\nAlcohol Revised\nCLPS: Collaborative longitudinal per-\nsonality study\nCLSC: Centre local de services com-\nmunautaires\nCmax:Concentration maximale\nCMDP: Conseil des médecins, den-\ntistes et pharmaciens\n",
+  "raw_text_sha256": "ee1f07154292f5d56ce38433a37a515808e58b6f6c8a8f6b53a25f7b1747691c",
+  "source_page_display": 14,
+  "source_page_index": 13
+}

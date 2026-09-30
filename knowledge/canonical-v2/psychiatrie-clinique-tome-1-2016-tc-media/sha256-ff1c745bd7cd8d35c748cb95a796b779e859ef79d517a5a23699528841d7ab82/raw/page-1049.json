@@ -1,0 +1,136 @@
+{
+  "block_sequence_sha256": "23bfa1fec9776ef9ba2a4a6cffb5a0b3aae45c1f1f211c2e2b0910a57ffaa1d5",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        425.7200012207031,
+        758.8693237304688
+      ],
+      "block_id": "page-1049-block-0001",
+      "order": 1,
+      "text": "1032\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 4\nOrganisation des soins\n",
+      "text_sha256": "bd451944c9d32ae4ef60f7b1400ed51daceda2e513cdf4d678a147cf61a72832"
+    },
+    {
+      "bbox": [
+        48.0,
+        39.009376525878906,
+        216.91200256347656,
+        56.978126525878906
+      ],
+      "block_id": "page-1049-block-0002",
+      "order": 2,
+      "text": "Lectures complémentaires\n",
+      "text_sha256": "a63665748f6f6aa4046621ac3e5b53857ebef6bf2c2f475217e47dfa03f03493"
+    },
+    {
+      "bbox": [
+        48.0,
+        69.888671875,
+        197.8733673095703,
+        79.75
+      ],
+      "block_id": "page-1049-block-0003",
+      "order": 3,
+      "text": "C, C. W. & M, R. W.\n",
+      "text_sha256": "6caf468b17fbec722fd6bdd4a2b2240e84d548018a2711b3689869d3ed1ad4b3"
+    },
+    {
+      "bbox": [
+        48.0,
+        80.18867492675781,
+        203.93113708496094,
+        143.65000915527344
+      ],
+      "block_id": "page-1049-block-0004",
+      "order": 4,
+      "text": "(2006). « Congruencies in increased\nmortality rates, years of potential life\nlost, and causes of death among public\nmental health clients in eight states »,\nPreventing Chronic Disease, 3(2), p. A42.\nJ, D. & H, C. R. (2004).\n",
+      "text_sha256": "39bf1375443a93aa433f70654198e82ed2e18fde791663320a2f8f3db45e5750"
+    },
+    {
+      "bbox": [
+        60.0,
+        144.0886688232422,
+        196.20016479492188,
+        174.60000610351562
+      ],
+      "block_id": "page-1049-block-0005",
+      "order": 5,
+      "text": "« Managing problematic anger :e\ndevelopment of a treatment program\nfor personality disordered patients in\n",
+      "text_sha256": "781c6e07f0c86da0f874cc3246d26246c3d3de53c0acd3ff59116da259f3993f"
+    },
+    {
+      "bbox": [
+        220.0,
+        69.888671875,
+        366.89544677734375,
+        111.9000015258789
+      ],
+      "block_id": "page-1049-block-0006",
+      "order": 6,
+      "text": "highsecurity », International Journal\nof Forensic Mental Health, 3(2),\np. 197-210.\nL, H. R. & B, L. L. (2001).\n",
+      "text_sha256": "7bad025d95263ce48e418721961f982a53fd23703217267a7aca1a4fd27a0f0d"
+    },
+    {
+      "bbox": [
+        220.0,
+        112.08867645263672,
+        374.4850158691406,
+        154.10000610351562
+      ],
+      "block_id": "page-1049-block-0007",
+      "order": 7,
+      "text": "« Some perspectives on deinstitutiona-\nlization », Psychiatric Services, 52(8),\np. 1039-1045.\nMk, K. (1987). « Beyond deinsti-\n",
+      "text_sha256": "3ffe56cdcac6dde4c1f2494efc6f837dfc69e004aedea7edeb8e36fcbc1ed2e0"
+    },
+    {
+      "bbox": [
+        232.0,
+        154.28868103027344,
+        369.4300231933594,
+        174.1999969482422
+      ],
+      "block_id": "page-1049-block-0008",
+      "order": 8,
+      "text": "tutionalization : A new ideology for\nthe postinstitutional era », Hospital &\n",
+      "text_sha256": "e29e8458fd489ebde7c34d9a07a0ac42caba222cfc80eca85fa8e8dd045df02c"
+    },
+    {
+      "bbox": [
+        392.0,
+        69.888671875,
+        545.5772705078125,
+        101.8499984741211
+      ],
+      "block_id": "page-1049-block-0009",
+      "order": 9,
+      "text": "Community Psychiatry, 38(9),\np. 945-950.\nM, C. L. & al. (2006). « Accelerated\n",
+      "text_sha256": "fa7686af3f57369ea90e79205b0f8e412998fe298057a96b2da3743c0f877c59"
+    },
+    {
+      "bbox": [
+        404.0,
+        102.0386734008789,
+        544.7349853515625,
+        162.15000915527344
+      ],
+      "block_id": "page-1049-block-0010",
+      "order": 10,
+      "text": "increase in the number of involuntary\nadmissions following the implementa-\ntion of the Dutch Act on Compulsory\nAdmission to Psychiatric Hospitals »,\nNed Tijdschr Geneeskd, 150(6),\np. 319-322.\n",
+      "text_sha256": "10c103663fdf5009645119d92f9ff4344e90a87f4a5c503f4a7e37c4db7685d6"
+    }
+  ],
+  "coordinates_sha256": "ba3ae2e18fa3f6c9b52628bb85f724b23f98ea0159736f0d16030d98f161660a",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1049",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "1032\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 4\nOrganisation des soins\nLectures complémentaires\nC, C. W. & M, R. W.\n(2006). « Congruencies in increased\nmortality rates, years of potential life\nlost, and causes of death among public\nmental health clients in eight states »,\nPreventing Chronic Disease, 3(2), p. A42.\nJ, D. & H, C. R. (2004).\n« Managing problematic anger :e\ndevelopment of a treatment program\nfor personality disordered patients in\nhighsecurity », International Journal\nof Forensic Mental Health, 3(2),\np. 197-210.\nL, H. R. & B, L. L. (2001).\n« Some perspectives on deinstitutiona-\nlization », Psychiatric Services, 52(8),\np. 1039-1045.\nMk, K. (1987). « Beyond deinsti-\ntutionalization : A new ideology for\nthe postinstitutional era », Hospital &\nCommunity Psychiatry, 38(9),\np. 945-950.\nM, C. L. & al. (2006). « Accelerated\nincrease in the number of involuntary\nadmissions following the implementa-\ntion of the Dutch Act on Compulsory\nAdmission to Psychiatric Hospitals »,\nNed Tijdschr Geneeskd, 150(6),\np. 319-322.\n",
+  "raw_text_sha256": "cecddcbd48beef09a25ac0b6145ad945a8d35d70881da4abf6e77fc64cbecc63",
+  "source_page_display": 1050,
+  "source_page_index": 1049
+}

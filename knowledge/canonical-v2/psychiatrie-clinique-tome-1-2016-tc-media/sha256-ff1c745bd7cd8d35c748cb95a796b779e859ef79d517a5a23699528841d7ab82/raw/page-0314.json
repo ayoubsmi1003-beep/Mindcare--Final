@@ -1,0 +1,328 @@
+{
+  "block_sequence_sha256": "fe2bb135b5adbcafcee5341155001fe245aca56b414d43afbca578e5cd1a692f",
+  "blocks": [
+    {
+      "bbox": [
+        400.45001220703125,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0314-block-0001",
+      "order": 1,
+      "text": "Chapitre 14\nÉpidémiologie\n297\n",
+      "text_sha256": "6bb686b503df73059a9f12040e8abacaadb6eef002141278ff951d465de4683f"
+    },
+    {
+      "bbox": [
+        312.0,
+        40.9658203125,
+        555.189697265625,
+        85.95849609375
+      ],
+      "block_id": "page-0314-block-0002",
+      "order": 2,
+      "text": "qui avaient un emploi. Ce type de problème a été nommé «biais\nécologique ». À cause de ce biais, ces études ne sont qu’une\nétape préliminaire dans l’examen de la relation entre un facteur\nde risque et une maladie.\n",
+      "text_sha256": "def21c3079a5cd703b2ac6cc0e41db0d613a8cda57d96556c8549a5d549720bd"
+    },
+    {
+      "bbox": [
+        312.0,
+        94.8330078125,
+        555.2393798828125,
+        212.45849609375
+      ],
+      "block_id": "page-0314-block-0003",
+      "order": 3,
+      "text": "Études cas-témoins et de cohorte\nDans les études cas-témoins (case-control study), on compare\nle pourcentage de sujets ayant une maladie (cas) qui ont été\nexposés à un facteur de risque donné, au pourcentage de sujets\nsains (témoins) ayant été exposés à ce même facteur de risque.\nPar exemple, on peut comparer des patients sourant de schi-\nzophrénie et des sujets qui n’en sourent pas, du point de vue\nde la présence d’une histoire de complications périnatales. Ce\ndevis épidémiologique est fréquemment utilisé en recherche\nmédicale.\n",
+      "text_sha256": "df6aae6f3eeb53bd39a0361a54d5ca1889aa2ca70452a1cad0e128b453255749"
+    },
+    {
+      "bbox": [
+        312.0,
+        213.4658203125,
+        555.2540893554688,
+        361.95849609375
+      ],
+      "block_id": "page-0314-block-0004",
+      "order": 4,
+      "text": "Dans les études de cohorte, on compare le pourcentage des\npatients exposés à un facteur de risque et qui ont la maladie au\npourcentage des personnes non exposées qui n’ont pas la maladie.\nPar exemple, la fréquence de troubles de comportement peut être\ncomparée entre des enfants de parents divorcés. Ces études de\ncohorte peuvent être prospectives ou rétrospectives. Un devis\nprospectif consiste à sélectionner les enfants dès le divorce et à les\nsuivre, disons durant les 10 prochaines années. Pour poursuivre\navec le même exemple, un devis rétrospectif consiste à retracer\ndans les registres de l’état civil les enfants dont les parents ont\ndivorcé il y a 10 ans, puis à examiner ces enfants maintenant,\n10 ans après le divorce, pour déterminer la fréquence des troubles\nde comportement apparus depuis.\n",
+      "text_sha256": "1f5103e7a19f2b7e1311316c6528cef9a83518922588405da8320fc4482068dd"
+    },
+    {
+      "bbox": [
+        312.0,
+        362.9658203125,
+        555.1044311523438,
+        396.45849609375
+      ],
+      "block_id": "page-0314-block-0005",
+      "order": 5,
+      "text": "Les études cas-témoins et de cohorte présentent des avantages\net des désavantages distincts qui font que, selon le contexte, un\ndevis peut être préférable à l’autre (voir le tableau 14.4).\n",
+      "text_sha256": "cbc53727e3392699f8149ff38756e4dcd5732e78d91462390052cd795f5ceaa5"
+    },
+    {
+      "bbox": [
+        314.25,
+        413.80230712890625,
+        527.4395141601562,
+        425.820068359375
+      ],
+      "block_id": "page-0314-block-0006",
+      "order": 6,
+      "text": "TABLEAU 14.4 Comparaison des études cas-témoins\n",
+      "text_sha256": "fed3c33122db918971a5a234866ec0241b4e149168aad77e82e6d800476f15d3"
+    },
+    {
+      "bbox": [
+        371.5,
+        425.352294921875,
+        474.2055358886719,
+        437.320068359375
+      ],
+      "block_id": "page-0314-block-0007",
+      "order": 7,
+      "text": "et des études de cohorte\n",
+      "text_sha256": "a65b96c7412197b5b7b24c34a44f73eef39c58718df49337268dd0b378d865e7"
+    },
+    {
+      "bbox": [
+        430.1499938964844,
+        442.47412109375,
+        475.3509826660156,
+        463.05029296875
+      ],
+      "block_id": "page-0314-block-0008",
+      "order": 8,
+      "text": "Étude\ncas-témoins\n",
+      "text_sha256": "5564848769578d79ec736d5ec6eba651d083c4e3ecae39d3c7ac9f198122571a"
+    },
+    {
+      "bbox": [
+        502.8000183105469,
+        442.47412109375,
+        541.759521484375,
+        463.05029296875
+      ],
+      "block_id": "page-0314-block-0009",
+      "order": 9,
+      "text": "Étude\nde cohorte\n",
+      "text_sha256": "7eabbb69241a3e19d604072c573c79efbcfaba5020d749f2a6d135615adc7041"
+    },
+    {
+      "bbox": [
+        316.25,
+        468.501953125,
+        531.1489868164062,
+        478.328125
+      ],
+      "block_id": "page-0314-block-0010",
+      "order": 10,
+      "text": "Risque de biais\nPlus élevé\nMoins élevé\n",
+      "text_sha256": "0b9a115d8c3dd9beeecc88f8bc8485251f45fe9cc730372e65b8d52b4e18a405"
+    },
+    {
+      "bbox": [
+        316.25,
+        487.251953125,
+        532.48095703125,
+        497.078125
+      ],
+      "block_id": "page-0314-block-0011",
+      "order": 11,
+      "text": "Étude de maladies rares\nEfcace\nPeu efcace\n",
+      "text_sha256": "2abf0f161ee189f57dc017bc0c296b0e9539f22a9de4c52779eefdb65425824e"
+    },
+    {
+      "bbox": [
+        316.25,
+        505.70196533203125,
+        400.6181640625,
+        535.5281372070312
+      ],
+      "block_id": "page-0314-block-0012",
+      "order": 12,
+      "text": "Étude des conséquences\nmultiples d’un seul facteur\nde risque\n",
+      "text_sha256": "43875133a1d6b62ef3c9567a60455bbabfea40034b92c69b47e5598860f0e1f4"
+    },
+    {
+      "bbox": [
+        420.25,
+        506.001953125,
+        518.2429809570312,
+        515.828125
+      ],
+      "block_id": "page-0314-block-0013",
+      "order": 13,
+      "text": "Peu efcace\nEfcace\n",
+      "text_sha256": "b5767dd9f3c51d25a7ad3a52de72dec189f3c982a01ff0478a423df7217bfbd8"
+    },
+    {
+      "bbox": [
+        316.25,
+        544.4519653320312,
+        525.4609985351562,
+        554.2781372070312
+      ],
+      "block_id": "page-0314-block-0014",
+      "order": 14,
+      "text": "Coût\nPeu élevé\nPlus élevé\n",
+      "text_sha256": "0276c3788670fe48f2d70b8aad56002793ff4cc33a0ee8cf2f20ac53eb5ff54c"
+    },
+    {
+      "bbox": [
+        316.25,
+        563.2019653320312,
+        411.1162414550781,
+        593.0281372070312
+      ],
+      "block_id": "page-0314-block-0015",
+      "order": 15,
+      "text": "Étude de la chronologie des\nfacteurs de risque par rapport\nà la survenue de la maladie\n",
+      "text_sha256": "9e6b2d1d18c52efbe0354109fb61d51b4113cb1c2f98d7d5c52a8631a7cbcf0e"
+    },
+    {
+      "bbox": [
+        420.25,
+        563.2019653320312,
+        525.7849731445312,
+        573.0281372070312
+      ],
+      "block_id": "page-0314-block-0016",
+      "order": 16,
+      "text": "Plus difcile\nPlus facile\n",
+      "text_sha256": "31bb1c43093c467e5b0865b9199df25ecc3bf0c205275770ec8d8f775b18303c"
+    },
+    {
+      "bbox": [
+        316.25,
+        601.9519653320312,
+        412.5181579589844,
+        621.7781372070312
+      ],
+      "block_id": "page-0314-block-0017",
+      "order": 17,
+      "text": "Étude d’une maladie ayant\nune longue période de latence\n",
+      "text_sha256": "703697a995ff30f6c4c728f388628f227dc317e28c3c5fe4328768aef48ff545"
+    },
+    {
+      "bbox": [
+        420.25,
+        601.9519653320312,
+        532.48095703125,
+        611.7781372070312
+      ],
+      "block_id": "page-0314-block-0018",
+      "order": 18,
+      "text": "Efcace\nPeu efcace\n",
+      "text_sha256": "f09f70c18dea5d0569b1fcddeabd5428d93ad2dded1309a02588e80b0fce3251"
+    },
+    {
+      "bbox": [
+        312.0,
+        644.0523071289062,
+        555.191650390625,
+        725.1585083007812
+      ],
+      "block_id": "page-0314-block-0019",
+      "order": 19,
+      "text": "Risque de biais\nLes études cas-témoins sont plus susceptibles de sourir de biais\nque les études de cohorte. En eet, dans les études cas-témoins,\non questionne les sujets ou leurs proches relativement à la pré-\nsence de facteurs de risque dans le passé. Les souvenirs peuvent\nêtre remaniés et inuencés par la survenue de la maladie. Ainsi,\npour reprendre un exemple précédemment donné, il est fort\n",
+      "text_sha256": "60e85ac2eb9bb78fae94a34108f6a644eea8827433a2981cc36efc1fa9936c16"
+    },
+    {
+      "bbox": [
+        54.0,
+        39.33681869506836,
+        233.62364196777344,
+        71.62939453125
+      ],
+      "block_id": "page-0314-block-0020",
+      "order": 20,
+      "text": "14.3.7 Possibilité de généraliser\nles résultats\n",
+      "text_sha256": "0df458639cb6de3b36804c649123174252a014102171e1f4251e56be91c78cd1"
+    },
+    {
+      "bbox": [
+        54.0,
+        75.16582489013672,
+        297.1517333984375,
+        143.95849609375
+      ],
+      "block_id": "page-0314-block-0021",
+      "order": 21,
+      "text": "Après avoir conclu à la validité d’une association étiologique, il faut\nse questionner sur la possibilité de généraliser cette association.\nEssentiellement, les résultats s’appliquent à la population dans\nlaquelle les sujets ont été sélectionnés. Par exemple, si une étude\nn’inclut que des sujets masculins, ses conclusions ne s’appliquent\nqu’aux hommes.\n",
+      "text_sha256": "0bbeed6133036f9887acebb7c83e1e4937ceb75b547f411786a8dd6a55d3b9f5"
+    },
+    {
+      "bbox": [
+        54.0,
+        154.6868133544922,
+        251.21116638183594,
+        186.97940063476562
+      ],
+      "block_id": "page-0314-block-0022",
+      "order": 22,
+      "text": "14.3.8 Stratégies de recherche\nen épidémiologie analytique\n",
+      "text_sha256": "e55033902d875f7664fc55cac000a0e2c01d5c2c16b1cf794080c2191855abd1"
+    },
+    {
+      "bbox": [
+        54.0,
+        190.4658203125,
+        297.2981262207031,
+        259.3085021972656
+      ],
+      "block_id": "page-0314-block-0023",
+      "order": 23,
+      "text": "Plusieurs stratégies de recherche permettent d’étudier les rela-\ntions entre des facteurs de risque hypothétiques et une maladie.\nCependant, la force des conclusions qui se dégagent des études\nn’est pas similaire, et celles-ci correspondent souvent à des étapes\nsuccessives dans l’établissement de l’étiologie. La présentation\nde ces stratégies suivra cet ordre.\n",
+      "text_sha256": "def24694232b1c3659773bd0978d44512a0773f18a24380dbfe5bc770f206eeb"
+    },
+    {
+      "bbox": [
+        54.0,
+        268.3330078125,
+        297.3434753417969,
+        422.45849609375
+      ],
+      "block_id": "page-0314-block-0024",
+      "order": 24,
+      "text": "Études de cas et séries de cas\nDans des études détaillées d’un ou de quelques cas, un clinicien\ndécrit l’histoire de certains patients, ce qui l’amène à émettre\ndes hypothèses étiologiques expliquant ses observations. De\ntelles observations peuvent parfois donner lieu à des hypothèses\nimportantes. Par exemple, le syndrome d’immunodécience\nacquise (sida) a été identié au moyen d’une série de cas, ce qui\na permis d’isoler le virus de l’immunodécience humaine (VIH).\nIl en est de même des cas psychanalysés par Freud. Cependant,\nen l’absence de groupes de comparaison et de tests statistiques,\nil est impossible de tirer des conclusions dénitives à partir de\ntelles observations ; les hypothèses formulées doivent être vériées\npar des études plus rigoureuses.\n",
+      "text_sha256": "df4984984d2450251d9497875a4429f205656f7290f56c2bcdac5e7fc9fec6f7"
+    },
+    {
+      "bbox": [
+        54.0,
+        431.53302001953125,
+        297.4041442871094,
+        585.6085205078125
+      ],
+      "block_id": "page-0314-block-0025",
+      "order": 25,
+      "text": "Études transversales\nDans les études transversales, l’association entre une maladie\net l’exposition à un facteur de risque hypothétique est étudiée\nalors qu’ils sont mesurés simultanément. Par exemple, un cher-\ncheur peut comparer le fonctionnement de familles de patients\ndéprimées avec celui de familles de personnes non déprimées.\nCependant, une telle étude ne permet pas de vérier la chronologie\ndes événements, c’est-à-dire de savoir si la dysfonction familiale a\nprécédé ou suivi l’épisode dépressif ; il est donc impossible de dire\nsi la dysfonction familiale est une conséquence ou une cause de la\ndépression. La limitation principale des études transversales est\ndonc leur incapacité de mettre au jour la séquence de l’exposition\net de la maladie.\n",
+      "text_sha256": "301cb87eaedbba132e75a86eb2b6df42a2292fc68640537f8f04c3b3bca55d86"
+    },
+    {
+      "bbox": [
+        54.0,
+        594.6830444335938,
+        297.42242431640625,
+        725.45849609375
+      ],
+      "block_id": "page-0314-block-0026",
+      "order": 26,
+      "text": "Études écologiques\nLes études écologiques (ou d’agrégation) examinent l’associa-\ntion entre un facteur de risque toujours hypothétique et une\nmaladie en comparant diverses populations selon ces facteurs.\nDe telles études ont établi une relation entre le taux de suicide\ndans diérents pays et le taux de chômage dans ces mêmes\npopulations. Les travaux d’Émile Durkheim (1897), considéré\ncomme le père de la sociologie, en constituent un exemple\ntype. Ces études ne permettent cependant pas de conrmer\nla proportion de chômeurs qui se sont suicidés et il est fort\nplausible que le suicide se soit aussi produit chez des personnes\n",
+      "text_sha256": "50c3c497b648111d845e8c7589ff970148731bd0f49abbe0aaa0401af6d0011e"
+    }
+  ],
+  "coordinates_sha256": "44c714ba2df11d8d7f692a6ad876d1ac21962dd5107cd794ab0332524a161d58",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0314",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 14\nÉpidémiologie\n297\nqui avaient un emploi. Ce type de problème a été nommé «biais\nécologique ». À cause de ce biais, ces études ne sont qu’une\nétape préliminaire dans l’examen de la relation entre un facteur\nde risque et une maladie.\nÉtudes cas-témoins et de cohorte\nDans les études cas-témoins (case-control study), on compare\nle pourcentage de sujets ayant une maladie (cas) qui ont été\nexposés à un facteur de risque donné, au pourcentage de sujets\nsains (témoins) ayant été exposés à ce même facteur de risque.\nPar exemple, on peut comparer des patients sourant de schi-\nzophrénie et des sujets qui n’en sourent pas, du point de vue\nde la présence d’une histoire de complications périnatales. Ce\ndevis épidémiologique est fréquemment utilisé en recherche\nmédicale.\nDans les études de cohorte, on compare le pourcentage des\npatients exposés à un facteur de risque et qui ont la maladie au\npourcentage des personnes non exposées qui n’ont pas la maladie.\nPar exemple, la fréquence de troubles de comportement peut être\ncomparée entre des enfants de parents divorcés. Ces études de\ncohorte peuvent être prospectives ou rétrospectives. Un devis\nprospectif consiste à sélectionner les enfants dès le divorce et à les\nsuivre, disons durant les 10 prochaines années. Pour poursuivre\navec le même exemple, un devis rétrospectif consiste à retracer\ndans les registres de l’état civil les enfants dont les parents ont\ndivorcé il y a 10 ans, puis à examiner ces enfants maintenant,\n10 ans après le divorce, pour déterminer la fréquence des troubles\nde comportement apparus depuis.\nLes études cas-témoins et de cohorte présentent des avantages\net des désavantages distincts qui font que, selon le contexte, un\ndevis peut être préférable à l’autre (voir le tableau 14.4).\nTABLEAU 14.4 Comparaison des études cas-témoins\net des études de cohorte\nÉtude\ncas-témoins\nÉtude\nde cohorte\nRisque de biais\nPlus élevé\nMoins élevé\nÉtude de maladies rares\nEfcace\nPeu efcace\nÉtude des conséquences\nmultiples d’un seul facteur\nde risque\nPeu efcace\nEfcace\nCoût\nPeu élevé\nPlus élevé\nÉtude de la chronologie des\nfacteurs de risque par rapport\nà la survenue de la maladie\nPlus difcile\nPlus facile\nÉtude d’une maladie ayant\nune longue période de latence\nEfcace\nPeu efcace\nRisque de biais\nLes études cas-témoins sont plus susceptibles de sourir de biais\nque les études de cohorte. En eet, dans les études cas-témoins,\non questionne les sujets ou leurs proches relativement à la pré-\nsence de facteurs de risque dans le passé. Les souvenirs peuvent\nêtre remaniés et inuencés par la survenue de la maladie. Ainsi,\npour reprendre un exemple précédemment donné, il est fort\n14.3.7 Possibilité de généraliser\nles résultats\nAprès avoir conclu à la validité d’une association étiologique, il faut\nse questionner sur la possibilité de généraliser cette association.\nEssentiellement, les résultats s’appliquent à la population dans\nlaquelle les sujets ont été sélectionnés. Par exemple, si une étude\nn’inclut que des sujets masculins, ses conclusions ne s’appliquent\nqu’aux hommes.\n14.3.8 Stratégies de recherche\nen épidémiologie analytique\nPlusieurs stratégies de recherche permettent d’étudier les rela-\ntions entre des facteurs de risque hypothétiques et une maladie.\nCependant, la force des conclusions qui se dégagent des études\nn’est pas similaire, et celles-ci correspondent souvent à des étapes\nsuccessives dans l’établissement de l’étiologie. La présentation\nde ces stratégies suivra cet ordre.\nÉtudes de cas et séries de cas\nDans des études détaillées d’un ou de quelques cas, un clinicien\ndécrit l’histoire de certains patients, ce qui l’amène à émettre\ndes hypothèses étiologiques expliquant ses observations. De\ntelles observations peuvent parfois donner lieu à des hypothèses\nimportantes. Par exemple, le syndrome d’immunodécience\nacquise (sida) a été identié au moyen d’une série de cas, ce qui\na permis d’isoler le virus de l’immunodécience humaine (VIH).\nIl en est de même des cas psychanalysés par Freud. Cependant,\nen l’absence de groupes de comparaison et de tests statistiques,\nil est impossible de tirer des conclusions dénitives à partir de\ntelles observations ; les hypothèses formulées doivent être vériées\npar des études plus rigoureuses.\nÉtudes transversales\nDans les études transversales, l’association entre une maladie\net l’exposition à un facteur de risque hypothétique est étudiée\nalors qu’ils sont mesurés simultanément. Par exemple, un cher-\ncheur peut comparer le fonctionnement de familles de patients\ndéprimées avec celui de familles de personnes non déprimées.\nCependant, une telle étude ne permet pas de vérier la chronologie\ndes événements, c’est-à-dire de savoir si la dysfonction familiale a\nprécédé ou suivi l’épisode dépressif ; il est donc impossible de dire\nsi la dysfonction familiale est une conséquence ou une cause de la\ndépression. La limitation principale des études transversales est\ndonc leur incapacité de mettre au jour la séquence de l’exposition\net de la maladie.\nÉtudes écologiques\nLes études écologiques (ou d’agrégation) examinent l’associa-\ntion entre un facteur de risque toujours hypothétique et une\nmaladie en comparant diverses populations selon ces facteurs.\nDe telles études ont établi une relation entre le taux de suicide\ndans diérents pays et le taux de chômage dans ces mêmes\npopulations. Les travaux d’Émile Durkheim (1897), considéré\ncomme le père de la sociologie, en constituent un exemple\ntype. Ces études ne permettent cependant pas de conrmer\nla proportion de chômeurs qui se sont suicidés et il est fort\nplausible que le suicide se soit aussi produit chez des personnes\n",
+  "raw_text_sha256": "e2e3ffcf26823904f24a562d5aafd6646241caa39c8f2c96cca2572266ef1411",
+  "source_page_display": 315,
+  "source_page_index": 314
+}

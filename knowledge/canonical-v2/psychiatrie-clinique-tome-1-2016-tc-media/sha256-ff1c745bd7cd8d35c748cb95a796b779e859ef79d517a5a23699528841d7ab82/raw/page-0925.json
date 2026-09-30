@@ -1,0 +1,220 @@
+{
+  "block_sequence_sha256": "a87f2daee90bf4cc2aa5a97a19ddc7e0cda12891cd8759e2d1d85a7b8f0c3080",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        477.3144836425781,
+        758.8693237304688
+      ],
+      "block_id": "page-0925-block-0001",
+      "order": 1,
+      "text": "908\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3\nSyndromes cliniques psychiatriques\n",
+      "text_sha256": "7cc678d0adb357a31fa5335bcbe210c1c62cf1a738984fca91dad8b72f5508f1"
+    },
+    {
+      "bbox": [
+        306.0,
+        41.93687438964844,
+        549.5056762695312,
+        223.93687438964844
+      ],
+      "block_id": "page-0925-block-0002",
+      "order": 2,
+      "text": "sociaux. Un examen clinique attentif et l’établissement d’une\nrelation de confiance demeurent jusqu’à ce jour les moyens\nles plus efficaces d’identifier la toxicomanie et d’amorcer une\nintervention appropriée. Le développement des connais-\nsances sur cette problématique fréquente a permis d’élaborer\ndes stratégies thérapeutiques diversifiées. L’ampleur des\ncomorbidités associées à la toxicomanie suggère également\nla pertinence de l’implication des milieux communautaires,\npsychiatriques et médicaux dans le traitement des personnes\nsouffrant de ce type de problèmes. Il reste à déterminer si\nla recherche, et notamment le développement des neuros-\nciences, conduira à la découverte de traitements modifiant\nplus efficacement le cours de la toxicomanie, et permettra\nd’identifier des marqueurs de vulnérabilité pouvant optimiser\nles méthodes de prévention et d’intervention précoce après\ndes personnes à risque.\n",
+      "text_sha256": "516b173dfdccb91400bd6e357625b49cec1583109226a2a3f29d01a6cb753902"
+    },
+    {
+      "bbox": [
+        48.0,
+        41.93687438964844,
+        291.4951171875,
+        158.03688049316406
+      ],
+      "block_id": "page-0925-block-0003",
+      "order": 3,
+      "text": "L’accès au service de traitement peut améliorer l’évolution de\nla toxicomanie. Or, il faut noter que des traitements prolongés\nsont souvent nécessaires an d’inuer réellement sur le cours\nde la problématique, car la grande majorité des individus qui se\nsoumettent à un traitement à court terme rechutent dans les\npremières semaines qui suivent l’arrêt du traitement. Même\nquand on met en place des stratégies de traitement prolongé, la\nplupart des individus passeront par plusieurs cycles, alternant\nsobriété et rechute, avant de voir leur état s’améliorer de façon\nplus signicative et durable.\n",
+      "text_sha256": "9c67401385585fe01e4ae1a99544e6b2db46332c350e634527243677222f06d3"
+    },
+    {
+      "bbox": [
+        48.0,
+        190.73687744140625,
+        290.8299865722656,
+        223.93687438964844
+      ],
+      "block_id": "page-0925-block-0004",
+      "order": 4,
+      "text": "Autrefois perçue comme un problème de nature morale, la\ntoxicomanie est maintenant considérée comme un trouble\ncomplexe relevant de facteurs biologiques, psychologiques et\n",
+      "text_sha256": "15606cddf8ca5736c13bdaf219e453fee85c6841158afc94d8e3b3f47a135685"
+    },
+    {
+      "bbox": [
+        48.0,
+        241.50938415527344,
+        216.91200256347656,
+        259.4781494140625
+      ],
+      "block_id": "page-0925-block-0005",
+      "order": 5,
+      "text": "Lectures complémentaires\n",
+      "text_sha256": "a63665748f6f6aa4046621ac3e5b53857ebef6bf2c2f475217e47dfa03f03493"
+    },
+    {
+      "bbox": [
+        48.0,
+        272.3414001464844,
+        206.01528930664062,
+        282.2086181640625
+      ],
+      "block_id": "page-0925-block-0006",
+      "order": 6,
+      "text": "A, P. & al. (2005). Toxicomanies, Paris,\n",
+      "text_sha256": "f5ba2a629ffb03296c0acf786fae9e1c12648556c2f868e629a8ab4a5cbf83f8"
+    },
+    {
+      "bbox": [
+        48.0,
+        283.2086181640625,
+        205.38938903808594,
+        304.2086181640625
+      ],
+      "block_id": "page-0925-block-0007",
+      "order": 7,
+      "text": "Masson.\nC     \n",
+      "text_sha256": "b75bf3d5a2e6b8abb5f370de8ea75640b1d672a3c486f75667cbbce12a671aa0"
+    },
+    {
+      "bbox": [
+        48.0,
+        305.2086181640625,
+        199.4149932861328,
+        326.2086181640625
+      ],
+      "block_id": "page-0925-block-0008",
+      "order": 8,
+      "text": ", www.ccsa.ca.\nD, V. P. & N, M. E. (1965).\n",
+      "text_sha256": "0e53787eba4057e0e52bb2760302b04d4741951497744429242117e239000376"
+    },
+    {
+      "bbox": [
+        48.0,
+        327.2086181640625,
+        204.19100952148438,
+        388.2086181640625
+      ],
+      "block_id": "page-0925-block-0009",
+      "order": 9,
+      "text": "« A medical treatment for diacetylmor-\nphine (heroin) addiction - a clinical\ntrial with methadone hydrochloride »\nJournal American Medical Association,\n193(8), p. 646-650.\nF, V. (2003) Le médecin et le toxico-\n",
+      "text_sha256": "e7cefe34c83c80a3f191f35b94ff9ad317e5a921fd52306e398a4cb43ee3bfac"
+    },
+    {
+      "bbox": [
+        60.0,
+        388.3414001464844,
+        203.85699462890625,
+        408.2086181640625
+      ],
+      "block_id": "page-0925-block-0010",
+      "order": 10,
+      "text": "mane : guide pratique, Paris, Heures de\nFrance.\n",
+      "text_sha256": "dd100e92c42a76b9302648610c5a9ecbba5b46e0d0ac55b2c6f2b296b9182954"
+    },
+    {
+      "bbox": [
+        219.0,
+        272.3414001464844,
+        362.8007507324219,
+        282.2086181640625
+      ],
+      "block_id": "page-0925-block-0011",
+      "order": 11,
+      "text": "H, J. & al. (2010). « Classifica -\n",
+      "text_sha256": "6e9f3621b97d82d11b4a8a61736f87664d211f3e04e52e5a03ecb0ba27e0e8eb"
+    },
+    {
+      "bbox": [
+        219.0,
+        283.2086181640625,
+        376.4339294433594,
+        335.108642578125
+      ],
+      "block_id": "page-0925-block-0012",
+      "order": 12,
+      "text": "tion and identification of opioid\naddiction and chronic pain patients »,\nEuropean Journal of Pain, 14(10),\np. 1014-1020.\nH, Y.-I. & al. (2001). « A 33 year\n",
+      "text_sha256": "3e5770d578263e6e88918f4c5dc6c3badad97ae6a98e059a9bf30bb033568c48"
+    },
+    {
+      "bbox": [
+        219.0,
+        335.2414245605469,
+        377.73822021484375,
+        378.0086364746094
+      ],
+      "block_id": "page-0925-block-0013",
+      "order": 13,
+      "text": "follow up of narcotics addicts », Archives\nof General Psychiatry, 58(5),\np. 503-508.\nKz, E.J. (2012). « Reections on\n",
+      "text_sha256": "6d476e2619dad078e7a5e1b84b02f8bfa46edcf2c583b3a1934bb3397d210b11"
+    },
+    {
+      "bbox": [
+        231.0,
+        379.0086364746094,
+        377.8086242675781,
+        408.0086364746094
+      ],
+      "block_id": "page-0925-block-0014",
+      "order": 14,
+      "text": "treating addictive disorders : a psy-\nchodynamic perspective », Am J Addict,\n21(3), p. 274-279.\n",
+      "text_sha256": "5099f6ed75cba250830331c8481828e2b93af0b83ca19ef8d42de1664763046b"
+    },
+    {
+      "bbox": [
+        390.0,
+        273.2086181640625,
+        517.8499755859375,
+        282.2086181640625
+      ],
+      "block_id": "page-0925-block-0015",
+      "order": 15,
+      "text": "Kk, M. J. (2000). « Methadone-\n",
+      "text_sha256": "7fe4c6ef6ec9e5a881ef13222e3021d63b902d135ac1e217b5081e5833e3d838"
+    },
+    {
+      "bbox": [
+        390.0,
+        283.2086181640625,
+        548.7625122070312,
+        354.2086181640625
+      ],
+      "block_id": "page-0925-block-0016",
+      "order": 16,
+      "text": "related opioid agonist pharmaco therapy\nfor heroin addiction. History, recent\nmolecular and neurochemical research\nand future in mainstream medicine »,\nAnnals of the New York Academy of\nSciences, 909, p. 186-216.\nU N O  D\n",
+      "text_sha256": "9387487802a01f6883092043c5bb18f1788109c1aadd683acde2d924d39e5ecb"
+    },
+    {
+      "bbox": [
+        402.0,
+        354.3414001464844,
+        531.4142456054688,
+        384.2086181640625
+      ],
+      "block_id": "page-0925-block-0017",
+      "order": 17,
+      "text": " C. (2015). World Drug\nReport 2015, United Nations publi -\ncations.\n",
+      "text_sha256": "be263ec42d8ee0d8b9eb141cc94da7dae82de9f4128a21a1796f2ea0134e8b86"
+    }
+  ],
+  "coordinates_sha256": "a11b1a77e4d130be41bd66fb7c04609065acce93afb9a9993696c7d8ed6d6057",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0925",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "908\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3\nSyndromes cliniques psychiatriques\nsociaux. Un examen clinique attentif et l’établissement d’une\nrelation de confiance demeurent jusqu’à ce jour les moyens\nles plus efficaces d’identifier la toxicomanie et d’amorcer une\nintervention appropriée. Le développement des connais-\nsances sur cette problématique fréquente a permis d’élaborer\ndes stratégies thérapeutiques diversifiées. L’ampleur des\ncomorbidités associées à la toxicomanie suggère également\nla pertinence de l’implication des milieux communautaires,\npsychiatriques et médicaux dans le traitement des personnes\nsouffrant de ce type de problèmes. Il reste à déterminer si\nla recherche, et notamment le développement des neuros-\nciences, conduira à la découverte de traitements modifiant\nplus efficacement le cours de la toxicomanie, et permettra\nd’identifier des marqueurs de vulnérabilité pouvant optimiser\nles méthodes de prévention et d’intervention précoce après\ndes personnes à risque.\nL’accès au service de traitement peut améliorer l’évolution de\nla toxicomanie. Or, il faut noter que des traitements prolongés\nsont souvent nécessaires an d’inuer réellement sur le cours\nde la problématique, car la grande majorité des individus qui se\nsoumettent à un traitement à court terme rechutent dans les\npremières semaines qui suivent l’arrêt du traitement. Même\nquand on met en place des stratégies de traitement prolongé, la\nplupart des individus passeront par plusieurs cycles, alternant\nsobriété et rechute, avant de voir leur état s’améliorer de façon\nplus signicative et durable.\nAutrefois perçue comme un problème de nature morale, la\ntoxicomanie est maintenant considérée comme un trouble\ncomplexe relevant de facteurs biologiques, psychologiques et\nLectures complémentaires\nA, P. & al. (2005). Toxicomanies, Paris,\nMasson.\nC     \n, www.ccsa.ca.\nD, V. P. & N, M. E. (1965).\n« A medical treatment for diacetylmor-\nphine (heroin) addiction - a clinical\ntrial with methadone hydrochloride »\nJournal American Medical Association,\n193(8), p. 646-650.\nF, V. (2003) Le médecin et le toxico-\nmane : guide pratique, Paris, Heures de\nFrance.\nH, J. & al. (2010). « Classifica -\ntion and identification of opioid\naddiction and chronic pain patients »,\nEuropean Journal of Pain, 14(10),\np. 1014-1020.\nH, Y.-I. & al. (2001). « A 33 year\nfollow up of narcotics addicts », Archives\nof General Psychiatry, 58(5),\np. 503-508.\nKz, E.J. (2012). « Reections on\ntreating addictive disorders : a psy-\nchodynamic perspective », Am J Addict,\n21(3), p. 274-279.\nKk, M. J. (2000). « Methadone-\nrelated opioid agonist pharmaco therapy\nfor heroin addiction. History, recent\nmolecular and neurochemical research\nand future in mainstream medicine »,\nAnnals of the New York Academy of\nSciences, 909, p. 186-216.\nU N O  D\n C. (2015). World Drug\nReport 2015, United Nations publi -\ncations.\n",
+  "raw_text_sha256": "751f91547392cba08a6a9cf6e8e14b6be8ff89ef89631c87755fddb45b9f4c73",
+  "source_page_display": 926,
+  "source_page_index": 925
+}

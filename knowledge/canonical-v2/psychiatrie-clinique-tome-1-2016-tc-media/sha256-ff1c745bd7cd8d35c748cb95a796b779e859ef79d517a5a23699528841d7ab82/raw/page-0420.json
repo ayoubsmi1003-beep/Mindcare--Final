@@ -1,0 +1,460 @@
+{
+  "block_sequence_sha256": "d90cdc7873661b3aaac08cfc2a28bfe68524724503bc48c3cb514dc5cc1829b6",
+  "blocks": [
+    {
+      "bbox": [
+        408.8999938964844,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0420-block-0001",
+      "order": 1,
+      "text": "Chapitre 19\nDépressions\n403\n",
+      "text_sha256": "1f1863ec0ddcd8695a7923aa6aaf3a5088668a0d5b03cc05484e1fdd687a1333"
+    },
+    {
+      "bbox": [
+        317.20001220703125,
+        40.04999923706055,
+        532.9814453125,
+        73.10029602050781
+      ],
+      "block_id": "page-0420-block-0002",
+      "order": 2,
+      "text": "i\nUn supplément d’information sur l’échelle de Beck est\ndisponible au http://echelles-psychiatrie.com/echelle-\nbeck.php.\n",
+      "text_sha256": "08abe0e1b3db5437d0136416a0d1d67cb047f08da9087e9c2c2e1b35fad7d312"
+    },
+    {
+      "bbox": [
+        312.0,
+        80.72441864013672,
+        555.3184204101562,
+        242.05850219726562
+      ],
+      "block_id": "page-0420-block-0003",
+      "order": 3,
+      "text": "• L’échelle PHQ-9 (Patient Health Questionnaire) est peut-être\nla plus conviviale, car elle est brève et directement arrimée\naux critères du DSM (voir la gure 19.2). Cet autoques-\ntionnaire permet d’établir la présence des divers critères,\nainsi que leur intensité, et il fournit un score global de ces\ndeux paramètres (Andrews & al., 2007). On y propose une\nconduite en fonction du score (Kroenke & Spitzer, 2002)\n(voir le tableau 19.5). L’échelle PHQ-9 est sensible au chan-\ngement. Elle fait partie d’une famille d’outils conçus pour\nle dépistage et le suivi des troubles de santé mentale en\n1re ligne, est libre de droits et disponible en de nombreuses\nlangues (ce qui peut être utile si on a à soigner une clientèle\nmultiethnique).\n",
+      "text_sha256": "8775b6ba7f33228951ba9d851f330d6aa41ae92233afe1950ddcdb7d49aff43d"
+    },
+    {
+      "bbox": [
+        317.20001220703125,
+        250.39999389648438,
+        523.6917114257812,
+        272.55029296875
+      ],
+      "block_id": "page-0420-block-0004",
+      "order": 4,
+      "text": "i\nUn supplément d’information sur l’échelle PHQ-9 est\ndisponible au www.phqscreeners.com.\n",
+      "text_sha256": "7e2820d15c60a074788e5b9f4942cf205a9613264032f666db683697373d4a3e"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.9658203125,
+        297.41766357421875,
+        133.95849609375
+      ],
+      "block_id": "page-0420-block-0005",
+      "order": 5,
+      "text": "d’établir le diagnostic, mais elles quantient la gravité de l’épisode\net l’ecacité du traitement (Stern, 2008). Les échelles suivantes\nsont toutes disponibles en langue française dans Internet :\n• L’échelle d’Hamilton (Hamilton Depression Rating Scale) doit\nêtre cotée par le clinicien ; elle est assez longue (17 items)\net exige une certaine expertise de la part du praticien. Elle\na l’intérêt de tenir compte des malaises somatiques et des\nsymptômes anxieux qui accompagnent la dépression.\n",
+      "text_sha256": "e48cc9fb3ee47f25927199fe27d71712870d346997e93bd14cc2eec5d0206c45"
+    },
+    {
+      "bbox": [
+        59.20000076293945,
+        141.35000610351562,
+        296.9939880371094,
+        162.55029296875
+      ],
+      "block_id": "page-0420-block-0006",
+      "order": 6,
+      "text": "i\nUn supplément d’information sur l’échelle d’Hamilton est dispo-\nnible au http://echelles-psychiatrie.com/pdf/echelle-hdrs.pdf.\n",
+      "text_sha256": "77fd8cdc0c1b0f43c08f37e23585ee2635d31ae28c309a07a6f31bd5b0331f92"
+    },
+    {
+      "bbox": [
+        54.0,
+        169.2744140625,
+        297.4241027832031,
+        204.45849609375
+      ],
+      "block_id": "page-0420-block-0007",
+      "order": 7,
+      "text": "• L’échelle MADRS (Montgomery-Asberg Depression Rating Scale),\naussi cotée par le clinicien, est plus courte, rapide et sensible au\nchangement, permettant de suivre la réponse au traitement.\n",
+      "text_sha256": "cc84303f7a6dcd2c1a9de706ac2376ae88486ac29483361c30394e6d02304fb3"
+    },
+    {
+      "bbox": [
+        59.20000076293945,
+        211.85000610351562,
+        294.6940002441406,
+        233.05029296875
+      ],
+      "block_id": "page-0420-block-0008",
+      "order": 8,
+      "text": "i\nUn supplément d’information sur l’échelle MADRS est dispo-\nnible au http://echelles-psychiatrie.com/echelle-madrs.php.\n",
+      "text_sha256": "9d2d20331bfa982608f959b36f38fcacfa59e9694ae200885937f1972b726db8"
+    },
+    {
+      "bbox": [
+        54.0,
+        239.7744140625,
+        297.01751708984375,
+        274.95849609375
+      ],
+      "block_id": "page-0420-block-0009",
+      "order": 9,
+      "text": "• L’échelle de Beck (Beck Depression Inventory) est un autoques-\ntionnaire (rempli par le patient), facile d’utilisation, sensible\nau changement.\n",
+      "text_sha256": "628f50007d2a845a046f34f1a4e665bf43096c846a9294a40cd3c14d3c3dbe00"
+    },
+    {
+      "bbox": [
+        56.0,
+        298.602294921875,
+        352.7066650390625,
+        310.9200744628906
+      ],
+      "block_id": "page-0420-block-0010",
+      "order": 10,
+      "text": "FIGURE 19.2 Échelle PHQ-9 pour le dépistage et le suivi de la dépression\n",
+      "text_sha256": "a2a6cd7c9e7cb3869e3551fc9a0902c3913b3ba29d18673f35de51fb2ac24b25"
+    },
+    {
+      "bbox": [
+        54.0,
+        715.8406372070312,
+        166.68199157714844,
+        724.7088623046875
+      ],
+      "block_id": "page-0420-block-0011",
+      "order": 11,
+      "text": "Source : Adapté de Spitzer & al. (2015).\n",
+      "text_sha256": "a6d482e9fbbbe3693b492629e6ae7d80d2937b3548c8fb39d1a06fa872129b16"
+    },
+    {
+      "bbox": [
+        214.60000610351562,
+        317.5741271972656,
+        393.47711181640625,
+        328.1502990722656
+      ],
+      "block_id": "page-0420-block-0012",
+      "order": 12,
+      "text": "Questionnaire sur la santé du patient – 9 (PHQ-9)\n",
+      "text_sha256": "493d21ea640f273c9986a5d57537c7c48a7478399c48d425ef3a90178fc47135"
+    },
+    {
+      "bbox": [
+        58.25,
+        333.4228515625,
+        260.32177734375,
+        363.328125
+      ],
+      "block_id": "page-0420-block-0013",
+      "order": 13,
+      "text": "Au cours des deux dernières semaines, à quelle fréquence\navez-vous été dérangé(e) par les problèmes suivants ?\n( Encerclez la réponses qui convient.)\n",
+      "text_sha256": "642eb9203d71b928c69f8b9c7f9b26343b84507a6490b9abf6fd90356476f7af"
+    },
+    {
+      "bbox": [
+        299.75,
+        333.4228515625,
+        471.489013671875,
+        343.4423828125
+      ],
+      "block_id": "page-0420-block-0014",
+      "order": 14,
+      "text": "Jamais\nPlusieurs jours\nPlus de sept\n",
+      "text_sha256": "7ac008a2e1aebda80bbe2c66cfc75298b846fc0f05a58e15fa9e5a5f5ee0c94d"
+    },
+    {
+      "bbox": [
+        441.5500183105469,
+        343.4228515625,
+        458.7130432128906,
+        353.4423828125
+      ],
+      "block_id": "page-0420-block-0015",
+      "order": 15,
+      "text": "jours\n",
+      "text_sha256": "a58131af38eff97d88b0a84987f2e4e5bb4ca937b9f613d17bfdf30733da8d9b"
+    },
+    {
+      "bbox": [
+        496.6000061035156,
+        333.4228515625,
+        541.843017578125,
+        343.4423828125
+      ],
+      "block_id": "page-0420-block-0016",
+      "order": 16,
+      "text": "Presque tous\n",
+      "text_sha256": "a7a3bd679c432029664bbc6da702e87f489c9b69b47408d4057a3f8c07cbfc5a"
+    },
+    {
+      "bbox": [
+        504.5,
+        343.4228515625,
+        533.9119873046875,
+        353.4423828125
+      ],
+      "block_id": "page-0420-block-0017",
+      "order": 17,
+      "text": "les jours\n",
+      "text_sha256": "b6cbe5fdfc9ca1e619acba55e5405a6dce5bc6ab2251ab65506d48654879fdf9"
+    },
+    {
+      "bbox": [
+        58.25,
+        372.95196533203125,
+        521.3200073242188,
+        382.77813720703125
+      ],
+      "block_id": "page-0420-block-0018",
+      "order": 18,
+      "text": "1. Avoir peu d’intérêt ou de plaisir à faire des choses.\n0\n1\n2\n3\n",
+      "text_sha256": "29a8524b3fece1b6d8fe74a10f0bd9cb2796d654fa8030efaa680870e49dfaac"
+    },
+    {
+      "bbox": [
+        58.25,
+        392.3519592285156,
+        521.3200073242188,
+        402.1781311035156
+      ],
+      "block_id": "page-0420-block-0019",
+      "order": 19,
+      "text": "2. Vous sentir triste, déprimé(e) ou désespéré(e).\n0\n1\n2\n3\n",
+      "text_sha256": "d87aeed3d8ed2db5e8a5e86e6ee606a5dc0c188b75b6423ebef4ad667bc49056"
+    },
+    {
+      "bbox": [
+        58.25,
+        411.8019714355469,
+        258.7406921386719,
+        431.6281433105469
+      ],
+      "block_id": "page-0420-block-0020",
+      "order": 20,
+      "text": "3. Avoir des difcultés à vous endormir ou à rester endormi(e),\nou trop dormir.\n",
+      "text_sha256": "4a42f7a27c517ead4dd3d977390f628acf3d518860eb11dc7cff14bf818d5d3f"
+    },
+    {
+      "bbox": [
+        310.0,
+        411.8019714355469,
+        521.3200073242188,
+        421.6281433105469
+      ],
+      "block_id": "page-0420-block-0021",
+      "order": 21,
+      "text": "0\n1\n2\n3\n",
+      "text_sha256": "e169bdf59fac30d230f7d21be511d04dc8cc61e5edb1d8255758bc220ba3d4c7"
+    },
+    {
+      "bbox": [
+        58.25,
+        441.20196533203125,
+        521.3200073242188,
+        451.02813720703125
+      ],
+      "block_id": "page-0420-block-0022",
+      "order": 22,
+      "text": "4. Vous sentir fatigué(e) ou avoir peu d’énergie.\n0\n1\n2\n3\n",
+      "text_sha256": "d1b7a7fde7167516a56ac3db5cacac5814e1c20db296ebb893ada4cb0786aa29"
+    },
+    {
+      "bbox": [
+        58.25,
+        460.6519470214844,
+        521.3200073242188,
+        470.4781188964844
+      ],
+      "block_id": "page-0420-block-0023",
+      "order": 23,
+      "text": "5. Avoir peu d’appétit ou trop manger.\n0\n1\n2\n3\n",
+      "text_sha256": "577f0eb107920aa5ae630d74b1cf367d91d5df8008d0cfefbce697409cc62d7c"
+    },
+    {
+      "bbox": [
+        58.25,
+        480.0519714355469,
+        268.6734924316406,
+        509.8781433105469
+      ],
+      "block_id": "page-0420-block-0024",
+      "order": 24,
+      "text": "6. Avoir une mauvaise perception de vous-même – ou penser\nque vous êtes un(e) perdant(e) ou que vous n’avez pas satisfait\nvos propres attentes ou celles de votre famille.\n",
+      "text_sha256": "4174ec45899e0e9b06f8fe5094c40535e309cefb9b11cc9d2997090c89937490"
+    },
+    {
+      "bbox": [
+        310.0,
+        480.0519714355469,
+        521.3200073242188,
+        489.8781433105469
+      ],
+      "block_id": "page-0420-block-0025",
+      "order": 25,
+      "text": "0\n1\n2\n3\n",
+      "text_sha256": "e169bdf59fac30d230f7d21be511d04dc8cc61e5edb1d8255758bc220ba3d4c7"
+    },
+    {
+      "bbox": [
+        58.25,
+        519.501953125,
+        258.5617980957031,
+        539.328125
+      ],
+      "block_id": "page-0420-block-0026",
+      "order": 26,
+      "text": "7. Avoir des difcultés à vous concentrer sur des choses telles\nque lire le journal ou regarder la télévision.\n",
+      "text_sha256": "1a042cd244fc0ac6e761d5c010487991632e338583771918e358343081f056cd"
+    },
+    {
+      "bbox": [
+        310.0,
+        519.501953125,
+        521.3200073242188,
+        529.328125
+      ],
+      "block_id": "page-0420-block-0027",
+      "order": 27,
+      "text": "0\n1\n2\n3\n",
+      "text_sha256": "e169bdf59fac30d230f7d21be511d04dc8cc61e5edb1d8255758bc220ba3d4c7"
+    },
+    {
+      "bbox": [
+        58.25,
+        548.9019775390625,
+        255.46212768554688,
+        578.7281494140625
+      ],
+      "block_id": "page-0420-block-0028",
+      "order": 28,
+      "text": "8. Bouger ou parler si lentement que les autres ont pu le\nremarquer, ou au contraire être très agité(e) et bouger plus\nque d’habitude.\n",
+      "text_sha256": "b08b57fe4252256a4b03baf8160afdf3357c3dfdc810c96dbadf8a9c0b4d583a"
+    },
+    {
+      "bbox": [
+        310.0,
+        548.9019775390625,
+        521.3200073242188,
+        558.7281494140625
+      ],
+      "block_id": "page-0420-block-0029",
+      "order": 29,
+      "text": "0\n1\n2\n3\n",
+      "text_sha256": "e169bdf59fac30d230f7d21be511d04dc8cc61e5edb1d8255758bc220ba3d4c7"
+    },
+    {
+      "bbox": [
+        58.25,
+        588.3519897460938,
+        270.023193359375,
+        608.1781616210938
+      ],
+      "block_id": "page-0420-block-0030",
+      "order": 30,
+      "text": "9. Penser que vous seriez mieux mort(e) ou penser à vous blesser\nd’une façon ou d’une autre.\n",
+      "text_sha256": "fb7059767d158efd698bec921c3b0d147ed029eb15952bfa4be634dddaec823d"
+    },
+    {
+      "bbox": [
+        310.0,
+        588.3519897460938,
+        521.3200073242188,
+        598.1781616210938
+      ],
+      "block_id": "page-0420-block-0031",
+      "order": 31,
+      "text": "0\n1\n2\n3\n",
+      "text_sha256": "e169bdf59fac30d230f7d21be511d04dc8cc61e5edb1d8255758bc220ba3d4c7"
+    },
+    {
+      "bbox": [
+        67.25,
+        617.6728515625,
+        537.1500244140625,
+        627.6923828125
+      ],
+      "block_id": "page-0420-block-0032",
+      "order": 32,
+      "text": "Sous-total\n______+\n_______+\n________+\n________\n",
+      "text_sha256": "c6cf67fca31f213d2a34eeeebc2b59cc7649c5b573cc66d305abd4a151e39878"
+    },
+    {
+      "bbox": [
+        438.20001220703125,
+        637.1228637695312,
+        539.4000244140625,
+        647.1423950195312
+      ],
+      "block_id": "page-0420-block-0033",
+      "order": 33,
+      "text": "Total =\n_________\n",
+      "text_sha256": "7527b6b9fbda855850b4546d37603306ea6b9a6a212672cd758d4454d4c4204c"
+    },
+    {
+      "bbox": [
+        58.25,
+        656.5228881835938,
+        542.0293579101562,
+        676.5424194335938
+      ],
+      "block_id": "page-0420-block-0034",
+      "order": 34,
+      "text": "Si vous avez encerclé au moins un des problèmes nommés dans ce questionnaire, répondez à la question suivante : dans quelle mesure ce ou\nces problèmes ont-ils rendu difciles votre travail, vos tâches à la maison ou votre capacité à bien vous entendre avec les autres ?\n",
+      "text_sha256": "881df7643517fc9b0f82cd61a4d80dbe955e2b9778cc6b327ac9958782f8dc55"
+    },
+    {
+      "bbox": [
+        290.6499938964844,
+        685.9728393554688,
+        333.6310119628906,
+        705.9923706054688
+      ],
+      "block_id": "page-0420-block-0035",
+      "order": 35,
+      "text": "Pas du tout\ndifcile(s) ❑\n",
+      "text_sha256": "4c3579f49ea540a7deb98b2a9c7ecc46916e486be8e8a61009cc7f7d2eee9c67"
+    },
+    {
+      "bbox": [
+        359.6499938964844,
+        685.9728393554688,
+        541.1319580078125,
+        705.9923706054688
+      ],
+      "block_id": "page-0420-block-0036",
+      "order": 36,
+      "text": "Plutôt\ndifcile(s) ❑\nTrès difcile(s) ❑\nExtrêmement\n",
+      "text_sha256": "1e047f27bbb2844ac29cb9015c39611c74430402658c661e80d235206bdcfaf9"
+    },
+    {
+      "bbox": [
+        499.1499938964844,
+        695.0499877929688,
+        539.1810302734375,
+        705.9923706054688
+      ],
+      "block_id": "page-0420-block-0037",
+      "order": 37,
+      "text": "difcile(s) ❑\n",
+      "text_sha256": "76077355d945f4fb9629c3593f0725cbee66a65c4db16fa13e1e80be03845b6c"
+    }
+  ],
+  "coordinates_sha256": "caee606a3814757275657a7a2ae057b6357ed36ed5694a75c2678aadbc67d480",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0420",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 19\nDépressions\n403\ni\nUn supplément d’information sur l’échelle de Beck est\ndisponible au http://echelles-psychiatrie.com/echelle-\nbeck.php.\n• L’échelle PHQ-9 (Patient Health Questionnaire) est peut-être\nla plus conviviale, car elle est brève et directement arrimée\naux critères du DSM (voir la gure 19.2). Cet autoques-\ntionnaire permet d’établir la présence des divers critères,\nainsi que leur intensité, et il fournit un score global de ces\ndeux paramètres (Andrews & al., 2007). On y propose une\nconduite en fonction du score (Kroenke & Spitzer, 2002)\n(voir le tableau 19.5). L’échelle PHQ-9 est sensible au chan-\ngement. Elle fait partie d’une famille d’outils conçus pour\nle dépistage et le suivi des troubles de santé mentale en\n1re ligne, est libre de droits et disponible en de nombreuses\nlangues (ce qui peut être utile si on a à soigner une clientèle\nmultiethnique).\ni\nUn supplément d’information sur l’échelle PHQ-9 est\ndisponible au www.phqscreeners.com.\nd’établir le diagnostic, mais elles quantient la gravité de l’épisode\net l’ecacité du traitement (Stern, 2008). Les échelles suivantes\nsont toutes disponibles en langue française dans Internet :\n• L’échelle d’Hamilton (Hamilton Depression Rating Scale) doit\nêtre cotée par le clinicien ; elle est assez longue (17 items)\net exige une certaine expertise de la part du praticien. Elle\na l’intérêt de tenir compte des malaises somatiques et des\nsymptômes anxieux qui accompagnent la dépression.\ni\nUn supplément d’information sur l’échelle d’Hamilton est dispo-\nnible au http://echelles-psychiatrie.com/pdf/echelle-hdrs.pdf.\n• L’échelle MADRS (Montgomery-Asberg Depression Rating Scale),\naussi cotée par le clinicien, est plus courte, rapide et sensible au\nchangement, permettant de suivre la réponse au traitement.\ni\nUn supplément d’information sur l’échelle MADRS est dispo-\nnible au http://echelles-psychiatrie.com/echelle-madrs.php.\n• L’échelle de Beck (Beck Depression Inventory) est un autoques-\ntionnaire (rempli par le patient), facile d’utilisation, sensible\nau changement.\nFIGURE 19.2 Échelle PHQ-9 pour le dépistage et le suivi de la dépression\nSource : Adapté de Spitzer & al. (2015).\nQuestionnaire sur la santé du patient – 9 (PHQ-9)\nAu cours des deux dernières semaines, à quelle fréquence\navez-vous été dérangé(e) par les problèmes suivants ?\n( Encerclez la réponses qui convient.)\nJamais\nPlusieurs jours\nPlus de sept\njours\nPresque tous\nles jours\n1. Avoir peu d’intérêt ou de plaisir à faire des choses.\n0\n1\n2\n3\n2. Vous sentir triste, déprimé(e) ou désespéré(e).\n0\n1\n2\n3\n3. Avoir des difcultés à vous endormir ou à rester endormi(e),\nou trop dormir.\n0\n1\n2\n3\n4. Vous sentir fatigué(e) ou avoir peu d’énergie.\n0\n1\n2\n3\n5. Avoir peu d’appétit ou trop manger.\n0\n1\n2\n3\n6. Avoir une mauvaise perception de vous-même – ou penser\nque vous êtes un(e) perdant(e) ou que vous n’avez pas satisfait\nvos propres attentes ou celles de votre famille.\n0\n1\n2\n3\n7. Avoir des difcultés à vous concentrer sur des choses telles\nque lire le journal ou regarder la télévision.\n0\n1\n2\n3\n8. Bouger ou parler si lentement que les autres ont pu le\nremarquer, ou au contraire être très agité(e) et bouger plus\nque d’habitude.\n0\n1\n2\n3\n9. Penser que vous seriez mieux mort(e) ou penser à vous blesser\nd’une façon ou d’une autre.\n0\n1\n2\n3\nSous-total\n______+\n_______+\n________+\n________\nTotal =\n_________\nSi vous avez encerclé au moins un des problèmes nommés dans ce questionnaire, répondez à la question suivante : dans quelle mesure ce ou\nces problèmes ont-ils rendu difciles votre travail, vos tâches à la maison ou votre capacité à bien vous entendre avec les autres ?\nPas du tout\ndifcile(s) ❑\nPlutôt\ndifcile(s) ❑\nTrès difcile(s) ❑\nExtrêmement\ndifcile(s) ❑\n",
+  "raw_text_sha256": "160b0aa0c381244230f8305e1cd9c0a18f3927c6ef3e96d34619b62f6163e9ed",
+  "source_page_display": 421,
+  "source_page_index": 420
+}

@@ -1,0 +1,232 @@
+{
+  "block_sequence_sha256": "71773031336509f30d0625747edbc3f740ab6ced7047af61229ccfca9de0657a",
+  "blocks": [
+    {
+      "bbox": [
+        408.8999938964844,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0424-block-0001",
+      "order": 1,
+      "text": "Chapitre 19\nDépressions\n407\n",
+      "text_sha256": "391a502093f9fccf7fc84994afd35d689fdb3dbe36791355d8f396765aa14ec1"
+    },
+    {
+      "bbox": [
+        56.25,
+        41.002296447753906,
+        276.3730163574219,
+        53.320068359375
+      ],
+      "block_id": "page-0424-block-0002",
+      "order": 2,
+      "text": "ENCADRÉ 19.6 Pharmacothérapie des états dépressifs\n",
+      "text_sha256": "ddd00989eb52b0f6fef8a70d86ec85c8ad49e712d17d24d819a3d5e977e13418"
+    },
+    {
+      "bbox": [
+        58.25,
+        61.45195770263672,
+        510.9380187988281,
+        125.27812957763672
+      ],
+      "block_id": "page-0424-block-0003",
+      "order": 3,
+      "text": "Traitement initial\n• Amorcer l’antidépresseur à une dose au bas de la fourchette thérapeutique et augmenter au besoin (sauf pour les tricycliques et les IMAO,\npour lesquels la dose initiale est sous-thérapeutique).\n• Tenir compte des effets stimulants ou sédatifs pour décider d’une prise matinale ou vespérale.\n• Faire un essai de trois à cinq semaines à dose thérapeutique avant d’évaluer les résultats.\n• En cas de dépression psychotique, amorcer un double traitement avec AD et antipsychotique.\n",
+      "text_sha256": "882aecc2c2a5f49e19861d13818a7fd7a80cf203010a4c02935c81f6dd4ef9f0"
+    },
+    {
+      "bbox": [
+        58.25,
+        133.85195922851562,
+        205.64700317382812,
+        156.80850219726562
+      ],
+      "block_id": "page-0424-block-0004",
+      "order": 4,
+      "text": "Dépression légère\n– considérer les approches psychothérapeu-\n",
+      "text_sha256": "40c81636c58535345cb80fdd4cb028fe3a45122c0b04fd6624e12665312207ef"
+    },
+    {
+      "bbox": [
+        58.25,
+        156.35195922851562,
+        201.3470001220703,
+        179.30850219726562
+      ],
+      "block_id": "page-0424-block-0005",
+      "order": 5,
+      "text": "tiques seules ;\n– considérer les solutions non médicamen-\n",
+      "text_sha256": "b9806a966d0424835301c5da0397cf2aec684bf0f341e9c62ee190d58adf5aae"
+    },
+    {
+      "bbox": [
+        70.25,
+        178.85195922851562,
+        195.16859436035156,
+        198.67813110351562
+      ],
+      "block_id": "page-0424-block-0006",
+      "order": 6,
+      "text": "teuses (millepertuis, oméga-3, exercice\nphysique).\n",
+      "text_sha256": "171ddcace4a36b549629f912ceeb32a62d55ecdfc1f6c32cc4b3e1ae358aaa41"
+    },
+    {
+      "bbox": [
+        214.5,
+        133.85195922851562,
+        374.74700927734375,
+        169.30850219726562
+      ],
+      "block_id": "page-0424-block-0007",
+      "order": 7,
+      "text": "Dépression modérément grave\n– pas de psychothérapie seule ;\n– par contre, la combinaison d’une psychothéra-\n",
+      "text_sha256": "bd8f7eb4d0e6724369757482523ac033b2c3b239f5b728be5e9e05e91e836a91"
+    },
+    {
+      "bbox": [
+        226.5,
+        168.85195922851562,
+        369.4920959472656,
+        188.67813110351562
+      ],
+      "block_id": "page-0424-block-0008",
+      "order": 8,
+      "text": "pie à une pharmacothérapie est supérieure à\nun de ces traitements donnés isolément.\n",
+      "text_sha256": "bc373f42cd241ae2d86b9aea5ae77d0e8dc9b16a5f7a09d6418f32a6a92d131d"
+    },
+    {
+      "bbox": [
+        386.1000061035156,
+        133.85195922851562,
+        538.3939819335938,
+        176.80850219726562
+      ],
+      "block_id": "page-0424-block-0009",
+      "order": 9,
+      "text": "Dépression grave, catatonique, avec tendance\nsuicidaire ou à haut risque (p. ex., dénutrition,\ndéshydratation)\n– considérer hospitalisation, ECT avec amorce\n",
+      "text_sha256": "25b1a661eed489143cce16e71cb013aa42de3e38aef1b41a6801c346e9e1f2f6"
+    },
+    {
+      "bbox": [
+        398.1000061035156,
+        176.35195922851562,
+        484.2840270996094,
+        186.17813110351562
+      ],
+      "block_id": "page-0424-block-0010",
+      "order": 10,
+      "text": "de médication en parallèle.\n",
+      "text_sha256": "a37b5ecc6408235dbf9d68e8b23aa01e79c0a14b22c5f5af5a26261330879aaf"
+    },
+    {
+      "bbox": [
+        58.25,
+        207.2228546142578,
+        529.7529907226562,
+        297.2585144042969
+      ],
+      "block_id": "page-0424-block-0011",
+      "order": 11,
+      "text": "Échec thérapeutique (amélioration inférieure à 50 % après 4 à 8 semaines de pharmacothérapie à dose thérapeutique)\nLe médecin doit se poser les questions suivantes : Le diagnostic est-il le bon ? La dose est-elle sufsante ? L’adhésion au traitement est-elle bonne ?\nUne affection médicale ou un abus de substances nuisent-ils au traitement ? Des facteurs psychosociaux perpétuent-ils l’état dépressif ? Un trouble\nde la personnalité est-il associé à l’état dépressif ?\n• Option :\n– optimisation: augmentation de la dose du même AD jusqu’à la dose maximale et selon tolérance ;\n– potentialisation de l’AD par une molécule d’une autre classe : le lithium, la triiodothyronine (T3) ou un antipsychotique atypique ;\n– combinaison : ajout d’un second AD au premier AD, les deux agissant différemment sur les neurotransmetteurs (p. ex., buproprion et ISRS ;\n",
+      "text_sha256": "b2ca86cab4e0aa28df1d910d33d8f3edc6471efad6e547bd4d2dad002532bf7b"
+    },
+    {
+      "bbox": [
+        70.25,
+        296.8019714355469,
+        528.5419921875,
+        317.6281433105469
+      ],
+      "block_id": "page-0424-block-0012",
+      "order": 12,
+      "text": "mirtazapine et venlafaxine) ;\n– substitution : remplacement de l’AD par un autre AD qui peut avoir une action différente sur les neurotransmetteurs, ou qui agit sur plusieurs\n",
+      "text_sha256": "68b42435a299b0972ec77b58ff33fe4233b5f6460856d5050f441f0498916813"
+    },
+    {
+      "bbox": [
+        58.25,
+        317.8019714355469,
+        530.7859497070312,
+        348.6281433105469
+      ],
+      "block_id": "page-0424-block-0013",
+      "order": 13,
+      "text": "neurotransmetteurs.\nDépression résistante : absence de réponse après au moins deux tentatives de médication différentes, à doses thérapeutiques et de durée sufsante\n(minimum huit semaines chacune) : envoyer en psychiatrie.\n",
+      "text_sha256": "9a00c734e0704cfd8d0d4aff991c92a15fd103484d43f40a588631eb862b576d"
+    },
+    {
+      "bbox": [
+        58.25,
+        353.7228698730469,
+        541.0919799804688,
+        443.7585144042969
+      ],
+      "block_id": "page-0424-block-0014",
+      "order": 14,
+      "text": "Traitement de continuation (après le traitement de la phase aiguë de la dépression)\n• Viser la rémission (disparition de tous les signes et symptômes).\n• Une fois la rémission atteinte, poursuivre la médication à la dose qui a eu l’effet thérapeutique :\n– durée : 6 à 12 mois, vu le risque élevé de rechute ;\n– durée chez la personne âgée : 2 ans, car la période à risque de rechute est plus longue.\n• En cas de rechute (réapparition ou exacerbation de symptômes dépressifs) lorsque le patient est en voie de rémission ou en rémission depuis moins\nde 12 mois :\n– gérer la rechute en se posant les mêmes questions et avec les mêmes stratégies que lors d’un échec thérapeutique.\n",
+      "text_sha256": "e26f524aeb58da24f587a31bdc5e819deedd87a63935af53ea3c52430e8c8698"
+    },
+    {
+      "bbox": [
+        58.25,
+        447.2228698730469,
+        442.7292785644531,
+        589.1281127929688
+      ],
+      "block_id": "page-0424-block-0015",
+      "order": 15,
+      "text": "Traitement de maintien de durée indénie (prophylaxie à long terme)\nLe traitement de maintien de durée indénie est à envisager dans les cas suivants :\n• trois épisodes ou plus ;\n• rémission de courte durée ;\n• l’épisode dépressif s’est prolongé ; il a été grave ou difcile à traiter ;\n• trouble dysthymique ayant précédé la dépression ;\n• facteurs de risque psychosociaux permanents (adversité) ou non modiables.\nNote : chez la clientèle pédopsychiatrique, la valeur du traitement de maintien est incertaine (non recommandé).\nEn cas de récidive (c.-à-d. réapparition de symptômes dépressifs après un an de rémission) :\n• Gérer la récidive en se posant les mêmes questions et avec les mêmes stratégies que lors d’un échec thérapeutique.\nArrêt d’un antidépresseur\n• Doit être graduel (sur quatre à six mois au minimum) pour éviter le syndrome d’interruption.\n• Surveiller la résurgence de symptômes dépressifs.\n",
+      "text_sha256": "56f46f8fc4785e8bcca73553f4145449c8b28b486bf38dc38e54636bbd214d5b"
+    },
+    {
+      "bbox": [
+        54.0,
+        611.4658203125,
+        297.42431640625,
+        725.45849609375
+      ],
+      "block_id": "page-0424-block-0016",
+      "order": 16,
+      "text": "grave s’il y a urgence d’agir (risque suicidaire important ; stupeur\nou catatonie dépressive ; refus de boire et de manger), ou en cas\nd’échec des traitements pharmacologiques. Une bonne réponse\nantérieure à l’ECT est une raison valable d’y recourir de nouveau.\nElle est aussi indiquée dans la dépression avec éléments psycho-\ntiques si la pharmacothérapie a échoué (Agence d’évaluation\ndes Technologies de la Santé, 2003). L’ECT a souvent un eet\nrapide et important, mais pas toujours soutenu, d’où la nécessité\nd’une intervention pharmacologique subséquente pour prévenir\nla rechute.\n",
+      "text_sha256": "662e30e05f53d734b8262535d16da3f6dbe7e52830125aa0dec4645059f41e60"
+    },
+    {
+      "bbox": [
+        332.0,
+        612.0241088867188,
+        531.25634765625,
+        633.2003173828125
+      ],
+      "block_id": "page-0424-block-0017",
+      "order": 17,
+      "text": "L’électroconvulsivothérapie et la neuromodulation sont\nprésentées en détail au chapitre 72.\n",
+      "text_sha256": "0ace60b4c6bf6d9d916b8b71a7478e60dce7a99d1567edeef731533e53469fa3"
+    },
+    {
+      "bbox": [
+        312.0,
+        642.2658081054688,
+        555.4800415039062,
+        725.45849609375
+      ],
+      "block_id": "page-0424-block-0018",
+      "order": 18,
+      "text": "On voit émerger de nouvelles techniques, pour l’instant encore\nconnées à des centres de recherche. La stimulation magnétique\ntranscrânienne semble avoir des propriétés antidépressives (NICE,\n2007). Cette technique qui vise à stimuler des régions spéciques\ndu cortex cérébral par un puissant électroaimant est apparemment\nsécuritaire et ne nécessite pas d’anesthésie ; l’ecacité, la fréquence\ndes traitements, la localisation et l’intensité des stimulations restent\n",
+      "text_sha256": "99baf37082d02baf261b28a6e11a21525073ea2dbfdd5215a88879a8d10c8ef7"
+    }
+  ],
+  "coordinates_sha256": "b7cf80a6c283c90f9efd439914c3cfecd69f8b66321c812bcec8d256a7264ce4",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0424",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 19\nDépressions\n407\nENCADRÉ 19.6 Pharmacothérapie des états dépressifs\nTraitement initial\n• Amorcer l’antidépresseur à une dose au bas de la fourchette thérapeutique et augmenter au besoin (sauf pour les tricycliques et les IMAO,\npour lesquels la dose initiale est sous-thérapeutique).\n• Tenir compte des effets stimulants ou sédatifs pour décider d’une prise matinale ou vespérale.\n• Faire un essai de trois à cinq semaines à dose thérapeutique avant d’évaluer les résultats.\n• En cas de dépression psychotique, amorcer un double traitement avec AD et antipsychotique.\nDépression légère\n– considérer les approches psychothérapeu-\ntiques seules ;\n– considérer les solutions non médicamen-\nteuses (millepertuis, oméga-3, exercice\nphysique).\nDépression modérément grave\n– pas de psychothérapie seule ;\n– par contre, la combinaison d’une psychothéra-\npie à une pharmacothérapie est supérieure à\nun de ces traitements donnés isolément.\nDépression grave, catatonique, avec tendance\nsuicidaire ou à haut risque (p. ex., dénutrition,\ndéshydratation)\n– considérer hospitalisation, ECT avec amorce\nde médication en parallèle.\nÉchec thérapeutique (amélioration inférieure à 50 % après 4 à 8 semaines de pharmacothérapie à dose thérapeutique)\nLe médecin doit se poser les questions suivantes : Le diagnostic est-il le bon ? La dose est-elle sufsante ? L’adhésion au traitement est-elle bonne ?\nUne affection médicale ou un abus de substances nuisent-ils au traitement ? Des facteurs psychosociaux perpétuent-ils l’état dépressif ? Un trouble\nde la personnalité est-il associé à l’état dépressif ?\n• Option :\n– optimisation: augmentation de la dose du même AD jusqu’à la dose maximale et selon tolérance ;\n– potentialisation de l’AD par une molécule d’une autre classe : le lithium, la triiodothyronine (T3) ou un antipsychotique atypique ;\n– combinaison : ajout d’un second AD au premier AD, les deux agissant différemment sur les neurotransmetteurs (p. ex., buproprion et ISRS ;\nmirtazapine et venlafaxine) ;\n– substitution : remplacement de l’AD par un autre AD qui peut avoir une action différente sur les neurotransmetteurs, ou qui agit sur plusieurs\nneurotransmetteurs.\nDépression résistante : absence de réponse après au moins deux tentatives de médication différentes, à doses thérapeutiques et de durée sufsante\n(minimum huit semaines chacune) : envoyer en psychiatrie.\nTraitement de continuation (après le traitement de la phase aiguë de la dépression)\n• Viser la rémission (disparition de tous les signes et symptômes).\n• Une fois la rémission atteinte, poursuivre la médication à la dose qui a eu l’effet thérapeutique :\n– durée : 6 à 12 mois, vu le risque élevé de rechute ;\n– durée chez la personne âgée : 2 ans, car la période à risque de rechute est plus longue.\n• En cas de rechute (réapparition ou exacerbation de symptômes dépressifs) lorsque le patient est en voie de rémission ou en rémission depuis moins\nde 12 mois :\n– gérer la rechute en se posant les mêmes questions et avec les mêmes stratégies que lors d’un échec thérapeutique.\nTraitement de maintien de durée indénie (prophylaxie à long terme)\nLe traitement de maintien de durée indénie est à envisager dans les cas suivants :\n• trois épisodes ou plus ;\n• rémission de courte durée ;\n• l’épisode dépressif s’est prolongé ; il a été grave ou difcile à traiter ;\n• trouble dysthymique ayant précédé la dépression ;\n• facteurs de risque psychosociaux permanents (adversité) ou non modiables.\nNote : chez la clientèle pédopsychiatrique, la valeur du traitement de maintien est incertaine (non recommandé).\nEn cas de récidive (c.-à-d. réapparition de symptômes dépressifs après un an de rémission) :\n• Gérer la récidive en se posant les mêmes questions et avec les mêmes stratégies que lors d’un échec thérapeutique.\nArrêt d’un antidépresseur\n• Doit être graduel (sur quatre à six mois au minimum) pour éviter le syndrome d’interruption.\n• Surveiller la résurgence de symptômes dépressifs.\ngrave s’il y a urgence d’agir (risque suicidaire important ; stupeur\nou catatonie dépressive ; refus de boire et de manger), ou en cas\nd’échec des traitements pharmacologiques. Une bonne réponse\nantérieure à l’ECT est une raison valable d’y recourir de nouveau.\nElle est aussi indiquée dans la dépression avec éléments psycho-\ntiques si la pharmacothérapie a échoué (Agence d’évaluation\ndes Technologies de la Santé, 2003). L’ECT a souvent un eet\nrapide et important, mais pas toujours soutenu, d’où la nécessité\nd’une intervention pharmacologique subséquente pour prévenir\nla rechute.\nL’électroconvulsivothérapie et la neuromodulation sont\nprésentées en détail au chapitre 72.\nOn voit émerger de nouvelles techniques, pour l’instant encore\nconnées à des centres de recherche. La stimulation magnétique\ntranscrânienne semble avoir des propriétés antidépressives (NICE,\n2007). Cette technique qui vise à stimuler des régions spéciques\ndu cortex cérébral par un puissant électroaimant est apparemment\nsécuritaire et ne nécessite pas d’anesthésie ; l’ecacité, la fréquence\ndes traitements, la localisation et l’intensité des stimulations restent\n",
+  "raw_text_sha256": "9d7a2043eb9f1fd4952c4e1ae0ff1b12cb11f26ad73a7c913d697d2aa13e5193",
+  "source_page_display": 425,
+  "source_page_index": 424
+}

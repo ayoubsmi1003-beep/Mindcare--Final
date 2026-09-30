@@ -1,0 +1,616 @@
+{
+  "block_sequence_sha256": "6f75ebc86187a5138a59e2d35e0f18e0651e5140e2a7f761fee590cb4273bb14",
+  "blocks": [
+    {
+      "bbox": [
+        362.5,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0620-block-0001",
+      "order": 1,
+      "text": "Chapitre 27\nTroubles neurocognitifs\n603\n",
+      "text_sha256": "dc00e5555a85c0d4bfed76bf7740707f90f5af776858cc10f40dd40d3ae66410"
+    },
+    {
+      "bbox": [
+        312.0,
+        581.6658325195312,
+        555.2798461914062,
+        661.7584838867188
+      ],
+      "block_id": "page-0620-block-0002",
+      "order": 2,
+      "text": "Les individus parvenus au troisième stade auraient un\nrisque plus élevé de progresser vers un trouble cognitif\nléger, puis vers une DTA. Le lien entre cette cascade\npathologique et l’émergence des symptômes cliniques\nreste à élucider et permettra éventuellement d’identifier une\npériode critique d’intervention thérapeutique (Sperling &\nal., 2011).\n",
+      "text_sha256": "2c0fd04aaace87e1445d7615f1a03ec5974b21a758c798ab54a9fbd846a2a11e"
+    },
+    {
+      "bbox": [
+        312.0,
+        672.3868408203125,
+        475.7742919921875,
+        688.5294189453125
+      ],
+      "block_id": "page-0620-block-0003",
+      "order": 3,
+      "text": "27.2.7 Diagnostic différentiel\n",
+      "text_sha256": "f7777670c49a4bc62e2b977aaae590396aef09e27ea7489053171ad1071ef709"
+    },
+    {
+      "bbox": [
+        312.0,
+        691.9658203125,
+        555.429931640625,
+        725.6585083007812
+      ],
+      "block_id": "page-0620-block-0004",
+      "order": 4,
+      "text": "Le diagnostic de la démence demeure un exercice clinique largement\ndéterminé par l’anamnèse recueillie auprès du patient et de ses\nproches. Quelques indices renseignent sur le diagnostic diérentiel :\n",
+      "text_sha256": "927980ec987b1569e80043361d6ab56ad8470080612322ebee0124d318f6004b"
+    },
+    {
+      "bbox": [
+        66.0,
+        581.6658325195312,
+        297.0028991699219,
+        592.1585083007812
+      ],
+      "block_id": "page-0620-block-0005",
+      "order": 5,
+      "text": "– dysfonction neurologique aux TEP-FDG (tomographie\n",
+      "text_sha256": "f179ab2e502e9819d42282d96d1d1f570fa7270271e326fcbe1649a90b11ad17"
+    },
+    {
+      "bbox": [
+        66.0,
+        593.1658325195312,
+        297.01751708984375,
+        627.6585083007812
+      ],
+      "block_id": "page-0620-block-0006",
+      "order": 6,
+      "text": "par émission de positons après injection de uorodéoxy-\nglucose)/IRM fonctionnelle ;\n– augmentation de protéine tau totale et phosphorylée dans\n",
+      "text_sha256": "1006c7c587f7763cdd3e0d32d840cac7365047ba1e02ac854e34da9cf6e929a9"
+    },
+    {
+      "bbox": [
+        66.0,
+        628.6658325195312,
+        296.9656066894531,
+        651.6585083007812
+      ],
+      "block_id": "page-0620-block-0007",
+      "order": 7,
+      "text": "le LCR ;\n– amincissement cortical et atrophie hippocampique à l’IRM\n",
+      "text_sha256": "8327359400a3c4060bf6faf5c35a994727c918e28445847925e44adf160cd756"
+    },
+    {
+      "bbox": [
+        54.0,
+        652.6658325195312,
+        297.1959533691406,
+        726.1760864257812
+      ],
+      "block_id": "page-0620-block-0008",
+      "order": 8,
+      "text": "structurale.\n• amyloïdose + neurodégénérescence + déclin cognitif subtil :\n• évidence de changements subtils du niveau de base de la\ncognition ;\n• pauvre performance aux tests cognitifs plus diciles ;\n• absence de trouble cognitif léger.\n",
+      "text_sha256": "fb3767de5a121357e671c40abe331a15b4c421759065f11a1876aca87b0355eb"
+    },
+    {
+      "bbox": [
+        56.0,
+        41.002296447753906,
+        269.68841552734375,
+        54.02006912231445
+      ],
+      "block_id": "page-0620-block-0009",
+      "order": 9,
+      "text": "TABLEAU 27.10 Échelle clinique de la démence (CDR)\n",
+      "text_sha256": "d71d32dbd21bf1feecb6b65ff33ef59569772f1fb6f38703cee38e4fc35e013b"
+    },
+    {
+      "bbox": [
+        306.6499938964844,
+        58.02412414550781,
+        353.9789733886719,
+        68.60029602050781
+      ],
+      "block_id": "page-0620-block-0010",
+      "order": 10,
+      "text": "Détérioration\n",
+      "text_sha256": "5ffcee8d7ab2b152278c8540ae34f0c9fce0d4266b7c124185393de0ca3800b7"
+    },
+    {
+      "bbox": [
+        138.9499969482422,
+        74.9228515625,
+        164.77101135253906,
+        84.9423828125
+      ],
+      "block_id": "page-0620-block-0011",
+      "order": 11,
+      "text": "Aucune\n",
+      "text_sha256": "f1a2c340fb8df6e7e8e04d9569e4c166afcd8ce07b4a8de0a53fab8128705054"
+    },
+    {
+      "bbox": [
+        146.5,
+        74.9228515625,
+        259.27398681640625,
+        95.9423828125
+      ],
+      "block_id": "page-0620-block-0012",
+      "order": 12,
+      "text": "0,0\nDiscutable\n",
+      "text_sha256": "469149d1ee6944d5afc5abfd1fb0931a6b5612302576a07fde7b38608c3ee888"
+    },
+    {
+      "bbox": [
+        235.6999969482422,
+        74.9228515625,
+        342.1609802246094,
+        95.9423828125
+      ],
+      "block_id": "page-0620-block-0013",
+      "order": 13,
+      "text": "0,5\nLégère\n",
+      "text_sha256": "4532ac8c4801088553c669535eb36f603e5f5f86c63beb37c23d4c295153b63a"
+    },
+    {
+      "bbox": [
+        324.8999938964844,
+        74.9228515625,
+        434.67999267578125,
+        95.9423828125
+      ],
+      "block_id": "page-0620-block-0014",
+      "order": 14,
+      "text": "1,0\nModérée\n",
+      "text_sha256": "7973f22b1c28ca35030ea41a20b91fd755d82e7628821556e3823e6dbfe60948"
+    },
+    {
+      "bbox": [
+        414.1000061035156,
+        74.9228515625,
+        521.541015625,
+        95.9423828125
+      ],
+      "block_id": "page-0620-block-0015",
+      "order": 15,
+      "text": "2,0\nSévère\n",
+      "text_sha256": "33a85cfdce836728b3d066245ce24c3ac47a55765e6248ab40884a19b5c3d079"
+    },
+    {
+      "bbox": [
+        504.20001220703125,
+        85.9228515625,
+        515.0,
+        95.9423828125
+      ],
+      "block_id": "page-0620-block-0016",
+      "order": 16,
+      "text": "3,0\n",
+      "text_sha256": "1afd38b1db45023cccb0350f04e29981225d26355f725ffb92459cd0df67f053"
+    },
+    {
+      "bbox": [
+        58.25,
+        100.4019546508789,
+        191.8500213623047,
+        130.22813415527344
+      ],
+      "block_id": "page-0620-block-0017",
+      "order": 17,
+      "text": "Mémoire\nAucune perte de\nmémoire ou légers oublis\ninconstants\n",
+      "text_sha256": "49fddf326223958abbcba3da4535fa94c47a0b97dee4cc98c5e244aee47e6546"
+    },
+    {
+      "bbox": [
+        200.5,
+        100.4019546508789,
+        275.927001953125,
+        140.22813415527344
+      ],
+      "block_id": "page-0620-block-0018",
+      "order": 18,
+      "text": "Légers oublis réguliers ;\nsouvenir partiel des\névénements ; oublis\n« bénins »\n",
+      "text_sha256": "7f670fb18b9498e93b3b5eb6bce5b856e15d1a1c41e453e32a60fe726cd7d38e"
+    },
+    {
+      "bbox": [
+        289.70001220703125,
+        100.4019546508789,
+        365.37713623046875,
+        160.22813415527344
+      ],
+      "block_id": "page-0620-block-0019",
+      "order": 19,
+      "text": "Perte modérée de la\nmémoire, plus marquée\npour les événements\nrécents, qui interfère\navec les activités\nquotidiennes\n",
+      "text_sha256": "3b884d61d4af01e6196949e38642e8558c71ca925f4e1d19f65afd0fffbe60b7"
+    },
+    {
+      "bbox": [
+        378.8999938964844,
+        100.4019546508789,
+        456.60601806640625,
+        160.22813415527344
+      ],
+      "block_id": "page-0620-block-0020",
+      "order": 20,
+      "text": "Perte sévère de la\nmémoire ; se souvient\nseulement des choses\nacquises de longue date\net ne retient pas les\nnouvelles informations\n",
+      "text_sha256": "9cd2ac6e4306d7a101564c9b4002cb296f7e7576418ee5e0c98660c2ca6b2f82"
+    },
+    {
+      "bbox": [
+        468.1000061035156,
+        100.4019546508789,
+        536.8600463867188,
+        130.22813415527344
+      ],
+      "block_id": "page-0620-block-0021",
+      "order": 21,
+      "text": "Perte sévère de la\nmémoire ; seuls des\nfragments demeurent\n",
+      "text_sha256": "c95f50a8b11d49c1e80e861e768df88b482381d687f26ff9058e08104f172896"
+    },
+    {
+      "bbox": [
+        58.25,
+        164.85195922851562,
+        275.24700927734375,
+        204.67813110351562
+      ],
+      "block_id": "page-0620-block-0022",
+      "order": 22,
+      "text": "Orientation\nS’oriente parfaitement\nS’oriente parfaitement\navec toutefois un léger\nproblème avec les rela-\ntions temporelles\n",
+      "text_sha256": "26888b742fd82bec6cdee7689caea439d6cb93e5fed327421e7e8affdfcb6f27"
+    },
+    {
+      "bbox": [
+        289.70001220703125,
+        164.85195922851562,
+        364.1081237792969,
+        234.67813110351562
+      ],
+      "block_id": "page-0620-block-0023",
+      "order": 23,
+      "text": "Difcultés modérées\nen ce qui concerne les\nrelations temporelles ;\nsait où se trouve le lieu\nde l’examen, mais peut\navoir des problèmes\nd’orientation ailleurs\n",
+      "text_sha256": "34321c9ee1e3cc9eaf86e8404bf25f8cabe38eb38430574d69d1c47bcb75b0b4"
+    },
+    {
+      "bbox": [
+        378.8999938964844,
+        164.85195922851562,
+        460.1837463378906,
+        234.67813110351562
+      ],
+      "block_id": "page-0620-block-0024",
+      "order": 24,
+      "text": "Difcultés sévères en ce\nqui concerne les relations\ntemporelles ; éprouve\ngénéralement des dif-\ncultés à se repérer dans\nle temps, et souvent à se\nsituer dans l’espace\n",
+      "text_sha256": "fa3ef9a0b35b684b6c98a4a426666acce1186e1fe8050f123d4d1edec8b3e9b9"
+    },
+    {
+      "bbox": [
+        468.1000061035156,
+        164.85195922851562,
+        548.2647094726562,
+        194.67813110351562
+      ],
+      "block_id": "page-0620-block-0025",
+      "order": 25,
+      "text": "Peut seulement se repé-\nrer vis-à-vis de sa propre\npersonne\n",
+      "text_sha256": "2be6c142339128e24d2dc0775031a617f8edaeb9cc8149f3fff06ee74cd22e54"
+    },
+    {
+      "bbox": [
+        58.25,
+        239.251953125,
+        99.30799865722656,
+        279.078125
+      ],
+      "block_id": "page-0620-block-0026",
+      "order": 26,
+      "text": "Capacité de\njugement et\nrésolution de\nproblèmes\n",
+      "text_sha256": "07a52725e1520c831dd73f2a0f2ce00ae3f8d37555138c2cb3eec6a58f8bce34"
+    },
+    {
+      "bbox": [
+        111.30000305175781,
+        239.251953125,
+        189.7319793701172,
+        309.078125
+      ],
+      "block_id": "page-0620-block-0027",
+      "order": 27,
+      "text": "Résout les problèmes\nquotidiens et gère cor-\nrectement ses nances\npersonnelles ; bonne\ncapacité de jugement en\ncomparaison avec les\nperformances passées\n",
+      "text_sha256": "fd19a8be935c5e13db99d3804bd8f9cca110a92bf088e11f278f6d49b56080aa"
+    },
+    {
+      "bbox": [
+        200.5,
+        239.251953125,
+        281.95001220703125,
+        289.078125
+      ],
+      "block_id": "page-0620-block-0028",
+      "order": 28,
+      "text": "Légère détérioration en\nce qui concerne la réso-\nlution de problèmes, la\nperception des similarités\net des différences\n",
+      "text_sha256": "3e91e461087325355d05114b4ee9a103df96ea92394a70a59e1feb94911926c1"
+    },
+    {
+      "bbox": [
+        289.70001220703125,
+        239.251953125,
+        371.1500244140625,
+        309.078125
+      ],
+      "block_id": "page-0620-block-0029",
+      "order": 29,
+      "text": "Difcultés modérées en\nce qui concerne la réso-\nlution de problèmes, la\nperception des similarités\net des différences ; sur le\nplan social, le jugement\nreste généralement bon\n",
+      "text_sha256": "1b7d0f4b346d420ddc22bdfa3de0742ddd116261b6f24433970293c91505d589"
+    },
+    {
+      "bbox": [
+        378.8999938964844,
+        239.251953125,
+        460.3500061035156,
+        319.078125
+      ],
+      "block_id": "page-0620-block-0030",
+      "order": 30,
+      "text": "Difcultés sévères en\nce qui concerne la réso-\nlution de problèmes, la\nperception des similarités\net des différences ; sur\nle plan social, la capacité\nde jugement s’est géné-\nralement affaiblie\n",
+      "text_sha256": "6f55fa895913b181d0087975afabfe10e7756367132bdfa7dad3c9d4e86b7c15"
+    },
+    {
+      "bbox": [
+        468.1000061035156,
+        239.251953125,
+        548.1640014648438,
+        269.078125
+      ],
+      "block_id": "page-0620-block-0031",
+      "order": 31,
+      "text": "Incapable d’émettre un\njugement ou de résoudre\ndes problèmes\n",
+      "text_sha256": "b20195d67e993f9df43aa3d5349eee3d2774706d5d7f4013586a814aa6f1a393"
+    },
+    {
+      "bbox": [
+        58.25,
+        323.70196533203125,
+        100.81099700927734,
+        343.52813720703125
+      ],
+      "block_id": "page-0620-block-0032",
+      "order": 32,
+      "text": "Activités hors\nde chez soi\n",
+      "text_sha256": "e0587f15618a2d722ffbbb56c9ce79cf0036a65c015bd49b0a0f9b6114304906"
+    },
+    {
+      "bbox": [
+        111.30000305175781,
+        323.70196533203125,
+        186.19366455078125,
+        383.52813720703125
+      ],
+      "block_id": "page-0620-block-0033",
+      "order": 33,
+      "text": "Le degré d’autonomie\nest resté le même dans\nle travail, pour faire\nles courses, dans les\nactivités bénévoles ou\nen groupe\n",
+      "text_sha256": "fcfea989aa592db6681bfa5d0764d2842aca87ac0737eebadeabc011cf6f2c4c"
+    },
+    {
+      "bbox": [
+        200.5,
+        323.70196533203125,
+        274.4800109863281,
+        343.52813720703125
+      ],
+      "block_id": "page-0620-block-0034",
+      "order": 34,
+      "text": "Légère détérioration au\nniveau de ces activités\n",
+      "text_sha256": "7d2691b05ea8ac63e8258ff7da0b582c5b17520b500ce61d5784cbc9b36cfa61"
+    },
+    {
+      "bbox": [
+        289.70001220703125,
+        323.70196533203125,
+        366.6308288574219,
+        383.52813720703125
+      ],
+      "block_id": "page-0620-block-0035",
+      "order": 35,
+      "text": "Incapable de pratiquer\nces activités de manière\nautonome, sans pour\nautant les avoir toutes\nabandonnées ; semble\nnormal à première vue\n",
+      "text_sha256": "dac46cb139ca94f6100109d1c8a65f916a9cb0c401fb11d7e08c51083b74ff71"
+    },
+    {
+      "bbox": [
+        378.8999938964844,
+        323.70196533203125,
+        459.0436706542969,
+        383.52813720703125
+      ],
+      "block_id": "page-0620-block-0036",
+      "order": 36,
+      "text": "Ne peut prétendre à\naucune indépendance\nhors du domicile ; semble\ncapable d’assister à cer-\ntaines activités en dehors\nde la maison familiale\n",
+      "text_sha256": "27c833c68db1ceaf683e4c54c6f0ebc404fb26d5716d726ca2830a62a3394b04"
+    },
+    {
+      "bbox": [
+        468.1000061035156,
+        323.70196533203125,
+        550.9536743164062,
+        383.52813720703125
+      ],
+      "block_id": "page-0620-block-0037",
+      "order": 37,
+      "text": "Ne peut prétendre à\naucune indépendance hors\ndu domicile ; semble trop\natteint pour assister à cer-\ntaines activités en dehors\nde la maison familiale\n",
+      "text_sha256": "e6b5e327e38dce0b201b0dddc8d30e18ade9cdeceffe3969a4d3c540ac4f2938"
+    },
+    {
+      "bbox": [
+        58.25,
+        388.1519470214844,
+        99.58699798583984,
+        407.9781188964844
+      ],
+      "block_id": "page-0620-block-0038",
+      "order": 38,
+      "text": "Maison et\npasse-temps\n",
+      "text_sha256": "f32595bc5626e5ba1712b46bb3ebf5278446b16d0052ea9ac2471316ddb8dc08"
+    },
+    {
+      "bbox": [
+        111.30000305175781,
+        388.1519470214844,
+        182.47201538085938,
+        427.9781188964844
+      ],
+      "block_id": "page-0620-block-0039",
+      "order": 39,
+      "text": "Poursuite normale de\nla vie à la maison, des\npasse-temps et des\nactivités intellectuelles\n",
+      "text_sha256": "9f1f7eddc51c66649a82692ca8d9f13ae537851edada3bf9d9d4c3678e61704c"
+    },
+    {
+      "bbox": [
+        200.5,
+        388.1519470214844,
+        275.5459289550781,
+        427.9781188964844
+      ],
+      "block_id": "page-0620-block-0040",
+      "order": 40,
+      "text": "Légère détérioration\ndans la vie à la maison,\nles passe-temps et les\nactivités intellectuelles\n",
+      "text_sha256": "8b1aba562095997261e9b8806466faa02cd09842da96b94f41e133653fb98c05"
+    },
+    {
+      "bbox": [
+        289.70001220703125,
+        388.1519470214844,
+        366.547119140625,
+        477.9781188964844
+      ],
+      "block_id": "page-0620-block-0041",
+      "order": 41,
+      "text": "Détérioration légère\nmais réelle, dans les\nfonctions assurées à la\nmaison ; les tâches les\nplus difciles ont été\nabandonnées, de même\nque les passe-temps et\nles centres d’intérêt les\nplus complexes\n",
+      "text_sha256": "31e2774cfe53f3e1b79bfc8bc8f6133b8ad2c408e68d942398b127da3e457880"
+    },
+    {
+      "bbox": [
+        378.8999938964844,
+        388.1519470214844,
+        458.0122985839844,
+        437.9781188964844
+      ],
+      "block_id": "page-0620-block-0042",
+      "order": 42,
+      "text": "Seules des tâches\nsimples continuent à\nêtre effectuées ; centres\nd’intérêt très limités, peu\ncultivés\n",
+      "text_sha256": "ca03ff79e1763ff9c44e9dd9e17f0cb650b000fee2869aab0587f01da255b272"
+    },
+    {
+      "bbox": [
+        468.1000061035156,
+        388.1519470214844,
+        542.5469970703125,
+        407.9781188964844
+      ],
+      "block_id": "page-0620-block-0043",
+      "order": 43,
+      "text": "Aucune fonction impor-\ntante à la maison\n",
+      "text_sha256": "e09b5a95c9579afec5ad90800f9689dc394688946d728ba4e2c5d4bb05ba5b94"
+    },
+    {
+      "bbox": [
+        58.25,
+        482.5519714355469,
+        94.88900756835938,
+        512.378173828125
+      ],
+      "block_id": "page-0620-block-0044",
+      "order": 44,
+      "text": "Prise en\ncharge\npersonnelle\n",
+      "text_sha256": "48d62b854de071ba6dd6999627b88ae28516f7cc302688bda768650ecf2d31eb"
+    },
+    {
+      "bbox": [
+        111.30000305175781,
+        482.5519714355469,
+        183.94801330566406,
+        512.378173828125
+      ],
+      "block_id": "page-0620-block-0045",
+      "order": 45,
+      "text": "Est totalement capable\nde s’occuper de\nlui-même\n",
+      "text_sha256": "0470c448a757944f86be9f8f7f70538321b1731dfcadf1e8da40bd688c566368"
+    },
+    {
+      "bbox": [
+        200.5,
+        482.5519714355469,
+        273.1480407714844,
+        513.378173828125
+      ],
+      "block_id": "page-0620-block-0046",
+      "order": 46,
+      "text": "Est totalement capable\nde s’occuper de\nlui-même\n",
+      "text_sha256": "0470c448a757944f86be9f8f7f70538321b1731dfcadf1e8da40bd688c566368"
+    },
+    {
+      "bbox": [
+        289.70001220703125,
+        482.5519714355469,
+        456.947021484375,
+        532.3781127929688
+      ],
+      "block_id": "page-0620-block-0047",
+      "order": 47,
+      "text": "A besoin d’être guidé\nA besoin d’aide pour\ns’habiller, pour les ques-\ntions d’hygiène, pour\nl’entretien de ses effets\npersonnels\n",
+      "text_sha256": "c9cc302a7510d54c22893ef4d515cd74713fbfbb4ce6da557fbd7c2aae8fa902"
+    },
+    {
+      "bbox": [
+        468.1000061035156,
+        482.5519714355469,
+        546.3009643554688,
+        522.3781127929688
+      ],
+      "block_id": "page-0620-block-0048",
+      "order": 48,
+      "text": "A besoin de beaucoup\nd’aide pour prendre soin\nde lui ; incontinence\nfréquente\n",
+      "text_sha256": "559aeaf168062f754fc342a4d36e55121ef26036aef3a34283a7d68e199d075a"
+    },
+    {
+      "bbox": [
+        54.0,
+        539.5963134765625,
+        496.7550048828125,
+        548.8765869140625
+      ],
+      "block_id": "page-0620-block-0049",
+      "order": 49,
+      "text": "Ne noter que les aggravations par rapport aux performances précédentes dues à une perte cognitive et non les limitations dues à d’autres facteurs.\n",
+      "text_sha256": "df6e8870a77a8a891a74543673d07017a04089ff64e68b46162bbb204f3810d4"
+    },
+    {
+      "bbox": [
+        54.0,
+        555.0406494140625,
+        194.5534210205078,
+        563.9088745117188
+      ],
+      "block_id": "page-0620-block-0050",
+      "order": 50,
+      "text": "Source : Adapté de Morris (1993), p. 2412-2414.\n",
+      "text_sha256": "e87793f7f44316e9b40b3bda5e775390956f6f66138b6325280f56cc3868b493"
+    }
+  ],
+  "coordinates_sha256": "0767910d51fd5ef595e74b4e2a3b220a28f102e73ec3a657a7ffc9b399fd48fe",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0620",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 27\nTroubles neurocognitifs\n603\nLes individus parvenus au troisième stade auraient un\nrisque plus élevé de progresser vers un trouble cognitif\nléger, puis vers une DTA. Le lien entre cette cascade\npathologique et l’émergence des symptômes cliniques\nreste à élucider et permettra éventuellement d’identifier une\npériode critique d’intervention thérapeutique (Sperling &\nal., 2011).\n27.2.7 Diagnostic différentiel\nLe diagnostic de la démence demeure un exercice clinique largement\ndéterminé par l’anamnèse recueillie auprès du patient et de ses\nproches. Quelques indices renseignent sur le diagnostic diérentiel :\n– dysfonction neurologique aux TEP-FDG (tomographie\npar émission de positons après injection de uorodéoxy-\nglucose)/IRM fonctionnelle ;\n– augmentation de protéine tau totale et phosphorylée dans\nle LCR ;\n– amincissement cortical et atrophie hippocampique à l’IRM\nstructurale.\n• amyloïdose + neurodégénérescence + déclin cognitif subtil :\n• évidence de changements subtils du niveau de base de la\ncognition ;\n• pauvre performance aux tests cognitifs plus diciles ;\n• absence de trouble cognitif léger.\nTABLEAU 27.10 Échelle clinique de la démence (CDR)\nDétérioration\nAucune\n0,0\nDiscutable\n0,5\nLégère\n1,0\nModérée\n2,0\nSévère\n3,0\nMémoire\nAucune perte de\nmémoire ou légers oublis\ninconstants\nLégers oublis réguliers ;\nsouvenir partiel des\névénements ; oublis\n« bénins »\nPerte modérée de la\nmémoire, plus marquée\npour les événements\nrécents, qui interfère\navec les activités\nquotidiennes\nPerte sévère de la\nmémoire ; se souvient\nseulement des choses\nacquises de longue date\net ne retient pas les\nnouvelles informations\nPerte sévère de la\nmémoire ; seuls des\nfragments demeurent\nOrientation\nS’oriente parfaitement\nS’oriente parfaitement\navec toutefois un léger\nproblème avec les rela-\ntions temporelles\nDifcultés modérées\nen ce qui concerne les\nrelations temporelles ;\nsait où se trouve le lieu\nde l’examen, mais peut\navoir des problèmes\nd’orientation ailleurs\nDifcultés sévères en ce\nqui concerne les relations\ntemporelles ; éprouve\ngénéralement des dif-\ncultés à se repérer dans\nle temps, et souvent à se\nsituer dans l’espace\nPeut seulement se repé-\nrer vis-à-vis de sa propre\npersonne\nCapacité de\njugement et\nrésolution de\nproblèmes\nRésout les problèmes\nquotidiens et gère cor-\nrectement ses nances\npersonnelles ; bonne\ncapacité de jugement en\ncomparaison avec les\nperformances passées\nLégère détérioration en\nce qui concerne la réso-\nlution de problèmes, la\nperception des similarités\net des différences\nDifcultés modérées en\nce qui concerne la réso-\nlution de problèmes, la\nperception des similarités\net des différences ; sur le\nplan social, le jugement\nreste généralement bon\nDifcultés sévères en\nce qui concerne la réso-\nlution de problèmes, la\nperception des similarités\net des différences ; sur\nle plan social, la capacité\nde jugement s’est géné-\nralement affaiblie\nIncapable d’émettre un\njugement ou de résoudre\ndes problèmes\nActivités hors\nde chez soi\nLe degré d’autonomie\nest resté le même dans\nle travail, pour faire\nles courses, dans les\nactivités bénévoles ou\nen groupe\nLégère détérioration au\nniveau de ces activités\nIncapable de pratiquer\nces activités de manière\nautonome, sans pour\nautant les avoir toutes\nabandonnées ; semble\nnormal à première vue\nNe peut prétendre à\naucune indépendance\nhors du domicile ; semble\ncapable d’assister à cer-\ntaines activités en dehors\nde la maison familiale\nNe peut prétendre à\naucune indépendance hors\ndu domicile ; semble trop\natteint pour assister à cer-\ntaines activités en dehors\nde la maison familiale\nMaison et\npasse-temps\nPoursuite normale de\nla vie à la maison, des\npasse-temps et des\nactivités intellectuelles\nLégère détérioration\ndans la vie à la maison,\nles passe-temps et les\nactivités intellectuelles\nDétérioration légère\nmais réelle, dans les\nfonctions assurées à la\nmaison ; les tâches les\nplus difciles ont été\nabandonnées, de même\nque les passe-temps et\nles centres d’intérêt les\nplus complexes\nSeules des tâches\nsimples continuent à\nêtre effectuées ; centres\nd’intérêt très limités, peu\ncultivés\nAucune fonction impor-\ntante à la maison\nPrise en\ncharge\npersonnelle\nEst totalement capable\nde s’occuper de\nlui-même\nEst totalement capable\nde s’occuper de\nlui-même\nA besoin d’être guidé\nA besoin d’aide pour\ns’habiller, pour les ques-\ntions d’hygiène, pour\nl’entretien de ses effets\npersonnels\nA besoin de beaucoup\nd’aide pour prendre soin\nde lui ; incontinence\nfréquente\nNe noter que les aggravations par rapport aux performances précédentes dues à une perte cognitive et non les limitations dues à d’autres facteurs.\nSource : Adapté de Morris (1993), p. 2412-2414.\n",
+  "raw_text_sha256": "7739313e94b3bae06dd2a7f3643d683f4239ef221eca904f3c17eabe702f2568",
+  "source_page_display": 621,
+  "source_page_index": 620
+}

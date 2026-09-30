@@ -1,0 +1,160 @@
+{
+  "block_sequence_sha256": "c4ec593a5260c3530feb310c2da66059d305ad2a82addcbbe151348e1b48f07f",
+  "blocks": [
+    {
+      "bbox": [
+        400.45001220703125,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0312-block-0001",
+      "order": 1,
+      "text": "Chapitre 14\nÉpidémiologie\n295\n",
+      "text_sha256": "7d9b5f8c000be7efc2ae26df541fd5b7e8cbf970b37620f9347e43151a78a395"
+    },
+    {
+      "bbox": [
+        317.20001220703125,
+        40.04999923706055,
+        540.4733276367188,
+        61.35029220581055
+      ],
+      "block_id": "page-0312-block-0002",
+      "order": 2,
+      "text": "i\nUn supplément d’information sur les logiciels et G*Power\nest disponible au www.gpower.hhu.de.\n",
+      "text_sha256": "bcbef293ae72b0d2a9a24eaecb4939d352c09527afdc167130f393e195247e31"
+    },
+    {
+      "bbox": [
+        312.0,
+        79.43682098388672,
+        379.9792175292969,
+        95.57939910888672
+      ],
+      "block_id": "page-0312-block-0003",
+      "order": 3,
+      "text": "14.3.4 Biais\n",
+      "text_sha256": "a44f97fdcf4e564bea98e481239b485611e58f2927e9fb7d7477752a37eb933d"
+    },
+    {
+      "bbox": [
+        312.0,
+        99.01582336425781,
+        554.8818969726562,
+        179.2584991455078
+      ],
+      "block_id": "page-0312-block-0004",
+      "order": 4,
+      "text": "Le fait de conclure qu’une association n’est pas due au hasard\nne signie pas automatiquement qu’elle soit valide. En eet,\nune association statistiquement signicative peut être due à\ndes biais introduits au cours de l’étude. Un biais est une erreur\nqui inue diéremment sur les deux groupes comparés. On\ndistingue deux catégories de biais : les biais de sélection et les\nbiais d’information.\n",
+      "text_sha256": "e1c906040cb2eb388a96c6f2dedf3d20110e6be02f29955a5d38d0d7eda7a7ee"
+    },
+    {
+      "bbox": [
+        312.0,
+        180.36582946777344,
+        555.3522338867188,
+        423.3085021972656
+      ],
+      "block_id": "page-0312-block-0005",
+      "order": 5,
+      "text": "Un biais de sélection est introduit quand les sujets et les\nsujets du groupe de comparaison sont recrutés selon un pro-\ncessus d’échantillonnage diérent. Par exemple, pour étudier\nl’ecacité d’un nouvel antidépresseur, on peut comparer deux\ngroupes, soit un groupe expérimental constitué de patients\ndéprimés traités au moyen d’une nouvelle molécule et un\ngroupe témoin traité par un antidépresseur classique. Cepen-\ndant, puisque plusieurs études ont montré que des troubles\nde la personnalité sont associés à une mauvaise réponse aux\nantidépresseurs, il y a un biais de sélection si, d’une part, les\nsujets du groupe expérimental de patients déprimés viennent\nd’une clinique spécialisée dans le traitement des troubles de\nla personnalité, alors que, d’autre part, le groupe témoin est\nconstitué de patients déprimés excluant ceux qui ont un trouble\nde la personnalité. Ainsi, les patients déprimés présentant un\ntrouble de la personnalité risquent de moins bien répondre\nau nouveau médicament que ceux qui ne sourent pas de ce\ntrouble. La comparaison des deux traitements est donc faussée\nen faveur du traitement classique. La meilleure façon d’éviter\nles biais de sélection est de s’assurer que les sujets des deux\ngroupes sont représentatifs de la même population.\n",
+      "text_sha256": "2326e98436fa9b4292bf4a43f763e5919a78ac9aaf7ec68a480b1dbde6447f2e"
+    },
+    {
+      "bbox": [
+        312.0,
+        424.41583251953125,
+        555.108642578125,
+        469.7585144042969
+      ],
+      "block_id": "page-0312-block-0006",
+      "order": 6,
+      "text": "Le biais d’information est introduit lorsque l’information sur\nles sujets malades et sur les sujets témoins est obtenue de façon\ndiérente. Dans le biais d’information, on distingue le biais de\nremémoration et le biais d’observation.\n",
+      "text_sha256": "4bc6747543821a27de52b64f3c667c29c3daf5759a2480f820dd72fe4b1853fe"
+    },
+    {
+      "bbox": [
+        312.0,
+        470.91583251953125,
+        555.3916625976562,
+        632.5084838867188
+      ],
+      "block_id": "page-0312-block-0007",
+      "order": 7,
+      "text": "On parle de biais de remémoration lorsque les sujets malades\net les sujets témoins ne se rappellent pas les faits avec le même\ndegré de précision. Par exemple, un chercheur veut comparer une\nhistoire de complications périnatales entre des patients sourant\nde schizophrénie et des sujets qui n’en sourent pas en interrogeant\nleurs mères relativement à de telles complications. Il est probable\nque les mères de patient sourant de schizophrénie se souviennent\nmieux des complications qui sont survenues, cherchant depuis\nlongtemps des causes possibles aux problèmes de leur enfant. En\nconséquence, une telle étude peut conclure qu’une histoire de com-\nplications périnatales est plus fréquente chez les patients sourant de\nschizophrénie, mais cet écart résulte des diérences dans la précision\ndes souvenirs des mères des personnes atteintes de schizophrénie,\ncomparativement aux mères de personnes non atteintes.\n",
+      "text_sha256": "74a014968be4ea2220ff65a8c0210167eb1edb6c6a5326e711b52cc6e611e04c"
+    },
+    {
+      "bbox": [
+        312.0,
+        633.6158447265625,
+        555.5789794921875,
+        725.45849609375
+      ],
+      "block_id": "page-0312-block-0008",
+      "order": 8,
+      "text": "On parle de biais d’observation lorsque les évaluateurs\nobtiennent ou interprètent l’information de façon diérente selon\nl’appartenance à l’un ou l’autre groupe. Par exemple, un chercheur\nveut comparer le fonctionnement familial de sujets anorexiques\net celui de familles de sujets non anorexiques. Supposons que\nl’évaluateur connaît l’hypothèse de recherche (les familles des\nsujets anorexiques présentent plus de dysfonctions) et qu’il sait\nquelles sont, parmi les familles, celles des sujets anorexiques ; il\n",
+      "text_sha256": "4064fb823fa28104ab92c8154998fa95f94dd8f8d1ac1d517f2803b622d35290"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.9658203125,
+        297.56512451171875,
+        254.9084930419922
+      ],
+      "block_id": "page-0312-block-0009",
+      "order": 9,
+      "text": "la pression artérielle, la sévérité des symptômes dépressifs).\nDans la même lignée, l’analyse de la variance (analysis of\nvariance – ANOVA) permet de comparer deux groupes ou\nplus par rapport à une variable continue ;\n• le test khi carré (χ2) permet de comparer des proportions entre\ndeux groupes par rapport à une variable catégorielle (p. ex.,\nproportion d’hommes ou de femmes atteints de schizophrénie\ncomparée à la proportion d’hommes ou de femmes atteints\nde troubles bipolaires) ;\n• le test F (ou test de Fisher) permet aussi de comparer des\nproportions, mais lorsque la taille de l’échantillon ou la pro-\nportion est petite.\nL’intervalle de conance d’un pourcentage ou d’une moyenne\ns’avère une statistique fort utile qui tient compte à la fois de la\nforce de l’association et de son niveau de signication statistique.\nL’intervalle de conance permet d’établir l’intervalle numérique\n(p. ex., ±3 %) à l’intérieur duquel se situe le véritable paramètre\nselon un niveau de probabilité prédéterminée (95 %).\n",
+      "text_sha256": "bcc57798ec14061bbd8eeae972f22c75b7b24baddaf522deab23ee87494728c7"
+    },
+    {
+      "bbox": [
+        54.0,
+        265.5868225097656,
+        213.3137664794922,
+        281.7294006347656
+      ],
+      "block_id": "page-0312-block-0010",
+      "order": 10,
+      "text": "14.3.3 Puissance statistique\n",
+      "text_sha256": "9646b17db3368e7418ffe34ec81c29c0034843f0fd24cc2c5745fba277d6a92d"
+    },
+    {
+      "bbox": [
+        54.0,
+        285.16583251953125,
+        297.50921630859375,
+        411.8085021972656
+      ],
+      "block_id": "page-0312-block-0011",
+      "order": 11,
+      "text": "En l’absence d’une association statistiquement signicative, il\nfaut se demander si l’étude portait sur un échantillon assez grand\npour mettre en évidence le phénomène d’intérêt. La puissance\nstatistique était-elle susante ? La puissance statistique est donc\nla probabilité qu’une association d’une certaine force soit détectée\net considérée comme statistiquement signicative. Elle est géné-\nralement représentée symboliquement par la lettre grecque β.\nPar convention, une puissance statistique de β = 0,80 est jugée\nsatisfaisante. Avant d’entreprendre une étude, les chercheurs\ndoivent s’assurer que la taille de l’échantillon qu’ils constitueront\nfournit une puissance statistique susante.\n",
+      "text_sha256": "19ae5baaed6cf1fc02cfedda2bd08503bc7908145717841aeac7a4b2294300fd"
+    },
+    {
+      "bbox": [
+        54.0,
+        412.91583251953125,
+        297.37213134765625,
+        725.45849609375
+      ],
+      "block_id": "page-0312-block-0012",
+      "order": 12,
+      "text": "Par exemple, on peut vouloir réaliser une étude comparant la\nfréquence d’un antécédent comme la perte d’un parent pendant\nl’enfance chez des patients déprimés et chez des sujets non\ndéprimés. Supposons, selon un exemple hypothétique, que\n5 % des personnes dans une population donnée ont perdu un\nde leurs parents par décès pendant l’enfance et qu’un chercheur\ndispose de ressources lui permettant d’évaluer un groupe de\n515 patients en dépression et un groupe témoin comprenant\nle même nombre de sujets non déprimés. Ce chercheur veut\ndéterminer si cet échantillon lui ore une puissance statistique\nsusante pour détecter une association entre la perte d’un parent\npendant l’enfance et la survenue d’une dépression à l’âge adulte.\nIl lui faut alors spécier l’augmentation du risque de dépression\nimputable à la perte d’un parent qu’il veut être capable de détecter.\nSupposons qu’il lui apparaît nécessaire de détecter un eet selon\nlequel la perte d’un parent double le risque de dépression. Dans\ncet exemple, des calculs de puissance statistique permettent en\neet d’établir que la probabilité pour que cet échantillon ore\nune association signicative entre la dépression et la perte d’un\nparent est de 0,80, donc la puissance est satisfaisante. Par contre,\nsi l’étude ne compte que 100 sujets par groupe et ne révèle pas\nd’association, il serait logique de soupçonner que la puissance\nstatistique est insusante. De plus, le fait qu’une telle étude ne\ntrouve pas d’association ne signie pas nécessairement qu’une\ntelle association n’existe pas. Plusieurs logiciels d’estimation\nde puissance statistique et de taille d’échantillon existent sur le\nWeb et sont disponibles gratuitement.\n",
+      "text_sha256": "7993c9cd79dde574d3a6da3f67834143e60615056e4ea17ee325780dacb0c3be"
+    }
+  ],
+  "coordinates_sha256": "c7ab93eed248e6e20cbbe555688d898d859d5f6bfdd39a9606df9441f3eceda6",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0312",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 14\nÉpidémiologie\n295\ni\nUn supplément d’information sur les logiciels et G*Power\nest disponible au www.gpower.hhu.de.\n14.3.4 Biais\nLe fait de conclure qu’une association n’est pas due au hasard\nne signie pas automatiquement qu’elle soit valide. En eet,\nune association statistiquement signicative peut être due à\ndes biais introduits au cours de l’étude. Un biais est une erreur\nqui inue diéremment sur les deux groupes comparés. On\ndistingue deux catégories de biais : les biais de sélection et les\nbiais d’information.\nUn biais de sélection est introduit quand les sujets et les\nsujets du groupe de comparaison sont recrutés selon un pro-\ncessus d’échantillonnage diérent. Par exemple, pour étudier\nl’ecacité d’un nouvel antidépresseur, on peut comparer deux\ngroupes, soit un groupe expérimental constitué de patients\ndéprimés traités au moyen d’une nouvelle molécule et un\ngroupe témoin traité par un antidépresseur classique. Cepen-\ndant, puisque plusieurs études ont montré que des troubles\nde la personnalité sont associés à une mauvaise réponse aux\nantidépresseurs, il y a un biais de sélection si, d’une part, les\nsujets du groupe expérimental de patients déprimés viennent\nd’une clinique spécialisée dans le traitement des troubles de\nla personnalité, alors que, d’autre part, le groupe témoin est\nconstitué de patients déprimés excluant ceux qui ont un trouble\nde la personnalité. Ainsi, les patients déprimés présentant un\ntrouble de la personnalité risquent de moins bien répondre\nau nouveau médicament que ceux qui ne sourent pas de ce\ntrouble. La comparaison des deux traitements est donc faussée\nen faveur du traitement classique. La meilleure façon d’éviter\nles biais de sélection est de s’assurer que les sujets des deux\ngroupes sont représentatifs de la même population.\nLe biais d’information est introduit lorsque l’information sur\nles sujets malades et sur les sujets témoins est obtenue de façon\ndiérente. Dans le biais d’information, on distingue le biais de\nremémoration et le biais d’observation.\nOn parle de biais de remémoration lorsque les sujets malades\net les sujets témoins ne se rappellent pas les faits avec le même\ndegré de précision. Par exemple, un chercheur veut comparer une\nhistoire de complications périnatales entre des patients sourant\nde schizophrénie et des sujets qui n’en sourent pas en interrogeant\nleurs mères relativement à de telles complications. Il est probable\nque les mères de patient sourant de schizophrénie se souviennent\nmieux des complications qui sont survenues, cherchant depuis\nlongtemps des causes possibles aux problèmes de leur enfant. En\nconséquence, une telle étude peut conclure qu’une histoire de com-\nplications périnatales est plus fréquente chez les patients sourant de\nschizophrénie, mais cet écart résulte des diérences dans la précision\ndes souvenirs des mères des personnes atteintes de schizophrénie,\ncomparativement aux mères de personnes non atteintes.\nOn parle de biais d’observation lorsque les évaluateurs\nobtiennent ou interprètent l’information de façon diérente selon\nl’appartenance à l’un ou l’autre groupe. Par exemple, un chercheur\nveut comparer le fonctionnement familial de sujets anorexiques\net celui de familles de sujets non anorexiques. Supposons que\nl’évaluateur connaît l’hypothèse de recherche (les familles des\nsujets anorexiques présentent plus de dysfonctions) et qu’il sait\nquelles sont, parmi les familles, celles des sujets anorexiques ; il\nla pression artérielle, la sévérité des symptômes dépressifs).\nDans la même lignée, l’analyse de la variance (analysis of\nvariance – ANOVA) permet de comparer deux groupes ou\nplus par rapport à une variable continue ;\n• le test khi carré (χ2) permet de comparer des proportions entre\ndeux groupes par rapport à une variable catégorielle (p. ex.,\nproportion d’hommes ou de femmes atteints de schizophrénie\ncomparée à la proportion d’hommes ou de femmes atteints\nde troubles bipolaires) ;\n• le test F (ou test de Fisher) permet aussi de comparer des\nproportions, mais lorsque la taille de l’échantillon ou la pro-\nportion est petite.\nL’intervalle de conance d’un pourcentage ou d’une moyenne\ns’avère une statistique fort utile qui tient compte à la fois de la\nforce de l’association et de son niveau de signication statistique.\nL’intervalle de conance permet d’établir l’intervalle numérique\n(p. ex., ±3 %) à l’intérieur duquel se situe le véritable paramètre\nselon un niveau de probabilité prédéterminée (95 %).\n14.3.3 Puissance statistique\nEn l’absence d’une association statistiquement signicative, il\nfaut se demander si l’étude portait sur un échantillon assez grand\npour mettre en évidence le phénomène d’intérêt. La puissance\nstatistique était-elle susante ? La puissance statistique est donc\nla probabilité qu’une association d’une certaine force soit détectée\net considérée comme statistiquement signicative. Elle est géné-\nralement représentée symboliquement par la lettre grecque β.\nPar convention, une puissance statistique de β = 0,80 est jugée\nsatisfaisante. Avant d’entreprendre une étude, les chercheurs\ndoivent s’assurer que la taille de l’échantillon qu’ils constitueront\nfournit une puissance statistique susante.\nPar exemple, on peut vouloir réaliser une étude comparant la\nfréquence d’un antécédent comme la perte d’un parent pendant\nl’enfance chez des patients déprimés et chez des sujets non\ndéprimés. Supposons, selon un exemple hypothétique, que\n5 % des personnes dans une population donnée ont perdu un\nde leurs parents par décès pendant l’enfance et qu’un chercheur\ndispose de ressources lui permettant d’évaluer un groupe de\n515 patients en dépression et un groupe témoin comprenant\nle même nombre de sujets non déprimés. Ce chercheur veut\ndéterminer si cet échantillon lui ore une puissance statistique\nsusante pour détecter une association entre la perte d’un parent\npendant l’enfance et la survenue d’une dépression à l’âge adulte.\nIl lui faut alors spécier l’augmentation du risque de dépression\nimputable à la perte d’un parent qu’il veut être capable de détecter.\nSupposons qu’il lui apparaît nécessaire de détecter un eet selon\nlequel la perte d’un parent double le risque de dépression. Dans\ncet exemple, des calculs de puissance statistique permettent en\neet d’établir que la probabilité pour que cet échantillon ore\nune association signicative entre la dépression et la perte d’un\nparent est de 0,80, donc la puissance est satisfaisante. Par contre,\nsi l’étude ne compte que 100 sujets par groupe et ne révèle pas\nd’association, il serait logique de soupçonner que la puissance\nstatistique est insusante. De plus, le fait qu’une telle étude ne\ntrouve pas d’association ne signie pas nécessairement qu’une\ntelle association n’existe pas. Plusieurs logiciels d’estimation\nde puissance statistique et de taille d’échantillon existent sur le\nWeb et sont disponibles gratuitement.\n",
+  "raw_text_sha256": "79897d798a379dc749c394ec1f37f7b062675aea4be879d0499818cfcb8850a5",
+  "source_page_display": 313,
+  "source_page_index": 312
+}

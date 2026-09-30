@@ -1,0 +1,100 @@
+{
+  "block_sequence_sha256": "e44d83f704cc1a02e84b8f73ad9c240ee336d6ffde19cf77c3459c81be308c9d",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        300.0453186035156,
+        289.0069885253906,
+        574.0473022460938
+      ],
+      "block_id": "page-0567-block-0001",
+      "order": 1,
+      "text": "26.1 Évolution du concept................................................... 551\n26.2 Dénitions....................................................................551\n26.2.1 Transmission ascendante et perception\ndouloureuse............................................................ 551\n26.2.2 Transmission descendante\net analgésie endogène........................................... 552\n26.2.3 éorie du portillon ............................................. 552\n26.2.4 éorie de la neuromatrice corps-Soi............... 555\n26.2.5 Données probantes issues de l’imagerie\nfonctionnelle........................................................... 555\n26.3 Épidémiologie ..............................................................556\n26.4 Étiologies ......................................................................556\n26.4.1 Étiologies biologiques........................................... 556\n26.4.2 Étiologies psychologiques.................................... 558\n26.4.3 Étiologies sociales.................................................. 559\n26.5 Description clinique.................................................... 560\n26.6 Évaluation et comorbidités psychiatriques ............... 560\n26.7 Outils diagnostiques.................................................... 562\n26.8 Diagnostic diérentiel................................................. 562\n26.8.1 Conversion.............................................................. 562\n26.8.2 Trouble factice et simulation .............................. 562\n26.8.3 Psychose.................................................................. 563\n",
+      "text_sha256": "b05d723efe9ebadefd856dadaf6706702bc55f9b12b141d84e7bf706e17d924f"
+    },
+    {
+      "bbox": [
+        306.0,
+        300.0453186035156,
+        547.0070190429688,
+        498.9681701660156
+      ],
+      "block_id": "page-0567-block-0002",
+      "order": 2,
+      "text": "26.9 Variété diagnostique.................................................... 563\n26.9.1 Trouble à symptomatologie somatique\navec douleur prédominante................................. 563\n26.9.2 Fibromyalgie........................................................... 567\n26.9.3 Douleur du membre fantôme ............................. 570\n26.9.4 Douleur cancéreuse .............................................. 572\n26.9.5 Asymbolie à la douleur......................................... 572\n26.10 Traitements ..................................................................573\n26.10.1 Traitements biologiques ...................................... 573\n26.10.2 Traitements psychologiques\net interventions sociales....................................... 576\n26.10.3 Traitements somatiques....................................... 576\n26.10.4 Traitement des comorbidités.............................. 577\n26.10.5 Réadaptation .......................................................... 577\n26.11 Évolution et pronostic ................................................. 577\nLectures complémentaires .................................................... 577\n",
+      "text_sha256": "7674061252e877f746ee52d3759647fd2336fbe0e373947feef3f39379375008"
+    },
+    {
+      "bbox": [
+        48.0,
+        205.60011291503906,
+        290.1090087890625,
+        218.10011291503906
+      ],
+      "block_id": "page-0567-block-0003",
+      "order": 3,
+      "text": "Monique Desjardins, M.D., FRCPC, M. Sc. (sciences biomédicales)\n",
+      "text_sha256": "5c85e96dd6b74c234d8040cea9c571baeee6d4ec0009b8cf957e4cdacf4211e1"
+    },
+    {
+      "bbox": [
+        48.0,
+        221.9772491455078,
+        284.7714538574219,
+        243.1938018798828
+      ],
+      "block_id": "page-0567-block-0004",
+      "order": 4,
+      "text": "Psychiatre, Service de médecine psychosomatique\net de consultation liaison, Hôpital du Sacré-Cœur de Montréal\n",
+      "text_sha256": "a5a00b54be0c9e38badff6299893e736b7d7b3b70da86da5839435ae0201299a"
+    },
+    {
+      "bbox": [
+        48.0,
+        246.9772491455078,
+        280.1392822265625,
+        268.1938171386719
+      ],
+      "block_id": "page-0567-block-0005",
+      "order": 5,
+      "text": "Professeure adjointe de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\n",
+      "text_sha256": "e24fd9e5fcb63577553120c1928554deab7ca02fcc29176ad48a834a1a0f4c09"
+    },
+    {
+      "bbox": [
+        48.0,
+        131.5734405517578,
+        336.1232604980469,
+        176.4953155517578
+      ],
+      "block_id": "page-0567-block-0006",
+      "order": 6,
+      "text": "Douleur chronique\n",
+      "text_sha256": "4d154238cbc1f9be925fa709ba61272a1590af211ae3de8e286b65130bf79798"
+    },
+    {
+      "bbox": [
+        263.1000061035156,
+        2.3810577392578125,
+        561.0,
+        122.38105773925781
+      ],
+      "block_id": "page-0567-block-0007",
+      "order": 7,
+      "text": "CHAPITRE26\n",
+      "text_sha256": "0e851473f500ed52e00728bb663cdb8798a7e279798737db30cf28fb5a20e463"
+    }
+  ],
+  "coordinates_sha256": "33d4f1d4fe7f0b1610dafa4b12651a77487d0af0e73971f213879c6b3ceae3aa",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0567",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "26.1 Évolution du concept................................................... 551\n26.2 Dénitions....................................................................551\n26.2.1 Transmission ascendante et perception\ndouloureuse............................................................ 551\n26.2.2 Transmission descendante\net analgésie endogène........................................... 552\n26.2.3 éorie du portillon ............................................. 552\n26.2.4 éorie de la neuromatrice corps-Soi............... 555\n26.2.5 Données probantes issues de l’imagerie\nfonctionnelle........................................................... 555\n26.3 Épidémiologie ..............................................................556\n26.4 Étiologies ......................................................................556\n26.4.1 Étiologies biologiques........................................... 556\n26.4.2 Étiologies psychologiques.................................... 558\n26.4.3 Étiologies sociales.................................................. 559\n26.5 Description clinique.................................................... 560\n26.6 Évaluation et comorbidités psychiatriques ............... 560\n26.7 Outils diagnostiques.................................................... 562\n26.8 Diagnostic diérentiel................................................. 562\n26.8.1 Conversion.............................................................. 562\n26.8.2 Trouble factice et simulation .............................. 562\n26.8.3 Psychose.................................................................. 563\n26.9 Variété diagnostique.................................................... 563\n26.9.1 Trouble à symptomatologie somatique\navec douleur prédominante................................. 563\n26.9.2 Fibromyalgie........................................................... 567\n26.9.3 Douleur du membre fantôme ............................. 570\n26.9.4 Douleur cancéreuse .............................................. 572\n26.9.5 Asymbolie à la douleur......................................... 572\n26.10 Traitements ..................................................................573\n26.10.1 Traitements biologiques ...................................... 573\n26.10.2 Traitements psychologiques\net interventions sociales....................................... 576\n26.10.3 Traitements somatiques....................................... 576\n26.10.4 Traitement des comorbidités.............................. 577\n26.10.5 Réadaptation .......................................................... 577\n26.11 Évolution et pronostic ................................................. 577\nLectures complémentaires .................................................... 577\nMonique Desjardins, M.D., FRCPC, M. Sc. (sciences biomédicales)\nPsychiatre, Service de médecine psychosomatique\net de consultation liaison, Hôpital du Sacré-Cœur de Montréal\nProfesseure adjointe de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\nDouleur chronique\nCHAPITRE26\n",
+  "raw_text_sha256": "f958def777f8d2fdfd2028507cbac6c127a9a0656cca0e468bce5ff0a20a3691",
+  "source_page_display": 568,
+  "source_page_index": 567
+}

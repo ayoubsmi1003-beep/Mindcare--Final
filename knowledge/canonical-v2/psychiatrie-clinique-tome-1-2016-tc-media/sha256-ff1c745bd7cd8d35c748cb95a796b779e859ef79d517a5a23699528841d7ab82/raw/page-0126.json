@@ -1,0 +1,232 @@
+{
+  "block_sequence_sha256": "7cec19812c992b88d3a29a3631970581d89e75438aae3f22514418a9a6f99ed7",
+  "blocks": [
+    {
+      "bbox": [
+        54.0,
+        325.1244201660156,
+        295.010009765625,
+        478.0472717285156
+      ],
+      "block_id": "page-0126-block-0001",
+      "order": 1,
+      "text": "6.1 \nNeuroanatomie...............................................................110\n6.1.1 \nTélencéphale........................................................... 110\n6.1.2 \nDiencéphale............................................................ 112\n6.1.3 \nTronc cérébral........................................................ 113\n6.1.4 \nSystème limbique .................................................. 113\n6.1.5 \nCervelet ................................................................... 115\n6.1.6 \nVentricules.............................................................. 115\n6.1.7 \nSystème nerveux autonome ................................ 116\n6.2 \nNeurotransmission.........................................................117\n6.2.1 \nMécanismes de transduction.............................. 117\n6.2.2 \nProtéines G............................................................. 120\n6.2.3 \nNeurotransmetteurs ............................................. 121\n",
+      "text_sha256": "86ceec0477b4588854c4c3db0680b90968bc9fcc680a74aba2bc80179e9d101d"
+    },
+    {
+      "bbox": [
+        109.0,
+        481.1859436035156,
+        295.0040283203125,
+        491.0472717285156
+      ],
+      "block_id": "page-0126-block-0002",
+      "order": 2,
+      "text": "Noradrénaline........................................................... 122\n",
+      "text_sha256": "75620c4f9bbd30ac50e17d811ff03098f7321e867b5ed83a59258dcbeb7089fb"
+    },
+    {
+      "bbox": [
+        109.0,
+        494.1859436035156,
+        295.0040283203125,
+        504.0472717285156
+      ],
+      "block_id": "page-0126-block-0003",
+      "order": 3,
+      "text": "Dopamine.................................................................. 124\n",
+      "text_sha256": "f8a0a28906455a16f06217a8918529ff885d141e43ec697ecd619cc8c5130c48"
+    },
+    {
+      "bbox": [
+        109.0,
+        507.18597412109375,
+        295.0040283203125,
+        517.0473022460938
+      ],
+      "block_id": "page-0126-block-0004",
+      "order": 4,
+      "text": "Sérotonine................................................................. 126\n",
+      "text_sha256": "0599ba641e655ba04cda71decf988fe3ffa74bf6eefbe9a94a86d64673a3a68d"
+    },
+    {
+      "bbox": [
+        54.0,
+        206.63592529296875,
+        247.64199829101562,
+        219.13592529296875
+      ],
+      "block_id": "page-0126-block-0005",
+      "order": 5,
+      "text": "Pierre Landry, M.D., FRCPC, Ph. D. (neurophysiologie)\n",
+      "text_sha256": "42fbe1f3ac1bc4c5a3d3383c22a33573060dfda6d783bc5c3f8466c1249be4d7"
+    },
+    {
+      "bbox": [
+        54.0,
+        222.9772491455078,
+        281.6262512207031,
+        244.1938018798828
+      ],
+      "block_id": "page-0126-block-0006",
+      "order": 6,
+      "text": "Psychiatre, Programme des troubles psychotiques et de l’hu-\nmeur, Institut universitaire en santé mentale de Montréal\n",
+      "text_sha256": "c672cd09c20e18734c39901c64abd21b2d1713333abf40449d69832f35dedfd3"
+    },
+    {
+      "bbox": [
+        54.0,
+        247.9772491455078,
+        275.9393005371094,
+        269.1938171386719
+      ],
+      "block_id": "page-0126-block-0007",
+      "order": 7,
+      "text": "Professeur agrégé de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\n",
+      "text_sha256": "f4bc23aed99fa29e8f7410379c6cebea846c1188b4a600c871ae8a6f9bc4dde5"
+    },
+    {
+      "bbox": [
+        312.0,
+        206.63592529296875,
+        468.2590026855469,
+        219.13592529296875
+      ],
+      "block_id": "page-0126-block-0008",
+      "order": 8,
+      "text": "Pierre-Paul Rompré, Ph. D. (psychologie)\n",
+      "text_sha256": "4a45bdfbfa49fef24c0cd6f45b8d64e43b4c89d11853aecf813f417de5a4f7ae"
+    },
+    {
+      "bbox": [
+        312.0,
+        222.9772491455078,
+        523.6769409179688,
+        255.1938018798828
+      ],
+      "block_id": "page-0126-block-0009",
+      "order": 9,
+      "text": "Chercheur en neurobiologie comportementale, Centre\nde recherche en santé du Québec, Université Concordia\n(Montréal)\n",
+      "text_sha256": "4f90b3ac93856a5535db3d10ec9d7868c6ffde74cb5abd56649669279de270ad"
+    },
+    {
+      "bbox": [
+        312.0,
+        258.9772644042969,
+        548.8925170898438,
+        280.1938171386719
+      ],
+      "block_id": "page-0126-block-0010",
+      "order": 10,
+      "text": "Professeur titulaire, Département de neurosciences, Faculté de\nmédecine, Université de Montréal\n",
+      "text_sha256": "c06d6f16faa273c60cade93762d999acfda0c0911f4a5a9daf7eaf107d62dac8"
+    },
+    {
+      "bbox": [
+        54.0,
+        131.5734405517578,
+        273.7200012207031,
+        176.4953155517578
+      ],
+      "block_id": "page-0126-block-0011",
+      "order": 11,
+      "text": "Neurobiologie\n",
+      "text_sha256": "e25625e889c374c0ba29785cfeba3e2c97628851593f1277b0856d3131c39d0d"
+    },
+    {
+      "bbox": [
+        325.5,
+        2.3810577392578125,
+        561.0,
+        122.38105773925781
+      ],
+      "block_id": "page-0126-block-0012",
+      "order": 12,
+      "text": "CHAPITRE6\n",
+      "text_sha256": "3d3333f9e793d68c9926c97485cf886e39f46e6c1b70f7a78246d4efec05d7c7"
+    },
+    {
+      "bbox": [
+        367.0,
+        325.1859436035156,
+        553.0040283203125,
+        335.0472717285156
+      ],
+      "block_id": "page-0126-block-0013",
+      "order": 13,
+      "text": "Acétylcholine ............................................................ 128\n",
+      "text_sha256": "c40a47accfb05681998da7d5e9bf69b0dfcf7a13c2be8fe1734accf917ac07a6"
+    },
+    {
+      "bbox": [
+        367.0,
+        338.1859436035156,
+        553.0040283203125,
+        348.0472717285156
+      ],
+      "block_id": "page-0126-block-0014",
+      "order": 14,
+      "text": "Histamine................................................................. 129\n",
+      "text_sha256": "d2828b5a91faeb7878a70e574cbb0bf7498b5f6a4ccc9d3e8c1b9c6c04b2e0d5"
+    },
+    {
+      "bbox": [
+        367.0,
+        351.1859436035156,
+        553.0040283203125,
+        361.0472717285156
+      ],
+      "block_id": "page-0126-block-0015",
+      "order": 15,
+      "text": "Glutamate.................................................................. 130\n",
+      "text_sha256": "836a697da09f6be89918b1077e349a1f5d799ddf13ae091580552583f034768a"
+    },
+    {
+      "bbox": [
+        367.0,
+        364.1859436035156,
+        553.0040283203125,
+        374.0472717285156
+      ],
+      "block_id": "page-0126-block-0016",
+      "order": 16,
+      "text": "Acide g-aminobutyrique ........................................... 131\n",
+      "text_sha256": "4c453be5567a3012fbc7335809ad29def6dcae81e1694d872c02c90e2e60294a"
+    },
+    {
+      "bbox": [
+        367.0,
+        377.1859436035156,
+        553.0040283203125,
+        387.0472717285156
+      ],
+      "block_id": "page-0126-block-0017",
+      "order": 17,
+      "text": "Endocannabinoïdes................................................... 132\n",
+      "text_sha256": "ab1b3e52e8d13edfa68e531167991c50ec771b5d4ade7e453f94dba4ea2208f5"
+    },
+    {
+      "bbox": [
+        312.0,
+        390.1859436035156,
+        553.010009765625,
+        488.0472717285156
+      ],
+      "block_id": "page-0126-block-0018",
+      "order": 18,
+      "text": "Neuropeptides........................................................... 133\n6.3 \nNeurotransmission chez l’humain ...............................134\n6.3.1 \nÉtudes post mortem du cerveau......................... 134\n6.3.2 \nRecherches liées au liquide\ncéphalorachidien, au plasma et à l’urine........... 134\n6.3.3 \nPlaquettes sanguines............................................. 135\n6.3.4 \nPsycho-neuro-endocrinologie ............................ 135\n6.3.5 \nPsycho-immunologie............................................ 136\n",
+      "text_sha256": "6e28a889e09e68b89f2fba936b7735737976000141a10e2d5946191de6c3c573"
+    }
+  ],
+  "coordinates_sha256": "a9942d9379d5531400d1a16e5f6a1330cdace29c43e8bb49a4777b8211327a57",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0126",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "6.1 \nNeuroanatomie...............................................................110\n6.1.1 \nTélencéphale........................................................... 110\n6.1.2 \nDiencéphale............................................................ 112\n6.1.3 \nTronc cérébral........................................................ 113\n6.1.4 \nSystème limbique .................................................. 113\n6.1.5 \nCervelet ................................................................... 115\n6.1.6 \nVentricules.............................................................. 115\n6.1.7 \nSystème nerveux autonome ................................ 116\n6.2 \nNeurotransmission.........................................................117\n6.2.1 \nMécanismes de transduction.............................. 117\n6.2.2 \nProtéines G............................................................. 120\n6.2.3 \nNeurotransmetteurs ............................................. 121\nNoradrénaline........................................................... 122\nDopamine.................................................................. 124\nSérotonine................................................................. 126\nPierre Landry, M.D., FRCPC, Ph. D. (neurophysiologie)\nPsychiatre, Programme des troubles psychotiques et de l’hu-\nmeur, Institut universitaire en santé mentale de Montréal\nProfesseur agrégé de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\nPierre-Paul Rompré, Ph. D. (psychologie)\nChercheur en neurobiologie comportementale, Centre\nde recherche en santé du Québec, Université Concordia\n(Montréal)\nProfesseur titulaire, Département de neurosciences, Faculté de\nmédecine, Université de Montréal\nNeurobiologie\nCHAPITRE6\nAcétylcholine ............................................................ 128\nHistamine................................................................. 129\nGlutamate.................................................................. 130\nAcide g-aminobutyrique ........................................... 131\nEndocannabinoïdes................................................... 132\nNeuropeptides........................................................... 133\n6.3 \nNeurotransmission chez l’humain ...............................134\n6.3.1 \nÉtudes post mortem du cerveau......................... 134\n6.3.2 \nRecherches liées au liquide\ncéphalorachidien, au plasma et à l’urine........... 134\n6.3.3 \nPlaquettes sanguines............................................. 135\n6.3.4 \nPsycho-neuro-endocrinologie ............................ 135\n6.3.5 \nPsycho-immunologie............................................ 136\n",
+  "raw_text_sha256": "76f165e1457a73382b616a1442f6144c70dc336d3f80358040e868a2d9536609",
+  "source_page_display": 127,
+  "source_page_index": 126
+}

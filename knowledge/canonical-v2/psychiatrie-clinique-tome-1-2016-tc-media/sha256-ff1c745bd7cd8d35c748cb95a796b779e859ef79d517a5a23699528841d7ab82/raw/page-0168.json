@@ -1,0 +1,364 @@
+{
+  "block_sequence_sha256": "b9e68f74c97ad42a9953f34b1c149f5719eea56f414d064069b64536fb14e2f4",
+  "blocks": [
+    {
+      "bbox": [
+        388.75,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0168-block-0001",
+      "order": 1,
+      "text": "Chapitre 7\nImagerie cérébrale\n151\n",
+      "text_sha256": "85c5eed01a6d9f522cd4859b4a523bbde61d9c85561e61558e7e869df21c415e"
+    },
+    {
+      "bbox": [
+        56.75,
+        41.002296447753906,
+        242.44337463378906,
+        53.320068359375
+      ],
+      "block_id": "page-0168-block-0002",
+      "order": 2,
+      "text": "TABLEAU 7.1 Techniques d’imagerie cérébrale\n",
+      "text_sha256": "0cafad9f611295f432f0f03057107a1f5659d0386d595f9f5bf646bb7739607a"
+    },
+    {
+      "bbox": [
+        162.90000915527344,
+        56.27412414550781,
+        507.79302978515625,
+        66.85029602050781
+      ],
+      "block_id": "page-0168-block-0003",
+      "order": 3,
+      "text": "Modalité\nPrincipe anatomophysiologique\nApplications cliniques\n",
+      "text_sha256": "4f950e2a5ee553a02628118445eff3fa60766e2f7f2f5ae657a904d5ca403d5a"
+    },
+    {
+      "bbox": [
+        58.75,
+        72.501953125,
+        489.2020263671875,
+        93.328125
+      ],
+      "block_id": "page-0168-block-0004",
+      "order": 4,
+      "text": "CT\nConventionnel\nMesure la densité des tissus.\nDétecter des lésions organiques.\n(AVC, tumeur, leucoaraïose).\n",
+      "text_sha256": "13cd9a45eb9dd25fa0687b520e4c84e980c374da420649297751c71ab474dfda"
+    },
+    {
+      "bbox": [
+        58.75,
+        102.55195617675781,
+        134.06201171875,
+        122.37812805175781
+      ],
+      "block_id": "page-0168-block-0005",
+      "order": 5,
+      "text": "Imagerie par résonance\nmagnétique (IRM)\n",
+      "text_sha256": "a595e5d7577d83bff4f392a25793cb3b6904f36da85cb1e0a8b7389a565c3806"
+    },
+    {
+      "bbox": [
+        144.5,
+        99.55195617675781,
+        346.26202392578125,
+        122.37812805175781
+      ],
+      "block_id": "page-0168-block-0006",
+      "order": 6,
+      "text": "Conventionnel\nMesure le signal des protons H* soumis\nà un champ magnétique.\n",
+      "text_sha256": "8ac883aff9a72889dd3a007e1f2205af3ea71ce02977ef6bf84c56ea11d88a0c"
+    },
+    {
+      "bbox": [
+        385.0,
+        102.55195617675781,
+        537.3815307617188,
+        133.3781280517578
+      ],
+      "block_id": "page-0168-block-0007",
+      "order": 7,
+      "text": "Évaluer le type de démence.\nDétecter des atteintes organiques (AVC, tumeur,\nlésion de la matière blanche, etc.).\n",
+      "text_sha256": "b79f14c43ae9001e172bb1d2d9cd4bfd507e87d2da4fe11733aa741e02aa8805"
+    },
+    {
+      "bbox": [
+        144.5,
+        142.5519561767578,
+        356.2886657714844,
+        172.3781280517578
+      ],
+      "block_id": "page-0168-block-0008",
+      "order": 8,
+      "text": "Volumétrie\nMesure le volume de la matière blanche\net du cortex ou de structures plus précises\ncomme l’hippocampe.\n",
+      "text_sha256": "a29dc3e23e22c43b58ab3eecb463169f701950cdd875b787f68f7350a6580c46"
+    },
+    {
+      "bbox": [
+        385.0,
+        142.5519561767578,
+        542.7680053710938,
+        173.3781280517578
+      ],
+      "block_id": "page-0168-block-0009",
+      "order": 9,
+      "text": "Mesurer le volume de l’hippocampe en démence.\nMesurer la charge en T2 dans la sclérose en\nplaques.\n",
+      "text_sha256": "3a2c130072ffa0c06e02478b38574fc77ca0d3eb5ee19ac591d82da676cacf0a"
+    },
+    {
+      "bbox": [
+        144.5,
+        182.60195922851562,
+        208.81605529785156,
+        202.42813110351562
+      ],
+      "block_id": "page-0168-block-0010",
+      "order": 10,
+      "text": "Tenseur de diffusion\n(DTi)\n",
+      "text_sha256": "a30ad6e367257d1aee12bfe21faceee1b261d2b551a71755523151e464368124"
+    },
+    {
+      "bbox": [
+        220.75,
+        182.60195922851562,
+        367.751953125,
+        212.42813110351562
+      ],
+      "block_id": "page-0168-block-0011",
+      "order": 11,
+      "text": "Évalue le trajet des neurones en se basant sur\nles propriétés de diffusion des cellules d’eau\ndans la myéline.\n",
+      "text_sha256": "e3cf04827a9ce65f28ac73c501d2d9e61ccffc62a5019437849254043e83a1af"
+    },
+    {
+      "bbox": [
+        385.0,
+        182.60195922851562,
+        545.9382934570312,
+        222.42813110351562
+      ],
+      "block_id": "page-0168-block-0012",
+      "order": 12,
+      "text": "Utiliser en préopératoire pour assister le chirurgien\ndans la résection de tumeurs ou de malformations\nartérioveineuses lorsqu’elles sont situées dans\ndes aires éloquentes* du cerveau.\n",
+      "text_sha256": "170623e8eef01369c7a09c743d2e43439268b9efb52a921aca39d2a147500c1c"
+    },
+    {
+      "bbox": [
+        144.5,
+        231.60195922851562,
+        362.4118957519531,
+        251.42813110351562
+      ],
+      "block_id": "page-0168-block-0013",
+      "order": 13,
+      "text": "Spectroscopie\nMesure différents métabolites présents dans\nle tissu nerveux.\n",
+      "text_sha256": "7cd0e1d6c09758d957dbc5a9b5775618f9c56145adf19638149c22acaeadaae1"
+    },
+    {
+      "bbox": [
+        385.0,
+        231.60195922851562,
+        527.37109375,
+        251.42813110351562
+      ],
+      "block_id": "page-0168-block-0014",
+      "order": 14,
+      "text": "Différencier une lésion tumorale d’une lésion\ndémyélinisante ou de la radionécrose.\n",
+      "text_sha256": "934fb6bea4ec2a8f4c360ec12b66c7ad292e0b40b2ad3947e9219cceda52a0c4"
+    },
+    {
+      "bbox": [
+        144.5,
+        260.6519470214844,
+        512.6444091796875,
+        291.4781188964844
+      ],
+      "block_id": "page-0168-block-0015",
+      "order": 15,
+      "text": "Perfusion\nMesure le débit sanguin.\nÉvaluer le tissu viable dans les AVC.\nDifférencier une récidive tumorale d’une\nradionécrose.\n",
+      "text_sha256": "13d36ad9f65eecb2f8db0921473c7dceff85bdbdb58ecb34345f8f223492be71"
+    },
+    {
+      "bbox": [
+        144.5,
+        300.6519470214844,
+        347.0140686035156,
+        320.4781188964844
+      ],
+      "block_id": "page-0168-block-0016",
+      "order": 16,
+      "text": "IRMf\nMesure l’augmentation du métabolisme\nde l’oxygène et du glucose.\n",
+      "text_sha256": "9c4a0dcff8983416fb427aadaa64ddcea76ff1cff7472fe6b547cd64e3a8a48b"
+    },
+    {
+      "bbox": [
+        385.0,
+        300.6519470214844,
+        545.9382934570312,
+        340.4781188964844
+      ],
+      "block_id": "page-0168-block-0017",
+      "order": 17,
+      "text": "Utiliser en préopératoire pour assister le chirurgien\ndans la résection de tumeurs ou de malformations\nartérioveineuses lorsqu’elles sont situées dans\ndes aires éloquentes du cerveau.\n",
+      "text_sha256": "9f5bf618946e88012d51dc38f92a1c13456a8bce320271e35097074248b01db1"
+    },
+    {
+      "bbox": [
+        58.75,
+        349.10137939453125,
+        543.4652099609375,
+        369.52813720703125
+      ],
+      "block_id": "page-0168-block-0018",
+      "order": 18,
+      "text": "TEP\n18F-FDG\nMesure le métabolisme du glucose.\nUtiliser pour le diagnostic différentiel des atteintes\nneurodégénératives.\n",
+      "text_sha256": "53b846399c7542dd52a63e7602d6bb0e56026327b3fb7b5cd7e518bed32dabf0"
+    },
+    {
+      "bbox": [
+        58.75,
+        378.10137939453125,
+        211.48927307128906,
+        398.52813720703125
+      ],
+      "block_id": "page-0168-block-0019",
+      "order": 19,
+      "text": "TEMP\n99mTc-ECD, HMPAO,\netc.\n",
+      "text_sha256": "eed67ece0c462fd165f1247a64793233e2a9e62dffdc491b0b56f6274f62d2b4"
+    },
+    {
+      "bbox": [
+        220.75,
+        378.70196533203125,
+        543.4652099609375,
+        398.52813720703125
+      ],
+      "block_id": "page-0168-block-0020",
+      "order": 20,
+      "text": "Mesure le ot sanguin cérébral.\nUtiliser pour le diagnostic différentiel des atteintes\nneurodégénératives.\n",
+      "text_sha256": "cc68d5b2f623918f301399a3e4ea82911d2d0c71d60197f93ccc221eff65738c"
+    },
+    {
+      "bbox": [
+        58.75,
+        407.751953125,
+        112.70500183105469,
+        438.578125
+      ],
+      "block_id": "page-0168-block-0021",
+      "order": 21,
+      "text": "Études de liaison\nspécique\n(TEP et TEMP)\n",
+      "text_sha256": "5793a52e737626f6d6743b343fa62db6a88a8224faef2ad88d7d9d91d99b387b"
+    },
+    {
+      "bbox": [
+        144.5,
+        407.751953125,
+        184.95501708984375,
+        427.578125
+      ],
+      "block_id": "page-0168-block-0022",
+      "order": 22,
+      "text": "Radioligands\nmultiples\n",
+      "text_sha256": "83c8be00c21da0f6c49bed5565f61da3db08ff8c82cf566f3933a17e961aa5d1"
+    },
+    {
+      "bbox": [
+        220.75,
+        407.751953125,
+        368.6569519042969,
+        447.578125
+      ],
+      "block_id": "page-0168-block-0023",
+      "order": 23,
+      "text": "Mesure la densité et/ou l’activité de molécules\nporteuses de sites récepteurs spéciques\n(neurorécepteurs, enzymes, transporteur de\nneurotransmetteurs, d’acides aminés, etc.).\n",
+      "text_sha256": "78588a3db769a9c2c49cd566b869870f174f4a87857cd853f274fe14c2b9fbef"
+    },
+    {
+      "bbox": [
+        385.0,
+        407.751953125,
+        532.2816772460938,
+        427.578125
+      ],
+      "block_id": "page-0168-block-0024",
+      "order": 24,
+      "text": "Rechercher les mécanismes et les traitements\ndes maladies psychiatriques.\n",
+      "text_sha256": "6c2fb92732da8548960e9ac33a4aa3afaf4282ca952a550e6d9f1bd7e2d2a248"
+    },
+    {
+      "bbox": [
+        54.75,
+        456.640625,
+        528.9119262695312,
+        474.375
+      ],
+      "block_id": "page-0168-block-0025",
+      "order": 25,
+      "text": "* Les aires éloquentes du cerveau sont celles qui contrôlent le langage, les fonctions motrices et les sens. Il est important de les préserver lors de chirurgies effectuées\nsur des tumeurs cérébrales.\n",
+      "text_sha256": "95116cd8d06a55a9522b1af6330e6ca6a1098559fbf199941390a7c4023a653d"
+    },
+    {
+      "bbox": [
+        54.0,
+        496.4658203125,
+        297.0938720703125,
+        518.6585083007812
+      ],
+      "block_id": "page-0168-block-0026",
+      "order": 26,
+      "text": "l’artériosclérose, le diabète, l’hypertension, l’hypercholestérolémie\net le syndrome métabolique.\n",
+      "text_sha256": "d8f2fcffc32dad67e1d6e3a744a5a6451ad6addb71924a5b8b35f93a68b2f7b5"
+    },
+    {
+      "bbox": [
+        54.0,
+        519.8658447265625,
+        297.546142578125,
+        725.45849609375
+      ],
+      "block_id": "page-0168-block-0027",
+      "order": 27,
+      "text": "L’IRM permet de mieux localiser avec plus de précision les\nlésions vasculaires et, ce faisant, d’entreprendre rapidement un\ntraitement ou de l’améliorer. Les lésions détectées sont de trois\ntypes :\n• les accidents vasculaires cérébraux, corticaux et sous- corticaux ;\n• les lacunes multiples ;\n• les lésions de la matière blanche décrites comme de la leucoen-\ncéphalopathie d’origine artériosclérotique probable (LESCA)\naussi appelée « leucoaraiose ». Ce type de lésion est relié à\nl’ischémie chronique secondaire à une maladie des petits\nvaisseaux dont les conséquences sont une gliose, une perte\nde substance avec dilatation des espaces périvasculaires, des\nmicro-infarctus ainsi qu’une dégénérescence de la myéline\n(voir la gure 7.7).\nLa présence de quelques lésions vasculaires, telles que des\nlacunes, un peu de leucoencéphalopathie sous-corticale ou\npériventriculaire, annonce une atteinte vasculaire, sans être\n",
+      "text_sha256": "9eac566ea8b543e15ea376899c4830f9458368a24894cdd76c87405ff81d6d54"
+    },
+    {
+      "bbox": [
+        312.0,
+        496.4658203125,
+        555.3827514648438,
+        621.95849609375
+      ],
+      "block_id": "page-0168-block-0028",
+      "order": 28,
+      "text": "toutefois synonyme de problème cognitif. Le diagnostic clinique\nde démence vasculaire doit être soutenu par la présence de ces\nlésions en neuro-imagerie. Il n’y a cependant pas de critères\nspéciques qui permettraient à l’imagerie de déterminer si un\npatient soure d’une démence vasculaire ou non (Ballard & al.,\n2004). À l’heure actuelle, on s’entend généralement sur l’existence\nd’un lien entre l’étendue des anomalies, et particulièrement la\nprogression de ces anomalies, et les décits neuropsychologiques\n(Schmidt & al.,2007). Certaines régions cérébrales, comme l’hip-\npocampe, sont plus déterminantes que d’autres dans la survenue\ndes problèmes cognitifs.\n",
+      "text_sha256": "e809e5d3a47b6fb957aa06caf9ebb0e75af42f3390a7dad00c2140b0cb4805ea"
+    },
+    {
+      "bbox": [
+        312.0,
+        622.9658203125,
+        555.2254028320312,
+        725.45849609375
+      ],
+      "block_id": "page-0168-block-0029",
+      "order": 29,
+      "text": "Deux autres maladies vasculaires s’accompagnent de problèmes\ncognitifs, soit l’angiopathie amyloïde, plus souvent associée à des\nhémorragies causées par une fragilité de la paroi vasculaire et\nle CADASIL (cerebral autosomal dominant arteriopathy with\nsub-cortical infarcts and leukoencephalopathy). Dans cette dernière\nartériopathie cérébrale, les lésions touchent préférentiellement\nles régions temporales et chez des jeunes patients ne présentant\naucun autre facteur de risque, l’apparition de telles lésions doit\norienter les soupçons vers cette maladie.\n",
+      "text_sha256": "a985f657bd95bd4a0daaef994440da144f86ac18ee29112ed104fc2c63770320"
+    }
+  ],
+  "coordinates_sha256": "1ef03f322ddcabc9c1c4193365455699c56e542a66b22f79423173848e077a29",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0168",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 7\nImagerie cérébrale\n151\nTABLEAU 7.1 Techniques d’imagerie cérébrale\nModalité\nPrincipe anatomophysiologique\nApplications cliniques\nCT\nConventionnel\nMesure la densité des tissus.\nDétecter des lésions organiques.\n(AVC, tumeur, leucoaraïose).\nImagerie par résonance\nmagnétique (IRM)\nConventionnel\nMesure le signal des protons H* soumis\nà un champ magnétique.\nÉvaluer le type de démence.\nDétecter des atteintes organiques (AVC, tumeur,\nlésion de la matière blanche, etc.).\nVolumétrie\nMesure le volume de la matière blanche\net du cortex ou de structures plus précises\ncomme l’hippocampe.\nMesurer le volume de l’hippocampe en démence.\nMesurer la charge en T2 dans la sclérose en\nplaques.\nTenseur de diffusion\n(DTi)\nÉvalue le trajet des neurones en se basant sur\nles propriétés de diffusion des cellules d’eau\ndans la myéline.\nUtiliser en préopératoire pour assister le chirurgien\ndans la résection de tumeurs ou de malformations\nartérioveineuses lorsqu’elles sont situées dans\ndes aires éloquentes* du cerveau.\nSpectroscopie\nMesure différents métabolites présents dans\nle tissu nerveux.\nDifférencier une lésion tumorale d’une lésion\ndémyélinisante ou de la radionécrose.\nPerfusion\nMesure le débit sanguin.\nÉvaluer le tissu viable dans les AVC.\nDifférencier une récidive tumorale d’une\nradionécrose.\nIRMf\nMesure l’augmentation du métabolisme\nde l’oxygène et du glucose.\nUtiliser en préopératoire pour assister le chirurgien\ndans la résection de tumeurs ou de malformations\nartérioveineuses lorsqu’elles sont situées dans\ndes aires éloquentes du cerveau.\nTEP\n18F-FDG\nMesure le métabolisme du glucose.\nUtiliser pour le diagnostic différentiel des atteintes\nneurodégénératives.\nTEMP\n99mTc-ECD, HMPAO,\netc.\nMesure le ot sanguin cérébral.\nUtiliser pour le diagnostic différentiel des atteintes\nneurodégénératives.\nÉtudes de liaison\nspécique\n(TEP et TEMP)\nRadioligands\nmultiples\nMesure la densité et/ou l’activité de molécules\nporteuses de sites récepteurs spéciques\n(neurorécepteurs, enzymes, transporteur de\nneurotransmetteurs, d’acides aminés, etc.).\nRechercher les mécanismes et les traitements\ndes maladies psychiatriques.\n* Les aires éloquentes du cerveau sont celles qui contrôlent le langage, les fonctions motrices et les sens. Il est important de les préserver lors de chirurgies effectuées\nsur des tumeurs cérébrales.\nl’artériosclérose, le diabète, l’hypertension, l’hypercholestérolémie\net le syndrome métabolique.\nL’IRM permet de mieux localiser avec plus de précision les\nlésions vasculaires et, ce faisant, d’entreprendre rapidement un\ntraitement ou de l’améliorer. Les lésions détectées sont de trois\ntypes :\n• les accidents vasculaires cérébraux, corticaux et sous- corticaux ;\n• les lacunes multiples ;\n• les lésions de la matière blanche décrites comme de la leucoen-\ncéphalopathie d’origine artériosclérotique probable (LESCA)\naussi appelée « leucoaraiose ». Ce type de lésion est relié à\nl’ischémie chronique secondaire à une maladie des petits\nvaisseaux dont les conséquences sont une gliose, une perte\nde substance avec dilatation des espaces périvasculaires, des\nmicro-infarctus ainsi qu’une dégénérescence de la myéline\n(voir la gure 7.7).\nLa présence de quelques lésions vasculaires, telles que des\nlacunes, un peu de leucoencéphalopathie sous-corticale ou\npériventriculaire, annonce une atteinte vasculaire, sans être\ntoutefois synonyme de problème cognitif. Le diagnostic clinique\nde démence vasculaire doit être soutenu par la présence de ces\nlésions en neuro-imagerie. Il n’y a cependant pas de critères\nspéciques qui permettraient à l’imagerie de déterminer si un\npatient soure d’une démence vasculaire ou non (Ballard & al.,\n2004). À l’heure actuelle, on s’entend généralement sur l’existence\nd’un lien entre l’étendue des anomalies, et particulièrement la\nprogression de ces anomalies, et les décits neuropsychologiques\n(Schmidt & al.,2007). Certaines régions cérébrales, comme l’hip-\npocampe, sont plus déterminantes que d’autres dans la survenue\ndes problèmes cognitifs.\nDeux autres maladies vasculaires s’accompagnent de problèmes\ncognitifs, soit l’angiopathie amyloïde, plus souvent associée à des\nhémorragies causées par une fragilité de la paroi vasculaire et\nle CADASIL (cerebral autosomal dominant arteriopathy with\nsub-cortical infarcts and leukoencephalopathy). Dans cette dernière\nartériopathie cérébrale, les lésions touchent préférentiellement\nles régions temporales et chez des jeunes patients ne présentant\naucun autre facteur de risque, l’apparition de telles lésions doit\norienter les soupçons vers cette maladie.\n",
+  "raw_text_sha256": "59a5b5f181638483bc128719a7dc7d55d4cdce0bda023f0abefaa207085a59d8",
+  "source_page_display": 169,
+  "source_page_index": 168
+}

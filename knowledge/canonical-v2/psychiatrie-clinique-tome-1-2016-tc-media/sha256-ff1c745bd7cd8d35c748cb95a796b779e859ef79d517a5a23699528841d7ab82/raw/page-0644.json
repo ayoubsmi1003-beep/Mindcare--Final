@@ -1,0 +1,388 @@
+{
+  "block_sequence_sha256": "bb3c7e8934277c983bd68833c3fad5be525ca25250887aafbaa4e0f831334499",
+  "blocks": [
+    {
+      "bbox": [
+        270.70001220703125,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0644-block-0001",
+      "order": 1,
+      "text": "Chapitre 28\nTroubles mentaux dus à une aection médicale\n627\n",
+      "text_sha256": "8fee50a7dc7e0b18085b79813fda17a6a372036388fad535955ca199e7a4f80c"
+    },
+    {
+      "bbox": [
+        54.25,
+        376.97442626953125,
+        297.33038330078125,
+        548.22607421875
+      ],
+      "block_id": "page-0644-block-0002",
+      "order": 2,
+      "text": "• Lorsque le patient conserve une autocritique face aux phéno-\nmènes hallucinatoires et comprend qu’il s’agit d’un symptôme\nproduit par la maladie physique, on les qualie d’hallucinoses.\nLes hallucinations visuelles complexes associées à un décit\nvisuel majeur (syndrome de Charles-Bonnet) et les hallucina-\ntions auditives chez les alcooliques (hallucinose alcoolique), qui\napparaissent dans un sensorium clair, en sont des exemples.\nLes aections médicales dans lesquelles les risques de psychose\nsont les plus élevés incluent :\n• les troubles endocriniens et métaboliques ;\n• les maladies auto-immunes (p. ex., le lupus érythéma-\nteux disséminé, l’encéphalite auto-immune des récepteurs\nNMDA) ;\n• l’épilepsie temporale.\n",
+      "text_sha256": "7f31c08085f6fedfb26cd4c52090160c787811c335c15a21b492c96f5e62253c"
+    },
+    {
+      "bbox": [
+        56.400001525878906,
+        41.002296447753906,
+        489.5849304199219,
+        53.320068359375
+      ],
+      "block_id": "page-0644-block-0003",
+      "order": 3,
+      "text": "TABLEAU 28.5 Diagnostic différentiel de dépression chez un patient avec une affection médicale probable\n",
+      "text_sha256": "0ba0d75582a3213ba91b18fedd8740900fff3f1ab5ff9abda40c2b00ea204cc5"
+    },
+    {
+      "bbox": [
+        76.55000305175781,
+        61.27412414550781,
+        521.4849853515625,
+        71.85029602050781
+      ],
+      "block_id": "page-0644-block-0004",
+      "order": 4,
+      "text": "Caractéristique\nDépression\nDémence\nDelirium\nCatatonie\n",
+      "text_sha256": "6a40cd6f915c2635c24036b2897c29bc16238b093f0eafe6eb950c1339596dc8"
+    },
+    {
+      "bbox": [
+        58.25,
+        79.62285614013672,
+        427.49029541015625,
+        109.52812957763672
+      ],
+      "block_id": "page-0644-block-0005",
+      "order": 5,
+      "text": "Problème initial\nHumeur dysphorique\nTroubles de mémoire\nDiminution de la prise\nde conscience de\nl’environnement\n",
+      "text_sha256": "595e7a59403af530394665011cd0175c9240e09db0034b67e1cb2447a90525f8"
+    },
+    {
+      "bbox": [
+        458.25,
+        79.70195770263672,
+        483.0630187988281,
+        89.52812957763672
+      ],
+      "block_id": "page-0644-block-0006",
+      "order": 6,
+      "text": "Stupeur\n",
+      "text_sha256": "d9f4989af90d19460b02bc96f6c4e8aa1cc56a3f9049516430b3554b140a0b8d"
+    },
+    {
+      "bbox": [
+        58.25,
+        117.0728530883789,
+        483.2430114746094,
+        127.0923843383789
+      ],
+      "block_id": "page-0644-block-0007",
+      "order": 7,
+      "text": "Apparition\nDiscrète\nInsidieuse\nAbrupte\nAbrupte\n",
+      "text_sha256": "9002ebc0c5b18fb3a2dbe40a7ee9ce9627852bdd5da68a3480dd56bf987e8225"
+    },
+    {
+      "bbox": [
+        58.25,
+        134.4728546142578,
+        534.8960571289062,
+        144.4923858642578
+      ],
+      "block_id": "page-0644-block-0008",
+      "order": 8,
+      "text": "Évolution\nPersistante\nProgressive\nFluctuante\nTransitoire ou prolongée\n",
+      "text_sha256": "f0c259d24fa404af2ff5d93fa464d405f9a6dbb0c7df03d6b53e72b24eb09b18"
+    },
+    {
+      "bbox": [
+        58.25,
+        151.9228515625,
+        481.0830078125,
+        161.9423828125
+      ],
+      "block_id": "page-0644-block-0009",
+      "order": 9,
+      "text": "Vigilance/éveil\nNormal\nNormal*\nPerturbé\nNormal\n",
+      "text_sha256": "5f1cc2271885a22ea17e136cc5bbde632612f0a8e082dfb607b0714a78d94d02"
+    },
+    {
+      "bbox": [
+        58.25,
+        170.32286071777344,
+        484.08001708984375,
+        180.34239196777344
+      ],
+      "block_id": "page-0644-block-0010",
+      "order": 10,
+      "text": "Attention\nDiminuée\nNormale*\nPerturbée\nAbsente\n",
+      "text_sha256": "4a119ba4ef83e5d4eddd18f117fe0a8b5e8fcfa634672c47a039d5c21e42b28b"
+    },
+    {
+      "bbox": [
+        58.25,
+        187.77285766601562,
+        503.1330261230469,
+        197.79238891601562
+      ],
+      "block_id": "page-0644-block-0011",
+      "order": 11,
+      "text": "Orientation\nNormale\nNormale*\nPerturbée\nNon évaluable\n",
+      "text_sha256": "9b91ab9987e76aedfcc7eaa4041ceb3b8efb4bb51640e63470067f40c5a6d699"
+    },
+    {
+      "bbox": [
+        58.25,
+        205.1728515625,
+        226.9611053466797,
+        236.078125
+      ],
+      "block_id": "page-0644-block-0012",
+      "order": 12,
+      "text": "Mémoire\nInégale, inconsistante\nFaible collaboration\nà l’évaluation\n",
+      "text_sha256": "71cd04bfa2a04b58ecc495e96badba2ae1329d57f2cb21c5a6718781504c8954"
+    },
+    {
+      "bbox": [
+        258.25,
+        205.251953125,
+        320.08001708984375,
+        225.078125
+      ],
+      "block_id": "page-0644-block-0013",
+      "order": 13,
+      "text": "Perturbée, surtout\nla mémoire récente\n",
+      "text_sha256": "f5cd4cf6256bb4d955822dd8e79bb32c89edc019ada811152a2011d0dc195e76"
+    },
+    {
+      "bbox": [
+        358.25,
+        205.251953125,
+        408.79400634765625,
+        226.078125
+      ],
+      "block_id": "page-0644-block-0014",
+      "order": 14,
+      "text": "Perturbée\nEncodage faible\n",
+      "text_sha256": "55c39b24dfbf28ca14cf910e71f84c680500a052042c7f1e92f88a1ef0b338fe"
+    },
+    {
+      "bbox": [
+        458.25,
+        205.251953125,
+        545.5679931640625,
+        226.078125
+      ],
+      "block_id": "page-0644-block-0015",
+      "order": 15,
+      "text": "Non évaluable\nDécits parfois permanents\n",
+      "text_sha256": "7ccb12e40e36914cb67c0237b0bd6550458fa16bb79896e2d54fbba0cf6f28d6"
+    },
+    {
+      "bbox": [
+        58.25,
+        243.6228485107422,
+        337.3200988769531,
+        263.52813720703125
+      ],
+      "block_id": "page-0644-block-0016",
+      "order": 16,
+      "text": "Plaintes mnésiques\nSoulignées\nDissimulées, méconnues\nou indifférence\n",
+      "text_sha256": "db80edadcd1052d94aae44dd7cef6ef0569652389c55525480add239462cdda0"
+    },
+    {
+      "bbox": [
+        358.25,
+        243.7019500732422,
+        487.5810241699219,
+        253.5281219482422
+      ],
+      "block_id": "page-0644-block-0017",
+      "order": 17,
+      "text": "Absentes\nAbsentes\n",
+      "text_sha256": "f20ea38e93c0b34dd33b7116ab6e7fbce58049fb9731d7a488cca0b8078847dc"
+    },
+    {
+      "bbox": [
+        58.25,
+        271.0228576660156,
+        486.4110107421875,
+        281.0423889160156
+      ],
+      "block_id": "page-0644-block-0018",
+      "order": 18,
+      "text": "Affect\nTriste, variation diurne\nVariable\nLabile\nRestreint\n",
+      "text_sha256": "23e4858e77e90f35b818aba784247ac7bd80d1c2a2ddc18d2a7fa0c78b028245"
+    },
+    {
+      "bbox": [
+        58.25,
+        288.4728698730469,
+        528.2069702148438,
+        308.3781433105469
+      ],
+      "block_id": "page-0644-block-0019",
+      "order": 19,
+      "text": "Activité psychomotrice\nRalentie\nVariable\nAugmentée ou diminuée\nImmobilité\nou agitation excessive\n",
+      "text_sha256": "a1b6522292a5547574a20274bb03d4a839df1e94f89a383951df1bb292665d88"
+    },
+    {
+      "bbox": [
+        58.25,
+        315.87286376953125,
+        500.38800048828125,
+        325.89239501953125
+      ],
+      "block_id": "page-0644-block-0020",
+      "order": 20,
+      "text": "Symptômes psychotiques\nOccasionnels\nFréquents\nTrès fréquents\nOccasionnels\n",
+      "text_sha256": "1bd6c6362c77326913edd9f5d0ab4034e8c558efe08f8754ffcb78a6d94f1003"
+    },
+    {
+      "bbox": [
+        54.25,
+        333.9963073730469,
+        364.39666748046875,
+        355.00885009765625
+      ],
+      "block_id": "page-0644-block-0021",
+      "order": 21,
+      "text": "* Fonction perturbée dans la démence à corps de Lewy et les stades tardifs des syndromes démentiels.\nSource : Adapté de Bergeron (2005), p. 588.\n",
+      "text_sha256": "34c4d6f5f009d1ebfe200afda7425b931586e0d0eedcc070d913557a1d55f8c5"
+    },
+    {
+      "bbox": [
+        312.0,
+        377.2158203125,
+        555.1572265625,
+        547.95849609375
+      ],
+      "block_id": "page-0644-block-0022",
+      "order": 22,
+      "text": "La manie due à une maladie physique est moins fréquente.\nLes aections médicales les plus communes sont :\n• l’hyperthyroïdie ;\n• la maladie de Cushing ;\n• la sclérose en plaques ;\n• les AVC (particulièrement dans les régions de l’hémisphère\ndroit et du thalamus droit).\nDe nombreuses maladies physiques, certaines fréquentes,\nd’autres plus rares, causent des troubles mentaux, parfois en\ncomorbidité. Un nombre important de médicaments induisent\négalement des symptômes psychiatriques. Les tableaux 28.6 et\n28.7 exposent de façon exhaustive les aections médicales et les\nsubstances associées étiologiquement à des symptômes d’anxiété,\nde dépression, de psychose et de manie.\n",
+      "text_sha256": "b7639128e34ea081ead4c081f953e86d5b352f068a3424518461b4742a2b3f46"
+    },
+    {
+      "bbox": [
+        56.400001525878906,
+        564.9523315429688,
+        381.937744140625,
+        577.320068359375
+      ],
+      "block_id": "page-0644-block-0023",
+      "order": 23,
+      "text": "TABLEAU 28.6 Affections médicales associées à des symptômes psychiatriques\n",
+      "text_sha256": "a44c4bea79a3dc2fa5c4040e423098d82df91d33f29c4ad1511b8d1238480003"
+    },
+    {
+      "bbox": [
+        121.4000015258789,
+        582.22412109375,
+        529.4844970703125,
+        592.80029296875
+      ],
+      "block_id": "page-0644-block-0024",
+      "order": 24,
+      "text": "Affections médicales\nAnxiété\nDépression\nPsychose\nManie\n",
+      "text_sha256": "6e644b0baaac6bb181b75a898edf3b4dc52ab2bf75fb92cd8faea41a942c6ff6"
+    },
+    {
+      "bbox": [
+        57.25,
+        598.3728637695312,
+        108.06401062011719,
+        608.3923950195312
+      ],
+      "block_id": "page-0644-block-0025",
+      "order": 25,
+      "text": "Auto-immunes\n",
+      "text_sha256": "af0698a4ba864b45ef2b3b9c86a59e5ee4cc42f1527af3a6321b3af7003c01e1"
+    },
+    {
+      "bbox": [
+        58.25,
+        617.2019653320312,
+        521.0000610351562,
+        627.0281372070312
+      ],
+      "block_id": "page-0644-block-0026",
+      "order": 26,
+      "text": "Lupus érythémateux disséminé\n+\n+\n+\n+\n",
+      "text_sha256": "0f9855a7adf1e571483580edeaf37311ca60e35d3cf70685529a00ec6d119c61"
+    },
+    {
+      "bbox": [
+        58.25,
+        635.6019897460938,
+        376.0,
+        645.4281616210938
+      ],
+      "block_id": "page-0644-block-0027",
+      "order": 27,
+      "text": "Myasthénie grave\n+\n+\n",
+      "text_sha256": "69543a7d9f34bfbf82a9466a54fbf0824e684688fa003320659391fa406bf6a9"
+    },
+    {
+      "bbox": [
+        58.25,
+        654.0519409179688,
+        376.0,
+        663.8781127929688
+      ],
+      "block_id": "page-0644-block-0028",
+      "order": 28,
+      "text": "Polyarthrite rhumatoïde\n+\n+\n",
+      "text_sha256": "2da3892f4fd0405991c4b516f9d52f493b76dcca3f64760728b9d23c9412803b"
+    },
+    {
+      "bbox": [
+        57.25,
+        672.2728881835938,
+        118.57600402832031,
+        682.2924194335938
+      ],
+      "block_id": "page-0644-block-0029",
+      "order": 29,
+      "text": "Cardiovasculaires\n",
+      "text_sha256": "5a0f4b40e7f767c27ece0fb528c55fe64d21097575c1d694dec33e1f0e78bcdb"
+    },
+    {
+      "bbox": [
+        58.25,
+        690.7019653320312,
+        376.0,
+        700.5281372070312
+      ],
+      "block_id": "page-0644-block-0030",
+      "order": 30,
+      "text": "Syndrome coronarien aigu et chronique\n+\n+\n",
+      "text_sha256": "e2d63f256926074ef598632a6bf57ca7ae9bb84eac604718ec0a17d2a1d64ca7"
+    },
+    {
+      "bbox": [
+        58.25,
+        709.1019897460938,
+        521.0000610351562,
+        718.9281616210938
+      ],
+      "block_id": "page-0644-block-0031",
+      "order": 31,
+      "text": "Arrêt cardiaque avec anoxie cérébrale\n+\n+\n",
+      "text_sha256": "df5c8edbe4e6aed2510c824ac45d6289b4fd0a6b4da025df57cde7384c969628"
+    }
+  ],
+  "coordinates_sha256": "af809387e0c48eb6b4268195ab7d287d8e440a961bdda422b4a92566736a867d",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0644",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 28\nTroubles mentaux dus à une aection médicale\n627\n• Lorsque le patient conserve une autocritique face aux phéno-\nmènes hallucinatoires et comprend qu’il s’agit d’un symptôme\nproduit par la maladie physique, on les qualie d’hallucinoses.\nLes hallucinations visuelles complexes associées à un décit\nvisuel majeur (syndrome de Charles-Bonnet) et les hallucina-\ntions auditives chez les alcooliques (hallucinose alcoolique), qui\napparaissent dans un sensorium clair, en sont des exemples.\nLes aections médicales dans lesquelles les risques de psychose\nsont les plus élevés incluent :\n• les troubles endocriniens et métaboliques ;\n• les maladies auto-immunes (p. ex., le lupus érythéma-\nteux disséminé, l’encéphalite auto-immune des récepteurs\nNMDA) ;\n• l’épilepsie temporale.\nTABLEAU 28.5 Diagnostic différentiel de dépression chez un patient avec une affection médicale probable\nCaractéristique\nDépression\nDémence\nDelirium\nCatatonie\nProblème initial\nHumeur dysphorique\nTroubles de mémoire\nDiminution de la prise\nde conscience de\nl’environnement\nStupeur\nApparition\nDiscrète\nInsidieuse\nAbrupte\nAbrupte\nÉvolution\nPersistante\nProgressive\nFluctuante\nTransitoire ou prolongée\nVigilance/éveil\nNormal\nNormal*\nPerturbé\nNormal\nAttention\nDiminuée\nNormale*\nPerturbée\nAbsente\nOrientation\nNormale\nNormale*\nPerturbée\nNon évaluable\nMémoire\nInégale, inconsistante\nFaible collaboration\nà l’évaluation\nPerturbée, surtout\nla mémoire récente\nPerturbée\nEncodage faible\nNon évaluable\nDécits parfois permanents\nPlaintes mnésiques\nSoulignées\nDissimulées, méconnues\nou indifférence\nAbsentes\nAbsentes\nAffect\nTriste, variation diurne\nVariable\nLabile\nRestreint\nActivité psychomotrice\nRalentie\nVariable\nAugmentée ou diminuée\nImmobilité\nou agitation excessive\nSymptômes psychotiques\nOccasionnels\nFréquents\nTrès fréquents\nOccasionnels\n* Fonction perturbée dans la démence à corps de Lewy et les stades tardifs des syndromes démentiels.\nSource : Adapté de Bergeron (2005), p. 588.\nLa manie due à une maladie physique est moins fréquente.\nLes aections médicales les plus communes sont :\n• l’hyperthyroïdie ;\n• la maladie de Cushing ;\n• la sclérose en plaques ;\n• les AVC (particulièrement dans les régions de l’hémisphère\ndroit et du thalamus droit).\nDe nombreuses maladies physiques, certaines fréquentes,\nd’autres plus rares, causent des troubles mentaux, parfois en\ncomorbidité. Un nombre important de médicaments induisent\négalement des symptômes psychiatriques. Les tableaux 28.6 et\n28.7 exposent de façon exhaustive les aections médicales et les\nsubstances associées étiologiquement à des symptômes d’anxiété,\nde dépression, de psychose et de manie.\nTABLEAU 28.6 Affections médicales associées à des symptômes psychiatriques\nAffections médicales\nAnxiété\nDépression\nPsychose\nManie\nAuto-immunes\nLupus érythémateux disséminé\n+\n+\n+\n+\nMyasthénie grave\n+\n+\nPolyarthrite rhumatoïde\n+\n+\nCardiovasculaires\nSyndrome coronarien aigu et chronique\n+\n+\nArrêt cardiaque avec anoxie cérébrale\n+\n+\n",
+  "raw_text_sha256": "c016f09afc1b99cdd2dc17ac87c36472288a78b1acf3ea0b7a242da9b7959544",
+  "source_page_display": 645,
+  "source_page_index": 644
+}

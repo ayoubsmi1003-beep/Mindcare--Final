@@ -1,0 +1,76 @@
+{
+  "block_sequence_sha256": "5713c1cd54d4575849d6cafa0a8fb23d7e4497326cd3d25e06c979741d8fd320",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0619-block-0001",
+      "order": 1,
+      "text": "602\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "010944ac4c2e6cc4f394d25b8512fc61de4c79b8973acb5d18eedee46d00f589"
+    },
+    {
+      "bbox": [
+        50.400001525878906,
+        41.002296447753906,
+        262.49822998046875,
+        53.320068359375
+      ],
+      "block_id": "page-0619-block-0002",
+      "order": 2,
+      "text": "FIGURE 27.5 Montreal Cognitive Assessment (MoCA)\n",
+      "text_sha256": "fc6d103a81681adad039d93983eb48bfa7d48e64eea6eab4b6fadf8873771b49"
+    },
+    {
+      "bbox": [
+        48.0,
+        546.0906372070312,
+        142.8320770263672,
+        554.9588623046875
+      ],
+      "block_id": "page-0619-block-0003",
+      "order": 3,
+      "text": "Source : Nasreddine & al. (2005).\n",
+      "text_sha256": "e8b27effeb1cab4d00e9b02578bbac710bd697194b11de7ca9ab08bca43b0b11"
+    },
+    {
+      "bbox": [
+        50.45000076293945,
+        573.5023193359375,
+        538.3613891601562,
+        585.820068359375
+      ],
+      "block_id": "page-0619-block-0004",
+      "order": 4,
+      "text": "FIGURE 27.6 Test de l’horloge : exemples de patients souffrant de démence de type Alzheimer légère, modérée et grave\n",
+      "text_sha256": "beaf36e808807780304e4419bd3a4cb5b366cbec5bd54424f9e63842e3487614"
+    },
+    {
+      "bbox": [
+        49.0,
+        715.890625,
+        143.98208618164062,
+        724.7588500976562
+      ],
+      "block_id": "page-0619-block-0005",
+      "order": 5,
+      "text": "Source : Sunderland & al. (1989).\n",
+      "text_sha256": "c95db0c211f7e9baabaff77165e8bf7b86fad50f1d135987e0a0a44693a856eb"
+    }
+  ],
+  "coordinates_sha256": "4b26291643e11a2c86c6a31088e17ae50a821987644f5dc09d9b8b450f3d4092",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0619",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "602\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nFIGURE 27.5 Montreal Cognitive Assessment (MoCA)\nSource : Nasreddine & al. (2005).\nFIGURE 27.6 Test de l’horloge : exemples de patients souffrant de démence de type Alzheimer légère, modérée et grave\nSource : Sunderland & al. (1989).\n",
+  "raw_text_sha256": "6bc29b7ef06997d26bf8f1582ebb0013b239b640750d1637c862614672ba6af7",
+  "source_page_display": 620,
+  "source_page_index": 619
+}

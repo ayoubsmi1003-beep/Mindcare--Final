@@ -1,0 +1,376 @@
+{
+  "block_sequence_sha256": "fd8d50495332af6a9d574b2882c73b0b31ea1da78e2fe670fc9465482ae38b22",
+  "blocks": [
+    {
+      "bbox": [
+        315.3500061035156,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0730-block-0001",
+      "order": 1,
+      "text": "Chapitre 31\nTroubles des conduites alimentaires\n713\n",
+      "text_sha256": "ddc470ef171e04a7cf796e18149d987b172aadb6829717fab6dda47f992027a8"
+    },
+    {
+      "bbox": [
+        312.0,
+        172.505859375,
+        555.3856201171875,
+        197.7584991455078
+      ],
+      "block_id": "page-0730-block-0002",
+      "order": 2,
+      "text": "Le tableau 31.9 résume les diérentes évolutions de l’anorexie\net de la boulimie.\n",
+      "text_sha256": "8d36575625605ef2b47a2d5ab2ef58b377470493ad39ad35bc8fb99dd59d1472"
+    },
+    {
+      "bbox": [
+        312.0,
+        229.31582641601562,
+        555.2933349609375,
+        392.95849609375
+      ],
+      "block_id": "page-0730-block-0003",
+      "order": 3,
+      "text": "Les troubles des conduites alimentaires (TCA) ne sont pas\ndes aections rares et ils représentent des pathologies parfois\ncomplexes qui nécessitent l’intervention d’une équipe interdis-\nciplinaire. Leur étiologie est loin d’avoir été élucidée, mais les\nnouvelles données scientiques amènent un éclairage intéressant\nautant pour le dépistage que pour le traitement. Ces troubles\nayant une mortalité (possiblement la plus haute des aections\npsychiatriques) et une morbidité élevées, le dépistage ainsi que\nle traitement demeurent fort importants. Cette aection est\nsouvent sous-estimée, surtout chez les moins de 18 ans, d’où\nl’importance de sensibiliser les cliniciens et le public. La prévention\nde l’anorexie et de la boulimie devient donc un enjeu médical\nmais également socioculturel, où l’intervention de plusieurs\npartenaires demeure indispensable.\n",
+      "text_sha256": "614a655dc09b41f906360e1a0159071700fc4bd15dac9b99dc22f5febf4e6b0b"
+    },
+    {
+      "bbox": [
+        54.0,
+        175.4658203125,
+        297.5581970214844,
+        254.95849609375
+      ],
+      "block_id": "page-0730-block-0004",
+      "order": 4,
+      "text": "Plusieurs variables ont été mises en relation avec le pronostic,\nmais pour la majorité d’entre elles, les résultats des études sont\ndiscordants. Il semble cependant qu’une courte durée de la maladie\navant le traitement et l’absence de trouble de la personnalité sont\ndes facteurs de bon pronostic, alors que les comportements pur-\ngatifs et le trouble de la personnalité obsessionnelle-compulsive\nsont associés à une évolution défavorable.\n",
+      "text_sha256": "2d548115223520d5262d19b5969f4c88b9dab27163fe912aba5e7b0865333cd0"
+    },
+    {
+      "bbox": [
+        54.0,
+        255.9658203125,
+        297.1146240234375,
+        323.95849609375
+      ],
+      "block_id": "page-0730-block-0005",
+      "order": 5,
+      "text": "Quant à la boulimie, même si le traitement semble ecace à\ncourt terme, les rechutes sont fréquentes et le taux de chronicité\ns’avère élevé (Steinhausen & Weber, 2009). Les facteurs de pro-\nnostic paraissent encore moins ables que dans l’anorexie, mais\nune multi-impulsivité comportementale (automutilation, abus\nde substances) a été associée à un mauvais pronostic.\n",
+      "text_sha256": "f8b3487d3d63b41d7b51d554a83d25d56cf5adee58c1646e6c80681a564dfa24"
+    },
+    {
+      "bbox": [
+        54.0,
+        324.9658203125,
+        297.0540771484375,
+        392.95849609375
+      ],
+      "block_id": "page-0730-block-0006",
+      "order": 6,
+      "text": "Par ailleurs, les études ont montré l’importance d’atteindre\nune qualité de vie chez les femmes souffrant d’un TCA.\nToutes les sphères de leur vie, que ce soit dans ses dimen-\nsions sociales, psychologiques ou physiques, sont atteintes.\nLa gravité du TCA doit donc être envisagée bien au-delà des\nsymp tômes alimentaires.\n",
+      "text_sha256": "df97d1b7ce28efac248e8d5fc8ce34d5c49833de3ad66b6671de984e012714d7"
+    },
+    {
+      "bbox": [
+        56.25,
+        41.002296447753906,
+        279.0148620605469,
+        53.320068359375
+      ],
+      "block_id": "page-0730-block-0007",
+      "order": 7,
+      "text": "TABLEAU 31.9 Pronostic de l’anorexie et de la boulimie\n",
+      "text_sha256": "3c00ab563c2f732c90814f6e7566305f111fc02382a3b62d34c0f1358732fb0b"
+    },
+    {
+      "bbox": [
+        124.9000015258789,
+        58.27412414550781,
+        540.4308471679688,
+        93.5923843383789
+      ],
+      "block_id": "page-0730-block-0008",
+      "order": 8,
+      "text": "Anorexie\nBoulimie\nSuivi < 4 ans\nSuivi > 10 ans\nSuivi < 4 ans\nSuivi > 4 ans\nAdolescentes\nAdultes\nAdolescentes\nAdultes\n",
+      "text_sha256": "433ab4fc056d232387c743871f3f51712845692501a39f245179ff175dcf5cf5"
+    },
+    {
+      "bbox": [
+        58.25,
+        99.05195617675781,
+        525.93798828125,
+        108.87812805175781
+      ],
+      "block_id": "page-0730-block-0009",
+      "order": 9,
+      "text": "Rémission\n45 %\n30 %\n75 %\n50-70 %\n40 %\n66 %\n",
+      "text_sha256": "a466034029813b1e43db4328824db577eb79203c20288938e0218d11a02a6f02"
+    },
+    {
+      "bbox": [
+        58.25,
+        117.501953125,
+        525.93798828125,
+        127.328125
+      ],
+      "block_id": "page-0730-block-0010",
+      "order": 10,
+      "text": "Chronicité\n20 %\n40 %\n15 %\n15-20 %\n27 %\n12 %\n",
+      "text_sha256": "29270ad56b3f664f7ad79987d2e9360f0e5d22de2f76cb461d55d37222fb8af9"
+    },
+    {
+      "bbox": [
+        58.25,
+        135.90196228027344,
+        529.16796875,
+        145.72813415527344
+      ],
+      "block_id": "page-0730-block-0011",
+      "order": 11,
+      "text": "Mortalité\n0 %\n0,9 %\n1,8 %\n8-10 %\n0 %\n0,32 %\n",
+      "text_sha256": "f2b16b7432153eeaf9014b35a0f542db38b1dd094e48b5f5d9b6c85ba23c70b1"
+    },
+    {
+      "bbox": [
+        54.0,
+        411.359375,
+        222.91200256347656,
+        429.328125
+      ],
+      "block_id": "page-0730-block-0012",
+      "order": 12,
+      "text": "Lectures complémentaires\n",
+      "text_sha256": "a63665748f6f6aa4046621ac3e5b53857ebef6bf2c2f475217e47dfa03f03493"
+    },
+    {
+      "bbox": [
+        54.0,
+        442.138671875,
+        211.17990112304688,
+        452.0791015625
+      ],
+      "block_id": "page-0730-block-0013",
+      "order": 13,
+      "text": "A  E D: www.\n",
+      "text_sha256": "f86cec656bf344cf104bd66caddce19a6f6cb52a12832ee5badd02ae73e1f724"
+    },
+    {
+      "bbox": [
+        54.0,
+        452.2886657714844,
+        210.60800170898438,
+        474.3791198730469
+      ],
+      "block_id": "page-0730-block-0014",
+      "order": 14,
+      "text": "aedweb.org.\nC, S. & D, C. (2008). 50 exercices\n",
+      "text_sha256": "d5933e79081a408f2cba3e562dc7478c93414cd22349a348b102b422bd814a4c"
+    },
+    {
+      "bbox": [
+        54.0,
+        474.5386657714844,
+        202.89100646972656,
+        506.77911376953125
+      ],
+      "block_id": "page-0730-block-0015",
+      "order": 15,
+      "text": "pour sortir de l’anorexie, Paris, Odile\nJacob.\nF, C. G. (2008). Cognitive Beha-\n",
+      "text_sha256": "738ca305b78ccc01c0f5136e0d20838b45cbea29043b5b11f5d1a61afb63bd2d"
+    },
+    {
+      "bbox": [
+        54.0,
+        506.98870849609375,
+        202.63601684570312,
+        539.1791381835938
+      ],
+      "block_id": "page-0730-block-0016",
+      "order": 16,
+      "text": "vioral erapy and Eating Disorders,\nNew York, NY, Guilfort Press.\nF, S. & al. (2010). « Le traitement\n",
+      "text_sha256": "d1138a9a6ebd3d336b92349a90df177718fc879b8fe7a6fda9a1e51485313ebf"
+    },
+    {
+      "bbox": [
+        54.0,
+        539.388671875,
+        211.0155487060547,
+        591.8790893554688
+      ],
+      "block_id": "page-0730-block-0017",
+      "order": 17,
+      "text": "familial des enfants et des adolescents\nanorexiques : Des lignes directrices pour\nle médecin communautaire », Paedia-\ntrics & Child Health, 15(1), p. 36.\nH-D B. (2009). « Ado-\n",
+      "text_sha256": "c6ba4b1d2982413a45244effda35b0cddcf9c13ec517355865bf79cc1d91af57"
+    },
+    {
+      "bbox": [
+        66.0,
+        592.0386962890625,
+        206.44100952148438,
+        632.4291381835938
+      ],
+      "block_id": "page-0730-block-0018",
+      "order": 18,
+      "text": "lescent Eating Disorders : Denitions,\nSymptomatology, Epidemiology and\nComorbidity », Child Adolesc Psychia-\ntric Clin N Am, 18(1), p. 31-47.\n",
+      "text_sha256": "45fc165fa7f02c4b0d4d1b972e9b03bdd08f69fbbbe23f0bf7dfa2ab976db64a"
+    },
+    {
+      "bbox": [
+        225.0,
+        442.138671875,
+        382.58502197265625,
+        452.0791015625
+      ],
+      "block_id": "page-0730-block-0019",
+      "order": 19,
+      "text": "K B. (2008). « Troubles du comporte-\n",
+      "text_sha256": "7a7a5ae741ee6cdf86f75c1b4fbd417fb20e96603d2665d4763e9a0c5cbdb79d"
+    },
+    {
+      "bbox": [
+        225.0,
+        452.138671875,
+        375.3134460449219,
+        494.1291198730469
+      ],
+      "block_id": "page-0730-block-0020",
+      "order": 20,
+      "text": "ment alimentaire », Échelles et ques-\ntionnaires d’évaluation chez l’enfant et\nl’adolescent, Paris, Masson, p. 27-46.\nL G, D. (2005). « e Maudsley\n",
+      "text_sha256": "95d3f202eebf313e13d75bf4ded3214e87614ecf51091a049c5113f99580eead"
+    },
+    {
+      "bbox": [
+        225.0,
+        494.1886901855469,
+        382.67486572265625,
+        536.1791381835938
+      ],
+      "block_id": "page-0730-block-0021",
+      "order": 21,
+      "text": "family-based treatment for adolescent\nanorexia nervosa », World Psychiatry,\n4(3), p. 142.\nL, J. & al. (2000). « Treatment Manual\n",
+      "text_sha256": "dbe2e028b8d0e4835ef716b4c5e06df32ea9e0568355240120b3a832bfe42afa"
+    },
+    {
+      "bbox": [
+        225.0,
+        536.2387084960938,
+        367.14471435546875,
+        578.2291259765625
+      ],
+      "block_id": "page-0730-block-0022",
+      "order": 22,
+      "text": "For Anorexia Nervosa - A Family\nBased Approach », Guilford Press,\nNew York.\nM P: www.maudsley -\n",
+      "text_sha256": "036f2c3efbb41398c73d9bfde1c7988b37e16647f31403336ae0ed1aa208d667"
+    },
+    {
+      "bbox": [
+        225.0,
+        578.2886962890625,
+        378.135009765625,
+        600.2291259765625
+      ],
+      "block_id": "page-0730-block-0023",
+      "order": 23,
+      "text": "parents.org.\nN E D I-\n",
+      "text_sha256": "585f7e1208ede8f26959769c2e98d26abe93b82db77aef664ddd2a316aa8ea06"
+    },
+    {
+      "bbox": [
+        225.0,
+        600.3386840820312,
+        374.7239990234375,
+        622.2791137695312
+      ],
+      "block_id": "page-0730-block-0024",
+      "order": 24,
+      "text": ": Center www.nedic.ca.\nP, G. & al. (2001). Démystier\n",
+      "text_sha256": "50255c13fd2eb0079980ce59e76577746e11c6c93bb39ac68f84db04861a990c"
+    },
+    {
+      "bbox": [
+        237.0,
+        622.3914184570312,
+        362.8988342285156,
+        632.1824340820312
+      ],
+      "block_id": "page-0730-block-0025",
+      "order": 25,
+      "text": "les maladies mentales, Anorexie et\n",
+      "text_sha256": "659cd0fbc49d8356e1c9475384da16b2e0cf29230eaae59d2948b1cd8a052a32"
+    },
+    {
+      "bbox": [
+        396.0,
+        442.138671875,
+        546.3856201171875,
+        474.3791198730469
+      ],
+      "block_id": "page-0730-block-0026",
+      "order": 26,
+      "text": "boulimie, Comprendre pour agir,\nBoucherville, Québec, Gaétan Morin.\nR, D. (2007). « Conséquences\n",
+      "text_sha256": "d981539084e2734d5991e5e8767f16be6a6d32badd910109151e81fb286c832a"
+    },
+    {
+      "bbox": [
+        396.0,
+        474.5386657714844,
+        549.3349609375,
+        516.9291381835938
+      ],
+      "block_id": "page-0730-block-0027",
+      "order": 27,
+      "text": "métaboliques de l’anorexie mentale »,\nNutrition clinique et métabolisme,\n21(4), p. 159-165.\nS J. R. & al. (2007). « Bulimia Ner-\n",
+      "text_sha256": "c8d7ebe5ea1a2febfbd585cb7b1b5b6b1130c15ec29b21a4ee3a102af824e4a6"
+    },
+    {
+      "bbox": [
+        396.0,
+        517.0886840820312,
+        549.4749755859375,
+        559.4791259765625
+      ],
+      "block_id": "page-0730-block-0028",
+      "order": 28,
+      "text": "vosa Treatment : A Systematic Review\nof Randomized Controlled Trials », Int\nJ Eat Disord, 40(4), p. 321-336.\nS, V. & T, J. (1999). La\n",
+      "text_sha256": "0d981be001fd7fa85f674415b92e422e186ea557e92b1c41e8bb20eecee983a7"
+    },
+    {
+      "bbox": [
+        396.0,
+        559.638671875,
+        552.073974609375,
+        591.8790893554688
+      ],
+      "block_id": "page-0730-block-0029",
+      "order": 29,
+      "text": "boulimie, s’en sortir repas après repas,\nParis, Estem.\nW, T. A. & al. (2011). « Obesity and\n",
+      "text_sha256": "47edbbc1e9d96cf6f4f45fadd2c12fb34ee30ca5743984f81d1d19461d64351d"
+    },
+    {
+      "bbox": [
+        408.0,
+        592.0386962890625,
+        553.5278930664062,
+        632.4291381835938
+      ],
+      "block_id": "page-0730-block-0030",
+      "order": 30,
+      "text": "associated eating disorders : A guide for\nmental health professionals », Psychia-\ntric Clinics of North America, 34(4),\np. 717-920.\n",
+      "text_sha256": "61cdd49a8b4d97f5b9fe13fc8db7189021cb768e094877d9914e7ddc067d30b1"
+    }
+  ],
+  "coordinates_sha256": "66ce87d9f302ee8697d3c21ee16c8393a717bf9295012c93630eae2a0597e7f1",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0730",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 31\nTroubles des conduites alimentaires\n713\nLe tableau 31.9 résume les diérentes évolutions de l’anorexie\net de la boulimie.\nLes troubles des conduites alimentaires (TCA) ne sont pas\ndes aections rares et ils représentent des pathologies parfois\ncomplexes qui nécessitent l’intervention d’une équipe interdis-\nciplinaire. Leur étiologie est loin d’avoir été élucidée, mais les\nnouvelles données scientiques amènent un éclairage intéressant\nautant pour le dépistage que pour le traitement. Ces troubles\nayant une mortalité (possiblement la plus haute des aections\npsychiatriques) et une morbidité élevées, le dépistage ainsi que\nle traitement demeurent fort importants. Cette aection est\nsouvent sous-estimée, surtout chez les moins de 18 ans, d’où\nl’importance de sensibiliser les cliniciens et le public. La prévention\nde l’anorexie et de la boulimie devient donc un enjeu médical\nmais également socioculturel, où l’intervention de plusieurs\npartenaires demeure indispensable.\nPlusieurs variables ont été mises en relation avec le pronostic,\nmais pour la majorité d’entre elles, les résultats des études sont\ndiscordants. Il semble cependant qu’une courte durée de la maladie\navant le traitement et l’absence de trouble de la personnalité sont\ndes facteurs de bon pronostic, alors que les comportements pur-\ngatifs et le trouble de la personnalité obsessionnelle-compulsive\nsont associés à une évolution défavorable.\nQuant à la boulimie, même si le traitement semble ecace à\ncourt terme, les rechutes sont fréquentes et le taux de chronicité\ns’avère élevé (Steinhausen & Weber, 2009). Les facteurs de pro-\nnostic paraissent encore moins ables que dans l’anorexie, mais\nune multi-impulsivité comportementale (automutilation, abus\nde substances) a été associée à un mauvais pronostic.\nPar ailleurs, les études ont montré l’importance d’atteindre\nune qualité de vie chez les femmes souffrant d’un TCA.\nToutes les sphères de leur vie, que ce soit dans ses dimen-\nsions sociales, psychologiques ou physiques, sont atteintes.\nLa gravité du TCA doit donc être envisagée bien au-delà des\nsymp tômes alimentaires.\nTABLEAU 31.9 Pronostic de l’anorexie et de la boulimie\nAnorexie\nBoulimie\nSuivi < 4 ans\nSuivi > 10 ans\nSuivi < 4 ans\nSuivi > 4 ans\nAdolescentes\nAdultes\nAdolescentes\nAdultes\nRémission\n45 %\n30 %\n75 %\n50-70 %\n40 %\n66 %\nChronicité\n20 %\n40 %\n15 %\n15-20 %\n27 %\n12 %\nMortalité\n0 %\n0,9 %\n1,8 %\n8-10 %\n0 %\n0,32 %\nLectures complémentaires\nA  E D: www.\naedweb.org.\nC, S. & D, C. (2008). 50 exercices\npour sortir de l’anorexie, Paris, Odile\nJacob.\nF, C. G. (2008). Cognitive Beha-\nvioral erapy and Eating Disorders,\nNew York, NY, Guilfort Press.\nF, S. & al. (2010). « Le traitement\nfamilial des enfants et des adolescents\nanorexiques : Des lignes directrices pour\nle médecin communautaire », Paedia-\ntrics & Child Health, 15(1), p. 36.\nH-D B. (2009). « Ado-\nlescent Eating Disorders : Denitions,\nSymptomatology, Epidemiology and\nComorbidity », Child Adolesc Psychia-\ntric Clin N Am, 18(1), p. 31-47.\nK B. (2008). « Troubles du comporte-\nment alimentaire », Échelles et ques-\ntionnaires d’évaluation chez l’enfant et\nl’adolescent, Paris, Masson, p. 27-46.\nL G, D. (2005). « e Maudsley\nfamily-based treatment for adolescent\nanorexia nervosa », World Psychiatry,\n4(3), p. 142.\nL, J. & al. (2000). « Treatment Manual\nFor Anorexia Nervosa - A Family\nBased Approach », Guilford Press,\nNew York.\nM P: www.maudsley -\nparents.org.\nN E D I-\n: Center www.nedic.ca.\nP, G. & al. (2001). Démystier\nles maladies mentales, Anorexie et\nboulimie, Comprendre pour agir,\nBoucherville, Québec, Gaétan Morin.\nR, D. (2007). « Conséquences\nmétaboliques de l’anorexie mentale »,\nNutrition clinique et métabolisme,\n21(4), p. 159-165.\nS J. R. & al. (2007). « Bulimia Ner-\nvosa Treatment : A Systematic Review\nof Randomized Controlled Trials », Int\nJ Eat Disord, 40(4), p. 321-336.\nS, V. & T, J. (1999). La\nboulimie, s’en sortir repas après repas,\nParis, Estem.\nW, T. A. & al. (2011). « Obesity and\nassociated eating disorders : A guide for\nmental health professionals », Psychia-\ntric Clinics of North America, 34(4),\np. 717-920.\n",
+  "raw_text_sha256": "3efef1c2ac2cb247ab74c274e615c3543882039085e9f0a874bd838aa55e99b2",
+  "source_page_display": 731,
+  "source_page_index": 730
+}

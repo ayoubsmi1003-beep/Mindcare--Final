@@ -1,0 +1,64 @@
+{
+  "block_sequence_sha256": "ff80d1ff8e4cd8876578ff9e511d5162450469b35fd509d8f9b21558e667be0b",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        180.42501831054688,
+        758.8693237304688
+      ],
+      "block_id": "page-1153-block-0001",
+      "order": 1,
+      "text": "F16\nFigures supplémentaires\n",
+      "text_sha256": "1e3f6ba727ea0f5af06904b29ee6e53d7a6471e90ea6f87c9eebc1227f2e7089"
+    },
+    {
+      "bbox": [
+        50.45000076293945,
+        41.002296447753906,
+        210.4630126953125,
+        53.320068359375
+      ],
+      "block_id": "page-1153-block-0002",
+      "order": 2,
+      "text": "FIGURE 25 Faisceaux dopaminergiques\n",
+      "text_sha256": "968e4f73e860fab7dd22c1cd4545065ace4fe9577c692f4afde1a89fcd298144"
+    },
+    {
+      "bbox": [
+        50.400001525878906,
+        375.0022888183594,
+        479.7397766113281,
+        387.320068359375
+      ],
+      "block_id": "page-1153-block-0003",
+      "order": 3,
+      "text": "FIGURE 26 Synapse et dopamine\nFIGURE 27 Cibles des neurotransmetteurs\n",
+      "text_sha256": "9ec67d22fa859b0676c38e2da0c61e901bf1533ae8dc3efd1dad50ebf688d40e"
+    },
+    {
+      "bbox": [
+        306.25,
+        615.7406616210938,
+        539.2608032226562,
+        642.4750366210938
+      ],
+      "block_id": "page-1153-block-0004",
+      "order": 4,
+      "text": "Source : Adapté de Healy, D. & McMonagle, T. (1997). « The enhancement of social\nfunctionning as a therapeutic principle in the management of depression »,\nJ. Psychopharmacol, (suppl. 4), p. S25-S31.\n",
+      "text_sha256": "e50e2392cce69bc3c4de24c4922d2871414991249a1e44502bce48b1541b8e55"
+    }
+  ],
+  "coordinates_sha256": "482492a3f80048eff2c2141d8d0d77c5402294c753f1efdbc3402a9c38f0447c",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1153",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "F16\nFigures supplémentaires\nFIGURE 25 Faisceaux dopaminergiques\nFIGURE 26 Synapse et dopamine\nFIGURE 27 Cibles des neurotransmetteurs\nSource : Adapté de Healy, D. & McMonagle, T. (1997). « The enhancement of social\nfunctionning as a therapeutic principle in the management of depression »,\nJ. Psychopharmacol, (suppl. 4), p. S25-S31.\n",
+  "raw_text_sha256": "7108cd9f2d35d4872f164cf482145e67e471cad3909f238e23ba577891d8d67c",
+  "source_page_display": 1154,
+  "source_page_index": 1153
+}

@@ -1,0 +1,88 @@
+{
+  "block_sequence_sha256": "fd2e91a4b56ab04734d985bfcddabbec736d089e07181359ca20a6d41631b918",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0349-block-0001",
+      "order": 1,
+      "text": "332\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "b02732ccb2340d5b9b651a33d527797b9008abab9a2c50d81f25b3c9c384cb61"
+    },
+    {
+      "bbox": [
+        50.25,
+        41.002296447753906,
+        294.5671691894531,
+        53.320068359375
+      ],
+      "block_id": "page-0349-block-0002",
+      "order": 2,
+      "text": "FIGURE 17.1 Modèle vulnérabilité-stress de la schizophrénie\n",
+      "text_sha256": "9fdf729fee1174c19da2366b153d47f610da8878026fe9c86cce3440792c8537"
+    },
+    {
+      "bbox": [
+        48.0,
+        485.2658386230469,
+        291.3408203125,
+        714.2584838867188
+      ],
+      "block_id": "page-0349-block-0003",
+      "order": 3,
+      "text": "d’identier des marqueurs génétiques liés à la maladie. Par\nailleurs, les études d’association portent sur un gène suspecté\ndans la pathophysiologie (p. ex., un gène intervenant dans le\nmétabolisme de la dopamine [DA]) et comparent sa fréquence\ndans une cohorte de personnes atteintes de schizophrénie com-\nparativement à des cas témoins. Au cours des années, près d’une\ncentaine de gènes candidats (p. ex., neuréguline ERBB-4, dys-\nbindine [DTNBP-1] et catéchol-O-méthyltransférase [COMT])\nreliés au métabolisme de la DA, ont été mis en cause. À ce jour,\naucun gène identié n’accroît de plus de trois fois le risque de\nsourir de schizophrénie. Par contre, les récentes études du\nGenome-wide association studies ont inrmé plusieurs de ces\nassociations. Ces études établissent des comparaisons entre des\ndizaines de milliers de personnes non atteintes de schizophrénie\nà des dizaines de milliers d’autres qui le sont et qui présentent un\nphénotype particulier, c’est-à-dire un caractère relié à des décits\nhéritables et quantiables à l’aide de mesures en laboratoire (p.\nex., un décit attentionnel mesurable en neuropsychologie) plutôt\nque par des observations cliniques. Ces mesures sont liées de plus\nprès aux variations génétiques de type polymorphisme d’un seul\n",
+      "text_sha256": "12999e69c8c261fa08a3592b73dc74b2729f05f53eec145c674a91de8e7621a4"
+    },
+    {
+      "bbox": [
+        306.0,
+        485.2658386230469,
+        549.2149658203125,
+        578.1085205078125
+      ],
+      "block_id": "page-0349-block-0004",
+      "order": 4,
+      "text": "nucléotide (single nucléotide polymorphism). Les polymorphismes\ninduisent des anomalies dans le phénotype (neurodéveloppe-\nmentales, neurophysiologiques, neurocognitives, etc.). Dans les\ndiérentes études, les gènes qui semblent associés de façon plus\nsystématique au phénotype de la schizophrénie sont associés\nau système glutamatergique. Pourtant, jusqu’à maintenant, la\nschizophrénie est associée au système dopaminergique, qui est\nbloqué par les antipsychotiques.\n",
+      "text_sha256": "958783a2d54b44624da9c02309ae97d10ad7c96c6504586065f7bdd7451a20a7"
+    },
+    {
+      "bbox": [
+        311.20001220703125,
+        583.7999877929688,
+        547.3800659179688,
+        605.2503051757812
+      ],
+      "block_id": "page-0349-block-0005",
+      "order": 5,
+      "text": "i\nUn supplément d’information sur le Genome-wide associa-\ntion studies est disponible au www.genome.gov/gwastudies.\n",
+      "text_sha256": "5f25b8e69ad80d0c398c73ad91f2ce9a6376f5df132a3364d4304ef48b664131"
+    },
+    {
+      "bbox": [
+        306.0,
+        617.8023071289062,
+        549.4342651367188,
+        714.2584838867188
+      ],
+      "block_id": "page-0349-block-0006",
+      "order": 6,
+      "text": "Marqueurs génétiques\nDiérents signes neuropsychologiques mesurables, qui sont sous\ncontrôle génétique, s’observent beaucoup plus fréquemment chez\nles personnes atteintes de schizophrénie et les membres de leur\nfamille, comparativement à la population générale. Parmi les\nmarqueurs génétiques, on retrouve :\n• Une onde P-300 enregistrée en électroencéphalographie (EEG).\nCette onde correspond à un potentiel évoqué déclenché par un\n",
+      "text_sha256": "83dc07544f21db732d4694d3165772c2f6b20d6dc502cb2b7a6a013d00fa4da1"
+    }
+  ],
+  "coordinates_sha256": "27f65bad780c737eb1998d66ab11b0d67f194af709ab90b40a813eb736f7cb32",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0349",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "332\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nFIGURE 17.1 Modèle vulnérabilité-stress de la schizophrénie\nd’identier des marqueurs génétiques liés à la maladie. Par\nailleurs, les études d’association portent sur un gène suspecté\ndans la pathophysiologie (p. ex., un gène intervenant dans le\nmétabolisme de la dopamine [DA]) et comparent sa fréquence\ndans une cohorte de personnes atteintes de schizophrénie com-\nparativement à des cas témoins. Au cours des années, près d’une\ncentaine de gènes candidats (p. ex., neuréguline ERBB-4, dys-\nbindine [DTNBP-1] et catéchol-O-méthyltransférase [COMT])\nreliés au métabolisme de la DA, ont été mis en cause. À ce jour,\naucun gène identié n’accroît de plus de trois fois le risque de\nsourir de schizophrénie. Par contre, les récentes études du\nGenome-wide association studies ont inrmé plusieurs de ces\nassociations. Ces études établissent des comparaisons entre des\ndizaines de milliers de personnes non atteintes de schizophrénie\nà des dizaines de milliers d’autres qui le sont et qui présentent un\nphénotype particulier, c’est-à-dire un caractère relié à des décits\nhéritables et quantiables à l’aide de mesures en laboratoire (p.\nex., un décit attentionnel mesurable en neuropsychologie) plutôt\nque par des observations cliniques. Ces mesures sont liées de plus\nprès aux variations génétiques de type polymorphisme d’un seul\nnucléotide (single nucléotide polymorphism). Les polymorphismes\ninduisent des anomalies dans le phénotype (neurodéveloppe-\nmentales, neurophysiologiques, neurocognitives, etc.). Dans les\ndiérentes études, les gènes qui semblent associés de façon plus\nsystématique au phénotype de la schizophrénie sont associés\nau système glutamatergique. Pourtant, jusqu’à maintenant, la\nschizophrénie est associée au système dopaminergique, qui est\nbloqué par les antipsychotiques.\ni\nUn supplément d’information sur le Genome-wide associa-\ntion studies est disponible au www.genome.gov/gwastudies.\nMarqueurs génétiques\nDiérents signes neuropsychologiques mesurables, qui sont sous\ncontrôle génétique, s’observent beaucoup plus fréquemment chez\nles personnes atteintes de schizophrénie et les membres de leur\nfamille, comparativement à la population générale. Parmi les\nmarqueurs génétiques, on retrouve :\n• Une onde P-300 enregistrée en électroencéphalographie (EEG).\nCette onde correspond à un potentiel évoqué déclenché par un\n",
+  "raw_text_sha256": "86c2ed2601c41a6da8de75340dbca7e9255758fe4163880ae89ea9edd631becd",
+  "source_page_display": 350,
+  "source_page_index": 349
+}

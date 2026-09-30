@@ -1,0 +1,102 @@
+{
+  "decision": "DSM-5 BLOCKED",
+  "canonical_promotion_authorized": false,
+  "activation_authorized": false,
+  "identity": {
+    "book_id": "dsm5-fr-2015-elsevier",
+    "source_pdf": "Books/DSM-5_Manuel-diagnostique-et-statistique-des-troubles-mentaux.pdf",
+    "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+    "source_sha256": "be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+    "source_pages": 1275,
+    "segment_repair": "seg-1126-1150-v2.pdf",
+    "repaired_source_pages": [
+      1137,
+      1140
+    ]
+  },
+  "coverage": {
+    "segments": 51,
+    "segment_page_count": [
+      25
+    ],
+    "segment_ranges_contiguous": true,
+    "page_map_records": 1275,
+    "page_map_valid": true,
+    "structure_candidate": "structure-v2.candidate.json",
+    "structure_candidate_pages_assigned": 1275,
+    "structure_candidate_valid": true,
+    "v2_pages_1137_1140_text_equal": true
+  },
+  "determinism": {
+    "candidate_key_order_all_records": false,
+    "candidate_output_hashes": {
+      "units": "116c04e814d67e764a227b2ab82550b204b55c30790a8ad57607d8e87c484e82",
+      "tables": "d466304ae612d6551736fa401cc39b0378b924548395ab79270093d01086b520",
+      "concepts": "73d243a97882ef2ee066b61006b07d48437fd6d73eca1be117e43e13a8399cb6",
+      "xrefs": "43c756106861d85d00c657fabcbddd124e2eacac337ce1f8cbfef119ac4bcc7e"
+    },
+    "v2_segment_sha256": "4bd2f8ebe255b49c66f3f516a869dc7332173081f6afebb9ab2986d9fc25e6fb",
+    "seg_report_count": 51,
+    "citra_replayed_segments": 1,
+    "citra_not_replayed_segments": 50,
+    "full_replay_proven": false
+  },
+  "review": {
+    "candidate_units": 12820,
+    "candidate_needs_review": 7772,
+    "candidate_page_mapping_status": {
+      "uncertain": 2127,
+      "certain": 10693
+    },
+    "candidate_extraction_status": {
+      "extracted": 12820
+    },
+    "candidate_fallback_extractors": {
+      "pymupdf-original-text-layer": 9046,
+      "u1-atomizer-rule-v1": 1613,
+      "pymupdf-fallback": 2111,
+      "citra-read-pdf": 50
+    },
+    "tables_needing_review": 121,
+    "active_unresolved_xrefs": 359,
+    "quarantined_unresolved_xrefs": 5,
+    "quarantined_xref_records": 8,
+    "quarantined_unit_relation_refs": 2,
+    "legacy_coverage_units_reclassified": 411,
+    "current_qa_report_verdict_not_used_as_final": "PASS"
+  },
+  "blockers": [
+    {
+      "id": "canonical-promotion-not-authorized",
+      "evidence": "reconciliation-v9/manifest.json: canonical_promotion_authorized=false",
+      "requirement": "WORKORDER completion and signed promotion are required before replacing current merged artifacts."
+    },
+    {
+      "id": "structure-candidate-not-promoted",
+      "evidence": "structure-v2.candidate.json: candidate_status=review_required, canonical_promotion_authorized=false",
+      "requirement": "R3 structure ranges must be accepted before canonical use."
+    },
+    {
+      "id": "partial-replay",
+      "evidence": "seg-reports-v2/manifest.json: 1 Citra-failed segment recorded, 50 segments not_replayed",
+      "requirement": "WORKORDER method/replay must be evidenced for every segment."
+    },
+    {
+      "id": "open-clinical-review",
+      "evidence": "7772 candidate units needs_review; 121 tables needs_review; 364 unresolved xrefs including quarantine",
+      "requirement": "Doctor review is required; unresolved review state cannot be silently promoted."
+    },
+    {
+      "id": "quarantined-references",
+      "evidence": "2 unit relation refs and 8 xref records quarantined",
+      "requirement": "Orphan references require explicit review; no target invention is allowed."
+    }
+  ],
+  "artifacts": {
+    "reconciliation": "reconciliation-v9/",
+    "seg_reports": "seg-reports-v2/",
+    "structure_candidate": "structure-v2.candidate.json",
+    "segment_v2_provenance": "segments/seg-1126-1150-v2.pdf.provenance.json"
+  },
+  "next_allowed": "Doctor review and explicit promotion decision only; no M08, database, embeddings, activation, or six-book reconciliation."
+}

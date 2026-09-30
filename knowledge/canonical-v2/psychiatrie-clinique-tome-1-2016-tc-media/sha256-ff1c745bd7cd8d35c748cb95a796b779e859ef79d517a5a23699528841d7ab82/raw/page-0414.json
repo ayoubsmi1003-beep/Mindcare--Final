@@ -1,0 +1,448 @@
+{
+  "block_sequence_sha256": "1fbf343d975a30a24486bbcb7ffee832f02dab69191c48e2cbe4109f6b7ed429",
+  "blocks": [
+    {
+      "bbox": [
+        408.8999938964844,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0414-block-0001",
+      "order": 1,
+      "text": "Chapitre 19\nDépressions\n397\n",
+      "text_sha256": "945b2b20f80ea386f6a6154624116c725faedd3146fc496fd717d5b7071c3b2e"
+    },
+    {
+      "bbox": [
+        56.25,
+        41.002296447753906,
+        376.3931884765625,
+        53.320068359375
+      ],
+      "block_id": "page-0414-block-0002",
+      "order": 2,
+      "text": "TABLEAU 19.1 Critères diagnostiques du trouble dépressif caractérisé (majeur)\n",
+      "text_sha256": "f41e062b7fe8966ddefee408bab0ade9f23f4a8ce0bca1debbadb90411a9d4ad"
+    },
+    {
+      "bbox": [
+        149.10000610351562,
+        58.27412414550781,
+        498.98199462890625,
+        81.60029602050781
+      ],
+      "block_id": "page-0414-block-0003",
+      "order": 3,
+      "text": "DSM-5\nDSM-IV-TR\nTrouble dépressif caractérisé\nÉpisode dépressif majeur\n",
+      "text_sha256": "967cd5554e6675c26c7340af6dcfa927c23d6ca0477ab683e6264ada7f3164b6"
+    },
+    {
+      "bbox": [
+        58.25,
+        86.4019546508789,
+        329.40496826171875,
+        96.2281265258789
+      ],
+      "block_id": "page-0414-block-0004",
+      "order": 4,
+      "text": "A. Au moins cinq des symptômes suivants sont présents pendant une même période\n",
+      "text_sha256": "23293c2d4ef7001f216c7c5153e3e1c7659702c914148f9edf02e86e879d064e"
+    },
+    {
+      "bbox": [
+        58.25,
+        96.4019546508789,
+        340.98907470703125,
+        159.22813415527344
+      ],
+      "block_id": "page-0414-block-0005",
+      "order": 5,
+      "text": "d’une durée de 2 semaines et représentent un changement par rapport au fonction­\nnement antérieur ; au moins un des symptômes est soit :\n1. une humeur dépressive, soit\n2. une perte d’intérêt ou de plaisir :\nN.B.: Ne pas inclure les symptômes qui sont clairement imputables à une autre affection\nmédicale.\n",
+      "text_sha256": "68986aeb2c7aca55994c3901a6ff6549f0747d1c53488a7cc5d7af5bbdc586c3"
+    },
+    {
+      "bbox": [
+        353.75,
+        86.4019546508789,
+        410.9380187988281,
+        96.2281265258789
+      ],
+      "block_id": "page-0414-block-0006",
+      "order": 6,
+      "text": "A. Idem à DSM­5.\n",
+      "text_sha256": "cb09dbee573d1a8ec10a9c26708b0d706a011f7988d38771098a236d189d2662"
+    },
+    {
+      "bbox": [
+        68.4000015258789,
+        167.15196228027344,
+        336.6318054199219,
+        208.09239196777344
+      ],
+      "block_id": "page-0414-block-0007",
+      "order": 7,
+      "text": "1. Humeur dépressive présente quasiment toute la journée, presque tous les jours,\nsignalée par la personne (p. ex., se sent triste, vide, sans espoir) ou observée par\nles autres (p. ex., pleure).\n(N.B. : Éventuellement irritabilité chez l’enfant et l’adolescent).\n",
+      "text_sha256": "0293d6a07b6906f6115938a3e59279bbe91f09046e0bf4f8d5d4be46feefa66f"
+    },
+    {
+      "bbox": [
+        362.75,
+        167.15196228027344,
+        424.364013671875,
+        176.97813415527344
+      ],
+      "block_id": "page-0414-block-0008",
+      "order": 8,
+      "text": "(1) Idem à DSM­5.\n",
+      "text_sha256": "f76872e4d184bb775cdae71c6db13aee8947b3aabf73b6f651c827354731c383"
+    },
+    {
+      "bbox": [
+        68.4000015258789,
+        215.90196228027344,
+        320.08642578125,
+        245.72813415527344
+      ],
+      "block_id": "page-0414-block-0009",
+      "order": 9,
+      "text": "2. Diminution marquée de l’intérêt ou du plaisir pour toutes ou presque toutes\nles activités quasiment toute la journée, presque tous les jours (signalée par\nla personne ou observée par les autres).\n",
+      "text_sha256": "6f6490cb45e5c34afa415a85da4b4560e5181b46ed4696efcdc4995f3c838afa"
+    },
+    {
+      "bbox": [
+        362.75,
+        215.90196228027344,
+        424.364013671875,
+        225.72813415527344
+      ],
+      "block_id": "page-0414-block-0010",
+      "order": 10,
+      "text": "(2) Idem à DSM­5.\n",
+      "text_sha256": "b6ae06a05c3e876b561f93655cbd7e95a2a3d0c7707f18b99fa32fb3fb368314"
+    },
+    {
+      "bbox": [
+        68.4000015258789,
+        253.65194702148438,
+        330.69195556640625,
+        294.5923767089844
+      ],
+      "block_id": "page-0414-block-0011",
+      "order": 11,
+      "text": "3. Perte ou gain de poids signicatif en l’absence de régime (p. ex., modication\ndu poids corporel excédant 5 % en un mois), ou diminution ou augmentation\nde l’appétit presque tous les jours.\n(N.B. : Chez l’enfant, prendre en compte l’absence de prise de poids attendue.)\n",
+      "text_sha256": "16dcab22315c4bf759bf29a832607a715c10cd9c5d441cec07977c6e6a8e9832"
+    },
+    {
+      "bbox": [
+        362.75,
+        253.65194702148438,
+        424.364013671875,
+        263.4781188964844
+      ],
+      "block_id": "page-0414-block-0012",
+      "order": 12,
+      "text": "(3) Idem à DSM­5.\n",
+      "text_sha256": "18bf1483ff8b276ccba153ca7c32a47f05287d43026add4ae439a1680a773b0c"
+    },
+    {
+      "bbox": [
+        68.4000015258789,
+        302.45196533203125,
+        424.364013671875,
+        312.27813720703125
+      ],
+      "block_id": "page-0414-block-0013",
+      "order": 13,
+      "text": "4. Insomnie ou hypersomnie presque tous les jours.\n(4) Idem à DSM­5.\n",
+      "text_sha256": "c79c46e80f86e1eb68c6ba109d942f15667cc5c5323eb7b2dd5da691b2e099e0"
+    },
+    {
+      "bbox": [
+        68.4000015258789,
+        320.20196533203125,
+        331.71649169921875,
+        340.02813720703125
+      ],
+      "block_id": "page-0414-block-0014",
+      "order": 14,
+      "text": "5. Agitation ou ralentissement psychomoteur presque tous les jours (constaté par\nles autres, non limité à un sentiment subjectif de fébrilité ou de ralentissement).\n",
+      "text_sha256": "9ad52a64ca54192a1bf72a7c0271604c1b97fb95e61291662f4e1aeca7661733"
+    },
+    {
+      "bbox": [
+        362.75,
+        320.20196533203125,
+        424.364013671875,
+        330.02813720703125
+      ],
+      "block_id": "page-0414-block-0015",
+      "order": 15,
+      "text": "(5) Idem à DSM­5.\n",
+      "text_sha256": "e2676727a6647533c0c81aa719b4fb17bab78400dd5d674a1fc769390363e3db"
+    },
+    {
+      "bbox": [
+        68.4000015258789,
+        347.95196533203125,
+        424.364013671875,
+        357.77813720703125
+      ],
+      "block_id": "page-0414-block-0016",
+      "order": 16,
+      "text": "6. Fatigue ou perte d’énergie presque tous les jours.\n(6) Idem à DSM­5.\n",
+      "text_sha256": "4f457e81813f7fe1f763fa8a16949c11ae333b376f625b8242c7a5d9573f5d55"
+    },
+    {
+      "bbox": [
+        68.4000015258789,
+        365.70196533203125,
+        335.8818664550781,
+        395.52813720703125
+      ],
+      "block_id": "page-0414-block-0017",
+      "order": 17,
+      "text": "7. Sentiment de dévalorisation ou de culpabilité excessive ou inappropriée (qui peut\nêtre délirant) presque tous les jours (pas seulement se reprocher ou se sentir\ncoupable d’être malade).\n",
+      "text_sha256": "802744bdd7d023bbd7399ab2d0f2a1c39fafe8df7d027ce11bd402e5b9def06d"
+    },
+    {
+      "bbox": [
+        362.75,
+        365.70196533203125,
+        424.364013671875,
+        375.52813720703125
+      ],
+      "block_id": "page-0414-block-0018",
+      "order": 18,
+      "text": "(7) Idem à DSM­5.\n",
+      "text_sha256": "c789724715e65ff7f01764fa6f20b025ddcd3527241aa98803703e6a9a5479a6"
+    },
+    {
+      "bbox": [
+        68.4000015258789,
+        403.45196533203125,
+        335.4649353027344,
+        423.27813720703125
+      ],
+      "block_id": "page-0414-block-0019",
+      "order": 19,
+      "text": "8. Diminution de l’aptitude à penser ou à se concentrer ou indécision, presque tous\nles jours (signalée par la personne ou observée par les autres).\n",
+      "text_sha256": "e0498131aac7015e5ba8b8aae23156f314a15818a343f71a3d0283769d9c3958"
+    },
+    {
+      "bbox": [
+        362.75,
+        403.45196533203125,
+        424.364013671875,
+        413.27813720703125
+      ],
+      "block_id": "page-0414-block-0020",
+      "order": 20,
+      "text": "(8) Idem à DSM­5.\n",
+      "text_sha256": "0e19438bbbbbbae054374b916c4bc3702731337d60a04c22084fa9e22ee2cdd3"
+    },
+    {
+      "bbox": [
+        68.4000015258789,
+        431.20196533203125,
+        343.95172119140625,
+        451.02813720703125
+      ],
+      "block_id": "page-0414-block-0021",
+      "order": 21,
+      "text": "9. Pensées de mort récurrentes (pas seulement une peur de mourir), idées suicidaires\nrécurrentes sans plan précis, tentative de suicide ou plan précis pour se suicider.\n",
+      "text_sha256": "fcf56928264c6f1aeb5d00b81dd04bef20d881d471e46f2bd80e896c09a848c6"
+    },
+    {
+      "bbox": [
+        362.75,
+        431.20196533203125,
+        424.364013671875,
+        441.02813720703125
+      ],
+      "block_id": "page-0414-block-0022",
+      "order": 22,
+      "text": "(9) Idem à DSM­5.\n",
+      "text_sha256": "60e1db6fefb073438b92b06fbc245e724fdc0464e757889724c5f3817cc76352"
+    },
+    {
+      "bbox": [
+        58.25,
+        458.95196533203125,
+        331.0141906738281,
+        468.77813720703125
+      ],
+      "block_id": "page-0414-block-0023",
+      "order": 23,
+      "text": "B. Les symptômes induisent une détresse cliniquement signicative ou une altération\n",
+      "text_sha256": "acdd92972f1d9d55c36e2ff2405330dcd11954fa3e1e29dea8f3dba32533c120"
+    },
+    {
+      "bbox": [
+        69.0999984741211,
+        468.95196533203125,
+        322.070068359375,
+        478.77813720703125
+      ],
+      "block_id": "page-0414-block-0024",
+      "order": 24,
+      "text": "du fonctionnement social, professionnel ou dans d’autres domaines importants.\n",
+      "text_sha256": "afd882a61c67b524e39041ee723e8404743b71dc3e305447b577677ada82cb20"
+    },
+    {
+      "bbox": [
+        353.75,
+        458.95196533203125,
+        544.6607055664062,
+        468.77813720703125
+      ],
+      "block_id": "page-0414-block-0025",
+      "order": 25,
+      "text": "B. Les symptômes ne répondent pas aux critères d’épisode\n",
+      "text_sha256": "025ae1e3c84b4995cff0f13d8f513a873610c4759c1382e7a58385effb908678"
+    },
+    {
+      "bbox": [
+        364.6000061035156,
+        468.95196533203125,
+        383.9230041503906,
+        478.77813720703125
+      ],
+      "block_id": "page-0414-block-0026",
+      "order": 26,
+      "text": "mixte.\n",
+      "text_sha256": "fdc28ea9b94c5ee5bff140b8e02401a8717af1b8a9ac4de4997141671dafb8eb"
+    },
+    {
+      "bbox": [
+        58.25,
+        486.70196533203125,
+        310.9551086425781,
+        496.52813720703125
+      ],
+      "block_id": "page-0414-block-0027",
+      "order": 27,
+      "text": "C. L’épisode n’est pas imputable aux effets physiologiques d’une substance ou\n",
+      "text_sha256": "f86772ab013f7c58076f665f8ccfe3b43431a92676f927c654eb4d7f9695964e"
+    },
+    {
+      "bbox": [
+        58.25,
+        496.70196533203125,
+        278.4942321777344,
+        517.6423950195312
+      ],
+      "block_id": "page-0414-block-0028",
+      "order": 28,
+      "text": "à une autre affection médicale.\nN.B. : Les critères A­C représentent un épisode dépressif caractérisé.\n",
+      "text_sha256": "f963fac8075992a64fd77ff0d6bc0448c7e71f9cebdabf3c5d3b633a63a7b91e"
+    },
+    {
+      "bbox": [
+        353.75,
+        486.70196533203125,
+        413.569091796875,
+        496.52813720703125
+      ],
+      "block_id": "page-0414-block-0029",
+      "order": 29,
+      "text": "C. Idem à DSM­5.\n",
+      "text_sha256": "d973caf7a904ee36469ec50629110c9115299308f49a94ee1d664cea973facbc"
+    },
+    {
+      "bbox": [
+        58.25,
+        525.4519653320312,
+        324.89801025390625,
+        535.2781372070312
+      ],
+      "block_id": "page-0414-block-0030",
+      "order": 30,
+      "text": "D. La survenue de l’épisode dépressif caractérisé n’est pas mieux expliquée par un\n",
+      "text_sha256": "1d1dcf5d78bd2cabd5c60b1b80ee0bebb56fa70367b0b8610a6ff66d40a536c9"
+    },
+    {
+      "bbox": [
+        69.4000015258789,
+        535.4519653320312,
+        342.1772766113281,
+        565.2781372070312
+      ],
+      "block_id": "page-0414-block-0031",
+      "order": 31,
+      "text": "trouble schizoaffectif, une schizophrénie, un trouble schizophréniforme, un trouble\ndélirant ou d’autres troubles spéciés ou non spéciés du spectre de la schizophrénie\nou d’autres troubles psychotiques.\n",
+      "text_sha256": "2a3a8d3e2f975a941eafb0fa4092c524c1f43e3d1766892e151995f7ae37bdfe"
+    },
+    {
+      "bbox": [
+        353.75,
+        525.4519653320312,
+        549.4970092773438,
+        535.2781372070312
+      ],
+      "block_id": "page-0414-block-0032",
+      "order": 32,
+      "text": "D. Les symptômes ne sont pas imputables aux effets physio­\n",
+      "text_sha256": "734da73aafffa665a3c5c1b51178e7f137bc5ec5429fd3d38affbfa938964f01"
+    },
+    {
+      "bbox": [
+        364.8999938964844,
+        535.4519653320312,
+        542.709228515625,
+        565.2781372070312
+      ],
+      "block_id": "page-0414-block-0033",
+      "order": 33,
+      "text": "logiques directs d’une substance (p. ex., une substance\ndonnant lieu à abus, un médicament) ou d’une affection\nmédicale générale (p. ex., hypothyroïdie).\n",
+      "text_sha256": "5f20a9235c36a9594e97b28793bb0a9d4f4363cd35411abd211c5a817c863701"
+    },
+    {
+      "bbox": [
+        58.25,
+        573.251953125,
+        317.3210144042969,
+        614.078125
+      ],
+      "block_id": "page-0414-block-0034",
+      "order": 34,
+      "text": "E. Il n’y a jamais eu auparavant d’épisode maniaque ou hypomaniaque.\nN.B. : Cette exclusion ne s’applique pas si tous les épisodes de type maniaque\nou hypomaniaque sont imputables à des substances ou aux effets physiologiques\nd’une autre pathologie médicale.\n",
+      "text_sha256": "66421de45e4f1dedee33ba418c9fa7f8f241b6403348e583bbdb3d48741ebb11"
+    },
+    {
+      "bbox": [
+        353.75,
+        573.251953125,
+        524.1484375,
+        583.078125
+      ],
+      "block_id": "page-0414-block-0035",
+      "order": 35,
+      "text": "E. Les symptômes ne sont pas mieux expliqués par un\n",
+      "text_sha256": "c9c95ee7f77e62b315ada2b8df9aeeb046fa571df892ad5ac9d3822a85ce15a1"
+    },
+    {
+      "bbox": [
+        363.8000183105469,
+        583.251953125,
+        542.9481201171875,
+        643.078125
+      ],
+      "block_id": "page-0414-block-0036",
+      "order": 36,
+      "text": "deuil, c.­à­d. après la mort d’un être cher, les symptômes\npersistent pendant plus de deux mois ou s’accompagnent\nd’une altération marquée du fonctionnement, de préoc­\ncupations morbides de dévalorisation, d’idées suicidaires,\nde symptômes psychotiques ou d’un ralentissement\npsychomoteur.\n",
+      "text_sha256": "5f6596b6a120419ba8701a894e2df12cef286e384d3e65d945c7e94d816d8b9c"
+    }
+  ],
+  "coordinates_sha256": "79579d724dfb2edbc5dac87ddcb180d8a8e5128da7e2abb758d8d05149612118",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0414",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 19\nDépressions\n397\nTABLEAU 19.1 Critères diagnostiques du trouble dépressif caractérisé (majeur)\nDSM-5\nDSM-IV-TR\nTrouble dépressif caractérisé\nÉpisode dépressif majeur\nA. Au moins cinq des symptômes suivants sont présents pendant une même période\nd’une durée de 2 semaines et représentent un changement par rapport au fonction­\nnement antérieur ; au moins un des symptômes est soit :\n1. une humeur dépressive, soit\n2. une perte d’intérêt ou de plaisir :\nN.B.: Ne pas inclure les symptômes qui sont clairement imputables à une autre affection\nmédicale.\nA. Idem à DSM­5.\n1. Humeur dépressive présente quasiment toute la journée, presque tous les jours,\nsignalée par la personne (p. ex., se sent triste, vide, sans espoir) ou observée par\nles autres (p. ex., pleure).\n(N.B. : Éventuellement irritabilité chez l’enfant et l’adolescent).\n(1) Idem à DSM­5.\n2. Diminution marquée de l’intérêt ou du plaisir pour toutes ou presque toutes\nles activités quasiment toute la journée, presque tous les jours (signalée par\nla personne ou observée par les autres).\n(2) Idem à DSM­5.\n3. Perte ou gain de poids signicatif en l’absence de régime (p. ex., modication\ndu poids corporel excédant 5 % en un mois), ou diminution ou augmentation\nde l’appétit presque tous les jours.\n(N.B. : Chez l’enfant, prendre en compte l’absence de prise de poids attendue.)\n(3) Idem à DSM­5.\n4. Insomnie ou hypersomnie presque tous les jours.\n(4) Idem à DSM­5.\n5. Agitation ou ralentissement psychomoteur presque tous les jours (constaté par\nles autres, non limité à un sentiment subjectif de fébrilité ou de ralentissement).\n(5) Idem à DSM­5.\n6. Fatigue ou perte d’énergie presque tous les jours.\n(6) Idem à DSM­5.\n7. Sentiment de dévalorisation ou de culpabilité excessive ou inappropriée (qui peut\nêtre délirant) presque tous les jours (pas seulement se reprocher ou se sentir\ncoupable d’être malade).\n(7) Idem à DSM­5.\n8. Diminution de l’aptitude à penser ou à se concentrer ou indécision, presque tous\nles jours (signalée par la personne ou observée par les autres).\n(8) Idem à DSM­5.\n9. Pensées de mort récurrentes (pas seulement une peur de mourir), idées suicidaires\nrécurrentes sans plan précis, tentative de suicide ou plan précis pour se suicider.\n(9) Idem à DSM­5.\nB. Les symptômes induisent une détresse cliniquement signicative ou une altération\ndu fonctionnement social, professionnel ou dans d’autres domaines importants.\nB. Les symptômes ne répondent pas aux critères d’épisode\nmixte.\nC. L’épisode n’est pas imputable aux effets physiologiques d’une substance ou\nà une autre affection médicale.\nN.B. : Les critères A­C représentent un épisode dépressif caractérisé.\nC. Idem à DSM­5.\nD. La survenue de l’épisode dépressif caractérisé n’est pas mieux expliquée par un\ntrouble schizoaffectif, une schizophrénie, un trouble schizophréniforme, un trouble\ndélirant ou d’autres troubles spéciés ou non spéciés du spectre de la schizophrénie\nou d’autres troubles psychotiques.\nD. Les symptômes ne sont pas imputables aux effets physio­\nlogiques directs d’une substance (p. ex., une substance\ndonnant lieu à abus, un médicament) ou d’une affection\nmédicale générale (p. ex., hypothyroïdie).\nE. Il n’y a jamais eu auparavant d’épisode maniaque ou hypomaniaque.\nN.B. : Cette exclusion ne s’applique pas si tous les épisodes de type maniaque\nou hypomaniaque sont imputables à des substances ou aux effets physiologiques\nd’une autre pathologie médicale.\nE. Les symptômes ne sont pas mieux expliqués par un\ndeuil, c.­à­d. après la mort d’un être cher, les symptômes\npersistent pendant plus de deux mois ou s’accompagnent\nd’une altération marquée du fonctionnement, de préoc­\ncupations morbides de dévalorisation, d’idées suicidaires,\nde symptômes psychotiques ou d’un ralentissement\npsychomoteur.\n",
+  "raw_text_sha256": "297a4045f34349ad44b9416f33bc96967f73b952f66baaee0e04f5b5a439fde3",
+  "source_page_display": 415,
+  "source_page_index": 414
+}

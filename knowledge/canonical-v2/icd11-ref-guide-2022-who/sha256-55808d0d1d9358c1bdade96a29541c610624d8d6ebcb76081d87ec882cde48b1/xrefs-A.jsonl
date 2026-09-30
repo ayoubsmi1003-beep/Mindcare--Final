@@ -1,0 +1,15 @@
+{"from_unit": "icd11rg-u-33-002", "target_text": "see 1.1.5.2", "target_unit": "icd11rg-u-34-002", "status": "resolved"}
+{"from_unit": "icd11rg-u-35-001", "target_text": "see Section 2.11 for further information", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-37-002", "target_text": "For further information please see 3.4 The Content Model", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-39-002", "target_text": "Codes starting with 'X' indicate an extension code (see 2.9)", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-41-001", "target_text": "Refer to 2.9.", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-41-002", "target_text": "Special tabulation lists (refer to section 2.25)", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-42-001", "target_text": "Refer to 2.10.", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-42-003", "target_text": "(See 3.12 Annex A: ICD-11 Updating and Maintenance)", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-43-001", "target_text": "(See Section 2.21 for more information.)", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-43-003", "target_text": "(See Section 1.4 for more information.)", "target_unit": "icd11rg-u-43-002", "status": "resolved"}
+{"from_unit": "icd11rg-u-44-001", "target_text": "See 3.12 Annex A: ICD-11 Updating and Maintenance for more detailed information.", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-44-002", "target_text": "(See 3.12 Annex A: ICD-11 Updating and Maintenance)", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-48-001", "target_text": "there is a section on extension codes (2.9)", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-48-001", "target_text": "one on Traditional medicine (1.5)", "target_unit": "icd11rg-u-44-001", "status": "resolved"}
+{"from_unit": "icd11rg-u-48-001", "target_text": "for tabulation and reporting only (2.25)", "target_unit": null, "status": "unresolved"}

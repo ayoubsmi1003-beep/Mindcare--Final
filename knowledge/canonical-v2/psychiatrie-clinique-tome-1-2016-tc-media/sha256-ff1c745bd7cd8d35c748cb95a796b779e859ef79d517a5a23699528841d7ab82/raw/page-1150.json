@@ -1,0 +1,64 @@
+{
+  "block_sequence_sha256": "fd7363e132b07a7481cda2744da062ab78f302ed51dac5325c47a9104646b29e",
+  "blocks": [
+    {
+      "bbox": [
+        422.8000183105469,
+        747.3754272460938,
+        554.97998046875,
+        758.6693725585938
+      ],
+      "block_id": "page-1150-block-0001",
+      "order": 1,
+      "text": "Figures supplémentaires\nF13\n",
+      "text_sha256": "95637d0b7b2bbadfe0d95951a2d2985f1285515c8345b8e879955d5ff05e56d1"
+    },
+    {
+      "bbox": [
+        56.29999923706055,
+        41.002296447753906,
+        179.0072479248047,
+        53.320068359375
+      ],
+      "block_id": "page-1150-block-0002",
+      "order": 2,
+      "text": "FIGURE 20 Homoncule moteur\n",
+      "text_sha256": "fdabedcc61c99a67945a3be17ba9356b83bf096a2bd95b756648a9ca2e7650e4"
+    },
+    {
+      "bbox": [
+        56.35000228881836,
+        495.4523010253906,
+        260.9330139160156,
+        507.77008056640625
+      ],
+      "block_id": "page-1150-block-0003",
+      "order": 3,
+      "text": "FIGURE 21 Système de contrôle moteur volontaire\n",
+      "text_sha256": "28b00ecc9f533ea010dbd36854cfde901ba848bd7cc5490f9d12326bc3e335b8"
+    },
+    {
+      "bbox": [
+        54.25,
+        717.1906127929688,
+        365.44580078125,
+        728.7088623046875
+      ],
+      "block_id": "page-1150-block-0004",
+      "order": 4,
+      "text": "Source : Mader, S. S. & Windelspecht, M. (2014). Biologie humaine, 2e éd., McGraw-Hill/Chenelière Éducation.\n",
+      "text_sha256": "f8a6e838b063e3c50fcef57e75ddb18986ca0c209e61143c8b6ee197632d6cd2"
+    }
+  ],
+  "coordinates_sha256": "3822f6c0a87fb473ed016b3bf48fb36daa14e0c11678ae20d6145a3a86ded996",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1150",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Figures supplémentaires\nF13\nFIGURE 20 Homoncule moteur\nFIGURE 21 Système de contrôle moteur volontaire\nSource : Mader, S. S. & Windelspecht, M. (2014). Biologie humaine, 2e éd., McGraw-Hill/Chenelière Éducation.\n",
+  "raw_text_sha256": "3b3481af5a4201ee7892253354d5721558500295a97636ed64046e7e44ec637f",
+  "source_page_display": 1151,
+  "source_page_index": 1150
+}

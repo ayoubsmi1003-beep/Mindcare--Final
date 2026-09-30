@@ -1,0 +1,100 @@
+{
+  "block_sequence_sha256": "72fc186404aa1d0ae8d542a4f3548e8feb74ad97f4c1d735ec9746d690236a4b",
+  "blocks": [
+    {
+      "bbox": [
+        405.1000061035156,
+        747.3754272460938,
+        555.0,
+        758.6693725585938
+      ],
+      "block_id": "page-0148-block-0001",
+      "order": 1,
+      "text": "Chapitre 6\nNeurobiologie\n131\n",
+      "text_sha256": "d39a43a73a9dc668a0b57474e53a9fa88ab6e5510742fd2f0cb5aee19cabeeba"
+    },
+    {
+      "bbox": [
+        312.0,
+        458.0658264160156,
+        555.3594360351562,
+        515.3585205078125
+      ],
+      "block_id": "page-0148-block-0002",
+      "order": 2,
+      "text": "Le rôle de ces diérents sous-types dans les troubles psy-\nchiatriques demeure peu connu. Des études de Harrison et\nses collaborateurs (2008) donnent à penser que les agonistes\ndes récepteurs mGluR2 et mGluR3 pourraient avoir des propriétés\nantipsychotiques.\n",
+      "text_sha256": "bc02b4927ab045199208f99aba9dac095829cc630d587d573d36071f5fbd0ef0"
+    },
+    {
+      "bbox": [
+        312.0,
+        524.2306518554688,
+        555.2909545898438,
+        725.5585327148438
+      ],
+      "block_id": "page-0148-block-0003",
+      "order": 3,
+      "text": "Acide γ-aminobutyrique\nL’acide γ-aminobutyrique (GABA), découvert en 1950, est le\nneurotransmetteur inhibiteur le plus répandu dans le SNC ;\ndans certaines régions, sa concentration est près de 1000 fois\nsupérieure à celle des monoamines. Les neurones GABAer-\ngiques peuvent constituer des neurones de projection ou des\ninterneurones. Les interneurones GABAergiques exercent une\naction inhibitrice sur la majorité des cellules monoaminer-\ngiques. Aussi, les régions du système limbique qui reçoivent\nune innervation monoaminergique renvoient des projections\nGABAergiques inhibitrices vers les mêmes régions. La neuro-\ntransmission GABAergique joue un rôle dans plusieurs troubles\nneurologiques et psychiatriques, notamment la chorée de\nHuntington, l’épilepsie, l’alcoolisme, les troubles du sommeil\net la maladie de Parkinson. Les anxiolytiques, en particulier\nles benzodiazépines, et les barbituriques favorisent la neuro-\ntransmission GABAergique.\n",
+      "text_sha256": "3a86811edbea6c678d5aeb1c320324761fbab254124056fdfc508b9ea79e3b44"
+    },
+    {
+      "bbox": [
+        54.0,
+        458.0658264160156,
+        297.107421875,
+        514.5585327148438
+      ],
+      "block_id": "page-0148-block-0004",
+      "order": 4,
+      "text": "jusqu’à plusieurs semaines. En clinique, on utilise un agoniste de\nla glycine, la D-cyclosérine, pour faciliter la neurotransmission\nglutamatergique, ce qui permet d’éviter l’eet neurotoxique du\nglutamate. La glycine et la sérine sont parfois utilisées dans le\ntraitement des symptômes négatifs de la schizophrénie.\n",
+      "text_sha256": "91969f52c9aeed2dc490038012cd34b614bb3e73191c37c0228089b24de09451"
+    },
+    {
+      "bbox": [
+        54.0,
+        515.5658569335938,
+        297.6706848144531,
+        629.5585327148438
+      ],
+      "block_id": "page-0148-block-0005",
+      "order": 5,
+      "text": "Il existe un autre site de liaison important qui se trouve à l’inté-\nrieur du canal calcique, il s’agit du site phencyclidine (PCP). Cette\ndrogue a la propriété de se lier à ce site et d’ainsi bloquer le canal ;\nla kétamine agit de la même manière. L’eet psychotomimétique\n(induction de symptômes qui s’apparentent à la psychose) du PCP\net de la kétamine résulte de leur action antagoniste vis-à-vis des\nrécepteurs NMDA ; elle est à l’origine de la théorie glutamater-\ngique de la psychose. La kétamine peut également avoir un eet\nantidépresseur rapide suggérant que le système glutamatergique\nest aussi impliqué dans un sous-type de dépression.\n",
+      "text_sha256": "218481bf3e578b3ec1d0075b3d881c0d48637e0557491d6caf5a796e294acb75"
+    },
+    {
+      "bbox": [
+        54.0,
+        630.5658569335938,
+        297.13677978515625,
+        725.5585327148438
+      ],
+      "block_id": "page-0148-block-0006",
+      "order": 6,
+      "text": "Les récepteurs glutamatergiques couplés aux protéines G\ncomprennent huit récepteurs métabotropes regroupés en trois\nsous-types :\n• I, comprenant le mGluR1 et le mGlur5 qui, activés, stimulent\nla production de l’IP3 ;\n• II, comprenant le mGLuR2 et le mGluR3 qui inhibent l’AMPc ;\n• III, comprenant le mGluR4, le mGluR6, le mGluR7 et le\nmGluR8 qui activent l’AMPc.\n",
+      "text_sha256": "d6842adda847629722a2e9075bc94adee7865f68901cee9c85fbb3a66d6cba3f"
+    },
+    {
+      "bbox": [
+        56.25,
+        41.002296447753906,
+        491.5973205566406,
+        53.320068359375
+      ],
+      "block_id": "page-0148-block-0007",
+      "order": 7,
+      "text": "FIGURE 6.15 Rôle du potentiel électrique de la membrane cellulaire lors de l’activation du récepteur NMDA\n",
+      "text_sha256": "705fd33855738ecdf17477dffde5d6f721bdaeac2882d0d8f754dcb6c2ff5845"
+    }
+  ],
+  "coordinates_sha256": "0241115a7ed6ac27a11b6111c3c71cbf94555edb0c5dca93e28d1f5b5df3b88f",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0148",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 6\nNeurobiologie\n131\nLe rôle de ces diérents sous-types dans les troubles psy-\nchiatriques demeure peu connu. Des études de Harrison et\nses collaborateurs (2008) donnent à penser que les agonistes\ndes récepteurs mGluR2 et mGluR3 pourraient avoir des propriétés\nantipsychotiques.\nAcide γ-aminobutyrique\nL’acide γ-aminobutyrique (GABA), découvert en 1950, est le\nneurotransmetteur inhibiteur le plus répandu dans le SNC ;\ndans certaines régions, sa concentration est près de 1000 fois\nsupérieure à celle des monoamines. Les neurones GABAer-\ngiques peuvent constituer des neurones de projection ou des\ninterneurones. Les interneurones GABAergiques exercent une\naction inhibitrice sur la majorité des cellules monoaminer-\ngiques. Aussi, les régions du système limbique qui reçoivent\nune innervation monoaminergique renvoient des projections\nGABAergiques inhibitrices vers les mêmes régions. La neuro-\ntransmission GABAergique joue un rôle dans plusieurs troubles\nneurologiques et psychiatriques, notamment la chorée de\nHuntington, l’épilepsie, l’alcoolisme, les troubles du sommeil\net la maladie de Parkinson. Les anxiolytiques, en particulier\nles benzodiazépines, et les barbituriques favorisent la neuro-\ntransmission GABAergique.\njusqu’à plusieurs semaines. En clinique, on utilise un agoniste de\nla glycine, la D-cyclosérine, pour faciliter la neurotransmission\nglutamatergique, ce qui permet d’éviter l’eet neurotoxique du\nglutamate. La glycine et la sérine sont parfois utilisées dans le\ntraitement des symptômes négatifs de la schizophrénie.\nIl existe un autre site de liaison important qui se trouve à l’inté-\nrieur du canal calcique, il s’agit du site phencyclidine (PCP). Cette\ndrogue a la propriété de se lier à ce site et d’ainsi bloquer le canal ;\nla kétamine agit de la même manière. L’eet psychotomimétique\n(induction de symptômes qui s’apparentent à la psychose) du PCP\net de la kétamine résulte de leur action antagoniste vis-à-vis des\nrécepteurs NMDA ; elle est à l’origine de la théorie glutamater-\ngique de la psychose. La kétamine peut également avoir un eet\nantidépresseur rapide suggérant que le système glutamatergique\nest aussi impliqué dans un sous-type de dépression.\nLes récepteurs glutamatergiques couplés aux protéines G\ncomprennent huit récepteurs métabotropes regroupés en trois\nsous-types :\n• I, comprenant le mGluR1 et le mGlur5 qui, activés, stimulent\nla production de l’IP3 ;\n• II, comprenant le mGLuR2 et le mGluR3 qui inhibent l’AMPc ;\n• III, comprenant le mGluR4, le mGluR6, le mGluR7 et le\nmGluR8 qui activent l’AMPc.\nFIGURE 6.15 Rôle du potentiel électrique de la membrane cellulaire lors de l’activation du récepteur NMDA\n",
+  "raw_text_sha256": "f13c467f5e203795d1fd7f06928d7c52d7dda8d69688128f204957bc8da86420",
+  "source_page_display": 149,
+  "source_page_index": 148
+}

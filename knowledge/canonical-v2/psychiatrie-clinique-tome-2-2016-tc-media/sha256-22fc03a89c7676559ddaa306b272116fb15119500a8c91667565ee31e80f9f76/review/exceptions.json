@@ -1,0 +1,187 @@
+{
+ "artifact": "review/exceptions.json",
+ "book_id": "psychiatrie-clinique-tome-2-2016-tc-media",
+ "source_version": "sha256:22fc03a89c7676559ddaa306b272116fb15119500a8c91667565ee31e80f9f76",
+ "manifest_sha256": "a866c432afd167b9628afe3c85f050f5d9fe282fa6c5a6ac8471408296051b6d",
+ "queue_item_count": 2306,
+ "exception_item_count": 124,
+ "routine_item_count": 2182,
+ "disposition": "all 124 exceptions remain needs_review; routine items technically eligible for batch coverage",
+ "classes": {
+  "xref_tome2_unresolved": {
+   "count": 1,
+   "queue_ids": [
+    "xref-task7-xref-7399b372fb407925c85b"
+   ]
+  },
+  "empty_medication_names": {
+   "count": 2,
+   "queue_ids": [
+    "medication-review-medication:c51021d2ce204",
+    "medication-review-medication:fbc6a3bfa7bf4"
+   ]
+  },
+  "duplicate_visual_reviews": {
+   "count": 11,
+   "queue_ids": [
+    "numeric-task10-fix1-visual_review-13e1c4",
+    "numeric-task10-fix1-visual_review-5175a9",
+    "numeric-task10-fix1-visual_review-5771d1",
+    "numeric-task10-fix1-visual_review-617edf",
+    "numeric-task10-fix1-visual_review-624333",
+    "numeric-task10-fix1-visual_review-718116",
+    "numeric-task10-fix1-visual_review-b91bb3",
+    "numeric-task10-fix1-visual_review-b9e4a6",
+    "numeric-task10-fix1-visual_review-c0e12e",
+    "numeric-task10-fix1-visual_review-ceb163",
+    "numeric-task10-fix1-visual_review-ec5adc"
+   ]
+  },
+  "duplicate_visual_groups": {
+   "groups": [
+    [
+     "task10-fix1-visual_review-13e1c41e6eb5c8705149a9a9",
+     "task10-fix1-visual_review-62433350ce447a00b8762e6a",
+     "task10-fix1-visual_review-b91bb31f90faacfc37db7d34",
+     "task10-fix1-visual_review-c0e12e3fbfe65385c0d27ec7",
+     "task10-fix1-visual_review-ceb163325b13f73508b3f83d"
+    ],
+    [
+     "task10-fix1-visual_review-5175a951e96a9751577bd69c",
+     "task10-fix1-visual_review-617edfbd3b8b503c52af657e",
+     "task10-fix1-visual_review-b9e4a66107e6e5c9e4979845",
+     "task10-fix1-visual_review-ec5adc4f70eae24182adbf03"
+    ],
+    [
+     "task10-fix1-visual_review-5771d15e9e80d9173fb46eb0",
+     "task10-fix1-visual_review-71811641340a7247fe75ab5f"
+    ]
+   ]
+  },
+  "private_use_claim_in_queue": {
+   "count": 1,
+   "queue_ids": [
+    "numeric-task10-fix1-claim-977e54c7361c9f"
+   ]
+  },
+  "page_mapping_gaps": {
+   "count": 43,
+   "queue_ids": [
+    "page-map-uncertain-0",
+    "page-map-uncertain-11",
+    "page-map-uncertain-12",
+    "page-map-uncertain-13",
+    "page-map-uncertain-142",
+    "page-map-uncertain-146",
+    "page-map-uncertain-147",
+    "page-map-uncertain-150",
+    "page-map-uncertain-174",
+    "page-map-uncertain-180",
+    "page-map-uncertain-2",
+    "page-map-uncertain-3",
+    "page-map-uncertain-320",
+    "page-map-uncertain-4",
+    "page-map-uncertain-503",
+    "page-map-uncertain-518",
+    "page-map-uncertain-532",
+    "page-map-uncertain-565",
+    "page-map-uncertain-571",
+    "page-map-uncertain-572",
+    "page-map-uncertain-618",
+    "page-map-uncertain-625",
+    "page-map-uncertain-626",
+    "page-map-uncertain-69",
+    "page-map-uncertain-7",
+    "page-map-uncertain-704",
+    "page-map-uncertain-705",
+    "page-map-uncertain-707",
+    "page-map-uncertain-708",
+    "page-map-uncertain-709",
+    "page-map-uncertain-711",
+    "page-map-uncertain-716",
+    "page-map-uncertain-717",
+    "page-map-uncertain-723",
+    "page-map-uncertain-726",
+    "page-map-uncertain-734",
+    "page-map-uncertain-737",
+    "page-map-uncertain-766",
+    "page-map-uncertain-782",
+    "page-map-uncertain-788",
+    "page-map-uncertain-8",
+    "page-map-uncertain-823",
+    "page-map-uncertain-84"
+   ]
+  },
+  "unit_mapping_gaps": {
+   "count": 66,
+   "queue_ids": [
+    "unit-page-review-unit:0a32a382ae6",
+    "unit-page-review-unit:0b2e6106458",
+    "unit-page-review-unit:0c5cc8a4b03",
+    "unit-page-review-unit:137a666f201",
+    "unit-page-review-unit:143639b32b3",
+    "unit-page-review-unit:158ad17f14a",
+    "unit-page-review-unit:18d2ec27031",
+    "unit-page-review-unit:1a9802d4248",
+    "unit-page-review-unit:1b6f3d268d7",
+    "unit-page-review-unit:1bb8974818b",
+    "unit-page-review-unit:1ff9bedde83",
+    "unit-page-review-unit:27e38aef99a",
+    "unit-page-review-unit:2a06d5f3dc2",
+    "unit-page-review-unit:2ae9f03941a",
+    "unit-page-review-unit:2cee450d34f",
+    "unit-page-review-unit:33c2d395ebe",
+    "unit-page-review-unit:3b24656c4fa",
+    "unit-page-review-unit:3e528305e1c",
+    "unit-page-review-unit:4c62ffdcd29",
+    "unit-page-review-unit:4c75bf21e18",
+    "unit-page-review-unit:4ecaf32e70f",
+    "unit-page-review-unit:50fb8e3d647",
+    "unit-page-review-unit:5185422b45e",
+    "unit-page-review-unit:52dd0d2dc8a",
+    "unit-page-review-unit:52df34bfddf",
+    "unit-page-review-unit:57a44bbf142",
+    "unit-page-review-unit:591c66aea73",
+    "unit-page-review-unit:59d4eac3b59",
+    "unit-page-review-unit:648412164ee",
+    "unit-page-review-unit:6aed23997ba",
+    "unit-page-review-unit:6cfa2a4d0f2",
+    "unit-page-review-unit:6db2b75d3a1",
+    "unit-page-review-unit:7090b831306",
+    "unit-page-review-unit:724ec37e101",
+    "unit-page-review-unit:7736d60041f",
+    "unit-page-review-unit:779a930b74b",
+    "unit-page-review-unit:78131d085db",
+    "unit-page-review-unit:81f843b4895",
+    "unit-page-review-unit:82f8d20bd6c",
+    "unit-page-review-unit:837821dd91d",
+    "unit-page-review-unit:87eb6f402d7",
+    "unit-page-review-unit:8ccf0916187",
+    "unit-page-review-unit:8d26925667c",
+    "unit-page-review-unit:90757586b16",
+    "unit-page-review-unit:951cfc5e8a8",
+    "unit-page-review-unit:96ace96a941",
+    "unit-page-review-unit:98d2c0c045a",
+    "unit-page-review-unit:ab58fbcdbbb",
+    "unit-page-review-unit:adc4d64000a",
+    "unit-page-review-unit:afcc1035ad4",
+    "unit-page-review-unit:b2251f3c7c5",
+    "unit-page-review-unit:c2752e5c886",
+    "unit-page-review-unit:c29b5247c54",
+    "unit-page-review-unit:c6106e86be2",
+    "unit-page-review-unit:cbd84cc43ab",
+    "unit-page-review-unit:d4b46c154cd",
+    "unit-page-review-unit:db1e2c34ad2",
+    "unit-page-review-unit:df9f9d24961",
+    "unit-page-review-unit:e2c694a374d",
+    "unit-page-review-unit:e6f0e94abf7",
+    "unit-page-review-unit:e75d6289120",
+    "unit-page-review-unit:ec4a1f10def",
+    "unit-page-review-unit:ecf0575afb2",
+    "unit-page-review-unit:f15f04ce1a4",
+    "unit-page-review-unit:f3ba35c4094",
+    "unit-page-review-unit:fb5123e9144"
+   ]
+  }
+ }
+}

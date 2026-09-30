@@ -1,0 +1,700 @@
+{
+  "block_sequence_sha256": "fe505247e2271dc356570e49aa53166863c158d7a592823b964d4cbb88c12be8",
+  "blocks": [
+    {
+      "bbox": [
+        465.5500183105469,
+        746.822265625,
+        555.02001953125,
+        758.9193725585938
+      ],
+      "block_id": "page-0016-block-0001",
+      "order": 1,
+      "text": "Abréviations\nxv\n",
+      "text_sha256": "1dae55efe0bacd4519e2584454ac2bdf55091e6d27044b065c32ac97cf4698eb"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.76171875,
+        203.61642456054688,
+        63.90849685668945
+      ],
+      "block_id": "page-0016-block-0002",
+      "order": 2,
+      "text": "PRI: Plan de services individualisés\nPROS: Plan régional d’organisation de\n",
+      "text_sha256": "d85e79dd3bfa39fe6180791580bcced4d3e6a3996ce18541ddb2342ce54852d0"
+    },
+    {
+      "bbox": [
+        54.0,
+        65.0658187866211,
+        205.1175079345703,
+        88.00849914550781
+      ],
+      "block_id": "page-0016-block-0003",
+      "order": 3,
+      "text": "service\nPROSSM: Plans régionaux d’organisa-\n",
+      "text_sha256": "9c470d69b9311c7068a7055089cbfe53325c81676af62c809d70f1dbf687391a"
+    },
+    {
+      "bbox": [
+        54.0,
+        89.16582489013672,
+        205.9542236328125,
+        112.15850067138672
+      ],
+      "block_id": "page-0016-block-0004",
+      "order": 4,
+      "text": "tion de services en santé mentale\nPRPP: Perceive, Plan and Perform\n",
+      "text_sha256": "dfb287f78f342b6877034b1207eedc13722860554ade197f10935b0e02982fe7"
+    },
+    {
+      "bbox": [
+        54.0,
+        113.3714828491211,
+        196.52975463867188,
+        161.1584930419922
+      ],
+      "block_id": "page-0016-block-0005",
+      "order": 5,
+      "text": "Assessment\nPSG: Polysomnographie\nPSI: Plan de soins individualisé\nPSP: Période de sommeil paradoxal,\n",
+      "text_sha256": "adddef6ec0557b510fa2a6bd2223063d81d0f93b01b061dc960238feaf3ddace"
+    },
+    {
+      "bbox": [
+        54.0,
+        162.36582946777344,
+        208.27548217773438,
+        222.6584930419922
+      ],
+      "block_id": "page-0016-block-0006",
+      "order": 6,
+      "text": "voir aussi REM\nQALY: Quality adjusted life year\nQ.I.: Quotient intellectuel\nQID: Quater in die, quatre fois par jour\nRAMQ : Régie de l’assurance-maladie\n",
+      "text_sha256": "4b815f426ac90e035bf9515d45ca5079f6e521d707a36342f3a421c5f6efafc4"
+    },
+    {
+      "bbox": [
+        54.0,
+        223.86582946777344,
+        198.45118713378906,
+        259.2585144042969
+      ],
+      "block_id": "page-0016-block-0007",
+      "order": 7,
+      "text": "du Québec\nRC: Réponse conditionnelle\nRDA: Renforcement diérentiel d’un\n",
+      "text_sha256": "bbdd65f677456da776d3b71a16c396d136f3549e668f5bb7e8c49255f125c6b5"
+    },
+    {
+      "bbox": [
+        54.0,
+        260.41583251953125,
+        197.95118713378906,
+        283.3584899902344
+      ],
+      "block_id": "page-0016-block-0008",
+      "order": 8,
+      "text": "comportement alternatif\nRDB: Renforcement diérentiel d’un\n",
+      "text_sha256": "3aafa0090a8f8f6a585a803ea3877e44797a24adfe7f87d9d3c152d8f7bd43bf"
+    },
+    {
+      "bbox": [
+        54.0,
+        284.5658264160156,
+        206.59246826171875,
+        307.5085144042969
+      ],
+      "block_id": "page-0016-block-0009",
+      "order": 9,
+      "text": "comportement à basse fréquence\nRDC: Renforcement diérentiel de\n",
+      "text_sha256": "99dea1a730069597ad79b7de66b4509ce1245d49452f5897e20e7e192b116945"
+    },
+    {
+      "bbox": [
+        54.0,
+        308.66583251953125,
+        195.3011932373047,
+        331.6084899902344
+      ],
+      "block_id": "page-0016-block-0010",
+      "order": 10,
+      "text": "comportements\nRDI: Renforcement diérentiel d’un\n",
+      "text_sha256": "a2a56b84d643f954e62b61452a7b6f5aca000adfdf18adcdf3c7c3e698ae365e"
+    },
+    {
+      "bbox": [
+        54.0,
+        332.7658386230469,
+        195.2675018310547,
+        355.7585144042969
+      ],
+      "block_id": "page-0016-block-0011",
+      "order": 11,
+      "text": "comportement incompatible\nREM: Rapid eye movement, mouve-\n",
+      "text_sha256": "e01f2375156b00972a78f50e2eab8b4d1b361fe463ac44f95ab7b1b47622d223"
+    },
+    {
+      "bbox": [
+        54.0,
+        356.91583251953125,
+        210.59486389160156,
+        403.95849609375
+      ],
+      "block_id": "page-0016-block-0012",
+      "order": 12,
+      "text": "ments oculaires rapides, voir aussi\nPSP\nRI: Réponse inconditionnelle\nRIA: Radioimmuno assey, dosage\n",
+      "text_sha256": "831d0b876620caa9e425bc80a9e9b91737d23d844a7e4d18d6398ce7ed6dc058"
+    },
+    {
+      "bbox": [
+        54.0,
+        405.16583251953125,
+        202.41749572753906,
+        440.5585021972656
+      ],
+      "block_id": "page-0016-block-0013",
+      "order": 13,
+      "text": "radio-immunologique\nRLS : Réseaux locaux de services\nRMP: Relaxation musculaire progres-\n",
+      "text_sha256": "18ff2a796cbd5d8a5077554324d15d8ece2fecc0b56b32a0e239514731027199"
+    },
+    {
+      "bbox": [
+        54.0,
+        441.7158203125,
+        196.30760192871094,
+        464.65850830078125
+      ],
+      "block_id": "page-0016-block-0014",
+      "order": 14,
+      "text": "sive\nROAE: Règlement sur l’organisation\n",
+      "text_sha256": "1413b51b19b9eba48c3af87800f5d196b45e6719b761acc83a2ea1259b8127f5"
+    },
+    {
+      "bbox": [
+        54.0,
+        465.8658142089844,
+        202.6175079345703,
+        500.45849609375
+      ],
+      "block_id": "page-0016-block-0015",
+      "order": 15,
+      "text": "et l’administration des établisse-\nments\nRRASOR: Rapid Risk Assessment for\n",
+      "text_sha256": "9b60d3a694e955ea4ed37e5b81048ad6d35d5e4812eb0d37fbbfb06cd189af1a"
+    },
+    {
+      "bbox": [
+        54.0,
+        501.6714782714844,
+        208.7093048095703,
+        524.5585327148438
+      ],
+      "block_id": "page-0016-block-0016",
+      "order": 16,
+      "text": "Sexual Oence Recidivism\nRRSSS: Régie régionale de la santé et des\n",
+      "text_sha256": "0bb7ca42b34a81b3946e3fceea7c0705e7377e01f3523053687733d608f4bf3b"
+    },
+    {
+      "bbox": [
+        54.0,
+        526.1886596679688,
+        207.12535095214844,
+        561.1585083007812
+      ],
+      "block_id": "page-0016-block-0017",
+      "order": 17,
+      "text": "services sociaux\nRSC: Réassignement sexuel chirurgical\nRUIS: Réseau universitaire intégré de\n",
+      "text_sha256": "b596d58fafaaab84bf38b15e8876fcc2e80666ea4ea8c15d2c51893c0f385230"
+    },
+    {
+      "bbox": [
+        54.0,
+        562.3158569335938,
+        205.8175048828125,
+        585.2584838867188
+      ],
+      "block_id": "page-0016-block-0018",
+      "order": 18,
+      "text": "santé\nSAAQ: Société de l’assurance automo-\n",
+      "text_sha256": "dd3a6386419350dadf3c160e5280a6091b2dc537db4a91b804a41f20136f4285"
+    },
+    {
+      "bbox": [
+        54.0,
+        586.4658203125,
+        201.91896057128906,
+        621.7564697265625
+      ],
+      "block_id": "page-0016-block-0019",
+      "order": 19,
+      "text": "bile du Québec\nSAF: Syndrome d’alcoolisation fœtale\nSADS: Schedule for aective disorders\n",
+      "text_sha256": "c8f0c2845701394745ec2e4490f193e4d0c965d3977190a1cb6b844d945ee404"
+    },
+    {
+      "bbox": [
+        54.0,
+        623.0714721679688,
+        199.9000244140625,
+        658.45849609375
+      ],
+      "block_id": "page-0016-block-0020",
+      "order": 20,
+      "text": "and schizophrenia\nSAS: Social adjustment scale\nSBNT: Social behaviour and network\n",
+      "text_sha256": "5b6b42b8feee1fb27d74093bc35af115a254176665b59fe7f6317c6c22a1c02d"
+    },
+    {
+      "bbox": [
+        54.0,
+        659.6715087890625,
+        210.96095275878906,
+        707.45849609375
+      ],
+      "block_id": "page-0016-block-0021",
+      "order": 21,
+      "text": "therapy\nSC: Stimulus conditionnel\nSC: Sous-cutané\nSCAN: Schedules for clinical assessment\n",
+      "text_sha256": "2bf6f1a5682c0100f7dcd61aa1f654771ae2b55acd0783d56ba74bb95f687e3b"
+    },
+    {
+      "bbox": [
+        78.0,
+        708.7214965820312,
+        149.96109008789062,
+        719.0564575195312
+      ],
+      "block_id": "page-0016-block-0022",
+      "order": 22,
+      "text": "in neuropsychiatry\n",
+      "text_sha256": "9909cff92a2edcecf4326e1b535c0b7a7976e46badb0452878dad4ef9566c6db"
+    },
+    {
+      "bbox": [
+        226.0,
+        40.76171875,
+        379.6304626464844,
+        51.45849609375
+      ],
+      "block_id": "page-0016-block-0023",
+      "order": 23,
+      "text": "SCID: Structured Clinical Interview for\n",
+      "text_sha256": "4abddab1137faade1f7bfa73347b5b99909dfce069f216345fd5f54ceec03769"
+    },
+    {
+      "bbox": [
+        226.0,
+        52.87148666381836,
+        349.45703125,
+        76.00849914550781
+      ],
+      "block_id": "page-0016-block-0024",
+      "order": 24,
+      "text": "DSM-IV Axis 1 Disorders\nSCID-D-R: Structured Clinical\n",
+      "text_sha256": "ff6cd47c1c40957cf36742f7283972dd8a881c5263450062f812f48f8255e4b8"
+    },
+    {
+      "bbox": [
+        226.0,
+        77.47148895263672,
+        382.5429382324219,
+        112.50849914550781
+      ],
+      "block_id": "page-0016-block-0025",
+      "order": 25,
+      "text": "Interview for DSM-IV Dissociative\nDisorders Revised\nSCID-II: Structured Clinical Interview\n",
+      "text_sha256": "2166b7720414e0799c1411e3a41fa26c50386f3d41a00d0516fb9b57c81c4c11"
+    },
+    {
+      "bbox": [
+        226.0,
+        113.97148895263672,
+        373.4674987792969,
+        148.95849609375
+      ],
+      "block_id": "page-0016-block-0026",
+      "order": 26,
+      "text": "for DSM-IV Axis II Personality\nDisorders\nSCMA: Société canadienne de méde-\n",
+      "text_sha256": "c08bfe17e9e19e49a700c576114204d44c6241671f81aed2517ee09052eb21aa"
+    },
+    {
+      "bbox": [
+        226.0,
+        150.36582946777344,
+        371.74249267578125,
+        186.2584991455078
+      ],
+      "block_id": "page-0016-block-0027",
+      "order": 27,
+      "text": "cine de l’addiction\nSCP: Stimulation cérébrale profonde\nSCSM : Soins de collaboration en santé\n",
+      "text_sha256": "aa3e812f7a6be2bd82b37a33b35f441cf863991c7801e6854ae3fda726fcb9e6"
+    },
+    {
+      "bbox": [
+        226.0,
+        188.03868103027344,
+        357.6835021972656,
+        223.5084991455078
+      ],
+      "block_id": "page-0016-block-0028",
+      "order": 28,
+      "text": "mentale\nSEP: Sclérose en plaques\nSERM: Selective estrogen receptor\n",
+      "text_sha256": "0fda63b73e5d1625a0cedcab769e395fe021941e5342e933f974f2cffd234315"
+    },
+    {
+      "bbox": [
+        226.0,
+        224.9714813232422,
+        351.7449645996094,
+        260.7585144042969
+      ],
+      "block_id": "page-0016-block-0029",
+      "order": 29,
+      "text": "modulator\nSI: Stimulus inconditionnel\nSIADH: Syndrome de sécrétion\n",
+      "text_sha256": "63fae8e71eb29f116ccb42714e257372f68fbb19d09ac3055ea191e0b052a514"
+    },
+    {
+      "bbox": [
+        226.0,
+        262.16583251953125,
+        378.3175048828125,
+        297.2585144042969
+      ],
+      "block_id": "page-0016-block-0030",
+      "order": 30,
+      "text": "inappropriée d’hormone antidiu-\nrétique\nSIDA: Syndrome d’immunodécience\n",
+      "text_sha256": "98175d506ce5a02f673197cc0879cd13c82a9ecd7b55580eeb3f4c6892f23d2a"
+    },
+    {
+      "bbox": [
+        226.0,
+        298.66583251953125,
+        359.5924987792969,
+        321.8584899902344
+      ],
+      "block_id": "page-0016-block-0031",
+      "order": 31,
+      "text": "acquise\nSIDP-IV: Structured Interview for\n",
+      "text_sha256": "b5a02134f5eba0d9f2e11bb2956c5970e49a5ec87b9d7c823ccf49ae1e502807"
+    },
+    {
+      "bbox": [
+        226.0,
+        323.271484375,
+        367.2015380859375,
+        346.40850830078125
+      ],
+      "block_id": "page-0016-block-0032",
+      "order": 32,
+      "text": "DSM-IV Personality Disorders\nSIPS: Structured Interview of\n",
+      "text_sha256": "6ad5d5961abbd55d853c032f17232582d6b333bd1572bbb3486ed29986ba9b7f"
+    },
+    {
+      "bbox": [
+        226.0,
+        347.8714904785156,
+        374.6675109863281,
+        383.70849609375
+      ],
+      "block_id": "page-0016-block-0033",
+      "order": 33,
+      "text": "Prodromal Syndromes\nSL: Sommeil lent\nSMTr: Stimulation magnétique trans-\n",
+      "text_sha256": "9779a6ab67be4a1a4264c67b534c360b9039eadacd79ba4f406dc76d9c4eee7e"
+    },
+    {
+      "bbox": [
+        226.0,
+        385.0658264160156,
+        376.3509521484375,
+        433.65850830078125
+      ],
+      "block_id": "page-0016-block-0034",
+      "order": 34,
+      "text": "crânienne répétitive\nSN: Stimulus neutre\nSNA: Système nerveux autonome\nSNAP: Schedule of nonadaptative and\n",
+      "text_sha256": "b21dc310e808e00af9e6006f04fce25fc2a3025e9e96de017867b321c0524e0a"
+    },
+    {
+      "bbox": [
+        226.0,
+        435.1214904785156,
+        364.8055114746094,
+        458.20849609375
+      ],
+      "block_id": "page-0016-block-0035",
+      "order": 35,
+      "text": "adaptative personality\nSNAP: Système nerveux autonome\n",
+      "text_sha256": "4c5d6087868c3312f3dabda274257530e5a2a6eb84e934035a8624819d5205b2"
+    },
+    {
+      "bbox": [
+        226.0,
+        459.6158142089844,
+        363.92913818359375,
+        482.8085021972656
+      ],
+      "block_id": "page-0016-block-0036",
+      "order": 36,
+      "text": "para sympathique\nSNAS: Système nerveux autonome\n",
+      "text_sha256": "f898da0cf14c8850e10af870b458f3c16bd5c2c84a43fdbf33de7d7b71f0c79a"
+    },
+    {
+      "bbox": [
+        226.0,
+        484.2158203125,
+        376.1335144042969,
+        545.45849609375
+      ],
+      "block_id": "page-0016-block-0037",
+      "order": 37,
+      "text": "sympathique\nSNC: Système nerveux central\nSNP: Single nucleotide polymorhpism\nSNP: Système nerveux périphérique\nSONAR: Sex oender need assessment\n",
+      "text_sha256": "ca07dc53c46bb5c63aa6ce48e0ec8f1fb5b5e0dc7e4905763f2bdca6a1076468"
+    },
+    {
+      "bbox": [
+        226.0,
+        546.9215087890625,
+        369.63311767578125,
+        582.7584838867188
+      ],
+      "block_id": "page-0016-block-0038",
+      "order": 38,
+      "text": "rating\nSOPS: Scale of prodromal symptoms\nSORAG: Sex oence risk appraisal\n",
+      "text_sha256": "1ebedcb242cfe15af54be6db6b1507596b83209afa3c2f354c6a6919adfa8aa6"
+    },
+    {
+      "bbox": [
+        226.0,
+        584.1715087890625,
+        379.9315185546875,
+        607.3085327148438
+      ],
+      "block_id": "page-0016-block-0039",
+      "order": 39,
+      "text": "guide\nSP: Sommeil paradoxal, sommeil REM,\n",
+      "text_sha256": "2a10bd0950060d51bb1c7d86f57f144d8efc642fb18269813794a9cdfce7a207"
+    },
+    {
+      "bbox": [
+        226.0,
+        608.7158203125,
+        370.56549072265625,
+        631.9085083007812
+      ],
+      "block_id": "page-0016-block-0040",
+      "order": 40,
+      "text": "voir aussi REM\nSPECT: Single photon emission com-\n",
+      "text_sha256": "510c2ef0e51aaca8fa01027e74e76ae98ad7095651920cafa319fc2e1f52b9db"
+    },
+    {
+      "bbox": [
+        226.0,
+        633.3715209960938,
+        379.3397521972656,
+        719.1585083007812
+      ],
+      "block_id": "page-0016-block-0041",
+      "order": 41,
+      "text": "puted tomography, tomographie\nmonophotonique\nSPM: Syndrome prémenstruel\nS-R: Stimulus-réponse\nSR: Slow release, à libération prolongée\nSS: Score standard\nSTAT: Statim, immédiatement\n",
+      "text_sha256": "bc401a9f76d4e61b04ec4eb65f58b40c63a32aa3c539fc7970b93c297eede0c1"
+    },
+    {
+      "bbox": [
+        398.0,
+        40.76171875,
+        525.8495483398438,
+        51.45849609375
+      ],
+      "block_id": "page-0016-block-0042",
+      "order": 42,
+      "text": "STEP-BD: Systematic treatment\n",
+      "text_sha256": "0b45bc6ebc662c1614e5c0ab90a4b0d5e600ffd9d3c285e0fa8901d72ff316da"
+    },
+    {
+      "bbox": [
+        398.0,
+        52.87148666381836,
+        554.9640502929688,
+        87.8584976196289
+      ],
+      "block_id": "page-0016-block-0043",
+      "order": 43,
+      "text": "enhancement program for bipolar\ndisorder\nSTEPPS: Systems training for emotional\n",
+      "text_sha256": "f2de2aa032d3ac97b7461478496f328a0f2c79a01cde687253f975b223ba8a97"
+    },
+    {
+      "bbox": [
+        398.0,
+        89.32148742675781,
+        553.6495361328125,
+        112.40850067138672
+      ],
+      "block_id": "page-0016-block-0044",
+      "order": 44,
+      "text": "predictability and problem solving\nSTOPPP: Stockholm Outcome of\n",
+      "text_sha256": "3f6cbced2fc448363a7af861a07f61bf4789481592aba70dedcc261dd11df515"
+    },
+    {
+      "bbox": [
+        398.0,
+        113.8714828491211,
+        554.2531127929688,
+        262.90850830078125
+      ],
+      "block_id": "page-0016-block-0045",
+      "order": 45,
+      "text": "Psychoanalysis and Psychotherapy\nProject\nSVR-20: Sexual violence risk-20\nT3: Triiodothyronine\nT4: yroxine\nTAE: érapie appuyée empiriquement\nTAG: Trouble anxiété généralisée\nTAM: Trouble aectif majeur\nTAT: ematic apperception test\nTB: Trouble bipolaire\nTC: érapie cognitive\nTCC: érapie cognitivo-comporte-\n",
+      "text_sha256": "54e8b06d937bd554204a7f0fa02236842e87164baa5efcdc6bfd46e1b8bbea0e"
+    },
+    {
+      "bbox": [
+        398.0,
+        264.3158264160156,
+        545.967529296875,
+        300.15850830078125
+      ],
+      "block_id": "page-0016-block-0046",
+      "order": 46,
+      "text": "mentale\nTCC: Traumatisme craniocérébral\nTCCp: érapie cognitivo-comporte-\n",
+      "text_sha256": "bf17626bdfe6b3fbc4ee7d76d029112c838b4e3ccae39b19bba1b65eb67f31ca"
+    },
+    {
+      "bbox": [
+        398.0,
+        301.5158386230469,
+        541.717529296875,
+        324.70849609375
+      ],
+      "block_id": "page-0016-block-0047",
+      "order": 47,
+      "text": "mentale pour la psychose\nTCI: Trouble du contrôle des impul-\n",
+      "text_sha256": "21fe5569c8bedd85bac5ab33ebaab6c7e5fbf4a6c152c0403e1cda85feb3330e"
+    },
+    {
+      "bbox": [
+        398.0,
+        326.1158142089844,
+        542.2987060546875,
+        349.2585144042969
+      ],
+      "block_id": "page-0016-block-0048",
+      "order": 48,
+      "text": "sions\nTCI-R: Temperament and Character\n",
+      "text_sha256": "70e48d3bbcd1bb246d968e3d17c90bdbe352ee534f7e2823414fbc39689eee14"
+    },
+    {
+      "bbox": [
+        398.0,
+        350.72149658203125,
+        545.5266723632812,
+        399.15850830078125
+      ],
+      "block_id": "page-0016-block-0049",
+      "order": 49,
+      "text": "Inventory – Revised\nTCL: Trouble cognitif léger\nTD: Trouble dissociatif\nTDA/H: Trouble décit de l’attention\n",
+      "text_sha256": "aef839b6adb90da327857666d93494ab4b4c3678f34b43eb0496d4b728ea48d4"
+    },
+    {
+      "bbox": [
+        398.0,
+        400.5658264160156,
+        546.5654907226562,
+        423.70849609375
+      ],
+      "block_id": "page-0016-block-0050",
+      "order": 50,
+      "text": "avec/sans hyperactivité\ntDCS: Transcranial direct-current sti-\n",
+      "text_sha256": "8ef8b90c43f9e31a52a3a4e99b09685f7ff1f474d5dec00933f9119632bcd5c5"
+    },
+    {
+      "bbox": [
+        398.0,
+        425.1158142089844,
+        553.2404174804688,
+        472.8085021972656
+      ],
+      "block_id": "page-0016-block-0051",
+      "order": 51,
+      "text": "mulation, stimulation électrique\ncorticale transcrânienne\nTDI: Trouble dissociatif de l’identité\nTDPM: Trouble dysphorique prémens-\n",
+      "text_sha256": "5d7334922a2009b6833dff76190a8337f02a091e095038373406e4b3db82f7f4"
+    },
+    {
+      "bbox": [
+        398.0,
+        474.2158203125,
+        532.2193603515625,
+        510.0585021972656
+      ],
+      "block_id": "page-0016-block-0052",
+      "order": 52,
+      "text": "truel\nTEI: Trouble explosif intermittent\nTEMP: Tomographie d’émission\n",
+      "text_sha256": "08a26aed82e8e895e120341bddbb1a8c43dd58033e37b3b99ac28089d1112455"
+    },
+    {
+      "bbox": [
+        398.0,
+        511.41583251953125,
+        550.5772094726562,
+        558.3585205078125
+      ],
+      "block_id": "page-0016-block-0053",
+      "order": 53,
+      "text": "monophotonique = SPECT :\nSingle photon emission computed\ntomo graphy\nTENS: Transcutaneous electrical nerve\n",
+      "text_sha256": "8efd30d97acc0231afe77569e4c9857b59db4f5df2c058aa9b05f8d53bf73f48"
+    },
+    {
+      "bbox": [
+        398.0,
+        559.771484375,
+        537.6266479492188,
+        582.9085083007812
+      ],
+      "block_id": "page-0016-block-0054",
+      "order": 54,
+      "text": "stimulation\nTEP: Tomographie par émission de\n",
+      "text_sha256": "17a2d1a7d8dadd5a3799f0afd2b7605bc8e6aaa161923df41c4e7e160f600c90"
+    },
+    {
+      "bbox": [
+        398.0,
+        584.2658081054688,
+        553.6909790039062,
+        619.3085327148438
+      ],
+      "block_id": "page-0016-block-0055",
+      "order": 55,
+      "text": "positons = PET scan : Positron\nemission tomography scan\nTERV: érapie d’exposition par réalité\n",
+      "text_sha256": "d4325b00af9558023af557d032d8ccd2bf13be5ff05a0f7e4531b5ad3c571cfc"
+    },
+    {
+      "bbox": [
+        398.0,
+        620.7158203125,
+        547.2675170898438,
+        681.9085083007812
+      ],
+      "block_id": "page-0016-block-0056",
+      "order": 56,
+      "text": "virtuelle\nTHC: Δ9-tétrahydrocannabinol\nTID: ter in die, trois fois par jour\nTIP: érapie interpersonnelle\nTmax: Temps d’atteinte de la concen-\n",
+      "text_sha256": "efa9bb402747386427111c74e8c1d696fec3e76987c61d1878d6f9ba909945f6"
+    },
+    {
+      "bbox": [
+        398.0,
+        683.2658081054688,
+        548.867919921875,
+        719.1585083007812
+      ],
+      "block_id": "page-0016-block-0057",
+      "order": 57,
+      "text": "tration maximale C\nTOC: Trouble obsessionnel-compulsif\nTP: Trouble de la personnalité\n",
+      "text_sha256": "b9c7b4b89662c036db0388695ddb9b1343e56508151ca537aea8455a2a9c1e79"
+    }
+  ],
+  "coordinates_sha256": "99bf159e7404399d7efbe3916264abd1248d550f419ee7bd805fc25af54e3c3d",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0016",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Abréviations\nxv\nPRI: Plan de services individualisés\nPROS: Plan régional d’organisation de\nservice\nPROSSM: Plans régionaux d’organisa-\ntion de services en santé mentale\nPRPP: Perceive, Plan and Perform\nAssessment\nPSG: Polysomnographie\nPSI: Plan de soins individualisé\nPSP: Période de sommeil paradoxal,\nvoir aussi REM\nQALY: Quality adjusted life year\nQ.I.: Quotient intellectuel\nQID: Quater in die, quatre fois par jour\nRAMQ : Régie de l’assurance-maladie\ndu Québec\nRC: Réponse conditionnelle\nRDA: Renforcement diérentiel d’un\ncomportement alternatif\nRDB: Renforcement diérentiel d’un\ncomportement à basse fréquence\nRDC: Renforcement diérentiel de\ncomportements\nRDI: Renforcement diérentiel d’un\ncomportement incompatible\nREM: Rapid eye movement, mouve-\nments oculaires rapides, voir aussi\nPSP\nRI: Réponse inconditionnelle\nRIA: Radioimmuno assey, dosage\nradio-immunologique\nRLS : Réseaux locaux de services\nRMP: Relaxation musculaire progres-\nsive\nROAE: Règlement sur l’organisation\net l’administration des établisse-\nments\nRRASOR: Rapid Risk Assessment for\nSexual Oence Recidivism\nRRSSS: Régie régionale de la santé et des\nservices sociaux\nRSC: Réassignement sexuel chirurgical\nRUIS: Réseau universitaire intégré de\nsanté\nSAAQ: Société de l’assurance automo-\nbile du Québec\nSAF: Syndrome d’alcoolisation fœtale\nSADS: Schedule for aective disorders\nand schizophrenia\nSAS: Social adjustment scale\nSBNT: Social behaviour and network\ntherapy\nSC: Stimulus conditionnel\nSC: Sous-cutané\nSCAN: Schedules for clinical assessment\nin neuropsychiatry\nSCID: Structured Clinical Interview for\nDSM-IV Axis 1 Disorders\nSCID-D-R: Structured Clinical\nInterview for DSM-IV Dissociative\nDisorders Revised\nSCID-II: Structured Clinical Interview\nfor DSM-IV Axis II Personality\nDisorders\nSCMA: Société canadienne de méde-\ncine de l’addiction\nSCP: Stimulation cérébrale profonde\nSCSM : Soins de collaboration en santé\nmentale\nSEP: Sclérose en plaques\nSERM: Selective estrogen receptor\nmodulator\nSI: Stimulus inconditionnel\nSIADH: Syndrome de sécrétion\ninappropriée d’hormone antidiu-\nrétique\nSIDA: Syndrome d’immunodécience\nacquise\nSIDP-IV: Structured Interview for\nDSM-IV Personality Disorders\nSIPS: Structured Interview of\nProdromal Syndromes\nSL: Sommeil lent\nSMTr: Stimulation magnétique trans-\ncrânienne répétitive\nSN: Stimulus neutre\nSNA: Système nerveux autonome\nSNAP: Schedule of nonadaptative and\nadaptative personality\nSNAP: Système nerveux autonome\npara sympathique\nSNAS: Système nerveux autonome\nsympathique\nSNC: Système nerveux central\nSNP: Single nucleotide polymorhpism\nSNP: Système nerveux périphérique\nSONAR: Sex oender need assessment\nrating\nSOPS: Scale of prodromal symptoms\nSORAG: Sex oence risk appraisal\nguide\nSP: Sommeil paradoxal, sommeil REM,\nvoir aussi REM\nSPECT: Single photon emission com-\nputed tomography, tomographie\nmonophotonique\nSPM: Syndrome prémenstruel\nS-R: Stimulus-réponse\nSR: Slow release, à libération prolongée\nSS: Score standard\nSTAT: Statim, immédiatement\nSTEP-BD: Systematic treatment\nenhancement program for bipolar\ndisorder\nSTEPPS: Systems training for emotional\npredictability and problem solving\nSTOPPP: Stockholm Outcome of\nPsychoanalysis and Psychotherapy\nProject\nSVR-20: Sexual violence risk-20\nT3: Triiodothyronine\nT4: yroxine\nTAE: érapie appuyée empiriquement\nTAG: Trouble anxiété généralisée\nTAM: Trouble aectif majeur\nTAT: ematic apperception test\nTB: Trouble bipolaire\nTC: érapie cognitive\nTCC: érapie cognitivo-comporte-\nmentale\nTCC: Traumatisme craniocérébral\nTCCp: érapie cognitivo-comporte-\nmentale pour la psychose\nTCI: Trouble du contrôle des impul-\nsions\nTCI-R: Temperament and Character\nInventory – Revised\nTCL: Trouble cognitif léger\nTD: Trouble dissociatif\nTDA/H: Trouble décit de l’attention\navec/sans hyperactivité\ntDCS: Transcranial direct-current sti-\nmulation, stimulation électrique\ncorticale transcrânienne\nTDI: Trouble dissociatif de l’identité\nTDPM: Trouble dysphorique prémens-\ntruel\nTEI: Trouble explosif intermittent\nTEMP: Tomographie d’émission\nmonophotonique = SPECT :\nSingle photon emission computed\ntomo graphy\nTENS: Transcutaneous electrical nerve\nstimulation\nTEP: Tomographie par émission de\npositons = PET scan : Positron\nemission tomography scan\nTERV: érapie d’exposition par réalité\nvirtuelle\nTHC: Δ9-tétrahydrocannabinol\nTID: ter in die, trois fois par jour\nTIP: érapie interpersonnelle\nTmax: Temps d’atteinte de la concen-\ntration maximale C\nTOC: Trouble obsessionnel-compulsif\nTP: Trouble de la personnalité\n",
+  "raw_text_sha256": "57b5ac9d245533b3ade5fb0e388e7e4fc8402df4aeb240545f73f95917942bef",
+  "source_page_display": 17,
+  "source_page_index": 16
+}

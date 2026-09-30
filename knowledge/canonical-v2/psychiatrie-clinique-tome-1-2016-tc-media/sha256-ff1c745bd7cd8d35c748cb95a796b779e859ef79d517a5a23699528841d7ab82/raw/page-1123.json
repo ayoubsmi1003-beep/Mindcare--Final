@@ -1,0 +1,820 @@
+{
+  "block_sequence_sha256": "f4c97533f2ef67ea981b1bea313e41600aa7bce6f97e612ca78ecdf50d43a62e",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        126.91150665283203,
+        758.8693237304688
+      ],
+      "block_id": "page-1123-block-0001",
+      "order": 1,
+      "text": "R26\nRéférences\n",
+      "text_sha256": "e17fc7ae3d71197e53b43ac7b65db5a4de9b7063d06d9a4b77c13c96224a0c80"
+    },
+    {
+      "bbox": [
+        390.0,
+        40.68496322631836,
+        548.1799926757812,
+        57.97343826293945
+      ],
+      "block_id": "page-1123-block-0002",
+      "order": 2,
+      "text": "Massachusetts General Hospital. (2010). Handbook of General\nHospital Psychiatry, 6e éd., Philadelphie, Saunders- Elsevier.\n",
+      "text_sha256": "8bd5b406f70a9de2edde663daf372787b031aecd81c9b99abe5410e2176c7b2b"
+    },
+    {
+      "bbox": [
+        390.0,
+        61.88496398925781,
+        536.5823974609375,
+        88.2734375
+      ],
+      "block_id": "page-1123-block-0003",
+      "order": 3,
+      "text": "National Institute of Health. (1981). « The Review Panel on\nCoronary-Prone Behavior and Coronary Heart Disease.\nA Critical Review », Circulation, 63, p. 1199-1215.\n",
+      "text_sha256": "2d9eafa338f67b09f70a4b171bc223bf9fedb294877e36e5231103e3471480d4"
+    },
+    {
+      "bbox": [
+        390.0,
+        92.1849594116211,
+        545.0975341796875,
+        127.6734390258789
+      ],
+      "block_id": "page-1123-block-0004",
+      "order": 4,
+      "text": "Nielsen, K. & al. (2005). « Sef-inicted Skin Diseases. A\nRetrospective Analysis of 57 Patients with Dermatitis Arte-\nfacta Seen in a Dermatology Department », Acta Dermato\nVenereologica, 85(6), p. 512-515.\n",
+      "text_sha256": "23495b1f17ccca28d71e77b4b5b227db2a7954e1547b24a8fbf24d7517335bc0"
+    },
+    {
+      "bbox": [
+        390.0,
+        131.5849609375,
+        541.447509765625,
+        167.0734405517578
+      ],
+      "block_id": "page-1123-block-0005",
+      "order": 5,
+      "text": "Pawlak, C. R. & al. (1999). « Patients with systemic lupus\nerythematosus differ from healthy controls in their immu-\nnological response to acute stress », Brain, Behavior, and\nImmunity, 13(4), p. 287-302.\n",
+      "text_sha256": "f1b019d0f396ca13c612d8e65b034000269323a17b024ca0e1fcaaaf9a7dc550"
+    },
+    {
+      "bbox": [
+        390.0,
+        170.98497009277344,
+        546.1334838867188,
+        206.4734344482422
+      ],
+      "block_id": "page-1123-block-0006",
+      "order": 6,
+      "text": "Rutledge, T. & Hogan, B. E. (2002). « A quantitative review\nof prospective evidence linking psychological factors with\nhypertension development », Psychosomatic Medicine,\n64(5), p. 758-766.\n",
+      "text_sha256": "11a529b11049c7af04cc8e7565f30d15ab47c7fbabcae6e83b6ac7c661eb6098"
+    },
+    {
+      "bbox": [
+        390.0,
+        210.3849639892578,
+        543.6525268554688,
+        245.87344360351562
+      ],
+      "block_id": "page-1123-block-0007",
+      "order": 7,
+      "text": "Rutledge, T. & al. (2006). « Depression in heart failure :\nA meta-analytic review of prevalence, intervention effects,\nand association with clinical outcomes », Journal of the\nAmerican College of Cardiology, 48(8), p. 1527-1537.\n",
+      "text_sha256": "61289eada58a9eda2b1aa61ffbe04ff1a58f4b56a80fc650828f59b280aaebe6"
+    },
+    {
+      "bbox": [
+        390.0,
+        249.78497314453125,
+        531.6925659179688,
+        267.0734558105469
+      ],
+      "block_id": "page-1123-block-0008",
+      "order": 8,
+      "text": "Sadock, B. J. & al. (1980). Comprehensive Textbook of\nPsychiatry, Baltimore, MD, Williams & Wilkins.\n",
+      "text_sha256": "c508392985459673bdef6bbc1face4a83c107b1b1d52738662ce4e33ab4f91a1"
+    },
+    {
+      "bbox": [
+        390.0,
+        270.9849548339844,
+        548.4450073242188,
+        297.3734436035156
+      ],
+      "block_id": "page-1123-block-0009",
+      "order": 9,
+      "text": "Selye, H. (1946). « The general adaptation syndrome and the\ndiseases of adaptation », Journal of Clinical Endocrinology &\nMetabolism, 6(2), p. 117-230.\n",
+      "text_sha256": "7104e737506b994b848db0c85a4490cb8ae94a21a158dcc37e0685d929d8672b"
+    },
+    {
+      "bbox": [
+        390.0,
+        301.28497314453125,
+        542.52001953125,
+        318.5734558105469
+      ],
+      "block_id": "page-1123-block-0010",
+      "order": 10,
+      "text": "Sifneos, P. (1972). Short term Psychotheray and Emotional\nCrisis, Cambridge, Harvard University Press.\n",
+      "text_sha256": "657adbe3efce45ffcd2c5cb92b0da07bb1c52be58dfebea6af708cc70de17b3e"
+    },
+    {
+      "bbox": [
+        390.0,
+        322.4849548339844,
+        542.7393188476562,
+        339.7734375
+      ],
+      "block_id": "page-1123-block-0011",
+      "order": 11,
+      "text": "Sirois, F. (1992). « Le déni dans la maladie coronarienne »,\nCanadian Medical Association Journal, 147, p. 315-321.\n",
+      "text_sha256": "266f21d6a66f3d0b38827e1bbef07c84e282495a7f47e7421d8507c431c1c724"
+    },
+    {
+      "bbox": [
+        390.0,
+        343.7349548339844,
+        536.4177856445312,
+        370.1234436035156
+      ],
+      "block_id": "page-1123-block-0012",
+      "order": 12,
+      "text": "Sirois, F. (2009). « L’intervention brève en psychiatrie de\nconsultation- liaison », Santé mentale au Québec, 34(2),\np. 237-254.\n",
+      "text_sha256": "a94a2d1831a066fae910fcbc5c375d3bbb0db46f81e019917661fe442008dc68"
+    },
+    {
+      "bbox": [
+        390.0,
+        374.03497314453125,
+        548.817626953125,
+        400.4234313964844
+      ],
+      "block_id": "page-1123-block-0013",
+      "order": 13,
+      "text": "Sirois, F. (2010). « TakoTsubo cardiomyopathy and emotional\nstress : A heuristic approach », General Hospital Psychiatry,\n32(4), p. 447.e1l-447.e13.\n",
+      "text_sha256": "e92ada2c12ad74e4544e8d1de1067a794f7a67aae2e4ebdef30791c2a13b95d8"
+    },
+    {
+      "bbox": [
+        390.0,
+        404.3349609375,
+        527.97998046875,
+        430.72344970703125
+      ],
+      "block_id": "page-1123-block-0014",
+      "order": 14,
+      "text": "Sirois, F. (2012a). « Syndrome de Takotsubo : nature\ndu stress psychique », La Presse Médicale, 42(4P1),\np. 471-472.\n",
+      "text_sha256": "89306bdc976272a4ac847ed3891a55b09c9eeeaa8c0015aa56132235ff1ef8a4"
+    },
+    {
+      "bbox": [
+        390.0,
+        434.6349792480469,
+        544.7468872070312,
+        461.0234375
+      ],
+      "block_id": "page-1123-block-0015",
+      "order": 15,
+      "text": "Sirois, F. (2012b). « Psychiatric aspects of chronic palliative\ncare : Waiting for death », Palliative and Supportive Care,\n10(3), p. 205-211\n",
+      "text_sha256": "2317aa586ecefd8be290809cb262e4feb67b328ae9250f8b9397d796f97d48ad"
+    },
+    {
+      "bbox": [
+        390.0,
+        464.9349670410156,
+        540.8793334960938,
+        491.3234558105469
+      ],
+      "block_id": "page-1123-block-0016",
+      "order": 16,
+      "text": "Stowell, J. R. & al. (2001). « Perceived stress and cellular\nimmunity : when coping counts », Journal of Behavioral\nMedicine, 24(4), p. 323-339.\n",
+      "text_sha256": "86283e56d37f5e529e2da0fa56e2a93352abf99d30b3e146c00e076da78bc8f9"
+    },
+    {
+      "bbox": [
+        390.0,
+        495.2349548339844,
+        538.4521484375,
+        521.6234741210938
+      ],
+      "block_id": "page-1123-block-0017",
+      "order": 17,
+      "text": "Straub, R. H. & al. (2005). « How psycho logical stress via\nhormones and nerve bers may exacerbate rhumatoid\narthritis », Arthritis & Rheumatism, 52(1), p. 16-26.\n",
+      "text_sha256": "34ecb646b2c4c95a5a416e46f2f0d866f712bb8db934fab778072d165c783862"
+    },
+    {
+      "bbox": [
+        390.0,
+        525.5349731445312,
+        518.8574829101562,
+        542.8234252929688
+      ],
+      "block_id": "page-1123-block-0018",
+      "order": 18,
+      "text": "Vaillant, G. (1992). Ego Mechanisms of Defense,\nWashington, DC, American Psychiatric Press.\n",
+      "text_sha256": "660d8c539a4993b7482766fa4a6389ddc97e1fd65dd10d64bf686093d37c408b"
+    },
+    {
+      "bbox": [
+        390.0,
+        546.7349853515625,
+        531.4000244140625,
+        573.1234741210938
+      ],
+      "block_id": "page-1123-block-0019",
+      "order": 19,
+      "text": "Vuitton, D. A. & al. (1999). « Psycho- immunologie : un\nmodèle en question », La Revue de médecine Interne,\n20(10), p. 934-946.\n",
+      "text_sha256": "165a5951776873772b3aca323cece5fd9d339ec758924625d01ad46eb74b08b8"
+    },
+    {
+      "bbox": [
+        390.0,
+        577.0349731445312,
+        544.9598388671875,
+        603.4234619140625
+      ],
+      "block_id": "page-1123-block-0020",
+      "order": 20,
+      "text": "Willemsen, R. & al. (2008). « Alexithymia and dermatology :\nThe state of the art », International Journal of Dermatology,\n47(9), p. 903-910.\n",
+      "text_sha256": "4f5fb57579e149b82e0df4698b302762ea0dff16bd1c10f1afb00d3ebabf7407"
+    },
+    {
+      "bbox": [
+        390.0,
+        607.3349609375,
+        543.0975341796875,
+        633.7234497070312
+      ],
+      "block_id": "page-1123-block-0021",
+      "order": 21,
+      "text": "Wittstein, I. S. (2005). « Neurohumoral features of myocar-\ndial stunning due to sudden emotional stress »,The New\nEngland Journal Medicine, 352(6), p. 539-548.\n",
+      "text_sha256": "c1d322024f89510a2d58b1e9389ecc971a221e5be44127821eb9381ede102cff"
+    },
+    {
+      "bbox": [
+        390.0,
+        647.1203002929688,
+        542.5509643554688,
+        694.2234497070312
+      ],
+      "block_id": "page-1123-block-0022",
+      "order": 22,
+      "text": "Chapitre 30\nAmerican Psychiatric Association (APA). (1994). DSM-IV.\nCritères diagnostiques (Washington, DC, 1994). Tra-\nduction française par J.-D. Guelet al., Paris, Masson,\n239 p.\n",
+      "text_sha256": "5435c2ec8f742fa2dc3caa91fcfed516fcf172f778cceb10594ea4865d36fc0a"
+    },
+    {
+      "bbox": [
+        390.0,
+        698.1349487304688,
+        544.8853149414062,
+        724.5234375
+      ],
+      "block_id": "page-1123-block-0023",
+      "order": 23,
+      "text": "American Psychiatric Association (APA). (2004). DSM-IV-TR.\nCritères diagnostiques (Washington, DC, 2000). Traduction\nfrançaise par J.-D. Guelet al., Paris, Masson, 384 p.\n",
+      "text_sha256": "f678d07d18fb0bc6e688b3520280e422a2e3a646db9672a27d8f9e8765a0a64d"
+    },
+    {
+      "bbox": [
+        219.0,
+        40.68496322631836,
+        368.6499938964844,
+        58.0234375
+      ],
+      "block_id": "page-1123-block-0024",
+      "order": 24,
+      "text": "ndings », Journal of American Medical Association, 169,\np. 1286.\n",
+      "text_sha256": "2b3487a18506666d802519afea4553051cc858cb09971ced855d1a110e2fcac0"
+    },
+    {
+      "bbox": [
+        219.0,
+        61.984962463378906,
+        377.3327331542969,
+        97.57344055175781
+      ],
+      "block_id": "page-1123-block-0025",
+      "order": 25,
+      "text": "Groves, M. S. & Muskin, P. R. (2011). « Psychological Res-\nponses to Illness », dans Levenson, J. L. (éd.), Textbook of\nPsychosomatic Medicine, 2e éd., Washington, DC, American\nPsychiatric Publishing.\n",
+      "text_sha256": "0a6e110dea5da8bedfb1939d593bbf4786ba97e45ecfbea1fbdd83203c0c0592"
+    },
+    {
+      "bbox": [
+        219.0,
+        101.53496551513672,
+        359.73260498046875,
+        137.17344665527344
+      ],
+      "block_id": "page-1123-block-0026",
+      "order": 26,
+      "text": "Hashizume, H. & al. (2005). « Anxiety accelerates\nT-helper 2-tilted immune response in patients with\natopic dermatitis », British Journal of Dermatology,\n152, p. 1161-1164.\n",
+      "text_sha256": "7c6af592301d83e2bad0bea3ec832e3f5dd293e3f5c4717e615c127871260c7f"
+    },
+    {
+      "bbox": [
+        219.0,
+        141.1349639892578,
+        376.21185302734375,
+        176.7734375
+      ],
+      "block_id": "page-1123-block-0027",
+      "order": 27,
+      "text": "Hasler, G. & al. (2005). « Asthma and panic in Young Adults.\nA 20-Year Prosppective Community Study », American\nJournal of Respiratory and Critical Care Medicine, 171,\np. 1224-1230.\n",
+      "text_sha256": "df93519e0da20eddc43b3f0be2c2d0c74c9377ae52c47da4cf64f3462dd34cdc"
+    },
+    {
+      "bbox": [
+        219.0,
+        180.68496704101562,
+        377.8775634765625,
+        216.3234405517578
+      ],
+      "block_id": "page-1123-block-0028",
+      "order": 28,
+      "text": "Hemingway, H. & Marmot, M. (1999). « Evidence based car-\ndiology. Psychosocial factors in the etiology and prognosis\nof coronary heart disease : systematic review of prospective\ncohort studies », British Medical Journal, 31, p. 1460-1467.\n",
+      "text_sha256": "52ebbf511442b689b38ff6b187dede3f8c3c52b06766b2bfdcda3b6bb687bd21"
+    },
+    {
+      "bbox": [
+        219.0,
+        220.2849578857422,
+        372.08514404296875,
+        246.7734375
+      ],
+      "block_id": "page-1123-block-0029",
+      "order": 29,
+      "text": "Holmes, T. & Rahe, R. H. (1967). « The Social Readjustment\nRating Scale », Journal of Psychosomatic Research, 11,\np. 213-218.\n",
+      "text_sha256": "ec420ddab00361c2dff6768a9d28b22211a4cff6732d2e19aa96ab89e9b35715"
+    },
+    {
+      "bbox": [
+        219.0,
+        250.73495483398438,
+        364.8875427246094,
+        286.3234558105469
+      ],
+      "block_id": "page-1123-block-0030",
+      "order": 30,
+      "text": "Jones, M. P. (2006). « The role of psychosocial factors\nin peptic ulcer disease : Beyond Helicobacter pylori and\nNSAIDs », Journal of Psychosomatic Research, 60(4),\np. 407-412.\n",
+      "text_sha256": "871371a0f67b1c36c924f998f21673252c9964006a6d2ac9b41cb1618675d1d8"
+    },
+    {
+      "bbox": [
+        219.0,
+        290.28497314453125,
+        375.0223693847656,
+        316.7734375
+      ],
+      "block_id": "page-1123-block-0031",
+      "order": 31,
+      "text": "Kannel, W. B. & al. (1976). « A general cardiovascular risk\nprole : the Framingham Study », Am Journal of Cardiology,\n38, p. 46-51.\n",
+      "text_sha256": "de9bdd130ed799e1d3c0a973b1a49946e3cafc18a6581c164de6f73970d30efe"
+    },
+    {
+      "bbox": [
+        219.0,
+        320.7349548339844,
+        374.5700988769531,
+        356.3234558105469
+      ],
+      "block_id": "page-1123-block-0032",
+      "order": 32,
+      "text": "Kenemy, M. E. & Schedlowski, M. (2007). « Understanding\nthe interaction between psychosocial stress and immune-\nrelated diseases : A stepwise progression », Brain, Behavior\nand Immunity, 21(8), p. 1009-1018.\n",
+      "text_sha256": "8ad343386db1608ef297c2b76f1b36d89d7b8a56d8ed48ea9af1e9a3337f6b78"
+    },
+    {
+      "bbox": [
+        219.0,
+        360.28497314453125,
+        376.5400695800781,
+        386.7734375
+      ],
+      "block_id": "page-1123-block-0033",
+      "order": 33,
+      "text": "Kiecolt-Glaser, J. K. & al. (2002). « Psychoneuroimmunology\nand psychosomatic medicine : Back to the future », Psycho-\nsomatic Medicine, 64(1), p. 15-28.\n",
+      "text_sha256": "9859aa13dc60a2e330c7d36e64e1280322d75ad83fe640514ba5e2b3fa2a3a28"
+    },
+    {
+      "bbox": [
+        219.0,
+        390.7349548339844,
+        377.282958984375,
+        426.3734436035156
+      ],
+      "block_id": "page-1123-block-0034",
+      "order": 34,
+      "text": "Koloski, N. A. & al. (2006). « Somatization an independent\npsychosocial risk factor for irritable bowel syndrome but not\ndyspepsia : a population-based study », European Journal of\nGastro enterology & Hepatology, 18, p. 1101-1109.\n",
+      "text_sha256": "d97874ad14501c919595872552fe4492b90c7cbd0fa5a057ef7d3b2995ed88e0"
+    },
+    {
+      "bbox": [
+        219.0,
+        430.28497314453125,
+        376.947509765625,
+        465.9234313964844
+      ],
+      "block_id": "page-1123-block-0035",
+      "order": 35,
+      "text": "Kozyrskyj, A. L. & al. (2008). « Continued exposure to mater-\nnal distress in early life is associated with an increased risk\nof childhood asthma », American Journal of Respiratory and\nCritical Care Medicine, 177(2), p. 142-147.\n",
+      "text_sha256": "efa5bd1470730370ae3d86018508be1efc96b38137f86a90db9b04acec2ce4ed"
+    },
+    {
+      "bbox": [
+        219.0,
+        469.8849792480469,
+        359.59423828125,
+        487.22344970703125
+      ],
+      "block_id": "page-1123-block-0036",
+      "order": 36,
+      "text": "Krystal, H. (1979). « Alexithymia and psychotherapy »,\nAmerican Journal of Psychotherapy, 33, p. 17-31.\n",
+      "text_sha256": "8a1da53b16fb7c9e80a68fac66da098318ab33324dcc4551c842f05048c18d95"
+    },
+    {
+      "bbox": [
+        219.0,
+        491.1849670410156,
+        360.8567810058594,
+        517.6234741210938
+      ],
+      "block_id": "page-1123-block-0037",
+      "order": 37,
+      "text": "Kyrou, I. & Tsigos, C. (2007). « Stress mechanisms and\nmetabolic complications », Hormone and Metabolic\nResearch, 39(6), p. 430-438.\n",
+      "text_sha256": "7e198520f8efa531cd2f53cf84ff7e3ea2831d5c5563ce2e91d59e34d5ee483e"
+    },
+    {
+      "bbox": [
+        219.0,
+        521.5849609375,
+        366.8500061035156,
+        548.0734252929688
+      ],
+      "block_id": "page-1123-block-0038",
+      "order": 38,
+      "text": "Lampert R. & al. (2002). « Emotional and physical\nprecipitants of ventricular arrythmias », Circulation, 106,\np. 1800-1805.\n",
+      "text_sha256": "1f9979331170226654052f5887fef7c246c1a2fe8e33704cdaecb928c66d2fb9"
+    },
+    {
+      "bbox": [
+        219.0,
+        552.0349731445312,
+        377.9112854003906,
+        569.3734741210938
+      ],
+      "block_id": "page-1123-block-0039",
+      "order": 39,
+      "text": "Lesser, I. M. (1981). « A Review of the Alexithymia Concept »,\nPsychosomatic Medicine, 143, p. 531-543.\n",
+      "text_sha256": "00acbe23de69ff715afeb6fe6028d19c4b3874f1af812a7d1eaf1ccbeb8da5bf"
+    },
+    {
+      "bbox": [
+        219.0,
+        573.3349609375,
+        376.9587707519531,
+        590.6734619140625
+      ],
+      "block_id": "page-1123-block-0040",
+      "order": 40,
+      "text": "Levenson, J. L. (2011). Textbook of Psychosomatic Medicine,\nWashington, DC, American Psychiatric Publishing.\n",
+      "text_sha256": "45a63f6d0397d1bb313a7855aac243937cfeb4578b0f4b103147d63b40e0b14a"
+    },
+    {
+      "bbox": [
+        219.0,
+        594.5849609375,
+        376.01251220703125,
+        621.0734252929688
+      ],
+      "block_id": "page-1123-block-0041",
+      "order": 41,
+      "text": "Levenstein, S. (2000). « The very model of modern etiology :\nA biopsychosocial view of the peptic ulcer », Psychoso matic\nMedicine, 62(2), p. 176-185\n",
+      "text_sha256": "4ad757d661c62c6765a940c99018f2922d5ed0976b8082dba93b59b0f1f454cb"
+    },
+    {
+      "bbox": [
+        219.0,
+        625.0349731445312,
+        365.95758056640625,
+        651.5234375
+      ],
+      "block_id": "page-1123-block-0042",
+      "order": 42,
+      "text": "Linden, W. & al. (1996). « Psychologial interventions for\npatients with coronary artery disease : a metaanalysis »,\nArchives of Internal Medicine, 156, p. 745-752.\n",
+      "text_sha256": "5d0923bb0ecafd99c185bc787613025b78e9e39ca72c3a8061c2461ac4f7d45b"
+    },
+    {
+      "bbox": [
+        219.0,
+        655.4849853515625,
+        374.5350341796875,
+        681.9234619140625
+      ],
+      "block_id": "page-1123-block-0043",
+      "order": 43,
+      "text": "MacMahon, K. M. A. & Lip, G. Y. H. (2002). « Psychological\nfactors in heart failure. A review of the literature », Archives\nof Internal Medicine, 162(5), p. 509-516.\n",
+      "text_sha256": "a8d96a80970859a0bfbae0d6f8deb8e3840e91552d1986ce51793ffda97eae3e"
+    },
+    {
+      "bbox": [
+        219.0,
+        685.8849487304688,
+        372.4763488769531,
+        703.2234497070312
+      ],
+      "block_id": "page-1123-block-0044",
+      "order": 44,
+      "text": "Marty, P. & de M’Uzan, M. (1963). « La pensée opératoire »,\nRevue française de psychanalyse, 27, p. 345-356.\n",
+      "text_sha256": "2748fb5b06944593ceb3d52b47618f1cc3a105cadcc76cca9b14c8925f8c36fd"
+    },
+    {
+      "bbox": [
+        219.0,
+        707.1849975585938,
+        365.29998779296875,
+        724.5234375
+      ],
+      "block_id": "page-1123-block-0045",
+      "order": 45,
+      "text": "Marty, P. & al. (1963). L’investigation psychosomatique,\nParis, Presses Universitaires de France.\n",
+      "text_sha256": "01e977d1fc216ce7c36547605c0b3ce8e3bde7d329cfb187b477962a2f0b9198"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.68496322631836,
+        202.92530822753906,
+        67.07344055175781
+      ],
+      "block_id": "page-1123-block-0046",
+      "order": 46,
+      "text": "Stern, T. A. & al. (2010). Massachusetts General Hospital\nHandbook of General Hospital Psychiatry, Philadelphie, PA,\nSaunders Elsevier.\n",
+      "text_sha256": "faa7f352e664b07f0f8b1805cade8ea00d8e90763328a2f1ce65972d62ad47fe"
+    },
+    {
+      "bbox": [
+        48.0,
+        70.9849624633789,
+        196.3425750732422,
+        97.3734359741211
+      ],
+      "block_id": "page-1123-block-0047",
+      "order": 47,
+      "text": "Taylor, M. A. & Fink, M. (2003). « Catatonia in psychiatric\nclassication : A home of its own », American Journal of\nPsychiatry, 160(7), p. 1233-1241.\n",
+      "text_sha256": "4331dcd81ad64da6d08c09a1073536f4d02174fbffa0bda6ace5ee0aab1f40fa"
+    },
+    {
+      "bbox": [
+        48.0,
+        101.28496551513672,
+        195.92767333984375,
+        136.7734375
+      ],
+      "block_id": "page-1123-block-0048",
+      "order": 48,
+      "text": "Viederman, M. & Perry, III S. W. (1980). « Use of a psy-\nchodynamic life narrative in the treatment of depression\nin the physically ill », General Hospital Psychiatry, 2(3),\np. 177-185.\n",
+      "text_sha256": "79ff177738212a7023c6849bc921c10eb86b3986ccf3c4ba1777c42e23b043b8"
+    },
+    {
+      "bbox": [
+        48.0,
+        140.68496704101562,
+        195.6475067138672,
+        167.0734405517578
+      ],
+      "block_id": "page-1123-block-0049",
+      "order": 49,
+      "text": "Warrington, T. P. & Bostwick, J. M. (2006). « Psychiatric\nadverse effects of corticosteroids », Mayo Clinic Procee-\ndings, 81(10), p. 1361-1367.\n",
+      "text_sha256": "5ad1093940492f6458321a32fc059bbe8321e1fe8390fe5b47f1c390d39c790c"
+    },
+    {
+      "bbox": [
+        48.0,
+        170.98497009277344,
+        205.28257751464844,
+        197.37344360351562
+      ],
+      "block_id": "page-1123-block-0050",
+      "order": 50,
+      "text": "Waxman S.G. & Geschwind N. (1975). « The interictal behavior\nsyndrome of temporal lobe epilepsy », Archives of General\nPsychiatry, 32(12), p. 1580-1586.\n",
+      "text_sha256": "8b61bc6e90eaa25f1e80b90bc66be961b94e6e173310ca69e1aa23bdaf572d9a"
+    },
+    {
+      "bbox": [
+        48.0,
+        201.2849578857422,
+        207.2000732421875,
+        227.67344665527344
+      ],
+      "block_id": "page-1123-block-0051",
+      "order": 51,
+      "text": "Yager, J. (1989). « Specic components of bedside manner\nin the general hospital psychiatric consultation : 12 concrete\nsuggestions », Psychosomatics, 30(2), p. 209-212.\n",
+      "text_sha256": "3da7492f3b9fcd3d24ebc2a4cda518aa518b6cb1095ae9cd597d021b17abef92"
+    },
+    {
+      "bbox": [
+        48.0,
+        231.5849609375,
+        200.38507080078125,
+        248.87344360351562
+      ],
+      "block_id": "page-1123-block-0052",
+      "order": 52,
+      "text": "Yalom, I. (2011). Le jardin d’Épicure : Regarder le soleil en\nface, Paris, France, Éditions Galaade.\n",
+      "text_sha256": "5044aed735ee2bc5b1efbf718beb31a90305169ff63ff386c77b578591a832d6"
+    },
+    {
+      "bbox": [
+        48.0,
+        262.27032470703125,
+        190.26507568359375,
+        300.2734375
+      ],
+      "block_id": "page-1123-block-0053",
+      "order": 53,
+      "text": "Chapitre 29\nAder, R. & Cohen, N. (1975). « Behaviorally conditioned\nimmunosuppression », Psychosomatic Medicine, 37,\np. 333-340.\n",
+      "text_sha256": "8edb0ae4cfe112edb0c398ac6ae9815cd752d64e17d57a0ea3a986d1c0516b64"
+    },
+    {
+      "bbox": [
+        48.0,
+        304.1849670410156,
+        202.3025665283203,
+        321.47344970703125
+      ],
+      "block_id": "page-1123-block-0054",
+      "order": 54,
+      "text": "Alexander, F. (1962). La médecine psycho somatique, Paris,\nPayot.\n",
+      "text_sha256": "4194f27b2cc45ac17eaf17c8a95c81fee3d93da0c074bac52d14060de971ea8b"
+    },
+    {
+      "bbox": [
+        48.0,
+        325.3849792480469,
+        206.9809112548828,
+        360.9234313964844
+      ],
+      "block_id": "page-1123-block-0055",
+      "order": 55,
+      "text": "American Psychiatric Association (APA). (2004). DSM-\nIV-TR. Critères diag nostiques (Washington, DC, 2000).\nTraduction française par J.-D. Guelet al., Paris, Masson,\n384 p.\n",
+      "text_sha256": "756aff4d6a020e0055f138034d526592fca1a4f6c87ff8b73456a4c0393e13dc"
+    },
+    {
+      "bbox": [
+        48.0,
+        364.8349609375,
+        200.60000610351562,
+        400.3234558105469
+      ],
+      "block_id": "page-1123-block-0056",
+      "order": 56,
+      "text": "American Psychiatric Association (APA). (2015). DSM-5 –\nManuel Diagnostique et Statistique des Troubles Mentaux.\nTraduction française par M.-A. Crocq, J.-D. Guelet al.,\nElsevier Masson SAS, Paris.\n",
+      "text_sha256": "9abdc7221827d2e516286759fe28a6461976091b7d5dc8ffca72c446615d7dc3"
+    },
+    {
+      "bbox": [
+        48.0,
+        404.2349548339844,
+        205.96507263183594,
+        421.5234375
+      ],
+      "block_id": "page-1123-block-0057",
+      "order": 57,
+      "text": "Bagnasco, M. & al. (2006). « Stress and Autoimmune Thyroid\nDiseases », Neuro ImmunoModulation, 13, p. 309-317.\n",
+      "text_sha256": "60cb8083210e875fddb250723a5bc6d2a69921e4f3916fb97b24635b14a66f71"
+    },
+    {
+      "bbox": [
+        48.0,
+        425.4349670410156,
+        206.5,
+        451.8234558105469
+      ],
+      "block_id": "page-1123-block-0058",
+      "order": 58,
+      "text": "Bibring, G. L. (1956). «Psychiatry and medical practice in a\ngeneral hospital », The New England Journal Medicine, 254,\np. 366-372.\n",
+      "text_sha256": "7836da8e8814273dd053905ab4ca4e81843854fcca8f22c1bd1505054be1714a"
+    },
+    {
+      "bbox": [
+        48.0,
+        455.7349548339844,
+        196.72401428222656,
+        473.0234375
+      ],
+      "block_id": "page-1123-block-0059",
+      "order": 59,
+      "text": "Cannon, W. B. (1936). « The Role of Emotion in Disease »,\nAnn Intern Med, 9, p. 1453-1465.\n",
+      "text_sha256": "a8778c37413cade6fb073432a5011aa6bb846adbd43a115b0c3113fecfab901b"
+    },
+    {
+      "bbox": [
+        48.0,
+        476.9349670410156,
+        199.28500366210938,
+        503.3234558105469
+      ],
+      "block_id": "page-1123-block-0060",
+      "order": 60,
+      "text": "Chang, P. P. & al. (2002). « Anger in young men and\nsubsequent premature cardiovascular disease », Archives\nof Internal Medicine, 162(8), p. 901-906.\n",
+      "text_sha256": "0a2a37ad58299c890989b941dd37a2e287e20dd2296e11861d3d3094edb2e538"
+    },
+    {
+      "bbox": [
+        48.0,
+        507.2349853515625,
+        205.09750366210938,
+        533.6234741210938
+      ],
+      "block_id": "page-1123-block-0061",
+      "order": 61,
+      "text": "Chida, Y. & al. (2007). « The Effets of Psychological Interven-\ntion on Atopic Dermatitis », International Archives of Allergy\nand Immunology, 144, p. 1-9.\n",
+      "text_sha256": "4455a1bd0f4dfab21acff566784300f478c505f73c587840cd34e4aeff362a0c"
+    },
+    {
+      "bbox": [
+        48.0,
+        537.5349731445312,
+        207.13002014160156,
+        573.0234375
+      ],
+      "block_id": "page-1123-block-0062",
+      "order": 62,
+      "text": "Chida, Y. & al. (2008). « A bidirectional relationship between\npsychosocial factors and atopic disorders : A systematic\nreview and meta- analysis », Psychosomatic Medicine, 70(1),\np. 102-116.\n",
+      "text_sha256": "747235de5e0cac758638ea7bcf9e438d6e5e21f0b85dc842afb03090b9c15011"
+    },
+    {
+      "bbox": [
+        48.0,
+        576.9349975585938,
+        197.2575225830078,
+        621.5234375
+      ],
+      "block_id": "page-1123-block-0063",
+      "order": 63,
+      "text": "Choung, R. S. & al. (2008). « Psychosocial Distress and\nSomatic Symptoms in Community Subjects With Irritable\nBowel Syndrome : A Psycho logical Component Is the\nRule », The American Journal of Gastroenterology, 104,\np. 1772-1779.\n",
+      "text_sha256": "4c1547bc1a0858aaa12bbf912c979e787118f16a26ea5a25855b01d0da54af8c"
+    },
+    {
+      "bbox": [
+        48.0,
+        625.4349975585938,
+        192.84750366210938,
+        651.8234252929688
+      ],
+      "block_id": "page-1123-block-0064",
+      "order": 64,
+      "text": "Drapeau, V. & al. (2003). « Is visceral obesity a physiolo-\ngical adaptation to stress ? », Panminerva Medica, 45,\np. 189-195.\n",
+      "text_sha256": "6a62b7ac65ffb694cd1c6965fe52418ce31df74616b599fe2cdda72774b55da2"
+    },
+    {
+      "bbox": [
+        48.0,
+        655.7349853515625,
+        194.63758850097656,
+        673.0234375
+      ],
+      "block_id": "page-1123-block-0065",
+      "order": 65,
+      "text": "Dubar, F. (1959). Accidents and Life Experience, Oxford,\nNew York University, Center Safety.\n",
+      "text_sha256": "c0d8271e7a9873a1d13f266bfba8aa8a68433a46d8fd3c8077f315673979cea7"
+    },
+    {
+      "bbox": [
+        48.0,
+        676.9349975585938,
+        200.9600067138672,
+        703.3234252929688
+      ],
+      "block_id": "page-1123-block-0066",
+      "order": 66,
+      "text": "Engel, G. L. (1967). « A psychological setting of somatic\ndisease : The “giving up-given up” complex », Proceedings\nof the Royal Society of Medicine, 60, p. 533-535.\n",
+      "text_sha256": "c6a0a9f277a8386283316f5245760994c986257ee7c76f921bd6641e6f280538"
+    },
+    {
+      "bbox": [
+        48.0,
+        707.2349853515625,
+        206.5638885498047,
+        724.5234375
+      ],
+      "block_id": "page-1123-block-0067",
+      "order": 67,
+      "text": "Friedman, M. & Rosenman, R. H. (1959). « Association of\nspecic overt behavior pattern with blood and cardiovascular\n",
+      "text_sha256": "0a1b946047c7e47335f544b64666f83af627ffdf0f242c136e749a040c37e7e9"
+    }
+  ],
+  "coordinates_sha256": "835c8c1ffd1fb5635960f9a8f760071e56ed3e69ae36562c4a951ae1770078c0",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1123",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "R26\nRéférences\nMassachusetts General Hospital. (2010). Handbook of General\nHospital Psychiatry, 6e éd., Philadelphie, Saunders- Elsevier.\nNational Institute of Health. (1981). « The Review Panel on\nCoronary-Prone Behavior and Coronary Heart Disease.\nA Critical Review », Circulation, 63, p. 1199-1215.\nNielsen, K. & al. (2005). « Sef-inicted Skin Diseases. A\nRetrospective Analysis of 57 Patients with Dermatitis Arte-\nfacta Seen in a Dermatology Department », Acta Dermato\nVenereologica, 85(6), p. 512-515.\nPawlak, C. R. & al. (1999). « Patients with systemic lupus\nerythematosus differ from healthy controls in their immu-\nnological response to acute stress », Brain, Behavior, and\nImmunity, 13(4), p. 287-302.\nRutledge, T. & Hogan, B. E. (2002). « A quantitative review\nof prospective evidence linking psychological factors with\nhypertension development », Psychosomatic Medicine,\n64(5), p. 758-766.\nRutledge, T. & al. (2006). « Depression in heart failure :\nA meta-analytic review of prevalence, intervention effects,\nand association with clinical outcomes », Journal of the\nAmerican College of Cardiology, 48(8), p. 1527-1537.\nSadock, B. J. & al. (1980). Comprehensive Textbook of\nPsychiatry, Baltimore, MD, Williams & Wilkins.\nSelye, H. (1946). « The general adaptation syndrome and the\ndiseases of adaptation », Journal of Clinical Endocrinology &\nMetabolism, 6(2), p. 117-230.\nSifneos, P. (1972). Short term Psychotheray and Emotional\nCrisis, Cambridge, Harvard University Press.\nSirois, F. (1992). « Le déni dans la maladie coronarienne »,\nCanadian Medical Association Journal, 147, p. 315-321.\nSirois, F. (2009). « L’intervention brève en psychiatrie de\nconsultation- liaison », Santé mentale au Québec, 34(2),\np. 237-254.\nSirois, F. (2010). « TakoTsubo cardiomyopathy and emotional\nstress : A heuristic approach », General Hospital Psychiatry,\n32(4), p. 447.e1l-447.e13.\nSirois, F. (2012a). « Syndrome de Takotsubo : nature\ndu stress psychique », La Presse Médicale, 42(4P1),\np. 471-472.\nSirois, F. (2012b). « Psychiatric aspects of chronic palliative\ncare : Waiting for death », Palliative and Supportive Care,\n10(3), p. 205-211\nStowell, J. R. & al. (2001). « Perceived stress and cellular\nimmunity : when coping counts », Journal of Behavioral\nMedicine, 24(4), p. 323-339.\nStraub, R. H. & al. (2005). « How psycho logical stress via\nhormones and nerve bers may exacerbate rhumatoid\narthritis », Arthritis & Rheumatism, 52(1), p. 16-26.\nVaillant, G. (1992). Ego Mechanisms of Defense,\nWashington, DC, American Psychiatric Press.\nVuitton, D. A. & al. (1999). « Psycho- immunologie : un\nmodèle en question », La Revue de médecine Interne,\n20(10), p. 934-946.\nWillemsen, R. & al. (2008). « Alexithymia and dermatology :\nThe state of the art », International Journal of Dermatology,\n47(9), p. 903-910.\nWittstein, I. S. (2005). « Neurohumoral features of myocar-\ndial stunning due to sudden emotional stress »,The New\nEngland Journal Medicine, 352(6), p. 539-548.\nChapitre 30\nAmerican Psychiatric Association (APA). (1994). DSM-IV.\nCritères diagnostiques (Washington, DC, 1994). Tra-\nduction française par J.-D. Guelet al., Paris, Masson,\n239 p.\nAmerican Psychiatric Association (APA). (2004). DSM-IV-TR.\nCritères diagnostiques (Washington, DC, 2000). Traduction\nfrançaise par J.-D. Guelet al., Paris, Masson, 384 p.\nndings », Journal of American Medical Association, 169,\np. 1286.\nGroves, M. S. & Muskin, P. R. (2011). « Psychological Res-\nponses to Illness », dans Levenson, J. L. (éd.), Textbook of\nPsychosomatic Medicine, 2e éd., Washington, DC, American\nPsychiatric Publishing.\nHashizume, H. & al. (2005). « Anxiety accelerates\nT-helper 2-tilted immune response in patients with\natopic dermatitis », British Journal of Dermatology,\n152, p. 1161-1164.\nHasler, G. & al. (2005). « Asthma and panic in Young Adults.\nA 20-Year Prosppective Community Study », American\nJournal of Respiratory and Critical Care Medicine, 171,\np. 1224-1230.\nHemingway, H. & Marmot, M. (1999). « Evidence based car-\ndiology. Psychosocial factors in the etiology and prognosis\nof coronary heart disease : systematic review of prospective\ncohort studies », British Medical Journal, 31, p. 1460-1467.\nHolmes, T. & Rahe, R. H. (1967). « The Social Readjustment\nRating Scale », Journal of Psychosomatic Research, 11,\np. 213-218.\nJones, M. P. (2006). « The role of psychosocial factors\nin peptic ulcer disease : Beyond Helicobacter pylori and\nNSAIDs », Journal of Psychosomatic Research, 60(4),\np. 407-412.\nKannel, W. B. & al. (1976). « A general cardiovascular risk\nprole : the Framingham Study », Am Journal of Cardiology,\n38, p. 46-51.\nKenemy, M. E. & Schedlowski, M. (2007). « Understanding\nthe interaction between psychosocial stress and immune-\nrelated diseases : A stepwise progression », Brain, Behavior\nand Immunity, 21(8), p. 1009-1018.\nKiecolt-Glaser, J. K. & al. (2002). « Psychoneuroimmunology\nand psychosomatic medicine : Back to the future », Psycho-\nsomatic Medicine, 64(1), p. 15-28.\nKoloski, N. A. & al. (2006). « Somatization an independent\npsychosocial risk factor for irritable bowel syndrome but not\ndyspepsia : a population-based study », European Journal of\nGastro enterology & Hepatology, 18, p. 1101-1109.\nKozyrskyj, A. L. & al. (2008). « Continued exposure to mater-\nnal distress in early life is associated with an increased risk\nof childhood asthma », American Journal of Respiratory and\nCritical Care Medicine, 177(2), p. 142-147.\nKrystal, H. (1979). « Alexithymia and psychotherapy »,\nAmerican Journal of Psychotherapy, 33, p. 17-31.\nKyrou, I. & Tsigos, C. (2007). « Stress mechanisms and\nmetabolic complications », Hormone and Metabolic\nResearch, 39(6), p. 430-438.\nLampert R. & al. (2002). « Emotional and physical\nprecipitants of ventricular arrythmias », Circulation, 106,\np. 1800-1805.\nLesser, I. M. (1981). « A Review of the Alexithymia Concept »,\nPsychosomatic Medicine, 143, p. 531-543.\nLevenson, J. L. (2011). Textbook of Psychosomatic Medicine,\nWashington, DC, American Psychiatric Publishing.\nLevenstein, S. (2000). « The very model of modern etiology :\nA biopsychosocial view of the peptic ulcer », Psychoso matic\nMedicine, 62(2), p. 176-185\nLinden, W. & al. (1996). « Psychologial interventions for\npatients with coronary artery disease : a metaanalysis »,\nArchives of Internal Medicine, 156, p. 745-752.\nMacMahon, K. M. A. & Lip, G. Y. H. (2002). « Psychological\nfactors in heart failure. A review of the literature », Archives\nof Internal Medicine, 162(5), p. 509-516.\nMarty, P. & de M’Uzan, M. (1963). « La pensée opératoire »,\nRevue française de psychanalyse, 27, p. 345-356.\nMarty, P. & al. (1963). L’investigation psychosomatique,\nParis, Presses Universitaires de France.\nStern, T. A. & al. (2010). Massachusetts General Hospital\nHandbook of General Hospital Psychiatry, Philadelphie, PA,\nSaunders Elsevier.\nTaylor, M. A. & Fink, M. (2003). « Catatonia in psychiatric\nclassication : A home of its own », American Journal of\nPsychiatry, 160(7), p. 1233-1241.\nViederman, M. & Perry, III S. W. (1980). « Use of a psy-\nchodynamic life narrative in the treatment of depression\nin the physically ill », General Hospital Psychiatry, 2(3),\np. 177-185.\nWarrington, T. P. & Bostwick, J. M. (2006). « Psychiatric\nadverse effects of corticosteroids », Mayo Clinic Procee-\ndings, 81(10), p. 1361-1367.\nWaxman S.G. & Geschwind N. (1975). « The interictal behavior\nsyndrome of temporal lobe epilepsy », Archives of General\nPsychiatry, 32(12), p. 1580-1586.\nYager, J. (1989). « Specic components of bedside manner\nin the general hospital psychiatric consultation : 12 concrete\nsuggestions », Psychosomatics, 30(2), p. 209-212.\nYalom, I. (2011). Le jardin d’Épicure : Regarder le soleil en\nface, Paris, France, Éditions Galaade.\nChapitre 29\nAder, R. & Cohen, N. (1975). « Behaviorally conditioned\nimmunosuppression », Psychosomatic Medicine, 37,\np. 333-340.\nAlexander, F. (1962). La médecine psycho somatique, Paris,\nPayot.\nAmerican Psychiatric Association (APA). (2004). DSM-\nIV-TR. Critères diag nostiques (Washington, DC, 2000).\nTraduction française par J.-D. Guelet al., Paris, Masson,\n384 p.\nAmerican Psychiatric Association (APA). (2015). DSM-5 –\nManuel Diagnostique et Statistique des Troubles Mentaux.\nTraduction française par M.-A. Crocq, J.-D. Guelet al.,\nElsevier Masson SAS, Paris.\nBagnasco, M. & al. (2006). « Stress and Autoimmune Thyroid\nDiseases », Neuro ImmunoModulation, 13, p. 309-317.\nBibring, G. L. (1956). «Psychiatry and medical practice in a\ngeneral hospital », The New England Journal Medicine, 254,\np. 366-372.\nCannon, W. B. (1936). « The Role of Emotion in Disease »,\nAnn Intern Med, 9, p. 1453-1465.\nChang, P. P. & al. (2002). « Anger in young men and\nsubsequent premature cardiovascular disease », Archives\nof Internal Medicine, 162(8), p. 901-906.\nChida, Y. & al. (2007). « The Effets of Psychological Interven-\ntion on Atopic Dermatitis », International Archives of Allergy\nand Immunology, 144, p. 1-9.\nChida, Y. & al. (2008). « A bidirectional relationship between\npsychosocial factors and atopic disorders : A systematic\nreview and meta- analysis », Psychosomatic Medicine, 70(1),\np. 102-116.\nChoung, R. S. & al. (2008). « Psychosocial Distress and\nSomatic Symptoms in Community Subjects With Irritable\nBowel Syndrome : A Psycho logical Component Is the\nRule », The American Journal of Gastroenterology, 104,\np. 1772-1779.\nDrapeau, V. & al. (2003). « Is visceral obesity a physiolo-\ngical adaptation to stress ? », Panminerva Medica, 45,\np. 189-195.\nDubar, F. (1959). Accidents and Life Experience, Oxford,\nNew York University, Center Safety.\nEngel, G. L. (1967). « A psychological setting of somatic\ndisease : The “giving up-given up” complex », Proceedings\nof the Royal Society of Medicine, 60, p. 533-535.\nFriedman, M. & Rosenman, R. H. (1959). « Association of\nspecic overt behavior pattern with blood and cardiovascular\n",
+  "raw_text_sha256": "adc1779e1241798411a44fe08e04c44a1d05afef193861ccf62e35ecc3a629f8",
+  "source_page_display": 1124,
+  "source_page_index": 1123
+}

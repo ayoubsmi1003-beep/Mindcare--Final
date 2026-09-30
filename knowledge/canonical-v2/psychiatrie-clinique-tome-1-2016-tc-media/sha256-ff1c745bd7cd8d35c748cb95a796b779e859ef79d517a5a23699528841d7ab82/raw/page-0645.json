@@ -1,0 +1,484 @@
+{
+  "block_sequence_sha256": "447524a9745c9c9062613d5ce509706c52a5953b3391d073cf640b50c9655e1f",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0645-block-0001",
+      "order": 1,
+      "text": "628\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "c68361572aeb2fbad073213dcb5a8898fb2891178abc2ddef23068ae3e276c48"
+    },
+    {
+      "bbox": [
+        50.400001525878906,
+        41.002296447753906,
+        375.937744140625,
+        53.320068359375
+      ],
+      "block_id": "page-0645-block-0002",
+      "order": 2,
+      "text": "TABLEAU 28.6 Affections médicales associées à des symptômes psychiatriques\n",
+      "text_sha256": "a44c4bea79a3dc2fa5c4040e423098d82df91d33f29c4ad1511b8d1238480003"
+    },
+    {
+      "bbox": [
+        115.4000015258789,
+        58.27412414550781,
+        523.4844970703125,
+        68.85029602050781
+      ],
+      "block_id": "page-0645-block-0003",
+      "order": 3,
+      "text": "Affections médicales\nAnxiété\nDépression\nPsychose\nManie\n",
+      "text_sha256": "6e644b0baaac6bb181b75a898edf3b4dc52ab2bf75fb92cd8faea41a942c6ff6"
+    },
+    {
+      "bbox": [
+        52.25,
+        74.12285614013672,
+        136.9810028076172,
+        84.14238739013672
+      ],
+      "block_id": "page-0645-block-0004",
+      "order": 4,
+      "text": "Cardiovasculaires (suite)\n",
+      "text_sha256": "8ee298e5c74debcfbaea83526b8fd081bb5298f1945fd8e5a4b5120dc6db9a5a"
+    },
+    {
+      "bbox": [
+        52.25,
+        92.8519515991211,
+        297.6499938964844,
+        102.6781234741211
+      ],
+      "block_id": "page-0645-block-0005",
+      "order": 5,
+      "text": "Arythmie\n+\n",
+      "text_sha256": "dd903f6e0177acd01407643276211b7d0cbc0175c28d62605cd3678259a4ad29"
+    },
+    {
+      "bbox": [
+        52.25,
+        111.45195770263672,
+        370.0,
+        121.27812957763672
+      ],
+      "block_id": "page-0645-block-0006",
+      "order": 6,
+      "text": "Infarctus du myocarde\n+\n+\n",
+      "text_sha256": "3dc8a67177f7d1f551acfe7634b7e986e8bc8c08b5d8ff638346a61f351bc3ba"
+    },
+    {
+      "bbox": [
+        52.25,
+        130.10195922851562,
+        297.6499938964844,
+        139.92813110351562
+      ],
+      "block_id": "page-0645-block-0007",
+      "order": 7,
+      "text": "Insufsance cardiaque\n+\n",
+      "text_sha256": "65acdd72568486c23ba10c2aecb085652026b54446c30b3f040f66c66a0f5cb5"
+    },
+    {
+      "bbox": [
+        52.25,
+        148.7019500732422,
+        370.0,
+        158.5281219482422
+      ],
+      "block_id": "page-0645-block-0008",
+      "order": 8,
+      "text": "Maladie coronarienne\n+\n",
+      "text_sha256": "db3c430576bcb5bbb8edf2a15106993d866405feb88014c66fc36ca1cd6cbd87"
+    },
+    {
+      "bbox": [
+        52.25,
+        167.35195922851562,
+        297.6499938964844,
+        177.17813110351562
+      ],
+      "block_id": "page-0645-block-0009",
+      "order": 9,
+      "text": "Tachycardie auriculaire paroxystique\n+\n",
+      "text_sha256": "d51cd3b7be6b0f2d7daf539d99cc8d8e2433d7fdc5611563960ffb80e80ba865"
+    },
+    {
+      "bbox": [
+        52.25,
+        185.9519500732422,
+        297.6499938964844,
+        195.7781219482422
+      ],
+      "block_id": "page-0645-block-0010",
+      "order": 10,
+      "text": "Prolapsus de la valve mitrale\n+\n",
+      "text_sha256": "0d25d98f572a7dff51b4ad6821fbe59807c237e83d86dbb2f8a9338a7ff0d9af"
+    },
+    {
+      "bbox": [
+        51.25,
+        204.52285766601562,
+        104.3860092163086,
+        214.54238891601562
+      ],
+      "block_id": "page-0645-block-0011",
+      "order": 11,
+      "text": "Endocriniennes\n",
+      "text_sha256": "c3197406d5d7904517096b87587177722d2ec6b5c0a2b1d4d03763fe090f3322"
+    },
+    {
+      "bbox": [
+        52.25,
+        223.2019500732422,
+        442.3999938964844,
+        233.0281219482422
+      ],
+      "block_id": "page-0645-block-0012",
+      "order": 12,
+      "text": "Diabète\n+\n+\n+\n",
+      "text_sha256": "c41c64c449e5dfab20dbf53334883e9e89f2571165eb1eeae30dcb7084b742e4"
+    },
+    {
+      "bbox": [
+        52.25,
+        241.85195922851562,
+        442.3999938964844,
+        251.67813110351562
+      ],
+      "block_id": "page-0645-block-0013",
+      "order": 13,
+      "text": "Hypoglycémie\n+\n+\n",
+      "text_sha256": "074158a4403250878590475b443febd5b0376ade61858e1f605850518cfcd91a"
+    },
+    {
+      "bbox": [
+        52.25,
+        260.45196533203125,
+        147.75601196289062,
+        270.27813720703125
+      ],
+      "block_id": "page-0645-block-0014",
+      "order": 14,
+      "text": "Dysfonction parathyroïdienne :\n",
+      "text_sha256": "ec5449b842b065efb78e54d6439aae06edd5b884c9c56dabab6b49c40cc1468a"
+    },
+    {
+      "bbox": [
+        61.25,
+        279.1019592285156,
+        442.3999938964844,
+        288.9281311035156
+      ],
+      "block_id": "page-0645-block-0015",
+      "order": 15,
+      "text": "Hyperparathyroïdie\n+\n+\n",
+      "text_sha256": "a0b13df70aed82cce6a7c60ad41ccb48ff339964d6a139346f251d27cf223bc3"
+    },
+    {
+      "bbox": [
+        61.25,
+        297.70196533203125,
+        442.3999938964844,
+        307.52813720703125
+      ],
+      "block_id": "page-0645-block-0016",
+      "order": 16,
+      "text": "Hypoparathyroïdie\n+\n+\n+\n",
+      "text_sha256": "19ca23d285cddb679628dae321a5b5388c059c7b3f0debb41086417ad3e5a1e5"
+    },
+    {
+      "bbox": [
+        52.25,
+        316.3519592285156,
+        133.59002685546875,
+        326.1781311035156
+      ],
+      "block_id": "page-0645-block-0017",
+      "order": 17,
+      "text": "Dysfonction thyroïdienne :\n",
+      "text_sha256": "803d804b8f7865ab2ca050581ded80ab26fd3b7c1acaa9c7d4c4847245c9d778"
+    },
+    {
+      "bbox": [
+        61.25,
+        334.95196533203125,
+        515.0,
+        344.77813720703125
+      ],
+      "block_id": "page-0645-block-0018",
+      "order": 18,
+      "text": "Hyperthyroïdie\n+\n+\n+\n+\n",
+      "text_sha256": "7b612b4763ed333394703a037387d5b16dfa314f2431d3909acf82ec2a710975"
+    },
+    {
+      "bbox": [
+        61.25,
+        353.6019592285156,
+        442.3999938964844,
+        363.4281311035156
+      ],
+      "block_id": "page-0645-block-0019",
+      "order": 19,
+      "text": "Hypothyroïdie\n+\n+\n+\n",
+      "text_sha256": "941f009e7a894f130632fa9a8ffe232de9f3d8b0f59c36101aa6f61772baaae8"
+    },
+    {
+      "bbox": [
+        52.25,
+        372.20196533203125,
+        137.9280242919922,
+        382.02813720703125
+      ],
+      "block_id": "page-0645-block-0020",
+      "order": 20,
+      "text": "Dysfonction surrénalienne :\n",
+      "text_sha256": "71abe166a9fb9122f5ecb5ad9de3d557b88a2578e93da7ab3a546177237897e8"
+    },
+    {
+      "bbox": [
+        61.25,
+        390.8519592285156,
+        442.3999938964844,
+        400.6781311035156
+      ],
+      "block_id": "page-0645-block-0021",
+      "order": 21,
+      "text": "Maladie d’Addison (insufsance surrénalienne)\n+\n+\n",
+      "text_sha256": "8759dd49301c7d4299fc7c7ecb6387bdbefcb3a4bacf82f8c48a6b2141277eec"
+    },
+    {
+      "bbox": [
+        61.25,
+        409.501953125,
+        442.3999938964844,
+        419.328125
+      ],
+      "block_id": "page-0645-block-0022",
+      "order": 22,
+      "text": "Phéochromocytome\n+\n+\n",
+      "text_sha256": "52ff2f2fcfa7bb1f55edeb0c406c3e3f8e7f45982b9feabb7cd64eb92f371570"
+    },
+    {
+      "bbox": [
+        61.25,
+        428.1019592285156,
+        515.0,
+        437.9281311035156
+      ],
+      "block_id": "page-0645-block-0023",
+      "order": 23,
+      "text": "Syndrome de Cushing (hypercorticisme)\n+\n+\n+\n+\n",
+      "text_sha256": "8ed8256434c9f8b096116a6ded5e2e04a9f696bb0aa803d5de9135b2a968a7e5"
+    },
+    {
+      "bbox": [
+        52.25,
+        446.751953125,
+        370.0,
+        456.578125
+      ],
+      "block_id": "page-0645-block-0024",
+      "order": 24,
+      "text": "Tumeur hypophysaire\n+\n+\n",
+      "text_sha256": "c3b7c25f6726b86d3524100a184ebc67e09b164369dabf2854d39a6a2cbb9736"
+    },
+    {
+      "bbox": [
+        51.25,
+        465.2728576660156,
+        116.58099365234375,
+        475.2923889160156
+      ],
+      "block_id": "page-0645-block-0025",
+      "order": 25,
+      "text": "Gastro-intestinales\n",
+      "text_sha256": "e4f8b55047c86c2d33966b3a8008a376322e8a0e591f424625787313afd38ef5"
+    },
+    {
+      "bbox": [
+        52.25,
+        484.001953125,
+        297.6499938964844,
+        493.828125
+      ],
+      "block_id": "page-0645-block-0026",
+      "order": 26,
+      "text": "Colite ulcéreuse\n+\n",
+      "text_sha256": "ac73184d056e233fe7e09a67c2f25fc6e090b3b4f56e69f555aa7d04d48f827a"
+    },
+    {
+      "bbox": [
+        52.25,
+        502.6019592285156,
+        297.6499938964844,
+        512.4281005859375
+      ],
+      "block_id": "page-0645-block-0027",
+      "order": 27,
+      "text": "Reux gastro-œsophagien, ulcus peptique\n+\n",
+      "text_sha256": "1d175a8b0fd9f9eda2662e222db55d8099b41b09813b3d966d6e004781185f69"
+    },
+    {
+      "bbox": [
+        52.25,
+        521.251953125,
+        297.6499938964844,
+        531.078125
+      ],
+      "block_id": "page-0645-block-0028",
+      "order": 28,
+      "text": "Syndrome du côlon irritable\n+\n",
+      "text_sha256": "881bd32d47c90f23cbd3de6610fe1d8958b0306e6e75f6e5823b3613f849ac17"
+    },
+    {
+      "bbox": [
+        52.25,
+        539.8519897460938,
+        297.6499938964844,
+        549.6781616210938
+      ],
+      "block_id": "page-0645-block-0029",
+      "order": 29,
+      "text": "Ulcus peptique\n+\n",
+      "text_sha256": "eb4276967bf571a419ffd68abdd4ebb39adf01b27a8dbb1c84b9b43401de29a0"
+    },
+    {
+      "bbox": [
+        51.25,
+        558.4228515625,
+        107.06800842285156,
+        568.4423828125
+      ],
+      "block_id": "page-0645-block-0030",
+      "order": 30,
+      "text": "Hématologiques\n",
+      "text_sha256": "9aa4c362bd2ce4eda538941317538e8081f82073366703ee4a47b478e5fb0704"
+    },
+    {
+      "bbox": [
+        52.25,
+        577.1019897460938,
+        370.0,
+        586.9281616210938
+      ],
+      "block_id": "page-0645-block-0031",
+      "order": 31,
+      "text": "Anémie\n+\n+\n",
+      "text_sha256": "66018d2e0528f4981eb811fe51f651d66880194a55a5cfd87292aceb63c55fde"
+    },
+    {
+      "bbox": [
+        52.25,
+        595.8519897460938,
+        442.3999938964844,
+        605.6781616210938
+      ],
+      "block_id": "page-0645-block-0032",
+      "order": 32,
+      "text": "Porphyrie aiguë intermittente\n+\n+\n+\n",
+      "text_sha256": "0daab308a71b153d47b0b803658338aea014d40b22d691b79d04ea0be2586026"
+    },
+    {
+      "bbox": [
+        51.25,
+        614.3728637695312,
+        93.07300567626953,
+        624.3923950195312
+      ],
+      "block_id": "page-0645-block-0033",
+      "order": 33,
+      "text": "Infectieuses\n",
+      "text_sha256": "493d90e3a4f1a854d2fa873615bfcc4b3a1b69eb5c9216f47a53653ae4b978bc"
+    },
+    {
+      "bbox": [
+        52.25,
+        633.1019897460938,
+        442.3999938964844,
+        642.9281616210938
+      ],
+      "block_id": "page-0645-block-0034",
+      "order": 34,
+      "text": "Endocardite bactérienne, septicémie\n+\n",
+      "text_sha256": "e8a2f116f9bc6001e58ab6aa3caeaeb80981cfee5f8cb80f5492479d9186e2c1"
+    },
+    {
+      "bbox": [
+        52.25,
+        651.8019409179688,
+        515.0,
+        661.6281127929688
+      ],
+      "block_id": "page-0645-block-0035",
+      "order": 35,
+      "text": "Encéphalite virale\n+\n+\n+\n+\n",
+      "text_sha256": "6126862e721ef3d9fc977995f2fd71fdc07a4e48895dd84e52948a5b555456bd"
+    },
+    {
+      "bbox": [
+        52.25,
+        670.5519409179688,
+        515.0,
+        680.3781127929688
+      ],
+      "block_id": "page-0645-block-0036",
+      "order": 36,
+      "text": "Hépatite C\n+\n+\n",
+      "text_sha256": "06932fde2d987c428fd3c24fdd1cf4298d6b8c038054d112f73eae55cf64788c"
+    },
+    {
+      "bbox": [
+        52.25,
+        689.4519653320312,
+        515.0,
+        699.2781372070312
+      ],
+      "block_id": "page-0645-block-0037",
+      "order": 37,
+      "text": "VIH/sida\n+\n+\n+\n",
+      "text_sha256": "bfa50895c5df9a6cc257e388cfa4da085ac8653b0f7ad13afab997baec486d5a"
+    },
+    {
+      "bbox": [
+        52.25,
+        708.501953125,
+        442.3999938964844,
+        718.328125
+      ],
+      "block_id": "page-0645-block-0038",
+      "order": 38,
+      "text": "Malaria (paludisme)\n+\n",
+      "text_sha256": "1fe3b47b66dad39c6545dfdd8961b8d5b2d9c34539796102456444687a108f3b"
+    },
+    {
+      "bbox": [
+        378.8000183105469,
+        41.45229721069336,
+        404.4842529296875,
+        53.42007064819336
+      ],
+      "block_id": "page-0645-block-0039",
+      "order": 39,
+      "text": "(suite)\n",
+      "text_sha256": "c684d6dbcdfd50f0ada227f799b5c0fb30e817ac3da61b4cbf208decde7f907b"
+    }
+  ],
+  "coordinates_sha256": "8665f260310717c31896e266457f2de7e16ed81cd3a0cd4c22e044930df72bbf",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0645",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "628\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nTABLEAU 28.6 Affections médicales associées à des symptômes psychiatriques\nAffections médicales\nAnxiété\nDépression\nPsychose\nManie\nCardiovasculaires (suite)\nArythmie\n+\nInfarctus du myocarde\n+\n+\nInsufsance cardiaque\n+\nMaladie coronarienne\n+\nTachycardie auriculaire paroxystique\n+\nProlapsus de la valve mitrale\n+\nEndocriniennes\nDiabète\n+\n+\n+\nHypoglycémie\n+\n+\nDysfonction parathyroïdienne :\nHyperparathyroïdie\n+\n+\nHypoparathyroïdie\n+\n+\n+\nDysfonction thyroïdienne :\nHyperthyroïdie\n+\n+\n+\n+\nHypothyroïdie\n+\n+\n+\nDysfonction surrénalienne :\nMaladie d’Addison (insufsance surrénalienne)\n+\n+\nPhéochromocytome\n+\n+\nSyndrome de Cushing (hypercorticisme)\n+\n+\n+\n+\nTumeur hypophysaire\n+\n+\nGastro-intestinales\nColite ulcéreuse\n+\nReux gastro-œsophagien, ulcus peptique\n+\nSyndrome du côlon irritable\n+\nUlcus peptique\n+\nHématologiques\nAnémie\n+\n+\nPorphyrie aiguë intermittente\n+\n+\n+\nInfectieuses\nEndocardite bactérienne, septicémie\n+\nEncéphalite virale\n+\n+\n+\n+\nHépatite C\n+\n+\nVIH/sida\n+\n+\n+\nMalaria (paludisme)\n+\n(suite)\n",
+  "raw_text_sha256": "f8081d17e6611b96a0bde6ba8e00b2f29db5b28e84eaee96d81752d27bf2ff01",
+  "source_page_display": 646,
+  "source_page_index": 645
+}

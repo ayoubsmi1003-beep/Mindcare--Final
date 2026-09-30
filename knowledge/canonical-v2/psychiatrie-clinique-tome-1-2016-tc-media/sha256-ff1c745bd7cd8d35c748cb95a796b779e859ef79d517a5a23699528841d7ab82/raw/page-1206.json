@@ -1,0 +1,700 @@
+{
+  "block_sequence_sha256": "22cc3bd5bf640ffd5085422f775782e861268ad5a4f11a791eb27bacd7871aa9",
+  "blocks": [
+    {
+      "bbox": [
+        496.5,
+        747.5753784179688,
+        555.02001953125,
+        758.8693237304688
+      ],
+      "block_id": "page-1206-block-0001",
+      "order": 1,
+      "text": "Index\nI45\n",
+      "text_sha256": "eae65a7815e2fd38a7030c786a95c9ab98b46903f71979b2556d6b068b72cf08"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.82011795043945,
+        211.9929962158203,
+        65.01728820800781
+      ],
+      "block_id": "page-1206-block-0002",
+      "order": 2,
+      "text": "retraite, 277-278\nrétroaction, 132, 209f, 477, 623t, 778,\n",
+      "text_sha256": "c7dcff7f6453f828c31b7e0958e6ec874519fbcbecc888b8d0e78e06db4770b2"
+    },
+    {
+      "bbox": [
+        54.0,
+        66.0201187133789,
+        211.2119903564453,
+        115.3672866821289
+      ],
+      "block_id": "page-1206-block-0003",
+      "order": 3,
+      "text": "867, 912, 1051-1055, 1300, 1576,\n1618, 1635-1636, 1710t, 1755,\n1778f\nrétroaction biologique (biofeedback),\n",
+      "text_sha256": "dd7bd8e96a24b332ff304f98ad9093b266be8fed026d120206f335dd667a1078"
+    },
+    {
+      "bbox": [
+        54.0,
+        116.3701171875,
+        202.9099578857422,
+        178.2672882080078
+      ],
+      "block_id": "page-1206-block-0004",
+      "order": 4,
+      "text": "485, 576, 1755\nréveils confusionnels, 740-741\nrévélation (coming out), 753, 802\nrêverie autistique, 1592-1593t\nrêves, 497-499t, 501, 508, 594, 722,\n",
+      "text_sha256": "623d1763dbe34caa8005231ae8bb23e07ca0979841e9c8384664b6337c1054fb"
+    },
+    {
+      "bbox": [
+        54.0,
+        179.27012634277344,
+        211.66000366210938,
+        216.0172882080078
+      ],
+      "block_id": "page-1206-block-0005",
+      "order": 5,
+      "text": "725t, 741, 742t, 758, 1374, 1375t,\n1600, 1604, 1643\nrévolution psychiatrique au Québec,\n",
+      "text_sha256": "336fa647217f1594fb21fe4560f07ddb693070236b5f24917a2872cc1ba3b209"
+    },
+    {
+      "bbox": [
+        54.0,
+        217.02012634277344,
+        117.16050720214844,
+        241.21728515625
+      ],
+      "block_id": "page-1206-block-0006",
+      "order": 6,
+      "text": "1071-1081\nrisque\n",
+      "text_sha256": "43aed3ac89a9eacad26d261783242e94151e7c5f6118fe558647ab433f13e76d"
+    },
+    {
+      "bbox": [
+        63.0,
+        242.22012329101562,
+        197.34471130371094,
+        266.3672790527344
+      ],
+      "block_id": "page-1206-block-0007",
+      "order": 7,
+      "text": "de passage à l’acte violent, 1184\nde violence, 1154-1155t, 1158,\n",
+      "text_sha256": "f4a90a7b0c6cfb0ee30508aa25608a571e6545231fa8f57bd1704fa216741c40"
+    },
+    {
+      "bbox": [
+        63.0,
+        267.3701171875,
+        184.75999450683594,
+        291.5672912597656
+      ],
+      "block_id": "page-1206-block-0008",
+      "order": 8,
+      "text": "1188\nsuicidaire, 1088-1092, 1093f,\n",
+      "text_sha256": "f1eba35491c48e3d1d2f4b0cefc72251d6da7c19eca9ac6e003dc0913f3887e0"
+    },
+    {
+      "bbox": [
+        54.0,
+        292.5201110839844,
+        101.66400146484375,
+        316.71728515625
+      ],
+      "block_id": "page-1206-block-0009",
+      "order": 9,
+      "text": "1128\nrôle(s)\n",
+      "text_sha256": "5ad17c056cfba31845f97ebfadf1f883e931966a8761a6608b40a05ceff1ab83"
+    },
+    {
+      "bbox": [
+        63.0,
+        317.7201232910156,
+        206.0457305908203,
+        354.46728515625
+      ],
+      "block_id": "page-1206-block-0010",
+      "order": 10,
+      "text": "de malade, 536\ndes médecins, 1005\ndes professionnels en psychiatrie,\n",
+      "text_sha256": "699613b7b4da196a4bee0a933dda0c21d2af6ab0efc902b56a69b8ed9275c616"
+    },
+    {
+      "bbox": [
+        54.0,
+        355.4701232910156,
+        203.36798095703125,
+        417.41729736328125
+      ],
+      "block_id": "page-1206-block-0011",
+      "order": 11,
+      "text": "1013\ndes psychiatres, 1005, 1013-1014\ndu médecin de famille, 1014\nfamiliaux, 1731\nrythme(s)\n",
+      "text_sha256": "caa9f239528d7920b2397d3f35e1c60518c32d4f6c60fcd17a58ba6fa28e46a3"
+    },
+    {
+      "bbox": [
+        63.0,
+        418.14453125,
+        210.30999755859375,
+        429.96728515625
+      ],
+      "block_id": "page-1206-block-0012",
+      "order": 12,
+      "text": "circadien, 715-717, 716f, 743-746,\n",
+      "text_sha256": "2162dfa54bd8786a0fdf84025455425a48405e4cd1ac6ad538a016314e4fd077"
+    },
+    {
+      "bbox": [
+        63.0,
+        430.9701232910156,
+        165.7424774169922,
+        455.16729736328125
+      ],
+      "block_id": "page-1206-block-0013",
+      "order": 13,
+      "text": "745t\nveille-sommeil, 716-720\n",
+      "text_sha256": "d554bd7eeebc851a2a2540aa362247446e968cb2779f58eebe7528a4d14b97a8"
+    },
+    {
+      "bbox": [
+        54.0,
+        460.70703125,
+        212.0442657470703,
+        539.1672973632812
+      ],
+      "block_id": "page-1206-block-0014",
+      "order": 14,
+      "text": "S\nsacofricose, 813\nsadisme sexuel, 818-820, 819t, 820t\nsadomasochisme, 753\nsalutogenèse, 1692\nsans-abri, 16, 328, 330, 341, 344, 836,\n",
+      "text_sha256": "8190229d43ac0f4cad7b3630b9dc6a776a8478c28ae5d7e2fe6222be43c2dbe1"
+    },
+    {
+      "bbox": [
+        54.0,
+        540.1701049804688,
+        139.1790008544922,
+        564.3173217773438
+      ],
+      "block_id": "page-1206-block-0015",
+      "order": 15,
+      "text": "1026\nsanté mentale, 8-11\n",
+      "text_sha256": "4c63dd01f564b6754342e3990a962a9fea9dcaefe987a5a46418426fdd6a5802"
+    },
+    {
+      "bbox": [
+        63.0,
+        565.3201293945312,
+        207.39598083496094,
+        576.9172973632812
+      ],
+      "block_id": "page-1206-block-0016",
+      "order": 16,
+      "text": "facteurs de risque familiaux et __,\n",
+      "text_sha256": "ccff83cb88af55fb13112ea59b9cda89b68dd59c9fc7453e8d5cf21f028c2ef9"
+    },
+    {
+      "bbox": [
+        63.0,
+        577.9201049804688,
+        197.86026000976562,
+        627.2672729492188
+      ],
+      "block_id": "page-1206-block-0017",
+      "order": 17,
+      "text": "236-238\nplan d’action en __, 16\nprévention en __, 9-10, 229\ntravail et problèmes de __, 263-\n",
+      "text_sha256": "94ee6d2004fd5683774e739826d6b2023f1275ed42af30e717a9771a2b66bb64"
+    },
+    {
+      "bbox": [
+        54.0,
+        628.2701416015625,
+        120.14950561523438,
+        665.0172729492188
+      ],
+      "block_id": "page-1206-block-0018",
+      "order": 18,
+      "text": "268, 264t\nscatologie, 820\nschéma(s)\n",
+      "text_sha256": "5143d2b947a687419cd08c5afcf689dc8816ab7f0a05d449625100231e91b746"
+    },
+    {
+      "bbox": [
+        63.0,
+        666.0201416015625,
+        190.4385223388672,
+        715.3673095703125
+      ],
+      "block_id": "page-1206-block-0019",
+      "order": 19,
+      "text": "corporel, 169\ndysfonctionnels, 934\nmentaux, 195\nprécoces inadaptés, 934, 1645\n",
+      "text_sha256": "ead36302edd1fa3d0f12347d862b8c9247c88ca5ef2753b004976eec430f2005"
+    },
+    {
+      "bbox": [
+        225.0,
+        40.59453201293945,
+        328.0705261230469,
+        52.41728591918945
+      ],
+      "block_id": "page-1206-block-0020",
+      "order": 20,
+      "text": "schizophrénie, 328-371\n",
+      "text_sha256": "9a0904dab8a94c8c0119707a2097e3f75eb3fb4d4d04781acf41b37feb659753"
+    },
+    {
+      "bbox": [
+        234.0,
+        53.3701171875,
+        266.0144958496094,
+        64.96728515625
+      ],
+      "block_id": "page-1206-block-0021",
+      "order": 21,
+      "text": "à début\n",
+      "text_sha256": "a56ea4bfd9707ca9b56cd36e54971c9ba3287d711bd3fa00167177be6123ffc8"
+    },
+    {
+      "bbox": [
+        243.0,
+        65.931640625,
+        351.2594909667969,
+        89.90943145751953
+      ],
+      "block_id": "page-1206-block-0022",
+      "order": 22,
+      "text": "précoce, 1403t\ntardif, 1402-1403, 1403t,\n",
+      "text_sha256": "e7b24dda503754ed66570390cf1f21cc256488a83a1e0cbacd53ed252697f13e"
+    },
+    {
+      "bbox": [
+        234.0,
+        91.90943908691406,
+        371.87451171875,
+        114.96728515625
+      ],
+      "block_id": "page-1206-block-0023",
+      "order": 23,
+      "text": "1404-1406\nantipsychotiques et __, 357-364,\n",
+      "text_sha256": "5456029cf915902a284fee4f19f7b5e1723498a4ba45860c7d97f811a8d3480f"
+    },
+    {
+      "bbox": [
+        234.0,
+        115.8701171875,
+        370.96392822265625,
+        139.96728515625
+      ],
+      "block_id": "page-1206-block-0024",
+      "order": 24,
+      "text": "359t, 360t, 1407, 1465, 1471\ncomportement agité ou violent\n",
+      "text_sha256": "08fdf4e18af1b8629bbcb80d4f14146b4d705cbc7efdd35b3b62f5bfce2fea09"
+    },
+    {
+      "bbox": [
+        234.0,
+        140.9201202392578,
+        369.6328125,
+        165.0172882080078
+      ],
+      "block_id": "page-1206-block-0025",
+      "order": 25,
+      "text": "et __, 1101\ndiérences reliées au sexe et __,\n",
+      "text_sha256": "b217267f79ed2616feb5f2660d9fe8743a8dc9a1a334f01117e5ca7ed693bad0"
+    },
+    {
+      "bbox": [
+        234.0,
+        165.9201202392578,
+        370.6889953613281,
+        190.0172882080078
+      ],
+      "block_id": "page-1206-block-0026",
+      "order": 26,
+      "text": "967\nélectroconvulsivothérapie et __,\n",
+      "text_sha256": "d635a8853e1b7a49fb15eca9a2a55f2778294eba3eff969392df1180cf686dd2"
+    },
+    {
+      "bbox": [
+        234.0,
+        190.9201202392578,
+        378.46063232421875,
+        240.06729125976562
+      ],
+      "block_id": "page-1206-block-0027",
+      "order": 27,
+      "text": "1555\némotions et __, 177\ngrossesse et __, 971\nimagerie médicale et __, 140, 144,\n",
+      "text_sha256": "5ec78b6c54d2b601d15f98afd3b54a0e0959f8b92802259e06c8ef32cf5d85e2"
+    },
+    {
+      "bbox": [
+        234.0,
+        240.97012329101562,
+        383.78521728515625,
+        327.6172790527344
+      ],
+      "block_id": "page-1206-block-0028",
+      "order": 28,
+      "text": "147, 154, 355, 1404\nincarcération et __, 1026\nintervention précoce et __, 356-357\nitinérance et __, 1026\nlangage et __, 184\nmotricité et __, 178, 182\norganisation et planication et __,\n",
+      "text_sha256": "e99f3c88f1aacadd97894a1d9cb165088ed1e7a64912cb2912981df97a3fca9b"
+    },
+    {
+      "bbox": [
+        234.0,
+        328.5201110839844,
+        363.9761047363281,
+        402.66729736328125
+      ],
+      "block_id": "page-1206-block-0029",
+      "order": 29,
+      "text": "185\nparanoïde, 322, 344\nparaphilies et __, 821\npersonnes âgées et __, 1402\nréfractaire, 1470\nrisque de violence et __, 1155-\n",
+      "text_sha256": "78b432268ef81e7481511de01e507aedec550c35633d8617bfd01c55223277a2"
+    },
+    {
+      "bbox": [
+        234.0,
+        403.57012939453125,
+        364.4032287597656,
+        427.66729736328125
+      ],
+      "block_id": "page-1206-block-0030",
+      "order": 30,
+      "text": "1157t\nstimulation magnétique trans-\n",
+      "text_sha256": "b1a7b9d2aa98e6d2876f6e4f7eee32a15815851d272d597dfe6c1941a69475a3"
+    },
+    {
+      "bbox": [
+        234.0,
+        428.57012939453125,
+        367.9620361328125,
+        452.66729736328125
+      ],
+      "block_id": "page-1206-block-0031",
+      "order": 31,
+      "text": "crânienne et __, 1561-1563\nthérapie\n",
+      "text_sha256": "c999d32501dee05eaf9e3b41bc77e8bfd19fc07e7eceb536045f8144dca0f6f5"
+    },
+    {
+      "bbox": [
+        243.0,
+        454.659423828125,
+        370.5542907714844,
+        477.659423828125
+      ],
+      "block_id": "page-1206-block-0032",
+      "order": 32,
+      "text": "familiale et __, 1737\npsychoéducative et __, 1701-\n",
+      "text_sha256": "8dcde7192f33755649da5b22a38db6f3ad2eedb9830b78f811815128b7d5f43b"
+    },
+    {
+      "bbox": [
+        234.0,
+        479.659423828125,
+        374.1961364746094,
+        502.71728515625
+      ],
+      "block_id": "page-1206-block-0033",
+      "order": 33,
+      "text": "1704\ntoxicomanie et __, 910-911, 918-\n",
+      "text_sha256": "1795cb9f0ebbeb88a56d954f91b15b750666dd6e846ece7189c2aa73e39188c8"
+    },
+    {
+      "bbox": [
+        234.0,
+        503.6201171875,
+        269.16448974609375,
+        527.71728515625
+      ],
+      "block_id": "page-1206-block-0034",
+      "order": 34,
+      "text": "919\ntroubles\n",
+      "text_sha256": "5572a8aa2bfb9262ff249829c11645d9473fd96be629a53f22a76733a646c95b"
+    },
+    {
+      "bbox": [
+        225.0,
+        529.659423828125,
+        367.5144958496094,
+        615.2672729492188
+      ],
+      "block_id": "page-1206-block-0035",
+      "order": 35,
+      "text": "d’attention et __, 166\nde mémoire et __, 175\nperceptuels et __, 171\nvieillissement et __, 1405-1406\nsciatalgie, 558\nscintigraphie, 140-141\nscissure, voir aussi gures supplé-\n",
+      "text_sha256": "d86e83ac830e55a500991d1e4b7ab9bb6a06f1bba3645c11cecc3b32135e30cd"
+    },
+    {
+      "bbox": [
+        225.0,
+        616.2816772460938,
+        383.8484802246094,
+        690.3173217773438
+      ],
+      "block_id": "page-1206-block-0036",
+      "order": 36,
+      "text": "mentaires\ncalcarine, 111\ncentrale de Rolando, 110f, 111, 168f\nlatérale de Sylvius, 111, 168f\npariéto-occipitale, 111\nsclérose\n",
+      "text_sha256": "aa3d33bb6738d5ff75c379de34f9829b946b4202144d6b5de68068cda255dd8a"
+    },
+    {
+      "bbox": [
+        234.0,
+        691.2701416015625,
+        383.1616516113281,
+        702.8673095703125
+      ],
+      "block_id": "page-1206-block-0037",
+      "order": 37,
+      "text": "en plaques, 143, 151t, 355, 483, 541,\n",
+      "text_sha256": "a794fca811eb8adcee5a1ada5528c4a2fa82e71fa74dec15a377e81124018951"
+    },
+    {
+      "bbox": [
+        252.0,
+        703.7701416015625,
+        370.21881103515625,
+        715.3673095703125
+      ],
+      "block_id": "page-1206-block-0038",
+      "order": 38,
+      "text": "557, 599, 656-657, 810, 1663\n",
+      "text_sha256": "6c98e856582930cb4930a7d1b9445479d6e84f9677114727710f59ca3b192e43"
+    },
+    {
+      "bbox": [
+        405.0,
+        40.82011795043945,
+        539.9832153320312,
+        52.41728591918945
+      ],
+      "block_id": "page-1206-block-0039",
+      "order": 39,
+      "text": "tubéreuse de Bourneville, 1250,\n",
+      "text_sha256": "bd44f07c1af9d3aa622fbe59c643d6938de6c738312f6e1840a0f87c1d716dc2"
+    },
+    {
+      "bbox": [
+        396.0,
+        53.3701171875,
+        554.6265869140625,
+        89.96728515625
+      ],
+      "block_id": "page-1206-block-0040",
+      "order": 40,
+      "text": "1266\nscriptophobie, 413\nsecret professionnel, 998, 1152t, 1182,\n",
+      "text_sha256": "62a6019f8d80b16747944801b39ba253e3739b9ae69d7093f1e1e302b3ceabb1"
+    },
+    {
+      "bbox": [
+        396.0,
+        90.8701171875,
+        541.6664428710938,
+        114.96728515625
+      ],
+      "block_id": "page-1206-block-0041",
+      "order": 41,
+      "text": "1184-1185, voir condentialité\nsécrétion inappropriée de l’ADH,\n",
+      "text_sha256": "a6e48e7890deccd0e769feca1ba33e3729f5b1d74036ab12360563ed9f0b9c8f"
+    },
+    {
+      "bbox": [
+        396.0,
+        115.8701171875,
+        494.80499267578125,
+        152.5172882080078
+      ],
+      "block_id": "page-1206-block-0042",
+      "order": 42,
+      "text": "1478-1479\nsecteur hospitalier, 998\nsécurité\n",
+      "text_sha256": "63e51a127cf113e4d985009353f70c9c826ec122e54b2e5e0ffd852f5ccac85f"
+    },
+    {
+      "bbox": [
+        396.0,
+        153.4201202392578,
+        546.509033203125,
+        190.0172882080078
+      ],
+      "block_id": "page-1206-block-0043",
+      "order": 43,
+      "text": "du patient, 1084, 1184\ndu public, 1188\nsédatifs, 887-891, 889t, 890t, 1258,\n",
+      "text_sha256": "eb1a2215fce16ca7ac00cd37e633435d99cc28c7868d2adaeaa42af79e46ef35"
+    },
+    {
+      "bbox": [
+        396.0,
+        190.9201202392578,
+        550.343017578125,
+        215.0172882080078
+      ],
+      "block_id": "page-1206-block-0044",
+      "order": 44,
+      "text": "1430\nsédentarité, 481, 547, 586, 619f, 643,\n",
+      "text_sha256": "f040336f01d21fe3ec0caaa19a839cd4f96ec107151bca4b1e8157bad78a3d71"
+    },
+    {
+      "bbox": [
+        396.0,
+        215.97012329101562,
+        546.415283203125,
+        240.06729125976562
+      ],
+      "block_id": "page-1206-block-0045",
+      "order": 45,
+      "text": "660, 680, 685, 1027, 1476, 1633\nsensation(s), 58, 206, 570, 753, 755,\n",
+      "text_sha256": "82664fe39a03574169c5ed636d0a69261fbd5d6d3373a9a07322030500ed9436"
+    },
+    {
+      "bbox": [
+        396.0,
+        240.97012329101562,
+        555.0350341796875,
+        290.0672912597656
+      ],
+      "block_id": "page-1206-block-0046",
+      "order": 46,
+      "text": "765, 834, 1624\nfortes, 1320\nsensibilisation spinale (wind-up), 552\nsensibilité, 27, 291\n",
+      "text_sha256": "792fdc87a6bfc74ca692403b733c8bce17fa89fdf8ea34e079d136887faabdf8"
+    },
+    {
+      "bbox": [
+        405.0,
+        290.9701232910156,
+        533.5712890625,
+        315.1172790527344
+      ],
+      "block_id": "page-1206-block-0047",
+      "order": 47,
+      "text": "au rejet, 402\naux informations négatives de\n",
+      "text_sha256": "9c70e78e0f0a9ef0893233023f5ac3c2d13406a55f0f27a03401aae668e292ad"
+    },
+    {
+      "bbox": [
+        396.0,
+        316.0201110839844,
+        551.3777465820312,
+        377.6172790527344
+      ],
+      "block_id": "page-1206-block-0048",
+      "order": 48,
+      "text": "l’environnement, 1367\nd’un test, 291\ntactile, 171\nsensorium, 1224-1225\nsentiments, 198, 939-940, 945, 1218,\n",
+      "text_sha256": "a516f7fff1cc89d67eec2fbc44c93fd03a114ff25dc949b438b706e4c40cf97d"
+    },
+    {
+      "bbox": [
+        396.0,
+        378.57012939453125,
+        542.805908203125,
+        402.66729736328125
+      ],
+      "block_id": "page-1206-block-0049",
+      "order": 49,
+      "text": "1590-1594t, 1685t, 1795\nséparation, 204, 213-214, 233-234,\n",
+      "text_sha256": "47e20946d2308acaf28b7c654ff655c4936ca361d5bec5f3e418c7899742bc0d"
+    },
+    {
+      "bbox": [
+        396.0,
+        403.57012939453125,
+        554.4205322265625,
+        465.21728515625
+      ],
+      "block_id": "page-1206-block-0050",
+      "order": 50,
+      "text": "238-247, 255, 436-437, 670,\n672, 792, 939, 1090-1091t, 1126,\n1251, 1353, 1367-1374, 1732\nseptum, 115, 335f, 810\nséquence manuelle de Luria (paume-\n",
+      "text_sha256": "072e45f8fb1f14faa23906c65d670f835600a95c442dc8eb3176d14dd1967524"
+    },
+    {
+      "bbox": [
+        396.0,
+        466.1201171875,
+        550.093017578125,
+        502.71728515625
+      ],
+      "block_id": "page-1206-block-0051",
+      "order": 51,
+      "text": "tranche-poing), 181, 601, 639,\n1643\nsérotonine, 114f, 126-127, 128f, 338,\n",
+      "text_sha256": "913ea7b85d34ff56c504d5ca92fc35ac2f96be12eafcf5e720dab531c0cd5f27"
+    },
+    {
+      "bbox": [
+        396.0,
+        503.6201171875,
+        553.3113403320312,
+        552.7672729492188
+      ],
+      "block_id": "page-1206-block-0052",
+      "order": 52,
+      "text": "394, 449, 477, 493, 534, 552, 700,\n759, 811, 828, 832, 851, 1145,\n1365, 1482, 1482f\nservices\n",
+      "text_sha256": "be149e824fa7c75373955ba0e0756836451924db511a015006f92971364408e8"
+    },
+    {
+      "bbox": [
+        405.0,
+        553.6701049804688,
+        549.4100341796875,
+        577.7672729492188
+      ],
+      "block_id": "page-1206-block-0053",
+      "order": 53,
+      "text": "d’hébergement, 1393\nde 1re ligne, 958, 998, 1005, 1077t,\n",
+      "text_sha256": "75f04d78e411dcb53c7dd2668d0366cda830ff2e35c5d5e027b82d44fdfc2bf3"
+    },
+    {
+      "bbox": [
+        405.0,
+        578.6701049804688,
+        544.4990234375,
+        652.8173217773438
+      ],
+      "block_id": "page-1206-block-0054",
+      "order": 54,
+      "text": "1391\nde 2e ligne, 958, 998, 1077t, 1391\nde 3e ligne, 958, 998, 1077t, 1391\nde consultation éthique, 1207\nintégrés en réseau, 922\npsychiatriques\n",
+      "text_sha256": "ac34f9fb0c840b471137465feb73a3d5ad4cb5cbee33576dd5efac2f4822a886"
+    },
+    {
+      "bbox": [
+        414.0,
+        653.4945678710938,
+        543.259521484375,
+        665.2594604492188
+      ],
+      "block_id": "page-1206-block-0055",
+      "order": 55,
+      "text": "évolution des __, 1067-1081,\n",
+      "text_sha256": "2a16fd425d9c0bb2089ac3b406714383a34b5de667013858a1415302877d0c68"
+    },
+    {
+      "bbox": [
+        396.0,
+        665.9945678710938,
+        551.2438354492188,
+        690.3173217773438
+      ],
+      "block_id": "page-1206-block-0056",
+      "order": 56,
+      "text": "1078-1080t\nsevrage, 865, 876, 882-883, 886, 889,\n",
+      "text_sha256": "ffbba1cbce1b19882ced9631697a6dfcbc1486ce518e698a0cf96b4e91a2849a"
+    },
+    {
+      "bbox": [
+        414.0,
+        691.2701416015625,
+        550.4168090820312,
+        715.3673095703125
+      ],
+      "block_id": "page-1206-block-0057",
+      "order": 57,
+      "text": "891, 894, 898, 899t, 900, 903,\n914, 965, 1258-1259, 1449, 1639\n",
+      "text_sha256": "70159048a6caabee6ff1953fbfa796345a9fc39284772fd00ea9a2d5186e9aa6"
+    }
+  ],
+  "coordinates_sha256": "8764838fb25c650880a92676101cf36b2a51a346c32f46e675fa0f430a6e193d",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1206",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Index\nI45\nretraite, 277-278\nrétroaction, 132, 209f, 477, 623t, 778,\n867, 912, 1051-1055, 1300, 1576,\n1618, 1635-1636, 1710t, 1755,\n1778f\nrétroaction biologique (biofeedback),\n485, 576, 1755\nréveils confusionnels, 740-741\nrévélation (coming out), 753, 802\nrêverie autistique, 1592-1593t\nrêves, 497-499t, 501, 508, 594, 722,\n725t, 741, 742t, 758, 1374, 1375t,\n1600, 1604, 1643\nrévolution psychiatrique au Québec,\n1071-1081\nrisque\nde passage à l’acte violent, 1184\nde violence, 1154-1155t, 1158,\n1188\nsuicidaire, 1088-1092, 1093f,\n1128\nrôle(s)\nde malade, 536\ndes médecins, 1005\ndes professionnels en psychiatrie,\n1013\ndes psychiatres, 1005, 1013-1014\ndu médecin de famille, 1014\nfamiliaux, 1731\nrythme(s)\ncircadien, 715-717, 716f, 743-746,\n745t\nveille-sommeil, 716-720\nS\nsacofricose, 813\nsadisme sexuel, 818-820, 819t, 820t\nsadomasochisme, 753\nsalutogenèse, 1692\nsans-abri, 16, 328, 330, 341, 344, 836,\n1026\nsanté mentale, 8-11\nfacteurs de risque familiaux et __,\n236-238\nplan d’action en __, 16\nprévention en __, 9-10, 229\ntravail et problèmes de __, 263-\n268, 264t\nscatologie, 820\nschéma(s)\ncorporel, 169\ndysfonctionnels, 934\nmentaux, 195\nprécoces inadaptés, 934, 1645\nschizophrénie, 328-371\nà début\nprécoce, 1403t\ntardif, 1402-1403, 1403t,\n1404-1406\nantipsychotiques et __, 357-364,\n359t, 360t, 1407, 1465, 1471\ncomportement agité ou violent\net __, 1101\ndiérences reliées au sexe et __,\n967\nélectroconvulsivothérapie et __,\n1555\némotions et __, 177\ngrossesse et __, 971\nimagerie médicale et __, 140, 144,\n147, 154, 355, 1404\nincarcération et __, 1026\nintervention précoce et __, 356-357\nitinérance et __, 1026\nlangage et __, 184\nmotricité et __, 178, 182\norganisation et planication et __,\n185\nparanoïde, 322, 344\nparaphilies et __, 821\npersonnes âgées et __, 1402\nréfractaire, 1470\nrisque de violence et __, 1155-\n1157t\nstimulation magnétique trans-\ncrânienne et __, 1561-1563\nthérapie\nfamiliale et __, 1737\npsychoéducative et __, 1701-\n1704\ntoxicomanie et __, 910-911, 918-\n919\ntroubles\nd’attention et __, 166\nde mémoire et __, 175\nperceptuels et __, 171\nvieillissement et __, 1405-1406\nsciatalgie, 558\nscintigraphie, 140-141\nscissure, voir aussi gures supplé-\nmentaires\ncalcarine, 111\ncentrale de Rolando, 110f, 111, 168f\nlatérale de Sylvius, 111, 168f\npariéto-occipitale, 111\nsclérose\nen plaques, 143, 151t, 355, 483, 541,\n557, 599, 656-657, 810, 1663\ntubéreuse de Bourneville, 1250,\n1266\nscriptophobie, 413\nsecret professionnel, 998, 1152t, 1182,\n1184-1185, voir condentialité\nsécrétion inappropriée de l’ADH,\n1478-1479\nsecteur hospitalier, 998\nsécurité\ndu patient, 1084, 1184\ndu public, 1188\nsédatifs, 887-891, 889t, 890t, 1258,\n1430\nsédentarité, 481, 547, 586, 619f, 643,\n660, 680, 685, 1027, 1476, 1633\nsensation(s), 58, 206, 570, 753, 755,\n765, 834, 1624\nfortes, 1320\nsensibilisation spinale (wind-up), 552\nsensibilité, 27, 291\nau rejet, 402\naux informations négatives de\nl’environnement, 1367\nd’un test, 291\ntactile, 171\nsensorium, 1224-1225\nsentiments, 198, 939-940, 945, 1218,\n1590-1594t, 1685t, 1795\nséparation, 204, 213-214, 233-234,\n238-247, 255, 436-437, 670,\n672, 792, 939, 1090-1091t, 1126,\n1251, 1353, 1367-1374, 1732\nseptum, 115, 335f, 810\nséquence manuelle de Luria (paume-\ntranche-poing), 181, 601, 639,\n1643\nsérotonine, 114f, 126-127, 128f, 338,\n394, 449, 477, 493, 534, 552, 700,\n759, 811, 828, 832, 851, 1145,\n1365, 1482, 1482f\nservices\nd’hébergement, 1393\nde 1re ligne, 958, 998, 1005, 1077t,\n1391\nde 2e ligne, 958, 998, 1077t, 1391\nde 3e ligne, 958, 998, 1077t, 1391\nde consultation éthique, 1207\nintégrés en réseau, 922\npsychiatriques\névolution des __, 1067-1081,\n1078-1080t\nsevrage, 865, 876, 882-883, 886, 889,\n891, 894, 898, 899t, 900, 903,\n914, 965, 1258-1259, 1449, 1639\n",
+  "raw_text_sha256": "9d2e6677840b302e6728b3553dc79c11b3e080c8dc1e922c74d0771c099f0f16",
+  "source_page_display": 1207,
+  "source_page_index": 1206
+}

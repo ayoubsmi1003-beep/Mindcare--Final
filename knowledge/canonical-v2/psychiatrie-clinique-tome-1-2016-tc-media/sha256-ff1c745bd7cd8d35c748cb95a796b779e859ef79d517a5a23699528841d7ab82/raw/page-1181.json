@@ -1,0 +1,148 @@
+{
+  "block_sequence_sha256": "defc93100439edf6fe62094c9349be93cdb49e61ed194ef4c476f65f4aeb4dcd",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        106.5719985961914,
+        758.8693237304688
+      ],
+      "block_id": "page-1181-block-0001",
+      "order": 1,
+      "text": "I20\nIndex\n",
+      "text_sha256": "1eb99e0edbf0b668acb89defba37432105d36920af296ff5966b2224e7026db5"
+    },
+    {
+      "bbox": [
+        48.0,
+        39.75703048706055,
+        54.2400016784668,
+        53.23359298706055
+      ],
+      "block_id": "page-1181-block-0002",
+      "order": 2,
+      "text": "Y\n",
+      "text_sha256": "d08c5f95ebb8581ee4e5c0a2ee534d5a10d3c8e7f3a18d961adf902602bbd8a3"
+    },
+    {
+      "bbox": [
+        48.0,
+        57.388671875,
+        123.14424133300781,
+        67.3291015625
+      ],
+      "block_id": "page-1181-block-0003",
+      "order": 3,
+      "text": "Yohimbine, 124, 631\n",
+      "text_sha256": "d558200f653d5bfc980bf2450364dd0433c8a4eacf5defc90136868cadcb5a28"
+    },
+    {
+      "bbox": [
+        48.0,
+        74.65703582763672,
+        53.77199935913086,
+        88.13359832763672
+      ],
+      "block_id": "page-1181-block-0004",
+      "order": 4,
+      "text": "Z\n",
+      "text_sha256": "ec39b67830c0c34d71b0b6bf1d1c424eb7caab9222eb401fdaef044cf2145e9b"
+    },
+    {
+      "bbox": [
+        48.0,
+        91.6089859008789,
+        162.4940185546875,
+        139.5791015625
+      ],
+      "block_id": "page-1181-block-0005",
+      "order": 5,
+      "text": "ZantacMD, voir Ranitidine\nZarontinMD, voir Éthosuximide\nZeldoxMD, voir Ziprasidone\nZimélidine, 1431\n",
+      "text_sha256": "889d7e8404fe2715a6a92e65c8963dee0a85b4f89e3cfb17b4952de93426e79b"
+    },
+    {
+      "bbox": [
+        219.0,
+        40.30898666381836,
+        361.78802490234375,
+        50.92910385131836
+      ],
+      "block_id": "page-1181-block-0006",
+      "order": 6,
+      "text": "Ziprasidone (ZeldoxMD), 323, 359, 441,\n",
+      "text_sha256": "94aad50d6018bc92818ebb46ee9cd3a1630d8815dfed31e108202825a43af926"
+    },
+    {
+      "bbox": [
+        219.0,
+        52.08867263793945,
+        377.40203857421875,
+        128.52911376953125
+      ],
+      "block_id": "page-1181-block-0007",
+      "order": 7,
+      "text": "506, 583, 645, 748, 1283, 1396, 1438,\n1460-1462, 1468-1469, 1472, 1475-\n1477, 1542, 1547, 1550-1551\nZocorMD, voir Simvastatine\nZofranMD, voir Ondansetron\nZoloftMD, voir Sertraline\nZolpidem (SublinoxMD), 132, 506, 732, 746,\n",
+      "text_sha256": "2cdaf31e99e5e4b7995a9183cb264e56719cf4d0532b241c3346937f474c61c2"
+    },
+    {
+      "bbox": [
+        237.0,
+        129.638671875,
+        342.48004150390625,
+        139.5791015625
+      ],
+      "block_id": "page-1181-block-0008",
+      "order": 8,
+      "text": "1438, 1454, 1498, 1506, 1508\n",
+      "text_sha256": "87a728b262d66a3ab59b4a76b5b9358f8331aa24c3b37d792a2c4469c6539e38"
+    },
+    {
+      "bbox": [
+        390.0,
+        40.30898666381836,
+        536.166015625,
+        50.92910385131836
+      ],
+      "block_id": "page-1181-block-0009",
+      "order": 9,
+      "text": "Zopiclone (ImovaneMD), 732, 746, 1420,\n",
+      "text_sha256": "aa2298697df462856308f4aad750f0c978d0ddd8df8f09bd861411e327af42ff"
+    },
+    {
+      "bbox": [
+        390.0,
+        53.68867111206055,
+        546.8800048828125,
+        76.27910614013672
+      ],
+      "block_id": "page-1181-block-0010",
+      "order": 10,
+      "text": "1438, 1446, 1454, 1498\nZuclopenthixol (ClopixolMD; AcuphaseMD;\n",
+      "text_sha256": "cb182448da3fbfe98eb981ff5ca411ea0d08c79609f3336c718a22737ee03443"
+    },
+    {
+      "bbox": [
+        390.0,
+        78.3089828491211,
+        534.4710083007812,
+        139.5791015625
+      ],
+      "block_id": "page-1181-block-0011",
+      "order": 11,
+      "text": "Clopixol DepotMD), 359-360, 1102,\n1163, 1437, 1461-1463, 1468-1469\nZybanMD, voir Bupropion\nZydisMD, voir Olanzapine\nZyprexaMD, voir Olanzapine\n",
+      "text_sha256": "b582fe96ddfd62e3001fc37b7d81ca8ddc310e5e1c094f391af80290eb17b6e6"
+    }
+  ],
+  "coordinates_sha256": "014108a369d997cd887babebc0341fe5c6ec25092dcbeb1e3c16def96a322046",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1181",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "I20\nIndex\nY\nYohimbine, 124, 631\nZ\nZantacMD, voir Ranitidine\nZarontinMD, voir Éthosuximide\nZeldoxMD, voir Ziprasidone\nZimélidine, 1431\nZiprasidone (ZeldoxMD), 323, 359, 441,\n506, 583, 645, 748, 1283, 1396, 1438,\n1460-1462, 1468-1469, 1472, 1475-\n1477, 1542, 1547, 1550-1551\nZocorMD, voir Simvastatine\nZofranMD, voir Ondansetron\nZoloftMD, voir Sertraline\nZolpidem (SublinoxMD), 132, 506, 732, 746,\n1438, 1454, 1498, 1506, 1508\nZopiclone (ImovaneMD), 732, 746, 1420,\n1438, 1446, 1454, 1498\nZuclopenthixol (ClopixolMD; AcuphaseMD;\nClopixol DepotMD), 359-360, 1102,\n1163, 1437, 1461-1463, 1468-1469\nZybanMD, voir Bupropion\nZydisMD, voir Olanzapine\nZyprexaMD, voir Olanzapine\n",
+  "raw_text_sha256": "f4ee1c39f670c138eea7d106f9a721e16b69af8c383422c7f7bec8bc32fad96c",
+  "source_page_display": 1182,
+  "source_page_index": 1181
+}

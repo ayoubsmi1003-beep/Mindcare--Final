@@ -1,0 +1,160 @@
+{
+  "block_sequence_sha256": "0676ebaba33881f2f9b012b6c4cbf4a1d27faadb12936429fef300664e2af251",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        447.807861328125,
+        758.8693237304688
+      ],
+      "block_id": "page-0037-block-0001",
+      "order": 1,
+      "text": "20\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 1\nIntroduction à la psychiatrie\n",
+      "text_sha256": "9efd4a41ec6a91c8e5ae00e14b469b2b2d6ae3abf583da2c97e5f274f9d11375"
+    },
+    {
+      "bbox": [
+        48.0,
+        39.009376525878906,
+        216.91200256347656,
+        56.978126525878906
+      ],
+      "block_id": "page-0037-block-0002",
+      "order": 2,
+      "text": "Lectures complémentaires\n",
+      "text_sha256": "a63665748f6f6aa4046621ac3e5b53857ebef6bf2c2f475217e47dfa03f03493"
+    },
+    {
+      "bbox": [
+        48.0,
+        69.7886734008789,
+        204.64100646972656,
+        79.7291030883789
+      ],
+      "block_id": "page-0037-block-0003",
+      "order": 3,
+      "text": "C, F. & T, J.-P. (2008). Ency-\n",
+      "text_sha256": "105d156cba7a41d0b9ca83c43777de099a2631f2cb2acc1efe594034bda657c8"
+    },
+    {
+      "bbox": [
+        48.0,
+        79.7886734008789,
+        195.92999267578125,
+        111.7291030883789
+      ],
+      "block_id": "page-0037-block-0004",
+      "order": 4,
+      "text": "clopédie historique des neurosciences,\nBruxelles, Belgique, De Boeck.\nG, H. E. & al. (2015).\n",
+      "text_sha256": "fa2ea4ee9fcb95f54ca2a4cbed0bd11a9587133224c8f4533df7b8cd541be81b"
+    },
+    {
+      "bbox": [
+        60.0,
+        111.7886734008789,
+        203.02999877929688,
+        161.72911071777344
+      ],
+      "block_id": "page-0037-block-0005",
+      "order": 5,
+      "text": "« Nanoneuromedicines for degenera-\ntive, inammatory, and infectious ner-\nvous system diseases », Nanomedicine :\nNanotechnology, Biology and Medicine,\n11(3), p. 751-767.\n",
+      "text_sha256": "93ae5003ded3333e7ad3cdd37d6ce130a0dbbd0ff05a9fd7d1ba2a0b470ede58"
+    },
+    {
+      "bbox": [
+        219.0,
+        69.7886734008789,
+        367.81298828125,
+        79.7291030883789
+      ],
+      "block_id": "page-0037-block-0006",
+      "order": 6,
+      "text": "H S. & al. (2005). Evidence-Based\n",
+      "text_sha256": "f4e90b626cd9fea13193f83a79705ca1afb02c5a1171613250728a4e2544bf76"
+    },
+    {
+      "bbox": [
+        219.0,
+        79.7886734008789,
+        378.1319885253906,
+        101.7291030883789
+      ],
+      "block_id": "page-0037-block-0007",
+      "order": 7,
+      "text": "Mental Health Care, Edinburgh, Elsevier.\nM, D. S. & al. (2013). e evaluation\n",
+      "text_sha256": "e66504872eef5e2d5643cb21be97d3f3da8bf66060e83b9f05d97b02be2a5056"
+    },
+    {
+      "bbox": [
+        219.0,
+        101.8414077758789,
+        377.9659729003906,
+        143.72911071777344
+      ],
+      "block_id": "page-0037-block-0008",
+      "order": 8,
+      "text": "and legacy of the Engel and Romano work\nin biopsychosocial medicine, Rochester,\nNY, University of Rochester Press.\nP, A. (2009). Histoire du cerveau : De\n",
+      "text_sha256": "ebbc972dbb42b7f416365a0e82a1c4765a0ff001ff59231c1af142417f751c42"
+    },
+    {
+      "bbox": [
+        231.0,
+        143.78868103027344,
+        371.2350158691406,
+        163.72911071777344
+      ],
+      "block_id": "page-0037-block-0009",
+      "order": 9,
+      "text": "l’Antiquité aux neurosciences, Québec,\nLes Presses de l’Université Laval.\n",
+      "text_sha256": "87ae0d31ea4d0a7dc358b35b7d674839fa1e882b283a991ab030e1c233b3f1d7"
+    },
+    {
+      "bbox": [
+        390.0,
+        69.7886734008789,
+        513.35498046875,
+        79.7291030883789
+      ],
+      "block_id": "page-0037-block-0010",
+      "order": 10,
+      "text": "W, P. (2005). Biopsychosocial\n",
+      "text_sha256": "deea635cccc868dba108ae00e077298b25a154d9898d94d1d6a34977bf51961c"
+    },
+    {
+      "bbox": [
+        390.0,
+        79.8414077758789,
+        533.5455322265625,
+        121.7291030883789
+      ],
+      "block_id": "page-0037-block-0011",
+      "order": 11,
+      "text": "medicine : An integrated approach\nto understanding illness, New York,\nOxford University Press.\nW, A. P. (2015). A History of the\n",
+      "text_sha256": "d0050befad85d47fee3f017a37f4ff01aee726816b9054f175000f26111e9fb8"
+    },
+    {
+      "bbox": [
+        402.0,
+        121.84141540527344,
+        537.8973388671875,
+        151.72911071777344
+      ],
+      "block_id": "page-0037-block-0012",
+      "order": 12,
+      "text": "brain : From Stone Age surgery to\nmodern neuroscience, New York, NY,\nPsychology Press.\n",
+      "text_sha256": "2cb51e1fe69b038572cc6e05fbb8800e1511804012c8ac3eb844ca64f26d5adc"
+    }
+  ],
+  "coordinates_sha256": "b2d396a13eb0e68f114ce38cd9a9f47e66bbfaad0727b9489b781536cb8dd84e",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0037",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "20\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 1\nIntroduction à la psychiatrie\nLectures complémentaires\nC, F. & T, J.-P. (2008). Ency-\nclopédie historique des neurosciences,\nBruxelles, Belgique, De Boeck.\nG, H. E. & al. (2015).\n« Nanoneuromedicines for degenera-\ntive, inammatory, and infectious ner-\nvous system diseases », Nanomedicine :\nNanotechnology, Biology and Medicine,\n11(3), p. 751-767.\nH S. & al. (2005). Evidence-Based\nMental Health Care, Edinburgh, Elsevier.\nM, D. S. & al. (2013). e evaluation\nand legacy of the Engel and Romano work\nin biopsychosocial medicine, Rochester,\nNY, University of Rochester Press.\nP, A. (2009). Histoire du cerveau : De\nl’Antiquité aux neurosciences, Québec,\nLes Presses de l’Université Laval.\nW, P. (2005). Biopsychosocial\nmedicine : An integrated approach\nto understanding illness, New York,\nOxford University Press.\nW, A. P. (2015). A History of the\nbrain : From Stone Age surgery to\nmodern neuroscience, New York, NY,\nPsychology Press.\n",
+  "raw_text_sha256": "b7c6f8a1008e68fe8a6ccdf239d9437403f962fbfa050495dd98ff13c827789a",
+  "source_page_display": 38,
+  "source_page_index": 37
+}

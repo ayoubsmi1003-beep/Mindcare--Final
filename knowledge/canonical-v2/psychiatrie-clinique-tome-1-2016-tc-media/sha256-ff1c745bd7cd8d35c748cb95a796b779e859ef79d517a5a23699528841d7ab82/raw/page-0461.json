@@ -1,0 +1,328 @@
+{
+  "block_sequence_sha256": "e5d0c62e710635a1d033b007a4ee6e7325a2129855d2e19fc73deb27f42e3dce",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        477.3144836425781,
+        758.8693237304688
+      ],
+      "block_id": "page-0461-block-0001",
+      "order": 1,
+      "text": "444\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3\nSyndromes cliniques psychiatriques\n",
+      "text_sha256": "e054433811ea8f939a7a7c238cee28ad5c8ad70542104349c56104820b6c231c"
+    },
+    {
+      "bbox": [
+        50.5,
+        41.002296447753906,
+        399.0335693359375,
+        53.320068359375
+      ],
+      "block_id": "page-0461-block-0002",
+      "order": 2,
+      "text": "TABLEAU 20.13 Application du modèle de prévention précoce dans les troubles anxieux\n",
+      "text_sha256": "a0a528c9e405240f6678c21e7865c9a6487575c5c0542f4a868259b3f37994da"
+    },
+    {
+      "bbox": [
+        68.3499984741211,
+        58.27412414550781,
+        521.1544799804688,
+        68.85029602050781
+      ],
+      "block_id": "page-0461-block-0003",
+      "order": 3,
+      "text": "Niveau\nDénition clinique\nPopulation cible\nInterventions potentielles\n",
+      "text_sha256": "20924d033392f151758d26e3607fa4378eede51fbf51e248749ab15bd6944644"
+    },
+    {
+      "bbox": [
+        78.6500015258789,
+        74.20195770263672,
+        250.5655517578125,
+        94.02812957763672
+      ],
+      "block_id": "page-0461-block-0004",
+      "order": 4,
+      "text": "0\nRisque élevé, en l’absence de symptômes\ncliniques\n",
+      "text_sha256": "785d4d65fd67527ac68461d822081221288c7fa1e8362ee3fb840183b73a37ae"
+    },
+    {
+      "bbox": [
+        261.95001220703125,
+        74.20195770263672,
+        535.7434692382812,
+        116.02812957763672
+      ],
+      "block_id": "page-0461-block-0005",
+      "order": 5,
+      "text": "Jeunes enfants des patients identiés\nPsychoéducation pour des jeunes et leur\nfamille\nPromotion des habitudes de vie saines\nEntraînement en résilience\n",
+      "text_sha256": "052eb89f17a98477c871dc5d86282865b5f8334f209ccb6ce3a8fc1c26e7d2d8"
+    },
+    {
+      "bbox": [
+        78.6500015258789,
+        124.65196228027344,
+        228.24203491210938,
+        186.47813415527344
+      ],
+      "block_id": "page-0461-block-0006",
+      "order": 6,
+      "text": "1\nSymptômes légers non spéciques\nou subsyndromiques\nLégère baisse du fonctionnement\npsychosocial\nDécits neurocognitifs de légers\nà modérés\n",
+      "text_sha256": "e99b82315dd87fe543b8f5904371158164b03e35d97b3207faa95d80c84bb2c7"
+    },
+    {
+      "bbox": [
+        261.95001220703125,
+        124.65196228027344,
+        379.4991455078125,
+        165.47813415527344
+      ],
+      "block_id": "page-0461-block-0007",
+      "order": 7,
+      "text": "Dépistage de la population de jeunes\nà risque\nJeunes référés : de l’école, des soins\nprimaires, des services sociaux, etc.\n",
+      "text_sha256": "bbb51f7529837c5593d40954ca48997795431396b0416b871a61a5670c2db2c8"
+    },
+    {
+      "bbox": [
+        406.70001220703125,
+        124.65196228027344,
+        541.2095336914062,
+        208.47813415527344
+      ],
+      "block_id": "page-0461-block-0008",
+      "order": 8,
+      "text": "Identication des signes précoces et des\nfacteurs de risque\nPrévention des facteurs de risque\nPsychoéducation et promotion des habi-\ntudes de vie saines\nEntraînement en habiletés sociales sur\nbase simpliée de la TCC\nEntraînement à la résolution de problèmes\n",
+      "text_sha256": "f411fce9165fbfead4947c76a66710b10c7ebc808dce7ebf7d0bdb89bc09ee71"
+    },
+    {
+      "bbox": [
+        78.6500015258789,
+        217.0519561767578,
+        246.5531005859375,
+        280.8781433105469
+      ],
+      "block_id": "page-0461-block-0009",
+      "order": 9,
+      "text": "2\nPremier épisode\nTrouble anxieux manifeste\nSymptômes anxieux typiques, d’intensité\nmodérée ou sévère\nDéclin fonctionnel\nDécits cognitifs possibles\n",
+      "text_sha256": "b52b3440488680e4776fe6aa160a2429dbbc8a81347539eda4e18349a418dbd6"
+    },
+    {
+      "bbox": [
+        261.95001220703125,
+        214.0519561767578,
+        391.8047180175781,
+        246.8781280517578
+      ],
+      "block_id": "page-0461-block-0010",
+      "order": 10,
+      "text": "Références des services de 1re ligne ou\nspécialisés, de l’urgence ou des services\nsociaux\n",
+      "text_sha256": "34b1124402036a62d2a81fbc65c9bd60bb4f61ce1111302667196ff7008d6286"
+    },
+    {
+      "bbox": [
+        406.70001220703125,
+        217.0519561767578,
+        543.1470336914062,
+        247.8781280517578
+      ],
+      "block_id": "page-0461-block-0011",
+      "order": 11,
+      "text": "Traitement pharmacologique et/ou psycho-\nlogique (TCC)\nPsychoéducation incluant :\n",
+      "text_sha256": "a7ef956d2977793d618d996d7306d609df4f5d65c6c40e363b68f2886c3279a8"
+    },
+    {
+      "bbox": [
+        413.70001220703125,
+        249.05197143554688,
+        530.7000122070312,
+        300.8781433105469
+      ],
+      "block_id": "page-0461-block-0012",
+      "order": 12,
+      "text": "• le renforcement de l’adhésion au\ntraitement\n• la prévention des rechutes\n• l’identication de signes précoces\nde rechute\n",
+      "text_sha256": "3601b15601eced6daa0e48da56577508bf0263b72f05c8e56233f5fe891e1b3f"
+    },
+    {
+      "bbox": [
+        78.6500015258789,
+        309.501953125,
+        252.66091918945312,
+        351.328125
+      ],
+      "block_id": "page-0461-block-0013",
+      "order": 13,
+      "text": "3\nRémission incomplète du premier épisode.\nRécurrence ou rechute\nSymptômes résiduels ou déclin du fonc-\ntionnement psychosocial\n",
+      "text_sha256": "f08d85bb48eb3fc79c7478e60add7b2bb8d8215973b1ba8271383f9f92cbeb50"
+    },
+    {
+      "bbox": [
+        261.95001220703125,
+        306.501953125,
+        377.4380187988281,
+        329.328125
+      ],
+      "block_id": "page-0461-block-0014",
+      "order": 14,
+      "text": "Références des services de 1re ligne\nou spécialisés\n",
+      "text_sha256": "a76fbae380c582a7ad80a524a132d3b257fb311b89561dc466829e18200d5a6d"
+    },
+    {
+      "bbox": [
+        406.70001220703125,
+        309.501953125,
+        538.7969970703125,
+        372.328125
+      ],
+      "block_id": "page-0461-block-0015",
+      "order": 15,
+      "text": "Mêmes que le niveau 2\nAccent mis sur le traitement pharmacolo-\ngique à long terme\nPromotion et maintien de l’intégration\nsociale\nRéadaptation des décits\n",
+      "text_sha256": "15fa16cad7aba7fb470f5534f1338153e8c69786968a2cf78b3c501d0e4252d8"
+    },
+    {
+      "bbox": [
+        78.6500015258789,
+        380.9019470214844,
+        246.99801635742188,
+        421.7281188964844
+      ],
+      "block_id": "page-0461-block-0016",
+      "order": 16,
+      "text": "4\nAbsence de réponse thérapeutique et/ou\nsymptômes sévères et persistants\nDécits marqués du fonctionnement\npsychosocial\n",
+      "text_sha256": "6751060c4d03de7574b4bf0a1c48a14565e5c301ee92f9130e887eb8c966ea05"
+    },
+    {
+      "bbox": [
+        261.95001220703125,
+        377.9019470214844,
+        377.4380187988281,
+        400.7281188964844
+      ],
+      "block_id": "page-0461-block-0017",
+      "order": 17,
+      "text": "Références des services de 1re ligne\nou spécialisés\n",
+      "text_sha256": "a76fbae380c582a7ad80a524a132d3b257fb311b89561dc466829e18200d5a6d"
+    },
+    {
+      "bbox": [
+        406.70001220703125,
+        380.9019470214844,
+        539.8389282226562,
+        422.7281188964844
+      ],
+      "block_id": "page-0461-block-0018",
+      "order": 18,
+      "text": "Accent sur le traitement pharmacologique\nà long terme\nMaintien de l’intégration sociale\nRéadaptation des décits\n",
+      "text_sha256": "50973f3c9372b93ed894ef3a8ec7c360232fb44479c472bf8267ea0395866145"
+    },
+    {
+      "bbox": [
+        48.45000076293945,
+        431.4906311035156,
+        191.3820037841797,
+        440.3588562011719
+      ],
+      "block_id": "page-0461-block-0019",
+      "order": 19,
+      "text": "Source : Adapté de Vasquez-Bourgon & al. (2013).\n",
+      "text_sha256": "0e5037f136a0232a282c98504d1a1de9de038da2b1ebea57d60cad3223ad9b78"
+    },
+    {
+      "bbox": [
+        48.20000076293945,
+        465.41583251953125,
+        291.04058837890625,
+        498.90850830078125
+      ],
+      "block_id": "page-0461-block-0020",
+      "order": 20,
+      "text": "Cependant, à l’heure actuelle, il existe peu de moyens d’iden-\ntier les populations cibles et la disponibilité d’interventions\nprécoces spéciques et ecaces.\n",
+      "text_sha256": "9a2bc81f41530bc57ee4aa71fbf8177c6b391fd8b35a9396ed7970a0d80a028a"
+    },
+    {
+      "bbox": [
+        48.20000076293945,
+        499.91583251953125,
+        291.2646179199219,
+        725.4085083007812
+      ],
+      "block_id": "page-0461-block-0021",
+      "order": 21,
+      "text": "Des programmes de prévention ciblant les enfants d’âge\npréscolaire jusqu’aux jeunes adultes ont vu le jour, surtout depuis\nle début des années 1990 (Turgeon & al., 2007). La plupart de\nces programmes incluent des stratégies telles que l’exposition in\nvivo, la restructuration cognitive, l’entraînement à la relaxation,\nl’entraînement à la résolution de problèmes et la rééducation\nrespiratoire. Leur durée varie de 10 à 20 rencontres et plusieurs\nse font en groupe. Dans certains cas, les parents prennent part\nau programme et des stratégies spéciques peuvent être ajoutées\n(p. ex., entraînement aux habiletés parentales, amélioration du\nréseau de soutien social des mères, gestion de l’anxiété parentale).\nPlusieurs de ces programmes amènent :\n• une diminution des symptômes d’anxiété chez l’enfant ;\n• une réduction de la sensibilité à l’anxiété ;\n• une amélioration du sentiment d’autoecacité personnelle ;\n• une diminution des comportements parentaux de surprotec-\ntion.\nLe programme de Turgeon et Brousseau, cités dans Turgeon\n& al. (2007), montre une diminution des comportements de\n",
+      "text_sha256": "c6cb792c7a98dba5ad3482770a16ef3ef8ae14be5513eb67ba7db65c0226d93f"
+    },
+    {
+      "bbox": [
+        306.0,
+        465.41583251953125,
+        548.7806396484375,
+        487.40850830078125
+      ],
+      "block_id": "page-0461-block-0022",
+      "order": 22,
+      "text": "surprotection parentale, un facteur de risque important dans\nl’étiologie des troubles anxieux, se maintenant au suivi de cinq ans.\n",
+      "text_sha256": "22cc7fbb390532a2e699e1437a4ebcbbf2b8d0128f4f3ed6a466a41a94b52643"
+    },
+    {
+      "bbox": [
+        306.0,
+        488.4658203125,
+        549.0175170898438,
+        568.1085205078125
+      ],
+      "block_id": "page-0461-block-0023",
+      "order": 23,
+      "text": "Il s’agit souvent de prolonger un traitement d’entretien aussi\nlongtemps que nécessaire après un traitement initial réussi.\nDans le cas de la pharmacothérapie, il est possible de maintenir\nune médication durant plusieurs années à des doses adaptées\nselon l’évolution. Dans le cas d’une thérapie cognitivo-compor-\ntementale réussie, il peut être utile de reprendre des sessions de\nrelance dès les premiers signes ou symptômes d’une rechute.\n",
+      "text_sha256": "6c78b054ddef7ace22e6a2d1c2151c27bae280e419c480a35549f28c92efb02a"
+    },
+    {
+      "bbox": [
+        313.0,
+        578.1931762695312,
+        475.355224609375,
+        597.1189575195312
+      ],
+      "block_id": "page-0461-block-0024",
+      "order": 24,
+      "text": "20.8\nÉvolution et pronostic\n",
+      "text_sha256": "007320f973841287a46c420b312124cfaa95f96a6da67d95cdea1ab0bf7edf23"
+    },
+    {
+      "bbox": [
+        306.0,
+        611.2158203125,
+        549.3109741210938,
+        679.3585205078125
+      ],
+      "block_id": "page-0461-block-0025",
+      "order": 25,
+      "text": "Les troubles anxieux se manifestent tôt dans la vie, souvent\ndurant l’enfance ou l’adolescence, et ont tendance à évoluer sur\nun mode persistant avec ou sans uctuation de l’intensité des\nsymptômes au long cours. Cependant, il est possible d’identi-\ner des particularités plus ou moins typiques de l’évolution de\ncertains troubles anxieux.\n",
+      "text_sha256": "4f1eab033ad5b2c1d0de20077491b6f8daed74bfb7ce79be6d6e1aaf230460b3"
+    },
+    {
+      "bbox": [
+        306.0,
+        680.3658447265625,
+        549.2040405273438,
+        725.45849609375
+      ],
+      "block_id": "page-0461-block-0026",
+      "order": 26,
+      "text": "Ainsi, on diagnostique rarement un début de trouble panique\ndurant l’enfance ou l’adolescence ou encore chez les personnes\nâgées. C’est une maladie du jeune âge avec une médiane de\ndébut, rapportée aux États-Unis, d’environ 22 ou 23 ans (DSM-5).\n",
+      "text_sha256": "c5406e1b873b266303e5739da9fc5b172425e8f371838f57f0ae24a99cbb90c7"
+    }
+  ],
+  "coordinates_sha256": "6a106146b3931ec5442e78b329f11ee6233e00b596a41ebcf6294a59b094029c",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0461",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "444\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3\nSyndromes cliniques psychiatriques\nTABLEAU 20.13 Application du modèle de prévention précoce dans les troubles anxieux\nNiveau\nDénition clinique\nPopulation cible\nInterventions potentielles\n0\nRisque élevé, en l’absence de symptômes\ncliniques\nJeunes enfants des patients identiés\nPsychoéducation pour des jeunes et leur\nfamille\nPromotion des habitudes de vie saines\nEntraînement en résilience\n1\nSymptômes légers non spéciques\nou subsyndromiques\nLégère baisse du fonctionnement\npsychosocial\nDécits neurocognitifs de légers\nà modérés\nDépistage de la population de jeunes\nà risque\nJeunes référés : de l’école, des soins\nprimaires, des services sociaux, etc.\nIdentication des signes précoces et des\nfacteurs de risque\nPrévention des facteurs de risque\nPsychoéducation et promotion des habi-\ntudes de vie saines\nEntraînement en habiletés sociales sur\nbase simpliée de la TCC\nEntraînement à la résolution de problèmes\n2\nPremier épisode\nTrouble anxieux manifeste\nSymptômes anxieux typiques, d’intensité\nmodérée ou sévère\nDéclin fonctionnel\nDécits cognitifs possibles\nRéférences des services de 1re ligne ou\nspécialisés, de l’urgence ou des services\nsociaux\nTraitement pharmacologique et/ou psycho-\nlogique (TCC)\nPsychoéducation incluant :\n• le renforcement de l’adhésion au\ntraitement\n• la prévention des rechutes\n• l’identication de signes précoces\nde rechute\n3\nRémission incomplète du premier épisode.\nRécurrence ou rechute\nSymptômes résiduels ou déclin du fonc-\ntionnement psychosocial\nRéférences des services de 1re ligne\nou spécialisés\nMêmes que le niveau 2\nAccent mis sur le traitement pharmacolo-\ngique à long terme\nPromotion et maintien de l’intégration\nsociale\nRéadaptation des décits\n4\nAbsence de réponse thérapeutique et/ou\nsymptômes sévères et persistants\nDécits marqués du fonctionnement\npsychosocial\nRéférences des services de 1re ligne\nou spécialisés\nAccent sur le traitement pharmacologique\nà long terme\nMaintien de l’intégration sociale\nRéadaptation des décits\nSource : Adapté de Vasquez-Bourgon & al. (2013).\nCependant, à l’heure actuelle, il existe peu de moyens d’iden-\ntier les populations cibles et la disponibilité d’interventions\nprécoces spéciques et ecaces.\nDes programmes de prévention ciblant les enfants d’âge\npréscolaire jusqu’aux jeunes adultes ont vu le jour, surtout depuis\nle début des années 1990 (Turgeon & al., 2007). La plupart de\nces programmes incluent des stratégies telles que l’exposition in\nvivo, la restructuration cognitive, l’entraînement à la relaxation,\nl’entraînement à la résolution de problèmes et la rééducation\nrespiratoire. Leur durée varie de 10 à 20 rencontres et plusieurs\nse font en groupe. Dans certains cas, les parents prennent part\nau programme et des stratégies spéciques peuvent être ajoutées\n(p. ex., entraînement aux habiletés parentales, amélioration du\nréseau de soutien social des mères, gestion de l’anxiété parentale).\nPlusieurs de ces programmes amènent :\n• une diminution des symptômes d’anxiété chez l’enfant ;\n• une réduction de la sensibilité à l’anxiété ;\n• une amélioration du sentiment d’autoecacité personnelle ;\n• une diminution des comportements parentaux de surprotec-\ntion.\nLe programme de Turgeon et Brousseau, cités dans Turgeon\n& al. (2007), montre une diminution des comportements de\nsurprotection parentale, un facteur de risque important dans\nl’étiologie des troubles anxieux, se maintenant au suivi de cinq ans.\nIl s’agit souvent de prolonger un traitement d’entretien aussi\nlongtemps que nécessaire après un traitement initial réussi.\nDans le cas de la pharmacothérapie, il est possible de maintenir\nune médication durant plusieurs années à des doses adaptées\nselon l’évolution. Dans le cas d’une thérapie cognitivo-compor-\ntementale réussie, il peut être utile de reprendre des sessions de\nrelance dès les premiers signes ou symptômes d’une rechute.\n20.8\nÉvolution et pronostic\nLes troubles anxieux se manifestent tôt dans la vie, souvent\ndurant l’enfance ou l’adolescence, et ont tendance à évoluer sur\nun mode persistant avec ou sans uctuation de l’intensité des\nsymptômes au long cours. Cependant, il est possible d’identi-\ner des particularités plus ou moins typiques de l’évolution de\ncertains troubles anxieux.\nAinsi, on diagnostique rarement un début de trouble panique\ndurant l’enfance ou l’adolescence ou encore chez les personnes\nâgées. C’est une maladie du jeune âge avec une médiane de\ndébut, rapportée aux États-Unis, d’environ 22 ou 23 ans (DSM-5).\n",
+  "raw_text_sha256": "9cf9edbf9914a1fb7e20ac6cf251febca588d7010ba9959a65d8955ee75ea04a",
+  "source_page_display": 462,
+  "source_page_index": 461
+}

@@ -1,0 +1,15 @@
+{
+  "debut": "2026-09-24T23:24:51.593Z",
+  "recette_version": "r2-2026-09-16",
+  "modele": "BAAI/bge-m3",
+  "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+  "dimensions": 1024,
+  "normalisation": "l2-native-tete-sentence-embedding-v1",
+  "chunker_version": "struct-v2",
+  "lots": 2,
+  "ecrits": 16,
+  "echecs": [],
+  "termine": true,
+  "duree_s": 165,
+  "empreinte_chunks": "cb832ee12e03131439db9dc3bfdec3fd8980b689872cd71ce023a64b926a3fb8"
+}

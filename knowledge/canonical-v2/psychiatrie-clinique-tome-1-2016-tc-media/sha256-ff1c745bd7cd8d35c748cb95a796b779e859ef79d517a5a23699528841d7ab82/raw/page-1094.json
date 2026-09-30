@@ -1,0 +1,484 @@
+{
+  "block_sequence_sha256": "203150689ebc8facb83f3bfdabddfc2d36e192bf505b61e19bbe9a08f8e35cf9",
+  "blocks": [
+    {
+      "bbox": [
+        310.6000061035156,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-1094-block-0001",
+      "order": 1,
+      "text": "Chapitre 48\nÉvolution des services psychiatriques\n1077\n",
+      "text_sha256": "e59e9857406a326126ebfac688870502381cad7b8d40a7dbd05dfef47b745f66"
+    },
+    {
+      "bbox": [
+        56.45000076293945,
+        37.752296447753906,
+        318.15753173828125,
+        53.320068359375
+      ],
+      "block_id": "page-1094-block-0002",
+      "order": 2,
+      "text": "TABLEAU 48.1 Contours des 1re, 2e et 3e lignes en santé mentale\n",
+      "text_sha256": "78e18e8d6645eddde6555cc4f2b6516d5055b459b93860e435eef7dce7c24f0c"
+    },
+    {
+      "bbox": [
+        188.1999969482422,
+        55.07412338256836,
+        498.2555236816406,
+        68.85029602050781
+      ],
+      "block_id": "page-1094-block-0003",
+      "order": 3,
+      "text": "1re ligne\n2e ligne\n3e ligne\n",
+      "text_sha256": "e461f6f885011cc93ea174c1280f279c5c964d9929807b6fa1b0801d5af83e56"
+    },
+    {
+      "bbox": [
+        58.25,
+        73.12285614013672,
+        479.39300537109375,
+        83.14238739013672
+      ],
+      "block_id": "page-1094-block-0004",
+      "order": 4,
+      "text": "Types de soins\n• Généraux, de base\n• Spécialisés\n• Ultraspécialisés\n",
+      "text_sha256": "104bef9569599ebaec77a6ee8f0067893becb722c99133e9659b0ed431742844"
+    },
+    {
+      "bbox": [
+        58.25,
+        89.5728530883789,
+        127.39611053466797,
+        109.5923843383789
+      ],
+      "block_id": "page-1094-block-0005",
+      "order": 5,
+      "text": "Types de problèmes\nde santé mentale\n",
+      "text_sha256": "606f6d4d6c3f8c60b0b0acf9f3da697458e18eb4e834efde98de369de3566f14"
+    },
+    {
+      "bbox": [
+        136.75,
+        89.6519546508789,
+        241.81207275390625,
+        143.47813415527344
+      ],
+      "block_id": "page-1094-block-0006",
+      "order": 6,
+      "text": "• Troubles de l’adaptation\n• Troubles du comportement\n• Troubles mentaux courants\n• Troubles de la personnalité\n• Troubles avec les substances\n",
+      "text_sha256": "aac1b8126146587acb6f06f450b49b262b974438198b46762d9db8da06c50dc9"
+    },
+    {
+      "bbox": [
+        277.3999938964844,
+        89.6519546508789,
+        406.6732482910156,
+        152.47813415527344
+      ],
+      "block_id": "page-1094-block-0007",
+      "order": 7,
+      "text": "• Troubles mentaux et troubles de la\npersonnalité graves\n• Troubles graves du comportement\n• Troubles mentaux courants/troubles\navec les substances mais complexes\n• Comorbidités\n",
+      "text_sha256": "89254a2dabc4db6742a4e126887f66f779a00fdb17120147cf9720b4f5fdeb83"
+    },
+    {
+      "bbox": [
+        418.1000061035156,
+        89.6519546508789,
+        544.092529296875,
+        150.47813415527344
+      ],
+      "block_id": "page-1094-block-0008",
+      "order": 8,
+      "text": "• Troubles mentaux graves et très\ncomplexes\n• Troubles courants, troubles avec les\nsubstances et comorbidités aux ns\nd’enseignement universitaire et de\nrecherche\n",
+      "text_sha256": "edec16c556f619dbbbf593975f1f666246edc57b1e665bbecd52fdbebd9a3731"
+    },
+    {
+      "bbox": [
+        58.25,
+        158.9728546142578,
+        503.131103515625,
+        168.9923858642578
+      ],
+      "block_id": "page-1094-block-0009",
+      "order": 9,
+      "text": "Niveaux de desserte\n• Quartier, localité\n• Secteur, région\n• Suprarégional, national\n",
+      "text_sha256": "5848a775446a90b66158ca339699cad784407cabb3b9732492810341318e40e8"
+    },
+    {
+      "bbox": [
+        58.25,
+        175.4228515625,
+        250.36477661132812,
+        238.328125
+      ],
+      "block_id": "page-1094-block-0010",
+      "order": 10,
+      "text": "Intervenants\n• Omnipraticiens\n• Professionnels en privé, dans\nles écoles ou en CLSC\n• Intervenants des organismes\nde la communauté, enseignants\n• Bénévoles\n",
+      "text_sha256": "60351c0d5e0703f8c9808f0b2829fc9bf19ccf493dcaf0387567cd8c7625d304"
+    },
+    {
+      "bbox": [
+        277.3999938964844,
+        175.501953125,
+        402.08001708984375,
+        216.328125
+      ],
+      "block_id": "page-1094-block-0011",
+      "order": 11,
+      "text": "• Psychiatres\n• Professionnels spécialisés en santé\nmentale, en toxicomanie ou en\ndécience intellectuelle\n",
+      "text_sha256": "df6c20a06ef6cd9ae5aa5342938916597077c2555e20192b1f7be6b5f6b152ac"
+    },
+    {
+      "bbox": [
+        418.1000061035156,
+        175.501953125,
+        548.0466918945312,
+        215.328125
+      ],
+      "block_id": "page-1094-block-0012",
+      "order": 12,
+      "text": "• Psychiatres et équipes de profession-\nnels ultraspécialisés en santé mentale,\nen toxicomanie ou en décience\nintellectuelle\n",
+      "text_sha256": "519357440ea8eb5c7ac763569d38188d190ed1b4672638e6f9ab79479e5f6e54"
+    },
+    {
+      "bbox": [
+        58.25,
+        244.82286071777344,
+        258.3470153808594,
+        319.7281188964844
+      ],
+      "block_id": "page-1094-block-0013",
+      "order": 13,
+      "text": "Lieux de soins\n• Communauté, milieu scolaire\n• Bureaux privés\n• Cliniques sans rendez-vous\n• Établissements publics et commu-\nnautaires (p. ex., CLSC)\n• Centres de crise\n• CHSLD\n",
+      "text_sha256": "befe5fcdbf8fc6d5471f134fd232dbbd8df9f44c2cbbebd9b14404436f29e1e6"
+    },
+    {
+      "bbox": [
+        277.3999938964844,
+        244.90196228027344,
+        408.0650329589844,
+        308.7281188964844
+      ],
+      "block_id": "page-1094-block-0014",
+      "order": 14,
+      "text": "• Unités de soins hospitaliers\n• Urgences\n• Cliniques ambulatoires de psychiatrie\n• Centres de réadaptation en santé\nmentale, hôpitaux de jour\n• Milieux résidentiels supervisés\n",
+      "text_sha256": "d93d1bb0f1e8550dfea6f166bfaed13fd226de7eab315734544d36de0c33261f"
+    },
+    {
+      "bbox": [
+        418.1000061035156,
+        244.90196228027344,
+        545.489013671875,
+        306.7281188964844
+      ],
+      "block_id": "page-1094-block-0015",
+      "order": 15,
+      "text": "• Établissements hospitaliers\nuniversitaires\n• Cliniques ambulatoires\nultraspécialisées\n• Centres de réadaptation innovateurs\nen santé mentale\n",
+      "text_sha256": "786d133a12d69a36894f5e0ab8b72278744bd64469d06b256cd464d271f49da6"
+    },
+    {
+      "bbox": [
+        58.25,
+        326.2728576660156,
+        122.72599792480469,
+        346.2923889160156
+      ],
+      "block_id": "page-1094-block-0016",
+      "order": 16,
+      "text": "Exemples de soins\nprodigués\n",
+      "text_sha256": "e211d3540734c92d58565a0e05a1fc37eadcb6abf18d0c413bbf9453a605cffd"
+    },
+    {
+      "bbox": [
+        136.75,
+        326.3519592285156,
+        256.27301025390625,
+        390.1781311035156
+      ],
+      "block_id": "page-1094-block-0017",
+      "order": 17,
+      "text": "• Évaluation des problèmes sociaux\nou médicaux\n• Médication\n• Psychothérapies\n• Counseling\n• Suivi et soutien\n",
+      "text_sha256": "9e8e425b23f9b9d66c874af225d683a0fed96d3da38a02a191280a5273ceb18d"
+    },
+    {
+      "bbox": [
+        277.3999938964844,
+        326.3519592285156,
+        399.90203857421875,
+        391.1781311035156
+      ],
+      "block_id": "page-1094-block-0018",
+      "order": 18,
+      "text": "• Évaluation\n• Médication\n• Psychothérapies spéciques\n• Électroconvulsivothérapie\n• Réadaptation\n• Désintoxication en unité spécique\n",
+      "text_sha256": "3e58de13ec54a1c0e8b8be1c7501e9602cbc1af245947f44e169b0bbdec508d3"
+    },
+    {
+      "bbox": [
+        418.1000061035156,
+        326.3519592285156,
+        531.8450317382812,
+        390.1781311035156
+      ],
+      "block_id": "page-1094-block-0019",
+      "order": 19,
+      "text": "• Évaluation\n• Médication\n• Psychothérapies spéciques\n• Interventions et programmes\ninnovateurs\n• Soins hospitaliers médicolégaux\n",
+      "text_sha256": "23cb906a389b8eee39bd3707ea89da554a172deccf37deed6b2403ab75783e51"
+    },
+    {
+      "bbox": [
+        58.25,
+        394.751953125,
+        545.43798828125,
+        407.6923828125
+      ],
+      "block_id": "page-1094-block-0020",
+      "order": 20,
+      "text": "Porte d’entrée\n• Population générale\n• Par M.D. ou intervenants de 1re ligne\n• Par M.D. ou intervenants de 2e ligne\n",
+      "text_sha256": "e784922d894751257d8f750234d83542cf5626e7d07f6e0511a80575b0e4038c"
+    },
+    {
+      "bbox": [
+        58.25,
+        414.12286376953125,
+        94.73600769042969,
+        434.14239501953125
+      ],
+      "block_id": "page-1094-block-0021",
+      "order": 21,
+      "text": "Fonctions\nInterlignes\n",
+      "text_sha256": "67ec98dc5ba58c9399e2e2c3462232f8cd623f5f82c674334d15e32125203ee6"
+    },
+    {
+      "bbox": [
+        136.75,
+        414.20196533203125,
+        259.91387939453125,
+        466.02813720703125
+      ],
+      "block_id": "page-1094-block-0022",
+      "order": 22,
+      "text": "• Soins et suivi\n• Identication des cas complexes et\nréférence à la 2e ligne\n• Reprise des cas graves stabilisés\nsuite à la référence à 2e ligne\n",
+      "text_sha256": "be1ee3ff180803806572e83f26fd61948ebb706de3eadbe438f4aece146db98e"
+    },
+    {
+      "bbox": [
+        277.3999938964844,
+        411.20196533203125,
+        408.7522277832031,
+        467.02813720703125
+      ],
+      "block_id": "page-1094-block-0023",
+      "order": 23,
+      "text": "• Consultation et soutien à la 1re ligne\n• Soins et suivi des cas graves\n• Reprise des cas très graves stabilisés\npar la 3e ligne\n• Télémédecine\n",
+      "text_sha256": "9e4c6c2b76618a71dd182f48ba502de0f405ea8fa35d46f8dcdf9742f195a98c"
+    },
+    {
+      "bbox": [
+        418.1000061035156,
+        411.20196533203125,
+        535.798095703125,
+        446.02813720703125
+      ],
+      "block_id": "page-1094-block-0024",
+      "order": 24,
+      "text": "• Consultation à la 2e ligne\n• Soins et suivi des cas très graves\n• Télémédecine\n",
+      "text_sha256": "83f67757b009db98dc7c72215a2812e75a5fe7c10097cf6e538c43f4d0b97d18"
+    },
+    {
+      "bbox": [
+        58.25,
+        473.5228576660156,
+        110.72000122070312,
+        493.5423889160156
+      ],
+      "block_id": "page-1094-block-0025",
+      "order": 25,
+      "text": "Exemples\nd’hébergement\n",
+      "text_sha256": "19f26b5e05a5b16024d0fb79afa48d8c90f6c090ffa5f5ead56b2eb655c64791"
+    },
+    {
+      "bbox": [
+        136.75,
+        473.6019592285156,
+        258.4085693359375,
+        505.4281311035156
+      ],
+      "block_id": "page-1094-block-0026",
+      "order": 26,
+      "text": "• Foyer pour femmes battues\n• Refuge des jeunes\n• CHSLD répartis partout au Québec\n",
+      "text_sha256": "62e86e800c4c4907c6dd799287c458b87e6596a0ca4b440b01fd8d3cba6440de"
+    },
+    {
+      "bbox": [
+        277.3999938964844,
+        473.6019592285156,
+        409.06329345703125,
+        524.4281616210938
+      ],
+      "block_id": "page-1094-block-0027",
+      "order": 27,
+      "text": "• Résidences d’accueil, foyers de groupe,\netc.\n• Unités spéciques de CHSLD\naccueillant les patients avec troubles\nmentaux graves\n",
+      "text_sha256": "14a0dad71eb4958f6b332db2e2121607a38c2a2e0e5bcedff3524d3cb25ef981"
+    },
+    {
+      "bbox": [
+        418.1000061035156,
+        473.6019592285156,
+        546.9830322265625,
+        503.4281311035156
+      ],
+      "block_id": "page-1094-block-0028",
+      "order": 28,
+      "text": "• Hébergement innovateur destiné aux\npersonnes avec troubles mentaux\ngraves\n",
+      "text_sha256": "963404a578612c3fe5e56e923e7f0113f8f38db22e1723192ab7a1cade02cda2"
+    },
+    {
+      "bbox": [
+        58.25,
+        530.9728393554688,
+        125.72300720214844,
+        560.9923706054688
+      ],
+      "block_id": "page-1094-block-0029",
+      "order": 29,
+      "text": "Exemples de points\nde service de\nréadaptation\n",
+      "text_sha256": "8da1e91df26d6224dc4cdb83fa210dec8a7eb45e44849c61543aa4cca3ed5d2e"
+    },
+    {
+      "bbox": [
+        136.75,
+        531.0519409179688,
+        260.8470153808594,
+        570.8781127929688
+      ],
+      "block_id": "page-1094-block-0030",
+      "order": 30,
+      "text": "• Centres de réadaptation au travail\ngénériques (n’acceptant pas seule-\nment les personnes avec troubles\nmentaux)\n",
+      "text_sha256": "0bdecd11614b875378d2926842e212f22812d7aba9d36f0912c51285a8853450"
+    },
+    {
+      "bbox": [
+        277.3999938964844,
+        531.0519409179688,
+        409.2037658691406,
+        570.8781127929688
+      ],
+      "block_id": "page-1094-block-0031",
+      "order": 31,
+      "text": "• Centres publics ou communautaires\nde réadaptation au travail accueillant\nseulement des personnes avec troubles\nmentaux\n",
+      "text_sha256": "1c8a00abda67ac46d58a74a82247b45580ccd6454a2acf1b6e6859915a219d03"
+    },
+    {
+      "bbox": [
+        418.1000061035156,
+        531.0519409179688,
+        545.489013671875,
+        540.8781127929688
+      ],
+      "block_id": "page-1094-block-0032",
+      "order": 32,
+      "text": "• Centres de réadaptation innovateurs\n",
+      "text_sha256": "b34a2cb18b932506c1aa83e2b78fdbfd2b2fc7ac1aa594fa9099c4c5a8353bb0"
+    },
+    {
+      "bbox": [
+        58.25,
+        577.3728637695312,
+        264.1888427734375,
+        597.2781372070312
+      ],
+      "block_id": "page-1094-block-0033",
+      "order": 33,
+      "text": "Enseignement\n• Éducation à la communauté et entre\nles services de base\n",
+      "text_sha256": "abfe1a5a387005753bfc2c3d25fb451bb78a312b1de3c685051719b6369633d4"
+    },
+    {
+      "bbox": [
+        277.3999938964844,
+        577.4519653320312,
+        405.3380432128906,
+        619.2781372070312
+      ],
+      "block_id": "page-1094-block-0034",
+      "order": 34,
+      "text": "• Enseignement collégial et\nuniversitaire\n• Formation continue\n• Soutien et supervision de la 1re ligne\n",
+      "text_sha256": "0efecd0009f680593f1768717e2bd18e955ccac935052353a3322d7a9e3971f8"
+    },
+    {
+      "bbox": [
+        418.1000061035156,
+        577.4519653320312,
+        524.585205078125,
+        630.2781372070312
+      ],
+      "block_id": "page-1094-block-0035",
+      "order": 35,
+      "text": "• Enseignement universitaire\n• Formation continue\n• Formation à la recherche\n• Soutien et supervision des 1re\net 2e lignes\n",
+      "text_sha256": "f9481200609078a2b984b4af8de2dc7356534d93ebdf35875639ab9c55a3bcb2"
+    },
+    {
+      "bbox": [
+        58.25,
+        636.8228759765625,
+        535.6430053710938,
+        687.7281494140625
+      ],
+      "block_id": "page-1094-block-0036",
+      "order": 36,
+      "text": "Recherche\n• Collaboration à la recherche\n• Collaboration à la recherche\n• Organisation et favorisation de la\nrecherche\n• Développement et évaluation des\nnouvelles technologies en santé\nmentale et en toxicomanies\n",
+      "text_sha256": "9c10320944a34e0970af689c99dac76a57d3f250b74726e8812e37156438d540"
+    },
+    {
+      "bbox": [
+        58.25,
+        694.2228393554688,
+        107.82200622558594,
+        714.2423706054688
+      ],
+      "block_id": "page-1094-block-0037",
+      "order": 37,
+      "text": "Formation des\nintervenants\n",
+      "text_sha256": "cd08b55c3fac3c583b8b37e16915ba25d64de3ee02c3aa82e285cf00f51160b0"
+    },
+    {
+      "bbox": [
+        136.75,
+        694.3019409179688,
+        469.07000732421875,
+        704.1281127929688
+      ],
+      "block_id": "page-1094-block-0038",
+      "order": 38,
+      "text": "• Secondaire à universitaire\n• Collégiale et universitaire\n• Universitaire\n",
+      "text_sha256": "3fd29640c051de696ddcd59894846c33023bf8f07143614206ffca7ccba44232"
+    },
+    {
+      "bbox": [
+        54.25,
+        721.9406127929688,
+        205.25453186035156,
+        730.808837890625
+      ],
+      "block_id": "page-1094-block-0039",
+      "order": 39,
+      "text": "Source : Document inédit de Lalonde, P. et Lesage, A.\n",
+      "text_sha256": "ab89836a85e51dca58348667348b1102104274970f9b72c3b85822889ac58690"
+    }
+  ],
+  "coordinates_sha256": "f7d653be376c9d6fc887a602608dd5823f8800f5d4d854184287389adffa9993",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1094",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 48\nÉvolution des services psychiatriques\n1077\nTABLEAU 48.1 Contours des 1re, 2e et 3e lignes en santé mentale\n1re ligne\n2e ligne\n3e ligne\nTypes de soins\n• Généraux, de base\n• Spécialisés\n• Ultraspécialisés\nTypes de problèmes\nde santé mentale\n• Troubles de l’adaptation\n• Troubles du comportement\n• Troubles mentaux courants\n• Troubles de la personnalité\n• Troubles avec les substances\n• Troubles mentaux et troubles de la\npersonnalité graves\n• Troubles graves du comportement\n• Troubles mentaux courants/troubles\navec les substances mais complexes\n• Comorbidités\n• Troubles mentaux graves et très\ncomplexes\n• Troubles courants, troubles avec les\nsubstances et comorbidités aux ns\nd’enseignement universitaire et de\nrecherche\nNiveaux de desserte\n• Quartier, localité\n• Secteur, région\n• Suprarégional, national\nIntervenants\n• Omnipraticiens\n• Professionnels en privé, dans\nles écoles ou en CLSC\n• Intervenants des organismes\nde la communauté, enseignants\n• Bénévoles\n• Psychiatres\n• Professionnels spécialisés en santé\nmentale, en toxicomanie ou en\ndécience intellectuelle\n• Psychiatres et équipes de profession-\nnels ultraspécialisés en santé mentale,\nen toxicomanie ou en décience\nintellectuelle\nLieux de soins\n• Communauté, milieu scolaire\n• Bureaux privés\n• Cliniques sans rendez-vous\n• Établissements publics et commu-\nnautaires (p. ex., CLSC)\n• Centres de crise\n• CHSLD\n• Unités de soins hospitaliers\n• Urgences\n• Cliniques ambulatoires de psychiatrie\n• Centres de réadaptation en santé\nmentale, hôpitaux de jour\n• Milieux résidentiels supervisés\n• Établissements hospitaliers\nuniversitaires\n• Cliniques ambulatoires\nultraspécialisées\n• Centres de réadaptation innovateurs\nen santé mentale\nExemples de soins\nprodigués\n• Évaluation des problèmes sociaux\nou médicaux\n• Médication\n• Psychothérapies\n• Counseling\n• Suivi et soutien\n• Évaluation\n• Médication\n• Psychothérapies spéciques\n• Électroconvulsivothérapie\n• Réadaptation\n• Désintoxication en unité spécique\n• Évaluation\n• Médication\n• Psychothérapies spéciques\n• Interventions et programmes\ninnovateurs\n• Soins hospitaliers médicolégaux\nPorte d’entrée\n• Population générale\n• Par M.D. ou intervenants de 1re ligne\n• Par M.D. ou intervenants de 2e ligne\nFonctions\nInterlignes\n• Soins et suivi\n• Identication des cas complexes et\nréférence à la 2e ligne\n• Reprise des cas graves stabilisés\nsuite à la référence à 2e ligne\n• Consultation et soutien à la 1re ligne\n• Soins et suivi des cas graves\n• Reprise des cas très graves stabilisés\npar la 3e ligne\n• Télémédecine\n• Consultation à la 2e ligne\n• Soins et suivi des cas très graves\n• Télémédecine\nExemples\nd’hébergement\n• Foyer pour femmes battues\n• Refuge des jeunes\n• CHSLD répartis partout au Québec\n• Résidences d’accueil, foyers de groupe,\netc.\n• Unités spéciques de CHSLD\naccueillant les patients avec troubles\nmentaux graves\n• Hébergement innovateur destiné aux\npersonnes avec troubles mentaux\ngraves\nExemples de points\nde service de\nréadaptation\n• Centres de réadaptation au travail\ngénériques (n’acceptant pas seule-\nment les personnes avec troubles\nmentaux)\n• Centres publics ou communautaires\nde réadaptation au travail accueillant\nseulement des personnes avec troubles\nmentaux\n• Centres de réadaptation innovateurs\nEnseignement\n• Éducation à la communauté et entre\nles services de base\n• Enseignement collégial et\nuniversitaire\n• Formation continue\n• Soutien et supervision de la 1re ligne\n• Enseignement universitaire\n• Formation continue\n• Formation à la recherche\n• Soutien et supervision des 1re\net 2e lignes\nRecherche\n• Collaboration à la recherche\n• Collaboration à la recherche\n• Organisation et favorisation de la\nrecherche\n• Développement et évaluation des\nnouvelles technologies en santé\nmentale et en toxicomanies\nFormation des\nintervenants\n• Secondaire à universitaire\n• Collégiale et universitaire\n• Universitaire\nSource : Document inédit de Lalonde, P. et Lesage, A.\n",
+  "raw_text_sha256": "4d286f6f90ca71ac1787266019bfa75a8781856acccd4136ed4f9cfebf0d3038",
+  "source_page_display": 1095,
+  "source_page_index": 1094
+}

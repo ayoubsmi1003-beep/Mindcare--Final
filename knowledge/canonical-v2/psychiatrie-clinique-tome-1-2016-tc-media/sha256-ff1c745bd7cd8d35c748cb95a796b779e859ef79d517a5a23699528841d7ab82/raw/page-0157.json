@@ -1,0 +1,124 @@
+{
+  "block_sequence_sha256": "0c3c1b808f50d6f3ef47aa200500d2549ee0dc7d804e62005c8bdb6446dc0936",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        470.3879699707031,
+        758.8693237304688
+      ],
+      "block_id": "page-0157-block-0001",
+      "order": 1,
+      "text": "140\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2\nDéterminants bio-psycho-sociaux\n",
+      "text_sha256": "b7b3088ab8d474d7b21eba71f6ae4d27701550cca36a802f92b87f68adabd6b8"
+    },
+    {
+      "bbox": [
+        318.0,
+        40.9658203125,
+        549.0175170898438,
+        51.45849609375
+      ],
+      "block_id": "page-0157-block-0002",
+      "order": 2,
+      "text": "– dans certains cas (essentiellement en recherche), la modé-\n",
+      "text_sha256": "12c2fdabebb2894c99d9e2af0e2a891010980716c4f8c715791c4eea5b3f246d"
+    },
+    {
+      "bbox": [
+        306.0,
+        52.4658203125,
+        549.3499755859375,
+        471.45849609375
+      ],
+      "block_id": "page-0157-block-0003",
+      "order": 3,
+      "text": "lisation mathématique de la distribution du radiopharma-\nceutique est nécessaire. Il faut alors obtenir des données\nde cinétique sanguine de la radioactivité, ce qui nécessite\nl’installation d’un cathéter artériel an de réaliser des\nétudes quantitatives de densité de récepteurs ou d’autres\nmolécules d’intérêt biologique (p. ex., des enzymes).\n• L’utilisation des radiopharmaceutiques présente très peu de\nrisques. Ainsi, les rares réactions allergiques rencontrées\nsont limitées, et ces produits sont par ailleurs généralement\ndépourvus d’eet pharmacologique aux doses employées.\n• Les doses de radioactivité associées à ces examens sont me-\nsurables, mais après plus de 60 années d’utilisation humaine\nclinique et d’observations à des doses encore plus élevées,\non n’a jamais détecté de réactions adverses à court ou à long\nterme à de tels niveaux d’exposition, bien que d’énormes\neorts aient été consacrés à la recherche de tels eets. Bien\nentendu, cela ne signie pas qu’il soit admissible d’utiliser\ndes examens exposant un patient à des doses de radiations\nionisantes sans qu’il y ait une justication clinique adéquate.\nLes données récentes sur l’utilisation des doses reçues lors\nd’examens diagnostiques à répétition soulèvent d’ailleurs des\nquestions pertinentes à cet égard (Fazel & al., 2009 ; Mettler\n& al., 2009).\n• L’acquisition de données est de durée limitée (typiquement\nde 20 à 40 minutes). En recherche, les protocoles peuvent\nfaire appel à des acquisitions plus longues. La réalisation\nde ces examens exige du sujet qu’il demeure allongé sur le\ndos et immobile durant toute l’acquisition. Ceci ne requiert\ndu patient qu’une collaboration limitée, n’imposant qu’un\ninconfort minimal, sans risque signicatif de complications.\nPratiquement tout patient peut s’y prêter, peu importe son\nétat. Pour le patient agité ou anxieux (claustrophobie) qui\nne peut ou ne veut collaborer, l’emploi d’une sédation légère\n(lorazépam 1 ou 2 mg) est justiable an d’obtenir un examen\nde bonne qualité et ne complique généralement pas l’inter-\nprétation des données.\n",
+      "text_sha256": "16d5c48c1a8e0b0814a9dd4e93d3dad41aac70a5d37ab2760356283c80b9896d"
+    },
+    {
+      "bbox": [
+        306.0,
+        482.98681640625,
+        545.41455078125,
+        499.12939453125
+      ],
+      "block_id": "page-0157-block-0004",
+      "order": 4,
+      "text": "7.2.1 Types d’acquisitions scintigraphiques\n",
+      "text_sha256": "17d4a5cb5197948309d5e3f78a4b09d08a40384c44be760f537203ae16f39124"
+    },
+    {
+      "bbox": [
+        306.0,
+        502.4658203125,
+        549.59130859375,
+        725.95849609375
+      ],
+      "block_id": "page-0157-block-0005",
+      "order": 5,
+      "text": "Ces techniques reposent toutes sur l’injection au patient d’un radio-\npharmaceutique, c’est-à-dire d’un agent composé d’une molécule\nqui dénit les propriétés biologiques du radiopharmaceutique\n(spéciant les cibles auxquelles il se lie et donc les paramètres\nbiologiques qu’il permet d’étudier) et d’un atome radioactif qui\német le signal permettant de localiser le radiotraceur dans le\npatient. Cette localisation du radiopharmaceutique peut se faire :\n• de façon dynamique, en mesurant ses changements au cours\ndu temps, ce qui permet de mesurer de quelle façon il se lie\nà ses cibles ;\n• de façon statique, à un temps standard après son injection,\nce qui est plus simple, mais apporte moins d’information\nphysiologique, ou une information moins exacte.\nLes caméras employées en mode planaire, en TEMP et en\nTEP sont toutes des détecteurs de radiation (elles n’émettent\nrien elles-mêmes) capables de localiser le point d’émission de la\nradiation émise par l’atome radioactif intégré au radiopharma-\nceutique, et donc de spécier sa localisation dans le corps du\npatient au moment de l’acquisition des données.\n",
+      "text_sha256": "634c561c574b9b45d8db6570e3810e99ae6476bff913d6fadcf1c6dbda190729"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.9658203125,
+        291.67254638671875,
+        444.20849609375
+      ],
+      "block_id": "page-0157-block-0006",
+      "order": 6,
+      "text": "recherche en neuropsychiatrie, et la littérature scientique fait\nlargement état des résultats fournis par les diérentes techniques\ndisponibles. De plus, la place de ces examens en clinique s’est\nprécisée au cours des années, mais elle demeure encore limitée.\nÀ l’exception de l’évaluation des troubles cognitifs, il n’y a pas\nd’indication clinique reconnue pour l’instant. Bien que certains\nexamens puissent avoir une utilité claire dans des circonstances\nbien dénies, de tels exemples sont limités aux cas de démence.\nCeci laisse cependant la place à une utilisation qui peut être\nutile pourvu qu’on comprenne bien les principes de ces études,\net qu’on évalue systématiquement le but recherché lorsqu’un\nexamen est demandé pour un patient en particulier. Il s’agit, dans\nla plupart des cas, de patients pour lesquels un diagnostic précis\nest dicile à poser sur des bases strictement cliniques. On tente\nalors d’établir la présence d’altération du fonctionnement cérébral\nse manifestant par des anomalies de la répartition régionale du\not sanguin ou du métabolisme du cerveau. Donc, l’imagerie\ncérébrale ne permet pas de poser un diagnostic psychiatrique\n(mais elle peut fortement le suggérer dans les cas de démence)\net elle ne le permettra peut-être jamais, du moins tant qu’on aura\nune classication du type DSM-5, essentiellement descriptive,\ndes maladies mentales. Toutefois, si on en venait à baser des\ndiagnostics sur la mise en évidence d’anomalies moléculaires,\nla neuro-imagerie pourrait changer de façon importante notre\nnomenclature diagnostique. Par contre, l’imagerie permet déjà\nd’identier un grand nombre de modications des fonctions\nmentales (p. ex., l’hypofrontalité qui est associée à plusieurs\nmaladies mentales : la schizophrénie, la dépression, etc.). Il est\nalors important de ne pas oublier qu’il est encore téméraire\nd’établir une relation causale entre les observations permises par\nla scintigraphie et telle ou telle anomalie des fonctions mentales\nsupérieures. À l’inverse, l’absence d’anomalie sur un tel examen\npeut n’être due qu’à l’insensibilité de nos techniques, à leur\napplication inappropriée, ou à notre mauvaise maîtrise de leur\nutilisation, plutôt qu’à l’absence d’une maladie active.\n",
+      "text_sha256": "8f8873407fa9c1a8eafa740616366468ae9054be0fbf3e751ebddeaa5d06d75c"
+    },
+    {
+      "bbox": [
+        48.0,
+        445.2658386230469,
+        291.486083984375,
+        571.2584838867188
+      ],
+      "block_id": "page-0157-block-0007",
+      "order": 7,
+      "text": "Dans ce chapitre sont présentées quelques explications des\nprincipes qui sous-tendent la production des résultats obtenus\nen médecine nucléaire, ainsi que les applications cliniques pos-\nsibles, ce qui permet de faire une analyse critique de la littérature\ntraitant de l’usage de la médecine nucléaire en psychiatrie, et de\nmieux décider de la pertinence d’un examen pour un patient\n(voir le résumé présenté au tableau 7.1). Les chapitres abordant\nles diverses pathologies mentales font état de plusieurs données\nportant sur les résultats obtenus en imagerie : ces résultats ont\ntrès souvent contribué à une meilleure compréhension des méca-\nnismes à l’origine de plusieurs maladies neuropsychiatriques.\n",
+      "text_sha256": "9c307b39c530a0af8ac005bd24c78f1ac269030314df3fbc7f6a083cc9954582"
+    },
+    {
+      "bbox": [
+        48.0,
+        572.3658447265625,
+        291.3751220703125,
+        702.3585205078125
+      ],
+      "block_id": "page-0157-block-0008",
+      "order": 8,
+      "text": "L’obtention de scintigraphies, puis leur analyse pour générer les\nrésultats qui seront interprétés par le spécialiste de ce domaine,\nexigent la réalisation d’opérations en série dont le niveau de com-\nplexité est variable. D’entrée de jeu, il est important de rappeler\ncertains éléments :\n• Les études réalisées en médecine nucléaire sont peu inva-\nsives, puisqu’elles se limitent dans la vaste majorité des cas\nà l’administration intraveineuse du radiopharmaceutique.\nPratiquement, il n’existe que deux exceptions à cette règle en\nneuro-imagerie nucléaire :\n– la réalisation des scinticisternographies exige l’injection\n",
+      "text_sha256": "0ba5a7cf02dc57a6acde87ee43c0522596c13af49987b1461f69d982e971e635"
+    },
+    {
+      "bbox": [
+        72.0,
+        703.4158325195312,
+        291.01751708984375,
+        725.45849609375
+      ],
+      "block_id": "page-0157-block-0009",
+      "order": 9,
+      "text": "intrathécale du radiopharmaceutique par ponction lom-\nbaire (p. ex., pour l’hydrocéphalie normotensive) ;\n",
+      "text_sha256": "d9912a468279d1b0cc1b3ae90db0e89da0e01f9849623b17e34b1fa1f43ea1bb"
+    }
+  ],
+  "coordinates_sha256": "ff9824868b920cfd3fc9cfcba0fb36a12a5fb5c261e5717b096ee124cbc6e8ca",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0157",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "140\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2\nDéterminants bio-psycho-sociaux\n– dans certains cas (essentiellement en recherche), la modé-\nlisation mathématique de la distribution du radiopharma-\nceutique est nécessaire. Il faut alors obtenir des données\nde cinétique sanguine de la radioactivité, ce qui nécessite\nl’installation d’un cathéter artériel an de réaliser des\nétudes quantitatives de densité de récepteurs ou d’autres\nmolécules d’intérêt biologique (p. ex., des enzymes).\n• L’utilisation des radiopharmaceutiques présente très peu de\nrisques. Ainsi, les rares réactions allergiques rencontrées\nsont limitées, et ces produits sont par ailleurs généralement\ndépourvus d’eet pharmacologique aux doses employées.\n• Les doses de radioactivité associées à ces examens sont me-\nsurables, mais après plus de 60 années d’utilisation humaine\nclinique et d’observations à des doses encore plus élevées,\non n’a jamais détecté de réactions adverses à court ou à long\nterme à de tels niveaux d’exposition, bien que d’énormes\neorts aient été consacrés à la recherche de tels eets. Bien\nentendu, cela ne signie pas qu’il soit admissible d’utiliser\ndes examens exposant un patient à des doses de radiations\nionisantes sans qu’il y ait une justication clinique adéquate.\nLes données récentes sur l’utilisation des doses reçues lors\nd’examens diagnostiques à répétition soulèvent d’ailleurs des\nquestions pertinentes à cet égard (Fazel & al., 2009 ; Mettler\n& al., 2009).\n• L’acquisition de données est de durée limitée (typiquement\nde 20 à 40 minutes). En recherche, les protocoles peuvent\nfaire appel à des acquisitions plus longues. La réalisation\nde ces examens exige du sujet qu’il demeure allongé sur le\ndos et immobile durant toute l’acquisition. Ceci ne requiert\ndu patient qu’une collaboration limitée, n’imposant qu’un\ninconfort minimal, sans risque signicatif de complications.\nPratiquement tout patient peut s’y prêter, peu importe son\nétat. Pour le patient agité ou anxieux (claustrophobie) qui\nne peut ou ne veut collaborer, l’emploi d’une sédation légère\n(lorazépam 1 ou 2 mg) est justiable an d’obtenir un examen\nde bonne qualité et ne complique généralement pas l’inter-\nprétation des données.\n7.2.1 Types d’acquisitions scintigraphiques\nCes techniques reposent toutes sur l’injection au patient d’un radio-\npharmaceutique, c’est-à-dire d’un agent composé d’une molécule\nqui dénit les propriétés biologiques du radiopharmaceutique\n(spéciant les cibles auxquelles il se lie et donc les paramètres\nbiologiques qu’il permet d’étudier) et d’un atome radioactif qui\német le signal permettant de localiser le radiotraceur dans le\npatient. Cette localisation du radiopharmaceutique peut se faire :\n• de façon dynamique, en mesurant ses changements au cours\ndu temps, ce qui permet de mesurer de quelle façon il se lie\nà ses cibles ;\n• de façon statique, à un temps standard après son injection,\nce qui est plus simple, mais apporte moins d’information\nphysiologique, ou une information moins exacte.\nLes caméras employées en mode planaire, en TEMP et en\nTEP sont toutes des détecteurs de radiation (elles n’émettent\nrien elles-mêmes) capables de localiser le point d’émission de la\nradiation émise par l’atome radioactif intégré au radiopharma-\nceutique, et donc de spécier sa localisation dans le corps du\npatient au moment de l’acquisition des données.\nrecherche en neuropsychiatrie, et la littérature scientique fait\nlargement état des résultats fournis par les diérentes techniques\ndisponibles. De plus, la place de ces examens en clinique s’est\nprécisée au cours des années, mais elle demeure encore limitée.\nÀ l’exception de l’évaluation des troubles cognitifs, il n’y a pas\nd’indication clinique reconnue pour l’instant. Bien que certains\nexamens puissent avoir une utilité claire dans des circonstances\nbien dénies, de tels exemples sont limités aux cas de démence.\nCeci laisse cependant la place à une utilisation qui peut être\nutile pourvu qu’on comprenne bien les principes de ces études,\net qu’on évalue systématiquement le but recherché lorsqu’un\nexamen est demandé pour un patient en particulier. Il s’agit, dans\nla plupart des cas, de patients pour lesquels un diagnostic précis\nest dicile à poser sur des bases strictement cliniques. On tente\nalors d’établir la présence d’altération du fonctionnement cérébral\nse manifestant par des anomalies de la répartition régionale du\not sanguin ou du métabolisme du cerveau. Donc, l’imagerie\ncérébrale ne permet pas de poser un diagnostic psychiatrique\n(mais elle peut fortement le suggérer dans les cas de démence)\net elle ne le permettra peut-être jamais, du moins tant qu’on aura\nune classication du type DSM-5, essentiellement descriptive,\ndes maladies mentales. Toutefois, si on en venait à baser des\ndiagnostics sur la mise en évidence d’anomalies moléculaires,\nla neuro-imagerie pourrait changer de façon importante notre\nnomenclature diagnostique. Par contre, l’imagerie permet déjà\nd’identier un grand nombre de modications des fonctions\nmentales (p. ex., l’hypofrontalité qui est associée à plusieurs\nmaladies mentales : la schizophrénie, la dépression, etc.). Il est\nalors important de ne pas oublier qu’il est encore téméraire\nd’établir une relation causale entre les observations permises par\nla scintigraphie et telle ou telle anomalie des fonctions mentales\nsupérieures. À l’inverse, l’absence d’anomalie sur un tel examen\npeut n’être due qu’à l’insensibilité de nos techniques, à leur\napplication inappropriée, ou à notre mauvaise maîtrise de leur\nutilisation, plutôt qu’à l’absence d’une maladie active.\nDans ce chapitre sont présentées quelques explications des\nprincipes qui sous-tendent la production des résultats obtenus\nen médecine nucléaire, ainsi que les applications cliniques pos-\nsibles, ce qui permet de faire une analyse critique de la littérature\ntraitant de l’usage de la médecine nucléaire en psychiatrie, et de\nmieux décider de la pertinence d’un examen pour un patient\n(voir le résumé présenté au tableau 7.1). Les chapitres abordant\nles diverses pathologies mentales font état de plusieurs données\nportant sur les résultats obtenus en imagerie : ces résultats ont\ntrès souvent contribué à une meilleure compréhension des méca-\nnismes à l’origine de plusieurs maladies neuropsychiatriques.\nL’obtention de scintigraphies, puis leur analyse pour générer les\nrésultats qui seront interprétés par le spécialiste de ce domaine,\nexigent la réalisation d’opérations en série dont le niveau de com-\nplexité est variable. D’entrée de jeu, il est important de rappeler\ncertains éléments :\n• Les études réalisées en médecine nucléaire sont peu inva-\nsives, puisqu’elles se limitent dans la vaste majorité des cas\nà l’administration intraveineuse du radiopharmaceutique.\nPratiquement, il n’existe que deux exceptions à cette règle en\nneuro-imagerie nucléaire :\n– la réalisation des scinticisternographies exige l’injection\nintrathécale du radiopharmaceutique par ponction lom-\nbaire (p. ex., pour l’hydrocéphalie normotensive) ;\n",
+  "raw_text_sha256": "995df7d9f6c40a694866d773c5c8fc86429b7e169f8c26196a70bdff52e57ab1",
+  "source_page_display": 158,
+  "source_page_index": 157
+}

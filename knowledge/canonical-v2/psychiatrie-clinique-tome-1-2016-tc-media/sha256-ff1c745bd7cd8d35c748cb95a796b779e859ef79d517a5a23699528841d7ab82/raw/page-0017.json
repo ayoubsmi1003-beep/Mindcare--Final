@@ -1,0 +1,292 @@
+{
+  "block_sequence_sha256": "5dc873e5b6d72666f31ab8fee0e8e1c72bb031e537543caed1a5af25cb086026",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        746.822265625,
+        134.64450073242188,
+        758.9193725585938
+      ],
+      "block_id": "page-0017-block-0001",
+      "order": 1,
+      "text": "xvi\nAbréviations\n",
+      "text_sha256": "eb1f48ea1504603195a18128a87c3406413a9e51b80a95ab7f01eedb06b10175"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.76171875,
+        186.75035095214844,
+        51.45849609375
+      ],
+      "block_id": "page-0017-block-0002",
+      "order": 2,
+      "text": "TPAT: Trouble psychotique aigu et\n",
+      "text_sha256": "c13b2ca1c66a4559f6c1b1edbb331b1fcce197323fdd171e51e2fb10e81761ec"
+    },
+    {
+      "bbox": [
+        48.0,
+        52.51581954956055,
+        179.6865234375,
+        75.3584976196289
+      ],
+      "block_id": "page-0017-block-0003",
+      "order": 3,
+      "text": "transitoire\nTPB: érapie psychodynamique\n",
+      "text_sha256": "8f961fa63135298240b1cdce276c3dc3abd0735d92f86d8f535c707c9fea2cd0"
+    },
+    {
+      "bbox": [
+        48.0,
+        76.4658203125,
+        179.03651428222656,
+        124.0584945678711
+      ],
+      "block_id": "page-0017-block-0004",
+      "order": 4,
+      "text": "brève\nTPB: Trouble psychotique bref\nTPH: Tryptophane hydroxylase\nTPL: érapie psychodynamique\n",
+      "text_sha256": "89756468b14fa13c96cfa7517b67bd48118a4156324d6a2ee8545233f4f968d0"
+    },
+    {
+      "bbox": [
+        48.0,
+        125.11582946777344,
+        194.7899932861328,
+        147.95849609375
+      ],
+      "block_id": "page-0017-block-0005",
+      "order": 5,
+      "text": "long-terme\nTRH: yrotropin releasing hormone,\n",
+      "text_sha256": "647c966ea95b196127b5e20e3b4208b8ee5026ba3200b83da01e7db680daca6a"
+    },
+    {
+      "bbox": [
+        48.0,
+        149.06582641601562,
+        198.09046936035156,
+        195.85850524902344
+      ],
+      "block_id": "page-0017-block-0006",
+      "order": 6,
+      "text": "hormone de libération de la\nthyréo stimuline, thyréolibérine\nTPL: Trouble de la personnalité limite\nTSH: yroid stimulating hormone,\n",
+      "text_sha256": "caf5f82cf1594333a83ee4d20386b31f71d2d924659270615007b95531eb6aa1"
+    },
+    {
+      "bbox": [
+        48.0,
+        196.9158172607422,
+        198.5675048828125,
+        231.35850524902344
+      ],
+      "block_id": "page-0017-block-0007",
+      "order": 7,
+      "text": "hormone thyréotrope, thyréosti-\nmuline, thyréotropine\nTSPT: Trouble de stress post-\n",
+      "text_sha256": "9ceb73983e5ddd3eeb95590e4d5c7a4596a6f78064b7609e629ad0e1aba5ed37"
+    },
+    {
+      "bbox": [
+        72.0,
+        232.4158172607422,
+        119.94650268554688,
+        242.9084930419922
+      ],
+      "block_id": "page-0017-block-0008",
+      "order": 8,
+      "text": "traumatique\n",
+      "text_sha256": "b0b8f29aa70a5eb6a1b698f0c15436072b213ceec08ce5dfea998bced67da2d3"
+    },
+    {
+      "bbox": [
+        220.0,
+        40.76171875,
+        349.3894958496094,
+        51.45849609375
+      ],
+      "block_id": "page-0017-block-0009",
+      "order": 9,
+      "text": "TSS: Trouble à symptomatologie\n",
+      "text_sha256": "5d72bfe018dade8f1afec175ffd5e8b2a916640b539c8be5156b20f512ce76da"
+    },
+    {
+      "bbox": [
+        220.0,
+        52.4658203125,
+        353.54937744140625,
+        99.90850067138672
+      ],
+      "block_id": "page-0017-block-0010",
+      "order": 10,
+      "text": "somatique\nTSST: Trier social stress test\nUDS: Unité de détresse subjective\nUGT: Uridine diphosphate glucu­\n",
+      "text_sha256": "9b0800aba7da0ba6a190ef23af1d7c5e052b0ed11a957a892c0a9e771cc170a6"
+    },
+    {
+      "bbox": [
+        220.0,
+        100.91582489013672,
+        355.7268371582031,
+        147.55850219726562
+      ],
+      "block_id": "page-0017-block-0011",
+      "order": 11,
+      "text": "ronosyl­transferase, UDP-\nglucuronosyl transférases\nUMF: Unité de médecine familiale\nUPI: Usage problématique\n",
+      "text_sha256": "7ba35c32af9b25e23fafb7e537b98a05be4e12fb7010c7c970c0c9b924af3bce"
+    },
+    {
+      "bbox": [
+        220.0,
+        148.61582946777344,
+        341.9687805175781,
+        171.4084930419922
+      ],
+      "block_id": "page-0017-block-0012",
+      "order": 12,
+      "text": "d’Internet\nVBM: Whole brain voxel based\n",
+      "text_sha256": "882e35d1ad05989f5bf2583948e6e18600b0f406e9e83e4681b82f5d03734fe8"
+    },
+    {
+      "bbox": [
+        220.0,
+        172.4714813232422,
+        345.21881103515625,
+        195.2584991455078
+      ],
+      "block_id": "page-0017-block-0013",
+      "order": 13,
+      "text": "morphometry\nVDRL: Veneral disease research\n",
+      "text_sha256": "6b7d26e8b7e5d9595be137cd5bb0b3a1fe3ab13b60f4c8e31e3f4487d7b38427"
+    },
+    {
+      "bbox": [
+        220.0,
+        196.3214874267578,
+        354.6153869628906,
+        231.4084930419922
+      ],
+      "block_id": "page-0017-block-0014",
+      "order": 14,
+      "text": "laboratory\nVGM: Volume globulaire moyen\nVIH: Virus de l’immunodécience\n",
+      "text_sha256": "1c0b0c363b395a1f3d452780145a1027a060ad38acee865cb77fdbbb127734cc"
+    },
+    {
+      "bbox": [
+        244.0,
+        232.4158172607422,
+        278.2950134277344,
+        242.9084930419922
+      ],
+      "block_id": "page-0017-block-0015",
+      "order": 15,
+      "text": "humaine\n",
+      "text_sha256": "70f752f0aa826aaa84e9e3d5755b0e3730e733d30479268a850f68233265be74"
+    },
+    {
+      "bbox": [
+        392.0,
+        40.76171875,
+        525.887939453125,
+        51.45849609375
+      ],
+      "block_id": "page-0017-block-0016",
+      "order": 16,
+      "text": "VOTP: Violent oender treatment\n",
+      "text_sha256": "efaa1a16a44d86279bd3c625e3bd1e99a9663e265e889cb2db0d408052e417c2"
+    },
+    {
+      "bbox": [
+        392.0,
+        52.521484375,
+        536.7415161132812,
+        75.25849914550781
+      ],
+      "block_id": "page-0017-block-0017",
+      "order": 17,
+      "text": "program\nVRSO-SO: Violence Risk Scale – Sex\n",
+      "text_sha256": "cb41dabc621130b030659b5443bdc887537632ccae85c7e65010cc2266e2631c"
+    },
+    {
+      "bbox": [
+        392.0,
+        76.3714828491211,
+        535.6970825195312,
+        111.30644989013672
+      ],
+      "block_id": "page-0017-block-0018",
+      "order": 18,
+      "text": "Oender version\nVTA: Aire tegmentale ventrale\nWAIS-R: Wechsler adult intelligence\n",
+      "text_sha256": "08ee782c875f291e2c055de61b7c0854f27f3a9f725012c10a32e2e6eeba2e35"
+    },
+    {
+      "bbox": [
+        392.0,
+        112.521484375,
+        545.5794677734375,
+        159.9084930419922
+      ],
+      "block_id": "page-0017-block-0019",
+      "order": 19,
+      "text": "scale revised\nWAS: World Association of Sexology\nWCST: Wisconsin card sorting test\nWFSBP: World Federation of Societies\n",
+      "text_sha256": "9fcde2dc3496879f2b5cf943c157c379d53a54df2da3c7926a9674af9cabfea8"
+    },
+    {
+      "bbox": [
+        392.0,
+        160.9158172607422,
+        538.2247924804688,
+        183.70849609375
+      ],
+      "block_id": "page-0017-block-0020",
+      "order": 20,
+      "text": "of Biological Psychiatry\nWISC: Wechsler Intelligence Scale for\n",
+      "text_sha256": "f68e9b9724e6392205a9935201ca969b54aff6676acb7dc5fa4127c379cb802d"
+    },
+    {
+      "bbox": [
+        392.0,
+        184.8214874267578,
+        549.1398315429688,
+        207.55850219726562
+      ],
+      "block_id": "page-0017-block-0021",
+      "order": 21,
+      "text": "Children\nWPATH: World Professional Association\n",
+      "text_sha256": "4b0720c7fc088f094ab64e8b419c8a5b6dfa5f07483f61db0ab9111809e51ff7"
+    },
+    {
+      "bbox": [
+        392.0,
+        208.56582641601562,
+        538.72607421875,
+        231.4084930419922
+      ],
+      "block_id": "page-0017-block-0022",
+      "order": 22,
+      "text": "for Transgender Health\nZAN-BPD: Zanarini Rating Scale for\n",
+      "text_sha256": "e95e84455b066ae876279fc9312c4b6074d2e90b0c1796998d0c977007eb5ffd"
+    },
+    {
+      "bbox": [
+        416.0,
+        232.4714813232422,
+        537.1060180664062,
+        242.8064422607422
+      ],
+      "block_id": "page-0017-block-0023",
+      "order": 23,
+      "text": "Borderline Personality Disorder\n",
+      "text_sha256": "25cf95cf2b172e720be44475f058734da9e149250f1c27a61ad5aabd1544f26d"
+    }
+  ],
+  "coordinates_sha256": "edc7869c6be101daaae6096bbd712ef5699a9c2e423c70be11dca35718834c20",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0017",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "xvi\nAbréviations\nTPAT: Trouble psychotique aigu et\ntransitoire\nTPB: érapie psychodynamique\nbrève\nTPB: Trouble psychotique bref\nTPH: Tryptophane hydroxylase\nTPL: érapie psychodynamique\nlong-terme\nTRH: yrotropin releasing hormone,\nhormone de libération de la\nthyréo stimuline, thyréolibérine\nTPL: Trouble de la personnalité limite\nTSH: yroid stimulating hormone,\nhormone thyréotrope, thyréosti-\nmuline, thyréotropine\nTSPT: Trouble de stress post-\ntraumatique\nTSS: Trouble à symptomatologie\nsomatique\nTSST: Trier social stress test\nUDS: Unité de détresse subjective\nUGT: Uridine diphosphate glucu­\nronosyl­transferase, UDP-\nglucuronosyl transférases\nUMF: Unité de médecine familiale\nUPI: Usage problématique\nd’Internet\nVBM: Whole brain voxel based\nmorphometry\nVDRL: Veneral disease research\nlaboratory\nVGM: Volume globulaire moyen\nVIH: Virus de l’immunodécience\nhumaine\nVOTP: Violent oender treatment\nprogram\nVRSO-SO: Violence Risk Scale – Sex\nOender version\nVTA: Aire tegmentale ventrale\nWAIS-R: Wechsler adult intelligence\nscale revised\nWAS: World Association of Sexology\nWCST: Wisconsin card sorting test\nWFSBP: World Federation of Societies\nof Biological Psychiatry\nWISC: Wechsler Intelligence Scale for\nChildren\nWPATH: World Professional Association\nfor Transgender Health\nZAN-BPD: Zanarini Rating Scale for\nBorderline Personality Disorder\n",
+  "raw_text_sha256": "66290a92a0a06882943a1a4bd85540fb1e9e6e7f1724a5f7f3ace88c733088ab",
+  "source_page_display": 18,
+  "source_page_index": 17
+}

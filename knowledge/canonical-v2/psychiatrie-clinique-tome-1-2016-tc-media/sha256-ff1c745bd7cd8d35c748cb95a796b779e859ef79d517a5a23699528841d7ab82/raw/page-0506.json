@@ -1,0 +1,220 @@
+{
+  "block_sequence_sha256": "23013c4177172886237b9fd9c0a9583310c3805fb167cce695fdaa05aba1cc34",
+  "blocks": [
+    {
+      "bbox": [
+        54.0,
+        132.87344360351562,
+        405.86358642578125,
+        177.79531860351562
+      ],
+      "block_id": "page-0506-block-0001",
+      "order": 1,
+      "text": "Troubles liés au stress\n",
+      "text_sha256": "4b8c52d3de663c92761e65e704b6b1dbdc78a4180ddf4e70e16d5ca7aa6a18c1"
+    },
+    {
+      "bbox": [
+        54.0,
+        225.35733032226562,
+        283.4090270996094,
+        239.39541625976562
+      ],
+      "block_id": "page-0506-block-0002",
+      "order": 2,
+      "text": "MICHÈLE BÉLANGER, M.D., FRCPC, M. Sc. (physiologie-biochimie)\n",
+      "text_sha256": "0ed99ec9c8f21ee0a6e6bb2b34fad179edda5fbc06d2b815e24dafadeeb08b95"
+    },
+    {
+      "bbox": [
+        54.0,
+        242.77725219726562,
+        277.47991943359375,
+        263.9938049316406
+      ],
+      "block_id": "page-0506-block-0003",
+      "order": 3,
+      "text": "Psychiatre, Clinique Nouveau Départ, Programme de santé\ndes fonctionnaires fédéraux (Montréal)\n",
+      "text_sha256": "03752e63ff0df44d83252101c4f787694edb2d4edb12178bcd101a3d88e05b7b"
+    },
+    {
+      "bbox": [
+        54.0,
+        272.8573303222656,
+        205.10899353027344,
+        286.8954162597656
+      ],
+      "block_id": "page-0506-block-0004",
+      "order": 4,
+      "text": "FRANÇOISE LAVALLÉE, PH. D. (psychologie)\n",
+      "text_sha256": "cf1df562ae7feb36453a6db767a24ec1d5e309727da2587b724b9406a7f969eb"
+    },
+    {
+      "bbox": [
+        54.0,
+        290.2772521972656,
+        269.4568786621094,
+        300.4938049316406
+      ],
+      "block_id": "page-0506-block-0005",
+      "order": 5,
+      "text": "Psychologue, clinique privée (CSST, IVAC, ACC, SAAQ)\n",
+      "text_sha256": "08874030d0817f14c2dc5efa404c4df46c9baf2afebf79dd23da8fd82e806069"
+    },
+    {
+      "bbox": [
+        54.0,
+        304.2772521972656,
+        266.4632873535156,
+        325.4938049316406
+      ],
+      "block_id": "page-0506-block-0006",
+      "order": 6,
+      "text": "Professeure, Département de psychologie, Université du\nQuébec à Trois-Rivières\n",
+      "text_sha256": "dfe53f15d27fcd6bf4fd19f037c4f947d80ce2d5dac63af392ebb5f07f017599"
+    },
+    {
+      "bbox": [
+        54.0,
+        334.3573303222656,
+        168.87159729003906,
+        348.3954162597656
+      ],
+      "block_id": "page-0506-block-0007",
+      "order": 7,
+      "text": "SYLVIE LÉVESQUE, M.D., FRCPC\n",
+      "text_sha256": "66b26346ed77d8809ae834ae2e85cf2412773d689564954487b10ca6ec1c040b"
+    },
+    {
+      "bbox": [
+        54.0,
+        351.7772521972656,
+        287.0762634277344,
+        383.9938049316406
+      ],
+      "block_id": "page-0506-block-0008",
+      "order": 8,
+      "text": "Psychiatre, Services correctionnels canadiens, Établissement\nDrummond et Donnacona, Centre correctionnel communau-\ntaire Martineau (Montréal)\n",
+      "text_sha256": "c26331cd482069a3d7108fed10759d2c46a8f2cb1261705a28bb5c2a36fde22d"
+    },
+    {
+      "bbox": [
+        54.0,
+        387.7772521972656,
+        280.7326965332031,
+        408.9938049316406
+      ],
+      "block_id": "page-0506-block-0009",
+      "order": 9,
+      "text": "Professeure chargée d’enseignement clinique, Département\nde psychiatrie, Faculté de médecine, Université de Montréal\n",
+      "text_sha256": "2abe1e8ceb0906a663d4d9d83782c6a94d5015bd9154ee95dcf6957170a5e4a2"
+    },
+    {
+      "bbox": [
+        312.0,
+        225.35733032226562,
+        555.009033203125,
+        239.39541625976562
+      ],
+      "block_id": "page-0506-block-0010",
+      "order": 10,
+      "text": "MICHEL WHITE, M.D., FRCPC, M. Mus., M. Sc. (sciences biomédicales)\n",
+      "text_sha256": "c9ea08d68417c32a2d6e2c2d6f05d42d0b76ed7b04a716f81b4685334807051a"
+    },
+    {
+      "bbox": [
+        312.0,
+        242.77725219726562,
+        546.2262573242188,
+        274.9938049316406
+      ],
+      "block_id": "page-0506-block-0011",
+      "order": 11,
+      "text": "Psychiatre, Hôpital Anciens combattants, Sainte-Anne-de-\nBellevue, Clinique pour traumatismes liés au stress opération-\nnel, Hôpital Sainte-Anne (Sainte-Anne-de-Bellevue)\n",
+      "text_sha256": "fc6e0030efb670b0d06f843a0e553ca201155c9dd442aa8cd109b370efca56c6"
+    },
+    {
+      "bbox": [
+        312.0,
+        283.8573303222656,
+        464.1090087890625,
+        297.8954162597656
+      ],
+      "block_id": "page-0506-block-0012",
+      "order": 12,
+      "text": "AÏCHA-NORA DEMBRI, PH. D. (psychologie)\n",
+      "text_sha256": "d41a2b9121209075ab4fbc03b9fdf47bfffdb33cd8a8eb1e8de45ee4f48a6b63"
+    },
+    {
+      "bbox": [
+        312.0,
+        301.2772521972656,
+        529.0263671875,
+        322.4938049316406
+      ],
+      "block_id": "page-0506-block-0013",
+      "order": 13,
+      "text": "Neuropsychologue, Le Pheonix, Institut de santé mentale\n(Longueuil)\n",
+      "text_sha256": "008368139d15c168d06f10d1581f71b656e0e5af70e32cd9bb89c42027c665a8"
+    },
+    {
+      "bbox": [
+        312.0,
+        326.2772521972656,
+        536.0943603515625,
+        347.4938049316406
+      ],
+      "block_id": "page-0506-block-0014",
+      "order": 14,
+      "text": "Superviseuse clinique, Centre intégré universitaire de santé\net de services sociaux de l’Ouest-de-l’Île-de-Montréal\n",
+      "text_sha256": "d74705282ac2b88b4b5665d2bf8926279b06682e98c8b5019c687cbfea735669"
+    },
+    {
+      "bbox": [
+        257.1000061035156,
+        4.3810577392578125,
+        555.0,
+        124.38105773925781
+      ],
+      "block_id": "page-0506-block-0015",
+      "order": 15,
+      "text": "CHAPITRE23\n",
+      "text_sha256": "b2f152f449009082507087adf823d435056b0cf89a588ad8699a470471057fdc"
+    },
+    {
+      "bbox": [
+        54.0,
+        454.97442626953125,
+        295.0099792480469,
+        607.8972778320312
+      ],
+      "block_id": "page-0506-block-0016",
+      "order": 16,
+      "text": "23.1 Évolution du concept .................................................... 490\n23.2 Épidémiologie ................................................................ 491\n23.3 Étiologies ........................................................................ 492\n23.3.1 Étiologies biologiques........................................... 492\n23.3.2 Étiologies psychosociales..................................... 495\n23.4 Description clinique...................................................... 496\n23.4.1 Évaluation ............................................................... 496\n23.4.2 Aspects socioculturels.......................................... 502\n23.5 Outils diagnostiques ..................................................... 503\n23.6 Diagnostic diérentiel .................................................. 504\n23.6.1 Trouble de stress aigu.......................................... 504\n23.6.2 Trouble de stress post-traumatique.................. 504\n",
+      "text_sha256": "7c484f8811519dd88083affb02a9815548c23ef9707b372935512e13c5f03b32"
+    },
+    {
+      "bbox": [
+        310.5,
+        454.97442626953125,
+        551.5100708007812,
+        578.8181762695312
+      ],
+      "block_id": "page-0506-block-0017",
+      "order": 17,
+      "text": "23.7 Traitements .................................................................... 505\n23.7.1 Traitements biologiques ...................................... 505\n23.7.2 érapie psychoéducative ................................... 507\n23.7.3 érapies axées sur le trauma............................. 507\n23.7.4 Interventions sociales........................................... 508\n23.7.5 Rencontre de verbalisation\nd’émotions (debrieng) ......................................... 508\n23.7.6 Prévention............................................................... 508\n23.8 Évolution et pronostic................................................... 508\nLectures complémentaires...................................................... 509\n",
+      "text_sha256": "2017717d4709869fa94667c9ecc031b89de1af01ac4977f894c52150c4b39d1a"
+    }
+  ],
+  "coordinates_sha256": "9ff825b185d8b315590d409f7d4dd7cf1cd8c4a44f45b407baae075088636d68",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0506",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Troubles liés au stress\nMICHÈLE BÉLANGER, M.D., FRCPC, M. Sc. (physiologie-biochimie)\nPsychiatre, Clinique Nouveau Départ, Programme de santé\ndes fonctionnaires fédéraux (Montréal)\nFRANÇOISE LAVALLÉE, PH. D. (psychologie)\nPsychologue, clinique privée (CSST, IVAC, ACC, SAAQ)\nProfesseure, Département de psychologie, Université du\nQuébec à Trois-Rivières\nSYLVIE LÉVESQUE, M.D., FRCPC\nPsychiatre, Services correctionnels canadiens, Établissement\nDrummond et Donnacona, Centre correctionnel communau-\ntaire Martineau (Montréal)\nProfesseure chargée d’enseignement clinique, Département\nde psychiatrie, Faculté de médecine, Université de Montréal\nMICHEL WHITE, M.D., FRCPC, M. Mus., M. Sc. (sciences biomédicales)\nPsychiatre, Hôpital Anciens combattants, Sainte-Anne-de-\nBellevue, Clinique pour traumatismes liés au stress opération-\nnel, Hôpital Sainte-Anne (Sainte-Anne-de-Bellevue)\nAÏCHA-NORA DEMBRI, PH. D. (psychologie)\nNeuropsychologue, Le Pheonix, Institut de santé mentale\n(Longueuil)\nSuperviseuse clinique, Centre intégré universitaire de santé\net de services sociaux de l’Ouest-de-l’Île-de-Montréal\nCHAPITRE23\n23.1 Évolution du concept .................................................... 490\n23.2 Épidémiologie ................................................................ 491\n23.3 Étiologies ........................................................................ 492\n23.3.1 Étiologies biologiques........................................... 492\n23.3.2 Étiologies psychosociales..................................... 495\n23.4 Description clinique...................................................... 496\n23.4.1 Évaluation ............................................................... 496\n23.4.2 Aspects socioculturels.......................................... 502\n23.5 Outils diagnostiques ..................................................... 503\n23.6 Diagnostic diérentiel .................................................. 504\n23.6.1 Trouble de stress aigu.......................................... 504\n23.6.2 Trouble de stress post-traumatique.................. 504\n23.7 Traitements .................................................................... 505\n23.7.1 Traitements biologiques ...................................... 505\n23.7.2 érapie psychoéducative ................................... 507\n23.7.3 érapies axées sur le trauma............................. 507\n23.7.4 Interventions sociales........................................... 508\n23.7.5 Rencontre de verbalisation\nd’émotions (debrieng) ......................................... 508\n23.7.6 Prévention............................................................... 508\n23.8 Évolution et pronostic................................................... 508\nLectures complémentaires...................................................... 509\n",
+  "raw_text_sha256": "7ff2e1feac84f3275f8b0efc83fe8ccc4c99c6f34832d353d98d7f94cd0e84fd",
+  "source_page_display": 507,
+  "source_page_index": 506
+}

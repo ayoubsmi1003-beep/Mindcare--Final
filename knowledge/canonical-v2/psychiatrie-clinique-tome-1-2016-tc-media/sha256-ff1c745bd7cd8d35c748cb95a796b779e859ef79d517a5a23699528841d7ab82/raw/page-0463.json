@@ -1,0 +1,112 @@
+{
+  "block_sequence_sha256": "8de5eb7f2392d5875b66c90754f8b0e1178fa56c4c710985f3b2dfa7be2d69d9",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        134.5734405517578,
+        426.4565734863281,
+        221.4953155517578
+      ],
+      "block_id": "page-0463-block-0001",
+      "order": 1,
+      "text": "Troubles obsessionnels-\ncompulsifs\n",
+      "text_sha256": "5043bb35baab556bd7a3f068fbeeba6a2a7bb0a17ef01a965031a88f0319324d"
+    },
+    {
+      "bbox": [
+        48.0,
+        254.20010375976562,
+        208.40899658203125,
+        266.7001037597656
+      ],
+      "block_id": "page-0463-block-0002",
+      "order": 2,
+      "text": "Christo Todorov, M.D., M. SC. (psychiatrie)\n",
+      "text_sha256": "a283bfe264886de8bd1229700e4323364685dc750f64989f71a766b6b58cab44"
+    },
+    {
+      "bbox": [
+        48.0,
+        270.5772399902344,
+        282.08245849609375,
+        302.7937927246094
+      ],
+      "block_id": "page-0463-block-0003",
+      "order": 3,
+      "text": "Psychiatre, chef médical adjoint, programme des troubles\nanxieux et de l’humeur, Institut universitaire en santé mentale\nde Montréal\n",
+      "text_sha256": "94c49d9726f0cab5f31bc7a5f3ee93f5cea832f81bf1f2769bbd6de2ba840ab4"
+    },
+    {
+      "bbox": [
+        48.0,
+        306.5772399902344,
+        269.9393005371094,
+        327.7937927246094
+      ],
+      "block_id": "page-0463-block-0004",
+      "order": 4,
+      "text": "Professeur agrégé de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\n",
+      "text_sha256": "f4bc23aed99fa29e8f7410379c6cebea846c1188b4a600c871ae8a6f9bc4dde5"
+    },
+    {
+      "bbox": [
+        48.0,
+        367.3160095214844,
+        289.010009765625,
+        700.0181884765625
+      ],
+      "block_id": "page-0463-block-0005",
+      "order": 5,
+      "text": "Partie A Trouble obsessionnel-compulsif.....................447\n21A.1 Historique..................................................................... 447\n21A.2 Épidémiologie .............................................................. 447\n21A.3 Étiologies ...................................................................... 447\n21A.3.1 Étiologies biologiques..................................... 448\n21A.3.2 Étiologies psychosociales............................... 449\n21A.4 Description clinique ...................................................450\n21A.4.1 Critères diagnostiques.................................... 450\n21A.4.2 Obsessions et compulsions............................ 452\n21A.4.3 Expérience obsessionnelle-compulsive....... 453\n21A.4.4 Sous-groupes cliniques................................... 454\n21A.5 Évaluation..................................................................... 454\n21A.6 Outils diagnostiques...................................................455\n21A.7 Diagnostic diérentiel et comorbidité .....................456\n21A.7.1 Personnalité obsessionnelle-compulsive .... 456\n21A.7.2 Troubles anxieux ............................................. 456\n21A.7.3 Tics et troubles du contrôle\ndes impulsions.................................................. 457\n21A.7.4 Dépression majeure et trouble bipolaire .... 457\n21A.7.5 Schizophrénie et troubles délirants ............. 457\n21A.7.6 Spectre obsessionnel-compulsif ................... 458\n21A.8 Traitements .................................................................. 458\n21A.8.1 Traitements biologiques................................. 459\n21A.8.2 Traitements psychologiques.......................... 461\n21A.8.3 Traitements intégrés....................................... 462\n21A.9 Évolution et pronostic.................................................462\n",
+      "text_sha256": "ebc13511c212625a261d4b6f4300dd0cb99180d4177a2e3a217db900a8aa7805"
+    },
+    {
+      "bbox": [
+        306.0,
+        367.3160095214844,
+        481.6812438964844,
+        378.2535095214844
+      ],
+      "block_id": "page-0463-block-0006",
+      "order": 6,
+      "text": "Partie B Troubles apparentés au trouble\n",
+      "text_sha256": "2e8a7dac8920dd768be9716e0073ac57134eeb97b47b90617b7225d73ffb9789"
+    },
+    {
+      "bbox": [
+        306.0,
+        377.3160095214844,
+        547.010009765625,
+        658.0181884765625
+      ],
+      "block_id": "page-0463-block-0007",
+      "order": 7,
+      "text": "obsessionnel-compulsif .....................................463\n21B.1 Obsession d’une dysmorphie corporelle..................463\n21B.1.1 Historique ......................................................... 463\n21B.1.2 Épidémiologie................................................... 463\n21B.1.3 Étiologies........................................................... 463\n21B.1.4 Description clinique........................................ 463\n21B.1.5 Évaluation.......................................................... 463\n21B.1.6 Diagnostic diérentiel et comorbidité ........ 464\n21B.1.7 Traitements....................................................... 465\n21B.1.8 Évolution et pronostic .................................... 465\n21B.2 Trouble d’amassage .....................................................465\n21B.2.1 Historique ......................................................... 466\n21B.2.2 Épidémiologie................................................... 466\n21B.2.3 Étiologies........................................................... 466\n21B.2.4 Description clinique........................................ 466\n21B.2.5 Évaluation et outils diagnostiques................ 467\n21B.2.6 Diagnostic diérentiel .................................... 469\n21B.2.7 Traitements....................................................... 469\n21B.2.8 Évolution et pronostic .................................... 469\n21B.3 Autres troubles apparentés\nau trouble obsessionnel-compulsif ...........................469\nLectures complémentaires.......................................................471\n",
+      "text_sha256": "665c65ed9319e539e9aa9f63b37d8741c0100ccd2dac925ec7228619452f3954"
+    },
+    {
+      "bbox": [
+        257.1000061035156,
+        5.181053161621094,
+        555.0,
+        125.18104553222656
+      ],
+      "block_id": "page-0463-block-0008",
+      "order": 8,
+      "text": "CHAPITRE21\n",
+      "text_sha256": "ba312567b3e5f8166f820832105cdec662e52125454a8344f6fea949c779da4b"
+    }
+  ],
+  "coordinates_sha256": "c2b5a09af8a5b5b2294781d590ba17769c844747713770c5ceb0ffeeeeb2679c",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0463",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Troubles obsessionnels-\ncompulsifs\nChristo Todorov, M.D., M. SC. (psychiatrie)\nPsychiatre, chef médical adjoint, programme des troubles\nanxieux et de l’humeur, Institut universitaire en santé mentale\nde Montréal\nProfesseur agrégé de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\nPartie A Trouble obsessionnel-compulsif.....................447\n21A.1 Historique..................................................................... 447\n21A.2 Épidémiologie .............................................................. 447\n21A.3 Étiologies ...................................................................... 447\n21A.3.1 Étiologies biologiques..................................... 448\n21A.3.2 Étiologies psychosociales............................... 449\n21A.4 Description clinique ...................................................450\n21A.4.1 Critères diagnostiques.................................... 450\n21A.4.2 Obsessions et compulsions............................ 452\n21A.4.3 Expérience obsessionnelle-compulsive....... 453\n21A.4.4 Sous-groupes cliniques................................... 454\n21A.5 Évaluation..................................................................... 454\n21A.6 Outils diagnostiques...................................................455\n21A.7 Diagnostic diérentiel et comorbidité .....................456\n21A.7.1 Personnalité obsessionnelle-compulsive .... 456\n21A.7.2 Troubles anxieux ............................................. 456\n21A.7.3 Tics et troubles du contrôle\ndes impulsions.................................................. 457\n21A.7.4 Dépression majeure et trouble bipolaire .... 457\n21A.7.5 Schizophrénie et troubles délirants ............. 457\n21A.7.6 Spectre obsessionnel-compulsif ................... 458\n21A.8 Traitements .................................................................. 458\n21A.8.1 Traitements biologiques................................. 459\n21A.8.2 Traitements psychologiques.......................... 461\n21A.8.3 Traitements intégrés....................................... 462\n21A.9 Évolution et pronostic.................................................462\nPartie B Troubles apparentés au trouble\nobsessionnel-compulsif .....................................463\n21B.1 Obsession d’une dysmorphie corporelle..................463\n21B.1.1 Historique ......................................................... 463\n21B.1.2 Épidémiologie................................................... 463\n21B.1.3 Étiologies........................................................... 463\n21B.1.4 Description clinique........................................ 463\n21B.1.5 Évaluation.......................................................... 463\n21B.1.6 Diagnostic diérentiel et comorbidité ........ 464\n21B.1.7 Traitements....................................................... 465\n21B.1.8 Évolution et pronostic .................................... 465\n21B.2 Trouble d’amassage .....................................................465\n21B.2.1 Historique ......................................................... 466\n21B.2.2 Épidémiologie................................................... 466\n21B.2.3 Étiologies........................................................... 466\n21B.2.4 Description clinique........................................ 466\n21B.2.5 Évaluation et outils diagnostiques................ 467\n21B.2.6 Diagnostic diérentiel .................................... 469\n21B.2.7 Traitements....................................................... 469\n21B.2.8 Évolution et pronostic .................................... 469\n21B.3 Autres troubles apparentés\nau trouble obsessionnel-compulsif ...........................469\nLectures complémentaires.......................................................471\nCHAPITRE21\n",
+  "raw_text_sha256": "8e7a79a0a3b0baf436277308f72c3a47bfcb40cf80172ccaea592e86772ce460",
+  "source_page_display": 464,
+  "source_page_index": 463
+}

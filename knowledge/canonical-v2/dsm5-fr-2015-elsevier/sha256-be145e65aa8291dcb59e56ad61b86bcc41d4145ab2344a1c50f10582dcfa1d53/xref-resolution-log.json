@@ -1,0 +1,350 @@
+{
+  "resolved_this_pass": 69,
+  "decisions": [
+    {
+      "from": "dsm5fr-u-1022-L042",
+      "rule": "named-chapter:Troubles anxieux",
+      "target": "dsm5fr-u-237-D136"
+    },
+    {
+      "from": "dsm5fr-u-1043-T802",
+      "rule": "named-appendix-glossaire-culturel",
+      "target": "dsm5fr-u-1077-M099"
+    },
+    {
+      "from": "dsm5fr-u-1069-M033",
+      "rule": "explicit-printed-page",
+      "target": "dsm5fr-u-517-G023"
+    },
+    {
+      "from": "dsm5fr-u-1078-U5285",
+      "rule": "named-appendix-glossaire-culturel",
+      "target": "dsm5fr-u-1077-M099"
+    },
+    {
+      "from": "dsm5fr-u-1079-M102",
+      "rule": "named-chapter:Affections proposées pour des études sup",
+      "target": "dsm5fr-u-1011-L038"
+    },
+    {
+      "from": "dsm5fr-u-1081-U5298",
+      "rule": "named-appendix-glossaire-culturel",
+      "target": "dsm5fr-u-1077-M099"
+    },
+    {
+      "from": "dsm5fr-u-15-B0001",
+      "rule": "named-section-III-divider",
+      "target": "dsm5fr-u-949-COVER"
+    },
+    {
+      "from": "dsm5fr-u-179-D022",
+      "rule": "named-chapter:Troubles liés à une substance et trouble",
+      "target": "dsm5fr-u-631-H005"
+    },
+    {
+      "from": "dsm5fr-u-190-D048",
+      "rule": "named-chapter:Spectre de la schizophrénie et autres tr",
+      "target": "dsm5fr-u-109-C036"
+    },
+    {
+      "from": "dsm5fr-u-193-D053",
+      "rule": "named-chapter:Troubles dépressifs",
+      "target": "dsm5fr-u-193-D053"
+    },
+    {
+      "from": "dsm5fr-u-217-D097",
+      "rule": "named-chapter:Troubles liés à une substance et trouble",
+      "target": "dsm5fr-u-631-H005"
+    },
+    {
+      "from": "dsm5fr-u-229-D124",
+      "rule": "named-chapter:Spectre de la schizophrénie et autres tr",
+      "target": "dsm5fr-u-109-C036"
+    },
+    {
+      "from": "dsm5fr-u-270-S10019",
+      "rule": "named-appendix-glossaire-culturel",
+      "target": "dsm5fr-u-1077-M099"
+    },
+    {
+      "from": "dsm5fr-u-270-T20016",
+      "rule": "named-appendix-glossaire-culturel",
+      "target": "dsm5fr-u-1077-M099"
+    },
+    {
+      "from": "dsm5fr-u-270-U10021",
+      "rule": "named-appendix-glossaire-culturel",
+      "target": "dsm5fr-u-1077-M099"
+    },
+    {
+      "from": "dsm5fr-u-282-E004",
+      "rule": "named-chapter:Troubles liés à une substance et trouble",
+      "target": "dsm5fr-u-631-H005"
+    },
+    {
+      "from": "dsm5fr-u-283-S10002",
+      "rule": "numbered-table-on-page",
+      "target": "dsm5fr-u-282-E004"
+    },
+    {
+      "from": "dsm5fr-u-283-T20001",
+      "rule": "numbered-table-on-page",
+      "target": "dsm5fr-u-282-E004"
+    },
+    {
+      "from": "dsm5fr-u-283-U10003",
+      "rule": "numbered-table-on-page",
+      "target": "dsm5fr-u-282-E004"
+    },
+    {
+      "from": "dsm5fr-u-290-E006",
+      "rule": "named-appendix-glossaire-culturel",
+      "target": "dsm5fr-u-1077-M099"
+    },
+    {
+      "from": "dsm5fr-u-3-B0001",
+      "rule": "named-section-II-divider",
+      "target": "dsm5fr-u-31-COVER2"
+    },
+    {
+      "from": "dsm5fr-u-327-E003",
+      "rule": "named-chapter:Troubles liés à une substance et trouble",
+      "target": "dsm5fr-u-631-H005"
+    },
+    {
+      "from": "dsm5fr-u-335-E005",
+      "rule": "named-appendix-glossaire-culturel",
+      "target": "dsm5fr-u-1077-M099"
+    },
+    {
+      "from": "dsm5fr-u-350-E003",
+      "rule": "named-section-formulation-culturelle",
+      "target": "dsm5fr-u-971-L003"
+    },
+    {
+      "from": "dsm5fr-u-359-U20002",
+      "rule": "named-section-formulation-culturelle",
+      "target": "dsm5fr-u-971-L003"
+    },
+    {
+      "from": "dsm5fr-u-37-B0002",
+      "rule": "single-table-on-page",
+      "target": "dsm5fr-u-37-B0002"
+    },
+    {
+      "from": "dsm5fr-u-372-F003",
+      "rule": "named-appendix-glossaire-culturel",
+      "target": "dsm5fr-u-1077-M099"
+    },
+    {
+      "from": "dsm5fr-u-372-F003",
+      "rule": "named-chapter:Affections proposées pour des études sup",
+      "target": "dsm5fr-u-1011-L038"
+    },
+    {
+      "from": "dsm5fr-u-40-B0001",
+      "rule": "named-section-III-divider",
+      "target": "dsm5fr-u-949-COVER"
+    },
+    {
+      "from": "dsm5fr-u-535-G031",
+      "rule": "named-chapter:Troubles liés à une substance et trouble",
+      "target": "dsm5fr-u-631-H005"
+    },
+    {
+      "from": "dsm5fr-u-541-S20002",
+      "rule": "named-chapter:Troubles liés à une substance et trouble",
+      "target": "dsm5fr-u-631-H005"
+    },
+    {
+      "from": "dsm5fr-u-541-T3002",
+      "rule": "named-chapter:Troubles liés à une substance et trouble",
+      "target": "dsm5fr-u-631-H005"
+    },
+    {
+      "from": "dsm5fr-u-541-U20001",
+      "rule": "named-chapter:Troubles liés à une substance et trouble",
+      "target": "dsm5fr-u-631-H005"
+    },
+    {
+      "from": "dsm5fr-u-584-S3001",
+      "rule": "single-table-on-page",
+      "target": "dsm5fr-u-584-S3001"
+    },
+    {
+      "from": "dsm5fr-u-585-S3001",
+      "rule": "named-chapter:Dysfonctions sexuelles",
+      "target": "dsm5fr-u-553-COVER"
+    },
+    {
+      "from": "dsm5fr-u-593-U30189",
+      "rule": "named-chapter:Dysphorie de genre",
+      "target": "dsm5fr-u-593-COVER"
+    },
+    {
+      "from": "dsm5fr-u-622-U30386",
+      "rule": "named-chapter:Troubles de la personnalité",
+      "target": "dsm5fr-u-841-J014"
+    },
+    {
+      "from": "dsm5fr-u-624-S3001",
+      "rule": "named-chapter:Troubles de la personnalité",
+      "target": "dsm5fr-u-841-J014"
+    },
+    {
+      "from": "dsm5fr-u-653-H003",
+      "rule": "named-chapter:Troubles neurocognitifs",
+      "target": "dsm5fr-u-775-J001"
+    },
+    {
+      "from": "dsm5fr-u-660-U30508",
+      "rule": "named-chapter:Troubles anxieux",
+      "target": "dsm5fr-u-237-D136"
+    },
+    {
+      "from": "dsm5fr-u-676-I003",
+      "rule": "named-chapter:Troubles neurocognitifs",
+      "target": "dsm5fr-u-775-J001"
+    },
+    {
+      "from": "dsm5fr-u-691-I010",
+      "rule": "named-chapter:Troubles neurocognitifs",
+      "target": "dsm5fr-u-775-J001"
+    },
+    {
+      "from": "dsm5fr-u-692-I001",
+      "rule": "named-chapter:Troubles neurocognitifs",
+      "target": "dsm5fr-u-775-J001"
+    },
+    {
+      "from": "dsm5fr-u-701-I006",
+      "rule": "named-chapter:Troubles neurocognitifs",
+      "target": "dsm5fr-u-775-J001"
+    },
+    {
+      "from": "dsm5fr-u-711-I011",
+      "rule": "named-chapter:Troubles neurocognitifs",
+      "target": "dsm5fr-u-775-J001"
+    },
+    {
+      "from": "dsm5fr-u-724-I003",
+      "rule": "named-chapter:Troubles neurocognitifs",
+      "target": "dsm5fr-u-775-J001"
+    },
+    {
+      "from": "dsm5fr-u-735-I008",
+      "rule": "named-chapter:Troubles neurocognitifs",
+      "target": "dsm5fr-u-775-J001"
+    },
+    {
+      "from": "dsm5fr-u-751-I006",
+      "rule": "named-chapter:Troubles neurocognitifs",
+      "target": "dsm5fr-u-775-J001"
+    },
+    {
+      "from": "dsm5fr-u-915-S60001",
+      "rule": "named-chapter:Dysphorie de genre",
+      "target": "dsm5fr-u-593-COVER"
+    },
+    {
+      "from": "dsm5fr-u-927-K046",
+      "rule": "named-chapter:Troubles liés à une substance et trouble",
+      "target": "dsm5fr-u-631-H005"
+    },
+    {
+      "from": "dsm5fr-u-953-S60001",
+      "rule": "numbered-table-on-page",
+      "target": "dsm5fr-u-952-K071"
+    },
+    {
+      "from": "dsm5fr-u-962-S60001",
+      "rule": "named-chapter:Spectre de la schizophrénie et autres tr",
+      "target": "dsm5fr-u-109-C036"
+    },
+    {
+      "from": "dsm5fr-u-null-B0002",
+      "rule": "named-chapter:Utilisation du manuel",
+      "target": "dsm5fr-u-21-B0001"
+    },
+    {
+      "from": "dsm5fr-u-xl-B0002",
+      "rule": "explicit-printed-page",
+      "target": "dsm5fr-u-841-J014"
+    },
+    {
+      "from": "dsm5fr-u-xliii-B0003",
+      "rule": "explicit-printed-page",
+      "target": "dsm5fr-u-891-K014"
+    },
+    {
+      "from": "dsm5fr-u-xliv-B0003",
+      "rule": "explicit-printed-page",
+      "target": "dsm5fr-u-923-COVER"
+    },
+    {
+      "from": "dsm5fr-u-xlv-B0003",
+      "rule": "explicit-printed-page",
+      "target": "dsm5fr-u-933-COVER"
+    },
+    {
+      "from": "dsm5fr-u-xxix-B0002",
+      "rule": "explicit-printed-page",
+      "target": "dsm5fr-u-471-COVER"
+    },
+    {
+      "from": "dsm5fr-u-xxv-B0001",
+      "rule": "explicit-printed-page",
+      "target": "dsm5fr-u-237-D136"
+    },
+    {
+      "from": "dsm5fr-u-xxv-B0001",
+      "rule": "explicit-printed-page",
+      "target": "dsm5fr-u-299-COVER"
+    },
+    {
+      "from": "dsm5fr-u-xxvi-B0002",
+      "rule": "explicit-printed-page",
+      "target": "dsm5fr-u-379-COVER"
+    },
+    {
+      "from": "dsm5fr-u-xxvi-B0002",
+      "rule": "explicit-printed-page",
+      "target": "dsm5fr-u-343-E001"
+    },
+    {
+      "from": "dsm5fr-u-xxvii-B0002",
+      "rule": "explicit-printed-page",
+      "target": "dsm5fr-u-403-COVER"
+    },
+    {
+      "from": "dsm5fr-u-xxviii-B0002",
+      "rule": "explicit-printed-page",
+      "target": "dsm5fr-u-429-F005"
+    },
+    {
+      "from": "dsm5fr-u-xxxi-B0002",
+      "rule": "explicit-printed-page",
+      "target": "dsm5fr-u-553-COVER"
+    },
+    {
+      "from": "dsm5fr-u-xxxi-B0002",
+      "rule": "explicit-printed-page",
+      "target": "dsm5fr-u-593-COVER"
+    },
+    {
+      "from": "dsm5fr-u-xxxii-B0002",
+      "rule": "explicit-printed-page",
+      "target": "dsm5fr-u-605-H004"
+    },
+    {
+      "from": "dsm5fr-u-xxxiii-B0002",
+      "rule": "explicit-printed-page",
+      "target": "dsm5fr-u-631-H005"
+    },
+    {
+      "from": "dsm5fr-u-xxxviii-B0002",
+      "rule": "explicit-printed-page",
+      "target": "dsm5fr-u-775-J001"
+    }
+  ]
+}

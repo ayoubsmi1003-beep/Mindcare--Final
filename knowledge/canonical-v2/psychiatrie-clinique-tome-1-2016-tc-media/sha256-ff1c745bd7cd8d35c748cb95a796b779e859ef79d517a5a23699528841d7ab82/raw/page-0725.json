@@ -1,0 +1,316 @@
+{
+  "block_sequence_sha256": "4052783214442a1473bc0dbaf81368a4bb8a4e65ccf0eaf6576d25fd524db6ea",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0725-block-0001",
+      "order": 1,
+      "text": "708\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "759e26629c88bd31214727982ba230618ff8684ef430959fe1c959a824800df3"
+    },
+    {
+      "bbox": [
+        306.0,
+        202.11582946777344,
+        549.31005859375,
+        339.1084899902344
+      ],
+      "block_id": "page-0725-block-0002",
+      "order": 2,
+      "text": "À long terme, l’ostéoporose constitue également une com-\nplication non négligeable que l’on observe chez 13 à 38 % des\nanorexiques, alors que l’ostéopénie est présente chez 50 à 92 %\nd’entre elles (Mehler & Mackenzie, 2009). Un retard de croissance\npeut également être observé si l’anorexie débute avant la puberté.\nLe tableau 31.7 résume ces complications, dont il faut tenir compte\ndans l’évaluation biologique. La littérature fait de plus en plus sou-\nvent état de complications psychologiques, telles que des troubles\ncognitifs signicatifs, qui mériteront d’être mieux évalués lorsqu’ils\nseront mieux connus, puisqu’ils peuvent à leur tour devenir des\nfacteurs perpétuants de la maladie. En cas de doute, on peut faire\nune évaluation en neuropsychologie pour préciser cet aspect.\n",
+      "text_sha256": "e4365b0ed65d195af986b13497976b8b7e0e18ca91c4da8a5eb1b1e9e8934fc2"
+    },
+    {
+      "bbox": [
+        308.45001220703125,
+        41.002296447753906,
+        523.0197143554688,
+        53.320068359375
+      ],
+      "block_id": "page-0725-block-0003",
+      "order": 3,
+      "text": "ENCADRÉ 31.2 Évaluation physique dans les troubles\n",
+      "text_sha256": "373aca61b66dccd7e4b38cc9f852033dc7587de685e60e7ce652b1b7e7b9fa0a"
+    },
+    {
+      "bbox": [
+        367.1499938964844,
+        52.852294921875,
+        478.5952453613281,
+        64.820068359375
+      ],
+      "block_id": "page-0725-block-0004",
+      "order": 4,
+      "text": "des conduites alimentaires\n",
+      "text_sha256": "8c7a32fc44b04cb899370d1db811568405a201e7d7fb87d9cf330958e175ffaa"
+    },
+    {
+      "bbox": [
+        310.25,
+        72.95195770263672,
+        536.1329345703125,
+        183.7781219482422
+      ],
+      "block_id": "page-0725-block-0005",
+      "order": 5,
+      "text": "• Poids et taille (à mettre sur une courbe de poids et IMC selon l’âge)\n• Peau : peau sèche, présence de lanugo, perte de cheveux\n• Pouls et pression artérielle (en position couchée/debout)\n• Anomalies à l’ECG (p.ex., bradycardie, arythmie et augmentation\nde l’intervalle QT)\n• Recherche d’œdème\n• Si vomissements :\n– hypertrophie des parotides\n– excoriations et kératinisation du dos des doigts\n– érosion de l’émail des dents\n",
+      "text_sha256": "5ed34d70a900ddc11c44ca711e879acb7e508474d1e4ed894362c1dbb6a579b1"
+    },
+    {
+      "bbox": [
+        308.5,
+        354.5022888183594,
+        537.7440185546875,
+        366.8700866699219
+      ],
+      "block_id": "page-0725-block-0006",
+      "order": 6,
+      "text": "TABLEAU 31.7 Complications des troubles des conduites\n",
+      "text_sha256": "b02af032ca51c50afdc6891e6f605ef49f4fd7c9def0d3ba0aa0eb7a699b39ef"
+    },
+    {
+      "bbox": [
+        365.3999938964844,
+        366.4023132324219,
+        416.5484924316406,
+        378.3700866699219
+      ],
+      "block_id": "page-0725-block-0007",
+      "order": 7,
+      "text": "alimentaires\n",
+      "text_sha256": "e61e7d6edc2936e463a64ec3101f66382b6e88d12aa79d5799008e59b5677c3f"
+    },
+    {
+      "bbox": [
+        325.5,
+        383.2741394042969,
+        481.04400634765625,
+        393.8503112792969
+      ],
+      "block_id": "page-0725-block-0008",
+      "order": 8,
+      "text": "Système\nAffections\n",
+      "text_sha256": "ea9c45364584959d592b92df9482319cff9ab4558bfb51c0b0733c1acd8cd8c5"
+    },
+    {
+      "bbox": [
+        310.25,
+        399.1728515625,
+        541.2649536132812,
+        449.078125
+      ],
+      "block_id": "page-0725-block-0009",
+      "order": 9,
+      "text": "Cardiovasculaire\nBradycardie, arythmies, hypotension orthostatique,\ninsufsance cardiaque, épanchement péricardique,\nprolapsus de la valve mitrale, anomalies à l’ECG\n(↑de l’intervalle QT, anomalie de l’onde T), mort\nsubite\n",
+      "text_sha256": "22ab4296fd66277a76635111d8fc78807d7c75126afc006c685e008370c46fc7"
+    },
+    {
+      "bbox": [
+        310.25,
+        457.5728454589844,
+        545.0887451171875,
+        487.4781188964844
+      ],
+      "block_id": "page-0725-block-0010",
+      "order": 10,
+      "text": "Hématologique\nLeucopénie, anémie, thrombocytopénie,\n↓de l’immunité cellulaire, transformation gélatineuse\nde la moelle osseuse\n",
+      "text_sha256": "b2bc9a68624fa922a760c5db006ab5e94c80182be53a71d7318fb8eb94b78b10"
+    },
+    {
+      "bbox": [
+        310.25,
+        496.0228576660156,
+        544.0982055664062,
+        526.4281616210938
+      ],
+      "block_id": "page-0725-block-0011",
+      "order": 11,
+      "text": "Endocrinien\n↓LH,↓FSH,↓TSH, irrégularités menstruelles,\naménorrhée, hypercorticisme, retard de croissance,\nretard pubertaire\n",
+      "text_sha256": "3e22ca552bac94296e612cd7f0a31bdfa69ce59425c230fd453d2114ec5d8dea"
+    },
+    {
+      "bbox": [
+        310.25,
+        534.9728393554688,
+        544.697021484375,
+        574.8781127929688
+      ],
+      "block_id": "page-0725-block-0012",
+      "order": 12,
+      "text": "Métabolique\nDéshydratation, acidose métabolique, hypokalié-\nmie, hyponatrémie, hypochlorémie, hypocalcémie,\nhypophosphatémie, hypomagnésémie, hypercaroté-\nnémie hypercholestérolémie\n",
+      "text_sha256": "718495c4be980791f394d4e252e67cc069e1e74072681a02248b7cbb20a2d27b"
+    },
+    {
+      "bbox": [
+        310.25,
+        583.3728637695312,
+        537.3018798828125,
+        623.2781372070312
+      ],
+      "block_id": "page-0725-block-0013",
+      "order": 13,
+      "text": "Gastro-intestinal\nÉrosions dentaires, hypertrophie des parotides,\nœsophagite,↓de la vidange gastrique, dilatation\ngastrique, pancréatite, constipation, diarrhée,\n↑des enzymes hépatiques\n",
+      "text_sha256": "da3ee55964c4e4775163d3b552e000248309bb42ab1a2cdf19c334ebd4f4cd97"
+    },
+    {
+      "bbox": [
+        310.25,
+        631.8228759765625,
+        352.9010009765625,
+        651.8424072265625
+      ],
+      "block_id": "page-0725-block-0014",
+      "order": 14,
+      "text": "Musculo-\nsquelettique\n",
+      "text_sha256": "f607b76efe18cbd412c70192494e728e89926d5d6ee68092a55b1f355a4ebda9"
+    },
+    {
+      "bbox": [
+        380.25,
+        631.9019775390625,
+        490.9512023925781,
+        641.7281494140625
+      ],
+      "block_id": "page-0725-block-0015",
+      "order": 15,
+      "text": "Ostéopénie, ostéoporose, fractures\n",
+      "text_sha256": "ad96e84098fb6125c94b0f318a1fe768ed402d020b18393aa8de04a231913371"
+    },
+    {
+      "bbox": [
+        310.25,
+        660.2228393554688,
+        521.7531127929688,
+        690.1281127929688
+      ],
+      "block_id": "page-0725-block-0016",
+      "order": 16,
+      "text": "Neurologique\nAtrophie corticale, neuropathie périphérique,\nconvulsions, hypothermie, perturbations du\nsommeil\n",
+      "text_sha256": "423a35f01c448cb3ae72748ecd45cab9284ecd5ad7777e48fed5df7daca6c380"
+    },
+    {
+      "bbox": [
+        310.25,
+        698.6728515625,
+        534.6223754882812,
+        718.578125
+      ],
+      "block_id": "page-0725-block-0017",
+      "order": 17,
+      "text": "Rénal\nHématurie, protéinurie, diminution de la capacité\nde concentration des urines\n",
+      "text_sha256": "70414b35f00ee0f944116fee5a92a5dd3b4c9ce7088ae67a18ad6b42a579356c"
+    },
+    {
+      "bbox": [
+        50.25,
+        41.002296447753906,
+        254.27850341796875,
+        53.320068359375
+      ],
+      "block_id": "page-0725-block-0018",
+      "order": 18,
+      "text": "ENCADRÉ 31.1 Questionnaire pour l’évaluation des\n",
+      "text_sha256": "61fe83550e19d35589ca391ed0aad99cc9f8517130e9ca077b18c0285ccde6c3"
+    },
+    {
+      "bbox": [
+        108.0999984741211,
+        52.852294921875,
+        255.8695068359375,
+        64.820068359375
+      ],
+      "block_id": "page-0725-block-0019",
+      "order": 19,
+      "text": "troubles des conduites alimentaires\n",
+      "text_sha256": "ee4ae257bd0885556b267fe0344267a4dcbd3dec19966f44836d2fa0efaec32f"
+    },
+    {
+      "bbox": [
+        52.25,
+        72.95195770263672,
+        263.47613525390625,
+        188.7781219482422
+      ],
+      "block_id": "page-0725-block-0020",
+      "order": 20,
+      "text": "• Histoire de la courbe de poids\n• Représentation du corps (schéma corporel)\n• Description détaillée des symptômes\n– Régime alimentaire : aliments bio, sans gras, diète.\n– Exercice physique : intensité, durée, fréquence, etc.\n– Vomissements : fréquence par jour ou par semaine\n– Troubles menstruels (p. ex., aménorrhée)\n– Prise de médicaments : laxatifs, coupe-faim, ipéca\n– Accès hyperphagiques : fréquence par jour ou par semaine\n– Autres symptômes associés : comportements alimentaires\n",
+      "text_sha256": "a71e37925616d5a255ee60e4232a1441c458aa9d5e7cb6b642ef3b67e550d01a"
+    },
+    {
+      "bbox": [
+        52.25,
+        188.9519500732422,
+        281.71148681640625,
+        320.77813720703125
+      ],
+      "block_id": "page-0725-block-0021",
+      "order": 21,
+      "text": "particuliers, rituels, pesées\n• Complications : faiblesse, fatigue, perte de conscience, maux\nd’estomac, palpitations\n• Degré d’atteinte du fonctionnement\n– Études, travail\n– Relations interpersonnelles\n– Sexualité\n• Présence de symptômes dépressifs\n• Présence de symptômes anxieux et plus particulièrement recherche\nd’un trouble obsessionnel-compulsif\n• Présence de soutien (familial ou autre)\n• Fonctionnement familial et réaction des parents chez les plus jeunes\n",
+      "text_sha256": "ebea0504cdb5b7534d3015d7053a50617273f044cb21693b04e53c7bd276fda3"
+    },
+    {
+      "bbox": [
+        48.0,
+        346.4658203125,
+        291.1905517578125,
+        448.95849609375
+      ],
+      "block_id": "page-0725-block-0022",
+      "order": 22,
+      "text": "Il faut exiger une grande précision dans la description\ndes comportements boulimiques ou hyperphagiques. Les\npatientes boulimiques minimisent leurs symptômes par\nhonte, alors que les patientes anorexiques appellent boulimie\nle petit écart alimentaire qui a échappé à leur contrôle (p. ex.,\nmanger trois ou quatre biscuits). La meilleure façon d’en avoir\nune idée claire est d’insister pour qu’elles décrivent de façon\nplus détaillée leurs prises alimentaires ainsi que leurs accès\nhyperphagiques.\n",
+      "text_sha256": "22b91c80c0e7a5a49a0a4f5af0a98a4f78243258a935300dd7ece7a9bfdb5f33"
+    },
+    {
+      "bbox": [
+        48.0,
+        449.9658203125,
+        291.3555603027344,
+        533.45849609375
+      ],
+      "block_id": "page-0725-block-0023",
+      "order": 23,
+      "text": "Dès la première rencontre, avec des enfants et des adolescentes,\nil s’avère primordial d’expliquer à la patiente et à sa famille une\napproche du problème en deux volets :\n• médical, pour traiter les complications de la dénutrition et\nnormaliser le poids ;\n• psychologique et cognitif, an de faire comprendre les facteurs\nen cause et prévenir les rechutes.\n",
+      "text_sha256": "2a6d3c11b1b07ee9561c3e551584ae93403b3276c794d58fb6b1a08ba25a8e5e"
+    },
+    {
+      "bbox": [
+        48.0,
+        545.98681640625,
+        200.2173614501953,
+        562.12939453125
+      ],
+      "block_id": "page-0725-block-0024",
+      "order": 24,
+      "text": "31.5.2 Évaluation physique\n",
+      "text_sha256": "e8fd669ea69b6b29e47c1592872694d59da43702e9dc59a834a755f8a2fdf764"
+    },
+    {
+      "bbox": [
+        48.0,
+        565.4658203125,
+        291.25836181640625,
+        725.45849609375
+      ],
+      "block_id": "page-0725-block-0025",
+      "order": 25,
+      "text": "L’encadré 31.2 présente les éléments qui doivent retenir l’atten-\ntion lors de l’examen physique. Les troubles cardiovasculaires\n(hypotension, bradycardie) constituent les complications les plus\nfréquentes de l’anorexie mentale, mais aussi les plus graves pou-\nvant mener à la mort par insusance cardiaque ou trouble du\nrythme. On les rencontre entre autres chez les patientes qui\nse font vomir ou qui utilisent de façon abusive des laxatifs,\ndeux comportements très à risque lorsqu’ils sont associés à un\nfaible poids en raison des déséquilibres électrolytiques qu’ils\nentraînent. Le médecin doit demeurer prudent dans l’utilisation\nde psychotropes pouvant allonger le QTc, et ce, particulièrement\nchez les moins de 18 ans. Il est recommandé de faire un ECG\nlors de l’évaluation initiale, puis d’assurer un suivi régulier de\nl’ECG par la suite.\n",
+      "text_sha256": "e758ee5b2ae483de602bad3d799e91298f16f06911bd7fcbc3e6ed559bab6d69"
+    }
+  ],
+  "coordinates_sha256": "4c89aba0618ff14fa8b48d17f80fbcead19d2fb7ee27531eac9c41b1cbdf0833",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0725",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "708\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nÀ long terme, l’ostéoporose constitue également une com-\nplication non négligeable que l’on observe chez 13 à 38 % des\nanorexiques, alors que l’ostéopénie est présente chez 50 à 92 %\nd’entre elles (Mehler & Mackenzie, 2009). Un retard de croissance\npeut également être observé si l’anorexie débute avant la puberté.\nLe tableau 31.7 résume ces complications, dont il faut tenir compte\ndans l’évaluation biologique. La littérature fait de plus en plus sou-\nvent état de complications psychologiques, telles que des troubles\ncognitifs signicatifs, qui mériteront d’être mieux évalués lorsqu’ils\nseront mieux connus, puisqu’ils peuvent à leur tour devenir des\nfacteurs perpétuants de la maladie. En cas de doute, on peut faire\nune évaluation en neuropsychologie pour préciser cet aspect.\nENCADRÉ 31.2 Évaluation physique dans les troubles\ndes conduites alimentaires\n• Poids et taille (à mettre sur une courbe de poids et IMC selon l’âge)\n• Peau : peau sèche, présence de lanugo, perte de cheveux\n• Pouls et pression artérielle (en position couchée/debout)\n• Anomalies à l’ECG (p.ex., bradycardie, arythmie et augmentation\nde l’intervalle QT)\n• Recherche d’œdème\n• Si vomissements :\n– hypertrophie des parotides\n– excoriations et kératinisation du dos des doigts\n– érosion de l’émail des dents\nTABLEAU 31.7 Complications des troubles des conduites\nalimentaires\nSystème\nAffections\nCardiovasculaire\nBradycardie, arythmies, hypotension orthostatique,\ninsufsance cardiaque, épanchement péricardique,\nprolapsus de la valve mitrale, anomalies à l’ECG\n(↑de l’intervalle QT, anomalie de l’onde T), mort\nsubite\nHématologique\nLeucopénie, anémie, thrombocytopénie,\n↓de l’immunité cellulaire, transformation gélatineuse\nde la moelle osseuse\nEndocrinien\n↓LH,↓FSH,↓TSH, irrégularités menstruelles,\naménorrhée, hypercorticisme, retard de croissance,\nretard pubertaire\nMétabolique\nDéshydratation, acidose métabolique, hypokalié-\nmie, hyponatrémie, hypochlorémie, hypocalcémie,\nhypophosphatémie, hypomagnésémie, hypercaroté-\nnémie hypercholestérolémie\nGastro-intestinal\nÉrosions dentaires, hypertrophie des parotides,\nœsophagite,↓de la vidange gastrique, dilatation\ngastrique, pancréatite, constipation, diarrhée,\n↑des enzymes hépatiques\nMusculo-\nsquelettique\nOstéopénie, ostéoporose, fractures\nNeurologique\nAtrophie corticale, neuropathie périphérique,\nconvulsions, hypothermie, perturbations du\nsommeil\nRénal\nHématurie, protéinurie, diminution de la capacité\nde concentration des urines\nENCADRÉ 31.1 Questionnaire pour l’évaluation des\ntroubles des conduites alimentaires\n• Histoire de la courbe de poids\n• Représentation du corps (schéma corporel)\n• Description détaillée des symptômes\n– Régime alimentaire : aliments bio, sans gras, diète.\n– Exercice physique : intensité, durée, fréquence, etc.\n– Vomissements : fréquence par jour ou par semaine\n– Troubles menstruels (p. ex., aménorrhée)\n– Prise de médicaments : laxatifs, coupe-faim, ipéca\n– Accès hyperphagiques : fréquence par jour ou par semaine\n– Autres symptômes associés : comportements alimentaires\nparticuliers, rituels, pesées\n• Complications : faiblesse, fatigue, perte de conscience, maux\nd’estomac, palpitations\n• Degré d’atteinte du fonctionnement\n– Études, travail\n– Relations interpersonnelles\n– Sexualité\n• Présence de symptômes dépressifs\n• Présence de symptômes anxieux et plus particulièrement recherche\nd’un trouble obsessionnel-compulsif\n• Présence de soutien (familial ou autre)\n• Fonctionnement familial et réaction des parents chez les plus jeunes\nIl faut exiger une grande précision dans la description\ndes comportements boulimiques ou hyperphagiques. Les\npatientes boulimiques minimisent leurs symptômes par\nhonte, alors que les patientes anorexiques appellent boulimie\nle petit écart alimentaire qui a échappé à leur contrôle (p. ex.,\nmanger trois ou quatre biscuits). La meilleure façon d’en avoir\nune idée claire est d’insister pour qu’elles décrivent de façon\nplus détaillée leurs prises alimentaires ainsi que leurs accès\nhyperphagiques.\nDès la première rencontre, avec des enfants et des adolescentes,\nil s’avère primordial d’expliquer à la patiente et à sa famille une\napproche du problème en deux volets :\n• médical, pour traiter les complications de la dénutrition et\nnormaliser le poids ;\n• psychologique et cognitif, an de faire comprendre les facteurs\nen cause et prévenir les rechutes.\n31.5.2 Évaluation physique\nL’encadré 31.2 présente les éléments qui doivent retenir l’atten-\ntion lors de l’examen physique. Les troubles cardiovasculaires\n(hypotension, bradycardie) constituent les complications les plus\nfréquentes de l’anorexie mentale, mais aussi les plus graves pou-\nvant mener à la mort par insusance cardiaque ou trouble du\nrythme. On les rencontre entre autres chez les patientes qui\nse font vomir ou qui utilisent de façon abusive des laxatifs,\ndeux comportements très à risque lorsqu’ils sont associés à un\nfaible poids en raison des déséquilibres électrolytiques qu’ils\nentraînent. Le médecin doit demeurer prudent dans l’utilisation\nde psychotropes pouvant allonger le QTc, et ce, particulièrement\nchez les moins de 18 ans. Il est recommandé de faire un ECG\nlors de l’évaluation initiale, puis d’assurer un suivi régulier de\nl’ECG par la suite.\n",
+  "raw_text_sha256": "cc594c0f4e0c9f7c72c947606aaf1eb2a3a6b716fedf0722bef857439192c513",
+  "source_page_display": 726,
+  "source_page_index": 725
+}

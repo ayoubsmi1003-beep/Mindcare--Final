@@ -1,0 +1,160 @@
+{
+  "block_sequence_sha256": "5491431ee770cbc99d06f918a87ae242a25dd49c98a2211e04437454dc826e81",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        471.6627197265625,
+        758.8693237304688
+      ],
+      "block_id": "page-0143-block-0001",
+      "order": 1,
+      "text": "126\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2 Déterminants bio-psycho-sociaux\n",
+      "text_sha256": "014944bc988da53636466f73c6148050402bfbe0e85033bc066eb93a31421a61"
+    },
+    {
+      "bbox": [
+        306.0,
+        39.63300704956055,
+        549.292236328125,
+        168.7584991455078
+      ],
+      "block_id": "page-0143-block-0002",
+      "order": 2,
+      "text": "Sérotonine\nPlus de 95 % de la sérotonine ou 5-hydroxytryptamine (5-HT)\nse trouve à l’extérieur du SNC, principalement dans les cellules\nentérochromanes de l’appareil digestif et dans les plaquettes\nsanguines. Quoique relativement peu concentrée dans le SNC, la\n5-HT joue un rôle primordial dans plusieurs fonctions mentales,\ndont la cognition, les émotions, la motivation, le sommeil, l’appétit,\nl’analgésie et l’impulsivité/agressivité. Un dérèglement des fonctions\nsérotoninergiques cérébrales est associé à plusieurs troubles mentaux,\ndont les troubles aectifs, la schizophrénie, les troubles anxieux\net les troubles de l’alimentation (voir les gures supplémentaires).\n",
+      "text_sha256": "e1e42452c67e84477d15b8449ec24b5f4bb12a63df860c7c31e7f1aedcee3845"
+    },
+    {
+      "bbox": [
+        306.0,
+        178.6522979736328,
+        549.3900756835938,
+        413.2585144042969
+      ],
+      "block_id": "page-0143-block-0003",
+      "order": 3,
+      "text": "Topochimie\nLes groupements de neurones qui contiennent la 5-HT sont\nnumérotés de B1 à B9. Ces groupements se trouvent tous dans\nle tronc cérébral, près de ou sur la ligne médiane, dans des\nnoyaux du raphé (voir la gure 6.3c). Les neurones sérotoni-\nnergiques qui donnent naissance aux projections ascendantes\n(vers le prosencéphale) sont issus principalement des noyaux\ndu raphé dorsal (B6-B7) et du raphé médian (B8), deux noyaux\nsuperposés situés en dessous de l’aqueduc de Sylvius (aqueduc\ndu mésencéphale). Les regroupements caudaux, B1 et B2, se\nprojettent vers la moelle épinière, alors que les regroupements B3\net B4 se dirigent principalement vers le cervelet. Les projections\nsérotoninergiques ascendantes se divisent en deux faisceaux :\n• un faisceau dorsal, issu du pôle antérieur B7 ;\n• un faisceau ventral, issu de B6-B8, qui se rejoignent au niveau\ndu diencéphale caudal.\nIls se projettent vers l’ensemble des régions du système lim-\nbique telles que les noyaux du mésencéphale ventral (la substance\nnoire, l’aire tegmentale ventrale), l’hypothalamus, l’habenula,\nl’amygdale, l’hippocampe, le striatum, le septum et le cortex.\n",
+      "text_sha256": "55f4ec1e74723e6c7fa1e8331140efe9e2dcf8f671d3572ae18ce9f62c5dff11"
+    },
+    {
+      "bbox": [
+        306.0,
+        414.2658386230469,
+        549.292724609375,
+        470.7585144042969
+      ],
+      "block_id": "page-0143-block-0004",
+      "order": 4,
+      "text": "Les noyaux du raphé reçoivent plusieurs aérences des noyaux\ndu tronc cérébral, dont la substance noire et l’aire tegmentale\nventrale, les noyaux du tegmentum pontin (partie dorsale du\npont) et latérodorsal (acétylcholine), le locus cœruleus (nora-\ndrénaline) et le noyau du tractus solitaire (adrénaline).\n",
+      "text_sha256": "a6f9e8e9e23346a46f31345964d040b5a5763620517fe700bd4c1af8461abda3"
+    },
+    {
+      "bbox": [
+        306.0,
+        475.6523132324219,
+        549.486328125,
+        673.7584838867188
+      ],
+      "block_id": "page-0143-block-0005",
+      "order": 5,
+      "text": "Synthèse et métabolisme\nL’acide aminé essentiel1, le L-tryptophane, est le précurseur de\nla 5-HT. La synthèse s’eectue en deux étapes.\n1. D’abord, l’enzyme tryptophane hydroxylase (TPH) catalyse\nla conversion du L-tryptophane en 5-hydroxytryptophane\n(5- HTP) (voir la gure 6.11). La TPH existe sous deux iso-\nformes, la TPH-1 et la TPH-2, présentes en quantités égales dans\nle système limbique. La TPH-2 est toutefois plus concentrée\ndans le tronc cérébral et absente en périphérie. L’hydroxylation\ndu L-tryptophane est l’étape limitante de la vitesse de synthèse.\n2. La 5-HTP est décarboxylée par une enzyme qui catalyse les\nacides aminés aromatiques (la 5-HTP décarboxylase), la même\nque celle qui catalyse la L-DOPA dans les neurones catécho -\nl aminergiques. Cette seconde étape convertit la 5-HTP en 5-HT.\nLa 5-HT est transportée dans les vésicules synaptiques par\nle TMV-2 et libérée dans la synapse par exocytose. La 5-HT\nlibre est métabolisée par la MAO de type A qui la convertit en\n",
+      "text_sha256": "3dbe4a9211ffdf46a4ea3642c104cbd085b46d647a7b6f05645c4b2c75d71bdb"
+    },
+    {
+      "bbox": [
+        306.0,
+        695.388671875,
+        538.039794921875,
+        725.3291015625
+      ],
+      "block_id": "page-0143-block-0006",
+      "order": 6,
+      "text": "1. Les acides aminés essentiels doivent être apportés par\nl’alimentation, au contraire des acides aminés non essentiels\nqui sont synthétisés par l’organisme.\n",
+      "text_sha256": "7e6a1f7368b01ec28535b0e0abe67aea035aa64ecdc9c7ceef64b8958dcb46b3"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.9658203125,
+        291.40625,
+        144.1584930419922
+      ],
+      "block_id": "page-0143-block-0007",
+      "order": 7,
+      "text": "entraîne une substitution de l’acide aminé valine (Val) par une\nméthionine (Met) à la position 158 de la COMT. Les individus\nhomozygotes pour l’allèle Val présente une enzyme COMT\nhyperactive par rapport aux individus homozygotes pour l’allèle\nMet, ce qui provoque une diminution de la neurotransmission\ncatécholaminergique, particulièrement au niveau du cortex. Ce\nphénotype serait, par exemple, associé avec une faible perfor-\nmance de la mémoire de travail, un décit de l’attention et des\nfonctions exécutives, comme dans la schizophrénie.\n",
+      "text_sha256": "480df61da0b831e84ff41c95cd26cc54e3b1a282e9a65e5d24cd380384617da6"
+    },
+    {
+      "bbox": [
+        48.0,
+        149.102294921875,
+        291.6564025878906,
+        565.3862915039062
+      ],
+      "block_id": "page-0143-block-0008",
+      "order": 8,
+      "text": "Récepteurs dopaminergiques\nLes récepteurs de la DA sont des métabotropes regroupés en\ndeux classes selon qu’ils sont couplés à une protéine G :\n1. Qui stimule la production d’AMPc (DA1 et DA5) ;\n2. Qui inhibe la production d’AMPc (DA2, DA3 et DA4).\nLes récepteurs DA1 et DA2 sont les plus nombreux dans le SNC.\nOn les trouve dans toutes les régions innervées par les neurones\ndopaminergiques. Les récepteurs DA1 sont postsynaptiques\nalors que les récepteurs DA2 sont pré et postsynaptiques. Deux\nisoformes du récepteur DA2 issues du même gène par couplage\nalternatif ont été identiés :\n1. DA2 court (DA2C, 415 acides aminés) ;\n2. DA2 long (DA2L, 444 acides aminés).\nLes deux isoformes dièrent au niveau de la troisième boucle\nintracellulaire, une portion du récepteur qui interagit avec la\nprotéine G. Les études eectuées sur des animaux modiés généti-\nquement montrent que le DA2C est principalement pré synaptique,\nconstituant un autorécepteur qui module négativement la synthèse\net la libération synaptique de dopamine (DA) ainsi que son taux\nde décharge (Centonze & al., 2002). Le récepteur DA2C intervient\négalement dans le rétrocontrôle négatif de la sécrétion de prolac-\ntine. Il n’existe pas actuellement d’antipsychotiques sélectifs pour\nl’une des deux isoformes, DA2C et DA2L; ceci est possiblement\ndû au fait que les deux récepteurs ne dièrent qu’au niveau de la\nboucle intracellulaire. Dans le striatum, on trouve des récepteurs\nDA1 sur les neurones épineux qui se projettent directement vers\nle mésencéphale ventral et qui contiennent de la substance P et\ndu GABA. Les neurones épineux qui se projettent vers le globus\npallidus et qui contiennent de l’enképhaline et du GABA possèdent\ndes récepteurs DA2; les interneurones cholinergiques du striatum\npossèdent aussi des récepteurs DA2. Enn, les récepteurs DA2\nsont aussi localisés sur des terminaisons axonales provenant de\nneurones glutamatergiques localisés dans le cortex, le thalamus\net l’hippocampe. La dopamine exerce une action inhibitrice sur la\nsécrétion synaptique de glutamate en activant ces récepteurs DA2.\n",
+      "text_sha256": "3c2fe24e1242f9c1436dbfed96aa5df768637f9ecf47e6d96f223b237dc6f241"
+    },
+    {
+      "bbox": [
+        48.0,
+        564.3158569335938,
+        291.339111328125,
+        586.4085083007812
+      ],
+      "block_id": "page-0143-block-0009",
+      "order": 9,
+      "text": "Les récepteurs DA3 se trouvent principalement dans le striatum\nventral, le tubercule olfactif et les îlots de Cajella.\n",
+      "text_sha256": "9ebf0a465eb777d057b32d968617fd6da70cfce02091508fc07d1889368f0c5f"
+    },
+    {
+      "bbox": [
+        48.0,
+        587.5158081054688,
+        290.9725341796875,
+        609.5585327148438
+      ],
+      "block_id": "page-0143-block-0010",
+      "order": 10,
+      "text": "Les récepteurs DA4 sont localisés en plus grande densité dans\nle cortex frontal, principalement sur des neurones GABAergiques.\n",
+      "text_sha256": "23d26bbf5299b21932b9aa95528c075f9d4b11c0933c03e04171b9009bd0bbcb"
+    },
+    {
+      "bbox": [
+        48.0,
+        610.6658325195312,
+        290.96710205078125,
+        632.7584838867188
+      ],
+      "block_id": "page-0143-block-0011",
+      "order": 11,
+      "text": "Les récepteurs DA5 sont présents, surtout dans l’hippocampe\net les corps mamillaires.\n",
+      "text_sha256": "db88ee18dbee0151e2e5f9c933ec327e1ce4fff955398cff21ff4a9723836fdc"
+    },
+    {
+      "bbox": [
+        48.0,
+        633.8658447265625,
+        291.19091796875,
+        727.5863037109375
+      ],
+      "block_id": "page-0143-block-0012",
+      "order": 12,
+      "text": "Généralement, les drogues et les médicaments qui possèdent une\nanité élevée pour les récepteurs DA1 possèdent aussi une grande\nanité pour les récepteurs DA5. Le même phénomène est observé\npour la classe DA2, mais il y a quelques exceptions. L’amisulpride,\npar exemple, possède une grande anité pour les récepteurs DA2\net DA3 mais pas pour les récepteurs DA4. La clozapine, qui est\nl’antipsychotique le plus ecace, possède une anité 100 fois plus\ngrande pour les récepteurs DA4que pour les récepteurs DA2et DA3.\n",
+      "text_sha256": "d588a38cf3dccbc46a8a38e9f35790ff85985cb2d581a12f6c90b9104778230e"
+    }
+  ],
+  "coordinates_sha256": "843ab607847462994523cbe0706d18fb63a606d6aa4f1d8f9b4ad91a055958e2",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0143",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "126\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2 Déterminants bio-psycho-sociaux\nSérotonine\nPlus de 95 % de la sérotonine ou 5-hydroxytryptamine (5-HT)\nse trouve à l’extérieur du SNC, principalement dans les cellules\nentérochromanes de l’appareil digestif et dans les plaquettes\nsanguines. Quoique relativement peu concentrée dans le SNC, la\n5-HT joue un rôle primordial dans plusieurs fonctions mentales,\ndont la cognition, les émotions, la motivation, le sommeil, l’appétit,\nl’analgésie et l’impulsivité/agressivité. Un dérèglement des fonctions\nsérotoninergiques cérébrales est associé à plusieurs troubles mentaux,\ndont les troubles aectifs, la schizophrénie, les troubles anxieux\net les troubles de l’alimentation (voir les gures supplémentaires).\nTopochimie\nLes groupements de neurones qui contiennent la 5-HT sont\nnumérotés de B1 à B9. Ces groupements se trouvent tous dans\nle tronc cérébral, près de ou sur la ligne médiane, dans des\nnoyaux du raphé (voir la gure 6.3c). Les neurones sérotoni-\nnergiques qui donnent naissance aux projections ascendantes\n(vers le prosencéphale) sont issus principalement des noyaux\ndu raphé dorsal (B6-B7) et du raphé médian (B8), deux noyaux\nsuperposés situés en dessous de l’aqueduc de Sylvius (aqueduc\ndu mésencéphale). Les regroupements caudaux, B1 et B2, se\nprojettent vers la moelle épinière, alors que les regroupements B3\net B4 se dirigent principalement vers le cervelet. Les projections\nsérotoninergiques ascendantes se divisent en deux faisceaux :\n• un faisceau dorsal, issu du pôle antérieur B7 ;\n• un faisceau ventral, issu de B6-B8, qui se rejoignent au niveau\ndu diencéphale caudal.\nIls se projettent vers l’ensemble des régions du système lim-\nbique telles que les noyaux du mésencéphale ventral (la substance\nnoire, l’aire tegmentale ventrale), l’hypothalamus, l’habenula,\nl’amygdale, l’hippocampe, le striatum, le septum et le cortex.\nLes noyaux du raphé reçoivent plusieurs aérences des noyaux\ndu tronc cérébral, dont la substance noire et l’aire tegmentale\nventrale, les noyaux du tegmentum pontin (partie dorsale du\npont) et latérodorsal (acétylcholine), le locus cœruleus (nora-\ndrénaline) et le noyau du tractus solitaire (adrénaline).\nSynthèse et métabolisme\nL’acide aminé essentiel1, le L-tryptophane, est le précurseur de\nla 5-HT. La synthèse s’eectue en deux étapes.\n1. D’abord, l’enzyme tryptophane hydroxylase (TPH) catalyse\nla conversion du L-tryptophane en 5-hydroxytryptophane\n(5- HTP) (voir la gure 6.11). La TPH existe sous deux iso-\nformes, la TPH-1 et la TPH-2, présentes en quantités égales dans\nle système limbique. La TPH-2 est toutefois plus concentrée\ndans le tronc cérébral et absente en périphérie. L’hydroxylation\ndu L-tryptophane est l’étape limitante de la vitesse de synthèse.\n2. La 5-HTP est décarboxylée par une enzyme qui catalyse les\nacides aminés aromatiques (la 5-HTP décarboxylase), la même\nque celle qui catalyse la L-DOPA dans les neurones catécho -\nl aminergiques. Cette seconde étape convertit la 5-HTP en 5-HT.\nLa 5-HT est transportée dans les vésicules synaptiques par\nle TMV-2 et libérée dans la synapse par exocytose. La 5-HT\nlibre est métabolisée par la MAO de type A qui la convertit en\n1. Les acides aminés essentiels doivent être apportés par\nl’alimentation, au contraire des acides aminés non essentiels\nqui sont synthétisés par l’organisme.\nentraîne une substitution de l’acide aminé valine (Val) par une\nméthionine (Met) à la position 158 de la COMT. Les individus\nhomozygotes pour l’allèle Val présente une enzyme COMT\nhyperactive par rapport aux individus homozygotes pour l’allèle\nMet, ce qui provoque une diminution de la neurotransmission\ncatécholaminergique, particulièrement au niveau du cortex. Ce\nphénotype serait, par exemple, associé avec une faible perfor-\nmance de la mémoire de travail, un décit de l’attention et des\nfonctions exécutives, comme dans la schizophrénie.\nRécepteurs dopaminergiques\nLes récepteurs de la DA sont des métabotropes regroupés en\ndeux classes selon qu’ils sont couplés à une protéine G :\n1. Qui stimule la production d’AMPc (DA1 et DA5) ;\n2. Qui inhibe la production d’AMPc (DA2, DA3 et DA4).\nLes récepteurs DA1 et DA2 sont les plus nombreux dans le SNC.\nOn les trouve dans toutes les régions innervées par les neurones\ndopaminergiques. Les récepteurs DA1 sont postsynaptiques\nalors que les récepteurs DA2 sont pré et postsynaptiques. Deux\nisoformes du récepteur DA2 issues du même gène par couplage\nalternatif ont été identiés :\n1. DA2 court (DA2C, 415 acides aminés) ;\n2. DA2 long (DA2L, 444 acides aminés).\nLes deux isoformes dièrent au niveau de la troisième boucle\nintracellulaire, une portion du récepteur qui interagit avec la\nprotéine G. Les études eectuées sur des animaux modiés généti-\nquement montrent que le DA2C est principalement pré synaptique,\nconstituant un autorécepteur qui module négativement la synthèse\net la libération synaptique de dopamine (DA) ainsi que son taux\nde décharge (Centonze & al., 2002). Le récepteur DA2C intervient\négalement dans le rétrocontrôle négatif de la sécrétion de prolac-\ntine. Il n’existe pas actuellement d’antipsychotiques sélectifs pour\nl’une des deux isoformes, DA2C et DA2L; ceci est possiblement\ndû au fait que les deux récepteurs ne dièrent qu’au niveau de la\nboucle intracellulaire. Dans le striatum, on trouve des récepteurs\nDA1 sur les neurones épineux qui se projettent directement vers\nle mésencéphale ventral et qui contiennent de la substance P et\ndu GABA. Les neurones épineux qui se projettent vers le globus\npallidus et qui contiennent de l’enképhaline et du GABA possèdent\ndes récepteurs DA2; les interneurones cholinergiques du striatum\npossèdent aussi des récepteurs DA2. Enn, les récepteurs DA2\nsont aussi localisés sur des terminaisons axonales provenant de\nneurones glutamatergiques localisés dans le cortex, le thalamus\net l’hippocampe. La dopamine exerce une action inhibitrice sur la\nsécrétion synaptique de glutamate en activant ces récepteurs DA2.\nLes récepteurs DA3 se trouvent principalement dans le striatum\nventral, le tubercule olfactif et les îlots de Cajella.\nLes récepteurs DA4 sont localisés en plus grande densité dans\nle cortex frontal, principalement sur des neurones GABAergiques.\nLes récepteurs DA5 sont présents, surtout dans l’hippocampe\net les corps mamillaires.\nGénéralement, les drogues et les médicaments qui possèdent une\nanité élevée pour les récepteurs DA1 possèdent aussi une grande\nanité pour les récepteurs DA5. Le même phénomène est observé\npour la classe DA2, mais il y a quelques exceptions. L’amisulpride,\npar exemple, possède une grande anité pour les récepteurs DA2\net DA3 mais pas pour les récepteurs DA4. La clozapine, qui est\nl’antipsychotique le plus ecace, possède une anité 100 fois plus\ngrande pour les récepteurs DA4que pour les récepteurs DA2et DA3.\n",
+  "raw_text_sha256": "1e5187cd69ba309b7ec7a7735eafd8c5dd88af8bce76c13f503a539456ad88af",
+  "source_page_display": 144,
+  "source_page_index": 143
+}

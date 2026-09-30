@@ -1,0 +1,340 @@
+{
+  "block_sequence_sha256": "39bafa4383487e7fd9d3c9119d2a71ade265e4a765e7475808191e543975291b",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0661-block-0001",
+      "order": 1,
+      "text": "644\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "9013767f3813f833407b0133b4ca7291bddc32e158f40481c6f7c82c91f54767"
+    },
+    {
+      "bbox": [
+        50.25,
+        41.002296447753906,
+        262.7619934082031,
+        53.320068359375
+      ],
+      "block_id": "page-0661-block-0002",
+      "order": 2,
+      "text": "TABLEAU 28.15 Effets indésirables des psychotropes\n",
+      "text_sha256": "fae5b866e52e8bb7480ed6db0a69352e588acc307ae8da6146d35d9602b518b0"
+    },
+    {
+      "bbox": [
+        110.80000305175781,
+        52.852294921875,
+        213.78501892089844,
+        64.820068359375
+      ],
+      "block_id": "page-0661-block-0003",
+      "order": 3,
+      "text": "sur la fonction cardiaque\n",
+      "text_sha256": "a0074fbfb83c58ed1dc4ab22be8749313e0a28a17cc4f0234550650260ca3dc2"
+    },
+    {
+      "bbox": [
+        53.54999923706055,
+        69.77412414550781,
+        119.68900299072266,
+        80.35029602050781
+      ],
+      "block_id": "page-0661-block-0004",
+      "order": 4,
+      "text": "Agents ou classes\n",
+      "text_sha256": "1fbf85c72d1c500cdd9655bf9f90db52c2306ae556e54f834d42bfaf8a45f83d"
+    },
+    {
+      "bbox": [
+        56.150001525878906,
+        74.77412414550781,
+        239.53350830078125,
+        90.35029602050781
+      ],
+      "block_id": "page-0661-block-0005",
+      "order": 5,
+      "text": "de médicaments\nEffets cardiaques\n",
+      "text_sha256": "f798cb8c92a50e800d2e5413e3522cf151f0b1af16ac3fc7b58f56426f9df90b"
+    },
+    {
+      "bbox": [
+        52.25,
+        95.70195770263672,
+        249.61602783203125,
+        105.52812957763672
+      ],
+      "block_id": "page-0661-block-0006",
+      "order": 6,
+      "text": "Lithium\nDérèglement et arrêt du nœud sinusal\n",
+      "text_sha256": "49efdf0c77cd97b4c44333004a5768595a09845aaf6c878daa7687aeeaa90826"
+    },
+    {
+      "bbox": [
+        52.25,
+        114.1519546508789,
+        275.671142578125,
+        143.97813415527344
+      ],
+      "block_id": "page-0661-block-0007",
+      "order": 7,
+      "text": "ISRS\nRalentissement du rythme cardiaque ;\nbradycardie sinusale occasionnelle, voire arrêt\ncardiaque ; allongement de l’intervalle QTc\n",
+      "text_sha256": "80f8ce2c1b6b3bfc623219e1dafd86c04c7dc6f77dedafb579d370fe973588a1"
+    },
+    {
+      "bbox": [
+        52.25,
+        152.5519561767578,
+        260.7690124511719,
+        192.3781280517578
+      ],
+      "block_id": "page-0661-block-0008",
+      "order": 8,
+      "text": "Tricycliques\nHypotension orthostatique ; altération de\nla conduction auriculoventriculaire ; effet\nantiarythmique ; proarythmie en présence\nde surdosage ou d’ischémie\n",
+      "text_sha256": "e47ce8413164980b87774f3142fff70cbfa7adc1c0ceb40234ed55ae899ff498"
+    },
+    {
+      "bbox": [
+        52.25,
+        201.001953125,
+        211.30702209472656,
+        210.828125
+      ],
+      "block_id": "page-0661-block-0009",
+      "order": 9,
+      "text": "IMAO\nHypotension orthostatique\n",
+      "text_sha256": "28ccbba621c832c93dd6fd15cf4ff88fb86eced5bb7700a0b7738194a22c4ebc"
+    },
+    {
+      "bbox": [
+        52.25,
+        219.40196228027344,
+        106.04299926757812,
+        239.22813415527344
+      ],
+      "block_id": "page-0661-block-0010",
+      "order": 10,
+      "text": "Antipsychotiques\ntypiques\n",
+      "text_sha256": "07fe5225310ed126209a69d68891607a603f4d1ad0e19140443e3d7b9238571a"
+    },
+    {
+      "bbox": [
+        128.75,
+        219.40196228027344,
+        255.84600830078125,
+        239.22813415527344
+      ],
+      "block_id": "page-0661-block-0011",
+      "order": 11,
+      "text": "Hypotension orthostatique ; allongement\nde l’intervalle QTc ; torsades de pointe\n",
+      "text_sha256": "2c3606e013f98604cf5dfdebd71c8cdfe187bc1d64dfeae04776804157c03f2b"
+    },
+    {
+      "bbox": [
+        52.25,
+        247.85195922851562,
+        106.04299926757812,
+        267.6781311035156
+      ],
+      "block_id": "page-0661-block-0012",
+      "order": 12,
+      "text": "Antipsychotiques\natypiques\n",
+      "text_sha256": "465d06102e7d7727e94be11d1e95537e213fa140892a3c6bb9a150ce63a83182"
+    },
+    {
+      "bbox": [
+        128.75,
+        247.85195922851562,
+        275.0790100097656,
+        267.6781311035156
+      ],
+      "block_id": "page-0661-block-0013",
+      "order": 13,
+      "text": "Variables ; allongement de l’intervalle QTc ;\narythmie ventriculaire ; syndrome métabolique\n",
+      "text_sha256": "00666cbc2321e4d9e357dc7d5ac4b317927654e17eac034db767984965106398"
+    },
+    {
+      "bbox": [
+        52.25,
+        276.251953125,
+        286.7250061035156,
+        306.078125
+      ],
+      "block_id": "page-0661-block-0014",
+      "order": 14,
+      "text": "Clozapine\nVariables ; allongement de l’intervalle QTc ;\narythmie ventriculaire ; hypotension orthostatique,\nmyocardite\n",
+      "text_sha256": "100e461bb9b56da3a8875bab741643085bfab714ae565632869446bd675d5c1e"
+    },
+    {
+      "bbox": [
+        52.25,
+        314.70196533203125,
+        280.5130310058594,
+        334.52813720703125
+      ],
+      "block_id": "page-0661-block-0015",
+      "order": 15,
+      "text": "Carbamazépine\nEffet antiarythmique ; bloc auriculoventriculaire ;\nhyponatrémie\n",
+      "text_sha256": "9bebae71fe2ea0479653f9431c6df7f32734f479b3799cb79d8bc3edfdf2384f"
+    },
+    {
+      "bbox": [
+        52.25,
+        343.1019592285156,
+        103.02799987792969,
+        362.9281311035156
+      ],
+      "block_id": "page-0661-block-0016",
+      "order": 16,
+      "text": "Inhibiteurs de la\ncholinestérase\n",
+      "text_sha256": "644a628751e305ac217b8666ccfb6b981c665a226b79a07a62b742fb226cc502"
+    },
+    {
+      "bbox": [
+        128.75,
+        343.1019592285156,
+        166.39700317382812,
+        352.9281311035156
+      ],
+      "block_id": "page-0661-block-0017",
+      "order": 17,
+      "text": "Bradycardie\n",
+      "text_sha256": "df519e46092a9ff3e67920ed5f04ae934a73e46fa517de745bd39ba06980a600"
+    },
+    {
+      "bbox": [
+        48.25,
+        371.7406311035156,
+        173.94239807128906,
+        380.6088562011719
+      ],
+      "block_id": "page-0661-block-0018",
+      "order": 18,
+      "text": "Source : Adapté de Levinson (2011), p. 424.\n",
+      "text_sha256": "304fd00c5e5abe5cb3b752b32aa2d491d2b5428c25b73b001e67a96db0ea5f57"
+    },
+    {
+      "bbox": [
+        50.25,
+        395.602294921875,
+        189.95201110839844,
+        407.9200744628906
+      ],
+      "block_id": "page-0661-block-0019",
+      "order": 19,
+      "text": "FIGURE 28.2 Électrocardiogramme\n",
+      "text_sha256": "558d2f8f2ff93cd1192792f548e40e203190951d2f5f554d3294fbc4f54df9f7"
+    },
+    {
+      "bbox": [
+        48.25,
+        530.5906372070312,
+        129.54283142089844,
+        539.4588623046875
+      ],
+      "block_id": "page-0661-block-0020",
+      "order": 20,
+      "text": "Source : Med on line (2015).\n",
+      "text_sha256": "d1457b9341dc0c1539f0e993504d4ca0b5a4ec3935bf356f7d9dcf80ba4b6c3d"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.5302124023438,
+        132.0084991455078
+      ],
+      "block_id": "page-0661-block-0021",
+      "order": 21,
+      "text": "en présence de delirium postopératoire et médical, d’une part\nà cause de sa voie d’administration IV et, d’autre part, à la suite\nde la longue expérience des intensivistes et de la surveillance des\nparamètres électrocardiographiques. Plusieurs antipsychotiques\ncomportent un risque d’allongement de l’intervalle QTc ce qui\npeut aboutir à des torsades de pointe (tachyarythmie ventriculaire)\n(voir le tableau 28.16). L’eet indésirable le plus problématique\nest l’hypotension orthostatique.\n",
+      "text_sha256": "8cf1fb3215191b1ac59f6f600cf4c1ad84fbad98186e1861e64062e65af60777"
+    },
+    {
+      "bbox": [
+        306.0,
+        133.0158233642578,
+        549.3238525390625,
+        201.05850219726562
+      ],
+      "block_id": "page-0661-block-0022",
+      "order": 22,
+      "text": "Les benzodiazépines n’ont pas d’eets sur la fonction car-\ndiaque et sont utilisées dans les maladies cardiovasculaires en\ntoutes circonstances. Un risque de dépendance est à surveiller\nlorsqu’ils sont prescrits à long terme. Il devient alors nettement\nplus avantageux de considérer l’usage d’un ISRS en présence\nd’anxiété chronique.\n",
+      "text_sha256": "04e9e0ce785a3d6d272cc0015ad7acd81353d74d49b08f475d1c4da871205e1d"
+    },
+    {
+      "bbox": [
+        306.0,
+        211.58682250976562,
+        462.7440185546875,
+        227.72940063476562
+      ],
+      "block_id": "page-0661-block-0023",
+      "order": 23,
+      "text": "28.4.2 VIH/sida et hépatites\n",
+      "text_sha256": "f4c2a1acf72dcad639a7dd0c80228683e9081e1761e5e676bf21d4faeb279c19"
+    },
+    {
+      "bbox": [
+        306.0,
+        231.06582641601562,
+        549.6198120117188,
+        679.4085083007812
+      ],
+      "block_id": "page-0661-block-0024",
+      "order": 24,
+      "text": "Depuis 1996, l’espérance de vie des patients infectés par le virus de\nl’immunodécience humaine (VIH) s’est nettement améliorée. La\ndécouverte d’un grand nombre d’antirétroviraux (antiprotéases)\net leur utilisation conjointe dans le cadre des trithérapies (Highly\nactive antiretroviral therapy - HAART) ont considérablement\nmodié les symptômes et l’évolution clinique de la maladie par\nleur réduction de l’incidence des infections opportunistes et\ndes tumeurs malignes. Ainsi, le nombre de personnes vivant au\nCanada avec le VIH (incluant le syndrome de l’immunodécience\nacquise [sida]) continue d’augmenter. Entre 2008 et 2011, ce\nnombre est passé de 64 000 (nombre estimé) à 71 300, soit une\nhausse de 11,4 %. L’amélioration des traitements a diminué la\nmortalité liée au VIH. Cependant, l’ecacité de la trithérapie a\nentraîné une certaine insouciance dans la population qui prend\ndes risques en utilisant moins systématiquement des moyens de\nprotection comme le condom. De plus, comme les infections\ncontinuent de survenir à un taux supérieur à celui des décès\nliés au VIH, le nombre total d’individus vivant avec une infection\nau VIH continue d’augmenter. Rappelons que le consentement\néclairé du patient avant d’effectuer un test de dépistage est\nobligatoire et le médecin doit toujours se demander comment\nle patient réagira devant le résultat. Au Canada (Agence de la\nsanté publique du Canada, 2011) :\n• 46,7 % des personnes infectées par le VIH sont des hommes\nayant eu des relations sexuelles avec d’autres hommes\n(HARSAH) ;\n• 17,6 % des personnes infectées font partie de la population\nhétérosexuelle qui ne provient pas d’une région où le VIH est\nendémique ;\n• 23,3 % sont des femmes vivant avec le VIH (y compris le sida) ;\n• 16,9 % ont contracté l’infection en utilisant des drogues\nintraveineuses ;\n• 14,9 % sont des individus qui ont contracté l’infection par\ncontact hétérosexuel et proviennent de régions où le VIH\nest endémique.\nLes autochtones et les populations originaires de pays endé-\nmiques continuent d’être surreprésentés dans l’épidémiologie\ndu VIH au Canada.\n",
+      "text_sha256": "f83fcfd671104a08b898a601b22e782cb7e4228cf0eaed4f0d0d41e8539043e7"
+    },
+    {
+      "bbox": [
+        306.0,
+        688.3330078125,
+        549.1233520507812,
+        725.45849609375
+      ],
+      "block_id": "page-0661-block-0025",
+      "order": 25,
+      "text": "Troubles mentaux et personnes infectées au VIH\nSelon les populations étudiées et les méthodes diagnostiques\nutilisées, la prévalence des troubles psychiatriques chez les\n",
+      "text_sha256": "09ec51454437555f18ead6d0b6af27f1fe908c206de787e55c82e44ad5766c8c"
+    },
+    {
+      "bbox": [
+        48.0,
+        553.9658203125,
+        291.1023254394531,
+        587.45849609375
+      ],
+      "block_id": "page-0661-block-0026",
+      "order": 26,
+      "text": "d’allongement du QT ou un allongement de l’intervalle QT\npréexistant, ou en combinaison avec d’autres médicaments qui\nprolongent le QTc.\n",
+      "text_sha256": "4d3b5f77d6d4291d6b67449cef5c6b260dd2b00f5a603f586ee18761502de60a"
+    },
+    {
+      "bbox": [
+        48.0,
+        588.4658203125,
+        291.12066650390625,
+        725.45849609375
+      ],
+      "block_id": "page-0661-block-0027",
+      "order": 27,
+      "text": "Les antidépresseurs tricycliques sont à éviter en raison du\nrisque de délai de conduction cardiaque et d’hypotension ortho-\nstatique, qui entraîne des syncopes et des chutes. En cas d’in-\ntoxication aiguë, ces médicaments sont responsables d’arythmies\nventriculaires et d’un allongement de l’intervalle QTc. Les ISRS\nont peu d’eets sur la fonction cardiaque et, avec les précau-\ntions requises, sont habituellement utilisés en 1re intention. Les\nantipsychotiques, en particulier les atypiques, sont utilisés chez\nles patients aectés d’un trouble mental comorbide tel que la\nschizophrénie, le trouble schizoaectif et le trouble bipolaire,\nbien que leur utilisation nécessite une plus grande surveillance du\nQTc. L’halopéridol reste le traitement de choix aux soins intensifs\n",
+      "text_sha256": "be5d1734704aa626a4b801ee44d002e61d9d897224338a65f175f154741d80c0"
+    }
+  ],
+  "coordinates_sha256": "8fd5a03e15a5a86a1513336eeb2e0f94405754547dbd1e2fc8ca770de11748ed",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0661",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "644\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nTABLEAU 28.15 Effets indésirables des psychotropes\nsur la fonction cardiaque\nAgents ou classes\nde médicaments\nEffets cardiaques\nLithium\nDérèglement et arrêt du nœud sinusal\nISRS\nRalentissement du rythme cardiaque ;\nbradycardie sinusale occasionnelle, voire arrêt\ncardiaque ; allongement de l’intervalle QTc\nTricycliques\nHypotension orthostatique ; altération de\nla conduction auriculoventriculaire ; effet\nantiarythmique ; proarythmie en présence\nde surdosage ou d’ischémie\nIMAO\nHypotension orthostatique\nAntipsychotiques\ntypiques\nHypotension orthostatique ; allongement\nde l’intervalle QTc ; torsades de pointe\nAntipsychotiques\natypiques\nVariables ; allongement de l’intervalle QTc ;\narythmie ventriculaire ; syndrome métabolique\nClozapine\nVariables ; allongement de l’intervalle QTc ;\narythmie ventriculaire ; hypotension orthostatique,\nmyocardite\nCarbamazépine\nEffet antiarythmique ; bloc auriculoventriculaire ;\nhyponatrémie\nInhibiteurs de la\ncholinestérase\nBradycardie\nSource : Adapté de Levinson (2011), p. 424.\nFIGURE 28.2 Électrocardiogramme\nSource : Med on line (2015).\nen présence de delirium postopératoire et médical, d’une part\nà cause de sa voie d’administration IV et, d’autre part, à la suite\nde la longue expérience des intensivistes et de la surveillance des\nparamètres électrocardiographiques. Plusieurs antipsychotiques\ncomportent un risque d’allongement de l’intervalle QTc ce qui\npeut aboutir à des torsades de pointe (tachyarythmie ventriculaire)\n(voir le tableau 28.16). L’eet indésirable le plus problématique\nest l’hypotension orthostatique.\nLes benzodiazépines n’ont pas d’eets sur la fonction car-\ndiaque et sont utilisées dans les maladies cardiovasculaires en\ntoutes circonstances. Un risque de dépendance est à surveiller\nlorsqu’ils sont prescrits à long terme. Il devient alors nettement\nplus avantageux de considérer l’usage d’un ISRS en présence\nd’anxiété chronique.\n28.4.2 VIH/sida et hépatites\nDepuis 1996, l’espérance de vie des patients infectés par le virus de\nl’immunodécience humaine (VIH) s’est nettement améliorée. La\ndécouverte d’un grand nombre d’antirétroviraux (antiprotéases)\net leur utilisation conjointe dans le cadre des trithérapies (Highly\nactive antiretroviral therapy - HAART) ont considérablement\nmodié les symptômes et l’évolution clinique de la maladie par\nleur réduction de l’incidence des infections opportunistes et\ndes tumeurs malignes. Ainsi, le nombre de personnes vivant au\nCanada avec le VIH (incluant le syndrome de l’immunodécience\nacquise [sida]) continue d’augmenter. Entre 2008 et 2011, ce\nnombre est passé de 64 000 (nombre estimé) à 71 300, soit une\nhausse de 11,4 %. L’amélioration des traitements a diminué la\nmortalité liée au VIH. Cependant, l’ecacité de la trithérapie a\nentraîné une certaine insouciance dans la population qui prend\ndes risques en utilisant moins systématiquement des moyens de\nprotection comme le condom. De plus, comme les infections\ncontinuent de survenir à un taux supérieur à celui des décès\nliés au VIH, le nombre total d’individus vivant avec une infection\nau VIH continue d’augmenter. Rappelons que le consentement\néclairé du patient avant d’effectuer un test de dépistage est\nobligatoire et le médecin doit toujours se demander comment\nle patient réagira devant le résultat. Au Canada (Agence de la\nsanté publique du Canada, 2011) :\n• 46,7 % des personnes infectées par le VIH sont des hommes\nayant eu des relations sexuelles avec d’autres hommes\n(HARSAH) ;\n• 17,6 % des personnes infectées font partie de la population\nhétérosexuelle qui ne provient pas d’une région où le VIH est\nendémique ;\n• 23,3 % sont des femmes vivant avec le VIH (y compris le sida) ;\n• 16,9 % ont contracté l’infection en utilisant des drogues\nintraveineuses ;\n• 14,9 % sont des individus qui ont contracté l’infection par\ncontact hétérosexuel et proviennent de régions où le VIH\nest endémique.\nLes autochtones et les populations originaires de pays endé-\nmiques continuent d’être surreprésentés dans l’épidémiologie\ndu VIH au Canada.\nTroubles mentaux et personnes infectées au VIH\nSelon les populations étudiées et les méthodes diagnostiques\nutilisées, la prévalence des troubles psychiatriques chez les\nd’allongement du QT ou un allongement de l’intervalle QT\npréexistant, ou en combinaison avec d’autres médicaments qui\nprolongent le QTc.\nLes antidépresseurs tricycliques sont à éviter en raison du\nrisque de délai de conduction cardiaque et d’hypotension ortho-\nstatique, qui entraîne des syncopes et des chutes. En cas d’in-\ntoxication aiguë, ces médicaments sont responsables d’arythmies\nventriculaires et d’un allongement de l’intervalle QTc. Les ISRS\nont peu d’eets sur la fonction cardiaque et, avec les précau-\ntions requises, sont habituellement utilisés en 1re intention. Les\nantipsychotiques, en particulier les atypiques, sont utilisés chez\nles patients aectés d’un trouble mental comorbide tel que la\nschizophrénie, le trouble schizoaectif et le trouble bipolaire,\nbien que leur utilisation nécessite une plus grande surveillance du\nQTc. L’halopéridol reste le traitement de choix aux soins intensifs\n",
+  "raw_text_sha256": "9d9ef707e82f6b5f5be3d8cb78c92344469935a61dfe06d2b6e28ad540fea821",
+  "source_page_display": 662,
+  "source_page_index": 661
+}

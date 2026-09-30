@@ -1,0 +1,76 @@
+{
+  "block_sequence_sha256": "4fc385aa78e2f41dbe03f24703c67c7106d62f7b0f7290178dd9cdc966d2a91b",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        471.6627197265625,
+        758.8693237304688
+      ],
+      "block_id": "page-0149-block-0001",
+      "order": 1,
+      "text": "132\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2 Déterminants bio-psycho-sociaux\n",
+      "text_sha256": "cdf6377cba466316c280c06e2f508027a7bf9265f7b088efe1a7f30e77c13d43"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.9658203125,
+        291.7101745605469,
+        725.2584838867188
+      ],
+      "block_id": "page-0149-block-0002",
+      "order": 2,
+      "text": "Le GABA est le produit de la décarboxylation du glutamate\npar l’acide glutamique décarboxylase (GAD). Cette enzyme se\nretrouve uniquement dans les neurones GABAergiques. L’enzyme\nexiste sous deux isoformes :\n1. Le GAD65 (poids moléculaire : 65) synthétise le GABA, qui\nest emmagasiné dans les vésicules synaptiques et libéré par\nexocytose au niveau des terminaisons.\n2. Le GAD67 synthétise le GABA cytoplasmique. Lors de la\nlibération synaptique, le GABA est métabolisé par l’enzyme\nGABA transaminase ; cette réaction chimique produit du\nsuccinate ou du glutamate lorsque l’α-kétoglutarate participe\nà la réaction.\nIl existe dans le SNC trois transporteurs membranaires du\nGABA :\n• Les GAT1 (GABA transporteur 1) et GAT2, qui sont présents\ndans les neurones et les astrocytes ;\n• Le GAT3, qui se trouve uniquement dans les astrocytes. Il\npermet aux astrocytes de capter le GABA ; il y est transformé\nen glutamine qui, par la suite, est réintroduite dans le neurone\nGABAergique. La glutamine est alors transformée en glutamate\npar l’enzyme glutaminase, ce qui complète la boucle de synthèse.\nDeux anticonvulsivants augmentent le niveau synaptique de\nGABA pour diminuer les convulsions :\n1. La tiagabine (GabitrilMD) bloque le GAT1 ;\n2. Le vigabatrin (SabrilMD) bloque l’enzyme GABA transaminase.\nIl existe deux sous-types de récepteurs GABAergiques :\n1. Le récepteur ionotrope GABAA est un canal sélectif aux\nions Cl–. Tout comme le récepteur NMDA, il comprend\nplusieurs sites de liaison. Il y a un site pour le GABA, un\npour la picrotoxine, un pour les benzodiazépines, un pour\nles barbituriques et un pour les agents anesthésiques et les\nneurostéroïdes (voir la figure 6.16). La liaison du GABA au\nrécepteur est suffisante pour ouvrir le canal. L’activation\ndu site benzodiazépine augmente la fréquence d’ouverture\ndu canal, alors que l’activation des sites barbiturique et\nstéroïde, augmente la durée de son ouverture. Les barbitu-\nriques et l’alcool ont une action allostérique (modulatrice),\nils augmentent l’affinité du site benzodiazépine, ce qui\nentraîne une potentialisation de l’effet pharmacologique\ndes médicaments de type benzodiazépines. Les récepteurs\nGABAA sont des pentamères constitués de cinq sous-unités\nsur une possibilité de huit (α, β, γ, δ, ε, θ, π, ρ). Selon sa\nconstitution (combinaison des différentes sous-unités), le\nrécepteur est sensible ou non aux benzodiazépines. Les\nrécepteurs α6β2/3δ et α4β2/δ sont insensibles aux benzodiazé-\npines ; mais ceux qui contiennent la sous-unité α5 le sont ;\nces derniers ne répondent pas au zolpidem (SublinoxMD),\nun sédatif non benzodiazépinique. La composition des\nrécepteurs GABAA peut donc expliquer la prépondérance\nde l’effet anxiolytique ou sédatif de certains médicaments\nchez les patients.\n2. Le récepteur métabotrope GABAB est couplé à des protéines G\nqui activent les canaux potassiques ou régulent l’IP3 et\nl’AMPc. Ce récepteur est présynaptique et postsynaptique ;\nau niveau présynaptique, il inhibe la libération synaptique\nde GABA. Son rôle est encore largement imprécis. On le\ntrouve dans plusieurs régions du système limbique où il\nralentit la libération de certains neurotransmetteurs, dont\n",
+      "text_sha256": "fa19dc3f6f51735a80414f9d4fe8fc14d4ca77a11a580b0d1b2ef76f9d398618"
+    },
+    {
+      "bbox": [
+        318.0,
+        379.0617370605469,
+        549.0175170898438,
+        424.2585144042969
+      ],
+      "block_id": "page-0149-block-0003",
+      "order": 3,
+      "text": "le glutamate. Le baclofène, un agoniste GABAB qui est ac-\ntuellement prescrit pour les troubles du mouvement, peut\nparfois être ecace dans le traitement de l’alcoolisme et de\nla schizophrénie.\n",
+      "text_sha256": "8dc6e1d8f29c2e553be1cf2098359fe16ffbeb29d77ca73ac295e730c0f7f6b1"
+    },
+    {
+      "bbox": [
+        306.0,
+        435.1330261230469,
+        549.3936157226562,
+        725.2584838867188
+      ],
+      "block_id": "page-0149-block-0004",
+      "order": 4,
+      "text": "Endocannabinoïdes\nEntre 1990 et 1995, on a identifié dans le SNC un système\nneurochimique qui est la cible du principal agent actif du cannabis,\nle δ9-tétrahydrocannabinol (THC). Ce système comprend deux\nneurotransmetteurs endocannabinoïdes principaux : l’anandamide\net le 2-arachidonylglycérole (2-AG), qui sont des acides gras\nsynthétisés à partir des phospholipides membranaires. Étant très\nliposolubles, ils ne peuvent être incorporés dans une vésicule\nsynaptique et libérés dans la synapse par le mécanisme d’exocytose\nclassique. Ils sont plutôt synthétisés sur demande à la suite d’une\nstimulation de l’activité neuronale ou de l’activation d’un récepteur\nmembranaire. Le mécanisme par lequel ils sont libérés dans la\nsynapse demeure inconnu. On sait toutefois qu’ils agissent comme\ndes messagers rétrogrades, c’est-à-dire qu’ils agissent directement\nsur le neurone qui a déclenché leur action à l’instar d’un mécanisme\nde rétroaction. Un transporteur membranaire les réintroduit dans\nle cytoplasme où ils sont métabolisés par des enzymes ; la plus\nconnue est l’acide gras amide hydroxylase. Les endocannabinoïdes\nactivent deux récepteurs couplés aux protéines G :\n1. Les récepteurs cannabinoïdes CB1 sont principalement lo-\ncalisés dans le SNC ; ils sont concentrés dans le cervelet, les\nnoyaux gris centraux, le cortex et les régions sous-corticales\ndu système limbique, dont l’hippocampe. Le THC possède\nune anité modérée pour le récepteur CB1 où il agit comme\nagoniste partiel avec une faible ecacité. Le cannabidiol, un\n",
+      "text_sha256": "011c8d16f6d86c95543da7ab32d6ca62adc96f904b0c833b121ec3dbe20f2d83"
+    },
+    {
+      "bbox": [
+        308.25,
+        41.002296447753906,
+        476.8633117675781,
+        53.320068359375
+      ],
+      "block_id": "page-0149-block-0005",
+      "order": 5,
+      "text": "FIGURE 6.16 Structure du récepteur GABA\n",
+      "text_sha256": "81aec5d81a4872d97b660ce4955ffe565f6d60ef502ff898bac63a72eeace7fa"
+    }
+  ],
+  "coordinates_sha256": "a5875c0d287e03d4e4dbc1cc04d05b2ef00aa870b4341e90f919f48b02f62ddd",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0149",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "132\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2 Déterminants bio-psycho-sociaux\nLe GABA est le produit de la décarboxylation du glutamate\npar l’acide glutamique décarboxylase (GAD). Cette enzyme se\nretrouve uniquement dans les neurones GABAergiques. L’enzyme\nexiste sous deux isoformes :\n1. Le GAD65 (poids moléculaire : 65) synthétise le GABA, qui\nest emmagasiné dans les vésicules synaptiques et libéré par\nexocytose au niveau des terminaisons.\n2. Le GAD67 synthétise le GABA cytoplasmique. Lors de la\nlibération synaptique, le GABA est métabolisé par l’enzyme\nGABA transaminase ; cette réaction chimique produit du\nsuccinate ou du glutamate lorsque l’α-kétoglutarate participe\nà la réaction.\nIl existe dans le SNC trois transporteurs membranaires du\nGABA :\n• Les GAT1 (GABA transporteur 1) et GAT2, qui sont présents\ndans les neurones et les astrocytes ;\n• Le GAT3, qui se trouve uniquement dans les astrocytes. Il\npermet aux astrocytes de capter le GABA ; il y est transformé\nen glutamine qui, par la suite, est réintroduite dans le neurone\nGABAergique. La glutamine est alors transformée en glutamate\npar l’enzyme glutaminase, ce qui complète la boucle de synthèse.\nDeux anticonvulsivants augmentent le niveau synaptique de\nGABA pour diminuer les convulsions :\n1. La tiagabine (GabitrilMD) bloque le GAT1 ;\n2. Le vigabatrin (SabrilMD) bloque l’enzyme GABA transaminase.\nIl existe deux sous-types de récepteurs GABAergiques :\n1. Le récepteur ionotrope GABAA est un canal sélectif aux\nions Cl–. Tout comme le récepteur NMDA, il comprend\nplusieurs sites de liaison. Il y a un site pour le GABA, un\npour la picrotoxine, un pour les benzodiazépines, un pour\nles barbituriques et un pour les agents anesthésiques et les\nneurostéroïdes (voir la figure 6.16). La liaison du GABA au\nrécepteur est suffisante pour ouvrir le canal. L’activation\ndu site benzodiazépine augmente la fréquence d’ouverture\ndu canal, alors que l’activation des sites barbiturique et\nstéroïde, augmente la durée de son ouverture. Les barbitu-\nriques et l’alcool ont une action allostérique (modulatrice),\nils augmentent l’affinité du site benzodiazépine, ce qui\nentraîne une potentialisation de l’effet pharmacologique\ndes médicaments de type benzodiazépines. Les récepteurs\nGABAA sont des pentamères constitués de cinq sous-unités\nsur une possibilité de huit (α, β, γ, δ, ε, θ, π, ρ). Selon sa\nconstitution (combinaison des différentes sous-unités), le\nrécepteur est sensible ou non aux benzodiazépines. Les\nrécepteurs α6β2/3δ et α4β2/δ sont insensibles aux benzodiazé-\npines ; mais ceux qui contiennent la sous-unité α5 le sont ;\nces derniers ne répondent pas au zolpidem (SublinoxMD),\nun sédatif non benzodiazépinique. La composition des\nrécepteurs GABAA peut donc expliquer la prépondérance\nde l’effet anxiolytique ou sédatif de certains médicaments\nchez les patients.\n2. Le récepteur métabotrope GABAB est couplé à des protéines G\nqui activent les canaux potassiques ou régulent l’IP3 et\nl’AMPc. Ce récepteur est présynaptique et postsynaptique ;\nau niveau présynaptique, il inhibe la libération synaptique\nde GABA. Son rôle est encore largement imprécis. On le\ntrouve dans plusieurs régions du système limbique où il\nralentit la libération de certains neurotransmetteurs, dont\nle glutamate. Le baclofène, un agoniste GABAB qui est ac-\ntuellement prescrit pour les troubles du mouvement, peut\nparfois être ecace dans le traitement de l’alcoolisme et de\nla schizophrénie.\nEndocannabinoïdes\nEntre 1990 et 1995, on a identifié dans le SNC un système\nneurochimique qui est la cible du principal agent actif du cannabis,\nle δ9-tétrahydrocannabinol (THC). Ce système comprend deux\nneurotransmetteurs endocannabinoïdes principaux : l’anandamide\net le 2-arachidonylglycérole (2-AG), qui sont des acides gras\nsynthétisés à partir des phospholipides membranaires. Étant très\nliposolubles, ils ne peuvent être incorporés dans une vésicule\nsynaptique et libérés dans la synapse par le mécanisme d’exocytose\nclassique. Ils sont plutôt synthétisés sur demande à la suite d’une\nstimulation de l’activité neuronale ou de l’activation d’un récepteur\nmembranaire. Le mécanisme par lequel ils sont libérés dans la\nsynapse demeure inconnu. On sait toutefois qu’ils agissent comme\ndes messagers rétrogrades, c’est-à-dire qu’ils agissent directement\nsur le neurone qui a déclenché leur action à l’instar d’un mécanisme\nde rétroaction. Un transporteur membranaire les réintroduit dans\nle cytoplasme où ils sont métabolisés par des enzymes ; la plus\nconnue est l’acide gras amide hydroxylase. Les endocannabinoïdes\nactivent deux récepteurs couplés aux protéines G :\n1. Les récepteurs cannabinoïdes CB1 sont principalement lo-\ncalisés dans le SNC ; ils sont concentrés dans le cervelet, les\nnoyaux gris centraux, le cortex et les régions sous-corticales\ndu système limbique, dont l’hippocampe. Le THC possède\nune anité modérée pour le récepteur CB1 où il agit comme\nagoniste partiel avec une faible ecacité. Le cannabidiol, un\nFIGURE 6.16 Structure du récepteur GABA\n",
+  "raw_text_sha256": "b009c7c4aa3931e42ee4fe4cb8d5535cf80066917ad8ae5e50684e37c48ffccc",
+  "source_page_display": 150,
+  "source_page_index": 149
+}

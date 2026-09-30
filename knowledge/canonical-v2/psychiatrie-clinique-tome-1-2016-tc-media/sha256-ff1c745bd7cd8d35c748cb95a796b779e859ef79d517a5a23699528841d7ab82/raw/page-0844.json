@@ -1,0 +1,268 @@
+{
+  "block_sequence_sha256": "e29676522e270b630ed95de5009666d5e1d32fba833c2a401634842b06865883",
+  "blocks": [
+    {
+      "bbox": [
+        54.0,
+        130.5734405517578,
+        482.25341796875,
+        259.49530029296875
+      ],
+      "block_id": "page-0844-block-0001",
+      "order": 1,
+      "text": "Troubles du contrôle des\nimpulsions et dépendances\ncomportementales\n",
+      "text_sha256": "f90123959b7ee20d67df281e1355fa688581ce836419826532214dffb2583c3c"
+    },
+    {
+      "bbox": [
+        54.0,
+        307.4001159667969,
+        224.40699768066406,
+        319.9001159667969
+      ],
+      "block_id": "page-0844-block-0002",
+      "order": 2,
+      "text": "Christian C. Joyal, Ph. D. (neuropsychologie)\n",
+      "text_sha256": "3f0256cfebd9c99fd0283b3cba6e89d32593f49c0f1f2994d0f4969c7e1697f0"
+    },
+    {
+      "bbox": [
+        54.0,
+        323.7772521972656,
+        263.4858703613281,
+        344.9938049316406
+      ],
+      "block_id": "page-0844-block-0003",
+      "order": 3,
+      "text": "Psychologue, chercheur titulaire, Institut Philippe-Pinel\n(Montréal)\n",
+      "text_sha256": "307e599a4b6fec0af459d795d2bda176993fdcb58e412b9294413c1e3f4e898e"
+    },
+    {
+      "bbox": [
+        54.0,
+        348.7772521972656,
+        281.9878234863281,
+        369.9938049316406
+      ],
+      "block_id": "page-0844-block-0004",
+      "order": 4,
+      "text": "Professeur titulaire, Département de psychologie, Université\ndu Québec à Trois-Rivières\n",
+      "text_sha256": "52fd58a2f2cce0bee8505a295ff6edfa0985cd085475a0e3c0499b63d24a12ca"
+    },
+    {
+      "bbox": [
+        54.0,
+        379.9001159667969,
+        297.15185546875,
+        392.4001159667969
+      ],
+      "block_id": "page-0844-block-0005",
+      "order": 5,
+      "text": "Véronique Brazzini-Poisson, M.D., M. Sc. (sciences biomédicales)\n",
+      "text_sha256": "0a59131ba5fc596a255eee054d7fbbb4cdca731422282715afbf7538eb42c145"
+    },
+    {
+      "bbox": [
+        54.0,
+        396.2772521972656,
+        239.95269775390625,
+        406.4938049316406
+      ],
+      "block_id": "page-0844-block-0006",
+      "order": 6,
+      "text": "Psychiatre, Hôpital Anna-Laberge (Châteauguay)\n",
+      "text_sha256": "67bd2be4188e5a0fa061a142137ed175a7f681f6bb94b47c26a0981a2d1dc74e"
+    },
+    {
+      "bbox": [
+        54.0,
+        410.2772521972656,
+        292.7745361328125,
+        431.4938049316406
+      ],
+      "block_id": "page-0844-block-0007",
+      "order": 7,
+      "text": "Professeure chargée d’enseignement clinique, Département de\npsychiatrie, Faculté de médecine, Université McGill (Montréal)\n",
+      "text_sha256": "b6158480c28c9aebc7ddba4f0fa3d3bc9510dc5044aeb0405be630246d40fd17"
+    },
+    {
+      "bbox": [
+        54.0,
+        441.4001159667969,
+        198.07159423828125,
+        453.9001159667969
+      ],
+      "block_id": "page-0844-block-0008",
+      "order": 8,
+      "text": "Claire-Anne Grégoire, M.D., FRCPC\n",
+      "text_sha256": "9ffdd6da2049df95b81b7bb6d331ffdc81e1ab0e3c2cf2769b70de23c9b91b78"
+    },
+    {
+      "bbox": [
+        54.0,
+        457.7772521972656,
+        247.79849243164062,
+        467.9938049316406
+      ],
+      "block_id": "page-0844-block-0009",
+      "order": 9,
+      "text": "Psychiatre, Hôpital Pierre-LeGardeur (Terrebonne)\n",
+      "text_sha256": "c29acf59fb71c8548965015517f2d4dd3ca0f206c6e6a3b1641e1bfab4c93da8"
+    },
+    {
+      "bbox": [
+        312.0,
+        307.4001159667969,
+        435.22161865234375,
+        319.9001159667969
+      ],
+      "block_id": "page-0844-block-0010",
+      "order": 10,
+      "text": "Louis Morissette, M.D., FRCPC\n",
+      "text_sha256": "5e37ea0290fed9ae9776ca7acfe58f317bcccce68058f21554b33363599dc978"
+    },
+    {
+      "bbox": [
+        312.0,
+        323.7772521972656,
+        482.12249755859375,
+        333.9938049316406
+      ],
+      "block_id": "page-0844-block-0011",
+      "order": 11,
+      "text": "Psychiatre, Institut Philippe-Pinel (Montréal)\n",
+      "text_sha256": "49905e4b911cae0adeceffc4857ca0c38d1e85e962dfeee72b8b6d516c3660c4"
+    },
+    {
+      "bbox": [
+        312.0,
+        337.7772521972656,
+        535.8391723632812,
+        358.9938049316406
+      ],
+      "block_id": "page-0844-block-0012",
+      "order": 12,
+      "text": "Professeur adjoint de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\n",
+      "text_sha256": "55794a101d286e95c09a0e659ed59983b705db069bfa7912758e835ca36bd33a"
+    },
+    {
+      "bbox": [
+        312.0,
+        368.9001159667969,
+        542.9874877929688,
+        381.4001159667969
+      ],
+      "block_id": "page-0844-block-0013",
+      "order": 13,
+      "text": "Paul Lespérance, M.D., FRCPC, M. Sc. (sciences neurologiques)\n",
+      "text_sha256": "b2e83b9a218e8467b47a1850e2881e4458088d3be66bb13bc184c3c1d78a9bf3"
+    },
+    {
+      "bbox": [
+        312.0,
+        385.2772521972656,
+        552.323974609375,
+        406.4938049316406
+      ],
+      "block_id": "page-0844-block-0014",
+      "order": 14,
+      "text": "Psychiatre-chef, Département de psychiatrie, Centre hospitalier\nde l’Université de Montréal\n",
+      "text_sha256": "9d67c1bafeb0686f5780f8b4150997b5b7d24a9f094f3325ff585c8dc44bec74"
+    },
+    {
+      "bbox": [
+        312.0,
+        410.2772521972656,
+        519.833984375,
+        431.4938049316406
+      ],
+      "block_id": "page-0844-block-0015",
+      "order": 15,
+      "text": "Professeur agrégé, Département de psychiatrie, Faculté\nde médecine, Université de Montréal\n",
+      "text_sha256": "245661154525172faeabf1242b90e0e5dc32d0f498be19921917346cba6a9f8e"
+    },
+    {
+      "bbox": [
+        263.1000061035156,
+        2.3810577392578125,
+        561.0,
+        122.38105773925781
+      ],
+      "block_id": "page-0844-block-0016",
+      "order": 16,
+      "text": "CHAPITRE36\n",
+      "text_sha256": "6ab3a8b555c478b72a4ce9279a1e4067b682c2f985562980b75ac44f1279f80f"
+    },
+    {
+      "bbox": [
+        54.04999923706055,
+        492.4660339355469,
+        296.04998779296875,
+        503.4035339355469
+      ],
+      "block_id": "page-0844-block-0017",
+      "order": 17,
+      "text": "Partie A Troubles du contrôle des impulsions...........828\n",
+      "text_sha256": "f9ff59c0f8b52ee1d411f4a4a4615a9b292f9f133ed006ca875a30ebc718f379"
+    },
+    {
+      "bbox": [
+        54.04999923706055,
+        508.22442626953125,
+        295.05999755859375,
+        596.1472778320312
+      ],
+      "block_id": "page-0844-block-0018",
+      "order": 18,
+      "text": "36A.1 Trouble explosif intermittent....................................829\n36A.1.1\nÉpidémiologie................................................ 829\n36A.1.2\nÉtiologies........................................................ 829\n36A.1.3\nDescription clinique..................................... 829\n36A.1.4\nComorbidités................................................. 831\n36A.1.5\nÉvaluation et diagnostic diérentiel ......... 831\n36A.1.6\nTraitements.................................................... 832\n",
+      "text_sha256": "c832e8447ec284f268e9eec6ad9b7c0becd6ec110c1afc738b71d9dfba9dd7ff"
+    },
+    {
+      "bbox": [
+        54.04999923706055,
+        601.1244506835938,
+        295.05999755859375,
+        689.0473022460938
+      ],
+      "block_id": "page-0844-block-0019",
+      "order": 19,
+      "text": "36A.2 Kleptomanie................................................................. 832\n36A.2.1\nÉpidémiologie................................................ 832\n36A.2.2\nÉtiologies........................................................ 832\n36A.2.3\nDescription clinique..................................... 833\n36A.2.4\nComorbidités................................................. 833\n36A.2.5\nÉvaluation et diagnostic diérentiel ......... 833\n36A.2.6\nTraitements.................................................... 834\n",
+      "text_sha256": "28fdfa02b9ce9261f972c1102d0de821ff0eed9b3355efd6253a65f4a5850998"
+    },
+    {
+      "bbox": [
+        312.0,
+        492.47442626953125,
+        553.010009765625,
+        581.5972900390625
+      ],
+      "block_id": "page-0844-block-0020",
+      "order": 20,
+      "text": "36A.3 Pyromanie .................................................................... 834\n36A.3.1\nÉpidémiologie................................................ 834\n36A.3.2\nÉtiologies........................................................ 834\n36A.3.3\nDescription clinique..................................... 835\n36A.3.4\nÉvaluation et diagnostic diérentiel ......... 835\n36A.3.5\nTraitements.................................................... 836\n36A.3.6\nÉvolution et pronostic ................................. 836\n",
+      "text_sha256": "753e42920271cd638e056fa59fa5a329df837985f14f6c97bcd25e8c312f0458"
+    },
+    {
+      "bbox": [
+        312.0,
+        586.7744140625,
+        553.010009765625,
+        689.0473022460938
+      ],
+      "block_id": "page-0844-block-0021",
+      "order": 21,
+      "text": "36A.4 Trichotillomanie.......................................................... 836\n36A.4.1\nÉpidémiologie............................................... 837\n36A.4.2\nÉtiologies........................................................ 837\n36A.4.3\nDescription clinique.................................... 837\n36A.4.4\nComorbidités ................................................ 838\n36A.4.5\nÉvaluation et diagnostic diérentiel......... 838\n36A.4.6\nTraitements................................................... 838\n36A.4.7\nÉvolution et pronostic................................. 839\n",
+      "text_sha256": "1ce1ecfb8c17eedb82f918b086ee63319cf4653bd43e935afbc8cf3ff79bf28d"
+    }
+  ],
+  "coordinates_sha256": "e8472388df180ba57a9b8bb97097228e2e3fd5a16f4f875c8aaedfe63443b549",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0844",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Troubles du contrôle des\nimpulsions et dépendances\ncomportementales\nChristian C. Joyal, Ph. D. (neuropsychologie)\nPsychologue, chercheur titulaire, Institut Philippe-Pinel\n(Montréal)\nProfesseur titulaire, Département de psychologie, Université\ndu Québec à Trois-Rivières\nVéronique Brazzini-Poisson, M.D., M. Sc. (sciences biomédicales)\nPsychiatre, Hôpital Anna-Laberge (Châteauguay)\nProfesseure chargée d’enseignement clinique, Département de\npsychiatrie, Faculté de médecine, Université McGill (Montréal)\nClaire-Anne Grégoire, M.D., FRCPC\nPsychiatre, Hôpital Pierre-LeGardeur (Terrebonne)\nLouis Morissette, M.D., FRCPC\nPsychiatre, Institut Philippe-Pinel (Montréal)\nProfesseur adjoint de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\nPaul Lespérance, M.D., FRCPC, M. Sc. (sciences neurologiques)\nPsychiatre-chef, Département de psychiatrie, Centre hospitalier\nde l’Université de Montréal\nProfesseur agrégé, Département de psychiatrie, Faculté\nde médecine, Université de Montréal\nCHAPITRE36\nPartie A Troubles du contrôle des impulsions...........828\n36A.1 Trouble explosif intermittent....................................829\n36A.1.1\nÉpidémiologie................................................ 829\n36A.1.2\nÉtiologies........................................................ 829\n36A.1.3\nDescription clinique..................................... 829\n36A.1.4\nComorbidités................................................. 831\n36A.1.5\nÉvaluation et diagnostic diérentiel ......... 831\n36A.1.6\nTraitements.................................................... 832\n36A.2 Kleptomanie................................................................. 832\n36A.2.1\nÉpidémiologie................................................ 832\n36A.2.2\nÉtiologies........................................................ 832\n36A.2.3\nDescription clinique..................................... 833\n36A.2.4\nComorbidités................................................. 833\n36A.2.5\nÉvaluation et diagnostic diérentiel ......... 833\n36A.2.6\nTraitements.................................................... 834\n36A.3 Pyromanie .................................................................... 834\n36A.3.1\nÉpidémiologie................................................ 834\n36A.3.2\nÉtiologies........................................................ 834\n36A.3.3\nDescription clinique..................................... 835\n36A.3.4\nÉvaluation et diagnostic diérentiel ......... 835\n36A.3.5\nTraitements.................................................... 836\n36A.3.6\nÉvolution et pronostic ................................. 836\n36A.4 Trichotillomanie.......................................................... 836\n36A.4.1\nÉpidémiologie............................................... 837\n36A.4.2\nÉtiologies........................................................ 837\n36A.4.3\nDescription clinique.................................... 837\n36A.4.4\nComorbidités ................................................ 838\n36A.4.5\nÉvaluation et diagnostic diérentiel......... 838\n36A.4.6\nTraitements................................................... 838\n36A.4.7\nÉvolution et pronostic................................. 839\n",
+  "raw_text_sha256": "ff1a3af7fe1b5cb89e36905b24b56650786a151bf2305b44bedd841cad4b6a66",
+  "source_page_display": 845,
+  "source_page_index": 844
+}

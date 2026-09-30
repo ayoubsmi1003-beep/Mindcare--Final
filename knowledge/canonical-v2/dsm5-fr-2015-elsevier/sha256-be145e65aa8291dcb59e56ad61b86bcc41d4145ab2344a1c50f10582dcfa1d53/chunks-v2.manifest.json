@@ -1,0 +1,10 @@
+{
+  "chunker_version": "struct-v2",
+  "normalisation": "nfkc-espace-v1",
+  "limite_texte": 2000,
+  "unites_lues": 12818,
+  "chunks_emis": 14079,
+  "unites_multi_chunks": 859,
+  "texte_max": 2000,
+  "indexable_max": 2671
+}

@@ -1,0 +1,76 @@
+{
+  "block_sequence_sha256": "e51ea60230466b30687cc3c474fbafe62213133e67f84051fe33bbb1104f3162",
+  "blocks": [
+    {
+      "bbox": [
+        398.8999938964844,
+        -50.99560546875,
+        658.9000244140625,
+        449.00439453125
+      ],
+      "block_id": "page-0318-block-0001",
+      "order": 1,
+      "text": "3\n",
+      "text_sha256": "1121cfccd5913f0a63fec40a6ffd44ea64f9dc135c66634ba001d10bcf4302a2"
+    },
+    {
+      "bbox": [
+        84.0,
+        394.7660217285156,
+        300.0,
+        605.2035522460938
+      ],
+      "block_id": "page-0318-block-0002",
+      "order": 2,
+      "text": "15 Troubles psychotiques brefs........................302\n16 Troubles délirants.........................................312\n17 Schizophrénies ..............................................327\n18 Troubles bipolaires.......................................372\n19 Dépressions....................................................392\n20 Troubles anxieux, panique, phobies...........411\n21 Troubles obsessionnels-compulsifs............446\n22 Troubles de l’adaptation...............................472\n23 Troubles liés au stress...................................489\n24 Dissociations..................................................510\n25 Troubles à symptomatologie somatique....528\n26 Douleur chronique .......................................550\n27 Troubles neurocognitifs...............................578\n28 Troubles mentaux dus à une aection\nmédicale .........................................................617\n",
+      "text_sha256": "50e8f051b5af41c1ea14c49bed53286de31d1ace7a611281c6a9d12cc70d7992"
+    },
+    {
+      "bbox": [
+        331.5,
+        394.7660217285156,
+        547.5,
+        612.7035522460938
+      ],
+      "block_id": "page-0318-block-0003",
+      "order": 3,
+      "text": "29 Facteurs psychologiques inuençant\ndes aections médicales...............................664\n30 Troubles factices ...........................................686\n31 Troubles des conduites alimentaires..........698\n32 Troubles du sommeil et de la vigilance......714\n33 Sexualité normale et dysfonctions\nsexuelles .........................................................750\n34 Dysphories de genre .....................................784\n35 Paraphilies......................................................806\n36 Troubles du contrôle des impulsions\net dépendances comportementales............827\n37 Troubles liés à l’alcool ..................................849\n38 Toxicomanies.................................................873\n39 Toxicomanies et maladies mentales ...........909\n40 Troubles de la personnalité .........................925\n41 Diérences reliées au sexe...........................964\n",
+      "text_sha256": "b53276c58797a512cb4b2571fe830a01d3730c6e0c3c12373c51dd5e15643f2b"
+    },
+    {
+      "bbox": [
+        48.0,
+        170.7292938232422,
+        443.5043029785156,
+        278.88165283203125
+      ],
+      "block_id": "page-0318-block-0004",
+      "order": 4,
+      "text": "Syndromes cliniques\npsychiatriques\n",
+      "text_sha256": "6b7fcc1fe5b13ab16bdb216ca04eea1edaaec2515e722b815220d34e39691d2c"
+    },
+    {
+      "bbox": [
+        240.60000610351562,
+        70.84444427490234,
+        385.2432556152344,
+        108.84444427490234
+      ],
+      "block_id": "page-0318-block-0005",
+      "order": 5,
+      "text": "PARTIE\n",
+      "text_sha256": "0e054fd62c9a877920b13d9a515f145b5819af2695746e6dfd91efa1e2c5806b"
+    }
+  ],
+  "coordinates_sha256": "51d15cceb136e72d9f14da1d2ea0efc79bf7a0b39db837955fc14504c6f658fa",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0318",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "3\n15 Troubles psychotiques brefs........................302\n16 Troubles délirants.........................................312\n17 Schizophrénies ..............................................327\n18 Troubles bipolaires.......................................372\n19 Dépressions....................................................392\n20 Troubles anxieux, panique, phobies...........411\n21 Troubles obsessionnels-compulsifs............446\n22 Troubles de l’adaptation...............................472\n23 Troubles liés au stress...................................489\n24 Dissociations..................................................510\n25 Troubles à symptomatologie somatique....528\n26 Douleur chronique .......................................550\n27 Troubles neurocognitifs...............................578\n28 Troubles mentaux dus à une aection\nmédicale .........................................................617\n29 Facteurs psychologiques inuençant\ndes aections médicales...............................664\n30 Troubles factices ...........................................686\n31 Troubles des conduites alimentaires..........698\n32 Troubles du sommeil et de la vigilance......714\n33 Sexualité normale et dysfonctions\nsexuelles .........................................................750\n34 Dysphories de genre .....................................784\n35 Paraphilies......................................................806\n36 Troubles du contrôle des impulsions\net dépendances comportementales............827\n37 Troubles liés à l’alcool ..................................849\n38 Toxicomanies.................................................873\n39 Toxicomanies et maladies mentales ...........909\n40 Troubles de la personnalité .........................925\n41 Diérences reliées au sexe...........................964\nSyndromes cliniques\npsychiatriques\nPARTIE\n",
+  "raw_text_sha256": "b63c2550c64664cbca0cff73c690b56820696638e6d37bf564e5196ad9570b10",
+  "source_page_display": 319,
+  "source_page_index": 318
+}

@@ -1,0 +1,88 @@
+{
+  "block_sequence_sha256": "6f7480aa0483d4db859226c3bc8fe78970fb037f9d566d12df8bd7cea11347b7",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        471.6627197265625,
+        758.8693237304688
+      ],
+      "block_id": "page-0145-block-0001",
+      "order": 1,
+      "text": "128\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2 Déterminants bio-psycho-sociaux\n",
+      "text_sha256": "79d0b6741ddf6383336ab3fb6319ea72178ae838919c6f939c1debb90a9e6716"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.32958984375,
+        260.1084899902344
+      ],
+      "block_id": "page-0145-block-0002",
+      "order": 2,
+      "text": "importante innervation cholinergique corticale. Le groupe Ch1,\nlocalisé dans le septum, est la source majeure de l’innervation\ncholinergique vers l’hippocampe. Ces voies nerveuses jouent\nun rôle dans la mémoire et l’apprentissage. Les groupes Ch5 et\nCh6 sont localisés dans le tronc cérébral au niveau de la jonction\nmésencéphalo- protubérancielle ; ce sont les noyaux du tegmentum\npédonculopontin (partie ventrolatérale du pont) et dorsolatéraux.\nCes neurones envoient des eérences au raphé dorsal, au locus\ncœruleus, au mésencéphale ventral (substance noire et aire teg-\nmentale ventrale), au thalamus et au cortex préfrontal. Ils jouent\nun rôle important dans la genèse du sommeil paradoxal (le stade\nde sommeil REM caractérisé par des mouvements rapides des yeux\net une atonie musculaire). Ces neurones cholinergiques régulent\naussi les fonctions limbiques. Ils reçoivent des aérences du\ncortex préfrontal et envoient des eérences vers l’aire tegmentale\nventrale et la substance noire. Ces structures du mésencéphale\nse projettent vers le cortex préfrontal, le striatum, l’amygdale et\nle septum. Par ce circuit, l’ACh joue un rôle important dans la\nrégulation de la motivation et des émotions.\n",
+      "text_sha256": "95db1da68543469012ea30034c38dfb79cf089bb3ca36e8cef758eb06aef39ed"
+    },
+    {
+      "bbox": [
+        306.0,
+        265.102294921875,
+        549.4649047851562,
+        346.7585144042969
+      ],
+      "block_id": "page-0145-block-0003",
+      "order": 3,
+      "text": "Synthèse et métabolisme\nLa choline est le précurseur de l’ACh. L’interaction de l’acétyl-\ncoenzyme A avec la choline sous l’action de l’enzyme choline acétyl-\ntransférase (ChAT) produit l’ACh. La réaction est bidirectionnelle\n(réversible), mais à l’équilibre, elle tend vers la production d’ACh. La\ndisponibilité de la choline limite cette synthèse (voir la gure 6.12).\nEn présence de choline, l’activité de la ChAT augmente, alors qu’elle\n",
+      "text_sha256": "90d4199116d03892a2fd4149d2dcacc123a0376af2db55b784646da01221911c"
+    },
+    {
+      "bbox": [
+        48.0,
+        39.63300704956055,
+        291.2790832519531,
+        283.7585144042969
+      ],
+      "block_id": "page-0145-block-0004",
+      "order": 4,
+      "text": "Acétylcholine\nL’acétylcholine (ACh) a d’abord été identiée comme neuro-\ntransmetteur au niveau de la jonction neuromusculaire et du\nsystème nerveux autonome. Ce n’est que plusieurs années plus\ntard, au début des années 1960, que la mise au point de nouvelles\ntechniques a permis de conrmer son rôle dans le SNC. L’ACh\nintervient dans la cognition, le cycle du sommeil paradoxal\n(sommeil REM), la motricité, la motivation et les émotions. La\ndégénérescence des neurones cholinergiques du prosencéphale\nventral (noyau basal de Meynert) est associée à la démence de\ntype Alzheimer, celle des interneurones cholinergiques du stria-\ntum aux mouvements choréiques, comme ceux que l’on observe\ndans la chorée de Huntington. L’activité électrique des neurones\ncholinergiques du striatum est inhibée par la DA, qui se lie au\nrécepteur DA2. Les médicaments antipsychotiques, qui sont de\npuissants antagonistes DA2 (halopéridol), désinhibent les neu-\nrones cholinergiques et produisent des eets parkinsoniens. Pour\natténuer ces eets indésirables, on utilise des agents anticholiner-\ngiques, tels que la benztropine (CogentinMD) et la procyclidine\n(KémadrinMD), qui réduisent l’activité de l’ACh générée par les\ninterneurones cholinergiques localisés dans le striatum.\n",
+      "text_sha256": "c918e3b5de1f138df40d3b48b800269c41b4bb1ff9c14d69320da7ea20558f2a"
+    },
+    {
+      "bbox": [
+        48.0,
+        288.6523132324219,
+        291.2225341796875,
+        346.7585144042969
+      ],
+      "block_id": "page-0145-block-0005",
+      "order": 5,
+      "text": "Topochimie\nLes regroupements de neurones cholinergiques sont numé-\nrotés Ch1 à Ch6. Les groupes Ch1 à Ch4 sont localisés dans\nle prosencéphale dont le noyau basal de Meynert et la subs-\ntance innominée (Ch4). Ces noyaux donnent naissance à une\n",
+      "text_sha256": "cf1390785ce46063f9ddd2868ddfb20df465c16e4cf68dc328b49a4c6c9b4ef6"
+    },
+    {
+      "bbox": [
+        50.25,
+        367.352294921875,
+        228.00074768066406,
+        379.6700744628906
+      ],
+      "block_id": "page-0145-block-0006",
+      "order": 6,
+      "text": "FIGURE 6.12 Métabolisme de l’acétylcholine\n",
+      "text_sha256": "eac3b34d5becc7511dcc7237113486244a16d4f745f65bad372473f63d3173bf"
+    }
+  ],
+  "coordinates_sha256": "f69394194b7b4cfc2d39ffdbb3e7193d9ee8aa119a69e4a136a73fd4e4bdf540",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0145",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "128\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2 Déterminants bio-psycho-sociaux\nimportante innervation cholinergique corticale. Le groupe Ch1,\nlocalisé dans le septum, est la source majeure de l’innervation\ncholinergique vers l’hippocampe. Ces voies nerveuses jouent\nun rôle dans la mémoire et l’apprentissage. Les groupes Ch5 et\nCh6 sont localisés dans le tronc cérébral au niveau de la jonction\nmésencéphalo- protubérancielle ; ce sont les noyaux du tegmentum\npédonculopontin (partie ventrolatérale du pont) et dorsolatéraux.\nCes neurones envoient des eérences au raphé dorsal, au locus\ncœruleus, au mésencéphale ventral (substance noire et aire teg-\nmentale ventrale), au thalamus et au cortex préfrontal. Ils jouent\nun rôle important dans la genèse du sommeil paradoxal (le stade\nde sommeil REM caractérisé par des mouvements rapides des yeux\net une atonie musculaire). Ces neurones cholinergiques régulent\naussi les fonctions limbiques. Ils reçoivent des aérences du\ncortex préfrontal et envoient des eérences vers l’aire tegmentale\nventrale et la substance noire. Ces structures du mésencéphale\nse projettent vers le cortex préfrontal, le striatum, l’amygdale et\nle septum. Par ce circuit, l’ACh joue un rôle important dans la\nrégulation de la motivation et des émotions.\nSynthèse et métabolisme\nLa choline est le précurseur de l’ACh. L’interaction de l’acétyl-\ncoenzyme A avec la choline sous l’action de l’enzyme choline acétyl-\ntransférase (ChAT) produit l’ACh. La réaction est bidirectionnelle\n(réversible), mais à l’équilibre, elle tend vers la production d’ACh. La\ndisponibilité de la choline limite cette synthèse (voir la gure 6.12).\nEn présence de choline, l’activité de la ChAT augmente, alors qu’elle\nAcétylcholine\nL’acétylcholine (ACh) a d’abord été identiée comme neuro-\ntransmetteur au niveau de la jonction neuromusculaire et du\nsystème nerveux autonome. Ce n’est que plusieurs années plus\ntard, au début des années 1960, que la mise au point de nouvelles\ntechniques a permis de conrmer son rôle dans le SNC. L’ACh\nintervient dans la cognition, le cycle du sommeil paradoxal\n(sommeil REM), la motricité, la motivation et les émotions. La\ndégénérescence des neurones cholinergiques du prosencéphale\nventral (noyau basal de Meynert) est associée à la démence de\ntype Alzheimer, celle des interneurones cholinergiques du stria-\ntum aux mouvements choréiques, comme ceux que l’on observe\ndans la chorée de Huntington. L’activité électrique des neurones\ncholinergiques du striatum est inhibée par la DA, qui se lie au\nrécepteur DA2. Les médicaments antipsychotiques, qui sont de\npuissants antagonistes DA2 (halopéridol), désinhibent les neu-\nrones cholinergiques et produisent des eets parkinsoniens. Pour\natténuer ces eets indésirables, on utilise des agents anticholiner-\ngiques, tels que la benztropine (CogentinMD) et la procyclidine\n(KémadrinMD), qui réduisent l’activité de l’ACh générée par les\ninterneurones cholinergiques localisés dans le striatum.\nTopochimie\nLes regroupements de neurones cholinergiques sont numé-\nrotés Ch1 à Ch6. Les groupes Ch1 à Ch4 sont localisés dans\nle prosencéphale dont le noyau basal de Meynert et la subs-\ntance innominée (Ch4). Ces noyaux donnent naissance à une\nFIGURE 6.12 Métabolisme de l’acétylcholine\n",
+  "raw_text_sha256": "d4e640a39e5f3eb2714a8e8f789b30f6a4e0aad8e93c08795f3120e33182ac1b",
+  "source_page_display": 146,
+  "source_page_index": 145
+}

@@ -1,0 +1,76 @@
+{
+  "block_sequence_sha256": "ea8515fb7fc166ef79ba8a8c83e6e34216cc8437f15ce6b722e85bd3514e5d67",
+  "blocks": [
+    {
+      "bbox": [
+        405.1000061035156,
+        747.3754272460938,
+        555.0,
+        758.6693725585938
+      ],
+      "block_id": "page-0136-block-0001",
+      "order": 1,
+      "text": "Chapitre 6\nNeurobiologie\n119\n",
+      "text_sha256": "ff3db2a4e7416536f7a817a2a3de3c560845b6c620ed66dcf8a35a4b971bd019"
+    },
+    {
+      "bbox": [
+        56.25,
+        41.002296447753906,
+        252.74575805664062,
+        53.320068359375
+      ],
+      "block_id": "page-0136-block-0002",
+      "order": 2,
+      "text": "FIGURE 6.6 Classes et sous-types de récepteurs\n",
+      "text_sha256": "0acd3e6301694215e39b7ef65ccec484e70493ed89913caab5a945024b03f76a"
+    },
+    {
+      "bbox": [
+        56.25,
+        496.9523010253906,
+        195.25201416015625,
+        509.27008056640625
+      ],
+      "block_id": "page-0136-block-0003",
+      "order": 3,
+      "text": "FIGURE 6.7 Récepteurs ionotropes\n",
+      "text_sha256": "33442d47c91f952abdd44a7503c7449d886b0d8b6dbc8b674f748c376aa718d5"
+    },
+    {
+      "bbox": [
+        66.0,
+        315.66583251953125,
+        297.68426513671875,
+        466.15850830078125
+      ],
+      "block_id": "page-0136-block-0004",
+      "order": 4,
+      "text": "de « seconds messagers ») qui constituent la transduction du\nsignal. Tous les récepteurs de l’histamine, des endocannabi-\nnoïdes, des neuropeptides et des monoamines (à l’exception\ndu récepteur 5-HT3) sont des récepteurs couplés aux pro-\ntéines G. Des récepteurs métabotropes sont aussi associés à la\nneurotransmission GABAergique et glutamatergique. Chaque\ntype de récepteur interagit avec certains types de protéines G,\nce qui diversie les mécanismes de transduction du signal et\nles eets sur le neurone. La latence de la réponse neuronale\ndéclenchée par l’activation des récepteurs métabotropes est plus\nlongue (quelques centaines de millisecondes) et perdure plus\nlongtemps (quelques secondes, voire quelques minutes après\nl’activation du récepteur) à cause ; 1) des réactions enzymatiques\n",
+      "text_sha256": "ad05a626cf39b66a8eb7111ce5378d936883697161fd67c92ef7ca249ab2baeb"
+    },
+    {
+      "bbox": [
+        312.0,
+        315.66583251953125,
+        555.4297485351562,
+        466.15850830078125
+      ],
+      "block_id": "page-0136-block-0005",
+      "order": 5,
+      "text": "en cascade nécessaires à la genèse des seconds messagers ;\n2) de l’action des seconds messagers sur les protéines présentes\ndans la cellule pour induire nalement la réponse physiologique.\nCes récepteurs servent donc à la transmission des signaux lents\net soutenus comme des changements d’activité des protéines\npour favoriser la multiplication ou la migration cellulaire.\n• Un autre type de récepteur métabotrope fait appel à des\nrécepteurs qui ont une activité tyrosine kinase intrinsèque,\nc’est-à-dire que ces récepteurs sont capables de phosphoryler\ncertains résidus tyrosine de substrats protéiques spéciques.\nCes récepteurs ne participent pas à la neurotransmission,\nmais ils jouent un rôle important dans l’activité des facteurs\nde croissance neuronale et des neurotrophines nécessaires au\n",
+      "text_sha256": "9e74468265c6ffb00d8d92c95bb0c5c8595dc1e58f538497c76f101d45910cc0"
+    }
+  ],
+  "coordinates_sha256": "1b017afadd8bf1074f6e330283a47bbf13fec249a89bc6979a7d9b8bdb2d98e0",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0136",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 6\nNeurobiologie\n119\nFIGURE 6.6 Classes et sous-types de récepteurs\nFIGURE 6.7 Récepteurs ionotropes\nde « seconds messagers ») qui constituent la transduction du\nsignal. Tous les récepteurs de l’histamine, des endocannabi-\nnoïdes, des neuropeptides et des monoamines (à l’exception\ndu récepteur 5-HT3) sont des récepteurs couplés aux pro-\ntéines G. Des récepteurs métabotropes sont aussi associés à la\nneurotransmission GABAergique et glutamatergique. Chaque\ntype de récepteur interagit avec certains types de protéines G,\nce qui diversie les mécanismes de transduction du signal et\nles eets sur le neurone. La latence de la réponse neuronale\ndéclenchée par l’activation des récepteurs métabotropes est plus\nlongue (quelques centaines de millisecondes) et perdure plus\nlongtemps (quelques secondes, voire quelques minutes après\nl’activation du récepteur) à cause ; 1) des réactions enzymatiques\nen cascade nécessaires à la genèse des seconds messagers ;\n2) de l’action des seconds messagers sur les protéines présentes\ndans la cellule pour induire nalement la réponse physiologique.\nCes récepteurs servent donc à la transmission des signaux lents\net soutenus comme des changements d’activité des protéines\npour favoriser la multiplication ou la migration cellulaire.\n• Un autre type de récepteur métabotrope fait appel à des\nrécepteurs qui ont une activité tyrosine kinase intrinsèque,\nc’est-à-dire que ces récepteurs sont capables de phosphoryler\ncertains résidus tyrosine de substrats protéiques spéciques.\nCes récepteurs ne participent pas à la neurotransmission,\nmais ils jouent un rôle important dans l’activité des facteurs\nde croissance neuronale et des neurotrophines nécessaires au\n",
+  "raw_text_sha256": "fcd3caccc54ec1e46df6f6607d5a7047b87958eb8c589d504b71999435e1c175",
+  "source_page_display": 137,
+  "source_page_index": 136
+}

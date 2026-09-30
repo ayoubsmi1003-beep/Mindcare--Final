@@ -1,0 +1,124 @@
+{
+  "block_sequence_sha256": "3034893dd3b79a6e5e7695e15b367602e7e6d19d2bcf79a9a83cc1408589e818",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        470.3879699707031,
+        758.8693237304688
+      ],
+      "block_id": "page-0159-block-0001",
+      "order": 1,
+      "text": "142\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2\nDéterminants bio-psycho-sociaux\n",
+      "text_sha256": "0d3bcb1628d4dd4c89e6f8ca1428e30ddaf69bda84e62108ca8ba9f3ce0f4e23"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.0009765625,
+        63.20849609375
+      ],
+      "block_id": "page-0159-block-0002",
+      "order": 2,
+      "text": "exactitude susante pour en tirer des conclusions applicables\ncliniquement et en recherche.\n",
+      "text_sha256": "063bb9891d0c90fd65d8c12eccf8a0bb9f5d7645acff71ce571e542a1d8f7fbb"
+    },
+    {
+      "bbox": [
+        306.0,
+        64.51582336425781,
+        549.341064453125,
+        122.1084976196289
+      ],
+      "block_id": "page-0159-block-0003",
+      "order": 3,
+      "text": "Mentionnons qu’il est aussi possible de mesurer le débit san-\nguin cérébral par TEP avec diérents radiopharmaceutiques qui\ntraversent la barrière hématoencéphalique, mais que ces études\nsont d’application très limitée en raison de la piètre disponibilité\ndes radiotraceurs.\n",
+      "text_sha256": "a7a4c6306de5c94e3d702e5a11571671353bfd4047dcd9defb0e3bfcd87256bf"
+    },
+    {
+      "bbox": [
+        306.0,
+        134.23301696777344,
+        549.466796875,
+        572.3585205078125
+      ],
+      "block_id": "page-0159-block-0004",
+      "order": 4,
+      "text": "Études du métabolisme énergétique\nLe cerveau génère de l’énergie presque uniquement par oxydation\nde glucose et ne dispose à peu près pas de réserves signicatives\nd’ATP. Ses consommations d’O2 et de glucose sont directement\nliées à son activité synaptique du moment. En fait, les neurones\npeuvent aussi consommer du lactate, fourni par les astrocytes\nplacés au voisinage des synapses à glutamate (Jolivet & al., 2009 ;\nMangia & al., 2009), mais celui-ci provient de la glycolyse dans\nles astrocytes (ou, en conditions anormales, de la périphérie,\np. ex., lors d’une acidose lactique). Il est possible de mesurer\nl’utilisation de l’O2 par le cerveau au moyen de la TEP en admi-\nnistrant de l’oxygène moléculaire (O2) marqué avec de l’15O, mais\npeu de centres réalisent de telles études en raison des dicultés\ntechniques que pose l’utilisation de cet atome radioactif. Dans\nla suite de ce chapitre, il s’agira systématiquement d’études de\nconsommation de glucose quand il sera question des études du\nmétabolisme énergétique cérébral. Le plus souvent, ces études\nfont appel à l’utilisation au uorodéoxyglucose marqué au uor 18\n18FDG, ou alors à d’autres agents tels que le déoxyglucose marqué\nau 11C. Ces analogues du glucose se comportent de façon similaire\nà ce dernier à bien des égards (transport cérébral et à travers\nles membranes cellulaires). Le déoxyglucose qui pénètre dans\nles cellules peut être phosphorylé, comme l’est normalement\nle glucose, mais comme il n’est pas catabolisé par les cellules\nnerveuses, il s’y accumule progressivement en proportion de\nleur consommation de glucose, l’accumulation se complétant\nsur une période d’une quarantaine de minutes après l’injection.\nLes modèles mathématiques permettant de mesurer la consom-\nmation d’énergie par le cerveau à partir de telles études ont été\nrelativement bien validés pour des conditions normales (bien\nque des variations importantes puissent exister entre les centres\nréalisant les mesures), mais lors de leur utilisation dans des états\npathologiques, l’exactitude des résultats reste souvent à conr-\nmer. Aussi, la plupart des études utilisant du 18FDG sont-elles\nfaites sans mesurer la consommation absolue du glucose, et l’on\nse contente de décrire la distribution régionale du radiotraceur\nune fois son accumulation terminée.\n",
+      "text_sha256": "fa9f3045f75bad19b1f3f35b38964dc73e79d09b6b2860923788f41165557b26"
+    },
+    {
+      "bbox": [
+        306.0,
+        573.6158447265625,
+        549.3993530273438,
+        725.45849609375
+      ],
+      "block_id": "page-0159-block-0005",
+      "order": 5,
+      "text": "Ces études bénécient des qualités de la TEP : la concentration\nde radioactivité dans les tissus est mesurée plus précisément\net plus ecacement que par la TEMP. Cependant, la cinétique\nd’accumulation tissulaire des radiopharmaceutiques utilisés dans\nla TEP pour mesurer la consommation de glucose par le cerveau\nest relativement lente et les résultats des études sont le reet de\nla consommation moyenne de glucose par le cerveau durant\ncette période. La mesure de la distribution de la consommation\nd’énergie est donc surtout adaptée à l’étude de conditions aec-\ntant celle-ci sur une période relativement longue, plus qu’à celles\nmodiant transitoirement seulement les échanges synaptiques,\nqu’il est préférable d’évaluer par des méthodes de mesure du\ndébit sanguin régional.\n",
+      "text_sha256": "93528d57621999a0a58542e92e8644da5778859e3e46305b4092a3e99c842fc3"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.9658203125,
+        291.3587951660156,
+        269.95849609375
+      ],
+      "block_id": "page-0159-block-0006",
+      "order": 6,
+      "text": "fort diérents de ceux qui lient la neurotransmission et la\nconsommation d’énergie). Il en résulte que la consommation\nlocale d’énergie et le ot sanguin cérébral régional varient\naussi de façon concomitante. Bien qu’il existe des exceptions à\ncette règle de couplage (p. ex., la perfusion de luxe1 à la suite\nde diverses lésions cérébrales ou un phénomène de réduction\nprolongée du ot sanguin cortical [spreading depression]), elles\nsont généralement transitoires et se produisent dans des condi-\ntions facilement identiables (accidents vasculaires cérébraux,\nmigraines). Il peut aussi y avoir des variations du couplage selon\nles conditions physiologiques qui prévalent dans le tissu cérébral\n(Sirotin & Das, 2009), mais dans la plupart des cas, il est justié\nde dire que la mesure du ot sanguin cérébral donne une carte\nde distribution relative de ce paramètre que l’on peut superpo-\nser à celle d’une mesure de la distribution de la consommation\nd’énergie par le cerveau, les deux indiquant la répartition de\nl’intensité des échanges synaptiques glutamatergiques. D’excel-\nlentes revues des mécanismes en cause, allant bien au-delà des\nobjectifs du présent chapitre, sont fournies par Attwell et ses\ncollaborateurs (2010) et Mangia et ses collaborateurs (2009).\n",
+      "text_sha256": "e9b5a59b058c69ceb40b84de18c840ab726ed737ebcdc2d44dae5d0527749a0c"
+    },
+    {
+      "bbox": [
+        48.0,
+        278.8330078125,
+        291.4454040527344,
+        502.45849609375
+      ],
+      "block_id": "page-0159-block-0007",
+      "order": 7,
+      "text": "Cartographie de la distribution relative\ndu ot sanguin cérébral par TEMP\nPlusieurs radiotraceurs ont été utilisés dans ce type d’étude en\nrecherche, mais peu ont été retenus pour une utilisation clinique.\nD’une façon générale, il s’agit d’agents lipophiles qui traversent\nfacilement la barrière hématoencéphalique. Comme ils sont\nadministrés par voie intraveineuse périphérique, ils se mélangent\nuniformément au sang avant d’arriver dans les régions cérébrales.\nCes régions recevant le plus grand débit sanguin, elles recueillent\nla plus grande quantité du radiopharmaceutique. Celui-ci diuse\ndes vaisseaux vers le parenchyme cérébral, essentiellement à cause\ndes écarts de concentration (après une injection en bolus) et de\nla lipophilie (le sang étant moins lipophile que le tissu nerveux)\nentre les deux milieux. Par la suite, ces radiotraceurs subissent des\nmodications chimiques diverses (réduction, désestérication)\nconduisant à la formation de produits polaires (électriquement\nchargés, faiblement lipophiles) incapables de rétrodiuser du\nparenchyme cérébral vers le compartiment vasculaire, et qui\nrestent ainsi captifs dans ce tissu au site où ils y sont entrés.\n",
+      "text_sha256": "7b4b7cda70b98b1fcf83fb55aae507881f97935a5ce2e52fd598832fcd2e4f94"
+    },
+    {
+      "bbox": [
+        48.0,
+        503.4658203125,
+        291.4424133300781,
+        651.95849609375
+      ],
+      "block_id": "page-0159-block-0008",
+      "order": 8,
+      "text": "Présentement, l’HMPAO (hexaméthyl propylèneamine oxime ;\nCeretecMD) et l’ECD (éthylène cystéinate dimer ; NeuroliteMD)\nmarqués au technétium 99m (99mTc) sont les deux agents les plus\nemployés. Une fois ces produits xés dans les tissus cérébraux,\nleur distribution reste pratiquement inchangée durant plusieurs\nheures, ce qui permet d’eectuer une acquisition de type TEMP.\nLes résultats obtenus montrent alors la répartition du ot sanguin\ncérébral au moment de l’injection du radiopharmaceutique. Les\ndeux agents ont des comportements similaires et donnent des\nrésultats comparables. La cartographie de la distribution du ot\nsanguin cérébral réalisée avec ces molécules est une façon simple,\nsans danger et peu coûteuse d’évaluer ce paramètre, et donc de\ndéterminer indirectement l’activité synaptique cérébrale, avec une\n",
+      "text_sha256": "ddd7c5cf676ca5000761b7742a1bd59539fca81cd127a48853ccd66577f049a6"
+    },
+    {
+      "bbox": [
+        48.0,
+        675.388671875,
+        282.2098083496094,
+        725.3291015625
+      ],
+      "block_id": "page-0159-block-0009",
+      "order": 9,
+      "text": "1. Développement d’une néovascularisation dépourvue des\nmécanismes normaux de régulation du ot sanguin présents\nau niveau des vaisseaux cérébraux normaux et entraînant\nune élévation du débit sanguin dans la zone adjacente à\nune lésion cérébrale.\n",
+      "text_sha256": "06dd3fcdb00c0266670aa5c85d506f7344ee57ce94359a67644e8be2b5e230c5"
+    }
+  ],
+  "coordinates_sha256": "bffb54b168b345d3ab9cadc8ad6fa583656fe71db7e8e30a1486b6b06721490d",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0159",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "142\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2\nDéterminants bio-psycho-sociaux\nexactitude susante pour en tirer des conclusions applicables\ncliniquement et en recherche.\nMentionnons qu’il est aussi possible de mesurer le débit san-\nguin cérébral par TEP avec diérents radiopharmaceutiques qui\ntraversent la barrière hématoencéphalique, mais que ces études\nsont d’application très limitée en raison de la piètre disponibilité\ndes radiotraceurs.\nÉtudes du métabolisme énergétique\nLe cerveau génère de l’énergie presque uniquement par oxydation\nde glucose et ne dispose à peu près pas de réserves signicatives\nd’ATP. Ses consommations d’O2 et de glucose sont directement\nliées à son activité synaptique du moment. En fait, les neurones\npeuvent aussi consommer du lactate, fourni par les astrocytes\nplacés au voisinage des synapses à glutamate (Jolivet & al., 2009 ;\nMangia & al., 2009), mais celui-ci provient de la glycolyse dans\nles astrocytes (ou, en conditions anormales, de la périphérie,\np. ex., lors d’une acidose lactique). Il est possible de mesurer\nl’utilisation de l’O2 par le cerveau au moyen de la TEP en admi-\nnistrant de l’oxygène moléculaire (O2) marqué avec de l’15O, mais\npeu de centres réalisent de telles études en raison des dicultés\ntechniques que pose l’utilisation de cet atome radioactif. Dans\nla suite de ce chapitre, il s’agira systématiquement d’études de\nconsommation de glucose quand il sera question des études du\nmétabolisme énergétique cérébral. Le plus souvent, ces études\nfont appel à l’utilisation au uorodéoxyglucose marqué au uor 18\n18FDG, ou alors à d’autres agents tels que le déoxyglucose marqué\nau 11C. Ces analogues du glucose se comportent de façon similaire\nà ce dernier à bien des égards (transport cérébral et à travers\nles membranes cellulaires). Le déoxyglucose qui pénètre dans\nles cellules peut être phosphorylé, comme l’est normalement\nle glucose, mais comme il n’est pas catabolisé par les cellules\nnerveuses, il s’y accumule progressivement en proportion de\nleur consommation de glucose, l’accumulation se complétant\nsur une période d’une quarantaine de minutes après l’injection.\nLes modèles mathématiques permettant de mesurer la consom-\nmation d’énergie par le cerveau à partir de telles études ont été\nrelativement bien validés pour des conditions normales (bien\nque des variations importantes puissent exister entre les centres\nréalisant les mesures), mais lors de leur utilisation dans des états\npathologiques, l’exactitude des résultats reste souvent à conr-\nmer. Aussi, la plupart des études utilisant du 18FDG sont-elles\nfaites sans mesurer la consommation absolue du glucose, et l’on\nse contente de décrire la distribution régionale du radiotraceur\nune fois son accumulation terminée.\nCes études bénécient des qualités de la TEP : la concentration\nde radioactivité dans les tissus est mesurée plus précisément\net plus ecacement que par la TEMP. Cependant, la cinétique\nd’accumulation tissulaire des radiopharmaceutiques utilisés dans\nla TEP pour mesurer la consommation de glucose par le cerveau\nest relativement lente et les résultats des études sont le reet de\nla consommation moyenne de glucose par le cerveau durant\ncette période. La mesure de la distribution de la consommation\nd’énergie est donc surtout adaptée à l’étude de conditions aec-\ntant celle-ci sur une période relativement longue, plus qu’à celles\nmodiant transitoirement seulement les échanges synaptiques,\nqu’il est préférable d’évaluer par des méthodes de mesure du\ndébit sanguin régional.\nfort diérents de ceux qui lient la neurotransmission et la\nconsommation d’énergie). Il en résulte que la consommation\nlocale d’énergie et le ot sanguin cérébral régional varient\naussi de façon concomitante. Bien qu’il existe des exceptions à\ncette règle de couplage (p. ex., la perfusion de luxe1 à la suite\nde diverses lésions cérébrales ou un phénomène de réduction\nprolongée du ot sanguin cortical [spreading depression]), elles\nsont généralement transitoires et se produisent dans des condi-\ntions facilement identiables (accidents vasculaires cérébraux,\nmigraines). Il peut aussi y avoir des variations du couplage selon\nles conditions physiologiques qui prévalent dans le tissu cérébral\n(Sirotin & Das, 2009), mais dans la plupart des cas, il est justié\nde dire que la mesure du ot sanguin cérébral donne une carte\nde distribution relative de ce paramètre que l’on peut superpo-\nser à celle d’une mesure de la distribution de la consommation\nd’énergie par le cerveau, les deux indiquant la répartition de\nl’intensité des échanges synaptiques glutamatergiques. D’excel-\nlentes revues des mécanismes en cause, allant bien au-delà des\nobjectifs du présent chapitre, sont fournies par Attwell et ses\ncollaborateurs (2010) et Mangia et ses collaborateurs (2009).\nCartographie de la distribution relative\ndu ot sanguin cérébral par TEMP\nPlusieurs radiotraceurs ont été utilisés dans ce type d’étude en\nrecherche, mais peu ont été retenus pour une utilisation clinique.\nD’une façon générale, il s’agit d’agents lipophiles qui traversent\nfacilement la barrière hématoencéphalique. Comme ils sont\nadministrés par voie intraveineuse périphérique, ils se mélangent\nuniformément au sang avant d’arriver dans les régions cérébrales.\nCes régions recevant le plus grand débit sanguin, elles recueillent\nla plus grande quantité du radiopharmaceutique. Celui-ci diuse\ndes vaisseaux vers le parenchyme cérébral, essentiellement à cause\ndes écarts de concentration (après une injection en bolus) et de\nla lipophilie (le sang étant moins lipophile que le tissu nerveux)\nentre les deux milieux. Par la suite, ces radiotraceurs subissent des\nmodications chimiques diverses (réduction, désestérication)\nconduisant à la formation de produits polaires (électriquement\nchargés, faiblement lipophiles) incapables de rétrodiuser du\nparenchyme cérébral vers le compartiment vasculaire, et qui\nrestent ainsi captifs dans ce tissu au site où ils y sont entrés.\nPrésentement, l’HMPAO (hexaméthyl propylèneamine oxime ;\nCeretecMD) et l’ECD (éthylène cystéinate dimer ; NeuroliteMD)\nmarqués au technétium 99m (99mTc) sont les deux agents les plus\nemployés. Une fois ces produits xés dans les tissus cérébraux,\nleur distribution reste pratiquement inchangée durant plusieurs\nheures, ce qui permet d’eectuer une acquisition de type TEMP.\nLes résultats obtenus montrent alors la répartition du ot sanguin\ncérébral au moment de l’injection du radiopharmaceutique. Les\ndeux agents ont des comportements similaires et donnent des\nrésultats comparables. La cartographie de la distribution du ot\nsanguin cérébral réalisée avec ces molécules est une façon simple,\nsans danger et peu coûteuse d’évaluer ce paramètre, et donc de\ndéterminer indirectement l’activité synaptique cérébrale, avec une\n1. Développement d’une néovascularisation dépourvue des\nmécanismes normaux de régulation du ot sanguin présents\nau niveau des vaisseaux cérébraux normaux et entraînant\nune élévation du débit sanguin dans la zone adjacente à\nune lésion cérébrale.\n",
+  "raw_text_sha256": "73aec708c82161b3acd3c7b4fff32100aef36f8be53ec24b7092a121255f129d",
+  "source_page_display": 160,
+  "source_page_index": 159
+}

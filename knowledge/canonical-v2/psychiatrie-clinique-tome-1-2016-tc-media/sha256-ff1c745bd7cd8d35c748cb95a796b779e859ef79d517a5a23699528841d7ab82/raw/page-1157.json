@@ -1,0 +1,196 @@
+{
+  "block_sequence_sha256": "74adc81a9560540f6d3706d93237cb74676a249baa1595efee9c7dfe77d3dd93",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        180.42501831054688,
+        758.8693237304688
+      ],
+      "block_id": "page-1157-block-0001",
+      "order": 1,
+      "text": "F20\nFigures supplémentaires\n",
+      "text_sha256": "e5157bf14d0181acd592a54776b30626746c8c7eeb5cbf70031da174311b46c5"
+    },
+    {
+      "bbox": [
+        50.400001525878906,
+        41.002296447753906,
+        279.2886657714844,
+        53.320068359375
+      ],
+      "block_id": "page-1157-block-0002",
+      "order": 2,
+      "text": "FIGURE 36 PiB-scan et IRM : individu normal versus DTA\n",
+      "text_sha256": "3f7d38da1529e62f9a8dc42fc275f3836901b728a2ea9a8efa4fbcbbbaa2ffe8"
+    },
+    {
+      "bbox": [
+        48.25,
+        229.29063415527344,
+        226.7104034423828,
+        238.02500915527344
+      ],
+      "block_id": "page-1157-block-0003",
+      "order": 3,
+      "text": "A. Individu cognitivement intact avec PiB-scan et IRM normaux.\n",
+      "text_sha256": "3c20ec8debe3700e6cd27da19b2dd4d2d71c314f2cb5d43ffc41f02bd84cce9f"
+    },
+    {
+      "bbox": [
+        48.25,
+        242.29063415527344,
+        253.44290161132812,
+        251.02500915527344
+      ],
+      "block_id": "page-1157-block-0004",
+      "order": 4,
+      "text": "B. Individu cognitivement intact avec PiB-scan positif, mais IRM normale.\n",
+      "text_sha256": "735269e04f5429dc8a29119963e530ca8760f3ea7bf7ed6549523689981fe2a3"
+    },
+    {
+      "bbox": [
+        48.25,
+        255.29061889648438,
+        288.5868225097656,
+        264.0249938964844
+      ],
+      "block_id": "page-1157-block-0005",
+      "order": 5,
+      "text": "C. Individu atteint de la DTA avec PiB-scan positif et IRM positive (atrophie cérébrale).\n",
+      "text_sha256": "2230367e97e4795b68d93407f56969fe3c85c7a884998998cba39edc7ba50b00"
+    },
+    {
+      "bbox": [
+        48.25,
+        268.2906188964844,
+        503.2681579589844,
+        286.0249938964844
+      ],
+      "block_id": "page-1157-block-0006",
+      "order": 6,
+      "text": "Source : Jack, C. R. & al. (2010). « Hypothetical model of dynamic biomarkers of the Alzheimer’s pathological cascade », The Lancet Neurology, 9(1), p. 119-128,\navec la permission de Elsevier.\n",
+      "text_sha256": "d8cd1fb983fe0a519b2803821ba7b1c686cf134d16816b44a0eb4b0c3474c45c"
+    },
+    {
+      "bbox": [
+        50.25,
+        338.9023132324219,
+        250.04275512695312,
+        351.2200622558594
+      ],
+      "block_id": "page-1157-block-0007",
+      "order": 7,
+      "text": "FIGURE 37 Comparaison de la résolution spatiale\n",
+      "text_sha256": "ff3d02e9966aa90ff583e1a94e6f2888847aa27a5e8e08bbdcc9cff23abc3db8"
+    },
+    {
+      "bbox": [
+        94.20000457763672,
+        350.7522888183594,
+        191.28802490234375,
+        362.7200622558594
+      ],
+      "block_id": "page-1157-block-0008",
+      "order": 8,
+      "text": "de la TEMP et de la TEP\n",
+      "text_sha256": "87f5d04bffa6a4dbd58bce598a46ac01bec862f32b8b1c6134cccb4096a75dd1"
+    },
+    {
+      "bbox": [
+        48.25,
+        467.640625,
+        283.9886779785156,
+        476.375
+      ],
+      "block_id": "page-1157-block-0009",
+      "order": 9,
+      "text": "A. Tomographie par émission monophotonique (TEMP) de ot sanguin cérébral avec\n",
+      "text_sha256": "692065ccd6dae56db58328bcdb666119f6c62cc69d244f329a893cc629639ec4"
+    },
+    {
+      "bbox": [
+        48.25,
+        476.6234436035156,
+        265.1118469238281,
+        495.375
+      ],
+      "block_id": "page-1157-block-0010",
+      "order": 10,
+      "text": "le radiotraceur 99mTc-ECD.\nB. Tomographie par émission de positrons (TEP) du métabolisme énergétique\n",
+      "text_sha256": "426a655e4e5ad1525446b3176ba65e9c42fd4867b0ffc4156d6c0394dc8c4cf3"
+    },
+    {
+      "bbox": [
+        55.5,
+        495.6234436035156,
+        255.6483917236328,
+        523.875
+      ],
+      "block_id": "page-1157-block-0011",
+      "order": 11,
+      "text": "cérébral avec le radiotraceur 18FDG.\nLa TEP offre une dénition anatomique (et par conséquent quantitative)\nsupérieure à celle obtenue en TEMP.\n",
+      "text_sha256": "d3b3ebe6ca50a9a8b3490a672a9e294d8439c9d057cb4143a396dee39bbcbcc1"
+    },
+    {
+      "bbox": [
+        308.25,
+        338.5243225097656,
+        470.19549560546875,
+        351.2200622558594
+      ],
+      "block_id": "page-1157-block-0012",
+      "order": 12,
+      "text": "FIGURE 38 Imagerie TEP avec le 11C-Pib\n",
+      "text_sha256": "aa53c8639b03b77cd517d911c529a1226ba1ece110622e6b3c832775a02599fe"
+    },
+    {
+      "bbox": [
+        306.25,
+        515.5906372070312,
+        537.47509765625,
+        562.3250122070312
+      ],
+      "block_id": "page-1157-block-0013",
+      "order": 13,
+      "text": "Ces deux coupes transaxiales montrent chez le sujet normal une accumulation de\nl’activité limitée à la substance blanche (principalement due à la lipophilicité du\nradiotraceur), alors que chez le malade avec une maladie d’Alzheimer, le cortex et\nles noyaux gris centraux montrent une accumulation importante liée à la présence\nde plaques d’amyloïde, caractéristiques de la maladie.\n",
+      "text_sha256": "2ebc32b446cee8d240e0f0f5cfa6fa53ecd8c3ea9678bbece654789116f5f7aa"
+    },
+    {
+      "bbox": [
+        306.25,
+        566.5906372070312,
+        523.8026733398438,
+        593.3250122070312
+      ],
+      "block_id": "page-1157-block-0014",
+      "order": 14,
+      "text": "Source : Klunk, W. E. & al. (2007). « Amyloid deposition begins in the striatum\nof Presenilin-1 mutation carriers from two unrelated pedigrees », Journal of\nNeuroscience, 27(23), p. 6174-6184.\n",
+      "text_sha256": "6c098bdab403e7bcc32caffbec3c5c1fd71ad7e1d207187c01f11bc897990b12"
+    },
+    {
+      "bbox": [
+        407.5,
+        63.490623474121094,
+        496.7705993652344,
+        143.72500610351562
+      ],
+      "block_id": "page-1157-block-0015",
+      "order": 15,
+      "text": "Rouge : niveau le plus élevé\nde β-amyloïde\nBleu foncé : absence de\nβ-amyloïde\nAutres couleurs, du rouge vers\nle bleu : niveau intermédiaire de\nβ-amyloïde, progressivement\ndécroissant\n",
+      "text_sha256": "a163d440f74ebe3fc840aaf0409f84ece321592b34f418f5a47893ba5ce21bf7"
+    }
+  ],
+  "coordinates_sha256": "cfcdbe562b1aad39efa57fbe73aa40338bf5875ddd826990073fa62823c4e040",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1157",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "F20\nFigures supplémentaires\nFIGURE 36 PiB-scan et IRM : individu normal versus DTA\nA. Individu cognitivement intact avec PiB-scan et IRM normaux.\nB. Individu cognitivement intact avec PiB-scan positif, mais IRM normale.\nC. Individu atteint de la DTA avec PiB-scan positif et IRM positive (atrophie cérébrale).\nSource : Jack, C. R. & al. (2010). « Hypothetical model of dynamic biomarkers of the Alzheimer’s pathological cascade », The Lancet Neurology, 9(1), p. 119-128,\navec la permission de Elsevier.\nFIGURE 37 Comparaison de la résolution spatiale\nde la TEMP et de la TEP\nA. Tomographie par émission monophotonique (TEMP) de ot sanguin cérébral avec\nle radiotraceur 99mTc-ECD.\nB. Tomographie par émission de positrons (TEP) du métabolisme énergétique\ncérébral avec le radiotraceur 18FDG.\nLa TEP offre une dénition anatomique (et par conséquent quantitative)\nsupérieure à celle obtenue en TEMP.\nFIGURE 38 Imagerie TEP avec le 11C-Pib\nCes deux coupes transaxiales montrent chez le sujet normal une accumulation de\nl’activité limitée à la substance blanche (principalement due à la lipophilicité du\nradiotraceur), alors que chez le malade avec une maladie d’Alzheimer, le cortex et\nles noyaux gris centraux montrent une accumulation importante liée à la présence\nde plaques d’amyloïde, caractéristiques de la maladie.\nSource : Klunk, W. E. & al. (2007). « Amyloid deposition begins in the striatum\nof Presenilin-1 mutation carriers from two unrelated pedigrees », Journal of\nNeuroscience, 27(23), p. 6174-6184.\nRouge : niveau le plus élevé\nde β-amyloïde\nBleu foncé : absence de\nβ-amyloïde\nAutres couleurs, du rouge vers\nle bleu : niveau intermédiaire de\nβ-amyloïde, progressivement\ndécroissant\n",
+  "raw_text_sha256": "82c32b98152ca080bfffd0db96fa09f63b229d860b1788c81f0d5b524e9ac1c2",
+  "source_page_display": 1158,
+  "source_page_index": 1157
+}

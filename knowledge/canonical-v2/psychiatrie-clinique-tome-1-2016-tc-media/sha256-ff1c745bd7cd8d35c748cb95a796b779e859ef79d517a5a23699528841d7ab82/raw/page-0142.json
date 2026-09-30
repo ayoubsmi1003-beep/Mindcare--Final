@@ -1,0 +1,76 @@
+{
+  "block_sequence_sha256": "c2c5519a1bf61061d349fecc2954ca3d0a526e3457d3a6d858105dc3e9644d26",
+  "blocks": [
+    {
+      "bbox": [
+        405.1000061035156,
+        747.3754272460938,
+        555.0,
+        758.6693725585938
+      ],
+      "block_id": "page-0142-block-0001",
+      "order": 1,
+      "text": "Chapitre 6\nNeurobiologie\n125\n",
+      "text_sha256": "4068847a11da2e9d77bc615c0141b5f69917ef5149999fd4032d144f2b1e887d"
+    },
+    {
+      "bbox": [
+        312.0,
+        40.9658203125,
+        555.36474609375,
+        332.95849609375
+      ],
+      "block_id": "page-0142-block-0002",
+      "order": 2,
+      "text": "est récupérée et retournée dans le cytoplasme présynaptique\npar un transporteur membranaire situé sur la face externe de\nla membrane plasmique présynaptique ; elle y est recyclée ou\nmétabolisée. Certains médicaments utilisés pour le traitement\ndu trouble de décit d’attention/hyperactivité (TDA/H) bloquent\naussi le transporteur de la DA ; mais ces médicaments ne sont pas\nsélectifs puisqu’ils agissent aussi sur le transporteur de la NA. La\ncocaïne bloque également le transporteur de la DA, augmentant\nainsi son niveau synaptique, un eet en partie responsable de son\npotentiel d’induire une dépendance. La DA cytoplasmique est\nrecyclée ou métabolisée par la MAO-B et la COMT. Le blocage\nde la synthèse de ces enzymes par des médicaments, la sélégiline\n(DéprénylMD), qui inhibe la MAO, et l’entacapone (ComtanMD),\nqui inhibe l’enzyme catéchol-O-méthyl transférase (COMT),\naident à réduire les troubles moteurs dans la maladie de Parkinson.\nL’action de la dihydroxyphénylacétaldéhyde, qui est transformé\npar la COMT en acide homovanillique (HVA), un métabolite\nprésent dans le liquide céphalorachidien et qui constitue un\nindicateur de l’activité dopaminergique. La COMT métabolise\nla DA en 3-méthoxytryptramine qui est également transformée\nen acide homovanillique par l’action de deux autres enzymes,\ndont la MAO. Une mutation du gène codant pour la COMT\nentraîne une altération de l’activité métabolique de l’enzyme,\nce qui perturbe les fonctions catécholaminergiques. La COMT\nest une protéine constituée de 271 acides aminés. Une mutation\n",
+      "text_sha256": "c1fcaa76c4c4854af41a00c007ba632f012720c6221815e2f35b236e485467d3"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.9658203125,
+        297.2680969238281,
+        177.95849609375
+      ],
+      "block_id": "page-0142-block-0003",
+      "order": 3,
+      "text": "l’hypophyse (ou glande pituitaire). Les neurones diencéphaliques\njouent un rôle important dans les fonctions neuroendocriniennes.\nLa DA exerce aussi une action inhibitrice sur la sécrétion de\nprolactine. Certains médicaments antipsychotiques (p. ex., l’ha-\nlopéridol, la rispéridone), ayant une puissante action antagoniste\nsur les récepteurs DA2, favorisent ainsi la sécrétion de prolactine,\nce qui entraîne des eets indésirables tels que de l’aménorrhée et\nde la galactorrhée. Le niveau de prolactine plasmatique constitue\nun indice du degré de blocage des récepteurs DA2. La prolactine\naugmente quand l’antipsychotique bloque les récepteurs DA2\ndans le faisceau tubéro-infundibulaire. (Voir la gure Faisceaux\ndopaminergiques dans les gures supplémentaires.)\n",
+      "text_sha256": "63e2afe2c1988178b2890cfb2c4f282b700d5d4dc6402823196924c0a0ebacfb"
+    },
+    {
+      "bbox": [
+        54.0,
+        182.852294921875,
+        297.623291015625,
+        332.95849609375
+      ],
+      "block_id": "page-0142-block-0004",
+      "order": 4,
+      "text": "Synthèse et métabolisme\nLa voie de synthèse de la DA est la même que celle décrite précé-\ndemment pour la NA à l’exception que les neurones dopaminer-\ngiques ne possèdent pas l’enzyme dopamine β- hydroxylase (voir\nla gure 6.10). Puisque la tyrosine hydroxylase limite l’activité de\nsynthèse et que la L-DOPA est rapidement transformée en DA par\nla DOPA décarboxylase, on utilise la L-DOPA pour augmenter\nles niveaux centraux de DA dans la maladie de Parkinson et non\nla tyrosine. La L-DOPA traverse la barrière hématoencéphalique\net peut donc être prise par la bouche. An d’assurer la trans-\nmission synaptique, la DA est insérée dans les vésicules par le\ntransporteur TMV-2. Lors de l’exocytose résultant de l’action\ndu calcium intracellulaire, la DA se lie à des récepteurs où elle\n",
+      "text_sha256": "3c1c0f0d4d0abfe6eed60f667ca2f09d1c6fc9c59772a9b9f83502234d6441ca"
+    },
+    {
+      "bbox": [
+        56.25,
+        365.7522888183594,
+        225.34701538085938,
+        378.070068359375
+      ],
+      "block_id": "page-0142-block-0005",
+      "order": 5,
+      "text": "FIGURE 6.10 Métabolisme de la dopamine\n",
+      "text_sha256": "f9de9fde1fc17d90c4f585c378c3870457978ec8e10fe30e56244009991abf64"
+    }
+  ],
+  "coordinates_sha256": "f39fc5ed09f7c78eda3abf733f4d8b90ef5a1eb802d80c16bacca87fc9da5a79",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0142",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 6\nNeurobiologie\n125\nest récupérée et retournée dans le cytoplasme présynaptique\npar un transporteur membranaire situé sur la face externe de\nla membrane plasmique présynaptique ; elle y est recyclée ou\nmétabolisée. Certains médicaments utilisés pour le traitement\ndu trouble de décit d’attention/hyperactivité (TDA/H) bloquent\naussi le transporteur de la DA ; mais ces médicaments ne sont pas\nsélectifs puisqu’ils agissent aussi sur le transporteur de la NA. La\ncocaïne bloque également le transporteur de la DA, augmentant\nainsi son niveau synaptique, un eet en partie responsable de son\npotentiel d’induire une dépendance. La DA cytoplasmique est\nrecyclée ou métabolisée par la MAO-B et la COMT. Le blocage\nde la synthèse de ces enzymes par des médicaments, la sélégiline\n(DéprénylMD), qui inhibe la MAO, et l’entacapone (ComtanMD),\nqui inhibe l’enzyme catéchol-O-méthyl transférase (COMT),\naident à réduire les troubles moteurs dans la maladie de Parkinson.\nL’action de la dihydroxyphénylacétaldéhyde, qui est transformé\npar la COMT en acide homovanillique (HVA), un métabolite\nprésent dans le liquide céphalorachidien et qui constitue un\nindicateur de l’activité dopaminergique. La COMT métabolise\nla DA en 3-méthoxytryptramine qui est également transformée\nen acide homovanillique par l’action de deux autres enzymes,\ndont la MAO. Une mutation du gène codant pour la COMT\nentraîne une altération de l’activité métabolique de l’enzyme,\nce qui perturbe les fonctions catécholaminergiques. La COMT\nest une protéine constituée de 271 acides aminés. Une mutation\nl’hypophyse (ou glande pituitaire). Les neurones diencéphaliques\njouent un rôle important dans les fonctions neuroendocriniennes.\nLa DA exerce aussi une action inhibitrice sur la sécrétion de\nprolactine. Certains médicaments antipsychotiques (p. ex., l’ha-\nlopéridol, la rispéridone), ayant une puissante action antagoniste\nsur les récepteurs DA2, favorisent ainsi la sécrétion de prolactine,\nce qui entraîne des eets indésirables tels que de l’aménorrhée et\nde la galactorrhée. Le niveau de prolactine plasmatique constitue\nun indice du degré de blocage des récepteurs DA2. La prolactine\naugmente quand l’antipsychotique bloque les récepteurs DA2\ndans le faisceau tubéro-infundibulaire. (Voir la gure Faisceaux\ndopaminergiques dans les gures supplémentaires.)\nSynthèse et métabolisme\nLa voie de synthèse de la DA est la même que celle décrite précé-\ndemment pour la NA à l’exception que les neurones dopaminer-\ngiques ne possèdent pas l’enzyme dopamine β- hydroxylase (voir\nla gure 6.10). Puisque la tyrosine hydroxylase limite l’activité de\nsynthèse et que la L-DOPA est rapidement transformée en DA par\nla DOPA décarboxylase, on utilise la L-DOPA pour augmenter\nles niveaux centraux de DA dans la maladie de Parkinson et non\nla tyrosine. La L-DOPA traverse la barrière hématoencéphalique\net peut donc être prise par la bouche. An d’assurer la trans-\nmission synaptique, la DA est insérée dans les vésicules par le\ntransporteur TMV-2. Lors de l’exocytose résultant de l’action\ndu calcium intracellulaire, la DA se lie à des récepteurs où elle\nFIGURE 6.10 Métabolisme de la dopamine\n",
+  "raw_text_sha256": "d13b1d69fa2dff023f37ff9e26f5eac0f52b3b8e1559670c9f4b74dc5dd812ec",
+  "source_page_display": 143,
+  "source_page_index": 142
+}

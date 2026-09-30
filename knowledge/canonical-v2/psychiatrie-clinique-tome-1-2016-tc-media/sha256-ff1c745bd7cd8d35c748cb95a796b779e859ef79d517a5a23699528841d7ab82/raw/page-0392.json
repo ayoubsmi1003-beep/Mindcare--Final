@@ -1,0 +1,148 @@
+{
+  "block_sequence_sha256": "e80562e52d614df5aa0ede5a229ead0d9975792c2280b0a0f89ec6dffbe6b569",
+  "blocks": [
+    {
+      "bbox": [
+        381.25,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0392-block-0001",
+      "order": 1,
+      "text": "Chapitre 18\nTroubles bipolaires\n375\n",
+      "text_sha256": "519804b9209bce66816fb43dd593bab6677d9db0b5878e29c5dd6e0b4f759390"
+    },
+    {
+      "bbox": [
+        54.0,
+        39.63300704956055,
+        297.1986083984375,
+        88.3584976196289
+      ],
+      "block_id": "page-0392-block-0002",
+      "order": 2,
+      "text": "Facteurs neurobiologiques\nC’est à partir des eets biologiques des psychotropes ecaces\ndans le traitement de la dépression et de la manie qu’on a pu\nproposer un lien entre ces monoamines biogènes et le TB.\n",
+      "text_sha256": "182309486d319fbdeb2db93968c102d7552e1cd65cd1c195f65d959a40323375"
+    },
+    {
+      "bbox": [
+        54.0,
+        89.41582489013672,
+        297.3623046875,
+        353.8085021972656
+      ],
+      "block_id": "page-0392-block-0003",
+      "order": 3,
+      "text": "Les systèmes monoaminergiques sont un ensemble de neurones\ncontenant une monoamine, soit la dopamine (DA), l’adréna-\nline (A), la noradrénaline (NA) ou la sérotonine (5-hydroxy-\ntryptamine, 5-HT) au niveau des circuits limbiques, striataux\net préfrontaux. Compte tenu de leur distribution étendue et de\nl’inuence déjà connue de ces structures sur les manifestations\ncomportementales et neurovégétatives des troubles de l’humeur,\nl’hypothèse d’un dérèglement des systèmes monoaminergiques\ndans la physiopathologie du TB fut l’une des premières proposées\n(Goodwin & Jamison, 2007). Le fait que les drogues illicites agissent\nsur les systèmes monoaminergiques et facilitent l’expression de\nsymptômes thymiques ou psychotiques a renforcé cette théorie.\nDe nombreux travaux ont ainsi tenté de valider l’hypothèse,\nprobablement trop simpliste, d’une « hyperactivité » des systèmes\ndopaminergiques dans la manie. En outre, d’autres systèmes de\nneurotransmetteurs intervenant dans le TB sont les systèmes\ncholinergiques, GABAergique, glutamatergique et neuroen-\ndocriniens (principalement au niveau des axes hypothalamo-\nhypophyso-thyroïdien et surrénalien). Enfin, plusieurs\nneuropeptides peuvent jouer un rôle dans le trouble bipolaire\n(opioïdes endogènes, substance P, neuropeptide Y, cholécystoki-\nnine), bien que la démonstration d’un eetin vitrone corresponde\npas toujours à ce qui se passe dans le cerveau du patient.\n",
+      "text_sha256": "067d5c308f7a8fd678aa1d29da84f4fa1bedf6af2e1669e926599ec741ff7505"
+    },
+    {
+      "bbox": [
+        54.0,
+        354.8658142089844,
+        297.428466796875,
+        492.3085021972656
+      ],
+      "block_id": "page-0392-block-0004",
+      "order": 4,
+      "text": "Plus récemment, l’intérêt des chercheurs travaillant sur la\npathophysiologie du TB s’est déplacé des neurotransmetteurs et\nde leurs récepteurs vers la cascade de transduction des signaux\nintracellulaires. Les systèmes de messagers intracellulaires les\nplus fréquemment étudiés dans le TB sont ceux de la protéine G\n(en relation avec l’AMP-cyclique), du calcium intracellulaire et\nde la protéine kinase C. Une conséquence de ces travaux a été\nl’hypothèse de l’eet antimaniaque d’un inhibiteur de la protéine\nkinase C, le tamoxifène, un médicament utilisé dans le traitement\ndu cancer du sein. Deux essais thérapeutiques ont conrmé\nl’ecacité du tamoxifène dans le traitement des états maniaques\n(Zarate & al., 2007 ; Yildiz & al., 2008).\n",
+      "text_sha256": "1251ca7e9631687e7d670418af90038d1706cc3f9286c83084a396b6c4282e43"
+    },
+    {
+      "bbox": [
+        54.0,
+        504.2330322265625,
+        297.4515075683594,
+        656.8585205078125
+      ],
+      "block_id": "page-0392-block-0005",
+      "order": 5,
+      "text": "Neuroanatomie et imagerie cérébrale\nDès la n du 19e siècle, des corrélations ont été proposées entre\nles émotions et les structures profondes du système limbique\nainsi que le cortex. Des observations cliniques ont ensuite pu\nrelier un peu plus précisément l’atteinte des circuits cortico-\nstriato-thalamo-corticaux à des changements aectifs, par exemple\ndans le cas d’un trouble de l’humeur secondaire à une atteinte\nneurologique (un accident vasculaire cérébral, une maladie\nde Parkinson ou une tumeur). Les plus récentes technologies\nd’imagerie cérébrale, structurelles ou fonctionnelles, permettent\nmaintenant de mettre en évidence certaines anomalies dans les\nmêmes régions chez des personnes sourant de troubles de\nl’humeur dits primaires, tel le TB.\n",
+      "text_sha256": "71c605809ab690573cd6a78886f5c87e1d95a2c9ce863003966fb479e22b5267"
+    },
+    {
+      "bbox": [
+        54.0,
+        662.7523193359375,
+        297.01751708984375,
+        721.0585327148438
+      ],
+      "block_id": "page-0392-block-0006",
+      "order": 6,
+      "text": "Neuro-imagerie structurelle\nLes premières images cérébrales par tomodensitométrie\n(CT-scan), puis celles obtenues en imagerie par résonance\nmagnétique (IRM) ont fait état de certains changements volu-\nmétriques (malgré un volume cérébral global inchangé) chez\n",
+      "text_sha256": "635ffc8cbf618530f49d8d2e1f061a9639af86d2325285ea372c0280bb0cfb1d"
+    },
+    {
+      "bbox": [
+        312.0,
+        40.9658203125,
+        555.2017822265625,
+        130.97607421875
+      ],
+      "block_id": "page-0392-block-0007",
+      "order": 7,
+      "text": "les personnes sourant d’un TB. Les modications les plus\nconstantes rapportées sont :\n• l’augmentation du volume des ventricules latéraux ;\n• l’augmentation du volume du sillon cortical ;\n• l’augmentation du nombre d’hyperintensités sous-corticales ;\n• l’augmentation du volume du striatum ;\n• la diminution du cortex préfrontal sous-genouillé.\n",
+      "text_sha256": "75ca45c7024c9d8afe8a52c3e4f1e367d19aa9ce1c6826364202e16e37d35367"
+    },
+    {
+      "bbox": [
+        312.0,
+        135.4658203125,
+        555.5136108398438,
+        214.95849609375
+      ],
+      "block_id": "page-0392-block-0008",
+      "order": 8,
+      "text": "Sur le plan étiopathogénique, il est important de déterminer\nsi ces modications sont déjà présentes dès les premières mani-\nfestations cliniques de la maladie ou si elles se développent au\ncours de son évolution. Pour le moment, la neuro-imagerie ne\npeut être utilisée à des ns diagnostiques, notamment parce que\nces anomalies radiologiques sont aussi présentes dans d’autres\ntroubles mentaux.\n",
+      "text_sha256": "5946a6ee633738e58f07404f3aa250a8675b00388ed8319c750e6e0a7054b199"
+    },
+    {
+      "bbox": [
+        312.0,
+        219.852294921875,
+        555.4022216796875,
+        489.95849609375
+      ],
+      "block_id": "page-0392-block-0009",
+      "order": 9,
+      "text": "Neuro-imagerie fonctionnelle\nDiverses techniques permettent d’évaluer, plus ou moins direc-\ntement, le fonctionnement cérébral des personnes sourant d’un\nTB. Les études de l’activité cérébrale comprennent les mesures\ndu taux du métabolisme cérébral du glucose par la tomographie\npar émission de positrons au 18-uoro-désoxy-glucose et du ux\nsanguin cérébral en utilisant de l’eau marquée à l’oxygène-15.\nCe second paramètre peut aussi être évalué par la tomographie\npar émission monophotonique (TEMP). De plus, l’imagerie\npar résonance magnétique fonctionnelle (IRMf) fournit des\ndonnées neurophysiologiques qui illustrent l’activité cérébrale.\nChez les patients atteints d’un TB, la plupart des modications\nobservées se situent au niveau du cortex antérieur et des com-\nposantes sous-corticales des circuits thalamo-corticaux et des\nnoyaux gris centraux. Ces modications semblent en général\nliées à l’état clinique, puisqu’elles sont peu fréquentes chez les\nindividus bipolaires en rémission euthymique et qu’elles sont\nsouvent atténuées ou inversées par les traitements. Les exceptions\nrapportées sont une augmentation du métabolisme :\n• de l’amygdale chez des individus bipolaires euthymiques non\ntraités ;\n• du cervelet chez des personnes bipolaires résistantes aux\ntraitements.\n",
+      "text_sha256": "d6b0b6653110e32c9b5874494855e8c3784596d61a5da9e3acd95423ab3bb677"
+    },
+    {
+      "bbox": [
+        312.0,
+        499.8330078125,
+        555.5660400390625,
+        697.95849609375
+      ],
+      "block_id": "page-0392-block-0010",
+      "order": 10,
+      "text": "Sommeil et rythmes circadiens\nPlusieurs interrogations persistent quant aux mécanismes qui\nlient les altérations du sommeil, les rythmes circadiens et le\nTB. Le sommeil, reet indirect du rythme circadien, est d’une\nimportance clinique majeure, tant dans l’évaluation de la manie\nque de la dépression. Les rythmes circadiens sont normalement\nsynchronisés par une « horloge interne » (zeitgeber) répondant\nelle-même à des stimuli environnementaux telle la lumière.\nCette horloge interne et les modications des rythmes circadiens\npeuvent se retrouver au cœur des liens entre la vulnérabilité\ngénétique, les stresseurs externes et les manifestations cliniques\ndu TB, sans doute par l’intermédiaire des neurotransmetteurs, du\nsystème neuroendocrinien et de la mélatonine. La stabilité des\nrythmes circadiens est d’ailleurs une composante importante\nde la thérapie interpersonnelle et des rythmes sociaux visant\nune amélioration de la stabilité de l’humeur chez les personnes\natteintes de TB.\n",
+      "text_sha256": "518f2f99a7ce55af8a4283073ed9da8de21817b5352689ebde6c19b16c426538"
+    },
+    {
+      "bbox": [
+        312.0,
+        698.9658203125,
+        555.0910034179688,
+        720.95849609375
+      ],
+      "block_id": "page-0392-block-0011",
+      "order": 11,
+      "text": "Les symptômes classiques du TB comprennent l’hypersomnie\ndurant la phase dépressive, à des taux variant de 23 à 78 %,\n",
+      "text_sha256": "cb62f69c5e47cf77b2a032bd0878be06bf69fc509c6a54d4f8d1c04940f85443"
+    }
+  ],
+  "coordinates_sha256": "b97ee135c5abdf0f95fb23190ad4918fe789b343381c9c89848b7a95c12d1f05",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0392",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 18\nTroubles bipolaires\n375\nFacteurs neurobiologiques\nC’est à partir des eets biologiques des psychotropes ecaces\ndans le traitement de la dépression et de la manie qu’on a pu\nproposer un lien entre ces monoamines biogènes et le TB.\nLes systèmes monoaminergiques sont un ensemble de neurones\ncontenant une monoamine, soit la dopamine (DA), l’adréna-\nline (A), la noradrénaline (NA) ou la sérotonine (5-hydroxy-\ntryptamine, 5-HT) au niveau des circuits limbiques, striataux\net préfrontaux. Compte tenu de leur distribution étendue et de\nl’inuence déjà connue de ces structures sur les manifestations\ncomportementales et neurovégétatives des troubles de l’humeur,\nl’hypothèse d’un dérèglement des systèmes monoaminergiques\ndans la physiopathologie du TB fut l’une des premières proposées\n(Goodwin & Jamison, 2007). Le fait que les drogues illicites agissent\nsur les systèmes monoaminergiques et facilitent l’expression de\nsymptômes thymiques ou psychotiques a renforcé cette théorie.\nDe nombreux travaux ont ainsi tenté de valider l’hypothèse,\nprobablement trop simpliste, d’une « hyperactivité » des systèmes\ndopaminergiques dans la manie. En outre, d’autres systèmes de\nneurotransmetteurs intervenant dans le TB sont les systèmes\ncholinergiques, GABAergique, glutamatergique et neuroen-\ndocriniens (principalement au niveau des axes hypothalamo-\nhypophyso-thyroïdien et surrénalien). Enfin, plusieurs\nneuropeptides peuvent jouer un rôle dans le trouble bipolaire\n(opioïdes endogènes, substance P, neuropeptide Y, cholécystoki-\nnine), bien que la démonstration d’un eetin vitrone corresponde\npas toujours à ce qui se passe dans le cerveau du patient.\nPlus récemment, l’intérêt des chercheurs travaillant sur la\npathophysiologie du TB s’est déplacé des neurotransmetteurs et\nde leurs récepteurs vers la cascade de transduction des signaux\nintracellulaires. Les systèmes de messagers intracellulaires les\nplus fréquemment étudiés dans le TB sont ceux de la protéine G\n(en relation avec l’AMP-cyclique), du calcium intracellulaire et\nde la protéine kinase C. Une conséquence de ces travaux a été\nl’hypothèse de l’eet antimaniaque d’un inhibiteur de la protéine\nkinase C, le tamoxifène, un médicament utilisé dans le traitement\ndu cancer du sein. Deux essais thérapeutiques ont conrmé\nl’ecacité du tamoxifène dans le traitement des états maniaques\n(Zarate & al., 2007 ; Yildiz & al., 2008).\nNeuroanatomie et imagerie cérébrale\nDès la n du 19e siècle, des corrélations ont été proposées entre\nles émotions et les structures profondes du système limbique\nainsi que le cortex. Des observations cliniques ont ensuite pu\nrelier un peu plus précisément l’atteinte des circuits cortico-\nstriato-thalamo-corticaux à des changements aectifs, par exemple\ndans le cas d’un trouble de l’humeur secondaire à une atteinte\nneurologique (un accident vasculaire cérébral, une maladie\nde Parkinson ou une tumeur). Les plus récentes technologies\nd’imagerie cérébrale, structurelles ou fonctionnelles, permettent\nmaintenant de mettre en évidence certaines anomalies dans les\nmêmes régions chez des personnes sourant de troubles de\nl’humeur dits primaires, tel le TB.\nNeuro-imagerie structurelle\nLes premières images cérébrales par tomodensitométrie\n(CT-scan), puis celles obtenues en imagerie par résonance\nmagnétique (IRM) ont fait état de certains changements volu-\nmétriques (malgré un volume cérébral global inchangé) chez\nles personnes sourant d’un TB. Les modications les plus\nconstantes rapportées sont :\n• l’augmentation du volume des ventricules latéraux ;\n• l’augmentation du volume du sillon cortical ;\n• l’augmentation du nombre d’hyperintensités sous-corticales ;\n• l’augmentation du volume du striatum ;\n• la diminution du cortex préfrontal sous-genouillé.\nSur le plan étiopathogénique, il est important de déterminer\nsi ces modications sont déjà présentes dès les premières mani-\nfestations cliniques de la maladie ou si elles se développent au\ncours de son évolution. Pour le moment, la neuro-imagerie ne\npeut être utilisée à des ns diagnostiques, notamment parce que\nces anomalies radiologiques sont aussi présentes dans d’autres\ntroubles mentaux.\nNeuro-imagerie fonctionnelle\nDiverses techniques permettent d’évaluer, plus ou moins direc-\ntement, le fonctionnement cérébral des personnes sourant d’un\nTB. Les études de l’activité cérébrale comprennent les mesures\ndu taux du métabolisme cérébral du glucose par la tomographie\npar émission de positrons au 18-uoro-désoxy-glucose et du ux\nsanguin cérébral en utilisant de l’eau marquée à l’oxygène-15.\nCe second paramètre peut aussi être évalué par la tomographie\npar émission monophotonique (TEMP). De plus, l’imagerie\npar résonance magnétique fonctionnelle (IRMf) fournit des\ndonnées neurophysiologiques qui illustrent l’activité cérébrale.\nChez les patients atteints d’un TB, la plupart des modications\nobservées se situent au niveau du cortex antérieur et des com-\nposantes sous-corticales des circuits thalamo-corticaux et des\nnoyaux gris centraux. Ces modications semblent en général\nliées à l’état clinique, puisqu’elles sont peu fréquentes chez les\nindividus bipolaires en rémission euthymique et qu’elles sont\nsouvent atténuées ou inversées par les traitements. Les exceptions\nrapportées sont une augmentation du métabolisme :\n• de l’amygdale chez des individus bipolaires euthymiques non\ntraités ;\n• du cervelet chez des personnes bipolaires résistantes aux\ntraitements.\nSommeil et rythmes circadiens\nPlusieurs interrogations persistent quant aux mécanismes qui\nlient les altérations du sommeil, les rythmes circadiens et le\nTB. Le sommeil, reet indirect du rythme circadien, est d’une\nimportance clinique majeure, tant dans l’évaluation de la manie\nque de la dépression. Les rythmes circadiens sont normalement\nsynchronisés par une « horloge interne » (zeitgeber) répondant\nelle-même à des stimuli environnementaux telle la lumière.\nCette horloge interne et les modications des rythmes circadiens\npeuvent se retrouver au cœur des liens entre la vulnérabilité\ngénétique, les stresseurs externes et les manifestations cliniques\ndu TB, sans doute par l’intermédiaire des neurotransmetteurs, du\nsystème neuroendocrinien et de la mélatonine. La stabilité des\nrythmes circadiens est d’ailleurs une composante importante\nde la thérapie interpersonnelle et des rythmes sociaux visant\nune amélioration de la stabilité de l’humeur chez les personnes\natteintes de TB.\nLes symptômes classiques du TB comprennent l’hypersomnie\ndurant la phase dépressive, à des taux variant de 23 à 78 %,\n",
+  "raw_text_sha256": "1bb570a4ffe02a81840912a98aac0c9c60c960862bc81c8846fb0f6a6496e145",
+  "source_page_display": 393,
+  "source_page_index": 392
+}

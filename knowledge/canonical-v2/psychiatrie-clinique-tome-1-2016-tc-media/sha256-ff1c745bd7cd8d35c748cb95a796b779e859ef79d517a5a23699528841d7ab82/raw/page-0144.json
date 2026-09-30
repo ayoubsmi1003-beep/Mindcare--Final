@@ -1,0 +1,124 @@
+{
+  "block_sequence_sha256": "2e4e0e037a44b360519552a36695ca0b3efac559b7d458b33564c630e111b676",
+  "blocks": [
+    {
+      "bbox": [
+        405.1000061035156,
+        747.3754272460938,
+        555.0,
+        758.6693725585938
+      ],
+      "block_id": "page-0144-block-0001",
+      "order": 1,
+      "text": "Chapitre 6\nNeurobiologie\n127\n",
+      "text_sha256": "b49638728c9c8cfd768e271c797c545f25778464b72dece4b0e14088cbf2fabc"
+    },
+    {
+      "bbox": [
+        312.0,
+        253.16583251953125,
+        555.021484375,
+        345.5085144042969
+      ],
+      "block_id": "page-0144-block-0002",
+      "order": 2,
+      "text": "naptiques que l’on retrouve dans le système limbique. Ils sont\nétroitement associés à l’action des médicaments antipsycho-\ntiques atypiques et à l’eet de certains antidépresseurs tel que\nla mirtazapine (RemeronMD) qui bloque préférentiellement les\nrécepteurs de type 5-HT2a et 5-HT2c. L’eet antagoniste sur\nle récepteur 5-HT2c par certains antipsychotiques atypiques\n(p. ex., l’olanzapine et la clozapine) est une des causes de la\nprise de poids.\n",
+      "text_sha256": "f302c1135eca37ce7d5c808a4dc9fe36169be73cb07a319626edc1554f45f2cf"
+    },
+    {
+      "bbox": [
+        312.0,
+        346.7158203125,
+        555.3626708984375,
+        415.65850830078125
+      ],
+      "block_id": "page-0144-block-0003",
+      "order": 3,
+      "text": "Les récepteurs 5-HT3 sont des récepteurs canaux permettant\nle passage des ions sodiques et potassiques. On les trouve dans le\nsystème limbique et au niveau des terminaisons du nerf vague.\nLes antagonistes des récepteurs 5-HT3, tel que l’ondansétron\n(ZofranMD), sont de puissants antiémétiques et leur utilité dans\nle traitement de l’alcoolisme semble prometteuse.\n",
+      "text_sha256": "df6e009754af959ea2ffb90efb80cc7db93121ec626ae37fdd93bf89426cb054"
+    },
+    {
+      "bbox": [
+        312.0,
+        416.8658142089844,
+        555.1412353515625,
+        520.9085083007812
+      ],
+      "block_id": "page-0144-block-0004",
+      "order": 4,
+      "text": "Les récepteurs 5-HT4 et 5-HT7 sont couplés à une protéine\nG qui stimule la production d’AMPc. Les molécules ayant une\naction agoniste sur les récepteurs 5-HT4 peuvent constituer des\nantidépresseurs de nouvelle génération à action rapide (Lucas &\nal., 2007). Les médicaments antipsychotiques atypiques possèdent\nune grande anité pour les récepteurs 5-HT7. Stahl (2010) a\nproposé que l’action antagoniste de certains de ces médicaments\nsur ce récepteur soit responsable de leur eet bénéque dans les\nmaladies aectives.\n",
+      "text_sha256": "0d5abb90335bb8171c9d7a5da07975a7647943a0928ab19e8f2b5ace967b16b0"
+    },
+    {
+      "bbox": [
+        312.0,
+        526.0023193359375,
+        555.1598510742188,
+        725.20849609375
+      ],
+      "block_id": "page-0144-block-0005",
+      "order": 5,
+      "text": "Site de recaptage\nLe principal mécanisme d’inactivation synaptique de la 5-HT\nest son recaptage par les terminaisons nerveuses. Le système\nde recaptage est saturable et possède une anité élevée pour la\n5-HT. Le transporteur de la 5-HT est aussi un site d’action des\nISRS, tels le citalopram (CelexaMD), la paroxétine (PaxilMD) et la\nuoxétine (ProzacMD) et de certains antidépresseurs tricycliques\ntels l’amitriptyline (ElavilMD), la clomipramine (AnafranilMD),\nl’imipramine (TofranilMD). Il existe deux isoformes du transpor-\nteur de la 5-HT résultant d’un polymorphisme génétique, une\nprotéine courte et une protéine longue. Le gène du transporteur\ncourt est moins actif, ce qui fait qu’on retrouve une plus faible\nconcentration du transporteur chez les personnes qui possèdent\nles deux allèles courts. Ce transporteur possède également une\nplus faible anité pour la 5-HT. Les personnes porteuses d’un\ntransporteur court présentent un risque plus élevé de sourir\nd’un trouble aectif.\n",
+      "text_sha256": "8e31277a7ed97e693789c43e6519fcc16787c88573dbc6571e6a14deaf3fe093"
+    },
+    {
+      "bbox": [
+        66.0,
+        253.16583251953125,
+        297.2199401855469,
+        286.65850830078125
+      ],
+      "block_id": "page-0144-block-0006",
+      "order": 6,
+      "text": "acide 5-hydroxy-indolacétique (5-HIAA). Le niveau de 5-HIAA\ndans le liquide céphalorachidien constitue un indicateur de la\nneurotransmission sérotoninergique dans le SNC.\n",
+      "text_sha256": "33856c86fe2bef95a043d914fdeab24725c2193d45ca12d1f039bbc4992fa387"
+    },
+    {
+      "bbox": [
+        54.0,
+        294.55230712890625,
+        297.638671875,
+        702.1585083007812
+      ],
+      "block_id": "page-0144-block-0007",
+      "order": 7,
+      "text": "Récepteurs sérotoninergiques\nLa classication des récepteurs sérotoninergiques est un sujet\ncomplexe en raison du grand nombre de récepteurs clonés. On\ndénombre actuellement 15 récepteurs sérotoninergiques qui sont\ntous des récepteurs métabotropes, à l’exception du récepteur de\ntype 3, qui est ionotrope. Ils sont regroupés en sept sous-types :\n1. 5-HT1 (5-HT1a, 5-HT1b, 5-HT1d, 5-HT1e, 5-HT1f)\n2. 5-HT2 (5-HT2a, 5-HT2b, 5-HT2c)\n3. 5-HT3 (5-HT3a, 5-HT3ab)\n4. 5-HT4\n5. 5-HT5 (5-HT5a, 5-HT5b)\n6. 5-HT6\n7. 5-HT7\nÀ l’instar des neurones catécholaminergiques, les neurones\nsérotoninergiques possèdent des autorécepteurs situés sur la surface\nde la membrane plasmique de la cellule nerveuse (le soma), des\ndendrites et des terminaisons nerveuses. Sur le soma et les dendrites,\non trouve des récepteurs 5-HT1a, alors qu’au niveau des terminai-\nsons, on trouve des récepteurs 5-HT1b/d. Ces récepteurs exercent\nune action inhibitrice sur l’activité électrique du neurone et sur la\nlibération synaptique de 5-HT. Ils sont aussi présents au niveau de la\nmembrane postsynaptique. Les récepteurs postsynaptiques 5-HT1a\nsont localisés principalement dans le cortex préfrontal, le striatum\net l’hippocampe. L’activation des récepteurs 5-HT1 inhibe la pro-\nduction d’AMPc. L’eet anxiolytique de la buspirone (BusparMD) et\nl’eet antidépresseur de l’aripiprazole (AbilifyMD) résultent de leur\naction agoniste sur les récepteurs 5-HT1a. L’eet antimigraineux\ndu sumatriptan (ImitrexMD) vient de son action agoniste sur les\nrécepteurs 5-HT1d au niveau des vaisseaux sanguins. Par ailleurs,\non observe une désensibilisation des récepteurs 5-HT1a quelques\nsemaines après le traitement avec un inhibiteur sélectif du recaptage\nde la sérotonine (ISRS). Il s’ensuit une potentialisation de la décharge\ncellulaire et une potentialisation de la libération de la sérotonine,\nmécanisme probable de l’eet thérapeutique des antidépresseurs.\n",
+      "text_sha256": "e57d1496146b3db0da0f4bf6802df14c5cfbb70121e3e379b08e6b24f7cde808"
+    },
+    {
+      "bbox": [
+        54.0,
+        703.1658325195312,
+        297.112548828125,
+        725.1585083007812
+      ],
+      "block_id": "page-0144-block-0008",
+      "order": 8,
+      "text": "Les récepteurs 5-HT2 sont couplés à une protéine G qui\nactive l’inositol triphosphate. Ce sont des récepteurs postsy-\n",
+      "text_sha256": "235188741e6c4569a8c060586bd264936542d147995478c463eb2aa02637934c"
+    },
+    {
+      "bbox": [
+        63.79999923706055,
+        41.002296447753906,
+        220.53826904296875,
+        53.320068359375
+      ],
+      "block_id": "page-0144-block-0009",
+      "order": 9,
+      "text": "FIGURE 6.11 Synthèse de la sérotonine\n",
+      "text_sha256": "567e1aca2e8af2b0b9720cd387815f05f3fc29f7c9ab5055ca141f144a5dde7b"
+    }
+  ],
+  "coordinates_sha256": "cbf695041ef05b55b010b28a6719c6f030454e749e88028ec511ed9221e9cd20",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0144",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 6\nNeurobiologie\n127\nnaptiques que l’on retrouve dans le système limbique. Ils sont\nétroitement associés à l’action des médicaments antipsycho-\ntiques atypiques et à l’eet de certains antidépresseurs tel que\nla mirtazapine (RemeronMD) qui bloque préférentiellement les\nrécepteurs de type 5-HT2a et 5-HT2c. L’eet antagoniste sur\nle récepteur 5-HT2c par certains antipsychotiques atypiques\n(p. ex., l’olanzapine et la clozapine) est une des causes de la\nprise de poids.\nLes récepteurs 5-HT3 sont des récepteurs canaux permettant\nle passage des ions sodiques et potassiques. On les trouve dans le\nsystème limbique et au niveau des terminaisons du nerf vague.\nLes antagonistes des récepteurs 5-HT3, tel que l’ondansétron\n(ZofranMD), sont de puissants antiémétiques et leur utilité dans\nle traitement de l’alcoolisme semble prometteuse.\nLes récepteurs 5-HT4 et 5-HT7 sont couplés à une protéine\nG qui stimule la production d’AMPc. Les molécules ayant une\naction agoniste sur les récepteurs 5-HT4 peuvent constituer des\nantidépresseurs de nouvelle génération à action rapide (Lucas &\nal., 2007). Les médicaments antipsychotiques atypiques possèdent\nune grande anité pour les récepteurs 5-HT7. Stahl (2010) a\nproposé que l’action antagoniste de certains de ces médicaments\nsur ce récepteur soit responsable de leur eet bénéque dans les\nmaladies aectives.\nSite de recaptage\nLe principal mécanisme d’inactivation synaptique de la 5-HT\nest son recaptage par les terminaisons nerveuses. Le système\nde recaptage est saturable et possède une anité élevée pour la\n5-HT. Le transporteur de la 5-HT est aussi un site d’action des\nISRS, tels le citalopram (CelexaMD), la paroxétine (PaxilMD) et la\nuoxétine (ProzacMD) et de certains antidépresseurs tricycliques\ntels l’amitriptyline (ElavilMD), la clomipramine (AnafranilMD),\nl’imipramine (TofranilMD). Il existe deux isoformes du transpor-\nteur de la 5-HT résultant d’un polymorphisme génétique, une\nprotéine courte et une protéine longue. Le gène du transporteur\ncourt est moins actif, ce qui fait qu’on retrouve une plus faible\nconcentration du transporteur chez les personnes qui possèdent\nles deux allèles courts. Ce transporteur possède également une\nplus faible anité pour la 5-HT. Les personnes porteuses d’un\ntransporteur court présentent un risque plus élevé de sourir\nd’un trouble aectif.\nacide 5-hydroxy-indolacétique (5-HIAA). Le niveau de 5-HIAA\ndans le liquide céphalorachidien constitue un indicateur de la\nneurotransmission sérotoninergique dans le SNC.\nRécepteurs sérotoninergiques\nLa classication des récepteurs sérotoninergiques est un sujet\ncomplexe en raison du grand nombre de récepteurs clonés. On\ndénombre actuellement 15 récepteurs sérotoninergiques qui sont\ntous des récepteurs métabotropes, à l’exception du récepteur de\ntype 3, qui est ionotrope. Ils sont regroupés en sept sous-types :\n1. 5-HT1 (5-HT1a, 5-HT1b, 5-HT1d, 5-HT1e, 5-HT1f)\n2. 5-HT2 (5-HT2a, 5-HT2b, 5-HT2c)\n3. 5-HT3 (5-HT3a, 5-HT3ab)\n4. 5-HT4\n5. 5-HT5 (5-HT5a, 5-HT5b)\n6. 5-HT6\n7. 5-HT7\nÀ l’instar des neurones catécholaminergiques, les neurones\nsérotoninergiques possèdent des autorécepteurs situés sur la surface\nde la membrane plasmique de la cellule nerveuse (le soma), des\ndendrites et des terminaisons nerveuses. Sur le soma et les dendrites,\non trouve des récepteurs 5-HT1a, alors qu’au niveau des terminai-\nsons, on trouve des récepteurs 5-HT1b/d. Ces récepteurs exercent\nune action inhibitrice sur l’activité électrique du neurone et sur la\nlibération synaptique de 5-HT. Ils sont aussi présents au niveau de la\nmembrane postsynaptique. Les récepteurs postsynaptiques 5-HT1a\nsont localisés principalement dans le cortex préfrontal, le striatum\net l’hippocampe. L’activation des récepteurs 5-HT1 inhibe la pro-\nduction d’AMPc. L’eet anxiolytique de la buspirone (BusparMD) et\nl’eet antidépresseur de l’aripiprazole (AbilifyMD) résultent de leur\naction agoniste sur les récepteurs 5-HT1a. L’eet antimigraineux\ndu sumatriptan (ImitrexMD) vient de son action agoniste sur les\nrécepteurs 5-HT1d au niveau des vaisseaux sanguins. Par ailleurs,\non observe une désensibilisation des récepteurs 5-HT1a quelques\nsemaines après le traitement avec un inhibiteur sélectif du recaptage\nde la sérotonine (ISRS). Il s’ensuit une potentialisation de la décharge\ncellulaire et une potentialisation de la libération de la sérotonine,\nmécanisme probable de l’eet thérapeutique des antidépresseurs.\nLes récepteurs 5-HT2 sont couplés à une protéine G qui\nactive l’inositol triphosphate. Ce sont des récepteurs postsy-\nFIGURE 6.11 Synthèse de la sérotonine\n",
+  "raw_text_sha256": "8e1aa8857c3b17b0400cb4da4a72bf96b293f3c205c412328b659e382855a02b",
+  "source_page_display": 145,
+  "source_page_index": 144
+}

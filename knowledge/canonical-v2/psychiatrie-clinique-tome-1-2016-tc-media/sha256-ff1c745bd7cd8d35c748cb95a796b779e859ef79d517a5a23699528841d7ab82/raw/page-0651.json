@@ -1,0 +1,388 @@
+{
+  "block_sequence_sha256": "b1a3ce2dc6fd8a73ef73962a12f6254366013f5432028e5179b942b1030f4870",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0651-block-0001",
+      "order": 1,
+      "text": "634\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "93da338749dbfb95dd71cf0b6fbf641bec050f7a9bee56aea0d3b925df7b7577"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.2700805664062,
+        98.1084976196289
+      ],
+      "block_id": "page-0651-block-0002",
+      "order": 2,
+      "text": "peut être dicilement captée par les électrodes de surface.\nC’est le cas des foyers frontaux médians. De plus, environ\n10 % des personnes saines présentent des anomalies lors\nd’un EEG de routine, qui sont le plus souvent subtiles et sans\nsignication clinique.\n",
+      "text_sha256": "55d8edfeeb968f0530d94a820eb666c7e1d82e29c00a7110ab05afecdaf6c3cb"
+    },
+    {
+      "bbox": [
+        306.0,
+        99.26582336425781,
+        549.4193115234375,
+        284.8085021972656
+      ],
+      "block_id": "page-0651-block-0003",
+      "order": 3,
+      "text": "Un ralentissement de l’électrogenèse cérébrale dans les fré-\nquences thêta (4 à 7 Hz) ou delta (0,1 à 3 Hz) est généralement\nl’indice d’une dysfonction neuronale. Ce ralentissement apparaît\nfocalisé suivant une crise épileptique focale ou inhérent à un\ndommage cérébral local comme une tumeur. Les ralentissements\nfocalisés sont plus susceptibles d’être observés dans la démence\nvasculaire que dans la maladie d’Alzheimer. On remarque un\nralentissement dius ou généralisé de l’électrogenèse cérébrale\nlors d’un delirium ou encore lors d’un processus neurodégéné-\nratif, mais pas lors d’un sevrage à l’alcool (delirium tremens). Par\ncontre, le ralentissement observé à l’EEG lors d’un delirium est\nnettement plus marqué que celui d’une démence. L’EEG a donc\nune certaine utilité pour diérencier un delirium, d’une démence\nou d’un autre trouble psychiatrique (l’EEG étant alors normal)\nlors de présentations inhabituelles. Le tableau 28.9 énumère des\naections médicales pour lesquelles un EEG est indiqué.\n",
+      "text_sha256": "a9f9b4eb6d1cbfb8a1540fb2fa27bc82a5762c530f859bf149b550955ec42b6b"
+    },
+    {
+      "bbox": [
+        308.3500061035156,
+        300.4523010253906,
+        549.0133056640625,
+        312.820068359375
+      ],
+      "block_id": "page-0651-block-0004",
+      "order": 4,
+      "text": "TABLEAU 28.9 Affections médicales pouvant être détectées\n",
+      "text_sha256": "e0a019345fe6f89c4bfe35236379837eeec5f009ef9af6a93ad2ca099ff9b5f6"
+    },
+    {
+      "bbox": [
+        365.6499938964844,
+        312.352294921875,
+        500.3690490722656,
+        324.320068359375
+      ],
+      "block_id": "page-0651-block-0005",
+      "order": 5,
+      "text": "par un électroencéphalogramme\n",
+      "text_sha256": "107c53e0f3864076939f792ae3de91ef20e43ecf97fb7daf78fc5dbde773aee7"
+    },
+    {
+      "bbox": [
+        323.3999938964844,
+        329.2741394042969,
+        515.362548828125,
+        339.8503112792969
+      ],
+      "block_id": "page-0651-block-0006",
+      "order": 6,
+      "text": "Affections possibles\nRésultats attendus\n",
+      "text_sha256": "3267cbe60e2b85c12273364aea60eb959a2fea5efff6401485c42cae2db5c225"
+    },
+    {
+      "bbox": [
+        310.25,
+        345.20196533203125,
+        515.4397583007812,
+        365.02813720703125
+      ],
+      "block_id": "page-0651-block-0007",
+      "order": 7,
+      "text": "Suspicion d’épilepsie\nPeut être normal ou comporter\ndes anomalies épileptiformes\n",
+      "text_sha256": "015ab84891c08c12a05f5ec82d0286f871a929b944ba75c91140d784a9255790"
+    },
+    {
+      "bbox": [
+        310.25,
+        373.6519470214844,
+        371.8550109863281,
+        393.4781188964844
+      ],
+      "block_id": "page-0651-block-0008",
+      "order": 8,
+      "text": "Suspicion de crises\nnon-épileptiques\n",
+      "text_sha256": "768c0de67e0817c0e730e5b1d70fa03187df4d736b9c687d844e7cc4505a389a"
+    },
+    {
+      "bbox": [
+        417.75,
+        373.6519470214844,
+        440.5830078125,
+        383.4781188964844
+      ],
+      "block_id": "page-0651-block-0009",
+      "order": 9,
+      "text": "Normal\n",
+      "text_sha256": "7d556bfa55a3c7aadddc1aa5221739aacb667d0512d0795f7589d01995d582e9"
+    },
+    {
+      "bbox": [
+        310.25,
+        402.0519714355469,
+        409.9625549316406,
+        421.8781433105469
+      ],
+      "block_id": "page-0651-block-0010",
+      "order": 10,
+      "text": "Accidents vasculaires cérébraux,\nsuspicion d’encéphalite\n",
+      "text_sha256": "75ecfa249dc25e8a6993076e21845250d6200ea23e0edadfbc1e9f31d00fd6b8"
+    },
+    {
+      "bbox": [
+        417.75,
+        402.0519714355469,
+        528.4946899414062,
+        411.8781433105469
+      ],
+      "block_id": "page-0651-block-0011",
+      "order": 11,
+      "text": "Ralentissement focal ou généralisé\n",
+      "text_sha256": "2e964183ad639b8aaa73e80dfeb49868e189a7a45183a12132aa27c0f4e544fa"
+    },
+    {
+      "bbox": [
+        310.25,
+        430.501953125,
+        378.1820373535156,
+        450.328125
+      ],
+      "block_id": "page-0651-block-0012",
+      "order": 12,
+      "text": "Suspicion de maladie\nde Creuzfeldt-Jakob\n",
+      "text_sha256": "5c1fce0bc3109eb52ef32aeb5e306312ffca655459617ce577b51aae8157e695"
+    },
+    {
+      "bbox": [
+        417.75,
+        430.501953125,
+        544.0914306640625,
+        460.328125
+      ],
+      "block_id": "page-0651-block-0013",
+      "order": 13,
+      "text": "Complexes périodiques ou potentiels\névoqués géants à la stimulation lumi-\nneuse intermittente de basse fréquence\n",
+      "text_sha256": "ca8d7faa1eabd07e7b3bbb03f653e5ea457ebaaa6db47fb76fb11ecb1607e96d"
+    },
+    {
+      "bbox": [
+        310.25,
+        468.9019470214844,
+        525.6067504882812,
+        498.7281188964844
+      ],
+      "block_id": "page-0651-block-0014",
+      "order": 14,
+      "text": "Démence à début précoce\nDiminution d’amplitude du rythme\nd’éveil, ralentissement discret de\nl’électrogenèse\n",
+      "text_sha256": "48928c4c2ed10ef34286eb636dedaf08210685b70fc38b033edbf1c38688f7d2"
+    },
+    {
+      "bbox": [
+        310.25,
+        507.35198974609375,
+        389.2160339355469,
+        527.1781616210938
+      ],
+      "block_id": "page-0651-block-0015",
+      "order": 15,
+      "text": "Crises d’agressivité sans\nstimulation extérieure\n",
+      "text_sha256": "14b50e310c012328afbcdc563f2b3bd31b3c1c2d7ba8ef8f7327c83e83e16770"
+    },
+    {
+      "bbox": [
+        417.75,
+        507.35198974609375,
+        543.1289672851562,
+        537.1781616210938
+      ],
+      "block_id": "page-0651-block-0016",
+      "order": 16,
+      "text": "Peut être normal et nécessiter un\nenregistrement en vidéotélémétrie ou\nprésenter des anomalies épileptiformes\n",
+      "text_sha256": "78130db581f60f9151edd5e70638515bbd8efab92f61e5877414e970beda84b9"
+    },
+    {
+      "bbox": [
+        310.25,
+        545.751953125,
+        486.1410217285156,
+        555.578125
+      ],
+      "block_id": "page-0651-block-0017",
+      "order": 17,
+      "text": "Delirium persistant\nRalentissement diffus\n",
+      "text_sha256": "edc6724e8166c3d0d55c1601c000532ef772d9f352854b0e73ec6fb90a99c7b6"
+    },
+    {
+      "bbox": [
+        310.25,
+        564.2019653320312,
+        378.3800354003906,
+        584.0281372070312
+      ],
+      "block_id": "page-0651-block-0018",
+      "order": 18,
+      "text": "Pertes de conscience\nrécidivantes\n",
+      "text_sha256": "23cb091a3bec22a15310926bb2f2041c1067c39aeeb624452b8b912eb1e8d347"
+    },
+    {
+      "bbox": [
+        417.75,
+        564.2019653320312,
+        440.5830078125,
+        574.0281372070312
+      ],
+      "block_id": "page-0651-block-0019",
+      "order": 19,
+      "text": "Normal\n",
+      "text_sha256": "7d556bfa55a3c7aadddc1aa5221739aacb667d0512d0795f7589d01995d582e9"
+    },
+    {
+      "bbox": [
+        310.25,
+        592.6019897460938,
+        440.5830078125,
+        602.4281616210938
+      ],
+      "block_id": "page-0651-block-0020",
+      "order": 20,
+      "text": "Premier épisode de psychose\nNormal\n",
+      "text_sha256": "64295932825c69b0e10e38dbb865e3c851cc4811657f215d599fe088959b38fd"
+    },
+    {
+      "bbox": [
+        310.25,
+        611.0519409179688,
+        440.5830078125,
+        620.8781127929688
+      ],
+      "block_id": "page-0651-block-0021",
+      "order": 21,
+      "text": "Attaques de panique nocturnes\nNormal\n",
+      "text_sha256": "2b0e14872d8319ffdf77fe1b6010b2fcd9d0ec2cbfc8d909e7cb669861c4e64e"
+    },
+    {
+      "bbox": [
+        306.25,
+        629.640625,
+        410.1930847167969,
+        638.5088500976562
+      ],
+      "block_id": "page-0651-block-0022",
+      "order": 22,
+      "text": "Source : Adapté de Libenson (2010).\n",
+      "text_sha256": "8b3c9e08e917cc928b67b86b3150e52c6ff0dc7f3176ce08e059b97c53a79906"
+    },
+    {
+      "bbox": [
+        306.0,
+        651.3658447265625,
+        549.3434448242188,
+        720.20849609375
+      ],
+      "block_id": "page-0651-block-0023",
+      "order": 23,
+      "text": "Les termes « complexes périodiques » réfèrent à la survenue à\nintervalles réguliers de complexes épileptiformes, généralement\ntoutes les 1 à 4 secondes. Un ralentissement de l’électrogenèse\ncérébrale y est le plus souvent associé. Les complexes périodiques\nindiquent une sourance cortico-sous-corticale importante et\naugmentent le risque de crises convulsives. Parmi les conditions\n",
+      "text_sha256": "f49f70a7532e1d262f74d13f6b90a6af4b2660ebc3d3fb612cf5b6e53335336a"
+    },
+    {
+      "bbox": [
+        48.0,
+        39.63300704956055,
+        291.26287841796875,
+        237.7584991455078
+      ],
+      "block_id": "page-0651-block-0024",
+      "order": 24,
+      "text": "Imagerie cérébrale\nDans l’évaluation d’un patient qui présente un tableau neuro-\npsychiatrique, l’utilisation de la tomodensitométrie (scanographie,\ntomographie axiale) et, pour plus de précision, de l’imagerie par\nrésonnance magnétique (IRM), repose sur le jugement clinique.\nCes examens sont utiles notamment pour éliminer le diagnostic\nde lésion hémorragique aiguë, des zones d’infarcissement, une\nmasse tumorale, des calcications intracérébrales des zones de\ndémyélinisation, etc. Le recours à l’imagerie cérébrale pour le\ndiagnostic d’un trouble psychiatrique primaire est habituellement\npeu concluant, à moins qu’il y ait des atypies symptomatiques\nou des signes neurologiques associés. Mais elle est très utile\nen recherche pour observer des anomalies fonctionnelles ou\nanatomiques statistiquement signicatives sur des groupes de\npatients comparés à des groupes témoins. Des situations cliniques\nincitant à demander des tests d’imagerie cérébrale sont décrites\ndans l’encadré 28.4.\n",
+      "text_sha256": "a821eeb168f8eee5e93064d80ea3c60792b8996538bd7d9d236af0a66d2ec324"
+    },
+    {
+      "bbox": [
+        68.0,
+        245.2741241455078,
+        285.3671569824219,
+        278.8503112792969
+      ],
+      "block_id": "page-0651-block-0025",
+      "order": 25,
+      "text": "Les différentes technologiques qui permettent de mettre en\névidence les structures anatomiques et l’activité fonction-\nnelle sont présentées en détail au chapitre 7.\n",
+      "text_sha256": "849678ffa529ece00f0251005c9ab18e75afb4228d9e13e0061bc6d7bfc57d96"
+    },
+    {
+      "bbox": [
+        50.25,
+        297.7522888183594,
+        255.76551818847656,
+        310.1200866699219
+      ],
+      "block_id": "page-0651-block-0026",
+      "order": 26,
+      "text": "ENCADRÉ 28.4 Situations cliniques pour lesquelles\n",
+      "text_sha256": "c38aa568d3ebf9e193788948337f6331307c7b86e144e4259882ee3854581d39"
+    },
+    {
+      "bbox": [
+        109.20000457763672,
+        309.6523132324219,
+        255.48602294921875,
+        333.1200866699219
+      ],
+      "block_id": "page-0651-block-0027",
+      "order": 27,
+      "text": "des tests d’imagerie cérébrale sont\nrecommandés\n",
+      "text_sha256": "72bcf0a9548fccc4abd713607458999235e4f91976641cc72618da05d958bb4f"
+    },
+    {
+      "bbox": [
+        52.25,
+        341.20196533203125,
+        247.60275268554688,
+        495.02813720703125
+      ],
+      "block_id": "page-0651-block-0028",
+      "order": 28,
+      "text": "• Certains bilans métastatiques\n• Nouveaux décits neurologiques focaux\n• Certains troubles du mouvement (p. ex., ataxie)\n• Troubles visuels inhabituels\n• Céphalées persistantes, progressives ou récurrentes\n• Signes d’une augmentation de la pression intracrânienne\n• Delirium persistant\n• Démence ou déclin cognitif inhabituel\n• Catatonie prolongée\n• Changement brusque de la personnalité\n• Premier épisode psychotique après 50 ans\n• Syndrome frontal\n• Évolution inhabituelle d’un trouble mental chronique traité\n",
+      "text_sha256": "634a3d6509ed01085e65e84f32d309dc95856d670d65ccdbe8f4720a734c58ca"
+    },
+    {
+      "bbox": [
+        48.0,
+        503.34063720703125,
+        228.24810791015625,
+        512.2088623046875
+      ],
+      "block_id": "page-0651-block-0029",
+      "order": 29,
+      "text": "Sources : Adapté de Lippmann (2014) ; Goyer (2011), p. 49-59.\n",
+      "text_sha256": "c59fbe2ccfaf2c43b683fddd4356a29923a162d71a4be32fa61e59153d9b2430"
+    },
+    {
+      "bbox": [
+        48.0,
+        521.7830200195312,
+        291.449462890625,
+        662.4085083007812
+      ],
+      "block_id": "page-0651-block-0030",
+      "order": 30,
+      "text": "Électroencéphalographie\nL’électroencéphalogramme (EEG) normal à l’éveil est composé\nprincipalement d’ondes alpha (fréquences 8 à 13 Hz) et bêta\n(fréquences supérieures à 13 Hz). Durant le sommeil, l’EEG\ndistingue quatre phases non-REM en plus de la phase REM.\nL’hyperventilation et la stimulation lumineuse intermittente (SLI)\nsont les manœuvres employées de routine durant l’EEG an de\nfavoriser la survenue d’une crise épileptique ou d’une réponse\nélectrique épileptiforme paroxystique. La privation de sommeil\npréalable à l’EEG peut également augmenter la sensibilité de l’EEG\nen favorisant la survenue de crises épileptiques ou d’anomalies\népileptiques interictales.\n",
+      "text_sha256": "847293313d3a84d7a2c659dce379bff7d3273ea55415219064d38377090c7eb4"
+    },
+    {
+      "bbox": [
+        48.0,
+        663.4158325195312,
+        290.97357177734375,
+        719.9085083007812
+      ],
+      "block_id": "page-0651-block-0031",
+      "order": 31,
+      "text": "Un EEG de routine à l’éveil a une sensibilité de 30 à 50 %\npour détecter une activité épileptique chez les patients atteints.\nCette sensibilité augmente signicativement, jusqu’à 85 %, avec\ndes EEG répétés ou un monitorage ambulatoire de plusieurs\nheures. L’activité interictale de certains foyers épileptogènes\n",
+      "text_sha256": "69e14242174dcabd04807946dbaec2c364840eb8bded0ed971facb0906805707"
+    }
+  ],
+  "coordinates_sha256": "c9f3827efc9b83009468ffa510268701f0d9ab2230a0a7d55d2f9aa4192691e4",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0651",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "634\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\npeut être dicilement captée par les électrodes de surface.\nC’est le cas des foyers frontaux médians. De plus, environ\n10 % des personnes saines présentent des anomalies lors\nd’un EEG de routine, qui sont le plus souvent subtiles et sans\nsignication clinique.\nUn ralentissement de l’électrogenèse cérébrale dans les fré-\nquences thêta (4 à 7 Hz) ou delta (0,1 à 3 Hz) est généralement\nl’indice d’une dysfonction neuronale. Ce ralentissement apparaît\nfocalisé suivant une crise épileptique focale ou inhérent à un\ndommage cérébral local comme une tumeur. Les ralentissements\nfocalisés sont plus susceptibles d’être observés dans la démence\nvasculaire que dans la maladie d’Alzheimer. On remarque un\nralentissement dius ou généralisé de l’électrogenèse cérébrale\nlors d’un delirium ou encore lors d’un processus neurodégéné-\nratif, mais pas lors d’un sevrage à l’alcool (delirium tremens). Par\ncontre, le ralentissement observé à l’EEG lors d’un delirium est\nnettement plus marqué que celui d’une démence. L’EEG a donc\nune certaine utilité pour diérencier un delirium, d’une démence\nou d’un autre trouble psychiatrique (l’EEG étant alors normal)\nlors de présentations inhabituelles. Le tableau 28.9 énumère des\naections médicales pour lesquelles un EEG est indiqué.\nTABLEAU 28.9 Affections médicales pouvant être détectées\npar un électroencéphalogramme\nAffections possibles\nRésultats attendus\nSuspicion d’épilepsie\nPeut être normal ou comporter\ndes anomalies épileptiformes\nSuspicion de crises\nnon-épileptiques\nNormal\nAccidents vasculaires cérébraux,\nsuspicion d’encéphalite\nRalentissement focal ou généralisé\nSuspicion de maladie\nde Creuzfeldt-Jakob\nComplexes périodiques ou potentiels\névoqués géants à la stimulation lumi-\nneuse intermittente de basse fréquence\nDémence à début précoce\nDiminution d’amplitude du rythme\nd’éveil, ralentissement discret de\nl’électrogenèse\nCrises d’agressivité sans\nstimulation extérieure\nPeut être normal et nécessiter un\nenregistrement en vidéotélémétrie ou\nprésenter des anomalies épileptiformes\nDelirium persistant\nRalentissement diffus\nPertes de conscience\nrécidivantes\nNormal\nPremier épisode de psychose\nNormal\nAttaques de panique nocturnes\nNormal\nSource : Adapté de Libenson (2010).\nLes termes « complexes périodiques » réfèrent à la survenue à\nintervalles réguliers de complexes épileptiformes, généralement\ntoutes les 1 à 4 secondes. Un ralentissement de l’électrogenèse\ncérébrale y est le plus souvent associé. Les complexes périodiques\nindiquent une sourance cortico-sous-corticale importante et\naugmentent le risque de crises convulsives. Parmi les conditions\nImagerie cérébrale\nDans l’évaluation d’un patient qui présente un tableau neuro-\npsychiatrique, l’utilisation de la tomodensitométrie (scanographie,\ntomographie axiale) et, pour plus de précision, de l’imagerie par\nrésonnance magnétique (IRM), repose sur le jugement clinique.\nCes examens sont utiles notamment pour éliminer le diagnostic\nde lésion hémorragique aiguë, des zones d’infarcissement, une\nmasse tumorale, des calcications intracérébrales des zones de\ndémyélinisation, etc. Le recours à l’imagerie cérébrale pour le\ndiagnostic d’un trouble psychiatrique primaire est habituellement\npeu concluant, à moins qu’il y ait des atypies symptomatiques\nou des signes neurologiques associés. Mais elle est très utile\nen recherche pour observer des anomalies fonctionnelles ou\nanatomiques statistiquement signicatives sur des groupes de\npatients comparés à des groupes témoins. Des situations cliniques\nincitant à demander des tests d’imagerie cérébrale sont décrites\ndans l’encadré 28.4.\nLes différentes technologiques qui permettent de mettre en\névidence les structures anatomiques et l’activité fonction-\nnelle sont présentées en détail au chapitre 7.\nENCADRÉ 28.4 Situations cliniques pour lesquelles\ndes tests d’imagerie cérébrale sont\nrecommandés\n• Certains bilans métastatiques\n• Nouveaux décits neurologiques focaux\n• Certains troubles du mouvement (p. ex., ataxie)\n• Troubles visuels inhabituels\n• Céphalées persistantes, progressives ou récurrentes\n• Signes d’une augmentation de la pression intracrânienne\n• Delirium persistant\n• Démence ou déclin cognitif inhabituel\n• Catatonie prolongée\n• Changement brusque de la personnalité\n• Premier épisode psychotique après 50 ans\n• Syndrome frontal\n• Évolution inhabituelle d’un trouble mental chronique traité\nSources : Adapté de Lippmann (2014) ; Goyer (2011), p. 49-59.\nÉlectroencéphalographie\nL’électroencéphalogramme (EEG) normal à l’éveil est composé\nprincipalement d’ondes alpha (fréquences 8 à 13 Hz) et bêta\n(fréquences supérieures à 13 Hz). Durant le sommeil, l’EEG\ndistingue quatre phases non-REM en plus de la phase REM.\nL’hyperventilation et la stimulation lumineuse intermittente (SLI)\nsont les manœuvres employées de routine durant l’EEG an de\nfavoriser la survenue d’une crise épileptique ou d’une réponse\nélectrique épileptiforme paroxystique. La privation de sommeil\npréalable à l’EEG peut également augmenter la sensibilité de l’EEG\nen favorisant la survenue de crises épileptiques ou d’anomalies\népileptiques interictales.\nUn EEG de routine à l’éveil a une sensibilité de 30 à 50 %\npour détecter une activité épileptique chez les patients atteints.\nCette sensibilité augmente signicativement, jusqu’à 85 %, avec\ndes EEG répétés ou un monitorage ambulatoire de plusieurs\nheures. L’activité interictale de certains foyers épileptogènes\n",
+  "raw_text_sha256": "7e5cfca1d16280ad9f32168a38fe5fee75c369e241e31bb495c3c84767645e86",
+  "source_page_display": 652,
+  "source_page_index": 651
+}

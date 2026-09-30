@@ -1,0 +1,148 @@
+{
+  "block_sequence_sha256": "43de3e67314ab9ca1f3c3a9d2ef8d58d65636699730e8d37ab29b10b01dded41",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0343-block-0001",
+      "order": 1,
+      "text": "326\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "b928b9263449f8e7f0d65cf622d136d58de0e2a5a1999ee9abbd5178d21a3876"
+    },
+    {
+      "bbox": [
+        48.0,
+        39.009376525878906,
+        216.91200256347656,
+        56.978126525878906
+      ],
+      "block_id": "page-0343-block-0002",
+      "order": 2,
+      "text": "Lectures complémentaires\n",
+      "text_sha256": "a63665748f6f6aa4046621ac3e5b53857ebef6bf2c2f475217e47dfa03f03493"
+    },
+    {
+      "bbox": [
+        48.0,
+        69.7886734008789,
+        183.41232299804688,
+        79.7291030883789
+      ],
+      "block_id": "page-0343-block-0003",
+      "order": 3,
+      "text": "C P. & al. (2001). Cognitive\n",
+      "text_sha256": "5549e30a8e10e99d4d89bc666f60b6ed3755997745b004ab39ece4b66534739d"
+    },
+    {
+      "bbox": [
+        48.0,
+        79.7886734008789,
+        194.90379333496094,
+        121.7291030883789
+      ],
+      "block_id": "page-0343-block-0004",
+      "order": 4,
+      "text": "erapy for Delusions, Voices and\nParanoia, Chichester, Royaume-Uni,\nWiley.\nC, O. & M-C, M.\n",
+      "text_sha256": "460a6e5e3906e28cfe5dd2e56af6102db31fb10ac92f0ac7ddd020527f147839"
+    },
+    {
+      "bbox": [
+        60.0,
+        121.78868103027344,
+        190.60101318359375,
+        151.72911071777344
+      ],
+      "block_id": "page-0343-block-0005",
+      "order": 5,
+      "text": "(1994). Psychothérapie cognitive des\npsychoses chroniques, Paris, France,\nMasson.\n",
+      "text_sha256": "713df8f539c05349e23164c6c11ae07c22eb9d5bafa46d70b3736661aeeaff40"
+    },
+    {
+      "bbox": [
+        220.0,
+        69.7886734008789,
+        351.5610046386719,
+        79.7291030883789
+      ],
+      "block_id": "page-0343-block-0006",
+      "order": 6,
+      "text": "K, M. (2004). Understanding\n",
+      "text_sha256": "a8d46d7f9405069b6c35433e08e6150bc6f2894d3341ef8903567ef8f041c98c"
+    },
+    {
+      "bbox": [
+        220.0,
+        79.8414077758789,
+        367.78131103515625,
+        121.7291030883789
+      ],
+      "block_id": "page-0343-block-0007",
+      "order": 7,
+      "text": "paranoia : A guide for professionals,\nfamilies, and suerers, Westport, CT,\nPraeger.\nL, A. (1970). « Paranoia and\n",
+      "text_sha256": "a3f83a76bd3cb039a2372892fc20d0fae239efae82ecee0b58aa7a11ff0449b0"
+    },
+    {
+      "bbox": [
+        232.0,
+        121.78868103027344,
+        367.0210266113281,
+        141.72911071777344
+      ],
+      "block_id": "page-0343-block-0008",
+      "order": 8,
+      "text": "Paranoid : A Historical Perspective »,\nPsychological Medicine, 1(1), p. 2-12.\n",
+      "text_sha256": "b424668afaaba2353bace6e2eaf8967c5c8200b34060adbb77d6dd4201d20c6e"
+    },
+    {
+      "bbox": [
+        392.0,
+        69.7886734008789,
+        541.280029296875,
+        79.7291030883789
+      ],
+      "block_id": "page-0343-block-0009",
+      "order": 9,
+      "text": "M, A. (2006). Delusional disorders,\n",
+      "text_sha256": "27e6825cb557680932f3d4a091553944ff79a1d007862750cce70ebb861d1b43"
+    },
+    {
+      "bbox": [
+        392.0,
+        76.83867645263672,
+        542.6083984375,
+        121.7291030883789
+      ],
+      "block_id": "page-0343-block-0010",
+      "order": 10,
+      "text": "paranoia and related illnesses, 2e éd.,\nNew York, NY, Cambridge University\nPress.\nS, B. J. (2009). «Delusional and\n",
+      "text_sha256": "338871143666004f87b84da6d2bc82a457a2149d10a414f3da4f97f98d3e75e8"
+    },
+    {
+      "bbox": [
+        404.0,
+        121.78868103027344,
+        544.8829956054688,
+        161.72911071777344
+      ],
+      "block_id": "page-0343-block-0011",
+      "order": 11,
+      "text": "shared psychotic disorder », dans\nSadock, B. J. & al., 9e éd., Philadelphia,\nPA, Lippincott Williams & Wilkins,\np. 511-520.\n",
+      "text_sha256": "74fb84862a766cd7e711af3c69815844d14b45985f9260712b1e7d15d3dea9ae"
+    }
+  ],
+  "coordinates_sha256": "a8b6e45fe9664e594ab2db38e6641f212ebe0bef022899e95f78c8dced1bae31",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0343",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "326\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nLectures complémentaires\nC P. & al. (2001). Cognitive\nerapy for Delusions, Voices and\nParanoia, Chichester, Royaume-Uni,\nWiley.\nC, O. & M-C, M.\n(1994). Psychothérapie cognitive des\npsychoses chroniques, Paris, France,\nMasson.\nK, M. (2004). Understanding\nparanoia : A guide for professionals,\nfamilies, and suerers, Westport, CT,\nPraeger.\nL, A. (1970). « Paranoia and\nParanoid : A Historical Perspective »,\nPsychological Medicine, 1(1), p. 2-12.\nM, A. (2006). Delusional disorders,\nparanoia and related illnesses, 2e éd.,\nNew York, NY, Cambridge University\nPress.\nS, B. J. (2009). «Delusional and\nshared psychotic disorder », dans\nSadock, B. J. & al., 9e éd., Philadelphia,\nPA, Lippincott Williams & Wilkins,\np. 511-520.\n",
+  "raw_text_sha256": "ddd7db43912dd738da3aa7bf76b905c725554d0c4b5eb2811579cd22ea915c32",
+  "source_page_display": 344,
+  "source_page_index": 343
+}

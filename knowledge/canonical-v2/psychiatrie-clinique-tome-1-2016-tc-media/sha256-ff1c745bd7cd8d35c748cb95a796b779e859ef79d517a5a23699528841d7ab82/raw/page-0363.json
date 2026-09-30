@@ -1,0 +1,364 @@
+{
+  "block_sequence_sha256": "91d28cea0224031e37d849a17425791c01a75b3d5b3049b2803b38c84b328717",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0363-block-0001",
+      "order": 1,
+      "text": "346\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "c8a2d5175c6d025b2d62dbd0427cdcb079884f4814d433d748ab3be851d1d801"
+    },
+    {
+      "bbox": [
+        50.25,
+        41.002296447753906,
+        323.02294921875,
+        53.320068359375
+      ],
+      "block_id": "page-0363-block-0002",
+      "order": 2,
+      "text": "TABLEAU 17.3 Critères diagnostiques du trouble schizophréniforme\n",
+      "text_sha256": "f2d2601d7bffce103cdc3ef4f257155455949699138c1f810c4d325df9a6d8a7"
+    },
+    {
+      "bbox": [
+        160.75,
+        59.52412414550781,
+        443.28802490234375,
+        70.10029602050781
+      ],
+      "block_id": "page-0363-block-0003",
+      "order": 3,
+      "text": "DSM-5\nDSM-IV-TR\n",
+      "text_sha256": "67d368c78be7842a2bc99b149901566bcadf3c9d62623ea48bafcc32b3563ffb"
+    },
+    {
+      "bbox": [
+        99.3499984741211,
+        75.22285461425781,
+        469.2301025390625,
+        85.24238586425781
+      ],
+      "block_id": "page-0363-block-0004",
+      "order": 4,
+      "text": "295.40 (F20.81) Trouble schizophréniforme\nTrouble schizophréniforme\n",
+      "text_sha256": "7b0b4bb70503e8ab55a72002eca0aba1b0a21a93035b74cfd669fdcf727d9397"
+    },
+    {
+      "bbox": [
+        52.25,
+        90.80195617675781,
+        282.4509582519531,
+        100.62812805175781
+      ],
+      "block_id": "page-0363-block-0005",
+      "order": 5,
+      "text": "A. Deux (ou plus) des manifestations suivantes sont présentes, chacune\n",
+      "text_sha256": "0bd1d81ea313b02205b7417f71fa28d107ea65eae24e60defcc61d9edeb1686a"
+    },
+    {
+      "bbox": [
+        63.10000228881836,
+        100.80195617675781,
+        293.1956481933594,
+        195.6281280517578
+      ],
+      "block_id": "page-0363-block-0006",
+      "order": 6,
+      "text": "pendant une proportion signicative de temps pendant une période d’un\nmois (ou moins quand ils répondent favorablement au traitement). Au\nmoins l’un des symptômes (1), (2) ou (3) doit être présent :\n1. Idées délirantes.\n2. Hallucinations.\n3. Discours désorganisé (p. ex. déraillements fréquents ou incohérence)\n4. Comportement grossièrement désorganisé ou catatonique.\n5. Symptômes négatifs (p. ex diminution de l’expression émotionnelle,\nou aboulie).\n",
+      "text_sha256": "0d00a54f519a1625dfb0eea02fb2654c3c3cba51583a802a37d4b5c563657e82"
+    },
+    {
+      "bbox": [
+        302.25,
+        90.80195617675781,
+        469.36370849609375,
+        100.62812805175781
+      ],
+      "block_id": "page-0363-block-0007",
+      "order": 7,
+      "text": "A. Répond aux critères A, D et E de la schizophrénie.\n",
+      "text_sha256": "775b6dd959ba48f96b1d5a29512c34effd074cf3383b1f31df868fa91b242eac"
+    },
+    {
+      "bbox": [
+        52.25,
+        202.2019500732422,
+        282.7291564941406,
+        212.0281219482422
+      ],
+      "block_id": "page-0363-block-0008",
+      "order": 8,
+      "text": "B. Un épisode du trouble dure au moins un mois mais moins de 6 mois.\n",
+      "text_sha256": "b85798213e1d725b57150c2028dfb5b332c8504376d046b204199794a293080b"
+    },
+    {
+      "bbox": [
+        63.10000228881836,
+        212.2019500732422,
+        278.8097229003906,
+        232.0281219482422
+      ],
+      "block_id": "page-0363-block-0009",
+      "order": 9,
+      "text": "(Quand on doit faire un diagnostic sans attendre la guérison, on doit\nqualier celui-ci de « provisoire »).\n",
+      "text_sha256": "389e5f1adf33561feefea356170386c74673cdd23e52653227d3e88d84ead67f"
+    },
+    {
+      "bbox": [
+        302.25,
+        202.2019500732422,
+        359.3548278808594,
+        212.0281219482422
+      ],
+      "block_id": "page-0363-block-0010",
+      "order": 10,
+      "text": "B. Idem à DSM-5.\n",
+      "text_sha256": "703f62df8ee835b259dd8e94c2103cd979d0ac69c184c555aa261a5bff070302"
+    },
+    {
+      "bbox": [
+        52.25,
+        238.65196228027344,
+        291.74700927734375,
+        248.47813415527344
+      ],
+      "block_id": "page-0363-block-0011",
+      "order": 11,
+      "text": "C. Un trouble schizoaffectif et un trouble dépressif ou bipolaire avec carac-\n",
+      "text_sha256": "1c9ab5c10ff40b6e83049c21205305276d03f9187a0de52436918c5695000eef"
+    },
+    {
+      "bbox": [
+        62.75,
+        248.65194702148438,
+        293.97662353515625,
+        310.4781188964844
+      ],
+      "block_id": "page-0363-block-0012",
+      "order": 12,
+      "text": "téristiques psychotiques ont été éliminés :\n1. soit parce qu’aucun épisode dépressif caractérisé ou maniaque n’a\nété présent conjointement avec les symptômes de la phase active ;\n2. soit parce que si des épisodes thymiques ont été présents pendant les\nsymptômes de la phase active, leur durée totale a été brève par rapport\nà la durée des périodes actives et résiduelles de la maladie elle-même.\n",
+      "text_sha256": "a6d2aef1655c8e35fed66bdbd3e7ab5a37a5d81439d3f2c7c8c6d5d7567f35d0"
+    },
+    {
+      "bbox": [
+        52.25,
+        317.0519714355469,
+        294.1249084472656,
+        326.8781433105469
+      ],
+      "block_id": "page-0363-block-0013",
+      "order": 13,
+      "text": "D. La perturbation n’est pas due aux effets physiologiques d’une substance\n",
+      "text_sha256": "9aaeeeb47bc0433c5b9e316dd29adb538b3882f0d45f4f806c16465281aec52d"
+    },
+    {
+      "bbox": [
+        63.400001525878906,
+        327.0519714355469,
+        294.1405029296875,
+        346.8781433105469
+      ],
+      "block_id": "page-0363-block-0014",
+      "order": 14,
+      "text": "(c.-à-d. une drogue donnant lieu à abus, un médicament) ou d’une autre\naffection médicale.\n",
+      "text_sha256": "debd4dac7d60fcd96403c5979cf753387f2d16a92017da0dee31a03ac8b7e199"
+    },
+    {
+      "bbox": [
+        52.25,
+        353.501953125,
+        293.9938659667969,
+        448.328125
+      ],
+      "block_id": "page-0363-block-0015",
+      "order": 15,
+      "text": "Spécier si :\nAvec caractéristiques de bon pronostic : Cette spécication nécessite\nla présence d’au moins deux des caractéristiques suivantes :\n1) survenue de symptômes psychotiques prééminents dans les 4 semaines\nsuivant le premier changement observable du comportement ou du\nfonctionnement habituels ;\n2) confusion ou perplexité ;\n3) bon fonctionnement social et professionnel prémorbide ;\n4) absence d’émoussement ou d’abrasion de l’affect.\n",
+      "text_sha256": "28239ac39cb36535864ee1eb5a5a4451b9d04ef0de057d54f91e651d6c80be50"
+    },
+    {
+      "bbox": [
+        52.25,
+        454.8228454589844,
+        292.6593933105469,
+        474.7281188964844
+      ],
+      "block_id": "page-0363-block-0016",
+      "order": 16,
+      "text": "Sans caractéristiques de bon pronostic : Cette spécication s’applique si\ndeux des caractéristiques mentionnées ci-dessus n’ont pas été présentes.\n",
+      "text_sha256": "fa3613fae27fb607df98f6efa620ffdc705b481349c9c2148d1c7def9f391adf"
+    },
+    {
+      "bbox": [
+        302.25,
+        454.9019470214844,
+        351.0480041503906,
+        464.7281188964844
+      ],
+      "block_id": "page-0363-block-0017",
+      "order": 17,
+      "text": "Idem à DSM-5.\n",
+      "text_sha256": "73e2b1c81f4b0cae397bef13680b1ec0f40f117881c7e4acde37a2d30a373dea"
+    },
+    {
+      "bbox": [
+        52.25,
+        481.3519592285156,
+        194.76901245117188,
+        502.2923889160156
+      ],
+      "block_id": "page-0363-block-0018",
+      "order": 18,
+      "text": "Spécier si :\nAvec catatonie [voir la sous-section 17.4.1]\n",
+      "text_sha256": "b1ca7496ff864f7e9ecb1de287bdbb40600808a4e7b3428754b2dcbac1c4cedb"
+    },
+    {
+      "bbox": [
+        52.25,
+        508.751953125,
+        209.36900329589844,
+        518.578125
+      ],
+      "block_id": "page-0363-block-0019",
+      "order": 19,
+      "text": "Spécier la sévérité actuelle [voir le tableau 17.1]\n",
+      "text_sha256": "b21fa41c7c552cdde3584a1c078bd5cb5757872fbf3e9ea9d3218cd239942991"
+    },
+    {
+      "bbox": [
+        48.25,
+        526.3406372070312,
+        196.6342315673828,
+        535.2088623046875
+      ],
+      "block_id": "page-0363-block-0020",
+      "order": 20,
+      "text": "Sources : APA (2015), p. 114 ; APA (2004a), p. 369.\n",
+      "text_sha256": "0874e145955eecd286f0b673e836e6e62533f9eb82231020f50b40583eba5f90"
+    },
+    {
+      "bbox": [
+        48.25,
+        539.3406372070312,
+        529.1807250976562,
+        566.0750122070312
+      ],
+      "block_id": "page-0363-block-0021",
+      "order": 21,
+      "text": "Traduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\n",
+      "text_sha256": "d1e2a281d01f1237f716bfb933581f8135592b601f1b1579862a0656634f5460"
+    },
+    {
+      "bbox": [
+        48.25,
+        570.3406372070312,
+        539.9170532226562,
+        597.0750122070312
+      ],
+      "block_id": "page-0363-block-0022",
+      "order": 22,
+      "text": "Traduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004.\nAll rights reserved.\n",
+      "text_sha256": "243709fe0bbde845639c05a08cd4ae4601450ec5670085ab5e9038dcd165d7c3"
+    },
+    {
+      "bbox": [
+        50.79999923706055,
+        616.352294921875,
+        302.44573974609375,
+        628.6701049804688
+      ],
+      "block_id": "page-0363-block-0023",
+      "order": 23,
+      "text": "TABLEAU 17.4 Critères diagnostiques du trouble schizoaffectif\n",
+      "text_sha256": "a6f05d8c2107473eadc02833c3329983749b86edfdbb06f441bd56d5d795b2bb"
+    },
+    {
+      "bbox": [
+        161.25,
+        634.8741455078125,
+        443.78802490234375,
+        645.4503173828125
+      ],
+      "block_id": "page-0363-block-0024",
+      "order": 24,
+      "text": "DSM-5\nDSM-IV-TR\n",
+      "text_sha256": "67d368c78be7842a2bc99b149901566bcadf3c9d62623ea48bafcc32b3563ffb"
+    },
+    {
+      "bbox": [
+        111.25,
+        650.5728759765625,
+        460.7481384277344,
+        660.5924072265625
+      ],
+      "block_id": "page-0363-block-0025",
+      "order": 25,
+      "text": "295.70 (F25.x) Trouble schizoaffectif\nTrouble schizoaffectif\n",
+      "text_sha256": "35fe6762925ae3336756953799fbdd39d4eca7ebca9ca2793e50afda6de0d983"
+    },
+    {
+      "bbox": [
+        52.75,
+        667.4019775390625,
+        276.8401184082031,
+        677.2281494140625
+      ],
+      "block_id": "page-0363-block-0026",
+      "order": 26,
+      "text": "A. Période ininterrompue de maladie pendant laquelle sont présents à\n",
+      "text_sha256": "fec295062193fc743c47f1abea94033b0e6ae99bba171e75177100b552fc284d"
+    },
+    {
+      "bbox": [
+        52.75,
+        677.4019775390625,
+        292.5322570800781,
+        708.3424072265625
+      ],
+      "block_id": "page-0363-block-0027",
+      "order": 27,
+      "text": "la fois un épisode thymique caractérisé (dépressif ou maniaque) et le\ncritère A de schizophrénie.\nN.B. : En cas d’épisode dépressif majeur, le critère A1 (humeur dépressive)\n",
+      "text_sha256": "4aa625f9e5332bb929aaf1f424a0d7e98315ec71f9fe1b3b180fb78532f50409"
+    },
+    {
+      "bbox": [
+        74.4000015258789,
+        708.4019775390625,
+        128.88600158691406,
+        718.2281494140625
+      ],
+      "block_id": "page-0363-block-0028",
+      "order": 28,
+      "text": "doit être présent.\n",
+      "text_sha256": "0f4891d826d6a8c2005716c9c7036dde61ee9b1444cef18ab3f161f648a2773c"
+    },
+    {
+      "bbox": [
+        302.75,
+        667.4019775390625,
+        359.8548278808594,
+        677.2281494140625
+      ],
+      "block_id": "page-0363-block-0029",
+      "order": 29,
+      "text": "A. Idem à DSM-5.\n",
+      "text_sha256": "17d5989bc13bdc24966ef82f371e7b88392c4ebe1bd8cdcdcd635723e9a91a6c"
+    }
+  ],
+  "coordinates_sha256": "ac77aaaa2e9d1399779fbcc35617a538d8c2efd79f79f5e5cfebf34db767d50c",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0363",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "346\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nTABLEAU 17.3 Critères diagnostiques du trouble schizophréniforme\nDSM-5\nDSM-IV-TR\n295.40 (F20.81) Trouble schizophréniforme\nTrouble schizophréniforme\nA. Deux (ou plus) des manifestations suivantes sont présentes, chacune\npendant une proportion signicative de temps pendant une période d’un\nmois (ou moins quand ils répondent favorablement au traitement). Au\nmoins l’un des symptômes (1), (2) ou (3) doit être présent :\n1. Idées délirantes.\n2. Hallucinations.\n3. Discours désorganisé (p. ex. déraillements fréquents ou incohérence)\n4. Comportement grossièrement désorganisé ou catatonique.\n5. Symptômes négatifs (p. ex diminution de l’expression émotionnelle,\nou aboulie).\nA. Répond aux critères A, D et E de la schizophrénie.\nB. Un épisode du trouble dure au moins un mois mais moins de 6 mois.\n(Quand on doit faire un diagnostic sans attendre la guérison, on doit\nqualier celui-ci de « provisoire »).\nB. Idem à DSM-5.\nC. Un trouble schizoaffectif et un trouble dépressif ou bipolaire avec carac-\ntéristiques psychotiques ont été éliminés :\n1. soit parce qu’aucun épisode dépressif caractérisé ou maniaque n’a\nété présent conjointement avec les symptômes de la phase active ;\n2. soit parce que si des épisodes thymiques ont été présents pendant les\nsymptômes de la phase active, leur durée totale a été brève par rapport\nà la durée des périodes actives et résiduelles de la maladie elle-même.\nD. La perturbation n’est pas due aux effets physiologiques d’une substance\n(c.-à-d. une drogue donnant lieu à abus, un médicament) ou d’une autre\naffection médicale.\nSpécier si :\nAvec caractéristiques de bon pronostic : Cette spécication nécessite\nla présence d’au moins deux des caractéristiques suivantes :\n1) survenue de symptômes psychotiques prééminents dans les 4 semaines\nsuivant le premier changement observable du comportement ou du\nfonctionnement habituels ;\n2) confusion ou perplexité ;\n3) bon fonctionnement social et professionnel prémorbide ;\n4) absence d’émoussement ou d’abrasion de l’affect.\nSans caractéristiques de bon pronostic : Cette spécication s’applique si\ndeux des caractéristiques mentionnées ci-dessus n’ont pas été présentes.\nIdem à DSM-5.\nSpécier si :\nAvec catatonie [voir la sous-section 17.4.1]\nSpécier la sévérité actuelle [voir le tableau 17.1]\nSources : APA (2015), p. 114 ; APA (2004a), p. 369.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004.\nAll rights reserved.\nTABLEAU 17.4 Critères diagnostiques du trouble schizoaffectif\nDSM-5\nDSM-IV-TR\n295.70 (F25.x) Trouble schizoaffectif\nTrouble schizoaffectif\nA. Période ininterrompue de maladie pendant laquelle sont présents à\nla fois un épisode thymique caractérisé (dépressif ou maniaque) et le\ncritère A de schizophrénie.\nN.B. : En cas d’épisode dépressif majeur, le critère A1 (humeur dépressive)\ndoit être présent.\nA. Idem à DSM-5.\n",
+  "raw_text_sha256": "0c0763d8afece89195ecbcefa7b8103aaf4fb4f8128031c1e2d6693f62bce771",
+  "source_page_display": 364,
+  "source_page_index": 363
+}

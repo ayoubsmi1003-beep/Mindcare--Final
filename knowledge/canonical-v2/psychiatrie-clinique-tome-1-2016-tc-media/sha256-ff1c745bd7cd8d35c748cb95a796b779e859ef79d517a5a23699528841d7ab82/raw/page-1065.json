@@ -1,0 +1,100 @@
+{
+  "block_sequence_sha256": "d38a9555f339bcc5dd3a7e17b7fa00c0aa56292e54e33147b176f2ac073242c3",
+  "blocks": [
+    {
+      "bbox": [
+        256.25,
+        4.181053161621094,
+        554.1500244140625,
+        124.18104553222656
+      ],
+      "block_id": "page-1065-block-0001",
+      "order": 1,
+      "text": "CHAPITRE47\n",
+      "text_sha256": "f7078498ebf971089c9910109a6c041cfc83891235bfe8c7fe5cf46fda970332"
+    },
+    {
+      "bbox": [
+        48.0,
+        306.75732421875,
+        271.8392028808594,
+        368.393798828125
+      ],
+      "block_id": "page-1065-block-0002",
+      "order": 2,
+      "text": "Daniel Saint-Laurent, M.D., FRCPC\nPsychiatre chef, Département de psychiatrie, Hôpital\nMaisonneuve-Rosemont (Montréal)\nProfesseur adjoint de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\n",
+      "text_sha256": "77812e3f5237ab74bde38a21d6e1c4710302bb9acfb970253b48ebeb4e2ecd26"
+    },
+    {
+      "bbox": [
+        306.0,
+        306.75732421875,
+        527.9392700195312,
+        368.393798828125
+      ],
+      "block_id": "page-1065-block-0003",
+      "order": 3,
+      "text": "Jacques Bernier, M.D., FRCPC\nPsychiatre, Clinique externe, Département de psychiatrie,\nHôpital Maisonneuve-Rosemont (Montréal)\nProfesseur agrégé de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\n",
+      "text_sha256": "db7b3c8c5be767bedde54026e0b45db222e076ebf6ee0c4d168420bb7f41c040"
+    },
+    {
+      "bbox": [
+        48.0,
+        412.2744140625,
+        291.02203369140625,
+        590.197265625
+      ],
+      "block_id": "page-1065-block-0004",
+      "order": 4,
+      "text": "47.1 Évaluation de la qualité des soins............................... 1049\n47.1.1 Historique de la mise en place\ndes programmes d’évaluation............................1049\n47.1.2 Évolution du concept de gestion de qualité\ndes soins.................................................................1050\n47.1.3 Système québécois d’évaluation et de gestion\nde la qualité des soins..........................................1050\n47.1.4 Modes d’évaluation..............................................1051\n47.1.5 Étapes d’implantation de la gestion\nde la qualité...........................................................1053\n47.1.6 Contrôle de la qualité par indicateurs .............1054\n47.1.7 Direction de l’amélioration de l’exercice .........1054\n47.1.8 Normes d’Agrément Canada, évaluation\ndes établissements ...............................................1056\n47.1.9 Agrément universitaire des programmes\nde résidence...........................................................1058\n",
+      "text_sha256": "d2811bfa91e250a0ecf7895771ef5468d712867475cd27084a455f4499b3cd9f"
+    },
+    {
+      "bbox": [
+        306.0,
+        412.2744140625,
+        549.0220336914062,
+        466.197265625
+      ],
+      "block_id": "page-1065-block-0005",
+      "order": 5,
+      "text": "47.2 Maintien de la compétence .............................................1060\n47.2.1 Développement professionnel continu\nen santé mentale au Québec..............................1060\n47.2.2 Organismes d’accréditation de\ndéveloppement professionnel continu ............1061\n",
+      "text_sha256": "05ee85bbd31ed1af09e9f3a73db3f21145bed92c1175a35a46c115cba91420fb"
+    },
+    {
+      "bbox": [
+        306.0,
+        470.2744140625,
+        548.9800415039062,
+        480.1181640625
+      ],
+      "block_id": "page-1065-block-0006",
+      "order": 6,
+      "text": "Lectures complémentaires..................................................... 1064\n",
+      "text_sha256": "f6eaf6f1dcbd6822b6b5247c70c5c7d9cd4144ec614c938fe9238a042e8026c8"
+    },
+    {
+      "bbox": [
+        48.0,
+        132.5734405517578,
+        412.36163330078125,
+        261.49530029296875
+      ],
+      "block_id": "page-1065-block-0007",
+      "order": 7,
+      "text": "Évaluation de la qualité\ndes soins et maintien\nde la compétence\n",
+      "text_sha256": "105a906be114f27a608d635c18556392b0afc1812963fc6a22ad75eaa7fd0cbe"
+    }
+  ],
+  "coordinates_sha256": "ed161a934d9255b063f20e17a617b625710e8df9498c871b858d5633f943aa4d",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1065",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "CHAPITRE47\nDaniel Saint-Laurent, M.D., FRCPC\nPsychiatre chef, Département de psychiatrie, Hôpital\nMaisonneuve-Rosemont (Montréal)\nProfesseur adjoint de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\nJacques Bernier, M.D., FRCPC\nPsychiatre, Clinique externe, Département de psychiatrie,\nHôpital Maisonneuve-Rosemont (Montréal)\nProfesseur agrégé de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\n47.1 Évaluation de la qualité des soins............................... 1049\n47.1.1 Historique de la mise en place\ndes programmes d’évaluation............................1049\n47.1.2 Évolution du concept de gestion de qualité\ndes soins.................................................................1050\n47.1.3 Système québécois d’évaluation et de gestion\nde la qualité des soins..........................................1050\n47.1.4 Modes d’évaluation..............................................1051\n47.1.5 Étapes d’implantation de la gestion\nde la qualité...........................................................1053\n47.1.6 Contrôle de la qualité par indicateurs .............1054\n47.1.7 Direction de l’amélioration de l’exercice .........1054\n47.1.8 Normes d’Agrément Canada, évaluation\ndes établissements ...............................................1056\n47.1.9 Agrément universitaire des programmes\nde résidence...........................................................1058\n47.2 Maintien de la compétence .............................................1060\n47.2.1 Développement professionnel continu\nen santé mentale au Québec..............................1060\n47.2.2 Organismes d’accréditation de\ndéveloppement professionnel continu ............1061\nLectures complémentaires..................................................... 1064\nÉvaluation de la qualité\ndes soins et maintien\nde la compétence\n",
+  "raw_text_sha256": "197c06c28094b623d508e57655ced0eab620a1b96b8c014539714a03d9dd71ef",
+  "source_page_display": 1066,
+  "source_page_index": 1065
+}

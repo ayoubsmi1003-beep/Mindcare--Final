@@ -1,0 +1,376 @@
+{
+  "block_sequence_sha256": "373f542901d9cfb530f40ad095cbb867720409d45458c357ff9dce9ee159762e",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.53765869140625,
+        758.8693237304688
+      ],
+      "block_id": "page-0533-block-0001",
+      "order": 1,
+      "text": "516\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "115f386d2c56708a873e153c2315a89dbe0f6f46b3947409c91eaf3978ebfd57"
+    },
+    {
+      "bbox": [
+        50.35000228881836,
+        41.002296447753906,
+        306.76678466796875,
+        53.320068359375
+      ],
+      "block_id": "page-0533-block-0002",
+      "order": 2,
+      "text": "TABLEAU 24.1 Critères diagnostiques de l’amnésie dissociative\n",
+      "text_sha256": "55b8dae7507200360f7ba1b2a5a831f28fcf48c11e9de9d03c20a9ff6b5e087d"
+    },
+    {
+      "bbox": [
+        111.0,
+        58.27412414550781,
+        520.435302734375,
+        81.14238739013672
+      ],
+      "block_id": "page-0533-block-0003",
+      "order": 3,
+      "text": "DSM-5\nDSM-IV-TR\n300.12 (F44.0) Amnésie dissociative\nAmnésie dissociative (auparavant amnésie psychogène)\n",
+      "text_sha256": "75e16a193e5597bd0724f40c311708a6409918b4f7f0bf8bda58e3469b02e4c1"
+    },
+    {
+      "bbox": [
+        52.25,
+        86.4019546508789,
+        279.0970153808594,
+        96.2281265258789
+      ],
+      "block_id": "page-0533-block-0004",
+      "order": 4,
+      "text": "A. Incapacité à se rappeler des informations autobiographiques impor-\n",
+      "text_sha256": "7f3e60b0f0ddfd8039b279ab5ca93f563242bcaff7c9de32e541884435e7ecee"
+    },
+    {
+      "bbox": [
+        64.25,
+        96.4019546508789,
+        290.9919128417969,
+        147.22813415527344
+      ],
+      "block_id": "page-0533-block-0005",
+      "order": 5,
+      "text": "tantes, habituellement traumatiques ou stressantes, qui ne peut pas\nêtre un oubli banal.\nN.B. : L’amnésie dissociative consiste en une amnésie localisée ou\nsélective pour un ou plusieurs événements spéciques ; ou bien en une\namnésie globale de son identité et de son histoire.\n",
+      "text_sha256": "aa804c476d52c1841429424e685218b7c267ccad2f6a5cb6d84761f84491ceba"
+    },
+    {
+      "bbox": [
+        302.25,
+        86.4019546508789,
+        535.8443603515625,
+        96.2281265258789
+      ],
+      "block_id": "page-0533-block-0006",
+      "order": 6,
+      "text": "A. La perturbation principale est constituée par un ou plusieurs épisodes\n",
+      "text_sha256": "3320a14e0f4a588ad2d5828f5fa3e19a7353f233ffae92ca131b271a9faf71ff"
+    },
+    {
+      "bbox": [
+        314.25,
+        96.4019546508789,
+        540.1221923828125,
+        136.22813415527344
+      ],
+      "block_id": "page-0533-block-0007",
+      "order": 7,
+      "text": "durant lesquels le sujet présente une incapacité à évoquer des souve-\nnirs personnels importants, habituellement traumatiques ou stressants.\nCette incapacité est trop importante pour s’expliquer par une simple\n« mauvaise mémoire ».\n",
+      "text_sha256": "90b56e6a681ba19b19aa76635f7c12ec500a08c29a27688bbd2782c86bb85c0b"
+    },
+    {
+      "bbox": [
+        52.25,
+        155.8019561767578,
+        286.74700927734375,
+        165.6281280517578
+      ],
+      "block_id": "page-0533-block-0008",
+      "order": 8,
+      "text": "B. Les symptômes sont à l’origine d’une détresse cliniquement signica-\n",
+      "text_sha256": "bb3b3c6953222a7ce2a6741cb3d246ab6a24e0dfce84e7e8c518a568f79fefa0"
+    },
+    {
+      "bbox": [
+        64.25,
+        165.8019561767578,
+        292.9198303222656,
+        185.6281280517578
+      ],
+      "block_id": "page-0533-block-0009",
+      "order": 9,
+      "text": "tive ou d’une altération du fonctionnement social, professionnel ou dans\nd’autres domaines importants.\n",
+      "text_sha256": "fd31f51e1464c65ce98c1003dd8ff88ded72d3783b18ee1b2719ce453ea78544"
+    },
+    {
+      "bbox": [
+        302.25,
+        155.8019561767578,
+        543.0469970703125,
+        165.6281280517578
+      ],
+      "block_id": "page-0533-block-0010",
+      "order": 10,
+      "text": "C. Les symptômes sont à l’origine d’une souffrance cliniquement signica-\n",
+      "text_sha256": "9b0486d5cc6abef8782fdd4e57d0308b370f6b9cea4b85074f81fe1aef5d7a08"
+    },
+    {
+      "bbox": [
+        314.25,
+        165.8019561767578,
+        544.7698974609375,
+        185.6281280517578
+      ],
+      "block_id": "page-0533-block-0011",
+      "order": 11,
+      "text": "tive ou d’une altération du fonctionnement social, professionnel, ou dans\nd’autres domaines importants.\n",
+      "text_sha256": "d2c149dea6c4453deddcd65d4e16e5a71640df0268b7df535aa7c8d40ff61c33"
+    },
+    {
+      "bbox": [
+        52.25,
+        194.251953125,
+        279.6666564941406,
+        204.078125
+      ],
+      "block_id": "page-0533-block-0012",
+      "order": 12,
+      "text": "C. La perturbation n’est pas imputable aux effets physiologiques d’une\n",
+      "text_sha256": "86526333e66e0e87582ce1e788a9701664c3df74a4a4fd48dc7e091889b178cb"
+    },
+    {
+      "bbox": [
+        64.25,
+        204.251953125,
+        293.3486633300781,
+        254.078125
+      ],
+      "block_id": "page-0533-block-0013",
+      "order": 13,
+      "text": "substance (p. ex. l’alcool ou d’autres drogues donnant lieu à un abus,\nun médicament) ou à une autre affection neurologique ou médicale\n(p. ex. des crises comitiales partielles complexes, une amnésie globale\ntransitoire [ictus amnésique], les séquelles d’un traumatisme crânien ou\ncérébral fermé, une autre maladie neurologique).\n",
+      "text_sha256": "1d565d92ac9196c95979325c67818cb02632e7941f886a6d4d2df51370a75f85"
+    },
+    {
+      "bbox": [
+        302.25,
+        194.251953125,
+        538.0398559570312,
+        204.078125
+      ],
+      "block_id": "page-0533-block-0014",
+      "order": 14,
+      "text": "B. La perturbation ne survient pas exclusivement au cours de l’évolution :\n",
+      "text_sha256": "5d83831ac9ea809092c378aa3157bb643f71ca281270577739884a2adfcab51f"
+    },
+    {
+      "bbox": [
+        314.25,
+        206.751953125,
+        539.877197265625,
+        302.578125
+      ],
+      "block_id": "page-0533-block-0015",
+      "order": 15,
+      "text": "•\nd’un trouble dissociatif de l’identité,\n•\nd’une fugue dissociative,\n•\nd’un état de stress post-traumatique,\n•\nd’un état de stress aigu\n•\nou d’un trouble somatisation,\net n’est pas due aux effets physiologiques directs d’une substance\n(p. ex., une substance donnant lieu à abus, un médicament) ou d’une\naffection neurologique ou médicale générale (p. ex., trouble amnésique\ndû à un traumatisme crânien).\n",
+      "text_sha256": "00f9f9a409f55a47ef7acee5957f3408bbdc2148ab9fffea8081dc7ddf378f6b"
+    },
+    {
+      "bbox": [
+        52.25,
+        262.6519470214844,
+        207.3345489501953,
+        272.4781188964844
+      ],
+      "block_id": "page-0533-block-0016",
+      "order": 16,
+      "text": "D. La perturbation ne s’explique pas mieux par :\n",
+      "text_sha256": "5683a9241df9e917e3bff3a636ee302f2dbd7ef80051551d6253451416f46767"
+    },
+    {
+      "bbox": [
+        64.25,
+        273.6519470214844,
+        207.92578125,
+        327.4781188964844
+      ],
+      "block_id": "page-0533-block-0017",
+      "order": 17,
+      "text": "•\nun trouble dissociatif de l’identité,\n•\nun trouble stress post-traumatique,\n•\nun trouble stress aigu,\n•\nun trouble à symptomatologie somatique,\n•\nun trouble neurocognitif majeur ou léger.\n",
+      "text_sha256": "b12cb256b162008df57d4d08fc1c0c5d2f9dd708809cf92a97210e22c7ab96eb"
+    },
+    {
+      "bbox": [
+        52.25,
+        336.1019592285156,
+        282.8466491699219,
+        376.9281311035156
+      ],
+      "block_id": "page-0533-block-0018",
+      "order": 18,
+      "text": "Spécier le type :\nAvec fugue dissociative : voyage apparemment intentionnel ou errance\nen état de perplexité associés à une amnésie de son identité ou d’autres\ninformations autobiographiques importantes.\n",
+      "text_sha256": "10317cfd6ea40d6c8b65cdb6cbb51b9810f313e195e56559eddfb217f59edb63"
+    },
+    {
+      "bbox": [
+        302.25,
+        336.0228576660156,
+        537.7470092773438,
+        357.9281311035156
+      ],
+      "block_id": "page-0533-block-0019",
+      "order": 19,
+      "text": "300.13 (F44.1) Fugue dissociative (auparavant fugue psychogène)\nA. La perturbation principale est un départ soudain et inattendu du domi-\n",
+      "text_sha256": "298521632fca4b4431361269ef54df6eacc10edfa479750df4a86713a7d319de"
+    },
+    {
+      "bbox": [
+        302.25,
+        358.1019592285156,
+        543.6913452148438,
+        389.9281311035156
+      ],
+      "block_id": "page-0533-block-0020",
+      "order": 20,
+      "text": "cile ou du lieu de travail habituel, s’accompagnant d’une incapacité à se\nsouvenir de son passé.\nB. Confusion concernant l’identité personnelle ou adoption d’une nouvelle\n",
+      "text_sha256": "c636949afec4bde76ffe177464c176abd853fd17cbd97b817afe36493e9e578f"
+    },
+    {
+      "bbox": [
+        302.25,
+        390.1019592285156,
+        536.447021484375,
+        411.9281311035156
+      ],
+      "block_id": "page-0533-block-0021",
+      "order": 21,
+      "text": "identité (partielle ou complète).\nC. La perturbation ne survient pas exclusivement au cours de l’évolution d’un\n",
+      "text_sha256": "01486d8fefd7980fd49b7796372a1cf77d8fd989ef03d8517c1b10a66654f290"
+    },
+    {
+      "bbox": [
+        302.25,
+        412.1019592285156,
+        544.7470092773438,
+        453.9281311035156
+      ],
+      "block_id": "page-0533-block-0022",
+      "order": 22,
+      "text": "trouble dissociatif de l’identité et n’est pas due aux effets physiologiques\ndirects d’une substance (p. ex., une substance donnant lieu à abus, un médi-\ncament) ou d’une affection médicale générale (p. ex., l’épilepsie temporale).\nD. Les symptômes sont à l’origine d’une souffrance cliniquement signica-\n",
+      "text_sha256": "9f47c899b4aa14226a38e9359539f1a87a6988d98a01bf26297d805919ccd050"
+    },
+    {
+      "bbox": [
+        314.25,
+        454.1019592285156,
+        542.9197998046875,
+        473.9281311035156
+      ],
+      "block_id": "page-0533-block-0023",
+      "order": 23,
+      "text": "tive ou d’une altération du fonctionnement social, professionnel ou dans\nd’autres domaines importants.\n",
+      "text_sha256": "fd31f51e1464c65ce98c1003dd8ff88ded72d3783b18ee1b2719ce453ea78544"
+    },
+    {
+      "bbox": [
+        48.25,
+        482.6203308105469,
+        548.683837890625,
+        542.4249877929688
+      ],
+      "block_id": "page-0533-block-0024",
+      "order": 24,
+      "text": "Sources : APA (2015), p. 353-354 ; APA (2004), p. 604.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris,\n2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation, DSM-IV-TR - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\n",
+      "text_sha256": "64fd7f2b3826d81aa7b0c16163f7abb797008a1af7f18846165526fd6e2a1016"
+    },
+    {
+      "bbox": [
+        50.25,
+        551.2523193359375,
+        350.6112365722656,
+        563.570068359375
+      ],
+      "block_id": "page-0533-block-0025",
+      "order": 25,
+      "text": "TABLEAU 24.2 Critères diagnostiques de dépersonnalisation/déréalisation\n",
+      "text_sha256": "6d4ff191419ed88618b6e4b58d733dd990faa03d5eb802234f2741153bde51c8"
+    },
+    {
+      "bbox": [
+        92.5999984741211,
+        568.5241088867188,
+        475.2671203613281,
+        591.3923950195312
+      ],
+      "block_id": "page-0533-block-0026",
+      "order": 26,
+      "text": "DSM-5\nDSM-IV-TR\n300.6 (F48.1) Dépersonnalisation/déréalisation\nTrouble de dépersonnalisation\n",
+      "text_sha256": "0fdaf303f8a5015140b67cf1613cd202a04b5c024c80ebfe4f8084b1b67e6859"
+    },
+    {
+      "bbox": [
+        52.25,
+        596.6519775390625,
+        271.8591003417969,
+        606.4781494140625
+      ],
+      "block_id": "page-0533-block-0027",
+      "order": 27,
+      "text": "A. Expériences prolongées ou récurrentes de dépersonnalisation, de\n",
+      "text_sha256": "75081a567e3486f9511ded31393255e4a6fd71aa574a24e8fe5eb922d2a1f91e"
+    },
+    {
+      "bbox": [
+        64.25,
+        606.6519775390625,
+        288.0838623046875,
+        718.4781494140625
+      ],
+      "block_id": "page-0533-block-0028",
+      "order": 28,
+      "text": "déréalisation, ou bien des deux :\n1. Dépersonnalisation: Expériences d’irréalité, de détachement, ou\nbien d’être un observateur extérieur de ses propres pensées, de\nses sentiments, de ses sensations, de son corps, ou de ses actes\n(p. ex. altérations perceptives, déformation de la perception du\ntemps, impression d’un soi irréel ou absent, indifférence\némotionnelle et/ou engourdissement physique).\n2. Déréalisation : Expériences d’irréalité ou de détachement du\nmonde extérieur (p. ex. les personnes ou les objets sont ressentis\ncomme étant irréels, perçus comme dans un rêve, dans un brouil-\nlard, sans vie ou bien visuellement déformés).\n",
+      "text_sha256": "17276827f335dc0867c469fa57c8624b38a19c09e1db7525c3a1a79342feab2c"
+    },
+    {
+      "bbox": [
+        302.25,
+        596.6519775390625,
+        539.208984375,
+        606.4781494140625
+      ],
+      "block_id": "page-0533-block-0029",
+      "order": 29,
+      "text": "A. Expérience prolongée ou récurrente d’un sentiment de détachement et\n",
+      "text_sha256": "fbb378b1baca7f838e1e9e436ff38dfb3f72fc270bb9ab71352d19e7bc15f57f"
+    },
+    {
+      "bbox": [
+        314.25,
+        606.6519775390625,
+        541.1083374023438,
+        636.4781494140625
+      ],
+      "block_id": "page-0533-block-0030",
+      "order": 30,
+      "text": "d’une impression d’être devenu un observateur extérieur de son propre\nfonctionnement mental ou de son propre corps (p. ex., sentiment d’être\ndans un rêve).\n",
+      "text_sha256": "2fe43909d12b64ad34e3c93df0f9fdbba0370a6489d8a7e3d4d2fd44c80f36a9"
+    }
+  ],
+  "coordinates_sha256": "81be02eb53da63eca4f978b0026ee5696cdc57436b500be980e44104352fea3c",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0533",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "516\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nTABLEAU 24.1 Critères diagnostiques de l’amnésie dissociative\nDSM-5\nDSM-IV-TR\n300.12 (F44.0) Amnésie dissociative\nAmnésie dissociative (auparavant amnésie psychogène)\nA. Incapacité à se rappeler des informations autobiographiques impor-\ntantes, habituellement traumatiques ou stressantes, qui ne peut pas\nêtre un oubli banal.\nN.B. : L’amnésie dissociative consiste en une amnésie localisée ou\nsélective pour un ou plusieurs événements spéciques ; ou bien en une\namnésie globale de son identité et de son histoire.\nA. La perturbation principale est constituée par un ou plusieurs épisodes\ndurant lesquels le sujet présente une incapacité à évoquer des souve-\nnirs personnels importants, habituellement traumatiques ou stressants.\nCette incapacité est trop importante pour s’expliquer par une simple\n« mauvaise mémoire ».\nB. Les symptômes sont à l’origine d’une détresse cliniquement signica-\ntive ou d’une altération du fonctionnement social, professionnel ou dans\nd’autres domaines importants.\nC. Les symptômes sont à l’origine d’une souffrance cliniquement signica-\ntive ou d’une altération du fonctionnement social, professionnel, ou dans\nd’autres domaines importants.\nC. La perturbation n’est pas imputable aux effets physiologiques d’une\nsubstance (p. ex. l’alcool ou d’autres drogues donnant lieu à un abus,\nun médicament) ou à une autre affection neurologique ou médicale\n(p. ex. des crises comitiales partielles complexes, une amnésie globale\ntransitoire [ictus amnésique], les séquelles d’un traumatisme crânien ou\ncérébral fermé, une autre maladie neurologique).\nB. La perturbation ne survient pas exclusivement au cours de l’évolution :\n•\nd’un trouble dissociatif de l’identité,\n•\nd’une fugue dissociative,\n•\nd’un état de stress post-traumatique,\n•\nd’un état de stress aigu\n•\nou d’un trouble somatisation,\net n’est pas due aux effets physiologiques directs d’une substance\n(p. ex., une substance donnant lieu à abus, un médicament) ou d’une\naffection neurologique ou médicale générale (p. ex., trouble amnésique\ndû à un traumatisme crânien).\nD. La perturbation ne s’explique pas mieux par :\n•\nun trouble dissociatif de l’identité,\n•\nun trouble stress post-traumatique,\n•\nun trouble stress aigu,\n•\nun trouble à symptomatologie somatique,\n•\nun trouble neurocognitif majeur ou léger.\nSpécier le type :\nAvec fugue dissociative : voyage apparemment intentionnel ou errance\nen état de perplexité associés à une amnésie de son identité ou d’autres\ninformations autobiographiques importantes.\n300.13 (F44.1) Fugue dissociative (auparavant fugue psychogène)\nA. La perturbation principale est un départ soudain et inattendu du domi-\ncile ou du lieu de travail habituel, s’accompagnant d’une incapacité à se\nsouvenir de son passé.\nB. Confusion concernant l’identité personnelle ou adoption d’une nouvelle\nidentité (partielle ou complète).\nC. La perturbation ne survient pas exclusivement au cours de l’évolution d’un\ntrouble dissociatif de l’identité et n’est pas due aux effets physiologiques\ndirects d’une substance (p. ex., une substance donnant lieu à abus, un médi-\ncament) ou d’une affection médicale générale (p. ex., l’épilepsie temporale).\nD. Les symptômes sont à l’origine d’une souffrance cliniquement signica-\ntive ou d’une altération du fonctionnement social, professionnel ou dans\nd’autres domaines importants.\nSources : APA (2015), p. 353-354 ; APA (2004), p. 604.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris,\n2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation, DSM-IV-TR - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\nTABLEAU 24.2 Critères diagnostiques de dépersonnalisation/déréalisation\nDSM-5\nDSM-IV-TR\n300.6 (F48.1) Dépersonnalisation/déréalisation\nTrouble de dépersonnalisation\nA. Expériences prolongées ou récurrentes de dépersonnalisation, de\ndéréalisation, ou bien des deux :\n1. Dépersonnalisation: Expériences d’irréalité, de détachement, ou\nbien d’être un observateur extérieur de ses propres pensées, de\nses sentiments, de ses sensations, de son corps, ou de ses actes\n(p. ex. altérations perceptives, déformation de la perception du\ntemps, impression d’un soi irréel ou absent, indifférence\némotionnelle et/ou engourdissement physique).\n2. Déréalisation : Expériences d’irréalité ou de détachement du\nmonde extérieur (p. ex. les personnes ou les objets sont ressentis\ncomme étant irréels, perçus comme dans un rêve, dans un brouil-\nlard, sans vie ou bien visuellement déformés).\nA. Expérience prolongée ou récurrente d’un sentiment de détachement et\nd’une impression d’être devenu un observateur extérieur de son propre\nfonctionnement mental ou de son propre corps (p. ex., sentiment d’être\ndans un rêve).\n",
+  "raw_text_sha256": "6c322e21df218ea705ae6fc31d484dca86d079e4bc55b67b5512391cc696a23c",
+  "source_page_display": 534,
+  "source_page_index": 533
+}

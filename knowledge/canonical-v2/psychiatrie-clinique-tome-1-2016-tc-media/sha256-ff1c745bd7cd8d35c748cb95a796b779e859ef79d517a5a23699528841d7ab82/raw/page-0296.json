@@ -1,0 +1,136 @@
+{
+  "block_sequence_sha256": "d20e753f91122d27f6bbcad1814ca978be53df5d1124fc07cef893afed276cc3",
+  "blocks": [
+    {
+      "bbox": [
+        381.20001220703125,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0296-block-0001",
+      "order": 1,
+      "text": "Chapitre 12\nTravail et invalidité\n279\n",
+      "text_sha256": "a653029823fe930631adbc0b4c8c89474d2b77acf102d785b7577ccba4f742d5"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.98867416381836,
+        201.04104614257812,
+        50.92910385131836
+      ],
+      "block_id": "page-0296-block-0002",
+      "order": 2,
+      "text": "G  Q. (1985). Loi\n",
+      "text_sha256": "f5409a3c5ae901e7aeea37121c3e0a80cda975d8814cb7946651cbb31c139883"
+    },
+    {
+      "bbox": [
+        54.0,
+        51.04140853881836,
+        209.78500366210938,
+        122.9291000366211
+      ],
+      "block_id": "page-0296-block-0003",
+      "order": 3,
+      "text": "sur les accidents de travail et les maladies\nprofessionnelles (révisée en 1999, dernière\nmise à jour le 1er août 2010), [en ligne],\nwww2.publicationsduquebec.gouv.qc.ca/\ndynamicSearch/telecharge.php?type=2&-\nle=/A_3_001/A3_001.html.\nO   \n",
+      "text_sha256": "d094fdd7a0a00258ae16fcd378b81d7762cde73f4c09926b7573db470fff86a7"
+    },
+    {
+      "bbox": [
+        66.0,
+        122.98867797851562,
+        209.67532348632812,
+        152.92910766601562
+      ],
+      "block_id": "page-0296-block-0004",
+      "order": 4,
+      "text": "  \n(OCDE). (2010). Maladie, invalidité et\ntravail, surmonter les obstacles, ODCE.\n",
+      "text_sha256": "bbe218b181d5a761d120bad0774ed5bbc9ecd566f861e6499bfcfc07193cb4ca"
+    },
+    {
+      "bbox": [
+        226.0,
+        40.98867416381836,
+        353.1360168457031,
+        50.92910385131836
+      ],
+      "block_id": "page-0296-block-0005",
+      "order": 5,
+      "text": "P . (2001). Le\n",
+      "text_sha256": "afe5d50d6563fabf46615cb59bf4ba555d8e31192fdedd022c03d018146ca59d"
+    },
+    {
+      "bbox": [
+        226.0,
+        50.98867416381836,
+        368.6618957519531,
+        92.9291000366211
+      ],
+      "block_id": "page-0296-block-0006",
+      "order": 6,
+      "text": "harcèlement moral au Québec, [en\nligne], www.europarl.europa.eu/\nworkingpapers/soci/pdf/108_fr.pdf.\nP, M. (2007). e Impact of\n",
+      "text_sha256": "a2cff43a0b46f1521caf38d70f40c340746f1d511865cf828cbf4461722901b9"
+    },
+    {
+      "bbox": [
+        238.0,
+        93.0414047241211,
+        381.8750915527344,
+        152.92910766601562
+      ],
+      "block_id": "page-0296-block-0007",
+      "order": 7,
+      "text": "Mental Health on Business and Indus-\ntry – an Economic Analysis, Sainsbury\nCentre for Mental Health, [en ligne],\nwww.centreformentalhealth.org.uk/\npdfs/nehin_mental_health_at_work_\nbusiness_case_michael_parsonage.pdf.\n",
+      "text_sha256": "055d32d250bc1547c1790c9b7513615d827266eed425d65a4e11342388203bab"
+    },
+    {
+      "bbox": [
+        398.0,
+        40.98867416381836,
+        533.1681518554688,
+        50.92910385131836
+      ],
+      "block_id": "page-0296-block-0008",
+      "order": 8,
+      "text": "S C. (2010). Taux\n",
+      "text_sha256": "a53e59f8567a68cc0883defbce9f99255435f99c8655a2f823880309409fce96"
+    },
+    {
+      "bbox": [
+        398.0,
+        50.98867416381836,
+        550.3323974609375,
+        112.9291000366211
+      ],
+      "block_id": "page-0296-block-0009",
+      "order": 9,
+      "text": "d’absence du travail, Division de l’ana-\nlyse des enquêtes sur le travail et les\nménages, produit 71-211-x, [en ligne],\nwww.statcan.gc.ca/pub/71-211-x/71-\n211-x2010000-fra.pdf.\nV, A. (2004). Travail, organisation et\n",
+      "text_sha256": "4a0ab4f6d4a9cf720ffb62e31f571842e34892e2dc0970430da0aee5719edd83"
+    },
+    {
+      "bbox": [
+        410.0,
+        112.9886703491211,
+        548.260986328125,
+        132.92910766601562
+      ],
+      "block_id": "page-0296-block-0010",
+      "order": 10,
+      "text": "santé, Québec, Presses de l’Université\nLaval.\n",
+      "text_sha256": "eebcb617f7fee40ad7a7f8ca0762cb37ace22181498cdf850cd0971ff19f7008"
+    }
+  ],
+  "coordinates_sha256": "34da1c5a9465b3056b164245cbcdb8d789e6e015845d54fd3e1775fe165b764a",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0296",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 12\nTravail et invalidité\n279\nG  Q. (1985). Loi\nsur les accidents de travail et les maladies\nprofessionnelles (révisée en 1999, dernière\nmise à jour le 1er août 2010), [en ligne],\nwww2.publicationsduquebec.gouv.qc.ca/\ndynamicSearch/telecharge.php?type=2&-\nle=/A_3_001/A3_001.html.\nO   \n  \n(OCDE). (2010). Maladie, invalidité et\ntravail, surmonter les obstacles, ODCE.\nP . (2001). Le\nharcèlement moral au Québec, [en\nligne], www.europarl.europa.eu/\nworkingpapers/soci/pdf/108_fr.pdf.\nP, M. (2007). e Impact of\nMental Health on Business and Indus-\ntry – an Economic Analysis, Sainsbury\nCentre for Mental Health, [en ligne],\nwww.centreformentalhealth.org.uk/\npdfs/nehin_mental_health_at_work_\nbusiness_case_michael_parsonage.pdf.\nS C. (2010). Taux\nd’absence du travail, Division de l’ana-\nlyse des enquêtes sur le travail et les\nménages, produit 71-211-x, [en ligne],\nwww.statcan.gc.ca/pub/71-211-x/71-\n211-x2010000-fra.pdf.\nV, A. (2004). Travail, organisation et\nsanté, Québec, Presses de l’Université\nLaval.\n",
+  "raw_text_sha256": "1664dc25af33ea5a0d2ed1ef37ff092a46df2895c68bcf0a0c24936621be34ba",
+  "source_page_display": 297,
+  "source_page_index": 296
+}

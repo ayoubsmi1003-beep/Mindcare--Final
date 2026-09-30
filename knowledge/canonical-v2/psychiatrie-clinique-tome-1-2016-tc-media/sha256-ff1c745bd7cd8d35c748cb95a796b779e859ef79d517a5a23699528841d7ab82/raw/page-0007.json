@@ -1,0 +1,52 @@
+{
+  "block_sequence_sha256": "c25f77a1e5b7fd4d693994712a5ac741464acba145acb2df819bf9fccd928480",
+  "blocks": [
+    {
+      "bbox": [
+        189.0,
+        38.31171798706055,
+        313.0,
+        60.77265548706055
+      ],
+      "block_id": "page-0007-block-0001",
+      "order": 1,
+      "text": "Remerciements\n",
+      "text_sha256": "d79c1bef7900115f9939cc9a700d348c100e3e9f2c760cc4f9ac3ed5f2800a30"
+    },
+    {
+      "bbox": [
+        189.0,
+        81.76582336425781,
+        549.2023315429688,
+        115.25849914550781
+      ],
+      "block_id": "page-0007-block-0002",
+      "order": 2,
+      "text": "En plus des auteurs qui ont rédigé les chapitres, plusieurs personnes ont été engagées, de près\nou de loin, dans le processus de publication de cet ouvrage. Nous leur exprimons notre gratitude\nd’avoir contribué à cette œuvre magistrale. Nos remerciements vont plus particulièrement :\n",
+      "text_sha256": "70174a10662c3978c102a9d553185ee66a648e298b138b8df7995e5c4b28572b"
+    },
+    {
+      "bbox": [
+        201.0,
+        114.57441711425781,
+        549.3141479492188,
+        322.2585144042969
+      ],
+      "block_id": "page-0007-block-0003",
+      "order": 3,
+      "text": "• aux superviseures de sections : Dre Natalie Gingras (pédopsychiatrie), Dre Nancy Légaré\n(psychopharmacologie) et Dre Isabelle Paquette ;\n• à l’Institut universitaire en santé mentale de Montréal, qui a contribué nancièrement à\nce grand projet ;\n• à l’alliance Otsuka-Lundbeck, à la Fondation et au CMDP de l’IUSMM qui ont généreu-\nsement oert une subvention pour soutenir la révision de ce manuel ;\n• à Pauline Bonenfant, technicienne en communication, pour sa abilité, sa disponibilité,\net pour avoir assuré le lien entre les auteurs et les directeurs de la publication ;\n• à Karine Demoors, éditrice, qui, avec un dévouement inlassable, a su parfaire et harmo-\nniser l’écriture des divers chapitres de ce manuel ;\n• aux auteurs des chapitres des éditions antérieures de ce manuel dont le travail a servi\nde base pour la rédaction de plusieurs chapitres de cette 4e édition ;\n• aux nombreux collaborateurs de Chenelière Éducation, qui ont mené ce livre à sa\nphase nale ;\n• à nos familles et à celles de nos collaborateurs, qui ont fait preuve de beaucoup de patience\net qui nous ont soutenus dans ce projet collectif ;\n• à nos patients et à leur famille, qui sont notre meilleure source de formation, nous posant\nchaque jour le dé de développer nos connaissances pour améliorer leur qualité de vie.\n",
+      "text_sha256": "792e911ed685c5947ce29d81ddc67df4e4667702c43582ead20c464f17cce0b6"
+    }
+  ],
+  "coordinates_sha256": "769fd646b0e2ecd85fba9944c471d5729756adc22b490b20d9a9ba1636a1293b",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0007",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Remerciements\nEn plus des auteurs qui ont rédigé les chapitres, plusieurs personnes ont été engagées, de près\nou de loin, dans le processus de publication de cet ouvrage. Nous leur exprimons notre gratitude\nd’avoir contribué à cette œuvre magistrale. Nos remerciements vont plus particulièrement :\n• aux superviseures de sections : Dre Natalie Gingras (pédopsychiatrie), Dre Nancy Légaré\n(psychopharmacologie) et Dre Isabelle Paquette ;\n• à l’Institut universitaire en santé mentale de Montréal, qui a contribué nancièrement à\nce grand projet ;\n• à l’alliance Otsuka-Lundbeck, à la Fondation et au CMDP de l’IUSMM qui ont généreu-\nsement oert une subvention pour soutenir la révision de ce manuel ;\n• à Pauline Bonenfant, technicienne en communication, pour sa abilité, sa disponibilité,\net pour avoir assuré le lien entre les auteurs et les directeurs de la publication ;\n• à Karine Demoors, éditrice, qui, avec un dévouement inlassable, a su parfaire et harmo-\nniser l’écriture des divers chapitres de ce manuel ;\n• aux auteurs des chapitres des éditions antérieures de ce manuel dont le travail a servi\nde base pour la rédaction de plusieurs chapitres de cette 4e édition ;\n• aux nombreux collaborateurs de Chenelière Éducation, qui ont mené ce livre à sa\nphase nale ;\n• à nos familles et à celles de nos collaborateurs, qui ont fait preuve de beaucoup de patience\net qui nous ont soutenus dans ce projet collectif ;\n• à nos patients et à leur famille, qui sont notre meilleure source de formation, nous posant\nchaque jour le dé de développer nos connaissances pour améliorer leur qualité de vie.\n",
+  "raw_text_sha256": "ec8688bb95255ada5cd55e1e8b60e42a439cded3f96fc3675fc977a95376935b",
+  "source_page_display": 8,
+  "source_page_index": 7
+}

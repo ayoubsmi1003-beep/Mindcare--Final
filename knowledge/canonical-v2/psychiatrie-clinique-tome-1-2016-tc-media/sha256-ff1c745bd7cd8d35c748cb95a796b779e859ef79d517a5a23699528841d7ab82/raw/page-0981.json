@@ -1,0 +1,136 @@
+{
+  "block_sequence_sha256": "2f7821366fc2c5292cade2f3493eaf50a65d941ae3ef93e00944145c780b429a",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        300.22442626953125,
+        289.0040283203125,
+        453.14727783203125
+      ],
+      "block_id": "page-0981-block-0001",
+      "order": 1,
+      "text": "41.1 Troubles psychiatriques et diérences sexuelles........ 965\n41.1.1 Troubles liés à des substances............................. 965\n41.1.2 Schizophrénies....................................................... 967\n41.1.3 Dépressions ............................................................ 967\n41.1.4 Troubles bipolaires................................................ 967\n41.1.5 Troubles anxieux ................................................... 968\n41.1.6 Troubles de stress post-traumatisme ................ 968\n41.1.7 Troubles obsessionnels-compulsifs ................... 968\n41.1.8 Troubles à symptomatologie somatique........... 968\n41.1.9 Troubles des conduites alimentaires................. 968\n41.1.10 Troubles de la personnalité ................................. 969\n41.1.11 Troubles décit de l’attention/hyperactivité.... 969\n",
+      "text_sha256": "15fe2b907c8ebf2bff31de2dfe5233075b9f9d9ba9cc6c1abab3c90cf85089f0"
+    },
+    {
+      "bbox": [
+        306.0,
+        300.22442626953125,
+        547.0100708007812,
+        454.06817626953125
+      ],
+      "block_id": "page-0981-block-0002",
+      "order": 2,
+      "text": "41.2 Psychiatrie périnatale et reproductive.......................... 969\n41.2.1 Syndrome prémenstruel et trouble\ndysphorique prémenstruel .................................. 969\n41.2.2 Troubles psychiatriques durant la grossesse .... 971\n41.2.3 Troubles psychiatriques en période\npostnatale................................................................ 973\n41.2.4 Avortement et fausse couche.............................. 974\n41.2.5 Infertilité ................................................................. 976\n41.2.6 Troubles psychiatriques durant\nla ménopause.......................................................... 976\n41.2.7 Troubles psychiatriques liés à des cancers\ntouchant le système reproducteur féminin...... 977\nLectures complémentaires...................................................... 978\n",
+      "text_sha256": "b6314dc3f23033c70bf494664681b3b138108a2379ff250d1fd29cf23abee1ac"
+    },
+    {
+      "bbox": [
+        48.0,
+        206.60011291503906,
+        182.67160034179688,
+        219.10011291503906
+      ],
+      "block_id": "page-0981-block-0003",
+      "order": 3,
+      "text": "Marie-Josée Poulin, M.D., FRCPC\n",
+      "text_sha256": "a4d82972a3e0d3e0104f6ea194742910d476f06e70cce2e85be18864d3daa7cd"
+    },
+    {
+      "bbox": [
+        48.0,
+        222.9772491455078,
+        276.47222900390625,
+        244.1938018798828
+      ],
+      "block_id": "page-0981-block-0004",
+      "order": 4,
+      "text": "Psychiatre, responsable médicale, Programme de psychiatrie\npérinatale, Institut universitaire en santé mentale de Québec\n",
+      "text_sha256": "9a2d8a057f85943c7e2e7db826b4efe343aa1c066484218f5ec6a19712cd64db"
+    },
+    {
+      "bbox": [
+        48.0,
+        247.9772491455078,
+        282.68072509765625,
+        269.1938171386719
+      ],
+      "block_id": "page-0981-block-0005",
+      "order": 5,
+      "text": "Professeure de clinique, Département de psychiatrie et neuro­\nsciences, Faculté de médecine, Université Laval (Québec)\n",
+      "text_sha256": "268952c6c727586dee1c33351005b885e1f03f8f7b5d5a6127385de6d645709c"
+    },
+    {
+      "bbox": [
+        306.0,
+        206.60011291503906,
+        495.9765930175781,
+        219.10011291503906
+      ],
+      "block_id": "page-0981-block-0006",
+      "order": 6,
+      "text": "Tuong-Vi Nguyen, M.D., FRCPC, M. Sc. (psychiatrie)\n",
+      "text_sha256": "ad734222debf914598fa8007860f3e796ed305844f1af4305b721b0ff4a7ba35"
+    },
+    {
+      "bbox": [
+        306.0,
+        222.9772491455078,
+        529.8790893554688,
+        244.1938018798828
+      ],
+      "block_id": "page-0981-block-0007",
+      "order": 7,
+      "text": "Psychiatre, Programme de psychiatrie reproductive, Centre\nuniversitaire de santé McGill (Montréal)\n",
+      "text_sha256": "6900290bc35a6292d75c0eb876851c39a057c0e2d3b41c51257f7f19c4551354"
+    },
+    {
+      "bbox": [
+        306.0,
+        247.9772491455078,
+        549.0294799804688,
+        269.1938171386719
+      ],
+      "block_id": "page-0981-block-0008",
+      "order": 8,
+      "text": "Professeure adjointe, Département de psychiatrie et d’obstétrique­\ngynécologie, Faculté de Médecine, Université McGill (Montréal)\n",
+      "text_sha256": "9baf7faa01ec71e36d1cc2874c2c21574a4fd6a083187d400f6085ed4d3c4d9e"
+    },
+    {
+      "bbox": [
+        48.0,
+        131.5734405517578,
+        469.82562255859375,
+        176.4953155517578
+      ],
+      "block_id": "page-0981-block-0009",
+      "order": 9,
+      "text": "Différences reliées au sexe\n",
+      "text_sha256": "9503496790e456ba9859b973ccea0a45dcdccd117618f2a3fd2147ea0e1c5707"
+    },
+    {
+      "bbox": [
+        263.1000061035156,
+        2.3810577392578125,
+        561.0,
+        122.38105773925781
+      ],
+      "block_id": "page-0981-block-0010",
+      "order": 10,
+      "text": "CHAPITRE41\n",
+      "text_sha256": "94b7c311d609ab6c4653328df0b673133d63d3818e263decb118712f4e5669dd"
+    }
+  ],
+  "coordinates_sha256": "57d38cf513754134ed3a5165835b75463051e69d60a832d5ebaaee5107c2643e",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0981",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "41.1 Troubles psychiatriques et diérences sexuelles........ 965\n41.1.1 Troubles liés à des substances............................. 965\n41.1.2 Schizophrénies....................................................... 967\n41.1.3 Dépressions ............................................................ 967\n41.1.4 Troubles bipolaires................................................ 967\n41.1.5 Troubles anxieux ................................................... 968\n41.1.6 Troubles de stress post-traumatisme ................ 968\n41.1.7 Troubles obsessionnels-compulsifs ................... 968\n41.1.8 Troubles à symptomatologie somatique........... 968\n41.1.9 Troubles des conduites alimentaires................. 968\n41.1.10 Troubles de la personnalité ................................. 969\n41.1.11 Troubles décit de l’attention/hyperactivité.... 969\n41.2 Psychiatrie périnatale et reproductive.......................... 969\n41.2.1 Syndrome prémenstruel et trouble\ndysphorique prémenstruel .................................. 969\n41.2.2 Troubles psychiatriques durant la grossesse .... 971\n41.2.3 Troubles psychiatriques en période\npostnatale................................................................ 973\n41.2.4 Avortement et fausse couche.............................. 974\n41.2.5 Infertilité ................................................................. 976\n41.2.6 Troubles psychiatriques durant\nla ménopause.......................................................... 976\n41.2.7 Troubles psychiatriques liés à des cancers\ntouchant le système reproducteur féminin...... 977\nLectures complémentaires...................................................... 978\nMarie-Josée Poulin, M.D., FRCPC\nPsychiatre, responsable médicale, Programme de psychiatrie\npérinatale, Institut universitaire en santé mentale de Québec\nProfesseure de clinique, Département de psychiatrie et neuro­\nsciences, Faculté de médecine, Université Laval (Québec)\nTuong-Vi Nguyen, M.D., FRCPC, M. Sc. (psychiatrie)\nPsychiatre, Programme de psychiatrie reproductive, Centre\nuniversitaire de santé McGill (Montréal)\nProfesseure adjointe, Département de psychiatrie et d’obstétrique­\ngynécologie, Faculté de Médecine, Université McGill (Montréal)\nDifférences reliées au sexe\nCHAPITRE41\n",
+  "raw_text_sha256": "c2dc4a422b9b0be3398db35dee595f84809a918792cdc20ea6e23c1c13c01681",
+  "source_page_display": 982,
+  "source_page_index": 981
+}

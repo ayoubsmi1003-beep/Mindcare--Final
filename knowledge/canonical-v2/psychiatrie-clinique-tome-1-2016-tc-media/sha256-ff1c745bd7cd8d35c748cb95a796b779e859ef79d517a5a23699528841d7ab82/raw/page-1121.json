@@ -1,0 +1,700 @@
+{
+  "block_sequence_sha256": "9049013f79c35439b490982a35342c45be6554933308aa98e3d48d44afd25ff3",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        126.91150665283203,
+        758.8693237304688
+      ],
+      "block_id": "page-1121-block-0001",
+      "order": 1,
+      "text": "R24\nRéférences\n",
+      "text_sha256": "5edd0a14b4c4466a818ed0622157539652792461d74625f3a0f685f7b4bea8ce"
+    },
+    {
+      "bbox": [
+        390.0,
+        40.68496322631836,
+        542.8424072265625,
+        67.22344207763672
+      ],
+      "block_id": "page-1121-block-0002",
+      "order": 2,
+      "text": "Richards, B. A. & al. (2009). « Patterns of cortical thinning\nin Alzheimer’s disease and frontotemporal dementia »,\nNeurobiology of Aging, 30(10), p. 1626-1636.\n",
+      "text_sha256": "a6b908ad5f07ec2cdeef4caac3261d19e296840c14caa630fd890d7451ccc34d"
+    },
+    {
+      "bbox": [
+        390.0,
+        71.2349624633789,
+        532.39501953125,
+        88.6234359741211
+      ],
+      "block_id": "page-1121-block-0003",
+      "order": 3,
+      "text": "Robillard, A. (2007). «Clinical diagnosis of dementia »,\nAlzheimer’s & Dementia, 3(4), p. 292-298.\n",
+      "text_sha256": "7dca712084354e25a173a97facfb25963c6ce8f15573d3ad492c966d3fcc6cca"
+    },
+    {
+      "bbox": [
+        390.0,
+        92.5849609375,
+        544.7275390625,
+        119.1734390258789
+      ],
+      "block_id": "page-1121-block-0004",
+      "order": 4,
+      "text": "Siddiqi, N. & al. (2007). « Interventions for preventing deli-\nrium in hospitalised patients », Cochrane Database System\nReview, 18(2), p. 1-3.\n",
+      "text_sha256": "b15107439ab468523c6e32ddbf8d6a0a9802a131569f9c3a990ee9b7f83f45f0"
+    },
+    {
+      "bbox": [
+        390.0,
+        123.13496398925781,
+        546.7326049804688,
+        168.0734405517578
+      ],
+      "block_id": "page-1121-block-0005",
+      "order": 5,
+      "text": "Sperling, R. A. & al. (2011). « Toward dening the preclinical\nstages of Alzheimer’s disease : Recommen dations from the\nNational Institute on Aging-Alzheimer’s Association work-\ngroups on diagnostic guidelines for Alzheimer’s disease »,\nAlzheimer’s & Dementia, 7, p. 280-292.\n",
+      "text_sha256": "ef6138fc59454841854a52f551846a1cf6c500819111f4a5ab44181aeb9651b0"
+    },
+    {
+      "bbox": [
+        390.0,
+        172.0349578857422,
+        541.2201538085938,
+        198.62344360351562
+      ],
+      "block_id": "page-1121-block-0006",
+      "order": 6,
+      "text": "Sunderland, T. & al. (1989). « Clock drawing in Alzheimer’s\ndisease : A novel measure of dementia severity », Journal\nof the American Geriatrics Society, 37(8), p. 725-729.\n",
+      "text_sha256": "ad26ac959620fd2cfbac7bdc8d2ad1bd356b891b6a2aee86c2f0dd15d2294b4a"
+    },
+    {
+      "bbox": [
+        390.0,
+        202.5849609375,
+        545.5499877929688,
+        229.17344665527344
+      ],
+      "block_id": "page-1121-block-0007",
+      "order": 7,
+      "text": "Thomas, A. J. & O’Brien, J. T. (2008). « Depression and\ncognition in older adults », Current Opinions in Psychiatry,\n21(8), p. 8-13.\n",
+      "text_sha256": "bd23e8473c4c5fceb308fb191f1c530462d95f0bd845f8cfc0cc1f8d5111e0c1"
+    },
+    {
+      "bbox": [
+        390.0,
+        233.1349639892578,
+        541.0025024414062,
+        259.6734313964844
+      ],
+      "block_id": "page-1121-block-0008",
+      "order": 8,
+      "text": "Thorpe, L. (2009). « Dépression ou démence ? Comment\naborder l’évaluation du patient », Revue canadienne de la\nmaladie d’Alzheimer et autres démences, (9), p. 17-21.\n",
+      "text_sha256": "39c532a98f869557472a73cb636044e8f14dcc32735164ed0a5dbd242689fc55"
+    },
+    {
+      "bbox": [
+        390.0,
+        263.6849670410156,
+        546.0224609375,
+        299.4234313964844
+      ],
+      "block_id": "page-1121-block-0009",
+      "order": 9,
+      "text": "Troisième conférence canadienne de consensus sur le diagnostic\net le traitement de la démence. (2007). 146 recommandations\napprouvées, verson nale, [en ligne], www.cccdtd.ca/pdfs/\nRecommandations_approuvees_CCCDTD_2007.pdf.\n",
+      "text_sha256": "85775acc2e02fa8469516b5d4b6de974f9f3a6312dc55b021d855e195e588385"
+    },
+    {
+      "bbox": [
+        390.0,
+        303.4349670410156,
+        541.6602172851562,
+        339.1734313964844
+      ],
+      "block_id": "page-1121-block-0010",
+      "order": 10,
+      "text": "Trzepacz, P. T. & al. (2005). « Delirium », dans Levenson, J.\nL. (dir.), The American Psychiatric Publishing Textbook of\nPsychosomatic Medicine, 2e éd., Arlington, VA, American\nPsychiatric Publishing, p. 71-114.\n",
+      "text_sha256": "633987d2459483d524d56c7e9cc7a1ddc2b073c51d4abe0bcfb66be53841ca4d"
+    },
+    {
+      "bbox": [
+        390.0,
+        343.1349792480469,
+        549.1046752929688,
+        388.0734558105469
+      ],
+      "block_id": "page-1121-block-0011",
+      "order": 11,
+      "text": "Van Eijk, M. M. & Roes, K. C. (2010). « Effect of rivastigmine\nas an adjunct to usual care with haloperidol on duration\nof delirium and mortality in critically ill patients : A multi-\ncentre, double-blind, placebo-controlled randomised trial »,\nThe Lancet, 376(9755), p. 1829-1837.\n",
+      "text_sha256": "90974a7c41e0d7f5aceb54ba5e3541cfc43e7f7bfcbb7e994bac63c94638d53e"
+    },
+    {
+      "bbox": [
+        390.0,
+        392.03497314453125,
+        541.3651733398438,
+        418.6234436035156
+      ],
+      "block_id": "page-1121-block-0012",
+      "order": 12,
+      "text": "Villeneuve, S. & Belleville, S. (2010). « Réserve cognitive et\nchangements associés au vieillissement », Psychologie et\nneuropsychiatrie du vieillissement, 8(2), p. 133-140.\n",
+      "text_sha256": "8b1836ebc075d49dce46b8e6d6418ad60e3b28afd02a21a6718b772992512df4"
+    },
+    {
+      "bbox": [
+        390.0,
+        422.5849609375,
+        540.7700805664062,
+        458.3234558105469
+      ],
+      "block_id": "page-1121-block-0013",
+      "order": 13,
+      "text": "Weiner, M. F. & Lipton, A. M. (2009). The American\nPsychiatric Publishing Textbook of Alzheimer disease and\nother dementias, Washington, DC, American Psychiatric\nPublishing.\n",
+      "text_sha256": "3fd24654d141323805cd9965f14b883a10fee33b31ea583cc075f001bb1dac0c"
+    },
+    {
+      "bbox": [
+        390.0,
+        462.3349609375,
+        546.7474975585938,
+        498.0734558105469
+      ],
+      "block_id": "page-1121-block-0014",
+      "order": 14,
+      "text": "Weintraub, D. & Hurtig, H. I. (2007). « Presentation and\nmanagement of psychosis in Parkinson’s disease and\ndementia with Lewy bodies », American Journal of Psychia-\ntry, 164(10), p. 1491-1498.\n",
+      "text_sha256": "43a6cd977e5a9e733dd6baa17397b7e9c7be38e742f3d626e6adca6627151ff0"
+    },
+    {
+      "bbox": [
+        390.0,
+        502.03497314453125,
+        547.5560302734375,
+        537.7734375
+      ],
+      "block_id": "page-1121-block-0015",
+      "order": 15,
+      "text": "Wheaton, P.& al. (2011). « Impact of pharmacological treat-\nments on cognitive and behavioural outcome in the postacute\nstages of adult traumatic brain injury : A meta-analysis »,\nJournal of Clinical Psy chopharmacology, 31(6), p. 745-757.\n",
+      "text_sha256": "90717718c4f8910a274f984c7f40d5a079bca77858ee61d59abec8a887c65e3d"
+    },
+    {
+      "bbox": [
+        390.0,
+        541.7849731445312,
+        544.5543823242188,
+        577.5234375
+      ],
+      "block_id": "page-1121-block-0016",
+      "order": 16,
+      "text": "Wiederkehr, S. & al. (2008). « Comparability of the clinical\ndiagnostic criteria for vascular dementia : A critical review »,\nJournal of Neuropsychiatry and Clinical Neurosciences,\n20(2), p. 150-161.\n",
+      "text_sha256": "83c6bd9a2428d14e2f91df90ca340d680ffeb8e3a108d76c282b21051d1bd7b1"
+    },
+    {
+      "bbox": [
+        390.0,
+        581.4849853515625,
+        547.3475341796875,
+        617.2234497070312
+      ],
+      "block_id": "page-1121-block-0017",
+      "order": 17,
+      "text": "Yudofsky, S. C. & Hales, R. E. (2008). The American Psychia-\ntric Publishing Textbook of neuropsychiatry and behavioral\nneurosciences, 5e éd., Washington, DC, American Psychia-\ntric Publishing.\n",
+      "text_sha256": "4c2b09c75c97361a975e04af827f1984e4797395690b1285f797e86e7b3ed46f"
+    },
+    {
+      "bbox": [
+        390.0,
+        630.7203369140625,
+        545.947509765625,
+        678.1734619140625
+      ],
+      "block_id": "page-1121-block-0018",
+      "order": 18,
+      "text": "Chapitre 28\nAgence de la santé publique du Canada (2009). Suivi des mala-\ndies du cœur et des accidents vasculaires cérébraux au\nCanada, [en ligne], www.phac-aspc.gc.ca/publicat/2009/\ncvd-avc/index-fra.php.\n",
+      "text_sha256": "340f0b79281b5ab3ea48b1b6e27cf5f4fca61ad016f29d2b5b018887409f555d"
+    },
+    {
+      "bbox": [
+        390.0,
+        682.1349487304688,
+        545.8475341796875,
+        717.8734741210938
+      ],
+      "block_id": "page-1121-block-0019",
+      "order": 19,
+      "text": "Agence de santé publique du Canada. (2011). Résumé : estima-\ntions de la prévalence et de l’incidence du VIH au Canada,\n[en ligne], http://webqa.phac-aspc.gc.gc/aids-sida/\npublication/survreport/estimat2011-fra.php.\n",
+      "text_sha256": "c5797409a1d3349858e3bd86ca1b8bd66484186650bb90b083ce3de75ab28c46"
+    },
+    {
+      "bbox": [
+        219.0,
+        40.68496322631836,
+        362.5201110839844,
+        57.923439025878906
+      ],
+      "block_id": "page-1121-block-0020",
+      "order": 20,
+      "text": "Disease and Other Dementias, Arlington, VA, American\nPsychiatric Publishing, p. 71-83.\n",
+      "text_sha256": "e6b5418ad6475436942be417407b3bec31bf3044e0f1dea2fddf0480353932d8"
+    },
+    {
+      "bbox": [
+        219.0,
+        61.78496551513672,
+        374.63250732421875,
+        97.1234359741211
+      ],
+      "block_id": "page-1121-block-0021",
+      "order": 21,
+      "text": "Livingston, G. & al. (2005). « Systematic review of psycho-\nlogical approaches to the management of neuropsychiatric\nsymptoms of dementia », American Journal of Psychiatry,\n162(11), p. 1996-2021.\n",
+      "text_sha256": "528444f4fec41ec9aa21b4aebac431cb53522924d9bea86496d31338157641d1"
+    },
+    {
+      "bbox": [
+        219.0,
+        100.9349594116211,
+        374.55755615234375,
+        127.22344207763672
+      ],
+      "block_id": "page-1121-block-0022",
+      "order": 22,
+      "text": "Mackenzie, I. & al. (2010). « Nomenclature and nosology for\nneuropathologic subtypes of frontotemporal lobar degene-\nration : an update », Acta Neuropathologica, 119(1), p. 1-4.\n",
+      "text_sha256": "14e5c19c4d777110aea4c5e8fc01c80e7573adfccee6f7b49314234e8ae29ff0"
+    },
+    {
+      "bbox": [
+        219.0,
+        131.0849609375,
+        377.7652282714844,
+        166.42344665527344
+      ],
+      "block_id": "page-1121-block-0023",
+      "order": 23,
+      "text": "Malamut, B. L. & Ryan, L. M. (2008). « Dementia : Behavioural\nand cognitive aspects », dans Sirven, J. I. & Malamut, B. L.\n(dir.), Clinical Neurology of the Older Adult, Philadelphie, PA,\nLippincott, Williams & Wilkins, p. 318-338.\n",
+      "text_sha256": "cfd1cc6e1c3fbad14da6d729625f85f4ba1be495de5d871872c43a5350e55daa"
+    },
+    {
+      "bbox": [
+        219.0,
+        170.2849578857422,
+        368.552734375,
+        187.4734344482422
+      ],
+      "block_id": "page-1121-block-0024",
+      "order": 24,
+      "text": "Massoud, F. (2009). «La maladie d’Alzheimer, mise à jour\nen 2009 », Le Médecin du Québec, 44(4), p. 83-88.\n",
+      "text_sha256": "67805a7b238161066b8e4fc00b77cdaa0ca818ba9bd6154bc68ba8729a4051b2"
+    },
+    {
+      "bbox": [
+        219.0,
+        191.3349609375,
+        361.1175231933594,
+        217.62344360351562
+      ],
+      "block_id": "page-1121-block-0025",
+      "order": 25,
+      "text": "Massoud, F. & Léger, G. C. (2011). « Pharmacological\ntreatment of Alzheimer disease », Canadian Journal of\nPsychiatry, 56(10), p. 579-588.\n",
+      "text_sha256": "0c37893db19112485d71489b141ffedab141f1b334aaeca1d13553710788fcb4"
+    },
+    {
+      "bbox": [
+        219.0,
+        221.48497009277344,
+        367.175048828125,
+        247.7734375
+      ],
+      "block_id": "page-1121-block-0026",
+      "order": 26,
+      "text": "McKeith, I. G. & al. (2005). « Diagnosis and management\nof dementia with Lewy bodies : Third report of the DLB\nConsortium », Neurology, 65(12), p. 1863-1872.\n",
+      "text_sha256": "192939e6973f29fa4b3c259ce5b200c283736a8d11f875a4ba7360879748ef67"
+    },
+    {
+      "bbox": [
+        219.0,
+        251.63497924804688,
+        371.43255615234375,
+        295.97344970703125
+      ],
+      "block_id": "page-1121-block-0027",
+      "order": 27,
+      "text": "McKhann, G. M & al. (2011). « The diagnosis of dementia\ndue to Alzheimer’s disease : Recommendations from the\nNational Institute on Aging-Alzheimer’s Association work-\ngroups on diagnostic guidelines for Alzheimer’s disease »,\nAlzheimer’s & Dementia, 7, p. 263-269.\n",
+      "text_sha256": "9f713befc20c49780e8311ea9b91ca91f9be6f8608e1dfa3298b95f4b5bf83a9"
+    },
+    {
+      "bbox": [
+        219.0,
+        299.8349609375,
+        376.72998046875,
+        335.1734313964844
+      ],
+      "block_id": "page-1121-block-0028",
+      "order": 28,
+      "text": "Mendez, M. & al. (2007). « Preliminary Findings : Behavioral\nWorsening on Donepezil in Patients With Frontotemporal\nDementia », American Journal of Geriatric Psychiatry, 15(1),\np. 84-87.\n",
+      "text_sha256": "8aaa13608c67897247f8a8fb46e4786b369bb00c334f5bd29522a50ffd8d2c6c"
+    },
+    {
+      "bbox": [
+        219.0,
+        339.03497314453125,
+        370.8600158691406,
+        374.3234558105469
+      ],
+      "block_id": "page-1121-block-0029",
+      "order": 29,
+      "text": "Miller, B. L. (2009). « Basic clinical approaches to dia-\ngnosis », dans Miller, B. L. & Boeve, B. F., The Behavioural\nNeurology of Dementia, New York, Cambridge University\nPress, p. 1-6.\n",
+      "text_sha256": "6805e4f53926433a77c344f59362e313c858dd7dcf5624bb786b741671120f70"
+    },
+    {
+      "bbox": [
+        219.0,
+        378.1849670410156,
+        370.00067138671875,
+        404.47344970703125
+      ],
+      "block_id": "page-1121-block-0030",
+      "order": 30,
+      "text": "Morris, J. C. (1993). « The Clinical Dementia Rating Scale\n(CDR) : Current version and scoring rules », Neurology,\n43(11), p. 2412-2414.\n",
+      "text_sha256": "8f42d55faa3e2a3b12023c6cfed4dc4b1506a68f02a90d2fdf4321f88cbe32dc"
+    },
+    {
+      "bbox": [
+        219.0,
+        408.3349609375,
+        375.24749755859375,
+        443.6234436035156
+      ],
+      "block_id": "page-1121-block-0031",
+      "order": 31,
+      "text": "Nasreddine, Z. S. & al. (2005). « The Montreal Cognitive\nAssessment (MoCA) : A brief screening tool For Mild Cogni-\ntive Impairment », Journal of American Geriatrics Society,\n53(4), p. 695-699.\n",
+      "text_sha256": "aa22081d4f2389fc350ea46b37ff604dc1c551b15f5d014414f4f9b9e8e781a7"
+    },
+    {
+      "bbox": [
+        219.0,
+        447.4849548339844,
+        371.1025085449219,
+        482.8234558105469
+      ],
+      "block_id": "page-1121-block-0032",
+      "order": 32,
+      "text": "Olin, J. T. & al. (2001). « A pilot randomized trial of carba-\nmazepine for behavioral symptoms in treatment-resistant\noutpatients with Alzheimer disease », American Journal of\nGeriatric Psychiatry, 9(4), p. 400-405.\n",
+      "text_sha256": "dd3f324e4f8430a959255aa7e3a8b8eb1676a53c692b33d3fd0db06b8eafc745"
+    },
+    {
+      "bbox": [
+        219.0,
+        486.6849670410156,
+        375.27008056640625,
+        521.9734497070312
+      ],
+      "block_id": "page-1121-block-0033",
+      "order": 33,
+      "text": "Ozkan, B. & al. (2008). « Pharmacotherapy for inappropriate\nsexual behaviors in dementia : A systematic review of\nliterature », American Journal of Alzheimer’s disease and\nOther Dementias, 23(4), p. 344-354.\n",
+      "text_sha256": "d73fcdfe33427aefac4028f2dcba03a901982f3be9bf46da2db9a163364b0b64"
+    },
+    {
+      "bbox": [
+        219.0,
+        525.8349609375,
+        372.7300109863281,
+        561.1734619140625
+      ],
+      "block_id": "page-1121-block-0034",
+      "order": 34,
+      "text": "Pelland, C. & Trudel, J. F. (2009). «Atypical antipsychotic\nefcacy and safety in managing delirium : A systematic\nreview and critical analysis », Psychol Neuropsychiatr Vieil,\n7(2), p. 109-119.\n",
+      "text_sha256": "d3021217fd38d8478e167b31b60ccaeb0cededd06d34a3c30dd4caba3e12f9fc"
+    },
+    {
+      "bbox": [
+        219.0,
+        565.0349731445312,
+        367.6849060058594,
+        609.3734741210938
+      ],
+      "block_id": "page-1121-block-0035",
+      "order": 35,
+      "text": "Petersen, R. C. & al. (2001). « Practice parameter : Early\ndetection of dementia : Mild cognitive impairment (an\nevidence-based review). Report of the Quality Standards\nSubcommittee of the American Academy of Neurology »,\nNeurology, 56(9), p. 1133-1142.\n",
+      "text_sha256": "9b1fcf2f5b3905758e49e893b65a8361e1920e2a02bec3de94b538f60ed04964"
+    },
+    {
+      "bbox": [
+        219.0,
+        613.2349853515625,
+        371.8575134277344,
+        648.5734252929688
+      ],
+      "block_id": "page-1121-block-0036",
+      "order": 36,
+      "text": "Raina, P. & al. (2008). « Effectiveness of cholinesterase\ninhibitors and memantine for treating dementia : Evidence\nreview for a clinical practice guideline », Annals of Internal\nMedicine, 148(5), p. 379-397.\n",
+      "text_sha256": "46fdcc602d4170c0e9457018b4d2a14c4d2b3993b3a6cb931476d462a1d3355b"
+    },
+    {
+      "bbox": [
+        219.0,
+        652.4349975585938,
+        374.66253662109375,
+        678.7234497070312
+      ],
+      "block_id": "page-1121-block-0037",
+      "order": 37,
+      "text": "Rayner, S. G. & al. (2012). « Dexmedetomidine as adjunct\ntreatment for severe alcohol withdrawal in the ICU »,\nAnnals of Intensive Care, 2(1), p. 1-6.\n",
+      "text_sha256": "8f8726949703910aaafb70346788e0a2415f9be24f4f02ae4c62b3d4c8e0073c"
+    },
+    {
+      "bbox": [
+        219.0,
+        682.5349731445312,
+        374.197509765625,
+        717.8734741210938
+      ],
+      "block_id": "page-1121-block-0038",
+      "order": 38,
+      "text": "Rewilak, D. (2007). « Behavior management strategies »,\ndans Conn, D. K., & al. (dir.), Practical Psychiatry in the\nLong-Term Care Home, a Handbook for Staff, 3e éd., Cam-\nbridge, Royaume-Uni, Hogrefe Publishing, p. 217-237.\n",
+      "text_sha256": "80009cd257c120c570dc5b4dfc247520969b15fda1dde60078bc69e3cab675a3"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.68496322631836,
+        193.3982391357422,
+        67.22344207763672
+      ],
+      "block_id": "page-1121-block-0039",
+      "order": 39,
+      "text": "Goldmann, G. R. & al. (2008). « Cognitive impairment in\nParkinson’s disease and dementia with Lewy bodies : a\nspectrum of disease », Neurosignals, 16(1), p. 24-34.\n",
+      "text_sha256": "5336d48cb4667f6c602007c27fd54d2ccd73a6b4d43bf4919b1b87de4acb6dc1"
+    },
+    {
+      "bbox": [
+        48.0,
+        71.2349624633789,
+        203.36505126953125,
+        97.7734375
+      ],
+      "block_id": "page-1121-block-0040",
+      "order": 40,
+      "text": "Gorno-Tempini, M. L. & al. (2011). « Classication of primary\nprogressive aphasia and its variants », Neurology, 76(11),\np. 1006-1014.\n",
+      "text_sha256": "5192762a3afed8ce67f51be224635b6fa430bd0bbd0a2978ec9bbb5ccbd31cf3"
+    },
+    {
+      "bbox": [
+        48.0,
+        101.78496551513672,
+        205.3975067138672,
+        119.1234359741211
+      ],
+      "block_id": "page-1121-block-0041",
+      "order": 41,
+      "text": "Hachinski, V. C. & al. (1975). « Cerebral blood ow in demen-\ntia », Archives of Neurology, 32(9), p. 632-637.\n",
+      "text_sha256": "4d6edb9e1baab0dc5f3f02416f7302468fa09e5640d8767cab27717f17b68154"
+    },
+    {
+      "bbox": [
+        48.0,
+        123.13496398925781,
+        197.11508178710938,
+        149.67344665527344
+      ],
+      "block_id": "page-1121-block-0042",
+      "order": 42,
+      "text": "Haw, C. & al. (2009). « Dementia and suicidal behaviour :\nA review of the literature », International Psychogeriatric,\n21(3), p. 440-453.\n",
+      "text_sha256": "d236fa375de7e82a84631aea4577d28a15aa828d05ba2a215e5002b379d33204"
+    },
+    {
+      "bbox": [
+        48.0,
+        153.68496704101562,
+        206.51502990722656,
+        189.37344360351562
+      ],
+      "block_id": "page-1121-block-0043",
+      "order": 43,
+      "text": "Herrmann, N. & Gauthier, S. (2008). « Diagnosis and\ntreatment of dementia : 6. Management of severe Alzheimer\ndisease », Canadian Medical Association Journal, 179(12),\np. 1279-1287.\n",
+      "text_sha256": "b52e8dc9980fe294cd1e44ab58eb514b970cdd6e77b9d760bcb4134df12d7063"
+    },
+    {
+      "bbox": [
+        48.0,
+        193.3849639892578,
+        192.1300048828125,
+        229.12344360351562
+      ],
+      "block_id": "page-1121-block-0044",
+      "order": 44,
+      "text": "Herrmann, N. & Lanctôt, K. L. (2007). « Pharmacologic\nmanagement of neuropsychiatric symptoms of Alzhei-\nmer disease », Canadian Journal of Psychiatry, 52(10),\np. 630-646.\n",
+      "text_sha256": "7f710d5c646aa9713553324cc144125e37cc1bb366566e342f457eb9bbef0f36"
+    },
+    {
+      "bbox": [
+        48.0,
+        233.0849609375,
+        197.3975067138672,
+        277.97344970703125
+      ],
+      "block_id": "page-1121-block-0045",
+      "order": 45,
+      "text": "Herrmann, N. & al. (2013). « Pharmacological recommen-\ndations for the symptomatic treatment of dementia : The\nCanadian Consensus Conference on the Diagnosis and\nTreatment of Dementia 2012 », Alzheimer’s Research &\nTherapy, 5(suppl. 1), p. 5-19.\n",
+      "text_sha256": "0713eea7384ebe56c8de2ad7472f3a109151b8f7e2ea00d6bc2432e1507a11c2"
+    },
+    {
+      "bbox": [
+        48.0,
+        281.9849548339844,
+        199.92050170898438,
+        317.72344970703125
+      ],
+      "block_id": "page-1121-block-0046",
+      "order": 46,
+      "text": "Hoy, S. M. & Keating, G. M. (2011). « Dexmedetomidine :\nA review of its use for sedation in mechanically ventilated\npatients in an intensive care setting and for procedural\nsedation », Drugs, 71(11), p. 1481-1501.\n",
+      "text_sha256": "6d0ea60962a116a78eaeecc48cb9b18595c0317cdf8d6b8d6c4bc4826ffeac8c"
+    },
+    {
+      "bbox": [
+        48.0,
+        321.6849670410156,
+        205.14456176757812,
+        357.4234313964844
+      ],
+      "block_id": "page-1121-block-0047",
+      "order": 47,
+      "text": "Inouye, S. K. & al. (1990). « Clarifying confusion : The\nconfusion assessment method. A new method for detection\nof delirium », Annals of Internal Medicine, 113(12),\np. 941-948.\n",
+      "text_sha256": "db2d5d7c26745950697eb5e5690b53ab7b01d8b4197ab445688fc769672cc68d"
+    },
+    {
+      "bbox": [
+        48.0,
+        361.4349670410156,
+        205.59750366210938,
+        397.1234436035156
+      ],
+      "block_id": "page-1121-block-0048",
+      "order": 48,
+      "text": "Jellinger, K. A. (2006). « A view of early diagnosis of demen-\ntias from neuropathology », dans Herholz, K. & al. (dir.), The\nDementias, Early Diagnosis and Evaluation, New York, NY,\nTaylor & Francis Group, p. 311-428.\n",
+      "text_sha256": "5b1a10093fe923a4d0b2d07135f711c7e1a5e99b18b4c5eae696fe2c1c59fca9"
+    },
+    {
+      "bbox": [
+        48.0,
+        401.1349792480469,
+        205.6800079345703,
+        436.8734436035156
+      ],
+      "block_id": "page-1121-block-0049",
+      "order": 49,
+      "text": "Kales, H. C. & al. (2007). « Mortality risk in patients with\ndementia treated with antipsychotics versus other psychia-\ntric medications », American Journal of Psychiatry, 164(10),\np. 1568-1576.\n",
+      "text_sha256": "a350beaf6b00e75caa5639e853ea5a7c1fdc002ec8924c3165f441a01a5552f4"
+    },
+    {
+      "bbox": [
+        48.0,
+        440.8349609375,
+        198.07696533203125,
+        467.4234313964844
+      ],
+      "block_id": "page-1121-block-0050",
+      "order": 50,
+      "text": "Kaul, M. (2009). «HIV-1 associated dementia : Update on\npathological mechanisms and therapeutic approaches »,\nCurrent Opinions in Neurology, 22(3), p. 315-320.\n",
+      "text_sha256": "113d15b3c066b5b932a7b2b1e78f829d55a11b9692ea4f2cbf23f3f06d768409"
+    },
+    {
+      "bbox": [
+        48.0,
+        471.3849792480469,
+        199.68411254882812,
+        507.1234436035156
+      ],
+      "block_id": "page-1121-block-0051",
+      "order": 51,
+      "text": "Kivipelto, M. & al. (2006). « Risk score for the prediction of\ndementia risk in 20 years among middle aged people : A\nlongitudinal, population-based study »,Lancet Neurology,\n5(9), p. 735-741.\n",
+      "text_sha256": "3ba18bd2984e885180e274666bbd9eb4fcd13112973f12a757b086bac7adf404"
+    },
+    {
+      "bbox": [
+        48.0,
+        511.0849609375,
+        206.1475067138672,
+        546.8234252929688
+      ],
+      "block_id": "page-1121-block-0052",
+      "order": 52,
+      "text": "Knopman, D. (2011). « Alzheimer’s disease », dans Agronin,\nM. E. & Maletta, G. J. (dir.), Principles and Practice of Geria-\ntric Psychiatry, 2e éd., Philadelphie, PA, Lippincott Williams\n& Wilkins, p. 301-315.\n",
+      "text_sha256": "04a85c2800f9cc02345cded9a018efed6fbfac5d2ccf027a8ad583b6f6fea99f"
+    },
+    {
+      "bbox": [
+        48.0,
+        550.8349609375,
+        203.73458862304688,
+        577.3734741210938
+      ],
+      "block_id": "page-1121-block-0053",
+      "order": 53,
+      "text": "Kouri, R. P. & Philips-Nootens, S. (2003). « Le majeur inapte\net le refus catégorique de soins de santé : un concept pour\nle moins ambigu », Revue du Barreau, 63, p. 1-28.\n",
+      "text_sha256": "d3dcfdd5d32ca08b3ffd199086ca26c9706018512eed70a42cc2b0ce4473ebbc"
+    },
+    {
+      "bbox": [
+        48.0,
+        581.3849487304688,
+        200.76536560058594,
+        617.0734252929688
+      ],
+      "block_id": "page-1121-block-0054",
+      "order": 54,
+      "text": "Laforce, R. Jr. & Rabinovici, G. D. (2011). « Amyloid imaging in\nthe differential diagnosis of dementia : Review and potential\nclinical applications », Alzheimer’s Research & Therapy, 10(3),\np. 31-41.\n",
+      "text_sha256": "98d4f5e6c739aea46da23d24129d812a66ce4299b787ca783092df763dc5983c"
+    },
+    {
+      "bbox": [
+        48.0,
+        621.0849609375,
+        206.56500244140625,
+        656.8234252929688
+      ],
+      "block_id": "page-1121-block-0055",
+      "order": 55,
+      "text": "Lane, R. & al. (2008). « Synergistic effect of apolipoprotein E\nepsilon4 and butyrylcholinesterase K-variant on progression\nfrom mild cognitive impairment to Alzheimer’s disease »,\nPharmacogenetics and Genomics, 18(4), p. 289-298.\n",
+      "text_sha256": "252645ab4d931c975d60ad711237b6a789755ed234f151880fcfa9df775a2c7f"
+    },
+    {
+      "bbox": [
+        48.0,
+        660.7849731445312,
+        203.29750061035156,
+        687.3234252929688
+      ],
+      "block_id": "page-1121-block-0056",
+      "order": 56,
+      "text": "Levenson, J. L. (2011). The American Psychiatric Publishing\nTextbook of Psychosomatic Medicine, Arlington, VA, Ameri-\ncan Psychiatric Publishing.\n",
+      "text_sha256": "1d983635f84b71e19413eb1dbf20619170738dad90fea4a670455d3c19bc837c"
+    },
+    {
+      "bbox": [
+        48.0,
+        691.3349609375,
+        203.3975372314453,
+        717.8734741210938
+      ],
+      "block_id": "page-1121-block-0057",
+      "order": 57,
+      "text": "Lipton, A. M. & Rubin, C. D. (2009). « Medical evaluation\nand diagnosis », dans Weiner, M. F. & Lipton, A. M. (dir.),\nThe American Psychiatric Publishing Textbook of Alzheimer\n",
+      "text_sha256": "112a0c971aae9f4aa6c3b868eb6983b46366d3b53110602be6fc7473714a2a12"
+    }
+  ],
+  "coordinates_sha256": "ac1ee9408a66426fa61551808646d28eb6861ed413f6b7cbeb09e028efcc242b",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1121",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "R24\nRéférences\nRichards, B. A. & al. (2009). « Patterns of cortical thinning\nin Alzheimer’s disease and frontotemporal dementia »,\nNeurobiology of Aging, 30(10), p. 1626-1636.\nRobillard, A. (2007). «Clinical diagnosis of dementia »,\nAlzheimer’s & Dementia, 3(4), p. 292-298.\nSiddiqi, N. & al. (2007). « Interventions for preventing deli-\nrium in hospitalised patients », Cochrane Database System\nReview, 18(2), p. 1-3.\nSperling, R. A. & al. (2011). « Toward dening the preclinical\nstages of Alzheimer’s disease : Recommen dations from the\nNational Institute on Aging-Alzheimer’s Association work-\ngroups on diagnostic guidelines for Alzheimer’s disease »,\nAlzheimer’s & Dementia, 7, p. 280-292.\nSunderland, T. & al. (1989). « Clock drawing in Alzheimer’s\ndisease : A novel measure of dementia severity », Journal\nof the American Geriatrics Society, 37(8), p. 725-729.\nThomas, A. J. & O’Brien, J. T. (2008). « Depression and\ncognition in older adults », Current Opinions in Psychiatry,\n21(8), p. 8-13.\nThorpe, L. (2009). « Dépression ou démence ? Comment\naborder l’évaluation du patient », Revue canadienne de la\nmaladie d’Alzheimer et autres démences, (9), p. 17-21.\nTroisième conférence canadienne de consensus sur le diagnostic\net le traitement de la démence. (2007). 146 recommandations\napprouvées, verson nale, [en ligne], www.cccdtd.ca/pdfs/\nRecommandations_approuvees_CCCDTD_2007.pdf.\nTrzepacz, P. T. & al. (2005). « Delirium », dans Levenson, J.\nL. (dir.), The American Psychiatric Publishing Textbook of\nPsychosomatic Medicine, 2e éd., Arlington, VA, American\nPsychiatric Publishing, p. 71-114.\nVan Eijk, M. M. & Roes, K. C. (2010). « Effect of rivastigmine\nas an adjunct to usual care with haloperidol on duration\nof delirium and mortality in critically ill patients : A multi-\ncentre, double-blind, placebo-controlled randomised trial »,\nThe Lancet, 376(9755), p. 1829-1837.\nVilleneuve, S. & Belleville, S. (2010). « Réserve cognitive et\nchangements associés au vieillissement », Psychologie et\nneuropsychiatrie du vieillissement, 8(2), p. 133-140.\nWeiner, M. F. & Lipton, A. M. (2009). The American\nPsychiatric Publishing Textbook of Alzheimer disease and\nother dementias, Washington, DC, American Psychiatric\nPublishing.\nWeintraub, D. & Hurtig, H. I. (2007). « Presentation and\nmanagement of psychosis in Parkinson’s disease and\ndementia with Lewy bodies », American Journal of Psychia-\ntry, 164(10), p. 1491-1498.\nWheaton, P.& al. (2011). « Impact of pharmacological treat-\nments on cognitive and behavioural outcome in the postacute\nstages of adult traumatic brain injury : A meta-analysis »,\nJournal of Clinical Psy chopharmacology, 31(6), p. 745-757.\nWiederkehr, S. & al. (2008). « Comparability of the clinical\ndiagnostic criteria for vascular dementia : A critical review »,\nJournal of Neuropsychiatry and Clinical Neurosciences,\n20(2), p. 150-161.\nYudofsky, S. C. & Hales, R. E. (2008). The American Psychia-\ntric Publishing Textbook of neuropsychiatry and behavioral\nneurosciences, 5e éd., Washington, DC, American Psychia-\ntric Publishing.\nChapitre 28\nAgence de la santé publique du Canada (2009). Suivi des mala-\ndies du cœur et des accidents vasculaires cérébraux au\nCanada, [en ligne], www.phac-aspc.gc.ca/publicat/2009/\ncvd-avc/index-fra.php.\nAgence de santé publique du Canada. (2011). Résumé : estima-\ntions de la prévalence et de l’incidence du VIH au Canada,\n[en ligne], http://webqa.phac-aspc.gc.gc/aids-sida/\npublication/survreport/estimat2011-fra.php.\nDisease and Other Dementias, Arlington, VA, American\nPsychiatric Publishing, p. 71-83.\nLivingston, G. & al. (2005). « Systematic review of psycho-\nlogical approaches to the management of neuropsychiatric\nsymptoms of dementia », American Journal of Psychiatry,\n162(11), p. 1996-2021.\nMackenzie, I. & al. (2010). « Nomenclature and nosology for\nneuropathologic subtypes of frontotemporal lobar degene-\nration : an update », Acta Neuropathologica, 119(1), p. 1-4.\nMalamut, B. L. & Ryan, L. M. (2008). « Dementia : Behavioural\nand cognitive aspects », dans Sirven, J. I. & Malamut, B. L.\n(dir.), Clinical Neurology of the Older Adult, Philadelphie, PA,\nLippincott, Williams & Wilkins, p. 318-338.\nMassoud, F. (2009). «La maladie d’Alzheimer, mise à jour\nen 2009 », Le Médecin du Québec, 44(4), p. 83-88.\nMassoud, F. & Léger, G. C. (2011). « Pharmacological\ntreatment of Alzheimer disease », Canadian Journal of\nPsychiatry, 56(10), p. 579-588.\nMcKeith, I. G. & al. (2005). « Diagnosis and management\nof dementia with Lewy bodies : Third report of the DLB\nConsortium », Neurology, 65(12), p. 1863-1872.\nMcKhann, G. M & al. (2011). « The diagnosis of dementia\ndue to Alzheimer’s disease : Recommendations from the\nNational Institute on Aging-Alzheimer’s Association work-\ngroups on diagnostic guidelines for Alzheimer’s disease »,\nAlzheimer’s & Dementia, 7, p. 263-269.\nMendez, M. & al. (2007). « Preliminary Findings : Behavioral\nWorsening on Donepezil in Patients With Frontotemporal\nDementia », American Journal of Geriatric Psychiatry, 15(1),\np. 84-87.\nMiller, B. L. (2009). « Basic clinical approaches to dia-\ngnosis », dans Miller, B. L. & Boeve, B. F., The Behavioural\nNeurology of Dementia, New York, Cambridge University\nPress, p. 1-6.\nMorris, J. C. (1993). « The Clinical Dementia Rating Scale\n(CDR) : Current version and scoring rules », Neurology,\n43(11), p. 2412-2414.\nNasreddine, Z. S. & al. (2005). « The Montreal Cognitive\nAssessment (MoCA) : A brief screening tool For Mild Cogni-\ntive Impairment », Journal of American Geriatrics Society,\n53(4), p. 695-699.\nOlin, J. T. & al. (2001). « A pilot randomized trial of carba-\nmazepine for behavioral symptoms in treatment-resistant\noutpatients with Alzheimer disease », American Journal of\nGeriatric Psychiatry, 9(4), p. 400-405.\nOzkan, B. & al. (2008). « Pharmacotherapy for inappropriate\nsexual behaviors in dementia : A systematic review of\nliterature », American Journal of Alzheimer’s disease and\nOther Dementias, 23(4), p. 344-354.\nPelland, C. & Trudel, J. F. (2009). «Atypical antipsychotic\nefcacy and safety in managing delirium : A systematic\nreview and critical analysis », Psychol Neuropsychiatr Vieil,\n7(2), p. 109-119.\nPetersen, R. C. & al. (2001). « Practice parameter : Early\ndetection of dementia : Mild cognitive impairment (an\nevidence-based review). Report of the Quality Standards\nSubcommittee of the American Academy of Neurology »,\nNeurology, 56(9), p. 1133-1142.\nRaina, P. & al. (2008). « Effectiveness of cholinesterase\ninhibitors and memantine for treating dementia : Evidence\nreview for a clinical practice guideline », Annals of Internal\nMedicine, 148(5), p. 379-397.\nRayner, S. G. & al. (2012). « Dexmedetomidine as adjunct\ntreatment for severe alcohol withdrawal in the ICU »,\nAnnals of Intensive Care, 2(1), p. 1-6.\nRewilak, D. (2007). « Behavior management strategies »,\ndans Conn, D. K., & al. (dir.), Practical Psychiatry in the\nLong-Term Care Home, a Handbook for Staff, 3e éd., Cam-\nbridge, Royaume-Uni, Hogrefe Publishing, p. 217-237.\nGoldmann, G. R. & al. (2008). « Cognitive impairment in\nParkinson’s disease and dementia with Lewy bodies : a\nspectrum of disease », Neurosignals, 16(1), p. 24-34.\nGorno-Tempini, M. L. & al. (2011). « Classication of primary\nprogressive aphasia and its variants », Neurology, 76(11),\np. 1006-1014.\nHachinski, V. C. & al. (1975). « Cerebral blood ow in demen-\ntia », Archives of Neurology, 32(9), p. 632-637.\nHaw, C. & al. (2009). « Dementia and suicidal behaviour :\nA review of the literature », International Psychogeriatric,\n21(3), p. 440-453.\nHerrmann, N. & Gauthier, S. (2008). « Diagnosis and\ntreatment of dementia : 6. Management of severe Alzheimer\ndisease », Canadian Medical Association Journal, 179(12),\np. 1279-1287.\nHerrmann, N. & Lanctôt, K. L. (2007). « Pharmacologic\nmanagement of neuropsychiatric symptoms of Alzhei-\nmer disease », Canadian Journal of Psychiatry, 52(10),\np. 630-646.\nHerrmann, N. & al. (2013). « Pharmacological recommen-\ndations for the symptomatic treatment of dementia : The\nCanadian Consensus Conference on the Diagnosis and\nTreatment of Dementia 2012 », Alzheimer’s Research &\nTherapy, 5(suppl. 1), p. 5-19.\nHoy, S. M. & Keating, G. M. (2011). « Dexmedetomidine :\nA review of its use for sedation in mechanically ventilated\npatients in an intensive care setting and for procedural\nsedation », Drugs, 71(11), p. 1481-1501.\nInouye, S. K. & al. (1990). « Clarifying confusion : The\nconfusion assessment method. A new method for detection\nof delirium », Annals of Internal Medicine, 113(12),\np. 941-948.\nJellinger, K. A. (2006). « A view of early diagnosis of demen-\ntias from neuropathology », dans Herholz, K. & al. (dir.), The\nDementias, Early Diagnosis and Evaluation, New York, NY,\nTaylor & Francis Group, p. 311-428.\nKales, H. C. & al. (2007). « Mortality risk in patients with\ndementia treated with antipsychotics versus other psychia-\ntric medications », American Journal of Psychiatry, 164(10),\np. 1568-1576.\nKaul, M. (2009). «HIV-1 associated dementia : Update on\npathological mechanisms and therapeutic approaches »,\nCurrent Opinions in Neurology, 22(3), p. 315-320.\nKivipelto, M. & al. (2006). « Risk score for the prediction of\ndementia risk in 20 years among middle aged people : A\nlongitudinal, population-based study »,Lancet Neurology,\n5(9), p. 735-741.\nKnopman, D. (2011). « Alzheimer’s disease », dans Agronin,\nM. E. & Maletta, G. J. (dir.), Principles and Practice of Geria-\ntric Psychiatry, 2e éd., Philadelphie, PA, Lippincott Williams\n& Wilkins, p. 301-315.\nKouri, R. P. & Philips-Nootens, S. (2003). « Le majeur inapte\net le refus catégorique de soins de santé : un concept pour\nle moins ambigu », Revue du Barreau, 63, p. 1-28.\nLaforce, R. Jr. & Rabinovici, G. D. (2011). « Amyloid imaging in\nthe differential diagnosis of dementia : Review and potential\nclinical applications », Alzheimer’s Research & Therapy, 10(3),\np. 31-41.\nLane, R. & al. (2008). « Synergistic effect of apolipoprotein E\nepsilon4 and butyrylcholinesterase K-variant on progression\nfrom mild cognitive impairment to Alzheimer’s disease »,\nPharmacogenetics and Genomics, 18(4), p. 289-298.\nLevenson, J. L. (2011). The American Psychiatric Publishing\nTextbook of Psychosomatic Medicine, Arlington, VA, Ameri-\ncan Psychiatric Publishing.\nLipton, A. M. & Rubin, C. D. (2009). « Medical evaluation\nand diagnosis », dans Weiner, M. F. & Lipton, A. M. (dir.),\nThe American Psychiatric Publishing Textbook of Alzheimer\n",
+  "raw_text_sha256": "9307605e81833728c14b8abfc616bd24f6d13b7cfc911a4f2333b623aa3882b9",
+  "source_page_display": 1122,
+  "source_page_index": 1121
+}

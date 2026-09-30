@@ -1,0 +1,485 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:mindcare:psychiatrie-clinique-tome-2:canonical-v2.1-tome2",
+  "title": "MindCare canonical v2.1 — Psychiatrie clinique tome 2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "book_id",
+    "source_version",
+    "ingestion_version",
+    "language",
+    "kind",
+    "structural_path",
+    "source_span",
+    "source_page_index",
+    "source_page_index_end",
+    "source_page_display",
+    "source_page_display_end",
+    "printed_page_kind",
+    "mapping_status",
+    "xref_status",
+    "validation_status",
+    "provenance"
+  ],
+  "anyOf": [
+    {
+      "required": [
+        "record_id"
+      ]
+    },
+    {
+      "required": [
+        "unit_id"
+      ]
+    }
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "canonical-v2.1-tome2"
+    },
+    "book_id": {
+      "const": "psychiatrie-clinique-tome-2-2016-tc-media"
+    },
+    "source_version": {
+      "const": "sha256:22fc03a89c7676559ddaa306b272116fb15119500a8c91667565ee31e80f9f76"
+    },
+    "ingestion_version": {
+      "const": "canonical-v2.1-tome2"
+    },
+    "language": {
+      "const": "fr"
+    },
+    "record_id": {
+      "type": "string",
+      "pattern": "^[a-z_]+:[0-9a-f]{64}$"
+    },
+    "unit_id": {
+      "type": "string",
+      "pattern": "^[a-z_]+:[0-9a-f]{64}$"
+    },
+    "kind": {
+      "type": "string",
+      "minLength": 1
+    },
+    "structural_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_span": {
+      "type": "string",
+      "minLength": 1
+    },
+    "occurrence": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "content_type": {
+      "type": "string",
+      "enum": [
+        "chapter_opening",
+        "heading",
+        "definition",
+        "prose",
+        "list",
+        "clinical_case",
+        "box",
+        "table",
+        "figure",
+        "algorithm",
+        "recommendation",
+        "diagnostic_criteria",
+        "differential",
+        "investigation",
+        "scale",
+        "medication_statement",
+        "reference",
+        "bibliography",
+        "index_entry",
+        "credits",
+        "back_matter"
+      ]
+    },
+    "title": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "parent_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "preceding_context_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "following_context_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "semantic_type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "confidence": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1
+    },
+    "extraction_status": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_page_index": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 825
+    },
+    "source_page_index_end": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 825
+    },
+    "source_page_display": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 826
+    },
+    "source_page_display_end": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 826
+    },
+    "printed_page_number": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "printed_page_number_end": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "printed_page_label": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "printed_page_label_end": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "printed_page_kind": {
+      "type": "string",
+      "enum": [
+        "front_matter",
+        "body",
+        "references",
+        "author_index",
+        "medication_index",
+        "subject_index",
+        "credits",
+        "cover",
+        "blank",
+        "unknown"
+      ]
+    },
+    "mapping_status": {
+      "type": "string",
+      "enum": [
+        "certain",
+        "inferred",
+        "uncertain",
+        "missing",
+        "not_applicable"
+      ]
+    },
+    "mapping_anchor": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "mapping_evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_page_index",
+        "text_span",
+        "extraction_version"
+      ],
+      "properties": {
+        "source_page_index": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 825
+        },
+        "text_span": {
+          "type": "string",
+          "minLength": 1
+        },
+        "extraction_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "observed_label": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        }
+      }
+    },
+    "raw_text": {
+      "type": "string"
+    },
+    "raw_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "reading_text": {
+      "type": "string"
+    },
+    "repair_references": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "source_page_index_start": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 825
+    },
+    "source_page_display_start": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 826
+    },
+    "printed_page_start": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "printed_page_end": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "mapping_status_start": {
+      "type": "string",
+      "enum": [
+        "certain",
+        "inferred",
+        "uncertain",
+        "missing",
+        "not_applicable"
+      ]
+    },
+    "mapping_status_end": {
+      "type": "string",
+      "enum": [
+        "certain",
+        "inferred",
+        "uncertain",
+        "missing",
+        "not_applicable"
+      ]
+    },
+    "source_block_references": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "block_index"
+        ],
+        "properties": {
+          "block_index": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "bbox": {
+            "type": "array",
+            "minItems": 4,
+            "maxItems": 4,
+            "items": {
+              "type": "number"
+            }
+          },
+          "text_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        }
+      }
+    },
+    "xref_status": {
+      "type": "string",
+      "enum": [
+        "not_applicable",
+        "resolved",
+        "unresolved",
+        "unresolved_external",
+        "ambiguous"
+      ]
+    },
+    "xref_targets": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "validation_status": {
+      "type": "string",
+      "enum": [
+        "auto_ok",
+        "needs_review",
+        "blocked",
+        "approved"
+      ]
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "book_id",
+        "source_version",
+        "ingestion_version",
+        "extractor",
+        "extractor_version",
+        "source_page_indices",
+        "structural_path",
+        "source_span",
+        "host_record_id",
+        "raw_passage_reference",
+        "repair_references",
+        "extraction_status",
+        "mapping_status",
+        "validation_status"
+      ],
+      "properties": {
+        "book_id": {
+          "const": "psychiatrie-clinique-tome-2-2016-tc-media"
+        },
+        "source_version": {
+          "const": "sha256:22fc03a89c7676559ddaa306b272116fb15119500a8c91667565ee31e80f9f76"
+        },
+        "ingestion_version": {
+          "const": "canonical-v2.1-tome2"
+        },
+        "extractor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "extractor_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_page_indices": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 825
+          },
+          "uniqueItems": true
+        },
+        "structural_path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_span": {
+          "type": "string",
+          "minLength": 1
+        },
+        "host_record_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "raw_passage_reference": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "repair_references": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "extraction_status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mapping_status": {
+          "type": "string",
+          "enum": [
+            "certain",
+            "inferred",
+            "uncertain",
+            "missing",
+            "not_applicable"
+          ]
+        },
+        "validation_status": {
+          "type": "string",
+          "enum": [
+            "auto_ok",
+            "needs_review",
+            "blocked",
+            "approved"
+          ]
+        }
+      }
+    },
+    "data": {
+      "type": "object"
+    }
+  }
+}

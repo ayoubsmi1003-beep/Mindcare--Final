@@ -1,0 +1,352 @@
+{
+  "block_sequence_sha256": "118295a782215b074ce8bdd9b03e9d7a47ca1ee90344ae537bb91ee6b44f5f68",
+  "blocks": [
+    {
+      "bbox": [
+        381.25,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0398-block-0001",
+      "order": 1,
+      "text": "Chapitre 18\nTroubles bipolaires\n381\n",
+      "text_sha256": "23d298d7a9754f0d818ca2d0245f4f458ab85183b64be5cd10015b3ad653f4e0"
+    },
+    {
+      "bbox": [
+        56.10000228881836,
+        115.852294921875,
+        501.0042419433594,
+        128.22006225585938
+      ],
+      "block_id": "page-0398-block-0002",
+      "order": 2,
+      "text": "TABLEAU 18.4 Critères diagnostiques de l’épisode maniaque ou hypomaniaque, avec caractéristiques mixtes\n",
+      "text_sha256": "4568b96f00e64047ae534a155c86f953617fd83bd93f51d1b3ccf65133d3fa8b"
+    },
+    {
+      "bbox": [
+        166.60000610351562,
+        134.4241180419922,
+        449.13800048828125,
+        145.0002899169922
+      ],
+      "block_id": "page-0398-block-0003",
+      "order": 3,
+      "text": "DSM-5\nDSM-IV-TR\n",
+      "text_sha256": "67d368c78be7842a2bc99b149901566bcadf3c9d62623ea48bafcc32b3563ffb"
+    },
+    {
+      "bbox": [
+        88.75,
+        150.32286071777344,
+        453.41400146484375,
+        169.34239196777344
+      ],
+      "block_id": "page-0398-block-0004",
+      "order": 4,
+      "text": "396.6_ (F31.6) Épisode maniaque ou hypomaniaque,\navec caractéristiques mixtes\nÉpisode mixte\n",
+      "text_sha256": "52a94ebfdc489725e728707b3100e0ae8b139d078b3b6b1f60aa8a520a6d6f2c"
+    },
+    {
+      "bbox": [
+        58.10000228881836,
+        174.35195922851562,
+        271.3039855957031,
+        184.17813110351562
+      ],
+      "block_id": "page-0398-block-0005",
+      "order": 5,
+      "text": "A. Les critères complets sont réunis pour un épisode maniaque ou\n",
+      "text_sha256": "7424bc41e762ce7502cb236b8f5fcbfd1e2cb92def18929153221b23462992a2"
+    },
+    {
+      "bbox": [
+        66.9000015258789,
+        184.35195922851562,
+        300.68658447265625,
+        342.1781311035156
+      ],
+      "block_id": "page-0398-block-0006",
+      "order": 6,
+      "text": "hypomaniaque et au moins trois des symptômes suivants sont présents\npendant la plupart des jours au cours de l’épisode maniaque ou hypo-\nmaniaque actuel ou le plus récent :\n1. Dysphorie ou humeur dépressive au premier plan, signalée par la personne\n(p. ex., se sent triste ou vide) ou observée par les autres (p. ex., pleure).\n2. Diminution de l’intérêt ou du plaisir pour toutes ou presque toutes les\nactivités (signalée par la personne ou observée par les autres).\n3. Ralentissement psychomoteur presque tous les jours (constaté par les\nautres, non limité à un sentiment subjectif de ralentissement intérieur).\n4. Fatigue ou perte d’énergie.\n5. Sentiment de dévalorisation ou de culpabilité excessive ou inappropriée\n(pas seulement se reprocher ou se sentir coupable d’être malade).\n6. Pensées de mort récurrentes (pas seulement une peur de mourir),\nidées suicidaires récurrentes sans plan précis, tentative de suicide\nou plan précis pour se suicider.\n",
+      "text_sha256": "eb9652eba19410bf07b29dcd355874f90b4705237604e3c6f7f6506dbeef1559"
+    },
+    {
+      "bbox": [
+        308.1000061035156,
+        174.35195922851562,
+        531.9358520507812,
+        184.17813110351562
+      ],
+      "block_id": "page-0398-block-0007",
+      "order": 7,
+      "text": "A. Les critères sont réunis à la fois pour un épisode maniaque et pour\n",
+      "text_sha256": "672e6b98cbf79ff608201cd82f7fd4be1edc61017a3067af16cf72816ba7707a"
+    },
+    {
+      "bbox": [
+        318.95001220703125,
+        184.35195922851562,
+        541.4930419921875,
+        204.17813110351562
+      ],
+      "block_id": "page-0398-block-0008",
+      "order": 8,
+      "text": "un épisode dépressif majeur (à l’exception du critère de durée) et cela\npresque tous les jours pendant au moins une semaine.\n",
+      "text_sha256": "f0471f799bf3eb6946ee8cce7395cca0a98142ac0525f2424a5d5b54aeaccfa9"
+    },
+    {
+      "bbox": [
+        58.10000228881836,
+        348.7228698730469,
+        222.25314331054688,
+        358.7424011230469
+      ],
+      "block_id": "page-0398-block-0009",
+      "order": 9,
+      "text": "Épisode dépressif, avec caractéristiques mixtes\n",
+      "text_sha256": "4061f2036081f0ebb28cfeb39845bb9a9062498c4c3c3171bd8691db1b86dd4d"
+    },
+    {
+      "bbox": [
+        58.10000228881836,
+        365.20196533203125,
+        296.135009765625,
+        375.02813720703125
+      ],
+      "block_id": "page-0398-block-0010",
+      "order": 10,
+      "text": "A. Les critères complets sont réunis pour un épisode dépressif caractérisé\n",
+      "text_sha256": "80866e6d2efafab4199e81fa450ea65fbe2ee9e9f1002c2d3327bc7dcca9607e"
+    },
+    {
+      "bbox": [
+        67.0,
+        375.20196533203125,
+        301.1060485839844,
+        554.0281372070312
+      ],
+      "block_id": "page-0398-block-0011",
+      "order": 11,
+      "text": "et au moins trois des symptômes maniaques/hypomaniaques suivants\nsont présents la plupart des jours au cours de l’épisode dépressif actuel\nou le plus récent :\n1. Humeur élevée ou expansive.\n2. Augmentation de l’estime de soi ou idées de grandeur.\n3. Plus grande communicabilité que d’habitude ou désir constant de parler.\n4. Fuite des idées ou sensations subjectives que les pensées délent.\n5. Augmentation de l’énergie ou de l’activité orientée vers un but (social,\nprofessionnel, scolaire ou sexuel).\n6. Engagement augmenté ou excessif dans des activités à potentiel\nélevé de conséquences dommageables (p. ex., la personne se\nlance sans retenue dans des achats inconsidérés, des conduites\nsexuelles inconséquentes ou des investissements commerciaux\ndéraisonnables).\n7. Réduction du besoin de sommeil (p. ex., le sujet se sent reposé en\ndépit d’une réduction du temps de sommeil par rapport à la durée\nhabituelle ; à distinguer d’une insomnie).\n",
+      "text_sha256": "778ae7b022f843c3844eb3fa650162c667a20fc5721299d68905f187331d7077"
+    },
+    {
+      "bbox": [
+        308.1000061035156,
+        365.20196533203125,
+        526.3473510742188,
+        375.02813720703125
+      ],
+      "block_id": "page-0398-block-0012",
+      "order": 12,
+      "text": "A. Les critères réunis à la fois pour un épisode maniaque et pour un\n",
+      "text_sha256": "f929639a3c8689bd2b2971deac6a1d3b66e4315c83da63b779916262d1173160"
+    },
+    {
+      "bbox": [
+        318.95001220703125,
+        375.20196533203125,
+        531.5048828125,
+        395.02813720703125
+      ],
+      "block_id": "page-0398-block-0013",
+      "order": 13,
+      "text": "épisode dépressif majeur (à l’exception du critère de durée) et cela\npresque tous les jours pendant au moins une semaine.\n",
+      "text_sha256": "bc2c6772ef7e86464f7b108c8d5a1e6a6b486e4dd1c05657eb6a4d027f690c32"
+    },
+    {
+      "bbox": [
+        58.10000228881836,
+        558.6519775390625,
+        299.66827392578125,
+        568.4781494140625
+      ],
+      "block_id": "page-0398-block-0014",
+      "order": 14,
+      "text": "B. Les symptômes mixtes sont manifestes pour les autres et représentent\n",
+      "text_sha256": "68f546d8eb14afff8bd600b945ed3b163940530650772383572ee35500af6afb"
+    },
+    {
+      "bbox": [
+        68.80000305175781,
+        568.6519775390625,
+        298.5998229980469,
+        578.4781494140625
+      ],
+      "block_id": "page-0398-block-0015",
+      "order": 15,
+      "text": "un changement par rapport au comportement habituel de la personne.\n",
+      "text_sha256": "49399b5600a40c50652a7700de540e57006bd7fc65547cec5ca5eda3eac3fb6c"
+    },
+    {
+      "bbox": [
+        308.1000061035156,
+        558.6519775390625,
+        534.7272338867188,
+        568.4781494140625
+      ],
+      "block_id": "page-0398-block-0016",
+      "order": 16,
+      "text": "B. La perturbation de l’humeur est sufsamment sévère pour entraîner\n",
+      "text_sha256": "1634f15cab47c48208985a9b64e3f78a860fb6a8088c30f631ba3dfde6998b8d"
+    },
+    {
+      "bbox": [
+        58.10000228881836,
+        568.6519775390625,
+        548.3970336914062,
+        608.4781494140625
+      ],
+      "block_id": "page-0398-block-0017",
+      "order": 17,
+      "text": "une altération marquée du fonctionnement professionnel, des activités\nsociales ou des relations interpersonnelles, ou pour nécessiter l’hospita-\nlisation an de prévenir des conséquences dommageables pour le sujet\nou pour autrui, ou il existe des caractéristiques psychotiques.\nC. Pour les personnes dont les symptômes répondent simultanément aux\n",
+      "text_sha256": "9bf852c8cc7a16d8391f56fc310547b747c4b519662092ba19b108ae2c166a8d"
+    },
+    {
+      "bbox": [
+        69.0999984741211,
+        597.8519897460938,
+        281.7535400390625,
+        617.6781616210938
+      ],
+      "block_id": "page-0398-block-0018",
+      "order": 18,
+      "text": "critères d’un épisode maniaque et dépressif, le diagnostic est celui\nd’épisode maniaque avec caractéristiques mixtes.\n",
+      "text_sha256": "26362c87fe616a66142c603f29e50c3418c394abebce3e9b0c50c25d945686b9"
+    },
+    {
+      "bbox": [
+        58.10000228881836,
+        622.3019409179688,
+        300.4012451171875,
+        632.1281127929688
+      ],
+      "block_id": "page-0398-block-0019",
+      "order": 19,
+      "text": "D. Les symptômes mixtes ne sont pas imputables aux effets physiologiques\n",
+      "text_sha256": "1a2e5df9200bd70187ee42ff78a0f2fb7c6c3bb949bc0898248001424fe6e01f"
+    },
+    {
+      "bbox": [
+        69.25,
+        632.3019409179688,
+        289.0470275878906,
+        652.1281127929688
+      ],
+      "block_id": "page-0398-block-0020",
+      "order": 20,
+      "text": "d’une substance (p. ex., une substance donnant lieu à abus, médica-\nment, autre traitement).\n",
+      "text_sha256": "c249652016c780967d6e279110fad518dd1b6d77bf8c6d5d4d7c14266972fe15"
+    },
+    {
+      "bbox": [
+        308.1000061035156,
+        622.3019409179688,
+        547.4784545898438,
+        632.1281127929688
+      ],
+      "block_id": "page-0398-block-0021",
+      "order": 21,
+      "text": "C. Les symptômes ne sont pas dus aux effets physiologiques directs d’une\n",
+      "text_sha256": "e473598be24b62162a3a0e24d326da844105bdf8641ca5270b11ec18ddc29fb6"
+    },
+    {
+      "bbox": [
+        319.1000061035156,
+        632.3019409179688,
+        547.8682250976562,
+        652.1281127929688
+      ],
+      "block_id": "page-0398-block-0022",
+      "order": 22,
+      "text": "substance (p. ex., substance donnant lieu à abus, médicament ou autre\ntraitement) ou d’une affection médicale générale (p. ex., hyperthyroïdie).\n",
+      "text_sha256": "f881c64ce0c6e22eb18422b0686160502eb7c18eee7a2accab4583b4193d0804"
+    },
+    {
+      "bbox": [
+        54.10000228881836,
+        658.890625,
+        212.25669860839844,
+        667.7588500976562
+      ],
+      "block_id": "page-0398-block-0023",
+      "order": 23,
+      "text": "Sources : APA (2015), p. 175-176 ; APA (2004), p. 421.\n",
+      "text_sha256": "c6c4c0238aacc579ec2294e955d6655d384e9e2515987f96b685ae237ad67691"
+    },
+    {
+      "bbox": [
+        54.10000228881836,
+        673.890625,
+        535.3306274414062,
+        700.625
+      ],
+      "block_id": "page-0398-block-0024",
+      "order": 24,
+      "text": "Traduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\n",
+      "text_sha256": "d1e2a281d01f1237f716bfb933581f8135592b601f1b1579862a0656634f5460"
+    },
+    {
+      "bbox": [
+        54.10000228881836,
+        706.890625,
+        553.9320068359375,
+        724.625
+      ],
+      "block_id": "page-0398-block-0025",
+      "order": 25,
+      "text": "Traduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\n",
+      "text_sha256": "cbaf74623581d335442980f66ae048c6f58e3db311890ed7cd9feabfdd0d127b"
+    },
+    {
+      "bbox": [
+        54.0,
+        39.63300704956055,
+        115.50300598144531,
+        54.10566329956055
+      ],
+      "block_id": "page-0398-block-0026",
+      "order": 26,
+      "text": "États mixtes\n",
+      "text_sha256": "b9eb103d37534db3c449eb7ce3d9c581af5b82e58aa9fc620e6b198355f4a81e"
+    },
+    {
+      "bbox": [
+        54.0,
+        54.76581954956055,
+        296.98919677734375,
+        99.75849914550781
+      ],
+      "block_id": "page-0398-block-0027",
+      "order": 27,
+      "text": "Les états mixtes sont des syndromes fréquemment observés\nchez les patients bipolaires (voir le tableau 18.4). Cette notion\nn’est pas récente. Dans sa description des diérents « tableaux\nd’états » de la folie maniaco-dépressive, Kraepelin insistait sur\n",
+      "text_sha256": "f8d45087596075756341897b219f2543033ac54c8bba5b3da382090b5682d754"
+    },
+    {
+      "bbox": [
+        312.0500183105469,
+        40.9658203125,
+        555.3977661132812,
+        99.75849914550781
+      ],
+      "block_id": "page-0398-block-0028",
+      "order": 28,
+      "text": "leur multiplicité, et notamment sur les diérents types d’états\nmixtes possibles. Il les conceptualisait comme le résultat de la\ncombinaison de trois dimensions, soit les troubles de l’humeur,\nde la pensée et de la volonté avec, pour chacune d’elles, un pôle\nmaniaque et un pôle dépressif. Ce modèle concluait ainsi à la\n",
+      "text_sha256": "7830d3cd53929a82ea130c31cebb3b8bd8ce5de2d11052a1a98ebd7b53058720"
+    }
+  ],
+  "coordinates_sha256": "72b970039e03fcae976f2e4b66d5694049c092a007aeb8cd81b9ceb40e399b90",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0398",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 18\nTroubles bipolaires\n381\nTABLEAU 18.4 Critères diagnostiques de l’épisode maniaque ou hypomaniaque, avec caractéristiques mixtes\nDSM-5\nDSM-IV-TR\n396.6_ (F31.6) Épisode maniaque ou hypomaniaque,\navec caractéristiques mixtes\nÉpisode mixte\nA. Les critères complets sont réunis pour un épisode maniaque ou\nhypomaniaque et au moins trois des symptômes suivants sont présents\npendant la plupart des jours au cours de l’épisode maniaque ou hypo-\nmaniaque actuel ou le plus récent :\n1. Dysphorie ou humeur dépressive au premier plan, signalée par la personne\n(p. ex., se sent triste ou vide) ou observée par les autres (p. ex., pleure).\n2. Diminution de l’intérêt ou du plaisir pour toutes ou presque toutes les\nactivités (signalée par la personne ou observée par les autres).\n3. Ralentissement psychomoteur presque tous les jours (constaté par les\nautres, non limité à un sentiment subjectif de ralentissement intérieur).\n4. Fatigue ou perte d’énergie.\n5. Sentiment de dévalorisation ou de culpabilité excessive ou inappropriée\n(pas seulement se reprocher ou se sentir coupable d’être malade).\n6. Pensées de mort récurrentes (pas seulement une peur de mourir),\nidées suicidaires récurrentes sans plan précis, tentative de suicide\nou plan précis pour se suicider.\nA. Les critères sont réunis à la fois pour un épisode maniaque et pour\nun épisode dépressif majeur (à l’exception du critère de durée) et cela\npresque tous les jours pendant au moins une semaine.\nÉpisode dépressif, avec caractéristiques mixtes\nA. Les critères complets sont réunis pour un épisode dépressif caractérisé\net au moins trois des symptômes maniaques/hypomaniaques suivants\nsont présents la plupart des jours au cours de l’épisode dépressif actuel\nou le plus récent :\n1. Humeur élevée ou expansive.\n2. Augmentation de l’estime de soi ou idées de grandeur.\n3. Plus grande communicabilité que d’habitude ou désir constant de parler.\n4. Fuite des idées ou sensations subjectives que les pensées délent.\n5. Augmentation de l’énergie ou de l’activité orientée vers un but (social,\nprofessionnel, scolaire ou sexuel).\n6. Engagement augmenté ou excessif dans des activités à potentiel\nélevé de conséquences dommageables (p. ex., la personne se\nlance sans retenue dans des achats inconsidérés, des conduites\nsexuelles inconséquentes ou des investissements commerciaux\ndéraisonnables).\n7. Réduction du besoin de sommeil (p. ex., le sujet se sent reposé en\ndépit d’une réduction du temps de sommeil par rapport à la durée\nhabituelle ; à distinguer d’une insomnie).\nA. Les critères réunis à la fois pour un épisode maniaque et pour un\népisode dépressif majeur (à l’exception du critère de durée) et cela\npresque tous les jours pendant au moins une semaine.\nB. Les symptômes mixtes sont manifestes pour les autres et représentent\nun changement par rapport au comportement habituel de la personne.\nB. La perturbation de l’humeur est sufsamment sévère pour entraîner\nune altération marquée du fonctionnement professionnel, des activités\nsociales ou des relations interpersonnelles, ou pour nécessiter l’hospita-\nlisation an de prévenir des conséquences dommageables pour le sujet\nou pour autrui, ou il existe des caractéristiques psychotiques.\nC. Pour les personnes dont les symptômes répondent simultanément aux\ncritères d’un épisode maniaque et dépressif, le diagnostic est celui\nd’épisode maniaque avec caractéristiques mixtes.\nD. Les symptômes mixtes ne sont pas imputables aux effets physiologiques\nd’une substance (p. ex., une substance donnant lieu à abus, médica-\nment, autre traitement).\nC. Les symptômes ne sont pas dus aux effets physiologiques directs d’une\nsubstance (p. ex., substance donnant lieu à abus, médicament ou autre\ntraitement) ou d’une affection médicale générale (p. ex., hyperthyroïdie).\nSources : APA (2015), p. 175-176 ; APA (2004), p. 421.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\nÉtats mixtes\nLes états mixtes sont des syndromes fréquemment observés\nchez les patients bipolaires (voir le tableau 18.4). Cette notion\nn’est pas récente. Dans sa description des diérents « tableaux\nd’états » de la folie maniaco-dépressive, Kraepelin insistait sur\nleur multiplicité, et notamment sur les diérents types d’états\nmixtes possibles. Il les conceptualisait comme le résultat de la\ncombinaison de trois dimensions, soit les troubles de l’humeur,\nde la pensée et de la volonté avec, pour chacune d’elles, un pôle\nmaniaque et un pôle dépressif. Ce modèle concluait ainsi à la\n",
+  "raw_text_sha256": "7fa213021cbec529b067ed15b66b7e591bb7199902d52b41853db87170d85fb1",
+  "source_page_display": 399,
+  "source_page_index": 398
+}

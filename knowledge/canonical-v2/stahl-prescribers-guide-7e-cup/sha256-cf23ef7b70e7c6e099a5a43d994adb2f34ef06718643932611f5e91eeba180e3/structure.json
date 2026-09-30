@@ -1,0 +1,2944 @@
+{
+ "book_id": "stahl-prescribers-guide-7e-cup",
+ "source_version": "sha256:cf23ef7b70e7c6e099a5a43d994adb2f34ef06718643932611f5e91eeba180e3",
+ "hierarchy": "Book -> Drug monograph (152, L1) -> L2 template section -> L3 subsection",
+ "toc_source": "embedded PDF TOC (7280 entries), L1 drug count 152",
+ "toc_drug_range": "Acamprosate src24 .. Zuclopenthixol src2549; back matter src2568..2697",
+ "body_start_source_page": 24,
+ "heading_detection": "TOC L1/L2/L3 authoritative; running head (drug name, y~73.6, Times 15) wins on conflict; section heads bold Times 15, L2 banner 21.2",
+ "monograph_template_l2": [
+  "Therapeutics",
+  "Side Effects",
+  "Dosing and Use",
+  "Special Populations",
+  "The Art of Psychopharmacology",
+  "The Art of Switching (when present)",
+  "Suggested Reading"
+ ],
+ "unlocated_sections": [],
+ "sections": [
+  {
+   "section_id": "front-matter",
+   "title": "Half title / Title / Imprints / Contents / Introduction / List of icons",
+   "depth": 0,
+   "source_page_start": 1,
+   "source_page_end": 23,
+   "printed_page_start": "1",
+   "printed_page_end": "23",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-001",
+   "title": "Acamprosate",
+   "depth": 1,
+   "drug_index": 1,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 24,
+   "source_page_end": 33,
+   "printed_page_start": "24",
+   "printed_page_end": "33",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-002",
+   "title": "Agomelatine",
+   "depth": 1,
+   "drug_index": 2,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 34,
+   "source_page_end": 48,
+   "printed_page_start": "34",
+   "printed_page_end": "48",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-003",
+   "title": "Alprazolam",
+   "depth": 1,
+   "drug_index": 3,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 49,
+   "source_page_end": 66,
+   "printed_page_start": "49",
+   "printed_page_end": "66",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-004",
+   "title": "Amisulpride",
+   "depth": 1,
+   "drug_index": 4,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing And Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "The Art of Switching",
+    "Suggested Reading"
+   ],
+   "source_page_start": 67,
+   "source_page_end": 88,
+   "printed_page_start": "67",
+   "printed_page_end": "88",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-005",
+   "title": "Amitriptyline",
+   "depth": 1,
+   "drug_index": 5,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 89,
+   "source_page_end": 109,
+   "printed_page_start": "89",
+   "printed_page_end": "109",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-006",
+   "title": "Amoxapine",
+   "depth": 1,
+   "drug_index": 6,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 110,
+   "source_page_end": 130,
+   "printed_page_start": "110",
+   "printed_page_end": "130",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-007",
+   "title": "Amphetamine (D)",
+   "depth": 1,
+   "drug_index": 7,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 131,
+   "source_page_end": 150,
+   "printed_page_start": "131",
+   "printed_page_end": "150",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-008",
+   "title": "Amphetamine (D,L)",
+   "depth": 1,
+   "drug_index": 8,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 151,
+   "source_page_end": 173,
+   "printed_page_start": "151",
+   "printed_page_end": "173",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-009",
+   "title": "Aripiprazole",
+   "depth": 1,
+   "drug_index": 9,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "The Art of Switching",
+    "Suggested Reading"
+   ],
+   "source_page_start": 174,
+   "source_page_end": 206,
+   "printed_page_start": "174",
+   "printed_page_end": "206",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-010",
+   "title": "Armodafinil",
+   "depth": 1,
+   "drug_index": 10,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing And Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 207,
+   "source_page_end": 220,
+   "printed_page_start": "207",
+   "printed_page_end": "220",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-011",
+   "title": "Asenapine",
+   "depth": 1,
+   "drug_index": 11,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "The Art of Switching",
+    "Suggested Reading"
+   ],
+   "source_page_start": 221,
+   "source_page_end": 244,
+   "printed_page_start": "221",
+   "printed_page_end": "244",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-012",
+   "title": "Atomoxetine",
+   "depth": 1,
+   "drug_index": 12,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 245,
+   "source_page_end": 260,
+   "printed_page_start": "245",
+   "printed_page_end": "260",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-013",
+   "title": "Benztropine",
+   "depth": 1,
+   "drug_index": 13,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 261,
+   "source_page_end": 271,
+   "printed_page_start": "261",
+   "printed_page_end": "271",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-014",
+   "title": "Blonanserin",
+   "depth": 1,
+   "drug_index": 14,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 272,
+   "source_page_end": 288,
+   "printed_page_start": "272",
+   "printed_page_end": "288",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-015",
+   "title": "Bremelanotide",
+   "depth": 1,
+   "drug_index": 15,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 289,
+   "source_page_end": 299,
+   "printed_page_start": "289",
+   "printed_page_end": "299",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-016",
+   "title": "Brexanolone",
+   "depth": 1,
+   "drug_index": 16,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 300,
+   "source_page_end": 310,
+   "printed_page_start": "300",
+   "printed_page_end": "310",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-017",
+   "title": "Brexpiprazole",
+   "depth": 1,
+   "drug_index": 17,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "The Art of Switching",
+    "Suggested Reading"
+   ],
+   "source_page_start": 311,
+   "source_page_end": 332,
+   "printed_page_start": "311",
+   "printed_page_end": "332",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-018",
+   "title": "Buprenorphine",
+   "depth": 1,
+   "drug_index": 18,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 333,
+   "source_page_end": 350,
+   "printed_page_start": "333",
+   "printed_page_end": "350",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-019",
+   "title": "Bupropion",
+   "depth": 1,
+   "drug_index": 19,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 351,
+   "source_page_end": 371,
+   "printed_page_start": "351",
+   "printed_page_end": "371",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-020",
+   "title": "Buspirone",
+   "depth": 1,
+   "drug_index": 20,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 372,
+   "source_page_end": 381,
+   "printed_page_start": "372",
+   "printed_page_end": "381",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-021",
+   "title": "Caprylidene",
+   "depth": 1,
+   "drug_index": 21,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 382,
+   "source_page_end": 390,
+   "printed_page_start": "382",
+   "printed_page_end": "390",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-022",
+   "title": "Carbamazepine",
+   "depth": 1,
+   "drug_index": 22,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 391,
+   "source_page_end": 409,
+   "printed_page_start": "391",
+   "printed_page_end": "409",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-023",
+   "title": "Cariprazine",
+   "depth": 1,
+   "drug_index": 23,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "The Art of Switching",
+    "Suggested Reading"
+   ],
+   "source_page_start": 410,
+   "source_page_end": 434,
+   "printed_page_start": "410",
+   "printed_page_end": "434",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-024",
+   "title": "Chlordiazepoxide",
+   "depth": 1,
+   "drug_index": 24,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 435,
+   "source_page_end": 448,
+   "printed_page_start": "435",
+   "printed_page_end": "448",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-025",
+   "title": "Chlorpromazine",
+   "depth": 1,
+   "drug_index": 25,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 449,
+   "source_page_end": 467,
+   "printed_page_start": "449",
+   "printed_page_end": "467",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-026",
+   "title": "Citalopram",
+   "depth": 1,
+   "drug_index": 26,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 468,
+   "source_page_end": 485,
+   "printed_page_start": "468",
+   "printed_page_end": "485",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-027",
+   "title": "Clomipramine",
+   "depth": 1,
+   "drug_index": 27,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 486,
+   "source_page_end": 507,
+   "printed_page_start": "486",
+   "printed_page_end": "507",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-028",
+   "title": "Clonazepam",
+   "depth": 1,
+   "drug_index": 28,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 508,
+   "source_page_end": 524,
+   "printed_page_start": "508",
+   "printed_page_end": "524",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-029",
+   "title": "Clonidine",
+   "depth": 1,
+   "drug_index": 29,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 525,
+   "source_page_end": 542,
+   "printed_page_start": "525",
+   "printed_page_end": "542",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-030",
+   "title": "Clorazepate",
+   "depth": 1,
+   "drug_index": 30,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 543,
+   "source_page_end": 556,
+   "printed_page_start": "543",
+   "printed_page_end": "556",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-031",
+   "title": "Clozapine",
+   "depth": 1,
+   "drug_index": 31,
+   "l2_sections": [
+    "Therapeutics",
+    "Side effects",
+    "Dosing and use",
+    "Special populations",
+    "The art of psychopharmacology",
+    "The Art of Switching",
+    "Suggested Reading"
+   ],
+   "source_page_start": 557,
+   "source_page_end": 588,
+   "printed_page_start": "557",
+   "printed_page_end": "588",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-032",
+   "title": "Cyamemazine",
+   "depth": 1,
+   "drug_index": 32,
+   "l2_sections": [
+    "Therapeutics",
+    "Side effects",
+    "Dosing and use",
+    "Special populations",
+    "The art of psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 589,
+   "source_page_end": 607,
+   "printed_page_start": "589",
+   "printed_page_end": "607",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-033",
+   "title": "Desipramine",
+   "depth": 1,
+   "drug_index": 33,
+   "l2_sections": [
+    "Therapeutics",
+    "Side effects",
+    "Dosing and use",
+    "Special populations",
+    "The art of psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 608,
+   "source_page_end": 628,
+   "printed_page_start": "608",
+   "printed_page_end": "628",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-034",
+   "title": "Desvenlafaxine",
+   "depth": 1,
+   "drug_index": 34,
+   "l2_sections": [
+    "Therapeutics",
+    "Side effects",
+    "Dosing and use",
+    "Special populations",
+    "The art of psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 629,
+   "source_page_end": 647,
+   "printed_page_start": "629",
+   "printed_page_end": "647",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-035",
+   "title": "Deutetrabenazine",
+   "depth": 1,
+   "drug_index": 35,
+   "l2_sections": [
+    "Therapeutics",
+    "Side effects",
+    "Dosing and use",
+    "Special populations",
+    "The art of psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 648,
+   "source_page_end": 660,
+   "printed_page_start": "648",
+   "printed_page_end": "660",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-036",
+   "title": "Dextromethorphan",
+   "depth": 1,
+   "drug_index": 36,
+   "l2_sections": [
+    "Therapeutics",
+    "Side effects",
+    "Dosing and use",
+    "Special populations",
+    "The art of psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 661,
+   "source_page_end": 671,
+   "printed_page_start": "661",
+   "printed_page_end": "671",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-037",
+   "title": "Diazepam",
+   "depth": 1,
+   "drug_index": 37,
+   "l2_sections": [
+    "Therapeutics",
+    "Side effects",
+    "Dosing and use",
+    "Special populations",
+    "The art of psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 672,
+   "source_page_end": 688,
+   "printed_page_start": "672",
+   "printed_page_end": "688",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-038",
+   "title": "Diphenhydramine",
+   "depth": 1,
+   "drug_index": 38,
+   "l2_sections": [
+    "Therapeutics",
+    "Side effects",
+    "Dosing and use",
+    "Special populations",
+    "The art of psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 689,
+   "source_page_end": 698,
+   "printed_page_start": "689",
+   "printed_page_end": "698",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-039",
+   "title": "Disulfiram",
+   "depth": 1,
+   "drug_index": 39,
+   "l2_sections": [
+    "Therapeutics",
+    "Side effects",
+    "Dosing and use",
+    "Special populations",
+    "The art of psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 699,
+   "source_page_end": 708,
+   "printed_page_start": "699",
+   "printed_page_end": "708",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-040",
+   "title": "Donepezil",
+   "depth": 1,
+   "drug_index": 40,
+   "l2_sections": [
+    "Therapeutics",
+    "Side effects",
+    "Dosing and use",
+    "Special populations",
+    "The art of psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 709,
+   "source_page_end": 723,
+   "printed_page_start": "709",
+   "printed_page_end": "723",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-041",
+   "title": "Dothiepin",
+   "depth": 1,
+   "drug_index": 41,
+   "l2_sections": [
+    "Therapeutics",
+    "Side effects",
+    "Dosing and use",
+    "Special populations",
+    "The art of psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 724,
+   "source_page_end": 743,
+   "printed_page_start": "724",
+   "printed_page_end": "743",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-042",
+   "title": "Doxepin",
+   "depth": 1,
+   "drug_index": 42,
+   "l2_sections": [
+    "Therapeutics",
+    "Side effects",
+    "Dosing and use",
+    "Special populations",
+    "The art of psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 744,
+   "source_page_end": 767,
+   "printed_page_start": "744",
+   "printed_page_end": "767",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-043",
+   "title": "Duloxetine",
+   "depth": 1,
+   "drug_index": 43,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 768,
+   "source_page_end": 788,
+   "printed_page_start": "768",
+   "printed_page_end": "788",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-044",
+   "title": "Escitalopram",
+   "depth": 1,
+   "drug_index": 44,
+   "l2_sections": [
+    "Therapeutics",
+    "Side effects",
+    "Dosing and use",
+    "Special populations",
+    "The art of psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 789,
+   "source_page_end": 806,
+   "printed_page_start": "789",
+   "printed_page_end": "806",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-045",
+   "title": "Esketamine",
+   "depth": 1,
+   "drug_index": 45,
+   "l2_sections": [
+    "Therapeutics",
+    "Side effects",
+    "Dosing and use",
+    "Special populations",
+    "The art of psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 807,
+   "source_page_end": 822,
+   "printed_page_start": "807",
+   "printed_page_end": "822",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-046",
+   "title": "Estazolam",
+   "depth": 1,
+   "drug_index": 46,
+   "l2_sections": [
+    "Therapeutics",
+    "Side effects",
+    "Dosing and use",
+    "Special populations",
+    "The art of psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 823,
+   "source_page_end": 834,
+   "printed_page_start": "823",
+   "printed_page_end": "834",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-047",
+   "title": "Eszopiclone",
+   "depth": 1,
+   "drug_index": 47,
+   "l2_sections": [
+    "Therapeutics",
+    "Side effects",
+    "Dosing and Use",
+    "Special populations",
+    "The art of psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 835,
+   "source_page_end": 847,
+   "printed_page_start": "835",
+   "printed_page_end": "847",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-048",
+   "title": "Flibanserin",
+   "depth": 1,
+   "drug_index": 48,
+   "l2_sections": [
+    "Therapeutics",
+    "Side effects",
+    "Dosing and use",
+    "Special Populations",
+    "The art of psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 848,
+   "source_page_end": 858,
+   "printed_page_start": "848",
+   "printed_page_end": "858",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-049",
+   "title": "Flumazenil",
+   "depth": 1,
+   "drug_index": 49,
+   "l2_sections": [
+    "Therapeutics",
+    "Side effects",
+    "Dosing and use",
+    "Special populations",
+    "The art of psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 859,
+   "source_page_end": 869,
+   "printed_page_start": "859",
+   "printed_page_end": "869",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-050",
+   "title": "Flunitrazepam",
+   "depth": 1,
+   "drug_index": 50,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing And Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 870,
+   "source_page_end": 883,
+   "printed_page_start": "870",
+   "printed_page_end": "883",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-051",
+   "title": "Fluoxetine",
+   "depth": 1,
+   "drug_index": 51,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing And Use",
+    "Special Populations",
+    "The art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 884,
+   "source_page_end": 904,
+   "printed_page_start": "884",
+   "printed_page_end": "904",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-052",
+   "title": "Flupenthixol",
+   "depth": 1,
+   "drug_index": 52,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing And Use",
+    "Special Populations",
+    "The Art Of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 905,
+   "source_page_end": 921,
+   "printed_page_start": "905",
+   "printed_page_end": "921",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-053",
+   "title": "Fluphenazine",
+   "depth": 1,
+   "drug_index": 53,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing And Use",
+    "Special Populations",
+    "The Art Of Psychopharmacology",
+    "The Art Of Switching",
+    "Suggested Reading"
+   ],
+   "source_page_start": 922,
+   "source_page_end": 943,
+   "printed_page_start": "922",
+   "printed_page_end": "943",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-054",
+   "title": "Flurazepam",
+   "depth": 1,
+   "drug_index": 54,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing And Use",
+    "Special Populations",
+    "The Art Of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 944,
+   "source_page_end": 955,
+   "printed_page_start": "944",
+   "printed_page_end": "955",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-055",
+   "title": "Fluvoxamine",
+   "depth": 1,
+   "drug_index": 55,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing And Use",
+    "Special Populations",
+    "The Art Of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 956,
+   "source_page_end": 975,
+   "printed_page_start": "956",
+   "printed_page_end": "975",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-056",
+   "title": "Gabapentin",
+   "depth": 1,
+   "drug_index": 56,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing And Use",
+    "Special Populations",
+    "The Art Of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 976,
+   "source_page_end": 994,
+   "printed_page_start": "976",
+   "printed_page_end": "994",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-057",
+   "title": "Galantamine",
+   "depth": 1,
+   "drug_index": 57,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing And Use",
+    "Special Populations",
+    "The Art Of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 995,
+   "source_page_end": 1010,
+   "printed_page_start": "995",
+   "printed_page_end": "1010",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-058",
+   "title": "Guanfacine",
+   "depth": 1,
+   "drug_index": 58,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing And Use",
+    "Special Populations",
+    "The Art Of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1011,
+   "source_page_end": 1023,
+   "printed_page_start": "1011",
+   "printed_page_end": "1023",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-059",
+   "title": "Haloperidol",
+   "depth": 1,
+   "drug_index": 59,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing And Use",
+    "Special Populations",
+    "The Art Of Psychopharmacology",
+    "The Art Of Switching",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1024,
+   "source_page_end": 1047,
+   "printed_page_start": "1024",
+   "printed_page_end": "1047",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-060",
+   "title": "Hydroxyzine",
+   "depth": 1,
+   "drug_index": 60,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1048,
+   "source_page_end": 1058,
+   "printed_page_start": "1048",
+   "printed_page_end": "1058",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-061",
+   "title": "Iloperidone",
+   "depth": 1,
+   "drug_index": 61,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "The Art of Switching",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1059,
+   "source_page_end": 1080,
+   "printed_page_start": "1059",
+   "printed_page_end": "1080",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-062",
+   "title": "Imipramine",
+   "depth": 1,
+   "drug_index": 62,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing And Use",
+    "Special Populations",
+    "The Art Of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1081,
+   "source_page_end": 1100,
+   "printed_page_start": "1081",
+   "printed_page_end": "1100",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-063",
+   "title": "Isocarboxazid",
+   "depth": 1,
+   "drug_index": 63,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing And Use",
+    "Special Populations",
+    "The Art Of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1101,
+   "source_page_end": 1110,
+   "printed_page_start": "1101",
+   "printed_page_end": "1110",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-064",
+   "title": "Ketamine",
+   "depth": 1,
+   "drug_index": 64,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1111,
+   "source_page_end": 1124,
+   "printed_page_start": "1111",
+   "printed_page_end": "1124",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-065",
+   "title": "Lamotrigine",
+   "depth": 1,
+   "drug_index": 65,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1125,
+   "source_page_end": 1148,
+   "printed_page_start": "1125",
+   "printed_page_end": "1148",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-066",
+   "title": "Lemborexant",
+   "depth": 1,
+   "drug_index": 66,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1149,
+   "source_page_end": 1159,
+   "printed_page_start": "1149",
+   "printed_page_end": "1159",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-067",
+   "title": "Levetiracetam",
+   "depth": 1,
+   "drug_index": 67,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1160,
+   "source_page_end": 1172,
+   "printed_page_start": "1160",
+   "printed_page_end": "1172",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-068",
+   "title": "Levomilnacipran",
+   "depth": 1,
+   "drug_index": 68,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1173,
+   "source_page_end": 1188,
+   "printed_page_start": "1173",
+   "printed_page_end": "1188",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-069",
+   "title": "Lisdexamfetamine",
+   "depth": 1,
+   "drug_index": 69,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1189,
+   "source_page_end": 1207,
+   "printed_page_start": "1189",
+   "printed_page_end": "1207",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-070",
+   "title": "Lithium",
+   "depth": 1,
+   "drug_index": 70,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1208,
+   "source_page_end": 1227,
+   "printed_page_start": "1208",
+   "printed_page_end": "1227",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-071",
+   "title": "Lofepramine",
+   "depth": 1,
+   "drug_index": 71,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1228,
+   "source_page_end": 1247,
+   "printed_page_start": "1228",
+   "printed_page_end": "1247",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-072",
+   "title": "Lofexidine",
+   "depth": 1,
+   "drug_index": 72,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1248,
+   "source_page_end": 1257,
+   "printed_page_start": "1248",
+   "printed_page_end": "1257",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-073",
+   "title": "Loflazepate",
+   "depth": 1,
+   "drug_index": 73,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1258,
+   "source_page_end": 1272,
+   "printed_page_start": "1258",
+   "printed_page_end": "1272",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-074",
+   "title": "Lorazepam",
+   "depth": 1,
+   "drug_index": 74,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1273,
+   "source_page_end": 1289,
+   "printed_page_start": "1273",
+   "printed_page_end": "1289",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-075",
+   "title": "Loxapine",
+   "depth": 1,
+   "drug_index": 75,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1290,
+   "source_page_end": 1310,
+   "printed_page_start": "1290",
+   "printed_page_end": "1310",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-076",
+   "title": "Lumateperone",
+   "depth": 1,
+   "drug_index": 76,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1311,
+   "source_page_end": 1329,
+   "printed_page_start": "1311",
+   "printed_page_end": "1329",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-077",
+   "title": "Lurasidone",
+   "depth": 1,
+   "drug_index": 77,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "The Art of Switching",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1330,
+   "source_page_end": 1354,
+   "printed_page_start": "1330",
+   "printed_page_end": "1354",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-078",
+   "title": "Maprotiline",
+   "depth": 1,
+   "drug_index": 78,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1355,
+   "source_page_end": 1374,
+   "printed_page_start": "1355",
+   "printed_page_end": "1374",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-079",
+   "title": "Memantine",
+   "depth": 1,
+   "drug_index": 79,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1375,
+   "source_page_end": 1385,
+   "printed_page_start": "1375",
+   "printed_page_end": "1385",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-080",
+   "title": "Methylfolate (L)",
+   "depth": 1,
+   "drug_index": 80,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1386,
+   "source_page_end": 1397,
+   "printed_page_start": "1386",
+   "printed_page_end": "1397",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-081",
+   "title": "Methylphenidate (D)",
+   "depth": 1,
+   "drug_index": 81,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1398,
+   "source_page_end": 1415,
+   "printed_page_start": "1398",
+   "printed_page_end": "1415",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-082",
+   "title": "Methylphenidate (D,L)",
+   "depth": 1,
+   "drug_index": 82,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1416,
+   "source_page_end": 1440,
+   "printed_page_start": "1416",
+   "printed_page_end": "1440",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-083",
+   "title": "Mianserin",
+   "depth": 1,
+   "drug_index": 83,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1441,
+   "source_page_end": 1454,
+   "printed_page_start": "1441",
+   "printed_page_end": "1454",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-084",
+   "title": "Midazolam",
+   "depth": 1,
+   "drug_index": 84,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1455,
+   "source_page_end": 1464,
+   "printed_page_start": "1455",
+   "printed_page_end": "1464",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-085",
+   "title": "Milnacipran",
+   "depth": 1,
+   "drug_index": 85,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1465,
+   "source_page_end": 1483,
+   "printed_page_start": "1465",
+   "printed_page_end": "1483",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-086",
+   "title": "Mirtazapine",
+   "depth": 1,
+   "drug_index": 86,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1484,
+   "source_page_end": 1499,
+   "printed_page_start": "1484",
+   "printed_page_end": "1499",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-087",
+   "title": "Moclobemide",
+   "depth": 1,
+   "drug_index": 87,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1500,
+   "source_page_end": 1509,
+   "printed_page_start": "1500",
+   "printed_page_end": "1509",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-088",
+   "title": "Modafinil",
+   "depth": 1,
+   "drug_index": 88,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1510,
+   "source_page_end": 1525,
+   "printed_page_start": "1510",
+   "printed_page_end": "1525",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-089",
+   "title": "Molindone",
+   "depth": 1,
+   "drug_index": 89,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1526,
+   "source_page_end": 1541,
+   "printed_page_start": "1526",
+   "printed_page_end": "1541",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-090",
+   "title": "Nalmefene",
+   "depth": 1,
+   "drug_index": 90,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1542,
+   "source_page_end": 1552,
+   "printed_page_start": "1542",
+   "printed_page_end": "1552",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-091",
+   "title": "Naltrexone",
+   "depth": 1,
+   "drug_index": 91,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1553,
+   "source_page_end": 1564,
+   "printed_page_start": "1553",
+   "printed_page_end": "1564",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-092",
+   "title": "Naltrexone/Bupropion",
+   "depth": 1,
+   "drug_index": 92,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1565,
+   "source_page_end": 1577,
+   "printed_page_start": "1565",
+   "printed_page_end": "1577",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-093",
+   "title": "Nefazodone",
+   "depth": 1,
+   "drug_index": 93,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1578,
+   "source_page_end": 1594,
+   "printed_page_start": "1578",
+   "printed_page_end": "1594",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-094",
+   "title": "Nortriptyline",
+   "depth": 1,
+   "drug_index": 94,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1595,
+   "source_page_end": 1615,
+   "printed_page_start": "1595",
+   "printed_page_end": "1615",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-095",
+   "title": "Olanzapine",
+   "depth": 1,
+   "drug_index": 95,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "The Art of Switching",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1616,
+   "source_page_end": 1645,
+   "printed_page_start": "1616",
+   "printed_page_end": "1645",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-096",
+   "title": "Oxazepam",
+   "depth": 1,
+   "drug_index": 96,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1646,
+   "source_page_end": 1659,
+   "printed_page_start": "1646",
+   "printed_page_end": "1659",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-097",
+   "title": "Oxcarbazepine",
+   "depth": 1,
+   "drug_index": 97,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1660,
+   "source_page_end": 1677,
+   "printed_page_start": "1660",
+   "printed_page_end": "1677",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-098",
+   "title": "Paliperidone",
+   "depth": 1,
+   "drug_index": 98,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "The Art of Switching",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1678,
+   "source_page_end": 1707,
+   "printed_page_start": "1678",
+   "printed_page_end": "1707",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-099",
+   "title": "Paroxetine",
+   "depth": 1,
+   "drug_index": 99,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1708,
+   "source_page_end": 1729,
+   "printed_page_start": "1708",
+   "printed_page_end": "1729",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-100",
+   "title": "Perospirone",
+   "depth": 1,
+   "drug_index": 100,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1730,
+   "source_page_end": 1745,
+   "printed_page_start": "1730",
+   "printed_page_end": "1745",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-101",
+   "title": "Perphenazine",
+   "depth": 1,
+   "drug_index": 101,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing And Use",
+    "Special Populations",
+    "The Art Of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1746,
+   "source_page_end": 1763,
+   "printed_page_start": "1746",
+   "printed_page_end": "1763",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-102",
+   "title": "Phenelzine",
+   "depth": 1,
+   "drug_index": 102,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1764,
+   "source_page_end": 1782,
+   "printed_page_start": "1764",
+   "printed_page_end": "1782",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-103",
+   "title": "Phentermine/topiramate",
+   "depth": 1,
+   "drug_index": 103,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1783,
+   "source_page_end": 1795,
+   "printed_page_start": "1783",
+   "printed_page_end": "1795",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-104",
+   "title": "Pimavanserin",
+   "depth": 1,
+   "drug_index": 104,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1796,
+   "source_page_end": 1805,
+   "printed_page_start": "1796",
+   "printed_page_end": "1805",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-105",
+   "title": "Pimozide",
+   "depth": 1,
+   "drug_index": 105,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1806,
+   "source_page_end": 1822,
+   "printed_page_start": "1806",
+   "printed_page_end": "1822",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-106",
+   "title": "Pipothiazine",
+   "depth": 1,
+   "drug_index": 106,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1823,
+   "source_page_end": 1838,
+   "printed_page_start": "1823",
+   "printed_page_end": "1838",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-107",
+   "title": "Pitolisant",
+   "depth": 1,
+   "drug_index": 107,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1839,
+   "source_page_end": 1850,
+   "printed_page_start": "1839",
+   "printed_page_end": "1850",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-108",
+   "title": "Prazosin",
+   "depth": 1,
+   "drug_index": 108,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1851,
+   "source_page_end": 1860,
+   "printed_page_start": "1851",
+   "printed_page_end": "1860",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-109",
+   "title": "Pregabalin",
+   "depth": 1,
+   "drug_index": 109,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1861,
+   "source_page_end": 1876,
+   "printed_page_start": "1861",
+   "printed_page_end": "1876",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-110",
+   "title": "Propranolol",
+   "depth": 1,
+   "drug_index": 110,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1877,
+   "source_page_end": 1890,
+   "printed_page_start": "1877",
+   "printed_page_end": "1890",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-111",
+   "title": "Protriptyline",
+   "depth": 1,
+   "drug_index": 111,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1891,
+   "source_page_end": 1910,
+   "printed_page_start": "1891",
+   "printed_page_end": "1910",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-112",
+   "title": "Quazepam",
+   "depth": 1,
+   "drug_index": 112,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1911,
+   "source_page_end": 1922,
+   "printed_page_start": "1911",
+   "printed_page_end": "1922",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-113",
+   "title": "Quetiapine",
+   "depth": 1,
+   "drug_index": 113,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "The Art of Switching",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1923,
+   "source_page_end": 1948,
+   "printed_page_start": "1923",
+   "printed_page_end": "1948",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-114",
+   "title": "Ramelteon",
+   "depth": 1,
+   "drug_index": 114,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1949,
+   "source_page_end": 1960,
+   "printed_page_start": "1949",
+   "printed_page_end": "1960",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-115",
+   "title": "Reboxetine",
+   "depth": 1,
+   "drug_index": 115,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1961,
+   "source_page_end": 1975,
+   "printed_page_start": "1961",
+   "printed_page_end": "1975",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-116",
+   "title": "Risperidone",
+   "depth": 1,
+   "drug_index": 116,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "The Art of Switching",
+    "Suggested Reading"
+   ],
+   "source_page_start": 1976,
+   "source_page_end": 2006,
+   "printed_page_start": "1976",
+   "printed_page_end": "2006",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-117",
+   "title": "Rivastigmine",
+   "depth": 1,
+   "drug_index": 117,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 2007,
+   "source_page_end": 2023,
+   "printed_page_start": "2007",
+   "printed_page_end": "2023",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-118",
+   "title": "Selegiline",
+   "depth": 1,
+   "drug_index": 118,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 2024,
+   "source_page_end": 2047,
+   "printed_page_start": "2024",
+   "printed_page_end": "2047",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-119",
+   "title": "Sertindole",
+   "depth": 1,
+   "drug_index": 119,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 2048,
+   "source_page_end": 2064,
+   "printed_page_start": "2048",
+   "printed_page_end": "2064",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-120",
+   "title": "Sertraline",
+   "depth": 1,
+   "drug_index": 120,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 2065,
+   "source_page_end": 2086,
+   "printed_page_start": "2065",
+   "printed_page_end": "2086",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-121",
+   "title": "Sildenafil",
+   "depth": 1,
+   "drug_index": 121,
+   "l2_sections": [
+    "Therapeutics",
+    "Side effects",
+    "Dosing and use",
+    "Special populations",
+    "The art of psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 2087,
+   "source_page_end": 2096,
+   "printed_page_start": "2087",
+   "printed_page_end": "2096",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-122",
+   "title": "Sodium oxybate",
+   "depth": 1,
+   "drug_index": 122,
+   "l2_sections": [
+    "Therapeutics",
+    "Side effects",
+    "Dosing and use",
+    "Special populations",
+    "The art of psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 2097,
+   "source_page_end": 2109,
+   "printed_page_start": "2097",
+   "printed_page_end": "2109",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-123",
+   "title": "solriamfetol",
+   "depth": 1,
+   "drug_index": 123,
+   "l2_sections": [
+    "Therapeutics",
+    "Side effects",
+    "Dosing and use",
+    "Special populations",
+    "The art of psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 2110,
+   "source_page_end": 2120,
+   "printed_page_start": "2110",
+   "printed_page_end": "2120",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-124",
+   "title": "Sulpiride",
+   "depth": 1,
+   "drug_index": 124,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 2121,
+   "source_page_end": 2137,
+   "printed_page_start": "2121",
+   "printed_page_end": "2137",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-125",
+   "title": "Suvorexant",
+   "depth": 1,
+   "drug_index": 125,
+   "l2_sections": [
+    "Therapeutics",
+    "Side effects",
+    "Dosing and use",
+    "Special populations",
+    "The art of psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 2138,
+   "source_page_end": 2148,
+   "printed_page_start": "2138",
+   "printed_page_end": "2148",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-126",
+   "title": "Tasimelteon",
+   "depth": 1,
+   "drug_index": 126,
+   "l2_sections": [
+    "Therapeutics",
+    "Side effects",
+    "Dosing and use",
+    "Special populations",
+    "The art of psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 2149,
+   "source_page_end": 2157,
+   "printed_page_start": "2149",
+   "printed_page_end": "2157",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-127",
+   "title": "Temazepam",
+   "depth": 1,
+   "drug_index": 127,
+   "l2_sections": [
+    "Therapeutics",
+    "Side effects",
+    "Dosing and use",
+    "Special populations",
+    "The art of psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 2158,
+   "source_page_end": 2169,
+   "printed_page_start": "2158",
+   "printed_page_end": "2169",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-128",
+   "title": "Thioridazine",
+   "depth": 1,
+   "drug_index": 128,
+   "l2_sections": [
+    "Therapeutics",
+    "Side effects",
+    "Dosing and use",
+    "Special populations",
+    "The art of psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 2170,
+   "source_page_end": 2187,
+   "printed_page_start": "2170",
+   "printed_page_end": "2187",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-129",
+   "title": "Thiothixene",
+   "depth": 1,
+   "drug_index": 129,
+   "l2_sections": [
+    "Therapeutics",
+    "Side effects",
+    "Dosing and use",
+    "Special populations",
+    "The art of psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 2188,
+   "source_page_end": 2203,
+   "printed_page_start": "2188",
+   "printed_page_end": "2203",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-130",
+   "title": "Tiagabine",
+   "depth": 1,
+   "drug_index": 130,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 2204,
+   "source_page_end": 2217,
+   "printed_page_start": "2204",
+   "printed_page_end": "2217",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-131",
+   "title": "Tianeptine",
+   "depth": 1,
+   "drug_index": 131,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 2218,
+   "source_page_end": 2229,
+   "printed_page_start": "2218",
+   "printed_page_end": "2229",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-132",
+   "title": "Topiramate",
+   "depth": 1,
+   "drug_index": 132,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing and Use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 2230,
+   "source_page_end": 2247,
+   "printed_page_start": "2230",
+   "printed_page_end": "2247",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-133",
+   "title": "Tranylcypromine",
+   "depth": 1,
+   "drug_index": 133,
+   "l2_sections": [
+    "Therapeutics",
+    "Side effects",
+    "Dosing and use",
+    "Special Populations",
+    "The Art of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 2248,
+   "source_page_end": 2265,
+   "printed_page_start": "2248",
+   "printed_page_end": "2265",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-134",
+   "title": "Trazodone",
+   "depth": 1,
+   "drug_index": 134,
+   "l2_sections": [
+    "Therapeutics",
+    "Side effects",
+    "Dosing and use",
+    "Special populations",
+    "The art of psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 2266,
+   "source_page_end": 2281,
+   "printed_page_start": "2266",
+   "printed_page_end": "2281",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-135",
+   "title": "Triazolam",
+   "depth": 1,
+   "drug_index": 135,
+   "l2_sections": [
+    "Therapeutics",
+    "Side effects",
+    "Dosing and use",
+    "Special populations",
+    "The art of psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 2282,
+   "source_page_end": 2294,
+   "printed_page_start": "2282",
+   "printed_page_end": "2294",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-136",
+   "title": "Trifluoperazine",
+   "depth": 1,
+   "drug_index": 136,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing And Use",
+    "Special Populations",
+    "The Art Of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 2295,
+   "source_page_end": 2312,
+   "printed_page_start": "2295",
+   "printed_page_end": "2312",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-137",
+   "title": "Trihexyphenidyl",
+   "depth": 1,
+   "drug_index": 137,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing And Use",
+    "Special Populations",
+    "The Art Of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 2313,
+   "source_page_end": 2324,
+   "printed_page_start": "2313",
+   "printed_page_end": "2324",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-138",
+   "title": "Triiodothyronine",
+   "depth": 1,
+   "drug_index": 138,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing And Use",
+    "Special Populations",
+    "The Art Of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 2325,
+   "source_page_end": 2336,
+   "printed_page_start": "2325",
+   "printed_page_end": "2336",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-139",
+   "title": "Trimipramine",
+   "depth": 1,
+   "drug_index": 139,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing And Use",
+    "Special Populations",
+    "The Art Of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 2337,
+   "source_page_end": 2356,
+   "printed_page_start": "2337",
+   "printed_page_end": "2356",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-140",
+   "title": "Valbenazine",
+   "depth": 1,
+   "drug_index": 140,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing And Use",
+    "Specia Populations",
+    "The Art Of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 2357,
+   "source_page_end": 2366,
+   "printed_page_start": "2357",
+   "printed_page_end": "2366",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-141",
+   "title": "Valproate",
+   "depth": 1,
+   "drug_index": 141,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing And Use",
+    "Special Populations",
+    "The Art Of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 2367,
+   "source_page_end": 2387,
+   "printed_page_start": "2367",
+   "printed_page_end": "2387",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-142",
+   "title": "Varenicline",
+   "depth": 1,
+   "drug_index": 142,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing And Use",
+    "Special Populations",
+    "The Art Of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 2388,
+   "source_page_end": 2398,
+   "printed_page_start": "2388",
+   "printed_page_end": "2398",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-143",
+   "title": "Venlafaxine",
+   "depth": 1,
+   "drug_index": 143,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing And Use",
+    "Special Populations",
+    "The Art Of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 2399,
+   "source_page_end": 2419,
+   "printed_page_start": "2399",
+   "printed_page_end": "2419",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-144",
+   "title": "Vilazodone",
+   "depth": 1,
+   "drug_index": 144,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing And Use",
+    "Special Populations",
+    "The Art Of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 2420,
+   "source_page_end": 2437,
+   "printed_page_start": "2420",
+   "printed_page_end": "2437",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-145",
+   "title": "Vortioxetine",
+   "depth": 1,
+   "drug_index": 145,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing And Use",
+    "Special Populations",
+    "The Art Of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 2438,
+   "source_page_end": 2455,
+   "printed_page_start": "2438",
+   "printed_page_end": "2455",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-146",
+   "title": "Zaleplon",
+   "depth": 1,
+   "drug_index": 146,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing And Use",
+    "Special Populations",
+    "The Art Of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 2456,
+   "source_page_end": 2467,
+   "printed_page_start": "2456",
+   "printed_page_end": "2467",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-147",
+   "title": "Ziprasidone",
+   "depth": 1,
+   "drug_index": 147,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing And Use",
+    "Special Populations",
+    "The Art Of Psychopharmacology",
+    "The Art Of Switching",
+    "Suggested Reading"
+   ],
+   "source_page_start": 2468,
+   "source_page_end": 2491,
+   "printed_page_start": "2468",
+   "printed_page_end": "2491",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-148",
+   "title": "Zolpidem",
+   "depth": 1,
+   "drug_index": 148,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing And Use",
+    "Special Populations",
+    "The Art Of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 2492,
+   "source_page_end": 2505,
+   "printed_page_start": "2492",
+   "printed_page_end": "2505",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-149",
+   "title": "Zonisamide",
+   "depth": 1,
+   "drug_index": 149,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing And Use",
+    "Special Populations",
+    "The Art Of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 2506,
+   "source_page_end": 2518,
+   "printed_page_start": "2506",
+   "printed_page_end": "2518",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-150",
+   "title": "Zopiclone",
+   "depth": 1,
+   "drug_index": 150,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing And Use",
+    "Special Populations",
+    "The Art Of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 2519,
+   "source_page_end": 2529,
+   "printed_page_start": "2519",
+   "printed_page_end": "2529",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-151",
+   "title": "Zotepine",
+   "depth": 1,
+   "drug_index": 151,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing And Use",
+    "Special Populations",
+    "The Art Of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 2530,
+   "source_page_end": 2548,
+   "printed_page_start": "2530",
+   "printed_page_end": "2548",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "drug-152",
+   "title": "Zuclopenthixol",
+   "depth": 1,
+   "drug_index": 152,
+   "l2_sections": [
+    "Therapeutics",
+    "Side Effects",
+    "Dosing And Use",
+    "Special Populations",
+    "The Art Of Psychopharmacology",
+    "Suggested Reading"
+   ],
+   "source_page_start": 2549,
+   "source_page_end": 2567,
+   "printed_page_start": "2549",
+   "printed_page_end": "2567",
+   "page_mapping_status": "certain"
+  },
+  {
+   "section_id": "back-matter",
+   "title": "Index by Drug Name / Index by Use / Index by Class / Abbreviations / Endmatter",
+   "depth": 0,
+   "source_page_start": 2568,
+   "source_page_end": 2697,
+   "printed_page_start": "2568",
+   "printed_page_end": "2697",
+   "page_mapping_status": "certain"
+  }
+ ]
+}

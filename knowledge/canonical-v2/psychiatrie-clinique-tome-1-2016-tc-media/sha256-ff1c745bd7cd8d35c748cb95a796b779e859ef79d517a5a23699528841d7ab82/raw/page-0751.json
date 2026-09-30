@@ -1,0 +1,172 @@
+{
+  "block_sequence_sha256": "cf5d590e77eae822d9754c4b59e8f18a4b4eb44f0aa4543156772cd22f00f14c",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0751-block-0001",
+      "order": 1,
+      "text": "734\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "832b244b41553963632e4c203c1ae860fb6c53fe3a5dea67860e1cb4482b99ff"
+    },
+    {
+      "bbox": [
+        306.0,
+        39.33681869506836,
+        413.26708984375,
+        55.47939682006836
+      ],
+      "block_id": "page-0751-block-0002",
+      "order": 2,
+      "text": "32.5.3 Narcolepsie\n",
+      "text_sha256": "18ab9591ff1bc00eb3f7d10e305d8fdddc9683ea3c03accb933410784ed4b3ce"
+    },
+    {
+      "bbox": [
+        306.0,
+        58.815818786621094,
+        549.4468383789062,
+        250.6584930419922
+      ],
+      "block_id": "page-0751-block-0003",
+      "order": 3,
+      "text": "En 1880, Gélineau a identié la narcolepsie comme une entité\npathologique indépendante. Cette maladie se caractérise par deux\nsymptômes principaux et deux symptômes moins fréquents :\n• une hypersomnolence diurne qui culmine en des accès in-\ncontrôlables de sommeil ;\n• de la cataplexie, dénie comme une chute brusque du tonus\nmusculaire ;\n• la paralysie du sommeil (incapacité à bouger lors d’un réveil) ;\n• les hallucinations hypnagogiques à l’endormissement et\nhypnopompiques au réveil.\nLes signes et symptômes de la narcolepsie sont tous en rapport\navec un dérèglement facilitateur des mécanismes du sommeil\nparadoxal. La notion de décience en hypocrétine peut être\nconsidérée comme abusive par certains, car les preuves à ce\njour viennent surtout du modèle animal et cette décience est\ndicilement vériable pour l’instant in vivo chez les patients.\n",
+      "text_sha256": "b9550fc1520e5f744a1e693266a4885f209bdbcb01479d1b809ed3a345f24634"
+    },
+    {
+      "bbox": [
+        306.0,
+        251.66583251953125,
+        549.4508666992188,
+        477.15850830078125
+      ],
+      "block_id": "page-0751-block-0004",
+      "order": 4,
+      "text": "L’hypersomnolence diurne des patients sourant de narco-\nlepsie se distingue par trois traits particuliers :\n1. La somnolence excessive est présente à tout moment de la\njournée, mais elle est plus marquée en n de matinée et au\ndébut de l’après-midi ; il n’est pas rare d’observer des patients\ndont la vigilance s’accroît en n de journée ;\n2. La présence d’accès incontrôlables de sommeil, parfois même\ndans des situations comme en mangeant, en conversant ou\nen conduisant leur voiture. Bien que subites, les attaques de\nsommeil sont précédées par des signes de fatigue prémonitoires ;\n3. Sa disparition après une sieste, quelle qu’en soit sa durée. En\ngénéral, les patients sourant de narcolepsie se sentent tout à\nfait reposés après une sieste de 5 à 10 minutes, mais cet eet\nrécupérateur ne dure en moyenne qu’une à deux heures, après\nquoi les patients redeviennent somnolents.\nLe diagnostic de narcolepsie établi selon le DSM-5 (voir le\ntableau 32.5) doit normalement être conrmé par l’enregistrement\npolygraphique du sommeil (test itératif de délai d’endormisse-\nment), comme pour l’hypersomnie primaire.\n",
+      "text_sha256": "3e6e973479da82e929d9f69c4d0183d87423ba05f1fcc2d89b75128e0863bb0d"
+    },
+    {
+      "bbox": [
+        306.0,
+        478.16583251953125,
+        549.2380981445312,
+        649.70849609375
+      ],
+      "block_id": "page-0751-block-0005",
+      "order": 5,
+      "text": "Le test itératif de délai d’endormissement met en évidence\nun phénomène électrophysiologique spécique à la narcolepsie,\nsoit le passage au sommeil paradoxal dès l’endormissement. En\neet, chez les personnes non atteintes, ce stade du sommeil\nn’apparaît que 90 minutes après l’endormissement, alors qu’il\nsurvient à l’instant même de l’endormissement ou dans les\n10 minutes qui suivent chez les patients sourant de narco-\nlepsie. Ce phénomène ne s’observe que très rarement chez les\nindividus sains, sauf après une privation de sommeil ou pen-\ndant le sevrage de certains médicaments. Il est à noter que les\nendormissements immédiats en sommeil paradoxal sont plus\nfréquents pendant les siestes du matin et que leur nombre peut\nvarier considérablement d’un patient à l’autre. Un minimum\nde deux siestes avec endormissement en sommeil paradoxal\nest nécessaire pour conrmer le diagnostic de narcolepsie.\n",
+      "text_sha256": "74494416168ebef2334c72165886c54cbb7a2496183382f5f4c10c293db369f7"
+    },
+    {
+      "bbox": [
+        306.0,
+        650.7158203125,
+        549.35595703125,
+        732.20849609375
+      ],
+      "block_id": "page-0751-block-0006",
+      "order": 6,
+      "text": "La cataplexie se manifeste par une chute brusque du tonus\nmusculaire déclenchée par des émotions soudaines comme le\nrire, la colère, la surprise. L’atonie musculaire peut toucher :\n• les muscles du visage, produisant ainsi une dysarthrie transitoire ;\n• les membres supérieurs ou inférieurs. Au cours d’un épi-\nsode cataplexique grave, le patient peut même s’écrouler sur\nle sol.\n",
+      "text_sha256": "45cfc985892b7c170695376c6c18505342318dc4f7d29fa9819c626150d5fd73"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.9658203125,
+        291.01751708984375,
+        110.95849609375
+      ],
+      "block_id": "page-0751-block-0007",
+      "order": 7,
+      "text": "l’éveil, qui mesure la capacité de résister au sommeil au cours\nd’un protocole semblable à celui du test itératif de délai d’en-\ndormissement.\nUne évaluation complémentaire en neuropsychologie\npeut s’avérer utile pour objectiver la performance cognitive et\npsychomotrice.\n",
+      "text_sha256": "59327aeadfa555b715165e0fc8440b7dd0c5b605b76c7e956382daaa55abb016"
+    },
+    {
+      "bbox": [
+        48.0,
+        121.48681640625,
+        211.2352294921875,
+        137.62939453125
+      ],
+      "block_id": "page-0751-block-0008",
+      "order": 8,
+      "text": "32.5.1 Hypersomnie primaire\n",
+      "text_sha256": "362c26f5f01d23dd450cccfc2fb2ef5a566c0fa91e4b87305622fb06ad8f3bce"
+    },
+    {
+      "bbox": [
+        48.0,
+        140.9658203125,
+        291.56414794921875,
+        323.95849609375
+      ],
+      "block_id": "page-0751-block-0009",
+      "order": 9,
+      "text": "Les critères diagnostiques de l’hypersomnie primaire (narcolepsie\nsans cataplexie) selon le DSM-5 sont présentés dans le tableau 32.4.\nCette aection est rare et les quelques études publiées men-\ntionnent une prévalence de 1 cas sur 10 000 à 500 000 personnes.\nSes manifestations diurnes sont peu uctuantes, la somnolence\nétant présente toute la journée. Même si elles peuvent durer plus\nd’une heure, les siestes sont peu ressourçantes et les réveils sont\ndiciles, avec présence d’ivresse du sommeil (inertie et confu-\nsion). Les patients sont habituellement jeunes (de 16 à 30 ans) et\nl’hypersomnolence apparaît et évolue sans lien apparent avec la\nsurvenue d’événements particuliers dans la vie personnelle. Dans\ncertains cas, il existe des problèmes psychologiques et sociaux,\nmais ceux-ci ne semblent pas directement associés à l’apparition\net à l’évolution de l’hypersomnolence. L’examen psychiatrique ne\nmet pas en évidence de psychopathologie spécique, mais des\nétudes systématiques sur cette aection restent à faire.\n",
+      "text_sha256": "81c844b8367b5a31ba07529f1c5a71b67ff93bf37bab4541e1688ae93f323983"
+    },
+    {
+      "bbox": [
+        48.0,
+        324.9658203125,
+        291.3067932128906,
+        484.95849609375
+      ],
+      "block_id": "page-0751-block-0010",
+      "order": 10,
+      "text": "Les causes de l’hypersomnie primaire sont mal connues.\nLes principales hypothèses relient l’hypersomnie primaire à\nun possible décit de la neurotransmission noradrénergique,\nhistaminergique ou GABAergique. Il n’y a pas de traitement\nspécique pour cette aection, bien qu’on recommande parfois\nde faibles doses de psychostimulants comme le méthylphéni-\ndate, la dexamphétamine ou encore le modanil (AlertecMD),\nmais la réponse varie d’un patient à l’autre. De courtes siestes\nplaniées peuvent également aider. L’examen physique permet\nd’éliminer les causes physiques possibles d’hypersomnolence\nsecondaire comme l’hypothyroïdie, les encéphalites, certains\ntroubles génétiques et la démence. On cherche aussi à éliminer\nla possibilité de troubles respiratoires au cours du sommeil et\nl’abus de substances.\n",
+      "text_sha256": "67a4c5a7a7c9ddc4718ddc601bb786411c04d729faf611c05bee6222bc67c4fa"
+    },
+    {
+      "bbox": [
+        48.0,
+        495.48681640625,
+        224.71751403808594,
+        511.62939453125
+      ],
+      "block_id": "page-0751-block-0011",
+      "order": 11,
+      "text": "32.5.2 Hypersomnie périodique\n",
+      "text_sha256": "44f9d8cf2eac40d5f4244520eb066030aa3251f6149b0127773b9002565e5e60"
+    },
+    {
+      "bbox": [
+        48.0,
+        514.9658203125,
+        291.7032470703125,
+        686.45849609375
+      ],
+      "block_id": "page-0751-block-0012",
+      "order": 12,
+      "text": "Il s’agit d’une présentation rare, caractérisée par un allongement\nimmodéré de la quantité de sommeil par 24 heures. La forme la\nmieux connue est le syndrome de Kleine-Levin. L’hypersomnie\nrécurrente que présentent ces patients s’accompagne de troubles\ncognitifs, comportementaux et psychiatriques. Le premier épi-\nsode est souvent associé à une infection ou à la prise d’alcool.\nL’hypersexualité touche la moitié des patients, la plupart des\nhommes, alors que l’hyperphagie, observée chez 66 % des patients,\nest sans égard au sexe. Des hallucinations et des délires peuvent\nêtre présents. Il est remarquable de constater que la plupart des\npatients sont tout à fait « normaux » entre les épisodes en ce qui\na trait au sommeil, à la cognition, à l’humeur et au comportement\nalimentaire. La maladie disparaît une quinzaine d’années après\nson début, sauf dans les cas d’apparition à l’âge adulte où elle peut\ndurer plus longtemps.\n",
+      "text_sha256": "8c0a5c420e15e8a643ffd760fd5401bc05358929e48213abe1270c8cfa2422c6"
+    },
+    {
+      "bbox": [
+        48.0,
+        687.4658203125,
+        291.44232177734375,
+        732.45849609375
+      ],
+      "block_id": "page-0751-block-0013",
+      "order": 13,
+      "text": "La littérature décrit également des cas d’hypersomnolence\npériodique liée au cycle menstruel. Il s’agit d’une hypersomnie\nqui apparaît après la ménarche, rythmée par les menstruations,\net qui peut être traitée par des contraceptifs oraux.\n",
+      "text_sha256": "d78c974aac42d87a5ced346b85eb08ecba8e7e4a621efda7ca64ee7b79da0a6a"
+    }
+  ],
+  "coordinates_sha256": "f34735d06d97b3dbb4d826e7b001dc4f1f9f3174d5bebbe9c66bdf27cc8f67f9",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0751",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "734\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n32.5.3 Narcolepsie\nEn 1880, Gélineau a identié la narcolepsie comme une entité\npathologique indépendante. Cette maladie se caractérise par deux\nsymptômes principaux et deux symptômes moins fréquents :\n• une hypersomnolence diurne qui culmine en des accès in-\ncontrôlables de sommeil ;\n• de la cataplexie, dénie comme une chute brusque du tonus\nmusculaire ;\n• la paralysie du sommeil (incapacité à bouger lors d’un réveil) ;\n• les hallucinations hypnagogiques à l’endormissement et\nhypnopompiques au réveil.\nLes signes et symptômes de la narcolepsie sont tous en rapport\navec un dérèglement facilitateur des mécanismes du sommeil\nparadoxal. La notion de décience en hypocrétine peut être\nconsidérée comme abusive par certains, car les preuves à ce\njour viennent surtout du modèle animal et cette décience est\ndicilement vériable pour l’instant in vivo chez les patients.\nL’hypersomnolence diurne des patients sourant de narco-\nlepsie se distingue par trois traits particuliers :\n1. La somnolence excessive est présente à tout moment de la\njournée, mais elle est plus marquée en n de matinée et au\ndébut de l’après-midi ; il n’est pas rare d’observer des patients\ndont la vigilance s’accroît en n de journée ;\n2. La présence d’accès incontrôlables de sommeil, parfois même\ndans des situations comme en mangeant, en conversant ou\nen conduisant leur voiture. Bien que subites, les attaques de\nsommeil sont précédées par des signes de fatigue prémonitoires ;\n3. Sa disparition après une sieste, quelle qu’en soit sa durée. En\ngénéral, les patients sourant de narcolepsie se sentent tout à\nfait reposés après une sieste de 5 à 10 minutes, mais cet eet\nrécupérateur ne dure en moyenne qu’une à deux heures, après\nquoi les patients redeviennent somnolents.\nLe diagnostic de narcolepsie établi selon le DSM-5 (voir le\ntableau 32.5) doit normalement être conrmé par l’enregistrement\npolygraphique du sommeil (test itératif de délai d’endormisse-\nment), comme pour l’hypersomnie primaire.\nLe test itératif de délai d’endormissement met en évidence\nun phénomène électrophysiologique spécique à la narcolepsie,\nsoit le passage au sommeil paradoxal dès l’endormissement. En\neet, chez les personnes non atteintes, ce stade du sommeil\nn’apparaît que 90 minutes après l’endormissement, alors qu’il\nsurvient à l’instant même de l’endormissement ou dans les\n10 minutes qui suivent chez les patients sourant de narco-\nlepsie. Ce phénomène ne s’observe que très rarement chez les\nindividus sains, sauf après une privation de sommeil ou pen-\ndant le sevrage de certains médicaments. Il est à noter que les\nendormissements immédiats en sommeil paradoxal sont plus\nfréquents pendant les siestes du matin et que leur nombre peut\nvarier considérablement d’un patient à l’autre. Un minimum\nde deux siestes avec endormissement en sommeil paradoxal\nest nécessaire pour conrmer le diagnostic de narcolepsie.\nLa cataplexie se manifeste par une chute brusque du tonus\nmusculaire déclenchée par des émotions soudaines comme le\nrire, la colère, la surprise. L’atonie musculaire peut toucher :\n• les muscles du visage, produisant ainsi une dysarthrie transitoire ;\n• les membres supérieurs ou inférieurs. Au cours d’un épi-\nsode cataplexique grave, le patient peut même s’écrouler sur\nle sol.\nl’éveil, qui mesure la capacité de résister au sommeil au cours\nd’un protocole semblable à celui du test itératif de délai d’en-\ndormissement.\nUne évaluation complémentaire en neuropsychologie\npeut s’avérer utile pour objectiver la performance cognitive et\npsychomotrice.\n32.5.1 Hypersomnie primaire\nLes critères diagnostiques de l’hypersomnie primaire (narcolepsie\nsans cataplexie) selon le DSM-5 sont présentés dans le tableau 32.4.\nCette aection est rare et les quelques études publiées men-\ntionnent une prévalence de 1 cas sur 10 000 à 500 000 personnes.\nSes manifestations diurnes sont peu uctuantes, la somnolence\nétant présente toute la journée. Même si elles peuvent durer plus\nd’une heure, les siestes sont peu ressourçantes et les réveils sont\ndiciles, avec présence d’ivresse du sommeil (inertie et confu-\nsion). Les patients sont habituellement jeunes (de 16 à 30 ans) et\nl’hypersomnolence apparaît et évolue sans lien apparent avec la\nsurvenue d’événements particuliers dans la vie personnelle. Dans\ncertains cas, il existe des problèmes psychologiques et sociaux,\nmais ceux-ci ne semblent pas directement associés à l’apparition\net à l’évolution de l’hypersomnolence. L’examen psychiatrique ne\nmet pas en évidence de psychopathologie spécique, mais des\nétudes systématiques sur cette aection restent à faire.\nLes causes de l’hypersomnie primaire sont mal connues.\nLes principales hypothèses relient l’hypersomnie primaire à\nun possible décit de la neurotransmission noradrénergique,\nhistaminergique ou GABAergique. Il n’y a pas de traitement\nspécique pour cette aection, bien qu’on recommande parfois\nde faibles doses de psychostimulants comme le méthylphéni-\ndate, la dexamphétamine ou encore le modanil (AlertecMD),\nmais la réponse varie d’un patient à l’autre. De courtes siestes\nplaniées peuvent également aider. L’examen physique permet\nd’éliminer les causes physiques possibles d’hypersomnolence\nsecondaire comme l’hypothyroïdie, les encéphalites, certains\ntroubles génétiques et la démence. On cherche aussi à éliminer\nla possibilité de troubles respiratoires au cours du sommeil et\nl’abus de substances.\n32.5.2 Hypersomnie périodique\nIl s’agit d’une présentation rare, caractérisée par un allongement\nimmodéré de la quantité de sommeil par 24 heures. La forme la\nmieux connue est le syndrome de Kleine-Levin. L’hypersomnie\nrécurrente que présentent ces patients s’accompagne de troubles\ncognitifs, comportementaux et psychiatriques. Le premier épi-\nsode est souvent associé à une infection ou à la prise d’alcool.\nL’hypersexualité touche la moitié des patients, la plupart des\nhommes, alors que l’hyperphagie, observée chez 66 % des patients,\nest sans égard au sexe. Des hallucinations et des délires peuvent\nêtre présents. Il est remarquable de constater que la plupart des\npatients sont tout à fait « normaux » entre les épisodes en ce qui\na trait au sommeil, à la cognition, à l’humeur et au comportement\nalimentaire. La maladie disparaît une quinzaine d’années après\nson début, sauf dans les cas d’apparition à l’âge adulte où elle peut\ndurer plus longtemps.\nLa littérature décrit également des cas d’hypersomnolence\npériodique liée au cycle menstruel. Il s’agit d’une hypersomnie\nqui apparaît après la ménarche, rythmée par les menstruations,\net qui peut être traitée par des contraceptifs oraux.\n",
+  "raw_text_sha256": "561c2900d993ec428003cec7f0bc9d0eaeafdf6398194ba75fa771ab93a8aa68",
+  "source_page_display": 752,
+  "source_page_index": 751
+}

@@ -1,0 +1,412 @@
+{
+  "block_sequence_sha256": "ffeb89a8f19cbf76747be29ee20755874df07d9061c28bd6f89f4ba6db469f70",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        106.5719985961914,
+        758.8693237304688
+      ],
+      "block_id": "page-1177-block-0001",
+      "order": 1,
+      "text": "I16\nIndex\n",
+      "text_sha256": "223a290f8fa4bad8867394a437ef11272345cb4869c738db16e63bc2cd383d13"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.30898666381836,
+        190.5380096435547,
+        50.92910385131836
+      ],
+      "block_id": "page-1177-block-0002",
+      "order": 2,
+      "text": "Clonidine (CatapresMD), 124, 404, 506,\n",
+      "text_sha256": "54449ae5257be6f47bcda7cf366eadce2730da34c6d539db1054fb1ba1cb7b8a"
+    },
+    {
+      "bbox": [
+        48.0,
+        51.98867416381836,
+        207.54302978515625,
+        116.9291000366211
+      ],
+      "block_id": "page-1177-block-0003",
+      "order": 3,
+      "text": "832, 900, 1258, 1284, 1329, 1452-1453,\n1474, 1504, 1506-1507, 1526, 1530\nClopidogrel (PlavixMD), 1436-1437, 1504\nClopixolMD, voir Zuclopenthixol\nClorazépate (TranxeneMD), 1444-1446, 1450\nClozapine (ClozarilMD), 117, 126, 127, 129,\n",
+      "text_sha256": "568e266a157da2ff84e66803cecdedd46054088fb5bf1a25b4e0355e6ef56013"
+    },
+    {
+      "bbox": [
+        48.0,
+        117.9886703491211,
+        204.06004333496094,
+        347.9790954589844
+      ],
+      "block_id": "page-1177-block-0004",
+      "order": 4,
+      "text": "182, 338, 345, 359-360, 363, 448, 458,\n525, 583, 614, 633, 644-645, 656, 748,\n918, 920, 973, 1095, 1112, 1396, 1415,\n1431, 1436-1437, 1439, 1460-1462,\n1464, 1468, 1472-1480, 1504-1508,\n1538, 1545-1547, 1550-1551\nClozarilMD, voir Clozapine\nCodéine, 879, 896, 1437, 1503-1505, 1507\nCogentinMD, voir Benztropine\nCognexMD, voir Tacrine\nComtanMD, voir Entacapone\nConcertaMD, voir Méthylphénidate\nCordaroneMD voir Amiodarone\nCoregMD, voir Carvédilol\nCorgardMD, voir Nadolol\nCozaarMD, voir Losartan\nCrixivanMD, voir Indinavir\nCyclosporine (NeoralMD), 1437-1438\nCymbaltaMD, voir Duloxétine\nCyproheptadine (PeriactinMD), 506\nCyprotérone (Androcur DepotMD), 824\n",
+      "text_sha256": "408298bfdde764be6ccc0cfaa276db0b6e2dfe5e9a296b92295f4594f7963209"
+    },
+    {
+      "bbox": [
+        48.0,
+        353.8570251464844,
+        192.4739990234375,
+        379.9790954589844
+      ],
+      "block_id": "page-1177-block-0005",
+      "order": 5,
+      "text": "D\nD-cyclosérine (SeromycinMD), 131, 437,\n",
+      "text_sha256": "1dd1a6109ddb2a2c49bb24626d5bf573ed9c3d7a613db4cf281795d0f688cd98"
+    },
+    {
+      "bbox": [
+        48.0,
+        381.0386657714844,
+        204.56561279296875,
+        478.9790954589844
+      ],
+      "block_id": "page-1177-block-0006",
+      "order": 6,
+      "text": "440, 459, 840\nDalmaneMD, voir Flurazépam\nDarunavir (PrezistaMD), 1437\nDDAVPMD, voir Desmopressine\nDelavirdine (RescriptorMD), 1436-1437\nDepakeneMD, voir Acide valproïque\nDepo-ProveraMD, voir Médroxyprogestérone\nDéprénylMD, voir Sélégiline\nDésipramine (NorpraminMD), 406, 437,\n",
+      "text_sha256": "04d21e9954e9271bf95cc1d92da4f8fb996ee05d12b8aef8ea76242cb815ffa4"
+    },
+    {
+      "bbox": [
+        48.0,
+        480.0386657714844,
+        198.12100219726562,
+        522.9791259765625
+      ],
+      "block_id": "page-1177-block-0007",
+      "order": 7,
+      "text": "459, 506, 574, 977, 1039, 1437,\n1486-1489, 1498, 1500, 1504-1505,\n1507-1508\nDesmopressine (DDAVPMD; 1-diamine 8\n",
+      "text_sha256": "ba29a7e90ca6f39ad0b6557ce3b1ac1917a9d2370ac2fbd0ee5cb454d8be3e4d"
+    },
+    {
+      "bbox": [
+        48.0,
+        524.0386962890625,
+        202.98638916015625,
+        544.9791259765625
+      ],
+      "block_id": "page-1177-block-0008",
+      "order": 8,
+      "text": "D-arginine-vasopressine), 1312, 1362\nDesvenlafaxine (PristiqMD), 437, 441, 576,\n",
+      "text_sha256": "13d478ec5ffb78d39d3ac84ec90fa4a8b3782a6500669c1bf0d12dac8b323c84"
+    },
+    {
+      "bbox": [
+        48.0,
+        546.0386962890625,
+        207.54302978515625,
+        632.9791259765625
+      ],
+      "block_id": "page-1177-block-0009",
+      "order": 9,
+      "text": "776, 977, 1318, 1486, 1488, 1491-1492,\n1502, 1505, 1508, 1510\nDesyrelMD, voir Trazodone\nDetrolMD, voir Toltérodine\nDexaméthasone, 1437, 1450\nDexedrineMD, voir Dextroamphétamine\nDexmédétomidine (PrecedexMD), 583\nDextroamphétamine (DexedrineMD; Dexe-\n",
+      "text_sha256": "b3ed6214fd78974131efe177177b221cea5759203cb96f169d631234f4685e17"
+    },
+    {
+      "bbox": [
+        48.0,
+        633.3590087890625,
+        199.82200622558594,
+        665.9791259765625
+      ],
+      "block_id": "page-1177-block-0010",
+      "order": 10,
+      "text": "drine spansuleMD), 1317, 1415, 1430,\n1498, 1521-1523, 1527\nDextrométhorphane (DMMD), 1437,\n",
+      "text_sha256": "86e87310fc388d7597fe0064184d5a230d1deeacdc8c04fc5d65e6ee641218d6"
+    },
+    {
+      "bbox": [
+        48.0,
+        667.0386962890625,
+        202.6020050048828,
+        710.0291137695312
+      ],
+      "block_id": "page-1177-block-0011",
+      "order": 11,
+      "text": "1504-1505, 1519\nDHA, voir Acide docosahexaenoïque\nDiabetaMD, voir Glyburide\nDiazépam (ValiumMD), 439, 638, 731, 865,\n",
+      "text_sha256": "299f74535f7100b2bc1b7e5a2a3ac76bdea81eb51d29c1d4673df361220b3946"
+    },
+    {
+      "bbox": [
+        66.0,
+        711.0886840820312,
+        186.54603576660156,
+        721.0291137695312
+      ],
+      "block_id": "page-1177-block-0012",
+      "order": 12,
+      "text": "891, 902, 1106, 1110, 1431, 1436,\n",
+      "text_sha256": "a226f598abebd6f1a0a779e4e9e34e3f13bd92c6c7e4773db357d49154c08413"
+    },
+    {
+      "bbox": [
+        219.0,
+        40.98867416381836,
+        366.1070861816406,
+        105.9291000366211
+      ],
+      "block_id": "page-1177-block-0013",
+      "order": 13,
+      "text": "1444-1446, 1448, 1450-1451, 1505-\n1506, 1543, 1560\nDiclofénac (ArthrotecMD), 1436\nDiucanMD, voir Fluconazole\nDilantinMD, voir Phénytoïne\nDiltiazem (CardizemMD), 1436, 1438,\n",
+      "text_sha256": "e7264d58c468dee736edd9b7b68283d53a71b479ec822649c496f9c5f97bc751"
+    },
+    {
+      "bbox": [
+        219.0,
+        106.9886703491211,
+        367.609130859375,
+        127.9291000366211
+      ],
+      "block_id": "page-1177-block-0014",
+      "order": 14,
+      "text": "1450, 1506\nDiphenhydramine (BénadrylMD), 309, 360,\n",
+      "text_sha256": "3d4ff0c6cd0c791563a9cfe6a97170389451f2cb8530fd4a9d111957fef8bf29"
+    },
+    {
+      "bbox": [
+        219.0,
+        128.98867797851562,
+        378.8594665527344,
+        248.97911071777344
+      ],
+      "block_id": "page-1177-block-0015",
+      "order": 15,
+      "text": "361, 388, 732, 886, 1102, 1111, 1456,\n1462, 1469, 1474, 1480, 1504, 1508, 1519\nDiprivanMD, voir Propofol\nDipyridamole (AggrenoxMD), 1407\nDisulrame (AntabuseMD), 506, 852, 866, 868\nDitropanMD, voir Oxybutynine\nDivalproexMD, voir Acide valproïque\nDM siropMD, voir Dextrométhorphane\nDobutamine (DobutrexMD), 1533\nDobutrexMD, voir Dobutamine\nDonézépil (AriceptMD), 129, 605-606, 610-\n",
+      "text_sha256": "51923925d21e30a4f25e57d801bef63571f6675e3d3cfe21d236b6dfc797241c"
+    },
+    {
+      "bbox": [
+        219.0,
+        250.03866577148438,
+        376.5630798339844,
+        303.9790954589844
+      ],
+      "block_id": "page-1177-block-0016",
+      "order": 16,
+      "text": "611, 640, 1407, 1480, 1512-1521, 1549\nDoridenMD, voir Glutéthimide\nDorm-aideMD, 1456\nDormiphenMD, 1456\nDoxépine (SinequanMD; SilenorMD), 899,\n",
+      "text_sha256": "de398655e9de37616ce77fea8120e521d17afc6a1433dd8bee77094566adcb74"
+    },
+    {
+      "bbox": [
+        219.0,
+        305.0386657714844,
+        368.9380187988281,
+        347.9790954589844
+      ],
+      "block_id": "page-1177-block-0017",
+      "order": 17,
+      "text": "1455, 1480, 1486, 1488-1489, 1546\nDoxylamine (UnisomMD), 1456\nDronabinol (MarinolMD), 575, 886\nDuloxétine (CymbaltaMD), 437, 441, 460,\n",
+      "text_sha256": "6a64fb53686a3375dafa2cc5b81f28c029cb5017db6d19f9d7b241b9cb5855e5"
+    },
+    {
+      "bbox": [
+        219.0,
+        349.0386657714844,
+        373.91705322265625,
+        402.9790954589844
+      ],
+      "block_id": "page-1177-block-0018",
+      "order": 18,
+      "text": "506, 547, 570, 574-575, 645, 776, 971,\n977, 1039, 1318, 1414, 1417, 1436,\n1479, 1485-1486, 1488, 1491-1492,\n1500-1507, 1509-1510\nDuragésicMD, voir Fentanyl\n",
+      "text_sha256": "618efd1ad6f5929abf7f687e6c7499cc2355b7e52d8cd68b746c5afa6468a30e"
+    },
+    {
+      "bbox": [
+        219.0,
+        408.8570251464844,
+        338.6789245605469,
+        445.9790954589844
+      ],
+      "block_id": "page-1177-block-0019",
+      "order": 19,
+      "text": "E\nEbixaMD, voir Mémantine\nECD (éthylène cystéinate dimer)\n",
+      "text_sha256": "def685095af5573a41c27fe5eea94f24637095c210cf2a615cfcae25f1cf0f98"
+    },
+    {
+      "bbox": [
+        219.0,
+        446.3589782714844,
+        376.62200927734375,
+        632.9791259765625
+      ],
+      "block_id": "page-1177-block-0020",
+      "order": 20,
+      "text": "(NeuroliteMD), 142, 151\nEdronaxMD voir Reboxétine\nÉdrophonium (TensilonMD), 1514\nÉfavirenz (SustivaMD), 1437, 1504\nEexor XR MD, voir Venlafaxine XR\nEentMD, voir Prasugrel\nElavilMD, voir Amitriptyline\nÉlétriptan (RelpaxMD), 1437\nÉnoxacine, 1505-1506\nEntacapone (ComtanMD), 125\nEPA, voir Acide eicosapentanoïque\nÉphédrine, 1558\nÉpinéphrine, 1533, 1558\nEpivalMD, voir Acide valproïque\nEquanilMD, voir Méprobamate\nErycMD, voir Érythromycine\nÉrythromycine (ErycMD), 1437, 1450, 1479,\n",
+      "text_sha256": "b315eb8f99e2fc0dc03cd8f938786a28e0d4ad127bd5248d1e316d7f40a4dfdd"
+    },
+    {
+      "bbox": [
+        219.0,
+        634.0386962890625,
+        363.4595947265625,
+        654.9791259765625
+      ],
+      "block_id": "page-1177-block-0021",
+      "order": 21,
+      "text": "1504, 1506, 1508, 1543, 1546\nEscitalopram (CipralexMD), 437, 441, 460,\n",
+      "text_sha256": "f258f35654f0d3d5e61443d513cba2354395bf8a6d887ed04284f42ad308e0e8"
+    },
+    {
+      "bbox": [
+        219.0,
+        656.0386962890625,
+        377.3836364746094,
+        721.0291137695312
+      ],
+      "block_id": "page-1177-block-0022",
+      "order": 22,
+      "text": "506, 645, 845, 974, 977, 1039-1040, 1284,\n1377-1378, 1414, 1417, 1436-1437, 1480,\n1485-1486, 1488-1490, 1491, 1497, 1500,\n1501, 1502, 1504, 1506, 1509\nÉsoméprazole (NexiumMD), 1504\nEszopiclone (LunestaMD), 506, 732, 1506\n",
+      "text_sha256": "30b8c54a80c117e6c0f606f39d553836b55ab14efca76da71532f0cf1b410ec5"
+    },
+    {
+      "bbox": [
+        390.0,
+        40.30898666381836,
+        521.9440307617188,
+        95.02910614013672
+      ],
+      "block_id": "page-1177-block-0023",
+      "order": 23,
+      "text": "Éthinylestradiol (AlesseMD), 1438\nÉthosuximide (ZarontinMD), 656\nÉthylène cystéinate dimer, voir ECD\nEvistaMD, voir Raloxifène\nExelonMD, voir Rivastigmine\n",
+      "text_sha256": "77ce49f24f8d5bf88c3064dcc3ebe05cac3dba80540e14ce3044a6a245f111b6"
+    },
+    {
+      "bbox": [
+        390.0,
+        100.90703582763672,
+        530.2799682617188,
+        281.3291015625
+      ],
+      "block_id": "page-1177-block-0024",
+      "order": 24,
+      "text": "F\nFelbamate (FelbatolMD), 655\nFelbatolMD, voir Felbamate\nFélodipine (PlendilMD), 1438\nFemaraMD, voir Létrozole\nFentanyl (DuragésicMD), 575\nFetzimaMD, voir Lévomilnacipran\nFinastéride (ProscarMD), 1437\nFiorinalMD, voir Butalbital\nFlagylMD, voir Métronidazole\nFlécaïnide (TambocarMD), 1507\nFlibanserine (AddylMD), 764\nFlomaxMD, voir Tamsulosine\nFloventMD, voir Fluticasone\nFluanxolMD, voir Flupentixol\nFluconazole (DiucanMD), 1436, 1450,\n",
+      "text_sha256": "57038f0a845deeec4260424e0d9ee44088b64e7bc4ace5b76aa98386745ae88e"
+    },
+    {
+      "bbox": [
+        390.0,
+        282.388671875,
+        544.0020141601562,
+        314.3791198730469
+      ],
+      "block_id": "page-1177-block-0025",
+      "order": 25,
+      "text": "1504, 1508, 1533\nFlumazénil (AnexateMD), 419, 889, 1457\nFluoxétine (ProzacMD), 121, 127, 406, 409,\n",
+      "text_sha256": "d6f69a5d51aa6647612250593dc1be0458ee21ed6377550785973aa082ff2881"
+    },
+    {
+      "bbox": [
+        390.0,
+        315.4386901855469,
+        548.6959838867188,
+        402.4790954589844
+      ],
+      "block_id": "page-1177-block-0026",
+      "order": 26,
+      "text": "437, 441, 460, 506-507, 570, 575, 610,\n645, 650, 711, 730, 825, 829, 832, 840,\n971, 972, 974, 976-977, 1284, 1325,\n1369, 1374, 1377-1378, 1431, 1436-\n1437, 1439, 1450-1451, 1455, 1479,\n1482, 1486, 1488-1491, 1499, 1500-\n1509, 1533, 1543, 1546\nFlupentixol (FluanxolMD; Fluanxol DepotMD),\n",
+      "text_sha256": "850698f1ea99f34bf2a4db9ddb4135ecd8ceebcc0bbd24ccb50c561be47ac590"
+    },
+    {
+      "bbox": [
+        390.0,
+        403.58868408203125,
+        542.14599609375,
+        435.5791015625
+      ],
+      "block_id": "page-1177-block-0027",
+      "order": 27,
+      "text": "359-360\nFlupenthixol, 1461, 1463, 1468-1469\nFluphénazine (ModitenMD; ModecateMD),\n",
+      "text_sha256": "7842f6c1619ad9084b050c56e71e5129d8b53283d96e0d5ab8d4508d9776ba97"
+    },
+    {
+      "bbox": [
+        390.0,
+        436.638671875,
+        540.3379516601562,
+        479.6291198730469
+      ],
+      "block_id": "page-1177-block-0028",
+      "order": 28,
+      "text": "359, 360, 506, 645, 656, 1396, 1460-\n1461, 1463, 1468-1470, 1473, 1476,\n1716-1718\nFlurazépam (DalmaneMD), 439, 731, 889,\n",
+      "text_sha256": "b8fc642f15b55fbf1a1b7fc7ffcd6a4422f5b2dd1082aba6ae45ea6a56f398d5"
+    },
+    {
+      "bbox": [
+        390.0,
+        480.6886901855469,
+        542.56005859375,
+        512.6790771484375
+      ],
+      "block_id": "page-1177-block-0029",
+      "order": 29,
+      "text": "891, 1438, 1444-1446, 1450, 1453\nFluticasone (FloventMD), 681\nFluvoxamine (LuvoxMD), 437, 441, 460, 506,\n",
+      "text_sha256": "22fdb03bf5f8dd0d5685bc311abc6346274b158be27f9bcbdb5d57e27368b625"
+    },
+    {
+      "bbox": [
+        390.0,
+        513.7387084960938,
+        548.55908203125,
+        567.7791137695312
+      ],
+      "block_id": "page-1177-block-0030",
+      "order": 30,
+      "text": "655, 845, 1284, 1374, 1377-1378, 1436-\n1437, 1450, 1479, 1486, 1488-1490,\n1502, 1504-1506, 1508-1509, 1543, 1546\nFosamprénavir (TelzirMD), 1437, 1507\nFurosémide (LasixMD), 1480\n",
+      "text_sha256": "8bcde98a147da66832b12151efcb4afd18858b460bcae8a885cb3c3de3bdc823"
+    },
+    {
+      "bbox": [
+        390.0,
+        573.6570434570312,
+        546.593017578125,
+        599.8291015625
+      ],
+      "block_id": "page-1177-block-0031",
+      "order": 31,
+      "text": "G\nGabapentine (NeurontinMD), 388, 440-441,\n",
+      "text_sha256": "8e29f35a3464c24019225b50d35ba95c0455b3b3ec83681e1ed455914079401e"
+    },
+    {
+      "bbox": [
+        390.0,
+        600.888671875,
+        545.39599609375,
+        654.8790893554688
+      ],
+      "block_id": "page-1177-block-0032",
+      "order": 32,
+      "text": "506, 547, 573-574, 576, 610, 642, 655,\n973, 1040, 1409 1451, 1456, 1474,\n1498, 1549\nGabitrilMD, voir Tiagabine\nGalantamine (RéminylMD; Reminyl ERMD),\n",
+      "text_sha256": "b1a853341f07c93ef15edbee9001fa6ab1ff47cf78c19dca91bb4c59f789bdda"
+    },
+    {
+      "bbox": [
+        390.0,
+        655.9887084960938,
+        542.1900024414062,
+        721.0291137695312
+      ],
+      "block_id": "page-1177-block-0033",
+      "order": 33,
+      "text": "605-606, 650, 1438, 1480, 1512-1520\nGlimépiride (AmarylMD), 1436\nGluconormMD, voir Répaglinide\nGlucophageMD, voir Metformine\nGlutéthimide (DoridenMD), 887\nGlyburide (DiabetaMD), 1436\n",
+      "text_sha256": "b552262e0174bbc4a3976efb0742e89761fd0a46b57f72d3cea30f958f6b8f32"
+    }
+  ],
+  "coordinates_sha256": "d71eb3d1ada936186f06ba9ccf504338e3766ae4c2c052f20ac5f7515082ff99",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1177",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "I16\nIndex\nClonidine (CatapresMD), 124, 404, 506,\n832, 900, 1258, 1284, 1329, 1452-1453,\n1474, 1504, 1506-1507, 1526, 1530\nClopidogrel (PlavixMD), 1436-1437, 1504\nClopixolMD, voir Zuclopenthixol\nClorazépate (TranxeneMD), 1444-1446, 1450\nClozapine (ClozarilMD), 117, 126, 127, 129,\n182, 338, 345, 359-360, 363, 448, 458,\n525, 583, 614, 633, 644-645, 656, 748,\n918, 920, 973, 1095, 1112, 1396, 1415,\n1431, 1436-1437, 1439, 1460-1462,\n1464, 1468, 1472-1480, 1504-1508,\n1538, 1545-1547, 1550-1551\nClozarilMD, voir Clozapine\nCodéine, 879, 896, 1437, 1503-1505, 1507\nCogentinMD, voir Benztropine\nCognexMD, voir Tacrine\nComtanMD, voir Entacapone\nConcertaMD, voir Méthylphénidate\nCordaroneMD voir Amiodarone\nCoregMD, voir Carvédilol\nCorgardMD, voir Nadolol\nCozaarMD, voir Losartan\nCrixivanMD, voir Indinavir\nCyclosporine (NeoralMD), 1437-1438\nCymbaltaMD, voir Duloxétine\nCyproheptadine (PeriactinMD), 506\nCyprotérone (Androcur DepotMD), 824\nD\nD-cyclosérine (SeromycinMD), 131, 437,\n440, 459, 840\nDalmaneMD, voir Flurazépam\nDarunavir (PrezistaMD), 1437\nDDAVPMD, voir Desmopressine\nDelavirdine (RescriptorMD), 1436-1437\nDepakeneMD, voir Acide valproïque\nDepo-ProveraMD, voir Médroxyprogestérone\nDéprénylMD, voir Sélégiline\nDésipramine (NorpraminMD), 406, 437,\n459, 506, 574, 977, 1039, 1437,\n1486-1489, 1498, 1500, 1504-1505,\n1507-1508\nDesmopressine (DDAVPMD; 1-diamine 8\nD-arginine-vasopressine), 1312, 1362\nDesvenlafaxine (PristiqMD), 437, 441, 576,\n776, 977, 1318, 1486, 1488, 1491-1492,\n1502, 1505, 1508, 1510\nDesyrelMD, voir Trazodone\nDetrolMD, voir Toltérodine\nDexaméthasone, 1437, 1450\nDexedrineMD, voir Dextroamphétamine\nDexmédétomidine (PrecedexMD), 583\nDextroamphétamine (DexedrineMD; Dexe-\ndrine spansuleMD), 1317, 1415, 1430,\n1498, 1521-1523, 1527\nDextrométhorphane (DMMD), 1437,\n1504-1505, 1519\nDHA, voir Acide docosahexaenoïque\nDiabetaMD, voir Glyburide\nDiazépam (ValiumMD), 439, 638, 731, 865,\n891, 902, 1106, 1110, 1431, 1436,\n1444-1446, 1448, 1450-1451, 1505-\n1506, 1543, 1560\nDiclofénac (ArthrotecMD), 1436\nDiucanMD, voir Fluconazole\nDilantinMD, voir Phénytoïne\nDiltiazem (CardizemMD), 1436, 1438,\n1450, 1506\nDiphenhydramine (BénadrylMD), 309, 360,\n361, 388, 732, 886, 1102, 1111, 1456,\n1462, 1469, 1474, 1480, 1504, 1508, 1519\nDiprivanMD, voir Propofol\nDipyridamole (AggrenoxMD), 1407\nDisulrame (AntabuseMD), 506, 852, 866, 868\nDitropanMD, voir Oxybutynine\nDivalproexMD, voir Acide valproïque\nDM siropMD, voir Dextrométhorphane\nDobutamine (DobutrexMD), 1533\nDobutrexMD, voir Dobutamine\nDonézépil (AriceptMD), 129, 605-606, 610-\n611, 640, 1407, 1480, 1512-1521, 1549\nDoridenMD, voir Glutéthimide\nDorm-aideMD, 1456\nDormiphenMD, 1456\nDoxépine (SinequanMD; SilenorMD), 899,\n1455, 1480, 1486, 1488-1489, 1546\nDoxylamine (UnisomMD), 1456\nDronabinol (MarinolMD), 575, 886\nDuloxétine (CymbaltaMD), 437, 441, 460,\n506, 547, 570, 574-575, 645, 776, 971,\n977, 1039, 1318, 1414, 1417, 1436,\n1479, 1485-1486, 1488, 1491-1492,\n1500-1507, 1509-1510\nDuragésicMD, voir Fentanyl\nE\nEbixaMD, voir Mémantine\nECD (éthylène cystéinate dimer)\n(NeuroliteMD), 142, 151\nEdronaxMD voir Reboxétine\nÉdrophonium (TensilonMD), 1514\nÉfavirenz (SustivaMD), 1437, 1504\nEexor XR MD, voir Venlafaxine XR\nEentMD, voir Prasugrel\nElavilMD, voir Amitriptyline\nÉlétriptan (RelpaxMD), 1437\nÉnoxacine, 1505-1506\nEntacapone (ComtanMD), 125\nEPA, voir Acide eicosapentanoïque\nÉphédrine, 1558\nÉpinéphrine, 1533, 1558\nEpivalMD, voir Acide valproïque\nEquanilMD, voir Méprobamate\nErycMD, voir Érythromycine\nÉrythromycine (ErycMD), 1437, 1450, 1479,\n1504, 1506, 1508, 1543, 1546\nEscitalopram (CipralexMD), 437, 441, 460,\n506, 645, 845, 974, 977, 1039-1040, 1284,\n1377-1378, 1414, 1417, 1436-1437, 1480,\n1485-1486, 1488-1490, 1491, 1497, 1500,\n1501, 1502, 1504, 1506, 1509\nÉsoméprazole (NexiumMD), 1504\nEszopiclone (LunestaMD), 506, 732, 1506\nÉthinylestradiol (AlesseMD), 1438\nÉthosuximide (ZarontinMD), 656\nÉthylène cystéinate dimer, voir ECD\nEvistaMD, voir Raloxifène\nExelonMD, voir Rivastigmine\nF\nFelbamate (FelbatolMD), 655\nFelbatolMD, voir Felbamate\nFélodipine (PlendilMD), 1438\nFemaraMD, voir Létrozole\nFentanyl (DuragésicMD), 575\nFetzimaMD, voir Lévomilnacipran\nFinastéride (ProscarMD), 1437\nFiorinalMD, voir Butalbital\nFlagylMD, voir Métronidazole\nFlécaïnide (TambocarMD), 1507\nFlibanserine (AddylMD), 764\nFlomaxMD, voir Tamsulosine\nFloventMD, voir Fluticasone\nFluanxolMD, voir Flupentixol\nFluconazole (DiucanMD), 1436, 1450,\n1504, 1508, 1533\nFlumazénil (AnexateMD), 419, 889, 1457\nFluoxétine (ProzacMD), 121, 127, 406, 409,\n437, 441, 460, 506-507, 570, 575, 610,\n645, 650, 711, 730, 825, 829, 832, 840,\n971, 972, 974, 976-977, 1284, 1325,\n1369, 1374, 1377-1378, 1431, 1436-\n1437, 1439, 1450-1451, 1455, 1479,\n1482, 1486, 1488-1491, 1499, 1500-\n1509, 1533, 1543, 1546\nFlupentixol (FluanxolMD; Fluanxol DepotMD),\n359-360\nFlupenthixol, 1461, 1463, 1468-1469\nFluphénazine (ModitenMD; ModecateMD),\n359, 360, 506, 645, 656, 1396, 1460-\n1461, 1463, 1468-1470, 1473, 1476,\n1716-1718\nFlurazépam (DalmaneMD), 439, 731, 889,\n891, 1438, 1444-1446, 1450, 1453\nFluticasone (FloventMD), 681\nFluvoxamine (LuvoxMD), 437, 441, 460, 506,\n655, 845, 1284, 1374, 1377-1378, 1436-\n1437, 1450, 1479, 1486, 1488-1490,\n1502, 1504-1506, 1508-1509, 1543, 1546\nFosamprénavir (TelzirMD), 1437, 1507\nFurosémide (LasixMD), 1480\nG\nGabapentine (NeurontinMD), 388, 440-441,\n506, 547, 573-574, 576, 610, 642, 655,\n973, 1040, 1409 1451, 1456, 1474,\n1498, 1549\nGabitrilMD, voir Tiagabine\nGalantamine (RéminylMD; Reminyl ERMD),\n605-606, 650, 1438, 1480, 1512-1520\nGlimépiride (AmarylMD), 1436\nGluconormMD, voir Répaglinide\nGlucophageMD, voir Metformine\nGlutéthimide (DoridenMD), 887\nGlyburide (DiabetaMD), 1436\n",
+  "raw_text_sha256": "f659faf42021321712c10fc21c45d1d4bcce2239dfef709e023a4438d8f53dc6",
+  "source_page_display": 1178,
+  "source_page_index": 1177
+}

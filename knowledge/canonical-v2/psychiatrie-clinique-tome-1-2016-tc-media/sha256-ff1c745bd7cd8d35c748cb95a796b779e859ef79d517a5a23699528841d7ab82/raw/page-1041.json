@@ -1,0 +1,340 @@
+{
+  "block_sequence_sha256": "cddd8487c3777e7dddcb9ef7c8e52954d288d45bcd58d0b4832000aad2b6e735",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        425.7200012207031,
+        758.8693237304688
+      ],
+      "block_id": "page-1041-block-0001",
+      "order": 1,
+      "text": "1024\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 4\nOrganisation des soins\n",
+      "text_sha256": "6e74b29ac2042a4f4b768f799177c3a8f639446559f5f57fdfd4cc23fb584b63"
+    },
+    {
+      "bbox": [
+        50.04999923706055,
+        41.002296447753906,
+        365.668701171875,
+        53.320068359375
+      ],
+      "block_id": "page-1041-block-0002",
+      "order": 2,
+      "text": "TABLEAU 45.1 Degrés de sévérité des troubles mentaux graves et persistants\n",
+      "text_sha256": "0c9aae1e8c70814e0bd60478118ec98610e310d8b971304d63f700992394524a"
+    },
+    {
+      "bbox": [
+        57.85000228881836,
+        68.67412567138672,
+        122.24100494384766,
+        79.25029754638672
+      ],
+      "block_id": "page-1041-block-0003",
+      "order": 3,
+      "text": "Degré de sévérité\n",
+      "text_sha256": "2168722e22b73ab683c4d360dfd310627f8efd32bf9b4df4485250bd8b04f93d"
+    },
+    {
+      "bbox": [
+        137.4499969482422,
+        58.67412567138672,
+        208.01670837402344,
+        79.25029754638672
+      ],
+      "block_id": "page-1041-block-0004",
+      "order": 4,
+      "text": "Pourcentage des\nadultes vivant dans\n",
+      "text_sha256": "9b450bcbac08a2824ced8d9a35305c855544622353d02fb0be7a960449b644b9"
+    },
+    {
+      "bbox": [
+        144.40000915527344,
+        78.67412567138672,
+        201.1055145263672,
+        89.25029754638672
+      ],
+      "block_id": "page-1041-block-0005",
+      "order": 5,
+      "text": "la communauté\n",
+      "text_sha256": "0bc51cb08289e588147343b08bd70e8e7ace8c047f3e73a060e6620b3a8b3866"
+    },
+    {
+      "bbox": [
+        236.65000915527344,
+        68.67412567138672,
+        521.9910278320312,
+        79.25029754638672
+      ],
+      "block_id": "page-1041-block-0006",
+      "order": 6,
+      "text": "Suivi\nDiagnostic\nDécits\nDurée\n",
+      "text_sha256": "7e42ed983d9821d336c50939c3eb3303e51c3d462c6cc6805f92efa76883b41e"
+    },
+    {
+      "bbox": [
+        52.29999923706055,
+        93.3519515991211,
+        445.9590148925781,
+        113.1781234741211
+      ],
+      "block_id": "page-1041-block-0007",
+      "order": 7,
+      "text": "I. Sévère et persistant\n0,5 %\nSpécialisé\n• Troubles psychotiques\nSévères et\npersistants\n",
+      "text_sha256": "4f20ea24c072df5596863b9f1f9066cba4c258ef75df45065f2320a53db7ed3a"
+    },
+    {
+      "bbox": [
+        477.95001220703125,
+        93.3519515991211,
+        493.52001953125,
+        103.1781234741211
+      ],
+      "block_id": "page-1041-block-0008",
+      "order": 8,
+      "text": "À vie\n",
+      "text_sha256": "fa7e54b2857abbcc8ae9241d6f23ab2277b137d4eef33bbdbc835d46284b31c5"
+    },
+    {
+      "bbox": [
+        52.29999923706055,
+        119.80195617675781,
+        258.00299072265625,
+        139.6281280517578
+      ],
+      "block_id": "page-1041-block-0009",
+      "order": 9,
+      "text": "II. Sévère\n1,0 %\nSpécialisé et\nde 1re ligne\n",
+      "text_sha256": "b7a177269cdd378ff4c5fbd1e98f376fe50c96619791ee3ab71e9e0b56df899f"
+    },
+    {
+      "bbox": [
+        281.3000183105469,
+        119.80195617675781,
+        398.5470275878906,
+        161.6281280517578
+      ],
+      "block_id": "page-1041-block-0010",
+      "order": 10,
+      "text": "• 50 % de troubles psychotiques\nnon affectifs et de maladie affec-\ntive bipolaire\n• 50 % d’autres troubles mentaux\n",
+      "text_sha256": "8d420d4434fc80643ddd45dd4e285dcc8b95a882b3c199ac58e538c00a5aedc2"
+    },
+    {
+      "bbox": [
+        411.3000183105469,
+        119.80195617675781,
+        538.25,
+        129.6281280517578
+      ],
+      "block_id": "page-1041-block-0011",
+      "order": 11,
+      "text": "Sévères\nChronique et aiguë\n",
+      "text_sha256": "6526b11c343e235b88b7d893826e8fe11d5017603d18af23f60bbf9da5c8a95a"
+    },
+    {
+      "bbox": [
+        52.29999923706055,
+        165.2019500732422,
+        252.09100341796875,
+        188.0281219482422
+      ],
+      "block_id": "page-1041-block-0012",
+      "order": 12,
+      "text": "III. Sérieux\n3,5 %\n1re ligne et\nspécialisé\n",
+      "text_sha256": "e4fb379c189ee7addd0714b958d95289f7000766d824ee50ae52065592ece1fe"
+    },
+    {
+      "bbox": [
+        281.3000183105469,
+        168.2019500732422,
+        371.1230163574219,
+        188.0281219482422
+      ],
+      "block_id": "page-1041-block-0013",
+      "order": 13,
+      "text": "• Autres troubles mentaux\net comorbidités\n",
+      "text_sha256": "d347330aa7cc7722834d8dee6073a40a55f3b767374f792ee31ba40d52f04b8d"
+    },
+    {
+      "bbox": [
+        411.3000183105469,
+        168.2019500732422,
+        537.9080200195312,
+        178.0281219482422
+      ],
+      "block_id": "page-1041-block-0014",
+      "order": 14,
+      "text": "Sérieux\nAiguë et chronique\n",
+      "text_sha256": "5afd5bb5a2df79f1ef0eaf96b4a51c8400903b1e148051bbd07bff87f62ad38b"
+    },
+    {
+      "bbox": [
+        52.29999923706055,
+        191.65196228027344,
+        389.4449157714844,
+        236.47813415527344
+      ],
+      "block_id": "page-1041-block-0015",
+      "order": 15,
+      "text": "IV. Modéré\n10,0 %\n1re ligne\n• Troubles anxieux, du contrôle\ndes impulsions et de l’humeur\n• Abus et dépendances aux\nsubstances\n",
+      "text_sha256": "03ae76c7ec08b8309337da4b804876939701f9346b9670612d4f4b1bfb626715"
+    },
+    {
+      "bbox": [
+        411.3000183105469,
+        194.65196228027344,
+        512.4110107421875,
+        204.47813415527344
+      ],
+      "block_id": "page-1041-block-0016",
+      "order": 16,
+      "text": "Modérés à légers\nÉpisodique\n",
+      "text_sha256": "fccd6db9135bf86f57b97354d5774c679759220ee44d1e947a8fdb8f9a1e8204"
+    },
+    {
+      "bbox": [
+        52.29999923706055,
+        240.0519561767578,
+        271.6750183105469,
+        262.8781433105469
+      ],
+      "block_id": "page-1041-block-0017",
+      "order": 17,
+      "text": "V. Léger\n15,0 %\n1re ligne et santé\npublique\n",
+      "text_sha256": "c39100cf40b93e4509406d74d6e867cb7cbc3b54a78c837634857145c97d9c8d"
+    },
+    {
+      "bbox": [
+        281.3000183105469,
+        243.0519561767578,
+        389.4449157714844,
+        296.8781433105469
+      ],
+      "block_id": "page-1041-block-0018",
+      "order": 18,
+      "text": "• Troubles anxieux, du contrôle\ndes impulsions et de l’humeur\n• Abus et dépendances aux\nsubstances\n• Détresse psychologique\n",
+      "text_sha256": "ddf16fd30b6bce8090a7938c21658fe17db9eb45def23634dc8c8ee4e6f8c5b2"
+    },
+    {
+      "bbox": [
+        411.3000183105469,
+        243.0519561767578,
+        444.9420166015625,
+        262.8781433105469
+      ],
+      "block_id": "page-1041-block-0019",
+      "order": 19,
+      "text": "Légers ou\ninexistants\n",
+      "text_sha256": "e84d3566fbec1f9346c403e63c38195b322d42b38b1bed0cdadf6a592cdea15e"
+    },
+    {
+      "bbox": [
+        477.95001220703125,
+        243.0519561767578,
+        510.7840881347656,
+        252.8781280517578
+      ],
+      "block_id": "page-1041-block-0020",
+      "order": 20,
+      "text": "Transitoire\n",
+      "text_sha256": "e3af1346ba33b2697ef748592fc8b421ce6084ec4b69b41bee5991684e5e55d2"
+    },
+    {
+      "bbox": [
+        48.29999923706055,
+        304.640625,
+        116.8280029296875,
+        313.50885009765625
+      ],
+      "block_id": "page-1041-block-0021",
+      "order": 21,
+      "text": "Source : Lesage (2010).\n",
+      "text_sha256": "6aa8132c79ac46959f0f46710d485010d16f3743060b8d72ed7560101a022ba2"
+    },
+    {
+      "bbox": [
+        48.0,
+        346.9658203125,
+        291.27313232421875,
+        414.95849609375
+      ],
+      "block_id": "page-1041-block-0022",
+      "order": 22,
+      "text": "(Vanasse & al., 2012). Au Québec, l’incidence se situe entre\n50 et 100 nouveaux cas par 100 000 habitants par année. À\nMontréal, l’étude d’une cohorte de 142 nouveaux cas de schi-\nzophrénie dénie de façon stricte montre que les deux tiers\nont commencé leur traitement avant l’âge de 30 ans (Abdel-\nBaki & al., 2011).\n",
+      "text_sha256": "87d3f78762027af947a040fb2831da58f383f54eddb5936ced66e63f1d7f428b"
+    },
+    {
+      "bbox": [
+        48.0,
+        415.9658203125,
+        291.4123840332031,
+        725.45849609375
+      ],
+      "block_id": "page-1041-block-0023",
+      "order": 23,
+      "text": "De façon générale, les patients sourant de troubles mentaux\nsévères et persistants ont en moyenne 45 ans ; ce sont majoritai-\nrement des hommes (57 %) atteints de schizophrénie (Chapireau,\n2005) et le tiers d’entre eux ont reçu plus d’un diagnostic,\ndont celui de trouble de la personnalité, en comorbidité, pour\n14 % d’entre eux (Placentino & al., 2009). En se reportant aux\nchires d’incidence et d’évolution de la schizophrénie proposés\nplus haut, ces hommes sourant d’un trouble mental sévère\net persistant doivent avoir vécu avec une maladie schizophré-\nnique depuis plus de 20 ans. Certains sont à l’hôpital de façon\npresque continue et ils présentent souvent un trouble de la\npersonnalité associé (Lichtenberg & al., 2008). De plus, 18 %\nd’entre eux ont des antécédents de crimes violents graves et\nle tiers a été détenu en milieu carcéral à un moment ou à un\nautre (Lelliott et Wing, 1994). La problématique de la judicia-\nrisation des troubles mentaux, qui n’était que de 9 % en 1972,\ndevient de plus en plus fréquente. Plus troublant encore, selon\nune étude de Hodgins et ses collaborateurs (2007), 49 % des\nhommes et 39 % des femmes sourant de maladies mentales\nsévères et persistantes ont manifesté des comportements\nagressifs envers autrui dans les six mois précédents le début de\nl’étude. Par ailleurs, les deux sexes ont été eux-mêmes victimes\nde gestes violents à des taux similaires dans leur vie. De plus,\nle personnel soignant en milieu hospitalier les perçoit comme\nayant davantage de comportements dits « perturbateurs »\n(Fisher & al., 2001). À cela, il faut ajouter que 13 % ont un\nproblème de dépendance à l’alcool et 12 %, aux drogues ; chez\n",
+      "text_sha256": "fe4e6c2b7427e9116da43cccc91a02b873af5d426d41df806115e9a0fc7c9946"
+    },
+    {
+      "bbox": [
+        306.0500183105469,
+        346.9658203125,
+        548.9608154296875,
+        368.95849609375
+      ],
+      "block_id": "page-1041-block-0024",
+      "order": 24,
+      "text": "cette clientèle, le pourcentage d’abus est de 35 % pour l’alcool\net de 46 % pour les drogues.\n",
+      "text_sha256": "b1ebf290aa58087c350524ea2df6458d4e5e7b48bd7ce1d91ba3c9945702abf5"
+    },
+    {
+      "bbox": [
+        313.0500183105469,
+        391.9931640625,
+        410.9236145019531,
+        411.1689453125
+      ],
+      "block_id": "page-1041-block-0025",
+      "order": 25,
+      "text": "45.4\nÉtiologie\n",
+      "text_sha256": "87438f8c41bc69838291717b2a4131b87ec9468b23388e819d666de8ea1a0a1e"
+    },
+    {
+      "bbox": [
+        306.0500183105469,
+        424.9658203125,
+        549.2910766601562,
+        584.95849609375
+      ],
+      "block_id": "page-1041-block-0026",
+      "order": 26,
+      "text": "Se poser la question de l’étiologie de la maladie psychiatrique\nsévère et persistante comme s’il s’agissait d’une entité autonome,\nen quelque sorte d’une nouvelle maladie, est à première vue\ncurieux. L’incapacité invalidante qui caractérise la résistance\nest le prolongement d’états pathologiques pour lesquels les\nhypothèses étiopathogéniques sont déjà examinées dans\nles chapitres de ce manuel portant sur les syndromes cliniques.\nCependant, la conception contemporaine de la maladie psy-\nchiatrique sévère et persistante ne permet pas de réduire ce\nphénomène aux seules conditions pathologiques initiales.\nOutre la composante bio-psycho-sociale propre à chaque\ntrouble mental en cause, certains facteurs non spéciques\nentrent en jeu pour moduler, dans un sens positif ou négatif,\nles conséquences de la maladie.\n",
+      "text_sha256": "0d8df8400fcc882cbe8d03bfbd9e12f3b61609c79920569fde4cff46ec5e68e8"
+    },
+    {
+      "bbox": [
+        306.0500183105469,
+        585.9658203125,
+        549.289306640625,
+        724.95849609375
+      ],
+      "block_id": "page-1041-block-0027",
+      "order": 27,
+      "text": "Si l’on s’inspire du concept élaboré par l’Organisation mon-\ndiale de la santé (2001) pour sa révision de la Classification\ninternationale du fonctionnement, du handicap et de la santé,\nla maladie psychiatrique sévère et persistante peut être envi-\nsagée comme le résultat d’interactions entre le potentiel\névolutif propre à chaque pathologie et un contexte particulier\noù interviennent :\n• des facteurs personnels : âge, sexe, comorbidité, histoire person-\nnelle, style cognitif d’évaluation (appraisal) (p. ex., appréciation\ndu niveau de stress et du soutien social, stratégie d’adaptation\nou coping), traits de caractère ou type de personnalité, adé-\nquation du soutien social, scolarité ou emploi, etc. ;\n",
+      "text_sha256": "a20ee7cdcf8b45645590aea773a430fa2a1c7ab1ff26e55ce1a20a52b707dd3d"
+    }
+  ],
+  "coordinates_sha256": "8c5d1e0e2329f9b80753651b25bce78fc9faaf2b7a6cd841f8ab3c7749a5c6cc",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1041",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "1024\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 4\nOrganisation des soins\nTABLEAU 45.1 Degrés de sévérité des troubles mentaux graves et persistants\nDegré de sévérité\nPourcentage des\nadultes vivant dans\nla communauté\nSuivi\nDiagnostic\nDécits\nDurée\nI. Sévère et persistant\n0,5 %\nSpécialisé\n• Troubles psychotiques\nSévères et\npersistants\nÀ vie\nII. Sévère\n1,0 %\nSpécialisé et\nde 1re ligne\n• 50 % de troubles psychotiques\nnon affectifs et de maladie affec-\ntive bipolaire\n• 50 % d’autres troubles mentaux\nSévères\nChronique et aiguë\nIII. Sérieux\n3,5 %\n1re ligne et\nspécialisé\n• Autres troubles mentaux\net comorbidités\nSérieux\nAiguë et chronique\nIV. Modéré\n10,0 %\n1re ligne\n• Troubles anxieux, du contrôle\ndes impulsions et de l’humeur\n• Abus et dépendances aux\nsubstances\nModérés à légers\nÉpisodique\nV. Léger\n15,0 %\n1re ligne et santé\npublique\n• Troubles anxieux, du contrôle\ndes impulsions et de l’humeur\n• Abus et dépendances aux\nsubstances\n• Détresse psychologique\nLégers ou\ninexistants\nTransitoire\nSource : Lesage (2010).\n(Vanasse & al., 2012). Au Québec, l’incidence se situe entre\n50 et 100 nouveaux cas par 100 000 habitants par année. À\nMontréal, l’étude d’une cohorte de 142 nouveaux cas de schi-\nzophrénie dénie de façon stricte montre que les deux tiers\nont commencé leur traitement avant l’âge de 30 ans (Abdel-\nBaki & al., 2011).\nDe façon générale, les patients sourant de troubles mentaux\nsévères et persistants ont en moyenne 45 ans ; ce sont majoritai-\nrement des hommes (57 %) atteints de schizophrénie (Chapireau,\n2005) et le tiers d’entre eux ont reçu plus d’un diagnostic,\ndont celui de trouble de la personnalité, en comorbidité, pour\n14 % d’entre eux (Placentino & al., 2009). En se reportant aux\nchires d’incidence et d’évolution de la schizophrénie proposés\nplus haut, ces hommes sourant d’un trouble mental sévère\net persistant doivent avoir vécu avec une maladie schizophré-\nnique depuis plus de 20 ans. Certains sont à l’hôpital de façon\npresque continue et ils présentent souvent un trouble de la\npersonnalité associé (Lichtenberg & al., 2008). De plus, 18 %\nd’entre eux ont des antécédents de crimes violents graves et\nle tiers a été détenu en milieu carcéral à un moment ou à un\nautre (Lelliott et Wing, 1994). La problématique de la judicia-\nrisation des troubles mentaux, qui n’était que de 9 % en 1972,\ndevient de plus en plus fréquente. Plus troublant encore, selon\nune étude de Hodgins et ses collaborateurs (2007), 49 % des\nhommes et 39 % des femmes sourant de maladies mentales\nsévères et persistantes ont manifesté des comportements\nagressifs envers autrui dans les six mois précédents le début de\nl’étude. Par ailleurs, les deux sexes ont été eux-mêmes victimes\nde gestes violents à des taux similaires dans leur vie. De plus,\nle personnel soignant en milieu hospitalier les perçoit comme\nayant davantage de comportements dits « perturbateurs »\n(Fisher & al., 2001). À cela, il faut ajouter que 13 % ont un\nproblème de dépendance à l’alcool et 12 %, aux drogues ; chez\ncette clientèle, le pourcentage d’abus est de 35 % pour l’alcool\net de 46 % pour les drogues.\n45.4\nÉtiologie\nSe poser la question de l’étiologie de la maladie psychiatrique\nsévère et persistante comme s’il s’agissait d’une entité autonome,\nen quelque sorte d’une nouvelle maladie, est à première vue\ncurieux. L’incapacité invalidante qui caractérise la résistance\nest le prolongement d’états pathologiques pour lesquels les\nhypothèses étiopathogéniques sont déjà examinées dans\nles chapitres de ce manuel portant sur les syndromes cliniques.\nCependant, la conception contemporaine de la maladie psy-\nchiatrique sévère et persistante ne permet pas de réduire ce\nphénomène aux seules conditions pathologiques initiales.\nOutre la composante bio-psycho-sociale propre à chaque\ntrouble mental en cause, certains facteurs non spéciques\nentrent en jeu pour moduler, dans un sens positif ou négatif,\nles conséquences de la maladie.\nSi l’on s’inspire du concept élaboré par l’Organisation mon-\ndiale de la santé (2001) pour sa révision de la Classification\ninternationale du fonctionnement, du handicap et de la santé,\nla maladie psychiatrique sévère et persistante peut être envi-\nsagée comme le résultat d’interactions entre le potentiel\névolutif propre à chaque pathologie et un contexte particulier\noù interviennent :\n• des facteurs personnels : âge, sexe, comorbidité, histoire person-\nnelle, style cognitif d’évaluation (appraisal) (p. ex., appréciation\ndu niveau de stress et du soutien social, stratégie d’adaptation\nou coping), traits de caractère ou type de personnalité, adé-\nquation du soutien social, scolarité ou emploi, etc. ;\n",
+  "raw_text_sha256": "cce180d58b7cfd8b669bde7bb02ef5447222596fc4ebea0603edca9927ed7ca2",
+  "source_page_display": 1042,
+  "source_page_index": 1041
+}

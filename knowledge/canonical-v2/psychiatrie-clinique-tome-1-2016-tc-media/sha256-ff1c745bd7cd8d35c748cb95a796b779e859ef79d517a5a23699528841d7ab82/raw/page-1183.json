@@ -1,0 +1,688 @@
+{
+  "block_sequence_sha256": "48064fd92bb6976fa6862c727a5e3abcb18e63d3de03d1433a72b91cd437e453",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        106.5719985961914,
+        758.8693237304688
+      ],
+      "block_id": "page-1183-block-0001",
+      "order": 1,
+      "text": "I22\nIndex\n",
+      "text_sha256": "2b1a95b6873d02f0775ed835d4f9c80e088a209b9f94f987cdd87d55ad49397a"
+    },
+    {
+      "bbox": [
+        57.0,
+        40.82011795043945,
+        195.14849853515625,
+        52.41728591918945
+      ],
+      "block_id": "page-1183-block-0002",
+      "order": 2,
+      "text": "dopaminergiques, 390, 614, 743,\n",
+      "text_sha256": "df4f125b5de8dbdecc33b3ab43c86f83879f01c7088a923219ab1268fb26d6f8"
+    },
+    {
+      "bbox": [
+        57.0,
+        53.32011795043945,
+        196.35894775390625,
+        117.27861785888672
+      ],
+      "block_id": "page-1183-block-0003",
+      "order": 3,
+      "text": "810, 842, 1498\ndu 5HT1, 1111t\ndu GABA, 417\nnon benzodiazépiniques, 1454\nnoradrénergiques α2A, 832, 1530,\n",
+      "text_sha256": "10997fc07f94970de0e614dd10716b197c621d2e4cc529e71ed24fc7c235faf2"
+    },
+    {
+      "bbox": [
+        57.0,
+        115.82012176513672,
+        191.00216674804688,
+        139.9172821044922
+      ],
+      "block_id": "page-1183-block-0004",
+      "order": 4,
+      "text": "1532\npartiels de la DA bloqueurs des\n",
+      "text_sha256": "087d974ce0d8fd4d5c8121e611deb0e064bfd1fa63c2046b146baae4e384c7c5"
+    },
+    {
+      "bbox": [
+        57.0,
+        140.8201141357422,
+        206.23251342773438,
+        164.9172821044922
+      ],
+      "block_id": "page-1183-block-0005",
+      "order": 5,
+      "text": "récepteurs de la DA, 1460\npartiels des récepteurs dopaminer-\n",
+      "text_sha256": "5eb6bd6e2f48e5b0b96104b71bad912a99e9bafd2539a226d2b74bd8f636f8a8"
+    },
+    {
+      "bbox": [
+        57.0,
+        165.8201141357422,
+        193.06202697753906,
+        202.4172821044922
+      ],
+      "block_id": "page-1183-block-0006",
+      "order": 6,
+      "text": "giques et sérotoninergiques\n5-HT1, 358\nsélectifs aux récepteurs opiacés\n",
+      "text_sha256": "b0578fe04ebb3358bdfec7abf73e577b0f8c3b31683684ade742187c40022aac"
+    },
+    {
+      "bbox": [
+        48.0,
+        203.3201141357422,
+        186.61012268066406,
+        264.91729736328125
+      ],
+      "block_id": "page-1183-block-0007",
+      "order": 7,
+      "text": "mu, 134\nsérotoninergiques, 135\nagoraphobie, 422, 424-425t\nagrément, 1056-1060\nagression, 29, 269, 492, 573, 654,\n",
+      "text_sha256": "0dd714ca3857ef4c242a635586f605edbe86169b48b863bb22861012cb3303fb"
+    },
+    {
+      "bbox": [
+        57.0,
+        265.59454345703125,
+        204.91000366210938,
+        314.91729736328125
+      ],
+      "block_id": "page-1183-block-0008",
+      "order": 8,
+      "text": "822, 828f, 829, 830t, 1138-1166,\n1140-1141t, 1243, 1322t\npassive, 1593t\nsexuelle, 270, 492, 513, 758, 764,\n",
+      "text_sha256": "8f395d0d67d38b87b88a4ed4ca5bf3c572525957d12bdfe47bc5abf670f947ca"
+    },
+    {
+      "bbox": [
+        48.0,
+        315.82012939453125,
+        198.27655029296875,
+        352.41729736328125
+      ],
+      "block_id": "page-1183-block-0009",
+      "order": 9,
+      "text": "799, 811, 901, 967-968, 1143,\n1188, 1358\nagressivité, 829-831, 1100, 1125,\n",
+      "text_sha256": "090f0d5132a1a5062b3ed769dfcbefe2095046f3f21a2caf5a97bf2c0e70972d"
+    },
+    {
+      "bbox": [
+        48.0,
+        353.32012939453125,
+        196.30203247070312,
+        402.41729736328125
+      ],
+      "block_id": "page-1183-block-0010",
+      "order": 10,
+      "text": "1140-1141t, 1142, 1143-1144t\nméditation et __, 1766\naide médicale à mourir, 1041-1042\naire(s)\n",
+      "text_sha256": "a71767654e09a63bb8534334eb432405899e5826ebafe467c9f387d45537c88e"
+    },
+    {
+      "bbox": [
+        57.0,
+        403.32012939453125,
+        127.83399963378906,
+        427.41729736328125
+      ],
+      "block_id": "page-1183-block-0011",
+      "order": 11,
+      "text": "associatives, 203\ncorticales, 111\n",
+      "text_sha256": "80ea0c7a9353ba30e1a32c74579bcb90443568d667d64ad713aa56a72d83d930"
+    },
+    {
+      "bbox": [
+        57.0,
+        429.35943603515625,
+        186.7078857421875,
+        452.41729736328125
+      ],
+      "block_id": "page-1183-block-0012",
+      "order": 12,
+      "text": "perceptuelles, 202\nde reconnaissance des visages,\n",
+      "text_sha256": "63bcc6c2b844372031a35998273df35374658b18dcd35e0796c0ccf04df26531"
+    },
+    {
+      "bbox": [
+        48.0,
+        453.32012939453125,
+        169.39849853515625,
+        552.4172973632812
+      ],
+      "block_id": "page-1183-block-0013",
+      "order": 13,
+      "text": "170f\nfusiforme des visages, 169\nmotrice, 172, 180\noccipitale, 169\nparahippocampique, 169\nsegmentaire ventrale, 335f\ntegmentale ventrale, 1464\nakathisie, 1473\n",
+      "text_sha256": "8b8c0969725dceb0311ee2515fe6a7b8ae64fb7e635b711d12a88a319a0b696e"
+    },
+    {
+      "bbox": [
+        48.0,
+        553.3201293945312,
+        199.51451110839844,
+        602.4172973632812
+      ],
+      "block_id": "page-1183-block-0014",
+      "order": 14,
+      "text": "antipsychotiques et __, 1473\nbenzodiazépines et __, 1447\nakinésie, 179\nalcool, 849-872, voir aussi troubles\n",
+      "text_sha256": "b98568340df7d495ca99a7c2a69c5dcd7c8bb00b512a48c5fc9cee5df6310988"
+    },
+    {
+      "bbox": [
+        57.0,
+        603.3201293945312,
+        200.46083068847656,
+        627.4172973632812
+      ],
+      "block_id": "page-1183-block-0015",
+      "order": 15,
+      "text": "liés à l’alcool\nabus d’__, 402, 405, 439, 586, 615,\n",
+      "text_sha256": "9185ba501f117667106979ee4cfa6d52ce3aedb6319f6d61425ea1c3f8180818"
+    },
+    {
+      "bbox": [
+        57.0,
+        628.3201293945312,
+        181.77317810058594,
+        652.4172973632812
+      ],
+      "block_id": "page-1183-block-0016",
+      "order": 16,
+      "text": "653, 850-857, 855, 1023\ncomplications psychiatriques\n",
+      "text_sha256": "e22d2358c45f5f939077742576913c5d29e8d018e5c71795c31a13084d2ccbc2"
+    },
+    {
+      "bbox": [
+        57.0,
+        653.3201293945312,
+        184.8802947998047,
+        677.4172973632812
+      ],
+      "block_id": "page-1183-block-0017",
+      "order": 17,
+      "text": "et __, 1098-1099t\ncomportement agité ou violent\n",
+      "text_sha256": "dff4bdc27bff9106d7b975543e3d487e00e9a7b2d524785633860cd6efffa258"
+    },
+    {
+      "bbox": [
+        57.0,
+        678.3201293945312,
+        182.6337127685547,
+        727.4172973632812
+      ],
+      "block_id": "page-1183-block-0018",
+      "order": 18,
+      "text": "et __, 1101\nconsommation d’__, 199, 855\ndelirium tremens et __, 581\ndémence et __, 586\n",
+      "text_sha256": "767ec5b2f31b310eefa1ec533ce9890a51ab7aace4cd69cf8e0fdd371edeb047"
+    },
+    {
+      "bbox": [
+        228.0,
+        40.82011795043945,
+        363.6328125,
+        64.91728210449219
+      ],
+      "block_id": "page-1183-block-0019",
+      "order": 19,
+      "text": "dépendance à l’__, 850\ndiérences reliées au sexe et __,\n",
+      "text_sha256": "a24dba66d305a133b46a77291b3995fd611da12c75a3d320e65faf290d032177"
+    },
+    {
+      "bbox": [
+        228.0,
+        65.82012176513672,
+        370.3125,
+        127.41728973388672
+      ],
+      "block_id": "page-1183-block-0020",
+      "order": 20,
+      "text": "965\ndouleur chronique et __, 561\ngrossesse et __, 861\ninsomnie et __, 729\ninteraction médicamenteuse et __,\n",
+      "text_sha256": "53f8403c440e3e45367ff90b260dad35c388d6997544d6ba9b87a57b3d116a7b"
+    },
+    {
+      "bbox": [
+        228.0,
+        128.3201141357422,
+        361.311279296875,
+        152.4172821044922
+      ],
+      "block_id": "page-1183-block-0021",
+      "order": 21,
+      "text": "1435\nintoxication aiguë par l’__, 858,\n",
+      "text_sha256": "e2eb321642b2df1fabd4976b37af2bb8329cb2921d1e65ab3a271008987fef03"
+    },
+    {
+      "bbox": [
+        228.0,
+        153.3201141357422,
+        376.010009765625,
+        202.4172821044922
+      ],
+      "block_id": "page-1183-block-0022",
+      "order": 22,
+      "text": "1098-1099t\nparaphilies et __, 810\nschizophrénie et __, 355\nsevrage de l’__, 579, 858-860, 858t,\n",
+      "text_sha256": "27afc84ee7663338d4d34836e666315be0305e4b01a883b24b52346dc635380c"
+    },
+    {
+      "bbox": [
+        228.0,
+        203.3201141357422,
+        359.7784423828125,
+        239.9172821044922
+      ],
+      "block_id": "page-1183-block-0023",
+      "order": 23,
+      "text": "859t, 890\nsommeil et __, 730\nsuicide et __, 646, 653, 656, 851,\n",
+      "text_sha256": "dde4333bbde737986adf05d21485c02b6d59b46273132092eafea7ae897c5eb6"
+    },
+    {
+      "bbox": [
+        228.0,
+        240.8201141357422,
+        356.31268310546875,
+        277.41729736328125
+      ],
+      "block_id": "page-1183-block-0024",
+      "order": 24,
+      "text": "858, 862, 1027, 1089, 1092,\n1119f, 1125-1136\nsystème nerveux central et __,\n",
+      "text_sha256": "29ca0a4c19f89dd1cebf8d434d7fc90e365f07b8c1b14c257f8d39e2a099a292"
+    },
+    {
+      "bbox": [
+        219.0,
+        278.32012939453125,
+        364.3621826171875,
+        314.91729736328125
+      ],
+      "block_id": "page-1183-block-0025",
+      "order": 25,
+      "text": "851-852\ntroubles délirants et __, 314\nAlcooliques Anonymes (AA), 293,\n",
+      "text_sha256": "21148e98f83985d97ae24296654e13cd7222dd4e9f588d5af7862b5dc8080166"
+    },
+    {
+      "bbox": [
+        219.0,
+        315.82012939453125,
+        372.94500732421875,
+        364.91729736328125
+      ],
+      "block_id": "page-1183-block-0026",
+      "order": 26,
+      "text": "845, 867-868, 874, 918-919, 921,\n1005, 1711\nalcoolisation chronique, 852\nalcoolisme, 12, 105, 130-136, 646,\n",
+      "text_sha256": "51a081082c41390906f61aba6b5dfff3c66bb625bd48a26bf5ab67087543bf32"
+    },
+    {
+      "bbox": [
+        228.0,
+        365.59454345703125,
+        373.82611083984375,
+        402.41729736328125
+      ],
+      "block_id": "page-1183-block-0027",
+      "order": 27,
+      "text": "849-872, 965, 1092, 1152, 1164,\n1745\nthérapie motivationnelle et __,\n",
+      "text_sha256": "674e5942b0a8383df7cb3d2e0229cfd78c0f3ef6f374bd714d3b971245836edc"
+    },
+    {
+      "bbox": [
+        219.0,
+        403.32012939453125,
+        364.5404357910156,
+        427.41729736328125
+      ],
+      "block_id": "page-1183-block-0028",
+      "order": 28,
+      "text": "1711\nalexithymie, 50t, 56, 534-535, 576,\n",
+      "text_sha256": "7b69338933db0843811572dd6ae32567fc69c972b6ceab49c8e33b54a3df60b6"
+    },
+    {
+      "bbox": [
+        219.0,
+        428.09454345703125,
+        350.7913818359375,
+        464.91729736328125
+      ],
+      "block_id": "page-1183-block-0029",
+      "order": 29,
+      "text": "659, 667, 678, 682, 773\nalgodystrophie réexe, 275\naliénation mentale, 1067-1069,\n",
+      "text_sha256": "7a1645b25e3a50dd4239d747c5db52f26cd92e6899b02be7518b6ddbd2ca3a82"
+    },
+    {
+      "bbox": [
+        219.0,
+        465.82012939453125,
+        337.46392822265625,
+        489.91729736328125
+      ],
+      "block_id": "page-1183-block-0030",
+      "order": 30,
+      "text": "1079t, 1139, 1189, 1193\naliment\n",
+      "text_sha256": "98cf177ac809843748b7415b1030e7de391879b04cab8b34dee4d315222d2687"
+    },
+    {
+      "bbox": [
+        228.0,
+        490.82012939453125,
+        376.0124816894531,
+        502.41729736328125
+      ],
+      "block_id": "page-1183-block-0031",
+      "order": 31,
+      "text": "interaction médicamenteuse et __,\n",
+      "text_sha256": "9f7d0ffd87696e2f459c0ea20fa03138d775e13ac6ab3bd11de69f6a855f71a2"
+    },
+    {
+      "bbox": [
+        219.0,
+        503.32012939453125,
+        343.60052490234375,
+        539.9172973632812
+      ],
+      "block_id": "page-1183-block-0032",
+      "order": 32,
+      "text": "1435\nalimentation inadéquate, 199\nallaitement, 974\n",
+      "text_sha256": "0be2275d2751e51fc8a7e2a09d2dbf45306328a53a9113492e6fa2451ec385fb"
+    },
+    {
+      "bbox": [
+        219.0,
+        540.8201293945312,
+        368.4609375,
+        602.4172973632812
+      ],
+      "block_id": "page-1183-block-0033",
+      "order": 33,
+      "text": "acide valproïque et __, 1542\nantidépresseurs et __, 1500-1501\nantipsychotiques et __, 1470\nlithium et __, 1538\nallèles, 94, 95, 98-99, 104, 128, 586,\n",
+      "text_sha256": "0ed2fcd41458cfff1eddad61a94bcd3ce52b410f38d50c97d75b24fb9f3c790c"
+    },
+    {
+      "bbox": [
+        219.0,
+        603.3201293945312,
+        336.7436218261719,
+        627.4172973632812
+      ],
+      "block_id": "page-1183-block-0034",
+      "order": 34,
+      "text": "852\nalliance thérapeutique, 955,\n",
+      "text_sha256": "51420baeacdc77445be4195bcc9f1562673c0ca9d1ddca7634440575d5340586"
+    },
+    {
+      "bbox": [
+        219.0,
+        628.3201293945312,
+        357.4249267578125,
+        689.9172973632812
+      ],
+      "block_id": "page-1183-block-0035",
+      "order": 35,
+      "text": "1164, 1216, 1407, 1441,\n1570-1574, 1573t, 1578,\n1787-1789\nallodynie, 557t\nalogie, 54f, 306, 352, 1071, 1103,\n",
+      "text_sha256": "b39eb64048a5ba42ea7cc5006d9d2fc4c7fb5826e3c6372fdf0e4b643b08f66b"
+    },
+    {
+      "bbox": [
+        219.0,
+        690.8201293945312,
+        342.59283447265625,
+        727.4172973632812
+      ],
+      "block_id": "page-1183-block-0036",
+      "order": 36,
+      "text": "1466\nalter ego, 523\naltération d’identité, 522-523\n",
+      "text_sha256": "9f80af01139758f948e92857ca9e631635efd6aed6e1dd5814fdabd8aabff984"
+    },
+    {
+      "bbox": [
+        390.0,
+        40.82011795043945,
+        549.4255981445312,
+        52.41728591918945
+      ],
+      "block_id": "page-1183-block-0037",
+      "order": 37,
+      "text": "altruisme, 222, 674, 1043, 1150, 1388,\n",
+      "text_sha256": "1659ccc60197211b34de15e7974c50f520beed4886c6ea2c8ea2a64ecadef76a"
+    },
+    {
+      "bbox": [
+        390.0,
+        53.09453201293945,
+        534.5719604492188,
+        77.41728973388672
+      ],
+      "block_id": "page-1183-block-0038",
+      "order": 38,
+      "text": "1589, 1590t, 1596, 1714-1715\naménagement des contingences,\n",
+      "text_sha256": "0a0085ae176ec20d64ec9c622f63069d10e03faef514c01d5c94a9df766be167"
+    },
+    {
+      "bbox": [
+        390.0,
+        78.32012176513672,
+        526.343017578125,
+        102.41728973388672
+      ],
+      "block_id": "page-1183-block-0039",
+      "order": 39,
+      "text": "1628, 1632t\namnésie, 60, 309, 511-523, 561,\n",
+      "text_sha256": "c753bbde8f189c1ff47879982dec9e5b15b1b9b8674e1e6e9289ef2b013bc7b3"
+    },
+    {
+      "bbox": [
+        399.0,
+        103.32012176513672,
+        544.3770751953125,
+        139.9172821044922
+      ],
+      "block_id": "page-1183-block-0040",
+      "order": 40,
+      "text": "593t, 613-616, 694, voir aussi\ntroubles (amnésiques)\nantérograde, 177, 888, 1446, 1449,\n",
+      "text_sha256": "e680736e65015bbed9fbf5e30ce02e390302353cd6138946c63e1cf27efc79bc"
+    },
+    {
+      "bbox": [
+        399.0,
+        140.8201141357422,
+        534.8155517578125,
+        177.4172821044922
+      ],
+      "block_id": "page-1183-block-0041",
+      "order": 41,
+      "text": "1453-1454, 1560\nde Korsako, 65\ndissociative, 14, 515, 516t, 519-\n",
+      "text_sha256": "73ed458b187c735b6d204f01992abb5cfee46e446367e149012a59c3bc25a757"
+    },
+    {
+      "bbox": [
+        399.0,
+        178.3201141357422,
+        536.3724365234375,
+        202.4172821044922
+      ],
+      "block_id": "page-1183-block-0042",
+      "order": 42,
+      "text": "521, 1759\npost-traumatique, 505, 595-596,\n",
+      "text_sha256": "3d8dd1efa5b0914330bba70ed0a0e5a54a16c7aa194351f2add66ea3712f7138"
+    },
+    {
+      "bbox": [
+        390.0,
+        203.3201141357422,
+        548.0590209960938,
+        252.4172821044922
+      ],
+      "block_id": "page-1183-block-0043",
+      "order": 43,
+      "text": "613, 659\npsychogène, 511\nrétrograde, 739-741, 1560\namphétamines, 891-894, 893t, 1430,\n",
+      "text_sha256": "65ddcc679c952e64182db0bbd665cc8d4a39cfe8fb1eca416794e7a8d455632b"
+    },
+    {
+      "bbox": [
+        399.0,
+        253.32012939453125,
+        534.6328125,
+        277.41729736328125
+      ],
+      "block_id": "page-1183-block-0044",
+      "order": 44,
+      "text": "1521-1534, 1521f\ndiérences reliées au sexe et __,\n",
+      "text_sha256": "b1ab116c37ac07356b202cd690f14f5e3f79bd0f44a42540efb2c81d27ca5096"
+    },
+    {
+      "bbox": [
+        390.0,
+        278.32012939453125,
+        539.6600341796875,
+        302.41729736328125
+      ],
+      "block_id": "page-1183-block-0045",
+      "order": 45,
+      "text": "965\namygdale, 112, 115, 174f, 202, 336f,\n",
+      "text_sha256": "4e019c47309069eb9471daeba2dd44d165c74dc7477ed2273fef602f66e78694"
+    },
+    {
+      "bbox": [
+        390.0,
+        303.32012939453125,
+        530.5929565429688,
+        339.91729736328125
+      ],
+      "block_id": "page-1183-block-0046",
+      "order": 46,
+      "text": "394, 417, 477, 494t, 495, 722,\n810, 931, 1365, 1464\nanalgésiques\n",
+      "text_sha256": "e7905091438059f2bce9d4511c15881e9174dfcde96219e2d8ba19b4891bfb0a"
+    },
+    {
+      "bbox": [
+        399.0,
+        340.82012939453125,
+        531.706787109375,
+        377.41729736328125
+      ],
+      "block_id": "page-1183-block-0047",
+      "order": 47,
+      "text": "delirium et __, 580\ndouleur chronique et __, 573\nopioïdes à libération contrôlée,\n",
+      "text_sha256": "9ff8077cb61d3f3e158114ce1a17854b9875b93e07d38f8b71eaa41c1ff15436"
+    },
+    {
+      "bbox": [
+        390.0,
+        378.32012939453125,
+        432.49798583984375,
+        402.41729736328125
+      ],
+      "block_id": "page-1183-block-0048",
+      "order": 48,
+      "text": "573\nanalyse(s)\n",
+      "text_sha256": "24a8e556c06d4c23cfb64203ce1641272495c80c1efcd233211b2a208340e3e2"
+    },
+    {
+      "bbox": [
+        399.0,
+        403.32012939453125,
+        538.524658203125,
+        414.91729736328125
+      ],
+      "block_id": "page-1183-block-0049",
+      "order": 49,
+      "text": "fonctionnelle du comportement,\n",
+      "text_sha256": "652f2fe87b214182b2af8010258239fca2184cabb30c0110a8c90ee3205a9d67"
+    },
+    {
+      "bbox": [
+        390.0,
+        415.82012939453125,
+        492.59698486328125,
+        464.91729736328125
+      ],
+      "block_id": "page-1183-block-0050",
+      "order": 50,
+      "text": "1259, 1613\nqualitatives, 81, 88-89\nquantitatives, 88-89\nanamnèse, 692, 1192t\n",
+      "text_sha256": "c4359725d97133529a5fb2ec33e8117fd85e3de977093dc47c8547495d6aece0"
+    },
+    {
+      "bbox": [
+        399.0,
+        465.82012939453125,
+        529.9804077148438,
+        477.41729736328125
+      ],
+      "block_id": "page-1183-block-0051",
+      "order": 51,
+      "text": "facteurs de risque à la violence\n",
+      "text_sha256": "31a977b5a2424c75303b83ab709fc8d5e3b34501aaec85785c2c41a773750d24"
+    },
+    {
+      "bbox": [
+        390.0,
+        478.32012939453125,
+        528.2599487304688,
+        552.4172973632812
+      ],
+      "block_id": "page-1183-block-0052",
+      "order": 52,
+      "text": "et __, 1152-1154T\nancrage (grounding), 523\nandroïdisme, 814\nandromimétophilie, 815\nandropause, 198, 755\nanémie, 308t, 314, 404, 579, 599,\n",
+      "text_sha256": "15d17f29e25d59e329df97c2cbbe9f72538e0f4517c6f87495edc213c1869254"
+    },
+    {
+      "bbox": [
+        390.0,
+        553.3201293945312,
+        533.4989624023438,
+        589.9172973632812
+      ],
+      "block_id": "page-1183-block-0053",
+      "order": 53,
+      "text": "628t, 649, 662, 710, 968, 1545\nanginophobie, 413\nangiopathie amyloïde cérébrale\n",
+      "text_sha256": "d7eaec4797640af3d1c8ffe0c4fc69c7c55598ef56fd1a62f5dc9c142251b720"
+    },
+    {
+      "bbox": [
+        390.0,
+        590.8201293945312,
+        545.7002563476562,
+        652.4172973632812
+      ],
+      "block_id": "page-1183-block-0054",
+      "order": 54,
+      "text": "démence et __, 590\nangoisse existentielle, 414, 663, 1597\nanhédonie, 352\nannulation rétroactive, 1591t\nanomalies\n",
+      "text_sha256": "0cafc6fd78ea854054ea78c9afbb3dd0f4456d5ea57c949255afc4e3a3142230"
+    },
+    {
+      "bbox": [
+        399.0,
+        653.3201293945312,
+        544.3258666992188,
+        664.9172973632812
+      ],
+      "block_id": "page-1183-block-0055",
+      "order": 55,
+      "text": "cérébrales, 138-157, 334-337, 354,\n",
+      "text_sha256": "aafd113fcded9d62e622772683b6a0518f3f7985887e0a1ff1c7a721137720e2"
+    },
+    {
+      "bbox": [
+        408.0,
+        665.8201293945312,
+        540.6312866210938,
+        727.3594360351562
+      ],
+      "block_id": "page-1183-block-0056",
+      "order": 56,
+      "text": "375, 448-449, 495, 557, 1248,\n1366, 1403t, 1558\nà l’imagerie fonctionnelle, 337\nhistologiques, 334\nstructurales, 335\n",
+      "text_sha256": "aa2f0569f86c1007ef9255fc4f7c20a3b945a74d83ed5ce9667ce7cb24434446"
+    }
+  ],
+  "coordinates_sha256": "34e2dca389d5fc7137eadc86717c8f58864ac623ac7f2e23366772d4f71e2d40",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1183",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "I22\nIndex\ndopaminergiques, 390, 614, 743,\n810, 842, 1498\ndu 5HT1, 1111t\ndu GABA, 417\nnon benzodiazépiniques, 1454\nnoradrénergiques α2A, 832, 1530,\n1532\npartiels de la DA bloqueurs des\nrécepteurs de la DA, 1460\npartiels des récepteurs dopaminer-\ngiques et sérotoninergiques\n5-HT1, 358\nsélectifs aux récepteurs opiacés\nmu, 134\nsérotoninergiques, 135\nagoraphobie, 422, 424-425t\nagrément, 1056-1060\nagression, 29, 269, 492, 573, 654,\n822, 828f, 829, 830t, 1138-1166,\n1140-1141t, 1243, 1322t\npassive, 1593t\nsexuelle, 270, 492, 513, 758, 764,\n799, 811, 901, 967-968, 1143,\n1188, 1358\nagressivité, 829-831, 1100, 1125,\n1140-1141t, 1142, 1143-1144t\nméditation et __, 1766\naide médicale à mourir, 1041-1042\naire(s)\nassociatives, 203\ncorticales, 111\nperceptuelles, 202\nde reconnaissance des visages,\n170f\nfusiforme des visages, 169\nmotrice, 172, 180\noccipitale, 169\nparahippocampique, 169\nsegmentaire ventrale, 335f\ntegmentale ventrale, 1464\nakathisie, 1473\nantipsychotiques et __, 1473\nbenzodiazépines et __, 1447\nakinésie, 179\nalcool, 849-872, voir aussi troubles\nliés à l’alcool\nabus d’__, 402, 405, 439, 586, 615,\n653, 850-857, 855, 1023\ncomplications psychiatriques\net __, 1098-1099t\ncomportement agité ou violent\net __, 1101\nconsommation d’__, 199, 855\ndelirium tremens et __, 581\ndémence et __, 586\ndépendance à l’__, 850\ndiérences reliées au sexe et __,\n965\ndouleur chronique et __, 561\ngrossesse et __, 861\ninsomnie et __, 729\ninteraction médicamenteuse et __,\n1435\nintoxication aiguë par l’__, 858,\n1098-1099t\nparaphilies et __, 810\nschizophrénie et __, 355\nsevrage de l’__, 579, 858-860, 858t,\n859t, 890\nsommeil et __, 730\nsuicide et __, 646, 653, 656, 851,\n858, 862, 1027, 1089, 1092,\n1119f, 1125-1136\nsystème nerveux central et __,\n851-852\ntroubles délirants et __, 314\nAlcooliques Anonymes (AA), 293,\n845, 867-868, 874, 918-919, 921,\n1005, 1711\nalcoolisation chronique, 852\nalcoolisme, 12, 105, 130-136, 646,\n849-872, 965, 1092, 1152, 1164,\n1745\nthérapie motivationnelle et __,\n1711\nalexithymie, 50t, 56, 534-535, 576,\n659, 667, 678, 682, 773\nalgodystrophie réexe, 275\naliénation mentale, 1067-1069,\n1079t, 1139, 1189, 1193\naliment\ninteraction médicamenteuse et __,\n1435\nalimentation inadéquate, 199\nallaitement, 974\nacide valproïque et __, 1542\nantidépresseurs et __, 1500-1501\nantipsychotiques et __, 1470\nlithium et __, 1538\nallèles, 94, 95, 98-99, 104, 128, 586,\n852\nalliance thérapeutique, 955,\n1164, 1216, 1407, 1441,\n1570-1574, 1573t, 1578,\n1787-1789\nallodynie, 557t\nalogie, 54f, 306, 352, 1071, 1103,\n1466\nalter ego, 523\naltération d’identité, 522-523\naltruisme, 222, 674, 1043, 1150, 1388,\n1589, 1590t, 1596, 1714-1715\naménagement des contingences,\n1628, 1632t\namnésie, 60, 309, 511-523, 561,\n593t, 613-616, 694, voir aussi\ntroubles (amnésiques)\nantérograde, 177, 888, 1446, 1449,\n1453-1454, 1560\nde Korsako, 65\ndissociative, 14, 515, 516t, 519-\n521, 1759\npost-traumatique, 505, 595-596,\n613, 659\npsychogène, 511\nrétrograde, 739-741, 1560\namphétamines, 891-894, 893t, 1430,\n1521-1534, 1521f\ndiérences reliées au sexe et __,\n965\namygdale, 112, 115, 174f, 202, 336f,\n394, 417, 477, 494t, 495, 722,\n810, 931, 1365, 1464\nanalgésiques\ndelirium et __, 580\ndouleur chronique et __, 573\nopioïdes à libération contrôlée,\n573\nanalyse(s)\nfonctionnelle du comportement,\n1259, 1613\nqualitatives, 81, 88-89\nquantitatives, 88-89\nanamnèse, 692, 1192t\nfacteurs de risque à la violence\net __, 1152-1154T\nancrage (grounding), 523\nandroïdisme, 814\nandromimétophilie, 815\nandropause, 198, 755\nanémie, 308t, 314, 404, 579, 599,\n628t, 649, 662, 710, 968, 1545\nanginophobie, 413\nangiopathie amyloïde cérébrale\ndémence et __, 590\nangoisse existentielle, 414, 663, 1597\nanhédonie, 352\nannulation rétroactive, 1591t\nanomalies\ncérébrales, 138-157, 334-337, 354,\n375, 448-449, 495, 557, 1248,\n1366, 1403t, 1558\nà l’imagerie fonctionnelle, 337\nhistologiques, 334\nstructurales, 335\n",
+  "raw_text_sha256": "3ac0a9280d40f4800c6df3cd1e32f0a1a48f38f376f119e5699c97712052a307",
+  "source_page_display": 1184,
+  "source_page_index": 1183
+}

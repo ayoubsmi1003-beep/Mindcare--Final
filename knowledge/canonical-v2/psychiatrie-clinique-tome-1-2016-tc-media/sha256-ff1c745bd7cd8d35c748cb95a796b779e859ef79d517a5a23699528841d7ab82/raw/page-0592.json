@@ -1,0 +1,340 @@
+{
+  "block_sequence_sha256": "bda15ba15a9c3689fea5d0c9a055fa69634bbafc5307addfb52bc2c028871ecd",
+  "blocks": [
+    {
+      "bbox": [
+        381.75,
+        747.525390625,
+        555.0,
+        758.8193359375
+      ],
+      "block_id": "page-0592-block-0001",
+      "order": 1,
+      "text": "Chapitre 26\nDouleur chronique\n575\n",
+      "text_sha256": "4b731c719a36c0feed85b2e816a2fbd13f7a20966cd3286e0a32a32a7231a0e2"
+    },
+    {
+      "bbox": [
+        56.29999923706055,
+        41.05229568481445,
+        354.1181640625,
+        53.320068359375
+      ],
+      "block_id": "page-0592-block-0002",
+      "order": 2,
+      "text": "TABLEAU 26.11 Traitement pharmacologique de la douleur neuropathique\n",
+      "text_sha256": "85e14d6226a5fbbf69186ada63299d53be76e180402f86e6bd25b99cb27cb845"
+    },
+    {
+      "bbox": [
+        60.650001525878906,
+        58.27412414550781,
+        233.7582244873047,
+        73.85029602050781
+      ],
+      "block_id": "page-0592-block-0003",
+      "order": 3,
+      "text": "Agent et dose de départ\nDose, fréquence\n",
+      "text_sha256": "42cb8febf1ce849c008360c2e41a910c7dc626bf0e7ef1024e885953f22f3cef"
+    },
+    {
+      "bbox": [
+        175.6999969482422,
+        63.27412414550781,
+        530.7435302734375,
+        78.85029602050781
+      ],
+      "block_id": "page-0592-block-0004",
+      "order": 4,
+      "text": "d’augmentation\nDose DIE maximale\nEffets indésirables\nCommentaires\n",
+      "text_sha256": "298addf8faa9625f27509e8d489cd8bd9c74ef040877cdfdd6f60fc52fd54780"
+    },
+    {
+      "bbox": [
+        58.25,
+        83.60137176513672,
+        428.1110534667969,
+        160.0281219482422
+      ],
+      "block_id": "page-0592-block-0005",
+      "order": 5,
+      "text": "Carbamazépine (TégrétolMD)\n100 mg DIE\n100 à 200 mg par semaine\n200 à 400 mg TID\n• Sédation\n• Étourdissements\n• Trouble de la vision\n• Ataxie\n• Céphalée\n• Nausées\n• Prurit\n",
+      "text_sha256": "f58eb82cb980c48208d6d1e21f2611c798733cc8e4aa8d74e4ed17681b543eef"
+    },
+    {
+      "bbox": [
+        458.25,
+        84.20195770263672,
+        547.8269653320312,
+        187.0281219482422
+      ],
+      "block_id": "page-0592-block-0006",
+      "order": 6,
+      "text": "• Premier choix en cas de\nnévralgie du trijumeau\n• Inducteur du cytochrome\nP-450\n• Interaction pharma-\ncodynamique avec la\nwarfarine\n• Surveillance des globules\nrouges et des enzymes\nhépatiques\n",
+      "text_sha256": "ba4569039effc2d25332bd6fc6935eec533960c1a42d0d7a0d8e7f9805da0ad9"
+    },
+    {
+      "bbox": [
+        57.25,
+        192.57286071777344,
+        193.71978759765625,
+        202.59239196777344
+      ],
+      "block_id": "page-0592-block-0007",
+      "order": 7,
+      "text": "Analgésie opioïde à libération contrôlée\n",
+      "text_sha256": "7102d2c7ae8a1c135dafe5607d57ce4bc3020f9ffc4db0d65630ece2c7f4fb50"
+    },
+    {
+      "bbox": [
+        58.25,
+        208.0519561767578,
+        130.59800720214844,
+        249.8781280517578
+      ],
+      "block_id": "page-0592-block-0008",
+      "order": 8,
+      "text": "Morphine 15mg\nOxycodone 10 mg\nFentanyl (DuragésicMD)\n25 µg/h\n",
+      "text_sha256": "7b318bb72d71e6146473b1836938be6930105bd673fd17df631f187151c26ea8"
+    },
+    {
+      "bbox": [
+        158.25,
+        208.0519561767578,
+        228.54788208007812,
+        239.8781280517578
+      ],
+      "block_id": "page-0592-block-0009",
+      "order": 9,
+      "text": "15 mg q12 h\n10 mg q12 h\nTimbre 25 µg/h q72 h\n",
+      "text_sha256": "1f71559775cd00b7859ef47b88dcaed2013e620fd89b3e967910d788bc9a90fc"
+    },
+    {
+      "bbox": [
+        258.25,
+        208.0519561767578,
+        328.6918640136719,
+        239.8781280517578
+      ],
+      "block_id": "page-0592-block-0010",
+      "order": 10,
+      "text": "30 à 120 mg q12 h\n20 à 60 mg q12 h\nTimbre 25 à 100 µg/h\n",
+      "text_sha256": "7e4b244666196f8e5d01f0ae42b0638cf5e2576e75d6a6e421c8025f1d16456b"
+    },
+    {
+      "bbox": [
+        358.25,
+        208.0519561767578,
+        423.4640197753906,
+        272.8781433105469
+      ],
+      "block_id": "page-0592-block-0011",
+      "order": 11,
+      "text": "• Nausées\n• Vomissements\n• Sédation\n• Étourdissements\n• Rétention urinaire\n• Constipation\n",
+      "text_sha256": "90a22afa35ec5d8ebec1fef15027de217f9d80323e931bec774d4596affff18f"
+    },
+    {
+      "bbox": [
+        458.25,
+        208.0519561767578,
+        546.0414428710938,
+        237.8781280517578
+      ],
+      "block_id": "page-0592-block-0012",
+      "order": 12,
+      "text": "• Émollients et laxatifs\nsont requis pour éviter la\nconstipation chronique\n",
+      "text_sha256": "e732ec8e5df60d4dde037c3724396f557b2f77d07be28bb07c45d0b8a266a3c2"
+    },
+    {
+      "bbox": [
+        57.25,
+        278.4228515625,
+        79.58800506591797,
+        288.4423828125
+      ],
+      "block_id": "page-0592-block-0013",
+      "order": 13,
+      "text": "Autres\n",
+      "text_sha256": "4223071af75525f591cc7662eb1d6b54bc0d1f6525bbe21f382f2cf41751cc1a"
+    },
+    {
+      "bbox": [
+        58.25,
+        293.9019470214844,
+        449.8070373535156,
+        347.7281188964844
+      ],
+      "block_id": "page-0592-block-0014",
+      "order": 14,
+      "text": "Tramadol\n50 mg DIE\n50 mg par semaine\n50 à 150 mg QID\n• Sédation\n• Constipation\n• Hypotension orthostatique\n• Ataxie\n• Convulsions\n",
+      "text_sha256": "62c27123a6a145022eea384dff2d4dc406df3579ec4228d94a9c823e72613f70"
+    },
+    {
+      "bbox": [
+        458.25,
+        293.9019470214844,
+        549.761962890625,
+        374.7281188964844
+      ],
+      "block_id": "page-0592-block-0015",
+      "order": 15,
+      "text": "• Diminue le seuil convul-\nsif ; contre-indication\nrelative en cas d’épilepsie\n• Pour éviter la toxicité\nhépatique, maintenir la\ndose maximale d’acé-\ntaminophène à 4 g si\ncombinée au Tramadol\n",
+      "text_sha256": "75a953d97b78e5ce8d0732b019602910206f90f34c9880ad375298235dd5bca9"
+    },
+    {
+      "bbox": [
+        58.25,
+        383.3519592285156,
+        335.5263977050781,
+        404.1781311035156
+      ],
+      "block_id": "page-0592-block-0016",
+      "order": 16,
+      "text": "Lidocaïne\n5-10 % onguent\nNe s’applique pas\nAppliquer q12 h sur une\npériode de 24 h\n",
+      "text_sha256": "8b53538cb7a1171e117461453a35b41f1e88d9681e7f652fbb6e6afd22550451"
+    },
+    {
+      "bbox": [
+        358.25,
+        383.3519592285156,
+        543.9170532226562,
+        403.1781311035156
+      ],
+      "block_id": "page-0592-block-0017",
+      "order": 17,
+      "text": "• Aucun effet indésirable\n• Premier choix en cas de\nzona postherpétique\n",
+      "text_sha256": "e9e2fd14ff1d574cb51625c73d4d1e6555e6838aeb70790c4c6f4f243baaceb6"
+    },
+    {
+      "bbox": [
+        58.25,
+        412.751953125,
+        419.9090270996094,
+        444.578125
+      ],
+      "block_id": "page-0592-block-0018",
+      "order": 18,
+      "text": "Dronabinol\n2,5 mg BID\n2,5 mg BID par semaine\n2,5 à 10 mg BID\n• Étourdissements\n• Sédation\n• Euphorie\n",
+      "text_sha256": "c7b01191651999dcaeeac78a57dcb10acff47d176e464f025918ae7796f5babd"
+    },
+    {
+      "bbox": [
+        458.25,
+        412.751953125,
+        541.6289672851562,
+        432.578125
+      ],
+      "block_id": "page-0592-block-0019",
+      "order": 19,
+      "text": "• Test d’urine positif pour\nles cannabinoïdes\n",
+      "text_sha256": "047a9b4f4598b760a6ab9b3ce54ecf4a8b9f54bef343fea9ff83e85e6ce94b06"
+    },
+    {
+      "bbox": [
+        58.25,
+        453.20196533203125,
+        128.56005859375,
+        485.02813720703125
+      ],
+      "block_id": "page-0592-block-0020",
+      "order": 20,
+      "text": "Tétrahydrocannabinol/\ncannabidiol\n1-2 inh q4 h\n",
+      "text_sha256": "339dc63b0ffda97c45fd175578a620e5c2432483757f82d3300b636e73ff90f6"
+    },
+    {
+      "bbox": [
+        158.25,
+        453.20196533203125,
+        419.9090270996094,
+        496.02813720703125
+      ],
+      "block_id": "page-0592-block-0021",
+      "order": 21,
+      "text": "Maximum 4 inh DIE\n2 inh QID\n• Étourdissements\n• Fatigue\n• Nausées\n• Euphorie\n",
+      "text_sha256": "d3e372bc9ddc41c4a92ea68531f24cf237bad8e9bcbc779c6c0256dfb7973a5b"
+    },
+    {
+      "bbox": [
+        458.25,
+        453.20196533203125,
+        548.8470458984375,
+        535.0281372070312
+      ],
+      "block_id": "page-0592-block-0022",
+      "order": 22,
+      "text": "• Approuvé de façon condi-\ntionnelle pour la douleur\nneuropathique dans la\nsclérose en plaques\n• Test d’urine positif pour\nles cannabinoïdes\n• Surveiller le site d’appli-\ncation (muqueuses)\n",
+      "text_sha256": "ee2d45e7795253be268842c3cfd33acdc91d8f21d9493c9b00e780cd71e86416"
+    },
+    {
+      "bbox": [
+        54.25,
+        543.7906494140625,
+        164.8582305908203,
+        552.6588745117188
+      ],
+      "block_id": "page-0592-block-0023",
+      "order": 23,
+      "text": "Source : Moulin & al. (2007), p. 13-21.\n",
+      "text_sha256": "3fe1020801d89c333ef6ef591b8a14c517ee4ebb334e14769197a96e34d1d3cc"
+    },
+    {
+      "bbox": [
+        357.20001220703125,
+        41.352294921875,
+        382.8842468261719,
+        53.320068359375
+      ],
+      "block_id": "page-0592-block-0024",
+      "order": 24,
+      "text": "(suite)\n",
+      "text_sha256": "c684d6dbcdfd50f0ada227f799b5c0fb30e817ac3da61b4cbf208decde7f907b"
+    },
+    {
+      "bbox": [
+        54.0,
+        570.0330200195312,
+        297.01751708984375,
+        709.1585083007812
+      ],
+      "block_id": "page-0592-block-0025",
+      "order": 25,
+      "text": "Antidépresseurs\nLa neurophysiologie de la nociception indique que les antidé-\npresseurs sont tous ecaces pour le traitement de la douleur\nneuropathique compte tenu de :\n• l’action inhibitrice des voies descendantes sérotoninergiques\net dopaminergiques ;\n• la modulation des monoamines ;\n• leur interaction avec le système opioïde endogène ;\n• l’inhibition de l’activité des canaux calciques ;\n• leurs eets antagonistes sur les récepteurs NMDA, histami-\nnergiques et cholinergiques au niveau de la corne dorsale.\n",
+      "text_sha256": "0550e0ec5ccd9d48ce5794709f6e3f9a1be07955a2fd1862ce8dced19f392e2b"
+    },
+    {
+      "bbox": [
+        312.0,
+        571.3658447265625,
+        555.3117065429688,
+        686.0084838867188
+      ],
+      "block_id": "page-0592-block-0026",
+      "order": 26,
+      "text": "Or, plusieurs patients confondent l’indication d’une telle pres-\ncription avec un traitement contre la dépression, renforçant ainsi\nleur diculté à accepter ces traitements. L’ecacité des antidé-\npresseurs pour le soulagement de la douleur est indépendante de\nleur eet sur l’humeur. On a montré que les eets antalgiques de\nla morphine sont potentialisés par l’amitriptyline, l’imipramine,\nla clomipramine, la uoxétine, la sertraline et la néfazodone.\nCes antidépresseurs produisent un eet antalgique à des doses\ninférieures à celles utilisées pour traiter la dépression et le délai\nd’action est plus rapide.\n",
+      "text_sha256": "081c8a7d592d4ac9e11272bd597b9869f892e32fc5e154c5fa81062b122554a2"
+    },
+    {
+      "bbox": [
+        312.0,
+        687.0658569335938,
+        554.9690551757812,
+        709.1585083007812
+      ],
+      "block_id": "page-0592-block-0027",
+      "order": 27,
+      "text": "Les inhibiteurs du recaptage de la noradrénaline et de la\nsérotonine (IRNS), par exemple la duloxétine, la venlafaxine\n",
+      "text_sha256": "628c9ecfee2066a41bfad1dcaa3fcd6d94d956b427568aa8819279449710afc3"
+    }
+  ],
+  "coordinates_sha256": "4d330e438ee230dda5fe405bf96c95ba15f6981d2a1d507067667afbfba24f4f",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0592",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 26\nDouleur chronique\n575\nTABLEAU 26.11 Traitement pharmacologique de la douleur neuropathique\nAgent et dose de départ\nDose, fréquence\nd’augmentation\nDose DIE maximale\nEffets indésirables\nCommentaires\nCarbamazépine (TégrétolMD)\n100 mg DIE\n100 à 200 mg par semaine\n200 à 400 mg TID\n• Sédation\n• Étourdissements\n• Trouble de la vision\n• Ataxie\n• Céphalée\n• Nausées\n• Prurit\n• Premier choix en cas de\nnévralgie du trijumeau\n• Inducteur du cytochrome\nP-450\n• Interaction pharma-\ncodynamique avec la\nwarfarine\n• Surveillance des globules\nrouges et des enzymes\nhépatiques\nAnalgésie opioïde à libération contrôlée\nMorphine 15mg\nOxycodone 10 mg\nFentanyl (DuragésicMD)\n25 µg/h\n15 mg q12 h\n10 mg q12 h\nTimbre 25 µg/h q72 h\n30 à 120 mg q12 h\n20 à 60 mg q12 h\nTimbre 25 à 100 µg/h\n• Nausées\n• Vomissements\n• Sédation\n• Étourdissements\n• Rétention urinaire\n• Constipation\n• Émollients et laxatifs\nsont requis pour éviter la\nconstipation chronique\nAutres\nTramadol\n50 mg DIE\n50 mg par semaine\n50 à 150 mg QID\n• Sédation\n• Constipation\n• Hypotension orthostatique\n• Ataxie\n• Convulsions\n• Diminue le seuil convul-\nsif ; contre-indication\nrelative en cas d’épilepsie\n• Pour éviter la toxicité\nhépatique, maintenir la\ndose maximale d’acé-\ntaminophène à 4 g si\ncombinée au Tramadol\nLidocaïne\n5-10 % onguent\nNe s’applique pas\nAppliquer q12 h sur une\npériode de 24 h\n• Aucun effet indésirable\n• Premier choix en cas de\nzona postherpétique\nDronabinol\n2,5 mg BID\n2,5 mg BID par semaine\n2,5 à 10 mg BID\n• Étourdissements\n• Sédation\n• Euphorie\n• Test d’urine positif pour\nles cannabinoïdes\nTétrahydrocannabinol/\ncannabidiol\n1-2 inh q4 h\nMaximum 4 inh DIE\n2 inh QID\n• Étourdissements\n• Fatigue\n• Nausées\n• Euphorie\n• Approuvé de façon condi-\ntionnelle pour la douleur\nneuropathique dans la\nsclérose en plaques\n• Test d’urine positif pour\nles cannabinoïdes\n• Surveiller le site d’appli-\ncation (muqueuses)\nSource : Moulin & al. (2007), p. 13-21.\n(suite)\nAntidépresseurs\nLa neurophysiologie de la nociception indique que les antidé-\npresseurs sont tous ecaces pour le traitement de la douleur\nneuropathique compte tenu de :\n• l’action inhibitrice des voies descendantes sérotoninergiques\net dopaminergiques ;\n• la modulation des monoamines ;\n• leur interaction avec le système opioïde endogène ;\n• l’inhibition de l’activité des canaux calciques ;\n• leurs eets antagonistes sur les récepteurs NMDA, histami-\nnergiques et cholinergiques au niveau de la corne dorsale.\nOr, plusieurs patients confondent l’indication d’une telle pres-\ncription avec un traitement contre la dépression, renforçant ainsi\nleur diculté à accepter ces traitements. L’ecacité des antidé-\npresseurs pour le soulagement de la douleur est indépendante de\nleur eet sur l’humeur. On a montré que les eets antalgiques de\nla morphine sont potentialisés par l’amitriptyline, l’imipramine,\nla clomipramine, la uoxétine, la sertraline et la néfazodone.\nCes antidépresseurs produisent un eet antalgique à des doses\ninférieures à celles utilisées pour traiter la dépression et le délai\nd’action est plus rapide.\nLes inhibiteurs du recaptage de la noradrénaline et de la\nsérotonine (IRNS), par exemple la duloxétine, la venlafaxine\n",
+  "raw_text_sha256": "3d23765c6a6b3ee6468854e7719a8d98c929fa0240dcc19bc88e52d8871e61f5",
+  "source_page_display": 593,
+  "source_page_index": 592
+}

@@ -1,0 +1,784 @@
+{
+  "block_sequence_sha256": "52d42667374fe951449b46f458301d09126c8b1fc590173d150e76a4ae1d9c28",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        126.91150665283203,
+        758.8693237304688
+      ],
+      "block_id": "page-1111-block-0001",
+      "order": 1,
+      "text": "R14\nRéférences\n",
+      "text_sha256": "c413e0f85a5529857684c29914fbf29d489e60c6feb9b95ea3cc36492439d241"
+    },
+    {
+      "bbox": [
+        390.0,
+        40.68496322631836,
+        547.1500244140625,
+        85.57344055175781
+      ],
+      "block_id": "page-1111-block-0002",
+      "order": 2,
+      "text": "Vanasse, A. & al. (2012). « Treatment prevalence and\nincidence of schizophrenia in Quebec using a population\nhealth services perspective : different algorithms, different\nestimates », Social psychiatry and psychiatric epidemiology,\n47(4), p. 533-543.\n",
+      "text_sha256": "9c41d8ef8508faed53b29949a2f9fae85090b679333133b55fdbdecb7c32303d"
+    },
+    {
+      "bbox": [
+        390.0,
+        89.53496551513672,
+        549.2631225585938,
+        125.22344207763672
+      ],
+      "block_id": "page-1111-block-0003",
+      "order": 3,
+      "text": "Wittchen, H.-U. (1994). « Reliability and validity studies of\nthe WHO Composite International Diagnostic Interview (CIDI) :\nA critical review », Journal of Psychiatric Research, 28(1),\np. 57-84.\n",
+      "text_sha256": "0212c04f5b39fac7e89d5a6905390be7d58bc8f3f0bca95d9ae8bd82533b854d"
+    },
+    {
+      "bbox": [
+        390.0,
+        129.18496704101562,
+        547.7500610351562,
+        164.92344665527344
+      ],
+      "block_id": "page-1111-block-0004",
+      "order": 4,
+      "text": "Zahner, G. E. P. & al. (1995). « Introduction to epidemiologic\nresearch methods », dans Tsuang, M. T. & al. (dir.), Textbook\nin Psychiatric Epidemiology, New York, NY, Wiley-Liss,\np. 23-53.\n",
+      "text_sha256": "38c4a9b98f693f204ece768f7d3ab262cc58bd40c971a8f96e26912d2a878c73"
+    },
+    {
+      "bbox": [
+        390.0,
+        178.3703155517578,
+        548.3309326171875,
+        225.7734375
+      ],
+      "block_id": "page-1111-block-0005",
+      "order": 5,
+      "text": "Chapitre 15\nAmerican Psychiatric Association (APA). (2004). DSM-\nIV-TR. Critères diagnostiques (Washington, DC, 2000).\nTraduction française par J.-D. Guelet al., Paris, Masson,\n384 p.\n",
+      "text_sha256": "8f3dba64f176218bdf4e4172ecd85cce39c0f323c2ae58258c40f2931774371b"
+    },
+    {
+      "bbox": [
+        390.0,
+        229.73497009277344,
+        543.5,
+        265.4234313964844
+      ],
+      "block_id": "page-1111-block-0006",
+      "order": 6,
+      "text": "American Psychiatric Association (APA). (2015). DSM-5 –\nManuel Diagnostique et Statistique des Troubles Mentaux.\nTraduction française par M.-A. Crocq, J.-D. Guelet al.,\nElsevier Masson SAS, Paris.\n",
+      "text_sha256": "9abdc7221827d2e516286759fe28a6461976091b7d5dc8ffca72c446615d7dc3"
+    },
+    {
+      "bbox": [
+        390.0,
+        269.3849792480469,
+        543.6500244140625,
+        305.1234436035156
+      ],
+      "block_id": "page-1111-block-0007",
+      "order": 7,
+      "text": "Arranz, B. & al. (2009). « Clinical and serotonergic\npredictors of non-affective acute remitting psychosis in\npatients with a rst-episode psychosis », Acta Psychiatrica\nScandinavica, 119(1), p. 71-77.\n",
+      "text_sha256": "6f7753c3a1ffa9137c41f3e98bc61f82085685ca900501df08acc3c06189c4d8"
+    },
+    {
+      "bbox": [
+        390.0,
+        309.0849609375,
+        549.1410522460938,
+        335.6234436035156
+      ],
+      "block_id": "page-1111-block-0008",
+      "order": 8,
+      "text": "Castagnini, A. & al. (2008). « Incidence and diagnostic\nstability of ICD-10 acute and transient psychotic disorders »,\nComprehensive Psychiatry, 49(3), p. 255-261.\n",
+      "text_sha256": "1ef82238c03bcd12e34867e4aed046e1251ecc3143ab86f5b8b6e7a677f9319d"
+    },
+    {
+      "bbox": [
+        390.0,
+        339.5849609375,
+        547.7618408203125,
+        366.1234436035156
+      ],
+      "block_id": "page-1111-block-0009",
+      "order": 9,
+      "text": "Castagnini, A. & al. (2013). « Long-term stability of acute and\ntransient psychotic disorders », Australian and New Zealand\nJournal of Psychiatry, 47(1), p. 59-64.\n",
+      "text_sha256": "3115ccff50113f8891ff8659b1facbb1b1e897581b2761ad53ddc7404b96eb5f"
+    },
+    {
+      "bbox": [
+        390.0,
+        370.0849609375,
+        542.4845581054688,
+        405.7734375
+      ],
+      "block_id": "page-1111-block-0010",
+      "order": 10,
+      "text": "Das, S. K. & al. (2001). « Testing the stress-vulnerability\nhypothesis in ICD-10 diagnosed acute and transient\npsychotic disorders », Acta Psychiatrica Scandinavica,\n104(1), p. 56-58.\n",
+      "text_sha256": "3cc7f25a9a4697ef6641bb17511dfcbce60eaf37fb8f769ed4414f2b20eb5054"
+    },
+    {
+      "bbox": [
+        390.0,
+        409.78497314453125,
+        539.3475341796875,
+        436.2734375
+      ],
+      "block_id": "page-1111-block-0011",
+      "order": 11,
+      "text": "Ey, H. (1954). « Bouffées délirantes et psychoses halluci-\nnatoires aiguës », Études psychiatriques, tome III, Paris,\nDesclée de Brouwer, p. 201-324.\n",
+      "text_sha256": "3e43d6c1ff3050f3b8be48598dbd8c16cc170da462b41d26483b362757d7f46e"
+    },
+    {
+      "bbox": [
+        390.0,
+        440.28497314453125,
+        544.8175659179688,
+        466.8234558105469
+      ],
+      "block_id": "page-1111-block-0012",
+      "order": 12,
+      "text": "Hatotani, N. (1996). « The concept of “atypical psychoses” :\nSpecial reference to its development in Japan »,Psychiatry\n& Clinical Neurosciences, 50(1), p. 1-10.\n",
+      "text_sha256": "cccb8fb4e8dec25ff0f94afc54f5b39a388aeb253599d1c58a1744204739ad56"
+    },
+    {
+      "bbox": [
+        390.0,
+        470.78497314453125,
+        543.1656494140625,
+        506.47344970703125
+      ],
+      "block_id": "page-1111-block-0013",
+      "order": 13,
+      "text": "Jäger, M. & al. (2003a). « On the descriptive validity of\nICD-10 schizophrenia : Empirical analyses in the spectrum\nof non-affective functional psychoses », Psychopathology,\n36(3), p. 152-159.\n",
+      "text_sha256": "c316f319ce61694cfae0fa263d7cd6be7636abc2f1d1743adaec81c28fb78d50"
+    },
+    {
+      "bbox": [
+        390.0,
+        510.43499755859375,
+        548.5277709960938,
+        555.3234252929688
+      ],
+      "block_id": "page-1111-block-0014",
+      "order": 14,
+      "text": "Jäger, M. & al. (2003b). « Course and outcome of rst-admitted\npatients with acute and transient psychotic disorders (ICD-\n10: F23). Focus on relapses and social adjustment », European\nArchives of Psychiatry & Clinical Neuroscience, 253(4),\np. 209-215.\n",
+      "text_sha256": "ac44ad353bd706ce21c2b621cfc5a9655de63db9fc8abe8b91d3cffdf7d24e15"
+    },
+    {
+      "bbox": [
+        390.0,
+        559.2849731445312,
+        540.2918090820312,
+        585.8234252929688
+      ],
+      "block_id": "page-1111-block-0015",
+      "order": 15,
+      "text": "Jorgensen, P. & al. (1997). « Acute and transient psychotic\ndisorder : A 1-year follow-up study », Acta Psychiatrica\nScandinavica, 96(2), p. 150-154.\n",
+      "text_sha256": "896b87006c9dd58a1da6340bb2589be897972c806c21816c6165f61558ce47a0"
+    },
+    {
+      "bbox": [
+        390.0,
+        589.7849731445312,
+        539.4288940429688,
+        616.3234252929688
+      ],
+      "block_id": "page-1111-block-0016",
+      "order": 16,
+      "text": "Malhotra, S. & Malhotra. S. (2003). « Acute and transient\npsychotic disorder : Comparison with schizophrenia »,\nCurrent Psychiatry Reports, 5(3), p. 178-186.\n",
+      "text_sha256": "321628307187c13b98050ea761f67be885357e49d97788cdd6709a8a9afc57e4"
+    },
+    {
+      "bbox": [
+        390.0,
+        620.3349609375,
+        543.6842041015625,
+        646.8234252929688
+      ],
+      "block_id": "page-1111-block-0017",
+      "order": 17,
+      "text": "Marneros A. & al. (2003). « Features of acute and transient\npsychotic disorders », European Archives of Psychiatry &\nClinical Neuroscience, 253(4), p. 167-174.\n",
+      "text_sha256": "e2efc98e7d8eca7ca6f37fecd2b04363d6244a2f3143679d43def9d7d9a60f80"
+    },
+    {
+      "bbox": [
+        390.0,
+        650.8349609375,
+        539.1654052734375,
+        686.5234375
+      ],
+      "block_id": "page-1111-block-0018",
+      "order": 18,
+      "text": "Marneros, A. & al. (2005). « Is the psychopathology of acute\nand transient psychotic disorder different from schizophrenic\nand schizoaffective disorders ? »,European Psychiatry, 20(4),\np. 315-320.\n",
+      "text_sha256": "5cd8f93908921cb1371535e720cefb45d4b3f11c94edc4e5a4fe1b35ccc15027"
+    },
+    {
+      "bbox": [
+        390.0,
+        690.4849853515625,
+        544.3975830078125,
+        717.0234375
+      ],
+      "block_id": "page-1111-block-0019",
+      "order": 19,
+      "text": "Mojtabai, R. & al. (2000). « Duration of remitting psychoses\nwith acute onset. Implications for ICD-10 », British Journal\nof Psychiatry, 176(6), p. 576-580.\n",
+      "text_sha256": "4e1f2cfe6aaf234c64890916cd333b5b014b27f2a5044428629305e7eb16da25"
+    },
+    {
+      "bbox": [
+        219.0,
+        38.18496322631836,
+        374.5249938964844,
+        58.0234375
+      ],
+      "block_id": "page-1111-block-0020",
+      "order": 20,
+      "text": "Durkheim, É. (1897). Le suicide. Étude de sociologie, 2e éd.,\nParis, France, Les Presses universitaires de France.\n",
+      "text_sha256": "00e99faba5c532a30bb5650554af8da2798456257439a3970cef3f961051d8b3"
+    },
+    {
+      "bbox": [
+        219.0,
+        61.934959411621094,
+        378.1025390625,
+        106.6234359741211
+      ],
+      "block_id": "page-1111-block-0021",
+      "order": 21,
+      "text": "Haro, J. M. & al. (2006). « Concordance of the Composite\nInternational Diagnostic Interview Version 3.0 (CIDI 3.0) with\nstandardized clinical assessments in the World Health Orga-\nnization World Mental Health Surveys », International Journal\nof Methods in Psychiatric Research, 15(4), p. 167-180.\n",
+      "text_sha256": "8e342c2813349cf2260ccb5a73ccce81dec3c6e9c47625863d80387330c91b3d"
+    },
+    {
+      "bbox": [
+        219.0,
+        110.53496551513672,
+        369.6449890136719,
+        136.9734344482422
+      ],
+      "block_id": "page-1111-block-0022",
+      "order": 22,
+      "text": "Hill, A. B. (1965). « The Environment and Disease : Asso-\nciation or Causation ? », Proceedings of the Royal Society\nof Medicine, 58(5), p. 295-300.\n",
+      "text_sha256": "3f78461958f00286518eb4e171f2a9cf59b4d571bf884760feb71d94c08a1c78"
+    },
+    {
+      "bbox": [
+        219.0,
+        140.8849639892578,
+        374.75,
+        176.4734344482422
+      ],
+      "block_id": "page-1111-block-0023",
+      "order": 23,
+      "text": "Institut de la statistique du Québec. (2001). Enquête auprès\nde la clientèle des ressources pour personnes itinérantes\ndes régions de Montréal-Centre et de Québec, 1998-1999,\nQuébec, Québec.\n",
+      "text_sha256": "66e35d28d9603a10afd16a8f09d03b902edc6b62759222254467ebf70a421356"
+    },
+    {
+      "bbox": [
+        219.0,
+        180.3849639892578,
+        372.3260803222656,
+        215.92344665527344
+      ],
+      "block_id": "page-1111-block-0024",
+      "order": 24,
+      "text": "Institut de la statistique du Québec.(2008a). Troubles mentaux,\ntoxicomanie et autres problèmes liés à la santé mentale\nchez les adultes québécois. Enquête sur la santé dans les\ncollectivités canadiennes (cycle 1.2). Québec.\n",
+      "text_sha256": "2a1ed42f75f15775a73793e06d2a12db20193370f6fa9b7db52497b17dfc6d4d"
+    },
+    {
+      "bbox": [
+        219.0,
+        219.8849639892578,
+        377.1358337402344,
+        264.5734558105469
+      ],
+      "block_id": "page-1111-block-0025",
+      "order": 25,
+      "text": "Institut de la statistique du Québec. (2008b). Utilisation de ser-\nvices et consommation de médicaments liées aux problèmes\nde santé mentale chez les adultes québécois. Enquête sur la\nsanté dans les collectivités canadiennes (cycle 1.2), Québec,\nQuébec.\n",
+      "text_sha256": "07626af2d96c38ae480aa1cd4e5c6ab75876527c22c72029dc6a2be146b25df5"
+    },
+    {
+      "bbox": [
+        219.0,
+        268.4849548339844,
+        375.125,
+        304.0234375
+      ],
+      "block_id": "page-1111-block-0026",
+      "order": 26,
+      "text": "Kessler, R. C. (2004). « Prevalence, severity, and unmet\nneed for treatment of mental disorders in the World Health\nOrganization World Mental Health Surveys », The Journal of\nAmerican Medical Association, 291(21), p. 2581-2590.\n",
+      "text_sha256": "485b4254712238f9196cddb3e7d2e5661a3c9db837c81a6b318a20695fd6d297"
+    },
+    {
+      "bbox": [
+        219.0,
+        307.9849548339844,
+        376.7350158691406,
+        343.5234375
+      ],
+      "block_id": "page-1111-block-0027",
+      "order": 27,
+      "text": "Kessler, R. C. & al. (2005). « Prevalence, severity, and\ncomorbidity of twelve-month DSM-IV disorders in the\nNational Comorbidity Survey Replication (NCS-R) », Archives\nof General Psychiatry, 62(6), p. 617-627.\n",
+      "text_sha256": "24789ecddd2bbd3ba3057c753c70e9d9bf933e3596a6bb08b6200068bc83affe"
+    },
+    {
+      "bbox": [
+        219.0,
+        347.4349670410156,
+        367.3727111816406,
+        364.7734375
+      ],
+      "block_id": "page-1111-block-0028",
+      "order": 28,
+      "text": "Koch, R. (1890). Aetiology of Tuberculosis, New York, NY,\nWilliams R. Jenkins.\n",
+      "text_sha256": "6fee67f3773542d6a8c61673bbb0f571ded16e0f94a3322d7ead0e9059c46048"
+    },
+    {
+      "bbox": [
+        219.0,
+        368.6849670410156,
+        367.666748046875,
+        395.1234436035156
+      ],
+      "block_id": "page-1111-block-0029",
+      "order": 29,
+      "text": "Lesage, A. (1996). « Perspectives épidémiologiques sur le\nvirage ambulatoire des services psychiatriques », Santé\nmentale au Québec, 21(1), p. 79-96.\n",
+      "text_sha256": "eef32ac97581a999d9598073e10c84cc6158bcbab4d0cfc5d274414d55dd6a88"
+    },
+    {
+      "bbox": [
+        219.0,
+        399.0849609375,
+        375.3450012207031,
+        434.6234436035156
+      ],
+      "block_id": "page-1111-block-0030",
+      "order": 30,
+      "text": "Murphy J. M. & al. (2004). « Anxiety and depression : A\n40-year perspective on relationships regarding prevalence,\ndistribution, and comorbidity », Acta Psychiatrica Scandina-\nvica, 109(5), p. 355-375.\n",
+      "text_sha256": "eef963a610ff140fea8c85f119b61829f1e37f7cfa05e312fb640f4494408a4a"
+    },
+    {
+      "bbox": [
+        219.0,
+        438.53497314453125,
+        365.6450500488281,
+        464.97344970703125
+      ],
+      "block_id": "page-1111-block-0031",
+      "order": 31,
+      "text": "Nicole, L. & al. (1993). « Lower incidence and increased\nmale/female ratio in schizophrenia », British Journal of\nPsychiatry, 162(4), p. 556-557.\n",
+      "text_sha256": "7d8bd9f72db8f50d9afb6666dd2dc5cd70d7575b06e4b1c6325ddb2901b54028"
+    },
+    {
+      "bbox": [
+        219.0,
+        468.9349670410156,
+        377.4474792480469,
+        495.3734436035156
+      ],
+      "block_id": "page-1111-block-0032",
+      "order": 32,
+      "text": "Préville, M. & al. (2008). « The epidemiology of psychiatric\ndisorders in the Quebec’s older adult population »,Canadian\nJournal of Psychiatry, 53(12), p. 822-832.\n",
+      "text_sha256": "86a8a84e2218511291a6965d6337c4ac29bb45fc30798891da375234c1007950"
+    },
+    {
+      "bbox": [
+        219.0,
+        499.28497314453125,
+        363.94061279296875,
+        534.8234252929688
+      ],
+      "block_id": "page-1111-block-0033",
+      "order": 33,
+      "text": "Préville, M. & al. (2010). « One-year incidence of\npsychiatric disorders onset in the Quebec’s older adult\npopulation », Canadian Journal of Psychiatry, 55(7),\np. 449-457.\n",
+      "text_sha256": "025c3d3b24f7eafe72f328c539b388bce78a7071f9cd5be8f81d079206caf8f8"
+    },
+    {
+      "bbox": [
+        219.0,
+        538.7849731445312,
+        354.25347900390625,
+        565.2234497070312
+      ],
+      "block_id": "page-1111-block-0034",
+      "order": 34,
+      "text": "Rivollier, F. & al. (2014). « Hypothèse épigéné-\ntique de la schizophrénie : revue de la littérature »,\nL’Encéphale, 40, p. 380-386.\n",
+      "text_sha256": "858921c2065a4bfc62d04faa54f86e8d53e160d70b3a6d2761bbeb627b24947d"
+    },
+    {
+      "bbox": [
+        219.0,
+        569.1349487304688,
+        376.9650573730469,
+        595.5734252929688
+      ],
+      "block_id": "page-1111-block-0035",
+      "order": 35,
+      "text": "Robins, E. & Guze, S. B. (1970). « Establishment of diagnostic\nvalidity in psychiatric illness : Its application to schizophre-\nnia », American Journal of Psychiatry, 126(7), p. 983-987.\n",
+      "text_sha256": "24609121e537c75be1c77e7078f52f1e8b134cdb4abbde531795c0012649a5e7"
+    },
+    {
+      "bbox": [
+        219.0,
+        599.4849853515625,
+        371.22515869140625,
+        625.9234619140625
+      ],
+      "block_id": "page-1111-block-0036",
+      "order": 36,
+      "text": "Robins, L. N. & al. (1984). « Lifetime prevalence of specic\npsychiatric disorders in three sites », Archives of General\nPsychiatry, 41(10), p. 949-958.\n",
+      "text_sha256": "0ab74374f8f6ec1609bbde3ffc534044b4305011d5932fa9c8de5b363887b114"
+    },
+    {
+      "bbox": [
+        219.0,
+        629.8849487304688,
+        369.5574951171875,
+        656.2734375
+      ],
+      "block_id": "page-1111-block-0037",
+      "order": 37,
+      "text": "Roy, M.-A. & al. (1996). «Accuracies and inaccuracies of\nthe family history method : A multivariate investigation »,\nActa Psychiatrica Scandinavica, 93(4), p. 224-234.\n",
+      "text_sha256": "379f211fd0b85392aede2cd9cfd89c36b02686c3fa153af3526ed59a537af2ce"
+    },
+    {
+      "bbox": [
+        219.0,
+        660.2349853515625,
+        375.6375732421875,
+        677.5234375
+      ],
+      "block_id": "page-1111-block-0038",
+      "order": 38,
+      "text": "Srole, L. & al. (1962). Mental Health in the Metropolis, New\nYork, McGraw-Hill.\n",
+      "text_sha256": "0cb0476e8b38b3eba29e19da40c2d0493455d27186844351cea2e28f5c7f576d"
+    },
+    {
+      "bbox": [
+        219.0,
+        681.4849853515625,
+        366.9276123046875,
+        717.0234375
+      ],
+      "block_id": "page-1111-block-0039",
+      "order": 39,
+      "text": "Van Os, J. & al. (2008). « Gene-Environment Interactions\nin Schizophrenia : Review of Epidemiological Findings\nand Future Directions », Schizophrenia Bulletin, 34(6),\np. 1066-1082.\n",
+      "text_sha256": "aee1ec01ff5c1d9fa99f339d6c098720ae9c194d798be0951a83c5e4ef1a6523"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.68496322631836,
+        203.5500030517578,
+        58.0234375
+      ],
+      "block_id": "page-1111-block-0040",
+      "order": 40,
+      "text": "Foucault, M. (1994a). « La folie et la société », Dits et écrits,\ntome 3, Paris, Gallimard, p. 477-499.\n",
+      "text_sha256": "9cefbb9ed76f3541e098d840c8961f7673260cf1e54b73965bfffcd42ef79809"
+    },
+    {
+      "bbox": [
+        48.0,
+        61.934959411621094,
+        207.24627685546875,
+        79.2734375
+      ],
+      "block_id": "page-1111-block-0041",
+      "order": 41,
+      "text": "Foucault, M. (1994b). « Un système ni face à une demande\ninnie », Dits et écrits, tome 4, Paris, Gallimard, p. 367-383.\n",
+      "text_sha256": "fba798572776ae9f39fd237a83eed9105695b4e98231a768cb2a61ae527350b1"
+    },
+    {
+      "bbox": [
+        48.0,
+        83.1849594116211,
+        203.92257690429688,
+        109.6234359741211
+      ],
+      "block_id": "page-1111-block-0042",
+      "order": 42,
+      "text": "Gerhardt, U. (1989). Ideas About Illness : An Intellectual and\nPolitical History of Medical Sociology, New York, New York\nUniversity Press.\n",
+      "text_sha256": "63975fe9652f5a66efb6c0a247ac55806dca9d8b8f16f74131bb8af9013ae2ae"
+    },
+    {
+      "bbox": [
+        48.0,
+        113.5849609375,
+        199.86257934570312,
+        130.87344360351562
+      ],
+      "block_id": "page-1111-block-0043",
+      "order": 43,
+      "text": "Goffman, E. (1961). Asiles : études sur la condition sociale\ndes malades mentaux et autres reclus, Paris, Minuit.\n",
+      "text_sha256": "392be87fcbd27e389432bd7b86d3bfa6ae9d83dc5687acb885923357902d1a4a"
+    },
+    {
+      "bbox": [
+        48.0,
+        134.8349609375,
+        197.69749450683594,
+        152.17344665527344
+      ],
+      "block_id": "page-1111-block-0044",
+      "order": 44,
+      "text": "Gould, S. J. (1981). La mal-mesure de l’homme : l’intelli-\ngence sous la toise des savants, Paris, Éditions Ramsay.\n",
+      "text_sha256": "1f347745371739ccb89d64af99f0698be2bb49c74ddfd6aa91652cf0663949d8"
+    },
+    {
+      "bbox": [
+        48.0,
+        156.0849609375,
+        206.87905883789062,
+        173.42344665527344
+      ],
+      "block_id": "page-1111-block-0045",
+      "order": 45,
+      "text": "Illich, I. (1999). Un facteur pathogène prédominant : l’obsession\nde la santé parfaite, Le Monde diplomatique, mars, p. 8.\n",
+      "text_sha256": "eabbf7d7fcebba7f67940c9e80145b7edc7b55133e585f0a4d9a479c91cc067c"
+    },
+    {
+      "bbox": [
+        48.0,
+        177.3349609375,
+        197.04757690429688,
+        194.67344665527344
+      ],
+      "block_id": "page-1111-block-0046",
+      "order": 46,
+      "text": "Kleinman, A. (1988). Rethinking Psychiatry : From Cultural\nCategory to Personal Experience, New York, Free Press.\n",
+      "text_sha256": "af3c90f035aaa33ce7b57cc01808d308d4c138b016e8fbb74747b7f8762d2143"
+    },
+    {
+      "bbox": [
+        48.0,
+        198.5849609375,
+        197.70626831054688,
+        215.92344665527344
+      ],
+      "block_id": "page-1111-block-0047",
+      "order": 47,
+      "text": "Lehmann, H. (1993). « Il faut freiner la désintégration de la\npsychiatrie », Actualité médicale, 13(4), p. 1.\n",
+      "text_sha256": "c4421e006e0eb67e0217c5acb4368f12d1cd70014ed7b7439800c96ae76f86cc"
+    },
+    {
+      "bbox": [
+        48.0,
+        219.8349609375,
+        203.0225830078125,
+        255.42344665527344
+      ],
+      "block_id": "page-1111-block-0048",
+      "order": 48,
+      "text": "Leighton, A. H. (1959). My Name is Legion : Foundations for\na Theory of Man in Relation to Culture. The Stirling County\nStudy of Psychiatric Disorder and Sociocultural Environ-\nment, New York, Basic Books.\n",
+      "text_sha256": "cf5935b78492541c1e9ef4cc45d3c591d728548faf2e8f49bdf144ded26af472"
+    },
+    {
+      "bbox": [
+        48.0,
+        259.3849792480469,
+        205.20640563964844,
+        276.6734313964844
+      ],
+      "block_id": "page-1111-block-0049",
+      "order": 49,
+      "text": "Levy, J. (1995). « Du monde à l’individu. La complexité dans\nles sciences sociales », Sciences humaines, (47), p. 27-31.\n",
+      "text_sha256": "c1b8be2ee008e96beddd59c6bde0b3ff3058e646e57863e65b388dc0edd22394"
+    },
+    {
+      "bbox": [
+        48.0,
+        280.6349792480469,
+        199.17782592773438,
+        288.8234558105469
+      ],
+      "block_id": "page-1111-block-0050",
+      "order": 50,
+      "text": "Mauss, M. (1993). Sociologie et anthropologie, Paris, PUF.\n",
+      "text_sha256": "e49d4d2900835e8566d528218987a44b32b1e5f796ffa72e74a33640561644e7"
+    },
+    {
+      "bbox": [
+        48.0,
+        292.7349548339844,
+        206.65008544921875,
+        310.0734558105469
+      ],
+      "block_id": "page-1111-block-0051",
+      "order": 51,
+      "text": "Parsons, T. (1964). Social Structure and Personality, London,\nFree Press.\n",
+      "text_sha256": "b201e1c7234b1eb431883734bf0e8e6f74c9c5ab51ec3d231306b1ca5670799d"
+    },
+    {
+      "bbox": [
+        48.0,
+        313.9849548339844,
+        195.77235412597656,
+        331.3234558105469
+      ],
+      "block_id": "page-1111-block-0052",
+      "order": 52,
+      "text": "Ricoeur, P. (1994). « La souffrance n’est pas la douleur »,\nAutrement, (142), p. 152-161.\n",
+      "text_sha256": "87a26799ea88d135431a8d45056540097e72e8e04fe81d0495171b2fb34cb044"
+    },
+    {
+      "bbox": [
+        48.0,
+        335.2349548339844,
+        207.16757202148438,
+        352.5734558105469
+      ],
+      "block_id": "page-1111-block-0053",
+      "order": 53,
+      "text": "Rocher, G. (1969). Introduction à la sociologie générale, tome\nII : Regards sur la réalité sociale, Montréal, Éditions HMH.\n",
+      "text_sha256": "cb1711b5f05101578c91bc25050dfb4111689a02db7bd632abd676ed171781e1"
+    },
+    {
+      "bbox": [
+        48.0,
+        356.4849548339844,
+        190.46005249023438,
+        382.97344970703125
+      ],
+      "block_id": "page-1111-block-0054",
+      "order": 54,
+      "text": "Rosenberg, M. (1984). « A symbolic interactionist\nview of psychosis », J Health Soc Behav, 25(3),\np. 289-302.\n",
+      "text_sha256": "b44accc5f3838a4212eb102d4139fd8e9288950b5198d83f555de5ffd46ce6ff"
+    },
+    {
+      "bbox": [
+        48.0,
+        386.8849792480469,
+        200.63015747070312,
+        413.3234558105469
+      ],
+      "block_id": "page-1111-block-0055",
+      "order": 55,
+      "text": "Sarbin, T. R. (1990). « Toward the obsolescence of the\nschizoph renia hypothesis », Journal of Mind and Behavior,\n11(3-4), p. 259-283.\n",
+      "text_sha256": "d1ef2856257e103d8b152e6f6e06e69891b32967b430ad0b3b755a015ce42e28"
+    },
+    {
+      "bbox": [
+        48.0,
+        417.28497314453125,
+        201.86007690429688,
+        434.5734558105469
+      ],
+      "block_id": "page-1111-block-0056",
+      "order": 56,
+      "text": "Wilkinson, R. G. (1996). Unhealthy Societies, The Afictions\nof Inequality, London, Routledge.\n",
+      "text_sha256": "6aa5d477125201c5a54bac80f6b8d714adf8d1811beeb153ad347a12771b8b71"
+    },
+    {
+      "bbox": [
+        48.0,
+        438.53497314453125,
+        200.1416473388672,
+        464.97344970703125
+      ],
+      "block_id": "page-1111-block-0057",
+      "order": 57,
+      "text": "Wilkinson, R. G. (2005). The impact of inequality. How\nto make sick societies healthier, New York, The New\nPress.\n",
+      "text_sha256": "14a524a8994c9f27eb302a1cad4c35380c2a2c7ee40fdecb619e65e292db79be"
+    },
+    {
+      "bbox": [
+        48.0,
+        468.8849792480469,
+        185.78515625,
+        477.0734558105469
+      ],
+      "block_id": "page-1111-block-0058",
+      "order": 58,
+      "text": "Wilson, E. O. (1978). L’humaine nature, Paris, Stock.\n",
+      "text_sha256": "d46493b3754e89bb1a7f2e527ff4d81036350a99280537c9efae1bde80b09647"
+    },
+    {
+      "bbox": [
+        48.0,
+        490.52032470703125,
+        203.0050048828125,
+        537.7234497070312
+      ],
+      "block_id": "page-1111-block-0059",
+      "order": 59,
+      "text": "Chapitre 14\nAlonso, J. & al. (2004). « Prevalence of mental disorders\nin Europe : Results from the European Study of the\nEpidemiology of Mental Disorders (ESEMeD) project », Acta\nPsychiatrica Scandinavica, 420(suppl.), p. 21-27.\n",
+      "text_sha256": "dfe7975c8d459065bdfb5ad3eda8cdbade9c58f3dee554ba9328a7f08b6d6dfe"
+    },
+    {
+      "bbox": [
+        48.0,
+        541.6849975585938,
+        206.85000610351562,
+        586.3734741210938
+      ],
+      "block_id": "page-1111-block-0060",
+      "order": 60,
+      "text": "Bonin, J.-P. & al. (2010). « Health and mental health care\nutilization by clients of resources for homeless persons in\nQuebec City and Montreal, Canada : A 5-year follow-up\nstudy », Journal of Behavioral Health Services & Research,\n37(1), p. 95-110.\n",
+      "text_sha256": "91ae2f82021398e1d0f1c2cd316e888f5b5e5e59ce1e956a065e3e394e1a6d86"
+    },
+    {
+      "bbox": [
+        48.0,
+        590.2849731445312,
+        197.72052001953125,
+        616.7734375
+      ],
+      "block_id": "page-1111-block-0061",
+      "order": 61,
+      "text": "Brown A. S. & al. (2004). « Serologic evidence of prenatal\ninuenza in the etiology of schizophrenia », Arch Gen\nPsychiatry, 61, p. 774-780.\n",
+      "text_sha256": "bfda92487377d0f9269598b80d3d5a8f1fffdc269e3533b519a89d332a3ef8aa"
+    },
+    {
+      "bbox": [
+        48.0,
+        620.6849975585938,
+        201.99520874023438,
+        647.1234741210938
+      ],
+      "block_id": "page-1111-block-0062",
+      "order": 62,
+      "text": "Cairney, J. & Streiner, D. L. (2010). Mental Disorders in\nCanada: An Epidemiological Perspective, Toronto, Ontario,\nUniversity of Toronto Press.\n",
+      "text_sha256": "a53f3772f5ec12046087ef4ff3161c39bca28fc757d6ce5a03fc3de7f7ec385c"
+    },
+    {
+      "bbox": [
+        48.0,
+        651.0849609375,
+        206.86695861816406,
+        686.6234741210938
+      ],
+      "block_id": "page-1111-block-0063",
+      "order": 63,
+      "text": "Caron, J. & al. (2012). « Prevalence of psychological distress\nand mental disorders, and use of mental health services\nin the epidemiological catchment area of Montreal South-\nWest », BMC Psychiatry, 12, p. 183.\n",
+      "text_sha256": "53e501e4eb9fb706e7c32077d2d78083105544d02a69d8f322e3ca5284370ac0"
+    },
+    {
+      "bbox": [
+        48.0,
+        690.5849609375,
+        201.7425079345703,
+        717.0234375
+      ],
+      "block_id": "page-1111-block-0064",
+      "order": 64,
+      "text": "Dohrenwend, B. S. & Dohrenwend, B. P. (1974). Stressful Life\nEvents : Their Nature and Effects, Oxford, Royaume-Uni,\nJohn Wiley & Sons.\n",
+      "text_sha256": "1b652e72cf6bf29ea075509ce11db17fb8339e8d8cd710e85695e9c50c105d67"
+    }
+  ],
+  "coordinates_sha256": "999cab64edd53558b722943e2a24a8dc309ca502088a5ba5c85537aec107768d",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1111",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "R14\nRéférences\nVanasse, A. & al. (2012). « Treatment prevalence and\nincidence of schizophrenia in Quebec using a population\nhealth services perspective : different algorithms, different\nestimates », Social psychiatry and psychiatric epidemiology,\n47(4), p. 533-543.\nWittchen, H.-U. (1994). « Reliability and validity studies of\nthe WHO Composite International Diagnostic Interview (CIDI) :\nA critical review », Journal of Psychiatric Research, 28(1),\np. 57-84.\nZahner, G. E. P. & al. (1995). « Introduction to epidemiologic\nresearch methods », dans Tsuang, M. T. & al. (dir.), Textbook\nin Psychiatric Epidemiology, New York, NY, Wiley-Liss,\np. 23-53.\nChapitre 15\nAmerican Psychiatric Association (APA). (2004). DSM-\nIV-TR. Critères diagnostiques (Washington, DC, 2000).\nTraduction française par J.-D. Guelet al., Paris, Masson,\n384 p.\nAmerican Psychiatric Association (APA). (2015). DSM-5 –\nManuel Diagnostique et Statistique des Troubles Mentaux.\nTraduction française par M.-A. Crocq, J.-D. Guelet al.,\nElsevier Masson SAS, Paris.\nArranz, B. & al. (2009). « Clinical and serotonergic\npredictors of non-affective acute remitting psychosis in\npatients with a rst-episode psychosis », Acta Psychiatrica\nScandinavica, 119(1), p. 71-77.\nCastagnini, A. & al. (2008). « Incidence and diagnostic\nstability of ICD-10 acute and transient psychotic disorders »,\nComprehensive Psychiatry, 49(3), p. 255-261.\nCastagnini, A. & al. (2013). « Long-term stability of acute and\ntransient psychotic disorders », Australian and New Zealand\nJournal of Psychiatry, 47(1), p. 59-64.\nDas, S. K. & al. (2001). « Testing the stress-vulnerability\nhypothesis in ICD-10 diagnosed acute and transient\npsychotic disorders », Acta Psychiatrica Scandinavica,\n104(1), p. 56-58.\nEy, H. (1954). « Bouffées délirantes et psychoses halluci-\nnatoires aiguës », Études psychiatriques, tome III, Paris,\nDesclée de Brouwer, p. 201-324.\nHatotani, N. (1996). « The concept of “atypical psychoses” :\nSpecial reference to its development in Japan »,Psychiatry\n& Clinical Neurosciences, 50(1), p. 1-10.\nJäger, M. & al. (2003a). « On the descriptive validity of\nICD-10 schizophrenia : Empirical analyses in the spectrum\nof non-affective functional psychoses », Psychopathology,\n36(3), p. 152-159.\nJäger, M. & al. (2003b). « Course and outcome of rst-admitted\npatients with acute and transient psychotic disorders (ICD-\n10: F23). Focus on relapses and social adjustment », European\nArchives of Psychiatry & Clinical Neuroscience, 253(4),\np. 209-215.\nJorgensen, P. & al. (1997). « Acute and transient psychotic\ndisorder : A 1-year follow-up study », Acta Psychiatrica\nScandinavica, 96(2), p. 150-154.\nMalhotra, S. & Malhotra. S. (2003). « Acute and transient\npsychotic disorder : Comparison with schizophrenia »,\nCurrent Psychiatry Reports, 5(3), p. 178-186.\nMarneros A. & al. (2003). « Features of acute and transient\npsychotic disorders », European Archives of Psychiatry &\nClinical Neuroscience, 253(4), p. 167-174.\nMarneros, A. & al. (2005). « Is the psychopathology of acute\nand transient psychotic disorder different from schizophrenic\nand schizoaffective disorders ? »,European Psychiatry, 20(4),\np. 315-320.\nMojtabai, R. & al. (2000). « Duration of remitting psychoses\nwith acute onset. Implications for ICD-10 », British Journal\nof Psychiatry, 176(6), p. 576-580.\nDurkheim, É. (1897). Le suicide. Étude de sociologie, 2e éd.,\nParis, France, Les Presses universitaires de France.\nHaro, J. M. & al. (2006). « Concordance of the Composite\nInternational Diagnostic Interview Version 3.0 (CIDI 3.0) with\nstandardized clinical assessments in the World Health Orga-\nnization World Mental Health Surveys », International Journal\nof Methods in Psychiatric Research, 15(4), p. 167-180.\nHill, A. B. (1965). « The Environment and Disease : Asso-\nciation or Causation ? », Proceedings of the Royal Society\nof Medicine, 58(5), p. 295-300.\nInstitut de la statistique du Québec. (2001). Enquête auprès\nde la clientèle des ressources pour personnes itinérantes\ndes régions de Montréal-Centre et de Québec, 1998-1999,\nQuébec, Québec.\nInstitut de la statistique du Québec.(2008a). Troubles mentaux,\ntoxicomanie et autres problèmes liés à la santé mentale\nchez les adultes québécois. Enquête sur la santé dans les\ncollectivités canadiennes (cycle 1.2). Québec.\nInstitut de la statistique du Québec. (2008b). Utilisation de ser-\nvices et consommation de médicaments liées aux problèmes\nde santé mentale chez les adultes québécois. Enquête sur la\nsanté dans les collectivités canadiennes (cycle 1.2), Québec,\nQuébec.\nKessler, R. C. (2004). « Prevalence, severity, and unmet\nneed for treatment of mental disorders in the World Health\nOrganization World Mental Health Surveys », The Journal of\nAmerican Medical Association, 291(21), p. 2581-2590.\nKessler, R. C. & al. (2005). « Prevalence, severity, and\ncomorbidity of twelve-month DSM-IV disorders in the\nNational Comorbidity Survey Replication (NCS-R) », Archives\nof General Psychiatry, 62(6), p. 617-627.\nKoch, R. (1890). Aetiology of Tuberculosis, New York, NY,\nWilliams R. Jenkins.\nLesage, A. (1996). « Perspectives épidémiologiques sur le\nvirage ambulatoire des services psychiatriques », Santé\nmentale au Québec, 21(1), p. 79-96.\nMurphy J. M. & al. (2004). « Anxiety and depression : A\n40-year perspective on relationships regarding prevalence,\ndistribution, and comorbidity », Acta Psychiatrica Scandina-\nvica, 109(5), p. 355-375.\nNicole, L. & al. (1993). « Lower incidence and increased\nmale/female ratio in schizophrenia », British Journal of\nPsychiatry, 162(4), p. 556-557.\nPréville, M. & al. (2008). « The epidemiology of psychiatric\ndisorders in the Quebec’s older adult population »,Canadian\nJournal of Psychiatry, 53(12), p. 822-832.\nPréville, M. & al. (2010). « One-year incidence of\npsychiatric disorders onset in the Quebec’s older adult\npopulation », Canadian Journal of Psychiatry, 55(7),\np. 449-457.\nRivollier, F. & al. (2014). « Hypothèse épigéné-\ntique de la schizophrénie : revue de la littérature »,\nL’Encéphale, 40, p. 380-386.\nRobins, E. & Guze, S. B. (1970). « Establishment of diagnostic\nvalidity in psychiatric illness : Its application to schizophre-\nnia », American Journal of Psychiatry, 126(7), p. 983-987.\nRobins, L. N. & al. (1984). « Lifetime prevalence of specic\npsychiatric disorders in three sites », Archives of General\nPsychiatry, 41(10), p. 949-958.\nRoy, M.-A. & al. (1996). «Accuracies and inaccuracies of\nthe family history method : A multivariate investigation »,\nActa Psychiatrica Scandinavica, 93(4), p. 224-234.\nSrole, L. & al. (1962). Mental Health in the Metropolis, New\nYork, McGraw-Hill.\nVan Os, J. & al. (2008). « Gene-Environment Interactions\nin Schizophrenia : Review of Epidemiological Findings\nand Future Directions », Schizophrenia Bulletin, 34(6),\np. 1066-1082.\nFoucault, M. (1994a). « La folie et la société », Dits et écrits,\ntome 3, Paris, Gallimard, p. 477-499.\nFoucault, M. (1994b). « Un système ni face à une demande\ninnie », Dits et écrits, tome 4, Paris, Gallimard, p. 367-383.\nGerhardt, U. (1989). Ideas About Illness : An Intellectual and\nPolitical History of Medical Sociology, New York, New York\nUniversity Press.\nGoffman, E. (1961). Asiles : études sur la condition sociale\ndes malades mentaux et autres reclus, Paris, Minuit.\nGould, S. J. (1981). La mal-mesure de l’homme : l’intelli-\ngence sous la toise des savants, Paris, Éditions Ramsay.\nIllich, I. (1999). Un facteur pathogène prédominant : l’obsession\nde la santé parfaite, Le Monde diplomatique, mars, p. 8.\nKleinman, A. (1988). Rethinking Psychiatry : From Cultural\nCategory to Personal Experience, New York, Free Press.\nLehmann, H. (1993). « Il faut freiner la désintégration de la\npsychiatrie », Actualité médicale, 13(4), p. 1.\nLeighton, A. H. (1959). My Name is Legion : Foundations for\na Theory of Man in Relation to Culture. The Stirling County\nStudy of Psychiatric Disorder and Sociocultural Environ-\nment, New York, Basic Books.\nLevy, J. (1995). « Du monde à l’individu. La complexité dans\nles sciences sociales », Sciences humaines, (47), p. 27-31.\nMauss, M. (1993). Sociologie et anthropologie, Paris, PUF.\nParsons, T. (1964). Social Structure and Personality, London,\nFree Press.\nRicoeur, P. (1994). « La souffrance n’est pas la douleur »,\nAutrement, (142), p. 152-161.\nRocher, G. (1969). Introduction à la sociologie générale, tome\nII : Regards sur la réalité sociale, Montréal, Éditions HMH.\nRosenberg, M. (1984). « A symbolic interactionist\nview of psychosis », J Health Soc Behav, 25(3),\np. 289-302.\nSarbin, T. R. (1990). « Toward the obsolescence of the\nschizoph renia hypothesis », Journal of Mind and Behavior,\n11(3-4), p. 259-283.\nWilkinson, R. G. (1996). Unhealthy Societies, The Afictions\nof Inequality, London, Routledge.\nWilkinson, R. G. (2005). The impact of inequality. How\nto make sick societies healthier, New York, The New\nPress.\nWilson, E. O. (1978). L’humaine nature, Paris, Stock.\nChapitre 14\nAlonso, J. & al. (2004). « Prevalence of mental disorders\nin Europe : Results from the European Study of the\nEpidemiology of Mental Disorders (ESEMeD) project », Acta\nPsychiatrica Scandinavica, 420(suppl.), p. 21-27.\nBonin, J.-P. & al. (2010). « Health and mental health care\nutilization by clients of resources for homeless persons in\nQuebec City and Montreal, Canada : A 5-year follow-up\nstudy », Journal of Behavioral Health Services & Research,\n37(1), p. 95-110.\nBrown A. S. & al. (2004). « Serologic evidence of prenatal\ninuenza in the etiology of schizophrenia », Arch Gen\nPsychiatry, 61, p. 774-780.\nCairney, J. & Streiner, D. L. (2010). Mental Disorders in\nCanada: An Epidemiological Perspective, Toronto, Ontario,\nUniversity of Toronto Press.\nCaron, J. & al. (2012). « Prevalence of psychological distress\nand mental disorders, and use of mental health services\nin the epidemiological catchment area of Montreal South-\nWest », BMC Psychiatry, 12, p. 183.\nDohrenwend, B. S. & Dohrenwend, B. P. (1974). Stressful Life\nEvents : Their Nature and Effects, Oxford, Royaume-Uni,\nJohn Wiley & Sons.\n",
+  "raw_text_sha256": "a4122d60ad4db44864552bfddfe07e0c591fefbea3ec2eb08e25df0d006c2224",
+  "source_page_display": 1112,
+  "source_page_index": 1111
+}

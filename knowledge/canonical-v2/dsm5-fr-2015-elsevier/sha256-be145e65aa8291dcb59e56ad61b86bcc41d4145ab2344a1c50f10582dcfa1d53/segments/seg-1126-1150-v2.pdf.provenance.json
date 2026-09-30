@@ -1,0 +1,20 @@
+{
+  "book_id": "dsm5-fr-2015-elsevier",
+  "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+  "source_pdf": "Books/DSM-5_Manuel-diagnostique-et-statistique-des-troubles-mentaux.pdf",
+  "source_sha256": "be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+  "segment_file": "seg-1126-1150-v2.pdf",
+  "source_page_start": 1126,
+  "source_page_end": 1150,
+  "page_count": 25,
+  "segment_sha256": "4bd2f8ebe255b49c66f3f516a869dc7332173081f6afebb9ab2986d9fc25e6fb",
+  "replaces": "seg-1126-1150.pdf",
+  "rebuild_reason": "The previous segment inherited blank pages 1137 and 1140 from working-copy-repaired-v1.pdf; this version is sliced directly from the fixed original source.",
+  "extractor": "pymupdf-insert-pdf",
+  "ocr_used": false,
+  "index_manifest": "index-v2.json",
+  "page_text_sha256": {
+    "1137": "5c45ad3024ee633fd9ddb7e30c75f87961f96e91b720308f198e56375e4ac327",
+    "1140": "e62a8304c7d3ed2435df53bb0db8107eb12360133c890c023f5cf3b45b99e8a3"
+  }
+}

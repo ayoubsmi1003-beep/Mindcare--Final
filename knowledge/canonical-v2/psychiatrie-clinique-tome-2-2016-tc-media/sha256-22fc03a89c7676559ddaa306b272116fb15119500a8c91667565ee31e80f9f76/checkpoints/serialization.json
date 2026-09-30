@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-09-24T23:52:43.4628311+01:00",
+  "python_version": "3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)]",
+  "commands": [
+    {
+      "command": "$env:TARGET = \"C:\\Users\\ABC Informatique\\.claude\\projects\\Final mindcare\\knowledge\\canonical-v2\\psychiatrie-clinique-tome-2-2016-tc-media\\sha256-22fc03a89c7676559ddaa306b272116fb15119500a8c91667565ee31e80f9f76\"; $env:PYTHONDONTWRITEBYTECODE = \"1\"; python -m unittest \"$env:TARGET\\tests\\test_serialization.py\" -v",
+      "exit_code": 0,
+      "result": "Ran 16 tests; OK"
+    },
+    {
+      "command": "$env:TARGET = \"C:\\Users\\ABC Informatique\\.claude\\projects\\Final mindcare\\knowledge\\canonical-v2\\psychiatrie-clinique-tome-2-2016-tc-media\\sha256-22fc03a89c7676559ddaa306b272116fb15119500a8c91667565ee31e80f9f76\"; $env:PYTHONDONTWRITEBYTECODE = \"1\"; python -m json.tool \"$env:TARGET\\schema\\canonical-v2.1-tome2.schema.json\" > $null",
+      "exit_code": 0,
+      "result": "Schema parsed successfully"
+    }
+  ]
+}

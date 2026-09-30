@@ -1,0 +1,196 @@
+{
+  "block_sequence_sha256": "f72eae2095b641c64923cccda2c775e5a23c1b98a6186a4254c4a5382926a563",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        133.2734375,
+        390.4532165527344,
+        220.1953125
+      ],
+      "block_id": "page-0731-block-0001",
+      "order": 1,
+      "text": "Troubles du sommeil\net de la vigilance\n",
+      "text_sha256": "59747a0f1c20b24c9453e700d6923fdab0e773d5eb2fd48e65b03b6dea836240"
+    },
+    {
+      "bbox": [
+        48.0,
+        268.80010986328125,
+        275.0443420410156,
+        329.393798828125
+      ],
+      "block_id": "page-0731-block-0002",
+      "order": 2,
+      "text": "Roger Godbout, PH. D. (psychologie)\nPsychologue, directeur, Laboratoire et Clinique du sommeil,\nHôpital Rivière-des-Prairies (Montréal)\nProfesseur titulaire, Département de psychiatrie, Faculté\nde médecine, Université de Montréal\n",
+      "text_sha256": "0887a01e86a9f435ce12f6a0051f3cbb41bba241c71759daef3feb10f5b1f1aa"
+    },
+    {
+      "bbox": [
+        48.0,
+        378.6244201660156,
+        289.010009765625,
+        463.5472717285156
+      ],
+      "block_id": "page-0731-block-0003",
+      "order": 3,
+      "text": "32.1 Caractéristiques du sommeil normal.......................... 715\n32.1.1 Rythmes biologiques circadiens ......................... 715\n32.1.2 Stades....................................................................... 717\n32.1.3 Évolution au cours de la vie................................. 719\n32.1.4 Fonctions................................................................. 720\n32.1.5 Mécanismes neuronaux\ncontrôlant le sommeil........................................... 722\n",
+      "text_sha256": "d2468e6499eb1654a82917f0bce44355f29a34e9bbe8478aea6f60d254479bc6"
+    },
+    {
+      "bbox": [
+        48.0,
+        469.6244201660156,
+        289.010009765625,
+        479.4681701660156
+      ],
+      "block_id": "page-0731-block-0004",
+      "order": 4,
+      "text": "32.2 Évolution du concept .................................................... 724\n",
+      "text_sha256": "03b0a9838711be4c91b0edcb7685a46cb8e117b167f8aa1a064684f7969a6296"
+    },
+    {
+      "bbox": [
+        48.0,
+        485.6244201660156,
+        289.010009765625,
+        560.5473022460938
+      ],
+      "block_id": "page-0731-block-0005",
+      "order": 5,
+      "text": "32.3 Évaluation et outils diagnostiques .............................. 724\n32.3.1 Questionnaires....................................................... 724\n32.3.2 Polysomnographie................................................. 725\n32.3.3 Actigraphie ............................................................. 728\n32.3.4 Vidéosomnographie.............................................. 728\n32.3.5 Évaluations complémentaires ............................. 728\n",
+      "text_sha256": "467f689ee7a5c9fc30946416e9489e53e7e434d7eed8a0b11dc455aa6b0bf6fd"
+    },
+    {
+      "bbox": [
+        48.0,
+        566.6244506835938,
+        289.010009765625,
+        628.5473022460938
+      ],
+      "block_id": "page-0731-block-0006",
+      "order": 6,
+      "text": "32.4 Insomnies ....................................................................... 729\n32.4.1 Insomnie et psychiatrie........................................ 729\n32.4.2 Insomnie et pédopsychiatrie............................... 729\n32.4.3 Description clinique ............................................. 730\n32.4.4 Traitements............................................................. 730\n",
+      "text_sha256": "744fcc13261a8bf6f5d06ab7bb3d5746189bb2845221e38d0458e044f8ab612d"
+    },
+    {
+      "bbox": [
+        48.0,
+        634.6244506835938,
+        289.010009765625,
+        683.5473022460938
+      ],
+      "block_id": "page-0731-block-0007",
+      "order": 7,
+      "text": "32.5 Hypersomnies ................................................................ 733\n32.5.1 Hypersomnie primaire......................................... 734\n32.5.2 Hypersomnie périodique..................................... 734\n32.5.3 Narcolepsie............................................................. 734\n",
+      "text_sha256": "f9aa76fb78cf51ba3b22ca42ec0ef67d7fffe1976f3b914b2e73779e013d79d7"
+    },
+    {
+      "bbox": [
+        306.0,
+        378.6244201660156,
+        547.010009765625,
+        388.4681701660156
+      ],
+      "block_id": "page-0731-block-0008",
+      "order": 8,
+      "text": "32.6 Troubles du sommeil liés à la respiration .................. 737\n",
+      "text_sha256": "44b4b262e82910ae397ce83dc490d8039ce964c54e83636b4a6bb5520aaf8fbe"
+    },
+    {
+      "bbox": [
+        306.0,
+        394.6244201660156,
+        547.010009765625,
+        479.5472717285156
+      ],
+      "block_id": "page-0731-block-0009",
+      "order": 9,
+      "text": "32.7 Parasomnies ................................................................... 739\n32.7.1 Terreurs nocturnes................................................ 739\n32.7.2 Somnambulisme.................................................... 739\n32.7.3 Réveils confusionnels ........................................... 740\n32.7.4 Cauchemars............................................................ 741\n32.7.5 Troubles du comportement\nen sommeil paradoxal........................................... 742\n",
+      "text_sha256": "71d1517600a74ce042161c0990686ed8bac437887207a1cc1ee3c081f3a9ca80"
+    },
+    {
+      "bbox": [
+        306.0,
+        485.6244201660156,
+        547.010009765625,
+        531.5473022460938
+      ],
+      "block_id": "page-0731-block-0010",
+      "order": 10,
+      "text": "32.8 Troubles du mouvement associés au sommeil .......... 743\n32.8.1 Syndrome des impatiences musculaires ........... 743\n32.8.2 Autres comportements moteurs répétitifs\nau cours du sommeil............................................. 743\n",
+      "text_sha256": "ad9a70635b0002d8df6c1e5345f1672830a482f8c35f5235749685b30902bb08"
+    },
+    {
+      "bbox": [
+        306.0,
+        537.6244506835938,
+        547.010009765625,
+        547.4682006835938
+      ],
+      "block_id": "page-0731-block-0011",
+      "order": 11,
+      "text": "32.9 Trouble veille-sommeil lié au rythme circadien ....... 743\n",
+      "text_sha256": "3d64a4d36689827379858c4c5285a58bb770a5eb21a1d96f06d62b97dc5b15ec"
+    },
+    {
+      "bbox": [
+        306.0,
+        553.6244506835938,
+        547.010009765625,
+        615.5473022460938
+      ],
+      "block_id": "page-0731-block-0012",
+      "order": 12,
+      "text": "32.10 Troubles du sommeil et psychiatrie............................ 746\n32.10.1 Troubles anxieux ................................................... 746\n32.10.2 Dépression.............................................................. 746\n32.10.3 Trouble bipolaire................................................... 748\n32.10.4 Psychose.................................................................. 748\n",
+      "text_sha256": "959a7911edb38fcc4f59cdac0b412a28acf9ccaef3de042031542819b54991da"
+    },
+    {
+      "bbox": [
+        306.0,
+        621.6244506835938,
+        547.010009765625,
+        641.4682006835938
+      ],
+      "block_id": "page-0731-block-0013",
+      "order": 13,
+      "text": "32.11 Troubles du sommeil induits par des substances\nou des médicaments...................................................... 748\n",
+      "text_sha256": "f5b126d8df50be47bf039c21eda354d7c9424ed6894d4c30a6e87583efa837ea"
+    },
+    {
+      "bbox": [
+        306.0,
+        647.6244506835938,
+        547.010009765625,
+        657.4682006835938
+      ],
+      "block_id": "page-0731-block-0014",
+      "order": 14,
+      "text": "Lectures complémentaires...................................................... 749\n",
+      "text_sha256": "e7457540676e3a0e1ed5d7e437193c8721b4237493da4b81bd3e448097500644"
+    },
+    {
+      "bbox": [
+        256.95001220703125,
+        4.8810577392578125,
+        552.0,
+        124.88105773925781
+      ],
+      "block_id": "page-0731-block-0015",
+      "order": 15,
+      "text": "CHAPITRE32\n",
+      "text_sha256": "f152431d8af4fdf3b6b0039c04452f37140970e86a9a6b580c3ce644754fab30"
+    }
+  ],
+  "coordinates_sha256": "d7d3234fe964870140b7c31b825b2597a44c48912c4a1c75c12bbb5a98dc8ea2",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0731",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Troubles du sommeil\net de la vigilance\nRoger Godbout, PH. D. (psychologie)\nPsychologue, directeur, Laboratoire et Clinique du sommeil,\nHôpital Rivière-des-Prairies (Montréal)\nProfesseur titulaire, Département de psychiatrie, Faculté\nde médecine, Université de Montréal\n32.1 Caractéristiques du sommeil normal.......................... 715\n32.1.1 Rythmes biologiques circadiens ......................... 715\n32.1.2 Stades....................................................................... 717\n32.1.3 Évolution au cours de la vie................................. 719\n32.1.4 Fonctions................................................................. 720\n32.1.5 Mécanismes neuronaux\ncontrôlant le sommeil........................................... 722\n32.2 Évolution du concept .................................................... 724\n32.3 Évaluation et outils diagnostiques .............................. 724\n32.3.1 Questionnaires....................................................... 724\n32.3.2 Polysomnographie................................................. 725\n32.3.3 Actigraphie ............................................................. 728\n32.3.4 Vidéosomnographie.............................................. 728\n32.3.5 Évaluations complémentaires ............................. 728\n32.4 Insomnies ....................................................................... 729\n32.4.1 Insomnie et psychiatrie........................................ 729\n32.4.2 Insomnie et pédopsychiatrie............................... 729\n32.4.3 Description clinique ............................................. 730\n32.4.4 Traitements............................................................. 730\n32.5 Hypersomnies ................................................................ 733\n32.5.1 Hypersomnie primaire......................................... 734\n32.5.2 Hypersomnie périodique..................................... 734\n32.5.3 Narcolepsie............................................................. 734\n32.6 Troubles du sommeil liés à la respiration .................. 737\n32.7 Parasomnies ................................................................... 739\n32.7.1 Terreurs nocturnes................................................ 739\n32.7.2 Somnambulisme.................................................... 739\n32.7.3 Réveils confusionnels ........................................... 740\n32.7.4 Cauchemars............................................................ 741\n32.7.5 Troubles du comportement\nen sommeil paradoxal........................................... 742\n32.8 Troubles du mouvement associés au sommeil .......... 743\n32.8.1 Syndrome des impatiences musculaires ........... 743\n32.8.2 Autres comportements moteurs répétitifs\nau cours du sommeil............................................. 743\n32.9 Trouble veille-sommeil lié au rythme circadien ....... 743\n32.10 Troubles du sommeil et psychiatrie............................ 746\n32.10.1 Troubles anxieux ................................................... 746\n32.10.2 Dépression.............................................................. 746\n32.10.3 Trouble bipolaire................................................... 748\n32.10.4 Psychose.................................................................. 748\n32.11 Troubles du sommeil induits par des substances\nou des médicaments...................................................... 748\nLectures complémentaires...................................................... 749\nCHAPITRE32\n",
+  "raw_text_sha256": "7f99dc9d7389f7105709fe947f60a547aeb85ecb8c5febde2a83130d59eba700",
+  "source_page_display": 732,
+  "source_page_index": 731
+}

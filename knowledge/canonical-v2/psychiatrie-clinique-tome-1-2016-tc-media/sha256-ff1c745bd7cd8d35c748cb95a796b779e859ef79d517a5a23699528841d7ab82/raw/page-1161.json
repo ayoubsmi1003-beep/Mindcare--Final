@@ -1,0 +1,52 @@
+{
+  "block_sequence_sha256": "775fa397f0a70b753a61b7486c42eaa46bbc81c5ae43d5aa9c2fbdb1cb4cf175",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        180.42501831054688,
+        758.8693237304688
+      ],
+      "block_id": "page-1161-block-0001",
+      "order": 1,
+      "text": "F24\nFigures supplémentaires\n",
+      "text_sha256": "33f40a7925b708370c4a717165b0e510f812b71737d736d3dd31efcf2f4bf4ea"
+    },
+    {
+      "bbox": [
+        50.25,
+        41.002296447753906,
+        256.2982482910156,
+        53.320068359375
+      ],
+      "block_id": "page-1161-block-0002",
+      "order": 2,
+      "text": "FIGURE 44 Montreal Cognitive Assessment (MoCA)\n",
+      "text_sha256": "978d3949d9557cae3f14b4b510cb9373883313413ce8cd3ddf288fa6dd8ccb6f"
+    },
+    {
+      "bbox": [
+        48.25,
+        549.7906494140625,
+        524.4198608398438,
+        567.5250244140625
+      ],
+      "block_id": "page-1161-block-0003",
+      "order": 3,
+      "text": "Source : Nasreddine, Z. S. & al. (2005). « The Montreal Cognitive Assessment (MoCA) : A brief screening tool for mild cognitive impairment », J American Geriatrics\nSociety, 53(4), p. 695-699.\n",
+      "text_sha256": "8090e0616031088717baf400be237199b6d13b10b1a45e835d3e1204fcc7c127"
+    }
+  ],
+  "coordinates_sha256": "9888e59db687829a9384199d9c09accc3331eff82ebbf0155724bd36fa26264e",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1161",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "F24\nFigures supplémentaires\nFIGURE 44 Montreal Cognitive Assessment (MoCA)\nSource : Nasreddine, Z. S. & al. (2005). « The Montreal Cognitive Assessment (MoCA) : A brief screening tool for mild cognitive impairment », J American Geriatrics\nSociety, 53(4), p. 695-699.\n",
+  "raw_text_sha256": "1415c2a2d049a2b03c3acfd158a1489d54c558da2c4165b28c9b357efbc671eb",
+  "source_page_display": 1162,
+  "source_page_index": 1161
+}

@@ -1,0 +1,184 @@
+{
+  "block_sequence_sha256": "c0b265eabdae637c8b136b0540034bb9749caa86dfe490c78c273abe1f94043c",
+  "blocks": [
+    {
+      "bbox": [
+        341.95001220703125,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0028-block-0001",
+      "order": 1,
+      "text": "Chapitre 1\nPsychiatrie bio-psycho-sociale\n11\n",
+      "text_sha256": "2acc688693b00b737338c0fa00dda6dc93cf29cf4bd23de2b336a8c1dec6f300"
+    },
+    {
+      "bbox": [
+        312.0,
+        40.9658203125,
+        555.4296875,
+        341.8584899902344
+      ],
+      "block_id": "page-0028-block-0002",
+      "order": 2,
+      "text": "En 1952, de ce côté de l’Atlantique, l’American Psychiatric\nAssociation (APA) publie son premier Diagnostic and Statistical\nManual of Mental Disorders, le DSM-I, qui dévie très fortement des\nclassications européennes. Après la guerre de 1939-1945, la psy-\nchiatrie ne met plus l’accent sur l’asile comme lieu de traitement, et\nles psychiatres américains sont préoccupés par l’évaluation\net le traitement des soldats et des anciens combattants chez\nqui on diagnostique un « épuisement au combat ». Un comité,\nprésidé par George Raines, s’inspire d’Adolf Meyer (fondateur\nde l’école psychobiologique de psychiatrie) qui percevait la psy-\nchopathologie comme une réaction d’une personne en réponse\nà un état émotionnel provoqué par les circonstances de la vie. Il\ns’agit donc d’une réaction de la personnalité à des facteurs bio-\nlogiques, psychologiques et sociaux. À cette époque, Freud et sa\nthéorie psychanalytique exerçaient aussi une grande inuence\nsur la mentalité des psychiatres américains. Pour créer le DSM-I,\nRaines dresse une liste de 106 maladies mentales, divisées en trois\ngrandes classes (psychoses, névroses et troubles du caractère),\ndont plusieurs sont considérées comme une réaction inadaptée à\nl’environnement chez une personne ayant une fragilité psychique\nspécique. C’est ainsi qu’on porte un diagnostic de réaction schi-\nzophrénique, de réaction maniaque, de réaction psychonévrotique,\netc. Les grandes catégories diagnostiques du DSM-I sont :\n1. Troubles causés ou associés à une altération fonctionnelle du\ntissu cérébral :\naiguë (infection, intoxication, hallucinose, delirium,\n",
+      "text_sha256": "d794faec136a98f5a5899569ce8678e724d5795ebde3b405fa4ae08dcab5c162"
+    },
+    {
+      "bbox": [
+        324.0500183105469,
+        342.91583251953125,
+        555.0675659179688,
+        378.45849609375
+      ],
+      "block_id": "page-0028-block-0003",
+      "order": 3,
+      "text": "trauma, vasculaire, convulsions, trouble métabolique,\nnéoplasie) ;\nchronique (congénital, mongolisme, syphilis, empoi-\n",
+      "text_sha256": "d33fd9a07a4b72b036f6ead6bdddba4c9d4c6f9f0e2e29758b64d3948d932a19"
+    },
+    {
+      "bbox": [
+        312.0,
+        379.5158386230469,
+        555.0437622070312,
+        453.65850830078125
+      ],
+      "block_id": "page-0028-block-0004",
+      "order": 4,
+      "text": "sonnement, trauma, artériosclérose, épilepsie, trouble\nmétabolique, chorée, démence) ;\n2. Décience mentale, légère, modérée, grave ;\n3. Troubles d’origine psychogénique, ou sans cause physique\nclairement dénie, ou sans changement structural du cerveau :\ntroubles psychotiques (réaction maniaque, dépressive,\n",
+      "text_sha256": "7abeaa991aa6801328cfa797109f23b3c375ccbca656810def81ec9025f88ad6"
+    },
+    {
+      "bbox": [
+        324.0500183105469,
+        454.7158203125,
+        555.0845947265625,
+        478.7585144042969
+      ],
+      "block_id": "page-0028-block-0005",
+      "order": 5,
+      "text": "involutionnelle, schizophrénique, paranoïde) ;\ntroubles psychophysiologiques autonomiques et viscéraux\n",
+      "text_sha256": "d3cbf706f0370f2541fff85c7aa112b4027ffdff1cfabe24632564c139d2c61e"
+    },
+    {
+      "bbox": [
+        324.0500183105469,
+        479.8158264160156,
+        555.2448120117188,
+        503.8085021972656
+      ],
+      "block_id": "page-0028-block-0006",
+      "order": 6,
+      "text": "(maladies psychosomatiques) ;\ntroubles psychonévrotiques (réaction anxieuse, dissociative,\n",
+      "text_sha256": "64969c59eeb24b04f120dcb86c840bf61865937356aae3426af69232dc553da1"
+    },
+    {
+      "bbox": [
+        324.0500183105469,
+        504.8658447265625,
+        555.0675659179688,
+        528.9085083007812
+      ],
+      "block_id": "page-0028-block-0007",
+      "order": 7,
+      "text": "phobique, obsessionnelle-compulsive, dépressive) ;\ntroubles de la personnalité (inadéquate, schizoïde, cyclothy-\n",
+      "text_sha256": "05caaa3a2934224a9718db2209ec6499d8ae1920099cfecc3d85bfd8c5f62d41"
+    },
+    {
+      "bbox": [
+        324.0500183105469,
+        529.9158325195312,
+        555.2177124023438,
+        588.5585327148438
+      ],
+      "block_id": "page-0028-block-0008",
+      "order": 8,
+      "text": "mique, paranoïde, passive-agressive, émotionnellement\ninstable, compulsive, antisociale, dyssociale, déviation\nsexuelle, dépendance à l’alcool, aux drogues, troubles du\nlangage, énurésie, somnambulisme) ;\ntroubles situationnels transitoires (réaction d’adaptation,\n",
+      "text_sha256": "8dd62b5a66fc00244c1b7fb090770a923e95ee4baf947c8011ab7de8504d4e35"
+    },
+    {
+      "bbox": [
+        312.0,
+        589.6158447265625,
+        555.4236450195312,
+        717.45849609375
+      ],
+      "block_id": "page-0028-block-0009",
+      "order": 9,
+      "text": "réaction au stress).\nMalgré tout, à cette époque, beaucoup de psychiatres\ncommencent à se rendre compte qu’il n’existe pas de langage com-\nmun quant aux diagnostics psychiatriques. Ces diagnostics\nvarient beaucoup, non seulement d’un pays à l’autre, mais aussi\nd’un psychiatre à l’autre, suivant le lieu de sa formation et ses\nconceptions théoriques. Par exemple, à l’issue du visionnement\nd’une même vidéo d’une entrevue psychiatrique, une majorité\nde psychiatres britanniques diagnostiquaient un trouble aectif,\ntandis que les psychiatres américains concluaient à une réaction\nschizophrénique (Gurland & al., 1969). D’ailleurs, de nombreux\n",
+      "text_sha256": "b0fd59e62300ac2daea71e95844bc0dc0bc77062ed5398a8cfa4f7e5552051fe"
+    },
+    {
+      "bbox": [
+        54.0,
+        39.22441482543945,
+        297.2584533691406,
+        232.7584991455078
+      ],
+      "block_id": "page-0028-block-0010",
+      "order": 10,
+      "text": "• accès à l’autonomie socio-économique des femmes (p. ex.,\namélioration de l’accès à l’éducation et dispositifs de\nmicrocrédit – attribution de prêts de faible montant à des\nentrepreneurs ou à des artisans qui ne peuvent accéder aux\nprêts bancaires classiques) ;\n• programmes à l’intention des groupes vulnérables, notamment\nles familles monoparentales, les minorités, les populations\nautochtones, les migrants et les victimes de conits ou de\nsinistres (p. ex., interventions psychosociales au lendemain\nde catastrophes) ;\n• programmes de prévention de la violence (p. ex., initiatives\nde surveillance de quartier, programmes de résolution de\nconits à l’école, lutte contre l’intimidation) ;\n• accompagnement social des personnes âgées (p. ex., initiatives\nvisant à favoriser les contacts amicaux, centres communau-\ntaires de jour pour les aînés).\n",
+      "text_sha256": "0a10a9015596bdbc2730b10240a51fc5decd220859d02c14fa66e31ee4100baf"
+    },
+    {
+      "bbox": [
+        65.80000305175781,
+        253.2431640625,
+        274.8168640136719,
+        290.36895751953125
+      ],
+      "block_id": "page-0028-block-0011",
+      "order": 11,
+      "text": "1.4\nNosographie des maladies\nmentales\n",
+      "text_sha256": "8c8b660aea44d23dc28d4bfb9af13524e3db5fde912db8779a11d98a92086da4"
+    },
+    {
+      "bbox": [
+        54.0,
+        304.3658142089844,
+        297.4029846191406,
+        396.70849609375
+      ],
+      "block_id": "page-0028-block-0012",
+      "order": 12,
+      "text": "Les nosographies reètent un besoin fondamentalement humain\nde classer, de nommer. À travers les âges, on a employé diérents\ntermes pour désigner les personnes atteintes d’un trouble mental,\nreets de la compréhension de leur époque : les possédés, les\nfous, les insensés, les aliénés, etc. Même aujourd’hui, on parle\nde malade, de patient, de bénéciaire, d’usager, de client, spéci-\nant ainsi une connotation variable de la personne qui consulte\nen psychiatrie.\n",
+      "text_sha256": "4f3603c68f02beb4a17d89b7319222dfce68b9a9bda7ffcb286921733e9b4df5"
+    },
+    {
+      "bbox": [
+        54.0,
+        408.43682861328125,
+        143.39071655273438,
+        424.57940673828125
+      ],
+      "block_id": "page-0028-block-0013",
+      "order": 13,
+      "text": "1.4.1 Historique\n",
+      "text_sha256": "9f8edb674df0d5a0cbf505ec70987b681094e940cb6bdf019abc4e20bfabdccd"
+    },
+    {
+      "bbox": [
+        54.0,
+        428.0658264160156,
+        297.1939392089844,
+        717.45849609375
+      ],
+      "block_id": "page-0028-block-0014",
+      "order": 14,
+      "text": "Malgré que, depuis Hippocrate, il ait existé de nombreuses noso-\ngraphies des troubles mentaux, les classications telles qu’elles\nsont aujourd’hui ont un passé assez récent. En 1893, l’Institut\ninternational de statistiques, à Paris, adopte une nomenclature\ninternationale des causes de décès (classication de Bertillon) qui\nne fait alors pas mention des troubles mentaux. Ce n’est qu’en\n1938 que cette nomenclature — qui deviendra ultérieurement,\nsous la direction de l’OMS, la Classication internationale\ndes maladies (CIM) — reconnaît cinq diagnostics psychia-\ntriques classés sous la rubrique « maladies du système nerveux\net des organes des sens » :\n• la paralysie générale (démence causée par la syphilis) ;\n• le retard (décience) mental ;\n• la schizophrénie (démence précoce) ;\n• la psychose maniaco-dépressive ;\n• les autres troubles mentaux.\nEn 1948, dans la CIM-6, non seulement la nomenclature des\ntroubles mentaux est-elle étendue, mais encore les maladies\nmentales – qu’on distingue désormais des maladies du système\nnerveux et des organes des sens – passent dans une rubrique\nautonome. Cette évolution, qui se cristallise dans la CIM-7,\npubliée en 1955, témoigne de la place grandissante qu’occupe\nla psychiatrie à l’intérieur de la médecine après la Seconde\nGuerre mondiale.\n",
+      "text_sha256": "a58070148bede45163268a9a71c8b9de86ccd2af2f4057b74690247cc9a6b614"
+    }
+  ],
+  "coordinates_sha256": "eaa8e61d38e0d967b688144dced730cd9e5dcdc933a9f29d1d3de9d9fe500f11",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0028",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 1\nPsychiatrie bio-psycho-sociale\n11\nEn 1952, de ce côté de l’Atlantique, l’American Psychiatric\nAssociation (APA) publie son premier Diagnostic and Statistical\nManual of Mental Disorders, le DSM-I, qui dévie très fortement des\nclassications européennes. Après la guerre de 1939-1945, la psy-\nchiatrie ne met plus l’accent sur l’asile comme lieu de traitement, et\nles psychiatres américains sont préoccupés par l’évaluation\net le traitement des soldats et des anciens combattants chez\nqui on diagnostique un « épuisement au combat ». Un comité,\nprésidé par George Raines, s’inspire d’Adolf Meyer (fondateur\nde l’école psychobiologique de psychiatrie) qui percevait la psy-\nchopathologie comme une réaction d’une personne en réponse\nà un état émotionnel provoqué par les circonstances de la vie. Il\ns’agit donc d’une réaction de la personnalité à des facteurs bio-\nlogiques, psychologiques et sociaux. À cette époque, Freud et sa\nthéorie psychanalytique exerçaient aussi une grande inuence\nsur la mentalité des psychiatres américains. Pour créer le DSM-I,\nRaines dresse une liste de 106 maladies mentales, divisées en trois\ngrandes classes (psychoses, névroses et troubles du caractère),\ndont plusieurs sont considérées comme une réaction inadaptée à\nl’environnement chez une personne ayant une fragilité psychique\nspécique. C’est ainsi qu’on porte un diagnostic de réaction schi-\nzophrénique, de réaction maniaque, de réaction psychonévrotique,\netc. Les grandes catégories diagnostiques du DSM-I sont :\n1. Troubles causés ou associés à une altération fonctionnelle du\ntissu cérébral :\naiguë (infection, intoxication, hallucinose, delirium,\ntrauma, vasculaire, convulsions, trouble métabolique,\nnéoplasie) ;\nchronique (congénital, mongolisme, syphilis, empoi-\nsonnement, trauma, artériosclérose, épilepsie, trouble\nmétabolique, chorée, démence) ;\n2. Décience mentale, légère, modérée, grave ;\n3. Troubles d’origine psychogénique, ou sans cause physique\nclairement dénie, ou sans changement structural du cerveau :\ntroubles psychotiques (réaction maniaque, dépressive,\ninvolutionnelle, schizophrénique, paranoïde) ;\ntroubles psychophysiologiques autonomiques et viscéraux\n(maladies psychosomatiques) ;\ntroubles psychonévrotiques (réaction anxieuse, dissociative,\nphobique, obsessionnelle-compulsive, dépressive) ;\ntroubles de la personnalité (inadéquate, schizoïde, cyclothy-\nmique, paranoïde, passive-agressive, émotionnellement\ninstable, compulsive, antisociale, dyssociale, déviation\nsexuelle, dépendance à l’alcool, aux drogues, troubles du\nlangage, énurésie, somnambulisme) ;\ntroubles situationnels transitoires (réaction d’adaptation,\nréaction au stress).\nMalgré tout, à cette époque, beaucoup de psychiatres\ncommencent à se rendre compte qu’il n’existe pas de langage com-\nmun quant aux diagnostics psychiatriques. Ces diagnostics\nvarient beaucoup, non seulement d’un pays à l’autre, mais aussi\nd’un psychiatre à l’autre, suivant le lieu de sa formation et ses\nconceptions théoriques. Par exemple, à l’issue du visionnement\nd’une même vidéo d’une entrevue psychiatrique, une majorité\nde psychiatres britanniques diagnostiquaient un trouble aectif,\ntandis que les psychiatres américains concluaient à une réaction\nschizophrénique (Gurland & al., 1969). D’ailleurs, de nombreux\n• accès à l’autonomie socio-économique des femmes (p. ex.,\namélioration de l’accès à l’éducation et dispositifs de\nmicrocrédit – attribution de prêts de faible montant à des\nentrepreneurs ou à des artisans qui ne peuvent accéder aux\nprêts bancaires classiques) ;\n• programmes à l’intention des groupes vulnérables, notamment\nles familles monoparentales, les minorités, les populations\nautochtones, les migrants et les victimes de conits ou de\nsinistres (p. ex., interventions psychosociales au lendemain\nde catastrophes) ;\n• programmes de prévention de la violence (p. ex., initiatives\nde surveillance de quartier, programmes de résolution de\nconits à l’école, lutte contre l’intimidation) ;\n• accompagnement social des personnes âgées (p. ex., initiatives\nvisant à favoriser les contacts amicaux, centres communau-\ntaires de jour pour les aînés).\n1.4\nNosographie des maladies\nmentales\nLes nosographies reètent un besoin fondamentalement humain\nde classer, de nommer. À travers les âges, on a employé diérents\ntermes pour désigner les personnes atteintes d’un trouble mental,\nreets de la compréhension de leur époque : les possédés, les\nfous, les insensés, les aliénés, etc. Même aujourd’hui, on parle\nde malade, de patient, de bénéciaire, d’usager, de client, spéci-\nant ainsi une connotation variable de la personne qui consulte\nen psychiatrie.\n1.4.1 Historique\nMalgré que, depuis Hippocrate, il ait existé de nombreuses noso-\ngraphies des troubles mentaux, les classications telles qu’elles\nsont aujourd’hui ont un passé assez récent. En 1893, l’Institut\ninternational de statistiques, à Paris, adopte une nomenclature\ninternationale des causes de décès (classication de Bertillon) qui\nne fait alors pas mention des troubles mentaux. Ce n’est qu’en\n1938 que cette nomenclature — qui deviendra ultérieurement,\nsous la direction de l’OMS, la Classication internationale\ndes maladies (CIM) — reconnaît cinq diagnostics psychia-\ntriques classés sous la rubrique « maladies du système nerveux\net des organes des sens » :\n• la paralysie générale (démence causée par la syphilis) ;\n• le retard (décience) mental ;\n• la schizophrénie (démence précoce) ;\n• la psychose maniaco-dépressive ;\n• les autres troubles mentaux.\nEn 1948, dans la CIM-6, non seulement la nomenclature des\ntroubles mentaux est-elle étendue, mais encore les maladies\nmentales – qu’on distingue désormais des maladies du système\nnerveux et des organes des sens – passent dans une rubrique\nautonome. Cette évolution, qui se cristallise dans la CIM-7,\npubliée en 1955, témoigne de la place grandissante qu’occupe\nla psychiatrie à l’intérieur de la médecine après la Seconde\nGuerre mondiale.\n",
+  "raw_text_sha256": "0f6e5a314e0812c1b996ab2161122766cd9de5ae8ccd963f160fcd3f60526d1d",
+  "source_page_display": 29,
+  "source_page_index": 28
+}

@@ -1,0 +1,400 @@
+{
+  "block_sequence_sha256": "8c65b356dc65816ac30f273d7f913ec9e79282923fafb70038432852455083a7",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0617-block-0001",
+      "order": 1,
+      "text": "600\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "ac220b5e696e35f15120707171f088e14c3c64e2faf0ad8898f0b15b1e69cd2a"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.72441482543945,
+        549.3060913085938,
+        258.90850830078125
+      ],
+      "block_id": "page-0617-block-0002",
+      "order": 2,
+      "text": "• Activités de la vie quotidienne (AVQ) : s’alimenter, s’habiller,\nse déplacer, s’occuper de son hygiène et être continent ;\n• Activités de la vie domestique (AVD) : l’entretien ménager,\ndes vêtements et de la propriété, la préparation des repas,\nla planication du budget, des achats et l’établissement de\nl’horaire quotidien.\nL’entrevue avec un proche aborde huit thèmes :\n• les problèmes de jugement ;\n• la diminution d’intérêt pour les activités et les passe-temps ;\n• la répétition de questions, d’histoires, de phrases ;\n• une diculté à apprendre comment utiliser un outil ou un appareil ;\n• oublier le mois ou l’année ;\n• une diculté à payer les comptes ou les taxes ;\n• une diculté à se rappeler les rendez-vous ;\n• des problèmes consistants de la mémoire ou de la pensée.\nEn présence de trois réponses positives ou plus, la sensibilité\nest de 90 % et la spécicité de 68 % (Lipton & Rubin, 2009).\n",
+      "text_sha256": "61af90c705e952411e0fdaffd3f6976e2b9be9d5171c544f2012499bcdc22d5c"
+    },
+    {
+      "bbox": [
+        306.0,
+        259.91583251953125,
+        549.2220458984375,
+        304.90850830078125
+      ],
+      "block_id": "page-0617-block-0003",
+      "order": 3,
+      "text": "Bien qu’il s’avère essentiel de procéder à un examen physique\ncomplet, incluant un examen neurologique, un examen de l’état\nmental et des tests de laboratoire appropriés (voir le tableau 27.9), le\ndiagnostic de la démence demeure avant tout un diagnostic clinique.\n",
+      "text_sha256": "09839687f72165f892420b8f02d7ff1e00278aefb9f58c653059fd7b18ee0f2d"
+    },
+    {
+      "bbox": [
+        306.0,
+        315.43682861328125,
+        460.3822021484375,
+        331.57940673828125
+      ],
+      "block_id": "page-0617-block-0004",
+      "order": 4,
+      "text": "27.2.6 Outils diagnostiques\n",
+      "text_sha256": "33af01ea0ecc0d352d22156a3a20f578eb07d57a5c7644b187925d9fbded6976"
+    },
+    {
+      "bbox": [
+        306.0,
+        334.91583251953125,
+        549.0670166015625,
+        356.90850830078125
+      ],
+      "block_id": "page-0617-block-0005",
+      "order": 5,
+      "text": "Le Mini-Mental State Examination (MMSE) est le test le plus\nutilisé cliniquement (sensibilité de 87 % et spécicité de 82 %)\n",
+      "text_sha256": "116d769acee8499584cd4be2c40538582eec51a51e911376ee897df173cdff5e"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.72441482543945,
+        291.3002624511719,
+        137.4084930419922
+      ],
+      "block_id": "page-0617-block-0006",
+      "order": 6,
+      "text": "• l’intoxication ou le sevrage de l’alcool, si les symptômes persistent\nau-delà de la durée habituelle de l’intoxication ou du sevrage ;\n• des substances toxiques : plomb, mercure, monoxyde de\ncarbone, insecticides organophosphorés et solvants volatils\n(p. ex., toluène dans la colle) et industriels.\nLa plupart des malades ont fait par le passé un usage intense\nde la substance ou du médicament en cause ou ils y ont été\nexposés de façon prolongée.\n",
+      "text_sha256": "8f0e4b8b4bc36807f2965f6d4fe4a3e578c7ce6fae8790082b8c62308b2974c0"
+    },
+    {
+      "bbox": [
+        48.0,
+        138.4158172607422,
+        291.5538330078125,
+        183.4084930419922
+      ],
+      "block_id": "page-0617-block-0007",
+      "order": 7,
+      "text": "Ces troubles débutent insidieusement, rarement avant l’âge de\n20 ans, et l’évolution est lente. Les décits sont habituellement\npermanents et peuvent s’aggraver même après avoir cessé tout\ncontact avec la substance.\n",
+      "text_sha256": "548006c20eb63ecc1c188a55ecdb9c358c58f03d5e6e05e290df33dca1813bc6"
+    },
+    {
+      "bbox": [
+        48.0,
+        184.4158172607422,
+        290.6850280761719,
+        217.9084930419922
+      ],
+      "block_id": "page-0617-block-0008",
+      "order": 8,
+      "text": "Le DSM-5 vient d’élaborer des critères spéciques pour le\ntrouble neurocognitif majeur induit par une substance ou un\nmédicament (voir l’encadré 27.11).\n",
+      "text_sha256": "9783cc2a75505474b421b6fd16eebf0e4d5bc9c438605fe978b97519213da368"
+    },
+    {
+      "bbox": [
+        48.0,
+        226.7830047607422,
+        291.5060119628906,
+        309.90850830078125
+      ],
+      "block_id": "page-0617-block-0009",
+      "order": 9,
+      "text": "Démence due à des étiologies multiples\nCette forme de démence est abordée simplement pour attirer\nl’attention des médecins sur la fréquence des démences ayant\nplusieurs étiologies. Le terme « démence non spéciée » est utilisé\nlorsqu’une démence ne répond aux critères d’aucun des types\nspéciques de démence décrits plus haut ou lorsqu’on manque\nd’arguments en faveur d’une étiologie spécique.\n",
+      "text_sha256": "bd5ba2ab5e620dc8d1c291bf5c4609a991cc2c3bab223dc762d1343c7b9f7032"
+    },
+    {
+      "bbox": [
+        48.0,
+        318.43682861328125,
+        147.45030212402344,
+        334.57940673828125
+      ],
+      "block_id": "page-0617-block-0010",
+      "order": 10,
+      "text": "27.2.5 Évaluation\n",
+      "text_sha256": "5107723587935c4b392fe9c7b6e4bf97de57d0613a5f418ee931c31189652ea7"
+    },
+    {
+      "bbox": [
+        48.0,
+        337.91583251953125,
+        291.2245788574219,
+        394.40850830078125
+      ],
+      "block_id": "page-0617-block-0011",
+      "order": 11,
+      "text": "La plupart des patients atteints de démence ne se plaignent pas\nde leur trouble de mémoire. La perte de mémoire rapportée par\nun proche est un prédicteur de présence d’une démence ou de\nson développement futur. La revue des activités fait partie du\nprocessus d’évaluation :\n",
+      "text_sha256": "212c61a7fcb0df9d918214a4e8dee741512069c3db02ee69f25dcc4d2c7d4ab8"
+    },
+    {
+      "bbox": [
+        50.5,
+        411.2522888183594,
+        249.72801208496094,
+        423.570068359375
+      ],
+      "block_id": "page-0617-block-0012",
+      "order": 12,
+      "text": "ENCADRÉ 27.11 Critères diagnostiques du trouble\n",
+      "text_sha256": "4eaf4c4b5bf7db173eadfe11c3d55fc539511ed2c76cb7ef1531f9f2e31b78ef"
+    },
+    {
+      "bbox": [
+        112.25,
+        423.102294921875,
+        274.87139892578125,
+        446.570068359375
+      ],
+      "block_id": "page-0617-block-0013",
+      "order": 13,
+      "text": "neurocognitif induit par une substance/\nun médicament\n",
+      "text_sha256": "dc5d5ad3793238858a8bceabe169156be5e2e0490b7c74249e4942ce653e534d"
+    },
+    {
+      "bbox": [
+        59.400001525878906,
+        454.62286376953125,
+        279.7044982910156,
+        475.64239501953125
+      ],
+      "block_id": "page-0617-block-0014",
+      "order": 14,
+      "text": "DSM-5\nTrouble neurocognitif majeur ou léger induit par une substance/\n",
+      "text_sha256": "f356abecf248bfe1ba5161c5851cc7cef0e16762feab75808002b040840a23f2"
+    },
+    {
+      "bbox": [
+        142.60000610351562,
+        475.62286376953125,
+        196.48301696777344,
+        485.64239501953125
+      ],
+      "block_id": "page-0617-block-0015",
+      "order": 15,
+      "text": "un médicament\n",
+      "text_sha256": "5a1bc5bc9901c2fa08dd07ec953006614dac1d3adbf42d05bebdf11fc8e753a5"
+    },
+    {
+      "bbox": [
+        52.25,
+        490.70196533203125,
+        274.9244079589844,
+        500.52813720703125
+      ],
+      "block_id": "page-0617-block-0016",
+      "order": 16,
+      "text": "A. Les critères d’un trouble neurocognitif majeur ou léger sont remplis\n",
+      "text_sha256": "b5474f64b4a7c23740ae0f21b745517d4b7c26d07ddbf356d3f4ea3c3f253a8e"
+    },
+    {
+      "bbox": [
+        60.75,
+        500.70196533203125,
+        127.3080062866211,
+        510.52813720703125
+      ],
+      "block_id": "page-0617-block-0017",
+      "order": 17,
+      "text": "(voir l’encadré 27.1).\n",
+      "text_sha256": "cf14f362759e0da88c62f5bbd93725e9e002b1ee4de2d635a64f644d0f5235a9"
+    },
+    {
+      "bbox": [
+        52.25,
+        518.1019897460938,
+        278.81689453125,
+        527.9281616210938
+      ],
+      "block_id": "page-0617-block-0018",
+      "order": 18,
+      "text": "B. Les altérations cognitives ne surviennent pas exclusivement pendant\n",
+      "text_sha256": "07a4aa27f26de262f43cc58b993e791452dfba7f78fdb1af05eee032677548c0"
+    },
+    {
+      "bbox": [
+        60.75,
+        528.1019897460938,
+        273.7209777832031,
+        547.9281616210938
+      ],
+      "block_id": "page-0617-block-0019",
+      "order": 19,
+      "text": "une phase d’état confusionnel (delirium) et persistent au-delà de la\ndurée habituelle de l’intoxication ou du sevrage aigu.\n",
+      "text_sha256": "7a5775988822ce74763618753bedc0f5c3636d8a23734c8b37734cc301ab5060"
+    },
+    {
+      "bbox": [
+        52.25,
+        555.5519409179688,
+        260.25848388671875,
+        565.3781127929688
+      ],
+      "block_id": "page-0617-block-0020",
+      "order": 20,
+      "text": "C. La substance ou le médicament impliqué, ainsi que la durée et\n",
+      "text_sha256": "9074f558ae067e2ec770e621edb56a42917b4e1cb5ee2cda1c3669c81cd30a52"
+    },
+    {
+      "bbox": [
+        60.900001525878906,
+        565.5519409179688,
+        267.8699645996094,
+        585.3781127929688
+      ],
+      "block_id": "page-0617-block-0021",
+      "order": 21,
+      "text": "l’importance de leur usage, sont capables de produire l’altération\nneurocognitive.\n",
+      "text_sha256": "5d04c40b6880c0c115279e704183951f59655c9f0787b61d78840c5526060b09"
+    },
+    {
+      "bbox": [
+        52.25,
+        592.9519653320312,
+        271.4956970214844,
+        602.7781372070312
+      ],
+      "block_id": "page-0617-block-0022",
+      "order": 22,
+      "text": "D. L’évolution temporelle des décits neurocognitifs concorde avec la\n",
+      "text_sha256": "1704dcfc72fbe3a0c0528b592d306424248131f1a39e9ce728bbaba161861763"
+    },
+    {
+      "bbox": [
+        61.04999923706055,
+        602.9519653320312,
+        278.1860656738281,
+        632.7781372070312
+      ],
+      "block_id": "page-0617-block-0023",
+      "order": 23,
+      "text": "période d’usage et d’abstinence de la substance ou du médicament\n(p. ex., les décits restent stables ou s’améliorent après une période\nd’abstinence).\n",
+      "text_sha256": "9c3a93acbffb760283d8ad8a74885b5444d3ae846d65d9dd7dc87c6d0bf3f2b8"
+    },
+    {
+      "bbox": [
+        52.25,
+        640.4019775390625,
+        280.9748840332031,
+        650.2281494140625
+      ],
+      "block_id": "page-0617-block-0024",
+      "order": 24,
+      "text": "E. Le trouble cognitif n’est pas imputable à une autre affection médicale\n",
+      "text_sha256": "69e717b9b6329d10ae5af2e4ec5557b293478e7c2e4fbb6c1e3a737505a9f283"
+    },
+    {
+      "bbox": [
+        60.25,
+        650.4019775390625,
+        240.4970703125,
+        660.2281494140625
+      ],
+      "block_id": "page-0617-block-0025",
+      "order": 25,
+      "text": "ou n’est pas mieux expliqué par un autre trouble mental.\n",
+      "text_sha256": "4c9517a16fa22f6c3899127b59bcca7bb6fb5f18fa561be6d9ada2599a044aa6"
+    },
+    {
+      "bbox": [
+        48.25,
+        667.9203491210938,
+        288.60601806640625,
+        724.7250366210938
+      ],
+      "block_id": "page-0617-block-0026",
+      "order": 26,
+      "text": "Source: APA (2015), p. 740-741.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic\nand Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles\nMentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson\nSAS, Paris, 2015. All rights reserved.\n",
+      "text_sha256": "6c7fb8d19268c0c9025c1adaae497e9ae5664f41ff36795d406345531b105137"
+    },
+    {
+      "bbox": [
+        342.25,
+        399.3241271972656,
+        528.1735229492188,
+        409.9002990722656
+      ],
+      "block_id": "page-0617-block-0027",
+      "order": 27,
+      "text": "Bilan de base\nBilan complémentaire\n",
+      "text_sha256": "839b7840384db9d584857a9ea7bf8de5f550735d1bac1c08fd52c10191d29a6b"
+    },
+    {
+      "bbox": [
+        310.25,
+        414.251953125,
+        408.0057067871094,
+        576.078125
+      ],
+      "block_id": "page-0617-block-0028",
+      "order": 28,
+      "text": "Histoire et examen physique\nExamen neurologique\nExamen mental\nÉlectrolytes*, calcémie*\nGlycémie à jeun*\nUrée, créatinine\nFormule sanguine complète*\net différentielle\nTests de fonction thyroïdienne*\nVitamine B12*, acide folique\nBilan lipidique\nHomocystéinémie\nSérologie pour la syphilis\nTomodensitométrie ou IRM\ndu cerveau\n",
+      "text_sha256": "74e698d99aaeca78b14a93fb18699c1f13d59b9bcb3ca5cb0f97f7033ada5e7f"
+    },
+    {
+      "bbox": [
+        431.5,
+        414.251953125,
+        537.0704345703125,
+        683.078125
+      ],
+      "block_id": "page-0617-block-0029",
+      "order": 29,
+      "text": "Évaluation neuropsychologique\nMagnésium\nAmmoniaque\nVitesse de sédimentation\nTests de fonction hépatique\nTests urinaires (analyse d’urine,\nrecherche de cuivre, métaux\nlourds et porphyrines, recherche\ntoxicologique)\nDosage sérique de médicaments\nCéruloplasmine\nAcide méthylmalonique\nAnticorps paranéoplasiques\nAnticorps antinucléaires\nBilan vasculitique\nVIH\nDépistage de la maladie de Lyme\nÉtudes d’ADN (préséniline 1,\npeptide amyloïde, répétitions de\nla séquence CAG, prol ataxique)\nPonction lombaire\nEEG\nCisternographie\nArtériographie cérébrale\nSPECT, TEP\n",
+      "text_sha256": "83b4807f9048fa75a4a8be0eda233a51471e164a9a4db388dd94f68d7303ec06"
+    },
+    {
+      "bbox": [
+        308.3000183105469,
+        379.7023010253906,
+        458.9195251464844,
+        392.7200622558594
+      ],
+      "block_id": "page-0617-block-0030",
+      "order": 30,
+      "text": "TABLEAU 27.9 Bilan dans la démence\n",
+      "text_sha256": "d9a29e4744e7e966ca0300db9dedff71b6e84e1a26c10b0067af59b7a8a919a8"
+    },
+    {
+      "bbox": [
+        306.0,
+        690.9462890625,
+        541.3187255859375,
+        709.7265625
+      ],
+      "block_id": "page-0617-block-0031",
+      "order": 31,
+      "text": "* Tests recommandés selon la Troisième conférence canadienne de consensus\nsur le diagnostic et le traitement de la démence (2007), p. 1-28.\n",
+      "text_sha256": "3e29048eaddecf7c78c835b3d5cbfd3acdb1bd4ffc9b96800de26a1626d8a38b"
+    },
+    {
+      "bbox": [
+        306.0,
+        715.890625,
+        454.5965270996094,
+        724.7588500976562
+      ],
+      "block_id": "page-0617-block-0032",
+      "order": 32,
+      "text": "Source : Adapté de Lipton & Rubin (2009), p. 71-83.\n",
+      "text_sha256": "a384caa2169158db5754057c0c7e59a94af259431fecdf3c2dbd9fa29a94b2b2"
+    }
+  ],
+  "coordinates_sha256": "5f28082637030697a66422eac1f4bfe46b84e56b5656d55831d7ffb8beb14ea6",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0617",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "600\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n• Activités de la vie quotidienne (AVQ) : s’alimenter, s’habiller,\nse déplacer, s’occuper de son hygiène et être continent ;\n• Activités de la vie domestique (AVD) : l’entretien ménager,\ndes vêtements et de la propriété, la préparation des repas,\nla planication du budget, des achats et l’établissement de\nl’horaire quotidien.\nL’entrevue avec un proche aborde huit thèmes :\n• les problèmes de jugement ;\n• la diminution d’intérêt pour les activités et les passe-temps ;\n• la répétition de questions, d’histoires, de phrases ;\n• une diculté à apprendre comment utiliser un outil ou un appareil ;\n• oublier le mois ou l’année ;\n• une diculté à payer les comptes ou les taxes ;\n• une diculté à se rappeler les rendez-vous ;\n• des problèmes consistants de la mémoire ou de la pensée.\nEn présence de trois réponses positives ou plus, la sensibilité\nest de 90 % et la spécicité de 68 % (Lipton & Rubin, 2009).\nBien qu’il s’avère essentiel de procéder à un examen physique\ncomplet, incluant un examen neurologique, un examen de l’état\nmental et des tests de laboratoire appropriés (voir le tableau 27.9), le\ndiagnostic de la démence demeure avant tout un diagnostic clinique.\n27.2.6 Outils diagnostiques\nLe Mini-Mental State Examination (MMSE) est le test le plus\nutilisé cliniquement (sensibilité de 87 % et spécicité de 82 %)\n• l’intoxication ou le sevrage de l’alcool, si les symptômes persistent\nau-delà de la durée habituelle de l’intoxication ou du sevrage ;\n• des substances toxiques : plomb, mercure, monoxyde de\ncarbone, insecticides organophosphorés et solvants volatils\n(p. ex., toluène dans la colle) et industriels.\nLa plupart des malades ont fait par le passé un usage intense\nde la substance ou du médicament en cause ou ils y ont été\nexposés de façon prolongée.\nCes troubles débutent insidieusement, rarement avant l’âge de\n20 ans, et l’évolution est lente. Les décits sont habituellement\npermanents et peuvent s’aggraver même après avoir cessé tout\ncontact avec la substance.\nLe DSM-5 vient d’élaborer des critères spéciques pour le\ntrouble neurocognitif majeur induit par une substance ou un\nmédicament (voir l’encadré 27.11).\nDémence due à des étiologies multiples\nCette forme de démence est abordée simplement pour attirer\nl’attention des médecins sur la fréquence des démences ayant\nplusieurs étiologies. Le terme « démence non spéciée » est utilisé\nlorsqu’une démence ne répond aux critères d’aucun des types\nspéciques de démence décrits plus haut ou lorsqu’on manque\nd’arguments en faveur d’une étiologie spécique.\n27.2.5 Évaluation\nLa plupart des patients atteints de démence ne se plaignent pas\nde leur trouble de mémoire. La perte de mémoire rapportée par\nun proche est un prédicteur de présence d’une démence ou de\nson développement futur. La revue des activités fait partie du\nprocessus d’évaluation :\nENCADRÉ 27.11 Critères diagnostiques du trouble\nneurocognitif induit par une substance/\nun médicament\nDSM-5\nTrouble neurocognitif majeur ou léger induit par une substance/\nun médicament\nA. Les critères d’un trouble neurocognitif majeur ou léger sont remplis\n(voir l’encadré 27.1).\nB. Les altérations cognitives ne surviennent pas exclusivement pendant\nune phase d’état confusionnel (delirium) et persistent au-delà de la\ndurée habituelle de l’intoxication ou du sevrage aigu.\nC. La substance ou le médicament impliqué, ainsi que la durée et\nl’importance de leur usage, sont capables de produire l’altération\nneurocognitive.\nD. L’évolution temporelle des décits neurocognitifs concorde avec la\npériode d’usage et d’abstinence de la substance ou du médicament\n(p. ex., les décits restent stables ou s’améliorent après une période\nd’abstinence).\nE. Le trouble cognitif n’est pas imputable à une autre affection médicale\nou n’est pas mieux expliqué par un autre trouble mental.\nSource: APA (2015), p. 740-741.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic\nand Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles\nMentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson\nSAS, Paris, 2015. All rights reserved.\nBilan de base\nBilan complémentaire\nHistoire et examen physique\nExamen neurologique\nExamen mental\nÉlectrolytes*, calcémie*\nGlycémie à jeun*\nUrée, créatinine\nFormule sanguine complète*\net différentielle\nTests de fonction thyroïdienne*\nVitamine B12*, acide folique\nBilan lipidique\nHomocystéinémie\nSérologie pour la syphilis\nTomodensitométrie ou IRM\ndu cerveau\nÉvaluation neuropsychologique\nMagnésium\nAmmoniaque\nVitesse de sédimentation\nTests de fonction hépatique\nTests urinaires (analyse d’urine,\nrecherche de cuivre, métaux\nlourds et porphyrines, recherche\ntoxicologique)\nDosage sérique de médicaments\nCéruloplasmine\nAcide méthylmalonique\nAnticorps paranéoplasiques\nAnticorps antinucléaires\nBilan vasculitique\nVIH\nDépistage de la maladie de Lyme\nÉtudes d’ADN (préséniline 1,\npeptide amyloïde, répétitions de\nla séquence CAG, prol ataxique)\nPonction lombaire\nEEG\nCisternographie\nArtériographie cérébrale\nSPECT, TEP\nTABLEAU 27.9 Bilan dans la démence\n* Tests recommandés selon la Troisième conférence canadienne de consensus\nsur le diagnostic et le traitement de la démence (2007), p. 1-28.\nSource : Adapté de Lipton & Rubin (2009), p. 71-83.\n",
+  "raw_text_sha256": "25168733167d43e8fedab6fe822dce32484cf79aa434261e5243403dbdedd234",
+  "source_page_display": 618,
+  "source_page_index": 617
+}

@@ -1,0 +1,340 @@
+{
+  "block_sequence_sha256": "7dd61f691290c56fa157114da5849669c91b67a372ea18fbf679923c036a1102",
+  "blocks": [
+    {
+      "bbox": [
+        374.20001220703125,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0058-block-0001",
+      "order": 1,
+      "text": "Chapitre 3\nExamen psychiatrique\n41\n",
+      "text_sha256": "9f13d7d16a0d9608fcd5026d22985a2c71eb542d9d3efcb74e83be89e635b7ab"
+    },
+    {
+      "bbox": [
+        63.10000228881836,
+        61.22412109375,
+        517.5398559570312,
+        71.80029296875
+      ],
+      "block_id": "page-0058-block-0002",
+      "order": 2,
+      "text": "Techniques\nDénitions\nExemples de commentaires du médecin\n",
+      "text_sha256": "e81df5a1e037e518d89e0343502cda76968bfbd863533d81624b151816aedaa1"
+    },
+    {
+      "bbox": [
+        58.25,
+        79.6019515991211,
+        329.99700927734375,
+        99.4281234741211
+      ],
+      "block_id": "page-0058-block-0003",
+      "order": 3,
+      "text": "Transition\nÉnoncé basé sur des informations recueillies précédemment et uti-\nlisé comme tremplin vers une autre partie de l’histoire à explorer.\n",
+      "text_sha256": "b779ad98e7fc5c598c65aeefb68b363b3172d3056f4d8300393df20335b96911"
+    },
+    {
+      "bbox": [
+        338.0,
+        79.6019515991211,
+        545.4739379882812,
+        120.4281234741211
+      ],
+      "block_id": "page-0058-block-0004",
+      "order": 4,
+      "text": "« Vous avez mentionné à quel point vous vous sentiez désespéré ;\nest-ce que cela vous a amené à penser à la mort ? »\n« Vous avez parlé du climat à la maison durant votre enfance. À\nl’école, comment ça se passait ? »\n",
+      "text_sha256": "9d272156960d503457834072a5815b02d227d7e29ba61818bd432f8416171537"
+    },
+    {
+      "bbox": [
+        58.25,
+        127.80195617675781,
+        316.3083801269531,
+        167.6281280517578
+      ],
+      "block_id": "page-0058-block-0005",
+      "order": 5,
+      "text": "Clarication\nDemande de précision sur les circonstances entourant une\nsituation ou une émotion à travers un questionnement direct\ndes aspects moins clairs (la durée, l’apparition, les symptômes\nassociés, etc.)\n",
+      "text_sha256": "98d665bcdd331ab40b4811e20ebf276ae28d63fcf5c7a72f1a8a08106f1bc7dc"
+    },
+    {
+      "bbox": [
+        338.0,
+        127.80195617675781,
+        550.9655151367188,
+        169.6281280517578
+      ],
+      "block_id": "page-0058-block-0006",
+      "order": 6,
+      "text": "« Je ne suis pas sûr d’avoir bien compris… Pouvez-vous réexpli-\nquer s’il vous plaît ? »\n« Comment cela a-t-il commencé ? »\n« Quelque chose m’échappe. Comment arrivez-vous à cette conclusion ? »\n",
+      "text_sha256": "08f9634f2444f7413bac49d60eee82644cf38e28dcb6bca0b3c6fb2676b1b71c"
+    },
+    {
+      "bbox": [
+        58.25,
+        177.0519561767578,
+        103.28599548339844,
+        206.8781280517578
+      ],
+      "block_id": "page-0058-block-0007",
+      "order": 7,
+      "text": "Application de\nla théorie de\nl’esprit\n",
+      "text_sha256": "f1a67b7af654ab959f7335a504dadea1f8d690c8c968a13c9e1597064315617b"
+    },
+    {
+      "bbox": [
+        117.0,
+        177.0519561767578,
+        328.9875183105469,
+        196.8781280517578
+      ],
+      "block_id": "page-0058-block-0008",
+      "order": 8,
+      "text": "Voir si le patient peut se mettre à la place (dans l’esprit) d’un autre\net d’énoncer sa perspective.\n",
+      "text_sha256": "983a31637f35017e45522675340d9c0cfb8d13e829860dcd8925963c6d0b6940"
+    },
+    {
+      "bbox": [
+        338.0,
+        177.0519561767578,
+        551.2137451171875,
+        207.8781280517578
+      ],
+      "block_id": "page-0058-block-0009",
+      "order": 9,
+      "text": "« Si je demandais à la travailleuse sociale, que me dirait-elle de\nvotre situation conjugale ? »\n« Comment pensez-vous que votre épouse expliquerait la situation ? »\n",
+      "text_sha256": "8071c6b6b098d26a96fcf0aed70b4d4a93c8fce2352dedc6e101c1b37d055471"
+    },
+    {
+      "bbox": [
+        58.25,
+        215.3019561767578,
+        320.88507080078125,
+        255.1281280517578
+      ],
+      "block_id": "page-0058-block-0010",
+      "order": 10,
+      "text": "Résumé\nÉnoncé synthétisant ce qui a été dit durant une partie de l’en-\ntrevue an de valider la compréhension du discours du patient\npar le médecin et permettre de clarier si ce qui est compris est\nconforme à la réalité du patient.\n",
+      "text_sha256": "e346721cea81634a29de9c2b6426350238ee3a5475287ea6b34e6023b8300c4f"
+    },
+    {
+      "bbox": [
+        338.0,
+        215.3019561767578,
+        533.368408203125,
+        245.1281280517578
+      ],
+      "block_id": "page-0058-block-0011",
+      "order": 11,
+      "text": "« Donc, je comprends que vous avez consommé la veille, puis\nque vous n’avez pas pu rentrer au travail, car vous craigniez\nqu’on vous attaque en chemin. Est-ce bien cela ? »\n",
+      "text_sha256": "2b7ff0855914f74354a774334ebd4f16c766303f8b28fc572c6fa0c481c47614"
+    },
+    {
+      "bbox": [
+        58.25,
+        262.501953125,
+        327.3970031738281,
+        282.328125
+      ],
+      "block_id": "page-0058-block-0012",
+      "order": 12,
+      "text": "Reet\nReprendre assez exactement les mots du patient avec une intona-\ntion d’interrogation pour l’inciter à continuer.\n",
+      "text_sha256": "8793556b7c7a7e35b31082c17b462f0e741cbbf0053da5b9418fc85621efd5e1"
+    },
+    {
+      "bbox": [
+        338.0,
+        262.501953125,
+        535.92822265625,
+        293.328125
+      ],
+      "block_id": "page-0058-block-0013",
+      "order": 13,
+      "text": "« Vous me dites donc que vous êtes bien content d’avoir quitté\nce travail ? »\n« Si je vous comprends bien, vous venez de me dire que… ? »\n",
+      "text_sha256": "ec9a8e2067a1767438d4269e7fb666bae154ee8879882b03593b3de8328d8612"
+    },
+    {
+      "bbox": [
+        58.25,
+        300.751953125,
+        290.5334167480469,
+        320.578125
+      ],
+      "block_id": "page-0058-block-0014",
+      "order": 14,
+      "text": "Confrontation\nÉnoncé visant à mettre en évidence ce qui est omis ou\ncontradictoire dans le discours du patient.\n",
+      "text_sha256": "7766948e53d95e1f66a75ef55ba993070c1588a88d1127f1e4240e1f838523c6"
+    },
+    {
+      "bbox": [
+        338.0,
+        300.751953125,
+        547.8724975585938,
+        351.578125
+      ],
+      "block_id": "page-0058-block-0015",
+      "order": 15,
+      "text": "« Vous dites que tout allait bien lorsque vous étiez chez votre frère,\nmais il semble que vous avez été hospitalisé à trois reprises durant\ncette période. »\n« Vous dites que vous n’avez rien fait, mais sur le rapport de police,\non rapporte que… »\n",
+      "text_sha256": "4ca0c9629c5edc8d6b9bef7e88a731f0a2aab861377ec6cde1cb81aac53c0ba8"
+    },
+    {
+      "bbox": [
+        58.25,
+        358.95196533203125,
+        330.1610107421875,
+        448.77813720703125
+      ],
+      "block_id": "page-0058-block-0016",
+      "order": 16,
+      "text": "Recadrage\nIntervention visant à ramener le patient à un thème qui n’a pas pu\nêtre approfondi, en général à cause d’un changement de sujet,\nconscient ou inconscient, de la part du patient. Cette intervention\ns’impose parfois an de pouvoir compléter l’objectif de l’entretien,\nsoit le recueil d’informations pertinentes. Elle peut aussi servir à\nrétablir le cadre. Une attitude prudente et bienveillante doit être\nexercée an de ne pas brusquer le patient. Par exemple, on peut\nvalider l’importance de ce que le patient est en train de dire tout\nen justiant l’importance de revenir au thème qu’on voulait aborder.\n",
+      "text_sha256": "78e091a895ffa07cb2627e8eeb4f772786c7ef30facc96291524cf98027abfb9"
+    },
+    {
+      "bbox": [
+        338.0,
+        358.95196533203125,
+        541.6569213867188,
+        440.77813720703125
+      ],
+      "block_id": "page-0058-block-0017",
+      "order": 17,
+      "text": "« Je comprends que vous avez vécu des choses assez difciles,\nmais pour pouvoir bien cerner la problématique actuelle, je vous\npropose de revenir à… »\n« Il m’est difcile de travailler avec vous lorsque vous haussez le\nton ainsi. »\n« Cela fait quelques fois que vous vous présentez en retard à\nvotre rendez-vous. Je me demande si vous êtes toujours motivé\nà poursuivre nos rencontres .»\n",
+      "text_sha256": "3b6d0531ca9b8c6ba643fd5e7b3169d21b0587762cece495b0abcddfcd54e1cb"
+    },
+    {
+      "bbox": [
+        58.25,
+        456.20196533203125,
+        309.5873107910156,
+        486.02813720703125
+      ],
+      "block_id": "page-0058-block-0018",
+      "order": 18,
+      "text": "Interprétation\nAssociation de faits non encore réalisée par le patient et que\nle médecin met en lumière an de l’amener à en prendre\nconscience.\n",
+      "text_sha256": "ba4f38ca6a036f70a1ca681db09b2cf591dc981839e0f3866bed99dee359e17d"
+    },
+    {
+      "bbox": [
+        338.0,
+        456.20196533203125,
+        543.0767822265625,
+        497.02813720703125
+      ],
+      "block_id": "page-0058-block-0019",
+      "order": 19,
+      "text": "« J’ai l’impression que vos rechutes surviennent chaque fois que\nvous craignez d’être abandonnée par votre conjoint. »\n« Cela me fait penser à la façon dont vous recherchiez en vain\nl’approbation de vos parents lorsque vous étiez plus jeune. »\n",
+      "text_sha256": "d63ad92307fbb630109f5d5097e635ca74144251aaae442ab2debf495c383be7"
+    },
+    {
+      "bbox": [
+        58.25,
+        504.4019775390625,
+        328.2220153808594,
+        534.2281494140625
+      ],
+      "block_id": "page-0058-block-0020",
+      "order": 20,
+      "text": "Explication\nEnseignement fait au patient concernant certains phénomènes\nmédicaux ou sur les modalités du traitement ou de la dispensation\nde soins.\n",
+      "text_sha256": "b31051ebdeae23a76a4f862ee36746dcfad878257cb4756b43e49a0c80b0e9ea"
+    },
+    {
+      "bbox": [
+        338.0,
+        504.4019775390625,
+        550.1752319335938,
+        545.2281494140625
+      ],
+      "block_id": "page-0058-block-0021",
+      "order": 21,
+      "text": "« On appelle ces phénomènes des hallucinations dans notre jargon\nmédical. »\n« Ce médicament peut en effet causer des maux de tête tempo-\nraires au début du traitement. »\n",
+      "text_sha256": "3a36e1e993b4eed5786b850a17b779be8dd06f5bd2a683b1b3c72f413c47fb1a"
+    },
+    {
+      "bbox": [
+        58.25,
+        552.6519775390625,
+        96.74700164794922,
+        582.4781494140625
+      ],
+      "block_id": "page-0058-block-0022",
+      "order": 22,
+      "text": "Révéla-\ntion super-\ncielle de soi\n",
+      "text_sha256": "a5a2bb9f05a9238fe489cabecf41c7dbb0c35727368a7ec2201bd21c5e243596"
+    },
+    {
+      "bbox": [
+        117.0,
+        552.6519775390625,
+        329.7996520996094,
+        622.4781494140625
+      ],
+      "block_id": "page-0058-block-0023",
+      "order": 23,
+      "text": "Exposition d’une situation banale vécue par le médecin pour ame-\nner le patient à aller plus loin dans l’analyse de sa vie actuelle. Il\nne s’agit pas de révélations-chocs, mais bien d’anecdotes qui per-\nmettent au patient de mieux connaître ses réactions ou sa situation\npersonnelle. À utiliser très rarement et en rester à des choses\nanodines, puisque la révélation de soi peut donner l’occasion au\npatient de poser au médecin des questions sur sa vie personnelle.\n",
+      "text_sha256": "0d7b9920f6bb6fcc7bb93c8edeff073e4bd952785a64fa17b2f64a589aeaa603"
+    },
+    {
+      "bbox": [
+        338.0,
+        552.6519775390625,
+        550.8849487304688,
+        614.4781494140625
+      ],
+      "block_id": "page-0058-block-0024",
+      "order": 24,
+      "text": "« Vous savez, il peut aussi m’arriver d’avoir des problèmes de sommeil. »\n« Même si je n’ai pas toujours envie de me lever le matin, il faut\nbien que je le fasse, car j’ai des responsabilités dans mon travail. »\n« Vous dites qu’il s’agit de votre premier voyage à l’étranger et que\ncela vous inquiète. Je me rappelle aussi mon premier voyage et\nj’avais aussi de telles inquiétudes. »\n",
+      "text_sha256": "8e35f9984fda6a772cc6e811ca8791eee9dffc1d541a2e8b5ef2b570fabca084"
+    },
+    {
+      "bbox": [
+        58.25,
+        629.8519897460938,
+        328.9495849609375,
+        709.6781616210938
+      ],
+      "block_id": "page-0058-block-0025",
+      "order": 25,
+      "text": "Conseils\nDans certains cas, des conseils peuvent être donnés au patient\nan de lui permettre de prendre en main sa vie et ses décisions. Il\nne s’agit pas d’une technique fréquemment utilisée, mais elle peut\ns’avérer utile pour dénouer des impasses, éviter la prise d’une\ndécision pouvant visiblement nuire au patient ou soutenir des\npatients dont les capacités de jugement peuvent être altérées par\nla pathologie. Il serait souhaitable que le patient puisse ultimement\nrésoudre par lui-même ses problèmes.\n",
+      "text_sha256": "8b4ddabd8e22af82598406f9a573dc1a140e26d279ce1eb5e8b6e39a2efd4b42"
+    },
+    {
+      "bbox": [
+        338.0,
+        629.8519897460938,
+        551.2521362304688,
+        701.6781616210938
+      ],
+      "block_id": "page-0058-block-0026",
+      "order": 26,
+      "text": "« Pensez-vous qu’il serait peut-être plus prudent d’attendre\nquelque peu avant de vous engager dans cette démarche ? »\n« Ce n’est peut-être pas une bonne idée de coner tout ce montant\nd’argent à cette personne que vous venez de rencontrer. »\n« Peut-être pourriez-vous attendre la n de cette hospitalisation\navant de prendre une décision par rapport à votre divorce. On\npourra en reparler. »\n",
+      "text_sha256": "b415ea165f71c6d38b6cebf026e853a0831fb0da275b4807875996375424f2f9"
+    },
+    {
+      "bbox": [
+        56.150001525878906,
+        41.002296447753906,
+        230.2342529296875,
+        53.320068359375
+      ],
+      "block_id": "page-0058-block-0027",
+      "order": 27,
+      "text": "TABLEAU 3.2 Techniques d’entrevue (suite)\n",
+      "text_sha256": "05c17b9517d76c09cf57c92ddf433adb367a85781b14ec3fb6bcd5ebf66ea81e"
+    }
+  ],
+  "coordinates_sha256": "97f3cc096618a078b43030eebbdec874a77da6f6b9b9bc031adbc2fb343101b8",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0058",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 3\nExamen psychiatrique\n41\nTechniques\nDénitions\nExemples de commentaires du médecin\nTransition\nÉnoncé basé sur des informations recueillies précédemment et uti-\nlisé comme tremplin vers une autre partie de l’histoire à explorer.\n« Vous avez mentionné à quel point vous vous sentiez désespéré ;\nest-ce que cela vous a amené à penser à la mort ? »\n« Vous avez parlé du climat à la maison durant votre enfance. À\nl’école, comment ça se passait ? »\nClarication\nDemande de précision sur les circonstances entourant une\nsituation ou une émotion à travers un questionnement direct\ndes aspects moins clairs (la durée, l’apparition, les symptômes\nassociés, etc.)\n« Je ne suis pas sûr d’avoir bien compris… Pouvez-vous réexpli-\nquer s’il vous plaît ? »\n« Comment cela a-t-il commencé ? »\n« Quelque chose m’échappe. Comment arrivez-vous à cette conclusion ? »\nApplication de\nla théorie de\nl’esprit\nVoir si le patient peut se mettre à la place (dans l’esprit) d’un autre\net d’énoncer sa perspective.\n« Si je demandais à la travailleuse sociale, que me dirait-elle de\nvotre situation conjugale ? »\n« Comment pensez-vous que votre épouse expliquerait la situation ? »\nRésumé\nÉnoncé synthétisant ce qui a été dit durant une partie de l’en-\ntrevue an de valider la compréhension du discours du patient\npar le médecin et permettre de clarier si ce qui est compris est\nconforme à la réalité du patient.\n« Donc, je comprends que vous avez consommé la veille, puis\nque vous n’avez pas pu rentrer au travail, car vous craigniez\nqu’on vous attaque en chemin. Est-ce bien cela ? »\nReet\nReprendre assez exactement les mots du patient avec une intona-\ntion d’interrogation pour l’inciter à continuer.\n« Vous me dites donc que vous êtes bien content d’avoir quitté\nce travail ? »\n« Si je vous comprends bien, vous venez de me dire que… ? »\nConfrontation\nÉnoncé visant à mettre en évidence ce qui est omis ou\ncontradictoire dans le discours du patient.\n« Vous dites que tout allait bien lorsque vous étiez chez votre frère,\nmais il semble que vous avez été hospitalisé à trois reprises durant\ncette période. »\n« Vous dites que vous n’avez rien fait, mais sur le rapport de police,\non rapporte que… »\nRecadrage\nIntervention visant à ramener le patient à un thème qui n’a pas pu\nêtre approfondi, en général à cause d’un changement de sujet,\nconscient ou inconscient, de la part du patient. Cette intervention\ns’impose parfois an de pouvoir compléter l’objectif de l’entretien,\nsoit le recueil d’informations pertinentes. Elle peut aussi servir à\nrétablir le cadre. Une attitude prudente et bienveillante doit être\nexercée an de ne pas brusquer le patient. Par exemple, on peut\nvalider l’importance de ce que le patient est en train de dire tout\nen justiant l’importance de revenir au thème qu’on voulait aborder.\n« Je comprends que vous avez vécu des choses assez difciles,\nmais pour pouvoir bien cerner la problématique actuelle, je vous\npropose de revenir à… »\n« Il m’est difcile de travailler avec vous lorsque vous haussez le\nton ainsi. »\n« Cela fait quelques fois que vous vous présentez en retard à\nvotre rendez-vous. Je me demande si vous êtes toujours motivé\nà poursuivre nos rencontres .»\nInterprétation\nAssociation de faits non encore réalisée par le patient et que\nle médecin met en lumière an de l’amener à en prendre\nconscience.\n« J’ai l’impression que vos rechutes surviennent chaque fois que\nvous craignez d’être abandonnée par votre conjoint. »\n« Cela me fait penser à la façon dont vous recherchiez en vain\nl’approbation de vos parents lorsque vous étiez plus jeune. »\nExplication\nEnseignement fait au patient concernant certains phénomènes\nmédicaux ou sur les modalités du traitement ou de la dispensation\nde soins.\n« On appelle ces phénomènes des hallucinations dans notre jargon\nmédical. »\n« Ce médicament peut en effet causer des maux de tête tempo-\nraires au début du traitement. »\nRévéla-\ntion super-\ncielle de soi\nExposition d’une situation banale vécue par le médecin pour ame-\nner le patient à aller plus loin dans l’analyse de sa vie actuelle. Il\nne s’agit pas de révélations-chocs, mais bien d’anecdotes qui per-\nmettent au patient de mieux connaître ses réactions ou sa situation\npersonnelle. À utiliser très rarement et en rester à des choses\nanodines, puisque la révélation de soi peut donner l’occasion au\npatient de poser au médecin des questions sur sa vie personnelle.\n« Vous savez, il peut aussi m’arriver d’avoir des problèmes de sommeil. »\n« Même si je n’ai pas toujours envie de me lever le matin, il faut\nbien que je le fasse, car j’ai des responsabilités dans mon travail. »\n« Vous dites qu’il s’agit de votre premier voyage à l’étranger et que\ncela vous inquiète. Je me rappelle aussi mon premier voyage et\nj’avais aussi de telles inquiétudes. »\nConseils\nDans certains cas, des conseils peuvent être donnés au patient\nan de lui permettre de prendre en main sa vie et ses décisions. Il\nne s’agit pas d’une technique fréquemment utilisée, mais elle peut\ns’avérer utile pour dénouer des impasses, éviter la prise d’une\ndécision pouvant visiblement nuire au patient ou soutenir des\npatients dont les capacités de jugement peuvent être altérées par\nla pathologie. Il serait souhaitable que le patient puisse ultimement\nrésoudre par lui-même ses problèmes.\n« Pensez-vous qu’il serait peut-être plus prudent d’attendre\nquelque peu avant de vous engager dans cette démarche ? »\n« Ce n’est peut-être pas une bonne idée de coner tout ce montant\nd’argent à cette personne que vous venez de rencontrer. »\n« Peut-être pourriez-vous attendre la n de cette hospitalisation\navant de prendre une décision par rapport à votre divorce. On\npourra en reparler. »\nTABLEAU 3.2 Techniques d’entrevue (suite)\n",
+  "raw_text_sha256": "32351362d2d689d81330f9a91616481c5393cbaf84eb21af7a7bd8c028ca6d8c",
+  "source_page_display": 59,
+  "source_page_index": 58
+}

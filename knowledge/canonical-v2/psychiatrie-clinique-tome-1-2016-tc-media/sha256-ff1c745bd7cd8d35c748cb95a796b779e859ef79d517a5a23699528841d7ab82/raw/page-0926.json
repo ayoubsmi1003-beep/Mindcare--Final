@@ -1,0 +1,208 @@
+{
+  "block_sequence_sha256": "315bd706c3f3131e45c6b2ef153b127a5d48a2fe172760afbb6d3a8a9d3f7783",
+  "blocks": [
+    {
+      "bbox": [
+        54.0,
+        449.0244140625,
+        295.0099792480469,
+        673.947265625
+      ],
+      "block_id": "page-0926-block-0001",
+      "order": 1,
+      "text": "39.1 Historique....................................................................... 909\n39.2 Épidémiologie ................................................................ 909\n39.3 Catégories de substances.............................................. 911\n39.3.1 Dépresseurs du système nerveux central......... 912\n39.3.2 Stimulants du système nerveux central............ 912\n39.3.3 Perturbateurs du système nerveux central....... 912\n39.4 Étiologies ........................................................................ 912\n39.4.1 Troubles psychiatriques secondaires\nà la toxicomanie..................................................... 912\n39.4.2 Toxicomanie secondaire aux troubles\npsychiatriques ........................................................ 913\n39.4.3 Modèle des facteurs communs........................... 913\n39.4.4 Modèle des facteurs multiples............................ 914\n39.4.5 Attitudes face à la consommation...................... 914\n39.5 Description clinique...................................................... 915\n39.5.1 Troubles anxiodépressifs ..................................... 915\n39.5.2 Troubles de la personnalité ................................. 915\n39.5.3 Trouble bipolaire et schizophrénie.................... 918\n",
+      "text_sha256": "0a6c37c339d1d6e505309a0864ade5746f21d5dc29bd924edc680c9f9ff386dc"
+    },
+    {
+      "bbox": [
+        312.0,
+        449.0244140625,
+        553.0100708007812,
+        627.8681640625
+      ],
+      "block_id": "page-0926-block-0002",
+      "order": 2,
+      "text": "39.6 Traitements........................................................................... 919\n39.6.1 Traitement intégré ................................................ 919\n39.6.2 Traitement pharmacologique ............................. 919\n39.6.3 Approche motivationnelle par étapes ............... 920\n39.6.4 Réduction des méfaits .......................................... 921\n39.6.5 Services intégrés en réseau.................................. 922\n39.6.6 Repérage proactif .................................................. 922\n39.6.7 érapie de groupe ............................................... 922\n39.6.8 Psychoéducation.................................................... 922\n39.6.9 Psychoéducation de la famille............................. 923\n39.6.10 Interventions alternatives.................................... 923\n39.6.11 Services au long cours .......................................... 923\n39.7 Pronostic......................................................................... 924\nLectures complémentaires...................................................... 924\n",
+      "text_sha256": "e515626ac4c8bc21febcddf8e595859ea4a327f1d6653f66ef0802d799ede24e"
+    },
+    {
+      "bbox": [
+        54.0,
+        285.30010986328125,
+        283.67401123046875,
+        297.80010986328125
+      ],
+      "block_id": "page-0926-block-0003",
+      "order": 3,
+      "text": "Richard Cloutier, M.D., FRCPC, M. Sc. (sciences biomédicales)\n",
+      "text_sha256": "1c315e1cad4cfb239518e7bb392771edd20ddb7ff6316c58356ec0bcd700df00"
+    },
+    {
+      "bbox": [
+        54.0,
+        301.67724609375,
+        247.32568359375,
+        322.893798828125
+      ],
+      "block_id": "page-0926-block-0004",
+      "order": 4,
+      "text": "Psychiatre, Institut universitaire en santé mentale\nde Montréal\n",
+      "text_sha256": "fae618926bb7c93490ea719fb1272be53be18ef7c17c2a13960222ef0ea50331"
+    },
+    {
+      "bbox": [
+        54.0,
+        326.67724609375,
+        277.8392028808594,
+        347.893798828125
+      ],
+      "block_id": "page-0926-block-0005",
+      "order": 5,
+      "text": "Professeur adjoint de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\n",
+      "text_sha256": "55794a101d286e95c09a0e659ed59983b705db069bfa7912758e835ca36bd33a"
+    },
+    {
+      "bbox": [
+        54.0,
+        357.80010986328125,
+        142.32850646972656,
+        370.30010986328125
+      ],
+      "block_id": "page-0926-block-0006",
+      "order": 6,
+      "text": "Patrick Barabé, M.D.\n",
+      "text_sha256": "5f4322a27fd753c7c4ad30c9aa0006338b45e5c34a9bc6ce8eaca505cc004870"
+    },
+    {
+      "bbox": [
+        54.0,
+        374.17724609375,
+        235.0096435546875,
+        384.393798828125
+      ],
+      "block_id": "page-0926-block-0007",
+      "order": 7,
+      "text": "Psychiatre, Hôpital du Sacré-Cœur de Montréal\n",
+      "text_sha256": "8ffc985cd6ca8728d8a4dd45e17e25aa2e23c02b9ca937c57bc31a30a799bc61"
+    },
+    {
+      "bbox": [
+        54.0,
+        388.17724609375,
+        292.0604248046875,
+        409.393798828125
+      ],
+      "block_id": "page-0926-block-0008",
+      "order": 8,
+      "text": "Professeur chargé d’enseignement de clinique, Département de\npsychiatrie, Faculté de médecine, Université de Montréal\n",
+      "text_sha256": "2bd945600d22bd04e3034d65fcad9a8e0836b3f18e30f983a4ba9a461b1c2432"
+    },
+    {
+      "bbox": [
+        312.0,
+        285.30010986328125,
+        452.58770751953125,
+        297.80010986328125
+      ],
+      "block_id": "page-0926-block-0009",
+      "order": 9,
+      "text": "Stéphane Potvin, Ph. D. (psychologie)\n",
+      "text_sha256": "95bef191018ceae0a9b5182c795d246f9f8f150220921e61cb9b6e7cbb4ab1f3"
+    },
+    {
+      "bbox": [
+        312.0,
+        301.67724609375,
+        535.30224609375,
+        322.893798828125
+      ],
+      "block_id": "page-0926-block-0010",
+      "order": 10,
+      "text": "Psychologue, Centre de recherche Fernand-Seguin, Institut\nuniversitaire en santé mentale de Montréal\n",
+      "text_sha256": "2ba0bb0fd4f64834a91c39b230988dcd2a1ec25682e6458336626f94b22578ba"
+    },
+    {
+      "bbox": [
+        312.0,
+        326.67724609375,
+        522.6334228515625,
+        347.893798828125
+      ],
+      "block_id": "page-0926-block-0011",
+      "order": 11,
+      "text": "Chercheur adjoint, Département de psychiatrie, Faculté\nde médecine, Université de Montréal\n",
+      "text_sha256": "d29e39e414eeadcf8ff7efe0bbd2195168288180317845aae488c4fce247d668"
+    },
+    {
+      "bbox": [
+        312.0,
+        357.80010986328125,
+        422.921630859375,
+        370.30010986328125
+      ],
+      "block_id": "page-0926-block-0012",
+      "order": 12,
+      "text": "François Noël, M.D., FRCPC\n",
+      "text_sha256": "755ade93ea5066c656d4f3d17f2978585c673c5b49807e4cf1d26ea5986b25c2"
+    },
+    {
+      "bbox": [
+        312.0,
+        374.17724609375,
+        547.4014282226562,
+        384.393798828125
+      ],
+      "block_id": "page-0926-block-0013",
+      "order": 13,
+      "text": "Psychiatre, Institut universitaire en santé mentale de Montréal\n",
+      "text_sha256": "c28ae8bad035c26b3782510caeee2d2fec12a211df5c8d4d0ee884d1a2b089af"
+    },
+    {
+      "bbox": [
+        312.0,
+        388.17724609375,
+        535.8391723632812,
+        409.393798828125
+      ],
+      "block_id": "page-0926-block-0014",
+      "order": 14,
+      "text": "Professeur adjoint de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\n",
+      "text_sha256": "55794a101d286e95c09a0e659ed59983b705db069bfa7912758e835ca36bd33a"
+    },
+    {
+      "bbox": [
+        54.0,
+        159.5734405517578,
+        456.8338928222656,
+        246.4953155517578
+      ],
+      "block_id": "page-0926-block-0015",
+      "order": 15,
+      "text": "Toxicomanies et maladies\nmentales\n",
+      "text_sha256": "dd1476327981340b94dbafe03ee5b7f2e36fc5f1748163608e80562962760f30"
+    },
+    {
+      "bbox": [
+        257.1000061035156,
+        4.181053161621094,
+        555.0,
+        124.18104553222656
+      ],
+      "block_id": "page-0926-block-0016",
+      "order": 16,
+      "text": "CHAPITRE39\n",
+      "text_sha256": "e08a0f0b362a6b016d125f7c5b522c1757f12834585eb21f172d82305feef3d9"
+    }
+  ],
+  "coordinates_sha256": "f1c18319929993e816b152109fb6551cabc5cc6866460b2056dd065778289b79",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0926",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "39.1 Historique....................................................................... 909\n39.2 Épidémiologie ................................................................ 909\n39.3 Catégories de substances.............................................. 911\n39.3.1 Dépresseurs du système nerveux central......... 912\n39.3.2 Stimulants du système nerveux central............ 912\n39.3.3 Perturbateurs du système nerveux central....... 912\n39.4 Étiologies ........................................................................ 912\n39.4.1 Troubles psychiatriques secondaires\nà la toxicomanie..................................................... 912\n39.4.2 Toxicomanie secondaire aux troubles\npsychiatriques ........................................................ 913\n39.4.3 Modèle des facteurs communs........................... 913\n39.4.4 Modèle des facteurs multiples............................ 914\n39.4.5 Attitudes face à la consommation...................... 914\n39.5 Description clinique...................................................... 915\n39.5.1 Troubles anxiodépressifs ..................................... 915\n39.5.2 Troubles de la personnalité ................................. 915\n39.5.3 Trouble bipolaire et schizophrénie.................... 918\n39.6 Traitements........................................................................... 919\n39.6.1 Traitement intégré ................................................ 919\n39.6.2 Traitement pharmacologique ............................. 919\n39.6.3 Approche motivationnelle par étapes ............... 920\n39.6.4 Réduction des méfaits .......................................... 921\n39.6.5 Services intégrés en réseau.................................. 922\n39.6.6 Repérage proactif .................................................. 922\n39.6.7 érapie de groupe ............................................... 922\n39.6.8 Psychoéducation.................................................... 922\n39.6.9 Psychoéducation de la famille............................. 923\n39.6.10 Interventions alternatives.................................... 923\n39.6.11 Services au long cours .......................................... 923\n39.7 Pronostic......................................................................... 924\nLectures complémentaires...................................................... 924\nRichard Cloutier, M.D., FRCPC, M. Sc. (sciences biomédicales)\nPsychiatre, Institut universitaire en santé mentale\nde Montréal\nProfesseur adjoint de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\nPatrick Barabé, M.D.\nPsychiatre, Hôpital du Sacré-Cœur de Montréal\nProfesseur chargé d’enseignement de clinique, Département de\npsychiatrie, Faculté de médecine, Université de Montréal\nStéphane Potvin, Ph. D. (psychologie)\nPsychologue, Centre de recherche Fernand-Seguin, Institut\nuniversitaire en santé mentale de Montréal\nChercheur adjoint, Département de psychiatrie, Faculté\nde médecine, Université de Montréal\nFrançois Noël, M.D., FRCPC\nPsychiatre, Institut universitaire en santé mentale de Montréal\nProfesseur adjoint de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\nToxicomanies et maladies\nmentales\nCHAPITRE39\n",
+  "raw_text_sha256": "7a8edb70206c0c948db64e066a8bc39b63ac35e88676dccd65a8622e35472dc3",
+  "source_page_display": 927,
+  "source_page_index": 926
+}

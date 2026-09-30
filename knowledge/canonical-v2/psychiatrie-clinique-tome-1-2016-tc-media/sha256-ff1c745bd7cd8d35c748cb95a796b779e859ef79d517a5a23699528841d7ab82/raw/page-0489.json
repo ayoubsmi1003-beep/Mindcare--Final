@@ -1,0 +1,148 @@
+{
+  "block_sequence_sha256": "a648f858300332182a1115df4694b5c395e70adcb3694c743aae135d41056194",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        130.5734405517578,
+        422.95355224609375,
+        175.4953155517578
+      ],
+      "block_id": "page-0489-block-0001",
+      "order": 1,
+      "text": "Troubles de l’adaptation\n",
+      "text_sha256": "9a940aac409e7bff743855aa489da29f194b5c4b93e5e9203aa7866cc66330f8"
+    },
+    {
+      "bbox": [
+        48.0,
+        223.65733337402344,
+        158.47158813476562,
+        237.69541931152344
+      ],
+      "block_id": "page-0489-block-0002",
+      "order": 2,
+      "text": "Hans Lamarre, M.D., FRCPC\n",
+      "text_sha256": "b72f9cb0a280ec065e04002bd3f9459f4158426595205c326a57be6bf805bd03"
+    },
+    {
+      "bbox": [
+        48.0,
+        241.07725524902344,
+        270.2681579589844,
+        262.2937927246094
+      ],
+      "block_id": "page-0489-block-0003",
+      "order": 3,
+      "text": "Psychiatre, Clinique ambulatoire de santé mentale, Hôpital\nMaisonneuve-Rosemont (Montréal)\n",
+      "text_sha256": "d008055e49b6920abd979cf78971fb51bd7478281e8e67504ccc3c900e8b969e"
+    },
+    {
+      "bbox": [
+        48.0,
+        266.0772399902344,
+        271.8392028808594,
+        287.2937927246094
+      ],
+      "block_id": "page-0489-block-0004",
+      "order": 4,
+      "text": "Professeur adjoint de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\n",
+      "text_sha256": "55794a101d286e95c09a0e659ed59983b705db069bfa7912758e835ca36bd33a"
+    },
+    {
+      "bbox": [
+        306.0,
+        223.65733337402344,
+        435.2716369628906,
+        237.69541931152344
+      ],
+      "block_id": "page-0489-block-0005",
+      "order": 5,
+      "text": "Georges-F. Pinard, M.D., FRCPC\n",
+      "text_sha256": "f2a35e16cb81e9c34206e07d98adada7f8f60851a42dbd59002ecebcf89132a8"
+    },
+    {
+      "bbox": [
+        306.0,
+        241.07725524902344,
+        528.2681884765625,
+        262.2937927246094
+      ],
+      "block_id": "page-0489-block-0006",
+      "order": 6,
+      "text": "Psychiatre, Clinique ambulatoire de santé mentale, Hôpital\nMaisonneuve-Rosemont (Montréal)\n",
+      "text_sha256": "d008055e49b6920abd979cf78971fb51bd7478281e8e67504ccc3c900e8b969e"
+    },
+    {
+      "bbox": [
+        306.0,
+        266.0772399902344,
+        527.9392700195312,
+        287.2937927246094
+      ],
+      "block_id": "page-0489-block-0007",
+      "order": 7,
+      "text": "Professeur agrégé de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\n",
+      "text_sha256": "f4bc23aed99fa29e8f7410379c6cebea846c1188b4a600c871ae8a6f9bc4dde5"
+    },
+    {
+      "bbox": [
+        48.0,
+        336.22442626953125,
+        289.010009765625,
+        450.06817626953125
+      ],
+      "block_id": "page-0489-block-0008",
+      "order": 8,
+      "text": "22.1 Historique et évolution du concept .............................473\n22.2 Épidémiologie .................................................................474\n22.3 Étiologies ......................................................................... 476\n22.3.1 Étiologies biologiques........................................... 477\n22.3.2 Étiologies psychologiques.................................... 478\n22.3.3 Étiologies sociales.................................................. 480\n22.4 Facteurs de risque et facteurs protecteurs..................480\n22.5 Description clinique et variétés diagnostiques ..........481\n22.6 Outils diagnostiques ......................................................482\n",
+      "text_sha256": "4cc9a12966effd0559bcb50a056e88aca1edd73c547138463575e8562c3e186c"
+    },
+    {
+      "bbox": [
+        306.0,
+        336.22442626953125,
+        547.010009765625,
+        424.06817626953125
+      ],
+      "block_id": "page-0489-block-0009",
+      "order": 9,
+      "text": "22.7 Diagnostic diérentiel ...................................................483\n22.8 Traitements ..................................................................... 483\n22.8.1 Traitements psychologiques ............................... 484\n22.8.2 Traitements biologiques ...................................... 485\n22.8.3 Interventions sociales........................................... 486\n22.8.4 Prévention............................................................... 486\n22.9 Évolution et pronostic....................................................487\n",
+      "text_sha256": "99c00f93ab3435f28e95b0488d752bf2fd0bc29b7874adf0c197562d7a87675c"
+    },
+    {
+      "bbox": [
+        306.0,
+        429.22442626953125,
+        547.010009765625,
+        439.06817626953125
+      ],
+      "block_id": "page-0489-block-0010",
+      "order": 10,
+      "text": "Lectures complémentaires.......................................................488\n",
+      "text_sha256": "d13c6c2c70e0763a6c60febca3ec17b67bac0c7f266023005b11f4e139a920e2"
+    },
+    {
+      "bbox": [
+        263.20001220703125,
+        2.3810577392578125,
+        561.1000366210938,
+        122.38105773925781
+      ],
+      "block_id": "page-0489-block-0011",
+      "order": 11,
+      "text": "CHAPITRE22\n",
+      "text_sha256": "01fa6e68d4b04f09914201df62886cbc2731f34683909cf8dd68c4b66f77c08a"
+    }
+  ],
+  "coordinates_sha256": "22d3205058262c1cb23de1f55443ec418a777ef56212544b7b37573ac0a76c79",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0489",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Troubles de l’adaptation\nHans Lamarre, M.D., FRCPC\nPsychiatre, Clinique ambulatoire de santé mentale, Hôpital\nMaisonneuve-Rosemont (Montréal)\nProfesseur adjoint de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\nGeorges-F. Pinard, M.D., FRCPC\nPsychiatre, Clinique ambulatoire de santé mentale, Hôpital\nMaisonneuve-Rosemont (Montréal)\nProfesseur agrégé de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\n22.1 Historique et évolution du concept .............................473\n22.2 Épidémiologie .................................................................474\n22.3 Étiologies ......................................................................... 476\n22.3.1 Étiologies biologiques........................................... 477\n22.3.2 Étiologies psychologiques.................................... 478\n22.3.3 Étiologies sociales.................................................. 480\n22.4 Facteurs de risque et facteurs protecteurs..................480\n22.5 Description clinique et variétés diagnostiques ..........481\n22.6 Outils diagnostiques ......................................................482\n22.7 Diagnostic diérentiel ...................................................483\n22.8 Traitements ..................................................................... 483\n22.8.1 Traitements psychologiques ............................... 484\n22.8.2 Traitements biologiques ...................................... 485\n22.8.3 Interventions sociales........................................... 486\n22.8.4 Prévention............................................................... 486\n22.9 Évolution et pronostic....................................................487\nLectures complémentaires.......................................................488\nCHAPITRE22\n",
+  "raw_text_sha256": "345100d48bb7efefebb5d5bd4a2b864f3a76969b10ce4d7cdb890cbc2b72ef62",
+  "source_page_display": 490,
+  "source_page_index": 489
+}

@@ -1,0 +1,112 @@
+{
+  "block_sequence_sha256": "bc9cdb0a8675366661914332f3e2b9a684b25a165d173be8a2180e1eb8ebd615",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        470.3879699707031,
+        758.8693237304688
+      ],
+      "block_id": "page-0117-block-0001",
+      "order": 1,
+      "text": "100\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2\nDéterminants bio-psycho-sociaux\n",
+      "text_sha256": "fbf36dce1bf8203fb0a07e9592131a1a8ea1f94a330e41b987a89b752e9a707b"
+    },
+    {
+      "bbox": [
+        306.0,
+        471.7158203125,
+        549.4927368164062,
+        725.45849609375
+      ],
+      "block_id": "page-0117-block-0002",
+      "order": 2,
+      "text": "mode de transmission particulier, incluant les paramètres\nsuivants :\n• la distance entre le marqueur et le gène de susceptibilité,\nestimée sous forme de fraction de recombinaison, désignée\npar la lettre θ;\n• la fréquence du gène de la maladie dans la population ;\n• le pourcentage de phénocopies (c.-à-d. les cas dus à des\ncauses environnementales plutôt que génétiques) ;\n• la pénétrance (c.-à-d. la probabilité qu’une personne\nporteuse des gènes de susceptibilité développe la maladie)\nqui détermine le mode de transmission (dominante,\nrécessive).\n2e étape : On calcule la vraisemblance d’observer un tel échantillon\nde familles en l’absence d’une liaison génétique.\n3e étape : On détermine laquelle des deux hypothèses, c’est-\nà-dire l’absence ou la présence de liaison génétique, est la\nplus probable, ainsi que la distance entre le gène de suscep-\ntibilité et le marqueur (θ). Pour ce faire, on divise la vraisem-\nblance d’observer de telles familles en présence de liaison\ngénétique (1re étape) par la vraisemblance de les observer en\nl’absence de liaison (2e étape). Ce résultat est généralement\n",
+      "text_sha256": "6fdb1c8581e76a3d30704dc57d1cec2cd37436a49c2817c0471b4a50c3b50e8c"
+    },
+    {
+      "bbox": [
+        48.0,
+        471.7158203125,
+        291.6297912597656,
+        562.70849609375
+      ],
+      "block_id": "page-0117-block-0003",
+      "order": 3,
+      "text": "grand-père. Ce phénomène de transmission simultanée entre\nun locus et un phénotype suggère une liaison génétique, comme\ncelle des loci B et C de la gure 5.4b ; le locus B peut représenter\nle gène de susceptibilité de la maladie, alors que le locus C repré-\nsente le marqueur. Il faut aussi remarquer que l’allèle montrant\nune transmission simultanée de la maladie peut varier selon les\nfamilles, puisque dans la famille 1, il s’agit de l’allèle 2, et dans\nla famille 2, il s’agit de l’allèle 4 (voir la gure 5.5).\n",
+      "text_sha256": "fb19407b38d065a32a7276d42be8ae13eb16de8ec02ab71151260031373b1af2"
+    },
+    {
+      "bbox": [
+        48.0,
+        563.7158203125,
+        291.4657897949219,
+        677.70849609375
+      ],
+      "block_id": "page-0117-block-0004",
+      "order": 4,
+      "text": "À l’opposé des familles 1 et 2 décrites dans cette gure, la\nfamille 3 illustre l’absence de liaison génétique. D’une part,\nla grand-mère a transmis l’allèle 1 à son ls atteint ; par la suite,\ncelui-ci a transmis l’allèle 3 à sa propre lle atteinte et l’allèle 1 à\nson ls atteint. D’autre part, la grand-mère a transmis l’allèle 4\nà sa lle atteinte, laquelle a transmis l’allèle 4 à sa lle atteinte, et\nl’allèle 2 à son ls atteint. Ainsi, dans la famille 3, il n’y a aucun\nsigne de cotransmission entre un allèle donné et la maladie, ce\nqui illustre donc la situation des loci A et B de la gure 5.4b qui\nsont transmis indépendamment l’un de l’autre.\n",
+      "text_sha256": "021a0d9d2c237a88332030085e53a0ccff817dbf6f1fe92b31c5d3dd0bf20b35"
+    },
+    {
+      "bbox": [
+        48.0,
+        678.7158203125,
+        291.3945007324219,
+        725.70849609375
+      ],
+      "block_id": "page-0117-block-0005",
+      "order": 5,
+      "text": "Des analyses statistiques permettent de déterminer s’il y a ou\nnon présence d’une telle liaison en procédant en trois étapes :\n1re étape : On calcule la vraisemblance d’observer de telles\nfamilles en présence d’une liaison génétique, étant donné un\n",
+      "text_sha256": "eb36c21bf9728c77803f1c6dd18c11bd5e9f8964d2cdfe53f52f6af1f023472f"
+    },
+    {
+      "bbox": [
+        50.29999923706055,
+        41.002296447753906,
+        214.6275177001953,
+        53.320068359375
+      ],
+      "block_id": "page-0117-block-0006",
+      "order": 6,
+      "text": "FIGURE 5.4 Représentation de la méiose\n",
+      "text_sha256": "e31df88a525a95853314f37c022240b668cfe49f555d52cfc249591d4844e701"
+    },
+    {
+      "bbox": [
+        131.4499969482422,
+        388.501953125,
+        475.77545166015625,
+        398.328125
+      ],
+      "block_id": "page-0117-block-0007",
+      "order": 7,
+      "text": "a) Étape de la méiose\nb) Recombinaison lors de la méiose\n",
+      "text_sha256": "eaafc43d537353a2e85b1fb71cbe447790c6f55f6a1cb922f11c71d1625da638"
+    },
+    {
+      "bbox": [
+        48.25,
+        406.9963073730469,
+        535.5577392578125,
+        435.2765808105469
+      ],
+      "block_id": "page-0117-block-0008",
+      "order": 8,
+      "text": "La probabilité que deux gènes situés sur un même chromosome parental soient encore situés sur le même chromosome chez l’enfant dépend de leur proximité.\nSi deux gènes sont situés à proximité l’un de l’autre (gure 5.4b, loci B et C), la probabilité qu’ils soient encore couplés chez l’enfant est plus grande que s’ils sont\néloignés (gure 5.4b, loci A et C). Deux gènes situés près l’un de l’autre, comme les loci B et C de la gure 5.4, sont dits « en liaison génétique ».\n",
+      "text_sha256": "5d1d882674d1f26a410269bdb95ea65b83ef9ea5ff3b73e45b3394f1bea636ef"
+    }
+  ],
+  "coordinates_sha256": "a015a74dc0af14d53a4bc4dfb5ee699e959a2f65b4fb4c0f95d2e67046259c79",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0117",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "100\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2\nDéterminants bio-psycho-sociaux\nmode de transmission particulier, incluant les paramètres\nsuivants :\n• la distance entre le marqueur et le gène de susceptibilité,\nestimée sous forme de fraction de recombinaison, désignée\npar la lettre θ;\n• la fréquence du gène de la maladie dans la population ;\n• le pourcentage de phénocopies (c.-à-d. les cas dus à des\ncauses environnementales plutôt que génétiques) ;\n• la pénétrance (c.-à-d. la probabilité qu’une personne\nporteuse des gènes de susceptibilité développe la maladie)\nqui détermine le mode de transmission (dominante,\nrécessive).\n2e étape : On calcule la vraisemblance d’observer un tel échantillon\nde familles en l’absence d’une liaison génétique.\n3e étape : On détermine laquelle des deux hypothèses, c’est-\nà-dire l’absence ou la présence de liaison génétique, est la\nplus probable, ainsi que la distance entre le gène de suscep-\ntibilité et le marqueur (θ). Pour ce faire, on divise la vraisem-\nblance d’observer de telles familles en présence de liaison\ngénétique (1re étape) par la vraisemblance de les observer en\nl’absence de liaison (2e étape). Ce résultat est généralement\ngrand-père. Ce phénomène de transmission simultanée entre\nun locus et un phénotype suggère une liaison génétique, comme\ncelle des loci B et C de la gure 5.4b ; le locus B peut représenter\nle gène de susceptibilité de la maladie, alors que le locus C repré-\nsente le marqueur. Il faut aussi remarquer que l’allèle montrant\nune transmission simultanée de la maladie peut varier selon les\nfamilles, puisque dans la famille 1, il s’agit de l’allèle 2, et dans\nla famille 2, il s’agit de l’allèle 4 (voir la gure 5.5).\nÀ l’opposé des familles 1 et 2 décrites dans cette gure, la\nfamille 3 illustre l’absence de liaison génétique. D’une part,\nla grand-mère a transmis l’allèle 1 à son ls atteint ; par la suite,\ncelui-ci a transmis l’allèle 3 à sa propre lle atteinte et l’allèle 1 à\nson ls atteint. D’autre part, la grand-mère a transmis l’allèle 4\nà sa lle atteinte, laquelle a transmis l’allèle 4 à sa lle atteinte, et\nl’allèle 2 à son ls atteint. Ainsi, dans la famille 3, il n’y a aucun\nsigne de cotransmission entre un allèle donné et la maladie, ce\nqui illustre donc la situation des loci A et B de la gure 5.4b qui\nsont transmis indépendamment l’un de l’autre.\nDes analyses statistiques permettent de déterminer s’il y a ou\nnon présence d’une telle liaison en procédant en trois étapes :\n1re étape : On calcule la vraisemblance d’observer de telles\nfamilles en présence d’une liaison génétique, étant donné un\nFIGURE 5.4 Représentation de la méiose\na) Étape de la méiose\nb) Recombinaison lors de la méiose\nLa probabilité que deux gènes situés sur un même chromosome parental soient encore situés sur le même chromosome chez l’enfant dépend de leur proximité.\nSi deux gènes sont situés à proximité l’un de l’autre (gure 5.4b, loci B et C), la probabilité qu’ils soient encore couplés chez l’enfant est plus grande que s’ils sont\néloignés (gure 5.4b, loci A et C). Deux gènes situés près l’un de l’autre, comme les loci B et C de la gure 5.4, sont dits « en liaison génétique ».\n",
+  "raw_text_sha256": "13b944a91a2107b6dd1472b5349390d751536f7493c362fead0c46ad3347b4a1",
+  "source_page_display": 118,
+  "source_page_index": 117
+}

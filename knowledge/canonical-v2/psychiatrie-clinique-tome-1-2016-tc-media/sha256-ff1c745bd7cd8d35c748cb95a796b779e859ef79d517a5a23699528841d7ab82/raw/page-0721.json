@@ -1,0 +1,436 @@
+{
+  "block_sequence_sha256": "165178783b84a3f7b3bf11e063837feb384544610d8bd6916661c1b432a4bd5e",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0721-block-0001",
+      "order": 1,
+      "text": "704\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "2bd7d70691ab02c59a5cb1cf4df317b7d376183a738c0c81c5fd1f697029bbd7"
+    },
+    {
+      "bbox": [
+        50.25,
+        41.002296447753906,
+        312.78302001953125,
+        53.320068359375
+      ],
+      "block_id": "page-0721-block-0002",
+      "order": 2,
+      "text": "TABLEAU 31.3 Critères diagnostiques des accès hyperphagiques\n",
+      "text_sha256": "1c9c033f0959e416425acebd9c8746493adb576eaaa981d1abb5368c7433f3d5"
+    },
+    {
+      "bbox": [
+        63.5,
+        58.27412414550781,
+        511.7605285644531,
+        81.60029602050781
+      ],
+      "block_id": "page-0721-block-0003",
+      "order": 3,
+      "text": "DSM-5\nDSM-IV-TR\n307.51 (F50.8) Accès hyperphagiques (binge-eating disorder)\nHyperphagie boulimique (binge eating disorder)\n",
+      "text_sha256": "7096fc8315942fd8c1619de555e49182e125688781ed920a08a2122825698ec5"
+    },
+    {
+      "bbox": [
+        52.25,
+        87.501953125,
+        283.85595703125,
+        97.328125
+      ],
+      "block_id": "page-0721-block-0004",
+      "order": 4,
+      "text": "A. Survenue récurrente d’accès hyperphagiques (crises de gloutonnerie)\n",
+      "text_sha256": "dcc29da235c5245d6b8fc18506c1d199a6126a4d2d08f2bcfc4cdb4d3a34daf9"
+    },
+    {
+      "bbox": [
+        63.10000228881836,
+        97.501953125,
+        297.0970153808594,
+        117.328125
+      ],
+      "block_id": "page-0721-block-0005",
+      "order": 5,
+      "text": "(binge-eating). Un accès hyperphagique répond aux deux caractéristiques\nsuivantes :\n",
+      "text_sha256": "b11b1dce6f9d97bbbe4dd526806eb6155d17040f4fd81646805066529d306105"
+    },
+    {
+      "bbox": [
+        64.25,
+        118.501953125,
+        297.49700927734375,
+        199.328125
+      ],
+      "block_id": "page-0721-block-0006",
+      "order": 6,
+      "text": "1. Absorption, en une période de temps limitée (p. ex., moins de\n2 heures), d’une quantité de nourriture largement supérieure à ce\nque la plupart des gens absorberaient en une période de temps\nsimilaire et dans les mêmes circonstances.\n2. Sentiment d’une perte de contrôle sur le comportement alimentaire\npendant la crise (p. ex., sentiment de ne pas pouvoir s’arrêter de man-\nger ou de ne pas pouvoir contrôler ce que l’on mange ou la quantité\nque l’on mange).\n",
+      "text_sha256": "0788df0cce0c537912d1af20f413eecc9169e9aad80e860c9245b5672255c43d"
+    },
+    {
+      "bbox": [
+        305.5,
+        87.501953125,
+        530.780029296875,
+        97.328125
+      ],
+      "block_id": "page-0721-block-0007",
+      "order": 7,
+      "text": "A. Survenue récurrente de crises de boulimie : (binge eating) une crise\n",
+      "text_sha256": "90b586b5227bde581ed62f9c5efbffb174a6f11206ab78d4db1adb0f261a2cec"
+    },
+    {
+      "bbox": [
+        316.3500061035156,
+        97.501953125,
+        496.0951843261719,
+        107.328125
+      ],
+      "block_id": "page-0721-block-0008",
+      "order": 8,
+      "text": "de boulimie répond aux deux caractéristiques suivantes :\n",
+      "text_sha256": "4b2bdee9c3fbc3720800487a473f0d2401069a114c5e145b35c706c4f494733e"
+    },
+    {
+      "bbox": [
+        317.5,
+        118.501953125,
+        379.0980224609375,
+        128.328125
+      ],
+      "block_id": "page-0721-block-0009",
+      "order": 9,
+      "text": "(1) Idem à DSM-5.\n",
+      "text_sha256": "97c24592c8d0f6dcee2ff30099f5e4f8bebdfbe4a9fac774dd20481c2d4a857c"
+    },
+    {
+      "bbox": [
+        317.5,
+        159.501953125,
+        379.0980224609375,
+        169.328125
+      ],
+      "block_id": "page-0721-block-0010",
+      "order": 10,
+      "text": "(2) Idem à DSM-5.\n",
+      "text_sha256": "adea63d55dc699b122ba6cb86c041f8830ef3eac3f8f9a3975438906a32861a5"
+    },
+    {
+      "bbox": [
+        52.25,
+        208.90196228027344,
+        285.6162414550781,
+        218.72813415527344
+      ],
+      "block_id": "page-0721-block-0011",
+      "order": 11,
+      "text": "B. Les accès hyperphagiques (de gloutonnerie) sont associés à au moins\n",
+      "text_sha256": "c1fb883f773afbe5df3e3a0de6a3340ef4fffa67869a25dd8da0a03da045eb67"
+    },
+    {
+      "bbox": [
+        63.10000228881836,
+        218.90196228027344,
+        177.97885131835938,
+        228.72813415527344
+      ],
+      "block_id": "page-0721-block-0012",
+      "order": 12,
+      "text": "trois des caractéristiques suivantes :\n",
+      "text_sha256": "f22f1d8149080bbc9fc60c5a2d274999cb92f20cf4f22035d6f1ec4e338bad1e"
+    },
+    {
+      "bbox": [
+        64.25,
+        229.90196228027344,
+        297.39208984375,
+        323.7281188964844
+      ],
+      "block_id": "page-0721-block-0013",
+      "order": 13,
+      "text": "1. Manger beaucoup plus rapidement que la normale.\n2. Manger jusqu’à éprouver une sensation pénible de distension\nabdominale.\n3. Manger de grandes quantités de nourriture en l’absence d’une\nsensation physique de faim.\n4. Manger seul parce que l’on est gêné de la quantité de nourriture que\nl’on absorbe.\n5. Se sentir dégoûté de soi-même, déprimé ou très coupable après avoir\nmangé.\n",
+      "text_sha256": "2ca764ae7ad84327d4188cd4d62f28ef60cc701a9e01d30da13c0b6f92b828f1"
+    },
+    {
+      "bbox": [
+        305.5,
+        208.90196228027344,
+        524.1444091796875,
+        218.72813415527344
+      ],
+      "block_id": "page-0721-block-0014",
+      "order": 14,
+      "text": "B. Les crises de boulimie sont associées à trois des caractéristiques\n",
+      "text_sha256": "2930ee74ad9d0bdd27ddf2bcebfa44d6a03b01ba964907a51190e65f95d334d1"
+    },
+    {
+      "bbox": [
+        316.3500061035156,
+        218.90196228027344,
+        374.9560241699219,
+        239.72813415527344
+      ],
+      "block_id": "page-0721-block-0015",
+      "order": 15,
+      "text": "suivantes ou plus :\nIdem à DSM-5.\n",
+      "text_sha256": "afae0305a029d77f0309fc9bd87e389e9c801f965db52a0679a96f109bbf5f69"
+    },
+    {
+      "bbox": [
+        52.25,
+        333.3519592285156,
+        280.9372253417969,
+        343.1781311035156
+      ],
+      "block_id": "page-0721-block-0016",
+      "order": 16,
+      "text": "C. Les accès hyperphagiques (de gloutonnerie) entraînent une détresse\n",
+      "text_sha256": "945536a539cae966464abae786c6b7abd3426d73bc2799208ee3ba16b282193c"
+    },
+    {
+      "bbox": [
+        63.25,
+        343.3519592285156,
+        93.58000183105469,
+        353.1781311035156
+      ],
+      "block_id": "page-0721-block-0017",
+      "order": 17,
+      "text": "marquée.\n",
+      "text_sha256": "e178dd81f18db4d5314e50105ac775313e8c40529a6a38a3b567b5637614ca15"
+    },
+    {
+      "bbox": [
+        305.5,
+        333.3519592285156,
+        530.8029174804688,
+        343.1781311035156
+      ],
+      "block_id": "page-0721-block-0018",
+      "order": 18,
+      "text": "C. Le comportement boulimique est source d’une souffrance marquée\n",
+      "text_sha256": "0632616d28b2b77e759a636153a8e284f54fb4dff228eb4044991c58af73f756"
+    },
+    {
+      "bbox": [
+        52.25,
+        362.751953125,
+        287.8021545410156,
+        372.578125
+      ],
+      "block_id": "page-0721-block-0019",
+      "order": 19,
+      "text": "D. Les accès hyperphagiques (de gloutonnerie) surviennent, en moyenne,\n",
+      "text_sha256": "2b3c6758477103ab9a70e1c54b987189d2951c18c5cb4085ce02ec61194d2d63"
+    },
+    {
+      "bbox": [
+        63.400001525878906,
+        372.751953125,
+        215.39785766601562,
+        382.578125
+      ],
+      "block_id": "page-0721-block-0020",
+      "order": 20,
+      "text": "au moins une fois par semaine pendant 3 mois.\n",
+      "text_sha256": "ca3869dcb9e0d4b09bc325e58df75080b46e05c66ef9b5ad422a8545fd97a664"
+    },
+    {
+      "bbox": [
+        305.5,
+        362.751953125,
+        537.8959350585938,
+        372.578125
+      ],
+      "block_id": "page-0721-block-0021",
+      "order": 21,
+      "text": "D. Le comportement boulimique survient, en moyenne au moins 2 jours/\n",
+      "text_sha256": "50c650c425be09362259b2ec1c7b5857a6a09972144d53c1bcaf0b253f860207"
+    },
+    {
+      "bbox": [
+        316.6499938964844,
+        372.751953125,
+        395.24261474609375,
+        382.578125
+      ],
+      "block_id": "page-0721-block-0022",
+      "order": 22,
+      "text": "semaine pendant 6 mois\n",
+      "text_sha256": "43aa0b53d307dcb2dd46687cc372ee1234a8efb3d38da55af4a9f00a02ae70f2"
+    },
+    {
+      "bbox": [
+        52.25,
+        392.20196533203125,
+        281.2851867675781,
+        402.02813720703125
+      ],
+      "block_id": "page-0721-block-0023",
+      "order": 23,
+      "text": "E. Les accès hyperphagiques (de gloutonnerie) ne sont pas associés au\n",
+      "text_sha256": "fc66f52af0f53f41de9788eb3ab23b0cd2224f77f762cc6cdab7e773d6f1c880"
+    },
+    {
+      "bbox": [
+        62.54999923706055,
+        402.20196533203125,
+        289.8928527832031,
+        432.02813720703125
+      ],
+      "block_id": "page-0721-block-0024",
+      "order": 24,
+      "text": "recours régulier à des comportements compensatoires inappropriés\ncomme dans la boulimie, et ne surviennent pas exclusivement au cours\nde la boulimie ou de l’anorexie mentale.\n",
+      "text_sha256": "6be97a9993aa4501ddef46edc3dbfa13f2843130be7f73b1867e2f7cdc924f98"
+    },
+    {
+      "bbox": [
+        305.5,
+        392.20196533203125,
+        537.5150756835938,
+        402.02813720703125
+      ],
+      "block_id": "page-0721-block-0025",
+      "order": 25,
+      "text": "E. Le comportement boulimique n’est pas associé à des comportements\n",
+      "text_sha256": "2163ba9ecc42ecbb9a36712ae332fa65018a87d8e33ff400959ab6053eb34d70"
+    },
+    {
+      "bbox": [
+        315.8000183105469,
+        402.20196533203125,
+        544.9327392578125,
+        432.02813720703125
+      ],
+      "block_id": "page-0721-block-0026",
+      "order": 26,
+      "text": "compensatoires inappropriés (p. ex., vomissements ou prise de purgatif,\njeûne, exercice physique excessif) et ne survient pas exclusivement au\ncours d’une anorexie mentale ou d’une boulimie.\n",
+      "text_sha256": "17e98e285af8863fa68ac42b54cff13656c8823785a742dc651d0b7d1a9a3886"
+    },
+    {
+      "bbox": [
+        52.25,
+        441.6019592285156,
+        90.51700592041016,
+        451.4281311035156
+      ],
+      "block_id": "page-0721-block-0027",
+      "order": 27,
+      "text": "Spécier si :\n",
+      "text_sha256": "9f4d6b666fae8b9a4b5e824d34891426b7291ac2aec8c230225d1feee4be1389"
+    },
+    {
+      "bbox": [
+        61.25,
+        452.5228576660156,
+        140.2160186767578,
+        473.5423889160156
+      ],
+      "block_id": "page-0721-block-0028",
+      "order": 28,
+      "text": "En rémission partielle\nEn rémission complète\n",
+      "text_sha256": "7700a963534f9a3ebc3e87cd8811466ef8c8c847aa6febec47fbbd75cc7d4cb5"
+    },
+    {
+      "bbox": [
+        52.25,
+        483.0519714355469,
+        218.43521118164062,
+        536.9923706054688
+      ],
+      "block_id": "page-0721-block-0029",
+      "order": 29,
+      "text": "Spécier la sévérité actuelle :\nLéger : 1-3 accès hyperphagiques par semaine.\nMoyen : 4-7 accès hyperphagiques par semaine.\nGrave : 8-13 accès hyperphagiques par semaine.\nExtrême : ≥ 14 accès hyperphagiques par semaine.\n",
+      "text_sha256": "672fa4a6106ba040acfeff79b2718633d830e1f4d89a3eac4b562ee5c357cccc"
+    },
+    {
+      "bbox": [
+        48.25,
+        546.140625,
+        548.705810546875,
+        605.875
+      ],
+      "block_id": "page-0721-block-0030",
+      "order": 30,
+      "text": "Sources : APA (2015), p. 412 ; APA (2004), p. 704.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\n",
+      "text_sha256": "54de490e1a5b880007132a28883843a330d97eb14da59b8b12de41508f32dd21"
+    },
+    {
+      "bbox": [
+        48.0,
+        618.0658569335938,
+        291.01751708984375,
+        676.5585327148438
+      ],
+      "block_id": "page-0721-block-0031",
+      "order": 31,
+      "text": "• les comportements compensatoires font suite à l’ingestion\nd’une petite quantité de nourriture.\nCompte tenu des modications apportées par le DSM-5, le\nprol des personnes correspondant à cette catégorie est proba-\nblement appelé à changer.\n",
+      "text_sha256": "366cc85b18f1ccfc2532b3eb6960d3c7e4771c2480da3b9fc3979ca868930c30"
+    },
+    {
+      "bbox": [
+        48.0,
+        684.0868530273438,
+        270.005859375,
+        700.2294311523438
+      ],
+      "block_id": "page-0721-block-0032",
+      "order": 32,
+      "text": "31.4.5 Autres troubles de l’alimentation\n",
+      "text_sha256": "ad00f9587bba013d677e06337b7da8a4777d0434f9d7699316220ebd9490b915"
+    },
+    {
+      "bbox": [
+        48.0,
+        703.5658569335938,
+        291.29815673828125,
+        725.5585327148438
+      ],
+      "block_id": "page-0721-block-0033",
+      "order": 33,
+      "text": "Dans le processus de révision des critères et des catégories dia-\ngnostiques pour le DSM-5, les experts se sont entendus pour\n",
+      "text_sha256": "208505f9a8136db33a287cd09f7c0d4dd63b84931df74db1aecc41dbe5944bbd"
+    },
+    {
+      "bbox": [
+        306.0,
+        618.0658569335938,
+        549.3358154296875,
+        652.1085205078125
+      ],
+      "block_id": "page-0721-block-0034",
+      "order": 34,
+      "text": "placer les troubles traditionnellement situés dans la catégorie\nsurvenant durant l’enfance plutôt dans la catégorie générale des\ntroubles alimentaires.\n",
+      "text_sha256": "1f8de4c2dfdcaeb52fe603d5e0e50a87e17d39b39b744229decfa78b0c57c5f0"
+    },
+    {
+      "bbox": [
+        306.0,
+        664.2830200195312,
+        549.6517333984375,
+        725.5585327148438
+      ],
+      "block_id": "page-0721-block-0035",
+      "order": 35,
+      "text": "Pica\nHippocrate fut le premier à faire une description écrite de ce\ntrouble. Pica pica est le nom latin de la pie, un oiseau qui aurait\nun appétit indiérencié. Le syndrome du pica implique l’ingestion\nrépétée de substances non nutritives et qui ne sont pas considérées\n",
+      "text_sha256": "81439aa477eb84d3ec2fcc452bbebf5c73a7c2da25ffdf0ccede0b54d0910c90"
+    }
+  ],
+  "coordinates_sha256": "5028b30be163c373a65467ff472170b38945b2e24033437b9477684a27a79d94",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0721",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "704\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nTABLEAU 31.3 Critères diagnostiques des accès hyperphagiques\nDSM-5\nDSM-IV-TR\n307.51 (F50.8) Accès hyperphagiques (binge-eating disorder)\nHyperphagie boulimique (binge eating disorder)\nA. Survenue récurrente d’accès hyperphagiques (crises de gloutonnerie)\n(binge-eating). Un accès hyperphagique répond aux deux caractéristiques\nsuivantes :\n1. Absorption, en une période de temps limitée (p. ex., moins de\n2 heures), d’une quantité de nourriture largement supérieure à ce\nque la plupart des gens absorberaient en une période de temps\nsimilaire et dans les mêmes circonstances.\n2. Sentiment d’une perte de contrôle sur le comportement alimentaire\npendant la crise (p. ex., sentiment de ne pas pouvoir s’arrêter de man-\nger ou de ne pas pouvoir contrôler ce que l’on mange ou la quantité\nque l’on mange).\nA. Survenue récurrente de crises de boulimie : (binge eating) une crise\nde boulimie répond aux deux caractéristiques suivantes :\n(1) Idem à DSM-5.\n(2) Idem à DSM-5.\nB. Les accès hyperphagiques (de gloutonnerie) sont associés à au moins\ntrois des caractéristiques suivantes :\n1. Manger beaucoup plus rapidement que la normale.\n2. Manger jusqu’à éprouver une sensation pénible de distension\nabdominale.\n3. Manger de grandes quantités de nourriture en l’absence d’une\nsensation physique de faim.\n4. Manger seul parce que l’on est gêné de la quantité de nourriture que\nl’on absorbe.\n5. Se sentir dégoûté de soi-même, déprimé ou très coupable après avoir\nmangé.\nB. Les crises de boulimie sont associées à trois des caractéristiques\nsuivantes ou plus :\nIdem à DSM-5.\nC. Les accès hyperphagiques (de gloutonnerie) entraînent une détresse\nmarquée.\nC. Le comportement boulimique est source d’une souffrance marquée\nD. Les accès hyperphagiques (de gloutonnerie) surviennent, en moyenne,\nau moins une fois par semaine pendant 3 mois.\nD. Le comportement boulimique survient, en moyenne au moins 2 jours/\nsemaine pendant 6 mois\nE. Les accès hyperphagiques (de gloutonnerie) ne sont pas associés au\nrecours régulier à des comportements compensatoires inappropriés\ncomme dans la boulimie, et ne surviennent pas exclusivement au cours\nde la boulimie ou de l’anorexie mentale.\nE. Le comportement boulimique n’est pas associé à des comportements\ncompensatoires inappropriés (p. ex., vomissements ou prise de purgatif,\njeûne, exercice physique excessif) et ne survient pas exclusivement au\ncours d’une anorexie mentale ou d’une boulimie.\nSpécier si :\nEn rémission partielle\nEn rémission complète\nSpécier la sévérité actuelle :\nLéger : 1-3 accès hyperphagiques par semaine.\nMoyen : 4-7 accès hyperphagiques par semaine.\nGrave : 8-13 accès hyperphagiques par semaine.\nExtrême : ≥ 14 accès hyperphagiques par semaine.\nSources : APA (2015), p. 412 ; APA (2004), p. 704.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\n• les comportements compensatoires font suite à l’ingestion\nd’une petite quantité de nourriture.\nCompte tenu des modications apportées par le DSM-5, le\nprol des personnes correspondant à cette catégorie est proba-\nblement appelé à changer.\n31.4.5 Autres troubles de l’alimentation\nDans le processus de révision des critères et des catégories dia-\ngnostiques pour le DSM-5, les experts se sont entendus pour\nplacer les troubles traditionnellement situés dans la catégorie\nsurvenant durant l’enfance plutôt dans la catégorie générale des\ntroubles alimentaires.\nPica\nHippocrate fut le premier à faire une description écrite de ce\ntrouble. Pica pica est le nom latin de la pie, un oiseau qui aurait\nun appétit indiérencié. Le syndrome du pica implique l’ingestion\nrépétée de substances non nutritives et qui ne sont pas considérées\n",
+  "raw_text_sha256": "29f580b7699cce0087e0a5984402239c430fe43051aa03cbcc20d045eaec8b10",
+  "source_page_display": 722,
+  "source_page_index": 721
+}

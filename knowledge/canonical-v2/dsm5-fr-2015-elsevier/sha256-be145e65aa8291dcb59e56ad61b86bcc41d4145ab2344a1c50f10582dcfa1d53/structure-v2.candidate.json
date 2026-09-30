@@ -1,0 +1,875 @@
+{
+  "book_id": "dsm5-fr-2015-elsevier",
+  "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+  "ingestion_version": "canonical-v2.1",
+  "candidate_status": "review_required",
+  "canonical_promotion_authorized": false,
+  "base_structure_sha256": "0f6d84ad27e61961408064634b54a45ce5d2c0b2d7bbeaf3f336d4853af1e2b8",
+  "original_chapter_gaps": [
+    [
+      90,
+      91
+    ],
+    [
+      1008,
+      1009
+    ],
+    [
+      1142,
+      1142
+    ],
+    [
+      1147,
+      1147
+    ],
+    [
+      1175,
+      1175
+    ],
+    [
+      1193,
+      1193
+    ],
+    [
+      1219,
+      1219
+    ]
+  ],
+  "parts": [
+    {
+      "chapters": [
+        {
+          "printed_start": "v",
+          "title": "Traduction française du DSM-5"
+        }
+      ],
+      "part": "Avant-matière",
+      "printed_end": "lvii"
+    },
+    {
+      "chapters": [
+        {
+          "idx_end": 79,
+          "idx_start": 62,
+          "printed_end": "20",
+          "printed_start": "3",
+          "title": "Introduction"
+        },
+        {
+          "idx_end": 87,
+          "idx_start": 80,
+          "printed_end": "28",
+          "printed_start": "21",
+          "title": "Utilisation du manuel"
+        },
+        {
+          "idx_end": 89,
+          "idx_start": 88,
+          "printed_end": "30",
+          "printed_start": "29",
+          "title": "Mise en garde pour l'usage médico-légal du DSM-5"
+        }
+      ],
+      "part": "Section I — Les fondements du DSM-5"
+    },
+    {
+      "chapters": [
+        {
+          "idx_end": 167,
+          "idx_start": 92,
+          "printed_end": "108",
+          "printed_start": "33",
+          "title": "Troubles neurodéveloppementaux"
+        },
+        {
+          "idx_end": 215,
+          "idx_start": 168,
+          "printed_end": "156",
+          "printed_start": "109",
+          "title": "Spectre de la schizophrénie et autres troubles psychotiques"
+        },
+        {
+          "idx_end": 251,
+          "idx_start": 216,
+          "printed_end": "192",
+          "printed_start": "157",
+          "title": "Troubles bipolaires et apparentés"
+        },
+        {
+          "idx_end": 295,
+          "idx_start": 252,
+          "printed_end": "236",
+          "printed_start": "193",
+          "title": "Troubles dépressifs"
+        },
+        {
+          "idx_end": 357,
+          "idx_start": 296,
+          "printed_end": "298",
+          "printed_start": "237",
+          "title": "Troubles anxieux"
+        },
+        {
+          "idx_end": 401,
+          "idx_start": 358,
+          "printed_end": "342",
+          "printed_start": "299",
+          "title": "Troubles obsessionnels-compulsifs et apparentés"
+        },
+        {
+          "idx_end": 437,
+          "idx_start": 402,
+          "printed_end": "378",
+          "printed_start": "343",
+          "title": "Troubles liés à des traumatismes ou à des facteurs de stress"
+        },
+        {
+          "idx_end": 461,
+          "idx_start": 438,
+          "printed_end": "402",
+          "printed_start": "379",
+          "title": "Troubles dissociatifs"
+        },
+        {
+          "idx_end": 487,
+          "idx_start": 462,
+          "printed_end": "428",
+          "printed_start": "403",
+          "title": "Troubles à symptomatologie somatique et apparentés"
+        },
+        {
+          "idx_end": 521,
+          "idx_start": 488,
+          "printed_end": "462",
+          "printed_start": "429",
+          "title": "Troubles des conduites alimentaires et de l'ingestion d'aliments"
+        },
+        {
+          "idx_end": 529,
+          "idx_start": 522,
+          "printed_end": "470",
+          "printed_start": "463",
+          "title": "Troubles du contrôle sphinctérien"
+        },
+        {
+          "idx_end": 611,
+          "idx_start": 530,
+          "printed_end": "552",
+          "printed_start": "471",
+          "title": "Troubles de l'alternance veille-sommeil"
+        },
+        {
+          "idx_end": 651,
+          "idx_start": 612,
+          "printed_end": "592",
+          "printed_start": "553",
+          "title": "Dysfonctions sexuelles"
+        },
+        {
+          "idx_end": 663,
+          "idx_start": 652,
+          "printed_end": "604",
+          "printed_start": "593",
+          "title": "Dysphorie de genre"
+        },
+        {
+          "idx_end": 689,
+          "idx_start": 664,
+          "printed_end": "630",
+          "printed_start": "605",
+          "title": "Troubles disruptifs, du contrôle des impulsions et des conduites"
+        },
+        {
+          "idx_end": 833,
+          "idx_start": 690,
+          "printed_end": "774",
+          "printed_start": "631",
+          "title": "Troubles liés à une substance et troubles addictifs"
+        },
+        {
+          "idx_end": 899,
+          "idx_start": 834,
+          "printed_end": "840",
+          "printed_start": "775",
+          "title": "Troubles neurocognitifs"
+        },
+        {
+          "idx_end": 949,
+          "idx_start": 900,
+          "printed_end": "890",
+          "printed_start": "841",
+          "title": "Troubles de la personnalité"
+        },
+        {
+          "idx_end": 979,
+          "idx_start": 950,
+          "printed_end": "920",
+          "printed_start": "891",
+          "title": "Troubles paraphiliques"
+        },
+        {
+          "idx_end": 981,
+          "idx_start": 980,
+          "printed_end": "922",
+          "printed_start": "921",
+          "title": "Autres troubles mentaux"
+        },
+        {
+          "idx_end": 991,
+          "idx_start": 982,
+          "printed_end": "932",
+          "printed_start": "923",
+          "title": "Troubles des mouvements et autres effets indésirables induits par un médicament"
+        },
+        {
+          "idx_end": 1007,
+          "idx_start": 992,
+          "printed_end": "948",
+          "printed_start": "933",
+          "title": "Autres situations pouvant faire l'objet d'un examen clinique"
+        }
+      ],
+      "part": "Section II — Critères diagnostiques et codes"
+    },
+    {
+      "chapters": [
+        {
+          "idx_end": 1029,
+          "idx_start": 1010,
+          "printed_end": "970",
+          "printed_start": "951",
+          "title": "Mesures d'évaluation"
+        },
+        {
+          "idx_end": 1043,
+          "idx_start": 1030,
+          "printed_end": "984",
+          "printed_start": "971",
+          "title": "Formulation culturelle"
+        },
+        {
+          "idx_end": 1069,
+          "idx_start": 1044,
+          "printed_end": "1010",
+          "printed_start": "985",
+          "title": "Modèle alternatif pour les troubles de la personnalité du DSM-5"
+        },
+        {
+          "idx_end": 1103,
+          "idx_start": 1070,
+          "printed_end": "1044",
+          "printed_start": "1011",
+          "title": "Affections proposées pour des études supplémentaires"
+        }
+      ],
+      "part": "Section III — Mesures et modèles émergents"
+    },
+    {
+      "chapters": [
+        {
+          "idx_end": 1115,
+          "idx_start": 1104,
+          "printed_end": "1056",
+          "printed_start": "1045",
+          "title": "Principaux changements entre le DSM-IV et le DSM-5"
+        },
+        {
+          "idx_end": 1135,
+          "idx_start": 1116,
+          "printed_end": "1076",
+          "printed_start": "1057",
+          "title": "Glossaire des termes techniques"
+        },
+        {
+          "idx_end": 1141,
+          "idx_start": 1136,
+          "printed_end": "1082",
+          "printed_start": "1077",
+          "title": "Glossaire des concepts culturels de détresse",
+          "warning": "printed pp.1078+1081 missing in working copy (blanked idx 1137/1140); ORIGINAL holds them"
+        },
+        {
+          "idx_end": 1146,
+          "idx_start": 1143,
+          "printed_end": "1087",
+          "printed_start": "1084",
+          "title": "Références du glossaire culturel"
+        },
+        {
+          "idx_end": 1174,
+          "idx_start": 1148,
+          "printed_end": "1115",
+          "printed_start": "1089",
+          "title": "Liste alphabétique des diagnostics et codes (CIM-9-MC et CIM-10-MC)"
+        },
+        {
+          "idx_end": 1192,
+          "idx_start": 1176,
+          "printed_end": "1133",
+          "printed_start": "1117",
+          "title": "Liste numérique des diagnostics et codes (CIM-9-MC)"
+        },
+        {
+          "idx_end": 1218,
+          "idx_start": 1194,
+          "printed_end": "1159",
+          "printed_start": "1135",
+          "title": "Liste numérique des diagnostics et codes (CIM-10-MC)"
+        },
+        {
+          "idx_end": 1243,
+          "idx_start": 1220,
+          "printed_end": "1184",
+          "printed_start": "1161",
+          "title": "Conseillers et autres contributeurs du DSM-5"
+        },
+        {
+          "idx_end": 1275,
+          "idx_start": 1244,
+          "printed_end": "1216",
+          "printed_start": "1185",
+          "title": "Index"
+        }
+      ],
+      "part": "Annexes"
+    }
+  ],
+  "page_ranges": [
+    {
+      "id": "front-matter",
+      "source_page_start": 1,
+      "source_page_end": 59,
+      "kind": "front_matter",
+      "title": "Avant-mati?re",
+      "mapping_status": "mixed_from_pages_map",
+      "evidence": {
+        "page_map_status_counts": {
+          "certain": 51,
+          "uncertain": 8
+        },
+        "audit_kind_counts": {
+          "blank": 1,
+          "front_matter": 58
+        }
+      }
+    },
+    {
+      "id": "section-intro-I",
+      "source_page_start": 60,
+      "source_page_end": 61,
+      "kind": "section_intro",
+      "title": "SECTION I ? Les fondements du DSM-5",
+      "mapping_status": "source_text_verified",
+      "evidence": {
+        "first_lines": {
+          "60": [
+            "SECTION I",
+            "Les fondements du DSM-5",
+            "Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
+          ],
+          "61": [
+            "Cette section a pour but de donner au lecteur des informations simples sur les objec-",
+            "tifs, l’architecture, le contenu et l’utilisation du DSM-5. Elle n’a pas pour ambition de",
+            "relater de façon exhaustive l’évolution du DSM-5 ; elle souhaite plutôt offrir une vue"
+          ]
+        }
+      }
+    },
+    {
+      "source_page_start": 62,
+      "source_page_end": 79,
+      "kind": "chapter",
+      "title": "Introduction",
+      "part": "Section I — Les fondements du DSM-5",
+      "printed_page_start": "3",
+      "printed_page_end": "20",
+      "mapping_status": "inherited_from_base"
+    },
+    {
+      "source_page_start": 80,
+      "source_page_end": 87,
+      "kind": "chapter",
+      "title": "Utilisation du manuel",
+      "part": "Section I — Les fondements du DSM-5",
+      "printed_page_start": "21",
+      "printed_page_end": "28",
+      "mapping_status": "inherited_from_base"
+    },
+    {
+      "source_page_start": 88,
+      "source_page_end": 89,
+      "kind": "chapter",
+      "title": "Mise en garde pour l'usage médico-légal du DSM-5",
+      "part": "Section I — Les fondements du DSM-5",
+      "printed_page_start": "29",
+      "printed_page_end": "30",
+      "mapping_status": "inherited_from_base"
+    },
+    {
+      "id": "section-intro-II",
+      "source_page_start": 90,
+      "source_page_end": 91,
+      "kind": "section_intro",
+      "title": "SECTION II ? Crit?res diagnostiques et codes",
+      "mapping_status": "source_text_verified",
+      "evidence": {
+        "first_lines": {
+          "90": [
+            "SECTION II",
+            "Critères diagnostiques et codes",
+            "Troubles neurodéveloppementaux. . . . . . . . . . . . . . . . . . . . . . . . . . ."
+          ],
+          "91": [
+            "Cette section contient les critères diagnostiques qui ont été approuvés pour un emploi",
+            "dans l’activité clinique habituelle, ainsi que les codes CIM-9-MC (les codes CIM-10 sont",
+            "indiqués entre parenthèses). Pour chaque trouble mental, les critères diagnostiques"
+          ]
+        }
+      }
+    },
+    {
+      "source_page_start": 92,
+      "source_page_end": 167,
+      "kind": "chapter",
+      "title": "Troubles neurodéveloppementaux",
+      "part": "Section II — Critères diagnostiques et codes",
+      "printed_page_start": "33",
+      "printed_page_end": "108",
+      "mapping_status": "inherited_from_base"
+    },
+    {
+      "source_page_start": 168,
+      "source_page_end": 215,
+      "kind": "chapter",
+      "title": "Spectre de la schizophrénie et autres troubles psychotiques",
+      "part": "Section II — Critères diagnostiques et codes",
+      "printed_page_start": "109",
+      "printed_page_end": "156",
+      "mapping_status": "inherited_from_base"
+    },
+    {
+      "source_page_start": 216,
+      "source_page_end": 251,
+      "kind": "chapter",
+      "title": "Troubles bipolaires et apparentés",
+      "part": "Section II — Critères diagnostiques et codes",
+      "printed_page_start": "157",
+      "printed_page_end": "192",
+      "mapping_status": "inherited_from_base"
+    },
+    {
+      "source_page_start": 252,
+      "source_page_end": 295,
+      "kind": "chapter",
+      "title": "Troubles dépressifs",
+      "part": "Section II — Critères diagnostiques et codes",
+      "printed_page_start": "193",
+      "printed_page_end": "236",
+      "mapping_status": "inherited_from_base"
+    },
+    {
+      "source_page_start": 296,
+      "source_page_end": 357,
+      "kind": "chapter",
+      "title": "Troubles anxieux",
+      "part": "Section II — Critères diagnostiques et codes",
+      "printed_page_start": "237",
+      "printed_page_end": "298",
+      "mapping_status": "inherited_from_base"
+    },
+    {
+      "source_page_start": 358,
+      "source_page_end": 401,
+      "kind": "chapter",
+      "title": "Troubles obsessionnels-compulsifs et apparentés",
+      "part": "Section II — Critères diagnostiques et codes",
+      "printed_page_start": "299",
+      "printed_page_end": "342",
+      "mapping_status": "inherited_from_base"
+    },
+    {
+      "source_page_start": 402,
+      "source_page_end": 437,
+      "kind": "chapter",
+      "title": "Troubles liés à des traumatismes ou à des facteurs de stress",
+      "part": "Section II — Critères diagnostiques et codes",
+      "printed_page_start": "343",
+      "printed_page_end": "378",
+      "mapping_status": "inherited_from_base"
+    },
+    {
+      "source_page_start": 438,
+      "source_page_end": 461,
+      "kind": "chapter",
+      "title": "Troubles dissociatifs",
+      "part": "Section II — Critères diagnostiques et codes",
+      "printed_page_start": "379",
+      "printed_page_end": "402",
+      "mapping_status": "inherited_from_base"
+    },
+    {
+      "source_page_start": 462,
+      "source_page_end": 487,
+      "kind": "chapter",
+      "title": "Troubles à symptomatologie somatique et apparentés",
+      "part": "Section II — Critères diagnostiques et codes",
+      "printed_page_start": "403",
+      "printed_page_end": "428",
+      "mapping_status": "inherited_from_base"
+    },
+    {
+      "source_page_start": 488,
+      "source_page_end": 521,
+      "kind": "chapter",
+      "title": "Troubles des conduites alimentaires et de l'ingestion d'aliments",
+      "part": "Section II — Critères diagnostiques et codes",
+      "printed_page_start": "429",
+      "printed_page_end": "462",
+      "mapping_status": "inherited_from_base"
+    },
+    {
+      "source_page_start": 522,
+      "source_page_end": 529,
+      "kind": "chapter",
+      "title": "Troubles du contrôle sphinctérien",
+      "part": "Section II — Critères diagnostiques et codes",
+      "printed_page_start": "463",
+      "printed_page_end": "470",
+      "mapping_status": "inherited_from_base"
+    },
+    {
+      "source_page_start": 530,
+      "source_page_end": 611,
+      "kind": "chapter",
+      "title": "Troubles de l'alternance veille-sommeil",
+      "part": "Section II — Critères diagnostiques et codes",
+      "printed_page_start": "471",
+      "printed_page_end": "552",
+      "mapping_status": "inherited_from_base"
+    },
+    {
+      "source_page_start": 612,
+      "source_page_end": 651,
+      "kind": "chapter",
+      "title": "Dysfonctions sexuelles",
+      "part": "Section II — Critères diagnostiques et codes",
+      "printed_page_start": "553",
+      "printed_page_end": "592",
+      "mapping_status": "inherited_from_base"
+    },
+    {
+      "source_page_start": 652,
+      "source_page_end": 663,
+      "kind": "chapter",
+      "title": "Dysphorie de genre",
+      "part": "Section II — Critères diagnostiques et codes",
+      "printed_page_start": "593",
+      "printed_page_end": "604",
+      "mapping_status": "inherited_from_base"
+    },
+    {
+      "source_page_start": 664,
+      "source_page_end": 689,
+      "kind": "chapter",
+      "title": "Troubles disruptifs, du contrôle des impulsions et des conduites",
+      "part": "Section II — Critères diagnostiques et codes",
+      "printed_page_start": "605",
+      "printed_page_end": "630",
+      "mapping_status": "inherited_from_base"
+    },
+    {
+      "source_page_start": 690,
+      "source_page_end": 833,
+      "kind": "chapter",
+      "title": "Troubles liés à une substance et troubles addictifs",
+      "part": "Section II — Critères diagnostiques et codes",
+      "printed_page_start": "631",
+      "printed_page_end": "774",
+      "mapping_status": "inherited_from_base"
+    },
+    {
+      "source_page_start": 834,
+      "source_page_end": 899,
+      "kind": "chapter",
+      "title": "Troubles neurocognitifs",
+      "part": "Section II — Critères diagnostiques et codes",
+      "printed_page_start": "775",
+      "printed_page_end": "840",
+      "mapping_status": "inherited_from_base"
+    },
+    {
+      "source_page_start": 900,
+      "source_page_end": 949,
+      "kind": "chapter",
+      "title": "Troubles de la personnalité",
+      "part": "Section II — Critères diagnostiques et codes",
+      "printed_page_start": "841",
+      "printed_page_end": "890",
+      "mapping_status": "inherited_from_base"
+    },
+    {
+      "source_page_start": 950,
+      "source_page_end": 979,
+      "kind": "chapter",
+      "title": "Troubles paraphiliques",
+      "part": "Section II — Critères diagnostiques et codes",
+      "printed_page_start": "891",
+      "printed_page_end": "920",
+      "mapping_status": "inherited_from_base"
+    },
+    {
+      "source_page_start": 980,
+      "source_page_end": 981,
+      "kind": "chapter",
+      "title": "Autres troubles mentaux",
+      "part": "Section II — Critères diagnostiques et codes",
+      "printed_page_start": "921",
+      "printed_page_end": "922",
+      "mapping_status": "inherited_from_base"
+    },
+    {
+      "source_page_start": 982,
+      "source_page_end": 991,
+      "kind": "chapter",
+      "title": "Troubles des mouvements et autres effets indésirables induits par un médicament",
+      "part": "Section II — Critères diagnostiques et codes",
+      "printed_page_start": "923",
+      "printed_page_end": "932",
+      "mapping_status": "inherited_from_base"
+    },
+    {
+      "source_page_start": 992,
+      "source_page_end": 1007,
+      "kind": "chapter",
+      "title": "Autres situations pouvant faire l'objet d'un examen clinique",
+      "part": "Section II — Critères diagnostiques et codes",
+      "printed_page_start": "933",
+      "printed_page_end": "948",
+      "mapping_status": "inherited_from_base"
+    },
+    {
+      "id": "section-intro-III",
+      "source_page_start": 1008,
+      "source_page_end": 1009,
+      "kind": "section_intro",
+      "title": "SECTION III ? Mesures et mod?les ?mergents",
+      "mapping_status": "source_text_verified",
+      "evidence": {
+        "first_lines": {
+          "1008": [
+            "SECTION III",
+            "Mesures et modèles émergents",
+            "Mesures d’évaluation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 951"
+          ],
+          "1009": [
+            "Cette section rassemble des outils et des techniques destinés à faciliter le processus",
+            "de prise de décision clinique, à comprendre le contexte culturel des troubles mentaux",
+            "et à identiier des diagnostics nouveaux proposés pour des études supplémentaires."
+          ]
+        }
+      }
+    },
+    {
+      "source_page_start": 1010,
+      "source_page_end": 1029,
+      "kind": "chapter",
+      "title": "Mesures d'évaluation",
+      "part": "Section III — Mesures et modèles émergents",
+      "printed_page_start": "951",
+      "printed_page_end": "970",
+      "mapping_status": "inherited_from_base"
+    },
+    {
+      "source_page_start": 1030,
+      "source_page_end": 1043,
+      "kind": "chapter",
+      "title": "Formulation culturelle",
+      "part": "Section III — Mesures et modèles émergents",
+      "printed_page_start": "971",
+      "printed_page_end": "984",
+      "mapping_status": "inherited_from_base"
+    },
+    {
+      "source_page_start": 1044,
+      "source_page_end": 1069,
+      "kind": "chapter",
+      "title": "Modèle alternatif pour les troubles de la personnalité du DSM-5",
+      "part": "Section III — Mesures et modèles émergents",
+      "printed_page_start": "985",
+      "printed_page_end": "1010",
+      "mapping_status": "inherited_from_base"
+    },
+    {
+      "source_page_start": 1070,
+      "source_page_end": 1103,
+      "kind": "chapter",
+      "title": "Affections proposées pour des études supplémentaires",
+      "part": "Section III — Mesures et modèles émergents",
+      "printed_page_start": "1011",
+      "printed_page_end": "1044",
+      "mapping_status": "inherited_from_base"
+    },
+    {
+      "source_page_start": 1104,
+      "source_page_end": 1115,
+      "kind": "chapter",
+      "title": "Principaux changements entre le DSM-IV et le DSM-5",
+      "part": "Annexes",
+      "printed_page_start": "1045",
+      "printed_page_end": "1056",
+      "mapping_status": "inherited_from_base"
+    },
+    {
+      "source_page_start": 1116,
+      "source_page_end": 1135,
+      "kind": "chapter",
+      "title": "Glossaire des termes techniques",
+      "part": "Annexes",
+      "printed_page_start": "1057",
+      "printed_page_end": "1076",
+      "mapping_status": "inherited_from_base"
+    },
+    {
+      "source_page_start": 1136,
+      "source_page_end": 1141,
+      "kind": "chapter",
+      "title": "Glossaire des concepts culturels de détresse",
+      "part": "Annexes",
+      "printed_page_start": "1077",
+      "printed_page_end": "1082",
+      "mapping_status": "inherited_from_base"
+    },
+    {
+      "id": "glossary-continuation-1083",
+      "source_page_start": 1142,
+      "source_page_end": 1142,
+      "kind": "section_continuation",
+      "title": "Glossaire des concepts culturels de d?tresse",
+      "mapping_status": "source_text_verified",
+      "evidence": {
+        "first_lines": [
+          "Glossaire des concepts culturels de détresse",
+          "1083",
+          "Les symptômes distinctifs du Taijin Kyōfu Shō se manifestent dans des contextes"
+        ]
+      }
+    },
+    {
+      "source_page_start": 1143,
+      "source_page_end": 1146,
+      "kind": "chapter",
+      "title": "Références du glossaire culturel",
+      "part": "Annexes",
+      "printed_page_start": "1084",
+      "printed_page_end": "1087",
+      "mapping_status": "inherited_from_base"
+    },
+    {
+      "id": "intentional-blank-1147",
+      "source_page_start": 1147,
+      "source_page_end": 1147,
+      "kind": "blank",
+      "title": "Page laiss?e en blanc intentionnellement",
+      "mapping_status": "source_text_verified",
+      "watermark_line_dropped": true
+    },
+    {
+      "source_page_start": 1148,
+      "source_page_end": 1174,
+      "kind": "chapter",
+      "title": "Liste alphabétique des diagnostics et codes (CIM-9-MC et CIM-10-MC)",
+      "part": "Annexes",
+      "printed_page_start": "1089",
+      "printed_page_end": "1115",
+      "mapping_status": "inherited_from_base"
+    },
+    {
+      "id": "intentional-blank-1175",
+      "source_page_start": 1175,
+      "source_page_end": 1175,
+      "kind": "blank",
+      "title": "Page laiss?e en blanc intentionnellement",
+      "mapping_status": "source_text_verified",
+      "watermark_line_dropped": true
+    },
+    {
+      "source_page_start": 1176,
+      "source_page_end": 1192,
+      "kind": "chapter",
+      "title": "Liste numérique des diagnostics et codes (CIM-9-MC)",
+      "part": "Annexes",
+      "printed_page_start": "1117",
+      "printed_page_end": "1133",
+      "mapping_status": "inherited_from_base"
+    },
+    {
+      "id": "intentional-blank-1193",
+      "source_page_start": 1193,
+      "source_page_end": 1193,
+      "kind": "blank",
+      "title": "Page laiss?e en blanc intentionnellement",
+      "mapping_status": "source_text_verified",
+      "watermark_line_dropped": true
+    },
+    {
+      "source_page_start": 1194,
+      "source_page_end": 1218,
+      "kind": "chapter",
+      "title": "Liste numérique des diagnostics et codes (CIM-10-MC)",
+      "part": "Annexes",
+      "printed_page_start": "1135",
+      "printed_page_end": "1159",
+      "mapping_status": "inherited_from_base"
+    },
+    {
+      "id": "intentional-blank-1219",
+      "source_page_start": 1219,
+      "source_page_end": 1219,
+      "kind": "blank",
+      "title": "Page laiss?e en blanc intentionnellement",
+      "mapping_status": "source_text_verified",
+      "watermark_line_dropped": true
+    },
+    {
+      "source_page_start": 1220,
+      "source_page_end": 1243,
+      "kind": "chapter",
+      "title": "Conseillers et autres contributeurs du DSM-5",
+      "part": "Annexes",
+      "printed_page_start": "1161",
+      "printed_page_end": "1184",
+      "mapping_status": "inherited_from_base"
+    },
+    {
+      "source_page_start": 1244,
+      "source_page_end": 1275,
+      "kind": "chapter",
+      "title": "Index",
+      "part": "Annexes",
+      "printed_page_start": "1185",
+      "printed_page_end": "1216",
+      "mapping_status": "inherited_from_base"
+    }
+  ],
+  "page_coverage": {
+    "source_page_start": 1,
+    "source_page_end": 1275,
+    "assigned_pages": 1275,
+    "missing_pages": [],
+    "overlap_pages": [],
+    "gaps_resolved_by_explicit_ranges": true
+  },
+  "provenance": {
+    "source": "Books/DSM-5_Manuel-diagnostique-et-statistique-des-troubles-mentaux.pdf",
+    "source_sha256": "be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+    "method": "original text-layer inspection with PyMuPDF; no OCR",
+    "chapter_ranges": "copied unchanged from base structure.json",
+    "special_ranges": "classified from source text and pages.map.json",
+    "watermark_line_dropped": true
+  },
+  "notes": [
+    "No chapter range was extended across a gap.",
+    "Section introductions, glossary continuation, front matter, and intentional blank pages are explicit non-chapter ranges.",
+    "Candidate does not modify canonical structure.json or authorize downstream merge."
+  ]
+}

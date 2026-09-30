@@ -1,0 +1,76 @@
+{
+  "block_sequence_sha256": "ae3d8e277b9fa4e16ceff7c31b91e36b257cf10abf1eaef83f8ec74bd44ffc53",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        180.42501831054688,
+        758.8693237304688
+      ],
+      "block_id": "page-1159-block-0001",
+      "order": 1,
+      "text": "F22\nFigures supplémentaires\n",
+      "text_sha256": "e501991c675a516ce44586282642b9507d1bcc18c13cb972f51bfdaacad24146"
+    },
+    {
+      "bbox": [
+        50.29999923706055,
+        41.002296447753906,
+        236.68801879882812,
+        53.320068359375
+      ],
+      "block_id": "page-1159-block-0002",
+      "order": 2,
+      "text": "FIGURE 41 Embryologie des organes génitaux\n",
+      "text_sha256": "5c456fca8ca61a9ec45054eeaad81babced2db8c1391c66b80710cc70e8664db"
+    },
+    {
+      "bbox": [
+        48.25,
+        577.4406127929688,
+        139.62049865722656,
+        586.1749877929688
+      ],
+      "block_id": "page-1159-block-0003",
+      "order": 3,
+      "text": "TDF = Testis Determining Factor\n",
+      "text_sha256": "efc96a6357fdd0afe67241c056d652d4af77518f37a7850aa6cfe1a09f373a46"
+    },
+    {
+      "bbox": [
+        48.25,
+        590.4406127929688,
+        186.8919219970703,
+        599.1749877929688
+      ],
+      "block_id": "page-1159-block-0004",
+      "order": 4,
+      "text": "SRY = Sex-determining Region of Y chromosome\n",
+      "text_sha256": "ecd6aca6d23676f9e1179442ca677e3d5ce1b51f1a101b6f224fa86c70451fbe"
+    },
+    {
+      "bbox": [
+        48.25,
+        603.4406127929688,
+        301.5406188964844,
+        612.308837890625
+      ],
+      "block_id": "page-1159-block-0005",
+      "order": 5,
+      "text": "Source : Adapté de Marieb, E. N. (1993). Anatomie et physiologie humaines, ERPI, p. 996.\n",
+      "text_sha256": "a8bcc7151d83dca827e9770aca43919f76fcad4389a1ee60f522240b497dc624"
+    }
+  ],
+  "coordinates_sha256": "30c9a94fa097b6a5e2b9148b37b9e57a319cb7ff405ce2cb3afa11bba85fda44",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1159",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "F22\nFigures supplémentaires\nFIGURE 41 Embryologie des organes génitaux\nTDF = Testis Determining Factor\nSRY = Sex-determining Region of Y chromosome\nSource : Adapté de Marieb, E. N. (1993). Anatomie et physiologie humaines, ERPI, p. 996.\n",
+  "raw_text_sha256": "340859f5251742e676bd6c4cef5d4ee9ab4e557949fb08c28f2d1ffb4c2f22c3",
+  "source_page_display": 1160,
+  "source_page_index": 1159
+}

@@ -1,0 +1,88 @@
+{
+  "block_sequence_sha256": "f1d3dfbb8735b659dbcf17d0c7491479eded89cd93d2826ad4f67a8fe5919112",
+  "blocks": [
+    {
+      "bbox": [
+        341.95001220703125,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0022-block-0001",
+      "order": 1,
+      "text": "Chapitre 1\nPsychiatrie bio-psycho-sociale\n5\n",
+      "text_sha256": "5715d90eaf62a53f8e42495fb6d2a9fc35d87d55a66870c52d441b96d203f151"
+    },
+    {
+      "bbox": [
+        56.400001525878906,
+        41.002296447753906,
+        208.9212646484375,
+        53.320068359375
+      ],
+      "block_id": "page-0022-block-0002",
+      "order": 2,
+      "text": "FIGURE 1.2 Modèle bio-psycho-social\n",
+      "text_sha256": "68e9d1982cbd6319a25630328a4d9da5f15a81ef282800f22198dcfbabc26f9a"
+    },
+    {
+      "bbox": [
+        54.0,
+        528.4658203125,
+        297.2176208496094,
+        678.8585205078125
+      ],
+      "block_id": "page-0022-block-0003",
+      "order": 3,
+      "text": "biologique incontestable, condition nécessaire à l’éclosion de la\npathologie. Un polymorphisme génétique est à la base de diverses\nmaladies mentales qui sont maintenant comprises comme des\ntroubles neurodéveloppementaux, qu’il s’agisse de la schizophré-\nnie, des troubles aectifs, du trouble du décit de l’attention/\nhyperactivité (TDA/H), de l’autisme et même de ce qu’on appelait\nautrefois les névroses, comme le trouble obsessionnel-compulsif\net les troubles anxieux. Néanmoins, il n’existe pas encore de\n« marqueurs biologiques » ables et surtout spéciques, capables\nd’orienter à coup sûr le diagnostic et le traitement. Le diagnostic\npsychiatrique reste encore essentiellement basé sur un examen\nclinique attentif où le ranement de l’observation des signes\net symptômes fonde les conclusions du médecin (chapitre 3).\n",
+      "text_sha256": "becfc84d85cfd5502e0df23164137aabc218c918de055f8613440eb20cc52ec7"
+    },
+    {
+      "bbox": [
+        54.0,
+        680.0158081054688,
+        297.1591796875,
+        725.45849609375
+      ],
+      "block_id": "page-0022-block-0004",
+      "order": 4,
+      "text": "On espère, un jour, arriver à spécifier des anomalies\nbiologiques pour préciser les diagnostics, car les tests dont on\ndispose actuellement ne sont pas susamment spéciques.\nDepuis quelques années, des recherches font appel aux techniques\n",
+      "text_sha256": "9c4106a7eaf4e039a77247d6f06aee613821a12320f88fff7b4e8ca74296ab23"
+    },
+    {
+      "bbox": [
+        312.0,
+        528.4658203125,
+        555.2172241210938,
+        573.8585205078125
+      ],
+      "block_id": "page-0022-block-0005",
+      "order": 5,
+      "text": "de neuro-imagerie (chapitre 7) et aux méthodes protéomiques\net génomiques (chapitre 5) pour identier des biomarqueurs qui\nrevêtent un grand intérêt en psychiatrie et en neurologie (Kalia &\nCosta e Silva, 2015 ; Razafsha & al., 2015).\n",
+      "text_sha256": "f96bc2bd21c38824b706e3265b94c8418aecc22c2259d5b2b74275c7adb9a271"
+    },
+    {
+      "bbox": [
+        312.0,
+        575.0158081054688,
+        555.0740966796875,
+        725.45849609375
+      ],
+      "block_id": "page-0022-block-0006",
+      "order": 6,
+      "text": "Les maladies qui ont surtout été étudiées sont :\n• les démences (p. ex., maladie d’Alzheimer) ;\n• la schizophrénie ;\n• les troubles de l’humeur (dépression majeure, trouble bipolaire,\nsuicidalité) ;\n• les troubles liés à l’utilisation de substances (dépendances) ;\n• le TDA/H.\nCes biomarqueurs ont le potentiel d’être à l’origine de tests\ncliniques pour :\n• détecter la présence d’une maladie avant même qu’elle ne\nmanifeste ses eets (identier les individus à risque de déve-\nlopper la maladie) ;\n",
+      "text_sha256": "16e34e1bce173c98bc2dee2e307a253934c63dd6d4f48e74280e79a20ac2b68b"
+    }
+  ],
+  "coordinates_sha256": "e06383fdbde84bfdb91fd233be052ec4af58b49966e7342792cc0a9bd001df17",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0022",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 1\nPsychiatrie bio-psycho-sociale\n5\nFIGURE 1.2 Modèle bio-psycho-social\nbiologique incontestable, condition nécessaire à l’éclosion de la\npathologie. Un polymorphisme génétique est à la base de diverses\nmaladies mentales qui sont maintenant comprises comme des\ntroubles neurodéveloppementaux, qu’il s’agisse de la schizophré-\nnie, des troubles aectifs, du trouble du décit de l’attention/\nhyperactivité (TDA/H), de l’autisme et même de ce qu’on appelait\nautrefois les névroses, comme le trouble obsessionnel-compulsif\net les troubles anxieux. Néanmoins, il n’existe pas encore de\n« marqueurs biologiques » ables et surtout spéciques, capables\nd’orienter à coup sûr le diagnostic et le traitement. Le diagnostic\npsychiatrique reste encore essentiellement basé sur un examen\nclinique attentif où le ranement de l’observation des signes\net symptômes fonde les conclusions du médecin (chapitre 3).\nOn espère, un jour, arriver à spécifier des anomalies\nbiologiques pour préciser les diagnostics, car les tests dont on\ndispose actuellement ne sont pas susamment spéciques.\nDepuis quelques années, des recherches font appel aux techniques\nde neuro-imagerie (chapitre 7) et aux méthodes protéomiques\net génomiques (chapitre 5) pour identier des biomarqueurs qui\nrevêtent un grand intérêt en psychiatrie et en neurologie (Kalia &\nCosta e Silva, 2015 ; Razafsha & al., 2015).\nLes maladies qui ont surtout été étudiées sont :\n• les démences (p. ex., maladie d’Alzheimer) ;\n• la schizophrénie ;\n• les troubles de l’humeur (dépression majeure, trouble bipolaire,\nsuicidalité) ;\n• les troubles liés à l’utilisation de substances (dépendances) ;\n• le TDA/H.\nCes biomarqueurs ont le potentiel d’être à l’origine de tests\ncliniques pour :\n• détecter la présence d’une maladie avant même qu’elle ne\nmanifeste ses eets (identier les individus à risque de déve-\nlopper la maladie) ;\n",
+  "raw_text_sha256": "4e39ad28c582529b5180b68197d3192cc7ce869433f57811b1903609bd46d98d",
+  "source_page_display": 23,
+  "source_page_index": 22
+}

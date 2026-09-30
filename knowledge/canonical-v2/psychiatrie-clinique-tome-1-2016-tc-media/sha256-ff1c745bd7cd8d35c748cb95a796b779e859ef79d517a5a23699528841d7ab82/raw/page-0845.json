@@ -1,0 +1,256 @@
+{
+  "block_sequence_sha256": "b1b6b4b793d0f94c23b17e18186c593e38819301f3bffca161fd775e44df1dd3",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0845-block-0001",
+      "order": 1,
+      "text": "828\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "bb42d8dcbce482c227aeee8acb9780c6f2bf975f6fe83a3de26a67e26d533940"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.7744140625,
+        547.010009765625,
+        115.697265625
+      ],
+      "block_id": "page-0845-block-0002",
+      "order": 2,
+      "text": "36B.2 Usage problématique de l’Internet............................845\n36B.2.1\nÉpidémiologie ................................................ 846\n36B.2.2\nÉtiologies......................................................... 846\n36B.2.3\nDescription clinique..................................... 846\n36B.2.4\nComorbidités ................................................. 847\n36B.2.5\nTraitements .................................................... 847\n",
+      "text_sha256": "268380ded39dec5b803468e8a66057cc228d6d050fa1634bba887355dd34ff93"
+    },
+    {
+      "bbox": [
+        306.0,
+        120.67442321777344,
+        547.010009765625,
+        208.51817321777344
+      ],
+      "block_id": "page-0845-block-0003",
+      "order": 3,
+      "text": "36B.3 Achat compulsif........................................................... 847\n36B.3.1\nÉpidémiologie ................................................ 847\n36B.3.2\nDescription clinique..................................... 847\n36B.3.3\nComorbidités ................................................. 848\n36B.3.4\nÉvaluation et diagnostic diérentiel.......... 848\n36B.3.5\nTraitements .................................................... 848\nLectures complémentaires....................................................... 848\n",
+      "text_sha256": "38ca55c4e0b9d9e3d030479dd969c878a5f2f8be53776eb4496e6f48149f4687"
+    },
+    {
+      "bbox": [
+        45.900001525878906,
+        292.99444580078125,
+        65.20710754394531,
+        339.82550048828125
+      ],
+      "block_id": "page-0845-block-0004",
+      "order": 4,
+      "text": "L\n",
+      "text_sha256": "610fb9a67aa23c84d6c820f52dc2b6c3f8119e52e7dcb9dfc490127d38eb733c"
+    },
+    {
+      "bbox": [
+        48.0,
+        299.41015625,
+        291.37872314453125,
+        390.3193359375
+      ],
+      "block_id": "page-0845-block-0005",
+      "order": 5,
+      "text": "a classication des troubles du contrôle des impulsions a\nfait l’objet de réaménagements majeurs entre le DSM-IV-TR\net le DSM-5 dans le but de regrouper les troubles qui se\nmanifestent par des comportements violant le droit d’autrui\n(p. ex., agressivité, violence, destruction de biens). Cette catégorie\ninclut désormais des comportements perturbateurs survenant\ndurant l’enfance et l’adolescence qui sont traités dans d’autres\nchapitres de ce manuel.\n",
+      "text_sha256": "916f155ac2c992f976b4bcf38ec02298239bb098fce5b6bbcbdd04879f5e03df"
+    },
+    {
+      "bbox": [
+        68.0,
+        396.47412109375,
+        270.8697509765625,
+        417.05029296875
+      ],
+      "block_id": "page-0845-block-0006",
+      "order": 6,
+      "text": "Le trouble disruptif avec dysrégulation émotionnelle est\nprésenté en détail au chapitre 19 (voir l’encadré 19.2).\n",
+      "text_sha256": "978ea58c9e292ee7a97478102b1d0e189bfcfce4576866fded9e4bbfce7bee61"
+    },
+    {
+      "bbox": [
+        68.0,
+        423.47412109375,
+        261.41973876953125,
+        444.05029296875
+      ],
+      "block_id": "page-0845-block-0007",
+      "order": 7,
+      "text": "Le trouble de la personnalité antisociale est présenté\nen détail au chapitre 40 (voir le tableau 40.11).\n",
+      "text_sha256": "62360f76bee6ce91c40d93f16c91cc2e649c928df0e69378e746eb92a843b4b8"
+    },
+    {
+      "bbox": [
+        68.0,
+        450.47412109375,
+        267.680419921875,
+        471.05029296875
+      ],
+      "block_id": "page-0845-block-0008",
+      "order": 8,
+      "text": "Le trouble oppositionnel avec provocation est présenté\nen détail au chapitre 60 (voir le tableau 60.3).\n",
+      "text_sha256": "41bb2b724ff896f3de84072b96913ee6a7b5930a394c2f234aa16934c64d3fe2"
+    },
+    {
+      "bbox": [
+        68.0,
+        477.47412109375,
+        270.11907958984375,
+        498.05029296875
+      ],
+      "block_id": "page-0845-block-0009",
+      "order": 9,
+      "text": "Le trouble des conduites est présenté en détail au dans\nle chapitre 60 (voir le tableau 60.4).\n",
+      "text_sha256": "3f14eb4f5825482dc91b45e7b22d43fab94d5143ec9f1a675f1cb87dbb497bea"
+    },
+    {
+      "bbox": [
+        48.0,
+        506.4658203125,
+        291.34375,
+        620.45849609375
+      ],
+      "block_id": "page-0845-block-0010",
+      "order": 10,
+      "text": "À l’inverse, les développements récents des neurosciences\ncliniques jetant une lumière nouvelle sur la physiopathologie de\ncertaines entités cliniques anciennement regroupées au sein des\ntroubles du contrôle des impulsions ont permis de les déplacer\ndans d’autres sections du DSM-5. À titre d’exemple, le jeu d’argent\npathologique, dont nous traitons pourtant dans ce chapitre, fait\ndésormais partie des dépendances comportementales traitées\ndans la section portant sur les toxicomanies dans le DSM-5.\nQuant à la trichotillomanie, elle est dorénavant répertoriée avec\nles troubles obsessionnels-compulsifs.\n",
+      "text_sha256": "83d979b8a2ec0d63427e0617398c79298ad6a6e7d0739bfbdb96a8defe36f432"
+    },
+    {
+      "bbox": [
+        56.900001525878906,
+        636.7431640625,
+        255.22364807128906,
+        673.6689453125
+      ],
+      "block_id": "page-0845-block-0011",
+      "order": 11,
+      "text": "Partie A\nTroubles du contrôle\ndes impulsions\n",
+      "text_sha256": "84c53400406f431bc6c533f1a671370a0ff2723dbdd5c214b292d2169068696d"
+    },
+    {
+      "bbox": [
+        48.0,
+        687.4658203125,
+        291.2059631347656,
+        709.45849609375
+      ],
+      "block_id": "page-0845-block-0012",
+      "order": 12,
+      "text": "Les troubles du contrôle des impulsions du DSM-5 englobent\nplusieurs entités cliniques plus ou moins disparates au contour\n",
+      "text_sha256": "cd2650627237edd518c10ca78a7bb94e9897403fc4ffdabc39c455989ffcf17a"
+    },
+    {
+      "bbox": [
+        306.0,
+        299.4658203125,
+        549.3021240234375,
+        355.95849609375
+      ],
+      "block_id": "page-0845-block-0013",
+      "order": 13,
+      "text": "physiopathologique unique ou imprécis, dont certaines forment\nle cœur de la section des troubles du contrôle des impulsions du\nDSM-5 (le trouble explosif intermittent [TEI], la kleptomanie et\nla pyromanie). Ce chapitre les aborde selon une logique sémio-\nlogique et physiopathologique.\n",
+      "text_sha256": "9fed8ec8653ea93c64e5161ab6ada6a89366a5e446cabdaa23bf46e4b405fe91"
+    },
+    {
+      "bbox": [
+        306.0,
+        356.9658203125,
+        549.1902465820312,
+        390.45849609375
+      ],
+      "block_id": "page-0845-block-0014",
+      "order": 14,
+      "text": "Comme plusieurs de ces troubles sont reliés à une interaction\navec certains neurotransmetteurs (dopamine, sérotonine, nora-\ndrénaline), la gure 36.1 schématise ces interrelations.\n",
+      "text_sha256": "281b75eb502c42bdc86eefefd77bccc3aceb78cd20e4281d29dee8bc708ffbd4"
+    },
+    {
+      "bbox": [
+        308.3000183105469,
+        447.55230712890625,
+        478.5737609863281,
+        459.8700866699219
+      ],
+      "block_id": "page-0845-block-0015",
+      "order": 15,
+      "text": "FIGURE 36.1 Rôle des neurotransmetteurs\n",
+      "text_sha256": "d1fbdb4bfe5420275358554805d843e9639060f6f7de55de003545cf61796c2a"
+    },
+    {
+      "bbox": [
+        358.5500183105469,
+        459.4023132324219,
+        506.3302917480469,
+        471.3700866699219
+      ],
+      "block_id": "page-0845-block-0016",
+      "order": 16,
+      "text": "dans certaines fonctions cérébrales\n",
+      "text_sha256": "fe0cfd73cd07b13ed0f5cc3edf798030a66b008fb048b066f1096c79de9ccbd9"
+    },
+    {
+      "bbox": [
+        306.25,
+        699.7906494140625,
+        463.4062194824219,
+        708.6588745117188
+      ],
+      "block_id": "page-0845-block-0017",
+      "order": 17,
+      "text": "Source : Adapté de Healy & McMonagle (1997), p. S27.\n",
+      "text_sha256": "c53e7f71d209f5dcd5a02c8d141f8b0846f8ca23b7eca3fa8e69908e167883f3"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.87441635131836,
+        289.010009765625,
+        128.79727172851562
+      ],
+      "block_id": "page-0845-block-0018",
+      "order": 18,
+      "text": "36A.5 Dermatillomanie ......................................................... 839\n36A.5.1\nÉpidémiologie................................................ 839\n36A.5.2\nÉtiologies........................................................ 839\n36A.5.3\nDescription clinique..................................... 839\n36A.5.4\nComorbidités................................................. 839\n36A.5.5\nÉvaluation et diagnostic diérentiel ......... 840\n36A.5.6\nTraitements.................................................... 840\n",
+      "text_sha256": "4c4b9c262a4c5dfd1f8d82c1e785f5fdfa23a5e2e0328c442bd8b0f8bbd35fcb"
+    },
+    {
+      "bbox": [
+        48.0,
+        138.01602172851562,
+        290.0,
+        148.95352172851562
+      ],
+      "block_id": "page-0845-block-0019",
+      "order": 19,
+      "text": "Partie B Dépendances comportementales..................840\n",
+      "text_sha256": "9144730d1b4c2e2928daaab3144186c9bd4c101ac4f652f251a351a33c424ab3"
+    },
+    {
+      "bbox": [
+        48.0,
+        153.7744140625,
+        289.010009765625,
+        254.697265625
+      ],
+      "block_id": "page-0845-block-0020",
+      "order": 20,
+      "text": "36B.1 Jeu d’argent pathologique .......................................... 840\n36B.1.1\nÉpidémiologie ................................................ 841\n36B.1.2\nÉtiologies......................................................... 842\n36B.1.3\nDescription clinique..................................... 843\n36B.1.4\nComorbidités ................................................. 844\n36B.1.5\nÉvaluation et diagnostic diérentiel.......... 844\n36B.1.6\nTraitements .................................................... 844\n36B.1.7\nÉvolution et pronostic.................................. 845\n",
+      "text_sha256": "c0d7bdcedbdce06a3b8e4b27475c1aefdb6c1455f73d11546326abdfab885f18"
+    }
+  ],
+  "coordinates_sha256": "313b6fb9d063e0a0400459012f90391a2ca7267656973fea9ea47b9ee0930ea6",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0845",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "828\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n36B.2 Usage problématique de l’Internet............................845\n36B.2.1\nÉpidémiologie ................................................ 846\n36B.2.2\nÉtiologies......................................................... 846\n36B.2.3\nDescription clinique..................................... 846\n36B.2.4\nComorbidités ................................................. 847\n36B.2.5\nTraitements .................................................... 847\n36B.3 Achat compulsif........................................................... 847\n36B.3.1\nÉpidémiologie ................................................ 847\n36B.3.2\nDescription clinique..................................... 847\n36B.3.3\nComorbidités ................................................. 848\n36B.3.4\nÉvaluation et diagnostic diérentiel.......... 848\n36B.3.5\nTraitements .................................................... 848\nLectures complémentaires....................................................... 848\nL\na classication des troubles du contrôle des impulsions a\nfait l’objet de réaménagements majeurs entre le DSM-IV-TR\net le DSM-5 dans le but de regrouper les troubles qui se\nmanifestent par des comportements violant le droit d’autrui\n(p. ex., agressivité, violence, destruction de biens). Cette catégorie\ninclut désormais des comportements perturbateurs survenant\ndurant l’enfance et l’adolescence qui sont traités dans d’autres\nchapitres de ce manuel.\nLe trouble disruptif avec dysrégulation émotionnelle est\nprésenté en détail au chapitre 19 (voir l’encadré 19.2).\nLe trouble de la personnalité antisociale est présenté\nen détail au chapitre 40 (voir le tableau 40.11).\nLe trouble oppositionnel avec provocation est présenté\nen détail au chapitre 60 (voir le tableau 60.3).\nLe trouble des conduites est présenté en détail au dans\nle chapitre 60 (voir le tableau 60.4).\nÀ l’inverse, les développements récents des neurosciences\ncliniques jetant une lumière nouvelle sur la physiopathologie de\ncertaines entités cliniques anciennement regroupées au sein des\ntroubles du contrôle des impulsions ont permis de les déplacer\ndans d’autres sections du DSM-5. À titre d’exemple, le jeu d’argent\npathologique, dont nous traitons pourtant dans ce chapitre, fait\ndésormais partie des dépendances comportementales traitées\ndans la section portant sur les toxicomanies dans le DSM-5.\nQuant à la trichotillomanie, elle est dorénavant répertoriée avec\nles troubles obsessionnels-compulsifs.\nPartie A\nTroubles du contrôle\ndes impulsions\nLes troubles du contrôle des impulsions du DSM-5 englobent\nplusieurs entités cliniques plus ou moins disparates au contour\nphysiopathologique unique ou imprécis, dont certaines forment\nle cœur de la section des troubles du contrôle des impulsions du\nDSM-5 (le trouble explosif intermittent [TEI], la kleptomanie et\nla pyromanie). Ce chapitre les aborde selon une logique sémio-\nlogique et physiopathologique.\nComme plusieurs de ces troubles sont reliés à une interaction\navec certains neurotransmetteurs (dopamine, sérotonine, nora-\ndrénaline), la gure 36.1 schématise ces interrelations.\nFIGURE 36.1 Rôle des neurotransmetteurs\ndans certaines fonctions cérébrales\nSource : Adapté de Healy & McMonagle (1997), p. S27.\n36A.5 Dermatillomanie ......................................................... 839\n36A.5.1\nÉpidémiologie................................................ 839\n36A.5.2\nÉtiologies........................................................ 839\n36A.5.3\nDescription clinique..................................... 839\n36A.5.4\nComorbidités................................................. 839\n36A.5.5\nÉvaluation et diagnostic diérentiel ......... 840\n36A.5.6\nTraitements.................................................... 840\nPartie B Dépendances comportementales..................840\n36B.1 Jeu d’argent pathologique .......................................... 840\n36B.1.1\nÉpidémiologie ................................................ 841\n36B.1.2\nÉtiologies......................................................... 842\n36B.1.3\nDescription clinique..................................... 843\n36B.1.4\nComorbidités ................................................. 844\n36B.1.5\nÉvaluation et diagnostic diérentiel.......... 844\n36B.1.6\nTraitements .................................................... 844\n36B.1.7\nÉvolution et pronostic.................................. 845\n",
+  "raw_text_sha256": "6c9b3d9504b000b3c8f177c2bc67a95fb649de2142747d20d53603b76409f61c",
+  "source_page_display": 846,
+  "source_page_index": 845
+}

@@ -1,0 +1,136 @@
+{
+  "block_sequence_sha256": "50fcac6e87378052e3193342d23a070fd011d111e697e2a7d9a8c30d6cbd1efd",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0583-block-0001",
+      "order": 1,
+      "text": "566\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "e9bff6199f3ef41133e768f9d27500a9988404024c0eedc97474f2e2d1da0bcf"
+    },
+    {
+      "bbox": [
+        50.45000076293945,
+        197.50230407714844,
+        252.3982696533203,
+        209.820068359375
+      ],
+      "block_id": "page-0583-block-0002",
+      "order": 2,
+      "text": "FIGURE 26.5 Points douloureux de la bromyalgie\n",
+      "text_sha256": "6d7d45d80488addd82d4770e49e8f8b1af84c700dc13ff6fc4a6382b3bd4afed"
+    },
+    {
+      "bbox": [
+        52.25,
+        61.80195617675781,
+        242.47604370117188,
+        103.62812805175781
+      ],
+      "block_id": "page-0583-block-0003",
+      "order": 3,
+      "text": "Notes\nLes facteurs psychologiques\nles plus féquents sont :\n– Détresse\n– Difcultés\n",
+      "text_sha256": "afca77bee07ace728802ea78f1be0451a76e05f9a1f280ac3f651b18ca5b6f17"
+    },
+    {
+      "bbox": [
+        152.35000610351562,
+        104.80195617675781,
+        200.7580108642578,
+        136.6281280517578
+      ],
+      "block_id": "page-0583-block-0004",
+      "order": 4,
+      "text": "relationnelles\n– Déni\n– Mauvaise\n",
+      "text_sha256": "48e80e8815a7cce6b14b81d65b969e5c4431ee0e52412d8054754c1d798b6826"
+    },
+    {
+      "bbox": [
+        156.5500030517578,
+        137.8019561767578,
+        244.54302978515625,
+        147.6281280517578
+      ],
+      "block_id": "page-0583-block-0005",
+      "order": 5,
+      "text": "observance des traitements\n",
+      "text_sha256": "a8aab0a888e5bfb51e987c5db73a3c45f60f9449532cd225a904c3443478b9ca"
+    },
+    {
+      "bbox": [
+        252.4499969482422,
+        61.80195617675781,
+        339.62213134765625,
+        82.62812805175781
+      ],
+      "block_id": "page-0583-block-0006",
+      "order": 6,
+      "text": "Spécier\nAvec douleur prédominante\n",
+      "text_sha256": "46a54f82e438dc1efb418689ab1816e0a0bbc14309cfe241771ac4ca46d9d863"
+    },
+    {
+      "bbox": [
+        352.5500183105469,
+        61.80195617675781,
+        432.7304992675781,
+        81.62812805175781
+      ],
+      "block_id": "page-0583-block-0007",
+      "order": 7,
+      "text": "Avec ou sans facteurs de\nstress psychologique\n",
+      "text_sha256": "91f7d08e96868999dfe87cee99b114c58e00bb1bcdbdb5a2f528481fd16e0948"
+    },
+    {
+      "bbox": [
+        452.6499938964844,
+        61.80195617675781,
+        532.0318603515625,
+        91.62812805175781
+      ],
+      "block_id": "page-0583-block-0008",
+      "order": 8,
+      "text": "La simulation n’est pas\nun diagnostic médical ou\npsychiatrique\n",
+      "text_sha256": "2b17e158fbbc1121156b3b57db571582c1c638d4ea7f16fcf9e8fcd96de9b100"
+    },
+    {
+      "bbox": [
+        48.25,
+        156.390625,
+        138.14016723632812,
+        165.2588653564453
+      ],
+      "block_id": "page-0583-block-0009",
+      "order": 9,
+      "text": "Source : Adapté de APA (2013).\n",
+      "text_sha256": "98569a7e527720666e2d5bca1d3d1f9bb76753515b7641025dea33f25d977dff"
+    },
+    {
+      "bbox": [
+        50.25,
+        41.05229568481445,
+        527.6842651367188,
+        53.37006759643555
+      ],
+      "block_id": "page-0583-block-0010",
+      "order": 10,
+      "text": "TABLEAU 26.7 Synthèse des principaux diagnostics de troubles à symptomatologie somatique selon le DSM-5(suite)\n",
+      "text_sha256": "886dae9d100972e5264087f6dc2a35c81440dd99db448d39d6b4100a72b70c71"
+    }
+  ],
+  "coordinates_sha256": "0d819a08eb97c7aba1949e10acc361b3ac14f43eddb572f667cbdde9bcd23b5c",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0583",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "566\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nFIGURE 26.5 Points douloureux de la bromyalgie\nNotes\nLes facteurs psychologiques\nles plus féquents sont :\n– Détresse\n– Difcultés\nrelationnelles\n– Déni\n– Mauvaise\nobservance des traitements\nSpécier\nAvec douleur prédominante\nAvec ou sans facteurs de\nstress psychologique\nLa simulation n’est pas\nun diagnostic médical ou\npsychiatrique\nSource : Adapté de APA (2013).\nTABLEAU 26.7 Synthèse des principaux diagnostics de troubles à symptomatologie somatique selon le DSM-5(suite)\n",
+  "raw_text_sha256": "ab7e8ce5c7370e480b7f5f4fd157054e43908b817d9b3dc96e4cc52ca47f5b03",
+  "source_page_display": 584,
+  "source_page_index": 583
+}

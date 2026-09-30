@@ -1,0 +1,88 @@
+{
+  "block_sequence_sha256": "c8be7b4d96d1c95da1e8a0754b1b6d947c8feca0aac039a67302d5f874e85de9",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0743-block-0001",
+      "order": 1,
+      "text": "726\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "00a5230dd8a4d37203c9264679da7bbb070acccc29ade8d89a88608e9f5d9a8c"
+    },
+    {
+      "bbox": [
+        48.0,
+        426.9658203125,
+        291.01751708984375,
+        506.45849609375
+      ],
+      "block_id": "page-0743-block-0002",
+      "order": 2,
+      "text": "diagnostic spécique dans le cas d’un trouble particulier. Ils\nn’enregistrent en général qu’un nombre limité de paramètres\nphysiologiques, avec une certaine inexibilité quant aux mon-\ntages et ltres utilisables. De plus, l’absence de personnel qualié,\nen l’occurrence d’un technicien diplômé en électrophysiologie\nmédicale, ne peut garantir la qualité de l’enregistrement et la\nsécurité du patient avec ces appareils portables.\n",
+      "text_sha256": "b9630a827c398514ebcacbe08e8f21939c778167f81fc1c2637b0ef889015235"
+    },
+    {
+      "bbox": [
+        48.0,
+        507.4658203125,
+        291.4171142578125,
+        725.45849609375
+      ],
+      "block_id": "page-0743-block-0003",
+      "order": 3,
+      "text": "Il est de plus en plus fréquent que les médecins reçoivent des\nrapports d’examen de la respiration au cours du sommeil pour\nleurs patients. Les capteurs suivants permettent de mesurer\nl’ensemble des variables nécessaires à l’évaluation du portrait\nclinique :\n• l’EEG, l’EOG et l’EMG sous-mentonnier pour la détermination\ndes stades du sommeil ; des électrodes EEG supplémentaires\npeuvent être ajoutées pour vérier la présence d’activité\népileptique ;\n• des sangles entourant le thorax et l’abdomen pour calculer\nl’eort respiratoire ;\n• des capteurs installés au niveau des narines et de la bouche\npour mesurer le ot respiratoire ;\n• un dispositif infrarouge installé habituellement au bout de\nl’index pour estimer de façon non invasive la saturation en\noxygène de l’hémoglobine au niveau des capillaires sanguins ;\n• des électrodes d’ECG pour mesurer le rythme cardiaque ;\n• un microphone pour enregistrer le ronement ;\n",
+      "text_sha256": "eca2a6d1190a12985346a193ff4583fdbf5225248dd5cdfa4bc92b7ef2150b74"
+    },
+    {
+      "bbox": [
+        50.25,
+        41.002296447753906,
+        222.9227752685547,
+        53.320068359375
+      ],
+      "block_id": "page-0743-block-0004",
+      "order": 4,
+      "text": "FIGURE 32.6 Modèle d’agenda de sommeil\n",
+      "text_sha256": "b9c03baf52af3cd49d22d3cc0db1f185edca628051d20bc4943faf47ca8da8c4"
+    },
+    {
+      "bbox": [
+        48.25,
+        386.890625,
+        524.0149536132812,
+        413.75885009765625
+      ],
+      "block_id": "page-0743-block-0005",
+      "order": 5,
+      "text": "Note : Ce modèle peut servir aux adultes et aux parents pour leur enfant. On leur remet une feuille modèle, telle qu’illustrée ici, accompagnée d’une (ou plusieurs) feuille\ndont aucune case n’est utilisée.\nSource : Roger Godbout, Ph. D., et Evelyne Martello, B. Sc., 2008.\n",
+      "text_sha256": "a4e59f635a43e57438dccccad082351245c6d03a849b8fe77946771ed2ec25f3"
+    },
+    {
+      "bbox": [
+        306.0,
+        426.9658203125,
+        549.1032104492188,
+        725.45849609375
+      ],
+      "block_id": "page-0743-block-0006",
+      "order": 6,
+      "text": "• des électrodes EMG de surface au niveau des muscles tibiaux\nantérieurs pour détecter la présence de mouvements pério-\ndiques des jambes au cours du sommeil ;\n• des électrodes EMG de surface au niveau des muscles mas-\nséters pour détecter la présence de bruxisme ;\n• un enregistrement audiovisuel doit toujours accompagner\nla PSG an de pouvoir s’assurer du bien-être du patient\net de pouvoir documenter des événements comportemen-\ntaux comme le somnambulisme, la somniloquie, les cau-\nchemars, les crises d’épilepsie de même que la position du\ndormeur au lit.\nLa gure 32.7 donne un exemple de rapport de PSG généré\nsuite à l’analyse automatisée d’un enregistrement nocturne avec\nun équipement ambulatoire. Les termes les plus importants\nsont surlignés en gris. Dans l’exemple, les signaux enregistrés\nse limitent :\n• à l’eort respiratoire ;\n• au ot respiratoire ;\n• à l’estimation de la saturation en oxygène artériel ;\n• au pouls ;\n• au ronement ;\n• à la position du corps.\nLe nombre total d’événements respiratoires est de 105, soit\n17,4 événements par heure d’enregistrement.\n",
+      "text_sha256": "19875bd75be074ee827ee513d17e843765273c94016cacbba918f30c295c161e"
+    }
+  ],
+  "coordinates_sha256": "23303ef5d80401cdf01f23f8f2df3c62c568d7d66d37316d8b7d00eddfc9b847",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0743",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "726\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\ndiagnostic spécique dans le cas d’un trouble particulier. Ils\nn’enregistrent en général qu’un nombre limité de paramètres\nphysiologiques, avec une certaine inexibilité quant aux mon-\ntages et ltres utilisables. De plus, l’absence de personnel qualié,\nen l’occurrence d’un technicien diplômé en électrophysiologie\nmédicale, ne peut garantir la qualité de l’enregistrement et la\nsécurité du patient avec ces appareils portables.\nIl est de plus en plus fréquent que les médecins reçoivent des\nrapports d’examen de la respiration au cours du sommeil pour\nleurs patients. Les capteurs suivants permettent de mesurer\nl’ensemble des variables nécessaires à l’évaluation du portrait\nclinique :\n• l’EEG, l’EOG et l’EMG sous-mentonnier pour la détermination\ndes stades du sommeil ; des électrodes EEG supplémentaires\npeuvent être ajoutées pour vérier la présence d’activité\népileptique ;\n• des sangles entourant le thorax et l’abdomen pour calculer\nl’eort respiratoire ;\n• des capteurs installés au niveau des narines et de la bouche\npour mesurer le ot respiratoire ;\n• un dispositif infrarouge installé habituellement au bout de\nl’index pour estimer de façon non invasive la saturation en\noxygène de l’hémoglobine au niveau des capillaires sanguins ;\n• des électrodes d’ECG pour mesurer le rythme cardiaque ;\n• un microphone pour enregistrer le ronement ;\nFIGURE 32.6 Modèle d’agenda de sommeil\nNote : Ce modèle peut servir aux adultes et aux parents pour leur enfant. On leur remet une feuille modèle, telle qu’illustrée ici, accompagnée d’une (ou plusieurs) feuille\ndont aucune case n’est utilisée.\nSource : Roger Godbout, Ph. D., et Evelyne Martello, B. Sc., 2008.\n• des électrodes EMG de surface au niveau des muscles tibiaux\nantérieurs pour détecter la présence de mouvements pério-\ndiques des jambes au cours du sommeil ;\n• des électrodes EMG de surface au niveau des muscles mas-\nséters pour détecter la présence de bruxisme ;\n• un enregistrement audiovisuel doit toujours accompagner\nla PSG an de pouvoir s’assurer du bien-être du patient\net de pouvoir documenter des événements comportemen-\ntaux comme le somnambulisme, la somniloquie, les cau-\nchemars, les crises d’épilepsie de même que la position du\ndormeur au lit.\nLa gure 32.7 donne un exemple de rapport de PSG généré\nsuite à l’analyse automatisée d’un enregistrement nocturne avec\nun équipement ambulatoire. Les termes les plus importants\nsont surlignés en gris. Dans l’exemple, les signaux enregistrés\nse limitent :\n• à l’eort respiratoire ;\n• au ot respiratoire ;\n• à l’estimation de la saturation en oxygène artériel ;\n• au pouls ;\n• au ronement ;\n• à la position du corps.\nLe nombre total d’événements respiratoires est de 105, soit\n17,4 événements par heure d’enregistrement.\n",
+  "raw_text_sha256": "bfc9e54c1d5bb2837a0dc25039e0d4487b34740f9df7d8e409fa998e8e5ca644",
+  "source_page_display": 744,
+  "source_page_index": 743
+}

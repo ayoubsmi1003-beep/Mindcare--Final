@@ -1,0 +1,172 @@
+{
+  "block_sequence_sha256": "bff6a4ec56781bca1231e03e4ccf26d8afd9c7e435fd053c0a21f7b2bb8d2452",
+  "blocks": [
+    {
+      "bbox": [
+        256.25,
+        4.981056213378906,
+        554.1500244140625,
+        124.98104858398438
+      ],
+      "block_id": "page-1037-block-0001",
+      "order": 1,
+      "text": "CHAPITRE45\n",
+      "text_sha256": "57403aabb44ca685e27df9ec260976d49852e4e879fa8787efdf8f4dea12273f"
+    },
+    {
+      "bbox": [
+        48.0,
+        293.5573425292969,
+        290.97998046875,
+        355.1938171386719
+      ],
+      "block_id": "page-1037-block-0002",
+      "order": 2,
+      "text": "Luigi De Benedictis, M.D.,FRCPC, AKC, M. Sc.(sciences biomédicales;\nmental health service and population research )\nPsychiatre, Institut universitaire en santé mentale de Montréal\nProfesseur adjoint de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\n",
+      "text_sha256": "5651723e5c449007f4aab73e17b6cfbb5613597579ef9e95b63a5094d11a6a13"
+    },
+    {
+      "bbox": [
+        48.0,
+        364.5573425292969,
+        280.9590148925781,
+        415.1938171386719
+      ],
+      "block_id": "page-1037-block-0003",
+      "order": 3,
+      "text": "Alexandre Dumais, M.D., FRCPC, Ph. D. (sciences biomédicales)\nPsychiatre, Institut Philippe-Pinel de Montréal\nProfesseur adjoint de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\n",
+      "text_sha256": "a5bb495cd38fd42fa382e083090017c49447d802a8d48f02cbf799782e895142"
+    },
+    {
+      "bbox": [
+        306.0,
+        293.5573425292969,
+        549.1973876953125,
+        355.1938171386719
+      ],
+      "block_id": "page-1037-block-0004",
+      "order": 4,
+      "text": "Alain D. Lesage, M.D., FRCPC, M. Phil. (épidémiologie et évaluation)\nPsychiatre, Centre de recherche de l’Institut universitaire en\nsanté mentale de Montréal\nProfesseur titulaire, Département de psychiatrie, Faculté de\nmédecine, Université de Montréal\n",
+      "text_sha256": "b55b6de802d08d703f85fab4b77f3a1f7ce9f03965d51499eaf0313befd014b0"
+    },
+    {
+      "bbox": [
+        306.0,
+        364.0573425292969,
+        527.9392700195312,
+        414.6938171386719
+      ],
+      "block_id": "page-1037-block-0005",
+      "order": 5,
+      "text": "Jean-Luc Dubreucq, M.D., FRCPC\nPsychiatre, Institut Philippe-Pinel de Montréal\nProfesseur agrégé de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\n",
+      "text_sha256": "e6e1cfe26f3e3e9c78d83a8a1d07ee83d44931ad8abc546ce04fe174865ee38b"
+    },
+    {
+      "bbox": [
+        48.0,
+        479.97442626953125,
+        290.97998046875,
+        489.81817626953125
+      ],
+      "block_id": "page-1037-block-0006",
+      "order": 6,
+      "text": "45.1 Inuence historique .....................................................1021\n",
+      "text_sha256": "bec7702af5d7b601d512432116142e7e4a4a6a3c6613ef2914aa80376be8c3b0"
+    },
+    {
+      "bbox": [
+        48.0,
+        493.97442626953125,
+        290.97998046875,
+        513.8181762695312
+      ],
+      "block_id": "page-1037-block-0007",
+      "order": 7,
+      "text": "45.2 Dénition de la maladie sévère\net persistante .................................................................1022\n",
+      "text_sha256": "397bbcc3d4947847eebc4a07c6f838f823ac697563ff8ad066e6de29c82056ea"
+    },
+    {
+      "bbox": [
+        48.0,
+        517.9744262695312,
+        290.97998046875,
+        527.8181762695312
+      ],
+      "block_id": "page-1037-block-0008",
+      "order": 8,
+      "text": "45.3 Épidémiologie ...............................................................1023\n",
+      "text_sha256": "e6c149dca52d44c9c3651776f3aed703e1b85555e70999b6f160d2cfc697feb9"
+    },
+    {
+      "bbox": [
+        48.0,
+        531.9744262695312,
+        290.97998046875,
+        541.8181762695312
+      ],
+      "block_id": "page-1037-block-0009",
+      "order": 9,
+      "text": "45.4 Étiologie.........................................................................1024\n",
+      "text_sha256": "7955dbd980fc60c95f4c04b56e686949bc6e52ccf50d842741d5ec3f9076d812"
+    },
+    {
+      "bbox": [
+        48.0,
+        545.9744262695312,
+        291.02203369140625,
+        579.8972778320312
+      ],
+      "block_id": "page-1037-block-0010",
+      "order": 10,
+      "text": "45.5 Dés actuels...................................................................1026\n45.5.1 Milieu de vie et itinérance..................................1026\n45.5.2 Dés cliniques ......................................................1027\n",
+      "text_sha256": "44d1bca00e052e7c17ba4700aead3200bfb433f9b7bfa516e07da1c095c6d67c"
+    },
+    {
+      "bbox": [
+        306.0,
+        479.97442626953125,
+        549.0220336914062,
+        537.8972778320312
+      ],
+      "block_id": "page-1037-block-0011",
+      "order": 11,
+      "text": "45.6 Approche clinique ........................................................1028\n45.6.1 Approche évaluative............................................1028\n45.6.2 Approche multidisciplinaire..............................1029\n45.6.3 Approche individualisée.....................................1029\n45.6.4 Approche relationnelle .......................................1031\n",
+      "text_sha256": "c4ecf57a6efd010d67d46aa595a5fa5dcdc58a019b096d1879e58c06cf565699"
+    },
+    {
+      "bbox": [
+        306.0,
+        541.9744262695312,
+        548.9800415039062,
+        551.8181762695312
+      ],
+      "block_id": "page-1037-block-0012",
+      "order": 12,
+      "text": "Lectures complémentaires .....................................................1032\n",
+      "text_sha256": "a2afe9ca82237ed5e1a7a5691c643a6d3d751362fdcee97a17c59c8008b1a16d"
+    },
+    {
+      "bbox": [
+        48.0,
+        132.4734344482422,
+        392.57208251953125,
+        219.3953094482422
+      ],
+      "block_id": "page-1037-block-0013",
+      "order": 13,
+      "text": "Maladie psychiatrique\nsévère et persistante\n",
+      "text_sha256": "4230e4de3b644a2923a76eec80798c94f50c00f93367da0e454bb38972970ed6"
+    }
+  ],
+  "coordinates_sha256": "1bd10c53781b35790671d2d7a5dcf22dbeb5cd415b44ea0af2526effbcf8ab6e",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1037",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "CHAPITRE45\nLuigi De Benedictis, M.D.,FRCPC, AKC, M. Sc.(sciences biomédicales;\nmental health service and population research )\nPsychiatre, Institut universitaire en santé mentale de Montréal\nProfesseur adjoint de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\nAlexandre Dumais, M.D., FRCPC, Ph. D. (sciences biomédicales)\nPsychiatre, Institut Philippe-Pinel de Montréal\nProfesseur adjoint de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\nAlain D. Lesage, M.D., FRCPC, M. Phil. (épidémiologie et évaluation)\nPsychiatre, Centre de recherche de l’Institut universitaire en\nsanté mentale de Montréal\nProfesseur titulaire, Département de psychiatrie, Faculté de\nmédecine, Université de Montréal\nJean-Luc Dubreucq, M.D., FRCPC\nPsychiatre, Institut Philippe-Pinel de Montréal\nProfesseur agrégé de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\n45.1 Inuence historique .....................................................1021\n45.2 Dénition de la maladie sévère\net persistante .................................................................1022\n45.3 Épidémiologie ...............................................................1023\n45.4 Étiologie.........................................................................1024\n45.5 Dés actuels...................................................................1026\n45.5.1 Milieu de vie et itinérance..................................1026\n45.5.2 Dés cliniques ......................................................1027\n45.6 Approche clinique ........................................................1028\n45.6.1 Approche évaluative............................................1028\n45.6.2 Approche multidisciplinaire..............................1029\n45.6.3 Approche individualisée.....................................1029\n45.6.4 Approche relationnelle .......................................1031\nLectures complémentaires .....................................................1032\nMaladie psychiatrique\nsévère et persistante\n",
+  "raw_text_sha256": "cec57535172f53389e40cc65bb1a1be43af6115539028b34a009648164a6ffe0",
+  "source_page_display": 1038,
+  "source_page_index": 1037
+}

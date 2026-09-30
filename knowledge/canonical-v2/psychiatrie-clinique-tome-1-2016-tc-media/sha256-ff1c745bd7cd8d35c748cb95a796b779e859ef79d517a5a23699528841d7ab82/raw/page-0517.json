@@ -1,0 +1,400 @@
+{
+  "block_sequence_sha256": "22df39deee165ef3fdc923c08b01194ec46cd98023fc9625a09e65ae14e368b0",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.53765869140625,
+        758.8693237304688
+      ],
+      "block_id": "page-0517-block-0001",
+      "order": 1,
+      "text": "500\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "21f7708cf24c92e42c4644fd708e166dcd2f74710afe7328c4a47e02f9dddf03"
+    },
+    {
+      "bbox": [
+        50.35000228881836,
+        41.002296447753906,
+        347.1533508300781,
+        53.320068359375
+      ],
+      "block_id": "page-0517-block-0002",
+      "order": 2,
+      "text": "TABLEAU 23.3 Critères diagnostiques du trouble stress post-traumatique\n",
+      "text_sha256": "98a79a8db5799ea0ad786229584e0f12dcdd0880812d4d26882f83e9f8572cb0"
+    },
+    {
+      "bbox": [
+        85.3499984741211,
+        58.27412414550781,
+        481.33636474609375,
+        81.60029602050781
+      ],
+      "block_id": "page-0517-block-0003",
+      "order": 3,
+      "text": "DSM-5\nDSM-IV-TR\n309.81 (F43.10) Trouble stress post-traumatique\nÉtat de stress post-traumatique\n",
+      "text_sha256": "e2587cc64267b3d4199af3eed4935b50664dd986a6ebbe2e2742009104bb333a"
+    },
+    {
+      "bbox": [
+        63.25,
+        86.501953125,
+        279.6412658691406,
+        106.328125
+      ],
+      "block_id": "page-0517-block-0004",
+      "order": 4,
+      "text": "4. État émotionnel négatif persistant (p. ex., crainte, horreur, colère,\nculpabilité ou honte).\n",
+      "text_sha256": "93a783d6d304333bffb3d3c3785dbabc5626cf6c1924f55b2931a6454f9337dc"
+    },
+    {
+      "bbox": [
+        63.25,
+        113.4019546508789,
+        283.1861877441406,
+        133.22813415527344
+      ],
+      "block_id": "page-0517-block-0005",
+      "order": 5,
+      "text": "5. Réduction nette de l’intérêt pour des activités importantes ou bien\nréduction de la participation à ces mêmes activités.\n",
+      "text_sha256": "68db924c0fb04be5f96ed6d0680129d001451356a383e48a8bbc9f1805ef194b"
+    },
+    {
+      "bbox": [
+        313.25,
+        113.4019546508789,
+        372.305419921875,
+        123.2281265258789
+      ],
+      "block_id": "page-0517-block-0006",
+      "order": 6,
+      "text": "(4) Idem à DSM-5.\n",
+      "text_sha256": "da3d57044e89fae95eaf1cc830757a7a0702cea594116eb6153eda05816bc4d8"
+    },
+    {
+      "bbox": [
+        63.25,
+        140.35195922851562,
+        278.5032653808594,
+        160.17813110351562
+      ],
+      "block_id": "page-0517-block-0007",
+      "order": 7,
+      "text": "6. Sentiment de détachement d’autrui ou bien devenir étranger par\nrapport aux autres.\n",
+      "text_sha256": "7b58a060a3be7df39d96cf04ae3a874eceab0653899d4467f65ed364bab9efb5"
+    },
+    {
+      "bbox": [
+        313.25,
+        140.35195922851562,
+        372.305419921875,
+        150.17813110351562
+      ],
+      "block_id": "page-0517-block-0008",
+      "order": 8,
+      "text": "(5) Idem à DSM-5.\n",
+      "text_sha256": "0dc2801a5a8b0e5ce16f9a1ae81451e058bf1036c662dc6b55b2a040ba799df3"
+    },
+    {
+      "bbox": [
+        63.25,
+        167.251953125,
+        294.0470275878906,
+        187.078125
+      ],
+      "block_id": "page-0517-block-0009",
+      "order": 9,
+      "text": "7. Incapacité persistante d’éprouver des émotions positives (p. ex., inca-\npacité d’éprouver bonheur, satisfaction ou sentiments affectueux).\n",
+      "text_sha256": "0626193cf5e0e826d10872279a0feec0aca89b33166cca5a9ee4ad3978e5f043"
+    },
+    {
+      "bbox": [
+        313.25,
+        167.251953125,
+        538.4345703125,
+        177.078125
+      ],
+      "block_id": "page-0517-block-0010",
+      "order": 10,
+      "text": "(6) Restriction des affects (p. ex., incapacité à éprouver des sentiments\n",
+      "text_sha256": "882773955f435348c4b7b161f2ec301f87a6ef2bfa8e22e8ca0ceef7dd665bf8"
+    },
+    {
+      "bbox": [
+        323.75,
+        177.251953125,
+        351.7400207519531,
+        187.078125
+      ],
+      "block_id": "page-0517-block-0011",
+      "order": 11,
+      "text": "tendres).\n",
+      "text_sha256": "e6df1fb7649e2b64be9427a406c8db345a11bdd3f5f2dff46678c19d83f6cdd1"
+    },
+    {
+      "bbox": [
+        52.25,
+        194.2019500732422,
+        287.0470275878906,
+        204.0281219482422
+      ],
+      "block_id": "page-0517-block-0012",
+      "order": 12,
+      "text": "E. Altérations marquées de l’éveil et de la réactivité associés à un ou plu-\n",
+      "text_sha256": "e9cf8e61d9d9d847c5199418ae713e91c03d85a68221fc29d23a9edfa8099a2b"
+    },
+    {
+      "bbox": [
+        62.25,
+        204.2019500732422,
+        286.07879638671875,
+        224.0281219482422
+      ],
+      "block_id": "page-0517-block-0013",
+      "order": 13,
+      "text": "sieurs événements traumatiques comme en témoignent deux (ou plus)\ndes éléments suivants :\n",
+      "text_sha256": "727542ec3e22aae5db50866a1588c401719e7afe1075f6fed8fe0c803e449639"
+    },
+    {
+      "bbox": [
+        63.25,
+        225.2019500732422,
+        286.70977783203125,
+        255.0281219482422
+      ],
+      "block_id": "page-0517-block-0014",
+      "order": 14,
+      "text": "1. Comportement irritable ou accès de colère (avec peu ou pas de\nprovocation) qui s’exprime typiquement par une agressivité verbale\nou physique envers des personnes ou des objets.\n",
+      "text_sha256": "4eb8a09274cb5f9daabca90469fade92891cded38d2099c8834aaa8b74d271d4"
+    },
+    {
+      "bbox": [
+        302.25,
+        194.2019500732422,
+        531.7969970703125,
+        204.0281219482422
+      ],
+      "block_id": "page-0517-block-0015",
+      "order": 15,
+      "text": "D. Présence de symptômes persistants traduisant une activation neuro-\n",
+      "text_sha256": "6942a45eca44a18e204929c7035c6007a75318ae278359e5db79ac5485d1f231"
+    },
+    {
+      "bbox": [
+        313.25,
+        204.2019500732422,
+        537.0869750976562,
+        235.0281219482422
+      ],
+      "block_id": "page-0517-block-0016",
+      "order": 16,
+      "text": "végétative (ne préexistant pas au traumatisme) comme en témoigne la\nprésence d’au moins deux des manifestations suivantes :\n2) Irritabilité ou accès de colère\n",
+      "text_sha256": "0792015c0bdc6d58a71a22c6c69a95d65fd978ae1f27d722a30891366f66f134"
+    },
+    {
+      "bbox": [
+        63.25,
+        262.1019592285156,
+        214.35638427734375,
+        271.9281311035156
+      ],
+      "block_id": "page-0517-block-0017",
+      "order": 17,
+      "text": "2. Comportement irrééchi ou autodestructeur.\n",
+      "text_sha256": "326385b23be9a3291ef4c3ecce5f4dae3bc18134dbab38e239d7782a8fc731cf"
+    },
+    {
+      "bbox": [
+        63.25,
+        279.0519714355469,
+        372.305419921875,
+        288.8781433105469
+      ],
+      "block_id": "page-0517-block-0018",
+      "order": 18,
+      "text": "3. Hypervigilance.\n(4) Idem à DSM-5.\n",
+      "text_sha256": "0519ba2441e4b40f3aa90455df03940df027ee54c3dfa471b2af30a7d2c6674a"
+    },
+    {
+      "bbox": [
+        63.25,
+        295.95196533203125,
+        372.305419921875,
+        305.77813720703125
+      ],
+      "block_id": "page-0517-block-0019",
+      "order": 19,
+      "text": "4. Réaction de sursaut exagérée.\n(5) Idem à DSM-5.\n",
+      "text_sha256": "907b759547bf181eab93bdf49820fe4d641ce5a2cc1e17a766ee59fe4b7dc5d2"
+    },
+    {
+      "bbox": [
+        63.25,
+        312.9019470214844,
+        372.305419921875,
+        322.7281188964844
+      ],
+      "block_id": "page-0517-block-0020",
+      "order": 20,
+      "text": "5. Problèmes de concentration.\n(3) Idem à DSM-5.\n",
+      "text_sha256": "a4627016559aecf99ee2bd2c0bfe8f88be49328920eb16c03531d52e3e7e825d"
+    },
+    {
+      "bbox": [
+        63.25,
+        329.8019714355469,
+        276.9845886230469,
+        349.6281433105469
+      ],
+      "block_id": "page-0517-block-0021",
+      "order": 21,
+      "text": "6. Perturbation du sommeil (p. ex. difcultés d’endormissement ou\nsommeil interrompu ou agité)\n",
+      "text_sha256": "f9a8db2d027c0c765b0ac029628be85dcc5a2791734480afa48f1363ba77d8a0"
+    },
+    {
+      "bbox": [
+        313.25,
+        329.8019714355469,
+        372.305419921875,
+        339.6281433105469
+      ],
+      "block_id": "page-0517-block-0022",
+      "order": 22,
+      "text": "(1) Idem à DSM-5.\n",
+      "text_sha256": "97c24592c8d0f6dcee2ff30099f5e4f8bebdfbe4a9fac774dd20481c2d4a857c"
+    },
+    {
+      "bbox": [
+        52.25,
+        356.751953125,
+        541.0269775390625,
+        366.578125
+      ],
+      "block_id": "page-0517-block-0023",
+      "order": 23,
+      "text": "F. La perturbation (symptômes des critères B, C, D et E) dure plus d’un mois.\nE. La perturbation (symptômes des critères B, C et D) dure plus d’un mois.\n",
+      "text_sha256": "4cd3c98eb7f1839373755901524373399426fd2870cc9b2e4b05247182bc273f"
+    },
+    {
+      "bbox": [
+        52.25,
+        373.70196533203125,
+        281.76263427734375,
+        383.52813720703125
+      ],
+      "block_id": "page-0517-block-0024",
+      "order": 24,
+      "text": "G. La perturbation entraîne une souffrance cliniquement signicative ou\n",
+      "text_sha256": "20d69e7b88d3e05ba0144c9f58c9b3185ec57e724ba5442859bb0883b6ce0580"
+    },
+    {
+      "bbox": [
+        63.400001525878906,
+        383.70196533203125,
+        290.873779296875,
+        403.52813720703125
+      ],
+      "block_id": "page-0517-block-0025",
+      "order": 25,
+      "text": "une altération du fonctionnement social, professionnel ou dans d’autres\ndomaines importants.\n",
+      "text_sha256": "0dc44f1b30dd6f5068cbb1904cd5fa58dcbe67ff48d4ea19f0ac577e7fe2d461"
+    },
+    {
+      "bbox": [
+        302.25,
+        373.70196533203125,
+        360.248291015625,
+        383.52813720703125
+      ],
+      "block_id": "page-0517-block-0026",
+      "order": 26,
+      "text": "F. Idem à DSM-5.\n",
+      "text_sha256": "27f350994248f7273de8065d110e782673c74b9f6edffd4b55718e7ebadc432a"
+    },
+    {
+      "bbox": [
+        52.25,
+        410.6019592285156,
+        281.8837585449219,
+        420.4281311035156
+      ],
+      "block_id": "page-0517-block-0027",
+      "order": 27,
+      "text": "H. La perturbation n’est pas imputable aux effets physiologiques d’une\n",
+      "text_sha256": "90cb8d3c50f015c7e223c5570f830a8416d8767608ad68986460975af7f523a3"
+    },
+    {
+      "bbox": [
+        63.400001525878906,
+        420.6019592285156,
+        294.9062805175781,
+        430.4281311035156
+      ],
+      "block_id": "page-0517-block-0028",
+      "order": 28,
+      "text": "substance (p. ex., médication, alcool) ou à une autre affection médicale.\n",
+      "text_sha256": "fdb2e6c05945386c5d055f594b8716fd0b8beb8cf7438f1149a2f619bc21236c"
+    },
+    {
+      "bbox": [
+        52.25,
+        437.5519714355469,
+        292.53314208984375,
+        663.3781127929688
+      ],
+      "block_id": "page-0517-block-0029",
+      "order": 29,
+      "text": "Spécier le type :\nAvec symptômes dissociatifs: Les symptômes présentés par le sujet\nrépondent aux critères d’un trouble stress post-traumatique ; de plus et en\nréponse au facteur de stress, le sujet éprouve l’un ou l’autre des symp-\ntômes persistants ou récurrents suivants :\n1. Dépersonnalisation : Expériences persistantes ou récurrentes de se\nsentir détaché de soi, comme si l’on était un observateur extérieur de\nses processus mentaux ou de son corps (p. ex. sentiment d’être dans\nun rêve, sentiment de déréalisation de soi ou de son corps ou sentiment\nd’un ralentissement temporel).\n2. Déréalisation : Expériences persistantes ou récurrentes d’un sentiment\nd’irréalité de l’environnement (p. ex. le monde autour du sujet est vécu\ncomme irréel, onirique, éloigné, ou déformé).\nN.B. : Pour retenir ce sous-type, les symptômes dissociatifs ne doivent pas\nêtre imputables aux effets physiologiques d’une substance (p. ex. période\nd’amnésie [blackouts], manifestations comportementales d’une intoxica-\ntion alcoolique aiguë) ou à une autre affection médicale (p. ex. épilepsie\npartielle complexe).\nSpécier si :\nÀ expression retardée: Si l’ensemble des critères diagnostiques n’est\nprésent que 6 mois après l’événement (alors que le début et l’expression\nde quelques symptômes peuvent être immédiats).\n",
+      "text_sha256": "6a0b4fc925959d8f7abff123b6e9695c8b6a4547857f444e56cc81142c6e9341"
+    },
+    {
+      "bbox": [
+        302.25,
+        437.5519714355469,
+        507.4712219238281,
+        501.3781433105469
+      ],
+      "block_id": "page-0517-block-0030",
+      "order": 30,
+      "text": "Spécier si :\nAigu : si la durée des symptômes est de moins de 3 mois.\nChronique : si la durée des symptômes est de 3 mois ou plus.\nSpécier si :\nSurvenue différée : si le début des symptômes survient au moins\nsix (6) mois après le facteur de stress.\n",
+      "text_sha256": "e20923909da6f5968b66f78918ab912abe9b0dab704844dddbae479c52c3c308"
+    },
+    {
+      "bbox": [
+        48.25,
+        669.0703125,
+        544.73193359375,
+        725.875
+      ],
+      "block_id": "page-0517-block-0031",
+      "order": 31,
+      "text": "Source: APA (2015), p. 320-322 ; APA (2004a), p. 539-540.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS.Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation,DSM-IV-TR - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\n",
+      "text_sha256": "ae45275f5aecce6d395fd1a33192eed457602a7ba66867ea00debcac293b74e7"
+    },
+    {
+      "bbox": [
+        349.1000061035156,
+        41.352294921875,
+        374.7342529296875,
+        53.320068359375
+      ],
+      "block_id": "page-0517-block-0032",
+      "order": 32,
+      "text": "(suite)\n",
+      "text_sha256": "c684d6dbcdfd50f0ada227f799b5c0fb30e817ac3da61b4cbf208decde7f907b"
+    }
+  ],
+  "coordinates_sha256": "c89df392e4c1b126848d57f0ee0047d29eda40c4e97988988e309697db90bbcb",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0517",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "500\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nTABLEAU 23.3 Critères diagnostiques du trouble stress post-traumatique\nDSM-5\nDSM-IV-TR\n309.81 (F43.10) Trouble stress post-traumatique\nÉtat de stress post-traumatique\n4. État émotionnel négatif persistant (p. ex., crainte, horreur, colère,\nculpabilité ou honte).\n5. Réduction nette de l’intérêt pour des activités importantes ou bien\nréduction de la participation à ces mêmes activités.\n(4) Idem à DSM-5.\n6. Sentiment de détachement d’autrui ou bien devenir étranger par\nrapport aux autres.\n(5) Idem à DSM-5.\n7. Incapacité persistante d’éprouver des émotions positives (p. ex., inca-\npacité d’éprouver bonheur, satisfaction ou sentiments affectueux).\n(6) Restriction des affects (p. ex., incapacité à éprouver des sentiments\ntendres).\nE. Altérations marquées de l’éveil et de la réactivité associés à un ou plu-\nsieurs événements traumatiques comme en témoignent deux (ou plus)\ndes éléments suivants :\n1. Comportement irritable ou accès de colère (avec peu ou pas de\nprovocation) qui s’exprime typiquement par une agressivité verbale\nou physique envers des personnes ou des objets.\nD. Présence de symptômes persistants traduisant une activation neuro-\nvégétative (ne préexistant pas au traumatisme) comme en témoigne la\nprésence d’au moins deux des manifestations suivantes :\n2) Irritabilité ou accès de colère\n2. Comportement irrééchi ou autodestructeur.\n3. Hypervigilance.\n(4) Idem à DSM-5.\n4. Réaction de sursaut exagérée.\n(5) Idem à DSM-5.\n5. Problèmes de concentration.\n(3) Idem à DSM-5.\n6. Perturbation du sommeil (p. ex. difcultés d’endormissement ou\nsommeil interrompu ou agité)\n(1) Idem à DSM-5.\nF. La perturbation (symptômes des critères B, C, D et E) dure plus d’un mois.\nE. La perturbation (symptômes des critères B, C et D) dure plus d’un mois.\nG. La perturbation entraîne une souffrance cliniquement signicative ou\nune altération du fonctionnement social, professionnel ou dans d’autres\ndomaines importants.\nF. Idem à DSM-5.\nH. La perturbation n’est pas imputable aux effets physiologiques d’une\nsubstance (p. ex., médication, alcool) ou à une autre affection médicale.\nSpécier le type :\nAvec symptômes dissociatifs: Les symptômes présentés par le sujet\nrépondent aux critères d’un trouble stress post-traumatique ; de plus et en\nréponse au facteur de stress, le sujet éprouve l’un ou l’autre des symp-\ntômes persistants ou récurrents suivants :\n1. Dépersonnalisation : Expériences persistantes ou récurrentes de se\nsentir détaché de soi, comme si l’on était un observateur extérieur de\nses processus mentaux ou de son corps (p. ex. sentiment d’être dans\nun rêve, sentiment de déréalisation de soi ou de son corps ou sentiment\nd’un ralentissement temporel).\n2. Déréalisation : Expériences persistantes ou récurrentes d’un sentiment\nd’irréalité de l’environnement (p. ex. le monde autour du sujet est vécu\ncomme irréel, onirique, éloigné, ou déformé).\nN.B. : Pour retenir ce sous-type, les symptômes dissociatifs ne doivent pas\nêtre imputables aux effets physiologiques d’une substance (p. ex. période\nd’amnésie [blackouts], manifestations comportementales d’une intoxica-\ntion alcoolique aiguë) ou à une autre affection médicale (p. ex. épilepsie\npartielle complexe).\nSpécier si :\nÀ expression retardée: Si l’ensemble des critères diagnostiques n’est\nprésent que 6 mois après l’événement (alors que le début et l’expression\nde quelques symptômes peuvent être immédiats).\nSpécier si :\nAigu : si la durée des symptômes est de moins de 3 mois.\nChronique : si la durée des symptômes est de 3 mois ou plus.\nSpécier si :\nSurvenue différée : si le début des symptômes survient au moins\nsix (6) mois après le facteur de stress.\nSource: APA (2015), p. 320-322 ; APA (2004a), p. 539-540.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS.Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation,DSM-IV-TR - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\n(suite)\n",
+  "raw_text_sha256": "744659d7ca169fc980b4e1adc40d8f2111ebc3c2b0075be87cb823ff976a074c",
+  "source_page_display": 518,
+  "source_page_index": 517
+}

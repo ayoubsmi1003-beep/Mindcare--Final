@@ -1,0 +1,19 @@
+{
+  "outil": "charger-connaissance-taylor-v2.mjs",
+  "ecrire": true,
+  "source_id": "9c2fd184-297e-504e-8c95-ffd06896e420",
+  "chunker": "taylor-units-v2-candidate",
+  "langue": "en",
+  "statut": "reviewed",
+  "approbation": "en-attente",
+  "unites_totales": 7861,
+  "unites_epurees": [
+    "tu-fa178dad5772486f",
+    "tu-d465713c5d2b8e86"
+  ],
+  "chunks": 9344,
+  "ecrits": {
+    "sources": 0,
+    "chunks": 9344
+  }
+}

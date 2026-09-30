@@ -1,0 +1,208 @@
+{
+  "block_sequence_sha256": "4fe2073f8b0612cf0a7287da8b4403ecb8965706910bcf3a62547039344d3a49",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        132.9734344482422,
+        416.8445129394531,
+        177.8953094482422
+      ],
+      "block_id": "page-0595-block-0001",
+      "order": 1,
+      "text": "Troubles neurocognitifs\n",
+      "text_sha256": "e97e0961fed78eeed76128e1b4638fb9b3b915a0d41dc32f5dd17bceecb0b64d"
+    },
+    {
+      "bbox": [
+        48.0,
+        231.10011291503906,
+        149.27159118652344,
+        243.60011291503906
+      ],
+      "block_id": "page-0595-block-0002",
+      "order": 2,
+      "text": "Nancy Vasil, M.D., FRCPC\n",
+      "text_sha256": "a17f929801c68d16fcbc9837d62f82f6c060b08165d78fb187ba794e79debcc6"
+    },
+    {
+      "bbox": [
+        48.0,
+        247.4772491455078,
+        276.4705505371094,
+        279.6938171386719
+      ],
+      "block_id": "page-0595-block-0003",
+      "order": 3,
+      "text": "Gérontopsychiatre, Service de consultation-liaison,\nClinique ambulatoire de santé mentale, Hôpital Maisonneuve-\nRosemont (Montréal)\n",
+      "text_sha256": "8f7ca0c2d45fd601e324842b673b7d3c5507083952a5b27e01972939db4c6ddd"
+    },
+    {
+      "bbox": [
+        48.0,
+        283.4772644042969,
+        280.1392822265625,
+        304.6938171386719
+      ],
+      "block_id": "page-0595-block-0004",
+      "order": 4,
+      "text": "Professeure adjointe de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\n",
+      "text_sha256": "e24fd9e5fcb63577553120c1928554deab7ca02fcc29176ad48a834a1a0f4c09"
+    },
+    {
+      "bbox": [
+        48.0,
+        314.6001281738281,
+        174.12159729003906,
+        327.1001281738281
+      ],
+      "block_id": "page-0595-block-0005",
+      "order": 5,
+      "text": "Georges F. Pinard, M.D., FRCPC\n",
+      "text_sha256": "f14ca6ad2a9b48f7f40eac17c02d1ff9d82eb1bb97eb28ced111cb1cb0e5c23d"
+    },
+    {
+      "bbox": [
+        48.0,
+        330.9772644042969,
+        270.2681579589844,
+        352.1938171386719
+      ],
+      "block_id": "page-0595-block-0006",
+      "order": 6,
+      "text": "Psychiatre, Clinique ambulatoire de santé mentale, Hôpital\nMaisonneuve-Rosemont (Montréal)\n",
+      "text_sha256": "d008055e49b6920abd979cf78971fb51bd7478281e8e67504ccc3c900e8b969e"
+    },
+    {
+      "bbox": [
+        48.0,
+        355.9772644042969,
+        269.9393005371094,
+        377.1938171386719
+      ],
+      "block_id": "page-0595-block-0007",
+      "order": 7,
+      "text": "Professeur agrégé de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\n",
+      "text_sha256": "f4bc23aed99fa29e8f7410379c6cebea846c1188b4a600c871ae8a6f9bc4dde5"
+    },
+    {
+      "bbox": [
+        306.0,
+        231.10011291503906,
+        433.6112976074219,
+        243.60011291503906
+      ],
+      "block_id": "page-0595-block-0008",
+      "order": 8,
+      "text": "Serge G. Gauthier, M.D., FRCPC\n",
+      "text_sha256": "3524406737ec0a60598d48552d0cdff1e2e008cefe91cef8e29bf3b82e4f6060"
+    },
+    {
+      "bbox": [
+        306.0,
+        247.4772491455078,
+        526.3727416992188,
+        268.6938171386719
+      ],
+      "block_id": "page-0595-block-0009",
+      "order": 9,
+      "text": "Neurologue, Centre McGill d’études sur le vieillissement,\nInstitut universitaire en santé mentale Douglas (Montréal)\n",
+      "text_sha256": "78ab2e1ec47d5e01e60393130a151c25acb14b82b8861b78cd774e80c502b6cf"
+    },
+    {
+      "bbox": [
+        306.0,
+        272.4772644042969,
+        540.8004150390625,
+        304.6938171386719
+      ],
+      "block_id": "page-0595-block-0010",
+      "order": 10,
+      "text": "Professeur titulaire, Départements de neurologie et neuro-\nchirurgie, de psychiatrie et de médecine, Faculté de médecine,\nUniversité McGill (Montréal)\n",
+      "text_sha256": "2ac6dfb70a178d37dee4a41f21108d919c04b51c318e5918f850a0f5f49c4969"
+    },
+    {
+      "bbox": [
+        48.0,
+        437.4244079589844,
+        289.010009765625,
+        564.3472900390625
+      ],
+      "block_id": "page-0595-block-0011",
+      "order": 11,
+      "text": "27.1 Delirium........................................................................... 579\n27.1.1 Historique et dénition........................................ 579\n27.1.2 Épidémiologie ........................................................ 579\n27.1.3 Étiologies................................................................. 579\n27.1.4 Description clinique ............................................. 580\n27.1.5 Évaluation ............................................................... 581\n27.1.6 Outils diagnostiques ............................................. 581\n27.1.7 Diagnostic diérentiel.......................................... 582\n27.1.8 Traitements............................................................. 582\n27.1.9 Évolution et pronostic .......................................... 584\n",
+      "text_sha256": "a3af1c7577c4d5be463caa3fb15ceccddf27a1492298ccc764ceb9e3bc997fa6"
+    },
+    {
+      "bbox": [
+        48.0,
+        569.3244018554688,
+        289.010009765625,
+        696.2472534179688
+      ],
+      "block_id": "page-0595-block-0012",
+      "order": 12,
+      "text": "27.2 Démences ........................................................................ 584\n27.2.1 Historique et dénition........................................ 585\n27.2.2 Épidémiologie ........................................................ 585\n27.2.3 Étiologies................................................................. 585\n27.2.4 Description clinique ............................................. 586\n27.2.5 Évaluation ............................................................... 600\n27.2.6 Outils diagnostiques ............................................. 600\n27.2.7 Diagnostic diérentiel.......................................... 603\n27.2.8 Traitements............................................................. 605\n27.2.9 Évolution et pronostic .......................................... 611\n",
+      "text_sha256": "34b174ac18e88c12462dda6126dea2dd865ced37fa02c3bbb7fa4210927331df"
+    },
+    {
+      "bbox": [
+        257.1000061035156,
+        4.981056213378906,
+        555.0,
+        124.98104858398438
+      ],
+      "block_id": "page-0595-block-0013",
+      "order": 13,
+      "text": "CHAPITRE27\n",
+      "text_sha256": "7cda90dce7fa351d17aa06204edc773eff848d842c68555f51f86262b365a20e"
+    },
+    {
+      "bbox": [
+        306.0,
+        437.4244079589844,
+        547.010009765625,
+        473.3472595214844
+      ],
+      "block_id": "page-0595-block-0014",
+      "order": 14,
+      "text": "27.3 Autres troubles cognitifs............................................... 611\n27.3.1 Trouble cognitif léger ........................................... 611\n27.3.2 Trouble postcommotionnel................................. 612\n",
+      "text_sha256": "08b8263538d4d3ed5d01d94aa30cc0bb0d5e63b13a74bcc2a76f5d0860951e0a"
+    },
+    {
+      "bbox": [
+        306.0,
+        478.3244323730469,
+        547.010009765625,
+        592.2472534179688
+      ],
+      "block_id": "page-0595-block-0015",
+      "order": 15,
+      "text": "27.4 Troubles amnésiques ..................................................... 614\n27.4.1 Historique et dénition........................................ 614\n27.4.2 Épidémiologie ........................................................ 615\n27.4.3 Étiologies................................................................. 615\n27.4.4 Description clinique ............................................. 615\n27.4.5 Évaluation ............................................................... 616\n27.4.6 Diagnostic diérentiel.......................................... 616\n27.4.7 Traitements............................................................. 616\n27.4.8 Évolution et pronostic .......................................... 616\n",
+      "text_sha256": "7d4bd55f732e5e3a658a88830e74909ffd7ec1d44aa25f16784fcbdcb10d9ad6"
+    },
+    {
+      "bbox": [
+        306.0,
+        597.2244262695312,
+        547.010009765625,
+        607.0681762695312
+      ],
+      "block_id": "page-0595-block-0016",
+      "order": 16,
+      "text": "Lectures complémentaires.......................................................616\n",
+      "text_sha256": "e0245605f5587f28555e11a6918165fe5ee05296bb6afa1008d5dd7d9a3f9729"
+    }
+  ],
+  "coordinates_sha256": "2a9e6c2b8955778b3c5f0dfd9d2580a0e2baab36918a6391dea3d34e9127059d",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0595",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Troubles neurocognitifs\nNancy Vasil, M.D., FRCPC\nGérontopsychiatre, Service de consultation-liaison,\nClinique ambulatoire de santé mentale, Hôpital Maisonneuve-\nRosemont (Montréal)\nProfesseure adjointe de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\nGeorges F. Pinard, M.D., FRCPC\nPsychiatre, Clinique ambulatoire de santé mentale, Hôpital\nMaisonneuve-Rosemont (Montréal)\nProfesseur agrégé de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\nSerge G. Gauthier, M.D., FRCPC\nNeurologue, Centre McGill d’études sur le vieillissement,\nInstitut universitaire en santé mentale Douglas (Montréal)\nProfesseur titulaire, Départements de neurologie et neuro-\nchirurgie, de psychiatrie et de médecine, Faculté de médecine,\nUniversité McGill (Montréal)\n27.1 Delirium........................................................................... 579\n27.1.1 Historique et dénition........................................ 579\n27.1.2 Épidémiologie ........................................................ 579\n27.1.3 Étiologies................................................................. 579\n27.1.4 Description clinique ............................................. 580\n27.1.5 Évaluation ............................................................... 581\n27.1.6 Outils diagnostiques ............................................. 581\n27.1.7 Diagnostic diérentiel.......................................... 582\n27.1.8 Traitements............................................................. 582\n27.1.9 Évolution et pronostic .......................................... 584\n27.2 Démences ........................................................................ 584\n27.2.1 Historique et dénition........................................ 585\n27.2.2 Épidémiologie ........................................................ 585\n27.2.3 Étiologies................................................................. 585\n27.2.4 Description clinique ............................................. 586\n27.2.5 Évaluation ............................................................... 600\n27.2.6 Outils diagnostiques ............................................. 600\n27.2.7 Diagnostic diérentiel.......................................... 603\n27.2.8 Traitements............................................................. 605\n27.2.9 Évolution et pronostic .......................................... 611\nCHAPITRE27\n27.3 Autres troubles cognitifs............................................... 611\n27.3.1 Trouble cognitif léger ........................................... 611\n27.3.2 Trouble postcommotionnel................................. 612\n27.4 Troubles amnésiques ..................................................... 614\n27.4.1 Historique et dénition........................................ 614\n27.4.2 Épidémiologie ........................................................ 615\n27.4.3 Étiologies................................................................. 615\n27.4.4 Description clinique ............................................. 615\n27.4.5 Évaluation ............................................................... 616\n27.4.6 Diagnostic diérentiel.......................................... 616\n27.4.7 Traitements............................................................. 616\n27.4.8 Évolution et pronostic .......................................... 616\nLectures complémentaires.......................................................616\n",
+  "raw_text_sha256": "c9ed17e530415b2e6c46b4453ae48a9e643a040aefe06b05e256571bed6beed5",
+  "source_page_display": 596,
+  "source_page_index": 595
+}

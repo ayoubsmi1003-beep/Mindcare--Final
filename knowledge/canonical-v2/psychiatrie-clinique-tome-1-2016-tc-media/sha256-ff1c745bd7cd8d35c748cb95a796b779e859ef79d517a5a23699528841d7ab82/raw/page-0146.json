@@ -1,0 +1,124 @@
+{
+  "block_sequence_sha256": "1f41d52e75fb6e79721ec2f3a8a1794fb0a5dc679d879df0952c236052965cb3",
+  "blocks": [
+    {
+      "bbox": [
+        405.1000061035156,
+        747.3754272460938,
+        555.0,
+        758.6693725585938
+      ],
+      "block_id": "page-0146-block-0001",
+      "order": 1,
+      "text": "Chapitre 6\nNeurobiologie\n129\n",
+      "text_sha256": "6d4c7d4c375b1211cb2c691c23b755988f30c1f939f347c328f44e7c5edd731c"
+    },
+    {
+      "bbox": [
+        312.0,
+        40.9658203125,
+        555.2914428710938,
+        223.95849609375
+      ],
+      "block_id": "page-0146-block-0002",
+      "order": 2,
+      "text": "dans le SNC. C’est en voulant créer de nouvelles molécules anti-\nhistaminiques que des chercheurs sont arrivés à la synthèse des\nphénothiazines, dont la chlorpromazine, le premier médicament\nayant une propriété antipsychotique. Les groupements histami-\nnergiques, numérotés E1 à E5, sont localisés dans le diencéphale\nventral, près des noyaux hypothalamiques et mamillaires ; ils\ndonnent naissance à l’ensemble des projections histaminergiques\nascendantes et descendantes. Les noyaux hypothalamiques, le\nseptum, le mésencéphale ventral, le cortex cérébral, l’hippocampe\net l’amygdale reçoivent une importante innervation histaminer-\ngique. La plupart des structures du tronc cérébral contiennent\ndes terminaisons nerveuses qui libèrent de l’histamine. Les neu-\nrones histaminergiques reçoivent des aérences des neurones\nadrénergiques (groupes C1 à C3), noradrénergiques (groupes\nA1 et A2) et sérotoninergiques (groupes B5 à B9), mais très peu\ndes neurones dopaminergiques.\n",
+      "text_sha256": "119d1ea8c213992ac78a3129fd46383f90c631f814208f8b1156a0e5176a36e8"
+    },
+    {
+      "bbox": [
+        312.0,
+        224.9658203125,
+        555.2542114257812,
+        338.95849609375
+      ],
+      "block_id": "page-0146-block-0003",
+      "order": 3,
+      "text": "L’histamine est formée par décarboxylation de la L-histidine\npar l’enzyme L-histidine décarboxylase ; elle est métabolisée par\nune diamine oxydase qui produit de l’acide acétique imidazole\n(voir la gure 6.13). Une autre voie métabolique fait appel à la\nmonoamine oxydase B, mais l’histamine elle-même, n’est pas un\nsubstrat de cette enzyme. Tout comme les autres neurotrans-\nmetteurs, l’histamine est insérée dans une vésicule par le VMT-2\navant d’être libérée dans la synapse où elle active des récepteurs\npré- et postsynaptiques. Il n’y a pas de système de recaptage,\ncontrairement aux monoamines.\n",
+      "text_sha256": "ebe370aada8d65399d64feb5f9fafe34b44b8ccfb5c40856d45b8e5c05bc8cf6"
+    },
+    {
+      "bbox": [
+        312.0,
+        339.9658203125,
+        555.030517578125,
+        536.5863037109375
+      ],
+      "block_id": "page-0146-block-0004",
+      "order": 4,
+      "text": "Quatre récepteurs de l’histamine ont été clonés (H1 à H4) ;\nce sont tous des métabotropes couplés à des protéines G qui\ncontrôlent principalement l’AMPc et la phospholipase C. Les\nrécepteurs H1 et H4 se trouvent principalement dans l’hippo-\ncampe, le cervelet et le thalamus, alors que les récepteurs H2\net H3 sont principalement localisés dans le cortex cérébral, le\nstriatum et le mésencéphale ventral. Les récepteurs H3 sont\ndes autorécepteurs qui exercent un rétrocontrôle négatif sur la\nsynthèse et la libération synaptique de l’histamine. L’activité des\nneurones histaminergiques est élevée pendant la phase d’éveil\net de vigilance, alors qu’elle est très faible pendant le sommeil\nlent. Plusieurs psychotropes sont de puissants antagonistes\ndes récepteurs H1; c’est le cas des antidépresseurs tricycliques\net de plusieurs médicaments anti psychotiques. Certains eets\nindésirables de ces médicaments, tels que la somnolence et le\ngain pondéral, seraient associés à leur propriété antagoniste\ndes récepteurs H1.\n",
+      "text_sha256": "70554bf13c90ddd7305fd72faa83b30d801cda1b0d090c81ca217811ed8d356d"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.9658203125,
+        297.61566162109375,
+        189.6584930419922
+      ],
+      "block_id": "page-0146-block-0005",
+      "order": 5,
+      "text": "diminue en présence d’ACh. Une fois produite, l’ACh est transportée\ndans les vésicules synaptiques pour être sécrétée dans la synapse.\nContrairement aux neurones monoaminergiques, il n’existe pas\nde protéine de recaptage de l’ACh. L’enzyme acétylcholinestérase\nmétabolise l’ACh synaptique en choline et en acide acétique. La\ncholine est alors récupérée par une protéine à la surface de la\nmembrane présynaptique et retournée dans le cytoplasme ou elle\nest recyclée (retransformée en ACh). La choline provenant de la\nsynapse constitue plus de 50 % de la source neuronale. Plusieurs\nmédicaments (donézépil – AriceptMD, etc.) utilisés pour retarder\nla progression des symptômes de la démence d’Alzheimer, inhibent\nde façon compétitive l’acétylcholinestérase avec pour conséquence\nd’augmenter l’action synaptique de l’ACh.\n",
+      "text_sha256": "0e3fa2d6e8108399585ed2314202c2ad1002eaf5f5ba3d736ac30de3ef77a702"
+    },
+    {
+      "bbox": [
+        54.0,
+        194.5522918701172,
+        297.378173828125,
+        241.20849609375
+      ],
+      "block_id": "page-0146-block-0006",
+      "order": 6,
+      "text": "Récepteurs cholinergiques\nLes récepteurs cholinergiques sont divisés en deux classes suivant\nleur réponse à deux agonistes : la muscarine et la nicotine. Ce\nsont les récepteurs muscariniques et les récepteurs nicotiniques.\n",
+      "text_sha256": "a35841f55002f39778201e4ebb5e7ebeacaa23547905c6b0b40be5ad5434770f"
+    },
+    {
+      "bbox": [
+        54.0,
+        242.2658233642578,
+        297.27301025390625,
+        679.4085083007812
+      ],
+      "block_id": "page-0146-block-0007",
+      "order": 7,
+      "text": "On dénombre cinq sous-types de récepteurs muscariniques\n(M1 à M5) qui sont tous couplés à une protéine G. Ils ont plu-\nsieurs fonctions :\n• Les récepteurs M1, M3 et M5 augmentent la concentration\nintracellulaire de phospholipase C (PLC).\n• Le métabolite de la clozapine, la n-desméthylclozapine, est\nun agoniste partiel des récepteurs M1 et M3 et contribue au\nprol des eets indésirables de la clozapine, notamment la\nsialorrhée.\n• Plusieurs psychotropes, dont les antidépresseurs tricycliques\net certains antipsychotiques, sont des antagonistes des récep-\nteurs muscariniques. Certains de leurs eets indésirables se\ntraduisent par des eets physiologiques inverses à ceux de\nl’ACh (p. ex., la xérostomie, la tachycardie et la constipation).\n• La stimulation des récepteurs M3 localisés sur les vaisseaux\nsanguins, les poumons, les glandes salivaires et l’intestin\nproduit une vasodilatation, une contraction des bronches,\nune sécrétion salivaire et des contractions intestinales.\n• Les récepteurs M2 et M4 inhibent la production d’AMPc.\n• Les récepteurs M2 postsynaptiques sont localisés sur le cœur\net leur stimulation induit une bradycardie. Ils sont aussi\nlocalisés sur les neurones cholinergiques et agissent comme\ndes autorécepteurs.\nLes récepteurs nicotiniques sont des récepteurs canaux pen-\ntamériques constitués de sous-unités α et β ; il existe huit sous-\nunités α (α2 à α10) et trois sous-unités β (β2 à β4). Les récepteurs\nnicotiniques sont associés aux fonctions du système limbique.\nCeux qui comprennent l’une des sous-unités α4, α7 et β2 jouent\nun rôle dans le décit de perception sensorielle dans la schizo-\nphrénie et l’abus des drogues. Les neurones dopaminergiques\ndu groupe A10 possèdent principalement des récepteurs α4\net β2; la varénicline (ChampixMD) utilisée pour le traitement du\ntabagisme est un agoniste des récepteurs nicotiniques α4 et β2.\nEn 2008, Santé Canada a émis un avis concernant l’utilisation de\nce médicament ; il peut induire des troubles psychiatriques et ne\ndevrait pas être prescrit à des patients sourant de psychose ou\nd’un trouble aectif majeur.\n",
+      "text_sha256": "4d0d5b759536948a905e23972b738a451675b9454362f1fc67bb4332898819f1"
+    },
+    {
+      "bbox": [
+        54.0,
+        688.2830200195312,
+        296.89898681640625,
+        725.45849609375
+      ],
+      "block_id": "page-0146-block-0008",
+      "order": 8,
+      "text": "Histamine\nL’histamine, un messager chimique du système immunitaire\nconnu depuis 1920 est aussi un important neurotransmetteur\n",
+      "text_sha256": "124daee9ed2d167b6435fb003e113d88be2d5cc687fe7538e8c3030feab65d02"
+    },
+    {
+      "bbox": [
+        314.25,
+        560.9523315429688,
+        478.06878662109375,
+        573.320068359375
+      ],
+      "block_id": "page-0146-block-0009",
+      "order": 9,
+      "text": "FIGURE 6.13 Métabolisme de l’histamine\n",
+      "text_sha256": "ec52adb81deec3b5f47f2f7772ad69381a6233d62cfb756e5c589cec6bfb1eea"
+    }
+  ],
+  "coordinates_sha256": "6bddc3ce9f6cf0437ef64a971be28df234aa188fe79f1b6a4639856dadb2f259",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0146",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 6\nNeurobiologie\n129\ndans le SNC. C’est en voulant créer de nouvelles molécules anti-\nhistaminiques que des chercheurs sont arrivés à la synthèse des\nphénothiazines, dont la chlorpromazine, le premier médicament\nayant une propriété antipsychotique. Les groupements histami-\nnergiques, numérotés E1 à E5, sont localisés dans le diencéphale\nventral, près des noyaux hypothalamiques et mamillaires ; ils\ndonnent naissance à l’ensemble des projections histaminergiques\nascendantes et descendantes. Les noyaux hypothalamiques, le\nseptum, le mésencéphale ventral, le cortex cérébral, l’hippocampe\net l’amygdale reçoivent une importante innervation histaminer-\ngique. La plupart des structures du tronc cérébral contiennent\ndes terminaisons nerveuses qui libèrent de l’histamine. Les neu-\nrones histaminergiques reçoivent des aérences des neurones\nadrénergiques (groupes C1 à C3), noradrénergiques (groupes\nA1 et A2) et sérotoninergiques (groupes B5 à B9), mais très peu\ndes neurones dopaminergiques.\nL’histamine est formée par décarboxylation de la L-histidine\npar l’enzyme L-histidine décarboxylase ; elle est métabolisée par\nune diamine oxydase qui produit de l’acide acétique imidazole\n(voir la gure 6.13). Une autre voie métabolique fait appel à la\nmonoamine oxydase B, mais l’histamine elle-même, n’est pas un\nsubstrat de cette enzyme. Tout comme les autres neurotrans-\nmetteurs, l’histamine est insérée dans une vésicule par le VMT-2\navant d’être libérée dans la synapse où elle active des récepteurs\npré- et postsynaptiques. Il n’y a pas de système de recaptage,\ncontrairement aux monoamines.\nQuatre récepteurs de l’histamine ont été clonés (H1 à H4) ;\nce sont tous des métabotropes couplés à des protéines G qui\ncontrôlent principalement l’AMPc et la phospholipase C. Les\nrécepteurs H1 et H4 se trouvent principalement dans l’hippo-\ncampe, le cervelet et le thalamus, alors que les récepteurs H2\net H3 sont principalement localisés dans le cortex cérébral, le\nstriatum et le mésencéphale ventral. Les récepteurs H3 sont\ndes autorécepteurs qui exercent un rétrocontrôle négatif sur la\nsynthèse et la libération synaptique de l’histamine. L’activité des\nneurones histaminergiques est élevée pendant la phase d’éveil\net de vigilance, alors qu’elle est très faible pendant le sommeil\nlent. Plusieurs psychotropes sont de puissants antagonistes\ndes récepteurs H1; c’est le cas des antidépresseurs tricycliques\net de plusieurs médicaments anti psychotiques. Certains eets\nindésirables de ces médicaments, tels que la somnolence et le\ngain pondéral, seraient associés à leur propriété antagoniste\ndes récepteurs H1.\ndiminue en présence d’ACh. Une fois produite, l’ACh est transportée\ndans les vésicules synaptiques pour être sécrétée dans la synapse.\nContrairement aux neurones monoaminergiques, il n’existe pas\nde protéine de recaptage de l’ACh. L’enzyme acétylcholinestérase\nmétabolise l’ACh synaptique en choline et en acide acétique. La\ncholine est alors récupérée par une protéine à la surface de la\nmembrane présynaptique et retournée dans le cytoplasme ou elle\nest recyclée (retransformée en ACh). La choline provenant de la\nsynapse constitue plus de 50 % de la source neuronale. Plusieurs\nmédicaments (donézépil – AriceptMD, etc.) utilisés pour retarder\nla progression des symptômes de la démence d’Alzheimer, inhibent\nde façon compétitive l’acétylcholinestérase avec pour conséquence\nd’augmenter l’action synaptique de l’ACh.\nRécepteurs cholinergiques\nLes récepteurs cholinergiques sont divisés en deux classes suivant\nleur réponse à deux agonistes : la muscarine et la nicotine. Ce\nsont les récepteurs muscariniques et les récepteurs nicotiniques.\nOn dénombre cinq sous-types de récepteurs muscariniques\n(M1 à M5) qui sont tous couplés à une protéine G. Ils ont plu-\nsieurs fonctions :\n• Les récepteurs M1, M3 et M5 augmentent la concentration\nintracellulaire de phospholipase C (PLC).\n• Le métabolite de la clozapine, la n-desméthylclozapine, est\nun agoniste partiel des récepteurs M1 et M3 et contribue au\nprol des eets indésirables de la clozapine, notamment la\nsialorrhée.\n• Plusieurs psychotropes, dont les antidépresseurs tricycliques\net certains antipsychotiques, sont des antagonistes des récep-\nteurs muscariniques. Certains de leurs eets indésirables se\ntraduisent par des eets physiologiques inverses à ceux de\nl’ACh (p. ex., la xérostomie, la tachycardie et la constipation).\n• La stimulation des récepteurs M3 localisés sur les vaisseaux\nsanguins, les poumons, les glandes salivaires et l’intestin\nproduit une vasodilatation, une contraction des bronches,\nune sécrétion salivaire et des contractions intestinales.\n• Les récepteurs M2 et M4 inhibent la production d’AMPc.\n• Les récepteurs M2 postsynaptiques sont localisés sur le cœur\net leur stimulation induit une bradycardie. Ils sont aussi\nlocalisés sur les neurones cholinergiques et agissent comme\ndes autorécepteurs.\nLes récepteurs nicotiniques sont des récepteurs canaux pen-\ntamériques constitués de sous-unités α et β ; il existe huit sous-\nunités α (α2 à α10) et trois sous-unités β (β2 à β4). Les récepteurs\nnicotiniques sont associés aux fonctions du système limbique.\nCeux qui comprennent l’une des sous-unités α4, α7 et β2 jouent\nun rôle dans le décit de perception sensorielle dans la schizo-\nphrénie et l’abus des drogues. Les neurones dopaminergiques\ndu groupe A10 possèdent principalement des récepteurs α4\net β2; la varénicline (ChampixMD) utilisée pour le traitement du\ntabagisme est un agoniste des récepteurs nicotiniques α4 et β2.\nEn 2008, Santé Canada a émis un avis concernant l’utilisation de\nce médicament ; il peut induire des troubles psychiatriques et ne\ndevrait pas être prescrit à des patients sourant de psychose ou\nd’un trouble aectif majeur.\nHistamine\nL’histamine, un messager chimique du système immunitaire\nconnu depuis 1920 est aussi un important neurotransmetteur\nFIGURE 6.13 Métabolisme de l’histamine\n",
+  "raw_text_sha256": "f1eb5c93c8ffe1d7a4f85e4b4cd5a755e355ac3be21b64d818ce266d2033227e",
+  "source_page_display": 147,
+  "source_page_index": 146
+}

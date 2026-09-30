@@ -1,0 +1,400 @@
+{
+  "block_sequence_sha256": "e1bbe63ef088898d4ab083c73290c36b2ea4bfc89e9bafd26c1d944879f35e38",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.9005126953125,
+        758.8693237304688
+      ],
+      "block_id": "page-0709-block-0001",
+      "order": 1,
+      "text": "692\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "12accb2dd34f2bdcae8d0f4254bd0d500aa691f212a5b94c1bda3d9e8e3e7862"
+    },
+    {
+      "bbox": [
+        48.0,
+        619.0658569335938,
+        291.3341369628906,
+        641.0585327148438
+      ],
+      "block_id": "page-0709-block-0002",
+      "order": 2,
+      "text": "dressé des listes d’indices qui peuvent mettre sur la piste d’un TF\nimposé à autrui. Les principaux sont décrits dans l’encadré 30.1.\n",
+      "text_sha256": "1eb09f7781b5a7f913fb8a7229deb13e37dacfd3bd2cae8cee6176c1c7db2f44"
+    },
+    {
+      "bbox": [
+        55.25,
+        659.3432006835938,
+        230.14407348632812,
+        678.3189697265625
+      ],
+      "block_id": "page-0709-block-0003",
+      "order": 3,
+      "text": "30.5\nVariété diagnostique\n",
+      "text_sha256": "7cf3dde2da7c828a9810f1798dacb5f4eeba4faa8172258976243e5c5848f951"
+    },
+    {
+      "bbox": [
+        48.0,
+        692.0658569335938,
+        291.0817565917969,
+        725.5585327148438
+      ],
+      "block_id": "page-0709-block-0004",
+      "order": 4,
+      "text": "Toutes les dissimulations, les mensonges, les négligences, les\nmauvaises observances et gestes délétères posés contre soi-même\nou autrui ne signent pas d’emblée un trouble factice (TF).\n",
+      "text_sha256": "895c8a2bb3aaa069ab3a810a80c2fbd32acc4ae6440f2d6b41208a4565cb001b"
+    },
+    {
+      "bbox": [
+        50.25,
+        41.002296447753906,
+        342.6000671386719,
+        53.320068359375
+      ],
+      "block_id": "page-0709-block-0005",
+      "order": 5,
+      "text": "TABLEAU 30.2 Critères diagnostiques du trouble factice imposé à autrui\n",
+      "text_sha256": "197c862216115add0670087a9a3ee6e72024a6fe3b2913ad1e76b13ae7a6eb4c"
+    },
+    {
+      "bbox": [
+        107.20000457763672,
+        58.27412414550781,
+        476.70562744140625,
+        81.14238739013672
+      ],
+      "block_id": "page-0709-block-0006",
+      "order": 6,
+      "text": "DSM-5\nDSM-IV-TR\n300.19 Trouble factice imposé à autrui\nTrouble factice par procuration\n",
+      "text_sha256": "d1546080487b309a5f494b4b106f5bac373d11623a6afb1eb9356a51abad90c0"
+    },
+    {
+      "bbox": [
+        52.25,
+        86.4019546508789,
+        286.7318420410156,
+        96.2281265258789
+      ],
+      "block_id": "page-0709-block-0007",
+      "order": 7,
+      "text": "A. Falsication de signes ou de symptômes physiques ou psychologiques,\n",
+      "text_sha256": "f2e3afadc3f0d5424f5de99a83408f7dcb7235c33b85ad634adf1b5619660651"
+    },
+    {
+      "bbox": [
+        61.25,
+        96.4019546508789,
+        282.3737487792969,
+        116.2281265258789
+      ],
+      "block_id": "page-0709-block-0008",
+      "order": 8,
+      "text": "ou induction de blessures ou de maladies chez autrui, associée à une\ntromperie identiée.\n",
+      "text_sha256": "c655f8b28b6074dd9f5928db0a0e633916dae7a720baabf0fcd80e8fd751cd65"
+    },
+    {
+      "bbox": [
+        302.5,
+        86.4019546508789,
+        512.3771362304688,
+        96.2281265258789
+      ],
+      "block_id": "page-0709-block-0009",
+      "order": 9,
+      "text": "A. Production délibérée ou simulation de signes ou de symptômes\n",
+      "text_sha256": "ed27b91409278092f665a048c0b392f7a695065f63fe8d3cf6426959e4067e0d"
+    },
+    {
+      "bbox": [
+        311.5,
+        96.4019546508789,
+        524.3938598632812,
+        116.2281265258789
+      ],
+      "block_id": "page-0709-block-0010",
+      "order": 10,
+      "text": "physiques ou psychologiques chez une autre personne que le sujet\nlui-même, personne dont le sujet a la charge.\n",
+      "text_sha256": "e276b140020ffbe249926aed825dee603c7a15a7261fe3500df915e98583e1b7"
+    },
+    {
+      "bbox": [
+        52.25,
+        124.80195617675781,
+        267.83282470703125,
+        134.6281280517578
+      ],
+      "block_id": "page-0709-block-0011",
+      "order": 11,
+      "text": "B. Le sujet fait passer une autre personne présente (la victime) pour\n",
+      "text_sha256": "d40545d1e30a4412f5955c35122819f44a082ef6ab58310be6da8877a971a3b4"
+    },
+    {
+      "bbox": [
+        61.25,
+        134.8019561767578,
+        151.2821044921875,
+        144.6281280517578
+      ],
+      "block_id": "page-0709-block-0012",
+      "order": 12,
+      "text": "malade, invalide ou blessée.\n",
+      "text_sha256": "41e5999dbbaaa9a695d1e4b71459833fc4a79e41bc0edf17e67317a08fa7845f"
+    },
+    {
+      "bbox": [
+        302.5,
+        124.80195617675781,
+        521.3148803710938,
+        134.6281280517578
+      ],
+      "block_id": "page-0709-block-0013",
+      "order": 13,
+      "text": "B. La motivation du comportement est de jouer le rôle de malade par\n",
+      "text_sha256": "d8b27cc8fdc2f79866a11e51a01707e5173d33c23e84061601764880eae7b4fd"
+    },
+    {
+      "bbox": [
+        311.5,
+        134.8019561767578,
+        349.6419982910156,
+        144.6281280517578
+      ],
+      "block_id": "page-0709-block-0014",
+      "order": 14,
+      "text": "procuration.\n",
+      "text_sha256": "ed67a4b4b3a64d79c6d8cce78e10cdc8657900ddcef9b00316d906a8d785c0fd"
+    },
+    {
+      "bbox": [
+        52.25,
+        153.251953125,
+        272.8356018066406,
+        163.078125
+      ],
+      "block_id": "page-0709-block-0015",
+      "order": 15,
+      "text": "C. Le comportement de tromperie est évident, même en l’absence de\n",
+      "text_sha256": "222ebb8b0f8c6bc64cc1f8ae6d7290032b582ab43092a7578b225b8a630035ef"
+    },
+    {
+      "bbox": [
+        61.25,
+        163.251953125,
+        166.36102294921875,
+        173.078125
+      ],
+      "block_id": "page-0709-block-0016",
+      "order": 16,
+      "text": "bénéces externes objectivables.\n",
+      "text_sha256": "8fe8ebedde8198da1fec2b664ed298ac38c1451ccbbdf9636453306adca9f318"
+    },
+    {
+      "bbox": [
+        302.5,
+        153.251953125,
+        514.8304443359375,
+        163.078125
+      ],
+      "block_id": "page-0709-block-0017",
+      "order": 17,
+      "text": "C. Il n’y a pas de motifs extérieurs (tels qu’un gain pécuniaire) à ce\n",
+      "text_sha256": "22a02618a6c1d5842f9ab9c3d7c33c416d11f347048d8ec63b64a36ec5833db1"
+    },
+    {
+      "bbox": [
+        311.5,
+        163.251953125,
+        359.8389892578125,
+        173.078125
+      ],
+      "block_id": "page-0709-block-0018",
+      "order": 18,
+      "text": "comportement.\n",
+      "text_sha256": "5788470353cfc02535b50ff4c6df0bbf57462298401a1fb306c1b1a2517e6ee8"
+    },
+    {
+      "bbox": [
+        52.25,
+        181.65196228027344,
+        287.1677551269531,
+        191.47813415527344
+      ],
+      "block_id": "page-0709-block-0019",
+      "order": 19,
+      "text": "D. Le comportement n’est pas mieux expliqué par un autre trouble mental\n",
+      "text_sha256": "a8e1bd42b218255a72ac42eee299a895b9a26a4ecc2eab1581231bafb6f57c08"
+    },
+    {
+      "bbox": [
+        61.25,
+        191.65196228027344,
+        244.32098388671875,
+        201.47813415527344
+      ],
+      "block_id": "page-0709-block-0020",
+      "order": 20,
+      "text": "tel qu’un trouble délirant ou un autre trouble psychotique.\n",
+      "text_sha256": "d4ed7ab273a10110b97106aa934262fdfcad42ccd4df305d339235dde8d1987f"
+    },
+    {
+      "bbox": [
+        302.5,
+        181.65196228027344,
+        539.5776977539062,
+        191.47813415527344
+      ],
+      "block_id": "page-0709-block-0021",
+      "order": 21,
+      "text": "D. Le comportement n’est pas mieux expliqué par un autre trouble mental.\n",
+      "text_sha256": "bdac4f9d02970e1f504353ae6f9fa6f5d706a1d0208e943f1d7d5eaecd639ce1"
+    },
+    {
+      "bbox": [
+        52.25,
+        210.02285766601562,
+        251.88601684570312,
+        230.92813110351562
+      ],
+      "block_id": "page-0709-block-0022",
+      "order": 22,
+      "text": "N.B. : Le diagnostic s’applique au coupable et non à la victime.\nSpécier si :\n",
+      "text_sha256": "95d1f2b95a31fc2e69bf2b8f4bd90e102aa8ed6bd644722e1d1f1ee3c296d1e2"
+    },
+    {
+      "bbox": [
+        52.25,
+        235.02285766601562,
+        105.1340103149414,
+        245.04238891601562
+      ],
+      "block_id": "page-0709-block-0023",
+      "order": 23,
+      "text": "Épisode unique\n",
+      "text_sha256": "aee7ca6f23cd8cb7f4debf5a24eb2bf547a4a19927a1be7fd2463e1f317ef2c0"
+    },
+    {
+      "bbox": [
+        52.25,
+        249.02285766601562,
+        274.7154235839844,
+        268.9281311035156
+      ],
+      "block_id": "page-0709-block-0024",
+      "order": 24,
+      "text": "Épisodes récurrents (deux événements ou plus de falsication d’une\nmaladie et/ou d’induction d’une blessure).\n",
+      "text_sha256": "87a8971cc515c2a83e1f7475baf346100400208f671a37cafb26a97284a32a28"
+    },
+    {
+      "bbox": [
+        48.25,
+        277.6906433105469,
+        537.8441772460938,
+        346.4250183105469
+      ],
+      "block_id": "page-0709-block-0025",
+      "order": 25,
+      "text": "Sources : APA (2015), p. 384 ; APA (2004), p. 900.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004.\nAll rights reserved.\n",
+      "text_sha256": "21f3fb3464345781fcfbd73f63abca3c4447ab77ebf54e3af8f1608d99e8a4f9"
+    },
+    {
+      "bbox": [
+        50.35000228881836,
+        358.2023010253906,
+        267.0665283203125,
+        370.52008056640625
+      ],
+      "block_id": "page-0709-block-0026",
+      "order": 26,
+      "text": "ENCADRÉ 30.1 Principaux indices d’un trouble factice\n",
+      "text_sha256": "7a9d57bc24f8cc9594d0b1414a2dfdac334b2728b9e032f5b01e47413f40f828"
+    },
+    {
+      "bbox": [
+        108.80000305175781,
+        370.05230712890625,
+        173.2785186767578,
+        382.02008056640625
+      ],
+      "block_id": "page-0709-block-0027",
+      "order": 27,
+      "text": "imposé à autrui\n",
+      "text_sha256": "be504b5526097ba439781d68556c8df5413cabb72695ca245a041772776333a0"
+    },
+    {
+      "bbox": [
+        52.25,
+        390.0728454589844,
+        287.31591796875,
+        597.9781494140625
+      ],
+      "block_id": "page-0709-block-0028",
+      "order": 28,
+      "text": "Pour l’évolution clinique :\n• discordances entre les symptômes de la maladie et les signes observés ;\n• symptômes, signes et évolution inhabituels qui n’ont pas de sens\ndu point de vue clinique ;\n• diagnostic différentiel constitué de troubles moins fréquents que le TF imposé ;\n• hospitalisations répétées et explorations médicales extensives,\nsans diagnostic dénitif ;\n• maladie persistante ou récurrente d’étiologie indéterminée ;\n• échecs répétés et inexpliqués des traitements.\nPour l’attitude du parent :\n• présence constante au chevet de l’enfant ;\n• disparition des symptômes et des signes en son absence ;\n• inquiétude moins élevée que celle des soignants ;\n• éloge excessif du personnel ;\n• lien exagéré avec le personnel ;\n• participation active aux soins donnés aux autres patients ;\n• acceptation inconditionnelle de toutes les explorations douloureuses\npour son enfant.\n",
+      "text_sha256": "7ed85423d681257111ff3fd819890382a24bb95e71872764de65ddef84e170ad"
+    },
+    {
+      "bbox": [
+        306.0,
+        355.5368347167969,
+        486.0498046875,
+        387.9294128417969
+      ],
+      "block_id": "page-0709-block-0029",
+      "order": 29,
+      "text": "30.5.1 Déformations de la vérité\ndans l’anamnèse\n",
+      "text_sha256": "7db8cc2b83933755df985435b735bf9c2a61f949fec71e060b8a7c8abea28aca"
+    },
+    {
+      "bbox": [
+        306.0,
+        391.5658264160156,
+        549.5179443359375,
+        637.3585205078125
+      ],
+      "block_id": "page-0709-block-0030",
+      "order": 30,
+      "text": "Dans la pratique quotidienne, les entorses à la franchise et à la vérité\ns’étendent sur un large spectre d’expressions et de variantes, dont les\nmanifestations mineures sont d’ailleurs très courantes. La tromperie\net le mensonge constituent une forme universelle de comportement\nsocial. Ils sont appris naturellement dès le jeune âge et servent de\nfeintes, de parades et de diversions dans les communications inter-\npersonnelles (Bass & Halligan, 2007). Il n’est pas rare que les patients\ndonnent des informations inexactes, qu’ils oublient des aspects\nimportants ou qu’ils modient les faits spontanément, à leur propre\ninsu, ou encore par timidité, par complaisance ou par besoin de se\nmontrer sous un jour meilleur. D’autres patients mentent carrément\net nient la vérité pour protéger des secrets de leur vie privée ou\nsoutirer des attentions et des avantages qu’ils craignent de se voir\nrefuser autrement ; ils peuvent aller jusqu’à la simulation, donnant\nalors des informations fausses en vue d’obtenir un gain concret bien\nprécis. Le mythomane qui verse dans le mensonge pathologique en\nest conscient, mais demeure incapable de se maîtriser. Par ailleurs,\nle patient amnésique qui fabule ou le schizophrène qui délire ne se\nrendent pas compte qu’ils « mentent ». Le médecin prudent conserve\nun scepticisme respectueux et se montre habituellement assez\nperspicace pour replacer les faits quand des détails sont discordants.\n",
+      "text_sha256": "24479860ea886217a4bac6e932d2c5265e1fc764eaa43234b0ebc8859859de58"
+    },
+    {
+      "bbox": [
+        306.0,
+        648.1368408203125,
+        522.6880493164062,
+        664.2794189453125
+      ],
+      "block_id": "page-0709-block-0031",
+      "order": 31,
+      "text": "30.5.2 Comportement autodestructeur\n",
+      "text_sha256": "210f5a8d7fe1a618906f6a4271a6ae3fc2ec6f6a28e020c96fa07443ab1cb4b3"
+    },
+    {
+      "bbox": [
+        306.0,
+        667.9158325195312,
+        549.4690551757812,
+        725.45849609375
+      ],
+      "block_id": "page-0709-block-0032",
+      "order": 32,
+      "text": "Outre l’imitation et la provocation volontaires d’une maladie,\nles raisons et façons de nuire à sa propre santé sont multiples,\ndirectes ou indirectes (Kocalevent & al., 2005). Beaucoup de\nmalades négligent leur traitement et maintiennent des habitudes\nde vie nocives : mauvaise alimentation, abus de tabac et de diverses\n",
+      "text_sha256": "dd7d9b1237d3dac726bfb5e5045cb885bc5c9bf5c4b1901f786cd520a18d2c51"
+    }
+  ],
+  "coordinates_sha256": "6e23d93d97d839411d314503f0147193f502a296452582c617b04c4c814c04f5",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0709",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "692\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\ndressé des listes d’indices qui peuvent mettre sur la piste d’un TF\nimposé à autrui. Les principaux sont décrits dans l’encadré 30.1.\n30.5\nVariété diagnostique\nToutes les dissimulations, les mensonges, les négligences, les\nmauvaises observances et gestes délétères posés contre soi-même\nou autrui ne signent pas d’emblée un trouble factice (TF).\nTABLEAU 30.2 Critères diagnostiques du trouble factice imposé à autrui\nDSM-5\nDSM-IV-TR\n300.19 Trouble factice imposé à autrui\nTrouble factice par procuration\nA. Falsication de signes ou de symptômes physiques ou psychologiques,\nou induction de blessures ou de maladies chez autrui, associée à une\ntromperie identiée.\nA. Production délibérée ou simulation de signes ou de symptômes\nphysiques ou psychologiques chez une autre personne que le sujet\nlui-même, personne dont le sujet a la charge.\nB. Le sujet fait passer une autre personne présente (la victime) pour\nmalade, invalide ou blessée.\nB. La motivation du comportement est de jouer le rôle de malade par\nprocuration.\nC. Le comportement de tromperie est évident, même en l’absence de\nbénéces externes objectivables.\nC. Il n’y a pas de motifs extérieurs (tels qu’un gain pécuniaire) à ce\ncomportement.\nD. Le comportement n’est pas mieux expliqué par un autre trouble mental\ntel qu’un trouble délirant ou un autre trouble psychotique.\nD. Le comportement n’est pas mieux expliqué par un autre trouble mental.\nN.B. : Le diagnostic s’applique au coupable et non à la victime.\nSpécier si :\nÉpisode unique\nÉpisodes récurrents (deux événements ou plus de falsication d’une\nmaladie et/ou d’induction d’une blessure).\nSources : APA (2015), p. 384 ; APA (2004), p. 900.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004.\nAll rights reserved.\nENCADRÉ 30.1 Principaux indices d’un trouble factice\nimposé à autrui\nPour l’évolution clinique :\n• discordances entre les symptômes de la maladie et les signes observés ;\n• symptômes, signes et évolution inhabituels qui n’ont pas de sens\ndu point de vue clinique ;\n• diagnostic différentiel constitué de troubles moins fréquents que le TF imposé ;\n• hospitalisations répétées et explorations médicales extensives,\nsans diagnostic dénitif ;\n• maladie persistante ou récurrente d’étiologie indéterminée ;\n• échecs répétés et inexpliqués des traitements.\nPour l’attitude du parent :\n• présence constante au chevet de l’enfant ;\n• disparition des symptômes et des signes en son absence ;\n• inquiétude moins élevée que celle des soignants ;\n• éloge excessif du personnel ;\n• lien exagéré avec le personnel ;\n• participation active aux soins donnés aux autres patients ;\n• acceptation inconditionnelle de toutes les explorations douloureuses\npour son enfant.\n30.5.1 Déformations de la vérité\ndans l’anamnèse\nDans la pratique quotidienne, les entorses à la franchise et à la vérité\ns’étendent sur un large spectre d’expressions et de variantes, dont les\nmanifestations mineures sont d’ailleurs très courantes. La tromperie\net le mensonge constituent une forme universelle de comportement\nsocial. Ils sont appris naturellement dès le jeune âge et servent de\nfeintes, de parades et de diversions dans les communications inter-\npersonnelles (Bass & Halligan, 2007). Il n’est pas rare que les patients\ndonnent des informations inexactes, qu’ils oublient des aspects\nimportants ou qu’ils modient les faits spontanément, à leur propre\ninsu, ou encore par timidité, par complaisance ou par besoin de se\nmontrer sous un jour meilleur. D’autres patients mentent carrément\net nient la vérité pour protéger des secrets de leur vie privée ou\nsoutirer des attentions et des avantages qu’ils craignent de se voir\nrefuser autrement ; ils peuvent aller jusqu’à la simulation, donnant\nalors des informations fausses en vue d’obtenir un gain concret bien\nprécis. Le mythomane qui verse dans le mensonge pathologique en\nest conscient, mais demeure incapable de se maîtriser. Par ailleurs,\nle patient amnésique qui fabule ou le schizophrène qui délire ne se\nrendent pas compte qu’ils « mentent ». Le médecin prudent conserve\nun scepticisme respectueux et se montre habituellement assez\nperspicace pour replacer les faits quand des détails sont discordants.\n30.5.2 Comportement autodestructeur\nOutre l’imitation et la provocation volontaires d’une maladie,\nles raisons et façons de nuire à sa propre santé sont multiples,\ndirectes ou indirectes (Kocalevent & al., 2005). Beaucoup de\nmalades négligent leur traitement et maintiennent des habitudes\nde vie nocives : mauvaise alimentation, abus de tabac et de diverses\n",
+  "raw_text_sha256": "94de1fccab55f21479defc9f3343148ec87e95e5481e560f214e012116c28e1a",
+  "source_page_display": 710,
+  "source_page_index": 709
+}

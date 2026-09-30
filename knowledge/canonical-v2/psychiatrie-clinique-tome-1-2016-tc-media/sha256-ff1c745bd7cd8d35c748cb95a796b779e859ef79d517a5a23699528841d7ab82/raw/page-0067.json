@@ -1,0 +1,316 @@
+{
+  "block_sequence_sha256": "c321f284022f5f3d8bcf6e37277951f7d7c2f11d193f880ec5b229403a4947d7",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        447.807861328125,
+        758.8693237304688
+      ],
+      "block_id": "page-0067-block-0001",
+      "order": 1,
+      "text": "50\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 1\nIntroduction à la psychiatrie\n",
+      "text_sha256": "2bd35f678e0865b7f16da1bb45c2a18ade207bf50d91f93a835878fe2d726d00"
+    },
+    {
+      "bbox": [
+        51.25,
+        59.374122619628906,
+        105.36050415039062,
+        69.9502944946289
+      ],
+      "block_id": "page-0067-block-0002",
+      "order": 2,
+      "text": "Humeur (suite)\n",
+      "text_sha256": "29e8d31a39baa90c82298cafb4c6372ea784117402affb62d3b215daef3be464"
+    },
+    {
+      "bbox": [
+        52.25,
+        75.5228500366211,
+        497.5072937011719,
+        85.5423812866211
+      ],
+      "block_id": "page-0067-block-0003",
+      "order": 3,
+      "text": "Hostilité\n• Frustré, fâché, irrité, irritable, haineux, elleux, hostile, provocateur, belliqueux, querelleur, colérique, violent\n",
+      "text_sha256": "1a8d3a3314ec51c1ababfd4d8d0bfecf8e65f1514519a079837de4d8d07e4e39"
+    },
+    {
+      "bbox": [
+        52.25,
+        94.5728530883789,
+        473.4993591308594,
+        104.5923843383789
+      ],
+      "block_id": "page-0067-block-0004",
+      "order": 4,
+      "text": "Honte et culpabilité\n• Scrupuleux, embarrassé, penaud, gêné, honteux, coupable, se blâme, remords, faible estime de soi\n",
+      "text_sha256": "5fc36e745111daf9f8550fe5e0ecf6a4dee21e266807a79c9ee673b5e952c9e9"
+    },
+    {
+      "bbox": [
+        52.25,
+        113.5728530883789,
+        476.40093994140625,
+        123.5923843383789
+      ],
+      "block_id": "page-0067-block-0005",
+      "order": 5,
+      "text": "Élévation de l’humeur\n• Jovial, joyeux, heureux, enthousiaste, euphorique, rayonnant, enammé, exubérant, exalté, extatique\n",
+      "text_sha256": "f04e0b3eb87e601665411d24f729a504f3e94f8f02717f6edd39d853d9f05c0d"
+    },
+    {
+      "bbox": [
+        52.25,
+        132.6228485107422,
+        464.083251953125,
+        142.6423797607422
+      ],
+      "block_id": "page-0067-block-0006",
+      "order": 6,
+      "text": "Euthymie\n• Tranquillité d’esprit, sérénité, sentiment de calme, état de paix intérieure, sentiment de bien-être\n",
+      "text_sha256": "648999ec53b8186837a973ff4db8969783e50a2185685bb3e81c1d1b70f2eb65"
+    },
+    {
+      "bbox": [
+        51.25,
+        148.22412109375,
+        72.72000122070312,
+        158.80029296875
+      ],
+      "block_id": "page-0067-block-0007",
+      "order": 7,
+      "text": "Affect\n",
+      "text_sha256": "7400a7d9ab1a3659454886753090089d0b45bfcdfa5011c4fd04963ca8036130"
+    },
+    {
+      "bbox": [
+        52.25,
+        164.4228515625,
+        317.2550964355469,
+        185.328125
+      ],
+      "block_id": "page-0067-block-0008",
+      "order": 8,
+      "text": "Congruence\n• Congruent ou discordant à l’humeur\n• Congruent ou discordant au contenu de la pensée\n",
+      "text_sha256": "60a37a9bbd39418475cdf1a22c81419a73271a009444ba92c4269bc92dcf52c0"
+    },
+    {
+      "bbox": [
+        52.25,
+        194.4228515625,
+        281.90093994140625,
+        226.328125
+      ],
+      "block_id": "page-0067-block-0009",
+      "order": 9,
+      "text": "Réactivité\n• Émoussé, terne, plat\n• Modulé, mobilisable, réactif à l’humour\n• Labile, changeant, variable, uctuant\n",
+      "text_sha256": "809964809ea939598b6cd3d6668e43d4d21cf6505e4581d3a1558f0e4c32e14a"
+    },
+    {
+      "bbox": [
+        52.25,
+        235.4728546142578,
+        313.1253967285156,
+        245.4923858642578
+      ],
+      "block_id": "page-0067-block-0010",
+      "order": 10,
+      "text": "Variabilité\n• Neutre, restreint, isolation de l’affect, alexithymie\n",
+      "text_sha256": "73a171bcc6945d548cadbed82ccf4029f11c4d320516f4704da6b6c2a82040e5"
+    },
+    {
+      "bbox": [
+        51.25,
+        251.07412719726562,
+        77.81199645996094,
+        261.6502990722656
+      ],
+      "block_id": "page-0067-block-0011",
+      "order": 11,
+      "text": "Pensée\n",
+      "text_sha256": "8af3d5b8b56e3a9cd9eb1e0a9d3252d356f605b9ec68228771c60b0d80d68c2f"
+    },
+    {
+      "bbox": [
+        52.25,
+        267.2728576660156,
+        446.7420654296875,
+        310.1781311035156
+      ],
+      "block_id": "page-0067-block-0012",
+      "order": 12,
+      "text": "Cours\n• Fluide, limpide, clair, cohérent, logique, facile à suivre\n• Circonstanciel, tangentiel, illogique, embrouillé, confus, désorganisé\n• Accéléré, tachypsychie, fuite des idées, relâchement associatif, incohérent, salade de mots\n• Ralenti, bradypsychie, blocage de la pensée\n",
+      "text_sha256": "e55887abeae9ad09194be1d2c491bf2c4ce095035a6e206f528edd794ac9494e"
+    },
+    {
+      "bbox": [
+        52.25,
+        319.2728576660156,
+        521.7105102539062,
+        361.1781311035156
+      ],
+      "block_id": "page-0067-block-0013",
+      "order": 13,
+      "text": "Forme\n• Concrète, abstraite\n• Accessible, vocabulaire recherché, emphatique, discours hermétique, ésotérique, autistique, pauvre, peu élaborée,\nphrases apprises, plaquée\n• Jargonophasie, métonymie, néologismes, schizophasie\n",
+      "text_sha256": "952cce7e2333a464cfc79f7ade76369cd62e93a9248d182e337d008055551614"
+    },
+    {
+      "bbox": [
+        52.25,
+        370.3228454589844,
+        130.3880157470703,
+        390.3423767089844
+      ],
+      "block_id": "page-0067-block-0014",
+      "order": 14,
+      "text": "Intensité de conviction\ndu contenu\n",
+      "text_sha256": "437de342e91d670bd073e6531f81794d97715b9009347b355b2b32151023ce24"
+    },
+    {
+      "bbox": [
+        146.25,
+        370.4019470214844,
+        444.21337890625,
+        391.2281188964844
+      ],
+      "block_id": "page-0067-block-0015",
+      "order": 15,
+      "text": "• Idées, croyances insolites, ésotériques, mystiques, préoccupations, obsessions, tourments\n• Idées surinvesties, idées délirantes, délires, délire structuré\n",
+      "text_sha256": "95cd53c67be21e68b55ede8e64cbaa11f23334c781e780b6ba3c5e0ef62bed30"
+    },
+    {
+      "bbox": [
+        52.25,
+        400.37286376953125,
+        499.36260986328125,
+        442.27813720703125
+      ],
+      "block_id": "page-0067-block-0016",
+      "order": 16,
+      "text": "Contenu anxieux\n• Phobies, craintes, inquiétudes, angoisses, détresse, peurs, frayeurs\n• Préoccupations ou ruminations concernant divers aspects du quotidien (santé, nances, travail, école, etc.),\nappréhension, désarroi, anticipations catastrophiques\n• Idées intrusives égodystones (obsessions, phobies d’impulsion)\n",
+      "text_sha256": "29b8778a525ac910aa0ce8e4b4f41a756cbc8ba1a0c8967c7589a7097085a97d"
+    },
+    {
+      "bbox": [
+        52.25,
+        451.37286376953125,
+        527.2623901367188,
+        471.27813720703125
+      ],
+      "block_id": "page-0067-block-0017",
+      "order": 17,
+      "text": "Contenu dépressif\n• Baisse de l’estime de soi, désespoir, autodévalorisation, sentiment d’impuissance, de pauvreté, de ruine, d’indignité,\nculpabilité, incapacité à se projeter dans l’avenir, pessimisme\n",
+      "text_sha256": "02ba173efea1fadf6af6212abeece43f8b35eb2e690d9a68bb872c1f6c75c9b1"
+    },
+    {
+      "bbox": [
+        52.25,
+        480.4228515625,
+        524.8754272460938,
+        500.328125
+      ],
+      "block_id": "page-0067-block-0018",
+      "order": 18,
+      "text": "Contenu maniaque\n• Idées grandioses, exaltation, élévation de l’estime de soi, impression d’être investi d’une mission, croyances d’avoir\ndes pouvoirs surnaturels, sentiment d’omnipotence, de supériorité, pompeux\n",
+      "text_sha256": "37971113a465b0de5804289b31e90d2afab705f4c3b549a02c4ebf972d00f1e7"
+    },
+    {
+      "bbox": [
+        52.25,
+        509.4228515625,
+        524.0047607421875,
+        541.328125
+      ],
+      "block_id": "page-0067-block-0019",
+      "order": 19,
+      "text": "Contenu psychotique\n• Délire paranoïde, de référence, grandiose, érotomane, de jalousie, mystique, religieux, nihiliste, de ruine, somatique\n• Idées de référence, vol/insertion/diffusion/écho de la pensée, contrôle des idées/gestes\n• Croyances bizarres, magiques, idiosyncrasiques\n",
+      "text_sha256": "dda2bad9d5dd32c89a1adaae65d7d2e1680c80c7cf0ff40cc898644da2f65c93"
+    },
+    {
+      "bbox": [
+        52.25,
+        550.4728393554688,
+        108.58100891113281,
+        570.4923706054688
+      ],
+      "block_id": "page-0067-block-0020",
+      "order": 20,
+      "text": "Caractéristiques\ndu délire\n",
+      "text_sha256": "314d216de2f7daf25049fc1b18f825efff2736c3293164e910663079e25b4438"
+    },
+    {
+      "bbox": [
+        146.25,
+        550.5519409179688,
+        533.4917602539062,
+        604.3781127929688
+      ],
+      "block_id": "page-0067-block-0021",
+      "order": 21,
+      "text": "• Expansif (grandeur, richesse), rétractif (nihilisme, culpabilité, hypocondrie), paranoïde (persécution, référence, contrôle)\n• Systématisé, organisé, fragmenté (peu structuré), bizarre\n• Envahissant, intense, mis à distance, encapsulé\n• Congruent ou non congruent à l’humeur\n• Aigu, chronique\n",
+      "text_sha256": "d42f8cca00a8f9db4979bf995a140bc9df4fc52edde8b5a2734e5ce7bb38325d"
+    },
+    {
+      "bbox": [
+        52.25,
+        613.4728393554688,
+        113.99000549316406,
+        653.4923706054688
+      ],
+      "block_id": "page-0067-block-0022",
+      "order": 22,
+      "text": "Contenu orientant\nvers la possibilité\nd’un trouble de la\npersonnalité\n",
+      "text_sha256": "626ee22d99fe4fcbebd9318cc08dea58a54f89f5da1db00f4cc30f68780314e3"
+    },
+    {
+      "bbox": [
+        146.25,
+        613.5519409179688,
+        535.0621948242188,
+        677.3781127929688
+      ],
+      "block_id": "page-0067-block-0023",
+      "order": 23,
+      "text": "• Discours récurrent d’autovictimisation, d’autodéresponsabilisation\n• Discours alloplastique (exigeant une adaptation de la part des autres plutôt qu’un effort de la part du patient à changer\nson attitude pour améliorer les circonstances)\n• Plaintes récurrentes, commentaires dépréciants ou dénigrants de l’entourage, méprisant\n• Sentiment d’abandon, de rejet\n• Tendance au clivage, idéalisation/dévalorisation des autres\n",
+      "text_sha256": "85020f816995bcd3f49ce091c956ecce832513b6318d47da9e2f4a5229bd2dbf"
+    },
+    {
+      "bbox": [
+        52.25,
+        686.5228881835938,
+        533.8923950195312,
+        717.4281616210938
+      ],
+      "block_id": "page-0067-block-0024",
+      "order": 24,
+      "text": "Potentiel agressif\n• Autoagressif : idées passives de mort, idées suicidaires (plan : moyen, lieu, temps, intention de passage à l’acte), idées\nd’automutilation\n• Hétéroagressif (plan : moyen, lieu, temps, intention de passage à l’acte, victime ciblée)\n",
+      "text_sha256": "7e518747520af92d538410295a698b4bd10355d04b384f4ce5654ca60e21033d"
+    },
+    {
+      "bbox": [
+        50.0,
+        41.002296447753906,
+        318.3842468261719,
+        53.320068359375
+      ],
+      "block_id": "page-0067-block-0025",
+      "order": 25,
+      "text": "TABLEAU 3.3 Structure et terminologie de l’examen mental (suite)\n",
+      "text_sha256": "c99f3986556adb6d6c5ca07fc3f205da395cbdbe73f2793e5598837401e5d574"
+    }
+  ],
+  "coordinates_sha256": "cb025e3492586ef69f9ac5987c28f601f3f0ad9e180c599ca07995c85d233bae",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0067",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "50\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 1\nIntroduction à la psychiatrie\nHumeur (suite)\nHostilité\n• Frustré, fâché, irrité, irritable, haineux, elleux, hostile, provocateur, belliqueux, querelleur, colérique, violent\nHonte et culpabilité\n• Scrupuleux, embarrassé, penaud, gêné, honteux, coupable, se blâme, remords, faible estime de soi\nÉlévation de l’humeur\n• Jovial, joyeux, heureux, enthousiaste, euphorique, rayonnant, enammé, exubérant, exalté, extatique\nEuthymie\n• Tranquillité d’esprit, sérénité, sentiment de calme, état de paix intérieure, sentiment de bien-être\nAffect\nCongruence\n• Congruent ou discordant à l’humeur\n• Congruent ou discordant au contenu de la pensée\nRéactivité\n• Émoussé, terne, plat\n• Modulé, mobilisable, réactif à l’humour\n• Labile, changeant, variable, uctuant\nVariabilité\n• Neutre, restreint, isolation de l’affect, alexithymie\nPensée\nCours\n• Fluide, limpide, clair, cohérent, logique, facile à suivre\n• Circonstanciel, tangentiel, illogique, embrouillé, confus, désorganisé\n• Accéléré, tachypsychie, fuite des idées, relâchement associatif, incohérent, salade de mots\n• Ralenti, bradypsychie, blocage de la pensée\nForme\n• Concrète, abstraite\n• Accessible, vocabulaire recherché, emphatique, discours hermétique, ésotérique, autistique, pauvre, peu élaborée,\nphrases apprises, plaquée\n• Jargonophasie, métonymie, néologismes, schizophasie\nIntensité de conviction\ndu contenu\n• Idées, croyances insolites, ésotériques, mystiques, préoccupations, obsessions, tourments\n• Idées surinvesties, idées délirantes, délires, délire structuré\nContenu anxieux\n• Phobies, craintes, inquiétudes, angoisses, détresse, peurs, frayeurs\n• Préoccupations ou ruminations concernant divers aspects du quotidien (santé, nances, travail, école, etc.),\nappréhension, désarroi, anticipations catastrophiques\n• Idées intrusives égodystones (obsessions, phobies d’impulsion)\nContenu dépressif\n• Baisse de l’estime de soi, désespoir, autodévalorisation, sentiment d’impuissance, de pauvreté, de ruine, d’indignité,\nculpabilité, incapacité à se projeter dans l’avenir, pessimisme\nContenu maniaque\n• Idées grandioses, exaltation, élévation de l’estime de soi, impression d’être investi d’une mission, croyances d’avoir\ndes pouvoirs surnaturels, sentiment d’omnipotence, de supériorité, pompeux\nContenu psychotique\n• Délire paranoïde, de référence, grandiose, érotomane, de jalousie, mystique, religieux, nihiliste, de ruine, somatique\n• Idées de référence, vol/insertion/diffusion/écho de la pensée, contrôle des idées/gestes\n• Croyances bizarres, magiques, idiosyncrasiques\nCaractéristiques\ndu délire\n• Expansif (grandeur, richesse), rétractif (nihilisme, culpabilité, hypocondrie), paranoïde (persécution, référence, contrôle)\n• Systématisé, organisé, fragmenté (peu structuré), bizarre\n• Envahissant, intense, mis à distance, encapsulé\n• Congruent ou non congruent à l’humeur\n• Aigu, chronique\nContenu orientant\nvers la possibilité\nd’un trouble de la\npersonnalité\n• Discours récurrent d’autovictimisation, d’autodéresponsabilisation\n• Discours alloplastique (exigeant une adaptation de la part des autres plutôt qu’un effort de la part du patient à changer\nson attitude pour améliorer les circonstances)\n• Plaintes récurrentes, commentaires dépréciants ou dénigrants de l’entourage, méprisant\n• Sentiment d’abandon, de rejet\n• Tendance au clivage, idéalisation/dévalorisation des autres\nPotentiel agressif\n• Autoagressif : idées passives de mort, idées suicidaires (plan : moyen, lieu, temps, intention de passage à l’acte), idées\nd’automutilation\n• Hétéroagressif (plan : moyen, lieu, temps, intention de passage à l’acte, victime ciblée)\nTABLEAU 3.3 Structure et terminologie de l’examen mental (suite)\n",
+  "raw_text_sha256": "7f92340a12cb7a61b5b77bd3345fa601b67b8c790f5284c45e8e899405f9573a",
+  "source_page_display": 68,
+  "source_page_index": 67
+}

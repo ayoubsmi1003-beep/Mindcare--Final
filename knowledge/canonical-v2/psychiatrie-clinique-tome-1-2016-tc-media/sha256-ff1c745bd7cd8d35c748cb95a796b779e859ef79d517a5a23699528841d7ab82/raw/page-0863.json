@@ -1,0 +1,292 @@
+{
+  "block_sequence_sha256": "955c98486996e814a766c8c27392379c95d6fc3801e031525340c4e9ea9f8776",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0863-block-0001",
+      "order": 1,
+      "text": "846\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "aae06561570c21d075d7a350b481ccdd355cf67218725c182bf7cf50e27ab89e"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.2880249023438,
+        222.45849609375
+      ],
+      "block_id": "page-0863-block-0002",
+      "order": 2,
+      "text": "Les eets négatifs peuvent toucher :\n• la sphère scolaire ou professionnelle (échecs scolaires, perte\nd’emploi) ;\n• les relations sociales (isolement social, indélité, conits\nfamiliaux) ;\n• la santé physique et mentale (risque accru d’obésité et de\ndépression) ;\n• les nances (dépenses accrues associées à l’Internet).\nLe DSM-5 inclut nouvellement l’UPI dans la section III du\nmanuel (catégorie à l’étude). Des critères provisoires ont été\nproposés s’inspirant de ceux utilisés pour les dépendances aux\nsubstances et les troubles du contrôle des impulsions (TCI). Par\ncontre, peu de données empiriques supportent cette classica-\ntion. L’encadré 36.2 réunit les critères diagnostiques de l’usage\nproblématique de l’Internet.\n",
+      "text_sha256": "08a6b58b3418497437eef339c0b9227de18a130bece3f7ef3b7c227996f2dae2"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.9658203125,
+        291.45849609375,
+        247.10850524902344
+      ],
+      "block_id": "page-0863-block-0003",
+      "order": 3,
+      "text": "routine quotidienne d’une majorité de personnes. Leur croissance\nexponentielle s’accompagne toutefois d’un certain lot de méfaits. De\nplus en plus, le problème de la consommation excessive de divers\nproduits de l’Internet a suscité l’intérêt des scientiques, d’abord sur\nle continent asiatique et plus récemment aux États-Unis. Les groupes\nd’experts se sont d’ailleurs penchés sur la possibilité de l’inclure à\ntitre d’entité clinique distincte dans le DSM-5, mais ils ont conclu\nque les données probantes étaient actuellement insusantes pour\njustier la création d’une telle catégorie nosographique. Connue à\nla fois sous les noms de dépendance aux technologies, dépendance\nà l’Internet, usage problématique ou compulsif de l’Internet, cette\nproblématique touche l’ensemble des technologies multimédias,\nincluant les jeux vidéo, les réalités virtuelles, la pornographie et\nles médias sociaux, d’où le terme plus large de cyberdépendance.\nNous utilisons ici l’appellation « usage problématique de l’Internet »\n(UPI), étant donné sa plus grande neutralité en l’absence d’une\nmeilleure connaissance des mécanismes physiopathologiques en\ncause dans ce comportement excessif.\n",
+      "text_sha256": "f54a6ddc3036dc2a9accbf782ac98a762016cd31cd65ce72df6284fe1d80c21e"
+    },
+    {
+      "bbox": [
+        48.0,
+        257.6368103027344,
+        174.60983276367188,
+        273.7793884277344
+      ],
+      "block_id": "page-0863-block-0004",
+      "order": 4,
+      "text": "36B.2.1 Épidémiologie\n",
+      "text_sha256": "ff78cfa24eba78df353e9e0f06bc8061e4aacd284bdcbfefc2c69b7542a99353"
+    },
+    {
+      "bbox": [
+        48.0,
+        277.1158142089844,
+        291.65606689453125,
+        460.2585144042969
+      ],
+      "block_id": "page-0863-block-0005",
+      "order": 5,
+      "text": "Les quelques études épidémiologiques réalisées jusqu’à ce jour\ndressent des tableaux divergents quant à la prévalence de l’UPI, ce\nqui s’explique notamment par de l’imprécision quant à dénition\ndu trouble inhérent à l’absence de critères diagnostiques formels\njusqu’à maintenant, mais également par des méthodologies de\nrecherche variables. Plusieurs études réalisées initialement à partir\nde sondages volontaires en ligne indiquent des prévalences très\nélevées, surévaluant l’ampleur réelle du problème de par le biais de\nsélection induit – ce sont les utilisateurs d’Internet qui répondent au\nsondage. Récemment, des études à grande échelle et représentatives\nde la population générale adulte indiquent que la prévalence de l’UPI\nse situerait entre 0,3 et 1 % (Aboujaoude, 2010). Les études qui se\nsont intéressées aux populations adolescentes pointent vers des\nvaleurs supérieures, variant entre 2 et 11 %, avec une prépondérance\nmasculine, ce qui porte à croire que les adolescents sont plus enclins\nà sourir d’un UPI (Shaw & Black, 2008).\n",
+      "text_sha256": "6d5bf01b7811f41adb43229ac7d98141b6ef3df7c4ad5a8bec0a325eaea9bc5e"
+    },
+    {
+      "bbox": [
+        48.0,
+        470.7868347167969,
+        151.81204223632812,
+        486.9294128417969
+      ],
+      "block_id": "page-0863-block-0006",
+      "order": 6,
+      "text": "36B.2.2 Étiologies\n",
+      "text_sha256": "0a16b9ddf560962c72a33925e881b11e60e866794a636334c496912b0fb6658a"
+    },
+    {
+      "bbox": [
+        48.0,
+        490.3158264160156,
+        291.48846435546875,
+        638.9085083007812
+      ],
+      "block_id": "page-0863-block-0007",
+      "order": 7,
+      "text": "Même si l’absence de données neurobiologiques sur l’UPI limite\nactuellement l’élaboration de modèles étiologiques spéciques, la\ncompréhension qui se forge de ce trouble s’inscrit dans un modèle\nmultifactoriel. Plusieurs auteurs ont tenté de rendre compte de\nl’apparition et de la persistance de ce problème en s’inspirant des\nmodèles de la dépendance comportementale ou des troubles du\ncontrôle des impulsions, étant donné leurs similitudes au plan\nsémiologique. Qui plus est, il a été proposé que les cognitions\nnégatives envers soi (p. ex., faible estime de soi et sentiment d’inef-\ncacité) et des habiletés sociales décientes jouent un rôle central\ndans le développement de l’UPI. Dans ce cas, l’Internet constitue\nun moyen de se retirer d’un monde réel perçu comme plus mena-\nçant, au prot d’une participation sociale virtuelle compensatoire.\n",
+      "text_sha256": "5d249b77b3025c927bac61cf6e1704a8e104b6fb5358f353eadb3a0d9ab1656b"
+    },
+    {
+      "bbox": [
+        48.0,
+        649.4368286132812,
+        207.217529296875,
+        665.5794067382812
+      ],
+      "block_id": "page-0863-block-0008",
+      "order": 8,
+      "text": "36B.2.3 Description clinique\n",
+      "text_sha256": "f1f3d3646089c9ead122223bf1b63189b1e30d5ffe9422b520e2d7208b57d90f"
+    },
+    {
+      "bbox": [
+        48.0,
+        668.9158325195312,
+        291.41766357421875,
+        725.45849609375
+      ],
+      "block_id": "page-0863-block-0009",
+      "order": 9,
+      "text": "L’UPI peut se dénir par des préoccupations ou une utilisation\nexcessives et incontrôlées de l’Internet entraînant une atteinte\nfonctionnelle ou une détresse signicative ; elle ne s’explique pas\npar un autre trouble psychiatrique primaire (p. ex., la manie) ou\npar l’eet d’une substance.\n",
+      "text_sha256": "5f53a89581f02c844786ac2302f070bebc2352839df14b2ba24a1a02388391b3"
+    },
+    {
+      "bbox": [
+        308.5,
+        239.70230102539062,
+        505.9192810058594,
+        252.070068359375
+      ],
+      "block_id": "page-0863-block-0010",
+      "order": 10,
+      "text": "ENCADRÉ 36.2 Critères diagnostiques de l’usage\n",
+      "text_sha256": "d7d9eac8cc0504ebbe839e857dcc00e1e4365ca7e31ad48a8c504eafe49f4588"
+    },
+    {
+      "bbox": [
+        367.8500061035156,
+        251.602294921875,
+        509.14801025390625,
+        263.570068359375
+      ],
+      "block_id": "page-0863-block-0011",
+      "order": 11,
+      "text": "pathologique des jeux sur Internet\n",
+      "text_sha256": "4abb5968760d301e28c93b18c0e9a6f6f4204e7b0e7c5afb1b33e3a127112bee"
+    },
+    {
+      "bbox": [
+        356.75,
+        269.5728454589844,
+        498.32891845703125,
+        290.5923767089844
+      ],
+      "block_id": "page-0863-block-0012",
+      "order": 12,
+      "text": "DSM-5\nUsage pathologique des jeux sur Internet\n",
+      "text_sha256": "f9d3a3a760f5fc8d13e5bb9c3d902db48271b92d2e545abcf2df9b072fcd64ad"
+    },
+    {
+      "bbox": [
+        310.25,
+        294.9019470214844,
+        543.8088989257812,
+        334.7281188964844
+      ],
+      "block_id": "page-0863-block-0013",
+      "order": 13,
+      "text": "Utilisation persistante et répétée d’Internet pour pratique des jeux, sou-\nvent avec d’autres joueurs, conduisant à une altération du fonctionne-\nment ou une détresse cliniquement signicatives comme en témoignent\nau moins cinq des manifestations suivantes sur une période de 12 mois :\n",
+      "text_sha256": "f9b4c073202afd28ce7dab74108accb70f5caa68e1e65babe5f43591e17e5970"
+    },
+    {
+      "bbox": [
+        310.25,
+        338.9019470214844,
+        544.4200439453125,
+        389.7281188964844
+      ],
+      "block_id": "page-0863-block-0014",
+      "order": 14,
+      "text": "1. Préoccupation par les jeux sur Internet (la personne se remémore\ndes expériences de jeu passées ou elle prévoit de jouer ; les jeux\nsur Internet deviennent l’activité dominante de la vie quotidienne).\nN.B.: Ce trouble est distinct du jeu d’argent sur Internet, qui fait partie\ndu jeu d’argent pathologique.\n",
+      "text_sha256": "05fb17d1eebe578aaa538fa056d77b0e82f7ebfb39b03574a64595dfd7adf8f4"
+    },
+    {
+      "bbox": [
+        310.25,
+        393.95196533203125,
+        536.9472045898438,
+        433.77813720703125
+      ],
+      "block_id": "page-0863-block-0015",
+      "order": 15,
+      "text": "2. Symptômes de sevrage quand l’accès aux jeux sur Internet est sup-\nprimé (ces symptômes se caractérisent typiquement par l’irritabilité,\nde l’anxiété ou de la tristesse mais sans signe physique de sevrage\npharmacologique).\n",
+      "text_sha256": "04066d5b459394079a16fcbd0c3adb62343b6175d6e92f1e4717793981af7ef1"
+    },
+    {
+      "bbox": [
+        310.25,
+        437.95196533203125,
+        537.6700439453125,
+        457.77813720703125
+      ],
+      "block_id": "page-0863-block-0016",
+      "order": 16,
+      "text": "3. Tolérance – Besoin de consacrer des périodes de temps croissantes\naux jeux sur Internet.\n",
+      "text_sha256": "7de78aaf46eb6de4450cb059d57e5e3fe4102c3867f6de64992b789022ab324e"
+    },
+    {
+      "bbox": [
+        310.25,
+        462.001953125,
+        526.7293090820312,
+        481.828125
+      ],
+      "block_id": "page-0863-block-0017",
+      "order": 17,
+      "text": "4. Tentatives infructueuses de contrôler la participation aux jeux sur\nInternet.\n",
+      "text_sha256": "acc901dede96fde6b7cd1dcbd6b1b0a5be4c9d841e078cb007036b2ad49f6605"
+    },
+    {
+      "bbox": [
+        310.25,
+        486.001953125,
+        532.3234252929688,
+        505.828125
+      ],
+      "block_id": "page-0863-block-0018",
+      "order": 18,
+      "text": "5. Perte d’intérêt pour les loisirs et divertissements antérieurs du fait,\net à l’exception, des jeux sur Internet.\n",
+      "text_sha256": "04cd99a262c2a7538fdb43ea67ebed68d8dc3d318a91321ef8bd1f359f23325c"
+    },
+    {
+      "bbox": [
+        310.25,
+        510.05194091796875,
+        532.311767578125,
+        529.8781127929688
+      ],
+      "block_id": "page-0863-block-0019",
+      "order": 19,
+      "text": "6. La pratique excessive des jeux sur Internet est poursuivie bien que\nla personne ait connaissance de ses problèmes psychosociaux.\n",
+      "text_sha256": "0fefe4c97c8b9a7ef91632b18202e6e7a11ff399a1ca477cefff4a714ced4750"
+    },
+    {
+      "bbox": [
+        310.25,
+        534.0519409179688,
+        524.710693359375,
+        553.8781127929688
+      ],
+      "block_id": "page-0863-block-0020",
+      "order": 20,
+      "text": "7. Ment à sa famille, à ses thérapeutes ou à d’autres sur l’ampleur\ndu jeu sur Internet.\n",
+      "text_sha256": "af729955842b1a49a074a3c0f0a0f5ca7332b7bdac02eb918961be3291ac28dd"
+    },
+    {
+      "bbox": [
+        310.25,
+        558.1019897460938,
+        542.4970092773438,
+        577.9281616210938
+      ],
+      "block_id": "page-0863-block-0021",
+      "order": 21,
+      "text": "8. Joue sur Internet pour échapper à ou pour soulager une humeur néga-\ntive (p. ex., des sentiments d’impuissance, de culpabilité, d’anxiété).\n",
+      "text_sha256": "bbcf20c7b6be78b2eee11aeb8f6be0693cfad8d214cef7b1e16f66460a628519"
+    },
+    {
+      "bbox": [
+        310.25,
+        582.1519775390625,
+        539.6771240234375,
+        662.9781494140625
+      ],
+      "block_id": "page-0863-block-0022",
+      "order": 22,
+      "text": "9. Met en danger ou perd une relation affective importante, un emploi\nou des possibilités d’étude ou de carrière à cause de la participation\nà des jeux sur Internet.\nN.B.: Seuls les jeux sur Internet sans mise d’argent sont inclus dans ce\ntrouble. L’utilisation d’Internet pour des activités exigées par un emploi\nou une profession n’est pas incluse ; le trouble n’inclut pas non plus les\nautres utilisations récréatives ou sociales d’Internet. De même, les sites\nInternet sexuels sont exclus.\n",
+      "text_sha256": "dd697786df3a28145ddad0e0dab2861563276d46900efa7509f09ed34e31d9f6"
+    },
+    {
+      "bbox": [
+        306.25,
+        667.9406127929688,
+        546.6060180664062,
+        724.6749877929688
+      ],
+      "block_id": "page-0863-block-0023",
+      "order": 23,
+      "text": "Source : APA (2015), p. 933.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic\nand Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles\nMentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson\nSAS, Paris, 2015. All rights reserved.\n",
+      "text_sha256": "8e85e313ff175f299a9f9bb220a4930c11b7f14c2d243a13735ac3965bbca973"
+    }
+  ],
+  "coordinates_sha256": "2a6e9b19b851d5a372dd2f324fdc62bbe8b534aede43ce4e0a9b883ab61c94c7",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0863",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "846\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nLes eets négatifs peuvent toucher :\n• la sphère scolaire ou professionnelle (échecs scolaires, perte\nd’emploi) ;\n• les relations sociales (isolement social, indélité, conits\nfamiliaux) ;\n• la santé physique et mentale (risque accru d’obésité et de\ndépression) ;\n• les nances (dépenses accrues associées à l’Internet).\nLe DSM-5 inclut nouvellement l’UPI dans la section III du\nmanuel (catégorie à l’étude). Des critères provisoires ont été\nproposés s’inspirant de ceux utilisés pour les dépendances aux\nsubstances et les troubles du contrôle des impulsions (TCI). Par\ncontre, peu de données empiriques supportent cette classica-\ntion. L’encadré 36.2 réunit les critères diagnostiques de l’usage\nproblématique de l’Internet.\nroutine quotidienne d’une majorité de personnes. Leur croissance\nexponentielle s’accompagne toutefois d’un certain lot de méfaits. De\nplus en plus, le problème de la consommation excessive de divers\nproduits de l’Internet a suscité l’intérêt des scientiques, d’abord sur\nle continent asiatique et plus récemment aux États-Unis. Les groupes\nd’experts se sont d’ailleurs penchés sur la possibilité de l’inclure à\ntitre d’entité clinique distincte dans le DSM-5, mais ils ont conclu\nque les données probantes étaient actuellement insusantes pour\njustier la création d’une telle catégorie nosographique. Connue à\nla fois sous les noms de dépendance aux technologies, dépendance\nà l’Internet, usage problématique ou compulsif de l’Internet, cette\nproblématique touche l’ensemble des technologies multimédias,\nincluant les jeux vidéo, les réalités virtuelles, la pornographie et\nles médias sociaux, d’où le terme plus large de cyberdépendance.\nNous utilisons ici l’appellation « usage problématique de l’Internet »\n(UPI), étant donné sa plus grande neutralité en l’absence d’une\nmeilleure connaissance des mécanismes physiopathologiques en\ncause dans ce comportement excessif.\n36B.2.1 Épidémiologie\nLes quelques études épidémiologiques réalisées jusqu’à ce jour\ndressent des tableaux divergents quant à la prévalence de l’UPI, ce\nqui s’explique notamment par de l’imprécision quant à dénition\ndu trouble inhérent à l’absence de critères diagnostiques formels\njusqu’à maintenant, mais également par des méthodologies de\nrecherche variables. Plusieurs études réalisées initialement à partir\nde sondages volontaires en ligne indiquent des prévalences très\nélevées, surévaluant l’ampleur réelle du problème de par le biais de\nsélection induit – ce sont les utilisateurs d’Internet qui répondent au\nsondage. Récemment, des études à grande échelle et représentatives\nde la population générale adulte indiquent que la prévalence de l’UPI\nse situerait entre 0,3 et 1 % (Aboujaoude, 2010). Les études qui se\nsont intéressées aux populations adolescentes pointent vers des\nvaleurs supérieures, variant entre 2 et 11 %, avec une prépondérance\nmasculine, ce qui porte à croire que les adolescents sont plus enclins\nà sourir d’un UPI (Shaw & Black, 2008).\n36B.2.2 Étiologies\nMême si l’absence de données neurobiologiques sur l’UPI limite\nactuellement l’élaboration de modèles étiologiques spéciques, la\ncompréhension qui se forge de ce trouble s’inscrit dans un modèle\nmultifactoriel. Plusieurs auteurs ont tenté de rendre compte de\nl’apparition et de la persistance de ce problème en s’inspirant des\nmodèles de la dépendance comportementale ou des troubles du\ncontrôle des impulsions, étant donné leurs similitudes au plan\nsémiologique. Qui plus est, il a été proposé que les cognitions\nnégatives envers soi (p. ex., faible estime de soi et sentiment d’inef-\ncacité) et des habiletés sociales décientes jouent un rôle central\ndans le développement de l’UPI. Dans ce cas, l’Internet constitue\nun moyen de se retirer d’un monde réel perçu comme plus mena-\nçant, au prot d’une participation sociale virtuelle compensatoire.\n36B.2.3 Description clinique\nL’UPI peut se dénir par des préoccupations ou une utilisation\nexcessives et incontrôlées de l’Internet entraînant une atteinte\nfonctionnelle ou une détresse signicative ; elle ne s’explique pas\npar un autre trouble psychiatrique primaire (p. ex., la manie) ou\npar l’eet d’une substance.\nENCADRÉ 36.2 Critères diagnostiques de l’usage\npathologique des jeux sur Internet\nDSM-5\nUsage pathologique des jeux sur Internet\nUtilisation persistante et répétée d’Internet pour pratique des jeux, sou-\nvent avec d’autres joueurs, conduisant à une altération du fonctionne-\nment ou une détresse cliniquement signicatives comme en témoignent\nau moins cinq des manifestations suivantes sur une période de 12 mois :\n1. Préoccupation par les jeux sur Internet (la personne se remémore\ndes expériences de jeu passées ou elle prévoit de jouer ; les jeux\nsur Internet deviennent l’activité dominante de la vie quotidienne).\nN.B.: Ce trouble est distinct du jeu d’argent sur Internet, qui fait partie\ndu jeu d’argent pathologique.\n2. Symptômes de sevrage quand l’accès aux jeux sur Internet est sup-\nprimé (ces symptômes se caractérisent typiquement par l’irritabilité,\nde l’anxiété ou de la tristesse mais sans signe physique de sevrage\npharmacologique).\n3. Tolérance – Besoin de consacrer des périodes de temps croissantes\naux jeux sur Internet.\n4. Tentatives infructueuses de contrôler la participation aux jeux sur\nInternet.\n5. Perte d’intérêt pour les loisirs et divertissements antérieurs du fait,\net à l’exception, des jeux sur Internet.\n6. La pratique excessive des jeux sur Internet est poursuivie bien que\nla personne ait connaissance de ses problèmes psychosociaux.\n7. Ment à sa famille, à ses thérapeutes ou à d’autres sur l’ampleur\ndu jeu sur Internet.\n8. Joue sur Internet pour échapper à ou pour soulager une humeur néga-\ntive (p. ex., des sentiments d’impuissance, de culpabilité, d’anxiété).\n9. Met en danger ou perd une relation affective importante, un emploi\nou des possibilités d’étude ou de carrière à cause de la participation\nà des jeux sur Internet.\nN.B.: Seuls les jeux sur Internet sans mise d’argent sont inclus dans ce\ntrouble. L’utilisation d’Internet pour des activités exigées par un emploi\nou une profession n’est pas incluse ; le trouble n’inclut pas non plus les\nautres utilisations récréatives ou sociales d’Internet. De même, les sites\nInternet sexuels sont exclus.\nSource : APA (2015), p. 933.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic\nand Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles\nMentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson\nSAS, Paris, 2015. All rights reserved.\n",
+  "raw_text_sha256": "fbf1192212230b1d6df264c293083b5f2f2b8bc0e7888a1602dbcec9d41cb42d",
+  "source_page_display": 864,
+  "source_page_index": 863
+}

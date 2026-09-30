@@ -1,0 +1,172 @@
+{
+  "block_sequence_sha256": "c25f510f55a25abb21d027e3e46906c6825567cb86e97391497ecb9b81e30650",
+  "blocks": [
+    {
+      "bbox": [
+        374.20001220703125,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0060-block-0001",
+      "order": 1,
+      "text": "Chapitre 3\nExamen psychiatrique\n43\n",
+      "text_sha256": "4aa5ca1dee242fa9b95c4404c8854606a231613e341a25540e8ceccffbd70756"
+    },
+    {
+      "bbox": [
+        312.0,
+        40.9658203125,
+        555.51904296875,
+        120.65850067138672
+      ],
+      "block_id": "page-0060-block-0002",
+      "order": 2,
+      "text": "la consommation du patient. Par exemple, il peut demander s’il\nconsomme 10 ou 12 bières ou quatre ou cinq « joints » par jour ;\net même si alors le patient minimise, l’approximation risque d’être\nplus exacte. Certaines questions peuvent aussi permettre d’inver-\nser le sentiment de honte : « Vous, avant d’être ivre, vous pouvez\nboire combien de bières, 12 ? 18 ? » Des questions plus directes et\nfermées s’imposent si le patient fournit des réponses imprécises.\n",
+      "text_sha256": "68b517b321d276fc8f11c6d32d5bd488bc58e3cb0df338062e0e695a8741365b"
+    },
+    {
+      "bbox": [
+        312.0,
+        121.7158203125,
+        555.5918579101562,
+        425.15850830078125
+      ],
+      "block_id": "page-0060-block-0003",
+      "order": 3,
+      "text": "De façon détaillée, il faut tâcher d’obtenir des précisions sur :\n• l’usage de tabac (quantité, durée, fréquence, tentatives d’arrêt,\ntraitements antérieurs) ;\n• la consommation d’alcool (type, quantité, durée, fréquence,\nconséquences [être impliqué dans des bagarres, conduite\nen état d’ébriété, problèmes au travail, perte de conscience\nou black-out], participation aux AA, périodes d’abstinence,\nsymptômes de sevrage antérieurs tels des tremblements, des\nhallucinations visuelles ou des convulsions comme dans le\ndelirium tremens, séjours en désintoxication, date et heure\nde la dernière consommation) ;\n• la consommation de drogues (nature, quantité, durée, fré-\nquence, conséquences, séjours en désintoxication, périodes\nd’abstinence, symptômes d’intoxication et de sevrage anté-\nrieurs, date et heure de la dernière consommation) ;\n• l’apport en caféine : café, thé, boissons gazeuses et énergisantes\n(quantité, fréquence) ;\n• l’intérêt à l’égard des jeux d’argent (cartes, poker-vidéo, loterie,\ncasino ; dettes encourues) ;\n• les habitudes alimentaires (tel le végétarisme, diètes, allergies\nalimentaires) ;\n• l’exercice physique, le conditionnement, les sports ou le\nsédentarisme ;\n• le déroulement des activités de la vie quotidienne (AVQ)\net domestique (AVD), si pertinent.\n",
+      "text_sha256": "50e6b1dd524317684dfbfda201be677ccaf609973f2bfb7a48657a05986b9798"
+    },
+    {
+      "bbox": [
+        312.0,
+        437.68682861328125,
+        408.55548095703125,
+        453.82940673828125
+      ],
+      "block_id": "page-0060-block-0004",
+      "order": 4,
+      "text": "3.2.8 Médication\n",
+      "text_sha256": "37e828ecd5abf388adfad61de0756fb9d553f6fb671710b69ce3667267d82075"
+    },
+    {
+      "bbox": [
+        312.0,
+        457.2158203125,
+        555.3368530273438,
+        571.5585327148438
+      ],
+      "block_id": "page-0060-block-0005",
+      "order": 5,
+      "text": "Une liste à jour des médicaments sous ordonnance doit être\nobtenue du patient ou de la pharmacie qu’il fréquente et consignée\nau dossier, en précisant le dosage, la durée d’utilisation et le nom\ndu médecin prescripteur. On y ajoute, selon les mêmes règles, les\nmédicaments en vente libre et les produits naturels utilisés. On\npeut aussi mentionner les eets bénéques (cognitifs, émotifs et\ncomportementaux), les bienfaits que le patient estime en retirer\net les eets indésirables. On essaye d’avoir une appréciation sur le\ndegré d’observance, en questionnant le patient et son entourage\nou ses soignants.\n",
+      "text_sha256": "592b5abc78382da958741911ccbcb85d9e6510f70e747044ddb487a350d9c757"
+    },
+    {
+      "bbox": [
+        323.3500061035156,
+        589.6431884765625,
+        554.627197265625,
+        608.8189697265625
+      ],
+      "block_id": "page-0060-block-0006",
+      "order": 6,
+      "text": "3.3\nHistoire de la maladie actuelle\n",
+      "text_sha256": "bccf486d5b56cf55bdfc5d7c92f54a639517f9a714c621ffff0c8cf83d096e44"
+    },
+    {
+      "bbox": [
+        312.0,
+        622.6658325195312,
+        555.1943359375,
+        656.20849609375
+      ],
+      "block_id": "page-0060-block-0007",
+      "order": 7,
+      "text": "Bien que cet aspect fasse souvent l’objet de questions dès le début\nde l’entretien, on l’insère ici aux ns de la rédaction de l’histoire\nde cas, selon le plan mentionné à l’encadré 3.2.\n",
+      "text_sha256": "bbeed98597918721d11d7422d10b2c1d0926b7a0832a19ebff25d181d2118d30"
+    },
+    {
+      "bbox": [
+        312.0,
+        657.2658081054688,
+        555.4263305664062,
+        725.45849609375
+      ],
+      "block_id": "page-0060-block-0008",
+      "order": 8,
+      "text": "Il est intéressant de donner l’occasion au patient d’expliquer,\ndans ses mots, sa compréhension des motifs de consultation.\nPendant quelques minutes ininterrompues en début d’entretien,\nl’écoute active est de mise an de saisir toute la complexité du\nrécit que le patient peut faire ; elle lui témoigne du respect et de\nla considération. Ce processus permet d’évaluer non seulement le\n",
+      "text_sha256": "2ebb737a8f59b3ba14a1e5df9b64a34ee7af21ed9c045edb0d86ee2499708f5c"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.9658203125,
+        297.24896240234375,
+        156.20849609375
+      ],
+      "block_id": "page-0060-block-0009",
+      "order": 9,
+      "text": "vive de la part du patient, la question peut être présentée comme\nfaisant partie de l’évaluation de routine : « il s’agit d’une question\nque nous posons habituellement à tous les patients ». Les accu-\nsations et les sentences dont le patient a fait l’objet doivent être\nprécisées. Doivent également être notés les verdicts (présents\net antérieurs) de non-responsabilité criminelle pour cause de\ntroubles mentaux, ainsi que les mandats ou ordonnances rele-\nvant du Tribunal administratif du Québec (TAQ), tout comme\nles interventions présentes et antérieures des Centres jeunesse\net les séjours en institution (dans le cas des patients mineurs).\n",
+      "text_sha256": "72e3737b17145c99f60165d790d9e632630508319be915814bbf82ec5628ce64"
+    },
+    {
+      "bbox": [
+        54.0,
+        166.88682556152344,
+        212.5060272216797,
+        183.02940368652344
+      ],
+      "block_id": "page-0060-block-0010",
+      "order": 10,
+      "text": "3.2.6 Antécédents familiaux\n",
+      "text_sha256": "c0617c43358fdce0f761d5162516d47852d75527b2f4891a1f59963634cc8700"
+    },
+    {
+      "bbox": [
+        54.0,
+        186.5158233642578,
+        297.75811767578125,
+        478.7585144042969
+      ],
+      "block_id": "page-0060-block-0011",
+      "order": 11,
+      "text": "La plupart des pathologies psychiatriques ont une composante\nétiologique génétique ou familiale. L’évaluation a donc intérêt à être\nenrichie d’une connaissance des maladies psychiatriques présentes\ndans la famille du premier degré et la famille étendue. Au moment\nopportun, quand le patient fait allusion à sa famille, on peut procé-\nder avec les questions suivantes : « Dans votre famille, je veux dire\nvos parents, vos frères, vos sœurs, vos grands-parents, vos oncles\net vos tantes, vos cousins et vos cousines, est-ce qu’il y en a qui :\n• ont fait des « dépressions » (terme désignant souvent toutes\nles maladies mentales dans le langage populaire) ?\n• ont pris des « pilules pour les nerfs » ?\n• ont consommé de l’alcool ou des drogues ?\n• sont allés chez les AA ?\n• ont été hospitalisés en psychiatrie ? Si oui, tâcher de préciser\npour quel diagnostic.\n• ont reçu des électrochocs ?\nUne attention particulière doit être portée aux tentatives de\nsuicide et aux suicides réussis chez les membres de la famille.\nLes causes du décès et l’âge au décès des membres de la famille\ncomplètent cette section. Tous ces éléments peuvent constituer des\nfacteurs contributifs au tableau psychiatrique pouvant être repris\ndans la formulation de synthèse. Il peut également être utile de\nconnaître les traitements pharmacologiques qui ont été ecaces\nchez les membres de la famille, le cas échéant.\n",
+      "text_sha256": "7c4ca449354a239e63798a2ec5a0a210d5560aa982602342acd5fc9eb89ea0e2"
+    },
+    {
+      "bbox": [
+        54.0,
+        489.43682861328125,
+        181.01651000976562,
+        505.57940673828125
+      ],
+      "block_id": "page-0060-block-0012",
+      "order": 12,
+      "text": "3.2.7 Habitudes de vie\n",
+      "text_sha256": "eab5a82412cdd616d9e95fa14adea248dc6ef607b524a09188312cc577f1619d"
+    },
+    {
+      "bbox": [
+        54.0,
+        509.06585693359375,
+        297.62591552734375,
+        725.45849609375
+      ],
+      "block_id": "page-0060-block-0013",
+      "order": 13,
+      "text": "Cette section traite des habitudes de consommation de substances\npsychotropes légales (médicaments) et illégales (drogues), les\ncomportements qui y sont associés, ainsi que le fonctionne-\nment habituel du patient dans le quotidien. La discussion sur\nla consommation risque de mobiliser certaines défenses et la\nplupart des patients se sentent plus à l’aise d’aborder ces thèmes\nlorsqu’ils n’ont pas l’impression d’être l’objet de jugement de la\npart du clinicien. Les questions ouvertes précédées d’une sorte\nde justication peuvent faciliter l’entrée en matière, comme :\n• Après une grosse journée ou pour vous détendre, vous\narrive-t-il de consommer de l’alcool ou du pot ?\n• Vous avez mentionné que vous aviez certains problèmes avec\nvotre consommation ; de quelle nature sont ces problèmes ?\n• Utilisez-vous des moyens pour contrôler votre anxiété ?\nLa plupart des patients ont tendance à minimiser leur consom-\nmation. Pour obtenir des réponses plus valides quant à la quantité\nréelle de consommation, le clinicien a intérêt à adopter une atti-\ntude naturelle et d’amplier dès le départ sa supposition quant à\n",
+      "text_sha256": "b337dc62979e195e6b7d6013c8e8b3f614f9fee73cfe956993859e2bd1c851db"
+    }
+  ],
+  "coordinates_sha256": "0ad7e7a271682dbc07faf4b4e461a8fd90eb36296d842da01b855b8e43ebb6ba",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0060",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 3\nExamen psychiatrique\n43\nla consommation du patient. Par exemple, il peut demander s’il\nconsomme 10 ou 12 bières ou quatre ou cinq « joints » par jour ;\net même si alors le patient minimise, l’approximation risque d’être\nplus exacte. Certaines questions peuvent aussi permettre d’inver-\nser le sentiment de honte : « Vous, avant d’être ivre, vous pouvez\nboire combien de bières, 12 ? 18 ? » Des questions plus directes et\nfermées s’imposent si le patient fournit des réponses imprécises.\nDe façon détaillée, il faut tâcher d’obtenir des précisions sur :\n• l’usage de tabac (quantité, durée, fréquence, tentatives d’arrêt,\ntraitements antérieurs) ;\n• la consommation d’alcool (type, quantité, durée, fréquence,\nconséquences [être impliqué dans des bagarres, conduite\nen état d’ébriété, problèmes au travail, perte de conscience\nou black-out], participation aux AA, périodes d’abstinence,\nsymptômes de sevrage antérieurs tels des tremblements, des\nhallucinations visuelles ou des convulsions comme dans le\ndelirium tremens, séjours en désintoxication, date et heure\nde la dernière consommation) ;\n• la consommation de drogues (nature, quantité, durée, fré-\nquence, conséquences, séjours en désintoxication, périodes\nd’abstinence, symptômes d’intoxication et de sevrage anté-\nrieurs, date et heure de la dernière consommation) ;\n• l’apport en caféine : café, thé, boissons gazeuses et énergisantes\n(quantité, fréquence) ;\n• l’intérêt à l’égard des jeux d’argent (cartes, poker-vidéo, loterie,\ncasino ; dettes encourues) ;\n• les habitudes alimentaires (tel le végétarisme, diètes, allergies\nalimentaires) ;\n• l’exercice physique, le conditionnement, les sports ou le\nsédentarisme ;\n• le déroulement des activités de la vie quotidienne (AVQ)\net domestique (AVD), si pertinent.\n3.2.8 Médication\nUne liste à jour des médicaments sous ordonnance doit être\nobtenue du patient ou de la pharmacie qu’il fréquente et consignée\nau dossier, en précisant le dosage, la durée d’utilisation et le nom\ndu médecin prescripteur. On y ajoute, selon les mêmes règles, les\nmédicaments en vente libre et les produits naturels utilisés. On\npeut aussi mentionner les eets bénéques (cognitifs, émotifs et\ncomportementaux), les bienfaits que le patient estime en retirer\net les eets indésirables. On essaye d’avoir une appréciation sur le\ndegré d’observance, en questionnant le patient et son entourage\nou ses soignants.\n3.3\nHistoire de la maladie actuelle\nBien que cet aspect fasse souvent l’objet de questions dès le début\nde l’entretien, on l’insère ici aux ns de la rédaction de l’histoire\nde cas, selon le plan mentionné à l’encadré 3.2.\nIl est intéressant de donner l’occasion au patient d’expliquer,\ndans ses mots, sa compréhension des motifs de consultation.\nPendant quelques minutes ininterrompues en début d’entretien,\nl’écoute active est de mise an de saisir toute la complexité du\nrécit que le patient peut faire ; elle lui témoigne du respect et de\nla considération. Ce processus permet d’évaluer non seulement le\nvive de la part du patient, la question peut être présentée comme\nfaisant partie de l’évaluation de routine : « il s’agit d’une question\nque nous posons habituellement à tous les patients ». Les accu-\nsations et les sentences dont le patient a fait l’objet doivent être\nprécisées. Doivent également être notés les verdicts (présents\net antérieurs) de non-responsabilité criminelle pour cause de\ntroubles mentaux, ainsi que les mandats ou ordonnances rele-\nvant du Tribunal administratif du Québec (TAQ), tout comme\nles interventions présentes et antérieures des Centres jeunesse\net les séjours en institution (dans le cas des patients mineurs).\n3.2.6 Antécédents familiaux\nLa plupart des pathologies psychiatriques ont une composante\nétiologique génétique ou familiale. L’évaluation a donc intérêt à être\nenrichie d’une connaissance des maladies psychiatriques présentes\ndans la famille du premier degré et la famille étendue. Au moment\nopportun, quand le patient fait allusion à sa famille, on peut procé-\nder avec les questions suivantes : « Dans votre famille, je veux dire\nvos parents, vos frères, vos sœurs, vos grands-parents, vos oncles\net vos tantes, vos cousins et vos cousines, est-ce qu’il y en a qui :\n• ont fait des « dépressions » (terme désignant souvent toutes\nles maladies mentales dans le langage populaire) ?\n• ont pris des « pilules pour les nerfs » ?\n• ont consommé de l’alcool ou des drogues ?\n• sont allés chez les AA ?\n• ont été hospitalisés en psychiatrie ? Si oui, tâcher de préciser\npour quel diagnostic.\n• ont reçu des électrochocs ?\nUne attention particulière doit être portée aux tentatives de\nsuicide et aux suicides réussis chez les membres de la famille.\nLes causes du décès et l’âge au décès des membres de la famille\ncomplètent cette section. Tous ces éléments peuvent constituer des\nfacteurs contributifs au tableau psychiatrique pouvant être repris\ndans la formulation de synthèse. Il peut également être utile de\nconnaître les traitements pharmacologiques qui ont été ecaces\nchez les membres de la famille, le cas échéant.\n3.2.7 Habitudes de vie\nCette section traite des habitudes de consommation de substances\npsychotropes légales (médicaments) et illégales (drogues), les\ncomportements qui y sont associés, ainsi que le fonctionne-\nment habituel du patient dans le quotidien. La discussion sur\nla consommation risque de mobiliser certaines défenses et la\nplupart des patients se sentent plus à l’aise d’aborder ces thèmes\nlorsqu’ils n’ont pas l’impression d’être l’objet de jugement de la\npart du clinicien. Les questions ouvertes précédées d’une sorte\nde justication peuvent faciliter l’entrée en matière, comme :\n• Après une grosse journée ou pour vous détendre, vous\narrive-t-il de consommer de l’alcool ou du pot ?\n• Vous avez mentionné que vous aviez certains problèmes avec\nvotre consommation ; de quelle nature sont ces problèmes ?\n• Utilisez-vous des moyens pour contrôler votre anxiété ?\nLa plupart des patients ont tendance à minimiser leur consom-\nmation. Pour obtenir des réponses plus valides quant à la quantité\nréelle de consommation, le clinicien a intérêt à adopter une atti-\ntude naturelle et d’amplier dès le départ sa supposition quant à\n",
+  "raw_text_sha256": "cb5c73181de93a7b4da3942b425daf1a271fa106b50c4d6503e68d4c08333f46",
+  "source_page_display": 61,
+  "source_page_index": 60
+}

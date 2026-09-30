@@ -1,0 +1,76 @@
+{
+  "block_sequence_sha256": "bbca73b2e2034533f9585be2479bb82eda3fc3b57d3498e08132e1fffcd5f4fd",
+  "blocks": [
+    {
+      "bbox": [
+        385.5500183105469,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0332-block-0001",
+      "order": 1,
+      "text": "Chapitre 16\nTroubles délirants\n315\n",
+      "text_sha256": "99c4758fe2dca3a22665add843075d113cfb29b4bb77897856c4df5fb07071ca"
+    },
+    {
+      "bbox": [
+        312.0,
+        40.9658203125,
+        555.5577392578125,
+        329.95849609375
+      ],
+      "block_id": "page-0332-block-0002",
+      "order": 2,
+      "text": "selon les critères du DSM-IV par une hyperactivité de l’hé-\nmisphère cérébral gauche en se basant sur l’EEG et l’imagerie\nfonctionnelle. Dans ces cas, il n’y a pas d’hypofrontalité. En\nfait, le patient n’est pas apathique ; au contraire, il dépense\nbeaucoup d’énergie à corroborer son délire, même à poser\ndes actes en rapport avec ses convictions. Selon eux, le délire\ns’élabore en deux étapes :\n• une perception qui a une référence personnelle pour le\npatient entraîne une inférence délirante à cause d’une\npropension à sauter trop rapidement aux conclusions ;\n• une hyperactivité de l’hémisphère gauche enracine cette\nperception qui devient une conviction, puis le patient élabore\nses thèmes délirants personnels, selon son expérience de vie.\nAvant la cristallisation du trouble délirant, le patient ressent\nun malaise qui lui semble nécessiter une explication. Cet\ninconfort est probablement relié à un dysfonctionnement\ncérébral ou à des stress de la vie quotidienne, ou encore à\ndes facteurs génétiques prédisposants – mais sans doute\nà une combinaison de ces trois déclencheurs.\n7. D’un surplus de dopamine (DA) dans les synapses entraînant\ndes biais d’attention et d’attribution.\nDes observations ou des événements anodins prennent\nalors un sens important quand le patient les interprète en leur\naccordant une signication personnelle intense. Normalement,\n",
+      "text_sha256": "801cb1ff0ad8cae1e437bc425b679b156911be8f553944e2d68e3d1ddedb6498"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.9658203125,
+        297.4549255371094,
+        329.95849609375
+      ],
+      "block_id": "page-0332-block-0003",
+      "order": 3,
+      "text": "• des modications du tissu cérébral : démence, envahisse-\nment tumoral, épilepsie, chorée de Huntington, calcication\ndes noyaux gris centraux, traumatisme crânien ;\n• l’hémodialyse.\n3. De chirurgies, surtout si le patient y accorde une signication\nsymbolique. Par exemple, les interventions touchant le cœur\nou les organes génitaux peuvent être suivies d’un épisode\npsychotique à cause des fantasmes qui y sont associés, ces\norganes étant perçus comme vitaux, ne devant pas être altérés.\n4. D’altération des perceptions de l’environnement provoquée\npar des décits sensoriels (surdité ou cécité) induisant ainsi\ndes interprétations erronées.\n5. De la théorie des « deux décits/hémisphère droit » de la\ncroyance délirante dans les délires monothématiques, comme\nles syndromes de Capgras (délire des sosies) ou de Cotard\n(délire nihiliste ou de négation d’organe) :\n• un trouble neuropsychologique, découlant d’une inca-\npacité perceptuelle, émotive ou cognitive, localisée dans\nl’hémisphère droit, déclenche le délire ;\n• un second décit, basé sur une incapacité d’autoévaluation\nou de vérication de la croyance, découlant d’une dysfonc-\ntion frontale droite, maintient le délire (Coltheart, 2007).\n6. D’une hyperactivité de l’hémisphère cérébral gauche. Braun\n& Suren (2011) expliquent le trouble délirant diagnostiqué\n",
+      "text_sha256": "0013485c16a70eee54e025803083fdd45b606619973ab3c12f4bc484849643b1"
+    },
+    {
+      "bbox": [
+        56.45000076293945,
+        347.7522888183594,
+        330.6368408203125,
+        360.070068359375
+      ],
+      "block_id": "page-0332-block-0004",
+      "order": 4,
+      "text": "FIGURE 16.1 Dopamine : neuromédiateur de signication (saillance)\n",
+      "text_sha256": "96ed88a92b61038d3cf82e756b13fcb55cccb9ee391ba0093e3c6ed892a83b39"
+    },
+    {
+      "bbox": [
+        54.25,
+        717.140625,
+        152.63339233398438,
+        726.0088500976562
+      ],
+      "block_id": "page-0332-block-0005",
+      "order": 5,
+      "text": "Source : Adaptée de Kapur (2003).\n",
+      "text_sha256": "7483f99e4a616d9abdf573d297f5a00c3cedfd1e2e4b5fa4c2156fde2e718fc2"
+    }
+  ],
+  "coordinates_sha256": "3f8f6b0c099918df0478d35fc28a3428b2711a5141787a28d8b0314699934533",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0332",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 16\nTroubles délirants\n315\nselon les critères du DSM-IV par une hyperactivité de l’hé-\nmisphère cérébral gauche en se basant sur l’EEG et l’imagerie\nfonctionnelle. Dans ces cas, il n’y a pas d’hypofrontalité. En\nfait, le patient n’est pas apathique ; au contraire, il dépense\nbeaucoup d’énergie à corroborer son délire, même à poser\ndes actes en rapport avec ses convictions. Selon eux, le délire\ns’élabore en deux étapes :\n• une perception qui a une référence personnelle pour le\npatient entraîne une inférence délirante à cause d’une\npropension à sauter trop rapidement aux conclusions ;\n• une hyperactivité de l’hémisphère gauche enracine cette\nperception qui devient une conviction, puis le patient élabore\nses thèmes délirants personnels, selon son expérience de vie.\nAvant la cristallisation du trouble délirant, le patient ressent\nun malaise qui lui semble nécessiter une explication. Cet\ninconfort est probablement relié à un dysfonctionnement\ncérébral ou à des stress de la vie quotidienne, ou encore à\ndes facteurs génétiques prédisposants – mais sans doute\nà une combinaison de ces trois déclencheurs.\n7. D’un surplus de dopamine (DA) dans les synapses entraînant\ndes biais d’attention et d’attribution.\nDes observations ou des événements anodins prennent\nalors un sens important quand le patient les interprète en leur\naccordant une signication personnelle intense. Normalement,\n• des modications du tissu cérébral : démence, envahisse-\nment tumoral, épilepsie, chorée de Huntington, calcication\ndes noyaux gris centraux, traumatisme crânien ;\n• l’hémodialyse.\n3. De chirurgies, surtout si le patient y accorde une signication\nsymbolique. Par exemple, les interventions touchant le cœur\nou les organes génitaux peuvent être suivies d’un épisode\npsychotique à cause des fantasmes qui y sont associés, ces\norganes étant perçus comme vitaux, ne devant pas être altérés.\n4. D’altération des perceptions de l’environnement provoquée\npar des décits sensoriels (surdité ou cécité) induisant ainsi\ndes interprétations erronées.\n5. De la théorie des « deux décits/hémisphère droit » de la\ncroyance délirante dans les délires monothématiques, comme\nles syndromes de Capgras (délire des sosies) ou de Cotard\n(délire nihiliste ou de négation d’organe) :\n• un trouble neuropsychologique, découlant d’une inca-\npacité perceptuelle, émotive ou cognitive, localisée dans\nl’hémisphère droit, déclenche le délire ;\n• un second décit, basé sur une incapacité d’autoévaluation\nou de vérication de la croyance, découlant d’une dysfonc-\ntion frontale droite, maintient le délire (Coltheart, 2007).\n6. D’une hyperactivité de l’hémisphère cérébral gauche. Braun\n& Suren (2011) expliquent le trouble délirant diagnostiqué\nFIGURE 16.1 Dopamine : neuromédiateur de signication (saillance)\nSource : Adaptée de Kapur (2003).\n",
+  "raw_text_sha256": "4c8c17464510396ec9f4b0300bd190c111cfb417a7251ae881c937cbd59d1b24",
+  "source_page_display": 333,
+  "source_page_index": 332
+}

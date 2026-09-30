@@ -1,0 +1,160 @@
+{
+  "block_sequence_sha256": "f590e9769da9feee605d2a4232c0b38dad7610fc6f6cc81bd0f283cad8b51054",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        477.3144836425781,
+        758.8693237304688
+      ],
+      "block_id": "page-0923-block-0001",
+      "order": 1,
+      "text": "906\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3\nSyndromes cliniques psychiatriques\n",
+      "text_sha256": "e012508e054f9d4327f2f20305c00b028710a38e9eef3f111db24be5903f85e0"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.2412719726562,
+        98.3084945678711
+      ],
+      "block_id": "page-0923-block-0002",
+      "order": 2,
+      "text": "Il faut par contre se rappeler qu’elles peuvent entraîner abus et\ndépendance. De plus, certaines études récentes montrent que\nl’utilisation de benzodiazépines dans le cadre d’un traitement\nde douleur chronique, peut être associée à une moins bonne\nréponse (soulagement de la douleur, capacité fonctionnelle, etc.).\n",
+      "text_sha256": "748360e49a958d3a86a78dd21fd19a29b4effdc965f578dbc1f5c01da92c979a"
+    },
+    {
+      "bbox": [
+        326.0,
+        104.5741195678711,
+        544.6237182617188,
+        125.35029602050781
+      ],
+      "block_id": "page-0923-block-0003",
+      "order": 3,
+      "text": "L’évaluation et le traitement de la douleur sont présentés en\ndétail au chapitre 26.\n",
+      "text_sha256": "c39c5d1dcd78d29d2823f023dac424ca68da64df7fd63ea98acac2b1d4ab147e"
+    },
+    {
+      "bbox": [
+        306.0,
+        133.9658203125,
+        549.5557250976562,
+        191.35850524902344
+      ],
+      "block_id": "page-0923-block-0004",
+      "order": 4,
+      "text": "Finalement, la population toxicomane est loin d’être homogène\nquant au type de substances utilisées, aux comorbidités psychia-\ntriques et aux conditions psychosociales. Il est donc essentiel\nd’évaluer chaque patient et d’adapter le plan de traitement selon\nles besoins de la personne et les objectifs xés.\n",
+      "text_sha256": "c11d4406478b7b7febce4ade5e73bd5944a7d0edb98c2e878d2d9ca9e04cefda"
+    },
+    {
+      "bbox": [
+        306.0,
+        200.43301391601562,
+        549.4323120117188,
+        490.40850830078125
+      ],
+      "block_id": "page-0923-block-0005",
+      "order": 5,
+      "text": "Comorbidités cognitives et psychologiques\nLes décits cognitifs notés chez les consommateurs de drogues\nont été abondamment décrits, mais ils doivent être interprétés\navec vigilance puisque ces altérations varient en fonction de\nplusieurs facteurs :\n• substance consommée ;\n• dose ;\n• durée et fréquence d’utilisation ;\n• fonctionnement cognitif précédant le début de la consom-\nmation ;\n• délai entre la dernière consommation et l’évaluation cognitive ;\n• âge du début de la consommation et âge lors de l’évaluation ;\n• expérience du patient avec la substance ;\n• présence de comorbidités physiques ou psychiatriques.\nLa plupart des études montrent des décits au niveau de\nl’attention, de la mémoire et des fonctions exécutives comme en\ntémoignent, notamment, des anomalies au niveau de la prise de\ndécision, de l’inhibition de la réponse et de l’impulsivité lors des\ntests neuropsychologiques (Yucel & Lubman, 2007). Ces décits\nsont plus importants chez les patients consommant plusieurs\nsubstances. Les altérations du fonctionnement cognitif sont à\nla fois un facteur de risque de manifester une consommation\nproblématique et une conséquence de l’utilisation d’une substance.\n",
+      "text_sha256": "aa7394724cf4e0476cb87f7a30fdc306b52910b57160210fc33a8f7498748eba"
+    },
+    {
+      "bbox": [
+        306.0,
+        491.66583251953125,
+        548.9633178710938,
+        537.3085327148438
+      ],
+      "block_id": "page-0923-block-0006",
+      "order": 6,
+      "text": "Les toxicomanes semblent également vulnérables sur le plan de\nla santé mentale, car la consommation de cannabis, de stimulants\net d’autres substances est associée aux troubles de l’humeur, aux\npsychoses, aux troubles anxieux et au suicide.\n",
+      "text_sha256": "feb8336c39b5ae17906a9bd5653ec8e64daa358363b309dbb5a318eb4d6a940a"
+    },
+    {
+      "bbox": [
+        326.0,
+        543.5241088867188,
+        524.2255249023438,
+        554.1002807617188
+      ],
+      "block_id": "page-0923-block-0007",
+      "order": 7,
+      "text": "La toxicomanie est présentée en détail au chapitre 39.\n",
+      "text_sha256": "3e7464b535336cdf3627daf31272c9c16962496cac50cc67d8ba7ad145d988e8"
+    },
+    {
+      "bbox": [
+        306.0,
+        566.6329956054688,
+        549.2448120117188,
+        697.95849609375
+      ],
+      "block_id": "page-0923-block-0008",
+      "order": 8,
+      "text": "Comorbidités sociales\nLes individus dépendants vis-à-vis d’une substance ont plus\nde risques de vivre dans un contexte socio-économique dif-\nficile, marqué par la pauvreté et l’instabilité. Par exemple, la\ntoxicomanie est souvent associée au fait d’être sans emploi,\nde ne pas avoir de logement stable, d’obtenir des revenus\nde sources illégales et d’avoir des contacts avec le milieu\ncriminel et carcéral. Cette instabilité psychosociale peut\navoir des répercussions négatives sur la santé physique et\npsychologique, puisque les individus utilisant plusieurs\nsubstances sont particulièrement à risque d’être affligés de\n",
+      "text_sha256": "2aeada19c594bfa39f16fe2cc39b39db4e327f418e36385f185d7f5fe4742270"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.9658203125,
+        291.35247802734375,
+        155.35850524902344
+      ],
+      "block_id": "page-0923-block-0009",
+      "order": 9,
+      "text": "au choix des modalités de traitement, pharmacologiques et non\npharmacologiques. Même si le fait de se plaindre de douleur\nest souvent perçu comme une manipulation pour obtenir des\nopioïdes, il n’est pas exclu qu’une personne toxicomane se plaigne\nde douleurs de façon légitime et elle est en droit de s’attendre à\nun traitement adéquat. Si la nature ou l’intensité de la douleur\njustient une médication incluant des opioïdes, il n’y a pas lieu\nde restreindre l’accès à un traitement analgésique approprié,\nmême en présence d’une toxicomanie active, malgré le risque\nqu’apparaisse un problème d’abus ou de dépendance aux opioïdes.\n",
+      "text_sha256": "02748e83ee276bf1d988c16c9cae2d71d25aa99ec42db10fffd4f4bd7b3ab81e"
+    },
+    {
+      "bbox": [
+        48.0,
+        156.4158172607422,
+        291.3304443359375,
+        374.70849609375
+      ],
+      "block_id": "page-0923-block-0010",
+      "order": 10,
+      "text": "Dans le cas d’une douleur aiguë (p. ex., la douleur postopéra-\ntoire), il importe d’évaluer le patient fréquemment an de changer\nle type d’analgésie (opioïde →AINS, acétaminophène, etc.) lorsque\nla douleur se résorbe. On sait qu’en l’absence d’une nouvelle cause\norganique, ce type de douleur a généralement une durée typique\net s’atténue avec le temps, ce qui permet de diminuer l’utilisation\ndes opioïdes. Si le patient n’est pas hospitalisé et qu’il y a des rai-\nsons de s’inquiéter quant à sa capacité de gérer sa médication, le\nmédecin peut inscrire sur sa prescription une dispensation plus\nfréquente (p. ex., d’une à deux fois par semaine, ou même tous\nles jours). Si le patient est dépendant aux opioïdes avant l’épisode\ndouloureux, et présente une tolérance, il est fréquent que les\ndoses nécessaires pour assurer une ecacité analgésique soient\nplus importantes. Si le patient est en traitement à la méthadone,\ncelle-ci n’ore aucune propriété analgésique et il est nécessaire\nd’ajouter d’autres médicaments. Malgré toutes ces remarques, il\nfaut se rappeler qu’il est plutôt rare que l’analgésie fournie dans le\ncas d’une douleur aiguë entraîne une détérioration importante du\nproblème de toxicomanie, pourvu qu’une attention y soit portée.\n",
+      "text_sha256": "4ce42f3ea6c554bde0dbdf00efd551e6dd3d5b0ed2056964952601b1daecd483"
+    },
+    {
+      "bbox": [
+        48.0,
+        375.7658386230469,
+        291.3393859863281,
+        628.6585083007812
+      ],
+      "block_id": "page-0923-block-0011",
+      "order": 11,
+      "text": "Dans le cas d’une douleur chronique, les mêmes considérations\ns’appliquent. Toutefois, vu la durée prolongée du traitement,\nil y a lieu de prendre des précautions an de limiter une perte\nde contrôle possible sur la gestion de la médication opioïde.\nLes opioïdes à action prolongée sont une option intéressante\npuisque, théoriquement, le risque de dépendance associé à un\nmédicament est souvent en relation avec un pic d’action rapide.\nLes données probantes sur l’ecacité analgésique comparée des\nmédicaments à action rapide et ceux à action prolongée sont\nencore peu nombreuses. De plus, les formulations dont l’action\nprolongée est due aux propriétés de l’enveloppe plutôt qu’à des\npropriétés intrinsèques peuvent être écrasées, coupées, diluées,\netc., et perdent ainsi leur eet prolongé. Ici encore, une dispen-\nsation plus fréquente de la médication peut être intéressante\net permet d’éviter une escalade de la prise d’opioïde. Pour les\npatients sous traitement à la méthadone, on peut envisager une\naugmentation de la dose pour combler à la fois les besoins du\ntraitement de toxicomanie et ceux du traitement analgésique.\nIl semble qu’en raison de son eet sur les récepteurs NMDA,\nla méthadone pourrait être particulièrement intéressante pour\nle traitement de la douleur neuropathique. Pour le moment, la\nlittérature à ce sujet demeure peu abondante.\n",
+      "text_sha256": "d312aace09bf7e516bf30a9458d241d02a7254d40c54ea4565ccaa17ce0a4f8f"
+    },
+    {
+      "bbox": [
+        48.0,
+        629.7158203125,
+        291.04534912109375,
+        697.95849609375
+      ],
+      "block_id": "page-0923-block-0012",
+      "order": 12,
+      "text": "L’utilisation des benzodiazépines mérite une attention parti-\nculière. Elles sont bien connues pour leur propriété myorelaxante,\nce qui justie leur utilisation dans certains cas de douleurs\nassociées à un spasme musculaire. Les patients présentant un\nproblème douloureux ont aussi fréquemment des problèmes\nde sommeil qui peuvent être traités par des benzodiazépines.\n",
+      "text_sha256": "f71661b695bd3715dfdf12df041e91d95aa9539bfd739d789e28c13c9d5b73f9"
+    }
+  ],
+  "coordinates_sha256": "8c4c6bf400739e6f271ec2e869e0c33818b9103cd997f051414b37055871df29",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0923",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "906\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3\nSyndromes cliniques psychiatriques\nIl faut par contre se rappeler qu’elles peuvent entraîner abus et\ndépendance. De plus, certaines études récentes montrent que\nl’utilisation de benzodiazépines dans le cadre d’un traitement\nde douleur chronique, peut être associée à une moins bonne\nréponse (soulagement de la douleur, capacité fonctionnelle, etc.).\nL’évaluation et le traitement de la douleur sont présentés en\ndétail au chapitre 26.\nFinalement, la population toxicomane est loin d’être homogène\nquant au type de substances utilisées, aux comorbidités psychia-\ntriques et aux conditions psychosociales. Il est donc essentiel\nd’évaluer chaque patient et d’adapter le plan de traitement selon\nles besoins de la personne et les objectifs xés.\nComorbidités cognitives et psychologiques\nLes décits cognitifs notés chez les consommateurs de drogues\nont été abondamment décrits, mais ils doivent être interprétés\navec vigilance puisque ces altérations varient en fonction de\nplusieurs facteurs :\n• substance consommée ;\n• dose ;\n• durée et fréquence d’utilisation ;\n• fonctionnement cognitif précédant le début de la consom-\nmation ;\n• délai entre la dernière consommation et l’évaluation cognitive ;\n• âge du début de la consommation et âge lors de l’évaluation ;\n• expérience du patient avec la substance ;\n• présence de comorbidités physiques ou psychiatriques.\nLa plupart des études montrent des décits au niveau de\nl’attention, de la mémoire et des fonctions exécutives comme en\ntémoignent, notamment, des anomalies au niveau de la prise de\ndécision, de l’inhibition de la réponse et de l’impulsivité lors des\ntests neuropsychologiques (Yucel & Lubman, 2007). Ces décits\nsont plus importants chez les patients consommant plusieurs\nsubstances. Les altérations du fonctionnement cognitif sont à\nla fois un facteur de risque de manifester une consommation\nproblématique et une conséquence de l’utilisation d’une substance.\nLes toxicomanes semblent également vulnérables sur le plan de\nla santé mentale, car la consommation de cannabis, de stimulants\net d’autres substances est associée aux troubles de l’humeur, aux\npsychoses, aux troubles anxieux et au suicide.\nLa toxicomanie est présentée en détail au chapitre 39.\nComorbidités sociales\nLes individus dépendants vis-à-vis d’une substance ont plus\nde risques de vivre dans un contexte socio-économique dif-\nficile, marqué par la pauvreté et l’instabilité. Par exemple, la\ntoxicomanie est souvent associée au fait d’être sans emploi,\nde ne pas avoir de logement stable, d’obtenir des revenus\nde sources illégales et d’avoir des contacts avec le milieu\ncriminel et carcéral. Cette instabilité psychosociale peut\navoir des répercussions négatives sur la santé physique et\npsychologique, puisque les individus utilisant plusieurs\nsubstances sont particulièrement à risque d’être affligés de\nau choix des modalités de traitement, pharmacologiques et non\npharmacologiques. Même si le fait de se plaindre de douleur\nest souvent perçu comme une manipulation pour obtenir des\nopioïdes, il n’est pas exclu qu’une personne toxicomane se plaigne\nde douleurs de façon légitime et elle est en droit de s’attendre à\nun traitement adéquat. Si la nature ou l’intensité de la douleur\njustient une médication incluant des opioïdes, il n’y a pas lieu\nde restreindre l’accès à un traitement analgésique approprié,\nmême en présence d’une toxicomanie active, malgré le risque\nqu’apparaisse un problème d’abus ou de dépendance aux opioïdes.\nDans le cas d’une douleur aiguë (p. ex., la douleur postopéra-\ntoire), il importe d’évaluer le patient fréquemment an de changer\nle type d’analgésie (opioïde →AINS, acétaminophène, etc.) lorsque\nla douleur se résorbe. On sait qu’en l’absence d’une nouvelle cause\norganique, ce type de douleur a généralement une durée typique\net s’atténue avec le temps, ce qui permet de diminuer l’utilisation\ndes opioïdes. Si le patient n’est pas hospitalisé et qu’il y a des rai-\nsons de s’inquiéter quant à sa capacité de gérer sa médication, le\nmédecin peut inscrire sur sa prescription une dispensation plus\nfréquente (p. ex., d’une à deux fois par semaine, ou même tous\nles jours). Si le patient est dépendant aux opioïdes avant l’épisode\ndouloureux, et présente une tolérance, il est fréquent que les\ndoses nécessaires pour assurer une ecacité analgésique soient\nplus importantes. Si le patient est en traitement à la méthadone,\ncelle-ci n’ore aucune propriété analgésique et il est nécessaire\nd’ajouter d’autres médicaments. Malgré toutes ces remarques, il\nfaut se rappeler qu’il est plutôt rare que l’analgésie fournie dans le\ncas d’une douleur aiguë entraîne une détérioration importante du\nproblème de toxicomanie, pourvu qu’une attention y soit portée.\nDans le cas d’une douleur chronique, les mêmes considérations\ns’appliquent. Toutefois, vu la durée prolongée du traitement,\nil y a lieu de prendre des précautions an de limiter une perte\nde contrôle possible sur la gestion de la médication opioïde.\nLes opioïdes à action prolongée sont une option intéressante\npuisque, théoriquement, le risque de dépendance associé à un\nmédicament est souvent en relation avec un pic d’action rapide.\nLes données probantes sur l’ecacité analgésique comparée des\nmédicaments à action rapide et ceux à action prolongée sont\nencore peu nombreuses. De plus, les formulations dont l’action\nprolongée est due aux propriétés de l’enveloppe plutôt qu’à des\npropriétés intrinsèques peuvent être écrasées, coupées, diluées,\netc., et perdent ainsi leur eet prolongé. Ici encore, une dispen-\nsation plus fréquente de la médication peut être intéressante\net permet d’éviter une escalade de la prise d’opioïde. Pour les\npatients sous traitement à la méthadone, on peut envisager une\naugmentation de la dose pour combler à la fois les besoins du\ntraitement de toxicomanie et ceux du traitement analgésique.\nIl semble qu’en raison de son eet sur les récepteurs NMDA,\nla méthadone pourrait être particulièrement intéressante pour\nle traitement de la douleur neuropathique. Pour le moment, la\nlittérature à ce sujet demeure peu abondante.\nL’utilisation des benzodiazépines mérite une attention parti-\nculière. Elles sont bien connues pour leur propriété myorelaxante,\nce qui justie leur utilisation dans certains cas de douleurs\nassociées à un spasme musculaire. Les patients présentant un\nproblème douloureux ont aussi fréquemment des problèmes\nde sommeil qui peuvent être traités par des benzodiazépines.\n",
+  "raw_text_sha256": "69c3ab710fe6f7842047d9f4771728b645ebe47493a2531fae94901497a79133",
+  "source_page_display": 924,
+  "source_page_index": 923
+}

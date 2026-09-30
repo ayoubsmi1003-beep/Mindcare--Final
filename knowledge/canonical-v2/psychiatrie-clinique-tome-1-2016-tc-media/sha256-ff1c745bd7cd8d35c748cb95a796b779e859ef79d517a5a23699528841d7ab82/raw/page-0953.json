@@ -1,0 +1,220 @@
+{
+  "block_sequence_sha256": "43d87b12448569c672af161a69521dddf71bc131bd06c357d075a00c18f288a4",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0953-block-0001",
+      "order": 1,
+      "text": "936\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "36fa96f7a393584dbf0a27528652dd2fb38ef43935781aea2dbff53b693a24d8"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.3787841796875,
+        102.3584976196289
+      ],
+      "block_id": "page-0953-block-0002",
+      "order": 2,
+      "text": "domaines du Soi (Self) et dans les domaines interpersonnels. Elle\nrequiert également la présence d’au moins un trait de personnalité\nd’intensité pathologique parmi les 25 traits de personnalité qui\nsont eux-mêmes regroupés en 5 domaines diérents (composante\ndimensionnelle).\n",
+      "text_sha256": "3ebb4d6e4c748407b02af31a51b8a36e2353a1f1c9abc4687405e61fceda641a"
+    },
+    {
+      "bbox": [
+        306.0,
+        104.6158218383789,
+        549.3888549804688,
+        140.60850524902344
+      ],
+      "block_id": "page-0953-block-0003",
+      "order": 3,
+      "text": "Les tableaux 40.6 et 40.7 reprennent les descriptions de cette\nproposition alternative concernant le niveau de fonctionnement\n(les cinq domaines et les 25 traits de la personnalité).\n",
+      "text_sha256": "2320189b04c10639a5c6d080cd5664430760f493decffb4af1ed8a80ff0f8780"
+    },
+    {
+      "bbox": [
+        306.0,
+        142.81582641601562,
+        549.4583129882812,
+        229.7584991455078
+      ],
+      "block_id": "page-0953-block-0004",
+      "order": 4,
+      "text": "Tous les individus présentent des traits de personnalité associés\naux diérents domaines décrits dans l’encadré 40.1. Chaque trait\npeut être évalué comme n’étant aucunement descriptif jusqu’à\nextrêmement descriptif. L’échelle de cotation suivante se décline\ncomme suit :\n0 = le trait ou le domaine n’est pas du tout descriptif ou très peu\ndescriptif de ce qui est présenté comme tableau clinique ;\n",
+      "text_sha256": "465e95c4243420464df934f4a1bcdf8ca973b94378c37d06268535edf701ab23"
+    },
+    {
+      "bbox": [
+        306.0,
+        233.9658203125,
+        504.61376953125,
+        244.45849609375
+      ],
+      "block_id": "page-0953-block-0005",
+      "order": 5,
+      "text": "1 = le trait ou le domaine est légèrement descriptif ;\n",
+      "text_sha256": "a16222172342fba59968dbe06c87781dc1ac37d194490a54629a88a1cc06da7d"
+    },
+    {
+      "bbox": [
+        306.0,
+        248.7158203125,
+        511.7054748535156,
+        259.20849609375
+      ],
+      "block_id": "page-0953-block-0006",
+      "order": 6,
+      "text": "2 = le trait ou le domaine est modérément descriptif ;\n",
+      "text_sha256": "5dd06f3d91f659b89cf3a35373429bb5f1a8c2ef60837ad18f7fc849d1d5f00b"
+    },
+    {
+      "bbox": [
+        306.0,
+        263.4658203125,
+        512.1474609375,
+        273.95849609375
+      ],
+      "block_id": "page-0953-block-0007",
+      "order": 7,
+      "text": "3 = le trait ou le domaine est extrêmement descriptif.\n",
+      "text_sha256": "2e06acc0ae937ee7da24ac4fadf195fd9544b835621a497763772d74c334b569"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.9658203125,
+        291.2703552246094,
+        154.95849609375
+      ],
+      "block_id": "page-0953-block-0008",
+      "order": 8,
+      "text": "sante la validité scientique du nouveau modèle proposé. Il fut\nalors décidé de maintenir sans modications la classication\ncatégorielle du DSM-IV et de publier la nouvelle proposition\ndimensionnelle comme un modèle alternatif à l’étude (émergeant)\ndans la section III du DSM-5 (p. 895-917). Ce modèle n’est ainsi\npas la classication ocielle du DSM-5, mais il suscite beaucoup\nd’intérêt de par l’originalité et la pertinence des changements\nproposés. Toutefois, il a aussi fait l’objet de nombreuses critiques\ndont, au premier plan, sa complexité et ses dicultés d’application\nau quotidien en clinique, tel qu’expliqué plus bas.\n",
+      "text_sha256": "162bed0158f3093c64157b34e9f59b43e7a70d9d125dabed22bedcd969c4a747"
+    },
+    {
+      "bbox": [
+        48.0,
+        155.9658203125,
+        291.341796875,
+        273.95849609375
+      ],
+      "block_id": "page-0953-block-0009",
+      "order": 9,
+      "text": "Le modèle alternatif du DSM-5 propose un système hybride\nintégrant les approches :\n• catégorielle (classication habituellement utilisée en psychiatrie,\navec des types de trouble de la personnalité délimités par des\ncritères d’inclusion et d’exclusion) ;\n• dimensionnelle (nouvelles dénitions associées à la description\nde multiples dimensions pour dénir des traits de personnalité\nvariés en intensité et en sévérité).\nLa conception du diagnostic est remaniée et prend pour\nassise l’altération du fonctionnement de la personnalité dans les\n",
+      "text_sha256": "e681dff027f1b12f27b01f0ffa8bd20e693415848a1c4d7403cea9321890acba"
+    },
+    {
+      "bbox": [
+        50.29999923706055,
+        303.352294921875,
+        490.7434997558594,
+        315.6700744628906
+      ],
+      "block_id": "page-0953-block-0010",
+      "order": 10,
+      "text": "TABLEAU 40.6 Grille d’évaluation du fonctionnement de la personnalité selon le modèle alternatif du DSM-5\n",
+      "text_sha256": "dc1e7f450292f1f0e3a002225c321655e4a2b38db8938817cac921bba64aac65"
+    },
+    {
+      "bbox": [
+        52.25,
+        320.6241149902344,
+        495.7974853515625,
+        341.2002868652344
+      ],
+      "block_id": "page-0953-block-0011",
+      "order": 11,
+      "text": "Niveau de\nfonctionnement\nFonctionnement du Soi (Self )\nFonctionnement interpersonnel\n",
+      "text_sha256": "c60a66a962bdfb2b35ed3d719119999b10ce2c662ef391094f86867177d41d7c"
+    },
+    {
+      "bbox": [
+        52.25,
+        346.2228698730469,
+        91.57100677490234,
+        376.2424011230469
+      ],
+      "block_id": "page-0953-block-0012",
+      "order": 12,
+      "text": "Niveau 0\nPeu ou pas\nd’altération\n",
+      "text_sha256": "e13bf31bd0195a5a3cd96058beed024b084f40f0244aef5c73b461915e4313f6"
+    },
+    {
+      "bbox": [
+        114.25,
+        346.2228698730469,
+        321.9767761230469,
+        494.1281433105469
+      ],
+      "block_id": "page-0953-block-0013",
+      "order": 13,
+      "text": "Identité:\n• Conscience permanente d’un soi unique.\n• Maintien des limites adaptées à son rôle.\n• Estime de soi positive consistante et modulée par la personne,\navec une appréciation correcte de soi-même.\n• Capable de vivre de gérer et de contrôle la gamme complète\ndes émotions.\nAutodétermination (Self-direction) :\n• Se xe et vise des objectifs raisonnables reposant sur une\névaluation réaliste de ses capacités.\n• Adopte des standards de comportement appropriés et trouve\nsatisfaction dans de nombreux domaines.\n• Est capable d’examiner ses expériences internes et de les\ninterpréter de façon constructive.\n",
+      "text_sha256": "40535465ea36d0517d36729e6facfe3925b0078b7487845e3a467f211523ea69"
+    },
+    {
+      "bbox": [
+        333.25,
+        346.2228698730469,
+        543.7969970703125,
+        493.1281433105469
+      ],
+      "block_id": "page-0953-block-0014",
+      "order": 14,
+      "text": "Empathie:\n• Est capable de comprendre correctement le vécu et les motiva-\ntions d’autrui, dans la plupart des situations.\n• Comprend et apprécie les points de vue des autres, même\nquand il ne les partage pas.\n• Se rend compte des effets de ses actions sur autrui.\nIntimité:\n• Maintient de nombreuses relations satisfaisantes et durables\ndans sa vie personnelle et sociale.\n• Désire et poursuit de nombreuses relations affectueuses\nproches et réciproques.\n• Recherche la coopération et l’intérêt mutuel et réagit de\nfaçon exible aux idées, émotions et comportements des\nautres.\n",
+      "text_sha256": "2933f7d6336a3303eb088ce859b113c89358ee058f2fedb6f7fbe8d486a839b8"
+    },
+    {
+      "bbox": [
+        52.25,
+        499.6728515625,
+        101.31800842285156,
+        529.6923828125
+      ],
+      "block_id": "page-0953-block-0015",
+      "order": 15,
+      "text": "Niveau 1 Un\ncertain niveau\nd’altération\n",
+      "text_sha256": "cbb696b64bafff17cabf044cb12ee5e0d0abcf64815632468c3e72ece19853af"
+    },
+    {
+      "bbox": [
+        114.25,
+        499.6728515625,
+        323.6766662597656,
+        666.578125
+      ],
+      "block_id": "page-0953-block-0016",
+      "order": 16,
+      "text": "Identité:\n• Conscience de soi relativement intacte, avec une diminution\nlégère de la netteté des frontières à l’occasion d’émotions\nfortes ou d’une souffrance physique.\n• Estime de soi diminuée parfois, avec évaluation de soi trop\ncritique ou légèrement déformée.\n• Les émotions fortes peuvent être source de souffrance, avec\nrestriction de l’étendue du vécu émotionnel.\nAutodétermination:\n• Trop focalisé sur ses objectifs, quelque peu inhibé quant à ses\nobjectifs ou hésitant.\n• Adopte des standards personnels non réalistes ou socialement\ninappropriés, limitant certains aspects de son épanouissement.\n• Est capable d’examiner ses expériences internes, mais peut\ndonner trop d’importance à un aspect particulier (p. ex. intel-\nlectuel, émotionnel) de la connaissance de soi.\n",
+      "text_sha256": "41ed6beb4c879cb12a9dd47defbe5ee33d80b140a4ed2439bdee549a20480c2e"
+    },
+    {
+      "bbox": [
+        333.25,
+        499.6728515625,
+        543.3338623046875,
+        718.578125
+      ],
+      "block_id": "page-0953-block-0017",
+      "order": 17,
+      "text": "Empathie:\n• Capacité légèrement réduire à apprécier et à comprendre\nle vécu d’autrui.\n• Peut avoir tendance à croire que les autres ont des attentes\nnon raisonnables ou qu’ils désirent le contrôler.\n• Est capable de prendre en considération et de comprendre des\npoints de vue différents du sien, mais ne le fait pas.\n• Conscience variable des effets que son comportement peut\navoir sur les autres.\nIntimité:\n• Capable de nouer des relations durables dans sa vie person-\nnelle et sociale, avec légère limitation du degré de profondeur\net de satisfaction.\n• Est capable de, et désire, nouer des relations intimes et\nréciproques, mais peut être trop inhibé pour s’exprimer comme\nil faut et être mal à l’aise en présence d’émotions intenses ou\nde conits.\n• La coopération peut être inhibée en raison de standards non\nréalistes.\n• Légère limitation de la capacité à respecter ou à réagir aux\nidées, émotions et comportements des autres.\n",
+      "text_sha256": "e479f1e8a4d1a1ba588e096a6a4b211cf8a8567bd001f6f3a5480c0391be6641"
+    }
+  ],
+  "coordinates_sha256": "df342f2d5d19a1a10b05f5d32ca88ebbc5717cb777270ca217441f2956e09f39",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0953",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "936\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\ndomaines du Soi (Self) et dans les domaines interpersonnels. Elle\nrequiert également la présence d’au moins un trait de personnalité\nd’intensité pathologique parmi les 25 traits de personnalité qui\nsont eux-mêmes regroupés en 5 domaines diérents (composante\ndimensionnelle).\nLes tableaux 40.6 et 40.7 reprennent les descriptions de cette\nproposition alternative concernant le niveau de fonctionnement\n(les cinq domaines et les 25 traits de la personnalité).\nTous les individus présentent des traits de personnalité associés\naux diérents domaines décrits dans l’encadré 40.1. Chaque trait\npeut être évalué comme n’étant aucunement descriptif jusqu’à\nextrêmement descriptif. L’échelle de cotation suivante se décline\ncomme suit :\n0 = le trait ou le domaine n’est pas du tout descriptif ou très peu\ndescriptif de ce qui est présenté comme tableau clinique ;\n1 = le trait ou le domaine est légèrement descriptif ;\n2 = le trait ou le domaine est modérément descriptif ;\n3 = le trait ou le domaine est extrêmement descriptif.\nsante la validité scientique du nouveau modèle proposé. Il fut\nalors décidé de maintenir sans modications la classication\ncatégorielle du DSM-IV et de publier la nouvelle proposition\ndimensionnelle comme un modèle alternatif à l’étude (émergeant)\ndans la section III du DSM-5 (p. 895-917). Ce modèle n’est ainsi\npas la classication ocielle du DSM-5, mais il suscite beaucoup\nd’intérêt de par l’originalité et la pertinence des changements\nproposés. Toutefois, il a aussi fait l’objet de nombreuses critiques\ndont, au premier plan, sa complexité et ses dicultés d’application\nau quotidien en clinique, tel qu’expliqué plus bas.\nLe modèle alternatif du DSM-5 propose un système hybride\nintégrant les approches :\n• catégorielle (classication habituellement utilisée en psychiatrie,\navec des types de trouble de la personnalité délimités par des\ncritères d’inclusion et d’exclusion) ;\n• dimensionnelle (nouvelles dénitions associées à la description\nde multiples dimensions pour dénir des traits de personnalité\nvariés en intensité et en sévérité).\nLa conception du diagnostic est remaniée et prend pour\nassise l’altération du fonctionnement de la personnalité dans les\nTABLEAU 40.6 Grille d’évaluation du fonctionnement de la personnalité selon le modèle alternatif du DSM-5\nNiveau de\nfonctionnement\nFonctionnement du Soi (Self )\nFonctionnement interpersonnel\nNiveau 0\nPeu ou pas\nd’altération\nIdentité:\n• Conscience permanente d’un soi unique.\n• Maintien des limites adaptées à son rôle.\n• Estime de soi positive consistante et modulée par la personne,\navec une appréciation correcte de soi-même.\n• Capable de vivre de gérer et de contrôle la gamme complète\ndes émotions.\nAutodétermination (Self-direction) :\n• Se xe et vise des objectifs raisonnables reposant sur une\névaluation réaliste de ses capacités.\n• Adopte des standards de comportement appropriés et trouve\nsatisfaction dans de nombreux domaines.\n• Est capable d’examiner ses expériences internes et de les\ninterpréter de façon constructive.\nEmpathie:\n• Est capable de comprendre correctement le vécu et les motiva-\ntions d’autrui, dans la plupart des situations.\n• Comprend et apprécie les points de vue des autres, même\nquand il ne les partage pas.\n• Se rend compte des effets de ses actions sur autrui.\nIntimité:\n• Maintient de nombreuses relations satisfaisantes et durables\ndans sa vie personnelle et sociale.\n• Désire et poursuit de nombreuses relations affectueuses\nproches et réciproques.\n• Recherche la coopération et l’intérêt mutuel et réagit de\nfaçon exible aux idées, émotions et comportements des\nautres.\nNiveau 1 Un\ncertain niveau\nd’altération\nIdentité:\n• Conscience de soi relativement intacte, avec une diminution\nlégère de la netteté des frontières à l’occasion d’émotions\nfortes ou d’une souffrance physique.\n• Estime de soi diminuée parfois, avec évaluation de soi trop\ncritique ou légèrement déformée.\n• Les émotions fortes peuvent être source de souffrance, avec\nrestriction de l’étendue du vécu émotionnel.\nAutodétermination:\n• Trop focalisé sur ses objectifs, quelque peu inhibé quant à ses\nobjectifs ou hésitant.\n• Adopte des standards personnels non réalistes ou socialement\ninappropriés, limitant certains aspects de son épanouissement.\n• Est capable d’examiner ses expériences internes, mais peut\ndonner trop d’importance à un aspect particulier (p. ex. intel-\nlectuel, émotionnel) de la connaissance de soi.\nEmpathie:\n• Capacité légèrement réduire à apprécier et à comprendre\nle vécu d’autrui.\n• Peut avoir tendance à croire que les autres ont des attentes\nnon raisonnables ou qu’ils désirent le contrôler.\n• Est capable de prendre en considération et de comprendre des\npoints de vue différents du sien, mais ne le fait pas.\n• Conscience variable des effets que son comportement peut\navoir sur les autres.\nIntimité:\n• Capable de nouer des relations durables dans sa vie person-\nnelle et sociale, avec légère limitation du degré de profondeur\net de satisfaction.\n• Est capable de, et désire, nouer des relations intimes et\nréciproques, mais peut être trop inhibé pour s’exprimer comme\nil faut et être mal à l’aise en présence d’émotions intenses ou\nde conits.\n• La coopération peut être inhibée en raison de standards non\nréalistes.\n• Légère limitation de la capacité à respecter ou à réagir aux\nidées, émotions et comportements des autres.\n",
+  "raw_text_sha256": "4200a5e25f6ec98b8a907106e470eef025652af649adb3508661e98d4aae0b05",
+  "source_page_display": 954,
+  "source_page_index": 953
+}

@@ -1,0 +1,64 @@
+{
+  "block_sequence_sha256": "80123b910e3c349fcb60e6e722e4875754dce5e39462925e7068790761e9540b",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        180.42501831054688,
+        758.8693237304688
+      ],
+      "block_id": "page-1139-block-0001",
+      "order": 1,
+      "text": "F2\nFigures supplémentaires\n",
+      "text_sha256": "acf0091a51659b542133b2a5ded020c1e6798edc7c7eb683a9d24cc41d9d3cfd"
+    },
+    {
+      "bbox": [
+        50.400001525878906,
+        41.002296447753906,
+        235.11724853515625,
+        53.320068359375
+      ],
+      "block_id": "page-1139-block-0002",
+      "order": 2,
+      "text": "FIGURE 1 Vue latérale de l’encéphale humain\n",
+      "text_sha256": "2b2e2044fbb0e2e9ce173325106490cfa7719cf42ee47a9262f49f753e2895f7"
+    },
+    {
+      "bbox": [
+        48.25,
+        388.890625,
+        360.0458068847656,
+        400.4088439941406
+      ],
+      "block_id": "page-1139-block-0003",
+      "order": 3,
+      "text": "Source : Mader, S. S. & Windelspecht, M. (2014). Biologie Humaine, 2e éd., McGraw-Hill/Chenelière Éducation.\n",
+      "text_sha256": "bef4b91a26c6c8f4f74bc3f3aaa822dc06fbc8cb4f2b877f3ef5689ee1dfbcf1"
+    },
+    {
+      "bbox": [
+        50.400001525878906,
+        439.1523132324219,
+        268.72149658203125,
+        451.4700622558594
+      ],
+      "block_id": "page-1139-block-0004",
+      "order": 4,
+      "text": "FIGURE 2 Coupe longitudinale de l’encéphale humain\n",
+      "text_sha256": "931ce89cdc5942332e6f6aba95e6b38b84756c231d32b0dd8ae68db33a07a078"
+    }
+  ],
+  "coordinates_sha256": "abbdafd486038a79a8ad50a60e9460d7a14a5d65a8a94fbbdde8252a5b97060f",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1139",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "F2\nFigures supplémentaires\nFIGURE 1 Vue latérale de l’encéphale humain\nSource : Mader, S. S. & Windelspecht, M. (2014). Biologie Humaine, 2e éd., McGraw-Hill/Chenelière Éducation.\nFIGURE 2 Coupe longitudinale de l’encéphale humain\n",
+  "raw_text_sha256": "118dbb0541208315eea3cd6cc0cc5159f160ce047f8c80d7e981dedc68a05b40",
+  "source_page_display": 1140,
+  "source_page_index": 1139
+}

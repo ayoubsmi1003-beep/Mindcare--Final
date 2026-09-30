@@ -1,0 +1,376 @@
+{
+  "block_sequence_sha256": "53649d445a4372e90271251dc917fa0557e3f045524dbab3a7f815ef408c7373",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.53765869140625,
+        758.8693237304688
+      ],
+      "block_id": "page-0485-block-0001",
+      "order": 1,
+      "text": "468\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "5747395a0f745f6b4e5164dc12a4aafc4eca0e5488f45a311311295e53a644bf"
+    },
+    {
+      "bbox": [
+        50.25,
+        41.002296447753906,
+        413.1412658691406,
+        53.320068359375
+      ],
+      "block_id": "page-0485-block-0002",
+      "order": 2,
+      "text": "TABLEAU 21.5 Comparaison entre trouble obsessionnel-compulsif et trouble d’amassage\n",
+      "text_sha256": "a7e826cfbc01c24a8bde8548af5ea0af429f55c4ff7faad75190c7a1cebb3527"
+    },
+    {
+      "bbox": [
+        95.3499984741211,
+        58.27412414550781,
+        268.36810302734375,
+        73.85029602050781
+      ],
+      "block_id": "page-0485-block-0003",
+      "order": 3,
+      "text": "Repère\nTrouble obsessionnel-\n",
+      "text_sha256": "44e25fa701b7de4e479b0936174ebc7cbbfc19c97666e7a8179f896105f60bf8"
+    },
+    {
+      "bbox": [
+        210.40000915527344,
+        63.27412414550781,
+        455.1996154785156,
+        78.85029602050781
+      ],
+      "block_id": "page-0485-block-0004",
+      "order": 4,
+      "text": "compulsif\nTrouble d’amassage\n",
+      "text_sha256": "de138c39a58204bd11f1e3368df16a243c44690eaaa54e8150eaa3707d9d2744"
+    },
+    {
+      "bbox": [
+        52.25,
+        84.12285614013672,
+        139.54100036621094,
+        104.14238739013672
+      ],
+      "block_id": "page-0485-block-0005",
+      "order": 5,
+      "text": "Présence d’un diagnostic\nde TOC\n",
+      "text_sha256": "8d459844b175710eb9233ab7e904ec5891c8ba55c8fdcdc37a13e694a59dccc2"
+    },
+    {
+      "bbox": [
+        172.25,
+        84.20195770263672,
+        543.8571166992188,
+        105.02812957763672
+      ],
+      "block_id": "page-0485-block-0006",
+      "order": 6,
+      "text": "• Oui\n• Cooccurrence avec un TOC dans 20 % des cas.\n• Les troubles anxieux et de l’humeur sont les plus fréquents en comorbidité.\n",
+      "text_sha256": "e7ce55aea3657eb943410699ab9c82830792888ffe99ee6391ad59b0ac0755d0"
+    },
+    {
+      "bbox": [
+        52.25,
+        113.5728530883789,
+        535.8191528320312,
+        175.47813415527344
+      ],
+      "block_id": "page-0485-block-0007",
+      "order": 7,
+      "text": "Présence d’obsessions\n• Oui, dans la majorité des cas\n• La peur de perdre des objets importants est similaire, du point de vue\nfonctionnel, aux obsessions.\n• Absence de pensées, d’images ou de besoins intrusifs non désirables ou\nrépugnants auxquels le patient résiste activement.\n• Détresse intense déclenchée par la perspective de se débarrasser des\npossessions accumulées.\n",
+      "text_sha256": "3a95a73d3f733c8a0c03d97290822470c9eb388698552c8fee77b992f72738ea"
+    },
+    {
+      "bbox": [
+        52.25,
+        183.9728546142578,
+        544.1470336914062,
+        203.8781280517578
+      ],
+      "block_id": "page-0485-block-0008",
+      "order": 8,
+      "text": "Présence de compulsions\n• Oui, dans la majorité des cas\n• Le fait d’éviter de se débarrasser des objets accumulés et d’en acquérir active-\nment peut être similaire aux compulsions, sur le plan fonctionnel.\n",
+      "text_sha256": "13467f56d866f4a2e7f0e2e4b84cb7bb733ca42ce68181c170a85d2033cba295"
+    },
+    {
+      "bbox": [
+        52.25,
+        212.4228515625,
+        154.3730010986328,
+        242.4423828125
+      ],
+      "block_id": "page-0485-block-0009",
+      "order": 9,
+      "text": "Présence d’un comportement\nd’accumulation cliniquement\nsignicatif\n",
+      "text_sha256": "e3f4600ad28ca3f5172660906198b458dd3b45270894b5a057c9185808fa04e4"
+    },
+    {
+      "bbox": [
+        172.25,
+        212.501953125,
+        281.7025146484375,
+        313.328125
+      ],
+      "block_id": "page-0485-block-0010",
+      "order": 10,
+      "text": "• Possible, mais rare (5 %\ndes cas)\n• Le clinicien doit établir si\nl’accumulation est secondaire\nà des obsessions authentiques\n(p. ex., peur de contaminer ou\nde faire du mal) ou bien si elle\nest indépendante, c’est-à-dire\nune comorbidité du TOC. C’est\nle cas le plus fréquent.\n",
+      "text_sha256": "bd1a8d2834c1f4b3b599c5e745c2ff28a1e402186141dae7ee72c2f5ae1e2960"
+    },
+    {
+      "bbox": [
+        292.25,
+        212.501953125,
+        544.1470336914062,
+        263.328125
+      ],
+      "block_id": "page-0485-block-0011",
+      "order": 11,
+      "text": "• Toujours présent, par dénition. L’accumulation est due à des raisons\npratiques ou sentimentales.\n• Si l’accumulation est co-occcurrente avec un TOC, elle ne doit pas être secon-\ndaire aux symptômes obsessionnels-compulsifs, ni liée de manière magique\n(c.-à-d. sans explication rationnelle) aux peurs obsessionnelles classiques.\n",
+      "text_sha256": "0679310113e99d8a9d76c4b1a8370eef0fcb62110c90ab7e648133afba748d59"
+    },
+    {
+      "bbox": [
+        52.25,
+        321.8228454589844,
+        151.27308654785156,
+        361.8423767089844
+      ],
+      "block_id": "page-0485-block-0012",
+      "order": 12,
+      "text": "Présence d’un diagnostic\nde trouble de la personnalité\nobsessionnelle-compulsive\n(TPOC)\n",
+      "text_sha256": "08f7c6b24ae04366930a20dec3e85580995a3e589910bf33af5d64823c839dce"
+    },
+    {
+      "bbox": [
+        172.25,
+        321.9019470214844,
+        282.1986999511719,
+        341.7281188964844
+      ],
+      "block_id": "page-0485-block-0013",
+      "order": 13,
+      "text": "• Possible dans environ un quart\ndes cas\n",
+      "text_sha256": "d04641ccf7f46296f7079dba8bc5635335cac2daebef76b0e4b7bfd12e0eb725"
+    },
+    {
+      "bbox": [
+        292.25,
+        321.9019470214844,
+        532.1448364257812,
+        382.7281188964844
+      ],
+      "block_id": "page-0485-block-0014",
+      "order": 14,
+      "text": "• Possible dans environ un tiers des cas. Par contre, si l’accumulation est\nretirée comme critère diagnostique pour le TPOC, les accumulateurs ne\nsatisfont pas aux critères du TPOC plus que les autres patients atteints\nde troubles anxieux.\n• La présence d’autres types de personnalité est plus fréquente (p. ex.,\ntrouble de la personnalité dépendante).\n",
+      "text_sha256": "e6d6300647c00ec91205f96224b38bbff60112c885dbb22db95f1028b6dacf47"
+    },
+    {
+      "bbox": [
+        52.25,
+        391.2728576660156,
+        280.39251708984375,
+        411.1781311035156
+      ],
+      "block_id": "page-0485-block-0015",
+      "order": 15,
+      "text": "Insight\n• Variable, mais assez bon dans\nla plupart des cas\n",
+      "text_sha256": "d89dc1eabf1f223e12f6f680caf61c0a8f78d442c9e393456423a96a53b73955"
+    },
+    {
+      "bbox": [
+        292.25,
+        391.3519592285156,
+        533.7411499023438,
+        433.1781311035156
+      ],
+      "block_id": "page-0485-block-0016",
+      "order": 16,
+      "text": "• Pauvre, le plus souvent.\n• L’accumulation peut être égosyntone, surtout au début.\n• L’accumulation devient source de détresse lorsque le fouillis s’amoncèle\nou que des tierces personnes interviennent.\n",
+      "text_sha256": "708346de2d81f3a75636a3920798ad737644190f81a3d908ed497c3cc70debed"
+    },
+    {
+      "bbox": [
+        52.25,
+        441.6728515625,
+        277.3798522949219,
+        471.578125
+      ],
+      "block_id": "page-0485-block-0017",
+      "order": 17,
+      "text": "Recherche d’aide\n• Beaucoup de patients le font,\nmais souvent tardivement\n(après des années)\n",
+      "text_sha256": "fe1ae9037d68919ce0d4c5d14c73ebdcee4f1a35a422124a433c8b28260430d5"
+    },
+    {
+      "bbox": [
+        292.25,
+        441.751953125,
+        541.3707885742188,
+        503.578125
+      ],
+      "block_id": "page-0485-block-0018",
+      "order": 18,
+      "text": "• Réticence à consulter, l’accumulation n’étant pas perçue comme\nproblématique.\n• Les autorités locales ou des personnes signicatives insistent pour qu’une\naide soit recherchée.\n• La réticence peut être due au manque d’autocritique ou au manque d’aide\ndisponible.\n",
+      "text_sha256": "5a3e30b3875545da0af7465e557b997a656142e47b2df8e5a9fe0d16b788b12b"
+    },
+    {
+      "bbox": [
+        52.25,
+        512.1228637695312,
+        260.885009765625,
+        532.0281372070312
+      ],
+      "block_id": "page-0485-block-0019",
+      "order": 19,
+      "text": "Stabilité de la problématique\n• Symptômes qui peuvent\nuctuer\n",
+      "text_sha256": "c31c3c3bb0ab14776f568e15bbe10edeb48ff56cff6fdfff987dcf2509414140"
+    },
+    {
+      "bbox": [
+        292.25,
+        512.2019653320312,
+        429.3204040527344,
+        522.0281372070312
+      ],
+      "block_id": "page-0485-block-0020",
+      "order": 20,
+      "text": "• Stable avec aggravation dans le temps.\n",
+      "text_sha256": "7a21a992f9a1f538e17eb33f55fbdb4292f3e4f1dec650851ae5fdcf7ede7a4e"
+    },
+    {
+      "bbox": [
+        52.25,
+        540.5228881835938,
+        354.1490783691406,
+        550.5424194335938
+      ],
+      "block_id": "page-0485-block-0021",
+      "order": 21,
+      "text": "Prévalence\n• Environ 2 ou 3 %\n• Environ 2 à 5 %\n",
+      "text_sha256": "cb890813a3063f19cebbfb5b4bdeb56aeb661ddbb60a8ceb4f654c82f4ac4cbf"
+    },
+    {
+      "bbox": [
+        52.25,
+        558.9728393554688,
+        314.906005859375,
+        568.9923706054688
+      ],
+      "block_id": "page-0485-block-0022",
+      "order": 22,
+      "text": "Incidence familiale\n• Oui\n• Oui\n",
+      "text_sha256": "39f9ac109b6ce6c0d6d7460662420127a10f734bda61a63621df6ad135ffb972"
+    },
+    {
+      "bbox": [
+        52.25,
+        577.3728637695312,
+        261.5940246582031,
+        607.2781372070312
+      ],
+      "block_id": "page-0485-block-0023",
+      "order": 23,
+      "text": "Hérédité\n• Oui : 27 à 47 % chez les\nadultes ; plus élevé chez\nles enfants avec TOC\n",
+      "text_sha256": "31a4f3c1c2740348b671bb06726765d06a74b1bd4e0a9b048d997987de9a2b27"
+    },
+    {
+      "bbox": [
+        292.25,
+        577.4519653320312,
+        389.478271484375,
+        587.2781372070312
+      ],
+      "block_id": "page-0485-block-0024",
+      "order": 24,
+      "text": "• Oui : 50 % chez les adultes\n",
+      "text_sha256": "a317225e7bf4c3ec6237b61b2246647846476e61496f8d905fc7ef5b7f43372d"
+    },
+    {
+      "bbox": [
+        52.25,
+        615.8228759765625,
+        474.1396789550781,
+        636.7281494140625
+      ],
+      "block_id": "page-0485-block-0025",
+      "order": 25,
+      "text": "Substrat neuronal\n• Circuit frontostriatothalamique\n• Preuves disponibles\n• Cortex cingulaire et ventrofrontal et régions limbiques\n• Preuves limitées\n",
+      "text_sha256": "061659573ffc0cbd1f2e52e93a5e44a70effed208dc0d5dc79fb46409edaa402"
+    },
+    {
+      "bbox": [
+        52.25,
+        645.2228393554688,
+        272.6930236816406,
+        676.1281127929688
+      ],
+      "block_id": "page-0485-block-0026",
+      "order": 26,
+      "text": "Processus cognitifs\n• Surestimation du risque\n• Sentiment de responsabilité\nexagéré\n",
+      "text_sha256": "14ca937d055ac921913dfc11b1240ada8897dbdfc45ad38af25ca0cc485776de"
+    },
+    {
+      "bbox": [
+        292.25,
+        645.3019409179688,
+        537.8470458984375,
+        676.1281127929688
+      ],
+      "block_id": "page-0485-block-0027",
+      "order": 27,
+      "text": "• Décits dans le traitement de l’information : prise de décision, catégorisa-\ntion, organisation, difcultés de mémoire\n• Attachement émotionnel aux possessions\n",
+      "text_sha256": "42e562cedc41723dea2883d02cfd819910274f557635c6861ec84f22914489f7"
+    },
+    {
+      "bbox": [
+        52.25,
+        684.6728515625,
+        151.30564880371094,
+        704.6923828125
+      ],
+      "block_id": "page-0485-block-0028",
+      "order": 28,
+      "text": "Réponse au traitement (ISRS\net TCC)\n",
+      "text_sha256": "dad5ea1ac24a6ed35ad5d58b399cd91be0b2efb2cf4865b5e6f53b866866db87"
+    },
+    {
+      "bbox": [
+        172.25,
+        684.751953125,
+        386.3570251464844,
+        705.578125
+      ],
+      "block_id": "page-0485-block-0029",
+      "order": 29,
+      "text": "• Modérée ou bonne\n• Preuve d’efcacité établie\n• Faible ou modérée\n• Preuve d’efcacité limitée\n",
+      "text_sha256": "cebd8f4540c84ea4af37a1c50a783b17ea250ef33f2cbf460aa1797c1de129b0"
+    },
+    {
+      "bbox": [
+        48.25,
+        714.8406372070312,
+        174.9320831298828,
+        723.7088623046875
+      ],
+      "block_id": "page-0485-block-0030",
+      "order": 30,
+      "text": "Source : Adapté de Mataix-Cols & al. (2010).\n",
+      "text_sha256": "809b2f709fd7bf81eba79ab3b10807d422922731a0205545d73b7d82a11bf0d4"
+    }
+  ],
+  "coordinates_sha256": "0438074addcb85535a2f46d63315c7bf2cc2c14eaf5cb64645216f7e210658e7",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0485",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "468\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nTABLEAU 21.5 Comparaison entre trouble obsessionnel-compulsif et trouble d’amassage\nRepère\nTrouble obsessionnel-\ncompulsif\nTrouble d’amassage\nPrésence d’un diagnostic\nde TOC\n• Oui\n• Cooccurrence avec un TOC dans 20 % des cas.\n• Les troubles anxieux et de l’humeur sont les plus fréquents en comorbidité.\nPrésence d’obsessions\n• Oui, dans la majorité des cas\n• La peur de perdre des objets importants est similaire, du point de vue\nfonctionnel, aux obsessions.\n• Absence de pensées, d’images ou de besoins intrusifs non désirables ou\nrépugnants auxquels le patient résiste activement.\n• Détresse intense déclenchée par la perspective de se débarrasser des\npossessions accumulées.\nPrésence de compulsions\n• Oui, dans la majorité des cas\n• Le fait d’éviter de se débarrasser des objets accumulés et d’en acquérir active-\nment peut être similaire aux compulsions, sur le plan fonctionnel.\nPrésence d’un comportement\nd’accumulation cliniquement\nsignicatif\n• Possible, mais rare (5 %\ndes cas)\n• Le clinicien doit établir si\nl’accumulation est secondaire\nà des obsessions authentiques\n(p. ex., peur de contaminer ou\nde faire du mal) ou bien si elle\nest indépendante, c’est-à-dire\nune comorbidité du TOC. C’est\nle cas le plus fréquent.\n• Toujours présent, par dénition. L’accumulation est due à des raisons\npratiques ou sentimentales.\n• Si l’accumulation est co-occcurrente avec un TOC, elle ne doit pas être secon-\ndaire aux symptômes obsessionnels-compulsifs, ni liée de manière magique\n(c.-à-d. sans explication rationnelle) aux peurs obsessionnelles classiques.\nPrésence d’un diagnostic\nde trouble de la personnalité\nobsessionnelle-compulsive\n(TPOC)\n• Possible dans environ un quart\ndes cas\n• Possible dans environ un tiers des cas. Par contre, si l’accumulation est\nretirée comme critère diagnostique pour le TPOC, les accumulateurs ne\nsatisfont pas aux critères du TPOC plus que les autres patients atteints\nde troubles anxieux.\n• La présence d’autres types de personnalité est plus fréquente (p. ex.,\ntrouble de la personnalité dépendante).\nInsight\n• Variable, mais assez bon dans\nla plupart des cas\n• Pauvre, le plus souvent.\n• L’accumulation peut être égosyntone, surtout au début.\n• L’accumulation devient source de détresse lorsque le fouillis s’amoncèle\nou que des tierces personnes interviennent.\nRecherche d’aide\n• Beaucoup de patients le font,\nmais souvent tardivement\n(après des années)\n• Réticence à consulter, l’accumulation n’étant pas perçue comme\nproblématique.\n• Les autorités locales ou des personnes signicatives insistent pour qu’une\naide soit recherchée.\n• La réticence peut être due au manque d’autocritique ou au manque d’aide\ndisponible.\nStabilité de la problématique\n• Symptômes qui peuvent\nuctuer\n• Stable avec aggravation dans le temps.\nPrévalence\n• Environ 2 ou 3 %\n• Environ 2 à 5 %\nIncidence familiale\n• Oui\n• Oui\nHérédité\n• Oui : 27 à 47 % chez les\nadultes ; plus élevé chez\nles enfants avec TOC\n• Oui : 50 % chez les adultes\nSubstrat neuronal\n• Circuit frontostriatothalamique\n• Preuves disponibles\n• Cortex cingulaire et ventrofrontal et régions limbiques\n• Preuves limitées\nProcessus cognitifs\n• Surestimation du risque\n• Sentiment de responsabilité\nexagéré\n• Décits dans le traitement de l’information : prise de décision, catégorisa-\ntion, organisation, difcultés de mémoire\n• Attachement émotionnel aux possessions\nRéponse au traitement (ISRS\net TCC)\n• Modérée ou bonne\n• Preuve d’efcacité établie\n• Faible ou modérée\n• Preuve d’efcacité limitée\nSource : Adapté de Mataix-Cols & al. (2010).\n",
+  "raw_text_sha256": "66d1a4362fffd37dbf4af02db995b30042654554a450a626687fd5ea662683ac",
+  "source_page_display": 486,
+  "source_page_index": 485
+}

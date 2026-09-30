@@ -1,0 +1,316 @@
+{
+  "block_sequence_sha256": "d5b134ce99018915cb7a60bc4191d6d012047069e26ab2d313839675311d444d",
+  "blocks": [
+    {
+      "bbox": [
+        315.3500061035156,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0722-block-0001",
+      "order": 1,
+      "text": "Chapitre 31\nTroubles des conduites alimentaires\n705\n",
+      "text_sha256": "0855976b3a2c023b94b0f95ee1b5dc9bb3e0ba39eb842cffd22437bd0e3e9640"
+    },
+    {
+      "bbox": [
+        56.29999923706055,
+        483.0022888183594,
+        238.87826538085938,
+        495.320068359375
+      ],
+      "block_id": "page-0722-block-0002",
+      "order": 2,
+      "text": "TABLEAU 31.4 Critères diagnostiques du pica\n",
+      "text_sha256": "09ee7427898307a76305f24986442ff41228b772f8dc5532f1f186800fa60f44"
+    },
+    {
+      "bbox": [
+        146.4499969482422,
+        500.2741394042969,
+        451.93798828125,
+        523.6503295898438
+      ],
+      "block_id": "page-0722-block-0003",
+      "order": 3,
+      "text": "DSM-5\nDSM-IV-TR\n307.52 (F98.3) Pica\nPica\n",
+      "text_sha256": "39afdcd659089bdbf9c31196b4eeb36b71aeea6c83f627826353cdf57cc6deea"
+    },
+    {
+      "bbox": [
+        58.25,
+        528.001953125,
+        279.2467346191406,
+        537.828125
+      ],
+      "block_id": "page-0722-block-0004",
+      "order": 4,
+      "text": "A. Ingestion répétée de substances non nutritives et non comestibles\n",
+      "text_sha256": "0b2704ccc757db7c718b997e5acef264bd2f5bb538449d754f276c85acbf93e2"
+    },
+    {
+      "bbox": [
+        69.0999984741211,
+        538.001953125,
+        202.08029174804688,
+        547.828125
+      ],
+      "block_id": "page-0722-block-0005",
+      "order": 5,
+      "text": "pendant une période d’au moins un mois.\n",
+      "text_sha256": "c9de74197e7aecc93d9f0ecea3ca8486637060fff865357b8e3d458221217242"
+    },
+    {
+      "bbox": [
+        313.0500183105469,
+        528.001953125,
+        372.6981201171875,
+        537.828125
+      ],
+      "block_id": "page-0722-block-0006",
+      "order": 6,
+      "text": "A. Idem à DSM-5.\n",
+      "text_sha256": "17d5989bc13bdc24966ef82f371e7b88392c4ebe1bd8cdcdcd635723e9a91a6c"
+    },
+    {
+      "bbox": [
+        58.25,
+        554.4519653320312,
+        293.0970153808594,
+        564.2781372070312
+      ],
+      "block_id": "page-0722-block-0007",
+      "order": 7,
+      "text": "B. L’ingestion de substances non nutritives et non comestibles ne corres-\n",
+      "text_sha256": "6065e9215484d91b70b6e09b14c26958b431c7307e188b228397ec2ecf886a71"
+    },
+    {
+      "bbox": [
+        69.0999984741211,
+        564.4519653320312,
+        234.52255249023438,
+        574.2781372070312
+      ],
+      "block_id": "page-0722-block-0008",
+      "order": 8,
+      "text": "pond pas au niveau de développement de l’individu.\n",
+      "text_sha256": "1ff5f863bc3ac9ae97838078287b65b9dee45dae3f1a3e05a81bd7da77f93a09"
+    },
+    {
+      "bbox": [
+        313.0500183105469,
+        554.4519653320312,
+        545.0296020507812,
+        564.2781372070312
+      ],
+      "block_id": "page-0722-block-0009",
+      "order": 9,
+      "text": "B. L’ingestion de substances non nutritives ne correspond pas au niveau\n",
+      "text_sha256": "abcf1004e95a2d774f98a91bbaaa4aea6087f41f1eabe2290544860137860bff"
+    },
+    {
+      "bbox": [
+        323.8999938964844,
+        564.4519653320312,
+        384.7850036621094,
+        574.2781372070312
+      ],
+      "block_id": "page-0722-block-0010",
+      "order": 10,
+      "text": "du développement.\n",
+      "text_sha256": "1122450a21af9ff7626e1d18fba446b9c9c344ae3073978b25bcc9bc3b546b4d"
+    },
+    {
+      "bbox": [
+        58.25,
+        580.8519897460938,
+        282.1219482421875,
+        590.6781616210938
+      ],
+      "block_id": "page-0722-block-0011",
+      "order": 11,
+      "text": "C. Le comportement ne correspond pas à une pratique culturellement\n",
+      "text_sha256": "091da6a7a85370116c9a1ad589c9ce5edfffd58c6bdf06480efc565cfae3fb81"
+    },
+    {
+      "bbox": [
+        69.25,
+        590.8519897460938,
+        175.67962646484375,
+        600.6781616210938
+      ],
+      "block_id": "page-0722-block-0012",
+      "order": 12,
+      "text": "admise ou socialement acceptée.\n",
+      "text_sha256": "e9f0564404d12168be1231f8023cbd44f6cabcb6d4e13cb4275ca31b4f623515"
+    },
+    {
+      "bbox": [
+        313.0500183105469,
+        580.8519897460938,
+        529.1893920898438,
+        590.6781616210938
+      ],
+      "block_id": "page-0722-block-0013",
+      "order": 13,
+      "text": "C. Le comportement ne représente pas une pratique culturellement\n",
+      "text_sha256": "5eeaca414d6cdec02c1a180d2e33714fb6ed1a379db350012f0a16ccba1ca9a6"
+    },
+    {
+      "bbox": [
+        324.0500183105469,
+        590.8519897460938,
+        349.20501708984375,
+        600.6781616210938
+      ],
+      "block_id": "page-0722-block-0014",
+      "order": 14,
+      "text": "admise.\n",
+      "text_sha256": "128d376b13be86e2e5a4d5740ec5e2f0ff720c68148223320f0e41db406245f5"
+    },
+    {
+      "bbox": [
+        58.25,
+        607.3019409179688,
+        295.65380859375,
+        617.1281127929688
+      ],
+      "block_id": "page-0722-block-0015",
+      "order": 15,
+      "text": "D. Si le comportement survient dans le contexte d’un autre trouble mental\n",
+      "text_sha256": "533c0d210c8416a103d724919871bb95e11154659d9b64ccd33d263ad007390c"
+    },
+    {
+      "bbox": [
+        69.4000015258789,
+        617.3019409179688,
+        298.3970031738281,
+        657.1281127929688
+      ],
+      "block_id": "page-0722-block-0016",
+      "order": 16,
+      "text": "(p. ex., handicap intellectuel [trouble du développement intellectuel],\ntrouble du spectre de l’autisme, schizophrénie) ou d’une affection médi-\ncale (y compris la grossesse), il est sufsamment grave pour justier, à\nlui seul, une prise en charge clinique.\n",
+      "text_sha256": "57cdc7708fb937b9362859ff59ecebdbaa19e9f717a15fd90ac2a056cf820ae3"
+    },
+    {
+      "bbox": [
+        313.0500183105469,
+        607.3019409179688,
+        373.0310974121094,
+        617.1281127929688
+      ],
+      "block_id": "page-0722-block-0017",
+      "order": 17,
+      "text": "D. Idem à DSM-5.\n",
+      "text_sha256": "a25093c4e73c5e7e67b3176a2cccc790e8fc03ace507127f5b4c7ba5e37fc007"
+    },
+    {
+      "bbox": [
+        54.25,
+        664.890625,
+        554.705810546875,
+        724.625
+      ],
+      "block_id": "page-0722-block-0018",
+      "order": 18,
+      "text": "Sources : APA (2015), p. 387-388 ; APA (2004), p. 123.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\n",
+      "text_sha256": "d2eeb4b12b9e39665171ad2631c1b2f904b5e551b2832893c2fc984181231490"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.9658203125,
+        297.61077880859375,
+        177.95849609375
+      ],
+      "block_id": "page-0722-block-0019",
+      "order": 19,
+      "text": "comme de la nourriture, et ce, pendant une période d’au moins\nun mois. Le principal changement au sein de cette catégorie dans\nle DSM-5 concerne cet aspect de l’ingestion de substances n’étant\npas considérées comme de la nourriture. En eet, dans le DSM-\nIV-TR, il était seulement question de substances non nutritives,\nce qui pouvait sous-entendre la possibilité que soient incluses des\nsubstances comme les sodas diètes. Ce trouble est rarement dia-\ngnostiqué avant l’âge de 18 mois. Le groupe de travail du DSM-5\nsuggère d’ailleurs que le diagnostic puisse être envisagé seulement\naprès l’âge de 2 ans an d’éviter de confondre avec le comportement\nnormal du jeune bébé qui a tendance à porter tout objet à sa bouche\n(voir le tableau 31.4).\n",
+      "text_sha256": "b380c1f521c8d62ce4a9af2296e17fc34733bf9d094c8f6d521f29ffb9f3a416"
+    },
+    {
+      "bbox": [
+        54.0,
+        178.9658203125,
+        297.47845458984375,
+        281.45849609375
+      ],
+      "block_id": "page-0722-block-0020",
+      "order": 20,
+      "text": "On observe ce trouble plus fréquemment chez les enfants\nexposés à la pauvreté ou à la négligence. Par ailleurs, ce syndrome\nest parfois associé à une décience nutritionnelle, par exemple à\nune carence en fer. Il faut penser aussi à éliminer la présence d’un\ntrouble obsessionnel-compulsif, auquel le pica pourrait être associé,\nou d’une trichotillomanie. Le médecin doit vérier les croyances ou\ncoutumes de la famille, car dans certains cas, il s’agit d’une pratique\npartagée par diérents membres. Il est dicile d’établir la prévalence\nde ce trouble, car il touche diérentes catégories de populations.\n",
+      "text_sha256": "774353dcf3fada36875c3675209a438a722adbd9997e221074acd19769fe8438"
+    },
+    {
+      "bbox": [
+        54.0,
+        282.4658203125,
+        297.5019226074219,
+        430.95849609375
+      ],
+      "block_id": "page-0722-block-0021",
+      "order": 21,
+      "text": "Selon le produit ingéré, on observe diérentes complications\nmédicales : un empoisonnement, une décience en vitamines ou\nen diérents minéraux, une obstruction intestinale ou encore\nune infestation par des parasites. Lorsque le pica est diagnosti-\nqué, il faut évaluer le fonctionnement cognitif du patient pour\néliminer une décience intellectuelle. Il faut aussi comprendre\nce qui amène cette ingestion et éliminer certains troubles, tel un\ntrouble psychotique. Dans le cas d’un jeune enfant, il importe\négalement de vérier le fonctionnement familial et rechercher une\npossible négligence. Il arrive aussi que des patients très carencés\nou atteints d’un trouble de la personnalité limite ingèrent des\nobjets non comestibles pour attirer l’attention. Dans ce cas, il\nne s’agit pas de pica, mais plutôt d’un trouble de l’attachement.\n",
+      "text_sha256": "69fce1e9b3adcb2e0faa443bdd2cce28424a84910a94470c38eed21636d6ea9c"
+    },
+    {
+      "bbox": [
+        54.0,
+        431.9658203125,
+        297.1812438964844,
+        465.45849609375
+      ],
+      "block_id": "page-0722-block-0022",
+      "order": 22,
+      "text": "Le traitement dépend du type de problème. De façon générale,\nil est important d’assurer un environnement sécuritaire et exempt\nde produits toxiques. La plupart des traitements utilisent une\n",
+      "text_sha256": "eec0c377e8517c8a60b5357c0c971ede5974201a2a94a4f2818c0d2b9f4d5a2b"
+    },
+    {
+      "bbox": [
+        312.0,
+        40.9658203125,
+        555.0386352539062,
+        62.95849609375
+      ],
+      "block_id": "page-0722-block-0023",
+      "order": 23,
+      "text": "approche comportementale associée à de la psychoéducation.\nSur le plan de l’évolution, il existe peu d’études de suivi.\n",
+      "text_sha256": "e037c7568814a6599734445449126c677603ec2cca098b2d92235a1167a52935"
+    },
+    {
+      "bbox": [
+        312.0,
+        71.88301086425781,
+        555.5865478515625,
+        324.6084899902344
+      ],
+      "block_id": "page-0722-block-0024",
+      "order": 24,
+      "text": "Mérycisme\nLe mérycisme est déni selon le DSM-5 comme la présence de\nrégurgitations répétées de nourriture pendant une période d’au\nmoins un mois (voir le tableau 31.5). Les régurgitations se font\nde façon machinale comme une sorte d’habitude. Par rapport\nau DSM-IV-TR, l’aspect de fonctionnement normal antérieur a\nété retiré, car il est souvent dicile de le mettre en évidence. On\nobserve ce syndrome parmi trois populations cliniques :\n• les bébés (plus fréquemment) ;\n• les patients avec un trouble psychiatrique et particulièrement\nun retard de développement ;\n• certains individus sans troubles psychiatriques ou\nneurologiques.\nLa prévalence est peu connue et devrait être évaluée pour cha-\ncune des populations. Ce syndrome peut être associé à des compli-\ncations médicales sérieuses, dont la malnutrition, des déséquilibres\nélectrolytiques, une œsophagite ou une aspiration bronchique. Le\nmédecin doit donc les rechercher. En ce qui concerne le traitement,\nil existe peu d’études systématiques et plutôt des descriptions\nd’intervention pour des cas uniques rapportés dans la littérature.\nLà encore, l’approche comportementale est l’approche privilégiée.\n",
+      "text_sha256": "d610d51cac8a6413f1eb997d45f7dbe8eae3f3b55f340510c6c33e627006b455"
+    },
+    {
+      "bbox": [
+        312.0,
+        333.53302001953125,
+        555.4259033203125,
+        465.45849609375
+      ],
+      "block_id": "page-0722-block-0025",
+      "order": 25,
+      "text": "Restriction ou évitement de l’ingestion\nd’aliments\nDans le DSM-5, la catégorie du trouble de l’alimentation de la\npremière ou de la deuxième enfance est appelée « restriction ou\névitement de l’ingestion d’aliments ». De plus, les critères ont\nété modiés an d’être plus inclusifs, puisque plusieurs patients\nprésentent des dicultés à s’alimenter, et ce, dans tous les groupes\nd’âge, et leur état ne rencontrait pas avec les critères antérieurs\n(voir le tableau 31.6). Ce trouble se manifeste par une incapacité\npersistante à satisfaire ses besoins nutritionnels ou énergétiques.\nIl est proposé de reconnaître trois sous types, soit :\n",
+      "text_sha256": "d008246d032ed08c12a0e894bad4af5a7c5ec727107d5d1d4d9854e42ae1a42c"
+    }
+  ],
+  "coordinates_sha256": "1b12c5213c51c6529d0c9307bcb36b8004c80f1b4140f4132840f400fa1090d5",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0722",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 31\nTroubles des conduites alimentaires\n705\nTABLEAU 31.4 Critères diagnostiques du pica\nDSM-5\nDSM-IV-TR\n307.52 (F98.3) Pica\nPica\nA. Ingestion répétée de substances non nutritives et non comestibles\npendant une période d’au moins un mois.\nA. Idem à DSM-5.\nB. L’ingestion de substances non nutritives et non comestibles ne corres-\npond pas au niveau de développement de l’individu.\nB. L’ingestion de substances non nutritives ne correspond pas au niveau\ndu développement.\nC. Le comportement ne correspond pas à une pratique culturellement\nadmise ou socialement acceptée.\nC. Le comportement ne représente pas une pratique culturellement\nadmise.\nD. Si le comportement survient dans le contexte d’un autre trouble mental\n(p. ex., handicap intellectuel [trouble du développement intellectuel],\ntrouble du spectre de l’autisme, schizophrénie) ou d’une affection médi-\ncale (y compris la grossesse), il est sufsamment grave pour justier, à\nlui seul, une prise en charge clinique.\nD. Idem à DSM-5.\nSources : APA (2015), p. 387-388 ; APA (2004), p. 123.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\ncomme de la nourriture, et ce, pendant une période d’au moins\nun mois. Le principal changement au sein de cette catégorie dans\nle DSM-5 concerne cet aspect de l’ingestion de substances n’étant\npas considérées comme de la nourriture. En eet, dans le DSM-\nIV-TR, il était seulement question de substances non nutritives,\nce qui pouvait sous-entendre la possibilité que soient incluses des\nsubstances comme les sodas diètes. Ce trouble est rarement dia-\ngnostiqué avant l’âge de 18 mois. Le groupe de travail du DSM-5\nsuggère d’ailleurs que le diagnostic puisse être envisagé seulement\naprès l’âge de 2 ans an d’éviter de confondre avec le comportement\nnormal du jeune bébé qui a tendance à porter tout objet à sa bouche\n(voir le tableau 31.4).\nOn observe ce trouble plus fréquemment chez les enfants\nexposés à la pauvreté ou à la négligence. Par ailleurs, ce syndrome\nest parfois associé à une décience nutritionnelle, par exemple à\nune carence en fer. Il faut penser aussi à éliminer la présence d’un\ntrouble obsessionnel-compulsif, auquel le pica pourrait être associé,\nou d’une trichotillomanie. Le médecin doit vérier les croyances ou\ncoutumes de la famille, car dans certains cas, il s’agit d’une pratique\npartagée par diérents membres. Il est dicile d’établir la prévalence\nde ce trouble, car il touche diérentes catégories de populations.\nSelon le produit ingéré, on observe diérentes complications\nmédicales : un empoisonnement, une décience en vitamines ou\nen diérents minéraux, une obstruction intestinale ou encore\nune infestation par des parasites. Lorsque le pica est diagnosti-\nqué, il faut évaluer le fonctionnement cognitif du patient pour\néliminer une décience intellectuelle. Il faut aussi comprendre\nce qui amène cette ingestion et éliminer certains troubles, tel un\ntrouble psychotique. Dans le cas d’un jeune enfant, il importe\négalement de vérier le fonctionnement familial et rechercher une\npossible négligence. Il arrive aussi que des patients très carencés\nou atteints d’un trouble de la personnalité limite ingèrent des\nobjets non comestibles pour attirer l’attention. Dans ce cas, il\nne s’agit pas de pica, mais plutôt d’un trouble de l’attachement.\nLe traitement dépend du type de problème. De façon générale,\nil est important d’assurer un environnement sécuritaire et exempt\nde produits toxiques. La plupart des traitements utilisent une\napproche comportementale associée à de la psychoéducation.\nSur le plan de l’évolution, il existe peu d’études de suivi.\nMérycisme\nLe mérycisme est déni selon le DSM-5 comme la présence de\nrégurgitations répétées de nourriture pendant une période d’au\nmoins un mois (voir le tableau 31.5). Les régurgitations se font\nde façon machinale comme une sorte d’habitude. Par rapport\nau DSM-IV-TR, l’aspect de fonctionnement normal antérieur a\nété retiré, car il est souvent dicile de le mettre en évidence. On\nobserve ce syndrome parmi trois populations cliniques :\n• les bébés (plus fréquemment) ;\n• les patients avec un trouble psychiatrique et particulièrement\nun retard de développement ;\n• certains individus sans troubles psychiatriques ou\nneurologiques.\nLa prévalence est peu connue et devrait être évaluée pour cha-\ncune des populations. Ce syndrome peut être associé à des compli-\ncations médicales sérieuses, dont la malnutrition, des déséquilibres\nélectrolytiques, une œsophagite ou une aspiration bronchique. Le\nmédecin doit donc les rechercher. En ce qui concerne le traitement,\nil existe peu d’études systématiques et plutôt des descriptions\nd’intervention pour des cas uniques rapportés dans la littérature.\nLà encore, l’approche comportementale est l’approche privilégiée.\nRestriction ou évitement de l’ingestion\nd’aliments\nDans le DSM-5, la catégorie du trouble de l’alimentation de la\npremière ou de la deuxième enfance est appelée « restriction ou\névitement de l’ingestion d’aliments ». De plus, les critères ont\nété modiés an d’être plus inclusifs, puisque plusieurs patients\nprésentent des dicultés à s’alimenter, et ce, dans tous les groupes\nd’âge, et leur état ne rencontrait pas avec les critères antérieurs\n(voir le tableau 31.6). Ce trouble se manifeste par une incapacité\npersistante à satisfaire ses besoins nutritionnels ou énergétiques.\nIl est proposé de reconnaître trois sous types, soit :\n",
+  "raw_text_sha256": "4c87ad7107950a4b64c90bb2554c05f6ba480cc0af5d454a87b036ec4185656d",
+  "source_page_display": 723,
+  "source_page_index": 722
+}

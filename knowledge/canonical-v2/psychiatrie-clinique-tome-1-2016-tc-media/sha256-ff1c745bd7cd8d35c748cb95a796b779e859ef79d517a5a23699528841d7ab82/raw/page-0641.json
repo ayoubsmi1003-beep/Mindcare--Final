@@ -1,0 +1,316 @@
+{
+  "block_sequence_sha256": "0d451b67a4b9b9a9c0efa93a0fc4d9a6ca50b875090c2782cfe77836b03cfb55",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0641-block-0001",
+      "order": 1,
+      "text": "624\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "db4571c837e18f248e8298247d0eb6ddb40ab4b7d43a3028f05b1a9b050941a2"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.281494140625,
+        143.45849609375
+      ],
+      "block_id": "page-0641-block-0002",
+      "order": 2,
+      "text": "Elle se distingue de la peur qui, elle, est une réponse émotionnelle\nà une menace perçue, dans le présent. Dans le langage populaire,\nles termes nervosité, angoisse ou stress sont souvent utilisés\nindiéremment pour rendre compte d’une réaction émotive\nintense, de malaises physiques ressentis, voire de situations\ngénérant des craintes ou des inquiétudes. L’anxiété peut s’avérer\nnormale face à des événements « stressants », comme l’annonce\nd’une maladie ou une hospitalisation. L’anxiété est considérée\ncomme un trouble lorsqu’elle est excessive et persistante.\n",
+      "text_sha256": "9effc35845168efb5b77936f1fe1e989d0e17ebcd63eaa1b3be6459a47bbc516"
+    },
+    {
+      "bbox": [
+        326.0,
+        149.47412109375,
+        500.9195251464844,
+        160.05029296875
+      ],
+      "block_id": "page-0641-block-0003",
+      "order": 3,
+      "text": "L’anxiété est présentée en détail au chapitre 20.\n",
+      "text_sha256": "475f6b17344f56d0766ea7c279377f1fbd204eaf06564c4bd5bfd91fea910a23"
+    },
+    {
+      "bbox": [
+        306.0,
+        168.4658203125,
+        549.1412353515625,
+        213.45849609375
+      ],
+      "block_id": "page-0641-block-0004",
+      "order": 4,
+      "text": "Les manifestations physiques de l’anxiété sont associées à\nune hyperactivité du système nerveux (autonome ou végétatif)\nsympathique et sont décrites dans le tableau 28.4. Elles sont\nsouvent la raison de consultation en médecine générale ou\n",
+      "text_sha256": "21cf08e2f8bf39eaf2a4ef2b6c075c6656161636cf5f8b07e8e2ca11e8a15a19"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.9658203125,
+        291.29791259765625,
+        62.95849609375
+      ],
+      "block_id": "page-0641-block-0005",
+      "order": 5,
+      "text": "concrets destinés à faciliter l’alliance thérapeutique tout en ren-\ndant l’expérience de l’hospitalisation plus digne et plus humaine.\n",
+      "text_sha256": "1bbf82f3cb06dd0a25052fb760737ef7c7ef6814f354ad33be4f2732f712fae5"
+    },
+    {
+      "bbox": [
+        48.0,
+        63.9658203125,
+        291.4323425292969,
+        315.95849609375
+      ],
+      "block_id": "page-0641-block-0006",
+      "order": 6,
+      "text": "L’évaluation clinique comporte quatre volets : l’énoncé du pro-\nblème clinique, la cueillette des informations, la formulation d’hy-\npothèses diagnostiques et les recommandations.\nBien au-delà\ndes subtilités de présentation des symptômes et de leurs liens de\ncausalité, l’évaluation doit tenir compte d’un ensemble d’éléments\ntissant une toile de relations complexes entre le patient, la maladie,\nles soignants et les soins. Les perceptions de la maladie et du rôle\nde malade, les attentes à l’égard des soins, la dynamique familiale\net le soutien des proches, les stresseurs hospitaliers et les relations\navec les soignants sont des exemples de facteurs qui génèrent des\nréactions comportementales et émotionnelles variables et qui\ncontribuent au tableau symptomatique. Le déni ou la minimisation\nd’une réaction psychologique par les patients ou par leur famille rend\nla tâche plus ardue, particulièrement si un trouble psychiatrique\nest perçu comme socialement inacceptable. Le style de stratégies\nd’adaptation adoptées par le patient permet de mieux comprendre\nses réactions et de personnaliser les interventions. On s’intéresse\naussi à des réactions ou des sentiments comme l’incertitude, la\nperte de contrôle, l’impuissance, la démoralisation, le déni, etc. La\ndimension temporelle doit aussi être considérée pour se donner\nune idée de l’évolution de la maladie et de la trajectoire de soins.\nUne approche systémique large est à privilégier.\n",
+      "text_sha256": "ec52603bde651b6c198615feab6d184fc0149c288904aaabf7455e187f98ebd4"
+    },
+    {
+      "bbox": [
+        68.0,
+        323.47412109375,
+        287.5684509277344,
+        334.05029296875
+      ],
+      "block_id": "page-0641-block-0007",
+      "order": 7,
+      "text": "L’examen psychiatrique est présenté en détail au chapitre 3.\n",
+      "text_sha256": "b073ce8b22ec6ff0ad8bf84687cd9441bf608f309c76bea8e7ec67a1cbbf294c"
+    },
+    {
+      "bbox": [
+        48.0,
+        342.4658203125,
+        291.59130859375,
+        479.45849609375
+      ],
+      "block_id": "page-0641-block-0008",
+      "order": 8,
+      "text": "Le médecin doit rester vigilant vis-à-vis des manifestations\npsychiatriques des aections médicales. Quand on note une asso-\nciation temporelle entre l’apparition, l’exacerbation et la rémission\ndes symptômes psychiatriques avec une maladie physique ou quand\nla présentation du tableau clinique est atypique, il faut considérer\nla possibilité que les manifestations psychiatriques soient induites\npar une autre aection médicale. La résistance au traitement\npharmacologique, en dépit d’une durée et d’un dosage adéquats,\nfait également penser que le trouble psychiatrique découle d’une\ncause physique. Certains indices cliniques, présentés dans l’en-\ncadré 28.3, nous mettent sur la piste qu’un trouble mental puisse\nêtre induit par une autre aection médicale ou une substance.\n",
+      "text_sha256": "7deceb1e6ded87e4ef6a54865811d6153f42045704452615c96e7be448ffbd42"
+    },
+    {
+      "bbox": [
+        48.0,
+        480.4658203125,
+        291.42913818359375,
+        582.95849609375
+      ],
+      "block_id": "page-0641-block-0009",
+      "order": 9,
+      "text": "L’interprétation des symptômes psychiatriques chez ces malades\nreprésente un des aspects les plus cruciaux de l’évaluation. En eet,\nde nombreuses maladies et leurs traitements induisent des symp-\ntômes psychiatriques comme de la fatigue, une perte d’appétit, de\nl’insomnie, des troubles cognitifs, une dysfonction sexuelle, etc. Ce\ndiscernement des symptômes se complexie s’il y a comorbidité\navec une utilisation de substances. La présence de troubles cognitifs,\nsubaigus ou chroniques, associés ou non à un problème médical,\ninterfère également avec l’évaluation psychiatrique.\n",
+      "text_sha256": "90598530a570a5cdae3c6c5e6eb98511f6f43cdc0b8f64bdaf73100d2858f43c"
+    },
+    {
+      "bbox": [
+        48.0,
+        583.9658203125,
+        291.1419677734375,
+        651.95849609375
+      ],
+      "block_id": "page-0641-block-0010",
+      "order": 10,
+      "text": "La présence de symptômes de la lignée anxieuse, dépres-\nsive, psychotique, etc., peut mener au diagnostic d’un trouble\nspécifique selon les critères établis par le DSM-5.\nMais\nl’évaluation des symptômes d’anxiété, de dépression, de psy-\nchose et de manie chez des patients physiquement malades\nest abordée dans les prochaines sections.\n",
+      "text_sha256": "d63e1f5531143c11b0c1c61fcd29b1fb22cdadc26c7c73d734887c452edc3fc3"
+    },
+    {
+      "bbox": [
+        68.0,
+        657.97412109375,
+        272.37353515625,
+        680.05029296875
+      ],
+      "block_id": "page-0641-block-0011",
+      "order": 11,
+      "text": "Ces divers troubles psychiatriques sont décrits en détail\naux chapitres 15 à 41.\n",
+      "text_sha256": "afc2b765357a54ccab19daeccc0698ac770774fc76cf0b4343f633ab8f6ae3ae"
+    },
+    {
+      "bbox": [
+        48.0,
+        688.3330078125,
+        290.94195556640625,
+        725.45849609375
+      ],
+      "block_id": "page-0641-block-0012",
+      "order": 12,
+      "text": "Anxiété\nL’anxiété se dénit comme un état psychologique et physiologique\naccompagnant un sentiment subjectif d’appréhension du futur.\n",
+      "text_sha256": "95a81bd3cff7c36b5b6897a64e2c7f584ef155747cba04320799d00856a98476"
+    },
+    {
+      "bbox": [
+        308.25,
+        542.852294921875,
+        499.0897521972656,
+        555.2200927734375
+      ],
+      "block_id": "page-0641-block-0013",
+      "order": 13,
+      "text": "TABLEAU 28.4 Signes et symptômes physiques\n",
+      "text_sha256": "25a32a0f814ef6f78b5af86a488b3e4a5bcf966b6df94afe01a457d2fade625f"
+    },
+    {
+      "bbox": [
+        365.6499938964844,
+        554.7523193359375,
+        413.5090026855469,
+        566.7200927734375
+      ],
+      "block_id": "page-0641-block-0014",
+      "order": 14,
+      "text": "de l’anxiété\n",
+      "text_sha256": "b7364c5f322ee8386f61c058ad608ca7d705ec1a3168f08c69fde9fad954d644"
+    },
+    {
+      "bbox": [
+        324.3500061035156,
+        574.6241455078125,
+        544.6365966796875,
+        585.2003173828125
+      ],
+      "block_id": "page-0641-block-0015",
+      "order": 15,
+      "text": "Systèmes\nSignes et symptômes physiques de l’anxiété\n",
+      "text_sha256": "0816113f4f97805eb2a4554198df39426f1e6af0f8d199c81fd0eada6547b64a"
+    },
+    {
+      "bbox": [
+        310.25,
+        593.6019897460938,
+        544.2171630859375,
+        613.4281616210938
+      ],
+      "block_id": "page-0641-block-0016",
+      "order": 16,
+      "text": "Neurologique\nÉtourdissements, céphalées, tensions musculaires,\ntremblements, paresthésies\n",
+      "text_sha256": "9826a3257566d528340e294262f2f63726e213f1a6208595d5c9a219c8245ecc"
+    },
+    {
+      "bbox": [
+        310.25,
+        622.001953125,
+        527.5221557617188,
+        641.828125
+      ],
+      "block_id": "page-0641-block-0017",
+      "order": 17,
+      "text": "Cardiopulmonaire\nPalpitations, oppression thoracique, sensation\nde soufe coupé, hyperventilation\n",
+      "text_sha256": "0e49438ecbe638bbd40c0e782242dab3d2d82cb201521617c65a8eac14b9d9ce"
+    },
+    {
+      "bbox": [
+        310.25,
+        650.4519653320312,
+        537.0469970703125,
+        670.2781372070312
+      ],
+      "block_id": "page-0641-block-0018",
+      "order": 18,
+      "text": "Gastro-intestinal\nBouche sèche, perte d’appétit, douleurs abdomi-\nnales, nausées, diarrhées\n",
+      "text_sha256": "38c47394c50d4587513c647abc6a13826a07264aab70aa0a4c9eb090969dea97"
+    },
+    {
+      "bbox": [
+        310.25,
+        678.8519897460938,
+        541.6348876953125,
+        688.6781616210938
+      ],
+      "block_id": "page-0641-block-0019",
+      "order": 19,
+      "text": "Génito-urinaire\nEnvie fréquente d’uriner, absence de plaisir sexuel\n",
+      "text_sha256": "974a6dd17a49835a438acf000ee0f566b9fb9cd2c0f16809dfbd71e93827de82"
+    },
+    {
+      "bbox": [
+        310.25,
+        697.3019409179688,
+        444.402099609375,
+        707.1281127929688
+      ],
+      "block_id": "page-0641-block-0020",
+      "order": 20,
+      "text": "Général\nFatigue, diaphorèse\n",
+      "text_sha256": "60bccb69b872a2a54ac4fa057cea39580609b4669ebd4d25cbbf7b9570916a71"
+    },
+    {
+      "bbox": [
+        306.25,
+        715.890625,
+        396.59234619140625,
+        724.7588500976562
+      ],
+      "block_id": "page-0641-block-0021",
+      "order": 21,
+      "text": "Source : Pollack (2010), p. 134.\n",
+      "text_sha256": "321884e0e78ce49ed1a2f16bb82f51bb744d7f28b2d21a96338e916d5891835d"
+    },
+    {
+      "bbox": [
+        308.75,
+        231.00230407714844,
+        517.0013427734375,
+        243.320068359375
+      ],
+      "block_id": "page-0641-block-0022",
+      "order": 22,
+      "text": "ENCADRÉ 28.3 Indices suggérant un trouble mental\n",
+      "text_sha256": "ba77da35f41575f7a0902b45a67d4aeed891ea9b0d44e6c137045b528be233ff"
+    },
+    {
+      "bbox": [
+        367.70001220703125,
+        242.852294921875,
+        521.3617553710938,
+        266.320068359375
+      ],
+      "block_id": "page-0641-block-0023",
+      "order": 23,
+      "text": "dû à une affection médicale ou induit\npar une substance\n",
+      "text_sha256": "168a091e1c8aa58b6457b6f83160fd3d6d80c120915a11df2c45e0d9461f3024"
+    },
+    {
+      "bbox": [
+        310.75,
+        274.45196533203125,
+        543.77099609375,
+        507.6781311035156
+      ],
+      "block_id": "page-0641-block-0024",
+      "order": 24,
+      "text": "• Début des symptômes psychiatriques après 40 ans\n• Antécédents familiaux de trouble neurologique dégénératif (p. ex.,\nmaladie d’Alzheimer ou chorée de Huntington) ou de trouble métabo-\nlique héréditaire (p. ex., diabète, anémie pernicieuse, porphyrie)\n• Polypharmacie (avec ou sans ordonnance médicale)\n• Apparition des symptômes au cours d’une maladie qui atteint\nun organe (p. ex., cœur, poumon, rein, foie)\n• Apparition des symptômes après la prise d’un médicament ayant des\neffets psychotropes\n• Altération des signes vitaux, dysfonction d’un organe vital, décits\nneurologiques focaux\n• États mentaux altérés (perte de conscience, dysfonction cognitive ;\navec une présentation épisodique, récurrente ou cyclique)\n• Symptômes de dysfonction cérébrale corticale (p. ex., aphasie, apraxie,\nagnosie, atteinte visuospatiale)\n• Symptômes de dysfonction cérébrale sous-corticale (p. ex., ralentisse-\nment au niveau de la pensée, du discours, des mouvements, dysarthrie,\nataxie, incoordination, tremblements, astérixis [apping], chorée)\n• Hallucinations visuelles, tactiles ou olfactives\n• Anomalies à la marche ; force musculaire diminuée (parésie, paralysie)\n• Dysfonction du langage (aphasie, manque du mot, radotage)\n• Anomalies oculaires (asymétrie pupillaire, nystagmus)\n",
+      "text_sha256": "e42d68044074162f489242683cc630230e59905e78e8a4265ed1c6337ac661d4"
+    },
+    {
+      "bbox": [
+        306.75,
+        516.4406127929688,
+        431.0758972167969,
+        525.308837890625
+      ],
+      "block_id": "page-0641-block-0025",
+      "order": 25,
+      "text": "Source : Adapté de Maldonado (2010), p. 3.\n",
+      "text_sha256": "95b529b51e625beb0ea6ae2a05161878dfe6c70861d675ccc35c24218c6c9d8c"
+    }
+  ],
+  "coordinates_sha256": "258c825f7670ad32e59b901c324fed1308c7a72a5cd99607c9eaeadf811d6ecc",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0641",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "624\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nElle se distingue de la peur qui, elle, est une réponse émotionnelle\nà une menace perçue, dans le présent. Dans le langage populaire,\nles termes nervosité, angoisse ou stress sont souvent utilisés\nindiéremment pour rendre compte d’une réaction émotive\nintense, de malaises physiques ressentis, voire de situations\ngénérant des craintes ou des inquiétudes. L’anxiété peut s’avérer\nnormale face à des événements « stressants », comme l’annonce\nd’une maladie ou une hospitalisation. L’anxiété est considérée\ncomme un trouble lorsqu’elle est excessive et persistante.\nL’anxiété est présentée en détail au chapitre 20.\nLes manifestations physiques de l’anxiété sont associées à\nune hyperactivité du système nerveux (autonome ou végétatif)\nsympathique et sont décrites dans le tableau 28.4. Elles sont\nsouvent la raison de consultation en médecine générale ou\nconcrets destinés à faciliter l’alliance thérapeutique tout en ren-\ndant l’expérience de l’hospitalisation plus digne et plus humaine.\nL’évaluation clinique comporte quatre volets : l’énoncé du pro-\nblème clinique, la cueillette des informations, la formulation d’hy-\npothèses diagnostiques et les recommandations.\nBien au-delà\ndes subtilités de présentation des symptômes et de leurs liens de\ncausalité, l’évaluation doit tenir compte d’un ensemble d’éléments\ntissant une toile de relations complexes entre le patient, la maladie,\nles soignants et les soins. Les perceptions de la maladie et du rôle\nde malade, les attentes à l’égard des soins, la dynamique familiale\net le soutien des proches, les stresseurs hospitaliers et les relations\navec les soignants sont des exemples de facteurs qui génèrent des\nréactions comportementales et émotionnelles variables et qui\ncontribuent au tableau symptomatique. Le déni ou la minimisation\nd’une réaction psychologique par les patients ou par leur famille rend\nla tâche plus ardue, particulièrement si un trouble psychiatrique\nest perçu comme socialement inacceptable. Le style de stratégies\nd’adaptation adoptées par le patient permet de mieux comprendre\nses réactions et de personnaliser les interventions. On s’intéresse\naussi à des réactions ou des sentiments comme l’incertitude, la\nperte de contrôle, l’impuissance, la démoralisation, le déni, etc. La\ndimension temporelle doit aussi être considérée pour se donner\nune idée de l’évolution de la maladie et de la trajectoire de soins.\nUne approche systémique large est à privilégier.\nL’examen psychiatrique est présenté en détail au chapitre 3.\nLe médecin doit rester vigilant vis-à-vis des manifestations\npsychiatriques des aections médicales. Quand on note une asso-\nciation temporelle entre l’apparition, l’exacerbation et la rémission\ndes symptômes psychiatriques avec une maladie physique ou quand\nla présentation du tableau clinique est atypique, il faut considérer\nla possibilité que les manifestations psychiatriques soient induites\npar une autre aection médicale. La résistance au traitement\npharmacologique, en dépit d’une durée et d’un dosage adéquats,\nfait également penser que le trouble psychiatrique découle d’une\ncause physique. Certains indices cliniques, présentés dans l’en-\ncadré 28.3, nous mettent sur la piste qu’un trouble mental puisse\nêtre induit par une autre aection médicale ou une substance.\nL’interprétation des symptômes psychiatriques chez ces malades\nreprésente un des aspects les plus cruciaux de l’évaluation. En eet,\nde nombreuses maladies et leurs traitements induisent des symp-\ntômes psychiatriques comme de la fatigue, une perte d’appétit, de\nl’insomnie, des troubles cognitifs, une dysfonction sexuelle, etc. Ce\ndiscernement des symptômes se complexie s’il y a comorbidité\navec une utilisation de substances. La présence de troubles cognitifs,\nsubaigus ou chroniques, associés ou non à un problème médical,\ninterfère également avec l’évaluation psychiatrique.\nLa présence de symptômes de la lignée anxieuse, dépres-\nsive, psychotique, etc., peut mener au diagnostic d’un trouble\nspécifique selon les critères établis par le DSM-5.\nMais\nl’évaluation des symptômes d’anxiété, de dépression, de psy-\nchose et de manie chez des patients physiquement malades\nest abordée dans les prochaines sections.\nCes divers troubles psychiatriques sont décrits en détail\naux chapitres 15 à 41.\nAnxiété\nL’anxiété se dénit comme un état psychologique et physiologique\naccompagnant un sentiment subjectif d’appréhension du futur.\nTABLEAU 28.4 Signes et symptômes physiques\nde l’anxiété\nSystèmes\nSignes et symptômes physiques de l’anxiété\nNeurologique\nÉtourdissements, céphalées, tensions musculaires,\ntremblements, paresthésies\nCardiopulmonaire\nPalpitations, oppression thoracique, sensation\nde soufe coupé, hyperventilation\nGastro-intestinal\nBouche sèche, perte d’appétit, douleurs abdomi-\nnales, nausées, diarrhées\nGénito-urinaire\nEnvie fréquente d’uriner, absence de plaisir sexuel\nGénéral\nFatigue, diaphorèse\nSource : Pollack (2010), p. 134.\nENCADRÉ 28.3 Indices suggérant un trouble mental\ndû à une affection médicale ou induit\npar une substance\n• Début des symptômes psychiatriques après 40 ans\n• Antécédents familiaux de trouble neurologique dégénératif (p. ex.,\nmaladie d’Alzheimer ou chorée de Huntington) ou de trouble métabo-\nlique héréditaire (p. ex., diabète, anémie pernicieuse, porphyrie)\n• Polypharmacie (avec ou sans ordonnance médicale)\n• Apparition des symptômes au cours d’une maladie qui atteint\nun organe (p. ex., cœur, poumon, rein, foie)\n• Apparition des symptômes après la prise d’un médicament ayant des\neffets psychotropes\n• Altération des signes vitaux, dysfonction d’un organe vital, décits\nneurologiques focaux\n• États mentaux altérés (perte de conscience, dysfonction cognitive ;\navec une présentation épisodique, récurrente ou cyclique)\n• Symptômes de dysfonction cérébrale corticale (p. ex., aphasie, apraxie,\nagnosie, atteinte visuospatiale)\n• Symptômes de dysfonction cérébrale sous-corticale (p. ex., ralentisse-\nment au niveau de la pensée, du discours, des mouvements, dysarthrie,\nataxie, incoordination, tremblements, astérixis [apping], chorée)\n• Hallucinations visuelles, tactiles ou olfactives\n• Anomalies à la marche ; force musculaire diminuée (parésie, paralysie)\n• Dysfonction du langage (aphasie, manque du mot, radotage)\n• Anomalies oculaires (asymétrie pupillaire, nystagmus)\nSource : Adapté de Maldonado (2010), p. 3.\n",
+  "raw_text_sha256": "cef52d29be552323eeb5f6426aa2a76dd00169fc07bc071f1f624510cabd1375",
+  "source_page_display": 642,
+  "source_page_index": 641
+}

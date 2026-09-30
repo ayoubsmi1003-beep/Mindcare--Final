@@ -1,0 +1,304 @@
+{
+  "block_sequence_sha256": "74258bdc1566db48667bd5becc36256bbf2c82f27d96c7396eeb4e34cc02fd42",
+  "blocks": [
+    {
+      "bbox": [
+        42.0,
+        40.78339767456055,
+        173.84500122070312,
+        57.98456954956055
+      ],
+      "block_id": "page-0003-block-0001",
+      "order": 1,
+      "text": "Psychiatrie clinique\nApproche bio-psycho-sociale, 4e édition\n",
+      "text_sha256": "d6cb56289fcd6061c259a334fa933bef60db0e46cbbf63b986e241dbdb7dae00"
+    },
+    {
+      "bbox": [
+        42.0,
+        61.33467102050781,
+        171.6405487060547,
+        80.98457336425781
+      ],
+      "block_id": "page-0003-block-0002",
+      "order": 2,
+      "text": "DR Pierre Lalonde\nDR Georges-F. Pinard et collaborateurs\n",
+      "text_sha256": "f38cd7ebca324b4f36a067c8554703c3bed0a726d3760137b0b183b0a8ce6ecc"
+    },
+    {
+      "bbox": [
+        42.0,
+        86.78340148925781,
+        194.29205322265625,
+        103.98457336425781
+      ],
+      "block_id": "page-0003-block-0003",
+      "order": 3,
+      "text": "© 2016 TC Média Livres Inc.\n© 1999, 1988, 1980 gaëtan morin éditeur ltée\n",
+      "text_sha256": "ad2e5574f13a416bd980432a262d708875244cb2bb5c2f97761c1e1f154ee9d2"
+    },
+    {
+      "bbox": [
+        42.0,
+        109.83467102050781,
+        241.27552795410156,
+        126.98457336425781
+      ],
+      "block_id": "page-0003-block-0004",
+      "order": 4,
+      "text": "Conception éditoriale : André Vandal\nÉdition : Guy Bonin, Karine Demoors, Daphné Marion-Vinet,\n",
+      "text_sha256": "7fb9b4ab58191abb89d385bdc2249ac0b86645478ddf5df9a9ba88711c5ac605"
+    },
+    {
+      "bbox": [
+        42.0,
+        126.83467102050781,
+        253.80047607421875,
+        143.9845733642578
+      ],
+      "block_id": "page-0003-block-0005",
+      "order": 5,
+      "text": "Marie Victoire Martin, Annie Ouellet\nCoordination : Marie-Michèle Martel, Marylène Leblanc-Langlois\n",
+      "text_sha256": "a6fa8c8d0dbe95170edfddaec2e4d9427b76798d1b34aab17d9611f850383048"
+    },
+    {
+      "bbox": [
+        42.0,
+        143.8346710205078,
+        188.64500427246094,
+        186.4845733642578
+      ],
+      "block_id": "page-0003-block-0006",
+      "order": 6,
+      "text": "et Alexandra Soyeux\nRévision linguistique : Jean-Pierre Regnault\nCorrection d’épreuves : Natacha Auclair\nConception graphique : Christian Campana\nConception de la couverture : Gianni Caccia\n",
+      "text_sha256": "4f58a91261fd42a5582a206b5a8fc5c2036ca438d3a87673f0ed89cf9f32e3dd"
+    },
+    {
+      "bbox": [
+        42.0,
+        218.7834014892578,
+        221.79852294921875,
+        244.4259796142578
+      ],
+      "block_id": "page-0003-block-0007",
+      "order": 7,
+      "text": "Catalogage avant publication\nde Bibliothèque et Archives nationales du Québec\net Bibliothèque et Archives Canada\n",
+      "text_sha256": "e589f822f5e24455ed6e13c743158c658e551e4d1bfb92a63a4a0b403b4a5d44"
+    },
+    {
+      "bbox": [
+        42.0,
+        252.33468627929688,
+        141.83265686035156,
+        260.9845886230469
+      ],
+      "block_id": "page-0003-block-0008",
+      "order": 8,
+      "text": "Lalonde, Pierre, 1941 mars 2-\n",
+      "text_sha256": "3e693b0b6ce9f3941ae639b3e9b29cc1d2e6b7b8781aa99c4f4c94c073d8a5f5"
+    },
+    {
+      "bbox": [
+        51.0,
+        266.8346862792969,
+        230.7203826904297,
+        275.4845886230469
+      ],
+      "block_id": "page-0003-block-0009",
+      "order": 9,
+      "text": "Psychiatrie clinique : une approche bio-psycho-sociale\n",
+      "text_sha256": "d07b05bb3f6c1921afa74f624b7b14ddfb25e9edf4472ee6143dfbbf4a097a4c"
+    },
+    {
+      "bbox": [
+        51.0,
+        281.3346862792969,
+        292.9366149902344,
+        315.4845886230469
+      ],
+      "block_id": "page-0003-block-0010",
+      "order": 10,
+      "text": "Édition originale : 1999-2001.\nComprend des références bibliographiques et un index.\nSommaire : t. 1. Déterminants bio-psycho-sociaux, syndromes cliniques\net organisation des soins – t. 2. Spécialités psychiatriques et traitements.\n",
+      "text_sha256": "0501fd4454ce2b405d9ca5977bf220b13cfff2d5ce91b9185a5c5c9df05a25a7"
+    },
+    {
+      "bbox": [
+        51.0,
+        321.3346862792969,
+        160.20228576660156,
+        338.4845886230469
+      ],
+      "block_id": "page-0003-block-0011",
+      "order": 11,
+      "text": "ISBN 978-2-7650-4770-4 (vol. 1)\nISBN 978-2-7650-4769-8 (vol. 2)\n",
+      "text_sha256": "8e765832d6aa91535af0babb94ea891453583153b7eeebd497cd877da5e2792d"
+    },
+    {
+      "bbox": [
+        42.0,
+        344.3346862792969,
+        290.5851135253906,
+        395.4845886230469
+      ],
+      "block_id": "page-0003-block-0012",
+      "order": 12,
+      "text": "1. Psychiatrie. 2. Psychopathologie. 3. Psychiatrie biologique. 4. Psy-\nchiatrie sociale. 5. Maladies mentales – Traitement. i. Pinard, Georges-\nFranck, 1961- . ii. Lalonde, Pierre, 1941 mars 2- \n. Déterminants bio-\npsycho-sociaux, syndromes cliniques et organisation des soins. iii. Lalonde,\nPierre, 1941 mars 2- \n. Spécialités psychiatriques et traitements.\niv. Psychiatrie clinique. v. Titre.\n",
+      "text_sha256": "c4e0c091fa7d2f43d86dbd2e703b2202d296de5e702ba351d4b077ea4277b64e"
+    },
+    {
+      "bbox": [
+        42.0,
+        401.3346862792969,
+        291.5073547363281,
+        409.9845886230469
+      ],
+      "block_id": "page-0003-block-0013",
+      "order": 13,
+      "text": "RC456.L34 2016 \n616.89 \nC2016-940327-0\n",
+      "text_sha256": "523abea654f2b0409e1d1f55f617205038518920b951efa72ae1ca88aa3b83dd"
+    },
+    {
+      "bbox": [
+        42.0,
+        620.9334106445312,
+        126.16743469238281,
+        629.5759887695312
+      ],
+      "block_id": "page-0003-block-0014",
+      "order": 14,
+      "text": "ISBN 978-2-7650-4770-4\n",
+      "text_sha256": "f9c018030ff56a93c0aff59424b7de6aa67983b818ab94d817dff7ae6e3e346c"
+    },
+    {
+      "bbox": [
+        42.0,
+        632.9846801757812,
+        197.90066528320312,
+        661.1345825195312
+      ],
+      "block_id": "page-0003-block-0015",
+      "order": 15,
+      "text": "Dépôt légal : 2e trimestre 2016\nBibliothèque et Archives nationales du Québec\nBibliothèque et Archives Canada\n",
+      "text_sha256": "6a8ec2b77a70d2af9ad087bd2aaaee001925c8cd35e70b541f3781f403d88ca3"
+    },
+    {
+      "bbox": [
+        42.0,
+        666.9846801757812,
+        108.28750610351562,
+        675.6345825195312
+      ],
+      "block_id": "page-0003-block-0016",
+      "order": 16,
+      "text": "Imprimé au Canada\n",
+      "text_sha256": "dac0e44f27a70530d916d48442c4986322558f1a8c1d194128851893c5dcc026"
+    },
+    {
+      "bbox": [
+        42.0,
+        681.4846801757812,
+        185.7899932861328,
+        690.1345825195312
+      ],
+      "block_id": "page-0003-block-0017",
+      "order": 17,
+      "text": "1 2 3 4 5 M\n20\n19\n18\n17\n16\n",
+      "text_sha256": "203b87d73f9a593368a84438cb471b7db2f7daeda9a5b7644f1d7e3631c30d6e"
+    },
+    {
+      "bbox": [
+        42.0,
+        695.9846801757812,
+        293.6822204589844,
+        713.1345825195312
+      ],
+      "block_id": "page-0003-block-0018",
+      "order": 18,
+      "text": "Gouvernement du Québec – Programme de crédit d’impôt pour l’édition de\nlivres – Gestion SODEC.\n",
+      "text_sha256": "0445ac9a075a61056407af99b8cd85299b4fb86819e3d0afd6f19749110d02ba"
+    },
+    {
+      "bbox": [
+        379.6499938964844,
+        125.63467407226562,
+        554.2507934570312,
+        159.78457641601562
+      ],
+      "block_id": "page-0003-block-0019",
+      "order": 19,
+      "text": "Les cas présentés dans les mises en situation de cet\nouvrage sont fictifs. Toute ressemblance avec des\npersonnes existantes ou ayant déjà existé n’est que\npure coïncidence.\n",
+      "text_sha256": "2bb4827c9793ccee5502c7573f4073126e7fd2fffe7e456aa8a01b5a92ff87ab"
+    },
+    {
+      "bbox": [
+        379.6499938964844,
+        179.28466796875,
+        554.4974975585938,
+        323.9345703125
+      ],
+      "block_id": "page-0003-block-0020",
+      "order": 20,
+      "text": "La thérapeutique évolue continuellement. La recherche\net le développement produisent des traitements et\ndes pharmacothérapies qui perfectionnent constam-\nment la médecine et ses applications. Nous présen-\ntons au lecteur le contenu du présent ouvrage à titre\ninformatif uniquement. Il ne saurait constituer un avis\nmédical. Il incombe au médecin traitant et non à\ncet ouvrage de déterminer la posologie et le traite-\nment appropriés pour chaque patient en particulier.\nNous recommandons également de lire attentive-\nment la notice du fabricant de chaque médicament\npour vérifier les indications, les mises en garde et\nles précautions, les interactions médicamenteuses,\nles effets secondaires et mesures à prendre, la poso-\nlogie recommandée, la méthode et la durée d’admi-\nnistration, ainsi que les contre-indications avant de\nprescrire.\n",
+      "text_sha256": "a584998f8431b5a4916894e5b2af8894637afc7422a9781518c320fb44591817"
+    },
+    {
+      "bbox": [
+        379.6499938964844,
+        329.78466796875,
+        554.4974975585938,
+        431.9345703125
+      ],
+      "block_id": "page-0003-block-0021",
+      "order": 21,
+      "text": "TC Média Livres Inc., les auteurs et leurs collabora-\nteurs se dégagent de toute responsabilité concer-\nnant toute réclamation ou condamnation passée,\nprésente ou future, de quelque nature que ce soit,\nrelative à tout dommage, à tout incident – spécial,\npunitif ou exemplaire – y compris de façon non limi-\ntative, à toute perte économique ou à tout préjudice\ncorporel ou matériel découlant d’une négligence, et\nà toute violation ou usurpation de tout droit, titre,\nintérêt de propriété intellectuelle résultant ou pouvant\nrésulter de tout contenu, texte, photographie ou des\nproduits ou services mentionnés dans cet ouvrage.\n",
+      "text_sha256": "a34ed35489691b1acafc244db49b3c8ad7aea7d8a6a7b5c57612c8b0fe93f1a0"
+    },
+    {
+      "bbox": [
+        379.6499938964844,
+        47.33466720581055,
+        554.4974975585938,
+        106.98457336425781
+      ],
+      "block_id": "page-0003-block-0022",
+      "order": 22,
+      "text": "Des marques de commerce sont mentionnées ou\nillustrées dans cet ouvrage. L’Éditeur tient à préciser\nqu’il n’a reçu aucun revenu ni avantage conséquem-\nment à la présence de ces marques. Celles-ci sont\nreproduites à la demande des auteurs en vue d’ap-\npuyer le propos pédagogique ou scientifique de\nl’ouvrage.\n",
+      "text_sha256": "b4fc81a9ff808b223f9fe84abf3d7c7ded1abf59bdbf184eb88c5de38abaaa7d"
+    },
+    {
+      "bbox": [
+        379.6499938964844,
+        455.03466796875,
+        554.0369262695312,
+        463.6845703125
+      ],
+      "block_id": "page-0003-block-0023",
+      "order": 23,
+      "text": "L’achat en ligne est réservé aux résidants du Canada.\n",
+      "text_sha256": "9a8c2032863917579858774751b89ef326973a6b7b2e159519f978daa906cdee"
+    },
+    {
+      "bbox": [
+        51.0,
+        520.2978515625,
+        284.57391357421875,
+        606.1591796875
+      ],
+      "block_id": "page-0003-block-0024",
+      "order": 24,
+      "text": "TOUS DROITS RÉSERVÉS.\nToute reproduction du présent ouvrage, en totalité ou en partie,\npar tous les moyens présentement connus ou à être décou-\nverts, est interdite sans l’autorisation préalable de TC Média\nLivres Inc.\nToute utilisation non expressément autorisée constitue une\ncontrefaçon pouvant donner lieu à une poursuite en justice\ncontre l’individu ou l’établissement qui effectue la reproduction\nnon autorisée.\n",
+      "text_sha256": "1365fd67f7f4ae3be8b6e0c6712c53686d6e82b9fdc086644b3fc38d6f273db1"
+    }
+  ],
+  "coordinates_sha256": "bd5de24c47ced3c566ad0c881f446bf3ace4195d742fccb3b3eac577e5c7e82d",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0003",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Psychiatrie clinique\nApproche bio-psycho-sociale, 4e édition\nDR Pierre Lalonde\nDR Georges-F. Pinard et collaborateurs\n© 2016 TC Média Livres Inc.\n© 1999, 1988, 1980 gaëtan morin éditeur ltée\nConception éditoriale : André Vandal\nÉdition : Guy Bonin, Karine Demoors, Daphné Marion-Vinet,\nMarie Victoire Martin, Annie Ouellet\nCoordination : Marie-Michèle Martel, Marylène Leblanc-Langlois\net Alexandra Soyeux\nRévision linguistique : Jean-Pierre Regnault\nCorrection d’épreuves : Natacha Auclair\nConception graphique : Christian Campana\nConception de la couverture : Gianni Caccia\nCatalogage avant publication\nde Bibliothèque et Archives nationales du Québec\net Bibliothèque et Archives Canada\nLalonde, Pierre, 1941 mars 2-\nPsychiatrie clinique : une approche bio-psycho-sociale\nÉdition originale : 1999-2001.\nComprend des références bibliographiques et un index.\nSommaire : t. 1. Déterminants bio-psycho-sociaux, syndromes cliniques\net organisation des soins – t. 2. Spécialités psychiatriques et traitements.\nISBN 978-2-7650-4770-4 (vol. 1)\nISBN 978-2-7650-4769-8 (vol. 2)\n1. Psychiatrie. 2. Psychopathologie. 3. Psychiatrie biologique. 4. Psy-\nchiatrie sociale. 5. Maladies mentales – Traitement. i. Pinard, Georges-\nFranck, 1961- . ii. Lalonde, Pierre, 1941 mars 2- \n. Déterminants bio-\npsycho-sociaux, syndromes cliniques et organisation des soins. iii. Lalonde,\nPierre, 1941 mars 2- \n. Spécialités psychiatriques et traitements.\niv. Psychiatrie clinique. v. Titre.\nRC456.L34 2016 \n616.89 \nC2016-940327-0\nISBN 978-2-7650-4770-4\nDépôt légal : 2e trimestre 2016\nBibliothèque et Archives nationales du Québec\nBibliothèque et Archives Canada\nImprimé au Canada\n1 2 3 4 5 M\n20\n19\n18\n17\n16\nGouvernement du Québec – Programme de crédit d’impôt pour l’édition de\nlivres – Gestion SODEC.\nLes cas présentés dans les mises en situation de cet\nouvrage sont fictifs. Toute ressemblance avec des\npersonnes existantes ou ayant déjà existé n’est que\npure coïncidence.\nLa thérapeutique évolue continuellement. La recherche\net le développement produisent des traitements et\ndes pharmacothérapies qui perfectionnent constam-\nment la médecine et ses applications. Nous présen-\ntons au lecteur le contenu du présent ouvrage à titre\ninformatif uniquement. Il ne saurait constituer un avis\nmédical. Il incombe au médecin traitant et non à\ncet ouvrage de déterminer la posologie et le traite-\nment appropriés pour chaque patient en particulier.\nNous recommandons également de lire attentive-\nment la notice du fabricant de chaque médicament\npour vérifier les indications, les mises en garde et\nles précautions, les interactions médicamenteuses,\nles effets secondaires et mesures à prendre, la poso-\nlogie recommandée, la méthode et la durée d’admi-\nnistration, ainsi que les contre-indications avant de\nprescrire.\nTC Média Livres Inc., les auteurs et leurs collabora-\nteurs se dégagent de toute responsabilité concer-\nnant toute réclamation ou condamnation passée,\nprésente ou future, de quelque nature que ce soit,\nrelative à tout dommage, à tout incident – spécial,\npunitif ou exemplaire – y compris de façon non limi-\ntative, à toute perte économique ou à tout préjudice\ncorporel ou matériel découlant d’une négligence, et\nà toute violation ou usurpation de tout droit, titre,\nintérêt de propriété intellectuelle résultant ou pouvant\nrésulter de tout contenu, texte, photographie ou des\nproduits ou services mentionnés dans cet ouvrage.\nDes marques de commerce sont mentionnées ou\nillustrées dans cet ouvrage. L’Éditeur tient à préciser\nqu’il n’a reçu aucun revenu ni avantage conséquem-\nment à la présence de ces marques. Celles-ci sont\nreproduites à la demande des auteurs en vue d’ap-\npuyer le propos pédagogique ou scientifique de\nl’ouvrage.\nL’achat en ligne est réservé aux résidants du Canada.\nTOUS DROITS RÉSERVÉS.\nToute reproduction du présent ouvrage, en totalité ou en partie,\npar tous les moyens présentement connus ou à être décou-\nverts, est interdite sans l’autorisation préalable de TC Média\nLivres Inc.\nToute utilisation non expressément autorisée constitue une\ncontrefaçon pouvant donner lieu à une poursuite en justice\ncontre l’individu ou l’établissement qui effectue la reproduction\nnon autorisée.\n",
+  "raw_text_sha256": "2627c4a0d90f563bb6e86aa40313e962dbf142e9928243ae2d6339112e6e5819",
+  "source_page_display": 4,
+  "source_page_index": 3
+}

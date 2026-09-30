@@ -1,0 +1,52 @@
+{
+  "block_sequence_sha256": "833135a141956b7f424682fd7cf96196567543f2652373e2312d28d22b075c41",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        180.42501831054688,
+        758.8693237304688
+      ],
+      "block_id": "page-1141-block-0001",
+      "order": 1,
+      "text": "F4\nFigures supplémentaires\n",
+      "text_sha256": "55266ceda6763fa7322b281e75f7de73180e62230b4a8c506f9d6f0fba0dbc2a"
+    },
+    {
+      "bbox": [
+        48.0,
+        674.0406494140625,
+        434.32000732421875,
+        682.9088745117188
+      ],
+      "block_id": "page-1141-block-0002",
+      "order": 2,
+      "text": "Source : Adaptation de la carte neuropsychologique du cerveau avec l'autorisation de l'Institut universitaire en santé mentale de Québec.\n",
+      "text_sha256": "5afaedfb314c3e94845f034f813415c8f24724bf8976f029fa42ad1901fb53f0"
+    },
+    {
+      "bbox": [
+        50.04999923706055,
+        41.002296447753906,
+        246.22650146484375,
+        53.320068359375
+      ],
+      "block_id": "page-1141-block-0003",
+      "order": 3,
+      "text": "FIGURE 5 Carte neuropsychologique du cerveau\n",
+      "text_sha256": "0c26b0f3fc03421158b949746913f2c4dba1ea527dff4cbc6c811b0a6b3dd731"
+    }
+  ],
+  "coordinates_sha256": "199d865cf2b6acff09c93da47d542d184b9e95b0dce52a979141bc19841477a7",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1141",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "F4\nFigures supplémentaires\nSource : Adaptation de la carte neuropsychologique du cerveau avec l'autorisation de l'Institut universitaire en santé mentale de Québec.\nFIGURE 5 Carte neuropsychologique du cerveau\n",
+  "raw_text_sha256": "b0ab39f0a2a384fa1dfecb3aaa7cd9053bd14549586e09b1ffeefd13a1f8fe43",
+  "source_page_display": 1142,
+  "source_page_index": 1141
+}

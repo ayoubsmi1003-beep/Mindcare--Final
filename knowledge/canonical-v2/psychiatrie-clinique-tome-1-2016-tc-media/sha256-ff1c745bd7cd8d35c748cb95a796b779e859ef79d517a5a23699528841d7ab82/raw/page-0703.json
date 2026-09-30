@@ -1,0 +1,232 @@
+{
+  "block_sequence_sha256": "80929c5b76fb862a8db6b5f67dbb81a7a53aebe31852ffd2bc5e4fef7f119b1d",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        130.5734405517578,
+        314.833740234375,
+        175.4953155517578
+      ],
+      "block_id": "page-0703-block-0001",
+      "order": 1,
+      "text": "Troubles factices\n",
+      "text_sha256": "0a35a9799048e5bdbe404ea651e7c228375f4a65b66c0ff91ef6d140a9f0e151"
+    },
+    {
+      "bbox": [
+        48.0,
+        223.2001190185547,
+        187.00509643554688,
+        235.7001190185547
+      ],
+      "block_id": "page-0703-block-0002",
+      "order": 2,
+      "text": "Jean-François Denis, M.D., CRCPC\n",
+      "text_sha256": "2f9ab53cbff1ac01cd7e26abfbac2aa18c0f79042402ec9fe132aca203870bd7"
+    },
+    {
+      "bbox": [
+        48.0,
+        239.57725524902344,
+        281.5072326660156,
+        260.7937927246094
+      ],
+      "block_id": "page-0703-block-0003",
+      "order": 3,
+      "text": "Psychiatre, Service de consultation-liaison, Hôpital de la Cité-\nde-la-Santé (Laval)\n",
+      "text_sha256": "140172820389278b3f2e9455f69e146a0e33ac42181623e6a6f741275839dc1d"
+    },
+    {
+      "bbox": [
+        48.0,
+        264.5772399902344,
+        291.0107116699219,
+        285.7937927246094
+      ],
+      "block_id": "page-0703-block-0004",
+      "order": 4,
+      "text": "Professeur adjoint de clinique, Faculté de médecine, Département\nde psychiatrie, Université de Montréal\n",
+      "text_sha256": "97d3aaff3c08e64b2675f91d6073ca81d23c20115af77f24ed78b36751da6a91"
+    },
+    {
+      "bbox": [
+        306.0,
+        223.2001190185547,
+        464.6800842285156,
+        235.7001190185547
+      ],
+      "block_id": "page-0703-block-0005",
+      "order": 5,
+      "text": "Julie-Anne Denis, M.D., B. ING., M. SC. A.\n",
+      "text_sha256": "2a1f6073c5a1569e0ae077c61e2e47c401b21918ea9014813f7aaca7a67ac7cf"
+    },
+    {
+      "bbox": [
+        306.0,
+        239.57725524902344,
+        529.0064086914062,
+        260.7937927246094
+      ],
+      "block_id": "page-0703-block-0006",
+      "order": 6,
+      "text": "Résidente en radiologie diagnostique, Faculté de médecine,\nUniversité de Montréal\n",
+      "text_sha256": "dcdb4414a6d0d02969c257fe10934e2bef0fdbfaad67b53ea13468a1f5bf3ca3"
+    },
+    {
+      "bbox": [
+        48.0,
+        335.22442626953125,
+        289.010009765625,
+        345.06817626953125
+      ],
+      "block_id": "page-0703-block-0007",
+      "order": 7,
+      "text": "30.1 Évolution du concept..................................................... 687\n",
+      "text_sha256": "311311f176d794e033b0e8b02c1338f6af80af0dbf60bbc5e0263b46228df9f1"
+    },
+    {
+      "bbox": [
+        48.0,
+        351.0244140625,
+        289.010009765625,
+        360.8681640625
+      ],
+      "block_id": "page-0703-block-0008",
+      "order": 8,
+      "text": "30.2 Épidémiologie ................................................................. 687\n",
+      "text_sha256": "377ccfdcb32b23e200423bb465f32d1219c2b43efbcc42aa2edc8f1009b01bd7"
+    },
+    {
+      "bbox": [
+        48.0,
+        366.8244323730469,
+        289.010009765625,
+        416.947265625
+      ],
+      "block_id": "page-0703-block-0009",
+      "order": 9,
+      "text": "30.3 Étiologies ......................................................................... 688\n30.3.1 Étiologies biologiques........................................... 688\n30.3.2 Étiologies psychologiques.................................... 688\n30.3.3 Étiologies sociales.................................................. 688\n",
+      "text_sha256": "f05efe15c4d9f052106436c218450ede67037258f1a2d022ee5b5fd08871f2ff"
+    },
+    {
+      "bbox": [
+        48.0,
+        420.9244079589844,
+        289.010009765625,
+        457.5972595214844
+      ],
+      "block_id": "page-0703-block-0010",
+      "order": 10,
+      "text": "30.4 Description clinique ...................................................... 689\n30.4.1 Troubles factices auto-induits ............................ 689\n30.4.2 Troubles factices imposés à autrui..................... 691\n",
+      "text_sha256": "1679bbbaeef1b4a07c7aa3bd8cae72cfc92d777d8748c5d36e8fa8f055202de9"
+    },
+    {
+      "bbox": [
+        48.0,
+        463.47442626953125,
+        289.010009765625,
+        500.197265625
+      ],
+      "block_id": "page-0703-block-0011",
+      "order": 11,
+      "text": "30.5 Variété diagnostique ...................................................... 692\n30.5.1 Déformations de la vérité dans l’anamnèse...... 692\n30.5.2 Comportement autodestructeur........................ 692\n",
+      "text_sha256": "9a71eb819edd8981675fc18bc97b8238ff616b869e73fd3562f7a082dc8d5e7a"
+    },
+    {
+      "bbox": [
+        306.0,
+        335.22442626953125,
+        547.010009765625,
+        345.06817626953125
+      ],
+      "block_id": "page-0703-block-0012",
+      "order": 12,
+      "text": "30.6 Évaluation........................................................................ 693\n",
+      "text_sha256": "77b1fa7cf53a97744b3910cf42cf6640e13f05e79e40aec3e3c6ee09ba1e121c"
+    },
+    {
+      "bbox": [
+        306.0,
+        350.1744079589844,
+        547.010009765625,
+        360.0181579589844
+      ],
+      "block_id": "page-0703-block-0013",
+      "order": 13,
+      "text": "30.7 Outils diagnostiques...................................................... 693\n",
+      "text_sha256": "31d584b905ac461c258e7a782b3f9115711f5baef0e812a90be1e40fee8e3bd5"
+    },
+    {
+      "bbox": [
+        306.0,
+        365.0744323730469,
+        547.010009765625,
+        388.0472717285156
+      ],
+      "block_id": "page-0703-block-0014",
+      "order": 14,
+      "text": "30.8 Diagnostic diérentiel...................................................694\n30.8.1 Simulation............................................................... 694\n",
+      "text_sha256": "4170747c44fe835943a8b9bc6be2aa712e8c4a983862b3a8e1e46e97c2547cc9"
+    },
+    {
+      "bbox": [
+        306.0,
+        393.0244140625,
+        547.010009765625,
+        468.0472717285156
+      ],
+      "block_id": "page-0703-block-0015",
+      "order": 15,
+      "text": "30.9 Traitements ..................................................................... 694\n30.9.1 Confrontation ........................................................ 695\n30.9.2 Hospitalisation....................................................... 696\n30.9.3 Médication.............................................................. 696\n30.9.4 Aspects médicolégaux.......................................... 696\n30.9.5 Psychothérapie....................................................... 696\n",
+      "text_sha256": "f0c0bd6a593131c2c6594b7220e75b38d9d49bf03325ac777699df1e81539a6c"
+    },
+    {
+      "bbox": [
+        306.0,
+        473.0744323730469,
+        547.010009765625,
+        482.9181823730469
+      ],
+      "block_id": "page-0703-block-0016",
+      "order": 16,
+      "text": "30.10 Évolution et pronostic ...................................................697\n",
+      "text_sha256": "a61bfbd5ad94701267d2d4dac2aba7d12840acfc8817f7429d230d324c4e07a8"
+    },
+    {
+      "bbox": [
+        306.0,
+        489.97442626953125,
+        547.010009765625,
+        499.81817626953125
+      ],
+      "block_id": "page-0703-block-0017",
+      "order": 17,
+      "text": "Lectures complémentaires....................................................... 697\n",
+      "text_sha256": "c0cc9118c38d172a3fcf3f5610de9549e1f0b029f809cac6fc9255d21500e2f5"
+    },
+    {
+      "bbox": [
+        257.1000061035156,
+        2.3810577392578125,
+        555.0,
+        122.38105773925781
+      ],
+      "block_id": "page-0703-block-0018",
+      "order": 18,
+      "text": "CHAPITRE30\n",
+      "text_sha256": "431b4c0963a38024475a36f852a3a4a64e6f777abc6387869cf5f1b0a144a39e"
+    }
+  ],
+  "coordinates_sha256": "f2a4042d4b1d5a2d919f53f766d8aac0023c14b2edc87d27b4742db647bee450",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0703",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Troubles factices\nJean-François Denis, M.D., CRCPC\nPsychiatre, Service de consultation-liaison, Hôpital de la Cité-\nde-la-Santé (Laval)\nProfesseur adjoint de clinique, Faculté de médecine, Département\nde psychiatrie, Université de Montréal\nJulie-Anne Denis, M.D., B. ING., M. SC. A.\nRésidente en radiologie diagnostique, Faculté de médecine,\nUniversité de Montréal\n30.1 Évolution du concept..................................................... 687\n30.2 Épidémiologie ................................................................. 687\n30.3 Étiologies ......................................................................... 688\n30.3.1 Étiologies biologiques........................................... 688\n30.3.2 Étiologies psychologiques.................................... 688\n30.3.3 Étiologies sociales.................................................. 688\n30.4 Description clinique ...................................................... 689\n30.4.1 Troubles factices auto-induits ............................ 689\n30.4.2 Troubles factices imposés à autrui..................... 691\n30.5 Variété diagnostique ...................................................... 692\n30.5.1 Déformations de la vérité dans l’anamnèse...... 692\n30.5.2 Comportement autodestructeur........................ 692\n30.6 Évaluation........................................................................ 693\n30.7 Outils diagnostiques...................................................... 693\n30.8 Diagnostic diérentiel...................................................694\n30.8.1 Simulation............................................................... 694\n30.9 Traitements ..................................................................... 694\n30.9.1 Confrontation ........................................................ 695\n30.9.2 Hospitalisation....................................................... 696\n30.9.3 Médication.............................................................. 696\n30.9.4 Aspects médicolégaux.......................................... 696\n30.9.5 Psychothérapie....................................................... 696\n30.10 Évolution et pronostic ...................................................697\nLectures complémentaires....................................................... 697\nCHAPITRE30\n",
+  "raw_text_sha256": "bfb34779e7068c8d8810af0523ee3f8fb4b01a26cceb83e8284d8fa5c0a64e7c",
+  "source_page_display": 704,
+  "source_page_index": 703
+}

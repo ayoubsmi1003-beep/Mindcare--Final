@@ -1,0 +1,124 @@
+{
+  "block_sequence_sha256": "3b9f304635f28e78adf3c011b9dadd353d82a1b341f74d098b1110ce5feba5cf",
+  "blocks": [
+    {
+      "bbox": [
+        25.350000381469727,
+        120.37812805175781,
+        559.6719970703125,
+        164.6378936767578
+      ],
+      "block_id": "page-0000-block-0001",
+      "order": 1,
+      "text": "PSYCHIATRIE CLINIQUE\n",
+      "text_sha256": "8e115682007d5f3f871448448a9597a482b373ac5fcd9fce7addb7fbc938eb08"
+    },
+    {
+      "bbox": [
+        70.1500015258789,
+        172.97499084472656,
+        514.496826171875,
+        199.6281280517578
+      ],
+      "block_id": "page-0000-block-0002",
+      "order": 2,
+      "text": "Approche bio-psycho-sociale\n4e édition\n",
+      "text_sha256": "6e0924ff9a4a930dbab60c2b24468f6e7be5e7c5759bc5ce9d28488887ba95ef"
+    },
+    {
+      "bbox": [
+        26.75,
+        35.46562576293945,
+        167.62158203125,
+        54.90507888793945
+      ],
+      "block_id": "page-0000-block-0003",
+      "order": 3,
+      "text": "DR P L\n",
+      "text_sha256": "7a7c8461d0bff91c1dbbd5353e1a64f47f3c31df8eb8aec03563aac2ae210f3e"
+    },
+    {
+      "bbox": [
+        26.75,
+        58.46562957763672,
+        277.2406005859375,
+        77.90508270263672
+      ],
+      "block_id": "page-0000-block-0004",
+      "order": 4,
+      "text": "DR Gg-F. Pet collaborateurs\n",
+      "text_sha256": "8bf252fbeb35b965d9fb9f5b43f87c2d6373d70ad16255023c6441d9980fd5c0"
+    },
+    {
+      "bbox": [
+        256.6000061035156,
+        242.75625610351562,
+        328.4125671386719,
+        265.4007873535156
+      ],
+      "block_id": "page-0000-block-0005",
+      "order": 5,
+      "text": "m \n",
+      "text_sha256": "68ef1032d596627395406ec2d6a00049661602305b69a3eb22bceb7078a72f1a"
+    },
+    {
+      "bbox": [
+        75.5999984741211,
+        283.1611633300781,
+        509.306396484375,
+        297.19915771484375
+      ],
+      "block_id": "page-0000-block-0006",
+      "order": 6,
+      "text": "Introduction à la psychiatrie, déterminants bio-psycho-sociaux,\n",
+      "text_sha256": "562e7b43b5e1d41771a223b1c12650a54b5b2e3760c18be411708fd4b94aae49"
+    },
+    {
+      "bbox": [
+        136.35000610351562,
+        303.1611633300781,
+        448.36834716796875,
+        317.19915771484375
+      ],
+      "block_id": "page-0000-block-0007",
+      "order": 7,
+      "text": "syndromes cliniques et organisation des soins\n",
+      "text_sha256": "84b17799d35f7de12c6af687804b1a7724eeddc62b88abcc5268d4d51b99e937"
+    },
+    {
+      "bbox": [
+        472.5500183105469,
+        28.309446334838867,
+        556.8470458984375,
+        42.559444427490234
+      ],
+      "block_id": "page-0000-block-0008",
+      "order": 8,
+      "text": "Conforme au\n",
+      "text_sha256": "27e6505e32f8153061d88a3927dda78bc777ebccd005a9b7a5eec5b5fcb99e0a"
+    },
+    {
+      "bbox": [
+        474.6499938964844,
+        44.23088836669922,
+        554.7631225585938,
+        70.98088836669922
+      ],
+      "block_id": "page-0000-block-0009",
+      "order": 9,
+      "text": "DSM-5\n",
+      "text_sha256": "e0f4dcd4ed5cfd1e327b14d9f1bf711f5e8d804a9385bd6bbd3ccaff940bfed7"
+    }
+  ],
+  "coordinates_sha256": "7b62ea11c12ad55475135fd2150ee782e2bf656e7e9a6459a4e726761666675f",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0000",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "PSYCHIATRIE CLINIQUE\nApproche bio-psycho-sociale\n4e édition\nDR P L\nDR Gg-F. Pet collaborateurs\nm \nIntroduction à la psychiatrie, déterminants bio-psycho-sociaux,\nsyndromes cliniques et organisation des soins\nConforme au\nDSM-5\n",
+  "raw_text_sha256": "8e05aab7d63bed997b03361fc5d9ac85451099fd36d5f1cc7b59ca05fd569670",
+  "source_page_display": 1,
+  "source_page_index": 0
+}

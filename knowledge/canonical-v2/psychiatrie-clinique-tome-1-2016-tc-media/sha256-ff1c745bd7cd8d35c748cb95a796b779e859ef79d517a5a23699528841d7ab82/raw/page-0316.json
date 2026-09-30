@@ -1,0 +1,148 @@
+{
+  "block_sequence_sha256": "680a9be61806b88d22c966a8209a74c3d523cfe3efff51db908ddb58b7c1ead0",
+  "blocks": [
+    {
+      "bbox": [
+        400.45001220703125,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0316-block-0001",
+      "order": 1,
+      "text": "Chapitre 14\nÉpidémiologie\n299\n",
+      "text_sha256": "58acacfa919d5381d8fa11d76bca8e68a85dd0326294d2879c6959247d63a5f3"
+    },
+    {
+      "bbox": [
+        312.0,
+        40.72441482543945,
+        555.3351440429688,
+        144.9084930419922
+      ],
+      "block_id": "page-0316-block-0002",
+      "order": 2,
+      "text": "• Quelle est la notoriété de la revue dans lequel l’article est publié ?\nIl est clair que toutes les revues ne sont pas égales quant à leurs\nexigences relativement à la rigueur scientifique. Le facteur\nd’impact (calculé par l’Institute for Scientic Information) est\nun paramètre de crédibilité d’un article scientique basé sur la\nfréquence à laquelle il est cité dans d’autres articles. De plus, la\npublication d’un article, même dans les revues les plus métho-\ndologiques prestigieuses, ne garantit pas l’absence de lacunes\nméthodologiques importantes.\n",
+      "text_sha256": "d683e1f4eba5547660fb9e4645f6608f233daf36de498ed74995ee274d1c2ced"
+    },
+    {
+      "bbox": [
+        312.0,
+        153.9368133544922,
+        480.5621337890625,
+        170.0793914794922
+      ],
+      "block_id": "page-0316-block-0003",
+      "order": 3,
+      "text": "14.5.1 Introduction de l’article\n",
+      "text_sha256": "87fa4112aa389d3351b44d480ac424c3051d594aca1d690b94e63c3f28c72231"
+    },
+    {
+      "bbox": [
+        312.0,
+        173.4158172607422,
+        555.1748046875,
+        366.40850830078125
+      ],
+      "block_id": "page-0316-block-0004",
+      "order": 4,
+      "text": "Dès l’introduction del’article, il importe de considérer les aspects\nsuivants :\n• Le revue de la littérature est-elle complète ? Résume-t-elle bien\nles résultats des travaux antérieurs pertinents par rapport à\nl’étude exposée dans cette publication ? Fait-elle bien ressortir les\nzones grises ou les déciences que cette étude vise à corriger ?\n• Les points de vue contradictoires sont-ils exposés ou les au-\nteurs se montrent-ils d’emblée acquis à une hypothèse, sans\nesprit critique ?\n• Les auteurs articulent-ils bien le modèle théorique sous-jacent\nà ces hypothèses ?\n• Les questions de recherche sont-elles posées en termes clairs\nqui permettent de les tester ?\n• Les hypothèses de recherche (quant aux réponses que l’on\ns’attend d’obtenir à ces questions) sont-elles clairement énon-\ncées et sont-elles justiées ?\n",
+      "text_sha256": "7f008ebce7166dd1ec3e1fc103cea9a6f8b433f40b413c0010ff6a0d02bd1ab7"
+    },
+    {
+      "bbox": [
+        312.0,
+        375.43682861328125,
+        497.58111572265625,
+        391.57940673828125
+      ],
+      "block_id": "page-0316-block-0005",
+      "order": 5,
+      "text": "14.5.2 Description des méthodes\n",
+      "text_sha256": "e63ad8bc4914522be2cfaf38ea36522891b3f8ea3f688d1a3d692e17325d942f"
+    },
+    {
+      "bbox": [
+        312.0,
+        394.91583251953125,
+        555.5152587890625,
+        666.9085083007812
+      ],
+      "block_id": "page-0316-block-0006",
+      "order": 6,
+      "text": "Concernant la description des méthodes, plusieurs points sont\nimportants :\n• Quel est le devis épidémiologique utilisé ? Comme on l’a bien\nvu, les devis dièrent quant à leur vulnérabilité à l’égard de\ncertains problèmes.\n• Ce devis est-il approprié compte tenu des questions de\nrecherche ?\n• La population ciblée est-elle clairement dénie ?\n• La méthode de sélection des sujets est-elle clairement expli-\nquée et quels sont les biais qu’elle peut avoir introduits ?\n• Le taux de participation est-il rapporté et est-il fait mention des\nraisons d’exclusion ou de non-participation dans cette étude ?\n• Les précautions nécessaires ont-elles été prises pour prévenir\nles biais d’information ? Par exemple, dans une étude théra-\npeutique, les observations sont-elles recueillies à double insu ?\n• La délité des instruments de mesure a-t-elle été évaluée ?\n• La validité des instruments de mesure est-elle démontrée ?\n• La traduction en français de l’instrument a-t-elle été validée ?\n• Les méthodes d’analyses retenues sont-elles appropriées aux\nquestions de recherche ? Cet aspect est souvent dicile à éva-\nluer et requiert généralement une connaissance approfondie\ndes biostatistiques.\n",
+      "text_sha256": "b66b1f8bfd99d7b5a94b5b89bef9ba44d9705e6b3576bc5b335b316805d4cb3c"
+    },
+    {
+      "bbox": [
+        312.0,
+        675.9368286132812,
+        413.009765625,
+        692.0794067382812
+      ],
+      "block_id": "page-0316-block-0007",
+      "order": 7,
+      "text": "14.5.3 Discussion\n",
+      "text_sha256": "7928bf21ef5cf8697b53355955702f51b64f35ee7f68b418a99833cc63b5d5e1"
+    },
+    {
+      "bbox": [
+        312.0,
+        695.4158325195312,
+        554.8541259765625,
+        729.4260864257812
+      ],
+      "block_id": "page-0316-block-0008",
+      "order": 8,
+      "text": "En ce qui concerne la discussion, les aspects suivants doivent\nêtre considérés :\n• Les principaux résultats sont-ils présentés succinctement ?\n",
+      "text_sha256": "625bdc13b9becbd504bef505c2b09ba69e388777da64d44a7153c0b585a3c92a"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.9658203125,
+        297.4541015625,
+        563.2584838867188
+      ],
+      "block_id": "page-0316-block-0009",
+      "order": 9,
+      "text": "entre le groupe expérimental et le groupe témoin. En eet,\nil est important que les deux groupes se ressemblent le plus\npossible et ne dièrent pas par rapport à des facteurs risquant\nd’inuer sur les résultats du traitement. Sinon, toute diérence\nentre les deux groupes à la n de l’étude peut être due à des\ndiérences existant avant le début de l’étude et serait donc\nindépendante de l’eet du traitement ;\n• d’éviter les biais d’observation. À cette intention, on\ngarde les patients et les évaluateurs dans l’ignorance du\ngroupe (expérimental ou témoin) auquel ils appartiennent.\nCette stratégie d’étude à double insu (double blind), dite aussi\nen double aveugle, permet d’éviter que les idées préconçues\nqu’aurait un groupe ou l’autre n’inuencent les observations ;\n• de tenir compte des patients qui abandonnent la recherche avant\nla n. Le taux d’abandon est un paramètre très important, car il\npermet d’estimer dans quelle mesure un traitement sera accepté\nou toléré lorsqu’il sera utilisé en clinique. Par ailleurs, les patients\nabandonnant une étude en cours dièrent souvent des patients\nqui poursuivent. C’est pourquoi les analyses devraient inclure les\npatients ayant abandonné l’étude avant la n, ce qui est appelé\nanalyses d’« intention de traiter » où sont inclus dans le calcul\nstatistique tous les patients qui sont entrés dans l’étude au début.\nCertains modèles statistiques complexes (désignés, en anglais,\npar le termeMixed-Eect Model Repeated Measure [MMRM])\nsont maintenant de plus en plus utilisés pour éviter que des\nabandons ne biaisent les conclusions d’une étude randomisée.\nDe plus en plus, les essais cliniques s’intéressent à divers aspects\ndu traitement qui ne se rapportent pas seulement à l’ecacité ou\naux eets indésirables. Les aspects économiques sont souvent\ninvoqués pour justier des décisions quant au traitement, au\nmoyen d’études coût/bénéces. Ces études permettent de gui-\nder le choix des interventions de façon à obtenir les meilleurs\nrésultats, compte tenu des ressources disponibles. Par exemple, il\nse peut qu’un traitement à première vue plus coûteux qu’un autre se\nrévèle nalement plus économique puisqu’il réduit le nombre de\nréhospitalisations et améliore la qualité de vie des patients traités.\nLa mise en évidence des facteurs permettant de prédire le degré\nde réponse au traitement constitue une dimension sur laquelle se\npenchent plusieurs chercheurs. Ainsi, on tient compte des stades\nde la maladie, de la posologie de la médication, des caractéristiques\ncliniques, etc. Étant donné qu’un même trouble peut être traité\nselon plusieurs modalités, la comparaison de l’ecacité d’un trai-\ntement combinant plusieurs modalités à celle d’un traitement n’en\nutilisant qu’une constitue également un objet d’étude intéressant.\n",
+      "text_sha256": "2884794006b729716ba52fc92aa3760ab81531ed78a0637bd1729b86899cc857"
+    },
+    {
+      "bbox": [
+        61.0,
+        582.5932006835938,
+        247.1268310546875,
+        620.0189819335938
+      ],
+      "block_id": "page-0316-block-0010",
+      "order": 10,
+      "text": "14.5\nLecture critique de la\nlittérature scientique\n",
+      "text_sha256": "17f9665268034d36f66e145cc3af13a9852818c614e7a6de2370631de27d4447"
+    },
+    {
+      "bbox": [
+        54.0,
+        634.0658569335938,
+        297.1661071777344,
+        728.9085083007812
+      ],
+      "block_id": "page-0316-block-0011",
+      "order": 11,
+      "text": "La connaissance des concepts et méthodes présentés dans ce cha-\npitre favorise aussi la lecture critique de la littérature scientique.\nLes paragraphes qui suivent décrivent la démarche qu’il convient\nd’adopter pour aborder un texte scientique. Les questions\nimportantes qu’il faut se poser relativement au périodique sont :\n• Cette revue est-elle dotée d’un comité de révision par des pairs ?\nPar ce processus, l’article est soumis à l’examen critique et\nanonyme d’autres chercheurs experts dans le même domaine.\n",
+      "text_sha256": "802230b4303168e1f1cca8f49e6e51ef1bd11048d4c0e8777263caecb09f93fe"
+    }
+  ],
+  "coordinates_sha256": "5df147304ff81d20b9c400900c8de1139410a1c30a003614c74386ca78ed5675",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0316",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 14\nÉpidémiologie\n299\n• Quelle est la notoriété de la revue dans lequel l’article est publié ?\nIl est clair que toutes les revues ne sont pas égales quant à leurs\nexigences relativement à la rigueur scientifique. Le facteur\nd’impact (calculé par l’Institute for Scientic Information) est\nun paramètre de crédibilité d’un article scientique basé sur la\nfréquence à laquelle il est cité dans d’autres articles. De plus, la\npublication d’un article, même dans les revues les plus métho-\ndologiques prestigieuses, ne garantit pas l’absence de lacunes\nméthodologiques importantes.\n14.5.1 Introduction de l’article\nDès l’introduction del’article, il importe de considérer les aspects\nsuivants :\n• Le revue de la littérature est-elle complète ? Résume-t-elle bien\nles résultats des travaux antérieurs pertinents par rapport à\nl’étude exposée dans cette publication ? Fait-elle bien ressortir les\nzones grises ou les déciences que cette étude vise à corriger ?\n• Les points de vue contradictoires sont-ils exposés ou les au-\nteurs se montrent-ils d’emblée acquis à une hypothèse, sans\nesprit critique ?\n• Les auteurs articulent-ils bien le modèle théorique sous-jacent\nà ces hypothèses ?\n• Les questions de recherche sont-elles posées en termes clairs\nqui permettent de les tester ?\n• Les hypothèses de recherche (quant aux réponses que l’on\ns’attend d’obtenir à ces questions) sont-elles clairement énon-\ncées et sont-elles justiées ?\n14.5.2 Description des méthodes\nConcernant la description des méthodes, plusieurs points sont\nimportants :\n• Quel est le devis épidémiologique utilisé ? Comme on l’a bien\nvu, les devis dièrent quant à leur vulnérabilité à l’égard de\ncertains problèmes.\n• Ce devis est-il approprié compte tenu des questions de\nrecherche ?\n• La population ciblée est-elle clairement dénie ?\n• La méthode de sélection des sujets est-elle clairement expli-\nquée et quels sont les biais qu’elle peut avoir introduits ?\n• Le taux de participation est-il rapporté et est-il fait mention des\nraisons d’exclusion ou de non-participation dans cette étude ?\n• Les précautions nécessaires ont-elles été prises pour prévenir\nles biais d’information ? Par exemple, dans une étude théra-\npeutique, les observations sont-elles recueillies à double insu ?\n• La délité des instruments de mesure a-t-elle été évaluée ?\n• La validité des instruments de mesure est-elle démontrée ?\n• La traduction en français de l’instrument a-t-elle été validée ?\n• Les méthodes d’analyses retenues sont-elles appropriées aux\nquestions de recherche ? Cet aspect est souvent dicile à éva-\nluer et requiert généralement une connaissance approfondie\ndes biostatistiques.\n14.5.3 Discussion\nEn ce qui concerne la discussion, les aspects suivants doivent\nêtre considérés :\n• Les principaux résultats sont-ils présentés succinctement ?\nentre le groupe expérimental et le groupe témoin. En eet,\nil est important que les deux groupes se ressemblent le plus\npossible et ne dièrent pas par rapport à des facteurs risquant\nd’inuer sur les résultats du traitement. Sinon, toute diérence\nentre les deux groupes à la n de l’étude peut être due à des\ndiérences existant avant le début de l’étude et serait donc\nindépendante de l’eet du traitement ;\n• d’éviter les biais d’observation. À cette intention, on\ngarde les patients et les évaluateurs dans l’ignorance du\ngroupe (expérimental ou témoin) auquel ils appartiennent.\nCette stratégie d’étude à double insu (double blind), dite aussi\nen double aveugle, permet d’éviter que les idées préconçues\nqu’aurait un groupe ou l’autre n’inuencent les observations ;\n• de tenir compte des patients qui abandonnent la recherche avant\nla n. Le taux d’abandon est un paramètre très important, car il\npermet d’estimer dans quelle mesure un traitement sera accepté\nou toléré lorsqu’il sera utilisé en clinique. Par ailleurs, les patients\nabandonnant une étude en cours dièrent souvent des patients\nqui poursuivent. C’est pourquoi les analyses devraient inclure les\npatients ayant abandonné l’étude avant la n, ce qui est appelé\nanalyses d’« intention de traiter » où sont inclus dans le calcul\nstatistique tous les patients qui sont entrés dans l’étude au début.\nCertains modèles statistiques complexes (désignés, en anglais,\npar le termeMixed-Eect Model Repeated Measure [MMRM])\nsont maintenant de plus en plus utilisés pour éviter que des\nabandons ne biaisent les conclusions d’une étude randomisée.\nDe plus en plus, les essais cliniques s’intéressent à divers aspects\ndu traitement qui ne se rapportent pas seulement à l’ecacité ou\naux eets indésirables. Les aspects économiques sont souvent\ninvoqués pour justier des décisions quant au traitement, au\nmoyen d’études coût/bénéces. Ces études permettent de gui-\nder le choix des interventions de façon à obtenir les meilleurs\nrésultats, compte tenu des ressources disponibles. Par exemple, il\nse peut qu’un traitement à première vue plus coûteux qu’un autre se\nrévèle nalement plus économique puisqu’il réduit le nombre de\nréhospitalisations et améliore la qualité de vie des patients traités.\nLa mise en évidence des facteurs permettant de prédire le degré\nde réponse au traitement constitue une dimension sur laquelle se\npenchent plusieurs chercheurs. Ainsi, on tient compte des stades\nde la maladie, de la posologie de la médication, des caractéristiques\ncliniques, etc. Étant donné qu’un même trouble peut être traité\nselon plusieurs modalités, la comparaison de l’ecacité d’un trai-\ntement combinant plusieurs modalités à celle d’un traitement n’en\nutilisant qu’une constitue également un objet d’étude intéressant.\n14.5\nLecture critique de la\nlittérature scientique\nLa connaissance des concepts et méthodes présentés dans ce cha-\npitre favorise aussi la lecture critique de la littérature scientique.\nLes paragraphes qui suivent décrivent la démarche qu’il convient\nd’adopter pour aborder un texte scientique. Les questions\nimportantes qu’il faut se poser relativement au périodique sont :\n• Cette revue est-elle dotée d’un comité de révision par des pairs ?\nPar ce processus, l’article est soumis à l’examen critique et\nanonyme d’autres chercheurs experts dans le même domaine.\n",
+  "raw_text_sha256": "d30e0672ebc76771d0b1f545d5e9c69df31465aeab4392fb81a855ea37d98708",
+  "source_page_display": 317,
+  "source_page_index": 316
+}

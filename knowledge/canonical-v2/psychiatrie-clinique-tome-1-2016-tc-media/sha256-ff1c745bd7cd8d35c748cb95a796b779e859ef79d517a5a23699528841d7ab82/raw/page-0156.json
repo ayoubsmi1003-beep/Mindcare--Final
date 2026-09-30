@@ -1,0 +1,184 @@
+{
+  "block_sequence_sha256": "1bb18569b62f822fd59f187b5ee985ca5120c5ed4e0f85d52ee0a04fd59cf065",
+  "blocks": [
+    {
+      "bbox": [
+        388.75,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0156-block-0001",
+      "order": 1,
+      "text": "Chapitre 7\nImagerie cérébrale\n139\n",
+      "text_sha256": "33a3e7d1ca323f4624d1130d4de536f97d346fbb716413696975862f7b31f483"
+    },
+    {
+      "bbox": [
+        51.900001525878906,
+        34.49443435668945,
+        82.04911041259766,
+        81.32548522949219
+      ],
+      "block_id": "page-0156-block-0002",
+      "order": 2,
+      "text": "L’\n",
+      "text_sha256": "a3c9d23c8ba5c25faa47ede71990f790d2e77dc45600aa7f91c642aae5d014b5"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.91015625,
+        297.1465148925781,
+        143.7693328857422
+      ],
+      "block_id": "page-0156-block-0003",
+      "order": 3,
+      "text": "une des dicultés conceptuelles les plus fréquentes à\nlaquelle se heurte le spécialiste en imagerie médicale\nquand il veut expliquer en quoi consiste son domaine\nà des collègues d’autres spécialités, ou encore à des étudiants\nen médecine ou au public, est celle qui pousse les gens à\nconsidérer que ces divers examens, tout en étant diérents les\nuns des autres, sont somme toute des variantes d’une même\nfaçon de poser un diagnostic. Toutes, après tout, génèrent\ndes « images » !\n",
+      "text_sha256": "a19ff538b57b0cf20fdd202ac5b177a3d1aaa7b82ae159bc99591e3fe206b4c4"
+    },
+    {
+      "bbox": [
+        54.0,
+        145.0158233642578,
+        297.1726989746094,
+        167.05850219726562
+      ],
+      "block_id": "page-0156-block-0004",
+      "order": 4,
+      "text": "En réalité, l’imagerie médicale regroupe deux spécialités bien\ndistinctes : la médecine nucléaire et la radiologie.\n",
+      "text_sha256": "6011f80640cf8b9d8c9a8571a1d5c756159e15b4402884b64ced2dfa78b5e95e"
+    },
+    {
+      "bbox": [
+        54.0,
+        168.1658172607422,
+        297.45819091796875,
+        306.0585021972656
+      ],
+      "block_id": "page-0156-block-0005",
+      "order": 5,
+      "text": "Chacune de ces disciplines exploite l’imagerie à partir de bases\nconceptuelles diérentes et constitue des champs de spécialité\nexclusifs. Les professionnels de chacune de ces disciplines tra-\nvaillent avec des modalités qui leur sont propres à partir de divers\ntypes d’études qui sont très diérentes les unes des autres. Bien\nqu’on ait tendance à les regrouper parce qu’elles font partie de\nl’imagerie médicale, leurs applications sont souvent totalement\ndiérentes. D’une façon générale, il ne s’agit pas de « choisir » un\ntype plutôt qu’un autre, mais beaucoup plus de savoir pourquoi\nil est utile de recourir à un type d’approche mais pas à l’autre, ou\naux deux types, de façon indépendante, dans l’évaluation d’une\naection psychiatrique.\n",
+      "text_sha256": "a46f3b946cef59e855fc2ad1ba48a60dfae6059dafa41f68b98cce5a0190d26d"
+    },
+    {
+      "bbox": [
+        66.75,
+        324.1431579589844,
+        292.4945983886719,
+        361.4189453125
+      ],
+      "block_id": "page-0156-block-0006",
+      "order": 6,
+      "text": "7.1\nClassication des techniques\nd’imagerie cérébrale\n",
+      "text_sha256": "0acad9a5e0b9ea41b809ed7f09cf563a8d0d04f786eb5ec0846ce42d87da0125"
+    },
+    {
+      "bbox": [
+        54.0,
+        375.2658386230469,
+        297.4295654296875,
+        468.8584899902344
+      ],
+      "block_id": "page-0156-block-0007",
+      "order": 7,
+      "text": "L’imagerie cérébrale se base sur diverses techniques que l’on peut\nsubdiviser en deux grands groupes :\n1. L’imagerie structurale, anatomique, morphologique, qui résulte\nd’études permettant de repérer des lésions macroscopiques.\nLes rayons X du crâne et la pneumoencéphalographie ont\nété avantageusement remplacés par des techniques bien plus\nprécises et moins douloureuses, comme :\na) la tomodensitométrie (computerised tomography scan –\n",
+      "text_sha256": "0d55cd8ca264b0a04493f61cd564e2ba39259168b10d9104e8322d0b37abb6a3"
+    },
+    {
+      "bbox": [
+        54.0,
+        469.91583251953125,
+        297.02484130859375,
+        532.7584838867188
+      ],
+      "block_id": "page-0156-block-0008",
+      "order": 8,
+      "text": "CT-scan) ;\nb) l’imagerie par résonnance magnétique (IRM).\n2. L’imagerie fonctionnelle, dynamique, physiologique, qui se\ndivise en trois sous-groupes :\na) les études du ot sanguin cérébral survenant lors de mo-\n",
+      "text_sha256": "e050b076441a8fbe64200a4bd7ad825d3730b16781bcfcda69741597e9916e2b"
+    },
+    {
+      "bbox": [
+        78.0,
+        533.8158569335938,
+        297.1693115234375,
+        714.45849609375
+      ],
+      "block_id": "page-0156-block-0009",
+      "order": 9,
+      "text": "dications de l’activité cérébrale réalisées :\n•\nen tomographie d’émission de positrons (TEP), sou-\nvent désignée par son acronyme anglais de PET :\npositron emission tomography, avec une résolution\nde 3 à 5 mm ;\n•\nen tomographie d’émission monophotonique (TEMP),\nsouvent désignée par son acronyme anglais de SPECT :\nsingle photon emission computed tomography, avec\nhabituellement une résolution de 8 à 12 mm, mais\ncertains nouveaux appareils orent maintenant une\nrésolution de 2 à 3 mm ;\n•\nen imagerie par résonnance magnétique fonctionnelle\n(IRMf) ;\n•\nparfois aussi en tomodensitométrie avec du xénon\nstable, quoique rarement utilisée.\n",
+      "text_sha256": "3af3a87b641a4de7e6d454fb0097139db772d6bc81edaf24230fee44d702fdc4"
+    },
+    {
+      "bbox": [
+        324.0,
+        40.9658203125,
+        555.2440185546875,
+        87.95849609375
+      ],
+      "block_id": "page-0156-block-0010",
+      "order": 10,
+      "text": "Ces études sont souvent réalisées dans un contexte d’acti-\nvation de diverses fonctions mentales (p. ex., le Wisconsin\nCard Sorting Test, qui active les fonctions préfrontales).\nb) les études portant sur l’évaluation directe du métabolisme\n",
+      "text_sha256": "cc81f421c9e73fc30933957680c92816a32e29e4ba88c1896bc2fe937c6cf9c3"
+    },
+    {
+      "bbox": [
+        324.0,
+        88.9658203125,
+        555.2595825195312,
+        197.45849609375
+      ],
+      "block_id": "page-0156-block-0011",
+      "order": 11,
+      "text": "énergétique cérébral (par consommation de glucose ou\nd’oxygène) qui ont une signication très proche de celle\ndes études de ot sanguin ; elles sont réalisées :\n•\nen TEP, pour évaluer la consommation de glucose ou\nd’oxygène dans certaines zones du cerveau ;\n•\nen spectroscopie IRM (IRMs), pour évaluer des chan-\ngements de concentration de diérentes molécules\ndans le cerveau.\nc) Les études de xation spécique de radiopharmaceutiques\n",
+      "text_sha256": "a46417ac7b845f29237cb3f728e5924964605c0aae620ab7b9c81004b1e4fd70"
+    },
+    {
+      "bbox": [
+        312.0,
+        198.4658203125,
+        555.207275390625,
+        517.95849609375
+      ],
+      "block_id": "page-0156-block-0012",
+      "order": 12,
+      "text": "ou traceurs radioactifs (des molécules radioactives utili-\nsées en médecine nucléaire ; on peut employer de façon\néquivalente les termes radiotraceurs et radioligands) qui,\naprès injection, se concentrent dans les régions d’activité\nmétabolique ou de concentration de diverses molécules (p.\nex., des molécules assurant la réception des neurotrans-\nmetteurs, ou des molécules assurant leur transport depuis\nla fente synaptique vers l’intérieur des cellules) intervenant\ndans la neurotransmission ou sur des cibles intra/extra-\ncellulaires non directement liées à la neurotransmission.\nOn peut visualiser ces radioligands par :\n•\nla tomographie d’émission de positrons (TEP) ;\n•\nla tomographie d’émission monophotonique (TEMP).\nIl existe une autre façon de classer les techniques d’imagerie\ncérébrale, selon que l’imagerie est planaire ou tomographique :\n1. En imagerie planaire, les images obtenues sont en deux di-\nmensions et ne donnent pas d’information sur la profondeur\nd’émission de la radiation dans le patient : c’est l’équivalent\nscintigraphique de la radiographie simple des poumons ; la\nscinticisternographie est nalement la seule technique encore\nréalisée en mode planaire.\n2. En imagerie tomographique, on obtient une série d’images\nplanaires tout autour du corps (ou du cerveau) du malade, et\non reconstitue ensuite la distribution de la radioactivité dans\nl’image étudiée en trois dimensions par le biais d’algorithmes\nde reconstruction par ordinateur : tomodensitométrie, IRM,\nTEMP, TEP, EEG mapping, magnétoencéphalographie.\n",
+      "text_sha256": "7b2b1464e36a2c8ec7cee15e6a3bf19bcbcd94b83db14842f76619e3a1b80242"
+    },
+    {
+      "bbox": [
+        324.0500183105469,
+        537.9931640625,
+        521.9716796875,
+        575.1689453125
+      ],
+      "block_id": "page-0156-block-0013",
+      "order": 13,
+      "text": "7.2\nTechniques de médecine\nnucléaire\n",
+      "text_sha256": "79b8e5a40e80ccd171dc2ae97f585041f3a2caa27e7a677983fa16e4c3f59d8b"
+    },
+    {
+      "bbox": [
+        312.0,
+        588.9658203125,
+        555.3379516601562,
+        714.45849609375
+      ],
+      "block_id": "page-0156-block-0014",
+      "order": 14,
+      "text": "Les études d’imagerie cérébrale fonctionnelle en médecine\nnucléaire (c.-à-d. l’ensemble des études faisant appel à l’admi-\nnistration, chez une personne vivante, de molécules portant\nun marqueur radioactif, puis à la représentation graphique de\nla distribution) occupent une place privilégiée dans l’étude du\ncerveau, tant sain qu’altéré par des maladies psychiatriques. Ces\nexamens ont contribué, depuis plus de 30 ans, à l’élaboration\nde nouvelles théories quant aux mécanismes en cause dans\nl’élaboration à la fois normale et pathologique des fonctions\nmentales supérieures et du comportement. Aujourd’hui, l’ima-\ngerie cérébrale fonctionnelle est un outil puissant et reconnu de\n",
+      "text_sha256": "dd699b26e64b549fbd4c74f9d1473f95b4f74c574f38246d3546a01d86e9130a"
+    }
+  ],
+  "coordinates_sha256": "4cae4914b18895b8b0a24fb77416a821230e710b453f67baaf9887d0acc366a1",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0156",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 7\nImagerie cérébrale\n139\nL’\nune des dicultés conceptuelles les plus fréquentes à\nlaquelle se heurte le spécialiste en imagerie médicale\nquand il veut expliquer en quoi consiste son domaine\nà des collègues d’autres spécialités, ou encore à des étudiants\nen médecine ou au public, est celle qui pousse les gens à\nconsidérer que ces divers examens, tout en étant diérents les\nuns des autres, sont somme toute des variantes d’une même\nfaçon de poser un diagnostic. Toutes, après tout, génèrent\ndes « images » !\nEn réalité, l’imagerie médicale regroupe deux spécialités bien\ndistinctes : la médecine nucléaire et la radiologie.\nChacune de ces disciplines exploite l’imagerie à partir de bases\nconceptuelles diérentes et constitue des champs de spécialité\nexclusifs. Les professionnels de chacune de ces disciplines tra-\nvaillent avec des modalités qui leur sont propres à partir de divers\ntypes d’études qui sont très diérentes les unes des autres. Bien\nqu’on ait tendance à les regrouper parce qu’elles font partie de\nl’imagerie médicale, leurs applications sont souvent totalement\ndiérentes. D’une façon générale, il ne s’agit pas de « choisir » un\ntype plutôt qu’un autre, mais beaucoup plus de savoir pourquoi\nil est utile de recourir à un type d’approche mais pas à l’autre, ou\naux deux types, de façon indépendante, dans l’évaluation d’une\naection psychiatrique.\n7.1\nClassication des techniques\nd’imagerie cérébrale\nL’imagerie cérébrale se base sur diverses techniques que l’on peut\nsubdiviser en deux grands groupes :\n1. L’imagerie structurale, anatomique, morphologique, qui résulte\nd’études permettant de repérer des lésions macroscopiques.\nLes rayons X du crâne et la pneumoencéphalographie ont\nété avantageusement remplacés par des techniques bien plus\nprécises et moins douloureuses, comme :\na) la tomodensitométrie (computerised tomography scan –\nCT-scan) ;\nb) l’imagerie par résonnance magnétique (IRM).\n2. L’imagerie fonctionnelle, dynamique, physiologique, qui se\ndivise en trois sous-groupes :\na) les études du ot sanguin cérébral survenant lors de mo-\ndications de l’activité cérébrale réalisées :\n•\nen tomographie d’émission de positrons (TEP), sou-\nvent désignée par son acronyme anglais de PET :\npositron emission tomography, avec une résolution\nde 3 à 5 mm ;\n•\nen tomographie d’émission monophotonique (TEMP),\nsouvent désignée par son acronyme anglais de SPECT :\nsingle photon emission computed tomography, avec\nhabituellement une résolution de 8 à 12 mm, mais\ncertains nouveaux appareils orent maintenant une\nrésolution de 2 à 3 mm ;\n•\nen imagerie par résonnance magnétique fonctionnelle\n(IRMf) ;\n•\nparfois aussi en tomodensitométrie avec du xénon\nstable, quoique rarement utilisée.\nCes études sont souvent réalisées dans un contexte d’acti-\nvation de diverses fonctions mentales (p. ex., le Wisconsin\nCard Sorting Test, qui active les fonctions préfrontales).\nb) les études portant sur l’évaluation directe du métabolisme\nénergétique cérébral (par consommation de glucose ou\nd’oxygène) qui ont une signication très proche de celle\ndes études de ot sanguin ; elles sont réalisées :\n•\nen TEP, pour évaluer la consommation de glucose ou\nd’oxygène dans certaines zones du cerveau ;\n•\nen spectroscopie IRM (IRMs), pour évaluer des chan-\ngements de concentration de diérentes molécules\ndans le cerveau.\nc) Les études de xation spécique de radiopharmaceutiques\nou traceurs radioactifs (des molécules radioactives utili-\nsées en médecine nucléaire ; on peut employer de façon\néquivalente les termes radiotraceurs et radioligands) qui,\naprès injection, se concentrent dans les régions d’activité\nmétabolique ou de concentration de diverses molécules (p.\nex., des molécules assurant la réception des neurotrans-\nmetteurs, ou des molécules assurant leur transport depuis\nla fente synaptique vers l’intérieur des cellules) intervenant\ndans la neurotransmission ou sur des cibles intra/extra-\ncellulaires non directement liées à la neurotransmission.\nOn peut visualiser ces radioligands par :\n•\nla tomographie d’émission de positrons (TEP) ;\n•\nla tomographie d’émission monophotonique (TEMP).\nIl existe une autre façon de classer les techniques d’imagerie\ncérébrale, selon que l’imagerie est planaire ou tomographique :\n1. En imagerie planaire, les images obtenues sont en deux di-\nmensions et ne donnent pas d’information sur la profondeur\nd’émission de la radiation dans le patient : c’est l’équivalent\nscintigraphique de la radiographie simple des poumons ; la\nscinticisternographie est nalement la seule technique encore\nréalisée en mode planaire.\n2. En imagerie tomographique, on obtient une série d’images\nplanaires tout autour du corps (ou du cerveau) du malade, et\non reconstitue ensuite la distribution de la radioactivité dans\nl’image étudiée en trois dimensions par le biais d’algorithmes\nde reconstruction par ordinateur : tomodensitométrie, IRM,\nTEMP, TEP, EEG mapping, magnétoencéphalographie.\n7.2\nTechniques de médecine\nnucléaire\nLes études d’imagerie cérébrale fonctionnelle en médecine\nnucléaire (c.-à-d. l’ensemble des études faisant appel à l’admi-\nnistration, chez une personne vivante, de molécules portant\nun marqueur radioactif, puis à la représentation graphique de\nla distribution) occupent une place privilégiée dans l’étude du\ncerveau, tant sain qu’altéré par des maladies psychiatriques. Ces\nexamens ont contribué, depuis plus de 30 ans, à l’élaboration\nde nouvelles théories quant aux mécanismes en cause dans\nl’élaboration à la fois normale et pathologique des fonctions\nmentales supérieures et du comportement. Aujourd’hui, l’ima-\ngerie cérébrale fonctionnelle est un outil puissant et reconnu de\n",
+  "raw_text_sha256": "e3324207ea18ab62a8cf10cae06ac3ef155a60beebf14d813eb2c3e4631afc50",
+  "source_page_display": 157,
+  "source_page_index": 156
+}

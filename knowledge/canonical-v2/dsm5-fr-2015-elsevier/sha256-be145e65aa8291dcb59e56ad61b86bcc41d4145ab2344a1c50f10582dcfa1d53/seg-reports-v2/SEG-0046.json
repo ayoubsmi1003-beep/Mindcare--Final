@@ -1,0 +1,89 @@
+{
+  "book_id": "dsm5-fr-2015-elsevier",
+  "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+  "segment": "seg-1126-1150-v2.pdf",
+  "source_page_start": 1126,
+  "source_page_end": 1150,
+  "page_count": 25,
+  "segment_sha256": "4bd2f8ebe255b49c66f3f516a869dc7332173081f6afebb9ab2986d9fc25e6fb",
+  "candidate_reconciliation": "reconciliation-v9",
+  "units": 169,
+  "tables": 3,
+  "concepts": 131,
+  "xrefs": 23,
+  "pages_with_no_text": [],
+  "uncertain": [
+    1126,
+    1127,
+    1128,
+    1129,
+    1130,
+    1131,
+    1132,
+    1133,
+    1134,
+    1136,
+    1137,
+    1138,
+    1139,
+    1140,
+    1141,
+    1142,
+    1148,
+    1149,
+    1150
+  ],
+  "fallback_pages": [
+    1126,
+    1127,
+    1128,
+    1129,
+    1130,
+    1131,
+    1132,
+    1133,
+    1134,
+    1136,
+    1137,
+    1138,
+    1139,
+    1140,
+    1141,
+    1142,
+    1148,
+    1149,
+    1150
+  ],
+  "extractors": {
+    "pymupdf-fallback": 108,
+    "pymupdf-original-text-layer": 61
+  },
+  "citra": {
+    "status": "failed_on_read",
+    "failed_segment_pages": [
+      12,
+      15
+    ],
+    "failed_source_pages": [
+      1137,
+      1140
+    ],
+    "fallback_used": true
+  },
+  "line_counts": {
+    "units": 169,
+    "tables": 3,
+    "concepts": 131,
+    "xrefs": 23
+  },
+  "files": {
+    "units": "reconciliation-v9/units.jsonl",
+    "tables": "reconciliation-v9/tables.jsonl",
+    "concepts": "reconciliation-v9/concepts.jsonl",
+    "xrefs": "reconciliation-v9/xrefs.jsonl"
+  },
+  "structure_candidate": "structure-v2.candidate.json",
+  "status": "CANDIDATE_REVIEW_REQUIRED",
+  "canonical_promotion_authorized": false,
+  "summary_line": "SEG seg-1126-1150-v2.pdf: units=169 tables=3 concepts=131 xrefs=23 | pages with no text: [] | uncertain: [1126, 1127, 1128, 1129, 1130, 1131, 1132, 1133, 1134, 1136, 1137, 1138, 1139, 1140, 1141, 1142, 1148, 1149, 1150] | citra-failed-pages: [12, 15] | notes: Citra failed on segment pages 12 and 15; PyMuPDF fallback used against the v2 segment.; Fallback pages are explicitly uncertain and routed to review."
+}

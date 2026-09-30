@@ -1,0 +1,748 @@
+{
+  "block_sequence_sha256": "371feb578095ce8a770f6bd914821458078a42a9b4d33324ba1082b31a2579af",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        126.91150665283203,
+        758.8693237304688
+      ],
+      "block_id": "page-1113-block-0001",
+      "order": 1,
+      "text": "R16\nRéférences\n",
+      "text_sha256": "26dd62b39a1063e7bea6f9bb25dc918fc4eb109dbe85738ad73aee92618cf496"
+    },
+    {
+      "bbox": [
+        390.0,
+        40.68496322631836,
+        546.1725463867188,
+        66.8734359741211
+      ],
+      "block_id": "page-1113-block-0002",
+      "order": 2,
+      "text": "American Psychiatric Association (APA). (2002). « Practice\nguideline for the treatment of patients with bipolar disorder\n(revision) », American Journal of Psychiatry, 159, p. 1-50.\n",
+      "text_sha256": "c98fe82fe438f0537009c29007536688aea61f473f638e8c0336f194aae74b6e"
+    },
+    {
+      "bbox": [
+        390.0,
+        70.28496551513672,
+        544.8853149414062,
+        96.47344207763672
+      ],
+      "block_id": "page-1113-block-0003",
+      "order": 3,
+      "text": "American Psychiatric Association (APA). (2004). DSM-IV-TR.\nCritères diagnostiques (Washington, DC, 2000). Traduction\nfrançaise par J.-D. Guel et al., Paris, Masson, 384 p.\n",
+      "text_sha256": "a4046af324b6c4603138c8996b0ac94181739099dd33f3059423b370db09a710"
+    },
+    {
+      "bbox": [
+        390.0,
+        99.9349594116211,
+        543.8975219726562,
+        135.12344360351562
+      ],
+      "block_id": "page-1113-block-0004",
+      "order": 4,
+      "text": "American Psychiatric Association (2015). DSM-5 – Manuel\nDiagnostique et Statistique des Troubles Mentaux. Traduc-\ntion française par M.-A. Crocq, J.-D. Guelet al., Elsevier\nMasson SAS, Paris.\n",
+      "text_sha256": "28c0b0dff8cef4fca35eff892f407f40122a8709e9451d8ab39cb4806ecbfea8"
+    },
+    {
+      "bbox": [
+        390.0,
+        138.5349578857422,
+        544.6962890625,
+        164.7234344482422
+      ],
+      "block_id": "page-1113-block-0005",
+      "order": 5,
+      "text": "Angst, J. & al. (2005). « The HCL-32 : towards a self-\nassessment tool for hypomanic symptoms in outpatients »,\nJournal or Affective Disorders, 88(2), p. 217-233.\n",
+      "text_sha256": "8c37341ea77be62aca903632e207728b80db0829369db75418fa56f49210c03c"
+    },
+    {
+      "bbox": [
+        390.0,
+        168.1349639892578,
+        528.2074584960938,
+        194.3234405517578
+      ],
+      "block_id": "page-1113-block-0006",
+      "order": 6,
+      "text": "Dunner, D. L. & al. (1976). « Depressive symptoms in\npatients with uniplar and bipolar affective disorder »,\nComprehensive Psychiatry, 17(3), p. 447-451.\n",
+      "text_sha256": "a68af9e7cc1e3b62f51bc4d7316cf56d232140beedc49eccf604ee96b4316e7d"
+    },
+    {
+      "bbox": [
+        390.0,
+        197.73497009277344,
+        542.7974853515625,
+        223.92344665527344
+      ],
+      "block_id": "page-1113-block-0007",
+      "order": 7,
+      "text": "Etain, B. & al. (2008). « Beyond genetics : Childhood affec-\ntive trauma in bipolar disorder », Bipolar Disorders, 10(8),\np. 867-876.\n",
+      "text_sha256": "7a32fb10c608881b44dca6e61ef9af18925690e460b002780e49b729d559342b"
+    },
+    {
+      "bbox": [
+        390.0,
+        227.3349609375,
+        538.3975219726562,
+        253.5734405517578
+      ],
+      "block_id": "page-1113-block-0008",
+      "order": 8,
+      "text": "Frank, E. & al. (2005) « Two-year outcomes for interperso-\nnal and social rhythm therapy in individuals with bipolar »,\nArchives of General Psychiatry, 62, p. 996-1004.\n",
+      "text_sha256": "a6c864035eac4d17a3d6f2a0aafeb57526da1e11323b11c58d7703d6d879446b"
+    },
+    {
+      "bbox": [
+        390.0,
+        256.9849548339844,
+        548.8951416015625,
+        292.1734313964844
+      ],
+      "block_id": "page-1113-block-0009",
+      "order": 9,
+      "text": "Ghaemi, S. N. & al. (2002). « Cade’s disease and beyond :\nMisdiagnosis, antidepressant use, and a proposed denition\nfor bipolar spectrum disorder », Canadian Journal of\nPsychiatry, 47(2), p. 125-134.\n",
+      "text_sha256": "ce89f99f51e73e5ab5ac4c89bba308fc35ad414446f50aefd9860f9884a3cc9b"
+    },
+    {
+      "bbox": [
+        390.0,
+        295.5849609375,
+        539.3026123046875,
+        321.7734375
+      ],
+      "block_id": "page-1113-block-0010",
+      "order": 10,
+      "text": "Goldberg, J. F. & Harrow, M. (1999). Bipolar Disorders :\nClinical Course and Outcome,Washington, DC, American\nPsychiatric Press.\n",
+      "text_sha256": "fe8841e6a3b30f1b5a5524b3428d1f41998910b0655030883ad261d951ce44db"
+    },
+    {
+      "bbox": [
+        390.0,
+        325.1849670410156,
+        547.7249755859375,
+        351.3734436035156
+      ],
+      "block_id": "page-1113-block-0011",
+      "order": 11,
+      "text": "Goodwin, F. K. & Jamison, K. R. (2007). Manic-Depressive\nIllness: Bipolar Disorders and Recurrent Depression, 2e éd.,\nNew York, NY, Oxford University Press.\n",
+      "text_sha256": "35c86f73660ed10f92e511cc5238054b2c13340f388daa9080ad5da447fa364c"
+    },
+    {
+      "bbox": [
+        390.0,
+        354.78497314453125,
+        547.1085815429688,
+        381.0234375
+      ],
+      "block_id": "page-1113-block-0012",
+      "order": 12,
+      "text": "Grof, P. A. & al. (2002). « Is response to prophylactic lithium\na familial trait ? », Journal of Clinical Psychiatry, 63(10),\np. 942-947.\n",
+      "text_sha256": "9c62ab361f306eb6dbf039c64af7bd84bedb5f8c2abcc3a8c33c1a95e5ae22fe"
+    },
+    {
+      "bbox": [
+        390.0,
+        385.1349792480469,
+        545.9276123046875,
+        420.3234558105469
+      ],
+      "block_id": "page-1113-block-0013",
+      "order": 13,
+      "text": "Hirschfeld, R. M. & al. (2000). « Development and validation\nof a screening instrument for bipolar spectrum disorder :\nThe Mood Disorder Questionnaire », American Journal of\nPsychiatry, 157(11), p. 1873-1875.\n",
+      "text_sha256": "3d294d6072c09bcd09905a1e4ebee6f8aa481363f306571255760b678cfc6c64"
+    },
+    {
+      "bbox": [
+        390.0,
+        424.4349670410156,
+        531.1524658203125,
+        441.6234436035156
+      ],
+      "block_id": "page-1113-block-0014",
+      "order": 14,
+      "text": "Leonhard, K. (1979). The Classication of Endogenous\nPsychoses, New York, Irvington Publishers.\n",
+      "text_sha256": "8b5cf9055d7da716cbfe3fea9f2f11d7d0fc4a51bd9a3b1458740d79e64f4ac2"
+    },
+    {
+      "bbox": [
+        390.0,
+        445.7349548339844,
+        539.802490234375,
+        480.9234313964844
+      ],
+      "block_id": "page-1113-block-0015",
+      "order": 15,
+      "text": "McElroy, S. L. & al. (2001). « Axis I psychiatric comorbi-\ndity and its relationship to historical illness variables in\n288 patients with bipolar disorder », American Journal of\nPsychiatry, 158(3), p. 420-426.\n",
+      "text_sha256": "43910a31bac96cba1b6b06386e2e4faff6834260160b719e05782e394e980f1d"
+    },
+    {
+      "bbox": [
+        390.0,
+        485.03497314453125,
+        540.330078125,
+        511.22344970703125
+      ],
+      "block_id": "page-1113-block-0016",
+      "order": 16,
+      "text": "Morris, C. D. & al. (2007). « Family- focused treatment for\nbipolar disorder in adults and youth », Journal of Clinical\nPsychology, 63(5), p. 433-445.\n",
+      "text_sha256": "3e6d87b4bfc7252bbdcada6628e0fb98c569ab070bb3d000d3aba99f3e5b8a8f"
+    },
+    {
+      "bbox": [
+        390.0,
+        515.3849487304688,
+        539.1514282226562,
+        577.5734252929688
+      ],
+      "block_id": "page-1113-block-0017",
+      "order": 17,
+      "text": "National Institute of Mental Health. (2006). Early Findings\nfrom Largest NIMH-Funded Research Program on\nBipolar Disorder Begin to Build Evidence-Base on Best\nTreatment Options, [en ligne], www.nimh.nih.gov/news/\nscience-news/2006/early-ndings-from-largest-nimh-\nfunded- research-program-on-bipolar-disorder-begin-to-\nbuild-evidence-base-on-best-treatment-options.shtml.\n",
+      "text_sha256": "4c9429457a84e27d4c6ae4269014bcbefb215984c2bf97875ca8e55020fd627b"
+    },
+    {
+      "bbox": [
+        390.0,
+        580.9849853515625,
+        542.677734375,
+        616.1734619140625
+      ],
+      "block_id": "page-1113-block-0018",
+      "order": 18,
+      "text": "National Institute of Mental Health. (2016). Systematic\nTreatment Enhancement Program for Bipolar Disorder\n(STEP-BD), [en ligne], www.nimh.nih.gov/funding/clinical-\nresearch/practical/step-bd/index.shtml\n",
+      "text_sha256": "ef181fe7f354d0cec83cebffa973bb03c30abe16d945ba45203853ec23b7905c"
+    },
+    {
+      "bbox": [
+        390.0,
+        619.5849609375,
+        548.9515380859375,
+        645.7734375
+      ],
+      "block_id": "page-1113-block-0019",
+      "order": 19,
+      "text": "Pagano, M. E. & al. (2008). « Initiation of stimulants and\nantidepressant medication and clinical presentation in juve-\nnile bipolar I disorder », Bipolar Disorders, 10(2), p. 334-341.\n",
+      "text_sha256": "8d744e33f486e40d4ed585a1c920d946df094546614a954c0d7e4cbe714eb062"
+    },
+    {
+      "bbox": [
+        390.0,
+        649.2349853515625,
+        546.8800048828125,
+        684.4234619140625
+      ],
+      "block_id": "page-1113-block-0020",
+      "order": 20,
+      "text": "Perlis, R. H. & al. (2009). « Retrospective age at onset of\nbipolar disorder and outcome during two-year follow-up :\nResults from the STEP-BD study », Bipolar Disorders, 11(4),\np. 391-400.\n",
+      "text_sha256": "2551027f74943f59e89fd221a7cfc0ff616ca30211967723e0e1a671f245364a"
+    },
+    {
+      "bbox": [
+        390.0,
+        687.8349609375,
+        545.8975219726562,
+        714.0234375
+      ],
+      "block_id": "page-1113-block-0021",
+      "order": 21,
+      "text": "Post, R. M. & Weiss, S. R. (1989). « Sensitization, kindling\nand anticonvulsants in mania », Journal of Clinical Psychia-\ntry, 50, p. 23-30.\n",
+      "text_sha256": "23399b0273b4fad8bf30103497e1d6101001adda1809d5602bc6bf094b9cad84"
+    },
+    {
+      "bbox": [
+        219.0,
+        40.68496322631836,
+        372.30523681640625,
+        94.07344055175781
+      ],
+      "block_id": "page-1113-block-0022",
+      "order": 22,
+      "text": "National Institute for Clinical Excellence (NICE). (2009).\nSchizophrenia Core Interventions in the Treatment and\nManagement of Schizophrenia in Adults in Primary and\nSecondary Care, Londres, Royaume-Uni, National Institute\nfor Clinical Excellence, National Collaborationg Centre for\nMental Health.\n",
+      "text_sha256": "95cae9de2f55612e51fa72dcb794c60cc9ca70509fad287e9f3aa4cc3f00a240"
+    },
+    {
+      "bbox": [
+        219.0,
+        97.4349594116211,
+        378.0625,
+        123.6734390258789
+      ],
+      "block_id": "page-1113-block-0023",
+      "order": 23,
+      "text": "Poulton, R. & al. (2000). « Children’s self-reported psychotic\nsymptoms and adult schizophreniform disorder » Archives of\nGeneral Psychiatry, 57, p. 1053-1058.\n",
+      "text_sha256": "907a631aae76aa72ec02d4e9116fa5f9628c3b9b6984b8a313c92879caf91f68"
+    },
+    {
+      "bbox": [
+        219.0,
+        127.03495788574219,
+        372.6474914550781,
+        153.3234405517578
+      ],
+      "block_id": "page-1113-block-0024",
+      "order": 24,
+      "text": "Rapoport, J. L. & Gogtay, N. (2011). « Childhood onset schi-\nzophrenia : support for a progressive neurodevelopmental\ndisorder », Int J Dev Neurosci, 29(3), p. 251-258.\n",
+      "text_sha256": "168795f45335320b113b31e6f9408cc4712cfd16b33df304abbd76adee2ca827"
+    },
+    {
+      "bbox": [
+        219.0,
+        156.68496704101562,
+        376.24749755859375,
+        182.92344665527344
+      ],
+      "block_id": "page-1113-block-0025",
+      "order": 25,
+      "text": "Rapoport, J. C. & al. (2005). « The neurodevelopmental\nmodel of schizophrenia : Update 2005 », Journal of Molecu-\nlar Psychiatry, 10(6), p. 614.\n",
+      "text_sha256": "f27bece06e309053c5fc02fbdf199c4f2442d44074abd883f46b6999045aea4b"
+    },
+    {
+      "bbox": [
+        219.0,
+        186.2849578857422,
+        377.2063293457031,
+        212.5734405517578
+      ],
+      "block_id": "page-1113-block-0026",
+      "order": 26,
+      "text": "Roy, A. & Pompili, M. (2009). « Management of schizophrenia\nwith suicide risk », Psychiatric Clinics of North America,\n32(4), p. 863-883.\n",
+      "text_sha256": "d871b35bdb43ad000c788ea7ae152376b67685e3b5afd8d30a69f6e854b555dd"
+    },
+    {
+      "bbox": [
+        219.0,
+        215.8849639892578,
+        368.2701110839844,
+        233.12344360351562
+      ],
+      "block_id": "page-1113-block-0027",
+      "order": 27,
+      "text": "Schneider, K. (1959). Clinical Psychopathology, New York,\nGrune and Stratton.\n",
+      "text_sha256": "682a6e9ab6d6b5c9f84b0ee3920c7a77dd220646324776e443ae69b212e8ec20"
+    },
+    {
+      "bbox": [
+        219.0,
+        236.48497009277344,
+        377.95306396484375,
+        262.72344970703125
+      ],
+      "block_id": "page-1113-block-0028",
+      "order": 28,
+      "text": "Shallice, T. (1982). « Specic impairments of planning »,\nPhilosophical Transactions of the Royal Society of London B,\nBiological Sciences, 298(1089), p. 199-209.\n",
+      "text_sha256": "a880768751520c8dcd9c32ee083aa19914d994b6129c0f4f01793389b25373af"
+    },
+    {
+      "bbox": [
+        219.0,
+        266.0849609375,
+        377.91766357421875,
+        301.4234313964844
+      ],
+      "block_id": "page-1113-block-0029",
+      "order": 29,
+      "text": "Stein, L. I. & Test, M. A. (1980). « Alternative to mental\nhospital treatment. I. Conceptual model, treatment program,\nand clinical evaluation », Archives of General Psychiatry,\n37(4), p. 392-397.\n",
+      "text_sha256": "8b936bc7e43f3db0a10f3c4dab769b4b3d96e9baa6a8ba8bf496715d8193ea20"
+    },
+    {
+      "bbox": [
+        219.0,
+        304.7349548339844,
+        375.4324951171875,
+        340.0734558105469
+      ],
+      "block_id": "page-1113-block-0030",
+      "order": 30,
+      "text": "Stip, E. (2005) « La schizophrénie », dans Botez-Marquard,\nT. et Boller, F. (dir.), Neuropsychologie clinique et neurologie\ndu comportement, Montréal, Presses de l’Université de\nMontréal.\n",
+      "text_sha256": "31b01d46d84a0d3ca040aae80765a5481c2e64a1ef3784d2ed4b9e1256f0cfa8"
+    },
+    {
+      "bbox": [
+        219.0,
+        343.4349670410156,
+        375.95758056640625,
+        378.72344970703125
+      ],
+      "block_id": "page-1113-block-0031",
+      "order": 31,
+      "text": "Stip, E. & al. (2003). « Exploring cognitive complaints in\nschizophrenia : The subjective scale to investigate cognition\nin schizophrenia », Comprehensive Psychiatry, 44(4),\np. 331-340.\n",
+      "text_sha256": "06742ed02311e3784a4b2f4242a030c04cd1eedfbb86ceb6bbdda8fcc35f5679"
+    },
+    {
+      "bbox": [
+        219.0,
+        382.0849609375,
+        373.3500061035156,
+        399.3234558105469
+      ],
+      "block_id": "page-1113-block-0032",
+      "order": 32,
+      "text": "Société québécoise de la schizophrénie. (2013). Refer-O-scope,\n[en ligne], www.refer-o-scope.com.\n",
+      "text_sha256": "010cd7425314c74676c8130e12d141b210047c9a29c903b94a06eb95e4651375"
+    },
+    {
+      "bbox": [
+        219.0,
+        402.6349792480469,
+        353.80255126953125,
+        428.9234313964844
+      ],
+      "block_id": "page-1113-block-0033",
+      "order": 33,
+      "text": "Torrey, E. F. & al. (1997). « Seasonality of births in\nschizophrenia and bipolar disorder : a review of the\nliterature », Schizophr Res, 28(1), p. 1-38.\n",
+      "text_sha256": "0e94de5774e24559b5257544967cfa4bdecbd6c406a9c5c5624e70441c67b998"
+    },
+    {
+      "bbox": [
+        219.0,
+        432.28497314453125,
+        365.842529296875,
+        458.5234375
+      ],
+      "block_id": "page-1113-block-0034",
+      "order": 34,
+      "text": "Torrey, E. F. & al. (2009). « Paternal age as a risk factor\nfor schizophrenia : how important is it ? », Schizophrenia\nResearch, 114, p. 1.\n",
+      "text_sha256": "8e183370f95bdf2c9b6b6984b732f392d239adfaf98a8983255fb4d3beb2b2e8"
+    },
+    {
+      "bbox": [
+        219.0,
+        461.8849792480469,
+        367.2138671875,
+        488.1734313964844
+      ],
+      "block_id": "page-1113-block-0035",
+      "order": 35,
+      "text": "Tsuang, M. T. & Van Os, J. (2013). « Attenuated psychosis\nsyndrome in DSM-5 », Schizophrenia Research, 150(1),\np. 31-35.\n",
+      "text_sha256": "dac9219530699d397732d9febe33ca1f9f7a3b693f4c31f61e60485884898dd1"
+    },
+    {
+      "bbox": [
+        219.0,
+        491.4849548339844,
+        376.8500061035156,
+        535.8734741210938
+      ],
+      "block_id": "page-1113-block-0036",
+      "order": 36,
+      "text": "Vanasse, A. & al. (2012). « Treatment prevalence and\nincidence of schizophrenia in Quebec using a population\nhealth services perspective : different algorithms, different\nestimates », Social Psychiatry and Psychiatric Epidemiology,\n47(4), p. 533-543.\n",
+      "text_sha256": "2094daa87b5d028ccf390b63f6307f9a05c8523afc4e2832efaed3fecbe75324"
+    },
+    {
+      "bbox": [
+        219.0,
+        539.1849975585938,
+        371.50262451171875,
+        574.5234375
+      ],
+      "block_id": "page-1113-block-0037",
+      "order": 37,
+      "text": "Vaughn, C. E. & Leff, J. (1976a). « The measurement of\nexpressed emotion in the families of psychiatric patients »,\nBritish Journal of Social and Clinical Psychology, 15(2),\np. 157-165.\n",
+      "text_sha256": "e9e57a2662a71381ec8dc38ebc31ac1d349af502c3a5dc8b56a48448deaaf347"
+    },
+    {
+      "bbox": [
+        219.0,
+        577.8849487304688,
+        372.7182922363281,
+        604.1234741210938
+      ],
+      "block_id": "page-1113-block-0038",
+      "order": 38,
+      "text": "Vaughn, C. E. & Leff, J. P. (1976b). « The inuence of family\nand social factors on the course of psychiatric illness »,\nBritish Journal of Psychiatry, 129(8), p. 125-137.\n",
+      "text_sha256": "953dd6772a20e6bc8073da64bd19b0c4cb77b6542fcbbf312573c32b50a1e266"
+    },
+    {
+      "bbox": [
+        219.0,
+        607.4849853515625,
+        374.49749755859375,
+        624.7234497070312
+      ],
+      "block_id": "page-1113-block-0039",
+      "order": 39,
+      "text": "Walker, E. F. & al. (1994) « Neuromotor precursors of schi-\nzophrenia », Schizophrenia Bulletin, 20(3), p. 441-451.\n",
+      "text_sha256": "bae38d13b0100dc711afb4066d1240903042fafde8ca5f6d0c48f9d00a368fed"
+    },
+    {
+      "bbox": [
+        219.0,
+        628.0349731445312,
+        376.362548828125,
+        663.3734741210938
+      ],
+      "block_id": "page-1113-block-0040",
+      "order": 40,
+      "text": "Wunderink, L. & al. (2007). « Guided discontinuation versus\nmaintenance treatment in remitted rst-episode psychosis :\nRelapse rates and functional outcome », Journal of Clinical\nPsychiatry, 68(5), p. 654-661.\n",
+      "text_sha256": "5b6f884edf4c00b9efc2872f4044d1c6f1b75da6e3d4e273f1a98cd29cc14351"
+    },
+    {
+      "bbox": [
+        219.0,
+        676.2203369140625,
+        368.34246826171875,
+        714.0234375
+      ],
+      "block_id": "page-1113-block-0041",
+      "order": 41,
+      "text": "Chapitre 18\nAkiskal, H. S. (1996). « The prevalent clinical spectrum of\nbipolar disorders : Beyond DSM-IV », Journal of Clinical\nPsychopharmacology, 16(2, suppl. 1), p. 4-14.\n",
+      "text_sha256": "41d306f82d659d22595360cf27e758450942fc34145599e1772249be55ea8a13"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.68496322631836,
+        205.33265686035156,
+        66.97344207763672
+      ],
+      "block_id": "page-1113-block-0042",
+      "order": 42,
+      "text": "Hennekens, C. H. & al. (2005). « Schizophrenia and increased\nrisks of cardiovascular disease », American Heart Journal,\n15(6), p. 1115-1121.\n",
+      "text_sha256": "31ce9872abe151e7f5eabfb4678d4d90c2f4679978220594fea5c7ecd79e9928"
+    },
+    {
+      "bbox": [
+        48.0,
+        70.4349594116211,
+        199.90757751464844,
+        105.82344055175781
+      ],
+      "block_id": "page-1113-block-0043",
+      "order": 43,
+      "text": "Hong, L. E. & al. (2005). « Specic motion processing\npathway decit during eye tracking in schizophrenia : a\nperformance-matched functional magnetic resonance\nimaging study », Biological Psychiatry, 57(7), p. 726-732.\n",
+      "text_sha256": "bf37123446b29d6346e6c12be7930757afbdbc04330a5a61400b9e86f8d1864b"
+    },
+    {
+      "bbox": [
+        48.0,
+        109.28496551513672,
+        202.08001708984375,
+        144.62344360351562
+      ],
+      "block_id": "page-1113-block-0044",
+      "order": 44,
+      "text": "Jablensky, A. & al. (1992). « Schizophrenia : Manifestations,\nincidence and course in different cultures. A World Health\nOrganization Ten-Country Study », Psychological Medecine\n– Monograph Supplement Impact, 20, p. 1.\n",
+      "text_sha256": "79d2ac4a769347bef8d727cb8b2b4ac522f73ce053bf0e1f4c88d2170b7a0345"
+    },
+    {
+      "bbox": [
+        48.0,
+        148.0849609375,
+        195.12501525878906,
+        183.4734344482422
+      ],
+      "block_id": "page-1113-block-0045",
+      "order": 45,
+      "text": "Kapur, S. (2003). « Psychosis as a state of aberrant\nsalience : a framework linking biology, phenomenology,\nand pharmacology in schizophrenia », American Journal\nof Psychiatry, 160(1), p. 13-23.\n",
+      "text_sha256": "6b41d9189c9de9bb69fd01593262174f39e676a5950b2dbd92108bd25ae21d5a"
+    },
+    {
+      "bbox": [
+        48.0,
+        186.93496704101562,
+        207.20672607421875,
+        213.2234344482422
+      ],
+      "block_id": "page-1113-block-0046",
+      "order": 46,
+      "text": "Kay, S. R. & al. (1987). « The positive and negative syndrome\nscale (PANSS) for schizophrenia », Schizophrenia bulletin,\n13(2), p. 261-276.\n",
+      "text_sha256": "f60723329e4f4f4926454ea96985d866c6f478f334b9847e6748ab4997cd2131"
+    },
+    {
+      "bbox": [
+        48.0,
+        216.68496704101562,
+        204.91000366210938,
+        242.9734344482422
+      ],
+      "block_id": "page-1113-block-0047",
+      "order": 47,
+      "text": "Keith, S. J. & Kane, J. M. (2003). « Partial compliance and\npatient consequences in schizophrenia », Journal of Clinical\nPsychiatry, 64(11), p. 1308-1315.\n",
+      "text_sha256": "bad4693e9931d21c86e4d7e691ae74752eb0a21daae5448c70e3868d92df602d"
+    },
+    {
+      "bbox": [
+        48.0,
+        246.43496704101562,
+        199.92251586914062,
+        272.72344970703125
+      ],
+      "block_id": "page-1113-block-0048",
+      "order": 48,
+      "text": "Kolvin, I. (1971). « Studies in the childhood psychoses. I.\nDiagnostic criteria and classication », The British Journal\nof Psychiatry, 118(545), p. 381-384.\n",
+      "text_sha256": "e5c4ad3f65cbbc1f051207281ee5e25378d5bfa69576a192471f68dc7dd66654"
+    },
+    {
+      "bbox": [
+        48.0,
+        276.2349548339844,
+        204.12513732910156,
+        302.5234375
+      ],
+      "block_id": "page-1113-block-0049",
+      "order": 49,
+      "text": "Kumra, S. & al. (1999). « Including children and adolescents\nwith schizophrenia in medication free research », American\nJournal of Psychiatry, 156(7), p. 1065-1068.\n",
+      "text_sha256": "1f46d95d7c4e6227f898ef54ca2f0e834d9d01d678cda1b7f7b3910d8280ec53"
+    },
+    {
+      "bbox": [
+        48.0,
+        305.9849548339844,
+        196.38002014160156,
+        341.3234558105469
+      ],
+      "block_id": "page-1113-block-0050",
+      "order": 50,
+      "text": "Kreyenbuhl, J. & al. (2010). « The schizophrenia patient\noutcomes research team (PORT) : updated treatment\nrecommendations 2009 », Schizophrenia Bulletin, 36(1),\np. 94-103.\n",
+      "text_sha256": "23a51fff8e3ee9c656089fc0a48cb8b0053f2794dd5aacb0c3cdddb29f9532a2"
+    },
+    {
+      "bbox": [
+        48.0,
+        344.78497314453125,
+        199.45001220703125,
+        380.1734313964844
+      ],
+      "block_id": "page-1113-block-0051",
+      "order": 51,
+      "text": "Lavoie, J. & al. (2013). « The electroretinogram as a\nbiomarker of central dopamine and serotonin : potential\nrelevance to psychiatric disorders », Biological Psychiatry,\n75(6), p. 479-486.\n",
+      "text_sha256": "8379d5bbb1ca38ac14082c35869871c7d7bac45d325f523cdc765a2566a77ad9"
+    },
+    {
+      "bbox": [
+        48.0,
+        383.6349792480469,
+        206.99749755859375,
+        409.9234313964844
+      ],
+      "block_id": "page-1113-block-0052",
+      "order": 52,
+      "text": "Lewis, D. A. & Liberman, J. A. (2000). « Catching up on schizo-\nphrenia. Natural History and Neurobiology », Neuron, 28(2),\np. 324-334.\n",
+      "text_sha256": "8ac0ef67190c70fd8422167719223209d9f522051ca4eb7d2a050544efa9b9ea"
+    },
+    {
+      "bbox": [
+        48.0,
+        413.3849792480469,
+        201.70001220703125,
+        439.6734313964844
+      ],
+      "block_id": "page-1113-block-0053",
+      "order": 53,
+      "text": "Malaspina, D. & al. (2001). « Advancing paternal age and\nthe risk of schizophrenia », Archives of General Psychiatry,\n58, p. 361.\n",
+      "text_sha256": "f900e7c7e872fab11256f9d317a26bf50b038c6401d1ac27351a2adffb54411a"
+    },
+    {
+      "bbox": [
+        48.0,
+        443.1349792480469,
+        206.6551055908203,
+        487.5734558105469
+      ],
+      "block_id": "page-1113-block-0054",
+      "order": 54,
+      "text": "Marder, S. R. & Fenton, W. (2004). « Measurement and treat-\nment research to improve cognition in schizophrenia : NIMH\nMATRICS initiative to support the development of agents\nfor improving cognition in schizophrenia », Schizophrenia\nResearch, 72(1), p. 5-9.\n",
+      "text_sha256": "f71452367c8bc271fef4c9a2fac7665a6edd9662dd12620e2c6bc031c8d69ea3"
+    },
+    {
+      "bbox": [
+        48.0,
+        491.03497314453125,
+        195.9600830078125,
+        526.3734741210938
+      ],
+      "block_id": "page-1113-block-0055",
+      "order": 55,
+      "text": "Markela-Lerenc, J. & al. (2009). «Stroop interference\neffect in schizophrenic patients : An electrophysiological\napproach », International Journal of Psychophysiology,\n71(3), p. 248-57.\n",
+      "text_sha256": "f0c62f0d1d08274816913205b5fd1d0b82d64e2ed3dd7460ceecd3127c41ac50"
+    },
+    {
+      "bbox": [
+        48.0,
+        529.8349609375,
+        197.79251098632812,
+        565.1734619140625
+      ],
+      "block_id": "page-1113-block-0056",
+      "order": 56,
+      "text": "Maziade, M. & Paccalet, T. (2013). « A protective-\ncompensatory model may reconcile the genetic and the\ndevelopmental ndings in schizophrenia », Schizophrenia\nResearch, 144(1-3), p. 9-15.\n",
+      "text_sha256": "98bc509ea1c10d23d18376086310bc7da38c517e9a6d737163007d84708299fc"
+    },
+    {
+      "bbox": [
+        48.0,
+        568.6849975585938,
+        197.9727325439453,
+        594.9734497070312
+      ],
+      "block_id": "page-1113-block-0057",
+      "order": 57,
+      "text": "McFarlane, W. R. (2004). Multifamily Groups in the\nTreatment of Severe Psychiatric Disorders, New York, NY,\nGuilford Press.\n",
+      "text_sha256": "0bb234b5d209c9e33e9c606f132a155ed9382bfce70af411d0aa85224fe97284"
+    },
+    {
+      "bbox": [
+        48.0,
+        598.4349975585938,
+        205.1550750732422,
+        624.7234497070312
+      ],
+      "block_id": "page-1113-block-0058",
+      "order": 58,
+      "text": "McGlashan, T. H. & al. (1998). A Scale for the Assessement\nof Prodromal Symptoms and State The Netherlands, Kluwer\nAcademic Publishers.\n",
+      "text_sha256": "447240455d46e73a8b2f502f1462d102c3e789567c0f6806c0eca2eb37e3e0b9"
+    },
+    {
+      "bbox": [
+        48.0,
+        628.1849975585938,
+        207.20005798339844,
+        663.5234375
+      ],
+      "block_id": "page-1113-block-0059",
+      "order": 59,
+      "text": "McGrath, J. & al. (2004). « A systematic review of the\nincidence of schizophrenia : The distribution of rates and the\ninuence of sex, urbanicity, migrant status and methodo-\nlogy », BioMed Central Medicine, 2, p. 13.\n",
+      "text_sha256": "5fdf6b437ea6d48a1c1a1c3c70eeb7df935620f1e11dce63d7e826f5a228a288"
+    },
+    {
+      "bbox": [
+        48.0,
+        667.0349731445312,
+        204.59446716308594,
+        693.3234252929688
+      ],
+      "block_id": "page-1113-block-0060",
+      "order": 60,
+      "text": "Messias, E. L. & al. (2007). « Epidemiology of schizophrenia :\nReview of ndings and myths », Psychiatric Clinics of North\nAmerica, 30(3), p. 323-338.\n",
+      "text_sha256": "3320c943205fc7954b7ff6b9d5f9e8de21acd8a10fa63e6f94e62291aa239193"
+    },
+    {
+      "bbox": [
+        48.0,
+        696.7849731445312,
+        198.8236541748047,
+        714.0234375
+      ],
+      "block_id": "page-1113-block-0061",
+      "order": 61,
+      "text": "Miller, G. A. (1956). « The magical number seven, plus or\nminus two », Psychological Review, 63(2), p. 81-97.\n",
+      "text_sha256": "784f823cf3ba1180788af23dd6036ea9d8e3725443073c13e273f91764fedf55"
+    }
+  ],
+  "coordinates_sha256": "ad45cc26ef439a9adc7bb55d7dc9652fe837496f3819379d85b317f1fe9cf669",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1113",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "R16\nRéférences\nAmerican Psychiatric Association (APA). (2002). « Practice\nguideline for the treatment of patients with bipolar disorder\n(revision) », American Journal of Psychiatry, 159, p. 1-50.\nAmerican Psychiatric Association (APA). (2004). DSM-IV-TR.\nCritères diagnostiques (Washington, DC, 2000). Traduction\nfrançaise par J.-D. Guel et al., Paris, Masson, 384 p.\nAmerican Psychiatric Association (2015). DSM-5 – Manuel\nDiagnostique et Statistique des Troubles Mentaux. Traduc-\ntion française par M.-A. Crocq, J.-D. Guelet al., Elsevier\nMasson SAS, Paris.\nAngst, J. & al. (2005). « The HCL-32 : towards a self-\nassessment tool for hypomanic symptoms in outpatients »,\nJournal or Affective Disorders, 88(2), p. 217-233.\nDunner, D. L. & al. (1976). « Depressive symptoms in\npatients with uniplar and bipolar affective disorder »,\nComprehensive Psychiatry, 17(3), p. 447-451.\nEtain, B. & al. (2008). « Beyond genetics : Childhood affec-\ntive trauma in bipolar disorder », Bipolar Disorders, 10(8),\np. 867-876.\nFrank, E. & al. (2005) « Two-year outcomes for interperso-\nnal and social rhythm therapy in individuals with bipolar »,\nArchives of General Psychiatry, 62, p. 996-1004.\nGhaemi, S. N. & al. (2002). « Cade’s disease and beyond :\nMisdiagnosis, antidepressant use, and a proposed denition\nfor bipolar spectrum disorder », Canadian Journal of\nPsychiatry, 47(2), p. 125-134.\nGoldberg, J. F. & Harrow, M. (1999). Bipolar Disorders :\nClinical Course and Outcome,Washington, DC, American\nPsychiatric Press.\nGoodwin, F. K. & Jamison, K. R. (2007). Manic-Depressive\nIllness: Bipolar Disorders and Recurrent Depression, 2e éd.,\nNew York, NY, Oxford University Press.\nGrof, P. A. & al. (2002). « Is response to prophylactic lithium\na familial trait ? », Journal of Clinical Psychiatry, 63(10),\np. 942-947.\nHirschfeld, R. M. & al. (2000). « Development and validation\nof a screening instrument for bipolar spectrum disorder :\nThe Mood Disorder Questionnaire », American Journal of\nPsychiatry, 157(11), p. 1873-1875.\nLeonhard, K. (1979). The Classication of Endogenous\nPsychoses, New York, Irvington Publishers.\nMcElroy, S. L. & al. (2001). « Axis I psychiatric comorbi-\ndity and its relationship to historical illness variables in\n288 patients with bipolar disorder », American Journal of\nPsychiatry, 158(3), p. 420-426.\nMorris, C. D. & al. (2007). « Family- focused treatment for\nbipolar disorder in adults and youth », Journal of Clinical\nPsychology, 63(5), p. 433-445.\nNational Institute of Mental Health. (2006). Early Findings\nfrom Largest NIMH-Funded Research Program on\nBipolar Disorder Begin to Build Evidence-Base on Best\nTreatment Options, [en ligne], www.nimh.nih.gov/news/\nscience-news/2006/early-ndings-from-largest-nimh-\nfunded- research-program-on-bipolar-disorder-begin-to-\nbuild-evidence-base-on-best-treatment-options.shtml.\nNational Institute of Mental Health. (2016). Systematic\nTreatment Enhancement Program for Bipolar Disorder\n(STEP-BD), [en ligne], www.nimh.nih.gov/funding/clinical-\nresearch/practical/step-bd/index.shtml\nPagano, M. E. & al. (2008). « Initiation of stimulants and\nantidepressant medication and clinical presentation in juve-\nnile bipolar I disorder », Bipolar Disorders, 10(2), p. 334-341.\nPerlis, R. H. & al. (2009). « Retrospective age at onset of\nbipolar disorder and outcome during two-year follow-up :\nResults from the STEP-BD study », Bipolar Disorders, 11(4),\np. 391-400.\nPost, R. M. & Weiss, S. R. (1989). « Sensitization, kindling\nand anticonvulsants in mania », Journal of Clinical Psychia-\ntry, 50, p. 23-30.\nNational Institute for Clinical Excellence (NICE). (2009).\nSchizophrenia Core Interventions in the Treatment and\nManagement of Schizophrenia in Adults in Primary and\nSecondary Care, Londres, Royaume-Uni, National Institute\nfor Clinical Excellence, National Collaborationg Centre for\nMental Health.\nPoulton, R. & al. (2000). « Children’s self-reported psychotic\nsymptoms and adult schizophreniform disorder » Archives of\nGeneral Psychiatry, 57, p. 1053-1058.\nRapoport, J. L. & Gogtay, N. (2011). « Childhood onset schi-\nzophrenia : support for a progressive neurodevelopmental\ndisorder », Int J Dev Neurosci, 29(3), p. 251-258.\nRapoport, J. C. & al. (2005). « The neurodevelopmental\nmodel of schizophrenia : Update 2005 », Journal of Molecu-\nlar Psychiatry, 10(6), p. 614.\nRoy, A. & Pompili, M. (2009). « Management of schizophrenia\nwith suicide risk », Psychiatric Clinics of North America,\n32(4), p. 863-883.\nSchneider, K. (1959). Clinical Psychopathology, New York,\nGrune and Stratton.\nShallice, T. (1982). « Specic impairments of planning »,\nPhilosophical Transactions of the Royal Society of London B,\nBiological Sciences, 298(1089), p. 199-209.\nStein, L. I. & Test, M. A. (1980). « Alternative to mental\nhospital treatment. I. Conceptual model, treatment program,\nand clinical evaluation », Archives of General Psychiatry,\n37(4), p. 392-397.\nStip, E. (2005) « La schizophrénie », dans Botez-Marquard,\nT. et Boller, F. (dir.), Neuropsychologie clinique et neurologie\ndu comportement, Montréal, Presses de l’Université de\nMontréal.\nStip, E. & al. (2003). « Exploring cognitive complaints in\nschizophrenia : The subjective scale to investigate cognition\nin schizophrenia », Comprehensive Psychiatry, 44(4),\np. 331-340.\nSociété québécoise de la schizophrénie. (2013). Refer-O-scope,\n[en ligne], www.refer-o-scope.com.\nTorrey, E. F. & al. (1997). « Seasonality of births in\nschizophrenia and bipolar disorder : a review of the\nliterature », Schizophr Res, 28(1), p. 1-38.\nTorrey, E. F. & al. (2009). « Paternal age as a risk factor\nfor schizophrenia : how important is it ? », Schizophrenia\nResearch, 114, p. 1.\nTsuang, M. T. & Van Os, J. (2013). « Attenuated psychosis\nsyndrome in DSM-5 », Schizophrenia Research, 150(1),\np. 31-35.\nVanasse, A. & al. (2012). « Treatment prevalence and\nincidence of schizophrenia in Quebec using a population\nhealth services perspective : different algorithms, different\nestimates », Social Psychiatry and Psychiatric Epidemiology,\n47(4), p. 533-543.\nVaughn, C. E. & Leff, J. (1976a). « The measurement of\nexpressed emotion in the families of psychiatric patients »,\nBritish Journal of Social and Clinical Psychology, 15(2),\np. 157-165.\nVaughn, C. E. & Leff, J. P. (1976b). « The inuence of family\nand social factors on the course of psychiatric illness »,\nBritish Journal of Psychiatry, 129(8), p. 125-137.\nWalker, E. F. & al. (1994) « Neuromotor precursors of schi-\nzophrenia », Schizophrenia Bulletin, 20(3), p. 441-451.\nWunderink, L. & al. (2007). « Guided discontinuation versus\nmaintenance treatment in remitted rst-episode psychosis :\nRelapse rates and functional outcome », Journal of Clinical\nPsychiatry, 68(5), p. 654-661.\nChapitre 18\nAkiskal, H. S. (1996). « The prevalent clinical spectrum of\nbipolar disorders : Beyond DSM-IV », Journal of Clinical\nPsychopharmacology, 16(2, suppl. 1), p. 4-14.\nHennekens, C. H. & al. (2005). « Schizophrenia and increased\nrisks of cardiovascular disease », American Heart Journal,\n15(6), p. 1115-1121.\nHong, L. E. & al. (2005). « Specic motion processing\npathway decit during eye tracking in schizophrenia : a\nperformance-matched functional magnetic resonance\nimaging study », Biological Psychiatry, 57(7), p. 726-732.\nJablensky, A. & al. (1992). « Schizophrenia : Manifestations,\nincidence and course in different cultures. A World Health\nOrganization Ten-Country Study », Psychological Medecine\n– Monograph Supplement Impact, 20, p. 1.\nKapur, S. (2003). « Psychosis as a state of aberrant\nsalience : a framework linking biology, phenomenology,\nand pharmacology in schizophrenia », American Journal\nof Psychiatry, 160(1), p. 13-23.\nKay, S. R. & al. (1987). « The positive and negative syndrome\nscale (PANSS) for schizophrenia », Schizophrenia bulletin,\n13(2), p. 261-276.\nKeith, S. J. & Kane, J. M. (2003). « Partial compliance and\npatient consequences in schizophrenia », Journal of Clinical\nPsychiatry, 64(11), p. 1308-1315.\nKolvin, I. (1971). « Studies in the childhood psychoses. I.\nDiagnostic criteria and classication », The British Journal\nof Psychiatry, 118(545), p. 381-384.\nKumra, S. & al. (1999). « Including children and adolescents\nwith schizophrenia in medication free research », American\nJournal of Psychiatry, 156(7), p. 1065-1068.\nKreyenbuhl, J. & al. (2010). « The schizophrenia patient\noutcomes research team (PORT) : updated treatment\nrecommendations 2009 », Schizophrenia Bulletin, 36(1),\np. 94-103.\nLavoie, J. & al. (2013). « The electroretinogram as a\nbiomarker of central dopamine and serotonin : potential\nrelevance to psychiatric disorders », Biological Psychiatry,\n75(6), p. 479-486.\nLewis, D. A. & Liberman, J. A. (2000). « Catching up on schizo-\nphrenia. Natural History and Neurobiology », Neuron, 28(2),\np. 324-334.\nMalaspina, D. & al. (2001). « Advancing paternal age and\nthe risk of schizophrenia », Archives of General Psychiatry,\n58, p. 361.\nMarder, S. R. & Fenton, W. (2004). « Measurement and treat-\nment research to improve cognition in schizophrenia : NIMH\nMATRICS initiative to support the development of agents\nfor improving cognition in schizophrenia », Schizophrenia\nResearch, 72(1), p. 5-9.\nMarkela-Lerenc, J. & al. (2009). «Stroop interference\neffect in schizophrenic patients : An electrophysiological\napproach », International Journal of Psychophysiology,\n71(3), p. 248-57.\nMaziade, M. & Paccalet, T. (2013). « A protective-\ncompensatory model may reconcile the genetic and the\ndevelopmental ndings in schizophrenia », Schizophrenia\nResearch, 144(1-3), p. 9-15.\nMcFarlane, W. R. (2004). Multifamily Groups in the\nTreatment of Severe Psychiatric Disorders, New York, NY,\nGuilford Press.\nMcGlashan, T. H. & al. (1998). A Scale for the Assessement\nof Prodromal Symptoms and State The Netherlands, Kluwer\nAcademic Publishers.\nMcGrath, J. & al. (2004). « A systematic review of the\nincidence of schizophrenia : The distribution of rates and the\ninuence of sex, urbanicity, migrant status and methodo-\nlogy », BioMed Central Medicine, 2, p. 13.\nMessias, E. L. & al. (2007). « Epidemiology of schizophrenia :\nReview of ndings and myths », Psychiatric Clinics of North\nAmerica, 30(3), p. 323-338.\nMiller, G. A. (1956). « The magical number seven, plus or\nminus two », Psychological Review, 63(2), p. 81-97.\n",
+  "raw_text_sha256": "77ced9e2339f0f3b6404db016d63492658667d9195bed29b48c0ad76a628ba34",
+  "source_page_display": 1114,
+  "source_page_index": 1113
+}

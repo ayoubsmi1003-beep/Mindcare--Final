@@ -1,0 +1,844 @@
+{
+  "block_sequence_sha256": "a21d5475b3952285cec488d96dad58300e1972743eccb8bb1116d1e09fc22a9c",
+  "blocks": [
+    {
+      "bbox": [
+        54.0,
+        38.31171798706055,
+        146.74002075195312,
+        60.77265548706055
+      ],
+      "block_id": "page-0004-block-0001",
+      "order": 1,
+      "text": "Les auteurs\n",
+      "text_sha256": "f21a5840d00af6c3e8a24b6d30e8078518edf8e3fdf086c6b6581940d22b35af"
+    },
+    {
+      "bbox": [
+        54.0,
+        81.76582336425781,
+        134.74169921875,
+        92.25849914550781
+      ],
+      "block_id": "page-0004-block-0002",
+      "order": 2,
+      "text": "Sous la direction de :\n",
+      "text_sha256": "661120b78a790911ce75dfcfbda08c1cc2d05de06247a30904a527c63ad21940"
+    },
+    {
+      "bbox": [
+        54.0,
+        96.26582336425781,
+        414.7959289550781,
+        106.75849914550781
+      ],
+      "block_id": "page-0004-block-0003",
+      "order": 3,
+      "text": "Pierre Lalonde, M.D., FRCPC, psychiatre, Institut universitaire en santé mentale de Montréal\n",
+      "text_sha256": "401bf3e33161002014405b0ec6fb3f824be277eeeed0b8ab194500871b1d6ef3"
+    },
+    {
+      "bbox": [
+        54.0,
+        110.76582336425781,
+        393.9000244140625,
+        121.25849914550781
+      ],
+      "block_id": "page-0004-block-0004",
+      "order": 4,
+      "text": "Georges-F. Pinard, M.D., FRCPC, psychiatre, Hôpital Mai sonneuve-Rosemont, Montréal\n",
+      "text_sha256": "4aa02a5b9ebabc1e8a701c8785e34f2039ca87a5f1b45ce635001ef52b1d4df8"
+    },
+    {
+      "bbox": [
+        54.0,
+        127.26582336425781,
+        554.9553833007812,
+        149.2584991455078
+      ],
+      "block_id": "page-0004-block-0005",
+      "order": 5,
+      "text": "Responsable de la section « Traitements biologiques » : Nancy Légaré, B. Pharm., M. Sc., Pharm. D., BCPP, BCPS, pharmacienne,\nInstitut Philippe-Pinel de Montréal\n",
+      "text_sha256": "79c0c22c3fed914ebf1a00c39c43a5383252f59d0307e8a62604acc872cd8188"
+    },
+    {
+      "bbox": [
+        54.0,
+        155.2658233642578,
+        553.8794555664062,
+        177.2584991455078
+      ],
+      "block_id": "page-0004-block-0006",
+      "order": 6,
+      "text": "Responsable de la section « Pédopsychiatrie » : Nathalie Gingras, M.D., FRCPC, M. Sc., psychiatre, fondatrice de Psychatrie de\nl’enfant et de l’adolescent, Centre hospitalier universitaire de Québec\n",
+      "text_sha256": "5f19eab04c09fd4cffd3b636e97a2f7d137a849039349054d1b554fc69885f71"
+    },
+    {
+      "bbox": [
+        54.0,
+        183.2658233642578,
+        555.0344848632812,
+        205.2584991455078
+      ],
+      "block_id": "page-0004-block-0007",
+      "order": 7,
+      "text": "Responsable de la section « Gérontopsychiatrie » : Isabelle Paquette, M.D., M. Sc., FRCPC, gérontopsychiatre, Institut universitaire\nen santé mentale de Montréal\n",
+      "text_sha256": "e424c2c5f3e77c4d50ba78fffca31f5c8ff11f3fdfc2a4ca8d5d44a856a0d30b"
+    },
+    {
+      "bbox": [
+        54.0,
+        219.7658233642578,
+        151.77096557617188,
+        230.2584991455078
+      ],
+      "block_id": "page-0004-block-0008",
+      "order": 8,
+      "text": "Avec la collaboration de :\n",
+      "text_sha256": "d4283850e231dad1a17fb9bc0d25d5d71f73d19eec5b36bb32c9b41e26160fd8"
+    },
+    {
+      "bbox": [
+        54.0,
+        238.5158233642578,
+        296.75738525390625,
+        249.0084991455078
+      ],
+      "block_id": "page-0004-block-0009",
+      "order": 9,
+      "text": "Amal Abdel-Baki, M.D., FRCPC, M. Sc. (sciences biomédicales)\n",
+      "text_sha256": "512d5abcf2781cc3943d75a562e8d74eed589ca10af0395e91454f7b9c234514"
+    },
+    {
+      "bbox": [
+        54.0,
+        253.01583862304688,
+        187.3480682373047,
+        263.5085144042969
+      ],
+      "block_id": "page-0004-block-0010",
+      "order": 10,
+      "text": "Diane Allaire, Ph. D. (psychologie)\n",
+      "text_sha256": "28ad77b5e182533ac872d50e3202baa9ea2b349d44440af5841e2af09574d14f"
+    },
+    {
+      "bbox": [
+        54.0,
+        267.5158386230469,
+        189.06158447265625,
+        278.0085144042969
+      ],
+      "block_id": "page-0004-block-0011",
+      "order": 11,
+      "text": "Wendi Arminjon, M.A. (sexologie)\n",
+      "text_sha256": "44b183f957d6b25334b235a8b5bb614005e393f48ecd6dc3c644941c5ef3f917"
+    },
+    {
+      "bbox": [
+        54.0,
+        282.0158386230469,
+        136.22000122070312,
+        292.5085144042969
+      ],
+      "block_id": "page-0004-block-0012",
+      "order": 12,
+      "text": "Pierre Assalian, M.D.\n",
+      "text_sha256": "53bf0e46a463b970e88da19845d60b54fa577b55177dbb45d23185addbe33580"
+    },
+    {
+      "bbox": [
+        54.0,
+        296.5158386230469,
+        134.718994140625,
+        307.0085144042969
+      ],
+      "block_id": "page-0004-block-0013",
+      "order": 13,
+      "text": "Patrick Barabé, M.D.\n",
+      "text_sha256": "5f4322a27fd753c7c4ad30c9aa0006338b45e5c34a9bc6ce8eaca505cc004870"
+    },
+    {
+      "bbox": [
+        54.0,
+        311.0158386230469,
+        156.97926330566406,
+        321.5085144042969
+      ],
+      "block_id": "page-0004-block-0014",
+      "order": 14,
+      "text": "Céline Bard, M.D., FRCPC\n",
+      "text_sha256": "8dc6fab0888a0bc427d384b4d66244407d307d747656282b8017b1d8fcf19c60"
+    },
+    {
+      "bbox": [
+        54.0,
+        325.5158386230469,
+        283.62200927734375,
+        336.0085144042969
+      ],
+      "block_id": "page-0004-block-0015",
+      "order": 15,
+      "text": "Philippe Baruch, M.D., M. Sc. (pharmacologie moléculaire)\n",
+      "text_sha256": "7dac0538cb09459c0cdcc0b7ced05b2b678809c7f6427485d238f0bcde603b31"
+    },
+    {
+      "bbox": [
+        54.0,
+        340.0158386230469,
+        248.95396423339844,
+        350.5085144042969
+      ],
+      "block_id": "page-0004-block-0016",
+      "order": 16,
+      "text": "Serge Beaulieu, M.D., FRCPC, Ph. D. (physiologie)\n",
+      "text_sha256": "21737888901edcdb37180d613345505689a192584ee69070bdd5f4b1e4d2ee87"
+    },
+    {
+      "bbox": [
+        54.0,
+        354.5158386230469,
+        199.34750366210938,
+        365.0085144042969
+      ],
+      "block_id": "page-0004-block-0017",
+      "order": 17,
+      "text": "Kim Bédard-Charrette, M.D., FRCPC\n",
+      "text_sha256": "c9c211f7c98ddb3c86f2a20539599b3948b623aff183b5e0d71b8b21fe4432fd"
+    },
+    {
+      "bbox": [
+        54.0,
+        369.0158386230469,
+        164.0550079345703,
+        379.5085144042969
+      ],
+      "block_id": "page-0004-block-0018",
+      "order": 18,
+      "text": "Manon Bélair, M.D., FRCPC\n",
+      "text_sha256": "b7e6fe1f213039262aa5ffeebb9ba68485078eea6febe9dfbaff670baf9933ae"
+    },
+    {
+      "bbox": [
+        54.0,
+        383.5158386230469,
+        260.4789733886719,
+        405.5085144042969
+      ],
+      "block_id": "page-0004-block-0019",
+      "order": 19,
+      "text": "Michèle Bélanger, M.D., FRCPC, M. Sc. (physiologie-\nbiochimie)\n",
+      "text_sha256": "8463e88506164b264509b8bf29f9e92604f583337a347505ca43b3d925bd1419"
+    },
+    {
+      "bbox": [
+        54.0,
+        409.5158386230469,
+        220.0364532470703,
+        420.0085144042969
+      ],
+      "block_id": "page-0004-block-0020",
+      "order": 20,
+      "text": "Marie-Claude Bélisle, M.D., FRCPC, T.C.F.\n",
+      "text_sha256": "3da2cd346809640443435a575887d34ea69222a233fa8e72e2eb5e0ce829bbd8"
+    },
+    {
+      "bbox": [
+        54.0,
+        424.0158386230469,
+        195.8607635498047,
+        434.5085144042969
+      ],
+      "block_id": "page-0004-block-0021",
+      "order": 21,
+      "text": "Sylvie Belleville, Ph. D. (psychologie)\n",
+      "text_sha256": "3ec11dc17457f6827dc6a9eb00c57e2802f3414a61e8b18f9152d88f480c7bf1"
+    },
+    {
+      "bbox": [
+        54.0,
+        438.5158386230469,
+        178.46900939941406,
+        449.0085144042969
+      ],
+      "block_id": "page-0004-block-0022",
+      "order": 22,
+      "text": "Nicolas Bergeron, M.D., FRCPC\n",
+      "text_sha256": "c44a5b2efedf6c7aedab090c3f7587992593de73e1e429c73cca0cbc43e09225"
+    },
+    {
+      "bbox": [
+        54.0,
+        453.0158386230469,
+        171.29525756835938,
+        463.5085144042969
+      ],
+      "block_id": "page-0004-block-0023",
+      "order": 23,
+      "text": "Jacques Bernier, M.D., FRCPC\n",
+      "text_sha256": "45a9b3d3c2775e10df9d4ea1c12e4a76374400a28be19aa3c9592756697af2c8"
+    },
+    {
+      "bbox": [
+        54.0,
+        467.5158386230469,
+        182.34249877929688,
+        478.0085144042969
+      ],
+      "block_id": "page-0004-block-0024",
+      "order": 24,
+      "text": "Christiane Bertelli, M.D., FRCPC\n",
+      "text_sha256": "e3761262e38e03bf71c59ab7d314876d60951203eeb70ba650bec18ec0f4df97"
+    },
+    {
+      "bbox": [
+        54.0,
+        482.0158386230469,
+        194.9744873046875,
+        492.5085144042969
+      ],
+      "block_id": "page-0004-block-0025",
+      "order": 25,
+      "text": "Félix-Antoine Bérubé, M.D., FRCPC\n",
+      "text_sha256": "c709527cdbecbdf08ffb8022b45e33f3a7281e7a3c4d67ab529a2cfef25b2dfc"
+    },
+    {
+      "bbox": [
+        54.0,
+        496.5158386230469,
+        252.3383331298828,
+        507.0085144042969
+      ],
+      "block_id": "page-0004-block-0026",
+      "order": 26,
+      "text": "Louise Blais, Ph. D. (sciences humaines appliquées)\n",
+      "text_sha256": "32e8c66841407f65032adce837379c0b05ce61de94ce453a205de744312605dc"
+    },
+    {
+      "bbox": [
+        54.0,
+        511.01580810546875,
+        206.51268005371094,
+        521.5084838867188
+      ],
+      "block_id": "page-0004-block-0027",
+      "order": 27,
+      "text": "Claude Blondeau, M.D., FRCPC, M. Ps.\n",
+      "text_sha256": "7bf788ed459ddeda032a29b7ce3dcde0315e0bb3926218a1c4bafae01f228e6d"
+    },
+    {
+      "bbox": [
+        54.0,
+        525.5158081054688,
+        141.12289428710938,
+        536.0084838867188
+      ],
+      "block_id": "page-0004-block-0028",
+      "order": 28,
+      "text": "Bernard Boileau, M.D.\n",
+      "text_sha256": "a84970538cba27ca3c5800769b9e5201af7d467b041386cbb8d623e293289307"
+    },
+    {
+      "bbox": [
+        54.0,
+        540.0158081054688,
+        170.79049682617188,
+        550.5084838867188
+      ],
+      "block_id": "page-0004-block-0029",
+      "order": 29,
+      "text": "Johanne Boivin, M.D., FRCPC\n",
+      "text_sha256": "27e4f44870cce357983365980317a685f2ab3d4dedb9acc690bced4af73f1026"
+    },
+    {
+      "bbox": [
+        54.0,
+        554.5158081054688,
+        168.4820098876953,
+        565.0084838867188
+      ],
+      "block_id": "page-0004-block-0030",
+      "order": 30,
+      "text": "Michel Bolduc, M.D., FRCPC\n",
+      "text_sha256": "a258faad78dbdec62c89818fc39cece376796d8cf63fa30dfff341bdcd44d7fe"
+    },
+    {
+      "bbox": [
+        54.0,
+        569.0658569335938,
+        285.66448974609375,
+        579.5585327148438
+      ],
+      "block_id": "page-0004-block-0031",
+      "order": 31,
+      "text": "François Borgeat, M.D., FRCPC, M. Sc. (psychophysiologie)\n",
+      "text_sha256": "7c137b864fa6a17b084f7be6eef7ef9aeccd0a33b7cb3a6731c241a206b4cec9"
+    },
+    {
+      "bbox": [
+        54.0,
+        583.5658569335938,
+        216.0234375,
+        594.0585327148438
+      ],
+      "block_id": "page-0004-block-0032",
+      "order": 32,
+      "text": "Maurice Boudreault, M.D., CSPQ, LMCC\n",
+      "text_sha256": "578d37ad338ebe3bb65aa271c16c9c28f5210f9865c40eef0546d0e05d921438"
+    },
+    {
+      "bbox": [
+        54.0,
+        598.0658569335938,
+        207.6600799560547,
+        608.5585327148438
+      ],
+      "block_id": "page-0004-block-0033",
+      "order": 33,
+      "text": "Donald Bouthillier, Ph. D. (psychologie)\n",
+      "text_sha256": "a2cdc1c31675ce3b316cb5a3603351d31dc4612d473d4aa7875523d311bb83a8"
+    },
+    {
+      "bbox": [
+        54.0,
+        612.5658569335938,
+        201.4917449951172,
+        623.0585327148438
+      ],
+      "block_id": "page-0004-block-0034",
+      "order": 34,
+      "text": "Richard Boyer, Ph. D. (santé publique)\n",
+      "text_sha256": "f2bf251b8e9ae9f2230abd6fee672aa6e40eaf20d934b078777779bd33172d56"
+    },
+    {
+      "bbox": [
+        54.0,
+        627.0658569335938,
+        138.3008270263672,
+        637.5585327148438
+      ],
+      "block_id": "page-0004-block-0035",
+      "order": 35,
+      "text": "Michel Brabant, M.D.\n",
+      "text_sha256": "e57c4e592efd0613bde12ae58451acc0f579c73331de82b62cc0f7e6f21b1857"
+    },
+    {
+      "bbox": [
+        54.0,
+        641.5658569335938,
+        195.69302368164062,
+        652.0585327148438
+      ],
+      "block_id": "page-0004-block-0036",
+      "order": 36,
+      "text": "Pierre Brassard, M. Ps. (psychologie)\n",
+      "text_sha256": "a9627dd016cceeb2ad5b43cd056c7dc133e6c288804317ea7891683e4075863e"
+    },
+    {
+      "bbox": [
+        54.0,
+        656.0658569335938,
+        296.934814453125,
+        666.5585327148438
+      ],
+      "block_id": "page-0004-block-0037",
+      "order": 37,
+      "text": "Véronique Brazzini-Poisson, M.D., M. Sc. (sciences biomédicales)\n",
+      "text_sha256": "0a59131ba5fc596a255eee054d7fbbb4cdca731422282715afbf7538eb42c145"
+    },
+    {
+      "bbox": [
+        54.0,
+        670.5658569335938,
+        269.03387451171875,
+        681.0585327148438
+      ],
+      "block_id": "page-0004-block-0038",
+      "order": 38,
+      "text": "Suzanne Brissette, M.D., M. Sc. (sciences biomédicales)\n",
+      "text_sha256": "6338e1b22f89c022d5447f605f70e559d207b46803b7edaa9ca017b29737b2f1"
+    },
+    {
+      "bbox": [
+        54.0,
+        685.0658569335938,
+        219.0105438232422,
+        695.5585327148438
+      ],
+      "block_id": "page-0004-block-0039",
+      "order": 39,
+      "text": "Anick Brisson, M. Ps., Ph. D. (psychologie)\n",
+      "text_sha256": "ddcd327769c447f351c53b6ff5ad8f5e3cf698f3dcd4ce96fbeb3fcffe8d2590"
+    },
+    {
+      "bbox": [
+        312.0,
+        238.5158233642578,
+        519.09033203125,
+        249.0084991455078
+      ],
+      "block_id": "page-0004-block-0040",
+      "order": 40,
+      "text": "Chantal Caron, M.D., FRCPC, M. Sc. (épidémiologie)\n",
+      "text_sha256": "2b7bd5eb44311a487aa193bc7b8d6c5ca471d00299dbb378a337e46e9742082f"
+    },
+    {
+      "bbox": [
+        312.0,
+        253.11581420898438,
+        417.5447692871094,
+        263.6084899902344
+      ],
+      "block_id": "page-0004-block-0041",
+      "order": 41,
+      "text": "Félix Carrier, M.D., FRCPC\n",
+      "text_sha256": "85799a597031e873a83cc5a1b2297fd958afca43d06b747f1d70ead8b1d6f911"
+    },
+    {
+      "bbox": [
+        312.0,
+        267.7158203125,
+        396.85150146484375,
+        278.20849609375
+      ],
+      "block_id": "page-0004-block-0042",
+      "order": 42,
+      "text": "Hélène Carrier, LL. B.\n",
+      "text_sha256": "c3cafa992ee2038b4580e2baf8f23e20b0503c10b66d2d7cebb18b439bed5747"
+    },
+    {
+      "bbox": [
+        312.0,
+        282.3158264160156,
+        485.0543212890625,
+        292.8085021972656
+      ],
+      "block_id": "page-0004-block-0043",
+      "order": 43,
+      "text": "Yvon Chagnon, Ph. D. (biologie moléculaire)\n",
+      "text_sha256": "2d6082b108976a49124c52bde2854cfb20c8fb94fccbc33be63de3ded175c40d"
+    },
+    {
+      "bbox": [
+        312.0,
+        296.91583251953125,
+        436.71826171875,
+        307.40850830078125
+      ],
+      "block_id": "page-0004-block-0044",
+      "order": 44,
+      "text": "Laury Chamelian, M.D., FRCPC\n",
+      "text_sha256": "6fe3e0cbbbcf9fa41faf333c53699b3dfcb3aea578f674c8d1e0f0e31da7dec3"
+    },
+    {
+      "bbox": [
+        312.0,
+        311.5158386230469,
+        434.50360107421875,
+        322.0085144042969
+      ],
+      "block_id": "page-0004-block-0045",
+      "order": 45,
+      "text": "Florence Chanut, M.D., FRCPC\n",
+      "text_sha256": "1ad4a13816ceb9eed3e12aab23ab0e48c9a2f0c33683c25ea56d5db8ed782cb5"
+    },
+    {
+      "bbox": [
+        312.0,
+        326.1158142089844,
+        434.10296630859375,
+        336.6084899902344
+      ],
+      "block_id": "page-0004-block-0046",
+      "order": 46,
+      "text": "Maryse Charron, M.D., FRCPC\n",
+      "text_sha256": "98b059fd16c9ad55ccdd145fb4dd016772365ca3a5ba9dcab72046e95571651a"
+    },
+    {
+      "bbox": [
+        312.0,
+        340.66583251953125,
+        451.0584716796875,
+        351.15850830078125
+      ],
+      "block_id": "page-0004-block-0047",
+      "order": 47,
+      "text": "Jean-Marc Chianetta, M.D., FRCPC\n",
+      "text_sha256": "41c3389bde04e98576087d474af8b75219bcb2a41a1476bf2f626691772a967f"
+    },
+    {
+      "bbox": [
+        312.0,
+        355.2658386230469,
+        442.7837219238281,
+        365.7585144042969
+      ],
+      "block_id": "page-0004-block-0048",
+      "order": 48,
+      "text": "Marie-Julie Cimon, M.D., FRCPC\n",
+      "text_sha256": "7714adb1325a20c94ea6aac437c6e6215ac0c1ed1143176ba8050ed0232bd1fd"
+    },
+    {
+      "bbox": [
+        312.0,
+        369.8658142089844,
+        554.7556762695312,
+        380.3584899902344
+      ],
+      "block_id": "page-0004-block-0049",
+      "order": 49,
+      "text": "Richard Cloutier, M.D., FRCPC, M. Sc. (sciences biomédicales)\n",
+      "text_sha256": "1c315e1cad4cfb239518e7bb392771edd20ddb7ff6316c58356ec0bcd700df00"
+    },
+    {
+      "bbox": [
+        312.0,
+        384.4658203125,
+        476.94598388671875,
+        394.95849609375
+      ],
+      "block_id": "page-0004-block-0050",
+      "order": 50,
+      "text": "Prometheas Constantinides, M.D., FRCPC\n",
+      "text_sha256": "145b80baa5804ae3367a00b2940297fc0f0318aeae626241fdd5e3322a12ff9a"
+    },
+    {
+      "bbox": [
+        312.0,
+        399.0658264160156,
+        455.8951721191406,
+        409.5585021972656
+      ],
+      "block_id": "page-0004-block-0051",
+      "order": 51,
+      "text": "Hélène Côté, T.C.F., M.A. (sexologie)\n",
+      "text_sha256": "5a49d43073769915af24e22cc266cc987a80affdfd3ed3aa1e81c22f69dec271"
+    },
+    {
+      "bbox": [
+        312.0,
+        413.66583251953125,
+        445.5751037597656,
+        424.15850830078125
+      ],
+      "block_id": "page-0004-block-0052",
+      "order": 52,
+      "text": "Jocelyne Cournoyer, M.D., FRCPC\n",
+      "text_sha256": "209eae1a8f253964af5fc345e823cfbf60addf9b995abccf3c3d7bb8d1f5cda1"
+    },
+    {
+      "bbox": [
+        312.0,
+        428.2658386230469,
+        440.7476501464844,
+        438.7585144042969
+      ],
+      "block_id": "page-0004-block-0053",
+      "order": 53,
+      "text": "Chantal Cyr, Ph. D. (psychologie)\n",
+      "text_sha256": "d31360be5727b43dd906a89fda4a2c226aa2ea262a0afe5125722fbac037270c"
+    },
+    {
+      "bbox": [
+        312.0,
+        442.8658142089844,
+        411.8676452636719,
+        453.3584899902344
+      ],
+      "block_id": "page-0004-block-0054",
+      "order": 54,
+      "text": "Joanne Cyr, M.D., FRCPC\n",
+      "text_sha256": "84be3d16330bdb793cbcb45ff4de498382fc47436fb755c991a08c525db07426"
+    },
+    {
+      "bbox": [
+        312.0,
+        457.4658203125,
+        443.16400146484375,
+        467.95849609375
+      ],
+      "block_id": "page-0004-block-0055",
+      "order": 55,
+      "text": "Andrée Daigneault, M.D., FRCPC\n",
+      "text_sha256": "d68691dc9aef8e1f335abcdf7d5313e49efc9f24eae6b9254ad9907984d51328"
+    },
+    {
+      "bbox": [
+        312.0,
+        472.0158386230469,
+        417.8290100097656,
+        482.5085144042969
+      ],
+      "block_id": "page-0004-block-0056",
+      "order": 56,
+      "text": "Pierre David, M.D., FRCPC\n",
+      "text_sha256": "5d92a7351feb54eab036245ab4d31f52dbdad2479f6bbf3efe689d3f020bcc21"
+    },
+    {
+      "bbox": [
+        312.0,
+        486.6158142089844,
+        550.0280151367188,
+        508.70849609375
+      ],
+      "block_id": "page-0004-block-0057",
+      "order": 57,
+      "text": "Luigi De Benedictis, M.D., FRCPC, AKC, M. Sc. (sciences\nbiomédicales ; mental health service and population research)\n",
+      "text_sha256": "741f50f6c66802e84979a88c1f226d8b4e05aa91cd4edbd889b09b6401b0f69d"
+    },
+    {
+      "bbox": [
+        312.0,
+        512.8158569335938,
+        377.72796630859375,
+        523.3085327148438
+      ],
+      "block_id": "page-0004-block-0058",
+      "order": 58,
+      "text": "Guy Deleu, M.D.\n",
+      "text_sha256": "1d05a02cf553181dfc9af06d97838ff282ced3648240c51375d6660396fac644"
+    },
+    {
+      "bbox": [
+        312.0,
+        527.4158325195312,
+        472.52496337890625,
+        537.9085083007812
+      ],
+      "block_id": "page-0004-block-0059",
+      "order": 59,
+      "text": "Aïcha-Nora Dembri, Ph. D. (psychologie)\n",
+      "text_sha256": "88e1c00cdbb609660009501bb8b206eb142351ba55fec2e578a89bd2956111f8"
+    },
+    {
+      "bbox": [
+        312.0,
+        542.0158081054688,
+        448.75634765625,
+        552.5084838867188
+      ],
+      "block_id": "page-0004-block-0060",
+      "order": 60,
+      "text": "Jean-François Denis, M.D., CRCPC\n",
+      "text_sha256": "2f9ab53cbff1ac01cd7e26abfbac2aa18c0f79042402ec9fe132aca203870bd7"
+    },
+    {
+      "bbox": [
+        312.0,
+        556.6158447265625,
+        472.5841979980469,
+        567.1085205078125
+      ],
+      "block_id": "page-0004-block-0061",
+      "order": 61,
+      "text": "Julie-Anne Denis, M.D., B. Ing., M. Sc. A.\n",
+      "text_sha256": "33c8768de30b1439b4fa4ce9de4611dcf91242c24bebdd2f765e67f4bbb260f6"
+    },
+    {
+      "bbox": [
+        312.0,
+        571.2158203125,
+        426.34906005859375,
+        581.70849609375
+      ],
+      "block_id": "page-0004-block-0062",
+      "order": 62,
+      "text": "Marie Désilets, bibliothécaire\n",
+      "text_sha256": "1f469c2f61ab58d0044584753193e93154d4760cfda788991304f6c367c4a96f"
+    },
+    {
+      "bbox": [
+        312.0,
+        585.8158569335938,
+        515.050537109375,
+        607.8585205078125
+      ],
+      "block_id": "page-0004-block-0063",
+      "order": 63,
+      "text": "Monique Desjardins, M.D., FRCPC, M. Sc. (sciences\nbiomédicales)\n",
+      "text_sha256": "d38383001b397a6a636257d9905d9fc23df7e0fb6addef6ffc5e7c7e6277f7d5"
+    },
+    {
+      "bbox": [
+        312.0,
+        611.9658203125,
+        473.225341796875,
+        622.45849609375
+      ],
+      "block_id": "page-0004-block-0064",
+      "order": 64,
+      "text": "Marc-Simon Drouin, Ph. D. (psychologie)\n",
+      "text_sha256": "52dc55cc4606f8166f844587ab9fb8fe53f489060d683b105791b999e4d529ee"
+    },
+    {
+      "bbox": [
+        312.0,
+        626.5658569335938,
+        445.21832275390625,
+        637.0585327148438
+      ],
+      "block_id": "page-0004-block-0065",
+      "order": 65,
+      "text": "Jean-Luc Dubreucq, M.D., FRCPC\n",
+      "text_sha256": "6d88ef6e9a3b9516ad6696711a1f5370a544e558dbc10d661f3d055376261176"
+    },
+    {
+      "bbox": [
+        312.0,
+        641.1658325195312,
+        464.47430419921875,
+        651.6585083007812
+      ],
+      "block_id": "page-0004-block-0066",
+      "order": 66,
+      "text": "Christiane Dufour, Ph. D. (psychologie)\n",
+      "text_sha256": "117fb4c0ff3193fe4ea1cdbf55d2137e806c6918ee8dc12ccaf56363f8d5328a"
+    },
+    {
+      "bbox": [
+        312.0,
+        655.7658081054688,
+        555.0904541015625,
+        666.2584838867188
+      ],
+      "block_id": "page-0004-block-0067",
+      "order": 67,
+      "text": "Alexandre Dumais, M.D., FRCPC, Ph. D. (sciences biomédicales)\n",
+      "text_sha256": "2834a2fb54bbce5845178147d866e88fe32ed4767012a6e40755853bb39463ac"
+    },
+    {
+      "bbox": [
+        312.0,
+        670.3658447265625,
+        446.973876953125,
+        680.8585205078125
+      ],
+      "block_id": "page-0004-block-0068",
+      "order": 68,
+      "text": "Gilles Dupuis, Ph. D. (psychologie)\n",
+      "text_sha256": "ffa45202cb0a4ee22435b41c860910a5f1ade04c35d0141c7eba7e531e354f47"
+    },
+    {
+      "bbox": [
+        312.0,
+        684.9658203125,
+        536.303955078125,
+        695.45849609375
+      ],
+      "block_id": "page-0004-block-0069",
+      "order": 69,
+      "text": "Marie-Josée Filteau, M.D., FRCPC, M. Sc. (neurobiologie)\n",
+      "text_sha256": "1d92ee3aaac49057e1021d263e657041f434c88596f0d906a506a69e84871f14"
+    }
+  ],
+  "coordinates_sha256": "486bc21fed8de1d2c9ecdf88d7906e23128809b001b13d92c54dcb202d156b15",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0004",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Les auteurs\nSous la direction de :\nPierre Lalonde, M.D., FRCPC, psychiatre, Institut universitaire en santé mentale de Montréal\nGeorges-F. Pinard, M.D., FRCPC, psychiatre, Hôpital Mai sonneuve-Rosemont, Montréal\nResponsable de la section « Traitements biologiques » : Nancy Légaré, B. Pharm., M. Sc., Pharm. D., BCPP, BCPS, pharmacienne,\nInstitut Philippe-Pinel de Montréal\nResponsable de la section « Pédopsychiatrie » : Nathalie Gingras, M.D., FRCPC, M. Sc., psychiatre, fondatrice de Psychatrie de\nl’enfant et de l’adolescent, Centre hospitalier universitaire de Québec\nResponsable de la section « Gérontopsychiatrie » : Isabelle Paquette, M.D., M. Sc., FRCPC, gérontopsychiatre, Institut universitaire\nen santé mentale de Montréal\nAvec la collaboration de :\nAmal Abdel-Baki, M.D., FRCPC, M. Sc. (sciences biomédicales)\nDiane Allaire, Ph. D. (psychologie)\nWendi Arminjon, M.A. (sexologie)\nPierre Assalian, M.D.\nPatrick Barabé, M.D.\nCéline Bard, M.D., FRCPC\nPhilippe Baruch, M.D., M. Sc. (pharmacologie moléculaire)\nSerge Beaulieu, M.D., FRCPC, Ph. D. (physiologie)\nKim Bédard-Charrette, M.D., FRCPC\nManon Bélair, M.D., FRCPC\nMichèle Bélanger, M.D., FRCPC, M. Sc. (physiologie-\nbiochimie)\nMarie-Claude Bélisle, M.D., FRCPC, T.C.F.\nSylvie Belleville, Ph. D. (psychologie)\nNicolas Bergeron, M.D., FRCPC\nJacques Bernier, M.D., FRCPC\nChristiane Bertelli, M.D., FRCPC\nFélix-Antoine Bérubé, M.D., FRCPC\nLouise Blais, Ph. D. (sciences humaines appliquées)\nClaude Blondeau, M.D., FRCPC, M. Ps.\nBernard Boileau, M.D.\nJohanne Boivin, M.D., FRCPC\nMichel Bolduc, M.D., FRCPC\nFrançois Borgeat, M.D., FRCPC, M. Sc. (psychophysiologie)\nMaurice Boudreault, M.D., CSPQ, LMCC\nDonald Bouthillier, Ph. D. (psychologie)\nRichard Boyer, Ph. D. (santé publique)\nMichel Brabant, M.D.\nPierre Brassard, M. Ps. (psychologie)\nVéronique Brazzini-Poisson, M.D., M. Sc. (sciences biomédicales)\nSuzanne Brissette, M.D., M. Sc. (sciences biomédicales)\nAnick Brisson, M. Ps., Ph. D. (psychologie)\nChantal Caron, M.D., FRCPC, M. Sc. (épidémiologie)\nFélix Carrier, M.D., FRCPC\nHélène Carrier, LL. B.\nYvon Chagnon, Ph. D. (biologie moléculaire)\nLaury Chamelian, M.D., FRCPC\nFlorence Chanut, M.D., FRCPC\nMaryse Charron, M.D., FRCPC\nJean-Marc Chianetta, M.D., FRCPC\nMarie-Julie Cimon, M.D., FRCPC\nRichard Cloutier, M.D., FRCPC, M. Sc. (sciences biomédicales)\nPrometheas Constantinides, M.D., FRCPC\nHélène Côté, T.C.F., M.A. (sexologie)\nJocelyne Cournoyer, M.D., FRCPC\nChantal Cyr, Ph. D. (psychologie)\nJoanne Cyr, M.D., FRCPC\nAndrée Daigneault, M.D., FRCPC\nPierre David, M.D., FRCPC\nLuigi De Benedictis, M.D., FRCPC, AKC, M. Sc. (sciences\nbiomédicales ; mental health service and population research)\nGuy Deleu, M.D.\nAïcha-Nora Dembri, Ph. D. (psychologie)\nJean-François Denis, M.D., CRCPC\nJulie-Anne Denis, M.D., B. Ing., M. Sc. A.\nMarie Désilets, bibliothécaire\nMonique Desjardins, M.D., FRCPC, M. Sc. (sciences\nbiomédicales)\nMarc-Simon Drouin, Ph. D. (psychologie)\nJean-Luc Dubreucq, M.D., FRCPC\nChristiane Dufour, Ph. D. (psychologie)\nAlexandre Dumais, M.D., FRCPC, Ph. D. (sciences biomédicales)\nGilles Dupuis, Ph. D. (psychologie)\nMarie-Josée Filteau, M.D., FRCPC, M. Sc. (neurobiologie)\n",
+  "raw_text_sha256": "fe41497857bb16246e2204bdc14a959a7d199d55a0fcd8857f9b0853cca00e19",
+  "source_page_display": 5,
+  "source_page_index": 4
+}

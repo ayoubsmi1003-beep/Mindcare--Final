@@ -1,0 +1,124 @@
+{
+  "block_sequence_sha256": "39a3db7ca5f3938eb49e9625c804f453ea41f488112854accbad5da450cb15c9",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        447.807861328125,
+        758.8693237304688
+      ],
+      "block_id": "page-0045-block-0001",
+      "order": 1,
+      "text": "28\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 1\nIntroduction à la psychiatrie\n",
+      "text_sha256": "c7fae67a3deec70e5c91d0101224727690dc7190973109db9370304c01fc3197"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.24169921875,
+        178.35850524902344
+      ],
+      "block_id": "page-0045-block-0002",
+      "order": 2,
+      "text": "être consignée clairement au dossier. Le médecin doit porter\nattention à la tenue de ses dossiers, tant pour assurer la transmis-\nsion d’informations pertinentes à des collègues que pour attester\ndes observations faites et des actions entreprises en cas de litige.\nCertains conits découlent d’une insatisfaction à propos de la\nrelation médecin-patient ou d’une mauvaise communication.\nLors d’une première consultation, un diagnostic présumé (ou\nl’absence de diagnostic) doit être consigné au dossier ainsi que\nles modalités d’interventions proposées. Les notes n’ont pas\nbesoin d’être très élaborées dans la mesure où elles indiquent\nl’essentiel de la démarche du médecin pour expliciter son obli-\ngation de moyens.\n",
+      "text_sha256": "8078b8bc91d36380e70790564fec8cc47717ef7bbf761ce44203dccdefb75278"
+    },
+    {
+      "bbox": [
+        306.0,
+        188.88682556152344,
+        421.36199951171875,
+        205.02940368652344
+      ],
+      "block_id": "page-0045-block-0003",
+      "order": 3,
+      "text": "2.3.3 Condentialité\n",
+      "text_sha256": "1569a18cb38174edb880d46fe860be2c96f0a72346ee85b8cf2aa4d01cd3556a"
+    },
+    {
+      "bbox": [
+        306.0,
+        208.4158172607422,
+        549.4517211914062,
+        496.2585144042969
+      ],
+      "block_id": "page-0045-block-0004",
+      "order": 4,
+      "text": "Le principe de condentialité remonte au serment d’Hippocrate :\n« Quoi que je voie ou entende dans la société pendant l’exercice ou\nmême hors de l’exercice de ma profession, je tairai ce qui n’a pas\nbesoin d’être divulgué, regardant la discrétion comme un devoir\nen pareil cas. » (Hippocrate, 1994, p. 83) Cette discrétion est à\nla fois une obligation éthique et légale selon l’article 20 du Code\nde déontologie du CMQ, assez explicite sous plusieurs chefs :\n• le devoir de réserve ;\n• s’assurer que le personnel professionnel collabore à cette\ndiscrétion ;\n• une obligation de secret envers l’entourage du patient ;\n• ne pas utiliser cette information au préjudice d’un patient ;\n• ne faire exception que lorsque le patient l’y autorise, lorsque\nl’y contraint la loi ou lorsque l’y oblige la sécurité du patient\nou de son entourage.\nCette condentialité est à la base de la conance sur laquelle\ndoit s’appuyer la relation médecin-patient. Elle protège la vie\nprivée du patient dont le médecin doit avoir connaissance pour\nl’exercice de son art. Elle permet l’honnêteté et la franchise de\nla part du patient. La condentialité s’impose même après la n\nde la relation au médecin et après le décès du patient. Absolue\naux temps anciens, elle est de plus en plus érodée de nos jours\nde divers côtés. La condentialité est soumise à des limites, à\ndes fuites et à des dilemmes éthiques.\n",
+      "text_sha256": "99ca5840a719adb35a2719e392f4c5b4b21247728286fc471de5e88cdde74948"
+    },
+    {
+      "bbox": [
+        306.0,
+        497.3158264160156,
+        549.3526611328125,
+        702.4085083007812
+      ],
+      "block_id": "page-0045-block-0005",
+      "order": 5,
+      "text": "Les limites de la condentialité sont d’abord érodées par la loi qui\ndonne la priorité à l’intérêt public sur l’intérêt individuel. Il existe :\n• des maladies à déclaration obligatoire dans le registre des\nmaladies infectieuses et transmissibles (p. ex., la èvre Ebola,\nla syphilis, la rage, etc.).\n• une obligation de divulguer (duty to warn) des risques immé-\ndiats pour la sécurité de personnes menacées par la dangerosité\nd’un patient qui les cible personnellement ;\n• une obligation de signaler au centre jeunesse les enfants\nrisquant de sourir d’abus ou de mauvais traitements (article 39\ndu Code de déontologie du CMQ) ou de tout groupe de\npersonnes menacées (article 40) ;\n• la possibilité d’être relevé de son secret professionnel par un\njuge de la Cour criminelle.\nCertains organismes publics (p. ex., la Commission de la santé\net la sécurité du travail [CSST]) peuvent avoir accès au dossier\nmédical sans le consentement du patient.\n",
+      "text_sha256": "425831fc9960996790dbe2359f660ab9e99ffd8229e07deb1d90b65bf06b72e2"
+    },
+    {
+      "bbox": [
+        306.0,
+        703.4158325195312,
+        549.2864990234375,
+        725.45849609375
+      ],
+      "block_id": "page-0045-block-0006",
+      "order": 6,
+      "text": "Par ailleurs, cette condentialité est aussi érodée par l’État\nlors de la compilation des données statistiques, malgré l’absence\n",
+      "text_sha256": "c192429076d05d7d2ae4005a45674b755c2dd192f3265ed0a737cdd95c5c9846"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.9658203125,
+        291.55548095703125,
+        463.15850830078125
+      ],
+      "block_id": "page-0045-block-0007",
+      "order": 7,
+      "text": "médecin fasse ici la distinction éthique entre le bien du patient\net le désir du patient ou celui de son substitut. L’autonomie\nlaissée aux enfants dans la décision médicale semble croître : la\nCour suprême du Canada (Canada, 2009) a ainsi statué que les\nenfants mineurs de 12 ans et plus sont en droit de refuser des\nsoins pour des raisons religieuses, s’ils sont jugés assez matures.\n• La décision. Certains patients compétents sont indécis ou am-\nbivalents relativement à une orientation thérapeutique. Certains\nrefusent le traitement. Ce peut être le cas en psychiatrie si un\npatient refuse une hospitalisation ou une intervention. Le mé-\ndecin est obligé de respecter la décision de refus, même si cela\nva à l’encontre de ses convictions ou même du sens commun. Il\ny a alors lieu de proposer des alternatives qui seraient un second\nchoix, quand même acceptable (p. ex., un centre de jour plutôt\nqu’une hospitalisation). Bien sûr, dans une situation d’urgence, il\nest possible d’agir sans le consentement du patient (p. ex., donner\nune médication injectable sédative en cas d’agitation ou rédiger\nune ordonnance de garde provisoire en cas de dangerosité). Sauf\ndans le cas d’une procédure totalement élective, un refus devant\nune indication chirurgicale claire doit amener le médecin à vérier\nce que le patient comprend de sa situation, principalement pour\névaluer s’il se trouve sous l’emprise d’émotions obnubilant son\njugement ou si son refus est fondé sur des valeurs importantes.\nUn aspect important du consentement concerne la recherche\nclinique ou les contraintes inhérentes au système de soins. Le\nmédecin peut être prisonnier d’un conit de loyauté entre l’intérêt\ndu patient et ses propres intérêts. Le contexte et les contraintes\ndoivent être explicités au patient, spécialement lorsqu’il s’agit\nd’une étude à double insu. Kihlbom (2008) appuie la notion d’un\nconsentement éclairé négativement dans la mesure où le patient\ndoit connaître les ns et pas nécessairement tous les moyens pour\ny parvenir ; ceci suppose qu’un lien de conance a été établi avec\nle médecin. En pratique, il s’agit, par exemple, de patients qui\nrefusent de visionner la vidéo de la chirurgie proposée en armant\nqu’ils sont d’accord avec les ns poursuivies par la procédure et qu’ils\nont conance en leur chirurgien quant aux moyens à prendre.\n",
+      "text_sha256": "a9f4ce2aa16934210268b5e96f229d0126a981a9d0099e11a694270b237e7ab6"
+    },
+    {
+      "bbox": [
+        48.0,
+        464.3158264160156,
+        291.4146728515625,
+        702.1585083007812
+      ],
+      "block_id": "page-0045-block-0008",
+      "order": 8,
+      "text": "Les contraintes sont les facteurs limitatifs du consentement.\nDu côté du patient, la limitation du refus de traitement existe dans\ncertaines conditions. Deux de ces contraintes sont plus manifestes :\n• la loi permet d’isoler contre sa volonté le patient contagieux qui\nrefuse le traitement, risquant ainsi de contaminer son entourage ;\n• il est possible de garder en établissement contre sa volonté le\npatient qui refuse le traitement alors qu’il présente une psy-\nchopathologie qui met en danger sa sécurité ou celle d’autrui.\nDu côté du médecin, le refus de traitement implique une décision\nmédicale de ne plus procéder, car c’est le désir du patient ou de\nsa famille, même s’il juge la décision inappropriée. Dans ce cas, il\ns’agit de laisser susamment de temps pour rendre plus évidente\nl’inéluctabilité d’une évolution défavorable et pour que diminue\nl’écart entre la position du patient et celle du médecin. En cas de\nconit ouvert ou d’opinions divergentes entre les soignants, il est\nutile d’en appeler à un comité d’éthique. Ces enjeux débouchent\nainsi sur une dimension éthique fondée sur la dimension inter-\npersonnelle de la relation médecin-patient : au premier chef, les\nquestions enchevêtrées, et étymologiquement identiques, de la\ncondentialité avec celles de la conance et des attentes.\n",
+      "text_sha256": "f7bffb644c12e032dcf73e57c276480b448b723f9a26c27fd7853bb5347a54bb"
+    },
+    {
+      "bbox": [
+        48.0,
+        703.3158569335938,
+        291.1177062988281,
+        725.45849609375
+      ],
+      "block_id": "page-0045-block-0009",
+      "order": 9,
+      "text": "L’article 21 du Code de déontologie du Collège des médecins\ndu Québec (CMQ) précise que chacune de ces contingences doit\n",
+      "text_sha256": "3263e3aac7482c90f5534ce7a863d35bfe95a982d52d07af1cf90f383284e76f"
+    }
+  ],
+  "coordinates_sha256": "4f63b7e620a1708072a73fbac924a66004e9c7d898b67a85556cc96e4c8df9bc",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0045",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "28\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 1\nIntroduction à la psychiatrie\nêtre consignée clairement au dossier. Le médecin doit porter\nattention à la tenue de ses dossiers, tant pour assurer la transmis-\nsion d’informations pertinentes à des collègues que pour attester\ndes observations faites et des actions entreprises en cas de litige.\nCertains conits découlent d’une insatisfaction à propos de la\nrelation médecin-patient ou d’une mauvaise communication.\nLors d’une première consultation, un diagnostic présumé (ou\nl’absence de diagnostic) doit être consigné au dossier ainsi que\nles modalités d’interventions proposées. Les notes n’ont pas\nbesoin d’être très élaborées dans la mesure où elles indiquent\nl’essentiel de la démarche du médecin pour expliciter son obli-\ngation de moyens.\n2.3.3 Condentialité\nLe principe de condentialité remonte au serment d’Hippocrate :\n« Quoi que je voie ou entende dans la société pendant l’exercice ou\nmême hors de l’exercice de ma profession, je tairai ce qui n’a pas\nbesoin d’être divulgué, regardant la discrétion comme un devoir\nen pareil cas. » (Hippocrate, 1994, p. 83) Cette discrétion est à\nla fois une obligation éthique et légale selon l’article 20 du Code\nde déontologie du CMQ, assez explicite sous plusieurs chefs :\n• le devoir de réserve ;\n• s’assurer que le personnel professionnel collabore à cette\ndiscrétion ;\n• une obligation de secret envers l’entourage du patient ;\n• ne pas utiliser cette information au préjudice d’un patient ;\n• ne faire exception que lorsque le patient l’y autorise, lorsque\nl’y contraint la loi ou lorsque l’y oblige la sécurité du patient\nou de son entourage.\nCette condentialité est à la base de la conance sur laquelle\ndoit s’appuyer la relation médecin-patient. Elle protège la vie\nprivée du patient dont le médecin doit avoir connaissance pour\nl’exercice de son art. Elle permet l’honnêteté et la franchise de\nla part du patient. La condentialité s’impose même après la n\nde la relation au médecin et après le décès du patient. Absolue\naux temps anciens, elle est de plus en plus érodée de nos jours\nde divers côtés. La condentialité est soumise à des limites, à\ndes fuites et à des dilemmes éthiques.\nLes limites de la condentialité sont d’abord érodées par la loi qui\ndonne la priorité à l’intérêt public sur l’intérêt individuel. Il existe :\n• des maladies à déclaration obligatoire dans le registre des\nmaladies infectieuses et transmissibles (p. ex., la èvre Ebola,\nla syphilis, la rage, etc.).\n• une obligation de divulguer (duty to warn) des risques immé-\ndiats pour la sécurité de personnes menacées par la dangerosité\nd’un patient qui les cible personnellement ;\n• une obligation de signaler au centre jeunesse les enfants\nrisquant de sourir d’abus ou de mauvais traitements (article 39\ndu Code de déontologie du CMQ) ou de tout groupe de\npersonnes menacées (article 40) ;\n• la possibilité d’être relevé de son secret professionnel par un\njuge de la Cour criminelle.\nCertains organismes publics (p. ex., la Commission de la santé\net la sécurité du travail [CSST]) peuvent avoir accès au dossier\nmédical sans le consentement du patient.\nPar ailleurs, cette condentialité est aussi érodée par l’État\nlors de la compilation des données statistiques, malgré l’absence\nmédecin fasse ici la distinction éthique entre le bien du patient\net le désir du patient ou celui de son substitut. L’autonomie\nlaissée aux enfants dans la décision médicale semble croître : la\nCour suprême du Canada (Canada, 2009) a ainsi statué que les\nenfants mineurs de 12 ans et plus sont en droit de refuser des\nsoins pour des raisons religieuses, s’ils sont jugés assez matures.\n• La décision. Certains patients compétents sont indécis ou am-\nbivalents relativement à une orientation thérapeutique. Certains\nrefusent le traitement. Ce peut être le cas en psychiatrie si un\npatient refuse une hospitalisation ou une intervention. Le mé-\ndecin est obligé de respecter la décision de refus, même si cela\nva à l’encontre de ses convictions ou même du sens commun. Il\ny a alors lieu de proposer des alternatives qui seraient un second\nchoix, quand même acceptable (p. ex., un centre de jour plutôt\nqu’une hospitalisation). Bien sûr, dans une situation d’urgence, il\nest possible d’agir sans le consentement du patient (p. ex., donner\nune médication injectable sédative en cas d’agitation ou rédiger\nune ordonnance de garde provisoire en cas de dangerosité). Sauf\ndans le cas d’une procédure totalement élective, un refus devant\nune indication chirurgicale claire doit amener le médecin à vérier\nce que le patient comprend de sa situation, principalement pour\névaluer s’il se trouve sous l’emprise d’émotions obnubilant son\njugement ou si son refus est fondé sur des valeurs importantes.\nUn aspect important du consentement concerne la recherche\nclinique ou les contraintes inhérentes au système de soins. Le\nmédecin peut être prisonnier d’un conit de loyauté entre l’intérêt\ndu patient et ses propres intérêts. Le contexte et les contraintes\ndoivent être explicités au patient, spécialement lorsqu’il s’agit\nd’une étude à double insu. Kihlbom (2008) appuie la notion d’un\nconsentement éclairé négativement dans la mesure où le patient\ndoit connaître les ns et pas nécessairement tous les moyens pour\ny parvenir ; ceci suppose qu’un lien de conance a été établi avec\nle médecin. En pratique, il s’agit, par exemple, de patients qui\nrefusent de visionner la vidéo de la chirurgie proposée en armant\nqu’ils sont d’accord avec les ns poursuivies par la procédure et qu’ils\nont conance en leur chirurgien quant aux moyens à prendre.\nLes contraintes sont les facteurs limitatifs du consentement.\nDu côté du patient, la limitation du refus de traitement existe dans\ncertaines conditions. Deux de ces contraintes sont plus manifestes :\n• la loi permet d’isoler contre sa volonté le patient contagieux qui\nrefuse le traitement, risquant ainsi de contaminer son entourage ;\n• il est possible de garder en établissement contre sa volonté le\npatient qui refuse le traitement alors qu’il présente une psy-\nchopathologie qui met en danger sa sécurité ou celle d’autrui.\nDu côté du médecin, le refus de traitement implique une décision\nmédicale de ne plus procéder, car c’est le désir du patient ou de\nsa famille, même s’il juge la décision inappropriée. Dans ce cas, il\ns’agit de laisser susamment de temps pour rendre plus évidente\nl’inéluctabilité d’une évolution défavorable et pour que diminue\nl’écart entre la position du patient et celle du médecin. En cas de\nconit ouvert ou d’opinions divergentes entre les soignants, il est\nutile d’en appeler à un comité d’éthique. Ces enjeux débouchent\nainsi sur une dimension éthique fondée sur la dimension inter-\npersonnelle de la relation médecin-patient : au premier chef, les\nquestions enchevêtrées, et étymologiquement identiques, de la\ncondentialité avec celles de la conance et des attentes.\nL’article 21 du Code de déontologie du Collège des médecins\ndu Québec (CMQ) précise que chacune de ces contingences doit\n",
+  "raw_text_sha256": "6e856ed85f1a30bc07dab296656f65618d26d93daf25a96184b0b68caac39265",
+  "source_page_display": 46,
+  "source_page_index": 45
+}

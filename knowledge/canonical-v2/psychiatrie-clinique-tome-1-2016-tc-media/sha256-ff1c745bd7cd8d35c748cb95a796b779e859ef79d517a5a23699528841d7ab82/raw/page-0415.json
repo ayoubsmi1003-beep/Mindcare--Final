@@ -1,0 +1,328 @@
+{
+  "block_sequence_sha256": "45aaf4711cef902b2ad06ffc736236e0123b2045b0e9c8ec8f901b7c0520f0b1",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0415-block-0001",
+      "order": 1,
+      "text": "398\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "18f9a47fec9f761552f96312291ec8ff643e01cd8b7f06471beb10ecc43b168b"
+    },
+    {
+      "bbox": [
+        50.25,
+        41.002296447753906,
+        370.3931884765625,
+        53.320068359375
+      ],
+      "block_id": "page-0415-block-0002",
+      "order": 2,
+      "text": "TABLEAU 19.1 Critères diagnostiques du trouble dépressif caractérisé (majeur)\n",
+      "text_sha256": "f41e062b7fe8966ddefee408bab0ade9f23f4a8ce0bca1debbadb90411a9d4ad"
+    },
+    {
+      "bbox": [
+        143.10000610351562,
+        58.27412414550781,
+        492.98199462890625,
+        81.60029602050781
+      ],
+      "block_id": "page-0415-block-0003",
+      "order": 3,
+      "text": "DSM-5\nDSM-IV-TR\nTrouble dépressif caractérisé\nÉpisode dépressif majeur\n",
+      "text_sha256": "967cd5554e6675c26c7340af6dcfa927c23d6ca0477ab683e6264ada7f3164b6"
+    },
+    {
+      "bbox": [
+        52.25,
+        87.95195770263672,
+        329.96099853515625,
+        97.77812957763672
+      ],
+      "block_id": "page-0415-block-0004",
+      "order": 4,
+      "text": "Sévérité/évolution\nÉpisode isolé\nÉpisode récurrent\n",
+      "text_sha256": "24faca8e28aea081af3fc45a577df20f3e5dcf953c7b3943077821ae1a69dc29"
+    },
+    {
+      "bbox": [
+        52.25,
+        105.55195617675781,
+        163.52362060546875,
+        175.3781280517578
+      ],
+      "block_id": "page-0415-block-0005",
+      "order": 5,
+      "text": "Léger\nMoyen\nGrave\nAvec caractéristiques psychotiques\nEn rémission partielle\nEn rémission complète\nNon spécié\n",
+      "text_sha256": "498d7d37b9863db5c53013eb96e40a8c45944b39e21b6c4c27f6acf0c821ba31"
+    },
+    {
+      "bbox": [
+        200.0,
+        105.55195617675781,
+        248.9600067138672,
+        175.3781280517578
+      ],
+      "block_id": "page-0415-block-0006",
+      "order": 6,
+      "text": "296.21 (F32.0)\n296.22 (F32.1)\n296.23 (F32.2)\n296.24 (F32.3)\n296.25 (F32.4)\n296.26 (F32.5)\n296.20 (F32.9)\n",
+      "text_sha256": "5bb739dc6003452aa8625d4b77db9649b59d11765433b52485abdabeab647bd5"
+    },
+    {
+      "bbox": [
+        273.8999938964844,
+        105.55195617675781,
+        327.17999267578125,
+        175.3781280517578
+      ],
+      "block_id": "page-0415-block-0007",
+      "order": 7,
+      "text": "296.31 (F33.0)\n296.32 (F33.1)\n296.33 (F33.2)\n296.34 (F33.3)\n296.35 (F33.41)\n296.36 (F33.42)\n296.30 (F33.9)\n",
+      "text_sha256": "bf018880776905c7ba8487891bbda03fdf7140193c9f41934903f2c2b1076acf"
+    },
+    {
+      "bbox": [
+        52.25,
+        179.9519500732422,
+        255.51739501953125,
+        281.77813720703125
+      ],
+      "block_id": "page-0415-block-0008",
+      "order": 8,
+      "text": "Spécier:\nAvec détresse anxieuse\nAvec caractéristiques mixtes\nAvec caractéristiques mélancoliques\nAvec caractéristiques atypiques\nAvec caractéristiques psychotiques congruentes à l’humeur\nAvec caractéristiques psychotiques non congruentes à l’humeur\nAvec catatonie\nAvec début dans le péripartum\nAvec caractère saisonnier (épisodes récurrents seulement)\n",
+      "text_sha256": "ed64669c133e2b8e6f7f7ba654eb3401abf60ede58a515c8c4f7ea552f1ebf45"
+    },
+    {
+      "bbox": [
+        48.25,
+        286.59063720703125,
+        538.7472534179688,
+        354.32501220703125
+      ],
+      "block_id": "page-0415-block-0009",
+      "order": 9,
+      "text": "Sources : APA (2015), p. 188-190 ; APA (2004), p. 411-412.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guel et al., Elsevier Masson SAS, Paris, 2004.\nAll rights reserved.\n",
+      "text_sha256": "b81e1ff2d188383b3d2e130eba078a945ecc4707ae1b9da2d7565c66395ff42a"
+    },
+    {
+      "bbox": [
+        372.0,
+        41.05229568481445,
+        397.6842346191406,
+        53.02006912231445
+      ],
+      "block_id": "page-0415-block-0010",
+      "order": 10,
+      "text": "(suite)\n",
+      "text_sha256": "c684d6dbcdfd50f0ada227f799b5c0fb30e817ac3da61b4cbf208decde7f907b"
+    },
+    {
+      "bbox": [
+        50.25,
+        374.7522888183594,
+        278.3937072753906,
+        387.070068359375
+      ],
+      "block_id": "page-0415-block-0011",
+      "order": 11,
+      "text": "TABLEAU 19.2 Comparaison du deuil et de la dépression\n",
+      "text_sha256": "266bff5c8e1e80f278810ea69425ab5d09874af5ef29c325392120143d9bba35"
+    },
+    {
+      "bbox": [
+        66.0999984741211,
+        393.0241394042969,
+        470.8119812011719,
+        403.6003112792969
+      ],
+      "block_id": "page-0415-block-0012",
+      "order": 12,
+      "text": "Symptômes\nDeuil\nDépression\n",
+      "text_sha256": "e0bb91d1414bd8a18ac743ccf639bc61c86a8d7974a212da1fb8f4d9fc8cd469"
+    },
+    {
+      "bbox": [
+        52.25,
+        407.95196533203125,
+        540.1943359375,
+        427.77813720703125
+      ],
+      "block_id": "page-0415-block-0013",
+      "order": 13,
+      "text": "Affects prédominants\nSentiments de vide et de perte\nHumeur dépressive persistante et incapacité à anticiper la\njoie ou le plaisir\n",
+      "text_sha256": "0882274dde32e53c64260e94713a3e78530a7fc05763134fc4539e09c1c4ee94"
+    },
+    {
+      "bbox": [
+        52.25,
+        432.4019470214844,
+        112.33009338378906,
+        452.2281188964844
+      ],
+      "block_id": "page-0415-block-0014",
+      "order": 14,
+      "text": "Dysphorie, humeur\ndépressive\n",
+      "text_sha256": "a1a911e7edde38e311cd029b795d62c5fa54a3db832142fb0ab87009e0eab909"
+    },
+    {
+      "bbox": [
+        131.0,
+        432.4019470214844,
+        348.2563781738281,
+        462.2281188964844
+      ],
+      "block_id": "page-0415-block-0015",
+      "order": 15,
+      "text": "Diminue habituellement en intensité au l des jours et des semaines\net survient par vagues. Ces vagues sont habituellement associées à\ndes pensées relatives à la personne décédée et à ce qui la rappelle.\n",
+      "text_sha256": "c4ad093134a2a1ab6cf08825c7357b09ac3c9b3f3a4a2e77526c2db103d30615"
+    },
+    {
+      "bbox": [
+        356.0,
+        432.4019470214844,
+        535.506591796875,
+        452.2281188964844
+      ],
+      "block_id": "page-0415-block-0016",
+      "order": 16,
+      "text": "Persistante et non liée à des pensées ou préoccupations\nspéciques\n",
+      "text_sha256": "7f0615635fc6195e5072e00360337805a33a6b043b32a2691563e7cdef55c837"
+    },
+    {
+      "bbox": [
+        52.25,
+        466.8019714355469,
+        479.7074279785156,
+        476.6281433105469
+      ],
+      "block_id": "page-0415-block-0017",
+      "order": 17,
+      "text": "Douleur, souffrance\nPeut être accompagnée par des émotions et une humeur positives.\nTristesse foncière et grande souffrance\n",
+      "text_sha256": "9595c76284d726adff7731e19e2017a8a644f3ebb7e70beb0c29260636210f78"
+    },
+    {
+      "bbox": [
+        52.25,
+        481.251953125,
+        485.8570556640625,
+        491.078125
+      ],
+      "block_id": "page-0415-block-0018",
+      "order": 18,
+      "text": "Contenu des pensées\nPensées et souvenirs concernant la personne décédée\nRuminations pessimistes et autocritiques\n",
+      "text_sha256": "8f6413c55c002d5369b8c27df14b59ca652b83a5b6bf33ced76c045f8aa0a21d"
+    },
+    {
+      "bbox": [
+        52.25,
+        495.6519470214844,
+        542.7005615234375,
+        505.4781188964844
+      ],
+      "block_id": "page-0415-block-0019",
+      "order": 19,
+      "text": "Estime de soi\nHabituellement préservée\nSentiments de dévalorisation et de mépris de soi fréquents\n",
+      "text_sha256": "f6f102f2b61a37d0a83b7ab4d751d28993cc04cc7645a7eab2dd02c940b38788"
+    },
+    {
+      "bbox": [
+        52.25,
+        510.10198974609375,
+        347.5650939941406,
+        549.9281616210938
+      ],
+      "block_id": "page-0415-block-0020",
+      "order": 20,
+      "text": "Autodépréciation\nSi l’autodépréciation est présente, elle concerne habituellement des\nsentiments d’échec vis-à-vis de la personne décédée (p. ex., ne pas\nlui avoir sufsamment rendu visite, ne pas lui avoir sufsamment dit\ncombien il ou elle l’aimait).\n",
+      "text_sha256": "d5f43079c6b679f833fab1b0f2ec15e9804225238a0d4582c03b80f64cbb3db8"
+    },
+    {
+      "bbox": [
+        52.25,
+        554.501953125,
+        335.2297058105469,
+        574.328125
+      ],
+      "block_id": "page-0415-block-0021",
+      "order": 21,
+      "text": "Idées de mort\nHabituellement liées à la personne décédée et à la possibilité de\nla rejoindre\n",
+      "text_sha256": "199d9246b7198ef3567d3c674a257490c119205df6bff2d876bcd78893921b00"
+    },
+    {
+      "bbox": [
+        356.0,
+        554.501953125,
+        528.68408203125,
+        584.328125
+      ],
+      "block_id": "page-0415-block-0022",
+      "order": 22,
+      "text": "Centrées sur la possibilité de mettre n à ses jours, à\ncause de sentiments de dévalorisation, d’indi gnité ou\nd’incapacité à faire face à la douleur de la dépression.\n",
+      "text_sha256": "f797d10e8971937aea90eca7809b3ef0adcc1fb342453c9a760768e5bfba2f46"
+    },
+    {
+      "bbox": [
+        48.25,
+        589.140625,
+        138.14016723632812,
+        598.0088500976562
+      ],
+      "block_id": "page-0415-block-0023",
+      "order": 23,
+      "text": "Source : Adapté de APA (2015).\n",
+      "text_sha256": "10c618e9758e00322778f24a7119d87f58804a6778570287350175b6d51f9c9c"
+    },
+    {
+      "bbox": [
+        48.25,
+        604.140625,
+        529.4806518554688,
+        630.875
+      ],
+      "block_id": "page-0415-block-0024",
+      "order": 24,
+      "text": "Traduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\n",
+      "text_sha256": "d1e2a281d01f1237f716bfb933581f8135592b601f1b1579862a0656634f5460"
+    },
+    {
+      "bbox": [
+        48.0,
+        657.2658081054688,
+        291.187255859375,
+        725.2584838867188
+      ],
+      "block_id": "page-0415-block-0025",
+      "order": 25,
+      "text": "plus exhaustive des décits cognitifs accompagnant la dépression.\nEn général, on observe chez le patient dépressif une diminu-\ntion de la vitesse de traitement de l’information, des dicultés\nattentionnelles et de concentration, ainsi que des troubles de\nla mémoire de rappel. Lorsque la dépression est associée à des\natteintes de la matière blanche sous-corticale (p. ex., lacunes,\n",
+      "text_sha256": "4aa08373ed1a50f31c073842a3a0ca195fb04f6d7c925637bdf309ab048b71fa"
+    },
+    {
+      "bbox": [
+        306.0,
+        657.2658081054688,
+        549.4591064453125,
+        725.2584838867188
+      ],
+      "block_id": "page-0415-block-0026",
+      "order": 26,
+      "text": "leucoaraiose périventriculaire), on note souvent des dicultés\nau niveau des fonctions exécutives. Pour être considérés comme\nsecondaires à la dépression, ces décits doivent être apparus et se\nrésorber en même temps que les symptômes dépressifs. D’autres\ndécits cognitifs (trouble du langage, apraxie, agnosie) doivent\nmener à l’évaluation d’un syndrome démentiel, car ils ne font\n",
+      "text_sha256": "a9768f82e4b2907425e22dcef74eebfdd2556cbd4bd279ffd7527862da3cf2f7"
+    }
+  ],
+  "coordinates_sha256": "3aa2543232e8a75e4faf7f946d1b6a23b9fe6a481111555d7bfbc5e10965bbf2",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0415",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "398\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nTABLEAU 19.1 Critères diagnostiques du trouble dépressif caractérisé (majeur)\nDSM-5\nDSM-IV-TR\nTrouble dépressif caractérisé\nÉpisode dépressif majeur\nSévérité/évolution\nÉpisode isolé\nÉpisode récurrent\nLéger\nMoyen\nGrave\nAvec caractéristiques psychotiques\nEn rémission partielle\nEn rémission complète\nNon spécié\n296.21 (F32.0)\n296.22 (F32.1)\n296.23 (F32.2)\n296.24 (F32.3)\n296.25 (F32.4)\n296.26 (F32.5)\n296.20 (F32.9)\n296.31 (F33.0)\n296.32 (F33.1)\n296.33 (F33.2)\n296.34 (F33.3)\n296.35 (F33.41)\n296.36 (F33.42)\n296.30 (F33.9)\nSpécier:\nAvec détresse anxieuse\nAvec caractéristiques mixtes\nAvec caractéristiques mélancoliques\nAvec caractéristiques atypiques\nAvec caractéristiques psychotiques congruentes à l’humeur\nAvec caractéristiques psychotiques non congruentes à l’humeur\nAvec catatonie\nAvec début dans le péripartum\nAvec caractère saisonnier (épisodes récurrents seulement)\nSources : APA (2015), p. 188-190 ; APA (2004), p. 411-412.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guel et al., Elsevier Masson SAS, Paris, 2004.\nAll rights reserved.\n(suite)\nTABLEAU 19.2 Comparaison du deuil et de la dépression\nSymptômes\nDeuil\nDépression\nAffects prédominants\nSentiments de vide et de perte\nHumeur dépressive persistante et incapacité à anticiper la\njoie ou le plaisir\nDysphorie, humeur\ndépressive\nDiminue habituellement en intensité au l des jours et des semaines\net survient par vagues. Ces vagues sont habituellement associées à\ndes pensées relatives à la personne décédée et à ce qui la rappelle.\nPersistante et non liée à des pensées ou préoccupations\nspéciques\nDouleur, souffrance\nPeut être accompagnée par des émotions et une humeur positives.\nTristesse foncière et grande souffrance\nContenu des pensées\nPensées et souvenirs concernant la personne décédée\nRuminations pessimistes et autocritiques\nEstime de soi\nHabituellement préservée\nSentiments de dévalorisation et de mépris de soi fréquents\nAutodépréciation\nSi l’autodépréciation est présente, elle concerne habituellement des\nsentiments d’échec vis-à-vis de la personne décédée (p. ex., ne pas\nlui avoir sufsamment rendu visite, ne pas lui avoir sufsamment dit\ncombien il ou elle l’aimait).\nIdées de mort\nHabituellement liées à la personne décédée et à la possibilité de\nla rejoindre\nCentrées sur la possibilité de mettre n à ses jours, à\ncause de sentiments de dévalorisation, d’indi gnité ou\nd’incapacité à faire face à la douleur de la dépression.\nSource : Adapté de APA (2015).\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\nplus exhaustive des décits cognitifs accompagnant la dépression.\nEn général, on observe chez le patient dépressif une diminu-\ntion de la vitesse de traitement de l’information, des dicultés\nattentionnelles et de concentration, ainsi que des troubles de\nla mémoire de rappel. Lorsque la dépression est associée à des\natteintes de la matière blanche sous-corticale (p. ex., lacunes,\nleucoaraiose périventriculaire), on note souvent des dicultés\nau niveau des fonctions exécutives. Pour être considérés comme\nsecondaires à la dépression, ces décits doivent être apparus et se\nrésorber en même temps que les symptômes dépressifs. D’autres\ndécits cognitifs (trouble du langage, apraxie, agnosie) doivent\nmener à l’évaluation d’un syndrome démentiel, car ils ne font\n",
+  "raw_text_sha256": "288daef0c53f044ca265771bed7093fd9fca75cd15a10a91eb47005ff8fd574c",
+  "source_page_display": 416,
+  "source_page_index": 415
+}

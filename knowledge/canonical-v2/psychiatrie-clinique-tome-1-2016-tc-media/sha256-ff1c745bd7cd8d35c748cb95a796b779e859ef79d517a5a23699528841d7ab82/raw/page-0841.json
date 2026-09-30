@@ -1,0 +1,400 @@
+{
+  "block_sequence_sha256": "52c75603f41383b8ae23fabc5cfdb255bc534b732a4f43e2b3aaf5f92188bc33",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0841-block-0001",
+      "order": 1,
+      "text": "824\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "34964e732ee3884e2dce49896c5c0bdfa8b52a206ed4029b58fcc5b9ff086993"
+    },
+    {
+      "bbox": [
+        49.70000076293945,
+        158.602294921875,
+        548.74072265625,
+        170.92007446289062
+      ],
+      "block_id": "page-0841-block-0002",
+      "order": 2,
+      "text": "TABLEAU 35.10 Principaux antiandrogènes utilisés dans le traitement des troubles paraphiliques et des délinquants sexuels\n",
+      "text_sha256": "05053e57e1304d7a88160de85d358d17f96c2ab7b3e88fead24560e1ac3f1e91"
+    },
+    {
+      "bbox": [
+        93.4000015258789,
+        174.12413024902344,
+        263.0360107421875,
+        189.70030212402344
+      ],
+      "block_id": "page-0841-block-0003",
+      "order": 3,
+      "text": "Nom\nMédroxyprogestérone\n",
+      "text_sha256": "9c4b6a3a4d655bd8bc5e425efa40211c061748dc7d15b9eef393118fbe9f233c"
+    },
+    {
+      "bbox": [
+        191.5500030517578,
+        183.53199768066406,
+        254.86050415039062,
+        194.70030212402344
+      ],
+      "block_id": "page-0841-block-0004",
+      "order": 4,
+      "text": "(Depo-ProveraMD)\n",
+      "text_sha256": "a8e9b2ecef3dfa0f910d8b0ca8e9f66b1b7776f3406fdb6381f303287804c17c"
+    },
+    {
+      "bbox": [
+        323.8500061035156,
+        174.12413024902344,
+        394.0605163574219,
+        194.70030212402344
+      ],
+      "block_id": "page-0841-block-0005",
+      "order": 5,
+      "text": "Cyprotérone\n(Androcur DepotMD)\n",
+      "text_sha256": "f43a8e86f8870dd08f7ff02b7bc65ffce2bcc6d8dea770ccc642edf96dea2fa7"
+    },
+    {
+      "bbox": [
+        457.95001220703125,
+        174.12413024902344,
+        518.010498046875,
+        194.70030212402344
+      ],
+      "block_id": "page-0841-block-0006",
+      "order": 6,
+      "text": "Leuprolide\n(LupronDepotMD)\n",
+      "text_sha256": "ac5d49965804d804de614aa1def5d6e92d2e2223d19a4245493d0ee103be890a"
+    },
+    {
+      "bbox": [
+        51.95000076293945,
+        200.4728546142578,
+        478.9360046386719,
+        210.4923858642578
+      ],
+      "block_id": "page-0841-block-0007",
+      "order": 7,
+      "text": "Classe chimique\nProgestogène\nAntiandrogène/progestogène\nAgoniste GnRH\n",
+      "text_sha256": "d0e6db0bb3bc3d86f7c73942b347b3351601443cae5b5c3ab23ed3683d3aada4"
+    },
+    {
+      "bbox": [
+        51.95000076293945,
+        219.9228515625,
+        496.00311279296875,
+        262.828125
+      ],
+      "block_id": "page-0841-block-0008",
+      "order": 8,
+      "text": "Dosage\nDepot* : 100 à 700 mg/sem.\nDepot : 100 à 600 mg/sem.\nDepot : 7,5 mg/mois\n22,5 mg q 3 mois\n30 mg q 4 mois\n45 mg q 6 mois\n",
+      "text_sha256": "193c6626a6ad325fe3de548e0e2fe267225fd363611881c2f63cc9bacdc863fa"
+    },
+    {
+      "bbox": [
+        51.95000076293945,
+        272.3228454589844,
+        147.5659942626953,
+        304.3423767089844
+      ],
+      "block_id": "page-0841-block-0009",
+      "order": 9,
+      "text": "Pharmacocinétique\nNiveau plasmatique (Tmax)\nDemi-vie d’élimination (T½)\n",
+      "text_sha256": "5f31cdcd1478ef08c86e7ffdd58fc4d325d3d19c9e4c470908bf987fb65325ee"
+    },
+    {
+      "bbox": [
+        159.6999969482422,
+        272.4019470214844,
+        230.16409301757812,
+        293.2281188964844
+      ],
+      "block_id": "page-0841-block-0010",
+      "order": 10,
+      "text": "Depot : quelques jours\nDepot : 50 jours\n",
+      "text_sha256": "874770668b67276a8adcfc999fdee06455109183f66dbd4b69d9d9bfb02bf40c"
+    },
+    {
+      "bbox": [
+        294.70001220703125,
+        272.4019470214844,
+        340.67510986328125,
+        293.2281188964844
+      ],
+      "block_id": "page-0841-block-0011",
+      "order": 11,
+      "text": "Depot : 3 jours\nDepot : 4 jours\n",
+      "text_sha256": "7d094263fa77d6f8b86486e44da309b049d177d7012eece82b14ade5ce718bcc"
+    },
+    {
+      "bbox": [
+        431.20001220703125,
+        272.4019470214844,
+        492.51751708984375,
+        293.2281188964844
+      ],
+      "block_id": "page-0841-block-0012",
+      "order": 12,
+      "text": "Métabolite : 2 à 6 h\nNon établie\n",
+      "text_sha256": "989000b75897498eaa40906cf440f0e2a79ec6ec829ba3f552bce6231353773c"
+    },
+    {
+      "bbox": [
+        51.95000076293945,
+        313.7728576660156,
+        263.49700927734375,
+        333.6781311035156
+      ],
+      "block_id": "page-0841-block-0013",
+      "order": 13,
+      "text": "Effet souhaité\nDécompte spermatique diminué,\ndysfonction sexuelle\n",
+      "text_sha256": "63d605cf680fb8a24db7085cf89dcd1ca260c87d862b0c603b1863e4a4b469b9"
+    },
+    {
+      "bbox": [
+        294.70001220703125,
+        313.8519592285156,
+        418.447021484375,
+        343.6781311035156
+      ],
+      "block_id": "page-0841-block-0014",
+      "order": 14,
+      "text": "Atrophie des tubules séminifères avec\nl’usage chronique (possiblement réver-\nsible avec l’arrêt de la cyprotérone)\n",
+      "text_sha256": "4adf16a1d06c2626f1434cc568653f79bc2b275a1d3e79436ecf54d2d31b7a5d"
+    },
+    {
+      "bbox": [
+        431.20001220703125,
+        313.8519592285156,
+        537.45166015625,
+        343.6781311035156
+      ],
+      "block_id": "page-0841-block-0015",
+      "order": 15,
+      "text": "Atrophie des tubules séminifères,\ndécompte spermatique diminué,\ndysfonction sexuelle\n",
+      "text_sha256": "9b4b2dd074ec09dfc29983c9851849f1b9a1370c048c6eb8ba1c77193b5a2b5a"
+    },
+    {
+      "bbox": [
+        51.95000076293945,
+        353.1728515625,
+        284.9272155761719,
+        437.6281433105469
+      ],
+      "block_id": "page-0841-block-0016",
+      "order": 16,
+      "text": "Effets indésirables\nde l’appétit et gain de poids\nThromboembolisme (le tabagisme\npeut ce risque)\nBouffées de chaleur, transpiration\nDyspnée, œdème, HTA, crampes\nmusculaires, inconfort, GI\nLéthargie, dépression légère, nervosité,\ninsomnie, cauchemars, céphalées\n",
+      "text_sha256": "8ece7e110a8a452b4393c7afc3a58f4249249afd358bfe05c3164dc512e2cacf"
+    },
+    {
+      "bbox": [
+        294.70001220703125,
+        353.251953125,
+        408.71514892578125,
+        427.078125
+      ],
+      "block_id": "page-0841-block-0017",
+      "order": 17,
+      "text": "Gynécomastie (15 à 20 %)\nDiminution de la pilosité et de la\nproduction de sébum, gain de poids\nThromboembolisme (le tabagisme\npeut ce risque)\nDiminution de la densité osseuse\nFatigue, dépression (5 à 10 %)\n",
+      "text_sha256": "32ba453578948ddc0445ef9f811117b9319eb56292084c4ca25b562436afdf6b"
+    },
+    {
+      "bbox": [
+        431.20001220703125,
+        353.251953125,
+        536.1882934570312,
+        460.078125
+      ],
+      "block_id": "page-0841-block-0018",
+      "order": 18,
+      "text": "Perte de pilosité\nBouffées de chaleur (60 %),\ntranspiration, dyspnée, œdème\n(3 %)\nSpasmes, myalgies\nNausée, autres effets GI\nÉruption, anémie\nDiminution de la densité osseuse\nLéthargie\nAnxiété, insomnie\n",
+      "text_sha256": "93070bc2cf3b8b361dcbd52f0e8d9b2f7e64ece569da90a3879190ac8e403d67"
+    },
+    {
+      "bbox": [
+        51.95000076293945,
+        469.62286376953125,
+        279.8836364746094,
+        551.5281372070312
+      ],
+      "block_id": "page-0841-block-0019",
+      "order": 19,
+      "text": "Précautions\nPeut diminuer la tolérance au glucose\nThrombose veineuse profonde et\nthromboembolisme (le tabagisme\npeut ce risque)\nMonitorer les patients avec des affec-\ntions pouvant être aggravées par une\nrétention liquidienne (p. ex., asthme,\nmigraine)\n",
+      "text_sha256": "eddc33088b571a663fda456b536dfea286bcd2dc882d49771642689dcc1dc874"
+    },
+    {
+      "bbox": [
+        294.70001220703125,
+        469.70196533203125,
+        421.1289978027344,
+        551.5281372070312
+      ],
+      "block_id": "page-0841-block-0020",
+      "order": 20,
+      "text": "Peut interférer avec le métabolisme des\nhydrates de carbone, le glucose à jeun\net le test de tolérance au glucose\nThrombose veineuse profonde et\nthromboembolisme (le tabagisme\npeut ce risque)\nRisques d’hypercalcémie et\nde dyslipidémie\n",
+      "text_sha256": "a4d86e5fef3a9031083d43a86450dface7ff3d2bc30d0af81a5345921b06ff7f"
+    },
+    {
+      "bbox": [
+        431.20001220703125,
+        469.70196533203125,
+        523.7529296875,
+        479.52813720703125
+      ],
+      "block_id": "page-0841-block-0021",
+      "order": 21,
+      "text": "Voir monographie du produit.\n",
+      "text_sha256": "d29ef861ecace214cecc7893133c789ea84ee768f5be1551f8fefd3c9ef76225"
+    },
+    {
+      "bbox": [
+        51.95000076293945,
+        561.0228881835938,
+        257.6200256347656,
+        591.9281616210938
+      ],
+      "block_id": "page-0841-block-0022",
+      "order": 22,
+      "text": "Contre-indications\nMaladie hépatique, troubles\nthromboemboliques\nPathologie hypophysaire active\n",
+      "text_sha256": "2fbb8e649749f467a848f6bbb48fe235e8f19b7c365b609fae5d3de1dc720bab"
+    },
+    {
+      "bbox": [
+        294.70001220703125,
+        561.1019897460938,
+        392.6200256347656,
+        591.9281616210938
+      ],
+      "block_id": "page-0841-block-0023",
+      "order": 23,
+      "text": "Maladie hépatique, troubles\nthromboemboliques\nPathologie hypophysaire active\n",
+      "text_sha256": "5484ef9423d670cb21021ac0cda0630c8cafab16d6c01933dc4b394a97b564a7"
+    },
+    {
+      "bbox": [
+        431.20001220703125,
+        561.1019897460938,
+        543.196044921875,
+        602.9281616210938
+      ],
+      "block_id": "page-0841-block-0024",
+      "order": 24,
+      "text": "Hypersensibilité au leuprolide (rare)\nPathologie hypophysaire active\nTroubles de la déminéralisation\nosseuse (contre-indication relative)\n",
+      "text_sha256": "fdbc75b2004ac0f6552709d611a99fef3c94e88f499c48ba1a48dd0f47059d22"
+    },
+    {
+      "bbox": [
+        51.95000076293945,
+        612.4728393554688,
+        119.8191146850586,
+        633.4923706054688
+      ],
+      "block_id": "page-0841-block-0025",
+      "order": 25,
+      "text": "Tests de laboratoire\nBilan de base\n",
+      "text_sha256": "6ccd6e7b62109ca405c00e1918f5ab966bd6cb978bd3de6895ca94eb6103831d"
+    },
+    {
+      "bbox": [
+        159.6999969482422,
+        612.5519409179688,
+        509.5459289550781,
+        632.3781127929688
+      ],
+      "block_id": "page-0841-block-0026",
+      "order": 26,
+      "text": "Dosage de testostérone (T), prolactine (PRL), LH, FSH, fonction hépatique, FSC, glucose, urée, créatinine, ÉCG,\ndensitométrie osseuse (pour le leuprolide)\n",
+      "text_sha256": "582a7cab8013e1f1c3da60b71e4ec8d13ba1303d395922cfae9d678955c4e07b"
+    },
+    {
+      "bbox": [
+        51.95000076293945,
+        642.9228515625,
+        382.7057189941406,
+        663.828125
+      ],
+      "block_id": "page-0841-block-0027",
+      "order": 27,
+      "text": "Maintien\nq 6 mois : T, LH, FSH, PRL, TA, poids\nq 3 mois : TA et poids\nq 6 mois : T, LH, FSH et PRL\n",
+      "text_sha256": "a3e0595c6ec74e3f6221afdade523dc58fe9d3408b5576794691ecd8b673ad1c"
+    },
+    {
+      "bbox": [
+        431.20001220703125,
+        643.001953125,
+        528.2718505859375,
+        694.828125
+      ],
+      "block_id": "page-0841-block-0028",
+      "order": 28,
+      "text": "q 1 mois pour 4 mois, puis\nq 6 mois : T\nq 6 mois : urée, créatinine, LH,\nFSH, PRL\nq 1 à 2 ans : densité osseuse\n",
+      "text_sha256": "72c773774e60bd116b399008fea38e10ddc262bf018ed5ad5f38f9ec4c2178ed"
+    },
+    {
+      "bbox": [
+        47.95000076293945,
+        704.0906372070312,
+        223.1626434326172,
+        724.6588745117188
+      ],
+      "block_id": "page-0841-block-0029",
+      "order": 29,
+      "text": "* Depot est la forme injectable par opposition à la forme orale.\nSource : Adapté de Dickey (2014), p. 292-295.\n",
+      "text_sha256": "87fc8c71695eea311b47b5c760b54dea1a66abea2ab4f3094ffff66ad26e1e87"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.9658203125,
+        291.01751708984375,
+        87.90850067138672
+      ],
+      "block_id": "page-0841-block-0030",
+      "order": 30,
+      "text": "fantaisies sexuelles déviantes et des comportements paraphi-\nliques et donc la récidive. Ce sont les traitements hormonaux\nantiandrogéniques et les antidépresseurs sérotoninergiques\n(Assumpçao & al., 2014).\n",
+      "text_sha256": "c1917aec1ced00e23b0b393472b1c2f2fa2f209ca6dcfc635ad2208048c2867e"
+    },
+    {
+      "bbox": [
+        48.0,
+        89.6158218383789,
+        290.9250183105469,
+        138.55850219726562
+      ],
+      "block_id": "page-0841-block-0031",
+      "order": 31,
+      "text": "Les médicaments antiandrogéniques comprennent (voir le\ntableau 35.10) :\n• l’acétate de médroxyprogestérone (Depo-ProveraMD), un\nprogestogène ;\n",
+      "text_sha256": "4883acf8850083730e7390fc23eca14ce99bd6fdc50affffec59c2017a79ef1f"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.72441482543945,
+        549.3026123046875,
+        138.55850219726562
+      ],
+      "block_id": "page-0841-block-0032",
+      "order": 32,
+      "text": "• l’acétate de cyprotérone (Androcur DepotMD), qui agit en\nbloquant les récepteurs à androgènes amenant alors une\nbaisse de la testostérone et donc de la libido.\nCes deux médicaments sont utilisés chez les paraphiles et les\ndélinquants sexuels, et particulièrement l’AndrocurMD dans le\ntrouble pédophilique ;\n• un analogue de l’hormone de libération de la gonadotrophine\n(GnRH), comme l’acétate de leuprolide (LupronDepotMD), qui\n",
+      "text_sha256": "d11da8a4bf4ff432876d252344b4a920f931307533bdc5f7cb51c2aa2d7b6890"
+    }
+  ],
+  "coordinates_sha256": "59838091e1ef3c48ceaf55e8e6025668c6dd6342f3a1955f851f8fef02422cd1",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0841",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "824\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nTABLEAU 35.10 Principaux antiandrogènes utilisés dans le traitement des troubles paraphiliques et des délinquants sexuels\nNom\nMédroxyprogestérone\n(Depo-ProveraMD)\nCyprotérone\n(Androcur DepotMD)\nLeuprolide\n(LupronDepotMD)\nClasse chimique\nProgestogène\nAntiandrogène/progestogène\nAgoniste GnRH\nDosage\nDepot* : 100 à 700 mg/sem.\nDepot : 100 à 600 mg/sem.\nDepot : 7,5 mg/mois\n22,5 mg q 3 mois\n30 mg q 4 mois\n45 mg q 6 mois\nPharmacocinétique\nNiveau plasmatique (Tmax)\nDemi-vie d’élimination (T½)\nDepot : quelques jours\nDepot : 50 jours\nDepot : 3 jours\nDepot : 4 jours\nMétabolite : 2 à 6 h\nNon établie\nEffet souhaité\nDécompte spermatique diminué,\ndysfonction sexuelle\nAtrophie des tubules séminifères avec\nl’usage chronique (possiblement réver-\nsible avec l’arrêt de la cyprotérone)\nAtrophie des tubules séminifères,\ndécompte spermatique diminué,\ndysfonction sexuelle\nEffets indésirables\nde l’appétit et gain de poids\nThromboembolisme (le tabagisme\npeut ce risque)\nBouffées de chaleur, transpiration\nDyspnée, œdème, HTA, crampes\nmusculaires, inconfort, GI\nLéthargie, dépression légère, nervosité,\ninsomnie, cauchemars, céphalées\nGynécomastie (15 à 20 %)\nDiminution de la pilosité et de la\nproduction de sébum, gain de poids\nThromboembolisme (le tabagisme\npeut ce risque)\nDiminution de la densité osseuse\nFatigue, dépression (5 à 10 %)\nPerte de pilosité\nBouffées de chaleur (60 %),\ntranspiration, dyspnée, œdème\n(3 %)\nSpasmes, myalgies\nNausée, autres effets GI\nÉruption, anémie\nDiminution de la densité osseuse\nLéthargie\nAnxiété, insomnie\nPrécautions\nPeut diminuer la tolérance au glucose\nThrombose veineuse profonde et\nthromboembolisme (le tabagisme\npeut ce risque)\nMonitorer les patients avec des affec-\ntions pouvant être aggravées par une\nrétention liquidienne (p. ex., asthme,\nmigraine)\nPeut interférer avec le métabolisme des\nhydrates de carbone, le glucose à jeun\net le test de tolérance au glucose\nThrombose veineuse profonde et\nthromboembolisme (le tabagisme\npeut ce risque)\nRisques d’hypercalcémie et\nde dyslipidémie\nVoir monographie du produit.\nContre-indications\nMaladie hépatique, troubles\nthromboemboliques\nPathologie hypophysaire active\nMaladie hépatique, troubles\nthromboemboliques\nPathologie hypophysaire active\nHypersensibilité au leuprolide (rare)\nPathologie hypophysaire active\nTroubles de la déminéralisation\nosseuse (contre-indication relative)\nTests de laboratoire\nBilan de base\nDosage de testostérone (T), prolactine (PRL), LH, FSH, fonction hépatique, FSC, glucose, urée, créatinine, ÉCG,\ndensitométrie osseuse (pour le leuprolide)\nMaintien\nq 6 mois : T, LH, FSH, PRL, TA, poids\nq 3 mois : TA et poids\nq 6 mois : T, LH, FSH et PRL\nq 1 mois pour 4 mois, puis\nq 6 mois : T\nq 6 mois : urée, créatinine, LH,\nFSH, PRL\nq 1 à 2 ans : densité osseuse\n* Depot est la forme injectable par opposition à la forme orale.\nSource : Adapté de Dickey (2014), p. 292-295.\nfantaisies sexuelles déviantes et des comportements paraphi-\nliques et donc la récidive. Ce sont les traitements hormonaux\nantiandrogéniques et les antidépresseurs sérotoninergiques\n(Assumpçao & al., 2014).\nLes médicaments antiandrogéniques comprennent (voir le\ntableau 35.10) :\n• l’acétate de médroxyprogestérone (Depo-ProveraMD), un\nprogestogène ;\n• l’acétate de cyprotérone (Androcur DepotMD), qui agit en\nbloquant les récepteurs à androgènes amenant alors une\nbaisse de la testostérone et donc de la libido.\nCes deux médicaments sont utilisés chez les paraphiles et les\ndélinquants sexuels, et particulièrement l’AndrocurMD dans le\ntrouble pédophilique ;\n• un analogue de l’hormone de libération de la gonadotrophine\n(GnRH), comme l’acétate de leuprolide (LupronDepotMD), qui\n",
+  "raw_text_sha256": "3e8c2a982cca4f06b8a88ee9f39fa472bf62f570393d562da32d2ee4f2406ff8",
+  "source_page_display": 842,
+  "source_page_index": 841
+}

@@ -1,0 +1,100 @@
+{
+  "block_sequence_sha256": "3966951d0b1e90ec2f81163f8b60518582cc835a87c79dcf6c12f4f290245357",
+  "blocks": [
+    {
+      "bbox": [
+        405.1000061035156,
+        747.3754272460938,
+        555.0,
+        758.6693725585938
+      ],
+      "block_id": "page-0134-block-0001",
+      "order": 1,
+      "text": "Chapitre 6\nNeurobiologie\n117\n",
+      "text_sha256": "34f64cef74fd405a2eed2db57cd5c40945030ec54c85fbed9102fccd5584796b"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.9658203125,
+        297.5416259765625,
+        369.0085144042969
+      ],
+      "block_id": "page-0134-block-0002",
+      "order": 2,
+      "text": "relais de l’inux nerveux en libérant la noradrénaline (NA)\nsur les organes cibles (voir la gure 6.4a).\n2. Le système nerveux autonome parasympathique (SNAP)\naccomplit sa fonction surtout dans des conditions de repos.\nLes bres nerveuses du SNAP proviennent essentiellement\ndes nerfs crâniens III, VII, IX et X localisés dans le tronc\ncérébral. Seules des bres en provenance de neurones loca-\nlisés dans la région sacrée de la moelle épinière innervent la\nvessie et l’intestin. Le nerf crânien X (nerf vague ou pneumo-\ngastrique) est le plus important du SNAP puisqu’il innerve\nles cellules ganglionnaires de plusieurs organes en libérant\nde l’ACh. (voir la gure 6.4b). Les récepteurs cholinergiques\ndu SNA sont muscariniques et font partie de la famille des\nrécepteurs métabotropes, qui répondent à la muscarine\n(agoniste cholinergique extrait d’un champignon). Ils sont\ncouplés aux protéines G et donc plus lents à induire des\nréponses excitatrices ou inhibitrices. Par ailleurs, il y a\ndes récepteurs nicotiniques qui font partie de la famille des\nrécepteurs ionotropes et qui répondent à la nicotine. Ce sont\ndes canaux cationiques activés par l’ACh, provoquant très\nrapidement, en quelques millisecondes, une dépolarisation\net une excitation. Plusieurs antidépresseurs (clomipramine,\namitriptyline, etc.) et antipsychotiques (clozapine, chlorpro-\nmazine, olanzapine etc.) sont des antagonistes des récepteurs\ncholinergiques muscariniques et/ou noradrénergiques.\nL’eet anticholinergique peut induire de la constipation,\nune tachycardie et de la rétention urinaire, alors que l’eet\nanti- adrénergique cause de l’hypotension orthostatique.\n",
+      "text_sha256": "6768c913fde36304c823a7732ffcbb1c8a55c24af44ad684284586753a5be6b7"
+    },
+    {
+      "bbox": [
+        65.30000305175781,
+        389.4931640625,
+        225.93209838867188,
+        408.4689636230469
+      ],
+      "block_id": "page-0134-block-0003",
+      "order": 3,
+      "text": "6.2\nNeurotransmission\n",
+      "text_sha256": "ad0e131c45a63495f121ca242cf200bd8ea68c4e05dc1a82238be862dbaadfc7"
+    },
+    {
+      "bbox": [
+        54.0,
+        422.41583251953125,
+        297.45281982421875,
+        725.1085205078125
+      ],
+      "block_id": "page-0134-block-0004",
+      "order": 4,
+      "text": "C’est dans son traité sur le connexionnisme cellulaire publié en\n1899 que Ramon y Cajal élabore la théorie soutenant que le cerveau\nest constitué d’éléments distincts dont l’élément principal est le\nneurone (Parent, 2009). L’éminent histologiste espagnol, colauréat\navec Camillo Golgi du prix Nobel de médecine (1906), suppose\nque les neurones sont séparés morphologiquement et qu’un inter-\nmédiaire est nécessaire à la transmission de l’inux nerveux de\nl’un vers l’autre. Émile du Bois-Reymond, 30 ans auparavant, avait\némis l’hypothèse qu’une substance chimique pouvait être sécrétée\npar une bre nerveuse et provoquer une contraction musculaire.\nLe premier appui empirique à cette hypothèse est venu beaucoup\nplus tard, en 1921, à la suite des expériences d’Otto Loewi sur le\nSNA. Loewi montre que la stimulation du nerf vague ralentit le\nrythme cardiaque en déclenchant la sécrétion d’une substance\nqu’il appelle «vagussto» (acétylcholine), et que la stimulation\nde la branche sympathique l’accélère en déclenchant la sécré-\ntion d’une autre substance, l’«acceleranssto» (noradrénaline).\nIl fallut attendre plusieurs années pour conrmer l’existence\nde ce mode de communication interneuronal dans le système\nnerveux central (SNC) (Parent, 2009). Le point de jonction où\nse fait la neurotransmission chimique entre les neurones porte\nle nom de « synapse » (du grec συνάπσις, « liaison », « point de\njonction »). Le pharmacologue Henry Dale, l’un des principaux\nprotagonistes de la neurotransmission chimique dans le SNC,\nsupposa que l’inux nerveux du neurone présynaptique entraîne\nla sécrétion d’une substance chimique qui génère un nouvel inux\n",
+      "text_sha256": "a844cb2b30c086fbe9df7a6276ff8832e998632738c9e2e2c45191d2622c9af2"
+    },
+    {
+      "bbox": [
+        312.0,
+        40.9658203125,
+        555.4568481445312,
+        279.6084899902344
+      ],
+      "block_id": "page-0134-block-0005",
+      "order": 5,
+      "text": "nerveux dans le neurone postsynaptique. Des techniques mises\nau point dans les années 1950 et 1960 ont permis de conrmer\nl’hypothèse de Dale en montrant l’existence d’un espace de 20\nà 40 nanomètres (0,000020-0,000040 mm) séparant l’élément\nprésynaptique de l’élément postsynaptique. Aujourd’hui, on parle\nde neurotransmission et de neuromodulation :\n• Le neurotransmetteur, sécrété par l’élément présynaptique,\ntransmet le signal du neurone présynaptique au neurone\npostsynaptique.\n• Le neuromodulateur qui peut aussi être sécrété par l’élément\nprésynaptique, modie plutôt la sensibilité du neurone post-\nsynaptique au neurotransmetteur ; il module donc le signal.\nLes neurotransmetteurs et les neuromodulateurs interagissent\navec des protéines situées à la surface externe de la membrane\nplasmique des neurones (voir la gure 6.5). Ils remplissent deux\nrôles essentiels :\n1. Ils permettent de diversier les messages transmis par un\nmême neurotransmetteur ;\n2. Ils assurent la transmission du message du neurone pré-\nsynaptique au neurone postsynaptique.\n",
+      "text_sha256": "d412eac015e84c656dc98f7333240083444c807369366b86fceb3341b6175d8d"
+    },
+    {
+      "bbox": [
+        312.0,
+        297.3368225097656,
+        500.35443115234375,
+        313.4794006347656
+      ],
+      "block_id": "page-0134-block-0006",
+      "order": 6,
+      "text": "6.2.1 Mécanisme de transduction\n",
+      "text_sha256": "6c1bd75ac32d28544e44538864f3ec21def28964ae31ea20b18434df0385d105"
+    },
+    {
+      "bbox": [
+        312.0,
+        317.0158386230469,
+        555.5250854492188,
+        725.1085205078125
+      ],
+      "block_id": "page-0134-block-0007",
+      "order": 7,
+      "text": "La communication entre les neurones requiert des mécanismes\nde transduction qui transforment le signal synaptique (le neuro-\ntransmetteur) en un signal interne qui assure une réponse bio-\nlogique. On distingue deux classes de récepteurs selon le type\nde mécanisme de transduction : les récepteurs ionotropes et les\nrécepteurs métabotropes.\n1. Les récepteurs ionotropes, qui permettent le passage d’ions\nà travers la membrane plasmique, sont des canaux propres\nà certains ions Na+, K+, Ca++ ou Cl–. Ils sont constitués de\nplusieurs sous-unités généralement appelées alpha (α), bêta\n(β) et gamma (γ) formant un pentamère ; certains récepteurs\ncanaux sont des tétramères (p. ex., le récepteur NMDA). Le\nregroupement des sous-unités qui constituent le récepteur\nassure la liaison du neurotransmetteur et la transduction du\nsignal (voir les gures 6.5 et 6.7). La liaison du neurotransmet-\nteur à une sous-unité du récepteur provoque un changement de\nconguration : le canal s’ouvre et laisse passer les ions. L’activité\nélectrique du neurone est alors inhibée ou accentuée selon\nle type d’ions qui traverse la membrane. Par exemple, dans\nle SNC, on trouve un sous-type de récepteur GABAergique\n(GABAA) sur lequel agissent les benzodiazépines. Lorsque le\nGABA se lie au récepteur GABAA, le canal s’ouvre et laisse\ncirculer les ions chlore (Cl–) à travers la membrane plasmique ;\ncela a pour conséquence de maintenir le potentiel membra-\nnaire sous le seuil d’excitabilité, limitant ainsi l’activation. À\nl’opposé, la liaison du glutamate au récepteur de type NMDA\nouvre un canal qui laisse passer les ions Na+ ou Ca++, ce qui\na pour conséquence de dépolariser le neurone et d’induire\ndes potentiels d’action. Puisque le récepteur qui reconnaît le\nneurotransmetteur est aussi responsable de la transduction\ndu signal, la latence et la durée de la réponse sont très courtes.\nEn d’autres termes, la liaison du neurotransmetteur au récep-\nteur ionotrope a un eet presque immédiat (de l’ordre de la\nmilliseconde) sur l’activité du neurone. Ces systèmes assurent\ndonc la neurotransmission rapide dans le système nerveux\n",
+      "text_sha256": "d10363078e99a7663b2fec5ed8764cfca3c3280c6c54681d6b3f5335b568b872"
+    }
+  ],
+  "coordinates_sha256": "ac20ffdbeee54d733f62e7278eaf3c6f46b75dbb8cce2ae42c0c1bb17de18b5f",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0134",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 6\nNeurobiologie\n117\nrelais de l’inux nerveux en libérant la noradrénaline (NA)\nsur les organes cibles (voir la gure 6.4a).\n2. Le système nerveux autonome parasympathique (SNAP)\naccomplit sa fonction surtout dans des conditions de repos.\nLes bres nerveuses du SNAP proviennent essentiellement\ndes nerfs crâniens III, VII, IX et X localisés dans le tronc\ncérébral. Seules des bres en provenance de neurones loca-\nlisés dans la région sacrée de la moelle épinière innervent la\nvessie et l’intestin. Le nerf crânien X (nerf vague ou pneumo-\ngastrique) est le plus important du SNAP puisqu’il innerve\nles cellules ganglionnaires de plusieurs organes en libérant\nde l’ACh. (voir la gure 6.4b). Les récepteurs cholinergiques\ndu SNA sont muscariniques et font partie de la famille des\nrécepteurs métabotropes, qui répondent à la muscarine\n(agoniste cholinergique extrait d’un champignon). Ils sont\ncouplés aux protéines G et donc plus lents à induire des\nréponses excitatrices ou inhibitrices. Par ailleurs, il y a\ndes récepteurs nicotiniques qui font partie de la famille des\nrécepteurs ionotropes et qui répondent à la nicotine. Ce sont\ndes canaux cationiques activés par l’ACh, provoquant très\nrapidement, en quelques millisecondes, une dépolarisation\net une excitation. Plusieurs antidépresseurs (clomipramine,\namitriptyline, etc.) et antipsychotiques (clozapine, chlorpro-\nmazine, olanzapine etc.) sont des antagonistes des récepteurs\ncholinergiques muscariniques et/ou noradrénergiques.\nL’eet anticholinergique peut induire de la constipation,\nune tachycardie et de la rétention urinaire, alors que l’eet\nanti- adrénergique cause de l’hypotension orthostatique.\n6.2\nNeurotransmission\nC’est dans son traité sur le connexionnisme cellulaire publié en\n1899 que Ramon y Cajal élabore la théorie soutenant que le cerveau\nest constitué d’éléments distincts dont l’élément principal est le\nneurone (Parent, 2009). L’éminent histologiste espagnol, colauréat\navec Camillo Golgi du prix Nobel de médecine (1906), suppose\nque les neurones sont séparés morphologiquement et qu’un inter-\nmédiaire est nécessaire à la transmission de l’inux nerveux de\nl’un vers l’autre. Émile du Bois-Reymond, 30 ans auparavant, avait\némis l’hypothèse qu’une substance chimique pouvait être sécrétée\npar une bre nerveuse et provoquer une contraction musculaire.\nLe premier appui empirique à cette hypothèse est venu beaucoup\nplus tard, en 1921, à la suite des expériences d’Otto Loewi sur le\nSNA. Loewi montre que la stimulation du nerf vague ralentit le\nrythme cardiaque en déclenchant la sécrétion d’une substance\nqu’il appelle «vagussto» (acétylcholine), et que la stimulation\nde la branche sympathique l’accélère en déclenchant la sécré-\ntion d’une autre substance, l’«acceleranssto» (noradrénaline).\nIl fallut attendre plusieurs années pour conrmer l’existence\nde ce mode de communication interneuronal dans le système\nnerveux central (SNC) (Parent, 2009). Le point de jonction où\nse fait la neurotransmission chimique entre les neurones porte\nle nom de « synapse » (du grec συνάπσις, « liaison », « point de\njonction »). Le pharmacologue Henry Dale, l’un des principaux\nprotagonistes de la neurotransmission chimique dans le SNC,\nsupposa que l’inux nerveux du neurone présynaptique entraîne\nla sécrétion d’une substance chimique qui génère un nouvel inux\nnerveux dans le neurone postsynaptique. Des techniques mises\nau point dans les années 1950 et 1960 ont permis de conrmer\nl’hypothèse de Dale en montrant l’existence d’un espace de 20\nà 40 nanomètres (0,000020-0,000040 mm) séparant l’élément\nprésynaptique de l’élément postsynaptique. Aujourd’hui, on parle\nde neurotransmission et de neuromodulation :\n• Le neurotransmetteur, sécrété par l’élément présynaptique,\ntransmet le signal du neurone présynaptique au neurone\npostsynaptique.\n• Le neuromodulateur qui peut aussi être sécrété par l’élément\nprésynaptique, modie plutôt la sensibilité du neurone post-\nsynaptique au neurotransmetteur ; il module donc le signal.\nLes neurotransmetteurs et les neuromodulateurs interagissent\navec des protéines situées à la surface externe de la membrane\nplasmique des neurones (voir la gure 6.5). Ils remplissent deux\nrôles essentiels :\n1. Ils permettent de diversier les messages transmis par un\nmême neurotransmetteur ;\n2. Ils assurent la transmission du message du neurone pré-\nsynaptique au neurone postsynaptique.\n6.2.1 Mécanisme de transduction\nLa communication entre les neurones requiert des mécanismes\nde transduction qui transforment le signal synaptique (le neuro-\ntransmetteur) en un signal interne qui assure une réponse bio-\nlogique. On distingue deux classes de récepteurs selon le type\nde mécanisme de transduction : les récepteurs ionotropes et les\nrécepteurs métabotropes.\n1. Les récepteurs ionotropes, qui permettent le passage d’ions\nà travers la membrane plasmique, sont des canaux propres\nà certains ions Na+, K+, Ca++ ou Cl–. Ils sont constitués de\nplusieurs sous-unités généralement appelées alpha (α), bêta\n(β) et gamma (γ) formant un pentamère ; certains récepteurs\ncanaux sont des tétramères (p. ex., le récepteur NMDA). Le\nregroupement des sous-unités qui constituent le récepteur\nassure la liaison du neurotransmetteur et la transduction du\nsignal (voir les gures 6.5 et 6.7). La liaison du neurotransmet-\nteur à une sous-unité du récepteur provoque un changement de\nconguration : le canal s’ouvre et laisse passer les ions. L’activité\nélectrique du neurone est alors inhibée ou accentuée selon\nle type d’ions qui traverse la membrane. Par exemple, dans\nle SNC, on trouve un sous-type de récepteur GABAergique\n(GABAA) sur lequel agissent les benzodiazépines. Lorsque le\nGABA se lie au récepteur GABAA, le canal s’ouvre et laisse\ncirculer les ions chlore (Cl–) à travers la membrane plasmique ;\ncela a pour conséquence de maintenir le potentiel membra-\nnaire sous le seuil d’excitabilité, limitant ainsi l’activation. À\nl’opposé, la liaison du glutamate au récepteur de type NMDA\nouvre un canal qui laisse passer les ions Na+ ou Ca++, ce qui\na pour conséquence de dépolariser le neurone et d’induire\ndes potentiels d’action. Puisque le récepteur qui reconnaît le\nneurotransmetteur est aussi responsable de la transduction\ndu signal, la latence et la durée de la réponse sont très courtes.\nEn d’autres termes, la liaison du neurotransmetteur au récep-\nteur ionotrope a un eet presque immédiat (de l’ordre de la\nmilliseconde) sur l’activité du neurone. Ces systèmes assurent\ndonc la neurotransmission rapide dans le système nerveux\n",
+  "raw_text_sha256": "ca16d9d9edf724feea392fc0ca312244ebb020550a3496ad84a3775a8df62822",
+  "source_page_display": 135,
+  "source_page_index": 134
+}

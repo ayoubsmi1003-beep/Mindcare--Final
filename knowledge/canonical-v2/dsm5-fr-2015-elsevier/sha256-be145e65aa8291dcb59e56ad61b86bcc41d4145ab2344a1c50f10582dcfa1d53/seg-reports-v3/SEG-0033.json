@@ -1,0 +1,75 @@
+{
+  "book_id": "dsm5-fr-2015-elsevier",
+  "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+  "segment": "seg-0801-0825.pdf",
+  "source_page_start": 801,
+  "source_page_end": 825,
+  "page_count": 25,
+  "segment_sha256": "409fc0a880e8dd91a324b4d109ddf71f1f0ef5af899591f86cc1b4ae87813a79",
+  "candidate_reconciliation": "reconciliation-v10",
+  "units": 331,
+  "tables": 0,
+  "concepts": 28,
+  "xrefs": 2,
+  "pages_with_no_text": [],
+  "uncertain": [
+    801,
+    802,
+    803,
+    804,
+    805,
+    806,
+    807,
+    808,
+    809,
+    810,
+    811,
+    812,
+    813,
+    814,
+    816
+  ],
+  "fallback_pages": [
+    801,
+    802,
+    803,
+    804,
+    805,
+    806,
+    807,
+    808,
+    809,
+    810,
+    811,
+    812,
+    813,
+    814,
+    816
+  ],
+  "extractors": {
+    "pymupdf-fallback": 56,
+    "pymupdf-original-text-layer": 275
+  },
+  "citra": {
+    "status": "not_replayed",
+    "failed_segment_pages": [],
+    "failed_source_pages": [],
+    "fallback_used": false
+  },
+  "line_counts": {
+    "units": 331,
+    "tables": 0,
+    "concepts": 28,
+    "xrefs": 2
+  },
+  "files": {
+    "units": "reconciliation-v10/units.jsonl",
+    "tables": "reconciliation-v10/tables.jsonl",
+    "concepts": "reconciliation-v10/concepts.jsonl",
+    "xrefs": "reconciliation-v10/xrefs.jsonl"
+  },
+  "structure_candidate": "structure-v2.candidate.json",
+  "status": "CANDIDATE_REVIEW_REQUIRED",
+  "canonical_promotion_authorized": false,
+  "summary_line": "SEG seg-0801-0825.pdf: units=331 tables=0 concepts=28 xrefs=2 | pages with no text: [] | uncertain: [801, 802, 803, 804, 805, 806, 807, 808, 809, 810, 811, 812, 813, 814, 816] | citra-failed-pages: [] | notes: Citra was not replayed for this segment; report is manifest-only and does not claim a fresh Citra result.; Fallback pages are explicitly uncertain and routed to review."
+}

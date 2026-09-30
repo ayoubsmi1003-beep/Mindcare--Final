@@ -1,0 +1,292 @@
+{
+  "block_sequence_sha256": "1dedd68335ccd002c30a4aa018e9787e6c0771fc68a006ca24549873a93d91fe",
+  "blocks": [
+    {
+      "bbox": [
+        402.45001220703125,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0912-block-0001",
+      "order": 1,
+      "text": "Chapitre 38\nToxicomanies\n895\n",
+      "text_sha256": "65d25765e1df65345293be551a365f6cb7b8aea5c0503d91db4196ae5a16b18c"
+    },
+    {
+      "bbox": [
+        312.0,
+        486.98681640625,
+        430.7528381347656,
+        503.12939453125
+      ],
+      "block_id": "page-0912-block-0002",
+      "order": 2,
+      "text": "38.5.8 Phencyclidine\n",
+      "text_sha256": "fa5568a52a76ba1ef404ef9880b67e13f35785e205a1bd8b583a8f77d8d6ded6"
+    },
+    {
+      "bbox": [
+        312.0,
+        506.8658447265625,
+        555.6311645507812,
+        648.6585083007812
+      ],
+      "block_id": "page-0912-block-0003",
+      "order": 3,
+      "text": "La phencyclidine, ou PCP, est un anesthésique dissociatif. Elle fut\nsynthétisée aux États-Unis en 1926, commercialisée brièvement\ncomme anesthésiant général dans les années 1960 avant de faire\nl’objet d’un usage illicite dès les années 1970. Cette substance se\nprésente sous forme de poudre, de comprimés, de liquide ou\nde capsules. Sa synthèse étant simple et son prix abordable, le\nPCP est fréquemment utilisé pour diluer ou pour augmenter les\neets d’autres drogues (p. ex., la cocaïne, le LSD ou le cannabis).\nElle est vendue dans la rue sous une multitude d’appellations :\npoussière d’ange, poudre d’ange, crystal, crystal joint, cyclone,\ndead on arrivalou DOA, dust, elephant tranquillizer, embalming\nuid, peace, scue, seams, surfer, wack ou zombie.\n",
+      "text_sha256": "dfd5c1e7689007bb612dabecf00e983f36c673417e9a54d1dbe8fc488bb50bb5"
+    },
+    {
+      "bbox": [
+        312.0,
+        650.1158447265625,
+        555.2747192382812,
+        708.3585205078125
+      ],
+      "block_id": "page-0912-block-0004",
+      "order": 4,
+      "text": "Tel que mentionné plus haut, exemption faite du cannabis, les\nhallucinogènes (dont le PCP) constituaient la catégorie de drogue\nillicite la plus consommée au cours des 12 derniers mois par les\nCanadiens. Cette consommation était passée de 0,7 % en 2004 à\n2,1 % en 2008. Elle était importante chez les hommes (3,3 % par\n",
+      "text_sha256": "8b7bb2751b549afc051cde094f9e7ee5aee4a2b9db057774a691ec7d862dbc85"
+    },
+    {
+      "bbox": [
+        56.25,
+        41.002296447753906,
+        360.7332458496094,
+        53.320068359375
+      ],
+      "block_id": "page-0912-block-0005",
+      "order": 5,
+      "text": "TABLEAU 38.14 Critères diagnostiques de l’intoxication aux hallucinogènes\n",
+      "text_sha256": "51de01d23b1333771d89e10869e4054e31e9fe18c25609c2ab7d95e7786904bd"
+    },
+    {
+      "bbox": [
+        212.6999969482422,
+        60.67412567138672,
+        495.238037109375,
+        71.25029754638672
+      ],
+      "block_id": "page-0912-block-0006",
+      "order": 6,
+      "text": "DSM-5\nDSM-IV-TR\n",
+      "text_sha256": "67d368c78be7842a2bc99b149901566bcadf3c9d62623ea48bafcc32b3563ffb"
+    },
+    {
+      "bbox": [
+        129.8000030517578,
+        77.22285461425781,
+        529.7540283203125,
+        87.24238586425781
+      ],
+      "block_id": "page-0912-block-0007",
+      "order": 7,
+      "text": "292.89 (F16.0x) Intoxication par un autre hallucinogène\nIntoxication aux hallucinogènes\n",
+      "text_sha256": "bc8f6954add507e240cdf15e6bcbd2dbec7ad801f787f016275ca6dc00044cfb"
+    },
+    {
+      "bbox": [
+        58.04999923706055,
+        92.80195617675781,
+        449.0980224609375,
+        102.62812805175781
+      ],
+      "block_id": "page-0912-block-0008",
+      "order": 8,
+      "text": "A. Usage récent d’un hallucinogène (autre que la phencyclidine).\nIdem à DSM-5.\n",
+      "text_sha256": "8e04177ea0a2b434054a266dc23bc148c82a160555ebab7d513324dc15028357"
+    },
+    {
+      "bbox": [
+        58.04999923706055,
+        109.20195770263672,
+        388.78466796875,
+        119.02812957763672
+      ],
+      "block_id": "page-0912-block-0009",
+      "order": 9,
+      "text": "B. Changements comportementaux ou psychologiques problématiques cliniquement signicatifs (p. ex.:\n",
+      "text_sha256": "0764090612466ba14110e39b6f2cc1a3c1317285f1d698086457c9d127533825"
+    },
+    {
+      "bbox": [
+        58.04999923706055,
+        120.20195007324219,
+        344.501708984375,
+        185.0281219482422
+      ],
+      "block_id": "page-0912-block-0010",
+      "order": 10,
+      "text": "• anxiété ou dépression marquées ;\n• idées de référence ;\n• peur de devenir fou ;\n• mode de pensée persécutoire ;\n• altération du jugement.\n[Ces changements] se sont développés pendant ou peu après l’usage d’un hallucinogène.\n",
+      "text_sha256": "f349364979b0e7699e5fc6ca6beb25e1228b8e79687358f1fa6382acc08f25be"
+    },
+    {
+      "bbox": [
+        400.3000183105469,
+        109.20195770263672,
+        449.0980224609375,
+        119.02812957763672
+      ],
+      "block_id": "page-0912-block-0011",
+      "order": 11,
+      "text": "Idem à DSM-5.\n",
+      "text_sha256": "73e2b1c81f4b0cae397bef13680b1ec0f40f117881c7e4acde37a2d30a373dea"
+    },
+    {
+      "bbox": [
+        58.04999923706055,
+        191.65196228027344,
+        368.634765625,
+        201.47813415527344
+      ],
+      "block_id": "page-0912-block-0012",
+      "order": 12,
+      "text": "C. Altérations des perceptions survenant en pleine conscience, dans un état de plein éveil (p. ex.:\n",
+      "text_sha256": "1aae726ae39a21cdbe75dc975557766a2bafd35cbb755ee656e7c0c1aaec752e"
+    },
+    {
+      "bbox": [
+        58.04999923706055,
+        202.65196228027344,
+        368.9439392089844,
+        256.4781494140625
+      ],
+      "block_id": "page-0912-block-0013",
+      "order": 13,
+      "text": "• intensication subjective des perceptions ;\n• dépersonnalisation, déréalisation ;\n• illusions, hallucinations ;\n• synesthésies [association des perceptions par deux sens, p. ex. voir des lettres en couleur].\n[Ces altérations] se sont développées pendant ou peu après l’usage d’un hallucinogène.\n",
+      "text_sha256": "d29329aabed23e68d0896876224c9db939a6d160e2f4bebddf872c0bbed35a6f"
+    },
+    {
+      "bbox": [
+        400.3000183105469,
+        191.65196228027344,
+        449.0980224609375,
+        201.47813415527344
+      ],
+      "block_id": "page-0912-block-0014",
+      "order": 14,
+      "text": "Idem à DSM-5.\n",
+      "text_sha256": "73e2b1c81f4b0cae397bef13680b1ec0f40f117881c7e4acde37a2d30a373dea"
+    },
+    {
+      "bbox": [
+        58.04999923706055,
+        263.0519714355469,
+        393.35906982421875,
+        272.8781433105469
+      ],
+      "block_id": "page-0912-block-0015",
+      "order": 15,
+      "text": "D. Au moins deux des signes suivants se développant pendant ou peu après l’usage d’un hallucinogène :\n",
+      "text_sha256": "6b96c3195c47deb5194a0c863649f3cc759ffa2a5fde713fcf1017c0f0b7e1e9"
+    },
+    {
+      "bbox": [
+        70.05000305175781,
+        274.0519714355469,
+        153.5841064453125,
+        349.8781433105469
+      ],
+      "block_id": "page-0912-block-0016",
+      "order": 16,
+      "text": "1. Dilatation pupillaire.\n2. Tachycardie.\n3. Transpiration.\n4. Palpitations.\n5. Vision trouble.\n6. Tremblements.\n7. Incoordination motrice.\n",
+      "text_sha256": "c720944ffc9deed1c41401c1955ec35ededc5339d032e237692b91a0e5e180f0"
+    },
+    {
+      "bbox": [
+        400.3000183105469,
+        263.0519714355469,
+        449.0980224609375,
+        272.8781433105469
+      ],
+      "block_id": "page-0912-block-0017",
+      "order": 17,
+      "text": "Idem à DSM-5.\n",
+      "text_sha256": "73e2b1c81f4b0cae397bef13680b1ec0f40f117881c7e4acde37a2d30a373dea"
+    },
+    {
+      "bbox": [
+        58.04999923706055,
+        356.501953125,
+        384.80633544921875,
+        366.328125
+      ],
+      "block_id": "page-0912-block-0018",
+      "order": 18,
+      "text": "E. Les symptômes ne sont pas dus à une autre affection médicale, et ne sont pas mieux expliqués par\n",
+      "text_sha256": "6fe88dd4032d77347c7165fc1d441b260b1c88461430c57a269c5a41921e66fb"
+    },
+    {
+      "bbox": [
+        68.3499984741211,
+        366.501953125,
+        294.7963562011719,
+        376.328125
+      ],
+      "block_id": "page-0912-block-0019",
+      "order": 19,
+      "text": "un autre trouble mental, dont une intoxication par une autre substance.\n",
+      "text_sha256": "bdd4fdca8725bd0d6b1cf8c96515f3a3b94e3f377e75b7919256e4e7cbadddff"
+    },
+    {
+      "bbox": [
+        400.3000183105469,
+        356.501953125,
+        449.0980224609375,
+        366.328125
+      ],
+      "block_id": "page-0912-block-0020",
+      "order": 20,
+      "text": "Idem à DSM-5.\n",
+      "text_sha256": "73e2b1c81f4b0cae397bef13680b1ec0f40f117881c7e4acde37a2d30a373dea"
+    },
+    {
+      "bbox": [
+        54.04999923706055,
+        384.09063720703125,
+        553.156982421875,
+        452.82501220703125
+      ],
+      "block_id": "page-0912-block-0021",
+      "order": 21,
+      "text": "Sources : APA (2015), p. 628 ; APA (2004), p. 292-293.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris,\n2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004.\nAll rights reserved.\n",
+      "text_sha256": "c88a9b69d9fc41c422d17a660ce77f0477b14d15b5cf7dc0692ab44b6b9e3910"
+    },
+    {
+      "bbox": [
+        54.0,
+        487.2330017089844,
+        297.1229553222656,
+        535.8585205078125
+      ],
+      "block_id": "page-0912-block-0022",
+      "order": 22,
+      "text": "Traitements des troubles liés aux hallucinogènes\nPeu de traitements sont disponibles pour les syndromes des\ntroubles liés aux hallucinogènes ; seule l’intoxication nécessite\nune intervention spécique.\n",
+      "text_sha256": "eefd14ecfd20d689eb6b609a9cbc7bfad132a7f47ad3ae0572c47b623a2fd7a3"
+    },
+    {
+      "bbox": [
+        54.0,
+        536.8658447265625,
+        297.1152038574219,
+        708.3585205078125
+      ],
+      "block_id": "page-0912-block-0023",
+      "order": 23,
+      "text": "L’absorption des hallucinogènes de type LSD est très rapide\net le recours au lavage gastrique n’est pas indiqué, car il peut\naugmenter l’agitation ; on peut calmer le patient verbalement\nou avec une benzodiazépine, tel que le lorazépam 1 à 2 mg\nPO ou IM q 4 h PRN. En présence de déshydratation, l’intoxi-\ncation au MDMA ou au MDA peut causer de l’hyperthermie\nmaligne, de l’insusance rénale et des convulsions. Pour\ntraiter les crises convulsives, on prescrit une benzodiazépine,\ntel que le lorazépam, et un anticonvulsivant. L’hyperthermie\nest traitée par les bains d’eau froide ou une couverture hypo-\nthermique. Une consultation en néphrologie s’impose dans\nles cas d’insusance rénale aiguë. Les psychoses induites\npar les hallucinogènes répondent aux benzodiazépines ainsi\nqu’aux antipsychotiques tels que la quétiapine, l’olanzapine\nou l’halopéridol.\n",
+      "text_sha256": "1633177de2793eab8e3a5e2dcf4c06a1dee0a1a05b9f2b77d1ab78e63ca21ff2"
+    }
+  ],
+  "coordinates_sha256": "ebe40ef56d8d5332d6a4b813aeca2a49f434520d21a1542b2949863c5f217af1",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0912",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 38\nToxicomanies\n895\n38.5.8 Phencyclidine\nLa phencyclidine, ou PCP, est un anesthésique dissociatif. Elle fut\nsynthétisée aux États-Unis en 1926, commercialisée brièvement\ncomme anesthésiant général dans les années 1960 avant de faire\nl’objet d’un usage illicite dès les années 1970. Cette substance se\nprésente sous forme de poudre, de comprimés, de liquide ou\nde capsules. Sa synthèse étant simple et son prix abordable, le\nPCP est fréquemment utilisé pour diluer ou pour augmenter les\neets d’autres drogues (p. ex., la cocaïne, le LSD ou le cannabis).\nElle est vendue dans la rue sous une multitude d’appellations :\npoussière d’ange, poudre d’ange, crystal, crystal joint, cyclone,\ndead on arrivalou DOA, dust, elephant tranquillizer, embalming\nuid, peace, scue, seams, surfer, wack ou zombie.\nTel que mentionné plus haut, exemption faite du cannabis, les\nhallucinogènes (dont le PCP) constituaient la catégorie de drogue\nillicite la plus consommée au cours des 12 derniers mois par les\nCanadiens. Cette consommation était passée de 0,7 % en 2004 à\n2,1 % en 2008. Elle était importante chez les hommes (3,3 % par\nTABLEAU 38.14 Critères diagnostiques de l’intoxication aux hallucinogènes\nDSM-5\nDSM-IV-TR\n292.89 (F16.0x) Intoxication par un autre hallucinogène\nIntoxication aux hallucinogènes\nA. Usage récent d’un hallucinogène (autre que la phencyclidine).\nIdem à DSM-5.\nB. Changements comportementaux ou psychologiques problématiques cliniquement signicatifs (p. ex.:\n• anxiété ou dépression marquées ;\n• idées de référence ;\n• peur de devenir fou ;\n• mode de pensée persécutoire ;\n• altération du jugement.\n[Ces changements] se sont développés pendant ou peu après l’usage d’un hallucinogène.\nIdem à DSM-5.\nC. Altérations des perceptions survenant en pleine conscience, dans un état de plein éveil (p. ex.:\n• intensication subjective des perceptions ;\n• dépersonnalisation, déréalisation ;\n• illusions, hallucinations ;\n• synesthésies [association des perceptions par deux sens, p. ex. voir des lettres en couleur].\n[Ces altérations] se sont développées pendant ou peu après l’usage d’un hallucinogène.\nIdem à DSM-5.\nD. Au moins deux des signes suivants se développant pendant ou peu après l’usage d’un hallucinogène :\n1. Dilatation pupillaire.\n2. Tachycardie.\n3. Transpiration.\n4. Palpitations.\n5. Vision trouble.\n6. Tremblements.\n7. Incoordination motrice.\nIdem à DSM-5.\nE. Les symptômes ne sont pas dus à une autre affection médicale, et ne sont pas mieux expliqués par\nun autre trouble mental, dont une intoxication par une autre substance.\nIdem à DSM-5.\nSources : APA (2015), p. 628 ; APA (2004), p. 292-293.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris,\n2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004.\nAll rights reserved.\nTraitements des troubles liés aux hallucinogènes\nPeu de traitements sont disponibles pour les syndromes des\ntroubles liés aux hallucinogènes ; seule l’intoxication nécessite\nune intervention spécique.\nL’absorption des hallucinogènes de type LSD est très rapide\net le recours au lavage gastrique n’est pas indiqué, car il peut\naugmenter l’agitation ; on peut calmer le patient verbalement\nou avec une benzodiazépine, tel que le lorazépam 1 à 2 mg\nPO ou IM q 4 h PRN. En présence de déshydratation, l’intoxi-\ncation au MDMA ou au MDA peut causer de l’hyperthermie\nmaligne, de l’insusance rénale et des convulsions. Pour\ntraiter les crises convulsives, on prescrit une benzodiazépine,\ntel que le lorazépam, et un anticonvulsivant. L’hyperthermie\nest traitée par les bains d’eau froide ou une couverture hypo-\nthermique. Une consultation en néphrologie s’impose dans\nles cas d’insusance rénale aiguë. Les psychoses induites\npar les hallucinogènes répondent aux benzodiazépines ainsi\nqu’aux antipsychotiques tels que la quétiapine, l’olanzapine\nou l’halopéridol.\n",
+  "raw_text_sha256": "931c523d713de393d950324758ffb9264a571edff618a974cd3752a45273c0e3",
+  "source_page_display": 913,
+  "source_page_index": 912
+}

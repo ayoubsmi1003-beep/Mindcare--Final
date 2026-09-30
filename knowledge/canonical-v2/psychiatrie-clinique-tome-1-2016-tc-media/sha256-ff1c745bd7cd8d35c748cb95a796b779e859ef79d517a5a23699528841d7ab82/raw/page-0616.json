@@ -1,0 +1,376 @@
+{
+  "block_sequence_sha256": "dbe0ccd2058fdfade864242e1b9c00d36929be7548e737058efea0375c0834e0",
+  "blocks": [
+    {
+      "bbox": [
+        362.5,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0616-block-0001",
+      "order": 1,
+      "text": "Chapitre 27\nTroubles neurocognitifs\n599\n",
+      "text_sha256": "5405e84b928c6eff19fb351e0461b1c984a57eea0cad0e324d3b92e00a4fa914"
+    },
+    {
+      "bbox": [
+        312.0,
+        40.9658203125,
+        555.4803466796875,
+        74.50849914550781
+      ],
+      "block_id": "page-0616-block-0002",
+      "order": 2,
+      "text": "« 1. Mutation génétique responsable d’un trouble neurocognitif\nfrontotemporal mise en évidence par les antécédents familiaux\nou par un test génétique.\n",
+      "text_sha256": "b4e227359844bb9639d6b5420f5cb3e71b4d034114aa3ab4ee4919b197958783"
+    },
+    {
+      "bbox": [
+        312.0,
+        75.5658187866211,
+        554.9603271484375,
+        109.1084976196289
+      ],
+      "block_id": "page-0616-block-0003",
+      "order": 3,
+      "text": "2. Mise en évidence par la neuro-imagerie d’une atteinte\ndisproportionnée des lobes frontaux et/ou temporaux. » (APA,\n2015, p. 756)\n",
+      "text_sha256": "b1e5270cf871a1a63f3ad6d882b3c29df13e04d5dc0da9606a7426465a16e1bb"
+    },
+    {
+      "bbox": [
+        312.0,
+        118.03300476074219,
+        555.1864013671875,
+        446.6084899902344
+      ],
+      "block_id": "page-0616-block-0004",
+      "order": 4,
+      "text": "Démences réversibles ou secondaires\nLes démences potentiellement réversibles représentent moins de\n1 % des cas de démence. On les observe surtout chez des patients\nde moins de 65 ans (Agronin, 2008). De nombreuses causes\nsont possibles :\n• troubles thyroïdiens ;\n• carences vitaminiques (en B12: anémie pernicieuse ; en thiamine :\nbéribéri ; en vitamine PP [également appelée vita mine B3] :\npellagre) ;\n• hyponatrémie, hypercalcémie, hypoglycémie ;\n• dysfonctions hépatiques ou rénales ;\n• tumeurs cérébrales primitives ou secondaires ;\n• hématome sous-dural ;\n• hydrocéphalie à pression normale ;\n• neurosyphilis, cryptococcose ;\n• méningite chronique ;\n• sclérose en plaques ;\n• maladies auto-immunes (artérite temporale, lupus érythé-\nmateux disséminé) ;\n• postirradiation intracrânienne ou décharge électrique.\nL’hydrocéphalie à pression normale se caractérise par une\naugmentation de la taille des ventricules cérébraux à l’imagerie\ncérébrale avec une pression d’ouverture normale à la ponction\nlombaire. La triade classique est la présence de démence, d’ataxie\net d’incontinence urinaire. Le traitement en est la dérivation\nventriculopéritonéale.\n",
+      "text_sha256": "c1ee263c538fe1149301ee6085d68724ae47c0af5302a1cf279d0647b7e1664e"
+    },
+    {
+      "bbox": [
+        312.0,
+        447.66583251953125,
+        555.0918579101562,
+        538.9085083007812
+      ],
+      "block_id": "page-0616-block-0005",
+      "order": 5,
+      "text": "La syphilis tertiaire est rare. Elle survient 10 à 25 ans\naprès l’infection primaire et se caractérise par une paralysie\ngénérale progressive, un changement de personnalité et des\noublis. Le test du laboratoire de recherche sur les maladies\nvénériennes (VDRL) peut être négatif et l’usage du test\nd’immunofluorescence absorbée pour détecter la présence\nd’anticorps dirigés contre le Treponema pallidum (FTA-ABS)\npeut être nécessaire.\n",
+      "text_sha256": "37a9265d8c8010323b49889fa897b62d1d1dfb58c6a69ee2ff3904ff35146e7e"
+    },
+    {
+      "bbox": [
+        312.0,
+        539.9658203125,
+        555.2726440429688,
+        654.2584838867188
+      ],
+      "block_id": "page-0616-block-0006",
+      "order": 6,
+      "text": "La pseudodémence de la dépression est un concept contro-\nversé. La relation entre dépression et démence est complexe.\nElle peut en être le prodrome, un facteur causal ou en partager\nles facteurs de risque. Une dysfonction exécutive, un ralentisse-\nment du traitement de l’information ou des hyperintensités de\nla matière blanche cérébrale associées à une maladie vasculaire\npeuvent être en cause. Les troubles cognitifs persistent souvent\naprès la rémission d’un épisode dépressif majeur, et jusqu’à 40 %\ndes patients présentent un tableau franc de démence au suivi\naprès trois ans (omas & O’Brien, 2008).\n",
+      "text_sha256": "9be0769161600643cfe0d9197be0be0e56103c47143b3c835c6ebe3feda01e8a"
+    },
+    {
+      "bbox": [
+        312.0,
+        663.1830444335938,
+        555.0175170898438,
+        725.45849609375
+      ],
+      "block_id": "page-0616-block-0007",
+      "order": 7,
+      "text": "Démence persistante induite par une substance\nIl peut s’agir d’une démence induite par :\n• des médicaments : psychotropes, sédatifs, hypnotiques, anxio-\nlytiques, stéroïdes, antihistaminiques, analgésiques, anticho-\nlinergiques, anticonvulsivants et méthotrexate intrathécal ;\n",
+      "text_sha256": "cdc4774a3f682887de3736edd41a8b0a5590ae9209bc09e9fa9b1f471e93cd13"
+    },
+    {
+      "bbox": [
+        54.0,
+        39.22441482543945,
+        297.19805908203125,
+        99.40850067138672
+      ],
+      "block_id": "page-0616-block-0008",
+      "order": 8,
+      "text": "• La variante logopénique, associée à une atrophie périsylvienne\npostérieure ou pariétale gauche, plus souvent associée à la\nmaladie d’Alzheimer qu’à la démence frontotemporale, se\ncaractérise par :\n– une diculté de récupération des mots et de l’anomie dans\n",
+      "text_sha256": "0d3bb1870868c42f8665767751ec914b0c9be2ecdd93b2c66101d44a84ce5d50"
+    },
+    {
+      "bbox": [
+        66.0,
+        100.41582489013672,
+        297.12506103515625,
+        151.4084930419922
+      ],
+      "block_id": "page-0616-block-0009",
+      "order": 9,
+      "text": "le discours spontané ;\n– une atteinte de la répétition des phrases ;\n– des erreurs phonologiques ;\n– une préservation de la compréhension des mots, de la\n",
+      "text_sha256": "507d2bdfbd24e468a791f107da96e900cc4f679619683cc83852650615ef39dc"
+    },
+    {
+      "bbox": [
+        54.0,
+        152.4158172607422,
+        297.0711669921875,
+        212.9084930419922
+      ],
+      "block_id": "page-0616-block-0010",
+      "order": 10,
+      "text": "connaissance des objets et de la motricité du discours ;\n– l’absence d’agrammatisme.\nDes symptômes moteurs peuvent aussi être présents\n(symptômes extrapyramidaux, syndrome du motoneurone\nbulbaire).\n",
+      "text_sha256": "3987fe762d7aab1aa7c79cf11d1e6f2af58744909d0fe023609db3cb31297028"
+    },
+    {
+      "bbox": [
+        54.0,
+        213.9158172607422,
+        297.218017578125,
+        235.9084930419922
+      ],
+      "block_id": "page-0616-block-0011",
+      "order": 11,
+      "text": "Le DSM-5 vient d’élaborer des critères spéciques pour le\ntrouble neurocognitif frontotemporal majeur (voir l’encadré 27.10).\n",
+      "text_sha256": "803b761c3daf3fd3604f3338c715555bdddade5789cc1cc7bdce3f52cb2566fd"
+    },
+    {
+      "bbox": [
+        54.0,
+        236.9158172607422,
+        297.01751708984375,
+        281.90850830078125
+      ],
+      "block_id": "page-0616-block-0012",
+      "order": 12,
+      "text": "On pose un diagnostic de trouble neurocognitif majeur fron-\ntotemporal probable si on observe chacun des critères suivants ;\ndans le cas contraire, un diagnostic de trouble neurocognitif\nmajeur frontotemporal possible devrait être établi :\n",
+      "text_sha256": "155c0dbf4c9fc9dd172d6a6df64985f790cb20a4941de384340e45b998b87245"
+    },
+    {
+      "bbox": [
+        56.400001525878906,
+        304.6523132324219,
+        255.72801208496094,
+        316.9700622558594
+      ],
+      "block_id": "page-0616-block-0013",
+      "order": 13,
+      "text": "ENCADRÉ 27.10 Critères diagnostiques du trouble\n",
+      "text_sha256": "c7c2f9997ed171d393be8384716cadb68647f476841565b4b300af1ada3d5acd"
+    },
+    {
+      "bbox": [
+        118.25,
+        316.5022888183594,
+        236.76876831054688,
+        328.4700622558594
+      ],
+      "block_id": "page-0616-block-0014",
+      "order": 14,
+      "text": "neurocognitif frontotemporal\n",
+      "text_sha256": "0c61e80b464d10e97ada3e1cbe49cc0e7729ac7b7ff48eaf28b30ba528f59010"
+    },
+    {
+      "bbox": [
+        58.25,
+        336.5228576660156,
+        284.5956115722656,
+        370.4281311035156
+      ],
+      "block_id": "page-0616-block-0015",
+      "order": 15,
+      "text": "DSM-5\n294.1x (F02.8x) Trouble neurocognitif frontotemporal majeur\nA. Les critères d’un trouble neurocognitif majeur ou léger sont remplis\n",
+      "text_sha256": "a2746e5cd3746a094a6f5acf1bc894fb21bae1c7c884ef03b1cc230c5b5a80af"
+    },
+    {
+      "bbox": [
+        70.25,
+        370.6019592285156,
+        137.10800170898438,
+        380.4281311035156
+      ],
+      "block_id": "page-0616-block-0016",
+      "order": 16,
+      "text": "(voir l’encadré 27.1).\n",
+      "text_sha256": "cf14f362759e0da88c62f5bbd93725e9e002b1ee4de2d635a64f644d0f5235a9"
+    },
+    {
+      "bbox": [
+        58.25,
+        388.001953125,
+        263.3686218261719,
+        397.828125
+      ],
+      "block_id": "page-0616-block-0017",
+      "order": 17,
+      "text": "B. Le trouble a un début insidieux et une progression graduelle.\n",
+      "text_sha256": "f1fb072a142f7d4bdfdf746bba181d98485109cff25308a6250454603182ce99"
+    },
+    {
+      "bbox": [
+        58.25,
+        405.45196533203125,
+        116.4274673461914,
+        415.27813720703125
+      ],
+      "block_id": "page-0616-block-0018",
+      "order": 18,
+      "text": "C. Soit (1) ou (2) :\n",
+      "text_sha256": "338fd7c56e6f40050efc41baea60d12e7bf378b6e6a0d30355a064d0e308272f"
+    },
+    {
+      "bbox": [
+        70.25,
+        416.45196533203125,
+        277.74627685546875,
+        437.27813720703125
+      ],
+      "block_id": "page-0616-block-0019",
+      "order": 19,
+      "text": "1. Variante comportementale :\na. Trois ou plus des symptômes comportementaux suivants :\n",
+      "text_sha256": "f70c27a1a2a3b714758a7dd131663ff096f2d70366302356e62c183a69512447"
+    },
+    {
+      "bbox": [
+        94.25,
+        438.45196533203125,
+        270.6379089355469,
+        470.27813720703125
+      ],
+      "block_id": "page-0616-block-0020",
+      "order": 20,
+      "text": "i. Désinhibition comportementale.\nii. Apathie ou inertie.\niii. Pertes des capacités de sympathie ou d’empathie à\n",
+      "text_sha256": "d2fdedac4b149b951b285e5b48f7a013bcd0e6ea48b10ac40165dfb53ff8f21c"
+    },
+    {
+      "bbox": [
+        94.25,
+        470.45196533203125,
+        289.3505859375,
+        491.27813720703125
+      ],
+      "block_id": "page-0616-block-0021",
+      "order": 21,
+      "text": "l’égard d’autrui.\niv. Comportements persévérants, stéréotypés ou compulsifs/\n",
+      "text_sha256": "95760e64b55a24289ad982fab78b207c1f3ef1d4320c2e24e0399e7540ca1032"
+    },
+    {
+      "bbox": [
+        94.25,
+        491.45196533203125,
+        261.9326477050781,
+        512.2781372070312
+      ],
+      "block_id": "page-0616-block-0022",
+      "order": 22,
+      "text": "ritualisés.\nv. Hyperoralité et modications des comportements\n",
+      "text_sha256": "1ac5d6ae75be0ccc0c3be0a76c098e63908de50cab9d7f89984a312adf22d75f"
+    },
+    {
+      "bbox": [
+        82.25,
+        512.4519653320312,
+        281.3535461425781,
+        533.2781372070312
+      ],
+      "block_id": "page-0616-block-0023",
+      "order": 23,
+      "text": "alimentaires.\nb. Important déclin de la cognition sociale et/ou des fonctions\n",
+      "text_sha256": "51b878f01d018636e9dd0f9556268cdbe7a9efb21a548e8f85c187708d6c06e0"
+    },
+    {
+      "bbox": [
+        70.25,
+        533.4519653320312,
+        275.7174987792969,
+        565.2781372070312
+      ],
+      "block_id": "page-0616-block-0024",
+      "order": 24,
+      "text": "exécutives.\n2. Variante verbale :\na. Important déclin des habiletés langagières, sous la forme\n",
+      "text_sha256": "0862edf454f04ba1f65dda08733195fe1eae1e5938c47dfb1ef36131f86a9317"
+    },
+    {
+      "bbox": [
+        94.25,
+        565.4519653320312,
+        276.4660949707031,
+        595.2781372070312
+      ],
+      "block_id": "page-0616-block-0025",
+      "order": 25,
+      "text": "d’un appauvrissement du discours, d’un manque du mot,\nde la dénomination des objets, de la grammaire ou de\nla compréhension des mots.\n",
+      "text_sha256": "7de17ee3172ad9c694d6ec6628937a52fadd87a2f9d8403398d46ff55b4654b6"
+    },
+    {
+      "bbox": [
+        58.25,
+        602.8519897460938,
+        290.37432861328125,
+        612.6781616210938
+      ],
+      "block_id": "page-0616-block-0026",
+      "order": 26,
+      "text": "D. Apprentissage, mémoire et fonctions perceptivomotrices relativement\n",
+      "text_sha256": "1b7b7e343f9ade541274df1c2ffe6c4a268202230f237a62d4f6844521ec87bc"
+    },
+    {
+      "bbox": [
+        70.25,
+        612.8519897460938,
+        107.0780029296875,
+        622.6781616210938
+      ],
+      "block_id": "page-0616-block-0027",
+      "order": 27,
+      "text": "préservées.\n",
+      "text_sha256": "770cb69335a16609a49c6345f3534309103dce342163a81bd0d9660671fdbf28"
+    },
+    {
+      "bbox": [
+        58.25,
+        630.3019409179688,
+        286.24700927734375,
+        640.1281127929688
+      ],
+      "block_id": "page-0616-block-0028",
+      "order": 28,
+      "text": "E. La perturbation n’est pas mieux expliquée par une maladie cérébro-\n",
+      "text_sha256": "751ccbcfa44633d357ddadb8d094c62a1a5f3f2a0ed8be28549db9de165b8cce"
+    },
+    {
+      "bbox": [
+        70.25,
+        640.3019409179688,
+        284.8554992675781,
+        660.1281127929688
+      ],
+      "block_id": "page-0616-block-0029",
+      "order": 29,
+      "text": "vasculaire, une autre maladie neurodégénérative, les effets d’une\nsubstance ou un autre trouble mental, neurologique ou systémique.\n",
+      "text_sha256": "d7f376c9aace5ab2dd781611527fde9244e9fc46d4a9b828feadad11e6aaa169"
+    },
+    {
+      "bbox": [
+        54.25,
+        667.890625,
+        294.60601806640625,
+        724.625
+      ],
+      "block_id": "page-0616-block-0030",
+      "order": 30,
+      "text": "Source : APA (2015), p. 725-726.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic\nand Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles\nMentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson\nSAS, Paris, 2015. All rights reserved.\n",
+      "text_sha256": "1408597bbadb12e83dbf6aba65aacb370cfda868504fded83e36751ca6711b40"
+    }
+  ],
+  "coordinates_sha256": "004f956ca52be58eb90556503010bb48b66807f902cc8174be5df3eb8b172f4e",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0616",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 27\nTroubles neurocognitifs\n599\n« 1. Mutation génétique responsable d’un trouble neurocognitif\nfrontotemporal mise en évidence par les antécédents familiaux\nou par un test génétique.\n2. Mise en évidence par la neuro-imagerie d’une atteinte\ndisproportionnée des lobes frontaux et/ou temporaux. » (APA,\n2015, p. 756)\nDémences réversibles ou secondaires\nLes démences potentiellement réversibles représentent moins de\n1 % des cas de démence. On les observe surtout chez des patients\nde moins de 65 ans (Agronin, 2008). De nombreuses causes\nsont possibles :\n• troubles thyroïdiens ;\n• carences vitaminiques (en B12: anémie pernicieuse ; en thiamine :\nbéribéri ; en vitamine PP [également appelée vita mine B3] :\npellagre) ;\n• hyponatrémie, hypercalcémie, hypoglycémie ;\n• dysfonctions hépatiques ou rénales ;\n• tumeurs cérébrales primitives ou secondaires ;\n• hématome sous-dural ;\n• hydrocéphalie à pression normale ;\n• neurosyphilis, cryptococcose ;\n• méningite chronique ;\n• sclérose en plaques ;\n• maladies auto-immunes (artérite temporale, lupus érythé-\nmateux disséminé) ;\n• postirradiation intracrânienne ou décharge électrique.\nL’hydrocéphalie à pression normale se caractérise par une\naugmentation de la taille des ventricules cérébraux à l’imagerie\ncérébrale avec une pression d’ouverture normale à la ponction\nlombaire. La triade classique est la présence de démence, d’ataxie\net d’incontinence urinaire. Le traitement en est la dérivation\nventriculopéritonéale.\nLa syphilis tertiaire est rare. Elle survient 10 à 25 ans\naprès l’infection primaire et se caractérise par une paralysie\ngénérale progressive, un changement de personnalité et des\noublis. Le test du laboratoire de recherche sur les maladies\nvénériennes (VDRL) peut être négatif et l’usage du test\nd’immunofluorescence absorbée pour détecter la présence\nd’anticorps dirigés contre le Treponema pallidum (FTA-ABS)\npeut être nécessaire.\nLa pseudodémence de la dépression est un concept contro-\nversé. La relation entre dépression et démence est complexe.\nElle peut en être le prodrome, un facteur causal ou en partager\nles facteurs de risque. Une dysfonction exécutive, un ralentisse-\nment du traitement de l’information ou des hyperintensités de\nla matière blanche cérébrale associées à une maladie vasculaire\npeuvent être en cause. Les troubles cognitifs persistent souvent\naprès la rémission d’un épisode dépressif majeur, et jusqu’à 40 %\ndes patients présentent un tableau franc de démence au suivi\naprès trois ans (omas & O’Brien, 2008).\nDémence persistante induite par une substance\nIl peut s’agir d’une démence induite par :\n• des médicaments : psychotropes, sédatifs, hypnotiques, anxio-\nlytiques, stéroïdes, antihistaminiques, analgésiques, anticho-\nlinergiques, anticonvulsivants et méthotrexate intrathécal ;\n• La variante logopénique, associée à une atrophie périsylvienne\npostérieure ou pariétale gauche, plus souvent associée à la\nmaladie d’Alzheimer qu’à la démence frontotemporale, se\ncaractérise par :\n– une diculté de récupération des mots et de l’anomie dans\nle discours spontané ;\n– une atteinte de la répétition des phrases ;\n– des erreurs phonologiques ;\n– une préservation de la compréhension des mots, de la\nconnaissance des objets et de la motricité du discours ;\n– l’absence d’agrammatisme.\nDes symptômes moteurs peuvent aussi être présents\n(symptômes extrapyramidaux, syndrome du motoneurone\nbulbaire).\nLe DSM-5 vient d’élaborer des critères spéciques pour le\ntrouble neurocognitif frontotemporal majeur (voir l’encadré 27.10).\nOn pose un diagnostic de trouble neurocognitif majeur fron-\ntotemporal probable si on observe chacun des critères suivants ;\ndans le cas contraire, un diagnostic de trouble neurocognitif\nmajeur frontotemporal possible devrait être établi :\nENCADRÉ 27.10 Critères diagnostiques du trouble\nneurocognitif frontotemporal\nDSM-5\n294.1x (F02.8x) Trouble neurocognitif frontotemporal majeur\nA. Les critères d’un trouble neurocognitif majeur ou léger sont remplis\n(voir l’encadré 27.1).\nB. Le trouble a un début insidieux et une progression graduelle.\nC. Soit (1) ou (2) :\n1. Variante comportementale :\na. Trois ou plus des symptômes comportementaux suivants :\ni. Désinhibition comportementale.\nii. Apathie ou inertie.\niii. Pertes des capacités de sympathie ou d’empathie à\nl’égard d’autrui.\niv. Comportements persévérants, stéréotypés ou compulsifs/\nritualisés.\nv. Hyperoralité et modications des comportements\nalimentaires.\nb. Important déclin de la cognition sociale et/ou des fonctions\nexécutives.\n2. Variante verbale :\na. Important déclin des habiletés langagières, sous la forme\nd’un appauvrissement du discours, d’un manque du mot,\nde la dénomination des objets, de la grammaire ou de\nla compréhension des mots.\nD. Apprentissage, mémoire et fonctions perceptivomotrices relativement\npréservées.\nE. La perturbation n’est pas mieux expliquée par une maladie cérébro-\nvasculaire, une autre maladie neurodégénérative, les effets d’une\nsubstance ou un autre trouble mental, neurologique ou systémique.\nSource : APA (2015), p. 725-726.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic\nand Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles\nMentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson\nSAS, Paris, 2015. All rights reserved.\n",
+  "raw_text_sha256": "5e8acc10afb83def63b372359c363fb6a0a3f71fb7290c9f85cb07a1045bb605",
+  "source_page_display": 617,
+  "source_page_index": 616
+}

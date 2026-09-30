@@ -1,0 +1,76 @@
+{
+  "block_sequence_sha256": "1a9ce2ee1537e0f141177c292048ce885ff2e417a49596f21b086af5e8d10754",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        180.42501831054688,
+        758.8693237304688
+      ],
+      "block_id": "page-1145-block-0001",
+      "order": 1,
+      "text": "F8\nFigures supplémentaires\n",
+      "text_sha256": "b3d86fb1ce90305a572fc556bb2ffc1c8bbeb9399605651c798efe73460a0df9"
+    },
+    {
+      "bbox": [
+        50.29999923706055,
+        41.002296447753906,
+        133.89425659179688,
+        53.320068359375
+      ],
+      "block_id": "page-1145-block-0002",
+      "order": 2,
+      "text": "FIGURE 10 Thalamus\n",
+      "text_sha256": "2b7b6dcfd435d8fe2a726bd45d939978108920871c018a1b9a9b54ac5160c99e"
+    },
+    {
+      "bbox": [
+        48.25,
+        283.4906311035156,
+        281.5024719238281,
+        292.3588562011719
+      ],
+      "block_id": "page-1145-block-0003",
+      "order": 3,
+      "text": "Source : Pinel, J. P. J. (2008). Biopsychology, New York, NY, Pearson Education Inc.\n",
+      "text_sha256": "861911004d5446dedc7ffcc5bd628119a6809e85b6475de49d94332f700eb01c"
+    },
+    {
+      "bbox": [
+        50.400001525878906,
+        322.5022888183594,
+        197.88052368164062,
+        334.820068359375
+      ],
+      "block_id": "page-1145-block-0004",
+      "order": 4,
+      "text": "FIGURE 11 Noyaux hypothalamiques\n",
+      "text_sha256": "c1c5445d4c9516d967677f820eb76609c1d87156582e4d664b61622b07b79fff"
+    },
+    {
+      "bbox": [
+        48.25,
+        713.5406494140625,
+        281.5024719238281,
+        722.4088745117188
+      ],
+      "block_id": "page-1145-block-0005",
+      "order": 5,
+      "text": "Source : Pinel, J. P. J. (2008). Biopsychology, New York, NY, Pearson Education Inc.\n",
+      "text_sha256": "861911004d5446dedc7ffcc5bd628119a6809e85b6475de49d94332f700eb01c"
+    }
+  ],
+  "coordinates_sha256": "17adca4e4a8291251d906bc0b01080986e6e790b0a77e69a5d80ab9b0e91ea4b",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1145",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "F8\nFigures supplémentaires\nFIGURE 10 Thalamus\nSource : Pinel, J. P. J. (2008). Biopsychology, New York, NY, Pearson Education Inc.\nFIGURE 11 Noyaux hypothalamiques\nSource : Pinel, J. P. J. (2008). Biopsychology, New York, NY, Pearson Education Inc.\n",
+  "raw_text_sha256": "1bc945a038a044cb565ab2bf01355cb09d9cc63a6b50372fdd9f854d06b47727",
+  "source_page_display": 1146,
+  "source_page_index": 1145
+}

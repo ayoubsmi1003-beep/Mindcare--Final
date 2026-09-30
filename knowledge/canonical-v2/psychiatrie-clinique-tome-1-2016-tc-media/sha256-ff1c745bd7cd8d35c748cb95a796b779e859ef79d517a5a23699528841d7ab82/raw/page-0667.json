@@ -1,0 +1,340 @@
+{
+  "block_sequence_sha256": "929901f277df89abdbc84224b1475bbbfc5d7e58c38b8691a692429d6467d035",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0667-block-0001",
+      "order": 1,
+      "text": "650\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "6ab08cd81f1058ecf1fde98592913c76a2527ae062778d6d32a6c89b55f31035"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.2067260742188,
+        188.47607421875
+      ],
+      "block_id": "page-0667-block-0002",
+      "order": 2,
+      "text": "Les troubles de sommeil aectent 20 à 40 % des patients. Une\nsensation de malaise ainsi qu’une perte d’appétit et de poids sont\nd’autres manifestations qui peuvent survenir après quelques\nsemaines du traitement. Les patients rapportent également des\nsymptômes tels que :\n• l’irritabilité (20 à 30 % des cas), qui peut être ampliée par la\nribavirine ;\n• l’anxiété (10 à 20 % des cas) ;\n• l’apathie ;\n• les troubles de mémoire et des dicultés de concentration\n(20 % des cas) ;\n• la diminution de la libido.\n",
+      "text_sha256": "0aa8995c6cf05244134ac2cb539c8fa2d6f63cb3d3e0018ca3c6313cbc0fa3ef"
+    },
+    {
+      "bbox": [
+        306.0,
+        200.48681640625,
+        521.7918701171875,
+        216.62939453125
+      ],
+      "block_id": "page-0667-block-0003",
+      "order": 3,
+      "text": "28.4.3 Lupus érythémateux disséminé\n",
+      "text_sha256": "3a48afe4c4b434e38a7467718eaa18268df164e25e4aef362e98611ecc007641"
+    },
+    {
+      "bbox": [
+        306.0,
+        219.9658203125,
+        549.3850708007812,
+        333.95849609375
+      ],
+      "block_id": "page-0667-block-0004",
+      "order": 4,
+      "text": "Le lupus érythémateux disséminé (LED) est une maladie auto-\nimmune systémique chronique dont sourent environ 50 000 Cana -\ndiens. Cette pathologie multigénique, associée à la production\nde nombreux auto-anticorps qui peuvent s’attaquer à tous les\norganes et les dégrader, touche essentiellement les femmes\n(9 fois sur 10) et les jeunes (le plus souvent entre 20 et 40 ans).\nLes conséquences de la maladie inuent lourdement sur la qualité\nde vie des patients. La gravité de cette maladie très polymorphe,\névoluant par poussées d’intensité variable d’un patient à l’autre,\ntient à la possibilité d’une atteinte rénale et cérébrale.\n",
+      "text_sha256": "f8b2cd8b99ced857b727f068db80cee3db32b2f8ddb29c445709ab54c256e7a7"
+    },
+    {
+      "bbox": [
+        306.0,
+        334.9658203125,
+        549.282470703125,
+        414.45849609375
+      ],
+      "block_id": "page-0667-block-0005",
+      "order": 5,
+      "text": "Avec une prévalence globale estimée à 56 %, les complications\nneuropsychiatriques sont les plus diciles à diagnostiquer. Elles\nenglobent un éventail de manifestations neurologiques et psychia-\ntriques regroupées sous le terme général de « neurolupus », qui\ns’ajoutent aux atteintes systemiques graves. Dix-neuf syndromes,\ndénis par le Collège américain de rhumatologie (1999) décrivent\nces atteintes (voir le tableau 28.17).\n",
+      "text_sha256": "da9bfd273f368e5e11458635aa3b4a4e885217ad525ace6ad8912d84c1e5d8a4"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.9658203125,
+        291.1588134765625,
+        229.05850219726562
+      ],
+      "block_id": "page-0667-block-0006",
+      "order": 6,
+      "text": "traitement à l’IFN-α, d’où l’importance d’un suivi psychiatrique\nsystématique même après l’arrêt de la médication. Ces tenta-\ntives et ces suicides sont associés le plus souvent à l’apparition\nd’une dépression majeure qui constitue un facteur indépendant\nd’une moindre réponse virologique précoce au traitement à\nl’IFN-α et à la ribavirine. Une altération immunitaire induite\ndirectement par la dépression ainsi qu’une faible observance\nau traitement chez les patients déprimés font partie des raisons\ninvoquées. Parmi les diérents mécanismes neurobiologiques,\nla dysrégulation sérotoninergique semble le processus le plus\nplausible pour expliquer la survenue de troubles de l’humeur\npendant l’administration d’interféron α. Les ISRS (sertraline,\ncitalopram, uoxétine, paroxétine) ont montré leur ecacité\ndans le traitement de la dépression et de l’anxiété induites par\nl’IFN-α. La gabapentine et les benzodiazépines peuvent également\napaiser l’anxiété occasionnée par la prise d’IFN-α.\n",
+      "text_sha256": "94e6261878e8c403a5f62d180e77c739f16085742abf85821a42deb88d6e2b15"
+    },
+    {
+      "bbox": [
+        48.0,
+        230.4158172607422,
+        291.05902099609375,
+        264.6084899902344
+      ],
+      "block_id": "page-0667-block-0007",
+      "order": 7,
+      "text": "Une prophylaxie aux antidépresseurs peut être souhaitable\nen cas de dépression subclinique, d’absence de soutien familial\nou de situation socio-économique instable.\n",
+      "text_sha256": "59e05411236629634727c2fd55aa64066f0b43d8cce838b6c0340d8014eb358c"
+    },
+    {
+      "bbox": [
+        48.0,
+        265.91583251953125,
+        291.3728942871094,
+        383.0085144042969
+      ],
+      "block_id": "page-0667-block-0008",
+      "order": 8,
+      "text": "Lorsqu’il existe un état de dépression clinique au moment\nd’entreprendre le traitement à l’IFN-α, il faut d’abord traiter\nla dépression ; une fois celle-ci contrôlée, on peut commencer\nl’interféron α avec une surveillance étroite an de déceler une\néventuelle rechute de dépression. Si une dépression survient au\ncours du traitement, on peut poursuivre le traitement à l’IFN α et\nadministrer des ISRS si les symptômes dépressifs sont modérés.\nEn l’absence de réponse aux antidépresseurs, il faut diminuer\nles doses d’IFN-α ou utiliser un antipsychotique atypique à faible\ndose (Schaefer & al., 2013).\n",
+      "text_sha256": "0b748531b7cba27153e108a01603749a9c48350b84a9de98fdbf000891f273af"
+    },
+    {
+      "bbox": [
+        48.0,
+        384.3658142089844,
+        291.2572937011719,
+        525.1085205078125
+      ],
+      "block_id": "page-0667-block-0009",
+      "order": 9,
+      "text": "L’irritabilité est un symptôme très fréquent (20 à 30 % des\ncas) au cours du traitement à l’IFN-α. Elle peut être ampliée\npar la ribavirine. En cas de dépression atypique, notamment en\nprésence d’une humeur irritable prédominante, il faut rechercher\ndes symptômes maniaques et des états mixtes. L’emploi d’anti-\npsychotiques atypiques au cours des manifestations maniaques\npermet de poursuivre le traitement antiviral. On a également\nrapporté des cas de manie qui surviennent parfois jusqu’à deux\nou trois ans après l’arrêt du traitement à l’IFN-α. En cas de\nmanie grave, de dépression ou de tentative de suicide, il importe\nd’interrompre ce traitement et une hospitalisation psychiatrique\npeut être indiquée.\n",
+      "text_sha256": "26aa907e19c6e59c33ff303a9d7fc1ae8f44052cfcdfce8702badff357ee6d37"
+    },
+    {
+      "bbox": [
+        48.0,
+        526.4658203125,
+        291.2312316894531,
+        619.8585205078125
+      ],
+      "block_id": "page-0667-block-0010",
+      "order": 10,
+      "text": "La présence de troubles psychiatriques avant le début du\ntraitement, incluant des maladies psychiatriques primaires telles\nque la schizophrénie ou le trouble bipolaire, ne doit pas consti-\ntuer une contre-indication à un traitement antiviral si la gravité\nde l’atteinte hépatique le justie. Cependant, il faut s’assurer au\npréalable de la stabilité de la maladie psychiatrique primaire et\neectuer une surveillance psychiatrique régulière pendant toute\nla durée du traitement antiviral.\n",
+      "text_sha256": "9f086edb728011c76da6a21cf7b8eb1648105bb9c6c3d69191894fea83e2eb02"
+    },
+    {
+      "bbox": [
+        48.0,
+        621.1658325195312,
+        291.1180725097656,
+        726.4085083007812
+      ],
+      "block_id": "page-0667-block-0011",
+      "order": 11,
+      "text": "Les complications neuropsychiatriques graves, comme une\ndépression accompagnée d’idées suicidaires, des états psycho-\ntiques ou maniaques, ou encore un état confusionnel, peuvent\nparfois être diciles à distinguer des symptômes neurovégétatifs\ninduits par l’IFN-α comme l’asthénie, l’insomnie, l’inappétence\net l’amaigrissement. Ces symptômes suivent généralement le\nrythme des injections ; ils s’atténuent avec le temps et répondent\naux traitements symptomatiques par des antipyrétiques ou\ndes antalgiques.\n",
+      "text_sha256": "e8fd2dafdb6f7c954c11fc5ffcd2beea49b0eae46b3e90e9e0fdd8bb93092ff1"
+    },
+    {
+      "bbox": [
+        308.5,
+        439.352294921875,
+        531.0123291015625,
+        451.7200622558594
+      ],
+      "block_id": "page-0667-block-0012",
+      "order": 12,
+      "text": "TABLEAU 28.17 Atteintes neuropsychiatriques au cours\n",
+      "text_sha256": "ec3b6a71b1077b18ed3cb51a5721650c674cb082558cf868671b1e2fde215658"
+    },
+    {
+      "bbox": [
+        370.8999938964844,
+        451.2522888183594,
+        529.698974609375,
+        474.7200622558594
+      ],
+      "block_id": "page-0667-block-0013",
+      "order": 13,
+      "text": "du lupus érythémateux disséminé (par\nordre de fréquence)\n",
+      "text_sha256": "a505f04721a84d05da6150c2df47aff699e8eaf22516aee9daaef31ebce98284"
+    },
+    {
+      "bbox": [
+        321.6000061035156,
+        479.67413330078125,
+        543.9110107421875,
+        490.25030517578125
+      ],
+      "block_id": "page-0667-block-0014",
+      "order": 14,
+      "text": "Système nerveux central\nSystème nerveux périphérique\n",
+      "text_sha256": "77cd61703cb8922bdf3a8702b2da0afb457299f0ba65598799cf2c1053473937"
+    },
+    {
+      "bbox": [
+        310.25,
+        495.6019592285156,
+        516.58251953125,
+        505.4281311035156
+      ],
+      "block_id": "page-0667-block-0015",
+      "order": 15,
+      "text": "Céphalées (28 %)\nAtteinte des nerfs crâniens\n",
+      "text_sha256": "c7ea3d25aa56d6fcded9c702cfe25d21e3ee451f50f67203a3f3d9f701d3b8f9"
+    },
+    {
+      "bbox": [
+        310.25,
+        514.0519409179688,
+        482.2870178222656,
+        523.8781127929688
+      ],
+      "block_id": "page-0667-block-0016",
+      "order": 16,
+      "text": "Troubles de l’humeur (21 %)\nPolyneuropathie\n",
+      "text_sha256": "2292827ccd2371ef9e7d8ce1955c0ab23a6eaa17065c8899bc1a5503c35dd3d4"
+    },
+    {
+      "bbox": [
+        310.25,
+        532.4519653320312,
+        476.49102783203125,
+        542.2781372070312
+      ],
+      "block_id": "page-0667-block-0017",
+      "order": 17,
+      "text": "Dysfonction cognitive (20 %)\nDysautonomie\n",
+      "text_sha256": "84396142a832e74e5fd930d9c3fd84687da24090293ca28703ac4a9facd5b7ae"
+    },
+    {
+      "bbox": [
+        310.25,
+        550.9019775390625,
+        467.8240051269531,
+        560.7281494140625
+      ],
+      "block_id": "page-0667-block-0018",
+      "order": 18,
+      "text": "Épilepsie (10 %)\nMyasthénie\n",
+      "text_sha256": "93aa726bf39cbd72f07ede69e4957d1de12f379e51bd1421b8641e7527d581af"
+    },
+    {
+      "bbox": [
+        310.25,
+        569.3019409179688,
+        486.9850158691406,
+        579.1281127929688
+      ],
+      "block_id": "page-0667-block-0019",
+      "order": 19,
+      "text": "Atteintes cérébrovasculaires (8 %)\nMononeuropathie\n",
+      "text_sha256": "df54b79a2bb9ebe2c5528e331d49d9ae066653407b56d183261ce5c632b7a258"
+    },
+    {
+      "bbox": [
+        310.25,
+        587.751953125,
+        519.2680053710938,
+        597.578125
+      ],
+      "block_id": "page-0667-block-0020",
+      "order": 20,
+      "text": "Troubles anxieux (6 %)\nSyndrome de Guillain-Barré\n",
+      "text_sha256": "14e3d91411e85eb15dc36db121d1515efbf02d338731e8035573ea4fea40205c"
+    },
+    {
+      "bbox": [
+        310.25,
+        606.1519775390625,
+        467.9590148925781,
+        615.9781494140625
+      ],
+      "block_id": "page-0667-block-0021",
+      "order": 21,
+      "text": "Psychose\nPlexopathie\n",
+      "text_sha256": "adc9232c3018b14c0ad3ae54058aa500d49b284ab999dd1091c841db26fb263c"
+    },
+    {
+      "bbox": [
+        310.25,
+        624.6019897460938,
+        348.5630187988281,
+        634.4281616210938
+      ],
+      "block_id": "page-0667-block-0022",
+      "order": 22,
+      "text": "Myélopathie\n",
+      "text_sha256": "77e4171ec2c60a1d952ac8565e2269bfce67ed4e157476ddc2458e9c6a898426"
+    },
+    {
+      "bbox": [
+        310.25,
+        643.001953125,
+        403.6880187988281,
+        652.828125
+      ],
+      "block_id": "page-0667-block-0023",
+      "order": 23,
+      "text": "Syndrome de démyélinisation\n",
+      "text_sha256": "483e19e48536ffd124adeda6c155f906df28c59106eaf67c48749f540f04bd76"
+    },
+    {
+      "bbox": [
+        310.25,
+        661.4519653320312,
+        400.3490295410156,
+        671.2781372070312
+      ],
+      "block_id": "page-0667-block-0024",
+      "order": 24,
+      "text": "Syndrome confusionnel aigu\n",
+      "text_sha256": "8aba3db219d5d3df4c82ca7a1d261ac4f8eb565b1e2038224f5247d5eccfe237"
+    },
+    {
+      "bbox": [
+        310.25,
+        679.8519897460938,
+        384.8420104980469,
+        689.6781616210938
+      ],
+      "block_id": "page-0667-block-0025",
+      "order": 25,
+      "text": "Mouvements anormaux\n",
+      "text_sha256": "9ce0751bffe681edec05823862a8d142f8323322282dde46e96b97bfe8e4f19e"
+    },
+    {
+      "bbox": [
+        310.25,
+        698.3019409179688,
+        374.62701416015625,
+        708.1281127929688
+      ],
+      "block_id": "page-0667-block-0026",
+      "order": 26,
+      "text": "Méningite aseptique\n",
+      "text_sha256": "ff1f3b8d057f999968c6e34be3909139292dfcdcb612ba85063a0b41d0a626c5"
+    },
+    {
+      "bbox": [
+        306.25,
+        716.890625,
+        452.3674011230469,
+        725.7588500976562
+      ],
+      "block_id": "page-0667-block-0027",
+      "order": 27,
+      "text": "Source : Collège américain de rhumatologie (1999).\n",
+      "text_sha256": "08de56989938da83360e925348c28284dead844cbe4917ae75a1db9301bc1471"
+    }
+  ],
+  "coordinates_sha256": "165d485a9d4eebdbe2fe5ff91e1cc3596fbdd2251383e9e1ed7f99170d4aa87a",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0667",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "650\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nLes troubles de sommeil aectent 20 à 40 % des patients. Une\nsensation de malaise ainsi qu’une perte d’appétit et de poids sont\nd’autres manifestations qui peuvent survenir après quelques\nsemaines du traitement. Les patients rapportent également des\nsymptômes tels que :\n• l’irritabilité (20 à 30 % des cas), qui peut être ampliée par la\nribavirine ;\n• l’anxiété (10 à 20 % des cas) ;\n• l’apathie ;\n• les troubles de mémoire et des dicultés de concentration\n(20 % des cas) ;\n• la diminution de la libido.\n28.4.3 Lupus érythémateux disséminé\nLe lupus érythémateux disséminé (LED) est une maladie auto-\nimmune systémique chronique dont sourent environ 50 000 Cana -\ndiens. Cette pathologie multigénique, associée à la production\nde nombreux auto-anticorps qui peuvent s’attaquer à tous les\norganes et les dégrader, touche essentiellement les femmes\n(9 fois sur 10) et les jeunes (le plus souvent entre 20 et 40 ans).\nLes conséquences de la maladie inuent lourdement sur la qualité\nde vie des patients. La gravité de cette maladie très polymorphe,\névoluant par poussées d’intensité variable d’un patient à l’autre,\ntient à la possibilité d’une atteinte rénale et cérébrale.\nAvec une prévalence globale estimée à 56 %, les complications\nneuropsychiatriques sont les plus diciles à diagnostiquer. Elles\nenglobent un éventail de manifestations neurologiques et psychia-\ntriques regroupées sous le terme général de « neurolupus », qui\ns’ajoutent aux atteintes systemiques graves. Dix-neuf syndromes,\ndénis par le Collège américain de rhumatologie (1999) décrivent\nces atteintes (voir le tableau 28.17).\ntraitement à l’IFN-α, d’où l’importance d’un suivi psychiatrique\nsystématique même après l’arrêt de la médication. Ces tenta-\ntives et ces suicides sont associés le plus souvent à l’apparition\nd’une dépression majeure qui constitue un facteur indépendant\nd’une moindre réponse virologique précoce au traitement à\nl’IFN-α et à la ribavirine. Une altération immunitaire induite\ndirectement par la dépression ainsi qu’une faible observance\nau traitement chez les patients déprimés font partie des raisons\ninvoquées. Parmi les diérents mécanismes neurobiologiques,\nla dysrégulation sérotoninergique semble le processus le plus\nplausible pour expliquer la survenue de troubles de l’humeur\npendant l’administration d’interféron α. Les ISRS (sertraline,\ncitalopram, uoxétine, paroxétine) ont montré leur ecacité\ndans le traitement de la dépression et de l’anxiété induites par\nl’IFN-α. La gabapentine et les benzodiazépines peuvent également\napaiser l’anxiété occasionnée par la prise d’IFN-α.\nUne prophylaxie aux antidépresseurs peut être souhaitable\nen cas de dépression subclinique, d’absence de soutien familial\nou de situation socio-économique instable.\nLorsqu’il existe un état de dépression clinique au moment\nd’entreprendre le traitement à l’IFN-α, il faut d’abord traiter\nla dépression ; une fois celle-ci contrôlée, on peut commencer\nl’interféron α avec une surveillance étroite an de déceler une\néventuelle rechute de dépression. Si une dépression survient au\ncours du traitement, on peut poursuivre le traitement à l’IFN α et\nadministrer des ISRS si les symptômes dépressifs sont modérés.\nEn l’absence de réponse aux antidépresseurs, il faut diminuer\nles doses d’IFN-α ou utiliser un antipsychotique atypique à faible\ndose (Schaefer & al., 2013).\nL’irritabilité est un symptôme très fréquent (20 à 30 % des\ncas) au cours du traitement à l’IFN-α. Elle peut être ampliée\npar la ribavirine. En cas de dépression atypique, notamment en\nprésence d’une humeur irritable prédominante, il faut rechercher\ndes symptômes maniaques et des états mixtes. L’emploi d’anti-\npsychotiques atypiques au cours des manifestations maniaques\npermet de poursuivre le traitement antiviral. On a également\nrapporté des cas de manie qui surviennent parfois jusqu’à deux\nou trois ans après l’arrêt du traitement à l’IFN-α. En cas de\nmanie grave, de dépression ou de tentative de suicide, il importe\nd’interrompre ce traitement et une hospitalisation psychiatrique\npeut être indiquée.\nLa présence de troubles psychiatriques avant le début du\ntraitement, incluant des maladies psychiatriques primaires telles\nque la schizophrénie ou le trouble bipolaire, ne doit pas consti-\ntuer une contre-indication à un traitement antiviral si la gravité\nde l’atteinte hépatique le justie. Cependant, il faut s’assurer au\npréalable de la stabilité de la maladie psychiatrique primaire et\neectuer une surveillance psychiatrique régulière pendant toute\nla durée du traitement antiviral.\nLes complications neuropsychiatriques graves, comme une\ndépression accompagnée d’idées suicidaires, des états psycho-\ntiques ou maniaques, ou encore un état confusionnel, peuvent\nparfois être diciles à distinguer des symptômes neurovégétatifs\ninduits par l’IFN-α comme l’asthénie, l’insomnie, l’inappétence\net l’amaigrissement. Ces symptômes suivent généralement le\nrythme des injections ; ils s’atténuent avec le temps et répondent\naux traitements symptomatiques par des antipyrétiques ou\ndes antalgiques.\nTABLEAU 28.17 Atteintes neuropsychiatriques au cours\ndu lupus érythémateux disséminé (par\nordre de fréquence)\nSystème nerveux central\nSystème nerveux périphérique\nCéphalées (28 %)\nAtteinte des nerfs crâniens\nTroubles de l’humeur (21 %)\nPolyneuropathie\nDysfonction cognitive (20 %)\nDysautonomie\nÉpilepsie (10 %)\nMyasthénie\nAtteintes cérébrovasculaires (8 %)\nMononeuropathie\nTroubles anxieux (6 %)\nSyndrome de Guillain-Barré\nPsychose\nPlexopathie\nMyélopathie\nSyndrome de démyélinisation\nSyndrome confusionnel aigu\nMouvements anormaux\nMéningite aseptique\nSource : Collège américain de rhumatologie (1999).\n",
+  "raw_text_sha256": "390be4df2b64f461b5c68f14981c45cbcd1cb8cfdb303599261c56dd479d4489",
+  "source_page_display": 668,
+  "source_page_index": 667
+}

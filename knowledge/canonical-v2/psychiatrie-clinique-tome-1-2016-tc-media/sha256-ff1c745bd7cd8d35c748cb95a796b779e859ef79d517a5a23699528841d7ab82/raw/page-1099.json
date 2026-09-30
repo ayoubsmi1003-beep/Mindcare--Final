@@ -1,0 +1,748 @@
+{
+  "block_sequence_sha256": "e163d55b896b0810de85a54554d9d170e537cbe32401e703dff9d585f86de276",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        39.009376525878906,
+        119.10401153564453,
+        56.978126525878906
+      ],
+      "block_id": "page-1099-block-0001",
+      "order": 1,
+      "text": "Références\n",
+      "text_sha256": "a9190c075970829ee1d1bff37207f2414ba42474d61189126c936d8bd81bacb3"
+    },
+    {
+      "bbox": [
+        48.0,
+        65.4203109741211,
+        192.95001220703125,
+        103.8734359741211
+      ],
+      "block_id": "page-1099-block-0002",
+      "order": 2,
+      "text": "Chapitre 2\nAlfandre, D. J. (2009). « “I’m Going Home” : Discharges\nagainst Medical Advice », Mayo Clinic Proceedings, 84,\np. 255-260.\n",
+      "text_sha256": "851e1da9348cab8432135b3050b4730dbe4b66d55cf4216f38402bb538c87048"
+    },
+    {
+      "bbox": [
+        48.0,
+        107.88496398925781,
+        198.0,
+        125.32344055175781
+      ],
+      "block_id": "page-1099-block-0003",
+      "order": 3,
+      "text": "Balint, M. (1980). Le médecin, son malade et la maladie,\nParis, France, Petite bibliothèque Payot.\n",
+      "text_sha256": "98754041d214843f1689b17e6acc8a9b46525d7dd2d4da18d57346008ac438d7"
+    },
+    {
+      "bbox": [
+        48.0,
+        129.3849639892578,
+        202.7550048828125,
+        174.5234375
+      ],
+      "block_id": "page-1099-block-0004",
+      "order": 4,
+      "text": "Canada. (2009). A. C. c. Manitoba (Directeur des services à\nl’enfant et à la famille), Jugement de la Cour suprême du\nCanada, 26 juin 2009 CSC 30, 2 R. C. S. 181, [en ligne],\nhttps://scc-csc.lexum.com/scc-csc/scc-csc/fr/item/7795/\nindex.do.\n",
+      "text_sha256": "26e79b29b15221ae1f12872867434e4dce2a79ffa769a2e9b14183973e6e20b7"
+    },
+    {
+      "bbox": [
+        48.0,
+        178.5849609375,
+        193.75390625,
+        205.2734375
+      ],
+      "block_id": "page-1099-block-0005",
+      "order": 5,
+      "text": "Emanuel, E. J. & Emanuel, L. (1992). « Four models of the\nphysician-patient relationship », Journal of American\nMedical Association, 267(16), p. 2221-2226.\n",
+      "text_sha256": "40e390db28e05044345141ca24425470ede3d50243b738f782a72e6332612a3f"
+    },
+    {
+      "bbox": [
+        48.0,
+        209.3349609375,
+        201.3153533935547,
+        235.9734344482422
+      ],
+      "block_id": "page-1099-block-0006",
+      "order": 6,
+      "text": "English, D. C. (2005). « Moral obligations of patients : A\nclinical view », Journal of Medicine & Philosophy, 30(2),\np. 139-152.\n",
+      "text_sha256": "3639d48847703495d22dc4ce35d4ecbb5b3ed52e6a80666eeded3566dfbf21a6"
+    },
+    {
+      "bbox": [
+        48.0,
+        240.0349578857422,
+        204.1800079345703,
+        275.9234313964844
+      ],
+      "block_id": "page-1099-block-0007",
+      "order": 7,
+      "text": "Goldstein, N. E. & al. (2008). « Titrating guidance : A model\nto guide physicians assisting patients and families facing\ncomplex decisions », Archives of Internal Medicine, 168(16),\np. 1733-1739.\n",
+      "text_sha256": "45a8e45be3a31c6f1902667412e965b09038d19bb2b8e270d10fd0a8b877de50"
+    },
+    {
+      "bbox": [
+        48.0,
+        279.9849548339844,
+        194.38002014160156,
+        306.6734313964844
+      ],
+      "block_id": "page-1099-block-0008",
+      "order": 8,
+      "text": "Hellin, T. (2002). « The physician-patient relationship :\nrecent developments and changes », Haemophilia, 8(3),\np. 450-454.\n",
+      "text_sha256": "a18fa0caa1f009a6b60271862154201d92ed8a6ec404dad02f59685d16dc443b"
+    },
+    {
+      "bbox": [
+        48.0,
+        310.7349548339844,
+        203.95008850097656,
+        328.1234436035156
+      ],
+      "block_id": "page-1099-block-0009",
+      "order": 9,
+      "text": "Hippocrate. (1994). De l’art médical, Bibliothèque classique,\nParis, France, Librairie Générale Française.\n",
+      "text_sha256": "0a6a85e5a2098b4400b8ad273c7c2b16295369ff3692e9e58c09c426ad7d2ed6"
+    },
+    {
+      "bbox": [
+        48.0,
+        332.1849670410156,
+        206.38140869140625,
+        358.8734436035156
+      ],
+      "block_id": "page-1099-block-0010",
+      "order": 10,
+      "text": "Hui, E. C. (2005a). « Doctors as duciaries : a legal construct\nof the patient-physician relationship », Hong Kong Medical\nJournal, 11(6), p. 527-529.\n",
+      "text_sha256": "049a7459df78365220bebe59397b8f103d604f318000590433d308ac3137afc7"
+    },
+    {
+      "bbox": [
+        48.0,
+        362.9349670410156,
+        193.22750854492188,
+        398.8234558105469
+      ],
+      "block_id": "page-1099-block-0011",
+      "order": 11,
+      "text": "Hui, E. C. (2005b). « The centrality of patient-physician\nrelationship to medical professionalism : an ethical\nevaluation of some contemporary models », Hong Kong\nMedical Journal, 11(3), p. 222-223.\n",
+      "text_sha256": "44e1b35ef7711bf166d8fb386ed363dc43417c59a8a7aabf291810b8cc2685aa"
+    },
+    {
+      "bbox": [
+        48.0,
+        402.8849792480469,
+        205.34750366210938,
+        429.5734558105469
+      ],
+      "block_id": "page-1099-block-0012",
+      "order": 12,
+      "text": "Hui, E. C. (2005c). « The contractual model of the patient-\nphysician relationship and the demise of medical professio-\nnalism », Hong Kong Medical Journal, 11(5), p. 420-422.\n",
+      "text_sha256": "9bdabf4d041b73f1e1ec87a068ba7a67f651fd13b0fd005ce3cc19b0e6c5f975"
+    },
+    {
+      "bbox": [
+        48.0,
+        433.5849609375,
+        206.03500366210938,
+        469.5234375
+      ],
+      "block_id": "page-1099-block-0013",
+      "order": 13,
+      "text": "Iverson, S. A. & al. (2008). « Impact of internet use on heal-\nth-related behaviors and the patient-physician relationship :\nA survey-based study and review », Journal of the American\nOsteopathic Association, 108(2), p. 699-711.\n",
+      "text_sha256": "83f154a94410d0767e9e120070cf0da25fff96548f1c8a06a7c5abe0cf3e7942"
+    },
+    {
+      "bbox": [
+        48.0,
+        473.5849609375,
+        198.79002380371094,
+        500.22344970703125
+      ],
+      "block_id": "page-1099-block-0014",
+      "order": 14,
+      "text": "Jackson, J. L. & Kroenke, K. (1999). « Difcult patient\nencounters in the ambulatory clinic », Archives of Internal\nMedicine, 159(10), p. 1069-1075.\n",
+      "text_sha256": "666b4a591d78d8f501b131ce77b16fabd75058bbeabb0376a29bd4ec34a60171"
+    },
+    {
+      "bbox": [
+        48.0,
+        504.28497314453125,
+        196.05758666992188,
+        521.7234497070312
+      ],
+      "block_id": "page-1099-block-0015",
+      "order": 15,
+      "text": "Kihlbom, U. (2008). « Autonomy and negatively informed\nconsent », Journal of Medical Ethics, 34(3), p. 146-149.\n",
+      "text_sha256": "beb8f7c678c23bd823dfd6568a11429b64f2a86a700183c5761699c9932830d7"
+    },
+    {
+      "bbox": [
+        48.0,
+        525.7849731445312,
+        201.3524169921875,
+        552.4234619140625
+      ],
+      "block_id": "page-1099-block-0016",
+      "order": 16,
+      "text": "Lee, Y. Y. & Lin, J. L. (2009). « The effects of trust in physi-\ncian on self-efcacy, adherence and diabetes outcomes »,\nSocial Science & Medicine, 68(6), p. 1060-1068.\n",
+      "text_sha256": "634b3367ebb6e6a8f2e940d80cfc74419d6e10895336969f11a516f1d4d004e6"
+    },
+    {
+      "bbox": [
+        48.0,
+        556.4849853515625,
+        198.75,
+        583.1734619140625
+      ],
+      "block_id": "page-1099-block-0017",
+      "order": 17,
+      "text": "Levinson, W. & Lurie, N. (2004). « When most doctors are\nwomen : What lies ahead ? », Annals of Internal Medicine,\n141(6), p. 471-474.\n",
+      "text_sha256": "cef9dc66c2814ceffb5b6b35ad0bec46add5a144bfdc38d0c48e4202bd72ac6e"
+    },
+    {
+      "bbox": [
+        48.0,
+        587.1849975585938,
+        204.4300079345703,
+        613.8734741210938
+      ],
+      "block_id": "page-1099-block-0018",
+      "order": 18,
+      "text": "McMahon, L. F. (2007). « The hospitalist movement-time to\nmove on », The New England Journal of Medicine, 357(25),\np. 2627-2629.\n",
+      "text_sha256": "8441eb71ecee8849b5f5c3a0e8b3a25ae0271345033e1193e9933b4829a2045c"
+    },
+    {
+      "bbox": [
+        48.0,
+        617.9349975585938,
+        190.37818908691406,
+        653.8234252929688
+      ],
+      "block_id": "page-1099-block-0019",
+      "order": 19,
+      "text": "Parsons, T. (1964). « Social structure and dynamic pro-\ncess : The case of modern medical practice », dans The\nSocial System, Free Press Paperback, Toronto, Ontario,\nCollier-MacMillan, p. 428-454.\n",
+      "text_sha256": "825306fdb1bd439827601846e3c3d52dc1ead1c85a3f2fad7e5f1087872a2ae4"
+    },
+    {
+      "bbox": [
+        48.0,
+        657.8849487304688,
+        199.63316345214844,
+        703.0234375
+      ],
+      "block_id": "page-1099-block-0020",
+      "order": 20,
+      "text": "Poirier, P. & al. (2006). « Predictors of compliance with\nmedical recommendations regarding pharmacologi-\ncal and non pharmacological approaches in patient\nwith cardiovascular disease », Clinical & Investigative\nMedicine, 29(2), p. 91-103.\n",
+      "text_sha256": "d6fb026d26f32eb6b80126c025ae410bb239c08d0597105443d9e3f943578f0e"
+    },
+    {
+      "bbox": [
+        48.0,
+        707.0849609375,
+        204.7676544189453,
+        724.5234375
+      ],
+      "block_id": "page-1099-block-0021",
+      "order": 21,
+      "text": "Québec. (2014). Code de déontologie des médecins, LRQ, c.\nC-26, a.87; c.78, a.6, Québec, Publications du Québec.\n",
+      "text_sha256": "9e5d3771e904536fc614590179bfc6262f7723a5fd70be17171c81f7eb38a42b"
+    },
+    {
+      "bbox": [
+        219.0,
+        64.9349594116211,
+        376.3799743652344,
+        91.82344055175781
+      ],
+      "block_id": "page-1099-block-0022",
+      "order": 22,
+      "text": "Robinson, A. R. & al. (2004). « Direct-to-consumer pharma-\nceutical advertising », Archives of Internal Medicine, 164(4),\np. 427-432.\n",
+      "text_sha256": "95f180129f033d944bccf57d0d0f8b8c68cb7808273ba6ab084950c3aea43e86"
+    },
+    {
+      "bbox": [
+        219.0,
+        95.9849624633789,
+        371.5799865722656,
+        122.8734359741211
+      ],
+      "block_id": "page-1099-block-0023",
+      "order": 23,
+      "text": "Rosenbloom, A. H. & Joikowitz, A. (2010). « The ethics of\nthe hospitalist model », Journal of Hospital Medicine, 5(3),\np. 183-188.\n",
+      "text_sha256": "349e1180d3a47db657cc5536464c6e952b45bc8506d5942d306b533ee9e3c9fa"
+    },
+    {
+      "bbox": [
+        219.0,
+        127.03495788574219,
+        363.60614013671875,
+        153.87344360351562
+      ],
+      "block_id": "page-1099-block-0024",
+      "order": 24,
+      "text": "Rosenow, E. C. (2005). « Patients’ understanding of and\ncompliance with medications : The sixth vital sign ? »,\nMayo Clinic Proceedings, 80(8), p. 983-987.\n",
+      "text_sha256": "b83f6a3fef60e1ca2c790d71844bac060fd7c5d80892610021ce553b024bfdf2"
+    },
+    {
+      "bbox": [
+        219.0,
+        158.0349578857422,
+        374.8875427246094,
+        184.92344665527344
+      ],
+      "block_id": "page-1099-block-0025",
+      "order": 25,
+      "text": "Roter, D. L. & al. (2002). « Physician gender effects in\nmedical communication », Journal of the American Medical\nAssociation, 288(6), p. 756-764.\n",
+      "text_sha256": "ba3318f7e0e12fe2adce5ed732c3b7719b65f160744f854db8bab0bfe35dd523"
+    },
+    {
+      "bbox": [
+        219.0,
+        189.0849609375,
+        375.9020690917969,
+        225.3234405517578
+      ],
+      "block_id": "page-1099-block-0026",
+      "order": 26,
+      "text": "Szasz, T. S. & Hollender, M. H. (1956). « A Contribution\nto the philosophy of medicine. The basic models of the\ndoctor-patient relationship », Archives of Internal Medicine,\n97(5), p. 585-592.\n",
+      "text_sha256": "4021f7e3245e40d39a2cde1e0c67120708c18aa5b959eb03ef809f2f051f5bdb"
+    },
+    {
+      "bbox": [
+        219.0,
+        229.48497009277344,
+        368.0301513671875,
+        256.32342529296875
+      ],
+      "block_id": "page-1099-block-0027",
+      "order": 27,
+      "text": "Thom, D. & Campbell, B. (1997). « Patient-physician trust :\nAn exploratory study », The Journal of Family Practice,\n44(2), p. 169-176.\n",
+      "text_sha256": "cd5c7d839be5fe772dd01cff03e7fc0efcc568ef6cfde1b65350a1d4a0359e47"
+    },
+    {
+      "bbox": [
+        219.0,
+        260.4849548339844,
+        366.4949951171875,
+        287.3734436035156
+      ],
+      "block_id": "page-1099-block-0028",
+      "order": 28,
+      "text": "Wagner, E. H. (2000). « The role of patient care teams in\nchronic disease management », British Medical Journal,\n320(7234), p. 369-372.\n",
+      "text_sha256": "58bf46bc0737c00c541f89d11f55eeb2995eb2149382787d0d67b2d544a3a169"
+    },
+    {
+      "bbox": [
+        219.0,
+        291.53497314453125,
+        376.3175048828125,
+        318.4234313964844
+      ],
+      "block_id": "page-1099-block-0029",
+      "order": 29,
+      "text": "Weiner, M. & Biondich, P. (2006). « The inuence of informa-\ntion technology on patient-physician relationships », Journal\nof General Internal Medicine, 21(suppl. 1), S35-39.\n",
+      "text_sha256": "cb3dbd35922b14c2fd3ff641afe8823e5e1fa6fbcd9b594340f5abb9654f5738"
+    },
+    {
+      "bbox": [
+        219.0,
+        332.0703125,
+        250.61599731445312,
+        340.9765625
+      ],
+      "block_id": "page-1099-block-0030",
+      "order": 30,
+      "text": "Chapitre 3\n",
+      "text_sha256": "0ccb35a8dc0ff72574b2a21b8d0d262ceebbab76e0d2e97b6a2ea0c64c9f941d"
+    },
+    {
+      "bbox": [
+        219.0,
+        343.9349670410156,
+        370.8500061035156,
+        380.1234436035156
+      ],
+      "block_id": "page-1099-block-0031",
+      "order": 31,
+      "text": "American Psychiatric Association (APA). (2015). DSM-5 –\nManuel Diagnostique et Statistique des Troubles Mentaux.\nTraduction française par M.-A. Crocq, J.-D. Guelet al.,\nElsevier Masson SAS, Paris.\n",
+      "text_sha256": "9abdc7221827d2e516286759fe28a6461976091b7d5dc8ffca72c446615d7dc3"
+    },
+    {
+      "bbox": [
+        219.0,
+        384.28497314453125,
+        378.21295166015625,
+        401.8234558105469
+      ],
+      "block_id": "page-1099-block-0032",
+      "order": 32,
+      "text": "Berne, É. (1984). Des Jeux et des Hommes : psychologie des\nrelations humaines, Paris, France, Stock.\n",
+      "text_sha256": "ad89ebe128cca99e2382da31332a053bc9990c6b1e0262db162a64da0f0b704d"
+    },
+    {
+      "bbox": [
+        219.0,
+        405.9849548339844,
+        375.8475036621094,
+        423.5234375
+      ],
+      "block_id": "page-1099-block-0033",
+      "order": 33,
+      "text": "Ekman, P. (1992). « Are there basic emotions ? », Psychologi-\ncal Review, 99(3), p. 550-553.\n",
+      "text_sha256": "77448be2f9cf86d2cca9c0a24296c0d5dba51411dc849a7070286eb113f0f49a"
+    },
+    {
+      "bbox": [
+        219.0,
+        427.6849670410156,
+        373.86761474609375,
+        463.9234313964844
+      ],
+      "block_id": "page-1099-block-0034",
+      "order": 34,
+      "text": "Folstein, M. F. & al. (1975). «Mini-Mental State : A practical\nmethod for grading the cognitive state of patients for\nthe clinician », Journal of Psychiatric Research, 12(3),\np. 189-198.\n",
+      "text_sha256": "902f653ea750421ed52fcca72f6d73fde513bfbfad0a629c06550e29899ce614"
+    },
+    {
+      "bbox": [
+        219.0,
+        468.03497314453125,
+        375.5726013183594,
+        485.5734558105469
+      ],
+      "block_id": "page-1099-block-0035",
+      "order": 35,
+      "text": "Fonagy, P. & al. (2002). Affect Regulation, Mentalization and\nthe Development of the Self, New York, NY, Other Press.\n",
+      "text_sha256": "2784d4d4a0679215f334c9fa63921bc7b1b0eb179806ab8d6336944ed9adffac"
+    },
+    {
+      "bbox": [
+        219.0,
+        489.7349548339844,
+        376.14617919921875,
+        516.6234741210938
+      ],
+      "block_id": "page-1099-block-0036",
+      "order": 36,
+      "text": "Jaffard, R. (2001). « La diversité de la mémoire »,La mémoire,\nle jardin de la pensée, dossier hors série, Pour la science\n(avril/juillet).\n",
+      "text_sha256": "2c62188e9f14e325454310eae46aec0b40bbcd3aae286234576c9f57e1f5899b"
+    },
+    {
+      "bbox": [
+        219.0,
+        520.7849731445312,
+        367.4752197265625,
+        547.6734619140625
+      ],
+      "block_id": "page-1099-block-0037",
+      "order": 37,
+      "text": "Klerman, G. L. & Weissman, M. M. (1994). Interpersonal\nPsychotherapy of Depression : A Brief, Focused, Specic\nStrategy, Maryland, États-Unis, Rowman & Littleeld.\n",
+      "text_sha256": "68b8933e5828ba5f7b7a8c4e745071ea7d5371779c6bf86b66b8d72992b0fbc4"
+    },
+    {
+      "bbox": [
+        219.0,
+        551.8349609375,
+        377.6900329589844,
+        597.3734741210938
+      ],
+      "block_id": "page-1099-block-0038",
+      "order": 38,
+      "text": "Krupnick, J. L. & al. (2006). « The role of the therapeutic\nalliance in psychotherapy and pharmacotherapy outcome :\nFindings in the National Institute of Mental Health Treatment\nof Depression Collaborative Research Program », Focus, 4,\np. 269-277.\n",
+      "text_sha256": "9e98de18def8e0b122ef23d6fbe0eed00a61487f7798d37f7a16d55f5364c2e1"
+    },
+    {
+      "bbox": [
+        219.0,
+        601.5349731445312,
+        376.7600402832031,
+        637.7734375
+      ],
+      "block_id": "page-1099-block-0039",
+      "order": 39,
+      "text": "Lichtenstein, P. & al. (2009). «Common genetic determinants\nof schizophrenia and bipolar disorder in Swedish families :\na population-based study », The Lancet, 373(9659),\np. 234-239.\n",
+      "text_sha256": "049c13639f519478b5139acd4e3ddef08dbd198369fc3e07701d49d898de315b"
+    },
+    {
+      "bbox": [
+        219.0,
+        641.9349975585938,
+        367.4324951171875,
+        659.4734497070312
+      ],
+      "block_id": "page-1099-block-0040",
+      "order": 40,
+      "text": "Plutchik, R. (2001). « The nature of emotions », American\nScientist, 89(4), p. 344-350.\n",
+      "text_sha256": "8a96b784158a76b4ef10ac08f34d71f3939ccf91f9ce362df4c0534fcd180df4"
+    },
+    {
+      "bbox": [
+        219.0,
+        663.6349487304688,
+        374.4499816894531,
+        681.1234741210938
+      ],
+      "block_id": "page-1099-block-0041",
+      "order": 41,
+      "text": "Robinson, D. J. (2008). The Mental Status Exam : Explained,\n2e éd., Port Huron, MI, Rapid Psychler Press.\n",
+      "text_sha256": "ba8fbf66a6372b1bb44d80bb8f10842654dd7e3d6a4400f969dbd134c9e7a440"
+    },
+    {
+      "bbox": [
+        219.0,
+        685.2849731445312,
+        375.49749755859375,
+        702.8234252929688
+      ],
+      "block_id": "page-1099-block-0042",
+      "order": 42,
+      "text": "Shea, S. C. (2005). La conduite de l’entretien psychiatrique.\nL’art de la compréhension, 2e éd., Paris, France, Elsevier.\n",
+      "text_sha256": "253bfb8762fd405e859d2791abf4e3d50a35f16f3797ca49fc170fad96e85d72"
+    },
+    {
+      "bbox": [
+        219.0,
+        706.9849853515625,
+        374.58251953125,
+        724.5234375
+      ],
+      "block_id": "page-1099-block-0043",
+      "order": 43,
+      "text": "Trzepacz, P. T. & Baker, R. W. (1993). The Psychiatric Mental\nStatus Examination, New York, NY, Oxford University Press.\n",
+      "text_sha256": "28b60758e3e87c841784429651f59b0d11286c1fcd8749cb1776d80e0ffdabd5"
+    },
+    {
+      "bbox": [
+        390.0,
+        64.9349594116211,
+        539.2256469726562,
+        109.8734359741211
+      ],
+      "block_id": "page-1099-block-0044",
+      "order": 44,
+      "text": "Van Os, J. & al. (2009). «A systematic review and\nmeta- analysis of the psychosis continuum : Evidence for\na psychosis proneness-persistence-impairment model\nof psychotic disorder », Psychological Medicine, 39(2),\np. 179-195.\n",
+      "text_sha256": "5b845f3fb3d3859eea8e40bb57c4415bbc1c55d2ca307061c825c8499b4ebafb"
+    },
+    {
+      "bbox": [
+        390.0,
+        123.37031555175781,
+        546.2366943359375,
+        152.42344665527344
+      ],
+      "block_id": "page-1099-block-0045",
+      "order": 45,
+      "text": "Chapitre 4\nCharcot, J.-M. (1873). Leçons sur les maladies du système\nnerveux, Paris, Adrien Delahaye.\n",
+      "text_sha256": "c99d0c157307069c5ce08fbf2dfa5135783af2b88f0a6156adb504c58870532a"
+    },
+    {
+      "bbox": [
+        390.0,
+        156.43496704101562,
+        543.177490234375,
+        183.0234375
+      ],
+      "block_id": "page-1099-block-0046",
+      "order": 46,
+      "text": "Chaytor, N. & al. (2006). «Improving the ecological validity\nof executive functioning assessment », Archives of Clinical\nNeuropsychology, 21(3), p. 217-227.\n",
+      "text_sha256": "3351b6e3568d1c959483badef33054c6349ff1055891bf78cbe3e4eec18b6ee6"
+    },
+    {
+      "bbox": [
+        390.0,
+        186.98497009277344,
+        544.197509765625,
+        213.5734405517578
+      ],
+      "block_id": "page-1099-block-0047",
+      "order": 47,
+      "text": "Corcoran, R. (2003). « Inductive reasoning and the unders-\ntanding of intention in schizophrenia », Cognitive Neuro\npsychiatry, 8, p. 223-235.\n",
+      "text_sha256": "85079aca0c37bee67187f5813d86e8c5175a4b7eb5b6d15bf5e6f7d05306bffc"
+    },
+    {
+      "bbox": [
+        390.0,
+        217.5849609375,
+        547.7474975585938,
+        234.92344665527344
+      ],
+      "block_id": "page-1099-block-0048",
+      "order": 48,
+      "text": "Damasio, A. R. (2003). Spinoza avait raison, Joie et tristesse,\nle cerveau des émotions, Paris, France, Odile Jacob.\n",
+      "text_sha256": "3949afd5214b1bac921edaf57c99ad43785bfd2f4c50defe4cc98cea2b5bb6cb"
+    },
+    {
+      "bbox": [
+        390.0,
+        238.93496704101562,
+        543.3660278320312,
+        293.0734558105469
+      ],
+      "block_id": "page-1099-block-0049",
+      "order": 49,
+      "text": "Dunn, L. B. & al. (2007). « Frontal dysfunction and\ncapacity to consent to treatment or research : conceptual\nconsiderations and empirical evidence », dans Miller,\nB. L. & Cummings, J. L. (dir.), The Human Frontal Lobes :\nFunctions and Disorders, 2e éd., New York, NY, Guilford\nPress, p. 335-344.\n",
+      "text_sha256": "6066d872e20e726e3a81d83de7f992a1ee3416c93ac91cde977a1015aa4d7a4c"
+    },
+    {
+      "bbox": [
+        390.0,
+        297.0849609375,
+        548.3726196289062,
+        323.6234436035156
+      ],
+      "block_id": "page-1099-block-0050",
+      "order": 50,
+      "text": "Frith, C. D. & Frith, U. (2001). « The biological basis of social\ninteraction », Current Directions in Psychological Science,\n10, p. 151-155.\n",
+      "text_sha256": "b67969871d6e8d3bdc5ddf8fce6eaaa148be041caf6b123f64c6a40d26bdc509"
+    },
+    {
+      "bbox": [
+        390.0,
+        327.6349792480469,
+        545.4974975585938,
+        372.5734558105469
+      ],
+      "block_id": "page-1099-block-0051",
+      "order": 51,
+      "text": "Getz, G. E. & Lovell, M. R. (2004). « Neuropsychological\nexami nation of the psychiatric patient », dans Yudofsky, S. C.\n& Kim, H. F. (dir.), Neuropsychiatric Assessment (Review of\nPsychiatry Series), 23, Washington, DC, American Psychia-\ntric Publication, p. 39-68.\n",
+      "text_sha256": "70d6c7aa9f40e7b0c321c6995a595f98ef73ed74121cb1efc95544be9783b1d0"
+    },
+    {
+      "bbox": [
+        390.0,
+        376.5849609375,
+        547.5474853515625,
+        403.1234436035156
+      ],
+      "block_id": "page-1099-block-0052",
+      "order": 52,
+      "text": "Grisso, T. & Applebaum, P. S. (1998). MacArthur Competence\nAssessment Tool for Yreatment, Sarassauta, FL, Profession-\nnal Resource Press.\n",
+      "text_sha256": "f1f57c9c71a84f35046ad253446d55623ad4a1afbd47f7d86ae33964c87d321c"
+    },
+    {
+      "bbox": [
+        390.0,
+        407.1349792480469,
+        542.2504272460938,
+        442.8734436035156
+      ],
+      "block_id": "page-1099-block-0053",
+      "order": 53,
+      "text": "Grou, C. (2009) « Réexion sur la notion de consentement\néclairé en santé mentale : et si la lumière n’était qu’illu-\nsion », dans Lalonde, P. (dir.) La psychiatrie en question,\nPresses de l’Université de Montréal.\n",
+      "text_sha256": "b52770e0e0b36e1c81f32e212e5d48ca2cee03ed8c15de693bada51843eb7669"
+    },
+    {
+      "bbox": [
+        390.0,
+        446.8849792480469,
+        538.7474975585938,
+        482.6234436035156
+      ],
+      "block_id": "page-1099-block-0054",
+      "order": 54,
+      "text": "Hannay, H. J. & Lezak, M. D. (2004). « The neuropsycholo-\ngical examination : interpretation », dans Lezak, M. D. &\nal., Neuropsychological Assessment, New York, Oxford\nUniversity Press.\n",
+      "text_sha256": "061028a81bbdae4381100df418bafadb77bf24efaeaa17746f423b08603b2975"
+    },
+    {
+      "bbox": [
+        390.0,
+        486.6349792480469,
+        534.216796875,
+        503.97344970703125
+      ],
+      "block_id": "page-1099-block-0055",
+      "order": 55,
+      "text": "Jézéquel, M. (2003). « Consentez que je vous soigne ! »,\nJournal du barreau, 35(21).\n",
+      "text_sha256": "aae925f5f5d96df1a2f2f04a1df496fb8fd12f768f286e80ef14ef8b0408dfcb"
+    },
+    {
+      "bbox": [
+        390.0,
+        507.9849853515625,
+        547.3806762695312,
+        543.7234497070312
+      ],
+      "block_id": "page-1099-block-0056",
+      "order": 56,
+      "text": "Kramer, J. H. & Quitania, L. (2007). « Bedside frontal lobe\ntesting », dans Miller, B. L. & Cummings, J. L. (dir.),The Human\nFrontal Lobes : Functions and Disorders, 2e éd., New York, NY,\nGuilford Press, p. 279-291.\n",
+      "text_sha256": "51bc821f8b53233aca626929196200c80a6d6e8bb4e7aac09552d534c03063d5"
+    },
+    {
+      "bbox": [
+        390.0,
+        547.7349853515625,
+        545.7100830078125,
+        583.4734497070312
+      ],
+      "block_id": "page-1099-block-0057",
+      "order": 57,
+      "text": "Lezak, M. D. (2012). « The neuropsychological examination :\nprocedures », dans Lezak, M. D. (dir.), Neuropsycholo-\ngical Assessment, 5e éd., New York, NY, Oxford Press,\np. 100-132.\n",
+      "text_sha256": "5599a943562ac58170fd66af7028026e70f76b449ae11462cc4c5d376e5373d2"
+    },
+    {
+      "bbox": [
+        390.0,
+        587.4849853515625,
+        547.4801635742188,
+        604.8734741210938
+      ],
+      "block_id": "page-1099-block-0058",
+      "order": 58,
+      "text": "Marzano, M. (2006). Je consens donc je suis, Paris, France,\nPresses universitaires de France.\n",
+      "text_sha256": "58c3f7d5704cb3a7f82cea9c29cea810e3436b96dd79dc4f9f17e4107c9b6b27"
+    },
+    {
+      "bbox": [
+        390.0,
+        608.8849487304688,
+        544.2540893554688,
+        653.8234252929688
+      ],
+      "block_id": "page-1099-block-0059",
+      "order": 59,
+      "text": "McCormick, L. & Lezak, M. D. (2005). « L’évaluation neu-\nropsychologique », dans Botez-Marquard, T. & Boller, F. (dir.),\nNeuropsychologie clinique et neurologie du comportement,\n3e éd., Montréal, Québec, Presses de l’Université de Montréal,\np. 59-69.\n",
+      "text_sha256": "1dc10d50350339d1b556bab5b587ca57fc6a0d67fff7634dabca624cf9f3bc8b"
+    },
+    {
+      "bbox": [
+        390.0,
+        657.7849731445312,
+        535.9749755859375,
+        693.5734252929688
+      ],
+      "block_id": "page-1099-block-0060",
+      "order": 60,
+      "text": "Stuss, D. T. (2007). « New Approaches to Prefrontal Lobe\nTesting », dans Miller, B. L. & Cummings, J. L. (dir.), The\nHuman Frontal Lobes : Functions and Disorders, 2e éd.,\nNew York, NY, Guilford Press, p. 292-305.\n",
+      "text_sha256": "4666a10361d4bbdfd1decdbf27c2277bce3a82224fd2e63cd81d2ca8c7e7f83b"
+    },
+    {
+      "bbox": [
+        390.0,
+        697.5349731445312,
+        547.5474853515625,
+        724.1234741210938
+      ],
+      "block_id": "page-1099-block-0061",
+      "order": 61,
+      "text": "Yudofsky, S. & Kim, H. F. (dir.) (2004). Neuropsychiatric Assess-\nment, Washington, D.C., American Psychiatric Association\nPublishing.\n",
+      "text_sha256": "bd804260ac84ca43032d14992a2c873cb2c6f175039bb7bdacdc3a6818ec1682"
+    }
+  ],
+  "coordinates_sha256": "6d4ab39903b9628e998da5b45329bcaafe2123ad2872db270e0d5778e65fec83",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1099",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Références\nChapitre 2\nAlfandre, D. J. (2009). « “I’m Going Home” : Discharges\nagainst Medical Advice », Mayo Clinic Proceedings, 84,\np. 255-260.\nBalint, M. (1980). Le médecin, son malade et la maladie,\nParis, France, Petite bibliothèque Payot.\nCanada. (2009). A. C. c. Manitoba (Directeur des services à\nl’enfant et à la famille), Jugement de la Cour suprême du\nCanada, 26 juin 2009 CSC 30, 2 R. C. S. 181, [en ligne],\nhttps://scc-csc.lexum.com/scc-csc/scc-csc/fr/item/7795/\nindex.do.\nEmanuel, E. J. & Emanuel, L. (1992). « Four models of the\nphysician-patient relationship », Journal of American\nMedical Association, 267(16), p. 2221-2226.\nEnglish, D. C. (2005). « Moral obligations of patients : A\nclinical view », Journal of Medicine & Philosophy, 30(2),\np. 139-152.\nGoldstein, N. E. & al. (2008). « Titrating guidance : A model\nto guide physicians assisting patients and families facing\ncomplex decisions », Archives of Internal Medicine, 168(16),\np. 1733-1739.\nHellin, T. (2002). « The physician-patient relationship :\nrecent developments and changes », Haemophilia, 8(3),\np. 450-454.\nHippocrate. (1994). De l’art médical, Bibliothèque classique,\nParis, France, Librairie Générale Française.\nHui, E. C. (2005a). « Doctors as duciaries : a legal construct\nof the patient-physician relationship », Hong Kong Medical\nJournal, 11(6), p. 527-529.\nHui, E. C. (2005b). « The centrality of patient-physician\nrelationship to medical professionalism : an ethical\nevaluation of some contemporary models », Hong Kong\nMedical Journal, 11(3), p. 222-223.\nHui, E. C. (2005c). « The contractual model of the patient-\nphysician relationship and the demise of medical professio-\nnalism », Hong Kong Medical Journal, 11(5), p. 420-422.\nIverson, S. A. & al. (2008). « Impact of internet use on heal-\nth-related behaviors and the patient-physician relationship :\nA survey-based study and review », Journal of the American\nOsteopathic Association, 108(2), p. 699-711.\nJackson, J. L. & Kroenke, K. (1999). « Difcult patient\nencounters in the ambulatory clinic », Archives of Internal\nMedicine, 159(10), p. 1069-1075.\nKihlbom, U. (2008). « Autonomy and negatively informed\nconsent », Journal of Medical Ethics, 34(3), p. 146-149.\nLee, Y. Y. & Lin, J. L. (2009). « The effects of trust in physi-\ncian on self-efcacy, adherence and diabetes outcomes »,\nSocial Science & Medicine, 68(6), p. 1060-1068.\nLevinson, W. & Lurie, N. (2004). « When most doctors are\nwomen : What lies ahead ? », Annals of Internal Medicine,\n141(6), p. 471-474.\nMcMahon, L. F. (2007). « The hospitalist movement-time to\nmove on », The New England Journal of Medicine, 357(25),\np. 2627-2629.\nParsons, T. (1964). « Social structure and dynamic pro-\ncess : The case of modern medical practice », dans The\nSocial System, Free Press Paperback, Toronto, Ontario,\nCollier-MacMillan, p. 428-454.\nPoirier, P. & al. (2006). « Predictors of compliance with\nmedical recommendations regarding pharmacologi-\ncal and non pharmacological approaches in patient\nwith cardiovascular disease », Clinical & Investigative\nMedicine, 29(2), p. 91-103.\nQuébec. (2014). Code de déontologie des médecins, LRQ, c.\nC-26, a.87; c.78, a.6, Québec, Publications du Québec.\nRobinson, A. R. & al. (2004). « Direct-to-consumer pharma-\nceutical advertising », Archives of Internal Medicine, 164(4),\np. 427-432.\nRosenbloom, A. H. & Joikowitz, A. (2010). « The ethics of\nthe hospitalist model », Journal of Hospital Medicine, 5(3),\np. 183-188.\nRosenow, E. C. (2005). « Patients’ understanding of and\ncompliance with medications : The sixth vital sign ? »,\nMayo Clinic Proceedings, 80(8), p. 983-987.\nRoter, D. L. & al. (2002). « Physician gender effects in\nmedical communication », Journal of the American Medical\nAssociation, 288(6), p. 756-764.\nSzasz, T. S. & Hollender, M. H. (1956). « A Contribution\nto the philosophy of medicine. The basic models of the\ndoctor-patient relationship », Archives of Internal Medicine,\n97(5), p. 585-592.\nThom, D. & Campbell, B. (1997). « Patient-physician trust :\nAn exploratory study », The Journal of Family Practice,\n44(2), p. 169-176.\nWagner, E. H. (2000). « The role of patient care teams in\nchronic disease management », British Medical Journal,\n320(7234), p. 369-372.\nWeiner, M. & Biondich, P. (2006). « The inuence of informa-\ntion technology on patient-physician relationships », Journal\nof General Internal Medicine, 21(suppl. 1), S35-39.\nChapitre 3\nAmerican Psychiatric Association (APA). (2015). DSM-5 –\nManuel Diagnostique et Statistique des Troubles Mentaux.\nTraduction française par M.-A. Crocq, J.-D. Guelet al.,\nElsevier Masson SAS, Paris.\nBerne, É. (1984). Des Jeux et des Hommes : psychologie des\nrelations humaines, Paris, France, Stock.\nEkman, P. (1992). « Are there basic emotions ? », Psychologi-\ncal Review, 99(3), p. 550-553.\nFolstein, M. F. & al. (1975). «Mini-Mental State : A practical\nmethod for grading the cognitive state of patients for\nthe clinician », Journal of Psychiatric Research, 12(3),\np. 189-198.\nFonagy, P. & al. (2002). Affect Regulation, Mentalization and\nthe Development of the Self, New York, NY, Other Press.\nJaffard, R. (2001). « La diversité de la mémoire »,La mémoire,\nle jardin de la pensée, dossier hors série, Pour la science\n(avril/juillet).\nKlerman, G. L. & Weissman, M. M. (1994). Interpersonal\nPsychotherapy of Depression : A Brief, Focused, Specic\nStrategy, Maryland, États-Unis, Rowman & Littleeld.\nKrupnick, J. L. & al. (2006). « The role of the therapeutic\nalliance in psychotherapy and pharmacotherapy outcome :\nFindings in the National Institute of Mental Health Treatment\nof Depression Collaborative Research Program », Focus, 4,\np. 269-277.\nLichtenstein, P. & al. (2009). «Common genetic determinants\nof schizophrenia and bipolar disorder in Swedish families :\na population-based study », The Lancet, 373(9659),\np. 234-239.\nPlutchik, R. (2001). « The nature of emotions », American\nScientist, 89(4), p. 344-350.\nRobinson, D. J. (2008). The Mental Status Exam : Explained,\n2e éd., Port Huron, MI, Rapid Psychler Press.\nShea, S. C. (2005). La conduite de l’entretien psychiatrique.\nL’art de la compréhension, 2e éd., Paris, France, Elsevier.\nTrzepacz, P. T. & Baker, R. W. (1993). The Psychiatric Mental\nStatus Examination, New York, NY, Oxford University Press.\nVan Os, J. & al. (2009). «A systematic review and\nmeta- analysis of the psychosis continuum : Evidence for\na psychosis proneness-persistence-impairment model\nof psychotic disorder », Psychological Medicine, 39(2),\np. 179-195.\nChapitre 4\nCharcot, J.-M. (1873). Leçons sur les maladies du système\nnerveux, Paris, Adrien Delahaye.\nChaytor, N. & al. (2006). «Improving the ecological validity\nof executive functioning assessment », Archives of Clinical\nNeuropsychology, 21(3), p. 217-227.\nCorcoran, R. (2003). « Inductive reasoning and the unders-\ntanding of intention in schizophrenia », Cognitive Neuro\npsychiatry, 8, p. 223-235.\nDamasio, A. R. (2003). Spinoza avait raison, Joie et tristesse,\nle cerveau des émotions, Paris, France, Odile Jacob.\nDunn, L. B. & al. (2007). « Frontal dysfunction and\ncapacity to consent to treatment or research : conceptual\nconsiderations and empirical evidence », dans Miller,\nB. L. & Cummings, J. L. (dir.), The Human Frontal Lobes :\nFunctions and Disorders, 2e éd., New York, NY, Guilford\nPress, p. 335-344.\nFrith, C. D. & Frith, U. (2001). « The biological basis of social\ninteraction », Current Directions in Psychological Science,\n10, p. 151-155.\nGetz, G. E. & Lovell, M. R. (2004). « Neuropsychological\nexami nation of the psychiatric patient », dans Yudofsky, S. C.\n& Kim, H. F. (dir.), Neuropsychiatric Assessment (Review of\nPsychiatry Series), 23, Washington, DC, American Psychia-\ntric Publication, p. 39-68.\nGrisso, T. & Applebaum, P. S. (1998). MacArthur Competence\nAssessment Tool for Yreatment, Sarassauta, FL, Profession-\nnal Resource Press.\nGrou, C. (2009) « Réexion sur la notion de consentement\néclairé en santé mentale : et si la lumière n’était qu’illu-\nsion », dans Lalonde, P. (dir.) La psychiatrie en question,\nPresses de l’Université de Montréal.\nHannay, H. J. & Lezak, M. D. (2004). « The neuropsycholo-\ngical examination : interpretation », dans Lezak, M. D. &\nal., Neuropsychological Assessment, New York, Oxford\nUniversity Press.\nJézéquel, M. (2003). « Consentez que je vous soigne ! »,\nJournal du barreau, 35(21).\nKramer, J. H. & Quitania, L. (2007). « Bedside frontal lobe\ntesting », dans Miller, B. L. & Cummings, J. L. (dir.),The Human\nFrontal Lobes : Functions and Disorders, 2e éd., New York, NY,\nGuilford Press, p. 279-291.\nLezak, M. D. (2012). « The neuropsychological examination :\nprocedures », dans Lezak, M. D. (dir.), Neuropsycholo-\ngical Assessment, 5e éd., New York, NY, Oxford Press,\np. 100-132.\nMarzano, M. (2006). Je consens donc je suis, Paris, France,\nPresses universitaires de France.\nMcCormick, L. & Lezak, M. D. (2005). « L’évaluation neu-\nropsychologique », dans Botez-Marquard, T. & Boller, F. (dir.),\nNeuropsychologie clinique et neurologie du comportement,\n3e éd., Montréal, Québec, Presses de l’Université de Montréal,\np. 59-69.\nStuss, D. T. (2007). « New Approaches to Prefrontal Lobe\nTesting », dans Miller, B. L. & Cummings, J. L. (dir.), The\nHuman Frontal Lobes : Functions and Disorders, 2e éd.,\nNew York, NY, Guilford Press, p. 292-305.\nYudofsky, S. & Kim, H. F. (dir.) (2004). Neuropsychiatric Assess-\nment, Washington, D.C., American Psychiatric Association\nPublishing.\n",
+  "raw_text_sha256": "2bbb836c06b2af554c26ffad329eb9716906f4c295b7288e6298693c7e9bd73d",
+  "source_page_display": 1100,
+  "source_page_index": 1099
+}

@@ -1,0 +1,388 @@
+{
+  "block_sequence_sha256": "9af2f036fa6e7d7d91bbe4653f23ef4fd16279084c603b81c7c02d55f40c42be",
+  "blocks": [
+    {
+      "bbox": [
+        305.8500061035156,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0742-block-0001",
+      "order": 1,
+      "text": "Chapitre 32\nTroubles du sommeil et de la vigilance\n725\n",
+      "text_sha256": "d07dbe060bfe666294a222af0633c67893c7e647d8d6316499b87946f6269131"
+    },
+    {
+      "bbox": [
+        56.29999923706055,
+        42.502296447753906,
+        433.8492126464844,
+        54.820068359375
+      ],
+      "block_id": "page-0742-block-0002",
+      "order": 2,
+      "text": "TABLEAU 32.2 Troubles du sommeil répertoriés dans le DSM-5 et équivalence du DSM-IV-TR\n",
+      "text_sha256": "ab81d0b1d1443dbea0ad85bea6defef27f349e12cd5e6799b304928be28c600e"
+    },
+    {
+      "bbox": [
+        107.70000457763672,
+        58.27412414550781,
+        467.6456298828125,
+        81.60029602050781
+      ],
+      "block_id": "page-0742-block-0003",
+      "order": 3,
+      "text": "DSM-5\nDSM-IV-TR\nTroubles de l’alternance veille-sommeil\nTroubles du sommeil\n",
+      "text_sha256": "c65da9d8417c5f338b55d799b10baabcc7ecf4c82abd28470af453d6f9948686"
+    },
+    {
+      "bbox": [
+        308.5,
+        86.001953125,
+        346.6600036621094,
+        95.828125
+      ],
+      "block_id": "page-0742-block-0004",
+      "order": 4,
+      "text": "Dyssomnies\n",
+      "text_sha256": "9fe3fcee62a82291555dccfe3a7dbb97b235f9504d665478f1d0d236ab0563b5"
+    },
+    {
+      "bbox": [
+        58.25,
+        102.4019546508789,
+        365.551025390625,
+        112.2281265258789
+      ],
+      "block_id": "page-0742-block-0005",
+      "order": 5,
+      "text": "Insomnie\nInsomnie primaire\n",
+      "text_sha256": "6d28946325b90af0f83c559428b94d10b4d142cfae53734b83ca3cec473cc52f"
+    },
+    {
+      "bbox": [
+        58.25,
+        118.8519515991211,
+        378.2320251464844,
+        128.67813110351562
+      ],
+      "block_id": "page-0742-block-0006",
+      "order": 6,
+      "text": "Hypersomnolence\nHypersomnie primaire\n",
+      "text_sha256": "2cd257bf4432e8bcb1be6160f604b25ccd7002d56ac4ce3e69cc20c816b7ccfd"
+    },
+    {
+      "bbox": [
+        58.25,
+        135.251953125,
+        345.64300537109375,
+        145.078125
+      ],
+      "block_id": "page-0742-block-0007",
+      "order": 7,
+      "text": "Narcolepsie, avec ou sans décience en hypocrétine\nNarcolepsie\n",
+      "text_sha256": "45e0a36079ff2cd471531a787a1296c3013cc846220369c66859e8e7898790a5"
+    },
+    {
+      "bbox": [
+        58.25,
+        152.7019500732422,
+        506.37139892578125,
+        162.5281219482422
+      ],
+      "block_id": "page-0742-block-0008",
+      "order": 8,
+      "text": "Troubles du sommeil liés à la respiration\nTrouble du sommeil lié à la respiration – enregistré sur l’axe III\n",
+      "text_sha256": "97bdac0e51fe3085542d903d9ecc4734c5c04bfb9dcd0ac97a5558fbc860f552"
+    },
+    {
+      "bbox": [
+        58.25,
+        171.10195922851562,
+        187.9490203857422,
+        180.92813110351562
+      ],
+      "block_id": "page-0742-block-0009",
+      "order": 9,
+      "text": "Apnée/hypopnée obstructive du sommeil\n",
+      "text_sha256": "a6077492cb3acf74f24e9c88eeb51e4442d9077893cfa1e1365553e895b31c0d"
+    },
+    {
+      "bbox": [
+        58.25,
+        189.5519561767578,
+        145.46902465820312,
+        199.3781280517578
+      ],
+      "block_id": "page-0742-block-0010",
+      "order": 10,
+      "text": "Apnée centrale du sommeil\n",
+      "text_sha256": "257b70d6f43cdbeabe19fe762fd53e211327d8abc490144aa455bf04b1625a43"
+    },
+    {
+      "bbox": [
+        58.25,
+        207.9519500732422,
+        158.60003662109375,
+        217.7781219482422
+      ],
+      "block_id": "page-0742-block-0011",
+      "order": 11,
+      "text": "Hypoventilation liée au sommeil\n",
+      "text_sha256": "ac15b0c821175aa6725959f8c6f198d473fc5caf5fa0b0b2e4e57306eeef5966"
+    },
+    {
+      "bbox": [
+        58.25,
+        226.40196228027344,
+        286.2480773925781,
+        256.2281494140625
+      ],
+      "block_id": "page-0742-block-0012",
+      "order": 12,
+      "text": "Troubles de l’alternance veille-sommeil liés au rythme circadien\n(avec retard ou avance de phase, type irrégulier, différent de 24 heures,\ntravail posté)\n",
+      "text_sha256": "d5e665e24193d4e4bfd06a02c81a26845989ff168c0b375cd0202548b359f634"
+    },
+    {
+      "bbox": [
+        308.5,
+        226.40196228027344,
+        518.8427734375,
+        256.2281494140625
+      ],
+      "block_id": "page-0742-block-0013",
+      "order": 13,
+      "text": "Trouble du sommeil lié au rythme circadien (avec retard de phase,\nchangement de fuseau horaire [jet lag], travail posté) (auparavant\ntrouble du rythme veille-sommeil)\n",
+      "text_sha256": "89bd700771c9ce13543112210294c0dd64ff95109f8c9fedf4668089ed91dd9b"
+    },
+    {
+      "bbox": [
+        57.25,
+        261.8019714355469,
+        348.48602294921875,
+        271.6281433105469
+      ],
+      "block_id": "page-0742-block-0014",
+      "order": 14,
+      "text": "Parasomnies\nParasomnies\n",
+      "text_sha256": "d851bb4e88bebb68edc7920b26d0572a0ea5791382b6eb26714aabf0176e826e"
+    },
+    {
+      "bbox": [
+        58.25,
+        276.751953125,
+        283.04486083984375,
+        296.578125
+      ],
+      "block_id": "page-0742-block-0015",
+      "order": 15,
+      "text": "Troubles de l’éveil en sommeil non paradoxal (somnambulisme, terreur\nnocturne)\n",
+      "text_sha256": "3c2f069528c06f0506c3042308f49d21b3428817eb301fb601be42f074c27dad"
+    },
+    {
+      "bbox": [
+        308.5,
+        276.751953125,
+        368.2620544433594,
+        297.578125
+      ],
+      "block_id": "page-0742-block-0016",
+      "order": 16,
+      "text": "Somnambulisme\nTerreurs nocturnes\n",
+      "text_sha256": "b165097ed8f5e3ec4b4ee8a309d1e3645d1075a1ecda1cce138b17cbc50c98d9"
+    },
+    {
+      "bbox": [
+        58.25,
+        306.20196533203125,
+        447.88299560546875,
+        316.02813720703125
+      ],
+      "block_id": "page-0742-block-0017",
+      "order": 17,
+      "text": "Cauchemars\nCauchemars (auparavant Rêves d’angoisse)\n",
+      "text_sha256": "b47d1b61700283edb8756d0f6725f50f2c3ee1b57dc8600119b727b523e4b7f7"
+    },
+    {
+      "bbox": [
+        58.25,
+        324.6019592285156,
+        469.8326416015625,
+        334.4281311035156
+      ],
+      "block_id": "page-0742-block-0018",
+      "order": 18,
+      "text": "Trouble du comportement en sommeil paradoxal (Parkinson, synucléopathie)\nParasomnies non spéciées : paralysie du sommeil\n",
+      "text_sha256": "1c1d09f15d7aedea9c11a0efce463f3e1a126fd5abf9c57d270a8ced45e21661"
+    },
+    {
+      "bbox": [
+        58.25,
+        342.0519714355469,
+        508.7061462402344,
+        361.8781433105469
+      ],
+      "block_id": "page-0742-block-0019",
+      "order": 19,
+      "text": "Syndrome des jambes sans repos\nDyssomnies non spéciées : syndrome des jambes sans repos,\nmouvements périodiques des jambes\n",
+      "text_sha256": "a719120b006945c75b7a8d470a9434d000f7f833e98018e831ad234dd4a262cf"
+    },
+    {
+      "bbox": [
+        58.25,
+        369.45196533203125,
+        451.5296325683594,
+        379.27813720703125
+      ],
+      "block_id": "page-0742-block-0020",
+      "order": 20,
+      "text": "Trouble du sommeil induit par une substance/un médicament\nTrouble du sommeil induit par une substance\n",
+      "text_sha256": "0f0707b36b17893602614d28a1dfcc4826606c137974b2c3d1bbabc6d3406124"
+    },
+    {
+      "bbox": [
+        58.25,
+        386.9019470214844,
+        506.31085205078125,
+        407.7281188964844
+      ],
+      "block_id": "page-0742-block-0021",
+      "order": 21,
+      "text": "Autre insomnie spéciée\nInsomnie liée à un autre trouble mental de l’axe I ou de l’axe II\nTrouble du sommeil dû à une affection médicale générale\n",
+      "text_sha256": "11af656dd5efbd805a2de97e5fed4a5a5a232ee83e1f3eccb723debeb26ab401"
+    },
+    {
+      "bbox": [
+        58.25,
+        415.3019714355469,
+        131.37501525878906,
+        425.1281433105469
+      ],
+      "block_id": "page-0742-block-0022",
+      "order": 22,
+      "text": "Insomnie non spéciée\n",
+      "text_sha256": "1b5d07e6523a125705d250eafb1607f6593f1ffda1fd38b33534787e7e87dcc6"
+    },
+    {
+      "bbox": [
+        58.25,
+        432.751953125,
+        495.067138671875,
+        442.578125
+      ],
+      "block_id": "page-0742-block-0023",
+      "order": 23,
+      "text": "Autre hypersomnolence spéciée (Kleine-Levin)\nHypersomnie liée à un autre trouble de l’axe I ou de l’axe II\n",
+      "text_sha256": "7045e68e19697177b90c5500c24553fb0bed19bbc9101fce9b0731637e2af21c"
+    },
+    {
+      "bbox": [
+        58.25,
+        450.1519470214844,
+        374.0290222167969,
+        459.9781188964844
+      ],
+      "block_id": "page-0742-block-0024",
+      "order": 24,
+      "text": "Hypersomnolence non spéciée\nDiagnostic inexistant\n",
+      "text_sha256": "28cfeaecb1f33ec24fedfd70b41f25e9771e4b0aafc941c4fc4a51ac4de389e3"
+    },
+    {
+      "bbox": [
+        58.25,
+        467.6019592285156,
+        374.0290222167969,
+        477.4281311035156
+      ],
+      "block_id": "page-0742-block-0025",
+      "order": 25,
+      "text": "Autre trouble de l’alternance veille-sommeil spécié\nDiagnostic inexistant\n",
+      "text_sha256": "8e5b29f47e1983620b3c88f3e01d8b47c7fc09bdc7b8806eba89b50e8f499c06"
+    },
+    {
+      "bbox": [
+        58.25,
+        485.001953125,
+        374.0290222167969,
+        494.828125
+      ],
+      "block_id": "page-0742-block-0026",
+      "order": 26,
+      "text": "Trouble de l’alternance veille-sommeil non spécié\nDiagnostic inexistant\n",
+      "text_sha256": "7a75b7e56e04d16eaa391e4c65ddb912e2572b3b829cca90e9e8cc3e6f95d980"
+    },
+    {
+      "bbox": [
+        54.25,
+        503.02032470703125,
+        555.0260620117188,
+        553.8250122070312
+      ],
+      "block_id": "page-0742-block-0027",
+      "order": 27,
+      "text": "Sources : APA (2015); APA (2004).\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS.Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American Psychiatric Associa-\ntion, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\n",
+      "text_sha256": "34e122629476e374996bce9532d4fe913a4e6c10c94a1a692d172ca28719c30c"
+    },
+    {
+      "bbox": [
+        54.0,
+        575.7158203125,
+        297.169921875,
+        678.20849609375
+      ],
+      "block_id": "page-0742-block-0028",
+      "order": 28,
+      "text": "de pouvoir mettre en contraste les données obtenues la semaine\nà celles obtenues les ns de semaine. En eet, les facteurs qui\nmodulent l’horaire et la qualité du sommeil peuvent varier selon\nles obligations sociales, familiales et professionnelles. Il faut s’as-\nsurer que l’agenda est rempli chaque matin et non pas par blocs,\nde temps en temps, après plusieurs jours. Une fois complètement\nrempli, le pattern des habitudes de coucher, de réveils nocturnes,\nde lever matinal et de siestes est graphiquement saillant et met\nen évidence les variations signicatives du sommeil du patient.\n",
+      "text_sha256": "94c9f77d4354635d5114a91644cdea7ebe153728a123062b1e2e3134588c1f4e"
+    },
+    {
+      "bbox": [
+        54.0,
+        688.73681640625,
+        198.3356170654297,
+        704.87939453125
+      ],
+      "block_id": "page-0742-block-0029",
+      "order": 29,
+      "text": "32.3.2 Polysomnographie\n",
+      "text_sha256": "85af4ec2a0f4fe1ab1f5336b9dd966dd4a0a27b540ca175b4fa328f068286b9c"
+    },
+    {
+      "bbox": [
+        54.0,
+        708.2158203125,
+        297.3336181640625,
+        730.20849609375
+      ],
+      "block_id": "page-0742-block-0030",
+      "order": 30,
+      "text": "La polysomnographie (PSG) est indiquée lorsqu’une analyse ne\nde la physiologie du sommeil est nécessaire, par exemple pour\n",
+      "text_sha256": "0eaae4eb1f2cd9f858b73ab2afc2a6fffe3c4d78c91cbb441188fc98753e30a9"
+    },
+    {
+      "bbox": [
+        312.1000061035156,
+        575.7158203125,
+        555.523193359375,
+        730.20849609375
+      ],
+      "block_id": "page-0742-block-0031",
+      "order": 31,
+      "text": "caractériser l’électroencéphalogramme (EEG), les paramètres\ncardiorespiratoires ou certains événements moteurs comme les\nmouvements périodiques des jambes ou le bruxisme. La PSG\nest également utilisée pour quantier la somnolence diurne\nexcessive. Seule la PSG permet de quantier avec certitude les\nstades du sommeil, et conséquemment de calculer les statistiques\ndescriptives d’une nuit de sommeil (voir la gure 32.7). Par\ncomparaison, la sous-section 32.1.2 et la gure 32.2 décrivent\nles phases normales du sommeil. Bien que les enregistrements\nPSG se déroulent habituellement en laboratoire de sommeil, de\nnouveaux équipements portables en permettent maintenant\nla réalisation en milieu naturel. La plupart de ces systèmes\nportables visent à émettre une hypothèse ou conrmer un\n",
+      "text_sha256": "01637529fa5e33040535d87b4c093204e53d73379626fe68a21f92f9c514a0cf"
+    }
+  ],
+  "coordinates_sha256": "30b933e5df2275cc3a8f4b0daef2133df5d14a17ce7d4d24c138889fd56479f7",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0742",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 32\nTroubles du sommeil et de la vigilance\n725\nTABLEAU 32.2 Troubles du sommeil répertoriés dans le DSM-5 et équivalence du DSM-IV-TR\nDSM-5\nDSM-IV-TR\nTroubles de l’alternance veille-sommeil\nTroubles du sommeil\nDyssomnies\nInsomnie\nInsomnie primaire\nHypersomnolence\nHypersomnie primaire\nNarcolepsie, avec ou sans décience en hypocrétine\nNarcolepsie\nTroubles du sommeil liés à la respiration\nTrouble du sommeil lié à la respiration – enregistré sur l’axe III\nApnée/hypopnée obstructive du sommeil\nApnée centrale du sommeil\nHypoventilation liée au sommeil\nTroubles de l’alternance veille-sommeil liés au rythme circadien\n(avec retard ou avance de phase, type irrégulier, différent de 24 heures,\ntravail posté)\nTrouble du sommeil lié au rythme circadien (avec retard de phase,\nchangement de fuseau horaire [jet lag], travail posté) (auparavant\ntrouble du rythme veille-sommeil)\nParasomnies\nParasomnies\nTroubles de l’éveil en sommeil non paradoxal (somnambulisme, terreur\nnocturne)\nSomnambulisme\nTerreurs nocturnes\nCauchemars\nCauchemars (auparavant Rêves d’angoisse)\nTrouble du comportement en sommeil paradoxal (Parkinson, synucléopathie)\nParasomnies non spéciées : paralysie du sommeil\nSyndrome des jambes sans repos\nDyssomnies non spéciées : syndrome des jambes sans repos,\nmouvements périodiques des jambes\nTrouble du sommeil induit par une substance/un médicament\nTrouble du sommeil induit par une substance\nAutre insomnie spéciée\nInsomnie liée à un autre trouble mental de l’axe I ou de l’axe II\nTrouble du sommeil dû à une affection médicale générale\nInsomnie non spéciée\nAutre hypersomnolence spéciée (Kleine-Levin)\nHypersomnie liée à un autre trouble de l’axe I ou de l’axe II\nHypersomnolence non spéciée\nDiagnostic inexistant\nAutre trouble de l’alternance veille-sommeil spécié\nDiagnostic inexistant\nTrouble de l’alternance veille-sommeil non spécié\nDiagnostic inexistant\nSources : APA (2015); APA (2004).\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS.Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American Psychiatric Associa-\ntion, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\nde pouvoir mettre en contraste les données obtenues la semaine\nà celles obtenues les ns de semaine. En eet, les facteurs qui\nmodulent l’horaire et la qualité du sommeil peuvent varier selon\nles obligations sociales, familiales et professionnelles. Il faut s’as-\nsurer que l’agenda est rempli chaque matin et non pas par blocs,\nde temps en temps, après plusieurs jours. Une fois complètement\nrempli, le pattern des habitudes de coucher, de réveils nocturnes,\nde lever matinal et de siestes est graphiquement saillant et met\nen évidence les variations signicatives du sommeil du patient.\n32.3.2 Polysomnographie\nLa polysomnographie (PSG) est indiquée lorsqu’une analyse ne\nde la physiologie du sommeil est nécessaire, par exemple pour\ncaractériser l’électroencéphalogramme (EEG), les paramètres\ncardiorespiratoires ou certains événements moteurs comme les\nmouvements périodiques des jambes ou le bruxisme. La PSG\nest également utilisée pour quantier la somnolence diurne\nexcessive. Seule la PSG permet de quantier avec certitude les\nstades du sommeil, et conséquemment de calculer les statistiques\ndescriptives d’une nuit de sommeil (voir la gure 32.7). Par\ncomparaison, la sous-section 32.1.2 et la gure 32.2 décrivent\nles phases normales du sommeil. Bien que les enregistrements\nPSG se déroulent habituellement en laboratoire de sommeil, de\nnouveaux équipements portables en permettent maintenant\nla réalisation en milieu naturel. La plupart de ces systèmes\nportables visent à émettre une hypothèse ou conrmer un\n",
+  "raw_text_sha256": "4ac5081d1c1dbd367268e61bdaf5d21094d48f0f2c54f77cae07c3bbd54c4980",
+  "source_page_display": 743,
+  "source_page_index": 742
+}

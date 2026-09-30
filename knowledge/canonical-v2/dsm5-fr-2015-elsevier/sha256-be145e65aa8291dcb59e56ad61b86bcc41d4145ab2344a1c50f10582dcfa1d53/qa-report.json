@@ -1,0 +1,3162 @@
+{
+  "book_id": "dsm5-fr-2015-elsevier",
+  "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+  "ingestion_version": "canonical-v2.1",
+  "generated_at": "2026-09-24T23:04:34.238050+00:00",
+  "verdict": "PASS",
+  "ocr_used": false,
+  "counts": {
+    "units": 12818,
+    "coverage_only_units": 411,
+    "tables": 121,
+    "concepts": 1921,
+    "xrefs": 509,
+    "relations": 27815,
+    "medication_mentions": 68,
+    "algorithms": 2,
+    "figures": 0,
+    "chunks_v2": 14079,
+    "chunker_version": "struct-v2"
+  },
+  "content_types": {
+    "algorithm-ref": 2,
+    "box": 2,
+    "code-list": 58,
+    "criteria": 536,
+    "definition": 349,
+    "footnote": 17,
+    "index-entry": 412,
+    "list": 299,
+    "prose": 9912,
+    "reference": 1020,
+    "severity": 26,
+    "specifier": 118,
+    "table-ref": 67
+  },
+  "validation_status": {
+    "auto_ok": 5054,
+    "needs_review": 7764
+  },
+  "page_mapping_status": {
+    "certain": 10728,
+    "uncertain": 2090
+  },
+  "page_coverage": {
+    "body_printed_range": [
+      1,
+      1216
+    ],
+    "covered": true,
+    "missing_count": 0,
+    "missing_examples": [],
+    "gap_recovery": {
+      "printed_1078": "original text layer",
+      "printed_1081": "original text layer"
+    }
+  },
+  "referential_integrity": {
+    "invalid_refs": [],
+    "unresolved_xrefs": "see xref-resolution-log.json",
+    "unresolved_xref_count": 297,
+    "resolved_xref_count": 212
+  },
+  "table_variants": {
+    "dsm5fr:table:283:1": [
+      {
+        "kept_file": "tables-E.jsonl",
+        "variant_file": "tables-S1.jsonl",
+        "variant_id": "dsm5fr:table:283:1:alt-S1"
+      }
+    ],
+    "dsm5fr:table:953:1": [
+      {
+        "kept_file": "tables-K.jsonl",
+        "variant_file": "tables-S6.jsonl",
+        "variant_id": "dsm5fr:table:953:1:alt-S6"
+      },
+      {
+        "kept_file": "tables-K.jsonl",
+        "variant_file": "tables-T7.jsonl",
+        "variant_id": "dsm5fr:table:953:1:alt-T7"
+      }
+    ],
+    "dsm5fr:table:957:1": [
+      {
+        "kept_file": "tables-K.jsonl",
+        "variant_file": "tables-S6.jsonl",
+        "variant_id": "dsm5fr:table:957:1:alt-S6"
+      },
+      {
+        "kept_file": "tables-K.jsonl",
+        "variant_file": "tables-T7.jsonl",
+        "variant_id": "dsm5fr:table:957:1:alt-T7"
+      }
+    ],
+    "dsm5fr:table:959:1": [
+      {
+        "kept_file": "tables-K.jsonl",
+        "variant_file": "tables-S6.jsonl",
+        "variant_id": "dsm5fr:table:959:1:alt-S6"
+      },
+      {
+        "kept_file": "tables-K.jsonl",
+        "variant_file": "tables-T7.jsonl",
+        "variant_id": "dsm5fr:table:959:1:alt-T7"
+      }
+    ],
+    "dsm5fr:table:814:1": [
+      {
+        "kept_file": "tables-J.jsonl",
+        "variant_file": "tables-T6.jsonl",
+        "variant_id": "dsm5fr:table:814:1:alt-T6"
+      }
+    ],
+    "dsm5fr:table:818:1": [
+      {
+        "kept_file": "tables-S5.jsonl",
+        "variant_file": "tables-T6.jsonl",
+        "variant_id": "dsm5fr:table:818:1:alt-T6"
+      }
+    ],
+    "dsm5fr:table:960:1": [
+      {
+        "kept_file": "tables-S6.jsonl",
+        "variant_file": "tables-T7.jsonl",
+        "variant_id": "dsm5fr:table:960:1:alt-T7"
+      }
+    ],
+    "dsm5fr:table:964:1": [
+      {
+        "kept_file": "tables-S6.jsonl",
+        "variant_file": "tables-T7.jsonl",
+        "variant_id": "dsm5fr:table:964:1:alt-T7"
+      }
+    ]
+  },
+  "concept_conflicts_resolved": [
+    {
+      "concept_id": "dsm5fr-c-aboulie",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-abus-sexuels-enfance",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-acces-de-colere",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-acces-hyperphagiques",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-acquisitions-excessives",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-affection-medicale",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-affectivite",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-affectivite-negative",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-affects",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-agitation",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-agoraphobie",
+      "variants": 9,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-akathisie",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-akathisie-tardive",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-alcool",
+      "variants": 14,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-alteration-du-fonctionnement",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-amnesie",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-amnesie-dissociative",
+      "variants": 6,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-amnesie-post-traumatique",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-amphetamine",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-amphetamines",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-analyse-toxicologique",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-anhedonie",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-anorexie-mentale",
+      "variants": 8,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-anosognosie",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-antagonistes-dopaminergiques",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-anticholinergiques",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-antidepresseurs",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-antipsychotiques",
+      "variants": 6,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-anxiete",
+      "variants": 9,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-anxiete-de-separation",
+      "variants": 7,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-anxiete-generalisee",
+      "variants": 7,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-anxiete-sociale",
+      "variants": 7,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-anxiete-sociale-phobie-sociale",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-anxieuse",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-anxiolytique",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-anxiolytiques",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-apathie",
+      "variants": 5,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-aphasie-progressive-primaire",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-apnee-centrale-du-sommeil",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-apnee-du-sommeil",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-apnee-hypopnee-obstructive-du-sommeil",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-arrachage-cheveux",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-arthrite",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-arythmie-cardiaque",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-asphyxiophilie",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-assist",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-asthme",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-ataque-de-nervios",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-ataxie",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-attaque-de-panique",
+      "variants": 6,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-attaque-de-panique-nocturne",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-attaques-de-khyal",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-attaques-de-panique",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-attention",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-autogynephilie",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-automutilation",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-autre-hallucinogene",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-autre-trouble-mental-specifie",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-autre-trouble-paraphilique-specifie",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-autres-troubles-mentaux",
+      "variants": 6,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-barbituriques",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-begaiement",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-benzodiazepines",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-bilan-neuropsychologique",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-boulimie",
+      "variants": 6,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-bpco",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-bradykinesie",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-bronchodilatateurs",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-cad",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-cafeine",
+      "variants": 9,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-cannabis",
+      "variants": 14,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-caracteristiques-atypiques",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-caracteristiques-mixtes",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-caracteristiques-psychotiques",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-carbonate-de-lithium",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-cardite",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-cataplexie",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-catatonie",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-cauchemar",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-cauchemars",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-choree",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-choree-de-sydenham",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-cim-10-mc",
+      "variants": 6,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-cim-11",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-cim-9-mc",
+      "variants": 6,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-cocaine",
+      "variants": 11,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-colere",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-competence",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-comportement-psychomoteur-anormal",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-comportement-repetitif-centre-corps",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-comportements-repetitifs-centres-sur-le-corps",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-compulsion",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-compulsions",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-conduites-alimentaires-troubles-des-et-de-lingestion-daliments",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-conduites-suicidaires",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-constipation",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-contraceptifs-oraux",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-conversion",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-corps-de-lewy",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-corticosteroides",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-crainte-excessive-d-avoir-une-maladie",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-crainte-excessive-davoir-une-maladie",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-crainte-maladie",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-critere-a",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-critere-b",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-criteres-diagnostiques",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-croyances-delirantes",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-culture",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-cycles-rapides",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-deambulation-trouble-mental",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-defense",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-deficit-cognitif",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-deficit-de-lattention-hyperactivite",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-degenerescence-corticobasale",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-degenerescence-lobaire-frontotemporale",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-delirium",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-delirium-hyperactif",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-delirium-hypoactif",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-delirium-mixte",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-demence",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-depersonnalisation",
+      "variants": 6,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-depersonnalisation-derealisation",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-depressif-persistant-trouble-dysthymie",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-depression",
+      "variants": 5,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-depression-unipolaire",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-derealisation",
+      "variants": 5,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-dermatillomanie",
+      "variants": 5,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-desinhibition",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-desinhibition-du-contact-social",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-desir-sexuel",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-desorientation",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-destresse",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-detachement",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-detachement-autrui",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-detachement-social",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-detresse-anxieuse",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-detresse-psychologique",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-deuil",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-deuil-complexe-persistant",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-deuil-problematique",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-developpement-evolution",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-dhat-syndrome-du",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-diabete",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-discours-desorganise",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-dissociation",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-distractibilite",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-diuretiques",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-douleur-genito-pelvienne",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-drogues",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-dsm-5",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-dsm-iv",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-dysarthrie",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-dysfonction-sexuelle",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-dysfonctions-sexuelles",
+      "variants": 6,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-dyskinesie-tardive",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-dyskinesies-tardives",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-dysmorphie-corporelle",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-dysmorphie-musculaire",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-dyspareunie",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-dysphorie",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-dysphorie-de-genre",
+      "variants": 6,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-dysphorie-genre-adolescents-adultes",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-dysphorie-genre-enfants",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-dystonie",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-dystonie-tardive",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-ejaculation-retardee",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-emotions-positives",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-emoussement-affectif",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-empathie",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-emprisonnement",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-encopresie",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-enfant",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-entretien-formulation-culturelle",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-enuresie",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-envie-imperieuse",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-epilepsie",
+      "variants": 5,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-episode",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-episode-depressif-caracterise",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-episode-maniaque",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-essence",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-etat-confusionnel",
+      "variants": 10,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-euphorie",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-evaluation-dimensionnelle",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-evaluation-symptomatique-transversale",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-eveil",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-evenement-traumatique",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-evenements-traumatiques",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-evitement",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-excitation-sexuelle",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-exhibitionnisme",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-explication-culturelle",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-facteur-de-stress",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-fatigabilite",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-fatigue",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-fetichisme",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-fonctionnement-de-la-personnalite",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-fonctionnement-intellectuel-limite",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-fonctions-executives",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-formulation-culturelle",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-frotteurisme",
+      "variants": 5,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-fugue-dissociative",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-gaz-nerveux",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-gene-c9orf72",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-genre",
+      "variants": 6,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-glossaire",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-grandiosite",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-hallucinations",
+      "variants": 9,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-hallucinations-visuelles",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-hallucinogene",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-hallucinogenes",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-handicap",
+      "variants": 5,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-handicap-intellectuel",
+      "variants": 7,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-handicap-intellectuel-leger",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-handicap-intellectuel-trouble-du-developpement-intellectuel",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-hostilite",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-humeur",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-hyperacousie",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-hyperactivite",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-hypereveil",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-hyperoralite",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-hyperparathyroidie",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-hypersensibilite-neuroleptiques",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-hypersexualite",
+      "variants": 5,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-hypersomnie",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-hypersomnolence",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-hyperthyroidie",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-hypervigilance",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-hypnotiques",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-hypomanie",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-hypopnee",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-hypothyroidie",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-hypoventilation-liee-au-sommeil",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-ideation-persecutoire",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-ideation-suicidaire",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-idee-delirante",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-idees-de-reference",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-idees-delirantes",
+      "variants": 5,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-idees-reference",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-idees-suicidaires",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-identite",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-identite-culturelle",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-ievre-rhumatismale",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-imc",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-impulsivite",
+      "variants": 6,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-inattention",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-incontinence-fecale",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-incontinence-urinaire",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-indice-de-masse-corporelle",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-infarctus-cerebral",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-insecticides-organophosphores",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-insecurite-liee-a-la-separation",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-insight",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-insomnie",
+      "variants": 8,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-instabilite-affective",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-insuline",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-intimite",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-intoxication",
+      "variants": 7,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-intoxication-par-une-substance",
+      "variants": 5,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-irresponsabilite",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-irritabilite",
+      "variants": 5,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-jalousie-obsessionnelle",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-jeu-argent-pathologique",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-jeu-dargent",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-jeu-dargent-pathologique",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-jeu-dargent-pathologique-trouble-lie-au-jeu-dargent",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-jugement-clinique",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-khyal-cap",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-kleptomanie",
+      "variants": 6,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-koro",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-labilite-emotionnelle",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-lashback",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-laxatifs",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-lesion-cerebrale-traumatique",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-lesions-cutanees",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-lesions-striatales",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-lithium",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-lorazepam",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-lupus-erythemateux-systemique",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-macropsie",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-maladie-alzheimer",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-maladie-cerebrovasculaire",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-maladie-corps-lewy",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-maladie-dalzheimer",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-maladie-de-huntington",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-maladie-de-parkinson",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-maladie-parkinson",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-maladie-prions",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-malhonnetete",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-malnutrition",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-maltraitance",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-manie",
+      "variants": 6,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-masochisme-sexuel",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-mdma",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-medicale",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-meiance",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-merycisme",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-metaux-lourds",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-methamphetamine",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-methylphenidate",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-metoclopramide",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-modele-alternatif-personnalite",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-modification-personnalite-affection-medicale",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-monoxyde-de-carbone",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-mouvements-periodiques-des-jambes",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-mouvements-stereotypes",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-mutisme-selectif",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-myoclonie",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-myoclonies",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-narcolepsie",
+      "variants": 7,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-negligence",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-negligence-enfant",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-negligence-grave",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-negligence-partenaire",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-negligence-sociale",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-nervios",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-neuroleptiques",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-non-congruence-genre",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-non-observance-traitement-medical",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-obsession",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-obsession-dune-dysmorphie-corporelle",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-obsession-dysmorphie-corporelle",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-obsessions",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-opiace",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-opiaces",
+      "variants": 5,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-orgasme",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-pandas",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-paralysie",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-paralysie-du-sommeil",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-paralysie-supranucleaire-progressive",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-paraphilie",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-parasomnie",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-parasomnies",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-paresie",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-paresthesies",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-parkinsonisme",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-partenaire",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-pedophilie",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-peinture",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-pensee-magique",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-perfectionnisme",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-perfectionnisme-rigide",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-perseveration",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-personnalite",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-personnalite-antisociale",
+      "variants": 8,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-personnalite-borderline",
+      "variants": 7,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-personnalite-dependante",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-personnalite-evitante",
+      "variants": 6,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-personnalite-histrionique",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-personnalite-narcissique",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-personnalite-obsessionnelle-compulsive",
+      "variants": 5,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-personnalite-paranoiaque",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-personnalite-schizoide",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-personnalite-schizotypique",
+      "variants": 6,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-perte-cheveux",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-perturbation-identite",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-perturbation-sommeil",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-peur",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-phencyclidine",
+      "variants": 6,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-pheochromocytome",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-phobie",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-phobie-sociale",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-phobie-specifique",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-phobie-speciique",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-pica",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-plethysmographie-penienne",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-polysomnographie",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-preparations-thyroidiennes",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-prevalence",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-prise-de-risque",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-problemes-relationnels",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-promis",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-pseudo-hallucinations-auditives",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-psychoticisme",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-pyromanie",
+      "variants": 6,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-qi",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-quete-attention",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-ralentissement-psychomoteur",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-reaction-de-sursaut",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-reaction-sursaut",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-recherche-dattention",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-references",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-remission",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-remission-complete",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-repetition-cag",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-reponse-environnement-protege",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-reseau-social",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-respiration-de-cheyne-stokes",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-retards-du-developpement",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-reves-effrayants",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-reviviscence",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-rigide",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-sadisme-sexuel",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-salbutamol",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-schizophrenie",
+      "variants": 11,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-sclerose-en-plaques",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-sedatif-hypnotique-anxiolytique",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-sedatif-hypnotique-ou-anxiolytique",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-sedatifs",
+      "variants": 5,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-sedatifs-hypnotiques-ou-anxiolytiques",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-sentiments-vide",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-sevices-adulte-non-partenaire",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-sevices-physiques-enfant",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-sevices-psychologiques-enfant",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-sevices-psychologiques-partenaire",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-sevices-sexuels-enfant",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-sevrage",
+      "variants": 7,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-sevrage-alcool",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-sevrage-dune-substance",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-shubo-kyofu",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-signe",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-simulation",
+      "variants": 5,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-situations-cliniques",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-sommeil",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-sommeil-non-reparateur",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-somnambulisme",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-somnolence",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-soucis",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-soucis-excessifs",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-sous-types",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-souvenirs-envahissants",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-stabilite",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-stereotypies",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-steroides",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-stimulant",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-streptocoques-du-groupe-a",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-stress",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-stupeur",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-substance-autre-ou-inconnue",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-substance-inconnue",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-substance-inhalee",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-substances-inhalees",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-substances-toxiques",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-suicide",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-suicidite",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-support-social",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-surpoids-obesite",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-susto",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-symptome",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-symptome-dissociatif",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-symptome-somatique",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-symptomes-dissociatifs",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-symptomes-negatifs",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-syndrome",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-syndrome-arret-antidepresseurs",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-syndrome-culturel",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-syndrome-dalimentation-nocturne",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-syndrome-des-jambes-sans-repos",
+      "variants": 5,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-syndrome-du-colon-irritable",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-syndrome-gilles-tourette",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-syndrome-malin-des-neuroleptiques",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-syndrome-malin-neuroleptiques",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-syndrome-prader-willi",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-syndrome-psychotique-attenue",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-syndrome-rett",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-synovite-poignets",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-tabac",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-tabac-troubles-lies-au",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-tdah",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-tendances-manipulatoires",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-tension-musculaire",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-tentative-de-suicide",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-tentative-suicicide",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-tentatives-de-suicide",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-terreurs-nocturnes",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-test-iteratif-de-latence-dendormissement",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-thesaurisation-pathologique",
+      "variants": 5,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-thesaurisation-pathologique-syllogomanie",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-tic",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-tics",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-tnc-corps-lewy",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-tolerance",
+      "variants": 6,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trait-de-personnalite",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-traitement",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-traits-personnalite",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-transe-dissociative",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-transpiration",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-transvestisme",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trichophagie",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trichotillomanie",
+      "variants": 5,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trichotillomanie-arrachage-compulsif-de-ses-propres-cheveux",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-triturage-peau",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-a-symptomatologie-neurologique-fonctionnelle",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-a-symptomatologie-somatique",
+      "variants": 5,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-adaptation",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-alimentaire",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-anxieux",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-anxieux-du-affection-medicale",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-anxieux-induit-cafeine",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-anxieux-induit-substance-medicamente",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-bipolaire",
+      "variants": 7,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-bipolaire-de-type-i",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-bipolaire-de-type-ii",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-conversion",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-cyclothymique",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-de-conversion",
+      "variants": 5,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-de-la-personnalite",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-de-la-personnalite-specifie-par-des-traits",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-de-ladaptation",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-de-lerection",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-de-lorgasme-chez-la-femme",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-de-lusage-dalcool",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-de-lusage-de-substances",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-de-lusage-des-opiaces",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-de-lusage-des-sedatifs-hypnotiques-ou-anxiolytiques",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-de-lusage-des-stimulants",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-de-lusage-du-tabac",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-de-lusage-dune-substance",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-delirant",
+      "variants": 8,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-depressif",
+      "variants": 6,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-depressif-caracterise",
+      "variants": 9,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-depressif-persistant",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-depressif-persistant-dysthymie",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-des-conduites",
+      "variants": 12,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-developpement-intellectuel",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-disruptif-avec-dysregulation-emotionnelle",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-dissociatif",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-dissociatif-identite",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-du-comportement-en-sommeil-paradoxal",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-du-developpement-intellectuel",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-du-sommeil-induit-par-une-substance-un-medicament",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-du-spectre-de-l-autisme",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-du-spectre-de-lautisme",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-dysphorique-premenstruel",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-exhibitionnisme",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-explosif-intermittent",
+      "variants": 7,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-factice",
+      "variants": 9,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-fetichisme",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-frotteurisme",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-masochisme-sexuel",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-mental",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-mental-non-specifie",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-neurocognitif",
+      "variants": 7,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-neurocognitif-frontotemporal",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-neurocognitif-lct",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-neurocognitif-leger",
+      "variants": 5,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-neurocognitif-majeur",
+      "variants": 9,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-neurocognitif-majeur-leger",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-neurocognitif-non-specifie",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-neurocognitif-substance",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-neurocognitif-vasculaire",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-neurocognitif-vih",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-obsessionnel-compulsif",
+      "variants": 13,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-obsessionnel-compulsif-induit-substance-medicamente",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-obsessionnel-compulsif-ou-apparente-du-a-une-autre-affection-medicale",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-oppositionnel-avec-provocation",
+      "variants": 6,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-panique",
+      "variants": 10,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-paraphilique",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-paraphilique-non-specifie",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-pedophilie",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-psychotique-bref",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-reactionnel-de-lattachement",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-sadisme-sexuel",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-schizoaffectif",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-schizophreniforme",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-specifique-des-apprentissages",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-spectre-autisme",
+      "variants": 6,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-stress-aigu",
+      "variants": 6,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-stress-post-traumatique",
+      "variants": 11,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-symptomatologie-somatique",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-transvestisme",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-usage-alcool",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-usage-cannabis",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-usage-opiaces",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-usage-stimulants",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-trouble-voyeurisme",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-troubles-anxieux",
+      "variants": 5,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-troubles-bipolaires",
+      "variants": 5,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-troubles-de-la-personnalite",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-troubles-depressifs",
+      "variants": 6,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-troubles-disruptifs-impulsions-conduites",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-troubles-dissociatifs",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-troubles-du-controle-sphincterien",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-troubles-du-sommeil",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-troubles-induits-substance",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-troubles-lies-traumatismes-stress",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-troubles-mentaux",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-troubles-mouvements-medicament",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-troubles-neurocognitifs",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-troubles-neurodeveloppementaux",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-troubles-obsessionnels-compulsifs-et-apparentes",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-troubles-paraphiliques",
+      "variants": 5,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-troubles-personnalite",
+      "variants": 5,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-troubles-personnalite-groupe-a",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-troubles-personnalite-groupe-c",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-troubles-psychotiques",
+      "variants": 4,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-troubles-symptomatologie-somatique",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-troubles-usage-substance",
+      "variants": 6,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-tumeur",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-utilite-clinique",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-vaginisme",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-vih",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-violence-physique-partenaire",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-violence-sexuelle-partenaire",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-vomissements",
+      "variants": 2,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-voyeurisme",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    },
+    {
+      "concept_id": "dsm5fr-c-whodas-2-0",
+      "variants": 3,
+      "resolved_by": "union-of-source-facts"
+    }
+  ],
+  "integrity": {
+    "encoding_replacement_char_units": [],
+    "watermark_leaks": [],
+    "empty_passages": []
+  },
+  "warnings": [
+    {
+      "code": "coverage-only-pages",
+      "count": 411,
+      "severity": "WARNING",
+      "explanation": "Full text preserved, semantic atomization incomplete; review before activation."
+    },
+    {
+      "code": "tables-need-layout-review",
+      "count": 121,
+      "severity": "WARNING",
+      "explanation": "Table reconstruction/layout review required; conflicting reconstructions preserved as variants."
+    },
+    {
+      "code": "unresolved-cross-references",
+      "count": 297,
+      "severity": "WARNING",
+      "explanation": "Truncated/ambiguous fragments kept unresolved with provenance; 69 resolved this pass via explicit page/chapter/table rules (xref-resolution-log.json)."
+    }
+  ],
+  "blocking_reasons": [],
+  "activation": {
+    "eligible": false,
+    "approved_at": null,
+    "approved_by": null,
+    "reason": "No automatic activation; resolve blockers and complete human review."
+  },
+  "table_review": {
+    "auto_ok": 19,
+    "needs_review": 102,
+    "report": "table-review.json"
+  },
+  "chunk_qa": {
+    "status": "PASS",
+    "units_covered": 12818,
+    "deterministic_rerun": true,
+    "sha256": "cb832ee12e03131439db9dc3bfdec3fd8980b689872cd71ce023a64b926a3fb8",
+    "script": "scripts/decouper-canonique-v2.mjs"
+  }
+}

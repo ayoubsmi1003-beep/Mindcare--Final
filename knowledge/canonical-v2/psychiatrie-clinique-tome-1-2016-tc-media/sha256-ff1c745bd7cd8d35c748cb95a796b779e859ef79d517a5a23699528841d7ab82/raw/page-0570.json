@@ -1,0 +1,88 @@
+{
+  "block_sequence_sha256": "f30890858e501f0a64d0e49ae05eda3c4dcd4a24a1b8e4f9eb18532234504088",
+  "blocks": [
+    {
+      "bbox": [
+        381.75,
+        747.525390625,
+        555.0,
+        758.8193359375
+      ],
+      "block_id": "page-0570-block-0001",
+      "order": 1,
+      "text": "Chapitre 26\nDouleur chronique\n553\n",
+      "text_sha256": "96d75bb3735f74780debb688323628999fcc33d3371fc6268a1cfd917451ae02"
+    },
+    {
+      "bbox": [
+        56.35000228881836,
+        41.002296447753906,
+        194.71400451660156,
+        53.320068359375
+      ],
+      "block_id": "page-0570-block-0002",
+      "order": 2,
+      "text": "FIGURE 26.1 Circuits de la douleur\n",
+      "text_sha256": "9525768193f0623ebd290194d53b7015127e6e34987aa7bd23a2b186e19d1eb1"
+    },
+    {
+      "bbox": [
+        54.25,
+        600.4906616210938,
+        279.5616455078125,
+        619.2250366210938
+      ],
+      "block_id": "page-0570-block-0003",
+      "order": 3,
+      "text": "Voies douloureuses\na) Schéma des principales bres afférentes modulant la douleur physiologique :\n",
+      "text_sha256": "8b18bceae0f116e16132ce3e9f2d2a611d3def3b0ba80056de9d466200147f90"
+    },
+    {
+      "bbox": [
+        54.25,
+        619.3744506835938,
+        367.63079833984375,
+        663.7250366210938
+      ],
+      "block_id": "page-0570-block-0004",
+      "order": 4,
+      "text": "•\nles bres périphériques : petites C et A-δ (nocicepteurs) et grosses A-β (mécanorécepteurs) ;\n•\nles principaux trajets médullaires : la voie spinothalamique latérale et la voie spinoparabrachiale ;\n•\nles cibles corticales des signaux douloureux : le cortex pariétal, le système limbique et le lobe préfrontal.\nb) Graphique de la douleur pathologique :\n",
+      "text_sha256": "e79e9476e8eb5f01b2687f26a0816d554dffa257180155741fecba7c0ac73b51"
+    },
+    {
+      "bbox": [
+        70.25,
+        664.9906616210938,
+        255.5677490234375,
+        673.7250366210938
+      ],
+      "block_id": "page-0570-block-0005",
+      "order": 5,
+      "text": "Allodynie (stimulus indolore) et hyperalgésie (stimulus douloureux)\n",
+      "text_sha256": "77869e0f8c68ed4d0d97c5bf8b1a883fd495ba40862b26563507236e45ada8ea"
+    },
+    {
+      "bbox": [
+        54.25,
+        679.9906616210938,
+        145.17018127441406,
+        688.85888671875
+      ],
+      "block_id": "page-0570-block-0006",
+      "order": 6,
+      "text": "Source : Kuner (2010), p. 1259.\n",
+      "text_sha256": "ea0343186ddfcdcab53ea30b6035bc805ed8a4ff48d08a86de64f0102e2f3aca"
+    }
+  ],
+  "coordinates_sha256": "fdfbe7f0e06789dbfc08da195c0a293ae49d701a05ddffae91fe895f6ff394a6",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0570",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 26\nDouleur chronique\n553\nFIGURE 26.1 Circuits de la douleur\nVoies douloureuses\na) Schéma des principales bres afférentes modulant la douleur physiologique :\n•\nles bres périphériques : petites C et A-δ (nocicepteurs) et grosses A-β (mécanorécepteurs) ;\n•\nles principaux trajets médullaires : la voie spinothalamique latérale et la voie spinoparabrachiale ;\n•\nles cibles corticales des signaux douloureux : le cortex pariétal, le système limbique et le lobe préfrontal.\nb) Graphique de la douleur pathologique :\nAllodynie (stimulus indolore) et hyperalgésie (stimulus douloureux)\nSource : Kuner (2010), p. 1259.\n",
+  "raw_text_sha256": "b8d59fb0c91c48529ec316d8e283327660a4f4d65b7158ad61c81e0a2d196b4d",
+  "source_page_display": 571,
+  "source_page_index": 570
+}

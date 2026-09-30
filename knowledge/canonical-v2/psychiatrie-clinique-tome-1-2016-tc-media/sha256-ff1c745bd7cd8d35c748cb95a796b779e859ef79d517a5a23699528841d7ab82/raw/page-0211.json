@@ -1,0 +1,136 @@
+{
+  "block_sequence_sha256": "634a577ca95a836d08819803d223ee5b7d4c3135a8d9774e16b1c9cbcc9e372e",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        140.5734405517578,
+        328.16192626953125,
+        227.4953155517578
+      ],
+      "block_id": "page-0211-block-0001",
+      "order": 1,
+      "text": "Développement\nde la personnalité\n",
+      "text_sha256": "38380d834d27704eebfd57d4ecd3f0e4f016c382d25ec6666548b1d508fbff7c"
+    },
+    {
+      "bbox": [
+        48.0,
+        276.30010986328125,
+        146.62159729003906,
+        288.80010986328125
+      ],
+      "block_id": "page-0211-block-0002",
+      "order": 2,
+      "text": "Joanne Cyr, M.D., FRCPC\n",
+      "text_sha256": "84be3d16330bdb793cbcb45ff4de498382fc47436fb755c991a08c525db07426"
+    },
+    {
+      "bbox": [
+        48.0,
+        292.67724609375,
+        284.1802062988281,
+        324.893798828125
+      ],
+      "block_id": "page-0211-block-0003",
+      "order": 3,
+      "text": "Psychiatre, programme des troubles anxieux et de l’humeur,\nvolet troubles de la personnalité, Institut universitaire en santé\nmentale de Montréal\n",
+      "text_sha256": "11d9c04681dfb0c9ee1dd0aa078d99540d32651a35b7802e2e042664f62590c9"
+    },
+    {
+      "bbox": [
+        48.0,
+        328.67724609375,
+        280.1392822265625,
+        349.893798828125
+      ],
+      "block_id": "page-0211-block-0004",
+      "order": 4,
+      "text": "Professeure adjointe de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\n",
+      "text_sha256": "e24fd9e5fcb63577553120c1928554deab7ca02fcc29176ad48a834a1a0f4c09"
+    },
+    {
+      "bbox": [
+        306.0,
+        276.30010986328125,
+        462.9090270996094,
+        288.80010986328125
+      ],
+      "block_id": "page-0211-block-0005",
+      "order": 5,
+      "text": "Marc-Simon Drouin, PH. D. (psychologie)\n",
+      "text_sha256": "af15692e3f78ad22618a93c57ee87c691c08058348947f85d44bdce02baa413a"
+    },
+    {
+      "bbox": [
+        306.0,
+        292.67724609375,
+        512.545654296875,
+        324.893798828125
+      ],
+      "block_id": "page-0211-block-0006",
+      "order": 6,
+      "text": "Psychologue, directeur, Faculté des sciences humaines,\nDépartement de psychologie, Université du Québec\nà Montréal\n",
+      "text_sha256": "90919c763cb307bc73da6458a1352401cb78e753e58647e09249161dda2532ee"
+    },
+    {
+      "bbox": [
+        306.0,
+        328.67724609375,
+        501.6216735839844,
+        360.893798828125
+      ],
+      "block_id": "page-0211-block-0007",
+      "order": 7,
+      "text": "Professeur titulaire, Faculté des sciences humaines,\nDépartement de psychologie, Université du Québec\nà Montréal\n",
+      "text_sha256": "877817ad4255c705fc18f0789fbc0ecbbfb1644d9f45532ccf9048a42a093c04"
+    },
+    {
+      "bbox": [
+        48.0,
+        411.0244140625,
+        289.0099792480469,
+        510.947265625
+      ],
+      "block_id": "page-0211-block-0008",
+      "order": 8,
+      "text": "9.1 \nModèle neurodéveloppemental transactionnel ........ 195\n9.1.1 \nCaractéristiques de l’organisme.......................... 195\n9.1.2 \nCaractéristiques de l’environnement................. 198\n9.1.3 \nSystèmes de mémoire et apprentissage............. 200\n9.1.4 \nSystèmes émotionnels .......................................... 203\n9.1.5 \nSystème cognitif..................................................... 206\n9.1.6 \nEnjeux développementaux .................................. 210\n9.1.7 \nCycles de vie et transitions .................................. 215\n",
+      "text_sha256": "8ef2364bfa31e0a11f2587ab330022ea2a684871e29975a6e0c32f146426da12"
+    },
+    {
+      "bbox": [
+        306.0,
+        411.0244140625,
+        547.0100708007812,
+        509.8681640625
+      ],
+      "block_id": "page-0211-block-0009",
+      "order": 9,
+      "text": "9.2 \néories psychodynamiques et psychosociales ........ 216\n9.2.1 \néorie psychanalytique...................................... 216\n9.2.2 \nPsychologie du Moi............................................... 219\n9.2.3 \nPsychologie du Soi et intersubjectivité ............. 222\n9.2.4 \néories de l’apprentissage social ...................... 223\n9.2.5 \nModèle psychobiologique.................................... 224\n9.2.6 \nPerspectives orientales de la personnalité........ 224\nLectures complémentaires...................................................... 226\n",
+      "text_sha256": "8cb3ba9f17726bdb7505d0240d9b1739569f52b675594eed6f5bdbe15b43925b"
+    },
+    {
+      "bbox": [
+        319.5,
+        2.3810577392578125,
+        555.0,
+        122.38105773925781
+      ],
+      "block_id": "page-0211-block-0010",
+      "order": 10,
+      "text": "CHAPITRE9\n",
+      "text_sha256": "745f17079bbf9adda2ed3d77d8c6bf115831f6a388e368e71af649e3678a94af"
+    }
+  ],
+  "coordinates_sha256": "eb6c04ba04d90cbf6f3879beae75b1f0f70335b5346cb3c0e532213b9c285c1a",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0211",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Développement\nde la personnalité\nJoanne Cyr, M.D., FRCPC\nPsychiatre, programme des troubles anxieux et de l’humeur,\nvolet troubles de la personnalité, Institut universitaire en santé\nmentale de Montréal\nProfesseure adjointe de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\nMarc-Simon Drouin, PH. D. (psychologie)\nPsychologue, directeur, Faculté des sciences humaines,\nDépartement de psychologie, Université du Québec\nà Montréal\nProfesseur titulaire, Faculté des sciences humaines,\nDépartement de psychologie, Université du Québec\nà Montréal\n9.1 \nModèle neurodéveloppemental transactionnel ........ 195\n9.1.1 \nCaractéristiques de l’organisme.......................... 195\n9.1.2 \nCaractéristiques de l’environnement................. 198\n9.1.3 \nSystèmes de mémoire et apprentissage............. 200\n9.1.4 \nSystèmes émotionnels .......................................... 203\n9.1.5 \nSystème cognitif..................................................... 206\n9.1.6 \nEnjeux développementaux .................................. 210\n9.1.7 \nCycles de vie et transitions .................................. 215\n9.2 \néories psychodynamiques et psychosociales ........ 216\n9.2.1 \néorie psychanalytique...................................... 216\n9.2.2 \nPsychologie du Moi............................................... 219\n9.2.3 \nPsychologie du Soi et intersubjectivité ............. 222\n9.2.4 \néories de l’apprentissage social ...................... 223\n9.2.5 \nModèle psychobiologique.................................... 224\n9.2.6 \nPerspectives orientales de la personnalité........ 224\nLectures complémentaires...................................................... 226\nCHAPITRE9\n",
+  "raw_text_sha256": "4717499e3ff1d26a24a164894bec7968413a11c522c22b1afc5db529638c1932",
+  "source_page_display": 212,
+  "source_page_index": 211
+}

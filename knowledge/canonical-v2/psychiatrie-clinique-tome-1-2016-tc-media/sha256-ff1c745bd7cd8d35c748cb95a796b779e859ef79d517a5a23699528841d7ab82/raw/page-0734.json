@@ -1,0 +1,136 @@
+{
+  "block_sequence_sha256": "b69acc0a279dfe995bdc32a78e867f807629d7a5edba65ca63584bc491f7ccf1",
+  "blocks": [
+    {
+      "bbox": [
+        305.8500061035156,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0734-block-0001",
+      "order": 1,
+      "text": "Chapitre 32\nTroubles du sommeil et de la vigilance\n717\n",
+      "text_sha256": "54bf2ec75bb1814d3546d2e9a84efac37727cb2974214970fbf0a8c27860fd95"
+    },
+    {
+      "bbox": [
+        324.0500183105469,
+        576.9658203125,
+        555.0777587890625,
+        587.375
+      ],
+      "block_id": "page-0734-block-0002",
+      "order": 2,
+      "text": "– Les complexes K peuvent apparaître de façon spontanée\n",
+      "text_sha256": "c9bae42115b6fdba6c6fb75ff144eceb0e75f6f35d305ba809abcd8e374b57a9"
+    },
+    {
+      "bbox": [
+        336.0,
+        588.4658203125,
+        555.3447875976562,
+        725.375
+      ],
+      "block_id": "page-0734-block-0003",
+      "order": 3,
+      "text": "ou en réponse à une stimulation de l’extérieur. Ils sont\ndonc une preuve que le cerveau est réceptif pendant le\nsommeil, mais il y a plus : si la même stimulation sensorielle\nest répétée, il est plus dicile de faire apparaître un com ­\nplexe K. On conclut donc que le cerveau est capable de\ntraiter de l’information pendant le sommeil. Lorsque la\nstimulation est signiante, par exemple le fait d’entendre\nles pleurs de son enfant ou de se faire appeler par son\npropre nom, la personne peut se réveiller abruptement.\nDans le cas d’une stimulation anodine, le complexe K\n« protège » le cerveau en favorisant une activité EEG lente\net synchrone.\n",
+      "text_sha256": "aa849f28135e10991a252feeeaa9b9eee8f5a034f32c1893f4523e0d62d9de2b"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.9658203125,
+        297.341796875,
+        138.375
+      ],
+      "block_id": "page-0734-block-0004",
+      "order": 4,
+      "text": "à un moment et pour une durée qui lui sont propres, selon son\nchronotype :\n• type du matin, où la personne est à son maximum de fonc­\ntionnement physique et psychologique tôt dans la journée ;\n• type du soir, où la personne a une meilleure performance\nen soirée ;\n• durée du sommeil, selon que l’on est un court ou un grand\ndormeur.\n",
+      "text_sha256": "0bb4566769533a2dcba4fe86d12f8bacb5b8883ddf1c6342d4d146b3b1e3e899"
+    },
+    {
+      "bbox": [
+        54.0,
+        149.0368194580078,
+        132.7803192138672,
+        165.1793975830078
+      ],
+      "block_id": "page-0734-block-0005",
+      "order": 5,
+      "text": "32.1.2 Stades\n",
+      "text_sha256": "d36e5b8f43b0ef6fb71eaaa2a63b24d13999d35a1afd68b936d71abbaa757691"
+    },
+    {
+      "bbox": [
+        54.0,
+        168.61582946777344,
+        297.26373291015625,
+        441.57501220703125
+      ],
+      "block_id": "page-0734-block-0006",
+      "order": 6,
+      "text": "La polysomnographie (PSG) de base, nécessaire à la détermi­\nnation des stades de sommeil, consiste en l’enregistrement par\ndes électrodes placées à la surface de la peau de trois paramètres\nphysiologiques :\n• l’électroencéphalogramme (EEG) des régions cérébrales\nfrontales ou centrales et occipitales ;\n• l’électrooculogramme (EOG) des mouvements des yeux,\ngauche et droit ;\n• l’électromyogramme (EMG) du tonus des muscles sous­\nmentonniers.\nLes tracés obtenus sont habituellement divisés en segments\nde 20 ou 30 secondes et on détermine un état de vigilance pour\nchacun d’eux. Rechtschaen & Kales (1968) ont établi les règles de\ncodage classiques, puis l’Association américaine de médecine du\nsommeil les a adaptées (Iber & al., 2007). Alors que la mise à jour\nde 2007 était nécessaire pour prendre en compte les changements\net l’avancement technologiques concernant l’identication des\ntroubles du sommeil, peu de modications ont été apportées à\nla dénition des stades de sommeil eux­mêmes. L’appellation\nanglo­saxonne particulière des stades de sommeil N1 à N3\n(N = non REM) et R = REM par l’Association américaine\nde médecine du sommeil est mise entre parenthèses dans la\ngure 32.2 qui illustre les stades du sommeil.\n",
+      "text_sha256": "9a796d6176bbca2a02bec02bdf57fe4fe2d0ea3ce61ad2549ccd45c29a86ea1d"
+    },
+    {
+      "bbox": [
+        54.0,
+        442.7658386230469,
+        296.89581298828125,
+        464.7250061035156
+      ],
+      "block_id": "page-0734-block-0007",
+      "order": 7,
+      "text": "La èche dans le graphique du stade 1 (N1) pointe vers le\nmoment apparent du passage de l’éveil au stade 1 de sommeil.\n",
+      "text_sha256": "e208b575ec597f86c60d5bb97fb0f97eb24dc22f1fd4941473196c67a8584f87"
+    },
+    {
+      "bbox": [
+        54.0,
+        465.91583251953125,
+        297.4148254394531,
+        667.4750366210938
+      ],
+      "block_id": "page-0734-block-0008",
+      "order": 8,
+      "text": "Le déroulement d’une nuit normale de sommeil parcourt les\nétapes suivantes : L’individu éveillé, les yeux ouverts, présente\nà l’EEG un tracé d’ondes rapides et de faible amplitude (ondes\nbêta, de 13 à 30 Hz). Le tonus musculaire (EMG) est élevé et\nles mouvements oculaires (EOG) sont rapides et adaptés au\ncomportement. Chez la personne au repos et qui a les yeux\nfermés, le tracé EEG caractéristique est formé d’ondes alpha (de\n8 à 12 Hz) qui disparaissent à l’ouverture des yeux ou au cours\nd’une tâche mentale.\n• Stade 1 (ou stade N1) : avec l’assoupissement, le rythme alpha\ndisparaît pour faire place à une activité EEG plus lente (ondes\nthêta, 4 à 7 Hz) et plus synchrone ; l’EOG présente des mou­\nvements lents des yeux sous les paupières closes alors que le\ntonus musculaire est maintenu.\n• Stade 2 (ou stade N2) : en quelques minutes apparaissent des\nsignes EEG caractéristiques en bouées :\n– Les fuseaux de sommeil enregistrés à l’EEG du stade 2\n",
+      "text_sha256": "7d504140edc39d47030ed7632930dc5bd6ff73baec3a30912ce41a094f73848f"
+    },
+    {
+      "bbox": [
+        78.0,
+        668.6158447265625,
+        296.92950439453125,
+        725.3250122070312
+      ],
+      "block_id": "page-0734-block-0009",
+      "order": 9,
+      "text": "reètent l’activité d’un mécanisme neurophysiologique\nde protection du sommeil par lequel l’accès des stimuli\nsensoriels au cerveau est grandement diminué grâce à\nl’inhibition du thalamus, relais obligé de cette information\npendant la veille.\n",
+      "text_sha256": "f2434305a89098c964afd4e2f6d68a2973616d5d47c3e729839248c026d90f66"
+    },
+    {
+      "bbox": [
+        314.3000183105469,
+        41.002296447753906,
+        552.8082885742188,
+        53.320068359375
+      ],
+      "block_id": "page-0734-block-0010",
+      "order": 10,
+      "text": "FIGURE 32.2 Tracés polysomnographiques de 20 secondes\n",
+      "text_sha256": "77f520230a5e0b7133b0214c772c1bc3a262d1c9c2e859fc84e0a56fae42b47e"
+    }
+  ],
+  "coordinates_sha256": "9fe7fb5aa1fd282a971385f91c30c22a4916731f14edb580f997fe7586cd8bfd",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0734",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 32\nTroubles du sommeil et de la vigilance\n717\n– Les complexes K peuvent apparaître de façon spontanée\nou en réponse à une stimulation de l’extérieur. Ils sont\ndonc une preuve que le cerveau est réceptif pendant le\nsommeil, mais il y a plus : si la même stimulation sensorielle\nest répétée, il est plus dicile de faire apparaître un com ­\nplexe K. On conclut donc que le cerveau est capable de\ntraiter de l’information pendant le sommeil. Lorsque la\nstimulation est signiante, par exemple le fait d’entendre\nles pleurs de son enfant ou de se faire appeler par son\npropre nom, la personne peut se réveiller abruptement.\nDans le cas d’une stimulation anodine, le complexe K\n« protège » le cerveau en favorisant une activité EEG lente\net synchrone.\nà un moment et pour une durée qui lui sont propres, selon son\nchronotype :\n• type du matin, où la personne est à son maximum de fonc­\ntionnement physique et psychologique tôt dans la journée ;\n• type du soir, où la personne a une meilleure performance\nen soirée ;\n• durée du sommeil, selon que l’on est un court ou un grand\ndormeur.\n32.1.2 Stades\nLa polysomnographie (PSG) de base, nécessaire à la détermi­\nnation des stades de sommeil, consiste en l’enregistrement par\ndes électrodes placées à la surface de la peau de trois paramètres\nphysiologiques :\n• l’électroencéphalogramme (EEG) des régions cérébrales\nfrontales ou centrales et occipitales ;\n• l’électrooculogramme (EOG) des mouvements des yeux,\ngauche et droit ;\n• l’électromyogramme (EMG) du tonus des muscles sous­\nmentonniers.\nLes tracés obtenus sont habituellement divisés en segments\nde 20 ou 30 secondes et on détermine un état de vigilance pour\nchacun d’eux. Rechtschaen & Kales (1968) ont établi les règles de\ncodage classiques, puis l’Association américaine de médecine du\nsommeil les a adaptées (Iber & al., 2007). Alors que la mise à jour\nde 2007 était nécessaire pour prendre en compte les changements\net l’avancement technologiques concernant l’identication des\ntroubles du sommeil, peu de modications ont été apportées à\nla dénition des stades de sommeil eux­mêmes. L’appellation\nanglo­saxonne particulière des stades de sommeil N1 à N3\n(N = non REM) et R = REM par l’Association américaine\nde médecine du sommeil est mise entre parenthèses dans la\ngure 32.2 qui illustre les stades du sommeil.\nLa èche dans le graphique du stade 1 (N1) pointe vers le\nmoment apparent du passage de l’éveil au stade 1 de sommeil.\nLe déroulement d’une nuit normale de sommeil parcourt les\nétapes suivantes : L’individu éveillé, les yeux ouverts, présente\nà l’EEG un tracé d’ondes rapides et de faible amplitude (ondes\nbêta, de 13 à 30 Hz). Le tonus musculaire (EMG) est élevé et\nles mouvements oculaires (EOG) sont rapides et adaptés au\ncomportement. Chez la personne au repos et qui a les yeux\nfermés, le tracé EEG caractéristique est formé d’ondes alpha (de\n8 à 12 Hz) qui disparaissent à l’ouverture des yeux ou au cours\nd’une tâche mentale.\n• Stade 1 (ou stade N1) : avec l’assoupissement, le rythme alpha\ndisparaît pour faire place à une activité EEG plus lente (ondes\nthêta, 4 à 7 Hz) et plus synchrone ; l’EOG présente des mou­\nvements lents des yeux sous les paupières closes alors que le\ntonus musculaire est maintenu.\n• Stade 2 (ou stade N2) : en quelques minutes apparaissent des\nsignes EEG caractéristiques en bouées :\n– Les fuseaux de sommeil enregistrés à l’EEG du stade 2\nreètent l’activité d’un mécanisme neurophysiologique\nde protection du sommeil par lequel l’accès des stimuli\nsensoriels au cerveau est grandement diminué grâce à\nl’inhibition du thalamus, relais obligé de cette information\npendant la veille.\nFIGURE 32.2 Tracés polysomnographiques de 20 secondes\n",
+  "raw_text_sha256": "cb4b19fc575d25d43f8648922dbc8e40bda44a85cef5cd603e498150eb77ad73",
+  "source_page_display": 735,
+  "source_page_index": 734
+}

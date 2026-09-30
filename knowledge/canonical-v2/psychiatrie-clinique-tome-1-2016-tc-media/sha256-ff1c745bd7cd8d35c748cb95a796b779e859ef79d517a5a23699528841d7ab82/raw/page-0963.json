@@ -1,0 +1,304 @@
+{
+  "block_sequence_sha256": "aa9f0b88a7b2f2eebe0255d44a68d7f57283c3427eb543ead7e72438b49f68a7",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0963-block-0001",
+      "order": 1,
+      "text": "946\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "bf30340bf4e3344b1e09fb0ac0b80fe2ee53179c4bd811cb762c785cbdc208b0"
+    },
+    {
+      "bbox": [
+        50.35000228881836,
+        41.002296447753906,
+        246.97801208496094,
+        53.320068359375
+      ],
+      "block_id": "page-0963-block-0002",
+      "order": 2,
+      "text": "ENCADRÉ 40.9 Critères diagnostiques du trouble\n",
+      "text_sha256": "c576783cdd47b617f8fb65be74b11ea7d8f7dfbf60e07d80ec66de28ae9e3c17"
+    },
+    {
+      "bbox": [
+        109.55000305175781,
+        52.852294921875,
+        230.85301208496094,
+        64.820068359375
+      ],
+      "block_id": "page-0963-block-0003",
+      "order": 3,
+      "text": "de la personnalité antisociale\n",
+      "text_sha256": "0d3005f16f65962cc99c54f050018ebfc46fbc8a5af44a0639c52ad9c48ce462"
+    },
+    {
+      "bbox": [
+        104.6500015258789,
+        70.87285614013672,
+        234.7677764892578,
+        90.89238739013672
+      ],
+      "block_id": "page-0963-block-0004",
+      "order": 4,
+      "text": "DSM-5 (idem à DSM-IV-TR)\n301.7 (F60.2) Personnalité antisociale\n",
+      "text_sha256": "71b77d8297017f78b57f11d9445af80e8074feb757a9c867511b46e5681d9c75"
+    },
+    {
+      "bbox": [
+        52.25,
+        97.3519515991211,
+        276.6688537597656,
+        107.1781234741211
+      ],
+      "block_id": "page-0963-block-0005",
+      "order": 5,
+      "text": "A. Mode général de mépris et de transgression des droits d’autrui qui\n",
+      "text_sha256": "53081272cc047d3a00e56101f3799b69dde2006a97bf589deb7a1cb2a64b15e3"
+    },
+    {
+      "bbox": [
+        64.25,
+        107.3519515991211,
+        287.01666259765625,
+        284.1781311035156
+      ],
+      "block_id": "page-0963-block-0006",
+      "order": 6,
+      "text": "survient depuis l’âge de 15 ans, comme en témoignent au moins trois\ndes manifestations suivantes :\n1. Incapacité de se conformer aux normes sociales qui déterminent\nles comportements légaux, comme l’indique la répétition de\ncomportements passibles d’arrestation.\n2. Tendance à tromper pour un prot ou par plaisir, indiquée par\ndes mensonges répétés, l’utilisation de pseudonymes ou des\nescroqueries.\n3. Impulsivité ou incapacité à planier à l’avance.\n4. Irritabilité ou agressivité, comme en témoigne la répétition de\nbagarres ou d’agressions.\n5. Mépris inconsidéré pour sa sécurité ou celle d’autrui.\n6. Irresponsabilité persistante, indiquée par l’incapacité répé-\ntée d’assumer un emploi stable ou d’honorer des obligations\nnancières.\n7. Absence de remords, indiquée par le fait d’être indifférent ou de\nse justier après avoir blessé, maltraité ou volé autrui.\n",
+      "text_sha256": "c62a0b975b789d9e80950f0075d6ea842c1dfbbbf94ee36f930e96216bca07e3"
+    },
+    {
+      "bbox": [
+        52.25,
+        292.8019714355469,
+        156.01666259765625,
+        302.6281433105469
+      ],
+      "block_id": "page-0963-block-0007",
+      "order": 7,
+      "text": "B. Âge au moins égal à 18 ans.\n",
+      "text_sha256": "c0ba5933eefeffde55de8722c0220098e5be20bea8156c372cc7fc98fb8f8150"
+    },
+    {
+      "bbox": [
+        52.25,
+        311.20196533203125,
+        274.5130310058594,
+        321.02813720703125
+      ],
+      "block_id": "page-0963-block-0008",
+      "order": 8,
+      "text": "C. Manifestations d’un trouble des conduites débutant avant l’âge de\n",
+      "text_sha256": "ce04b08a75749dc4cf09ecdb1753286312f82d2e3c5b77003d36c20d7cb8980c"
+    },
+    {
+      "bbox": [
+        64.25,
+        321.20196533203125,
+        88.6310043334961,
+        331.02813720703125
+      ],
+      "block_id": "page-0963-block-0009",
+      "order": 9,
+      "text": "15 ans.\n",
+      "text_sha256": "c0e605efce22f1b58b16fd18456bb560b8f08f14556a9aee10b8508077b0c473"
+    },
+    {
+      "bbox": [
+        52.25,
+        339.6519470214844,
+        274.7164306640625,
+        349.4781188964844
+      ],
+      "block_id": "page-0963-block-0010",
+      "order": 10,
+      "text": "D. Les comportements antisociaux ne surviennent pas exclusivement\n",
+      "text_sha256": "fe26fca1e279871685c9dbb32005ced8755cefb755b26e63e313cc3ecf9c7ded"
+    },
+    {
+      "bbox": [
+        64.25,
+        349.6519470214844,
+        272.3421936035156,
+        359.4781188964844
+      ],
+      "block_id": "page-0963-block-0011",
+      "order": 11,
+      "text": "pendant l’évolution d’une schizophrénie ou d’un trouble bipolaire.\n",
+      "text_sha256": "52a55414f28279dd91f561ce1f3cabfdb8524d1c84144c99f22645d1840ab3b7"
+    },
+    {
+      "bbox": [
+        48.25,
+        368.1703186035156,
+        288.60601806640625,
+        424.9750061035156
+      ],
+      "block_id": "page-0963-block-0012",
+      "order": 12,
+      "text": "Source : APA (2015), p. 775.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic\nand Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles\nMentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson\nSAS, Paris, 2015. All rights reserved.\n",
+      "text_sha256": "394eb4653c4a202ea922a24db2ce19300f83c4098b18835b4f51c06f29965f95"
+    },
+    {
+      "bbox": [
+        50.35000228881836,
+        453.0022888183594,
+        250.32801818847656,
+        465.320068359375
+      ],
+      "block_id": "page-0963-block-0013",
+      "order": 13,
+      "text": "ENCADRÉ 40.10 Critères diagnostiques du trouble\n",
+      "text_sha256": "69349608dabeaed0457aa372f296f4196950fb9da193561d44fbb7fa494109cf"
+    },
+    {
+      "bbox": [
+        112.95000457763672,
+        464.852294921875,
+        234.2530059814453,
+        476.820068359375
+      ],
+      "block_id": "page-0963-block-0014",
+      "order": 14,
+      "text": "de la personnalité antisociale\n",
+      "text_sha256": "0d3005f16f65962cc99c54f050018ebfc46fbc8a5af44a0639c52ad9c48ce462"
+    },
+    {
+      "bbox": [
+        104.6500015258789,
+        482.87286376953125,
+        234.7677764892578,
+        502.89239501953125
+      ],
+      "block_id": "page-0963-block-0015",
+      "order": 15,
+      "text": "Modèle alternatif du DSM-5\n301.7 (F60.2) Personnalité antisociale\n",
+      "text_sha256": "80c8295666ec12bedfc1a9ed802a180b2617be6eddfabd3df8f59ce3c19be771"
+    },
+    {
+      "bbox": [
+        52.25,
+        509.35198974609375,
+        274.30328369140625,
+        519.1781616210938
+      ],
+      "block_id": "page-0963-block-0016",
+      "order": 16,
+      "text": "A. Altération d’intensité au minimum moyenne du fonctionnement de\n",
+      "text_sha256": "1c4d896454502cb8c1b5cf4f79c3b86ed2e1568d8a5b094d68c3b2a5c847715d"
+    },
+    {
+      "bbox": [
+        64.25,
+        519.3519897460938,
+        288.2286376953125,
+        668.1781616210938
+      ],
+      "block_id": "page-0963-block-0017",
+      "order": 17,
+      "text": "la personnalité comme en témoignent des difcultés dans au moins\ndeux des quatre domaines suivants :\n1. Identité :\n• Égocentrisme ;\n• estime de soi liée à un prot personnel, au pouvoir ou au plaisir.\n2. Autodétermination :\n• Objectifs fondés sur une satisfaction personnelle ;\n• absence de standards internes prosociaux associée à une\nincapacité de se conformer à un comportement respectueux\nde la loi ou culturellement et éthiquement normatif.\n3. Empathie :\n• Manque d’intérêt pour les sentiments, les besoins ou la\nsouffrance d’autrui ;\n• manque de remords après avoir maltraité ou fait souffrir autrui.\n",
+      "text_sha256": "ef1d5698c1c305390ed7670efc21c5e2fa28543f0e3c1cd72f770cd884df5d33"
+    },
+    {
+      "bbox": [
+        308.3500061035156,
+        41.352294921875,
+        508.3280334472656,
+        53.67007064819336
+      ],
+      "block_id": "page-0963-block-0018",
+      "order": 18,
+      "text": "ENCADRÉ 40.10 Critères diagnostiques du trouble\n",
+      "text_sha256": "69349608dabeaed0457aa372f296f4196950fb9da193561d44fbb7fa494109cf"
+    },
+    {
+      "bbox": [
+        370.95001220703125,
+        53.20229721069336,
+        492.2530212402344,
+        65.17007446289062
+      ],
+      "block_id": "page-0963-block-0019",
+      "order": 19,
+      "text": "de la personnalité antisociale\n",
+      "text_sha256": "0d3005f16f65962cc99c54f050018ebfc46fbc8a5af44a0639c52ad9c48ce462"
+    },
+    {
+      "bbox": [
+        322.25,
+        73.22285461425781,
+        541.3970336914062,
+        135.1281280517578
+      ],
+      "block_id": "page-0963-block-0020",
+      "order": 20,
+      "text": "4. Intimité :\n• Incapacité d’entretenir des relations mutuelles proches car le\nmoyen principal d’entrer en relation avec autrui est l’exploita-\ntion, y compris par tromperie et coercition ;\n• utilisation de sa supériorité ou de l’intimidation pour contrôler\nautrui.\n",
+      "text_sha256": "5496b11b00ccd6c239287a9cbc7371a448bb9ce4d8a648b693f9f4c80bb7cfb5"
+    },
+    {
+      "bbox": [
+        310.25,
+        143.751953125,
+        487.760009765625,
+        153.578125
+      ],
+      "block_id": "page-0963-block-0021",
+      "order": 21,
+      "text": "B. Au moins six des sept traits pathologiques suivants:\n",
+      "text_sha256": "5b721e0e1f3668477e8e34265417d42a4564a46ba854c3d2c8bc54106ee38af1"
+    },
+    {
+      "bbox": [
+        310.25,
+        154.82286071777344,
+        544.0970458984375,
+        608.7423706054688
+      ],
+      "block_id": "page-0963-block-0022",
+      "order": 22,
+      "text": "1. Tendances manipulatoires (un aspect de l’antagonisme) :\n• Utilisation fréquente de subterfuges pour inuencer ou contrô-\nler autrui ;\n• opère avec séduction, charme, désinvolture ou des attitudes\ndoucereuses pour aboutir à ses ns.\n2. Dureté/insensibilité (un aspect de l’antagonisme) :\n• Manque d’intérêt pour les sentiments ou les problèmes\nd’autrui ;\n• manque de culpabilité ou de remords à propos des effets\nnégatifs voire nocifs de son action sur autrui ;\n• agression, sadisme.\n3. Malhonnêteté (un aspect de l’antagonisme) :\n• Tromperies et fraudes ;\n• représentation erronée de sa personne ;\n• enjolivement de la vérité ou inventions quand le sujet relate\ndes événements.\n4. Hostilité (un aspect de l’antagonisme) :\n• Sentiments de colère persistants ou fréquents ;\n• colère ou irritabilité en réponse à des affrontements mineurs\net à des insultes ;\n• comportement mauvais, méchant ou vindicatif.\n5. Prise de risque (un aspect de la désinhibition) :\n• S’engage dans des activités dangereuses, risquées, poten-\ntiellement autodommageables, superues, sans considération\npour les conséquences ;\n• tendance à l’ennui ;\n• se lance dans des activités irrééchies pour lutter contre cet\nennui ;\n• ne se sent pas concerné par ses limites et déni de la réalité\nd’un danger personnel encouru.\n6. Impulsivité (un aspect de la désinhibition) :\n• Agit sur un coup de tête en réponse à des stimuli\nimmédiats ;\n• agit dans l’instant, sans projet ni considération pour les\nconséquences ;\n• difcultés pour faire des plans et les suivre.\n7. Irresponsabilité (un aspect de la désinhibition) :\n• Ne prend pas en considération – et n’honore pas – les obliga-\ntions nancières et les autres engagements ;\n• ne respecte pas accords et promesses qu’il ne tient pas.\nN.B. : Le sujet a au moins 18 ans.\nSpécier si : Avec caractéristiques psychopathiques\n",
+      "text_sha256": "3935bf55d11fec60015bd2019ae317e88592beca77ba06e51756d4b1921c05b7"
+    },
+    {
+      "bbox": [
+        306.25,
+        617.390625,
+        546.6060180664062,
+        674.125
+      ],
+      "block_id": "page-0963-block-0023",
+      "order": 23,
+      "text": "Source : APA (2015), p. 899.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic\nand Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles\nMentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson\nSAS, Paris, 2015. All rights reserved.\n",
+      "text_sha256": "84601fc33b6081b135f4f19fbccb4aa21ed3dc0796c9e24aa3900f467bf27d43"
+    },
+    {
+      "bbox": [
+        494.1500244140625,
+        53.352294921875,
+        519.7842407226562,
+        65.320068359375
+      ],
+      "block_id": "page-0963-block-0024",
+      "order": 24,
+      "text": "(suite)\n",
+      "text_sha256": "c684d6dbcdfd50f0ada227f799b5c0fb30e817ac3da61b4cbf208decde7f907b"
+    }
+  ],
+  "coordinates_sha256": "6510acae1720f0aaeb7c9b9d98ee47872c200f0a18384a3734b3a66ecdb90fb3",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0963",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "946\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nENCADRÉ 40.9 Critères diagnostiques du trouble\nde la personnalité antisociale\nDSM-5 (idem à DSM-IV-TR)\n301.7 (F60.2) Personnalité antisociale\nA. Mode général de mépris et de transgression des droits d’autrui qui\nsurvient depuis l’âge de 15 ans, comme en témoignent au moins trois\ndes manifestations suivantes :\n1. Incapacité de se conformer aux normes sociales qui déterminent\nles comportements légaux, comme l’indique la répétition de\ncomportements passibles d’arrestation.\n2. Tendance à tromper pour un prot ou par plaisir, indiquée par\ndes mensonges répétés, l’utilisation de pseudonymes ou des\nescroqueries.\n3. Impulsivité ou incapacité à planier à l’avance.\n4. Irritabilité ou agressivité, comme en témoigne la répétition de\nbagarres ou d’agressions.\n5. Mépris inconsidéré pour sa sécurité ou celle d’autrui.\n6. Irresponsabilité persistante, indiquée par l’incapacité répé-\ntée d’assumer un emploi stable ou d’honorer des obligations\nnancières.\n7. Absence de remords, indiquée par le fait d’être indifférent ou de\nse justier après avoir blessé, maltraité ou volé autrui.\nB. Âge au moins égal à 18 ans.\nC. Manifestations d’un trouble des conduites débutant avant l’âge de\n15 ans.\nD. Les comportements antisociaux ne surviennent pas exclusivement\npendant l’évolution d’une schizophrénie ou d’un trouble bipolaire.\nSource : APA (2015), p. 775.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic\nand Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles\nMentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson\nSAS, Paris, 2015. All rights reserved.\nENCADRÉ 40.10 Critères diagnostiques du trouble\nde la personnalité antisociale\nModèle alternatif du DSM-5\n301.7 (F60.2) Personnalité antisociale\nA. Altération d’intensité au minimum moyenne du fonctionnement de\nla personnalité comme en témoignent des difcultés dans au moins\ndeux des quatre domaines suivants :\n1. Identité :\n• Égocentrisme ;\n• estime de soi liée à un prot personnel, au pouvoir ou au plaisir.\n2. Autodétermination :\n• Objectifs fondés sur une satisfaction personnelle ;\n• absence de standards internes prosociaux associée à une\nincapacité de se conformer à un comportement respectueux\nde la loi ou culturellement et éthiquement normatif.\n3. Empathie :\n• Manque d’intérêt pour les sentiments, les besoins ou la\nsouffrance d’autrui ;\n• manque de remords après avoir maltraité ou fait souffrir autrui.\nENCADRÉ 40.10 Critères diagnostiques du trouble\nde la personnalité antisociale\n4. Intimité :\n• Incapacité d’entretenir des relations mutuelles proches car le\nmoyen principal d’entrer en relation avec autrui est l’exploita-\ntion, y compris par tromperie et coercition ;\n• utilisation de sa supériorité ou de l’intimidation pour contrôler\nautrui.\nB. Au moins six des sept traits pathologiques suivants:\n1. Tendances manipulatoires (un aspect de l’antagonisme) :\n• Utilisation fréquente de subterfuges pour inuencer ou contrô-\nler autrui ;\n• opère avec séduction, charme, désinvolture ou des attitudes\ndoucereuses pour aboutir à ses ns.\n2. Dureté/insensibilité (un aspect de l’antagonisme) :\n• Manque d’intérêt pour les sentiments ou les problèmes\nd’autrui ;\n• manque de culpabilité ou de remords à propos des effets\nnégatifs voire nocifs de son action sur autrui ;\n• agression, sadisme.\n3. Malhonnêteté (un aspect de l’antagonisme) :\n• Tromperies et fraudes ;\n• représentation erronée de sa personne ;\n• enjolivement de la vérité ou inventions quand le sujet relate\ndes événements.\n4. Hostilité (un aspect de l’antagonisme) :\n• Sentiments de colère persistants ou fréquents ;\n• colère ou irritabilité en réponse à des affrontements mineurs\net à des insultes ;\n• comportement mauvais, méchant ou vindicatif.\n5. Prise de risque (un aspect de la désinhibition) :\n• S’engage dans des activités dangereuses, risquées, poten-\ntiellement autodommageables, superues, sans considération\npour les conséquences ;\n• tendance à l’ennui ;\n• se lance dans des activités irrééchies pour lutter contre cet\nennui ;\n• ne se sent pas concerné par ses limites et déni de la réalité\nd’un danger personnel encouru.\n6. Impulsivité (un aspect de la désinhibition) :\n• Agit sur un coup de tête en réponse à des stimuli\nimmédiats ;\n• agit dans l’instant, sans projet ni considération pour les\nconséquences ;\n• difcultés pour faire des plans et les suivre.\n7. Irresponsabilité (un aspect de la désinhibition) :\n• Ne prend pas en considération – et n’honore pas – les obliga-\ntions nancières et les autres engagements ;\n• ne respecte pas accords et promesses qu’il ne tient pas.\nN.B. : Le sujet a au moins 18 ans.\nSpécier si : Avec caractéristiques psychopathiques\nSource : APA (2015), p. 899.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic\nand Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles\nMentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson\nSAS, Paris, 2015. All rights reserved.\n(suite)\n",
+  "raw_text_sha256": "4e4d89ed2b0068d3d47bd562532f571d7161ab861182cc7bb677ea936e57eb22",
+  "source_page_display": 964,
+  "source_page_index": 963
+}

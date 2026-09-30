@@ -1,0 +1,136 @@
+{
+  "block_sequence_sha256": "824abbead5d37a4e36023039b9573238e6292fe651878264af75145a32e3a178",
+  "blocks": [
+    {
+      "bbox": [
+        369.3000183105469,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-1036-block-0001",
+      "order": 1,
+      "text": "Chapitre 44\nSoins en collaboration\n1019\n",
+      "text_sha256": "d29fda325698ad020071b616fdb1ac9d8c49c750ec7370fee07fa06f7a184df4"
+    },
+    {
+      "bbox": [
+        54.0,
+        39.009376525878906,
+        222.91200256347656,
+        56.978126525878906
+      ],
+      "block_id": "page-1036-block-0002",
+      "order": 2,
+      "text": "Lectures complémentaires\n",
+      "text_sha256": "a63665748f6f6aa4046621ac3e5b53857ebef6bf2c2f475217e47dfa03f03493"
+    },
+    {
+      "bbox": [
+        54.0,
+        69.7886734008789,
+        197.11416625976562,
+        79.7291030883789
+      ],
+      "block_id": "page-1036-block-0003",
+      "order": 3,
+      "text": "C C M\n",
+      "text_sha256": "e3adfbcbf1bf3e0ee67fba197e407c63698dacdd0553e0f3f75cf592aaf78696"
+    },
+    {
+      "bbox": [
+        54.0,
+        79.7886734008789,
+        202.48629760742188,
+        101.7291030883789
+      ],
+      "block_id": "page-1036-block-0004",
+      "order": 4,
+      "text": "H I: www.ccmhi.ca.\nC F H\n",
+      "text_sha256": "17025927f2255ef12a1f7dff656d3b7185c3971b972cc01a1deeb0a2d2b13f8d"
+    },
+    {
+      "bbox": [
+        54.0,
+        101.7886734008789,
+        193.97718811035156,
+        123.7291030883789
+      ],
+      "block_id": "page-1036-block-0005",
+      "order": 5,
+      "text": "A: www.cfha.net.\nG, M. (..) Article 1 – soins de\n",
+      "text_sha256": "dcb5bc9a433c904d13e736b684ace9e0446e1ee1fc474b69b68243b46e07aac8"
+    },
+    {
+      "bbox": [
+        66.0,
+        123.84141540527344,
+        207.9346160888672,
+        163.72911071777344
+      ],
+      "block_id": "page-1036-block-0006",
+      "order": 6,
+      "text": "collaboration en santé mentale –\nÉvénements marquants de l’évolution\nvers des soins de collaboration en santé\nmentale au Canada, Commisssion\n",
+      "text_sha256": "266d556f69aa3747e8bd5824cfc5156ff2f2bb26d2cd2274f863b8e596962c51"
+    },
+    {
+      "bbox": [
+        225.0,
+        69.7886734008789,
+        378.1900939941406,
+        131.72911071777344
+      ],
+      "block_id": "page-1036-block-0007",
+      "order": 7,
+      "text": "de la santé mentale du Canada, [en\nligne], www.mentalhealthcommission.\nca/Francais/system/les/private/\ndocument/Primary_Care_Article_1_\nGervais_FINAL_FRE.pdf.\nL, A. & al. (2006). Prévalence de\n",
+      "text_sha256": "5cf3b5f39ff117cbc64456a8809b50b9a86f33c94dabb5d1fd8a2507304f1a5d"
+    },
+    {
+      "bbox": [
+        237.0,
+        131.84141540527344,
+        381.08001708984375,
+        171.72911071777344
+      ],
+      "block_id": "page-1036-block-0008",
+      "order": 8,
+      "text": "la maladie mentale et utilisation des\nservices connexes au Canada : Une\nanalyse des données de l’Enquête sur la\nsanté dans les collectivités canadiennes,\n",
+      "text_sha256": "cf61755c390740f83c2d68c22c431cf574c794239086098684d0b2b49f874ec8"
+    },
+    {
+      "bbox": [
+        396.0,
+        69.7886734008789,
+        547.031982421875,
+        141.72911071777344
+      ],
+      "block_id": "page-1036-block-0009",
+      "order": 9,
+      "text": "Rapport préparé pour l’Initiative\ncanadienne de collaboration en santé\nmentale, Mississauga (Ontario), [en\nligne], www.iusmm.ca/Documents/\npdf/Hopital/Publications/prevalence_\nmaladie_mentale.pdf.\nO’D, J.L.W. (dir.) (2009). e\n",
+      "text_sha256": "c4e0c711cd74073e7729456c870f81a9e1f7602bd743fce77b8564904a29ff1b"
+    },
+    {
+      "bbox": [
+        408.0,
+        141.84141540527344,
+        554.9736328125,
+        171.72911071777344
+      ],
+      "block_id": "page-1036-block-0010",
+      "order": 10,
+      "text": "Primary Care Toolkit : Practical\nResources for the Integrated Behavioural\nCare Provider, New-York, Springer.\n",
+      "text_sha256": "3f4ebb1c44f50c403e4ddb58a31c96946fd8aac6e4ade31c2c48cb1f59d8debd"
+    }
+  ],
+  "coordinates_sha256": "1a337acfbddb7f713f14174cc7e6f54d12bedd10a9f14eacd3c18df2973dccb6",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1036",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 44\nSoins en collaboration\n1019\nLectures complémentaires\nC C M\nH I: www.ccmhi.ca.\nC F H\nA: www.cfha.net.\nG, M. (..) Article 1 – soins de\ncollaboration en santé mentale –\nÉvénements marquants de l’évolution\nvers des soins de collaboration en santé\nmentale au Canada, Commisssion\nde la santé mentale du Canada, [en\nligne], www.mentalhealthcommission.\nca/Francais/system/les/private/\ndocument/Primary_Care_Article_1_\nGervais_FINAL_FRE.pdf.\nL, A. & al. (2006). Prévalence de\nla maladie mentale et utilisation des\nservices connexes au Canada : Une\nanalyse des données de l’Enquête sur la\nsanté dans les collectivités canadiennes,\nRapport préparé pour l’Initiative\ncanadienne de collaboration en santé\nmentale, Mississauga (Ontario), [en\nligne], www.iusmm.ca/Documents/\npdf/Hopital/Publications/prevalence_\nmaladie_mentale.pdf.\nO’D, J.L.W. (dir.) (2009). e\nPrimary Care Toolkit : Practical\nResources for the Integrated Behavioural\nCare Provider, New-York, Springer.\n",
+  "raw_text_sha256": "dbbaf8386fa5073b300c6b7731b7f4af772169bd8e5ef5df692380c349a4e7c3",
+  "source_page_display": 1037,
+  "source_page_index": 1036
+}

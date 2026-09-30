@@ -1,0 +1,244 @@
+{
+  "block_sequence_sha256": "49cf49183306b37dd8caae613f12984de3be67ab551e3a4a018837dd79aaee2e",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0753-block-0001",
+      "order": 1,
+      "text": "736\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "b92abae38b49be17d9c920a56bc1501a69bda769eca473ababda38ee042c7732"
+    },
+    {
+      "bbox": [
+        50.35000228881836,
+        41.002296447753906,
+        273.9407653808594,
+        53.320068359375
+      ],
+      "block_id": "page-0753-block-0002",
+      "order": 2,
+      "text": "TABLEAU 32.5 Critères diagnostiques de la narcolepsie\n",
+      "text_sha256": "9dbf0a1015098754b94f718717dea3a4c15907e710bb941cd650a431a406c2b5"
+    },
+    {
+      "bbox": [
+        52.25,
+        58.27412414550781,
+        475.5420227050781,
+        94.328125
+      ],
+      "block_id": "page-0753-block-0003",
+      "order": 3,
+      "text": "DSM-5\nDSM-IV-TR\n347._ (G47.4) Narcolepsie\nNarcolepsie\nA. Besoin irrépressible de sommeil, assoupissement ou sieste se répétant au cours d’une\n",
+      "text_sha256": "d100d6069900625cebdc300331b982069d406dfad6cf3d8be48c6625349b4bec"
+    },
+    {
+      "bbox": [
+        64.25,
+        94.501953125,
+        341.5712890625,
+        104.328125
+      ],
+      "block_id": "page-0753-block-0004",
+      "order": 4,
+      "text": "même journée et survenant au moins 3 fois par semaine au cours des 3 derniers mois.\n",
+      "text_sha256": "57e1fbfd39db3005a4e1b31b530bcb3752314d28ced775e65ea98278d411e761"
+    },
+    {
+      "bbox": [
+        363.20001220703125,
+        84.501953125,
+        423.99810791015625,
+        94.328125
+      ],
+      "block_id": "page-0753-block-0005",
+      "order": 5,
+      "text": "A. Idem à DSM-5.\n",
+      "text_sha256": "17d5989bc13bdc24966ef82f371e7b88392c4ebe1bd8cdcdcd635723e9a91a6c"
+    },
+    {
+      "bbox": [
+        52.25,
+        107.9019546508789,
+        213.38710021972656,
+        117.7281265258789
+      ],
+      "block_id": "page-0753-block-0006",
+      "order": 6,
+      "text": "B. Présence d’au moins un des critères suivants :\n",
+      "text_sha256": "b7258e2eac80c7e2b4d91a107480b15eb4fa3d36c84ea6ff933d4817e15e9c3b"
+    },
+    {
+      "bbox": [
+        64.25,
+        118.9019546508789,
+        328.701904296875,
+        138.72813415527344
+      ],
+      "block_id": "page-0753-block-0007",
+      "order": 7,
+      "text": "1. Épisodes de cataplexie, déni selon (a) ou (b), survenant au moins plusieurs fois\npar mois :\n",
+      "text_sha256": "3cc3cbbf37435c764faf208cb6c81e21b8609263b3522ec7e45085102bc5f31f"
+    },
+    {
+      "bbox": [
+        76.25,
+        139.90196228027344,
+        328.4191589355469,
+        149.72813415527344
+      ],
+      "block_id": "page-0753-block-0008",
+      "order": 8,
+      "text": "a. Chez des individus présentant la maladie de longue date, brefs épisodes (de\n",
+      "text_sha256": "5839111460b294239da307b49844f24aaad662df4676f798a29ceac65717e5f1"
+    },
+    {
+      "bbox": [
+        76.25,
+        149.90196228027344,
+        352.4252014160156,
+        180.72813415527344
+      ],
+      "block_id": "page-0753-block-0009",
+      "order": 9,
+      "text": "quelques secondes à quelques minutes) de perte soudaine et bilatérale du tonus\nmusculaire avec maintien de la conscience déclenchés par le rire ou la plaisanterie.\nb. Chez l’enfant et les individus présentant la maladie depuis moins de 6 mois, gri-\n",
+      "text_sha256": "5bc43d88f76cf07637429e3bc33661d57e6fed4b0b416658675de171f83ddb9d"
+    },
+    {
+      "bbox": [
+        64.25,
+        180.90196228027344,
+        354.3360290527344,
+        292.7281188964844
+      ],
+      "block_id": "page-0753-block-0010",
+      "order": 10,
+      "text": "maces spontanées ou épisodes d’ouverture de la mâchoire avec protrusion linguale,\nou hypotonie généralisée survenant sans lien évident avec un contenu émotionnel.\n2. Décience en hypocrétine estimée par immunoréactivité de l’hypocrétine-1 dans le\nliquide céphalorachidien (LCR) (valeur inférieure ou égale à un tiers des valeurs obte-\nnues chez des sujets sains en utilisant le même test, ou inférieure ou égale à 110 pg/\nmL). Les taux bas d’hypocrétine-1 dans le LCR ne doivent pas avoir été mesurés dans\nun contexte de lésion cérébrale aiguë, d’inammation ou d’infection.\n3. La polysomnographie nocturne montre une latence de sommeil paradoxal inférieure\nou égale à 15 minutes, ou un test itératif de latence d’endormissement révèle une\nlatence d’endormissement moyenne de moins de 8 minutes et la présence de sommeil\nparadoxal à au moins deux reprises.\n",
+      "text_sha256": "b4984ca107571680a5c43ffeff21a854099e1b284282cb6c68250bdcfa66c3db"
+    },
+    {
+      "bbox": [
+        363.20001220703125,
+        107.9019546508789,
+        541.4130859375,
+        117.7281265258789
+      ],
+      "block_id": "page-0753-block-0011",
+      "order": 11,
+      "text": "B. Présence d’au moins un des deux critères suivants :\n",
+      "text_sha256": "bcb2d371b1f96d2982259f345a01571f7e1e36bdaf08cbbdafc0c5d22fda778b"
+    },
+    {
+      "bbox": [
+        375.20001220703125,
+        118.9019546508789,
+        522.5681762695312,
+        128.72811889648438
+      ],
+      "block_id": "page-0753-block-0012",
+      "order": 12,
+      "text": "(1) cataplexie (c.-à-d. brefs épisodes de perte\n",
+      "text_sha256": "d0d56375212dd63d2c0a3b83852839919d3f712420aefababbbb63f130375a1e"
+    },
+    {
+      "bbox": [
+        375.20001220703125,
+        128.90196228027344,
+        539.6122436523438,
+        159.72813415527344
+      ],
+      "block_id": "page-0753-block-0013",
+      "order": 13,
+      "text": "soudaine du tonus musculaire bilatérale, le plus\nsouvent en rapport avec une émotion intense) ;\n(2) intrusion récurrente d’éléments du sommeil\n",
+      "text_sha256": "1f8804995253a6e161ef7ebc331e5e3ae052080808335d60d7ea192602aca729"
+    },
+    {
+      "bbox": [
+        388.3000183105469,
+        159.90196228027344,
+        542.2754516601562,
+        209.72813415527344
+      ],
+      "block_id": "page-0753-block-0014",
+      "order": 14,
+      "text": "paradoxal (à mouvements oculaires rapides)\nlors des transitions veille/sommeil se manifes-\ntant par des hallucinations hypnopompiques ou\nhypnagogiques ou par des paralysies du som-\nmeil en début ou en n d’épisodes de sommeil.\n",
+      "text_sha256": "aaac3d7032b53fd350eb47863531ac6990097d75a60a4d19ebb30e8f6cb06900"
+    },
+    {
+      "bbox": [
+        363.20001220703125,
+        296.3519592285156,
+        532.0970458984375,
+        306.1781311035156
+      ],
+      "block_id": "page-0753-block-0015",
+      "order": 15,
+      "text": "C. La perturbation n’est pas liée aux effets physiolo-\n",
+      "text_sha256": "9b071f2e798a01a395a41c8cf91db4cabc676359507d75cf3f4fb1a91d9deae1"
+    },
+    {
+      "bbox": [
+        52.25,
+        306.3519592285156,
+        543.16552734375,
+        641.0281372070312
+      ],
+      "block_id": "page-0753-block-0016",
+      "order": 16,
+      "text": "giques directs d’une substance (p. ex., une subs-\ntance donnant lieu à abus, un médicament) ou d’une\nautre affection médicale générale.\nSpécier le type :\n347.00 (G47.419) Narcolepsie sans cataplexie avec décience en hypocrétine : Les\nexigences du critère b concernant la décience en hypocrétine et la polysomnographie/test\nitératif de latence d’endormissement sont satisfaites en l’absence de cataplexie (le critère B1\nn’est pas rempli).\n347.01 (G47.411) Narcolepsie avec cataplexie sans décience en hypocrétine : Dans ce\nsous-type rare de la narcolepsie (moins de 5 % des cas de narcolepsie), les exigences du critère\nB pour la cataplexie et la polysomnographie/test itératif de latence d’endormissement sont satis-\nfaites et le niveau d’hypocrétine-1 dans le LCR est normal (le critère B2 n’est pas rempli).\n347.00 (G47.419) Ataxie cérébelleuse autosomique dominante avec surdité et narcolepsie :\nUne mutation de l’exon 21 de l’ADN (cytosine-5)-méthyltransférase-1 est responsable de ce sous-\ntype caractérisé par une apparition tardive de la narcolepsie (entre 30 et 40 ans), une surdité, une\nataxie cérébelleuse et nalement par une démence.\n347.00 (G47.419) Narcolepsie autosomique dominante avec obésité et diabète de\ntype 2 : La narcolepsie, l’obésité, le diabète de type 2 et un taux bas d’hypocrétine-1 dans le\nLCR ont été observés dans de rares cas et sont associés à une mutation du gène de la glyco-\nprotéine myéline oligodendrocyte.\n347.10 (G47.429) Narcolepsie secondaire à une autre affection médicale : Ce sous-type\nconcerne la narcolepsie qui survient secondairement à une affection médicale responsable\nd’une infection (p. ex., maladie de Whippie, sarcoïdose), d’un traumatisme ou d’une destruction\ntumorale des neurones à hypocrétine.\nSpécier la sévérité actuelle :\nLéger : Cataplexie peu fréquente (moins d’une fois par semaine), besoin de sieste seulement\nune ou deux fois par jour, et sommeil nocturne peu perturbé.\nMoyen : Cataplexie quotidienne ou presque tous les jours, sommeil nocturne perturbé et\nbesoin quotidien de plusieurs siestes.\nGrave : Cataplexie résistante aux traitements avec plusieurs attaques quotidiennes, som-\nnolence quasi constante et sommeil nocturne perturbé (c.-à-d. agitation, insomnie et rêves\nintenses).\n",
+      "text_sha256": "e2247ac2bf760fc4c6ea13d337af7dd035e12b5202f71f0246b442c2e46ca8ea"
+    },
+    {
+      "bbox": [
+        48.25,
+        647.2906494140625,
+        206.40670776367188,
+        656.1588745117188
+      ],
+      "block_id": "page-0753-block-0017",
+      "order": 17,
+      "text": "Sources : APA (2015), p. 437-438 ; APA (2004), p. 712.\n",
+      "text_sha256": "495268e1e0637ba0525be98353f23fe3965a64bba702ef9ed92ba0d89f490946"
+    },
+    {
+      "bbox": [
+        48.25,
+        662.2906494140625,
+        529.40087890625,
+        689.0250244140625
+      ],
+      "block_id": "page-0753-block-0018",
+      "order": 18,
+      "text": "Traduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\n",
+      "text_sha256": "d1e2a281d01f1237f716bfb933581f8135592b601f1b1579862a0656634f5460"
+    },
+    {
+      "bbox": [
+        48.25,
+        695.2906494140625,
+        539.6670532226562,
+        722.0250244140625
+      ],
+      "block_id": "page-0753-block-0019",
+      "order": 19,
+      "text": "Traduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004.\nAll rights reserved.\n",
+      "text_sha256": "243709fe0bbde845639c05a08cd4ae4601450ec5670085ab5e9038dcd165d7c3"
+    }
+  ],
+  "coordinates_sha256": "810d896321d99f5c2f1b2c6a53800a465a448b3a8ab1c185aa1dbc16fe058fa1",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0753",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "736\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nTABLEAU 32.5 Critères diagnostiques de la narcolepsie\nDSM-5\nDSM-IV-TR\n347._ (G47.4) Narcolepsie\nNarcolepsie\nA. Besoin irrépressible de sommeil, assoupissement ou sieste se répétant au cours d’une\nmême journée et survenant au moins 3 fois par semaine au cours des 3 derniers mois.\nA. Idem à DSM-5.\nB. Présence d’au moins un des critères suivants :\n1. Épisodes de cataplexie, déni selon (a) ou (b), survenant au moins plusieurs fois\npar mois :\na. Chez des individus présentant la maladie de longue date, brefs épisodes (de\nquelques secondes à quelques minutes) de perte soudaine et bilatérale du tonus\nmusculaire avec maintien de la conscience déclenchés par le rire ou la plaisanterie.\nb. Chez l’enfant et les individus présentant la maladie depuis moins de 6 mois, gri-\nmaces spontanées ou épisodes d’ouverture de la mâchoire avec protrusion linguale,\nou hypotonie généralisée survenant sans lien évident avec un contenu émotionnel.\n2. Décience en hypocrétine estimée par immunoréactivité de l’hypocrétine-1 dans le\nliquide céphalorachidien (LCR) (valeur inférieure ou égale à un tiers des valeurs obte-\nnues chez des sujets sains en utilisant le même test, ou inférieure ou égale à 110 pg/\nmL). Les taux bas d’hypocrétine-1 dans le LCR ne doivent pas avoir été mesurés dans\nun contexte de lésion cérébrale aiguë, d’inammation ou d’infection.\n3. La polysomnographie nocturne montre une latence de sommeil paradoxal inférieure\nou égale à 15 minutes, ou un test itératif de latence d’endormissement révèle une\nlatence d’endormissement moyenne de moins de 8 minutes et la présence de sommeil\nparadoxal à au moins deux reprises.\nB. Présence d’au moins un des deux critères suivants :\n(1) cataplexie (c.-à-d. brefs épisodes de perte\nsoudaine du tonus musculaire bilatérale, le plus\nsouvent en rapport avec une émotion intense) ;\n(2) intrusion récurrente d’éléments du sommeil\nparadoxal (à mouvements oculaires rapides)\nlors des transitions veille/sommeil se manifes-\ntant par des hallucinations hypnopompiques ou\nhypnagogiques ou par des paralysies du som-\nmeil en début ou en n d’épisodes de sommeil.\nC. La perturbation n’est pas liée aux effets physiolo-\ngiques directs d’une substance (p. ex., une subs-\ntance donnant lieu à abus, un médicament) ou d’une\nautre affection médicale générale.\nSpécier le type :\n347.00 (G47.419) Narcolepsie sans cataplexie avec décience en hypocrétine : Les\nexigences du critère b concernant la décience en hypocrétine et la polysomnographie/test\nitératif de latence d’endormissement sont satisfaites en l’absence de cataplexie (le critère B1\nn’est pas rempli).\n347.01 (G47.411) Narcolepsie avec cataplexie sans décience en hypocrétine : Dans ce\nsous-type rare de la narcolepsie (moins de 5 % des cas de narcolepsie), les exigences du critère\nB pour la cataplexie et la polysomnographie/test itératif de latence d’endormissement sont satis-\nfaites et le niveau d’hypocrétine-1 dans le LCR est normal (le critère B2 n’est pas rempli).\n347.00 (G47.419) Ataxie cérébelleuse autosomique dominante avec surdité et narcolepsie :\nUne mutation de l’exon 21 de l’ADN (cytosine-5)-méthyltransférase-1 est responsable de ce sous-\ntype caractérisé par une apparition tardive de la narcolepsie (entre 30 et 40 ans), une surdité, une\nataxie cérébelleuse et nalement par une démence.\n347.00 (G47.419) Narcolepsie autosomique dominante avec obésité et diabète de\ntype 2 : La narcolepsie, l’obésité, le diabète de type 2 et un taux bas d’hypocrétine-1 dans le\nLCR ont été observés dans de rares cas et sont associés à une mutation du gène de la glyco-\nprotéine myéline oligodendrocyte.\n347.10 (G47.429) Narcolepsie secondaire à une autre affection médicale : Ce sous-type\nconcerne la narcolepsie qui survient secondairement à une affection médicale responsable\nd’une infection (p. ex., maladie de Whippie, sarcoïdose), d’un traumatisme ou d’une destruction\ntumorale des neurones à hypocrétine.\nSpécier la sévérité actuelle :\nLéger : Cataplexie peu fréquente (moins d’une fois par semaine), besoin de sieste seulement\nune ou deux fois par jour, et sommeil nocturne peu perturbé.\nMoyen : Cataplexie quotidienne ou presque tous les jours, sommeil nocturne perturbé et\nbesoin quotidien de plusieurs siestes.\nGrave : Cataplexie résistante aux traitements avec plusieurs attaques quotidiennes, som-\nnolence quasi constante et sommeil nocturne perturbé (c.-à-d. agitation, insomnie et rêves\nintenses).\nSources : APA (2015), p. 437-438 ; APA (2004), p. 712.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004.\nAll rights reserved.\n",
+  "raw_text_sha256": "ef3a81d6f13f0288061363c0d6ea38f10b77d7a83d033999c68ef867e647934c",
+  "source_page_display": 754,
+  "source_page_index": 753
+}

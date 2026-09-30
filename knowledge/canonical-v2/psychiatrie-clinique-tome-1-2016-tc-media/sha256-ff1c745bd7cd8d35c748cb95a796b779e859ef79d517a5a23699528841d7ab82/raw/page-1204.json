@@ -1,0 +1,616 @@
+{
+  "block_sequence_sha256": "24210f7e70de76687359dfab9b5c144905054f2e45f4f455bb451213007d1898",
+  "blocks": [
+    {
+      "bbox": [
+        496.5,
+        747.5753784179688,
+        555.02001953125,
+        758.8693237304688
+      ],
+      "block_id": "page-1204-block-0001",
+      "order": 1,
+      "text": "Index\nI43\n",
+      "text_sha256": "a736b8369b75ca9ec6f61515d83ba8612c88fe252d981023de0e02e81c2606f9"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.82011795043945,
+        134.78700256347656,
+        64.96728515625
+      ],
+      "block_id": "page-1204-block-0002",
+      "order": 2,
+      "text": "psychasthénie, 413\npsychiatrie\n",
+      "text_sha256": "399f914130febd1f12fb52d4e93718c47e4ec9389d92ac7f4716cbc4fbe116fc"
+    },
+    {
+      "bbox": [
+        54.0,
+        65.8701171875,
+        211.52450561523438,
+        177.71728515625
+      ],
+      "block_id": "page-1204-block-0003",
+      "order": 3,
+      "text": "communautaire, 15\nlégale, 1168-1186\nmédecine nucléaire et __, 143-157\npérinatale, 969-978\npratique de la __, 15-16\nreproductive, 969-978\nsciences contributives de la __, 4t\npsychochirurgie, 1430\npsychoéducation, 1003, voir thérapie\n",
+      "text_sha256": "dbc0261596da9a5726d4957e76d1edd9f99ce457ba24b87b8f6912db80c282cf"
+    },
+    {
+      "bbox": [
+        63.0,
+        178.6201171875,
+        143.43922424316406,
+        202.7672882080078
+      ],
+      "block_id": "page-1204-block-0004",
+      "order": 4,
+      "text": "psychoéducative\nfamiliale\n",
+      "text_sha256": "818f1cd102c750a08904f18f21b103fac773b84ce7ae54222e85e1ccea02ab36"
+    },
+    {
+      "bbox": [
+        63.0,
+        204.7594451904297,
+        181.5153350830078,
+        277.91729736328125
+      ],
+      "block_id": "page-1204-block-0005",
+      "order": 5,
+      "text": "schizophrénie et __, 363\ntoxicomanie et __, 923\ninsomnie et __, 732\npersonnes âgées et __, 1392\ntoxicomanie et __, 922-923\ntrouble(s)\n",
+      "text_sha256": "8b213d5a7d55709ecc46f0493c1cc0d264b84913af1b22cab2eb60697acdc288"
+    },
+    {
+      "bbox": [
+        72.0,
+        279.909423828125,
+        195.5243682861328,
+        302.909423828125
+      ],
+      "block_id": "page-1204-block-0006",
+      "order": 6,
+      "text": "bipolaire et __, 388-389\nde décit de l’attention avec\n",
+      "text_sha256": "78a572b24f6f90eadc05f0672a831b7293e1a121c5e29db46392c5041185fbd3"
+    },
+    {
+      "bbox": [
+        72.0,
+        304.9594421386719,
+        189.45301818847656,
+        340.5094299316406
+      ],
+      "block_id": "page-1204-block-0007",
+      "order": 7,
+      "text": "ou sans hyperactivité\n(TDA/H) et __, 1315\ndes conduites alimentaires\n",
+      "text_sha256": "307ec1a1bd0c3e0fc1076462b25c0d6e603561a0d7e63f62e3488f65f61ddb3e"
+    },
+    {
+      "bbox": [
+        54.0,
+        342.5594177246094,
+        165.85650634765625,
+        378.16729736328125
+      ],
+      "block_id": "page-1204-block-0008",
+      "order": 8,
+      "text": "et __, 711\npsycho-immunologie, 136\npsychologie\n",
+      "text_sha256": "10261856b81afd6ad2c85085a23a09d5b436e4fbabac512b3bf8536de34cebba"
+    },
+    {
+      "bbox": [
+        63.0,
+        379.07012939453125,
+        209.5932159423828,
+        390.66729736328125
+      ],
+      "block_id": "page-1204-block-0009",
+      "order": 9,
+      "text": "du Moi (Ego psychology), 219, 222,\n",
+      "text_sha256": "8aedf230dae2515cd368bcbad3cb3cd56a22f1b2554774a96db41d226acd0d7f"
+    },
+    {
+      "bbox": [
+        54.0,
+        391.6201171875,
+        212.60153198242188,
+        440.7673034667969
+      ],
+      "block_id": "page-1204-block-0010",
+      "order": 10,
+      "text": "1589\ndu Soi, 194, 212, 222-223, 927, 1596\nhumaniste, 1708\npsycho-neuro-endocrinologie, 135-\n",
+      "text_sha256": "0cab7b8c12f43b7b3fc1d9a313c365108ea9571342e51d7912313eba73c749c8"
+    },
+    {
+      "bbox": [
+        54.0,
+        441.7201232910156,
+        129.36900329589844,
+        465.8672790527344
+      ],
+      "block_id": "page-1204-block-0011",
+      "order": 11,
+      "text": "136\npsychopathologie\n",
+      "text_sha256": "18be2bb0a88d3aa7a4c5ec90c6922f3a5c26bb09279ce4b9f61f9043ed19a656"
+    },
+    {
+      "bbox": [
+        54.0,
+        466.5445251464844,
+        202.38150024414062,
+        553.5172729492188
+      ],
+      "block_id": "page-1204-block-0012",
+      "order": 12,
+      "text": "cognitive, 1235-1237\nculture et __, 251-252\nimmigration et __, 252-253\ninfantile, 236-237\npsychopharmacologie, 1430-1442\npsychophysiologie, 159-193\npsychose(s), 348, 1026\n",
+      "text_sha256": "6b0805a4ac9740937943c252ea08d4b6a20371bc58200215e5903ecee482e29a"
+    },
+    {
+      "bbox": [
+        63.0,
+        554.4701538085938,
+        211.2064971923828,
+        591.1173095703125
+      ],
+      "block_id": "page-1204-block-0013",
+      "order": 13,
+      "text": "à début précoce, 1235-1236\naiguës, 274, 303\nantipsychotiques et __, 1464-1465,\n",
+      "text_sha256": "03ceb55103a59d3af0d23459c6f47ca7ec84354c2e0dee595087e957f0214765"
+    },
+    {
+      "bbox": [
+        63.0,
+        592.0701293945312,
+        202.56605529785156,
+        641.21728515625
+      ],
+      "block_id": "page-1204-block-0014",
+      "order": 14,
+      "text": "1471\natypique, 1403\ncomorbidité et __, 626-627\nd’allure schizophrénique à début\n",
+      "text_sha256": "2969978cb0dc76348d6a28ae4de5a5c7ddd2e432878e0c1529f0539513da2ea4"
+    },
+    {
+      "bbox": [
+        63.0,
+        642.1701049804688,
+        195.37828063964844,
+        728.9172973632812
+      ],
+      "block_id": "page-1204-block-0015",
+      "order": 15,
+      "text": "très tardif, 1404-1406\nde motilité, 303\ndétection précoce de la __, 345\nfonctionnelles, 303\nhypocondriaque, 318\nidées suicidaires et __, 1093\nnon aective, 1404\n",
+      "text_sha256": "aa480f7c0100b2810bad35985d70c6f4bf74d7569da5029a4227dc9e43157dc2"
+    },
+    {
+      "bbox": [
+        234.0,
+        40.82011795043945,
+        375.592529296875,
+        102.5672836303711
+      ],
+      "block_id": "page-1204-block-0016",
+      "order": 16,
+      "text": "phénoménologie des __, 349-354\npostpartum, 974\npsychogéniques, 303\nsecondaire, 356\nthérapie cognitivo-\n",
+      "text_sha256": "6967fd673c3f0ef5e9b00fed5e312c83b043e0113479603f710cef4f999db862"
+    },
+    {
+      "bbox": [
+        225.0,
+        103.4701156616211,
+        383.4693603515625,
+        165.1672821044922
+      ],
+      "block_id": "page-1204-block-0017",
+      "order": 17,
+      "text": "comportementale et __,\n1779, 1779f\ntoxique, 356\npsychosomatique, 30, 528-549, 666-667\npsychostimulants, 339, 1304, 1317,\n",
+      "text_sha256": "431b34902d2fd687737fbc2df8a04d583402f754e899bf1bb0c114afd5720544"
+    },
+    {
+      "bbox": [
+        234.0,
+        165.89453125,
+        365.5847473144531,
+        190.21728515625
+      ],
+      "block_id": "page-1204-block-0018",
+      "order": 18,
+      "text": "1325, 1415, 1521-1534\ntrouble de décit de l’attention\n",
+      "text_sha256": "6b4af4fce0b7467e137b6205b0659e9870694f34d4665372b69fb849994c567a"
+    },
+    {
+      "bbox": [
+        225.0,
+        191.1701202392578,
+        378.40948486328125,
+        227.81729125976562
+      ],
+      "block_id": "page-1204-block-0019",
+      "order": 19,
+      "text": "avec ou sans hyperactivité\n(TDA/H) et __, 1521-1534\npsychothérapie(s), 484, 1430, 1567-\n",
+      "text_sha256": "ac7208bdf2f9820a81cf367eba547ea794747e15c750523a35e3ab7ee0116af5"
+    },
+    {
+      "bbox": [
+        234.0,
+        228.54454040527344,
+        377.093994140625,
+        265.41729736328125
+      ],
+      "block_id": "page-1204-block-0020",
+      "order": 20,
+      "text": "1586, 1588, 1745-1747\ncentrée sur le client, 1745\ncognitivo-comportementale, 389,\n",
+      "text_sha256": "e84c28884eb8fe35fc874e9a84ce7feff3f22d280af7845adb18b2fd314dfa32"
+    },
+    {
+      "bbox": [
+        234.0,
+        266.32012939453125,
+        383.8349609375,
+        403.21728515625
+      ],
+      "block_id": "page-1204-block-0021",
+      "order": 21,
+      "text": "1640-1665, voir aussi thérapie\n(cognitivo-comportementale)\ndépression et __, 1414\nde soutien, 1787\ndysphorie du genre et __, 801-802\nexistentielle, 1747\nexpérientielles, 1740\ngestaltiste des relations d’objet, 1748\nhumanistes, 1740, 1744t\nindividuelle introspective, 1325\ninterpersonnelle (PTI), 484, 1045,\n",
+      "text_sha256": "7b5d79174504ae3425c5d880e7bf67e94a830ace1d25ed225001fbf90faad0ca"
+    },
+    {
+      "bbox": [
+        234.0,
+        403.89453125,
+        377.0118408203125,
+        465.8672790527344
+      ],
+      "block_id": "page-1204-block-0022",
+      "order": 22,
+      "text": "1681-1688, voir aussi théra-\npie interpersonnelle (TIP)\npar le jeu, 1344\npersonnes âgées et __, 1397-1398\ntroubles\n",
+      "text_sha256": "7ea2dbcad5f1fe851373a00bc93df4107f1b1962755b0517a9330b719412a8b0"
+    },
+    {
+      "bbox": [
+        225.0,
+        467.8094177246094,
+        365.7933349609375,
+        515.96728515625
+      ],
+      "block_id": "page-1204-block-0023",
+      "order": 23,
+      "text": "de l’attachement et __, 1299\nfactices et __, 696-697\nliés à l’alcool et __, 868\npsychotropes, 1430\n",
+      "text_sha256": "c52d924d6b53ecb2ab674ffbc17bff55a1d931e4c79f5c5c77b41c0e820958ef"
+    },
+    {
+      "bbox": [
+        234.0,
+        516.8701171875,
+        375.2669982910156,
+        528.46728515625
+      ],
+      "block_id": "page-1204-block-0024",
+      "order": 24,
+      "text": "interactions médicamenteuses et\n",
+      "text_sha256": "2b384aecc94e95f76f2636b3f97fd19b3151b904028aec10a3b67a9db72007dc"
+    },
+    {
+      "bbox": [
+        234.0,
+        529.4201049804688,
+        371.44439697265625,
+        566.0673217773438
+      ],
+      "block_id": "page-1204-block-0025",
+      "order": 25,
+      "text": "__, 1439t\npersonnes âgées et __, 1396\nproblèmes iatrogéniques des __,\n",
+      "text_sha256": "fa0e2d5fe86931fac0e57e11b0d1673391d5b13c08a577aac8a2c36efd01d7de"
+    },
+    {
+      "bbox": [
+        234.0,
+        567.0201416015625,
+        297.1605224609375,
+        591.1173095703125
+      ],
+      "block_id": "page-1204-block-0026",
+      "order": 26,
+      "text": "1110-1112\ntrouble(s)\n",
+      "text_sha256": "21a9999680d42f1886b00753a60459287b350844756195270089060df0b6d939"
+    },
+    {
+      "bbox": [
+        243.0,
+        593.1094360351562,
+        376.7652893066406,
+        616.1094360351562
+      ],
+      "block_id": "page-1204-block-0027",
+      "order": 27,
+      "text": "des conduites et __, 1325\ndu développement intellectuel\n",
+      "text_sha256": "7955b77e397cd35ac14320792631e06abede40f995630274a98b5bd571db9eb2"
+    },
+    {
+      "bbox": [
+        243.0,
+        618.159423828125,
+        382.4175720214844,
+        641.159423828125
+      ],
+      "block_id": "page-1204-block-0028",
+      "order": 28,
+      "text": "et __, 1258\noppositionnel avec provocation\n",
+      "text_sha256": "65e26b5f6ec5ba03bc7cc1ef6d7be3cd8e34d6855f503274f4053f29e3bca1dc"
+    },
+    {
+      "bbox": [
+        225.0,
+        643.2094116210938,
+        383.8162841796875,
+        666.2672729492188
+      ],
+      "block_id": "page-1204-block-0029",
+      "order": 29,
+      "text": "et __, 1325\npuberté, 198, 204, 219, 221, 338, 699-\n",
+      "text_sha256": "b92e110f184aeab4bf060d7999c0f53a2319f7232846d0e62e0531e7b0499056"
+    },
+    {
+      "bbox": [
+        225.0,
+        667.2201538085938,
+        365.69403076171875,
+        703.8673095703125
+      ],
+      "block_id": "page-1204-block-0030",
+      "order": 30,
+      "text": "700, 701f, 708, 712, 737, 751,\n753, 799, 1145-1146, 1320\npunition, 214, 224, 317, 322, 668,\n",
+      "text_sha256": "b4a30c69514c8b92bec2faca1854f871b7018c4fce61ab368e7b9011258db88c"
+    },
+    {
+      "bbox": [
+        243.0,
+        704.8201293945312,
+        383.1600036621094,
+        728.9172973632812
+      ],
+      "block_id": "page-1204-block-0031",
+      "order": 31,
+      "text": "673, 924, 935, 1260f, 1262, 1612f,\n1613\n",
+      "text_sha256": "5900dc5e24881385065469a024afd0fc156dc1fb44803eded0ae20afbbd0957b"
+    },
+    {
+      "bbox": [
+        405.0,
+        40.82011795043945,
+        530.8099975585938,
+        52.41728591918945
+      ],
+      "block_id": "page-1204-block-0032",
+      "order": 32,
+      "text": "par addition (positive), 1260f,\n",
+      "text_sha256": "963a176f807d698a8424908539567164cbd1398d9569a4d347725d6649bc44c1"
+    },
+    {
+      "bbox": [
+        405.0,
+        53.520118713378906,
+        550.3099975585938,
+        77.8172836303711
+      ],
+      "block_id": "page-1204-block-0033",
+      "order": 33,
+      "text": "1613, 1628\npar soustraction (négative), 1260f,\n",
+      "text_sha256": "4dfa1c4d56dc600bc2673b0f8724c247229e64026a007f8f6ee1b8a0b7bf70ef"
+    },
+    {
+      "bbox": [
+        396.0,
+        78.8701171875,
+        532.3994750976562,
+        103.16728973388672
+      ],
+      "block_id": "page-1204-block-0034",
+      "order": 34,
+      "text": "1612-1613, 1612f, 1628\npyromanie, 834-836, 835t, 841t\n",
+      "text_sha256": "45713550759de9386d596d2c0115485640e0dc86056e55adde1bd7c387e34b08"
+    },
+    {
+      "bbox": [
+        396.0,
+        108.8570327758789,
+        544.49853515625,
+        187.7672882080078
+      ],
+      "block_id": "page-1204-block-0035",
+      "order": 35,
+      "text": "Q\nqualité de vie, 1382\nqualité des soins, 1049-1060\nquatrième ventricule, 110f\nquestionnaire psychiatrique, 42-43\nquestions ouvertes et fermés, 39t,\n",
+      "text_sha256": "acef73bfc694f0119deeba8821579b6863a7feae7a10c344d67283d50eda4cf6"
+    },
+    {
+      "bbox": [
+        396.0,
+        188.8701171875,
+        545.5458374023438,
+        213.11729431152344
+      ],
+      "block_id": "page-1204-block-0036",
+      "order": 36,
+      "text": "1712-1713\nquotient intellectuel (QI), 7, 65, 85,\n",
+      "text_sha256": "8d832f268664529bf2b6d1d67d702c70521f16bbd00559e88710245ad2b9e680"
+    },
+    {
+      "bbox": [
+        405.0,
+        214.22012329101562,
+        529.6139526367188,
+        263.8672790527344
+      ],
+      "block_id": "page-1204-block-0037",
+      "order": 37,
+      "text": "88, 1224t, 1240, 1305, 1343\nfaible, 1319\nnon verbal, 1272\nverbal, 1274\n",
+      "text_sha256": "3d438610e689b6031c7f4dbe82b03d52da7cc40856fcb7cee1e7a251a7b7c7ac"
+    },
+    {
+      "bbox": [
+        396.0,
+        269.5070495605469,
+        552.7650146484375,
+        323.0672912597656
+      ],
+      "block_id": "page-1204-block-0038",
+      "order": 38,
+      "text": "R\nradiations optiques, 168f\nradiopharmaceutiques, 140, 143-144\nradiothérapie, 561, 571-572, 579,\n",
+      "text_sha256": "0b979cc8278fa42fc166a5d7113b455eacff7576095496fdace28122c8cca6be"
+    },
+    {
+      "bbox": [
+        396.0,
+        324.1701354980469,
+        552.6259155273438,
+        361.1172790527344
+      ],
+      "block_id": "page-1204-block-0039",
+      "order": 39,
+      "text": "1304\nrage, 204, 1140-1141t\nraisonnement, 74, 90t, 145, 173, 183,\n",
+      "text_sha256": "6a331ae842262bf2783a06aa8a4e27affe3dac26f01bb1c04d2be997fb8dbf72"
+    },
+    {
+      "bbox": [
+        396.0,
+        362.2201232910156,
+        549.1009521484375,
+        399.16729736328125
+      ],
+      "block_id": "page-1204-block-0040",
+      "order": 40,
+      "text": "185-187, 209, 214-215, 317, 351\n585, 1351\nrapport\n",
+      "text_sha256": "e4f38619eee9683e5f0e0a0d0ca7a595fdea9ca8f2ee6ce616b93f4cbee623c4"
+    },
+    {
+      "bbox": [
+        405.0,
+        400.0445251464844,
+        548.4094848632812,
+        424.5672912597656
+      ],
+      "block_id": "page-1204-block-0041",
+      "order": 41,
+      "text": "d’évaluation psychiatrique, 74-76\nmédecin-patient, 22-24\n",
+      "text_sha256": "80f5e608d4f393f82295b508b5b4551ffee453ace7beaab3eb9c658e949977d4"
+    },
+    {
+      "bbox": [
+        396.0,
+        426.659423828125,
+        551.1123657226562,
+        449.91729736328125
+      ],
+      "block_id": "page-1204-block-0042",
+      "order": 42,
+      "text": "judiciarisation et __, 16\nrationalisation, 51, 68, 674, 817, 821,\n",
+      "text_sha256": "5cd08b60228dd0a977ce8390c430f1315ad30d9d0716402e6ed94a4d1e2de218"
+    },
+    {
+      "bbox": [
+        396.0,
+        451.0201110839844,
+        543.7100219726562,
+        487.96728515625
+      ],
+      "block_id": "page-1204-block-0043",
+      "order": 43,
+      "text": "923, 1078t, 1150t, 1212, 1592t,\n1601\nréaction\n",
+      "text_sha256": "ec8ad607ee3464cc8a558d71b14881d96695d1b1448f4fa33f9a6e43c8beef62"
+    },
+    {
+      "bbox": [
+        405.0,
+        489.0201110839844,
+        543.9115600585938,
+        500.6172790527344
+      ],
+      "block_id": "page-1204-block-0044",
+      "order": 44,
+      "text": "contre-transférentielle, 503, 697,\n",
+      "text_sha256": "0940c55e7a832eb244e6e5923d72437d889f3af86702a6467beaa7607ed570c1"
+    },
+    {
+      "bbox": [
+        405.0,
+        501.7201232910156,
+        548.3472290039062,
+        551.3673095703125
+      ],
+      "block_id": "page-1204-block-0045",
+      "order": 45,
+      "text": "821, 917, 950, 1108, 1570,\n1585, 1588-1589, 1598, 1601-\n1604, 1793\nd’immobilisation (freeze), 204,\n",
+      "text_sha256": "9fe06b5422991ed2e198b3a1bbc4675259ba0d0f2f11d220905832b37e86e621"
+    },
+    {
+      "bbox": [
+        405.0,
+        552.4701538085938,
+        549.1950073242188,
+        576.71728515625
+      ],
+      "block_id": "page-1204-block-0046",
+      "order": 46,
+      "text": "205f, 427, 429, 515, 915, 1369\nde combat/fuite (ght/ight), 204,\n",
+      "text_sha256": "42e57a72dbaa3b9c74f58a7c6257d6d52b5d5d6b5644782639e44eee20cfb7a0"
+    },
+    {
+      "bbox": [
+        396.0,
+        577.8201293945312,
+        535.1815185546875,
+        614.7672729492188
+      ],
+      "block_id": "page-1204-block-0047",
+      "order": 47,
+      "text": "205f, 515, 683\nde sursaut (startle), 492\nréadaptation, 1768-1785, 1770-\n",
+      "text_sha256": "d97cbf820d16a789d2574da9876f37a774e5751e8d7c656080911fbe5b0d67e8"
+    },
+    {
+      "bbox": [
+        396.0,
+        615.8701171875,
+        553.1271362304688,
+        652.8173217773438
+      ],
+      "block_id": "page-1204-block-0048",
+      "order": 48,
+      "text": "1771t\nschizophrénie et __, 367-369\nréalité virtuelle, 442-443, 1593, 1609,\n",
+      "text_sha256": "5c7894f8fc80e9bd3e1d078663c0a603bbf9dbcf2f0fb8604d0d99ec0243a953"
+    },
+    {
+      "bbox": [
+        396.0,
+        653.9201049804688,
+        553.2353515625,
+        703.5673217773438
+      ],
+      "block_id": "page-1204-block-0049",
+      "order": 49,
+      "text": "1622, 1626, 1646\nréanimation cardiopulmonaire, 1207\nréassignation sexuelle, 785, 801-803\nrécepteurs\n",
+      "text_sha256": "8b1c6ff258947b10f36981d6697cc6e7e103875fe5b6f64de2a9fc9033752cff"
+    },
+    {
+      "bbox": [
+        405.0,
+        704.6701049804688,
+        552.8670654296875,
+        728.9172973632812
+      ],
+      "block_id": "page-1204-block-0050",
+      "order": 50,
+      "text": "5-HT, 119, 126-128, 135-136, 1484\ncannabinoïdes, 573\n",
+      "text_sha256": "01591ed7e927b090cd030f5f086a9c9043bbbe22844662c9cd1b41d92d811a46"
+    }
+  ],
+  "coordinates_sha256": "afb110068426fcfcb1a4301237cd362c8dc51ae114f368c1c47e0075ffb858b2",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1204",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Index\nI43\npsychasthénie, 413\npsychiatrie\ncommunautaire, 15\nlégale, 1168-1186\nmédecine nucléaire et __, 143-157\npérinatale, 969-978\npratique de la __, 15-16\nreproductive, 969-978\nsciences contributives de la __, 4t\npsychochirurgie, 1430\npsychoéducation, 1003, voir thérapie\npsychoéducative\nfamiliale\nschizophrénie et __, 363\ntoxicomanie et __, 923\ninsomnie et __, 732\npersonnes âgées et __, 1392\ntoxicomanie et __, 922-923\ntrouble(s)\nbipolaire et __, 388-389\nde décit de l’attention avec\nou sans hyperactivité\n(TDA/H) et __, 1315\ndes conduites alimentaires\net __, 711\npsycho-immunologie, 136\npsychologie\ndu Moi (Ego psychology), 219, 222,\n1589\ndu Soi, 194, 212, 222-223, 927, 1596\nhumaniste, 1708\npsycho-neuro-endocrinologie, 135-\n136\npsychopathologie\ncognitive, 1235-1237\nculture et __, 251-252\nimmigration et __, 252-253\ninfantile, 236-237\npsychopharmacologie, 1430-1442\npsychophysiologie, 159-193\npsychose(s), 348, 1026\nà début précoce, 1235-1236\naiguës, 274, 303\nantipsychotiques et __, 1464-1465,\n1471\natypique, 1403\ncomorbidité et __, 626-627\nd’allure schizophrénique à début\ntrès tardif, 1404-1406\nde motilité, 303\ndétection précoce de la __, 345\nfonctionnelles, 303\nhypocondriaque, 318\nidées suicidaires et __, 1093\nnon aective, 1404\nphénoménologie des __, 349-354\npostpartum, 974\npsychogéniques, 303\nsecondaire, 356\nthérapie cognitivo-\ncomportementale et __,\n1779, 1779f\ntoxique, 356\npsychosomatique, 30, 528-549, 666-667\npsychostimulants, 339, 1304, 1317,\n1325, 1415, 1521-1534\ntrouble de décit de l’attention\navec ou sans hyperactivité\n(TDA/H) et __, 1521-1534\npsychothérapie(s), 484, 1430, 1567-\n1586, 1588, 1745-1747\ncentrée sur le client, 1745\ncognitivo-comportementale, 389,\n1640-1665, voir aussi thérapie\n(cognitivo-comportementale)\ndépression et __, 1414\nde soutien, 1787\ndysphorie du genre et __, 801-802\nexistentielle, 1747\nexpérientielles, 1740\ngestaltiste des relations d’objet, 1748\nhumanistes, 1740, 1744t\nindividuelle introspective, 1325\ninterpersonnelle (PTI), 484, 1045,\n1681-1688, voir aussi théra-\npie interpersonnelle (TIP)\npar le jeu, 1344\npersonnes âgées et __, 1397-1398\ntroubles\nde l’attachement et __, 1299\nfactices et __, 696-697\nliés à l’alcool et __, 868\npsychotropes, 1430\ninteractions médicamenteuses et\n__, 1439t\npersonnes âgées et __, 1396\nproblèmes iatrogéniques des __,\n1110-1112\ntrouble(s)\ndes conduites et __, 1325\ndu développement intellectuel\net __, 1258\noppositionnel avec provocation\net __, 1325\npuberté, 198, 204, 219, 221, 338, 699-\n700, 701f, 708, 712, 737, 751,\n753, 799, 1145-1146, 1320\npunition, 214, 224, 317, 322, 668,\n673, 924, 935, 1260f, 1262, 1612f,\n1613\npar addition (positive), 1260f,\n1613, 1628\npar soustraction (négative), 1260f,\n1612-1613, 1612f, 1628\npyromanie, 834-836, 835t, 841t\nQ\nqualité de vie, 1382\nqualité des soins, 1049-1060\nquatrième ventricule, 110f\nquestionnaire psychiatrique, 42-43\nquestions ouvertes et fermés, 39t,\n1712-1713\nquotient intellectuel (QI), 7, 65, 85,\n88, 1224t, 1240, 1305, 1343\nfaible, 1319\nnon verbal, 1272\nverbal, 1274\nR\nradiations optiques, 168f\nradiopharmaceutiques, 140, 143-144\nradiothérapie, 561, 571-572, 579,\n1304\nrage, 204, 1140-1141t\nraisonnement, 74, 90t, 145, 173, 183,\n185-187, 209, 214-215, 317, 351\n585, 1351\nrapport\nd’évaluation psychiatrique, 74-76\nmédecin-patient, 22-24\njudiciarisation et __, 16\nrationalisation, 51, 68, 674, 817, 821,\n923, 1078t, 1150t, 1212, 1592t,\n1601\nréaction\ncontre-transférentielle, 503, 697,\n821, 917, 950, 1108, 1570,\n1585, 1588-1589, 1598, 1601-\n1604, 1793\nd’immobilisation (freeze), 204,\n205f, 427, 429, 515, 915, 1369\nde combat/fuite (ght/ight), 204,\n205f, 515, 683\nde sursaut (startle), 492\nréadaptation, 1768-1785, 1770-\n1771t\nschizophrénie et __, 367-369\nréalité virtuelle, 442-443, 1593, 1609,\n1622, 1626, 1646\nréanimation cardiopulmonaire, 1207\nréassignation sexuelle, 785, 801-803\nrécepteurs\n5-HT, 119, 126-128, 135-136, 1484\ncannabinoïdes, 573\n",
+  "raw_text_sha256": "4517f85428c137fbb197fb1833dd4f5f99807690910ecfa25d1213fc07461a0d",
+  "source_page_display": 1205,
+  "source_page_index": 1204
+}

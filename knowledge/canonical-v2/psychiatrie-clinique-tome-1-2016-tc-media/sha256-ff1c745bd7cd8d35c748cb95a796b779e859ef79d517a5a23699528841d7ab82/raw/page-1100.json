@@ -1,0 +1,748 @@
+{
+  "block_sequence_sha256": "a724241197fe50c786f8818477fbc8e088b5dfb88cf126c7eef5b7498c1e9970",
+  "blocks": [
+    {
+      "bbox": [
+        476.20001220703125,
+        747.5753784179688,
+        555.02001953125,
+        758.8693237304688
+      ],
+      "block_id": "page-1100-block-0001",
+      "order": 1,
+      "text": "Références\nR3\n",
+      "text_sha256": "9608f05f4311dbb097e375d3e5df3210796fafe94d9428cabf2264843e1e0238"
+    },
+    {
+      "bbox": [
+        225.0,
+        40.68496322631836,
+        367.2200012207031,
+        67.1734390258789
+      ],
+      "block_id": "page-1100-block-0002",
+      "order": 2,
+      "text": "Nair, A. & Howard, R. (2013). « ENCODE and a new\nlandscape for psychiatric genetics », British Journal of\nPsychiatry, 203(2), p. 84-85.\n",
+      "text_sha256": "bb13d05eb029758c7aae748f0c750806301ba1b29786bb38a2be23881521699d"
+    },
+    {
+      "bbox": [
+        225.0,
+        71.13496398925781,
+        376.6001281738281,
+        97.6234359741211
+      ],
+      "block_id": "page-1100-block-0003",
+      "order": 3,
+      "text": "Owen, M. J. & al. (2011). « Neurodevelopmental hypothesis\nof schizophrenia », British Journal of Psychiatry, 198(3),\np. 173-175.\n",
+      "text_sha256": "e61313ed6d3663e2817a42e31f4017a2775a1a292cc4316346b9f9acc709bd7f"
+    },
+    {
+      "bbox": [
+        225.0,
+        101.5849609375,
+        377.910888671875,
+        128.0234375
+      ],
+      "block_id": "page-1100-block-0004",
+      "order": 4,
+      "text": "Purcell, S. M. & al. (2009). « Common polygenic variation\ncontributes to risk of schizophrenia and bipolar disorder »,\nNature, 460(7256), p. 748-752.\n",
+      "text_sha256": "b795ae6fc8bb9ac811cdf564318da9bf1a2a37f7deb5d968f3e5e00b36aa9560"
+    },
+    {
+      "bbox": [
+        225.0,
+        131.98497009277344,
+        376.0804138183594,
+        158.4734344482422
+      ],
+      "block_id": "page-1100-block-0005",
+      "order": 5,
+      "text": "Roy-Gagnon, M. H. & al. (2011). « Genomic and genealogical\ninvestigation of the French Canadian founder population\nstructure », Human Genetics, 129(5), p. 521-531.\n",
+      "text_sha256": "dc4ae1b6ac6cc91b7640788550e8dc3d86c6c1c10c371a6f5884d53020dfbf87"
+    },
+    {
+      "bbox": [
+        225.0,
+        162.43496704101562,
+        382.50006103515625,
+        188.92344665527344
+      ],
+      "block_id": "page-1100-block-0006",
+      "order": 6,
+      "text": "Rutter, M. (2006). « Implications of resi lience concepts for\nscientic understan ding », Annals of the New York Academy\nof Sciences, 109, p. 1-12.\n",
+      "text_sha256": "0a787c49fd8b1d8af2db4d528451e0a0aa7dd591a2876418426e46243a1b03c6"
+    },
+    {
+      "bbox": [
+        225.0,
+        192.8849639892578,
+        378.0020751953125,
+        228.5234375
+      ],
+      "block_id": "page-1100-block-0007",
+      "order": 7,
+      "text": "Sigvardsson, S. & al. (1996). « Replication of the Stockholm\nAdoption Study of alcoholism. Conrmatory cross-fos-\ntering analysis », Archives of General Psychiatry, 53(8),\np. 681-687.\n",
+      "text_sha256": "b5a70cc6ed16500e75e0199ba38b0ee2b7c752b11b3198e7fda04b6e8f215c3a"
+    },
+    {
+      "bbox": [
+        225.0,
+        232.48497009277344,
+        379.85137939453125,
+        258.9234313964844
+      ],
+      "block_id": "page-1100-block-0008",
+      "order": 8,
+      "text": "Smoller, J. W. & al. (2013). « Identication of risk loci with\nshared effects on ve major psychiatric disorders : a genome-\nwide analysis », The Lancet, 381(9875), p. 1371-1379.\n",
+      "text_sha256": "9ee18ab87ab83b8956f3b5c5129b5f5bce531d9d794d32bd951d71ea9e6b729e"
+    },
+    {
+      "bbox": [
+        225.0,
+        262.8849792480469,
+        380.4426574707031,
+        289.3734436035156
+      ],
+      "block_id": "page-1100-block-0009",
+      "order": 9,
+      "text": "Société des obstétriciens et gynécologues du Canada (SOGC).\n(2014). Naissances multiples, [en ligne], http://sogc.org/fr/\npublications/naissances-multiples.\n",
+      "text_sha256": "5a98528fecf9c51a0ff6df3a6a8ae259193c7e384b803c24bdf512eb982097fe"
+    },
+    {
+      "bbox": [
+        225.0,
+        293.3349609375,
+        383.6999816894531,
+        310.6734313964844
+      ],
+      "block_id": "page-1100-block-0010",
+      "order": 10,
+      "text": "Strachan, T. & Read, A. P. (1999). Human Molecular Genetics,\nNew York, NY, Wiley-Liss.\n",
+      "text_sha256": "860dbe724ec3a8530fd39f9311bced0d441262a481bf1ea3aca56c3d698811c7"
+    },
+    {
+      "bbox": [
+        225.0,
+        314.6349792480469,
+        367.12689208984375,
+        350.2734375
+      ],
+      "block_id": "page-1100-block-0011",
+      "order": 11,
+      "text": "Szatmari, P. & al. (2007). « Informative phenotypes for\ngenetic studies of psychiatric disorders », American\nJournal of Medical Genetics Part B Neuropsychiatric\nGene tics,144(5), p. 581-588.\n",
+      "text_sha256": "51e86d4aec13a3dd1f03bef0bbb74f872bb37806e9c747108bd1447f9272d5f1"
+    },
+    {
+      "bbox": [
+        225.0,
+        354.2349548339844,
+        371.2001953125,
+        380.72344970703125
+      ],
+      "block_id": "page-1100-block-0012",
+      "order": 12,
+      "text": "Tandon, R. & al. (2008). « Schizophrenia, “just the facts”\nwhat we know in 2008. 2. Epidemiology and etiology »,\nSchizophrenia Research, 102(1-3), p. 1-18.\n",
+      "text_sha256": "ca7bb957f1ac8a5c5c3edf5f1d5c779cd61dbaa7ccfb7ccfdf9374c92d37c0ec"
+    },
+    {
+      "bbox": [
+        225.0,
+        384.6349792480469,
+        377.3901062011719,
+        411.1234436035156
+      ],
+      "block_id": "page-1100-block-0013",
+      "order": 13,
+      "text": "Tang, B. & al. (2011). « Disease- and age-related changes\nin histone acetylation at gene promoters in psychiatric\ndisorders », Translational Psychiatry, 1, p. e64.\n",
+      "text_sha256": "9313c2f1e286b41c261873f95e8fdb9197e034adadd6cd6da8e2229fed149ffb"
+    },
+    {
+      "bbox": [
+        225.0,
+        415.0849609375,
+        382.17999267578125,
+        450.72344970703125
+      ],
+      "block_id": "page-1100-block-0014",
+      "order": 14,
+      "text": "Van der Stelt, O. & al. (2004). « Impaired P3 generation\nreects high-level and progressive neurocognitive dysfunc-\ntion in schizophrenia », Archives of General Psychiatry, 61(3),\np. 237-248.\n",
+      "text_sha256": "b37b2df92e960caa5645522a5eb9c52dae3fa12b7dd6a4506a557544e4af61e9"
+    },
+    {
+      "bbox": [
+        225.0,
+        454.6849670410156,
+        379.697509765625,
+        472.0234375
+      ],
+      "block_id": "page-1100-block-0015",
+      "order": 15,
+      "text": "Van Os, J. & al. (2010). « The environment and schizophre-\nnia », Nature, 468(7321), p. 203-212.\n",
+      "text_sha256": "131a23fed73300e883965d679653078d339c4c96d6a325421496fb53b36dd1c6"
+    },
+    {
+      "bbox": [
+        225.0,
+        475.9849548339844,
+        377.94921875,
+        511.6234436035156
+      ],
+      "block_id": "page-1100-block-0016",
+      "order": 16,
+      "text": "Van Snellenberg, J. X. & De Candia, T. (2009). « Meta-ana-\nlytic evidence for familial coaggregation of schizophrenia\nand bipolar disorder », Archives of General Psychiatry,\n66(7), p. 748-755.\n",
+      "text_sha256": "68fd2b25179d8d0926409ec1f48438b149098b507807d11899cc1f4b79599843"
+    },
+    {
+      "bbox": [
+        225.0,
+        525.0203247070312,
+        376.60125732421875,
+        563.1734619140625
+      ],
+      "block_id": "page-1100-block-0017",
+      "order": 17,
+      "text": "Chapitre 6\nArnonde, D. & al. (2009). « Magnetic resonance imaging\nstudies in bipolar disorder and schizophrenia : meta-\nanalysis », Schizophrenia Research, 195(3), p. 194-201.\n",
+      "text_sha256": "69bd9969f21630949ffd1bc93ff8fc0cba47664e1dd18c95dacf1c02ab81db50"
+    },
+    {
+      "bbox": [
+        225.0,
+        567.1349487304688,
+        383.00128173828125,
+        602.7734375
+      ],
+      "block_id": "page-1100-block-0018",
+      "order": 18,
+      "text": "Ashwood, P. & al. (2011). « Elevated plasma cytokines in\nautism spectrum disorders provide evidence of immune\ndysfunction and are associated with impaired behavioural\noutcome », Brain, Behavior, and Immunity, 25(1), p. 40-45.\n",
+      "text_sha256": "3917fed0dcb4a3ab73a2577d9de23682aaed89566d460d927b97d89a2eec2b4c"
+    },
+    {
+      "bbox": [
+        225.0,
+        606.7349853515625,
+        381.1322021484375,
+        633.2234497070312
+      ],
+      "block_id": "page-1100-block-0019",
+      "order": 19,
+      "text": "Bergink, V. & al. (2011). « Prevalence of autoimmune thyroid\ndysfunction in postpartum psychosis », British Journal of\nPsychiatry, 198(4), p. 264-268.\n",
+      "text_sha256": "e5895b3c9652c99e091c405d3a1c82541698e0f8acda96c5a5511b6c5437a7aa"
+    },
+    {
+      "bbox": [
+        225.0,
+        637.1849975585938,
+        373.71502685546875,
+        672.7734375
+      ],
+      "block_id": "page-1100-block-0020",
+      "order": 20,
+      "text": "Bernard, J. A. & Mittal, V. A. (2014). «Cerebellar-motor\ndysfunction in schizophrenia and psychosis risk : The\nimportance of regional cerebellar analysis approaches »,\nFront Psychiatry, 5, article 160, p. 1-14.\n",
+      "text_sha256": "e9daf5c1aee803565dec3b0274ffd0c03f48c480683557e57021eec90b6fa84e"
+    },
+    {
+      "bbox": [
+        225.0,
+        676.7349853515625,
+        383.7500305175781,
+        703.2234497070312
+      ],
+      "block_id": "page-1100-block-0021",
+      "order": 21,
+      "text": "Boldrini, M. & al. (2008). « Serotonin-1A autoreceptor\nbinding in the dorsal raphe nucleus of depressed suicides »,\nJournal of Psychiatry Research, 42(6), p. 433-442.\n",
+      "text_sha256": "ee5b00634e370526a816afb145483f72ea47f7f38c7480bd852e5befacde5d7e"
+    },
+    {
+      "bbox": [
+        225.0,
+        707.1849975585938,
+        368.6700744628906,
+        724.5234375
+      ],
+      "block_id": "page-1100-block-0022",
+      "order": 22,
+      "text": "Brown, A. S. & Derkits, E. J. (2010). « Prenatal infection\nand schizophrenia : A review of epidemiologic and\n",
+      "text_sha256": "88e47433f7930db394a2dcf8b46a424a30653381ff6b65174ea084c46f9b58c3"
+    },
+    {
+      "bbox": [
+        396.0,
+        40.68496322631836,
+        536.6500244140625,
+        57.923439025878906
+      ],
+      "block_id": "page-1100-block-0023",
+      "order": 23,
+      "text": "transitional studies », American Journal of Psychiatry,\n167(3), p. 261-280.\n",
+      "text_sha256": "0a905d6ecd9e17b2fe18397c0c67571a281a0906fbdf0c49839f462eb04fb993"
+    },
+    {
+      "bbox": [
+        396.0,
+        61.78496551513672,
+        547.3526000976562,
+        97.1234359741211
+      ],
+      "block_id": "page-1100-block-0024",
+      "order": 24,
+      "text": "Brunet, A. & al. (2014). « Trauma reactivation plus propra-\nnolol is associated with durably physiological responding\nduring subsequent script-driven traumatic imagery »,\nCanadian Journal of Psychiatric, 59(4), p. 228-232.\n",
+      "text_sha256": "888c84233ad5aa42a57ef03f79ae0fdc7c843b141e70c169f7f0a164ce85bc67"
+    },
+    {
+      "bbox": [
+        396.0,
+        101.03496551513672,
+        555.5400390625,
+        118.2734375
+      ],
+      "block_id": "page-1100-block-0025",
+      "order": 25,
+      "text": "Bunevicius, R. (2009). « Thyroid disorders in mental patients »,\nCurrent Opinion in Psychiatry, 22(4), p. 391-395.\n",
+      "text_sha256": "acce44890f91506fa829301d8adb013c88cc49190ee0466a6cbff06ebc30ddf1"
+    },
+    {
+      "bbox": [
+        396.0,
+        122.13496398925781,
+        553.730224609375,
+        148.42344665527344
+      ],
+      "block_id": "page-1100-block-0026",
+      "order": 26,
+      "text": "Centonze, D. & al. (2002). « Dopamine D2 receptor mediated\ninhibition of dopaminergic neurons in mice lacking D2L\nreceptors », Neuropsychopharmacology, 27(5), p. 723-726.\n",
+      "text_sha256": "faa77535fa93680a780d28053a5689f3c1f742bf37340be3a58f944b9675b111"
+    },
+    {
+      "bbox": [
+        396.0,
+        152.2849578857422,
+        549.6024780273438,
+        178.5734405517578
+      ],
+      "block_id": "page-1100-block-0027",
+      "order": 27,
+      "text": "Csernansky, J. G. & al. (2004). « Abnormalities of thalamic\nvolume and shape in schizophrenia », American Journal of\nPsychiatry, 161(5), p. 896-902.\n",
+      "text_sha256": "6f2d5dd078a3489deeecb72fd0ec98342127264675774a23ae8a2d766347bd21"
+    },
+    {
+      "bbox": [
+        396.0,
+        182.43496704101562,
+        546.6113891601562,
+        208.7234344482422
+      ],
+      "block_id": "page-1100-block-0028",
+      "order": 28,
+      "text": "Dantzer, R. & Kelley, K. W. (2007). « Twenty years of research\non cytokine-induced sickness behavior », Brain Behavior and\nImmunity, 21(2), p. 153-160.\n",
+      "text_sha256": "1bb3b4facc5b98516bef916c753df9d54bfb6fad25f595988835844dbad944b7"
+    },
+    {
+      "bbox": [
+        396.0,
+        212.5849609375,
+        548.6671752929688,
+        238.87344360351562
+      ],
+      "block_id": "page-1100-block-0029",
+      "order": 29,
+      "text": "Di Forti, M. & al. (2009). « High potency cannabis and the\nrisk of psychosis », British Journal of Psychiatry, 195(6),\np. 488-491.\n",
+      "text_sha256": "fdbfac9bebbce368f2cb227c7460ee2ef927434ca9a621a33134b49e4725732b"
+    },
+    {
+      "bbox": [
+        396.0,
+        242.7849578857422,
+        542.5943603515625,
+        269.0734558105469
+      ],
+      "block_id": "page-1100-block-0030",
+      "order": 30,
+      "text": "Dowlati, Y. & al. (2010). « A meta-analysis of cytokines\nin major depression », Biological Psychiatry, 67(5),\np. 446-457.\n",
+      "text_sha256": "db205c949c10a698e7972342cfa7c3f51232f7d7e31b21ed378d252a1d577c07"
+    },
+    {
+      "bbox": [
+        396.0,
+        272.9349670410156,
+        545.8263549804688,
+        299.22344970703125
+      ],
+      "block_id": "page-1100-block-0031",
+      "order": 31,
+      "text": "Drzyzga, L. & al. (2006). « Cytokines in schizophrenia and\nthe effects of antipsychotic drugs », Brain, Behavior, and\nImmunity, 20(6), p. 532-545.\n",
+      "text_sha256": "c250940de1b26419354d69bab5111c584b9804c3ccdc6634271ffb803641caed"
+    },
+    {
+      "bbox": [
+        396.0,
+        303.0849609375,
+        550.6400146484375,
+        329.3734436035156
+      ],
+      "block_id": "page-1100-block-0032",
+      "order": 32,
+      "text": "Dwivedi, Y. (2009). « Brain-derived neurotrophic factor :\nRole in depression and suicide », Neuropsychiatric Disease\nTreatment, 5, p. 433-449.\n",
+      "text_sha256": "5b9091e32cd613a44316f0d78963c64791c5d27a9d3475adf9f79f84d659c413"
+    },
+    {
+      "bbox": [
+        396.0,
+        333.2349548339844,
+        554.7000122070312,
+        368.5734558105469
+      ],
+      "block_id": "page-1100-block-0033",
+      "order": 33,
+      "text": "Estrada, G. & al. (2011). « Cannabis use and age of onset\nof psychosis : Further evidence of interaction with COMT\nVal158Met polymorphism », Acta Psychiatrica Scandinavica,\n123(6), p. 485-492.\n",
+      "text_sha256": "40c1ab7af199b838361694937d4a8cfee9438f5516c77795ca4d4d1916114101"
+    },
+    {
+      "bbox": [
+        396.0,
+        372.4349670410156,
+        544.5450439453125,
+        398.7734375
+      ],
+      "block_id": "page-1100-block-0034",
+      "order": 34,
+      "text": "Gilbertson, M. W. & al. (2002). « Smaller hippocampal\nvolume predicts pathologic vulnerability to psychological\ntrauma », Nature Neurosciences, 5(11), p. 1242-1247.\n",
+      "text_sha256": "1873c9ae05adb75ae4e56b547685f5722866e55b21310a6d9a59ee7776cd577f"
+    },
+    {
+      "bbox": [
+        396.0,
+        402.6349792480469,
+        550.728515625,
+        437.97344970703125
+      ],
+      "block_id": "page-1100-block-0035",
+      "order": 35,
+      "text": "Goldstein, D. S. & al. (2003). « Sources and signicance of\nplasma levels of catechols and their metabolites in humans »,\nJournal of Pharmacology and Experimental Therapy, 305(3),\np. 800-811.\n",
+      "text_sha256": "ed141566d49ec1b38f73b061e4c17d6c61c2b2331408aee8e1cc60a6baec0f96"
+    },
+    {
+      "bbox": [
+        396.0,
+        441.8349609375,
+        553.3177490234375,
+        477.1734313964844
+      ],
+      "block_id": "page-1100-block-0036",
+      "order": 36,
+      "text": "Harrison, P.J. & al. (2008). « The group II metabotropic\nglutamate receptor 3 (mGluR3, mGlu3, GRM3) : expression,\nfunction and involvement in schizophrenia », Journal of\nPsychopharmacology, 22(3), p. 308-322.\n",
+      "text_sha256": "a52601ce31daaaa0f1b49dba7c8a07724a99e2d62190b24cdea250ff99352f03"
+    },
+    {
+      "bbox": [
+        396.0,
+        481.03497314453125,
+        553.1318969726562,
+        516.3734741210938
+      ],
+      "block_id": "page-1100-block-0037",
+      "order": 37,
+      "text": "Heinrich, A. & Adamaszek, M. (2010). « Anti-Borna disease\nvirus antibody responses in psychiatric patients : Long-term\nfollow up », Psychiatry Clinical Neurosciences, 64(3),\np. 255-261.\n",
+      "text_sha256": "2b9f8d4531e92ecc8ef0d63186bb641d00f3b1d03bbcec45cca6ca2a5043653f"
+    },
+    {
+      "bbox": [
+        396.0,
+        520.2849731445312,
+        545.967529296875,
+        555.6234741210938
+      ],
+      "block_id": "page-1100-block-0038",
+      "order": 38,
+      "text": "Hill, M. N. & al. (2009). «The therapeutic potential of the\nendocannabinoid system for the development of a novel\nclass of antidepressants », Trends in Pharmacological\nSciences, 30(9), p. 484-493.\n",
+      "text_sha256": "b4e87dd25d68ca75e8db3e1799dd66a8438071a01fa8d47d9266ebce7b483660"
+    },
+    {
+      "bbox": [
+        396.0,
+        559.4849853515625,
+        548.1529541015625,
+        594.8234252929688
+      ],
+      "block_id": "page-1100-block-0039",
+      "order": 39,
+      "text": "Jokinen, J. & Nordström, P. (2009). « HPA axis hyperactivity\nand attempted suicide in young adult mood disorder\ninpatients », Journal of Affective Disorder, 116(1-2),\np. 117-120.\n",
+      "text_sha256": "007ef1e8fee3580ed81dfbe7628927bd06db8e1bf2e2d68fbb4b19b37ca69f9f"
+    },
+    {
+      "bbox": [
+        396.0,
+        598.6849975585938,
+        547.6398315429688,
+        615.9234619140625
+      ],
+      "block_id": "page-1100-block-0040",
+      "order": 40,
+      "text": "Kaplan, H.J. & Sadock, B.J. (1998). Synopsis of Psychiatry,\n8e éd., Philadelphie, Lippincott Williams & Wilkins.\n",
+      "text_sha256": "11b5b1aac3c0924988da5fc4be2b0439da18d0c0c9611dc63b9c3923c265f176"
+    },
+    {
+      "bbox": [
+        396.0,
+        619.7849731445312,
+        555.1018676757812,
+        646.0734252929688
+      ],
+      "block_id": "page-1100-block-0041",
+      "order": 41,
+      "text": "Kempton, M. J. & al. (2008). « Meta-analysis, database and\nmeta-regression of 98 structural imaging studies in bipolar\ndisorder »,Archives of General Psychiatry, 65(9), p. 1017-1032.\n",
+      "text_sha256": "a8f7ea2aa54e1244d585a4e5f7fa512be9cbbffe80c13022bbb96159d19c6079"
+    },
+    {
+      "bbox": [
+        396.0,
+        649.9349975585938,
+        551.188720703125,
+        685.3234252929688
+      ],
+      "block_id": "page-1100-block-0042",
+      "order": 42,
+      "text": "Kleinman, J. E. & al. (2011). « Genetic neuropathology of\nschizophrenia: New approaches to an old question and new\nuses for postmortem human brains »,Biological Psychiatry,\n15(69), p. 140-145.\n",
+      "text_sha256": "b4be4b775f5c9bd169859ef61fff3356fd5330f3862471993247d550fadff6bb"
+    },
+    {
+      "bbox": [
+        396.0,
+        689.1849975585938,
+        554.7988891601562,
+        724.5234375
+      ],
+      "block_id": "page-1100-block-0043",
+      "order": 43,
+      "text": "Le Donne, M. & al. (2011). « Early pospartum alexithymia and\nrisk for depression : Relationship with serum thyrotropin,\nfree thyroid hormones and thyroid autoantibodies »,\nPsychoneuroendocrinology. 37(4), p. 519-533.\n",
+      "text_sha256": "f3b39619fecfc3732359886d46e41590ba1bb0aa541d55b81805113540644ca4"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.52031326293945,
+        204.5,
+        96.32344055175781
+      ],
+      "block_id": "page-1100-block-0044",
+      "order": 44,
+      "text": "Chapitre 5\nBattaglia, M. & al. (2009). « A genetically informed study\nof the association between childhood separation anxiety,\nsensitivity to CO(2), panic disorder, and the effect of\nchildhood parental loss », Archives of General Psychiatry,\n66(1), p. 64-71.\n",
+      "text_sha256": "5d227dd16470a3dabbf958787e219c7d67176ec32120ade8bcd020c346b339bf"
+    },
+    {
+      "bbox": [
+        54.0,
+        100.13496398925781,
+        201.49749755859375,
+        117.3734359741211
+      ],
+      "block_id": "page-1100-block-0045",
+      "order": 45,
+      "text": "Bertolino, A. & Blasi, G. (2009). « The genetics of schizo-\nphrenia », Neuroscience, 164(1), p. 288-299.\n",
+      "text_sha256": "1e22fcdabe9081c86c89c0f96092bf43da505bd47f538e1b070a2ef3818d1a69"
+    },
+    {
+      "bbox": [
+        54.0,
+        121.1849594116211,
+        210.99258422851562,
+        156.42344665527344
+      ],
+      "block_id": "page-1100-block-0046",
+      "order": 46,
+      "text": "Bora, E. & al. (2009). « Cognitive endophenotypes of bipolar\ndisorder : A meta- analysis of neuropsychological decits in\neuthymic patients and their rst-degree relatives, » Journal\nof Affective Disorders, 113(1-2), p. 1-20.\n",
+      "text_sha256": "c7d205ca9bb37887a91048bef75be7ebd24f3bcd3ba2a77ee3fdd66cce663826"
+    },
+    {
+      "bbox": [
+        54.0,
+        160.2849578857422,
+        210.71534729003906,
+        186.4734344482422
+      ],
+      "block_id": "page-1100-block-0047",
+      "order": 47,
+      "text": "Gardiner-Garden, M. & Frommer, M. (1987). « CpG islands\nin vertebrate genomes », Journal of Molecular Biology, 196(2),\np. 261-282.\n",
+      "text_sha256": "6510a6a6a951ee99612f3ca57544ce1517b4d00db768f8d71d65574a5b150f9f"
+    },
+    {
+      "bbox": [
+        54.0,
+        190.3349609375,
+        201.1900177001953,
+        216.5734405517578
+      ],
+      "block_id": "page-1100-block-0048",
+      "order": 48,
+      "text": "Girard, S. L. & al. (2011). « Increased exonic de novo\nmutation rate in individuals with schizophrenia », Nature\nGenetics, 43(9), p. 860-863.\n",
+      "text_sha256": "21e0a142fe6ead6a8f08c925040fab936009f50e1436f8fba22e08f3c4c90369"
+    },
+    {
+      "bbox": [
+        54.0,
+        220.3849639892578,
+        212.4575958251953,
+        255.62344360351562
+      ],
+      "block_id": "page-1100-block-0049",
+      "order": 49,
+      "text": "Gottesman, I. I. & Bertelsen, A. (1989). « Conrming unex-\npressed genotypes for schizophrenia. Risks in the offspring\nof Fischer’s Danish identical and fraternal discordant\ntwins », Archives of General Psychiatry, 46(10), p. 867-872.\n",
+      "text_sha256": "757a58d44fe1ba8a80289114bc5367a65660926bb8c561729d7973cbf7bcfa86"
+    },
+    {
+      "bbox": [
+        54.0,
+        259.4349670410156,
+        208.8995819091797,
+        294.72344970703125
+      ],
+      "block_id": "page-1100-block-0050",
+      "order": 50,
+      "text": "Hébert, M. & al. (2010). « Retinal response to light in young\nnonaffected offspring at high genetic risk of neuropsy-\nchiatric brain disorders », Biological Psychiatry, 67(3),\np. 270-274.\n",
+      "text_sha256": "89d78412e204e15e6a583f9dd2e5901633688de1c7dcb30f16da76adf3010d68"
+    },
+    {
+      "bbox": [
+        54.0,
+        298.53497314453125,
+        201.73756408691406,
+        342.7734375
+      ],
+      "block_id": "page-1100-block-0051",
+      "order": 51,
+      "text": "Hoge, S. K. & Appelbaum, P. S. (2008). « Ethical, legal, and\nsocial implications of psychiatric genetics and genetic\ncounseling », dans Smoller, J. W. & al. (dir.), Psychiatric\nGenetics : Applications in Clinical Practice, Arlington, VA,\nAmerican Psychiatric Publishing, p. 255-276.\n",
+      "text_sha256": "0ecade2e714eb26b0288f0f41bba211d438cdd6c64a8c51854c9bb9252d59fde"
+    },
+    {
+      "bbox": [
+        54.0,
+        346.6349792480469,
+        202.8975067138672,
+        372.8734436035156
+      ],
+      "block_id": "page-1100-block-0052",
+      "order": 52,
+      "text": "Hoischen, A. & al. (2014). « Prioritization of neurodevelop-\nmental disease genes by discovery of new mutations »,\nNature Neuroscience, 17(6), p. 764-772.\n",
+      "text_sha256": "330518a9f235455bbeac4804aac5caab1e9a778245fb74e7bd4174824b1ec21d"
+    },
+    {
+      "bbox": [
+        54.0,
+        376.6849670410156,
+        210.24693298339844,
+        411.9234313964844
+      ],
+      "block_id": "page-1100-block-0053",
+      "order": 53,
+      "text": "Labbe, A. & al. (2012). « Symptom dimensions as alternative\nphenotypes to address genetic heterogeneity in schizo-\nphrenia and bipolar disorder », European Journal of Human\nGenetics, 20(11), p. 1182-1188.\n",
+      "text_sha256": "3b66294a986f279cd679fdc524e6ef9334caa8b64829ab6c683e4b1a0623611a"
+    },
+    {
+      "bbox": [
+        54.0,
+        415.7349548339844,
+        210.22251892089844,
+        441.97344970703125
+      ],
+      "block_id": "page-1100-block-0054",
+      "order": 54,
+      "text": "Lee, S. H. & al. (2013). « Genetic relationship between ve\npsychiatric disorders estimated from genome-wide SNPs »,\nNature Genetics, 45(9), p. 984-994.\n",
+      "text_sha256": "935ffd0d57012ea1d3b247d84006d3699381c33c206a87f470faef6710daa35e"
+    },
+    {
+      "bbox": [
+        54.0,
+        445.8349609375,
+        207.44749450683594,
+        472.0234375
+      ],
+      "block_id": "page-1100-block-0055",
+      "order": 55,
+      "text": "Levenson, J. M. & Sweatt, J. D. (2005). « Epigenetic mecha-\nnisms in memory formation », Nature Reviews Neurosci-\nence, 6(2), p. 108-118.\n",
+      "text_sha256": "53f7681f0b21daeb7bef0e6c8fa77b01a3a8cba15daf28b95f6a74765cf485cc"
+    },
+    {
+      "bbox": [
+        54.0,
+        475.8849792480469,
+        211.99749755859375,
+        511.1234436035156
+      ],
+      "block_id": "page-1100-block-0056",
+      "order": 56,
+      "text": "Maziade, M. & Paccalet, T. (2013). « A protective-compensa-\ntory model may reconcile the genetic and the developmen-\ntal ndings in schizophrenia », Schizophrenia Research,\n144(1-3), p. 9-15.\n",
+      "text_sha256": "5bd2ccef04c938960c3f91d86be3899658094f23c02b5eb2ce7f6dcc4f08ff60"
+    },
+    {
+      "bbox": [
+        54.0,
+        514.9349975585938,
+        199.01673889160156,
+        550.1734619140625
+      ],
+      "block_id": "page-1100-block-0057",
+      "order": 57,
+      "text": "Maziade, M. & al. (2005). « Shared and specic suscepti-\nbility loci for schizophrenia and bipolar disorder : A dense\ngenome scan in Eastern Quebec families », Mole cular\nPsychiatry, 10(5), p. 486-499.\n",
+      "text_sha256": "fb0e026e1dfe9b364d2090f637c68f60fb723669ab23b82ce430bfa97f0d1786"
+    },
+    {
+      "bbox": [
+        54.0,
+        554.0349731445312,
+        211.7042236328125,
+        589.2734375
+      ],
+      "block_id": "page-1100-block-0058",
+      "order": 58,
+      "text": "Maziade, M. & al. (2009a). « Chromosome 13q13-q14\nlocus overlaps mood and psychotic disorders : the\nrelevance for redening phenotype », European Journal of\nHuman Genetics, 17(8), p. 1034-1042.\n",
+      "text_sha256": "5a6431ce34667b7ad62ebfacb404c4d7d1163f5cfa597ebf3c4f025ef1bb0d39"
+    },
+    {
+      "bbox": [
+        54.0,
+        593.0849609375,
+        210.79750061035156,
+        628.3234252929688
+      ],
+      "block_id": "page-1100-block-0059",
+      "order": 59,
+      "text": "Maziade, M. & al. (2009b). « Shared neurocognitive dysfunc-\ntions in young offspring at extreme risk for schizophrenia\nor bipolar disorder in Eastern Quebec multigene rational\nfamilies », Schizophrenia Bulletin, 35(5), p. 919-930.\n",
+      "text_sha256": "4b9844a957332297e5d65f3b070830d902e9008bb0edf8e7475f9c46f39d196a"
+    },
+    {
+      "bbox": [
+        54.0,
+        632.1849975585938,
+        210.03001403808594,
+        685.4734497070312
+      ],
+      "block_id": "page-1100-block-0060",
+      "order": 60,
+      "text": "Maziade, M. & al. (2011). « Verbal and visual memory\nimpairments among young offspring and healthy adult\nrelatives of patients with schizophrenia and bipolar\ndisorder : selective generational patterns indicate different\ndevelopmental trajectories », Schizophrenia Bulletin, 37(6),\np. 1218-1228.\n",
+      "text_sha256": "0cc8a00f7c5f6cd4e31ac139ca69791c2d22f5c2bfaff33ddcf85556fc8013bd"
+    },
+    {
+      "bbox": [
+        54.0,
+        689.2849731445312,
+        211.99256896972656,
+        724.5234375
+      ],
+      "block_id": "page-1100-block-0061",
+      "order": 61,
+      "text": "Mérette, C. & al. (2008). « Replication of linkage with bipolar\ndisorder on chromosome 16p in the Eastern Quebec\npopulation », American Journal of Medical Genetics, part B\nNeuropsychiatric Gene tics, 147B(6), p. 737-744.\n",
+      "text_sha256": "694ca2e07694e7b56283a94941c2f440618d5b007f75c0403dcd1530636b8bb3"
+    }
+  ],
+  "coordinates_sha256": "d5953387c9074b007723718fddd98cbf954a9c7951641574f81ffdc78cae259c",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1100",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Références\nR3\nNair, A. & Howard, R. (2013). « ENCODE and a new\nlandscape for psychiatric genetics », British Journal of\nPsychiatry, 203(2), p. 84-85.\nOwen, M. J. & al. (2011). « Neurodevelopmental hypothesis\nof schizophrenia », British Journal of Psychiatry, 198(3),\np. 173-175.\nPurcell, S. M. & al. (2009). « Common polygenic variation\ncontributes to risk of schizophrenia and bipolar disorder »,\nNature, 460(7256), p. 748-752.\nRoy-Gagnon, M. H. & al. (2011). « Genomic and genealogical\ninvestigation of the French Canadian founder population\nstructure », Human Genetics, 129(5), p. 521-531.\nRutter, M. (2006). « Implications of resi lience concepts for\nscientic understan ding », Annals of the New York Academy\nof Sciences, 109, p. 1-12.\nSigvardsson, S. & al. (1996). « Replication of the Stockholm\nAdoption Study of alcoholism. Conrmatory cross-fos-\ntering analysis », Archives of General Psychiatry, 53(8),\np. 681-687.\nSmoller, J. W. & al. (2013). « Identication of risk loci with\nshared effects on ve major psychiatric disorders : a genome-\nwide analysis », The Lancet, 381(9875), p. 1371-1379.\nSociété des obstétriciens et gynécologues du Canada (SOGC).\n(2014). Naissances multiples, [en ligne], http://sogc.org/fr/\npublications/naissances-multiples.\nStrachan, T. & Read, A. P. (1999). Human Molecular Genetics,\nNew York, NY, Wiley-Liss.\nSzatmari, P. & al. (2007). « Informative phenotypes for\ngenetic studies of psychiatric disorders », American\nJournal of Medical Genetics Part B Neuropsychiatric\nGene tics,144(5), p. 581-588.\nTandon, R. & al. (2008). « Schizophrenia, “just the facts”\nwhat we know in 2008. 2. Epidemiology and etiology »,\nSchizophrenia Research, 102(1-3), p. 1-18.\nTang, B. & al. (2011). « Disease- and age-related changes\nin histone acetylation at gene promoters in psychiatric\ndisorders », Translational Psychiatry, 1, p. e64.\nVan der Stelt, O. & al. (2004). « Impaired P3 generation\nreects high-level and progressive neurocognitive dysfunc-\ntion in schizophrenia », Archives of General Psychiatry, 61(3),\np. 237-248.\nVan Os, J. & al. (2010). « The environment and schizophre-\nnia », Nature, 468(7321), p. 203-212.\nVan Snellenberg, J. X. & De Candia, T. (2009). « Meta-ana-\nlytic evidence for familial coaggregation of schizophrenia\nand bipolar disorder », Archives of General Psychiatry,\n66(7), p. 748-755.\nChapitre 6\nArnonde, D. & al. (2009). « Magnetic resonance imaging\nstudies in bipolar disorder and schizophrenia : meta-\nanalysis », Schizophrenia Research, 195(3), p. 194-201.\nAshwood, P. & al. (2011). « Elevated plasma cytokines in\nautism spectrum disorders provide evidence of immune\ndysfunction and are associated with impaired behavioural\noutcome », Brain, Behavior, and Immunity, 25(1), p. 40-45.\nBergink, V. & al. (2011). « Prevalence of autoimmune thyroid\ndysfunction in postpartum psychosis », British Journal of\nPsychiatry, 198(4), p. 264-268.\nBernard, J. A. & Mittal, V. A. (2014). «Cerebellar-motor\ndysfunction in schizophrenia and psychosis risk : The\nimportance of regional cerebellar analysis approaches »,\nFront Psychiatry, 5, article 160, p. 1-14.\nBoldrini, M. & al. (2008). « Serotonin-1A autoreceptor\nbinding in the dorsal raphe nucleus of depressed suicides »,\nJournal of Psychiatry Research, 42(6), p. 433-442.\nBrown, A. S. & Derkits, E. J. (2010). « Prenatal infection\nand schizophrenia : A review of epidemiologic and\ntransitional studies », American Journal of Psychiatry,\n167(3), p. 261-280.\nBrunet, A. & al. (2014). « Trauma reactivation plus propra-\nnolol is associated with durably physiological responding\nduring subsequent script-driven traumatic imagery »,\nCanadian Journal of Psychiatric, 59(4), p. 228-232.\nBunevicius, R. (2009). « Thyroid disorders in mental patients »,\nCurrent Opinion in Psychiatry, 22(4), p. 391-395.\nCentonze, D. & al. (2002). « Dopamine D2 receptor mediated\ninhibition of dopaminergic neurons in mice lacking D2L\nreceptors », Neuropsychopharmacology, 27(5), p. 723-726.\nCsernansky, J. G. & al. (2004). « Abnormalities of thalamic\nvolume and shape in schizophrenia », American Journal of\nPsychiatry, 161(5), p. 896-902.\nDantzer, R. & Kelley, K. W. (2007). « Twenty years of research\non cytokine-induced sickness behavior », Brain Behavior and\nImmunity, 21(2), p. 153-160.\nDi Forti, M. & al. (2009). « High potency cannabis and the\nrisk of psychosis », British Journal of Psychiatry, 195(6),\np. 488-491.\nDowlati, Y. & al. (2010). « A meta-analysis of cytokines\nin major depression », Biological Psychiatry, 67(5),\np. 446-457.\nDrzyzga, L. & al. (2006). « Cytokines in schizophrenia and\nthe effects of antipsychotic drugs », Brain, Behavior, and\nImmunity, 20(6), p. 532-545.\nDwivedi, Y. (2009). « Brain-derived neurotrophic factor :\nRole in depression and suicide », Neuropsychiatric Disease\nTreatment, 5, p. 433-449.\nEstrada, G. & al. (2011). « Cannabis use and age of onset\nof psychosis : Further evidence of interaction with COMT\nVal158Met polymorphism », Acta Psychiatrica Scandinavica,\n123(6), p. 485-492.\nGilbertson, M. W. & al. (2002). « Smaller hippocampal\nvolume predicts pathologic vulnerability to psychological\ntrauma », Nature Neurosciences, 5(11), p. 1242-1247.\nGoldstein, D. S. & al. (2003). « Sources and signicance of\nplasma levels of catechols and their metabolites in humans »,\nJournal of Pharmacology and Experimental Therapy, 305(3),\np. 800-811.\nHarrison, P.J. & al. (2008). « The group II metabotropic\nglutamate receptor 3 (mGluR3, mGlu3, GRM3) : expression,\nfunction and involvement in schizophrenia », Journal of\nPsychopharmacology, 22(3), p. 308-322.\nHeinrich, A. & Adamaszek, M. (2010). « Anti-Borna disease\nvirus antibody responses in psychiatric patients : Long-term\nfollow up », Psychiatry Clinical Neurosciences, 64(3),\np. 255-261.\nHill, M. N. & al. (2009). «The therapeutic potential of the\nendocannabinoid system for the development of a novel\nclass of antidepressants », Trends in Pharmacological\nSciences, 30(9), p. 484-493.\nJokinen, J. & Nordström, P. (2009). « HPA axis hyperactivity\nand attempted suicide in young adult mood disorder\ninpatients », Journal of Affective Disorder, 116(1-2),\np. 117-120.\nKaplan, H.J. & Sadock, B.J. (1998). Synopsis of Psychiatry,\n8e éd., Philadelphie, Lippincott Williams & Wilkins.\nKempton, M. J. & al. (2008). « Meta-analysis, database and\nmeta-regression of 98 structural imaging studies in bipolar\ndisorder »,Archives of General Psychiatry, 65(9), p. 1017-1032.\nKleinman, J. E. & al. (2011). « Genetic neuropathology of\nschizophrenia: New approaches to an old question and new\nuses for postmortem human brains »,Biological Psychiatry,\n15(69), p. 140-145.\nLe Donne, M. & al. (2011). « Early pospartum alexithymia and\nrisk for depression : Relationship with serum thyrotropin,\nfree thyroid hormones and thyroid autoantibodies »,\nPsychoneuroendocrinology. 37(4), p. 519-533.\nChapitre 5\nBattaglia, M. & al. (2009). « A genetically informed study\nof the association between childhood separation anxiety,\nsensitivity to CO(2), panic disorder, and the effect of\nchildhood parental loss », Archives of General Psychiatry,\n66(1), p. 64-71.\nBertolino, A. & Blasi, G. (2009). « The genetics of schizo-\nphrenia », Neuroscience, 164(1), p. 288-299.\nBora, E. & al. (2009). « Cognitive endophenotypes of bipolar\ndisorder : A meta- analysis of neuropsychological decits in\neuthymic patients and their rst-degree relatives, » Journal\nof Affective Disorders, 113(1-2), p. 1-20.\nGardiner-Garden, M. & Frommer, M. (1987). « CpG islands\nin vertebrate genomes », Journal of Molecular Biology, 196(2),\np. 261-282.\nGirard, S. L. & al. (2011). « Increased exonic de novo\nmutation rate in individuals with schizophrenia », Nature\nGenetics, 43(9), p. 860-863.\nGottesman, I. I. & Bertelsen, A. (1989). « Conrming unex-\npressed genotypes for schizophrenia. Risks in the offspring\nof Fischer’s Danish identical and fraternal discordant\ntwins », Archives of General Psychiatry, 46(10), p. 867-872.\nHébert, M. & al. (2010). « Retinal response to light in young\nnonaffected offspring at high genetic risk of neuropsy-\nchiatric brain disorders », Biological Psychiatry, 67(3),\np. 270-274.\nHoge, S. K. & Appelbaum, P. S. (2008). « Ethical, legal, and\nsocial implications of psychiatric genetics and genetic\ncounseling », dans Smoller, J. W. & al. (dir.), Psychiatric\nGenetics : Applications in Clinical Practice, Arlington, VA,\nAmerican Psychiatric Publishing, p. 255-276.\nHoischen, A. & al. (2014). « Prioritization of neurodevelop-\nmental disease genes by discovery of new mutations »,\nNature Neuroscience, 17(6), p. 764-772.\nLabbe, A. & al. (2012). « Symptom dimensions as alternative\nphenotypes to address genetic heterogeneity in schizo-\nphrenia and bipolar disorder », European Journal of Human\nGenetics, 20(11), p. 1182-1188.\nLee, S. H. & al. (2013). « Genetic relationship between ve\npsychiatric disorders estimated from genome-wide SNPs »,\nNature Genetics, 45(9), p. 984-994.\nLevenson, J. M. & Sweatt, J. D. (2005). « Epigenetic mecha-\nnisms in memory formation », Nature Reviews Neurosci-\nence, 6(2), p. 108-118.\nMaziade, M. & Paccalet, T. (2013). « A protective-compensa-\ntory model may reconcile the genetic and the developmen-\ntal ndings in schizophrenia », Schizophrenia Research,\n144(1-3), p. 9-15.\nMaziade, M. & al. (2005). « Shared and specic suscepti-\nbility loci for schizophrenia and bipolar disorder : A dense\ngenome scan in Eastern Quebec families », Mole cular\nPsychiatry, 10(5), p. 486-499.\nMaziade, M. & al. (2009a). « Chromosome 13q13-q14\nlocus overlaps mood and psychotic disorders : the\nrelevance for redening phenotype », European Journal of\nHuman Genetics, 17(8), p. 1034-1042.\nMaziade, M. & al. (2009b). « Shared neurocognitive dysfunc-\ntions in young offspring at extreme risk for schizophrenia\nor bipolar disorder in Eastern Quebec multigene rational\nfamilies », Schizophrenia Bulletin, 35(5), p. 919-930.\nMaziade, M. & al. (2011). « Verbal and visual memory\nimpairments among young offspring and healthy adult\nrelatives of patients with schizophrenia and bipolar\ndisorder : selective generational patterns indicate different\ndevelopmental trajectories », Schizophrenia Bulletin, 37(6),\np. 1218-1228.\nMérette, C. & al. (2008). « Replication of linkage with bipolar\ndisorder on chromosome 16p in the Eastern Quebec\npopulation », American Journal of Medical Genetics, part B\nNeuropsychiatric Gene tics, 147B(6), p. 737-744.\n",
+  "raw_text_sha256": "6657638c1adb7371646c75f6fc373f752e3f1d64206001bd24c497c32b57dcea",
+  "source_page_display": 1101,
+  "source_page_index": 1100
+}

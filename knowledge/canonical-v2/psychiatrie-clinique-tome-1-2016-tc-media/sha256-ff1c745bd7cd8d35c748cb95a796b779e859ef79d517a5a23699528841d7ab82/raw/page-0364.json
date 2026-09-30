@@ -1,0 +1,364 @@
+{
+  "block_sequence_sha256": "e789fbd3ab526ce176c0aae58982ea52da2b128bd2c3e3cab210ea97a10a8f95",
+  "blocks": [
+    {
+      "bbox": [
+        396.8000183105469,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0364-block-0001",
+      "order": 1,
+      "text": "Chapitre 17\nSchizophrénies\n347\n",
+      "text_sha256": "15c4eba1833e1c2cd309f6b62cf3dcf90073c7254571d354cba0a22993d4a75c"
+    },
+    {
+      "bbox": [
+        56.29999923706055,
+        41.002296447753906,
+        307.94573974609375,
+        53.320068359375
+      ],
+      "block_id": "page-0364-block-0002",
+      "order": 2,
+      "text": "TABLEAU 17.4 Critères diagnostiques du trouble schizoaffectif\n",
+      "text_sha256": "a6f05d8c2107473eadc02833c3329983749b86edfdbb06f441bd56d5d795b2bb"
+    },
+    {
+      "bbox": [
+        166.75,
+        59.52412414550781,
+        449.28802490234375,
+        70.10029602050781
+      ],
+      "block_id": "page-0364-block-0003",
+      "order": 3,
+      "text": "DSM-5\nDSM-IV-TR\n",
+      "text_sha256": "67d368c78be7842a2bc99b149901566bcadf3c9d62623ea48bafcc32b3563ffb"
+    },
+    {
+      "bbox": [
+        116.75,
+        75.22285461425781,
+        466.2481384277344,
+        85.24238586425781
+      ],
+      "block_id": "page-0364-block-0004",
+      "order": 4,
+      "text": "295.70 (F25.x) Trouble schizoaffectif\nTrouble schizoaffectif\n",
+      "text_sha256": "35fe6762925ae3336756953799fbdd39d4eca7ebca9ca2793e50afda6de0d983"
+    },
+    {
+      "bbox": [
+        58.25,
+        90.80195617675781,
+        285.1834411621094,
+        100.62812805175781
+      ],
+      "block_id": "page-0364-block-0005",
+      "order": 5,
+      "text": "B. Idées délirantes ou hallucinations pendant au moins 2 semaines sur\n",
+      "text_sha256": "19bc204468c577ffa758bd0406ce62f6d9c0f13898163bff8b48c6cce5ca048c"
+    },
+    {
+      "bbox": [
+        69.0999984741211,
+        100.80195617675781,
+        296.5470275878906,
+        120.62812805175781
+      ],
+      "block_id": "page-0364-block-0006",
+      "order": 6,
+      "text": "toute la durée de la maladie, en dehors d’un épisode thymique caracté-\nrisé (dépressif ou maniaque).\n",
+      "text_sha256": "00fe21cdf5edabff43624cba3e2e9993db52bc9a11d16fbb9c36e5972c2cf576"
+    },
+    {
+      "bbox": [
+        308.25,
+        90.80195617675781,
+        365.3548278808594,
+        100.62812805175781
+      ],
+      "block_id": "page-0364-block-0007",
+      "order": 7,
+      "text": "B. Idem à DSM-5.\n",
+      "text_sha256": "703f62df8ee835b259dd8e94c2103cd979d0ac69c184c555aa261a5bff070302"
+    },
+    {
+      "bbox": [
+        58.25,
+        127.20195007324219,
+        278.9049377441406,
+        137.0281219482422
+      ],
+      "block_id": "page-0364-block-0008",
+      "order": 8,
+      "text": "C. Les symptômes qui répondent aux critères d’un épisode thymique\n",
+      "text_sha256": "324a3f9203c0b8220bd44c9934a4dca1663e4f88a9be6ecbbbf3d3cc05efe791"
+    },
+    {
+      "bbox": [
+        69.25,
+        137.2019500732422,
+        291.0027160644531,
+        157.0281219482422
+      ],
+      "block_id": "page-0364-block-0009",
+      "order": 9,
+      "text": "caractérisé sont présents pendant la majeure partie de la durée totale\ndes périodes actives et résiduelles de la maladie.\n",
+      "text_sha256": "1223afa658b156f3a790ce28abf7c7dd9346d86da6637ba32111be16e2b1c99c"
+    },
+    {
+      "bbox": [
+        308.25,
+        127.20195007324219,
+        365.5048828125,
+        137.0281219482422
+      ],
+      "block_id": "page-0364-block-0010",
+      "order": 10,
+      "text": "C. Idem à DSM-5.\n",
+      "text_sha256": "e3115c8f08f85dfc1a8c901e597d6628d9cc927dde450ccede1ca1ec3dd04b8e"
+    },
+    {
+      "bbox": [
+        58.25,
+        163.65196228027344,
+        288.20550537109375,
+        173.47813415527344
+      ],
+      "block_id": "page-0364-block-0011",
+      "order": 11,
+      "text": "D. La perturbation n’est pas imputable aux effets physiologiques directs\n",
+      "text_sha256": "97eab03b71b2c3a5923755ca6584ea50b6fe9855149e5dbc24205802fcc53a00"
+    },
+    {
+      "bbox": [
+        69.4000015258789,
+        173.65196228027344,
+        279.0980529785156,
+        193.47813415527344
+      ],
+      "block_id": "page-0364-block-0012",
+      "order": 12,
+      "text": "d’une substance (p. ex. une substance donnant lieu à un abus, un\nmédicament) ou d’une autre affection médicale.\n",
+      "text_sha256": "0fca9573cc7425d32d175a4ef63b5edc68e066ced8455691793947ec67fc4ab4"
+    },
+    {
+      "bbox": [
+        308.25,
+        163.65196228027344,
+        365.67791748046875,
+        173.47813415527344
+      ],
+      "block_id": "page-0364-block-0013",
+      "order": 13,
+      "text": "D. Idem à DSM-5.\n",
+      "text_sha256": "a25093c4e73c5e7e67b3176a2cccc790e8fc03ace507127f5b4c7ba5e37fc007"
+    },
+    {
+      "bbox": [
+        58.25,
+        200.0519561767578,
+        299.0887145996094,
+        261.8781433105469
+      ],
+      "block_id": "page-0364-block-0014",
+      "order": 14,
+      "text": "Spécier le type :\n295.70 (F25.0) Type bipolaire : Ce sous-type est retenu lorsqu’un épisode\nmaniaque fait partie du tableau clinique. Des épisodes dépressifs caractéri-\nsés peuvent aussi être observés.\n295.70 (F25.1) Type dépressif : Ce sous-type est retenu lorsque seuls des\népisodes dépressifs caractérisés font partie du tableau clinique.\n",
+      "text_sha256": "144ccd64b842b14f6e702c4fbc2fe546e8e9d1debe6d62d566c347107d3bdb1b"
+    },
+    {
+      "bbox": [
+        308.25,
+        200.0519561767578,
+        364.8548889160156,
+        209.8781280517578
+      ],
+      "block_id": "page-0364-block-0015",
+      "order": 15,
+      "text": "E. Idem à DSM-5.\n",
+      "text_sha256": "623c5ec74498d33a47207c86c1d4b8bb5aae0042d0559cf373e98ababace68cc"
+    },
+    {
+      "bbox": [
+        58.25,
+        268.501953125,
+        200.76901245117188,
+        289.4423828125
+      ],
+      "block_id": "page-0364-block-0016",
+      "order": 16,
+      "text": "Spécier si :\nAvec catatonie [voir la sous-section 17.4.1]\n",
+      "text_sha256": "b1ca7496ff864f7e9ecb1de287bdbb40600808a4e7b3428754b2dcbac1c4cedb"
+    },
+    {
+      "bbox": [
+        58.25,
+        295.9019470214844,
+        221.51901245117188,
+        305.7281188964844
+      ],
+      "block_id": "page-0364-block-0017",
+      "order": 17,
+      "text": "Spécier le type de l’évolution [voir le tableau 17.1]\n",
+      "text_sha256": "71096841e1419f785dbd302ea8828112a18f6761524a87ab6354da61b60b823c"
+    },
+    {
+      "bbox": [
+        58.25,
+        312.3519592285156,
+        215.36900329589844,
+        322.1781311035156
+      ],
+      "block_id": "page-0364-block-0018",
+      "order": 18,
+      "text": "Spécier la sévérité actuelle [voir le tableau 17.1]\n",
+      "text_sha256": "563d6164a6fd046744815b8bcfd05d8bf57e94a1dd8f9da15747dd26114f5027"
+    },
+    {
+      "bbox": [
+        54.25,
+        328.9406433105469,
+        215.814697265625,
+        337.8088684082031
+      ],
+      "block_id": "page-0364-block-0019",
+      "order": 19,
+      "text": "Sources : APA (2015), p. 124-125 ; APA (2004a), p. 374.\n",
+      "text_sha256": "bb83590613bb4cc23bbe1bac11784b0e66e3f7c3c7183c597101fbed7a6555ba"
+    },
+    {
+      "bbox": [
+        54.25,
+        343.9406433105469,
+        535.1806640625,
+        370.6750183105469
+      ],
+      "block_id": "page-0364-block-0020",
+      "order": 20,
+      "text": "Traduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\n",
+      "text_sha256": "d1e2a281d01f1237f716bfb933581f8135592b601f1b1579862a0656634f5460"
+    },
+    {
+      "bbox": [
+        54.25,
+        376.9406433105469,
+        545.6670532226562,
+        403.6750183105469
+      ],
+      "block_id": "page-0364-block-0021",
+      "order": 21,
+      "text": "Traduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004.\nAll rights reserved.\n",
+      "text_sha256": "243709fe0bbde845639c05a08cd4ae4601450ec5670085ab5e9038dcd165d7c3"
+    },
+    {
+      "bbox": [
+        66.0,
+        418.4658203125,
+        297.22210693359375,
+        428.95849609375
+      ],
+      "block_id": "page-0364-block-0022",
+      "order": 22,
+      "text": "– des symptômes de psychose franche, mais de courte durée\n",
+      "text_sha256": "de335b63e94d8deccf74fb4d437c2f8dd6239fd4ba24e095d1a6d5467987e392"
+    },
+    {
+      "bbox": [
+        66.0,
+        429.9658203125,
+        297.09100341796875,
+        452.95849609375
+      ],
+      "block_id": "page-0364-block-0023",
+      "order": 23,
+      "text": "(moins de sept jours) et qui se résolvent spontanément ;\n– avoir un parent au 1er degré atteint de psychose ou avoir\n",
+      "text_sha256": "7201b5bb8512082a0ea03aba7de8833b73f540a598f358a11367bd59d17dd417"
+    },
+    {
+      "bbox": [
+        54.0,
+        453.9658203125,
+        297.5005798339844,
+        725.45849609375
+      ],
+      "block_id": "page-0364-block-0024",
+      "order": 24,
+      "text": "une personnalité schizotypique.\n• Dans la dernière année, présenter une détérioration fonction-\nnelle ou un pauvre fonctionnement au long cours.\nÀ l’issue d’un suivi de trois ans chez des patients présentant\nde tels critères, Tsuang & Van Os (2013) ont constaté :\n• qu’environ 35 % vont évoluer vers la schizophrénie, mais ces\ntaux varient en fait de 9 à 70 % selon les études, les critères\net les traitements utilisés,\n• qu’environ 40 % sont atteints d’autres troubles (dépression,\ntrouble anxieux, trouble obsessionnel compulsif, etc.),\n• que 25 % ne montrent plus aucun symptôme psychiatrique.\nDans la catégorie des diagnostics nécessitant des études\nultérieures, le DSM-5 ajoute ainsi un nouveau diagnostic de\n« trouble psychotique atténué » pour faciliter la reconnaissance\ndes psychoses débutantes et amorcer un suivi précoce (voir\nl’enca dré 17.1). Cette nouvelle catégorie sera utile pour décrire les\npatients qui ne présentent pas les critères permettant de conclure\nà un trouble psychotique, mais dont le fonctionnement altéré\nlaisse suspecter l’émergence d’une maladie qui n’est pas forcément\nune schizophrénie. L’avenir dira si on risque de stigmatiser des\njeunes en leur donnant trop tôt un diagnostic et si on les amène à\nprendre une médication qui pourrait être superue. Les critères\nproposés par le DSM-5 sont présentés dans l’encadré 17.2.\n",
+      "text_sha256": "0b9d10a9119b6805f8de188569ba030ade46fe4b971c8c2ff80da097c8361a0d"
+    },
+    {
+      "bbox": [
+        310.0,
+        41.252296447753906,
+        335.6842346191406,
+        53.220069885253906
+      ],
+      "block_id": "page-0364-block-0025",
+      "order": 25,
+      "text": "(suite)\n",
+      "text_sha256": "c684d6dbcdfd50f0ada227f799b5c0fb30e817ac3da61b4cbf208decde7f907b"
+    },
+    {
+      "bbox": [
+        312.0,
+        418.4658203125,
+        555.0571899414062,
+        475.45849609375
+      ],
+      "block_id": "page-0364-block-0026",
+      "order": 26,
+      "text": "Il est quand même surprenant que ces critères ne fassent\naucunement mention des baisses cognitives et fonctionnelles\nni des symptômes négatifs, qui sont pourtant beaucoup plus\nannonciateurs d’une possible évolution vers la schizophrénie,\nque les symptômes psychotiques du critère A de l’encadré 17.2.\n",
+      "text_sha256": "9e64067826b4592cadba032f33a6088fa8a260d8d0f43f913f796f6863d0e82e"
+    },
+    {
+      "bbox": [
+        312.0,
+        486.1368103027344,
+        537.7980346679688,
+        502.2793884277344
+      ],
+      "block_id": "page-0364-block-0027",
+      "order": 27,
+      "text": "17.4.5 Mode d’apparition de la psychose\n",
+      "text_sha256": "9c7a41d1e8ffcfa5b71501a446977d8f2cd0670478eb272463bbf2f9392dec1c"
+    },
+    {
+      "bbox": [
+        312.0,
+        505.7158203125,
+        555.4571533203125,
+        597.6085205078125
+      ],
+      "block_id": "page-0364-block-0028",
+      "order": 28,
+      "text": "Chez plus de 75 % des jeunes qui sourent de schizophrénie\n(Cannon & al., 2008), les parents, les proches et les ensei-\ngnants mentionnent que, au cours de leur enfance et surtout de\nleur adolescence, ces jeunes présentaient des comportements\nparticuliers : « Il n’était pas comme les autres », « bohème », « ori-\nginal », « marginal », « il avait des comportements ou des idées\nbizarres », « il avait des réactions excessives devant des situations\nbanales », « il était solitaire, isolé, avait peu d’amis ».\n",
+      "text_sha256": "8a4ad46ad67f9f56a850df482c6a36a394656c4211b4bc4584379fe669c6557a"
+    },
+    {
+      "bbox": [
+        312.0,
+        598.7158203125,
+        555.2157592773438,
+        725.45849609375
+      ],
+      "block_id": "page-0364-block-0029",
+      "order": 29,
+      "text": "Les dicultés de socialisation ont habituellement été mani-\nfestes : soit qu’il ait été un enfant inhibé, timide, renfermé, néga-\ntiviste, qui « restait dans son coin » ; soit qu’il ait été envahissant,\naccaparant, intrusif, opposant, nerveux, hyperactif. Chez les\npatients atteints de schizophrénie à début précoce, les anomalies\nde développement sont souvent plus marquées. Chez les moins de\n14 ans, le début de la maladie est insidieux, souvent dicile à\ndiagnostiquer et à diérencier des autres troubles neurodévelop-\npementaux. L’enfant peut présenter un ou des éléments suivants :\nil acquiert des rituels ou des habitudes bizarres ; il présente des\nproblèmes de langage, des troubles touchant la motricité ne, le\n",
+      "text_sha256": "d384ec1a8000c539e7318adeb0f6cc7342d06c01fe9eb4d7e5b3ad1cc791eaf0"
+    }
+  ],
+  "coordinates_sha256": "79ec7aed0d14c1d04ed98c7aee817356049acb3c2a1a07b7e77dc0e868623233",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0364",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 17\nSchizophrénies\n347\nTABLEAU 17.4 Critères diagnostiques du trouble schizoaffectif\nDSM-5\nDSM-IV-TR\n295.70 (F25.x) Trouble schizoaffectif\nTrouble schizoaffectif\nB. Idées délirantes ou hallucinations pendant au moins 2 semaines sur\ntoute la durée de la maladie, en dehors d’un épisode thymique caracté-\nrisé (dépressif ou maniaque).\nB. Idem à DSM-5.\nC. Les symptômes qui répondent aux critères d’un épisode thymique\ncaractérisé sont présents pendant la majeure partie de la durée totale\ndes périodes actives et résiduelles de la maladie.\nC. Idem à DSM-5.\nD. La perturbation n’est pas imputable aux effets physiologiques directs\nd’une substance (p. ex. une substance donnant lieu à un abus, un\nmédicament) ou d’une autre affection médicale.\nD. Idem à DSM-5.\nSpécier le type :\n295.70 (F25.0) Type bipolaire : Ce sous-type est retenu lorsqu’un épisode\nmaniaque fait partie du tableau clinique. Des épisodes dépressifs caractéri-\nsés peuvent aussi être observés.\n295.70 (F25.1) Type dépressif : Ce sous-type est retenu lorsque seuls des\népisodes dépressifs caractérisés font partie du tableau clinique.\nE. Idem à DSM-5.\nSpécier si :\nAvec catatonie [voir la sous-section 17.4.1]\nSpécier le type de l’évolution [voir le tableau 17.1]\nSpécier la sévérité actuelle [voir le tableau 17.1]\nSources : APA (2015), p. 124-125 ; APA (2004a), p. 374.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004.\nAll rights reserved.\n– des symptômes de psychose franche, mais de courte durée\n(moins de sept jours) et qui se résolvent spontanément ;\n– avoir un parent au 1er degré atteint de psychose ou avoir\nune personnalité schizotypique.\n• Dans la dernière année, présenter une détérioration fonction-\nnelle ou un pauvre fonctionnement au long cours.\nÀ l’issue d’un suivi de trois ans chez des patients présentant\nde tels critères, Tsuang & Van Os (2013) ont constaté :\n• qu’environ 35 % vont évoluer vers la schizophrénie, mais ces\ntaux varient en fait de 9 à 70 % selon les études, les critères\net les traitements utilisés,\n• qu’environ 40 % sont atteints d’autres troubles (dépression,\ntrouble anxieux, trouble obsessionnel compulsif, etc.),\n• que 25 % ne montrent plus aucun symptôme psychiatrique.\nDans la catégorie des diagnostics nécessitant des études\nultérieures, le DSM-5 ajoute ainsi un nouveau diagnostic de\n« trouble psychotique atténué » pour faciliter la reconnaissance\ndes psychoses débutantes et amorcer un suivi précoce (voir\nl’enca dré 17.1). Cette nouvelle catégorie sera utile pour décrire les\npatients qui ne présentent pas les critères permettant de conclure\nà un trouble psychotique, mais dont le fonctionnement altéré\nlaisse suspecter l’émergence d’une maladie qui n’est pas forcément\nune schizophrénie. L’avenir dira si on risque de stigmatiser des\njeunes en leur donnant trop tôt un diagnostic et si on les amène à\nprendre une médication qui pourrait être superue. Les critères\nproposés par le DSM-5 sont présentés dans l’encadré 17.2.\n(suite)\nIl est quand même surprenant que ces critères ne fassent\naucunement mention des baisses cognitives et fonctionnelles\nni des symptômes négatifs, qui sont pourtant beaucoup plus\nannonciateurs d’une possible évolution vers la schizophrénie,\nque les symptômes psychotiques du critère A de l’encadré 17.2.\n17.4.5 Mode d’apparition de la psychose\nChez plus de 75 % des jeunes qui sourent de schizophrénie\n(Cannon & al., 2008), les parents, les proches et les ensei-\ngnants mentionnent que, au cours de leur enfance et surtout de\nleur adolescence, ces jeunes présentaient des comportements\nparticuliers : « Il n’était pas comme les autres », « bohème », « ori-\nginal », « marginal », « il avait des comportements ou des idées\nbizarres », « il avait des réactions excessives devant des situations\nbanales », « il était solitaire, isolé, avait peu d’amis ».\nLes dicultés de socialisation ont habituellement été mani-\nfestes : soit qu’il ait été un enfant inhibé, timide, renfermé, néga-\ntiviste, qui « restait dans son coin » ; soit qu’il ait été envahissant,\naccaparant, intrusif, opposant, nerveux, hyperactif. Chez les\npatients atteints de schizophrénie à début précoce, les anomalies\nde développement sont souvent plus marquées. Chez les moins de\n14 ans, le début de la maladie est insidieux, souvent dicile à\ndiagnostiquer et à diérencier des autres troubles neurodévelop-\npementaux. L’enfant peut présenter un ou des éléments suivants :\nil acquiert des rituels ou des habitudes bizarres ; il présente des\nproblèmes de langage, des troubles touchant la motricité ne, le\n",
+  "raw_text_sha256": "86f9c4443bdb1e8f25e7f7ae88db0fd8037ee7ae1cefd134dbf85bc95ac0824d",
+  "source_page_display": 365,
+  "source_page_index": 364
+}

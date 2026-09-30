@@ -1,0 +1,160 @@
+{
+  "block_sequence_sha256": "71ef27ac228ff636331be3456f29efbf31239c93dff1dee25427680bea7f80b7",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        470.3879699707031,
+        758.8693237304688
+      ],
+      "block_id": "page-0113-block-0001",
+      "order": 1,
+      "text": "96\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2\nDéterminants bio-psycho-sociaux\n",
+      "text_sha256": "267355efd4bb52ce86601fe511d28c2a61e60f9071fe9215e08a7844c5d82c65"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.48828125,
+        395.20849609375
+      ],
+      "block_id": "page-0113-block-0002",
+      "order": 2,
+      "text": "d’enfants atteints avec le risque de présence de la maladie chez\nles parents biologiques d’enfants non atteints. De plus, on peut\ncomparer le risque de présence de la maladie entre les parents\nbiologiques et les parents adoptifs des enfants atteints.\n• La seconde sélectionne des parents qui sourent de la maladie\net qui ont donné leur enfant en adoption. On compare alors\nle risque de présence de la maladie chez les enfants nés de\nparents atteints avec le risque de présence de la maladie chez\nles enfants adoptés nés de parents non atteints. On peut ainsi\ndissocier les composantes génétiques et environnementales\nde la transmission familiale. En eet, une transmission gé-\nnétique est l’explication la plus probable si on constate une\naugmentation de la fréquence de la maladie chez les parents\nbiologiques d’enfants adoptés malades et chez les enfants\nadoptés nés de parents malades.\nLa réalisation d’études d’adoption présente trois dicultés\nmajeures :\n• Il est dicile de retrouver les parents biologiques ou les\nenfants adoptés, en raison de la condentialité entourant le\nprocessus d’adoption.\n• Les personnes adoptées forment un groupe qui n’est pas né-\ncessairement représentatif de la population générale, puisque\nseule une petite minorité de la population est soumise au\nprocessus d’adoption. Il est donc dicile de déterminer s’il est\npossible de généraliser les résultats de ces études à l’ensemble\nde la population.\n• Puisque la proportion des enfants adoptés est faible, il est\nsouvent dicile d’obtenir un échantillon de taille susante\npour des maladies qui n’atteignent que quelques pour cent\nde la population.\n",
+      "text_sha256": "769baa8e79c6016107fd020867d3ca6546b6491186bb9e42f8bc4b7f847d7a83"
+    },
+    {
+      "bbox": [
+        306.0,
+        407.73681640625,
+        446.40411376953125,
+        423.87939453125
+      ],
+      "block_id": "page-0113-block-0003",
+      "order": 3,
+      "text": "5.2.3 Études de jumeaux\n",
+      "text_sha256": "9b540a067ebae3952f4988d45a37152e5792c71dc51f2f75887cb06a0abd23c1"
+    },
+    {
+      "bbox": [
+        306.0,
+        427.2158203125,
+        549.3501586914062,
+        725.45849609375
+      ],
+      "block_id": "page-0113-block-0004",
+      "order": 4,
+      "text": "Les études de jumeaux sont basées sur le fait que les jumeaux\nmonozygotes et dizygotes dièrent quant à la proportion des\ngènes qu’ils partagent alors qu’ils sont exposés aux mêmes\ninuences environnementales. D’une part, chez les jumeaux\nmonozygotes, les gènes sont identiques à 100 %, tandis que\nles jumeaux dizygotes ne partagent que 50 % de leur matériel\ngénétique. D’autre part, les jumeaux monozygotes et dizygotes\nont pour caractéristiques d’être nés en même temps, au sein\nde la même famille et de vivre dans le même environnement.\nSelon que le risque d’une maladie est inuencé par des facteurs\ngénétiques ou environnementaux, on note une diérence dans\nle taux de concordance (c.-à-d. dans le pourcentage de paires de\njumeaux où les deux personnes sont aectées par la maladie, par\nrapport à celui des paires de jumeaux où au moins un est atteint).\nEn eet, on observe un taux de concordance plus élevé chez les\njumeaux monozygotes que chez les jumeaux dizygotes en cas\nd’inuences génétiques en raison de la plus grande proportion\nde gènes partagés par les jumeaux monozygotes (Tandon & al.,\n2008). En cas d’inuences relevant de facteurs environnementaux\npartagés par deux jumeaux (p. ex., la perte d’un parent en bas\nâge), on note un taux de concordance similaire chez les jumeaux\nmonozygotes et dizygotes. Notons que le taux de concordance\nreste inférieur à 100 %, même chez les jumeaux monozygotes,\ncar certaines inuences environnementales peuvent ne pas être\npartagées par les deux jumeaux, telles l’attitude parentale envers\nchaque enfant ou des infections virales pendant la petite enfance.\n",
+      "text_sha256": "dc484b1c908ece7abeced71c342dffc064cc803fc62a9c99f48b70f4eaa385f4"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.9658203125,
+        291.2909851074219,
+        248.95849609375
+      ],
+      "block_id": "page-0113-block-0005",
+      "order": 5,
+      "text": "signalent la n de la séquence codante de l’ARNm (ce sont\nles codons stop), les 61 autres permettent de synthétiser les\n20 acides aminés et plusieurs codons peuvent donc désigner\nle même acide aminé. Dû à cette redondance des codons, le\ncode génétique est dit « dégénéré ». Cela a un eet protecteur\ncontre les mutations, puisque le remplacement d’un nucléotide\npar un autre peut ne pas modier l’acide aminé choisi pendant\nla traduction.\n• Une mutation est une modication de la séquence d’ADN,\nsurvenant spontanément ou sous l’eet d’une inuence envi-\nronnementale (p. ex., une exposition à des rayons ultraviolets).\nIl peut s’agir du remplacement d’un nucléotide par un autre,\nce qui modie l’acide aminé codé (il s’agit alors d’une forme\nspéciale de polymorphisme), mais aussi de la délétion (c.-à-d.\nla perte) ou de l’ajout d’un ou de plusieurs nucléotides. Si elle\nest située dans un gène, la mutation peut modier la trans-\ncription et la structure de la protéine dont le gène contrôle\nla synthèse, ou encore inactiver totalement le gène.\n",
+      "text_sha256": "472898a5624a4b8b58cd857ba663c6ec166407975c6aa32c1b3d14f484c919b9"
+    },
+    {
+      "bbox": [
+        59.29999923706055,
+        267.2431640625,
+        256.5984191894531,
+        286.2189636230469
+      ],
+      "block_id": "page-0113-block-0006",
+      "order": 6,
+      "text": "5.2\nÉpidémiologie génétique\n",
+      "text_sha256": "443e9229dd6b58e89a587a8da16b3a739e781f3dc31ac004b4395d0590415015"
+    },
+    {
+      "bbox": [
+        48.0,
+        299.9658203125,
+        291.3446044921875,
+        356.45849609375
+      ],
+      "block_id": "page-0113-block-0007",
+      "order": 7,
+      "text": "Les trois principales méthodologies utilisées en épidémiologie\ngénétique sont les études familiales, les études d’adoption et les\nétudes de jumeaux. Ce sont des étapes essentielles préalables à\nl’identication des gènes de susceptibilité puisqu’elles visent à\ndéterminer si des gènes sont en cause dans une maladie donnée.\n",
+      "text_sha256": "e02b6003f0000c17ffa9ae2092811e7d6bff641d691ce37fe384a72c9d5a98dc"
+    },
+    {
+      "bbox": [
+        48.0,
+        365.98681640625,
+        176.39459228515625,
+        382.12939453125
+      ],
+      "block_id": "page-0113-block-0008",
+      "order": 8,
+      "text": "5.2.1 Études familiales\n",
+      "text_sha256": "126045c79b5b6799efebed85b3e26cef09a2cef926996211e71c9a832c713ec5"
+    },
+    {
+      "bbox": [
+        48.0,
+        385.4658203125,
+        291.0936279296875,
+        441.95849609375
+      ],
+      "block_id": "page-0113-block-0009",
+      "order": 9,
+      "text": "Dans les études familiales, on détermine s’il y a transmission\nfamiliale de la maladie en mesurant et en comparant le risque\npour une maladie chez les apparentés de personnes atteintes\net le risque pour cette même maladie chez les apparentés de\npersonnes non atteintes.\n",
+      "text_sha256": "0e5712827978dad4c61526d0e63fc75e764001f672133aad035f177fa70a867e"
+    },
+    {
+      "bbox": [
+        48.0,
+        442.9658203125,
+        291.6741638183594,
+        556.95849609375
+      ],
+      "block_id": "page-0113-block-0010",
+      "order": 10,
+      "text": "Les études familiales ne nécessitent pas de groupes très\nparticuliers, puisqu’elles ne portent généralement que sur les\nfamilles nucléaires des personnes atteintes. Ainsi, la facilité de\nréalisation est le principal avantage de ces études par rapport\naux autres devis d’épidémiologie génétique (études d’adoption\net de jumeaux). Cependant, les études familiales ne permettent\npas de distinguer la transmission familiale d’origine génétique\net celle d’origine environnementale, puisque les membres d’une\nfamille partagent une partie de leurs gènes, mais aussi une partie\nde leur environnement.\n",
+      "text_sha256": "2581bdc34c484e4cab8e169acaf90658da8ae02a8bacc4ed4e820e8f73481c7e"
+    },
+    {
+      "bbox": [
+        48.0,
+        566.48681640625,
+        182.33993530273438,
+        582.62939453125
+      ],
+      "block_id": "page-0113-block-0011",
+      "order": 11,
+      "text": "5.2.2 Études d’adoption\n",
+      "text_sha256": "819e747849c6760eb0b4f46523e8bf19c97911486266e2b6d10f92e8cd82ae9a"
+    },
+    {
+      "bbox": [
+        48.0,
+        585.9658203125,
+        291.37335205078125,
+        724.95849609375
+      ],
+      "block_id": "page-0113-block-0012",
+      "order": 12,
+      "text": "Dans le processus d’adoption, des individus sont séparés de leur\nfamille biologique tôt dans leur vie. Ainsi, la concordance entre\ndes individus adoptés et leurs parents biologiques relativement\nà la présence ou à l’absence d’une maladie ou encore leur res-\nsemblance relativement à un trait continu (p. ex., le quotient\nintellectuel) ne s’explique que par des facteurs génétiques, puisque\nl’inuence environnementale est exercée par les parents adoptifs.\nIl est possible de recourir à deux stratégies :\n• La première sélectionne des personnes qui ont été adoptées\net qui sourent de la maladie étudiée, ainsi que des personnes\nadoptées qui ne sourent pas de cette maladie. On compare alors\nle risque de présence de la maladie chez les parents biologiques\n",
+      "text_sha256": "e1e5dd16434bb53dd6770f5d435f283d4cfb69936466910fc5477a58a9d003fc"
+    }
+  ],
+  "coordinates_sha256": "46658128341cedb57204ab0e5636646d86cb925d93b94dec17349644e5c5a54e",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0113",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "96\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2\nDéterminants bio-psycho-sociaux\nd’enfants atteints avec le risque de présence de la maladie chez\nles parents biologiques d’enfants non atteints. De plus, on peut\ncomparer le risque de présence de la maladie entre les parents\nbiologiques et les parents adoptifs des enfants atteints.\n• La seconde sélectionne des parents qui sourent de la maladie\net qui ont donné leur enfant en adoption. On compare alors\nle risque de présence de la maladie chez les enfants nés de\nparents atteints avec le risque de présence de la maladie chez\nles enfants adoptés nés de parents non atteints. On peut ainsi\ndissocier les composantes génétiques et environnementales\nde la transmission familiale. En eet, une transmission gé-\nnétique est l’explication la plus probable si on constate une\naugmentation de la fréquence de la maladie chez les parents\nbiologiques d’enfants adoptés malades et chez les enfants\nadoptés nés de parents malades.\nLa réalisation d’études d’adoption présente trois dicultés\nmajeures :\n• Il est dicile de retrouver les parents biologiques ou les\nenfants adoptés, en raison de la condentialité entourant le\nprocessus d’adoption.\n• Les personnes adoptées forment un groupe qui n’est pas né-\ncessairement représentatif de la population générale, puisque\nseule une petite minorité de la population est soumise au\nprocessus d’adoption. Il est donc dicile de déterminer s’il est\npossible de généraliser les résultats de ces études à l’ensemble\nde la population.\n• Puisque la proportion des enfants adoptés est faible, il est\nsouvent dicile d’obtenir un échantillon de taille susante\npour des maladies qui n’atteignent que quelques pour cent\nde la population.\n5.2.3 Études de jumeaux\nLes études de jumeaux sont basées sur le fait que les jumeaux\nmonozygotes et dizygotes dièrent quant à la proportion des\ngènes qu’ils partagent alors qu’ils sont exposés aux mêmes\ninuences environnementales. D’une part, chez les jumeaux\nmonozygotes, les gènes sont identiques à 100 %, tandis que\nles jumeaux dizygotes ne partagent que 50 % de leur matériel\ngénétique. D’autre part, les jumeaux monozygotes et dizygotes\nont pour caractéristiques d’être nés en même temps, au sein\nde la même famille et de vivre dans le même environnement.\nSelon que le risque d’une maladie est inuencé par des facteurs\ngénétiques ou environnementaux, on note une diérence dans\nle taux de concordance (c.-à-d. dans le pourcentage de paires de\njumeaux où les deux personnes sont aectées par la maladie, par\nrapport à celui des paires de jumeaux où au moins un est atteint).\nEn eet, on observe un taux de concordance plus élevé chez les\njumeaux monozygotes que chez les jumeaux dizygotes en cas\nd’inuences génétiques en raison de la plus grande proportion\nde gènes partagés par les jumeaux monozygotes (Tandon & al.,\n2008). En cas d’inuences relevant de facteurs environnementaux\npartagés par deux jumeaux (p. ex., la perte d’un parent en bas\nâge), on note un taux de concordance similaire chez les jumeaux\nmonozygotes et dizygotes. Notons que le taux de concordance\nreste inférieur à 100 %, même chez les jumeaux monozygotes,\ncar certaines inuences environnementales peuvent ne pas être\npartagées par les deux jumeaux, telles l’attitude parentale envers\nchaque enfant ou des infections virales pendant la petite enfance.\nsignalent la n de la séquence codante de l’ARNm (ce sont\nles codons stop), les 61 autres permettent de synthétiser les\n20 acides aminés et plusieurs codons peuvent donc désigner\nle même acide aminé. Dû à cette redondance des codons, le\ncode génétique est dit « dégénéré ». Cela a un eet protecteur\ncontre les mutations, puisque le remplacement d’un nucléotide\npar un autre peut ne pas modier l’acide aminé choisi pendant\nla traduction.\n• Une mutation est une modication de la séquence d’ADN,\nsurvenant spontanément ou sous l’eet d’une inuence envi-\nronnementale (p. ex., une exposition à des rayons ultraviolets).\nIl peut s’agir du remplacement d’un nucléotide par un autre,\nce qui modie l’acide aminé codé (il s’agit alors d’une forme\nspéciale de polymorphisme), mais aussi de la délétion (c.-à-d.\nla perte) ou de l’ajout d’un ou de plusieurs nucléotides. Si elle\nest située dans un gène, la mutation peut modier la trans-\ncription et la structure de la protéine dont le gène contrôle\nla synthèse, ou encore inactiver totalement le gène.\n5.2\nÉpidémiologie génétique\nLes trois principales méthodologies utilisées en épidémiologie\ngénétique sont les études familiales, les études d’adoption et les\nétudes de jumeaux. Ce sont des étapes essentielles préalables à\nl’identication des gènes de susceptibilité puisqu’elles visent à\ndéterminer si des gènes sont en cause dans une maladie donnée.\n5.2.1 Études familiales\nDans les études familiales, on détermine s’il y a transmission\nfamiliale de la maladie en mesurant et en comparant le risque\npour une maladie chez les apparentés de personnes atteintes\net le risque pour cette même maladie chez les apparentés de\npersonnes non atteintes.\nLes études familiales ne nécessitent pas de groupes très\nparticuliers, puisqu’elles ne portent généralement que sur les\nfamilles nucléaires des personnes atteintes. Ainsi, la facilité de\nréalisation est le principal avantage de ces études par rapport\naux autres devis d’épidémiologie génétique (études d’adoption\net de jumeaux). Cependant, les études familiales ne permettent\npas de distinguer la transmission familiale d’origine génétique\net celle d’origine environnementale, puisque les membres d’une\nfamille partagent une partie de leurs gènes, mais aussi une partie\nde leur environnement.\n5.2.2 Études d’adoption\nDans le processus d’adoption, des individus sont séparés de leur\nfamille biologique tôt dans leur vie. Ainsi, la concordance entre\ndes individus adoptés et leurs parents biologiques relativement\nà la présence ou à l’absence d’une maladie ou encore leur res-\nsemblance relativement à un trait continu (p. ex., le quotient\nintellectuel) ne s’explique que par des facteurs génétiques, puisque\nl’inuence environnementale est exercée par les parents adoptifs.\nIl est possible de recourir à deux stratégies :\n• La première sélectionne des personnes qui ont été adoptées\net qui sourent de la maladie étudiée, ainsi que des personnes\nadoptées qui ne sourent pas de cette maladie. On compare alors\nle risque de présence de la maladie chez les parents biologiques\n",
+  "raw_text_sha256": "f32451d24354e47c690abcdecbc8f2efd30d2406fa3d3caa8c2af5df1ef6dfe1",
+  "source_page_display": 114,
+  "source_page_index": 113
+}

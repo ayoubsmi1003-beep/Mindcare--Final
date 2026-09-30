@@ -1,0 +1,784 @@
+{
+  "block_sequence_sha256": "146cf12f83f92534b17e2550ca04ef3d8fb718126472deb3a7066112cbece820",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        746.822265625,
+        134.64450073242188,
+        758.9193725585938
+      ],
+      "block_id": "page-0015-block-0001",
+      "order": 1,
+      "text": "xiv\nAbréviations\n",
+      "text_sha256": "6c176610a971f3596554db3f826021a670b33ce2df2e501c8a7aa348c85b8067"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.76171875,
+        197.5361328125,
+        51.45849609375
+      ],
+      "block_id": "page-0015-block-0002",
+      "order": 2,
+      "text": "IRMAO-A: Inhibiteur réversible de la\n",
+      "text_sha256": "db945669d94838d0d347e949d4a1f2d6034c2a85aa5ed9226afc53cc1a977b21"
+    },
+    {
+      "bbox": [
+        48.0,
+        52.91582107543945,
+        198.71749877929688,
+        76.15850067138672
+      ],
+      "block_id": "page-0015-block-0003",
+      "order": 3,
+      "text": "monoamine-oxydase de type A\nIRMf: Imagerie par résonance magné-\n",
+      "text_sha256": "695ef1894b60e3ce0dfad63ff046ba3ae5b84fd308383a8d1ef0769dc3d84c71"
+    },
+    {
+      "bbox": [
+        48.0,
+        77.6158218383789,
+        202.8175048828125,
+        100.8584976196289
+      ],
+      "block_id": "page-0015-block-0004",
+      "order": 4,
+      "text": "tique fonctionnelle\nIRMN: Imagerie par résonance magné-\n",
+      "text_sha256": "9b1d2521da70a82537c5bde5fea91252c1689a5fc7a6cb558090807bddf407c6"
+    },
+    {
+      "bbox": [
+        48.0,
+        102.3158187866211,
+        191.8175048828125,
+        125.5584945678711
+      ],
+      "block_id": "page-0015-block-0005",
+      "order": 5,
+      "text": "tique nucléaire\nIRMNf: Imagerie par résonance ma-\n",
+      "text_sha256": "ac773cf62ef893255c863d2dbecb1f246a2bd3a5509452a5e9db2b0b688e3731"
+    },
+    {
+      "bbox": [
+        48.0,
+        127.01582336425781,
+        197.19683837890625,
+        174.95849609375
+      ],
+      "block_id": "page-0015-block-0006",
+      "order": 6,
+      "text": "gnétique nucléaire fonctionnelle\nvoir IRMf\nIRMs: Spectroscopie IRM\nIRND: Inhibiteur du recaptage de la\n",
+      "text_sha256": "bcd9552e4f724373542e8d067a0165c3e99285af6777e670d645579c915f80d9"
+    },
+    {
+      "bbox": [
+        48.0,
+        176.4158172607422,
+        197.924072265625,
+        199.6584930419922
+      ],
+      "block_id": "page-0015-block-0007",
+      "order": 7,
+      "text": "nor adrénaline et de la dopamine\nIRSN : Inhibiteur du recaptage de la\n",
+      "text_sha256": "a2988335a94346cd9e76dd6a34be5a0f2dd779a27b96d36a74353ee08c74a788"
+    },
+    {
+      "bbox": [
+        48.0,
+        201.11582946777344,
+        200.39630126953125,
+        224.35850524902344
+      ],
+      "block_id": "page-0015-block-0008",
+      "order": 8,
+      "text": "sérotonine et de la noradrénaline\nISAM: International Society of\n",
+      "text_sha256": "bcb73441e20dfc95defff7297838d3dc073b17dc5ad7be06d502a2c1674c8cfc"
+    },
+    {
+      "bbox": [
+        48.0,
+        225.81582641601562,
+        162.22059631347656,
+        249.05850219726562
+      ],
+      "block_id": "page-0015-block-0009",
+      "order": 9,
+      "text": "Addiction Medicine\nISO: International Standards\n",
+      "text_sha256": "4f2f9aba7ad99504878c76461cadb18c6c0edb862bd26142612f316aade014e9"
+    },
+    {
+      "bbox": [
+        48.0,
+        250.51583862304688,
+        202.41749572753906,
+        285.70849609375
+      ],
+      "block_id": "page-0015-block-0010",
+      "order": 10,
+      "text": "Organization, Organisation inter-\nnationale de normalisation\nISRS: Inhibiteur sélectif du recaptage\n",
+      "text_sha256": "93bce13e3d1018616c544b01dbd81b70dbf9c8e96bb3bf9a47b02a7e833fd570"
+    },
+    {
+      "bbox": [
+        48.0,
+        287.16583251953125,
+        202.33815002441406,
+        310.40850830078125
+      ],
+      "block_id": "page-0015-block-0011",
+      "order": 11,
+      "text": "de la sérotonine\nISRSN: Inhibiteur sélectif du recaptage\n",
+      "text_sha256": "c446a41ce2eb66049948067dc3ed527460d78665e132adc8596dcaab6e4bb3de"
+    },
+    {
+      "bbox": [
+        48.0,
+        311.8658142089844,
+        200.21749877929688,
+        347.0585021972656
+      ],
+      "block_id": "page-0015-block-0012",
+      "order": 12,
+      "text": "de la sérotonine et de la noradré-\nnaline\nISSTD: International Society for the\n",
+      "text_sha256": "13f8dbe31a3e5033314b3f80e7050f4230f9ee2484617bddd59e7593d122c81e"
+    },
+    {
+      "bbox": [
+        48.0,
+        348.5158386230469,
+        204.1761016845703,
+        371.7585144042969
+      ],
+      "block_id": "page-0015-block-0013",
+      "order": 13,
+      "text": "Study of Trauma and Dissociation\nITSS: Infections transmissibles sexuel-\n",
+      "text_sha256": "54d83d5e034ae4354119651908f9210933928b58d046834f35f1935e1446c44e"
+    },
+    {
+      "bbox": [
+        48.0,
+        373.2158203125,
+        184.0084991455078,
+        409.20849609375
+      ],
+      "block_id": "page-0015-block-0014",
+      "order": 14,
+      "text": "lement et par le sang\nIV: Intraveineux\nIVAC: Indemnisation aux victimes\n",
+      "text_sha256": "0efac059d0683afcb20515dc83047f47133ce33cbffdc228b5795b3ed7dcbf8a"
+    },
+    {
+      "bbox": [
+        48.0,
+        410.66583251953125,
+        168.38914489746094,
+        433.90850830078125
+      ],
+      "block_id": "page-0015-block-0015",
+      "order": 15,
+      "text": "d’actes criminels\nJCAHO: Joint Commission on\n",
+      "text_sha256": "7a8c7769c2763b330c7eb85bc08b933a40f59552e24d72e8fc1b609facaf50bc"
+    },
+    {
+      "bbox": [
+        48.0,
+        435.3658142089844,
+        186.81922912597656,
+        483.3085021972656
+      ],
+      "block_id": "page-0015-block-0016",
+      "order": 16,
+      "text": "Accre ditation of Health Care\nOrganisations\nJP: Jeu pathologique\nK-FTDS: Kiddie formal thought di­\n",
+      "text_sha256": "6567e7e9e2459651bd1ccf1118e8e547c8c54ac58b66308737530bce954cc299"
+    },
+    {
+      "bbox": [
+        48.0,
+        484.8215026855469,
+        197.75985717773438,
+        508.0085144042969
+      ],
+      "block_id": "page-0015-block-0017",
+      "order": 17,
+      "text": "sorder rating scale\nK-SADS: Kiddie Schedule for Aective\n",
+      "text_sha256": "6ba97e9290ca470a8824cad2a25c1c0efb80f6138c5587d7d60697f4fe5c39c3"
+    },
+    {
+      "bbox": [
+        48.0,
+        509.521484375,
+        183.10423278808594,
+        545.45849609375
+      ],
+      "block_id": "page-0015-block-0018",
+      "order": 18,
+      "text": "Disorders and Schizophrenia\nLCR: Liquide céphalorachidien\nL-DOPA: Lévo-\n",
+      "text_sha256": "719abcfa4b3bb497724d14663329cf18907ad57218006b82d82c91f16662fa21"
+    },
+    {
+      "bbox": [
+        48.0,
+        546.9158325195312,
+        193.58401489257812,
+        582.9085083007812
+      ],
+      "block_id": "page-0015-block-0019",
+      "order": 19,
+      "text": "dihydroxyphénylalanine\nLED: Lupus érythémateux disséminé\nLESCA: Leucoencéphalopathie\n",
+      "text_sha256": "fee46cef89e3195f85ab14e5998a49f9a78e1d4ac4937b934981175e8dce60cd"
+    },
+    {
+      "bbox": [
+        48.0,
+        584.3658447265625,
+        186.68450927734375,
+        607.6085205078125
+      ],
+      "block_id": "page-0015-block-0020",
+      "order": 20,
+      "text": "d’origine artériosclérotique\nLH: Luteinizing hormone, hormone\n",
+      "text_sha256": "25dfec1c1e12308cba07cc85a7a9cb481074ccef0218f2fead162c5c7075c768"
+    },
+    {
+      "bbox": [
+        48.0,
+        609.0658569335938,
+        203.6943359375,
+        657.8085327148438
+      ],
+      "block_id": "page-0015-block-0021",
+      "order": 21,
+      "text": "lutéinisante\nLSD : Diéthylamide de l’acide lysergique\nMAB: Maladie aective bipolaire\nMacCAT-T: Macarthur competence\n",
+      "text_sha256": "852636a93b090e06356e37beb560159e15fd0df5d9cdfc43cac440dba32884e6"
+    },
+    {
+      "bbox": [
+        48.0,
+        659.3214721679688,
+        197.16551208496094,
+        682.5084838867188
+      ],
+      "block_id": "page-0015-block-0022",
+      "order": 22,
+      "text": "assessment tool­treatment\nMADRS : Montgomery­Asberg depres­\n",
+      "text_sha256": "af33644910f0df66ecde33ce16e3afe5eb2e243192069e4eb8369b534a97b200"
+    },
+    {
+      "bbox": [
+        48.0,
+        684.021484375,
+        198.938232421875,
+        707.20849609375
+      ],
+      "block_id": "page-0015-block-0023",
+      "order": 23,
+      "text": "sion rating scale\nMAST: Michigan alcoholism screening\n",
+      "text_sha256": "686941ab1e928a52d0f5480530d0657487db1adb5b1598e3fa9938f63a5967c6"
+    },
+    {
+      "bbox": [
+        72.0,
+        708.7214965820312,
+        85.281005859375,
+        719.0564575195312
+      ],
+      "block_id": "page-0015-block-0024",
+      "order": 24,
+      "text": "test\n",
+      "text_sha256": "f2ca1bb6c7e907d06dafe4687e579fce76b37e4e93b7605022da52e6ccc26fd2"
+    },
+    {
+      "bbox": [
+        220.0,
+        40.76171875,
+        341.2341003417969,
+        51.45849609375
+      ],
+      "block_id": "page-0015-block-0025",
+      "order": 25,
+      "text": "MATRICS: Measurement And\n",
+      "text_sha256": "e832e3b76186ba3dae39bf2136f1641281411de994a4281a1f53ed438b638c5b"
+    },
+    {
+      "bbox": [
+        220.0,
+        52.671485900878906,
+        368.365478515625,
+        99.65850067138672
+      ],
+      "block_id": "page-0015-block-0026",
+      "order": 26,
+      "text": "Treatment Research to Improve\nCognition in Schizophrenia\nMBT: Mentalization­based treatment\nMCMI-III: Millon clinical multiaxial\n",
+      "text_sha256": "6fffa9628c532d9b519da10ba68f1f7c0b3ed6d90c57e1e72a05df7ee7691e39"
+    },
+    {
+      "bbox": [
+        220.0,
+        100.9214859008789,
+        365.7250061035156,
+        148.70849609375
+      ],
+      "block_id": "page-0015-block-0027",
+      "order": 27,
+      "text": "inventory – iii\nMCV: Maladies cardiovasculaires\nMDA: Méthylènedioxyamphétamine\nMDMA: 3-4 méthylène-dioxy-méth-\n",
+      "text_sha256": "d12fda51625debd9be63543271374cc8f95c80eee66d29ce408b9a5737504810"
+    },
+    {
+      "bbox": [
+        220.0,
+        149.86582946777344,
+        358.8254089355469,
+        185.30850219726562
+      ],
+      "block_id": "page-0015-block-0028",
+      "order": 28,
+      "text": "amphétamine\nmÉq: Milliéquivalent\nMHPG: Méthoxy-hydroxy-phényl-\n",
+      "text_sha256": "fae25dda22a0e106dacd0ba5a47a633592ccd8be4a30cdb232d011d358ef6ee5"
+    },
+    {
+      "bbox": [
+        220.0,
+        186.4658203125,
+        363.8720703125,
+        221.85850524902344
+      ],
+      "block_id": "page-0015-block-0029",
+      "order": 29,
+      "text": "glycol\nMIBG: Méta-iodo-benzyl-guanidine\nMID: Multidimensional Inventory of\n",
+      "text_sha256": "76322263e5709f37d142c952bd9c5f69ceafe67fdbd6c8e195b56c0145718782"
+    },
+    {
+      "bbox": [
+        220.0,
+        223.12149047851562,
+        376.5256042480469,
+        258.45849609375
+      ],
+      "block_id": "page-0015-block-0030",
+      "order": 30,
+      "text": "Dissociation\nmmol: Millimole\nMMPI-2: Minnesota multiphasic perso­\n",
+      "text_sha256": "260b190fd2baf353d933cbb65eb1199b06ed38a3e7dde5a461676faf80b1ce27"
+    },
+    {
+      "bbox": [
+        220.0,
+        259.6714782714844,
+        369.0623474121094,
+        282.5585021972656
+      ],
+      "block_id": "page-0015-block-0031",
+      "order": 31,
+      "text": "nality inventory\nMMPI-II-RF: Minnesota Multiphasic\n",
+      "text_sha256": "99394ccea3ffacc7ad158cf846aa0a7f78cc14b7e2d75001d750c4d01116d2f1"
+    },
+    {
+      "bbox": [
+        244.0,
+        283.0151672363281,
+        347.82867431640625,
+        294.1564636230469
+      ],
+      "block_id": "page-0015-block-0032",
+      "order": 32,
+      "text": "Personality Inventory – 2nd\n",
+      "text_sha256": "9050c44fcc095dff01125885501a4b9e4315c2d2fa63be7a8bd5c0f85b08000a"
+    },
+    {
+      "bbox": [
+        220.0,
+        295.47149658203125,
+        368.4375,
+        318.3584899902344
+      ],
+      "block_id": "page-0015-block-0033",
+      "order": 33,
+      "text": "Edition – restructured form\nMMRM: Mixed­eect model repeated\n",
+      "text_sha256": "883e8997dab2de28e4fb2102aac4cee79447defcb0a3acc37d41847f126cab07"
+    },
+    {
+      "bbox": [
+        220.0,
+        319.5715026855469,
+        376.0323181152344,
+        342.45849609375
+      ],
+      "block_id": "page-0015-block-0034",
+      "order": 34,
+      "text": "measure\nMMSE: Mini­mental state examination\n",
+      "text_sha256": "729bd58c89a64e76d4a01272e894deccf54ac12f4b1ce9409ef20ec5059ee6c6"
+    },
+    {
+      "bbox": [
+        220.0,
+        343.66583251953125,
+        375.7170104980469,
+        379.0585021972656
+      ],
+      "block_id": "page-0015-block-0035",
+      "order": 35,
+      "text": "(Folstein)\nMoCA: Montreal cognitive assessment\nMOR: Mouvements oculaires rapides =\n",
+      "text_sha256": "a887dfcac87e17004601594c7d866e0c32e9fd98efad3ddfe39f6d64b74947da"
+    },
+    {
+      "bbox": [
+        220.0,
+        380.2158203125,
+        349.76849365234375,
+        440.5585021972656
+      ],
+      "block_id": "page-0015-block-0036",
+      "order": 36,
+      "text": "REM : Rapid eye movement\nMP: Maladie de Parkinson\nMPH: Méthylphénidate\nMRI: Mental research institute\nMSAD: McLean Study of Adult\n",
+      "text_sha256": "457b9712b00fc8cd25ec6c69bd21706689abce8d0a32c64315261dc1cd13ff84"
+    },
+    {
+      "bbox": [
+        220.0,
+        441.771484375,
+        357.9154968261719,
+        464.65850830078125
+      ],
+      "block_id": "page-0015-block-0037",
+      "order": 37,
+      "text": "Development\nMSH: Melanocyte­stimulating hor­\n",
+      "text_sha256": "bf074b683f32c81dbfb81ad154508d56d0127fe4224950f5dd1a7772e8b06ea8"
+    },
+    {
+      "bbox": [
+        220.0,
+        465.8658142089844,
+        361.3470153808594,
+        551.1085205078125
+      ],
+      "block_id": "page-0015-block-0038",
+      "order": 38,
+      "text": "mone, hormone mélanotrope\nNA: Narcotiques Anonymes\nNA: Noradrénaline\nNAA: N-acétyl-aspartate\nNAC: Noyau accumbens\nNCS: National Comorbidity Study\nNCSR: National Comorbidity Study\n",
+      "text_sha256": "3ee1ef389c3bfb53fe2c069b6ccf5adff49297f29d3ddc0d868ac3ce3f89f76b"
+    },
+    {
+      "bbox": [
+        220.0,
+        552.3214721679688,
+        369.4574890136719,
+        575.20849609375
+      ],
+      "block_id": "page-0015-block-0039",
+      "order": 39,
+      "text": "replication\nNEO-PI-R: Neopersonality inventory­\n",
+      "text_sha256": "5a0c3675455898ba37d0a6c0d39f005fea47040ddc84949c5d709c48b65bf8b5"
+    },
+    {
+      "bbox": [
+        220.0,
+        576.4215087890625,
+        354.8812561035156,
+        599.3585205078125
+      ],
+      "block_id": "page-0015-block-0040",
+      "order": 40,
+      "text": "revised\nNESARC : National Epidemiologic\n",
+      "text_sha256": "b8bb1d2a29b4cdf9319f4c4132d43bc44f79bd9af29ced40676aa0ceb7a87101"
+    },
+    {
+      "bbox": [
+        220.0,
+        600.5714721679688,
+        364.9889831542969,
+        635.1085205078125
+      ],
+      "block_id": "page-0015-block-0041",
+      "order": 41,
+      "text": "Survey of Alcohol and Related\nConditions\nNGF: Nerve growth factor, facteur de\n",
+      "text_sha256": "90bce70b97a7ae3364ea72a0d26ec28c3a09ac8bf46687136b04304c9651431a"
+    },
+    {
+      "bbox": [
+        220.0,
+        636.2658081054688,
+        364.83673095703125,
+        659.2584838867188
+      ],
+      "block_id": "page-0015-block-0042",
+      "order": 42,
+      "text": "croissance neuronale\nNHSCRD: National Health Services’\n",
+      "text_sha256": "7efd60e1eb1ca9520156e784abce0d81146439217a251922dacb5efc6622924e"
+    },
+    {
+      "bbox": [
+        220.0,
+        660.4158325195312,
+        362.09765625,
+        707.45849609375
+      ],
+      "block_id": "page-0015-block-0043",
+      "order": 43,
+      "text": "Centre for Reviews and\nDissemination\nNIA : National Institute on Aging\nNIMH: National Institute of Mental\n",
+      "text_sha256": "0e73c4345572e14390acb5ccac819d288a874c265afba53b7b2a48a7e0b39646"
+    },
+    {
+      "bbox": [
+        244.0,
+        708.6658325195312,
+        270.3625183105469,
+        719.1585083007812
+      ],
+      "block_id": "page-0015-block-0044",
+      "order": 44,
+      "text": "Health\n",
+      "text_sha256": "6864e88b2acb50395a3efb2033a1c4e616f094f473a0ad490b0f20062e833061"
+    },
+    {
+      "bbox": [
+        392.0,
+        40.76171875,
+        543.0916137695312,
+        51.45849609375
+      ],
+      "block_id": "page-0015-block-0045",
+      "order": 45,
+      "text": "NLAES : National longitudinal alcohol\n",
+      "text_sha256": "b46cefa9fa3a40be26c53f40fca51e9e8fa9edd8ce8d3bb1cad4baf14399ab85"
+    },
+    {
+      "bbox": [
+        392.0,
+        52.671485900878906,
+        545.3284912109375,
+        150.20849609375
+      ],
+      "block_id": "page-0015-block-0046",
+      "order": 46,
+      "text": "epidemiologic survey\nNMDA: N-méthyl-D-aspartate\nNNH: Number needed to harm\nNNT: Number needed to treat\nNPY: Neuropeptide Y\nNRL: Neuroleptique\nNSA: Negative symptoms assessment\nNSDUH: National Survey on Drug Use\n",
+      "text_sha256": "89c2bf2bc2cf94d48c968565138a8c739fd49a1d49cd8367a507c327b6042da8"
+    },
+    {
+      "bbox": [
+        392.0,
+        151.42149353027344,
+        531.5098266601562,
+        174.30850219726562
+      ],
+      "block_id": "page-0015-block-0047",
+      "order": 47,
+      "text": "and Health\nODC: Obsession d’une dysmorphie\n",
+      "text_sha256": "6e5b793fff1c2f91a89c2f29d597bb1d405999ff6e22f823d36d6d0b7305a943"
+    },
+    {
+      "bbox": [
+        392.0,
+        175.4658203125,
+        516.2158813476562,
+        198.4084930419922
+      ],
+      "block_id": "page-0015-block-0048",
+      "order": 48,
+      "text": "corporelle\nODIN: Outcome of Depression\n",
+      "text_sha256": "79229376e6abdfb9d6c9c83dd20d889e75654e35f114d15ff7a5dbf689702106"
+    },
+    {
+      "bbox": [
+        392.0,
+        199.5158233642578,
+        548.1957397460938,
+        222.45849609375
+      ],
+      "block_id": "page-0015-block-0049",
+      "order": 49,
+      "text": "International Network\nOICS: Organe international de contrôle\n",
+      "text_sha256": "204876f0a1752b5f1af9814819f0fb1874246a60f6658e6fe01d1739e5d00904"
+    },
+    {
+      "bbox": [
+        392.0,
+        223.61582946777344,
+        529.07421875,
+        246.55850219726562
+      ],
+      "block_id": "page-0015-block-0050",
+      "order": 50,
+      "text": "des stupéants\nOMS: Organisation mondiale de la\n",
+      "text_sha256": "135392707035281e422345bdae79eca0d296ad27378e59b162150c17cd6bacce"
+    },
+    {
+      "bbox": [
+        392.0,
+        247.7158203125,
+        529.6889038085938,
+        270.65850830078125
+      ],
+      "block_id": "page-0015-block-0051",
+      "order": 51,
+      "text": "santé\nONG: Organisation non gouverne-\n",
+      "text_sha256": "f4a34956280ebac3279dd7197405ec984ceedc3d7939f3b174d6c9eed06354e8"
+    },
+    {
+      "bbox": [
+        392.0,
+        271.8158264160156,
+        540.6175537109375,
+        294.7585144042969
+      ],
+      "block_id": "page-0015-block-0052",
+      "order": 52,
+      "text": "mentale\nOPTSQ: Ordre professionnel des tra-\n",
+      "text_sha256": "5120d498596ea66f06f84b9f4daad43861ad06aa90dcd411e8d313b43e6a4fac"
+    },
+    {
+      "bbox": [
+        392.0,
+        295.91583251953125,
+        525.2496337890625,
+        343.70849609375
+      ],
+      "block_id": "page-0015-block-0053",
+      "order": 53,
+      "text": "vailleurs sociaux du Québec\nORL: Otorhinolaryngologie\nP.A.: Pression artérielle\nPACT: Program of Assertive\n",
+      "text_sha256": "d9f7937d050866d9daae2e9f509e1a8a440eb1caf951e96a14291c4757de0e73"
+    },
+    {
+      "bbox": [
+        392.0,
+        344.9214782714844,
+        522.1896362304688,
+        367.8085021972656
+      ],
+      "block_id": "page-0015-block-0054",
+      "order": 54,
+      "text": "Community Treatment\nPAN: Personnalité apparemment\n",
+      "text_sha256": "92bec7d91204d38eb4460265911f0fb6cd76b0f48aa29f4507145d73d4a88ae7"
+    },
+    {
+      "bbox": [
+        392.0,
+        368.9658203125,
+        523.70703125,
+        391.90850830078125
+      ],
+      "block_id": "page-0015-block-0055",
+      "order": 55,
+      "text": "normale\nPANDAS: Pediatric autoimmune\n",
+      "text_sha256": "3217bb6f25e5e5c46118b62628278fbd2d35d91627275337e5314fdc9d4be909"
+    },
+    {
+      "bbox": [
+        392.0,
+        393.1214904785156,
+        545.91552734375,
+        427.65850830078125
+      ],
+      "block_id": "page-0015-block-0056",
+      "order": 56,
+      "text": "neuro psychiatric disorders associ­\nated with streptococcal infections\nPANSS: Positive and Negative\n",
+      "text_sha256": "aedd83dd42e5673a2f609ae6a5ae972c9d889252acddb80dda3adc9b79c9ba80"
+    },
+    {
+      "bbox": [
+        392.0,
+        428.8714904785156,
+        547.7295532226562,
+        476.6084899902344
+      ],
+      "block_id": "page-0015-block-0057",
+      "order": 57,
+      "text": "Symptoms of Schizophrenia\nPASM: Plan d’action en santé mentale\nPCL-R: Psychopathy checklist – revised\nPCP: 1-1-phényl-cyclohexyl piperidine,\n",
+      "text_sha256": "adebfa81ce36e127a409a8118a3b7dd31d7965d2a0cb28149ab83ca5880c1108"
+    },
+    {
+      "bbox": [
+        392.0,
+        477.7658386230469,
+        534.8154907226562,
+        500.70849609375
+      ],
+      "block_id": "page-0015-block-0058",
+      "order": 58,
+      "text": "phencyclidine\nPDQ-4: Personality diagnostic ques­\n",
+      "text_sha256": "77bfd78d3d13f08ff4e73b1762c620b8f3f8b5f1146934aa4538193a351fa2c6"
+    },
+    {
+      "bbox": [
+        392.0,
+        501.9214782714844,
+        530.16552734375,
+        537.2584838867188
+      ],
+      "block_id": "page-0015-block-0059",
+      "order": 59,
+      "text": "tionnaire – 4\nPE: Personnalité émotionnelle\nPET-scan: Positron emission tomo­\n",
+      "text_sha256": "5d5476fa32ce9b1d71b5f11348dd375e71aa1d3a82321fe98a9b2770d174f6de"
+    },
+    {
+      "bbox": [
+        392.0,
+        538.4158325195312,
+        546.7507934570312,
+        573.0084838867188
+      ],
+      "block_id": "page-0015-block-0060",
+      "order": 60,
+      "text": "graphy scan = TEP : Tomographie\npar émission de positrons\nPGRO: Psychothérapie gestaltiste des\n",
+      "text_sha256": "6ab74fd780c2d0a1a391320e7672213a6a9391f19f80c2a20390d53746f5fee5"
+    },
+    {
+      "bbox": [
+        392.0,
+        574.1658325195312,
+        536.4175415039062,
+        609.5084838867188
+      ],
+      "block_id": "page-0015-block-0061",
+      "order": 61,
+      "text": "relations d’objet\nPHQ: Patient health questionnaire\nPII: Plan d’intervention interdiscipli-\n",
+      "text_sha256": "dbee5dceeb8c7333d1de39e5fc86bac25e757a102bb674f1d955bdaa9073bbe4"
+    },
+    {
+      "bbox": [
+        392.0,
+        610.6658325195312,
+        543.4430541992188,
+        670.95849609375
+      ],
+      "block_id": "page-0015-block-0062",
+      "order": 62,
+      "text": "naire\nPLT: Potentialisation à long terme\nPNI: Pathological narcissism inventory\nPO: Per os, par la bouche\nPOR: Pratiques organisationnelles\n",
+      "text_sha256": "74fccfb4994590f52302803fdec1d80d9bb2f2402a39142c7042629ea7dcca1a"
+    },
+    {
+      "bbox": [
+        392.0,
+        672.1158447265625,
+        514.0305786132812,
+        707.5084838867188
+      ],
+      "block_id": "page-0015-block-0063",
+      "order": 63,
+      "text": "re quises\nPR: Prévention de la réponse\nPREM: Plan régional d’eectifs\n",
+      "text_sha256": "7d710a4e6134d3bf8f42e078549e5f9af41a258ce39162aa7e799b4ba58dbc8c"
+    },
+    {
+      "bbox": [
+        416.0,
+        708.6658325195312,
+        453.80999755859375,
+        719.1585083007812
+      ],
+      "block_id": "page-0015-block-0064",
+      "order": 64,
+      "text": "médicaux\n",
+      "text_sha256": "45001f9322d755e082aa51d27fd8f5def1647b25c7fb60c8b12b8d755a763150"
+    }
+  ],
+  "coordinates_sha256": "0a6cfb2e5ad9a123ba9750eeb9bc826e6ac0bc578dc8d5a98f35abcbccd33118",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0015",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "xiv\nAbréviations\nIRMAO-A: Inhibiteur réversible de la\nmonoamine-oxydase de type A\nIRMf: Imagerie par résonance magné-\ntique fonctionnelle\nIRMN: Imagerie par résonance magné-\ntique nucléaire\nIRMNf: Imagerie par résonance ma-\ngnétique nucléaire fonctionnelle\nvoir IRMf\nIRMs: Spectroscopie IRM\nIRND: Inhibiteur du recaptage de la\nnor adrénaline et de la dopamine\nIRSN : Inhibiteur du recaptage de la\nsérotonine et de la noradrénaline\nISAM: International Society of\nAddiction Medicine\nISO: International Standards\nOrganization, Organisation inter-\nnationale de normalisation\nISRS: Inhibiteur sélectif du recaptage\nde la sérotonine\nISRSN: Inhibiteur sélectif du recaptage\nde la sérotonine et de la noradré-\nnaline\nISSTD: International Society for the\nStudy of Trauma and Dissociation\nITSS: Infections transmissibles sexuel-\nlement et par le sang\nIV: Intraveineux\nIVAC: Indemnisation aux victimes\nd’actes criminels\nJCAHO: Joint Commission on\nAccre ditation of Health Care\nOrganisations\nJP: Jeu pathologique\nK-FTDS: Kiddie formal thought di­\nsorder rating scale\nK-SADS: Kiddie Schedule for Aective\nDisorders and Schizophrenia\nLCR: Liquide céphalorachidien\nL-DOPA: Lévo-\ndihydroxyphénylalanine\nLED: Lupus érythémateux disséminé\nLESCA: Leucoencéphalopathie\nd’origine artériosclérotique\nLH: Luteinizing hormone, hormone\nlutéinisante\nLSD : Diéthylamide de l’acide lysergique\nMAB: Maladie aective bipolaire\nMacCAT-T: Macarthur competence\nassessment tool­treatment\nMADRS : Montgomery­Asberg depres­\nsion rating scale\nMAST: Michigan alcoholism screening\ntest\nMATRICS: Measurement And\nTreatment Research to Improve\nCognition in Schizophrenia\nMBT: Mentalization­based treatment\nMCMI-III: Millon clinical multiaxial\ninventory – iii\nMCV: Maladies cardiovasculaires\nMDA: Méthylènedioxyamphétamine\nMDMA: 3-4 méthylène-dioxy-méth-\namphétamine\nmÉq: Milliéquivalent\nMHPG: Méthoxy-hydroxy-phényl-\nglycol\nMIBG: Méta-iodo-benzyl-guanidine\nMID: Multidimensional Inventory of\nDissociation\nmmol: Millimole\nMMPI-2: Minnesota multiphasic perso­\nnality inventory\nMMPI-II-RF: Minnesota Multiphasic\nPersonality Inventory – 2nd\nEdition – restructured form\nMMRM: Mixed­eect model repeated\nmeasure\nMMSE: Mini­mental state examination\n(Folstein)\nMoCA: Montreal cognitive assessment\nMOR: Mouvements oculaires rapides =\nREM : Rapid eye movement\nMP: Maladie de Parkinson\nMPH: Méthylphénidate\nMRI: Mental research institute\nMSAD: McLean Study of Adult\nDevelopment\nMSH: Melanocyte­stimulating hor­\nmone, hormone mélanotrope\nNA: Narcotiques Anonymes\nNA: Noradrénaline\nNAA: N-acétyl-aspartate\nNAC: Noyau accumbens\nNCS: National Comorbidity Study\nNCSR: National Comorbidity Study\nreplication\nNEO-PI-R: Neopersonality inventory­\nrevised\nNESARC : National Epidemiologic\nSurvey of Alcohol and Related\nConditions\nNGF: Nerve growth factor, facteur de\ncroissance neuronale\nNHSCRD: National Health Services’\nCentre for Reviews and\nDissemination\nNIA : National Institute on Aging\nNIMH: National Institute of Mental\nHealth\nNLAES : National longitudinal alcohol\nepidemiologic survey\nNMDA: N-méthyl-D-aspartate\nNNH: Number needed to harm\nNNT: Number needed to treat\nNPY: Neuropeptide Y\nNRL: Neuroleptique\nNSA: Negative symptoms assessment\nNSDUH: National Survey on Drug Use\nand Health\nODC: Obsession d’une dysmorphie\ncorporelle\nODIN: Outcome of Depression\nInternational Network\nOICS: Organe international de contrôle\ndes stupéants\nOMS: Organisation mondiale de la\nsanté\nONG: Organisation non gouverne-\nmentale\nOPTSQ: Ordre professionnel des tra-\nvailleurs sociaux du Québec\nORL: Otorhinolaryngologie\nP.A.: Pression artérielle\nPACT: Program of Assertive\nCommunity Treatment\nPAN: Personnalité apparemment\nnormale\nPANDAS: Pediatric autoimmune\nneuro psychiatric disorders associ­\nated with streptococcal infections\nPANSS: Positive and Negative\nSymptoms of Schizophrenia\nPASM: Plan d’action en santé mentale\nPCL-R: Psychopathy checklist – revised\nPCP: 1-1-phényl-cyclohexyl piperidine,\nphencyclidine\nPDQ-4: Personality diagnostic ques­\ntionnaire – 4\nPE: Personnalité émotionnelle\nPET-scan: Positron emission tomo­\ngraphy scan = TEP : Tomographie\npar émission de positrons\nPGRO: Psychothérapie gestaltiste des\nrelations d’objet\nPHQ: Patient health questionnaire\nPII: Plan d’intervention interdiscipli-\nnaire\nPLT: Potentialisation à long terme\nPNI: Pathological narcissism inventory\nPO: Per os, par la bouche\nPOR: Pratiques organisationnelles\nre quises\nPR: Prévention de la réponse\nPREM: Plan régional d’eectifs\nmédicaux\n",
+  "raw_text_sha256": "c15149439b4081b3c2961266d8f072a3c2d7d870c6f8c26f5063474c2d41f507",
+  "source_page_display": 16,
+  "source_page_index": 15
+}

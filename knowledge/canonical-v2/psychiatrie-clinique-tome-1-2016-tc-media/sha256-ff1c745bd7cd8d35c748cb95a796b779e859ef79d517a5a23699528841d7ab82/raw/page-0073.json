@@ -1,0 +1,160 @@
+{
+  "block_sequence_sha256": "e15a585d6ded11e2ce1ba4ef728eff2ea1e6006782ce98ff1ed50704222f9c19",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        447.807861328125,
+        758.8693237304688
+      ],
+      "block_id": "page-0073-block-0001",
+      "order": 1,
+      "text": "56\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 1\nIntroduction à la psychiatrie\n",
+      "text_sha256": "e6bfe910cec6f29fec9d00f411b7a1fac7854ffe05fe4b43e8c0a60f93395cbd"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.2650146484375,
+        260.8085021972656
+      ],
+      "block_id": "page-0073-block-0002",
+      "order": 2,
+      "text": "elle se doit d’être souple, uide, suivant les rythmes internes\nde l’individu et en relation avec son environnement. Elle obéit\nnécessairement à une logique relativement commune au groupe\nculturel d’appartenance et permet une communication facile\net appropriée aux circonstances. On peut concevoir la pensée\ncomme un cours d’eau, dont :\n• le cours peut être rapide, agité, tumultueux, calme, etc. ;\n• la forme peut être sinueuse, tortueuse, rectiligne, étroite,\nmajestueuse, etc. ;\n• le contenu peut être clair, limpide, boueux, contaminé, pollué,\netc.\nAinsi, on évalue la pensée selon son cours, sa forme et son\ncontenu. La parole demeure la voie royale de l’analyse de la\npensée, mais l’écriture est aussi utilisée pour arriver à cette n\n(lorsque l’expression verbale est limitée), tout comme le dessin\nchez l’enfant. Un trouble de la pensée désigne toute altération\nsignicative de la forme ou du cours de la pensée et se caractérise\ngénéralement par un discours désorganisé ou incohérent.\n",
+      "text_sha256": "3e7a5f1a662bb185c39e05965bc181c6c41b705623263b679ca869a8917c300c"
+    },
+    {
+      "bbox": [
+        306.0,
+        266.05230712890625,
+        549.3802490234375,
+        566.45849609375
+      ],
+      "block_id": "page-0073-block-0003",
+      "order": 3,
+      "text": "Cours de la pensée\nLe cours de la pensée (voir les gures 3.6 et 3.7) comprend trois\nvolets : le rythme, la cohérence et la logique.\n• Le rythme de la pensée quantie sa vitesse, qui peut être accé-\nlérée ou ralentie. L’accélération de la pensée (tachypsychie) est\ngénéralement observée chez les patients en phase maniaque.\nLa pensée ralentie (bradypsychie) se retrouve chez des pa-\ntients présentant un état dépressif, un contact très altéré avec\nl’environnement, un état apathique associé à l’hypofrontalité\ndans la schizophrénie ou dans un trouble neurocognitif, un\nparkinsonisme ou une intoxication du système nerveux central\npar les dépresseurs. Le rythme de la pensée se reète dans la\nuidité du discours.\n• Le processus d’association des idées établit la cohérence de la\npensée. Une pensée cohérente suppose une suite d’idées dont\nla juxtaposition semble naturelle et permet une compréhen-\nsion juste et spontanée de ce que le sujet veut exprimer. Elle\nreète une pensée dirigée vers un but et se manifeste par des\nréponses ciblant la question. Dans la pensée circonstancielle\n(ou prolixité circonlocutoire), le patient donne moult détails\nplus ou moins pertinents qui, au lieu d’agrémenter le discours,\nle rendent plus compliqué et plus dicile à comprendre ; il\nnit cependant par répondre à la question initiale. Dans la\npensée tangentielle, des informations superues se suivent,\nse multiplient et la question initiale est perdue de vue.\n",
+      "text_sha256": "911030718d1b66c5296aa8020c3b9fb302758026f93d5a8d3ad549c27d68e53c"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.9658203125,
+        291.0429382324219,
+        88.00849914550781
+      ],
+      "block_id": "page-0073-block-0004",
+      "order": 4,
+      "text": "• sa réactivité, qui réfère à la quantité ou à l’intensité d’expression\nde l’aect, en fonction des circonstances ou du contenu de la\npensée (voir la gure 3.5) :\n– l’aect est dit modulé lorsque les émotions sont facilement\n",
+      "text_sha256": "2f89b40d1c96dd724926d1f137ecd4425f471611e4bd1334cf05296c7909c249"
+    },
+    {
+      "bbox": [
+        60.0,
+        89.0658187866211,
+        291.49212646484375,
+        159.1584930419922
+      ],
+      "block_id": "page-0073-block-0005",
+      "order": 5,
+      "text": "exprimées et variées en fonction du contexte de l’entretien\n(p. ex., un patient qui devient triste de façon appropriée\nen discutant d’un deuil, mais qui est aussi capable de se\ndétendre plus tard et de faire un peu d’humour lorsqu’il\nparle de situations comiques) ;\n– l’aect est mobilisable lorsqu’on note une certaine at-\n",
+      "text_sha256": "a19bf9ba99c104359703b4615e37d3e91124ced9ef14617c9891011e6bf3a5d7"
+    },
+    {
+      "bbox": [
+        60.0,
+        160.1658172607422,
+        291.31951904296875,
+        218.7584991455078
+      ],
+      "block_id": "page-0073-block-0006",
+      "order": 6,
+      "text": "ténuation de l’expression émotive spontanée, mais une\npréservation de la capacité de réagir émotionnellement à\nun stimulus donné (p. ex., un patient triste qui est malgré\ntout capable de sourire quand on fait une blague) ;\n– l’affect émoussé décrit une diminution générale de la\n",
+      "text_sha256": "cff1e147022cab5047046dec0e6340d02775db42b7a4fd770e43e9232ce25001"
+    },
+    {
+      "bbox": [
+        60.0,
+        219.81582641601562,
+        291.01751708984375,
+        255.35850524902344
+      ],
+      "block_id": "page-0073-block-0007",
+      "order": 7,
+      "text": "modulation et de la réactivité de l’aect, associée à un\ndétachement ou à de l’indiérence ;\n– un aect plat dénote une absence totale de réactivité émo-\n",
+      "text_sha256": "48511df6635bfbecfb28d8359c3535e3e0797090e8002b015a57320f1f4e93ae"
+    },
+    {
+      "bbox": [
+        60.0,
+        256.3658142089844,
+        290.8739318847656,
+        291.90850830078125
+      ],
+      "block_id": "page-0073-block-0008",
+      "order": 8,
+      "text": "tionnelle, notamment comme symptôme négatif dans la\nschizophrénie ;\n– la labilité aective désigne, au contraire, un aect très\n",
+      "text_sha256": "bbcce730ceffef986591136349b7a3468db41eb7133121706e82f59f525e10b9"
+    },
+    {
+      "bbox": [
+        48.0,
+        292.9658203125,
+        291.64544677734375,
+        526.4085083007812
+      ],
+      "block_id": "page-0073-block-0009",
+      "order": 9,
+      "text": "réactif, passant d’un état émotionnel à un autre rapide-\nment (p. ex., passer du rire aux larmes, ou de la colère à la\ngrande tristesse en un court laps de temps) comme dans\nla paralysie pseudobulbaire, la démence, la manie ;\n• sa variabilité, qui réfère à la capacité du patient à éprouver\ndiérents états émotionnels lors de l’entretien. Ainsi, un aect\ncirconscrit décrit une expressivité aective limitée à un type\nd’émotions (p. ex., la tristesse et le désespoir) exprimées avec\nune intensité adéquate mais de façon exclusive (donc une\nréactivité préservée).\nL’isolation de l’aect désigne un mécanisme de défense par\nlequel la personne inhibe l’émotion qui devrait normalement\nêtre attachée à ses propos et ses actions. L’alexithymie désigne\nune diculté ou une incapacité (d’ordre neurocognitif) à recon-\nnaître et à verbaliser les émotions et les sentiments rattachés à\ndes événements vécus : elle s’accompagne d’une pensée opératoire\n(fonctionnement mental caractérisé par l’absence de symboli-\nsation, de mentalisation), d’une vie psychique pauvre et parfois\nd’un discours robotisé ou dénué d’émotions comme dans les\nmaladies psychosomatiques.\n",
+      "text_sha256": "fd6865a9cac89269ffea1501590cede7ce3797314ca15ca40849aa27f1f7dbb7"
+    },
+    {
+      "bbox": [
+        48.0,
+        531.3023071289062,
+        291.1445007324219,
+        566.45849609375
+      ],
+      "block_id": "page-0073-block-0010",
+      "order": 10,
+      "text": "Pensée\nLa pensée est constituée des processus reliant les idées, les images\net les représentations mentales d’un individu. Normalement,\n",
+      "text_sha256": "7b3d7bde7d74740db448b155285b9ea409f12a98b83c72f20e1e25ce04b0ff3e"
+    },
+    {
+      "bbox": [
+        50.25,
+        660.0523071289062,
+        175.6699981689453,
+        672.4201049804688
+      ],
+      "block_id": "page-0073-block-0011",
+      "order": 11,
+      "text": "FIGURE 3.6 Cours de la pensée\n",
+      "text_sha256": "4996ed1f4a575d8cbbf319b9dee832ecccecb7c9a5ad10c7007b0f0f8abe886b"
+    },
+    {
+      "bbox": [
+        50.25,
+        586.852294921875,
+        181.5395050048828,
+        599.2200927734375
+      ],
+      "block_id": "page-0073-block-0012",
+      "order": 12,
+      "text": "FIGURE 3.5 Réactivité de l’affect\n",
+      "text_sha256": "0d9cb482613dfade377b1cac7ea7ba022f51e79d961f71107fb7c6b468f58412"
+    }
+  ],
+  "coordinates_sha256": "1a280020284490121ecee800d709963161006212c524e640c7176901c8581398",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0073",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "56\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 1\nIntroduction à la psychiatrie\nelle se doit d’être souple, uide, suivant les rythmes internes\nde l’individu et en relation avec son environnement. Elle obéit\nnécessairement à une logique relativement commune au groupe\nculturel d’appartenance et permet une communication facile\net appropriée aux circonstances. On peut concevoir la pensée\ncomme un cours d’eau, dont :\n• le cours peut être rapide, agité, tumultueux, calme, etc. ;\n• la forme peut être sinueuse, tortueuse, rectiligne, étroite,\nmajestueuse, etc. ;\n• le contenu peut être clair, limpide, boueux, contaminé, pollué,\netc.\nAinsi, on évalue la pensée selon son cours, sa forme et son\ncontenu. La parole demeure la voie royale de l’analyse de la\npensée, mais l’écriture est aussi utilisée pour arriver à cette n\n(lorsque l’expression verbale est limitée), tout comme le dessin\nchez l’enfant. Un trouble de la pensée désigne toute altération\nsignicative de la forme ou du cours de la pensée et se caractérise\ngénéralement par un discours désorganisé ou incohérent.\nCours de la pensée\nLe cours de la pensée (voir les gures 3.6 et 3.7) comprend trois\nvolets : le rythme, la cohérence et la logique.\n• Le rythme de la pensée quantie sa vitesse, qui peut être accé-\nlérée ou ralentie. L’accélération de la pensée (tachypsychie) est\ngénéralement observée chez les patients en phase maniaque.\nLa pensée ralentie (bradypsychie) se retrouve chez des pa-\ntients présentant un état dépressif, un contact très altéré avec\nl’environnement, un état apathique associé à l’hypofrontalité\ndans la schizophrénie ou dans un trouble neurocognitif, un\nparkinsonisme ou une intoxication du système nerveux central\npar les dépresseurs. Le rythme de la pensée se reète dans la\nuidité du discours.\n• Le processus d’association des idées établit la cohérence de la\npensée. Une pensée cohérente suppose une suite d’idées dont\nla juxtaposition semble naturelle et permet une compréhen-\nsion juste et spontanée de ce que le sujet veut exprimer. Elle\nreète une pensée dirigée vers un but et se manifeste par des\nréponses ciblant la question. Dans la pensée circonstancielle\n(ou prolixité circonlocutoire), le patient donne moult détails\nplus ou moins pertinents qui, au lieu d’agrémenter le discours,\nle rendent plus compliqué et plus dicile à comprendre ; il\nnit cependant par répondre à la question initiale. Dans la\npensée tangentielle, des informations superues se suivent,\nse multiplient et la question initiale est perdue de vue.\n• sa réactivité, qui réfère à la quantité ou à l’intensité d’expression\nde l’aect, en fonction des circonstances ou du contenu de la\npensée (voir la gure 3.5) :\n– l’aect est dit modulé lorsque les émotions sont facilement\nexprimées et variées en fonction du contexte de l’entretien\n(p. ex., un patient qui devient triste de façon appropriée\nen discutant d’un deuil, mais qui est aussi capable de se\ndétendre plus tard et de faire un peu d’humour lorsqu’il\nparle de situations comiques) ;\n– l’aect est mobilisable lorsqu’on note une certaine at-\nténuation de l’expression émotive spontanée, mais une\npréservation de la capacité de réagir émotionnellement à\nun stimulus donné (p. ex., un patient triste qui est malgré\ntout capable de sourire quand on fait une blague) ;\n– l’affect émoussé décrit une diminution générale de la\nmodulation et de la réactivité de l’aect, associée à un\ndétachement ou à de l’indiérence ;\n– un aect plat dénote une absence totale de réactivité émo-\ntionnelle, notamment comme symptôme négatif dans la\nschizophrénie ;\n– la labilité aective désigne, au contraire, un aect très\nréactif, passant d’un état émotionnel à un autre rapide-\nment (p. ex., passer du rire aux larmes, ou de la colère à la\ngrande tristesse en un court laps de temps) comme dans\nla paralysie pseudobulbaire, la démence, la manie ;\n• sa variabilité, qui réfère à la capacité du patient à éprouver\ndiérents états émotionnels lors de l’entretien. Ainsi, un aect\ncirconscrit décrit une expressivité aective limitée à un type\nd’émotions (p. ex., la tristesse et le désespoir) exprimées avec\nune intensité adéquate mais de façon exclusive (donc une\nréactivité préservée).\nL’isolation de l’aect désigne un mécanisme de défense par\nlequel la personne inhibe l’émotion qui devrait normalement\nêtre attachée à ses propos et ses actions. L’alexithymie désigne\nune diculté ou une incapacité (d’ordre neurocognitif) à recon-\nnaître et à verbaliser les émotions et les sentiments rattachés à\ndes événements vécus : elle s’accompagne d’une pensée opératoire\n(fonctionnement mental caractérisé par l’absence de symboli-\nsation, de mentalisation), d’une vie psychique pauvre et parfois\nd’un discours robotisé ou dénué d’émotions comme dans les\nmaladies psychosomatiques.\nPensée\nLa pensée est constituée des processus reliant les idées, les images\net les représentations mentales d’un individu. Normalement,\nFIGURE 3.6 Cours de la pensée\nFIGURE 3.5 Réactivité de l’affect\n",
+  "raw_text_sha256": "0a56f68e12bcbe06970ba8a0eb555dd4ed36bc0d22865632280790a40a41ff56",
+  "source_page_display": 74,
+  "source_page_index": 73
+}

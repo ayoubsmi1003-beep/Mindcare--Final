@@ -1,0 +1,112 @@
+{
+  "block_sequence_sha256": "ffaecc988af2dd87080d77332c67c9961d9fc9b8e6ee5a68b3de69bfcc468eb7",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        131.5734405517578,
+        258.1532897949219,
+        176.4953155517578
+      ],
+      "block_id": "page-0527-block-0001",
+      "order": 1,
+      "text": "Dissociations\n",
+      "text_sha256": "4eccd9c017745808ee74be31ace2663ca94ecd8ff757997a77e38bd2e0f6fca1"
+    },
+    {
+      "bbox": [
+        48.0,
+        210.65733337402344,
+        177.07159423828125,
+        224.69541931152344
+      ],
+      "block_id": "page-0527-block-0002",
+      "order": 2,
+      "text": "GEORGES ROBITAILLE, M.D., FRCPC\n",
+      "text_sha256": "eb67e30bb4a6f0f8bc7e56d0f6e4d607d65f735ca04248ea000343516580bee5"
+    },
+    {
+      "bbox": [
+        48.0,
+        228.07725524902344,
+        254.08709716796875,
+        249.29380798339844
+      ],
+      "block_id": "page-0527-block-0003",
+      "order": 3,
+      "text": "Psychiatre et psychanalyste, Hôpital Charles-LeMoyne\n(Longueuil)\n",
+      "text_sha256": "826875dc6873968553335ac30804224131ab8cd35951cdd32cfaac99adc6ca98"
+    },
+    {
+      "bbox": [
+        48.0,
+        253.07723999023438,
+        274.71038818359375,
+        285.2937927246094
+      ],
+      "block_id": "page-0527-block-0004",
+      "order": 4,
+      "text": "Professeur chargé d’enseignement clinique, Département de\npsychiatrie, Faculté de médecine et des sciences de la santé,\nUniversité de Sherbrooke\n",
+      "text_sha256": "3e21b84b5cd3ae1a68a7001b2eb41783cdca57249697ba811aa13a8f806f749d"
+    },
+    {
+      "bbox": [
+        48.0,
+        320.4244079589844,
+        289.010009765625,
+        486.3472595214844
+      ],
+      "block_id": "page-0527-block-0005",
+      "order": 5,
+      "text": "24.1 Évolution du concept .....................................................511\n24.2 Étiologies ......................................................................... 513\n24.3 Épidémiologie .................................................................515\n24.3.1 Amnésie dissociative ........................................... 515\n24.3.2 Dépersonnalisation/déréalisation...................... 515\n24.3.3 Trouble dissociatif de l’identité (TDI)............... 517\n24.3.4 Autre trouble dissociatif spécié........................ 517\n24.4 Description clinique et outils diagnostiques..............519\n24.4.1 Amnésie dissociative ............................................ 520\n24.4.2 Dépersonnalisation ............................................... 521\n24.4.3 Déréalisation .......................................................... 521\n24.4.4 Confusion d’identité ............................................. 522\n24.4.5 Altération d’identité.............................................. 522\n",
+      "text_sha256": "c5b66c9e59130c87e5a1a441d57f1236e854bb24f07e3e73dd53e689bc0f23cc"
+    },
+    {
+      "bbox": [
+        306.0,
+        320.4244079589844,
+        547.010009765625,
+        395.2681579589844
+      ],
+      "block_id": "page-0527-block-0006",
+      "order": 6,
+      "text": "24.5 Diagnostic diérentiel ...................................................523\n24.6 Traitements ..................................................................... 525\n24.6.1 Traitements biologiques ...................................... 525\n24.6.2 Traitements psychologiques ............................... 525\n24.6.3 Interventions sociales........................................... 527\n24.7 Évolution et pronostic....................................................527\n",
+      "text_sha256": "8611aa41fb1b206cb204559e5b01261cf1917964ae27e0a1fad89e6fd9c8d8c6"
+    },
+    {
+      "bbox": [
+        306.0,
+        400.4244079589844,
+        547.010009765625,
+        410.2681579589844
+      ],
+      "block_id": "page-0527-block-0007",
+      "order": 7,
+      "text": "Lectures complémentaires.......................................................527\n",
+      "text_sha256": "8c969b5c402bb8d9f55595ff254201c0d5d576556d0f3481648a6b221a6b90f5"
+    },
+    {
+      "bbox": [
+        263.1000061035156,
+        3.2810592651367188,
+        561.0,
+        123.28105163574219
+      ],
+      "block_id": "page-0527-block-0008",
+      "order": 8,
+      "text": "CHAPITRE24\n",
+      "text_sha256": "c8d6e34bab3dd8a71e093f60f8ebe3f4edf07223c19ab51282497ffa004d9f45"
+    }
+  ],
+  "coordinates_sha256": "8a54830ce1a1a80dfc9c146a3d5b5e36b8eda263c2cd49fb14d361267f1fec7d",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0527",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Dissociations\nGEORGES ROBITAILLE, M.D., FRCPC\nPsychiatre et psychanalyste, Hôpital Charles-LeMoyne\n(Longueuil)\nProfesseur chargé d’enseignement clinique, Département de\npsychiatrie, Faculté de médecine et des sciences de la santé,\nUniversité de Sherbrooke\n24.1 Évolution du concept .....................................................511\n24.2 Étiologies ......................................................................... 513\n24.3 Épidémiologie .................................................................515\n24.3.1 Amnésie dissociative ........................................... 515\n24.3.2 Dépersonnalisation/déréalisation...................... 515\n24.3.3 Trouble dissociatif de l’identité (TDI)............... 517\n24.3.4 Autre trouble dissociatif spécié........................ 517\n24.4 Description clinique et outils diagnostiques..............519\n24.4.1 Amnésie dissociative ............................................ 520\n24.4.2 Dépersonnalisation ............................................... 521\n24.4.3 Déréalisation .......................................................... 521\n24.4.4 Confusion d’identité ............................................. 522\n24.4.5 Altération d’identité.............................................. 522\n24.5 Diagnostic diérentiel ...................................................523\n24.6 Traitements ..................................................................... 525\n24.6.1 Traitements biologiques ...................................... 525\n24.6.2 Traitements psychologiques ............................... 525\n24.6.3 Interventions sociales........................................... 527\n24.7 Évolution et pronostic....................................................527\nLectures complémentaires.......................................................527\nCHAPITRE24\n",
+  "raw_text_sha256": "e2610c86a1c5634d90051640ba996ae374c97bc7a0143c6a1068b1d3405f3df8",
+  "source_page_display": 528,
+  "source_page_index": 527
+}

@@ -1,0 +1,160 @@
+{
+  "block_sequence_sha256": "5280365f7a2cd765a509fcd81290fa6b7242d44e3848efcc79a1a287e6b8e937",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0975-block-0001",
+      "order": 1,
+      "text": "958\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "6c8b771880db3de8bdd149637ccc6162d153d32ca5e613b56515be25d1b48276"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.9658203125,
+        291.0721740722656,
+        74.8084945678711
+      ],
+      "block_id": "page-0975-block-0002",
+      "order": 2,
+      "text": "est souvent utile pour réévaluer les objectifs thérapeutiques\nou le diagnostic et pour ajuster plus rapidement le traitement\npharmacologique.\n",
+      "text_sha256": "b23c3d1292fbf7a3816529044d6bc23c127274d6a9b0b27c1eea547d2b6827a3"
+    },
+    {
+      "bbox": [
+        48.0,
+        80.6368179321289,
+        257.7778015136719,
+        101.62939453125
+      ],
+      "block_id": "page-0975-block-0003",
+      "order": 3,
+      "text": "Services spécialisés de 2e et 3e lignes\n",
+      "text_sha256": "589f8c74274591e49d44d452bc2c5e426ce26342a1ecb4d7d134b0de95600959"
+    },
+    {
+      "bbox": [
+        48.0,
+        105.16582489013672,
+        291.36334228515625,
+        357.1084899902344
+      ],
+      "block_id": "page-0975-block-0004",
+      "order": 4,
+      "text": "Ces services sont oerts aux patients présentant un TP d’inten-\nsité modérée à graves, motivés à s’impliquer dans une démarche\nactive de traitement. Ces ressources ont émergé au Québec\ndepuis le début des années 2000 et on observe avec les années\nune quantité croissante de ressources se spécialisant dans la\nprise en charge et le traitement des TP. La plupart d’entre elles\nutilisent des versions modiées des thérapies ayant montré une\necacité pour ces clientèles (voir la sous- section 40.8.3), souvent\nen combinant des interventions individuelles et de groupe. Elles\nse situent pour la majorité, au niveau des soins de 2e et 3e lignes,\ntant en pédopsychiatrie que dans les services pour adultes, mais\nil en existe également dans le secteur privé. Habituellement, ces\nservices fournissent des épisodes de soins aux clientèles présen-\ntant un trouble d’une plus grande gravité, mais ils orent à divers\ndegrés des services à d’autres niveaux :\n• consultation ;\n• formation des thérapeutes et transmission des connaissances ;\n• soutien aux autres lignes de soins ;\n• recherche clinique.\nCes ressources sont inégalement réparties sur le territoire\nquébécois, certaines régions en étant dépourvues.\n",
+      "text_sha256": "deaf727dd54c4088f040459db4e5ed6b8b18e6b78ccb37d7e8e730fadb55aaf1"
+    },
+    {
+      "bbox": [
+        48.0,
+        366.1330261230469,
+        291.2986145019531,
+        581.20849609375
+      ],
+      "block_id": "page-0975-block-0005",
+      "order": 5,
+      "text": "Services externes de psychiatrie générale\nde 2e ligne\nTypiquement, les services externes psychiatriques de 2e ligne\nrassemblent une clientèle hétérogène formée d’une proportion\nnon négligeable de patients présentant un TP, comme problé-\nmatique principale ou comme comorbidité signicative. Les\npatients se voient généralement orir un suivi psychiatrique\ndont l’intensité peut être très variée (d’une rencontre par\nsemaine jusqu’à une ou deux rencontres par année), ainsi que\nl’aide de plusieurs professionnels de diverses disciplines en\nsanté mentale. Dans certains cas, des interventions psychothé-\nrapeutiques individuelles ou de groupe sont disponibles. D’un\nmilieu à l’autre, les suivis qu’on y propose peuvent être plus ou\nmoins adaptés aux enjeux propres à la clientèle avec un TP. En\npratique, lorsque les grands principes de l’intervention auprès\nde ces patients sont respectés, plusieurs d’entre eux tirent prot\nde ce niveau de soin et il n’est pas nécessaire de les orienter\nvers des milieux plus spécialisés.\n",
+      "text_sha256": "b666e46fcd2bfdf6b0546fc8fde9c634f3e64ad95fcf3e1c545ff8d728cdf2aa"
+    },
+    {
+      "bbox": [
+        48.0,
+        587.0868530273438,
+        260.116943359375,
+        608.0794067382812
+      ],
+      "block_id": "page-0975-block-0006",
+      "order": 6,
+      "text": "Services de 1re ligne en santé mentale\n",
+      "text_sha256": "73938dbf931eba4792758ded2cb4a8e23d171a5f1728e6323b195d0f6a5a4026"
+    },
+    {
+      "bbox": [
+        48.0,
+        611.5658569335938,
+        291.34942626953125,
+        725.97607421875
+      ],
+      "block_id": "page-0975-block-0007",
+      "order": 7,
+      "text": "Ce type de service est vaste et diversié. Pour en faire une liste\nnon exhaustive, les services de 1religne en santé mentale incluent :\n• les nombreux services disponibles dans les CLSC ;\n• les cliniques de médecine familiale et sans rendez-vous ;\n• les psychologues en bureau privé ;\n• les intervenants scolaires ;\n• les ressources communautaires ciblant diérentes probléma-\ntiques psychosociales ;\n• les diérents groupes de soutien.\n",
+      "text_sha256": "2071b6afe724e98dd90d9ce71f3c777bb851eff974c622bc369b510086c33405"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.4638061523438,
+        258.7585144042969
+      ],
+      "block_id": "page-0975-block-0008",
+      "order": 8,
+      "text": "Il est probable que la plus grande partie des patients avec un\nTP reçoivent des services se situant à ce niveau, surtout lorsque\nla gravité est moindre, que la symptomatologie s’est atténuée\navec le temps et/ou à la suite des thérapies dans les autres lignes\nde soins. Les services de 1re ligne s’adressent à l’ensemble de la\npopulation et sont souvent facilement accessibles. À l’heure\nactuelle, la plupart ne fournissent pas de services spécialisés pour\nles troubles de la personnalité. Malgré cela, ils peuvent être d’une\naide considérable. En quelque sorte, une des visées de la thérapie\ndans les niveaux de soins spécialisés est d’amener les patients à\ndévelopper susamment d’autonomie et de bien-être pour ne\nrequérir que des services en 1re ligne. Par exemple, un patient\nqui achève un épisode de soins dans un centre spécialisé et qui a\nprésenté une bonne amélioration au niveau des comportements\nles plus désorganisés, mais qui a identié un besoin récurrent\nd’être entouré et soutenu, peut être très bien servi par un groupe\nde soutien entre pairs ou par un organisme communautaire qu’il\npeut fréquenter sur une longue période ou lorsqu’il en ressent\nle besoin.\n",
+      "text_sha256": "190481e868540daa383ec6771725b51330e1ea6ce0591c923dd21f68e2507c28"
+    },
+    {
+      "bbox": [
+        306.0,
+        269.2868347167969,
+        480.6377258300781,
+        285.4294128417969
+      ],
+      "block_id": "page-0975-block-0009",
+      "order": 9,
+      "text": "40.8.3 Traitements biologiques\n",
+      "text_sha256": "325bc461ffd25a917b496830bd51717bf0a54a0f805cce7396a75991f2677b1e"
+    },
+    {
+      "bbox": [
+        306.0,
+        288.8158264160156,
+        549.4725952148438,
+        598.7584838867188
+      ],
+      "block_id": "page-0975-block-0010",
+      "order": 10,
+      "text": "L’étude de l’ecacité des traitements pharmacologiques pour les\npatients présentant un TP fait face à des enjeux méthodologiques\nmajeurs, l’un des plus importants étant la diculté de recruter\ndes patients qui ne présentent aucune comorbidité susceptible\nde biaiser les résultats. Également, les caractéristiques impulsives\net instables de ces patients contribuent à des taux d’attrition\nimportants dans les études. Néanmoins, plusieurs eorts ont\nété déployés au l des ans pour tester l’ecacité de diérents\nmédicaments pour ces troubles. Malheureusement, jusqu’à\nmaintenant, aucun traitement pharmacologique n’a montré d’ef-\ncacité pour l’une ou l’autre des grandes catégories de troubles\nde la personnalité (notons cependant que la quasi-totalité des\nétudes ont porté sur le TP limite). Autrement dit, nul n’est encore\nparvenu à montrer que la prise d’une médication particulière\namène une plus grande diminution générale des symptômes\ndu TP que celle obtenue par la prise d’un placebo. Toutefois,\nplusieurs études ont mis en relief des améliorations au niveau de\ncertains symptômes spéciques. Ainsi, l’APA, dans son dernier\nguide de pratique concernant le TP limite, qui remonte déjà à\n2001, proposait d’utiliser les médicaments en visant des groupes\nde symptômes, plutôt qu’une amélioration du trouble dans sa\nglobalité. D’autres guides de pratique et une récente méta-analyse\nCochrane ont nuancé et enrichi cette proposition (NICE, 2009 ;\nStoers & al., 2010). Les symptômes cibles sont répartis en trois\ncatégories, résumées dans le tableau 40.9, qui comprend aussi\nles classes de médicaments ayant montré une ecacité pour\nchacune d’entre elles.\n",
+      "text_sha256": "61a63850bf5af2a35b2bdbddbac9b1730bcfce33ed6de988b452a062d9446228"
+    },
+    {
+      "bbox": [
+        306.0,
+        599.7658081054688,
+        549.3504028320312,
+        690.9085083007812
+      ],
+      "block_id": "page-0975-block-0011",
+      "order": 11,
+      "text": "Cependant, les preuves empiriques restent limitées pour utiliser\nces molécules pour cette indication, c’est-à-dire le traitement de\nsymptômes spéciques du TP. Pour cette raison, aucun médi-\ncament n’est ociellement recommandé, ni par Santé Canada\nni par le fabricant, spéciquement pour le traitement d’un TP.\nD’ailleurs, certains guides de pratique (notamment NICE, 2009)\nvont même jusqu’à recommander de ne pas utiliser de médication\nchez ces patients.\n",
+      "text_sha256": "3ab2b1aa90227c287b727f31806996e385a10dad6cd7088c459a375df50f7a77"
+    },
+    {
+      "bbox": [
+        306.0,
+        691.9158325195312,
+        549.0175170898438,
+        725.45849609375
+      ],
+      "block_id": "page-0975-block-0012",
+      "order": 12,
+      "text": "Malgré tout, si la décision est prise de prescrire un médica-\nment en visant le traitement d’un groupe de symptômes, il est\nimportant d’en informer le patient, de mentionner qu’il s’agit\n",
+      "text_sha256": "7034d929a0193389ed75b962ffb2df3073924549124c81dbd435c25349d25ec5"
+    }
+  ],
+  "coordinates_sha256": "f692b7538b7fa75090b32632ced737c9edceb6a9d90ef9d91fa915ea97f7eac1",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0975",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "958\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nest souvent utile pour réévaluer les objectifs thérapeutiques\nou le diagnostic et pour ajuster plus rapidement le traitement\npharmacologique.\nServices spécialisés de 2e et 3e lignes\nCes services sont oerts aux patients présentant un TP d’inten-\nsité modérée à graves, motivés à s’impliquer dans une démarche\nactive de traitement. Ces ressources ont émergé au Québec\ndepuis le début des années 2000 et on observe avec les années\nune quantité croissante de ressources se spécialisant dans la\nprise en charge et le traitement des TP. La plupart d’entre elles\nutilisent des versions modiées des thérapies ayant montré une\necacité pour ces clientèles (voir la sous- section 40.8.3), souvent\nen combinant des interventions individuelles et de groupe. Elles\nse situent pour la majorité, au niveau des soins de 2e et 3e lignes,\ntant en pédopsychiatrie que dans les services pour adultes, mais\nil en existe également dans le secteur privé. Habituellement, ces\nservices fournissent des épisodes de soins aux clientèles présen-\ntant un trouble d’une plus grande gravité, mais ils orent à divers\ndegrés des services à d’autres niveaux :\n• consultation ;\n• formation des thérapeutes et transmission des connaissances ;\n• soutien aux autres lignes de soins ;\n• recherche clinique.\nCes ressources sont inégalement réparties sur le territoire\nquébécois, certaines régions en étant dépourvues.\nServices externes de psychiatrie générale\nde 2e ligne\nTypiquement, les services externes psychiatriques de 2e ligne\nrassemblent une clientèle hétérogène formée d’une proportion\nnon négligeable de patients présentant un TP, comme problé-\nmatique principale ou comme comorbidité signicative. Les\npatients se voient généralement orir un suivi psychiatrique\ndont l’intensité peut être très variée (d’une rencontre par\nsemaine jusqu’à une ou deux rencontres par année), ainsi que\nl’aide de plusieurs professionnels de diverses disciplines en\nsanté mentale. Dans certains cas, des interventions psychothé-\nrapeutiques individuelles ou de groupe sont disponibles. D’un\nmilieu à l’autre, les suivis qu’on y propose peuvent être plus ou\nmoins adaptés aux enjeux propres à la clientèle avec un TP. En\npratique, lorsque les grands principes de l’intervention auprès\nde ces patients sont respectés, plusieurs d’entre eux tirent prot\nde ce niveau de soin et il n’est pas nécessaire de les orienter\nvers des milieux plus spécialisés.\nServices de 1re ligne en santé mentale\nCe type de service est vaste et diversié. Pour en faire une liste\nnon exhaustive, les services de 1religne en santé mentale incluent :\n• les nombreux services disponibles dans les CLSC ;\n• les cliniques de médecine familiale et sans rendez-vous ;\n• les psychologues en bureau privé ;\n• les intervenants scolaires ;\n• les ressources communautaires ciblant diérentes probléma-\ntiques psychosociales ;\n• les diérents groupes de soutien.\nIl est probable que la plus grande partie des patients avec un\nTP reçoivent des services se situant à ce niveau, surtout lorsque\nla gravité est moindre, que la symptomatologie s’est atténuée\navec le temps et/ou à la suite des thérapies dans les autres lignes\nde soins. Les services de 1re ligne s’adressent à l’ensemble de la\npopulation et sont souvent facilement accessibles. À l’heure\nactuelle, la plupart ne fournissent pas de services spécialisés pour\nles troubles de la personnalité. Malgré cela, ils peuvent être d’une\naide considérable. En quelque sorte, une des visées de la thérapie\ndans les niveaux de soins spécialisés est d’amener les patients à\ndévelopper susamment d’autonomie et de bien-être pour ne\nrequérir que des services en 1re ligne. Par exemple, un patient\nqui achève un épisode de soins dans un centre spécialisé et qui a\nprésenté une bonne amélioration au niveau des comportements\nles plus désorganisés, mais qui a identié un besoin récurrent\nd’être entouré et soutenu, peut être très bien servi par un groupe\nde soutien entre pairs ou par un organisme communautaire qu’il\npeut fréquenter sur une longue période ou lorsqu’il en ressent\nle besoin.\n40.8.3 Traitements biologiques\nL’étude de l’ecacité des traitements pharmacologiques pour les\npatients présentant un TP fait face à des enjeux méthodologiques\nmajeurs, l’un des plus importants étant la diculté de recruter\ndes patients qui ne présentent aucune comorbidité susceptible\nde biaiser les résultats. Également, les caractéristiques impulsives\net instables de ces patients contribuent à des taux d’attrition\nimportants dans les études. Néanmoins, plusieurs eorts ont\nété déployés au l des ans pour tester l’ecacité de diérents\nmédicaments pour ces troubles. Malheureusement, jusqu’à\nmaintenant, aucun traitement pharmacologique n’a montré d’ef-\ncacité pour l’une ou l’autre des grandes catégories de troubles\nde la personnalité (notons cependant que la quasi-totalité des\nétudes ont porté sur le TP limite). Autrement dit, nul n’est encore\nparvenu à montrer que la prise d’une médication particulière\namène une plus grande diminution générale des symptômes\ndu TP que celle obtenue par la prise d’un placebo. Toutefois,\nplusieurs études ont mis en relief des améliorations au niveau de\ncertains symptômes spéciques. Ainsi, l’APA, dans son dernier\nguide de pratique concernant le TP limite, qui remonte déjà à\n2001, proposait d’utiliser les médicaments en visant des groupes\nde symptômes, plutôt qu’une amélioration du trouble dans sa\nglobalité. D’autres guides de pratique et une récente méta-analyse\nCochrane ont nuancé et enrichi cette proposition (NICE, 2009 ;\nStoers & al., 2010). Les symptômes cibles sont répartis en trois\ncatégories, résumées dans le tableau 40.9, qui comprend aussi\nles classes de médicaments ayant montré une ecacité pour\nchacune d’entre elles.\nCependant, les preuves empiriques restent limitées pour utiliser\nces molécules pour cette indication, c’est-à-dire le traitement de\nsymptômes spéciques du TP. Pour cette raison, aucun médi-\ncament n’est ociellement recommandé, ni par Santé Canada\nni par le fabricant, spéciquement pour le traitement d’un TP.\nD’ailleurs, certains guides de pratique (notamment NICE, 2009)\nvont même jusqu’à recommander de ne pas utiliser de médication\nchez ces patients.\nMalgré tout, si la décision est prise de prescrire un médica-\nment en visant le traitement d’un groupe de symptômes, il est\nimportant d’en informer le patient, de mentionner qu’il s’agit\n",
+  "raw_text_sha256": "0907778a80597b90e9b849ce43f8d27aa20d22bf629fa6d1fc14c6cc48aa849b",
+  "source_page_display": 976,
+  "source_page_index": 975
+}

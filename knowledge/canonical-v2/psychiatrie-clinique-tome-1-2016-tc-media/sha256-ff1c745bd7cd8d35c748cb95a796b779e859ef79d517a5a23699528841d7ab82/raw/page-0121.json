@@ -1,0 +1,100 @@
+{
+  "block_sequence_sha256": "32b6c015bebab5a68393e5bb24e7cb838ce886fcfe56ddb4d1ce0160f9a1a169",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        470.3879699707031,
+        758.8693237304688
+      ],
+      "block_id": "page-0121-block-0001",
+      "order": 1,
+      "text": "104\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2\nDéterminants bio-psycho-sociaux\n",
+      "text_sha256": "5bdb287193a7353e803553dff4c226ce6e45e842229788482076067d8a796ca4"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.6038208007812,
+        455.1084899902344
+      ],
+      "block_id": "page-0121-block-0002",
+      "order": 2,
+      "text": "même maladie. Si ce marqueur est transmis dans la fratrie\nindépendamment de la maladie, on s’attend à ce que cette\nproportion soit de 50 %. Une proportion d’allèles IPD dé-\npassant nettement 50 % évoque un lien entre le marqueur\net la maladie. Cependant, si le test de cette proportion ne\nrequiert pas la spécication d’un mode de transmission,\nsa puissance statistique demeure grandement dépendante\ndu mode réel de transmission. Par exemple, ce test peut\ndétecter beaucoup plus facilement la présence d’un mar-\nqueur génétique dans une maladie récessive dans laquelle\ndes paires fraternelles atteintes devraient partager 100 %\nde leur allèle IPD avec le marqueur (p. ex., ce qui serait le\ncas de la brose kystique) que dans le cas d’une maladie\ndominante, où cette proportion est de 75 %, en théorie (ce\nque l’on observerait dans la chorée de Huntington). De plus,\nces analyses non paramétriques, comparées aux analyses\nde liaison, ont une moins grande puissance statistique, et\nleurs résultats sont généralement moins détaillés que ceux\nobtenus au moyen des méthodes basées sur le lod score,\npuisque les méthodes non paramétriques ne permettent\npas d’estimer la distance entre le locus de la maladie et le\nmarqueur. Ainsi, les analyses non paramétriques orent,\nthéoriquement du moins, un avantage complémentaire\naux études reposant sur un lod score. Cependant, en\npratique, il arrive que les désavantages des analyses non\nparamétriques soient compensés par une plus grande fa-\ncilité à échantillonner des paires fraternelles de personnes\natteintes que des familles étendues.\n2. La méconnaissance du mode de transmission et la possibilité\nque certaines formes de maladies psychiatriques aient un mode\nde transmission polygénique font que la puissance statistique\ndes méthodes basées sur le lod score est beaucoup moins\ngrande dans de tels cas. Il existe toutefois des alternatives\nanalytiques pour faire face à ce type de problème :\na) Choisir de grandes familles, dans lesquelles la distribution\n",
+      "text_sha256": "4ccc61cc3952ded36997f8730e857819fb6ac162f19270a3fa1528626b7b7942"
+    },
+    {
+      "bbox": [
+        330.0,
+        456.3658142089844,
+        549.5687866210938,
+        725.45849609375
+      ],
+      "block_id": "page-0121-block-0003",
+      "order": 3,
+      "text": "des cas est compatible avec une transmission mendélienne.\nPar exemple, on peut choisir de grandes familles dans\nlesquelles on retrouve des personnes atteintes dans plu-\nsieurs générations successives (autrement dit, la maladie\nne « saute » pas de génération, comme dans certaines\nfamilles étudiées par le groupe de recherche de Maziade &\nPaccalet (2013), et dans lesquelles on retrouve des fratries\noù près de la moitié des personnes sont aectées). Ces\ndonnées pourraient évoquer une transmission dominante.\nMalheureusement, même dans une famille dans laquelle\nles cas semblent distribués selon un mode mendélien, il n’y\na aucune garantie que ce soit le cas, puisque ces familles\npeuvent aussi parfois présenter une transmission de type\npolygénique. Ce n’est pas seulement à cause du nombre de\ngènes en cause : une transmission mendélienne suppose\nque le gène s’exprime et que l’on observe un phénotype\nlié à ce gène chaque fois qu’il est transmis. Si le phénotype\nn’apparaît pas, cela suppose que le gène n’a pas été transmis.\nPar contre, dans la transmission polygénique, le phénotype\nest lié à la présence de plusieurs gènes en interactions les\nuns avec les autres. Dans ce cas, l’absence de certains gènes\nempêchera l’apparition du phénotype lié au gène d’intérêt\nmême s’il a été eectivement transmis.\n",
+      "text_sha256": "285f7ac73b5196e90618431772925f7b4739a1227b9305fd410e8abfa76dece1"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.9658203125,
+        291.41693115234375,
+        439.6084899902344
+      ],
+      "block_id": "page-0121-block-0004",
+      "order": 4,
+      "text": "qualiés de « cas de non-pénétrance ». Ces cas sont considérés\ncomme non aectés lors des analyses de liaison, même s’ils sont\nporteurs de gènes de susceptibilité, ce qui diminue la mise en\névidence d’une liaison génétique. Trois solutions à ce problème\nont été proposées :\n• Les analyses permettent un certain pourcentage de cas de\nnon-pénétrance, sans spécier quels individus sont concernés.\nCependant, cette solution introduit un paramètre d’incertitude\ndans les analyses, avec l’inconvénient de diminuer la puissance\nstatistique.\n• Il est possible de n’inclure que les sujets affectés dans\nles analyses de liaison, ce qui élimine le problème des cas\nde non-pénétrance. Cependant, la perte de l’information\nfournie par les personnes non aectées diminue la puissance\nstatistique.\n• Il est possible de recourir à des méthodes plus sensibles que les\nentrevues cliniques pour identier les cas de non- pénétrance.\nEn eet, plusieurs études ont révélé que les apparentés non\naectés de patients atteints de schizophrénie sont quand\nmême fréquemment porteurs d’anomalies similaires à celles\nretrouvées chez les patients atteints de schizophrénie, par\nexemple une diminution de la performance à des tests co-\ngnitifs (trouble d’attention, de mémoire, etc.). De tels décits\nchez une personne non aectée peuvent signier qu’elle est\nporteuse d’une vulnérabilité génétique vis-à-vis de la schi-\nzophrénie, sans avoir développé cette maladie (qui est alors\ndite à pénétrance incomplète, puisque des individus portant\ndes gènes de susceptibilité ne développent pas la maladie).\nCependant, il est possible d’observer de telles anomalies chez\ndes patients présentant d’autres diagnostics psychiatriques,\nce qui risque d’introduire des faux positifs dans les analyses,\ndiminuant ainsi la mise en évidence d’une liaison génétique. Il\nfaut aussi considérer les dicultés reliées aux facteurs causant\nla maladie.\n",
+      "text_sha256": "9862c461664c8d434d671154fa3875b5997a053fa5d0186d603a0c19f80b9343"
+    },
+    {
+      "bbox": [
+        48.0,
+        450.5830078125,
+        291.2415466308594,
+        584.5084838867188
+      ],
+      "block_id": "page-0121-block-0005",
+      "order": 5,
+      "text": "Méconnaissance du mode de transmission\nSi une base génétique à la transmission familiale de la plupart\ndes maladies psychiatriques est bien établie, leur mode exact\nde transmission demeure incertain. Or, la compréhension des\nmécanismes génétiques sous-tendant les maladies complexes et\nles analyses de liaison génétique nécessite de connaître le modèle\nde transmission génétique. Cette méconnaissance du mode de\ntransmission des maladies psychiatriques pose deux dés :\n1. Un modèle de transmission erroné diminue la puissance\nstatistique des analyses. Deux solutions ont été proposées :\na) Répéter les analyses en variant le mode de transmission.\n",
+      "text_sha256": "d734ec6e78d53c08c44e346b4468833b8f284cf38ab2914b5a4bc8492dad6305"
+    },
+    {
+      "bbox": [
+        60.0,
+        585.5658569335938,
+        291.27386474609375,
+        667.5585327148438
+      ],
+      "block_id": "page-0121-block-0006",
+      "order": 6,
+      "text": "Cependant, l’utilisation de cette stratégie augmente le risque\nd’obtenir une fausse preuve de liaison génétique (appelée\n« erreur de type 1 »), résultant de la multiplication des\ntests statistiques. Certaines précautions méthodologiques\npermettent cependant de limiter les problèmes découlant\nde cette répétition.\nb) Utiliser des analyses dites non paramétriques, qui ne\n",
+      "text_sha256": "3f6d54deb1e12e6f6020123cd9174e5a0e2b7b4727358fbf5aba9ca2b574601f"
+    },
+    {
+      "bbox": [
+        72.0,
+        668.6658325195312,
+        291.024169921875,
+        725.45849609375
+      ],
+      "block_id": "page-0121-block-0007",
+      "order": 7,
+      "text": "nécessitent pas de présumer du mode de transmission\ngénétique. Une de ces approches consiste à estimer la\nproportion d’allèles identiques par descendance (IPD)\nà l’égard d’un marqueur donné partagé par une paire\nfraternelle (c.-à-d. des frères ou des sœurs) atteinte de la\n",
+      "text_sha256": "bf4b367f60e75c1ebc8ba1e10f1182757f31c1f215a2e3a181e4da2b5ffd4fd7"
+    }
+  ],
+  "coordinates_sha256": "b69fd8937f3477d0721869f3dfc2ab5504344a65ca0c298e319c63f49766b8e5",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0121",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "104\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2\nDéterminants bio-psycho-sociaux\nmême maladie. Si ce marqueur est transmis dans la fratrie\nindépendamment de la maladie, on s’attend à ce que cette\nproportion soit de 50 %. Une proportion d’allèles IPD dé-\npassant nettement 50 % évoque un lien entre le marqueur\net la maladie. Cependant, si le test de cette proportion ne\nrequiert pas la spécication d’un mode de transmission,\nsa puissance statistique demeure grandement dépendante\ndu mode réel de transmission. Par exemple, ce test peut\ndétecter beaucoup plus facilement la présence d’un mar-\nqueur génétique dans une maladie récessive dans laquelle\ndes paires fraternelles atteintes devraient partager 100 %\nde leur allèle IPD avec le marqueur (p. ex., ce qui serait le\ncas de la brose kystique) que dans le cas d’une maladie\ndominante, où cette proportion est de 75 %, en théorie (ce\nque l’on observerait dans la chorée de Huntington). De plus,\nces analyses non paramétriques, comparées aux analyses\nde liaison, ont une moins grande puissance statistique, et\nleurs résultats sont généralement moins détaillés que ceux\nobtenus au moyen des méthodes basées sur le lod score,\npuisque les méthodes non paramétriques ne permettent\npas d’estimer la distance entre le locus de la maladie et le\nmarqueur. Ainsi, les analyses non paramétriques orent,\nthéoriquement du moins, un avantage complémentaire\naux études reposant sur un lod score. Cependant, en\npratique, il arrive que les désavantages des analyses non\nparamétriques soient compensés par une plus grande fa-\ncilité à échantillonner des paires fraternelles de personnes\natteintes que des familles étendues.\n2. La méconnaissance du mode de transmission et la possibilité\nque certaines formes de maladies psychiatriques aient un mode\nde transmission polygénique font que la puissance statistique\ndes méthodes basées sur le lod score est beaucoup moins\ngrande dans de tels cas. Il existe toutefois des alternatives\nanalytiques pour faire face à ce type de problème :\na) Choisir de grandes familles, dans lesquelles la distribution\ndes cas est compatible avec une transmission mendélienne.\nPar exemple, on peut choisir de grandes familles dans\nlesquelles on retrouve des personnes atteintes dans plu-\nsieurs générations successives (autrement dit, la maladie\nne « saute » pas de génération, comme dans certaines\nfamilles étudiées par le groupe de recherche de Maziade &\nPaccalet (2013), et dans lesquelles on retrouve des fratries\noù près de la moitié des personnes sont aectées). Ces\ndonnées pourraient évoquer une transmission dominante.\nMalheureusement, même dans une famille dans laquelle\nles cas semblent distribués selon un mode mendélien, il n’y\na aucune garantie que ce soit le cas, puisque ces familles\npeuvent aussi parfois présenter une transmission de type\npolygénique. Ce n’est pas seulement à cause du nombre de\ngènes en cause : une transmission mendélienne suppose\nque le gène s’exprime et que l’on observe un phénotype\nlié à ce gène chaque fois qu’il est transmis. Si le phénotype\nn’apparaît pas, cela suppose que le gène n’a pas été transmis.\nPar contre, dans la transmission polygénique, le phénotype\nest lié à la présence de plusieurs gènes en interactions les\nuns avec les autres. Dans ce cas, l’absence de certains gènes\nempêchera l’apparition du phénotype lié au gène d’intérêt\nmême s’il a été eectivement transmis.\nqualiés de « cas de non-pénétrance ». Ces cas sont considérés\ncomme non aectés lors des analyses de liaison, même s’ils sont\nporteurs de gènes de susceptibilité, ce qui diminue la mise en\névidence d’une liaison génétique. Trois solutions à ce problème\nont été proposées :\n• Les analyses permettent un certain pourcentage de cas de\nnon-pénétrance, sans spécier quels individus sont concernés.\nCependant, cette solution introduit un paramètre d’incertitude\ndans les analyses, avec l’inconvénient de diminuer la puissance\nstatistique.\n• Il est possible de n’inclure que les sujets affectés dans\nles analyses de liaison, ce qui élimine le problème des cas\nde non-pénétrance. Cependant, la perte de l’information\nfournie par les personnes non aectées diminue la puissance\nstatistique.\n• Il est possible de recourir à des méthodes plus sensibles que les\nentrevues cliniques pour identier les cas de non- pénétrance.\nEn eet, plusieurs études ont révélé que les apparentés non\naectés de patients atteints de schizophrénie sont quand\nmême fréquemment porteurs d’anomalies similaires à celles\nretrouvées chez les patients atteints de schizophrénie, par\nexemple une diminution de la performance à des tests co-\ngnitifs (trouble d’attention, de mémoire, etc.). De tels décits\nchez une personne non aectée peuvent signier qu’elle est\nporteuse d’une vulnérabilité génétique vis-à-vis de la schi-\nzophrénie, sans avoir développé cette maladie (qui est alors\ndite à pénétrance incomplète, puisque des individus portant\ndes gènes de susceptibilité ne développent pas la maladie).\nCependant, il est possible d’observer de telles anomalies chez\ndes patients présentant d’autres diagnostics psychiatriques,\nce qui risque d’introduire des faux positifs dans les analyses,\ndiminuant ainsi la mise en évidence d’une liaison génétique. Il\nfaut aussi considérer les dicultés reliées aux facteurs causant\nla maladie.\nMéconnaissance du mode de transmission\nSi une base génétique à la transmission familiale de la plupart\ndes maladies psychiatriques est bien établie, leur mode exact\nde transmission demeure incertain. Or, la compréhension des\nmécanismes génétiques sous-tendant les maladies complexes et\nles analyses de liaison génétique nécessite de connaître le modèle\nde transmission génétique. Cette méconnaissance du mode de\ntransmission des maladies psychiatriques pose deux dés :\n1. Un modèle de transmission erroné diminue la puissance\nstatistique des analyses. Deux solutions ont été proposées :\na) Répéter les analyses en variant le mode de transmission.\nCependant, l’utilisation de cette stratégie augmente le risque\nd’obtenir une fausse preuve de liaison génétique (appelée\n« erreur de type 1 »), résultant de la multiplication des\ntests statistiques. Certaines précautions méthodologiques\npermettent cependant de limiter les problèmes découlant\nde cette répétition.\nb) Utiliser des analyses dites non paramétriques, qui ne\nnécessitent pas de présumer du mode de transmission\ngénétique. Une de ces approches consiste à estimer la\nproportion d’allèles identiques par descendance (IPD)\nà l’égard d’un marqueur donné partagé par une paire\nfraternelle (c.-à-d. des frères ou des sœurs) atteinte de la\n",
+  "raw_text_sha256": "29549ed20dc76c62cd57546a2e319832b7eb79837cc9e9a421cd3148de2bcef9",
+  "source_page_display": 122,
+  "source_page_index": 121
+}

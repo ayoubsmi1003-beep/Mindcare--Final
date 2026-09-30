@@ -1,0 +1,124 @@
+{
+  "block_sequence_sha256": "ebae88fabb77454cb2c1bcb8490de774e7088d7a8759d8f9bf480ee9d883115a",
+  "blocks": [
+    {
+      "bbox": [
+        209.25,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-1082-block-0001",
+      "order": 1,
+      "text": "Chapitre 47\nÉvaluation de la qualité des soins et maintien de la compétence\n1065\n",
+      "text_sha256": "5f63fd029d6385343de4b2e69b189bff296d7bf0660f59406bab8f4cc5e8164b"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.98867416381836,
+        197.28399658203125,
+        50.92910385131836
+      ],
+      "block_id": "page-1082-block-0002",
+      "order": 2,
+      "text": "H, G. (2010). « Le programme de\n",
+      "text_sha256": "04668db6fdc077daa218f7732fbcc2bf17d596d4a32e887a7a7c62d139700305"
+    },
+    {
+      "bbox": [
+        54.0,
+        50.98867416381836,
+        210.39801025390625,
+        92.9291000366211
+      ],
+      "block_id": "page-1082-block-0003",
+      "order": 3,
+      "text": "Maintien du certicat du CRMCC : des\nchangements sont annoncés », La lettre\ndu DPC, 19(4), p. 2-3.\nH, G. (2011). « Le programme de\n",
+      "text_sha256": "071824d322ab183694be3f3e93e24cdc84134d1720a6c7e930daba7a3b736302"
+    },
+    {
+      "bbox": [
+        66.0,
+        92.9886703491211,
+        210.1264190673828,
+        122.9291000366211
+      ],
+      "block_id": "page-1082-block-0004",
+      "order": 4,
+      "text": "Maintien du certicat du CRMCC : des\nchangements apportés au 3e cycle », Le\nSpécialiste, 13(2), p. 32.\n",
+      "text_sha256": "085822ff126ca641d53196d60cc457c8db93a262f0404fea9b6b2740c82d016a"
+    },
+    {
+      "bbox": [
+        226.0,
+        40.98867416381836,
+        376.2850036621094,
+        50.92910385131836
+      ],
+      "block_id": "page-1082-block-0005",
+      "order": 5,
+      "text": "L, F. & al. (2010). « Eective conti-\n",
+      "text_sha256": "6024d81eff02f28dd8431358d827ef121b9a7f534e3732794dbdc7f9d401d8c1"
+    },
+    {
+      "bbox": [
+        226.0,
+        50.98867416381836,
+        381.49200439453125,
+        102.9291000366211
+      ],
+      "block_id": "page-1082-block-0006",
+      "order": 6,
+      "text": "nuing professional development for\ntranslating shared decision making\nin primary care : A study protocol »,\nImplemention Science, 27(5), 83, p. 1-6.\nS, J. & al. (2010). « Eectiveness\n",
+      "text_sha256": "f68f58d45336bda349ad55e5f7f1a74c39eb78f3dc63115b22e8e70581b38046"
+    },
+    {
+      "bbox": [
+        238.0,
+        102.9886703491211,
+        374.1400451660156,
+        122.9291000366211
+      ],
+      "block_id": "page-1082-block-0007",
+      "order": 7,
+      "text": "of Continuing Professional\nDevelopment project : A summary of\n",
+      "text_sha256": "42d378128b3f201584cfe9d38c88d60913e51bb0a880bc6f02855960ed2119b8"
+    },
+    {
+      "bbox": [
+        398.0,
+        40.98867416381836,
+        553.2650146484375,
+        72.9291000366211
+      ],
+      "block_id": "page-1082-block-0008",
+      "order": 8,
+      "text": "ndings », Medical Teacher, 32(7),\np. 586-592.\nT, M. & B, C. (2010).\n",
+      "text_sha256": "099678fad53c47073054fc475f2898b570adfe092313a56c99867e297e104655"
+    },
+    {
+      "bbox": [
+        410.0,
+        72.9886703491211,
+        552.9104614257812,
+        122.9291000366211
+      ],
+      "block_id": "page-1082-block-0009",
+      "order": 9,
+      "text": "Guide de formation ABC: L’évaluation\nde la qualité de l’acte, Montréal,\nQuébec, Association des Conseils des\nmédecins, dentistes et pharmaciens du\nQuébec.\n",
+      "text_sha256": "4acf87f6777dbe0eba40a82c40a72fa61df2d95c7ab980c8118b2838f6643356"
+    }
+  ],
+  "coordinates_sha256": "fa6919b5e3cbd90e0fc9adfc676c2bd8295ad4f21438806f5003209ece99295a",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1082",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 47\nÉvaluation de la qualité des soins et maintien de la compétence\n1065\nH, G. (2010). « Le programme de\nMaintien du certicat du CRMCC : des\nchangements sont annoncés », La lettre\ndu DPC, 19(4), p. 2-3.\nH, G. (2011). « Le programme de\nMaintien du certicat du CRMCC : des\nchangements apportés au 3e cycle », Le\nSpécialiste, 13(2), p. 32.\nL, F. & al. (2010). « Eective conti-\nnuing professional development for\ntranslating shared decision making\nin primary care : A study protocol »,\nImplemention Science, 27(5), 83, p. 1-6.\nS, J. & al. (2010). « Eectiveness\nof Continuing Professional\nDevelopment project : A summary of\nndings », Medical Teacher, 32(7),\np. 586-592.\nT, M. & B, C. (2010).\nGuide de formation ABC: L’évaluation\nde la qualité de l’acte, Montréal,\nQuébec, Association des Conseils des\nmédecins, dentistes et pharmaciens du\nQuébec.\n",
+  "raw_text_sha256": "eda9a0dff4a4dc0a76b4306689bd0e83357f31506241186420c7bff0afcb0cde",
+  "source_page_display": 1083,
+  "source_page_index": 1082
+}

@@ -1,0 +1,100 @@
+{
+  "block_sequence_sha256": "54d366e02c1c453a533fe59be83b03e62e381179c8ee2b9e0c528b30a11247b4",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        470.3879699707031,
+        758.8693237304688
+      ],
+      "block_id": "page-0163-block-0001",
+      "order": 1,
+      "text": "146\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2\nDéterminants bio-psycho-sociaux\n",
+      "text_sha256": "3c3078d1c5aca359bc0a8d3993d74f8aa567fb17431189edde567324713695a9"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.30859375,
+        154.95849609375
+      ],
+      "block_id": "page-0163-block-0002",
+      "order": 2,
+      "text": "Aux États-Unis et en Europe, un ligand du transporteur\nmembranaire de la dopamine, l’ioupane marqué à l’iode 123\n(DAT Scan™) est utilisé avec succès pour aider à conrmer un\ndiagnostic de démence à corps de Lewy par la mise en évidence de\nlésions du système dopaminergique nigrostrié caractéristiques\nde cette maladie (Latoo & Jan, 2008). Ces observations per-\nmettent de diérencier de façon ecace une démence à corps\nde Lewy d’une démence de type Alzheimer. À l’heure actuelle,\ncet agent n’est pas approuvé aux ns d’utilisation clinique au\nCanada, mais il pourrait l’être assez rapidement.\n",
+      "text_sha256": "ceb2d65530f97494ea4aa47966d5c2fe6c33406917a696d2f6be1f11ad0ab81c"
+    },
+    {
+      "bbox": [
+        306.0,
+        155.9658203125,
+        549.48876953125,
+        726.45849609375
+      ],
+      "block_id": "page-0163-block-0003",
+      "order": 3,
+      "text": "Depuis quelques années, une nouvelle approche a vu le\njour pour le diagnostic de la maladie d’Alzheimer : l’imagerie\ndirecte des dépôts d’amyloïde dans le cerveau, auxquels se\nlient spéciquement des agents TEP. Le premier agent utilisé\navec succès dans ce domaine est le\n11C-PiB (voir les\ngures supplémentaires), un dérivé de la thioavine T. L’utili-\nsation en recherche à large échelle de ce produit a conrmé sa\ncapacité de reéter la charge amyloïdienne, comme le conrme\npar la suite l’examen des échantillons de tissu cérébral. La dé-\nnition des applications cliniques de cette approche fait l’objet\nde nombreux projets à l’heure actuelle. On a mis au point de\nnouveaux radiotraceurs du même type, marqués avec du uor\n18, et dont la demi-vie physique relativement longue permet\nune distribution commerciale. Ces produits laissent entrevoir\nune utilisation à grande échelle de cette technique dans le\ndiagnostic des démences pour identier spéciquement celles\nliées à l’amyloïde. On envisage même la possibilité d’avancer\nun pronostic pour des personnes à risque de sourir d’une\ndémence de ce type (Villemagne & Rowe, 2010). Un premier\nradiopharmaceutique de ce type, le 18F-orbétapir (Amyvid), a\nété approuvé pour application clinique aux États-Unis au début\nde 2012 et en Europe au début de 2013. Deux autres agents, le\n18F-utemetamol (Vizamy) et le 18F-orbetaben (Neuraceq)\nont également été approuvés pour les mêmes indications en\n2014. Un guide d’utilisation appropriée a récemment été publié\n(Johnson & al., 2013) et propose trois indications, à l’exclusion\nde toutes autres, là où ces agents sont disponibles :\n1. Évaluation d’un patient avec atteinte cognitive minime pro-\nlongée stable, ou progressive mais inexpliquée ;\n2. Évaluation d’un patient répondant aux critères d’une maladie\nd’Alzheimer possible, mais demeurant par ailleurs atypique\nsur le plan de l’évolution, ou présentant possiblement une\nétiologie mixte ;\n3. Évaluation d’un patient avec une démence précoce (en général\navant 65 ans).\nUne autre approche en médecine nucléaire, cliniquement\ndisponible, peut aussi aider à établir le diagnostic spécique\nd’une maladie s’accompagnant d’une démence. L’imagerie de\nl’innervation sympathique cardiaque à l’aide du MIBG (méta-\niodobenzylguanidine) marqué à l’iode 131 permet de diérencier\nles cas de démence associés aux synucléopathies (maladie de\nParkinson idiopathique, démences à corps de Lewy, présentant\ndes dépôts de la protéine α-synucléine dans les neurones),\nd’autres types de maladies avec démence (Alzheimer, syndrome\nde type parkinson, tels que la paralysie supranucléaire progres-\nsive, les dégénérescences multisystèmes et les dégénérescences\ncorticobasales), qui ne présentent pas de telles lésions mais qui\npeuvent, au moins dans leurs phases initiales respectives, présenter\nun tableau clinique dicile à diérencier de celui des démences\n",
+      "text_sha256": "2e0e601b8419ba1afd7ffb37877e98955e2b9791ebfd1ca01b5d67dde775f09a"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.9658203125,
+        291.3936462402344,
+        283.20849609375
+      ],
+      "block_id": "page-0163-block-0004",
+      "order": 4,
+      "text": "à ceux de la TEP pour les cas de démences, mais les études\npermettant de réaliser cette comparaison n’ont pas encore été\neectuées. Par ailleurs, cela ne signie pas que les résultats\nobtenus avec la TEMP n’ont aucune valeur : si l’accès à la TEP\nest limité, la TEMP peut aussi contribuer au diagnostic d’une\nmaladie neurodégénérative (Silverman, 2004) avec des résultats\nintéressants (Dougall & al., 2003 ; Pimlott & Ebmeier, 2007).\nLa distribution caractéristique des anomalies métaboliques\nobtenues avec la TEP dans la maladie d’Alzheimer a été décrite\nil y a déjà longtemps, notamment avec la mise en évidence\nd’une atteinte des aires associatives polymodales temporopa-\nriétales et frontales (Jagust & al., 2007). L’atteinte des régions\npostérieures des gyri cingulaires est également bien établie et\ns’avère un élément important du diagnostic précoce. On rap-\nporte aussi des atteintes des structures temporales médianes\n(hippocampes). Au total, la possibilité de montrer des atteintes\ndu métabolisme cérébral au moyen de la TEP est maintenant\nbien établie (Bohnen & al., 2012 ; Coleman, 2005 ; Mistur & al.,\n2009), avec des chires de sensibilité et de spécicité jusqu’à\nplus de 90 %, y compris dans des études avec conrmation\nhistologique de la maladie (Jagust & al., 2007).\n",
+      "text_sha256": "f9d2aa80432ed227ac905ac59c149481ae68bb0f83b1abfa05488d56069e16cb"
+    },
+    {
+      "bbox": [
+        48.0,
+        284.2658386230469,
+        291.272705078125,
+        468.6084899902344
+      ],
+      "block_id": "page-0163-block-0005",
+      "order": 5,
+      "text": "Ces modications sont présentes de façon précoce dans la\nmaladie d’Alzheimer. Mosconi et ses collaborateurs (2009) ont\nconrmé leur présence par la TEP à des stades précliniques\ndu processus dégénératif. En fait, cette observation n’est pas\nparticulièrement surprenante, puisque les peptides amyloïdiens,\nqui sont le plus probablement en cause dans le développement\nde la maladie d’Alzheimer, semblent capables d’aecter direc-\ntement les synapses. Comme l’activité synaptique inue sur\nla xation de 18FDG, ces anomalies fonctionnelles (peut-être\nprélésionnelles) s’accompagnent de modications de consom-\nmation de glucose à des stades très précoces de la maladie.\nBien entendu, ces altérations ne sont pas alors susamment\nmarquées pour induire des anomalies détectables en clinique,\nmais il semble que leur mise en évidence par la TEP puisse\nse faire jusqu’à 10 ans avant que les malades n’atteignent un\nstade de démence apparent.\n",
+      "text_sha256": "2d4ba99a815f0214469659ea4ee084456f62d1e512f12164e9390aedd47e8950"
+    },
+    {
+      "bbox": [
+        48.0,
+        468.92620849609375,
+        291.4090270996094,
+        619.2584838867188
+      ],
+      "block_id": "page-0163-block-0006",
+      "order": 6,
+      "text": "Par ailleurs, les études fonctionnelles de la TEP, avec le 18FDG\ncomme traceur, peuvent aider à faire un diagnostic diérentiel\ndes principales maladies neurodégénératives conduisant à des\ntableaux cliniques de démence (maladie d’Alzheimer, maladie à\ncorps de Lewy, dégénérescence lobaire frontotemporale donnant\ndes démences de type frontotemporal). L’exactitude diagnostique\nse situe entre 80 % et 90 % (Bohnen & al., 2012). Il est également\npossible de diérencier des maladies qui, souvent, se présentent\navec un tableau d’atteintes cognitives, avant de se révéler plus\ngraves dans d’autres domaines lors de l’apparition tardive d’autres\nsymptômes (maladie de Parkinson idiopathique, syndrome de\ntype parkinsonien, paralysie supranucléaire progressive, dégé-\nnérescence corticobasale, atrophie multisystématisée).\n",
+      "text_sha256": "95105894088e9b73610d9f4fd52c1480b4c36367f5d300703a7e0480d253467e"
+    },
+    {
+      "bbox": [
+        48.0,
+        631.1830444335938,
+        291.1075134277344,
+        726.45849609375
+      ],
+      "block_id": "page-0163-block-0007",
+      "order": 7,
+      "text": "Études de liaison spécique\nEn ce qui concerne les études de liaison spécique, la situation\nest essentiellement la même que pour les études de ot sanguin\net de métabolisme cérébraux : les seules utilisations cliniques en\npsychiatrie touchent les maladies neurodégénératives associées\nà une démence. Les applications en recherche sont cependant\nmultiples et elles ont permis depuis quelques décennies des\navancées importantes en psychiatrie.\n",
+      "text_sha256": "60e64ed0e6e00f1ccc46d0aca63c85882260f5d8203f4def576f36c6689c7cc2"
+    }
+  ],
+  "coordinates_sha256": "595319b2a00ccdce9203ca69adc39f0cb930d804a9bf568a5f6af0fed4c84372",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0163",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "146\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2\nDéterminants bio-psycho-sociaux\nAux États-Unis et en Europe, un ligand du transporteur\nmembranaire de la dopamine, l’ioupane marqué à l’iode 123\n(DAT Scan™) est utilisé avec succès pour aider à conrmer un\ndiagnostic de démence à corps de Lewy par la mise en évidence de\nlésions du système dopaminergique nigrostrié caractéristiques\nde cette maladie (Latoo & Jan, 2008). Ces observations per-\nmettent de diérencier de façon ecace une démence à corps\nde Lewy d’une démence de type Alzheimer. À l’heure actuelle,\ncet agent n’est pas approuvé aux ns d’utilisation clinique au\nCanada, mais il pourrait l’être assez rapidement.\nDepuis quelques années, une nouvelle approche a vu le\njour pour le diagnostic de la maladie d’Alzheimer : l’imagerie\ndirecte des dépôts d’amyloïde dans le cerveau, auxquels se\nlient spéciquement des agents TEP. Le premier agent utilisé\navec succès dans ce domaine est le\n11C-PiB (voir les\ngures supplémentaires), un dérivé de la thioavine T. L’utili-\nsation en recherche à large échelle de ce produit a conrmé sa\ncapacité de reéter la charge amyloïdienne, comme le conrme\npar la suite l’examen des échantillons de tissu cérébral. La dé-\nnition des applications cliniques de cette approche fait l’objet\nde nombreux projets à l’heure actuelle. On a mis au point de\nnouveaux radiotraceurs du même type, marqués avec du uor\n18, et dont la demi-vie physique relativement longue permet\nune distribution commerciale. Ces produits laissent entrevoir\nune utilisation à grande échelle de cette technique dans le\ndiagnostic des démences pour identier spéciquement celles\nliées à l’amyloïde. On envisage même la possibilité d’avancer\nun pronostic pour des personnes à risque de sourir d’une\ndémence de ce type (Villemagne & Rowe, 2010). Un premier\nradiopharmaceutique de ce type, le 18F-orbétapir (Amyvid), a\nété approuvé pour application clinique aux États-Unis au début\nde 2012 et en Europe au début de 2013. Deux autres agents, le\n18F-utemetamol (Vizamy) et le 18F-orbetaben (Neuraceq)\nont également été approuvés pour les mêmes indications en\n2014. Un guide d’utilisation appropriée a récemment été publié\n(Johnson & al., 2013) et propose trois indications, à l’exclusion\nde toutes autres, là où ces agents sont disponibles :\n1. Évaluation d’un patient avec atteinte cognitive minime pro-\nlongée stable, ou progressive mais inexpliquée ;\n2. Évaluation d’un patient répondant aux critères d’une maladie\nd’Alzheimer possible, mais demeurant par ailleurs atypique\nsur le plan de l’évolution, ou présentant possiblement une\nétiologie mixte ;\n3. Évaluation d’un patient avec une démence précoce (en général\navant 65 ans).\nUne autre approche en médecine nucléaire, cliniquement\ndisponible, peut aussi aider à établir le diagnostic spécique\nd’une maladie s’accompagnant d’une démence. L’imagerie de\nl’innervation sympathique cardiaque à l’aide du MIBG (méta-\niodobenzylguanidine) marqué à l’iode 131 permet de diérencier\nles cas de démence associés aux synucléopathies (maladie de\nParkinson idiopathique, démences à corps de Lewy, présentant\ndes dépôts de la protéine α-synucléine dans les neurones),\nd’autres types de maladies avec démence (Alzheimer, syndrome\nde type parkinson, tels que la paralysie supranucléaire progres-\nsive, les dégénérescences multisystèmes et les dégénérescences\ncorticobasales), qui ne présentent pas de telles lésions mais qui\npeuvent, au moins dans leurs phases initiales respectives, présenter\nun tableau clinique dicile à diérencier de celui des démences\nà ceux de la TEP pour les cas de démences, mais les études\npermettant de réaliser cette comparaison n’ont pas encore été\neectuées. Par ailleurs, cela ne signie pas que les résultats\nobtenus avec la TEMP n’ont aucune valeur : si l’accès à la TEP\nest limité, la TEMP peut aussi contribuer au diagnostic d’une\nmaladie neurodégénérative (Silverman, 2004) avec des résultats\nintéressants (Dougall & al., 2003 ; Pimlott & Ebmeier, 2007).\nLa distribution caractéristique des anomalies métaboliques\nobtenues avec la TEP dans la maladie d’Alzheimer a été décrite\nil y a déjà longtemps, notamment avec la mise en évidence\nd’une atteinte des aires associatives polymodales temporopa-\nriétales et frontales (Jagust & al., 2007). L’atteinte des régions\npostérieures des gyri cingulaires est également bien établie et\ns’avère un élément important du diagnostic précoce. On rap-\nporte aussi des atteintes des structures temporales médianes\n(hippocampes). Au total, la possibilité de montrer des atteintes\ndu métabolisme cérébral au moyen de la TEP est maintenant\nbien établie (Bohnen & al., 2012 ; Coleman, 2005 ; Mistur & al.,\n2009), avec des chires de sensibilité et de spécicité jusqu’à\nplus de 90 %, y compris dans des études avec conrmation\nhistologique de la maladie (Jagust & al., 2007).\nCes modications sont présentes de façon précoce dans la\nmaladie d’Alzheimer. Mosconi et ses collaborateurs (2009) ont\nconrmé leur présence par la TEP à des stades précliniques\ndu processus dégénératif. En fait, cette observation n’est pas\nparticulièrement surprenante, puisque les peptides amyloïdiens,\nqui sont le plus probablement en cause dans le développement\nde la maladie d’Alzheimer, semblent capables d’aecter direc-\ntement les synapses. Comme l’activité synaptique inue sur\nla xation de 18FDG, ces anomalies fonctionnelles (peut-être\nprélésionnelles) s’accompagnent de modications de consom-\nmation de glucose à des stades très précoces de la maladie.\nBien entendu, ces altérations ne sont pas alors susamment\nmarquées pour induire des anomalies détectables en clinique,\nmais il semble que leur mise en évidence par la TEP puisse\nse faire jusqu’à 10 ans avant que les malades n’atteignent un\nstade de démence apparent.\nPar ailleurs, les études fonctionnelles de la TEP, avec le 18FDG\ncomme traceur, peuvent aider à faire un diagnostic diérentiel\ndes principales maladies neurodégénératives conduisant à des\ntableaux cliniques de démence (maladie d’Alzheimer, maladie à\ncorps de Lewy, dégénérescence lobaire frontotemporale donnant\ndes démences de type frontotemporal). L’exactitude diagnostique\nse situe entre 80 % et 90 % (Bohnen & al., 2012). Il est également\npossible de diérencier des maladies qui, souvent, se présentent\navec un tableau d’atteintes cognitives, avant de se révéler plus\ngraves dans d’autres domaines lors de l’apparition tardive d’autres\nsymptômes (maladie de Parkinson idiopathique, syndrome de\ntype parkinsonien, paralysie supranucléaire progressive, dégé-\nnérescence corticobasale, atrophie multisystématisée).\nÉtudes de liaison spécique\nEn ce qui concerne les études de liaison spécique, la situation\nest essentiellement la même que pour les études de ot sanguin\net de métabolisme cérébraux : les seules utilisations cliniques en\npsychiatrie touchent les maladies neurodégénératives associées\nà une démence. Les applications en recherche sont cependant\nmultiples et elles ont permis depuis quelques décennies des\navancées importantes en psychiatrie.\n",
+  "raw_text_sha256": "d393fa0178775225b93f32bb72e6dd47676893c3f179066e0c317a5e120c7b72",
+  "source_page_display": 164,
+  "source_page_index": 163
+}

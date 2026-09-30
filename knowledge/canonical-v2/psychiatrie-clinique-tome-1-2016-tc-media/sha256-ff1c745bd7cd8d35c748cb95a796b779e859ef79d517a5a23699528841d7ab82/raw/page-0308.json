@@ -1,0 +1,448 @@
+{
+  "block_sequence_sha256": "722a9bfa1bdf09517d237cf3ce727de2e8f845c783ba2e173544c256d3cd02f5",
+  "blocks": [
+    {
+      "bbox": [
+        400.45001220703125,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0308-block-0001",
+      "order": 1,
+      "text": "Chapitre 14\nÉpidémiologie\n291\n",
+      "text_sha256": "571a8956325903ae0aef038ad81903784546b072bacd60258f83f91f16bff0e4"
+    },
+    {
+      "bbox": [
+        54.0,
+        39.33681869506836,
+        268.87542724609375,
+        55.47939682006836
+      ],
+      "block_id": "page-0308-block-0002",
+      "order": 2,
+      "text": "14.1.2 Validité avec une mesure étalon\n",
+      "text_sha256": "5beea05045d59b9e6d79fc4b8231c37fa93a68f424a5d71bb2a3b7eed2ff9cfa"
+    },
+    {
+      "bbox": [
+        54.0,
+        58.9658203125,
+        297.01751708984375,
+        174.1584930419922
+      ],
+      "block_id": "page-0308-block-0003",
+      "order": 3,
+      "text": "Il est possible d’évaluer la validité d’une mesure en la compa-\nrant à un étalon qui fournit une mesure presque parfaite. Par\nexemple, un diagnostic dénitif de cancer de la prostate peut\nêtre établi par un examen microscopique de cette glande après\nson ablation chirurgicale. Cependant, à des ns de dépistage,\nil est avantageux de détecter une telle pathologie sans qu’il soit\nnécessaire de procéder à l’ablation de cet organe. Ainsi, pour\névaluer la validité d’un test de dépistage, on peut déterminer la\nfaçon dont ce test a pu prédire les résultats de l’examen micros-\ncopique de l’organe.\n",
+      "text_sha256": "a1da1dc00c97464eb8e1b7f6f721ea8eedb62b40cfe607299aaa5aea3c168913"
+    },
+    {
+      "bbox": [
+        54.0,
+        175.31582641601562,
+        297.3426513671875,
+        498.2585144042969
+      ],
+      "block_id": "page-0308-block-0004",
+      "order": 4,
+      "text": "Pour évaluer la valeur prédictive d’une mesure comparée\nà une mesure étalon, on doit généralement tenir compte des\ncaractéristiques psychométriques suivantes :\n• la sensibilité d’un test, qui est la probabilité que ce test détecte\nun individu malade selon la mesure étalon ; il y a un faux\nnégatif lorsque le test ne détecte pas un malade ;\n• la spécicité d’un test, qui est la probabilité que le test déclare\nsain un individu qui n’est pas malade selon la mesure étalon ;\nil y a faux positif lorsque le test déclare malade une personne\nqui ne l’est pas.\nAinsi, deux valeurs prédictives sont possibles :\n• la valeur prédictive positive, qui est la probabilité qu’un\nindividu déclaré malade par le test soit réellement malade ;\n• la valeur prédictive négative, qui est la probabilité qu’un in-\ndividu qui n’est pas déclaré malade par le test soit réellement\nexempt de la maladie en question.\nOn convient que les exigences quant à la performance d’un\ntest de dépistage sont fonction des répercussions de la décision\nque l’on doit prendre sur la base de ce test. Par exemple, nous\nexigeons une très forte sensibilité pour un test qui doit servir à\nidentier les personnes atteintes d’un cancer an de dépister la\nmajorité d’individus malades. Par ailleurs, un test de dépistage\ndu cancer très peu spécique (avec de nombreux faux positifs)\npeut induire beaucoup d’anxiété chez les personnes dépistées\nqui ne présentent pas vraiment de cancer et donner lieu à\ndes interventions inutiles. Le tableau 14.1 situe ces diverses\npossibilités.\n",
+      "text_sha256": "90c2c291db3bb6d48687f9be01c12514cc5bff671b13ed86acaed200f0b52ef1"
+    },
+    {
+      "bbox": [
+        56.150001525878906,
+        517.7523193359375,
+        228.0038299560547,
+        529.7700805664062
+      ],
+      "block_id": "page-0308-block-0005",
+      "order": 5,
+      "text": "TABLEAU 14.1 Mesures de la validité selon\n",
+      "text_sha256": "073cd15339ffe84c63640fa5d75984a4c8006c69b1123822819ad151b1550691"
+    },
+    {
+      "bbox": [
+        112.70000457763672,
+        529.4022827148438,
+        189.91725158691406,
+        541.3700561523438
+      ],
+      "block_id": "page-0308-block-0006",
+      "order": 6,
+      "text": "une mesure étalon\n",
+      "text_sha256": "682bd6775f2afa27d16f562a261a10acc00f7fd8f49966b1e47c664590e10761"
+    },
+    {
+      "bbox": [
+        127.0,
+        547.0741577148438,
+        175.801513671875,
+        567.6503295898438
+      ],
+      "block_id": "page-0308-block-0007",
+      "order": 7,
+      "text": "Personne\nmalade selon\n",
+      "text_sha256": "bcf8335af1a00d49ea897bfd88d53c10b2e8f750aa1a48a56e63e25004a0e2bc"
+    },
+    {
+      "bbox": [
+        140.10000610351562,
+        567.0741577148438,
+        162.7100067138672,
+        577.6503295898438
+      ],
+      "block_id": "page-0308-block-0008",
+      "order": 8,
+      "text": "le test\n",
+      "text_sha256": "bda697669fd13e342d41434c0023ff7ca608cbbb3ac4dc1db3faff52b4a9ac44"
+    },
+    {
+      "bbox": [
+        188.85000610351562,
+        546.9241333007812,
+        230.27001953125,
+        567.5003051757812
+      ],
+      "block_id": "page-0308-block-0009",
+      "order": 9,
+      "text": "Personne\nsaine selon\n",
+      "text_sha256": "8b2be2c4f1e7fe9bbc40f69d5a31c92623aa961937aeb89e8bd7c859a8ce67f5"
+    },
+    {
+      "bbox": [
+        198.25,
+        566.9241333007812,
+        220.86000061035156,
+        577.5003051757812
+      ],
+      "block_id": "page-0308-block-0010",
+      "order": 10,
+      "text": "le test\n",
+      "text_sha256": "bda697669fd13e342d41434c0023ff7ca608cbbb3ac4dc1db3faff52b4a9ac44"
+    },
+    {
+      "bbox": [
+        259.0500183105469,
+        557.0741577148438,
+        276.2971496582031,
+        567.6503295898438
+      ],
+      "block_id": "page-0308-block-0011",
+      "order": 11,
+      "text": "Total\n",
+      "text_sha256": "cd552ee392063cb6b4df9c6a618c442db5677a8cc22115ee370ce6f42e1cda41"
+    },
+    {
+      "bbox": [
+        57.75,
+        582.8241577148438,
+        118.95851135253906,
+        613.4003295898438
+      ],
+      "block_id": "page-0308-block-0012",
+      "order": 12,
+      "text": "Personne\nmalade selon\nla mesure étalon\n",
+      "text_sha256": "6b72f730d8d3757db8ad5e588396396a2f9fdc0f2e845c9b0ed3b1346219a0c2"
+    },
+    {
+      "bbox": [
+        129.6999969482422,
+        583.3519897460938,
+        276.6300048828125,
+        593.1781616210938
+      ],
+      "block_id": "page-0308-block-0013",
+      "order": 13,
+      "text": "Vrai positif (a)\nFaux positif (b)\na + b\n",
+      "text_sha256": "f353a98a4ee14c9dc06cc256ef2995d5ebbe615cef5dae02cc731fe8586c7ca3"
+    },
+    {
+      "bbox": [
+        59.25,
+        621.6241455078125,
+        117.46600341796875,
+        642.2003173828125
+      ],
+      "block_id": "page-0308-block-0014",
+      "order": 14,
+      "text": "Personne saine\nselon la mesure\n",
+      "text_sha256": "d0777658cd5c44d2022aaaca203c60ab793bc758f5ad2aca924d2f9662805b66"
+    },
+    {
+      "bbox": [
+        77.0,
+        641.6241455078125,
+        99.51500701904297,
+        652.2003173828125
+      ],
+      "block_id": "page-0308-block-0015",
+      "order": 15,
+      "text": "étalon\n",
+      "text_sha256": "c4a977e9a893457935e2853bc40645b7f8f6ef201fd9465c6dc1340be9845cf8"
+    },
+    {
+      "bbox": [
+        127.0,
+        622.1019897460938,
+        276.5589904785156,
+        631.9281616210938
+      ],
+      "block_id": "page-0308-block-0016",
+      "order": 16,
+      "text": "Faux négatif (c)\nVrai négatif (d)\nc + d\n",
+      "text_sha256": "679118f348ae068cb88e358a16b8644c8f6b2e3b3c8d5abd4987ed9e4bfffdd4"
+    },
+    {
+      "bbox": [
+        79.6500015258789,
+        660.4241333007812,
+        290.1592712402344,
+        671.0003051757812
+      ],
+      "block_id": "page-0308-block-0017",
+      "order": 17,
+      "text": "Total\na + c\nb + d\na + b + c + d\n",
+      "text_sha256": "8a31a7afb2ea935327835673f84c5ca5c2857980f29a7f9fd6b15b2a97bbc6b1"
+    },
+    {
+      "bbox": [
+        54.25,
+        679.4462890625,
+        162.33859252929688,
+        717.2265625
+      ],
+      "block_id": "page-0308-block-0018",
+      "order": 18,
+      "text": "Sensibilité : a/(a + b)\nSpécicité : d/(c + d)\nValeur prédictive positive : a/(a + c)\nValeur prédictive négative : d/(b + d)\n",
+      "text_sha256": "8a00ce29a515f5bf7c5c565178b410c96835d69302f0af9edefe445c0a16dba1"
+    },
+    {
+      "bbox": [
+        312.0,
+        40.9658203125,
+        555.382080078125,
+        344.95849609375
+      ],
+      "block_id": "page-0308-block-0019",
+      "order": 19,
+      "text": "En psychiatrie, compte tenu de l’absence de méthodes dia-\ngnostiques absolues, on a parfois recours à la sensibilité, à la\nspécicité et à la valeur prédictive pour examiner la convergence\nd’une mesure plus simple ou moins coûteuse avec la mesure\nétalon. Par exemple, pour évaluer la présence de troubles\npsychiatriques chez les parents de personnes sourant d’une\nmaladie mentale, la méthode la plus pertinente – la méthode\ndite de la « meilleure estimation diagnostique » (best estimate\ndiagnosis) – consiste à recourir à trois sources d’information\npour poser un diagnostic :\n• une entrevue directe avec chacun des patients, comportant\ndes questions sur leurs symptômes psychiatriques ;\n• une révision de leur dossier psychiatrique ;\n• des renseignements fournis par leurs proches.\nCette méthode est malheureusement fort coûteuse. Par\nconséquent, on utilise fréquemment la méthode de l’histoire\nfamiliale (antécédents psychiatriques familiaux), c’est-à-dire la\nméthode par laquelle on établit un diagnostic en se fondant sur\nles renseignements fournis par une seule personne décrivant\nles symptômes psychiatriques de ses proches. Dans le cas de\nla schizophrénie, Roy et ses collaborateurs (1996) ont évalué la\nvalidité de la méthode de la meilleure estimation diagnostique et\nont trouvé que la méthode de l’histoire familiale avait une faible\nsensibilité, une bonne spécicité et une faible valeur prédictive\npositive. Le tableau 14.2 présente les résultats obtenus.\n",
+      "text_sha256": "1e5da74860ea2a3eec3b808042c3a5e248a3584f788345d601f488c01fae85dc"
+    },
+    {
+      "bbox": [
+        314.20001220703125,
+        360.7023010253906,
+        554.9688720703125,
+        372.7200622558594
+      ],
+      "block_id": "page-0308-block-0020",
+      "order": 20,
+      "text": "TABLEAU 14.2 Mesures de validité de la méthode de l’histoire\n",
+      "text_sha256": "b48b7822fabba83d6b7808a3bae217b3fa1fc142580894d0a16bd22ef4495cff"
+    },
+    {
+      "bbox": [
+        371.5,
+        372.6523132324219,
+        540.4179077148438,
+        408.4200744628906
+      ],
+      "block_id": "page-0308-block-0021",
+      "order": 21,
+      "text": "familiale (HF) comparée à la méthode de la\nmeilleure estimation diagnostique (MED)\npour diagnostiquer la schizophrénie\n",
+      "text_sha256": "b4af89f9e77d8990dc872180050f85bf17f43df829f3d5aafd29de60f8b41b48"
+    },
+    {
+      "bbox": [
+        406.3999938964844,
+        414.3741149902344,
+        455.20147705078125,
+        434.9502868652344
+      ],
+      "block_id": "page-0308-block-0022",
+      "order": 22,
+      "text": "Personne\nmalade selon\n",
+      "text_sha256": "bcf8335af1a00d49ea897bfd88d53c10b2e8f750aa1a48a56e63e25004a0e2bc"
+    },
+    {
+      "bbox": [
+        423.70001220703125,
+        434.3741149902344,
+        437.7695007324219,
+        444.9502868652344
+      ],
+      "block_id": "page-0308-block-0023",
+      "order": 23,
+      "text": "l’HF\n",
+      "text_sha256": "0f945cefb9a2b569ac90aa74994aba136f76b275ee7f5cb8b392d5c28e649c7d"
+    },
+    {
+      "bbox": [
+        465.1000061035156,
+        414.3741149902344,
+        506.5199890136719,
+        434.9502868652344
+      ],
+      "block_id": "page-0308-block-0024",
+      "order": 24,
+      "text": "Personne\nsaine selon\n",
+      "text_sha256": "8b2be2c4f1e7fe9bbc40f69d5a31c92623aa961937aeb89e8bd7c859a8ce67f5"
+    },
+    {
+      "bbox": [
+        478.70001220703125,
+        434.3741149902344,
+        492.7695007324219,
+        444.9502868652344
+      ],
+      "block_id": "page-0308-block-0025",
+      "order": 25,
+      "text": "l’HF\n",
+      "text_sha256": "0f945cefb9a2b569ac90aa74994aba136f76b275ee7f5cb8b392d5c28e649c7d"
+    },
+    {
+      "bbox": [
+        524.6500244140625,
+        424.3741149902344,
+        541.8971557617188,
+        434.9502868652344
+      ],
+      "block_id": "page-0308-block-0026",
+      "order": 26,
+      "text": "Total\n",
+      "text_sha256": "cd552ee392063cb6b4df9c6a618c442db5677a8cc22115ee370ce6f42e1cda41"
+    },
+    {
+      "bbox": [
+        325.1000061035156,
+        450.1241149902344,
+        388.5030212402344,
+        460.7002868652344
+      ],
+      "block_id": "page-0308-block-0027",
+      "order": 27,
+      "text": "Personne malade\n",
+      "text_sha256": "5621a3b886c7d90a33208c67df73db8de9c5fae3bc6ca1cf10e968ff34bf3e8c"
+    },
+    {
+      "bbox": [
+        327.75,
+        460.1241149902344,
+        385.96600341796875,
+        470.7002868652344
+      ],
+      "block_id": "page-0308-block-0028",
+      "order": 28,
+      "text": "selon la mesure\n",
+      "text_sha256": "9c9a94842e06495aee2b2c2688b0d17ffed420af1c0e4b0c12e20564a7b137f1"
+    },
+    {
+      "bbox": [
+        336.0,
+        470.1241149902344,
+        377.60052490234375,
+        480.7002868652344
+      ],
+      "block_id": "page-0308-block-0029",
+      "order": 29,
+      "text": "étalon MED\n",
+      "text_sha256": "f9956e15cc38317f96379b6b09a4c6ba36a8853566975fcb1a9d1c9d71b37c25"
+    },
+    {
+      "bbox": [
+        426.45001220703125,
+        450.3019714355469,
+        543.2400512695312,
+        460.4781188964844
+      ],
+      "block_id": "page-0308-block-0030",
+      "order": 30,
+      "text": "14\n27\n41\n",
+      "text_sha256": "fb45a5b831fc133748f188d2e552080b49856a7dc21e2597bc31e691ddfd25c6"
+    },
+    {
+      "bbox": [
+        316.75,
+        488.92413330078125,
+        396.7339172363281,
+        509.50030517578125
+      ],
+      "block_id": "page-0308-block-0031",
+      "order": 31,
+      "text": "Personne saine selon\nla mesure étalon MED\n",
+      "text_sha256": "030c8d0efde157637c5872d39048222ad0f1bd4b36678df003a013473d2e5199"
+    },
+    {
+      "bbox": [
+        426.45001220703125,
+        489.1019592285156,
+        542.47998046875,
+        499.2281188964844
+      ],
+      "block_id": "page-0308-block-0032",
+      "order": 32,
+      "text": "14\n3 695\n3 709\n",
+      "text_sha256": "ad65111aea139716cd284717f1fc11933cac20822d87a843f1acc5ee4fbf2d0a"
+    },
+    {
+      "bbox": [
+        348.1499938964844,
+        517.72412109375,
+        542.47998046875,
+        528.30029296875
+      ],
+      "block_id": "page-0308-block-0033",
+      "order": 33,
+      "text": "Total\n28\n3 722\n3 750\n",
+      "text_sha256": "c460e248162013a98fb2e5245266f47b8a8b6da7cbb2c7a08f18635f60c8a9de"
+    },
+    {
+      "bbox": [
+        312.25,
+        536.7462768554688,
+        554.5513305664062,
+        630.2588500976562
+      ],
+      "block_id": "page-0308-block-0034",
+      "order": 34,
+      "text": "Sensibilité de l’HF : 14/41 = 0,34\nSpécicité de l’HF : 3 695/3 709 = 0,996\nValeur prédictive positive de l’HF : 14/28 = 0,50\nValeur prédictive négative de l’HF : 3 695/3 722 = 0,993\nTaux de concordance entre les deux méthodes : 14 + 3 695/3 750 = 0,989\nTaux d’accord prédit par le hasard : (28/3 750 × 41/3 750)\n+ (3 722/3 750 × 3 709/3 750) = 0,982\nCoefcient kappa entre les deux méthodes : (0,989 – 0,982)/(1 – 0,982) = 0,40\nSource : Adapté de Roy & al. (1996), p. 224-234.\n",
+      "text_sha256": "ddf21bbebc23097fd9630597ef022961cc6dcf8ff7861fc60675133d23e1f2b1"
+    },
+    {
+      "bbox": [
+        312.0,
+        651.8868408203125,
+        504.06976318359375,
+        668.0294189453125
+      ],
+      "block_id": "page-0308-block-0035",
+      "order": 35,
+      "text": "14.1.3 Validité sans mesure étalon\n",
+      "text_sha256": "2305651fa4d37b645301a662bf28fbd94bcbf281002e1221240fe0218670ac88"
+    },
+    {
+      "bbox": [
+        312.0,
+        671.7658081054688,
+        555.0354614257812,
+        717.95849609375
+      ],
+      "block_id": "page-0308-block-0036",
+      "order": 36,
+      "text": "Puisqu’il n’existe pas de méthode absolue pour mesurer les\nsymptômes psychiatriques ou pour déterminer la présence ou\nl’absence d’un trouble psychiatrique, l’évaluation de la validité\ndes méthodes existantes requiert des approches diérentes.\n",
+      "text_sha256": "765450705af2f3afa638c55443de3e3373e513e5112c14e88d22b890dd5a0ba3"
+    }
+  ],
+  "coordinates_sha256": "adfa9d04b9aa4afba242db26dbc7b1a94a5379361c204212bf31b8757ccad7bc",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0308",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 14\nÉpidémiologie\n291\n14.1.2 Validité avec une mesure étalon\nIl est possible d’évaluer la validité d’une mesure en la compa-\nrant à un étalon qui fournit une mesure presque parfaite. Par\nexemple, un diagnostic dénitif de cancer de la prostate peut\nêtre établi par un examen microscopique de cette glande après\nson ablation chirurgicale. Cependant, à des ns de dépistage,\nil est avantageux de détecter une telle pathologie sans qu’il soit\nnécessaire de procéder à l’ablation de cet organe. Ainsi, pour\névaluer la validité d’un test de dépistage, on peut déterminer la\nfaçon dont ce test a pu prédire les résultats de l’examen micros-\ncopique de l’organe.\nPour évaluer la valeur prédictive d’une mesure comparée\nà une mesure étalon, on doit généralement tenir compte des\ncaractéristiques psychométriques suivantes :\n• la sensibilité d’un test, qui est la probabilité que ce test détecte\nun individu malade selon la mesure étalon ; il y a un faux\nnégatif lorsque le test ne détecte pas un malade ;\n• la spécicité d’un test, qui est la probabilité que le test déclare\nsain un individu qui n’est pas malade selon la mesure étalon ;\nil y a faux positif lorsque le test déclare malade une personne\nqui ne l’est pas.\nAinsi, deux valeurs prédictives sont possibles :\n• la valeur prédictive positive, qui est la probabilité qu’un\nindividu déclaré malade par le test soit réellement malade ;\n• la valeur prédictive négative, qui est la probabilité qu’un in-\ndividu qui n’est pas déclaré malade par le test soit réellement\nexempt de la maladie en question.\nOn convient que les exigences quant à la performance d’un\ntest de dépistage sont fonction des répercussions de la décision\nque l’on doit prendre sur la base de ce test. Par exemple, nous\nexigeons une très forte sensibilité pour un test qui doit servir à\nidentier les personnes atteintes d’un cancer an de dépister la\nmajorité d’individus malades. Par ailleurs, un test de dépistage\ndu cancer très peu spécique (avec de nombreux faux positifs)\npeut induire beaucoup d’anxiété chez les personnes dépistées\nqui ne présentent pas vraiment de cancer et donner lieu à\ndes interventions inutiles. Le tableau 14.1 situe ces diverses\npossibilités.\nTABLEAU 14.1 Mesures de la validité selon\nune mesure étalon\nPersonne\nmalade selon\nle test\nPersonne\nsaine selon\nle test\nTotal\nPersonne\nmalade selon\nla mesure étalon\nVrai positif (a)\nFaux positif (b)\na + b\nPersonne saine\nselon la mesure\nétalon\nFaux négatif (c)\nVrai négatif (d)\nc + d\nTotal\na + c\nb + d\na + b + c + d\nSensibilité : a/(a + b)\nSpécicité : d/(c + d)\nValeur prédictive positive : a/(a + c)\nValeur prédictive négative : d/(b + d)\nEn psychiatrie, compte tenu de l’absence de méthodes dia-\ngnostiques absolues, on a parfois recours à la sensibilité, à la\nspécicité et à la valeur prédictive pour examiner la convergence\nd’une mesure plus simple ou moins coûteuse avec la mesure\nétalon. Par exemple, pour évaluer la présence de troubles\npsychiatriques chez les parents de personnes sourant d’une\nmaladie mentale, la méthode la plus pertinente – la méthode\ndite de la « meilleure estimation diagnostique » (best estimate\ndiagnosis) – consiste à recourir à trois sources d’information\npour poser un diagnostic :\n• une entrevue directe avec chacun des patients, comportant\ndes questions sur leurs symptômes psychiatriques ;\n• une révision de leur dossier psychiatrique ;\n• des renseignements fournis par leurs proches.\nCette méthode est malheureusement fort coûteuse. Par\nconséquent, on utilise fréquemment la méthode de l’histoire\nfamiliale (antécédents psychiatriques familiaux), c’est-à-dire la\nméthode par laquelle on établit un diagnostic en se fondant sur\nles renseignements fournis par une seule personne décrivant\nles symptômes psychiatriques de ses proches. Dans le cas de\nla schizophrénie, Roy et ses collaborateurs (1996) ont évalué la\nvalidité de la méthode de la meilleure estimation diagnostique et\nont trouvé que la méthode de l’histoire familiale avait une faible\nsensibilité, une bonne spécicité et une faible valeur prédictive\npositive. Le tableau 14.2 présente les résultats obtenus.\nTABLEAU 14.2 Mesures de validité de la méthode de l’histoire\nfamiliale (HF) comparée à la méthode de la\nmeilleure estimation diagnostique (MED)\npour diagnostiquer la schizophrénie\nPersonne\nmalade selon\nl’HF\nPersonne\nsaine selon\nl’HF\nTotal\nPersonne malade\nselon la mesure\nétalon MED\n14\n27\n41\nPersonne saine selon\nla mesure étalon MED\n14\n3 695\n3 709\nTotal\n28\n3 722\n3 750\nSensibilité de l’HF : 14/41 = 0,34\nSpécicité de l’HF : 3 695/3 709 = 0,996\nValeur prédictive positive de l’HF : 14/28 = 0,50\nValeur prédictive négative de l’HF : 3 695/3 722 = 0,993\nTaux de concordance entre les deux méthodes : 14 + 3 695/3 750 = 0,989\nTaux d’accord prédit par le hasard : (28/3 750 × 41/3 750)\n+ (3 722/3 750 × 3 709/3 750) = 0,982\nCoefcient kappa entre les deux méthodes : (0,989 – 0,982)/(1 – 0,982) = 0,40\nSource : Adapté de Roy & al. (1996), p. 224-234.\n14.1.3 Validité sans mesure étalon\nPuisqu’il n’existe pas de méthode absolue pour mesurer les\nsymptômes psychiatriques ou pour déterminer la présence ou\nl’absence d’un trouble psychiatrique, l’évaluation de la validité\ndes méthodes existantes requiert des approches diérentes.\n",
+  "raw_text_sha256": "a5d7c75e94689ae52704b776451ec9a5f3f235ff8844108dd5b341f3a95f78f0",
+  "source_page_display": 309,
+  "source_page_index": 308
+}

@@ -1,0 +1,136 @@
+{
+  "block_sequence_sha256": "287f88cea22439f938c972e5e54e2e6efc9e90b42ea7e73f263c07c3498e434c",
+  "blocks": [
+    {
+      "bbox": [
+        400.45001220703125,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0310-block-0001",
+      "order": 1,
+      "text": "Chapitre 14\nÉpidémiologie\n293\n",
+      "text_sha256": "ad00798d2d2c99179a7b3979df5b277db0112927218db85e4e39bd2a9db51a20"
+    },
+    {
+      "bbox": [
+        312.0,
+        40.72441482543945,
+        555.2730712890625,
+        196.9084930419922
+      ],
+      "block_id": "page-0310-block-0002",
+      "order": 2,
+      "text": "• la National Comorbidity Study (NCS) (Kessler & al., 2005) ;\n• l’European Study of the Epidemiology of Mental Disorders\n(ESEMeD) (Alonso & al., 2004) ;\n• le World Mental Health Survey (OMS) (Kessler, 2004).\nLe Canada n’a mené sa première enquête d’envergure natio-\nnale de santé mentale qu’en 2002. Des rapports sont dispo-\nnibles pour l’ensemble du Canada (Cairney & Streiner, 2010)\net spéciquement pour le Québec (Institut de la statistique du\nQuébec, 2008a, 2008b). Ces enquêtes québécoises ont porté\nsur des populations plus circonscrites, comme les études lon-\ngitudinales de Caron et ses collaborateurs (2012) auprès des\nrésidents du sud-ouest de Montréal ou encore celles de Préville\net ses collaborateurs (2008, 2010) auprès des aînés du Québec.\n",
+      "text_sha256": "3c1b9f6f2f8a978689bc3f37dd170a536134e6e84263f95d01e063c5d080cccd"
+    },
+    {
+      "bbox": [
+        312.0,
+        197.9158172607422,
+        555.2003173828125,
+        415.40850830078125
+      ],
+      "block_id": "page-0310-block-0003",
+      "order": 3,
+      "text": "Ces études font cependant face à d’importantes dicultés\nméthodologiques : certaines couches de la population sont dif-\ncilement accessibles. Par exemple, les itinérants sont rarement\npris en considération dans de telles études, ce qui amène sans\ndoute une sous-estimation importante de la prévalence des\ntroubles psychotiques comme la schizophrénie, qui est parti-\nculièrement fréquente dans ce groupe. Il est alors nécessaire\nde mener des études spéciques auprès de ces populations\nparticulières (Bonin & al., 2010 ; Institut de la statistique du\nQuébec, 2001). Aussi, lorsque les études sont menées dans la\npopulation générale, il est probable qu’une forte proportion\nde participants présente des symptômes psychiatriques à la\nfrontière de la normalité. Ainsi, de nombreux patients pré-\nsentent quatre ou cinq des critères de dépression ; un chan-\ngement touchant un seul critère entraîne un désaccord sur le\ndiagnostic, expliquant la faible délité test-retest du diagnostic\nde dépression dans certaines études. Cette faible délité a\nnotamment pour conséquence de diminuer la précision des\nestimations de la prévalence.\n",
+      "text_sha256": "c13bfc9ab24524661973eac2af2b1aa89f0d824406014397869ec35f338721df"
+    },
+    {
+      "bbox": [
+        312.0,
+        416.41583251953125,
+        555.2740478515625,
+        722.8085327148438
+      ],
+      "block_id": "page-0310-block-0004",
+      "order": 4,
+      "text": "Par-delà les diérences non négligeables quant aux estimations\nde la prévalence, ces études arrivent à des conclusions semblables à\ncelles des études classiques qui ne reposent pas sur des critères\ndiagnostiques systématiques et des entrevues structurées :\n• de 20 % à 25 % de la population connaissent des problèmes\npsychiatriques nécessitant une aide professionnelle, mais\nenviron 10 % consultent pour obtenir de l’aide ;\n• une minorité des personnes sourant de psychopathologies\nreçoit des soins ; dans la plupart des cas, ces traitements sont\nadministrés par des praticiens de lre ligne ;\n• les troubles psychiatriques entraînent des handicaps fonc-\ntionnels importants, une diminution de la qualité de vie et\nde l’espérance de vie des personnes touchées ;\n• la comorbidité, c’est-à-dire la présence de plus d’un trouble\npsychiatrique chez le même patient, est très fréquente.\nPresque toutes les personnes souffrant de troubles mentaux\ngraves sont amenées à entrer en contact avec des services et\nà recevoir des soins, mais selon les enquêtes épidémiologiques\ncitées plus haut, de 15 à 20 % des personnes souffrant de\ntroubles mentaux moins sévères ne consultent pas. Si elles\nconsultent, de 7 à 9 % d’entre elles le font d’abord auprès des\nservices de base comme les médecins de famille, les psycho-\nlogues de pratique privée ou les groupes d’entraide, tels les\nAlcooliques Anonymes (AA), les centres locaux de services\ncommunautaires (CLSC), etc. ; ensuite, seulement de 1 à 2 %\nde la population générale consulte les services spécialisés\n",
+      "text_sha256": "6fea6f6d59a49ba27f13d388a5bba9357c65bf56017121d2329bb1fa01eac331"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.9658203125,
+        297.51947021484375,
+        270.5085144042969
+      ],
+      "block_id": "page-0310-block-0005",
+      "order": 5,
+      "text": "Pour des problèmes psychiatriques entraînant le plus souvent\nune demande de soins, telle la schizophrénie, on peut estimer l’in-\ncidence en examinant le nombre d’admissions à l’hôpital pour une\npopulation et pour une période donnée. Ainsi, à titre d’illustration du\ncalcul de l’incidence, Nicole et ses collaborateurs (1993) ont estimé\nà 8,6 pour 100 000 le taux d’incidence annuel d’admissions pour\nschizophrénie au Québec. Pour ce faire, ils ont recensé le nombre de\npatients hospitalisés pour lesquels un diagnostic de schizophrénie\na été posé pour la première fois pendant la période étudiée. Pour\nobtenir le taux d’incidence annuel, ils ont ensuite divisé ce nombre\nde nouveaux cas par la durée de la période étudiée (cinq ans) et par\nla population des secteurs desservie par l’Institut universitaire en\nsanté mentale de Montréal, où l’étude a été réalisée. Par ailleurs,\nen se basant sur les données de la Régie de l’assurance-maladie du\nQuébec, Vanasse et ses collaborateurs (2012) obtiennent des chires\nbeaucoup plus élevés (de 1,46 %), soit 94 par 100 000 habitants.\nCependant, pour la plupart des problèmes psychiatriques tels les\ntroubles anxieux et la dépression, seule une minorité de personnes\nest un jour traitée. Il est alors impossible d’estimer l’incidence de\nces troubles à partir du nombre de cas en traitement.\n",
+      "text_sha256": "b63fe786b7b85f41d919933b949a385d46d2d41f6c9f36953d6981a6b4abc5f1"
+    },
+    {
+      "bbox": [
+        54.0,
+        271.5158386230469,
+        297.28070068359375,
+        391.7585144042969
+      ],
+      "block_id": "page-0310-block-0006",
+      "order": 6,
+      "text": "Pour obtenir des données qui servent à établir l’incidence,\nil faut :\n• savoir qui a déjà la maladie au début de la période considérée,\npuisque les personnes déjà atteintes sont exclues du calcul ;\n• disposer d’une mesure précise des nouvelles occurrences\npendant la période considérée.\nColliger de telles données requiert une surveillance rigoureuse\nd’une population, et les instruments diagnostiques actuels ont\nune marge d’erreur qui rend impossible une estimation précise\nde l’incidence pour la majorité des troubles psychiatriques.\n",
+      "text_sha256": "4da2dd91bbb5b623c6f17143992d44ca3e4b5f3389c194d172d0b2b1c192b161"
+    },
+    {
+      "bbox": [
+        54.0,
+        402.3368225097656,
+        156.82029724121094,
+        418.4794006347656
+      ],
+      "block_id": "page-0310-block-0007",
+      "order": 7,
+      "text": "14.2.2 Prévalence\n",
+      "text_sha256": "1e10d7bab61bb056aed525be3ee48eac069db07d0cecbb15dca0605caa2adef3"
+    },
+    {
+      "bbox": [
+        54.0,
+        421.8658142089844,
+        297.1321716308594,
+        536.1085205078125
+      ],
+      "block_id": "page-0310-block-0008",
+      "order": 8,
+      "text": "Le taux de prévalence correspondant au nombre de cas d’une\nmaladie, englobant aussi bien les cas nouveaux que les cas anciens,\nenregistré dans une population donnée pendant une période\ndéterminée, divisé par le nombre de personnes composant la popu-\nlation à l’étude. Le taux de prévalence est intimement lié au taux\nd’incidence, mais ces deux indices ne doivent pas être confondus.\nEn eet la prévalence est fonction de l’incidence et de la durée\nde la maladie. Ainsi, la prévalence augmente si l’incidence ou la\ndurée de la maladie augmente. Les taux de prévalence les plus\nfréquemment utilisés sont la prévalence à 1 mois, à 12 mois ou à vie.\n",
+      "text_sha256": "05ab9c6866a8e19a40f11e9be67e2fccb5ebc5f34f95d0cf4973ff11b4ad9921"
+    },
+    {
+      "bbox": [
+        54.0,
+        537.1158447265625,
+        297.3589172363281,
+        639.8585205078125
+      ],
+      "block_id": "page-0310-block-0009",
+      "order": 9,
+      "text": "Plusieurs études classiques ont estimé le taux de prévalence\ndes problèmes psychiatriques. Parmi celles-ci, retenons l’étude\ndu Stirling County (Murphy & al., 2004), portant sur une région\nrurale de la Nouvelle-Écosse, et l’étude de Midtown Manhattan\n(Srole & al., 1962). L’une des conclusions les plus importantes de\nces études fut que 20 % à 25 % de la population adulte présentait\ndes problèmes psychologiques signicatifs. Cependant ces études\nn’étaient pas fondées sur des critères diagnostiques systématiques\nni sur des entrevues structurées.\n",
+      "text_sha256": "5b623bf97b6149b6bb3d9f8f0ac959766d4f4d935d8ca4c30ec06e24091e92da"
+    },
+    {
+      "bbox": [
+        54.0,
+        640.9158325195312,
+        297.0635681152344,
+        722.5585327148438
+      ],
+      "block_id": "page-0310-block-0010",
+      "order": 10,
+      "text": "Depuis les années 1980, quelques études utilisant des entre-\nvues structurées et des critères diagnostiques opérationnalisés\nont été réalisées auprès de grands échantillons de la population\ngénérale en vue d’établir la prévalence des troubles mentaux.\nParmi ces nouveaux classiques, mentionnons :\n• l’Epidemiologic Catchment Area (ECA) Study (Robins\n& al., 1984) ;\n",
+      "text_sha256": "43e6a11bad6b7b0a9196d952b9a7f5fc9b00448fdfd435fb5d8f979fc86fb700"
+    }
+  ],
+  "coordinates_sha256": "f21d7dd36e2d90fa64a2dcc838b37b9bd03c68a8c5b356cc4d40df843a73891c",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0310",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 14\nÉpidémiologie\n293\n• la National Comorbidity Study (NCS) (Kessler & al., 2005) ;\n• l’European Study of the Epidemiology of Mental Disorders\n(ESEMeD) (Alonso & al., 2004) ;\n• le World Mental Health Survey (OMS) (Kessler, 2004).\nLe Canada n’a mené sa première enquête d’envergure natio-\nnale de santé mentale qu’en 2002. Des rapports sont dispo-\nnibles pour l’ensemble du Canada (Cairney & Streiner, 2010)\net spéciquement pour le Québec (Institut de la statistique du\nQuébec, 2008a, 2008b). Ces enquêtes québécoises ont porté\nsur des populations plus circonscrites, comme les études lon-\ngitudinales de Caron et ses collaborateurs (2012) auprès des\nrésidents du sud-ouest de Montréal ou encore celles de Préville\net ses collaborateurs (2008, 2010) auprès des aînés du Québec.\nCes études font cependant face à d’importantes dicultés\nméthodologiques : certaines couches de la population sont dif-\ncilement accessibles. Par exemple, les itinérants sont rarement\npris en considération dans de telles études, ce qui amène sans\ndoute une sous-estimation importante de la prévalence des\ntroubles psychotiques comme la schizophrénie, qui est parti-\nculièrement fréquente dans ce groupe. Il est alors nécessaire\nde mener des études spéciques auprès de ces populations\nparticulières (Bonin & al., 2010 ; Institut de la statistique du\nQuébec, 2001). Aussi, lorsque les études sont menées dans la\npopulation générale, il est probable qu’une forte proportion\nde participants présente des symptômes psychiatriques à la\nfrontière de la normalité. Ainsi, de nombreux patients pré-\nsentent quatre ou cinq des critères de dépression ; un chan-\ngement touchant un seul critère entraîne un désaccord sur le\ndiagnostic, expliquant la faible délité test-retest du diagnostic\nde dépression dans certaines études. Cette faible délité a\nnotamment pour conséquence de diminuer la précision des\nestimations de la prévalence.\nPar-delà les diérences non négligeables quant aux estimations\nde la prévalence, ces études arrivent à des conclusions semblables à\ncelles des études classiques qui ne reposent pas sur des critères\ndiagnostiques systématiques et des entrevues structurées :\n• de 20 % à 25 % de la population connaissent des problèmes\npsychiatriques nécessitant une aide professionnelle, mais\nenviron 10 % consultent pour obtenir de l’aide ;\n• une minorité des personnes sourant de psychopathologies\nreçoit des soins ; dans la plupart des cas, ces traitements sont\nadministrés par des praticiens de lre ligne ;\n• les troubles psychiatriques entraînent des handicaps fonc-\ntionnels importants, une diminution de la qualité de vie et\nde l’espérance de vie des personnes touchées ;\n• la comorbidité, c’est-à-dire la présence de plus d’un trouble\npsychiatrique chez le même patient, est très fréquente.\nPresque toutes les personnes souffrant de troubles mentaux\ngraves sont amenées à entrer en contact avec des services et\nà recevoir des soins, mais selon les enquêtes épidémiologiques\ncitées plus haut, de 15 à 20 % des personnes souffrant de\ntroubles mentaux moins sévères ne consultent pas. Si elles\nconsultent, de 7 à 9 % d’entre elles le font d’abord auprès des\nservices de base comme les médecins de famille, les psycho-\nlogues de pratique privée ou les groupes d’entraide, tels les\nAlcooliques Anonymes (AA), les centres locaux de services\ncommunautaires (CLSC), etc. ; ensuite, seulement de 1 à 2 %\nde la population générale consulte les services spécialisés\nPour des problèmes psychiatriques entraînant le plus souvent\nune demande de soins, telle la schizophrénie, on peut estimer l’in-\ncidence en examinant le nombre d’admissions à l’hôpital pour une\npopulation et pour une période donnée. Ainsi, à titre d’illustration du\ncalcul de l’incidence, Nicole et ses collaborateurs (1993) ont estimé\nà 8,6 pour 100 000 le taux d’incidence annuel d’admissions pour\nschizophrénie au Québec. Pour ce faire, ils ont recensé le nombre de\npatients hospitalisés pour lesquels un diagnostic de schizophrénie\na été posé pour la première fois pendant la période étudiée. Pour\nobtenir le taux d’incidence annuel, ils ont ensuite divisé ce nombre\nde nouveaux cas par la durée de la période étudiée (cinq ans) et par\nla population des secteurs desservie par l’Institut universitaire en\nsanté mentale de Montréal, où l’étude a été réalisée. Par ailleurs,\nen se basant sur les données de la Régie de l’assurance-maladie du\nQuébec, Vanasse et ses collaborateurs (2012) obtiennent des chires\nbeaucoup plus élevés (de 1,46 %), soit 94 par 100 000 habitants.\nCependant, pour la plupart des problèmes psychiatriques tels les\ntroubles anxieux et la dépression, seule une minorité de personnes\nest un jour traitée. Il est alors impossible d’estimer l’incidence de\nces troubles à partir du nombre de cas en traitement.\nPour obtenir des données qui servent à établir l’incidence,\nil faut :\n• savoir qui a déjà la maladie au début de la période considérée,\npuisque les personnes déjà atteintes sont exclues du calcul ;\n• disposer d’une mesure précise des nouvelles occurrences\npendant la période considérée.\nColliger de telles données requiert une surveillance rigoureuse\nd’une population, et les instruments diagnostiques actuels ont\nune marge d’erreur qui rend impossible une estimation précise\nde l’incidence pour la majorité des troubles psychiatriques.\n14.2.2 Prévalence\nLe taux de prévalence correspondant au nombre de cas d’une\nmaladie, englobant aussi bien les cas nouveaux que les cas anciens,\nenregistré dans une population donnée pendant une période\ndéterminée, divisé par le nombre de personnes composant la popu-\nlation à l’étude. Le taux de prévalence est intimement lié au taux\nd’incidence, mais ces deux indices ne doivent pas être confondus.\nEn eet la prévalence est fonction de l’incidence et de la durée\nde la maladie. Ainsi, la prévalence augmente si l’incidence ou la\ndurée de la maladie augmente. Les taux de prévalence les plus\nfréquemment utilisés sont la prévalence à 1 mois, à 12 mois ou à vie.\nPlusieurs études classiques ont estimé le taux de prévalence\ndes problèmes psychiatriques. Parmi celles-ci, retenons l’étude\ndu Stirling County (Murphy & al., 2004), portant sur une région\nrurale de la Nouvelle-Écosse, et l’étude de Midtown Manhattan\n(Srole & al., 1962). L’une des conclusions les plus importantes de\nces études fut que 20 % à 25 % de la population adulte présentait\ndes problèmes psychologiques signicatifs. Cependant ces études\nn’étaient pas fondées sur des critères diagnostiques systématiques\nni sur des entrevues structurées.\nDepuis les années 1980, quelques études utilisant des entre-\nvues structurées et des critères diagnostiques opérationnalisés\nont été réalisées auprès de grands échantillons de la population\ngénérale en vue d’établir la prévalence des troubles mentaux.\nParmi ces nouveaux classiques, mentionnons :\n• l’Epidemiologic Catchment Area (ECA) Study (Robins\n& al., 1984) ;\n",
+  "raw_text_sha256": "113cd9726597fd5f6af02e83173bf9d286fbe380cac62a2350c6eb2dc26de74c",
+  "source_page_display": 311,
+  "source_page_index": 310
+}

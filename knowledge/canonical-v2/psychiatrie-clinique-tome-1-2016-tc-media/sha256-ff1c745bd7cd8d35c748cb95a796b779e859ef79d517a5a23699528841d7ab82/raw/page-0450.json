@@ -1,0 +1,388 @@
+{
+  "block_sequence_sha256": "968c5c5c2d80c345f41dd144cf6ea8666240049276802778b280148e6730931a",
+  "blocks": [
+    {
+      "bbox": [
+        317.1499938964844,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0450-block-0001",
+      "order": 1,
+      "text": "Chapitre 20\nTroubles anxieux, panique, phobies\n433\n",
+      "text_sha256": "52b772889af07ebf0246fba5bd85de5b9d36f1c78bba49bca08304663ae4c247"
+    },
+    {
+      "bbox": [
+        54.0,
+        313.8658142089844,
+        297.45404052734375,
+        456.8584899902344
+      ],
+      "block_id": "page-0450-block-0002",
+      "order": 2,
+      "text": "Trois types de symptômes anxieux d’origine organique peuvent\nêtre observés :\n1. Anxiété de type plus ou moins généralisé ;\n2. Attaques de panique ;\n3. Symptômes d’allure obsessionnelle-compulsive.\nDans ces cas, les symptômes anxieux sont moins bien structurés\nque dans les troubles anxieux primaires, leur présentation peut\nêtre oue, changeante ou atypique. Ils peuvent être aussi induits\npar l’usage de substances (drogues, alcool, médicaments). Pour\nvalider un tel diagnostic, le DSM-5 exige que le début des symp-\ntômes anxieux survienne pendant une intoxication aiguë, durant le\nmois suivant l’intoxication ou le sevrage de la substance en cause.\n",
+      "text_sha256": "3821ff3783e69906d6c3e836c9963dc05f4b0aaec103ffab69407c8147be8413"
+    },
+    {
+      "bbox": [
+        54.0,
+        457.8658142089844,
+        297.38787841796875,
+        491.3584899902344
+      ],
+      "block_id": "page-0450-block-0003",
+      "order": 3,
+      "text": "Finalement, une catégorie résiduelle a été créée pour ranger\ncertains autres troubles anxieux spéciés (p. ex., attaques de panique\nà symptômes limités) ou autres troubles anxieux non spéciés.\n",
+      "text_sha256": "e2e3680826ea2c4ec27a70f7eda2cf38b36b5956ddf691e3d70e4d4eef17dfe6"
+    },
+    {
+      "bbox": [
+        61.0,
+        509.3931884765625,
+        170.59698486328125,
+        528.5689697265625
+      ],
+      "block_id": "page-0450-block-0004",
+      "order": 4,
+      "text": "20.5\nÉvaluation\n",
+      "text_sha256": "bba0ab473f77b21b9e8cde4210892041fe5b13f3bac46c241af0766c02b17948"
+    },
+    {
+      "bbox": [
+        54.0,
+        542.3658447265625,
+        297.17333984375,
+        621.8585205078125
+      ],
+      "block_id": "page-0450-block-0005",
+      "order": 5,
+      "text": "Lors de l’évaluation d’un patient présentant des symptômes\nanxieux, le médecin commence par cibler les symptômes anxieux\nprincipaux ainsi que les symptômes associés (insomnie, irritabilité,\netc.) et leurs eets sur la détresse subjective et le fonctionne-\nment psychosocial. Dans ce contexte, il précise la raison de la\nconsultation, les circonstances de l’apparition des symptômes et\nla présence de déclencheurs identiables.\n",
+      "text_sha256": "53bcb22a6a17e04ceda90d918fd4a61317a5edb32928d4a834ed233e5006fe2f"
+    },
+    {
+      "bbox": [
+        54.0,
+        622.8658447265625,
+        297.31475830078125,
+        725.3585205078125
+      ],
+      "block_id": "page-0450-block-0006",
+      "order": 6,
+      "text": "Ensuite, il évalue la contribution possible d’une prise ou d’un\nabus de certains médicaments, de substances illicites, d’alcool,\nde café, de boissons énergisantes ainsi que la présence d’une\naection médicale pouvant se manifester par des symptômes\nanxieux (voir le tableau 20.10). Un bilan physique de base est\ndonc de rigueur (voir l’encadré 20.1) et des examens doivent\nêtre eectués en fonction des particularités de la présentation\nclinique (p. ex., un ECG pour éliminer un problème cardiaque,\nun EEG pour éliminer une épilepsie temporale ou bien un\n",
+      "text_sha256": "4f509580a0f85e24e540954b712cb82070f3efbba1b46340ba7e63f522562b15"
+    },
+    {
+      "bbox": [
+        312.0,
+        448.3658142089844,
+        555.102783203125,
+        516.3585205078125
+      ],
+      "block_id": "page-0450-block-0007",
+      "order": 7,
+      "text": "dosage des catécholamines urinaires de 24 heures pour élimi-\nner un phéochromocytome se manifestant par des attaques de\npanique). Certaines situations cliniques peuvent s’avérer très\ncompliquées et on ne doit perdre de vue qu’un diagnostic de\nmaladie physique n’exclut pas nécessairement l’existence d’un\ntrouble anxieux concomitant et vice versa.\n",
+      "text_sha256": "755104042c0c9409d3d6a421d5e4acb6fd3eeaafb2ead38e64e224949a32f562"
+    },
+    {
+      "bbox": [
+        312.0,
+        517.3658447265625,
+        555.2310791015625,
+        725.3585205078125
+      ],
+      "block_id": "page-0450-block-0008",
+      "order": 8,
+      "text": "Une fois les causes physiques éliminées, et pour pouvoir pré-\nciser le diagnostic diérentiel, le médecin recherche la présence\nou l’absence d’attaques de panique inattendues (spontanées), qui\nreprésentent le critère diagnostique exclusif du trouble panique.\nDans ce contexte, les attaques de panique nocturnes constituent\nun indice par excellence. Les divers comportements d’évitement,\nagoraphobiques ou autres, sont fréquents et typiques des troubles\nanxieux et doivent être recherchés activement lors de l’évaluation\nclinique. Non seulement le type d’évitement peut orienter le dia-\ngnostic diérentiel, mais l’importance de l’évitement indique la\nsévérité clinique et les séquelles fonctionnelles du trouble anxieux.\nÉvaluer la présence d’idées suicidaires ou de tendances automu-\ntilatrices est aussi incontournable pour deux raisons :\n• une attaque de panique ou un épisode d’exacerbation des\nsymptômes anxieux peut pousser le patient vers un geste\nsuicidaire comme étant « une solution immédiate et radicale » ;\n• le taux de suicide chez les patients atteints de troubles anxieux\nest du même ordre (environ 10 %) que dans la dépression\n",
+      "text_sha256": "0192dc5bba11d2fd4cc795c71177eefd2dcb410aca2cf04b84c7df6c24837087"
+    },
+    {
+      "bbox": [
+        314.25,
+        313.9023132324219,
+        531.9949951171875,
+        326.2200622558594
+      ],
+      "block_id": "page-0450-block-0009",
+      "order": 9,
+      "text": "ENCADRÉ 20.1 Bilan physique de base (non exhaustif)\n",
+      "text_sha256": "599b68839e159ee735137443ef7aa56affa921627bf33e924bda4ee441363496"
+    },
+    {
+      "bbox": [
+        316.25,
+        334.3519592285156,
+        416.5490417480469,
+        440.1781311035156
+      ],
+      "block_id": "page-0450-block-0010",
+      "order": 10,
+      "text": "• Formule sanguine complète\n• Analyse d’urine\n• Glycémie\n• Électrolytes, calcémie\n• Urée, créatinine\n• Bilan thyroïdien\n• Dosage de vitamine B12\n• Bilan toxicologique\n• ECG\n",
+      "text_sha256": "b246b1caa053c355b98fec67bb9b20aa0514a6a88a0f28a8eec10ad05aa8bca9"
+    },
+    {
+      "bbox": [
+        56.25,
+        41.002296447753906,
+        416.1409606933594,
+        53.320068359375
+      ],
+      "block_id": "page-0450-block-0011",
+      "order": 11,
+      "text": "TABLEAU 20.10 Affections médicales pouvant se manifester par des symptômes anxieux\n",
+      "text_sha256": "e367be07c6bb22bc47bc8664b2ef8e243b6aa0ee26ed668742b9eb094064199a"
+    },
+    {
+      "bbox": [
+        64.5999984741211,
+        58.27412414550781,
+        259.5973815917969,
+        78.85029602050781
+      ],
+      "block_id": "page-0450-block-0012",
+      "order": 12,
+      "text": "Intoxications\nSevrage\nMaladies\ncardiovasculaires\n",
+      "text_sha256": "bfece2210dc288dc007d6eba4bba425e1a067fb5c31c50356faf29a6fccf8131"
+    },
+    {
+      "bbox": [
+        275.95001220703125,
+        58.27412414550781,
+        331.86700439453125,
+        78.85029602050781
+      ],
+      "block_id": "page-0450-block-0013",
+      "order": 13,
+      "text": "Maladies\nendocriniennes\n",
+      "text_sha256": "6374f41bbad93b7b382803a650f7715d79ab723df9158be76b05119a45588cd0"
+    },
+    {
+      "bbox": [
+        350.8500061035156,
+        58.27412414550781,
+        402.54901123046875,
+        78.85029602050781
+      ],
+      "block_id": "page-0450-block-0014",
+      "order": 14,
+      "text": "Maladies\nneurologiques\n",
+      "text_sha256": "210723555bf9c1f51248337c6389db262f9a475f931b5e964fb65335288cdc87"
+    },
+    {
+      "bbox": [
+        426.45001220703125,
+        58.27412414550781,
+        471.6415100097656,
+        78.85029602050781
+      ],
+      "block_id": "page-0450-block-0015",
+      "order": 15,
+      "text": "Maladies\npulmonaires\n",
+      "text_sha256": "e806c9cc5fdecb02198707137776d2e56a9eabbf8c3dbe5f5769fb9ce404c0e6"
+    },
+    {
+      "bbox": [
+        498.0500183105469,
+        58.27412414550781,
+        541.1514892578125,
+        78.85029602050781
+      ],
+      "block_id": "page-0450-block-0016",
+      "order": 16,
+      "text": "Autres\naffectations\n",
+      "text_sha256": "77158b3695eedf2b0a68748c2e6c469fd2eb894ec5d584614183168ae337b87d"
+    },
+    {
+      "bbox": [
+        58.25,
+        84.20195770263672,
+        248.96505737304688,
+        104.02812957763672
+      ],
+      "block_id": "page-0450-block-0017",
+      "order": 17,
+      "text": "Hallucinogènes\nTrouble du rythme\ncardiaque\n",
+      "text_sha256": "80b8dd35744994a83ec5a412fffef80acec69f49394f67ac459c8e8e3887d6d8"
+    },
+    {
+      "bbox": [
+        272.20001220703125,
+        84.20195770263672,
+        319.2790222167969,
+        115.02812957763672
+      ],
+      "block_id": "page-0450-block-0018",
+      "order": 18,
+      "text": "Ménopause ou\nsyndrome\nprémenstruel\n",
+      "text_sha256": "72ab1b6107320730ab53a7eeb306b44bcbdc2cacb78a264c23ff8c638c4db6a4"
+    },
+    {
+      "bbox": [
+        343.6499938964844,
+        84.20195770263672,
+        403.8690185546875,
+        104.02812957763672
+      ],
+      "block_id": "page-0450-block-0019",
+      "order": 19,
+      "text": "Ischémie cérébrale\ntransitoire\n",
+      "text_sha256": "afabab5658121d70ee7e774121ce55fd1121d76ed8f20b4a5f4c55a4970681d7"
+    },
+    {
+      "bbox": [
+        488.25,
+        84.20195770263672,
+        524.2319946289062,
+        104.02812957763672
+      ],
+      "block_id": "page-0450-block-0020",
+      "order": 20,
+      "text": "Troubles\nélectrolytes\n",
+      "text_sha256": "b8e5306d5a98232190be6b40638e5c3afcebe840f20c59a23e783d644142c6b2"
+    },
+    {
+      "bbox": [
+        58.25,
+        123.65196228027344,
+        378.7140197753906,
+        143.47813415527344
+      ],
+      "block_id": "page-0450-block-0021",
+      "order": 21,
+      "text": "Marijuana\nPhéochromocytome\nMaladie de\nHuntington\n",
+      "text_sha256": "a1422fc5afc5cda7757296ec49535c9aca2feb0ff5550d1f421512a4dfbb083a"
+    },
+    {
+      "bbox": [
+        488.25,
+        123.65196228027344,
+        510.7500305175781,
+        133.47813415527344
+      ],
+      "block_id": "page-0450-block-0022",
+      "order": 22,
+      "text": "Urémie\n",
+      "text_sha256": "52ee4471efdf6e583109d2839b35d182341ea5f6db22d24e8f5e3609345b9ef9"
+    },
+    {
+      "bbox": [
+        58.25,
+        152.0519561767578,
+        406.79400634765625,
+        161.8781280517578
+      ],
+      "block_id": "page-0450-block-0023",
+      "order": 23,
+      "text": "Métaux lourds\nMaladie de Ménière\n",
+      "text_sha256": "80da98c40dac04c96968078a5944f5f31bda0b18296e44a34544324db0810b17"
+    },
+    {
+      "bbox": [
+        58.25,
+        170.501953125,
+        401.7049865722656,
+        180.328125
+      ],
+      "block_id": "page-0450-block-0024",
+      "order": 24,
+      "text": "Nicotine\nMaladie de Wilson\n",
+      "text_sha256": "21930c273f7ee9f80b485bfa475a5f19a09d3ee172c3b22850af476b1c69f5a1"
+    },
+    {
+      "bbox": [
+        58.25,
+        188.90196228027344,
+        371.2980041503906,
+        198.72813415527344
+      ],
+      "block_id": "page-0450-block-0025",
+      "order": 25,
+      "text": "Nitrite d’amyle\nMigraine\n",
+      "text_sha256": "bb3547caf0549831903be872803dbc0207364415128e34a18e2a186bc5e3a54b"
+    },
+    {
+      "bbox": [
+        58.25,
+        207.35195922851562,
+        407.93701171875,
+        217.17813110351562
+      ],
+      "block_id": "page-0450-block-0026",
+      "order": 26,
+      "text": "Stéroïdes\nSclérose en plaques\n",
+      "text_sha256": "b8675f49a9e9e4281116f979c56c0205e919558f2e6bf04beb4475dc996043b0"
+    },
+    {
+      "bbox": [
+        58.25,
+        225.751953125,
+        110.74700164794922,
+        255.578125
+      ],
+      "block_id": "page-0450-block-0027",
+      "order": 27,
+      "text": "Sympathomimé-\ntiques et autres\nstimulants\n",
+      "text_sha256": "9c5b9e1d606ef98a8c73ab16c2079b787218eab638deb0076fdd2903d004fe5b"
+    },
+    {
+      "bbox": [
+        343.6499938964844,
+        225.751953125,
+        371.0030517578125,
+        235.578125
+      ],
+      "block_id": "page-0450-block-0028",
+      "order": 28,
+      "text": "Tumeurs\n",
+      "text_sha256": "b98f51e0f89917dd02e1ca2506c15ee1fff57d2f6ce74fc879bd564dea869441"
+    },
+    {
+      "bbox": [
+        58.25,
+        264.20196533203125,
+        98.02999877929688,
+        274.02813720703125
+      ],
+      "block_id": "page-0450-block-0029",
+      "order": 29,
+      "text": "Théophylline\n",
+      "text_sha256": "3339aa630a918f007348a7f38ca5f8f128b791b8be10929ba9a2e02ba07c6415"
+    },
+    {
+      "bbox": [
+        54.25,
+        282.7906188964844,
+        330.4876403808594,
+        291.6588439941406
+      ],
+      "block_id": "page-0450-block-0030",
+      "order": 30,
+      "text": "Sources : Adapté de Kaplan & al. (1994) ; Raj & Sheehan (1987) ; Lempérière & Desjarlais (1990).\n",
+      "text_sha256": "b775acc6aad4672dfbcd169e7867e0e64fcad0c041212467ffc4dc6d2012fccc"
+    },
+    {
+      "bbox": [
+        418.8999938964844,
+        41.352294921875,
+        444.5842590332031,
+        53.320068359375
+      ],
+      "block_id": "page-0450-block-0031",
+      "order": 31,
+      "text": "(suite)\n",
+      "text_sha256": "c684d6dbcdfd50f0ada227f799b5c0fb30e817ac3da61b4cbf208decde7f907b"
+    }
+  ],
+  "coordinates_sha256": "1ff637561324e25984dd94f847b88ff918fed5c9abe1ae69866b5a257c401c0b",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0450",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 20\nTroubles anxieux, panique, phobies\n433\nTrois types de symptômes anxieux d’origine organique peuvent\nêtre observés :\n1. Anxiété de type plus ou moins généralisé ;\n2. Attaques de panique ;\n3. Symptômes d’allure obsessionnelle-compulsive.\nDans ces cas, les symptômes anxieux sont moins bien structurés\nque dans les troubles anxieux primaires, leur présentation peut\nêtre oue, changeante ou atypique. Ils peuvent être aussi induits\npar l’usage de substances (drogues, alcool, médicaments). Pour\nvalider un tel diagnostic, le DSM-5 exige que le début des symp-\ntômes anxieux survienne pendant une intoxication aiguë, durant le\nmois suivant l’intoxication ou le sevrage de la substance en cause.\nFinalement, une catégorie résiduelle a été créée pour ranger\ncertains autres troubles anxieux spéciés (p. ex., attaques de panique\nà symptômes limités) ou autres troubles anxieux non spéciés.\n20.5\nÉvaluation\nLors de l’évaluation d’un patient présentant des symptômes\nanxieux, le médecin commence par cibler les symptômes anxieux\nprincipaux ainsi que les symptômes associés (insomnie, irritabilité,\netc.) et leurs eets sur la détresse subjective et le fonctionne-\nment psychosocial. Dans ce contexte, il précise la raison de la\nconsultation, les circonstances de l’apparition des symptômes et\nla présence de déclencheurs identiables.\nEnsuite, il évalue la contribution possible d’une prise ou d’un\nabus de certains médicaments, de substances illicites, d’alcool,\nde café, de boissons énergisantes ainsi que la présence d’une\naection médicale pouvant se manifester par des symptômes\nanxieux (voir le tableau 20.10). Un bilan physique de base est\ndonc de rigueur (voir l’encadré 20.1) et des examens doivent\nêtre eectués en fonction des particularités de la présentation\nclinique (p. ex., un ECG pour éliminer un problème cardiaque,\nun EEG pour éliminer une épilepsie temporale ou bien un\ndosage des catécholamines urinaires de 24 heures pour élimi-\nner un phéochromocytome se manifestant par des attaques de\npanique). Certaines situations cliniques peuvent s’avérer très\ncompliquées et on ne doit perdre de vue qu’un diagnostic de\nmaladie physique n’exclut pas nécessairement l’existence d’un\ntrouble anxieux concomitant et vice versa.\nUne fois les causes physiques éliminées, et pour pouvoir pré-\nciser le diagnostic diérentiel, le médecin recherche la présence\nou l’absence d’attaques de panique inattendues (spontanées), qui\nreprésentent le critère diagnostique exclusif du trouble panique.\nDans ce contexte, les attaques de panique nocturnes constituent\nun indice par excellence. Les divers comportements d’évitement,\nagoraphobiques ou autres, sont fréquents et typiques des troubles\nanxieux et doivent être recherchés activement lors de l’évaluation\nclinique. Non seulement le type d’évitement peut orienter le dia-\ngnostic diérentiel, mais l’importance de l’évitement indique la\nsévérité clinique et les séquelles fonctionnelles du trouble anxieux.\nÉvaluer la présence d’idées suicidaires ou de tendances automu-\ntilatrices est aussi incontournable pour deux raisons :\n• une attaque de panique ou un épisode d’exacerbation des\nsymptômes anxieux peut pousser le patient vers un geste\nsuicidaire comme étant « une solution immédiate et radicale » ;\n• le taux de suicide chez les patients atteints de troubles anxieux\nest du même ordre (environ 10 %) que dans la dépression\nENCADRÉ 20.1 Bilan physique de base (non exhaustif)\n• Formule sanguine complète\n• Analyse d’urine\n• Glycémie\n• Électrolytes, calcémie\n• Urée, créatinine\n• Bilan thyroïdien\n• Dosage de vitamine B12\n• Bilan toxicologique\n• ECG\nTABLEAU 20.10 Affections médicales pouvant se manifester par des symptômes anxieux\nIntoxications\nSevrage\nMaladies\ncardiovasculaires\nMaladies\nendocriniennes\nMaladies\nneurologiques\nMaladies\npulmonaires\nAutres\naffectations\nHallucinogènes\nTrouble du rythme\ncardiaque\nMénopause ou\nsyndrome\nprémenstruel\nIschémie cérébrale\ntransitoire\nTroubles\nélectrolytes\nMarijuana\nPhéochromocytome\nMaladie de\nHuntington\nUrémie\nMétaux lourds\nMaladie de Ménière\nNicotine\nMaladie de Wilson\nNitrite d’amyle\nMigraine\nStéroïdes\nSclérose en plaques\nSympathomimé-\ntiques et autres\nstimulants\nTumeurs\nThéophylline\nSources : Adapté de Kaplan & al. (1994) ; Raj & Sheehan (1987) ; Lempérière & Desjarlais (1990).\n(suite)\n",
+  "raw_text_sha256": "3d55576d199b4590acab421c2d224a42fc2f9cb251593b01fced7416976e00f8",
+  "source_page_display": 451,
+  "source_page_index": 450
+}

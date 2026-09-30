@@ -1,0 +1,328 @@
+{
+  "block_sequence_sha256": "63f05508e9308971637022e83c1b7c1e76442b59c0874591a849834dc39dea65",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0847-block-0001",
+      "order": 1,
+      "text": "830\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "f459120fcf709782d2f78393da5f6ddf856c3e2f728b599faa9b763388952c1a"
+    },
+    {
+      "bbox": [
+        50.25,
+        40.95229721069336,
+        329.97369384765625,
+        53.320068359375
+      ],
+      "block_id": "page-0847-block-0002",
+      "order": 2,
+      "text": "TABLEAU 36.1 Critères diagnostiques du trouble explosif intermittent\n",
+      "text_sha256": "652236fae8cef13e1c47784d33927accbf0400e079dcd77761a8c3ebe7543483"
+    },
+    {
+      "bbox": [
+        160.90000915527344,
+        59.22412109375,
+        443.68798828125,
+        69.80029296875
+      ],
+      "block_id": "page-0847-block-0003",
+      "order": 3,
+      "text": "DSM-5\nDSM-IV-TR\n",
+      "text_sha256": "67d368c78be7842a2bc99b149901566bcadf3c9d62623ea48bafcc32b3563ffb"
+    },
+    {
+      "bbox": [
+        99.05000305175781,
+        74.12285614013672,
+        472.2451171875,
+        84.14238739013672
+      ],
+      "block_id": "page-0847-block-0004",
+      "order": 4,
+      "text": "312.34 (F63.8) Trouble explosif intermittent\nTrouble explosif intermittent\n",
+      "text_sha256": "87e37c6b5ed99e3e2631469a89c61e4688e4f1428873bf449efd41e698e56eb0"
+    },
+    {
+      "bbox": [
+        52.25,
+        89.3519515991211,
+        273.2931213378906,
+        99.1781234741211
+      ],
+      "block_id": "page-0847-block-0005",
+      "order": 5,
+      "text": "A. Épisodes comportementaux explosifs récurrents témoignant d’une\n",
+      "text_sha256": "b113d448c8147edd186f1e939ccbef0514c97b765d4d4323307eb98abf767958"
+    },
+    {
+      "bbox": [
+        63.10000228881836,
+        99.3519515991211,
+        294.24700927734375,
+        242.17813110351562
+      ],
+      "block_id": "page-0847-block-0006",
+      "order": 6,
+      "text": "incapacité à résister à des impulsions agressives, comme en témoigne\nl’une ou l’autre des manifestations suivantes :\n1. Agressivité verbale (p. ex., crises de colère, diatribes, disputes ou\naltercations verbales) ou agressivité physique envers des biens maté-\nriels, des animaux ou d’autres personnes, survenant deux fois par\nsemaine, en moyenne, durant une période de 3 mois. L’agressivité\nphysique n’a pas pour conséquence d’endommager ou de détruire\ndes biens matériels ni de blesser physiquement des animaux ou\nd’autres personnes.\n[OU]\n2. Trois accès comportementaux explosifs, survenant durant une\npériode de 12 mois, durant lesquels des biens matériels sont\nendommagés ou détruits et/ou des animaux ou d’autres personnes\nsont blessés dans une agression physique.\n",
+      "text_sha256": "9d7f6d0abda30788ae4424cc1da4194167293e291942691884b2e8a0d4db7702"
+    },
+    {
+      "bbox": [
+        302.5,
+        89.3519515991211,
+        529.0845336914062,
+        99.1781234741211
+      ],
+      "block_id": "page-0847-block-0007",
+      "order": 7,
+      "text": "A. Plusieurs épisodes distincts d’incapacité à résister à des impulsions\n",
+      "text_sha256": "ae1ee97d7062ed4b4248895fdbc2a3bdcf327abc5248a7889741e9ece4743de6"
+    },
+    {
+      "bbox": [
+        313.3500061035156,
+        99.3519515991211,
+        531.4893188476562,
+        119.1781234741211
+      ],
+      "block_id": "page-0847-block-0008",
+      "order": 8,
+      "text": "agressives, aboutissant à des voies de fait graves ou à la destruction\nde biens.\n",
+      "text_sha256": "f4625e3008ffd43285bb762bd2be57dd9d45f2b4b6e5ff4089f3590a906eca17"
+    },
+    {
+      "bbox": [
+        52.25,
+        248.80197143554688,
+        292.24700927734375,
+        258.6281433105469
+      ],
+      "block_id": "page-0847-block-0009",
+      "order": 9,
+      "text": "B. Le degré d’agressivité exprimé durant les accès explosifs est sans com-\n",
+      "text_sha256": "a88ef8483ccf3bd35f8839291f589c94874cee51704d53e7cb3e03b01b5d24db"
+    },
+    {
+      "bbox": [
+        63.10000228881836,
+        258.8019714355469,
+        285.2403564453125,
+        278.6281433105469
+      ],
+      "block_id": "page-0847-block-0010",
+      "order": 10,
+      "text": "mune mesure avec la provocation ou un quelconque facteur de stress\npsychosocial déclenchant.\n",
+      "text_sha256": "eb52c1a34cc9e40b675b7621b16d0db8ad20e03f4c13c547cffce0ea8c725512"
+    },
+    {
+      "bbox": [
+        302.5,
+        248.80197143554688,
+        537.6749267578125,
+        258.6281433105469
+      ],
+      "block_id": "page-0847-block-0011",
+      "order": 11,
+      "text": "B. Le degré d’agressivité exprimé durant les épisodes est sans commune\n",
+      "text_sha256": "2bfe90eb2a46782c9d3c2845de7c0353e29b00ac49fdf49db5bf235cd052de3f"
+    },
+    {
+      "bbox": [
+        313.3500061035156,
+        258.8019714355469,
+        544.3140258789062,
+        268.6281433105469
+      ],
+      "block_id": "page-0847-block-0012",
+      "order": 12,
+      "text": "mesure avec un quelconque facteur de stress psychosocial déclenchant.\n",
+      "text_sha256": "a413672f751268e45f2a07a259a17acb37998d7aa6ff478dfab9aefe57b57120"
+    },
+    {
+      "bbox": [
+        52.25,
+        285.20196533203125,
+        282.06378173828125,
+        295.02813720703125
+      ],
+      "block_id": "page-0847-block-0013",
+      "order": 13,
+      "text": "C. Les accès agressifs récurrents ne sont pas prémédités (c.-à-d. qu’ils\n",
+      "text_sha256": "e7c7118abb6a1f92af87f492f8a8fec53a606e02f77851bee016cfb7007ff43b"
+    },
+    {
+      "bbox": [
+        63.25,
+        295.20196533203125,
+        286.8464050292969,
+        315.02813720703125
+      ],
+      "block_id": "page-0847-block-0014",
+      "order": 14,
+      "text": "sont impulsifs et/ou dus à la colère) et ils ne sont pas réalisés dans un\nbut tangible (p. ex., argent, pouvoir, intimidation).\n",
+      "text_sha256": "31736e21ec92415bd74b05a59dac58abfc8b3a71d64ca8caaace15549366bed0"
+    },
+    {
+      "bbox": [
+        52.25,
+        321.6519470214844,
+        294.7070007324219,
+        331.4781188964844
+      ],
+      "block_id": "page-0847-block-0015",
+      "order": 15,
+      "text": "D. Les accès agressifs récurrents entraînent soit une détresse signicative chez\n",
+      "text_sha256": "016ac8eca548937a813e5aa01d0d7a73228cf965c90b8e7af4850f9247c752e8"
+    },
+    {
+      "bbox": [
+        62.900001525878906,
+        331.6519470214844,
+        293.947021484375,
+        351.4781188964844
+      ],
+      "block_id": "page-0847-block-0016",
+      "order": 16,
+      "text": "la personne, soit une altération du fonctionnement professionnel ou interper-\nsonnel, ou sont associés à des conséquences nancières ou judiciaires.\n",
+      "text_sha256": "2842a0f5becc965930e479e3cddedff1053a6eb18f4f40449ff5b389a9d6b52e"
+    },
+    {
+      "bbox": [
+        52.25,
+        358.0519714355469,
+        281.697021484375,
+        367.8781433105469
+      ],
+      "block_id": "page-0847-block-0017",
+      "order": 17,
+      "text": "E. L’âge chronologique est au moins de 6 ans (ou un niveau développe-\n",
+      "text_sha256": "f08a63ab4e96b3577d933d46d9493c8564438e9a0e51cc69d79384e59a712be5"
+    },
+    {
+      "bbox": [
+        62.54999923706055,
+        368.0519714355469,
+        122.9219970703125,
+        377.8781433105469
+      ],
+      "block_id": "page-0847-block-0018",
+      "order": 18,
+      "text": "mental équivalent).\n",
+      "text_sha256": "d184294134e5ae800d72262cd57570b44aa44010806e5123c420f6d866d9ccff"
+    },
+    {
+      "bbox": [
+        52.25,
+        384.501953125,
+        292.0393981933594,
+        394.328125
+      ],
+      "block_id": "page-0847-block-0019",
+      "order": 19,
+      "text": "F. Les accès agressifs récurrents ne sont pas mieux expliqués par un autre\n",
+      "text_sha256": "a2c5fe532c251dede3f81515e79259ce8bb65045f4f35a0ac5e0dcc475afff21"
+    },
+    {
+      "bbox": [
+        61.25,
+        394.501953125,
+        278.1184997558594,
+        512.328125
+      ],
+      "block_id": "page-0847-block-0020",
+      "order": 20,
+      "text": "trouble mental : p. ex.,\n• un trouble dépressif caractérisé,\n• un trouble bipolaire,\n• un trouble disruptif avec dysrégulation émotionnelle,\n• un trouble psychotique,\n• une personnalité antisociale,\n• un trouble de la personnalité borderline\net ne sont pas imputables à une autre affection médicale (p. ex.,\nun traumatisme crânien, une maladie d’Alzheimer),\nou aux effets physiologiques d’une substance (p. ex., une substance\ndonnant lieu à un abus, un médicament).\n",
+      "text_sha256": "6987dc748e910b6d0cd101bcae6fae468b1d6606bf2861dd6c945bdba682252c"
+    },
+    {
+      "bbox": [
+        302.5,
+        384.501953125,
+        490.4847106933594,
+        394.328125
+      ],
+      "block_id": "page-0847-block-0021",
+      "order": 21,
+      "text": "C. Les épisodes agressifs ne sont pas mieux expliqués par\n",
+      "text_sha256": "812af718faf7b363ce48e74fb5769c397b5b119ded1634920101db9dbf1962a7"
+    },
+    {
+      "bbox": [
+        313.5,
+        395.501953125,
+        502.4515686035156,
+        503.328125
+      ],
+      "block_id": "page-0847-block-0022",
+      "order": 22,
+      "text": "• un autre trouble mental :\n– une personnalité antisociale ou borderline,\n– un trouble psychotique,\n– un épisode maniaque,\n– un trouble des conduites,\n– un décit de l’attention / hyperactivité)\n• les effets physiologiques directs d’une substance (p. ex.,\nune substance donnant lieu à abus, un médicament)\n• une affection médicale générale :\n– un traumatisme crânien ou une maladie d’Alzheimer.\n",
+      "text_sha256": "a5bc9c79bd1b2c5781185b10fa6e85c44accc5e37ae95f0bdc172facc4e4ba6a"
+    },
+    {
+      "bbox": [
+        52.25,
+        518.9019775390625,
+        286.33599853515625,
+        599.7281494140625
+      ],
+      "block_id": "page-0847-block-0023",
+      "order": 23,
+      "text": "Pour les enfants âgés de 6 à 18 ans, le comportement agressif survenant\ndans le cadre d’un trouble de l’adaptation ne doit pas être considéré pour\nce diagnostic.\nN.B.: Ce diagnostic peut être posé en plus des diagnostics de décit de\nl’attention/hyperactivité, trouble des conduites, trouble oppositionnel avec\nprovocation ou trouble du spectre de l’autisme quand les accès agressifs\nrécurrents sont en surplus de ceux habituellement vus dans ces troubles\net justient une prise en charge clinique particulière.\n",
+      "text_sha256": "26fec22efe1c1bc74ce3ddd96ee2ad00c9225292c8810df4cb149da3ed8a0ed4"
+    },
+    {
+      "bbox": [
+        48.25,
+        605.5406494140625,
+        544.4320068359375,
+        664.9750366210938
+      ],
+      "block_id": "page-0847-block-0024",
+      "order": 24,
+      "text": "Sources : APA (2015), p. 553 ; APA (2004), p. 769-770.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS.Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation,DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\n",
+      "text_sha256": "311f752ad1a54f44dfaea114522cb51cd4ca3f777ee56959f3e5ec9c8ecb63b9"
+    },
+    {
+      "bbox": [
+        48.0,
+        680.4658203125,
+        291.41925048828125,
+        725.45849609375
+      ],
+      "block_id": "page-0847-block-0025",
+      "order": 25,
+      "text": "de ces troubles chez les hommes que chez les femmes (Kessler\n& al., 2006). La diérence entre hommes et femmes est plus\nfaible en milieu psychiatrique (Coccaro & al., 2005), ce qui\npourrait s’expliquer par le fait que les hommes atteints d’un TEI\n",
+      "text_sha256": "65702378732b686802bbcc5e192e80adcbc783abd91fd99ed13168d77e4ed07a"
+    },
+    {
+      "bbox": [
+        306.0,
+        680.4658203125,
+        549.3461303710938,
+        725.45849609375
+      ],
+      "block_id": "page-0847-block-0026",
+      "order": 26,
+      "text": "se retrouvent majoritairement en milieu carcéral, alors que les\nfemmes sont plus souvent dirigées vers le milieu psychiatrique.\nOn rapporte souvent que le patient typique est un homme\nphysiquement imposant qui se sent inutile ou sans contrôle sur\n",
+      "text_sha256": "28e86c9853f4643a91ff05a3618b4398140a7670e1c9c93196c768ece86f754e"
+    }
+  ],
+  "coordinates_sha256": "c8c79c6c16e5dae56981bc906bb0608e41a61fb7af6619812a63fd3bef48c612",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0847",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "830\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nTABLEAU 36.1 Critères diagnostiques du trouble explosif intermittent\nDSM-5\nDSM-IV-TR\n312.34 (F63.8) Trouble explosif intermittent\nTrouble explosif intermittent\nA. Épisodes comportementaux explosifs récurrents témoignant d’une\nincapacité à résister à des impulsions agressives, comme en témoigne\nl’une ou l’autre des manifestations suivantes :\n1. Agressivité verbale (p. ex., crises de colère, diatribes, disputes ou\naltercations verbales) ou agressivité physique envers des biens maté-\nriels, des animaux ou d’autres personnes, survenant deux fois par\nsemaine, en moyenne, durant une période de 3 mois. L’agressivité\nphysique n’a pas pour conséquence d’endommager ou de détruire\ndes biens matériels ni de blesser physiquement des animaux ou\nd’autres personnes.\n[OU]\n2. Trois accès comportementaux explosifs, survenant durant une\npériode de 12 mois, durant lesquels des biens matériels sont\nendommagés ou détruits et/ou des animaux ou d’autres personnes\nsont blessés dans une agression physique.\nA. Plusieurs épisodes distincts d’incapacité à résister à des impulsions\nagressives, aboutissant à des voies de fait graves ou à la destruction\nde biens.\nB. Le degré d’agressivité exprimé durant les accès explosifs est sans com-\nmune mesure avec la provocation ou un quelconque facteur de stress\npsychosocial déclenchant.\nB. Le degré d’agressivité exprimé durant les épisodes est sans commune\nmesure avec un quelconque facteur de stress psychosocial déclenchant.\nC. Les accès agressifs récurrents ne sont pas prémédités (c.-à-d. qu’ils\nsont impulsifs et/ou dus à la colère) et ils ne sont pas réalisés dans un\nbut tangible (p. ex., argent, pouvoir, intimidation).\nD. Les accès agressifs récurrents entraînent soit une détresse signicative chez\nla personne, soit une altération du fonctionnement professionnel ou interper-\nsonnel, ou sont associés à des conséquences nancières ou judiciaires.\nE. L’âge chronologique est au moins de 6 ans (ou un niveau développe-\nmental équivalent).\nF. Les accès agressifs récurrents ne sont pas mieux expliqués par un autre\ntrouble mental : p. ex.,\n• un trouble dépressif caractérisé,\n• un trouble bipolaire,\n• un trouble disruptif avec dysrégulation émotionnelle,\n• un trouble psychotique,\n• une personnalité antisociale,\n• un trouble de la personnalité borderline\net ne sont pas imputables à une autre affection médicale (p. ex.,\nun traumatisme crânien, une maladie d’Alzheimer),\nou aux effets physiologiques d’une substance (p. ex., une substance\ndonnant lieu à un abus, un médicament).\nC. Les épisodes agressifs ne sont pas mieux expliqués par\n• un autre trouble mental :\n– une personnalité antisociale ou borderline,\n– un trouble psychotique,\n– un épisode maniaque,\n– un trouble des conduites,\n– un décit de l’attention / hyperactivité)\n• les effets physiologiques directs d’une substance (p. ex.,\nune substance donnant lieu à abus, un médicament)\n• une affection médicale générale :\n– un traumatisme crânien ou une maladie d’Alzheimer.\nPour les enfants âgés de 6 à 18 ans, le comportement agressif survenant\ndans le cadre d’un trouble de l’adaptation ne doit pas être considéré pour\nce diagnostic.\nN.B.: Ce diagnostic peut être posé en plus des diagnostics de décit de\nl’attention/hyperactivité, trouble des conduites, trouble oppositionnel avec\nprovocation ou trouble du spectre de l’autisme quand les accès agressifs\nrécurrents sont en surplus de ceux habituellement vus dans ces troubles\net justient une prise en charge clinique particulière.\nSources : APA (2015), p. 553 ; APA (2004), p. 769-770.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS.Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation,DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\nde ces troubles chez les hommes que chez les femmes (Kessler\n& al., 2006). La diérence entre hommes et femmes est plus\nfaible en milieu psychiatrique (Coccaro & al., 2005), ce qui\npourrait s’expliquer par le fait que les hommes atteints d’un TEI\nse retrouvent majoritairement en milieu carcéral, alors que les\nfemmes sont plus souvent dirigées vers le milieu psychiatrique.\nOn rapporte souvent que le patient typique est un homme\nphysiquement imposant qui se sent inutile ou sans contrôle sur\n",
+  "raw_text_sha256": "6f8614d96cb0df798dfaab8956d5e646c34fbece410b75fae22aa7e574058759",
+  "source_page_display": 848,
+  "source_page_index": 847
+}

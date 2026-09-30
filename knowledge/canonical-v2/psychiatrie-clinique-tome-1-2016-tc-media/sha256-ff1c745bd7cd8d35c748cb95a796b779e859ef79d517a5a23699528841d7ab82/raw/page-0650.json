@@ -1,0 +1,484 @@
+{
+  "block_sequence_sha256": "3a80123223c4dfdd1012474ba863c66319795ae3e572e44a25d531c039c6796e",
+  "blocks": [
+    {
+      "bbox": [
+        270.70001220703125,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0650-block-0001",
+      "order": 1,
+      "text": "Chapitre 28\nTroubles mentaux dus à une aection médicale\n633\n",
+      "text_sha256": "503284cf70424555d578610b2d568aa6ce470c4c439c58652b11394a32afb3c1"
+    },
+    {
+      "bbox": [
+        56.35000228881836,
+        41.002296447753906,
+        195.08888244628906,
+        53.320068359375
+      ],
+      "block_id": "page-0650-block-0002",
+      "order": 2,
+      "text": "TABLEAU 28.8 Tests de laboratoire\n",
+      "text_sha256": "a7ce45f1801fea09f398c60454053069ff02e2b8d65e3fb43c16c7b76ce2d9cc"
+    },
+    {
+      "bbox": [
+        121.20000457763672,
+        79.47412109375,
+        140.0336151123047,
+        90.05029296875
+      ],
+      "block_id": "page-0650-block-0003",
+      "order": 3,
+      "text": "Tests\n",
+      "text_sha256": "5c17754674b09233565c65903b8d354ec3cca1f61acc15f1bdf6a6442a6395c7"
+    },
+    {
+      "bbox": [
+        211.87413024902344,
+        78.65049743652344,
+        222.45030212402344,
+        109.25
+      ],
+      "block_id": "page-0650-block-0004",
+      "order": 4,
+      "text": "Delirium\n",
+      "text_sha256": "88a5dc3974e38b9f2d0589ea59c3527dc472f7c18540d8988c005c98e7a09120"
+    },
+    {
+      "bbox": [
+        231.87413024902344,
+        74.95500183105469,
+        242.45030212402344,
+        109.25
+      ],
+      "block_id": "page-0650-block-0005",
+      "order": 5,
+      "text": "Démence\n",
+      "text_sha256": "2da7f19b79997312c3471d52ba7bf0f711145fecadc783fb5c022b8e8557fc83"
+    },
+    {
+      "bbox": [
+        251.87411499023438,
+        86.91549682617188,
+        262.4502868652344,
+        109.25
+      ],
+      "block_id": "page-0650-block-0006",
+      "order": 6,
+      "text": "Manie\n",
+      "text_sha256": "739784c4b857c5ec8cca4fbad6d2670cf699625678197061aae9940246a793d2"
+    },
+    {
+      "bbox": [
+        271.8741149902344,
+        68.43798828125,
+        282.4502868652344,
+        109.25
+      ],
+      "block_id": "page-0650-block-0007",
+      "order": 7,
+      "text": "Dépression\n",
+      "text_sha256": "f43471125c51aee269efb041ee2e7024459ec74ca1022e28b638c22ef0ff35af"
+    },
+    {
+      "bbox": [
+        291.8741149902344,
+        82.16549682617188,
+        302.4502868652344,
+        109.25
+      ],
+      "block_id": "page-0650-block-0008",
+      "order": 8,
+      "text": "Fatigue\n",
+      "text_sha256": "e320931ff63fd59e597007acf3250ce7d68ed09d23db62047b0084f1ca70b55b"
+    },
+    {
+      "bbox": [
+        361.45001220703125,
+        79.47412109375,
+        500.35833740234375,
+        90.05029296875
+      ],
+      "block_id": "page-0650-block-0009",
+      "order": 9,
+      "text": "Affections recherchées/commentaires\n",
+      "text_sha256": "5ab68264f975bf102fd6d38d95b430cf29f216af9c2e296cb5a06321048c7d05"
+    },
+    {
+      "bbox": [
+        57.25,
+        115.62285614013672,
+        175.33099365234375,
+        125.64238739013672
+      ],
+      "block_id": "page-0650-block-0010",
+      "order": 10,
+      "text": "Tests courants additionnels (suite)\n",
+      "text_sha256": "8912818ede6eb96ce8d0d4f2500f861e1765036d876e4913ea7205af6db2e447"
+    },
+    {
+      "bbox": [
+        58.25,
+        132.10195922851562,
+        367.56500244140625,
+        152.92813110351562
+      ],
+      "block_id": "page-0650-block-0011",
+      "order": 11,
+      "text": "Créatine phosphokinase (CK)\n\n\n\n• Myosite\n• Rhabdomyolyse\n",
+      "text_sha256": "5ac5842cbaa32b06c12d1e81df1fa0c9bc25e841689615fa8a8c919c05aa1b97"
+    },
+    {
+      "bbox": [
+        58.25,
+        159.5519561767578,
+        528.0369873046875,
+        180.3781280517578
+      ],
+      "block_id": "page-0650-block-0012",
+      "order": 12,
+      "text": "Bilan lipidique\n\n• Avec le bilan métabolique de la prise d’antipsychotiques atypiques\n• Risque cardiovasculaire\n",
+      "text_sha256": "eb4a31540601b5f0334132062627a5e23c7068842d57dc8d9605b3ffdb35dc9d"
+    },
+    {
+      "bbox": [
+        58.25,
+        186.9519500732422,
+        442.01300048828125,
+        207.7781219482422
+      ],
+      "block_id": "page-0650-block-0013",
+      "order": 13,
+      "text": "Cortisol\n\n\n\n• Insufsance surrénalienne (dépression)\n• Maladie de Cushing (manie)\n",
+      "text_sha256": "5cf8775350cec834528757b10b83879dff63f40f6b20f9938d1d76c32f663bf5"
+    },
+    {
+      "bbox": [
+        58.25,
+        214.40196228027344,
+        540.1284790039062,
+        246.22813415527344
+      ],
+      "block_id": "page-0650-block-0014",
+      "order": 14,
+      "text": "Dosage sérique de médicaments\n\n\n\n\n\n• Intoxication\n• Observance\n• Niveau d’un stabilisateur de l’humeur, des tricycliques, de la clozapine\n",
+      "text_sha256": "76f86d44aea835296f494ab0df269e727e4281b2fd93fc60c7222ccef6f39b03"
+    },
+    {
+      "bbox": [
+        58.25,
+        252.80197143554688,
+        344.7229919433594,
+        262.8820495605469
+      ],
+      "block_id": "page-0650-block-0015",
+      "order": 15,
+      "text": "Cultures du sang ou des urines\n\n• Infection\n",
+      "text_sha256": "ecd90d42f7e9a277b203a5a0b621629653cebaa88dfc77bad365f4871e9a0012"
+    },
+    {
+      "bbox": [
+        57.25,
+        269.6728515625,
+        150.21910095214844,
+        279.6923828125
+      ],
+      "block_id": "page-0650-block-0016",
+      "order": 16,
+      "text": "Tests sanguins spéciques\n",
+      "text_sha256": "3446d00ac6389c01805c7ef3434e6cf121b2ecaee3abd5f1a604499b477e63dd"
+    },
+    {
+      "bbox": [
+        58.25,
+        286.1519470214844,
+        172.2643280029297,
+        305.9781188964844
+      ],
+      "block_id": "page-0650-block-0017",
+      "order": 17,
+      "text": "Vitesse de sédimentation –\nprotéine C réactive (en anglais CRP)\n",
+      "text_sha256": "36344e6190b63158f7987a4c3959b7e113a478440b474575cb5f7438568a3caa"
+    },
+    {
+      "bbox": [
+        233.4499969482422,
+        286.1519470214844,
+        395.4830322265625,
+        296.28204345703125
+      ],
+      "block_id": "page-0650-block-0018",
+      "order": 18,
+      "text": "\n\n• Syndrome inammatoire\n",
+      "text_sha256": "5005baf7db4f3643680592fef5691bc2226b6cfd54b531be1fa79f8da1a4eef3"
+    },
+    {
+      "bbox": [
+        58.25,
+        312.6019592285156,
+        447.94482421875,
+        333.4281311035156
+      ],
+      "block_id": "page-0650-block-0019",
+      "order": 19,
+      "text": "Électrophorèse des protéines\n\n• Néoplasie (myélome multiple, lymphome)\n• Syndrome inammatoire\n",
+      "text_sha256": "9fdf948f3464b7f95c60145f64ee854e9fc2cfd057ea0026cb8022af4cd10665"
+    },
+    {
+      "bbox": [
+        58.25,
+        340.001953125,
+        180.6527862548828,
+        359.828125
+      ],
+      "block_id": "page-0650-block-0020",
+      "order": 20,
+      "text": "Recherche d’anticorps auto-immuns –\nfacteur rhumatoïde\n",
+      "text_sha256": "1638944e22108328c6126649c6a28c021488616ef297df30d41adf15953343f1"
+    },
+    {
+      "bbox": [
+        293.45001220703125,
+        340.001953125,
+        395.4830322265625,
+        360.828125
+      ],
+      "block_id": "page-0650-block-0021",
+      "order": 21,
+      "text": "\n• Maladies auto-immunes\n• Syndrome inammatoire\n",
+      "text_sha256": "ebc1a33c0a52da8534399a29c888933a49b61bf2ca80246e647dccd1ce9e6198"
+    },
+    {
+      "bbox": [
+        58.25,
+        367.45196533203125,
+        544.6697387695312,
+        387.27813720703125
+      ],
+      "block_id": "page-0650-block-0022",
+      "order": 22,
+      "text": "VIH\n\n\n\n\n\n• En présence de facteurs de risque (partagés ou non) pour les infections\ntransmises sexuellement et par le sang (ITSS)\n",
+      "text_sha256": "1a93b5e43d373983259cb67b9132019befd805753397872ae16c9c90206a0878"
+    },
+    {
+      "bbox": [
+        58.25,
+        393.8519592285156,
+        300.5240173339844,
+        403.9820251464844
+      ],
+      "block_id": "page-0650-block-0023",
+      "order": 23,
+      "text": "Hépatites (VHB, VHC)\n\n",
+      "text_sha256": "92893e14e8bf7d5f02dabf290bb02d0e9a9f1de81afd1471da7d391b3c38a2e3"
+    },
+    {
+      "bbox": [
+        58.25,
+        410.8019714355469,
+        300.5240173339844,
+        420.9320373535156
+      ],
+      "block_id": "page-0650-block-0024",
+      "order": 24,
+      "text": "Virus Epstein-Barr (EBV)\n\n",
+      "text_sha256": "6dd603940a17b9bdca44661097f3614f8bc24e2d3a701681ec3972f697da2a03"
+    },
+    {
+      "bbox": [
+        58.25,
+        427.751953125,
+        300.5240173339844,
+        437.83203125
+      ],
+      "block_id": "page-0650-block-0025",
+      "order": 25,
+      "text": "Cytomégalovirus (CMV)\n\n",
+      "text_sha256": "42ac3161b5ad25fdd9705d013a3faf8b60def6f9da9f68b540ce10f3ce4fd186"
+    },
+    {
+      "bbox": [
+        58.25,
+        444.70196533203125,
+        495.6521301269531,
+        454.78204345703125
+      ],
+      "block_id": "page-0650-block-0026",
+      "order": 26,
+      "text": "Maladie de Lyme\n\n\n\n\n• Surtout avec une exposition dans les zones endémiques\n",
+      "text_sha256": "83f641386892cc867a9fe651d32bac5a6d970506553c254648203d20be7414eb"
+    },
+    {
+      "bbox": [
+        58.25,
+        461.6519470214844,
+        182.77395629882812,
+        481.4781188964844
+      ],
+      "block_id": "page-0650-block-0027",
+      "order": 27,
+      "text": "Métaux lourds (plomb, mercure, cuivre,\nmanganèse, etc.)\n",
+      "text_sha256": "9d5e46d6cfeed3f09716218b590e5429d465c11a7d36007eee001e056f30ad2c"
+    },
+    {
+      "bbox": [
+        213.4499969482422,
+        461.6519470214844,
+        459.4537048339844,
+        471.7320251464844
+      ],
+      "block_id": "page-0650-block-0028",
+      "order": 28,
+      "text": "\n\n• Intoxication chronique liée à l’environnement\n",
+      "text_sha256": "c8e7e93d9a3f6cefd14d875d54e5048181e50e592774b8164d170d79b5c22792"
+    },
+    {
+      "bbox": [
+        58.25,
+        488.0519714355469,
+        375.80499267578125,
+        498.1320495605469
+      ],
+      "block_id": "page-0650-block-0029",
+      "order": 29,
+      "text": "Céruloplasmine\n\n\n• Maladie de Wilson\n",
+      "text_sha256": "f9a88501eba297b98d52b939d7beae6a7a616174f098740d58e590caf6b36ea2"
+    },
+    {
+      "bbox": [
+        58.25,
+        505.001953125,
+        393.87200927734375,
+        515.08203125
+      ],
+      "block_id": "page-0650-block-0030",
+      "order": 30,
+      "text": "Porphyrines\n\n\n\n\n\n• Porphyrie (maladie rare)\n",
+      "text_sha256": "09a617d2bad0eca91d08043e4f98c6d5fbd54126b5a4b558f806c7982f28e19c"
+    },
+    {
+      "bbox": [
+        57.25,
+        521.8728637695312,
+        165.8791046142578,
+        531.8923950195312
+      ],
+      "block_id": "page-0650-block-0031",
+      "order": 31,
+      "text": "Tests diagnostiques techniques\n",
+      "text_sha256": "e9a70317f88fef5639f91e785e6b18aeacb51ed7d237e388c8dcedf3d98836ac"
+    },
+    {
+      "bbox": [
+        58.25,
+        538.3519897460938,
+        366.4637756347656,
+        559.1781616210938
+      ],
+      "block_id": "page-0650-block-0032",
+      "order": 32,
+      "text": "Électrocardiogramme (ECG)\n\n\n\n\n\n• Infarctus\n• Mesure du QTc\n",
+      "text_sha256": "f4468f570d6db5b09efb63119df087ddeda9b55bfece0267cf22522f94d07194"
+    },
+    {
+      "bbox": [
+        58.25,
+        565.8019409179688,
+        550.7576293945312,
+        575.8820190429688
+      ],
+      "block_id": "page-0650-block-0033",
+      "order": 33,
+      "text": "Radiographie pulmonaire\n\n\n\n\n\n• Recherche d’un cancer, particulièrement chez les fumeurs et les plus de 40 ans\n",
+      "text_sha256": "12584e218194937beaee869ee04983cc8c29f2e8e695a26e469b793f850735b5"
+    },
+    {
+      "bbox": [
+        58.25,
+        582.7019653320312,
+        517.8935546875,
+        602.5281372070312
+      ],
+      "block_id": "page-0650-block-0034",
+      "order": 34,
+      "text": "Imagerie cérébrale\n\n\n\n• Symptômes neuropsychiatriques, particulièrement en présence\nde facteurs de risque cardiovasculaires\n",
+      "text_sha256": "e9a397a7fb7796a6862bef3caf65a39e2cc670f09c090b7c1951ec02cd76a92e"
+    },
+    {
+      "bbox": [
+        58.25,
+        610.1519775390625,
+        547.8872680664062,
+        640.9781494140625
+      ],
+      "block_id": "page-0650-block-0035",
+      "order": 35,
+      "text": "Électroencéphalogramme (EEG)\n\n\n\n• Anomalies épileptiformes\n• Objectiver un delirium (ralentissement du rythme, surtout en postérieur) ;\ntype hypoactif mimant parfois une dépression\n",
+      "text_sha256": "7129a2d4ac510daa45088862379187c0426d0a0a268d7c8ca7aee2d64d19f5f1"
+    },
+    {
+      "bbox": [
+        58.25,
+        649.6019897460938,
+        358.9070129394531,
+        670.4281616210938
+      ],
+      "block_id": "page-0650-block-0036",
+      "order": 36,
+      "text": "Ponction lombaire\n\n\n\n• Infection\n• Inammation\n",
+      "text_sha256": "1c2a68f89d26ee6d1fce26b8decf26616b149254588667d1b68ef4226e693815"
+    },
+    {
+      "bbox": [
+        54.25,
+        678.5625,
+        188.3386993408203,
+        698.375
+      ],
+      "block_id": "page-0650-block-0037",
+      "order": 37,
+      "text": ": Test recommandé\n: Test à considérer selon la suspicion clinique\n",
+      "text_sha256": "0c02eaf97d62f66f4cfb9e3bdc7d15e2386d17763f7de917b1e77a32c5b5f080"
+    },
+    {
+      "bbox": [
+        54.25,
+        705.640625,
+        357.662353515625,
+        714.5088500976562
+      ],
+      "block_id": "page-0650-block-0038",
+      "order": 38,
+      "text": "Sources : Adapté de Levenson (2011), p. 264, 293, 313, 346, 571, 894 ; Smith & Hogan (2016), p. 20-38.\n",
+      "text_sha256": "965dcafc143f994cdae0d84065a9a1eb6783aa394960dbac995ad429f7c7c740"
+    },
+    {
+      "bbox": [
+        197.3000030517578,
+        41.352294921875,
+        222.9842529296875,
+        53.320068359375
+      ],
+      "block_id": "page-0650-block-0039",
+      "order": 39,
+      "text": "(suite)\n",
+      "text_sha256": "c684d6dbcdfd50f0ada227f799b5c0fb30e817ac3da61b4cbf208decde7f907b"
+    }
+  ],
+  "coordinates_sha256": "4b354f74fb3b7de14a6ea9acde30bb3e9e10b1faabe4115fd3b1396548fcdcea",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0650",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 28\nTroubles mentaux dus à une aection médicale\n633\nTABLEAU 28.8 Tests de laboratoire\nTests\nDelirium\nDémence\nManie\nDépression\nFatigue\nAffections recherchées/commentaires\nTests courants additionnels (suite)\nCréatine phosphokinase (CK)\n\n\n\n• Myosite\n• Rhabdomyolyse\nBilan lipidique\n\n• Avec le bilan métabolique de la prise d’antipsychotiques atypiques\n• Risque cardiovasculaire\nCortisol\n\n\n\n• Insufsance surrénalienne (dépression)\n• Maladie de Cushing (manie)\nDosage sérique de médicaments\n\n\n\n\n\n• Intoxication\n• Observance\n• Niveau d’un stabilisateur de l’humeur, des tricycliques, de la clozapine\nCultures du sang ou des urines\n\n• Infection\nTests sanguins spéciques\nVitesse de sédimentation –\nprotéine C réactive (en anglais CRP)\n\n\n• Syndrome inammatoire\nÉlectrophorèse des protéines\n\n• Néoplasie (myélome multiple, lymphome)\n• Syndrome inammatoire\nRecherche d’anticorps auto-immuns –\nfacteur rhumatoïde\n\n• Maladies auto-immunes\n• Syndrome inammatoire\nVIH\n\n\n\n\n\n• En présence de facteurs de risque (partagés ou non) pour les infections\ntransmises sexuellement et par le sang (ITSS)\nHépatites (VHB, VHC)\n\nVirus Epstein-Barr (EBV)\n\nCytomégalovirus (CMV)\n\nMaladie de Lyme\n\n\n\n\n• Surtout avec une exposition dans les zones endémiques\nMétaux lourds (plomb, mercure, cuivre,\nmanganèse, etc.)\n\n\n• Intoxication chronique liée à l’environnement\nCéruloplasmine\n\n\n• Maladie de Wilson\nPorphyrines\n\n\n\n\n\n• Porphyrie (maladie rare)\nTests diagnostiques techniques\nÉlectrocardiogramme (ECG)\n\n\n\n\n\n• Infarctus\n• Mesure du QTc\nRadiographie pulmonaire\n\n\n\n\n\n• Recherche d’un cancer, particulièrement chez les fumeurs et les plus de 40 ans\nImagerie cérébrale\n\n\n\n• Symptômes neuropsychiatriques, particulièrement en présence\nde facteurs de risque cardiovasculaires\nÉlectroencéphalogramme (EEG)\n\n\n\n• Anomalies épileptiformes\n• Objectiver un delirium (ralentissement du rythme, surtout en postérieur) ;\ntype hypoactif mimant parfois une dépression\nPonction lombaire\n\n\n\n• Infection\n• Inammation\n: Test recommandé\n: Test à considérer selon la suspicion clinique\nSources : Adapté de Levenson (2011), p. 264, 293, 313, 346, 571, 894 ; Smith & Hogan (2016), p. 20-38.\n(suite)\n",
+  "raw_text_sha256": "117a65cd279ee3d819bddf625bb89b07cc02112d4d909fefdcbcad848ab80e6c",
+  "source_page_display": 651,
+  "source_page_index": 650
+}

@@ -1,0 +1,268 @@
+{
+  "block_sequence_sha256": "39e85f45b78472f33d07e696a96ce272940a5fb244a60da28f0644118a282c24",
+  "blocks": [
+    {
+      "bbox": [
+        402.45001220703125,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0916-block-0001",
+      "order": 1,
+      "text": "Chapitre 38\nToxicomanies\n899\n",
+      "text_sha256": "d5910d7973eb743eae8383713a9dfb2882699aa50a431279815147463f2709a3"
+    },
+    {
+      "bbox": [
+        312.0,
+        420.9658203125,
+        555.6466674804688,
+        673.5585327148438
+      ],
+      "block_id": "page-0916-block-0002",
+      "order": 2,
+      "text": "Le traitement requiert l’observation attentive et, si nécessaire, la\nprotection des voies aériennes ainsi que le soutien de la ventilation\net de la circulation. Dans les cas les plus graves, l’administration d’un\nantagoniste comme la naloxone (NarcanMD) peut être nécessaire.\nSi la fréquence respiratoire est inférieure à 12 ou si la saturation\nen O2 est inférieure à 90 %, la dose initiale de naloxone se situe\ngénéralement entre 0,2 à 1,0 mg, à répéter toutes les 2 à 3 minutes\nau besoin. La voie privilégiée d’administration de la naloxone est\nla voie intraveineuse, mais elle peut aussi s’administrer en intra-\nmusculaire ou en sous-cutané. Il importe de noter que la réponse\nà la naloxone s’évalue par la fonction respiratoire et non par un\nétat de vigilance normal. Si aucune réponse n’est observée après\navoir répété l’administration de naloxone jusqu’à concurrence\nde 5 à 10 mg, il faut envisager un autre diagnostic. Il faut aussi se\nsouvenir que la demi-vie de la naloxone est très courte, souvent\nplus courte que celle de l’opioïde consommé. Dans certains cas,\nla naloxone doit être administrée en perfusion continue, tant que\nl’opioïde consommé n’a pas été éliminé. Dans ces cas, après une\namélioration initiale, on continue d’observer l’hypoventilation\nou la diminution de la vigilance. La dose de naloxone nécessaire\npour la perfusion continue correspond aux deux tiers de la dose\nutilisée pour permettre la réponse initiale, administrée à l’heure.\n",
+      "text_sha256": "0148497e1db7da6e319fb78087968f370150c6533aa2d0e9dd3a0b28b239e711"
+    },
+    {
+      "bbox": [
+        312.0,
+        674.5658569335938,
+        555.0960693359375,
+        708.1585083007812
+      ],
+      "block_id": "page-0916-block-0003",
+      "order": 3,
+      "text": "Lorsque la naloxone est administrée à un patient dépendant,\ncelui-ci présente rapidement des symptômes de sevrage pouvant\nentraîner un grand inconfort ainsi qu’une agitation importante. Il\n",
+      "text_sha256": "878a751676a70acd90374a9cb6e442e0b55a85f53bc3c57b8081b890d7640e0d"
+    },
+    {
+      "bbox": [
+        54.0,
+        420.05230712890625,
+        297.2565612792969,
+        708.1585083007812
+      ],
+      "block_id": "page-0916-block-0004",
+      "order": 4,
+      "text": "Traitement de l’intoxication\nL’intoxication aux opioïdes entraîne de la somnolence, une\nhypotension et une bradypnée qui peuvent aller jusqu’au coma\net à l’arrêt cardiorespiratoire. Il est souvent impossible d’obtenir\nune histoire de la part du patient et il n’est ni réaliste ni prudent\nd’attendre les résultats de tests de dépistage de substances avant\nd’amorcer le traitement. Il faut aussi se souvenir que les opioïdes\nsont souvent consommés avec d’autres psychotropes, en particu-\nlier les benzodiazépines et l’alcool, ce qui peut aecter le tableau\nclinique et le traitement. Certains opioïdes sont aussi combinés\navec d’autres médicaments, comme l’acétaminophène ou l’aspi-\nrine. Un rythme respiratoire inférieur à 12 est probablement le\nmeilleur indice d’une intoxication aux opioïdes. La présence de\npupilles normales n’exclut pas une intoxication. En eet, d’autres\nsubstances exerçant un eet contraire sur les pupilles pourraient\navoir été consommées (p. ex., la cocaïne), ou alors l’opioïde n’a\npas d’eet de constriction pupillaire (p. ex., la mépéridine). Les\nconvulsions, quoique peu fréquentes, peuvent survenir surtout\nen présence de certains opioïdes (tramadol, hydromorphone)\nou résulter de l’hypoxie associée à ce type d’intoxication. Étant\ndonné le nombre de substances qui peuvent entraîner un coma,\nil est essentiel de procéder à une anamnèse et à un examen\nphysique complet. Toutefois, la conrmation de l’intoxication\naux opioïdes peut être obtenue par l’observation de la réponse à\nl’administration d’un antagoniste.\n",
+      "text_sha256": "52024fa82225633e34b9e668703487eaf57a919d12c674cbbc25bf0c60482934"
+    },
+    {
+      "bbox": [
+        56.45000076293945,
+        41.002296447753906,
+        313.0295715332031,
+        53.320068359375
+      ],
+      "block_id": "page-0916-block-0005",
+      "order": 5,
+      "text": "TABLEAU 38.16 Critères diagnostiques du sevrage des opioïdes\n",
+      "text_sha256": "0e047fb0d0459f0928533f79974aacd46841896aff5281536f9b6f6eb670c70c"
+    },
+    {
+      "bbox": [
+        222.90000915527344,
+        60.67412567138672,
+        505.93798828125,
+        71.25029754638672
+      ],
+      "block_id": "page-0916-block-0006",
+      "order": 6,
+      "text": "DSM-5\nDSM-IV-TR\n",
+      "text_sha256": "67d368c78be7842a2bc99b149901566bcadf3c9d62623ea48bafcc32b3563ffb"
+    },
+    {
+      "bbox": [
+        174.15000915527344,
+        77.22285461425781,
+        521.291015625,
+        87.24238586425781
+      ],
+      "block_id": "page-0916-block-0007",
+      "order": 7,
+      "text": "292.0 (F11.23) Sevrage d’un opiacé\nSevrage d’un opiacé\n",
+      "text_sha256": "1bfcc6d34a50f046fcb0f5d232b5679969a459169734a133f35870aa5c3cfbd8"
+    },
+    {
+      "bbox": [
+        58.25,
+        94.05195617675781,
+        213.24087524414062,
+        103.87812805175781
+      ],
+      "block_id": "page-0916-block-0008",
+      "order": 8,
+      "text": "A. L’une ou l’autre des circonstances suivantes :\n",
+      "text_sha256": "df73e5016ce4ae55b2f8f8196d457f56a7102f44b2a08801cc3bcd51a69baeca"
+    },
+    {
+      "bbox": [
+        70.25,
+        105.05195617675781,
+        390.756103515625,
+        135.8781280517578
+      ],
+      "block_id": "page-0916-block-0009",
+      "order": 9,
+      "text": "1. Arrêt (ou réduction) d’un usage d’opiacés qui a été massif et prolongé (c.-à-d. au moins plusieurs\nsemaines).\n2. Administration d’un antagoniste opiacé après une période de l’usage d’opiacés.\n",
+      "text_sha256": "0325b8bcd5b66a2dc8203e0b4540ab64e5699472940b2138bcc7a80a772b88b7"
+    },
+    {
+      "bbox": [
+        420.5,
+        94.05195617675781,
+        469.2980041503906,
+        103.87812805175781
+      ],
+      "block_id": "page-0916-block-0010",
+      "order": 10,
+      "text": "Idem à DSM-5.\n",
+      "text_sha256": "73e2b1c81f4b0cae397bef13680b1ec0f40f117881c7e4acde37a2d30a373dea"
+    },
+    {
+      "bbox": [
+        58.25,
+        144.4519500732422,
+        401.65301513671875,
+        154.2781219482422
+      ],
+      "block_id": "page-0916-block-0011",
+      "order": 11,
+      "text": "B. Au moins trois des manifestations suivantes se développant de quelques minutes à quelques jours après\n",
+      "text_sha256": "a5b4908c490fe133ab87d992bb74c34cfad48c79820a252eb3012c22777e4fdf"
+    },
+    {
+      "bbox": [
+        68.75,
+        154.4519500732422,
+        106.31001281738281,
+        164.2781219482422
+      ],
+      "block_id": "page-0916-block-0012",
+      "order": 12,
+      "text": "le critère A :\n",
+      "text_sha256": "534e486a6a19473d1c3a093f8f34a373f8b36db8dbbf99669d3eff9635c1e514"
+    },
+    {
+      "bbox": [
+        70.25,
+        165.4519500732422,
+        237.95933532714844,
+        263.27813720703125
+      ],
+      "block_id": "page-0916-block-0013",
+      "order": 13,
+      "text": "1. Humeur dysphorique.\n2. Nausées ou vomissements.\n3. Douleurs musculaires.\n4. Larmoiement ou rhinorrhée.\n5. Dilatation pupillaire, piloérection, ou transpiration.\n6. Diarrhée.\n7. Bâillement.\n8. Fièvre.\n9. Insomnie.\n",
+      "text_sha256": "3655089eada1733d1a111025529de615ff655bdb4d8f251aa544b0dd6ccb2bea"
+    },
+    {
+      "bbox": [
+        420.5,
+        144.4519500732422,
+        469.2980041503906,
+        154.2781219482422
+      ],
+      "block_id": "page-0916-block-0014",
+      "order": 14,
+      "text": "Idem à DSM-5.\n",
+      "text_sha256": "73e2b1c81f4b0cae397bef13680b1ec0f40f117881c7e4acde37a2d30a373dea"
+    },
+    {
+      "bbox": [
+        58.25,
+        271.9019470214844,
+        403.5657653808594,
+        281.7281188964844
+      ],
+      "block_id": "page-0916-block-0015",
+      "order": 15,
+      "text": "C. Les signes et symptômes du critère B causent une souffrance cliniquement signicative ou une altération\n",
+      "text_sha256": "e4f8b8a8e38b2e007cd5a583d105e9d3d1c7df5b60120c2cbe5e7c7ed3582349"
+    },
+    {
+      "bbox": [
+        69.25,
+        281.9019470214844,
+        324.0701599121094,
+        291.7281188964844
+      ],
+      "block_id": "page-0916-block-0016",
+      "order": 16,
+      "text": "du fonctionnement social, professionnel, ou dans d’autres domaines importants.\n",
+      "text_sha256": "435a19888d94cf5b9cf7d2a3dfdbfeca686455e71b4f73ab12f74eb9f53dbf76"
+    },
+    {
+      "bbox": [
+        420.5,
+        271.9019470214844,
+        469.2980041503906,
+        281.7281188964844
+      ],
+      "block_id": "page-0916-block-0017",
+      "order": 17,
+      "text": "Idem à DSM-5.\n",
+      "text_sha256": "73e2b1c81f4b0cae397bef13680b1ec0f40f117881c7e4acde37a2d30a373dea"
+    },
+    {
+      "bbox": [
+        58.25,
+        300.3019714355469,
+        403.9696960449219,
+        310.1281433105469
+      ],
+      "block_id": "page-0916-block-0018",
+      "order": 18,
+      "text": "D. Les signes et symptômes ne sont pas dus à une autre affection médicale, et ne sont pas mieux expliqués\n",
+      "text_sha256": "b205fe5015b76220ecca55f08a6ad9ec244eeccb799376a6635b009b55d106f8"
+    },
+    {
+      "bbox": [
+        69.4000015258789,
+        310.3019714355469,
+        308.1051025390625,
+        320.1281433105469
+      ],
+      "block_id": "page-0916-block-0019",
+      "order": 19,
+      "text": "par un autre trouble mental, dont une intoxication par une autre substance.\n",
+      "text_sha256": "707bbcebf64a6945be50353791e886baddce4de986e308434d48c53829e06762"
+    },
+    {
+      "bbox": [
+        420.5,
+        300.3019714355469,
+        469.2980041503906,
+        310.1281433105469
+      ],
+      "block_id": "page-0916-block-0020",
+      "order": 20,
+      "text": "Idem à DSM-5.\n",
+      "text_sha256": "73e2b1c81f4b0cae397bef13680b1ec0f40f117881c7e4acde37a2d30a373dea"
+    },
+    {
+      "bbox": [
+        54.25,
+        328.890625,
+        554.1411743164062,
+        397.625
+      ],
+      "block_id": "page-0916-block-0021",
+      "order": 21,
+      "text": "Sources : APA (2015), p. 649-650 ; APA (2004), p. 316-317.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris,\n2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All\nrights reserved.\n",
+      "text_sha256": "94ad8b849e71ecbd7b42d720c1dde8df5b191665168bd9d1211aa3c4eea4d726"
+    }
+  ],
+  "coordinates_sha256": "9a72d9e9a61edcab22ba8b2159c0d8b79e137818f94fb8f14402fa28b82a6c3c",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0916",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 38\nToxicomanies\n899\nLe traitement requiert l’observation attentive et, si nécessaire, la\nprotection des voies aériennes ainsi que le soutien de la ventilation\net de la circulation. Dans les cas les plus graves, l’administration d’un\nantagoniste comme la naloxone (NarcanMD) peut être nécessaire.\nSi la fréquence respiratoire est inférieure à 12 ou si la saturation\nen O2 est inférieure à 90 %, la dose initiale de naloxone se situe\ngénéralement entre 0,2 à 1,0 mg, à répéter toutes les 2 à 3 minutes\nau besoin. La voie privilégiée d’administration de la naloxone est\nla voie intraveineuse, mais elle peut aussi s’administrer en intra-\nmusculaire ou en sous-cutané. Il importe de noter que la réponse\nà la naloxone s’évalue par la fonction respiratoire et non par un\nétat de vigilance normal. Si aucune réponse n’est observée après\navoir répété l’administration de naloxone jusqu’à concurrence\nde 5 à 10 mg, il faut envisager un autre diagnostic. Il faut aussi se\nsouvenir que la demi-vie de la naloxone est très courte, souvent\nplus courte que celle de l’opioïde consommé. Dans certains cas,\nla naloxone doit être administrée en perfusion continue, tant que\nl’opioïde consommé n’a pas été éliminé. Dans ces cas, après une\namélioration initiale, on continue d’observer l’hypoventilation\nou la diminution de la vigilance. La dose de naloxone nécessaire\npour la perfusion continue correspond aux deux tiers de la dose\nutilisée pour permettre la réponse initiale, administrée à l’heure.\nLorsque la naloxone est administrée à un patient dépendant,\ncelui-ci présente rapidement des symptômes de sevrage pouvant\nentraîner un grand inconfort ainsi qu’une agitation importante. Il\nTraitement de l’intoxication\nL’intoxication aux opioïdes entraîne de la somnolence, une\nhypotension et une bradypnée qui peuvent aller jusqu’au coma\net à l’arrêt cardiorespiratoire. Il est souvent impossible d’obtenir\nune histoire de la part du patient et il n’est ni réaliste ni prudent\nd’attendre les résultats de tests de dépistage de substances avant\nd’amorcer le traitement. Il faut aussi se souvenir que les opioïdes\nsont souvent consommés avec d’autres psychotropes, en particu-\nlier les benzodiazépines et l’alcool, ce qui peut aecter le tableau\nclinique et le traitement. Certains opioïdes sont aussi combinés\navec d’autres médicaments, comme l’acétaminophène ou l’aspi-\nrine. Un rythme respiratoire inférieur à 12 est probablement le\nmeilleur indice d’une intoxication aux opioïdes. La présence de\npupilles normales n’exclut pas une intoxication. En eet, d’autres\nsubstances exerçant un eet contraire sur les pupilles pourraient\navoir été consommées (p. ex., la cocaïne), ou alors l’opioïde n’a\npas d’eet de constriction pupillaire (p. ex., la mépéridine). Les\nconvulsions, quoique peu fréquentes, peuvent survenir surtout\nen présence de certains opioïdes (tramadol, hydromorphone)\nou résulter de l’hypoxie associée à ce type d’intoxication. Étant\ndonné le nombre de substances qui peuvent entraîner un coma,\nil est essentiel de procéder à une anamnèse et à un examen\nphysique complet. Toutefois, la conrmation de l’intoxication\naux opioïdes peut être obtenue par l’observation de la réponse à\nl’administration d’un antagoniste.\nTABLEAU 38.16 Critères diagnostiques du sevrage des opioïdes\nDSM-5\nDSM-IV-TR\n292.0 (F11.23) Sevrage d’un opiacé\nSevrage d’un opiacé\nA. L’une ou l’autre des circonstances suivantes :\n1. Arrêt (ou réduction) d’un usage d’opiacés qui a été massif et prolongé (c.-à-d. au moins plusieurs\nsemaines).\n2. Administration d’un antagoniste opiacé après une période de l’usage d’opiacés.\nIdem à DSM-5.\nB. Au moins trois des manifestations suivantes se développant de quelques minutes à quelques jours après\nle critère A :\n1. Humeur dysphorique.\n2. Nausées ou vomissements.\n3. Douleurs musculaires.\n4. Larmoiement ou rhinorrhée.\n5. Dilatation pupillaire, piloérection, ou transpiration.\n6. Diarrhée.\n7. Bâillement.\n8. Fièvre.\n9. Insomnie.\nIdem à DSM-5.\nC. Les signes et symptômes du critère B causent une souffrance cliniquement signicative ou une altération\ndu fonctionnement social, professionnel, ou dans d’autres domaines importants.\nIdem à DSM-5.\nD. Les signes et symptômes ne sont pas dus à une autre affection médicale, et ne sont pas mieux expliqués\npar un autre trouble mental, dont une intoxication par une autre substance.\nIdem à DSM-5.\nSources : APA (2015), p. 649-650 ; APA (2004), p. 316-317.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris,\n2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All\nrights reserved.\n",
+  "raw_text_sha256": "80e5d7e8a24519dff13c4dbfb8f0ded7992d3761d3a4413a786b2a4cb145da4a",
+  "source_page_display": 917,
+  "source_page_index": 916
+}

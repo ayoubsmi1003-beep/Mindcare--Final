@@ -1,0 +1,280 @@
+{
+  "block_sequence_sha256": "98a09ffbf41696d8495c70ffbd21111c0b4effc7a6d799d8f987001a6ffa33cf",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        448.98931884765625,
+        758.8693237304688
+      ],
+      "block_id": "page-0095-block-0001",
+      "order": 1,
+      "text": "78\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 1 Introduction à la psychiatrie\n",
+      "text_sha256": "4f9277c674576a51514065c3a4a8b90caa1500f5ff96352869f21e00359b863c"
+    },
+    {
+      "bbox": [
+        47.85000228881836,
+        34.49443435668945,
+        69.4923095703125,
+        81.32548522949219
+      ],
+      "block_id": "page-0095-block-0002",
+      "order": 2,
+      "text": "V\n",
+      "text_sha256": "ade9afa39b059ce9954a97780d15c35c204ed2a8ee75199512731550556e6f5f"
+    },
+    {
+      "bbox": [
+        71.5999984741211,
+        40.91015625,
+        290.98651123046875,
+        74.3193359375
+      ],
+      "block_id": "page-0095-block-0003",
+      "order": 3,
+      "text": "oici comment Jean-Martin Charcot, neurologue, intro-\nduisait sa première leçon sur les maladies du système\nnerveux, à la Salpêtrière, à Paris, en 1877 :\n",
+      "text_sha256": "59c4f4912f83a4676d6d50ba8992d1d847a46b31492e0c6b8ae8fe27c7dae0e0"
+    },
+    {
+      "bbox": [
+        66.0,
+        80.93867492675781,
+        273.15155029296875,
+        196.42910766601562
+      ],
+      "block_id": "page-0095-block-0004",
+      "order": 4,
+      "text": "« Messieurs, votre temps est précieux et je ne veux pas\nétendre outre mesure ce préambule. […] Je me propose de\nvous entretenir surtout, cette année, [des leçons des] mala-\ndies du système nerveux […] qui s’orent le plus souvent\nà notre observation dans cet hospice. Il me répugnerait\nd’entrer, dès la première entrevue, dans des détails par trop\ntechniques ; j’ai pensé qu’il serait plus convenable d’appe-\nler votre attention sur une question [celle des maladies\ndu système nerveux] d’une portée générale et que nous\nretrouverons à chaque pas dans le cours de nos études. »\n(Charcot, 1873, p. 3)\n",
+      "text_sha256": "22183566a613e84b48638a5300ad637d297f03270fd1bc6a4057280d8152e0f7"
+    },
+    {
+      "bbox": [
+        48.0,
+        203.86582946777344,
+        291.1681823730469,
+        237.95849609375
+      ],
+      "block_id": "page-0095-block-0005",
+      "order": 5,
+      "text": "Ce chapitre en est un d’introduction et a pour objectif\nde familiariser le lecteur avec les généralités de l’évaluation\nneuropsychologique.\n",
+      "text_sha256": "7c7175630f01813510a642cfaa121cf6fb59a99aab1c7e4417af58066090e09b"
+    },
+    {
+      "bbox": [
+        60.0,
+        256.5431823730469,
+        252.10308837890625,
+        293.7689514160156
+      ],
+      "block_id": "page-0095-block-0006",
+      "order": 6,
+      "text": "4.1\nObjectifs de l’évaluation\nneuropsychologique\n",
+      "text_sha256": "d8a6bc83f365a839e8c6a67cb45f59fe2f372732eb0480f919637d9a27c3eebe"
+    },
+    {
+      "bbox": [
+        48.0,
+        307.8658142089844,
+        291.44549560546875,
+        483.65850830078125
+      ],
+      "block_id": "page-0095-block-0007",
+      "order": 7,
+      "text": "La recherche étiologique des atteintes cognitives ou des altérations\ncomportementales représente un dé de taille pour le clinicien\nœuvrant dans le domaine de la santé mentale. C’est pourquoi bon\nnombre de patients sont acheminés en neuropsychologie pour\ny passer des examens, la plupart du temps avec une demande\nexplicite d’un apport de clarication d’un diagnostic. Par ailleurs,\nl’examen neuropsychologique ouvre à une compréhension mieux\néclairée du fonctionnement humain, précise les capacités et limi-\ntations cognitives réelles d’un patient, permettant ainsi d’élaborer\ndes objectifs réalistes et d’orienter le traitement. Que ce soit dans\nla pratique clinique courante ou aux ns d’une expertise légale, les\nprincipaux motifs de consultation en neuropsychologie sont soit\nune demande de contribution au diagnostic, soit une demande\nde bilan fonctionnel des capacités et limitations cognitives (Getz\n& Lovell, 2004 ; Lezak, 2012 ; McCormick & Lezak, 2005).\n",
+      "text_sha256": "ed440487bce65d97863caa3e5a0a1e67b6f17a497069c8484a72111ddcddd585"
+    },
+    {
+      "bbox": [
+        48.0,
+        494.48681640625,
+        225.44418334960938,
+        510.62939453125
+      ],
+      "block_id": "page-0095-block-0008",
+      "order": 8,
+      "text": "4.1.1 Contribution au diagnostic\n",
+      "text_sha256": "ca37eff44249edb8eff277ae770654dbd786f454d7ca85f7ee303e9afd48fb8d"
+    },
+    {
+      "bbox": [
+        48.0,
+        514.2658081054688,
+        291.42913818359375,
+        725.45849609375
+      ],
+      "block_id": "page-0095-block-0009",
+      "order": 9,
+      "text": "Dans la contribution au diagnostic, il s’agit de déterminer si\nl’ensemble de l’évaluation neuropsychologique privilégie une\nhypothèse diagnostique plutôt qu’une autre ou si elle met en\névidence une étiologie neurologique. Pour ce faire, l’évaluation\ndoit s’appuyer sur les données de la littérature scientique à propos\ndes pathologies existantes. Par ailleurs, le neuropsychologue doit\nfaire preuve d’une méthodologie rigoureuse qui lui permettra\nde vérier ses hypothèses par la passation de tests, de recueillir\nles éléments de l’anamnèse et d’eectuer les observations com-\nportementales nécessaires. L’ensemble de ces résultats permet\nd’établir un prol cognitif et comportemental qui correspond\nà l’une des hypothèses diagnostiques avancées. Par exemple, le\nneuropsychologue peut se voir demander si le prol objectivé par\nle biais de l’examen neuropsychologique correspond à un tableau\npsychotique ou à un trouble délirant, à un trouble décitaire de\nl’attention ou à une hypomanie, à un syndrome neurodégénératif\nd’étiologie sous-corticale ou à un tableau dépressif majeur, ou\nencore à un trouble de la personnalité, voire à une simulation.\n",
+      "text_sha256": "1a90e7cc12e94a53c6065fc82fb83d9b619c1d6fb97cbb1285c041ddeca64f26"
+    },
+    {
+      "bbox": [
+        306.0,
+        39.33681869506836,
+        540.2210083007812,
+        55.47939682006836
+      ],
+      "block_id": "page-0095-block-0010",
+      "order": 10,
+      "text": "4.1.2 Diagnostic différentiel et comorbidité\n",
+      "text_sha256": "ab7f07c208fa29217ce382bc5b29342e39fd435d1516a7e93be18876af47f9a6"
+    },
+    {
+      "bbox": [
+        306.0,
+        58.91582489013672,
+        549.34619140625,
+        263.0585021972656
+      ],
+      "block_id": "page-0095-block-0011",
+      "order": 11,
+      "text": "Parmi les éléments qui permettent généralement de retenir l’hy-\npothèse de la comorbidité lors de l’établissement d’un diagnostic\nde trouble psychiatrique ou d’un problème neurocognitif chez\nun patient, il importe de prendre en compte les points suivants\n(voir le tableau 4.1) :\n• les observations ;\n• les antécédents relatifs aux relations interpersonnelles et à\nl’aectivité ;\n• le développement personnel et socioprofessionnel de l’individu.\nS’il est impossible d’établir un diagnostic précis d’une\naffection psychiatrique par le biais d’une seule épreuve\ncognitive, le neuropsychologue a néanmoins la possibilité\nde se servir de l’analyse de l’ensemble du profil cognitif\net comportemental obtenu par une batterie de tests et de\nprendre en compte les renseignements fournis par l’observa-\ntion clinique pour tenter d’établir un diagnostic différentiel\n(Getz & Lovell, 2004).\n",
+      "text_sha256": "18e9008c0e58ee56a8f7b6dffcc75367cafc2507af70a5cc8651ed9165ab11e7"
+    },
+    {
+      "bbox": [
+        308.25,
+        273.7023010253906,
+        524.8240356445312,
+        286.02008056640625
+      ],
+      "block_id": "page-0095-block-0012",
+      "order": 12,
+      "text": "TABLEAU 4.1 Comorbidité diagnostique psychiatrique\n",
+      "text_sha256": "3e217e716bae9a46acc8e449b546f5c62cef65dc29b317a3eaaf3616cd1eb771"
+    },
+    {
+      "bbox": [
+        360.6000061035156,
+        285.55230712890625,
+        476.6247863769531,
+        297.52008056640625
+      ],
+      "block_id": "page-0095-block-0013",
+      "order": 13,
+      "text": "et problèmes neurocognitifs\n",
+      "text_sha256": "f14c3f39fe95ec591c132072be2359c16b6433e5b0e0714c2d1d60a7748d10c3"
+    },
+    {
+      "bbox": [
+        317.8000183105469,
+        302.47412109375,
+        358.08001708984375,
+        323.05029296875
+      ],
+      "block_id": "page-0095-block-0014",
+      "order": 14,
+      "text": "Éléments\npermettant\n",
+      "text_sha256": "21252dae6cbf9d8f80eacb389475dbaafe6d495ea3c46e74be308cd0372c3235"
+    },
+    {
+      "bbox": [
+        311.3999938964844,
+        322.47412109375,
+        364.77099609375,
+        353.05029296875
+      ],
+      "block_id": "page-0095-block-0015",
+      "order": 15,
+      "text": "de retenir\nl’hypothèse de\nla comorbidité\n",
+      "text_sha256": "3d2eb9fe1579ee9176a07fcadff8eb7c1765a49c7b2ca0ec512be7004b35cc3c"
+    },
+    {
+      "bbox": [
+        441.3999938964844,
+        322.47412109375,
+        476.5690002441406,
+        333.05029296875
+      ],
+      "block_id": "page-0095-block-0016",
+      "order": 16,
+      "text": "Exemples\n",
+      "text_sha256": "0373e3068ead68b7ddd9f017946c549912847bb53df5b779edc48d40c26910c5"
+    },
+    {
+      "bbox": [
+        310.25,
+        358.4019470214844,
+        364.5469970703125,
+        408.2281188964844
+      ],
+      "block_id": "page-0095-block-0017",
+      "order": 17,
+      "text": "Antécédents\nconcernant\nles relations\ninterpersonnelles\net l’affectivité\n",
+      "text_sha256": "7655680c861a84b30e13a6e439fe302d119835b3e78a85b0f40b8b69c69b8d92"
+    },
+    {
+      "bbox": [
+        373.75,
+        358.4019470214844,
+        532.4136962890625,
+        426.2281188964844
+      ],
+      "block_id": "page-0095-block-0018",
+      "order": 18,
+      "text": "• Difcultés ou carences affectives prémorbides\n• Milieu familial dysfonctionnel durant l’enfance\n• Traumatismes\n• Instabilité sur les plans familial, relationnel,\nprofessionnel, résidentiel ou social\n• Insatisfaction relationnelle chronique\n",
+      "text_sha256": "cee96b1aeff0b56b755a58362123d4c9461660db94856bb6a32d99665c56aad3"
+    },
+    {
+      "bbox": [
+        310.25,
+        434.8519592285156,
+        359.57000732421875,
+        474.6781311035156
+      ],
+      "block_id": "page-0095-block-0019",
+      "order": 19,
+      "text": "Développement\npersonnel et\nsocioprofes-\nsionnel\n",
+      "text_sha256": "5b67ca523e32ddb21c75948b06be91a7aee661a5ea732e7acfb39af570514750"
+    },
+    {
+      "bbox": [
+        373.75,
+        434.8519592285156,
+        536.3679809570312,
+        502.6781311035156
+      ],
+      "block_id": "page-0095-block-0020",
+      "order": 20,
+      "text": "• Difcultés scolaires\n• Troubles comportementaux en bas âge\n• Conduites antisociales\n• Consommation abusive de substances toxiques\nou exposition prolongée à des solvants\n• Lésions cérébrales ou traumas conrmés\n",
+      "text_sha256": "ab94310d3b4c582495266a4bd2d251588de89531fddadb74a41f71d7f71c850b"
+    },
+    {
+      "bbox": [
+        310.25,
+        511.30194091796875,
+        532.2644653320312,
+        619.1281127929688
+      ],
+      "block_id": "page-0095-block-0021",
+      "order": 21,
+      "text": "Observation\n• Résultats de l’examen neuropsychologique\nprésentant des atypies\n• Discordances entre la gravité ou la légèreté\nobjective d’un dommage cérébral et l’ampleur\nde la symptomatologie\n• Délais entre le moment de la lésion cérébrale\nprésumée et l’apparition des symptômes\n• Écarts entre les résultats de l’évaluation et\nle fonctionnement allégué ou observé\n• Recherche de gains secondaires\n",
+      "text_sha256": "3ecb7b7c5e6b81a23235fde9274051ca97478789068ecfcc6e4d9da54746feec"
+    },
+    {
+      "bbox": [
+        306.0,
+        638.9830322265625,
+        549.3939208984375,
+        723.20849609375
+      ],
+      "block_id": "page-0095-block-0022",
+      "order": 22,
+      "text": "Atteinte cérébrale jumelée à un profil de per -\nsonnalité dépendante Jacques a subi un trauma\ncranioencéphalique modéré au début de son adolescence.\nIl a vécu dans sa famille durant une assez longue période.\nDans la trentaine, il a été hospitalisé à plusieurs reprises. Par\nla suite, il a séjourné en institution psychiatrique, toujours\nà la suite de comportements agressifs ou de menaces\n",
+      "text_sha256": "8f2d831a4be86d260dbcdb5f3056f6efef14748c875a49ab4f92cf2f7c9116e8"
+    }
+  ],
+  "coordinates_sha256": "3f2591120e68fc0b0d20f7457807fd3c8c636a9effd1e13a6d6fc2b11765357e",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0095",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "78\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 1 Introduction à la psychiatrie\nV\noici comment Jean-Martin Charcot, neurologue, intro-\nduisait sa première leçon sur les maladies du système\nnerveux, à la Salpêtrière, à Paris, en 1877 :\n« Messieurs, votre temps est précieux et je ne veux pas\nétendre outre mesure ce préambule. […] Je me propose de\nvous entretenir surtout, cette année, [des leçons des] mala-\ndies du système nerveux […] qui s’orent le plus souvent\nà notre observation dans cet hospice. Il me répugnerait\nd’entrer, dès la première entrevue, dans des détails par trop\ntechniques ; j’ai pensé qu’il serait plus convenable d’appe-\nler votre attention sur une question [celle des maladies\ndu système nerveux] d’une portée générale et que nous\nretrouverons à chaque pas dans le cours de nos études. »\n(Charcot, 1873, p. 3)\nCe chapitre en est un d’introduction et a pour objectif\nde familiariser le lecteur avec les généralités de l’évaluation\nneuropsychologique.\n4.1\nObjectifs de l’évaluation\nneuropsychologique\nLa recherche étiologique des atteintes cognitives ou des altérations\ncomportementales représente un dé de taille pour le clinicien\nœuvrant dans le domaine de la santé mentale. C’est pourquoi bon\nnombre de patients sont acheminés en neuropsychologie pour\ny passer des examens, la plupart du temps avec une demande\nexplicite d’un apport de clarication d’un diagnostic. Par ailleurs,\nl’examen neuropsychologique ouvre à une compréhension mieux\néclairée du fonctionnement humain, précise les capacités et limi-\ntations cognitives réelles d’un patient, permettant ainsi d’élaborer\ndes objectifs réalistes et d’orienter le traitement. Que ce soit dans\nla pratique clinique courante ou aux ns d’une expertise légale, les\nprincipaux motifs de consultation en neuropsychologie sont soit\nune demande de contribution au diagnostic, soit une demande\nde bilan fonctionnel des capacités et limitations cognitives (Getz\n& Lovell, 2004 ; Lezak, 2012 ; McCormick & Lezak, 2005).\n4.1.1 Contribution au diagnostic\nDans la contribution au diagnostic, il s’agit de déterminer si\nl’ensemble de l’évaluation neuropsychologique privilégie une\nhypothèse diagnostique plutôt qu’une autre ou si elle met en\névidence une étiologie neurologique. Pour ce faire, l’évaluation\ndoit s’appuyer sur les données de la littérature scientique à propos\ndes pathologies existantes. Par ailleurs, le neuropsychologue doit\nfaire preuve d’une méthodologie rigoureuse qui lui permettra\nde vérier ses hypothèses par la passation de tests, de recueillir\nles éléments de l’anamnèse et d’eectuer les observations com-\nportementales nécessaires. L’ensemble de ces résultats permet\nd’établir un prol cognitif et comportemental qui correspond\nà l’une des hypothèses diagnostiques avancées. Par exemple, le\nneuropsychologue peut se voir demander si le prol objectivé par\nle biais de l’examen neuropsychologique correspond à un tableau\npsychotique ou à un trouble délirant, à un trouble décitaire de\nl’attention ou à une hypomanie, à un syndrome neurodégénératif\nd’étiologie sous-corticale ou à un tableau dépressif majeur, ou\nencore à un trouble de la personnalité, voire à une simulation.\n4.1.2 Diagnostic différentiel et comorbidité\nParmi les éléments qui permettent généralement de retenir l’hy-\npothèse de la comorbidité lors de l’établissement d’un diagnostic\nde trouble psychiatrique ou d’un problème neurocognitif chez\nun patient, il importe de prendre en compte les points suivants\n(voir le tableau 4.1) :\n• les observations ;\n• les antécédents relatifs aux relations interpersonnelles et à\nl’aectivité ;\n• le développement personnel et socioprofessionnel de l’individu.\nS’il est impossible d’établir un diagnostic précis d’une\naffection psychiatrique par le biais d’une seule épreuve\ncognitive, le neuropsychologue a néanmoins la possibilité\nde se servir de l’analyse de l’ensemble du profil cognitif\net comportemental obtenu par une batterie de tests et de\nprendre en compte les renseignements fournis par l’observa-\ntion clinique pour tenter d’établir un diagnostic différentiel\n(Getz & Lovell, 2004).\nTABLEAU 4.1 Comorbidité diagnostique psychiatrique\net problèmes neurocognitifs\nÉléments\npermettant\nde retenir\nl’hypothèse de\nla comorbidité\nExemples\nAntécédents\nconcernant\nles relations\ninterpersonnelles\net l’affectivité\n• Difcultés ou carences affectives prémorbides\n• Milieu familial dysfonctionnel durant l’enfance\n• Traumatismes\n• Instabilité sur les plans familial, relationnel,\nprofessionnel, résidentiel ou social\n• Insatisfaction relationnelle chronique\nDéveloppement\npersonnel et\nsocioprofes-\nsionnel\n• Difcultés scolaires\n• Troubles comportementaux en bas âge\n• Conduites antisociales\n• Consommation abusive de substances toxiques\nou exposition prolongée à des solvants\n• Lésions cérébrales ou traumas conrmés\nObservation\n• Résultats de l’examen neuropsychologique\nprésentant des atypies\n• Discordances entre la gravité ou la légèreté\nobjective d’un dommage cérébral et l’ampleur\nde la symptomatologie\n• Délais entre le moment de la lésion cérébrale\nprésumée et l’apparition des symptômes\n• Écarts entre les résultats de l’évaluation et\nle fonctionnement allégué ou observé\n• Recherche de gains secondaires\nAtteinte cérébrale jumelée à un profil de per -\nsonnalité dépendante Jacques a subi un trauma\ncranioencéphalique modéré au début de son adolescence.\nIl a vécu dans sa famille durant une assez longue période.\nDans la trentaine, il a été hospitalisé à plusieurs reprises. Par\nla suite, il a séjourné en institution psychiatrique, toujours\nà la suite de comportements agressifs ou de menaces\n",
+  "raw_text_sha256": "38a3846edd013c022aad0ec400e9ecc6f052e056b37f4935c5727b4ad385b3af",
+  "source_page_display": 96,
+  "source_page_index": 95
+}

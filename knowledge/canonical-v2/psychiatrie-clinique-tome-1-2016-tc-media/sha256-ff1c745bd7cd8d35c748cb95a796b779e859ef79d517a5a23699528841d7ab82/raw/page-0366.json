@@ -1,0 +1,160 @@
+{
+  "block_sequence_sha256": "f37196788b0a83b77acac92de6c1fc47aed3205f7c451bd069594334670f3432",
+  "blocks": [
+    {
+      "bbox": [
+        396.8000183105469,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0366-block-0001",
+      "order": 1,
+      "text": "Chapitre 17\nSchizophrénies\n349\n",
+      "text_sha256": "f37cd71e9cf79dcb5eb5ee4eaf3ea875924de2ca986a6648e6011d35ee322e3a"
+    },
+    {
+      "bbox": [
+        312.0,
+        40.9658203125,
+        555.0175170898438,
+        86.6084976196289
+      ],
+      "block_id": "page-0366-block-0002",
+      "order": 2,
+      "text": "qu’on appelle parfois la « décompensation psychotique ». Ces\nsymptômes sont reliés à un trouble de la transmission de la dopa-\nmine dans le cerveau et sont atténués par les antipsychotiques,\nqui bloquent les récepteurs de dopamine.\n",
+      "text_sha256": "09b893c43f8356127e73dbee0939d8e765310dea2047dbe2365ddaf6b4bd0baa"
+    },
+    {
+      "bbox": [
+        312.0,
+        91.7522964477539,
+        555.2816772460938,
+        432.2585144042969
+      ],
+      "block_id": "page-0366-block-0003",
+      "order": 3,
+      "text": "Hallucinations\nLes hallucinations sont des perceptions sensorielles en l’absence\nde stimuli réels. Les hallucinations de l’individu atteint de schizo-\nphrénie sont le plus souvent auditives. Surtout au début, il peut\ns’agir de bruits, de sons confus, de mots indistincts, mais plus la\nmaladie progresse, plus le patient peut entendre des phrases pro-\nnoncées par des voix qu’il identie parfois. Ou bien il perçoit des\nordres : « Déshabille-toi ! », « Marche ! », ou des insultes : « Salaud ! »,\n« Putain ! » L’hallucination schizophrénique a ceci de particulier\nque le patient entend une ou plusieurs voix qui parlent de lui à\nla troisième personne ou une voix qui commente ses pensées\net ses actions : « Tiens, voici un avant-goût de sa paresse. Bon, il\nva se lever maintenant. C’est bien le temps ! » À la limite, il peut\ns’agir d’une conversation entre plusieurs personnes à laquelle\nle patient peut parfois répliquer (soliloque). Les hallucinations\nauditives reviennent fréquemment, s’élaborent de plus en plus,\nleur contenu n’étant pas limité à une ou deux paroles. Certains\npatients mentionnent qu’ils entendent des voix constamment,\nalors que chez d’autres, il s’agit de plusieurs épisodes de quelques\nminutes ou plusieurs heures par jour. De nombreux patients\nles reconnaissent comme des « voix » audibles ou qui parlent\ndans leur tête, mais dont ils ne connaissent pas l’origine. D’autres\nles attribuent à des gens autour d’eux (p. ex., un collègue de travail,\ndes voisins à travers les murs de l’appartement, des gens dans la\nrue) ou encore à des entités extérieures, souvent omnipotentes\n(p. ex., Dieu, le diable, des esprits). Environ un quart des patients\nprésentent des hallucinations uniquement bienveillantes ou qui\nles complimentent, 25 % à la fois bienveillantes et malveillantes\net 50 % uniquement insultantes, malveillantes ou menaçantes.\n",
+      "text_sha256": "a106b095ef6612a5c58f03417fce7e90a9ac5ffa073a719278640aa1dd98f10c"
+    },
+    {
+      "bbox": [
+        312.0,
+        433.4658203125,
+        555.3410034179688,
+        502.6084899902344
+      ],
+      "block_id": "page-0366-block-0004",
+      "order": 4,
+      "text": "Les hallucinations visuelles portent de façon typique sur la vision\nde personnages, distincts ou ous, réels ou mystiques : un oncle,\nle diable, un visage grimaçant, etc. Les hallucinations d’animaux,\nde « bibittes », sont rares dans la schizophrénie ; elles surviennent\nplutôt dans les cas de psychoses secondaires à des aections médi-\ncales, une intoxication ou un sevrage (p. ex., delirium tremens).\n",
+      "text_sha256": "f2a4f1e362cf86d78fc01b16ce73d20e12dd1443ef49dfd4fee624522ad38e72"
+    },
+    {
+      "bbox": [
+        312.0,
+        503.8658142089844,
+        555.34765625,
+        631.6085205078125
+      ],
+      "block_id": "page-0366-block-0005",
+      "order": 5,
+      "text": "Les hallucinations cénesthésiques ont trait au sens du toucher\net sont ressenties comme des perceptions tactiles bizarres (p. ex.,\nbrûlures, décharges électriques) ou bien comme des attouche-\nments inconvenants (notamment sur les organes sexuels) ou\nencore la sensation que l’intérieur du corps est en train de se\ntransformer (syndrome de Cotard : ses organes sont pourris,\nbouchés, transformés en pierre). Ces hallucinations cénesthésiques\npeuvent survenir dans la schizophrénie, mais plus souvent dans\nles psychoses liées à l’intoxication ou au sevrage de drogues psy-\nchostimulantes telles les amphétamines, la cocaïne (typiquement,\nimpression d’insectes qui rampent sous la peau, formications).\n",
+      "text_sha256": "89afdae6c4ae9155dbc538566121da6f2c39a928623f10ab1ebb49f9ac93234d"
+    },
+    {
+      "bbox": [
+        312.0,
+        632.8658447265625,
+        555.5072631835938,
+        690.2584838867188
+      ],
+      "block_id": "page-0366-block-0006",
+      "order": 6,
+      "text": "Les hallucinations olfactives concernent l’odorat (habituelle-\nment nauséabondes, putréfaction, odeur de brûlé, etc.). Le patient\na parfois l’impression de dégager de mauvaises odeurs, ce qui\npeut l’inciter à se laver à répétition. On peut aussi observer de\ntelles hallucinations dans le trouble délirant somatique.\n",
+      "text_sha256": "81db09b0b96a3c45cc4dd79dde1ede430a244b81a51e1d519ea4b097c0195f8e"
+    },
+    {
+      "bbox": [
+        312.0,
+        691.5158081054688,
+        555.1190795898438,
+        725.45849609375
+      ],
+      "block_id": "page-0366-block-0007",
+      "order": 7,
+      "text": "Les hallucinations gustatives sont souvent interprétées de\nfaçon délirante comme une impression que les aliments ont\nchangé de goût, d’où la déduction d’avoir été empoisonné. Dans\n",
+      "text_sha256": "ce649fe6d82827c283e2a1b2a02980113273fed84975f11ee5fe64decb52f6b6"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.72441482543945,
+        297.4393310546875,
+        406.65850830078125
+      ],
+      "block_id": "page-0366-block-0008",
+      "order": 8,
+      "text": "• La toxicomanie. Plusieurs tentent, par les drogues, notam-\nment le cannabis, d’obtenir un eet apaisant. Sans le savoir,\ncependant, ils précipitent ainsi le processus psychotique.\n• Les activités compulsives. Le jeune range plusieurs fois par\njour ses objets personnels, planie un emploi du temps rigide\nprévoyant ses moindres gestes, s’oblige à des rituels de lavage,\nd’habillage, d’exercices physiques. Il ritualise ses actions pour\ncontrecarrer le désordre qui s’installe dans ses pensées.\n• La découverte mystique. Cherchant des explications, il lit des\nlivres ésotériques ou religieux (p. ex., l’Apocalypse, le Coran) ;\nil s’applique intensément à une tâche intellectuelle ou à des ré-\nexions spirituelles ou philosophiques. Il approfondit cependant\nainsi une pensée de plus en plus idiosyncrasique (personnelle\net souvent hermétique). Il peut parfois écrire un journal rempli\nd’idées obscures s’associant dans une logique inconsistante.\nLes adolescents ne vont pas facilement chercher d’aide par eux-\nmêmes. Sur le point « d’éclater », le jeune peut quand même en parler\nà une personne de conance (p. ex., un professeur, un psychologue\nscolaire, un médecin de famille ou ses parents). Il attribue souvent\nses malaises à la drogue ou à une maladie physique. L’entourage\npeut penser que ces problèmes sont dus à l’adolescence et se faire\nrassurant. La période entre le début du prodrome et la première\nconsultation en psychiatrie s’allonge alors, ce qui a donné lieu au\nconcept de durée de psychose non traitée (duration of untreated\npsychosis[DUP]). Le jeune s’inige parfois des automutilations an\nde vérier s’il ressent encore des sensations physiques douloureuses\nqu’il craint de ne plus éprouver. Il peut aussi faire une tentative de\nsuicide et expliquer par la suite qu’il a agi ainsi pour obéir à des\nvoix ou pour éviter de poser des gestes répréhensibles que ces\nvoix lui ordonnaient de faire. Parfois, le suicide est perçu comme\nun moyen de sortir de ce tourment de désintégration psychique.\n",
+      "text_sha256": "e53b986184372b64fb89b06e392a48c8c64c1f95e73d18b72f02e7669f429785"
+    },
+    {
+      "bbox": [
+        54.0,
+        407.7658386230469,
+        297.5008850097656,
+        557.3585205078125
+      ],
+      "block_id": "page-0366-block-0009",
+      "order": 9,
+      "text": "La schizophrénie amène le patient à consulter en psychiatrie\nsouvent vers la n de l’adolescence ou au début de l’âge adulte. Il\nest souvent conduit à l’urgence par sa famille à la suite d’une série\nd’actes ou de paroles bizarres, parce qu’il est agité ou qu’il vient\nde poser un geste agressif contre des personnes ou des objets,\nparce qu’il se trouve dans un état de perplexité ou de stupeur\nou encore parce que ses parents sont exaspérés par son retrait\net son inactivité. Le patient peut alors expliquer qu’il a brisé le\ntéléviseur parce qu’il était excédé par les commentaires qu’on\nfaisait à son sujet. Pendant la phase aiguë, qu’il s’agisse d’un pre-\nmier épisode ou d’une rechute, les symptômes psychotiques sont\nprédominants : hallucinations, délires, incohérence du discours,\ndésorganisation du comportement.\n",
+      "text_sha256": "b3c382607b70028e675ac79532823a61e731a41367d5b285e183010f26adc8d3"
+    },
+    {
+      "bbox": [
+        54.0,
+        567.98681640625,
+        185.50958251953125,
+        584.12939453125
+      ],
+      "block_id": "page-0366-block-0010",
+      "order": 10,
+      "text": "17.4.6 Phénoménologie\n",
+      "text_sha256": "29daf5f2f17e406584f1033b3c2be51776b159bac829bbb3a5e689025e527f28"
+    },
+    {
+      "bbox": [
+        54.0,
+        587.5658569335938,
+        297.3687744140625,
+        644.4085083007812
+      ],
+      "block_id": "page-0366-block-0011",
+      "order": 11,
+      "text": "Les psychoses (p. ex., schizophrénie, maladie bipolaire avec\nsymptômes psychotiques, trouble délirant) sont des maladies du\ncerveau qui causent une perturbation du contact avec la réalité.\nDiérentes dimensions symptomatiques aectent le fonctionne-\nment du patient et occasionnent beaucoup de détresse.\n",
+      "text_sha256": "b2dc5b78e611ad0d11a4779a026b8841ba1f048ba2ebc3dc757b8250ab78181c"
+    },
+    {
+      "bbox": [
+        54.0,
+        653.3829956054688,
+        297.5585632324219,
+        725.45849609375
+      ],
+      "block_id": "page-0366-block-0012",
+      "order": 12,
+      "text": "Symptômes positifs\nLa phénoménologie des expériences vécues par les patients se\ncaractérise par des symptômes dits positifs qui s’ajoutent (idée\nd’addition) aux pensées usuelles d’un individu. Ce sont des mani-\nfestations productives de la maladie, sous forme d’hallucinations\net de délires survenant dans la phase aiguë de la schizophrénie,\n",
+      "text_sha256": "43a270738792f8f56126d224bdae56e0ff9d6a1f5e39d4e8f8699ae40b968de6"
+    }
+  ],
+  "coordinates_sha256": "1522844d64854c71f2b5e5728280650f4c0ea38bd9efab65d968ac5d45ab3325",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0366",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 17\nSchizophrénies\n349\nqu’on appelle parfois la « décompensation psychotique ». Ces\nsymptômes sont reliés à un trouble de la transmission de la dopa-\nmine dans le cerveau et sont atténués par les antipsychotiques,\nqui bloquent les récepteurs de dopamine.\nHallucinations\nLes hallucinations sont des perceptions sensorielles en l’absence\nde stimuli réels. Les hallucinations de l’individu atteint de schizo-\nphrénie sont le plus souvent auditives. Surtout au début, il peut\ns’agir de bruits, de sons confus, de mots indistincts, mais plus la\nmaladie progresse, plus le patient peut entendre des phrases pro-\nnoncées par des voix qu’il identie parfois. Ou bien il perçoit des\nordres : « Déshabille-toi ! », « Marche ! », ou des insultes : « Salaud ! »,\n« Putain ! » L’hallucination schizophrénique a ceci de particulier\nque le patient entend une ou plusieurs voix qui parlent de lui à\nla troisième personne ou une voix qui commente ses pensées\net ses actions : « Tiens, voici un avant-goût de sa paresse. Bon, il\nva se lever maintenant. C’est bien le temps ! » À la limite, il peut\ns’agir d’une conversation entre plusieurs personnes à laquelle\nle patient peut parfois répliquer (soliloque). Les hallucinations\nauditives reviennent fréquemment, s’élaborent de plus en plus,\nleur contenu n’étant pas limité à une ou deux paroles. Certains\npatients mentionnent qu’ils entendent des voix constamment,\nalors que chez d’autres, il s’agit de plusieurs épisodes de quelques\nminutes ou plusieurs heures par jour. De nombreux patients\nles reconnaissent comme des « voix » audibles ou qui parlent\ndans leur tête, mais dont ils ne connaissent pas l’origine. D’autres\nles attribuent à des gens autour d’eux (p. ex., un collègue de travail,\ndes voisins à travers les murs de l’appartement, des gens dans la\nrue) ou encore à des entités extérieures, souvent omnipotentes\n(p. ex., Dieu, le diable, des esprits). Environ un quart des patients\nprésentent des hallucinations uniquement bienveillantes ou qui\nles complimentent, 25 % à la fois bienveillantes et malveillantes\net 50 % uniquement insultantes, malveillantes ou menaçantes.\nLes hallucinations visuelles portent de façon typique sur la vision\nde personnages, distincts ou ous, réels ou mystiques : un oncle,\nle diable, un visage grimaçant, etc. Les hallucinations d’animaux,\nde « bibittes », sont rares dans la schizophrénie ; elles surviennent\nplutôt dans les cas de psychoses secondaires à des aections médi-\ncales, une intoxication ou un sevrage (p. ex., delirium tremens).\nLes hallucinations cénesthésiques ont trait au sens du toucher\net sont ressenties comme des perceptions tactiles bizarres (p. ex.,\nbrûlures, décharges électriques) ou bien comme des attouche-\nments inconvenants (notamment sur les organes sexuels) ou\nencore la sensation que l’intérieur du corps est en train de se\ntransformer (syndrome de Cotard : ses organes sont pourris,\nbouchés, transformés en pierre). Ces hallucinations cénesthésiques\npeuvent survenir dans la schizophrénie, mais plus souvent dans\nles psychoses liées à l’intoxication ou au sevrage de drogues psy-\nchostimulantes telles les amphétamines, la cocaïne (typiquement,\nimpression d’insectes qui rampent sous la peau, formications).\nLes hallucinations olfactives concernent l’odorat (habituelle-\nment nauséabondes, putréfaction, odeur de brûlé, etc.). Le patient\na parfois l’impression de dégager de mauvaises odeurs, ce qui\npeut l’inciter à se laver à répétition. On peut aussi observer de\ntelles hallucinations dans le trouble délirant somatique.\nLes hallucinations gustatives sont souvent interprétées de\nfaçon délirante comme une impression que les aliments ont\nchangé de goût, d’où la déduction d’avoir été empoisonné. Dans\n• La toxicomanie. Plusieurs tentent, par les drogues, notam-\nment le cannabis, d’obtenir un eet apaisant. Sans le savoir,\ncependant, ils précipitent ainsi le processus psychotique.\n• Les activités compulsives. Le jeune range plusieurs fois par\njour ses objets personnels, planie un emploi du temps rigide\nprévoyant ses moindres gestes, s’oblige à des rituels de lavage,\nd’habillage, d’exercices physiques. Il ritualise ses actions pour\ncontrecarrer le désordre qui s’installe dans ses pensées.\n• La découverte mystique. Cherchant des explications, il lit des\nlivres ésotériques ou religieux (p. ex., l’Apocalypse, le Coran) ;\nil s’applique intensément à une tâche intellectuelle ou à des ré-\nexions spirituelles ou philosophiques. Il approfondit cependant\nainsi une pensée de plus en plus idiosyncrasique (personnelle\net souvent hermétique). Il peut parfois écrire un journal rempli\nd’idées obscures s’associant dans une logique inconsistante.\nLes adolescents ne vont pas facilement chercher d’aide par eux-\nmêmes. Sur le point « d’éclater », le jeune peut quand même en parler\nà une personne de conance (p. ex., un professeur, un psychologue\nscolaire, un médecin de famille ou ses parents). Il attribue souvent\nses malaises à la drogue ou à une maladie physique. L’entourage\npeut penser que ces problèmes sont dus à l’adolescence et se faire\nrassurant. La période entre le début du prodrome et la première\nconsultation en psychiatrie s’allonge alors, ce qui a donné lieu au\nconcept de durée de psychose non traitée (duration of untreated\npsychosis[DUP]). Le jeune s’inige parfois des automutilations an\nde vérier s’il ressent encore des sensations physiques douloureuses\nqu’il craint de ne plus éprouver. Il peut aussi faire une tentative de\nsuicide et expliquer par la suite qu’il a agi ainsi pour obéir à des\nvoix ou pour éviter de poser des gestes répréhensibles que ces\nvoix lui ordonnaient de faire. Parfois, le suicide est perçu comme\nun moyen de sortir de ce tourment de désintégration psychique.\nLa schizophrénie amène le patient à consulter en psychiatrie\nsouvent vers la n de l’adolescence ou au début de l’âge adulte. Il\nest souvent conduit à l’urgence par sa famille à la suite d’une série\nd’actes ou de paroles bizarres, parce qu’il est agité ou qu’il vient\nde poser un geste agressif contre des personnes ou des objets,\nparce qu’il se trouve dans un état de perplexité ou de stupeur\nou encore parce que ses parents sont exaspérés par son retrait\net son inactivité. Le patient peut alors expliquer qu’il a brisé le\ntéléviseur parce qu’il était excédé par les commentaires qu’on\nfaisait à son sujet. Pendant la phase aiguë, qu’il s’agisse d’un pre-\nmier épisode ou d’une rechute, les symptômes psychotiques sont\nprédominants : hallucinations, délires, incohérence du discours,\ndésorganisation du comportement.\n17.4.6 Phénoménologie\nLes psychoses (p. ex., schizophrénie, maladie bipolaire avec\nsymptômes psychotiques, trouble délirant) sont des maladies du\ncerveau qui causent une perturbation du contact avec la réalité.\nDiérentes dimensions symptomatiques aectent le fonctionne-\nment du patient et occasionnent beaucoup de détresse.\nSymptômes positifs\nLa phénoménologie des expériences vécues par les patients se\ncaractérise par des symptômes dits positifs qui s’ajoutent (idée\nd’addition) aux pensées usuelles d’un individu. Ce sont des mani-\nfestations productives de la maladie, sous forme d’hallucinations\net de délires survenant dans la phase aiguë de la schizophrénie,\n",
+  "raw_text_sha256": "129aa10520323edb1945b0ef19431551a67c1e20f6417da3cc82842162f1d7cf",
+  "source_page_display": 367,
+  "source_page_index": 366
+}

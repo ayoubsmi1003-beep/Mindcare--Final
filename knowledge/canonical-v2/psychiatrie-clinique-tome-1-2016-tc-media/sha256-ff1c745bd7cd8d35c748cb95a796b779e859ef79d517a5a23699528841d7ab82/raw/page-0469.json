@@ -1,0 +1,172 @@
+{
+  "block_sequence_sha256": "b666647abba1496c4b545d3b06773b11a0944f75513e16cbd3ffe33f405434f5",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.53765869140625,
+        758.8693237304688
+      ],
+      "block_id": "page-0469-block-0001",
+      "order": 1,
+      "text": "452\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "aa406f1b680644f843669ef779730fe8f02b8c42a563eaed514164d71b30abb8"
+    },
+    {
+      "bbox": [
+        50.45000076293945,
+        41.002296447753906,
+        345.9700012207031,
+        53.320068359375
+      ],
+      "block_id": "page-0469-block-0002",
+      "order": 2,
+      "text": "TABLEAU 21.2 Critères diagnostiques du trouble obsessionnel-compulsif\n",
+      "text_sha256": "24137886cd7e9bd46410adc5e8db0da0f39ef2594a8efd85de0041d20e7f04c9"
+    },
+    {
+      "bbox": [
+        95.4000015258789,
+        58.27412414550781,
+        478.40911865234375,
+        81.14238739013672
+      ],
+      "block_id": "page-0469-block-0003",
+      "order": 3,
+      "text": "DSM-5\nDSM-IV-TR\n300.3 (F42.x) Trouble obsessionnel-compulsif\nTrouble obsessionnel-compulsif\n",
+      "text_sha256": "67319cd2dca13937291ee504d16fcb68768ee7a79001adef3ac2574bd6c220a0"
+    },
+    {
+      "bbox": [
+        52.25,
+        86.4019546508789,
+        288.7118835449219,
+        284.2281188964844
+      ],
+      "block_id": "page-0469-block-0004",
+      "order": 4,
+      "text": "• des ruminations de culpabilité dans le trouble dépressif caractérisé ;\n• des préoccupations délirantes ou des pensées imposées dans le\nspectre de la schizophrénie et autres troubles psychotiques ;\n• des schémas répétitifs de comportement comme dans le trouble du\nspectre de l’autisme).\nSpécier si :\nAvec bonne ou assez bonne prise de conscience ou insight: La per-\nsonne reconnaît que les croyances concernant le trouble obsessionnel-\ncompulsif ne correspondent certainement ou probablement pas à la réalité\nou qu’elles pourraient être vraies ou fausses.\nAvec mauvaise prise de conscience ou insight: La personne pense\nque les croyances concernant le trouble obsessionnel-compulsif corres-\npondent probablement à la réalité.\nAvec absence de prise de conscience ou insight/avec présence\nde croyances délirantes : Le sujet est complètement convaincu que les\ncroyances concernant le trouble obsessionnel-compulsif sont vraies.\nSpécier si :\nEn relation avec des tics: présence de tics actuellement ou dans les\nantécédents de la personne.\n",
+      "text_sha256": "b2f20fe3f89b7261b4b7b2806d67d333dd6992f0c036e5e1ac133ed7fe00d5ee"
+    },
+    {
+      "bbox": [
+        311.0,
+        86.4019546508789,
+        527.0772705078125,
+        106.2281265258789
+      ],
+      "block_id": "page-0469-block-0005",
+      "order": 5,
+      "text": "• \nruminations de culpabilité quand il s’agit d’un trouble dépressif\nmajeur.\n",
+      "text_sha256": "d57a75918624ddb287e7e0fc5e8bcc282ad9797b35cd6077d64fa99b9ea0ae8e"
+    },
+    {
+      "bbox": [
+        302.5,
+        211.40196228027344,
+        543.1109619140625,
+        252.22813415527344
+      ],
+      "block_id": "page-0469-block-0006",
+      "order": 6,
+      "text": "Spécier si :\nAvec peu de prise de conscience : si, la plupart du temps durant l’épisode\nactuel, le sujet ne reconnaît pas que les obsessions et les compulsions sont\nexcessives ou irraisonnées.\n",
+      "text_sha256": "280e8578d027431e32952a27da163262ce4be6a3eb97038c22e752fe842f1cad"
+    },
+    {
+      "bbox": [
+        48.25,
+        292.9203186035156,
+        547.7838745117188,
+        352.7250061035156
+      ],
+      "block_id": "page-0469-block-0007",
+      "order": 7,
+      "text": "Sources : APA (2015), p. 277-278 ; APA (2004), p. 532-533.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris,\n2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation, DSM-IV-TR - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\n",
+      "text_sha256": "157b7acdfd3b488e4459402d79afad8ab22f5afa8b845bb075c9c537e2284e40"
+    },
+    {
+      "bbox": [
+        48.0,
+        362.0158386230469,
+        291.4848937988281,
+        453.45849609375
+      ],
+      "block_id": "page-0469-block-0008",
+      "order": 8,
+      "text": "Une modication apportée par le DSM-5 au niveau des obses-\nsions concerne l’anxiété ou la détresse associée. Bien que cette\ncaractéristique demeure le plus souvent valide chez la plupart des\npatients atteints de TOC, chez une minorité d’entre eux, l’anxiété\nou la détresse est moins marquée, voire absente. Les obsessions\nperdent alors leur caractère égodystone et deviennent égosyntones,\nc’est-à-dire non dérangeantes subjectivement, comme si elles\nétaient devenues des habitudes acceptables (Leckman &al., 2010).\n",
+      "text_sha256": "b11a1be0305cb02793cbce6ae661ca1f87886f4c3bd1e6badaf2dd912b977c54"
+    },
+    {
+      "bbox": [
+        48.0,
+        454.5158386230469,
+        291.27587890625,
+        725.45849609375
+      ],
+      "block_id": "page-0469-block-0009",
+      "order": 9,
+      "text": "Les compulsions sont dénies par le DSM-5 (et le DSM-IV)\ncomme des comportements répétitifs observables ou des actes\nmentaux (nommés aussi « compulsions mentales » ou « rituels\nmentaux ») que les patients se sentent obligés d’accomplir soit en\nréponse à des obsessions, soit selon des règles idiosyncrasiques\ninexibles qu’ils élaborent eux-mêmes. Du point de vue phéno-\nménologique, les caractéristiques distinctives des symptômes\nobsessionnels-compulsifs décrits par les critères diagnostiques\ndu DSM-5 expriment la forme (la structure) spécique de ce\ntype de symptômes, ce qui permet de les diérencier de tout\nautre symptôme ou phénomène psychologique normal. Cepen-\ndant, tous les phénomènes psychiques ont aussi un contenu (un\nthème) qui est peu spécique et qui peut être associé à diérents\nsymptômes (p. ex., contenu hypocondriaque de nature anxieuse,\nobsessionnelle ou délirante) ou encore varier selon le contexte\npersonnel, culturel ou historique. Ainsi, du point de vue du\ncontenu, les pensées obsessionnelles les plus fréquentes sont :\n• les obsessions de contamination (saleté, microbes, excréments,\npolluants) ;\n• l’obsession du doute ;\n• les obsessions d’ordre, de rangement ou de symétrie qui portent\nsur l’agencement des objets selon des règles particulières\net rigides ;\n",
+      "text_sha256": "9d5e224828950760cb35f66eaaa6554406455100e3ed175a7023f34884e8613c"
+    },
+    {
+      "bbox": [
+        306.0,
+        361.7744140625,
+        549.4126586914062,
+        673.45849609375
+      ],
+      "block_id": "page-0469-block-0010",
+      "order": 10,
+      "text": "• les obsessions répréhensibles à caractère sexuel (prendre\nen bouche le pénis de son nouveau-né), agressif (crever les\nyeux de sa lle) ou blasphématoire (s’écrier durant la messe :\n« Jésus est un bâtard »). Elles sont pénibles pour la personne,\nmais ne sont jamais réalisées, ce qui justie leur appellation\nclassique française de « phobies d’impulsion » à la diérence\ndes troubles du contrôle des impulsions et des paraphilies,\ndont les impulsions peuvent être réalisées en pratique.\nQuant aux compulsions, les plus fréquentes sont :\n• les compulsions de lavage et de nettoyage ;\n• les compulsions de vérication (aussi fréquentes que les\nprécédentes) ;\n• les compulsions de rangement d’objets selon des règles rigou-\nreuses ;\n• les compulsions de répétition (p. ex, répéter chaque geste\ncompulsionnel un nombre de fois déterminé à l’avance) ;\n• les compulsions mentales, appelées aussi des « rituels men-\ntaux », se caractérisant par des formules magiques répétées\nsilencieusement, par des prières particulières (« Mon Dieu,\nannulez-moi cela ! ») ou encore par des opérations mentales\nbizarres : faire un calcul nissant par un chire impair à gauche\ndu champ de conscience et un autre nissant par un chire\npair du côté droit an d’éviter un malheur.\nLes compulsions peuvent devenir très élaborées et le patient\npeut y consacrer chaque jour un temps considérable an de les\naccomplir parfaitement.\n",
+      "text_sha256": "f830a2e02e06c916e401ddb2f3e67b38ceb625bc029ea92350b1916336f70d86"
+    },
+    {
+      "bbox": [
+        306.0,
+        683.98681640625,
+        505.788818359375,
+        700.12939453125
+      ],
+      "block_id": "page-0469-block-0011",
+      "order": 11,
+      "text": "21A.4.2 Obsessions et compulsions\n",
+      "text_sha256": "b67c340a0ae7581eceff89f0ed030d7eeedb6e3797872818240da193a9dc94a5"
+    },
+    {
+      "bbox": [
+        306.0,
+        703.4658203125,
+        548.6605224609375,
+        725.45849609375
+      ],
+      "block_id": "page-0469-block-0012",
+      "order": 12,
+      "text": "La distinction fonctionnelle entre obsession et compulsion\npeut donner la fausse impression qu’il s’agit de symptômes\n",
+      "text_sha256": "6b42bf8138d173006b26e6aee38c656a891de39a50bfd7ad4a374d2378f652dc"
+    },
+    {
+      "bbox": [
+        347.8999938964844,
+        41.352294921875,
+        373.5842590332031,
+        53.320068359375
+      ],
+      "block_id": "page-0469-block-0013",
+      "order": 13,
+      "text": "(suite)\n",
+      "text_sha256": "c684d6dbcdfd50f0ada227f799b5c0fb30e817ac3da61b4cbf208decde7f907b"
+    }
+  ],
+  "coordinates_sha256": "7f9531c19070deecd2b85c96d5195a797f8b6783237c85b08c69e2b6007d9b1f",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0469",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "452\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nTABLEAU 21.2 Critères diagnostiques du trouble obsessionnel-compulsif\nDSM-5\nDSM-IV-TR\n300.3 (F42.x) Trouble obsessionnel-compulsif\nTrouble obsessionnel-compulsif\n• des ruminations de culpabilité dans le trouble dépressif caractérisé ;\n• des préoccupations délirantes ou des pensées imposées dans le\nspectre de la schizophrénie et autres troubles psychotiques ;\n• des schémas répétitifs de comportement comme dans le trouble du\nspectre de l’autisme).\nSpécier si :\nAvec bonne ou assez bonne prise de conscience ou insight: La per-\nsonne reconnaît que les croyances concernant le trouble obsessionnel-\ncompulsif ne correspondent certainement ou probablement pas à la réalité\nou qu’elles pourraient être vraies ou fausses.\nAvec mauvaise prise de conscience ou insight: La personne pense\nque les croyances concernant le trouble obsessionnel-compulsif corres-\npondent probablement à la réalité.\nAvec absence de prise de conscience ou insight/avec présence\nde croyances délirantes : Le sujet est complètement convaincu que les\ncroyances concernant le trouble obsessionnel-compulsif sont vraies.\nSpécier si :\nEn relation avec des tics: présence de tics actuellement ou dans les\nantécédents de la personne.\n• \nruminations de culpabilité quand il s’agit d’un trouble dépressif\nmajeur.\nSpécier si :\nAvec peu de prise de conscience : si, la plupart du temps durant l’épisode\nactuel, le sujet ne reconnaît pas que les obsessions et les compulsions sont\nexcessives ou irraisonnées.\nSources : APA (2015), p. 277-278 ; APA (2004), p. 532-533.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris,\n2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation, DSM-IV-TR - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\nUne modication apportée par le DSM-5 au niveau des obses-\nsions concerne l’anxiété ou la détresse associée. Bien que cette\ncaractéristique demeure le plus souvent valide chez la plupart des\npatients atteints de TOC, chez une minorité d’entre eux, l’anxiété\nou la détresse est moins marquée, voire absente. Les obsessions\nperdent alors leur caractère égodystone et deviennent égosyntones,\nc’est-à-dire non dérangeantes subjectivement, comme si elles\nétaient devenues des habitudes acceptables (Leckman &al., 2010).\nLes compulsions sont dénies par le DSM-5 (et le DSM-IV)\ncomme des comportements répétitifs observables ou des actes\nmentaux (nommés aussi « compulsions mentales » ou « rituels\nmentaux ») que les patients se sentent obligés d’accomplir soit en\nréponse à des obsessions, soit selon des règles idiosyncrasiques\ninexibles qu’ils élaborent eux-mêmes. Du point de vue phéno-\nménologique, les caractéristiques distinctives des symptômes\nobsessionnels-compulsifs décrits par les critères diagnostiques\ndu DSM-5 expriment la forme (la structure) spécique de ce\ntype de symptômes, ce qui permet de les diérencier de tout\nautre symptôme ou phénomène psychologique normal. Cepen-\ndant, tous les phénomènes psychiques ont aussi un contenu (un\nthème) qui est peu spécique et qui peut être associé à diérents\nsymptômes (p. ex., contenu hypocondriaque de nature anxieuse,\nobsessionnelle ou délirante) ou encore varier selon le contexte\npersonnel, culturel ou historique. Ainsi, du point de vue du\ncontenu, les pensées obsessionnelles les plus fréquentes sont :\n• les obsessions de contamination (saleté, microbes, excréments,\npolluants) ;\n• l’obsession du doute ;\n• les obsessions d’ordre, de rangement ou de symétrie qui portent\nsur l’agencement des objets selon des règles particulières\net rigides ;\n• les obsessions répréhensibles à caractère sexuel (prendre\nen bouche le pénis de son nouveau-né), agressif (crever les\nyeux de sa lle) ou blasphématoire (s’écrier durant la messe :\n« Jésus est un bâtard »). Elles sont pénibles pour la personne,\nmais ne sont jamais réalisées, ce qui justie leur appellation\nclassique française de « phobies d’impulsion » à la diérence\ndes troubles du contrôle des impulsions et des paraphilies,\ndont les impulsions peuvent être réalisées en pratique.\nQuant aux compulsions, les plus fréquentes sont :\n• les compulsions de lavage et de nettoyage ;\n• les compulsions de vérication (aussi fréquentes que les\nprécédentes) ;\n• les compulsions de rangement d’objets selon des règles rigou-\nreuses ;\n• les compulsions de répétition (p. ex, répéter chaque geste\ncompulsionnel un nombre de fois déterminé à l’avance) ;\n• les compulsions mentales, appelées aussi des « rituels men-\ntaux », se caractérisant par des formules magiques répétées\nsilencieusement, par des prières particulières (« Mon Dieu,\nannulez-moi cela ! ») ou encore par des opérations mentales\nbizarres : faire un calcul nissant par un chire impair à gauche\ndu champ de conscience et un autre nissant par un chire\npair du côté droit an d’éviter un malheur.\nLes compulsions peuvent devenir très élaborées et le patient\npeut y consacrer chaque jour un temps considérable an de les\naccomplir parfaitement.\n21A.4.2 Obsessions et compulsions\nLa distinction fonctionnelle entre obsession et compulsion\npeut donner la fausse impression qu’il s’agit de symptômes\n(suite)\n",
+  "raw_text_sha256": "6f2e8e55e628994c18d3565d65636beca321d41fd52e26046e5e606a655c196f",
+  "source_page_display": 470,
+  "source_page_index": 469
+}

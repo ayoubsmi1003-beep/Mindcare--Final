@@ -1,0 +1,652 @@
+{
+  "block_sequence_sha256": "67df205e5045d11721078c05c9a5e2cce589fb23536c3cc447318526a3e6b45d",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        126.91150665283203,
+        758.8693237304688
+      ],
+      "block_id": "page-1137-block-0001",
+      "order": 1,
+      "text": "R40\nRéférences\n",
+      "text_sha256": "afc6df94a98306ae962b5d5e5718d9f61d252906009de9241b5385fa3fe7b034"
+    },
+    {
+      "bbox": [
+        390.0,
+        40.68496322631836,
+        548.9900512695312,
+        66.8734359741211
+      ],
+      "block_id": "page-1137-block-0002",
+      "order": 2,
+      "text": "Ministère de la Santé et des Services sociaux (MSSS). (1987). La\npolitique de santé mentale du Québec: Pour un partenariat\nélargi, Québec, Gouvernement du Québec.\n",
+      "text_sha256": "32dec9d78769ddfd285c79f84713e1931c53766840c30f0f1f379a3f3771d1a8"
+    },
+    {
+      "bbox": [
+        390.0,
+        70.6849594116211,
+        546.9278564453125,
+        114.8734359741211
+      ],
+      "block_id": "page-1137-block-0003",
+      "order": 3,
+      "text": "Ministère de la Santé et des Services sociaux (MSSS). (2005).\nPlan d’action en santé mentale 2005-2010 - La force des\nliens, Québec, Publications du Québec, [en ligne], http://\nmsssa4.msss.gouv.qc.ca/fr/document/publication.nsf/0/84\n09aa194a47b7c385257020006bce71 ?OpenDocument.\n",
+      "text_sha256": "cdf927dedabc800a08de25e3cecd1f7ebc1ff6ac43ba364cb199647e600ff619"
+    },
+    {
+      "bbox": [
+        390.0,
+        118.6849594116211,
+        544.8975219726562,
+        162.87344360351562
+      ],
+      "block_id": "page-1137-block-0004",
+      "order": 4,
+      "text": "Ministère de la Santé et des Services sociaux (MSSS). (2011).\nOrientations relatives à l’organisation des soins et des ser-\nvices offerts à la clientèle adulte par les équipes en santé\nmentale de première ligne en CSSS, Québec, Gouverne-\nment du Québec.\n",
+      "text_sha256": "5eb6534a4eb58ffa88de8674ae041908a781087b588209e67c109e1f0b94aa4f"
+    },
+    {
+      "bbox": [
+        390.0,
+        166.68496704101562,
+        531.2950439453125,
+        183.87344360351562
+      ],
+      "block_id": "page-1137-block-0005",
+      "order": 5,
+      "text": "Murphy, H. B. (1986). « Foster homes : The new back\nwards », Canada’s Mental Health, 20(suppl.), p. 1-17.\n",
+      "text_sha256": "bc7333a31048d32e4579ff124cbbffa03292823d3c5589654e083ce96012d88e"
+    },
+    {
+      "bbox": [
+        390.0,
+        187.68496704101562,
+        538.5125122070312,
+        213.87344360351562
+      ],
+      "block_id": "page-1137-block-0006",
+      "order": 6,
+      "text": "Myers, J. K. & al. (1984). « Six months prevalence of\npsychiatric disorders in three communities », Archives of\nGeneral Psychiatry, 41(10), p. 959-967.\n",
+      "text_sha256": "41e03399ee03a831e3297555f489e1720217cd120e36337b2e77e5f697f498f0"
+    },
+    {
+      "bbox": [
+        390.0,
+        217.68496704101562,
+        549.2774658203125,
+        252.87344360351562
+      ],
+      "block_id": "page-1137-block-0007",
+      "order": 7,
+      "text": "Overholser, W. (1956). « Séance d’introduction », Actes du\nColloque international sur la chlorpromazine et les médica-\nments neuroleptiques en thérapeutique psychiatrique, Paris,\nFrance, 20-22 octobre 1955, Encéphale, numéro spécial.\n",
+      "text_sha256": "6b46349cb4e8422d98061f04d1e1cbdc2daca38db32bd5c21edeb54fed4dec91"
+    },
+    {
+      "bbox": [
+        390.0,
+        256.6849670410156,
+        539.1325073242188,
+        273.8734436035156
+      ],
+      "block_id": "page-1137-block-0008",
+      "order": 8,
+      "text": "Pagé, J.-C. (1961). Les fous crient au secours, Montréal,\nQuébec, Éditions du Jour.\n",
+      "text_sha256": "4bad7f6ac8559924fe8fbd4a445ac2037fbed15e5477336d09449882f218f21e"
+    },
+    {
+      "bbox": [
+        390.0,
+        277.6849670410156,
+        547.9050903320312,
+        294.8734436035156
+      ],
+      "block_id": "page-1137-block-0009",
+      "order": 9,
+      "text": "Pinel. P. (1801). Traité médico-philosophique sur l’aliénation\nmentale ou la manie, Paris, France, Richard.\n",
+      "text_sha256": "be0b42a4530a8a78e9a8b7eec334bc233073a8ef9fd6cb93182bb691e3ebfcf5"
+    },
+    {
+      "bbox": [
+        390.0,
+        298.6849670410156,
+        546.6525268554688,
+        333.8734436035156
+      ],
+      "block_id": "page-1137-block-0010",
+      "order": 10,
+      "text": "Québec. (1967-1972). Rapport de la Commission d’enquête\nsur la santé et le bien-être social, Québec, Commission\nd’enquête sur la santé et le bien-être social, Éditeur ofciel\ndu Québec.\n",
+      "text_sha256": "09b5f43b0ccbfc9a1768abfdf366fa72529f15cdc6e6dc22ca13c4944a6de9be"
+    },
+    {
+      "bbox": [
+        390.0,
+        337.6849670410156,
+        548.6475219726562,
+        372.8734436035156
+      ],
+      "block_id": "page-1137-block-0011",
+      "order": 11,
+      "text": "Québec. (1988). Rapport de la Commission d’enquête sur\nles services de santé et les services sociaux, Québec, Com-\nmission d’enquête sur les services de santé et les services\nsociaux, Les Publications du Québec.\n",
+      "text_sha256": "523fd722ed66ee2a0fdf559dfa03317201b756117964744b6c46bf122da73cca"
+    },
+    {
+      "bbox": [
+        390.0,
+        376.6849670410156,
+        543.5975341796875,
+        402.8734436035156
+      ],
+      "block_id": "page-1137-block-0012",
+      "order": 12,
+      "text": "Québec. (1996). Rapport du Véricateur général à l’Assem-\nblée nationale pour l’année 1995-1996, Tome II, Québec,\nVéricateur général du Québec.\n",
+      "text_sha256": "97b69d547606a5072599d0cc3bcb85b48c6f4af04a99375b83fcbedda85bb105"
+    },
+    {
+      "bbox": [
+        390.0,
+        406.6849670410156,
+        546.2640380859375,
+        423.8734436035156
+      ],
+      "block_id": "page-1137-block-0013",
+      "order": 13,
+      "text": "Québec. (2015). Loi sur les services de santé et les services\nsociaux, Québec, Publications du Québec.\n",
+      "text_sha256": "49bea26141578efc730288a5b6d4595538308f9d03ade2847b806af6e69d422d"
+    },
+    {
+      "bbox": [
+        390.0,
+        427.6849670410156,
+        548.1471557617188,
+        453.8734436035156
+      ],
+      "block_id": "page-1137-block-0014",
+      "order": 14,
+      "text": "Raymondis, L. M. (1966). Quelques aperçus sur une réforme\ndes services psychiatriques, Paris, France, Pichon et\nDurant-Auzias.\n",
+      "text_sha256": "5c1c4bb8f39e192f6d7085e9dcd4d8d7840cc41b88c3719abf229e1ed7f52f17"
+    },
+    {
+      "bbox": [
+        390.0,
+        457.6849670410156,
+        545.3202514648438,
+        474.8734436035156
+      ],
+      "block_id": "page-1137-block-0015",
+      "order": 15,
+      "text": "Saucier, R. & Fishmeister, L. V. (1954). « L’emploi du Largactil\nen psychiatrie », Le Saguenay Médical, 3(2), p. 51-57.\n",
+      "text_sha256": "cfa6de996aa6f1beb8e16e65880c55a6fe9e113a83b21a107a5e24cb527fe479"
+    },
+    {
+      "bbox": [
+        390.0,
+        478.6849670410156,
+        540.9008178710938,
+        504.8734436035156
+      ],
+      "block_id": "page-1137-block-0016",
+      "order": 16,
+      "text": "Wallot, H. (1998). La danse autour du fou. Histoire orga-\nnisationnelle de la prise en charge de la folie au Québec,\nBeauport, Québec, Éditions MNH.\n",
+      "text_sha256": "76d663db195ae4e7f076790cec0ed5b24066bcbb0116b38d6ca19258751eb7da"
+    },
+    {
+      "bbox": [
+        390.0,
+        508.68499755859375,
+        546.66748046875,
+        543.8734741210938
+      ],
+      "block_id": "page-1137-block-0017",
+      "order": 17,
+      "text": "Wallot, H. (2013). « Le concept de rétablissement », Le\nrétablissement, une autre folie ?, conférence gratuite\nofferte par l’Association canadienne pour la santé mentale,\nQuébec.\n",
+      "text_sha256": "5092943ac7e0234415de880e024216a4829756c2fb153708818177e2f49127d5"
+    },
+    {
+      "bbox": [
+        390.0,
+        547.6849975585938,
+        534.9450073242188,
+        564.8734741210938
+      ],
+      "block_id": "page-1137-block-0018",
+      "order": 18,
+      "text": "Wallot, H. (2014). Peut-on guérir d’un passé asilaire?,\n2e éd., Québec, Québec, Presses Inter Universitaires.\n",
+      "text_sha256": "f5cbffa0bf9cc1783e92d98f8ab2dc875fb8d4d8e1a1b251c90a951e0e129b2c"
+    },
+    {
+      "bbox": [
+        219.0,
+        40.68496322631836,
+        373.0176696777344,
+        66.97344207763672
+      ],
+      "block_id": "page-1137-block-0019",
+      "order": 19,
+      "text": "Cormier, H. J. & Klerman, G. L. (1985). « Suicide, économie\net environnement social au Québec », L’Union médicale du\nCanada, 114(15), p. 360-365.\n",
+      "text_sha256": "74a5bb534ce8536fe5821c187271d8278f3947459830e135db24707e9c6c24d0"
+    },
+    {
+      "bbox": [
+        219.0,
+        70.88496398925781,
+        372.0475158691406,
+        97.1734390258789
+      ],
+      "block_id": "page-1137-block-0020",
+      "order": 20,
+      "text": "Côté, C. & Larouche, D. (2000). Radiographie d’une mort\nne. Dimension sociale de la maladie au Québec, Chicou-\ntimi, Québec, Éditions JCL.\n",
+      "text_sha256": "80547c8f4487670a2aed0cebbd27d21e8ebecc6d428233c65476e3c0cb676185"
+    },
+    {
+      "bbox": [
+        219.0,
+        101.03496551513672,
+        367.6026306152344,
+        118.2734375
+      ],
+      "block_id": "page-1137-block-0021",
+      "order": 21,
+      "text": "Deegan, P. E. (1996). « Le rétablissement, un itinéraire du\ncœur », Le Partenaire, 5(1), p. 1-6.\n",
+      "text_sha256": "c400d5e6bd878bbc335d6f0ea305886374e6b413ac61143aed98d0d0ccf70071"
+    },
+    {
+      "bbox": [
+        219.0,
+        122.18496704101562,
+        363.2799987792969,
+        148.4734344482422
+      ],
+      "block_id": "page-1137-block-0022",
+      "order": 22,
+      "text": "Duquet, E. E. (1888). « La folie héréditaire ou la folie\ndes dégénérés », L’Union médicale du Canada, 17(17),\np. 5-156.\n",
+      "text_sha256": "603eb7cec35dbaabcb43dbb974271ee172b57ec9e9d6ce519a7a1dcf8d58f91a"
+    },
+    {
+      "bbox": [
+        219.0,
+        152.3349609375,
+        376.9850769042969,
+        178.62344360351562
+      ],
+      "block_id": "page-1137-block-0023",
+      "order": 23,
+      "text": "Esquirol, J.-É. (1838). Des maladies mentales considérées\nsous le rapport médical, hygiénique, et médico-légal, tomes\n1 à 3, Paris, France, J.-B. Baillière.\n",
+      "text_sha256": "5976c7a5389020e3192467a375c80e95f70ca2511ae1782458dda41ecfc93083"
+    },
+    {
+      "bbox": [
+        219.0,
+        182.5349578857422,
+        368.8865661621094,
+        199.7734375
+      ],
+      "block_id": "page-1137-block-0024",
+      "order": 24,
+      "text": "Falret, J.-P. (1864). Des maladies mentales et des asiles\nd’aliénés, Paris, France, J.-B. Baillière.\n",
+      "text_sha256": "4f683a8f83bf0eb58805794a994e38d55ff2a1809b56e55ebbe990cf53141a7c"
+    },
+    {
+      "bbox": [
+        219.0,
+        203.6349639892578,
+        371.66265869140625,
+        229.92344665527344
+      ],
+      "block_id": "page-1137-block-0025",
+      "order": 25,
+      "text": "Faris, R. E. L. & Dunham, H. W. (1939). Mental Disorders in\nUrban Areas : An Ecological Study of Schizophrenia and\nOther Psychosis, Chicago, IL, University of Chicago Press.\n",
+      "text_sha256": "f8867f08f78401293bd7a2fca96cf1a6a1248c463e09ada211d56d051b9f292f"
+    },
+    {
+      "bbox": [
+        219.0,
+        233.7849578857422,
+        371.30035400390625,
+        260.1234436035156
+      ],
+      "block_id": "page-1137-block-0026",
+      "order": 26,
+      "text": "Gaucher, D. (1985). « L’organisation des services en santé\nmentale au Québec : tendances actuelles », Sociologie et\nsociétés, 17(1), p. 41-49.\n",
+      "text_sha256": "71dee9d805bdc2174218f34f79fee000cc294af9852de956d57c98dd214e2f00"
+    },
+    {
+      "bbox": [
+        219.0,
+        263.9849548339844,
+        376.2137145996094,
+        281.22344970703125
+      ],
+      "block_id": "page-1137-block-0027",
+      "order": 27,
+      "text": "Georget, E. (1821). De la physiologie du système nerveux et\nspécialement du cerveau, Paris, France, J.-B. Baillière.\n",
+      "text_sha256": "b9f6d7f4e2698eca567f0fe5b9e4cfc8a25010e0913320a70ad9abf38de0abb2"
+    },
+    {
+      "bbox": [
+        219.0,
+        285.0849609375,
+        376.454345703125,
+        311.4234313964844
+      ],
+      "block_id": "page-1137-block-0028",
+      "order": 28,
+      "text": "Guertin, M. & Lecomte, Y. (1983). « Éditorial sur les structures\nintermédiaires ou alternatives », Santé mentale au Québec,\n8(1), p. 4-6.\n",
+      "text_sha256": "213744537d84bd18ad7c14dfbb148297fb98c12e202af9acc4a357fcc1b149a3"
+    },
+    {
+      "bbox": [
+        219.0,
+        315.28497314453125,
+        365.10003662109375,
+        341.5734558105469
+      ],
+      "block_id": "page-1137-block-0029",
+      "order": 29,
+      "text": "Hollingshead, A. B. & Redlich, F. C. (1958). Social Class a\nnd Mental Illness : A community study, New York, NY,\nJohn Wiley.\n",
+      "text_sha256": "081762a5a61695d377837d7a08214da105fbff446565d2f6d43995beccf870ce"
+    },
+    {
+      "bbox": [
+        219.0,
+        345.4349670410156,
+        376.24749755859375,
+        362.72344970703125
+      ],
+      "block_id": "page-1137-block-0030",
+      "order": 30,
+      "text": "Keating, P. (1993). La science du mal : l’institution de la psy-\nchiatrie au Québec, 1800-1914, Montréal, Québec, Boréal.\n",
+      "text_sha256": "012c8623b01108721a2c33370dac1e5c21ae06902877eb7714dd5e1b32cea11e"
+    },
+    {
+      "bbox": [
+        219.0,
+        366.5849609375,
+        369.6275329589844,
+        392.8734436035156
+      ],
+      "block_id": "page-1137-block-0031",
+      "order": 31,
+      "text": "Kovess, V. & al. (1982). Les indicateurs de santé mentale,\nMontréal, Québec, Unité de recherche psychosociale,\nCentre hospitalier Douglas.\n",
+      "text_sha256": "4b8aad86b272166d0ab0725f0574bde706983d9fdc299f2e71c71383f7220edd"
+    },
+    {
+      "bbox": [
+        219.0,
+        396.7349548339844,
+        371.5601806640625,
+        413.97344970703125
+      ],
+      "block_id": "page-1137-block-0032",
+      "order": 32,
+      "text": "Lahaise, R. (1973). L’Hôtel-Dieu de Montréal (1642-1973),\nLaSalle, Québec, Hurtubise HMH.\n",
+      "text_sha256": "1e7145ea2c74bab9e31c9a671610ca62ee47a79777c022a321c3ddf6b2a59cf8"
+    },
+    {
+      "bbox": [
+        219.0,
+        417.8849792480469,
+        378.48919677734375,
+        453.22344970703125
+      ],
+      "block_id": "page-1137-block-0033",
+      "order": 33,
+      "text": "Lajoie, A. (1994). « Le droit aux services : une réforme en\npeau de chagrin», dans Lemieux, V. & al. (dir.) Le système\nde santé au Québec. Organisations, acteurs et enjeux, Qué-\nbec, Québec, Les Presses de l’Université Laval, p. 129-142.\n",
+      "text_sha256": "7fc17019d348a9a6f3f9aba82306eb13e493bb32a4d0c8dfdcf49a8949444767"
+    },
+    {
+      "bbox": [
+        219.0,
+        457.0849609375,
+        376.20001220703125,
+        483.4234313964844
+      ],
+      "block_id": "page-1137-block-0034",
+      "order": 34,
+      "text": "Lefebvre, Y. (1987). « Jalons pour une problématique\nquébécoise de la désinstitutionalisation », Santé mentale au\nQuébec, 12(1), p. 5-13.\n",
+      "text_sha256": "802e12a1b3ca99c76a37adc7fc24aae15aba6e739b764e9d02ee58338c1de8ef"
+    },
+    {
+      "bbox": [
+        219.0,
+        487.28497314453125,
+        359.04766845703125,
+        504.5234375
+      ],
+      "block_id": "page-1137-block-0035",
+      "order": 35,
+      "text": "Leighton, D. C. & al. (1963). The Character of Danger,\nvolume III, New York, NY, Basic Books.\n",
+      "text_sha256": "e83652a66aa428331092a69bb8759050613aa97b7dc71f6c1950c76adf59d026"
+    },
+    {
+      "bbox": [
+        219.0,
+        508.38494873046875,
+        372.947509765625,
+        525.6234741210938
+      ],
+      "block_id": "page-1137-block-0036",
+      "order": 36,
+      "text": "Magnan, V. (1890). Leçons cliniques sur les maladies men-\ntales faites à l’asile clinique, Paris, France, Bataille.\n",
+      "text_sha256": "e0e320cea2d9264d2ac8f88549b905ef0362943e62777fd4bab6e573f28fe804"
+    },
+    {
+      "bbox": [
+        219.0,
+        529.5349731445312,
+        373.69757080078125,
+        564.8734741210938
+      ],
+      "block_id": "page-1137-block-0037",
+      "order": 37,
+      "text": "Melanson-Ouellet, A. & Pronovost, L. (1981). « Étude sur les\nconnaissances et les perceptions des services psychia-\ntriques au Québec », Santé mentale au Québec, 6(2),\np. 79-88.\n",
+      "text_sha256": "f35e0f6e8d1a30f4078a37a962507fb502b9eb8b46f52c2447aee3eca391517b"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.68496322631836,
+        193.1475067138672,
+        57.87343978881836
+      ],
+      "block_id": "page-1137-block-0038",
+      "order": 38,
+      "text": "Lin, E. & al. (2010). « On quantifying quality », Canadian\nJournal of Psychiatry, 55(9), p. 537-538.\n",
+      "text_sha256": "457ed3a108eba3ce67f345a933f24f547c7e669a0ef687b75b804937118830f2"
+    },
+    {
+      "bbox": [
+        48.0,
+        61.684959411621094,
+        200.3252716064453,
+        87.8734359741211
+      ],
+      "block_id": "page-1137-block-0039",
+      "order": 39,
+      "text": "Québec. (2014a). Code de déontologie des médecins, [en\nligne], www2.publicationsduquebec.gouv.qc.ca/dynamic-\nSearch/telecharge.php ?type=3&le=/M_9/M9R17.HTM.\n",
+      "text_sha256": "2572117653bc442e7c879cc107380cdbf4c6ac3d997916a94e009f974c6a9635"
+    },
+    {
+      "bbox": [
+        48.0,
+        91.6849594116211,
+        200.92015075683594,
+        126.8734359741211
+      ],
+      "block_id": "page-1137-block-0040",
+      "order": 40,
+      "text": "Québec. (2014b). Loi sur les services de santé et les\nservices sociaux, [en ligne], www2.publicationsduquebec.\ngouv.qc.ca/dynamicSearch/telecharge.php ?type=2&-\nle=/S_4_2/S4_2.html.\n",
+      "text_sha256": "867aa2115356e0bfc0c5114fbb1a592384a3b0fade6139349d442d20f68805d4"
+    },
+    {
+      "bbox": [
+        48.0,
+        130.68496704101562,
+        203.24749755859375,
+        165.87344360351562
+      ],
+      "block_id": "page-1137-block-0041",
+      "order": 41,
+      "text": "Québec. (2014c). Règlement sur l’organisation et l’adminis-\ntration des établissements, [en ligne], www2.publica-\ntionsduquebec.gouv.qc.ca/dynamicSearch/telecharge.\nphp ?type=3&le=/S_5/S5R5.HTM.\n",
+      "text_sha256": "d932e7e1367839344451ed370418f4a75472d7459e30bd1fb66fa6e0e1e52e47"
+    },
+    {
+      "bbox": [
+        48.0,
+        169.68496704101562,
+        206.8517303466797,
+        204.87344360351562
+      ],
+      "block_id": "page-1137-block-0042",
+      "order": 42,
+      "text": "Robert, Y. (2012). « Les enquêtes de révision : entre l’inquié-\ntude et la quiétude », Le Collège, 52(2), [en ligne], www.cmq.\norg/fr-CA/Commun/AProposOrdre/Publications/~/media/\nFiles/Revue/CMQ_LeCollege_Printemps2012.pdf ?61418.\n",
+      "text_sha256": "55902cc629b10a5df2f557c7b3ae21c475092601ad0a17ecfaaf4e6bc6600d59"
+    },
+    {
+      "bbox": [
+        48.0,
+        208.68496704101562,
+        204.3300018310547,
+        243.87344360351562
+      ],
+      "block_id": "page-1137-block-0043",
+      "order": 43,
+      "text": "Spaeth-Rublee, B. & al. (2010). « Measuring quality of\nmental health care : a review of initiatives and programs in\nselected countries », Canadian Journal of Psychiatry, 55(9),\np. 539-548.\n",
+      "text_sha256": "97c8c73f44487a4b06fab9f3510740d2d9be02d62285ed36400347e17e8f61ab"
+    },
+    {
+      "bbox": [
+        48.0,
+        257.1703186035156,
+        200.6000213623047,
+        285.8734436035156
+      ],
+      "block_id": "page-1137-block-0044",
+      "order": 44,
+      "text": "Chapitre 48\nAird, G. (1982). « La mort d’une illusion ? », Santé mentale\nau Québec, 7(1), p. 116-119.\n",
+      "text_sha256": "9c2688258dd48ebdb31a576c6e44a943dcb5e581f2ae89f821c5731e83dde0b8"
+    },
+    {
+      "bbox": [
+        48.0,
+        289.6849670410156,
+        203.0575714111328,
+        315.8734436035156
+      ],
+      "block_id": "page-1137-block-0045",
+      "order": 45,
+      "text": "Anthony, W. A. (2001). « Pour un système de santé axé sur\nle rétablissement : douze points de repère pour l’organisa-\ntion d’ensemble des services », Le Partenaire, 9(2), p. 1-5.\n",
+      "text_sha256": "5763136a138129fd9b724fd394e9fc6bb4ed4f5f4fb83684709d423e7362d3bc"
+    },
+    {
+      "bbox": [
+        48.0,
+        319.6849670410156,
+        204.97532653808594,
+        336.8734436035156
+      ],
+      "block_id": "page-1137-block-0046",
+      "order": 46,
+      "text": "Apollon, W. (1986). « Pour une politique en santé mentale »,\nSanté mentale au Québec, 11(1), p. 75-104.\n",
+      "text_sha256": "091021f7622ea4a9071857d59075a5f9904f042af3da2f9170fe35f43010d572"
+    },
+    {
+      "bbox": [
+        48.0,
+        340.6849670410156,
+        199.9849853515625,
+        366.8734436035156
+      ],
+      "block_id": "page-1137-block-0047",
+      "order": 47,
+      "text": "Association des psychiatres du Canada. (2012). « La crimina-\nlisation des personnes atteintes d’une maladie mentale »,\nRevue canadienne de psychiatrie, 57(2), [encart].\n",
+      "text_sha256": "854a613c49f665857de0d7aab8575b286b24da88043ee317e44e40b23facf4d2"
+    },
+    {
+      "bbox": [
+        48.0,
+        370.6849670410156,
+        202.47750854492188,
+        396.8734436035156
+      ],
+      "block_id": "page-1137-block-0048",
+      "order": 48,
+      "text": "Bédard, D. & al. (1962). Rapport de la Commission d’étude\ndes hôpitaux psychiatriques, Québec, Gouvernement du\nQuébec.\n",
+      "text_sha256": "f4d8728c23c299c32156772e91404e039c9312409b6a7674aa7353f0287b2e2b"
+    },
+    {
+      "bbox": [
+        48.0,
+        400.6849670410156,
+        201.07672119140625,
+        453.8734436035156
+      ],
+      "block_id": "page-1137-block-0049",
+      "order": 49,
+      "text": "Berlinguet, M. (1985). « Structures et fonctions hospita-\nlières », dans Dufresne, J. & al. (dir.) Traité d’anthropologie\nmédicale : l’institution de la santé et de la maladie, Sillery,\nQuébec, Presses de l’Université du Québec et Institut\nquébécois de recherche sur la culture ; Lyon, Presses\nuniversitaires de Lyon, p. 353-385.\n",
+      "text_sha256": "145e87d376a32deda4399294e33ef714e35ab78620d5b21d1b54981445dad78a"
+    },
+    {
+      "bbox": [
+        48.0,
+        457.6849670410156,
+        205.6826934814453,
+        474.8734436035156
+      ],
+      "block_id": "page-1137-block-0050",
+      "order": 50,
+      "text": "Bourque, E. (1886). « Le délire chronique », L’Union médicale\ndu Canada, 15, p. 193-198.\n",
+      "text_sha256": "92867eb30fd2500e4cdde1d632d1bc0d6201cdb1aaf782f17720fc1ae747d4d7"
+    },
+    {
+      "bbox": [
+        48.0,
+        478.6849670410156,
+        207.19825744628906,
+        504.8734436035156
+      ],
+      "block_id": "page-1137-block-0051",
+      "order": 51,
+      "text": "Brunet, M. (1978). « Le professionnalisme, obstacle au\nchangement social. Un cas type : l’équipe multidisciplinaire\nde santé », Recherches sociographiques, 19(2), p. 261-269.\n",
+      "text_sha256": "42898c8181ef58d70b6869d6e1a29ab40411041642429b6f5e1626499763ef6e"
+    },
+    {
+      "bbox": [
+        48.0,
+        508.68499755859375,
+        205.52232360839844,
+        525.8734741210938
+      ],
+      "block_id": "page-1137-block-0052",
+      "order": 52,
+      "text": "Cellard, A. (1991). Histoire de la folie au Québec de 1600 à\n1850 : le désordre, Montréal, Québec, Boréal.\n",
+      "text_sha256": "e24e9c49ac3c8f739e8d6b0ace7f502ad22565dbd098b2b5f6c2a2fa83dc421e"
+    },
+    {
+      "bbox": [
+        48.0,
+        529.6849975585938,
+        201.6800079345703,
+        564.8734741210938
+      ],
+      "block_id": "page-1137-block-0053",
+      "order": 53,
+      "text": "Cellard, A. & Nadon, D. (1986). « Ordre et désordre : le\nMontreal Lunatic Asylum et la naissance de l’asile au\nQuébec », Revue d’histoire de l’Amérique française, 39(3),\np. 345-367.\n",
+      "text_sha256": "0cfba963780fc309a98a75ea06e92dd018c2f2ba8324fda16656b7db5ae29553"
+    }
+  ],
+  "coordinates_sha256": "c236ddda38be751882f5623dd07c6a214375ec7dabe1fadf5b297b9e68a81dd0",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1137",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "R40\nRéférences\nMinistère de la Santé et des Services sociaux (MSSS). (1987). La\npolitique de santé mentale du Québec: Pour un partenariat\nélargi, Québec, Gouvernement du Québec.\nMinistère de la Santé et des Services sociaux (MSSS). (2005).\nPlan d’action en santé mentale 2005-2010 - La force des\nliens, Québec, Publications du Québec, [en ligne], http://\nmsssa4.msss.gouv.qc.ca/fr/document/publication.nsf/0/84\n09aa194a47b7c385257020006bce71 ?OpenDocument.\nMinistère de la Santé et des Services sociaux (MSSS). (2011).\nOrientations relatives à l’organisation des soins et des ser-\nvices offerts à la clientèle adulte par les équipes en santé\nmentale de première ligne en CSSS, Québec, Gouverne-\nment du Québec.\nMurphy, H. B. (1986). « Foster homes : The new back\nwards », Canada’s Mental Health, 20(suppl.), p. 1-17.\nMyers, J. K. & al. (1984). « Six months prevalence of\npsychiatric disorders in three communities », Archives of\nGeneral Psychiatry, 41(10), p. 959-967.\nOverholser, W. (1956). « Séance d’introduction », Actes du\nColloque international sur la chlorpromazine et les médica-\nments neuroleptiques en thérapeutique psychiatrique, Paris,\nFrance, 20-22 octobre 1955, Encéphale, numéro spécial.\nPagé, J.-C. (1961). Les fous crient au secours, Montréal,\nQuébec, Éditions du Jour.\nPinel. P. (1801). Traité médico-philosophique sur l’aliénation\nmentale ou la manie, Paris, France, Richard.\nQuébec. (1967-1972). Rapport de la Commission d’enquête\nsur la santé et le bien-être social, Québec, Commission\nd’enquête sur la santé et le bien-être social, Éditeur ofciel\ndu Québec.\nQuébec. (1988). Rapport de la Commission d’enquête sur\nles services de santé et les services sociaux, Québec, Com-\nmission d’enquête sur les services de santé et les services\nsociaux, Les Publications du Québec.\nQuébec. (1996). Rapport du Véricateur général à l’Assem-\nblée nationale pour l’année 1995-1996, Tome II, Québec,\nVéricateur général du Québec.\nQuébec. (2015). Loi sur les services de santé et les services\nsociaux, Québec, Publications du Québec.\nRaymondis, L. M. (1966). Quelques aperçus sur une réforme\ndes services psychiatriques, Paris, France, Pichon et\nDurant-Auzias.\nSaucier, R. & Fishmeister, L. V. (1954). « L’emploi du Largactil\nen psychiatrie », Le Saguenay Médical, 3(2), p. 51-57.\nWallot, H. (1998). La danse autour du fou. Histoire orga-\nnisationnelle de la prise en charge de la folie au Québec,\nBeauport, Québec, Éditions MNH.\nWallot, H. (2013). « Le concept de rétablissement », Le\nrétablissement, une autre folie ?, conférence gratuite\nofferte par l’Association canadienne pour la santé mentale,\nQuébec.\nWallot, H. (2014). Peut-on guérir d’un passé asilaire?,\n2e éd., Québec, Québec, Presses Inter Universitaires.\nCormier, H. J. & Klerman, G. L. (1985). « Suicide, économie\net environnement social au Québec », L’Union médicale du\nCanada, 114(15), p. 360-365.\nCôté, C. & Larouche, D. (2000). Radiographie d’une mort\nne. Dimension sociale de la maladie au Québec, Chicou-\ntimi, Québec, Éditions JCL.\nDeegan, P. E. (1996). « Le rétablissement, un itinéraire du\ncœur », Le Partenaire, 5(1), p. 1-6.\nDuquet, E. E. (1888). « La folie héréditaire ou la folie\ndes dégénérés », L’Union médicale du Canada, 17(17),\np. 5-156.\nEsquirol, J.-É. (1838). Des maladies mentales considérées\nsous le rapport médical, hygiénique, et médico-légal, tomes\n1 à 3, Paris, France, J.-B. Baillière.\nFalret, J.-P. (1864). Des maladies mentales et des asiles\nd’aliénés, Paris, France, J.-B. Baillière.\nFaris, R. E. L. & Dunham, H. W. (1939). Mental Disorders in\nUrban Areas : An Ecological Study of Schizophrenia and\nOther Psychosis, Chicago, IL, University of Chicago Press.\nGaucher, D. (1985). « L’organisation des services en santé\nmentale au Québec : tendances actuelles », Sociologie et\nsociétés, 17(1), p. 41-49.\nGeorget, E. (1821). De la physiologie du système nerveux et\nspécialement du cerveau, Paris, France, J.-B. Baillière.\nGuertin, M. & Lecomte, Y. (1983). « Éditorial sur les structures\nintermédiaires ou alternatives », Santé mentale au Québec,\n8(1), p. 4-6.\nHollingshead, A. B. & Redlich, F. C. (1958). Social Class a\nnd Mental Illness : A community study, New York, NY,\nJohn Wiley.\nKeating, P. (1993). La science du mal : l’institution de la psy-\nchiatrie au Québec, 1800-1914, Montréal, Québec, Boréal.\nKovess, V. & al. (1982). Les indicateurs de santé mentale,\nMontréal, Québec, Unité de recherche psychosociale,\nCentre hospitalier Douglas.\nLahaise, R. (1973). L’Hôtel-Dieu de Montréal (1642-1973),\nLaSalle, Québec, Hurtubise HMH.\nLajoie, A. (1994). « Le droit aux services : une réforme en\npeau de chagrin», dans Lemieux, V. & al. (dir.) Le système\nde santé au Québec. Organisations, acteurs et enjeux, Qué-\nbec, Québec, Les Presses de l’Université Laval, p. 129-142.\nLefebvre, Y. (1987). « Jalons pour une problématique\nquébécoise de la désinstitutionalisation », Santé mentale au\nQuébec, 12(1), p. 5-13.\nLeighton, D. C. & al. (1963). The Character of Danger,\nvolume III, New York, NY, Basic Books.\nMagnan, V. (1890). Leçons cliniques sur les maladies men-\ntales faites à l’asile clinique, Paris, France, Bataille.\nMelanson-Ouellet, A. & Pronovost, L. (1981). « Étude sur les\nconnaissances et les perceptions des services psychia-\ntriques au Québec », Santé mentale au Québec, 6(2),\np. 79-88.\nLin, E. & al. (2010). « On quantifying quality », Canadian\nJournal of Psychiatry, 55(9), p. 537-538.\nQuébec. (2014a). Code de déontologie des médecins, [en\nligne], www2.publicationsduquebec.gouv.qc.ca/dynamic-\nSearch/telecharge.php ?type=3&le=/M_9/M9R17.HTM.\nQuébec. (2014b). Loi sur les services de santé et les\nservices sociaux, [en ligne], www2.publicationsduquebec.\ngouv.qc.ca/dynamicSearch/telecharge.php ?type=2&-\nle=/S_4_2/S4_2.html.\nQuébec. (2014c). Règlement sur l’organisation et l’adminis-\ntration des établissements, [en ligne], www2.publica-\ntionsduquebec.gouv.qc.ca/dynamicSearch/telecharge.\nphp ?type=3&le=/S_5/S5R5.HTM.\nRobert, Y. (2012). « Les enquêtes de révision : entre l’inquié-\ntude et la quiétude », Le Collège, 52(2), [en ligne], www.cmq.\norg/fr-CA/Commun/AProposOrdre/Publications/~/media/\nFiles/Revue/CMQ_LeCollege_Printemps2012.pdf ?61418.\nSpaeth-Rublee, B. & al. (2010). « Measuring quality of\nmental health care : a review of initiatives and programs in\nselected countries », Canadian Journal of Psychiatry, 55(9),\np. 539-548.\nChapitre 48\nAird, G. (1982). « La mort d’une illusion ? », Santé mentale\nau Québec, 7(1), p. 116-119.\nAnthony, W. A. (2001). « Pour un système de santé axé sur\nle rétablissement : douze points de repère pour l’organisa-\ntion d’ensemble des services », Le Partenaire, 9(2), p. 1-5.\nApollon, W. (1986). « Pour une politique en santé mentale »,\nSanté mentale au Québec, 11(1), p. 75-104.\nAssociation des psychiatres du Canada. (2012). « La crimina-\nlisation des personnes atteintes d’une maladie mentale »,\nRevue canadienne de psychiatrie, 57(2), [encart].\nBédard, D. & al. (1962). Rapport de la Commission d’étude\ndes hôpitaux psychiatriques, Québec, Gouvernement du\nQuébec.\nBerlinguet, M. (1985). « Structures et fonctions hospita-\nlières », dans Dufresne, J. & al. (dir.) Traité d’anthropologie\nmédicale : l’institution de la santé et de la maladie, Sillery,\nQuébec, Presses de l’Université du Québec et Institut\nquébécois de recherche sur la culture ; Lyon, Presses\nuniversitaires de Lyon, p. 353-385.\nBourque, E. (1886). « Le délire chronique », L’Union médicale\ndu Canada, 15, p. 193-198.\nBrunet, M. (1978). « Le professionnalisme, obstacle au\nchangement social. Un cas type : l’équipe multidisciplinaire\nde santé », Recherches sociographiques, 19(2), p. 261-269.\nCellard, A. (1991). Histoire de la folie au Québec de 1600 à\n1850 : le désordre, Montréal, Québec, Boréal.\nCellard, A. & Nadon, D. (1986). « Ordre et désordre : le\nMontreal Lunatic Asylum et la naissance de l’asile au\nQuébec », Revue d’histoire de l’Amérique française, 39(3),\np. 345-367.\n",
+  "raw_text_sha256": "f93953b5fdba87503b1723d30129a485d8948d4beebaf3ebceda36fe12eaefb0",
+  "source_page_display": 1138,
+  "source_page_index": 1137
+}

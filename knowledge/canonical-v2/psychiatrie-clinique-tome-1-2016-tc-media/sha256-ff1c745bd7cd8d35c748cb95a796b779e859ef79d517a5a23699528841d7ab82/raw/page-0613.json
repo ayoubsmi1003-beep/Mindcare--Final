@@ -1,0 +1,496 @@
+{
+  "block_sequence_sha256": "1b24074c77c3775d07ae4f64350f792749d5aadf5713046b6299ef84c55765af",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0613-block-0001",
+      "order": 1,
+      "text": "596\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "9a9a639729fef4d03b1613a1078ee25247d68804f8883073adaefa69d2282e5d"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.219970703125,
+        85.95849609375
+      ],
+      "block_id": "page-0613-block-0002",
+      "order": 2,
+      "text": "de psychose, de confusion ou de dépression. Le diagnostic\ns’établit lorsqu’on constate une démence chez un patient avec\nune MP conrmée depuis au moins un an, ce qui la distingue\nde la démence à corps de Lewy.\n",
+      "text_sha256": "76d07afe386830d9af81d1f625aecda5e0cf134585fc8b83184cb1ee8948a024"
+    },
+    {
+      "bbox": [
+        306.0,
+        86.9658203125,
+        549.4110717773438,
+        360.45849609375
+      ],
+      "block_id": "page-0613-block-0003",
+      "order": 3,
+      "text": "Les caractéristiques motrices cardinales de la MP incluent :\n• une bradykinésie ;\n• de la rigidité ;\n• un tremblement de repos (asymétrique et précoce) ;\n• une instabilité posturale.\nLes manifestations neuropsychiatriques de la MP incluent des\nhallucinations visuelles et un délire de persécution ou de jalousie,\nqu’on retrouve dans la MP avec ou sans démence. Le délire peut\nêtre exacerbé par les médicaments antiparkinsoniens. Les patients\nsourant de la MP sont aussi sujets à la dépression, à l’anxiété\net aux troubles du sommeil. Le tableau cognitif de la démence\ndue à la MP se caractérise par un ralentissement, de l’apathie,\nune dysfonction exécutive précoce (décits de l’attention et de la\nplanication) et des troubles visuospatiaux. Le rappel peut être\namélioré par l’indiçage. On n’observe habituellement pas d’aphasie,\nd’apraxie, ou de trouble grave de la mémoire dans la démence de\nla MP. Weintraub & Hurtig (2007) décrivent les diérences dans la\nprésentation de la MP et de la DCL et constatent que la démence\net les hallucinations apparaissent typiquement dans la deuxième\nmoitié de l’évolution clinique de la MP alors que ce sont des carac-\ntéristiques initiales de présentation dans la DCL. La MP est une\ncondition lentement progressive. À l’autopsie, on trouve au niveau\nde la substance noire, une perte neuronale et des corps de Lewy.\n",
+      "text_sha256": "c97812d3a48f85398204fdb4c95ee707834264ccdda96bbfb3a9ca799036faa0"
+    },
+    {
+      "bbox": [
+        306.0,
+        361.4658203125,
+        549.0680541992188,
+        383.45849609375
+      ],
+      "block_id": "page-0613-block-0004",
+      "order": 4,
+      "text": "Le DSM-5 présente de nouveaux critères pour le trouble neuro-\ncognitif majeur dû à la maladie de Parkinson (voir l’encadré 27.7).\n",
+      "text_sha256": "83b2d8b77ac7ab50fa19565a2f5d44d18f1e2d7c3fd12838d2c42a798d3de4a4"
+    },
+    {
+      "bbox": [
+        306.0,
+        384.4658203125,
+        549.2705078125,
+        429.45849609375
+      ],
+      "block_id": "page-0613-block-0005",
+      "order": 5,
+      "text": "Un trouble neurocognitif majeur probablement dû à la maladie\nde Parkinson devrait être diagnostiqué si les critères 1 et 2 sont\nobservés. Un trouble neurocognitif majeur possiblement dû à la\nmaladie de Parkinson devrait être diagnostiqué si 1 ou 2 est présent :\n",
+      "text_sha256": "6d2ad372fc21a991a257d47f593e8bf375f5fb7cffc5ecd8539348b8f068d846"
+    },
+    {
+      "bbox": [
+        324.0,
+        435.638671875,
+        531.4379272460938,
+        486.5791015625
+      ],
+      "block_id": "page-0613-block-0006",
+      "order": 6,
+      "text": "1. Il n’y a pas de preuve d’une étiologie mixte (c.-à-d.\nabsence d’une autre maladie neurodégénérative ou céré-\nbrovasculaire, d’une autre maladie mentale, neurologique\nou systémique ou de toute autre aection pouvant contri-\nbuer au déclin cognitif).\n",
+      "text_sha256": "e7a9eadb4f75db705c002196e54d10c1ed1690b8ae81f4dfa26071fe306d7e4b"
+    },
+    {
+      "bbox": [
+        50.25,
+        316.5022888183594,
+        245.12803649902344,
+        328.820068359375
+      ],
+      "block_id": "page-0613-block-0007",
+      "order": 7,
+      "text": "ENCADRÉ 27.6 Critères diagnostiques du trouble\n",
+      "text_sha256": "4d90c6947b88d04ac6126641550c0b9cd2104c86b1f1b83dbfeaae7b3f455aee"
+    },
+    {
+      "bbox": [
+        107.70000457763672,
+        328.352294921875,
+        252.0288848876953,
+        351.820068359375
+      ],
+      "block_id": "page-0613-block-0008",
+      "order": 8,
+      "text": "neurocognitif majeur ou léger dû\nà une lésion cérébrale traumatique\n",
+      "text_sha256": "af6448f49adbb5b5b811187b9af324504bc8bc70edc05890aede2cc39821e06f"
+    },
+    {
+      "bbox": [
+        77.0999984741211,
+        360.37286376953125,
+        262.0519104003906,
+        391.39239501953125
+      ],
+      "block_id": "page-0613-block-0009",
+      "order": 9,
+      "text": "DSM-5\n294.1x (F02.8x) Trouble neurocognitif majeur ou léger\ndû à une lésion cérébrale traumatique\n",
+      "text_sha256": "64cb7e7578c18bb031e4c3e35915b2cb07589c750443d110ab62ae8f2ce2a8eb"
+    },
+    {
+      "bbox": [
+        52.25,
+        396.45196533203125,
+        274.9244079589844,
+        406.27813720703125
+      ],
+      "block_id": "page-0613-block-0010",
+      "order": 10,
+      "text": "A. Les critères d’un trouble neurocognitif majeur ou léger sont remplis\n",
+      "text_sha256": "b5474f64b4a7c23740ae0f21b745517d4b7c26d07ddbf356d3f4ea3c3f253a8e"
+    },
+    {
+      "bbox": [
+        60.75,
+        406.45196533203125,
+        127.7080078125,
+        416.27813720703125
+      ],
+      "block_id": "page-0613-block-0011",
+      "order": 11,
+      "text": "(voir l’encadré 27.1).\n",
+      "text_sha256": "cf14f362759e0da88c62f5bbd93725e9e002b1ee4de2d635a64f644d0f5235a9"
+    },
+    {
+      "bbox": [
+        52.25,
+        425.8519592285156,
+        270.4239807128906,
+        435.6781311035156
+      ],
+      "block_id": "page-0613-block-0012",
+      "order": 12,
+      "text": "B. Mise en évidence d’une lésion cérébrale traumatique, c’est-à-dire\n",
+      "text_sha256": "83698224aa221843e3aedcccc4ae16ffc96ee7fd7b5e8b3818192cb988632e52"
+    },
+    {
+      "bbox": [
+        60.75,
+        435.8519592285156,
+        286.74700927734375,
+        529.6781616210938
+      ],
+      "block_id": "page-0613-block-0013",
+      "order": 13,
+      "text": "d’un impact sur la tête ou d’un autre mécanisme d’ébranlement rapide\nou de déplacement du cerveau à l’intérieur de la boîte crânienne, avec\nau moins un des éléments suivants :\n1. Perte de conscience.\n2. Amnésie post-traumatique.\n3. Désorientation et confusion.\n4. Signes neurologiques (p. ex., lésion décelable en neuro-imagerie,\napparition récente de crises comitiales, aggravation marquée d’une comi-\ntialité préexistante, amputation du champ visuel, anosmie, hémiparésie).\n",
+      "text_sha256": "e0babe91ded92ca0d164f9f1f687457c1fa59ce3683c80166aef65cf6e9ef442"
+    },
+    {
+      "bbox": [
+        52.25,
+        540.4519653320312,
+        280.4971618652344,
+        550.2781372070312
+      ],
+      "block_id": "page-0613-block-0014",
+      "order": 14,
+      "text": "C. Le trouble neurocognitif est observé immédiatement après la survenue\n",
+      "text_sha256": "3244b0e49c0517685ec3b12479f672ac19cc42773d205600fc2298ca4ac40c83"
+    },
+    {
+      "bbox": [
+        60.70000076293945,
+        550.4519653320312,
+        286.44122314453125,
+        570.2781372070312
+      ],
+      "block_id": "page-0613-block-0015",
+      "order": 15,
+      "text": "de la lésion cérébrale traumatique ou immédiatement après la reprise de\nla conscience et persiste au-delà de la période aiguë post-traumatique.\n",
+      "text_sha256": "1f1392a58ba3a28b2d64030c5606e36e5a30ad452c9d5cee2c51ae0e1c73895b"
+    },
+    {
+      "bbox": [
+        48.25,
+        579.5406494140625,
+        130.0043182373047,
+        588.4088745117188
+      ],
+      "block_id": "page-0613-block-0016",
+      "order": 16,
+      "text": "Source : APA (2015), p. 737.\n",
+      "text_sha256": "f992f340f29a55fd4d0d550f1d188e7501a204e31d4c28b955eaa2ed5b024b5d"
+    },
+    {
+      "bbox": [
+        48.25,
+        594.5406494140625,
+        288.60601806640625,
+        639.2750244140625
+      ],
+      "block_id": "page-0613-block-0017",
+      "order": 17,
+      "text": "Traduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic\nand Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles\nMentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson\nSAS, Paris, 2015. All rights reserved.\n",
+      "text_sha256": "193a7e2b36b0a0e7fa4c8bb97e17204fd45a4428dd7abfc54638dbedd585feab"
+    },
+    {
+      "bbox": [
+        308.3500061035156,
+        501.5022888183594,
+        503.8780517578125,
+        513.820068359375
+      ],
+      "block_id": "page-0613-block-0018",
+      "order": 18,
+      "text": "ENCADRÉ 27.7 Critères diagnostiques du trouble\n",
+      "text_sha256": "bcdde881a9ee72c18c9f0022a0ff98452eb345d31f5999ae00527e08b423e2d6"
+    },
+    {
+      "bbox": [
+        366.3999938964844,
+        513.352294921875,
+        543.3679809570312,
+        525.320068359375
+      ],
+      "block_id": "page-0613-block-0019",
+      "order": 19,
+      "text": "neurocognitif dû à la maladie de Parkinson\n",
+      "text_sha256": "64d2ea6d425463d905237362058616311c7e901a9259b221d6cc4739d8a51c77"
+    },
+    {
+      "bbox": [
+        322.8000183105469,
+        533.3728637695312,
+        532.4408569335938,
+        564.3923950195312
+      ],
+      "block_id": "page-0613-block-0020",
+      "order": 20,
+      "text": "DSM-5\n294.1x (F02.8x) Trouble neurocognitif majeur dû à la maladie\nde Parkinson\n",
+      "text_sha256": "214f3baac3a6cf7fd9e81c76edfa77c6d5766bfa307b1bc281670afb0cf16246"
+    },
+    {
+      "bbox": [
+        310.25,
+        568.4519653320312,
+        532.9243774414062,
+        578.2781372070312
+      ],
+      "block_id": "page-0613-block-0021",
+      "order": 21,
+      "text": "A. Les critères d’un trouble neurocognitif majeur ou léger sont remplis\n",
+      "text_sha256": "b5474f64b4a7c23740ae0f21b745517d4b7c26d07ddbf356d3f4ea3c3f253a8e"
+    },
+    {
+      "bbox": [
+        318.75,
+        578.4519653320312,
+        385.3580017089844,
+        588.2781372070312
+      ],
+      "block_id": "page-0613-block-0022",
+      "order": 22,
+      "text": "(voir l’encadré 27.1).\n",
+      "text_sha256": "cf14f362759e0da88c62f5bbd93725e9e002b1ee4de2d635a64f644d0f5235a9"
+    },
+    {
+      "bbox": [
+        310.25,
+        595.8519897460938,
+        544.5364990234375,
+        605.6781616210938
+      ],
+      "block_id": "page-0613-block-0023",
+      "order": 23,
+      "text": "B. La perturbation survient durant le contexte d’une maladie de Parkinson\n",
+      "text_sha256": "b0176d62ade0ace42aa5eacaa95eadb4ba4416f2c6995fbba6dbaff901d81d77"
+    },
+    {
+      "bbox": [
+        318.75,
+        605.8519897460938,
+        344.22900390625,
+        615.6781616210938
+      ],
+      "block_id": "page-0613-block-0024",
+      "order": 24,
+      "text": "connue.\n",
+      "text_sha256": "2f628d3ba27ac019d57a3123e5664d37ee3f0da26ab0cde7bb5f8bc46e3b1620"
+    },
+    {
+      "bbox": [
+        310.25,
+        623.3019409179688,
+        518.4032592773438,
+        633.1281127929688
+      ],
+      "block_id": "page-0613-block-0025",
+      "order": 25,
+      "text": "C. Il y a début insidieux et une progression graduelle de l’atteinte.\n",
+      "text_sha256": "b784c6bed48fe6840d888f75198c101c827ff9ed1688d4218e3fd1afa2de6dd6"
+    },
+    {
+      "bbox": [
+        310.25,
+        640.7019653320312,
+        527.0905151367188,
+        650.5281372070312
+      ],
+      "block_id": "page-0613-block-0026",
+      "order": 26,
+      "text": "D. Le trouble neurocognitif n’est pas imputable à une autre affection\n",
+      "text_sha256": "dc6685af37d4b5a6b135e40f69dd5ebdeff9f3362feae5e9a641cae348eebb6b"
+    },
+    {
+      "bbox": [
+        319.0500183105469,
+        650.7019653320312,
+        509.7550354003906,
+        660.5281372070312
+      ],
+      "block_id": "page-0613-block-0027",
+      "order": 27,
+      "text": "médicale et n’est pas mieux expliqué par un trouble mental.\n",
+      "text_sha256": "aa6e04549ae6aeb508f95cdb4a1c1d92183267e25f998fefcf5810d8fbfe4048"
+    },
+    {
+      "bbox": [
+        306.25,
+        668.2906494140625,
+        546.6060180664062,
+        725.0250244140625
+      ],
+      "block_id": "page-0613-block-0028",
+      "order": 28,
+      "text": "Source : APA (2015), p. 751.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic\nand Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles\nMentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson\nSAS, Paris, 2015. All rights reserved.\n",
+      "text_sha256": "f5da496f178899091386f84d1fc976288f5b609480b7b08d34dfe1b3f7f2ae6d"
+    },
+    {
+      "bbox": [
+        48.0,
+        655.352294921875,
+        291.2180480957031,
+        724.95849609375
+      ],
+      "block_id": "page-0613-block-0029",
+      "order": 29,
+      "text": "Démence due à la maladie de Parkinson\nChez les patients sourant de la MP, le risque de démence est\nmultiplié par six. La prévalence de la démence dans la MP est\nde 20 à 40 %, et l’incidence est de 69 cas par 1000 personnes\npar an dans le monde (Goldmann & al., 2008). Les facteurs de\nrisque sont l’âge, la présence de signes extrapyramidaux graves,\n",
+      "text_sha256": "7db912a7b293e9c0b22fc540f5c8aaf9d619bb1baf9253bb18e93122bfe3fced"
+    },
+    {
+      "bbox": [
+        50.25,
+        41.002296447753906,
+        242.83045959472656,
+        53.320068359375
+      ],
+      "block_id": "page-0613-block-0030",
+      "order": 30,
+      "text": "ENCADRÉ 27.5 Critères diagnostiques du trouble\n",
+      "text_sha256": "3f509477e43c71c3e503631dd096653c2065230f4007cc3b30324f47db51fe54"
+    },
+    {
+      "bbox": [
+        108.30000305175781,
+        52.852294921875,
+        228.51390075683594,
+        76.320068359375
+      ],
+      "block_id": "page-0613-block-0031",
+      "order": 31,
+      "text": "neurocognitif majeur ou léger\ndû à une infection par le VIH\n",
+      "text_sha256": "811fbf6eb35e8f22d9e5a79e552dc7bec77f2f9223e9de66d792070ddfddec30"
+    },
+    {
+      "bbox": [
+        60.10000228881836,
+        84.37285614013672,
+        278.8424987792969,
+        115.39238739013672
+      ],
+      "block_id": "page-0613-block-0032",
+      "order": 32,
+      "text": "DSM-5\n291.1x (F02.8x) Trouble neurocognitif majeur dû à une infection\npar le virus de l’immunodécience humaine\n",
+      "text_sha256": "48d0da276caf186d2215547d45d263401249067384ec4d5692cc39a877baa013"
+    },
+    {
+      "bbox": [
+        52.25,
+        122.85195922851562,
+        277.0843811035156,
+        132.67813110351562
+      ],
+      "block_id": "page-0613-block-0033",
+      "order": 33,
+      "text": "A. Les critères d’un trouble neurocognitif majeur ou léger sont remplis.\n",
+      "text_sha256": "6102ffe4c9f1a49e3ff4ae3ccfc1309cfd46c557a6c5a9e7f0a64e73377851f1"
+    },
+    {
+      "bbox": [
+        52.25,
+        140.3019561767578,
+        263.98968505859375,
+        150.1281280517578
+      ],
+      "block_id": "page-0613-block-0034",
+      "order": 34,
+      "text": "B. Il y a une infection conrmée par le virus de l’immunodécience\n",
+      "text_sha256": "4d0abfb8093215c102a43b3f4d319939d91d935f53a186bedefe29d8bf12ee9e"
+    },
+    {
+      "bbox": [
+        60.75,
+        150.3019561767578,
+        103.29301452636719,
+        160.1281280517578
+      ],
+      "block_id": "page-0613-block-0035",
+      "order": 35,
+      "text": "humain (VIH).\n",
+      "text_sha256": "406d5136880d7fd013a084c31603863b7b33b9bdc0268db7e13b145c7dd66f3e"
+    },
+    {
+      "bbox": [
+        52.25,
+        167.7019500732422,
+        282.8970031738281,
+        177.5281219482422
+      ],
+      "block_id": "page-0613-block-0036",
+      "order": 36,
+      "text": "C. Le trouble neurocognitif n’est pas mieux expliqué par une autre affec-\n",
+      "text_sha256": "9831a3bf4cb7dabc7e7f071caf00eb2bd4691edc561eb6722800cc2cb54fe251"
+    },
+    {
+      "bbox": [
+        60.900001525878906,
+        177.7019500732422,
+        285.544677734375,
+        207.5281219482422
+      ],
+      "block_id": "page-0613-block-0037",
+      "order": 37,
+      "text": "tion médicale non-VIH, y compris des maladies cérébrales secondaires\ntelles qu’une leucoencéphalopathie multifocale progressive ou une\nméningite à cryptocoques.\n",
+      "text_sha256": "1ca848b659e45fc05fe4b224e7d756aa0cc61c1023de628148e1980cfd975f37"
+    },
+    {
+      "bbox": [
+        52.25,
+        215.15196228027344,
+        269.0905456542969,
+        224.97813415527344
+      ],
+      "block_id": "page-0613-block-0038",
+      "order": 38,
+      "text": "D. Le trouble neurocognitif n’est pas imputable à une autre affection\n",
+      "text_sha256": "dc6685af37d4b5a6b135e40f69dd5ebdeff9f3362feae5e9a641cae348eebb6b"
+    },
+    {
+      "bbox": [
+        61.04999923706055,
+        225.15196228027344,
+        251.75502014160156,
+        234.97813415527344
+      ],
+      "block_id": "page-0613-block-0039",
+      "order": 39,
+      "text": "médicale et n’est pas mieux expliqué par un trouble mental.\n",
+      "text_sha256": "aa6e04549ae6aeb508f95cdb4a1c1d92183267e25f998fefcf5810d8fbfe4048"
+    },
+    {
+      "bbox": [
+        48.25,
+        242.74063110351562,
+        288.60601806640625,
+        299.4750061035156
+      ],
+      "block_id": "page-0613-block-0040",
+      "order": 40,
+      "text": "Source : APA (2015), p. 746.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic\nand Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles\nMentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson\nSAS, Paris, 2015. All rights reserved.\n",
+      "text_sha256": "ea82f6c80a5a0cf916e69bf3f747aed65ce258a9d93c2c040a05f2537a3e5cfb"
+    }
+  ],
+  "coordinates_sha256": "97430cd5feb45c4695470b8a41b2ce99089ad8fb23d4747ce820f51204fa8337",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0613",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "596\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nde psychose, de confusion ou de dépression. Le diagnostic\ns’établit lorsqu’on constate une démence chez un patient avec\nune MP conrmée depuis au moins un an, ce qui la distingue\nde la démence à corps de Lewy.\nLes caractéristiques motrices cardinales de la MP incluent :\n• une bradykinésie ;\n• de la rigidité ;\n• un tremblement de repos (asymétrique et précoce) ;\n• une instabilité posturale.\nLes manifestations neuropsychiatriques de la MP incluent des\nhallucinations visuelles et un délire de persécution ou de jalousie,\nqu’on retrouve dans la MP avec ou sans démence. Le délire peut\nêtre exacerbé par les médicaments antiparkinsoniens. Les patients\nsourant de la MP sont aussi sujets à la dépression, à l’anxiété\net aux troubles du sommeil. Le tableau cognitif de la démence\ndue à la MP se caractérise par un ralentissement, de l’apathie,\nune dysfonction exécutive précoce (décits de l’attention et de la\nplanication) et des troubles visuospatiaux. Le rappel peut être\namélioré par l’indiçage. On n’observe habituellement pas d’aphasie,\nd’apraxie, ou de trouble grave de la mémoire dans la démence de\nla MP. Weintraub & Hurtig (2007) décrivent les diérences dans la\nprésentation de la MP et de la DCL et constatent que la démence\net les hallucinations apparaissent typiquement dans la deuxième\nmoitié de l’évolution clinique de la MP alors que ce sont des carac-\ntéristiques initiales de présentation dans la DCL. La MP est une\ncondition lentement progressive. À l’autopsie, on trouve au niveau\nde la substance noire, une perte neuronale et des corps de Lewy.\nLe DSM-5 présente de nouveaux critères pour le trouble neuro-\ncognitif majeur dû à la maladie de Parkinson (voir l’encadré 27.7).\nUn trouble neurocognitif majeur probablement dû à la maladie\nde Parkinson devrait être diagnostiqué si les critères 1 et 2 sont\nobservés. Un trouble neurocognitif majeur possiblement dû à la\nmaladie de Parkinson devrait être diagnostiqué si 1 ou 2 est présent :\n1. Il n’y a pas de preuve d’une étiologie mixte (c.-à-d.\nabsence d’une autre maladie neurodégénérative ou céré-\nbrovasculaire, d’une autre maladie mentale, neurologique\nou systémique ou de toute autre aection pouvant contri-\nbuer au déclin cognitif).\nENCADRÉ 27.6 Critères diagnostiques du trouble\nneurocognitif majeur ou léger dû\nà une lésion cérébrale traumatique\nDSM-5\n294.1x (F02.8x) Trouble neurocognitif majeur ou léger\ndû à une lésion cérébrale traumatique\nA. Les critères d’un trouble neurocognitif majeur ou léger sont remplis\n(voir l’encadré 27.1).\nB. Mise en évidence d’une lésion cérébrale traumatique, c’est-à-dire\nd’un impact sur la tête ou d’un autre mécanisme d’ébranlement rapide\nou de déplacement du cerveau à l’intérieur de la boîte crânienne, avec\nau moins un des éléments suivants :\n1. Perte de conscience.\n2. Amnésie post-traumatique.\n3. Désorientation et confusion.\n4. Signes neurologiques (p. ex., lésion décelable en neuro-imagerie,\napparition récente de crises comitiales, aggravation marquée d’une comi-\ntialité préexistante, amputation du champ visuel, anosmie, hémiparésie).\nC. Le trouble neurocognitif est observé immédiatement après la survenue\nde la lésion cérébrale traumatique ou immédiatement après la reprise de\nla conscience et persiste au-delà de la période aiguë post-traumatique.\nSource : APA (2015), p. 737.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic\nand Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles\nMentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson\nSAS, Paris, 2015. All rights reserved.\nENCADRÉ 27.7 Critères diagnostiques du trouble\nneurocognitif dû à la maladie de Parkinson\nDSM-5\n294.1x (F02.8x) Trouble neurocognitif majeur dû à la maladie\nde Parkinson\nA. Les critères d’un trouble neurocognitif majeur ou léger sont remplis\n(voir l’encadré 27.1).\nB. La perturbation survient durant le contexte d’une maladie de Parkinson\nconnue.\nC. Il y a début insidieux et une progression graduelle de l’atteinte.\nD. Le trouble neurocognitif n’est pas imputable à une autre affection\nmédicale et n’est pas mieux expliqué par un trouble mental.\nSource : APA (2015), p. 751.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic\nand Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles\nMentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson\nSAS, Paris, 2015. All rights reserved.\nDémence due à la maladie de Parkinson\nChez les patients sourant de la MP, le risque de démence est\nmultiplié par six. La prévalence de la démence dans la MP est\nde 20 à 40 %, et l’incidence est de 69 cas par 1000 personnes\npar an dans le monde (Goldmann & al., 2008). Les facteurs de\nrisque sont l’âge, la présence de signes extrapyramidaux graves,\nENCADRÉ 27.5 Critères diagnostiques du trouble\nneurocognitif majeur ou léger\ndû à une infection par le VIH\nDSM-5\n291.1x (F02.8x) Trouble neurocognitif majeur dû à une infection\npar le virus de l’immunodécience humaine\nA. Les critères d’un trouble neurocognitif majeur ou léger sont remplis.\nB. Il y a une infection conrmée par le virus de l’immunodécience\nhumain (VIH).\nC. Le trouble neurocognitif n’est pas mieux expliqué par une autre affec-\ntion médicale non-VIH, y compris des maladies cérébrales secondaires\ntelles qu’une leucoencéphalopathie multifocale progressive ou une\nméningite à cryptocoques.\nD. Le trouble neurocognitif n’est pas imputable à une autre affection\nmédicale et n’est pas mieux expliqué par un trouble mental.\nSource : APA (2015), p. 746.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic\nand Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles\nMentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson\nSAS, Paris, 2015. All rights reserved.\n",
+  "raw_text_sha256": "095685ffe9a015ab1183797a4519c1e5b8dc0972bcfd2756376e34be5b349d3d",
+  "source_page_display": 614,
+  "source_page_index": 613
+}

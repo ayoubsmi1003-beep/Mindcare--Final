@@ -1,0 +1,100 @@
+{
+  "block_sequence_sha256": "fda48352e973dce14c995d8b8d75212c79993abe87f132fc3c5d7c80253e0f36",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        471.6627197265625,
+        758.8693237304688
+      ],
+      "block_id": "page-0139-block-0001",
+      "order": 1,
+      "text": "122\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2 Déterminants bio-psycho-sociaux\n",
+      "text_sha256": "844b08498222b5d6331e43e198ed4fe7ac83394713815ee4d2c042e20b28854f"
+    },
+    {
+      "bbox": [
+        306.0,
+        431.4658203125,
+        549.1954956054688,
+        556.95849609375
+      ],
+      "block_id": "page-0139-block-0002",
+      "order": 2,
+      "text": "von Euler en 1946. La NA est le neurotransmetteur utilisé par\nles fibres postganglionnaires de la branche sympathique du\nsystème nerveux autonome (SNA). Ce n’est qu’une décennie\nplus tard que son rôle dans la neurotransmission du SNC a été\ndémontré. La NA joue un rôle crucial dans le fonctionnement\ndes structures corticales et sous-corticales mises en cause\ndans diverses maladies mentales et troubles du comportement\n(p. ex., la dépression majeure, le trouble déficit de l’attention).\nElle participe au contrôle de l’éveil et de l’attention soutenue,\nde l’appétence, de la réponse au stress, de l’humeur et de\nl’anxiété (voir les figures supplémentaires).\n",
+      "text_sha256": "1f5ed18dc431ac2859c3987a251741da153e1b35d982a3cc082a387190e6ca4c"
+    },
+    {
+      "bbox": [
+        306.0,
+        561.852294921875,
+        549.5066528320312,
+        725.97607421875
+      ],
+      "block_id": "page-0139-block-0003",
+      "order": 3,
+      "text": "Topochimie\nAu début des années 1960, les chercheurs suédois, A. Dalhström\net K. Björklund, ont mis au point une méthode d’histouorescence\nqui leur a permis d’établir la topochimie des neurones mono-\naminergiques dans le SNC. La topochimie est une classication\nqui fait appel à un code alphanumérique pour identier les\ngroupements cellulaires producteurs d’un neurotransmetteur.\nCette classication, qui est toujours utilisée aujourd’hui, est\nparticulièrement utile parce que ces groupements ne corres-\npondent pas exactement aux noyaux dénis anatomiquement.\nLa numérotation des groupements monoaminergiques et cho-\nlinergiques se fait ainsi :\n• A1 à A7, groupements noradrénergiques ;\n• A8 à A17, groupements dopaminergiques ;\n",
+      "text_sha256": "da0ca48913e80c61b84ef817d3f0e6d158b3a86bbc8dec0d4152252d930b30d3"
+    },
+    {
+      "bbox": [
+        60.0,
+        431.4658203125,
+        291.0095520019531,
+        467.0085144042969
+      ],
+      "block_id": "page-0139-block-0004",
+      "order": 4,
+      "text": "benzène avec deux radicaux hydroxyles, d’où leur nom :\ncatécholamines ;\nb) une indolamine dérivée du tryptophane : la sérotonine\n",
+      "text_sha256": "904414abf571f2fceed1ad8d02c28609f1a6dd0d53aafa57591627a3f6087d38"
+    },
+    {
+      "bbox": [
+        48.0,
+        468.0658264160156,
+        291.29742431640625,
+        665.7584838867188
+      ],
+      "block_id": "page-0139-block-0005",
+      "order": 5,
+      "text": "ou 5-hydroxytryptamine (5-HT). Les catécholamines et\nla sérotonine étant synthétisées à partir d’un acide aminé,\non les regroupe sous l’appellation monoamines ;\nc) un ester acétylé de la choline : l’acétylcholine (ACh) ;\nd) une imidazole, dérivée de l’histidine : l’histamine (H).\n2. Les acides aminés comprennent :\na) l’acide γ-aminobutyrique (GABA) ;\nb) la glycine (GLY) ;\nc) le glutamate (GLU).\n3. Les neuropeptides sont des neurotransmetteurs constitués\nd’une chaîne plus ou moins longue d’acides aminés, issue d’une\nmolécule précurseur, scindée en plusieurs segments par des\nenzymes. Il en existe un grand nombre dans le SNC. Ils sont\ngénéralement colocalisés avec d’autres neurotransmetteurs qui\nsont soit d’autres neuropeptides, soit des neurotransmetteurs\nclassiques comme, les acides aminés ou les monoamines.\n",
+      "text_sha256": "5cadbae9c1e98321f79f7a5436ee01f357a4e6c59d02fc967172e774e5c0cc8b"
+    },
+    {
+      "bbox": [
+        48.0,
+        676.6830444335938,
+        291.2177734375,
+        725.45849609375
+      ],
+      "block_id": "page-0139-block-0006",
+      "order": 6,
+      "text": "Noradrénaline\nLe rôle de la noradrénaline (NA), aussi appelée norépinéphrine,\ncomme neurotransmetteur a été démontré pour la première\nfois dans le système nerveux périphérique par le Suédois Ulf\n",
+      "text_sha256": "d319c8f9185c4c86f33972d96960892972a2e25e640f5923699283f6e18bbea4"
+    },
+    {
+      "bbox": [
+        50.400001525878906,
+        41.002296447753906,
+        354.0908203125,
+        53.320068359375
+      ],
+      "block_id": "page-0139-block-0007",
+      "order": 7,
+      "text": "FIGURE 6.8 Structures chimiques des trois classes de neurotransmetteurs\n",
+      "text_sha256": "c5d87c9fd2c56ef909d935ca5f314a81a60b3bc5501601faca7b6bc319568d37"
+    }
+  ],
+  "coordinates_sha256": "492a04731ecd2ce1c8bcf2b0dfdd67aadcfa0f755cfa003f51c4969ffef5d89a",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0139",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "122\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2 Déterminants bio-psycho-sociaux\nvon Euler en 1946. La NA est le neurotransmetteur utilisé par\nles fibres postganglionnaires de la branche sympathique du\nsystème nerveux autonome (SNA). Ce n’est qu’une décennie\nplus tard que son rôle dans la neurotransmission du SNC a été\ndémontré. La NA joue un rôle crucial dans le fonctionnement\ndes structures corticales et sous-corticales mises en cause\ndans diverses maladies mentales et troubles du comportement\n(p. ex., la dépression majeure, le trouble déficit de l’attention).\nElle participe au contrôle de l’éveil et de l’attention soutenue,\nde l’appétence, de la réponse au stress, de l’humeur et de\nl’anxiété (voir les figures supplémentaires).\nTopochimie\nAu début des années 1960, les chercheurs suédois, A. Dalhström\net K. Björklund, ont mis au point une méthode d’histouorescence\nqui leur a permis d’établir la topochimie des neurones mono-\naminergiques dans le SNC. La topochimie est une classication\nqui fait appel à un code alphanumérique pour identier les\ngroupements cellulaires producteurs d’un neurotransmetteur.\nCette classication, qui est toujours utilisée aujourd’hui, est\nparticulièrement utile parce que ces groupements ne corres-\npondent pas exactement aux noyaux dénis anatomiquement.\nLa numérotation des groupements monoaminergiques et cho-\nlinergiques se fait ainsi :\n• A1 à A7, groupements noradrénergiques ;\n• A8 à A17, groupements dopaminergiques ;\nbenzène avec deux radicaux hydroxyles, d’où leur nom :\ncatécholamines ;\nb) une indolamine dérivée du tryptophane : la sérotonine\nou 5-hydroxytryptamine (5-HT). Les catécholamines et\nla sérotonine étant synthétisées à partir d’un acide aminé,\non les regroupe sous l’appellation monoamines ;\nc) un ester acétylé de la choline : l’acétylcholine (ACh) ;\nd) une imidazole, dérivée de l’histidine : l’histamine (H).\n2. Les acides aminés comprennent :\na) l’acide γ-aminobutyrique (GABA) ;\nb) la glycine (GLY) ;\nc) le glutamate (GLU).\n3. Les neuropeptides sont des neurotransmetteurs constitués\nd’une chaîne plus ou moins longue d’acides aminés, issue d’une\nmolécule précurseur, scindée en plusieurs segments par des\nenzymes. Il en existe un grand nombre dans le SNC. Ils sont\ngénéralement colocalisés avec d’autres neurotransmetteurs qui\nsont soit d’autres neuropeptides, soit des neurotransmetteurs\nclassiques comme, les acides aminés ou les monoamines.\nNoradrénaline\nLe rôle de la noradrénaline (NA), aussi appelée norépinéphrine,\ncomme neurotransmetteur a été démontré pour la première\nfois dans le système nerveux périphérique par le Suédois Ulf\nFIGURE 6.8 Structures chimiques des trois classes de neurotransmetteurs\n",
+  "raw_text_sha256": "fa85e7aefb43c53cc3d5415fb529073d4f502d79d0ea281b44e6fcc34ea1d936",
+  "source_page_display": 140,
+  "source_page_index": 139
+}

@@ -1,0 +1,160 @@
+{
+  "block_sequence_sha256": "512b324671a531d81a5f128707387dbd872d2d341502fe2f4036612466835a75",
+  "blocks": [
+    {
+      "bbox": [
+        362.5,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0618-block-0001",
+      "order": 1,
+      "text": "Chapitre 27\nTroubles neurocognitifs\n601\n",
+      "text_sha256": "357c86bb703ec71f7a632018cf141bf69a3a21a16add1fdb0facf5a738344d3a"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.9658203125,
+        296.9615478515625,
+        152.85850524902344
+      ],
+      "block_id": "page-0618-block-0002",
+      "order": 2,
+      "text": "(Lipton & Rubin, 2009). Un résultat inférieur à 25 sur 30 suggère\nla présence d’un delirium ou d’une démence, et on parle plus\nprécisément de :\n• démence légère : de 19 à 24 sur 30 ;\n• démence modérée : de 10 à 18 sur 30 ;\n• démence grave : inférieur à 10 sur 30.\nIl existe des normes spéciques en fonction de l’âge, du sexe\net du niveau de scolarité. Ce test est toutefois peu sensible s’il\ns’agit de diagnostiquer une démence légère.\n",
+      "text_sha256": "aebe5d1167cd2487f44e7b90e0c9fd0dc76f99e0a2c440d418db1409ad6c7794"
+    },
+    {
+      "bbox": [
+        54.0,
+        154.06582641601562,
+        297.2668151855469,
+        417.8085021972656
+      ],
+      "block_id": "page-0618-block-0003",
+      "order": 3,
+      "text": "Le Montreal Cognitive Assessment (MoCA) (Nasreddine &\nal., 2005) (voir la gure 27.5) a été conçu pour évaluer les dys-\nfonctions cognitives légères (sensibilité de 100 %, spécicité de\n87 %). Il évalue l’attention, la concentration, les fonctions exé-\ncutives, la mémoire, le langage, les capacités visuoconstructives,\nles capacités d’abstraction, le calcul et l’orientation. Le temps\nd’exécution est d’environ 10 minutes. Un score de 26 et plus sur\n30 est considéré normal.\nLe test de l’horloge (voir la gure 27.6) évalue les fonctions\nexécutives et les habiletés visuospatiales (sensibilité de 20 à 86 %,\nspécicité de 60 à 96 % [Sunderland & al., 1989]) et peut complé-\nter le MMSE. Il est intégré au MoCA. Il est utile pour les cas de\ndémence modérée à grave. Il prend en moyenne deux minutes\nà administrer, il est simple et non menaçant pour le patient.\nOn présente au patient une feuille blanche et on lui demande :\n• de dessiner un cercle assez grand pour écrire à l’intérieur ;\n• de placer des chires dans le cercle pour indiquer les heures\nd’une horloge ;\n• de dessiner des aiguilles indiquant 11 h 10.\nIl n’y a pas de temps limite. Ce test est normal si tous les\nchires sont inscrits dans une séquence correcte et si les aiguilles\nindiquent l’heure demandée.\n",
+      "text_sha256": "8ec8a44d3ed375e009800d9744e079e99a116a6de84be6112029856c2464d07b"
+    },
+    {
+      "bbox": [
+        54.0,
+        419.0158386230469,
+        297.32275390625,
+        487.8584899902344
+      ],
+      "block_id": "page-0618-block-0004",
+      "order": 4,
+      "text": "Le Mini-Cog (Borson &al.,2000) est un test de dépistage simple\net rapide, composé du rappel des trois mots sans indice et suivi\ndu test de l’horloge. Un rappel de 0/3 signale une démence et de\n3/3 l’exclut. Un résultat intermédiaire est tranché par les résultats\nà l’horloge. La sensibilité (76 %) et la spécicité (89 %) du Mini-\nCog sont comparables au MMSE dans des études rétrospectives.\n",
+      "text_sha256": "12c5b5c912309cd266a6725bf01280a5f22fbf612a6ae9db0ea903f1685cf902"
+    },
+    {
+      "bbox": [
+        54.0,
+        489.0658264160156,
+        297.4765930175781,
+        569.6085205078125
+      ],
+      "block_id": "page-0618-block-0005",
+      "order": 5,
+      "text": "La batterie rapide d’ecience frontale (Dubois & al., 2000)\névalue les fonctions exécutives au moyen de six sous-tests (simi-\nlitudes, uence verbale, comportement de préhension, séquences\nmotrices de Luria, épreuves des consignes contradictoires et\népreuve de Go-No Go) et permet d’évaluer les dysfonctionne-\nments des lobes frontaux. Sa passation dure environ 10 minutes\net sa validité discriminante est de 89,1 %.\n",
+      "text_sha256": "7c3f074bfec847730602045ace42c78acb4e29116db42eef3262c50e4d7dfd48"
+    },
+    {
+      "bbox": [
+        54.0,
+        570.8158569335938,
+        297.0887145996094,
+        651.4085083007812
+      ],
+      "block_id": "page-0618-block-0006",
+      "order": 6,
+      "text": "L’Échelle clinique de la démence (Clinical Dementia Rating\nScale [CDR]) (voir le tableau 27.10) est utile pour établir la gra-\nvité de la DTA ainsi que sa progression. Elle fournit des indices\nconcernant les domaines de la mémoire, de l’orientation, du\njugement, de la résolution de problèmes, des activités poursuivies\nhors de chez soi, des activités à la maison, des passe-temps et de\nla prise en charge personnelle.\n",
+      "text_sha256": "364e92e496f912e4d976e1ebdd6a126efc7252b6f9392117b61e4282c2058d33"
+    },
+    {
+      "bbox": [
+        54.0,
+        652.5658569335938,
+        297.35565185546875,
+        698.1085205078125
+      ],
+      "block_id": "page-0618-block-0007",
+      "order": 7,
+      "text": "Les tests neuropsychologiques peuvent aussi aider à diagnos-\ntiquer la démence, mais pas tellement ses variantes. Les résultats\nsont limités par le chevauchement substantiel que l’on observe\nentre les divers types de démence.\n",
+      "text_sha256": "9b426ad6b7c44171870f6a5c58d205f28394d308179dfd76b3b6f49dabf2aabd"
+    },
+    {
+      "bbox": [
+        74.0,
+        704.2741088867188,
+        278.53515625,
+        725.05029296875
+      ],
+      "block_id": "page-0618-block-0008",
+      "order": 8,
+      "text": "L’évaluation neuropsychologique est présentée en détail\nau chapitre 4.\n",
+      "text_sha256": "cdbba571685bcd55632887d1b13f915c7016f2116a95245f39cadc54170077ff"
+    },
+    {
+      "bbox": [
+        312.0,
+        40.9658203125,
+        555.2764892578125,
+        121.0584945678711
+      ],
+      "block_id": "page-0618-block-0009",
+      "order": 9,
+      "text": "Les tests génétiques soulèvent d’importantes questions\néthiques (principe d’autonomie par opposition aux conséquences\npsychologiques malheureuses que pourrait entraîner l’annonce\nd’un diagnostic de maladie incurable en phase présymptoma-\ntique). À l’heure actuelle, ces tests ne sont pas recommandés,\nd’autant plus qu’il n’existe pas à ce jour de traitement préventif\nni curatif pour la démence de type Alzheimer (DTA).\n",
+      "text_sha256": "f5f17fba28f9e20acd4305f8b2f90a38652772619b684eb5c1faaf9781f240c3"
+    },
+    {
+      "bbox": [
+        312.0,
+        122.16581726074219,
+        555.2880249023438,
+        601.45849609375
+      ],
+      "block_id": "page-0618-block-0010",
+      "order": 10,
+      "text": "Des marqueurs peuvent être dosés dans le liquide cépha-\nlorachidien, et sont utilisés uniquement dans un contexte de\nrecherche :\n• l’augmentation de protéine tau totale, un marqueur de dégé-\nnérescence axonale et neuronale ;\n• l’augmentation de protéine tau phosphorylée, un marqueur\nd’enchevêtrements neurobrillaires ;\n• la diminution de protéine ß-amyloïde A42, un marqueur d’une\ndéposition intracorticale accrue.\nL’utilisation de la neuro-imagerie demeure controversée, mais\nelle est recommandée par la Troisième conférence canadienne\nde consensus sur le diagnostic et le traitement de la démence\n(2007) dans certaines situations :\n• un âge inférieur à 60 ans ;\n• un déclin rapide (en un ou deux mois) et inexpliqué des\nfonctions cognitives ou du fonctionnement ;\n• des troubles cognitifs ou symptômes inhabituels ou aty-\npiques ;\n• une démence récente (moins de deux ans) ;\n• un trauma crânien récent ou important ;\n• des symptômes neurologiques inexpliqués, tout nouveau\nsigne neurologique focal ou un trouble de la démarche ;\n• des antécédents de cancer, surtout les types de cancer qui\nproduisent des métastases cérébrales : mélanome, carcinome\n(poumon, sein, rein, colorectal) ;\n• une prise d’anticoagulants ou des antécédents de trouble de\nla coagulation ;\n• des antécédents d’incontinence urinaire et de troubles de la\ndémarche dans les premiers stades de la démence (hydro-\ncéphalie à pression normale).\nLa TEP peut aider à distinguer la DTA de la DFT (Bocti,\n2008). Diverses techniques de marquage, telles que le composé\ntraceur B de Pittsburgh (PiB) qui se lie aux plaques brillaires\nß-amyloïdes (PiB-scan), font actuellement l’objet de travaux de\nrecherche (voir les gures supplémentaires). Des études sug-\ngèrent que le PiB-scan est sensible à la pathologie de la DTA. Il\npeut permettre de distinguer la DTA des autres types démences\n(p. ex., la DFT) et peut aider à déterminer si un trouble cognitif\nléger est dû à la DTA (Laforce & Rabinovici, 2011).\n",
+      "text_sha256": "829a12dd6caf91252aee0168573b4a4e6eb6b1b4e688d49d24be9105dd0c598b"
+    },
+    {
+      "bbox": [
+        312.0,
+        602.5658569335938,
+        555.4052734375,
+        686.6585083007812
+      ],
+      "block_id": "page-0618-block-0011",
+      "order": 11,
+      "text": "Le processus physiopathologique de la DTA semble s’amor-\ncer plusieurs années avant que le diagnostic ne soit posé. Cette\nlongue phase préclinique pourrait être dénie par une cascade\npathologique en trois stades, que l’on peut associer aux biomar-\nqueurs suivants :\n• amyloïdose asymptomatique :\n– augmentation de rétention des traceurs amyloïdes à la\n",
+      "text_sha256": "08c7e3ff77a790ffaa402fd6d09e23f615d985450c3695713b82751e21ee8218"
+    },
+    {
+      "bbox": [
+        312.0,
+        687.7658081054688,
+        542.2203979492188,
+        725.97607421875
+      ],
+      "block_id": "page-0618-block-0012",
+      "order": 12,
+      "text": "TEP ;\n– diminution de protéine ß-amyloïde A42 dans le LCR.\n• amyloïdose + neurodégénérescence :\n",
+      "text_sha256": "ea203528119e9880b358e91b0eb149865f293e746098b7e226486cac28244c0f"
+    }
+  ],
+  "coordinates_sha256": "a27ad35347a03e1da265f0ca5f436b4c775737b8112525840870ab5a24745fa8",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0618",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 27\nTroubles neurocognitifs\n601\n(Lipton & Rubin, 2009). Un résultat inférieur à 25 sur 30 suggère\nla présence d’un delirium ou d’une démence, et on parle plus\nprécisément de :\n• démence légère : de 19 à 24 sur 30 ;\n• démence modérée : de 10 à 18 sur 30 ;\n• démence grave : inférieur à 10 sur 30.\nIl existe des normes spéciques en fonction de l’âge, du sexe\net du niveau de scolarité. Ce test est toutefois peu sensible s’il\ns’agit de diagnostiquer une démence légère.\nLe Montreal Cognitive Assessment (MoCA) (Nasreddine &\nal., 2005) (voir la gure 27.5) a été conçu pour évaluer les dys-\nfonctions cognitives légères (sensibilité de 100 %, spécicité de\n87 %). Il évalue l’attention, la concentration, les fonctions exé-\ncutives, la mémoire, le langage, les capacités visuoconstructives,\nles capacités d’abstraction, le calcul et l’orientation. Le temps\nd’exécution est d’environ 10 minutes. Un score de 26 et plus sur\n30 est considéré normal.\nLe test de l’horloge (voir la gure 27.6) évalue les fonctions\nexécutives et les habiletés visuospatiales (sensibilité de 20 à 86 %,\nspécicité de 60 à 96 % [Sunderland & al., 1989]) et peut complé-\nter le MMSE. Il est intégré au MoCA. Il est utile pour les cas de\ndémence modérée à grave. Il prend en moyenne deux minutes\nà administrer, il est simple et non menaçant pour le patient.\nOn présente au patient une feuille blanche et on lui demande :\n• de dessiner un cercle assez grand pour écrire à l’intérieur ;\n• de placer des chires dans le cercle pour indiquer les heures\nd’une horloge ;\n• de dessiner des aiguilles indiquant 11 h 10.\nIl n’y a pas de temps limite. Ce test est normal si tous les\nchires sont inscrits dans une séquence correcte et si les aiguilles\nindiquent l’heure demandée.\nLe Mini-Cog (Borson &al.,2000) est un test de dépistage simple\net rapide, composé du rappel des trois mots sans indice et suivi\ndu test de l’horloge. Un rappel de 0/3 signale une démence et de\n3/3 l’exclut. Un résultat intermédiaire est tranché par les résultats\nà l’horloge. La sensibilité (76 %) et la spécicité (89 %) du Mini-\nCog sont comparables au MMSE dans des études rétrospectives.\nLa batterie rapide d’ecience frontale (Dubois & al., 2000)\névalue les fonctions exécutives au moyen de six sous-tests (simi-\nlitudes, uence verbale, comportement de préhension, séquences\nmotrices de Luria, épreuves des consignes contradictoires et\népreuve de Go-No Go) et permet d’évaluer les dysfonctionne-\nments des lobes frontaux. Sa passation dure environ 10 minutes\net sa validité discriminante est de 89,1 %.\nL’Échelle clinique de la démence (Clinical Dementia Rating\nScale [CDR]) (voir le tableau 27.10) est utile pour établir la gra-\nvité de la DTA ainsi que sa progression. Elle fournit des indices\nconcernant les domaines de la mémoire, de l’orientation, du\njugement, de la résolution de problèmes, des activités poursuivies\nhors de chez soi, des activités à la maison, des passe-temps et de\nla prise en charge personnelle.\nLes tests neuropsychologiques peuvent aussi aider à diagnos-\ntiquer la démence, mais pas tellement ses variantes. Les résultats\nsont limités par le chevauchement substantiel que l’on observe\nentre les divers types de démence.\nL’évaluation neuropsychologique est présentée en détail\nau chapitre 4.\nLes tests génétiques soulèvent d’importantes questions\néthiques (principe d’autonomie par opposition aux conséquences\npsychologiques malheureuses que pourrait entraîner l’annonce\nd’un diagnostic de maladie incurable en phase présymptoma-\ntique). À l’heure actuelle, ces tests ne sont pas recommandés,\nd’autant plus qu’il n’existe pas à ce jour de traitement préventif\nni curatif pour la démence de type Alzheimer (DTA).\nDes marqueurs peuvent être dosés dans le liquide cépha-\nlorachidien, et sont utilisés uniquement dans un contexte de\nrecherche :\n• l’augmentation de protéine tau totale, un marqueur de dégé-\nnérescence axonale et neuronale ;\n• l’augmentation de protéine tau phosphorylée, un marqueur\nd’enchevêtrements neurobrillaires ;\n• la diminution de protéine ß-amyloïde A42, un marqueur d’une\ndéposition intracorticale accrue.\nL’utilisation de la neuro-imagerie demeure controversée, mais\nelle est recommandée par la Troisième conférence canadienne\nde consensus sur le diagnostic et le traitement de la démence\n(2007) dans certaines situations :\n• un âge inférieur à 60 ans ;\n• un déclin rapide (en un ou deux mois) et inexpliqué des\nfonctions cognitives ou du fonctionnement ;\n• des troubles cognitifs ou symptômes inhabituels ou aty-\npiques ;\n• une démence récente (moins de deux ans) ;\n• un trauma crânien récent ou important ;\n• des symptômes neurologiques inexpliqués, tout nouveau\nsigne neurologique focal ou un trouble de la démarche ;\n• des antécédents de cancer, surtout les types de cancer qui\nproduisent des métastases cérébrales : mélanome, carcinome\n(poumon, sein, rein, colorectal) ;\n• une prise d’anticoagulants ou des antécédents de trouble de\nla coagulation ;\n• des antécédents d’incontinence urinaire et de troubles de la\ndémarche dans les premiers stades de la démence (hydro-\ncéphalie à pression normale).\nLa TEP peut aider à distinguer la DTA de la DFT (Bocti,\n2008). Diverses techniques de marquage, telles que le composé\ntraceur B de Pittsburgh (PiB) qui se lie aux plaques brillaires\nß-amyloïdes (PiB-scan), font actuellement l’objet de travaux de\nrecherche (voir les gures supplémentaires). Des études sug-\ngèrent que le PiB-scan est sensible à la pathologie de la DTA. Il\npeut permettre de distinguer la DTA des autres types démences\n(p. ex., la DFT) et peut aider à déterminer si un trouble cognitif\nléger est dû à la DTA (Laforce & Rabinovici, 2011).\nLe processus physiopathologique de la DTA semble s’amor-\ncer plusieurs années avant que le diagnostic ne soit posé. Cette\nlongue phase préclinique pourrait être dénie par une cascade\npathologique en trois stades, que l’on peut associer aux biomar-\nqueurs suivants :\n• amyloïdose asymptomatique :\n– augmentation de rétention des traceurs amyloïdes à la\nTEP ;\n– diminution de protéine ß-amyloïde A42 dans le LCR.\n• amyloïdose + neurodégénérescence :\n",
+  "raw_text_sha256": "e091fd260764d1cbb8a8452797ed098e422d68b51c16932342d582fe3d82e0f4",
+  "source_page_display": 619,
+  "source_page_index": 618
+}

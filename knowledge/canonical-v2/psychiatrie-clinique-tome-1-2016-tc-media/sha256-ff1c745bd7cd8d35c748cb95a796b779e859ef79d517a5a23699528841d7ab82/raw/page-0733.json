@@ -1,0 +1,100 @@
+{
+  "block_sequence_sha256": "024f749560a7e1502acc3caa980fda9d18e99325623d1c2235b473a241b9df89",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0733-block-0001",
+      "order": 1,
+      "text": "716\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "9b51e59a9728e17ab30211d8787c24c15d00c4068bf0e70f17fce22b7f32a615"
+    },
+    {
+      "bbox": [
+        60.0,
+        40.9658203125,
+        291.01751708984375,
+        130.45849609375
+      ],
+      "block_id": "page-0733-block-0002",
+      "order": 2,
+      "text": "d’expression de plusieurs fonctions physiologiques et psy-\nchologiques comme :\na) le cycle veille-sommeil ;\nb) la température corporelle ;\nc) la sécrétion de plusieurs hormones, dont la mélatonine ;\nd) l’humeur ;\ne) certaines habiletés cognitives : l’attention, la mémoire,\n",
+      "text_sha256": "935ac120c547d3801a49d29eb710b58bcaaf345ae495936ccb113ba00ef7e9e5"
+    },
+    {
+      "bbox": [
+        60.0,
+        131.4658203125,
+        290.9683837890625,
+        155.45849609375
+      ],
+      "block_id": "page-0733-block-0003",
+      "order": 3,
+      "text": "la uidité verbale ;\nf) des habiletés psychomotrices comme le temps de\n",
+      "text_sha256": "2d5f6161f873b8cfca1d4c10007ccfbbd3bb39413b36c544ab3d3594d08e4d74"
+    },
+    {
+      "bbox": [
+        60.0,
+        156.4658203125,
+        291.24102783203125,
+        272.45849609375
+      ],
+      "block_id": "page-0733-block-0004",
+      "order": 4,
+      "text": "réaction.\nL’horloge biologique circadienne est elle-même réglée par\ndes éléments intrinsèques comme la transcription ryth-\nmique de certains gènes, mais elle est aussi inuencée par\ndes synchroniseurs extrinsèques, par exemple la lumière\nambiante. Ainsi. la sécrétion de la mélatonine a un rythme cir-\ncadien spontané de 24 heures, mais elle est supprimée\npar la lumière peu importe l’heure, ce qui explique que\nl’exposition à la lumière de l’écran d’un téléviseur ou d’un\nordinateur interfère avec sa sécrétion. Un autre rôle de\n",
+      "text_sha256": "1d6b90027e292b920cd8733519d404c87f0bc981bc53a3d6fed78a397a1a6416"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.1931762695312,
+        273.95849609375
+      ],
+      "block_id": "page-0733-block-0005",
+      "order": 5,
+      "text": "l’horloge biologique circadienne est celui de synchroniser\nentre elles les fonctions placées sous sa gouverne. C’est ce\nqui fait que l’on tend à s’endormir davantage au moment\noù la température corporelle baisse, qu’il fait noir et que\nla sécrétion de mélatonine augmente ; conséquemment, la\nquantité et la qualité du sommeil qui s’ensuit sont d’autant\nmeilleures si ces trois conditions sont réunies.\n2. La pression homéostatique est un mécanisme qui facilite le\nsommeil proportionnellement au temps d’éveil accumulé\navant le coucher ; c’est la dette accumulée de besoin de\nsommeil, c’est-à-dire le nombre d’heures d’éveil depuis\nle lever, le retard pour aller au lit. Ainsi, la personne qui\na passé une nuit à dormir dans des conditions optimales\nest peu somnolente le matin. La somnolence augmente\nensuite progressivement à mesure que la journée avance,\njusqu’au point où la dette accumulée de besoin de som-\nmeil est intolérable et où une période de sommeil devient\ninévitable.\nL’horloge biologique et la pression homéostatique combinent\nleurs inuences respectives de sorte que chaque personne s’endort\n",
+      "text_sha256": "38e85b817ced7e0ab48aab3147b87ad1760e4afda954fe12cf9eb60e7ba9cbec"
+    },
+    {
+      "bbox": [
+        50.400001525878906,
+        299.9023132324219,
+        497.4033508300781,
+        312.2200622558594
+      ],
+      "block_id": "page-0733-block-0006",
+      "order": 6,
+      "text": "FIGURE 32.1 Représentation schématique de synchroniseurs circadiens qui déterminent le début du sommeil\n",
+      "text_sha256": "af5d31709c24d571cd788c897a2c16d46e87526126cb5582bf1f925e165df26c"
+    },
+    {
+      "bbox": [
+        100.75,
+        311.7522888183594,
+        147.3297576904297,
+        323.7200622558594
+      ],
+      "block_id": "page-0733-block-0007",
+      "order": 7,
+      "text": "et sa durée\n",
+      "text_sha256": "64e41aa7741a34031f0e2f1343c295aeec28ef4c97ffd0ecea290551fea4e403"
+    }
+  ],
+  "coordinates_sha256": "eb0a09af43fc32ea52614b4a4f004b9f2f204ea109255dc19825bbacfcc40457",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0733",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "716\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nd’expression de plusieurs fonctions physiologiques et psy-\nchologiques comme :\na) le cycle veille-sommeil ;\nb) la température corporelle ;\nc) la sécrétion de plusieurs hormones, dont la mélatonine ;\nd) l’humeur ;\ne) certaines habiletés cognitives : l’attention, la mémoire,\nla uidité verbale ;\nf) des habiletés psychomotrices comme le temps de\nréaction.\nL’horloge biologique circadienne est elle-même réglée par\ndes éléments intrinsèques comme la transcription ryth-\nmique de certains gènes, mais elle est aussi inuencée par\ndes synchroniseurs extrinsèques, par exemple la lumière\nambiante. Ainsi. la sécrétion de la mélatonine a un rythme cir-\ncadien spontané de 24 heures, mais elle est supprimée\npar la lumière peu importe l’heure, ce qui explique que\nl’exposition à la lumière de l’écran d’un téléviseur ou d’un\nordinateur interfère avec sa sécrétion. Un autre rôle de\nl’horloge biologique circadienne est celui de synchroniser\nentre elles les fonctions placées sous sa gouverne. C’est ce\nqui fait que l’on tend à s’endormir davantage au moment\noù la température corporelle baisse, qu’il fait noir et que\nla sécrétion de mélatonine augmente ; conséquemment, la\nquantité et la qualité du sommeil qui s’ensuit sont d’autant\nmeilleures si ces trois conditions sont réunies.\n2. La pression homéostatique est un mécanisme qui facilite le\nsommeil proportionnellement au temps d’éveil accumulé\navant le coucher ; c’est la dette accumulée de besoin de\nsommeil, c’est-à-dire le nombre d’heures d’éveil depuis\nle lever, le retard pour aller au lit. Ainsi, la personne qui\na passé une nuit à dormir dans des conditions optimales\nest peu somnolente le matin. La somnolence augmente\nensuite progressivement à mesure que la journée avance,\njusqu’au point où la dette accumulée de besoin de som-\nmeil est intolérable et où une période de sommeil devient\ninévitable.\nL’horloge biologique et la pression homéostatique combinent\nleurs inuences respectives de sorte que chaque personne s’endort\nFIGURE 32.1 Représentation schématique de synchroniseurs circadiens qui déterminent le début du sommeil\net sa durée\n",
+  "raw_text_sha256": "68b46b586eec423723cf9a869de0601e3063e41eb7d29645a67e6224802f08f8",
+  "source_page_display": 734,
+  "source_page_index": 733
+}

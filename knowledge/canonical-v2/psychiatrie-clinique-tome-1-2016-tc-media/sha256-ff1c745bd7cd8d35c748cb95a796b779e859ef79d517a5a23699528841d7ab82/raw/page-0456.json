@@ -1,0 +1,436 @@
+{
+  "block_sequence_sha256": "020134ad5b3ae8f0eb3982c5c0ffb9138f5cd32b066257f7baceb85eea516760",
+  "blocks": [
+    {
+      "bbox": [
+        317.1499938964844,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0456-block-0001",
+      "order": 1,
+      "text": "Chapitre 20\nTroubles anxieux, panique, phobies\n439\n",
+      "text_sha256": "a19cf0f7425bce64ae5635c3bb9faa6cf481c303a1008b1e39df7853d039ae1d"
+    },
+    {
+      "bbox": [
+        312.0,
+        39.63300704956055,
+        555.436767578125,
+        365.45849609375
+      ],
+      "block_id": "page-0456-block-0002",
+      "order": 2,
+      "text": "Benzodiazépines\nLes benzodiazépines ont été les premiers agents anxiolytiques\ndécouverts, elles aussi, par hasard, dans les années 1950. Elles\nagissent en se fixant sur un site spécifique du récepteur de\nl’acide γ-aminobutyrique (GABA) de type A, entraînant ainsi\nune augmentation de la biodisponibilité du GABA, un neuro-\ntransmetteur inhibiteur général du système nerveux central.\nD’où le large spectre des eets divers des benzodiazépines en\ntant qu’anxiolytiques, anticonvulsivants, myorelaxants et séda-\ntifs, voire somnifères. Leur tolérabilité et leur action rapide les\nrendent utiles surtout dans le traitement des attaques de panique\nviolentes ou des autres états anxieux aigus ou envahissants. Leur\ninconvénient majeur est le risque de causer une dépendance,\nsurtout chez les personnes ayant déjà un penchant pour l’abus\nd’alcool ou de drogues illicites. Cependant, dans certains cas de\nmanque de réponse aux antidépresseurs, un traitement ecace\navec benzodiazépines durant plusieurs mois peut être justié\n(Bandelow & al., 2013). Dans ce contexte les benzodiazépines à\nlongue demi-vie d’élimination (clonazépam, chlordiazépoxide,\ndiazépam, urazépam) sont privilégiées dans la pratique clinique,\ncar elles sont moins susceptibles d’entraîner une dépendance\ncomparativement aux benzodiazépines à courte ou moyenne\ndemi-vie (alprazolam, lorazépam, oxazépam, témazépam, triazo-\nlam) (voir le tableau 20.11). Comme la rapidité d’action est\nimportante pour couper les crises d’anxiété aiguës, les benzo-\ndiazépines avec début d’action rapide (de 30 minutes à 1 heure)\nsont également privilégiées dans ces cas (alprazolam, clonazépam,\ndiazépam, urazépam).\n",
+      "text_sha256": "335b919be8ecdf941b3273c86e95f2e0aa82ca40df85442a0dd961804ef28588"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.9658203125,
+        297.5653076171875,
+        284.95849609375
+      ],
+      "block_id": "page-0456-block-0003",
+      "order": 3,
+      "text": "que les risques de complications graves avec les IMAO ont été\nexagérés par prudence et leur place dans l’arsenal pharmacolo-\ngique est sous-estimée malgré une ecacité prouvée (Goldberg\n& ase, 2013). On a démontré que le moclobémide, un IMAO\nréversible dans son action inhibitrice sur la MAO, était d’utili-\nsation sécuritaire, mais qu’il était peu ecace dans le traitement\ndu trouble panique et de l’anxiété sociale.\nAutres antidépresseurs\nLa mirtazapine est un antidépresseur à mécanisme d’action parti-\nculier. Elle inhibe les hétérorécepteurs α2 des neurones sérotoni-\nnergiques et les autorécepteurs α2 adrénergiques. Elle bloque aussi\nles récepteurs 5-HT2 et 5-HT3 des neurones sérotoninergiques\npost-synaptiques et est un antagoniste puissant des récepteurs\nH1 (histaminiques). Les données actuelles sur l’ecacité de cette\nmolécule dans le traitement des troubles anxieux sont basées sur\nles résultats positifs, mais issus de petites études ouvertes ou non\ncontrôlées, indiquant que la mirtazapine peut être utile dans le\ntraitement du trouble panique, de l’anxiété généralisée (Ravindran\n& Stein, 2010). Par contre, l’usage de ce médicament à long terme\nest limité par ses eets indésirables tels qu’une augmentation de\nl’appétit et une prise de poids, parfois importante.\n",
+      "text_sha256": "bb39e2e628dc0aeedc1650ef20b89bdb407db40e01968d48893699befab63315"
+    },
+    {
+      "bbox": [
+        54.0,
+        285.9658203125,
+        297.3652038574219,
+        365.45849609375
+      ],
+      "block_id": "page-0456-block-0004",
+      "order": 4,
+      "text": "Le bupropion, un inhibiteur du recaptage de la noradrénaline\net supposément de la dopamine et agoniste nicotinique, est bien\ntoléré en général et n’occasionne pas d’eets indésirables sur la\nsexualité. Il a montré une ecacité supérieure à l’escitalopram\ndans le traitement de l’anxiété généralisée selon une étude pilote\nrandomisée et contrôlée, mais il n’y a pas eu d’autres études\nconrmant ce résultat (Van Ameringen & al., 2010).\n",
+      "text_sha256": "0fbefde3a6d81c08cf75f4552034b462ffbda2d23a1204ae89a390f3a6d923ce"
+    },
+    {
+      "bbox": [
+        56.29999923706055,
+        395.5022888183594,
+        551.1246337890625,
+        407.820068359375
+      ],
+      "block_id": "page-0456-block-0005",
+      "order": 5,
+      "text": "TABLEAU 20.11 Caractéristiques des benzodiazépines d’usage courant pour les troubles anxieux classées selon la demi-vie\n",
+      "text_sha256": "c88b4a0b9f5463fd98476cf7ae76e564311c832bfdb6d70ff9a18e33844220e0"
+    },
+    {
+      "bbox": [
+        71.25,
+        412.7741394042969,
+        137.4459991455078,
+        434.3503112792969
+      ],
+      "block_id": "page-0456-block-0006",
+      "order": 6,
+      "text": "Nom générique\n(nom commercial)\n",
+      "text_sha256": "5a4054255daff2ad17b2aba018a53fd48f5d8c18b9600d93f0ff66e1cbf1b087"
+    },
+    {
+      "bbox": [
+        171.8000030517578,
+        412.7741394042969,
+        534.3565063476562,
+        434.3503112792969
+      ],
+      "block_id": "page-0456-block-0007",
+      "order": 7,
+      "text": "Doses\néquivalentes (mg)\nPosologie (mg)\nDébut d’action (h)\nDemi-vie\nd’élimination (h)\n",
+      "text_sha256": "3c6c64355ae11dbbe8e8c1001245fe73120d7803e468df11658b112e824ce1e8"
+    },
+    {
+      "bbox": [
+        58.25,
+        439.10137939453125,
+        327.67120361328125,
+        460.52813720703125
+      ],
+      "block_id": "page-0456-block-0008",
+      "order": 8,
+      "text": "Oxazépam (SeraxMD)\n15,00\n10,00 à 30,00\nTID à QID\n",
+      "text_sha256": "f99b19fd14b55d756dd80bf6c556e531fd9fe1e2b2bb3f41e930c450353c6df4"
+    },
+    {
+      "bbox": [
+        383.45001220703125,
+        439.70196533203125,
+        425.093017578125,
+        449.52813720703125
+      ],
+      "block_id": "page-0456-block-0009",
+      "order": 9,
+      "text": "Intermédiaire\n",
+      "text_sha256": "efa8ae3677c601f949b352b83e0a701d7f03c2927eefd13abcf6635f48195f19"
+    },
+    {
+      "bbox": [
+        395.8500061035156,
+        439.70196533203125,
+        515.4940185546875,
+        460.52813720703125
+      ],
+      "block_id": "page-0456-block-0010",
+      "order": 10,
+      "text": "2 à 4\nCourte\n5 à 15\n",
+      "text_sha256": "4cf809ac4471efec8e60d26f40e6a71be085c304c626e4f1ad2149e4d6c7a313"
+    },
+    {
+      "bbox": [
+        58.25,
+        468.5513610839844,
+        415.166015625,
+        478.9781188964844
+      ],
+      "block_id": "page-0456-block-0011",
+      "order": 11,
+      "text": "Alprazolam (XanaxMD)\n0,50\n0,25 à 1,00 TID\nRapide\n",
+      "text_sha256": "44de7378175bd43db951830eabfc2fd3f2bdba06b8ac175ea26f73664a319bed"
+    },
+    {
+      "bbox": [
+        395.8500061035156,
+        469.1519470214844,
+        517.6640014648438,
+        489.9781188964844
+      ],
+      "block_id": "page-0456-block-0012",
+      "order": 12,
+      "text": "1 à 2\nCourte\n10 à 15\n",
+      "text_sha256": "aa125929088f8a148b9de3f5e311a02baca64527cee1aaf52d72f51ff427920a"
+    },
+    {
+      "bbox": [
+        58.25,
+        497.9513854980469,
+        425.093017578125,
+        508.3781433105469
+      ],
+      "block_id": "page-0456-block-0013",
+      "order": 13,
+      "text": "Bromazépam (LectopamMD)\n3,00\n1,50 à 6,00 TID\nIntermédiaire\n",
+      "text_sha256": "b809d62cb7aff113df62da9aff64835b298109c308147ae1c41bebbd7970d1e3"
+    },
+    {
+      "bbox": [
+        395.8500061035156,
+        498.5519714355469,
+        525.593017578125,
+        519.3781127929688
+      ],
+      "block_id": "page-0456-block-0014",
+      "order": 14,
+      "text": "1 à 4\nIntermédiaire\n",
+      "text_sha256": "3aec2dc3f5c4d9554052b8f39d4910660498c327c1ecbfb778e2bdc41251f55d"
+    },
+    {
+      "bbox": [
+        494.20001220703125,
+        509.55194091796875,
+        515.4940185546875,
+        519.3781127929688
+      ],
+      "block_id": "page-0456-block-0015",
+      "order": 15,
+      "text": "8 à 30\n",
+      "text_sha256": "8c6c428068284e5f4272bda3c4ae030c2f6f6fc8442b022a95be9df065ff07ca"
+    },
+    {
+      "bbox": [
+        58.25,
+        527.4013671875,
+        425.093017578125,
+        537.828125
+      ],
+      "block_id": "page-0456-block-0016",
+      "order": 16,
+      "text": "Lorazépam (AtivanMD)\n1,00\n0,50 à 2,00 TID\nIntermédiaire\n",
+      "text_sha256": "0fb955d31273a87a6abaf61cb55f8ea5e1ce0c5505c56cc495caae46649b368b"
+    },
+    {
+      "bbox": [
+        379.5500183105469,
+        539.001953125,
+        428.9569396972656,
+        559.828125
+      ],
+      "block_id": "page-0456-block-0017",
+      "order": 17,
+      "text": "1 à 6 PO\n45 à 75 min IM\n",
+      "text_sha256": "39f58435c7ef763543239ba61989c7f9d337544808454ee7b5df7e1268866406"
+    },
+    {
+      "bbox": [
+        483.95001220703125,
+        528.001953125,
+        525.593017578125,
+        537.828125
+      ],
+      "block_id": "page-0456-block-0018",
+      "order": 18,
+      "text": "Intermédiaire\n",
+      "text_sha256": "efa8ae3677c601f949b352b83e0a701d7f03c2927eefd13abcf6635f48195f19"
+    },
+    {
+      "bbox": [
+        492.0500183105469,
+        539.001953125,
+        517.6640014648438,
+        548.828125
+      ],
+      "block_id": "page-0456-block-0019",
+      "order": 19,
+      "text": "10 à 20\n",
+      "text_sha256": "4f41dc93d3f94e87428c6685619545b980c5262d9b1d993534941b097fb55a63"
+    },
+    {
+      "bbox": [
+        58.25,
+        567.8013916015625,
+        425.093017578125,
+        578.2281494140625
+      ],
+      "block_id": "page-0456-block-0020",
+      "order": 20,
+      "text": "Témazépam (RestorilMD)\n15,00\n15,00 à 30,00 HS\nIntermédiaire\n",
+      "text_sha256": "c05d822fddd46f9d87c8b39bdd9b550aab4ff0e1d29c298489ed0bc29d9702af"
+    },
+    {
+      "bbox": [
+        395.8500061035156,
+        568.4019775390625,
+        525.593017578125,
+        589.2281494140625
+      ],
+      "block_id": "page-0456-block-0021",
+      "order": 21,
+      "text": "2 à 3\nIntermédiaire\n",
+      "text_sha256": "d778fc11db80e4430c9930c1d70da8ca0223f8bffaffbcf003bfd9d53e2770c6"
+    },
+    {
+      "bbox": [
+        492.0500183105469,
+        579.4019775390625,
+        517.6640014648438,
+        589.2281494140625
+      ],
+      "block_id": "page-0456-block-0022",
+      "order": 22,
+      "text": "10 à 20\n",
+      "text_sha256": "4f41dc93d3f94e87428c6685619545b980c5262d9b1d993534941b097fb55a63"
+    },
+    {
+      "bbox": [
+        58.25,
+        597.2514038085938,
+        323.34112548828125,
+        618.6781616210938
+      ],
+      "block_id": "page-0456-block-0023",
+      "order": 23,
+      "text": "Clonazépam (RivotrilMD)\n0,25\n0,25 à 2,00\nBID à TID\n",
+      "text_sha256": "3d46b6d950e0df681cd0811eb60af4cfbd044f6d7fe73c280d91ad2ed4b5170f"
+    },
+    {
+      "bbox": [
+        393.3500061035156,
+        597.8519897460938,
+        415.166015625,
+        607.6781616210938
+      ],
+      "block_id": "page-0456-block-0024",
+      "order": 24,
+      "text": "Rapide\n",
+      "text_sha256": "2c2090e3814b41376c8916be4533b5f02d2641ef8c0220bb15f2a14a690d283b"
+    },
+    {
+      "bbox": [
+        395.8500061035156,
+        597.8519897460938,
+        517.6640014648438,
+        618.6781616210938
+      ],
+      "block_id": "page-0456-block-0025",
+      "order": 25,
+      "text": "1 à 2\nLongue\n20 à 80\n",
+      "text_sha256": "944e6169952fe0d968f8a910f1980fd8644f8901b046637a2d7882274cbf54cf"
+    },
+    {
+      "bbox": [
+        58.25,
+        626.6513671875,
+        325.5011901855469,
+        648.078125
+      ],
+      "block_id": "page-0456-block-0026",
+      "order": 26,
+      "text": "Chlordiazépoxide (LibriumMD)\n10,00\n5,00 à 25,00\nTID à QID\n",
+      "text_sha256": "c6c2191f2ac485734d55747086ad78ebd6381af1d53f66b2f307cc9a9e55aff7"
+    },
+    {
+      "bbox": [
+        383.45001220703125,
+        627.251953125,
+        425.093017578125,
+        637.078125
+      ],
+      "block_id": "page-0456-block-0027",
+      "order": 27,
+      "text": "Intermédiaire\n",
+      "text_sha256": "efa8ae3677c601f949b352b83e0a701d7f03c2927eefd13abcf6635f48195f19"
+    },
+    {
+      "bbox": [
+        395.8500061035156,
+        627.251953125,
+        516.489990234375,
+        648.078125
+      ],
+      "block_id": "page-0456-block-0028",
+      "order": 28,
+      "text": "1 à 4\nLongue\n",
+      "text_sha256": "d3a0b6ef58bc4f6c06b7190006f5591fcb4eddc163761584dd6511aad5ebb814"
+    },
+    {
+      "bbox": [
+        494.5,
+        638.251953125,
+        515.1099853515625,
+        648.078125
+      ],
+      "block_id": "page-0456-block-0029",
+      "order": 29,
+      "text": "> 100\n",
+      "text_sha256": "b559ed5cfe1cb2c0c7a18df60012be089ccd12a8dd0dbcb87d4166eb9755ecd0"
+    },
+    {
+      "bbox": [
+        58.25,
+        656.1013793945312,
+        325.5011901855469,
+        677.5281372070312
+      ],
+      "block_id": "page-0456-block-0030",
+      "order": 30,
+      "text": "Diazépam (ValiumMD)\n5,00\n2,00 à 10,00\nBID à QID\n",
+      "text_sha256": "0285fd5f26c11910805c50eb506ae266f79e2de727393ec32b006d95d09c8c81"
+    },
+    {
+      "bbox": [
+        392.6000061035156,
+        656.7019653320312,
+        516.489990234375,
+        677.5281372070312
+      ],
+      "block_id": "page-0456-block-0031",
+      "order": 31,
+      "text": "Rapide\n0,5 à 2\nLongue\n",
+      "text_sha256": "92918179b7a7fc0b1e981bcb99dd5b291fd6b6eeb9c479bb543d0bcd88aae751"
+    },
+    {
+      "bbox": [
+        494.5,
+        667.7019653320312,
+        515.1099853515625,
+        677.5281372070312
+      ],
+      "block_id": "page-0456-block-0032",
+      "order": 32,
+      "text": "> 100\n",
+      "text_sha256": "b559ed5cfe1cb2c0c7a18df60012be089ccd12a8dd0dbcb87d4166eb9755ecd0"
+    },
+    {
+      "bbox": [
+        58.25,
+        685.5014038085938,
+        516.489990234375,
+        706.9281616210938
+      ],
+      "block_id": "page-0456-block-0033",
+      "order": 33,
+      "text": "Flurazépam (DalmaneMD)\n15,00\n15,00 à 30,00 HS\nRapide\n0,5 à 1\nLongue\n",
+      "text_sha256": "b8497d1ad4be8792f009236ff98cccecc5753347b21b38617e071e052295b71f"
+    },
+    {
+      "bbox": [
+        494.5,
+        697.1019897460938,
+        515.1099853515625,
+        706.9281616210938
+      ],
+      "block_id": "page-0456-block-0034",
+      "order": 34,
+      "text": "> 100\n",
+      "text_sha256": "b559ed5cfe1cb2c0c7a18df60012be089ccd12a8dd0dbcb87d4166eb9755ecd0"
+    },
+    {
+      "bbox": [
+        54.25,
+        715.7406616210938,
+        247.21852111816406,
+        724.60888671875
+      ],
+      "block_id": "page-0456-block-0035",
+      "order": 35,
+      "text": "Source : Adapté de Association des pharmaciens du Canada (2014).\n",
+      "text_sha256": "d68f3ed6f4159d93338bcd723543c824c60323bc01935651ad35bb387bc1c76d"
+    }
+  ],
+  "coordinates_sha256": "c579e10d77b001de9983738f2a3203702943888df1f30884862b071bfd0275b6",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0456",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 20\nTroubles anxieux, panique, phobies\n439\nBenzodiazépines\nLes benzodiazépines ont été les premiers agents anxiolytiques\ndécouverts, elles aussi, par hasard, dans les années 1950. Elles\nagissent en se fixant sur un site spécifique du récepteur de\nl’acide γ-aminobutyrique (GABA) de type A, entraînant ainsi\nune augmentation de la biodisponibilité du GABA, un neuro-\ntransmetteur inhibiteur général du système nerveux central.\nD’où le large spectre des eets divers des benzodiazépines en\ntant qu’anxiolytiques, anticonvulsivants, myorelaxants et séda-\ntifs, voire somnifères. Leur tolérabilité et leur action rapide les\nrendent utiles surtout dans le traitement des attaques de panique\nviolentes ou des autres états anxieux aigus ou envahissants. Leur\ninconvénient majeur est le risque de causer une dépendance,\nsurtout chez les personnes ayant déjà un penchant pour l’abus\nd’alcool ou de drogues illicites. Cependant, dans certains cas de\nmanque de réponse aux antidépresseurs, un traitement ecace\navec benzodiazépines durant plusieurs mois peut être justié\n(Bandelow & al., 2013). Dans ce contexte les benzodiazépines à\nlongue demi-vie d’élimination (clonazépam, chlordiazépoxide,\ndiazépam, urazépam) sont privilégiées dans la pratique clinique,\ncar elles sont moins susceptibles d’entraîner une dépendance\ncomparativement aux benzodiazépines à courte ou moyenne\ndemi-vie (alprazolam, lorazépam, oxazépam, témazépam, triazo-\nlam) (voir le tableau 20.11). Comme la rapidité d’action est\nimportante pour couper les crises d’anxiété aiguës, les benzo-\ndiazépines avec début d’action rapide (de 30 minutes à 1 heure)\nsont également privilégiées dans ces cas (alprazolam, clonazépam,\ndiazépam, urazépam).\nque les risques de complications graves avec les IMAO ont été\nexagérés par prudence et leur place dans l’arsenal pharmacolo-\ngique est sous-estimée malgré une ecacité prouvée (Goldberg\n& ase, 2013). On a démontré que le moclobémide, un IMAO\nréversible dans son action inhibitrice sur la MAO, était d’utili-\nsation sécuritaire, mais qu’il était peu ecace dans le traitement\ndu trouble panique et de l’anxiété sociale.\nAutres antidépresseurs\nLa mirtazapine est un antidépresseur à mécanisme d’action parti-\nculier. Elle inhibe les hétérorécepteurs α2 des neurones sérotoni-\nnergiques et les autorécepteurs α2 adrénergiques. Elle bloque aussi\nles récepteurs 5-HT2 et 5-HT3 des neurones sérotoninergiques\npost-synaptiques et est un antagoniste puissant des récepteurs\nH1 (histaminiques). Les données actuelles sur l’ecacité de cette\nmolécule dans le traitement des troubles anxieux sont basées sur\nles résultats positifs, mais issus de petites études ouvertes ou non\ncontrôlées, indiquant que la mirtazapine peut être utile dans le\ntraitement du trouble panique, de l’anxiété généralisée (Ravindran\n& Stein, 2010). Par contre, l’usage de ce médicament à long terme\nest limité par ses eets indésirables tels qu’une augmentation de\nl’appétit et une prise de poids, parfois importante.\nLe bupropion, un inhibiteur du recaptage de la noradrénaline\net supposément de la dopamine et agoniste nicotinique, est bien\ntoléré en général et n’occasionne pas d’eets indésirables sur la\nsexualité. Il a montré une ecacité supérieure à l’escitalopram\ndans le traitement de l’anxiété généralisée selon une étude pilote\nrandomisée et contrôlée, mais il n’y a pas eu d’autres études\nconrmant ce résultat (Van Ameringen & al., 2010).\nTABLEAU 20.11 Caractéristiques des benzodiazépines d’usage courant pour les troubles anxieux classées selon la demi-vie\nNom générique\n(nom commercial)\nDoses\néquivalentes (mg)\nPosologie (mg)\nDébut d’action (h)\nDemi-vie\nd’élimination (h)\nOxazépam (SeraxMD)\n15,00\n10,00 à 30,00\nTID à QID\nIntermédiaire\n2 à 4\nCourte\n5 à 15\nAlprazolam (XanaxMD)\n0,50\n0,25 à 1,00 TID\nRapide\n1 à 2\nCourte\n10 à 15\nBromazépam (LectopamMD)\n3,00\n1,50 à 6,00 TID\nIntermédiaire\n1 à 4\nIntermédiaire\n8 à 30\nLorazépam (AtivanMD)\n1,00\n0,50 à 2,00 TID\nIntermédiaire\n1 à 6 PO\n45 à 75 min IM\nIntermédiaire\n10 à 20\nTémazépam (RestorilMD)\n15,00\n15,00 à 30,00 HS\nIntermédiaire\n2 à 3\nIntermédiaire\n10 à 20\nClonazépam (RivotrilMD)\n0,25\n0,25 à 2,00\nBID à TID\nRapide\n1 à 2\nLongue\n20 à 80\nChlordiazépoxide (LibriumMD)\n10,00\n5,00 à 25,00\nTID à QID\nIntermédiaire\n1 à 4\nLongue\n> 100\nDiazépam (ValiumMD)\n5,00\n2,00 à 10,00\nBID à QID\nRapide\n0,5 à 2\nLongue\n> 100\nFlurazépam (DalmaneMD)\n15,00\n15,00 à 30,00 HS\nRapide\n0,5 à 1\nLongue\n> 100\nSource : Adapté de Association des pharmaciens du Canada (2014).\n",
+  "raw_text_sha256": "eb77246f42ab1256fa5ff6c683d4e7e12dd1d005bbeb8a641d52193ee1d1d12d",
+  "source_page_display": 457,
+  "source_page_index": 456
+}

@@ -1,0 +1,424 @@
+{
+  "block_sequence_sha256": "e5f50b674cb459e8ea22d29ab0a2cfc4f6f72dc34b9e5370f71f738f33130da8",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.53765869140625,
+        758.8693237304688
+      ],
+      "block_id": "page-0511-block-0001",
+      "order": 1,
+      "text": "494\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "5b37fd211b9d5036830693ae437b3bb429d0ddc8eac003a21bde2f8cc70d6e5b"
+    },
+    {
+      "bbox": [
+        50.29999923706055,
+        245.9022979736328,
+        278.4438781738281,
+        258.2200927734375
+      ],
+      "block_id": "page-0511-block-0002",
+      "order": 2,
+      "text": "TABLEAU 23.1 Synthèse des réponses à un traumatisme\n",
+      "text_sha256": "5a64a2017d099f1c14be00f083f2e22b836623cf5ce13547c5965a3f0e120fa2"
+    },
+    {
+      "bbox": [
+        80.30000305175781,
+        263.17413330078125,
+        391.57647705078125,
+        283.75030517578125
+      ],
+      "block_id": "page-0511-block-0003",
+      "order": 3,
+      "text": "Structure\nRôle\nEffet\nNeuro-\nmodulateur\n",
+      "text_sha256": "b00daa531071a0b2abc92ddec98fcb2add208f352441124fec972b44b9e7256a"
+    },
+    {
+      "bbox": [
+        412.5,
+        263.17413330078125,
+        516.1910400390625,
+        283.75030517578125
+      ],
+      "block_id": "page-0511-block-0004",
+      "order": 4,
+      "text": "Neuro-\nstimulateur\nEffet\n",
+      "text_sha256": "7405af10e24a93bf7f9b525baa2ee2d81fe39bbe4e88d23a79d7df0349be8d45"
+    },
+    {
+      "bbox": [
+        52.25,
+        289.0728454589844,
+        124.69100189208984,
+        308.9781188964844
+      ],
+      "block_id": "page-0511-block-0005",
+      "order": 5,
+      "text": "Hippocampe\n(diminution du volume)\n",
+      "text_sha256": "9f0cf6f856b130bd1dc5ce264b6c0c239bfb2de880ef34cc399cb01d9644646e"
+    },
+    {
+      "bbox": [
+        150.25,
+        289.1519470214844,
+        250.12222290039062,
+        384.9781188964844
+      ],
+      "block_id": "page-0511-block-0006",
+      "order": 6,
+      "text": "• Réponse conditionnée\n• Stockage des souvenirs\n• Activation de souvenirs\nsimilaires\n• Habituation\n• Sensibilisation/\ndésensibilisation\n• Potentialisation de l’axe HHS\n• Dépression\n",
+      "text_sha256": "55153d828cef6ed616ecd653bc26f96f83b3ee0a4b0994afa79d0a529e96dad5"
+    },
+    {
+      "bbox": [
+        258.25,
+        289.1519470214844,
+        336.8970031738281,
+        308.9781188964844
+      ],
+      "block_id": "page-0511-block-0007",
+      "order": 7,
+      "text": "• Persistance ou rémis-\nsion des symptômes\n",
+      "text_sha256": "5485578e5f9736366d6cb896027ffa58e533dd449c63234263bfc685a6c78f09"
+    },
+    {
+      "bbox": [
+        346.25,
+        289.1519470214844,
+        510.5530090332031,
+        298.9781188964844
+      ],
+      "block_id": "page-0511-block-0008",
+      "order": 8,
+      "text": "• Glutamate\n• Excitation\n",
+      "text_sha256": "c80a89a0c490bad429706e8ef0e99e5956119def87d7c1e95e679da4f681b317"
+    },
+    {
+      "bbox": [
+        52.25,
+        393.4728698730469,
+        137.3852081298828,
+        424.3781433105469
+      ],
+      "block_id": "page-0511-block-0009",
+      "order": 9,
+      "text": "Gyrus temporal\n(augmentation du volume)\nAire de Wernicke (audition)\n",
+      "text_sha256": "35cd1ffe2cb118a9c87c8c80a6dc93dde701a032d0cf95a907ba64aae045f0a3"
+    },
+    {
+      "bbox": [
+        150.25,
+        393.5519714355469,
+        508.8609924316406,
+        403.3781433105469
+      ],
+      "block_id": "page-0511-block-0010",
+      "order": 10,
+      "text": "• Analyse des bruits\n• Alarme auditive\n• GABA\n• Inhibition\n",
+      "text_sha256": "7f655f5a9be145efa59b9f004369ef04f04147569fb20fd3cbe03b369d46db6b"
+    },
+    {
+      "bbox": [
+        52.25,
+        432.9228515625,
+        111.80300903320312,
+        474.828125
+      ],
+      "block_id": "page-0511-block-0011",
+      "order": 11,
+      "text": "Amygdale\n(système limbique)\nÀ droite : image\nÀ gauche : son\n",
+      "text_sha256": "badb627a61f276c3d2a7a322a143009fdb315a43f79c490b0e3aa19875d3cb3e"
+    },
+    {
+      "bbox": [
+        150.25,
+        433.001953125,
+        241.44802856445312,
+        495.828125
+      ],
+      "block_id": "page-0511-block-0012",
+      "order": 12,
+      "text": "• Mémoire affective\n• Réponse émotionnelle\n• Apprentissage émotionnel\n• Attribution d’une valence\naffective (p. ex., peur des\nserpents)\n",
+      "text_sha256": "a86a4321c13b74913e44a4a9acabd9280efe425aa8947b4fb67c9f7080e0edc8"
+    },
+    {
+      "bbox": [
+        258.25,
+        433.001953125,
+        316.13800048828125,
+        485.828125
+      ],
+      "block_id": "page-0511-block-0013",
+      "order": 13,
+      "text": "• Élaboration des\nsymptômes\n• Mémoire\n• Sommeil\n• Dépendance\n",
+      "text_sha256": "b5e30f25d435d8714542394e4e8afd313e3b750cd48517754ce5cac68f62a33e"
+    },
+    {
+      "bbox": [
+        346.25,
+        433.001953125,
+        463.2525329589844,
+        464.828125
+      ],
+      "block_id": "page-0511-block-0014",
+      "order": 14,
+      "text": "• GABA\n• Benzodiazépines\n• Alcool\n• Barbituriques\n",
+      "text_sha256": "7605ffdcd833ab48498c7f93ce6adf69ca993e8b1f195d0412c50f068606e22a"
+    },
+    {
+      "bbox": [
+        471.25,
+        433.001953125,
+        508.8609924316406,
+        442.828125
+      ],
+      "block_id": "page-0511-block-0015",
+      "order": 15,
+      "text": "• Inhibition\n",
+      "text_sha256": "baf6fc2871c5775ceb919e5ccba4eef92ef6e7032a932b02964039a0c40a2e68"
+    },
+    {
+      "bbox": [
+        346.25,
+        473.4019470214844,
+        510.5530090332031,
+        483.2281188964844
+      ],
+      "block_id": "page-0511-block-0016",
+      "order": 16,
+      "text": "• Glutamate\n• Excitation\n",
+      "text_sha256": "c80a89a0c490bad429706e8ef0e99e5956119def87d7c1e95e679da4f681b317"
+    },
+    {
+      "bbox": [
+        52.25,
+        505.3228759765625,
+        231.15902709960938,
+        559.2281494140625
+      ],
+      "block_id": "page-0511-block-0017",
+      "order": 17,
+      "text": "Locus cœruleus\nStimulant :\n• ↑respiration\n• ↑rythme cardiaque\n• ↑pression artérielle\n• Dilatation des pupilles\n",
+      "text_sha256": "28ccd8f2e401656341cd821f3a8a46c47f38253e8a67201fa18325e5ee8aa043"
+    },
+    {
+      "bbox": [
+        258.25,
+        505.4019775390625,
+        330.56500244140625,
+        580.2281494140625
+      ],
+      "block_id": "page-0511-block-0018",
+      "order": 18,
+      "text": "• Activation\nneurovégétative\n• Lutte ou fuite\n• Hypervigilance\n• Réaction de sursaut\n• Insomnie\n• Suspicion\n",
+      "text_sha256": "af6d8cd22d0a682338f694bcb17d5d872cde3f81c5988c9687b67f68fd279b37"
+    },
+    {
+      "bbox": [
+        346.25,
+        505.4019775390625,
+        391.3970031738281,
+        525.2281494140625
+      ],
+      "block_id": "page-0511-block-0019",
+      "order": 19,
+      "text": "• Noradréna-\nline\n",
+      "text_sha256": "f545a3376c83002e603beddd63562525d58b34cb5e2a703754e56aa214711180"
+    },
+    {
+      "bbox": [
+        471.25,
+        505.4019775390625,
+        510.5530090332031,
+        515.2281494140625
+      ],
+      "block_id": "page-0511-block-0020",
+      "order": 20,
+      "text": "• Excitation\n",
+      "text_sha256": "ccdda91b6dbf4ce393eb025da862623180aed31955c3c93214cde17f38f8e480"
+    },
+    {
+      "bbox": [
+        52.25,
+        588.7728881835938,
+        110.50700378417969,
+        608.6781616210938
+      ],
+      "block_id": "page-0511-block-0021",
+      "order": 21,
+      "text": "Cortex préfrontal\n(associations)\n",
+      "text_sha256": "45c8c2518bd0614870b22e884109fec6cb5e95542cbdf0bf411bd7cbba737f35"
+    },
+    {
+      "bbox": [
+        150.25,
+        588.8519897460938,
+        336.8970031738281,
+        609.6781616210938
+      ],
+      "block_id": "page-0511-block-0022",
+      "order": 22,
+      "text": "• Reconnaissance des stimuli\n• Classication des stimuli\n• Persistance ou rémis-\nsion des symptômes\n",
+      "text_sha256": "a10cdedb1fbd29efc2b97f2ab9c0d83e5f155bca935f5bed79ec6a787bbc68a6"
+    },
+    {
+      "bbox": [
+        346.25,
+        588.8519897460938,
+        456.0630187988281,
+        620.6781616210938
+      ],
+      "block_id": "page-0511-block-0023",
+      "order": 23,
+      "text": "• Glutamate\n• Dopamine\n• Cocaïne\n• Amphétamine\n• Apomorphine\n",
+      "text_sha256": "d51b8909450d94d2d4278ed21fe85999a5059d9b024c175e61357e9b9958737b"
+    },
+    {
+      "bbox": [
+        471.25,
+        588.8519897460938,
+        510.5530090332031,
+        598.6781616210938
+      ],
+      "block_id": "page-0511-block-0024",
+      "order": 24,
+      "text": "• Excitation\n",
+      "text_sha256": "ccdda91b6dbf4ce393eb025da862623180aed31955c3c93214cde17f38f8e480"
+    },
+    {
+      "bbox": [
+        52.25,
+        629.1728515625,
+        110.73200988769531,
+        649.078125
+      ],
+      "block_id": "page-0511-block-0025",
+      "order": 25,
+      "text": "Noyaux du raphé\n(tronc cérébral)\n",
+      "text_sha256": "3d16bd950fa9a9d15bfd7f1329a8c3b4464c3697d929c1c9221e6ae4aaa90447"
+    },
+    {
+      "bbox": [
+        150.25,
+        629.251953125,
+        240.41200256347656,
+        672.078125
+      ],
+      "block_id": "page-0511-block-0026",
+      "order": 26,
+      "text": "• Régulation veille/sommeil\n• Régulation de la vigilance\n• Régulation de l’humeur\n• Contrôle de la douleur\n",
+      "text_sha256": "75f81fd8cbcb685c9830b0343dc7428508ad341f5c07c18d8e96bfc6ead949f0"
+    },
+    {
+      "bbox": [
+        258.25,
+        629.251953125,
+        294.89801025390625,
+        672.078125
+      ],
+      "block_id": "page-0511-block-0027",
+      "order": 27,
+      "text": "• Humeur\n• Anxiété\n• Sommeil\n• Appétit\n",
+      "text_sha256": "30aada868a350b7972ee20c9ab4c0c72ec0cf1369cbb686ac043ce2f2e16194c"
+    },
+    {
+      "bbox": [
+        346.25,
+        629.251953125,
+        453.7400207519531,
+        661.078125
+      ],
+      "block_id": "page-0511-block-0028",
+      "order": 28,
+      "text": "• Sérotonine\n• LSD\n• Ecstasy\n• Fenuramine\n",
+      "text_sha256": "4a3b3f39e3d7e2908cf19c25a83cbe7b08e8c0ace072e100e6465933c503078e"
+    },
+    {
+      "bbox": [
+        471.25,
+        629.251953125,
+        510.5530090332031,
+        639.078125
+      ],
+      "block_id": "page-0511-block-0029",
+      "order": 29,
+      "text": "• Excitation\n",
+      "text_sha256": "ccdda91b6dbf4ce393eb025da862623180aed31955c3c93214cde17f38f8e480"
+    },
+    {
+      "bbox": [
+        52.25,
+        680.6228637695312,
+        125.4020004272461,
+        712.6423950195312
+      ],
+      "block_id": "page-0511-block-0030",
+      "order": 30,
+      "text": "Noyaux gris centraux\nAmygdale\nNoyau accumbens\n",
+      "text_sha256": "f21b6cf974b335ae6d137087a49e8ba8e0fa08e1d0a0f11f0b3ba88f6e108346"
+    },
+    {
+      "bbox": [
+        150.25,
+        680.7019653320312,
+        389.0470275878906,
+        700.5281372070312
+      ],
+      "block_id": "page-0511-block-0031",
+      "order": 31,
+      "text": "• Neuroprotection\n• Neuropep-\ntide Y\n",
+      "text_sha256": "45a6a78a2004b3cd1f1d98ae60ab4b7bfe480a349bcded12fbdf0e5be9a777a4"
+    },
+    {
+      "bbox": [
+        471.25,
+        680.7019653320312,
+        544.2539672851562,
+        711.5281372070312
+      ],
+      "block_id": "page-0511-block-0032",
+      "order": 32,
+      "text": "• Libération de NPY\n• ↑NA et de ses\neffets neurotoxiques\n",
+      "text_sha256": "c2dd9ff9e1fa9a658dd794d5fc29e527e02b88e2fc53d6f93bb0503bb49340a3"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.76171875,
+        291.3938293457031,
+        214.45849609375
+      ],
+      "block_id": "page-0511-block-0033",
+      "order": 33,
+      "text": "Neuropeptide Y (NPY) : Le NPY est un neurotransmetteur\nqui est secrété par l’hypothalamus. Il est présent dans le cerveau\net le système nerveux autonome et il agit aux mêmes endroits\nque la noradrénaline (NA). Son principal eet est de stimuler la\nprise de nourriture et de diminuer l’activité physique. Le NPY\njoue un rôle important dans la réponse au stress. Il bloque les\nsignaux nocicepteurs au cerveau en inhibant la libération de la\nNA au niveau synaptique. La suractivation du système noradré-\nnergique et le NPY jouent un rôle signicatif dans les symptômes\nd’hyperactivation accompagnant le TSPT. La diminution de la\nsécrétion du NPY entraîne une libération exagérée de la NA et\ncontribue à la réaction d’hypersensibilité au stress. L’exposition\nà des stresseurs aigus peut augmenter la libération de la NA et\ndu NPY, alors que l’exposition à des traumas prolongés peut en\ndiminuer les taux.\n",
+      "text_sha256": "5a8e2feeee111361fc7b64d3c494fd9999055edde3ed8f67be003d56ae385c47"
+    },
+    {
+      "bbox": [
+        306.0,
+        39.63300704956055,
+        549.5478515625,
+        214.7584991455078
+      ],
+      "block_id": "page-0511-block-0034",
+      "order": 34,
+      "text": "Neurocircuiterie de la peur et de l’anxiété\nAucun véritable dysfonctionnement neuroendocrinien n’a été\ndémontré dans le TSPT et les anomalies associées à ce trouble\npeuvent représenter des mécanismes de compensation à l’adaptation\nau stress plutôt qu’un processus pathophysiologique en soi. Cepen-\ndant, l’activation à court terme de ces circuits associée à la peur\nproduit des symptômes tels que l’augmentation du rythme cardiaque\net de la pression artérielle an de soutenir la réponse motrice de\nlutte ou de fuite. L’activation sur une longue période peut entraîner\ndes complications cardiaques, telles qu’une augmentation du risque\ncardiovasculaire, de l’athérosclérose, de l’ischémie cardiaque, de\nl’hypertension, des troubles du rythme cardiaque ou des infarctus,\netc. Les mémoires sensorielles, enregistrées dans l’hippocampe\nlors du trauma, sont xées de façon permanente. Une réaction\ncatastrophique peut être déclenchée non seulement par des stimuli\n",
+      "text_sha256": "7094d7de368e4515023cd144801b0a5f5ed94dc4265418e8c26876893bf95cf5"
+    }
+  ],
+  "coordinates_sha256": "a922534783b2aff8d0f3b70ad232476a1940d1a4bf9427e178ef66e0488b1ab4",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0511",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "494\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nTABLEAU 23.1 Synthèse des réponses à un traumatisme\nStructure\nRôle\nEffet\nNeuro-\nmodulateur\nNeuro-\nstimulateur\nEffet\nHippocampe\n(diminution du volume)\n• Réponse conditionnée\n• Stockage des souvenirs\n• Activation de souvenirs\nsimilaires\n• Habituation\n• Sensibilisation/\ndésensibilisation\n• Potentialisation de l’axe HHS\n• Dépression\n• Persistance ou rémis-\nsion des symptômes\n• Glutamate\n• Excitation\nGyrus temporal\n(augmentation du volume)\nAire de Wernicke (audition)\n• Analyse des bruits\n• Alarme auditive\n• GABA\n• Inhibition\nAmygdale\n(système limbique)\nÀ droite : image\nÀ gauche : son\n• Mémoire affective\n• Réponse émotionnelle\n• Apprentissage émotionnel\n• Attribution d’une valence\naffective (p. ex., peur des\nserpents)\n• Élaboration des\nsymptômes\n• Mémoire\n• Sommeil\n• Dépendance\n• GABA\n• Benzodiazépines\n• Alcool\n• Barbituriques\n• Inhibition\n• Glutamate\n• Excitation\nLocus cœruleus\nStimulant :\n• ↑respiration\n• ↑rythme cardiaque\n• ↑pression artérielle\n• Dilatation des pupilles\n• Activation\nneurovégétative\n• Lutte ou fuite\n• Hypervigilance\n• Réaction de sursaut\n• Insomnie\n• Suspicion\n• Noradréna-\nline\n• Excitation\nCortex préfrontal\n(associations)\n• Reconnaissance des stimuli\n• Classication des stimuli\n• Persistance ou rémis-\nsion des symptômes\n• Glutamate\n• Dopamine\n• Cocaïne\n• Amphétamine\n• Apomorphine\n• Excitation\nNoyaux du raphé\n(tronc cérébral)\n• Régulation veille/sommeil\n• Régulation de la vigilance\n• Régulation de l’humeur\n• Contrôle de la douleur\n• Humeur\n• Anxiété\n• Sommeil\n• Appétit\n• Sérotonine\n• LSD\n• Ecstasy\n• Fenuramine\n• Excitation\nNoyaux gris centraux\nAmygdale\nNoyau accumbens\n• Neuroprotection\n• Neuropep-\ntide Y\n• Libération de NPY\n• ↑NA et de ses\neffets neurotoxiques\nNeuropeptide Y (NPY) : Le NPY est un neurotransmetteur\nqui est secrété par l’hypothalamus. Il est présent dans le cerveau\net le système nerveux autonome et il agit aux mêmes endroits\nque la noradrénaline (NA). Son principal eet est de stimuler la\nprise de nourriture et de diminuer l’activité physique. Le NPY\njoue un rôle important dans la réponse au stress. Il bloque les\nsignaux nocicepteurs au cerveau en inhibant la libération de la\nNA au niveau synaptique. La suractivation du système noradré-\nnergique et le NPY jouent un rôle signicatif dans les symptômes\nd’hyperactivation accompagnant le TSPT. La diminution de la\nsécrétion du NPY entraîne une libération exagérée de la NA et\ncontribue à la réaction d’hypersensibilité au stress. L’exposition\nà des stresseurs aigus peut augmenter la libération de la NA et\ndu NPY, alors que l’exposition à des traumas prolongés peut en\ndiminuer les taux.\nNeurocircuiterie de la peur et de l’anxiété\nAucun véritable dysfonctionnement neuroendocrinien n’a été\ndémontré dans le TSPT et les anomalies associées à ce trouble\npeuvent représenter des mécanismes de compensation à l’adaptation\nau stress plutôt qu’un processus pathophysiologique en soi. Cepen-\ndant, l’activation à court terme de ces circuits associée à la peur\nproduit des symptômes tels que l’augmentation du rythme cardiaque\net de la pression artérielle an de soutenir la réponse motrice de\nlutte ou de fuite. L’activation sur une longue période peut entraîner\ndes complications cardiaques, telles qu’une augmentation du risque\ncardiovasculaire, de l’athérosclérose, de l’ischémie cardiaque, de\nl’hypertension, des troubles du rythme cardiaque ou des infarctus,\netc. Les mémoires sensorielles, enregistrées dans l’hippocampe\nlors du trauma, sont xées de façon permanente. Une réaction\ncatastrophique peut être déclenchée non seulement par des stimuli\n",
+  "raw_text_sha256": "82a11e8f548c3b8e0b5b7e4b8c4a51669ada692f39e9c29627e9482c9a61fa64",
+  "source_page_display": 512,
+  "source_page_index": 511
+}

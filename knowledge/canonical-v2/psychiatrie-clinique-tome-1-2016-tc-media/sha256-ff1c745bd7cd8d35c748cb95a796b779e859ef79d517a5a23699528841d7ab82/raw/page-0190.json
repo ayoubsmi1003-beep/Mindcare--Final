@@ -1,0 +1,220 @@
+{
+  "block_sequence_sha256": "48c87b1cb38c49e0f8ecaddb79fe91c64aeff1c17f1b5903ec7de6d1038a3c9c",
+  "blocks": [
+    {
+      "bbox": [
+        307.1000061035156,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0190-block-0001",
+      "order": 1,
+      "text": "Chapitre 8\nPsychophysiologie et neuropsychologie\n173\n",
+      "text_sha256": "5b1d61374d9a6a3c88f9b95e9d56879f2dc6938d38dd9c6997bb9a99358c5e11"
+    },
+    {
+      "bbox": [
+        312.0,
+        40.9658203125,
+        555.4152221679688,
+        85.95849609375
+      ],
+      "block_id": "page-0190-block-0002",
+      "order": 2,
+      "text": "pour les items qu’ils auraient dû reconnaître, mais qu’ils ont\ncatégorisés comme de nouveaux items (recognition misses). Les\nrégions intervenant dans l’encodage sont l’hippocampe gauche\nantérieur, la partie droite de l’amygdale et le gyrus frontal inférieur.\n",
+      "text_sha256": "9c24a3f89f1ad0e20ba8ffe34e080ee47982e229a866ed19c46e46a1cfce4dda"
+    },
+    {
+      "bbox": [
+        312.0,
+        86.9658203125,
+        555.4257202148438,
+        223.95849609375
+      ],
+      "block_id": "page-0190-block-0003",
+      "order": 3,
+      "text": "On étudie la récupération en présentant une liste d’items au\nsujet avant le début de l’examen an qu’il les mémorise. Une fois\ndans l’appareil, le sujet doit déterminer si le stimulus est inconnu\nou connu. Par la suite, on peut comparer les activations d’IRMf\nobtenues pour les stimuli correctement catégorisés comme connus\n(correct hits) et ceux correctement catégorisés comme nouveaux\n(correct rejections). Les régions participant à la récupération sont\nle gyrus parahippocampique droit, le gyrus frontal médian et\nsupérieur, le sillon intrapariétal, le lobe pariétal supérieur et le\nlobe pariétal inférieur latéral (voir la gure Structures intervenant\ndans la récupération de mémoire épisodique dans les gures\nsupplémentaires).\n",
+      "text_sha256": "b2759bd4c5ca19809a4a6aa4c812f4c63394e24c1473b8417799d4c6f9e8ef08"
+    },
+    {
+      "bbox": [
+        312.0,
+        224.9658203125,
+        555.129638671875,
+        258.45849609375
+      ],
+      "block_id": "page-0190-block-0004",
+      "order": 4,
+      "text": "Toutefois, la mémoire n’est pas un phénomène immuable et\nelle peut facilement changer dans le temps ; c’est alors que les\nsouvenirs peuvent être largement subjectifs.\n",
+      "text_sha256": "2e027424ad87001183616aac9cd4245d7593897fb0389181d963137a8761f337"
+    },
+    {
+      "bbox": [
+        312.0,
+        259.4658203125,
+        555.4791870117188,
+        476.95849609375
+      ],
+      "block_id": "page-0190-block-0005",
+      "order": 5,
+      "text": "Pour étudier le souvenir objectif, on présente au sujet les stimuli\nà observer dans divers contextes (c.-à-d. à diérents endroits sur\nl’écran d’un ordinateur). Par la suite, durant la séance d’IRMf, on\nprésente une nouvelle fois ces stimuli et on y insère de nouveaux\nstimuli que le sujet n’a jamais vus auparavant. On lui demande\nalors de catégoriser chaque stimulus comme étant connu (c.-à-d.\ndéjà vu auparavant) ou nouveau (c.-à-d. jamais vu auparavant).\nPar ailleurs, lorsqu’un sujet juge qu’un stimulus est connu, on\nlui demande de préciser s’il a entièrement reconnu le stimulus\nqu’on lui avait présenté au préalable (full recognition) ou si le\nstimulus est simplement familier (familiarity) et donc, a déjà été\nvu, mais dans un autre contexte. Il est alors possible de comparer\nplusieurs combinaisons de réponses (p. ex., full recognition ou\nfamiliarity). Les régions intervenant dans le souvenir objectif\n(sélection, maintien et organisation) sont la partie gauche de\nl’amygdale, les cortex dorsolatéral et ventrolatéral préfrontaux\ngauches, le cortex préfrontal antérieur latéral ainsi que le cor-\ntex pariétal supérieur, qui sont essentiels pour les processus de\nrecherche stratégique médiés par des connexions descendantes.\n",
+      "text_sha256": "12d543ffaa246c0f67ed3b64ae02c4192101c8a8ebf78d4d632fb7e3c46b28c4"
+    },
+    {
+      "bbox": [
+        312.0,
+        477.9658203125,
+        555.424072265625,
+        568.95849609375
+      ],
+      "block_id": "page-0190-block-0006",
+      "order": 6,
+      "text": "Pour étudier le souvenir subjectif, on procède de manière\nsimilaire. Mais, cette fois-ci, durant la séance d’IRMf, on montre\nau sujet seulement des stimuli qu’on lui a déjà présentés et on lui\ndemande de préciser s’il se souvient d’avoir déjà vu ce stimulus\nautrefois (remember) ou s’il est absolument convaincu (know)\nqu’il a observé le stimulus juste avant d’entrer dans l’appareil.\nLes régions intervenant dans le souvenir subjectif sont la partie\ngauche de l’hippocampe et le cortex pariétal inférieur latéral.\n",
+      "text_sha256": "4691b5c545e11e5f835d0fd69e968be65de07507eeb659584e1a10a9ebb9f6e6"
+    },
+    {
+      "bbox": [
+        312.0,
+        583.8330078125,
+        555.3514404296875,
+        678.45849609375
+      ],
+      "block_id": "page-0190-block-0007",
+      "order": 7,
+      "text": "Mémoire sémantique\nLa mémoire sémantique concerne les connaissances générales\napprises (p. ex., les mots du vocabulaire, les concepts d’objets, etc.).\nElle associe même certaines fonctions aux objets et permet de\nfaire des liens entre les connaissances. Pourvu qu’on l’ait informé,\nl’individu peut alors se souvenir que le système métrique est à\nbase décimale, qu’un avocat peut être un fruit ou une personne,\nen encore que la capitale du Canada est Ottawa.\n",
+      "text_sha256": "9e54be4eb051f59bedae92d5fd82746676ae431a32b32769f89ce9c2c8257683"
+    },
+    {
+      "bbox": [
+        312.0,
+        679.4658203125,
+        555.0175170898438,
+        712.95849609375
+      ],
+      "block_id": "page-0190-block-0008",
+      "order": 8,
+      "text": "Il n’existe pas de consensus concernant les structures anato-\nmiques intervenant dans la mémoire sémantique (voir les gures\nsupplémentaires). Selon certaines hypothèses, les informations\n",
+      "text_sha256": "eb77676877ecc6b536b491bff8ad2188d3fddff646ea511c0232793d03abbd0a"
+    },
+    {
+      "bbox": [
+        66.0,
+        40.9658203125,
+        297.01751708984375,
+        51.45849609375
+      ],
+      "block_id": "page-0190-block-0009",
+      "order": 9,
+      "text": "b) la mémoire sémantique, qui renferme les faits de connais-\n",
+      "text_sha256": "626516e48041de45a035a818ff963e521a7c4a66d2b687963906f1bf7b33e635"
+    },
+    {
+      "bbox": [
+        54.0,
+        52.4658203125,
+        297.4039001464844,
+        101.45849609375
+      ],
+      "block_id": "page-0190-block-0010",
+      "order": 10,
+      "text": "sances générales acquises (p. ex., le nom du premier ministre\ndu Québec, la capitale du Canada).\n2. La mémoire implicite (ou non déclarative), qui inclut :\na) la mémoire procédurale, qui nous permet d’acquérir des\n",
+      "text_sha256": "2df028b9f8822d28a39db99b22a31070bd1a7d7b60084f00acbe12594387f2b2"
+    },
+    {
+      "bbox": [
+        66.0,
+        102.4658203125,
+        297.40374755859375,
+        137.95849609375
+      ],
+      "block_id": "page-0190-block-0011",
+      "order": 11,
+      "text": "habiletés par la pratique (p. ex., faire du vélo ou jouer d’un\ninstrument de musique) ;\nb) les réexes conditionnés (par association de deux stimuli :\n",
+      "text_sha256": "851c92937d11337aa0cc735bbcdd37bf2d9dede7a2b73dee3c228227b27a292e"
+    },
+    {
+      "bbox": [
+        66.0,
+        138.9658203125,
+        281.749755859375,
+        162.95849609375
+      ],
+      "block_id": "page-0190-block-0012",
+      "order": 12,
+      "text": "le chien de Pavlov qui salive en entendant la cloche) ;\nc) l’amorçage (ou priming).\n",
+      "text_sha256": "b1affe87f6373a4db1d4c9a464f704785140e11a65978e85031bdc24799dbe5f"
+    },
+    {
+      "bbox": [
+        54.0,
+        174.8330078125,
+        297.3274230957031,
+        476.45849609375
+      ],
+      "block_id": "page-0190-block-0013",
+      "order": 13,
+      "text": "Mémoire épisodique\nLa mémoire épisodique est la mémoire des événements personnels\nqui s’inscrivent dans un contexte spatial, temporel et émotionnel\n(contrairement à la mémoire sémantique où seule l’information\nfactuelle est retenue). Par exemple, cette mémoire épisodique per-\nmet à une personne de répondre à des questions concernant son\npassé, ses antécédents médicaux, son dernier voyage, son joueur\nde hockey vedette, etc. Les connaissances portant sur la mémoire\népisodique ont accompli des pas de géant avec les recherches de\nBrenda Milner. Dans les premières années de ses recherches portant\nsur le célèbre patient Henry Molaison (1926-2008), plus connu\nsous les initiales H.M.6, Milner a montré que le syndrome amné-\nsique du lobe temporal médian se caractérise par une incapacité\nà acquérir de nouveaux souvenirs, tout en laissant parfaitement\nintacts les souvenirs du passé plus lointain et les autres fonctions\ncognitives, y compris le langage, la perception et le raisonnement.\nL’une des recherches eectuées sur H.M. consistait à travailler sur\ndes tâches perceptuelles et motrices an de déterminer quel type\nd’apprentissage et de mémoire étaient encore intacts. Pour ce faire,\nH.M. devait reproduire le dessin d’une étoile en la regardant dans\nun miroir. Au cours des trois jours durant lesquels était réalisée\nl’expérimentation, H.M. arrivait à améliorer ses résultats, mais il\nne conservait aucun souvenir de tous les événements survenus\ndurant ces trois jours. Ces observations ont conduit Milner à\nproposer l’existence de diérents types de mémoire (épisodique\net procédurale), chacun dépendant d’un système cérébral distinct.\n",
+      "text_sha256": "7b18aca7aef2a17e3998b3987316f745b5fcf96dd08b815605ae97fba67b87a2"
+    },
+    {
+      "bbox": [
+        54.0,
+        477.4658203125,
+        297.2513427734375,
+        545.45849609375
+      ],
+      "block_id": "page-0190-block-0014",
+      "order": 14,
+      "text": "Les recherches de Milner ont certes permis de préciser les\norigines cérébrales de la mémoire, mais ces études avaient été\nréalisées sur un ou des patients ayant subi des lésions cérébrales\nbien documentées et souvent très étendues. Aujourd’hui, il est\npossible d’observer le cerveau durant une tâche de mémoire chez\ndes sujets sains aussi bien que cérébrolésés.\n",
+      "text_sha256": "044a3016bdd820a30d28cad2544b09069c4b2ea6c1c1c9c0240816723644534e"
+    },
+    {
+      "bbox": [
+        54.0,
+        546.4658203125,
+        297.4039001464844,
+        602.95849609375
+      ],
+      "block_id": "page-0190-block-0015",
+      "order": 15,
+      "text": "En neuro-imagerie, Spaniol et collaborateurs (2009) ont fait\nétat des résultats d’une méta-analyse d’études d’IRMf explorant\nles substrats neuronaux de la mémoire épisodique. Ils se sont plus\nprécisément penchés sur deux processus : l’encodage/récupération\net le souvenir objectif et subjectif (recollection).\n",
+      "text_sha256": "e35cde54f4b73ac0b7df25666f7319f71b2bd8280805d9ec60744c345a792979"
+    },
+    {
+      "bbox": [
+        54.0,
+        603.9658203125,
+        297.32073974609375,
+        671.95849609375
+      ],
+      "block_id": "page-0190-block-0016",
+      "order": 16,
+      "text": "On étudie ou on mesure l’encodage en présentant à un sujet\ndes stimuli durant la séance d’IRMf ; une fois sorti de l’appareil,\non lui demande d’indiquer l’objet qu’il reconnaît (connu) et celui\nqu’il ne reconnaît pas (nouveau). Il est par la suite possible de\njoindre les valeurs d’activation IRMf des stimuli que les sujets\nont reconnus correctement (recognition hits) et de faire de même\n",
+      "text_sha256": "a0a1513c411c359ef67fc3b1feda7ad31b0bb24f26b2a001e8900618d39f804e"
+    },
+    {
+      "bbox": [
+        54.0,
+        683.2886962890625,
+        295.75,
+        713.2291259765625
+      ],
+      "block_id": "page-0190-block-0017",
+      "order": 17,
+      "text": "6. À cause d’une épilepsie résistante aux traitements, H.M. a subi\nune résection bilatérale de larges portions des hippocampes et\ndes tissus avoisinants des lobes temporaux.\n",
+      "text_sha256": "d1169157381e3f7970f8e365166ae98286f186c4f23a9748905c06f476efa66d"
+    }
+  ],
+  "coordinates_sha256": "31c2beea5530ae33b53276b50fc2ebef25f0171b103e6e7312fcecc23b50007c",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0190",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 8\nPsychophysiologie et neuropsychologie\n173\npour les items qu’ils auraient dû reconnaître, mais qu’ils ont\ncatégorisés comme de nouveaux items (recognition misses). Les\nrégions intervenant dans l’encodage sont l’hippocampe gauche\nantérieur, la partie droite de l’amygdale et le gyrus frontal inférieur.\nOn étudie la récupération en présentant une liste d’items au\nsujet avant le début de l’examen an qu’il les mémorise. Une fois\ndans l’appareil, le sujet doit déterminer si le stimulus est inconnu\nou connu. Par la suite, on peut comparer les activations d’IRMf\nobtenues pour les stimuli correctement catégorisés comme connus\n(correct hits) et ceux correctement catégorisés comme nouveaux\n(correct rejections). Les régions participant à la récupération sont\nle gyrus parahippocampique droit, le gyrus frontal médian et\nsupérieur, le sillon intrapariétal, le lobe pariétal supérieur et le\nlobe pariétal inférieur latéral (voir la gure Structures intervenant\ndans la récupération de mémoire épisodique dans les gures\nsupplémentaires).\nToutefois, la mémoire n’est pas un phénomène immuable et\nelle peut facilement changer dans le temps ; c’est alors que les\nsouvenirs peuvent être largement subjectifs.\nPour étudier le souvenir objectif, on présente au sujet les stimuli\nà observer dans divers contextes (c.-à-d. à diérents endroits sur\nl’écran d’un ordinateur). Par la suite, durant la séance d’IRMf, on\nprésente une nouvelle fois ces stimuli et on y insère de nouveaux\nstimuli que le sujet n’a jamais vus auparavant. On lui demande\nalors de catégoriser chaque stimulus comme étant connu (c.-à-d.\ndéjà vu auparavant) ou nouveau (c.-à-d. jamais vu auparavant).\nPar ailleurs, lorsqu’un sujet juge qu’un stimulus est connu, on\nlui demande de préciser s’il a entièrement reconnu le stimulus\nqu’on lui avait présenté au préalable (full recognition) ou si le\nstimulus est simplement familier (familiarity) et donc, a déjà été\nvu, mais dans un autre contexte. Il est alors possible de comparer\nplusieurs combinaisons de réponses (p. ex., full recognition ou\nfamiliarity). Les régions intervenant dans le souvenir objectif\n(sélection, maintien et organisation) sont la partie gauche de\nl’amygdale, les cortex dorsolatéral et ventrolatéral préfrontaux\ngauches, le cortex préfrontal antérieur latéral ainsi que le cor-\ntex pariétal supérieur, qui sont essentiels pour les processus de\nrecherche stratégique médiés par des connexions descendantes.\nPour étudier le souvenir subjectif, on procède de manière\nsimilaire. Mais, cette fois-ci, durant la séance d’IRMf, on montre\nau sujet seulement des stimuli qu’on lui a déjà présentés et on lui\ndemande de préciser s’il se souvient d’avoir déjà vu ce stimulus\nautrefois (remember) ou s’il est absolument convaincu (know)\nqu’il a observé le stimulus juste avant d’entrer dans l’appareil.\nLes régions intervenant dans le souvenir subjectif sont la partie\ngauche de l’hippocampe et le cortex pariétal inférieur latéral.\nMémoire sémantique\nLa mémoire sémantique concerne les connaissances générales\napprises (p. ex., les mots du vocabulaire, les concepts d’objets, etc.).\nElle associe même certaines fonctions aux objets et permet de\nfaire des liens entre les connaissances. Pourvu qu’on l’ait informé,\nl’individu peut alors se souvenir que le système métrique est à\nbase décimale, qu’un avocat peut être un fruit ou une personne,\nen encore que la capitale du Canada est Ottawa.\nIl n’existe pas de consensus concernant les structures anato-\nmiques intervenant dans la mémoire sémantique (voir les gures\nsupplémentaires). Selon certaines hypothèses, les informations\nb) la mémoire sémantique, qui renferme les faits de connais-\nsances générales acquises (p. ex., le nom du premier ministre\ndu Québec, la capitale du Canada).\n2. La mémoire implicite (ou non déclarative), qui inclut :\na) la mémoire procédurale, qui nous permet d’acquérir des\nhabiletés par la pratique (p. ex., faire du vélo ou jouer d’un\ninstrument de musique) ;\nb) les réexes conditionnés (par association de deux stimuli :\nle chien de Pavlov qui salive en entendant la cloche) ;\nc) l’amorçage (ou priming).\nMémoire épisodique\nLa mémoire épisodique est la mémoire des événements personnels\nqui s’inscrivent dans un contexte spatial, temporel et émotionnel\n(contrairement à la mémoire sémantique où seule l’information\nfactuelle est retenue). Par exemple, cette mémoire épisodique per-\nmet à une personne de répondre à des questions concernant son\npassé, ses antécédents médicaux, son dernier voyage, son joueur\nde hockey vedette, etc. Les connaissances portant sur la mémoire\népisodique ont accompli des pas de géant avec les recherches de\nBrenda Milner. Dans les premières années de ses recherches portant\nsur le célèbre patient Henry Molaison (1926-2008), plus connu\nsous les initiales H.M.6, Milner a montré que le syndrome amné-\nsique du lobe temporal médian se caractérise par une incapacité\nà acquérir de nouveaux souvenirs, tout en laissant parfaitement\nintacts les souvenirs du passé plus lointain et les autres fonctions\ncognitives, y compris le langage, la perception et le raisonnement.\nL’une des recherches eectuées sur H.M. consistait à travailler sur\ndes tâches perceptuelles et motrices an de déterminer quel type\nd’apprentissage et de mémoire étaient encore intacts. Pour ce faire,\nH.M. devait reproduire le dessin d’une étoile en la regardant dans\nun miroir. Au cours des trois jours durant lesquels était réalisée\nl’expérimentation, H.M. arrivait à améliorer ses résultats, mais il\nne conservait aucun souvenir de tous les événements survenus\ndurant ces trois jours. Ces observations ont conduit Milner à\nproposer l’existence de diérents types de mémoire (épisodique\net procédurale), chacun dépendant d’un système cérébral distinct.\nLes recherches de Milner ont certes permis de préciser les\norigines cérébrales de la mémoire, mais ces études avaient été\nréalisées sur un ou des patients ayant subi des lésions cérébrales\nbien documentées et souvent très étendues. Aujourd’hui, il est\npossible d’observer le cerveau durant une tâche de mémoire chez\ndes sujets sains aussi bien que cérébrolésés.\nEn neuro-imagerie, Spaniol et collaborateurs (2009) ont fait\nétat des résultats d’une méta-analyse d’études d’IRMf explorant\nles substrats neuronaux de la mémoire épisodique. Ils se sont plus\nprécisément penchés sur deux processus : l’encodage/récupération\net le souvenir objectif et subjectif (recollection).\nOn étudie ou on mesure l’encodage en présentant à un sujet\ndes stimuli durant la séance d’IRMf ; une fois sorti de l’appareil,\non lui demande d’indiquer l’objet qu’il reconnaît (connu) et celui\nqu’il ne reconnaît pas (nouveau). Il est par la suite possible de\njoindre les valeurs d’activation IRMf des stimuli que les sujets\nont reconnus correctement (recognition hits) et de faire de même\n6. À cause d’une épilepsie résistante aux traitements, H.M. a subi\nune résection bilatérale de larges portions des hippocampes et\ndes tissus avoisinants des lobes temporaux.\n",
+  "raw_text_sha256": "4a920f424c713dd7d000dc534f2cc0edfef4b61c12a4bf8436e3f9c74abaf4af",
+  "source_page_display": 191,
+  "source_page_index": 190
+}

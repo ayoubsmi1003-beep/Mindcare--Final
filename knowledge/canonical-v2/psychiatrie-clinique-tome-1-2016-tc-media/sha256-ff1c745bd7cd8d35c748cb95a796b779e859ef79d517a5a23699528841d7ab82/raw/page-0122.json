@@ -1,0 +1,124 @@
+{
+  "block_sequence_sha256": "254ecac621ef951adb0e7e11696965540c365a5599752d57082a9c8f76c54d1c",
+  "blocks": [
+    {
+      "bbox": [
+        420.6000061035156,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0122-block-0001",
+      "order": 1,
+      "text": "Chapitre 5\nGénétique\n105\n",
+      "text_sha256": "a4a3917aa038d7f9b7b86825414f8da0d5c36959f36fcf4977d85b7fbc7619b6"
+    },
+    {
+      "bbox": [
+        312.0,
+        40.9658203125,
+        555.2723999023438,
+        225.95849609375
+      ],
+      "block_id": "page-0122-block-0002",
+      "order": 2,
+      "text": "connu peu de mouvements de population (Roy-Gagnon &\nal., 2011).\n• L’identication des sous-types s’est avérée fructueuse pour\nplusieurs maladies chez l’humain. Par exemple, des données\ncliniques et épidémiologiques ont permis de conclure que\nle diabète juvénile (type I) et le diabète de type II sont pro-\nbablement des maladies distinctes, ce qu’ont conrmé des\nétudes génétiques. On peut aussi distinguer entre une forme\nd’alcoolisme de type II, associée à un trouble de la personnalité\nantisociale et des comportements violents, davantage liée à\nl’hérédité, que l’alcoolisme de type I, qui ne l’est pas (Sigvardsson\n& al., 1996). En eectuant des analyses génétiques sur des\nsous-types de troubles bipolaires, comme celui associé à des\nsymptômes psychotiques, on a aussi réussi à identier des loci\nd’intérêt (Mérette & al., 2008). Une telle stratégie s’applique\négalement à la schizophrénie (Bertolino & Blasi, 2009).\n",
+      "text_sha256": "a68a8a3a9f03762595c1797f7e612237d0d70e347b2c804c52b90e83a8c859d5"
+    },
+    {
+      "bbox": [
+        323.3999938964844,
+        246.2431640625,
+        552.067626953125,
+        283.1689453125
+      ],
+      "block_id": "page-0122-block-0003",
+      "order": 3,
+      "text": "5.4\nIntervention des mécanismes\népigénétiques\n",
+      "text_sha256": "f974aa335c6b95508e3c1cb9a36fe136edbf26b5d134cddd04c793c473d7d08a"
+    },
+    {
+      "bbox": [
+        312.0,
+        296.9658203125,
+        555.2420043945312,
+        445.45849609375
+      ],
+      "block_id": "page-0122-block-0004",
+      "order": 4,
+      "text": "Toutes les cellules de notre organisme partagent exactement la\nmême information génétique contenue dans notre ADN. Or, nos\ncellules sont spécialisées en cellules de la peau, du foie, des reins\nou du cerveau, etc. L’ensemble de tous ces types cellulaires pro-\nvient des mêmes 20 000 à 25 000 gènes présents dans toutes nos\ncellules, mais chaque type cellulaire n’exprime que les gènes qui\nlui sont nécessaires. C’est l’épigénétique qui fournit la réponse à\nce paradoxe apparent entre un support de l’information génétique\n(l’ADN) identique dans des types de cellules qui remplissent,\nelles, des rôles très diérents dans l’organisme. L’épigénétique\nest l’étude des changements dans l’expression des gènes, et donc\ndans l’expression d’un phénotype cellulaire, qui s’eectue sans\nmodication de la séquence de l’ADN elle-même.\n",
+      "text_sha256": "4558b0a919649719266e8916b95bf29768f477602e316e333e2c38a1d6fadd6b"
+    },
+    {
+      "bbox": [
+        312.0,
+        446.4658203125,
+        555.290771484375,
+        573.95849609375
+      ],
+      "block_id": "page-0122-block-0005",
+      "order": 5,
+      "text": "Cette modication de l’expression des gènes est un processus\ncomplexe qui fait appel à des modications chimiques nes\napportées aux bases constituant l’ADN ou aux protéines liées\nà l’ADN dans le noyau. Il ne s’agit pas de polymorphisme : les\nnucléotides de l’ADN restent strictement les mêmes, mais leur\naccessibilité est modiée par l’addition ou par le retrait de grou-\npements chimiques particuliers. Les modications épigénétiques\nles plus connues sont (voir la gure 5.6) :\n1. La méthylation de l’ADN. Il s’agit d’une modication chimique\npar l’addition d’un groupement méthyle sur la cytosine, l’une\ndes quatre bases constituant l’ADN.\n",
+      "text_sha256": "1623876f0865d3fee2587328eb807cf7e42f50aac795acb5826519c54811f8cb"
+    },
+    {
+      "bbox": [
+        324.0,
+        576.9658203125,
+        555.4473266601562,
+        725.45849609375
+      ],
+      "block_id": "page-0122-block-0006",
+      "order": 6,
+      "text": "Cette méthylation a lieu dans des régions spécifiques\ndu génome riches en dimères cytosine-guanine, appelées\n« îlots CpG ». On dénit habituellement un îlot CpG comme\nune région comptant au minimum 200 paires de bases et\ncontenant au moins 50 % de cytosine (Gardiner-Garden &\nFrommer, 1987) et de guanine. Le p dans CpG symbolise le\ngroupement phosphate qui relie la cytosine (C) à la guanine\n(G). Cela signie seulement que C et G appartiennent au\nmême brin d’ADN et donc qu’ils ne se font pas face en étant\nsitués sur deux brins diérents. Les îlots CpG sont notamment\nprésents dans les régions promotrices des gènes, c’est-à-dire\ndans la région de l’ADN qui conditionne l’expression d’un gène.\nD’une manière générale, la méthylation des cytosines tend à\n",
+      "text_sha256": "f8260b06999f8030f8d8f8570d8e9299fce850e53968e2e707cae79356d87e23"
+    },
+    {
+      "bbox": [
+        66.0,
+        40.9658203125,
+        297.11126708984375,
+        51.45849609375
+      ],
+      "block_id": "page-0122-block-0007",
+      "order": 7,
+      "text": "b) Utiliser des études d’association qui, dans certains contextes\n",
+      "text_sha256": "8b95d8cbab12b8f3af3058e0cce30aeec05a6fe9bea350f253d9556e6c9293fc"
+    },
+    {
+      "bbox": [
+        54.0,
+        52.4658203125,
+        297.22174072265625,
+        237.45849609375
+      ],
+      "block_id": "page-0122-block-0008",
+      "order": 8,
+      "text": "de transmission polygénique, peuvent orir une puissance\nstatistique satisfaisante. On peut maintenant parcourir le\ngénome au moyen de centaines de milliers de marqueurs\nSNP en comparant des milliers de patients non reliés géné-\ntiquement avec des personnes témoins. Jusqu’à maintenant,\nces études ont donné des résultats intéressants malgré\nl’utilisation de milliers d’analyses itératives de comparai-\nsons, ce qui requiert un seuil statistique très élevé (Purcell\n& al., 2009). Ces études d’association se heurtent aux\nmêmes dés méthodologiques que les analyses de liaison,\nsoit la présence d’épistasie (interactions entre gènes), de\nfacteurs environnementaux déclencheurs et d’imprécisions\ndiagnostiques.\nL’inclusion de phénotypes intermédiaires dans les analyses\ngénétiques peut être une solution au dé créé par la transmission\ncomplexe des maladies psychiatriques (Szatmari & al., 2007).\n",
+      "text_sha256": "d56386c60530530d5798c53b537f12b532d9caa2d9b9fe77251b576bc926a04a"
+    },
+    {
+      "bbox": [
+        54.0,
+        245.3330078125,
+        297.4747009277344,
+        725.45849609375
+      ],
+      "block_id": "page-0122-block-0009",
+      "order": 9,
+      "text": "Hétérogénéité génétique\nL’hétérogénéité génétique présente dans les syndromes psychia-\ntriques (schizophrénie, troubles bipolaires, autisme, etc.) implique\nque des combinaisons de gènes diérents interviennent dans les\ndiérents sous-types de la maladie. Ainsi, dans une famille donnée,\nle gène A peut causer un syndrome X, alors que dans d’autres\nfamilles, ce sont les gènes B ou C qui causent un syndrome simi-\nlaire. Cette hétérogénéité découlerait de la complexité du contrôle\ngénétique du cerveau, puisque des milliers de gènes y sont exprimés.\nCertaines maladies rares sont causées par des mutations d’un seul\ngène (p. ex., la myopathie de Duchenne) ; mais pour les maladies\natteignant une prévalence aussi importante que celle des mala-\ndies psychiatriques, l’hétérogénéité génétique est probablement\nla règle. Une telle hétérogénéité est un obstacle additionnel qui\ntend à réduire la puissance statistique des analyses de liaison et\nd’association. Quatre solutions à ce problème ont été proposées :\n• Les analyses peuvent faire en sorte que seul un certain pour-\ncentage des familles (sans spécier lesquelles) transmette le\ngène lié au marqueur. L’inconvénient de cette solution est\nqu’elle entraîne l’introduction d’un paramètre supplémentaire\ndans les analyses, diminuant la puissance statistique.\n• L’utilisation de grandes familles peut théoriquement diminuer\nle degré d’hétérogénéité génétique dans un échantillon, en\nsupposant que ces familles possèdent le même sous-type\ngénétique. Cette proposition fait toutefois encore l’objet de\ncontroverses.\n• L’étude d’une population formant un isolat génétique (p. ex.,\nles communautés amish établies en Amérique du Nord) s’est\nparfois avérée fructueuse en génétique humaine. De telles po-\npulations sont issues d’un nombre limité d’individus, avec peu\nd’ajouts étrangers. Ainsi, au moment de la fondation de cette\npopulation, il est probable que les gènes de susceptibilité de\nla maladie ont été introduits par un petit nombre d’individus,\nlimitant ainsi le nombre de sous-types étiologiques au sein de\ncette population. De tels isolats génétiques ont déjà facilité\nl’identication de gènes de susceptibilité de plusieurs mala-\ndies. Le Québec ne constitue pas un isolat génétique, mais il\nprésente un degré d’homogénéité génétique supérieur à celui\nde plusieurs pays occidentaux, car sa population francophone\ndescend d’environ 8 500 colons français arrivés entre 1608\net 1760 ; et certaines régions (comme le Lac-Saint-Jean) ont\n",
+      "text_sha256": "882446febd5fc35db2aca70f5b665b7ec81863b20cd57e238220ca13d4aa57c3"
+    }
+  ],
+  "coordinates_sha256": "fd6a2c3466145e1597405b0ac8e5bb80001285ff4e862537c15ee689c3cc0b69",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0122",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 5\nGénétique\n105\nconnu peu de mouvements de population (Roy-Gagnon &\nal., 2011).\n• L’identication des sous-types s’est avérée fructueuse pour\nplusieurs maladies chez l’humain. Par exemple, des données\ncliniques et épidémiologiques ont permis de conclure que\nle diabète juvénile (type I) et le diabète de type II sont pro-\nbablement des maladies distinctes, ce qu’ont conrmé des\nétudes génétiques. On peut aussi distinguer entre une forme\nd’alcoolisme de type II, associée à un trouble de la personnalité\nantisociale et des comportements violents, davantage liée à\nl’hérédité, que l’alcoolisme de type I, qui ne l’est pas (Sigvardsson\n& al., 1996). En eectuant des analyses génétiques sur des\nsous-types de troubles bipolaires, comme celui associé à des\nsymptômes psychotiques, on a aussi réussi à identier des loci\nd’intérêt (Mérette & al., 2008). Une telle stratégie s’applique\négalement à la schizophrénie (Bertolino & Blasi, 2009).\n5.4\nIntervention des mécanismes\népigénétiques\nToutes les cellules de notre organisme partagent exactement la\nmême information génétique contenue dans notre ADN. Or, nos\ncellules sont spécialisées en cellules de la peau, du foie, des reins\nou du cerveau, etc. L’ensemble de tous ces types cellulaires pro-\nvient des mêmes 20 000 à 25 000 gènes présents dans toutes nos\ncellules, mais chaque type cellulaire n’exprime que les gènes qui\nlui sont nécessaires. C’est l’épigénétique qui fournit la réponse à\nce paradoxe apparent entre un support de l’information génétique\n(l’ADN) identique dans des types de cellules qui remplissent,\nelles, des rôles très diérents dans l’organisme. L’épigénétique\nest l’étude des changements dans l’expression des gènes, et donc\ndans l’expression d’un phénotype cellulaire, qui s’eectue sans\nmodication de la séquence de l’ADN elle-même.\nCette modication de l’expression des gènes est un processus\ncomplexe qui fait appel à des modications chimiques nes\napportées aux bases constituant l’ADN ou aux protéines liées\nà l’ADN dans le noyau. Il ne s’agit pas de polymorphisme : les\nnucléotides de l’ADN restent strictement les mêmes, mais leur\naccessibilité est modiée par l’addition ou par le retrait de grou-\npements chimiques particuliers. Les modications épigénétiques\nles plus connues sont (voir la gure 5.6) :\n1. La méthylation de l’ADN. Il s’agit d’une modication chimique\npar l’addition d’un groupement méthyle sur la cytosine, l’une\ndes quatre bases constituant l’ADN.\nCette méthylation a lieu dans des régions spécifiques\ndu génome riches en dimères cytosine-guanine, appelées\n« îlots CpG ». On dénit habituellement un îlot CpG comme\nune région comptant au minimum 200 paires de bases et\ncontenant au moins 50 % de cytosine (Gardiner-Garden &\nFrommer, 1987) et de guanine. Le p dans CpG symbolise le\ngroupement phosphate qui relie la cytosine (C) à la guanine\n(G). Cela signie seulement que C et G appartiennent au\nmême brin d’ADN et donc qu’ils ne se font pas face en étant\nsitués sur deux brins diérents. Les îlots CpG sont notamment\nprésents dans les régions promotrices des gènes, c’est-à-dire\ndans la région de l’ADN qui conditionne l’expression d’un gène.\nD’une manière générale, la méthylation des cytosines tend à\nb) Utiliser des études d’association qui, dans certains contextes\nde transmission polygénique, peuvent orir une puissance\nstatistique satisfaisante. On peut maintenant parcourir le\ngénome au moyen de centaines de milliers de marqueurs\nSNP en comparant des milliers de patients non reliés géné-\ntiquement avec des personnes témoins. Jusqu’à maintenant,\nces études ont donné des résultats intéressants malgré\nl’utilisation de milliers d’analyses itératives de comparai-\nsons, ce qui requiert un seuil statistique très élevé (Purcell\n& al., 2009). Ces études d’association se heurtent aux\nmêmes dés méthodologiques que les analyses de liaison,\nsoit la présence d’épistasie (interactions entre gènes), de\nfacteurs environnementaux déclencheurs et d’imprécisions\ndiagnostiques.\nL’inclusion de phénotypes intermédiaires dans les analyses\ngénétiques peut être une solution au dé créé par la transmission\ncomplexe des maladies psychiatriques (Szatmari & al., 2007).\nHétérogénéité génétique\nL’hétérogénéité génétique présente dans les syndromes psychia-\ntriques (schizophrénie, troubles bipolaires, autisme, etc.) implique\nque des combinaisons de gènes diérents interviennent dans les\ndiérents sous-types de la maladie. Ainsi, dans une famille donnée,\nle gène A peut causer un syndrome X, alors que dans d’autres\nfamilles, ce sont les gènes B ou C qui causent un syndrome simi-\nlaire. Cette hétérogénéité découlerait de la complexité du contrôle\ngénétique du cerveau, puisque des milliers de gènes y sont exprimés.\nCertaines maladies rares sont causées par des mutations d’un seul\ngène (p. ex., la myopathie de Duchenne) ; mais pour les maladies\natteignant une prévalence aussi importante que celle des mala-\ndies psychiatriques, l’hétérogénéité génétique est probablement\nla règle. Une telle hétérogénéité est un obstacle additionnel qui\ntend à réduire la puissance statistique des analyses de liaison et\nd’association. Quatre solutions à ce problème ont été proposées :\n• Les analyses peuvent faire en sorte que seul un certain pour-\ncentage des familles (sans spécier lesquelles) transmette le\ngène lié au marqueur. L’inconvénient de cette solution est\nqu’elle entraîne l’introduction d’un paramètre supplémentaire\ndans les analyses, diminuant la puissance statistique.\n• L’utilisation de grandes familles peut théoriquement diminuer\nle degré d’hétérogénéité génétique dans un échantillon, en\nsupposant que ces familles possèdent le même sous-type\ngénétique. Cette proposition fait toutefois encore l’objet de\ncontroverses.\n• L’étude d’une population formant un isolat génétique (p. ex.,\nles communautés amish établies en Amérique du Nord) s’est\nparfois avérée fructueuse en génétique humaine. De telles po-\npulations sont issues d’un nombre limité d’individus, avec peu\nd’ajouts étrangers. Ainsi, au moment de la fondation de cette\npopulation, il est probable que les gènes de susceptibilité de\nla maladie ont été introduits par un petit nombre d’individus,\nlimitant ainsi le nombre de sous-types étiologiques au sein de\ncette population. De tels isolats génétiques ont déjà facilité\nl’identication de gènes de susceptibilité de plusieurs mala-\ndies. Le Québec ne constitue pas un isolat génétique, mais il\nprésente un degré d’homogénéité génétique supérieur à celui\nde plusieurs pays occidentaux, car sa population francophone\ndescend d’environ 8 500 colons français arrivés entre 1608\net 1760 ; et certaines régions (comme le Lac-Saint-Jean) ont\n",
+  "raw_text_sha256": "e21d71d89e48dcb00bbfcf876c8f65337e4c3b4a4344669268586c7e9d62dd56",
+  "source_page_display": 123,
+  "source_page_index": 122
+}

@@ -1,0 +1,364 @@
+{
+  "block_sequence_sha256": "7fabd5ca545dd8e2b41bba6b2bc06ba3fc686745c9b3cee984450a454f707d08",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        447.807861328125,
+        758.8693237304688
+      ],
+      "block_id": "page-0083-block-0001",
+      "order": 1,
+      "text": "66\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 1\nIntroduction à la psychiatrie\n",
+      "text_sha256": "fd9d6b86b0a3f0ffc819c610e5a52ac698ddd55255136e7d1f1d6a32340b2c67"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.9658203125,
+        291.1649475097656,
+        62.95849609375
+      ],
+      "block_id": "page-0083-block-0002",
+      "order": 2,
+      "text": "le proverbe, il y a trois types de réponses possibles : abstraite,\nconcrète, bizarre (voir le tableau 3.7).\n",
+      "text_sha256": "a1d25a0c781bf2580506f22466b491e5ade4cf0bc1f80d5fdc34b13be1cf60b9"
+    },
+    {
+      "bbox": [
+        48.0,
+        63.9658203125,
+        291.328857421875,
+        108.95849609375
+      ],
+      "block_id": "page-0083-block-0003",
+      "order": 3,
+      "text": "Puisque la capacité d’abstraction implique une certaine faci-\nlité à alterner entre diérents schèmes mentaux, on peut aussi\ndemander au patient de compléter des séries conceptuelles (des\nséquences de chires, de lettres ou de symboles).\n",
+      "text_sha256": "9d791e2129e75ab7033269de8e0d1ec67ad80ac5ab620c5f7d52e36b8125d795"
+    },
+    {
+      "bbox": [
+        50.04999923706055,
+        130.00230407714844,
+        289.2526550292969,
+        142.3700714111328
+      ],
+      "block_id": "page-0083-block-0004",
+      "order": 4,
+      "text": "TABLEAU 3.7 Exemples de réponses au test d’interprétation\n",
+      "text_sha256": "c2681d542db89d4c1bb06a0c89a52105c8855a6df29dc748d34a00f2830e1e7e"
+    },
+    {
+      "bbox": [
+        102.70000457763672,
+        141.9022979736328,
+        237.75819396972656,
+        153.8700714111328
+      ],
+      "block_id": "page-0083-block-0005",
+      "order": 5,
+      "text": "d’un proverbe (test d’abstraction)\n",
+      "text_sha256": "0d2075f7b6aede0cf046a2db2a9cd4965fd2706120725dbf66c165d039caae1a"
+    },
+    {
+      "bbox": [
+        61.0,
+        169.22412109375,
+        93.5469970703125,
+        179.80029296875
+      ],
+      "block_id": "page-0083-block-0006",
+      "order": 6,
+      "text": "Proverbe\n",
+      "text_sha256": "31d0bedcc7e868527f7087601fbbe6ca2b01491b6fc7f2b0f5e7109316badc12"
+    },
+    {
+      "bbox": [
+        114.95000457763672,
+        159.22412109375,
+        155.66700744628906,
+        179.80029296875
+      ],
+      "block_id": "page-0083-block-0007",
+      "order": 7,
+      "text": "Exemple\nde réponse\n",
+      "text_sha256": "17f7dc2c1891211185d60ac25b9be29e0a962a2dd352d96196a039ac300520ba"
+    },
+    {
+      "bbox": [
+        119.3499984741211,
+        179.22412109375,
+        151.1844940185547,
+        189.80029296875
+      ],
+      "block_id": "page-0083-block-0008",
+      "order": 8,
+      "text": "concrète\n",
+      "text_sha256": "5ccb54bd58c976486adfcff9c808763b940022f6ef52c4ab0d6f9bda7c0fc463"
+    },
+    {
+      "bbox": [
+        176.9499969482422,
+        159.22412109375,
+        217.6669921875,
+        179.80029296875
+      ],
+      "block_id": "page-0083-block-0009",
+      "order": 9,
+      "text": "Exemple\nde réponse\n",
+      "text_sha256": "17f7dc2c1891211185d60ac25b9be29e0a962a2dd352d96196a039ac300520ba"
+    },
+    {
+      "bbox": [
+        181.1999969482422,
+        179.22412109375,
+        213.39549255371094,
+        189.80029296875
+      ],
+      "block_id": "page-0083-block-0010",
+      "order": 10,
+      "text": "abstraite\n",
+      "text_sha256": "b800691c99e367b666ca80be76ee5f55075d5e98670295524b1208d55d0fe349"
+    },
+    {
+      "bbox": [
+        240.1999969482422,
+        159.22412109375,
+        280.9169921875,
+        179.80029296875
+      ],
+      "block_id": "page-0083-block-0011",
+      "order": 11,
+      "text": "Exemple\nde réponse\n",
+      "text_sha256": "17f7dc2c1891211185d60ac25b9be29e0a962a2dd352d96196a039ac300520ba"
+    },
+    {
+      "bbox": [
+        247.85000610351562,
+        179.22412109375,
+        273.177001953125,
+        189.80029296875
+      ],
+      "block_id": "page-0083-block-0012",
+      "order": 12,
+      "text": "bizarre\n",
+      "text_sha256": "51a66fa995bf9372c2e934f27a65207f88f8046e18d053042e6b094e81688838"
+    },
+    {
+      "bbox": [
+        52.25,
+        195.1228485107422,
+        100.14801025390625,
+        235.1423797607422
+      ],
+      "block_id": "page-0083-block-0013",
+      "order": 13,
+      "text": "Pierre\nqui roule\nn’amasse pas\nmousse.\n",
+      "text_sha256": "6f008854ab6c6ca522ccfa72060724fd31dd75c116cc6a6285e5d6289b2a7071"
+    },
+    {
+      "bbox": [
+        110.25,
+        195.2019500732422,
+        155.07899475097656,
+        235.0281219482422
+      ],
+      "block_id": "page-0083-block-0014",
+      "order": 14,
+      "text": "Il n’y a pas de\nmousse sur la\npierre si elle\nroule.\n",
+      "text_sha256": "e4443be511b8eebd998cc4729f7a8b36fe5f6b258c591bfdb0e09581c3666d76"
+    },
+    {
+      "bbox": [
+        168.25,
+        195.2019500732422,
+        215.1490020751953,
+        245.0281219482422
+      ],
+      "block_id": "page-0083-block-0015",
+      "order": 15,
+      "text": "Si on dépense\ntout à mesure,\non ne peut\npas accumuler\nd’économies.\n",
+      "text_sha256": "703393852e3382ae0e4d89224662b805edb578c0fba906b072895bf01c11c381"
+    },
+    {
+      "bbox": [
+        234.25,
+        195.2019500732422,
+        277.8910217285156,
+        245.0281219482422
+      ],
+      "block_id": "page-0083-block-0016",
+      "order": 16,
+      "text": "Pierre, tu es\nPierre et sur\ncette pierre\nje bâtirai mon\néglise.\n",
+      "text_sha256": "0335cdb0826d2a07563783846960f6cbb3eb49c991df6fe7b35fb22e9fd74ff4"
+    },
+    {
+      "bbox": [
+        52.25,
+        253.57284545898438,
+        97.03099060058594,
+        293.5923767089844
+      ],
+      "block_id": "page-0083-block-0017",
+      "order": 17,
+      "text": "Il ne faut pas\njeter le bébé\navec l’eau\ndu bain.\n",
+      "text_sha256": "acafc77caca6ac3e198399974ad626e4730b8fc55bb31fc685922ed03ee4df4a"
+    },
+    {
+      "bbox": [
+        110.25,
+        253.65194702148438,
+        159.552001953125,
+        303.4781188964844
+      ],
+      "block_id": "page-0083-block-0018",
+      "order": 18,
+      "text": "En voulant jeter\nl’eau du bain,\non a lancé le\nbébé sans faire\nattention.\n",
+      "text_sha256": "c8b549293318c80de90554505c11902133736cda914cd92f2da40484b3d32f2e"
+    },
+    {
+      "bbox": [
+        168.25,
+        253.65194702148438,
+        224.81109619140625,
+        303.4781188964844
+      ],
+      "block_id": "page-0083-block-0019",
+      "order": 19,
+      "text": "Il ne faut pas\nrejeter l’essentiel,\nle bon, en voulant\nse débarrasser\ndes détails.\n",
+      "text_sha256": "836f57fbe203c9f922a2dea5a0f0b64efcde774b2e0306f041a1e54128d6a120"
+    },
+    {
+      "bbox": [
+        234.25,
+        253.65194702148438,
+        284.3970031738281,
+        293.4781188964844
+      ],
+      "block_id": "page-0083-block-0020",
+      "order": 20,
+      "text": "L’eau du bain\ndonne des pou-\nvoirs magiques\nau bébé.\n",
+      "text_sha256": "adc7081acea329ee74973541259341c2dc6548b8e8e88355e0ccf64c768efd57"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.2500610351562,
+        74.65850067138672
+      ],
+      "block_id": "page-0083-block-0021",
+      "order": 21,
+      "text": "ne pas se faire frapper). Ce jugement est généralement perturbé\ndans les pathologies graves, comme la psychose ou un trouble\nneurocognitif.\n",
+      "text_sha256": "3b7ae932f98dbbfa67f31e660f298dd39a70ed09f0788b3a352a74bf752694c7"
+    },
+    {
+      "bbox": [
+        306.0,
+        75.8158187866211,
+        548.9817504882812,
+        156.0084991455078
+      ],
+      "block_id": "page-0083-block-0022",
+      "order": 22,
+      "text": "Le jugement social se dénit comme la capacité de décoder\nles situations sociales an d’adopter une conduite adaptée aux\ncirconstances des relations interpersonnelles, tout en respectant\nles règles de la vie en société. Il implique donc une capacité de\nregard sur soi, d’autocritique et de exibilité mentale pour avoir\nun comportement socialement acceptable et entretenir des\néchanges interpersonnels adéquats.\n",
+      "text_sha256": "164a3f7edbc9d01d310d82fa106a7d70d9f60fe9ff5a752cd7c17a4caba8674f"
+    },
+    {
+      "bbox": [
+        306.0,
+        157.1658172607422,
+        549.4524536132812,
+        481.40850830078125
+      ],
+      "block_id": "page-0083-block-0023",
+      "order": 23,
+      "text": "Au-delà de la pathologie aiguë, la majorité des gens font preuve\nd’un certain degré de jugement pour se conformer aux règles\ngénérales de la société et distinguer le bien du mal. Cependant,\nla plupart des pathologies psychiatriques et plusieurs aections\nmédicales (particulièrement neurologiques) aectent le jugement,\net ce, à diérents niveaux. Ainsi, les capacités de jugement d’un\npatient atteint d’une décience intellectuelle peuvent être limi-\ntées dans certaines situations complexes exigeant des ressources\ncognitives supérieures à son niveau intellectuel (p. ex., la gestion\nd’un héritage), alors qu’il peut être capable de juger de situations\nplus simples (p. ex., l’achat de vêtements). L’impulsivité, présente\ndans de nombreuses pathologies (dont l’hypofrontalité, le TDA/H,\ncertains troubles de la personnalité, les états d’intoxication) court-\ncircuite le processus complexe de prise de décision qu’im-\nplique le jugement. À l’autre extrême, le doute pathologique\ndu patient obsessionnel et son investissement exagéré dans les\ndétails peuvent faire dévier le processus de réexion et retarder\nla décision. Des distorsions cognitives propres à la dépression, la\nmanie et la psychose modulent aussi le cadre de référence dans\nlequel s’eectue la réexion concernant la prise de décision. Le\ntableau 3.8 décrit diérentes causes de perturbation du juge-\nment en fonction de la pathologie sous-jacente. Ces facteurs\nnon exhaustifs peuvent être présents de façon variable et il faut\nles rechercher pour évaluer le jugement et justier une ligne de\nconduite conséquente. À noter que le jugement peut être atteint\nà diérents niveaux et qu’une altération du jugement n’est pas\nsynonyme de la présence de dangerosité, même si, dans certaines\nsituations, elle peut y contribuer.\n",
+      "text_sha256": "464b6406d1139c5f00a141edccbbd51c617e15adb0919c1db05c989f4e66884f"
+    },
+    {
+      "bbox": [
+        306.0,
+        482.5658264160156,
+        549.350341796875,
+        678.95849609375
+      ],
+      "block_id": "page-0083-block-0024",
+      "order": 24,
+      "text": "Une impression générale des capacités fondamentales de juge-\nment du patient peut être dégagée de son discours. Une attention\nparticulière doit être portée aux décisions qu’il a prises dans le\npassé ainsi qu’à sa façon de mener sa vie, d’administrer ses biens\net d’aménager ses relations et, surtout, de son comportement en\nentretien. Ainsi, la méance, un pauvre contact interpersonnel,\nun doute sur la abilité, un pauvre contrôle pulsionnel, un ralen-\ntissement ou une altération des processus cognitifs, des troubles\nde la pensée, des idées suicidaires, des idées hétéroagressives,\ndes délires et des hallucinations permettent de qualier les\nperturbations du jugement. Dans un contexte clinique, le degré\nd’altération du jugement (préservé, partiel, pauvre) est un facteur\ndéterminant dans la prise de décision de donner congé ou de\ngarder le patient à l’hôpital contre son gré. Le jugement peut\nêtre altéré dans n’importe quelle maladie (voir le tableau 3.7),\npar exemple, par la méance, les troubles cognitifs, la dépression,\nla manie ou le délire et les hallucinations.\n",
+      "text_sha256": "2b679f5615a9c5f22646be873af7ec2d6ae8ca2366bd0d30abf12f2a9d4dd428"
+    },
+    {
+      "bbox": [
+        306.0,
+        680.1158447265625,
+        549.432373046875,
+        725.45849609375
+      ],
+      "block_id": "page-0083-block-0025",
+      "order": 25,
+      "text": "Le jugement peut aussi être évalué de façon plus objective en\ndemandant au patient de décrire sa réaction dans une situation\noù plusieurs façons de faire sont possibles (certaines faisant\npreuve de meilleur jugement) : « Que feriez-vous si vous trouviez\n",
+      "text_sha256": "4eba06427f2220502bf661354a88e64262e4f0fc21fae8b2fb081f09fbe09fae"
+    },
+    {
+      "bbox": [
+        48.0,
+        332.1330261230469,
+        291.39044189453125,
+        495.7585144042969
+      ],
+      "block_id": "page-0083-block-0026",
+      "order": 26,
+      "text": "Jugement\nLe jugement constitue la capacité de considérer et de soupeser\nl’ensemble des éléments, des facteurs et des options concernant\nune situation donnée an d’en dégager les conséquences possibles\npour nalement en arriver à prendre une décision ou ajuster un\ncomportement. Il implique trois éléments essentiels : le recueil des\ndonnées, l’analyse et la décision, dont l’intégration correcte révèle\nune bonne capacité de jugement. Le jugement est une fonction\nmentale supérieure qui fait appel au bon fonctionnement d’une\nmultitude de processus cognitifs préalables dans la hiérarchie\ndes fonctions cognitives (vigilance, attention, concentration,\nintelligence, capacité d’abstraction, contrôle des pulsions, etc.).\nIl peut aussi dépendre de la personnalité, de l’humeur, de la santé\npsychologique et des circonstances de vie de l’individu.\n",
+      "text_sha256": "2f3a572954d964e5ba29ade8f494d60e097f1484ec66ee47240c595a3837486d"
+    },
+    {
+      "bbox": [
+        48.0,
+        496.7658386230469,
+        291.2764892578125,
+        576.2584838867188
+      ],
+      "block_id": "page-0083-block-0027",
+      "order": 27,
+      "text": "Le jugement concerne le processus de prise de décision, plutôt\nque le résultat issu de ce processus. Il peut donc arriver qu’un\nindividu atteigne un résultat souhaitable par hasard, sans jugement\npréalable quant au raisonnement pouvant l’amener à ce résultat\n(p. ex., un patient schizophrène décompensé qui se rend au poste\nde police pour se plaindre de son voisin qui le « persécute » et qui\nnit par être amené à l’hôpital pour recevoir des soins).\n",
+      "text_sha256": "68c548c4dce2620166ab442df5f406c72314c28b34d3fb630b5304ef30f12e3e"
+    },
+    {
+      "bbox": [
+        48.0,
+        577.2658081054688,
+        291.4036560058594,
+        679.7584838867188
+      ],
+      "block_id": "page-0083-block-0028",
+      "order": 28,
+      "text": "Le jugement est évidemment influencé par des facteurs\nsocioculturels. Le processus de prise de décision du patient\ndoit être évalué attentivement dans son contexte global. Il peut\nêtre acceptable dans certaines cultures d’avoir recours à des\nguérisseurs traditionnels plutôt qu’au médecin en cas de mala-\ndie. Parallèlement, il est attendu que des adeptes de certaines\nreligions (témoins de Jéhovah) refusent les transfusions de sang\nou les grees d’organes sans que cela ne soit considéré comme\nune erreur de jugement au sein de leur communauté.\n",
+      "text_sha256": "53b02c165393010d3c96e0ce4fb0118dc221d97bf1960de40b12405fd87e9f0b"
+    },
+    {
+      "bbox": [
+        48.0,
+        680.7658081054688,
+        291.638916015625,
+        725.7584838867188
+      ],
+      "block_id": "page-0083-block-0029",
+      "order": 29,
+      "text": "Le jugement pratique réfère à la capacité de prendre des\ndécisions adéquates selon le contexte, de faire ce que la plupart\ndes gens feraient dans une situation similaire (p. ex., de réaliser\nqu’il faut attendre au feu rouge avant de traverser la rue an de\n",
+      "text_sha256": "8f9d9d83e77700eee43785b8a7556c8191dbe40fc7c95c0aef1031664464f54a"
+    }
+  ],
+  "coordinates_sha256": "0c5053530a73e3065a963a472963f10348f03635b6f59829f6e159d9e7a321d1",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0083",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "66\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 1\nIntroduction à la psychiatrie\nle proverbe, il y a trois types de réponses possibles : abstraite,\nconcrète, bizarre (voir le tableau 3.7).\nPuisque la capacité d’abstraction implique une certaine faci-\nlité à alterner entre diérents schèmes mentaux, on peut aussi\ndemander au patient de compléter des séries conceptuelles (des\nséquences de chires, de lettres ou de symboles).\nTABLEAU 3.7 Exemples de réponses au test d’interprétation\nd’un proverbe (test d’abstraction)\nProverbe\nExemple\nde réponse\nconcrète\nExemple\nde réponse\nabstraite\nExemple\nde réponse\nbizarre\nPierre\nqui roule\nn’amasse pas\nmousse.\nIl n’y a pas de\nmousse sur la\npierre si elle\nroule.\nSi on dépense\ntout à mesure,\non ne peut\npas accumuler\nd’économies.\nPierre, tu es\nPierre et sur\ncette pierre\nje bâtirai mon\néglise.\nIl ne faut pas\njeter le bébé\navec l’eau\ndu bain.\nEn voulant jeter\nl’eau du bain,\non a lancé le\nbébé sans faire\nattention.\nIl ne faut pas\nrejeter l’essentiel,\nle bon, en voulant\nse débarrasser\ndes détails.\nL’eau du bain\ndonne des pou-\nvoirs magiques\nau bébé.\nne pas se faire frapper). Ce jugement est généralement perturbé\ndans les pathologies graves, comme la psychose ou un trouble\nneurocognitif.\nLe jugement social se dénit comme la capacité de décoder\nles situations sociales an d’adopter une conduite adaptée aux\ncirconstances des relations interpersonnelles, tout en respectant\nles règles de la vie en société. Il implique donc une capacité de\nregard sur soi, d’autocritique et de exibilité mentale pour avoir\nun comportement socialement acceptable et entretenir des\néchanges interpersonnels adéquats.\nAu-delà de la pathologie aiguë, la majorité des gens font preuve\nd’un certain degré de jugement pour se conformer aux règles\ngénérales de la société et distinguer le bien du mal. Cependant,\nla plupart des pathologies psychiatriques et plusieurs aections\nmédicales (particulièrement neurologiques) aectent le jugement,\net ce, à diérents niveaux. Ainsi, les capacités de jugement d’un\npatient atteint d’une décience intellectuelle peuvent être limi-\ntées dans certaines situations complexes exigeant des ressources\ncognitives supérieures à son niveau intellectuel (p. ex., la gestion\nd’un héritage), alors qu’il peut être capable de juger de situations\nplus simples (p. ex., l’achat de vêtements). L’impulsivité, présente\ndans de nombreuses pathologies (dont l’hypofrontalité, le TDA/H,\ncertains troubles de la personnalité, les états d’intoxication) court-\ncircuite le processus complexe de prise de décision qu’im-\nplique le jugement. À l’autre extrême, le doute pathologique\ndu patient obsessionnel et son investissement exagéré dans les\ndétails peuvent faire dévier le processus de réexion et retarder\nla décision. Des distorsions cognitives propres à la dépression, la\nmanie et la psychose modulent aussi le cadre de référence dans\nlequel s’eectue la réexion concernant la prise de décision. Le\ntableau 3.8 décrit diérentes causes de perturbation du juge-\nment en fonction de la pathologie sous-jacente. Ces facteurs\nnon exhaustifs peuvent être présents de façon variable et il faut\nles rechercher pour évaluer le jugement et justier une ligne de\nconduite conséquente. À noter que le jugement peut être atteint\nà diérents niveaux et qu’une altération du jugement n’est pas\nsynonyme de la présence de dangerosité, même si, dans certaines\nsituations, elle peut y contribuer.\nUne impression générale des capacités fondamentales de juge-\nment du patient peut être dégagée de son discours. Une attention\nparticulière doit être portée aux décisions qu’il a prises dans le\npassé ainsi qu’à sa façon de mener sa vie, d’administrer ses biens\net d’aménager ses relations et, surtout, de son comportement en\nentretien. Ainsi, la méance, un pauvre contact interpersonnel,\nun doute sur la abilité, un pauvre contrôle pulsionnel, un ralen-\ntissement ou une altération des processus cognitifs, des troubles\nde la pensée, des idées suicidaires, des idées hétéroagressives,\ndes délires et des hallucinations permettent de qualier les\nperturbations du jugement. Dans un contexte clinique, le degré\nd’altération du jugement (préservé, partiel, pauvre) est un facteur\ndéterminant dans la prise de décision de donner congé ou de\ngarder le patient à l’hôpital contre son gré. Le jugement peut\nêtre altéré dans n’importe quelle maladie (voir le tableau 3.7),\npar exemple, par la méance, les troubles cognitifs, la dépression,\nla manie ou le délire et les hallucinations.\nLe jugement peut aussi être évalué de façon plus objective en\ndemandant au patient de décrire sa réaction dans une situation\noù plusieurs façons de faire sont possibles (certaines faisant\npreuve de meilleur jugement) : « Que feriez-vous si vous trouviez\nJugement\nLe jugement constitue la capacité de considérer et de soupeser\nl’ensemble des éléments, des facteurs et des options concernant\nune situation donnée an d’en dégager les conséquences possibles\npour nalement en arriver à prendre une décision ou ajuster un\ncomportement. Il implique trois éléments essentiels : le recueil des\ndonnées, l’analyse et la décision, dont l’intégration correcte révèle\nune bonne capacité de jugement. Le jugement est une fonction\nmentale supérieure qui fait appel au bon fonctionnement d’une\nmultitude de processus cognitifs préalables dans la hiérarchie\ndes fonctions cognitives (vigilance, attention, concentration,\nintelligence, capacité d’abstraction, contrôle des pulsions, etc.).\nIl peut aussi dépendre de la personnalité, de l’humeur, de la santé\npsychologique et des circonstances de vie de l’individu.\nLe jugement concerne le processus de prise de décision, plutôt\nque le résultat issu de ce processus. Il peut donc arriver qu’un\nindividu atteigne un résultat souhaitable par hasard, sans jugement\npréalable quant au raisonnement pouvant l’amener à ce résultat\n(p. ex., un patient schizophrène décompensé qui se rend au poste\nde police pour se plaindre de son voisin qui le « persécute » et qui\nnit par être amené à l’hôpital pour recevoir des soins).\nLe jugement est évidemment influencé par des facteurs\nsocioculturels. Le processus de prise de décision du patient\ndoit être évalué attentivement dans son contexte global. Il peut\nêtre acceptable dans certaines cultures d’avoir recours à des\nguérisseurs traditionnels plutôt qu’au médecin en cas de mala-\ndie. Parallèlement, il est attendu que des adeptes de certaines\nreligions (témoins de Jéhovah) refusent les transfusions de sang\nou les grees d’organes sans que cela ne soit considéré comme\nune erreur de jugement au sein de leur communauté.\nLe jugement pratique réfère à la capacité de prendre des\ndécisions adéquates selon le contexte, de faire ce que la plupart\ndes gens feraient dans une situation similaire (p. ex., de réaliser\nqu’il faut attendre au feu rouge avant de traverser la rue an de\n",
+  "raw_text_sha256": "2dbecfc19115e78ab1ed02e2b40b142b95d24e82d44685032268d5c731c72f36",
+  "source_page_display": 84,
+  "source_page_index": 83
+}

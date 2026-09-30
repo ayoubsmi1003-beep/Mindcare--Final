@@ -1,0 +1,184 @@
+{
+  "block_sequence_sha256": "cc324d9e73f9119b858db8b3538b863d2acbaeb9e2d63037361309f6a90a6dd1",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        471.6627197265625,
+        758.8693237304688
+      ],
+      "block_id": "page-0205-block-0001",
+      "order": 1,
+      "text": "188\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2 Déterminants bio-psycho-sociaux\n",
+      "text_sha256": "b4863e2dd5446a599703ee6b1c2ae54b253f3c7adb1de8530129e0fc4d32ac1b"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.3208618164062,
+        131.95849609375
+      ],
+      "block_id": "page-0205-block-0002",
+      "order": 2,
+      "text": "ce qui laisse présager des décits dans ces deux sphères chez\nles psychopathes (Kiehl & al., 2000). Finalement, on note des\ndécits du contrôle de l’inhibition chez les patients atteints d’un\ntrouble obsessionnel-compulsif. En leur demandant d’inhiber\nune réponse, Kang et collaborateurs (2013) ont constaté qu’ils\nprésentent une sous-activation des cortex cingulaire antérieur et\nmédian, du putamen et du noyau caudé, ces structures constituant\nun circuit entre les régions frontales et les noyaux gris centraux.\n",
+      "text_sha256": "715f1959f5f65dfde81a00408107d337a62677eb1ba134c98de5f433c59c0dcd"
+    },
+    {
+      "bbox": [
+        315.1499938964844,
+        157.9931640625,
+        482.0761413574219,
+        177.1689453125
+      ],
+      "block_id": "page-0205-block-0003",
+      "order": 3,
+      "text": "8.10\nHormones et stress\n",
+      "text_sha256": "cdf4bcddcf677b7c883e27e459f0476640b33ad2cd1906e39bd121aef9858892"
+    },
+    {
+      "bbox": [
+        306.0,
+        190.9658203125,
+        549.3341674804688,
+        373.95849609375
+      ],
+      "block_id": "page-0205-block-0004",
+      "order": 4,
+      "text": "Comme nous en avons discuté auparavant, un certain nombre\nde connaissances que nous possédons à ce jour sur le cerveau\nproviennent d’études eectuées sur des patients sourant de\nlésions cérébrales. Bien que ces résultats soient très instructifs,\nil n’en demeure pas moins que ces cas sont relativement rares et\nparfois diciles à interpréter puisqu’il est exceptionnel que deux\npatients aient une lésion identique ou encore que leur foyer épi-\nleptique soit situé exactement au même endroit dans le cerveau.\nPar contre, d’autres domaines d’études peuvent nous en apprendre\nconsidérablement, l’un d’eux étant la psychoneuroendocrinologie,\nune discipline née de la combinaison de trois champs d’études\nqui s’intéressent respectivement au comportement, au cerveau\net aux hormones. En tirant avantage de la structure moléculaire\nde certaines hormones et de la localisation de leurs récepteurs,\nnous pouvons arriver à moduler de façon temporaire – et parfois\npermanente – certains processus cognitifs.\n",
+      "text_sha256": "7e174dce693a2135ca2c66477353b4c771c1339ce61b0e4a33228814688c4914"
+    },
+    {
+      "bbox": [
+        306.0,
+        388.48681640625,
+        475.98223876953125,
+        404.62939453125
+      ],
+      "block_id": "page-0205-block-0005",
+      "order": 5,
+      "text": "8.10.1 Catégories d’hormones\n",
+      "text_sha256": "5d9ca30a3f99731cabb5a3c0a8d29cced89dfcc26d19e6546c9ce3a3d5e2dd22"
+    },
+    {
+      "bbox": [
+        306.0,
+        407.9658203125,
+        549.1962890625,
+        562.45849609375
+      ],
+      "block_id": "page-0205-block-0006",
+      "order": 6,
+      "text": "Il existe trois principales catégories d’hormones :\n1. Les peptides sont des polymères d’acides aminés reliés entre\neux par des liaisons peptidiques. Ce sont de grosses molécules\nhydrosolubles qui n’ont pas accès au cerveau, car il leur est\nimpossible de passer la barrière hématoencéphalique.\n2. Les neuropeptides sont des peptides (hormonaux ou non)\nsecrétés par un neurone qui agissent au niveau du cerveau\ncomme neuromodulateur ou neurotransmetteur.\n3. Les stéroïdes sont des hormones de très petite taille ; étant\nliposolubles, elles peuvent aisément passer la barrière hé-\nmatoencéphalique et donc, agir directement au niveau du\ncerveau. C’est le cas, notamment, des glucocorticoïdes qui\nsont une catégorie d’hormones de stress.\n",
+      "text_sha256": "913b3008c080622a7100fa238a53197e92c6392b896a168db8a7b9f71154bfd5"
+    },
+    {
+      "bbox": [
+        306.0,
+        578.98681640625,
+        383.1519470214844,
+        595.12939453125
+      ],
+      "block_id": "page-0205-block-0007",
+      "order": 7,
+      "text": "8.10.2 Stress\n",
+      "text_sha256": "c9d92340abb170dad8e4c61f0029d572dffab4103998e1e98ae515764ac757d7"
+    },
+    {
+      "bbox": [
+        306.0,
+        598.4658203125,
+        549.2449340820312,
+        726.47607421875
+      ],
+      "block_id": "page-0205-block-0008",
+      "order": 8,
+      "text": "En 1936, c’est à Montréal que l’endocrinologue Hans Selye utilisa\nle terme « stress » pour la première fois dans le sens que nous\nlui connaissons aujourd’hui. Il dénissait le stress comme une\nréponse non spécique de l’organisme lorsque l’homéostasie\ndu corps est menacée. Par la suite, le psychologue John Mason\n(1968) a soulevé le fait qu’il devait y avoir des caractéristiques\nspéciques qui faisaient répondre le corps. À ce jour, on a iden-\ntié quatre caractéristiques additives du stress, regroupées sous\nl’acronyme CINE (Dickerson & Kemeny, 2004) :\n• C – le sentiment d’avoir peu ou pas de contrôle sur la situation ;\n• I – l’imprévisibilité ;\n",
+      "text_sha256": "b7daa3ec1f2beb2c2cbb90cefe376225be864c57df3dc579716eeaf476bfc441"
+    },
+    {
+      "bbox": [
+        48.0,
+        39.33681869506836,
+        160.7550048828125,
+        55.47939682006836
+      ],
+      "block_id": "page-0205-block-0009",
+      "order": 9,
+      "text": "8.9.5 Autocontrôle\n",
+      "text_sha256": "04f952b3949fc9cfc830360c46dfd141dbc123ddcfcb0991e2d02f241032f540"
+    },
+    {
+      "bbox": [
+        48.0,
+        58.815818786621094,
+        291.18115234375,
+        138.4084930419922
+      ],
+      "block_id": "page-0205-block-0010",
+      "order": 10,
+      "text": "L’autocontrôle consiste en la capacité d’ajuster, de moduler ou\nd’inhiber son comportement et ses actions en fonction du contexte\net des exigences externes. L’autocontrôle est donc intimement\nlié aux fonctions d’inhibition qui se révèlent essentielles pour\naccomplir une action en vue d’atteindre un but précis. Généra-\nlement, un manque d’inhibition se traduit par de l’impulsivité,\ndonc par un manque de contrôle sur le comportement.\n",
+      "text_sha256": "1de786ae49f74e0b240311ffb52770977bf009ff3284eb310052bc9647869753"
+    },
+    {
+      "bbox": [
+        48.0,
+        139.4158172607422,
+        290.9894104003906,
+        184.45849609375
+      ],
+      "block_id": "page-0205-block-0011",
+      "order": 11,
+      "text": "L’inhibition et l’impulsivité peuvent être mesurées à l’aide de\nplusieurs tests neuropsychologiques, comme la tâche de Stroop,\nla tâche Stop Signal, la Continuous Performance Task, la Barratt\nImpulsiveness Scale et les tâches de décisiongo/no-go, entre autres.\n",
+      "text_sha256": "0d5d8e0ab9f6f1f132344dd42fab6b65e15eabb2b68dd3321e9c3df423dfeb20"
+    },
+    {
+      "bbox": [
+        53.20000076293945,
+        190.35000610351562,
+        273.8446960449219,
+        211.55029296875
+      ],
+      "block_id": "page-0205-block-0012",
+      "order": 12,
+      "text": "i\nVous pouvez consulter les tests neuropsychologiques au\nwww4.parinc.com.\n",
+      "text_sha256": "3bebed60bd96c1f202498fcafa07296c111c0f7d1ec3dbeae536754ee2e4635d"
+    },
+    {
+      "bbox": [
+        48.0,
+        219.9658203125,
+        291.2926940917969,
+        414.65850830078125
+      ],
+      "block_id": "page-0205-block-0013",
+      "order": 13,
+      "text": "L’inhibition fait intervenir plusieurs régions du cerveau,\nprincipalement situées dans le lobe frontal. Selon les tâches,\nl’inhibition est souvent associée à l’activation de plusieurs régions\ncorticales, dont l’aire motrice supplémentaire, l’aire motrice pré-\nsupplémentaire, le gyrus frontal inférieur, le cortex prémoteur, le\ncortex pariétal, les cortex préfrontaux ventrolatéral et dorsolatéral,\nle cortex cingulaire antérieur, le cortex frontal inférieur et de\nl’insula. Des structures sous-corticales ont aussi un rôle à jouer\ndans l’inhibition d’une réponse, comme les noyaux gris centraux,\ndont le noyau sous-thalamique, qui est directement connecté\nau gyrus frontal inférieur et à l’aire motrice présupplémentaire.\nCes régions agissent ensemble en un circuit complexe, et dif-\nférentes régions peuvent être recrutées selon la tâche réalisée\n(Bari & Robbins, 2013). De plus, une augmentation de l’activité\nde la noradrénaline, de la sérotonine et de l’acétylcholine dans\nle cortex orbitofrontal est liée à une augmentation des capacités\nd’inhibition (Logue & Gould, 2013).\n",
+      "text_sha256": "2d4c18daf23b03d51d6b782e1ac65c735089da21142e69ddacb9cac817efa0a8"
+    },
+    {
+      "bbox": [
+        48.0,
+        415.66583251953125,
+        291.4236145019531,
+        725.45849609375
+      ],
+      "block_id": "page-0205-block-0014",
+      "order": 14,
+      "text": "On observe des décits d’inhibition dans plusieurs troubles\npsychiatriques. Durant la phase maniaque, les patients bipolaires\nmontrent une hypoactivation du gyrus frontal inférieur droit\nlors de diérentes tâches d’inhibition (Hajek & al., 2013). Les\npatients atteints d’un trouble du spectre de l’autisme ont aussi des\ndicultés à contrôler une réponse automatique et à ignorer les\ninformations non pertinentes durant une tâche, par comparaison\naux sujets témoins (Geurts & al., 2014). On observe également\ndes décits au niveau de l’inhibition cognitive chez les patients\nschizophrènes. Lors de la passation du test de Stroop, ils sont\nplus lents et font plus d’erreurs que les sujets sains. Ces résultats\ndonnent à penser que les décits de fonctionnement exécutif\nglobal chez les schizophrènes sont, au moins en partie, reliés à un\ndécit d’inhibition. Évidemment, on observe aussi de nombreux\nproblèmes d’inhibition dans le trouble décit de l’attention avec\nou sans hyperactivité (TDA/H). Chez ces patients, les décits\nd’inhibition motrice et d’inhibition des interférences sont associés\nà une sous-activation de la jonction inférieure temporale jusqu’à\nl’insula, ainsi que de l’aire motrice supplémentaire, du cortex\ncingulaire antérieur, du noyau caudé gauche et du thalamus\ndroit (Hart & al., 2013). Les personnes atteintes d’un trouble de\nla personnalité antisociale sont impulsives et elles ont donc aussi\ndes dicultés d’inhibition (Swann & al., 2009) lors d’une tâche\nd’impulsivité, ce qui explique les symptômes antisociaux. Elles\nprésentent également une amplitude plus faible de la composante\nde potentiels évoqués N-275 frontale que les sujets témoins. Cette\ncomposante reète les capacités attentionnelles et inhibitrices,\n",
+      "text_sha256": "473969838d56a21ce08198175d0980d333837681a53db965ab0b8eb7c251b93c"
+    }
+  ],
+  "coordinates_sha256": "0794a625aff1421e7d712d710981e207271e935d4adc06d245e9b0c67023d7a0",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0205",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "188\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2 Déterminants bio-psycho-sociaux\nce qui laisse présager des décits dans ces deux sphères chez\nles psychopathes (Kiehl & al., 2000). Finalement, on note des\ndécits du contrôle de l’inhibition chez les patients atteints d’un\ntrouble obsessionnel-compulsif. En leur demandant d’inhiber\nune réponse, Kang et collaborateurs (2013) ont constaté qu’ils\nprésentent une sous-activation des cortex cingulaire antérieur et\nmédian, du putamen et du noyau caudé, ces structures constituant\nun circuit entre les régions frontales et les noyaux gris centraux.\n8.10\nHormones et stress\nComme nous en avons discuté auparavant, un certain nombre\nde connaissances que nous possédons à ce jour sur le cerveau\nproviennent d’études eectuées sur des patients sourant de\nlésions cérébrales. Bien que ces résultats soient très instructifs,\nil n’en demeure pas moins que ces cas sont relativement rares et\nparfois diciles à interpréter puisqu’il est exceptionnel que deux\npatients aient une lésion identique ou encore que leur foyer épi-\nleptique soit situé exactement au même endroit dans le cerveau.\nPar contre, d’autres domaines d’études peuvent nous en apprendre\nconsidérablement, l’un d’eux étant la psychoneuroendocrinologie,\nune discipline née de la combinaison de trois champs d’études\nqui s’intéressent respectivement au comportement, au cerveau\net aux hormones. En tirant avantage de la structure moléculaire\nde certaines hormones et de la localisation de leurs récepteurs,\nnous pouvons arriver à moduler de façon temporaire – et parfois\npermanente – certains processus cognitifs.\n8.10.1 Catégories d’hormones\nIl existe trois principales catégories d’hormones :\n1. Les peptides sont des polymères d’acides aminés reliés entre\neux par des liaisons peptidiques. Ce sont de grosses molécules\nhydrosolubles qui n’ont pas accès au cerveau, car il leur est\nimpossible de passer la barrière hématoencéphalique.\n2. Les neuropeptides sont des peptides (hormonaux ou non)\nsecrétés par un neurone qui agissent au niveau du cerveau\ncomme neuromodulateur ou neurotransmetteur.\n3. Les stéroïdes sont des hormones de très petite taille ; étant\nliposolubles, elles peuvent aisément passer la barrière hé-\nmatoencéphalique et donc, agir directement au niveau du\ncerveau. C’est le cas, notamment, des glucocorticoïdes qui\nsont une catégorie d’hormones de stress.\n8.10.2 Stress\nEn 1936, c’est à Montréal que l’endocrinologue Hans Selye utilisa\nle terme « stress » pour la première fois dans le sens que nous\nlui connaissons aujourd’hui. Il dénissait le stress comme une\nréponse non spécique de l’organisme lorsque l’homéostasie\ndu corps est menacée. Par la suite, le psychologue John Mason\n(1968) a soulevé le fait qu’il devait y avoir des caractéristiques\nspéciques qui faisaient répondre le corps. À ce jour, on a iden-\ntié quatre caractéristiques additives du stress, regroupées sous\nl’acronyme CINE (Dickerson & Kemeny, 2004) :\n• C – le sentiment d’avoir peu ou pas de contrôle sur la situation ;\n• I – l’imprévisibilité ;\n8.9.5 Autocontrôle\nL’autocontrôle consiste en la capacité d’ajuster, de moduler ou\nd’inhiber son comportement et ses actions en fonction du contexte\net des exigences externes. L’autocontrôle est donc intimement\nlié aux fonctions d’inhibition qui se révèlent essentielles pour\naccomplir une action en vue d’atteindre un but précis. Généra-\nlement, un manque d’inhibition se traduit par de l’impulsivité,\ndonc par un manque de contrôle sur le comportement.\nL’inhibition et l’impulsivité peuvent être mesurées à l’aide de\nplusieurs tests neuropsychologiques, comme la tâche de Stroop,\nla tâche Stop Signal, la Continuous Performance Task, la Barratt\nImpulsiveness Scale et les tâches de décisiongo/no-go, entre autres.\ni\nVous pouvez consulter les tests neuropsychologiques au\nwww4.parinc.com.\nL’inhibition fait intervenir plusieurs régions du cerveau,\nprincipalement situées dans le lobe frontal. Selon les tâches,\nl’inhibition est souvent associée à l’activation de plusieurs régions\ncorticales, dont l’aire motrice supplémentaire, l’aire motrice pré-\nsupplémentaire, le gyrus frontal inférieur, le cortex prémoteur, le\ncortex pariétal, les cortex préfrontaux ventrolatéral et dorsolatéral,\nle cortex cingulaire antérieur, le cortex frontal inférieur et de\nl’insula. Des structures sous-corticales ont aussi un rôle à jouer\ndans l’inhibition d’une réponse, comme les noyaux gris centraux,\ndont le noyau sous-thalamique, qui est directement connecté\nau gyrus frontal inférieur et à l’aire motrice présupplémentaire.\nCes régions agissent ensemble en un circuit complexe, et dif-\nférentes régions peuvent être recrutées selon la tâche réalisée\n(Bari & Robbins, 2013). De plus, une augmentation de l’activité\nde la noradrénaline, de la sérotonine et de l’acétylcholine dans\nle cortex orbitofrontal est liée à une augmentation des capacités\nd’inhibition (Logue & Gould, 2013).\nOn observe des décits d’inhibition dans plusieurs troubles\npsychiatriques. Durant la phase maniaque, les patients bipolaires\nmontrent une hypoactivation du gyrus frontal inférieur droit\nlors de diérentes tâches d’inhibition (Hajek & al., 2013). Les\npatients atteints d’un trouble du spectre de l’autisme ont aussi des\ndicultés à contrôler une réponse automatique et à ignorer les\ninformations non pertinentes durant une tâche, par comparaison\naux sujets témoins (Geurts & al., 2014). On observe également\ndes décits au niveau de l’inhibition cognitive chez les patients\nschizophrènes. Lors de la passation du test de Stroop, ils sont\nplus lents et font plus d’erreurs que les sujets sains. Ces résultats\ndonnent à penser que les décits de fonctionnement exécutif\nglobal chez les schizophrènes sont, au moins en partie, reliés à un\ndécit d’inhibition. Évidemment, on observe aussi de nombreux\nproblèmes d’inhibition dans le trouble décit de l’attention avec\nou sans hyperactivité (TDA/H). Chez ces patients, les décits\nd’inhibition motrice et d’inhibition des interférences sont associés\nà une sous-activation de la jonction inférieure temporale jusqu’à\nl’insula, ainsi que de l’aire motrice supplémentaire, du cortex\ncingulaire antérieur, du noyau caudé gauche et du thalamus\ndroit (Hart & al., 2013). Les personnes atteintes d’un trouble de\nla personnalité antisociale sont impulsives et elles ont donc aussi\ndes dicultés d’inhibition (Swann & al., 2009) lors d’une tâche\nd’impulsivité, ce qui explique les symptômes antisociaux. Elles\nprésentent également une amplitude plus faible de la composante\nde potentiels évoqués N-275 frontale que les sujets témoins. Cette\ncomposante reète les capacités attentionnelles et inhibitrices,\n",
+  "raw_text_sha256": "bacac19b584dd955925d13288b0117d1ebe78bb87bb138ea8bf9bf3626b87fd6",
+  "source_page_display": 206,
+  "source_page_index": 205
+}

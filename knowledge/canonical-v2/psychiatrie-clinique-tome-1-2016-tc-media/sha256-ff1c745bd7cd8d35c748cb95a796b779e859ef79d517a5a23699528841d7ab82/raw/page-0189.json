@@ -1,0 +1,112 @@
+{
+  "block_sequence_sha256": "fbf7c284712ae66b040b155f7ef1223cd33a48e2fc274253647adfaa82aa940e",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        471.6627197265625,
+        758.8693237304688
+      ],
+      "block_id": "page-0189-block-0001",
+      "order": 1,
+      "text": "172\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2 Déterminants bio-psycho-sociaux\n",
+      "text_sha256": "870c8026f5eddb1981ec43d2c76e01f5d11428acbc75d29d38e68816632fed57"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.5174560546875,
+        483.7585144042969
+      ],
+      "block_id": "page-0189-block-0002",
+      "order": 2,
+      "text": "antérieur et l’aire motrice supplémentaire (voir la figure\nIllustration de l’activation du réseau commun en mémoire\nde travail dans les figures supplémentaires). En plus de ce\nréseau commun, des régions plus spécifiques sont activées\npar différentes fonctions de la mémoire de travail. Parmi\ncelles-ci, on peut citer :\n• l’aire de Broca gauche, pour les tâches mettant en jeu la mé-\nmoire de travail verbale ;\n• les aires prémotrices dorsale et médiane pour des tâches\nfaisant intervenir la mémoire de travail non verbale ;\n• le gyrus frontal inférieur postérieur lorsqu’il est nécessaire\nde se souvenir de l’identité du stimulus ;\n• le gyrus frontal supérieur postérieur dans le cas d’un souvenir\nnécessitant la localisation d’un stimulus dans l’espace ;\n• l’hémisphère gauche, au niveau du cortex préfrontal rostral\nlatéral, du lobule pariétal supérieur/sillon intrapariétal et\ndu cortex insulaire antérieur au cours de la réalisation de\ntâches nécessitant l’intervention de la mémoire de travail et\nde tâches n’impliquant pas cette dernière.\nEn général, les méta-analyses donnent des résultats similaires.\nRottschy et collaborateurs (2012) les ont interprétés, notamment\nl’activation du réseau commun (core network), comme représentant\nl’administrateur central (central executive) qui ne serait pas localisé\ndans une seule région bien circonscrite ; il serait plutôt représenté\npar un « comité exécutif » siégeant à plusieurs endroits (ceux du\nréseau commun). Les activations se produisent symétriquement\ndans les deux hémisphères dans les zones frontales (BA44/45),\nl’insula antérieure, le cortex dorsal prémoteur et le gyrus frontal\ninférieur (cortex prémoteur ventral), qui s’étendent dans l’aire\nBA44 (voir les gures supplémentaires). On a également observé\nune activation bilatérale dans l’aire motrice supplémentaire ainsi\nque dans le sulcus intrapariétal, dans le lobule pariétal supérieur\n(aire 7) et dans la région pariétale antérieure (aire BA2). De plus,\nle cortex préfrontal latéral a montré une activation bilatérale dans\nles parties caudales et rostrales. Une activation bilatérale a été\nmise en évidence dans le cortex visuel ventral ainsi que dans le\nlobule antérieur du cervelet (aire VI).\n",
+      "text_sha256": "21dfdceb9a81e476425c081dff12b6649a8221b4c887e4e3e7b3f9decb391707"
+    },
+    {
+      "bbox": [
+        306.0,
+        484.9658203125,
+        549.2753295898438,
+        612.20849609375
+      ],
+      "block_id": "page-0189-block-0003",
+      "order": 3,
+      "text": "Malgré l’extrême complexité des processus cognitifs, Rottschy\net collaborateurs (2012) ont tout de même établi que le réseau\ncommun chevauchait grandement les réseaux communs observés\ndans d’autres domaines de la cognition (p. ex., l’attention, la\nperception, la planication motrice, etc.). Plusieurs auteurs ont\ntenté d’élucider cette observation, mais aucun d’entre eux n’a pu\nproposer à ce jour un modèle permettant d’expliquer l’ensemble\ndes données obtenues (Ikkai & Curtis, 2011). Il est donc plus\nprudent de dire que ce réseau commun, tel qu’il est observé\ndans plusieurs domaines, reète des processus cognitifs de base\nnécessaires à des opérations plus complexes.\n",
+      "text_sha256": "88d3af67729cae6815d2a2070260d9b11bd3e0c7a09ebdfe04c4d0e038e10af2"
+    },
+    {
+      "bbox": [
+        306.0,
+        622.9368286132812,
+        470.2588195800781,
+        639.0794067382812
+      ],
+      "block_id": "page-0189-block-0004",
+      "order": 4,
+      "text": "8.5.2 Mémoire à long terme\n",
+      "text_sha256": "166a54623558b27698323701d659db63825a4874b3bbafe2d9654514ca92a154"
+    },
+    {
+      "bbox": [
+        306.0,
+        642.5658569335938,
+        549.0547485351562,
+        692.1085205078125
+      ],
+      "block_id": "page-0189-block-0005",
+      "order": 5,
+      "text": "La mémoire à long terme est divisée en deux grands domaines :\n1. La mémoire explicite (ou déclarative), qui est elle-même\nsubdivisée en deux composantes :\na) la mémoire épisodique, qui renferme les éléments auto-\n",
+      "text_sha256": "0be65445650d328fa27d23767f86e4dc6a340f6cb40b25e01ab6153b47f0e691"
+    },
+    {
+      "bbox": [
+        330.0,
+        693.2658081054688,
+        549.1099243164062,
+        715.45849609375
+      ],
+      "block_id": "page-0189-block-0006",
+      "order": 6,
+      "text": "biographiques propres à un individu (p. ex., le nom de son\nécole, de son père, de sa mère, la date de son mariage) ;\n",
+      "text_sha256": "55c61301d91f025bc07bfaf7f9185146b1dc33d407f2a0082dd0afbfb0141300"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.9658203125,
+        291.5047607421875,
+        634.45849609375
+      ],
+      "block_id": "page-0189-block-0007",
+      "order": 7,
+      "text": "le chercher). La mémoire de travail est donc en interaction\navec la mémoire à long terme. Elle permet de conserver l’in-\nformation emmagasinée pour une courte période, le temps\nd’accomplir nos tâches quotidiennes sans encombrer notre\nmémoire à long terme qui, elle, est remplie de souvenirs\n(Cowan, 2008).\nÀ l’origine, le modèle d’Atkinson & Shirin (1968) proposait\nune conception séquentielle de l’emmagasinage de l’information.\nLes éléments saisis par nos systèmes perceptuels (visuel, auditif,\netc.) devaient passer par la mémoire à court terme avant de\npouvoir être emmagasinés de façon plus permanente dans la\nmémoire à long terme. On pensait alors que la mémoire à court\nterme renfermait les représentations mentales des éléments\nperceptuels et agissait comme une porte d’entrée (gateway) vers\nle long terme. Plus tard, Baddeley & Hitch (1974) ont élaboré un\nautre modèle plus dynamique dans lequel la mémoire de travail\nsert d’une part à transférer une information vers la mémoire\nà long terme (p. ex., par répétition) et, d’autre part, à stocker\ntemporairement des informations issues de la mémoire à long\nterme. Selon eux, la mémoire de travail serait donc constituée\nde trois composantes majeures :\n1. la boucle phonologique, qui intervient dans le traitement et\nle maintien de l’information verbale et qui représente l’ensemble\ndes neurones activés lors du traitement et du maintien de l’in-\nformation verbale dans la mémoire de travail est impliquée\ndans le traitement et le maintien de l’information verbale ;\n2. le calepin visuospatial, qui possède les mêmes caractéristiques\nque la boucle phonologique, mais qui est dédié aux informa-\ntions visuelles et spatiales ;\n3. l’administrateur central, qui participe à la gestion des ressources\nattentionnelles (p. ex., focalisation, division et transition\nattentionnelle [switch]).\nAu début des années 2000, Baddeley (2003) t évoluer son\nmodèle tripartite en intégrant un nouveau composant : le tampon\n(buer) épisodique. Il s’agit d’un système de stockage à capacités\nlimitées assumant deux fonctions :\n1. Intégrer les informations élémentaires en des représentations\nplus complexes ;\n2. Permettre à ces représentations d’entrer en mémoire épisodique\n(la mémoire des événements personnels) et d’être récupérées.\nEn électrophysiologie, l’étude de la mémoire de travail réalisée\npar Drew et ses collaborateurs (2006) montre que certaines com-\nposantes des potentiels évoqués permettent de mesurer plusieurs\ndimensions spéciques de la mémoire de travail. Notamment,\nl’onde lente négative (negative slow wave) permet de mesurer le\nmaintien d’information dans la mémoire de travail, alors que la\ncomposante tardive controlatérale (contralateral delay activity) est\nsensible aux diérences interindividuelles au niveau de la capacité\nde la mémoire de travail (c.-à-d. la quantité d’informations qu’elle\npeut contenir).\n",
+      "text_sha256": "ecefe7889958575d877303e9aae3e8a5f9ce46c5251770ad281428b753ac357c"
+    },
+    {
+      "bbox": [
+        48.0,
+        635.5158081054688,
+        291.11199951171875,
+        715.45849609375
+      ],
+      "block_id": "page-0189-block-0008",
+      "order": 8,
+      "text": "En neuro-imagerie, dans une méta-analyse regroupant\nles résultats de 189 études faisant appel à l’IRMf, portant sur\nles substrats neuronaux de la mémoire de travail, Rottschy\net ses collaborateurs (2012) ont observé un réseau commun\n(core network) transcendant les types de tâches, de stimuli et\nde modalités. Qualifié de réseau frontopariétal bilatéral, ce\nréseau comprend le gyrus frontal inférieur, le cortex insulaire\n",
+      "text_sha256": "f4b7bacb83e033a57c38bfec263a6b25b0afcb4e72d06f77627e30eb79be06de"
+    }
+  ],
+  "coordinates_sha256": "8768dd6e8b6eb14aaec322abad3dbe0ce73b24be7fe980428fa79b9ad3ed1d15",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0189",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "172\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2 Déterminants bio-psycho-sociaux\nantérieur et l’aire motrice supplémentaire (voir la figure\nIllustration de l’activation du réseau commun en mémoire\nde travail dans les figures supplémentaires). En plus de ce\nréseau commun, des régions plus spécifiques sont activées\npar différentes fonctions de la mémoire de travail. Parmi\ncelles-ci, on peut citer :\n• l’aire de Broca gauche, pour les tâches mettant en jeu la mé-\nmoire de travail verbale ;\n• les aires prémotrices dorsale et médiane pour des tâches\nfaisant intervenir la mémoire de travail non verbale ;\n• le gyrus frontal inférieur postérieur lorsqu’il est nécessaire\nde se souvenir de l’identité du stimulus ;\n• le gyrus frontal supérieur postérieur dans le cas d’un souvenir\nnécessitant la localisation d’un stimulus dans l’espace ;\n• l’hémisphère gauche, au niveau du cortex préfrontal rostral\nlatéral, du lobule pariétal supérieur/sillon intrapariétal et\ndu cortex insulaire antérieur au cours de la réalisation de\ntâches nécessitant l’intervention de la mémoire de travail et\nde tâches n’impliquant pas cette dernière.\nEn général, les méta-analyses donnent des résultats similaires.\nRottschy et collaborateurs (2012) les ont interprétés, notamment\nl’activation du réseau commun (core network), comme représentant\nl’administrateur central (central executive) qui ne serait pas localisé\ndans une seule région bien circonscrite ; il serait plutôt représenté\npar un « comité exécutif » siégeant à plusieurs endroits (ceux du\nréseau commun). Les activations se produisent symétriquement\ndans les deux hémisphères dans les zones frontales (BA44/45),\nl’insula antérieure, le cortex dorsal prémoteur et le gyrus frontal\ninférieur (cortex prémoteur ventral), qui s’étendent dans l’aire\nBA44 (voir les gures supplémentaires). On a également observé\nune activation bilatérale dans l’aire motrice supplémentaire ainsi\nque dans le sulcus intrapariétal, dans le lobule pariétal supérieur\n(aire 7) et dans la région pariétale antérieure (aire BA2). De plus,\nle cortex préfrontal latéral a montré une activation bilatérale dans\nles parties caudales et rostrales. Une activation bilatérale a été\nmise en évidence dans le cortex visuel ventral ainsi que dans le\nlobule antérieur du cervelet (aire VI).\nMalgré l’extrême complexité des processus cognitifs, Rottschy\net collaborateurs (2012) ont tout de même établi que le réseau\ncommun chevauchait grandement les réseaux communs observés\ndans d’autres domaines de la cognition (p. ex., l’attention, la\nperception, la planication motrice, etc.). Plusieurs auteurs ont\ntenté d’élucider cette observation, mais aucun d’entre eux n’a pu\nproposer à ce jour un modèle permettant d’expliquer l’ensemble\ndes données obtenues (Ikkai & Curtis, 2011). Il est donc plus\nprudent de dire que ce réseau commun, tel qu’il est observé\ndans plusieurs domaines, reète des processus cognitifs de base\nnécessaires à des opérations plus complexes.\n8.5.2 Mémoire à long terme\nLa mémoire à long terme est divisée en deux grands domaines :\n1. La mémoire explicite (ou déclarative), qui est elle-même\nsubdivisée en deux composantes :\na) la mémoire épisodique, qui renferme les éléments auto-\nbiographiques propres à un individu (p. ex., le nom de son\nécole, de son père, de sa mère, la date de son mariage) ;\nle chercher). La mémoire de travail est donc en interaction\navec la mémoire à long terme. Elle permet de conserver l’in-\nformation emmagasinée pour une courte période, le temps\nd’accomplir nos tâches quotidiennes sans encombrer notre\nmémoire à long terme qui, elle, est remplie de souvenirs\n(Cowan, 2008).\nÀ l’origine, le modèle d’Atkinson & Shirin (1968) proposait\nune conception séquentielle de l’emmagasinage de l’information.\nLes éléments saisis par nos systèmes perceptuels (visuel, auditif,\netc.) devaient passer par la mémoire à court terme avant de\npouvoir être emmagasinés de façon plus permanente dans la\nmémoire à long terme. On pensait alors que la mémoire à court\nterme renfermait les représentations mentales des éléments\nperceptuels et agissait comme une porte d’entrée (gateway) vers\nle long terme. Plus tard, Baddeley & Hitch (1974) ont élaboré un\nautre modèle plus dynamique dans lequel la mémoire de travail\nsert d’une part à transférer une information vers la mémoire\nà long terme (p. ex., par répétition) et, d’autre part, à stocker\ntemporairement des informations issues de la mémoire à long\nterme. Selon eux, la mémoire de travail serait donc constituée\nde trois composantes majeures :\n1. la boucle phonologique, qui intervient dans le traitement et\nle maintien de l’information verbale et qui représente l’ensemble\ndes neurones activés lors du traitement et du maintien de l’in-\nformation verbale dans la mémoire de travail est impliquée\ndans le traitement et le maintien de l’information verbale ;\n2. le calepin visuospatial, qui possède les mêmes caractéristiques\nque la boucle phonologique, mais qui est dédié aux informa-\ntions visuelles et spatiales ;\n3. l’administrateur central, qui participe à la gestion des ressources\nattentionnelles (p. ex., focalisation, division et transition\nattentionnelle [switch]).\nAu début des années 2000, Baddeley (2003) t évoluer son\nmodèle tripartite en intégrant un nouveau composant : le tampon\n(buer) épisodique. Il s’agit d’un système de stockage à capacités\nlimitées assumant deux fonctions :\n1. Intégrer les informations élémentaires en des représentations\nplus complexes ;\n2. Permettre à ces représentations d’entrer en mémoire épisodique\n(la mémoire des événements personnels) et d’être récupérées.\nEn électrophysiologie, l’étude de la mémoire de travail réalisée\npar Drew et ses collaborateurs (2006) montre que certaines com-\nposantes des potentiels évoqués permettent de mesurer plusieurs\ndimensions spéciques de la mémoire de travail. Notamment,\nl’onde lente négative (negative slow wave) permet de mesurer le\nmaintien d’information dans la mémoire de travail, alors que la\ncomposante tardive controlatérale (contralateral delay activity) est\nsensible aux diérences interindividuelles au niveau de la capacité\nde la mémoire de travail (c.-à-d. la quantité d’informations qu’elle\npeut contenir).\nEn neuro-imagerie, dans une méta-analyse regroupant\nles résultats de 189 études faisant appel à l’IRMf, portant sur\nles substrats neuronaux de la mémoire de travail, Rottschy\net ses collaborateurs (2012) ont observé un réseau commun\n(core network) transcendant les types de tâches, de stimuli et\nde modalités. Qualifié de réseau frontopariétal bilatéral, ce\nréseau comprend le gyrus frontal inférieur, le cortex insulaire\n",
+  "raw_text_sha256": "3ca66100bbe8a4f42ef0400aa67333618f43157af390bac0141232ce447c5a46",
+  "source_page_display": 190,
+  "source_page_index": 189
+}

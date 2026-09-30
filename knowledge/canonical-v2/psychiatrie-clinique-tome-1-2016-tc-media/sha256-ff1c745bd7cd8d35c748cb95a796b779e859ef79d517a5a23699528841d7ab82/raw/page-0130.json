@@ -1,0 +1,136 @@
+{
+  "block_sequence_sha256": "5dc4274861253945394e39d037db113af4deccde20bf03e9d7eed8648d6a18ee",
+  "blocks": [
+    {
+      "bbox": [
+        405.1000061035156,
+        747.3754272460938,
+        555.0,
+        758.6693725585938
+      ],
+      "block_id": "page-0130-block-0001",
+      "order": 1,
+      "text": "Chapitre 6\nNeurobiologie\n113\n",
+      "text_sha256": "75cf3d3a9f4f7246e57582e101fb6c5cbff9267481a68f83f40ea0ed5af79f10"
+    },
+    {
+      "bbox": [
+        312.0,
+        40.9658203125,
+        555.3360595703125,
+        451.2585144042969
+      ],
+      "block_id": "page-0130-block-0002",
+      "order": 2,
+      "text": "les émotions (voie mésolimbique) et les cognitions (voie\nmésocorticale). L’action thérapeutique des antipsychotiques\nest en bonne partie liée au blocage des récepteurs dopami-\nnergiques de ces deux voies (voir les gures supplémentaires).\n2. Le système noradrénergique prend sa source des neurones\nlocalisés dans le locus cœruleus (voir la gure 6.3b). Ce noyau\nbilatéral consiste en un ensemble de 15 000 neurones situés à\nla base du quatrième ventricule à la jonction du mésencéphale\net de la protubérance, juste en dessous du cervelet. Ces cel-\nlules contenant de la mélanine confèrent au locus cœruleus\nune pigmentation le rendant facilement visible à l’œil nu. La\npathophysiologie de certains troubles anxieux, notamment\nle trouble panique, ainsi que la dépression majeure trouvent\nune explication neurobiologique dans le dysfonctionnement\nde ce noyau et de la libération de la noradrénaline.\n3. Le système sérotoninergique provient presque en quasi-totalité\ndes neurones localisés dans les zones médiane et paramé-\ndiane du mésencéphale jusqu’à la partie rostrale du bulbe\nrachidien (voir la gure 6.3c). Les centres sérotoninergiques\nappartiennent pour la plupart à quelques noyaux du raphé.\nEectivement, ce ne sont pas tous les noyaux du raphé qui\ncontiennent de la sérotonine et parmi les neuf diérents noyaux\ndu raphé, le noyau dorsal et le noyau médian constituent la\nsource la plus importante de sérotonine pour l’ensemble de\nl’encéphale. Une perturbation de la transmission sérotoniner-\ngique est suspectée dans plusieurs troubles psychiatriques,\nparticulièrement la dépression majeure, les troubles anxieux,\nle suicide et les troubles alimentaires. Quelques noyaux du\nraphé ont des cellules noradrénergiques, dopaminergiques\net cholécystokininergiques, mais en faible quantité.\n4. Le système cholinergique a son origine dans la région méso-\nbulbaire du tronc cérébral dans laquelle on trouve deux noyaux\ncholinergiques : l’aire tegmentale dorsolatérale et l’aire tegmen-\ntale pédonculobulbaire. Ces noyaux cellulaires se projettent vers\nle thalamus et sont intimement liés au cycle éveil-sommeil.\n",
+      "text_sha256": "aafa0335eefd678fc2bf2054618fdc1955c7d9910949be220cea718ea8dd14e5"
+    },
+    {
+      "bbox": [
+        312.0,
+        463.8868103027344,
+        443.7918701171875,
+        480.0293884277344
+      ],
+      "block_id": "page-0130-block-0003",
+      "order": 3,
+      "text": "6.1.4 Système limbique\n",
+      "text_sha256": "5c3d7ed4bb38b1b84801e8f6cf9cbf3976477dfe62177488db59ce4bc51cda41"
+    },
+    {
+      "bbox": [
+        312.0,
+        480.2658386230469,
+        555.3843383789062,
+        725.6085205078125
+      ],
+      "block_id": "page-0130-block-0004",
+      "order": 4,
+      "text": "Au 19e siècle, Paul Broca, le célèbre anatomiste français, donne\nle nom de système limbique à l’ensemble des structures ner-\nveuses jouant un rôle dans le comportement, la mémoire et les\némotions. L’exemple clinique le plus dramatique reétant le rôle\nde ces structures dans l’intégration de ces trois dimensions fut\nobservé en 1939 par Klüver et Bucy, qui ont décrit un syndrome\ncaractérisé par un appétit vorace, une hyperoralité (porter divers\nobjets à la bouche), une hypersexualité et une docilité accompa-\ngnés d’un trouble de la mémoire chez des malades atteints d’une\nlésion bilatérale du lobe temporal. En 1937, le neuroanatomiste\naméricain James Papez observe des changements dégénératifs de\nl’hippocampe, des corps mamillaires, du thalamus et du cortex\ncingulaire chez les patients atteints d’une maladie psychiatrique\nsans préciser laquelle. Il propose que ces structures anatomiques,\nde concert avec l’hypothalamus, constituent le siège des émo-\ntions en établissant une communication entre elles sous forme\nd’une boucle, d’où le nom de circuit de Papez. Les travaux du\nneurologue Korsako montrent que les corps mamillaires, et\nplus particulièrement la voie mamillothalamique, sont davantage\nliés à la mémoire plutôt qu’aux émotions. Comme preuve à son\nhypothèse, il décrit le syndrome de Korsako chez l’alcoolique\n",
+      "text_sha256": "ac4c6ea76c3e84e27603240512fc639dc9297d8c86ce7f7010f52aec05cba135"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.9658203125,
+        297.47991943359375,
+        237.35850524902344
+      ],
+      "block_id": "page-0130-block-0005",
+      "order": 5,
+      "text": "L’hypothalamus occupe un espace restreint sous le thalamus\net son importance fonctionnelle est surprenante considérant que\nson poids ne dépasse pas quatre grammes. L’hypothalamus sert\nd’interface entre le système limbique, le néocortex, le système\nnerveux autonome (SNA) et le système endocrinien. Plusieurs\nnoyaux hypothalamiques commandent des fonctions très précises,\nles uns modiant l’activité du SNA, alors que d’autres modulent la\nlibération des hormones hypophysaires. L’hypothalamus antérieur\ninuence la pression artérielle (neurones sensibles à l’angiotensine\nII), la fréquence cardiaque, la vasodilatation périphérique, le péris-\ntaltisme intestinal et la température corporelle, alors que les parties\nlatérale et médiane sont respectivement liées à l’alimentation et à\nla soif. Certains eets indésirables des psychotropes tels que le gain\nde poids, la polydipsie, la galactorrhée et même l’hyperthermie\ndans le syndrome malin des neuroleptiques seraient causés par\nl’action antagoniste des antipsychotiques sur la transmission de\nl’histamine et de la dopamine dans l’hypothalamus.\n",
+      "text_sha256": "5de5bd71e1e77460446663e53f356c639993d9e8e1f1581ab7d71a3fc5b6a70d"
+    },
+    {
+      "bbox": [
+        54.0,
+        247.98681640625,
+        166.82669067382812,
+        264.12939453125
+      ],
+      "block_id": "page-0130-block-0006",
+      "order": 6,
+      "text": "6.1.3 Tronc cérébral\n",
+      "text_sha256": "c74b584e4fdcd18129ef3119f153feccf2b2698d003f0cd7855f49f4403dfc6e"
+    },
+    {
+      "bbox": [
+        54.0,
+        267.5658264160156,
+        297.4324951171875,
+        477.6084899902344
+      ],
+      "block_id": "page-0130-block-0007",
+      "order": 7,
+      "text": "Le tronc cérébral donne l’impression de soutenir les hémisphères\nun peu comme un pied soutient le chapeau d’un champignon.\nIl inclut le mésencéphale, la protubérance (le pont) et le bulbe\nrachidien. Plusieurs noyaux cellulaires, dont ceux des nerfs crâ-\nniens, se trouvent dans le tronc cérébral et certains d’entre eux\nchevauchent deux ou trois régions du tronc cérébral. Seuls les\nnoyaux impliqués dans des maladies psychiatriques sont décrits\nici. Quatre systèmes aminergiques d’importance proviennent de\ncellules localisées dans le tronc cérébral (voir la gure 6.3), soit :\n1. Le système dopaminergique est conné essentiellement au\nmésencéphale et représente environ 20 000 neurones dans\nchacun des deux hémisphères. L’aire tegmentale ventrale (ATV)\n(ou aire de Tsai) et la substance noire contiennent des neurones\ndopaminergiques et sont des noyaux intimement reliés à des\npathologies psychiatriques et neurologiques lorsqu’ils sont dys-\nfonctionnels. L’ATV se situe dans le mésencéphale sur la ligne\nmédiane et supérieure de la substance noire (voir la gure 6.3a).\na) Les neurones de la substance noire se regroupent sous la\n",
+      "text_sha256": "b28d5c5fff20db9039ea62bfa3f63a555c5132c661bbd7411b8c52657f66cdb9"
+    },
+    {
+      "bbox": [
+        66.0,
+        478.7158203125,
+        297.5674743652344,
+        642.2584838867188
+      ],
+      "block_id": "page-0130-block-0008",
+      "order": 8,
+      "text": "forme d’un croissant à la base du tronc cérébral et couvrent\nun territoire chevauchant le mésencéphale jusqu’à la région\nsous-thalamique du diencéphale. Les axones des neurones\ndopaminergiques de la substance noire se dirigent vers le\nstriatum (voie nigrostriée). Le striatum contient plus de\ndopamine que la substance noire, mais il n’en fait pas la\nsynthèse. Les symptômes de la maladie de Parkinson sur-\nviennent à la suite de la dégénérescence des neurones de\nla substance noire. Les mêmes symptômes parkinsoniens\ns’observent parfois avec certaines médications antipsy-\nchotiques (p. ex., l’halopéridol) qui diminuent l’activité\ndes neurones dopaminergiques de la substance noire et\nbloquent les récepteurs dopaminergiques dans le striatum.\nb) Les antipsychotiques (p. ex., halopéridol, rispéridone) qui\n",
+      "text_sha256": "a67dce68e85a3b50bd33663eedbf6d262b6346fc874475f425acb659a15004d6"
+    },
+    {
+      "bbox": [
+        66.0,
+        643.3658447265625,
+        297.4033203125,
+        713.95849609375
+      ],
+      "block_id": "page-0130-block-0009",
+      "order": 9,
+      "text": "bloquent la voie dopaminergique tubéro-infundibulaire\nentre l’hypothalamus et la tige (infundibulum) de l’hypo-\nphyse postérieure (ou neurohypophyse) provoquent une\naugmentation de la prolactine, associée à de la galactorrhée\net un gonement des seins.\nc) D’autres axones dopaminergiques en provenance des neu-\n",
+      "text_sha256": "e78cc1c6ce90129295093beb4019e65cfcd713d5d59af9f5d050912076a0cc36"
+    },
+    {
+      "bbox": [
+        78.0,
+        715.1158447265625,
+        296.9430236816406,
+        725.6085205078125
+      ],
+      "block_id": "page-0130-block-0010",
+      "order": 10,
+      "text": "rones de l’ATV se dirigent vers des sites qui sous-tendent\n",
+      "text_sha256": "dbfe5b85c283a894a9193135fd2f802555316da2d922471e4c8a7d5a4694adaa"
+    }
+  ],
+  "coordinates_sha256": "8b404063a8af9516794158a059abf655174474a5efa200601347d71cb0f77088",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0130",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 6\nNeurobiologie\n113\nles émotions (voie mésolimbique) et les cognitions (voie\nmésocorticale). L’action thérapeutique des antipsychotiques\nest en bonne partie liée au blocage des récepteurs dopami-\nnergiques de ces deux voies (voir les gures supplémentaires).\n2. Le système noradrénergique prend sa source des neurones\nlocalisés dans le locus cœruleus (voir la gure 6.3b). Ce noyau\nbilatéral consiste en un ensemble de 15 000 neurones situés à\nla base du quatrième ventricule à la jonction du mésencéphale\net de la protubérance, juste en dessous du cervelet. Ces cel-\nlules contenant de la mélanine confèrent au locus cœruleus\nune pigmentation le rendant facilement visible à l’œil nu. La\npathophysiologie de certains troubles anxieux, notamment\nle trouble panique, ainsi que la dépression majeure trouvent\nune explication neurobiologique dans le dysfonctionnement\nde ce noyau et de la libération de la noradrénaline.\n3. Le système sérotoninergique provient presque en quasi-totalité\ndes neurones localisés dans les zones médiane et paramé-\ndiane du mésencéphale jusqu’à la partie rostrale du bulbe\nrachidien (voir la gure 6.3c). Les centres sérotoninergiques\nappartiennent pour la plupart à quelques noyaux du raphé.\nEectivement, ce ne sont pas tous les noyaux du raphé qui\ncontiennent de la sérotonine et parmi les neuf diérents noyaux\ndu raphé, le noyau dorsal et le noyau médian constituent la\nsource la plus importante de sérotonine pour l’ensemble de\nl’encéphale. Une perturbation de la transmission sérotoniner-\ngique est suspectée dans plusieurs troubles psychiatriques,\nparticulièrement la dépression majeure, les troubles anxieux,\nle suicide et les troubles alimentaires. Quelques noyaux du\nraphé ont des cellules noradrénergiques, dopaminergiques\net cholécystokininergiques, mais en faible quantité.\n4. Le système cholinergique a son origine dans la région méso-\nbulbaire du tronc cérébral dans laquelle on trouve deux noyaux\ncholinergiques : l’aire tegmentale dorsolatérale et l’aire tegmen-\ntale pédonculobulbaire. Ces noyaux cellulaires se projettent vers\nle thalamus et sont intimement liés au cycle éveil-sommeil.\n6.1.4 Système limbique\nAu 19e siècle, Paul Broca, le célèbre anatomiste français, donne\nle nom de système limbique à l’ensemble des structures ner-\nveuses jouant un rôle dans le comportement, la mémoire et les\némotions. L’exemple clinique le plus dramatique reétant le rôle\nde ces structures dans l’intégration de ces trois dimensions fut\nobservé en 1939 par Klüver et Bucy, qui ont décrit un syndrome\ncaractérisé par un appétit vorace, une hyperoralité (porter divers\nobjets à la bouche), une hypersexualité et une docilité accompa-\ngnés d’un trouble de la mémoire chez des malades atteints d’une\nlésion bilatérale du lobe temporal. En 1937, le neuroanatomiste\naméricain James Papez observe des changements dégénératifs de\nl’hippocampe, des corps mamillaires, du thalamus et du cortex\ncingulaire chez les patients atteints d’une maladie psychiatrique\nsans préciser laquelle. Il propose que ces structures anatomiques,\nde concert avec l’hypothalamus, constituent le siège des émo-\ntions en établissant une communication entre elles sous forme\nd’une boucle, d’où le nom de circuit de Papez. Les travaux du\nneurologue Korsako montrent que les corps mamillaires, et\nplus particulièrement la voie mamillothalamique, sont davantage\nliés à la mémoire plutôt qu’aux émotions. Comme preuve à son\nhypothèse, il décrit le syndrome de Korsako chez l’alcoolique\nL’hypothalamus occupe un espace restreint sous le thalamus\net son importance fonctionnelle est surprenante considérant que\nson poids ne dépasse pas quatre grammes. L’hypothalamus sert\nd’interface entre le système limbique, le néocortex, le système\nnerveux autonome (SNA) et le système endocrinien. Plusieurs\nnoyaux hypothalamiques commandent des fonctions très précises,\nles uns modiant l’activité du SNA, alors que d’autres modulent la\nlibération des hormones hypophysaires. L’hypothalamus antérieur\ninuence la pression artérielle (neurones sensibles à l’angiotensine\nII), la fréquence cardiaque, la vasodilatation périphérique, le péris-\ntaltisme intestinal et la température corporelle, alors que les parties\nlatérale et médiane sont respectivement liées à l’alimentation et à\nla soif. Certains eets indésirables des psychotropes tels que le gain\nde poids, la polydipsie, la galactorrhée et même l’hyperthermie\ndans le syndrome malin des neuroleptiques seraient causés par\nl’action antagoniste des antipsychotiques sur la transmission de\nl’histamine et de la dopamine dans l’hypothalamus.\n6.1.3 Tronc cérébral\nLe tronc cérébral donne l’impression de soutenir les hémisphères\nun peu comme un pied soutient le chapeau d’un champignon.\nIl inclut le mésencéphale, la protubérance (le pont) et le bulbe\nrachidien. Plusieurs noyaux cellulaires, dont ceux des nerfs crâ-\nniens, se trouvent dans le tronc cérébral et certains d’entre eux\nchevauchent deux ou trois régions du tronc cérébral. Seuls les\nnoyaux impliqués dans des maladies psychiatriques sont décrits\nici. Quatre systèmes aminergiques d’importance proviennent de\ncellules localisées dans le tronc cérébral (voir la gure 6.3), soit :\n1. Le système dopaminergique est conné essentiellement au\nmésencéphale et représente environ 20 000 neurones dans\nchacun des deux hémisphères. L’aire tegmentale ventrale (ATV)\n(ou aire de Tsai) et la substance noire contiennent des neurones\ndopaminergiques et sont des noyaux intimement reliés à des\npathologies psychiatriques et neurologiques lorsqu’ils sont dys-\nfonctionnels. L’ATV se situe dans le mésencéphale sur la ligne\nmédiane et supérieure de la substance noire (voir la gure 6.3a).\na) Les neurones de la substance noire se regroupent sous la\nforme d’un croissant à la base du tronc cérébral et couvrent\nun territoire chevauchant le mésencéphale jusqu’à la région\nsous-thalamique du diencéphale. Les axones des neurones\ndopaminergiques de la substance noire se dirigent vers le\nstriatum (voie nigrostriée). Le striatum contient plus de\ndopamine que la substance noire, mais il n’en fait pas la\nsynthèse. Les symptômes de la maladie de Parkinson sur-\nviennent à la suite de la dégénérescence des neurones de\nla substance noire. Les mêmes symptômes parkinsoniens\ns’observent parfois avec certaines médications antipsy-\nchotiques (p. ex., l’halopéridol) qui diminuent l’activité\ndes neurones dopaminergiques de la substance noire et\nbloquent les récepteurs dopaminergiques dans le striatum.\nb) Les antipsychotiques (p. ex., halopéridol, rispéridone) qui\nbloquent la voie dopaminergique tubéro-infundibulaire\nentre l’hypothalamus et la tige (infundibulum) de l’hypo-\nphyse postérieure (ou neurohypophyse) provoquent une\naugmentation de la prolactine, associée à de la galactorrhée\net un gonement des seins.\nc) D’autres axones dopaminergiques en provenance des neu-\nrones de l’ATV se dirigent vers des sites qui sous-tendent\n",
+  "raw_text_sha256": "3e1d8b2245871f4cf51a8f4bcfe1c064e44cf9fc8c7d43cf3501404916227756",
+  "source_page_display": 131,
+  "source_page_index": 130
+}

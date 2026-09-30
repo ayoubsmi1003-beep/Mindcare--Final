@@ -1,0 +1,88 @@
+{
+  "block_sequence_sha256": "dd806844ff846638112c8e9e377a1e7d61a38a3427fd06d3b8f5727656a489f8",
+  "blocks": [
+    {
+      "bbox": [
+        489.8999938964844,
+        746.2317504882812,
+        555.0,
+        759.7693481445312
+      ],
+      "block_id": "page-0010-block-0001",
+      "order": 1,
+      "text": "Préface\nix\n",
+      "text_sha256": "c00c576baf99f3730f592c70f209bc4e849859f365e1a46cdba4317febc36f4d"
+    },
+    {
+      "bbox": [
+        195.0,
+        40.9658203125,
+        555.1696166992188,
+        97.45849609375
+      ],
+      "block_id": "page-0010-block-0002",
+      "order": 2,
+      "text": "Cette parution montre également qu’une diusion de la psychiatrie québécoise en Europe\nfrancophone est possible, puisque l’ouvrage sera apprécié en France, en Suisse et en Belgique,\nde même qu’au Maghreb et dans le reste de l’Afrique francophone. Il servira également lors\ndes collaborations essentielles que nous avons établies entre le Québec et Haïti dans nos res-\nponsabilités récentes et durables de l’enseignement.\n",
+      "text_sha256": "02d168a36743484d8ab893e2b66df4065eebbd5f9a0d735e151918e5e9eba20e"
+    },
+    {
+      "bbox": [
+        195.0,
+        98.4658203125,
+        555.7866821289062,
+        327.45849609375
+      ],
+      "block_id": "page-0010-block-0003",
+      "order": 3,
+      "text": "La psychiatrie arme sa place dans la conception de l’intervention auprès des maladies\nmentales. Ce livre témoigne des choix importants que fait la psychiatrie en garantissant une\napproche scientique qu’elle met en valeur au côté d’une approche humaniste nécessaire au\ndéveloppement d’une société. Les directeurs de ce manuel, par leur travail acharné et méti-\nculeux, ont bien reété ce que nous armons souvent, à savoir que la psychiatrie est une\nscience plutôt centripète qui s’alimente à ses marges issues des autres disciplines (génétique,\nphilosophie, neurosciences, anthropologie, etc.). Ainsi, l’ouvrage témoigne des progrès récents\naccomplis dans ces disciplines, et les auteurs ont pris soin de ramener cet enrichissement\npériphérique au sein de la pratique clinique à travers les chapitres, de sorte qu’un étudiant en\nmédecine ou en sciences de la santé et tout clinicien pourra facilement actualiser sa pratique\nbio-psycho-sociale avec les notions exposées dans ce manuel. Je me plais souvent à dire que la\npsychiatrie n’est pas une discipline de la médecine, mais plutôt que la médecine est une dis-\ncipline de la psychiatrie. C’est en eet la discipline qui s’occupe de l’humain dans sa globalité,\ndans ses multiples dimensions biologiques, psychiques, sociales, spirituelles. Les branches de\nla médecine vont ainsi se spécialiser vers le cœur lorsqu’il s’agit de cardiologie, vers l’incision\nlorsqu’il s’agit de la chirurgie, vers le cerveau lorsqu’il s’agit de la neurologie. Ces disciplines\narrivent parfois même à oublier la dimension psychique ou sociale de l’être vivant. La psychia-\ntrie valide la nécessité d’un transfert de connaissances axé sur l’ensemble des dimensions en\ndehors de l’étude propre d’un organe et de ses défaillances. Les deux directeurs scientiques\nqui ont réussi à réunir et à réviser l’ensemble de ces chapitres ont fait un travail extraordinaire.\n",
+      "text_sha256": "a809db4f7c0790ddacbcf8d97e40b14ea0e3873c798c6a444d8dda094968b3dd"
+    },
+    {
+      "bbox": [
+        195.0,
+        328.4658203125,
+        555.517333984375,
+        511.45849609375
+      ],
+      "block_id": "page-0010-block-0004",
+      "order": 4,
+      "text": "On pourrait enn se questionner sur l’eort nécessaire ou sur le parti pris de s’appuyer sur\nle DSM-5, qui a même, en quelque sorte, ponctué l’échéancier de la parution de ce manuel. En\neet, avec le DSM-5, on a assisté à une entreprise de médicalisation de certains comportements\nen société, ou qui apparaissent au décours d’événements de la vie normale, comme un deuil qui\nse prolonge. On sait que, malgré l’apparent souci d’être athéorique, le trouble obsessionnel, par\nexemple, a changé de place dans la nosographie à la suite de l’émergence d’explications biologiques\ncrédibles. Outre le fait que phénoménologiquement, on y voyait plus un trouble encontinuum avec\nle trouble délirant qu’avec les troubles anxieux, en faisant cette modication, on s’aperçoit que l’on\nchange nos paradigmes, par exemple en se déplaçant du psychodynamisme vers le biologique. Ce\nn’est pas si athéorique que cela. Pour les prodromes de la schizophrénie, qualiés hypothétique-\nment de « trouble psychotique atténué », l’insertion ocielle de ce nouveau diagnostic (encore à\nl’étude) dans le DSM-5 n’a pas été conrmée, car elle aolait le monde des actuaires américains.\nQue nalement les actuaires aient contribué, en même temps que les cliniciens et les chercheurs\nen psychiatrie, à cette vaste entreprise de classication du DSM-5 à laquelle les Drs Lalonde et\nPinard se réfèrent reète en fait notre société actuelle. Il nous faut alors appliquer un esprit critique\net pratique pour que chacun des chapitres soit utile dans le champ clinique. Ils ont réussi ce pari.\n",
+      "text_sha256": "029ad0d30a0034de8047b7c8da056fa61b334a280b681eb13fee8ba4af943bed"
+    },
+    {
+      "bbox": [
+        195.0,
+        512.4658203125,
+        555.7222290039062,
+        672.45849609375
+      ],
+      "block_id": "page-0010-block-0005",
+      "order": 5,
+      "text": "Que ce soit dans la cohérence d’un manuel comme le Henri Ey ou dans le menu détaillé\nd’un Kaplan & Sadock, la psychiatrie crée des mythes. Libre à nous, enseignants, de nous y\nréférer pour transmettre des connaissances. Nous avons cependant l’exigence de demeurer\nlucides. Lucides de la construction du contenu. Sinon, c’est un danger de destruction, comme\nle mythe grec de la Déesse aime Troie (DSM-III). Le cheval athéorique est entré dans la ville\nfortiée, puis les actuaires, les fondamentalistes biologiques sont sortis et ont tout détruit. Ce\nqui me rassure dans le manuel de psychiatrie de Lalonde et Pinard, c’est le souci d’aborder\nles classications diagnostiques avec un esprit critique et de s’ancrer, chapitre après chapitre,\ndans la clinique quotidienne enrichie de la vision duelle du Québec qui, par sa nature et son\nambivalence connue à se sentir intégrée ou autonome, donne la garantie que rien n’est achevé.\nAinsi arrivera un jour une autre édition. Je félicite avec un grand respect les deux directeurs\nde cette publication et tous les auteurs. La besogne a été longue, ardue et monumentale. Le\nrésultat est entre les mains des étudiants, des praticiens et des enseignants. L’intégration\nbio-psycho-sociale est très réussie.\n",
+      "text_sha256": "ae9e75c2666e6be93bad6728d306b0d41bd186338cd53ff2e4b33ee6aa9b4f43"
+    },
+    {
+      "bbox": [
+        207.0,
+        685.7015991210938,
+        554.5216064453125,
+        720.523193359375
+      ],
+      "block_id": "page-0010-block-0006",
+      "order": 6,
+      "text": "Emmanuel Stip, M.D., FRCPC, M. Sc. (sciences neurologiques)\nPsychiatre, professeur titulaire, directeur du Département de psychiatrie, Faculté\nde médecine, Université de Montréal\n",
+      "text_sha256": "9871917efeab39786e735abb31d2d5e56e3da319180566ea0f97c66f54e60324"
+    }
+  ],
+  "coordinates_sha256": "b81ae4b52115c22a030a92cb4aa607db9a241956c71e2500cac1d8ace09e4682",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0010",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Préface\nix\nCette parution montre également qu’une diusion de la psychiatrie québécoise en Europe\nfrancophone est possible, puisque l’ouvrage sera apprécié en France, en Suisse et en Belgique,\nde même qu’au Maghreb et dans le reste de l’Afrique francophone. Il servira également lors\ndes collaborations essentielles que nous avons établies entre le Québec et Haïti dans nos res-\nponsabilités récentes et durables de l’enseignement.\nLa psychiatrie arme sa place dans la conception de l’intervention auprès des maladies\nmentales. Ce livre témoigne des choix importants que fait la psychiatrie en garantissant une\napproche scientique qu’elle met en valeur au côté d’une approche humaniste nécessaire au\ndéveloppement d’une société. Les directeurs de ce manuel, par leur travail acharné et méti-\nculeux, ont bien reété ce que nous armons souvent, à savoir que la psychiatrie est une\nscience plutôt centripète qui s’alimente à ses marges issues des autres disciplines (génétique,\nphilosophie, neurosciences, anthropologie, etc.). Ainsi, l’ouvrage témoigne des progrès récents\naccomplis dans ces disciplines, et les auteurs ont pris soin de ramener cet enrichissement\npériphérique au sein de la pratique clinique à travers les chapitres, de sorte qu’un étudiant en\nmédecine ou en sciences de la santé et tout clinicien pourra facilement actualiser sa pratique\nbio-psycho-sociale avec les notions exposées dans ce manuel. Je me plais souvent à dire que la\npsychiatrie n’est pas une discipline de la médecine, mais plutôt que la médecine est une dis-\ncipline de la psychiatrie. C’est en eet la discipline qui s’occupe de l’humain dans sa globalité,\ndans ses multiples dimensions biologiques, psychiques, sociales, spirituelles. Les branches de\nla médecine vont ainsi se spécialiser vers le cœur lorsqu’il s’agit de cardiologie, vers l’incision\nlorsqu’il s’agit de la chirurgie, vers le cerveau lorsqu’il s’agit de la neurologie. Ces disciplines\narrivent parfois même à oublier la dimension psychique ou sociale de l’être vivant. La psychia-\ntrie valide la nécessité d’un transfert de connaissances axé sur l’ensemble des dimensions en\ndehors de l’étude propre d’un organe et de ses défaillances. Les deux directeurs scientiques\nqui ont réussi à réunir et à réviser l’ensemble de ces chapitres ont fait un travail extraordinaire.\nOn pourrait enn se questionner sur l’eort nécessaire ou sur le parti pris de s’appuyer sur\nle DSM-5, qui a même, en quelque sorte, ponctué l’échéancier de la parution de ce manuel. En\neet, avec le DSM-5, on a assisté à une entreprise de médicalisation de certains comportements\nen société, ou qui apparaissent au décours d’événements de la vie normale, comme un deuil qui\nse prolonge. On sait que, malgré l’apparent souci d’être athéorique, le trouble obsessionnel, par\nexemple, a changé de place dans la nosographie à la suite de l’émergence d’explications biologiques\ncrédibles. Outre le fait que phénoménologiquement, on y voyait plus un trouble encontinuum avec\nle trouble délirant qu’avec les troubles anxieux, en faisant cette modication, on s’aperçoit que l’on\nchange nos paradigmes, par exemple en se déplaçant du psychodynamisme vers le biologique. Ce\nn’est pas si athéorique que cela. Pour les prodromes de la schizophrénie, qualiés hypothétique-\nment de « trouble psychotique atténué », l’insertion ocielle de ce nouveau diagnostic (encore à\nl’étude) dans le DSM-5 n’a pas été conrmée, car elle aolait le monde des actuaires américains.\nQue nalement les actuaires aient contribué, en même temps que les cliniciens et les chercheurs\nen psychiatrie, à cette vaste entreprise de classication du DSM-5 à laquelle les Drs Lalonde et\nPinard se réfèrent reète en fait notre société actuelle. Il nous faut alors appliquer un esprit critique\net pratique pour que chacun des chapitres soit utile dans le champ clinique. Ils ont réussi ce pari.\nQue ce soit dans la cohérence d’un manuel comme le Henri Ey ou dans le menu détaillé\nd’un Kaplan & Sadock, la psychiatrie crée des mythes. Libre à nous, enseignants, de nous y\nréférer pour transmettre des connaissances. Nous avons cependant l’exigence de demeurer\nlucides. Lucides de la construction du contenu. Sinon, c’est un danger de destruction, comme\nle mythe grec de la Déesse aime Troie (DSM-III). Le cheval athéorique est entré dans la ville\nfortiée, puis les actuaires, les fondamentalistes biologiques sont sortis et ont tout détruit. Ce\nqui me rassure dans le manuel de psychiatrie de Lalonde et Pinard, c’est le souci d’aborder\nles classications diagnostiques avec un esprit critique et de s’ancrer, chapitre après chapitre,\ndans la clinique quotidienne enrichie de la vision duelle du Québec qui, par sa nature et son\nambivalence connue à se sentir intégrée ou autonome, donne la garantie que rien n’est achevé.\nAinsi arrivera un jour une autre édition. Je félicite avec un grand respect les deux directeurs\nde cette publication et tous les auteurs. La besogne a été longue, ardue et monumentale. Le\nrésultat est entre les mains des étudiants, des praticiens et des enseignants. L’intégration\nbio-psycho-sociale est très réussie.\nEmmanuel Stip, M.D., FRCPC, M. Sc. (sciences neurologiques)\nPsychiatre, professeur titulaire, directeur du Département de psychiatrie, Faculté\nde médecine, Université de Montréal\n",
+  "raw_text_sha256": "b81c81d92d8407553d528f46c0d3bb1c755bd6aa4ff67654c153480629d12039",
+  "source_page_display": 11,
+  "source_page_index": 10
+}

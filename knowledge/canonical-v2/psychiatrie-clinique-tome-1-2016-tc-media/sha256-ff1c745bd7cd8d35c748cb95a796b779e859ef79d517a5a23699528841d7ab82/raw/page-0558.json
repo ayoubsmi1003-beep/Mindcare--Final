@@ -1,0 +1,376 @@
+{
+  "block_sequence_sha256": "156b9af2fbbc0f6c639555f79f3d6e0bad1cb2efa691c19a6ab0f03beffdd687",
+  "blocks": [
+    {
+      "bbox": [
+        301.45001220703125,
+        747.525390625,
+        555.0,
+        758.8193359375
+      ],
+      "block_id": "page-0558-block-0001",
+      "order": 1,
+      "text": "Chapitre 25\nTroubles à symptomatologie somatique\n541\n",
+      "text_sha256": "6f8acde19e2b03285b809eab7b76ec13e95d4be5a47aaf5f3b3900f7c47ae632"
+    },
+    {
+      "bbox": [
+        56.650001525878906,
+        41.05229568481445,
+        311.7814025878906,
+        53.320068359375
+      ],
+      "block_id": "page-0558-block-0002",
+      "order": 2,
+      "text": "TABLEAU 25.6 Critères diagnostiques du trouble de conversion\n",
+      "text_sha256": "5ce17d9534303aea947e9adf9ef834ad3a9527820296c02c720221aa5528582a"
+    },
+    {
+      "bbox": [
+        78.6500015258789,
+        58.27412414550781,
+        469.70361328125,
+        92.60029602050781
+      ],
+      "block_id": "page-0558-block-0003",
+      "order": 3,
+      "text": "DSM-5\nDSM-IV-TR\n300.11 (F44.x) Trouble de conversion\n(trouble à symptomatologie neurologique fonctionnelle)\nTrouble de conversion\n",
+      "text_sha256": "0da50a129ecc228a9c6718060bf6ab547943e744a5abf02198fb2334f62f5e0b"
+    },
+    {
+      "bbox": [
+        58.5,
+        96.501953125,
+        299.11602783203125,
+        106.328125
+      ],
+      "block_id": "page-0558-block-0004",
+      "order": 4,
+      "text": "A. Un ou plusieurs symptômes d’altération de la motricité volontaire ou des\n",
+      "text_sha256": "60526db895cd51a85a654404e2fd18d55b0a30c31a177ddeaadfa2e70c674bf8"
+    },
+    {
+      "bbox": [
+        69.3499984741211,
+        106.501953125,
+        139.8830108642578,
+        116.328125
+      ],
+      "block_id": "page-0558-block-0005",
+      "order": 5,
+      "text": "fonctions sensorielles.\n",
+      "text_sha256": "4d065c297a0c58b0b33e733e125b7c94ba6e145020db619d8c746a2f6cd4d0cf"
+    },
+    {
+      "bbox": [
+        308.5,
+        96.501953125,
+        542.0986328125,
+        106.328125
+      ],
+      "block_id": "page-0558-block-0006",
+      "order": 6,
+      "text": "A. Un ou plusieurs symptômes ou décits touchant la motricité volontaire\n",
+      "text_sha256": "3c5a5050a711c9ef094835244e20e4abfb82a4e997e71c6e9c17b5da4bd92639"
+    },
+    {
+      "bbox": [
+        319.3500061035156,
+        106.501953125,
+        529.5029296875,
+        126.328125
+      ],
+      "block_id": "page-0558-block-0007",
+      "order": 7,
+      "text": "ou les fonctions sensitives ou sensorielles suggérant une affection\nneurologique ou une affection médicale générale.\n",
+      "text_sha256": "729d05a6f3b8e0eddd4a917e78400c400a27919fc82128e000337d0d17c03e8a"
+    },
+    {
+      "bbox": [
+        58.5,
+        131.90196228027344,
+        298.6681823730469,
+        141.72813415527344
+      ],
+      "block_id": "page-0558-block-0008",
+      "order": 8,
+      "text": "B. Les données cliniques démontrent l’incompatibilité entre les symptômes\n",
+      "text_sha256": "04d1ebafd127179f331750551df8fae43785c0332f7d135e84a1e37e714f8c4c"
+    },
+    {
+      "bbox": [
+        69.3499984741211,
+        141.90196228027344,
+        237.12295532226562,
+        151.72813415527344
+      ],
+      "block_id": "page-0558-block-0009",
+      "order": 9,
+      "text": "et une affection neurologique ou médicale reconnue.\n",
+      "text_sha256": "580d4bd368ed06b93b145abe7a9c476b8e4f6604b9eacf9953f2cfdada34d8de"
+    },
+    {
+      "bbox": [
+        308.5,
+        131.90196228027344,
+        548.4182739257812,
+        141.72813415527344
+      ],
+      "block_id": "page-0558-block-0010",
+      "order": 10,
+      "text": "B. On estime que des facteurs psychologiques sont associés au symptôme\n",
+      "text_sha256": "773a649f3add39109fb9f8a5fd01c69b1f6f5e0ce75b44d0c0c95203bb0db2e5"
+    },
+    {
+      "bbox": [
+        319.3500061035156,
+        141.90196228027344,
+        541.5504760742188,
+        161.72813415527344
+      ],
+      "block_id": "page-0558-block-0011",
+      "order": 11,
+      "text": "ou au décit parce que la survenue ou l’aggravation du symptôme est\nprécédée par des conits ou d’autres facteurs de stress.\n",
+      "text_sha256": "7107e797121feb52c35ee4938b185506f175b921662492f66fab979155ce9bad"
+    },
+    {
+      "bbox": [
+        58.5,
+        167.35195922851562,
+        290.0956726074219,
+        177.17813110351562
+      ],
+      "block_id": "page-0558-block-0012",
+      "order": 12,
+      "text": "C. Les symptômes ou les handicaps ne sont pas mieux expliqués par un\n",
+      "text_sha256": "e5f130c3fbdc61032906a4265a4065c0e35f0daf72e594c341addba078eb868b"
+    },
+    {
+      "bbox": [
+        69.5,
+        177.35195922851562,
+        173.00531005859375,
+        187.17813110351562
+      ],
+      "block_id": "page-0558-block-0013",
+      "order": 13,
+      "text": "autre trouble médical ou mental.\n",
+      "text_sha256": "b258d116a165578a928b1f962aba57138f6a3996a7e0898ee44d5be6daf01d49"
+    },
+    {
+      "bbox": [
+        308.5,
+        167.35195922851562,
+        535.828369140625,
+        177.17813110351562
+      ],
+      "block_id": "page-0558-block-0014",
+      "order": 14,
+      "text": "C. Le symptôme ou décit n’est pas produit intentionnellement ou feint\n",
+      "text_sha256": "e9572a5f551b7df9c4342ba056e97c17c08a1ff414f19dd275cc4ee2d3ffd550"
+    },
+    {
+      "bbox": [
+        319.5,
+        177.35195922851562,
+        475.6829528808594,
+        187.17813110351562
+      ],
+      "block_id": "page-0558-block-0015",
+      "order": 15,
+      "text": "(comme dans le Trouble factice ou la Simulation).\n",
+      "text_sha256": "7528e71423288d437f7d9e3ce71010dfc1bf073bd57f9d9935fcc9371b345608"
+    },
+    {
+      "bbox": [
+        308.5,
+        192.751953125,
+        544.1759033203125,
+        202.578125
+      ],
+      "block_id": "page-0558-block-0016",
+      "order": 16,
+      "text": "D. Après des examens médicaux appropriés, le symptôme ou le décit ne\n",
+      "text_sha256": "9ce8d055d41aea10660fb3d7ecb1664d6696ca5e2926c40025c8caf255aceaf7"
+    },
+    {
+      "bbox": [
+        319.3500061035156,
+        202.751953125,
+        549.5728149414062,
+        232.578125
+      ],
+      "block_id": "page-0558-block-0017",
+      "order": 17,
+      "text": "peut pas s’expliquer complètement par une affection médicale générale,\nou par les effets directs d’une substance, ou être assimilé à un compor-\ntement ou une expérience culturellement déterminés.\n",
+      "text_sha256": "1cedcb189f304cc2976738cb255a3da7a59781235b9de0b9bfc589e498e706fe"
+    },
+    {
+      "bbox": [
+        58.5,
+        238.2019500732422,
+        288.49395751953125,
+        248.0281219482422
+      ],
+      "block_id": "page-0558-block-0018",
+      "order": 18,
+      "text": "D. Le symptôme ou le handicap entraîne une détresse ou une altération\n",
+      "text_sha256": "185831245b1f2b994bb24944c6de04a38234baad4583703ca172dcff34b8fd27"
+    },
+    {
+      "bbox": [
+        69.6500015258789,
+        248.20196533203125,
+        294.6678771972656,
+        278.02813720703125
+      ],
+      "block_id": "page-0558-block-0019",
+      "order": 19,
+      "text": "cliniquement signicative dans le domaine du fonctionnement social,\nprofessionnel ou dans d’autres domaines importants, ou nécessite une\névaluation médicale.\n",
+      "text_sha256": "c42875c5ece67d70ee347f23a2924886d0c2b389b7c3d5e6847ec7f9c0cc490f"
+    },
+    {
+      "bbox": [
+        308.5,
+        238.2019500732422,
+        367.64410400390625,
+        248.0281219482422
+      ],
+      "block_id": "page-0558-block-0020",
+      "order": 20,
+      "text": "E. Idem à DSM-5.\n",
+      "text_sha256": "623c5ec74498d33a47207c86c1d4b8bb5aae0042d0559cf373e98ababace68cc"
+    },
+    {
+      "bbox": [
+        308.5,
+        283.6019592285156,
+        540.8809204101562,
+        293.4281311035156
+      ],
+      "block_id": "page-0558-block-0021",
+      "order": 21,
+      "text": "F. Les symptômes ou le décit ne se limitent pas à une douleur ou à une\n",
+      "text_sha256": "eb7adbad0858dcaca1bcc061fbfb3672f4c5b3cf67f2614285c1f2d2515b3cfb"
+    },
+    {
+      "bbox": [
+        317.6499938964844,
+        293.6019592285156,
+        546.50048828125,
+        323.4281311035156
+      ],
+      "block_id": "page-0558-block-0022",
+      "order": 22,
+      "text": "dysfonction sexuelle, ne surviennent pas exclusivement au cours de\nl’évolution d’un Trouble somatisation et ne sont pas mieux expliqués par\nun autre trouble mental.\n",
+      "text_sha256": "cf2fe60f1c107b89805f3144c54217c1fc23edc2f65034d642ad895c28da7c6b"
+    },
+    {
+      "bbox": [
+        58.5,
+        329.0519714355469,
+        298.4936218261719,
+        424.9924011230469
+      ],
+      "block_id": "page-0558-block-0023",
+      "order": 23,
+      "text": "Spécier le type de symptôme :\n(F44.4) Avec faiblesse ou paralysie\n(F44.4) Avec mouvements anormaux (p. ex., tremblements, mouvements\ndystoniques, myoclonies, trouble de la marche)\n(F44.4) Avec des symptômes de déglutition\n(F44.4) Avec des troubles de l’élocution (p. ex., dysphonie, trouble de\nl’articulation)\n(F44.5) Avec attaques ou crises épileptiformes\n(F44.6) Avec anesthésie ou perte sensorielle\n",
+      "text_sha256": "bfd27ec9a8826012f3f501a467e7658db865be1a687855a4f0c83ca6fa8ddc99"
+    },
+    {
+      "bbox": [
+        58.5,
+        435.9728698730469,
+        283.447998046875,
+        532.9923706054688
+      ],
+      "block_id": "page-0558-block-0024",
+      "order": 24,
+      "text": "(F44.6) Avec symptôme sensoriel spécique (p. ex., perturbations\nvisuelles, olfactives ou de l’audition)\n(F44.7) Avec symptômes associés\nSpécier si :\nÉpisode aigu: symptômes présents depuis moins de 6 mois.\nPersistant: symptômes survenant depuis 6 mois ou plus.\nSpécier si :\nAvec facteur de stress psychologique (spécier le facteur de stress)\nSans facteur de stress psychologique\n",
+      "text_sha256": "f139560dcbcd99317ae8512c6baf8ea89d69a1c05bf25d9c3c112db4537a755f"
+    },
+    {
+      "bbox": [
+        308.5,
+        329.0519714355469,
+        542.9602661132812,
+        369.8781433105469
+      ],
+      "block_id": "page-0558-block-0025",
+      "order": 25,
+      "text": "Spécier le type de symptôme ou de décit :\nAvec symptôme ou décit moteur (p. ex., trouble de la coordination\nou de l’équilibre, paralysie ou faiblesse musculaire localisée, difcultés de\ndéglutition ou « boule dans la gorge », aphonie et rétention urinaire).\n",
+      "text_sha256": "131d528985a8597706ac7257b08109b479239bce8c1b86681a8aa18f6bbbfb45"
+    },
+    {
+      "bbox": [
+        308.5,
+        403.9728698730469,
+        548.1470336914062,
+        477.8781433105469
+      ],
+      "block_id": "page-0558-block-0026",
+      "order": 26,
+      "text": "Avec crises épileptiques ou convulsions\nComprend des crises épileptiques ou des crises comitiales avec manifesta-\ntions motrices ou sensitives.\nAvec symptôme ou décit sensitif ou sensoriel (p. ex., perte de sensibi-\nlité tactile ou douloureuse, diplopie, cécité, surdité et hallucinations).\nAvec présentation mixte\ns’il existe des symptômes de plusieurs catégories.\n",
+      "text_sha256": "14a3c1b41de5bea0335e73c80036ebfc7bb7c12611361bb57236e072c49826ca"
+    },
+    {
+      "bbox": [
+        54.5,
+        540.0703125,
+        554.0338745117188,
+        599.5750122070312
+      ],
+      "block_id": "page-0558-block-0027",
+      "order": 27,
+      "text": "Sources : APA (2015), p. 376-377 ; APA (2004), p.498.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris,\n2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation, DSM-IV-TR - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\n",
+      "text_sha256": "001b4f5da667dba1d0f8bb2a54b67a19a8c01722b2925c3704c3bd4e45bc271c"
+    },
+    {
+      "bbox": [
+        54.0,
+        615.0658569335938,
+        297.1153869628906,
+        725.5585327148438
+      ],
+      "block_id": "page-0558-block-0028",
+      "order": 28,
+      "text": "• violence péri-ictale (p. ex., agitation, désorganisation du\ncomportement) ;\n• crise épileptique simple à contenu purement émotionnel ou sensitif ;\n• aura d’épilepsie temporale avec sentiment d’étrangeté, de\ndépersonnalisation ;\n• sclérose en plaques avec une symptomatologie variée déant\nla neuro-anatomie.\nIl n’est pas rare que le patient présente un tableau mixte,\ncaractérisé par la présence d’une pathologie neurologique bien\n",
+      "text_sha256": "baeb8bd05db3db5d9c3b3cfde2774065709e4c2b5e80927102fc9503d8f44a64"
+    },
+    {
+      "bbox": [
+        312.0,
+        615.0658569335938,
+        555.1099243164062,
+        662.20849609375
+      ],
+      "block_id": "page-0558-block-0029",
+      "order": 29,
+      "text": "documentée (p. ex., épilepsie) et une conversion surajoutée\n(crises pseudoconvulsives) chez l’épileptique en quête d’attention,\ndans un traumatisme cérébral récent ou même dans la sclérose\nen plaques.\n",
+      "text_sha256": "392f4822dd7095d973f6e76ed7643ba50e1ec54e84eefa89919d4302a8d8986c"
+    },
+    {
+      "bbox": [
+        312.0,
+        674.7830200195312,
+        555.461669921875,
+        725.5585327148438
+      ],
+      "block_id": "page-0558-block-0030",
+      "order": 30,
+      "text": "Comorbidités\nOn observe fréquemment la coexistence d’une conversion avec\nd’autres pathologies psychiatriques, soit la dépression ou certains\ntroubles anxieux (trouble panique, trouble de stress post-traumatique).\n",
+      "text_sha256": "14116b94c2718455e7647ad8ab2040249cd81f2b3ae5749e44c6030153559ade"
+    }
+  ],
+  "coordinates_sha256": "909343d8d1bad081808be67abe75cdd624ed7e7ee3cef7559bea7758bbf35d4b",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0558",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 25\nTroubles à symptomatologie somatique\n541\nTABLEAU 25.6 Critères diagnostiques du trouble de conversion\nDSM-5\nDSM-IV-TR\n300.11 (F44.x) Trouble de conversion\n(trouble à symptomatologie neurologique fonctionnelle)\nTrouble de conversion\nA. Un ou plusieurs symptômes d’altération de la motricité volontaire ou des\nfonctions sensorielles.\nA. Un ou plusieurs symptômes ou décits touchant la motricité volontaire\nou les fonctions sensitives ou sensorielles suggérant une affection\nneurologique ou une affection médicale générale.\nB. Les données cliniques démontrent l’incompatibilité entre les symptômes\net une affection neurologique ou médicale reconnue.\nB. On estime que des facteurs psychologiques sont associés au symptôme\nou au décit parce que la survenue ou l’aggravation du symptôme est\nprécédée par des conits ou d’autres facteurs de stress.\nC. Les symptômes ou les handicaps ne sont pas mieux expliqués par un\nautre trouble médical ou mental.\nC. Le symptôme ou décit n’est pas produit intentionnellement ou feint\n(comme dans le Trouble factice ou la Simulation).\nD. Après des examens médicaux appropriés, le symptôme ou le décit ne\npeut pas s’expliquer complètement par une affection médicale générale,\nou par les effets directs d’une substance, ou être assimilé à un compor-\ntement ou une expérience culturellement déterminés.\nD. Le symptôme ou le handicap entraîne une détresse ou une altération\ncliniquement signicative dans le domaine du fonctionnement social,\nprofessionnel ou dans d’autres domaines importants, ou nécessite une\névaluation médicale.\nE. Idem à DSM-5.\nF. Les symptômes ou le décit ne se limitent pas à une douleur ou à une\ndysfonction sexuelle, ne surviennent pas exclusivement au cours de\nl’évolution d’un Trouble somatisation et ne sont pas mieux expliqués par\nun autre trouble mental.\nSpécier le type de symptôme :\n(F44.4) Avec faiblesse ou paralysie\n(F44.4) Avec mouvements anormaux (p. ex., tremblements, mouvements\ndystoniques, myoclonies, trouble de la marche)\n(F44.4) Avec des symptômes de déglutition\n(F44.4) Avec des troubles de l’élocution (p. ex., dysphonie, trouble de\nl’articulation)\n(F44.5) Avec attaques ou crises épileptiformes\n(F44.6) Avec anesthésie ou perte sensorielle\n(F44.6) Avec symptôme sensoriel spécique (p. ex., perturbations\nvisuelles, olfactives ou de l’audition)\n(F44.7) Avec symptômes associés\nSpécier si :\nÉpisode aigu: symptômes présents depuis moins de 6 mois.\nPersistant: symptômes survenant depuis 6 mois ou plus.\nSpécier si :\nAvec facteur de stress psychologique (spécier le facteur de stress)\nSans facteur de stress psychologique\nSpécier le type de symptôme ou de décit :\nAvec symptôme ou décit moteur (p. ex., trouble de la coordination\nou de l’équilibre, paralysie ou faiblesse musculaire localisée, difcultés de\ndéglutition ou « boule dans la gorge », aphonie et rétention urinaire).\nAvec crises épileptiques ou convulsions\nComprend des crises épileptiques ou des crises comitiales avec manifesta-\ntions motrices ou sensitives.\nAvec symptôme ou décit sensitif ou sensoriel (p. ex., perte de sensibi-\nlité tactile ou douloureuse, diplopie, cécité, surdité et hallucinations).\nAvec présentation mixte\ns’il existe des symptômes de plusieurs catégories.\nSources : APA (2015), p. 376-377 ; APA (2004), p.498.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris,\n2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation, DSM-IV-TR - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\n• violence péri-ictale (p. ex., agitation, désorganisation du\ncomportement) ;\n• crise épileptique simple à contenu purement émotionnel ou sensitif ;\n• aura d’épilepsie temporale avec sentiment d’étrangeté, de\ndépersonnalisation ;\n• sclérose en plaques avec une symptomatologie variée déant\nla neuro-anatomie.\nIl n’est pas rare que le patient présente un tableau mixte,\ncaractérisé par la présence d’une pathologie neurologique bien\ndocumentée (p. ex., épilepsie) et une conversion surajoutée\n(crises pseudoconvulsives) chez l’épileptique en quête d’attention,\ndans un traumatisme cérébral récent ou même dans la sclérose\nen plaques.\nComorbidités\nOn observe fréquemment la coexistence d’une conversion avec\nd’autres pathologies psychiatriques, soit la dépression ou certains\ntroubles anxieux (trouble panique, trouble de stress post-traumatique).\n",
+  "raw_text_sha256": "b2a3c3fb4b41f9a4df5b831bbb5d87192c945d632a9c760fe31dda1d3cdbedf6",
+  "source_page_display": 559,
+  "source_page_index": 558
+}

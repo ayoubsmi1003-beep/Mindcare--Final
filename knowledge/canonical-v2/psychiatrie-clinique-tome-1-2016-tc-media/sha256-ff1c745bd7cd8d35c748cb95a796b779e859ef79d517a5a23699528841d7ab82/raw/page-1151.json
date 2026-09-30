@@ -1,0 +1,52 @@
+{
+  "block_sequence_sha256": "5164a769408e6d9c8fcb5d19077eeb3e91f534203ca8a3cfd0c9231b4ecb5e2b",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        180.42501831054688,
+        758.8693237304688
+      ],
+      "block_id": "page-1151-block-0001",
+      "order": 1,
+      "text": "F14\nFigures supplémentaires\n",
+      "text_sha256": "8fd23497dc2a86e0d80a17d22c3637d998af9d58786247ca4c92253ffec036f1"
+    },
+    {
+      "bbox": [
+        50.400001525878906,
+        41.002296447753906,
+        270.43841552734375,
+        53.320068359375
+      ],
+      "block_id": "page-1151-block-0002",
+      "order": 2,
+      "text": "FIGURE 22 Structure et fonctionnement de la synapse\n",
+      "text_sha256": "49ccc91b4b39fa87c94f5813f9b38975715cdece3d2157fad4cd280b8ac952e3"
+    },
+    {
+      "bbox": [
+        48.25,
+        582.4406127929688,
+        359.44580078125,
+        593.9588623046875
+      ],
+      "block_id": "page-1151-block-0003",
+      "order": 3,
+      "text": "Source : Mader, S. S. & Windelspecht, M. (2014). Biologie humaine, 2e éd., McGraw-Hill/Chenelière Éducation.\n",
+      "text_sha256": "f8a6e838b063e3c50fcef57e75ddb18986ca0c209e61143c8b6ee197632d6cd2"
+    }
+  ],
+  "coordinates_sha256": "200049b40bf5e4febb1e1c0b34e0ba90ccb62670a91b19c5f6659e85a22cbfd5",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1151",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "F14\nFigures supplémentaires\nFIGURE 22 Structure et fonctionnement de la synapse\nSource : Mader, S. S. & Windelspecht, M. (2014). Biologie humaine, 2e éd., McGraw-Hill/Chenelière Éducation.\n",
+  "raw_text_sha256": "71544f379e96bbc16aa5a29264c56909e5f02f22dfed0d23d10943e45e16b83a",
+  "source_page_display": 1152,
+  "source_page_index": 1151
+}

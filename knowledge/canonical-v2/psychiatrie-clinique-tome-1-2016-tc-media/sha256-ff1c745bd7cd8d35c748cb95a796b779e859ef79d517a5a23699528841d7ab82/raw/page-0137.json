@@ -1,0 +1,100 @@
+{
+  "block_sequence_sha256": "8f6854c065ae2f2c27924dfc05dc0712d84d3c8f5a8ca182ba2b84ce546a76e2",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        471.6627197265625,
+        758.8693237304688
+      ],
+      "block_id": "page-0137-block-0001",
+      "order": 1,
+      "text": "120\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2 Déterminants bio-psycho-sociaux\n",
+      "text_sha256": "bd144e75bfedfa46e093bba73e7424db377e886c0dc25024c60e2027161fbc3c"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.9658203125,
+        291.4056091308594,
+        271.95849609375
+      ],
+      "block_id": "page-0137-block-0002",
+      "order": 2,
+      "text": "développement du SNC et au maintien de son bon fonction-\nnement à maturité. Les facteurs de croissance neuronale sont\nessentiels pour la neurogenèse, c’est-à-dire la formation de\nnouvelles cellules nerveuses. Il y a une perte neuronale dans\nl’hippocampe chez les patients présentant un diagnostic de\ndépression et les médicaments antidépresseurs stimulent la\nneurogenèse en augmentant l’activité des facteurs de crois-\nsance neuronale.\n• Les récepteurs de type stéroïdien ont la particularité d’être\nintracellulaires. Les hormones stéroïdiennes sont lipophiles,\nce qui leur permet de pénétrer facilement dans le cytoplasme\npour se lier aux récepteurs stéroïdiens. Le couple ainsi formé\nagit directement sur le noyau de la cellule et en modie le\nfonctionnement. La progestérone, la prégnénolone et la\ndihydro épiandrostérone sont des exemples de neurostéroïdes\nproduits dans le cerveau. Les neurostéroïdes sont des modu-\nlateurs de la transmission GABA. Aussi, la diminution de la\nconcentration des neurostéroïdes dans la maladie d’Alzheimer\nlaisse croire à une activité neuroprotectrice de ces molécules\ndans le cerveau.\n",
+      "text_sha256": "817685208154606101b4d8e0980cde81f09a5ce101a65ed00c5a1bf51face647"
+    },
+    {
+      "bbox": [
+        48.0,
+        284.48681640625,
+        146.8610076904297,
+        300.62939453125
+      ],
+      "block_id": "page-0137-block-0003",
+      "order": 3,
+      "text": "6.2.2 Protéines G\n",
+      "text_sha256": "67ee53b7911558712ec3b5d0b61ec3ee3122b552a920f4ca088d12c23c0f5689"
+    },
+    {
+      "bbox": [
+        48.0,
+        303.9658203125,
+        291.5531921386719,
+        724.95849609375
+      ],
+      "block_id": "page-0137-block-0004",
+      "order": 4,
+      "text": "Les protéines G sont des molécules situées sur la face interne de la\nmembrane plasmique. Elles sont constituées de trois sous-unités\nα, β et γ (voir la gure 6.6). La sous-unité α varie d’une protéine\nG à une autre. Les sous-unités β et γ sont étroitement liées et\nprésentent moins de variations. La sous-unité γ est profondément\nancrée dans la membrane plasmique. Les étapes qui suivent la\nstimulation du récepteur sont les suivantes :\n1. La sous-unité α porte le site de liaison aux nucléotides guany-\nliques. À l’état de repos, la sous-unité α est liée à la molécule\nde guanosine diphosphate (GDP).\n2. La liaison de l’agoniste, le neurotransmetteur qui active le ré-\ncepteur, entraîne un changement de conguration du récepteur\nqui permet la formation d’un complexe ternaire agoniste-ré-\ncepteur-protéine G. Cette interaction entraîne l’activation de\nla protéine G, c’est-à-dire l’ouverture du site nucléotidique et\nl’échange de la GDP pour la guanosine triphosphate (GTP).\n3. La sous-unité α se sépare alors des sous-unités β et γ et active\nà son tour une enzyme eectrice qui catalyse la formation du\nsecond messager.\n4. La sous-unité α est dotée d’une activité GTPasique intrinsèque\nqui catalyse l’hydrolyse de la GTP en GDP. La sous-unité α\nretourne alors à l’état de repos et se réassocie aux sous-unités\nβ et γ ; le cycle peut alors reprendre.\nLe phénomène synaptique initial ne dure que quelques cen-\ntaines de millisecondes, mais les eets cellulaires que produisent\nles seconds messagers persistent pendant quelques secondes, voire\nquelques minutes. Ainsi, les systèmes de messagers conviennent\nmieux à la transmission lente et soutenue du signal synap-\ntique et servent à moduler la transmission rapide assurée par\nles récepteurs ionotropes. Les antidépresseurs, le lithium, les\npeptides opiacés, la cocaïne et l’alcool peuvent modier les\nconcentrations des sous-unités des protéines G dans plusieurs\nrégions cérébrales. Les modications provoquées par une prise\nprolongée de ces agents psychotropes donnent à penser que les\nprotéines G participent aux eets thérapeutiques ou induisent\nune dépendance à ces substances.\n",
+      "text_sha256": "a9ba8e59f7ba6464074c8ac239a50d43b2af54b4477f4ad3cefa970fb3feb3b4"
+    },
+    {
+      "bbox": [
+        306.0,
+        39.63300704956055,
+        549.2047729492188,
+        216.85850524902344
+      ],
+      "block_id": "page-0137-block-0005",
+      "order": 5,
+      "text": "Liaison du premier messager\nLes récepteurs métabotropes couplés aux protéines G se dis-\ntinguent des récepteurs ionotropes par leur structure et leur\nfonction. Ils forment une famille génique et dérivent probable-\nment de molécules communes. Plus de 350 récepteurs couplés\naux protéines G ont été clonés. Ils sont constitués d’une longue\nchaîne peptidique comprenant des segments hydrophobes\n(lipophiles) insérés dans la couche lipidique de la membrane\ncellulaire et forment les segments transmembranaires (au nombre\nde sept) qui les caractérisent. L’extrémité aminée (N-terminale)\nest toujours extracellulaire et l’extrémité carboxylée est intracel-\nlulaire. Les variations structurales des boucles intracellulaires du\nrécepteur déterminent le type de voie de signalisation, qui est\nactivée par la liaison du neurotransmetteur à l’une des boucles\nextracellulaires.\n",
+      "text_sha256": "d9e6a8a7e8428f63c903bb58d35a8a6a441541307b6c7abdb7593f8fb325b564"
+    },
+    {
+      "bbox": [
+        306.0,
+        225.0330047607422,
+        549.2896118164062,
+        544.45849609375
+      ],
+      "block_id": "page-0137-block-0006",
+      "order": 6,
+      "text": "Liaison des seconds messagers\nLa liaison du premier messager (le neurotransmetteur) au récep-\nteur entraîne l’activation d’une protéine G. Celle-ci s’associe\nalors à une protéine eectrice, pour déclencher la synthèse de\nseconds messagers intracellulaires qui déclenchent alors des\nréactions métaboliques cellulaires particulières. Les principaux\nseconds messagers sont :\n• l’adénosine monophosphate cyclique (AMPc) ;\n• la guanosine monophosphate cyclique (GMPc) ;\n• l’inositol triphosphate (IP3) ;\n• la phospholipase C (PLC) ;\n• le diacylglycérol (DAG) ;\n• l’acide arachidonique (AA) ;\n• l’ion de calcium (Ca++).\nEn dépit de leur nombre relativement restreint, les seconds\nmessagers commandent donc des réactions physiologiques et\nbiochimiques très diverses. Ils activent souvent des protéines\nkinases spéciques, c’est-à-dire des enzymes qui catalysent\nl’addition d’un groupe phosphate (PO4) à un substrat de nature\nprotéique. La phosphorylation des phosphoprotéines constitue\ndonc une sorte de voie nale commune des systèmes de trans-\nduction du signal. Le signal qui résulte de cette cascade complexe\npeut, par exemple, prendre la forme d’une ouverture des canaux\ncalciques, ce qui produit une sécrétion de neurotransmetteur\ndans la synapse ; ou encore une ouverture des canaux potassiques\nce qui produit une hyperpolarisation neuronale.\n",
+      "text_sha256": "71014ab2d3ac0fff154ee0deb057e7bc69234e63efe81aa28a67f0e762842089"
+    },
+    {
+      "bbox": [
+        306.0,
+        545.6158447265625,
+        549.450927734375,
+        725.2584838867188
+      ],
+      "block_id": "page-0137-block-0007",
+      "order": 7,
+      "text": "Il est important de souligner que le même neurotransmet-\nteur peut interagir avec plusieurs types de récepteurs. Ainsi\nla noradrénaline peut activer neuf récepteurs diérents (voir\nla section 6.3). Ces récepteurs peuvent diérer en vertu du\nsystème de transduction du signal qu’ils mettent en œuvre. À\ntitre d’exemple :\n• les récepteurs α1 sont associés à des protéines Gq/11 qui\nactivent la phospholipase C ;\n• les récepteurs α2 sont associés à des protéines Gi/o qui inhibent\nla production d’AMPc ;\n• les récepteurs β1 sont associés à des protéines G qui stimulent\nla production d’AMPc.\nNon seulement un neurotransmetteur peut agir sur plusieurs\nrécepteurs distincts, mais ceux-ci peuvent coexister dans la\nmembrane d’un même neurone.\n",
+      "text_sha256": "40b2d3d364b263dcab3627821bed4ec3858846e08d2f6c24dc7f8d3abd339c57"
+    }
+  ],
+  "coordinates_sha256": "010656ecb9013d968616b93f8b09020b077a6f46f45683b3afc54bf4eb55d83e",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0137",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "120\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2 Déterminants bio-psycho-sociaux\ndéveloppement du SNC et au maintien de son bon fonction-\nnement à maturité. Les facteurs de croissance neuronale sont\nessentiels pour la neurogenèse, c’est-à-dire la formation de\nnouvelles cellules nerveuses. Il y a une perte neuronale dans\nl’hippocampe chez les patients présentant un diagnostic de\ndépression et les médicaments antidépresseurs stimulent la\nneurogenèse en augmentant l’activité des facteurs de crois-\nsance neuronale.\n• Les récepteurs de type stéroïdien ont la particularité d’être\nintracellulaires. Les hormones stéroïdiennes sont lipophiles,\nce qui leur permet de pénétrer facilement dans le cytoplasme\npour se lier aux récepteurs stéroïdiens. Le couple ainsi formé\nagit directement sur le noyau de la cellule et en modie le\nfonctionnement. La progestérone, la prégnénolone et la\ndihydro épiandrostérone sont des exemples de neurostéroïdes\nproduits dans le cerveau. Les neurostéroïdes sont des modu-\nlateurs de la transmission GABA. Aussi, la diminution de la\nconcentration des neurostéroïdes dans la maladie d’Alzheimer\nlaisse croire à une activité neuroprotectrice de ces molécules\ndans le cerveau.\n6.2.2 Protéines G\nLes protéines G sont des molécules situées sur la face interne de la\nmembrane plasmique. Elles sont constituées de trois sous-unités\nα, β et γ (voir la gure 6.6). La sous-unité α varie d’une protéine\nG à une autre. Les sous-unités β et γ sont étroitement liées et\nprésentent moins de variations. La sous-unité γ est profondément\nancrée dans la membrane plasmique. Les étapes qui suivent la\nstimulation du récepteur sont les suivantes :\n1. La sous-unité α porte le site de liaison aux nucléotides guany-\nliques. À l’état de repos, la sous-unité α est liée à la molécule\nde guanosine diphosphate (GDP).\n2. La liaison de l’agoniste, le neurotransmetteur qui active le ré-\ncepteur, entraîne un changement de conguration du récepteur\nqui permet la formation d’un complexe ternaire agoniste-ré-\ncepteur-protéine G. Cette interaction entraîne l’activation de\nla protéine G, c’est-à-dire l’ouverture du site nucléotidique et\nl’échange de la GDP pour la guanosine triphosphate (GTP).\n3. La sous-unité α se sépare alors des sous-unités β et γ et active\nà son tour une enzyme eectrice qui catalyse la formation du\nsecond messager.\n4. La sous-unité α est dotée d’une activité GTPasique intrinsèque\nqui catalyse l’hydrolyse de la GTP en GDP. La sous-unité α\nretourne alors à l’état de repos et se réassocie aux sous-unités\nβ et γ ; le cycle peut alors reprendre.\nLe phénomène synaptique initial ne dure que quelques cen-\ntaines de millisecondes, mais les eets cellulaires que produisent\nles seconds messagers persistent pendant quelques secondes, voire\nquelques minutes. Ainsi, les systèmes de messagers conviennent\nmieux à la transmission lente et soutenue du signal synap-\ntique et servent à moduler la transmission rapide assurée par\nles récepteurs ionotropes. Les antidépresseurs, le lithium, les\npeptides opiacés, la cocaïne et l’alcool peuvent modier les\nconcentrations des sous-unités des protéines G dans plusieurs\nrégions cérébrales. Les modications provoquées par une prise\nprolongée de ces agents psychotropes donnent à penser que les\nprotéines G participent aux eets thérapeutiques ou induisent\nune dépendance à ces substances.\nLiaison du premier messager\nLes récepteurs métabotropes couplés aux protéines G se dis-\ntinguent des récepteurs ionotropes par leur structure et leur\nfonction. Ils forment une famille génique et dérivent probable-\nment de molécules communes. Plus de 350 récepteurs couplés\naux protéines G ont été clonés. Ils sont constitués d’une longue\nchaîne peptidique comprenant des segments hydrophobes\n(lipophiles) insérés dans la couche lipidique de la membrane\ncellulaire et forment les segments transmembranaires (au nombre\nde sept) qui les caractérisent. L’extrémité aminée (N-terminale)\nest toujours extracellulaire et l’extrémité carboxylée est intracel-\nlulaire. Les variations structurales des boucles intracellulaires du\nrécepteur déterminent le type de voie de signalisation, qui est\nactivée par la liaison du neurotransmetteur à l’une des boucles\nextracellulaires.\nLiaison des seconds messagers\nLa liaison du premier messager (le neurotransmetteur) au récep-\nteur entraîne l’activation d’une protéine G. Celle-ci s’associe\nalors à une protéine eectrice, pour déclencher la synthèse de\nseconds messagers intracellulaires qui déclenchent alors des\nréactions métaboliques cellulaires particulières. Les principaux\nseconds messagers sont :\n• l’adénosine monophosphate cyclique (AMPc) ;\n• la guanosine monophosphate cyclique (GMPc) ;\n• l’inositol triphosphate (IP3) ;\n• la phospholipase C (PLC) ;\n• le diacylglycérol (DAG) ;\n• l’acide arachidonique (AA) ;\n• l’ion de calcium (Ca++).\nEn dépit de leur nombre relativement restreint, les seconds\nmessagers commandent donc des réactions physiologiques et\nbiochimiques très diverses. Ils activent souvent des protéines\nkinases spéciques, c’est-à-dire des enzymes qui catalysent\nl’addition d’un groupe phosphate (PO4) à un substrat de nature\nprotéique. La phosphorylation des phosphoprotéines constitue\ndonc une sorte de voie nale commune des systèmes de trans-\nduction du signal. Le signal qui résulte de cette cascade complexe\npeut, par exemple, prendre la forme d’une ouverture des canaux\ncalciques, ce qui produit une sécrétion de neurotransmetteur\ndans la synapse ; ou encore une ouverture des canaux potassiques\nce qui produit une hyperpolarisation neuronale.\nIl est important de souligner que le même neurotransmet-\nteur peut interagir avec plusieurs types de récepteurs. Ainsi\nla noradrénaline peut activer neuf récepteurs diérents (voir\nla section 6.3). Ces récepteurs peuvent diérer en vertu du\nsystème de transduction du signal qu’ils mettent en œuvre. À\ntitre d’exemple :\n• les récepteurs α1 sont associés à des protéines Gq/11 qui\nactivent la phospholipase C ;\n• les récepteurs α2 sont associés à des protéines Gi/o qui inhibent\nla production d’AMPc ;\n• les récepteurs β1 sont associés à des protéines G qui stimulent\nla production d’AMPc.\nNon seulement un neurotransmetteur peut agir sur plusieurs\nrécepteurs distincts, mais ceux-ci peuvent coexister dans la\nmembrane d’un même neurone.\n",
+  "raw_text_sha256": "4d918ac0f71b6cb06d40aa859557b6d6b77ec5522823f7d0399b9c08ef3abdb9",
+  "source_page_display": 138,
+  "source_page_index": 137
+}

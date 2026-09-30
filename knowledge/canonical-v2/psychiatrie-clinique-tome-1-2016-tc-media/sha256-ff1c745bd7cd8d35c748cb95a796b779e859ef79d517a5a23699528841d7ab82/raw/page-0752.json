@@ -1,0 +1,400 @@
+{
+  "block_sequence_sha256": "8f4925db53a24b7b761642b4066770281f3db911968d2178a77a70f3ffe1fdae",
+  "blocks": [
+    {
+      "bbox": [
+        305.8500061035156,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0752-block-0001",
+      "order": 1,
+      "text": "Chapitre 32\nTroubles du sommeil et de la vigilance\n735\n",
+      "text_sha256": "5a2315f9ef1d028c4c1929d1d7aaa17abf72f8c25cd2bb801988468dcfb4e989"
+    },
+    {
+      "bbox": [
+        56.25,
+        41.002296447753906,
+        435.0011901855469,
+        53.320068359375
+      ],
+      "block_id": "page-0752-block-0002",
+      "order": 2,
+      "text": "TABLEAU 32.4 Critères diagnostiques de l’hypersomnie primaire/narcolepsie sans cataplexie\n",
+      "text_sha256": "088e01c9c8d421253db12c9f25d7256382ff447dafb01fa701325297d1bba4f0"
+    },
+    {
+      "bbox": [
+        126.6500015258789,
+        58.27412414550781,
+        479.86651611328125,
+        81.60029602050781
+      ],
+      "block_id": "page-0752-block-0003",
+      "order": 3,
+      "text": "DSM-5\nDSM-IV-TR\n307.44 (F51.11) Hypersomnolence\nHypersomnie primaire\n",
+      "text_sha256": "5beecdd40a7fefe4d673685e0001325d1de86d6a4da6afa5abdba3fb15e765cf"
+    },
+    {
+      "bbox": [
+        58.25,
+        87.001953125,
+        301.0342102050781,
+        96.828125
+      ],
+      "block_id": "page-0752-block-0004",
+      "order": 4,
+      "text": "A. Somnolence excessive (hypersomnolence) rapportée malgré une période\n",
+      "text_sha256": "7a705d483df1a5f7cf45fad08995004e5636afec74429003e5d44289f49a9e95"
+    },
+    {
+      "bbox": [
+        70.25,
+        97.001953125,
+        319.3592224121094,
+        169.828125
+      ],
+      "block_id": "page-0752-block-0005",
+      "order": 5,
+      "text": "principale de sommeil d’au moins 7 heures et présence d’au moins un des\nsymptômes suivants :\n1. Périodes de sommeil ou d’assoupissement se répétant au cours d’une\nmême journée.\n2. Une période principale de sommeil prolongée d’au moins 9 heures par jour\nd’un sommeil non réparateur (ne permettant pas de récupérer).\n3. Difculté à être totalement éveillé après un réveil brutal.\n",
+      "text_sha256": "8c77b1e5df26bc7174cf4dd70ada7ea73a91c8806d8884e1f36318f20b5ceb6f"
+    },
+    {
+      "bbox": [
+        328.0,
+        87.001953125,
+        548.0771484375,
+        96.828125
+      ],
+      "block_id": "page-0752-block-0006",
+      "order": 6,
+      "text": "A. La plainte essentielle est une somnolence excessive, d’une durée\n",
+      "text_sha256": "999e81325575949e16f4511dfc608910f94212d91919d9de871cc284e3e23f9e"
+    },
+    {
+      "bbox": [
+        340.0,
+        97.001953125,
+        544.0784301757812,
+        136.828125
+      ],
+      "block_id": "page-0752-block-0007",
+      "order": 7,
+      "text": "d’au moins un mois (ou moins en cas d’hypersomnie primaire\nrécurrente), comme en témoignent des épisodes de sommeil\nprolongé ou des épisodes de sommeil diurne survenant presque\ntous les jours.\n",
+      "text_sha256": "acf9bb5314de291963b0e43241b7907818c8066a2e2ab982228e5efe93ed40d6"
+    },
+    {
+      "bbox": [
+        58.25,
+        178.40196228027344,
+        319.1159973144531,
+        188.22813415527344
+      ],
+      "block_id": "page-0752-block-0008",
+      "order": 8,
+      "text": "B. L’hypersomnolence survient au moins 3 fois par semaine, pendant au moins 3\n",
+      "text_sha256": "71b190bd97ed1fc2b9a487e3df023e52a53d64b12a4c1dbc302f2d1596d7c7ec"
+    },
+    {
+      "bbox": [
+        70.25,
+        188.40196228027344,
+        87.57500457763672,
+        198.22813415527344
+      ],
+      "block_id": "page-0752-block-0009",
+      "order": 9,
+      "text": "mois.\n",
+      "text_sha256": "44e725df5c772d1280caabfc7934ce68c0444349c09e3cc17614cab2d283ac03"
+    },
+    {
+      "bbox": [
+        58.25,
+        206.85195922851562,
+        290.2363586425781,
+        216.67813110351562
+      ],
+      "block_id": "page-0752-block-0010",
+      "order": 10,
+      "text": "C. L’hypersomnolence s’accompagne d’une détresse marquée ou d’une\n",
+      "text_sha256": "c3a8ff4c24fa18965665e4e7dbe84d35d91f0c5ddda4ec89986ab165b4574b62"
+    },
+    {
+      "bbox": [
+        70.25,
+        216.85195922851562,
+        310.90374755859375,
+        236.67813110351562
+      ],
+      "block_id": "page-0752-block-0011",
+      "order": 11,
+      "text": "altération du fonctionnement cognitif, social, professionnel ou dans d’autres\ndomaines importants.\n",
+      "text_sha256": "4acd146b18ef32a5a3e581d3103b28839ca9a479d5bb1aebeeba44c4e487f7ac"
+    },
+    {
+      "bbox": [
+        328.0,
+        206.85195922851562,
+        388.798095703125,
+        216.67813110351562
+      ],
+      "block_id": "page-0752-block-0012",
+      "order": 12,
+      "text": "B. Idem à DSM-5.\n",
+      "text_sha256": "703f62df8ee835b259dd8e94c2103cd979d0ac69c184c555aa261a5bff070302"
+    },
+    {
+      "bbox": [
+        58.25,
+        245.251953125,
+        300.668212890625,
+        255.078125
+      ],
+      "block_id": "page-0752-block-0013",
+      "order": 13,
+      "text": "D. L’hypersomnolence n’est pas mieux expliquée par un autre trouble veille-\n",
+      "text_sha256": "8169325b8fb80ecb9a737782d219ae31ea3de55625c4a71f4f078b04abe9ea99"
+    },
+    {
+      "bbox": [
+        70.25,
+        255.251953125,
+        287.2608337402344,
+        309.078125
+      ],
+      "block_id": "page-0752-block-0014",
+      "order": 14,
+      "text": "sommeil ni ne survient exclusivement au cours de ce trouble, p. ex. :\n• narcolepsie ;\n• trouble du sommeil lié à la respiration ;\n• trouble du sommeil lié au rythme circadien ;\n• parasomnie.\n",
+      "text_sha256": "20f3aba17db138d015bac83e7e9e6add88b49ba690ace7511d87fae32ebe9e73"
+    },
+    {
+      "bbox": [
+        328.0,
+        245.251953125,
+        532.1800537109375,
+        255.078125
+      ],
+      "block_id": "page-0752-block-0015",
+      "order": 15,
+      "text": "C. La somnolence excessive n’est pas mieux expliquée par une\n",
+      "text_sha256": "61ff1d75dc305bbc01359ac2a142e0cac4ef1525bc39ce03faca634d29052b3c"
+    },
+    {
+      "bbox": [
+        340.0,
+        255.251953125,
+        545.2969970703125,
+        305.078125
+      ],
+      "block_id": "page-0752-block-0016",
+      "order": 16,
+      "text": "insomnie, ne survient pas exclusivement au cours d’un autre\ntrouble du sommeil (p. ex., une narcolepsie, un trouble du\nsommeil lié à la respiration, un trouble du sommeil lié au rythme\ncircadien ou une parasomnie) et ne peut pas non plus être expli-\nquée par une quantité insufsante de sommeil.\n",
+      "text_sha256": "b21adebbd67e10e28ed4b55a31a6aaca13c76aa96cc21022c4cb4121cc140ab8"
+    },
+    {
+      "bbox": [
+        58.25,
+        317.70196533203125,
+        305.9062805175781,
+        327.52813720703125
+      ],
+      "block_id": "page-0752-block-0017",
+      "order": 17,
+      "text": "E. L’insomnie n’est pas imputable aux effets physiologiques d’une substance\n",
+      "text_sha256": "b3f7bea08109552abc53da23ab67c046c9e4d8961431532175a3dc84d3f64641"
+    },
+    {
+      "bbox": [
+        70.25,
+        327.70196533203125,
+        238.66049194335938,
+        337.52813720703125
+      ],
+      "block_id": "page-0752-block-0018",
+      "order": 18,
+      "text": "(p. ex., substance donnant lieu à abus, médicament).\n",
+      "text_sha256": "41af8d1ad1f103fe867777d02324ca438b79679de442b9b617b6cce6de6163e5"
+    },
+    {
+      "bbox": [
+        328.0,
+        317.70196533203125,
+        538.474365234375,
+        327.52813720703125
+      ],
+      "block_id": "page-0752-block-0019",
+      "order": 19,
+      "text": "E. La perturbation n’est pas liée aux effets physiologiques directs\n",
+      "text_sha256": "0e3a06aa6092599b33e348219077b8dce5be1dd60b2392517034f6e395de644c"
+    },
+    {
+      "bbox": [
+        340.0,
+        327.70196533203125,
+        541.6061401367188,
+        347.52813720703125
+      ],
+      "block_id": "page-0752-block-0020",
+      "order": 20,
+      "text": "d’une substance (p. ex., une substance donnant lieu à abus, un\nmédicament) ou d’une affection médicale générale.\n",
+      "text_sha256": "62f9426b4128eef20ef6bc4e3db80c6b5dc536d8076ba2b9492b29b4aac9a08f"
+    },
+    {
+      "bbox": [
+        58.25,
+        356.1019592285156,
+        290.7754211425781,
+        365.9281311035156
+      ],
+      "block_id": "page-0752-block-0021",
+      "order": 21,
+      "text": "F. La coexistence d’un trouble mental ou d’une autre affection médicale\n",
+      "text_sha256": "1596ae2914eea28b337c44a038670dfe7e703294e23bd288f815878998f4f2d1"
+    },
+    {
+      "bbox": [
+        70.25,
+        366.1019592285156,
+        278.3219909667969,
+        375.9281311035156
+      ],
+      "block_id": "page-0752-block-0022",
+      "order": 22,
+      "text": "n’explique pas la prédominance des plaintes d’hypersomnolence.\n",
+      "text_sha256": "b2f29fb78f4f23fddb646639f7e99bb6e2a9f486c60d14d93449b19063f1ad5e"
+    },
+    {
+      "bbox": [
+        328.0,
+        356.1019592285156,
+        388.8310852050781,
+        365.9281311035156
+      ],
+      "block_id": "page-0752-block-0023",
+      "order": 23,
+      "text": "D. Idem à DSM-5.\n",
+      "text_sha256": "a25093c4e73c5e7e67b3176a2cccc790e8fc03ace507127f5b4c7ba5e37fc007"
+    },
+    {
+      "bbox": [
+        58.25,
+        384.5519714355469,
+        303.9000549316406,
+        427.4924011230469
+      ],
+      "block_id": "page-0752-block-0024",
+      "order": 24,
+      "text": "Spécier si :\nAvec un trouble mental, y compris les troubles liés à l’usage de substances\nAvec une autre affection médicale\nAvec un autre trouble du sommeil\n",
+      "text_sha256": "f6b3a4db1f59d01d8862d686c67310f4c88a73069649bba695f86f2e321bfb97"
+    },
+    {
+      "bbox": [
+        58.25,
+        435.95196533203125,
+        178.74623107910156,
+        478.89239501953125
+      ],
+      "block_id": "page-0752-block-0025",
+      "order": 25,
+      "text": "Spécier si :\nAigu : Durée de moins d’un mois.\nSubaigu : Durée de 1 à 3 mois.\nPersistant : Durée de plus de 3 mois.\n",
+      "text_sha256": "60d78ec616350f2cc0b9a3184fb20cc2c3972ae91f495ffeda1671c537821095"
+    },
+    {
+      "bbox": [
+        328.0,
+        435.95196533203125,
+        539.923828125,
+        476.77813720703125
+      ],
+      "block_id": "page-0752-block-0026",
+      "order": 26,
+      "text": "Spécier si:\nRécurrente : s’il existe des périodes de somnolence excessive d’une\ndurée d’au moins trois jours, survenant plusieurs fois par an, pendant\nau moins 2 ans.\n",
+      "text_sha256": "9eedd4301596273e2b960308f883f7b4df4d5a073b8dd120a4b69b504a4156d2"
+    },
+    {
+      "bbox": [
+        58.25,
+        487.4019470214844,
+        315.33837890625,
+        571.3424072265625
+      ],
+      "block_id": "page-0752-block-0027",
+      "order": 27,
+      "text": "Spécier la sévérité actuelle :\nSpécier la sévérité en se fondant sur la difculté de maintien de la vigilance\ndiurne se manifestant par la survenue, en un jour donné, de multiples attaques\nirrépressibles de sommeil, par exemple dans des situations d’inactivité physique,\nen conduisant un véhicule, lors d’une visite chez des amis ou au travail.\nLéger : Difculté de maintien de la vigilance diurne 1 à 2 fois par semaine.\nMoyen : Difculté de maintien de la vigilance diurne 3 à 4 fois par semaine.\nGrave : Difculté de maintien de la vigilance diurne 5 à 7 fois par semaine.\n",
+      "text_sha256": "19ef046f27307f0bff333c5fbaf51f6d6b2a9941a4fd0e9408dcfcf4a375fcd7"
+    },
+    {
+      "bbox": [
+        54.25,
+        579.9906616210938,
+        212.4567108154297,
+        588.85888671875
+      ],
+      "block_id": "page-0752-block-0028",
+      "order": 28,
+      "text": "Sources: APA (2015), p. 432-433 ; APA (2004), p. 705.\n",
+      "text_sha256": "eb8ee968ef80673bf7d87856f585d24880ab414c2499f515b845967ed32d8fff"
+    },
+    {
+      "bbox": [
+        54.25,
+        592.9906616210938,
+        535.40087890625,
+        619.7250366210938
+      ],
+      "block_id": "page-0752-block-0029",
+      "order": 29,
+      "text": "Traduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\n",
+      "text_sha256": "d1e2a281d01f1237f716bfb933581f8135592b601f1b1579862a0656634f5460"
+    },
+    {
+      "bbox": [
+        54.25,
+        623.9906616210938,
+        545.1941528320312,
+        650.7250366210938
+      ],
+      "block_id": "page-0752-block-0030",
+      "order": 30,
+      "text": "Traduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004.\nAll rights reserved.\n",
+      "text_sha256": "243709fe0bbde845639c05a08cd4ae4601450ec5670085ab5e9038dcd165d7c3"
+    },
+    {
+      "bbox": [
+        54.0,
+        664.7658081054688,
+        297.289794921875,
+        732.7584838867188
+      ],
+      "block_id": "page-0752-block-0031",
+      "order": 31,
+      "text": "Les épisodes de cataplexie ne durent généralement que\nquelques secondes, plus rarement au-delà de deux minutes,\naprès quoi le patient retrouve son tonus musculaire normal.\nLes attaques de cataplexie correspondent à un déclenchement\ninopiné et isolé des mécanismes d’atonie musculaire propre\nau sommeil paradoxal. Lors d’une attaque prolongée, le tonus\n",
+      "text_sha256": "ecd814ffacb469a1cf450b1504dc1fc94734cb78d61638381ef136e9f2785546"
+    },
+    {
+      "bbox": [
+        312.0,
+        664.7658081054688,
+        555.4561157226562,
+        732.7584838867188
+      ],
+      "block_id": "page-0752-block-0032",
+      "order": 32,
+      "text": "musculaire peut reprendre pendant quelques secondes, ce qui\npeut produire des clonies du visage ou des extrémités pouvant\névoquer une crise d’épilepsie. Or, l’aspect soudain des attaques\nde cataplexie, leur étroite relation avec des émotions spéciques,\nleur début et leur n qui sont généralement bien délimités, ainsi\nque leur courte durée, sont autant d’indices qui en facilitent\n",
+      "text_sha256": "5cf43e15cd76e31dca2cb872d9da471ca422233d2409bf4d083b44e52bb5e6b1"
+    }
+  ],
+  "coordinates_sha256": "12b71f308ffe407c98918c0463189411e21320627c3e5009c725030606a33327",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0752",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 32\nTroubles du sommeil et de la vigilance\n735\nTABLEAU 32.4 Critères diagnostiques de l’hypersomnie primaire/narcolepsie sans cataplexie\nDSM-5\nDSM-IV-TR\n307.44 (F51.11) Hypersomnolence\nHypersomnie primaire\nA. Somnolence excessive (hypersomnolence) rapportée malgré une période\nprincipale de sommeil d’au moins 7 heures et présence d’au moins un des\nsymptômes suivants :\n1. Périodes de sommeil ou d’assoupissement se répétant au cours d’une\nmême journée.\n2. Une période principale de sommeil prolongée d’au moins 9 heures par jour\nd’un sommeil non réparateur (ne permettant pas de récupérer).\n3. Difculté à être totalement éveillé après un réveil brutal.\nA. La plainte essentielle est une somnolence excessive, d’une durée\nd’au moins un mois (ou moins en cas d’hypersomnie primaire\nrécurrente), comme en témoignent des épisodes de sommeil\nprolongé ou des épisodes de sommeil diurne survenant presque\ntous les jours.\nB. L’hypersomnolence survient au moins 3 fois par semaine, pendant au moins 3\nmois.\nC. L’hypersomnolence s’accompagne d’une détresse marquée ou d’une\naltération du fonctionnement cognitif, social, professionnel ou dans d’autres\ndomaines importants.\nB. Idem à DSM-5.\nD. L’hypersomnolence n’est pas mieux expliquée par un autre trouble veille-\nsommeil ni ne survient exclusivement au cours de ce trouble, p. ex. :\n• narcolepsie ;\n• trouble du sommeil lié à la respiration ;\n• trouble du sommeil lié au rythme circadien ;\n• parasomnie.\nC. La somnolence excessive n’est pas mieux expliquée par une\ninsomnie, ne survient pas exclusivement au cours d’un autre\ntrouble du sommeil (p. ex., une narcolepsie, un trouble du\nsommeil lié à la respiration, un trouble du sommeil lié au rythme\ncircadien ou une parasomnie) et ne peut pas non plus être expli-\nquée par une quantité insufsante de sommeil.\nE. L’insomnie n’est pas imputable aux effets physiologiques d’une substance\n(p. ex., substance donnant lieu à abus, médicament).\nE. La perturbation n’est pas liée aux effets physiologiques directs\nd’une substance (p. ex., une substance donnant lieu à abus, un\nmédicament) ou d’une affection médicale générale.\nF. La coexistence d’un trouble mental ou d’une autre affection médicale\nn’explique pas la prédominance des plaintes d’hypersomnolence.\nD. Idem à DSM-5.\nSpécier si :\nAvec un trouble mental, y compris les troubles liés à l’usage de substances\nAvec une autre affection médicale\nAvec un autre trouble du sommeil\nSpécier si :\nAigu : Durée de moins d’un mois.\nSubaigu : Durée de 1 à 3 mois.\nPersistant : Durée de plus de 3 mois.\nSpécier si:\nRécurrente : s’il existe des périodes de somnolence excessive d’une\ndurée d’au moins trois jours, survenant plusieurs fois par an, pendant\nau moins 2 ans.\nSpécier la sévérité actuelle :\nSpécier la sévérité en se fondant sur la difculté de maintien de la vigilance\ndiurne se manifestant par la survenue, en un jour donné, de multiples attaques\nirrépressibles de sommeil, par exemple dans des situations d’inactivité physique,\nen conduisant un véhicule, lors d’une visite chez des amis ou au travail.\nLéger : Difculté de maintien de la vigilance diurne 1 à 2 fois par semaine.\nMoyen : Difculté de maintien de la vigilance diurne 3 à 4 fois par semaine.\nGrave : Difculté de maintien de la vigilance diurne 5 à 7 fois par semaine.\nSources: APA (2015), p. 432-433 ; APA (2004), p. 705.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004.\nAll rights reserved.\nLes épisodes de cataplexie ne durent généralement que\nquelques secondes, plus rarement au-delà de deux minutes,\naprès quoi le patient retrouve son tonus musculaire normal.\nLes attaques de cataplexie correspondent à un déclenchement\ninopiné et isolé des mécanismes d’atonie musculaire propre\nau sommeil paradoxal. Lors d’une attaque prolongée, le tonus\nmusculaire peut reprendre pendant quelques secondes, ce qui\npeut produire des clonies du visage ou des extrémités pouvant\névoquer une crise d’épilepsie. Or, l’aspect soudain des attaques\nde cataplexie, leur étroite relation avec des émotions spéciques,\nleur début et leur n qui sont généralement bien délimités, ainsi\nque leur courte durée, sont autant d’indices qui en facilitent\n",
+  "raw_text_sha256": "be6f01abae1aa9f58f014d925363f87515c2837b58efdab801227f7a9d70b25f",
+  "source_page_display": 753,
+  "source_page_index": 752
+}

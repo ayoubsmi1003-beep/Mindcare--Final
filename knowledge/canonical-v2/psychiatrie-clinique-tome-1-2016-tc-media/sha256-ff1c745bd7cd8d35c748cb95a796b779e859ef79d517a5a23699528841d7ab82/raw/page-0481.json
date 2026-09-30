@@ -1,0 +1,292 @@
+{
+  "block_sequence_sha256": "fcf8de8ec2542a7519d31641735cf6c69625ece4bc5bb8a2cc2c12bc10526ce8",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.53765869140625,
+        758.8693237304688
+      ],
+      "block_id": "page-0481-block-0001",
+      "order": 1,
+      "text": "464\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "f055781901fc653feb94537a8b6c8aee4435dad6471fdf0154936dc50980ebd1"
+    },
+    {
+      "bbox": [
+        50.35000228881836,
+        41.002296447753906,
+        382.5309143066406,
+        53.320068359375
+      ],
+      "block_id": "page-0481-block-0002",
+      "order": 2,
+      "text": "TABLEAU 21.4 Critères diagnostiques de l’obsession d’une dysmorphie corporelle\n",
+      "text_sha256": "1535edd0d4abcef332ecfaed9bba66556cb693cc377017b79527614d52b8b0a7"
+    },
+    {
+      "bbox": [
+        52.25,
+        58.27412414550781,
+        481.897216796875,
+        94.4781265258789
+      ],
+      "block_id": "page-0481-block-0003",
+      "order": 3,
+      "text": "DSM-5\nDSM-IV-TR\n300.7 (F45.22) Obsession d’une dysmorphie corporelle\nPeur d’une dysmorphie corporelle\nA. Préoccupation concernant un ou plusieurs imperfections ou défauts\n",
+      "text_sha256": "85155dbd9278810d16f39d1da92ba0e2c9dbc0d03c5ff7e2f62201c466cb3a34"
+    },
+    {
+      "bbox": [
+        60.75,
+        94.6519546508789,
+        286.27398681640625,
+        114.4781265258789
+      ],
+      "block_id": "page-0481-block-0004",
+      "order": 4,
+      "text": "perçus dans son apparence physique qui ne sont pas apparents ou qui\nsemblent mineurs pour autrui.\n",
+      "text_sha256": "8d6827e671d1bd2504057e8d7f5522788f969a8f245e12e296490d6105984faf"
+    },
+    {
+      "bbox": [
+        302.25,
+        84.6519546508789,
+        543.941162109375,
+        94.4781265258789
+      ],
+      "block_id": "page-0481-block-0005",
+      "order": 5,
+      "text": "A. Préoccupation concernant un défaut imaginaire de l’apparence physique.\n",
+      "text_sha256": "ddd68ab02bbbfffe09c37eeb2fb5faa1de8c60890a5e4c4ee3fed5d5bfe6c689"
+    },
+    {
+      "bbox": [
+        311.0500183105469,
+        94.6519546508789,
+        544.3970336914062,
+        114.4781265258789
+      ],
+      "block_id": "page-0481-block-0006",
+      "order": 6,
+      "text": "Si un léger défaut physique est apparent, la préoccupation est manifeste-\nment démesurée.\n",
+      "text_sha256": "61744b1ef6762a41aff5d3ddc45f6dde5e542a2fcb4c797609c3c0581a75e965"
+    },
+    {
+      "bbox": [
+        52.25,
+        119.05195617675781,
+        278.697021484375,
+        128.8781280517578
+      ],
+      "block_id": "page-0481-block-0007",
+      "order": 7,
+      "text": "B. À un moment de l’évolution du trouble, l’individu a eu des comporte-\n",
+      "text_sha256": "16b9723f9033d22e2ea55ee6c41fd84c76057b76d846ea063e8b9c507fb4169e"
+    },
+    {
+      "bbox": [
+        60.400001525878906,
+        129.0519561767578,
+        292.4205017089844,
+        168.8781280517578
+      ],
+      "block_id": "page-0481-block-0008",
+      "order": 8,
+      "text": "ments répétitifs (p. ex. vérication dans le miroir, toilettage excessif,\nexcoriation de la peau, recherche de rassurement) ou des actes mentaux\n(p. ex. comparaison de son apparence avec celle d’autrui) en réponse à\ndes préoccupations concernant son apparence physique.\n",
+      "text_sha256": "7a0a2bb1ed4a942de5136b7ea5a7552ccd80c6b41646166b68382a7908c4cabd"
+    },
+    {
+      "bbox": [
+        52.25,
+        173.501953125,
+        279.1359558105469,
+        183.328125
+      ],
+      "block_id": "page-0481-block-0009",
+      "order": 9,
+      "text": "C. La préoccupation entraîne une détresse cliniquement signicative ou\n",
+      "text_sha256": "ebdb6b54d009809ac7d7c513751ec2f1466d50306caaf0565b52a4c7dcd80b97"
+    },
+    {
+      "bbox": [
+        60.900001525878906,
+        183.501953125,
+        288.373779296875,
+        203.328125
+      ],
+      "block_id": "page-0481-block-0010",
+      "order": 10,
+      "text": "une altération du fonctionnement social, professionnel ou dans d’autres\ndomaines importants.\n",
+      "text_sha256": "0dc44f1b30dd6f5068cbb1904cd5fa58dcbe67ff48d4ea19f0ac577e7fe2d461"
+    },
+    {
+      "bbox": [
+        302.25,
+        173.501953125,
+        359.8479919433594,
+        183.328125
+      ],
+      "block_id": "page-0481-block-0011",
+      "order": 11,
+      "text": "B. Idem à DSM-5.\n",
+      "text_sha256": "703f62df8ee835b259dd8e94c2103cd979d0ac69c184c555aa261a5bff070302"
+    },
+    {
+      "bbox": [
+        52.25,
+        207.90196228027344,
+        277.8373107910156,
+        217.72813415527344
+      ],
+      "block_id": "page-0481-block-0012",
+      "order": 12,
+      "text": "D. La préoccupation concernant l’apparence n’est pas mieux expliquée\n",
+      "text_sha256": "062d0b1cf09b4b2059aec725c81abf24516aa6954b10b27c73ca7a26d8f29ae9"
+    },
+    {
+      "bbox": [
+        61.04999923706055,
+        217.90196228027344,
+        287.3158264160156,
+        247.72813415527344
+      ],
+      "block_id": "page-0481-block-0013",
+      "order": 13,
+      "text": "par une insatisfaction concernant le poids ou le tissu adipeux chez un\nindividu dont les symptômes répondent aux critères diagnostiques d’un\ntrouble alimentaire.\n",
+      "text_sha256": "74954b2b1633f848520c81969a6edb260b07e77f23f5a31451b8c74ff03a964f"
+    },
+    {
+      "bbox": [
+        302.25,
+        207.90196228027344,
+        540.1890258789062,
+        217.72813415527344
+      ],
+      "block_id": "page-0481-block-0014",
+      "order": 14,
+      "text": "C. La préoccupation n’est pas mieux expliquée par un autre trouble mental\n",
+      "text_sha256": "b12580af38b52d6a8d34f8c2cdeb04561c7b5988b5472492418fde2f814aa57b"
+    },
+    {
+      "bbox": [
+        311.25,
+        217.90196228027344,
+        534.700439453125,
+        237.72813415527344
+      ],
+      "block_id": "page-0481-block-0015",
+      "order": 15,
+      "text": "(p. ex., une anorexie mentale où il existe une insatisfaction concernant\nles formes et les dimensions du corps).\n",
+      "text_sha256": "f4fdc9329747d034514c2a56726f4ca0cae586a6000735aeb05ce2e14306d261"
+    },
+    {
+      "bbox": [
+        52.25,
+        252.35195922851562,
+        294.2627868652344,
+        303.1781311035156
+      ],
+      "block_id": "page-0481-block-0016",
+      "order": 16,
+      "text": "Spécier si :\nAvec dysmorphie musculaire : L’individu est préoccupé par l’idée d’être\nde constitution physique trop petite ou pas assez musclée. Cette spécica-\ntion est utilisée même si la personne est préoccupée par d’autres parties de\nson corps, ce qui est souvent le cas.\n",
+      "text_sha256": "592a7c02de66e324d88ca3f77a2da37c62ca5ecc024624006019c0f3426fa83e"
+    },
+    {
+      "bbox": [
+        52.25,
+        307.751953125,
+        294.3879699707031,
+        421.578125
+      ],
+      "block_id": "page-0481-block-0017",
+      "order": 17,
+      "text": "Spécier si :\nIndiquer le niveau d’insight concernant les croyances relatives à l’obsession\nd’une dysmorphie corporelle (p. ex. « je suis laid » ou « je suis difforme »).\nAvec un insight bon ou acceptable : L’individu reconnaît que ses croyances\nrelatives à l’obsession d’une dysmorphie corporelle ne sont certainement ou\nprobablement pas exactes, ou qu’elles pourraient être vraies ou non.\nAvec peu d’insight: L’individu pense que ses croyances relatives à l’ob-\nsession d’une dysmorphie corporelle sont probablement vraies.\nSans insight ou avec croyances délirantes : L’individu est totalement\nconvaincu que ses croyances relatives à l’obsession d’une dysmorphie\ncorporelle sont vraies.\n",
+      "text_sha256": "224a21964b1ee61a4873934edf69ca38343e2cf70907334f63c6beaaf82a69f2"
+    },
+    {
+      "bbox": [
+        48.25,
+        426.3203125,
+        548.683837890625,
+        484.125
+      ],
+      "block_id": "page-0481-block-0018",
+      "order": 18,
+      "text": "Sources : APA (2015), p. 284-285 ; APA (2004), p. 592.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris,\n2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation, DSM-IV-TR - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\n",
+      "text_sha256": "c4258d25c1d718315a8e6feae4c39f10e4610fd53e1306b639bf0e7c1066d998"
+    },
+    {
+      "bbox": [
+        48.0,
+        505.66583251953125,
+        291.5401916503906,
+        609.8085327148438
+      ],
+      "block_id": "page-0481-block-0019",
+      "order": 19,
+      "text": "en insistant pour des mesures radicales (p. ex., chirurgicales), ils\ndemeurent vagues et inconsistants dans la description de leur\nvécu. Le médecin doit donc être sensibilisé à la possibilité d’une\nODC lorsque le patient présente des préoccupations nettement\nexcessives ou inappropriées par rapport à son apparence physique.\nIl peut alors poser quelques questions appropriées : Êtes-vous\npréoccupé de votre apparence ? Est-ce que vous y pensez souvent\nou longuement ? Quelle est la détresse que ces préoccupations\nvous occasionnent ? Quel est leur impact sur votre vie sociale ? Etc.\n",
+      "text_sha256": "ea08456a4c19d1a796ddb2ce400a778c83997c06ea99294e01e9cf952617840e"
+    },
+    {
+      "bbox": [
+        48.0,
+        620.5368041992188,
+        216.67410278320312,
+        652.87939453125
+      ],
+      "block_id": "page-0481-block-0020",
+      "order": 20,
+      "text": "21B.1.6 Diagnostic différentiel\net comorbidité\n",
+      "text_sha256": "75a28245b76937dabcbc92d925f82eaf2f0991160a93e851829deb864a39fd59"
+    },
+    {
+      "bbox": [
+        48.0,
+        656.4158325195312,
+        291.16796875,
+        725.45849609375
+      ],
+      "block_id": "page-0481-block-0021",
+      "order": 21,
+      "text": "Le fait même que l’ODC fait partie d’un groupe de troubles qualiés\n« apparentés » au TOC indique déjà un problème potentiel quant\nà la diérenciation entre « les pairs apparentés ». L’ODC doit aussi\nêtre diérenciée par rapport à d’autres troubles psychiatriques\nformellement « non apparentés », et cela se complique aussi par\nl’omniprésence de la comorbidité.\n",
+      "text_sha256": "d4f182aca44225076cd8fe1d40335221bba168c58d676844ebab61df2823afb7"
+    },
+    {
+      "bbox": [
+        306.0,
+        504.3330078125,
+        549.2523193359375,
+        656.45849609375
+      ],
+      "block_id": "page-0481-block-0022",
+      "order": 22,
+      "text": "Trouble obsessionnel-compulsif\nTOC et ODC apparaissent étroitement apparentés sinon iden-\ntiques pour l’essentiel. L’appellation « obsession d’une dysmorphie\ncorporelle » dans la version française du DSM-5 renforce cette\nimpression. En eet, TOC et ODC ne se diérencient pas par la\nforme ou la structure de leurs symptômes – obsessions, compul-\nsions et comportement d’évitement – mais uniquement par leur\ncontenu (thématique) – obsession de l’apparence physique dans\nle cas de l’ODC par opposition à la crainte de la saleté, au doute, à\nl’ordre, etc., dans le cas du TOC. Le DSM-5 indique d’ailleurs que\ndans l’ODC « le focus est seulement sur l’apparence » (APA, 2015).\nCes patients se diérencient aussi en ayant un moindre insight\npar rapport à leur maladie que les patients atteints d’un TOC.\n",
+      "text_sha256": "2b8f10542e4cafaeae872f678b800cbc3cddda36c336234e23d5baa45234b623"
+    },
+    {
+      "bbox": [
+        306.0,
+        657.4658203125,
+        549.3629760742188,
+        725.45849609375
+      ],
+      "block_id": "page-0481-block-0023",
+      "order": 23,
+      "text": "Bref, la distinction entre TOC et ODC ne repose pas sur les\ncritères phénoménologiques de la forme (structure) des symp-\ntômes exigés pour diérencier symptômes ou maladies, mais\nuniquement sur leur contenu (thématique) non spécique. Par\nconséquent, cette distinction paraît formelle et supercielle, car elle\nreprésente une réication d’un point de vue historique contestable.\n",
+      "text_sha256": "1f32af5830cfe9c4474ffc6f20e5d28ffca4165b1f712b1fe1b5010e459f6cdb"
+    }
+  ],
+  "coordinates_sha256": "26e231ed1788ba687927a572da4e9f412575a9f73aea32fc5348dd9881462424",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0481",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "464\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nTABLEAU 21.4 Critères diagnostiques de l’obsession d’une dysmorphie corporelle\nDSM-5\nDSM-IV-TR\n300.7 (F45.22) Obsession d’une dysmorphie corporelle\nPeur d’une dysmorphie corporelle\nA. Préoccupation concernant un ou plusieurs imperfections ou défauts\nperçus dans son apparence physique qui ne sont pas apparents ou qui\nsemblent mineurs pour autrui.\nA. Préoccupation concernant un défaut imaginaire de l’apparence physique.\nSi un léger défaut physique est apparent, la préoccupation est manifeste-\nment démesurée.\nB. À un moment de l’évolution du trouble, l’individu a eu des comporte-\nments répétitifs (p. ex. vérication dans le miroir, toilettage excessif,\nexcoriation de la peau, recherche de rassurement) ou des actes mentaux\n(p. ex. comparaison de son apparence avec celle d’autrui) en réponse à\ndes préoccupations concernant son apparence physique.\nC. La préoccupation entraîne une détresse cliniquement signicative ou\nune altération du fonctionnement social, professionnel ou dans d’autres\ndomaines importants.\nB. Idem à DSM-5.\nD. La préoccupation concernant l’apparence n’est pas mieux expliquée\npar une insatisfaction concernant le poids ou le tissu adipeux chez un\nindividu dont les symptômes répondent aux critères diagnostiques d’un\ntrouble alimentaire.\nC. La préoccupation n’est pas mieux expliquée par un autre trouble mental\n(p. ex., une anorexie mentale où il existe une insatisfaction concernant\nles formes et les dimensions du corps).\nSpécier si :\nAvec dysmorphie musculaire : L’individu est préoccupé par l’idée d’être\nde constitution physique trop petite ou pas assez musclée. Cette spécica-\ntion est utilisée même si la personne est préoccupée par d’autres parties de\nson corps, ce qui est souvent le cas.\nSpécier si :\nIndiquer le niveau d’insight concernant les croyances relatives à l’obsession\nd’une dysmorphie corporelle (p. ex. « je suis laid » ou « je suis difforme »).\nAvec un insight bon ou acceptable : L’individu reconnaît que ses croyances\nrelatives à l’obsession d’une dysmorphie corporelle ne sont certainement ou\nprobablement pas exactes, ou qu’elles pourraient être vraies ou non.\nAvec peu d’insight: L’individu pense que ses croyances relatives à l’ob-\nsession d’une dysmorphie corporelle sont probablement vraies.\nSans insight ou avec croyances délirantes : L’individu est totalement\nconvaincu que ses croyances relatives à l’obsession d’une dysmorphie\ncorporelle sont vraies.\nSources : APA (2015), p. 284-285 ; APA (2004), p. 592.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris,\n2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation, DSM-IV-TR - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\nen insistant pour des mesures radicales (p. ex., chirurgicales), ils\ndemeurent vagues et inconsistants dans la description de leur\nvécu. Le médecin doit donc être sensibilisé à la possibilité d’une\nODC lorsque le patient présente des préoccupations nettement\nexcessives ou inappropriées par rapport à son apparence physique.\nIl peut alors poser quelques questions appropriées : Êtes-vous\npréoccupé de votre apparence ? Est-ce que vous y pensez souvent\nou longuement ? Quelle est la détresse que ces préoccupations\nvous occasionnent ? Quel est leur impact sur votre vie sociale ? Etc.\n21B.1.6 Diagnostic différentiel\net comorbidité\nLe fait même que l’ODC fait partie d’un groupe de troubles qualiés\n« apparentés » au TOC indique déjà un problème potentiel quant\nà la diérenciation entre « les pairs apparentés ». L’ODC doit aussi\nêtre diérenciée par rapport à d’autres troubles psychiatriques\nformellement « non apparentés », et cela se complique aussi par\nl’omniprésence de la comorbidité.\nTrouble obsessionnel-compulsif\nTOC et ODC apparaissent étroitement apparentés sinon iden-\ntiques pour l’essentiel. L’appellation « obsession d’une dysmorphie\ncorporelle » dans la version française du DSM-5 renforce cette\nimpression. En eet, TOC et ODC ne se diérencient pas par la\nforme ou la structure de leurs symptômes – obsessions, compul-\nsions et comportement d’évitement – mais uniquement par leur\ncontenu (thématique) – obsession de l’apparence physique dans\nle cas de l’ODC par opposition à la crainte de la saleté, au doute, à\nl’ordre, etc., dans le cas du TOC. Le DSM-5 indique d’ailleurs que\ndans l’ODC « le focus est seulement sur l’apparence » (APA, 2015).\nCes patients se diérencient aussi en ayant un moindre insight\npar rapport à leur maladie que les patients atteints d’un TOC.\nBref, la distinction entre TOC et ODC ne repose pas sur les\ncritères phénoménologiques de la forme (structure) des symp-\ntômes exigés pour diérencier symptômes ou maladies, mais\nuniquement sur leur contenu (thématique) non spécique. Par\nconséquent, cette distinction paraît formelle et supercielle, car elle\nreprésente une réication d’un point de vue historique contestable.\n",
+  "raw_text_sha256": "daa0273cbdd377757a600e936e482837633abdace88a7d674e4b214b69a48d37",
+  "source_page_display": 482,
+  "source_page_index": 481
+}

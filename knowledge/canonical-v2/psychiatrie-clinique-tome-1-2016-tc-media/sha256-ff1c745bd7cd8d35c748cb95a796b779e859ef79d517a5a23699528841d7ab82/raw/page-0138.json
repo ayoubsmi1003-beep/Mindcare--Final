@@ -1,0 +1,136 @@
+{
+  "block_sequence_sha256": "c26a1b6e99e4d0bc5d3f620e80a9930c6f8c112acbe36eb2bb4947f170afd707",
+  "blocks": [
+    {
+      "bbox": [
+        405.1000061035156,
+        747.3754272460938,
+        555.0,
+        758.6693725585938
+      ],
+      "block_id": "page-0138-block-0001",
+      "order": 1,
+      "text": "Chapitre 6\nNeurobiologie\n121\n",
+      "text_sha256": "ade51d8336cb49487f4891a153dc34ff67e646f85c6eafcd2943a4862d44644d"
+    },
+    {
+      "bbox": [
+        312.0,
+        40.9658203125,
+        555.3377075195312,
+        641.5084838867188
+      ],
+      "block_id": "page-0138-block-0002",
+      "order": 2,
+      "text": "Pour être considérée comme un neurotransmetteur, une\nsubstance doit satisfaire aux critères suivants :\n• Le neurotransmetteur est synthétisé dans le neurone.\n• Il est présent dans le neurone et il est sécrété dans la synapse\nen quantité susante pour induire un changement au niveau\nde la membrane postsynaptique, ou de l’organe cible (dans le\ncas du système nerveux périphérique), à la suite de l’arrivée\nd’un potentiel d’action.\n• Il y a dans la synapse un système d’inactivation qui permet de\nmettre n rapidement à l’action du neurotransmetteur. Il s’agit\ngénéralement d’un mécanisme enzymatique qui dégrade le\nneurotransmetteur ou d’une protéine de recaptage qui ramène\nle neurotransmetteur dans le neurone présynaptique où il est\ndégradé ou recyclé.\nAprès sa synthèse, le neurotransmetteur est mis en réserve\ndans des vésicules situées dans le neurone présynaptique ; cette\ninsertion se réalise par l’entremise de protéines spécifiques\nappelées transporteurs vésiculaires. À l’arrivée d’un potentiel\nd’action, le calcium intracellulaire pénètre dans le cytoplasme\nce qui déclenche une série de réactions chimiques entraînant\nla fusion de la vésicule avec la membrane du neurone présy-\nnaptique ; c’est au moment de cette fusion que le neurotrans-\nmetteur est libéré dans la synapse. Une fois dans la synapse,\nle neurotransmetteur se lie alors aux protéines présentes à la\nsurface des membranes présynaptiques et postsynaptiques ;\ncertaines de ces protéines sont des enzymes qui métabolisent le\nneurotransmetteur, d’autres sont des récepteurs qui permettent\nla transmission du signal. À la surface de la membrane du neu-\nrone présynaptique, on trouve une protéine de recaptage qui\nréintroduit le neurotransmetteur dans le cytoplasme. Lorsque\nla concentration synaptique du neurotransmetteur est élevée,\nil peut diffuser hors de la synapse dans le milieu extracellu-\nlaire et se lier à des récepteurs ou à un site de recaptage que\nl’on dit non synaptique ; on parle alors de neurotransmission\nnon synaptique (voir la figure 6.5). Les neuro transmetteurs\npeuvent agir sur des récepteurs constitués de canaux ioniques ;\nils ont alors une action directe et rapide sur le potentiel\nmembranaire. Ils peuvent également agir par l’intermédiaire\nd’un système de messagers intracellulaires ; dans ce cas, le\ndélai d’action est plus lent et l’action est plus prolongée. Si\nl’action du neurotransmetteur sur le système de messagers\nintracellulaires provoque une modulation de la réponse d’un\nautre neurotransmetteur, on nomme alors le premier un\nneuro modulateur. On peut miser sur ces deux mécanismes\nd’action (canaux ioniques et messagers intracellulaires) pour\nstabiliser l’humeur dans le trouble bipolaire : l’acide valproïque\nbloque les canaux ioniques, alors que le lithium agit sur le\nsystème de messagers intracellulaires. Ainsi, on comprend\nmieux comment la combinaison de ces deux médicaments\npeut s’avérer complémentaire dans le traitement d’un trouble\nbipolaire réfractaire.\n",
+      "text_sha256": "efa5e75db0ff89e643b5bbb4ab409416720464b783eeeb82673a2a35549e2980"
+    },
+    {
+      "bbox": [
+        312.0,
+        642.6658325195312,
+        555.4144287109375,
+        701.9085083007812
+      ],
+      "block_id": "page-0138-block-0003",
+      "order": 3,
+      "text": "La nature chimique des neurotransmetteurs est très diverse, de\nsorte qu’on les regroupe de la façon suivante (voir la gure 6.8) :\n1. Les amines biogènes sont des molécules dérivées d’un acide\naminé ; elles comprennent :\na) les catécholamines dérivées de la tyrosine : la dopamine\n",
+      "text_sha256": "efb64952a2609153f645a139ba16ef89d7df56b8f4264466b516330cbbbfd7dd"
+    },
+    {
+      "bbox": [
+        336.0,
+        703.0658569335938,
+        555.3294677734375,
+        725.2584838867188
+      ],
+      "block_id": "page-0138-block-0004",
+      "order": 4,
+      "text": "(DA), la noradrénaline (NA) et l’adrénaline (A), qui sont\ntoutes trois constituées d’un noyau catéchol, soit un noyau\n",
+      "text_sha256": "c7632e792b00bae03361ed267be384cb04d5ee0b92de1c80b519138fea9fa3d6"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.05229568481445,
+        297.27130126953125,
+        204.20849609375
+      ],
+      "block_id": "page-0138-block-0005",
+      "order": 5,
+      "text": "Voie de l’adénosine monophosphate cyclique\nL’AMPc, découverte au début des années 1970, est le premier des\nseconds messagers à avoir été identié. Certains récepteurs (p. ex.,\nle récepteur dopaminergique DA1) peuvent activer la protéine Gs\nqui stimule une enzyme eectrice membranaire, l’adénylate cyclase.\nL’adénylate cyclase est l’enzyme qui catalyse la cyclisation de l’adé-\nnosine-triphosphate (ATP) pour la transformer en AMPc. L’AMPc\nest un second messager qui active la famille des protéines kinases A\ndépendantes de l’AMPc. D’autres récepteurs (p. ex., le récepteur à\ndopamine DA2) activent une autre protéine G, la protéine Gi qui,\nelle, inhibe l’activité de l’adénylate cyclase. L’AMPc est présente\ndans presque toutes les cellules. Elle joue un rôle dans plusieurs\nprocessus homéostatiques régis par les hormones et dans les\nréponses cellulaires de plusieurs neurotransmetteurs dans le SNC.\n",
+      "text_sha256": "a354f09e392da9b8f330763a9b249bca2902b01d42dfa2cdf33138d96717006c"
+    },
+    {
+      "bbox": [
+        54.0,
+        205.4158172607422,
+        297.5753173828125,
+        367.95849609375
+      ],
+      "block_id": "page-0138-block-0006",
+      "order": 6,
+      "text": "Les études précliniques chez le rat ont montré que l’administra-\ntion d’antidépresseurs (tricycliques et inhibiteurs de la monoamine\noxydase) pendant trois à six semaines entraîne une diminution de\nla synthèse d’AMPc en raison de la réduction du nombre de récep-\nteurs β. C’est un mécanisme compensatoire an de maintenir un\néquilibre homéostatique fonctionnel suite à l’augmentation de la\nneurotransmission noradrénergique. La concentration synaptique\nde noradrénaline augmente grâce au médicament (tricyclique et\nIMAO), alors que le nombre de récepteurs β diminue ; le signal\nreste donc le même, pas plus fort, pas plus faible. On n’observe pas\ncet eet avec les inhibiteurs sélectifs du recaptage de la sérotonine\n(ISRS) tels que la uoxétine et le citalopram. Toutefois, il n’est pas\ncertain que cette diminution de la synthèse d’AMPc contribue à\nl’eet thérapeutique des antidépresseurs.\n",
+      "text_sha256": "ef5d53249814ae3bf28fc419e615784af2c41b29b4590fc10a71c6810f7fc94b"
+    },
+    {
+      "bbox": [
+        54.0,
+        369.16583251953125,
+        297.12060546875,
+        403.0585021972656
+      ],
+      "block_id": "page-0138-block-0007",
+      "order": 7,
+      "text": "Les phosphodiestérases des nucléotides cycliques dégradent\nrapidement l’AMPc en 5’AMP ou AMP acyclique. Cela constitue un\nmécanisme essentiel d’inactivation de l’action du second messager.\n",
+      "text_sha256": "5750d821fe643e7256c7919b23fa0a6919584511b54e4bf37f7c212baab22164"
+    },
+    {
+      "bbox": [
+        54.0,
+        408.1523132324219,
+        297.2298583984375,
+        669.8585205078125
+      ],
+      "block_id": "page-0138-block-0008",
+      "order": 8,
+      "text": "Cascades des phospho-inositides\nCertaines protéines G activent une enzyme, la phospholipase C,\nqui scinde un lipide membranaire, le phosphatidyl-inositol-diphos-\nphate (PiP2), en diacylglycérol (DAG) et en inositol- triphosphate\n(IP3). Le DAG et l’IP3 sont à l’origine de deux systèmes de seconds\nmessagers :\n1. Le DAG, qui active la protéine kinase C ;\n2. L’IP3, qui, en se liant à des récepteurs sur la membrane du\nréticulum endoplasmique, permet la libération du calcium\nemmagasiné dans cet organite.\nLe lithium utilisé dans le traitement des troubles\naffectifs bipolaires est un inhibiteur de l’enzyme inositol\nmono phosphatase qui participe à la régénération des phos-\npho-inositides membranaires. On croit que le trouble bipo-\nlaire est associé à un surplus d’ions Ca++ dans le cytoplasme.\nL’effet thérapeutique du lithium vient en partie de sa capacité\nà épuiser les stocks de phospho- inositides, réduisant ainsi le\nCa++ cytoplasmique. Comme son effet thérapeutique ne se\nmanifeste qu’au bout de quelques jours, il est probable que le\nlithium interagisse également avec des protéines régulatrices,\nnotamment certaines protéines G et l’enzyme glycogen syn-\nthase kinase (GSK).\n",
+      "text_sha256": "57c3ed78673a744f8d0cc71aa88d025db601631738a6716c299458f117897679"
+    },
+    {
+      "bbox": [
+        54.0,
+        683.5868530273438,
+        200.78353881835938,
+        699.7294311523438
+      ],
+      "block_id": "page-0138-block-0009",
+      "order": 9,
+      "text": "6.2.3 Neurotransmetteurs\n",
+      "text_sha256": "439fd0c861c93b06ab1f0ebe0049236e7670e9284ebad1b9a6f86874b449e405"
+    },
+    {
+      "bbox": [
+        54.0,
+        703.2658081054688,
+        297.372802734375,
+        725.45849609375
+      ],
+      "block_id": "page-0138-block-0010",
+      "order": 10,
+      "text": "On a déjà identié une centaine de neurotransmetteurs et on en\ndécouvre encore de nouveaux chaque année.\n",
+      "text_sha256": "c3f7c73ba4c3f6f25d4e9bd65c6e87cc41871af9752102e9e66db0b7b94537d8"
+    }
+  ],
+  "coordinates_sha256": "6fe4e3cf22115ff7da3c2a5045beb36c31171b433093a68176061b6315899274",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0138",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 6\nNeurobiologie\n121\nPour être considérée comme un neurotransmetteur, une\nsubstance doit satisfaire aux critères suivants :\n• Le neurotransmetteur est synthétisé dans le neurone.\n• Il est présent dans le neurone et il est sécrété dans la synapse\nen quantité susante pour induire un changement au niveau\nde la membrane postsynaptique, ou de l’organe cible (dans le\ncas du système nerveux périphérique), à la suite de l’arrivée\nd’un potentiel d’action.\n• Il y a dans la synapse un système d’inactivation qui permet de\nmettre n rapidement à l’action du neurotransmetteur. Il s’agit\ngénéralement d’un mécanisme enzymatique qui dégrade le\nneurotransmetteur ou d’une protéine de recaptage qui ramène\nle neurotransmetteur dans le neurone présynaptique où il est\ndégradé ou recyclé.\nAprès sa synthèse, le neurotransmetteur est mis en réserve\ndans des vésicules situées dans le neurone présynaptique ; cette\ninsertion se réalise par l’entremise de protéines spécifiques\nappelées transporteurs vésiculaires. À l’arrivée d’un potentiel\nd’action, le calcium intracellulaire pénètre dans le cytoplasme\nce qui déclenche une série de réactions chimiques entraînant\nla fusion de la vésicule avec la membrane du neurone présy-\nnaptique ; c’est au moment de cette fusion que le neurotrans-\nmetteur est libéré dans la synapse. Une fois dans la synapse,\nle neurotransmetteur se lie alors aux protéines présentes à la\nsurface des membranes présynaptiques et postsynaptiques ;\ncertaines de ces protéines sont des enzymes qui métabolisent le\nneurotransmetteur, d’autres sont des récepteurs qui permettent\nla transmission du signal. À la surface de la membrane du neu-\nrone présynaptique, on trouve une protéine de recaptage qui\nréintroduit le neurotransmetteur dans le cytoplasme. Lorsque\nla concentration synaptique du neurotransmetteur est élevée,\nil peut diffuser hors de la synapse dans le milieu extracellu-\nlaire et se lier à des récepteurs ou à un site de recaptage que\nl’on dit non synaptique ; on parle alors de neurotransmission\nnon synaptique (voir la figure 6.5). Les neuro transmetteurs\npeuvent agir sur des récepteurs constitués de canaux ioniques ;\nils ont alors une action directe et rapide sur le potentiel\nmembranaire. Ils peuvent également agir par l’intermédiaire\nd’un système de messagers intracellulaires ; dans ce cas, le\ndélai d’action est plus lent et l’action est plus prolongée. Si\nl’action du neurotransmetteur sur le système de messagers\nintracellulaires provoque une modulation de la réponse d’un\nautre neurotransmetteur, on nomme alors le premier un\nneuro modulateur. On peut miser sur ces deux mécanismes\nd’action (canaux ioniques et messagers intracellulaires) pour\nstabiliser l’humeur dans le trouble bipolaire : l’acide valproïque\nbloque les canaux ioniques, alors que le lithium agit sur le\nsystème de messagers intracellulaires. Ainsi, on comprend\nmieux comment la combinaison de ces deux médicaments\npeut s’avérer complémentaire dans le traitement d’un trouble\nbipolaire réfractaire.\nLa nature chimique des neurotransmetteurs est très diverse, de\nsorte qu’on les regroupe de la façon suivante (voir la gure 6.8) :\n1. Les amines biogènes sont des molécules dérivées d’un acide\naminé ; elles comprennent :\na) les catécholamines dérivées de la tyrosine : la dopamine\n(DA), la noradrénaline (NA) et l’adrénaline (A), qui sont\ntoutes trois constituées d’un noyau catéchol, soit un noyau\nVoie de l’adénosine monophosphate cyclique\nL’AMPc, découverte au début des années 1970, est le premier des\nseconds messagers à avoir été identié. Certains récepteurs (p. ex.,\nle récepteur dopaminergique DA1) peuvent activer la protéine Gs\nqui stimule une enzyme eectrice membranaire, l’adénylate cyclase.\nL’adénylate cyclase est l’enzyme qui catalyse la cyclisation de l’adé-\nnosine-triphosphate (ATP) pour la transformer en AMPc. L’AMPc\nest un second messager qui active la famille des protéines kinases A\ndépendantes de l’AMPc. D’autres récepteurs (p. ex., le récepteur à\ndopamine DA2) activent une autre protéine G, la protéine Gi qui,\nelle, inhibe l’activité de l’adénylate cyclase. L’AMPc est présente\ndans presque toutes les cellules. Elle joue un rôle dans plusieurs\nprocessus homéostatiques régis par les hormones et dans les\nréponses cellulaires de plusieurs neurotransmetteurs dans le SNC.\nLes études précliniques chez le rat ont montré que l’administra-\ntion d’antidépresseurs (tricycliques et inhibiteurs de la monoamine\noxydase) pendant trois à six semaines entraîne une diminution de\nla synthèse d’AMPc en raison de la réduction du nombre de récep-\nteurs β. C’est un mécanisme compensatoire an de maintenir un\néquilibre homéostatique fonctionnel suite à l’augmentation de la\nneurotransmission noradrénergique. La concentration synaptique\nde noradrénaline augmente grâce au médicament (tricyclique et\nIMAO), alors que le nombre de récepteurs β diminue ; le signal\nreste donc le même, pas plus fort, pas plus faible. On n’observe pas\ncet eet avec les inhibiteurs sélectifs du recaptage de la sérotonine\n(ISRS) tels que la uoxétine et le citalopram. Toutefois, il n’est pas\ncertain que cette diminution de la synthèse d’AMPc contribue à\nl’eet thérapeutique des antidépresseurs.\nLes phosphodiestérases des nucléotides cycliques dégradent\nrapidement l’AMPc en 5’AMP ou AMP acyclique. Cela constitue un\nmécanisme essentiel d’inactivation de l’action du second messager.\nCascades des phospho-inositides\nCertaines protéines G activent une enzyme, la phospholipase C,\nqui scinde un lipide membranaire, le phosphatidyl-inositol-diphos-\nphate (PiP2), en diacylglycérol (DAG) et en inositol- triphosphate\n(IP3). Le DAG et l’IP3 sont à l’origine de deux systèmes de seconds\nmessagers :\n1. Le DAG, qui active la protéine kinase C ;\n2. L’IP3, qui, en se liant à des récepteurs sur la membrane du\nréticulum endoplasmique, permet la libération du calcium\nemmagasiné dans cet organite.\nLe lithium utilisé dans le traitement des troubles\naffectifs bipolaires est un inhibiteur de l’enzyme inositol\nmono phosphatase qui participe à la régénération des phos-\npho-inositides membranaires. On croit que le trouble bipo-\nlaire est associé à un surplus d’ions Ca++ dans le cytoplasme.\nL’effet thérapeutique du lithium vient en partie de sa capacité\nà épuiser les stocks de phospho- inositides, réduisant ainsi le\nCa++ cytoplasmique. Comme son effet thérapeutique ne se\nmanifeste qu’au bout de quelques jours, il est probable que le\nlithium interagisse également avec des protéines régulatrices,\nnotamment certaines protéines G et l’enzyme glycogen syn-\nthase kinase (GSK).\n6.2.3 Neurotransmetteurs\nOn a déjà identié une centaine de neurotransmetteurs et on en\ndécouvre encore de nouveaux chaque année.\n",
+  "raw_text_sha256": "61ce654814356574b1edf57a617f437e9168752cf7d5a8578a654109fee4fec5",
+  "source_page_display": 139,
+  "source_page_index": 138
+}

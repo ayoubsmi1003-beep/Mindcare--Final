@@ -1,0 +1,124 @@
+{
+  "block_sequence_sha256": "5f4d8f449e1858e53da4e51b7d15a0f7473a75d39128fe1d9a0b75eb4b42546f",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        470.3879699707031,
+        758.8693237304688
+      ],
+      "block_id": "page-0161-block-0001",
+      "order": 1,
+      "text": "144\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2\nDéterminants bio-psycho-sociaux\n",
+      "text_sha256": "a787d3033988f1ca7289b645f504a239ac34d5f4d88d932455c533c72fa73ceb"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.0769653320312,
+        109.3584976196289
+      ],
+      "block_id": "page-0161-block-0002",
+      "order": 2,
+      "text": "Il existe d’autres applications de cette technique, mais elles ne\nsont pas vraiment du ressort de la psychiatrie. On y recourt pour\nrechercher des fuites de LCR dans des contextes de céphalées\npossiblement secondaires à de telles fuites, de méningites à répé-\ntitions ou d’une évaluation de la fonctionnalité d’une dérivation\ndu LCR utilisée chez un patient avec une hydrocéphalie.\n",
+      "text_sha256": "24717d7637f18a99b5513e702f04e06432893934c4f322898e4ea8b790297f1f"
+    },
+    {
+      "bbox": [
+        306.0,
+        118.28300476074219,
+        549.3688354492188,
+        401.2585144042969
+      ],
+      "block_id": "page-0161-block-0003",
+      "order": 3,
+      "text": "Études du ot sanguin cérébral\net du métabolisme énergétique\nLes maladies mentales ont des causes organiques souvent mal\ncomprises, mais on peut raisonnablement s’attendre à ce qu’elles\nsoient associées à des anomalies de la transmission synaptique.\nPar ailleurs, les neurones ne fonctionnent pas isolément, mais en\ns’assemblant de façon plus ou moins transitoire en des circuits\nle long desquels circule l’information. On peut donc recourir à\nl’ensemble des techniques décrites précédemment pour évaluer\ndiérents aspects des bases moléculaires, cellulaires et fonc-\ntionnelles de maladies qui aectent plus ou moins directement\nles échanges synaptiques neuronaux. Ainsi, les études du ot\nsanguin cérébral et de la consommation d’énergie (par utilisa-\ntion de glucose) orent la possibilité de connaître la répartition\nanatomique de l’activité synaptique : cette répartition chez un\npatient peut ainsi être comparée à celle de personnes témoins,\nou à la sienne évaluée à un autre moment. En montrant des\nanomalies de ot sanguin ou de métabolisme de diverses régions\ncérébrales dans plusieurs types de maladies psychiatriques et,\nà l’aide de techniques d’analyse statistique particulières, en\nmettant en évidence des relations anormales entre ces régions,\nces études apportent des informations sur l’identité des struc-\ntures aectées et permettent de tester des hypothèses sur la\nphysiopathologie de ces maladies.\n",
+      "text_sha256": "49fabc980f64dbdb48ace4429fed653e56403bcfe1f0e77fd515feab7a716aa3"
+    },
+    {
+      "bbox": [
+        306.0,
+        402.3158264160156,
+        549.523681640625,
+        725.45849609375
+      ],
+      "block_id": "page-0161-block-0004",
+      "order": 4,
+      "text": "On a constaté que les anomalies du ot sanguin ou du méta-\nbolisme de diverses régions cérébrales peuvent être accen-\ntuées par la réalisation de tâches : ainsi, des tests de stimulation\ndes régions frontales (p. ex., Wisconsin Card Sorting Test) chez des\npatients schizophrènes révèlent une diminution du ot sanguin\nde ces régions (hypofrontalité), alors que des personnes témoins\nmontrent au contraire une augmentation. En condition de repos\ncependant, on ne note pas de diérence entre les deux groupes.\nDe telles constatations peuvent aider à mieux comprendre les\nmécanismes physiopathologiques sous-tendant la schizophrénie,\nvoire à donner des indices sur les approches thérapeutiques : en\nprésence d’hypofrontalité, il est improductif de demander à ces\npatients de générer des hypothèses pour résoudre un problème ;\nil est préférable de leur fournir des solutions ou des directives.\nOn peut également considérer comme des études d’activation les\nexamens comparant le ot sanguin cérébral ou la consommation\ncérébrale de glucose d’un patient avant et après un traitement\nde six semaines à la rispéridone : les modications observées\nen post-traitement par rapport à celles obtenues initialement,\nconstituent un élément puissant permettant de conrmer le rôle\nque jouent les régions concernées dans la maladie de ce patient.\nDe plus, les résultats pourraient servir à prédire la réponse au\ntraitement (Lahti & al., 2009). La réalisation d’études d’activation\nexige de maîtriser les techniques de manipulation des images\nreposant sur l’analyse statistique des diérences de ot sanguin\nentre divers états des mêmes patients ou entre divers groupes de\npatients. Ces techniques sont aujourd’hui largement disponibles\nen clinique, et encore plus en recherche.\n",
+      "text_sha256": "e58a399fd5517306fb3292c1eab95496bf74ce1bf58fbdd6d88567c22feba7ca"
+    },
+    {
+      "bbox": [
+        48.0,
+        39.33681869506836,
+        201.29393005371094,
+        55.47939682006836
+      ],
+      "block_id": "page-0161-block-0005",
+      "order": 5,
+      "text": "7.3.1 Applications cliniques\n",
+      "text_sha256": "ef8de699e73480e133559bc0da2768cd564f8f97a338cff7a10f3a4c53076fef"
+    },
+    {
+      "bbox": [
+        48.0,
+        58.815818786621094,
+        291.4250183105469,
+        184.30850219726562
+      ],
+      "block_id": "page-0161-block-0006",
+      "order": 6,
+      "text": "Il n’y a présentement aucune application clinique de routine de la\nmédecine nucléaire conrmée en psychiatrie pour les pathologies,\nà l’exception de celles associées aux démences. Cela ne signie\npas pour autant que ces maladies ne bénécient pas de l’apport\ndes études en imagerie fonctionnelle et moléculaire nucléaire. Les\nprogrès des études sur la neurotransmission par TEP et par TEMP\n(Heiss & Herholz, 2006) ont permis de mieux comprendre de nom-\nbreuses maladies psychiatriques ou, au moins, de mieux orienter\nla recherche. Mais les études fonctionnelles de ot sanguin ou de\nmétabolisme ont depuis longtemps joué un rôle également impor-\ntant en clinique, et elles continuent de le faire (Carota & al., 2008).\n",
+      "text_sha256": "5ae4d52d8adafe18323403844e2666714518335480a74211d195b968318e0ba6"
+    },
+    {
+      "bbox": [
+        48.0,
+        193.18301391601562,
+        291.4944763183594,
+        566.3085327148438
+      ],
+      "block_id": "page-0161-block-0007",
+      "order": 7,
+      "text": "Scinticisternographie et hydrocéphalie\nnormotensive\nCette technique permet d’évaluer, en mode planaire en deux\ndimensions et/ou par la TEMP, la circulation du liquide cépha-\nlorachidien (LCR). Le LCR est produit par les plexus choroïdes\nsitués dans les ventricules cérébraux (voir la gure 16 dans les\ngures supplémentaires). Il circule dans les quatre ventricules\ncérébraux et dans les espaces sous-arachnoïdiens2; il baigne\nle cerveau et la moelle épinière. Il est réabsorbé par les sinus\nveineux cérébraux au niveau des villosités arachnoïdiennes. Une\ndilatation des ventricules contenant le LCR peut résulter d’une\nhypersécrétion de LCR, d’un défaut de réabsorption ou d’une\nobstruction mécanique des voies de circulation. La scinticis-\nternographie est réalisée en introduisant dans les espaces sous-\narachnoïdiens par ponction lombaire (ou, plus rarement, dans\nle réservoir d’une dérivation du LCR installée chirurgicalement)\nun radiopharmaceutique biologiquement inerte qui suit passive-\nment l’écoulement du LCR vers ses sites de réabsorption (surtout\ndans le sinus longitudinal supérieur3) (voir les figures sup-\nplémentaires). Ce test est souvent utilisé pour évaluer des\nmalades soupçonnés d’être porteurs d’une hydrocéphalie nor-\nmotensive. Cette anomalie se manifeste typiquement par une\naltération progressive des fonctions cognitives (ralentissement\npsychomoteur, troubles attentionnels, troubles de mémoire,\nsyndrome frontal) et s’accompagne d’incontinence urinaire, de\ntroubles de l’équilibre et de la marche. Le tableau clinique peut\ncependant ne pas être typique, et le malade peut éventuellement\nêtre envoyé en psychiatrie. L’observation caractéristique d’un\nreux intraventriculaire persistant de la radioactivité à la scin-\nticisternographie est un élément utile pour poser le diagnostic\nd’hydrocéphalie normotensive (communicante) (voir les gures 33\net 34 dans les gures supplémentaires).\n",
+      "text_sha256": "41b6930ba1e2753763f821e829cce9fe9f1ecca0596c403e4c64b3b9f7de82d2"
+    },
+    {
+      "bbox": [
+        48.0,
+        567.3158569335938,
+        291.17547607421875,
+        623.8085327148438
+      ],
+      "block_id": "page-0161-block-0008",
+      "order": 8,
+      "text": "Cependant, la place exacte de la scinticisternographie par\nrapport à d’autres approches reste mal dénie, dans un contexte\noù le diagnostic de cette aection est de toute façon dicile,\nalors que de nouvelles approches pour la mesure du ot sanguin\ncérébral par techniques radio-isotopiques semblent prometteuses.\n",
+      "text_sha256": "3bb3cb446404937f215bddbbf8ca435312beaba1eebf7371554cbd80a330b6ad"
+    },
+    {
+      "bbox": [
+        48.0,
+        635.388671875,
+        279.1261901855469,
+        725.3291015625
+      ],
+      "block_id": "page-0161-block-0009",
+      "order": 9,
+      "text": "2. Une dilatation de l’espace sous-arachnoïdien est qualiée\nde « citerne ». L’espace sous-arachnoïdien est délimité par la\npie-mère et l’arachnoïde. Il entoure tout le système nerveux\ncentral.\n3. Les sinus veineux sont un dédoublement de la dure-mère ;\nils recueillent le sang veineux de la surface cérébrale avant\nde se déverser dans les veines jugulaires. Le LCR passe par\nles granulations arachnoïdiennes de Pacchioni pour arriver\ndans ces sinus veineux.\n",
+      "text_sha256": "ede7c380e4d9a3c191be2dd6a062787b90738039fac6e1a04288c09eb744f37d"
+    }
+  ],
+  "coordinates_sha256": "937e6194ec946f9e839aa90569f2713b3ef1aee63f2b02dde49513bb86a4a469",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0161",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "144\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2\nDéterminants bio-psycho-sociaux\nIl existe d’autres applications de cette technique, mais elles ne\nsont pas vraiment du ressort de la psychiatrie. On y recourt pour\nrechercher des fuites de LCR dans des contextes de céphalées\npossiblement secondaires à de telles fuites, de méningites à répé-\ntitions ou d’une évaluation de la fonctionnalité d’une dérivation\ndu LCR utilisée chez un patient avec une hydrocéphalie.\nÉtudes du ot sanguin cérébral\net du métabolisme énergétique\nLes maladies mentales ont des causes organiques souvent mal\ncomprises, mais on peut raisonnablement s’attendre à ce qu’elles\nsoient associées à des anomalies de la transmission synaptique.\nPar ailleurs, les neurones ne fonctionnent pas isolément, mais en\ns’assemblant de façon plus ou moins transitoire en des circuits\nle long desquels circule l’information. On peut donc recourir à\nl’ensemble des techniques décrites précédemment pour évaluer\ndiérents aspects des bases moléculaires, cellulaires et fonc-\ntionnelles de maladies qui aectent plus ou moins directement\nles échanges synaptiques neuronaux. Ainsi, les études du ot\nsanguin cérébral et de la consommation d’énergie (par utilisa-\ntion de glucose) orent la possibilité de connaître la répartition\nanatomique de l’activité synaptique : cette répartition chez un\npatient peut ainsi être comparée à celle de personnes témoins,\nou à la sienne évaluée à un autre moment. En montrant des\nanomalies de ot sanguin ou de métabolisme de diverses régions\ncérébrales dans plusieurs types de maladies psychiatriques et,\nà l’aide de techniques d’analyse statistique particulières, en\nmettant en évidence des relations anormales entre ces régions,\nces études apportent des informations sur l’identité des struc-\ntures aectées et permettent de tester des hypothèses sur la\nphysiopathologie de ces maladies.\nOn a constaté que les anomalies du ot sanguin ou du méta-\nbolisme de diverses régions cérébrales peuvent être accen-\ntuées par la réalisation de tâches : ainsi, des tests de stimulation\ndes régions frontales (p. ex., Wisconsin Card Sorting Test) chez des\npatients schizophrènes révèlent une diminution du ot sanguin\nde ces régions (hypofrontalité), alors que des personnes témoins\nmontrent au contraire une augmentation. En condition de repos\ncependant, on ne note pas de diérence entre les deux groupes.\nDe telles constatations peuvent aider à mieux comprendre les\nmécanismes physiopathologiques sous-tendant la schizophrénie,\nvoire à donner des indices sur les approches thérapeutiques : en\nprésence d’hypofrontalité, il est improductif de demander à ces\npatients de générer des hypothèses pour résoudre un problème ;\nil est préférable de leur fournir des solutions ou des directives.\nOn peut également considérer comme des études d’activation les\nexamens comparant le ot sanguin cérébral ou la consommation\ncérébrale de glucose d’un patient avant et après un traitement\nde six semaines à la rispéridone : les modications observées\nen post-traitement par rapport à celles obtenues initialement,\nconstituent un élément puissant permettant de conrmer le rôle\nque jouent les régions concernées dans la maladie de ce patient.\nDe plus, les résultats pourraient servir à prédire la réponse au\ntraitement (Lahti & al., 2009). La réalisation d’études d’activation\nexige de maîtriser les techniques de manipulation des images\nreposant sur l’analyse statistique des diérences de ot sanguin\nentre divers états des mêmes patients ou entre divers groupes de\npatients. Ces techniques sont aujourd’hui largement disponibles\nen clinique, et encore plus en recherche.\n7.3.1 Applications cliniques\nIl n’y a présentement aucune application clinique de routine de la\nmédecine nucléaire conrmée en psychiatrie pour les pathologies,\nà l’exception de celles associées aux démences. Cela ne signie\npas pour autant que ces maladies ne bénécient pas de l’apport\ndes études en imagerie fonctionnelle et moléculaire nucléaire. Les\nprogrès des études sur la neurotransmission par TEP et par TEMP\n(Heiss & Herholz, 2006) ont permis de mieux comprendre de nom-\nbreuses maladies psychiatriques ou, au moins, de mieux orienter\nla recherche. Mais les études fonctionnelles de ot sanguin ou de\nmétabolisme ont depuis longtemps joué un rôle également impor-\ntant en clinique, et elles continuent de le faire (Carota & al., 2008).\nScinticisternographie et hydrocéphalie\nnormotensive\nCette technique permet d’évaluer, en mode planaire en deux\ndimensions et/ou par la TEMP, la circulation du liquide cépha-\nlorachidien (LCR). Le LCR est produit par les plexus choroïdes\nsitués dans les ventricules cérébraux (voir la gure 16 dans les\ngures supplémentaires). Il circule dans les quatre ventricules\ncérébraux et dans les espaces sous-arachnoïdiens2; il baigne\nle cerveau et la moelle épinière. Il est réabsorbé par les sinus\nveineux cérébraux au niveau des villosités arachnoïdiennes. Une\ndilatation des ventricules contenant le LCR peut résulter d’une\nhypersécrétion de LCR, d’un défaut de réabsorption ou d’une\nobstruction mécanique des voies de circulation. La scinticis-\nternographie est réalisée en introduisant dans les espaces sous-\narachnoïdiens par ponction lombaire (ou, plus rarement, dans\nle réservoir d’une dérivation du LCR installée chirurgicalement)\nun radiopharmaceutique biologiquement inerte qui suit passive-\nment l’écoulement du LCR vers ses sites de réabsorption (surtout\ndans le sinus longitudinal supérieur3) (voir les figures sup-\nplémentaires). Ce test est souvent utilisé pour évaluer des\nmalades soupçonnés d’être porteurs d’une hydrocéphalie nor-\nmotensive. Cette anomalie se manifeste typiquement par une\naltération progressive des fonctions cognitives (ralentissement\npsychomoteur, troubles attentionnels, troubles de mémoire,\nsyndrome frontal) et s’accompagne d’incontinence urinaire, de\ntroubles de l’équilibre et de la marche. Le tableau clinique peut\ncependant ne pas être typique, et le malade peut éventuellement\nêtre envoyé en psychiatrie. L’observation caractéristique d’un\nreux intraventriculaire persistant de la radioactivité à la scin-\nticisternographie est un élément utile pour poser le diagnostic\nd’hydrocéphalie normotensive (communicante) (voir les gures 33\net 34 dans les gures supplémentaires).\nCependant, la place exacte de la scinticisternographie par\nrapport à d’autres approches reste mal dénie, dans un contexte\noù le diagnostic de cette aection est de toute façon dicile,\nalors que de nouvelles approches pour la mesure du ot sanguin\ncérébral par techniques radio-isotopiques semblent prometteuses.\n2. Une dilatation de l’espace sous-arachnoïdien est qualiée\nde « citerne ». L’espace sous-arachnoïdien est délimité par la\npie-mère et l’arachnoïde. Il entoure tout le système nerveux\ncentral.\n3. Les sinus veineux sont un dédoublement de la dure-mère ;\nils recueillent le sang veineux de la surface cérébrale avant\nde se déverser dans les veines jugulaires. Le LCR passe par\nles granulations arachnoïdiennes de Pacchioni pour arriver\ndans ces sinus veineux.\n",
+  "raw_text_sha256": "1b90ca92e5eda63f65ebd3b9f3e2285b23a8331396f6e6546787113a38f12b5e",
+  "source_page_display": 162,
+  "source_page_index": 161
+}

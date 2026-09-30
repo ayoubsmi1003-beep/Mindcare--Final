@@ -1,0 +1,196 @@
+{
+  "block_sequence_sha256": "b262001b0c861ae3335a694fe8916db9a21473e1cc7c693c3bfb71ddcc9bc130",
+  "blocks": [
+    {
+      "bbox": [
+        422.8000183105469,
+        747.3754272460938,
+        554.97998046875,
+        758.6693725585938
+      ],
+      "block_id": "page-1154-block-0001",
+      "order": 1,
+      "text": "Figures supplémentaires\nF17\n",
+      "text_sha256": "b58d38bc4ad65c1d558778eac59075fb22085a928a396c29629582fa6fd84240"
+    },
+    {
+      "bbox": [
+        56.400001525878906,
+        41.002296447753906,
+        274.6490783691406,
+        53.320068359375
+      ],
+      "block_id": "page-1154-block-0002",
+      "order": 2,
+      "text": "FIGURE 28 Réseau et connections de voies indirectes\n",
+      "text_sha256": "58270d88d3ec3988112cd9095b62e2b7cd6a35346cfdc7b7497d9a2c7d51cdd2"
+    },
+    {
+      "bbox": [
+        54.25,
+        305.390625,
+        293.2727355957031,
+        402.625
+      ],
+      "block_id": "page-1154-block-0003",
+      "order": 3,
+      "text": "Schéma illustrant les réseaux et connexions des voies indirectes et directes des\nnoyaux gris centraux, aussi désignées sous l’appellation de boucles squelettomotrices,\ncruciales dans le contrôle des mouvements.\nGPe : globus pallidus externe\nGPi : globus pallidus interne\nSNr : substance noire reticulata\nNST : noyau sous-thalamique\nLes lignes rouges désignent les connexions inhibitrices, alors que les lignes vertes\ndésignent les connexions excitatrices.\n",
+      "text_sha256": "fd1b9d5fe2f30c5e70dda66c694d6b2ba6e92d3e73d2b9249e5ffd16f7c523c4"
+    },
+    {
+      "bbox": [
+        54.25,
+        406.890625,
+        290.0340576171875,
+        433.625
+      ],
+      "block_id": "page-1154-block-0004",
+      "order": 4,
+      "text": "Source : Adapté de Sauvé, G. (2015). Comparaison des potentiels évoqués cognitifs\nde patients présentant des tics chroniques simples ou complexes. Mémoire de\nmaîtrise. Faculté de médecine. Université de Montréal, p. 14.\n",
+      "text_sha256": "41545248abf2223c9ed13dab8606e3314e0af4ec1117d43795195f86913d52c9"
+    },
+    {
+      "bbox": [
+        178.8000030517578,
+        336.1906433105469,
+        285.06103515625,
+        368.9250183105469
+      ],
+      "block_id": "page-1154-block-0005",
+      "order": 5,
+      "text": "AMS : aire motrice supplémentaire\nCMP : cortex moteur primaire\nCSP : cortex somatosensoriel primaire\n",
+      "text_sha256": "e5b2a524075a9386597edcfa5c850281d74e3e8ee2fb08478794b268c715446c"
+    },
+    {
+      "bbox": [
+        56.25,
+        502.5023193359375,
+        280.62701416015625,
+        514.820068359375
+      ],
+      "block_id": "page-1154-block-0006",
+      "order": 6,
+      "text": "FIGURE 30 Structures intervenant dans la récupération\n",
+      "text_sha256": "add41a9a73423b9c0ec340adcae37223f671b177af3ef7c40329ed1cdab300f0"
+    },
+    {
+      "bbox": [
+        100.45000457763672,
+        514.352294921875,
+        207.60601806640625,
+        526.320068359375
+      ],
+      "block_id": "page-1154-block-0007",
+      "order": 7,
+      "text": "de la mémoire épisodique\n",
+      "text_sha256": "876b6faa3f17efc8f66e14ad1b2ccac623cf3a1146076c9a88b8f1191892ed89"
+    },
+    {
+      "bbox": [
+        54.25,
+        705.140625,
+        271.1235656738281,
+        714.0088500976562
+      ],
+      "block_id": "page-1154-block-0008",
+      "order": 8,
+      "text": "Source : Reproduit avec la permission de Neuromédia (www.neuromedia.ca).\n",
+      "text_sha256": "6d2e6fb4eefd25b4d50b8015c63cdfb8c45bcc1b22002d4948760c57242e8198"
+    },
+    {
+      "bbox": [
+        314.3500061035156,
+        398.0022888183594,
+        509.8707580566406,
+        410.320068359375
+      ],
+      "block_id": "page-1154-block-0009",
+      "order": 9,
+      "text": "FIGURE 31 Raisonnement abstrait et activations\n",
+      "text_sha256": "c1d57a1c775288fdbe317605cd8641ae7703eee42c3368059ec6b48207e55839"
+    },
+    {
+      "bbox": [
+        358.45001220703125,
+        409.852294921875,
+        533.4415283203125,
+        421.820068359375
+      ],
+      "block_id": "page-1154-block-0010",
+      "order": 10,
+      "text": "cérébrales chez les personnes alcooliques\n",
+      "text_sha256": "2786746468558d61f46bec6c32aef43924ba131f4a6d61adc758af20ad7e7414"
+    },
+    {
+      "bbox": [
+        312.25,
+        696.140625,
+        533.9223022460938,
+        713.875
+      ],
+      "block_id": "page-1154-block-0011",
+      "order": 11,
+      "text": "Source : Bagga, D. & al. (2014). « Assessment of abstract reasoning abilities in\nalcohol-dependent subjects : an fMRI study », Neuroradiology, 56(1), p. 69-77.\n",
+      "text_sha256": "2100673cf05ae7118c0e779ba96685fba458e920e072a5b0b62208ac620dadb6"
+    },
+    {
+      "bbox": [
+        314.3999938964844,
+        41.002296447753906,
+        510.5771484375,
+        53.320068359375
+      ],
+      "block_id": "page-1154-block-0012",
+      "order": 12,
+      "text": "FIGURE 29 Structures cérébrales affectées chez\n",
+      "text_sha256": "8f1c63b580649819d03b9563454923c9f1c9ff2dd130418a93fd07399c413d72"
+    },
+    {
+      "bbox": [
+        358.70001220703125,
+        52.852294921875,
+        508.7593078613281,
+        76.320068359375
+      ],
+      "block_id": "page-1154-block-0013",
+      "order": 13,
+      "text": "les personnes souffrant d’un trouble\nde stress post-traumatique\n",
+      "text_sha256": "0ad279d1ba0a141b11a51cb250b83e9daf8e5e988a245fbc1b0122b84efd9f7f"
+    },
+    {
+      "bbox": [
+        312.25,
+        261.2406311035156,
+        468.5953063964844,
+        269.9750061035156
+      ],
+      "block_id": "page-1154-block-0014",
+      "order": 14,
+      "text": "La èche noire montre les connexions avec l’amygdale.\n",
+      "text_sha256": "9c19d65d479eb0fa8cbd61ddbdc783efa36eecb3fd5d1f394f4ccd1383de99c1"
+    },
+    {
+      "bbox": [
+        312.25,
+        274.2406311035156,
+        546.8935546875,
+        318.9750061035156
+      ],
+      "block_id": "page-1154-block-0015",
+      "order": 15,
+      "text": "Source : Dégeilh & al. (2013). « Memory impairment in posttraumatic stress disorder :\nbehavioral and neuroimaging ndings », Revue de Neuropsychologie, 5(1), p. 45-55.\n10.1684/nrp.2013.0252. Laboratoire de Francis Eustache, INSERM U1077, http://\nwww.u1077.caen.inserm.fr/memory-and-amnesia/memory-in-post-traumatic-stress-\ndisorder-ptsd/?lang=en.\n",
+      "text_sha256": "87b604360486ab7e65e940d173f155ddee2a26f18e53a001683c9e867295b18e"
+    }
+  ],
+  "coordinates_sha256": "af70f88578886bd5705891c6dbbb615bb2ad237e60d4ef470dfb978cb80579f0",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1154",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Figures supplémentaires\nF17\nFIGURE 28 Réseau et connections de voies indirectes\nSchéma illustrant les réseaux et connexions des voies indirectes et directes des\nnoyaux gris centraux, aussi désignées sous l’appellation de boucles squelettomotrices,\ncruciales dans le contrôle des mouvements.\nGPe : globus pallidus externe\nGPi : globus pallidus interne\nSNr : substance noire reticulata\nNST : noyau sous-thalamique\nLes lignes rouges désignent les connexions inhibitrices, alors que les lignes vertes\ndésignent les connexions excitatrices.\nSource : Adapté de Sauvé, G. (2015). Comparaison des potentiels évoqués cognitifs\nde patients présentant des tics chroniques simples ou complexes. Mémoire de\nmaîtrise. Faculté de médecine. Université de Montréal, p. 14.\nAMS : aire motrice supplémentaire\nCMP : cortex moteur primaire\nCSP : cortex somatosensoriel primaire\nFIGURE 30 Structures intervenant dans la récupération\nde la mémoire épisodique\nSource : Reproduit avec la permission de Neuromédia (www.neuromedia.ca).\nFIGURE 31 Raisonnement abstrait et activations\ncérébrales chez les personnes alcooliques\nSource : Bagga, D. & al. (2014). « Assessment of abstract reasoning abilities in\nalcohol-dependent subjects : an fMRI study », Neuroradiology, 56(1), p. 69-77.\nFIGURE 29 Structures cérébrales affectées chez\nles personnes souffrant d’un trouble\nde stress post-traumatique\nLa èche noire montre les connexions avec l’amygdale.\nSource : Dégeilh & al. (2013). « Memory impairment in posttraumatic stress disorder :\nbehavioral and neuroimaging ndings », Revue de Neuropsychologie, 5(1), p. 45-55.\n10.1684/nrp.2013.0252. Laboratoire de Francis Eustache, INSERM U1077, http://\nwww.u1077.caen.inserm.fr/memory-and-amnesia/memory-in-post-traumatic-stress-\ndisorder-ptsd/?lang=en.\n",
+  "raw_text_sha256": "201bd8c527398cf21205dd450b291eb27401d785139606918c85a5d719e34151",
+  "source_page_display": 1155,
+  "source_page_index": 1154
+}

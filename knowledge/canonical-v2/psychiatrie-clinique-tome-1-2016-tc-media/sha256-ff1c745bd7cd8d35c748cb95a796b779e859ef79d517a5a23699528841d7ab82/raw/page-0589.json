@@ -1,0 +1,292 @@
+{
+  "block_sequence_sha256": "b193b4ac3034fd19e8e0bfa0a9a727527822641500f1e3baa09d2713d3c777c2",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0589-block-0001",
+      "order": 1,
+      "text": "572\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "dcc235a88999fd9556e7606c606e0e94c7a0169e8fdcc7de62809e7cecb6559d"
+    },
+    {
+      "bbox": [
+        50.35000228881836,
+        503.55230712890625,
+        254.98776245117188,
+        515.8700561523438
+      ],
+      "block_id": "page-0589-block-0002",
+      "order": 2,
+      "text": "TABLEAU 26.10 Syndromes de douleur cancéreuse\n",
+      "text_sha256": "b2be3119e2520b771272bdc64081f4d46a1e69eb3f796d671722919dc06f354e"
+    },
+    {
+      "bbox": [
+        111.3499984741211,
+        515.4022827148438,
+        171.0447540283203,
+        527.3700561523438
+      ],
+      "block_id": "page-0589-block-0003",
+      "order": 3,
+      "text": "neuropathique\n",
+      "text_sha256": "e3767257ad94a5b171745c3a2f4f14dc49fb5cdf3be629b65d4ad1e2d40e6b19"
+    },
+    {
+      "bbox": [
+        83.9000015258789,
+        532.2741088867188,
+        231.79400634765625,
+        542.8502807617188
+      ],
+      "block_id": "page-0589-block-0004",
+      "order": 4,
+      "text": "Type\nAffections\n",
+      "text_sha256": "9f34291019d3ba7b0f0ccc26c6ee71f5cef3529dbf5267b688b73bf4ba221a05"
+    },
+    {
+      "bbox": [
+        52.25,
+        548.1728515625,
+        123.63800048828125,
+        568.1923828125
+      ],
+      "block_id": "page-0589-block-0005",
+      "order": 5,
+      "text": "Douleur directement\ninduite par le cancer\n",
+      "text_sha256": "49b7d5902537b7152353f858496cab149411f1969527809181b9f7192982ad9c"
+    },
+    {
+      "bbox": [
+        140.25,
+        548.251953125,
+        286.1470031738281,
+        619.078125
+      ],
+      "block_id": "page-0589-block-0006",
+      "order": 6,
+      "text": "Syndromes neurologiques paranéoplasiques\nInltrations/compressions tumorales ou\nmétastatiques du SN périphérique (nerfs,\nplexus)\nInltrations/compressions tumorales ou\nmétastatiques du SN central (p. ex., compres-\nsion de la moelle épinière)\n",
+      "text_sha256": "508661719f1bf3f402ef8bd5f1132b6c2c0edeeda20203e21478153ab0d7d20c"
+    },
+    {
+      "bbox": [
+        52.25,
+        627.5728759765625,
+        130.81100463867188,
+        657.5924072265625
+      ],
+      "block_id": "page-0589-block-0007",
+      "order": 7,
+      "text": "Douleur induite par les\ntraitements contre le\ncancer\n",
+      "text_sha256": "d42f27c37f65bb7af5480e9c975e03a969841b6994e870d3578bacb4fe519aa4"
+    },
+    {
+      "bbox": [
+        140.25,
+        627.6519775390625,
+        275.1600646972656,
+        678.4781494140625
+      ],
+      "block_id": "page-0589-block-0008",
+      "order": 8,
+      "text": "Interventions chirurgicales (p. ex., douleur\npostmastectomie)\nRadiothérapie (p. ex., plexopathies)\nNeuropathies périphériques induites par la\nchimiothérapie\n",
+      "text_sha256": "cc8db7b26a2022791921e12f50cdc489c9b9ad70f5b69a260aa99f6d0cad835f"
+    },
+    {
+      "bbox": [
+        52.25,
+        687.0228881835938,
+        122.4050064086914,
+        707.0424194335938
+      ],
+      "block_id": "page-0589-block-0009",
+      "order": 9,
+      "text": "Douleur associée au\ncancer\n",
+      "text_sha256": "b6cc983b7c0d568925f7993e9b88ac2568af5562da41de1944b30a75a09f11fa"
+    },
+    {
+      "bbox": [
+        140.25,
+        687.1019897460938,
+        219.2880096435547,
+        696.9281616210938
+      ],
+      "block_id": "page-0589-block-0010",
+      "order": 10,
+      "text": "Névralgie postherpétique\n",
+      "text_sha256": "14eef7f9ee23152558fbb41dc3f6cd78a1b0364c2fff9fb82236bc3a914766c0"
+    },
+    {
+      "bbox": [
+        48.25,
+        715.6906127929688,
+        167.57823181152344,
+        724.558837890625
+      ],
+      "block_id": "page-0589-block-0011",
+      "order": 11,
+      "text": "Source : Naleschinski & al. (2012), p. 1-5.\n",
+      "text_sha256": "45a6575a14473d63c40a5c3d157a1cb7aa617753adef1ea8bdb987ff95ec075f"
+    },
+    {
+      "bbox": [
+        48.0,
+        39.33681869506836,
+        200.3984832763672,
+        55.47939682006836
+      ],
+      "block_id": "page-0589-block-0012",
+      "order": 12,
+      "text": "26.9.4 Douleur cancéreuse\n",
+      "text_sha256": "a2b143d2c0fcdbde10d75a8defcc53040b8b073d857f484729483853e887de2d"
+    },
+    {
+      "bbox": [
+        48.0,
+        58.815818786621094,
+        290.9306945800781,
+        80.8084945678711
+      ],
+      "block_id": "page-0589-block-0013",
+      "order": 13,
+      "text": "Plusieurs personnes atteintes de cancer souriront de douleurs\nneuropathiques au cours de cette maladie grave et parfois évolutive.\n",
+      "text_sha256": "b0453167742fe54260ce202898db627f707ff0f43277c828c0a891ef2cf3d8a5"
+    },
+    {
+      "bbox": [
+        48.0,
+        89.6830062866211,
+        291.0679931640625,
+        215.82608032226562
+      ],
+      "block_id": "page-0589-block-0014",
+      "order": 14,
+      "text": "Épidémiologie\nLes patients atteints de cancer peuvent sourir de douleur à cause\ndu cancer lui-même, ou à la suite des traitements chirurgicaux,\ndes chimiothérapies ou des radiothérapies (voir le tableau 26.10).\nSelon Van den Beuken-Van Everdingen et ses collaborateurs\n(2007), on observe la douleur cancéreuse chez :\n• 33 % des patients ayant terminé leurs traitements ;\n• 59 % des patients en phase active de leur traitement ;\n• 64 % des patients aectés d’un cancer métastatique ou terminal ;\n• 53 % à tous les stades de cancer.\n",
+      "text_sha256": "205a77e1692d471a0f9411edeb9fc50b5e9a18d1faaa87361e06cacc5727e794"
+    },
+    {
+      "bbox": [
+        48.0,
+        226.18301391601562,
+        243.59254455566406,
+        251.80850219726562
+      ],
+      "block_id": "page-0589-block-0015",
+      "order": 15,
+      "text": "Description clinique\nIl existe plusieurs formes de douleurs cancéreuses.\n",
+      "text_sha256": "89e6041ce79fbe841aa611c97a476727e92035fa0442d82069b6d68b5c92b972"
+    },
+    {
+      "bbox": [
+        48.0,
+        256.7023010253906,
+        291.3533630371094,
+        435.8085021972656
+      ],
+      "block_id": "page-0589-block-0016",
+      "order": 16,
+      "text": "Syndrome paranéoplasique\nCertains cancers annoncent leur survenue par des symptômes\nprécurseurs, nommés « syndrome paranéoplasique » et dont la\nmanifestation la plus fréquente est la neuropathie périphérique.\nElle peut prendre la forme :\n• d’une neuropathie des mécanorécepteurs (grosses bres A-β\nde faible intensité), qui se caractérise par de la dysesthésie, des\nengourdissements, une ataxie sensorielle et parfois de la douleur ;\n• d’une neuropathie des nocicepteurs (petites bres C et A-δ,\nsensibles à la douleur intense), qui s’accompagne d’une hy-\nperalgésie mécanique et d’allodynie.\nLe diagnostic précoce de ces anomalies neurologiques conduit\nà une détection plus rapide de la néoplasie qui l’accompagne.\nUn traitement ciblant le cancer amène souvent la rémission du\nsyndrome paranéoplasique.\n",
+      "text_sha256": "4cf88e277bc9b62e10b056f16a1b8bbeb1ee7d2336e3e15f3f62b8d0cabeaa7e"
+    },
+    {
+      "bbox": [
+        48.0,
+        440.7023010253906,
+        290.9579162597656,
+        478.3260803222656
+      ],
+      "block_id": "page-0589-block-0017",
+      "order": 17,
+      "text": "Douleurs nociceptives\nLes douleurs nociceptives sont d’origine :\n• somatique (peau, ligaments, articulations, muscles, tendons) ;\n",
+      "text_sha256": "412728063276522c639887eabc808d88f8ec6e9db0443c3da439618ffe9c96b1"
+    },
+    {
+      "bbox": [
+        306.0,
+        39.0244140625,
+        549.39892578125,
+        191.45849609375
+      ],
+      "block_id": "page-0589-block-0018",
+      "order": 18,
+      "text": "• viscérale (organes creux, mésentère, parenchymes – p. ex.,\npancréas) à la suite de l’inltration tissulaire par les cellules\nnéoplasiques.\nCes douleurs sont typiquement bien circonscrites et locali-\nsées. Des formes dites « inltratives » de douleur neuropathique\ncancéreuse se développent lorsque les nerfs périphériques sont\ncomprimés par une masse cancéreuse ou lorsque le SNC est\nenvahi par des cellules néoplasiques ou métastatiques. Par\nexemple, la compression médullaire se produit chez 5 à 10 % des\npatients en oncologie. Elle provient d’une métastase comprimant\nune vertèbre ou de l’extension directe de la tumeur dans l’espace\népidural. Une lombalgie diuse est habituellement le symptôme\nde présentation d’une compression médullaire.\n",
+      "text_sha256": "4d9d4069d251cc156b634878ab0fdb7f8ee6e0ebe27ede28d7bbea27dca08abe"
+    },
+    {
+      "bbox": [
+        306.0,
+        192.5158233642578,
+        549.4918212890625,
+        379.3584899902344
+      ],
+      "block_id": "page-0589-block-0019",
+      "order": 19,
+      "text": "La névralgie postherpétique est fréquente si on compare son\nincidence à la population générale, à cause de l’immunosuppression\nchez les patients cancéreux. De 25 à 50 % des patients cancéreux\nsourent de névralgie postherpétique à la suite d’une infection\naiguë (voir le tableau 26.10).\nDouleurs neuropathiques\nDes douleurs neuropathiques s’ajoutent lorsque le système nerveux\npériphérique ou central est endommagé soit par une inltration\ndirecte des nerfs, soit par des toxines associées aux cellules néopla-\nsiques, à la chimiothérapie ou par une résection chirurgicale. Une\ndouleur neuropathique peut être une complication de l’intervention\nthérapeutique. La douleur du membre fantôme est un exemple\nde douleur postchirurgicale. Les chirurgies entraînent la section\ndes nerfs périphériques cutanés et sous-cutanés. De 25 à 50 % des\nthoracotomies et de 25 à 60 % des mastectomies provoquent des\ndouleurs neuropathiques localisées au site d’incision chirurgicale.\n",
+      "text_sha256": "f1ea3a19f4eb6f4d4bf253faa383d40403a1ae05b298b88d337f4e27ee6ef3d5"
+    },
+    {
+      "bbox": [
+        306.0,
+        380.3658142089844,
+        549.3568725585938,
+        609.2584838867188
+      ],
+      "block_id": "page-0589-block-0020",
+      "order": 20,
+      "text": "La radiothérapie, à cause de la cicatrisation breuse qu’elle\nentraîne, peut être à l’origine d’une douleur neuropathique qui\napparaît parfois plusieurs mois, voire plusieurs années après la n\ndu traitement. La neuropathie induite par la chimiothérapie est la\nforme la plus fréquente de complication neurologique du traite-\nment contre le cancer. Son incidence est variable, les estimations\nallant de 10 à 100 % et sa prévalence dépend de facteurs tels que :\n• le type de chimiothérapie et son intensité ;\n• l’administration conjointe d’autres médicaments neurotoxiques ;\n• la dose cumulative ;\n• la durée du traitement ;\n• l’âge ;\n• l’existence d’une neuropathie liée à une maladie prémorbide\ntelle que le diabète.\nCertains patients sont incapables d’achever leur chimiothérapie\nà cause de l’intensité de la douleur induite. L’atteinte touche autant\nles mécanorécepteurs (grosses bres A-β) de faible intensité que les\npetites bres C et A-δ de conduction nociceptive, sensibles à la\ndouleur, les symptômes étant alors mixtes.\n",
+      "text_sha256": "427bcc7887af30ae228496cfe1edc4b3b354e8f7791989fbfdb3af15f77e061c"
+    },
+    {
+      "bbox": [
+        306.0,
+        615.1830444335938,
+        548.9772338867188,
+        663.8585205078125
+      ],
+      "block_id": "page-0589-block-0021",
+      "order": 21,
+      "text": "Traitements\nLes traitements préconisés pour la douleur cancéreuse sont\nconformes aux lignes directrices de la Société canadienne de la\ndouleur (voir la section 26.10).\n",
+      "text_sha256": "f03c833a15f046e8f6c1f48fb65987727cc037d4aa91f7b0d2abbf64b5cd3c49"
+    },
+    {
+      "bbox": [
+        306.0,
+        672.4368286132812,
+        473.760009765625,
+        688.5794067382812
+      ],
+      "block_id": "page-0589-block-0022",
+      "order": 22,
+      "text": "26.9.5 Asymbolie à la douleur\n",
+      "text_sha256": "a6c94e5c8e493157fc9b58967448f9c03502976b34df1b50f7096d71327c5d6c"
+    },
+    {
+      "bbox": [
+        306.0,
+        691.9158325195312,
+        549.0175170898438,
+        725.45849609375
+      ],
+      "block_id": "page-0589-block-0023",
+      "order": 23,
+      "text": "L’asymbolie à la douleur (appelée « analgognosie » ou « apractogno-\nsie algique ») se caractérise par la disparition de la composante\naective de la douleur, une sensation normalement désagréable,\n",
+      "text_sha256": "03add4f18f35e66c2313cacd8da3f305f829d241f83ddbaeadec05b5fdb04061"
+    }
+  ],
+  "coordinates_sha256": "5d48f99f8829942561ac425a3910c6b457876241d9e36e3af6d851e9ec8dbc2f",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0589",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "572\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nTABLEAU 26.10 Syndromes de douleur cancéreuse\nneuropathique\nType\nAffections\nDouleur directement\ninduite par le cancer\nSyndromes neurologiques paranéoplasiques\nInltrations/compressions tumorales ou\nmétastatiques du SN périphérique (nerfs,\nplexus)\nInltrations/compressions tumorales ou\nmétastatiques du SN central (p. ex., compres-\nsion de la moelle épinière)\nDouleur induite par les\ntraitements contre le\ncancer\nInterventions chirurgicales (p. ex., douleur\npostmastectomie)\nRadiothérapie (p. ex., plexopathies)\nNeuropathies périphériques induites par la\nchimiothérapie\nDouleur associée au\ncancer\nNévralgie postherpétique\nSource : Naleschinski & al. (2012), p. 1-5.\n26.9.4 Douleur cancéreuse\nPlusieurs personnes atteintes de cancer souriront de douleurs\nneuropathiques au cours de cette maladie grave et parfois évolutive.\nÉpidémiologie\nLes patients atteints de cancer peuvent sourir de douleur à cause\ndu cancer lui-même, ou à la suite des traitements chirurgicaux,\ndes chimiothérapies ou des radiothérapies (voir le tableau 26.10).\nSelon Van den Beuken-Van Everdingen et ses collaborateurs\n(2007), on observe la douleur cancéreuse chez :\n• 33 % des patients ayant terminé leurs traitements ;\n• 59 % des patients en phase active de leur traitement ;\n• 64 % des patients aectés d’un cancer métastatique ou terminal ;\n• 53 % à tous les stades de cancer.\nDescription clinique\nIl existe plusieurs formes de douleurs cancéreuses.\nSyndrome paranéoplasique\nCertains cancers annoncent leur survenue par des symptômes\nprécurseurs, nommés « syndrome paranéoplasique » et dont la\nmanifestation la plus fréquente est la neuropathie périphérique.\nElle peut prendre la forme :\n• d’une neuropathie des mécanorécepteurs (grosses bres A-β\nde faible intensité), qui se caractérise par de la dysesthésie, des\nengourdissements, une ataxie sensorielle et parfois de la douleur ;\n• d’une neuropathie des nocicepteurs (petites bres C et A-δ,\nsensibles à la douleur intense), qui s’accompagne d’une hy-\nperalgésie mécanique et d’allodynie.\nLe diagnostic précoce de ces anomalies neurologiques conduit\nà une détection plus rapide de la néoplasie qui l’accompagne.\nUn traitement ciblant le cancer amène souvent la rémission du\nsyndrome paranéoplasique.\nDouleurs nociceptives\nLes douleurs nociceptives sont d’origine :\n• somatique (peau, ligaments, articulations, muscles, tendons) ;\n• viscérale (organes creux, mésentère, parenchymes – p. ex.,\npancréas) à la suite de l’inltration tissulaire par les cellules\nnéoplasiques.\nCes douleurs sont typiquement bien circonscrites et locali-\nsées. Des formes dites « inltratives » de douleur neuropathique\ncancéreuse se développent lorsque les nerfs périphériques sont\ncomprimés par une masse cancéreuse ou lorsque le SNC est\nenvahi par des cellules néoplasiques ou métastatiques. Par\nexemple, la compression médullaire se produit chez 5 à 10 % des\npatients en oncologie. Elle provient d’une métastase comprimant\nune vertèbre ou de l’extension directe de la tumeur dans l’espace\népidural. Une lombalgie diuse est habituellement le symptôme\nde présentation d’une compression médullaire.\nLa névralgie postherpétique est fréquente si on compare son\nincidence à la population générale, à cause de l’immunosuppression\nchez les patients cancéreux. De 25 à 50 % des patients cancéreux\nsourent de névralgie postherpétique à la suite d’une infection\naiguë (voir le tableau 26.10).\nDouleurs neuropathiques\nDes douleurs neuropathiques s’ajoutent lorsque le système nerveux\npériphérique ou central est endommagé soit par une inltration\ndirecte des nerfs, soit par des toxines associées aux cellules néopla-\nsiques, à la chimiothérapie ou par une résection chirurgicale. Une\ndouleur neuropathique peut être une complication de l’intervention\nthérapeutique. La douleur du membre fantôme est un exemple\nde douleur postchirurgicale. Les chirurgies entraînent la section\ndes nerfs périphériques cutanés et sous-cutanés. De 25 à 50 % des\nthoracotomies et de 25 à 60 % des mastectomies provoquent des\ndouleurs neuropathiques localisées au site d’incision chirurgicale.\nLa radiothérapie, à cause de la cicatrisation breuse qu’elle\nentraîne, peut être à l’origine d’une douleur neuropathique qui\napparaît parfois plusieurs mois, voire plusieurs années après la n\ndu traitement. La neuropathie induite par la chimiothérapie est la\nforme la plus fréquente de complication neurologique du traite-\nment contre le cancer. Son incidence est variable, les estimations\nallant de 10 à 100 % et sa prévalence dépend de facteurs tels que :\n• le type de chimiothérapie et son intensité ;\n• l’administration conjointe d’autres médicaments neurotoxiques ;\n• la dose cumulative ;\n• la durée du traitement ;\n• l’âge ;\n• l’existence d’une neuropathie liée à une maladie prémorbide\ntelle que le diabète.\nCertains patients sont incapables d’achever leur chimiothérapie\nà cause de l’intensité de la douleur induite. L’atteinte touche autant\nles mécanorécepteurs (grosses bres A-β) de faible intensité que les\npetites bres C et A-δ de conduction nociceptive, sensibles à la\ndouleur, les symptômes étant alors mixtes.\nTraitements\nLes traitements préconisés pour la douleur cancéreuse sont\nconformes aux lignes directrices de la Société canadienne de la\ndouleur (voir la section 26.10).\n26.9.5 Asymbolie à la douleur\nL’asymbolie à la douleur (appelée « analgognosie » ou « apractogno-\nsie algique ») se caractérise par la disparition de la composante\naective de la douleur, une sensation normalement désagréable,\n",
+  "raw_text_sha256": "2aeff2ebcffc560bcc80823a56822dabe757a4dca4fde7ab98388437219c6290",
+  "source_page_display": 590,
+  "source_page_index": 589
+}

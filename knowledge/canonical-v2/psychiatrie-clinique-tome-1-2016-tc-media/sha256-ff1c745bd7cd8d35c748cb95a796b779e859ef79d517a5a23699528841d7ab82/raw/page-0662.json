@@ -1,0 +1,316 @@
+{
+  "block_sequence_sha256": "a25e15b772dcfae842c866f9ff7fae550a2767d4a9e352a8f686ab8d192dc377",
+  "blocks": [
+    {
+      "bbox": [
+        270.70001220703125,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0662-block-0001",
+      "order": 1,
+      "text": "Chapitre 28\nTroubles mentaux dus à une aection médicale\n645\n",
+      "text_sha256": "56e2fd97895192d6eb14728012de947291c2a0333f1ccc47ccaca8880010d56e"
+    },
+    {
+      "bbox": [
+        56.5,
+        41.002296447753906,
+        467.38690185546875,
+        53.320068359375
+      ],
+      "block_id": "page-0662-block-0002",
+      "order": 2,
+      "text": "TABLEAU 28.16 Facteurs de risque et psychotropes associés à un allongement de l’intervalle QT/QTc\n",
+      "text_sha256": "79796d19366ca91bbda50d74e302f8f89895aab872b576ff3a1a3139a540a94c"
+    },
+    {
+      "bbox": [
+        262.70001220703125,
+        58.27412414550781,
+        346.44281005859375,
+        68.85029602050781
+      ],
+      "block_id": "page-0662-block-0003",
+      "order": 3,
+      "text": "Valeurs QTc anormales\n",
+      "text_sha256": "a1229147cd3d5f7450fbf956cc911ee7ee5d6df4b5e9831fa0134b4acda2dd34"
+    },
+    {
+      "bbox": [
+        58.25,
+        74.20195770263672,
+        472.6732482910156,
+        84.02812957763672
+      ],
+      "block_id": "page-0662-block-0004",
+      "order": 4,
+      "text": "Hommes > 450 msec\nFemmes > 460 msec\nInquiétantes > 500 msec\n",
+      "text_sha256": "b3320e106958beae3382a7ea92a28aada1a39f6b42174ba407d368c311e2c1b7"
+    },
+    {
+      "bbox": [
+        209.4499969482422,
+        209.12413024902344,
+        489.2130432128906,
+        231.9923858642578
+      ],
+      "block_id": "page-0662-block-0005",
+      "order": 5,
+      "text": "Psychotropes associés à un allongement du QT/QTc\nAntipsychotiques\nAntidépresseurs et autres\n",
+      "text_sha256": "30b205f42993ddae26fe801d7fff0a77279039d3bdd8f01e4d9a6e9024f0e984"
+    },
+    {
+      "bbox": [
+        58.25,
+        237.501953125,
+        229.29800415039062,
+        269.328125
+      ],
+      "block_id": "page-0662-block-0006",
+      "order": 6,
+      "text": "Risque élevé\n• Halopéridol IV\n• Thioridazine (MellarilMD)\n• Ziprasidone (ZeldoxMD)\n",
+      "text_sha256": "6124c2aeb48ec7744950ad672ce2707aeb453e630d3f96d8ed0daece80d7d46d"
+    },
+    {
+      "bbox": [
+        338.0,
+        237.501953125,
+        380.4170227050781,
+        247.328125
+      ],
+      "block_id": "page-0662-block-0007",
+      "order": 7,
+      "text": "• Méthadone\n",
+      "text_sha256": "a039b57466183de8d2adfeef002a3b31edc23888dee98815d95bb35d654452e0"
+    },
+    {
+      "bbox": [
+        58.25,
+        277.3013610839844,
+        235.9980010986328,
+        320.7281188964844
+      ],
+      "block_id": "page-0662-block-0008",
+      "order": 8,
+      "text": "Risque modéré\n• Fluphénazine (ModitenMD)\n• Halopéridol (PO/IM)\n• Palipéridone (InvegaMD)\n• Rispéridone (RisperdalMD)\n",
+      "text_sha256": "a31615667b1ba63e60dc20bcffad7ae26955bba295146e73080c4c0ec1c79283"
+    },
+    {
+      "bbox": [
+        338.0,
+        277.3013610839844,
+        455.4206237792969,
+        320.7281188964844
+      ],
+      "block_id": "page-0662-block-0009",
+      "order": 9,
+      "text": "• Citalopram (CelexaMD) > 40 mg\n• Escitalopram (CipralexMD) > 20 mg\n• Tricycliques\n• Lithium\n",
+      "text_sha256": "dbe8db6d8be5767e1694b08edb1674357b0fbe62b2eda8bed8f21654f67337e7"
+    },
+    {
+      "bbox": [
+        58.25,
+        328.7513732910156,
+        230.447998046875,
+        383.1781311035156
+      ],
+      "block_id": "page-0662-block-0010",
+      "order": 10,
+      "text": "Risque faible\n• Asénapine (SaphrisMD)\n• Clozapine (ClozarilMD)\n• Lurasidone (LatudaMD)\n• Olanzapine (ZyprexaMD)\n• Quétiapine (SeroquelMD)\n",
+      "text_sha256": "e9a2d810882dcb8aa9d489241941fa5e953a2311cbf2f57a7ede5ec14e5e72b2"
+    },
+    {
+      "bbox": [
+        338.0,
+        329.3013610839844,
+        455.2099914550781,
+        361.7281188964844
+      ],
+      "block_id": "page-0662-block-0011",
+      "order": 11,
+      "text": "• Citalopram (CelexaMD) ≤40 mg\n• Escitalopram (CipralexMD) ≤20 mg\n• Trazodone (DesyrelMD)\n",
+      "text_sha256": "b34f76a2da752b1040c69e1399b65cff23328473a8d5b7bcaf572aba00394cba"
+    },
+    {
+      "bbox": [
+        58.25,
+        391.1513671875,
+        411.99798583984375,
+        423.578125
+      ],
+      "block_id": "page-0662-block-0012",
+      "order": 12,
+      "text": "Risque minimal\n• Aripiprazole (AbilifyMD)\n• Fluoxétine (ProzacMD)\n• Paroxétine (PaxilMD)\n• Sertraline (ZoloftMD)\n",
+      "text_sha256": "219703e1cb2194a86b1cb726de34556ab2be1d98febac25a1f926265a468cd53"
+    },
+    {
+      "bbox": [
+        448.1499938964844,
+        391.1513671875,
+        534.1480102539062,
+        423.578125
+      ],
+      "block_id": "page-0662-block-0013",
+      "order": 13,
+      "text": "• Duloxétine (CymbaltaMD)\n• Mirtazapine (RemeronMD)\n• Venlafaxine (EffexorMD)\n",
+      "text_sha256": "0961e6944773bdef80898fb6eeef12537b33961746586cc83adefdae7f230e9c"
+    },
+    {
+      "bbox": [
+        338.0,
+        431.60137939453125,
+        432.99798583984375,
+        464.02813720703125
+      ],
+      "block_id": "page-0662-block-0014",
+      "order": 14,
+      "text": "• Acide valproïque (EpivalMD)\n• Carbamazépine (TegretolMD)\n• Lamotrigine (LamictalMD)\n",
+      "text_sha256": "8aaeb655977527b8e3e9c46090b75e0a31398e59727f9afc3eb3dacc13cd0a5a"
+    },
+    {
+      "bbox": [
+        448.1000061035156,
+        432.20196533203125,
+        540.5980224609375,
+        464.02813720703125
+      ],
+      "block_id": "page-0662-block-0015",
+      "order": 15,
+      "text": "• Amphétamine\n• Benzodiazépines\n• Méthylphénidate (RitalinMD)\n",
+      "text_sha256": "7eb2ad4956d39010a11a973755e2dc5ddd70cb587977711a90ff6af77ba2f839"
+    },
+    {
+      "bbox": [
+        54.25,
+        472.7906188964844,
+        277.7880859375,
+        481.6588439941406
+      ],
+      "block_id": "page-0662-block-0016",
+      "order": 16,
+      "text": "Sources : Adapté de Beach & al. (2013), p. 1-15 ; Castro & al. (2013), p. 1-11.\n",
+      "text_sha256": "fcac57ba6493266d09dbf6c5b16d6ed04f1bf3bf705a81f3cf0ef0cde60b0bbf"
+    },
+    {
+      "bbox": [
+        151.4499969482422,
+        89.47412109375,
+        478.1520080566406,
+        112.3423843383789
+      ],
+      "block_id": "page-0662-block-0017",
+      "order": 17,
+      "text": "Facteurs de risque associés à un allongement du QT/QTc\nNon modiables\nPotentiellement modiables\n",
+      "text_sha256": "7cafefb15eb3ec7449f048d95297d1f6d41688ff23c20e9852dcb6246fb4c5d7"
+    },
+    {
+      "bbox": [
+        58.25,
+        117.8519515991211,
+        273.108642578125,
+        169.67813110351562
+      ],
+      "block_id": "page-0662-block-0018",
+      "order": 18,
+      "text": "• Sexe féminin\n• Âge avancé\n• Prédisposition génétique (formes congénitales du syndrome QT\nlong, antécédents familiaux de mort subite, antécédents familiaux\nd’ allongement du QT induit par une médication)\n",
+      "text_sha256": "6c1d192c6604fbdd724ee4a6b0b1fc786ab5d2c0a76696d8d8827358db7cb05a"
+    },
+    {
+      "bbox": [
+        308.6499938964844,
+        117.8519515991211,
+        542.9192504882812,
+        203.67813110351562
+      ],
+      "block_id": "page-0662-block-0019",
+      "order": 19,
+      "text": "• Troubles électrolytiques (hypokaliémie, hypocalcémie, hypomagnésémie\ngrave)\n• Bradycardie\n• Dysfonction ventriculaire gauche\n• Dysfonction hépatique ou rénale\n• Hypothyroïdie\n• Prise concomitante de médicaments allongeant le QT\n• Inhibition métabolique d’un médicament allongeant le QT\n",
+      "text_sha256": "066003c1c077fbcdce98f386ecb721fe765e0877fc7ec594dcacc1015eb042b9"
+    },
+    {
+      "bbox": [
+        54.0,
+        507.9658203125,
+        297.3924560546875,
+        552.95849609375
+      ],
+      "block_id": "page-0662-block-0020",
+      "order": 20,
+      "text": "patients séropositifs varie de 30 à 48 % (Corr, 2012) ; la présence\nd’une maladie psychiatrique prémorbide est associée de façon\nsignicative à l’apparition de complications psychiatriques consé-\ncutives à l’infection au VIH.\n",
+      "text_sha256": "44b709a7c889a01d4070ca0556672556b6aa5abd87a9825fa8d7b3df0dfb3359"
+    },
+    {
+      "bbox": [
+        54.0,
+        553.9658203125,
+        297.1940612792969,
+        679.45849609375
+      ],
+      "block_id": "page-0662-block-0021",
+      "order": 21,
+      "text": "L’éventualité d’une infection au VIH suscite beaucoup d’an-\nxiété chez les patients. L’annonce d’un diagnostic de séropositivité\nou du sida peut être vécue comme une condamnation à mort.\nOn observe fréquemment des réactions aiguës de stress telles\nque de la colère, un sentiment de culpabilité, de l’angoisse,\nune anxiété diuse, du déni et du désespoir, de même que des\ncomportements à risque (conduite automobile à des vitesses\nexcessives, consommation de drogues) ainsi que des tentatives\nde suicide. Ces réactions surviennent immédiatement après\nl’annonce du diagnostic, mais également au début de la thérapie\nantirétrovirale.\n",
+      "text_sha256": "6acfc245b7889c31d0034d017a2655b0668f3f003ddcb1d47daeb11ada639964"
+    },
+    {
+      "bbox": [
+        54.0,
+        680.4658203125,
+        297.127197265625,
+        725.45849609375
+      ],
+      "block_id": "page-0662-block-0022",
+      "order": 22,
+      "text": "Les troubles de l’adaptation sont fréquents et constituent\nun des diagnostics les plus courants (30 %) en clinique externe\n(Gallego & al., 2011). L’angoisse d’un destin incertain ainsi que\nl’inquiétude constante de la survenue d’infections opportunistes et\n",
+      "text_sha256": "789c47f68bc64610e0a4489ceec38cc4cf4112ebc38e302843a302c2955cddb9"
+    },
+    {
+      "bbox": [
+        312.0,
+        507.8658447265625,
+        555.3939208984375,
+        541.3585205078125
+      ],
+      "block_id": "page-0662-block-0023",
+      "order": 23,
+      "text": "d’eets indésirables du traitement antirétroviral causent souvent\nune anxiété importante qui diminue la capacité de la personne\nà s’adapter à la situation.\n",
+      "text_sha256": "8af23b496b6d2f60c3fadf8af593c91d716d6a225a81432ce9454089e9f317fe"
+    },
+    {
+      "bbox": [
+        312.0,
+        542.3658447265625,
+        555.5611572265625,
+        610.3585205078125
+      ],
+      "block_id": "page-0662-block-0024",
+      "order": 24,
+      "text": "Les troubles anxieux (4 à 40 %) sont peu spéciques et leur\nintensité va de l’anxiété simple au trouble panique. Les symptômes\nanxieux augmentent l’intensité de la fatigue due à l’infection au VIH\net les limitations fonctionnelles au plan physique. Contrairement\nà un état dépressif associé, qui diminue l’observance, l’anxiété ne\nmodie pas l’adhésion aux traitements antirétroviraux.\n",
+      "text_sha256": "906fce312d002c4ffcf8ed052a7b177cc11c68795fe63ef11654973d0e0e9ab0"
+    },
+    {
+      "bbox": [
+        312.0,
+        611.3658447265625,
+        555.57763671875,
+        725.3585205078125
+      ],
+      "block_id": "page-0662-block-0025",
+      "order": 25,
+      "text": "Des symptômes dépressifs peuvent survenir à tout moment\nau cours de la maladie (annonce du diagnostic de VIH, perte\nd’un travail, stigmatisation sociale, progression clinique de la\nmaladie). Cependant, un épisode dépressif mineur ou majeur\nqui s’installe de novo chez un patient sans antécédents psychia-\ntriques de dépression, ou qui fait partie d’un trouble dépressif\nrécurrent ne doit pas être perçu comme une réaction normale\nau statut de séropositivité. Les taux de dépression majeure chez\ndes individus positifs au VIH varient de 10 à 60 %, les cas les plus\nfréquents se rencontrant parmi les patients hospitalisés ou à un\n",
+      "text_sha256": "f5b3fa6bc446b45cbee33a7268c1da431580b99b1fd96dc0640dcca6680a53c2"
+    }
+  ],
+  "coordinates_sha256": "bcfd31d154ac0b9c50c40cb8c14d470e2106e5e361ce6e854a9c0c2fb398e0e4",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0662",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 28\nTroubles mentaux dus à une aection médicale\n645\nTABLEAU 28.16 Facteurs de risque et psychotropes associés à un allongement de l’intervalle QT/QTc\nValeurs QTc anormales\nHommes > 450 msec\nFemmes > 460 msec\nInquiétantes > 500 msec\nPsychotropes associés à un allongement du QT/QTc\nAntipsychotiques\nAntidépresseurs et autres\nRisque élevé\n• Halopéridol IV\n• Thioridazine (MellarilMD)\n• Ziprasidone (ZeldoxMD)\n• Méthadone\nRisque modéré\n• Fluphénazine (ModitenMD)\n• Halopéridol (PO/IM)\n• Palipéridone (InvegaMD)\n• Rispéridone (RisperdalMD)\n• Citalopram (CelexaMD) > 40 mg\n• Escitalopram (CipralexMD) > 20 mg\n• Tricycliques\n• Lithium\nRisque faible\n• Asénapine (SaphrisMD)\n• Clozapine (ClozarilMD)\n• Lurasidone (LatudaMD)\n• Olanzapine (ZyprexaMD)\n• Quétiapine (SeroquelMD)\n• Citalopram (CelexaMD) ≤40 mg\n• Escitalopram (CipralexMD) ≤20 mg\n• Trazodone (DesyrelMD)\nRisque minimal\n• Aripiprazole (AbilifyMD)\n• Fluoxétine (ProzacMD)\n• Paroxétine (PaxilMD)\n• Sertraline (ZoloftMD)\n• Duloxétine (CymbaltaMD)\n• Mirtazapine (RemeronMD)\n• Venlafaxine (EffexorMD)\n• Acide valproïque (EpivalMD)\n• Carbamazépine (TegretolMD)\n• Lamotrigine (LamictalMD)\n• Amphétamine\n• Benzodiazépines\n• Méthylphénidate (RitalinMD)\nSources : Adapté de Beach & al. (2013), p. 1-15 ; Castro & al. (2013), p. 1-11.\nFacteurs de risque associés à un allongement du QT/QTc\nNon modiables\nPotentiellement modiables\n• Sexe féminin\n• Âge avancé\n• Prédisposition génétique (formes congénitales du syndrome QT\nlong, antécédents familiaux de mort subite, antécédents familiaux\nd’ allongement du QT induit par une médication)\n• Troubles électrolytiques (hypokaliémie, hypocalcémie, hypomagnésémie\ngrave)\n• Bradycardie\n• Dysfonction ventriculaire gauche\n• Dysfonction hépatique ou rénale\n• Hypothyroïdie\n• Prise concomitante de médicaments allongeant le QT\n• Inhibition métabolique d’un médicament allongeant le QT\npatients séropositifs varie de 30 à 48 % (Corr, 2012) ; la présence\nd’une maladie psychiatrique prémorbide est associée de façon\nsignicative à l’apparition de complications psychiatriques consé-\ncutives à l’infection au VIH.\nL’éventualité d’une infection au VIH suscite beaucoup d’an-\nxiété chez les patients. L’annonce d’un diagnostic de séropositivité\nou du sida peut être vécue comme une condamnation à mort.\nOn observe fréquemment des réactions aiguës de stress telles\nque de la colère, un sentiment de culpabilité, de l’angoisse,\nune anxiété diuse, du déni et du désespoir, de même que des\ncomportements à risque (conduite automobile à des vitesses\nexcessives, consommation de drogues) ainsi que des tentatives\nde suicide. Ces réactions surviennent immédiatement après\nl’annonce du diagnostic, mais également au début de la thérapie\nantirétrovirale.\nLes troubles de l’adaptation sont fréquents et constituent\nun des diagnostics les plus courants (30 %) en clinique externe\n(Gallego & al., 2011). L’angoisse d’un destin incertain ainsi que\nl’inquiétude constante de la survenue d’infections opportunistes et\nd’eets indésirables du traitement antirétroviral causent souvent\nune anxiété importante qui diminue la capacité de la personne\nà s’adapter à la situation.\nLes troubles anxieux (4 à 40 %) sont peu spéciques et leur\nintensité va de l’anxiété simple au trouble panique. Les symptômes\nanxieux augmentent l’intensité de la fatigue due à l’infection au VIH\net les limitations fonctionnelles au plan physique. Contrairement\nà un état dépressif associé, qui diminue l’observance, l’anxiété ne\nmodie pas l’adhésion aux traitements antirétroviraux.\nDes symptômes dépressifs peuvent survenir à tout moment\nau cours de la maladie (annonce du diagnostic de VIH, perte\nd’un travail, stigmatisation sociale, progression clinique de la\nmaladie). Cependant, un épisode dépressif mineur ou majeur\nqui s’installe de novo chez un patient sans antécédents psychia-\ntriques de dépression, ou qui fait partie d’un trouble dépressif\nrécurrent ne doit pas être perçu comme une réaction normale\nau statut de séropositivité. Les taux de dépression majeure chez\ndes individus positifs au VIH varient de 10 à 60 %, les cas les plus\nfréquents se rencontrant parmi les patients hospitalisés ou à un\n",
+  "raw_text_sha256": "9cd768cb398a0d74d5602f537551d93fde35410709617a3c9672739824d33cb2",
+  "source_page_display": 663,
+  "source_page_index": 662
+}

@@ -1,0 +1,172 @@
+{
+  "block_sequence_sha256": "96284206608f906c83d1219ebd5572fbc13d3d7d31a31b6c4ef76f63b4cd3a3a",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        447.807861328125,
+        758.8693237304688
+      ],
+      "block_id": "page-0053-block-0001",
+      "order": 1,
+      "text": "36\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 1\nIntroduction à la psychiatrie\n",
+      "text_sha256": "fd615a15d89733b851a27ed6d820799a47a543bbf57f9f3be7bff9de41c462a1"
+    },
+    {
+      "bbox": [
+        45.900001525878906,
+        34.294437408447266,
+        65.20710754394531,
+        81.12548828125
+      ],
+      "block_id": "page-0053-block-0002",
+      "order": 2,
+      "text": "L\n",
+      "text_sha256": "610fb9a67aa23c84d6c820f52dc2b6c3f8119e52e7dcb9dfc490127d38eb733c"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.25556564331055,
+        291.0739440917969,
+        85.61933898925781
+      ],
+      "block_id": "page-0053-block-0003",
+      "order": 3,
+      "text": "’entretien psychiatrique, visant l’évaluation d’un patient,\nconstitue un processus assez complexe que tout médecin\ndoit maîtriser. Il est méthodique comme plusieurs évalua-\ntions pratiquées par d’autres professionnels de la santé.\n",
+      "text_sha256": "f68a203e20c356a8793db7f556410cba51dff2f431c0fa4e46a14270bea15fde"
+    },
+    {
+      "bbox": [
+        48.0,
+        86.76582336425781,
+        291.3918151855469,
+        339.0585021972656
+      ],
+      "block_id": "page-0053-block-0004",
+      "order": 4,
+      "text": "L’entretien psychiatrique, comme tout entretien médical, a pour\nbut de saisir l’ensemble des facteurs biologiques, psychologiques,\nsociaux et culturels pertinents à la problématique présentée par\nle patient an d’établir un diagnostic aussi précis que possible et\nde formuler un plan de traitement adapté et cohérent. Avant de\nrencontrer le patient, il est important de réviser l’ensemble des\ndocuments disponibles : le dossier antérieur, les préévaluations,\nles rapports de consultation d’autres professionnels ou méde-\ncins, le prol pharmacologique et, le cas échéant, les rapports\nd’ambulanciers, de policiers ou de la cour. L’entretien doit se\ndérouler avec un stress minimal pour le patient, idéalement sous\nforme de discussion et non d’interrogatoire. Pour arriver à ce\nbut, le médecin doit commencer par créer un climat favorisant\nl’établissement d’un lien de conance et ainsi poser les assises de\nl’alliance thérapeutique. La relation unissant le médecin et son\npatient est donc primordiale à la bonne conduite de l’examen\npsychiatrique. L’évaluation ne doit pas prendre la forme d’une\nsérie de questions au hasard. Au contraire, elle s’organise d’après\nla formulation d’hypothèses diagnostiques qui sont validées ou\nmodiées tout au long de l’entretien, en fonction des informations\nrecueillies auprès du patient et des tiers, tout en considérant les\ndiagnostics diérentiels pertinents.\n",
+      "text_sha256": "74396378309275eb823358e4ccd215406ae96017e64b0cedde45c1cefbea7151"
+    },
+    {
+      "bbox": [
+        48.0,
+        340.0658264160156,
+        291.3648681640625,
+        452.70849609375
+      ],
+      "block_id": "page-0053-block-0005",
+      "order": 5,
+      "text": "À l’issue de cette analyse, un rapport détaillé de l’entretien\ndoit être rédigé an de :\n• consigner les observations et conclusions du médecin ;\n• permettre la transmission d’informations à d’autres interve-\nnants ;\n• comparer l’évolution au cours du suivi du patient à partir de\nces observations initiales ;\n• constituer un document médicoadministratif.\nCe chapitre est axé sur l’adulte.\n",
+      "text_sha256": "8d59f15a1d285aa20752831453f30f81c06bd73911f738f3b7e810521c7a544a"
+    },
+    {
+      "bbox": [
+        68.0,
+        458.72412109375,
+        253.1722412109375,
+        489.3503112792969
+      ],
+      "block_id": "page-0053-block-0006",
+      "order": 6,
+      "text": "Les particularités de l’entretien en pédopsychiatrie\nsont présentées au chapitre 55 et celles de la\ngérontopsychiatrie, au chapitre 64.\n",
+      "text_sha256": "4ee047f26da2c82e792e4d71b0e41d322142977abb1596a543acaf8fd02949ad"
+    },
+    {
+      "bbox": [
+        59.95000076293945,
+        514.7931518554688,
+        247.45362854003906,
+        533.9689331054688
+      ],
+      "block_id": "page-0053-block-0007",
+      "order": 7,
+      "text": "3.1\nEntretien psychiatrique\n",
+      "text_sha256": "37c901aef99eaa8b4fa8d9d9213a943d5c8202e36214183bce5270c861aa416d"
+    },
+    {
+      "bbox": [
+        48.0,
+        547.7658081054688,
+        291.2179870605469,
+        725.45849609375
+      ],
+      "block_id": "page-0053-block-0008",
+      "order": 8,
+      "text": "L’entretien psychiatrique comprend deux parties (voir la gure 3.1) :\n• la partie subjective durant laquelle le patient, sa famille ou\nles autres participants à l’entretien relatent leur version de la\nproblématique présentée. Cette partie inclut aussi l’histoire\nlongitudinale du patient et ses antécédents ;\n• la partie objective, constituée par l’examen mental, qui réunit\nl’ensemble des observations du médecin (les éléments notés\ndurant l’évaluation), mais aussi une analyse des échanges\nayant lieu dans le contexte de la relation médecin-patient.\nCe processus s’attarde donc au contenu, mais aussi au cours\net à l’observation de la forme de la communication tout au\nlong de l’entretien.\nLes deux parties de l’entretien psychiatrique sont intimement\nliées. L’entretien mobilise diverses fonctions mentales chez le\npatient (tout comme chez le médecin), incluant sa capacité à\n",
+      "text_sha256": "38a8510ddb1186c83687f6e41363c82ababa8a071f99f470493fc2f8edc72f6e"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.2485961914062,
+        183.10850524902344
+      ],
+      "block_id": "page-0053-block-0009",
+      "order": 9,
+      "text": "entrer en relation, sa réactivité aective, sa capacité à contrôler ses\npulsions, ses processus de pensée, ses fonctions cognitives et son\njugement. Durant l’entretien s’accomplissent aussi divers échanges\nnon verbaux (attitudes, gestes, intonations, silences, etc.) entre le\npatient et le médecin, ainsi que des phénomènes transactionnels\nconscients et inconscients. L’analyse de ces éléments module les\nhypothèses diagnostiques élaborées dès le début de l’entretien\npar le médecin pour en arriver à une meilleure compréhension\nde la problématique du patient. Il peut bien sûr être pertinent de\nvérier aussi auprès de lui son modèle explicatif et son attitude\nface à la maladie. Le processus du cheminement clinique habituel\nd’un entretien psychiatrique est présenté à l’encadré 3.1.\n",
+      "text_sha256": "27c9e45b7d26122f6cca4354de7ff8f1cddad01cd78b8422a451a31c02a8ba48"
+    },
+    {
+      "bbox": [
+        306.0,
+        483.5658264160156,
+        549.4426879882812,
+        725.45849609375
+      ],
+      "block_id": "page-0053-block-0010",
+      "order": 10,
+      "text": "Les interactions entre le médecin et le patient peuvent être\nconçues selon diérents modèles :\n• Le modèle paternaliste suppose que le médecin soit détenteur\nde la connaissance et joue un rôle actif interventionniste. Le\npatient est alors placé dans un rôle passif d’obéir aux recom-\nmandations de son médecin qui agit comme un bon père\nde famille. Bien que ce type d’interaction puisse convenir à\ncertains patients plutôt dépendants ou démunis, il n’assure pas\nla prise en considération des valeurs et du cadre de référence\ndu patient.\n• Le modèle informatif attribue au patient le rôle de décideur. Il\ny est attendu que le médecin lui fournisse toutes les informa-\ntions nécessaires pour lui permettre, en toute connaissance de\ncause, de prendre une décision sur son traitement. Ce modèle\nest plus souvent rencontré lors d’une consultation en réponse\nà un médecin traitant ou pour fournir une deuxième opinion\nà la demande du patient. Le médecin doit certainement faire\npreuve de prudence dans de tels contextes et s’assurer de\nla capacité de compréhension et de l’aptitude du patient à\nprendre cette décision.\n",
+      "text_sha256": "35c2ad9c80bdea457a693f5c1192aaffb1248d3c3bad1fc91c1a9c817c1e6485"
+    },
+    {
+      "bbox": [
+        309.20001220703125,
+        200.50230407714844,
+        520.8767700195312,
+        212.820068359375
+      ],
+      "block_id": "page-0053-block-0011",
+      "order": 11,
+      "text": "ENCADRÉ 3.1 Processus d’un cheminement clinique\n",
+      "text_sha256": "96a3a551e2964a24fcbed5bdd53150624b8203ba18f6e332a19fc19cc6f20fbf"
+    },
+    {
+      "bbox": [
+        363.3500061035156,
+        212.352294921875,
+        515.116943359375,
+        224.320068359375
+      ],
+      "block_id": "page-0053-block-0012",
+      "order": 12,
+      "text": "habituel d’un entretien psychiatrique\n",
+      "text_sha256": "e3fdd1211bd08f878c85c2d561ed63186c1b25e6bdab113a53f28f291fcecefc"
+    },
+    {
+      "bbox": [
+        311.0,
+        232.3728485107422,
+        541.0006103515625,
+        460.27813720703125
+      ],
+      "block_id": "page-0053-block-0013",
+      "order": 13,
+      "text": "Au cours de l’entretien :\n• création d’une alliance avec le patient dès le début de la relation ;\n• clarication de la raison de consultation ;\n• élaboration de premières hypothèses diagnostiques pour orienter\nla suite du questionnaire ;\n• exploration des symptômes reliés au diagnostic le plus probable,\nà partir de questions ouvertes et fermées ;\n• exploration d’autres possibilités diagnostiques associées ;\n• exclusion de diagnostics moins probables à travers un question-\nnement général sur d’autres troubles mentaux (toxiques, cognitifs,\npsychotiques, affectifs, anxieux) ;\n• clarication des points ambigus de l’entretien ;\n• évaluation de la dangerosité auto et hétéroagressive ;\n• questionnement des attentes du patient.\nÀ la n de l’entretien :\n• intégration des informations recueillies auprès du patient et des tiers\net des observations du médecin dans une formulation de synthèse ;\n• élaboration du (ou des) diagnostic ;\n• communication des impressions diagnostiques au patient ;\n• entente sur un plan d’action qui encourage et donne espoir.\n",
+      "text_sha256": "d3a3210a2a892375a6405cc85fbbe12d382aac58224e18a931dcc4970674c851"
+    }
+  ],
+  "coordinates_sha256": "38678e3aa1f2c3d0dfb80d208f3355dea6ecad0ae7b3dfd4024d61fc70dc9c7d",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0053",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "36\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 1\nIntroduction à la psychiatrie\nL\n’entretien psychiatrique, visant l’évaluation d’un patient,\nconstitue un processus assez complexe que tout médecin\ndoit maîtriser. Il est méthodique comme plusieurs évalua-\ntions pratiquées par d’autres professionnels de la santé.\nL’entretien psychiatrique, comme tout entretien médical, a pour\nbut de saisir l’ensemble des facteurs biologiques, psychologiques,\nsociaux et culturels pertinents à la problématique présentée par\nle patient an d’établir un diagnostic aussi précis que possible et\nde formuler un plan de traitement adapté et cohérent. Avant de\nrencontrer le patient, il est important de réviser l’ensemble des\ndocuments disponibles : le dossier antérieur, les préévaluations,\nles rapports de consultation d’autres professionnels ou méde-\ncins, le prol pharmacologique et, le cas échéant, les rapports\nd’ambulanciers, de policiers ou de la cour. L’entretien doit se\ndérouler avec un stress minimal pour le patient, idéalement sous\nforme de discussion et non d’interrogatoire. Pour arriver à ce\nbut, le médecin doit commencer par créer un climat favorisant\nl’établissement d’un lien de conance et ainsi poser les assises de\nl’alliance thérapeutique. La relation unissant le médecin et son\npatient est donc primordiale à la bonne conduite de l’examen\npsychiatrique. L’évaluation ne doit pas prendre la forme d’une\nsérie de questions au hasard. Au contraire, elle s’organise d’après\nla formulation d’hypothèses diagnostiques qui sont validées ou\nmodiées tout au long de l’entretien, en fonction des informations\nrecueillies auprès du patient et des tiers, tout en considérant les\ndiagnostics diérentiels pertinents.\nÀ l’issue de cette analyse, un rapport détaillé de l’entretien\ndoit être rédigé an de :\n• consigner les observations et conclusions du médecin ;\n• permettre la transmission d’informations à d’autres interve-\nnants ;\n• comparer l’évolution au cours du suivi du patient à partir de\nces observations initiales ;\n• constituer un document médicoadministratif.\nCe chapitre est axé sur l’adulte.\nLes particularités de l’entretien en pédopsychiatrie\nsont présentées au chapitre 55 et celles de la\ngérontopsychiatrie, au chapitre 64.\n3.1\nEntretien psychiatrique\nL’entretien psychiatrique comprend deux parties (voir la gure 3.1) :\n• la partie subjective durant laquelle le patient, sa famille ou\nles autres participants à l’entretien relatent leur version de la\nproblématique présentée. Cette partie inclut aussi l’histoire\nlongitudinale du patient et ses antécédents ;\n• la partie objective, constituée par l’examen mental, qui réunit\nl’ensemble des observations du médecin (les éléments notés\ndurant l’évaluation), mais aussi une analyse des échanges\nayant lieu dans le contexte de la relation médecin-patient.\nCe processus s’attarde donc au contenu, mais aussi au cours\net à l’observation de la forme de la communication tout au\nlong de l’entretien.\nLes deux parties de l’entretien psychiatrique sont intimement\nliées. L’entretien mobilise diverses fonctions mentales chez le\npatient (tout comme chez le médecin), incluant sa capacité à\nentrer en relation, sa réactivité aective, sa capacité à contrôler ses\npulsions, ses processus de pensée, ses fonctions cognitives et son\njugement. Durant l’entretien s’accomplissent aussi divers échanges\nnon verbaux (attitudes, gestes, intonations, silences, etc.) entre le\npatient et le médecin, ainsi que des phénomènes transactionnels\nconscients et inconscients. L’analyse de ces éléments module les\nhypothèses diagnostiques élaborées dès le début de l’entretien\npar le médecin pour en arriver à une meilleure compréhension\nde la problématique du patient. Il peut bien sûr être pertinent de\nvérier aussi auprès de lui son modèle explicatif et son attitude\nface à la maladie. Le processus du cheminement clinique habituel\nd’un entretien psychiatrique est présenté à l’encadré 3.1.\nLes interactions entre le médecin et le patient peuvent être\nconçues selon diérents modèles :\n• Le modèle paternaliste suppose que le médecin soit détenteur\nde la connaissance et joue un rôle actif interventionniste. Le\npatient est alors placé dans un rôle passif d’obéir aux recom-\nmandations de son médecin qui agit comme un bon père\nde famille. Bien que ce type d’interaction puisse convenir à\ncertains patients plutôt dépendants ou démunis, il n’assure pas\nla prise en considération des valeurs et du cadre de référence\ndu patient.\n• Le modèle informatif attribue au patient le rôle de décideur. Il\ny est attendu que le médecin lui fournisse toutes les informa-\ntions nécessaires pour lui permettre, en toute connaissance de\ncause, de prendre une décision sur son traitement. Ce modèle\nest plus souvent rencontré lors d’une consultation en réponse\nà un médecin traitant ou pour fournir une deuxième opinion\nà la demande du patient. Le médecin doit certainement faire\npreuve de prudence dans de tels contextes et s’assurer de\nla capacité de compréhension et de l’aptitude du patient à\nprendre cette décision.\nENCADRÉ 3.1 Processus d’un cheminement clinique\nhabituel d’un entretien psychiatrique\nAu cours de l’entretien :\n• création d’une alliance avec le patient dès le début de la relation ;\n• clarication de la raison de consultation ;\n• élaboration de premières hypothèses diagnostiques pour orienter\nla suite du questionnaire ;\n• exploration des symptômes reliés au diagnostic le plus probable,\nà partir de questions ouvertes et fermées ;\n• exploration d’autres possibilités diagnostiques associées ;\n• exclusion de diagnostics moins probables à travers un question-\nnement général sur d’autres troubles mentaux (toxiques, cognitifs,\npsychotiques, affectifs, anxieux) ;\n• clarication des points ambigus de l’entretien ;\n• évaluation de la dangerosité auto et hétéroagressive ;\n• questionnement des attentes du patient.\nÀ la n de l’entretien :\n• intégration des informations recueillies auprès du patient et des tiers\net des observations du médecin dans une formulation de synthèse ;\n• élaboration du (ou des) diagnostic ;\n• communication des impressions diagnostiques au patient ;\n• entente sur un plan d’action qui encourage et donne espoir.\n",
+  "raw_text_sha256": "64cfccd77bf3ce178a4e6db89197b901ee375c2f3efae98189cfe7783ff108c0",
+  "source_page_display": 54,
+  "source_page_index": 53
+}

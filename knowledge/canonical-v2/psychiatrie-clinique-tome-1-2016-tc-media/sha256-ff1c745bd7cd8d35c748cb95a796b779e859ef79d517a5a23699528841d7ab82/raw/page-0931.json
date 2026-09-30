@@ -1,0 +1,268 @@
+{
+  "block_sequence_sha256": "613a30305d4adae9e3f73fcb8d65398245d0f6547462987f431d5de799c25579",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0931-block-0001",
+      "order": 1,
+      "text": "914\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "dabe08372531ba030b47601bf62b491445c111b16842d1e1c4e9c85d6cd024e7"
+    },
+    {
+      "bbox": [
+        306.0,
+        39.07441329956055,
+        549.5006713867188,
+        478.20849609375
+      ],
+      "block_id": "page-0931-block-0002",
+      "order": 2,
+      "text": "• La tolérance fait en sorte que la substance doit être prise à\nplus haute dose pour produire le même eet, ce qui conduit\nà un renforcement positif du comportement de consom-\nmation.\n• L’envahissement, c’est-à-dire la place que prend la consom-\nmation dans la vie quotidienne, est lié au fait que la consom-\nmation produit un court-circuit en donnant un accès direct\nà l’« autoroute du plaisir », un relais de circuits cérébraux\ngérant la récompense, dont la récompense sexuelle, ce qui\nrend le phénomène de la dépendance analogue à une per-\nversion, puisqu’il y a détournement de la nalité du plaisir\npar le moyen qui devient une n en soi.\n• L’exclusion, sociale qui amène peu à peu la personne à perdre\nses liens professionnels, familiaux et interpersonnels, cor-\nrespond en psychiatrie au concept d’aliénation (la perte\nde tous ses liens), qui est souvent la marque de troubles\ngraves et persistants. La personne s’enfonce dans la spirale\nde la dépendance toxicomane (Koob & Le Moal, 2001) : au\ndépart, elle cherche un plaisir découvert par l’usage jouissif\nde la substance et, petit à petit, elle se trouve enfermée dans\nun processus qui mène du plaisir à l’abus, pour aboutir à\nune situation où la drogue peut devenir un besoin et parfois\nmême, un néobesoin vital (Lowenstein, 2005). Coincée dans\nle fond de l’entonnoir, la personne ne trouve plus dans cette\nspirale ce qu’elle y cherchait, c’est-à-dire du plaisir ; elle se\nretrouve plutôt déterminée par des enjeux contraignants\nayant pris la forme d’un besoin irrépressible (craving). Ce qui\nse présente initialement comme une libre exploration devient\ninsidieusement un processus tyrannique : c’est le lucratif et\nperformant marché de l’alcool, des drogues et du jeu, dont\nles utilisateurs deviennent les grands perdants.\n• Le sevrage se traduit par des symptômes désagréables au\nmoment du retrait des eets de la substance, amenant, par\nrenforcement négatif, à prendre de nouveau de la substance\npour soulager ce malaise.\n",
+      "text_sha256": "b4d2a83890259d54a8fb85f4f315666a13163185126e289cf962cae76dece003"
+    },
+    {
+      "bbox": [
+        306.0,
+        482.0658264160156,
+        549.177978515625,
+        504.95849609375
+      ],
+      "block_id": "page-0931-block-0003",
+      "order": 3,
+      "text": "Le tableau 39.3 présente de façon schématique les relations\npostulées ici.\n",
+      "text_sha256": "dab94f9706b9c3aaaf759b7dcc9951eb38559db7e040112db26157fb8d364c42"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.9658203125,
+        290.9688415527344,
+        74.6084976196289
+      ],
+      "block_id": "page-0931-block-0004",
+      "order": 4,
+      "text": "chez les personnalités impulsives (Bornovalova & al., 2005),\nmais également chez les personnes sourant d’un trouble\nbipolaire (Swann, 2010) et possiblement dans la schizophrénie.\n",
+      "text_sha256": "2631f6f2c81cf508e1f2aad591713f26d0eb47e8da0d61a1f9b6ff5c18a57812"
+    },
+    {
+      "bbox": [
+        48.0,
+        75.66582489013672,
+        291.410888671875,
+        120.90850067138672
+      ],
+      "block_id": "page-0931-block-0005",
+      "order": 5,
+      "text": "Enn, selon certains auteurs, des facteurs génétiques com-\nmuns à la toxicomanie et à la maladie mentale contribueraient à\nl’émergence de troubles comorbides ; mais à ce jour, ces modèles\ndemeurent spéculatifs et peu appuyés sur le plan empirique.\n",
+      "text_sha256": "bd2b35ab50dae1a8c39af0d46a146cf0c9973a2690bf92e30c67089411e4a819"
+    },
+    {
+      "bbox": [
+        48.0,
+        131.48681640625,
+        256.9651184082031,
+        147.62939453125
+      ],
+      "block_id": "page-0931-block-0006",
+      "order": 6,
+      "text": "39.4.4 Modèle des facteurs multiples\n",
+      "text_sha256": "bf87184e45b04303ad177a7dc92dc3ba919e15179659387b23a5be8668d8839b"
+    },
+    {
+      "bbox": [
+        48.0,
+        151.06582641601562,
+        291.53668212890625,
+        422.15850830078125
+      ],
+      "block_id": "page-0931-block-0007",
+      "order": 7,
+      "text": "Les modèles explicatifs présentés précédemment ne sont pas\nmutuellement exclusifs, de sorte que Gregg &al. (2007) et Mueser\n& al. (1998) ont proposé que de multiples facteurs contribueraient\nà l’émergence de troubles concomitants. Dans cette perspective, les\nrelations entre la toxicomanie et la maladie mentale sont conçues\ncomme étant bidirectionnelles. Ainsi, le trouble psychiatrique\nprédisposerait à la toxicomanie, et vice-versa. Selon le modèle\ndes facteurs multiples, ce sont essentiellement les mêmes hypo-\nthèses étiologiques (automédication, hypersensibilité, impulsivité,\netc.) qui sont proposées, à cette diérence que l’accent est mis\nsur la complémentarité des diérents facteurs explicatifs. Dans\nle futur, il serait pertinent de pondérer l’importance relative de\nces facteurs explicatifs selon les diérentes comorbidités. Par\nexemple, on peut penser que :\n• la relation entre la consommation de dépresseurs du SNC\n(alcool, héroïne, benzodiazépines) et les troubles anxieux serait\nliée à une forme d’automédication (renforcement négatif) ;\n• la relation entre la prise de stimulants et les troubles de la\npersonnalité limite (borderline) et antisociale, serait reliée à\nl’impulsivité ;\n• la relation entre la consommation d’hallucinogènes et la psy-\nchose ferait intervenir des enjeux d’ordre phénoménologique,\ntels que le désir de se distraire, de fuir ou d’oublier.\n",
+      "text_sha256": "ed8a4cb00b5a306bb44d99f00f5eb998cee6d42a305954b0d02b4241be309e4b"
+    },
+    {
+      "bbox": [
+        48.0,
+        434.7868347167969,
+        275.9168701171875,
+        450.9294128417969
+      ],
+      "block_id": "page-0931-block-0008",
+      "order": 8,
+      "text": "39.4.5 Attitudes face à la consommation\n",
+      "text_sha256": "9cc553be686d7d1a38778a72687fb2b358a0e98c5e92198eba00f6f8cb327379"
+    },
+    {
+      "bbox": [
+        48.0,
+        454.3158264160156,
+        291.3823547363281,
+        725.45849609375
+      ],
+      "block_id": "page-0931-block-0009",
+      "order": 9,
+      "text": "La consommation de substances se décline sur plusieurs\nniveaux qui sont associés à une variété de comportements et\nde conséquences.\n• La perte de contrôle dans la consommation évoque un trouble\nde contrôle des impulsions, c’est-à-dire un besoin irrépres-\nsible créant une tension que l’impulsion va soulager tout en\nprocurant du plaisir.\n• La notion d’abus de substances est généralement constatée\npar des manifestations comportementales désinhibées, l’ap-\nparentant aux troubles externalisés typiques des personnalités\nimpulsives (problèmes légaux, professionnels, interpersonnels,\nsituations dangereuses). Ces manifestations surviennent lors\nd’une consommation excessive.\n• La notion de persistance dans la consommation s’apparente\nau trouble obsessionnel-compulsif (TOC). Il y a toutefois une\ndiérence : le TOC évite le plaisir alors qu’ici, on assiste plutôt\nà un phénomène d’impulsion-compulsion, c’est-à-dire que la\npersonne est orientée vers le plaisir par une compulsion de\nrépétition (ad-dictus, la conduite est dictée) au point de devenir\nune habitude. Ce qu’il y a de commun, c’est que cette persistance\nse fait en réponse à des indices (cues) environnementaux qui\nalimentent une obsession de consommer. Le comportement\nde persévération s’apparente à un rituel compulsif.\n",
+      "text_sha256": "ea94887d52db237ec1618396f3f4dc1b3e1a5fc65c2c6542d2998dd3c34edc2f"
+    },
+    {
+      "bbox": [
+        306.5,
+        523.7023315429688,
+        533.1033935546875,
+        547.570068359375
+      ],
+      "block_id": "page-0931-block-0010",
+      "order": 10,
+      "text": "TABLEAU 39.3 Troubles liés aux substances et tableaux\npsychiatriques apparentés\n",
+      "text_sha256": "224b60df21d338c30a0e587fc5e5908a53bd6bc8a1a8ba1622c92920c696b7cc"
+    },
+    {
+      "bbox": [
+        311.5,
+        552.47412109375,
+        530.31201171875,
+        568.05029296875
+      ],
+      "block_id": "page-0931-block-0011",
+      "order": 11,
+      "text": "Attitudes liées aux substances\nAspects psychiatriques\n",
+      "text_sha256": "46cd2ae2934101d08801d0a3902a367648fcc3323629ec3e7029cef40db045d7"
+    },
+    {
+      "bbox": [
+        467.5500183105469,
+        562.47412109375,
+        508.53302001953125,
+        573.05029296875
+      ],
+      "block_id": "page-0931-block-0012",
+      "order": 12,
+      "text": "apparentés\n",
+      "text_sha256": "20c0b61c208bfedc9189eeeec840c16b6ada62ba73d6a17285e961bd3d111d06"
+    },
+    {
+      "bbox": [
+        310.5,
+        578.2019653320312,
+        542.1181640625,
+        588.0281372070312
+      ],
+      "block_id": "page-0931-block-0013",
+      "order": 13,
+      "text": "Contrôle perdu\nTrouble du contrôle des impulsions\n",
+      "text_sha256": "582bd2ee93c5fa510cfc5f5d8492ed4819bb62ffe2747c5334f0399ab58518ad"
+    },
+    {
+      "bbox": [
+        310.5,
+        596.6019897460938,
+        513.5460815429688,
+        606.4281616210938
+      ],
+      "block_id": "page-0931-block-0014",
+      "order": 14,
+      "text": "Abus de substances\nTrouble de la personnalité\n",
+      "text_sha256": "e74c2b935dfdc12fd5af9aecafcb2573e300dc90ec92d9d838fe13a91f1c5fc3"
+    },
+    {
+      "bbox": [
+        310.5,
+        615.0519409179688,
+        415.73236083984375,
+        634.8781127929688
+      ],
+      "block_id": "page-0931-block-0015",
+      "order": 15,
+      "text": "Persistance du comportement de\nconsommation\n",
+      "text_sha256": "ee994a056c9bbd42fbf5ced068cb09ac02eb276fe1654b39c034cda5542e012c"
+    },
+    {
+      "bbox": [
+        431.5,
+        615.0519409179688,
+        531.6990966796875,
+        624.8781127929688
+      ],
+      "block_id": "page-0931-block-0016",
+      "order": 16,
+      "text": "Trouble obsessionnel-compulsif\n",
+      "text_sha256": "113b2273720f2a8933b7d6bd9a49fb056894d136bde85eeba66ebc4d45eff40a"
+    },
+    {
+      "bbox": [
+        310.5,
+        643.4519653320312,
+        497.23602294921875,
+        653.2781372070312
+      ],
+      "block_id": "page-0931-block-0017",
+      "order": 17,
+      "text": "Tolérance\nRenforcement positif\n",
+      "text_sha256": "581ef5883105e976363db30e4e50282e158ca2b406714422053a3ccd9e530645"
+    },
+    {
+      "bbox": [
+        310.5,
+        661.9019775390625,
+        394.7040100097656,
+        681.7281494140625
+      ],
+      "block_id": "page-0931-block-0018",
+      "order": 18,
+      "text": "Envahissement dans la vie\nquotidienne\n",
+      "text_sha256": "98bf7727e58821d87a2167bf5fd2ca88c100857a2dc6a2a469c2277996d8e302"
+    },
+    {
+      "bbox": [
+        431.5,
+        661.9019775390625,
+        464.8089904785156,
+        671.7281494140625
+      ],
+      "block_id": "page-0931-block-0019",
+      "order": 19,
+      "text": "Perversion\n",
+      "text_sha256": "1dc8985ef00baa032d31eb24a00888b1b3cdd8e4d56d7e01cc178cdab5bbc204"
+    },
+    {
+      "bbox": [
+        310.5,
+        690.3019409179688,
+        462.6310119628906,
+        700.1281127929688
+      ],
+      "block_id": "page-0931-block-0020",
+      "order": 20,
+      "text": "Exclusion sociale\nAliénation\n",
+      "text_sha256": "67bcae0450ccf69621827333eb79cb3faec84e3f797dcacc3b64a2c4c273070b"
+    },
+    {
+      "bbox": [
+        310.5,
+        708.751953125,
+        499.9090270996094,
+        718.578125
+      ],
+      "block_id": "page-0931-block-0021",
+      "order": 21,
+      "text": "Sevrage\nRenforcement négatif\n",
+      "text_sha256": "d6166ca60c0de7f958293d562545f33908b2123c09e5ebdd58ea0c64b30ff519"
+    }
+  ],
+  "coordinates_sha256": "18da2ca561f3863b619097f1cea684fe9a90229547a5010130f37de41f19a1ea",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0931",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "914\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n• La tolérance fait en sorte que la substance doit être prise à\nplus haute dose pour produire le même eet, ce qui conduit\nà un renforcement positif du comportement de consom-\nmation.\n• L’envahissement, c’est-à-dire la place que prend la consom-\nmation dans la vie quotidienne, est lié au fait que la consom-\nmation produit un court-circuit en donnant un accès direct\nà l’« autoroute du plaisir », un relais de circuits cérébraux\ngérant la récompense, dont la récompense sexuelle, ce qui\nrend le phénomène de la dépendance analogue à une per-\nversion, puisqu’il y a détournement de la nalité du plaisir\npar le moyen qui devient une n en soi.\n• L’exclusion, sociale qui amène peu à peu la personne à perdre\nses liens professionnels, familiaux et interpersonnels, cor-\nrespond en psychiatrie au concept d’aliénation (la perte\nde tous ses liens), qui est souvent la marque de troubles\ngraves et persistants. La personne s’enfonce dans la spirale\nde la dépendance toxicomane (Koob & Le Moal, 2001) : au\ndépart, elle cherche un plaisir découvert par l’usage jouissif\nde la substance et, petit à petit, elle se trouve enfermée dans\nun processus qui mène du plaisir à l’abus, pour aboutir à\nune situation où la drogue peut devenir un besoin et parfois\nmême, un néobesoin vital (Lowenstein, 2005). Coincée dans\nle fond de l’entonnoir, la personne ne trouve plus dans cette\nspirale ce qu’elle y cherchait, c’est-à-dire du plaisir ; elle se\nretrouve plutôt déterminée par des enjeux contraignants\nayant pris la forme d’un besoin irrépressible (craving). Ce qui\nse présente initialement comme une libre exploration devient\ninsidieusement un processus tyrannique : c’est le lucratif et\nperformant marché de l’alcool, des drogues et du jeu, dont\nles utilisateurs deviennent les grands perdants.\n• Le sevrage se traduit par des symptômes désagréables au\nmoment du retrait des eets de la substance, amenant, par\nrenforcement négatif, à prendre de nouveau de la substance\npour soulager ce malaise.\nLe tableau 39.3 présente de façon schématique les relations\npostulées ici.\nchez les personnalités impulsives (Bornovalova & al., 2005),\nmais également chez les personnes sourant d’un trouble\nbipolaire (Swann, 2010) et possiblement dans la schizophrénie.\nEnn, selon certains auteurs, des facteurs génétiques com-\nmuns à la toxicomanie et à la maladie mentale contribueraient à\nl’émergence de troubles comorbides ; mais à ce jour, ces modèles\ndemeurent spéculatifs et peu appuyés sur le plan empirique.\n39.4.4 Modèle des facteurs multiples\nLes modèles explicatifs présentés précédemment ne sont pas\nmutuellement exclusifs, de sorte que Gregg &al. (2007) et Mueser\n& al. (1998) ont proposé que de multiples facteurs contribueraient\nà l’émergence de troubles concomitants. Dans cette perspective, les\nrelations entre la toxicomanie et la maladie mentale sont conçues\ncomme étant bidirectionnelles. Ainsi, le trouble psychiatrique\nprédisposerait à la toxicomanie, et vice-versa. Selon le modèle\ndes facteurs multiples, ce sont essentiellement les mêmes hypo-\nthèses étiologiques (automédication, hypersensibilité, impulsivité,\netc.) qui sont proposées, à cette diérence que l’accent est mis\nsur la complémentarité des diérents facteurs explicatifs. Dans\nle futur, il serait pertinent de pondérer l’importance relative de\nces facteurs explicatifs selon les diérentes comorbidités. Par\nexemple, on peut penser que :\n• la relation entre la consommation de dépresseurs du SNC\n(alcool, héroïne, benzodiazépines) et les troubles anxieux serait\nliée à une forme d’automédication (renforcement négatif) ;\n• la relation entre la prise de stimulants et les troubles de la\npersonnalité limite (borderline) et antisociale, serait reliée à\nl’impulsivité ;\n• la relation entre la consommation d’hallucinogènes et la psy-\nchose ferait intervenir des enjeux d’ordre phénoménologique,\ntels que le désir de se distraire, de fuir ou d’oublier.\n39.4.5 Attitudes face à la consommation\nLa consommation de substances se décline sur plusieurs\nniveaux qui sont associés à une variété de comportements et\nde conséquences.\n• La perte de contrôle dans la consommation évoque un trouble\nde contrôle des impulsions, c’est-à-dire un besoin irrépres-\nsible créant une tension que l’impulsion va soulager tout en\nprocurant du plaisir.\n• La notion d’abus de substances est généralement constatée\npar des manifestations comportementales désinhibées, l’ap-\nparentant aux troubles externalisés typiques des personnalités\nimpulsives (problèmes légaux, professionnels, interpersonnels,\nsituations dangereuses). Ces manifestations surviennent lors\nd’une consommation excessive.\n• La notion de persistance dans la consommation s’apparente\nau trouble obsessionnel-compulsif (TOC). Il y a toutefois une\ndiérence : le TOC évite le plaisir alors qu’ici, on assiste plutôt\nà un phénomène d’impulsion-compulsion, c’est-à-dire que la\npersonne est orientée vers le plaisir par une compulsion de\nrépétition (ad-dictus, la conduite est dictée) au point de devenir\nune habitude. Ce qu’il y a de commun, c’est que cette persistance\nse fait en réponse à des indices (cues) environnementaux qui\nalimentent une obsession de consommer. Le comportement\nde persévération s’apparente à un rituel compulsif.\nTABLEAU 39.3 Troubles liés aux substances et tableaux\npsychiatriques apparentés\nAttitudes liées aux substances\nAspects psychiatriques\napparentés\nContrôle perdu\nTrouble du contrôle des impulsions\nAbus de substances\nTrouble de la personnalité\nPersistance du comportement de\nconsommation\nTrouble obsessionnel-compulsif\nTolérance\nRenforcement positif\nEnvahissement dans la vie\nquotidienne\nPerversion\nExclusion sociale\nAliénation\nSevrage\nRenforcement négatif\n",
+  "raw_text_sha256": "afd6560d61865cfc172e78e57203d35f35189d0c165d390acbe87a13b1dd9b43",
+  "source_page_display": 932,
+  "source_page_index": 931
+}

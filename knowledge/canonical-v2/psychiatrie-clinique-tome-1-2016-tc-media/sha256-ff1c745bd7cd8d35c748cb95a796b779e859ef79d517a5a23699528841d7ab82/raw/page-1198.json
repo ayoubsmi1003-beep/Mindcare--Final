@@ -1,0 +1,640 @@
+{
+  "block_sequence_sha256": "3ef1516e7dc86be9ad07aa8bad5286b2b82ee13e70bcead1f0a8030151ef1501",
+  "blocks": [
+    {
+      "bbox": [
+        496.5,
+        747.5753784179688,
+        555.02001953125,
+        758.8693237304688
+      ],
+      "block_id": "page-1198-block-0001",
+      "order": 1,
+      "text": "Index\nI37\n",
+      "text_sha256": "d3e3fdaad82cfa6f4768ca8bf7f795c930914ae62e27af828e78f1b9a5568dd9"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.82011795043945,
+        191.4044952392578,
+        77.41728973388672
+      ],
+      "block_id": "page-1198-block-0002",
+      "order": 2,
+      "text": "motrice (go/no-go), 182\ninsight, voir introspection\ninsomnie, 729-733, 1444-1458\n",
+      "text_sha256": "a8e9308b67f762f7c391ff0d23cbf247772fa2bff91a29197989e78c3a8a5ef6"
+    },
+    {
+      "bbox": [
+        63.0,
+        78.32012176513672,
+        206.8099365234375,
+        89.91728973388672
+      ],
+      "block_id": "page-1198-block-0003",
+      "order": 3,
+      "text": "antipsychotiques et __, 732, 1456,\n",
+      "text_sha256": "01701b52b97c790069b5778e194471db8045250ad6ae52366168013d38bde58b"
+    },
+    {
+      "bbox": [
+        63.0,
+        90.82012176513672,
+        209.8626708984375,
+        114.91728973388672
+      ],
+      "block_id": "page-1198-block-0004",
+      "order": 4,
+      "text": "1471\nchez les enfants et les adolescents,\n",
+      "text_sha256": "cd1d3955756403562e76c2bf5e22f1f8fff77126a258f4f321ace9d06cec3e90"
+    },
+    {
+      "bbox": [
+        54.0,
+        115.82012176513672,
+        213.012451171875,
+        239.9172821044922
+      ],
+      "block_id": "page-1198-block-0005",
+      "order": 5,
+      "text": "729-730\ncomorbide, 1420, 1453\ndépression et __, 396\ndouleur chronique et __, 561\nprimaire, 1420, 1453\nthérapie cognitive et __, 1658-1659\ninstitutions (de soins), 1402, 1412\ninsula, 110, 166, 477, 700\ninsulinothérapie, 1069-1070, 1430\nintégration, 168-169, 281, 989, 1014,\n",
+      "text_sha256": "aa6a67ef512678bf56e4f196349d034a192ecbf0824dbb6d20078c4ba5388b5f"
+    },
+    {
+      "bbox": [
+        54.0,
+        240.8201141357422,
+        204.5314483642578,
+        277.41729736328125
+      ],
+      "block_id": "page-1198-block-0006",
+      "order": 6,
+      "text": "1251, 1346, 1399, 1782\nintellectualisation, 1591t\nintelligence, 51t, 65, 91t, 186, 1253-\n",
+      "text_sha256": "e8e0d9821a239898b0c58caad5333eeab59a4439a20444dc7e794ddca099f63f"
+    },
+    {
+      "bbox": [
+        63.0,
+        278.32012939453125,
+        199.5330047607422,
+        339.91729736328125
+      ],
+      "block_id": "page-1198-block-0007",
+      "order": 7,
+      "text": "1255, 1271-1272\ncourbe normale de l’__, 86f, 314\némotionnelle, 480\nlangage autistique et __, 1274\nquotient intellectuel (QI) et __,\n",
+      "text_sha256": "47d3ae89050a469f7e8ff5d07ca22c0e1f2854fd151aa6ba2745a9ff68179d26"
+    },
+    {
+      "bbox": [
+        54.0,
+        340.82012939453125,
+        141.1326446533203,
+        377.41729736328125
+      ],
+      "block_id": "page-1198-block-0008",
+      "order": 8,
+      "text": "1224t\nsociale, 85t-86\ninteraction(s), 36-37\n",
+      "text_sha256": "82ae54446a1bee3ba44c772bb0ff663b5c3b9b1973375e02d6a3ed9b10db94f5"
+    },
+    {
+      "bbox": [
+        63.0,
+        378.32012939453125,
+        210.39645385742188,
+        389.91729736328125
+      ],
+      "block_id": "page-1198-block-0009",
+      "order": 9,
+      "text": "médicamenteuses, 409, 1435-1439\n",
+      "text_sha256": "563a407a3c3ef439bc74046c7664bf97e2eda821c77d0a98b2eeacd4ffe33943"
+    },
+    {
+      "bbox": [
+        72.0,
+        391.85943603515625,
+        189.5580291748047,
+        402.35943603515625
+      ],
+      "block_id": "page-1198-block-0010",
+      "order": 10,
+      "text": "antagoniste des récepteurs\n",
+      "text_sha256": "18af56de8e4803d30fea7f1331467ffbf7aa74da2fc49ddce3cc44b2238180f3"
+    },
+    {
+      "bbox": [
+        72.0,
+        404.35943603515625,
+        209.71051025390625,
+        439.85943603515625
+      ],
+      "block_id": "page-1198-block-0011",
+      "order": 11,
+      "text": "NMDA (mémantine) et __,\n1519\nantidépresseurs et __, 1503,\n",
+      "text_sha256": "28fd20b7bcc895f9bcff18e45a7a5c170db76303123456e140389e8f075f7339"
+    },
+    {
+      "bbox": [
+        72.0,
+        440.88165283203125,
+        201.10801696777344,
+        464.85943603515625
+      ],
+      "block_id": "page-1198-block-0012",
+      "order": 12,
+      "text": "1504-1508t\nantipsychotiques et __, 1478-\n",
+      "text_sha256": "1592d1eb26d8253c82276da57b0420d70bac647f91e142dbcbf15d3046f01316"
+    },
+    {
+      "bbox": [
+        72.0,
+        466.85943603515625,
+        199.93777465820312,
+        489.85943603515625
+      ],
+      "block_id": "page-1198-block-0013",
+      "order": 13,
+      "text": "1479\nbenzodiazépines et __, 1450-\n",
+      "text_sha256": "48ce66eea1096f6f48c73cb3c04497482e3551cff1f63e9c9b39ff94776879e5"
+    },
+    {
+      "bbox": [
+        72.0,
+        491.85943603515625,
+        209.6077423095703,
+        514.8594360351562
+      ],
+      "block_id": "page-1198-block-0014",
+      "order": 14,
+      "text": "1451\ninhibiteurs de la cholinestérase\n",
+      "text_sha256": "db03f401601b971dda03d686ec330057d99afafe2d95f5262a31e90c17a7826b"
+    },
+    {
+      "bbox": [
+        63.0,
+        516.8594360351562,
+        184.64950561523438,
+        564.9172973632812
+      ],
+      "block_id": "page-1198-block-0015",
+      "order": 15,
+      "text": "et __, 1519\nlithium et __, 1540, 1540t\nparent-enfant, 1225\nsociales\n",
+      "text_sha256": "2aa3adb01c3fd46b5ad17832fca035bf3f46b18854eb23cbbb4445106726bfca"
+    },
+    {
+      "bbox": [
+        54.0,
+        565.8816528320312,
+        212.59950256347656,
+        602.4172973632812
+      ],
+      "block_id": "page-1198-block-0016",
+      "order": 16,
+      "text": "décits persistants des __, 1268t\ninteractionnisme, 282-284\ninterdisciplinarité, 981-991, 981t,\n",
+      "text_sha256": "fc2d7cc824f766e1642de72417bc9353820f3b6bd83a23899a047d956542586a"
+    },
+    {
+      "bbox": [
+        54.0,
+        603.3201293945312,
+        117.16050720214844,
+        627.4172973632812
+      ],
+      "block_id": "page-1198-block-0017",
+      "order": 17,
+      "text": "1015-1018\nInternet\n",
+      "text_sha256": "d4a0cc3552abfd9fef35cb5feb8910e44301e7c6333987a67d72c0a926058a6c"
+    },
+    {
+      "bbox": [
+        63.0,
+        628.0945434570312,
+        203.28854370117188,
+        639.9172973632812
+      ],
+      "block_id": "page-1198-block-0018",
+      "order": 18,
+      "text": "usage problématique de l’__, 845-\n",
+      "text_sha256": "1a0f42c6b1c567ae95039a57a5364d734fb48a4f38cdeeb1948646b25fdd6079"
+    },
+    {
+      "bbox": [
+        54.0,
+        640.5945434570312,
+        117.93450927734375,
+        664.9172973632812
+      ],
+      "block_id": "page-1198-block-0019",
+      "order": 19,
+      "text": "847\nintervention(s)\n",
+      "text_sha256": "d96190fd7313eec0a0a4de648cc0cb4345edc5a06f2b9c3c235f8e2d266b0106"
+    },
+    {
+      "bbox": [
+        63.0,
+        665.8201293945312,
+        209.83250427246094,
+        702.4172973632812
+      ],
+      "block_id": "page-1198-block-0020",
+      "order": 20,
+      "text": "administratives, 1088t\naux proches aidants, 1398-1399\ncentrées sur des dimensions inter-\n",
+      "text_sha256": "eb5a643fca2ce883fa219e41514cb1f9fec28d06c737ee59ec0be4bad77d1b03"
+    },
+    {
+      "bbox": [
+        81.0,
+        703.3201293945312,
+        202.8121337890625,
+        727.4172973632812
+      ],
+      "block_id": "page-1198-block-0021",
+      "order": 21,
+      "text": "personnelles et dynamiques,\n1133\n",
+      "text_sha256": "7045f71987a8427de008086e20bc3f75320958a436f4c79d644eb42c91a318d7"
+    },
+    {
+      "bbox": [
+        234.0,
+        40.82011795043945,
+        361.06390380859375,
+        52.41728591918945
+      ],
+      "block_id": "page-1198-block-0022",
+      "order": 22,
+      "text": "cognitivo-comportementales,\n",
+      "text_sha256": "b2f8c93949f2a37b963294840c39e98097e3cde1a5c7eba8e720b5d7d7ef2f5b"
+    },
+    {
+      "bbox": [
+        234.0,
+        53.32011795043945,
+        380.67303466796875,
+        177.4172821044922
+      ],
+      "block_id": "page-1198-block-0023",
+      "order": 23,
+      "text": "576\ncommunautaires, 869\ncomportementale, 1261t\nd’information, 1690\nde couple, 868\nde crise, 485, 1112-1115\nde sensibilisation, 1690\nde soutien psychologique, 1690\nde traitement, 1259\nen situation d’urgence, 1094-1095,\n",
+      "text_sha256": "039d6a4fcd43e8cd9430c8fe77069a2754252ee67f6e09e15dde38ee77a090f8"
+    },
+    {
+      "bbox": [
+        234.0,
+        178.3201141357422,
+        369.76837158203125,
+        264.91729736328125
+      ],
+      "block_id": "page-1198-block-0024",
+      "order": 24,
+      "text": "1094t, 1113-1115\nfamiliales, 869, 1777\nhumanistes, 1578\nindividuelle adaptée, 1262-1263\nparent-enfant, 1299\npsychodynamiques, 854, 1578\nsociales, 310, 361-362, 365-366,\n",
+      "text_sha256": "15e61c42e7ee6c1e161dc251c2074ec78142da18637f99f2a10d52e677ffb0c4"
+    },
+    {
+      "bbox": [
+        234.0,
+        265.82012939453125,
+        376.4092102050781,
+        339.91729736328125
+      ],
+      "block_id": "page-1198-block-0025",
+      "order": 25,
+      "text": "390, 408-409, 486, 508, 527,\n576, 802, 825, 869, 904, 1164,\n1259, 1285, 1329\nschizophrénie et __, 361-362\ntrouble bipolaire et __, 390\ntroubles liés à l’alcool et __, 869-\n",
+      "text_sha256": "e66bbe214128c68d946f4ab340eaf329e8b62d428f83c768195f15d1a3c5bd71"
+    },
+    {
+      "bbox": [
+        225.0,
+        340.82012939453125,
+        303.8160400390625,
+        364.91729736328125
+      ],
+      "block_id": "page-1198-block-0026",
+      "order": 26,
+      "text": "870\nintimidation, 1320\n",
+      "text_sha256": "f9fc6da4d2b0f69a3d5201f130639e2406c8ce99924251502a184be64feee3d1"
+    },
+    {
+      "bbox": [
+        225.0,
+        365.82012939453125,
+        383.9424133300781,
+        414.91729736328125
+      ],
+      "block_id": "page-1198-block-0027",
+      "order": 27,
+      "text": "à l’école, 742\nau travail, 269\ndu patient, 31\nintoxication, 170, 433, 433t, 749t, 579,\n",
+      "text_sha256": "00c592ab216d32084967ef25c4afa03f4a3676d25b5addb572c0268561391f27"
+    },
+    {
+      "bbox": [
+        225.0,
+        415.82012939453125,
+        369.8656005859375,
+        439.91729736328125
+      ],
+      "block_id": "page-1198-block-0028",
+      "order": 28,
+      "text": "858, 859t, 876-903, 1097-1099\nintrospection, 67-68, 1590t\n",
+      "text_sha256": "3e08771353373381506dc1c54d4872baa9ab80bbc10b5541c07e65f5c7a7ddf5"
+    },
+    {
+      "bbox": [
+        234.0,
+        440.82012939453125,
+        375.760009765625,
+        452.41729736328125
+      ],
+      "block_id": "page-1198-block-0029",
+      "order": 29,
+      "text": "autocritique et capacité d’__, 51t,\n",
+      "text_sha256": "00ae2d2ab919b1e67bec803886c2bb8e3f891e8956d883798c078a947afd23af"
+    },
+    {
+      "bbox": [
+        225.0,
+        453.32012939453125,
+        379.4590148925781,
+        489.91729736328125
+      ],
+      "block_id": "page-1198-block-0030",
+      "order": 30,
+      "text": "67, 186, 1104\nintrusions, 520, 522\ninvalidité, 275-276, 533t, 561t, 1023,\n",
+      "text_sha256": "bf1d96cf6b21f0f9231daff7a90cdd1e60db907a3c99f1684759eb98abc9bdf1"
+    },
+    {
+      "bbox": [
+        225.0,
+        490.82012939453125,
+        365.08148193359375,
+        552.4172973632812
+      ],
+      "block_id": "page-1198-block-0031",
+      "order": 31,
+      "text": "1768\ndouleur chronique et __, 559\net travail, 259-279\ninvestissement aectif, 1732\nirritabilité, 607t, 650, 975t, 1140-\n",
+      "text_sha256": "31f5c68beaf77c62cdfeb93dbb09c5e49183a159392ce321bdcc50b1b731cab7"
+    },
+    {
+      "bbox": [
+        234.0,
+        553.3201293945312,
+        379.3315124511719,
+        652.4172973632812
+      ],
+      "block_id": "page-1198-block-0032",
+      "order": 32,
+      "text": "1141t, 1320, 1648t\ncausée par la caféine, 882\ncausée par la douleur, 275\ncausée par le cannabis, 886\nchez les jeunes, 400, 409\nphase maniaque et __, 376, 378\nréduction de l’__, 205\ntraitement de l’__, 506, 648, 1283-\n",
+      "text_sha256": "259a2af47d1594779c596b886fa48321e6e7a6d03853f7122a5b63c38e5f7042"
+    },
+    {
+      "bbox": [
+        225.0,
+        653.3201293945312,
+        376.49664306640625,
+        689.9172973632812
+      ],
+      "block_id": "page-1198-block-0033",
+      "order": 33,
+      "text": "1284, 1516\nisolation de l’aect, 1591t\nisolement social, 240, 267-268, 270,\n",
+      "text_sha256": "b63baef4e1fb05a57d0d40448aab67a43b98a28d8e56dcd266fcf97808499573"
+    },
+    {
+      "bbox": [
+        234.0,
+        690.8201293945312,
+        372.5751953125,
+        727.4172973632812
+      ],
+      "block_id": "page-1198-block-0034",
+      "order": 34,
+      "text": "273, 317, 366, 576, 1028, 1075,\n1402, 1406, 1411t-1412, 1778\nréduction de l’__, 1685t\n",
+      "text_sha256": "a44929ae023e48fa5d29d1278df55ba440f5e9f2553bf76f160c91de5022fd2c"
+    },
+    {
+      "bbox": [
+        396.0,
+        40.82011795043945,
+        448.14849853515625,
+        64.91728210449219
+      ],
+      "block_id": "page-1198-block-0035",
+      "order": 35,
+      "text": "isthme, 170f\nitinérance\n",
+      "text_sha256": "d56c2103bbd560a6e5c68c4e88b57cd60857495ebc79260d9cd9b33593c0befa"
+    },
+    {
+      "bbox": [
+        405.0,
+        65.82012176513672,
+        535.4064331054688,
+        77.41728973388672
+      ],
+      "block_id": "page-1198-block-0036",
+      "order": 36,
+      "text": "milieu de vie et __, 1026-1027,\n",
+      "text_sha256": "16108916789b0b6c7d18ffe03e99ca67b445109e9d8cfeccedc05705875712e4"
+    },
+    {
+      "bbox": [
+        405.0,
+        78.32012176513672,
+        501.60015869140625,
+        102.41728973388672
+      ],
+      "block_id": "page-1198-block-0037",
+      "order": 37,
+      "text": "1031\ntoxicomanie et __, 911\n",
+      "text_sha256": "c3212a2b212f005341ab6203adef24f1e32f7bd5b74af833a251e2fb83d833aa"
+    },
+    {
+      "bbox": [
+        396.0,
+        107.90703582763672,
+        549.6099853515625,
+        135.9172821044922
+      ],
+      "block_id": "page-1198-block-0038",
+      "order": 38,
+      "text": "J\njeu d’argent pathologique, 840-845,\n",
+      "text_sha256": "9c124c0f7fd136feff804a56f7e32dbe316c3c85ffc16dc5866a516eaa6275ab"
+    },
+    {
+      "bbox": [
+        396.0,
+        136.8201141357422,
+        534.2100219726562,
+        173.4172821044922
+      ],
+      "block_id": "page-1198-block-0039",
+      "order": 39,
+      "text": "841t, 843t\njeunes psychotiques, 1026\njugement, 39-41, 51t, 66-67, 67t,\n",
+      "text_sha256": "a915a992f0196986b5b6b0f51891e2d225d173a08e6a279f3d63b6cbe21a39d7"
+    },
+    {
+      "bbox": [
+        396.0,
+        174.3201141357422,
+        521.07275390625,
+        223.4172821044922
+      ],
+      "block_id": "page-1198-block-0040",
+      "order": 40,
+      "text": "87-90, 187, 215-215, 401,\n585, 603t, 722, 1093,\n1157-1158\njustice, 24, 999, 1187-1199\n",
+      "text_sha256": "87a1e3193299db819f015ce1adaa8238e8b72603ffe92ceba71b9e3ad3587513"
+    },
+    {
+      "bbox": [
+        396.0,
+        228.9070281982422,
+        515.8994750976562,
+        281.91729736328125
+      ],
+      "block_id": "page-1198-block-0041",
+      "order": 41,
+      "text": "K\nkétamine, 901\nkinésithérapie, 576\nkleptomanie, 832-834, 841t\n",
+      "text_sha256": "11fd27624aca065f40e1df64ff26a4649dd0e5aaf0e0ca6116027ef327bb3e19"
+    },
+    {
+      "bbox": [
+        396.0,
+        287.40704345703125,
+        548.6744384765625,
+        327.91729736328125
+      ],
+      "block_id": "page-1198-block-0042",
+      "order": 42,
+      "text": "L\nlactophilie, 820\nlangage, 24, 54, 54f, 81, 83, 182-185,\n",
+      "text_sha256": "dd21b4881de05922d24665782143121e9c4d5f6a677bb53369f8fbef7c54ea50"
+    },
+    {
+      "bbox": [
+        405.0,
+        328.82012939453125,
+        550.1495971679688,
+        377.91729736328125
+      ],
+      "block_id": "page-1198-block-0043",
+      "order": 43,
+      "text": "1224, 1333-1335t, 1340-1341,\n1342f\nautistique, 1273-1274\ndéveloppement du __, 1332-1337,\n",
+      "text_sha256": "a6f9549927af30b465c9f588f5807e0be26211bcfe6d5f041d212f6ff31e597e"
+    },
+    {
+      "bbox": [
+        405.0,
+        378.82012939453125,
+        536.6384887695312,
+        415.41729736328125
+      ],
+      "block_id": "page-1198-block-0044",
+      "order": 44,
+      "text": "1333-1335t\nproblème de __, 348\npsychanalytique, 216-219, 791,\n",
+      "text_sha256": "c00372b6adf03c7fb3ac5e89038d1c7232c3a971cf4dab9114bac4f583aa43c1"
+    },
+    {
+      "bbox": [
+        396.0,
+        416.32012939453125,
+        526.2139892578125,
+        465.41729736328125
+      ],
+      "block_id": "page-1198-block-0045",
+      "order": 45,
+      "text": "1588\nstéréotypé, 1273\nleadership, 984-988\nlenteur idéique, 378, voir aussi\n",
+      "text_sha256": "23a392e72931454917cd473a7d4f400bc58d302512b71b4b9d68696cd4bedccf"
+    },
+    {
+      "bbox": [
+        396.0,
+        466.32012939453125,
+        535.2099609375,
+        502.91729736328125
+      ],
+      "block_id": "page-1198-block-0046",
+      "order": 46,
+      "text": "bradypsychie\nlésion auto-immune, 449\nléthargie, 51t, 478, 580, 625, 722,\n",
+      "text_sha256": "442433469141b8c42e18618b8595a7c6eb9c87d0b997327c8c42ff0b921a6773"
+    },
+    {
+      "bbox": [
+        396.0,
+        503.82012939453125,
+        546.8260498046875,
+        540.4172973632812
+      ],
+      "block_id": "page-1198-block-0047",
+      "order": 47,
+      "text": "748, 824t, 888, 970, 1278, 1451,\n1540\nleucopénie, 632t, 708t, 710, 1112t,\n",
+      "text_sha256": "f2e8b6f8a6d597ae5bd10a00851b42ffeaae3950491a20a56f6cc2b4ed61021e"
+    },
+    {
+      "bbox": [
+        396.0,
+        541.3201293945312,
+        553.0819091796875,
+        602.9172973632812
+      ],
+      "block_id": "page-1198-block-0048",
+      "order": 48,
+      "text": "1478, 1480t, 1545\nlibéralisme, 807, 1203-1204, 1211\nlibido, baisse de __, 755\nlinguaphilie, 814\nliquide céphalorachidien (LCR), 116,\n",
+      "text_sha256": "8a5d63cbdc1d8532b8d692ddd4cb9f7adcf81a06f1c26133c722d061ae47061d"
+    },
+    {
+      "bbox": [
+        396.0,
+        603.8201293945312,
+        552.5435791015625,
+        640.4172973632812
+      ],
+      "block_id": "page-1198-block-0049",
+      "order": 49,
+      "text": "125, 127, 134-135, 144, 552, 931,\n1278t, 1367\nlithium, 1431, 1536-1540\n",
+      "text_sha256": "fdd0e7fb129f1f4d36f2c156873dd8410d831a67ce6913d5fe148c4b57f63599"
+    },
+    {
+      "bbox": [
+        396.0,
+        641.3201293945312,
+        552.7994995117188,
+        677.9172973632812
+      ],
+      "block_id": "page-1198-block-0050",
+      "order": 50,
+      "text": "réactions indésirables du __, 1111t\nlittérature scientique, 299-300\nlobe(s), voir aussi gures\n",
+      "text_sha256": "ab54133850d680e5ea13172b82a53808180216396f7552397d2e60856b3e28ee"
+    },
+    {
+      "bbox": [
+        405.0,
+        678.8816528320312,
+        552.0599975585938,
+        702.9172973632812
+      ],
+      "block_id": "page-1198-block-0051",
+      "order": 51,
+      "text": "supplémentaires\nfrontal (frontaux), 110, 110f, 168f,\n",
+      "text_sha256": "fdda0b9b83637bf3d33748160a376e55114cba769cf75513ab407742c8aa700c"
+    },
+    {
+      "bbox": [
+        423.0,
+        703.8201293945312,
+        532.2838745117188,
+        727.9172973632812
+      ],
+      "block_id": "page-1198-block-0052",
+      "order": 52,
+      "text": "174f, 335f, 553f, 810, 829,\n1304\n",
+      "text_sha256": "3c11f1aa9089f07315e71dbef7d6f4109bc9467e48f372f17cfeba5a5fef5140"
+    }
+  ],
+  "coordinates_sha256": "d1d7a87261848eb8ff8eef22d2c92c31bfc8d7adc17b53a20c583916e7879964",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1198",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Index\nI37\nmotrice (go/no-go), 182\ninsight, voir introspection\ninsomnie, 729-733, 1444-1458\nantipsychotiques et __, 732, 1456,\n1471\nchez les enfants et les adolescents,\n729-730\ncomorbide, 1420, 1453\ndépression et __, 396\ndouleur chronique et __, 561\nprimaire, 1420, 1453\nthérapie cognitive et __, 1658-1659\ninstitutions (de soins), 1402, 1412\ninsula, 110, 166, 477, 700\ninsulinothérapie, 1069-1070, 1430\nintégration, 168-169, 281, 989, 1014,\n1251, 1346, 1399, 1782\nintellectualisation, 1591t\nintelligence, 51t, 65, 91t, 186, 1253-\n1255, 1271-1272\ncourbe normale de l’__, 86f, 314\némotionnelle, 480\nlangage autistique et __, 1274\nquotient intellectuel (QI) et __,\n1224t\nsociale, 85t-86\ninteraction(s), 36-37\nmédicamenteuses, 409, 1435-1439\nantagoniste des récepteurs\nNMDA (mémantine) et __,\n1519\nantidépresseurs et __, 1503,\n1504-1508t\nantipsychotiques et __, 1478-\n1479\nbenzodiazépines et __, 1450-\n1451\ninhibiteurs de la cholinestérase\net __, 1519\nlithium et __, 1540, 1540t\nparent-enfant, 1225\nsociales\ndécits persistants des __, 1268t\ninteractionnisme, 282-284\ninterdisciplinarité, 981-991, 981t,\n1015-1018\nInternet\nusage problématique de l’__, 845-\n847\nintervention(s)\nadministratives, 1088t\naux proches aidants, 1398-1399\ncentrées sur des dimensions inter-\npersonnelles et dynamiques,\n1133\ncognitivo-comportementales,\n576\ncommunautaires, 869\ncomportementale, 1261t\nd’information, 1690\nde couple, 868\nde crise, 485, 1112-1115\nde sensibilisation, 1690\nde soutien psychologique, 1690\nde traitement, 1259\nen situation d’urgence, 1094-1095,\n1094t, 1113-1115\nfamiliales, 869, 1777\nhumanistes, 1578\nindividuelle adaptée, 1262-1263\nparent-enfant, 1299\npsychodynamiques, 854, 1578\nsociales, 310, 361-362, 365-366,\n390, 408-409, 486, 508, 527,\n576, 802, 825, 869, 904, 1164,\n1259, 1285, 1329\nschizophrénie et __, 361-362\ntrouble bipolaire et __, 390\ntroubles liés à l’alcool et __, 869-\n870\nintimidation, 1320\nà l’école, 742\nau travail, 269\ndu patient, 31\nintoxication, 170, 433, 433t, 749t, 579,\n858, 859t, 876-903, 1097-1099\nintrospection, 67-68, 1590t\nautocritique et capacité d’__, 51t,\n67, 186, 1104\nintrusions, 520, 522\ninvalidité, 275-276, 533t, 561t, 1023,\n1768\ndouleur chronique et __, 559\net travail, 259-279\ninvestissement aectif, 1732\nirritabilité, 607t, 650, 975t, 1140-\n1141t, 1320, 1648t\ncausée par la caféine, 882\ncausée par la douleur, 275\ncausée par le cannabis, 886\nchez les jeunes, 400, 409\nphase maniaque et __, 376, 378\nréduction de l’__, 205\ntraitement de l’__, 506, 648, 1283-\n1284, 1516\nisolation de l’aect, 1591t\nisolement social, 240, 267-268, 270,\n273, 317, 366, 576, 1028, 1075,\n1402, 1406, 1411t-1412, 1778\nréduction de l’__, 1685t\nisthme, 170f\nitinérance\nmilieu de vie et __, 1026-1027,\n1031\ntoxicomanie et __, 911\nJ\njeu d’argent pathologique, 840-845,\n841t, 843t\njeunes psychotiques, 1026\njugement, 39-41, 51t, 66-67, 67t,\n87-90, 187, 215-215, 401,\n585, 603t, 722, 1093,\n1157-1158\njustice, 24, 999, 1187-1199\nK\nkétamine, 901\nkinésithérapie, 576\nkleptomanie, 832-834, 841t\nL\nlactophilie, 820\nlangage, 24, 54, 54f, 81, 83, 182-185,\n1224, 1333-1335t, 1340-1341,\n1342f\nautistique, 1273-1274\ndéveloppement du __, 1332-1337,\n1333-1335t\nproblème de __, 348\npsychanalytique, 216-219, 791,\n1588\nstéréotypé, 1273\nleadership, 984-988\nlenteur idéique, 378, voir aussi\nbradypsychie\nlésion auto-immune, 449\nléthargie, 51t, 478, 580, 625, 722,\n748, 824t, 888, 970, 1278, 1451,\n1540\nleucopénie, 632t, 708t, 710, 1112t,\n1478, 1480t, 1545\nlibéralisme, 807, 1203-1204, 1211\nlibido, baisse de __, 755\nlinguaphilie, 814\nliquide céphalorachidien (LCR), 116,\n125, 127, 134-135, 144, 552, 931,\n1278t, 1367\nlithium, 1431, 1536-1540\nréactions indésirables du __, 1111t\nlittérature scientique, 299-300\nlobe(s), voir aussi gures\nsupplémentaires\nfrontal (frontaux), 110, 110f, 168f,\n174f, 335f, 553f, 810, 829,\n1304\n",
+  "raw_text_sha256": "1c27f3197261adb0a7bf2036b9057a1dddf3e2d45d59a3e2d7819d19744123ec",
+  "source_page_display": 1199,
+  "source_page_index": 1198
+}

@@ -1,0 +1,400 @@
+{
+  "block_sequence_sha256": "955c71364002b8c3a1eee5c1fb2bbb96e774fb8d477aac8e074a61b413c16319",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0757-block-0001",
+      "order": 1,
+      "text": "740\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "16611c33d461cee08c781f3319effdd928c5a7c1e0b2994b7b93b77a0b7e3ef8"
+    },
+    {
+      "bbox": [
+        50.29999923706055,
+        41.002296447753906,
+        294.1400451660156,
+        53.320068359375
+      ],
+      "block_id": "page-0757-block-0002",
+      "order": 2,
+      "text": "TABLEAU 32.8 Critères diagnostiques des troubles de l’éveil\n",
+      "text_sha256": "81d6919cf51339f7ef934b1f379c060649618235d43a8c459cb91a886dbcf0b3"
+    },
+    {
+      "bbox": [
+        160.90000915527344,
+        59.624122619628906,
+        443.68798828125,
+        70.2002944946289
+      ],
+      "block_id": "page-0757-block-0003",
+      "order": 3,
+      "text": "DSM-5\nDSM-IV-TR\n",
+      "text_sha256": "67d368c78be7842a2bc99b149901566bcadf3c9d62623ea48bafcc32b3563ffb"
+    },
+    {
+      "bbox": [
+        65.8499984741211,
+        76.3741226196289,
+        454.2395324707031,
+        86.9502944946289
+      ],
+      "block_id": "page-0757-block-0004",
+      "order": 4,
+      "text": "307.46 (F51._) Trouble de l’éveil en sommeil non paradoxal\nSomnambulisme\n",
+      "text_sha256": "0d8bdad86f1149c75692e6b34661db1afe8de11ef639d011487c676b956c310e"
+    },
+    {
+      "bbox": [
+        52.25,
+        92.95195770263672,
+        290.5470275878906,
+        102.77812957763672
+      ],
+      "block_id": "page-0757-block-0005",
+      "order": 5,
+      "text": "A. Épisodes récurrents de réveil incomplet, survenant habituellement pen-\n",
+      "text_sha256": "375c8afc2c667b97d5763ac6de5850e798b2429db5773f5debfc8f78ac69778c"
+    },
+    {
+      "bbox": [
+        64.25,
+        102.95195770263672,
+        292.098876953125,
+        173.7781219482422
+      ],
+      "block_id": "page-0757-block-0006",
+      "order": 6,
+      "text": "dant le premier tiers de la période principale de sommeil, accompagnés\npar l’un des deux critères suivants :\n1. Somnambulisme : Épisodes répétés au cours desquels la personne\nquitte son lit et déambule pendant son sommeil. Au cours de ses\ndéambulations, le sujet a un visage inexpressif, le regard xe et ne\nréagit guère aux efforts de son entourage pour communiquer avec\nlui ; il ne peut être réveillé qu’avec beaucoup de difcultés.\n",
+      "text_sha256": "afdbbbf961e66433fd53f144a92872b265705dfa0782449eef89a3e938d06e70"
+    },
+    {
+      "bbox": [
+        64.25,
+        251.87286376953125,
+        293.563720703125,
+        311.77813720703125
+      ],
+      "block_id": "page-0757-block-0007",
+      "order": 7,
+      "text": "2. Terreurs nocturnes : Épisodes récurrents de réveils brutaux et terri-\nants, débutant habituellement par un cri d’effroi. Présence au cours\nde chaque épisode d’une peur intense et d’une activation neurové-\ngétative se traduisant par des signes tels que mydriase, tachycardie,\npolypnée, transpiration. Pendant l’épisode, la personne ne réagit que\npeu aux efforts faits par son entourage pour la réconforter.\n",
+      "text_sha256": "48a72eafdf06d6e0031e7347f8da1aaa7d412389296d77a7247b52da83ed4bcf"
+    },
+    {
+      "bbox": [
+        302.5,
+        125.95195007324219,
+        536.5763549804688,
+        135.7781219482422
+      ],
+      "block_id": "page-0757-block-0008",
+      "order": 8,
+      "text": "A. Épisodes répétés au cours desquels le sujet quitte son lit et déambule\n",
+      "text_sha256": "be710793c88d3c59781d54913993f1cbb95414d4537d94d7b5d4b6c6244df77c"
+    },
+    {
+      "bbox": [
+        302.5,
+        135.9519500732422,
+        542.9325561523438,
+        166.7781219482422
+      ],
+      "block_id": "page-0757-block-0009",
+      "order": 9,
+      "text": "pendant son sommeil ; ces épisodes surviennent habituellement au\ncours du premier tiers de la période principale de sommeil.\nB. Au cours de ses déambulations, le sujet a un visage inexpressif, le regard\n",
+      "text_sha256": "ae1e16781143edb80fd665c5e0688db7590492d6f927880cc022f6bfb174680b"
+    },
+    {
+      "bbox": [
+        302.5,
+        166.9519500732422,
+        536.6870727539062,
+        197.7781219482422
+      ],
+      "block_id": "page-0757-block-0010",
+      "order": 10,
+      "text": "xe, et ne réagit guère aux efforts de son entourage pour communiquer\navec lui ; il ne peut être réveillé qu’avec beaucoup de difcultés.\nC. Au réveil (à la n de l’épisode de somnambulisme ou le lendemain\n",
+      "text_sha256": "47a35d129e8e33d1172f52640d3925ab094f2b484430296f7592febf5d89ba80"
+    },
+    {
+      "bbox": [
+        302.5,
+        197.9519500732422,
+        530.5960083007812,
+        218.7781219482422
+      ],
+      "block_id": "page-0757-block-0011",
+      "order": 11,
+      "text": "matin), le sujet ne garde aucun souvenir de l’épisode.\nD. Quelques minutes après le réveil d’un épisode de somnambulisme, les\n",
+      "text_sha256": "e8d6b759cdc3939908a756ae156ae813c755e5a097239866b345402974f5f140"
+    },
+    {
+      "bbox": [
+        314.5,
+        218.9519500732422,
+        542.26611328125,
+        238.7781219482422
+      ],
+      "block_id": "page-0757-block-0012",
+      "order": 12,
+      "text": "activités mentales et le comportement ne sont plus perturbés (bien qu’il\npuisse y avoir une brève période initiale de confusion et de désorientation).\n",
+      "text_sha256": "028c87ae8de8e3609ce5cd0ff8199359a9ba5085822bea206d8376ea9c2135b6"
+    },
+    {
+      "bbox": [
+        302.5,
+        243.35195922851562,
+        351.2980041503906,
+        253.17813110351562
+      ],
+      "block_id": "page-0757-block-0013",
+      "order": 13,
+      "text": "Idem à DSM-5.\n",
+      "text_sha256": "73e2b1c81f4b0cae397bef13680b1ec0f40f117881c7e4acde37a2d30a373dea"
+    },
+    {
+      "bbox": [
+        52.25,
+        316.3519592285156,
+        281.76605224609375,
+        326.1781311035156
+      ],
+      "block_id": "page-0757-block-0014",
+      "order": 14,
+      "text": "B. Il n’y a pas ou très peu (p. ex., seulement une scène visuelle unique)\n",
+      "text_sha256": "8eafa86bbd4cd6792650b82ddd1a350e8972ccf0c9e6301739b87a4dea9d5fa3"
+    },
+    {
+      "bbox": [
+        64.25,
+        326.3519592285156,
+        135.28701782226562,
+        336.1781311035156
+      ],
+      "block_id": "page-0757-block-0015",
+      "order": 15,
+      "text": "de souvenir d’un rêve.\n",
+      "text_sha256": "b9490dc5d927caf654da2628f5af045e25eda88e80b694a1db9d140edb3f4e6d"
+    },
+    {
+      "bbox": [
+        302.5,
+        316.3519592285156,
+        363.3310852050781,
+        326.1781311035156
+      ],
+      "block_id": "page-0757-block-0016",
+      "order": 16,
+      "text": "D. Idem à DSM-5.\n",
+      "text_sha256": "a25093c4e73c5e7e67b3176a2cccc790e8fc03ace507127f5b4c7ba5e37fc007"
+    },
+    {
+      "bbox": [
+        52.25,
+        340.8019714355469,
+        209.8603057861328,
+        350.6281433105469
+      ],
+      "block_id": "page-0757-block-0017",
+      "order": 17,
+      "text": "C. La personne garde une amnésie de l’épisode.\n",
+      "text_sha256": "4fc95750f4ee54d57e6316f4349bf223427052e4bc0395f8f6353d1175369d4c"
+    },
+    {
+      "bbox": [
+        52.25,
+        355.20196533203125,
+        273.9661560058594,
+        365.02813720703125
+      ],
+      "block_id": "page-0757-block-0018",
+      "order": 18,
+      "text": "D. Les épisodes sont à l’origine d’une détresse signicative ou d’une\n",
+      "text_sha256": "333bdd060dc61c1f6f009e59f5719ee08632a52782fd5647a43390dc20bd976b"
+    },
+    {
+      "bbox": [
+        64.25,
+        365.20196533203125,
+        277.6466369628906,
+        385.02813720703125
+      ],
+      "block_id": "page-0757-block-0019",
+      "order": 19,
+      "text": "altération du fonctionnement social, professionnel ou dans d’autres\ndomaines importants.\n",
+      "text_sha256": "ae7e0cc8b82dfbd43f3999754561e4561cd4c6247e69225aea82e30eb1197ba0"
+    },
+    {
+      "bbox": [
+        302.5,
+        355.20196533203125,
+        363.3440856933594,
+        365.02813720703125
+      ],
+      "block_id": "page-0757-block-0020",
+      "order": 20,
+      "text": "E. Idem à DSM-5.\n",
+      "text_sha256": "623c5ec74498d33a47207c86c1d4b8bb5aae0042d0559cf373e98ababace68cc"
+    },
+    {
+      "bbox": [
+        52.25,
+        389.6519470214844,
+        283.0556335449219,
+        399.4781188964844
+      ],
+      "block_id": "page-0757-block-0021",
+      "order": 21,
+      "text": "E. La perturbation n’est pas imputable aux effets physiologiques directs\n",
+      "text_sha256": "b37ea22370b93395f15121a3624814a3440d3df1da094a99ee788f36d52e7116"
+    },
+    {
+      "bbox": [
+        52.25,
+        399.6519470214844,
+        287.26806640625,
+        420.4781188964844
+      ],
+      "block_id": "page-0757-block-0022",
+      "order": 22,
+      "text": "d’une substance (p. ex., substance donnant lieu à abus, médicament).\nF. Des troubles mentaux et médicaux concomitants n’expliquent pas les\n",
+      "text_sha256": "9702d21d1ad40f715c61701deb0f30420171ad543c06221605f47afcf604bdf6"
+    },
+    {
+      "bbox": [
+        64.25,
+        420.6519470214844,
+        239.8733367919922,
+        430.4781188964844
+      ],
+      "block_id": "page-0757-block-0023",
+      "order": 23,
+      "text": "épisodes de somnambulisme ou de terreurs nocturnes.\n",
+      "text_sha256": "e22106d166945c92e335fac48dfdb8b595d108f42ed4e9f8adedd93204aa1392"
+    },
+    {
+      "bbox": [
+        302.5,
+        389.6519470214844,
+        363.3482971191406,
+        399.4781188964844
+      ],
+      "block_id": "page-0757-block-0024",
+      "order": 24,
+      "text": "F. Idem à DSM-5.\n",
+      "text_sha256": "27f350994248f7273de8065d110e782673c74b9f6edffd4b55718e7ebadc432a"
+    },
+    {
+      "bbox": [
+        52.25,
+        435.0519714355469,
+        242.38487243652344,
+        499.9924011230469
+      ],
+      "block_id": "page-0757-block-0025",
+      "order": 25,
+      "text": "Spécier le type :\n307.46 (F51.3) Type somnambulisme\nSpécier si :\nAvec alimentation liée au sommeil\nAvec comportement sexuel lié au sommeil (sexsomnie)\n307.46 (F51.4) Type terreur nocturne\n",
+      "text_sha256": "9053c3f6124fde1a6a28b485409bc497c5a8ca410e6602e488a49d0e59d6fd8b"
+    },
+    {
+      "bbox": [
+        48.25,
+        506.640625,
+        207.32640075683594,
+        515.5088500976562
+      ],
+      "block_id": "page-0757-block-0026",
+      "order": 26,
+      "text": "Sources : APA (2015), p. 469 ; APA (2004), p. 739, 745.\n",
+      "text_sha256": "44c09352513c37c254694508a97627fff14fb888089742f8925c63c127216d84"
+    },
+    {
+      "bbox": [
+        48.25,
+        519.640625,
+        549.025634765625,
+        537.375
+      ],
+      "block_id": "page-0757-block-0027",
+      "order": 27,
+      "text": "Traduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American Psychiatric\nAssociation,DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris, 2015. All rights reserved.\n",
+      "text_sha256": "fb5fb130300faff65420de5d3ef69a7ce144955db61ee8bbbf27d55196c347ac"
+    },
+    {
+      "bbox": [
+        48.25,
+        541.640625,
+        526.610107421875,
+        559.375
+      ],
+      "block_id": "page-0757-block-0028",
+      "order": 28,
+      "text": "Traduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation,DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\n",
+      "text_sha256": "12ed7cea618ee657b8988e6b4bda4ec9cea458d5f4a41e44899e176dc040e9cb"
+    },
+    {
+      "bbox": [
+        48.0,
+        575.9658203125,
+        291.3958740234375,
+        730.45849609375
+      ],
+      "block_id": "page-0757-block-0029",
+      "order": 29,
+      "text": "derniers mois de 17 %. L’expérience clinique suggère l’existence\nde plusieurs éléments communs avec le somnambulisme, avec\nlaquelle la somniloquie coexiste souvent, y compris l’amnésie de\nl’épisode et le sentiment d’être très fatigué le matin suivant une\nnuit « active ». La principale diérence entre les deux aections\nest que la somniloquie peut se produire :\n• en sommeil lent profond ; la prononciation est alors molle et\nle discours confus ;\n• en sommeil paradoxal, le discours est empreint d’émotions,\nintelligible et net. La somniloquie en sommeil paradoxal peut\naccompagner le trouble comportemental en sommeil paradoxal\n(voir la sous-section 32.7.5) et le trouble de stress post- traumatique.\nDu point de vue diérentiel, les vocalisations lors de crises\n",
+      "text_sha256": "9fd76cbb16afb6d1c9f2658c7f458699ece0e62ef97f81e05c756b2937e3d65c"
+    },
+    {
+      "bbox": [
+        318.0,
+        575.9658203125,
+        549.2568969726562,
+        632.45849609375
+      ],
+      "block_id": "page-0757-block-0030",
+      "order": 30,
+      "text": "d’épilepsie sont plus stéréotypées. La somniloquie cause surtout\nun problème pour les dormeurs à proximité à cause de l’intensité\nde la voix et possiblement du contenu lui-même du discours.\nOn ne peut toutefois entretenir une conversation soutenue avec\nle somniloque, par manque d’intérêt de la part de ce dernier.\n",
+      "text_sha256": "d64ac74e27ddb4e88eb93b7ca0cb7078a14f2028d6ed67bad736052871307143"
+    },
+    {
+      "bbox": [
+        306.0,
+        642.98681640625,
+        467.38177490234375,
+        659.12939453125
+      ],
+      "block_id": "page-0757-block-0031",
+      "order": 31,
+      "text": "32.7.3 Réveils confusionnels\n",
+      "text_sha256": "f3e931f845e2e1e072b55418b5e3d1c1a62adce1cac8383249f718e38618d278"
+    },
+    {
+      "bbox": [
+        306.0,
+        662.4658203125,
+        549.3013916015625,
+        730.45849609375
+      ],
+      "block_id": "page-0757-block-0032",
+      "order": 32,
+      "text": "Ce diagnostic est disparu du DSM-5 mais il fait partie de la clas-\nsication internationale des troubles du sommeil qui vient d’être\npubliée en 2014 par l’American Academy of Sleep Medicine et il\nest répertorié dans la CIM-10 (code G47.51). Il s’agit d’épisodes\nde réveils incomplets, habituellement lors du premier tiers de\nla nuit, en sommeil lent profond, mais parfois lors de siestes,\n",
+      "text_sha256": "a7ec3e89c8bc18d5d07a098a6d244883886e95e572bfacf0b61c50f6a77e1955"
+    }
+  ],
+  "coordinates_sha256": "7e9e04d9b1c843b611f037be603ce2ff6f16c9955026d6f3df8e08a79a82e3d2",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0757",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "740\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nTABLEAU 32.8 Critères diagnostiques des troubles de l’éveil\nDSM-5\nDSM-IV-TR\n307.46 (F51._) Trouble de l’éveil en sommeil non paradoxal\nSomnambulisme\nA. Épisodes récurrents de réveil incomplet, survenant habituellement pen-\ndant le premier tiers de la période principale de sommeil, accompagnés\npar l’un des deux critères suivants :\n1. Somnambulisme : Épisodes répétés au cours desquels la personne\nquitte son lit et déambule pendant son sommeil. Au cours de ses\ndéambulations, le sujet a un visage inexpressif, le regard xe et ne\nréagit guère aux efforts de son entourage pour communiquer avec\nlui ; il ne peut être réveillé qu’avec beaucoup de difcultés.\n2. Terreurs nocturnes : Épisodes récurrents de réveils brutaux et terri-\nants, débutant habituellement par un cri d’effroi. Présence au cours\nde chaque épisode d’une peur intense et d’une activation neurové-\ngétative se traduisant par des signes tels que mydriase, tachycardie,\npolypnée, transpiration. Pendant l’épisode, la personne ne réagit que\npeu aux efforts faits par son entourage pour la réconforter.\nA. Épisodes répétés au cours desquels le sujet quitte son lit et déambule\npendant son sommeil ; ces épisodes surviennent habituellement au\ncours du premier tiers de la période principale de sommeil.\nB. Au cours de ses déambulations, le sujet a un visage inexpressif, le regard\nxe, et ne réagit guère aux efforts de son entourage pour communiquer\navec lui ; il ne peut être réveillé qu’avec beaucoup de difcultés.\nC. Au réveil (à la n de l’épisode de somnambulisme ou le lendemain\nmatin), le sujet ne garde aucun souvenir de l’épisode.\nD. Quelques minutes après le réveil d’un épisode de somnambulisme, les\nactivités mentales et le comportement ne sont plus perturbés (bien qu’il\npuisse y avoir une brève période initiale de confusion et de désorientation).\nIdem à DSM-5.\nB. Il n’y a pas ou très peu (p. ex., seulement une scène visuelle unique)\nde souvenir d’un rêve.\nD. Idem à DSM-5.\nC. La personne garde une amnésie de l’épisode.\nD. Les épisodes sont à l’origine d’une détresse signicative ou d’une\naltération du fonctionnement social, professionnel ou dans d’autres\ndomaines importants.\nE. Idem à DSM-5.\nE. La perturbation n’est pas imputable aux effets physiologiques directs\nd’une substance (p. ex., substance donnant lieu à abus, médicament).\nF. Des troubles mentaux et médicaux concomitants n’expliquent pas les\népisodes de somnambulisme ou de terreurs nocturnes.\nF. Idem à DSM-5.\nSpécier le type :\n307.46 (F51.3) Type somnambulisme\nSpécier si :\nAvec alimentation liée au sommeil\nAvec comportement sexuel lié au sommeil (sexsomnie)\n307.46 (F51.4) Type terreur nocturne\nSources : APA (2015), p. 469 ; APA (2004), p. 739, 745.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American Psychiatric\nAssociation,DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation,DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\nderniers mois de 17 %. L’expérience clinique suggère l’existence\nde plusieurs éléments communs avec le somnambulisme, avec\nlaquelle la somniloquie coexiste souvent, y compris l’amnésie de\nl’épisode et le sentiment d’être très fatigué le matin suivant une\nnuit « active ». La principale diérence entre les deux aections\nest que la somniloquie peut se produire :\n• en sommeil lent profond ; la prononciation est alors molle et\nle discours confus ;\n• en sommeil paradoxal, le discours est empreint d’émotions,\nintelligible et net. La somniloquie en sommeil paradoxal peut\naccompagner le trouble comportemental en sommeil paradoxal\n(voir la sous-section 32.7.5) et le trouble de stress post- traumatique.\nDu point de vue diérentiel, les vocalisations lors de crises\nd’épilepsie sont plus stéréotypées. La somniloquie cause surtout\nun problème pour les dormeurs à proximité à cause de l’intensité\nde la voix et possiblement du contenu lui-même du discours.\nOn ne peut toutefois entretenir une conversation soutenue avec\nle somniloque, par manque d’intérêt de la part de ce dernier.\n32.7.3 Réveils confusionnels\nCe diagnostic est disparu du DSM-5 mais il fait partie de la clas-\nsication internationale des troubles du sommeil qui vient d’être\npubliée en 2014 par l’American Academy of Sleep Medicine et il\nest répertorié dans la CIM-10 (code G47.51). Il s’agit d’épisodes\nde réveils incomplets, habituellement lors du premier tiers de\nla nuit, en sommeil lent profond, mais parfois lors de siestes,\n",
+  "raw_text_sha256": "f94dff91e26bc840a29a41a6a76f8d3d06540f50d0d6ccb8b98d1bcd4f76e794",
+  "source_page_display": 758,
+  "source_page_index": 757
+}

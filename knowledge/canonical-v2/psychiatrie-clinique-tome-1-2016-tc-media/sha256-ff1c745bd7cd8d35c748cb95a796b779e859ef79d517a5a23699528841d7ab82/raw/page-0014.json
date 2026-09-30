@@ -1,0 +1,724 @@
+{
+  "block_sequence_sha256": "a20753e9a53da04afa9db201cdaa8e4fa51e3ba42f114d789bf1a09763e75def",
+  "blocks": [
+    {
+      "bbox": [
+        464.25,
+        746.822265625,
+        555.0,
+        758.9193725585938
+      ],
+      "block_id": "page-0014-block-0001",
+      "order": 1,
+      "text": "Abréviations\nxiii\n",
+      "text_sha256": "d281483f50ed04a05ad9547dc73c4937b772471a7ef2a347ba5b8f10bdd4b35b"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.4658203125,
+        195.5175018310547,
+        51.45849609375
+      ],
+      "block_id": "page-0014-block-0002",
+      "order": 2,
+      "text": "CMFC: Collège des médecins de fa-\n",
+      "text_sha256": "f51ce521704e24c7712be1145670a12ec74d02c73e17dd8465d921f4bee4e18f"
+    },
+    {
+      "bbox": [
+        54.0,
+        52.7158203125,
+        179.14051818847656,
+        75.8084945678711
+      ],
+      "block_id": "page-0014-block-0003",
+      "order": 3,
+      "text": "mille du Canada\nCMQ: Collège des médecins du\n",
+      "text_sha256": "c41acc351e14d984704adbfed995f8642f67370e3c1a6f455273f4ade996f0e4"
+    },
+    {
+      "bbox": [
+        54.0,
+        77.0658187866211,
+        207.58245849609375,
+        112.75849914550781
+      ],
+      "block_id": "page-0014-block-0004",
+      "order": 4,
+      "text": "Québec\nCMV: Cytomégalovirus\nCNRS: Centre national de la recherche\n",
+      "text_sha256": "4248e5aea2f667fc0af6e54fe94fd77ede70fcdb52f937da9846566402caaa3d"
+    },
+    {
+      "bbox": [
+        54.0,
+        114.01582336425781,
+        208.83970642089844,
+        149.6584930419922
+      ],
+      "block_id": "page-0014-block-0005",
+      "order": 5,
+      "text": "scientique\nCOMT: Catéchol-o-méthyl-transférase\nCPAP: Continuous positive airway\n",
+      "text_sha256": "c0ddb9add6c094dbcec98570156a93ae2e8cd8b7ca29e97b1622787a418e7c52"
+    },
+    {
+      "bbox": [
+        54.0,
+        151.021484375,
+        193.620361328125,
+        199.20849609375
+      ],
+      "block_id": "page-0014-block-0006",
+      "order": 6,
+      "text": "pressure\nCPK: Créatine phosphokinase\nCPT : Continuous performance test\nCRA: Community reinforcement\n",
+      "text_sha256": "8c12d49fedbafccc3b2879db0d348b8b31bc9809c7df6e094e5e5eeadef57abe"
+    },
+    {
+      "bbox": [
+        54.0,
+        200.521484375,
+        204.96749877929688,
+        223.55850219726562
+      ],
+      "block_id": "page-0014-block-0007",
+      "order": 7,
+      "text": "approach\nCRDI: Centre de réadaptation en dé-\n",
+      "text_sha256": "043d5003daa4e097774db2e1f8b509f1302e43aaeaa90c708005987af17916fc"
+    },
+    {
+      "bbox": [
+        54.0,
+        224.81582641601562,
+        167.6135711669922,
+        247.9084930419922
+      ],
+      "block_id": "page-0014-block-0008",
+      "order": 8,
+      "text": "cience intellectuelle\nCRF: Corticotropin-releasing\n",
+      "text_sha256": "77f8a9c28f2fa67d1bc4eb25e49fb9cce09eeab9bf15d642d45675586a79f735"
+    },
+    {
+      "bbox": [
+        54.0,
+        249.2158203125,
+        207.9878387451172,
+        296.6084899902344
+      ],
+      "block_id": "page-0014-block-0009",
+      "order": 9,
+      "text": "factor, substance libératrice de la\ncortico trophine, corticolibérine\nCRH: Corticostimuline\nCRM: Conseil de recherches médicales\n",
+      "text_sha256": "ca1bf69f1c83d6047fe9ee5cfdc57073dae42d54fe7e36d485404d7921de7ba2"
+    },
+    {
+      "bbox": [
+        54.0,
+        297.91583251953125,
+        200.52500915527344,
+        320.95849609375
+      ],
+      "block_id": "page-0014-block-0010",
+      "order": 10,
+      "text": "du Canada\nCRMCC: Collège royal des médecins\n",
+      "text_sha256": "8ad25b9e234db38133be18959673f1951769098f4f039d1af14b8f96994f9c9b"
+    },
+    {
+      "bbox": [
+        54.0,
+        322.2658386230469,
+        204.32757568359375,
+        345.3584899902344
+      ],
+      "block_id": "page-0014-block-0011",
+      "order": 11,
+      "text": "et chirurgiens du Canada\nCRSSS: Conseil régional de la santé et\n",
+      "text_sha256": "5ad09647966c7cc87905916b47e5c1eae350109191e119b6921d8215642fb2aa"
+    },
+    {
+      "bbox": [
+        54.0,
+        346.6158142089844,
+        196.83367919921875,
+        369.70849609375
+      ],
+      "block_id": "page-0014-block-0012",
+      "order": 12,
+      "text": "des services sociaux\nCSSS: Centre de santé et de services\n",
+      "text_sha256": "6cade0c88b3a6418dd2ced42b4b5179c905b16192aca16628e37af8ec67c9555"
+    },
+    {
+      "bbox": [
+        54.0,
+        370.9658203125,
+        205.77249145507812,
+        394.0585021972656
+      ],
+      "block_id": "page-0014-block-0013",
+      "order": 13,
+      "text": "sociaux\nCSST: Commission de la santé et de la\n",
+      "text_sha256": "a10fed3a066180e9cd5be880bcd32bdb8aad6c9febc55cc9ccf229259ae030be"
+    },
+    {
+      "bbox": [
+        54.0,
+        395.3658142089844,
+        200.33999633789062,
+        431.0085144042969
+      ],
+      "block_id": "page-0014-block-0014",
+      "order": 14,
+      "text": "sécurité au travail\nCTF: Corticotrophine\nCT-scan: Computerized tomography,\n",
+      "text_sha256": "2e8dbf5618e2d2bccfa9b434b289f829b76d0fc5c195b5f4a1882db678fdf9e3"
+    },
+    {
+      "bbox": [
+        54.0,
+        432.2658386230469,
+        183.66416931152344,
+        480.5085144042969
+      ],
+      "block_id": "page-0014-block-0015",
+      "order": 15,
+      "text": "tomodensitométrie\nCYP: Cytochrome pigment\nDA: Dopamine\nDAE: Direction de l’amélioration\n",
+      "text_sha256": "c791ba0fdad860ff839da848913fa62dc068b3ed4aff7cc5636e379b6713457a"
+    },
+    {
+      "bbox": [
+        54.0,
+        481.8158264160156,
+        198.04750061035156,
+        504.8584899902344
+      ],
+      "block_id": "page-0014-block-0016",
+      "order": 16,
+      "text": "de l’exercice\nDAPP-BQ: Dimensional Assessment\n",
+      "text_sha256": "edefe0616b4c9fe6bc24318c5a8c753de5d6aa07bb3e2fac116acb6a04735a0c"
+    },
+    {
+      "bbox": [
+        54.0,
+        506.22149658203125,
+        200.63787841796875,
+        553.6085205078125
+      ],
+      "block_id": "page-0014-block-0017",
+      "order": 17,
+      "text": "of Personality Pathology – Basic\nQuestionnaire\nDCL: Démence à corps de Lewy\nDDASS: Direction départementale\n",
+      "text_sha256": "fd5ef4f66231cf2b449b63520745da257476e50ca27ed1576fb6d99dd84b4aed"
+    },
+    {
+      "bbox": [
+        54.0,
+        554.8658447265625,
+        197.66749572753906,
+        577.95849609375
+      ],
+      "block_id": "page-0014-block-0018",
+      "order": 18,
+      "text": "de l’action sanitaire et sociale\nDDM: Date des dernières menstrua-\n",
+      "text_sha256": "7d4375491ce4ab3b76e9370700237f749cb5aa15b20553185a6ab5ef2b4baf3b"
+    },
+    {
+      "bbox": [
+        54.0,
+        579.2158203125,
+        202.1092529296875,
+        602.3085327148438
+      ],
+      "block_id": "page-0014-block-0019",
+      "order": 19,
+      "text": "tions\nDÉBA-A/D: Dépistage/évaluation du\n",
+      "text_sha256": "b37ff8892feefd0de9af90c83cc60e13a72abbf81d0e022ffb62e29016e763f4"
+    },
+    {
+      "bbox": [
+        54.0,
+        603.5658569335938,
+        194.37722778320312,
+        676.95849609375
+      ],
+      "block_id": "page-0014-block-0020",
+      "order": 20,
+      "text": "besoin d’aide-alcool/drogues\nDES: Dissociative experiences scale\nDFT: Démence frontotemporale\nDGS: Direction générale de la santé\nDI: Décience intellectuelle\nDIB-R: Diagnostic Interview for\n",
+      "text_sha256": "2f84be6b52276778eac22fb0e94685802ddbe9382855b9410912294bea476804"
+    },
+    {
+      "bbox": [
+        54.0,
+        678.3214721679688,
+        170.06854248046875,
+        713.9085083007812
+      ],
+      "block_id": "page-0014-block-0021",
+      "order": 21,
+      "text": "Borderline\nDIE: Une fois par jour\nDIN: Diagnostic Interview for\n",
+      "text_sha256": "beb884696a7d62ea8bd5284f8d770a662653f669862c7a3bb669658c4ff0dc87"
+    },
+    {
+      "bbox": [
+        78.0,
+        715.271484375,
+        120.2750015258789,
+        725.6064453125
+      ],
+      "block_id": "page-0014-block-0022",
+      "order": 22,
+      "text": "Narcissism\n",
+      "text_sha256": "6639cdd776a03cf5483999fa7a9728c08ba4869fe073adef201723f7df0559fa"
+    },
+    {
+      "bbox": [
+        226.0,
+        40.76171875,
+        382.74200439453125,
+        51.45849609375
+      ],
+      "block_id": "page-0014-block-0023",
+      "order": 23,
+      "text": "DIPD: Diagnostic Interview for DSM-IV\n",
+      "text_sha256": "a971182e4ad572043e53459f5d3d1427742732fab23efb37da0abd3df625c2ca"
+    },
+    {
+      "bbox": [
+        226.0,
+        52.72148513793945,
+        377.0347595214844,
+        88.20849609375
+      ],
+      "block_id": "page-0014-block-0024",
+      "order": 24,
+      "text": "Personality Disorders\nDIS: Diagnostic interview schedule\nDI-TED: Décience intellectuelle avec\n",
+      "text_sha256": "8759a0f69bf4bca4da6c49141e7920606526a1b8a417b78f63b490014116986f"
+    },
+    {
+      "bbox": [
+        226.0,
+        89.41582489013672,
+        375.6155090332031,
+        136.70849609375
+      ],
+      "block_id": "page-0014-block-0025",
+      "order": 25,
+      "text": "trouble envahissant du dévelop-\npement\nDIU: Dispositif intra-utérin\nD-KEFS: Delis-kaplan executive func-\n",
+      "text_sha256": "c588bf24f977cbe44dff70605c57a7d46a9150bb6682b2f4dce7055c748e824a"
+    },
+    {
+      "bbox": [
+        226.0,
+        137.9714813232422,
+        380.6675109863281,
+        173.45849609375
+      ],
+      "block_id": "page-0014-block-0026",
+      "order": 26,
+      "text": "tion system\nDMT: Diméthyltryptamine\nDOM: 2,5-diméthoxy-4-méthylamphé-\n",
+      "text_sha256": "ad40c3664624fbc710053365478a5a9ba07ef0d24ea3c15ee1478478d87d469e"
+    },
+    {
+      "bbox": [
+        226.0,
+        174.6658172607422,
+        371.86749267578125,
+        197.70849609375
+      ],
+      "block_id": "page-0014-block-0027",
+      "order": 27,
+      "text": "tamine\nDOPAC: Acide dihydroxyphénylacé-\n",
+      "text_sha256": "410acf93c55bad1dbafbed8a8e56502a4ef4eb46855df19f9c205d1348fd1c7b"
+    },
+    {
+      "bbox": [
+        226.0,
+        198.9158172607422,
+        368.1210021972656,
+        221.95849609375
+      ],
+      "block_id": "page-0014-block-0028",
+      "order": 28,
+      "text": "tique\nDPC: Développement professionnel\n",
+      "text_sha256": "24c36db0203925a9fa96332311addc556145be4f729487ccfbf5f34abf00fe71"
+    },
+    {
+      "bbox": [
+        226.0,
+        223.1658172607422,
+        369.2118835449219,
+        246.1584930419922
+      ],
+      "block_id": "page-0014-block-0029",
+      "order": 29,
+      "text": "continu\nDPJ: Direction de la protection de la\n",
+      "text_sha256": "4f85d83db49c104ee2b7090afe7ef266c97f3900871b3b2da34f8e4b0556742d"
+    },
+    {
+      "bbox": [
+        226.0,
+        247.4158172607422,
+        363.02215576171875,
+        282.95849609375
+      ],
+      "block_id": "page-0014-block-0030",
+      "order": 30,
+      "text": "jeunesse\nDS: Désensibilisation systématique\nDSM: Diagnostic and Statistical\n",
+      "text_sha256": "d527238914c91dfbc6ea1f5e63f1d5b17597de2999aa2fc464e8f43ffb72c50d"
+    },
+    {
+      "bbox": [
+        226.0,
+        284.22149658203125,
+        378.5397644042969,
+        469.95849609375
+      ],
+      "block_id": "page-0014-block-0031",
+      "order": 31,
+      "text": "Manual (of Mental Disorders)\nDT: Delirium tremens\nDTA: Démence de type Alzheimer\nDTi: Diusion tensor imaging\nDUP: Duration of untreated psychosis\nDV: Démence vasculaire\nEBM: Evidence based medecine\nECA: Epidemiologic catchment area\nECD : Éthylène cystéinate dimer\nECG: Électrocardiogramme\nECT : Électroconvulsivothérapie\nEDSS: Expanded disability status scale\nEE: Émotionalité exprimée\nEEG : Électroencéphalogramme\nEGF : Échelle d’évaluation globale du\n",
+      "text_sha256": "fe8b004bfbaf00e8d4669b1655daef4e276087cc30d7632b4ab1bdbbd9385c1a"
+    },
+    {
+      "bbox": [
+        226.0,
+        471.16583251953125,
+        373.2149658203125,
+        505.90850830078125
+      ],
+      "block_id": "page-0014-block-0032",
+      "order": 32,
+      "text": "fonctionnement = GAF : Global\nassessment of functioning\nEHS : Entrainement aux habiletés\n",
+      "text_sha256": "727ebd125988c2b2df4ccd507dc3c75caca32c0fc3e67c2e9b273a693718c596"
+    },
+    {
+      "bbox": [
+        226.0,
+        507.16583251953125,
+        375.41607666015625,
+        542.6585083007812
+      ],
+      "block_id": "page-0014-block-0033",
+      "order": 33,
+      "text": "sociales\nÉMC: Éducation médicale continue\nEMDR: Eye movement desensitization\n",
+      "text_sha256": "4b9d33719f7679a0525dd0138388b792aed731fbc342965c2e307988c7cf3225"
+    },
+    {
+      "bbox": [
+        226.0,
+        543.9714965820312,
+        379.01751708984375,
+        566.9085083007812
+      ],
+      "block_id": "page-0014-block-0034",
+      "order": 34,
+      "text": "and reprocessing\nEMG: Électromyographie, électromyo-\n",
+      "text_sha256": "9196d93cef290d66e4119517c295bb4dccac2cc4607f371cd392560c6d467728"
+    },
+    {
+      "bbox": [
+        226.0,
+        568.1658325195312,
+        380.2174987792969,
+        591.1585083007812
+      ],
+      "block_id": "page-0014-block-0035",
+      "order": 35,
+      "text": "gramme\nEOG: Électrooculographie, électroocu-\n",
+      "text_sha256": "7e907d9620b7b9fb4879f5638e5067f7120deb3c7071cda83ffa3590ee65a02a"
+    },
+    {
+      "bbox": [
+        226.0,
+        592.4158325195312,
+        362.50372314453125,
+        627.9085083007812
+      ],
+      "block_id": "page-0014-block-0036",
+      "order": 36,
+      "text": "logramme\nESA: État de stress aigu\nESCCAD: Enquête de surveillance\n",
+      "text_sha256": "81f0f064f997a09cefb813e84ace12aab1701330fb1c585681d8297a6ab192d8"
+    },
+    {
+      "bbox": [
+        226.0,
+        629.1658325195312,
+        376.64715576171875,
+        688.9085083007812
+      ],
+      "block_id": "page-0014-block-0037",
+      "order": 37,
+      "text": "canadienne de la consommation\nd’alcool et de drogues\nESPT: État de stress post-traumatique\nETP: Équivalent temps plein\nEULAR: European league against\n",
+      "text_sha256": "e1885ffceb80a8c30b617bee4c0299865e4386f0d0eebc16724af12df4983614"
+    },
+    {
+      "bbox": [
+        226.0,
+        690.1658325195312,
+        346.16143798828125,
+        725.70849609375
+      ],
+      "block_id": "page-0014-block-0038",
+      "order": 38,
+      "text": "rheumatism\nfee: Faible expression émotive\nFEE: Forte expression émotive\n",
+      "text_sha256": "96b0bb60b49983f2b539ffb7b70bbe8e84e1c03e8545f784ecc78aee93508468"
+    },
+    {
+      "bbox": [
+        398.0,
+        40.76171875,
+        548.5099487304688,
+        51.45849609375
+      ],
+      "block_id": "page-0014-block-0039",
+      "order": 39,
+      "text": "FOCUS: Freedom from obsessions and\n",
+      "text_sha256": "aacb6172277f0ca4a84bbd974784d37ab5fbc983185b449e58cc639fe626e3fe"
+    },
+    {
+      "bbox": [
+        398.0,
+        52.771484375,
+        550.1268310546875,
+        75.8084945678711
+      ],
+      "block_id": "page-0014-block-0040",
+      "order": 40,
+      "text": "compulsions using special tools\nFRCPC: Fellow of the Royal College of\n",
+      "text_sha256": "207c226e7f9addb1f1826c13511c06ddea8234e9b9d495194fe79f2b090da234"
+    },
+    {
+      "bbox": [
+        398.0,
+        77.0658187866211,
+        533.8900146484375,
+        112.75849914550781
+      ],
+      "block_id": "page-0014-block-0041",
+      "order": 41,
+      "text": "Physician Canada\nFSC: Formule sanguine complète\nFSH: Follicle stimulating hormone,\n",
+      "text_sha256": "d9204f8853abe16142050b81286f89a2866697d5afa66293bf263bbeb4b3a93a"
+    },
+    {
+      "bbox": [
+        398.0,
+        114.01582336425781,
+        542.0400390625,
+        137.10850524902344
+      ],
+      "block_id": "page-0014-block-0042",
+      "order": 42,
+      "text": "hormone folliculo-stimulante\nGABA: Gamma amino-nutyric acid,\n",
+      "text_sha256": "19810afd7a75b2a898e1030cdb2bdccf854d454e9b7e84c2c58d3a2e3061af3c"
+    },
+    {
+      "bbox": [
+        398.0,
+        138.36582946777344,
+        550.9336547851562,
+        174.0084991455078
+      ],
+      "block_id": "page-0014-block-0043",
+      "order": 43,
+      "text": "acide γ-aminobutyrique\nGAD: Acide glutamique décarboxylase\nGAF: Global assessment of functioning\n",
+      "text_sha256": "0c328382a6e8500b6046e6cd1dd35449942971d3d20c2644a7fe34d2c33b4ad5"
+    },
+    {
+      "bbox": [
+        398.0,
+        175.31582641601562,
+        551.5175170898438,
+        235.30850219726562
+      ],
+      "block_id": "page-0014-block-0044",
+      "order": 44,
+      "text": "= EGF : Évaluation globale du\nfonctionnement\nGGT: γ-glutamyltransférase\nGMF: Groupe de médecine de famille\nGnRH: Gonadolibérine, hormone libé-\n",
+      "text_sha256": "3912886e4b2f3c0271e1ec161372f47ab498a822998244c63ebe77f13e766308"
+    },
+    {
+      "bbox": [
+        398.0,
+        236.61582946777344,
+        542.452392578125,
+        259.70849609375
+      ],
+      "block_id": "page-0014-block-0045",
+      "order": 45,
+      "text": "ratrice de gonadotrophine\nHAART: Highly active antiretroviral\n",
+      "text_sha256": "4e6c029ea861161bda0ec349f3ceb64b0d4188d3cbdd16029a17bc65976ed5f7"
+    },
+    {
+      "bbox": [
+        398.0,
+        261.021484375,
+        528.2565307617188,
+        284.0585021972656
+      ],
+      "block_id": "page-0014-block-0046",
+      "order": 46,
+      "text": "therapy\nHAND: HIV-associated cognitive\n",
+      "text_sha256": "1b2cf219e6fa27ac6d44571b5ad42f0c19f4b8b8535f8daf897387928e7da4db"
+    },
+    {
+      "bbox": [
+        398.0,
+        285.3714904785156,
+        505.2283020019531,
+        308.40850830078125
+      ],
+      "block_id": "page-0014-block-0047",
+      "order": 47,
+      "text": "disorders\nHBIGDA: Harry Benjamin\n",
+      "text_sha256": "6a06beed6f4f04f11a6607630b4f976341310c4598377065aeb9f157cb097a5f"
+    },
+    {
+      "bbox": [
+        398.0,
+        309.66583251953125,
+        547.1998291015625,
+        357.1084899902344
+      ],
+      "block_id": "page-0014-block-0048",
+      "order": 48,
+      "text": "International Gender Dysphoria\nAssociation\nHDS: HIV dementia scale\nHHS: Axe hypothalamo-hypophyso-\n",
+      "text_sha256": "e964ac6916f9ef86f464d7cca0dfdb2a409f478468b70c5b02b05438aa049ec8"
+    },
+    {
+      "bbox": [
+        398.0,
+        358.41583251953125,
+        549.4110717773438,
+        394.0585021972656
+      ],
+      "block_id": "page-0014-block-0049",
+      "order": 49,
+      "text": "surrénalien\nHLM: Habitation à loyer modique\nhMG : Gonadotrophine humaine de la\n",
+      "text_sha256": "9993c06052a8102bac4e0bdb4b47b1e7e19c91cd0c4f7892aba997f3884533e9"
+    },
+    {
+      "bbox": [
+        398.0,
+        395.3658142089844,
+        545.467529296875,
+        418.40850830078125
+      ],
+      "block_id": "page-0014-block-0050",
+      "order": 50,
+      "text": "ménopause\nHMO: Health maintenance organiza-\n",
+      "text_sha256": "65f9e1a40ec9b066ba0f6b5323ea3404c97c76ebacd5ec03185ad5f7dffa62c9"
+    },
+    {
+      "bbox": [
+        398.0,
+        419.7158203125,
+        554.7664184570312,
+        442.7585144042969
+      ],
+      "block_id": "page-0014-block-0051",
+      "order": 51,
+      "text": "tion\nHMPAO: Hexaméthyl propylène amine\n",
+      "text_sha256": "1afd5da6127e1ed2c4c6c8ba506b5fd180d436886de6ab677779e1a4954862a7"
+    },
+    {
+      "bbox": [
+        398.0,
+        444.0658264160156,
+        545.1261596679688,
+        504.8584899902344
+      ],
+      "block_id": "page-0014-block-0052",
+      "order": 52,
+      "text": "oxime\nHS: Hora somni, à l’heure du coucher\nHVA: Acide homovanillique\nIChE: Inhibiteur de la cholinestérase\nIEPA: International Early Psychosis\n",
+      "text_sha256": "76924e23e267ccb17dba48e0791c212d9f8e6a44f21f4784e7963a2e50f5b355"
+    },
+    {
+      "bbox": [
+        398.0,
+        506.16583251953125,
+        543.3681640625,
+        554.4085083007812
+      ],
+      "block_id": "page-0014-block-0053",
+      "order": 53,
+      "text": "Association\nIG: Immunogloguline\nIM: Intramusculaire\nIMAO: Inhibiteur de la monoamine-\n",
+      "text_sha256": "12a825b39822b09c1e0efe911147693dc04fc57484493dbc6c73e136e75dafcb"
+    },
+    {
+      "bbox": [
+        398.0,
+        555.6658325195312,
+        545.967529296875,
+        591.3085327148438
+      ],
+      "block_id": "page-0014-block-0054",
+      "order": 54,
+      "text": "oxydase\nIMC: Indice de masse corporelle\nIPCF: Institut de psychiatrie commu-\n",
+      "text_sha256": "b03deab28e6c7d6e8246172586b6771a767a7b73286546f5bc346dbd0a817bcb"
+    },
+    {
+      "bbox": [
+        398.0,
+        592.6158447265625,
+        539.16552734375,
+        628.2584838867188
+      ],
+      "block_id": "page-0014-block-0055",
+      "order": 55,
+      "text": "nautaire et familiale\nIPD: Identique par descendance\nIPDE: International personality dis-\n",
+      "text_sha256": "4d4dc005fce4662d9afdab6af36b63c9bbfb8a6b05d3cacf74e934eacf9b9bd1"
+    },
+    {
+      "bbox": [
+        398.0,
+        629.6215209960938,
+        545.467529296875,
+        665.20849609375
+      ],
+      "block_id": "page-0014-block-0056",
+      "order": 56,
+      "text": "order examination\nIPT: Integrated psychological therapy\nIRM: Imagerie par résonance magné-\n",
+      "text_sha256": "45d1d4f568818722b4cf7358a776f6176b1a39176d220f394756a097664d5c00"
+    },
+    {
+      "bbox": [
+        398.0,
+        666.4658203125,
+        539.8400268554688,
+        689.5585327148438
+      ],
+      "block_id": "page-0014-block-0057",
+      "order": 57,
+      "text": "tique\nIRMA: Immuno-radio-metric assay,\n",
+      "text_sha256": "14284100b242cdc5897bfe34af29d0b4dfdfd45ea1071d1238e23bc31bef8de9"
+    },
+    {
+      "bbox": [
+        398.0,
+        690.8658447265625,
+        543.3101196289062,
+        713.9085083007812
+      ],
+      "block_id": "page-0014-block-0058",
+      "order": 58,
+      "text": "dosage radio-immunométrique\nIRMAO: Inhibiteur réversible de la\n",
+      "text_sha256": "2bf3a5812b7ae1cbbf93af003354d6111e21c3837bbb6724f28377277da1ec16"
+    },
+    {
+      "bbox": [
+        422.0,
+        715.2158203125,
+        503.405517578125,
+        725.70849609375
+      ],
+      "block_id": "page-0014-block-0059",
+      "order": 59,
+      "text": "monoamine-oxydase\n",
+      "text_sha256": "8229f734095f4e110c875854b89194895edfea0e24259c052b43ee02e6b48c25"
+    }
+  ],
+  "coordinates_sha256": "b27e28c19c336dc38bf7305aa86ce651f4caa14acc362e23b6108bbd9296e063",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0014",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Abréviations\nxiii\nCMFC: Collège des médecins de fa-\nmille du Canada\nCMQ: Collège des médecins du\nQuébec\nCMV: Cytomégalovirus\nCNRS: Centre national de la recherche\nscientique\nCOMT: Catéchol-o-méthyl-transférase\nCPAP: Continuous positive airway\npressure\nCPK: Créatine phosphokinase\nCPT : Continuous performance test\nCRA: Community reinforcement\napproach\nCRDI: Centre de réadaptation en dé-\ncience intellectuelle\nCRF: Corticotropin-releasing\nfactor, substance libératrice de la\ncortico trophine, corticolibérine\nCRH: Corticostimuline\nCRM: Conseil de recherches médicales\ndu Canada\nCRMCC: Collège royal des médecins\net chirurgiens du Canada\nCRSSS: Conseil régional de la santé et\ndes services sociaux\nCSSS: Centre de santé et de services\nsociaux\nCSST: Commission de la santé et de la\nsécurité au travail\nCTF: Corticotrophine\nCT-scan: Computerized tomography,\ntomodensitométrie\nCYP: Cytochrome pigment\nDA: Dopamine\nDAE: Direction de l’amélioration\nde l’exercice\nDAPP-BQ: Dimensional Assessment\nof Personality Pathology – Basic\nQuestionnaire\nDCL: Démence à corps de Lewy\nDDASS: Direction départementale\nde l’action sanitaire et sociale\nDDM: Date des dernières menstrua-\ntions\nDÉBA-A/D: Dépistage/évaluation du\nbesoin d’aide-alcool/drogues\nDES: Dissociative experiences scale\nDFT: Démence frontotemporale\nDGS: Direction générale de la santé\nDI: Décience intellectuelle\nDIB-R: Diagnostic Interview for\nBorderline\nDIE: Une fois par jour\nDIN: Diagnostic Interview for\nNarcissism\nDIPD: Diagnostic Interview for DSM-IV\nPersonality Disorders\nDIS: Diagnostic interview schedule\nDI-TED: Décience intellectuelle avec\ntrouble envahissant du dévelop-\npement\nDIU: Dispositif intra-utérin\nD-KEFS: Delis-kaplan executive func-\ntion system\nDMT: Diméthyltryptamine\nDOM: 2,5-diméthoxy-4-méthylamphé-\ntamine\nDOPAC: Acide dihydroxyphénylacé-\ntique\nDPC: Développement professionnel\ncontinu\nDPJ: Direction de la protection de la\njeunesse\nDS: Désensibilisation systématique\nDSM: Diagnostic and Statistical\nManual (of Mental Disorders)\nDT: Delirium tremens\nDTA: Démence de type Alzheimer\nDTi: Diusion tensor imaging\nDUP: Duration of untreated psychosis\nDV: Démence vasculaire\nEBM: Evidence based medecine\nECA: Epidemiologic catchment area\nECD : Éthylène cystéinate dimer\nECG: Électrocardiogramme\nECT : Électroconvulsivothérapie\nEDSS: Expanded disability status scale\nEE: Émotionalité exprimée\nEEG : Électroencéphalogramme\nEGF : Échelle d’évaluation globale du\nfonctionnement = GAF : Global\nassessment of functioning\nEHS : Entrainement aux habiletés\nsociales\nÉMC: Éducation médicale continue\nEMDR: Eye movement desensitization\nand reprocessing\nEMG: Électromyographie, électromyo-\ngramme\nEOG: Électrooculographie, électroocu-\nlogramme\nESA: État de stress aigu\nESCCAD: Enquête de surveillance\ncanadienne de la consommation\nd’alcool et de drogues\nESPT: État de stress post-traumatique\nETP: Équivalent temps plein\nEULAR: European league against\nrheumatism\nfee: Faible expression émotive\nFEE: Forte expression émotive\nFOCUS: Freedom from obsessions and\ncompulsions using special tools\nFRCPC: Fellow of the Royal College of\nPhysician Canada\nFSC: Formule sanguine complète\nFSH: Follicle stimulating hormone,\nhormone folliculo-stimulante\nGABA: Gamma amino-nutyric acid,\nacide γ-aminobutyrique\nGAD: Acide glutamique décarboxylase\nGAF: Global assessment of functioning\n= EGF : Évaluation globale du\nfonctionnement\nGGT: γ-glutamyltransférase\nGMF: Groupe de médecine de famille\nGnRH: Gonadolibérine, hormone libé-\nratrice de gonadotrophine\nHAART: Highly active antiretroviral\ntherapy\nHAND: HIV-associated cognitive\ndisorders\nHBIGDA: Harry Benjamin\nInternational Gender Dysphoria\nAssociation\nHDS: HIV dementia scale\nHHS: Axe hypothalamo-hypophyso-\nsurrénalien\nHLM: Habitation à loyer modique\nhMG : Gonadotrophine humaine de la\nménopause\nHMO: Health maintenance organiza-\ntion\nHMPAO: Hexaméthyl propylène amine\noxime\nHS: Hora somni, à l’heure du coucher\nHVA: Acide homovanillique\nIChE: Inhibiteur de la cholinestérase\nIEPA: International Early Psychosis\nAssociation\nIG: Immunogloguline\nIM: Intramusculaire\nIMAO: Inhibiteur de la monoamine-\noxydase\nIMC: Indice de masse corporelle\nIPCF: Institut de psychiatrie commu-\nnautaire et familiale\nIPD: Identique par descendance\nIPDE: International personality dis-\norder examination\nIPT: Integrated psychological therapy\nIRM: Imagerie par résonance magné-\ntique\nIRMA: Immuno-radio-metric assay,\ndosage radio-immunométrique\nIRMAO: Inhibiteur réversible de la\nmonoamine-oxydase\n",
+  "raw_text_sha256": "d4f995e045e3e16803c09040a704564eabbba295f1a9866364672b920607497c",
+  "source_page_display": 15,
+  "source_page_index": 14
+}

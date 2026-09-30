@@ -1,0 +1,496 @@
+{
+  "block_sequence_sha256": "c76ae9130a91deb1b554103d99e1983b1aca38f64e36bd503c04f73c930f1854",
+  "blocks": [
+    {
+      "bbox": [
+        270.70001220703125,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0646-block-0001",
+      "order": 1,
+      "text": "Chapitre 28\nTroubles mentaux dus à une aection médicale\n629\n",
+      "text_sha256": "d6a8a1b5df00000db70be074d12e1208f8d2a24fd9cd49dbfef0133c4104a2a5"
+    },
+    {
+      "bbox": [
+        56.400001525878906,
+        41.002296447753906,
+        381.937744140625,
+        53.320068359375
+      ],
+      "block_id": "page-0646-block-0002",
+      "order": 2,
+      "text": "TABLEAU 28.6 Affections médicales associées à des symptômes psychiatriques\n",
+      "text_sha256": "a44c4bea79a3dc2fa5c4040e423098d82df91d33f29c4ad1511b8d1238480003"
+    },
+    {
+      "bbox": [
+        121.4000015258789,
+        58.27412414550781,
+        529.4844970703125,
+        68.85029602050781
+      ],
+      "block_id": "page-0646-block-0003",
+      "order": 3,
+      "text": "Affections médicales\nAnxiété\nDépression\nPsychose\nManie\n",
+      "text_sha256": "6e644b0baaac6bb181b75a898edf3b4dc52ab2bf75fb92cd8faea41a942c6ff6"
+    },
+    {
+      "bbox": [
+        57.25,
+        74.12285614013672,
+        122.73100280761719,
+        84.14238739013672
+      ],
+      "block_id": "page-0646-block-0004",
+      "order": 4,
+      "text": "Infectieuses (suite)\n",
+      "text_sha256": "18648846562d75f92a9b243b665dcd5421b6089028dbc2539e1546c04ab05bca"
+    },
+    {
+      "bbox": [
+        58.25,
+        92.6519546508789,
+        521.0000610351562,
+        102.4781265258789
+      ],
+      "block_id": "page-0646-block-0005",
+      "order": 5,
+      "text": "Méningite\n+\n+\n",
+      "text_sha256": "d1d255d89c7b6eb2129a678fa15932159862210a1748d931e0c340d6821d4aa1"
+    },
+    {
+      "bbox": [
+        58.25,
+        110.751953125,
+        521.0000610351562,
+        120.578125
+      ],
+      "block_id": "page-0646-block-0006",
+      "order": 6,
+      "text": "Mononucléose\n+\n+\n+\n",
+      "text_sha256": "91c8e71a0f63a6f681e791480cff7873e0bbc38f512992ff380fa44f923ff7da"
+    },
+    {
+      "bbox": [
+        58.25,
+        128.90196228027344,
+        521.0000610351562,
+        138.72813415527344
+      ],
+      "block_id": "page-0646-block-0007",
+      "order": 7,
+      "text": "Neurosyphilis\n+\n+\n+\n+\n",
+      "text_sha256": "12309daa55d12a7d749d5283ef1ad32d73002b33a0a1a0d92c095c147daf59b8"
+    },
+    {
+      "bbox": [
+        58.25,
+        147.001953125,
+        521.0000610351562,
+        156.828125
+      ],
+      "block_id": "page-0646-block-0008",
+      "order": 8,
+      "text": "Nouvelle variante de la maladie de Creutzfeldt-Jakob\n+\n+\n",
+      "text_sha256": "cecb578b8cb09e7225cb19fcad8f3b799d988c98df15cca34735901984a16ae0"
+    },
+    {
+      "bbox": [
+        58.25,
+        165.15196228027344,
+        376.0,
+        174.97813415527344
+      ],
+      "block_id": "page-0646-block-0009",
+      "order": 9,
+      "text": "Pneumonie\n+\n",
+      "text_sha256": "340d7232baa71308fa6ffa91288a67ef2078f74c8225bb67b39b8bc5d3daf7e3"
+    },
+    {
+      "bbox": [
+        58.25,
+        183.251953125,
+        376.0,
+        193.078125
+      ],
+      "block_id": "page-0646-block-0010",
+      "order": 10,
+      "text": "Tuberculose\n+\n",
+      "text_sha256": "5631da1d7b57747dba7d077156687de04d048ee1558d116099af004ddd023d15"
+    },
+    {
+      "bbox": [
+        57.25,
+        201.32286071777344,
+        109.2340087890625,
+        211.34239196777344
+      ],
+      "block_id": "page-0646-block-0011",
+      "order": 11,
+      "text": "Inammatoires\n",
+      "text_sha256": "48710194c96f4b32ee06a3dcb95c9ee94bc8a65dd003fc1c6adf6a4149a659ed"
+    },
+    {
+      "bbox": [
+        58.25,
+        219.501953125,
+        303.6499938964844,
+        229.328125
+      ],
+      "block_id": "page-0646-block-0012",
+      "order": 12,
+      "text": "Anaphylaxie\n+\n",
+      "text_sha256": "5b946f27edc30dff83161ed37e7caa53a8732cc4ade4e73d4bbc1cd9c9e555e0"
+    },
+    {
+      "bbox": [
+        58.25,
+        237.65196228027344,
+        448.3999938964844,
+        247.47813415527344
+      ],
+      "block_id": "page-0646-block-0013",
+      "order": 13,
+      "text": "Artérite temporale\n+\n+\n+\n",
+      "text_sha256": "f88e82b1e2942eef07f8b1bb297b89e15b7d716d04d08a5634308873d534d71c"
+    },
+    {
+      "bbox": [
+        58.25,
+        255.751953125,
+        448.3999938964844,
+        265.578125
+      ],
+      "block_id": "page-0646-block-0014",
+      "order": 14,
+      "text": "Sarcoïdose\n+\n",
+      "text_sha256": "43f151147ab147435aa3fb82a159c90e703cc3f8f3d9c48e7ac7eab90546e747"
+    },
+    {
+      "bbox": [
+        57.25,
+        273.8228454589844,
+        103.7350082397461,
+        283.8423767089844
+      ],
+      "block_id": "page-0646-block-0015",
+      "order": 15,
+      "text": "Métaboliques\n",
+      "text_sha256": "e98309ee5d279e42c90261817b088ba0465784a05fd7a64ae1bba3368d69b9e6"
+    },
+    {
+      "bbox": [
+        58.25,
+        292.001953125,
+        521.0000610351562,
+        304.06640625
+      ],
+      "block_id": "page-0646-block-0016",
+      "order": 16,
+      "text": "Carence en acide folique, vitamines B3, B12, C, thiamine\n+\n+\n+\n+\n",
+      "text_sha256": "f954f301c71340a4fbe193b0e50c46ca1e52adf6f3a7c6070f93c6a58f1627de"
+    },
+    {
+      "bbox": [
+        58.25,
+        309.5513610839844,
+        448.3999938964844,
+        319.9781188964844
+      ],
+      "block_id": "page-0646-block-0017",
+      "order": 17,
+      "text": "Déséquilibres électrolytiques Ca++, K+, Na+, Cl–\n+\n+\n+\n",
+      "text_sha256": "65039cc76ec6973ee71e124494b65a558176a9b5558c20b5e1e6f26b7f67c97e"
+    },
+    {
+      "bbox": [
+        67.25,
+        328.251953125,
+        521.0000610351562,
+        338.078125
+      ],
+      "block_id": "page-0646-block-0018",
+      "order": 18,
+      "text": "Insufsance rénale, urémie, dialyse\n+\n+\n+\n+\n",
+      "text_sha256": "95812ed7212af2440fd2aaf43a102d17f56ef26a9b1de17faa7f716d846eedb4"
+    },
+    {
+      "bbox": [
+        58.25,
+        346.4019470214844,
+        521.0000610351562,
+        356.2281188964844
+      ],
+      "block_id": "page-0646-block-0019",
+      "order": 19,
+      "text": "Encéphalopathie hépatique, maladie de Wilson\n+\n+\n+\n+\n",
+      "text_sha256": "c4ace235827639489630350224f8ae5fbe21f2b63ecf4a6e4d28361f8d18bb23"
+    },
+    {
+      "bbox": [
+        57.25,
+        364.4228515625,
+        103.73500061035156,
+        374.4423828125
+      ],
+      "block_id": "page-0646-block-0020",
+      "order": 20,
+      "text": "Néoplasiques\n",
+      "text_sha256": "4f9dbd3dca7255f0d1c1981bf96940762e742fde8b271e2dd6959096a7901c7c"
+    },
+    {
+      "bbox": [
+        58.25,
+        382.6519470214844,
+        521.0000610351562,
+        392.4781188964844
+      ],
+      "block_id": "page-0646-block-0021",
+      "order": 21,
+      "text": "Tumeur cérébrale bénigne ou maligne\n+\n+\n+\n+\n",
+      "text_sha256": "287653f8df95c1451f695754b556b1492b54e73242117544ab4baa5b2283b2e4"
+    },
+    {
+      "bbox": [
+        58.25,
+        400.8019714355469,
+        376.0,
+        410.6281433105469
+      ],
+      "block_id": "page-0646-block-0022",
+      "order": 22,
+      "text": "Cancer du pancréas\n+\n",
+      "text_sha256": "9f37cb326547ae19da93aa11b0f99955c6dfecd97decb1f03f7e214c0678dbb6"
+    },
+    {
+      "bbox": [
+        58.25,
+        418.9019470214844,
+        376.0,
+        428.7281188964844
+      ],
+      "block_id": "page-0646-block-0023",
+      "order": 23,
+      "text": "Cancer du poumon\n+\n+\n",
+      "text_sha256": "19853527674554a7c90356d9cb0196d7d5fea35d9c0f1371a9d113b4dcd80afc"
+    },
+    {
+      "bbox": [
+        58.25,
+        437.0519714355469,
+        303.6499938964844,
+        446.8781433105469
+      ],
+      "block_id": "page-0646-block-0024",
+      "order": 24,
+      "text": "Néoplasie endocrinienne multiple\n+\n",
+      "text_sha256": "e282fc7ad7ccb9f133b1ac24b37ffb05a5df392639637ba9841a3d72e2a8b642"
+    },
+    {
+      "bbox": [
+        58.25,
+        455.1519470214844,
+        521.0000610351562,
+        464.9781188964844
+      ],
+      "block_id": "page-0646-block-0025",
+      "order": 25,
+      "text": "Syndrome carcinoïde\n+\n+\n",
+      "text_sha256": "cbae6e56cdff50b886ef671428e8c4792b144b7c8ec1e4c9150050584ec095db"
+    },
+    {
+      "bbox": [
+        58.25,
+        473.3019714355469,
+        376.0,
+        483.1281433105469
+      ],
+      "block_id": "page-0646-block-0026",
+      "order": 26,
+      "text": "Syndrome paranéoplasique\n+\n",
+      "text_sha256": "8369ed6a800d38ef54ff2270cbb16cc6c992a7de5241025d6c872393f58cf309"
+    },
+    {
+      "bbox": [
+        57.25,
+        491.3228454589844,
+        107.06500244140625,
+        501.3423767089844
+      ],
+      "block_id": "page-0646-block-0027",
+      "order": 27,
+      "text": "Neurologiques\n",
+      "text_sha256": "7166d450208e48fb8375a2d2e00bb499c03a9ee43c3e94b7646b31366a0a9772"
+    },
+    {
+      "bbox": [
+        58.25,
+        509.55194091796875,
+        521.0000610351562,
+        519.3781127929688
+      ],
+      "block_id": "page-0646-block-0028",
+      "order": 28,
+      "text": "Sclérose en plaques\n+\n+\n+\n+\n",
+      "text_sha256": "e372c79ff76461bfba4f472eb5d0d42f459ad7119f7bf6059d97af75afdac772"
+    },
+    {
+      "bbox": [
+        58.25,
+        527.6519775390625,
+        521.0000610351562,
+        537.4781494140625
+      ],
+      "block_id": "page-0646-block-0029",
+      "order": 29,
+      "text": "Épilepsie\n+\n+\n+\n+\n",
+      "text_sha256": "63fdcea15a5700aed0b89a718b56adadcc7cda19a123a2bbf3254f5128d9ac9d"
+    },
+    {
+      "bbox": [
+        58.25,
+        545.8019409179688,
+        448.3999938964844,
+        555.6281127929688
+      ],
+      "block_id": "page-0646-block-0030",
+      "order": 30,
+      "text": "Hydrocéphalie\n+\n+\n",
+      "text_sha256": "04a614302976b3e03bbabc48850f9c95c2076d20c92a019ea67dc2ebd65fcbcc"
+    },
+    {
+      "bbox": [
+        58.25,
+        563.9019775390625,
+        521.0000610351562,
+        573.7281494140625
+      ],
+      "block_id": "page-0646-block-0031",
+      "order": 31,
+      "text": "Accident vasculaire cérébral\n+\n+\n+\n",
+      "text_sha256": "501da7061fe21d780997cff5efacbb0e2a482b625f8aeb5394d2b220f0f3f26b"
+    },
+    {
+      "bbox": [
+        58.25,
+        582.0519409179688,
+        521.0000610351562,
+        591.8781127929688
+      ],
+      "block_id": "page-0646-block-0032",
+      "order": 32,
+      "text": "Démence vasculaire\n+\n+\n",
+      "text_sha256": "23585af2c03ca768b2d420f5714838e7422659d3f46b9c5958165c67ad468744"
+    },
+    {
+      "bbox": [
+        58.25,
+        600.1519775390625,
+        303.6499938964844,
+        609.9781494140625
+      ],
+      "block_id": "page-0646-block-0033",
+      "order": 33,
+      "text": "Ischémie cérébrale transitoire\n+\n",
+      "text_sha256": "dac76731fe101fd47d85d2a57dd0802baa0e70025fa3f2d343c73bd338d43ab5"
+    },
+    {
+      "bbox": [
+        58.25,
+        618.3019409179688,
+        521.0000610351562,
+        628.1281127929688
+      ],
+      "block_id": "page-0646-block-0034",
+      "order": 34,
+      "text": "Malformations artérioveineuses\n+\n+\n",
+      "text_sha256": "42b1068f6a0c2774583512bb359f39afa639530191b3c948e9023e05e0d95da8"
+    },
+    {
+      "bbox": [
+        58.25,
+        636.4019775390625,
+        521.0000610351562,
+        646.2281494140625
+      ],
+      "block_id": "page-0646-block-0035",
+      "order": 35,
+      "text": "Démences dégénératives\n+\n+\n+\n",
+      "text_sha256": "3a26a817d3d1fb4b313960be4f69af588a844ef150655b67cd8a2cc0c2758586"
+    },
+    {
+      "bbox": [
+        58.25,
+        654.5519409179688,
+        521.0000610351562,
+        664.3781127929688
+      ],
+      "block_id": "page-0646-block-0036",
+      "order": 36,
+      "text": "Chorée de Huntington\n+\n+\n+\n+\n",
+      "text_sha256": "ec6d8956c2f4655a9040979974653a8b47d81154e5fa5f272ea6841a4e907d31"
+    },
+    {
+      "bbox": [
+        58.25,
+        672.6519775390625,
+        521.0000610351562,
+        682.4781494140625
+      ],
+      "block_id": "page-0646-block-0037",
+      "order": 37,
+      "text": "Chorée de Sydenham\n+\n",
+      "text_sha256": "2ab13f7442b176b9cd562661e2af33c2b7eae962098c1a6010eea079cab7b825"
+    },
+    {
+      "bbox": [
+        58.25,
+        690.8019409179688,
+        521.0000610351562,
+        700.6281127929688
+      ],
+      "block_id": "page-0646-block-0038",
+      "order": 38,
+      "text": "Maladie de Parkinson\n+\n+\n+\n+\n",
+      "text_sha256": "d43cbc84736955b7db441b5a3d07528dc162b31d885f707db8359adf5c47a23b"
+    },
+    {
+      "bbox": [
+        58.25,
+        708.9019775390625,
+        303.6499938964844,
+        718.7281494140625
+      ],
+      "block_id": "page-0646-block-0039",
+      "order": 39,
+      "text": "Maladie de Ménière\n+\n",
+      "text_sha256": "258857b2fefa2cdb71b3bb93709bf673a70ea020b84494c43803145b05cbe190"
+    },
+    {
+      "bbox": [
+        384.8000183105469,
+        41.45229721069336,
+        410.4842529296875,
+        53.42007064819336
+      ],
+      "block_id": "page-0646-block-0040",
+      "order": 40,
+      "text": "(suite)\n",
+      "text_sha256": "c684d6dbcdfd50f0ada227f799b5c0fb30e817ac3da61b4cbf208decde7f907b"
+    }
+  ],
+  "coordinates_sha256": "fdc0af241113bc172f4a7205760c3601706a423b15ebc421dcd006b0a5b8d622",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0646",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 28\nTroubles mentaux dus à une aection médicale\n629\nTABLEAU 28.6 Affections médicales associées à des symptômes psychiatriques\nAffections médicales\nAnxiété\nDépression\nPsychose\nManie\nInfectieuses (suite)\nMéningite\n+\n+\nMononucléose\n+\n+\n+\nNeurosyphilis\n+\n+\n+\n+\nNouvelle variante de la maladie de Creutzfeldt-Jakob\n+\n+\nPneumonie\n+\nTuberculose\n+\nInammatoires\nAnaphylaxie\n+\nArtérite temporale\n+\n+\n+\nSarcoïdose\n+\nMétaboliques\nCarence en acide folique, vitamines B3, B12, C, thiamine\n+\n+\n+\n+\nDéséquilibres électrolytiques Ca++, K+, Na+, Cl–\n+\n+\n+\nInsufsance rénale, urémie, dialyse\n+\n+\n+\n+\nEncéphalopathie hépatique, maladie de Wilson\n+\n+\n+\n+\nNéoplasiques\nTumeur cérébrale bénigne ou maligne\n+\n+\n+\n+\nCancer du pancréas\n+\nCancer du poumon\n+\n+\nNéoplasie endocrinienne multiple\n+\nSyndrome carcinoïde\n+\n+\nSyndrome paranéoplasique\n+\nNeurologiques\nSclérose en plaques\n+\n+\n+\n+\nÉpilepsie\n+\n+\n+\n+\nHydrocéphalie\n+\n+\nAccident vasculaire cérébral\n+\n+\n+\nDémence vasculaire\n+\n+\nIschémie cérébrale transitoire\n+\nMalformations artérioveineuses\n+\n+\nDémences dégénératives\n+\n+\n+\nChorée de Huntington\n+\n+\n+\n+\nChorée de Sydenham\n+\nMaladie de Parkinson\n+\n+\n+\n+\nMaladie de Ménière\n+\n(suite)\n",
+  "raw_text_sha256": "b87623dcbb09e9518a0e00e5680703dcffdc7874eff88f7975773712fc65d573",
+  "source_page_display": 647,
+  "source_page_index": 646
+}

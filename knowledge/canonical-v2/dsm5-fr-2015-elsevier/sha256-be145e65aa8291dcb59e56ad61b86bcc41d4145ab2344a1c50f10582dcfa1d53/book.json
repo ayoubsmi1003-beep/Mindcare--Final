@@ -1,0 +1,73 @@
+{
+  "approved_by": null,
+  "approved_at": null,
+  "authors_editors": "American Psychiatric Association ; coordination générale de la traduction française Marc-Antoine Crocq et Julien Daniel Guelfi ; directeurs de l'équipe de la traduction française Patrice Boyer, Marc-Antoine Crocq, Julien Daniel Guelfi, Charles Pull, Marie-Claire Pull-Erpelding",
+  "book_id": "dsm5-fr-2015-elsevier",
+  "classification": "C4",
+  "edition": "5e édition, traduction française (DSM-5, Fifth Edition 1-1276)",
+  "extraction_status": "complete",
+  "ingestion_version": "canonical-v2.1",
+  "isbn": "9782294743382",
+  "language": "fr",
+  "local_sha256": "BE145E65AA8291DCB59E56AD61B86BCC41D4145AB2344A1C50F10582DCFA1D53",
+  "provenance_status": "registered",
+  "publication_year": 2015,
+  "publisher": "Elsevier Masson",
+  "source_identifier": "Books/DSM-5_Manuel-diagnostique-et-statistique-des-troubles-mentaux.pdf",
+  "source_page_count": 1275,
+  "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+  "statut": "discovered",
+  "subtitle": "Manuel diagnostique et statistique des troubles mentaux",
+  "title": "DSM-5 — Manuel diagnostique et statistique des troubles mentaux",
+  "validation_status": "needs_review",
+  "frozen_at": "2026-09-24T23:04:34.238050+00:00",
+  "qa_verdict": "PASS",
+  "counts": {
+    "units": 12818,
+    "coverage_only_units": 411,
+    "tables": 121,
+    "concepts": 1921,
+    "xrefs": 509,
+    "relations": 27815,
+    "medication_mentions": 68,
+    "algorithms": 2,
+    "figures": 0,
+    "chunks_v2": 14079,
+    "chunker_version": "struct-v2"
+  },
+  "page_coverage": {
+    "body_printed_range": [
+      1,
+      1216
+    ],
+    "covered": true,
+    "missing_count": 0,
+    "missing_examples": [],
+    "gap_recovery": {
+      "printed_1078": "original text layer",
+      "printed_1081": "original text layer"
+    }
+  },
+  "human_validation": {
+    "status": "approved",
+    "approved_by": "doctor + operator (chat 2026-09-24)",
+    "scope": "canonical knowledge layer only (units/tables/concepts/relations/xrefs); excludes PG activation, chunking, embeddings",
+    "residual_accepted_risks": [
+      "411 coverage-only fallback pages retained",
+      "102 tables needs_review (variants preserved)",
+      "297 xrefs explicitly unresolved",
+      "uncertain page mappings retained"
+    ]
+  },
+  "activation": {
+    "eligible": false,
+    "approved_at": null,
+    "approved_by": null,
+    "reason": "PG activation requires a signed in-DB approval (approved_by profile UUID) via Gate-C loader + 0NN migration; not yet executed."
+  },
+  "chunker": {
+    "version": "struct-v2",
+    "chunks": 14079,
+    "qa": "PASS"
+  }
+}

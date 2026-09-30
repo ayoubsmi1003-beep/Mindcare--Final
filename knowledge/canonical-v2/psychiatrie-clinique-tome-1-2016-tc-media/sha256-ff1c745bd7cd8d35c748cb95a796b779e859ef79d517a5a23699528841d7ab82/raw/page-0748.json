@@ -1,0 +1,412 @@
+{
+  "block_sequence_sha256": "70bdf4e8c4f344b3039df2d017983a0e6acb78ee82e2b2552e50fefecd20b81a",
+  "blocks": [
+    {
+      "bbox": [
+        305.8500061035156,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0748-block-0001",
+      "order": 1,
+      "text": "Chapitre 32\nTroubles du sommeil et de la vigilance\n731\n",
+      "text_sha256": "667140911512917ea810d0e0e24865f704b8be6d85abff42288173964ce6a6dd"
+    },
+    {
+      "bbox": [
+        56.5,
+        40.852294921875,
+        264.9472961425781,
+        53.220069885253906
+      ],
+      "block_id": "page-0748-block-0002",
+      "order": 2,
+      "text": "TABLEAU 32.3 Critères diagnostiques de l’insomnie\n",
+      "text_sha256": "0d846bde6e2e18debe4fa96020ac21ba65e0d8e9c3132601fc67bffda8568eff"
+    },
+    {
+      "bbox": [
+        131.9499969482422,
+        61.02412414550781,
+        462.905517578125,
+        84.4002914428711
+      ],
+      "block_id": "page-0748-block-0003",
+      "order": 3,
+      "text": "DSM-5\nDSM-IV-TR\n307.42 (F51.01) Insomnie\nInsomnie primaire\n",
+      "text_sha256": "f546306bcd24abb1072a03daeb73ba3c21cc253c812e8353e7c20f679a383dd0"
+    },
+    {
+      "bbox": [
+        58.35000228881836,
+        88.251953125,
+        285.6860046386719,
+        98.078125
+      ],
+      "block_id": "page-0748-block-0004",
+      "order": 4,
+      "text": "A. La plainte essentielle concerne une insatisfaction liée à la quantité ou\n",
+      "text_sha256": "b9ba53208a8ed579effc597a9df32a2bfa02629cf50730e5f9778ec3f384ed34"
+    },
+    {
+      "bbox": [
+        70.3499984741211,
+        98.251953125,
+        300.2557373046875,
+        191.078125
+      ],
+      "block_id": "page-0748-block-0005",
+      "order": 5,
+      "text": "à la qualité du sommeil, associée à un (ou plusieurs) des symptômes\nsuivants :\n1. Difculté d’endormissement. (Chez l’enfant, il peut s’agir de difculté\nd’endormissement sans l’intervention d’un tiers responsable.)\n2. Difculté de maintien du sommeil caractérisée par des réveils\nfréquents ou des problèmes à retrouver le sommeil après un éveil.\n(Chez l’enfant, il peut s’agir de difcultés à retrouver le sommeil\nsans l’intervention d’un tiers responsable.)\n3. Réveil matinal précoce assorti d’une incapacité à se rendormir.\n",
+      "text_sha256": "b42a8827564c6cc15c34bda62b8272e79892f716aafad1e709b8a34727867d19"
+    },
+    {
+      "bbox": [
+        308.5,
+        88.251953125,
+        523.2643432617188,
+        98.078125
+      ],
+      "block_id": "page-0748-block-0006",
+      "order": 6,
+      "text": "A. La plainte essentielle est une difculté d’endormissement ou de\n",
+      "text_sha256": "86cbfccd556aa516f4f4288cb2e15826d3eadf2a7c2f9c7d0805534fd375e90a"
+    },
+    {
+      "bbox": [
+        320.5,
+        98.251953125,
+        531.4172973632812,
+        118.078125
+      ],
+      "block_id": "page-0748-block-0007",
+      "order": 7,
+      "text": "maintien du sommeil, ou un sommeil non réparateur, ceci pendant\nau moins un mois.\n",
+      "text_sha256": "7025514e7898660c0d81a5bfc9467e8e4f1011988629c2a4b4bcdc18d2607636"
+    },
+    {
+      "bbox": [
+        58.35000228881836,
+        196.7019500732422,
+        282.8710632324219,
+        206.5281219482422
+      ],
+      "block_id": "page-0748-block-0008",
+      "order": 8,
+      "text": "B. La perturbation du sommeil est à l’origine d’une détresse marquée\n",
+      "text_sha256": "5bc445305931d422a867c86964c7d094d43c371f07e5d70e3cd3288c5e889a4f"
+    },
+    {
+      "bbox": [
+        70.3499984741211,
+        206.7019500732422,
+        297.5381774902344,
+        226.5281219482422
+      ],
+      "block_id": "page-0748-block-0009",
+      "order": 9,
+      "text": "ou d’une altération du fonctionnement dans les domaines social,\nprofessionnel, éducatif, scolaire ou dans d’autres domaines importants.\n",
+      "text_sha256": "9ed86c9335c4ca2e6fb887a5311c03ce5d996d040584785198070c86a3fd2244"
+    },
+    {
+      "bbox": [
+        308.5,
+        196.7019500732422,
+        369.298095703125,
+        206.5281219482422
+      ],
+      "block_id": "page-0748-block-0010",
+      "order": 10,
+      "text": "B. Idem à DSM-5.\n",
+      "text_sha256": "703f62df8ee835b259dd8e94c2103cd979d0ac69c184c555aa261a5bff070302"
+    },
+    {
+      "bbox": [
+        58.35000228881836,
+        232.15196228027344,
+        291.29248046875,
+        241.97813415527344
+      ],
+      "block_id": "page-0748-block-0011",
+      "order": 11,
+      "text": "C. Les difcultés de sommeil surviennent au moins 3 nuits par semaine.\n",
+      "text_sha256": "d16ac68871132a654df58c8ba58987caa3c4737c8f4954434a426a05ebe61dea"
+    },
+    {
+      "bbox": [
+        58.35000228881836,
+        247.5519561767578,
+        282.5287170410156,
+        257.37811279296875
+      ],
+      "block_id": "page-0748-block-0012",
+      "order": 12,
+      "text": "D. Les difcultés de sommeil sont présentes depuis au moins 3 mois.\n",
+      "text_sha256": "2731250b56b3778fe59ee060b8c2e473fd2a00be4f900455ac0852d328e54b92"
+    },
+    {
+      "bbox": [
+        58.35000228881836,
+        263.001953125,
+        271.2455749511719,
+        272.828125
+      ],
+      "block_id": "page-0748-block-0013",
+      "order": 13,
+      "text": "E. Les difcultés de sommeil surviennent malgré l’adéquation des\n",
+      "text_sha256": "1744e0197f15a97c727f437fda6b720781a0d08347334407340287c9a2166b88"
+    },
+    {
+      "bbox": [
+        70.3499984741211,
+        273.001953125,
+        143.97000122070312,
+        282.828125
+      ],
+      "block_id": "page-0748-block-0014",
+      "order": 14,
+      "text": "conditions de sommeil.\n",
+      "text_sha256": "c916b8c18de6b5326c64205e11fabff47b30daf2ce421b2d02f0e58400846e1c"
+    },
+    {
+      "bbox": [
+        58.35000228881836,
+        288.4019470214844,
+        264.4554138183594,
+        298.2281188964844
+      ],
+      "block_id": "page-0748-block-0015",
+      "order": 15,
+      "text": "F. L’insomnie n’est pas mieux expliquée par un autre trouble de\n",
+      "text_sha256": "a06c6c6f1cec997ad2b2c0c4c8b16748d9866e7dd5fc7d2b71b0824cb503e967"
+    },
+    {
+      "bbox": [
+        70.3499984741211,
+        298.4019470214844,
+        289.96490478515625,
+        328.2281188964844
+      ],
+      "block_id": "page-0748-block-0016",
+      "order": 16,
+      "text": "l’alternance veille-sommeil ni ne survient exclusivement au cours de\nce trouble (p. ex., narcolepsie, trouble du sommeil lié à la respiration,\ntrouble du sommeil lié au rythme circadien, parasomnie).\n",
+      "text_sha256": "a0085c0e109a82fd09c783dd804205a42f87156a155b0d0d66155b2bcf15dfef"
+    },
+    {
+      "bbox": [
+        308.5,
+        288.4019470214844,
+        369.319091796875,
+        298.2281188964844
+      ],
+      "block_id": "page-0748-block-0017",
+      "order": 17,
+      "text": "C. Idem à DSM-5.\n",
+      "text_sha256": "e3115c8f08f85dfc1a8c901e597d6628d9cc927dde450ccede1ca1ec3dd04b8e"
+    },
+    {
+      "bbox": [
+        58.35000228881836,
+        333.8519592285156,
+        270.4161071777344,
+        343.6781311035156
+      ],
+      "block_id": "page-0748-block-0018",
+      "order": 18,
+      "text": "G. L’insomnie n’est pas imputable aux effets physiologiques d’une\n",
+      "text_sha256": "fb7164a78a7d919e30dc360db7178bb2b23e0442d423c6e9d77e334edbffd958"
+    },
+    {
+      "bbox": [
+        69.5,
+        343.8519592285156,
+        272.2908020019531,
+        353.6781311035156
+      ],
+      "block_id": "page-0748-block-0019",
+      "order": 19,
+      "text": "substance (p. ex., substance donnant lieu à abus, médicament).\n",
+      "text_sha256": "775f1c363cc2d7b88339d87934c56795aa5b4010c6f763c0e0a7d3bb1e44750a"
+    },
+    {
+      "bbox": [
+        308.5,
+        333.8519592285156,
+        539.2064208984375,
+        343.6781311035156
+      ],
+      "block_id": "page-0748-block-0020",
+      "order": 20,
+      "text": "E. La perturbation n’est pas liée aux effets physiologiques directs d’une\n",
+      "text_sha256": "8e96b5b26b3a26dad9e77738a4551ba20e11009d4e5649aebfb96ba68ab273ec"
+    },
+    {
+      "bbox": [
+        320.5,
+        343.8519592285156,
+        545.4498901367188,
+        363.6781311035156
+      ],
+      "block_id": "page-0748-block-0021",
+      "order": 21,
+      "text": "substance (p. ex., une substance donnant lieu à abus, un médicament)\nou d’une affection médicale générale.\n",
+      "text_sha256": "0f99ca4210690c6c3a7dd05d5d898fdb3cd954d72f33fb02519a0c4543e75901"
+    },
+    {
+      "bbox": [
+        58.35000228881836,
+        369.251953125,
+        290.8252868652344,
+        379.078125
+      ],
+      "block_id": "page-0748-block-0022",
+      "order": 22,
+      "text": "H. La coexistence d’un trouble mental ou d’une autre affection médicale\n",
+      "text_sha256": "1829a3320e7ebcf46da8274aac57bc2aaa69609a45a28a6808d2c912db2c1cb1"
+    },
+    {
+      "bbox": [
+        70.3499984741211,
+        379.251953125,
+        251.0889892578125,
+        389.078125
+      ],
+      "block_id": "page-0748-block-0023",
+      "order": 23,
+      "text": "n’explique pas la prédominance des plaintes d’insomnie.\n",
+      "text_sha256": "d230d7f08b226b3557e3ac0dd7ec20255dff6c833cea7cccefa408096651d9fa"
+    },
+    {
+      "bbox": [
+        308.5,
+        369.251953125,
+        531.561767578125,
+        379.078125
+      ],
+      "block_id": "page-0748-block-0024",
+      "order": 24,
+      "text": "D. La perturbation ne survient pas exclusivement au cours d’un autre\n",
+      "text_sha256": "72e917ca47927e5aa48c3ab9ab4a0f8e60c1f41f06088823ed588af90c8d4fc9"
+    },
+    {
+      "bbox": [
+        320.5,
+        379.251953125,
+        519.4264526367188,
+        399.078125
+      ],
+      "block_id": "page-0748-block-0025",
+      "order": 25,
+      "text": "trouble mental (p. ex., un trouble dépressif majeur, une anxiété\ngénéralisée, un delirium).\n",
+      "text_sha256": "1c34e522ce29bba9faa4d75ad2617c49112a1d61d1b146fafd5fd9cc31510363"
+    },
+    {
+      "bbox": [
+        58.35000228881836,
+        404.70196533203125,
+        272.71002197265625,
+        457.64239501953125
+      ],
+      "block_id": "page-0748-block-0026",
+      "order": 26,
+      "text": "Spécier si :\nAvec une comorbidité d’un trouble mental non lié au sommeil,\ny compris les troubles de l’usage de substances\nAvec une autre comorbidité médicale\nAvec un autre trouble du sommeil\n",
+      "text_sha256": "8a987dce66dc10775f89ff6fbaf9d5b9c747b4f5c6f40e0e6cdf6b496daf4040"
+    },
+    {
+      "bbox": [
+        58.35000228881836,
+        463.1019592285156,
+        285.44305419921875,
+        516.0424194335938
+      ],
+      "block_id": "page-0748-block-0027",
+      "order": 27,
+      "text": "Spécier si :\nÉpisodique: Symptômes présents depuis au moins 1 mois mais moins\nde 3 mois.\nPersistant: Symptômes présents depuis 3 mois ou plus.\nRécurrent: Au moins deux épisodes sur une période d’un an.\n",
+      "text_sha256": "5b6c8f6fa6caa367f6b37d903c50f9f4372f5379985b62870bad4c964738fdbc"
+    },
+    {
+      "bbox": [
+        54.35000228881836,
+        523.1906127929688,
+        212.50669860839844,
+        532.058837890625
+      ],
+      "block_id": "page-0748-block-0028",
+      "order": 28,
+      "text": "Sources : APA (2015), p. 424-425 ; APA (2004), p. 699.\n",
+      "text_sha256": "65b7fd7281e82d32fff9cbc6a7c7cdec5b2162c4517489ff353c486625f6ea27"
+    },
+    {
+      "bbox": [
+        54.35000228881836,
+        538.1906127929688,
+        535.5008544921875,
+        564.9249877929688
+      ],
+      "block_id": "page-0748-block-0029",
+      "order": 29,
+      "text": "Traduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\n",
+      "text_sha256": "d1e2a281d01f1237f716bfb933581f8135592b601f1b1579862a0656634f5460"
+    },
+    {
+      "bbox": [
+        54.35000228881836,
+        571.1906127929688,
+        551.531982421875,
+        588.9249877929688
+      ],
+      "block_id": "page-0748-block-0030",
+      "order": 30,
+      "text": "Traduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\n",
+      "text_sha256": "cbaf74623581d335442980f66ae048c6f58e3db311890ed7cd9feabfdd0d127b"
+    },
+    {
+      "bbox": [
+        54.0,
+        611.4658203125,
+        297.0124206542969,
+        633.45849609375
+      ],
+      "block_id": "page-0748-block-0031",
+      "order": 31,
+      "text": "indirectement le sommeil en bloquant l’éveil ce qui, en prise\nvespérale, laisse toute la place aux mécanismes du sommeil.\n",
+      "text_sha256": "1095cb8fa5a9c28363b08c2035bb1569d91431e5f299357809f91120d1685242"
+    },
+    {
+      "bbox": [
+        54.0,
+        634.4658203125,
+        297.4717712402344,
+        725.45849609375
+      ],
+      "block_id": "page-0748-block-0032",
+      "order": 32,
+      "text": "Les diverses benzodiazépines disponibles présentent des vitesses\nd’absorption et d’élimination de durées variables, ce qui permet\nde les utiliser ecacement selon diérents besoins : insomnie de\ndébut de nuit, réveils nocturnes ou réveil matinal précoce.\nLes\nmolécules dotées d’une très brève durée d’action (courte demi-\nvie, comme le triazolam [HalcionMD] et l’oxazépam [SeraxMD])\nsont plus susceptibles de causer de l’insomnie matinale et de\nl’anxiété rebond le lendemain, de même que de l’insomnie rebond\n",
+      "text_sha256": "6a28ef55d949b919690aa9911d2aa52dd8331d27269882b24e2443f9a37c5c30"
+    },
+    {
+      "bbox": [
+        312.0,
+        611.4658203125,
+        555.4359130859375,
+        725.45849609375
+      ],
+      "block_id": "page-0748-block-0033",
+      "order": 33,
+      "text": "à l’arrêt de la médication. C’est pourquoi les doses maximales\ndisponibles ont été réduites peu de temps après le lancement\nde ces produits à la n des années 1980. Plus la molécule ou ses\nmétabolites actifs ont une longue durée d’action (longue demi-vie,\ncomme le urazépam [DalmaneMD] ou le diazépam [ValiumMD]),\nplus elle risque de causer de la somnolence diurne résiduelle le\nlendemain de la prise, d’autant plus chez la personne âgée, car\nl’eet s’accumule. Les symptômes de sevrage existent, mais ils sont\npossiblement plus tardifs et moins prononcés que ceux associés\naux molécules à courte demi-vie. Comme tous les médicaments\n",
+      "text_sha256": "5c70f9666675388a4686e1b284eca3331530b266439e67eabd3ee07a48b82540"
+    }
+  ],
+  "coordinates_sha256": "388c3921965c5f0d3ae635190da6c5aa6e86cff0bfea44f1b4d6335283e73e02",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0748",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 32\nTroubles du sommeil et de la vigilance\n731\nTABLEAU 32.3 Critères diagnostiques de l’insomnie\nDSM-5\nDSM-IV-TR\n307.42 (F51.01) Insomnie\nInsomnie primaire\nA. La plainte essentielle concerne une insatisfaction liée à la quantité ou\nà la qualité du sommeil, associée à un (ou plusieurs) des symptômes\nsuivants :\n1. Difculté d’endormissement. (Chez l’enfant, il peut s’agir de difculté\nd’endormissement sans l’intervention d’un tiers responsable.)\n2. Difculté de maintien du sommeil caractérisée par des réveils\nfréquents ou des problèmes à retrouver le sommeil après un éveil.\n(Chez l’enfant, il peut s’agir de difcultés à retrouver le sommeil\nsans l’intervention d’un tiers responsable.)\n3. Réveil matinal précoce assorti d’une incapacité à se rendormir.\nA. La plainte essentielle est une difculté d’endormissement ou de\nmaintien du sommeil, ou un sommeil non réparateur, ceci pendant\nau moins un mois.\nB. La perturbation du sommeil est à l’origine d’une détresse marquée\nou d’une altération du fonctionnement dans les domaines social,\nprofessionnel, éducatif, scolaire ou dans d’autres domaines importants.\nB. Idem à DSM-5.\nC. Les difcultés de sommeil surviennent au moins 3 nuits par semaine.\nD. Les difcultés de sommeil sont présentes depuis au moins 3 mois.\nE. Les difcultés de sommeil surviennent malgré l’adéquation des\nconditions de sommeil.\nF. L’insomnie n’est pas mieux expliquée par un autre trouble de\nl’alternance veille-sommeil ni ne survient exclusivement au cours de\nce trouble (p. ex., narcolepsie, trouble du sommeil lié à la respiration,\ntrouble du sommeil lié au rythme circadien, parasomnie).\nC. Idem à DSM-5.\nG. L’insomnie n’est pas imputable aux effets physiologiques d’une\nsubstance (p. ex., substance donnant lieu à abus, médicament).\nE. La perturbation n’est pas liée aux effets physiologiques directs d’une\nsubstance (p. ex., une substance donnant lieu à abus, un médicament)\nou d’une affection médicale générale.\nH. La coexistence d’un trouble mental ou d’une autre affection médicale\nn’explique pas la prédominance des plaintes d’insomnie.\nD. La perturbation ne survient pas exclusivement au cours d’un autre\ntrouble mental (p. ex., un trouble dépressif majeur, une anxiété\ngénéralisée, un delirium).\nSpécier si :\nAvec une comorbidité d’un trouble mental non lié au sommeil,\ny compris les troubles de l’usage de substances\nAvec une autre comorbidité médicale\nAvec un autre trouble du sommeil\nSpécier si :\nÉpisodique: Symptômes présents depuis au moins 1 mois mais moins\nde 3 mois.\nPersistant: Symptômes présents depuis 3 mois ou plus.\nRécurrent: Au moins deux épisodes sur une période d’un an.\nSources : APA (2015), p. 424-425 ; APA (2004), p. 699.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\nindirectement le sommeil en bloquant l’éveil ce qui, en prise\nvespérale, laisse toute la place aux mécanismes du sommeil.\nLes diverses benzodiazépines disponibles présentent des vitesses\nd’absorption et d’élimination de durées variables, ce qui permet\nde les utiliser ecacement selon diérents besoins : insomnie de\ndébut de nuit, réveils nocturnes ou réveil matinal précoce.\nLes\nmolécules dotées d’une très brève durée d’action (courte demi-\nvie, comme le triazolam [HalcionMD] et l’oxazépam [SeraxMD])\nsont plus susceptibles de causer de l’insomnie matinale et de\nl’anxiété rebond le lendemain, de même que de l’insomnie rebond\nà l’arrêt de la médication. C’est pourquoi les doses maximales\ndisponibles ont été réduites peu de temps après le lancement\nde ces produits à la n des années 1980. Plus la molécule ou ses\nmétabolites actifs ont une longue durée d’action (longue demi-vie,\ncomme le urazépam [DalmaneMD] ou le diazépam [ValiumMD]),\nplus elle risque de causer de la somnolence diurne résiduelle le\nlendemain de la prise, d’autant plus chez la personne âgée, car\nl’eet s’accumule. Les symptômes de sevrage existent, mais ils sont\npossiblement plus tardifs et moins prononcés que ceux associés\naux molécules à courte demi-vie. Comme tous les médicaments\n",
+  "raw_text_sha256": "01048cb7927f145d765fb9a6145b14c673bd0591da98acda00902531edc5d5bf",
+  "source_page_display": 749,
+  "source_page_index": 748
+}

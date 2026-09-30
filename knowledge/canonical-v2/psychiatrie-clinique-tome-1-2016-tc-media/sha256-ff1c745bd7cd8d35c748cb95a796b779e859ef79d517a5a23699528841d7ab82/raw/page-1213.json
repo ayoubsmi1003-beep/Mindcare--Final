@@ -1,0 +1,712 @@
+{
+  "block_sequence_sha256": "ee8bf719fab466724cca5c870b0a63bbee0a11cd52528f7bb0636b593cea9665",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        106.5719985961914,
+        758.8693237304688
+      ],
+      "block_id": "page-1213-block-0001",
+      "order": 1,
+      "text": "I52\nIndex\n",
+      "text_sha256": "e9e8cfd9b1747c35ec5d95107ab880df083f4b01b66e160e24f44cc3efeb3aa3"
+    },
+    {
+      "bbox": [
+        57.0,
+        40.82011795043945,
+        206.96182250976562,
+        77.41728973388672
+      ],
+      "block_id": "page-1213-block-0002",
+      "order": 2,
+      "text": "alcool et __, 861-862\nantihistaminiques et __, 1377-1378\nantipsychotiques atypiques et __,\n",
+      "text_sha256": "bd1bffcc7f1258ba3ec72ec67736c07952410f7df6258e6bbc4f33ac9e7ccb00"
+    },
+    {
+      "bbox": [
+        57.0,
+        78.32012176513672,
+        187.1351318359375,
+        102.41728973388672
+      ],
+      "block_id": "page-1213-block-0003",
+      "order": 3,
+      "text": "440, 1471\napprentissage associatifs et __,\n",
+      "text_sha256": "1938dfc4622fa651a90bfeb1e0455a37aadf1d593e5907dd2257ac6a9bcfc740"
+    },
+    {
+      "bbox": [
+        57.0,
+        103.32012176513672,
+        197.86000061035156,
+        127.41728973388672
+      ],
+      "block_id": "page-1213-block-0004",
+      "order": 4,
+      "text": "1365\nbenzodiazépines et __, 439, 439t,\n",
+      "text_sha256": "bdc8d59e9a4e24f7ca8201d3efb88e1c09fbe2dea2813f28077af07757c8fca5"
+    },
+    {
+      "bbox": [
+        57.0,
+        128.3201141357422,
+        175.71755981445312,
+        152.4172821044922
+      ],
+      "block_id": "page-1213-block-0005",
+      "order": 5,
+      "text": "1377-1378, 1444-1451\nchez l’enfant et l’adolescent,\n",
+      "text_sha256": "154c91cda62d17342d1e32c53f8138c3138ab271fa7b2ce66ca4be313b8fa691"
+    },
+    {
+      "bbox": [
+        57.0,
+        153.0945281982422,
+        194.45950317382812,
+        177.4172821044922
+      ],
+      "block_id": "page-1213-block-0006",
+      "order": 6,
+      "text": "1364-1378\nchez les personnes âgées, 1415-\n",
+      "text_sha256": "aeae53d2f5ba7af60500470f44474ef6f6424de0dd211fc41982e338722df625"
+    },
+    {
+      "bbox": [
+        57.0,
+        178.0945281982422,
+        198.41000366210938,
+        202.4172821044922
+      ],
+      "block_id": "page-1213-block-0007",
+      "order": 7,
+      "text": "1417\ncomorbidité et __, 624-625, 624t,\n",
+      "text_sha256": "d8c5ed8b0b35c56fa7cdefac9af381a77dc479ecba837648991d3fae6b5f2418"
+    },
+    {
+      "bbox": [
+        57.0,
+        203.3201141357422,
+        192.63282775878906,
+        227.4172821044922
+      ],
+      "block_id": "page-1213-block-0008",
+      "order": 8,
+      "text": "1364\ndiérences reliées au sexe et __,\n",
+      "text_sha256": "84d1c94fb82567ce9c37e1888c162e3648b9dbac04fa1f09b18af8c5ba7c812d"
+    },
+    {
+      "bbox": [
+        57.0,
+        228.3201141357422,
+        191.0985107421875,
+        277.41729736328125
+      ],
+      "block_id": "page-1213-block-0009",
+      "order": 9,
+      "text": "968\némotions et __, 178\nétiologie des __, 416-421, 1365f\nfacteurs\n",
+      "text_sha256": "c3fcd4f8d30eab5ef1759de30173153a4c52a8b10f0959f8aacb3b0f6b972050"
+    },
+    {
+      "bbox": [
+        66.0,
+        279.35943603515625,
+        196.6923828125,
+        302.35943603515625
+      ],
+      "block_id": "page-1213-block-0010",
+      "order": 10,
+      "text": "cognitifs et __, 1365\nenvironnementaux et __, 416,\n",
+      "text_sha256": "c0f46752d22b48074b4b568660da744e5ae72ab36a62c79384560b6479be18e4"
+    },
+    {
+      "bbox": [
+        66.0,
+        303.38165283203125,
+        181.70578002929688,
+        339.85943603515625
+      ],
+      "block_id": "page-1213-block-0011",
+      "order": 11,
+      "text": "1365f\ngénétiques et __, 1365f\nprédisposants et __, 1365-\n",
+      "text_sha256": "bc5ffdb684f13616f14cf98f22ba93f5571ddae0b81c8c85ef4a328eddf0522d"
+    },
+    {
+      "bbox": [
+        57.0,
+        341.85943603515625,
+        200.71353149414062,
+        389.91729736328125
+      ],
+      "block_id": "page-1213-block-0012",
+      "order": 12,
+      "text": "1366\ngrossesse et __, 971\nhypnose et __, 1760\nimagerie médicale et __, 416-417,\n",
+      "text_sha256": "3c81ebb98b005a9de3a5c96b88d5764fa98af91817bf0131a0fc856625f607f8"
+    },
+    {
+      "bbox": [
+        57.0,
+        390.82012939453125,
+        179.22657775878906,
+        452.41729736328125
+      ],
+      "block_id": "page-1213-block-0013",
+      "order": 13,
+      "text": "418t, 1364\nkleptomanie et __, 833\nméditation et __, 1765\nparaphilies et __, 821\nrespiration diaphragmatique\n",
+      "text_sha256": "2516d883f80dafbc08b1ed9944bad29f9ccda4888d81fc55d8aeec4a5c33645b"
+    },
+    {
+      "bbox": [
+        57.0,
+        453.32012939453125,
+        200.83250427246094,
+        489.91729736328125
+      ],
+      "block_id": "page-1213-block-0014",
+      "order": 14,
+      "text": "et __, 1619\nsoins palliatifs et __, 1040-1041\nstimulation magnétique transcrâ-\n",
+      "text_sha256": "aa7a99cbb49f9b09fa2551426801245f1526a89a453b38305b0e9c61601c35e6"
+    },
+    {
+      "bbox": [
+        57.0,
+        490.82012939453125,
+        188.05445861816406,
+        527.4172973632812
+      ],
+      "block_id": "page-1213-block-0015",
+      "order": 15,
+      "text": "nienne et __, 1563\nstyles parentaux et __, 1365\nsuicide et patient atteint de __,\n",
+      "text_sha256": "f22ab24f98fb251b0f08912326e5cb3e21f89093e297e0b2d5e15db47af89501"
+    },
+    {
+      "bbox": [
+        57.0,
+        528.3201293945312,
+        109.82849884033203,
+        552.4172973632812
+      ],
+      "block_id": "page-1213-block-0016",
+      "order": 16,
+      "text": "433-434\nthérapie\n",
+      "text_sha256": "972b8ce38a9f0518e52e2c652560f86c49d61cd2a89da24aa90941071d61d357"
+    },
+    {
+      "bbox": [
+        66.0,
+        554.3594360351562,
+        187.33798217773438,
+        564.8594360351562
+      ],
+      "block_id": "page-1213-block-0017",
+      "order": 17,
+      "text": "cognitive et __, 1646, 1657-\n",
+      "text_sha256": "1f87c27c574ee32a352df8281040054539a7f5f34d9e2511773e8731e8e1a0c4"
+    },
+    {
+      "bbox": [
+        66.0,
+        566.8594360351562,
+        170.89503479003906,
+        589.8594360351562
+      ],
+      "block_id": "page-1213-block-0018",
+      "order": 18,
+      "text": "1659\ncomportementale et __,\n",
+      "text_sha256": "f781b1546cb211ad224e25d9ac899e2f2673045c22ce4c7858a0c22f2ec72439"
+    },
+    {
+      "bbox": [
+        57.0,
+        591.8594360351562,
+        177.38299560546875,
+        639.9172973632812
+      ],
+      "block_id": "page-1213-block-0019",
+      "order": 19,
+      "text": "1619-1639\nfamiliale et __, 1737\ntoxicomanie et __, 910t, 915\ntrouble(s)\n",
+      "text_sha256": "001692799ff97dc694813140fa9ed6cb256fc222e4bb374147348f07abcfaa0f"
+    },
+    {
+      "bbox": [
+        66.0,
+        641.8594360351562,
+        189.5243682861328,
+        664.8594360351562
+      ],
+      "block_id": "page-1213-block-0020",
+      "order": 20,
+      "text": "bipolaire et __, 385\nde décit de l’attention avec\n",
+      "text_sha256": "57bdcc6f415c247c400090d473a761d37657452f6acfcb0917855d34223397f4"
+    },
+    {
+      "bbox": [
+        66.0,
+        666.8594360351562,
+        189.70826721191406,
+        702.3594360351562
+      ],
+      "block_id": "page-1213-block-0021",
+      "order": 21,
+      "text": "ou sans hyperactivité\n(TDA/H) et __, 1313\nde la personnalité et __, 929\n",
+      "text_sha256": "20afa96b304e5fed2b4e797194ac220d7ae0625e6c941be73bf457f6dc5ca531"
+    },
+    {
+      "bbox": [
+        237.0,
+        41.85943603515625,
+        354.4530029296875,
+        52.35943603515625
+      ],
+      "block_id": "page-1213-block-0022",
+      "order": 22,
+      "text": "des conduites alimentaires\n",
+      "text_sha256": "8c7a32fc44b04cb899370d1db811568405a201e7d7fb87d9cf330958e175ffaa"
+    },
+    {
+      "bbox": [
+        219.0,
+        54.35943603515625,
+        364.3205261230469,
+        89.91728973388672
+      ],
+      "block_id": "page-1213-block-0023",
+      "order": 23,
+      "text": "et __, 707\ndu sommeil et __, 746, 747t\ntrouble(s) bipolaire, 273, 373-391\n",
+      "text_sha256": "4496a4c3b50d47dbf0e108ec9b77cfc052fad8b78e52eda3a5a23c71a7bc3352"
+    },
+    {
+      "bbox": [
+        228.0,
+        90.82012176513672,
+        371.7120361328125,
+        127.41728973388672
+      ],
+      "block_id": "page-1213-block-0024",
+      "order": 24,
+      "text": "acide valproïque et __, 1540-1543\nalcool et __, 861\nantipsychotiques et __, 387-388,\n",
+      "text_sha256": "3eb00e06d30a3d8aefe72cd3f8547ce9280d978321ebbda69023ceea066e1314"
+    },
+    {
+      "bbox": [
+        228.0,
+        128.3201141357422,
+        368.9259338378906,
+        177.4172821044922
+      ],
+      "block_id": "page-1213-block-0025",
+      "order": 25,
+      "text": "1471\ncarbamazépine et __, 1543-1546\nchez les enfants, 378\nchez les patients âgés, 378, 1408-\n",
+      "text_sha256": "f9f2e4fd287fa0b85d9a54eb9aa8e2b0c020ca40eb219a83d49d61feeb22bc40"
+    },
+    {
+      "bbox": [
+        228.0,
+        178.3201141357422,
+        373.63250732421875,
+        202.4172821044922
+      ],
+      "block_id": "page-1213-block-0026",
+      "order": 26,
+      "text": "1409\nde type I, 376-378, 377t, 381t, voir\n",
+      "text_sha256": "2702d46d508f78a0267f3ba5829be316ad0dac383acc0d4e94f9041f37a93a10"
+    },
+    {
+      "bbox": [
+        228.0,
+        203.3201141357422,
+        354.5255126953125,
+        227.4172821044922
+      ],
+      "block_id": "page-1213-block-0027",
+      "order": 27,
+      "text": "aussi manie\nde type II, 376, 378-380, 379t,\n",
+      "text_sha256": "7ab6c1ac574be3d5eccd554189176fbe285a63ec99039ebfe08f0016715d3d6a"
+    },
+    {
+      "bbox": [
+        228.0,
+        228.3201141357422,
+        363.6328125,
+        252.4172821044922
+      ],
+      "block_id": "page-1213-block-0028",
+      "order": 28,
+      "text": "381t, voir aussi hypomanie\ndiérences reliées au sexe et __,\n",
+      "text_sha256": "66f4ab54f38893de1f5c8595a34616984f21e6a6b87cad4c307baade8c77166c"
+    },
+    {
+      "bbox": [
+        228.0,
+        253.32012939453125,
+        356.4841613769531,
+        277.41729736328125
+      ],
+      "block_id": "page-1213-block-0029",
+      "order": 29,
+      "text": "967-968\nélectroconvulsivothérapie et __,\n",
+      "text_sha256": "a603d341fa87b8570f310f0bf091b324464b0a43e6fc463710f8a67f207c13a0"
+    },
+    {
+      "bbox": [
+        228.0,
+        278.32012939453125,
+        369.56207275390625,
+        389.91729736328125
+      ],
+      "block_id": "page-1213-block-0030",
+      "order": 30,
+      "text": "1555\némotions et __, 177\nfamille et __, 238\ngrossesse et __, 971\nimagerie médicale et __, 155\nlamotrigine et __, 1546-1548-\nlithium et __, 1536-1540\nméditation et __, 1765-1766\nperspective évolutionniste du __,\n",
+      "text_sha256": "0a2d46b55bb4e715fd373be98e64d7faf4be3006b0dde8fa98dbe73f5f817c8b"
+    },
+    {
+      "bbox": [
+        228.0,
+        390.82012939453125,
+        357.9761047363281,
+        414.91729736328125
+      ],
+      "block_id": "page-1213-block-0031",
+      "order": 31,
+      "text": "419-420\nrisque de violence et __, 1155-\n",
+      "text_sha256": "d3f9642968d0358e58384b8ed8b10a8cec089047f797d7fb4f122fad9cb2d6ce"
+    },
+    {
+      "bbox": [
+        228.0,
+        415.82012939453125,
+        363.875244140625,
+        439.91729736328125
+      ],
+      "block_id": "page-1213-block-0032",
+      "order": 32,
+      "text": "1157t\nstabilisateurs de l’humeur et __,\n",
+      "text_sha256": "ce0f5ce251c52a6ea88b7052d8711074d360966a7b87bd0effc8e8d194ab4a00"
+    },
+    {
+      "bbox": [
+        228.0,
+        440.82012939453125,
+        368.1961364746094,
+        464.91729736328125
+      ],
+      "block_id": "page-1213-block-0033",
+      "order": 33,
+      "text": "1536-1552\ntoxicomanie et __, 910-911, 918-\n",
+      "text_sha256": "af13dd80008dff150e2dc61a633657518f36d32cb7c9b5fa5943d355e0a36d4d"
+    },
+    {
+      "bbox": [
+        228.0,
+        465.82012939453125,
+        263.37451171875,
+        489.91729736328125
+      ],
+      "block_id": "page-1213-block-0034",
+      "order": 34,
+      "text": "919\nthérapie\n",
+      "text_sha256": "cbe393dac025dbd694b91031f7c04f0be1782627abccc390c713c573ac33769d"
+    },
+    {
+      "bbox": [
+        237.0,
+        491.85943603515625,
+        352.83599853515625,
+        514.8594360351562
+      ],
+      "block_id": "page-1213-block-0035",
+      "order": 35,
+      "text": "cognitive et __, 1654-1657\npsychoéducative et __,\n",
+      "text_sha256": "6a608d0dc02669e12bd1cd5597588e7c8fa15b3464709ffeb0163337d1685393"
+    },
+    {
+      "bbox": [
+        228.0,
+        516.8594360351562,
+        336.3572998046875,
+        539.9172973632812
+      ],
+      "block_id": "page-1213-block-0036",
+      "order": 36,
+      "text": "1700-1701\ntraitement et __, 387-390\n",
+      "text_sha256": "c5c36aa5fa7ffc465cc40870226c3f64451d0fc969749240dbdf5a16ee68897b"
+    },
+    {
+      "bbox": [
+        237.0,
+        541.8594360351562,
+        372.73699951171875,
+        564.8594360351562
+      ],
+      "block_id": "page-1213-block-0037",
+      "order": 37,
+      "text": "des épisodes dépressifs __, 388\ndes épisodes maniaques __,\n",
+      "text_sha256": "99e45eddc5f674140b50aa47b907a84ab889625c022442d6bc2ce595cd5eb0a7"
+    },
+    {
+      "bbox": [
+        228.0,
+        566.8594360351562,
+        290.9414978027344,
+        589.9172973632812
+      ],
+      "block_id": "page-1213-block-0038",
+      "order": 38,
+      "text": "387-388\ntrouble(s)\n",
+      "text_sha256": "0568ee542c81e3def9740113299b562754ed6ba31566c669b3eed0259bf0b05a"
+    },
+    {
+      "bbox": [
+        219.0,
+        591.8594360351562,
+        344.3750305175781,
+        627.4172973632812
+      ],
+      "block_id": "page-1213-block-0039",
+      "order": 39,
+      "text": "d’attention et __, 167\ndu sommeil et __, 748\ntrouble d’amassage (hoarding\n",
+      "text_sha256": "e5e82dedb8c3715a7505ed1d787436cca0345565890cb88772dfecb7963a4b66"
+    },
+    {
+      "bbox": [
+        219.0,
+        628.0945434570312,
+        371.7408752441406,
+        677.4172973632812
+      ],
+      "block_id": "page-1213-block-0040",
+      "order": 40,
+      "text": "disorder), 465-460\nautoévaluation du __, 470\nchez les personnes âgées, 1418\ntrouble de décit de l’attention avec\n",
+      "text_sha256": "27b21b2a54eafe1c0769d2c5b711b98324aece0593b02999ecd2e94b443eb9d4"
+    },
+    {
+      "bbox": [
+        237.0,
+        678.3201293945312,
+        373.1466064453125,
+        702.4172973632812
+      ],
+      "block_id": "page-1213-block-0041",
+      "order": 41,
+      "text": "ou sans hyperactivité (TDA/H),\n166, 1236-1237, 1303-1318\n",
+      "text_sha256": "8f8e30ac63c646abb3944a9f3e5459035aca1e2fa2a64ab3a97a596f161e452a"
+    },
+    {
+      "bbox": [
+        399.0,
+        40.82011795043945,
+        534.6328125,
+        52.41728591918945
+      ],
+      "block_id": "page-1213-block-0042",
+      "order": 42,
+      "text": "diérences reliées au sexe et __,\n",
+      "text_sha256": "b84daa9a8f4f3ecf4a0d106b25066a8ce44a49b0bcf216c27ea736e0d0afce03"
+    },
+    {
+      "bbox": [
+        399.0,
+        53.32011795043945,
+        542.8973388671875,
+        127.41728973388672
+      ],
+      "block_id": "page-1213-block-0043",
+      "order": 43,
+      "text": "969\nfamille et __, 238\ninsomnie et __, 729\nméditation et __, 1766\nmotricité et __, 178, 181-182\nnon-stimulants et __, 1317, 1521-\n",
+      "text_sha256": "bb1a94d650f90c2112301d1cb7851e0a1e28c12121afa3309897ec9d76eeb259"
+    },
+    {
+      "bbox": [
+        399.0,
+        128.3201141357422,
+        525.1754150390625,
+        164.9172821044922
+      ],
+      "block_id": "page-1213-block-0044",
+      "order": 44,
+      "text": "1534\nparaphilies et __, 821\npsychostimulants et __, 1317,\n",
+      "text_sha256": "9da2023c4f258df8a7c438cba62e8ac8399cfe8eb1c6bdb074cf2c4edef74aad"
+    },
+    {
+      "bbox": [
+        399.0,
+        165.8201141357422,
+        528.9761352539062,
+        189.9172821044922
+      ],
+      "block_id": "page-1213-block-0045",
+      "order": 45,
+      "text": "1521-1534\nrisque de violence et __, 1155-\n",
+      "text_sha256": "704b123e666a4c0f8f293555b559cf0d41e5024238cbde063e156b93abc9e684"
+    },
+    {
+      "bbox": [
+        399.0,
+        190.8201141357422,
+        542.83251953125,
+        214.9172821044922
+      ],
+      "block_id": "page-1213-block-0046",
+      "order": 46,
+      "text": "1157t\nstimulation magnétique transcrâ-\n",
+      "text_sha256": "900c72ce55c7e82db97e94768790daeefd9e4fd6823e491a6f7c4b87cd1cdf43"
+    },
+    {
+      "bbox": [
+        399.0,
+        215.8201141357422,
+        546.7969970703125,
+        264.91729736328125
+      ],
+      "block_id": "page-1213-block-0047",
+      "order": 47,
+      "text": "nienne et __, 1563\nthérapie familiale et __, 1736-1737\ntoxicomanie et __, 877\ntroubles\n",
+      "text_sha256": "6cc712e0d9190a42ae82fa3e10dcc4dfb56f5099bca094a1ade194fde8eeb534"
+    },
+    {
+      "bbox": [
+        408.0,
+        266.85943603515625,
+        537.0107421875,
+        327.35943603515625
+      ],
+      "block_id": "page-1213-block-0048",
+      "order": 48,
+      "text": "anxieux et __, 1312-1313\nbipolaires et __, 1313\nde la personnalité et __, 1314\ndépressifs et __, 1313\nexplosifs intermittents et __,\n",
+      "text_sha256": "85c6a641236695a3f0931c244d9ef007094ce0c6c608c2a78f3a9546e6df3d8e"
+    },
+    {
+      "bbox": [
+        399.0,
+        329.35943603515625,
+        525.314697265625,
+        352.41729736328125
+      ],
+      "block_id": "page-1213-block-0049",
+      "order": 49,
+      "text": "829\nutilisation de substance et __,\n",
+      "text_sha256": "986a807e89ef19ba9b1d6923e8ee57f92d109525bde9cee01f5e4307638be116"
+    },
+    {
+      "bbox": [
+        390.0,
+        353.32012939453125,
+        522.8289794921875,
+        389.91729736328125
+      ],
+      "block_id": "page-1213-block-0050",
+      "order": 50,
+      "text": "1313-1314\nvie quotidienne et __, 1315\ntrouble(s) de l’adaptation, 473-\n",
+      "text_sha256": "033c0504fd0a1b72903d7dc31f8cd552a31b7bd414aad7eea96a79312400d25f"
+    },
+    {
+      "bbox": [
+        390.0,
+        390.59454345703125,
+        536.509521484375,
+        439.91729736328125
+      ],
+      "block_id": "page-1213-block-0051",
+      "order": 51,
+      "text": "488\nidées suicidaires et __, 1093\nmédicaments et __, 1527-1528t\ntrouble(s) de l’attachement, 1289-\n",
+      "text_sha256": "bf2676bcab0766fe1eb5ae96cd8d910e4e27cbb866d72fe9dc134b9326b46b89"
+    },
+    {
+      "bbox": [
+        390.0,
+        440.59454345703125,
+        532.135986328125,
+        464.91729736328125
+      ],
+      "block_id": "page-1213-block-0052",
+      "order": 52,
+      "text": "1301, voir aussi attachement\ntrouble(s) de l’humeur\n",
+      "text_sha256": "6ebbd56a5409a56d3e235d42f2c3e4cdd0540a051f2665b806fb274aa929f855"
+    },
+    {
+      "bbox": [
+        399.0,
+        465.82012939453125,
+        535.6890258789062,
+        514.9172973632812
+      ],
+      "block_id": "page-1213-block-0053",
+      "order": 53,
+      "text": "alcool et __, 861-862\nchez les personnes âgées, 1402\ndépression et __, 396\nélectroconvulsivothérapie et __,\n",
+      "text_sha256": "47e1f6426f438f33fa6391504d8c33ac42cefcf019bf1737475bd4faf5e7d619"
+    },
+    {
+      "bbox": [
+        399.0,
+        515.8201293945312,
+        541.150634765625,
+        602.4172973632812
+      ],
+      "block_id": "page-1213-block-0054",
+      "order": 54,
+      "text": "1555\némotions et __, 177\nimagerie médicale et __, 147, 156\nkleptomanie et __, 833\nparaphilies et __, 821\npsychoses aiguës et __, 303\npsychothérapie interpersonnelle\n",
+      "text_sha256": "34348a70ec38b25ed32ab80a23a8759af1594991400a6cc63265e3778cd5694c"
+    },
+    {
+      "bbox": [
+        399.0,
+        603.3201293945312,
+        538.3265380859375,
+        627.4172973632812
+      ],
+      "block_id": "page-1213-block-0055",
+      "order": 55,
+      "text": "(PTI) et __, 1681\ntroubles de la personnalité et __,\n",
+      "text_sha256": "c4cacb0abe2de48c90911692e3818b7d404a0fe882d89e28efddd1e4090145e6"
+    },
+    {
+      "bbox": [
+        399.0,
+        628.3201293945312,
+        530.7325439453125,
+        652.4172973632812
+      ],
+      "block_id": "page-1213-block-0056",
+      "order": 56,
+      "text": "929\ntroubles des conduites alimen-\n",
+      "text_sha256": "736ed76a6c0dc06aaac6d984140e7ee31b41684c13a37209d0fbc233ea3b1af2"
+    },
+    {
+      "bbox": [
+        390.0,
+        653.3201293945312,
+        534.5438842773438,
+        677.4172973632812
+      ],
+      "block_id": "page-1213-block-0057",
+      "order": 57,
+      "text": "taires et __, 709\ntrouble(s) de la personnalité, 273-\n",
+      "text_sha256": "b0626b383b977cec4ebe4a39aea15f1d77b93ddb0c0ad99d7db46ce0aa674f62"
+    },
+    {
+      "bbox": [
+        399.0,
+        678.0945434570312,
+        544.1489868164062,
+        702.4172973632812
+      ],
+      "block_id": "page-1213-block-0058",
+      "order": 58,
+      "text": "274, 926-963, 1108-1109\nantipsychotiques et __, 959t, 1471\n",
+      "text_sha256": "c5e66e65e7c1d99fdb11d439b99414e8845ecc425bb8eb17989c0d6950256e27"
+    }
+  ],
+  "coordinates_sha256": "cf933c1ed6f42f7ee41863d15c1e9f1404ca5b5cece70b5fcc376f97fcfb7f4d",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1213",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "I52\nIndex\nalcool et __, 861-862\nantihistaminiques et __, 1377-1378\nantipsychotiques atypiques et __,\n440, 1471\napprentissage associatifs et __,\n1365\nbenzodiazépines et __, 439, 439t,\n1377-1378, 1444-1451\nchez l’enfant et l’adolescent,\n1364-1378\nchez les personnes âgées, 1415-\n1417\ncomorbidité et __, 624-625, 624t,\n1364\ndiérences reliées au sexe et __,\n968\némotions et __, 178\nétiologie des __, 416-421, 1365f\nfacteurs\ncognitifs et __, 1365\nenvironnementaux et __, 416,\n1365f\ngénétiques et __, 1365f\nprédisposants et __, 1365-\n1366\ngrossesse et __, 971\nhypnose et __, 1760\nimagerie médicale et __, 416-417,\n418t, 1364\nkleptomanie et __, 833\nméditation et __, 1765\nparaphilies et __, 821\nrespiration diaphragmatique\net __, 1619\nsoins palliatifs et __, 1040-1041\nstimulation magnétique transcrâ-\nnienne et __, 1563\nstyles parentaux et __, 1365\nsuicide et patient atteint de __,\n433-434\nthérapie\ncognitive et __, 1646, 1657-\n1659\ncomportementale et __,\n1619-1639\nfamiliale et __, 1737\ntoxicomanie et __, 910t, 915\ntrouble(s)\nbipolaire et __, 385\nde décit de l’attention avec\nou sans hyperactivité\n(TDA/H) et __, 1313\nde la personnalité et __, 929\ndes conduites alimentaires\net __, 707\ndu sommeil et __, 746, 747t\ntrouble(s) bipolaire, 273, 373-391\nacide valproïque et __, 1540-1543\nalcool et __, 861\nantipsychotiques et __, 387-388,\n1471\ncarbamazépine et __, 1543-1546\nchez les enfants, 378\nchez les patients âgés, 378, 1408-\n1409\nde type I, 376-378, 377t, 381t, voir\naussi manie\nde type II, 376, 378-380, 379t,\n381t, voir aussi hypomanie\ndiérences reliées au sexe et __,\n967-968\nélectroconvulsivothérapie et __,\n1555\némotions et __, 177\nfamille et __, 238\ngrossesse et __, 971\nimagerie médicale et __, 155\nlamotrigine et __, 1546-1548-\nlithium et __, 1536-1540\nméditation et __, 1765-1766\nperspective évolutionniste du __,\n419-420\nrisque de violence et __, 1155-\n1157t\nstabilisateurs de l’humeur et __,\n1536-1552\ntoxicomanie et __, 910-911, 918-\n919\nthérapie\ncognitive et __, 1654-1657\npsychoéducative et __,\n1700-1701\ntraitement et __, 387-390\ndes épisodes dépressifs __, 388\ndes épisodes maniaques __,\n387-388\ntrouble(s)\nd’attention et __, 167\ndu sommeil et __, 748\ntrouble d’amassage (hoarding\ndisorder), 465-460\nautoévaluation du __, 470\nchez les personnes âgées, 1418\ntrouble de décit de l’attention avec\nou sans hyperactivité (TDA/H),\n166, 1236-1237, 1303-1318\ndiérences reliées au sexe et __,\n969\nfamille et __, 238\ninsomnie et __, 729\nméditation et __, 1766\nmotricité et __, 178, 181-182\nnon-stimulants et __, 1317, 1521-\n1534\nparaphilies et __, 821\npsychostimulants et __, 1317,\n1521-1534\nrisque de violence et __, 1155-\n1157t\nstimulation magnétique transcrâ-\nnienne et __, 1563\nthérapie familiale et __, 1736-1737\ntoxicomanie et __, 877\ntroubles\nanxieux et __, 1312-1313\nbipolaires et __, 1313\nde la personnalité et __, 1314\ndépressifs et __, 1313\nexplosifs intermittents et __,\n829\nutilisation de substance et __,\n1313-1314\nvie quotidienne et __, 1315\ntrouble(s) de l’adaptation, 473-\n488\nidées suicidaires et __, 1093\nmédicaments et __, 1527-1528t\ntrouble(s) de l’attachement, 1289-\n1301, voir aussi attachement\ntrouble(s) de l’humeur\nalcool et __, 861-862\nchez les personnes âgées, 1402\ndépression et __, 396\nélectroconvulsivothérapie et __,\n1555\némotions et __, 177\nimagerie médicale et __, 147, 156\nkleptomanie et __, 833\nparaphilies et __, 821\npsychoses aiguës et __, 303\npsychothérapie interpersonnelle\n(PTI) et __, 1681\ntroubles de la personnalité et __,\n929\ntroubles des conduites alimen-\ntaires et __, 709\ntrouble(s) de la personnalité, 273-\n274, 926-963, 1108-1109\nantipsychotiques et __, 959t, 1471\n",
+  "raw_text_sha256": "9e4567e2fa596fe853d51cc9b189be7c19b1dd9cb48aa13590b26b98ce12c10f",
+  "source_page_display": 1214,
+  "source_page_index": 1213
+}

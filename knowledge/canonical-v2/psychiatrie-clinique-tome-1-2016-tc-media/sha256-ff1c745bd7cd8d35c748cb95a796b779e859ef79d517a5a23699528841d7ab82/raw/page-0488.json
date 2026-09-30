@@ -1,0 +1,124 @@
+{
+  "block_sequence_sha256": "d71b29d80571dc9c7c0f1cb4d7c75aaa7dc2d2087c5e8255224ad54868beaf8e",
+  "blocks": [
+    {
+      "bbox": [
+        319.6000061035156,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0488-block-0001",
+      "order": 1,
+      "text": "Chapitre 21\nTroubles obsessionnels-compulsifs\n471\n",
+      "text_sha256": "5e5580739c7070b92b6e5d68829f6b356f9935ed3321c3afbe6684e3c29a04a4"
+    },
+    {
+      "bbox": [
+        54.0,
+        39.009376525878906,
+        222.91200256347656,
+        56.978126525878906
+      ],
+      "block_id": "page-0488-block-0002",
+      "order": 2,
+      "text": "Lectures complémentaires\n",
+      "text_sha256": "a63665748f6f6aa4046621ac3e5b53857ebef6bf2c2f475217e47dfa03f03493"
+    },
+    {
+      "bbox": [
+        54.0,
+        70.701904296875,
+        187.65223693847656,
+        79.701904296875
+      ],
+      "block_id": "page-0488-block-0003",
+      "order": 3,
+      "text": "C,  A\n",
+      "text_sha256": "bbfd81306d3dbdc3d18fd0c4f1aaf0e7863a94b70ddc41702f9b5bf874952527"
+    },
+    {
+      "bbox": [
+        54.0,
+        79.8414077758789,
+        201.76564025878906,
+        121.701904296875
+      ],
+      "block_id": "page-0488-block-0004",
+      "order": 4,
+      "text": "(2005). Comment vivre avec une per-\nsonne atteinte de TOC, Paris, France,\nQuébec, Josette Lyon.\nC,  Bv\n",
+      "text_sha256": "626e04d91207495e3e71d6cc3a5cd60cb7a62a6a99c5d75c8584a279286c4941"
+    },
+    {
+      "bbox": [
+        66.0,
+        122.70191192626953,
+        203.5550079345703,
+        131.70191955566406
+      ],
+      "block_id": "page-0488-block-0005",
+      "order": 5,
+      "text": "M. (2007). Les troubles obsessionnels\n",
+      "text_sha256": "ae268d511c1782f8b7da0719ec5679ca8c836c5ad02f25209ab845b074fc080a"
+    },
+    {
+      "bbox": [
+        226.0,
+        70.701904296875,
+        377.7850036621094,
+        101.701904296875
+      ],
+      "block_id": "page-0488-block-0006",
+      "order": 6,
+      "text": "compulsifs, Pratiques de psychothéra-\npie, Paris, France, Masson.\nO’, K. & al. (2012). Entre monts\n",
+      "text_sha256": "43ecc3619324aa1ba832778039de2d270add2ba0a2fc26866809540f74bf6879"
+    },
+    {
+      "bbox": [
+        238.0,
+        101.8414077758789,
+        376.3587951660156,
+        131.70191955566406
+      ],
+      "block_id": "page-0488-block-0007",
+      "order": 7,
+      "text": "et merveilles. Comment reconnaître et\nsurmonter l’accumulation compulsive,\nQuébec, MultiMondes.\n",
+      "text_sha256": "7a5ade5ef8594ecaff32bd92396334f54ca71f313f399ff99b6f57552bf3d8b3"
+    },
+    {
+      "bbox": [
+        398.0,
+        69.8414077758789,
+        547.4904174804688,
+        79.701904296875
+      ],
+      "block_id": "page-0488-block-0008",
+      "order": 8,
+      "text": "Tg, J. (2006). Les défauts physiques\n",
+      "text_sha256": "cb67d8e5abeb415455687c1c0159f2dd049ab2de76f3151ff5fa48814feaf7e2"
+    },
+    {
+      "bbox": [
+        410.0,
+        79.8414077758789,
+        531.615966796875,
+        99.701904296875
+      ],
+      "block_id": "page-0488-block-0009",
+      "order": 9,
+      "text": "imaginaires, Paris, France, Odile\nJacob.\n",
+      "text_sha256": "80f522cfc1a67c4828c473fbdd3bdaf4859c918e4a5f56321a52968e741521ca"
+    }
+  ],
+  "coordinates_sha256": "96816d77584792468727a45d8beb506864c2e0fdbbcce5aa8732bbf921b858ea",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0488",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 21\nTroubles obsessionnels-compulsifs\n471\nLectures complémentaires\nC,  A\n(2005). Comment vivre avec une per-\nsonne atteinte de TOC, Paris, France,\nQuébec, Josette Lyon.\nC,  Bv\nM. (2007). Les troubles obsessionnels\ncompulsifs, Pratiques de psychothéra-\npie, Paris, France, Masson.\nO’, K. & al. (2012). Entre monts\net merveilles. Comment reconnaître et\nsurmonter l’accumulation compulsive,\nQuébec, MultiMondes.\nTg, J. (2006). Les défauts physiques\nimaginaires, Paris, France, Odile\nJacob.\n",
+  "raw_text_sha256": "ff4ec5d6ec3c2ea236a6592f38bff56e6fb65c2dc21de6cf6c488aa4b3e27820",
+  "source_page_display": 489,
+  "source_page_index": 488
+}

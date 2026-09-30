@@ -1,0 +1,244 @@
+{
+  "block_sequence_sha256": "348317c86251878725843754fa6170a160340b1eaa42392d71c0bb45013dffbb",
+  "blocks": [
+    {
+      "bbox": [
+        54.0,
+        133.5734405517578,
+        400.4701232910156,
+        178.4953155517578
+      ],
+      "block_id": "page-0052-block-0001",
+      "order": 1,
+      "text": "Examen psychiatrique\n",
+      "text_sha256": "69deac7ab40a6d21d066c6a2b80a0ef884dafa69ed351ab8880750580f8d553a"
+    },
+    {
+      "bbox": [
+        54.0,
+        236.15733337402344,
+        138.77850341796875,
+        250.19541931152344
+      ],
+      "block_id": "page-0052-block-0002",
+      "order": 2,
+      "text": "Yvan Pelletier, M.D.\n",
+      "text_sha256": "1a9fe0408f8425fb761b5f31cfb986f5c31cee22c985d72e376cf5130c720281"
+    },
+    {
+      "bbox": [
+        54.0,
+        253.57723999023438,
+        278.7462158203125,
+        274.7937927246094
+      ],
+      "block_id": "page-0052-block-0003",
+      "order": 3,
+      "text": "Psychiatre, Pavillon Albert-Prévost, Hôpital du Sacré-Cœur\nde Montréal\n",
+      "text_sha256": "fee95756b44a84b8562b69fa571e20d55e13df5878b10fab78f861f4adf8fb9a"
+    },
+    {
+      "bbox": [
+        54.0,
+        278.5772399902344,
+        275.9393005371094,
+        299.7937927246094
+      ],
+      "block_id": "page-0052-block-0004",
+      "order": 4,
+      "text": "Professeur agrégé de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\n",
+      "text_sha256": "f4bc23aed99fa29e8f7410379c6cebea846c1188b4a600c871ae8a6f9bc4dde5"
+    },
+    {
+      "bbox": [
+        312.0,
+        236.15733337402344,
+        415.7716369628906,
+        250.19541931152344
+      ],
+      "block_id": "page-0052-block-0005",
+      "order": 5,
+      "text": "Setrak Ishak, M.D., FRCPC\n",
+      "text_sha256": "361650426fd796951436df8afeb0aa7933ce8c76fe694f319e9c8854031e8dfb"
+    },
+    {
+      "bbox": [
+        312.0,
+        253.57723999023438,
+        511.5595397949219,
+        274.7937927246094
+      ],
+      "block_id": "page-0052-block-0006",
+      "order": 6,
+      "text": "Résident en psychiatrie, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\n",
+      "text_sha256": "7c6ebcfd25a98e2520c8bc84241dea32a1e9d7806bf252a6b592e2081b2542fa"
+    },
+    {
+      "bbox": [
+        54.0,
+        336.72442626953125,
+        294.989990234375,
+        398.64727783203125
+      ],
+      "block_id": "page-0052-block-0007",
+      "order": 7,
+      "text": "3.1 \nEntretien psychiatrique .................................................. 36\n3.1.1 \nCadre.......................................................................... 37\n3.1.2 \nRelation médecin-patient ...................................... 38\n3.1.3 \nTypes d’entretien ..................................................... 38\n3.1.4 \nTechniques d’entrevue............................................ 40\n",
+      "text_sha256": "0960a73cfed4846716a13ae17b61212e3e84459c2bc292d619dc7133428e1912"
+    },
+    {
+      "bbox": [
+        54.0,
+        403.72442626953125,
+        294.989990234375,
+        516.6472778320312
+      ],
+      "block_id": "page-0052-block-0008",
+      "order": 8,
+      "text": "3.2 \nQuestionnaire psychiatrique ......................................... 42\n3.2.1 \nIdentication............................................................ 42\n3.2.2 \nRaison de la consultation....................................... 42\n3.2.3 \nAntécédents psychiatriques .................................. 42\n3.2.4 \nAntécédents médicochirurgicaux........................ 42\n3.2.5 \nAntécédents judiciaires.......................................... 42\n3.2.6 \nAntécédents familiaux............................................ 43\n3.2.7 \nHabitudes de vie ...................................................... 43\n3.2.8 \nMédication................................................................ 43\n",
+      "text_sha256": "d6b0e64c147f27796ae250d92837659890c0b0b225865c4743d3634b5ca48469"
+    },
+    {
+      "bbox": [
+        54.0,
+        521.7244262695312,
+        294.989990234375,
+        531.5681762695312
+      ],
+      "block_id": "page-0052-block-0009",
+      "order": 9,
+      "text": "3.3 \nHistoire de la maladie actuelle ...................................... 43\n",
+      "text_sha256": "471ccf582557954931170c3977a95ddfff070779f90a9fa17286c42eb2bf5dce"
+    },
+    {
+      "bbox": [
+        54.0,
+        535.7244262695312,
+        294.989990234375,
+        545.5681762695312
+      ],
+      "block_id": "page-0052-block-0010",
+      "order": 10,
+      "text": "3.4 \nHistoire personnelle longitudinale............................... 45\n",
+      "text_sha256": "cdc98a784364c337f4f2c551ace8d544cfd4006a28d7e054f5637621fe728e67"
+    },
+    {
+      "bbox": [
+        54.0,
+        549.7244262695312,
+        294.989990234375,
+        559.5681762695312
+      ],
+      "block_id": "page-0052-block-0011",
+      "order": 11,
+      "text": "3.5 \nExamen physique............................................................. 46\n",
+      "text_sha256": "ea855f7f3e15d922562f03a158294cbcc034afb0082217aeeae3dbcd57dc3eaf"
+    },
+    {
+      "bbox": [
+        54.0,
+        563.7244262695312,
+        294.989990234375,
+        611.6472778320312
+      ],
+      "block_id": "page-0052-block-0012",
+      "order": 12,
+      "text": "3.6 \nExamen mental ................................................................ 46\n3.6.1 \nFonctions de l’examen mental............................... 47\n3.6.2 \nProcédure de l’examen mental.............................. 47\n3.6.3 \nContenu de l’examen mental................................. 47\n",
+      "text_sha256": "eac0b823e3c2ea61d26f780c441ddf6532231024881e8c422f0279d0f054b50a"
+    },
+    {
+      "bbox": [
+        54.0,
+        616.7244262695312,
+        294.989990234375,
+        626.5681762695312
+      ],
+      "block_id": "page-0052-block-0013",
+      "order": 13,
+      "text": "3.7 \nFormulation de synthèse ................................................ 68\n",
+      "text_sha256": "2295818860454afc0a8ed9db493752e8e1250c5097bc826a89aae3b5a280cc18"
+    },
+    {
+      "bbox": [
+        312.0,
+        336.72442626953125,
+        552.9900512695312,
+        432.64727783203125
+      ],
+      "block_id": "page-0052-block-0014",
+      "order": 14,
+      "text": "3.8 \nDiagnostics....................................................................... 70\n3.8.1 \nGénéralités sur le diagnostic\nde trouble mental .................................................... 70\n3.8.2 \nSystème diagnostique du DSM-5......................... 70\n3.8.3 \nÉvaluation du niveau de fonctionnement........... 71\n3.8.4\nÉvaluations symptomatiques transversales........ 71\n3.8.5 \nFormulation culturelle............................................ 71\n3.8.6 \nProjet Signature ....................................................... 72\n",
+      "text_sha256": "180fcb33af6b63aaf03a6e77d4e4697291ea04887001353ead0d63b0f80f6d5a"
+    },
+    {
+      "bbox": [
+        312.0,
+        437.72442626953125,
+        552.9900512695312,
+        497.64727783203125
+      ],
+      "block_id": "page-0052-block-0015",
+      "order": 15,
+      "text": "3.9 \nPlan d’intervention.......................................................... 72\n3.9.1 \nAspects administratifs............................................ 72\n3.9.2 \nAspects biologiques ................................................ 72\n3.9.3 \nAspects psychologiques ......................................... 72\n3.9.4 \nAspects sociaux ....................................................... 73\n",
+      "text_sha256": "ef93d3a47944f6e06e1ef16d4b8aeeeb2f3d63856d5cc30d44e8eac45af96115"
+    },
+    {
+      "bbox": [
+        312.0,
+        502.72442626953125,
+        552.9900512695312,
+        512.5681762695312
+      ],
+      "block_id": "page-0052-block-0016",
+      "order": 16,
+      "text": "3.10 Évolution et pronostic..................................................... 73\n",
+      "text_sha256": "7c17ca5d80e008d794b688b279ed39cc5190ae21a5ffebde13813e7adfd028f3"
+    },
+    {
+      "bbox": [
+        312.0,
+        516.7244262695312,
+        552.9900512695312,
+        616.6472778320312
+      ],
+      "block_id": "page-0052-block-0017",
+      "order": 17,
+      "text": "3.11 Rapports d’évaluation psychiatrique ............................ 74\n3.11.1 Histoire de cas.......................................................... 74\n3.11.2 Note d’évaluation à l’urgence ................................ 75\n3.11.3 Note d’admission..................................................... 75\n3.11.4 Note d’évolution ...................................................... 75\n3.11.5 Rapport de consultation......................................... 75\n3.11.6 Rapport d’expertise ................................................. 76\n3.11.7 Résumé de dossier................................................... 76\n",
+      "text_sha256": "4a2d257f0a09b21d2c465a85e107ec322fdc913ce70863179bf734ecb442b269"
+    },
+    {
+      "bbox": [
+        312.0,
+        621.7244262695312,
+        552.9900512695312,
+        631.5681762695312
+      ],
+      "block_id": "page-0052-block-0018",
+      "order": 18,
+      "text": "Lectures complémentaires........................................................ 76\n",
+      "text_sha256": "cdb634d19ecd602c218e767ffd73ee4d6b4c678d186fcba9616f62577d902773"
+    },
+    {
+      "bbox": [
+        325.5,
+        3.1810531616210938,
+        561.0,
+        123.18104553222656
+      ],
+      "block_id": "page-0052-block-0019",
+      "order": 19,
+      "text": "CHAPITRE3\n",
+      "text_sha256": "0f849a3ceeb69f3b7a7caf2d6bd61ea01e151df279f23de2b15f29496cac8067"
+    }
+  ],
+  "coordinates_sha256": "201cb172c5cad3d00e724a40982b5d5496b0fe36c72f1938f43b461be23d92c9",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0052",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Examen psychiatrique\nYvan Pelletier, M.D.\nPsychiatre, Pavillon Albert-Prévost, Hôpital du Sacré-Cœur\nde Montréal\nProfesseur agrégé de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\nSetrak Ishak, M.D., FRCPC\nRésident en psychiatrie, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\n3.1 \nEntretien psychiatrique .................................................. 36\n3.1.1 \nCadre.......................................................................... 37\n3.1.2 \nRelation médecin-patient ...................................... 38\n3.1.3 \nTypes d’entretien ..................................................... 38\n3.1.4 \nTechniques d’entrevue............................................ 40\n3.2 \nQuestionnaire psychiatrique ......................................... 42\n3.2.1 \nIdentication............................................................ 42\n3.2.2 \nRaison de la consultation....................................... 42\n3.2.3 \nAntécédents psychiatriques .................................. 42\n3.2.4 \nAntécédents médicochirurgicaux........................ 42\n3.2.5 \nAntécédents judiciaires.......................................... 42\n3.2.6 \nAntécédents familiaux............................................ 43\n3.2.7 \nHabitudes de vie ...................................................... 43\n3.2.8 \nMédication................................................................ 43\n3.3 \nHistoire de la maladie actuelle ...................................... 43\n3.4 \nHistoire personnelle longitudinale............................... 45\n3.5 \nExamen physique............................................................. 46\n3.6 \nExamen mental ................................................................ 46\n3.6.1 \nFonctions de l’examen mental............................... 47\n3.6.2 \nProcédure de l’examen mental.............................. 47\n3.6.3 \nContenu de l’examen mental................................. 47\n3.7 \nFormulation de synthèse ................................................ 68\n3.8 \nDiagnostics....................................................................... 70\n3.8.1 \nGénéralités sur le diagnostic\nde trouble mental .................................................... 70\n3.8.2 \nSystème diagnostique du DSM-5......................... 70\n3.8.3 \nÉvaluation du niveau de fonctionnement........... 71\n3.8.4\nÉvaluations symptomatiques transversales........ 71\n3.8.5 \nFormulation culturelle............................................ 71\n3.8.6 \nProjet Signature ....................................................... 72\n3.9 \nPlan d’intervention.......................................................... 72\n3.9.1 \nAspects administratifs............................................ 72\n3.9.2 \nAspects biologiques ................................................ 72\n3.9.3 \nAspects psychologiques ......................................... 72\n3.9.4 \nAspects sociaux ....................................................... 73\n3.10 Évolution et pronostic..................................................... 73\n3.11 Rapports d’évaluation psychiatrique ............................ 74\n3.11.1 Histoire de cas.......................................................... 74\n3.11.2 Note d’évaluation à l’urgence ................................ 75\n3.11.3 Note d’admission..................................................... 75\n3.11.4 Note d’évolution ...................................................... 75\n3.11.5 Rapport de consultation......................................... 75\n3.11.6 Rapport d’expertise ................................................. 76\n3.11.7 Résumé de dossier................................................... 76\nLectures complémentaires........................................................ 76\nCHAPITRE3\n",
+  "raw_text_sha256": "6d658ea8bfc82a43a2bdd4109f7c2bdb4945f36b27949ba9d979c9e7655d908a",
+  "source_page_display": 53,
+  "source_page_index": 52
+}

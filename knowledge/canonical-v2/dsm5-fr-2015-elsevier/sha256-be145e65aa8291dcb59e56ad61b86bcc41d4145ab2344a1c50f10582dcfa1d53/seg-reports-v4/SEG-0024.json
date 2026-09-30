@@ -1,0 +1,50 @@
+{
+  "book_id": "dsm5-fr-2015-elsevier",
+  "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+  "segment": "seg-0576-0600.pdf",
+  "source_page_start": 576,
+  "source_page_end": 600,
+  "page_count": 25,
+  "segment_sha256": "069415aebbf6ed25e2dd37dd27b7cd00714327d4e59239c1c5e94b4bd4f2987d",
+  "candidate_reconciliation": "reconciliation-v10",
+  "units": 447,
+  "tables": 3,
+  "concepts": 68,
+  "xrefs": 12,
+  "pages_with_no_text": [],
+  "uncertain": [],
+  "fallback_pages": [],
+  "extractors": {
+    "citra-read-pdf": 9,
+    "pymupdf-original-text-layer": 438
+  },
+  "citra": {
+    "status": "mcp_timeout_unresponsive",
+    "failed_segment_pages": [],
+    "failed_source_pages": [],
+    "fallback_used": true
+  },
+  "line_counts": {
+    "units": 447,
+    "tables": 3,
+    "concepts": 68,
+    "xrefs": 12
+  },
+  "files": {
+    "units": "reconciliation-v10/units.jsonl",
+    "tables": "reconciliation-v10/tables.jsonl",
+    "concepts": "reconciliation-v10/concepts.jsonl",
+    "xrefs": "reconciliation-v10/xrefs.jsonl"
+  },
+  "structure_candidate": "structure-v2.candidate.json",
+  "status": "CANDIDATE_REVIEW_REQUIRED",
+  "canonical_promotion_authorized": false,
+  "summary_line": "SEG seg-0576-0600.pdf: units=447 tables=3 concepts=68 xrefs=12 | pages with no text: [] | uncertain: [] | citra-failed-pages: [] | notes: Citra was not replayed for this segment; report is manifest-only and does not claim a fresh Citra result.",
+  "fallback_verification": {
+    "method": "pymupdf-get_text",
+    "ocr_used": false,
+    "page_count": 25,
+    "empty_pages": [],
+    "segment_sha256": "069415aebbf6ed25e2dd37dd27b7cd00714327d4e59239c1c5e94b4bd4f2987d"
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "block_sequence_sha256": "307f16ea7714b981895c7e7982ee7b019b2ed7f2ddc8a21c468ea2da7cde8f6e",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        470.3879699707031,
+        758.8693237304688
+      ],
+      "block_id": "page-0167-block-0001",
+      "order": 1,
+      "text": "150\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2\nDéterminants bio-psycho-sociaux\n",
+      "text_sha256": "86cc3c85530a721a56bc27e8d57a7c5fd9f09d0db637cd5efbedd8f104cce857"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.2572021484375,
+        85.95849609375
+      ],
+      "block_id": "page-0167-block-0002",
+      "order": 2,
+      "text": "du débit sanguin. L’obtention du signal en IRMf utilise donc une\nséquence sensible aux variations du débit sanguin. L’information\nest recueillie par une antenne et traduite en code de couleurs sur\ndes coupes anatomiques.\n",
+      "text_sha256": "677237f129cbbdaf1d270c546cb7d3efc7426594500a33e51c269dc4a9ee1df4"
+    },
+    {
+      "bbox": [
+        306.0,
+        86.9658203125,
+        549.3075561523438,
+        212.45849609375
+      ],
+      "block_id": "page-0167-block-0003",
+      "order": 3,
+      "text": "L’évaluation en IRMf, qu’elle soit à des ns cliniques ou de\nrecherche fondamentale, repose généralement sur l’élaboration\nd’un protocole cherchant à comparer deux ou plusieurs condi-\ntions cérébrales. Au cours d’une séance d’IRMf, l’acquisition\npeut durer jusqu’à une heure et permet d’eectuer des tests sur\nle plan cognitif, émotionnel, moteur, etc. La stimulation peut\nêtre de nature visuelle, auditive, sensorielle, etc. Les principales\nlimites sont plutôt relatives à la nature des comparaisons (devis\nexpérimental) ainsi qu’à l’environnement contraignant que\nreprésente une salle d’examen dans laquelle l’équipement utilisé\ndoit être compatible avec un environnement IRM.\n",
+      "text_sha256": "bdf96fb6a011d83ddc5f7775b6bb452bca35762af257a635c10d6bb86edec44b"
+    },
+    {
+      "bbox": [
+        306.0,
+        213.4658203125,
+        549.0175170898438,
+        246.95849609375
+      ],
+      "block_id": "page-0167-block-0004",
+      "order": 4,
+      "text": "Le tableau 7.1 résume les diérentes modalités en imagerie\ndisponibles pour l’évaluation du cerveau et les principales appli-\ncations cliniques.\n",
+      "text_sha256": "de05acad331c97222455a1891f85c76c74512687a859953fc731e056671b04fb"
+    },
+    {
+      "bbox": [
+        311.20001220703125,
+        252.35000610351562,
+        542.8238525390625,
+        283.55029296875
+      ],
+      "block_id": "page-0167-block-0005",
+      "order": 5,
+      "text": "i\nUn supplément d’information sur les différentes techniques\nutilisées en IRM est disponible au www.imaios.com/fr/ e-\nCourse/e-MRI.\n",
+      "text_sha256": "3883a1532f5c4b07b908bb4f47f24682dce026ac21ca525a0b7bcb95340769b1"
+    },
+    {
+      "bbox": [
+        318.1000061035156,
+        307.2431640625,
+        528.9735107421875,
+        362.1689453125
+      ],
+      "block_id": "page-0167-block-0006",
+      "order": 6,
+      "text": "7.5\nApplications de l’imagerie\npar résonance magnétique\nen psychiatrie\n",
+      "text_sha256": "c7e80628fa322e531c9e5d313e64648c218b69f3c88b4f1d048f42d92677f344"
+    },
+    {
+      "bbox": [
+        306.0,
+        375.9658203125,
+        549.2100830078125,
+        420.95849609375
+      ],
+      "block_id": "page-0167-block-0007",
+      "order": 7,
+      "text": "Il n’y a présentement aucune application clinique de routine\nde l’imagerie utile en psychiatrie, à l’exception des pathologies\nassociées aux démences. Toutefois, elle est un outil qui permet\nd’étudier le système nerveux central plus en détail.\n",
+      "text_sha256": "960b06c002ab4bda39b323eaaba5721ae9b70ed5602655a57db0f4ec254a6a95"
+    },
+    {
+      "bbox": [
+        306.0,
+        431.48681640625,
+        396.654541015625,
+        447.62939453125
+      ],
+      "block_id": "page-0167-block-0008",
+      "order": 8,
+      "text": "7.5.1 Démences\n",
+      "text_sha256": "b73cde66276d96cddf7cb248e36a7eb404318e438c394f95890dce442b88a010"
+    },
+    {
+      "bbox": [
+        306.0,
+        450.9658203125,
+        549.25634765625,
+        564.95849609375
+      ],
+      "block_id": "page-0167-block-0009",
+      "order": 9,
+      "text": "L’objectif de l’évaluation en imagerie est de caractériser le type\nde démence à la recherche d’une cause traitable et possiblement\nréversible. L’American College of Radiology (Wippold & al.,\n2014) considère que l’IRM est la méthode d’imagerie la plus\nappropriée dans l’évaluation initiale des diérents types de\ndémence. L’augmentation du nombre de malades, les nouvelles\nméthodes d’imagerie, les découvertes sur la pathophysiologie\ndes maladies et les essais cliniques de nouveaux traitements\nont suscité un regain d’intérêt à l’égard de l’imagerie depuis les\ndix dernières années.\n",
+      "text_sha256": "a6e77f4a1bed6206361cdf1ad2591d8e4404f2306bb40dbf459e4739afa13dc4"
+    },
+    {
+      "bbox": [
+        306.0,
+        565.9658203125,
+        549.7808227539062,
+        656.95849609375
+      ],
+      "block_id": "page-0167-block-0010",
+      "order": 10,
+      "text": "Le diagnostic de démence est un diagnostic clinique. Le\nsupport fourni par l’imagerie devient important pour le traite-\nment, le pronostic, le soutien familial et social, ainsi que pour la\nplanication des conséquences nancières et légales inhérentes\nà la maladie. Birks (2006) a montré que les nouvelles approches\nthérapeutiques rendent tout à fait pertinent le fait de diérencier\nune démence vasculaire d’une démence d’Alzheimer ou d’une\ndémence frontotemporale.\n",
+      "text_sha256": "83f7f0e7693c3e46e0d959c21fb7c87516bc03eccc13856e59f3765e36b16bc4"
+    },
+    {
+      "bbox": [
+        306.0,
+        665.8330078125,
+        549.0175170898438,
+        725.95849609375
+      ],
+      "block_id": "page-0167-block-0011",
+      "order": 11,
+      "text": "Démence vasculaire\nLa démence vasculaire représente est particulièrement ren-\ncontrée dans la population plus âgée. Son diagnostic est\nimportant, car il est possible d’en limiter la progression. Cer-\ntains facteurs de risque sont reliés à des causes traitables, tels\n",
+      "text_sha256": "4f5e572017544968c1f71944855e4a6352b57ef5757845c41a06f22e840db7fc"
+    },
+    {
+      "bbox": [
+        48.0,
+        340.4658203125,
+        291.3267822265625,
+        525.7584838867188
+      ],
+      "block_id": "page-0167-block-0012",
+      "order": 12,
+      "text": "signal en fonction de la direction) que possèdent les molécules\nd’eau au sein des gaines de myéline, ce qui permet d’établir le\ntrajet des neurones (tractographie). L’étude DTi permet donc\nd’étudier la matière blanche avec un degré de précision dont\nl’IRM de base est incapable. La DTi est surtout utilisée en\nclinique pour l’évaluation préopératoire de tumeurs cérébrales\nou de malformation artérioveineuses.\n• La technique de perfusion cérébrale permet d’analyser\nla microcirculation dans le tissu cérébral. On peut ainsi\ncalculer :\n– le débit sanguin régional ;\n– le volume sanguin régional ;\n– le temps de transit moyen ;\n– le temps d’arrivée du produit de contraste ;\n– le temps pour atteindre la variation maximale de contraste\n",
+      "text_sha256": "fffea704ce930a465dfc8c35e54082bde18c1b352a79aaf5cfb5cd10f17ebbfb"
+    },
+    {
+      "bbox": [
+        48.0,
+        526.9158325195312,
+        291.3668212890625,
+        597.5084838867188
+      ],
+      "block_id": "page-0167-block-0013",
+      "order": 13,
+      "text": "(temps jusqu’à la valeur crête – time to peak).\nCes techniques de perfusion sont largement utilisées dans\nl’évaluation des lésions cérébrales tumorales et des accidents\nvasculaires cérébraux (AVC). La perfusion permet de diérencier\nla récidive tumorale de la radionécrose et la pénombre de la zone\ninfarcie dans le cas des AVC.\n",
+      "text_sha256": "a35d16dfb73e3b80dfaed92bb9c988713ea767a2e9ecc07d8bab9af7e37b93b4"
+    },
+    {
+      "bbox": [
+        48.0,
+        598.6658325195312,
+        291.26629638671875,
+        725.45849609375
+      ],
+      "block_id": "page-0167-block-0014",
+      "order": 14,
+      "text": "L’imagerie par résonnance magnétique fonctionnelle (IRMf)\nest une technique d’imagerie in vivo et non invasive utilisée an\nd’obtenir de l’information sur la localisation de régions cérébrales\nintervenant dans le traitement de tâches cognitives spéciques.\nL’IRMf permet donc de « voir » quelle région cérébrale s’active\nlors de l’accomplissement d’une tâche. Elle est très utilisée\nen neurosciences cognitives. Il est important de noter que la\nmesure que fournit l’IRMf est une mesure indirecte de l’activité\nneuronale. Lorsqu’une région cérébrale accomplit une tâche,\nl’activité neuronale mise en jeu exige un apport supplémentaire\nd’oxygène et de glucose, ce qui se traduit par une augmentation\n",
+      "text_sha256": "8b65646440d6b6cb6217ad96bf32897f225850b11a9b12d8fa682eff3e6177b8"
+    },
+    {
+      "bbox": [
+        50.25,
+        41.002296447753906,
+        281.6938781738281,
+        53.320068359375
+      ],
+      "block_id": "page-0167-block-0015",
+      "order": 15,
+      "text": "FIGURE 7.6 Coupe axiale en pondération T2 d’un cerveau\n",
+      "text_sha256": "ef4144befd91d1718fdc35564933bcb99225c9d47b1ff9af5f0beb4bd644e4af"
+    },
+    {
+      "bbox": [
+        95.6500015258789,
+        52.852294921875,
+        273.1680603027344,
+        64.820068359375
+      ],
+      "block_id": "page-0167-block-0016",
+      "order": 16,
+      "text": "normal (c.-à-d. pas d’anomalie structurale)\n",
+      "text_sha256": "229f6d9a8f84b3d4eee4d11d6d59ccc6aaab5c2315da9f55170a454868e9eee4"
+    },
+    {
+      "bbox": [
+        48.0,
+        299.6906433105469,
+        275.6599426269531,
+        317.4250183105469
+      ],
+      "block_id": "page-0167-block-0017",
+      "order": 17,
+      "text": "1. Cortex. 2. Matière blanche. 3. Corps calleux. 4. Ventricule latéral. 5. Thalamus.\n6. Putamen. 7. Capsule interne.\n",
+      "text_sha256": "f553c49b21a46c331add0c217dfd5cf73c55b8d6984ec6f19645cdbd2e3d5542"
+    }
+  ],
+  "coordinates_sha256": "09fdea249188236ccc59d03b3f53939e979bebdc4636521a45a4106ca3da9514",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0167",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "150\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2\nDéterminants bio-psycho-sociaux\ndu débit sanguin. L’obtention du signal en IRMf utilise donc une\nséquence sensible aux variations du débit sanguin. L’information\nest recueillie par une antenne et traduite en code de couleurs sur\ndes coupes anatomiques.\nL’évaluation en IRMf, qu’elle soit à des ns cliniques ou de\nrecherche fondamentale, repose généralement sur l’élaboration\nd’un protocole cherchant à comparer deux ou plusieurs condi-\ntions cérébrales. Au cours d’une séance d’IRMf, l’acquisition\npeut durer jusqu’à une heure et permet d’eectuer des tests sur\nle plan cognitif, émotionnel, moteur, etc. La stimulation peut\nêtre de nature visuelle, auditive, sensorielle, etc. Les principales\nlimites sont plutôt relatives à la nature des comparaisons (devis\nexpérimental) ainsi qu’à l’environnement contraignant que\nreprésente une salle d’examen dans laquelle l’équipement utilisé\ndoit être compatible avec un environnement IRM.\nLe tableau 7.1 résume les diérentes modalités en imagerie\ndisponibles pour l’évaluation du cerveau et les principales appli-\ncations cliniques.\ni\nUn supplément d’information sur les différentes techniques\nutilisées en IRM est disponible au www.imaios.com/fr/ e-\nCourse/e-MRI.\n7.5\nApplications de l’imagerie\npar résonance magnétique\nen psychiatrie\nIl n’y a présentement aucune application clinique de routine\nde l’imagerie utile en psychiatrie, à l’exception des pathologies\nassociées aux démences. Toutefois, elle est un outil qui permet\nd’étudier le système nerveux central plus en détail.\n7.5.1 Démences\nL’objectif de l’évaluation en imagerie est de caractériser le type\nde démence à la recherche d’une cause traitable et possiblement\nréversible. L’American College of Radiology (Wippold & al.,\n2014) considère que l’IRM est la méthode d’imagerie la plus\nappropriée dans l’évaluation initiale des diérents types de\ndémence. L’augmentation du nombre de malades, les nouvelles\nméthodes d’imagerie, les découvertes sur la pathophysiologie\ndes maladies et les essais cliniques de nouveaux traitements\nont suscité un regain d’intérêt à l’égard de l’imagerie depuis les\ndix dernières années.\nLe diagnostic de démence est un diagnostic clinique. Le\nsupport fourni par l’imagerie devient important pour le traite-\nment, le pronostic, le soutien familial et social, ainsi que pour la\nplanication des conséquences nancières et légales inhérentes\nà la maladie. Birks (2006) a montré que les nouvelles approches\nthérapeutiques rendent tout à fait pertinent le fait de diérencier\nune démence vasculaire d’une démence d’Alzheimer ou d’une\ndémence frontotemporale.\nDémence vasculaire\nLa démence vasculaire représente est particulièrement ren-\ncontrée dans la population plus âgée. Son diagnostic est\nimportant, car il est possible d’en limiter la progression. Cer-\ntains facteurs de risque sont reliés à des causes traitables, tels\nsignal en fonction de la direction) que possèdent les molécules\nd’eau au sein des gaines de myéline, ce qui permet d’établir le\ntrajet des neurones (tractographie). L’étude DTi permet donc\nd’étudier la matière blanche avec un degré de précision dont\nl’IRM de base est incapable. La DTi est surtout utilisée en\nclinique pour l’évaluation préopératoire de tumeurs cérébrales\nou de malformation artérioveineuses.\n• La technique de perfusion cérébrale permet d’analyser\nla microcirculation dans le tissu cérébral. On peut ainsi\ncalculer :\n– le débit sanguin régional ;\n– le volume sanguin régional ;\n– le temps de transit moyen ;\n– le temps d’arrivée du produit de contraste ;\n– le temps pour atteindre la variation maximale de contraste\n(temps jusqu’à la valeur crête – time to peak).\nCes techniques de perfusion sont largement utilisées dans\nl’évaluation des lésions cérébrales tumorales et des accidents\nvasculaires cérébraux (AVC). La perfusion permet de diérencier\nla récidive tumorale de la radionécrose et la pénombre de la zone\ninfarcie dans le cas des AVC.\nL’imagerie par résonnance magnétique fonctionnelle (IRMf)\nest une technique d’imagerie in vivo et non invasive utilisée an\nd’obtenir de l’information sur la localisation de régions cérébrales\nintervenant dans le traitement de tâches cognitives spéciques.\nL’IRMf permet donc de « voir » quelle région cérébrale s’active\nlors de l’accomplissement d’une tâche. Elle est très utilisée\nen neurosciences cognitives. Il est important de noter que la\nmesure que fournit l’IRMf est une mesure indirecte de l’activité\nneuronale. Lorsqu’une région cérébrale accomplit une tâche,\nl’activité neuronale mise en jeu exige un apport supplémentaire\nd’oxygène et de glucose, ce qui se traduit par une augmentation\nFIGURE 7.6 Coupe axiale en pondération T2 d’un cerveau\nnormal (c.-à-d. pas d’anomalie structurale)\n1. Cortex. 2. Matière blanche. 3. Corps calleux. 4. Ventricule latéral. 5. Thalamus.\n6. Putamen. 7. Capsule interne.\n",
+  "raw_text_sha256": "af963e064d5472171502ae7a82d10daa0cce317f1eb779aa22bb94cd632a1025",
+  "source_page_display": 168,
+  "source_page_index": 167
+}

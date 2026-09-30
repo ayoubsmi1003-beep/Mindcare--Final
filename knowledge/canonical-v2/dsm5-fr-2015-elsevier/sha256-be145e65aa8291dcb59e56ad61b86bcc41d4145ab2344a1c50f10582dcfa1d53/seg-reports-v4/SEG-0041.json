@@ -1,0 +1,88 @@
+{
+  "book_id": "dsm5-fr-2015-elsevier",
+  "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+  "segment": "seg-1001-1025.pdf",
+  "source_page_start": 1001,
+  "source_page_end": 1025,
+  "page_count": 25,
+  "segment_sha256": "2b4aba39d77b9bafe286fc57995ad1bb3d2f82dc43de3cb03f8e9c5d00740786",
+  "candidate_reconciliation": "reconciliation-v10",
+  "units": 96,
+  "tables": 15,
+  "concepts": 67,
+  "xrefs": 13,
+  "pages_with_no_text": [],
+  "uncertain": [
+    1001,
+    1002,
+    1003,
+    1004,
+    1005,
+    1006,
+    1008,
+    1009,
+    1011,
+    1013,
+    1014,
+    1015,
+    1017,
+    1018,
+    1020,
+    1022,
+    1024,
+    1025
+  ],
+  "fallback_pages": [
+    1001,
+    1002,
+    1003,
+    1004,
+    1005,
+    1006,
+    1008,
+    1009,
+    1011,
+    1013,
+    1014,
+    1015,
+    1017,
+    1018,
+    1020,
+    1022,
+    1024,
+    1025
+  ],
+  "extractors": {
+    "pymupdf-fallback": 32,
+    "pymupdf-original-text-layer": 64
+  },
+  "citra": {
+    "status": "mcp_timeout_unresponsive",
+    "failed_segment_pages": [],
+    "failed_source_pages": [],
+    "fallback_used": true
+  },
+  "line_counts": {
+    "units": 96,
+    "tables": 15,
+    "concepts": 67,
+    "xrefs": 13
+  },
+  "files": {
+    "units": "reconciliation-v10/units.jsonl",
+    "tables": "reconciliation-v10/tables.jsonl",
+    "concepts": "reconciliation-v10/concepts.jsonl",
+    "xrefs": "reconciliation-v10/xrefs.jsonl"
+  },
+  "structure_candidate": "structure-v2.candidate.json",
+  "status": "CANDIDATE_REVIEW_REQUIRED",
+  "canonical_promotion_authorized": false,
+  "summary_line": "SEG seg-1001-1025.pdf: units=96 tables=15 concepts=67 xrefs=13 | pages with no text: [] | uncertain: [1001, 1002, 1003, 1004, 1005, 1006, 1008, 1009, 1011, 1013, 1014, 1015, 1017, 1018, 1020, 1022, 1024, 1025] | citra-failed-pages: [] | notes: Citra was not replayed for this segment; report is manifest-only and does not claim a fresh Citra result.; Fallback pages are explicitly uncertain and routed to review.",
+  "fallback_verification": {
+    "method": "pymupdf-get_text",
+    "ocr_used": false,
+    "page_count": 25,
+    "empty_pages": [],
+    "segment_sha256": "2b4aba39d77b9bafe286fc57995ad1bb3d2f82dc43de3cb03f8e9c5d00740786"
+  }
+}

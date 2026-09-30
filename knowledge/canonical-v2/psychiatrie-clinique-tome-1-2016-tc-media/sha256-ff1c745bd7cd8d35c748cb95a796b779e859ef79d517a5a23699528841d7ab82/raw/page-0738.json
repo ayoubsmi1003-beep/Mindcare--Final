@@ -1,0 +1,76 @@
+{
+  "block_sequence_sha256": "cc20b2204f2b5608326ace48d12f25866b7efc4d67840baadec0d4f1452f94cf",
+  "blocks": [
+    {
+      "bbox": [
+        305.8500061035156,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0738-block-0001",
+      "order": 1,
+      "text": "Chapitre 32\nTroubles du sommeil et de la vigilance\n721\n",
+      "text_sha256": "f92de42589ed8eda6dbfef09cd414807d3f9f389d8e0782164f7ee41c1319aa2"
+    },
+    {
+      "bbox": [
+        56.29999923706055,
+        41.002296447753906,
+        429.3281555175781,
+        53.320068359375
+      ],
+      "block_id": "page-0738-block-0002",
+      "order": 2,
+      "text": "FIGURE 32.4 Hypnogramme d’une nuit normale de sommeil à différentes périodes de la vie\n",
+      "text_sha256": "1bb2f06e3ec3174c1f14719b2974054c628149064df92dc093e4298daa52944f"
+    },
+    {
+      "bbox": [
+        54.0,
+        555.0203247070312,
+        550.7796630859375,
+        572.8250122070312
+      ],
+      "block_id": "page-0738-block-0003",
+      "order": 3,
+      "text": "Légende : SP : sommeil paradoxal ; SL : sommeil lent ; PSP : période de sommeil paradoxal, dénie comme une succession de segments de sommeil paradoxal non interrompue\npar plus de 15 minutes d’un autre état de vigilance.\n",
+      "text_sha256": "b9f98d0b804c5739d076945c4fa6bfadb5734b14708a555c1f286848583b70b1"
+    },
+    {
+      "bbox": [
+        54.0,
+        598.2158203125,
+        297.01751708984375,
+        674.72607421875
+      ],
+      "block_id": "page-0738-block-0004",
+      "order": 4,
+      "text": "On attribue classiquement au sommeil lent des fonctions phy-\nsiologiques puisque c’est au cours de cette période que l’on observe :\n• une recrudescence de la synthèse protéique cérébrale ;\n• l’activation des fonctions immunitaires ;\n• la réparation des tissus ;\n• le pic quotidien de sécrétion de l’hormone de croissance.\n",
+      "text_sha256": "1dc801ee0a8cd22512ea22ee0daa8cfd91a0241343d2e87fe70ff287251f511b"
+    },
+    {
+      "bbox": [
+        312.0,
+        598.1658325195312,
+        555.2904663085938,
+        674.20849609375
+      ],
+      "block_id": "page-0738-block-0005",
+      "order": 5,
+      "text": "Ce dernier point est bien illustré par le nanisme psycho-\nsocial (nanisme de stress, nanisme par carence psychoaective,\nconséquence de maltraitance psychologique) où l’on retrouve\nune réduction importante du sommeil lent profond et de\nl’hormone de croissance, produisant un retard staturopondéral.\nLorsque l’enfant est retiré du milieu pathogène, il retrouve son\n",
+      "text_sha256": "be59ab29efef12fc715c0b45ad78a768f78a29d2593581415ff566b5f9010828"
+    }
+  ],
+  "coordinates_sha256": "e0380a9d7c8bc5d239b6ed20ac4d3659309189cc13a18a4fa164622ccab08306",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0738",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 32\nTroubles du sommeil et de la vigilance\n721\nFIGURE 32.4 Hypnogramme d’une nuit normale de sommeil à différentes périodes de la vie\nLégende : SP : sommeil paradoxal ; SL : sommeil lent ; PSP : période de sommeil paradoxal, dénie comme une succession de segments de sommeil paradoxal non interrompue\npar plus de 15 minutes d’un autre état de vigilance.\nOn attribue classiquement au sommeil lent des fonctions phy-\nsiologiques puisque c’est au cours de cette période que l’on observe :\n• une recrudescence de la synthèse protéique cérébrale ;\n• l’activation des fonctions immunitaires ;\n• la réparation des tissus ;\n• le pic quotidien de sécrétion de l’hormone de croissance.\nCe dernier point est bien illustré par le nanisme psycho-\nsocial (nanisme de stress, nanisme par carence psychoaective,\nconséquence de maltraitance psychologique) où l’on retrouve\nune réduction importante du sommeil lent profond et de\nl’hormone de croissance, produisant un retard staturopondéral.\nLorsque l’enfant est retiré du milieu pathogène, il retrouve son\n",
+  "raw_text_sha256": "0eabb71e87029867d00ee0c87f6cd7c6852efb53fad6e28a93632cf8af732445",
+  "source_page_display": 739,
+  "source_page_index": 738
+}

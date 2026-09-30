@@ -1,0 +1,664 @@
+{
+  "block_sequence_sha256": "7160e73dbb13df3a6269717ba890413f4d70b887875f87096b254ac3dc5cbd27",
+  "blocks": [
+    {
+      "bbox": [
+        496.5,
+        747.5753784179688,
+        555.02001953125,
+        758.8693237304688
+      ],
+      "block_id": "page-1184-block-0001",
+      "order": 1,
+      "text": "Index\nI23\n",
+      "text_sha256": "e324af2445fd9699ffa4f37360d1193701a87dcd54bbb129935ae4523095966c"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.82011795043945,
+        213.01451110839844,
+        52.41728591918945
+      ],
+      "block_id": "page-1184-block-0002",
+      "order": 2,
+      "text": "anorexie, 699-702, voir aussi troubles\n",
+      "text_sha256": "42a0bb595f175f5c69fed5ca3069b1e7ff9d5cfcd41ff175262be2e112bcb933"
+    },
+    {
+      "bbox": [
+        63.0,
+        53.32011795043945,
+        200.58816528320312,
+        77.41728973388672
+      ],
+      "block_id": "page-1184-block-0003",
+      "order": 3,
+      "text": "des conduites alimentaires\ncomplications physiques de l’__,\n",
+      "text_sha256": "372a43ada418d8c3f206499d2edf6acfc652d479bda294a77342683d8214c4be"
+    },
+    {
+      "bbox": [
+        54.0,
+        78.32012176513672,
+        186.30043029785156,
+        177.4172821044922
+      ],
+      "block_id": "page-1184-block-0004",
+      "order": 4,
+      "text": "710-711\ngrossesse et __, 971\nhospitalisation et __, 710\nhypnose et __, 1761\nthérapie familiale et __, 1738\nanorgasmie, 776\nanosognosie, 67, 170, 587\nantagonistes\n",
+      "text_sha256": "2876d37c23e50f96ac941804ca17b98e4ab1030856dabfb73942c8066c8c2793"
+    },
+    {
+      "bbox": [
+        63.0,
+        178.3201141357422,
+        212.02651977539062,
+        202.4172821044922
+      ],
+      "block_id": "page-1184-block-0005",
+      "order": 5,
+      "text": "λ, 897\ncaractéristiques pharmacologiques\n",
+      "text_sha256": "6a82b0029ecd0ecb817da3d86414a3331f6dbf6f06b03609115a5935f359a979"
+    },
+    {
+      "bbox": [
+        63.0,
+        203.3201141357422,
+        177.2429962158203,
+        242.2786102294922
+      ],
+      "block_id": "page-1184-block-0006",
+      "order": 6,
+      "text": "des __, 1452t\nDA2 (halopéridol), 128\ndes récepteurs 5-HT3, 127,\n",
+      "text_sha256": "5ad42a2aa370eeeabc69e91a3cf70ad9c3013f6b114db60d691a6eae4051f958"
+    },
+    {
+      "bbox": [
+        63.0,
+        240.8201141357422,
+        190.73251342773438,
+        264.91729736328125
+      ],
+      "block_id": "page-1184-block-0007",
+      "order": 7,
+      "text": "1502\ndes récepteurs adrénergiques,\n",
+      "text_sha256": "5dc54cb6399ae8b5a09f786ffae4bac5a4608fab3b9164bf327960da73359567"
+    },
+    {
+      "bbox": [
+        63.0,
+        265.82012939453125,
+        190.77452087402344,
+        289.91729736328125
+      ],
+      "block_id": "page-1184-block-0008",
+      "order": 8,
+      "text": "1451-1453\ndes récepteurs cholinergiques\n",
+      "text_sha256": "2057d13b2696c93b79b75da0e9d4bb37677d66bd613191e44507d6dab30f1bf3"
+    },
+    {
+      "bbox": [
+        63.0,
+        290.82012939453125,
+        204.00489807128906,
+        314.91729736328125
+      ],
+      "block_id": "page-1184-block-0009",
+      "order": 9,
+      "text": "muscariniques, 117\ndes récepteurs de la dopamine et\n",
+      "text_sha256": "292d4f1d6437ac3183efc6852f26712038cbc12b3340a06aba22857d111ba589"
+    },
+    {
+      "bbox": [
+        63.0,
+        315.82012939453125,
+        204.2474822998047,
+        377.41729736328125
+      ],
+      "block_id": "page-1184-block-0010",
+      "order": 10,
+      "text": "de la sérotonine, 1431, 1460-\n1480, voir aussi antipsycho-\ntiques\ndes récepteurs H1, 129\ndes récepteurs NMDA, 573,\n",
+      "text_sha256": "02b9967cf8f5d10a24646fe218f425f1aa47dcc57f3957cf56b7ea85b850340c"
+    },
+    {
+      "bbox": [
+        63.0,
+        378.32012939453125,
+        204.6195068359375,
+        402.41729736328125
+      ],
+      "block_id": "page-1184-block-0011",
+      "order": 11,
+      "text": "1519\ndes récepteurs sérotoninergiques\n",
+      "text_sha256": "40f1f0b1a64fc7fd3615c99f22a57e70e045532dc9828e5d56b0c0aadd7e65ad"
+    },
+    {
+      "bbox": [
+        63.0,
+        403.32012939453125,
+        205.6619873046875,
+        439.91729736328125
+      ],
+      "block_id": "page-1184-block-0012",
+      "order": 12,
+      "text": "(5-HT2A), 1455\ndopaminergiques, 837, 839\ndu CRF (cortisol releasing factor),\n",
+      "text_sha256": "3c4ea4cc5259070bac57bb035f5d7aef7db1668b3b6cab70e8607217081ee9a3"
+    },
+    {
+      "bbox": [
+        63.0,
+        440.82012939453125,
+        191.42015075683594,
+        489.91729736328125
+      ],
+      "block_id": "page-1184-block-0013",
+      "order": 13,
+      "text": "507\nGABA, 1457\nmécanismes __, 668\nnon compétitif des récepteurs\n",
+      "text_sha256": "8fc6ca6d285f347add8d8d38f4722d72e846b92eb6c0c86031962a9c644b6bb1"
+    },
+    {
+      "bbox": [
+        54.0,
+        490.82012939453125,
+        177.1170196533203,
+        539.9172973632812
+      ],
+      "block_id": "page-1184-block-0014",
+      "order": 14,
+      "text": "N-méthyl-D-aspartate\n(NMDA), 1512\nopiacés, 834, 840, 842, 845\nantécédents, 42-43\n",
+      "text_sha256": "cabb24ac45265d413e2f4badf8e81b7f4d4762fd8d5b20c6b059d46779a57f67"
+    },
+    {
+      "bbox": [
+        63.0,
+        540.8201293945312,
+        200.43980407714844,
+        564.9172973632812
+      ],
+      "block_id": "page-1184-block-0015",
+      "order": 15,
+      "text": "criminels, 950\nde consommation de substance,\n",
+      "text_sha256": "2abcbf70cfaa4f52570a79fc9afaf612a745dc562a99cd3db0b8a36423e3f3fc"
+    },
+    {
+      "bbox": [
+        63.0,
+        565.8201293945312,
+        206.2974853515625,
+        602.4172973632812
+      ],
+      "block_id": "page-1184-block-0016",
+      "order": 16,
+      "text": "1085\nfamiliaux, 43, 1085, 1216, 1250t\njudiciaires, 42-43, 80, 1023, 1085-\n",
+      "text_sha256": "060e2eed3b198cc41f27af5d8ecb27a0ed6051909a9b6ea83a18e3f21113bcc6"
+    },
+    {
+      "bbox": [
+        63.0,
+        603.3201293945312,
+        192.59486389160156,
+        639.9172973632812
+      ],
+      "block_id": "page-1184-block-0017",
+      "order": 17,
+      "text": "1086, 1151, 1192t\nmédicaux, 1215, 1250t\nmédicochirurgicaux, 42, 1085,\n",
+      "text_sha256": "c53b194e24bf4f8ecbd6635f928ee3cdacb06225642f0746ae7ae32368107832"
+    },
+    {
+      "bbox": [
+        63.0,
+        640.8201293945312,
+        197.00999450683594,
+        677.4172973632812
+      ],
+      "block_id": "page-1184-block-0018",
+      "order": 18,
+      "text": "1151, 1192t\nneurologiques, 80\npsychiatriques, 42, 1085, 1192t,\n",
+      "text_sha256": "37f9d8821edd44d52c91ebd7ca40eac6380ef81713c4f792fec3f355f49cc93f"
+    },
+    {
+      "bbox": [
+        63.0,
+        678.3201293945312,
+        209.44602966308594,
+        702.4172973632812
+      ],
+      "block_id": "page-1184-block-0019",
+      "order": 19,
+      "text": "1215, 1250t\npsychosociaux, 533, 561, 683, 853,\n",
+      "text_sha256": "7a1577c7c7aa3973371d822892e0d43ba59a108fa29edfa35762a646ce37997c"
+    },
+    {
+      "bbox": [
+        63.0,
+        703.0945434570312,
+        155.99900817871094,
+        727.4172973632812
+      ],
+      "block_id": "page-1184-block-0020",
+      "order": 20,
+      "text": "1215-1216, 1378\nscolaires, 80\n",
+      "text_sha256": "cef2b1499f68511af6b85775e85d9ad994d175b6f4cd40ee3f63c59ed9e5fee5"
+    },
+    {
+      "bbox": [
+        234.0,
+        40.82011795043945,
+        369.09649658203125,
+        52.41728591918945
+      ],
+      "block_id": "page-1184-block-0021",
+      "order": 21,
+      "text": "violents (de violence), 241, 646,\n",
+      "text_sha256": "44afdf6de48fc91e408187df387995d0ba718dbdff8495601e1ef2a778a3c52a"
+    },
+    {
+      "bbox": [
+        225.0,
+        53.32011795043945,
+        366.2926940917969,
+        89.91728973388672
+      ],
+      "block_id": "page-1184-block-0022",
+      "order": 22,
+      "text": "821, 832, 1023-1024, 1086,\n1100t, 1151, 1365\nantiadrénergiques\n",
+      "text_sha256": "b2ff9a3188597d6a473e915644e74f44d8150c44d5fa9d15044415ae80d1b517"
+    },
+    {
+      "bbox": [
+        234.0,
+        90.82012176513672,
+        381.7798156738281,
+        102.41728973388672
+      ],
+      "block_id": "page-1184-block-0023",
+      "order": 23,
+      "text": "trouble de stress post-traumatique\n",
+      "text_sha256": "e9d7b6e3011d50e18affd3658bceec745538c9b17ca852a0dbe67d57e9850e74"
+    },
+    {
+      "bbox": [
+        225.0,
+        103.32012176513672,
+        293.2965087890625,
+        127.41728973388672
+      ],
+      "block_id": "page-1184-block-0024",
+      "order": 24,
+      "text": "et __, 506\nantiandrogènes\n",
+      "text_sha256": "cad575927ff79dd736e59b5261e6a8727704cc407874bec2f921d2be187ba295"
+    },
+    {
+      "bbox": [
+        225.0,
+        128.3201141357422,
+        371.242919921875,
+        177.4172821044922
+      ],
+      "block_id": "page-1184-block-0025",
+      "order": 25,
+      "text": "démence et __, 610\nparaphilies et __, 823, 824t\nanticipation, 1590t\nanticholinergiques, 432t, 547, 583,\n",
+      "text_sha256": "56a8e8c1add9df71b49c48c709cad922f35d9bb67e73a11ac171776f1da514f5"
+    },
+    {
+      "bbox": [
+        225.0,
+        178.3201141357422,
+        358.05999755859375,
+        239.9172821044922
+      ],
+      "block_id": "page-1184-block-0026",
+      "order": 26,
+      "text": "630-631t, 641, 1325, 1437t,\n1445-1446, 1474t, 1489\ndelirium et __, 580\ntroubles délirants et __, 314\nanticonvulsivants, 1431, 1451,\n",
+      "text_sha256": "1983828777eedacb4c8c5917b07204405790779115812657a33e32d76b63474e"
+    },
+    {
+      "bbox": [
+        234.0,
+        240.8201141357422,
+        377.0281982421875,
+        302.41729736328125
+      ],
+      "block_id": "page-1184-block-0027",
+      "order": 27,
+      "text": "1540-1543\ndelirium et __, 580\ndémence et __, 610\ndouleur chronique et __, 575-576\ntrouble(s)\n",
+      "text_sha256": "37e31d0334f436898e94b975f2669aa46575acdf702952e8e7eb8142049986c6"
+    },
+    {
+      "bbox": [
+        243.0,
+        304.35943603515625,
+        361.34429931640625,
+        327.35943603515625
+      ],
+      "block_id": "page-1184-block-0028",
+      "order": 28,
+      "text": "anxieux et __, 440\nde stress post-traumatique\n",
+      "text_sha256": "64d0d3ecd9f9c0bc5264e57d2d862281946d08947c7020d244845d1cfa5d4f62"
+    },
+    {
+      "bbox": [
+        225.0,
+        329.35943603515625,
+        372.1315002441406,
+        364.91729736328125
+      ],
+      "block_id": "page-1184-block-0029",
+      "order": 29,
+      "text": "et __, 506\ndélirants et __, 314\nantidépresseurs, 1431, 1482-1510\n",
+      "text_sha256": "a6ce70e00f16611e5ab0d3c87d76cfa3f9791fc401c43f1f75189a037093f822"
+    },
+    {
+      "bbox": [
+        234.0,
+        365.82012939453125,
+        355.296630859375,
+        402.41729736328125
+      ],
+      "block_id": "page-1184-block-0030",
+      "order": 30,
+      "text": "allaitement et __, 1500-1501\nchez la femme, 1499-1500\nchez les enfants et les\n",
+      "text_sha256": "b0ce5f4b23ccca22f457c6b7e6339e5e504aca9f9e6aa322d3ff838b17a895e6"
+    },
+    {
+      "bbox": [
+        234.0,
+        403.32012939453125,
+        371.1383361816406,
+        439.91729736328125
+      ],
+      "block_id": "page-1184-block-0031",
+      "order": 31,
+      "text": "adolescents, 1499\ndémence et __, 610\ndépression et __, 406-408, 1414,\n",
+      "text_sha256": "666bfa15bdad4cf4a3f7d625df9051ce27479737d27e5f626f36ebe2b16624c9"
+    },
+    {
+      "bbox": [
+        234.0,
+        440.82012939453125,
+        377.0281982421875,
+        527.4172973632812
+      ],
+      "block_id": "page-1184-block-0032",
+      "order": 32,
+      "text": "1488t\ndouleur chronique et __, 573-575\ngrossesse et __, 972\ninsomnie et __, 732\nménopause et __, 1501\nparaphilies et __, 823-824\nréactions indésirables des __,\n",
+      "text_sha256": "31c84fba2bd961b4c0ea642cb82dcaa981026d9229b90cb6fa4c2d4e4f7666f4"
+    },
+    {
+      "bbox": [
+        234.0,
+        528.3201293945312,
+        316.5458984375,
+        564.9172973632812
+      ],
+      "block_id": "page-1184-block-0033",
+      "order": 33,
+      "text": "1110-1111t\nsédatifs, 1454-1455\ntrouble(s)\n",
+      "text_sha256": "f6b18c45e339653ea11c4a9b5a7989d13cd5b47c744027d05fd236f313c0e981"
+    },
+    {
+      "bbox": [
+        243.0,
+        566.8594360351562,
+        376.3977355957031,
+        577.3594360351562
+      ],
+      "block_id": "page-1184-block-0034",
+      "order": 34,
+      "text": "à symptomatologie somatique\n",
+      "text_sha256": "7f9866365f6dd008314a8f0ad4206cd80b74c200349f01f2dade9d137a273dbd"
+    },
+    {
+      "bbox": [
+        243.0,
+        579.3594360351562,
+        345.170654296875,
+        602.3594360351562
+      ],
+      "block_id": "page-1184-block-0035",
+      "order": 35,
+      "text": "(TSS) et __, 547\nanxieux et __, 437-439,\n",
+      "text_sha256": "48f61862fe67a1d07161811584ee6ac0c2d9f2c25c385ba4ae818b473d6515b3"
+    },
+    {
+      "bbox": [
+        243.0,
+        603.3816528320312,
+        361.34429931640625,
+        652.3594360351562
+      ],
+      "block_id": "page-1184-block-0036",
+      "order": 36,
+      "text": "1488t\nbipolaire et __, 1488t\ndélirants et __, 323\nde stress post-traumatique\n",
+      "text_sha256": "311f2c156967ff6271603b678c5fd2fe0cc600cf0a956711db262fa9659f3654"
+    },
+    {
+      "bbox": [
+        243.0,
+        653.3816528320312,
+        369.0000305175781,
+        689.8594360351562
+      ],
+      "block_id": "page-1184-block-0037",
+      "order": 37,
+      "text": "et __, 505-506, 1488t\ndissociatifs et __, 525\ndysmorphique prémenstruel\n",
+      "text_sha256": "8938a9dc4a95a38473e6ae0d58eabaf29e25329a2ea57f738447b8ab5152ed15"
+    },
+    {
+      "bbox": [
+        243.0,
+        690.8816528320312,
+        382.10418701171875,
+        714.8594360351562
+      ],
+      "block_id": "page-1184-block-0038",
+      "order": 38,
+      "text": "et __, 1488t\nobsessionnels-compulsifs et __,\n",
+      "text_sha256": "d0bd009c62012d742a776de51a8563b391f591df60acf03054912277e79ef97b"
+    },
+    {
+      "bbox": [
+        261.0,
+        715.8816528320312,
+        306.6495056152344,
+        727.3594360351562
+      ],
+      "block_id": "page-1184-block-0039",
+      "order": 39,
+      "text": "449, 1488t\n",
+      "text_sha256": "4598d25effd9559e2cf487500efbeb3f69677369f116aadbfdd13820bb350438"
+    },
+    {
+      "bbox": [
+        396.0,
+        40.82011795043945,
+        550.1589965820312,
+        52.41728591918945
+      ],
+      "block_id": "page-1184-block-0040",
+      "order": 40,
+      "text": "antiépileptiques, 1479t, 1480t, 1540,\n",
+      "text_sha256": "88d9007cff18788e72f90345aa38aaf76c9f6ab49b51b2158cdfcd4673c10b1b"
+    },
+    {
+      "bbox": [
+        405.0,
+        53.32011795043945,
+        502.18402099609375,
+        102.41728973388672
+      ],
+      "block_id": "page-1184-block-0041",
+      "order": 41,
+      "text": "1543, 1546-1549\nbromyalgie et __, 570\nTDA/H et __, 1530\ntrouble(s)\n",
+      "text_sha256": "bd7c40a7deec5500d8b820e28f9150149589eee3f33971131b1860f0e08af8f3"
+    },
+    {
+      "bbox": [
+        396.0,
+        103.38164520263672,
+        555.0548706054688,
+        139.9172821044922
+      ],
+      "block_id": "page-1184-block-0042",
+      "order": 42,
+      "text": "bipolaire de type I et __, 1551t\ndu spectre de l’autisme et __, 1284\nantihistaminiques, 129, 314, 580,\n",
+      "text_sha256": "f166df1ca3af8d29fd19a6c597dd7ac4b22f2afffbb5271682f8984a60ef5a44"
+    },
+    {
+      "bbox": [
+        405.0,
+        140.8201141357422,
+        525.0159301757812,
+        202.4172821044922
+      ],
+      "block_id": "page-1184-block-0043",
+      "order": 43,
+      "text": "707, 1456\nbenzodiazépines et __, 1377\ndémence et __, 599\ninsomnie et __, 732\ntrouble(s)\n",
+      "text_sha256": "3585db13dbbd677ec28fb7030756e8842019cdc8c79611c8dc97696eb4e44e27"
+    },
+    {
+      "bbox": [
+        396.0,
+        204.35943603515625,
+        524.2661743164062,
+        252.4172821044922
+      ],
+      "block_id": "page-1184-block-0044",
+      "order": 44,
+      "text": "anxieux et __, 1377-1378\ndélirants et __, 314\ndu sommeil et __, 748\nanti-inammatoires\n",
+      "text_sha256": "f1fac6d760827d80f7f3612f63a5806fbe9e4c5d9affbe90a755fb065daf1d49"
+    },
+    {
+      "bbox": [
+        396.0,
+        253.32012939453125,
+        485.098876953125,
+        277.41729736328125
+      ],
+      "block_id": "page-1184-block-0045",
+      "order": 45,
+      "text": "delirium et __, 580\nantimicrobiens\n",
+      "text_sha256": "93a2fbc7e8ce0708a295f315a69d485e69e50fccf5ed63c7be314f98614e25e4"
+    },
+    {
+      "bbox": [
+        396.0,
+        278.32012939453125,
+        550.8099975585938,
+        302.41729736328125
+      ],
+      "block_id": "page-1184-block-0046",
+      "order": 46,
+      "text": "delirium et __, 580\nantipsychotiques, 1431, 1460-1480,\n",
+      "text_sha256": "77e16b070fc7441704268db3441b93067c635ce6729610e9257f7a0bd11c8c7a"
+    },
+    {
+      "bbox": [
+        405.0,
+        303.32012939453125,
+        553.1325073242188,
+        489.91729736328125
+      ],
+      "block_id": "page-1184-block-0047",
+      "order": 47,
+      "text": "1549-1551, voir aussi antago-\nnistes des récepteurs de la dopa-\nmine et de la sérotonine\nallaitement et __, 1470\nclassication des __, 1465\ndémence et __, 609-610\ndépression et __, 1415\ndouleur chronique et __, 576\ndysfonctions sexuelles et __, 1475\ngrossesse et __, 973, 1470\ninsomnie et __, 732\nmaladie de Parkinson et __, 1471\nmanie et __, 1475\npersonnes âgées et __, 1396-1397\nschizophrénie et __, 332f, 338,\n",
+      "text_sha256": "a4454fac68ca5ad8d85b290c324fb320413890ab7480f073973bbbe7adf42099"
+    },
+    {
+      "bbox": [
+        405.0,
+        490.82012939453125,
+        515.1981201171875,
+        527.4172973632812
+      ],
+      "block_id": "page-1184-block-0048",
+      "order": 48,
+      "text": "357-364, 1407, 1470\nsommeil et __, 1474-1475\ntrouble(s)\n",
+      "text_sha256": "ba59eea2f2792b87f3f26d0b6e7875bedeaac1afeff779d341f73ce931250c0b"
+    },
+    {
+      "bbox": [
+        414.0,
+        529.3594360351562,
+        540.9495239257812,
+        564.8594360351562
+      ],
+      "block_id": "page-1184-block-0049",
+      "order": 49,
+      "text": "d’anxiété et __, 440\nde la personnalité et __, 959t\nde stress post-traumatique\n",
+      "text_sha256": "62f400e4b51b48b7b5b9a202759b44e77f9e6985814a4acfe8376390650be68f"
+    },
+    {
+      "bbox": [
+        414.0,
+        566.8594360351562,
+        549.0439453125,
+        627.3594360351562
+      ],
+      "block_id": "page-1184-block-0050",
+      "order": 50,
+      "text": "et __, 506\ndélirants et __, 323-324, 1407\ndes conduites (TC) et __, 1325\ndissociatifs et __, 525\ndu développement intellectuel\n",
+      "text_sha256": "5e971338f2165b2368566a1cdcfbe3e3a6d16443fdccdd7a89d15488b9651c7d"
+    },
+    {
+      "bbox": [
+        414.0,
+        629.3594360351562,
+        541.8450317382812,
+        652.3594360351562
+      ],
+      "block_id": "page-1184-block-0051",
+      "order": 51,
+      "text": "et __, 1258\ndu spectre de l’autisme et __,\n",
+      "text_sha256": "79b76b45ab6c8fc7ca46cd935d725e10d91ac733c64eab0b718185488149ecdb"
+    },
+    {
+      "bbox": [
+        414.0,
+        654.3594360351562,
+        553.4176025390625,
+        677.3594360351562
+      ],
+      "block_id": "page-1184-block-0052",
+      "order": 52,
+      "text": "1282\noppositionnel avec provocation\n",
+      "text_sha256": "7cc54e82538d69f3f95604d0e2922490c5854e02ac6ff50f0473eb1102aa5bdc"
+    },
+    {
+      "bbox": [
+        396.0,
+        679.3594360351562,
+        530.757568359375,
+        702.4172973632812
+      ],
+      "block_id": "page-1184-block-0053",
+      "order": 53,
+      "text": "et __, 1325\nanxiété(s), 412, 669, 1105-1107,\n",
+      "text_sha256": "ec3d8b9b6d792e169dd5aa2239cf21c29854197c2c3970ab0664707c37b32639"
+    },
+    {
+      "bbox": [
+        414.0,
+        703.3201293945312,
+        538.4544677734375,
+        727.4172973632812
+      ],
+      "block_id": "page-1184-block-0054",
+      "order": 54,
+      "text": "voir aussi troubles anxieux et\nphobies\n",
+      "text_sha256": "8ad358560811ceb28c57a856288c1d9f565ab29e3f10ddcc45e67fd2c800c275"
+    }
+  ],
+  "coordinates_sha256": "b997d25bb2cd8f19cae7c0375972450218c883348ba62a8ff31a71c4f9d08e67",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1184",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Index\nI23\nanorexie, 699-702, voir aussi troubles\ndes conduites alimentaires\ncomplications physiques de l’__,\n710-711\ngrossesse et __, 971\nhospitalisation et __, 710\nhypnose et __, 1761\nthérapie familiale et __, 1738\nanorgasmie, 776\nanosognosie, 67, 170, 587\nantagonistes\nλ, 897\ncaractéristiques pharmacologiques\ndes __, 1452t\nDA2 (halopéridol), 128\ndes récepteurs 5-HT3, 127,\n1502\ndes récepteurs adrénergiques,\n1451-1453\ndes récepteurs cholinergiques\nmuscariniques, 117\ndes récepteurs de la dopamine et\nde la sérotonine, 1431, 1460-\n1480, voir aussi antipsycho-\ntiques\ndes récepteurs H1, 129\ndes récepteurs NMDA, 573,\n1519\ndes récepteurs sérotoninergiques\n(5-HT2A), 1455\ndopaminergiques, 837, 839\ndu CRF (cortisol releasing factor),\n507\nGABA, 1457\nmécanismes __, 668\nnon compétitif des récepteurs\nN-méthyl-D-aspartate\n(NMDA), 1512\nopiacés, 834, 840, 842, 845\nantécédents, 42-43\ncriminels, 950\nde consommation de substance,\n1085\nfamiliaux, 43, 1085, 1216, 1250t\njudiciaires, 42-43, 80, 1023, 1085-\n1086, 1151, 1192t\nmédicaux, 1215, 1250t\nmédicochirurgicaux, 42, 1085,\n1151, 1192t\nneurologiques, 80\npsychiatriques, 42, 1085, 1192t,\n1215, 1250t\npsychosociaux, 533, 561, 683, 853,\n1215-1216, 1378\nscolaires, 80\nviolents (de violence), 241, 646,\n821, 832, 1023-1024, 1086,\n1100t, 1151, 1365\nantiadrénergiques\ntrouble de stress post-traumatique\net __, 506\nantiandrogènes\ndémence et __, 610\nparaphilies et __, 823, 824t\nanticipation, 1590t\nanticholinergiques, 432t, 547, 583,\n630-631t, 641, 1325, 1437t,\n1445-1446, 1474t, 1489\ndelirium et __, 580\ntroubles délirants et __, 314\nanticonvulsivants, 1431, 1451,\n1540-1543\ndelirium et __, 580\ndémence et __, 610\ndouleur chronique et __, 575-576\ntrouble(s)\nanxieux et __, 440\nde stress post-traumatique\net __, 506\ndélirants et __, 314\nantidépresseurs, 1431, 1482-1510\nallaitement et __, 1500-1501\nchez la femme, 1499-1500\nchez les enfants et les\nadolescents, 1499\ndémence et __, 610\ndépression et __, 406-408, 1414,\n1488t\ndouleur chronique et __, 573-575\ngrossesse et __, 972\ninsomnie et __, 732\nménopause et __, 1501\nparaphilies et __, 823-824\nréactions indésirables des __,\n1110-1111t\nsédatifs, 1454-1455\ntrouble(s)\nà symptomatologie somatique\n(TSS) et __, 547\nanxieux et __, 437-439,\n1488t\nbipolaire et __, 1488t\ndélirants et __, 323\nde stress post-traumatique\net __, 505-506, 1488t\ndissociatifs et __, 525\ndysmorphique prémenstruel\net __, 1488t\nobsessionnels-compulsifs et __,\n449, 1488t\nantiépileptiques, 1479t, 1480t, 1540,\n1543, 1546-1549\nbromyalgie et __, 570\nTDA/H et __, 1530\ntrouble(s)\nbipolaire de type I et __, 1551t\ndu spectre de l’autisme et __, 1284\nantihistaminiques, 129, 314, 580,\n707, 1456\nbenzodiazépines et __, 1377\ndémence et __, 599\ninsomnie et __, 732\ntrouble(s)\nanxieux et __, 1377-1378\ndélirants et __, 314\ndu sommeil et __, 748\nanti-inammatoires\ndelirium et __, 580\nantimicrobiens\ndelirium et __, 580\nantipsychotiques, 1431, 1460-1480,\n1549-1551, voir aussi antago-\nnistes des récepteurs de la dopa-\nmine et de la sérotonine\nallaitement et __, 1470\nclassication des __, 1465\ndémence et __, 609-610\ndépression et __, 1415\ndouleur chronique et __, 576\ndysfonctions sexuelles et __, 1475\ngrossesse et __, 973, 1470\ninsomnie et __, 732\nmaladie de Parkinson et __, 1471\nmanie et __, 1475\npersonnes âgées et __, 1396-1397\nschizophrénie et __, 332f, 338,\n357-364, 1407, 1470\nsommeil et __, 1474-1475\ntrouble(s)\nd’anxiété et __, 440\nde la personnalité et __, 959t\nde stress post-traumatique\net __, 506\ndélirants et __, 323-324, 1407\ndes conduites (TC) et __, 1325\ndissociatifs et __, 525\ndu développement intellectuel\net __, 1258\ndu spectre de l’autisme et __,\n1282\noppositionnel avec provocation\net __, 1325\nanxiété(s), 412, 669, 1105-1107,\nvoir aussi troubles anxieux et\nphobies\n",
+  "raw_text_sha256": "79d321e838a068af3525ed8d37ed086f209189029b5c828f32c6408fa6a848cd",
+  "source_page_display": 1185,
+  "source_page_index": 1184
+}

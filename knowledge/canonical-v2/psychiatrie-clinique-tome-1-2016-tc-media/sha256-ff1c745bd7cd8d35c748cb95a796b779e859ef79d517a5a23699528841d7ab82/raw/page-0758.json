@@ -1,0 +1,328 @@
+{
+  "block_sequence_sha256": "2b70f1c8e020e2a1c1e648e5830adf2b3ee94537550df102b3a79db603a06d3e",
+  "blocks": [
+    {
+      "bbox": [
+        305.8500061035156,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0758-block-0001",
+      "order": 1,
+      "text": "Chapitre 32\nTroubles du sommeil et de la vigilance\n741\n",
+      "text_sha256": "8d8ca92be3a3e8da250e38f13e929e5c356791183ae311afc7244b5f2c28a996"
+    },
+    {
+      "bbox": [
+        56.25,
+        41.002296447753906,
+        277.24676513671875,
+        53.320068359375
+      ],
+      "block_id": "page-0758-block-0002",
+      "order": 2,
+      "text": "TABLEAU 32.9 Critères diagnostiques des cauchemars\n",
+      "text_sha256": "105d6deba6daac0a5397806b6ada7e5e06bba872ad1ef0de13aa039c6e990b56"
+    },
+    {
+      "bbox": [
+        166.90000915527344,
+        62.624122619628906,
+        449.68798828125,
+        73.2002944946289
+      ],
+      "block_id": "page-0758-block-0003",
+      "order": 3,
+      "text": "DSM-5\nDSM-IV-TR\n",
+      "text_sha256": "67d368c78be7842a2bc99b149901566bcadf3c9d62623ea48bafcc32b3563ffb"
+    },
+    {
+      "bbox": [
+        58.25,
+        79.77412414550781,
+        485.5159912109375,
+        114.02812957763672
+      ],
+      "block_id": "page-0758-block-0004",
+      "order": 4,
+      "text": "307.47 (F51.5) Cauchemars\nCauchemars\n(auparavant Rêves d’angoisse)\nA. Survenues répétées de rêves prolongés, extrêmement dysphoriques,\n",
+      "text_sha256": "69fe2c97ed3808683947d79dd4a81136a555bc643edfbea7ec620c754baab435"
+    },
+    {
+      "bbox": [
+        70.25,
+        114.20195770263672,
+        300.6156921386719,
+        154.0281219482422
+      ],
+      "block_id": "page-0758-block-0005",
+      "order": 5,
+      "text": "dont le souvenir persiste lors de l’éveil, qui impliquent généralement des\nefforts pour éviter des menaces contre la survie, la sécurité ou l’intégrité\nphysique et qui surviennent habituellement pendant la deuxième partie\nde la principale période de sommeil.\n",
+      "text_sha256": "33d418e70e0aa3937c4db723bf97a32bc538946cadcc26bfe8d31535e9b7121f"
+    },
+    {
+      "bbox": [
+        308.5,
+        104.20195770263672,
+        541.4762573242188,
+        114.02812957763672
+      ],
+      "block_id": "page-0758-block-0006",
+      "order": 6,
+      "text": "A. Réveils répétés au cours de la période principale de sommeil ou de la\n",
+      "text_sha256": "04b7069d7135f7dcb3df10bfb978856803afc0e1b96b0ae746a8713afed56a5f"
+    },
+    {
+      "bbox": [
+        58.25,
+        114.20195770263672,
+        545.5086669921875,
+        167.47813415527344
+      ],
+      "block_id": "page-0758-block-0007",
+      "order": 7,
+      "text": "sieste avec souvenir précis de rêves effrayants et prolongés. Ces rêves\ncomportent habituellement un danger pour la survie, la sécurité ou\nl’estime de soi. Les réveils surviennent généralement au cours de la\nseconde moitié de la période de sommeil.\nB. Lorsque le sujet se réveille immédiatement après un rêve dysphorique,\n",
+      "text_sha256": "00a90492affa05dffcafdbd0a943184818d9ff15e017542723d748d7bf2a35f8"
+    },
+    {
+      "bbox": [
+        70.25,
+        167.65196228027344,
+        217.18435668945312,
+        177.47813415527344
+      ],
+      "block_id": "page-0758-block-0008",
+      "order": 8,
+      "text": "il est rapidement orienté et pleinement éveillé.\n",
+      "text_sha256": "33fdf873fd08c26de15af66f7cbc09bcd70c58ebea214bd2ec389e227a5ce601"
+    },
+    {
+      "bbox": [
+        308.5,
+        157.65196228027344,
+        542.7648315429688,
+        167.47813415527344
+      ],
+      "block_id": "page-0758-block-0009",
+      "order": 9,
+      "text": "B. Lorsque le sujet se réveille immédiatement après un cauchemar, il est\n",
+      "text_sha256": "c420808b205f46ef1358fa37f597904b185a2b8b7715e2be0cb3896ab8fbddbe"
+    },
+    {
+      "bbox": [
+        58.25,
+        167.65196228027344,
+        539.7782592773438,
+        210.8781280517578
+      ],
+      "block_id": "page-0758-block-0010",
+      "order": 10,
+      "text": "rapidement orienté et pleinement éveillé (contrairement à ce que l’on\nobserve dans les Terreurs nocturnes et certaines formes d’épilepsie\noù le sujet est confus et désorienté).\nC. La perturbation du sommeil provoque une détresse signicative ou une\n",
+      "text_sha256": "0ca29b723a6ab9b38e6d8fd6c0d4f97ee2fbd94d5d70c43eaa95fa6e0aa47ffa"
+    },
+    {
+      "bbox": [
+        70.25,
+        211.0519561767578,
+        283.6466369628906,
+        230.8781280517578
+      ],
+      "block_id": "page-0758-block-0011",
+      "order": 11,
+      "text": "altération du fonctionnement social, professionnel ou dans d’autres\ndomaines importants.\n",
+      "text_sha256": "ae7e0cc8b82dfbd43f3999754561e4561cd4c6247e69225aea82e30eb1197ba0"
+    },
+    {
+      "bbox": [
+        308.5,
+        201.0519561767578,
+        369.319091796875,
+        210.8781280517578
+      ],
+      "block_id": "page-0758-block-0012",
+      "order": 12,
+      "text": "C. Idem à DSM-5.\n",
+      "text_sha256": "e3115c8f08f85dfc1a8c901e597d6628d9cc927dde450ccede1ca1ec3dd04b8e"
+    },
+    {
+      "bbox": [
+        58.25,
+        234.501953125,
+        293.6470031738281,
+        244.328125
+      ],
+      "block_id": "page-0758-block-0013",
+      "order": 13,
+      "text": "D. Les symptômes du cauchemar ne sont pas imputables aux effets phy-\n",
+      "text_sha256": "e7e0bd1a8182665ec4889eb272c5749159691124438ea02caea3558e8c44446e"
+    },
+    {
+      "bbox": [
+        70.25,
+        244.501953125,
+        295.8167419433594,
+        264.328125
+      ],
+      "block_id": "page-0758-block-0014",
+      "order": 14,
+      "text": "siologiques d’une substance (p. ex., substance donnant lieu à un abus,\nmédicament).\n",
+      "text_sha256": "e37139df27a08516fa3cbd6e6eec519f4045069bcce7335394fefb071e388b5b"
+    },
+    {
+      "bbox": [
+        308.5,
+        234.501953125,
+        369.3310852050781,
+        244.328125
+      ],
+      "block_id": "page-0758-block-0015",
+      "order": 15,
+      "text": "D. Idem à DSM-5.\n",
+      "text_sha256": "a25093c4e73c5e7e67b3176a2cccc790e8fc03ace507127f5b4c7ba5e37fc007"
+    },
+    {
+      "bbox": [
+        58.25,
+        267.9019470214844,
+        279.3345642089844,
+        277.7281188964844
+      ],
+      "block_id": "page-0758-block-0016",
+      "order": 16,
+      "text": "E. Des troubles mentaux et médicaux concomitants n’expliquent pas\n",
+      "text_sha256": "ec3ef27523a69452b84ecf3650a8ed8ebd03322af7c9823d77200b34710e9099"
+    },
+    {
+      "bbox": [
+        70.25,
+        277.9019470214844,
+        262.13275146484375,
+        287.7281188964844
+      ],
+      "block_id": "page-0758-block-0017",
+      "order": 17,
+      "text": "convenablement la plainte principale de rêves dysphoriques.\n",
+      "text_sha256": "63bd5406f07224a77c4f0b07f8f9cbc8df90da95c1717af4384ad3dabafffc67"
+    },
+    {
+      "bbox": [
+        308.5,
+        267.9019470214844,
+        547.4122924804688,
+        277.7281188964844
+      ],
+      "block_id": "page-0758-block-0018",
+      "order": 18,
+      "text": "E. Les cauchemars ne surviennent pas exclusivement au cours d’un autre\n",
+      "text_sha256": "4c5b210aec88ac952d856a9f3ccca9cacd5fbf0ac37cadc266b86d48bc7ec84b"
+    },
+    {
+      "bbox": [
+        58.25,
+        277.9019470214844,
+        545.75634765625,
+        479.14239501953125
+      ],
+      "block_id": "page-0758-block-0019",
+      "order": 19,
+      "text": "trouble mental (p. ex., un delirium, un état de stress post-traumatique).\nSpécier si :\nDurant l’endormissement\nAssocié à un trouble mental non lié au sommeil, y compris les troubles\nliés à l’usage de substances.\nAssocié à une autre affection médicale\nAssocié à un autre trouble du sommeil\nSpécier si :\nAigu : La durée de la période de cauchemars est de 1 mois ou moins.\nSubaigu : La durée de la période de cauchemars est supérieure à 1 mois\nmais inférieure à 6 mois.\nPersistant : La durée de la période de cauchemars est de 6 mois ou plus.\nSpécier la sévérité actuelle :\nLa sévérité peut être évaluée selon la fréquence avec laquelle les cauche-\nmars se produisent :\nLéger : Moins d’un épisode par semaine en moyenne.\nMoyen : Un ou plusieurs épisodes par semaine mais pas toutes les nuits.\nGrave : Épisodes toutes les nuits.\n",
+      "text_sha256": "8ccc5c0dadf6006ebae821663f0767db5bcaf54629e32aa126b91aaaf21fffd3"
+    },
+    {
+      "bbox": [
+        54.25,
+        485.2906188964844,
+        198.20631408691406,
+        494.1588439941406
+      ],
+      "block_id": "page-0758-block-0020",
+      "order": 20,
+      "text": "Sources : APA (2015), p. 475 ; APA (2004), p. 734.\n",
+      "text_sha256": "d171e1e8e75f131fd22cf75d28514632853c6cb3ab4b19b29926a7cee00e39e8"
+    },
+    {
+      "bbox": [
+        54.25,
+        498.2906188964844,
+        535.7008666992188,
+        525.0250244140625
+      ],
+      "block_id": "page-0758-block-0021",
+      "order": 21,
+      "text": "Traduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\n",
+      "text_sha256": "d1e2a281d01f1237f716bfb933581f8135592b601f1b1579862a0656634f5460"
+    },
+    {
+      "bbox": [
+        54.25,
+        529.2906494140625,
+        545.194091796875,
+        556.0250244140625
+      ],
+      "block_id": "page-0758-block-0022",
+      "order": 22,
+      "text": "Traduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004.\nAll rights reserved.\n",
+      "text_sha256": "243709fe0bbde845639c05a08cd4ae4601450ec5670085ab5e9038dcd165d7c3"
+    },
+    {
+      "bbox": [
+        54.0,
+        575.4658203125,
+        297.58709716796875,
+        730.97607421875
+      ],
+      "block_id": "page-0758-block-0023",
+      "order": 23,
+      "text": "et qui peuvent durer de quelques minutes à plusieurs heures.\nContrairement aux terreurs nocturnes, il n’y a pas ou peu d’acti-\nvation importante du système nerveux autonome. La prévalence\nest d’environ 15 % de 3 à 13 ans (diminuant fortement après 5 ans)\npuis d’environ 3 à 4 % chez l’adulte, surtout chez les moins de 35\nans. Le patient est désorienté, confus, et la pensée et le langage\nsont léthargiques. Il n’est pas agressif à moins qu’on le force à se\nréveiller complètement ; l’amnésie de l’épisode est courante. Les\nréveils confusionnels peuvent être associés ou déclenchés par :\n• des réveils forcés ;\n• le stress et l’anxiété ;\n• l’intoxication à des drogues ou à l’alcool ;\n• le sommeil de rebond qui suit la privation de sommeil ;\n",
+      "text_sha256": "5f0f0c31295a007cba94b22a5fd7e1d52b92373752b44aa4e509879b5c72b3e6"
+    },
+    {
+      "bbox": [
+        312.0,
+        575.2244262695312,
+        555.2440795898438,
+        674.7584838867188
+      ],
+      "block_id": "page-0758-block-0024",
+      "order": 24,
+      "text": "• d’autres troubles de sommeil comme l’hypersomnie ou les\napnées du sommeil ;\n• la èvre.\nOn prévient ce trouble en évitant les éléments déclencheurs\net on évite d’intervenir au cours d’un épisode à moins qu’il n’y\nait un danger potentiel. Les traitements pharmacologiques ne\nse sont pas avérés utiles quoique la clomipramine ait connu un\nsuccès anecdotique, comme les techniques de relaxation.\n",
+      "text_sha256": "9be61960702e4bade36cb88a4dd32be19faebd1c7e5b7b84738dd8e69959670c"
+    },
+    {
+      "bbox": [
+        312.0,
+        687.6868286132812,
+        421.7276611328125,
+        703.8294067382812
+      ],
+      "block_id": "page-0758-block-0025",
+      "order": 25,
+      "text": "32.7.4 Cauchemars\n",
+      "text_sha256": "c42c6aef6d319b01e724e4102eeba1a8fd4041b05d2f28b1c18269239eda60b4"
+    },
+    {
+      "bbox": [
+        312.0,
+        707.5658569335938,
+        555.11865234375,
+        729.95849609375
+      ],
+      "block_id": "page-0758-block-0026",
+      "order": 26,
+      "text": "Les cauchemars sont des mauvais rêves si désagréables qu’ils\nprovoquent le réveil (voir le tableau 32.9). Ils se produisent\n",
+      "text_sha256": "c970215415bb8170e7847ceafb608f50bc1c67a961e72e74565326a453c137d4"
+    }
+  ],
+  "coordinates_sha256": "73ea744f82897c40966d30721ceb055c3a7b044c39067e8385171c8df808847e",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0758",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 32\nTroubles du sommeil et de la vigilance\n741\nTABLEAU 32.9 Critères diagnostiques des cauchemars\nDSM-5\nDSM-IV-TR\n307.47 (F51.5) Cauchemars\nCauchemars\n(auparavant Rêves d’angoisse)\nA. Survenues répétées de rêves prolongés, extrêmement dysphoriques,\ndont le souvenir persiste lors de l’éveil, qui impliquent généralement des\nefforts pour éviter des menaces contre la survie, la sécurité ou l’intégrité\nphysique et qui surviennent habituellement pendant la deuxième partie\nde la principale période de sommeil.\nA. Réveils répétés au cours de la période principale de sommeil ou de la\nsieste avec souvenir précis de rêves effrayants et prolongés. Ces rêves\ncomportent habituellement un danger pour la survie, la sécurité ou\nl’estime de soi. Les réveils surviennent généralement au cours de la\nseconde moitié de la période de sommeil.\nB. Lorsque le sujet se réveille immédiatement après un rêve dysphorique,\nil est rapidement orienté et pleinement éveillé.\nB. Lorsque le sujet se réveille immédiatement après un cauchemar, il est\nrapidement orienté et pleinement éveillé (contrairement à ce que l’on\nobserve dans les Terreurs nocturnes et certaines formes d’épilepsie\noù le sujet est confus et désorienté).\nC. La perturbation du sommeil provoque une détresse signicative ou une\naltération du fonctionnement social, professionnel ou dans d’autres\ndomaines importants.\nC. Idem à DSM-5.\nD. Les symptômes du cauchemar ne sont pas imputables aux effets phy-\nsiologiques d’une substance (p. ex., substance donnant lieu à un abus,\nmédicament).\nD. Idem à DSM-5.\nE. Des troubles mentaux et médicaux concomitants n’expliquent pas\nconvenablement la plainte principale de rêves dysphoriques.\nE. Les cauchemars ne surviennent pas exclusivement au cours d’un autre\ntrouble mental (p. ex., un delirium, un état de stress post-traumatique).\nSpécier si :\nDurant l’endormissement\nAssocié à un trouble mental non lié au sommeil, y compris les troubles\nliés à l’usage de substances.\nAssocié à une autre affection médicale\nAssocié à un autre trouble du sommeil\nSpécier si :\nAigu : La durée de la période de cauchemars est de 1 mois ou moins.\nSubaigu : La durée de la période de cauchemars est supérieure à 1 mois\nmais inférieure à 6 mois.\nPersistant : La durée de la période de cauchemars est de 6 mois ou plus.\nSpécier la sévérité actuelle :\nLa sévérité peut être évaluée selon la fréquence avec laquelle les cauche-\nmars se produisent :\nLéger : Moins d’un épisode par semaine en moyenne.\nMoyen : Un ou plusieurs épisodes par semaine mais pas toutes les nuits.\nGrave : Épisodes toutes les nuits.\nSources : APA (2015), p. 475 ; APA (2004), p. 734.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004.\nAll rights reserved.\net qui peuvent durer de quelques minutes à plusieurs heures.\nContrairement aux terreurs nocturnes, il n’y a pas ou peu d’acti-\nvation importante du système nerveux autonome. La prévalence\nest d’environ 15 % de 3 à 13 ans (diminuant fortement après 5 ans)\npuis d’environ 3 à 4 % chez l’adulte, surtout chez les moins de 35\nans. Le patient est désorienté, confus, et la pensée et le langage\nsont léthargiques. Il n’est pas agressif à moins qu’on le force à se\nréveiller complètement ; l’amnésie de l’épisode est courante. Les\nréveils confusionnels peuvent être associés ou déclenchés par :\n• des réveils forcés ;\n• le stress et l’anxiété ;\n• l’intoxication à des drogues ou à l’alcool ;\n• le sommeil de rebond qui suit la privation de sommeil ;\n• d’autres troubles de sommeil comme l’hypersomnie ou les\napnées du sommeil ;\n• la èvre.\nOn prévient ce trouble en évitant les éléments déclencheurs\net on évite d’intervenir au cours d’un épisode à moins qu’il n’y\nait un danger potentiel. Les traitements pharmacologiques ne\nse sont pas avérés utiles quoique la clomipramine ait connu un\nsuccès anecdotique, comme les techniques de relaxation.\n32.7.4 Cauchemars\nLes cauchemars sont des mauvais rêves si désagréables qu’ils\nprovoquent le réveil (voir le tableau 32.9). Ils se produisent\n",
+  "raw_text_sha256": "ba390110829ee539952f7e1b8c9473c04cbf7cfdb7da8402b07235acf2db31da",
+  "source_page_display": 759,
+  "source_page_index": 758
+}

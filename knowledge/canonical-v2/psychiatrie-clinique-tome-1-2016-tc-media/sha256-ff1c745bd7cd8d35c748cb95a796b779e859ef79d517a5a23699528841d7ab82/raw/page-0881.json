@@ -1,0 +1,424 @@
+{
+  "block_sequence_sha256": "db3466e32b64c5e9d9aa3a947c7b0ecb2e24773f39eb6471df07e334f58368c0",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        477.9005126953125,
+        758.8693237304688
+      ],
+      "block_id": "page-0881-block-0001",
+      "order": 1,
+      "text": "864\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3\nSyndromes cliniques psychiatriques\n",
+      "text_sha256": "3b8bb894905390dfe5c75e1fe225539256ce0c8a63752bf0921b72c1f9e53f4d"
+    },
+    {
+      "bbox": [
+        55.0,
+        43.893165588378906,
+        228.89320373535156,
+        63.068946838378906
+      ],
+      "block_id": "page-0881-block-0002",
+      "order": 2,
+      "text": "37.7\nOutils diagnostiques\n",
+      "text_sha256": "92fd46e9528127e62052a0d44a9cabf0f80711754c1ce2358926070e7ca35332"
+    },
+    {
+      "bbox": [
+        48.0,
+        76.8658218383789,
+        291.50823974609375,
+        248.80850219726562
+      ],
+      "block_id": "page-0881-block-0003",
+      "order": 3,
+      "text": "Les médecins ne détectent qu’environ 30 % des problèmes reliés\nà la consommation d’alcool chez leurs patients et ils omettent\nsouvent de diriger ceux qu’ils ont ainsi identiés vers les ressources\nappropriées. C’est dans ce contexte que de nombreux question-\nnaires de dépistage ont été élaborés pour faciliter la détection des\nproblèmes de consommation d’alcool. La sensibilité de ces tests de\ndépistage dépend de la prévalence des troubles de consommation\ndans la population ciblée et elle varie selon des facteurs sociaux\net culturels. La abilité des réponses données par le patient au\nquestionnaire peut varier, en particulier dans un contexte où le\npatient craint les conséquences du dévoilement de sa consommation\nexacte. Par exemple, si des conditions de liberté sous probation\ns’appliquent, si la garde d’un enfant peut être menacée ou, tout\nsimplement, si le patient craint de se voir refuser un traitement\nen raison de sa prise d’alcool.\n",
+      "text_sha256": "869d6fce033d3cc5fb03cbd9069c5fc682d96375f1a26ed6853ae402c36ee592"
+    },
+    {
+      "bbox": [
+        48.0,
+        259.3868103027344,
+        145.51785278320312,
+        275.5293884277344
+      ],
+      "block_id": "page-0881-block-0004",
+      "order": 4,
+      "text": "37.7.1 Dépistage\n",
+      "text_sha256": "56cdbbab6e59c50f5fb289c2c6946d8a60e17d92053b8516f650a9fa0be11ea3"
+    },
+    {
+      "bbox": [
+        48.0,
+        278.8658142089844,
+        291.5906982421875,
+        530.0084838867188
+      ],
+      "block_id": "page-0881-block-0005",
+      "order": 5,
+      "text": "Le questionnaire Cut down, Annoyed, Guilty, Eye-opener (CAGE)\na été présenté pour la première fois en 1970 par Ewing & Rouse.\nCet outil de dépistage est facile d’utilisation et comporte quatre\nquestions (Ewing, 1984) :\n1. Avez-vous déjà senti le besoin de diminuer votre consomma-\ntion d’alcool ?\n2. Vous a-t-on déjà fait des commentaires sur votre consom-\nmation d’alcool ?\n3. Vous êtes-vous déjà senti coupable à cause de votre consom-\nmation d’alcool ?\n4. Avez-vous déjà bu le matin pour vous remettre d’aplomb ?\nDeux réponses positives sur quatre donnent une sensibilité\nentre 46 % et 92 % et une spécicité de 62 % à 95 %. Un résultat de\ndeux réponses positives ou plus au CAGE exige une évaluation\ndiagnostique exhaustive. Le questionnaire est moins sensible\nchez les femmes et les jeunes et il ne permet pas de diérencier\nles problèmes actuels et passés. Il s’agit d’un test de dépistage, non\nde diagnostic, et en ce sens, il se révèle peu valable pour identier\nla dépendance à l’alcool dans une population clinique de patients\nhospitalisés ou traités en clinique ambulatoire pour un problème\nrelié à l’alcool.\n",
+      "text_sha256": "b203854ee611291585e18000f9f7f0e8723c0775d2a7ae596a083e0975da77ff"
+    },
+    {
+      "bbox": [
+        48.0,
+        531.0158081054688,
+        291.0396423339844,
+        645.3085327148438
+      ],
+      "block_id": "page-0881-block-0006",
+      "order": 6,
+      "text": "L’Alcohol Use Disorder Identication Test (AUDIT) a été\nélaboré par l’OMS. Il identie mieux que le CAGE les pro-\nblèmes récents et il n’est pas biaisé selon le genre ou l’ethnie.\nIl est cependant plus long à administrer. L’AUDIT-C est une\nversion abrégée de trois questions validée auprès des popu-\nlations caucasiennes, afro-américaines et hispaniques. Des\nréponses totalisant quatre points et plus chez les hommes ou\ntrois points et plus chez les femmes représentent un résultat\npositif, signiant qu’il faut procéder à une évaluation plus\npoussée (voir le tableau 37.6).\n",
+      "text_sha256": "b0b984cdb175e0fc80a215804e5b6f22bcf3c3aef2dc6dfb2729bf1894d0e87e"
+    },
+    {
+      "bbox": [
+        53.20000076293945,
+        647.9500122070312,
+        291.0529479980469,
+        671.9503173828125
+      ],
+      "block_id": "page-0881-block-0007",
+      "order": 7,
+      "text": "i\nUn supplément d’information sur le questionnaire AUDIT est\ndisponible au www.who.int/substance_abuse/activities/sbi/en.\n",
+      "text_sha256": "8ea413bbdeec1605dc2fb90612b5200715b2987a31b195f008f6f67e397c2b14"
+    },
+    {
+      "bbox": [
+        48.0,
+        680.4158325195312,
+        291.01751708984375,
+        725.5084838867188
+      ],
+      "block_id": "page-0881-block-0008",
+      "order": 8,
+      "text": "Dans les Centres de services sociaux et de santé (CSSS) de\nla plupart des régions sociosanitaires du Québec, les interve-\nnants utilisent le questionnaire Dépistage/évaluation du besoin\nd’aide-alcool/drogues (DÉBA-A/D) (Tremblay & al., 2001). Cet\n",
+      "text_sha256": "55efb2c3abee3490a798b4d5cd280175c14f294eb15d56c26e4d140a635a1374"
+    },
+    {
+      "bbox": [
+        308.0,
+        41.002296447753906,
+        457.25439453125,
+        53.320068359375
+      ],
+      "block_id": "page-0881-block-0009",
+      "order": 9,
+      "text": "TABLEAU 37.6 Questionnaire AUDIT-C\n",
+      "text_sha256": "c9b578700a709df465bbf84069a92e1ba85c21dfec7ac5bd18b316166e513473"
+    },
+    {
+      "bbox": [
+        310.25,
+        57.70195770263672,
+        522.5260009765625,
+        67.52812957763672
+      ],
+      "block_id": "page-0881-block-0010",
+      "order": 10,
+      "text": "Q1 : L’an passé, à quelle fréquence avez-vous bu ?\nPoints\n",
+      "text_sha256": "f4e59cc92f1bacd570113fde4defbb2eaaf54660140618801960fe2080451ece"
+    },
+    {
+      "bbox": [
+        326.25,
+        72.1019515991211,
+        514.969970703125,
+        81.9281234741211
+      ],
+      "block_id": "page-0881-block-0011",
+      "order": 11,
+      "text": "• Jamais\n0\n",
+      "text_sha256": "8d2ef6160c6d0c12c55e0a8e0685bf2e6ec045f25300332ad4d22998fa6a58c1"
+    },
+    {
+      "bbox": [
+        326.25,
+        87.1019515991211,
+        514.969970703125,
+        96.9281234741211
+      ],
+      "block_id": "page-0881-block-0012",
+      "order": 12,
+      "text": "• Chaque mois ou moins souvent\n1\n",
+      "text_sha256": "3c80c2cd67508cfc797b0f73927a62d944c9ef6f895c07ffc2ed1489596dbfac"
+    },
+    {
+      "bbox": [
+        326.25,
+        101.751953125,
+        514.969970703125,
+        111.578125
+      ],
+      "block_id": "page-0881-block-0013",
+      "order": 13,
+      "text": "• 2 à 4 fois par mois\n2\n",
+      "text_sha256": "a73edbaa0810c1ec254d1d4f49bf02eaaf0bb619c7fa4b1a39616ec0273d1cdb"
+    },
+    {
+      "bbox": [
+        326.25,
+        116.20195770263672,
+        514.969970703125,
+        126.02812957763672
+      ],
+      "block_id": "page-0881-block-0014",
+      "order": 14,
+      "text": "• 2 à 3 fois par semaine\n3\n",
+      "text_sha256": "3d5d033f3d7611b159f4245d4c71d68c49a53c36000df0e7c745eda642174b01"
+    },
+    {
+      "bbox": [
+        326.25,
+        130.60195922851562,
+        514.969970703125,
+        140.42813110351562
+      ],
+      "block_id": "page-0881-block-0015",
+      "order": 15,
+      "text": "• 4 fois ou plus par semaine\n4\n",
+      "text_sha256": "9842214c60018bc738fe833b56f54450aca6e304d58bb75a1764400281f82bba"
+    },
+    {
+      "bbox": [
+        310.25,
+        145.0519561767578,
+        459.4125671386719,
+        154.8781280517578
+      ],
+      "block_id": "page-0881-block-0016",
+      "order": 16,
+      "text": "Q2 : L’an passé, quand vous avez bu, combien\n",
+      "text_sha256": "536b5f3be488bf6f287cb3e3419b7933fd00dce85ef7a0543273760ef9077554"
+    },
+    {
+      "bbox": [
+        327.0500183105469,
+        155.0519561767578,
+        448.3858947753906,
+        164.8781280517578
+      ],
+      "block_id": "page-0881-block-0017",
+      "order": 17,
+      "text": "de consommations avez-vous prises ?\n",
+      "text_sha256": "fa9f81ee329b702ec63b6457ead314d0cec849ed97310f25fc31065d8896a4c7"
+    },
+    {
+      "bbox": [
+        326.25,
+        169.4519500732422,
+        514.969970703125,
+        179.2781219482422
+      ],
+      "block_id": "page-0881-block-0018",
+      "order": 18,
+      "text": "• 1 ou 2\n0\n",
+      "text_sha256": "1e069737e860b33ec26a3ca51117875d6d2d8de6936b71b4a24a35d3406ed223"
+    },
+    {
+      "bbox": [
+        326.25,
+        183.90196228027344,
+        514.969970703125,
+        193.72813415527344
+      ],
+      "block_id": "page-0881-block-0019",
+      "order": 19,
+      "text": "• 3 ou 4\n1\n",
+      "text_sha256": "2fc4c151715b19910e311459560b6481c70d3365c366bbdfa43c1580ffcd1e21"
+    },
+    {
+      "bbox": [
+        326.25,
+        198.3019561767578,
+        514.969970703125,
+        208.1281280517578
+      ],
+      "block_id": "page-0881-block-0020",
+      "order": 20,
+      "text": "• 5 ou 6\n2\n",
+      "text_sha256": "abe61e48d9892c722277563c201dee8a34b4d6243d0ebe42ea0368b4118797f4"
+    },
+    {
+      "bbox": [
+        326.25,
+        212.751953125,
+        514.969970703125,
+        222.578125
+      ],
+      "block_id": "page-0881-block-0021",
+      "order": 21,
+      "text": "• 7 à 9\n3\n",
+      "text_sha256": "1cab62d2e7e158cf57a114d572e98085368b1083b37ed59da19313c34ade2b6c"
+    },
+    {
+      "bbox": [
+        326.25,
+        227.15196228027344,
+        514.969970703125,
+        236.97813415527344
+      ],
+      "block_id": "page-0881-block-0022",
+      "order": 22,
+      "text": "• 10 ou plus\n4\n",
+      "text_sha256": "7bac16fd35611d91226cc6eba425d1aac819b6e1d49428d0035f8b938d01ec89"
+    },
+    {
+      "bbox": [
+        310.25,
+        241.60195922851562,
+        465.53277587890625,
+        251.42813110351562
+      ],
+      "block_id": "page-0881-block-0023",
+      "order": 23,
+      "text": "Q3 : L’an passé quand vous avez bu, combien de\n",
+      "text_sha256": "613456155e956cf003fcecacf5fb79b332158efe9ba6a6e5c0a130f1f9a96564"
+    },
+    {
+      "bbox": [
+        327.0500183105469,
+        251.60195922851562,
+        474.1332702636719,
+        261.4281311035156
+      ],
+      "block_id": "page-0881-block-0024",
+      "order": 24,
+      "text": "fois avez-vous pris 6 consommations ou plus ?\n",
+      "text_sha256": "897f201425fabd78470851256f44bad219bb961094414569642051ce4a9d9b8b"
+    },
+    {
+      "bbox": [
+        326.25,
+        266.001953125,
+        514.969970703125,
+        275.828125
+      ],
+      "block_id": "page-0881-block-0025",
+      "order": 25,
+      "text": "• Jamais\n0\n",
+      "text_sha256": "8d2ef6160c6d0c12c55e0a8e0685bf2e6ec045f25300332ad4d22998fa6a58c1"
+    },
+    {
+      "bbox": [
+        326.25,
+        280.45196533203125,
+        514.969970703125,
+        290.27813720703125
+      ],
+      "block_id": "page-0881-block-0026",
+      "order": 26,
+      "text": "• Moins qu’une fois par mois\n1\n",
+      "text_sha256": "70ded583922fc9445897a3b674cebc516870a44c1a444fb6624e45492de9adc9"
+    },
+    {
+      "bbox": [
+        326.25,
+        294.8519592285156,
+        514.969970703125,
+        304.6781311035156
+      ],
+      "block_id": "page-0881-block-0027",
+      "order": 27,
+      "text": "• Chaque mois\n2\n",
+      "text_sha256": "749740d74ccbbf24743c07523e32448090ae4c654df4d9c27f2accf84d383214"
+    },
+    {
+      "bbox": [
+        326.25,
+        309.3019714355469,
+        514.969970703125,
+        319.1281433105469
+      ],
+      "block_id": "page-0881-block-0028",
+      "order": 28,
+      "text": "• Chaque semaine\n3\n",
+      "text_sha256": "581fbace4da447499a2820a2b5bdac727f4a7a64aee7bfe6b0362581aa15f4d1"
+    },
+    {
+      "bbox": [
+        326.25,
+        323.70196533203125,
+        514.969970703125,
+        333.52813720703125
+      ],
+      "block_id": "page-0881-block-0029",
+      "order": 29,
+      "text": "• Tous les jours ou presque\n4\n",
+      "text_sha256": "07a9b7f31dea04f228c847ab5303deabd9893d0b7d8bb90e372680360b6f3b35"
+    },
+    {
+      "bbox": [
+        306.25,
+        341.0406188964844,
+        387.4820251464844,
+        349.9088439941406
+      ],
+      "block_id": "page-0881-block-0030",
+      "order": 30,
+      "text": "Source: Gache & al. (2005).\n",
+      "text_sha256": "3322c52bd967069acca179c864cd6289e90adf02b05a5316de7dc5722fb87d0b"
+    },
+    {
+      "bbox": [
+        306.0,
+        371.0158386230469,
+        549.4796752929688,
+        620.5260620117188
+      ],
+      "block_id": "page-0881-block-0031",
+      "order": 31,
+      "text": "instrument sert à orienter les personnes vers des services adaptés\nà leur consommation. Il permet d’en identier six types :\n1. Les abstinents ;\n2. Les consommateurs à faible risque ;\n3. Les consommateurs à risque ;\n4. Les consommateurs problématiques ;\n5. Les consommateurs susceptibles de répondre aux critères\ndiagnostiques d’un trouble lié à l’alcool de sévérité modérée\nou d’abus (selon le DSM-IV-TR) ;\n6. Les consommateurs susceptibles de répondre aux critères\ndiagnostiques d’un trouble lié à l’alcool de sévérité importante\nou de dépendance (selon le DSM-IV-TR).\nLe questionnaire s’adresse aux personnes de 18 ans et plus. La\ndétection d’une consommation abusive chez les jeunes est importante\nparce qu’elle est associée à un plus mauvais pronostic. Une version\npour adolescents de 12 à 18 ans, le DEP-ADO, quant à lui, distingue :\n• les individus sans problème ;\n• ceux avec des problèmes émergents qui ont besoin d’une\nintervention précoce ;\n• ceux qui nécessitent une intervention spécialisée.\n",
+      "text_sha256": "7bf33262a596dae832d4a4ab8a26f0cbf74879c7a257b6f7a0d4c9f5f1176fb0"
+    },
+    {
+      "bbox": [
+        311.20001220703125,
+        625.6000366210938,
+        532.3207397460938,
+        658.6002807617188
+      ],
+      "block_id": "page-0881-block-0032",
+      "order": 32,
+      "text": "i\nUn supplément d’information sur ces grilles d’évaluation\nest disponible au https://oraprdnt.uqtr.uquebec.ca/pls/\npublic/gscw030?owa_no_site=3472.\n",
+      "text_sha256": "c2d63cbd6ffe9fe09211acadbe4532f498a292ac112e59128bf14b3f42ca21b9"
+    },
+    {
+      "bbox": [
+        306.0,
+        672.5368041992188,
+        474.986572265625,
+        688.6793823242188
+      ],
+      "block_id": "page-0881-block-0033",
+      "order": 33,
+      "text": "37.7.2 Marqueurs biologiques\n",
+      "text_sha256": "da5ff4fd0ac7cb84107b1752a5f69b01123a8238a9ee740285a53e6e6550c4b6"
+    },
+    {
+      "bbox": [
+        306.0,
+        692.0158081054688,
+        549.024169921875,
+        725.5084838867188
+      ],
+      "block_id": "page-0881-block-0034",
+      "order": 34,
+      "text": "L’alcoolisation modie un certain nombre de marqueurs bio-\nlogiques. Aucun de ces marqueurs n’est cependant pathogno-\nmonique. Ils sont utiles dans le suivi clinique des personnes\n",
+      "text_sha256": "7e34dc3e5678545aefb1e330fe05fb91a5fad4df86804c0b81be41c116469d40"
+    }
+  ],
+  "coordinates_sha256": "71564e43a9e9c3ec350a99982c2815315f3a60edf1532b961c8f142a5a27b91f",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0881",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "864\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3\nSyndromes cliniques psychiatriques\n37.7\nOutils diagnostiques\nLes médecins ne détectent qu’environ 30 % des problèmes reliés\nà la consommation d’alcool chez leurs patients et ils omettent\nsouvent de diriger ceux qu’ils ont ainsi identiés vers les ressources\nappropriées. C’est dans ce contexte que de nombreux question-\nnaires de dépistage ont été élaborés pour faciliter la détection des\nproblèmes de consommation d’alcool. La sensibilité de ces tests de\ndépistage dépend de la prévalence des troubles de consommation\ndans la population ciblée et elle varie selon des facteurs sociaux\net culturels. La abilité des réponses données par le patient au\nquestionnaire peut varier, en particulier dans un contexte où le\npatient craint les conséquences du dévoilement de sa consommation\nexacte. Par exemple, si des conditions de liberté sous probation\ns’appliquent, si la garde d’un enfant peut être menacée ou, tout\nsimplement, si le patient craint de se voir refuser un traitement\nen raison de sa prise d’alcool.\n37.7.1 Dépistage\nLe questionnaire Cut down, Annoyed, Guilty, Eye-opener (CAGE)\na été présenté pour la première fois en 1970 par Ewing & Rouse.\nCet outil de dépistage est facile d’utilisation et comporte quatre\nquestions (Ewing, 1984) :\n1. Avez-vous déjà senti le besoin de diminuer votre consomma-\ntion d’alcool ?\n2. Vous a-t-on déjà fait des commentaires sur votre consom-\nmation d’alcool ?\n3. Vous êtes-vous déjà senti coupable à cause de votre consom-\nmation d’alcool ?\n4. Avez-vous déjà bu le matin pour vous remettre d’aplomb ?\nDeux réponses positives sur quatre donnent une sensibilité\nentre 46 % et 92 % et une spécicité de 62 % à 95 %. Un résultat de\ndeux réponses positives ou plus au CAGE exige une évaluation\ndiagnostique exhaustive. Le questionnaire est moins sensible\nchez les femmes et les jeunes et il ne permet pas de diérencier\nles problèmes actuels et passés. Il s’agit d’un test de dépistage, non\nde diagnostic, et en ce sens, il se révèle peu valable pour identier\nla dépendance à l’alcool dans une population clinique de patients\nhospitalisés ou traités en clinique ambulatoire pour un problème\nrelié à l’alcool.\nL’Alcohol Use Disorder Identication Test (AUDIT) a été\nélaboré par l’OMS. Il identie mieux que le CAGE les pro-\nblèmes récents et il n’est pas biaisé selon le genre ou l’ethnie.\nIl est cependant plus long à administrer. L’AUDIT-C est une\nversion abrégée de trois questions validée auprès des popu-\nlations caucasiennes, afro-américaines et hispaniques. Des\nréponses totalisant quatre points et plus chez les hommes ou\ntrois points et plus chez les femmes représentent un résultat\npositif, signiant qu’il faut procéder à une évaluation plus\npoussée (voir le tableau 37.6).\ni\nUn supplément d’information sur le questionnaire AUDIT est\ndisponible au www.who.int/substance_abuse/activities/sbi/en.\nDans les Centres de services sociaux et de santé (CSSS) de\nla plupart des régions sociosanitaires du Québec, les interve-\nnants utilisent le questionnaire Dépistage/évaluation du besoin\nd’aide-alcool/drogues (DÉBA-A/D) (Tremblay & al., 2001). Cet\nTABLEAU 37.6 Questionnaire AUDIT-C\nQ1 : L’an passé, à quelle fréquence avez-vous bu ?\nPoints\n• Jamais\n0\n• Chaque mois ou moins souvent\n1\n• 2 à 4 fois par mois\n2\n• 2 à 3 fois par semaine\n3\n• 4 fois ou plus par semaine\n4\nQ2 : L’an passé, quand vous avez bu, combien\nde consommations avez-vous prises ?\n• 1 ou 2\n0\n• 3 ou 4\n1\n• 5 ou 6\n2\n• 7 à 9\n3\n• 10 ou plus\n4\nQ3 : L’an passé quand vous avez bu, combien de\nfois avez-vous pris 6 consommations ou plus ?\n• Jamais\n0\n• Moins qu’une fois par mois\n1\n• Chaque mois\n2\n• Chaque semaine\n3\n• Tous les jours ou presque\n4\nSource: Gache & al. (2005).\ninstrument sert à orienter les personnes vers des services adaptés\nà leur consommation. Il permet d’en identier six types :\n1. Les abstinents ;\n2. Les consommateurs à faible risque ;\n3. Les consommateurs à risque ;\n4. Les consommateurs problématiques ;\n5. Les consommateurs susceptibles de répondre aux critères\ndiagnostiques d’un trouble lié à l’alcool de sévérité modérée\nou d’abus (selon le DSM-IV-TR) ;\n6. Les consommateurs susceptibles de répondre aux critères\ndiagnostiques d’un trouble lié à l’alcool de sévérité importante\nou de dépendance (selon le DSM-IV-TR).\nLe questionnaire s’adresse aux personnes de 18 ans et plus. La\ndétection d’une consommation abusive chez les jeunes est importante\nparce qu’elle est associée à un plus mauvais pronostic. Une version\npour adolescents de 12 à 18 ans, le DEP-ADO, quant à lui, distingue :\n• les individus sans problème ;\n• ceux avec des problèmes émergents qui ont besoin d’une\nintervention précoce ;\n• ceux qui nécessitent une intervention spécialisée.\ni\nUn supplément d’information sur ces grilles d’évaluation\nest disponible au https://oraprdnt.uqtr.uquebec.ca/pls/\npublic/gscw030?owa_no_site=3472.\n37.7.2 Marqueurs biologiques\nL’alcoolisation modie un certain nombre de marqueurs bio-\nlogiques. Aucun de ces marqueurs n’est cependant pathogno-\nmonique. Ils sont utiles dans le suivi clinique des personnes\n",
+  "raw_text_sha256": "f7f81ee90995c0ccbc6ec29a10076eef914adcca40cad54a9632eb895c48f862",
+  "source_page_display": 882,
+  "source_page_index": 881
+}

@@ -1,0 +1,436 @@
+{
+  "block_sequence_sha256": "15f2fcb6a6773fa175e7eceae4aa8d292b48abfcb684543f32679fcb93c25a3a",
+  "blocks": [
+    {
+      "bbox": [
+        396.8000183105469,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0362-block-0001",
+      "order": 1,
+      "text": "Chapitre 17\nSchizophrénies\n345\n",
+      "text_sha256": "eb3b066c44faf6396bb52e76545d96113537120b5ded13f179697ee8ca85587a"
+    },
+    {
+      "bbox": [
+        312.0,
+        40.9658203125,
+        554.9418334960938,
+        74.50849914550781
+      ],
+      "block_id": "page-0362-block-0002",
+      "order": 2,
+      "text": "trouble schizophréniforme selon le DSM-5. La CIM-10 utilise\nle diagnostic de trouble psychotique aigu polymorphe ou de\nbouée délirante à peu près dans le même contexte.\n",
+      "text_sha256": "879bbf9cf548e5938049948ee7f7587af935076b4a9e025e856caf5c719122db"
+    },
+    {
+      "bbox": [
+        312.0,
+        85.0868148803711,
+        469.04815673828125,
+        101.2293930053711
+      ],
+      "block_id": "page-0362-block-0003",
+      "order": 3,
+      "text": "17.4.3 Trouble schizoaffectif\n",
+      "text_sha256": "e58fdc3d901b9f62b7fe59a2a90e70e69a4e5d08646a1a52bfd0ca960b1a135e"
+    },
+    {
+      "bbox": [
+        312.0,
+        104.6158218383789,
+        555.4248046875,
+        184.4084930419922
+      ],
+      "block_id": "page-0362-block-0004",
+      "order": 4,
+      "text": "En 1933, le psychiatre américain J. Kasanin a été l’un des premiers\nchercheurs à préciser le concept d’une psychose présentant des\nsymptômes mixtes de schizophrénie et de trouble aectif. Cer-\ntains auteurs formulent une théorie unicatrice de la psychose\nqui s’étendrait en une continuité entre la schizophrénie « pure »\net le trouble aectif bipolaire « pur », le trouble schizoaectif se\nsituant entre les deux.\n",
+      "text_sha256": "5366809f85ef215734a5b44f750c4a1934cbd703eaa7c13521c770be922234a3"
+    },
+    {
+      "bbox": [
+        312.0,
+        185.3173828125,
+        555.0663452148438,
+        207.5084991455078
+      ],
+      "block_id": "page-0362-block-0005",
+      "order": 5,
+      "text": "Schizophrénie ↔Trouble schizoaectif ↔Trouble aectif\nbipolaire\n",
+      "text_sha256": "d00582d506f43e339424a5a1eccd0c028c0edbfa5f4f3fedb260dd14b24e5e3a"
+    },
+    {
+      "bbox": [
+        312.0,
+        208.56582641601562,
+        555.4512939453125,
+        322.95849609375
+      ],
+      "block_id": "page-0362-block-0006",
+      "order": 6,
+      "text": "Chez certains patients, il est parfois dicile de diérencier un\ntrouble aectif d’un trouble schizophrénique, surtout au début\nde la maladie. Parfois, en eet, les symptômes aectifs (anxiété,\nirritabilité, tristesse, ruminations suicidaires, etc.) s’entremêlent\navec les troubles de la pensée (incohérence, délire, hallucinations,\netc.). Avant d’arriver à une précision diagnostique, on doit parfois\nattendre quelques mois pour constater l’évolution de la maladie\net pour observer l’état du malade en période de rémission. Le\ntableau 17.4 mentionne les critères du trouble schizoaectif qui\nsont presque identiques à ceux du DSM-IV-TR.\n",
+      "text_sha256": "0543ebc4e6219b85de6519726939e0a55c7aa426e41fcd7af979b9ae10d5ca2e"
+    },
+    {
+      "bbox": [
+        312.0,
+        324.0158386230469,
+        555.3795776367188,
+        380.65850830078125
+      ],
+      "block_id": "page-0362-block-0007",
+      "order": 7,
+      "text": "Comme traitement, dans l’optique d’une variante d’un trouble\naectif, il est utile de faire l’essai de l’acide valproïque, du lithium\nou de la carbamazépine, combinés à un antipsychotique. Mais\nles nouveaux antipsychotiques atypiques ont souvent un eet à\nla fois antipsychotique et stabilisateur de l’humeur.\n",
+      "text_sha256": "4ef4100bcf033977411ca0a44f04ba65c6e6209f13a88c84be05137aa079c4e4"
+    },
+    {
+      "bbox": [
+        312.0,
+        391.23681640625,
+        537.3713989257812,
+        407.37939453125
+      ],
+      "block_id": "page-0362-block-0008",
+      "order": 8,
+      "text": "17.4.4 Détection précoce de la psychose\n",
+      "text_sha256": "4f2c0d58211fafb4a0e7149286fada737e6e05c878f81cdc111c0ab9b1f90427"
+    },
+    {
+      "bbox": [
+        312.0,
+        410.7658386230469,
+        555.6382446289062,
+        629.1085205078125
+      ],
+      "block_id": "page-0362-block-0009",
+      "order": 9,
+      "text": "Des études épidémiologiques populationnelles laissent croire à un\ncontinuum de la psychose entre les personnes de la population\ngénérale et les patients présentant un trouble psychotique. On\nconsidère la vulnérabilité à la psychose comme un trait existant\ndans la population générale, un continuum à l’extrémité duquel se\ntrouvent les individus présentant les critères diagnostiques de la\nschizophrénie. Sur ce continuum, environ 17 % de la population\nexpérimente transitoirement des symptômes psychotiques (p. ex.,\nhallucinations, méance, sentiment de persécution, etc.), avec un\npic à l’adolescence (Poulton & al., 2000), mais pour la majorité\nde ces individus, les symptômes sont brefs, isolés ou d’intensité\nsubclinique et ils ont peu de conséquences, car ils ne sont pas\nreliés à une dysrégulation aective. Par contre, les individus appa-\nrentés à un patient atteint de schizophrénie se situent aussi dans\nce continuum et présentent des caractéristiques schizotypiques,\nschizoïdes ou paranoïdes. Leurs performances aux tests cognitifs\nsont intermédiaires entre celles des personnes normales et celles\ndes patients schizophrènes et ils présentent souvent des symptômes\nnégatifs atténués, ce qu’on a englobé sous le concept de schizotaxie.\n",
+      "text_sha256": "a5036a2570c8da1027874f954f58d339998276460a2ae1cdb1216e886b6be1f2"
+    },
+    {
+      "bbox": [
+        312.0,
+        630.1658325195312,
+        555.312255859375,
+        713.9085083007812
+      ],
+      "block_id": "page-0362-block-0010",
+      "order": 10,
+      "text": "Il existe des critères qui permettent d’identier les personnes\nà haut risque d’être atteintes d’un trouble psychotique (at risk\nmental state ou ultra high risk) :\n• Être dans la période d’âge à risque (entre 14 à 30 ans), qui\nconstitue le pic d’incidence des troubles psychotiques, et\nprésenter au moins un des trois critères suivants :\n– des symptômes psychotiques positifs atténués au cours de\n",
+      "text_sha256": "be3341fcbbfec9712da632de61e8fad021f3c15d6fb6a470e760660a1c829921"
+    },
+    {
+      "bbox": [
+        336.0,
+        714.9658203125,
+        554.8088989257812,
+        725.45849609375
+      ],
+      "block_id": "page-0362-block-0011",
+      "order": 11,
+      "text": "la dernière année (en termes d’intensité ou de fréquence) ;\n",
+      "text_sha256": "2694fa38ca8da0fbe96cde6dfc45961bb2291e426147ebaaa5ba9e2ff9e68ba5"
+    },
+    {
+      "bbox": [
+        54.0,
+        353.9658203125,
+        297.3856201171875,
+        673.45849609375
+      ],
+      "block_id": "page-0362-block-0012",
+      "order": 12,
+      "text": "symptômes (types et gravité) entre les patients. Le tableau 17.2\nillustre les dimensions par lesquelles le DSM-5 souhaite fournir une\ninformation additionnelle qui permet un meilleur suivi quant à :\n• l’évaluation de la gravité ;\n• la planication du traitement ;\n• les résultats du traitement.\nDans l’avenir, il est bien probable que ce que l’on appelle\naujourd’hui la schizophrénie soit subdivisé en plusieurs patho-\nlogies relevant de causes variées, interactives ou cumulatives\net nécessitant donc des ajustements thérapeutiques variés et\nindividualisés. Les frontières mal délimitées du spectre de la\nschizophrénie englobent une variété de manifestations cliniques,\nd’histoires familiales et de réponses aux traitements. On peut aussi\nreconnaître qu’une forme héréditaire se concentre dans certaines\nfamilles, mais la majorité des schizophrénies qui surviennent\nsont sporadiques et sans histoire familiale. Les symptômes schi-\nzophréniques qui apparaissent chez l’enfant, le jeune adulte ou la\nfemme ménopausée ne sont sans doute pas basés sur les mêmes\nprocessus étiologiques. Certaines schizophrénies réagissent bien\naux antipsychotiques classiques bloqueurs de dopamine, alors\nque d’autres, dites réfractaires, s’atténuent avec la clozapine, qui\nest peu sélective des récepteurs DA2. Par conséquent, on peut se\ndemander s’il ne s’agit pas là de maladies diérentes plutôt que de\nformes évolutives d’une même maladie. Quoi qu’il en soit, on les\nappelle toutes « schizophrénies », car la symptomatologie seule\nne permet pas de les diérentier en sous-catégories. Il faudra\ntrouver d’autres méthodes diagnostiques plus ables.\n",
+      "text_sha256": "9f9eca036f61d41f7c47aca3dbd1aaba4af99b121383a1b45ed9d3e2bec66fb3"
+    },
+    {
+      "bbox": [
+        54.0,
+        683.98681640625,
+        239.4682159423828,
+        700.12939453125
+      ],
+      "block_id": "page-0362-block-0013",
+      "order": 13,
+      "text": "17.4.2 Trouble schizophréniforme\n",
+      "text_sha256": "adf10fa4d2d0b267198c5cc438d7478847218c622d3d694b1187439e5c72748b"
+    },
+    {
+      "bbox": [
+        54.0,
+        703.4658203125,
+        297.122802734375,
+        725.45849609375
+      ],
+      "block_id": "page-0362-block-0014",
+      "order": 14,
+      "text": "Si les symptômes décrits dans le tableau 17.3 durent depuis\nmoins de six mois, il convient de porter un diagnostic de\n",
+      "text_sha256": "e7dc698498cd2d3427564130f338697a98b318bf46284bb2bf01ca2c08101f7c"
+    },
+    {
+      "bbox": [
+        56.85000228881836,
+        41.002296447753906,
+        283.3150329589844,
+        53.320068359375
+      ],
+      "block_id": "page-0362-block-0015",
+      "order": 15,
+      "text": "TABLEAU 17.2 Dimensions de la gravité des symptômes\n",
+      "text_sha256": "259fcbe8bd268b92de33e1a6e94eda99e17de5603c585e20cc3ffdb6aadbeb50"
+    },
+    {
+      "bbox": [
+        113.20000457763672,
+        52.852294921875,
+        167.7239990234375,
+        64.820068359375
+      ],
+      "block_id": "page-0362-block-0016",
+      "order": 16,
+      "text": "psychotiques\n",
+      "text_sha256": "f917877ac2066c0086164786060a49f60da52c12dacdc4c935a6ffbddbf817b7"
+    },
+    {
+      "bbox": [
+        61.5,
+        71.1241226196289,
+        108.26850891113281,
+        91.7002944946289
+      ],
+      "block_id": "page-0362-block-0017",
+      "order": 17,
+      "text": "Symptômes\n(dimensions)\n",
+      "text_sha256": "1c685699c1e9cf48204f576da115ff9b3870ecd1d14e92b488fea3952a611350"
+    },
+    {
+      "bbox": [
+        118.55000305175781,
+        69.77412414550781,
+        291.0379943847656,
+        93.10029602050781
+      ],
+      "block_id": "page-0362-block-0018",
+      "order": 18,
+      "text": "Sévérité\nAbsent\nÉquivoque\nLéger\nModéré\nGrave\n",
+      "text_sha256": "aedbe2d17ed31725f2dd43299c741f97059ca442325ba8e7bf67ae5165c7d414"
+    },
+    {
+      "bbox": [
+        58.75,
+        97.501953125,
+        282.6700134277344,
+        107.328125
+      ],
+      "block_id": "page-0362-block-0019",
+      "order": 19,
+      "text": "Hallucinations\n0\n1\n2\n3\n4\n",
+      "text_sha256": "1dbefb55fad79ace1b80579cf165eaaf94b59897b6d8b03df3d990f4e1308e0b"
+    },
+    {
+      "bbox": [
+        58.75,
+        113.9019546508789,
+        282.6700134277344,
+        123.7281265258789
+      ],
+      "block_id": "page-0362-block-0020",
+      "order": 20,
+      "text": "Délire\n0\n1\n2\n3\n4\n",
+      "text_sha256": "bf6c36490b8198e231576213677366d8a6212272109249efbd077445825be4df"
+    },
+    {
+      "bbox": [
+        58.75,
+        130.35195922851562,
+        97.2340087890625,
+        150.17813110351562
+      ],
+      "block_id": "page-0362-block-0021",
+      "order": 21,
+      "text": "Discours\ndésorganisé\n",
+      "text_sha256": "9e9c7d90a283755978732861a2fd92e85367111c6bdb98095b77c391d0905dd3"
+    },
+    {
+      "bbox": [
+        128.9499969482422,
+        130.35195922851562,
+        282.6700134277344,
+        140.17813110351562
+      ],
+      "block_id": "page-0362-block-0022",
+      "order": 22,
+      "text": "0\n1\n2\n3\n4\n",
+      "text_sha256": "026d8ad3dfa1f2aa9da7964947ddedd4e83c6fc008206ebf898699dea80f9804"
+    },
+    {
+      "bbox": [
+        58.75,
+        156.751953125,
+        109.43799591064453,
+        176.578125
+      ],
+      "block_id": "page-0362-block-0023",
+      "order": 23,
+      "text": "Comportements\nanormaux\n",
+      "text_sha256": "a6029876c94c7547657a5b0edb1c5b04baa6d8563e8593faaafedbfaa51e94e8"
+    },
+    {
+      "bbox": [
+        128.9499969482422,
+        156.751953125,
+        282.6700134277344,
+        166.578125
+      ],
+      "block_id": "page-0362-block-0024",
+      "order": 24,
+      "text": "0\n1\n2\n3\n4\n",
+      "text_sha256": "026d8ad3dfa1f2aa9da7964947ddedd4e83c6fc008206ebf898699dea80f9804"
+    },
+    {
+      "bbox": [
+        58.75,
+        183.2019500732422,
+        96.0820083618164,
+        203.0281219482422
+      ],
+      "block_id": "page-0362-block-0025",
+      "order": 25,
+      "text": "Symptômes\nnégatifs\n",
+      "text_sha256": "af4a4034fff07f20cbdb883e3d6d9a03e16d45332adad36d5ce5337f6ce8af8d"
+    },
+    {
+      "bbox": [
+        128.9499969482422,
+        183.2019500732422,
+        282.6700134277344,
+        193.0281219482422
+      ],
+      "block_id": "page-0362-block-0026",
+      "order": 26,
+      "text": "0\n1\n2\n3\n4\n",
+      "text_sha256": "026d8ad3dfa1f2aa9da7964947ddedd4e83c6fc008206ebf898699dea80f9804"
+    },
+    {
+      "bbox": [
+        58.75,
+        209.60195922851562,
+        282.6700134277344,
+        219.42813110351562
+      ],
+      "block_id": "page-0362-block-0027",
+      "order": 27,
+      "text": "Décit cognitif\n0\n1\n2\n3\n4\n",
+      "text_sha256": "900b51347babe8af040627477b5cf7f2cc4d3a6e488c200c3500bab9340f8d0d"
+    },
+    {
+      "bbox": [
+        58.75,
+        226.0519561767578,
+        92.73400115966797,
+        245.8781280517578
+      ],
+      "block_id": "page-0362-block-0028",
+      "order": 28,
+      "text": "Humeur\ndépressive\n",
+      "text_sha256": "b532077b622c6aba372c8419748d9fc739733edd719689afeb347f161cdd6771"
+    },
+    {
+      "bbox": [
+        128.9499969482422,
+        226.0519561767578,
+        282.6700134277344,
+        235.8781280517578
+      ],
+      "block_id": "page-0362-block-0029",
+      "order": 29,
+      "text": "0\n1\n2\n3\n4\n",
+      "text_sha256": "026d8ad3dfa1f2aa9da7964947ddedd4e83c6fc008206ebf898699dea80f9804"
+    },
+    {
+      "bbox": [
+        58.75,
+        252.45196533203125,
+        97.88200378417969,
+        272.27813720703125
+      ],
+      "block_id": "page-0362-block-0030",
+      "order": 30,
+      "text": "Manie\n(expansivité)\n",
+      "text_sha256": "be85ccf575f6cd69fb894926ea13ddb754bf1852e3b472193913b96f3cf77c3d"
+    },
+    {
+      "bbox": [
+        128.9499969482422,
+        252.45196533203125,
+        282.6700134277344,
+        262.27813720703125
+      ],
+      "block_id": "page-0362-block-0031",
+      "order": 31,
+      "text": "0\n1\n2\n3\n4\n",
+      "text_sha256": "026d8ad3dfa1f2aa9da7964947ddedd4e83c6fc008206ebf898699dea80f9804"
+    },
+    {
+      "bbox": [
+        58.75,
+        278.9019470214844,
+        99.45700073242188,
+        298.7281188964844
+      ],
+      "block_id": "page-0362-block-0032",
+      "order": 32,
+      "text": "Utilisation de\nsubstances\n",
+      "text_sha256": "03fffb53a62a2134af44ad0edaebb2370bbdb8979a6de2d2d69e1ffe7e038b37"
+    },
+    {
+      "bbox": [
+        128.9499969482422,
+        278.9019470214844,
+        282.6700134277344,
+        288.7281188964844
+      ],
+      "block_id": "page-0362-block-0033",
+      "order": 33,
+      "text": "0\n1\n2\n3\n4\n",
+      "text_sha256": "026d8ad3dfa1f2aa9da7964947ddedd4e83c6fc008206ebf898699dea80f9804"
+    },
+    {
+      "bbox": [
+        58.75,
+        305.3019714355469,
+        95.66105651855469,
+        325.1281433105469
+      ],
+      "block_id": "page-0362-block-0034",
+      "order": 34,
+      "text": "Troubles du\nsommeil\n",
+      "text_sha256": "789a21b549b9cec77f77e7d744dd191fb9c8fc268a56a6eee530a3ed4873d2c8"
+    },
+    {
+      "bbox": [
+        128.9499969482422,
+        305.3019714355469,
+        282.6700134277344,
+        315.1281433105469
+      ],
+      "block_id": "page-0362-block-0035",
+      "order": 35,
+      "text": "0\n1\n2\n3\n4\n",
+      "text_sha256": "026d8ad3dfa1f2aa9da7964947ddedd4e83c6fc008206ebf898699dea80f9804"
+    }
+  ],
+  "coordinates_sha256": "124840d8b3411ebe942b41a9abb6faf6015a9f05a9b6c74ca52a4f01d213a6fe",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0362",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 17\nSchizophrénies\n345\ntrouble schizophréniforme selon le DSM-5. La CIM-10 utilise\nle diagnostic de trouble psychotique aigu polymorphe ou de\nbouée délirante à peu près dans le même contexte.\n17.4.3 Trouble schizoaffectif\nEn 1933, le psychiatre américain J. Kasanin a été l’un des premiers\nchercheurs à préciser le concept d’une psychose présentant des\nsymptômes mixtes de schizophrénie et de trouble aectif. Cer-\ntains auteurs formulent une théorie unicatrice de la psychose\nqui s’étendrait en une continuité entre la schizophrénie « pure »\net le trouble aectif bipolaire « pur », le trouble schizoaectif se\nsituant entre les deux.\nSchizophrénie ↔Trouble schizoaectif ↔Trouble aectif\nbipolaire\nChez certains patients, il est parfois dicile de diérencier un\ntrouble aectif d’un trouble schizophrénique, surtout au début\nde la maladie. Parfois, en eet, les symptômes aectifs (anxiété,\nirritabilité, tristesse, ruminations suicidaires, etc.) s’entremêlent\navec les troubles de la pensée (incohérence, délire, hallucinations,\netc.). Avant d’arriver à une précision diagnostique, on doit parfois\nattendre quelques mois pour constater l’évolution de la maladie\net pour observer l’état du malade en période de rémission. Le\ntableau 17.4 mentionne les critères du trouble schizoaectif qui\nsont presque identiques à ceux du DSM-IV-TR.\nComme traitement, dans l’optique d’une variante d’un trouble\naectif, il est utile de faire l’essai de l’acide valproïque, du lithium\nou de la carbamazépine, combinés à un antipsychotique. Mais\nles nouveaux antipsychotiques atypiques ont souvent un eet à\nla fois antipsychotique et stabilisateur de l’humeur.\n17.4.4 Détection précoce de la psychose\nDes études épidémiologiques populationnelles laissent croire à un\ncontinuum de la psychose entre les personnes de la population\ngénérale et les patients présentant un trouble psychotique. On\nconsidère la vulnérabilité à la psychose comme un trait existant\ndans la population générale, un continuum à l’extrémité duquel se\ntrouvent les individus présentant les critères diagnostiques de la\nschizophrénie. Sur ce continuum, environ 17 % de la population\nexpérimente transitoirement des symptômes psychotiques (p. ex.,\nhallucinations, méance, sentiment de persécution, etc.), avec un\npic à l’adolescence (Poulton & al., 2000), mais pour la majorité\nde ces individus, les symptômes sont brefs, isolés ou d’intensité\nsubclinique et ils ont peu de conséquences, car ils ne sont pas\nreliés à une dysrégulation aective. Par contre, les individus appa-\nrentés à un patient atteint de schizophrénie se situent aussi dans\nce continuum et présentent des caractéristiques schizotypiques,\nschizoïdes ou paranoïdes. Leurs performances aux tests cognitifs\nsont intermédiaires entre celles des personnes normales et celles\ndes patients schizophrènes et ils présentent souvent des symptômes\nnégatifs atténués, ce qu’on a englobé sous le concept de schizotaxie.\nIl existe des critères qui permettent d’identier les personnes\nà haut risque d’être atteintes d’un trouble psychotique (at risk\nmental state ou ultra high risk) :\n• Être dans la période d’âge à risque (entre 14 à 30 ans), qui\nconstitue le pic d’incidence des troubles psychotiques, et\nprésenter au moins un des trois critères suivants :\n– des symptômes psychotiques positifs atténués au cours de\nla dernière année (en termes d’intensité ou de fréquence) ;\nsymptômes (types et gravité) entre les patients. Le tableau 17.2\nillustre les dimensions par lesquelles le DSM-5 souhaite fournir une\ninformation additionnelle qui permet un meilleur suivi quant à :\n• l’évaluation de la gravité ;\n• la planication du traitement ;\n• les résultats du traitement.\nDans l’avenir, il est bien probable que ce que l’on appelle\naujourd’hui la schizophrénie soit subdivisé en plusieurs patho-\nlogies relevant de causes variées, interactives ou cumulatives\net nécessitant donc des ajustements thérapeutiques variés et\nindividualisés. Les frontières mal délimitées du spectre de la\nschizophrénie englobent une variété de manifestations cliniques,\nd’histoires familiales et de réponses aux traitements. On peut aussi\nreconnaître qu’une forme héréditaire se concentre dans certaines\nfamilles, mais la majorité des schizophrénies qui surviennent\nsont sporadiques et sans histoire familiale. Les symptômes schi-\nzophréniques qui apparaissent chez l’enfant, le jeune adulte ou la\nfemme ménopausée ne sont sans doute pas basés sur les mêmes\nprocessus étiologiques. Certaines schizophrénies réagissent bien\naux antipsychotiques classiques bloqueurs de dopamine, alors\nque d’autres, dites réfractaires, s’atténuent avec la clozapine, qui\nest peu sélective des récepteurs DA2. Par conséquent, on peut se\ndemander s’il ne s’agit pas là de maladies diérentes plutôt que de\nformes évolutives d’une même maladie. Quoi qu’il en soit, on les\nappelle toutes « schizophrénies », car la symptomatologie seule\nne permet pas de les diérentier en sous-catégories. Il faudra\ntrouver d’autres méthodes diagnostiques plus ables.\n17.4.2 Trouble schizophréniforme\nSi les symptômes décrits dans le tableau 17.3 durent depuis\nmoins de six mois, il convient de porter un diagnostic de\nTABLEAU 17.2 Dimensions de la gravité des symptômes\npsychotiques\nSymptômes\n(dimensions)\nSévérité\nAbsent\nÉquivoque\nLéger\nModéré\nGrave\nHallucinations\n0\n1\n2\n3\n4\nDélire\n0\n1\n2\n3\n4\nDiscours\ndésorganisé\n0\n1\n2\n3\n4\nComportements\nanormaux\n0\n1\n2\n3\n4\nSymptômes\nnégatifs\n0\n1\n2\n3\n4\nDécit cognitif\n0\n1\n2\n3\n4\nHumeur\ndépressive\n0\n1\n2\n3\n4\nManie\n(expansivité)\n0\n1\n2\n3\n4\nUtilisation de\nsubstances\n0\n1\n2\n3\n4\nTroubles du\nsommeil\n0\n1\n2\n3\n4\n",
+  "raw_text_sha256": "579c9eef0327535ef304b6b79bf96f90895620587e2849c006f00584dde4bc11",
+  "source_page_display": 363,
+  "source_page_index": 362
+}

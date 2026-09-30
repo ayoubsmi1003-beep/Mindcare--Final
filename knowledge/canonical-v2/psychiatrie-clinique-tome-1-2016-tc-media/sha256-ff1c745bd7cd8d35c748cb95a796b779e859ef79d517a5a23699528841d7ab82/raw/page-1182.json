@@ -1,0 +1,592 @@
+{
+  "block_sequence_sha256": "4c795d95cbb954cee1b45e24bd095ff46ae7fba5805d4dc3b4fa20a957cb46d1",
+  "blocks": [
+    {
+      "bbox": [
+        54.0,
+        38.31171798706055,
+        182.16049194335938,
+        60.77265548706055
+      ],
+      "block_id": "page-1182-block-0001",
+      "order": 1,
+      "text": "Index des sujets\n",
+      "text_sha256": "6fb923aba6e7d0d482089ad35edfa00c060c71ba31f3842f7b2836d18c85a7b3"
+    },
+    {
+      "bbox": [
+        54.0,
+        86.50703430175781,
+        152.5850067138672,
+        139.6672821044922
+      ],
+      "block_id": "page-1182-block-0002",
+      "order": 2,
+      "text": "A\nABC (approche), 608t\naboulie (avolition), 352\nabsentéisme, 262\n",
+      "text_sha256": "365945abb53f5febb3835f123fbb057c3c7ade6df09417e8290515ee66961536"
+    },
+    {
+      "bbox": [
+        54.0,
+        140.6201171875,
+        186.54299926757812,
+        164.71728515625
+      ],
+      "block_id": "page-1182-block-0003",
+      "order": 3,
+      "text": "mental, 165\nabsorption, 512, 703-704t, 731,\n",
+      "text_sha256": "681d477cc0d72e41ff39be73c4e464f4b206f5f018537fb09d221eac8bd1678b"
+    },
+    {
+      "bbox": [
+        54.0,
+        165.6701202392578,
+        207.8155059814453,
+        214.9172821044922
+      ],
+      "block_id": "page-1182-block-0004",
+      "order": 4,
+      "text": "1433-1434, 1439t, 1444-1445,\n1460, 1536, 1540, 1544, 1546,\n1760\nabstraction, 51t, 57, 65-66, 67t, 186-\n",
+      "text_sha256": "a8372b4c8b3a7b2a6f3a7fc4dfd542dda6a0727eadc0ad7b3430597d92564e8f"
+    },
+    {
+      "bbox": [
+        54.0,
+        215.8701171875,
+        201.57521057128906,
+        252.5172882080078
+      ],
+      "block_id": "page-1182-block-0005",
+      "order": 5,
+      "text": "187, 209, 601, 861, 1382, 1413,\n1644\nabus\n",
+      "text_sha256": "78114d9fea49e67ae7f77bdb61814a269c6631b656ac15e246bb9f6ea3f3f485"
+    },
+    {
+      "bbox": [
+        63.0,
+        253.47012329101562,
+        207.5098876953125,
+        277.6172790527344
+      ],
+      "block_id": "page-1182-block-0006",
+      "order": 6,
+      "text": "chronique, 83, 935\nd’enfant, 28, 69t, 71, 200, 237, 304,\n",
+      "text_sha256": "a305aea6fab467e2640062e2030c8df271e23316036484289aff0acad4dec453"
+    },
+    {
+      "bbox": [
+        63.0,
+        278.57012939453125,
+        202.72494506835938,
+        352.8672790527344
+      ],
+      "block_id": "page-1182-block-0007",
+      "order": 7,
+      "text": "355, 395, 405, 495, 508, 618,\n764, 793, 812, 825-826, 829,\n969, 1119, 1150t, 1151, 1154,\n1159t, 1161t, 1294, 1300\nde conance, 32\nde substances, 829, 875-876\n",
+      "text_sha256": "c75e4f0c2af0ebebfee85b3e7c1f5af06fccdf799c21f4f33942dd9c9a8154a2"
+    },
+    {
+      "bbox": [
+        63.0,
+        354.8094177246094,
+        199.00802612304688,
+        465.71728515625
+      ],
+      "block_id": "page-1182-block-0008",
+      "order": 8,
+      "text": "idées suicidaires et __, 1093\ninsomnie et __, 729\nthérapie familiale et __, 1738\ndissociations et __, 513-515\ndu conjoint, 71\némotionnel, 935\nexpériences précoces d’__, 934\ninsomnie et __, 730\nphysique, 237, 395, 495, 513,\n",
+      "text_sha256": "6787a7d69e2c608aaddf871419fc3e0d1b6c4ead0e4a827065d7f45aa849f986"
+    },
+    {
+      "bbox": [
+        63.0,
+        466.6701354980469,
+        209.4266357421875,
+        503.3172912597656
+      ],
+      "block_id": "page-1182-block-0009",
+      "order": 9,
+      "text": "533-534, 829, 934, 1126, 1136,\n1320, 1367, 1725\npsychologique, 200, 567, 1036,\n",
+      "text_sha256": "70ed61650b01d6871cceec1a142a0d4e8a2ef69906774ca3295524a0d58ffef0"
+    },
+    {
+      "bbox": [
+        63.0,
+        504.2701416015625,
+        212.44134521484375,
+        540.96728515625
+      ],
+      "block_id": "page-1182-block-0010",
+      "order": 10,
+      "text": "1133, 1135, 1159-1160t\nschizophrénie et __, 355\nsexuel, 513, 534, 700, 793, 934-935,\n",
+      "text_sha256": "967b73c9c1793644f844a3244f6a3299a1e6a576f619943b5d4045888f7ddafa"
+    },
+    {
+      "bbox": [
+        54.0,
+        541.9201049804688,
+        205.1062469482422,
+        591.1173095703125
+      ],
+      "block_id": "page-1182-block-0011",
+      "order": 11,
+      "text": "1126, 1367\nacceptation, 1714-1715, 1764, 1766\naccès à l’information, 33\naccident vasculaire cérébral (AVC),\n",
+      "text_sha256": "58094efb817fae0def3b5c84f73d0826c0fb3041e6811a9aa846ced4dbd9bc9e"
+    },
+    {
+      "bbox": [
+        54.0,
+        592.0701293945312,
+        206.16123962402344,
+        678.9172973632812
+      ],
+      "block_id": "page-1182-block-0012",
+      "order": 12,
+      "text": "64, 115, 185, 375, 475, 557, 579,\n589, 618, 629t, 635, 763, 1087,\n1096, 1396, 1411, 1413, 1474,\n1477, 1492, 1557, 1633\ndémence et __, 589\nacculturation, 1251, 1251f\nacétylcholine, 112, 117, 122, 126,\n",
+      "text_sha256": "f52b2f79c1704e2cabf330337cd24adbdb57479b7f5e2e6e2b83c329be62b761"
+    },
+    {
+      "bbox": [
+        54.0,
+        679.8701171875,
+        193.56077575683594,
+        729.0673217773438
+      ],
+      "block_id": "page-1182-block-0013",
+      "order": 13,
+      "text": "128-129, 129f, 147, 188, 580,\n586, 605, 613, 723, 811, 882,\n1147, 1433, 1473, 1513-1514\nachat compulsif, 847-848\n",
+      "text_sha256": "9be49e44b34a1956b233d650e7b0eb78d8bf73837f0010717104a5c6fbfc575b"
+    },
+    {
+      "bbox": [
+        225.0,
+        87.92012023925781,
+        304.2435302734375,
+        112.1172866821289
+      ],
+      "block_id": "page-1182-block-0014",
+      "order": 14,
+      "text": "achmophobie, 413\nacide\n",
+      "text_sha256": "a08ce91746efdf738ce65341faac7c0653ed13653c27f3631790bf24d8ed58e3"
+    },
+    {
+      "bbox": [
+        234.0,
+        113.1201171875,
+        372.8625183105469,
+        124.71728515625
+      ],
+      "block_id": "page-1182-block-0015",
+      "order": 15,
+      "text": "γ-aminobutyrique (GABA), 122,\n",
+      "text_sha256": "d076e1021558ea28031cabf45e025f2719fe1f9b500faae22966828a6cce3b3d"
+    },
+    {
+      "bbox": [
+        234.0,
+        125.72012329101562,
+        370.11053466796875,
+        162.5172882080078
+      ],
+      "block_id": "page-1182-block-0016",
+      "order": 16,
+      "text": "130-131, 417, 439, 580, 851,\n876t, 1278t, 1446, 1541\ndésoxyribonucléique (ADN),\n",
+      "text_sha256": "bc4f00796595d565eb08d872b1528de42d51b4767201db69fcb00bcc3a4d6712"
+    },
+    {
+      "bbox": [
+        225.0,
+        163.24453735351562,
+        366.7644958496094,
+        225.46728515625
+      ],
+      "block_id": "page-1182-block-0017",
+      "order": 17,
+      "text": "94-96, 102, 106f, 196\nribonucléique, 94\nvalproïque, 1540-1543\nacomoclitisme, 814\nACT (assertive community treat-\n",
+      "text_sha256": "09aea534fc08e5b0a58f0ad11c1820f9351e8395b86862eab2bd0bade39e553f"
+    },
+    {
+      "bbox": [
+        225.0,
+        226.4201202392578,
+        382.375244140625,
+        288.41729736328125
+      ],
+      "block_id": "page-1182-block-0018",
+      "order": 18,
+      "text": "ment), 369, 918, 981, 1031, 1070,\n1780, 1784t\nactigraphie, 728, 729f\naction déviante, 283-284\nactivation comportementale, 547,\n",
+      "text_sha256": "7a4d02b45b7fac85b6c611ec9826d252356ab96b663028801033816bfe1b19b4"
+    },
+    {
+      "bbox": [
+        225.0,
+        289.4201354980469,
+        370.2099914550781,
+        338.7673034667969
+      ],
+      "block_id": "page-1182-block-0019",
+      "order": 19,
+      "text": "1039, 1262, 1377, 1568, 1628,\n1634-1635, 1646, 1649, 1661t,\n1797\nactivité(s)\n",
+      "text_sha256": "5e80e6b8db5fae3847c557cef9597d649e4529d5f0bb7bb99590b2f144a82871"
+    },
+    {
+      "bbox": [
+        234.0,
+        339.7701110839844,
+        347.47998046875,
+        363.96728515625
+      ],
+      "block_id": "page-1182-block-0020",
+      "order": 20,
+      "text": "cérébrale, 1304\nen milieu communautaire,\n",
+      "text_sha256": "3dce19337815aa5699641bfcdf717c65c8f0d6a4fea658415d3a9d90365e7a08"
+    },
+    {
+      "bbox": [
+        234.0,
+        364.9701232910156,
+        297.7875061035156,
+        389.1172790527344
+      ],
+      "block_id": "page-1182-block-0021",
+      "order": 21,
+      "text": "1133-1134\npsychomotrice\n",
+      "text_sha256": "1a6e98a095d1b8babd511ad66a531a6773e5d7b6df774f993a5dea1e7b2da0c2"
+    },
+    {
+      "bbox": [
+        234.0,
+        391.159423828125,
+        363.5574035644531,
+        426.91729736328125
+      ],
+      "block_id": "page-1182-block-0022",
+      "order": 22,
+      "text": "dépression et __, 396\npédopsychiatrie et __, 1221\nquotidiennes, 396\n",
+      "text_sha256": "b82ddbdbd3c3ded346976ed003af0f6ddbeb2c2975c227401951f0ec9c87a7e3"
+    },
+    {
+      "bbox": [
+        225.0,
+        427.9816589355469,
+        378.62713623046875,
+        464.66729736328125
+      ],
+      "block_id": "page-1182-block-0023",
+      "order": 23,
+      "text": "registre des __, 1650t\nacupuncture, 576\nadaptation, 281-282, 671, 674, 1224,\n",
+      "text_sha256": "3421b0db15515969c157721e4b9ae3d0e7ce788d4ccb2c146b564af48c9c46ea"
+    },
+    {
+      "bbox": [
+        225.0,
+        465.6701354980469,
+        346.579345703125,
+        590.6173095703125
+      ],
+      "block_id": "page-1182-block-0024",
+      "order": 24,
+      "text": "1575\nà l’objet, 1333-1335t\naux symptômes, 1315\ndicultés d’__, 1127\nface aux stress, 1382\nscolaire, 1286\nstratégies d’__, 1652\ntroubles de l’ ___, 473-488\nadénohypophyse, 189f\nadhésion\n",
+      "text_sha256": "2b1af325f5061c1f7ecc1efb224c47acb5c5199d18e4c22df52967e9fc40e069"
+    },
+    {
+      "bbox": [
+        234.0,
+        591.5701293945312,
+        378.3355407714844,
+        603.1672973632812
+      ],
+      "block_id": "page-1182-block-0025",
+      "order": 25,
+      "text": "au traitement, 25, 1027, 1433, 1439-\n",
+      "text_sha256": "28c010a16f2ec4ea81984e6540c5cb1321c801aea775f04c979fc3840c186c6e"
+    },
+    {
+      "bbox": [
+        234.0,
+        604.1701049804688,
+        365.0044860839844,
+        628.3673095703125
+      ],
+      "block_id": "page-1182-block-0026",
+      "order": 26,
+      "text": "1442\nthérapie motivationnelle et __,\n",
+      "text_sha256": "6ade1ccc3fa227b43aa4e18d965a47091be9563b02e6bb15606433ea401f4ccd"
+    },
+    {
+      "bbox": [
+        225.0,
+        629.3701171875,
+        358.9324951171875,
+        653.5673217773438
+      ],
+      "block_id": "page-1182-block-0027",
+      "order": 27,
+      "text": "1708\nADN, voir acide désoxyribonu-\n",
+      "text_sha256": "85375c2b7d43f5eb81de04835be13611bb0c2a46ab11ba478a9188265ef8f84c"
+    },
+    {
+      "bbox": [
+        225.0,
+        654.5201416015625,
+        320.45550537109375,
+        691.3173217773438
+      ],
+      "block_id": "page-1182-block-0028",
+      "order": 28,
+      "text": "cléique (ADN)\nadolescentophilie, 817\nadoption, 334\n",
+      "text_sha256": "cb61599cc64a3db3bbe5d2b11924ac88b411f3b582b46260bd69d2362653a523"
+    },
+    {
+      "bbox": [
+        234.0,
+        692.3201293945312,
+        383.1641845703125,
+        729.1173095703125
+      ],
+      "block_id": "page-1182-block-0029",
+      "order": 29,
+      "text": "d’un nouveau comportement, 1693\nd’un rôle social, 785\nd’une nouvelle identité, 516t\n",
+      "text_sha256": "da52df069bbaac98a05ca042fe884f7851fb76cfcd6d75348cbbc121590a2f86"
+    },
+    {
+      "bbox": [
+        405.0,
+        87.92012023925781,
+        541.3099975585938,
+        99.51728820800781
+      ],
+      "block_id": "page-1182-block-0030",
+      "order": 30,
+      "text": "de saines habitudes de vie, 661t,\n",
+      "text_sha256": "51cea13aaf9d0aa1fba35e17d3b0993d62482df41801166eef994f10a6113c14"
+    },
+    {
+      "bbox": [
+        396.0,
+        100.5201187133789,
+        535.0599975585938,
+        149.9172821044922
+      ],
+      "block_id": "page-1182-block-0031",
+      "order": 31,
+      "text": "988, 1388, 1704\nétudes d’__, 96-97, 334\nfamille et __, 232-235\nadrénaline, 122f, 478, 483, 1482f,\n",
+      "text_sha256": "7da0a759c0394be45334bb034122a45a641bf7902804eb85f217f9ae552e2ad6"
+    },
+    {
+      "bbox": [
+        396.0,
+        150.9201202392578,
+        549.760009765625,
+        175.06729125976562
+      ],
+      "block_id": "page-1182-block-0032",
+      "order": 32,
+      "text": "1751\naect, 55-56, 344, 1221-1222, 1595f,\n",
+      "text_sha256": "4246f9d5683540d4f4398fc1bfa7a1f7624f928d4673f8ff213bacf5f241ba92"
+    },
+    {
+      "bbox": [
+        405.0,
+        176.0701141357422,
+        546.9933471679688,
+        200.2672882080078
+      ],
+      "block_id": "page-1182-block-0033",
+      "order": 33,
+      "text": "1686\ndépressif, 321, 386, 660, 662, 676,\n",
+      "text_sha256": "fe0c359ccfd7d58753e345ccb68c8e3ad88f930be382de445def4dfdd7939adc"
+    },
+    {
+      "bbox": [
+        405.0,
+        201.27012634277344,
+        539.2213745117188,
+        238.0172882080078
+      ],
+      "block_id": "page-1182-block-0034",
+      "order": 34,
+      "text": "911\neuphorique, 376, 622\ninapproprié, aplati ou émoussé,\n",
+      "text_sha256": "eeb561146f88e3703578b3eab06b4dcc7b80696c601c25def43aa73ddbc4ffde"
+    },
+    {
+      "bbox": [
+        396.0,
+        239.02012634277344,
+        509.0954895019531,
+        263.21728515625
+      ],
+      "block_id": "page-1182-block-0035",
+      "order": 35,
+      "text": "352\naectations neurologiques\n",
+      "text_sha256": "c194bf0b9d3773e352827ce07116237a6126d3faa0a8f9514becffce850473d7"
+    },
+    {
+      "bbox": [
+        396.0,
+        264.2201232910156,
+        531.3494873046875,
+        301.0173034667969
+      ],
+      "block_id": "page-1182-block-0036",
+      "order": 36,
+      "text": "delirium et __, 579\naérences somesthésiques, 170\naliation, 502, 916, 1290, 1590t\n",
+      "text_sha256": "8abd1efc27822275681ec0b4279a4f9914a736c39c47fc57d9e50bfe53fb014a"
+    },
+    {
+      "bbox": [
+        396.0,
+        301.9701232910156,
+        549.7542114257812,
+        326.16729736328125
+      ],
+      "block_id": "page-1182-block-0037",
+      "order": 37,
+      "text": "universitaire, 1069, 1078-1080\narmation de soi, 47, 204, 214, 443,\n",
+      "text_sha256": "ceb4b83a4fa9e0b074d30e109f10ee0d94f17304e16b99835d02551288be1dc7"
+    },
+    {
+      "bbox": [
+        396.0,
+        327.1701354980469,
+        546.9600219726562,
+        363.96728515625
+      ],
+      "block_id": "page-1182-block-0038",
+      "order": 38,
+      "text": "481, 486, 823, 836, 1146, 1590t,\n1636-1637, 1650, 1661t, 1793\nagenda\n",
+      "text_sha256": "75c8ce4f553b72d3c3aaa9fcca0a538440ed3e63aef40a9184879e66cc832b7e"
+    },
+    {
+      "bbox": [
+        396.0,
+        364.9701232910156,
+        546.4619750976562,
+        426.91729736328125
+      ],
+      "block_id": "page-1182-block-0039",
+      "order": 39,
+      "text": "du comportement, 1618\ndu sommeil, 724, 726f\nagents muscariniques, 1112t\nagirs imposés, 522\nagitation, 52-53, 239, 306, 309, 354,\n",
+      "text_sha256": "2ef1d3a852e414a826df02ef67c087db9835ba957b8d795270a0b672ba9a3c03"
+    },
+    {
+      "bbox": [
+        396.0,
+        427.9201354980469,
+        551.6659545898438,
+        502.46728515625
+      ],
+      "block_id": "page-1182-block-0040",
+      "order": 40,
+      "text": "376, 1099-1101, 1140-1141t\nantipsychotiques et __, 1462, 1465\nbenzodiazépines et __, 1447\nmédicaments et __, 1102t\nagnosies, 169\nagonistes\n",
+      "text_sha256": "606876e7a1c353bdd5ff3d229c8f0671f87c04fdf6cfa4f0cbede697d79cdaf6"
+    },
+    {
+      "bbox": [
+        405.0,
+        503.47015380859375,
+        540.9840087890625,
+        515.0673217773438
+      ],
+      "block_id": "page-1182-block-0041",
+      "order": 41,
+      "text": "α2-adrénergiques (agoniste α1),\n",
+      "text_sha256": "64deb6f70a8f8c35eb391365ed79726a734b7a270396613a1920a9e34c584ee6"
+    },
+    {
+      "bbox": [
+        405.0,
+        516.0201416015625,
+        525.2985229492188,
+        552.8173217773438
+      ],
+      "block_id": "page-1182-block-0042",
+      "order": 42,
+      "text": "1308, 1329, 1451-1453\nβ2-adrénergique, 681\nde l’hormone libératrice des\n",
+      "text_sha256": "ef7e668e30a55a8db245ad7b42c2f424f177b5d3a40a806ef68abb07baf336b2"
+    },
+    {
+      "bbox": [
+        405.0,
+        553.8201293945312,
+        545.1749877929688,
+        603.1672973632812
+      ],
+      "block_id": "page-1182-block-0043",
+      "order": 43,
+      "text": "gonadotropes, 976\nde la dopamine, 1504t\nde substitution, 894\ndes récepteurs α1-adrénergiques\n",
+      "text_sha256": "8d742c8574eb7ed6d79aa0a592eedda606bfb23b437a6e7aefcae08b6d09a730"
+    },
+    {
+      "bbox": [
+        405.0,
+        604.1701049804688,
+        538.6754760742188,
+        628.3673095703125
+      ],
+      "block_id": "page-1182-block-0044",
+      "order": 44,
+      "text": "(α1-bloquants), 1452\ndes récepteurs β (β-bloquants),\n",
+      "text_sha256": "2b3ed6dfcc25134536ec03a556c1dd4c338fa4ec7b960560e8270c7e77ed9fb0"
+    },
+    {
+      "bbox": [
+        405.0,
+        629.3701171875,
+        532.7324829101562,
+        653.5673217773438
+      ],
+      "block_id": "page-1182-block-0045",
+      "order": 45,
+      "text": "1451-1452, 1533\ndes récepteurs adrénergiques,\n",
+      "text_sha256": "6238e6cc6f173aea58c79bfb6424096f95829a79c9f29b6e75ddf71a11c66e28"
+    },
+    {
+      "bbox": [
+        405.0,
+        654.5201416015625,
+        552.0735473632812,
+        691.3173217773438
+      ],
+      "block_id": "page-1182-block-0046",
+      "order": 46,
+      "text": "1451-1453\ndes récepteurs cannabinoïdes, 610\ndes récepteurs de la mélatonine,\n",
+      "text_sha256": "8c144423218da84d16b44af03033b31d8fbfd9c8693d6413122613dd93280d13"
+    },
+    {
+      "bbox": [
+        405.0,
+        692.3201293945312,
+        536.8905029296875,
+        716.5172729492188
+      ],
+      "block_id": "page-1182-block-0047",
+      "order": 47,
+      "text": "1420, 1457\ndes récepteurs GABAergiques,\n",
+      "text_sha256": "8dfcc796d8071235d20ccd5e985a4050ff4a842c9bf47b03a0c48ae71b17e37e"
+    },
+    {
+      "bbox": [
+        423.0,
+        717.5201416015625,
+        539.4107055664062,
+        729.1173095703125
+      ],
+      "block_id": "page-1182-block-0048",
+      "order": 48,
+      "text": "970, 1446, 1453-1454, 1458\n",
+      "text_sha256": "401d5a83222d9f79668978a78c22bde8f7968db3298b1f97f0cc208295ae1097"
+    }
+  ],
+  "coordinates_sha256": "96fc9dc227bda3b76d99c462c8ef5255aece38ccf90caa0ce9079ea3fb375369",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1182",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Index des sujets\nA\nABC (approche), 608t\naboulie (avolition), 352\nabsentéisme, 262\nmental, 165\nabsorption, 512, 703-704t, 731,\n1433-1434, 1439t, 1444-1445,\n1460, 1536, 1540, 1544, 1546,\n1760\nabstraction, 51t, 57, 65-66, 67t, 186-\n187, 209, 601, 861, 1382, 1413,\n1644\nabus\nchronique, 83, 935\nd’enfant, 28, 69t, 71, 200, 237, 304,\n355, 395, 405, 495, 508, 618,\n764, 793, 812, 825-826, 829,\n969, 1119, 1150t, 1151, 1154,\n1159t, 1161t, 1294, 1300\nde conance, 32\nde substances, 829, 875-876\nidées suicidaires et __, 1093\ninsomnie et __, 729\nthérapie familiale et __, 1738\ndissociations et __, 513-515\ndu conjoint, 71\némotionnel, 935\nexpériences précoces d’__, 934\ninsomnie et __, 730\nphysique, 237, 395, 495, 513,\n533-534, 829, 934, 1126, 1136,\n1320, 1367, 1725\npsychologique, 200, 567, 1036,\n1133, 1135, 1159-1160t\nschizophrénie et __, 355\nsexuel, 513, 534, 700, 793, 934-935,\n1126, 1367\nacceptation, 1714-1715, 1764, 1766\naccès à l’information, 33\naccident vasculaire cérébral (AVC),\n64, 115, 185, 375, 475, 557, 579,\n589, 618, 629t, 635, 763, 1087,\n1096, 1396, 1411, 1413, 1474,\n1477, 1492, 1557, 1633\ndémence et __, 589\nacculturation, 1251, 1251f\nacétylcholine, 112, 117, 122, 126,\n128-129, 129f, 147, 188, 580,\n586, 605, 613, 723, 811, 882,\n1147, 1433, 1473, 1513-1514\nachat compulsif, 847-848\nachmophobie, 413\nacide\nγ-aminobutyrique (GABA), 122,\n130-131, 417, 439, 580, 851,\n876t, 1278t, 1446, 1541\ndésoxyribonucléique (ADN),\n94-96, 102, 106f, 196\nribonucléique, 94\nvalproïque, 1540-1543\nacomoclitisme, 814\nACT (assertive community treat-\nment), 369, 918, 981, 1031, 1070,\n1780, 1784t\nactigraphie, 728, 729f\naction déviante, 283-284\nactivation comportementale, 547,\n1039, 1262, 1377, 1568, 1628,\n1634-1635, 1646, 1649, 1661t,\n1797\nactivité(s)\ncérébrale, 1304\nen milieu communautaire,\n1133-1134\npsychomotrice\ndépression et __, 396\npédopsychiatrie et __, 1221\nquotidiennes, 396\nregistre des __, 1650t\nacupuncture, 576\nadaptation, 281-282, 671, 674, 1224,\n1575\nà l’objet, 1333-1335t\naux symptômes, 1315\ndicultés d’__, 1127\nface aux stress, 1382\nscolaire, 1286\nstratégies d’__, 1652\ntroubles de l’ ___, 473-488\nadénohypophyse, 189f\nadhésion\nau traitement, 25, 1027, 1433, 1439-\n1442\nthérapie motivationnelle et __,\n1708\nADN, voir acide désoxyribonu-\ncléique (ADN)\nadolescentophilie, 817\nadoption, 334\nd’un nouveau comportement, 1693\nd’un rôle social, 785\nd’une nouvelle identité, 516t\nde saines habitudes de vie, 661t,\n988, 1388, 1704\nétudes d’__, 96-97, 334\nfamille et __, 232-235\nadrénaline, 122f, 478, 483, 1482f,\n1751\naect, 55-56, 344, 1221-1222, 1595f,\n1686\ndépressif, 321, 386, 660, 662, 676,\n911\neuphorique, 376, 622\ninapproprié, aplati ou émoussé,\n352\naectations neurologiques\ndelirium et __, 579\naérences somesthésiques, 170\naliation, 502, 916, 1290, 1590t\nuniversitaire, 1069, 1078-1080\narmation de soi, 47, 204, 214, 443,\n481, 486, 823, 836, 1146, 1590t,\n1636-1637, 1650, 1661t, 1793\nagenda\ndu comportement, 1618\ndu sommeil, 724, 726f\nagents muscariniques, 1112t\nagirs imposés, 522\nagitation, 52-53, 239, 306, 309, 354,\n376, 1099-1101, 1140-1141t\nantipsychotiques et __, 1462, 1465\nbenzodiazépines et __, 1447\nmédicaments et __, 1102t\nagnosies, 169\nagonistes\nα2-adrénergiques (agoniste α1),\n1308, 1329, 1451-1453\nβ2-adrénergique, 681\nde l’hormone libératrice des\ngonadotropes, 976\nde la dopamine, 1504t\nde substitution, 894\ndes récepteurs α1-adrénergiques\n(α1-bloquants), 1452\ndes récepteurs β (β-bloquants),\n1451-1452, 1533\ndes récepteurs adrénergiques,\n1451-1453\ndes récepteurs cannabinoïdes, 610\ndes récepteurs de la mélatonine,\n1420, 1457\ndes récepteurs GABAergiques,\n970, 1446, 1453-1454, 1458\n",
+  "raw_text_sha256": "9b24688da74a2b9f49618880a20ccea079b236444471e2cb6ef5c29cbd797b90",
+  "source_page_display": 1183,
+  "source_page_index": 1182
+}

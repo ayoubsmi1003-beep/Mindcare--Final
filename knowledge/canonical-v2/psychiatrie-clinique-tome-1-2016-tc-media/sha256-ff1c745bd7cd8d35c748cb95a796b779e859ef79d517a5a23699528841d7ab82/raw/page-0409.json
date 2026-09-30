@@ -1,0 +1,328 @@
+{
+  "block_sequence_sha256": "a84369e7429bbba86ce1041d337ecb5ba10dde8c2fcafdce708ac6b9f2d8fbf9",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        132.9734344482422,
+        240.61328125,
+        177.8953094482422
+      ],
+      "block_id": "page-0409-block-0001",
+      "order": 1,
+      "text": "Dépressions\n",
+      "text_sha256": "cdefaacbb3b86b5f3447bc5d51b523c84c9ca1a40df4480fa78d0d8f2fed71ae"
+    },
+    {
+      "bbox": [
+        48.0,
+        230.90011596679688,
+        291.0090026855469,
+        243.40011596679688
+      ],
+      "block_id": "page-0409-block-0002",
+      "order": 2,
+      "text": "Jean-François Trudel, M.D., FRCPC, M. SC. (sciences biomédicales)\n",
+      "text_sha256": "5544df09e5bccbbf6b9af7ad642556c63c4ec2285cad1833c3ad99ae3aa6f339"
+    },
+    {
+      "bbox": [
+        48.0,
+        247.27725219726562,
+        277.46173095703125,
+        279.4938049316406
+      ],
+      "block_id": "page-0409-block-0003",
+      "order": 3,
+      "text": "Psychiatre, Centre de santé et de services sociaux – Institut\nuniversitaire de gériatrie de Sherbrooke et Centre hospitalier\nuniversitaire de Sherbrooke\n",
+      "text_sha256": "7246c1d6128c5639b5558023f413d18dd3165876b58bbbe8d597a0c65488a414"
+    },
+    {
+      "bbox": [
+        48.0,
+        283.2772521972656,
+        290.37274169921875,
+        315.4938049316406
+      ],
+      "block_id": "page-0409-block-0004",
+      "order": 4,
+      "text": "Professeur titulaire, Service de gérontopsychiatrie, Département\nde psychiatrie, Faculté de médecine et des sciences de la santé,\nUniversité de Sherbrooke\n",
+      "text_sha256": "009ae6bf6a370bc6e3a9a370f3d1e515e34a85c87e50c8e375ea34af2c69e3fd"
+    },
+    {
+      "bbox": [
+        48.0,
+        325.4001159667969,
+        190.57159423828125,
+        337.9001159667969
+      ],
+      "block_id": "page-0409-block-0005",
+      "order": 5,
+      "text": "Jean-Marc Chianetta, M.D., FRCPC\n",
+      "text_sha256": "41c3389bde04e98576087d474af8b75219bcb2a41a1476bf2f626691772a967f"
+    },
+    {
+      "bbox": [
+        48.0,
+        341.7772521972656,
+        280.1413879394531,
+        362.9938049316406
+      ],
+      "block_id": "page-0409-block-0006",
+      "order": 6,
+      "text": "Psychiatre, Centre hospitalier Georges L. Dumont (Moncton,\nNouveau-Brunswick)\n",
+      "text_sha256": "75763d703e0b8c1bfd3770883ab891045be7ffca6f3257f9944b5256ee86528e"
+    },
+    {
+      "bbox": [
+        48.0,
+        366.7772521972656,
+        271.8392028808594,
+        398.9938049316406
+      ],
+      "block_id": "page-0409-block-0007",
+      "order": 7,
+      "text": "Professeur adjoint de clinique, Département de psychiatrie,\nFaculté de médecine et des sciences de la santé, Université\nde Sherbrooke\n",
+      "text_sha256": "ba98c55b9aea3d9a341d27a510457d25c0e3a023e66f113c0b1da7991204cc20"
+    },
+    {
+      "bbox": [
+        306.0,
+        230.90011596679688,
+        438.97161865234375,
+        243.40011596679688
+      ],
+      "block_id": "page-0409-block-0008",
+      "order": 8,
+      "text": "Stéphanie Mailloux, M.D., FRCPC\n",
+      "text_sha256": "1e03960fce02253a1f46870c9c00404a05a28ac1362e949b98590b6369858ae1"
+    },
+    {
+      "bbox": [
+        306.0,
+        247.27725219726562,
+        523.1319580078125,
+        268.4938049316406
+      ],
+      "block_id": "page-0409-block-0009",
+      "order": 9,
+      "text": "Psychiatre, Service de pédopsychiatrie, Centre hospitalier\nuniversitaire de Sherbrooke\n",
+      "text_sha256": "44bb05581e430d1d5478fd3d3565991b09d0bde18fdb17c2aba32af60df23692"
+    },
+    {
+      "bbox": [
+        306.0,
+        272.2772521972656,
+        542.7710571289062,
+        293.4938049316406
+      ],
+      "block_id": "page-0409-block-0010",
+      "order": 10,
+      "text": "Professeure adjointe Département de psychiatrie, Faculté de\nmédecine et des sciences de la santé, Université de Sherbrooke\n",
+      "text_sha256": "ceef9f33059353e87f9f7442e7f11562877cba64cfa8f225eb79b1b46669c9a9"
+    },
+    {
+      "bbox": [
+        48.0,
+        460.7744140625,
+        289.0099792480469,
+        470.6181640625
+      ],
+      "block_id": "page-0409-block-0011",
+      "order": 11,
+      "text": "19.1 Historique et évolution du concept ............................ 393\n",
+      "text_sha256": "e707416f8470f6a491b29653bc1efef99044b0d1a48528247e281258e5a7085c"
+    },
+    {
+      "bbox": [
+        48.0,
+        475.7744140625,
+        289.0099792480469,
+        485.6181640625
+      ],
+      "block_id": "page-0409-block-0012",
+      "order": 12,
+      "text": "19.2 Épidémiologie ................................................................ 393\n",
+      "text_sha256": "4fa7404e5569082122325bf4246b7e9cda96d09afc1a6a401a0043a319a7f4c2"
+    },
+    {
+      "bbox": [
+        48.0,
+        490.7744140625,
+        289.0099792480469,
+        539.697265625
+      ],
+      "block_id": "page-0409-block-0013",
+      "order": 13,
+      "text": "19.3 Étiologie.......................................................................... 393\n19.3.1 Étiologies biologiques........................................... 394\n19.3.2 Étiologies psychologiques.................................... 395\n19.3.3 Étiologies sociales.................................................. 395\n",
+      "text_sha256": "20d8476d73fa25098230f9f9e5c9d5f563c1ab6e09e8fd3fc189fa74e5f4ec0f"
+    },
+    {
+      "bbox": [
+        48.0,
+        550.7744140625,
+        289.0099792480469,
+        586.697265625
+      ],
+      "block_id": "page-0409-block-0014",
+      "order": 14,
+      "text": "19.4 Description clinique.......................................................... 396\nTableau 19.1 Trouble dépressif caractérisé (majeur)..... 397\nTableau 19.3 Trouble dépressif persistant\n",
+      "text_sha256": "ae69dec0a837fd29b1c4f4b978a8236693a049629468397c143201d4a4471e99"
+    },
+    {
+      "bbox": [
+        72.0,
+        586.8359375,
+        289.0040283203125,
+        609.697265625
+      ],
+      "block_id": "page-0409-block-0015",
+      "order": 15,
+      "text": "(dysthymie) .................................................... 399\nTableau 19.4 Manifestations de la dépression\n",
+      "text_sha256": "3929ed4c9f543eac5e99cdd3f9d786b3e1e452817a4308fbc4b983d2f1ef455a"
+    },
+    {
+      "bbox": [
+        72.0,
+        609.8359375,
+        289.0040283203125,
+        632.697265625
+      ],
+      "block_id": "page-0409-block-0016",
+      "order": 16,
+      "text": "chez l’enfant et l’adolescent ........................ 400\nEncadré 19.1 Présentations possibles de la dépression\n",
+      "text_sha256": "769d29b6b325ebfd40cbe7cc44553ab27e3da2fb3ca1ffb5031a2e2b6afd5873"
+    },
+    {
+      "bbox": [
+        72.0,
+        632.8359375,
+        289.0040283203125,
+        655.697265625
+      ],
+      "block_id": "page-0409-block-0017",
+      "order": 17,
+      "text": "chez la personne âgée.................................. 400\nEncadré 19.2 Trouble disruptif avec dysrégulation\n",
+      "text_sha256": "d6403293c7c0d93f9d555c5b22881c2fd2e2ad593f2eb56161fd0b394f983950"
+    },
+    {
+      "bbox": [
+        122.5,
+        655.8359375,
+        289.0040283203125,
+        665.697265625
+      ],
+      "block_id": "page-0409-block-0018",
+      "order": 18,
+      "text": "émotionnelle................................................. 401\n",
+      "text_sha256": "6e38d7fc1232c5247b798761b17bc7338fa4fb391ebf800b9637cfc1995cff95"
+    },
+    {
+      "bbox": [
+        306.0,
+        460.7744140625,
+        547.0100708007812,
+        470.6181640625
+      ],
+      "block_id": "page-0409-block-0019",
+      "order": 19,
+      "text": "19.5 Variété diagnostique ..................................................... 400\n",
+      "text_sha256": "1c83511a7f1739e376ef844424240bb2d196fe7162cf01241a78d33430dc6376"
+    },
+    {
+      "bbox": [
+        306.0,
+        475.7744140625,
+        547.0100708007812,
+        485.697265625
+      ],
+      "block_id": "page-0409-block-0020",
+      "order": 20,
+      "text": "19.6 Évaluation............................................................................. 402\n",
+      "text_sha256": "e8f7bba77f48256822b3f540bbd4d367cacdf82f9f5c7a935ffa4d3d360870bf"
+    },
+    {
+      "bbox": [
+        306.0,
+        490.7744140625,
+        547.0100708007812,
+        500.697265625
+      ],
+      "block_id": "page-0409-block-0021",
+      "order": 21,
+      "text": "19.7 Outils diagnostiques ......................................................... 402\n",
+      "text_sha256": "1d7b03ecbdddf38c048d6d793ec43a2b9977a4c361706b2595ab4def34fcc6ce"
+    },
+    {
+      "bbox": [
+        306.0,
+        505.7744140625,
+        547.0100708007812,
+        515.6181640625
+      ],
+      "block_id": "page-0409-block-0022",
+      "order": 22,
+      "text": "19.8 Diagnostic diérentiel et comorbidité ....................... 404\n",
+      "text_sha256": "e9bd7d68d5079243af2ce9eb50676f5227aa5000bca771da87d3d3102cccc79e"
+    },
+    {
+      "bbox": [
+        306.0,
+        520.7744140625,
+        547.0100708007812,
+        608.697265625
+      ],
+      "block_id": "page-0409-block-0023",
+      "order": 23,
+      "text": "19.9 Traitement...................................................................... 405\n19.9.1 Traitements biologiques ...................................... 406\n19.9.2 Psychothérapies ..................................................... 408\n19.9.3 Traitements naturels............................................. 408\n19.9.4 Interventions sociales........................................... 408\n19.9.5 Traitement chez l’enfant et l’adolescent............ 409\n19.9.6 Traitement chez la personne âgée...................... 409\n",
+      "text_sha256": "eedc2b69764aa9156589d2ac7c155653a5becc29b434e730d7f048eee502ee5f"
+    },
+    {
+      "bbox": [
+        306.0,
+        613.7744140625,
+        547.0100708007812,
+        623.697265625
+      ],
+      "block_id": "page-0409-block-0024",
+      "order": 24,
+      "text": "19.10 Évolution et pronostic....................................................... 410\n",
+      "text_sha256": "c12127b0378df14574197c6ac352b838e4f7cac0a80745107c217ad851fe25d3"
+    },
+    {
+      "bbox": [
+        306.0,
+        628.7744140625,
+        547.0100708007812,
+        638.6181640625
+      ],
+      "block_id": "page-0409-block-0025",
+      "order": 25,
+      "text": "Lectures complémentaires...................................................... 410\n",
+      "text_sha256": "fa72826f3730c62bfcb1eecde557b9612c775c1a2b6a2ac68d2c445575a75476"
+    },
+    {
+      "bbox": [
+        257.1000061035156,
+        4.981056213378906,
+        555.0,
+        124.98104858398438
+      ],
+      "block_id": "page-0409-block-0026",
+      "order": 26,
+      "text": "CHAPITRE19\n",
+      "text_sha256": "57cb793991956383e354e56d22709cf038d0bc50bfe4bd1917a880b02fa69df1"
+    }
+  ],
+  "coordinates_sha256": "361450c4e4c362ad6d26d2a0e9cee7bdca0573a7d39d980e2ad24200169ad84c",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0409",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Dépressions\nJean-François Trudel, M.D., FRCPC, M. SC. (sciences biomédicales)\nPsychiatre, Centre de santé et de services sociaux – Institut\nuniversitaire de gériatrie de Sherbrooke et Centre hospitalier\nuniversitaire de Sherbrooke\nProfesseur titulaire, Service de gérontopsychiatrie, Département\nde psychiatrie, Faculté de médecine et des sciences de la santé,\nUniversité de Sherbrooke\nJean-Marc Chianetta, M.D., FRCPC\nPsychiatre, Centre hospitalier Georges L. Dumont (Moncton,\nNouveau-Brunswick)\nProfesseur adjoint de clinique, Département de psychiatrie,\nFaculté de médecine et des sciences de la santé, Université\nde Sherbrooke\nStéphanie Mailloux, M.D., FRCPC\nPsychiatre, Service de pédopsychiatrie, Centre hospitalier\nuniversitaire de Sherbrooke\nProfesseure adjointe Département de psychiatrie, Faculté de\nmédecine et des sciences de la santé, Université de Sherbrooke\n19.1 Historique et évolution du concept ............................ 393\n19.2 Épidémiologie ................................................................ 393\n19.3 Étiologie.......................................................................... 393\n19.3.1 Étiologies biologiques........................................... 394\n19.3.2 Étiologies psychologiques.................................... 395\n19.3.3 Étiologies sociales.................................................. 395\n19.4 Description clinique.......................................................... 396\nTableau 19.1 Trouble dépressif caractérisé (majeur)..... 397\nTableau 19.3 Trouble dépressif persistant\n(dysthymie) .................................................... 399\nTableau 19.4 Manifestations de la dépression\nchez l’enfant et l’adolescent ........................ 400\nEncadré 19.1 Présentations possibles de la dépression\nchez la personne âgée.................................. 400\nEncadré 19.2 Trouble disruptif avec dysrégulation\némotionnelle................................................. 401\n19.5 Variété diagnostique ..................................................... 400\n19.6 Évaluation............................................................................. 402\n19.7 Outils diagnostiques ......................................................... 402\n19.8 Diagnostic diérentiel et comorbidité ....................... 404\n19.9 Traitement...................................................................... 405\n19.9.1 Traitements biologiques ...................................... 406\n19.9.2 Psychothérapies ..................................................... 408\n19.9.3 Traitements naturels............................................. 408\n19.9.4 Interventions sociales........................................... 408\n19.9.5 Traitement chez l’enfant et l’adolescent............ 409\n19.9.6 Traitement chez la personne âgée...................... 409\n19.10 Évolution et pronostic....................................................... 410\nLectures complémentaires...................................................... 410\nCHAPITRE19\n",
+  "raw_text_sha256": "84736d1eeabcb41718f6e5056a37d3ad270a0c20fdce331afe28e7b2ac9fae2e",
+  "source_page_display": 410,
+  "source_page_index": 409
+}

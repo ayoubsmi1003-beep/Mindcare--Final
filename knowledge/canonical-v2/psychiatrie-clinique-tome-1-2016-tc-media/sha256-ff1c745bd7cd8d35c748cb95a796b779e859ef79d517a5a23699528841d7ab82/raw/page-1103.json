@@ -1,0 +1,784 @@
+{
+  "block_sequence_sha256": "4f7c5dd66b988b9abc007dbd2522f495a75a42ebee3049f9d756b3029805f381",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        126.91150665283203,
+        758.8693237304688
+      ],
+      "block_id": "page-1103-block-0001",
+      "order": 1,
+      "text": "R6\nRéférences\n",
+      "text_sha256": "0e607c4fdc20b715103cbe263e5e06645d275b81d9fb6f4e4661d8fe998bf8b0"
+    },
+    {
+      "bbox": [
+        390.0,
+        40.68496322631836,
+        534.3499755859375,
+        57.923439025878906
+      ],
+      "block_id": "page-1103-block-0002",
+      "order": 2,
+      "text": "Goulet, D. (2011). Histoire de la neurologie au Québec,\nMontréal, Québec, Carte blanche.\n",
+      "text_sha256": "0e7c0892eef8009c5e366464f03fa2978a4edfc83dd88b5041ed607e2f588189"
+    },
+    {
+      "bbox": [
+        390.0,
+        61.8349609375,
+        537.0299682617188,
+        88.1234359741211
+      ],
+      "block_id": "page-1103-block-0003",
+      "order": 3,
+      "text": "Green, C. S. & Bavelier, D. (2003). « Action video game\nmodies visual selective attention », Nature, 423(6939),\np. 534-537.\n",
+      "text_sha256": "08583297188094367487073f43bcbd7053739ad3ca3f82da0dde03f0e6779ff5"
+    },
+    {
+      "bbox": [
+        390.0,
+        92.03496551513672,
+        545.7449951171875,
+        118.32344055175781
+      ],
+      "block_id": "page-1103-block-0004",
+      "order": 4,
+      "text": "Green, M. F. (2006). « Cognitive impairment and functional\noutcome in schizophrenia and bipolar disorder », Journal of\nClinical Psychiatry, 67(suppl. 9), p. 3-8, 36-42.\n",
+      "text_sha256": "5619f56a4a57f6834bcb107e8a26617165b0b837734bf727cd1527ecdfa4ac72"
+    },
+    {
+      "bbox": [
+        390.0,
+        122.23497009277344,
+        547.902587890625,
+        148.5234375
+      ],
+      "block_id": "page-1103-block-0005",
+      "order": 5,
+      "text": "Green, M. F. & al. (2000). « Neurocognitive decits and\nfunctional outcome in schizophrenia : Are we measuring the\n«right stuff» ? », Schizophrenia Bulletin, 26(1), p. 119-136.\n",
+      "text_sha256": "aabd17d01f2f24f4515dc85e056cf7e719e88b4648dcef88e93e5a60fb1a1a1e"
+    },
+    {
+      "bbox": [
+        390.0,
+        152.43496704101562,
+        543.3275756835938,
+        169.67344665527344
+      ],
+      "block_id": "page-1103-block-0006",
+      "order": 6,
+      "text": "Grill-Spector, K., & Malach, R. (2004). « The human visual\ncortex », Annual Review of Neuroscience, 27, p. 649-677.\n",
+      "text_sha256": "99d543a9e0f398e5c8a5fbad30a3779fba9d8be6067330759081c38a3c12b457"
+    },
+    {
+      "bbox": [
+        390.0,
+        173.5349578857422,
+        535.7799682617188,
+        208.92344665527344
+      ],
+      "block_id": "page-1103-block-0007",
+      "order": 7,
+      "text": "Groen, W. B. & al. (2008). « The phenotype and neural\ncorrelates of language in autism : An integrative\nreview », Neuroscience & Biobehavioral Reviews, 32(8),\np. 1416-1425.\n",
+      "text_sha256": "3ae75a2f18ee223870dfa99b2bbfec7975114b90805c07203426cc7a0a7bb1bb"
+    },
+    {
+      "bbox": [
+        390.0,
+        212.7849578857422,
+        546.947509765625,
+        239.12344360351562
+      ],
+      "block_id": "page-1103-block-0008",
+      "order": 8,
+      "text": "Gruter, T. & al. (2008). « Neural and genetic foundations of\nface recognition and prosopagnosia », Journal of Neuropsy-\nchology, 2(1), p. 79-97.\n",
+      "text_sha256": "6dccbf57777a036802f984716d5f5eb8790a91680b059ea458009740ecbb7449"
+    },
+    {
+      "bbox": [
+        390.0,
+        242.98497009277344,
+        543.6174926757812,
+        278.3734436035156
+      ],
+      "block_id": "page-1103-block-0009",
+      "order": 9,
+      "text": "Hajek, T. & al. (2013). « Functional neuroanatomy of\nresponse inhibition in bipolar disorders – combined voxel\nbased and cognitive performance meta-analysis », Journal\nof Psychiatric Research, 47(12), p. 1955-1966.\n",
+      "text_sha256": "2c6ea7c670873b6054308ccb4bb1602501d9dcf7fdab6e08fd39d90aa0478df3"
+    },
+    {
+      "bbox": [
+        390.0,
+        282.28497314453125,
+        546.2606811523438,
+        308.5734558105469
+      ],
+      "block_id": "page-1103-block-0010",
+      "order": 10,
+      "text": "Handy, T. C. & al. (2001). « Perceptual load and visuocortical\nprocessing : Event-related potentials reveal sensory-level\nselection », Psychological Sciences, 12(3), p. 213-218.\n",
+      "text_sha256": "7785d9cc8823434b794c23572b5c9a31dfb9eb93337665901714f0b3f83bdc63"
+    },
+    {
+      "bbox": [
+        390.0,
+        312.4849548339844,
+        544.4974975585938,
+        365.97344970703125
+      ],
+      "block_id": "page-1103-block-0011",
+      "order": 11,
+      "text": "Hart, H. & al. (2013). « Meta-analysis of functional\nmagnetic resonance imaging studies of inhibition and\nattention in attention-decit/hyperactivity disorder :\nExploring task-specic, stimulant medication, and age\neffects », Thje Journal of the American Medical Associa-\ntion Psychiatry, 70(2), p. 185-198.\n",
+      "text_sha256": "dbefe9fe151ebd5da9e4d88a1fc43fd6384ed415b3a2e41ef6173b0f4401fd31"
+    },
+    {
+      "bbox": [
+        390.0,
+        369.8349609375,
+        545.4025268554688,
+        405.22344970703125
+      ],
+      "block_id": "page-1103-block-0012",
+      "order": 12,
+      "text": "Harvey, P. D. & al. (2005). « Treatment of cognitive impair-\nment in early psychosis : A comparison of risperidone and\nhaloperidol in a large long-term trial », American Journal of\nPsychiatry, 162(10), p. 1888-1895.\n",
+      "text_sha256": "39b33b7e3cb8af1f76bd1e78817a2c0d80e232e87c872f4bd54efc9236f0a05a"
+    },
+    {
+      "bbox": [
+        390.0,
+        409.1349792480469,
+        549.007568359375,
+        426.3734436035156
+      ],
+      "block_id": "page-1103-block-0013",
+      "order": 13,
+      "text": "Herbert, J. & al. (2006). « Do corticosteroids damage the\nbrain ? », Journal of Neuroendocrinology, 18(6), p. 393-411.\n",
+      "text_sha256": "31309520737e28c94202991080c8d29322e683b4c07972347021a6a7eef16478"
+    },
+    {
+      "bbox": [
+        390.0,
+        430.2349548339844,
+        544.4793701171875,
+        456.5734558105469
+      ],
+      "block_id": "page-1103-block-0014",
+      "order": 14,
+      "text": "Hiraishi, H. & al. (2007). « A preliminary fMRI study of moral\njudgment task in high functioning autistic children »,No To\nHattatsu, 39(5), p. 360-365.\n",
+      "text_sha256": "b601b5bf6c983ea915835d73d2aabbb9794572f2b9e5c8c0822e28d702b26451"
+    },
+    {
+      "bbox": [
+        390.0,
+        460.4349670410156,
+        548.007568359375,
+        477.72344970703125
+      ],
+      "block_id": "page-1103-block-0015",
+      "order": 15,
+      "text": "Horan, W. P. & al. (2008). « Affective traits in schizophrenia\nand schizotypy », Schizophrenia Bulletin, 34(5), p. 856-874.\n",
+      "text_sha256": "91984f30c2f43829f4f736b183ed70a59543a93bc654aa8a2ac29a2474e2483b"
+    },
+    {
+      "bbox": [
+        390.0,
+        481.5849609375,
+        549.0126953125,
+        516.9734497070312
+      ],
+      "block_id": "page-1103-block-0016",
+      "order": 16,
+      "text": "Houde, O. & al. (2010). « Mapping numerical processing,\nreading, and executive functions in the developing brain : An\nfMRI meta-analysis of 52 studies including 842 children »,\nDevelopmental Science, 13(6), p. 876-885.\n",
+      "text_sha256": "e1a087a786e45b3cab00f263e86138003804e06ac6b2cf7ed74bd9315ddaad2a"
+    },
+    {
+      "bbox": [
+        390.0,
+        520.8349609375,
+        545.6820068359375,
+        547.1734619140625
+      ],
+      "block_id": "page-1103-block-0017",
+      "order": 17,
+      "text": "Huang, S. & al. (2012). « Brain networks of novelty-driven\ninvoluntary and cued voluntary auditory attention shifting »,\nPLoS One, 7(8), p. e44062.\n",
+      "text_sha256": "71e689b2134506899c6f192d5c643b1dd95a8d679cc6895ce5071cf7ee9832bf"
+    },
+    {
+      "bbox": [
+        390.0,
+        551.0349731445312,
+        544.8576049804688,
+        577.3734741210938
+      ],
+      "block_id": "page-1103-block-0018",
+      "order": 18,
+      "text": "Ikkai, A. & Curtis, C. E. (2011). « Common neural mecha-\nnisms supporting spatial working memory, attention and\nmotor intention », Neuropsychologia, 49(6), p. 1428-1434.\n",
+      "text_sha256": "fbad6e92ea525feb5031ca0a62eac90781715cb0a7f11989a4d06965839ac9bc"
+    },
+    {
+      "bbox": [
+        390.0,
+        581.2349853515625,
+        542.5631713867188,
+        616.6234741210938
+      ],
+      "block_id": "page-1103-block-0019",
+      "order": 19,
+      "text": "Jardri, R. & al. (2011). « Cortical activations during auditory\nverbal hallucinations in schizophrenia : A coordinate-based\nmeta- analysis », American Journal of Psychiatry, 168(1),\np. 73-81.\n",
+      "text_sha256": "714d6f18b270be190158d723fa51d9ad063223a00fd02c24331c27daeadacffe"
+    },
+    {
+      "bbox": [
+        390.0,
+        620.4849853515625,
+        547.6719360351562,
+        655.8734741210938
+      ],
+      "block_id": "page-1103-block-0020",
+      "order": 20,
+      "text": "Jemel, B. & al. (2009). « From upright to upside-down\npresentation : A spatio-temporal ERP study of the parametric\neffect of rotation on face and house processing », BMC\nNeuroscience, 10, p. 100.\n",
+      "text_sha256": "8fa8f3230870164cd097312fb0ef9aef351e7b8ded5f115c5b1adc3794841249"
+    },
+    {
+      "bbox": [
+        390.0,
+        659.7349853515625,
+        548.4026489257812,
+        695.1234741210938
+      ],
+      "block_id": "page-1103-block-0021",
+      "order": 21,
+      "text": "Just, M. A. & al. (2007). « Functional and anatomical cortical\nunderconnectivity in autism : Evidence from an FMRI study\nof an executive function task and corpus callosum morpho-\nmetry », Cerebral Cortex, 17(4), p. 951-961.\n",
+      "text_sha256": "1790ac082730f0e6fbf574ba8d0d334c4a787166d478bf5c663e604c62cfead7"
+    },
+    {
+      "bbox": [
+        390.0,
+        699.0349731445312,
+        546.557861328125,
+        716.2734375
+      ],
+      "block_id": "page-1103-block-0022",
+      "order": 22,
+      "text": "Kandel, E. (2013). « The new science of mind and the future\nof knowledge », Neuron, 80(3), p. 546-560.\n",
+      "text_sha256": "66991f7b26b2150c8b4bcbc700e215fdbc614791757b1f03ba4606e14b827ee9"
+    },
+    {
+      "bbox": [
+        219.0,
+        40.68496322631836,
+        362.3999938964844,
+        67.3734359741211
+      ],
+      "block_id": "page-1103-block-0023",
+      "order": 23,
+      "text": "Deutsch, J. A. & Deutsch, D. (1963). « Attention : Some\ntheoretical considerations », Psychological Review, 87,\np. 272-300.\n",
+      "text_sha256": "a4fd3907fd3bd40038a020cdf8c1bcda3705b75fbc22ecb15a4dac14bac0dabf"
+    },
+    {
+      "bbox": [
+        219.0,
+        71.4349594116211,
+        363.0701599121094,
+        98.1234359741211
+      ],
+      "block_id": "page-1103-block-0024",
+      "order": 24,
+      "text": "Devinsky, O. (2009). « Delusional misidentications and\nduplications : Right brain lesions, left brain delusions »,\nNeurology, 72(1), p. 80-87.\n",
+      "text_sha256": "093401f1aaeaf0e8a0ade5c5c0c633a51beacf1d7fd2ff472de6c4a640f9d183"
+    },
+    {
+      "bbox": [
+        219.0,
+        102.1849594116211,
+        378.0539245605469,
+        138.12344360351562
+      ],
+      "block_id": "page-1103-block-0025",
+      "order": 25,
+      "text": "Dickerson, S. S. & Kemeny, M. E. (2004). « Acute stressors and\ncortisol responses : A theoretical integration and synthesis\nof laboratory research », Psychology Bulletin, 130(3),\np. 355-391.\n",
+      "text_sha256": "3380cd89182a80d371a5be9ed1b2c1461799e34e64c2f1d7d3352678c909ae08"
+    },
+    {
+      "bbox": [
+        219.0,
+        142.18496704101562,
+        373.1499938964844,
+        178.12344360351562
+      ],
+      "block_id": "page-1103-block-0026",
+      "order": 26,
+      "text": "Dollfus, S. & al. (2008). « Functional decit in the medial\nprefrontal cortex during a language comprehension task\nin patients with schizophrenia », Schizophrenia Research,\n99(1-3), p. 304-311.\n",
+      "text_sha256": "4326367362423e8df3fe3d6fda28970aaf0d5b969ea7afafa4339727d2b05a70"
+    },
+    {
+      "bbox": [
+        219.0,
+        182.18496704101562,
+        376.6000061035156,
+        208.87344360351562
+      ],
+      "block_id": "page-1103-block-0027",
+      "order": 27,
+      "text": "Drew, T. W. & al. (2006). « Event-related potential measures\nof visual working memory », Clinical EEG and Neuroscience,\n37(4), p. 286-291.\n",
+      "text_sha256": "1f4b6b366f2cfacb9d64d15c76d9a90e4339642e0e82c8a38ea367f5229a5d75"
+    },
+    {
+      "bbox": [
+        219.0,
+        212.93496704101562,
+        369.6825256347656,
+        239.5734405517578
+      ],
+      "block_id": "page-1103-block-0028",
+      "order": 28,
+      "text": "Eddy, C. M. & al. (2009). « Neuropsychological aspects of\nTourette syndrome : A review », Journal of Psychosomatic\nResearch, 67(6), p. 503-513.\n",
+      "text_sha256": "9dcfc6439538b338ad9a50810a19c5c0defdbebff31c94902dd3ac492a0e1af0"
+    },
+    {
+      "bbox": [
+        219.0,
+        243.6349639892578,
+        377.15142822265625,
+        261.0734558105469
+      ],
+      "block_id": "page-1103-block-0029",
+      "order": 29,
+      "text": "Forbes, N. F. & al. (2009). « Working memory in schizophrenia :\nA meta-analysis »,Psychological Medicine, 39(6), p. 889-905.\n",
+      "text_sha256": "60544352c6e52bdac9fe9ab2d39ecc07aa493581104926fb41354e4c8f3407bd"
+    },
+    {
+      "bbox": [
+        219.0,
+        265.1349792480469,
+        369.55255126953125,
+        282.5734558105469
+      ],
+      "block_id": "page-1103-block-0030",
+      "order": 30,
+      "text": "Fossati, P. & al. (2002). « Executive functioning in unipolar\ndepression : A review », Encephale, 28(2), p. 97-107.\n",
+      "text_sha256": "7becf048b09e1f164f3cc1713243cf84ed858a9ee5f627cbf7cb007b13c7d336"
+    },
+    {
+      "bbox": [
+        219.0,
+        286.6349792480469,
+        361.80755615234375,
+        313.3234558105469
+      ],
+      "block_id": "page-1103-block-0031",
+      "order": 31,
+      "text": "Fritsch, G., & Hitzig, E. (2009). « Electric excitability of\nthe cerebrum (Uber die elektrische Erregbarkeit des\nGrosshirns) », Epilepsy & Behavior, 15(2), p. 123-130.\n",
+      "text_sha256": "b26b590d7d4a9f9902a72a1b54a319f9c1534c65045cb85a5014f9e101e127ac"
+    },
+    {
+      "bbox": [
+        219.0,
+        317.3849792480469,
+        374.8974914550781,
+        353.3234558105469
+      ],
+      "block_id": "page-1103-block-0032",
+      "order": 32,
+      "text": "Frodl, T. & al. (2003). « Larger amygdala volumes in rst\ndepressive episode as compared to recurrent major depres-\nsion and healthy control subjects »,Biological Psychiatry,\n53(4), p. 338-344.\n",
+      "text_sha256": "813c091a4dcab00944f53c69f77daf917c33c1c8db2199951ef8072aa3747afd"
+    },
+    {
+      "bbox": [
+        219.0,
+        357.3849792480469,
+        372.3500061035156,
+        384.0734558105469
+      ],
+      "block_id": "page-1103-block-0033",
+      "order": 33,
+      "text": "Fulton, J. (1928). « Observations upon the vascularity of\nthe human occipital lobe during visual activity »,Brain, 51,\np. 310-320.\n",
+      "text_sha256": "70e1c9fdeb4fa59ecf6d44df16e18337048d5d56b3e183bbdc0ac6198c19561c"
+    },
+    {
+      "bbox": [
+        219.0,
+        388.1349792480469,
+        377.6075439453125,
+        414.8234558105469
+      ],
+      "block_id": "page-1103-block-0034",
+      "order": 34,
+      "text": "Garcia-Lazaro, H. G. & al. (2012). « Neuroanatomy of epi-\nsodic and semantic memory in humans : A brief review of\nneuroimaging studies », Neurology India, 60(6), p. 613-617.\n",
+      "text_sha256": "57f8f0ce01e7dda40d4ca6729c24e40f1225965102a44a3c336b75f33c85b24c"
+    },
+    {
+      "bbox": [
+        219.0,
+        418.8849792480469,
+        366.40496826171875,
+        464.0734558105469
+      ],
+      "block_id": "page-1103-block-0035",
+      "order": 35,
+      "text": "Geburek, A. J. & al. (2013). « Electrophysiological indices\nof error monitoring in juvenile and adult attention decit\nhyperactivity disorder (ADHD)–a meta-analytic apprai-\nsal », International Journal of Psychophysiology, 87(3),\np. 349-362.\n",
+      "text_sha256": "5b94b8dbd20fa3bf902f798cbff3e8b286b94c645ddf5f4b89c3fdeea7a43dd8"
+    },
+    {
+      "bbox": [
+        219.0,
+        468.1349792480469,
+        375.9251403808594,
+        494.8234558105469
+      ],
+      "block_id": "page-1103-block-0036",
+      "order": 36,
+      "text": "Geurts, H. M. & al. (2014). « Prepotent response inhibition\nand interference control in autism spectrum disorders : Two\nmeta-analyses », Autism Research, 7(4), p. 407-420.\n",
+      "text_sha256": "ab86f156467d7981a206cc7ddd4e36f68ae621f1fab2392f6b5f77a86870a191"
+    },
+    {
+      "bbox": [
+        219.0,
+        498.8849792480469,
+        367.3675231933594,
+        534.8234252929688
+      ],
+      "block_id": "page-1103-block-0037",
+      "order": 37,
+      "text": "Geuze, E. & al. (2009). « Neuropsychological performance\nis related to current social and occupational functioning\nin veterans with posttraumatic stress disorder », Depress\nAnxiety, 26(1), p. 7-15.\n",
+      "text_sha256": "daef94a660f4f7722b80ba5a85405bd7f7ed4ae6d7e9f0dfcb7cf3e848ff50c7"
+    },
+    {
+      "bbox": [
+        219.0,
+        538.8849487304688,
+        367.7799987792969,
+        565.5234375
+      ],
+      "block_id": "page-1103-block-0038",
+      "order": 38,
+      "text": "Giesbrecht, B. & al. (2014). « A new perspective on the\nperceptual selectivity of attention under load »,Annals of\nthe New York Academy of Sciences, 1316(1), p. 71-86.\n",
+      "text_sha256": "474b1069cda270f877c1486bb87e04b5b4c61efc7bd70fc6c697b81500ea2543"
+    },
+    {
+      "bbox": [
+        219.0,
+        569.5849609375,
+        367.8475036621094,
+        605.5234375
+      ],
+      "block_id": "page-1103-block-0039",
+      "order": 39,
+      "text": "Goldstein, G. & al. (2002). « High-functioning autism and\nschizophrenia : A comparison of an early and late onset\nneurodevelopmental disorder », Archives of Clinical Neu-\nropsychology, 17(5), p. 461-475.\n",
+      "text_sha256": "664b92f1666956d45fb42d0e6ca6ce038c80d127a4866cf679a30460ede1aadd"
+    },
+    {
+      "bbox": [
+        219.0,
+        609.5849609375,
+        378.29998779296875,
+        636.2734375
+      ],
+      "block_id": "page-1103-block-0040",
+      "order": 40,
+      "text": "Gomot, M. & al. (2006). « Change detection in children with\nautism : An auditory event-related fMRI study », Neuroimage,\n29(2), p. 475-484.\n",
+      "text_sha256": "2788b5360bf7ea6b83c561c26742200f7b4a897fc436e3e1780920f7d2ea42cb"
+    },
+    {
+      "bbox": [
+        219.0,
+        640.3349609375,
+        371.53265380859375,
+        676.2734375
+      ],
+      "block_id": "page-1103-block-0041",
+      "order": 41,
+      "text": "Gomot, M. & al. (2011). « Candidate electrophysiological\nendophenotypes of hyper-reactivity to change in autism »,\nJournal of Autism and Developmental Disorders, 41(6),\np. 705-714.\n",
+      "text_sha256": "a3df8dc36d0bc98e318b07133ef6d437163783035008596f42a78685c62a8215"
+    },
+    {
+      "bbox": [
+        219.0,
+        680.3349609375,
+        368.49749755859375,
+        716.2734375
+      ],
+      "block_id": "page-1103-block-0042",
+      "order": 42,
+      "text": "Gomot, M. & Wicker, B. (2012). « A challenging, unpredic-\ntable world for people with autism spectrum disorder »,\nInternational Journal of Psychophysiology, 83(2),\np. 240-247.\n",
+      "text_sha256": "747825800775abc7e75de52e53167ad6fd07bc9a9c5100022aafea76bff88d26"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.68496322631836,
+        199.87258911132812,
+        67.1734390258789
+      ],
+      "block_id": "page-1103-block-0043",
+      "order": 43,
+      "text": "Blanchard, J. J. & Cohen, A. S. (2006). « The structure of\nnegative symptoms within schizophrenia : Implications for\nassessment », Schizophrenia Bulletin, 32(2), p. 238-245.\n",
+      "text_sha256": "a71447086137003f5900660a9e4049df5ce4a0a2448563e41482ad50aa10e04a"
+    },
+    {
+      "bbox": [
+        48.0,
+        71.1849594116211,
+        205.44749450683594,
+        97.6734390258789
+      ],
+      "block_id": "page-1103-block-0044",
+      "order": 44,
+      "text": "Bohlhalter, S. & al. (2006). « Neural correlates of tic genera-\ntion in Tourette syndrome : An event-related functional MRI\nstudy », Brain, 129(8), p. 2029-2037.\n",
+      "text_sha256": "3e90d53f5b07813a87dada3af55f0466c2e941f83a4156e8915cc3123192c9b9"
+    },
+    {
+      "bbox": [
+        48.0,
+        101.63496398925781,
+        187.0,
+        118.97344207763672
+      ],
+      "block_id": "page-1103-block-0045",
+      "order": 45,
+      "text": "Broadbent, D. (1958) Perception and communication,\nOxford, Royaume-Uni, Oxford University Press.\n",
+      "text_sha256": "ae78aee2f0c26151a94bee35fe1855817543744c7e1ffa3ca611855430dd9686"
+    },
+    {
+      "bbox": [
+        48.0,
+        122.93496704101562,
+        198.78501892089844,
+        149.4734344482422
+      ],
+      "block_id": "page-1103-block-0046",
+      "order": 46,
+      "text": "Butler, P. D. & al. (2007). « Subcortical visual dysfunction\nin schizophrenia drives secondary cortical impairments »,\nBrain, 130(2), p. 417-430.\n",
+      "text_sha256": "3cd3a8f5ac42316d648f082fcb7e23c4124caf1e15150ac614f031e2f9fcf581"
+    },
+    {
+      "bbox": [
+        48.0,
+        153.43496704101562,
+        204.35272216796875,
+        170.7734375
+      ],
+      "block_id": "page-1103-block-0047",
+      "order": 47,
+      "text": "Cabeza, R. & Kingstone, A. (2001). Handbook of functional\nneuroimaging of cognition, Cambridge, MA, The MIT Press.\n",
+      "text_sha256": "a962489f09ae2f1c41af56caa3d5f6b20d69fcd48ea970c2063bceca099a0b4b"
+    },
+    {
+      "bbox": [
+        48.0,
+        174.73497009277344,
+        196.9925994873047,
+        210.37344360351562
+      ],
+      "block_id": "page-1103-block-0048",
+      "order": 48,
+      "text": "Carrillo-de-la-Pena, M. T. & al. (2008). « Equivalent is not\nequal : Primary motor cortex (MI) activation during motor\nimagery and execution of sequential movements », Brain\nResearch, 1226, p. 134-143.\n",
+      "text_sha256": "59c7691440f23e06038d7beac68cefac6201347d33f88dc6c4c85e680cc3b89e"
+    },
+    {
+      "bbox": [
+        48.0,
+        214.3849639892578,
+        199.9575958251953,
+        231.7234344482422
+      ],
+      "block_id": "page-1103-block-0049",
+      "order": 49,
+      "text": "Cavanna, A. E. & al. (2009). « Cognitive functioning in Tou-\nrette syndrome », Discovery Medicine, 8(43), p. 191-195.\n",
+      "text_sha256": "c416537fe012e1a1db5649e9d04996e567775c63752ebcace8ac0553eda1a19d"
+    },
+    {
+      "bbox": [
+        48.0,
+        235.68496704101562,
+        198.463623046875,
+        262.1734313964844
+      ],
+      "block_id": "page-1103-block-0050",
+      "order": 50,
+      "text": "Caylak, E. (2009). « Neurobiological approaches on brains\nof children with dyslexia : Review », Academic Radiology,\n168, p. 1003-1024.\n",
+      "text_sha256": "b465ec704a66c0a35a95c302fdfc494162799bdb4b322ae37c7ef4ad992f1521"
+    },
+    {
+      "bbox": [
+        48.0,
+        266.1349792480469,
+        195.88015747070312,
+        283.5234375
+      ],
+      "block_id": "page-1103-block-0051",
+      "order": 51,
+      "text": "Changeux, J. P. (1983). L’homme neuronal, Paris, France,\nFayard.\n",
+      "text_sha256": "02555386bcc79a4d3c6a6c5c2820a8d24dc7bdca349a031b571b6652464689e6"
+    },
+    {
+      "bbox": [
+        48.0,
+        287.4849548339844,
+        206.99749755859375,
+        313.97344970703125
+      ],
+      "block_id": "page-1103-block-0052",
+      "order": 52,
+      "text": "Cohen, A. S. & Minor, K. S. (2010). « Emotional experience in\npatients with schizophrenia revisited : Meta-analysis of labo-\nratory studies », Schizophrenia Bulletin, 36(1), p. 143-150.\n",
+      "text_sha256": "c73abf934d106e9d266a782bec3f6fc8a4e91e3cc9ffbfec3dd5c05e386eb7d5"
+    },
+    {
+      "bbox": [
+        48.0,
+        317.9349670410156,
+        203.09750366210938,
+        344.4234313964844
+      ],
+      "block_id": "page-1103-block-0053",
+      "order": 53,
+      "text": "Cooper, R. P. & Shallice, T. (2006). « Hierarchical schemas\nand goals in the control of sequential behavior », Psycholo-\ngical Review, 113(4), p. 887-916.\n",
+      "text_sha256": "b10ac5f710cf1a3e1706e4efb7e72050005f7b6e54d01ef1d28c799fed92eb37"
+    },
+    {
+      "bbox": [
+        48.0,
+        348.4349670410156,
+        196.9225616455078,
+        374.9234313964844
+      ],
+      "block_id": "page-1103-block-0054",
+      "order": 54,
+      "text": "Corbetta, M. & al. (2008). « The reorienting system of\nthe human brain : From environment to theory of mind »,\nNeuron, 58(3), p. 306-324.\n",
+      "text_sha256": "9bf4a0a2956c6161c7245ae498cdff1ddf77c14b726b18c30a0a8f3c22d92433"
+    },
+    {
+      "bbox": [
+        48.0,
+        378.8849792480469,
+        202.98165893554688,
+        405.3734436035156
+      ],
+      "block_id": "page-1103-block-0055",
+      "order": 55,
+      "text": "Cortese, S. & al. (2012). « Toward systems neuroscience of\nADHD : A meta- analysis of 55 fMRI studies »,American Journal\nof Psychiatry,169(10), p. 1038-1055.\n",
+      "text_sha256": "b1ed94c73c411308edea90e96209a3d8801878a8c67a8f54c7bb141440551f75"
+    },
+    {
+      "bbox": [
+        48.0,
+        409.3349609375,
+        199.125,
+        435.8734436035156
+      ],
+      "block_id": "page-1103-block-0056",
+      "order": 56,
+      "text": "Cowan, N. (2008). « What are the differences between\nlong-term, short-term, and working memory ? », Progress\nin Brain Research, 169, p. 323-338.\n",
+      "text_sha256": "fff5047831d1d2a993884b1faf8887167e263283765f6b1fefc573ebc2ffc9cd"
+    },
+    {
+      "bbox": [
+        48.0,
+        439.8349609375,
+        198.4261474609375,
+        484.6734313964844
+      ],
+      "block_id": "page-1103-block-0057",
+      "order": 57,
+      "text": "Cunha, P. J. & al. (2010). « The frontal assessment battery\n(FAB) reveals neurocognitive dysfunction in substance-\ndependent individuals in distinct executive domains :\nAbstract reasoning, motor programming, and cognitive\nexibility », Addictive Behaviors, 35(10), p. 875-881.\n",
+      "text_sha256": "a85f99e3b3d69c82618284134e71910101cc8aec1a9a38aff6f8ba73840e5b0e"
+    },
+    {
+      "bbox": [
+        48.0,
+        488.6349792480469,
+        196.27706909179688,
+        524.2734375
+      ],
+      "block_id": "page-1103-block-0058",
+      "order": 58,
+      "text": "Dalrymple, K. A. & al. (2011). « The anatomic basis of the\nright face-selective N170 IN acquired prosopagnosia :\nA combined ERP/fMRI study », Neuropsychologia, 49(9),\np. 2553-2563.\n",
+      "text_sha256": "7fc498e99a268fc4cebf00a51dec30eedb883d6a9ebb6e37d793544d05422f3b"
+    },
+    {
+      "bbox": [
+        48.0,
+        528.2349853515625,
+        196.94515991210938,
+        545.5734252929688
+      ],
+      "block_id": "page-1103-block-0059",
+      "order": 59,
+      "text": "Damasio, A. R. (1994). Descartes’ Error : Emotion, Reason\nand the Emotion Brain. New York, Avon Books.\n",
+      "text_sha256": "2869f5b03a9df6257b1aa4777cdb5dbbf4316865e9db0152ef32a83bec295a3c"
+    },
+    {
+      "bbox": [
+        48.0,
+        549.5849609375,
+        203.29750061035156,
+        576.0734252929688
+      ],
+      "block_id": "page-1103-block-0060",
+      "order": 60,
+      "text": "Dawson, G. D. (1947). « Cerebral responses to electrical sti-\nmulation of peripheral nerve in man, Journal of Neurology,\nNeurosurgery & Psychiatry,10(3), p. 134-140.\n",
+      "text_sha256": "e8859d1ef1920f0bf102b9bc5a0ed73f0d6d3d912eef6dc8fb3fe416ac25cacc"
+    },
+    {
+      "bbox": [
+        48.0,
+        580.0349731445312,
+        189.7708282470703,
+        606.5234375
+      ],
+      "block_id": "page-1103-block-0061",
+      "order": 61,
+      "text": "Dekowska, M. & al. (2008). « Facing facts : Neuronal\nmechanisms of face perception », Acta Neurobiologiae\nExperimentalis (Wars), 68(2), p. 229-252.\n",
+      "text_sha256": "e9c3d5c49c88e96258c2a0cd47ae2e669f9f7c98b2bc494f6dec870ae2dbfc62"
+    },
+    {
+      "bbox": [
+        48.0,
+        610.4849853515625,
+        197.8175048828125,
+        627.8734741210938
+      ],
+      "block_id": "page-1103-block-0062",
+      "order": 62,
+      "text": "Delasiauve, L. (1865). « Le Sauvage de l’Aveyron », Journal\nde médecine mentale, 5, p. 197-211.\n",
+      "text_sha256": "43fbf63cbf56ee6cbdf1fb915d4acb99bd7c754330adc54fe0fc5a14fa8ea4be"
+    },
+    {
+      "bbox": [
+        48.0,
+        631.8349609375,
+        202.94252014160156,
+        667.4734497070312
+      ],
+      "block_id": "page-1103-block-0063",
+      "order": 63,
+      "text": "DeLisi, L. E. (2001). « Speech disorder in schizophrenia :\nReview of the literature and exploration of its relation to\nthe uniquely human capacity for language », Schizophrenia\nBulletin, 27(3), p. 481-496.\n",
+      "text_sha256": "bbdbab88c5155ed924c9ca80fa006445eb60a9b3eb1ca4a4a72ba5d202917bc4"
+    },
+    {
+      "bbox": [
+        48.0,
+        671.4349975585938,
+        204.08389282226562,
+        716.2734375
+      ],
+      "block_id": "page-1103-block-0064",
+      "order": 64,
+      "text": "Delvecchio, G. & al. (2013). « Evidence of diagnostic spe-\ncicity in the neural correlates of facial affect processing\nin bipolar disorder and schizophrenia : A meta-analysis\nof functional imaging studies », Psychological Medicine,\n43(3), p. 553-569.\n",
+      "text_sha256": "11f6f0d902c18a2f47a75df9099894f4df352d988e7c2fe05a62e6986a96ab24"
+    }
+  ],
+  "coordinates_sha256": "785e13dfe6ac21c49fdc023fcee3f1ad0ec6d9a3c58588dc5707faaa3800e857",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1103",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "R6\nRéférences\nGoulet, D. (2011). Histoire de la neurologie au Québec,\nMontréal, Québec, Carte blanche.\nGreen, C. S. & Bavelier, D. (2003). « Action video game\nmodies visual selective attention », Nature, 423(6939),\np. 534-537.\nGreen, M. F. (2006). « Cognitive impairment and functional\noutcome in schizophrenia and bipolar disorder », Journal of\nClinical Psychiatry, 67(suppl. 9), p. 3-8, 36-42.\nGreen, M. F. & al. (2000). « Neurocognitive decits and\nfunctional outcome in schizophrenia : Are we measuring the\n«right stuff» ? », Schizophrenia Bulletin, 26(1), p. 119-136.\nGrill-Spector, K., & Malach, R. (2004). « The human visual\ncortex », Annual Review of Neuroscience, 27, p. 649-677.\nGroen, W. B. & al. (2008). « The phenotype and neural\ncorrelates of language in autism : An integrative\nreview », Neuroscience & Biobehavioral Reviews, 32(8),\np. 1416-1425.\nGruter, T. & al. (2008). « Neural and genetic foundations of\nface recognition and prosopagnosia », Journal of Neuropsy-\nchology, 2(1), p. 79-97.\nHajek, T. & al. (2013). « Functional neuroanatomy of\nresponse inhibition in bipolar disorders – combined voxel\nbased and cognitive performance meta-analysis », Journal\nof Psychiatric Research, 47(12), p. 1955-1966.\nHandy, T. C. & al. (2001). « Perceptual load and visuocortical\nprocessing : Event-related potentials reveal sensory-level\nselection », Psychological Sciences, 12(3), p. 213-218.\nHart, H. & al. (2013). « Meta-analysis of functional\nmagnetic resonance imaging studies of inhibition and\nattention in attention-decit/hyperactivity disorder :\nExploring task-specic, stimulant medication, and age\neffects », Thje Journal of the American Medical Associa-\ntion Psychiatry, 70(2), p. 185-198.\nHarvey, P. D. & al. (2005). « Treatment of cognitive impair-\nment in early psychosis : A comparison of risperidone and\nhaloperidol in a large long-term trial », American Journal of\nPsychiatry, 162(10), p. 1888-1895.\nHerbert, J. & al. (2006). « Do corticosteroids damage the\nbrain ? », Journal of Neuroendocrinology, 18(6), p. 393-411.\nHiraishi, H. & al. (2007). « A preliminary fMRI study of moral\njudgment task in high functioning autistic children »,No To\nHattatsu, 39(5), p. 360-365.\nHoran, W. P. & al. (2008). « Affective traits in schizophrenia\nand schizotypy », Schizophrenia Bulletin, 34(5), p. 856-874.\nHoude, O. & al. (2010). « Mapping numerical processing,\nreading, and executive functions in the developing brain : An\nfMRI meta-analysis of 52 studies including 842 children »,\nDevelopmental Science, 13(6), p. 876-885.\nHuang, S. & al. (2012). « Brain networks of novelty-driven\ninvoluntary and cued voluntary auditory attention shifting »,\nPLoS One, 7(8), p. e44062.\nIkkai, A. & Curtis, C. E. (2011). « Common neural mecha-\nnisms supporting spatial working memory, attention and\nmotor intention », Neuropsychologia, 49(6), p. 1428-1434.\nJardri, R. & al. (2011). « Cortical activations during auditory\nverbal hallucinations in schizophrenia : A coordinate-based\nmeta- analysis », American Journal of Psychiatry, 168(1),\np. 73-81.\nJemel, B. & al. (2009). « From upright to upside-down\npresentation : A spatio-temporal ERP study of the parametric\neffect of rotation on face and house processing », BMC\nNeuroscience, 10, p. 100.\nJust, M. A. & al. (2007). « Functional and anatomical cortical\nunderconnectivity in autism : Evidence from an FMRI study\nof an executive function task and corpus callosum morpho-\nmetry », Cerebral Cortex, 17(4), p. 951-961.\nKandel, E. (2013). « The new science of mind and the future\nof knowledge », Neuron, 80(3), p. 546-560.\nDeutsch, J. A. & Deutsch, D. (1963). « Attention : Some\ntheoretical considerations », Psychological Review, 87,\np. 272-300.\nDevinsky, O. (2009). « Delusional misidentications and\nduplications : Right brain lesions, left brain delusions »,\nNeurology, 72(1), p. 80-87.\nDickerson, S. S. & Kemeny, M. E. (2004). « Acute stressors and\ncortisol responses : A theoretical integration and synthesis\nof laboratory research », Psychology Bulletin, 130(3),\np. 355-391.\nDollfus, S. & al. (2008). « Functional decit in the medial\nprefrontal cortex during a language comprehension task\nin patients with schizophrenia », Schizophrenia Research,\n99(1-3), p. 304-311.\nDrew, T. W. & al. (2006). « Event-related potential measures\nof visual working memory », Clinical EEG and Neuroscience,\n37(4), p. 286-291.\nEddy, C. M. & al. (2009). « Neuropsychological aspects of\nTourette syndrome : A review », Journal of Psychosomatic\nResearch, 67(6), p. 503-513.\nForbes, N. F. & al. (2009). « Working memory in schizophrenia :\nA meta-analysis »,Psychological Medicine, 39(6), p. 889-905.\nFossati, P. & al. (2002). « Executive functioning in unipolar\ndepression : A review », Encephale, 28(2), p. 97-107.\nFritsch, G., & Hitzig, E. (2009). « Electric excitability of\nthe cerebrum (Uber die elektrische Erregbarkeit des\nGrosshirns) », Epilepsy & Behavior, 15(2), p. 123-130.\nFrodl, T. & al. (2003). « Larger amygdala volumes in rst\ndepressive episode as compared to recurrent major depres-\nsion and healthy control subjects »,Biological Psychiatry,\n53(4), p. 338-344.\nFulton, J. (1928). « Observations upon the vascularity of\nthe human occipital lobe during visual activity »,Brain, 51,\np. 310-320.\nGarcia-Lazaro, H. G. & al. (2012). « Neuroanatomy of epi-\nsodic and semantic memory in humans : A brief review of\nneuroimaging studies », Neurology India, 60(6), p. 613-617.\nGeburek, A. J. & al. (2013). « Electrophysiological indices\nof error monitoring in juvenile and adult attention decit\nhyperactivity disorder (ADHD)–a meta-analytic apprai-\nsal », International Journal of Psychophysiology, 87(3),\np. 349-362.\nGeurts, H. M. & al. (2014). « Prepotent response inhibition\nand interference control in autism spectrum disorders : Two\nmeta-analyses », Autism Research, 7(4), p. 407-420.\nGeuze, E. & al. (2009). « Neuropsychological performance\nis related to current social and occupational functioning\nin veterans with posttraumatic stress disorder », Depress\nAnxiety, 26(1), p. 7-15.\nGiesbrecht, B. & al. (2014). « A new perspective on the\nperceptual selectivity of attention under load »,Annals of\nthe New York Academy of Sciences, 1316(1), p. 71-86.\nGoldstein, G. & al. (2002). « High-functioning autism and\nschizophrenia : A comparison of an early and late onset\nneurodevelopmental disorder », Archives of Clinical Neu-\nropsychology, 17(5), p. 461-475.\nGomot, M. & al. (2006). « Change detection in children with\nautism : An auditory event-related fMRI study », Neuroimage,\n29(2), p. 475-484.\nGomot, M. & al. (2011). « Candidate electrophysiological\nendophenotypes of hyper-reactivity to change in autism »,\nJournal of Autism and Developmental Disorders, 41(6),\np. 705-714.\nGomot, M. & Wicker, B. (2012). « A challenging, unpredic-\ntable world for people with autism spectrum disorder »,\nInternational Journal of Psychophysiology, 83(2),\np. 240-247.\nBlanchard, J. J. & Cohen, A. S. (2006). « The structure of\nnegative symptoms within schizophrenia : Implications for\nassessment », Schizophrenia Bulletin, 32(2), p. 238-245.\nBohlhalter, S. & al. (2006). « Neural correlates of tic genera-\ntion in Tourette syndrome : An event-related functional MRI\nstudy », Brain, 129(8), p. 2029-2037.\nBroadbent, D. (1958) Perception and communication,\nOxford, Royaume-Uni, Oxford University Press.\nButler, P. D. & al. (2007). « Subcortical visual dysfunction\nin schizophrenia drives secondary cortical impairments »,\nBrain, 130(2), p. 417-430.\nCabeza, R. & Kingstone, A. (2001). Handbook of functional\nneuroimaging of cognition, Cambridge, MA, The MIT Press.\nCarrillo-de-la-Pena, M. T. & al. (2008). « Equivalent is not\nequal : Primary motor cortex (MI) activation during motor\nimagery and execution of sequential movements », Brain\nResearch, 1226, p. 134-143.\nCavanna, A. E. & al. (2009). « Cognitive functioning in Tou-\nrette syndrome », Discovery Medicine, 8(43), p. 191-195.\nCaylak, E. (2009). « Neurobiological approaches on brains\nof children with dyslexia : Review », Academic Radiology,\n168, p. 1003-1024.\nChangeux, J. P. (1983). L’homme neuronal, Paris, France,\nFayard.\nCohen, A. S. & Minor, K. S. (2010). « Emotional experience in\npatients with schizophrenia revisited : Meta-analysis of labo-\nratory studies », Schizophrenia Bulletin, 36(1), p. 143-150.\nCooper, R. P. & Shallice, T. (2006). « Hierarchical schemas\nand goals in the control of sequential behavior », Psycholo-\ngical Review, 113(4), p. 887-916.\nCorbetta, M. & al. (2008). « The reorienting system of\nthe human brain : From environment to theory of mind »,\nNeuron, 58(3), p. 306-324.\nCortese, S. & al. (2012). « Toward systems neuroscience of\nADHD : A meta- analysis of 55 fMRI studies »,American Journal\nof Psychiatry,169(10), p. 1038-1055.\nCowan, N. (2008). « What are the differences between\nlong-term, short-term, and working memory ? », Progress\nin Brain Research, 169, p. 323-338.\nCunha, P. J. & al. (2010). « The frontal assessment battery\n(FAB) reveals neurocognitive dysfunction in substance-\ndependent individuals in distinct executive domains :\nAbstract reasoning, motor programming, and cognitive\nexibility », Addictive Behaviors, 35(10), p. 875-881.\nDalrymple, K. A. & al. (2011). « The anatomic basis of the\nright face-selective N170 IN acquired prosopagnosia :\nA combined ERP/fMRI study », Neuropsychologia, 49(9),\np. 2553-2563.\nDamasio, A. R. (1994). Descartes’ Error : Emotion, Reason\nand the Emotion Brain. New York, Avon Books.\nDawson, G. D. (1947). « Cerebral responses to electrical sti-\nmulation of peripheral nerve in man, Journal of Neurology,\nNeurosurgery & Psychiatry,10(3), p. 134-140.\nDekowska, M. & al. (2008). « Facing facts : Neuronal\nmechanisms of face perception », Acta Neurobiologiae\nExperimentalis (Wars), 68(2), p. 229-252.\nDelasiauve, L. (1865). « Le Sauvage de l’Aveyron », Journal\nde médecine mentale, 5, p. 197-211.\nDeLisi, L. E. (2001). « Speech disorder in schizophrenia :\nReview of the literature and exploration of its relation to\nthe uniquely human capacity for language », Schizophrenia\nBulletin, 27(3), p. 481-496.\nDelvecchio, G. & al. (2013). « Evidence of diagnostic spe-\ncicity in the neural correlates of facial affect processing\nin bipolar disorder and schizophrenia : A meta-analysis\nof functional imaging studies », Psychological Medicine,\n43(3), p. 553-569.\n",
+  "raw_text_sha256": "9dce59f022e62dc58aa67db812b54a820de12b4ec94e37ac89038f98b864e315",
+  "source_page_display": 1104,
+  "source_page_index": 1103
+}

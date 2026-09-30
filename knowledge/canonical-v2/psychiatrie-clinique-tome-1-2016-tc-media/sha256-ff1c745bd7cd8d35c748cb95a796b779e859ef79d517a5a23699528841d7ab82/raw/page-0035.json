@@ -1,0 +1,316 @@
+{
+  "block_sequence_sha256": "49b2beef4325918e88db243f8a749a80e444a96a6066eba68443385d633e0272",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        447.807861328125,
+        758.8693237304688
+      ],
+      "block_id": "page-0035-block-0001",
+      "order": 1,
+      "text": "18\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 1\nIntroduction à la psychiatrie\n",
+      "text_sha256": "3a82f11c2018a692aeb32d7f3ac0272e20c1bb72a9233eebfe529084f2df2fe1"
+    },
+    {
+      "bbox": [
+        311.20001220703125,
+        40.04999923706055,
+        546.103515625,
+        61.25029373168945
+      ],
+      "block_id": "page-0035-block-0002",
+      "order": 2,
+      "text": "i\nUn supplément d’information sur UptoDate est disponible au\nwww.uptodate.com.\n",
+      "text_sha256": "fe82e8e836b6d957b0b45b2738936f26287fc4bae6f70d06a4f43e3b7a428ed5"
+    },
+    {
+      "bbox": [
+        330.0,
+        67.97441864013672,
+        548.936279296875,
+        105.15850067138672
+      ],
+      "block_id": "page-0035-block-0003",
+      "order": 3,
+      "text": "• Clinical Evidence ore des réponses aux questions\ncliniques :\ndes tableaux récapitulatifs de ce qui est pertinent\n",
+      "text_sha256": "4a9ab50fc7dc4a50c5079f98b45b87e9c4315c8548425a3f2ce9528697695490"
+    },
+    {
+      "bbox": [
+        342.0500183105469,
+        106.16582489013672,
+        488.2942810058594,
+        157.1584930419922
+      ],
+      "block_id": "page-0035-block-0004",
+      "order": 4,
+      "text": "ou non et les faits saillants ;\ndes informations sur la maladie ;\nles guides de pratique disponibles ;\ndes informations pour les patients.\n",
+      "text_sha256": "cc8172015fa24ce3c45adf8b324d2b20a85e9f9e06b769270937e93d7142f6f0"
+    },
+    {
+      "bbox": [
+        311.20001220703125,
+        164.5500030517578,
+        546.7940063476562,
+        185.7502899169922
+      ],
+      "block_id": "page-0035-block-0005",
+      "order": 5,
+      "text": "i\nUn supplément d’information sur Clinical Evidence est dispo-\nnible au http://clinicalevidence.bmj.com/x/index.html.\n",
+      "text_sha256": "a4371610687cdb8f11225b7914d2a7d7dd17af525711fc47be359dd3889cf1e4"
+    },
+    {
+      "bbox": [
+        330.0,
+        192.4744110107422,
+        549.4326782226562,
+        262.15850830078125
+      ],
+      "block_id": "page-0035-block-0006",
+      "order": 6,
+      "text": "• Bibliothèque virtuelle : NHSEvidence Search Health and\nSocial Care est produit par le NICE – National Institute\nfor Health and Care Excellence, Royaume-Uni. Cette\nbibliothèque en ligne ore des ressources axées sur les\ndonnées probantes, incluant divers sujets concernant\nla santé, dont la santé mentale et la psychiatrie.\n",
+      "text_sha256": "40d1f67ec50385cb4d43f1d09c88d5d56ddf68f0fc70dce939b411c7c6c02b1e"
+    },
+    {
+      "bbox": [
+        311.20001220703125,
+        269.5500183105469,
+        548.8809204101562,
+        290.75030517578125
+      ],
+      "block_id": "page-0035-block-0007",
+      "order": 7,
+      "text": "i\nUn supplément d’information sur le NHS Evidence Search\nHealth and Social Care est disponible au www.evidence.nhs.uk.\n",
+      "text_sha256": "50d3ee296f5f43ae1b1e4fd6bbc4f358ee9220821ecc30eb331aa86058c55a70"
+    },
+    {
+      "bbox": [
+        318.0,
+        299.16583251953125,
+        548.9464721679688,
+        309.65850830078125
+      ],
+      "block_id": "page-0035-block-0008",
+      "order": 8,
+      "text": "b) Guides de pratique clinique : National Guideline\n",
+      "text_sha256": "b1d69f425897af35933ed3621b68f9cf5d16f045e65239d89cf2bbcc38c39fe6"
+    },
+    {
+      "bbox": [
+        330.0,
+        310.66583251953125,
+        549.1683959960938,
+        378.65850830078125
+      ],
+      "block_id": "page-0035-block-0009",
+      "order": 9,
+      "text": "Clearinghouse contient des guides de pratique clinique\nbasés sur des données probantes et autres documents\nreliés (États-Unis, Royaume-Uni et autres). Pour chaque\nguide, on retrouve une che résumant le contenu et don-\nnant l’accès au document. On peut même comparer des\nsynthèses de plusieurs guides.\n",
+      "text_sha256": "a8cdcaeca341bdbd15818eb476bb4a0158a39a6c75a95356fbbdda2d7ed94371"
+    },
+    {
+      "bbox": [
+        311.20001220703125,
+        386.0500183105469,
+        523.2860107421875,
+        407.25030517578125
+      ],
+      "block_id": "page-0035-block-0010",
+      "order": 10,
+      "text": "i\nUn supplément d’information sur la National Guideline\nClearinghouse est disponible au www.guideline.gov.\n",
+      "text_sha256": "f1b1923f071f16f46b234841bc827829e07da44cb44363e9f424db6914972ff1"
+    },
+    {
+      "bbox": [
+        306.0,
+        415.66583251953125,
+        549.078857421875,
+        485.65850830078125
+      ],
+      "block_id": "page-0035-block-0011",
+      "order": 11,
+      "text": "2. Synopsis (critiques d’articles) : Ce sont de courts résumés\net évaluations critiques de revues systématiques ou d’essais\ncliniques. Les articles sont sélectionnés pour leur qualité et\nrésumés pour en faire ressortir les faits importants pour la\npratique clinique.\na) Evidence-Based Mental Health: ce périodique est publié\n",
+      "text_sha256": "649a1a627b4e22d0da16984db9919d88ae66c453c033462bb07334849f2ecb7d"
+    },
+    {
+      "bbox": [
+        330.0,
+        486.66583251953125,
+        549.2872924804688,
+        577.6585083007812
+      ],
+      "block_id": "page-0035-block-0012",
+      "order": 12,
+      "text": "par la British Psychological Society, le Royal College of\nPsychiatrists et le British Medical Journal Publishing\nGroup. Il en existe une version électronique (avec archives,\nblogue, possibilités d’alertes, moteur de recherche, etc.) et\nune version papier. Il présente des études sélectionnées (à\npartir de critères de validité et de qualité). Chaque étude\nest résumée et un commentaire d’experts sur l’implication\npour la clinique est ajouté.\n",
+      "text_sha256": "cdc9f5fbba10f4035011bb3ec862922525cf6aafda480d8d7059be012dcd39da"
+    },
+    {
+      "bbox": [
+        311.20001220703125,
+        585.0499877929688,
+        538.5889892578125,
+        606.2503051757812
+      ],
+      "block_id": "page-0035-block-0013",
+      "order": 13,
+      "text": "i\nUn supplément d’information sur l’Evidence-Based Mental\nHealth est disponible au http://ebmh.bmj.com.\n",
+      "text_sha256": "1451246d49098688006c03fffabb80cf103f6d341e7a3f3861a4ba1f06740345"
+    },
+    {
+      "bbox": [
+        318.0,
+        614.6658325195312,
+        548.9900512695312,
+        625.1585083007812
+      ],
+      "block_id": "page-0035-block-0014",
+      "order": 14,
+      "text": "b) DARE – Database of Abstracts of Reviews of Eectiveness.\n",
+      "text_sha256": "578b838a354d50cdbb1c96cd030a62696d317635f6c2eff8073966ae46dd798a"
+    },
+    {
+      "bbox": [
+        330.0,
+        626.1658325195312,
+        549.1519165039062,
+        682.6585083007812
+      ],
+      "block_id": "page-0035-block-0015",
+      "order": 15,
+      "text": "Cette base de données est produite par le National Health\nServices, Centre for Reviews and Dissemination (NHS\nCRD), Université d’York, Royaume-Uni. Ce sont des\névaluations critiques de revues systématiques tirées de\ndiérents périodiques scientiques.\n",
+      "text_sha256": "06f17a9ca8eaa8721bef7d424d2519f34c9ef528740b33c43e832cf18e0583c5"
+    },
+    {
+      "bbox": [
+        311.20001220703125,
+        690.0499877929688,
+        541.4146118164062,
+        711.2503051757812
+      ],
+      "block_id": "page-0035-block-0016",
+      "order": 16,
+      "text": "i\nUn supplément d’information sur la DARE est disponible au\nwww.crd.york.ac.uk/crdweb.\n",
+      "text_sha256": "66d86404e5708fa7ec9f814ff8b7a1d88462d7bbb9759f8b8fdb3d2c73e8a1d5"
+    },
+    {
+      "bbox": [
+        60.0,
+        40.9658203125,
+        291.01751708984375,
+        62.95849609375
+      ],
+      "block_id": "page-0035-block-0017",
+      "order": 17,
+      "text": "personnels et relationnels respectueux des devoirs et obliga-\ntions du médecin.\n",
+      "text_sha256": "73da096fb71b48cc89267a22aa8aeeb9ba7ce4c33ff96e85cc92e3edf5efe213"
+    },
+    {
+      "bbox": [
+        53.20000076293945,
+        70.3499984741211,
+        283.9834899902344,
+        121.55029296875
+      ],
+      "block_id": "page-0035-block-0018",
+      "order": 18,
+      "text": "i\nUn supplément d’information sur les compétences\nrattachées à chaque rôle selon les objectifs de la formation\nen psychiatrie du Collège Royal (2015) est disponible au\nwww.royalcollege.ca/portal/page/portal/rc/canmeds/\ncanmeds2015.\n",
+      "text_sha256": "2f5117d4d2abbec25bda8fea115deba46665d7e7c496bd96adcefc5500a4f861"
+    },
+    {
+      "bbox": [
+        60.04999923706055,
+        147.2431640625,
+        274.76202392578125,
+        184.1689453125
+      ],
+      "block_id": "page-0035-block-0019",
+      "order": 19,
+      "text": "1.7\nPratique basée\nsur les données probantes4\n",
+      "text_sha256": "cee1dfdf9a89567ecfa5edb17784fac3002379ed1b46e92f001ef4d92c3046ee"
+    },
+    {
+      "bbox": [
+        48.0,
+        197.9658203125,
+        291.2525329589844,
+        281.45849609375
+      ],
+      "block_id": "page-0035-block-0020",
+      "order": 20,
+      "text": "La pratique médicale et psychiatrique se base maintenant sur\ndes données probantes dont la validité s’étale sur cinq niveaux\npar ordre décroissant de validité scientique de la méthodo-\nlogie utilisée :\n• Niveau 1 :\nessais contrôlés randomisés (randomized controlled trials) ;\nrevues systématiques d’essais contrôlés randomisés, homo-\n",
+      "text_sha256": "08937a94a49bcabe2b16f7612b07859107ba0b78540bdb778d54174306ab8b67"
+    },
+    {
+      "bbox": [
+        48.0,
+        282.4658203125,
+        201.10455322265625,
+        433.45849609375
+      ],
+      "block_id": "page-0035-block-0021",
+      "order": 21,
+      "text": "gènes ;\nrevues systématiques.\n• Niveau 2 :\nessais contrôlés non randomisés.\n• Niveau 3 :\nétudes de cohorte prospectives.\n• Niveau 4 :\nétudes de cohorte rétrospectives ;\nétudes cas-contrôle.\n• Niveau 5 :\nétudes de cas ;\nopinions d’experts publiées.\n",
+      "text_sha256": "5038d4ce9c309d02ee29159360c6d27626988ab5cf4324b8ffa767c239bd0db5"
+    },
+    {
+      "bbox": [
+        48.0,
+        445.98681640625,
+        201.32875061035156,
+        462.12939453125
+      ],
+      "block_id": "page-0035-block-0022",
+      "order": 22,
+      "text": "1.7.1 Sources d’information\n",
+      "text_sha256": "83441151d1c65685ae6351046ac51ca3bfc151504a6354eec122f998522ff1fd"
+    },
+    {
+      "bbox": [
+        48.0,
+        465.4658203125,
+        291.10711669921875,
+        558.45849609375
+      ],
+      "block_id": "page-0035-block-0023",
+      "order": 23,
+      "text": "Où trouver des réponses scientifiques à des questions cli-\nniques? Plusieurs sources informatisées sont regroupées\nen trois grandes catégories (Lindlof & Taylor, 2010). Voici\nquelques exemples :\n1. Résumés : Ressources créées pour permettre aux cliniciens de\ntrouver rapidement des informations basées sur des données\nprobantes à partir de la littérature scientique.\na) Outils axés sur les meilleures pratiques :\n",
+      "text_sha256": "accf54ab8e52efcfb9a031527a4e105ebc364011fb62309a2f4210a770696c37"
+    },
+    {
+      "bbox": [
+        72.0,
+        559.7744140625,
+        291.0812072753906,
+        658.45849609375
+      ],
+      "block_id": "page-0035-block-0024",
+      "order": 24,
+      "text": "• UptoDate est un outil à l’intention des cliniciens pour\nrépondre aux questions concernant les soins aux pa-\ntients. Les textes sont rédigés par des spécialistes, à\npartir de la littérature scientique (données probantes).\nLe contenu consiste en des textes résumant :\nles meilleures pratiques (diagnostic, traitement) ;\ndes informations sur les maladies, sur les médicaments ;\ndes informations pour les patients.\n",
+      "text_sha256": "afac14753776c131ed8e64969108076258b6b8fc56039b56abd424abe5b357ae"
+    },
+    {
+      "bbox": [
+        48.0,
+        692.388671875,
+        289.3200988769531,
+        712.3291015625
+      ],
+      "block_id": "page-0035-block-0025",
+      "order": 25,
+      "text": "4. Cette section a été préparée par Marie Désilets, bibliothécaire,\nInstitut universitaire en santé mentale de Montréal.\n",
+      "text_sha256": "4380be1ff1ac719cfcf3fe9a59fe472b2102c6312cfd939cd42fa98ebbfdc9d3"
+    }
+  ],
+  "coordinates_sha256": "83685816e384bdbf4b740cd055ab486c3f5dfd43546d714ab55839d0635bfbce",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0035",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "18\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 1\nIntroduction à la psychiatrie\ni\nUn supplément d’information sur UptoDate est disponible au\nwww.uptodate.com.\n• Clinical Evidence ore des réponses aux questions\ncliniques :\ndes tableaux récapitulatifs de ce qui est pertinent\nou non et les faits saillants ;\ndes informations sur la maladie ;\nles guides de pratique disponibles ;\ndes informations pour les patients.\ni\nUn supplément d’information sur Clinical Evidence est dispo-\nnible au http://clinicalevidence.bmj.com/x/index.html.\n• Bibliothèque virtuelle : NHSEvidence Search Health and\nSocial Care est produit par le NICE – National Institute\nfor Health and Care Excellence, Royaume-Uni. Cette\nbibliothèque en ligne ore des ressources axées sur les\ndonnées probantes, incluant divers sujets concernant\nla santé, dont la santé mentale et la psychiatrie.\ni\nUn supplément d’information sur le NHS Evidence Search\nHealth and Social Care est disponible au www.evidence.nhs.uk.\nb) Guides de pratique clinique : National Guideline\nClearinghouse contient des guides de pratique clinique\nbasés sur des données probantes et autres documents\nreliés (États-Unis, Royaume-Uni et autres). Pour chaque\nguide, on retrouve une che résumant le contenu et don-\nnant l’accès au document. On peut même comparer des\nsynthèses de plusieurs guides.\ni\nUn supplément d’information sur la National Guideline\nClearinghouse est disponible au www.guideline.gov.\n2. Synopsis (critiques d’articles) : Ce sont de courts résumés\net évaluations critiques de revues systématiques ou d’essais\ncliniques. Les articles sont sélectionnés pour leur qualité et\nrésumés pour en faire ressortir les faits importants pour la\npratique clinique.\na) Evidence-Based Mental Health: ce périodique est publié\npar la British Psychological Society, le Royal College of\nPsychiatrists et le British Medical Journal Publishing\nGroup. Il en existe une version électronique (avec archives,\nblogue, possibilités d’alertes, moteur de recherche, etc.) et\nune version papier. Il présente des études sélectionnées (à\npartir de critères de validité et de qualité). Chaque étude\nest résumée et un commentaire d’experts sur l’implication\npour la clinique est ajouté.\ni\nUn supplément d’information sur l’Evidence-Based Mental\nHealth est disponible au http://ebmh.bmj.com.\nb) DARE – Database of Abstracts of Reviews of Eectiveness.\nCette base de données est produite par le National Health\nServices, Centre for Reviews and Dissemination (NHS\nCRD), Université d’York, Royaume-Uni. Ce sont des\névaluations critiques de revues systématiques tirées de\ndiérents périodiques scientiques.\ni\nUn supplément d’information sur la DARE est disponible au\nwww.crd.york.ac.uk/crdweb.\npersonnels et relationnels respectueux des devoirs et obliga-\ntions du médecin.\ni\nUn supplément d’information sur les compétences\nrattachées à chaque rôle selon les objectifs de la formation\nen psychiatrie du Collège Royal (2015) est disponible au\nwww.royalcollege.ca/portal/page/portal/rc/canmeds/\ncanmeds2015.\n1.7\nPratique basée\nsur les données probantes4\nLa pratique médicale et psychiatrique se base maintenant sur\ndes données probantes dont la validité s’étale sur cinq niveaux\npar ordre décroissant de validité scientique de la méthodo-\nlogie utilisée :\n• Niveau 1 :\nessais contrôlés randomisés (randomized controlled trials) ;\nrevues systématiques d’essais contrôlés randomisés, homo-\ngènes ;\nrevues systématiques.\n• Niveau 2 :\nessais contrôlés non randomisés.\n• Niveau 3 :\nétudes de cohorte prospectives.\n• Niveau 4 :\nétudes de cohorte rétrospectives ;\nétudes cas-contrôle.\n• Niveau 5 :\nétudes de cas ;\nopinions d’experts publiées.\n1.7.1 Sources d’information\nOù trouver des réponses scientifiques à des questions cli-\nniques? Plusieurs sources informatisées sont regroupées\nen trois grandes catégories (Lindlof & Taylor, 2010). Voici\nquelques exemples :\n1. Résumés : Ressources créées pour permettre aux cliniciens de\ntrouver rapidement des informations basées sur des données\nprobantes à partir de la littérature scientique.\na) Outils axés sur les meilleures pratiques :\n• UptoDate est un outil à l’intention des cliniciens pour\nrépondre aux questions concernant les soins aux pa-\ntients. Les textes sont rédigés par des spécialistes, à\npartir de la littérature scientique (données probantes).\nLe contenu consiste en des textes résumant :\nles meilleures pratiques (diagnostic, traitement) ;\ndes informations sur les maladies, sur les médicaments ;\ndes informations pour les patients.\n4. Cette section a été préparée par Marie Désilets, bibliothécaire,\nInstitut universitaire en santé mentale de Montréal.\n",
+  "raw_text_sha256": "7ebd75855a6a157593d151c0c1b14d3a3f31fa50bdcd03978fe89dc9c19f26a1",
+  "source_page_display": 36,
+  "source_page_index": 35
+}

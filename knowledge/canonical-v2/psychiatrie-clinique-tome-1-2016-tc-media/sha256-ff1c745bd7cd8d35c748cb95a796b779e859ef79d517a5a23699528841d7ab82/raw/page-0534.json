@@ -1,0 +1,412 @@
+{
+  "block_sequence_sha256": "42411828a302b1d6589e276727770d09c9c0e8378eda4b509750b1f4375f583f",
+  "blocks": [
+    {
+      "bbox": [
+        404.3500061035156,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0534-block-0001",
+      "order": 1,
+      "text": "Chapitre 24\nDissociations\n517\n",
+      "text_sha256": "61688ccde465d687a9136223abe1c43e5ff666d4bba9b26bd831e5457cc7aa74"
+    },
+    {
+      "bbox": [
+        56.25,
+        41.002296447753906,
+        356.6112365722656,
+        53.320068359375
+      ],
+      "block_id": "page-0534-block-0002",
+      "order": 2,
+      "text": "TABLEAU 24.2 Critères diagnostiques de dépersonnalisation/déréalisation\n",
+      "text_sha256": "6d4ff191419ed88618b6e4b58d733dd990faa03d5eb802234f2741153bde51c8"
+    },
+    {
+      "bbox": [
+        98.5999984741211,
+        58.27412414550781,
+        481.2671203613281,
+        81.14238739013672
+      ],
+      "block_id": "page-0534-block-0003",
+      "order": 3,
+      "text": "DSM-5\nDSM-IV-TR\n300.6 (F48.1) Dépersonnalisation/déréalisation\nTrouble de dépersonnalisation\n",
+      "text_sha256": "0fdaf303f8a5015140b67cf1613cd202a04b5c024c80ebfe4f8084b1b67e6859"
+    },
+    {
+      "bbox": [
+        58.25,
+        86.4019546508789,
+        284.3993225097656,
+        96.2281265258789
+      ],
+      "block_id": "page-0534-block-0004",
+      "order": 4,
+      "text": "B. Pendant les expériences de dépersonnalisation ou de déréalisation,\n",
+      "text_sha256": "dd253fbaad89aee69b6edf65e39f9c1728e398426f6a39001460d21e0e9ec67d"
+    },
+    {
+      "bbox": [
+        70.25,
+        96.4019546508789,
+        208.40431213378906,
+        106.2281265258789
+      ],
+      "block_id": "page-0534-block-0005",
+      "order": 5,
+      "text": "l’appréciation de la réalité demeure intacte.\n",
+      "text_sha256": "6fa74bfac765847dc4f5d4f492938cf70614cafbbefa16fb1eea3073f15c5242"
+    },
+    {
+      "bbox": [
+        308.25,
+        86.4019546508789,
+        545.0110473632812,
+        96.2281265258789
+      ],
+      "block_id": "page-0534-block-0006",
+      "order": 6,
+      "text": "B. Pendant l’expérience de dépersonnalisation, l’appréciation de la réalité\n",
+      "text_sha256": "8015dc021c275ec323aa756ae32d5d3f7a1f305221e1f9087070d6fa3fabf7dc"
+    },
+    {
+      "bbox": [
+        320.25,
+        96.4019546508789,
+        374.1510009765625,
+        106.2281265258789
+      ],
+      "block_id": "page-0534-block-0007",
+      "order": 7,
+      "text": "demeure intacte.\n",
+      "text_sha256": "5b7dbb61209bcc98e0c05d8c13726ba9ed2642318695ecc148c3e3e49ab023d3"
+    },
+    {
+      "bbox": [
+        58.25,
+        114.80195617675781,
+        292.74700927734375,
+        124.62812805175781
+      ],
+      "block_id": "page-0534-block-0008",
+      "order": 8,
+      "text": "C. Les symptômes sont à l’origine d’une détresse cliniquement signica-\n",
+      "text_sha256": "bf5e3e87833bf9911bb272b891730cb38c61afaec2ef51bfbf55c1b597a77832"
+    },
+    {
+      "bbox": [
+        70.25,
+        124.80195617675781,
+        298.9198303222656,
+        144.6281280517578
+      ],
+      "block_id": "page-0534-block-0009",
+      "order": 9,
+      "text": "tive ou d’une altération du fonctionnement social, professionnel ou dans\nd’autres domaines importants.\n",
+      "text_sha256": "fd31f51e1464c65ce98c1003dd8ff88ded72d3783b18ee1b2719ce453ea78544"
+    },
+    {
+      "bbox": [
+        308.25,
+        114.80195617675781,
+        533.462158203125,
+        124.62812805175781
+      ],
+      "block_id": "page-0534-block-0010",
+      "order": 10,
+      "text": "C. La dépersonnalisation est à l’origine d’une souffrance cliniquement\n",
+      "text_sha256": "1580bd8dd37a74c5cb24881674423c4bfea66ae4b08494845ede61634323b71f"
+    },
+    {
+      "bbox": [
+        320.25,
+        124.80195617675781,
+        547.4136352539062,
+        144.6281280517578
+      ],
+      "block_id": "page-0534-block-0011",
+      "order": 11,
+      "text": "signicative ou d’une altération du fonctionnement social, professionnel\nou dans d’autres domaines importants.\n",
+      "text_sha256": "2aa9fe8a34737ecc19dc6e512590fe5049779471d56a0e01c456f90a6bc91c37"
+    },
+    {
+      "bbox": [
+        58.25,
+        153.251953125,
+        285.7165222167969,
+        163.078125
+      ],
+      "block_id": "page-0534-block-0012",
+      "order": 12,
+      "text": "D. La perturbation n’est pas imputable aux effets physiologiques d’une\n",
+      "text_sha256": "5fefb5b6001b86836ff2357f03d67282bb7b3b7d3638d06cbfd4f9c2cacf1f0d"
+    },
+    {
+      "bbox": [
+        70.25,
+        163.251953125,
+        292.707763671875,
+        183.078125
+      ],
+      "block_id": "page-0534-block-0013",
+      "order": 13,
+      "text": "substance (p. ex. une drogue donnant lieu à un abus, un médicament)\nou à une autre affection médicale (p. ex. des crises comitiales).\n",
+      "text_sha256": "d5691db99b9280a338c7da0b896b0ed9acf4bf44935f46988e090968c6a92650"
+    },
+    {
+      "bbox": [
+        308.25,
+        153.251953125,
+        535.5970458984375,
+        163.078125
+      ],
+      "block_id": "page-0534-block-0014",
+      "order": 14,
+      "text": "D. L’expérience de dépersonnalisation n’est pas due aux effets physio-\n",
+      "text_sha256": "d459ea87ff1f1070182fa0a86e16df4805a82c2498b2ce952cc47a5f68431c35"
+    },
+    {
+      "bbox": [
+        320.25,
+        163.251953125,
+        540.7901611328125,
+        193.078125
+      ],
+      "block_id": "page-0534-block-0015",
+      "order": 15,
+      "text": "logiques directs d’une substance (p. ex., une substance donnant lieu\nà abus, un médicament) ou d’une affection médicale générale (p. ex.,\nl’épilepsie temporale).\n",
+      "text_sha256": "1f997085b16b94a7cb2dcb67698b43b11f5647664111923e93716f5aebd7d816"
+    },
+    {
+      "bbox": [
+        58.25,
+        201.65196228027344,
+        294.8987121582031,
+        211.47813415527344
+      ],
+      "block_id": "page-0534-block-0016",
+      "order": 16,
+      "text": "E. La perturbation n’est pas mieux expliquée par un autre trouble mental,\n",
+      "text_sha256": "e805f75364cbe0c186022e0f74124509c136f41e99f9878ae693aaae5c23a550"
+    },
+    {
+      "bbox": [
+        70.25,
+        211.65196228027344,
+        194.5177459716797,
+        293.4781188964844
+      ],
+      "block_id": "page-0534-block-0017",
+      "order": 17,
+      "text": "comme :\n•\nune schizophrénie,\n•\nun trouble panique,\n•\nun trouble dépressif caractérisé,\n•\nun trouble stress aigu,\n•\nun trouble stress post-traumatique,\n•\nou un autre trouble dissociatif.\n",
+      "text_sha256": "08e3ea826358d86213956934e10ae007fe2339b96cf9b41a6d0c24c966003b4c"
+    },
+    {
+      "bbox": [
+        308.25,
+        201.65196228027344,
+        539.784912109375,
+        211.47813415527344
+      ],
+      "block_id": "page-0534-block-0018",
+      "order": 18,
+      "text": "D. L’expérience de dépersonnalisation ne survient pas exclusivement au\n",
+      "text_sha256": "9b09c21b94e33848562c93ac0c503885b0e9f13b796e1e424114b8a7c82a1f40"
+    },
+    {
+      "bbox": [
+        320.25,
+        211.65196228027344,
+        495.7928771972656,
+        269.4781188964844
+      ],
+      "block_id": "page-0534-block-0019",
+      "order": 19,
+      "text": "cours de l’évolution d’un autre trouble mental, comme :\n•\nla schizophrénie,\n•\nle trouble panique,\n•\nl’état de stress aigu,\n•\nou un autre trouble dissociatif.\n",
+      "text_sha256": "90dab907f16bb84786a18f9756899a24355d93e35c19197af7eab135f1d9b13a"
+    },
+    {
+      "bbox": [
+        54.25,
+        302.2406311035156,
+        553.7838745117188,
+        361.9750061035156
+      ],
+      "block_id": "page-0534-block-0020",
+      "order": 20,
+      "text": "Sources : APA (2015), p. 358-359 ; APA (2004), p. 614.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris,\n2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation, DSM-IV-TR - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\n",
+      "text_sha256": "69ac14131dd85f2877b82e59f6d5a0be5de3f40dc3697319f2beaf347e158c21"
+    },
+    {
+      "bbox": [
+        56.5,
+        593.8023071289062,
+        347.59478759765625,
+        606.1701049804688
+      ],
+      "block_id": "page-0534-block-0021",
+      "order": 21,
+      "text": "TABLEAU 24.3 Critères diagnostiques du trouble dissociatif de l’identité\n",
+      "text_sha256": "76c51bcd4b01061faec33f6a77b39399752981203d2f9f100be5f13ee861dc29"
+    },
+    {
+      "bbox": [
+        98.5999984741211,
+        611.0741577148438,
+        542.767822265625,
+        633.9923706054688
+      ],
+      "block_id": "page-0534-block-0022",
+      "order": 22,
+      "text": "DSM-5\nDSM-IV-TR\n300.14 (F44.81) Trouble dissociatif de l’identité\nTrouble dissociatif de l’identité (auparavant personnalité multiple)\n",
+      "text_sha256": "54acba8d5bd5e38d9895a0fed8115645643b943747c1c0b340fcfd6839018a53"
+    },
+    {
+      "bbox": [
+        58.5,
+        639.2019653320312,
+        300.2970275878906,
+        649.0281372070312
+      ],
+      "block_id": "page-0534-block-0023",
+      "order": 23,
+      "text": "A. Perturbation de l’identité caractérisée par deux ou plusieurs états de per-\n",
+      "text_sha256": "085e7fbee619403920cca921ccc9eab0ce101b83107d59a62df3f728590806e4"
+    },
+    {
+      "bbox": [
+        70.5,
+        649.2019653320312,
+        300.4333801269531,
+        719.0281372070312
+      ],
+      "block_id": "page-0534-block-0024",
+      "order": 24,
+      "text": "sonnalité distincts, ce qui peut être décrit dans certaines cultures comme\nune expérience de possession. La perturbation de l’identité implique une\ndiscontinuité marquée du sens de soi et de l’agentivité, accompagnée\nd’altérations, en rapport avec celle-ci, de l’affect, du comportement, de\nla conscience, de la mémoire, de la perception, de la cognition et/ou du\nfonctionnement sensorimoteur. Ces signes et ces symptômes peuvent\nêtre observés par les autres ou bien rapportés par le sujet lui-même.\n",
+      "text_sha256": "800126de6c4730a9af1701ed051cc0b8687b79bf828f4e0bf496036c5db65c2d"
+    },
+    {
+      "bbox": [
+        308.5,
+        639.2019653320312,
+        534.7709350585938,
+        649.0281372070312
+      ],
+      "block_id": "page-0534-block-0025",
+      "order": 25,
+      "text": "A. Présence de deux ou plusieurs identités ou « états de personnalité »\n",
+      "text_sha256": "1cdd857e045ded21ae882fc3975f2044b0ed444633b501a1e042f38cfa236dc8"
+    },
+    {
+      "bbox": [
+        308.5,
+        649.2019653320312,
+        538.079833984375,
+        691.0281372070312
+      ],
+      "block_id": "page-0534-block-0026",
+      "order": 26,
+      "text": "distincts (chacun ayant ses modalités constantes et particulières de\nperception, de pensée et de relation concernant l’environnement et\nsoi-même).\nB. Au moins deux de ces identités ou « états de personnalité » prennent\n",
+      "text_sha256": "56ee5c2631a1d3053763b2e16a4ea7c3ac5e6389a76d043373834c8a0b2b00eb"
+    },
+    {
+      "bbox": [
+        320.5,
+        691.2019653320312,
+        477.2264709472656,
+        701.0281372070312
+      ],
+      "block_id": "page-0534-block-0027",
+      "order": 27,
+      "text": "tour à tour le contrôle du comportement du sujet.\n",
+      "text_sha256": "433b00515ab86ab1e77f74833be2e97eff39a157f0007d9adf156927f7d29dd9"
+    },
+    {
+      "bbox": [
+        54.25,
+        375.43682861328125,
+        295.20703125,
+        391.57940673828125
+      ],
+      "block_id": "page-0534-block-0028",
+      "order": 28,
+      "text": "24.3.3 Trouble dissociatif de l’identité (TDI)\n",
+      "text_sha256": "98febf7d0e8dae8f6028e70f02d53581613185d819630c569535e26b3e94eeed"
+    },
+    {
+      "bbox": [
+        54.25,
+        394.91583251953125,
+        297.64111328125,
+        577.9085083007812
+      ],
+      "block_id": "page-0534-block-0029",
+      "order": 29,
+      "text": "Les données sont très variables selon les populations étudiées,\nmais elles se révèlent assez constantes sur le plan international.\nUn taux conservateur serait d’environ 0,7 à 1 % dans la population\ngénérale (Akyüz & al., 1999 ; Sar & al., 2007 ; Ross, 1991). De son\ncôté, l’ISSTD propose un taux de 1 à 3 % (2011), alors que le DSM-5\n(APA, 2015) retient une prévalence annuelle de 1,5 % (H : 1,6 %,\nF : 1,4 %). Chez les patients psychiatriques hospitalisés, le taux\nvarie de 0,9 à 5,4 % (Friedl & al., 2000, Pays-Bas ; Gast & al., 2001,\nAllemagne ; Modestin & al., 1996, Suisse ; Rifkin & al., 1998 ; Saxe\n& al., 1993, États-Unis ; Ross, 1997, Canada ; Tutkun & al., 1998,\nTurquie ; Xiao & al., 2006, Chine ). Ce taux serait d’environ 6 à\n8 % chez les patients psychiatriques en suivi externe et dans les\nressources pour le traitement de l’alcoolisme et des toxicomanies\n(Foote & al., 2006, États-Unis ; Tezcan & al., 2003, Turquie). La\nrépartition selon le sexe demeure à préciser. Classiquement, on\névaluait le ratio à 5 à 9 femmes pour 1 homme, cependant des\n",
+      "text_sha256": "def8c622f32975dae53f5ee7901ca6df750e5deb1ecda0ab7323b1d3f1c0138c"
+    },
+    {
+      "bbox": [
+        312.25,
+        377.0658264160156,
+        555.2745361328125,
+        468.20849609375
+      ],
+      "block_id": "page-0534-block-0030",
+      "order": 30,
+      "text": "données plus récentes (H=F ; APA, 2015) laissent penser à un\nbiais de sélection (les femmes seraient surreprésentées dans les\nsystèmes de santé, tandis que les hommes le seraient dans\nles systèmes de la justice), car on n’observe pas de telles divergences\ndans les données portant sur les populations générales et les\npopulations d’enfants et d’adolescents. Une prépondérance de\nfemmes est probable. Les critères diagnostiques du TDI sont\nmentionnés dans le tableau 24.3.\n",
+      "text_sha256": "db8ccabc66f01047cd306e83ea07176701b37c838fed9bb6563ed5f8b63bc436"
+    },
+    {
+      "bbox": [
+        312.25,
+        478.7868347167969,
+        533.2914428710938,
+        494.9294128417969
+      ],
+      "block_id": "page-0534-block-0031",
+      "order": 31,
+      "text": "24.3.4 Autre trouble dissociatif spécié\n",
+      "text_sha256": "05d26f0240732ccc07acb0fe5ed0b3ea581d7867cd3989fe591040a58943d888"
+    },
+    {
+      "bbox": [
+        312.25,
+        498.2658386230469,
+        555.3175048828125,
+        577.9085083007812
+      ],
+      "block_id": "page-0534-block-0032",
+      "order": 32,
+      "text": "Il s’agit d’une nouvelle catégorie proposée par le DSM-5 (voir\nl’encadré 24.1). La prévalence de la catégorie diagnostique pré-\ncédente (trouble dissociatif non spécié) du DSM-IV (voir le\ntableau 24.4) était inconnue. Son utilisation apparaissait dispro-\nportionnée (Dell & O’Neil, 2009). À noter que les modications\nrécentes apportées aux critères diagnostiques au DSM-5 devraient\naccroître la prévalence du TDI.\n",
+      "text_sha256": "1e51da7db8f57a88e05ac0be1ab2a07bec699c8b32661165f0472172a7946729"
+    },
+    {
+      "bbox": [
+        358.1500244140625,
+        41.40229415893555,
+        383.8342590332031,
+        53.37006759643555
+      ],
+      "block_id": "page-0534-block-0033",
+      "order": 33,
+      "text": "(suite)\n",
+      "text_sha256": "c684d6dbcdfd50f0ada227f799b5c0fb30e817ac3da61b4cbf208decde7f907b"
+    }
+  ],
+  "coordinates_sha256": "37739979664f5f0540fb9d0fac3cd0e0d444ac4ee528ef15c70225a5e46036ef",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0534",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 24\nDissociations\n517\nTABLEAU 24.2 Critères diagnostiques de dépersonnalisation/déréalisation\nDSM-5\nDSM-IV-TR\n300.6 (F48.1) Dépersonnalisation/déréalisation\nTrouble de dépersonnalisation\nB. Pendant les expériences de dépersonnalisation ou de déréalisation,\nl’appréciation de la réalité demeure intacte.\nB. Pendant l’expérience de dépersonnalisation, l’appréciation de la réalité\ndemeure intacte.\nC. Les symptômes sont à l’origine d’une détresse cliniquement signica-\ntive ou d’une altération du fonctionnement social, professionnel ou dans\nd’autres domaines importants.\nC. La dépersonnalisation est à l’origine d’une souffrance cliniquement\nsignicative ou d’une altération du fonctionnement social, professionnel\nou dans d’autres domaines importants.\nD. La perturbation n’est pas imputable aux effets physiologiques d’une\nsubstance (p. ex. une drogue donnant lieu à un abus, un médicament)\nou à une autre affection médicale (p. ex. des crises comitiales).\nD. L’expérience de dépersonnalisation n’est pas due aux effets physio-\nlogiques directs d’une substance (p. ex., une substance donnant lieu\nà abus, un médicament) ou d’une affection médicale générale (p. ex.,\nl’épilepsie temporale).\nE. La perturbation n’est pas mieux expliquée par un autre trouble mental,\ncomme :\n•\nune schizophrénie,\n•\nun trouble panique,\n•\nun trouble dépressif caractérisé,\n•\nun trouble stress aigu,\n•\nun trouble stress post-traumatique,\n•\nou un autre trouble dissociatif.\nD. L’expérience de dépersonnalisation ne survient pas exclusivement au\ncours de l’évolution d’un autre trouble mental, comme :\n•\nla schizophrénie,\n•\nle trouble panique,\n•\nl’état de stress aigu,\n•\nou un autre trouble dissociatif.\nSources : APA (2015), p. 358-359 ; APA (2004), p. 614.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris,\n2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation, DSM-IV-TR - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\nTABLEAU 24.3 Critères diagnostiques du trouble dissociatif de l’identité\nDSM-5\nDSM-IV-TR\n300.14 (F44.81) Trouble dissociatif de l’identité\nTrouble dissociatif de l’identité (auparavant personnalité multiple)\nA. Perturbation de l’identité caractérisée par deux ou plusieurs états de per-\nsonnalité distincts, ce qui peut être décrit dans certaines cultures comme\nune expérience de possession. La perturbation de l’identité implique une\ndiscontinuité marquée du sens de soi et de l’agentivité, accompagnée\nd’altérations, en rapport avec celle-ci, de l’affect, du comportement, de\nla conscience, de la mémoire, de la perception, de la cognition et/ou du\nfonctionnement sensorimoteur. Ces signes et ces symptômes peuvent\nêtre observés par les autres ou bien rapportés par le sujet lui-même.\nA. Présence de deux ou plusieurs identités ou « états de personnalité »\ndistincts (chacun ayant ses modalités constantes et particulières de\nperception, de pensée et de relation concernant l’environnement et\nsoi-même).\nB. Au moins deux de ces identités ou « états de personnalité » prennent\ntour à tour le contrôle du comportement du sujet.\n24.3.3 Trouble dissociatif de l’identité (TDI)\nLes données sont très variables selon les populations étudiées,\nmais elles se révèlent assez constantes sur le plan international.\nUn taux conservateur serait d’environ 0,7 à 1 % dans la population\ngénérale (Akyüz & al., 1999 ; Sar & al., 2007 ; Ross, 1991). De son\ncôté, l’ISSTD propose un taux de 1 à 3 % (2011), alors que le DSM-5\n(APA, 2015) retient une prévalence annuelle de 1,5 % (H : 1,6 %,\nF : 1,4 %). Chez les patients psychiatriques hospitalisés, le taux\nvarie de 0,9 à 5,4 % (Friedl & al., 2000, Pays-Bas ; Gast & al., 2001,\nAllemagne ; Modestin & al., 1996, Suisse ; Rifkin & al., 1998 ; Saxe\n& al., 1993, États-Unis ; Ross, 1997, Canada ; Tutkun & al., 1998,\nTurquie ; Xiao & al., 2006, Chine ). Ce taux serait d’environ 6 à\n8 % chez les patients psychiatriques en suivi externe et dans les\nressources pour le traitement de l’alcoolisme et des toxicomanies\n(Foote & al., 2006, États-Unis ; Tezcan & al., 2003, Turquie). La\nrépartition selon le sexe demeure à préciser. Classiquement, on\névaluait le ratio à 5 à 9 femmes pour 1 homme, cependant des\ndonnées plus récentes (H=F ; APA, 2015) laissent penser à un\nbiais de sélection (les femmes seraient surreprésentées dans les\nsystèmes de santé, tandis que les hommes le seraient dans\nles systèmes de la justice), car on n’observe pas de telles divergences\ndans les données portant sur les populations générales et les\npopulations d’enfants et d’adolescents. Une prépondérance de\nfemmes est probable. Les critères diagnostiques du TDI sont\nmentionnés dans le tableau 24.3.\n24.3.4 Autre trouble dissociatif spécié\nIl s’agit d’une nouvelle catégorie proposée par le DSM-5 (voir\nl’encadré 24.1). La prévalence de la catégorie diagnostique pré-\ncédente (trouble dissociatif non spécié) du DSM-IV (voir le\ntableau 24.4) était inconnue. Son utilisation apparaissait dispro-\nportionnée (Dell & O’Neil, 2009). À noter que les modications\nrécentes apportées aux critères diagnostiques au DSM-5 devraient\naccroître la prévalence du TDI.\n(suite)\n",
+  "raw_text_sha256": "b4bec4df2fdedd937ee716c7f1cf427e237cbc0845c4da8d4b925f577be8c1d4",
+  "source_page_display": 535,
+  "source_page_index": 534
+}

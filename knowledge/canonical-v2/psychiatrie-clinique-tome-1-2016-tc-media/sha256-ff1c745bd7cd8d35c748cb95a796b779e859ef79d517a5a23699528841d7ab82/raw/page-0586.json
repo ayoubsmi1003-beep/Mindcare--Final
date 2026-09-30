@@ -1,0 +1,148 @@
+{
+  "block_sequence_sha256": "bf2565b6e3e78bc9bf386d978069d34437b3e24d5c1350af222c476536d476d7",
+  "blocks": [
+    {
+      "bbox": [
+        381.75,
+        747.525390625,
+        555.0,
+        758.8193359375
+      ],
+      "block_id": "page-0586-block-0001",
+      "order": 1,
+      "text": "Chapitre 26\nDouleur chronique\n569\n",
+      "text_sha256": "92bdbb32582d5d2182e0aaa67e762f5a798e9bcff3ab7f226a24a4365db1209e"
+    },
+    {
+      "bbox": [
+        56.35000228881836,
+        41.352294921875,
+        286.12054443359375,
+        53.320068359375
+      ],
+      "block_id": "page-0586-block-0002",
+      "order": 2,
+      "text": "TABLEAU 26.9\nCritères diagnostiques de la bromyalgie\n",
+      "text_sha256": "4e1342286fc89873cbd5073b71c3796a7787d85d5601d286293f28f956702023"
+    },
+    {
+      "bbox": [
+        89.20000457763672,
+        58.27412414550781,
+        458.3899841308594,
+        81.14238739013672
+      ],
+      "block_id": "page-0586-block-0003",
+      "order": 3,
+      "text": "ACR (2010)\nACR (1990)\nIndex de douleur diffuse (Widespread pain index, WPI)\nDouleur diffuse\n",
+      "text_sha256": "e836ca4ffbaff724a21611e5b1b5d3d09dd9542b5a51b65e0ab2dbdfffa461a9"
+    },
+    {
+      "bbox": [
+        58.25,
+        86.6519546508789,
+        276.0888366699219,
+        117.4781265258789
+      ],
+      "block_id": "page-0586-block-0004",
+      "order": 4,
+      "text": "Noter le nombre de régions affectées par la douleur dans la dernière\nsemaine.\nCes 12 régions incluent\n",
+      "text_sha256": "6a20fbe73e011f367fe67b67a751ed56ca4a66d1aa4c4bf58d308fff43e73dfa"
+    },
+    {
+      "bbox": [
+        58.25,
+        118.6519546508789,
+        287.0165100097656,
+        270.4781188964844
+      ],
+      "block_id": "page-0586-block-0005",
+      "order": 5,
+      "text": "1. la mâchoire\n2. le cou\n3. la ceinture scapulaire (épaule)\n4. le haut du bras\n5. l’avant-bras\n6. le thorax\n7. l’abdomen\n8. le haut du dos\n9. le bas du dos\n10. la hanche (fesse, trochanter)\n11. le haut de la jambe\n12. le bas de la jambe\ntoutes ces régions doivent être évaluées bilatéralement, provoquant une\ndouleur diffuse ou localisée\n",
+      "text_sha256": "a95114aff810b029cbd3f8155ddccd384a16cf9a15c0bac372c23fd1320ee894"
+    },
+    {
+      "bbox": [
+        313.75,
+        86.6519546508789,
+        548.1317749023438,
+        280.4781188964844
+      ],
+      "block_id": "page-0586-block-0006",
+      "order": 6,
+      "text": "Douleur localisée\n• au côté droit/gauche du corps,\n• au-dessus/au-dessous de la taille.\nDe plus, une douleur squelettique axiale (rachis cervical, thoracique ou\nlombaire) doit être présente.\nPoints sensibles\nLa douleur, lors de la palpation (4 kg/cm² appliqués pendant 4 secondes),\ndoit être présente à au moins 11 des 18 points douloureux spéciques\nbilatéralement :\n• occiput\n• rachis cervical inférieur\n• trapèze\n• sus-épineux\n• deuxième côte\n• épicondyle (coude)\n• muscle fessier\n• grand trochanter (hanche)\n• genou interne\n",
+      "text_sha256": "6558b5e4261e33aa48a638bde3fde3f63551ac3ccf26f5ee0687bd7026c0e2c8"
+    },
+    {
+      "bbox": [
+        313.75,
+        288.9728698730469,
+        550.3460693359375,
+        339.8781433105469
+      ],
+      "block_id": "page-0586-block-0007",
+      "order": 7,
+      "text": "Diagnostic\nLes deux critères doivent être présents. La douleur diffuse est présente\ndepuis au moins trois mois. La présence d’une autre affection rhumatis-\nmale (arthrose, polyarthrite rhumatismale, lupus) n’exclut pas le diagnostic\nde bromyalgie.\n",
+      "text_sha256": "a446694c1c651516a55d4feba7e2b59c4935f01d8e88574cafbfecef4cf45672"
+    },
+    {
+      "bbox": [
+        58.25,
+        348.4228515625,
+        295.2800598144531,
+        552.328125
+      ],
+      "block_id": "page-0586-block-0008",
+      "order": 8,
+      "text": "Échelle graduée des symptômes (Symptoms severity, SS)\n1. Fatigue\n2. Sommeil non réparateur\n3. Symptômes cognitifs (p.ex. mémoire de travail, mémoire de reconnais-\nsance, connaissance verbale, anxiété, dépression)\nPour chacun de ces trois symptômes, indiquer l’intensité dans la dernière\nsemaine en utilisant l’échelle suivante\n0 = aucun problème\n1 = léger problème, généralement intermittent\n2 = problème modéré ou considérable, fréquent et/ou à un niveau modéré\n3 = problème grave, envahissant, continu, interfère avec le bien-être\nquotidiennement\nPour les symptômes somatiques généraux dans les 12 régions, indiquer\nl’intensité selon l’échelle suivante :\n0 = aucun symptôme\n1 = quelques symptômes\n2 = un nombre modéré de symptômes\n3 = beaucoup de symptômes\nCote totale entre 0 et 12.\n",
+      "text_sha256": "70a52c8643f0fd30eaca1c9f0c4c44c43394c852f16c4a729caec3a8ab74b313"
+    },
+    {
+      "bbox": [
+        58.25,
+        560.8228759765625,
+        293.2095642089844,
+        634.7281494140625
+      ],
+      "block_id": "page-0586-block-0009",
+      "order": 9,
+      "text": "Critères diagnostiques\nUn patient répond aux critères diagnostiques de la bromyalgie si les trois\nconditions suivantes sont présentes :\n1. WPI ≥ 7/19 et Cote totale SS ≥ 5 ou WPI = 3–6 et Cote totale SS ≥ 9\n2. Les symptômes sont présents et au même degré depuis au moins trois\nmois.\n3. La douleur n’est pas mieux expliquée par une autre affection médicale.\n",
+      "text_sha256": "20799490297e318a199eb5efbdacdb179d0f97c29108ff850cf450b18b40280a"
+    },
+    {
+      "bbox": [
+        58.25,
+        643.2728881835938,
+        305.5753173828125,
+        707.1781616210938
+      ],
+      "block_id": "page-0586-block-0010",
+      "order": 10,
+      "text": "Critères modiés\n1. Wide spread index (WPI) (voir ci-dessus)\n2. Échelle Symtoms severity (SS) (voir ci-dessus, mais sans symptômes\nsomatiques)\n3. Présence de douleur abdominale, dépression, céphalées (oui = 1, non = 0)\nCote totale (WPI + SS + symptômes associés) entre 0 et 31.\n",
+      "text_sha256": "ce23110ab359392f6a630d5ac20dbe3e091c5fa87cfd8373a11aac290d01e12d"
+    },
+    {
+      "bbox": [
+        54.25,
+        715.9406127929688,
+        219.70974731445312,
+        724.808837890625
+      ],
+      "block_id": "page-0586-block-0011",
+      "order": 11,
+      "text": "Source : American College of Rheumatology (1990, 2010).\n",
+      "text_sha256": "b236639d225636ea0cbd65fa63961ebb6c90f717f8162a53f5c5fe78fa5c73da"
+    }
+  ],
+  "coordinates_sha256": "27415ec20f11153a10303b23fda49845df6b0b1f39691026cf74cc6f42555f4f",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0586",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 26\nDouleur chronique\n569\nTABLEAU 26.9\nCritères diagnostiques de la bromyalgie\nACR (2010)\nACR (1990)\nIndex de douleur diffuse (Widespread pain index, WPI)\nDouleur diffuse\nNoter le nombre de régions affectées par la douleur dans la dernière\nsemaine.\nCes 12 régions incluent\n1. la mâchoire\n2. le cou\n3. la ceinture scapulaire (épaule)\n4. le haut du bras\n5. l’avant-bras\n6. le thorax\n7. l’abdomen\n8. le haut du dos\n9. le bas du dos\n10. la hanche (fesse, trochanter)\n11. le haut de la jambe\n12. le bas de la jambe\ntoutes ces régions doivent être évaluées bilatéralement, provoquant une\ndouleur diffuse ou localisée\nDouleur localisée\n• au côté droit/gauche du corps,\n• au-dessus/au-dessous de la taille.\nDe plus, une douleur squelettique axiale (rachis cervical, thoracique ou\nlombaire) doit être présente.\nPoints sensibles\nLa douleur, lors de la palpation (4 kg/cm² appliqués pendant 4 secondes),\ndoit être présente à au moins 11 des 18 points douloureux spéciques\nbilatéralement :\n• occiput\n• rachis cervical inférieur\n• trapèze\n• sus-épineux\n• deuxième côte\n• épicondyle (coude)\n• muscle fessier\n• grand trochanter (hanche)\n• genou interne\nDiagnostic\nLes deux critères doivent être présents. La douleur diffuse est présente\ndepuis au moins trois mois. La présence d’une autre affection rhumatis-\nmale (arthrose, polyarthrite rhumatismale, lupus) n’exclut pas le diagnostic\nde bromyalgie.\nÉchelle graduée des symptômes (Symptoms severity, SS)\n1. Fatigue\n2. Sommeil non réparateur\n3. Symptômes cognitifs (p.ex. mémoire de travail, mémoire de reconnais-\nsance, connaissance verbale, anxiété, dépression)\nPour chacun de ces trois symptômes, indiquer l’intensité dans la dernière\nsemaine en utilisant l’échelle suivante\n0 = aucun problème\n1 = léger problème, généralement intermittent\n2 = problème modéré ou considérable, fréquent et/ou à un niveau modéré\n3 = problème grave, envahissant, continu, interfère avec le bien-être\nquotidiennement\nPour les symptômes somatiques généraux dans les 12 régions, indiquer\nl’intensité selon l’échelle suivante :\n0 = aucun symptôme\n1 = quelques symptômes\n2 = un nombre modéré de symptômes\n3 = beaucoup de symptômes\nCote totale entre 0 et 12.\nCritères diagnostiques\nUn patient répond aux critères diagnostiques de la bromyalgie si les trois\nconditions suivantes sont présentes :\n1. WPI ≥ 7/19 et Cote totale SS ≥ 5 ou WPI = 3–6 et Cote totale SS ≥ 9\n2. Les symptômes sont présents et au même degré depuis au moins trois\nmois.\n3. La douleur n’est pas mieux expliquée par une autre affection médicale.\nCritères modiés\n1. Wide spread index (WPI) (voir ci-dessus)\n2. Échelle Symtoms severity (SS) (voir ci-dessus, mais sans symptômes\nsomatiques)\n3. Présence de douleur abdominale, dépression, céphalées (oui = 1, non = 0)\nCote totale (WPI + SS + symptômes associés) entre 0 et 31.\nSource : American College of Rheumatology (1990, 2010).\n",
+  "raw_text_sha256": "ae6b1db31c7fd35e23e5762b7c220abd15f9600719b35899d51b6511b36792c2",
+  "source_page_display": 587,
+  "source_page_index": 586
+}

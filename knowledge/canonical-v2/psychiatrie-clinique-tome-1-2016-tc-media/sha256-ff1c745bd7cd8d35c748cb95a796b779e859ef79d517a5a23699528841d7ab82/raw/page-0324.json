@@ -1,0 +1,280 @@
+{
+  "block_sequence_sha256": "a2adfedfa8351daa6dcdd9cf4ba3908e2c1a205b38dceadf695d580e57ba3573",
+  "blocks": [
+    {
+      "bbox": [
+        346.6000061035156,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0324-block-0001",
+      "order": 1,
+      "text": "Chapitre 15\nTroubles psychotiques brefs\n307\n",
+      "text_sha256": "5bc216ef1ff258f1cc24d3c3c8b5a2ccf9d64790e3664a6fba0ef4919f318d64"
+    },
+    {
+      "bbox": [
+        61.10000228881836,
+        526.4931640625,
+        236.24407958984375,
+        545.6689453125
+      ],
+      "block_id": "page-0324-block-0002",
+      "order": 2,
+      "text": "15.5\nVariété diagnostique\n",
+      "text_sha256": "a3e20720b942ec8ca0f088ca5ce8011fe1f1fcefab9faaae76829fe83db86cd7"
+    },
+    {
+      "bbox": [
+        54.10000228881836,
+        559.4658203125,
+        296.8721923828125,
+        581.45849609375
+      ],
+      "block_id": "page-0324-block-0003",
+      "order": 3,
+      "text": "Le DSM-5 propose de spécier s’il y a un facteur de stress marqué\nou de la catatonie et d’évaluer le niveau de sévérité.\n",
+      "text_sha256": "e5bae571edfcae6e6883c04400d646d909743007025a1370a5c11238adf98141"
+    },
+    {
+      "bbox": [
+        54.10000228881836,
+        582.4658203125,
+        297.4015808105469,
+        725.45849609375
+      ],
+      "block_id": "page-0324-block-0004",
+      "order": 4,
+      "text": "Le DSM-IV considérait seulement la présence ou l’absence du\nsymptôme. Dans le DSM-5, les diérentes dimensions sympto-\nmatiques sont maintenant énumérées de façon détaillée an de\nmieux décrire l’hétérogénéité des symptômes (types et sévérité)\nentre les individus, de quantier la sévérité de la présentation et\naussi de mieux orienter le plan de traitement et surveiller son\necacité. Le tableau 17.2 illustre les dimensions par lesquelles\nle DSM-5 souhaite fournir une information additionnelle qui\npermettra un meilleur suivi quant à:\n• l’évaluation de la sévérité ;\n• la planication du traitement ;\n• les résultats du traitement.\n",
+      "text_sha256": "d59efd235aa72dc30c5c2702c5170b7817c7b53432563d475947f0e0792b11f3"
+    },
+    {
+      "bbox": [
+        319.0,
+        526.4931640625,
+        428.59698486328125,
+        545.6689453125
+      ],
+      "block_id": "page-0324-block-0005",
+      "order": 5,
+      "text": "15.6\nÉvaluation\n",
+      "text_sha256": "f69764bb2b8bd2e1149978dd31b885b2859b614f6b44ddf88902f798dd5f4a11"
+    },
+    {
+      "bbox": [
+        312.0,
+        559.9158325195312,
+        555.1943969726562,
+        665.8085327148438
+      ],
+      "block_id": "page-0324-block-0006",
+      "order": 6,
+      "text": "Bien que la présentation clinique permette aisément d’identier la\npsychose aiguë (délires, hallucinations, discours et comportement\ndésorganisés), la collaboration du patient en situation d’urgence\nlimite parfois la collecte d’informations. L’entourage peut alors\nêtre mis à contribution pour fournir les données manquantes.\nLes antécédents psychiatriques et médicaux, les habitudes de\nconsommation de substances, la prise de médicaments, l’expo-\nsition à des agents toxiques peuvent déjà orienter vers l’étiologie\ndu trouble psychotique bref.\n",
+      "text_sha256": "9aad07c38eae0f243682bacb66fc516c1d945ca29095c573e7d819e6f5c58912"
+    },
+    {
+      "bbox": [
+        312.0,
+        667.2658081054688,
+        555.3765258789062,
+        725.45849609375
+      ],
+      "block_id": "page-0324-block-0007",
+      "order": 7,
+      "text": "À l’examen, il faut porter une attention particulière au sen-\nsorium, aux fonctions cognitives (p. ex., l’orientation temporos-\npatiale, la mémoire, la concentration, etc.), ainsi qu’à tout signe\nphysique évoquant un problème médical ou une intoxication\n(p. ex., mydriase, démarche ataxique, etc.). D’ailleurs, outre\n",
+      "text_sha256": "798700010d4384c68b75d0db884d13f3f82a815f63cc7c42f16cf4d2c94939eb"
+    },
+    {
+      "bbox": [
+        56.0,
+        41.002296447753906,
+        321.8271789550781,
+        54.02006912231445
+      ],
+      "block_id": "page-0324-block-0008",
+      "order": 8,
+      "text": "TABLEAU 15.2 Critères diagnostiques du trouble psychotique bref\n",
+      "text_sha256": "77f21434ea080a368531db14f3e82797a890bf7065884ee96238e90b8774ae02"
+    },
+    {
+      "bbox": [
+        58.25,
+        57.17412567138672,
+        550.349365234375,
+        93.37812805175781
+      ],
+      "block_id": "page-0324-block-0009",
+      "order": 9,
+      "text": "DSM-5\nDSM-IV-TR\n298.8 (F23) Trouble psychotique bref\n298.8 (F23.8X) Trouble psychotique bref\nA. Présence d’un (ou plus) des symptômes suivants. Au moins l’un des symptômes (1), (2) ou (3) doit\n",
+      "text_sha256": "420a52d69b86b292c1dacece84262ae7e2ff3ab52ea8c5658f0f6268a25b1dd0"
+    },
+    {
+      "bbox": [
+        58.25,
+        93.55195617675781,
+        356.54473876953125,
+        158.4923858642578
+      ],
+      "block_id": "page-0324-block-0010",
+      "order": 10,
+      "text": "être présent :\n1. Idées délirantes.\n2. Hallucinations.\n3. Discours désorganisé (p. ex. déraillements fréquents ou incohérence).\n4. Comportement grossièrement désorganisé ou catatonique.\nN.B.Ne pas inclure un symptôme s’il s’agit d’une modalité de réaction culturellement admise.\n",
+      "text_sha256": "cf8379318cd9bcc76fd445048069603bf7ac26d209d29e9ab4fb6728f8419707"
+    },
+    {
+      "bbox": [
+        412.75,
+        83.55195617675781,
+        469.8548278808594,
+        93.37812805175781
+      ],
+      "block_id": "page-0324-block-0011",
+      "order": 11,
+      "text": "A. Idem à DSM-5.\n",
+      "text_sha256": "17d5989bc13bdc24966ef82f371e7b88392c4ebe1bd8cdcdcd635723e9a91a6c"
+    },
+    {
+      "bbox": [
+        58.25,
+        163.001953125,
+        382.8168640136719,
+        172.828125
+      ],
+      "block_id": "page-0324-block-0012",
+      "order": 12,
+      "text": "B. Au cours d’un épisode, la perturbation persiste au moins un jour mais moins d’un mois, avec retour\n",
+      "text_sha256": "fc4fa884fd24d467cc963170f87b1237050c67026a03a6b3cc7410effc7cefd2"
+    },
+    {
+      "bbox": [
+        66.4000015258789,
+        173.001953125,
+        226.75576782226562,
+        182.828125
+      ],
+      "block_id": "page-0324-block-0013",
+      "order": 13,
+      "text": "complet au niveau de fonctionnement prémorbide.\n",
+      "text_sha256": "9b74eb74506ba444295f54cc8fe79fc372376820953d3994b1035a7cc8abda48"
+    },
+    {
+      "bbox": [
+        412.75,
+        163.001953125,
+        469.8548278808594,
+        172.828125
+      ],
+      "block_id": "page-0324-block-0014",
+      "order": 14,
+      "text": "B. Idem à DSM-5.\n",
+      "text_sha256": "703f62df8ee835b259dd8e94c2103cd979d0ac69c184c555aa261a5bff070302"
+    },
+    {
+      "bbox": [
+        58.25,
+        187.40196228027344,
+        393.6470031738281,
+        197.22813415527344
+      ],
+      "block_id": "page-0324-block-0015",
+      "order": 15,
+      "text": "C. La perturbation n’est pas mieux expliquée par un trouble dépressif caractérisé ou bipolaire avec carac-\n",
+      "text_sha256": "b52745d18a3dd41b0f277bf081e9c278a451336ffa180608caff581a586dead0"
+    },
+    {
+      "bbox": [
+        66.9000015258789,
+        197.40196228027344,
+        399.07391357421875,
+        227.22813415527344
+      ],
+      "block_id": "page-0324-block-0016",
+      "order": 16,
+      "text": "téristiques psychotiques, ou un autre trouble psychotique comme une schizophrénie ou une catatonie, et\nn’est pas due aux effets physiologiques directs d’une substance (p. ex. une substance donnant lieu à un\nabus, un médicament) ou d’une affection médicale générale.\n",
+      "text_sha256": "bd0807a77fa8bdb712851257069a03f3631b1fbb364f3b5766d2cf37d030a1c3"
+    },
+    {
+      "bbox": [
+        412.75,
+        187.40196228027344,
+        470.0048828125,
+        197.22813415527344
+      ],
+      "block_id": "page-0324-block-0017",
+      "order": 17,
+      "text": "C. Idem à DSM-5.\n",
+      "text_sha256": "e3115c8f08f85dfc1a8c901e597d6628d9cc927dde450ccede1ca1ec3dd04b8e"
+    },
+    {
+      "bbox": [
+        58.25,
+        231.85195922851562,
+        405.09405517578125,
+        324.6781311035156
+      ],
+      "block_id": "page-0324-block-0018",
+      "order": 18,
+      "text": "Spécier si :\nAvec facteur(s) de stress marqué(s) (psychose réactionnelle brève) : si les symptômes surviennent en\nréaction à des événements qui, isolément ou réunis, produiraient un stress marqué chez la plupart des sujets\ndans des circonstances similaires et dans la même culture.\nSans facteur(s) de stress marqué(s) : Si les symptômes ne surviennent pas en réaction à des événements\nqui, isolément ou réunis, produiraient un stress marqué chez la plupart des sujets dans des circonstances\nsimilaires et dans la même culture.\nAvec début lors du post-partum : Si les symptômes surviennent durant la grossesse ou dans\nles 4 semaines du post-partum.\n",
+      "text_sha256": "084cae327f2e45037f6a6b50130b73dc76eeb80f7a99bf9f41b60fe7dd23c687"
+    },
+    {
+      "bbox": [
+        412.75,
+        231.85195922851562,
+        461.5480041503906,
+        241.67813110351562
+      ],
+      "block_id": "page-0324-block-0019",
+      "order": 19,
+      "text": "Idem à DSM-5.\n",
+      "text_sha256": "73e2b1c81f4b0cae397bef13680b1ec0f40f117881c7e4acde37a2d30a373dea"
+    },
+    {
+      "bbox": [
+        58.25,
+        329.251953125,
+        394.01885986328125,
+        360.078125
+      ],
+      "block_id": "page-0324-block-0020",
+      "order": 20,
+      "text": "Spécier si :\nAvec catatonie (pour la dénition, se référer aux critères de catatonie associée à un autre trouble mental)\n(voir le tableau 28.10)\n",
+      "text_sha256": "f9928c15a7ac87211b78f02202afe07c07df5bd9c216d845ad64edcfabbd0e3c"
+    },
+    {
+      "bbox": [
+        58.25,
+        364.70196533203125,
+        399.58905029296875,
+        446.52813720703125
+      ],
+      "block_id": "page-0324-block-0021",
+      "order": 21,
+      "text": "Spécier la sévérité actuelle :\nLa sévérité est cotée par une évaluation quantitative des symptômes psychotiques primaires, dont les idées\ndélirantes, les hallucinations, la désorganisation du discours, les comportements psychomoteurs anormaux\net les symptômes négatifs. Chacun de ces symptômes peut être coté pour sa sévérité actuelle (en prenant\nen compte l’intensité la plus sévère au cours des 7 derniers jours) sur une échelle de 5 points, allant de 0\n(absent) à 4 (présent et grave). […] (voir le tableau 17.2)\nN.B. Un diagnostic de trouble psychotique bref peut être posé sans utiliser cette spécication de la\nsévérité.\n",
+      "text_sha256": "8083ecf457339a110341ab86e18334258ba45c6fb206867a91e47d0a7bb92f05"
+    },
+    {
+      "bbox": [
+        54.0,
+        453.59063720703125,
+        554.455810546875,
+        513.3250122070312
+      ],
+      "block_id": "page-0324-block-0022",
+      "order": 22,
+      "text": "Sources : APA (2015), p. 111 ; APA (2004), p. 384-385.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris,\n2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\n",
+      "text_sha256": "701c9654ee11cb6ca549cfc3f7d3113cbc8b4ec13d4e17db29f11566fa222c92"
+    }
+  ],
+  "coordinates_sha256": "e37c0727c6118576677ab3b179ed5bc57b9b4e027011e5db19477213e29a8bc8",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0324",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 15\nTroubles psychotiques brefs\n307\n15.5\nVariété diagnostique\nLe DSM-5 propose de spécier s’il y a un facteur de stress marqué\nou de la catatonie et d’évaluer le niveau de sévérité.\nLe DSM-IV considérait seulement la présence ou l’absence du\nsymptôme. Dans le DSM-5, les diérentes dimensions sympto-\nmatiques sont maintenant énumérées de façon détaillée an de\nmieux décrire l’hétérogénéité des symptômes (types et sévérité)\nentre les individus, de quantier la sévérité de la présentation et\naussi de mieux orienter le plan de traitement et surveiller son\necacité. Le tableau 17.2 illustre les dimensions par lesquelles\nle DSM-5 souhaite fournir une information additionnelle qui\npermettra un meilleur suivi quant à:\n• l’évaluation de la sévérité ;\n• la planication du traitement ;\n• les résultats du traitement.\n15.6\nÉvaluation\nBien que la présentation clinique permette aisément d’identier la\npsychose aiguë (délires, hallucinations, discours et comportement\ndésorganisés), la collaboration du patient en situation d’urgence\nlimite parfois la collecte d’informations. L’entourage peut alors\nêtre mis à contribution pour fournir les données manquantes.\nLes antécédents psychiatriques et médicaux, les habitudes de\nconsommation de substances, la prise de médicaments, l’expo-\nsition à des agents toxiques peuvent déjà orienter vers l’étiologie\ndu trouble psychotique bref.\nÀ l’examen, il faut porter une attention particulière au sen-\nsorium, aux fonctions cognitives (p. ex., l’orientation temporos-\npatiale, la mémoire, la concentration, etc.), ainsi qu’à tout signe\nphysique évoquant un problème médical ou une intoxication\n(p. ex., mydriase, démarche ataxique, etc.). D’ailleurs, outre\nTABLEAU 15.2 Critères diagnostiques du trouble psychotique bref\nDSM-5\nDSM-IV-TR\n298.8 (F23) Trouble psychotique bref\n298.8 (F23.8X) Trouble psychotique bref\nA. Présence d’un (ou plus) des symptômes suivants. Au moins l’un des symptômes (1), (2) ou (3) doit\nêtre présent :\n1. Idées délirantes.\n2. Hallucinations.\n3. Discours désorganisé (p. ex. déraillements fréquents ou incohérence).\n4. Comportement grossièrement désorganisé ou catatonique.\nN.B.Ne pas inclure un symptôme s’il s’agit d’une modalité de réaction culturellement admise.\nA. Idem à DSM-5.\nB. Au cours d’un épisode, la perturbation persiste au moins un jour mais moins d’un mois, avec retour\ncomplet au niveau de fonctionnement prémorbide.\nB. Idem à DSM-5.\nC. La perturbation n’est pas mieux expliquée par un trouble dépressif caractérisé ou bipolaire avec carac-\ntéristiques psychotiques, ou un autre trouble psychotique comme une schizophrénie ou une catatonie, et\nn’est pas due aux effets physiologiques directs d’une substance (p. ex. une substance donnant lieu à un\nabus, un médicament) ou d’une affection médicale générale.\nC. Idem à DSM-5.\nSpécier si :\nAvec facteur(s) de stress marqué(s) (psychose réactionnelle brève) : si les symptômes surviennent en\nréaction à des événements qui, isolément ou réunis, produiraient un stress marqué chez la plupart des sujets\ndans des circonstances similaires et dans la même culture.\nSans facteur(s) de stress marqué(s) : Si les symptômes ne surviennent pas en réaction à des événements\nqui, isolément ou réunis, produiraient un stress marqué chez la plupart des sujets dans des circonstances\nsimilaires et dans la même culture.\nAvec début lors du post-partum : Si les symptômes surviennent durant la grossesse ou dans\nles 4 semaines du post-partum.\nIdem à DSM-5.\nSpécier si :\nAvec catatonie (pour la dénition, se référer aux critères de catatonie associée à un autre trouble mental)\n(voir le tableau 28.10)\nSpécier la sévérité actuelle :\nLa sévérité est cotée par une évaluation quantitative des symptômes psychotiques primaires, dont les idées\ndélirantes, les hallucinations, la désorganisation du discours, les comportements psychomoteurs anormaux\net les symptômes négatifs. Chacun de ces symptômes peut être coté pour sa sévérité actuelle (en prenant\nen compte l’intensité la plus sévère au cours des 7 derniers jours) sur une échelle de 5 points, allant de 0\n(absent) à 4 (présent et grave). […] (voir le tableau 17.2)\nN.B. Un diagnostic de trouble psychotique bref peut être posé sans utiliser cette spécication de la\nsévérité.\nSources : APA (2015), p. 111 ; APA (2004), p. 384-385.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris,\n2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\n",
+  "raw_text_sha256": "f330caafaa54621b4481798fa7b5b12e1a0aae50b149aae94dab263dca78fcd9",
+  "source_page_display": 325,
+  "source_page_index": 324
+}

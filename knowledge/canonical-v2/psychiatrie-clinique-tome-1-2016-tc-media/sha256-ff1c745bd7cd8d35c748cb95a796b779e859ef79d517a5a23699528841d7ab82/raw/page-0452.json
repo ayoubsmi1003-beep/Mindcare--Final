@@ -1,0 +1,136 @@
+{
+  "block_sequence_sha256": "7c1afe5b3981693e2368ebbfd1bff22026a2bf6bb5319d7cf8b9b6484abc82b5",
+  "blocks": [
+    {
+      "bbox": [
+        317.1499938964844,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0452-block-0001",
+      "order": 1,
+      "text": "Chapitre 20\nTroubles anxieux, panique, phobies\n435\n",
+      "text_sha256": "3a848c6e4b964d36ad40983d5e016c77eaf120259540c353ca2c0949f5a1cd64"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.9658203125,
+        297.5235290527344,
+        178.45849609375
+      ],
+      "block_id": "page-0452-block-0002",
+      "order": 2,
+      "text": "Dans ce contexte, le DSM-5 précise que « la perturbation\nliée au stress […] n’est pas simplement l’exacerbation d’un autre\ntrouble mental préexistant », par exemple d’un trouble anxieux\ndéjà présent avant que survienne l’événement stressant. Les\nsymptômes d’un « trouble de l’adaptation avec anxiété » sont,\nselon le DSM-5, « nervosité, inquiétudes, agitation ou anxiété\nde séparation ». Ils demeurent donc assez ous, à la diérence\ndes symptômes structurés, caractéristiques des troubles anxieux\nauthentiques. De plus, le contenu cognitif de l’anxiété dans le cas\ndes troubles de l’adaptation gravite autour de l’événement stres-\nsant vécu ou de ses conséquences, sans tendance à se généraliser\nà d’autres situations.\n",
+      "text_sha256": "d14f21cd8fe1420e93a1b086193205dae8bcfb43650ef79e1975a6419b271a72"
+    },
+    {
+      "bbox": [
+        54.0,
+        191.0368194580078,
+        184.79632568359375,
+        207.1793975830078
+      ],
+      "block_id": "page-0452-block-0003",
+      "order": 3,
+      "text": "20.6.2 Trouble panique\n",
+      "text_sha256": "c1cafbe2f029cbb5519ec4ac7c147c084ec04fa18fc55c534d7575129bbe2174"
+    },
+    {
+      "bbox": [
+        54.0,
+        210.56582641601562,
+        297.2414245605469,
+        498.15850830078125
+      ],
+      "block_id": "page-0452-block-0004",
+      "order": 4,
+      "text": "Comme déjà mentionné, le caractère spontané et récurrent\ndes attaques de panique est la base du diagnostic différentiel\ndu trouble panique par rapport à tous les autres troubles\nanxieux. L’identification d’attaques de panique nocturnes vient\nconfirmer, sans ambiguïté, le caractère spontané (inattendu)\ndes attaques de panique et, par conséquent, le diagnostic de\ntrouble panique. Le DSM-5 exige qu’au moins une des attaques\nde panique initiales soit suivie d’une période d’un mois ou\nplus d’anxiété anticipatoire quant à la survenue d’autres\nattaques de panique. Cette anxiété anticipatoire ne doit pas\nêtre confondue avec l’anxiété généralisée, où les appréhensions\nconcernent une multitude de situations de la vie de tous les\njours mais ne visent pas spécifiquement l’anticipation d’une\nautre attaque de panique. Dans le cas de l’anxiété générali-\nsée, il peut y avoir des moments de montée d’anxiété imitant\nune attaque de panique paucisymptomatique, mais la nature\ndes inquiétudes est liée surtout au déclencheur situationnel\nconcret et n’est pas dominée par une crainte de mourir ou\nde perdre le contrôle. Cependant, on peut observer chez le\nmême patient un trouble panique en cooccurrence avec une\nanxiété généralisée classique. Dans ces cas, les deux diagnostics\nsont retenus. La présence d’une à deux situations d’évitement\nagoraphobique n’invalide pas le diagnostic de trouble panique\nselon le DSM-5, mais trois ou plus militent en faveur du dia-\ngnostic d’agoraphobie.\n",
+      "text_sha256": "e5f581fe9c2b6d8535d32b6750b26f17f102620b7402989446759343592944c4"
+    },
+    {
+      "bbox": [
+        54.0,
+        499.16583251953125,
+        297.2490234375,
+        625.1585083007812
+      ],
+      "block_id": "page-0452-block-0005",
+      "order": 5,
+      "text": "Des attaques de panique spontanées peuvent aussi survenir au\ncours d’une dépression majeure. Il n’y a pas moyen de distinguer\ncliniquement ce type d’attaques de panique « dépressives » de\ncelles du trouble panique sur une base sémiologique. Cependant,\nles attaques de panique survenant au cours d’une dépression\nmajeure peuvent être de plus longue durée (une heure et plus)\net plus fréquentes au courant d’une même journée. Le diagnostic\ndiérentiel repose surtout sur la présence des symptômes typiques\net caractéristiques de la dépression majeure et son évolution\nrécurrente avec des périodes de rémission sans symptômes\ndépressifs ni anxieux.\n",
+      "text_sha256": "9ea1c31290894b6501e2a67cdd768b8f76e9d1801caa90f76d05b4bfd8862a00"
+    },
+    {
+      "bbox": [
+        54.0,
+        637.73681640625,
+        293.6385803222656,
+        653.87939453125
+      ],
+      "block_id": "page-0452-block-0006",
+      "order": 6,
+      "text": "20.6.3 Agoraphobie et phobies spéciques\n",
+      "text_sha256": "7f69ecef8fb344c4b438388a54326f030d0cc279fcfdbf12ebe6e3eb204fec92"
+    },
+    {
+      "bbox": [
+        54.0,
+        657.2158203125,
+        297.18341064453125,
+        725.45849609375
+      ],
+      "block_id": "page-0452-block-0007",
+      "order": 7,
+      "text": "Au cœur de l’expérience d’évitement agoraphobique existe,\ncomme on l’a déjà mentionné, un « noyau claustrophobique »,\ncar il s’agit de situations ou de lieux d’où « il pourrait être\ndicile de s’échapper ». Dans ce sens, la distinction avec les\nphobies spéciques de type situationnel peut parfois s’avérer\nproblématique. Si le patient évite plus d’un seul type de situation,\n",
+      "text_sha256": "58f2baf0bbddbb9d61b7505ff4331e03e6afbdd43ec57458bda56aadd3e1e16f"
+    },
+    {
+      "bbox": [
+        312.0,
+        40.9658203125,
+        555.3583984375,
+        613.3085327148438
+      ],
+      "block_id": "page-0452-block-0008",
+      "order": 8,
+      "text": "le diagnostic d’agoraphobie prend préséance selon le DSM-5.\nCependant, si l’évitement d’une situation, p. ex., le voyage en\navion est conditionné par la peur d’un écrasement possible et\nnon par la survenue d’une attaque de panique, le diagnostic de\nphobie spécique est privilégié. De la même façon, le contenu\ncognitif peut diérencier l’agoraphobie et l’anxiété de séparation\n– dans ce cas, le patient craint la séparation ou l’éloignement de\nchez lui et non la survenue d’une attaque de panique. De même,\ndans l’anxiété sociale, le vécu cognitif déterminant l’évitement\nest dominé par la peur d’être mal jugé par autrui. Le stress\npost-traumatique se diérencie de l’agoraphobie par le fait que\nles situations redoutées ou évitées ont un lien évident avec les\ncirconstances du traumatisme vécu. Finalement, dans certains\ncas de trouble obsessionnel-compulsif, l’évitement d’apparence\nagoraphobique se produit en réaction des obsessions à contenu\nagressif ou sexuel, par exemple un patient qui ne sort pas seul\nde chez lui par crainte obsessionnelle de tuer des enfants, des\npersonnes âgées ou d’autres personnes vulnérables. Le dia-\ngnostic diérentiel de l’agoraphobie avec la dépression majeure\nn’est pas dicile à faire dans les cas typiques. Cependant, les\ndeux peuvent coexister et les deux diagnostics sont à retenir\nlorsque l’agoraphobie précède l’épisode de dépression majeure\net continue à être présente après la n de cet épisode. Dans\ncertains cas, la dépression majeure peut prendre une apparence\nagoraphobique durant l’épisode dépressif aigu ou lors de la\npériode de convalescence.\nÉtude de cas Une patiente, lors d’un épisode dépressif,\naffirmait être incapable de rester seule chez elle et comme\nsa mère refusait de venir lui tenir compagnie parce qu’elle\nconsidérait cette demande comme un « caprice d’enfant », la\npatiente a fait une tentative de suicide. Lors d’un épisode de\ndépression majeure subséquent, la même patiente éprouvant\nla même détresse insupportable de se retrouver seule chez elle\ns’est présentée à l’hôpital sur le conseil, cette fois, de sa mère.\nMalgré un rétablissement complet et asymptomatique de son\nétat dépressif, à la fin de son hospitalisation, elle continuait à\nprésenter des appréhensions anxieuses à l’idée de vivre seule\nchez elle. Elle a dû tout d’abord aller passer quelques jours\nchez sa mère avant de revenir chez elle et découvrir, à sa plus\ngrande surprise, que le fait de rester seule chez elle ne posait\nplus aucun problème. Une autre patiente atteinte de dépression\nmajeure récurrente en rémission partielle est de retour chez\nelle après une hospitalisation. Cependant, étant incapable de\nsortir seule, elle a appelé une amie pour l’accompagner lors\nde ses sorties telle une vraie agoraphobe. Cette apparente\n« agoraphobie » s’est dissipée au bout de quelques semaines.\nDans ces deux cas, les symptômes d’apparence agoraphobique\nétaient en fait des symptômes dépressifs et non pas une véri-\ntable agoraphobie.\n",
+      "text_sha256": "137a8e6f9487013b45f2b68ca13793b90b2685f0aa55d1c9263890e02886f0c1"
+    },
+    {
+      "bbox": [
+        312.0,
+        625.9368286132812,
+        437.7684020996094,
+        642.0794067382812
+      ],
+      "block_id": "page-0452-block-0009",
+      "order": 9,
+      "text": "20.6.4 Anxiété sociale\n",
+      "text_sha256": "2127606538099be6959895a7f2799dc3d2b2431bcee5b3c232b653d8f333f171"
+    },
+    {
+      "bbox": [
+        312.0,
+        645.4658203125,
+        555.3518676757812,
+        725.45849609375
+      ],
+      "block_id": "page-0452-block-0010",
+      "order": 10,
+      "text": "Avant d’aborder le diagnostic diérentiel de l’anxiété (ou phobie)\nsociale par rapport aux autres troubles anxieux et psychiatriques,\nmentionnons certaines aections médicales susceptibles d’engen-\ndrer une phénoménologie symptomatique et comportementale\nd’allure phobique sociale :\n• l’hyperhidrose (sudation excessive axillaire, palmaire ou au\nfront) peut occasionner des limitations importantes dans les\n",
+      "text_sha256": "f3b91f883430829077d8b0aa2645d8aee21a156bcfe860092c8d6137456b1088"
+    }
+  ],
+  "coordinates_sha256": "3ed8c50a82cf987f7bee6abdb4e3dc9fa8a136428a92316974c61cd14699ea3e",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0452",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 20\nTroubles anxieux, panique, phobies\n435\nDans ce contexte, le DSM-5 précise que « la perturbation\nliée au stress […] n’est pas simplement l’exacerbation d’un autre\ntrouble mental préexistant », par exemple d’un trouble anxieux\ndéjà présent avant que survienne l’événement stressant. Les\nsymptômes d’un « trouble de l’adaptation avec anxiété » sont,\nselon le DSM-5, « nervosité, inquiétudes, agitation ou anxiété\nde séparation ». Ils demeurent donc assez ous, à la diérence\ndes symptômes structurés, caractéristiques des troubles anxieux\nauthentiques. De plus, le contenu cognitif de l’anxiété dans le cas\ndes troubles de l’adaptation gravite autour de l’événement stres-\nsant vécu ou de ses conséquences, sans tendance à se généraliser\nà d’autres situations.\n20.6.2 Trouble panique\nComme déjà mentionné, le caractère spontané et récurrent\ndes attaques de panique est la base du diagnostic différentiel\ndu trouble panique par rapport à tous les autres troubles\nanxieux. L’identification d’attaques de panique nocturnes vient\nconfirmer, sans ambiguïté, le caractère spontané (inattendu)\ndes attaques de panique et, par conséquent, le diagnostic de\ntrouble panique. Le DSM-5 exige qu’au moins une des attaques\nde panique initiales soit suivie d’une période d’un mois ou\nplus d’anxiété anticipatoire quant à la survenue d’autres\nattaques de panique. Cette anxiété anticipatoire ne doit pas\nêtre confondue avec l’anxiété généralisée, où les appréhensions\nconcernent une multitude de situations de la vie de tous les\njours mais ne visent pas spécifiquement l’anticipation d’une\nautre attaque de panique. Dans le cas de l’anxiété générali-\nsée, il peut y avoir des moments de montée d’anxiété imitant\nune attaque de panique paucisymptomatique, mais la nature\ndes inquiétudes est liée surtout au déclencheur situationnel\nconcret et n’est pas dominée par une crainte de mourir ou\nde perdre le contrôle. Cependant, on peut observer chez le\nmême patient un trouble panique en cooccurrence avec une\nanxiété généralisée classique. Dans ces cas, les deux diagnostics\nsont retenus. La présence d’une à deux situations d’évitement\nagoraphobique n’invalide pas le diagnostic de trouble panique\nselon le DSM-5, mais trois ou plus militent en faveur du dia-\ngnostic d’agoraphobie.\nDes attaques de panique spontanées peuvent aussi survenir au\ncours d’une dépression majeure. Il n’y a pas moyen de distinguer\ncliniquement ce type d’attaques de panique « dépressives » de\ncelles du trouble panique sur une base sémiologique. Cependant,\nles attaques de panique survenant au cours d’une dépression\nmajeure peuvent être de plus longue durée (une heure et plus)\net plus fréquentes au courant d’une même journée. Le diagnostic\ndiérentiel repose surtout sur la présence des symptômes typiques\net caractéristiques de la dépression majeure et son évolution\nrécurrente avec des périodes de rémission sans symptômes\ndépressifs ni anxieux.\n20.6.3 Agoraphobie et phobies spéciques\nAu cœur de l’expérience d’évitement agoraphobique existe,\ncomme on l’a déjà mentionné, un « noyau claustrophobique »,\ncar il s’agit de situations ou de lieux d’où « il pourrait être\ndicile de s’échapper ». Dans ce sens, la distinction avec les\nphobies spéciques de type situationnel peut parfois s’avérer\nproblématique. Si le patient évite plus d’un seul type de situation,\nle diagnostic d’agoraphobie prend préséance selon le DSM-5.\nCependant, si l’évitement d’une situation, p. ex., le voyage en\navion est conditionné par la peur d’un écrasement possible et\nnon par la survenue d’une attaque de panique, le diagnostic de\nphobie spécique est privilégié. De la même façon, le contenu\ncognitif peut diérencier l’agoraphobie et l’anxiété de séparation\n– dans ce cas, le patient craint la séparation ou l’éloignement de\nchez lui et non la survenue d’une attaque de panique. De même,\ndans l’anxiété sociale, le vécu cognitif déterminant l’évitement\nest dominé par la peur d’être mal jugé par autrui. Le stress\npost-traumatique se diérencie de l’agoraphobie par le fait que\nles situations redoutées ou évitées ont un lien évident avec les\ncirconstances du traumatisme vécu. Finalement, dans certains\ncas de trouble obsessionnel-compulsif, l’évitement d’apparence\nagoraphobique se produit en réaction des obsessions à contenu\nagressif ou sexuel, par exemple un patient qui ne sort pas seul\nde chez lui par crainte obsessionnelle de tuer des enfants, des\npersonnes âgées ou d’autres personnes vulnérables. Le dia-\ngnostic diérentiel de l’agoraphobie avec la dépression majeure\nn’est pas dicile à faire dans les cas typiques. Cependant, les\ndeux peuvent coexister et les deux diagnostics sont à retenir\nlorsque l’agoraphobie précède l’épisode de dépression majeure\net continue à être présente après la n de cet épisode. Dans\ncertains cas, la dépression majeure peut prendre une apparence\nagoraphobique durant l’épisode dépressif aigu ou lors de la\npériode de convalescence.\nÉtude de cas Une patiente, lors d’un épisode dépressif,\naffirmait être incapable de rester seule chez elle et comme\nsa mère refusait de venir lui tenir compagnie parce qu’elle\nconsidérait cette demande comme un « caprice d’enfant », la\npatiente a fait une tentative de suicide. Lors d’un épisode de\ndépression majeure subséquent, la même patiente éprouvant\nla même détresse insupportable de se retrouver seule chez elle\ns’est présentée à l’hôpital sur le conseil, cette fois, de sa mère.\nMalgré un rétablissement complet et asymptomatique de son\nétat dépressif, à la fin de son hospitalisation, elle continuait à\nprésenter des appréhensions anxieuses à l’idée de vivre seule\nchez elle. Elle a dû tout d’abord aller passer quelques jours\nchez sa mère avant de revenir chez elle et découvrir, à sa plus\ngrande surprise, que le fait de rester seule chez elle ne posait\nplus aucun problème. Une autre patiente atteinte de dépression\nmajeure récurrente en rémission partielle est de retour chez\nelle après une hospitalisation. Cependant, étant incapable de\nsortir seule, elle a appelé une amie pour l’accompagner lors\nde ses sorties telle une vraie agoraphobe. Cette apparente\n« agoraphobie » s’est dissipée au bout de quelques semaines.\nDans ces deux cas, les symptômes d’apparence agoraphobique\nétaient en fait des symptômes dépressifs et non pas une véri-\ntable agoraphobie.\n20.6.4 Anxiété sociale\nAvant d’aborder le diagnostic diérentiel de l’anxiété (ou phobie)\nsociale par rapport aux autres troubles anxieux et psychiatriques,\nmentionnons certaines aections médicales susceptibles d’engen-\ndrer une phénoménologie symptomatique et comportementale\nd’allure phobique sociale :\n• l’hyperhidrose (sudation excessive axillaire, palmaire ou au\nfront) peut occasionner des limitations importantes dans les\n",
+  "raw_text_sha256": "8657c0df55151170ff39fb53431889b53addcbd30f8d70fae9292761c9765b05",
+  "source_page_display": 453,
+  "source_page_index": 452
+}

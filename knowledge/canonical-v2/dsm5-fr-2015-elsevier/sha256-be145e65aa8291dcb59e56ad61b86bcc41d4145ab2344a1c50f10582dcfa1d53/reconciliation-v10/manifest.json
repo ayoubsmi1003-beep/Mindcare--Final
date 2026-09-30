@@ -1,0 +1,48 @@
+{
+  "book_id": "dsm5-fr-2015-elsevier",
+  "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+  "ingestion_version": "canonical-v2.1",
+  "status": "CANDIDATE_REVIEW_REQUIRED",
+  "canonical_promotion_authorized": false,
+  "doctor_review_required": true,
+  "meds_excluded": true,
+  "input_reconciliation": "reconciliation-v9",
+  "structure_candidate": "structure-v2.candidate.json",
+  "active_outputs": {
+    "units": 12820,
+    "tables": 121,
+    "concepts": 1921,
+    "xrefs": 501
+  },
+  "quarantine": {
+    "unit_relation_refs": 2,
+    "xref_records": 8,
+    "unit_relation_file_sha256": "0aea828eba1ed26a455d4a092726cd547a9caa0ea153ef72f73f5a9fc3cf8bc1",
+    "xref_file_sha256": "ff78c88e28ba83c110260eb8b0b295fb2be7bb965b9fd5230ec5925d3de1d00a"
+  },
+  "active_integrity": {
+    "unit_ids_unique": true,
+    "all_unit_relations_resolve": true,
+    "all_xref_from_refs_resolve": true,
+    "all_resolved_xref_targets_resolve": true,
+    "unresolved_xrefs_active": 359,
+    "unresolved_xrefs_quarantined": 5
+  },
+  "output_sha256": {
+    "units": "116c04e814d67e764a227b2ab82550b204b55c30790a8ad57607d8e87c484e82",
+    "tables": "d466304ae612d6551736fa401cc39b0378b924548395ab79270093d01086b520",
+    "concepts": "8e769905ec5c524a4e9a0337da6f0aa44f72994fb95f8b260882b1eaf425dcd2",
+    "xrefs": "43c756106861d85d00c657fabcbddd124e2eacac337ce1f8cbfef119ac4bcc7e"
+  },
+  "notes": [
+    "No unit rows were deleted; orphan relation references are preserved in quarantine.",
+    "No xref target was invented; orphan xref records are preserved in quarantine.",
+    "Unresolved xrefs remain review items; canonical promotion and activation remain unauthorized."
+  ],
+  "extra_concept_fields_quarantined": 1,
+  "quarantine_files": {
+    "unit-relation-quarantine.jsonl": "0aea828eba1ed26a455d4a092726cd547a9caa0ea153ef72f73f5a9fc3cf8bc1",
+    "xref-quarantine.jsonl": "ff78c88e28ba83c110260eb8b0b295fb2be7bb965b9fd5230ec5925d3de1d00a",
+    "concept-extra-fields-quarantine.jsonl": "efbd1dc64d05b54b12a0df4f758f553f14ce625f440eabb3c5ca0369fabe086a"
+  }
+}

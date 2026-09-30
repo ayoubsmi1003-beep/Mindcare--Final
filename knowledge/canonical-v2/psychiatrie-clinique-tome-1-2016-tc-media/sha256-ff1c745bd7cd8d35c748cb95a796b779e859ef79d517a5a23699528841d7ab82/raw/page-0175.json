@@ -1,0 +1,496 @@
+{
+  "block_sequence_sha256": "c939aab42f6403ab7a559db6a1157076a2829a9fbd1ac0cdf950216a1768ce8a",
+  "blocks": [
+    {
+      "bbox": [
+        51.0,
+        131.42344665527344,
+        371.2736511230469,
+        218.34532165527344
+      ],
+      "block_id": "page-0175-block-0001",
+      "order": 1,
+      "text": "Psychophysiologie\net neuropsychologie\n",
+      "text_sha256": "5fa4317379b5f6c4fd315af0c17fea74b8a0d6e7473750b441d28fe756c2d38a"
+    },
+    {
+      "bbox": [
+        48.0,
+        259.2001037597656,
+        221.97398376464844,
+        271.7001037597656
+      ],
+      "block_id": "page-0175-block-0002",
+      "order": 2,
+      "text": "Marc-E. Lavoie, PH. D. (sciences biomédicales)\n",
+      "text_sha256": "e166fc37e1b56ecc6000ba0e23e62481347f5223864fd10d7c1fdcc543e98bbc"
+    },
+    {
+      "bbox": [
+        48.0,
+        275.5772399902344,
+        283.67626953125,
+        307.7937927246094
+      ],
+      "block_id": "page-0175-block-0003",
+      "order": 3,
+      "text": "Chercheur, directeur, Laboratoire de psychophysiologie cogni-\ntive et sociale, Centre de recherche, Institut universitaire en\nsanté mentale de Montréal\n",
+      "text_sha256": "d66d9025fedc9365fc1c99fd4e581724561aca6080f1a1008c7bfc8b92e7b21e"
+    },
+    {
+      "bbox": [
+        48.0,
+        311.5772399902344,
+        267.8908996582031,
+        332.7937927246094
+      ],
+      "block_id": "page-0175-block-0004",
+      "order": 4,
+      "text": "Professeur-chercheur agrégé, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\n",
+      "text_sha256": "4081b2395636ff708509ecb40d3969aa4ec31603c80e0778d2b33fa5601016fa"
+    },
+    {
+      "bbox": [
+        48.0,
+        342.7001037597656,
+        225.37400817871094,
+        355.2001037597656
+      ],
+      "block_id": "page-0175-block-0005",
+      "order": 5,
+      "text": "Geneviève Sauvé, M. SC. (sciences biomédicales)\n",
+      "text_sha256": "75cb92a7f8f6005231b66865d90e2d0600d026a83d6d261eca66a35b645ab643"
+    },
+    {
+      "bbox": [
+        48.0,
+        359.0772399902344,
+        290.18804931640625,
+        391.2937927246094
+      ],
+      "block_id": "page-0175-block-0006",
+      "order": 6,
+      "text": "Doctorante en neurosciences, Laboratoire de psychophysiologie\ncognitive et sociale, Centre de recherche, Institut universitaire\nen santé mentale de Montréal\n",
+      "text_sha256": "b5a642f841dfd524708e5762f1ffc9e915ade5800db0b06abdddbef94a2ef685"
+    },
+    {
+      "bbox": [
+        48.0,
+        401.2001037597656,
+        260.7239990234375,
+        413.7001037597656
+      ],
+      "block_id": "page-0175-block-0007",
+      "order": 7,
+      "text": "Simon Morand-Beaulieu, M. SC. (sciences biomédicales)\n",
+      "text_sha256": "6e518e3eeb6df003d5873d7c8be5a6815d25a2550115c17c1ca676d2b96835ab"
+    },
+    {
+      "bbox": [
+        48.0,
+        417.5772399902344,
+        286.0880126953125,
+        449.7937927246094
+      ],
+      "block_id": "page-0175-block-0008",
+      "order": 8,
+      "text": "Doctorant en neurosciences, Laboratoire de psychophysiologie\ncognitive et sociale, Centre de recherche, Institut universitaire\nen santé mentale de Montréal\n",
+      "text_sha256": "82797dde0efc9b64c9ca97fbba29b55e632c9d6b5082270c44faea542e00dc94"
+    },
+    {
+      "bbox": [
+        48.0,
+        459.7001037597656,
+        176.97299194335938,
+        472.2001037597656
+      ],
+      "block_id": "page-0175-block-0009",
+      "order": 9,
+      "text": "David Luck, PH. D. (neurosciences)\n",
+      "text_sha256": "2e0910a0421d8768ebaceb73281b3f4b64aec7eb9ade57c0ccbfb43dea83373b"
+    },
+    {
+      "bbox": [
+        48.0,
+        476.0772399902344,
+        278.5365905761719,
+        497.2937927246094
+      ],
+      "block_id": "page-0175-block-0010",
+      "order": 10,
+      "text": "Chercheur, Groupe émotion-cognition, Centre de recherche,\nInstitut universitaire en santé mentale de Montréal\n",
+      "text_sha256": "b76a82e942414f8c13893c66cad8fd89d0c79bdfb3b53afdc714db3baf56eab4"
+    },
+    {
+      "bbox": [
+        48.0,
+        501.0772399902344,
+        269.8518981933594,
+        522.2938232421875
+      ],
+      "block_id": "page-0175-block-0011",
+      "order": 11,
+      "text": "Professeur-chercheur adjoint, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\n",
+      "text_sha256": "467f462e683e905231856793c2c5c70777321ae5ab145c14e09c7789d72408ab"
+    },
+    {
+      "bbox": [
+        306.0,
+        259.2001037597656,
+        502.6730041503906,
+        271.8599548339844
+      ],
+      "block_id": "page-0175-block-0012",
+      "order": 12,
+      "text": "Emmanuel Stip, M.D., FRCP, M. SC. (neurosciences)\n",
+      "text_sha256": "6e33d301d4ab937d0a3b0c4146ce52718062ec479ea9cdc52eb62769e7b91e31"
+    },
+    {
+      "bbox": [
+        306.0,
+        275.5772399902344,
+        515.850830078125,
+        285.7937927246094
+      ],
+      "block_id": "page-0175-block-0013",
+      "order": 13,
+      "text": "Psychiatre, Centre hospitalier universitaire de Montréal\n",
+      "text_sha256": "e2c56547832e66726278963df4c9bb9a479f5508b90405d1b1197ad3d669ba87"
+    },
+    {
+      "bbox": [
+        306.0,
+        289.5772399902344,
+        527.4338989257812,
+        310.7937927246094
+      ],
+      "block_id": "page-0175-block-0014",
+      "order": 14,
+      "text": "Professeur titulaire, directeur, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\n",
+      "text_sha256": "57b68e36465791d52acfc6e7e4983d3aafe29b7b1b4ed193882420508666d8f0"
+    },
+    {
+      "bbox": [
+        306.0,
+        320.7001037597656,
+        474.822998046875,
+        333.2001037597656
+      ],
+      "block_id": "page-0175-block-0015",
+      "order": 15,
+      "text": "Marie-France Marin, PH. D. (neurosciences)\n",
+      "text_sha256": "c73b0524f4cbbe7fa772881db787e75f13ba1c30ff6052d0a480f4fbdfa4c427"
+    },
+    {
+      "bbox": [
+        306.0,
+        337.0772399902344,
+        545.1637573242188,
+        369.2937927246094
+      ],
+      "block_id": "page-0175-block-0016",
+      "order": 16,
+      "text": "Chercheuse en neurosciences, Centre d’étude sur le stress\nhumain, Centre de recherche de l’Institut universitaire en santé\nmentale de Montréal\n",
+      "text_sha256": "9acedb9aeae5e481b43b4eb70b5d0db5c2f09f05a33d54f89de3a4c2e559ee62"
+    },
+    {
+      "bbox": [
+        306.0,
+        379.2001037597656,
+        438.52301025390625,
+        391.7001037597656
+      ],
+      "block_id": "page-0175-block-0017",
+      "order": 17,
+      "text": "Sonia Lupien, PH. D. (neurosciences)\n",
+      "text_sha256": "1929172d74f5ffb4849c058b2aafc0d94085271e9bcc02032f1bee6727ea5549"
+    },
+    {
+      "bbox": [
+        306.0,
+        395.5772399902344,
+        545.1637573242188,
+        427.7937927246094
+      ],
+      "block_id": "page-0175-block-0018",
+      "order": 18,
+      "text": "Chercheuse, directrice scientique, Centre d’étude sur le stress\nhumain, Centre de recherche de l’Institut universitaire en santé\nmentale de Montréal\n",
+      "text_sha256": "5bc7936b320ff2d79f98ade81174ec9c87bedaf83f4259df056bd1592a1ab709"
+    },
+    {
+      "bbox": [
+        306.0,
+        431.5772399902344,
+        534.2099609375,
+        452.7937927246094
+      ],
+      "block_id": "page-0175-block-0019",
+      "order": 19,
+      "text": "Professeure titulaire, Département de psychiatrie, Faculté de\nmédecine, Université de Montréal\n",
+      "text_sha256": "a5b0af0d58b19177d2aa417668aabd221016ac0302b8b7b4053fcc27a226b9fd"
+    },
+    {
+      "bbox": [
+        48.0,
+        555.5453491210938,
+        289.0069885253906,
+        565.4682006835938
+      ],
+      "block_id": "page-0175-block-0020",
+      "order": 20,
+      "text": "8.1 \nHistorique.....................................................................159\n",
+      "text_sha256": "f620c3b560cbccced1f54c09e2c1ea587bff32bc81da654ebdcb334e567db882"
+    },
+    {
+      "bbox": [
+        72.0,
+        569.2359619140625,
+        289.0040283203125,
+        579.0972900390625
+      ],
+      "block_id": "page-0175-block-0021",
+      "order": 21,
+      "text": "8.1.1 \nDe l’Antiquité au Siècle des lumières................. 159\n",
+      "text_sha256": "c5bd6a58af6b00550b611e1e7defc65c4fc5ace07d324a76d35c793c2fcb9752"
+    },
+    {
+      "bbox": [
+        72.0,
+        579.7859497070312,
+        289.0040283203125,
+        592.6472778320312
+      ],
+      "block_id": "page-0175-block-0022",
+      "order": 22,
+      "text": "8.1.2 \n19e siècle : localisation des fonctions................. 160\n",
+      "text_sha256": "081fbce3dbf05f23999d9b27ea5560ce43991f2c0a9a5f67f2cf626a6e43f8bd"
+    },
+    {
+      "bbox": [
+        72.0,
+        593.3359375,
+        289.0040283203125,
+        616.697265625
+      ],
+      "block_id": "page-0175-block-0023",
+      "order": 23,
+      "text": "8.1.3 \n20e siècle : apparition des nouvelles\ntechnologies............................................................ 161\n",
+      "text_sha256": "f6e6ae2799bb8ffb9c20e97000de04abf52c99d016eb121c409fc5f44be519db"
+    },
+    {
+      "bbox": [
+        48.0,
+        620.2453002929688,
+        289.0069885253906,
+        630.1681518554688
+      ],
+      "block_id": "page-0175-block-0024",
+      "order": 24,
+      "text": "8.2 \nCarte neuropsychologique du cerveau ...................... 163\n",
+      "text_sha256": "2c7adc9e47066a7c9af9c2693010078e144ac651258aaa8a974141df6363bd56"
+    },
+    {
+      "bbox": [
+        48.0,
+        633.8744506835938,
+        289.0040283203125,
+        643.7973022460938
+      ],
+      "block_id": "page-0175-block-0025",
+      "order": 25,
+      "text": "8.3 \nAttention ............................................................................... 163\n",
+      "text_sha256": "c7a22e0332481d03b2e18f5ea984012adaae64893cee424a77e0050a50c40376"
+    },
+    {
+      "bbox": [
+        72.0,
+        647.4859619140625,
+        289.0040283203125,
+        670.8472900390625
+      ],
+      "block_id": "page-0175-block-0026",
+      "order": 26,
+      "text": "8.3.1 \nAttention sélective................................................. 163\n8.3.2 \nAttention partagée ................................................ 165\n",
+      "text_sha256": "e67ed15bc0c1d0b4815f494b62a42e9c830a5c8380ad7aacc83fca102d4c7d5e"
+    },
+    {
+      "bbox": [
+        72.0,
+        674.5359497070312,
+        289.0040283203125,
+        684.3972778320312
+      ],
+      "block_id": "page-0175-block-0027",
+      "order": 27,
+      "text": "8.3.3 \nAttention soutenue ............................................... 165\n",
+      "text_sha256": "732bcbd4b816561dbc4c7336c811116a5fba3b7f696be1693e96138955402f9e"
+    },
+    {
+      "bbox": [
+        72.0,
+        688.0859375,
+        289.0040283203125,
+        697.947265625
+      ],
+      "block_id": "page-0175-block-0028",
+      "order": 28,
+      "text": "8.3.4 \nTroubles d’attention.............................................. 166\n",
+      "text_sha256": "b67c06cd53dba706ae7ef8a447ef4663fa768580168ba629f8babe77c63a824a"
+    },
+    {
+      "bbox": [
+        48.0,
+        701.4953002929688,
+        289.0069885253906,
+        724.9972534179688
+      ],
+      "block_id": "page-0175-block-0029",
+      "order": 29,
+      "text": "8.4 \nPerception, sensations et orientation......................... 167\n8.4.1 \nPerception du mouvement .................................. 167\n",
+      "text_sha256": "d49ae1fae93a7b5f6c12434e6278902a5240301bb7de628a6a2ccabf13967f3a"
+    },
+    {
+      "bbox": [
+        330.0,
+        555.6859741210938,
+        547.0040283203125,
+        565.5473022460938
+      ],
+      "block_id": "page-0175-block-0030",
+      "order": 30,
+      "text": "8.4.2 \nOrientation spatiale .............................................. 168\n",
+      "text_sha256": "e42e58dd9fad71ccb55cbf3109f1dfc74b7a3723c2dcdbb495eba97b9ecee536"
+    },
+    {
+      "bbox": [
+        330.0,
+        569.7359619140625,
+        547.0040283203125,
+        590.6472778320312
+      ],
+      "block_id": "page-0175-block-0031",
+      "order": 31,
+      "text": "8.4.3 \nIntégration sensorielle multimodale\ndes signaux perceptifs et sensitifs ...................... 168\n",
+      "text_sha256": "c607bb3474f7adf43228b112963a07f7ad9dfad2252b7e13b1cda5a3c53cd1fc"
+    },
+    {
+      "bbox": [
+        330.0,
+        594.8359375,
+        547.0040283203125,
+        615.7973022460938
+      ],
+      "block_id": "page-0175-block-0032",
+      "order": 32,
+      "text": "8.4.4 \nNeuropsychologie des problèmes\nde la perception et de la reconnaissance .......... 169\n",
+      "text_sha256": "ef9854aabbca3e3b13f2154fdc852fb2c54f56177e35a9189cc60689dc262376"
+    },
+    {
+      "bbox": [
+        330.0,
+        619.9859619140625,
+        547.0040283203125,
+        640.8972778320312
+      ],
+      "block_id": "page-0175-block-0033",
+      "order": 33,
+      "text": "8.4.5 \nIntégration perceptive et sensorielle\net schéma corporel................................................ 169\n",
+      "text_sha256": "1c82e5093a49d24e6a95483cb8cf0db5f48755f4a50335596c82b43b24ffb4bd"
+    },
+    {
+      "bbox": [
+        330.0,
+        645.0859375,
+        547.0040283203125,
+        654.947265625
+      ],
+      "block_id": "page-0175-block-0034",
+      "order": 34,
+      "text": "8.4.6 \nTroubles perceptuels............................................. 170\n",
+      "text_sha256": "4990638b954ef1ddd41da21e35b568906ec34a1d267ae2e0b90f0a4571703128"
+    },
+    {
+      "bbox": [
+        306.0,
+        658.9953002929688,
+        547.0070190429688,
+        668.9181518554688
+      ],
+      "block_id": "page-0175-block-0035",
+      "order": 35,
+      "text": "8.5 \nMémoire .......................................................................171\n",
+      "text_sha256": "ccaf836b18e379e3521d5f917861ac0ca63f5f1fc1c65e269045410c5ffa0ff0"
+    },
+    {
+      "bbox": [
+        330.0,
+        673.1859741210938,
+        547.0040283203125,
+        683.0473022460938
+      ],
+      "block_id": "page-0175-block-0036",
+      "order": 36,
+      "text": "8.5.1 \nMémoire à court terme et mémoire de travail .... 171\n",
+      "text_sha256": "5a34e368ed8ad2deec1954d845575ee52db37a894b06698c5d56d14f8ed636a7"
+    },
+    {
+      "bbox": [
+        330.0,
+        687.2359619140625,
+        547.0040283203125,
+        697.0972900390625
+      ],
+      "block_id": "page-0175-block-0037",
+      "order": 37,
+      "text": "8.5.2 \nMémoire à long terme.......................................... 172\n",
+      "text_sha256": "65ec550f0034bc460bab1c976f56b112ab71e55c2d2d28aca8431d5ca3a38f2b"
+    },
+    {
+      "bbox": [
+        330.0,
+        701.2859497070312,
+        547.0040283203125,
+        711.1472778320312
+      ],
+      "block_id": "page-0175-block-0038",
+      "order": 38,
+      "text": "8.5.3 \nMémoire procédurale........................................... 174\n",
+      "text_sha256": "ef94003aac8e917311d98d90c57210e2fbe8aed40c6bd69e335f56441d085e35"
+    },
+    {
+      "bbox": [
+        330.0,
+        715.3359375,
+        547.0040283203125,
+        725.197265625
+      ],
+      "block_id": "page-0175-block-0039",
+      "order": 39,
+      "text": "8.5.4 \nTroubles de mémoire............................................ 175\n",
+      "text_sha256": "fc0162f58ead0ca52f4a2c8ed8d1461f873d0e4c74d6de15e4525b3888ddb9c3"
+    },
+    {
+      "bbox": [
+        303.70001220703125,
+        4.181053161621094,
+        539.2000122070312,
+        124.18104553222656
+      ],
+      "block_id": "page-0175-block-0040",
+      "order": 40,
+      "text": "CHAPITRE8\n",
+      "text_sha256": "8c8b66dd8c5cbcb2df3c6b292f778c9fe0cf38b0af1d1319709b212879d8d531"
+    }
+  ],
+  "coordinates_sha256": "7dbd6131d356557f028dd9231ce5c973149c3fa5c4037d10cef8215236fad74b",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0175",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Psychophysiologie\net neuropsychologie\nMarc-E. Lavoie, PH. D. (sciences biomédicales)\nChercheur, directeur, Laboratoire de psychophysiologie cogni-\ntive et sociale, Centre de recherche, Institut universitaire en\nsanté mentale de Montréal\nProfesseur-chercheur agrégé, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\nGeneviève Sauvé, M. SC. (sciences biomédicales)\nDoctorante en neurosciences, Laboratoire de psychophysiologie\ncognitive et sociale, Centre de recherche, Institut universitaire\nen santé mentale de Montréal\nSimon Morand-Beaulieu, M. SC. (sciences biomédicales)\nDoctorant en neurosciences, Laboratoire de psychophysiologie\ncognitive et sociale, Centre de recherche, Institut universitaire\nen santé mentale de Montréal\nDavid Luck, PH. D. (neurosciences)\nChercheur, Groupe émotion-cognition, Centre de recherche,\nInstitut universitaire en santé mentale de Montréal\nProfesseur-chercheur adjoint, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\nEmmanuel Stip, M.D., FRCP, M. SC. (neurosciences)\nPsychiatre, Centre hospitalier universitaire de Montréal\nProfesseur titulaire, directeur, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\nMarie-France Marin, PH. D. (neurosciences)\nChercheuse en neurosciences, Centre d’étude sur le stress\nhumain, Centre de recherche de l’Institut universitaire en santé\nmentale de Montréal\nSonia Lupien, PH. D. (neurosciences)\nChercheuse, directrice scientique, Centre d’étude sur le stress\nhumain, Centre de recherche de l’Institut universitaire en santé\nmentale de Montréal\nProfesseure titulaire, Département de psychiatrie, Faculté de\nmédecine, Université de Montréal\n8.1 \nHistorique.....................................................................159\n8.1.1 \nDe l’Antiquité au Siècle des lumières................. 159\n8.1.2 \n19e siècle : localisation des fonctions................. 160\n8.1.3 \n20e siècle : apparition des nouvelles\ntechnologies............................................................ 161\n8.2 \nCarte neuropsychologique du cerveau ...................... 163\n8.3 \nAttention ............................................................................... 163\n8.3.1 \nAttention sélective................................................. 163\n8.3.2 \nAttention partagée ................................................ 165\n8.3.3 \nAttention soutenue ............................................... 165\n8.3.4 \nTroubles d’attention.............................................. 166\n8.4 \nPerception, sensations et orientation......................... 167\n8.4.1 \nPerception du mouvement .................................. 167\n8.4.2 \nOrientation spatiale .............................................. 168\n8.4.3 \nIntégration sensorielle multimodale\ndes signaux perceptifs et sensitifs ...................... 168\n8.4.4 \nNeuropsychologie des problèmes\nde la perception et de la reconnaissance .......... 169\n8.4.5 \nIntégration perceptive et sensorielle\net schéma corporel................................................ 169\n8.4.6 \nTroubles perceptuels............................................. 170\n8.5 \nMémoire .......................................................................171\n8.5.1 \nMémoire à court terme et mémoire de travail .... 171\n8.5.2 \nMémoire à long terme.......................................... 172\n8.5.3 \nMémoire procédurale........................................... 174\n8.5.4 \nTroubles de mémoire............................................ 175\nCHAPITRE8\n",
+  "raw_text_sha256": "1220951c1c96a010b73bf7ac44f3ccaf6d73ff5cd3c0f35ca7e541b30ffd01d6",
+  "source_page_display": 176,
+  "source_page_index": 175
+}

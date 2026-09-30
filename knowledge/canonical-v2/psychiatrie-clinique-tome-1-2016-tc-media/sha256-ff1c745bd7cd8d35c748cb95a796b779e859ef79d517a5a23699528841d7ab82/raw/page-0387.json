@@ -1,0 +1,256 @@
+{
+  "block_sequence_sha256": "4cc39e562a53b59142d2421661f4865eb474024bbb4977b5d44c56d307b56872",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0387-block-0001",
+      "order": 1,
+      "text": "370\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "40fd1feb0ebe9fc15ce5e5869bce0e779a5e848887b28f8013698f31554fc282"
+    },
+    {
+      "bbox": [
+        50.400001525878906,
+        414.80230712890625,
+        220.9337615966797,
+        427.1200866699219
+      ],
+      "block_id": "page-0387-block-0002",
+      "order": 2,
+      "text": "FIGURE 17.6 Évolution de la schizophrénie\n",
+      "text_sha256": "e659ce5efd37e1fbe8cad6a8596242bbea150df7d55ad7726440ac6fb2a8c1a3"
+    },
+    {
+      "bbox": [
+        48.25,
+        675.890625,
+        180.7342071533203,
+        684.7588500976562
+      ],
+      "block_id": "page-0387-block-0003",
+      "order": 3,
+      "text": "Source : Adapté de Lewis & Lieberman (2000).\n",
+      "text_sha256": "3423ef34ccefb58f0645c2557410de761a5669f926b571e24ef3efe3729cc27e"
+    },
+    {
+      "bbox": [
+        50.29999923706055,
+        41.002296447753906,
+        228.24000549316406,
+        53.320068359375
+      ],
+      "block_id": "page-0387-block-0004",
+      "order": 4,
+      "text": "TABLEAU 17.8 Pronostic de la schizophrénie\n",
+      "text_sha256": "0a920baffc3e237194c5d53238e2aaee1f4e1dc7f1eae1e2c7eb204b8283d117"
+    },
+    {
+      "bbox": [
+        125.75,
+        58.27412414550781,
+        479.2453918457031,
+        68.85029602050781
+      ],
+      "block_id": "page-0387-block-0005",
+      "order": 5,
+      "text": "Facteurs de bon pronostic\nFacteurs de mauvais pronostic\n",
+      "text_sha256": "119a463988969e190c9d170dec234bd4f320eabbdd671dc4b5ad57f8b9d1ab6a"
+    },
+    {
+      "bbox": [
+        52.25,
+        74.20195770263672,
+        348.29400634765625,
+        84.02812957763672
+      ],
+      "block_id": "page-0387-block-0006",
+      "order": 6,
+      "text": "Sexe féminin, excepté si le début de la maladie a eu lieu très tôt\nSexe masculin\n",
+      "text_sha256": "b585d6bfcbfa741f6c7c577b73c4bbbcaf55bdabc98ed59b3e83da23dd0475d7"
+    },
+    {
+      "bbox": [
+        52.25,
+        92.6519546508789,
+        460.6721496582031,
+        102.4781265258789
+      ],
+      "block_id": "page-0387-block-0007",
+      "order": 7,
+      "text": "Pas d’histoire familiale de schizophrénie ni de psychose\nHistoire familiale de schizophrénie et de psychose\n",
+      "text_sha256": "52a30d2701beda149208943b0f76b5591a1d08da792802df4da37cff449023f3"
+    },
+    {
+      "bbox": [
+        52.25,
+        111.05195617675781,
+        478.7899475097656,
+        120.87812805175781
+      ],
+      "block_id": "page-0387-block-0008",
+      "order": 8,
+      "text": "Bon fonctionnement prémorbide\nHistoire d’agressivité, autres difcultés durant l’enfance\n",
+      "text_sha256": "f6707ffd300308317fb084cb1871de0ae218548b05d781f8664de0080e25cff5"
+    },
+    {
+      "bbox": [
+        52.25,
+        129.501953125,
+        492.507568359375,
+        139.328125
+      ],
+      "block_id": "page-0387-block-0009",
+      "order": 9,
+      "text": "Pas d’anomalies structurales cérébrales\nAnomalies structurales cérébrales (p. ex., atrophie corticale)\n",
+      "text_sha256": "d1e1ff45e1c1b29105ed86645aa10b9dd5fdf851b6f64990e35954c1d40cdfa0"
+    },
+    {
+      "bbox": [
+        52.25,
+        147.90196228027344,
+        352.80810546875,
+        157.72813415527344
+      ],
+      "block_id": "page-0387-block-0010",
+      "order": 10,
+      "text": "Le mariage serait un facteur de protection\nCélibat, solitude\n",
+      "text_sha256": "e0c652aca31dc2e70d491b449765bae367af12c5058771b33885bba1b3b7217d"
+    },
+    {
+      "bbox": [
+        52.25,
+        166.35195922851562,
+        350.948974609375,
+        176.17813110351562
+      ],
+      "block_id": "page-0387-block-0011",
+      "order": 11,
+      "text": "Début aigu de la maladie\nDébut insidieux\n",
+      "text_sha256": "1fc4deb26885220a92ca546addd2d5ecb1f2073818f5e84d05ba5884b777a87c"
+    },
+    {
+      "bbox": [
+        52.25,
+        184.751953125,
+        543.2351684570312,
+        224.578125
+      ],
+      "block_id": "page-0387-block-0012",
+      "order": 12,
+      "text": "Âge plus tardif au début des symptômes\nDébut précoce, possiblement parce qu’un âge d’apparition plus précoce est\nsigne d’une maladie plus grave, mais également parce qu’un jeune patient\nn’a pas eu la possibilité d’acquérir avant la psychose les habiletés sociales\net occupationnelles qui faciliteraient sa réadaptation.\n",
+      "text_sha256": "42738fca0eb87d50d910f2f75947ba859f51480d5dd65926c01a7d30734e1652"
+    },
+    {
+      "bbox": [
+        52.25,
+        233.2019500732422,
+        366.98699951171875,
+        243.0281219482422
+      ],
+      "block_id": "page-0387-block-0013",
+      "order": 13,
+      "text": "Symptômes positifs\nSymptômes négatifs\n",
+      "text_sha256": "1fb2f8c76ae8b8b6fccac9a8dbdaa232977ff2f480fc80646e756b0c54466f02"
+    },
+    {
+      "bbox": [
+        52.25,
+        251.60195922851562,
+        357.8090515136719,
+        261.4281311035156
+      ],
+      "block_id": "page-0387-block-0014",
+      "order": 14,
+      "text": "Peu de troubles cognitifs\nTroubles cognitifs\n",
+      "text_sha256": "a48c0181c839dc84a49344b9d9410bbbf66a362a740207ad86e07b373e756f46"
+    },
+    {
+      "bbox": [
+        52.25,
+        270.0519714355469,
+        370.8659973144531,
+        279.8781433105469
+      ],
+      "block_id": "page-0387-block-0015",
+      "order": 15,
+      "text": "Pas d’abus de drogues\nUtilisation de drogues\n",
+      "text_sha256": "44dbcbee61f7ba078281ee94d8f2b47da8401d49ee1671a5e823117966bfaae1"
+    },
+    {
+      "bbox": [
+        52.25,
+        288.45196533203125,
+        454.4918518066406,
+        298.27813720703125
+      ],
+      "block_id": "page-0387-block-0016",
+      "order": 16,
+      "text": "Intervention précoce\nPsychose non traitée durant une longue période\n",
+      "text_sha256": "4fa06089bddea79161df6c99978de19cc29aabd0805cd952b930b0fdb5d738a5"
+    },
+    {
+      "bbox": [
+        52.25,
+        306.9019470214844,
+        466.7472839355469,
+        316.7281188964844
+      ],
+      "block_id": "page-0387-block-0017",
+      "order": 17,
+      "text": "Bonne adhésion à la médication\nInobservance de la médication et de la réadaptation\n",
+      "text_sha256": "4983f9008359306fb4b6c5213def779d03fada43d1c50ff766b12dd85f08e268"
+    },
+    {
+      "bbox": [
+        52.25,
+        325.3019714355469,
+        381.405029296875,
+        335.1281433105469
+      ],
+      "block_id": "page-0387-block-0018",
+      "order": 18,
+      "text": "Bonne réponse initiale au traitement\nRésistance au traitement\n",
+      "text_sha256": "8b4fe0b6d1a3d048d567755804d19b21ffe41bdaa96a2ea677f5eba55ce2ff28"
+    },
+    {
+      "bbox": [
+        52.25,
+        343.751953125,
+        422.8275451660156,
+        353.578125
+      ],
+      "block_id": "page-0387-block-0019",
+      "order": 19,
+      "text": "Effets indésirables minimes\nAkathisie, parkinsonisme non contrôlé\n",
+      "text_sha256": "8cff2d09d696573afb2b9d0d67d9ffb78e860290b5b08a8543df616ce4613c01"
+    },
+    {
+      "bbox": [
+        52.25,
+        362.1519470214844,
+        373.791015625,
+        371.9781188964844
+      ],
+      "block_id": "page-0387-block-0020",
+      "order": 20,
+      "text": "Capable d’autocritique\nManque d’autocritique\n",
+      "text_sha256": "efa8c893ea821a47fac41ad8795de1d6e6fc5dd49c2ac0331dfecbfd33d62f44"
+    }
+  ],
+  "coordinates_sha256": "a3d1c2ff6c73ef6b5732e642eb928696fc07ccded58bdc9e076899de33b68671",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0387",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "370\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nFIGURE 17.6 Évolution de la schizophrénie\nSource : Adapté de Lewis & Lieberman (2000).\nTABLEAU 17.8 Pronostic de la schizophrénie\nFacteurs de bon pronostic\nFacteurs de mauvais pronostic\nSexe féminin, excepté si le début de la maladie a eu lieu très tôt\nSexe masculin\nPas d’histoire familiale de schizophrénie ni de psychose\nHistoire familiale de schizophrénie et de psychose\nBon fonctionnement prémorbide\nHistoire d’agressivité, autres difcultés durant l’enfance\nPas d’anomalies structurales cérébrales\nAnomalies structurales cérébrales (p. ex., atrophie corticale)\nLe mariage serait un facteur de protection\nCélibat, solitude\nDébut aigu de la maladie\nDébut insidieux\nÂge plus tardif au début des symptômes\nDébut précoce, possiblement parce qu’un âge d’apparition plus précoce est\nsigne d’une maladie plus grave, mais également parce qu’un jeune patient\nn’a pas eu la possibilité d’acquérir avant la psychose les habiletés sociales\net occupationnelles qui faciliteraient sa réadaptation.\nSymptômes positifs\nSymptômes négatifs\nPeu de troubles cognitifs\nTroubles cognitifs\nPas d’abus de drogues\nUtilisation de drogues\nIntervention précoce\nPsychose non traitée durant une longue période\nBonne adhésion à la médication\nInobservance de la médication et de la réadaptation\nBonne réponse initiale au traitement\nRésistance au traitement\nEffets indésirables minimes\nAkathisie, parkinsonisme non contrôlé\nCapable d’autocritique\nManque d’autocritique\n",
+  "raw_text_sha256": "26f1c151211f684ba76afaebab3bb9df5530842bb0d63f27b725019307c3a8f1",
+  "source_page_display": 388,
+  "source_page_index": 387
+}

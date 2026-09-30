@@ -1,0 +1,436 @@
+{
+  "block_sequence_sha256": "013018b9783ef6d343060978cc08c401bc72c5fcf420e5fa3f6098a0e8ddc11a",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0969-block-0001",
+      "order": 1,
+      "text": "952\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "e0e936451a7fb1358a142fb86a5de552e9ddbd04b9fab4752375c14e69cff372"
+    },
+    {
+      "bbox": [
+        306.0,
+        467.4658203125,
+        549.5008544921875,
+        650.45849609375
+      ],
+      "block_id": "page-0969-block-0002",
+      "order": 2,
+      "text": "ces patients des soins adéquats demande donc de modier nos\ntechniques et nos réexes cliniques. Cette section s’amorce par\nun rapide exposé des raisons qui font en sorte que certaines\nattitudes et pratiques peuvent engendrer une détérioration cli-\nnique. Ensuite, nous exposerons quelques grands principes de\nl’intervention auprès de cette clientèle, ainsi que les diérents\nniveaux de services tels qu’ils existent présentement au Québec.\nUne bonne partie des informations qui suivent concernent le\ntraitement des patients avec un TP limite, et dans une certaine\nmesure les autres troubles du groupe B du DSM-IV (narcissique,\nantisociale et histrionique). D’une part, ce sont ces patients qui,\nsur le terrain, sont le plus souvent à la recherche d’un traitement\nspéciquement pour leurs troubles de la personnalité. D’autre\npart – et peut-être en conséquence de cela –, les traitements\nmanualisés et dont l’ecacité a été démontrée ont été conçus\npour répondre aux besoins de ces patients en particulier.\n",
+      "text_sha256": "90cf6bb309a154359a45a244a2d5c35701873bff6d6276e9e73c11563a7178a2"
+    },
+    {
+      "bbox": [
+        306.0,
+        660.98681640625,
+        453.41131591796875,
+        677.12939453125
+      ],
+      "block_id": "page-0969-block-0003",
+      "order": 3,
+      "text": "40.8.1 Principes généraux\n",
+      "text_sha256": "65b112a1efb158d8e2cfac0c626f414506ad96ccd6522fb76c761e2866cf9f0e"
+    },
+    {
+      "bbox": [
+        306.0,
+        680.4658203125,
+        549.0755004882812,
+        725.45849609375
+      ],
+      "block_id": "page-0969-block-0004",
+      "order": 4,
+      "text": "Plusieurs auteurs, dont Dawson (1988), ont suggéré que certaines\ndes manifestations les plus spectaculaires du TP limite – esca-\nlades de gestes suicidaires, comportements régressés, hostilité –\npourraient être exacerbées, voire être déclenchées, par le réseau\n",
+      "text_sha256": "3f08d34866a39cc1671921293011489c57cc045f3e98eb8c661d947f557e4932"
+    },
+    {
+      "bbox": [
+        50.79999923706055,
+        41.002296447753906,
+        403.2062072753906,
+        53.320068359375
+      ],
+      "block_id": "page-0969-block-0005",
+      "order": 5,
+      "text": "TABLEAU 40.8 Mesures psychométriques utilisées pour les troubles de la personnalité\n",
+      "text_sha256": "9f46b2a18c44419fcae357050ee085e275f9c9d87b0e4e764836b2b6f38082f7"
+    },
+    {
+      "bbox": [
+        151.0,
+        59.77412414550781,
+        432.0345153808594,
+        70.35029602050781
+      ],
+      "block_id": "page-0969-block-0006",
+      "order": 6,
+      "text": "Outils\nDescription\n",
+      "text_sha256": "b5fe21305e24a98925d582470576389009be503b66b0a90209b83def72982902"
+    },
+    {
+      "bbox": [
+        52.75,
+        77.05195617675781,
+        219.05101013183594,
+        97.87812805175781
+      ],
+      "block_id": "page-0969-block-0007",
+      "order": 7,
+      "text": "International Personality Disorder Examination (IPDE)\nLoranger & al. (1994)\n",
+      "text_sha256": "6f6dd6683174856b541475c6358fac45c21b412307d38699e761953f28675bc8"
+    },
+    {
+      "bbox": [
+        278.0,
+        77.05195617675781,
+        534.3507690429688,
+        96.87812805175781
+      ],
+      "block_id": "page-0969-block-0008",
+      "order": 8,
+      "text": "Entrevue semi-structurée pour les troubles de la personnalité de la CIM-10 et du\nDSM-IV.\n",
+      "text_sha256": "715073674ed4e2650b72a9aa51614b19aedb2baa41d3827746458531e627eddb"
+    },
+    {
+      "bbox": [
+        52.75,
+        105.37285614013672,
+        263.5284118652344,
+        115.39238739013672
+      ],
+      "block_id": "page-0969-block-0009",
+      "order": 9,
+      "text": "Questionnaires remplis par les patients ou les professionnels\n",
+      "text_sha256": "ce809270372f225baed044cf8d489be3d6dff0ab3e2173341619a8cf05610c7d"
+    },
+    {
+      "bbox": [
+        52.75,
+        122.90196228027344,
+        197.59901428222656,
+        143.72813415527344
+      ],
+      "block_id": "page-0969-block-0010",
+      "order": 10,
+      "text": "Revised NEO Personality Inventory (NEO-PI-R)\nMcCrae & Costa (1990)\n",
+      "text_sha256": "a97eabbccc6c825136298833c71ce6ed713f771c57d51f6737cdcaa57c299e80"
+    },
+    {
+      "bbox": [
+        278.0,
+        122.90196228027344,
+        528.5263671875,
+        142.72813415527344
+      ],
+      "block_id": "page-0969-block-0011",
+      "order": 11,
+      "text": "Questionnaire rempli par le patient ; évalue les 5 dimensions de la personnalité\nselon le modèle du Big Five de McCrae & Costa.\n",
+      "text_sha256": "0c265b0ea7d2241fc841bed0249d970aa63fe78e3914caaff40e85f1c80dd0ca"
+    },
+    {
+      "bbox": [
+        52.75,
+        152.3019561767578,
+        269.24700927734375,
+        183.1281280517578
+      ],
+      "block_id": "page-0969-block-0012",
+      "order": 12,
+      "text": "Dimensional Assessment of Personality Pathology – Basic Question-\nnaire (DAPP-BQ)\nLivesley & al. (1992)\n",
+      "text_sha256": "9f4355d75aa240594394e1fab9dda8d3e50bab01c9cabafe2562fccf175586aa"
+    },
+    {
+      "bbox": [
+        278.0,
+        152.3019561767578,
+        544.8253784179688,
+        172.1281280517578
+      ],
+      "block_id": "page-0969-block-0013",
+      "order": 13,
+      "text": "Questionnaire rempli par le patient ; élaboré autour de l’approche dimensionnelle en\n18 traits et 4 facteurs.\n",
+      "text_sha256": "4239ceb21fc5d70053740e89e8c51339dc0efb06ce0eee59603ea13a08ad7744"
+    },
+    {
+      "bbox": [
+        52.75,
+        191.751953125,
+        247.71900939941406,
+        212.578125
+      ],
+      "block_id": "page-0969-block-0014",
+      "order": 14,
+      "text": "Schedule of Nonadaptative and Adaptative Personality (SNAP)\nClark & al. (1993)\n",
+      "text_sha256": "cd5a30f1d07e9d2e6422a8aa495fdca83af289db468fadae531a8e7831cd80f4"
+    },
+    {
+      "bbox": [
+        278.0,
+        191.751953125,
+        539.3778686523438,
+        211.578125
+      ],
+      "block_id": "page-0969-block-0015",
+      "order": 15,
+      "text": "Questionnaire rempli par le patient ; évalue plusieurs traits de la personnalité, dont\nune partie pour les diagnostics du DSM.\n",
+      "text_sha256": "8fff7516f6736935b6c9a9c73386b0e32bb81e4853df5e45df515025020ae023"
+    },
+    {
+      "bbox": [
+        52.75,
+        221.15196228027344,
+        209.60000610351562,
+        241.97813415527344
+      ],
+      "block_id": "page-0969-block-0016",
+      "order": 16,
+      "text": "Personality Diagnostic Questionnaire – 4 (PDQ-R)\nHyler (1994)\n",
+      "text_sha256": "b526dcb9507c749f377c14d50574ad30a232bd84c630295f37d2c408451115e9"
+    },
+    {
+      "bbox": [
+        278.0,
+        221.15196228027344,
+        544.6640625,
+        240.97813415527344
+      ],
+      "block_id": "page-0969-block-0017",
+      "order": 17,
+      "text": "Questionnaire rempli par le patient pour le dépistage des troubles de la personnalité\ndu DSM-IV.\n",
+      "text_sha256": "fb1c50f2c6a2fbfba1c4a36f0fff31aa04696249ac2ff3b53bb7f40119084345"
+    },
+    {
+      "bbox": [
+        52.75,
+        250.60195922851562,
+        206.33599853515625,
+        271.4281311035156
+      ],
+      "block_id": "page-0969-block-0018",
+      "order": 18,
+      "text": "Millon Clinical Multiaxial Inventory – III (MCMI-III)\nMillon (1990)\n",
+      "text_sha256": "33947d30030596261ff82e4e2c3765f5001e885571323e0ec61aa3aa199d39fc"
+    },
+    {
+      "bbox": [
+        278.0,
+        250.60195922851562,
+        521.103759765625,
+        270.4281311035156
+      ],
+      "block_id": "page-0969-block-0019",
+      "order": 19,
+      "text": "Questionnaire de 175 items rempli par le patient mesurant les troubles de la\npersonnalité du DSM-IV\n",
+      "text_sha256": "e02dd19e600389b4d6a690e82f63f7c1dc5626f0bd886294955b021393cce6fa"
+    },
+    {
+      "bbox": [
+        52.75,
+        280.001953125,
+        231.96600341796875,
+        300.828125
+      ],
+      "block_id": "page-0969-block-0020",
+      "order": 20,
+      "text": "Temperament and Character Inventory – Revised (TCI-R)\nCloninger (1999)\n",
+      "text_sha256": "ef45995d8ebe239978ff592269d54288f3f3df8516116089ac28a44f3c50c907"
+    },
+    {
+      "bbox": [
+        278.0,
+        280.001953125,
+        537.447021484375,
+        299.828125
+      ],
+      "block_id": "page-0969-block-0021",
+      "order": 21,
+      "text": "Questionnaire rempli par le patient, qui évalue les quatre dimensions de tempéra-\nment et trois dimensions du caractère dénies par Cloninger.\n",
+      "text_sha256": "39a11f44526219552ff7e51dedc6bb53b4036a2899430ff934b1bf7ac9ff8bac"
+    },
+    {
+      "bbox": [
+        52.75,
+        309.45196533203125,
+        187.77000427246094,
+        330.27813720703125
+      ],
+      "block_id": "page-0969-block-0022",
+      "order": 22,
+      "text": "Borderline Personality Questionnaire (BPQ)\nPoreh & al. (2006)\n",
+      "text_sha256": "a748505c835e7011d0518fa8d2f931de1547046a53680ebbcf71f74ede7b31f4"
+    },
+    {
+      "bbox": [
+        278.0,
+        309.45196533203125,
+        538.7456665039062,
+        329.27813720703125
+      ],
+      "block_id": "page-0969-block-0023",
+      "order": 23,
+      "text": "Questionnaire rempli par le patient, utile pour le dépistage et le suivi de l’évolution\ndes symptômes du trouble de la personnalité limite.\n",
+      "text_sha256": "14b7a607bbae62ec6640fdc3c41a0c7d4bdf55540be0f3dd620b96e55ba1bd0b"
+    },
+    {
+      "bbox": [
+        52.75,
+        335.8519592285156,
+        240.90301513671875,
+        369.6781311035156
+      ],
+      "block_id": "page-0969-block-0024",
+      "order": 24,
+      "text": "Minnesota Multiphasic Personality Inventory – 2nd Edition –\nrestructured form (MMPI-II-RF)\nBen-Porath & Tellegen (2008)\n",
+      "text_sha256": "d024d8297221f6269399b2ab19fc97745a34f63736563a6dbf0043488bf43130"
+    },
+    {
+      "bbox": [
+        278.0,
+        338.8519592285156,
+        532.5081176757812,
+        368.6781311035156
+      ],
+      "block_id": "page-0969-block-0025",
+      "order": 25,
+      "text": "Questionnaire rempli par le patient, utilisé depuis très longtemps, qui fournit des\ndonnées sur plusieurs items reliés à la personnalité, mais qui n’a pas été validé\npour les diagnostics DSM-IV et CIM-10.\n",
+      "text_sha256": "1073d260a50a7e8a45c40e39b12ee38f4384ae7ef82936a1cfb2b901d76ac8cf"
+    },
+    {
+      "bbox": [
+        52.75,
+        378.3019714355469,
+        176.10501098632812,
+        399.1281433105469
+      ],
+      "block_id": "page-0969-block-0026",
+      "order": 26,
+      "text": "Pathological Narcissism Inventory (PNI)\nPincus & al. (2009)\n",
+      "text_sha256": "3057738e3f7d2d0f56886c2d58f2e5a558e02abba2edb90c2d0c102fd7ce46fd"
+    },
+    {
+      "bbox": [
+        278.0,
+        378.3019714355469,
+        540.43701171875,
+        408.1281433105469
+      ],
+      "block_id": "page-0969-block-0027",
+      "order": 27,
+      "text": "Questionnaire rempli par le patient, utile au dépistage et au suivi de l’évolution des\nsymptômes du trouble de la personnalité narcissique, contenant aussi des items\npour le narcissisme vulnérable.\n",
+      "text_sha256": "89fbd6acb90ea0a0997f89269f32e40e0e6800c263c5523ebd69d2afb35c6c1e"
+    },
+    {
+      "bbox": [
+        52.75,
+        416.70196533203125,
+        267.18701171875,
+        437.52813720703125
+      ],
+      "block_id": "page-0969-block-0028",
+      "order": 28,
+      "text": "Zanarini Rating Scale for Borderline Personality Disorder (ZAN-BPD)\nZanarini & al. (2003)\n",
+      "text_sha256": "dc3501841a1ebbe1d5fb8d1b488aa083a589bfb66ec347435e633c2109e861fb"
+    },
+    {
+      "bbox": [
+        278.0,
+        416.70196533203125,
+        543.9617919921875,
+        446.52813720703125
+      ],
+      "block_id": "page-0969-block-0029",
+      "order": 29,
+      "text": "Questionnaire rempli par le clinicien qui évalue chaque critère du trouble de la\npersonnalité sur un continuum de gravité. Permet l’évaluation de la progression des\nsymptômes, d’une semaine à l’autre.\n",
+      "text_sha256": "f9b0533b9e90a3f31c58d782dcc92b09c146c71b36c8ed969288117f0c63ab88"
+    },
+    {
+      "bbox": [
+        48.0,
+        467.4658203125,
+        291.3663024902344,
+        501.15850830078125
+      ],
+      "block_id": "page-0969-block-0030",
+      "order": 30,
+      "text": "Enn, les tests projectifs (p. ex., Rorschach ouematic Apper-\nception Test -TAT) tentent de fournir des informations au sujet\ndes processus inconscients, ou inatteignables à un niveau verbal.\n",
+      "text_sha256": "513b0b3ec544a673452f97100fcd8f2115cede175824a9c4d70160d509a98e69"
+    },
+    {
+      "bbox": [
+        48.0,
+        502.2658386230469,
+        291.52813720703125,
+        570.8085327148438
+      ],
+      "block_id": "page-0969-block-0031",
+      "order": 31,
+      "text": "Les mesures physiologiques (p. ex., dosage sanguin de testos-\ntérone) représentent aussi un groupe d’outils diagnostiques qui,\ndans le champ des TP, ont surtout été utilisés dans le contexte\nde la recherche. Il n’existe actuellement aucun dosage sanguin\ndont la spécicité et la sensibilité sont susantes pour avoir\nune utilité clinique.\n",
+      "text_sha256": "3168d5f2e1c69fb0dd81c93b72137472673984dd4c12389be0de9e9926606559"
+    },
+    {
+      "bbox": [
+        48.0,
+        571.9658203125,
+        291.2906799316406,
+        617.2584838867188
+      ],
+      "block_id": "page-0969-block-0032",
+      "order": 32,
+      "text": "Bien que les études décrivant des singularités notables à\nl’imagerie cérébrale structurale et fonctionnelle se fassent de\nplus en plus nombreuses, aucun test d’imagerie n’a une validité\nsusante pour conrmer ou exclure un trouble de la personnalité.\n",
+      "text_sha256": "946d3d3d0436afd28ede9983cbf30e38668e3d2720e0d9249e835ef010cf8a68"
+    },
+    {
+      "bbox": [
+        55.150001525878906,
+        635.6931762695312,
+        174.04696655273438,
+        654.6689453125
+      ],
+      "block_id": "page-0969-block-0033",
+      "order": 33,
+      "text": "40.8\nTraitements\n",
+      "text_sha256": "1bee9fe6dc6a417261d483492f7d5c8f03133fb2a8e464f830d4a6e17379524f"
+    },
+    {
+      "bbox": [
+        48.0,
+        668.5158081054688,
+        291.18841552734375,
+        725.45849609375
+      ],
+      "block_id": "page-0969-block-0034",
+      "order": 34,
+      "text": "Le traitement des patients sourant d’un trouble de la per-\nsonnalité (TP) comporte des dés et des impasses spéciques.\nCertaines interventions, habituellement considérées adéquates\ndans le traitement d’autres troubles mentaux, peuvent s’avérer\ninecaces, voire même nuisibles avec cette population. Orir à\n",
+      "text_sha256": "f09b4915cd4611e41ce99baea84f25e65d65f4c107794b19acf6ed47b7dc2504"
+    },
+    {
+      "bbox": [
+        405.70001220703125,
+        41.352294921875,
+        431.3842468261719,
+        53.320068359375
+      ],
+      "block_id": "page-0969-block-0035",
+      "order": 35,
+      "text": "(suite)\n",
+      "text_sha256": "c684d6dbcdfd50f0ada227f799b5c0fb30e817ac3da61b4cbf208decde7f907b"
+    }
+  ],
+  "coordinates_sha256": "a9d6f560929886f07f8413837d4410f04e70ecb6b3ea5e7df570260cbf6cd093",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0969",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "952\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nces patients des soins adéquats demande donc de modier nos\ntechniques et nos réexes cliniques. Cette section s’amorce par\nun rapide exposé des raisons qui font en sorte que certaines\nattitudes et pratiques peuvent engendrer une détérioration cli-\nnique. Ensuite, nous exposerons quelques grands principes de\nl’intervention auprès de cette clientèle, ainsi que les diérents\nniveaux de services tels qu’ils existent présentement au Québec.\nUne bonne partie des informations qui suivent concernent le\ntraitement des patients avec un TP limite, et dans une certaine\nmesure les autres troubles du groupe B du DSM-IV (narcissique,\nantisociale et histrionique). D’une part, ce sont ces patients qui,\nsur le terrain, sont le plus souvent à la recherche d’un traitement\nspéciquement pour leurs troubles de la personnalité. D’autre\npart – et peut-être en conséquence de cela –, les traitements\nmanualisés et dont l’ecacité a été démontrée ont été conçus\npour répondre aux besoins de ces patients en particulier.\n40.8.1 Principes généraux\nPlusieurs auteurs, dont Dawson (1988), ont suggéré que certaines\ndes manifestations les plus spectaculaires du TP limite – esca-\nlades de gestes suicidaires, comportements régressés, hostilité –\npourraient être exacerbées, voire être déclenchées, par le réseau\nTABLEAU 40.8 Mesures psychométriques utilisées pour les troubles de la personnalité\nOutils\nDescription\nInternational Personality Disorder Examination (IPDE)\nLoranger & al. (1994)\nEntrevue semi-structurée pour les troubles de la personnalité de la CIM-10 et du\nDSM-IV.\nQuestionnaires remplis par les patients ou les professionnels\nRevised NEO Personality Inventory (NEO-PI-R)\nMcCrae & Costa (1990)\nQuestionnaire rempli par le patient ; évalue les 5 dimensions de la personnalité\nselon le modèle du Big Five de McCrae & Costa.\nDimensional Assessment of Personality Pathology – Basic Question-\nnaire (DAPP-BQ)\nLivesley & al. (1992)\nQuestionnaire rempli par le patient ; élaboré autour de l’approche dimensionnelle en\n18 traits et 4 facteurs.\nSchedule of Nonadaptative and Adaptative Personality (SNAP)\nClark & al. (1993)\nQuestionnaire rempli par le patient ; évalue plusieurs traits de la personnalité, dont\nune partie pour les diagnostics du DSM.\nPersonality Diagnostic Questionnaire – 4 (PDQ-R)\nHyler (1994)\nQuestionnaire rempli par le patient pour le dépistage des troubles de la personnalité\ndu DSM-IV.\nMillon Clinical Multiaxial Inventory – III (MCMI-III)\nMillon (1990)\nQuestionnaire de 175 items rempli par le patient mesurant les troubles de la\npersonnalité du DSM-IV\nTemperament and Character Inventory – Revised (TCI-R)\nCloninger (1999)\nQuestionnaire rempli par le patient, qui évalue les quatre dimensions de tempéra-\nment et trois dimensions du caractère dénies par Cloninger.\nBorderline Personality Questionnaire (BPQ)\nPoreh & al. (2006)\nQuestionnaire rempli par le patient, utile pour le dépistage et le suivi de l’évolution\ndes symptômes du trouble de la personnalité limite.\nMinnesota Multiphasic Personality Inventory – 2nd Edition –\nrestructured form (MMPI-II-RF)\nBen-Porath & Tellegen (2008)\nQuestionnaire rempli par le patient, utilisé depuis très longtemps, qui fournit des\ndonnées sur plusieurs items reliés à la personnalité, mais qui n’a pas été validé\npour les diagnostics DSM-IV et CIM-10.\nPathological Narcissism Inventory (PNI)\nPincus & al. (2009)\nQuestionnaire rempli par le patient, utile au dépistage et au suivi de l’évolution des\nsymptômes du trouble de la personnalité narcissique, contenant aussi des items\npour le narcissisme vulnérable.\nZanarini Rating Scale for Borderline Personality Disorder (ZAN-BPD)\nZanarini & al. (2003)\nQuestionnaire rempli par le clinicien qui évalue chaque critère du trouble de la\npersonnalité sur un continuum de gravité. Permet l’évaluation de la progression des\nsymptômes, d’une semaine à l’autre.\nEnn, les tests projectifs (p. ex., Rorschach ouematic Apper-\nception Test -TAT) tentent de fournir des informations au sujet\ndes processus inconscients, ou inatteignables à un niveau verbal.\nLes mesures physiologiques (p. ex., dosage sanguin de testos-\ntérone) représentent aussi un groupe d’outils diagnostiques qui,\ndans le champ des TP, ont surtout été utilisés dans le contexte\nde la recherche. Il n’existe actuellement aucun dosage sanguin\ndont la spécicité et la sensibilité sont susantes pour avoir\nune utilité clinique.\nBien que les études décrivant des singularités notables à\nl’imagerie cérébrale structurale et fonctionnelle se fassent de\nplus en plus nombreuses, aucun test d’imagerie n’a une validité\nsusante pour conrmer ou exclure un trouble de la personnalité.\n40.8\nTraitements\nLe traitement des patients sourant d’un trouble de la per-\nsonnalité (TP) comporte des dés et des impasses spéciques.\nCertaines interventions, habituellement considérées adéquates\ndans le traitement d’autres troubles mentaux, peuvent s’avérer\ninecaces, voire même nuisibles avec cette population. Orir à\n(suite)\n",
+  "raw_text_sha256": "6d77d72a4c312030e6ca1a585b5e0407ab016adcad0eece0a22f41a45e79be66",
+  "source_page_display": 970,
+  "source_page_index": 969
+}

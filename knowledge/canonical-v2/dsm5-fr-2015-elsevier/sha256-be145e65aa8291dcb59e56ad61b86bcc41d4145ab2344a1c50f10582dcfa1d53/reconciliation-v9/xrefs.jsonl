@@ -1,0 +1,501 @@
+{"from_unit":"dsm5fr-u-10-B0002","target_text":"Harmonisation avec la CIM-11","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-1000-U5276","target_text":"voir un proche intime,","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-1000-U5276","target_text":"voir une connexion","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-1003-U5278","target_text":"Cf. Affectivité négative","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-1004-L029","target_text":"tableau 3","target_unit":"dsm5fr-u-1002-L028","status":"resolved"}
+{"from_unit":"dsm5fr-u-1011-L039","target_text":"Personnalité borderline","target_unit":"dsm5fr-u-991-L017","status":"resolved"}
+{"from_unit":"dsm5fr-u-1011-L039","target_text":"Personnalité schizotypique","target_unit":"dsm5fr-u-994-L020","status":"resolved"}
+{"from_unit":"dsm5fr-u-1015-L040","target_text":"Trouble bipolaire de type II","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-1015-L040","target_text":"Trouble cyclothymique","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-1015-L040","target_text":"Trouble dépressif caractérisé","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-1018-L041","target_text":"Trouble dépressif caractérisé","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-1018-L041","target_text":"Trouble stress post-traumatique","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-1022-L042","target_text":"Trouble de l’usage d’un autre stimulant","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-1022-L042","target_text":"Troubles anxieux","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-1025-L043","target_text":"jeu d’argent pathologique","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-1028-L044","target_text":"Trouble neurocognitif majeur [démence]","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-1032-L045","target_text":"Lésions auto-inligées non suicidaires","target_unit":"dsm5fr-u-1034-L046","status":"resolved"}
+{"from_unit":"dsm5fr-u-1034-L046","target_text":"Personnalité borderline","target_unit":"dsm5fr-u-991-L017","status":"resolved"}
+{"from_unit":"dsm5fr-u-1034-L046","target_text":"Trouble conduite suicidaire","target_unit":"dsm5fr-u-1032-L045","status":"resolved"}
+{"from_unit":"dsm5fr-u-1043-T802","target_text":"Glossaire des concepts culturels de détresse . . . 1077","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-1043-T802","target_text":"Liste alphabétiques des diagnostics et codes du DSM-5 (CIM-9-MC et CIM-10-MC) . . . 1089","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-1043-U5281","target_text":"1117","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-1043-U5281","target_text":"1135","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-1043-U5281","target_text":"1161","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-1067-M003","target_text":"Cf. psychotiques (caractéristiques) congruentes à l’humeur.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-1067-M011","target_text":"Cf. aussi hallucinations.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-1068-M022","target_text":"À comparer avec la micropsie.","target_unit":"dsm5fr-u-1069-M031","status":"resolved"}
+{"from_unit":"dsm5fr-u-1068-M024","target_text":"Cf. aussi hypomanie.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-1069-M031","target_text":"À comparer avec la macropsie.","target_unit":"dsm5fr-u-1068-M022","status":"resolved"}
+{"from_unit":"dsm5fr-u-1069-M033","target_text":"Cf. « Troubles de l’éveil en sommeil non paradoxal » (Non Rapid Eye Mouvement Sleep Arousal Disorders) (p. 517) et « Trouble du comportement en sommeil paradoxal » (Rapid Eye Movement Sleep Behavior Disorder) (p. 527).","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-1070-M039","target_text":"Comparer avec les dyssomnies.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-1072-M068","target_text":"Cf. rythmes circadiens.","target_unit":"dsm5fr-u-1073-M069","status":"resolved"}
+{"from_unit":"dsm5fr-u-1073-M071","target_text":"À comparer avec symptôme.","target_unit":"dsm5fr-u-1074-M082","status":"resolved"}
+{"from_unit":"dsm5fr-u-1073-M072","target_text":"Ou sommeil à mouvements oculaires rapides.","target_unit":"dsm5fr-u-1069-M033","status":"resolved"}
+{"from_unit":"dsm5fr-u-1074-M082","target_text":"À comparer avec signe.","target_unit":"dsm5fr-u-1073-M071","status":"resolved"}
+{"from_unit":"dsm5fr-u-1078-T807","target_text":"2. NDT. Syndrome décrit dans le DSM-IV.","target_unit":"dsm5fr-u-1078-T810","status":"resolved"}
+{"from_unit":"dsm5fr-u-1078-T807","target_text":"Affections apparentées dans le DSM-5 : Trouble dépressif caractérisé, trouble dépressif persistant (dysthymie), anxiété généralisée, trouble à symptomatologie somatique, crainte excessive d’avoir une maladie, trouble de l’érection, éjaculation précoce, autre dysfonction sexuelle spéciiée ou non spéciiée, dificulté scolaire","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-1078-T807","target_text":"Koro en Asie de Sud-Est, à Singapour en particulier, et shènkuī (déplétion ou déicience rénale) en Chine (Sumathipala et al. 2004)","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-1078-U5285","target_text":"Glossaire des concepts culturels de détresse","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-1078-U5287","target_text":"voir perdu du dhat en l’absence","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-1078-U5293","target_text":"voir une maladie, trouble de l’érection, éjaculation précoce","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-1079-M102","target_text":"cf. « Affections proposées pour des études supplémentaires ».","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-1081-T811","target_text":"3e édition de la CCTM (Chinese Society of Psychiatry 2001), diagnostic somatoforme d’exclusion","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-1081-T811","target_text":"seconde édition révisée de la Classiication chinoise des troubles mentaux (CCTM-2-R)","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-1081-T815","target_text":"Affections apparentées dans d’autres contextes culturels : spectre de la neurasthénie (Inde, Japon), brain fag syndrome, épuisement professionnel, fatigue chronique","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-1081-T815","target_text":"Affections apparentées dans le DSM-5 : Trouble dépressif caractérisé, trouble dépressif persistant (dysthymie), anxiété généralisée, trouble à symptomatologie somatique, anxiété sociale, phobie spéciique, trouble stress post-traumatique","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-1081-U5298","target_text":"Glossaire des concepts culturels de détresse","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-111-C041","target_text":"La catatonie est décrite plus loin dans ce chapitre et abordée ultérieurement dans la discussion.","target_unit":"dsm5fr-u-146-C013","status":"resolved"}
+{"from_unit":"dsm5fr-u-115-C046","target_text":"On ne porte pas le diagnostic de trouble délirant si le sujet a déjà présenté un tableau symptomatique qui répond au critère A de la schizophrénie (critère B).","target_unit":"dsm5fr-u-113-C044","status":"resolved"}
+{"from_unit":"dsm5fr-u-117-C001","target_text":"Spécifier si : Avec catatonie (pour la définition, se référer aux critères de catatonie associée à un autre trouble mental, p. 146).","target_unit":"dsm5fr-u-146-C013","status":"resolved"}
+{"from_unit":"dsm5fr-u-1185-N024","target_text":"Substance (troubles liés à une) et troubles addictifs","target_unit":"dsm5fr-u-1212-N237","status":"resolved"}
+{"from_unit":"dsm5fr-u-1186-N032","target_text":"Conduites alimentaires (troubles des) et de l’ingestion d’aliments","target_unit":"dsm5fr-u-1191-N095","status":"resolved"}
+{"from_unit":"dsm5fr-u-1187-N049","target_text":"Trichotillomanie (arrachage compulsif de ses propres cheveux)","target_unit":"dsm5fr-u-1215-N271","status":"resolved"}
+{"from_unit":"dsm5fr-u-1188-N058","target_text":"Fluidité verbale (trouble de la) apparaissant durant l'enfance (bégaiement)","target_unit":"dsm5fr-u-1197-N072","status":"resolved"}
+{"from_unit":"dsm5fr-u-1189-N066","target_text":"Boulimie","target_unit":"dsm5fr-u-1189-N065","status":"resolved"}
+{"from_unit":"dsm5fr-u-119-C009","target_text":"Le trouble psychotique induit par une substance/ un médicament, l’état confusionnel induit par une substance et l’intoxication par une substance sont distingués du trouble psychotique bref par le fait qu’une substance (p. ex. une substance donnant lieu à abus, un médicament ou l’exposition à un toxique) est jugée être liée étiologiquement aux symptômes psychotiques (cf. « Trouble psychotique induit par une substance/un médicament » plus loin dans ce chapitre).","target_unit":"dsm5fr-u-117-C001","status":"resolved"}
+{"from_unit":"dsm5fr-u-119-C009","target_text":"Si les symptômes psychotiques persistent 1 mois ou davantage, on portera un des diagnostics suivants en fonction des autres symptômes du tableau clinique : trouble schizophréniforme, trouble délirant, trouble dépressif avec caractéristiques psychotiques, trouble bipolaire avec caractéristiques psychotiques ou trouble du spectre de la schizophrénie ou autre trouble psychotique spécifié ou non spécifié.","target_unit":"dsm5fr-u-94-C007","status":"resolved"}
+{"from_unit":"dsm5fr-u-119-C009","target_text":"Un trouble psychotique dû à une affection médicale ou un état confusionnel est diagnostiqué quand on peut mettre en évidence d’après les antécédents, l’examen physique ou les examens complémentaires que les idées délirantes ou les hallucinations sont la conséquence physiologique directe d’une affection médicale spécifique (p. ex. syndrome de Cushing, tumeur cérébrale) (cf. « Trouble psychotique dû à une autre affection médicale » plus loin dans ce chapitre).","target_unit":"dsm5fr-u-109-C036","status":"resolved"}
+{"from_unit":"dsm5fr-u-1190-N075","target_text":"Culturelle (formulation)","target_unit":"dsm5fr-u-1191-N107","status":"resolved"}
+{"from_unit":"dsm5fr-u-1190-N079","target_text":"Apnée centrale du sommeil","target_unit":"dsm5fr-u-1187-N046","status":"resolved"}
+{"from_unit":"dsm5fr-u-1190-N081","target_text":"Classiication internationale des maladies","target_unit":"dsm5fr-u-1190-N082","status":"resolved"}
+{"from_unit":"dsm5fr-u-1190-N084","target_text":"Neurocognitifs (troubles) (TNC)","target_unit":"dsm5fr-u-1201-N138","status":"resolved"}
+{"from_unit":"dsm5fr-u-1190-N090","target_text":"Obsessionnels-compulsifs (troubles) et apparentés","target_unit":"dsm5fr-u-1203-N152","status":"resolved"}
+{"from_unit":"dsm5fr-u-1191-N103","target_text":"Prions (trouble neurocognitif dû à une maladie à), majeur ou léger","target_unit":"dsm5fr-u-1206-N183","status":"resolved"}
+{"from_unit":"dsm5fr-u-1192-N001","target_text":"Attention (déicit de l’)/ hyperactivité (TDAH)","target_unit":"dsm5fr-u-1187-N052","status":"resolved"}
+{"from_unit":"dsm5fr-u-1192-N004","target_text":"État confusionnel (delirium)","target_unit":"dsm5fr-u-1196-N056","status":"resolved"}
+{"from_unit":"dsm5fr-u-1192-N005","target_text":"Neurocognitifs (troubles) (TNC)","target_unit":"dsm5fr-u-1201-N138","status":"resolved"}
+{"from_unit":"dsm5fr-u-1194-N033","target_text":"Obsession d’une dysmorphie corporelle","target_unit":"dsm5fr-u-1202-N146","status":"resolved"}
+{"from_unit":"dsm5fr-u-1195-N039","target_text":"Dépressif persistant (trouble) (dysthymie)","target_unit":"dsm5fr-u-1192-N012","status":"resolved"}
+{"from_unit":"dsm5fr-u-1197-N077","target_text":"Tics","target_unit":"dsm5fr-u-1214-N262","status":"resolved"}
+{"from_unit":"dsm5fr-u-1197-N079","target_text":"Pseudocyèse","target_unit":"dsm5fr-u-1206-N185","status":"resolved"}
+{"from_unit":"dsm5fr-u-1198-N091","target_text":"Attention (déicit de l’)/ hyperactivité (TDAH)","target_unit":"dsm5fr-u-1187-N052","status":"resolved"}
+{"from_unit":"dsm5fr-u-1198-N093","target_text":"Crainte excessive d'avoir une maladie","target_unit":"dsm5fr-u-1191-N102","status":"resolved"}
+{"from_unit":"dsm5fr-u-1199-N096","target_text":"Classiication internationale des troubles du sommeil","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-120-C010","target_text":"N.B. : Pour des informations supplémentaires sur les caractéristiques associées au diagnostic, le développement et l’évolution (facteurs liés à l’âge), les questions diagnostiques liées à la culture, les questions diagnostiques liées au genre, le diagnostic différentiel et la comorbidité, se référer aux parties correspondantes dans le chapitre sur la schizophrénie.","target_unit":"dsm5fr-u-122-C018","status":"resolved"}
+{"from_unit":"dsm5fr-u-120-C010","target_text":"Spécifier si : Avec catatonie (pour la définition, se référer aux critères de catatonie associée à un autre trouble mental, p. 146).","target_unit":"dsm5fr-u-146-C013","status":"resolved"}
+{"from_unit":"dsm5fr-u-1201-N129","target_text":"Sommeil paradoxal","target_unit":"dsm5fr-u-1211-N224","status":"resolved"}
+{"from_unit":"dsm5fr-u-1206-N178","target_text":"Anxiété sociale (phobie sociale)","target_unit":"dsm5fr-u-1187-N041","status":"resolved"}
+{"from_unit":"dsm5fr-u-1206-N192","target_text":"Schizophrénie (spectre de la) et autres troubles psychotiques","target_unit":"dsm5fr-u-1209-N208","status":"resolved"}
+{"from_unit":"dsm5fr-u-1211-N221","target_text":"Syndrome des jambes sans repos","target_unit":"dsm5fr-u-1199-N104","status":"resolved"}
+{"from_unit":"dsm5fr-u-1211-N225","target_text":"Éveil (troubles de l') en sommeil paradoxal","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-1212-N236","target_text":"les noms des substances spéciiques","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-1212-N237","target_text":"les noms des substances spéciiques","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-1213-N248","target_text":"Thésaurisation pathologique (syllogomanie)","target_unit":"dsm5fr-u-1214-N261","status":"resolved"}
+{"from_unit":"dsm5fr-u-1213-N249","target_text":"Conversion Start (trouble de)","target_unit":"dsm5fr-u-1191-N099","status":"resolved"}
+{"from_unit":"dsm5fr-u-1214-N256","target_text":"Tabac (troubles liés au)","target_unit":"dsm5fr-u-1214-N255","status":"resolved"}
+{"from_unit":"dsm5fr-u-1214-N258","target_text":"Attention (déicit de l')/hyperactivité (TDAH)","target_unit":"dsm5fr-u-1187-N052","status":"resolved"}
+{"from_unit":"dsm5fr-u-1214-N260","target_text":"Éveil (troubles de l') en sommeil paradoxal","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-1214-N263","target_text":"Neurocognitifs (troubles) (TNC)","target_unit":"dsm5fr-u-1201-N138","status":"resolved"}
+{"from_unit":"dsm5fr-u-1214-N264","target_text":"Obsessionnel-compulsif (trouble) (TOC)","target_unit":"dsm5fr-u-1202-N148","status":"resolved"}
+{"from_unit":"dsm5fr-u-1215-N273","target_text":"Dermatillomanie (triturage pathologique de la peau)","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-1215-N276","target_text":"Stress post-traumatique (trouble)","target_unit":"dsm5fr-u-1212-N233","status":"resolved"}
+{"from_unit":"dsm5fr-u-1215-N278","target_text":"les troubles spéciiques de l'alternance veille-sommeil","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-122-C018","target_text":"Non spécifié Spécifier si : Avec catatonie (pour la définition, se référer aux critères de catatonie associée à un autre trouble mental, p. 146).","target_unit":"dsm5fr-u-146-C013","status":"resolved"}
+{"from_unit":"dsm5fr-u-130-C030","target_text":"N.B. : Pour des informations supplémentaires sur le développement et l’évolution (facteurs liés à l’âge), les facteurs de risque et pronostiques (facteurs de risque environnementaux), les questions diagnostiques liées à la culture et les questions diagnostiques liées au genre, se référer aux parties correspondantes dans les chapitres concernant la schizophrénie, les troubles bipolaires I et II et la dépression caractérisée.","target_unit":"dsm5fr-u-122-C018","status":"resolved"}
+{"from_unit":"dsm5fr-u-130-C030","target_text":"Spécifier le type : 295.70 (F25.0) Type bipolaire : Ce sous-type est retenu lorsqu’un épisode maniaque fait partie du tableau clinique.","target_unit":"dsm5fr-u-158-C035","status":"resolved"}
+{"from_unit":"dsm5fr-u-130-C030","target_text":"Spécifier si : Avec catatonie (pour la définition, se référer aux critères de catatonie associée à un autre trouble mental, p. 146).","target_unit":"dsm5fr-u-146-C013","status":"resolved"}
+{"from_unit":"dsm5fr-u-130-C030","target_text":"Des épisodes dépressifs caractérisés peuvent aussi être observés. 295.70 (F25.1) Type dépressif : Ce sous-type est retenu lorsque seuls des épisodes dépressifs caractérisés font partie du tableau clinique.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-131-U10005","target_text":"se référer aux critères de catatonie associée à un autre trouble mental, p","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-131-U10016","target_text":"(Cf. dans le chapitre « Mesures d’évaluation » l’évaluation dimen- sionnelle de la sévérité des symptômes psychotiques par le clinicien.)","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-131-U10018","target_text":"se référer aux parties correspondantes dans les chapitres concernant la schizophrénie, les troubles bipolaires I et II et la dépression caractérisée","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-132-C031","target_text":"Afin de décider si le tableau clinique répond au critère C, le clinicien doit reprendre toute l’histoire de la maladie (c.-à.d. à la fois les phases actives et résiduelles) et déterminer quand des symptômes thymiques significatifs (non traités ou ayant nécessité le recours à un traitement par antidépresseur et/ou thymorégulateur) se sont exprimés conjointement aux symptômes psychotiques.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-134-C039","target_text":"Étant donné que la proportion des manifestations thymiques par rapport aux manifestations psychotiques peut varier au cours du temps, le diagnostic est réévalué régulièrement, au profit ou aux dépens du trouble schizoaffectif (p. ex. un diagnostic de trouble schizoaffectif, posé face à un épisode dépressif caractérisé sévère ayant duré 3 mois au cours des 6 premiers mois d’évolution psychotique, peut être revu en faveur d’une schizophrénie si des symptômes psychotiques patents ou des symptômes résiduels marqués dominent le tableau par la suite en l’absence de tout autre épisode thymique).","target_unit":"dsm5fr-u-122-C018","status":"resolved"}
+{"from_unit":"dsm5fr-u-136-C041","target_text":"CIM-10-MC Avec un trouble léger Avec un trouble moyen Sans trouble de l’usage d’une ou grave de l’usage de l’usage d’une CIM-9-MC substance d’une substance substance Alcool 291.9 F10.159 F10.259 F10.959 Cannabis 292.9 F12.159 F12.259 F12.959 Phencyclidine 292.9 F16.159 F16.259 F16.959 Autres hallucinogènes 292.9 F16.159 F16.259 F16.959 Substance inhalée 292.9 F18.159 F18.259 F18.959 Sédatifs, hypnotiques 292.9 F13.159 F13.259 F13.959 ou anxiolytiques Amphétamines 292.9 F15.159 F15.259 F15.959 (ou autres stimulants) Cocaïne 292.9 F14.159 F14.259 F14.959 Substance autre 292.9 F19.159 F19.259 F19.959 (ou inconnue) Spécifier si (cf. tableau 1 du chapitre « Troubles liés à une substance et troubles addictifs » pour les diagnostics associés à la classe de substance) : Avec début au cours d’une intoxication : Si les critères sont remplis pour une intoxication par la substance et si les symptômes se développent au cours de l’intoxication.","target_unit":"dsm5fr-u-94-C007","status":"resolved"}
+{"from_unit":"dsm5fr-u-136-C041","target_text":"N.B. : Ce diagnostic ne doit être fait à la place d’un diagnostic d’intoxication par une substance ou de sevrage d’une substance que lorsque les symptômes du critère A dominent le tableau clinique et qu’ils sont suffisamment marqués pour justifier une prise en charge clinique.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-136-C041","target_text":"Note de codage : Les codes de la CIM-9-MC et la CIM-10-MC pour les troubles psychotiques induits par [une substance spécifique/un médicament] sont indiqués dans le tableau ci-après.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-137-C042","target_text":"Le code diagnostique est choisi dans le tableau inclus dans les critères, qui repose sur la classe de la substance.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-137-C042","target_text":"Le code diagnostique est choisi dans le tableau inclus dans les critères, qui repose sur la classe de médicaments et la présence ou l’absence d’une comorbidité avec un trouble de l’usage de substance.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-146-C014","target_text":"Le tableau clinique est dominé par au moins trois des symptômes suivants : 1.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-147-C015","target_text":"La spécification de catatonie est appropriée lorsque le tableau clinique est caractérisé par une perturbation importante de la psychomotricité et comprend au moins 3 des 12 caractéristiques diagnostiques figurant dans le critère A.","target_unit":"dsm5fr-u-146-C013","status":"resolved"}
+{"from_unit":"dsm5fr-u-147-C016","target_text":"Le tableau clinique est dominé par au moins trois des symptômes suivants : 1.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-149-C021","target_text":"Le diagnostic d’autre trouble du spectre de la schizophrénie ou autre trouble psychotique spécifié est utilisé dans les situations où le clinicien choisit de donner la raison précise pour laquelle le tableau clinique ne répond aux critères d’aucun des troubles spécifiques de ce chapitre.","target_unit":"dsm5fr-u-122-C018","status":"resolved"}
+{"from_unit":"dsm5fr-u-15-B0001","target_text":"section III, intitulée « Formulations culturelles »","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-163-T10001","target_text":"dépressif) (cf.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-163-U10003","target_text":"(cf. « Avec caractéristiques mixtes », p. 187)","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-179-D022","target_text":"tableau 1 dans le chapitre « Troubles liés à une substance et troubles addictifs » pour le diagnostic associé avec chaque classe de substances): Avec début pendant une intoxication: si les critères pour une intoxication par la substance sont réunis et si les symptômes se sont développés pendant l’intoxication.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-18-B0001","target_text":"WHODAS (WHO Disability Assessment Schedule)","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-190-D048","target_text":"les critères de la catatonie associée à un trouble mental dans le chapitre « Spectre de la schizophrénie et autres troubles psychotiques ».","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-193-D053","target_text":"À la différence du DSM-IV, ce chapitre « Troubles dépressifs » a été séparé du chapitre précédent « Troubles bipolaires ».","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-21-B0002","target_text":"Mise en garde pour l’usage médico-légal du DSM-5","target_unit":"dsm5fr-u-29-B0001","status":"resolved"}
+{"from_unit":"dsm5fr-u-217-D097","target_text":"tableau 1 du chapitre « Troubles liés à une substance et troubles addictifs » pour les diagnostics associés à chaque classe de substance): Avec début au cours d’une intoxication: Si les critères pour une intoxication par la substance sont réunis et si les symptômes se sont développés pendant le syndrome d’intoxication.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-229-D124","target_text":"critères de la catatonie associée à un trouble mental dans le chapitre « Spectre de la schizophrénie et autres troubles psychotiques ».","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-25-B0002","target_text":"Système multiaxial","target_unit":"dsm5fr-u-18-B0001","status":"resolved"}
+{"from_unit":"dsm5fr-u-25-B0002","target_text":" troubles des mouvements induits par un médicament et autres situations pouvant faire l’objet d’un examen clinique","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-270-S10019","target_text":"se référer au « Glossaire des concepts culturels de détresse » en annexe","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-270-T20016","target_text":"Glossaire des concepts culturels de détresse » en annexe","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-270-U10021","target_text":"se référer au « Glossaire des concepts culturels de détresse » en annexe","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-282-E004","target_text":"Les codes CIM-9-MC et CIM-10-MC du trouble anxieux induit [par une substance/un médicament spécifique] sont indiqués dans le tableau ci-après.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-282-E004","target_text":"cf. tableau 1 dans le chapitre « Troubles liés à une substance et troubles addictifs » pour les diagnostics associés à chaque classe de substance","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-283-S10002","target_text":"cf. tableau 1","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-283-T20001","target_text":"cf. tableau 1 dans le chapitre « Troubles liés à une substance et troub","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-283-U10003","target_text":"(cf. tableau 1 dans le chapitre « Troubles liés à une substance et troubles addic- tifs » pour les diagnostics associés à chaque classe de substance)","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-290-E006","target_text":"Cf. « Glossaire des concepts culturels de détresse » en annexe.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-299-T20004","target_text":"chapitre sur les troubles obsessionnels-compulsifs et apparentés dans le DSM-5 relète les","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-299-T20011","target_text":"chapitre décrit ensuite la trichotillomanie (arrachage compulsif de ses propres cheveux) e","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-3-B0001","target_text":"section II du Manuel","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-304-S10018","target_text":"cf. « Comorbidité » pour ce trouble","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-304-U10019","target_text":"(cf. « Comorbidité » pour ce trouble)","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-327-E003","target_text":"cf. tableau 1 dans le chapitre « Troubles liés à une substance et troubles addictifs » pour les diagnostics associés à la classe de substance","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-329-S10003","target_text":"tableau inclus dans l’ensemble des critères","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-329-S10011","target_text":"tableau inclus dans l’ensemble des critères","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-33-B0001","target_text":"Handicap intellectuel (troubles du développement intellectuel)","target_unit":"dsm5fr-u-36-B0001","status":"resolved"}
+{"from_unit":"dsm5fr-u-33-B0001","target_text":"Trouble du spectre de l’autisme","target_unit":"dsm5fr-u-34-B0001","status":"resolved"}
+{"from_unit":"dsm5fr-u-33-B0001","target_text":"Trouble déficit de l’attention/hyperactivité (TDAH)","target_unit":"dsm5fr-u-34-B0002","status":"resolved"}
+{"from_unit":"dsm5fr-u-335-E005","target_text":"cf. « Glossaire des concepts culturels de détresse » en annexe","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-350-E003","target_text":"Pour les enfants de 6 ans ou moins, cf. les critères correspondants ci-dessous.","target_unit":"dsm5fr-u-350-E003","status":"resolved"}
+{"from_unit":"dsm5fr-u-350-E003","target_text":"cf. « Formulation culturelle » dans la section III","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-357-S10003","target_text":"cf. les critères pour le\nsous-type préscolaire)","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-357-U10013","target_text":"(cf. les critères pour le sous-type préscolaire)","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-359-S10002","target_text":"cf.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-359-U20002","target_text":"(cf. « Formulation culturelle » dans la section III)","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-36-B0001","target_text":"cf. tableau 1","target_unit":"dsm5fr-u-36-B0002","status":"resolved"}
+{"from_unit":"dsm5fr-u-36-B0002","target_text":"Tableau 1","target_unit":"dsm5fr-u-37-B0002","status":"resolved"}
+{"from_unit":"dsm5fr-u-37-B0002","target_text":"Tableau 1. Niveaux de sévérité du handicap intellectuel (trouble du développement intellectuel)","target_unit":null,"status":"resolved"}
+{"from_unit":"dsm5fr-u-372-F003","target_text":"Cf. « Glossaire des concepts culturels de détresse » en annexe.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-372-F003","target_text":"cf. « Affections proposées pour des études supplémentaires »","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-379-T20003","target_text":"chapitre comporte le trouble dissociatif de l’identité, l’amnésie dissociative, la déperso","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-398-T20008","target_text":"chapitre des troubles dissociatifs","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-40-B0001","target_text":"section III du DSM-5 consacrée aux travaux nécessitant des recherches futures","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-403-T3001","target_text":"chapitre inclut les diagnostics de trouble à symptomatologie somatique, de crainte excess","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-403-T3002","target_text":"chapitre ont une caractéristique commune : la prééminence de symptômes somatiques associé","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-416-U20002","target_text":"(cf. « Diagnostic différentiel »\nde ce trouble)","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-421-F002","target_text":"cf. « Diagnostic différentiel » de ce trouble","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-421-F002","target_text":"voir le chapitre « Autres situations pouvant faire l’objet d’un examen clinique »","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-440-F008","target_text":"voir p. ex. les tables numériques des percentiles de l’IMC établies par le CDC pour les enfants et les adolescents","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-458-F003","target_text":"La perturbation du schéma d’alimentation n’est pas mieux expliquée par un trouble accès hyperphagiques ou par un autre trouble mental, y compris par l’utilisation d’une substance, et n’est pas imputable à un autre trouble mental ou à un effet iatrogène.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-464-T3003","target_text":"voir atteint un âge auquel la continence est supposée acquise (c.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-467-T3004","target_text":"voir une consistance normale ou quasi normale.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-471-T3004","target_text":"chapitre vise à faciliter le diagnostic différentiel des plaintes concernant la veille et","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-478-G005","target_text":"Trouble de l’alternance veille-sommeil lié au rythme circadien","target_unit":"dsm5fr-u-506-G017","status":"resolved"}
+{"from_unit":"dsm5fr-u-478-G005","target_text":"cf. « Trouble du sommeil induit par une substance/un médicament » plus loin dans ce chapitre","target_unit":"dsm5fr-u-535-G031","status":"resolved"}
+{"from_unit":"dsm5fr-u-490-G009","target_text":"Hypersomnolence","target_unit":"dsm5fr-u-480-G006","status":"resolved"}
+{"from_unit":"dsm5fr-u-490-G009","target_text":"Syndrome d’apnées du sommeil","target_unit":"dsm5fr-u-492-G011","status":"resolved"}
+{"from_unit":"dsm5fr-u-501-G014","target_text":"cf. supra « Apnée/hypopnée obstructive du sommeil »","target_unit":"dsm5fr-u-492-G011","status":"resolved"}
+{"from_unit":"dsm5fr-u-505-G016","target_text":"Apnée/hypopnée obstructive du sommeil et apnée centrale du sommeil","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-520-T3010","target_text":"voir une instabilité dans les stades les plus profonds du sommeil non paradoxal.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-521-G024","target_text":"Trouble du comportement en sommeil paradoxal","target_unit":"dsm5fr-u-527-G027","status":"resolved"}
+{"from_unit":"dsm5fr-u-521-G024","target_text":"Trouble du sommeil induit par une substance/un médicament, de type parasomnie","target_unit":"dsm5fr-u-535-G031","status":"resolved"}
+{"from_unit":"dsm5fr-u-525-G026","target_text":"Trouble du comportement en sommeil paradoxal","target_unit":"dsm5fr-u-527-G027","status":"resolved"}
+{"from_unit":"dsm5fr-u-525-G026","target_text":"Trouble du sommeil induit par une substance/un médicament","target_unit":"dsm5fr-u-535-G031","status":"resolved"}
+{"from_unit":"dsm5fr-u-529-G028","target_text":"Apnée obstructive du sommeil","target_unit":"dsm5fr-u-492-G011","status":"resolved"}
+{"from_unit":"dsm5fr-u-535-G031","target_text":"tableau 1 du chapitre « Troubles liés à une substance et troubles addictifs »","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-538-T3004","target_text":"voir la preuve d’une intoxication ou d’un sevrage dans les antécédents, l’examen physique ou les résultats de laboratoire.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-538-T3005","target_text":"voir des caractéristiques atypiques par rapport aux autres troubles du sommeil (p.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-541-S20002","target_text":"cf. chapitre « Troubles liés à une substance et troubles addictifs » pour les descriptions des troubles de l’usage d’une substance)","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-541-T3002","target_text":"chapitre « Troubles liés à une substance et troubles addictifs » pour les descriptions de","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-541-U20001","target_text":"(cf. chapitre\n« Troubles liés à une substance et troubles addictifs » pour les descriptions des troubles\nde l’usage d’une substance)","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-542-G032","target_text":"paragraphes « Comorbidité » pour d’autres troubles du sommeil dans ce chapitre","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-553-T3002","target_text":"voir plusieurs dysfonctions sexuelles en même temps.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-556-G040","target_text":"Dysfonction avec orgasme","target_unit":"dsm5fr-u-561-G043","status":"resolved"}
+{"from_unit":"dsm5fr-u-558-T3012","target_text":"voir d’importants problèmes d’érection (Prins et al.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-558-T3013","target_text":"voir des relations sexuelles ou à la pression de l’entourage (Santtila et al.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-560-G042","target_text":"Dysfonction sexuelle induite par une substance/un médicament","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-562-T3002","target_text":"voir une durée minimale d’environ 6 mois.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-564-G044","target_text":"Trouble de l’intérêt pour l’activité sexuelle ou de l’excitation sexuelle chez la femme","target_unit":"dsm5fr-u-565-G045","status":"resolved"}
+{"from_unit":"dsm5fr-u-582-H004","target_text":"Spécifier si (cf. tableau 1 dans le chapitre « Troubles liés à une substance et troubles addictifs » pour les diagnostics associés aux différentes classes de substances)","target_unit":"dsm5fr-u-633-H007","status":"resolved"}
+{"from_unit":"dsm5fr-u-584-S3001","target_text":"Dysfonction sexuelle induite par une substance/un médicament  \n583\nNote de codage : Les codes de la CIM-9-MC et de la CIM-10-MC pour les dysfonctions \nsexuelles induites par une substance/un médicament sont indiqués dans le tableau ci-dessous.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-584-S3001","target_text":"tableau 1 dans le chapitre « Troubles liés à une substance et troubles addic-\ntifs » pour les diagnostics associés aux différentes classes de substances) :\nAvec début au cours d’une intoxication : Si les critères pour l’intoxication par une \nsubstance sont présents et si les symptômes sont apparus au cours de l’intoxication.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-584-U30156","target_text":"ysfonctions sexuelles dans le tableau des critères diagnostiques, selon la classe des produits. Pour les subs- tances qui ne rentrent pas dans l’une des classes","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-584-U30160","target_text":"diagnostic est choisi dans le tableau des critères diagnostiques selon la classe de médicaments et la présence ou l’absence d’une comorbidité avec un trouble li","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-585-S3001","target_text":"584 \nDysfonctions sexuelles\ndans le tableau des critères diagnostiques, selon la classe des produits.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-585-S3001","target_text":"Le code du diagnostic est choisi \ndans le tableau des critères diagnostiques selon la classe de médicaments et la présence \nou l’absence d’une comorbidité avec un trouble lié à l’usage d’une substance.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-593-U30189","target_text":"Dysphorie de genre Ce chapitre concerne le diagnostic global de dysphorie de genre, présenté avec des cri- tères développementaux spéciiques pour les enfants d’","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-593-U30190","target_text":"n/féminin et la sexualité. Ce chapitre utilise les concepts et les termes largement utilisés par les cliniciens spécialisé","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-593-U30191","target_text":"Dans ce chapitre, sexe et sexuel se réfèrent aux paramètres biolo- giques mâle/femelle (dans le contexte de la capacité de rep","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-597-S3001","target_text":"Certaines illes peuvent exprimer le \ndésir d’avoir un pénis ou d’en voir pousser un quand elles seront plus âgées.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-608-T40003","target_text":"cf. « Comorbidité » pour ce trouble","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-622-U30386","target_text":"oublement codé ici et dans le chapitre","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-622-U30386","target_text":"sociale sont proposés dans le chapitre « Troubles de la personnalité ». Ce trouble est doublement","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-624-S3001","target_text":"Pyromanie \n623\n« Troubles de la personnalité » car il est étroitement lié au spectre des troubles des \nconduites « externalisés » dans ce chapitre, et aussi aux « Troubles liés à une substance \net troubles addictifs » dans le chapitre correspondant.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-642-T40001","target_text":"cf. les troubles mentaux","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-642-U30414","target_text":"ent la présentation clinique (cf. les troubles mentaux induits par une substance/un médicament dans les chapitres","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-642-U30416","target_text":"tance/un médicament dans leur chapitre respectif.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-643-H001","target_text":"cf. les critères A et B du sevrage de l’alcool, p. 653","target_unit":"dsm5fr-u-653-H003","status":"resolved"}
+{"from_unit":"dsm5fr-u-645-U30424","target_text":"est à présent décrite dans le chapitre « Troubles neu- rocognitifs » et dénommée trouble neurocognitif induit par","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-646-S3001","target_text":"Cette affection est à présent décrite dans le chapitre « Troubles neu-\nrocognitifs » et dénommée trouble neurocognitif induit par une substance/un médicament.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-653-H003","target_text":"Pour l’état confusionnel par intoxication par l’alcool et l’état confusionnel (delirium) du sevrage de l’alcool, voir les critères et la discussion sur l’état confusionnel (delirium) dans le chapitre « Troubles neurocognitifs ».","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-655-S3001","target_text":"« État confusionnel (delirium) » dans le chapitre « Troubles \n neurocognitifs  ») peut survenir dans un contexte de sevrage.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-659-T40001","target_text":"cf. le sevrage de","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-659-U30489","target_text":"(cf. le sevrage de la caféine traité ultérieurement dans ce chapitre).","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-659-U30489","target_text":"e la tolérance et le sevrage (cf. le sevrage de la caféine traité ultérieurement dans ce chapitre).","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-660-T40003","target_text":"cf. « Trouble anxieux induit par une substance/un","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-660-U30508","target_text":"début pendant l’intoxication (voir « Trouble du sommeil induit par une substance/un médicament » dans le chapitre « Trouble ve","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-660-U30508","target_text":"tance/un médicament » dans le chapitre « Trouble veille-sommeil ») par le fait que, dans ces troubles, les symptômes vont au-delà de ceux","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-660-U30508","target_text":"tance/un médicament » dans le chapitre « Troubles anxieux »), et du trouble du sommeil induit par la caféine, avec début pendant l’intoxication (voir « T","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-664-H010","target_text":"Le syndrome de sevrage caractéristique du cannabis (cf. les critères A et B du sevrage du cannabis, p. 675).","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-676-I003","target_text":"chapitre « Troubles neurocognitifs »","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-69-C002","target_text":"L’exigence que plusieurs symptômes soient pré-sents avant l’âge de 12 ans renvoie à l’importance qu’il y ait un tableau clinique significatif pendant l’enfance.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-69-C003","target_text":"Dans les cas rares où il existe une cause génétique connue (p. ex. syndrome de l’X fragile, syndrome de délétion 22q11), la présence d’un tableau clinique de TDAH devra aussi faire poser le diagnostic de ce trouble.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-691-I010","target_text":"chapitre « Troubles neurocognitifs »","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-692-I001","target_text":"chapitre « Troubles neurocognitifs »","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-701-I006","target_text":"chapitre « Troubles neurocognitifs »","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-701-I008","target_text":"cf. les critères A et B du sevrage d’un opiacé, p. 709","target_unit":"dsm5fr-u-709-I010","status":"resolved"}
+{"from_unit":"dsm5fr-u-711-I011","target_text":"chapitre « Troubles neurocognitifs »","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-712-I013","target_text":"cf. les critères A et B du sevrage d’un sédatif, hypnotique ou anxiolytique, p. 721","target_unit":"dsm5fr-u-721-I002","status":"resolved"}
+{"from_unit":"dsm5fr-u-72-C010","target_text":"Les enfants présentant un trouble réactionnel de l’attachement peuvent montrer une désinhibition sociale, mais pas l’ensemble du tableau clinique de TDAH, et ils peuvent aussi présenter d’autres particularités telles que la difficulté à maintenir des relations durables qui ne sont pas caractéristiques du TDAH.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-724-I003","target_text":"chapitre « Troubles neurocognitifs »","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-725-I005","target_text":"cf. les critères A et B du sevrage d’un stimulant, p. 734","target_unit":"dsm5fr-u-734-I007","status":"resolved"}
+{"from_unit":"dsm5fr-u-735-I008","target_text":"chapitre « Troubles neurocognitifs »","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-736-I010","target_text":"cf. les critères A et B du sevrage du tabac","target_unit":"dsm5fr-u-740-I011","status":"resolved"}
+{"from_unit":"dsm5fr-u-743-I003","target_text":"cf. les critères A et B du sevrage d’une substance autre [ou inconnue] p. 749","target_unit":"dsm5fr-u-749-I005","status":"resolved"}
+{"from_unit":"dsm5fr-u-751-I006","target_text":"chapitre « Troubles neurocognitifs »","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-775-J001","target_text":"tableau 1","target_unit":"dsm5fr-u-777-J002","status":"resolved"}
+{"from_unit":"dsm5fr-u-787-J006","target_text":"Des étiologies multiples (p. 833)","target_unit":"dsm5fr-u-834-J012","status":"resolved"}
+{"from_unit":"dsm5fr-u-787-J006","target_text":"L’usage d’une substance/d’un médicament (p. 816)","target_unit":"dsm5fr-u-816-J011","status":"resolved"}
+{"from_unit":"dsm5fr-u-787-J006","target_text":"Non spécifié (p. 834)","target_unit":"dsm5fr-u-834-J013","status":"resolved"}
+{"from_unit":"dsm5fr-u-787-J006","target_text":"Une autre affection médicale (p. 832)","target_unit":"dsm5fr-u-832-J010","status":"resolved"}
+{"from_unit":"dsm5fr-u-787-J006","target_text":"Une dégénérescence lobaire frontotemporale (p. 801)","target_unit":"dsm5fr-u-801-J003","status":"resolved"}
+{"from_unit":"dsm5fr-u-787-J006","target_text":"Une infection par le VIH (p. 822)","target_unit":"dsm5fr-u-822-J013","status":"resolved"}
+{"from_unit":"dsm5fr-u-787-J006","target_text":"Une lésion cérébrale traumatique (p. 813)","target_unit":"dsm5fr-u-813-J009","status":"resolved"}
+{"from_unit":"dsm5fr-u-787-J006","target_text":"Une maladie de Huntington (p. 830)","target_unit":"dsm5fr-u-830-J008","status":"resolved"}
+{"from_unit":"dsm5fr-u-787-J006","target_text":"Une maladie de Parkinson (p. 827)","target_unit":"dsm5fr-u-827-J006","status":"resolved"}
+{"from_unit":"dsm5fr-u-787-J006","target_text":"Une maladie d’Alzheimer (p. 797)","target_unit":"dsm5fr-u-797-J001","status":"resolved"}
+{"from_unit":"dsm5fr-u-787-J006","target_text":"Une maladie vasculaire (p. 809)","target_unit":"dsm5fr-u-809-J007","status":"resolved"}
+{"from_unit":"dsm5fr-u-787-J006","target_text":"Une maladie à corps de Lewy (p. 806)","target_unit":"dsm5fr-u-806-J005","status":"resolved"}
+{"from_unit":"dsm5fr-u-787-J006","target_text":"Une maladie à prions (p. 825)","target_unit":"dsm5fr-u-825-J004","status":"resolved"}
+{"from_unit":"dsm5fr-u-787-J006","target_text":"tableau ci-dessous","target_unit":"dsm5fr-u-787-J006","status":"resolved"}
+{"from_unit":"dsm5fr-u-790-J007","target_text":"Des étiologies multiples (p. 833)","target_unit":"dsm5fr-u-834-J012","status":"resolved"}
+{"from_unit":"dsm5fr-u-790-J007","target_text":"L’usage d’une substance/d’un médicament (p. 816)","target_unit":"dsm5fr-u-816-J011","status":"resolved"}
+{"from_unit":"dsm5fr-u-790-J007","target_text":"Non spécifié (p. 834)","target_unit":"dsm5fr-u-834-J013","status":"resolved"}
+{"from_unit":"dsm5fr-u-790-J007","target_text":"Une autre affection médicale (p. 832)","target_unit":"dsm5fr-u-832-J010","status":"resolved"}
+{"from_unit":"dsm5fr-u-790-J007","target_text":"Une dégénérescence lobaire frontotemporale (p. 801)","target_unit":"dsm5fr-u-801-J003","status":"resolved"}
+{"from_unit":"dsm5fr-u-790-J007","target_text":"Une infection par le VIH (p. 822)","target_unit":"dsm5fr-u-822-J013","status":"resolved"}
+{"from_unit":"dsm5fr-u-790-J007","target_text":"Une lésion cérébrale traumatique (p. 813)","target_unit":"dsm5fr-u-813-J009","status":"resolved"}
+{"from_unit":"dsm5fr-u-790-J007","target_text":"Une maladie de Huntington (p. 830)","target_unit":"dsm5fr-u-830-J008","status":"resolved"}
+{"from_unit":"dsm5fr-u-790-J007","target_text":"Une maladie de Parkinson (p. 827)","target_unit":"dsm5fr-u-827-J006","status":"resolved"}
+{"from_unit":"dsm5fr-u-790-J007","target_text":"Une maladie d’Alzheimer (p. 797)","target_unit":"dsm5fr-u-797-J001","status":"resolved"}
+{"from_unit":"dsm5fr-u-790-J007","target_text":"Une maladie vasculaire (p. 809)","target_unit":"dsm5fr-u-809-J007","status":"resolved"}
+{"from_unit":"dsm5fr-u-790-J007","target_text":"Une maladie à corps de Lewy (p. 806)","target_unit":"dsm5fr-u-806-J005","status":"resolved"}
+{"from_unit":"dsm5fr-u-790-J007","target_text":"Une maladie à prions (p. 825)","target_unit":"dsm5fr-u-825-J004","status":"resolved"}
+{"from_unit":"dsm5fr-u-790-J007","target_text":"« Trouble neurocognitif majeur ou léger induit par une substance/un médicament. »","target_unit":"dsm5fr-u-816-J011","status":"resolved"}
+{"from_unit":"dsm5fr-u-792-T504","target_text":"comme cela sera abordé dans les paragraphes concernés","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-793-S40006","target_text":"tableau 1","target_unit":"dsm5fr-u-777-J002","status":"resolved"}
+{"from_unit":"dsm5fr-u-793-S40017","target_text":"tableau 1","target_unit":"dsm5fr-u-777-J002","status":"resolved"}
+{"from_unit":"dsm5fr-u-793-T502","target_text":"cf. tableau 1 dans l'introduction de ce chapitre","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-793-T503","target_text":"décrites dans le tableau 1","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-793-U40007","target_text":"cf. tableau 1","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-793-U40018","target_text":"tableau 1","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-794-T502","target_text":"dans les paragraphes correspondants","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-796-S40064","target_text":"tableau 1","target_unit":"dsm5fr-u-777-J002","status":"resolved"}
+{"from_unit":"dsm5fr-u-796-T502","target_text":"comme cela est discuté dans les paragraphes correspondants","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-796-T502","target_text":"les évaluations courtes proposées dans le tableau 1","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-796-U40006","target_text":"tableau 1","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-804-T603","target_text":"cf. « Marqueurs diagnostiques » pour ce trouble","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-804-U40006","target_text":"cf. « Marqueurs diagnostiques »","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-806-J005","target_text":"Trouble neurocognitif majeur ou léger dû à la maladie de Parkinson.","target_unit":"dsm5fr-u-827-J006","status":"resolved"}
+{"from_unit":"dsm5fr-u-807-T609","target_text":"cf. « Diagnostic différentiel » pour ce trouble","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-807-U40019","target_text":"cf. « Diagnostic différentiel »","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-810-S50001","target_text":"critère A","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-810-S50009","target_text":"critère C","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-813-J009","target_text":"tableau 2","target_unit":"dsm5fr-u-813-J009","status":"resolved"}
+{"from_unit":"dsm5fr-u-814-S50001","target_text":"critère B","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-814-S50002","target_text":"critère C","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-814-T607","target_text":"tableau 2","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-814-T608","target_text":"Tableau 2.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-814-U40012","target_text":"tableau 2","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-814-U40015","target_text":"Tableau 2","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-818-T603","target_text":"le tableau inclus dans l'ensemble de critères","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-819-S50011","target_text":"critère B","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-819-S50014","target_text":"critère C","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-819-S50018","target_text":"critère D","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-819-T601","target_text":"le tableau inclus dans l'ensemble de critères","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-827-J006","target_text":"Trouble neurocognitif majeur ou léger avec corps de Lewy.","target_unit":"dsm5fr-u-806-J005","status":"resolved"}
+{"from_unit":"dsm5fr-u-828-S50002","target_text":"critère B","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-828-S50002","target_text":"critère C","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-841-J014","target_text":"Critères A-F","target_unit":"dsm5fr-u-843-J001","status":"resolved"}
+{"from_unit":"dsm5fr-u-847-S50014","target_text":"critère B","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-851-S50007","target_text":"critère B","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-855-S50001","target_text":"critère B","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-859-S50005","target_text":"critère D","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-863-S50006","target_text":"critère 3","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-863-S50013","target_text":"critère 4","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-863-S50015","target_text":"critère 5","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-863-S50020","target_text":"critère 6","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-863-S50023","target_text":"critère 7","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-863-S50025","target_text":"critère 8","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-864-S50002","target_text":"critère 9","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-867-S50004","target_text":"critère 1","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-867-S50010","target_text":"critère 2","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-867-S50012","target_text":"critère 3","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-867-S50013","target_text":"critère 4","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-867-S50016","target_text":"critère 5","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-867-S50019","target_text":"critère 6","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-867-S50022","target_text":"critère 7","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-868-S50001","target_text":"critère 8","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-870-S50009","target_text":"critère 1","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-870-S50013","target_text":"critère 2","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-870-S50015","target_text":"critère 3","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-870-S50021","target_text":"critère 4","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-870-S50027","target_text":"critère 5","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-871-S50006","target_text":"critère 7","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-871-S50013","target_text":"critère 8","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-871-S50017","target_text":"critère 9","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-874-S50001","target_text":"critère 1","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-874-S50003","target_text":"critère 2","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-874-S50007","target_text":"critère 3","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-874-S50008","target_text":"critère 4","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-874-S50014","target_text":"critère 5","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-874-S50016","target_text":"critère 6","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-874-S50017","target_text":"critère 7","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-877-S50007","target_text":"critère 1","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-877-S50008","target_text":"critère 2","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-877-S50013","target_text":"critère 3","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-877-S50017","target_text":"critère 4","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-878-S50001","target_text":"critère 5","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-878-S50006","target_text":"critère 6","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-878-S50008","target_text":"critère 7","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-878-S50010","target_text":"critère 8","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-880-S50018","target_text":"critère 1","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-881-S50005","target_text":"critère 2","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-881-S50008","target_text":"critère 3","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-881-S50018","target_text":"critère 4","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-881-S50024","target_text":"critère 5","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-881-S50028","target_text":"critère 6","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-882-S50003","target_text":"critère 7","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-882-S50004","target_text":"critère 8","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-885-S50011","target_text":"critère A","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-885-S50012","target_text":"critère B","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-885-S50013","target_text":"critère C","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-885-S50014","target_text":"critère D","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-885-S50015","target_text":"critère F","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-893-U5027","target_text":"voir des rapports sexuels, se manifestant sous la forme","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-893-U5028","target_text":"voir un comportement","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-893-U5029","target_text":"voir des rapports","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-894-S50006","target_text":"critère A","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-894-S50006","target_text":"critère B","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-894-S50012","target_text":"critère C","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-894-U5031","target_text":"voir des rapports","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-894-U5031","target_text":"voir espionné à de nombreuses reprises, à des moments différents, des","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-894-U5032","target_text":"voir des fantasmes ou des impulsions à propos du fait de","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-894-U5032","target_text":"voir des rapports","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-894-U5032","target_text":"voir un diagnostic de trouble voyeurisme","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-894-U5033","target_text":"voir des rapports sexuels (c","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-894-U5033","target_text":"voir des rapports sexuels","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-894-U5034","target_text":"voir persisté au moins 6  mois, doit aussi être compris comme une","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-894-U5034","target_text":"voir un intérêt sexuel voyeuriste intense","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-895-U5037","target_text":"voir des rapports sexuels","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-895-U5040","target_text":"voir des rapports sexuels n’en ferait pas partie","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-895-U5041","target_text":"voir des rapports sexuels","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-897-S50009","target_text":"critère A","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-897-S50009","target_text":"critère B","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-897-U5049","target_text":"voir des fantasmes ou des impulsions à exhiber leurs organes génitaux, ils","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-897-U5049","target_text":"voir un diagnostic de trouble exhibitionnisme","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-897-U5051","target_text":"voir persisté au moins 6 mois, doit aussi être compris comme","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-897-U5051","target_text":"voir un intérêt sexuel exhi-","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-898-S50015","target_text":"critère B","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-898-U5055","target_text":"voir été conscients pour la première fois de leur intérêt à exhiber leurs organes","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-900-S50009","target_text":"critère A","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-900-S50009","target_text":"critère B","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-900-U5067","target_text":"voir des fantasmes ou des impul-","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-900-U5067","target_text":"voir un diagnostic","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-900-U5069","target_text":"voir persisté au moins 6 mois doit être compris comme une indication","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-900-U5069","target_text":"voir un intérêt","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-901-S60001","target_text":"Le critère A de durée","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-901-T708","target_text":"Troubles des conduites et personnalité antisociale","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-901-U5072","target_text":"voir le diagnostic","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-901-U5072","target_text":"voir été conscients pour la première fois de leur intérêt à toucher subrepticement des","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-901-U5073","target_text":"voir beaucoup moins de femmes que d’hommes ayant des préférences","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-902-S60001","target_text":"Troubles de l’usage de substances","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-902-T702","target_text":"trouble frotteurisme étant largement issue des recherches chez des individus","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-903-U5080","target_text":"voir de tels intérêts paraphiliques","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-903-U5080","target_text":"voir persisté au moins 6 mois, doit aussi être compris comme","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-903-U5081","target_text":"voir un large recours à la pornographie montrant des personnes humiliées,","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-904-T701","target_text":"trouble masochisme sexuel","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-904-T702","target_text":"trouble masochisme sexuel repose largement sur les individus en traitement","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-904-U5089","target_text":"voir un intérêt sexuel intense pour la souffrance","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-904-U5089","target_text":"voir un tel intérêt paraphilique qu’à ceux qui","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-905-U5091","target_text":"voir fait du mal","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-905-U5092","target_text":"voir des pulsions ou des fantasmes entraînant une exci-","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-905-U5094","target_text":"voir un intérêt sexuel sadique intense","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-905-U5095","target_text":"voir persisté au moins 6 mois, doit être envisagé comme une indication","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-905-U5096","target_text":"voir un large recours à la pornographie montrant des personnes faisant mal","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-906-T702","target_text":"personnalité antisociale","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-906-T703","target_text":"trouble sadisme sexuel est largement issue des recherches chez des individus","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-906-U5098","target_text":"voir eu des pratiques de bondage et de discipline, de « sadomasochisme »","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-907-U5107","target_text":"voir approché sexuellement de nombreux enfants, à des moments","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-907-U5108","target_text":"voir des pulsions ou des fantasmes concernant les enfants,","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-907-U5109","target_text":"voir persisté au moins 6 mois, permet de vériier que l’attirance sexuelle","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-907-U5109","target_text":"voir qu’un intérêt sexuel","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-908-U5111","target_text":"voir un large recours à la pornographie montrant des enfants prépubères est","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-909-S60003","target_text":"Trouble obsessionnel-compulsif","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-909-T704","target_text":"trouble pédophilie sont parfois présentes en tant que troubles comorbides","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-909-U5117","target_text":"voir été victimes","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-909-U5118","target_text":"voir une orien-","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-91-C039","target_text":"Le répertoire de comportements est variable, chaque personne se présentant avec son propre tableau individuel et caractéristique.","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-910-T701","target_text":"trouble sont les troubles dépressifs","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-910-U5125","target_text":"voir un diagnostic de trouble fétichisme associé","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-911-U5129","target_text":"voir des pratiques fétichistes ne se plaignent pas","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-911-U5129","target_text":"voir le diagnostic de trouble fétichisme","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-912-T704","target_text":"hypersexualité","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-914-U5146","target_text":"voir une anatomie fémi-","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-914-U5147","target_text":"voir été sexuellement excités par le fait de s’habiller en femme (Långs-","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-914-U5149","target_text":"voir une diminution de la réponse sexuelle","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-914-U5151","target_text":"voir des enfants","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-915-S60001","target_text":"Dysphorie de genre","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-915-T704","target_text":"trouble transvestisme","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-915-U5154","target_text":"voir les deux diagnostics","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-923-K038","target_text":"cf. plus loin « Diagnostic différentiel »","target_unit":"dsm5fr-u-926-K039","status":"resolved"}
+{"from_unit":"dsm5fr-u-923-U5180","target_text":"chapitre ne sont pas des troubles mentaux","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-923-U5182","target_text":"voir réduit la dose d’un","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-924-S60002","target_text":"cf. plus loin « Diagnostic différentiel »","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-924-U5189","target_text":"cf. plus loin «","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-924-U5189","target_text":"voir une détresse respiratoire – résultant d’une acidose","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-924-U5190","target_text":"voir une leu-","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-925-U5195","target_text":"voir récidive chez certains individus, en particulier lorsque les","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-926-S60001","target_text":"symptômes extrapyramidaux","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-926-U5204","target_text":"voir réduit la dose d’un médicament utilisé pour traiter","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-926-U5205","target_text":"voir réduit la dose d’un médicament","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-927-K046","target_text":"cf. « Sevrage d’un stimulant » dans le chapitre « Troubles liés à une substance et troubles addictifs »","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-933-U5215","target_text":"CIM-9-MC (habituellement des codes V) et CIM-","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-933-U5215","target_text":"chapitre décrit d’autres situations ou problèmes pouvant faire l’objet d’un examen","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-933-U5216","target_text":"chapitre ne sont pas des troubles mentaux","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-933-U5216","target_text":"chapitre peuvent aussi être inclus dans le dossier médical en","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-933-U5217","target_text":"voir des conséquences médicales et psychologiques signiicatives pour","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-947-S60002","target_text":"déambulation associée à [trouble mental spécifique]","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-951-S60001","target_text":"les groupes catégoriels du DSM","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-952-K071","target_text":"tableau 1","target_unit":"dsm5fr-u-953-K072","status":"resolved"}
+{"from_unit":"dsm5fr-u-953-S60001","target_text":"Tableau 1","target_unit":null,"status":"resolved"}
+{"from_unit":"dsm5fr-u-954-K073","target_text":"tableau 2","target_unit":"dsm5fr-u-955-K074","status":"resolved"}
+{"from_unit":"dsm5fr-u-956-K075","target_text":"tableau 1","target_unit":"dsm5fr-u-953-K072","status":"resolved"}
+{"from_unit":"dsm5fr-u-956-K075","target_text":"tableau 2","target_unit":"dsm5fr-u-955-K074","status":"resolved"}
+{"from_unit":"dsm5fr-u-956-S60001","target_text":"Les tableaux 1 et 2 résument chaque domaine du niveau 1","target_unit":"dsm5fr-u-953-S60001","status":"resolved"}
+{"from_unit":"dsm5fr-u-956-U5258","target_text":"voir suivre les modiications du tableau clinique dans le temps, les éva-","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-957-K076","target_text":"Auto-évaluation symptomatique transversale niveau 1 – DSM-5 – Adulte","target_unit":"dsm5fr-u-957-K076","status":"resolved"}
+{"from_unit":"dsm5fr-u-957-U5260","target_text":"voir dérangé","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-957-U5260","target_text":"voir le sentiment que quelqu’un peut entendre vos","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-957-U5260","target_text":"voir le sentiment que vos maladies ne sont pas","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-957-U5260","target_text":"voir quand même","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-959-U5261","target_text":"voir ennuyé votre","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-962-K078","target_text":"Cotation et interprétation","target_unit":"dsm5fr-u-962-K078","status":"resolved"}
+{"from_unit":"dsm5fr-u-962-K078","target_text":"Fréquence d’utilisation","target_unit":"dsm5fr-u-962-K078","status":"resolved"}
+{"from_unit":"dsm5fr-u-962-S60001","target_text":"chapitre « Spectre de la schizophrénie et autres troubles psychotiques »","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-962-U5263","target_text":"chapitre « Spectre de la schizophrénie et autres","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-964-U5264","target_text":"voir fait des erreurs","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-976-S60001","target_text":"questions 9 et 10","target_unit":"dsm5fr-u-976-S60001","status":"resolved"}
+{"from_unit":"dsm5fr-u-977-S60002","target_text":"votre famille, vos amis ou d’autres personnes","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-982-L007","target_text":"Entretien de formulation culturelle (EFC)","target_unit":"dsm5fr-u-973-L005","status":"resolved"}
+{"from_unit":"dsm5fr-u-985-L009","target_text":"ENFP, cf. tableau 2, p. 998","target_unit":"dsm5fr-u-998-L027","status":"resolved"}
+{"from_unit":"dsm5fr-u-986-L010","target_text":"ENFP, cf. tableau 2, p. 998","target_unit":"dsm5fr-u-998-L027","status":"resolved"}
+{"from_unit":"dsm5fr-u-987-L011","target_text":"La taxonomie complète des traits figure dans le tableau 3 (p. 912)","target_unit":"dsm5fr-u-1002-L028","status":"resolved"}
+{"from_unit":"dsm5fr-u-99-C021","target_text":"La catégorie autres tics spécifiés est utilisée dans les situations où le clinicien choisit de communiquer la raison spécifique pour laquelle le tableau clinique ne remplit pas les critères des tics ni d’un autre trouble neurodéveloppemental spécifique.","target_unit":"dsm5fr-u-94-C007","status":"resolved"}
+{"from_unit":"dsm5fr-u-995-L021","target_text":"tableau 2 et taxonomie des traits pathologiques (tableau 3)","target_unit":"dsm5fr-u-998-L027","status":"resolved"}
+{"from_unit":"dsm5fr-u-999-U5275","target_text":"liste de cet effet","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-null-B0002","target_text":"Utilisation du manuel","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-null-B0004","target_text":"Troubles neurodéveloppementaux","target_unit":"dsm5fr-u-33-B0001","status":"resolved"}
+{"from_unit":"dsm5fr-u-xl-B0002","target_text":"Troubles de la personnalité (p. 841)","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-xliii-B0003","target_text":"Troubles paraphiliques (p. 891)","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-xliv-B0003","target_text":"Troubles des mouvements et autres effets indésirables induits par un médicament (p. 923)","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-xlv-B0003","target_text":"Autres situations pouvant faire l’objet d’un examen clinique (p. 933)","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-xxix-B0002","target_text":"Troubles de l’alternance veille-sommeil (p. 471)","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-xxv-B0001","target_text":"Troubles anxieux (p. 237)","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-xxv-B0001","target_text":"Troubles obsessionnels-compulsifs et apparentés (p. 299)","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-xxvi-B0002","target_text":"Troubles dissociatifs (p. 379)","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-xxvi-B0002","target_text":"Troubles liés à des traumatismes ou à des facteurs de stress (p. 343)","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-xxvii-B0002","target_text":"Troubles à symptomatologie somatique et apparentés (p. 403)","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-xxviii-B0002","target_text":"Troubles des conduites alimentaires et de l’ingestion d’aliments (p. 429)","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-xxxi-B0002","target_text":"Dysfonctions sexuelles (p. 553)","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-xxxi-B0002","target_text":"Dysphorie de genre (p. 593)","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-xxxii-B0002","target_text":"Troubles disruptifs, du contrôle des impulsions et des conduites (p. 605)","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-xxxiii-B0002","target_text":"Troubles liés à une substance et troubles addictifs (p. 631)","target_unit":null,"status":"unresolved"}
+{"from_unit":"dsm5fr-u-xxxviii-B0002","target_text":"Troubles neurocognitifs (p. 775)","target_unit":null,"status":"unresolved"}

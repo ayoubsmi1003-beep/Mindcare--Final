@@ -1,0 +1,88 @@
+{
+  "block_sequence_sha256": "406a16d8488b0ffc922896128eaf849942e20090d61ce76efb7e97f3c4d6c043",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.53765869140625,
+        758.8693237304688
+      ],
+      "block_id": "page-0487-block-0001",
+      "order": 1,
+      "text": "470\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "c22db6f2c74d15929ea2fedcd6492684bffd45b86f2ced8a450dde36b2690433"
+    },
+    {
+      "bbox": [
+        50.0,
+        41.002296447753906,
+        298.34185791015625,
+        53.320068359375
+      ],
+      "block_id": "page-0487-block-0002",
+      "order": 2,
+      "text": "FIGURE 21.4 Échelle d’autoévaluation du trouble d’amassage\n",
+      "text_sha256": "c5d24669c27509fa4b03ea50b75366f98e9e324f56854b73df699df048e6bce3"
+    },
+    {
+      "bbox": [
+        48.0,
+        425.4658203125,
+        291.36688232421875,
+        458.95849609375
+      ],
+      "block_id": "page-0487-block-0003",
+      "order": 3,
+      "text": "critères diagnostiques manquants pour un des troubles men-\ntionnés plus haut, il peut utiliser la catégorie résiduelle de TOC\nou trouble apparenté non spécié.\n",
+      "text_sha256": "194661ef94fb2adec96564d2f67096543008b2bc2d56b3de7264faf9c443e778"
+    },
+    {
+      "bbox": [
+        48.0,
+        489.9658203125,
+        291.24224853515625,
+        695.95849609375
+      ],
+      "block_id": "page-0487-block-0004",
+      "order": 4,
+      "text": "Le trouble obsessionnel-compulsif est l’un des troubles psychia-\ntriques les plus répandus : 2 ou 3% des personnes en seraient\natteintes. Son évolution naturelle tend vers la chronicité qui est\nsouvent invalidante, bien que dans environ la moitié des cas, on\nobserve une amélioration spontanée et parfois une rémission\ncomplète. Les symptômes obsessionnels-compulsifs sont de\nnature intrusive, c’est-à-dire qu’ils s’imposent à l’esprit contre la\nvolonté et le jugement des patients. Cet aspect fascinant du TOC\nlui a valu dans le passé l’appellation de « folie lucide ». Cepen-\ndant actuellement, on reconnaît que l’autocritique (insight), par\nrapport aux symptômes peut être ambiguë, partielle ou absente.\nCette autocritique est encore moins présente dans les troubles\nnouvellement classiés comme « apparentés » au TOC, soit\nl’obsession d’une dysmorphie corporelle et le trouble d’amas-\nsage. Bien que formellement non psychotiques, ces troubles se\nmanifestent parfois avec une « conviction délirante » (DSM-5) et\npeuvent présenter une sorte de transition dimensionnelle vers\nle pôle des troubles psychotiques. L’expérience obsessionnelle\n",
+      "text_sha256": "555b3b78c2acbb7532c0f48958f2c54210c489090fbb54f94abd53c4607c2167"
+    },
+    {
+      "bbox": [
+        306.0,
+        425.4658203125,
+        549.4382934570312,
+        695.95849609375
+      ],
+      "block_id": "page-0487-block-0005",
+      "order": 5,
+      "text": "compulsive, dominée par le sentiment de contrainte subjective,\nillustre bien le concept philosophique de la maladie en général\n- une condition de vie restrictive limitant la liberté existentielle.\nDe récentes percées thérapeutiques ont mis n aux attitudes\ndéfaitistes à l’égard du TOC. Cependant, force est de constater\nque le taux de réponse thérapeutique est presque le même que\nle taux d’amélioration spontanée – autour de 50 %. Par contre,\nla réponse thérapeutique se manifeste au bout de quelques\nmois, tandis que l’amélioration spontanée peut survenir après\ndes années. Ces données soulèvent quand même un question-\nnement : existe-t-il un TOC traitable et un autre TOC non\ntraitable par les approches disponibles ? Ce questionnement\nest au cœur des « sentiments d’incomplétude » non seulement\ndes patients atteints de TOC mais aussi des chercheurs et des\ncliniciens ; il anime leur quête de connaissances et de réussites\nthérapeutiques. Étant donné la résistance thérapeutique du\ntrouble d’amassage et de l’obsession dysmorphique corporelle\nencore plus importante que celle du TOC, le DSM-5 a indivi-\ndualisé le premier en tant qu’unité nosologique et a associé le\nsecond aux troubles apparents au TOC dans le but d’intensier\nla recherche de nouveaux moyens thérapeutiques, à la fois\ncommuns pour l’ensemble des troubles apparentés au TOC et\nen même temps spéciques pour chacun d’eux.\n",
+      "text_sha256": "e4c40fc8a7cd29022ed574c2420889c9c346757bcda59b6a3f8a3a262cdfe050"
+    },
+    {
+      "bbox": [
+        48.0,
+        401.2906188964844,
+        137.89016723632812,
+        410.1588439941406
+      ],
+      "block_id": "page-0487-block-0006",
+      "order": 6,
+      "text": "Source : Adapté de APA (2015).\n",
+      "text_sha256": "10c618e9758e00322778f24a7119d87f58804a6778570287350175b6d51f9c9c"
+    }
+  ],
+  "coordinates_sha256": "6f4a602840c6cd13cf2ff894408cf4270fe946f6f99dcaa3ef63ef576336ae4d",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0487",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "470\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nFIGURE 21.4 Échelle d’autoévaluation du trouble d’amassage\ncritères diagnostiques manquants pour un des troubles men-\ntionnés plus haut, il peut utiliser la catégorie résiduelle de TOC\nou trouble apparenté non spécié.\nLe trouble obsessionnel-compulsif est l’un des troubles psychia-\ntriques les plus répandus : 2 ou 3% des personnes en seraient\natteintes. Son évolution naturelle tend vers la chronicité qui est\nsouvent invalidante, bien que dans environ la moitié des cas, on\nobserve une amélioration spontanée et parfois une rémission\ncomplète. Les symptômes obsessionnels-compulsifs sont de\nnature intrusive, c’est-à-dire qu’ils s’imposent à l’esprit contre la\nvolonté et le jugement des patients. Cet aspect fascinant du TOC\nlui a valu dans le passé l’appellation de « folie lucide ». Cepen-\ndant actuellement, on reconnaît que l’autocritique (insight), par\nrapport aux symptômes peut être ambiguë, partielle ou absente.\nCette autocritique est encore moins présente dans les troubles\nnouvellement classiés comme « apparentés » au TOC, soit\nl’obsession d’une dysmorphie corporelle et le trouble d’amas-\nsage. Bien que formellement non psychotiques, ces troubles se\nmanifestent parfois avec une « conviction délirante » (DSM-5) et\npeuvent présenter une sorte de transition dimensionnelle vers\nle pôle des troubles psychotiques. L’expérience obsessionnelle\ncompulsive, dominée par le sentiment de contrainte subjective,\nillustre bien le concept philosophique de la maladie en général\n- une condition de vie restrictive limitant la liberté existentielle.\nDe récentes percées thérapeutiques ont mis n aux attitudes\ndéfaitistes à l’égard du TOC. Cependant, force est de constater\nque le taux de réponse thérapeutique est presque le même que\nle taux d’amélioration spontanée – autour de 50 %. Par contre,\nla réponse thérapeutique se manifeste au bout de quelques\nmois, tandis que l’amélioration spontanée peut survenir après\ndes années. Ces données soulèvent quand même un question-\nnement : existe-t-il un TOC traitable et un autre TOC non\ntraitable par les approches disponibles ? Ce questionnement\nest au cœur des « sentiments d’incomplétude » non seulement\ndes patients atteints de TOC mais aussi des chercheurs et des\ncliniciens ; il anime leur quête de connaissances et de réussites\nthérapeutiques. Étant donné la résistance thérapeutique du\ntrouble d’amassage et de l’obsession dysmorphique corporelle\nencore plus importante que celle du TOC, le DSM-5 a indivi-\ndualisé le premier en tant qu’unité nosologique et a associé le\nsecond aux troubles apparents au TOC dans le but d’intensier\nla recherche de nouveaux moyens thérapeutiques, à la fois\ncommuns pour l’ensemble des troubles apparentés au TOC et\nen même temps spéciques pour chacun d’eux.\nSource : Adapté de APA (2015).\n",
+  "raw_text_sha256": "bdf1e46c4b12b4b704706d0e9d4f4d5b909d92d8ed4ae80d4547a59011cbea9f",
+  "source_page_display": 488,
+  "source_page_index": 487
+}

@@ -1,0 +1,124 @@
+{
+  "block_sequence_sha256": "2a47e0e1941696d03730d75e3c0f9613694368c4dcc0986e53bcc1a14bc4fd61",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.53765869140625,
+        758.8693237304688
+      ],
+      "block_id": "page-0473-block-0001",
+      "order": 1,
+      "text": "456\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "d0172471aba5bfa665376fd2556050a5568c00350c28c1a441504361fde31960"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.9658203125,
+        291.450927734375,
+        355.1084899902344
+      ],
+      "block_id": "page-0473-block-0002",
+      "order": 2,
+      "text": "eectuée en se basant sur les propos du patient. À partir d’une\nliste exhaustive des obsessions et des compulsions possibles\nselon leur contenu (voir l’encadré 21.1), le clinicien et le patient\ndéterminent les principales obsessions et compulsions présentes\nchez le patient. Par la suite, les symptômes ainsi identiés sont\névalués sur cinq dimensions (items) pour les obsessions et les\ncompulsions séparément :\n1. Durée de temps par jour ;\n2. Gêne (interférence) au quotidien ;\n3. Détresse (angoisse) associée ;\n4. Résistance aux symptômes ;\n5. Contrôle sur les symptômes.\nLa gravité de chaque item est cotée de 0 (absent) à 4, selon le\ndegré de la gravité déterminée explicitement. Par exemple, pour\nla durée de temps occupée par les symptômes par jour, l’absence\nde symptômes est cotée 0 ; une durée jusqu’à 1 heure est cotée 1 ;\nune durée jusqu’à 3 heures est cotée 2 ; une durée jusqu’à\n8 heures est cotée 3 ; et une durée de plus de 8 heures par jour\nest cotée 4. De cette manière, le pointage maximal d’intensité\npour les obsessions, ainsi que pour les compulsions, est de\n20 points et, pour l’ensemble des obsessions et des compulsions,\nde 40 points. Un pointage inférieur à 16 points est considéré\ncomme subsyndromique ou normal. Les patients atteints\nde trouble obsessionnel-compulsif inclus dans les protocoles de\nrecherche présentent le plus souvent un pointage de 26 ou\n27 points, c’est-à-dire une sévérité clinique modérée à marquée.\n",
+      "text_sha256": "8793ee6e55dc4e92454fb22b6408d5566256ad7ab4fe0adc791f0ba87606a45f"
+    },
+    {
+      "bbox": [
+        55.0,
+        373.5431823730469,
+        246.1284942626953,
+        410.6689453125
+      ],
+      "block_id": "page-0473-block-0003",
+      "order": 3,
+      "text": "21A.7 Diagnostic différentiel\net comorbidité\n",
+      "text_sha256": "71c6216b065655785d25c2276e69ad4ad7cf2adbf9551ad019e9719fa684b2a3"
+    },
+    {
+      "bbox": [
+        48.0,
+        424.6158142089844,
+        291.3260192871094,
+        516.8085327148438
+      ],
+      "block_id": "page-0473-block-0004",
+      "order": 4,
+      "text": "Le diagnostic diérentiel vise à délimiter l’espace psychopatho-\nlogique du TOC par rapport aux autres troubles psychiques qui\ncomportent parfois des manifestations cliniques plus ou moins\nsemblables. Cependant, la tâche n’est pas toujours facile, les\nconcepts nosologiques n’étant que des approximations de la réalité\nclinique, dans laquelle le typique et l’atypique se chevauchent\net se juxtaposent à des formes transitoires d’autres troubles\npsychiques, sans respect des limites nosographiques présumées.\n",
+      "text_sha256": "1596fd6b75325ff35b0132baa81c3cd70801820c71972d3babebb359592591ac"
+    },
+    {
+      "bbox": [
+        48.0,
+        527.48681640625,
+        253.76097106933594,
+        559.7794189453125
+      ],
+      "block_id": "page-0473-block-0005",
+      "order": 5,
+      "text": "21A.7.1 Personnalité obsessionnelle-\ncompulsive\n",
+      "text_sha256": "8ce2ae2c1694b88e74026d1eb852a110c393bb036c96fc074c3c1e2bcdfd31ca"
+    },
+    {
+      "bbox": [
+        48.0,
+        563.3158569335938,
+        291.1441650390625,
+        655.45849609375
+      ],
+      "block_id": "page-0473-block-0006",
+      "order": 6,
+      "text": "La personnalité obsessionnelle-compulsive a en commun avec\nle TOC le contenu et les thèmes des préoccupations : règles,\nordre, propreté, accumulation, etc. Cependant, dans le cas de\nla personnalité obsessionnelle-compulsive, en principe, il n’y a\npas de symptômes obsessionnels-compulsifs comme tels et les\npréoccupations ne sont pas vécues comme égodystones, mais\nau contraire, comme égosyntones, c’est-à-dire conformes aux\nhabitudes, aux valeurs et au jugement de la personne.\n",
+      "text_sha256": "050937ac7c3b2dc88c64f3c0ca07d086ab25eafb3de2c3db58a4f4e3c104e620"
+    },
+    {
+      "bbox": [
+        48.0,
+        656.6158447265625,
+        291.24188232421875,
+        725.45849609375
+      ],
+      "block_id": "page-0473-block-0007",
+      "order": 7,
+      "text": "Pourtant, plusieurs aspects de la relation entre traits de per-\nsonnalité obsessionnelle-compulsive et symptômes obsession-\nnels-compulsifs demeurent controversés et peu élucidés. Ce qui\nest clair, c’est qu’ils peuvent fort bien coexister. Dans ces cas, la\nfrontière entre les deux devient confuse. Par exemple, selon la tra-\ndition européenne la présence de symptômes mineurs est non\n",
+      "text_sha256": "b4fa3e3224d7b46760ed25d78aa03515e421c85663af106b18533b8aabd646e4"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.39892578125,
+        224.20849609375
+      ],
+      "block_id": "page-0473-block-0008",
+      "order": 8,
+      "text": "seulement compatible avec le diagnostic de « personnalité anan-\nkastique » (terme équivalent pour personnalité obsessionnelle-\ncompulsive), mais elle en constitue un des critères diagnostiques. À\nl’opposé, les patients atteints d’un trouble obsessionnel-compulsif\nprésentent dans une proportion signicative, quoique variable\n(environ 30 %), une personnalité obsessionnelle-compulsive ou\ndes traits d’une telle personnalité. Ces derniers peuvent soit\nprécéder les symptômes, soit survenir ou s’accentuer au cours de\nl’évolution du TOC pour parfois s’atténuer ou disparaître après\nun traitement réussi du TOC. Dans d’autres cas encore, la per-\nsonnalité obsessionnelle-compulsive demeure en quelque sorte\ncomme une « cicatrice caractérielle » après la rémission complète\ndes symptômes obsessionnels-compulsifs. Cependant, dans la\nmajorité des cas, le TOC est cliniquement présent en l’absence\nd’un trouble de personnalité obsessionnelle-compulsive ou en\ncombinaison avec n’importe quel autre type de la personnalité.\n",
+      "text_sha256": "688bd2debf792b026bf4c0d889168309c3c8f2d7f681bd65af8a58e89aa4d63b"
+    },
+    {
+      "bbox": [
+        306.0,
+        233.0830078125,
+        549.4271240234375,
+        725.45849609375
+      ],
+      "block_id": "page-0473-block-0009",
+      "order": 9,
+      "text": "21A.7.2 Troubles anxieux\nLes préoccupations et les inquiétudes observées dans l’anxiété\ngénéralisée peuvent être répétitives et envahissantes, mais elles\nreprésentent des réactions excessives à l’égard de problèmes\nréels, par exemple, une rougeur sur la peau (serait-ce un can-\ncer ?), une infection quelconque (serait-ce une méningite ou la\nbactérie mangeuse de chair ?), un retard imprévu (serait-ce un\naccident ?), etc. Les inquiétudes anxieuses sont donc volatiles\net changeantes, peuvent disparaître une fois que la personne\nest rassurée ou céder la place à de nouvelles inquiétudes. En\nrevanche, les ruminations obsessionnelles sont des idées sté-\nréotypées qui font intrusion et qui ne se rapportent pas à des\nproblèmes réels, mais à des situations hypothétiques, très peu\nplausibles ou carrément impossibles. De plus, les patients obses-\nsionnels sont le plus souvent conscients de l’aspect absurde de\nleurs ruminations :\n• « Est-ce bien moi qui ai causé la mort de ma mère, en éternuant\ndans sa chambre, lors de ma visite à l’hôpital ? »\n• « Le sel de mer ne rend-il pas les marins sexuellement im-\npuissants ? »\n• « Les policiers ne vont-ils pas toujours à deux parce que chacun\nest aveugle d’un œil et donc, quand ils sont deux, cela leur\nfait au total deux yeux et donc une vue normale ? »\nC’est par l’absence d’attaques de panique que le TOC se dis-\ntingue du trouble panique, de l’agoraphobie, de la phobie sociale\nou des phobies spéciques. Par conséquent, les comportements\nd’évitement d’allure phobique qu’on peut observer chez certains\nobsessionnels, visent à esquiver des situations susceptibles de\ndéclencher des rituels obsessionnels-compulsifs et non pas des\nattaques de panique. Par exemple, un patient atteint de TOC avec\nune phobie d’impulsion de frapper, voire de tuer des enfants,\névite de sortir seul de chez lui, mais il peut sortir accompagné\nde son épouse ou d’un intervenant an de se garantir qu’il ne\nposera pas de gestes agressifs. Formellement, il présente donc\nune agoraphobie, mais elle n’est pas provoquée par l’appréhension\nd’attaques de panique, mais par des obsessions à contenu agressif.\nCependant, une cooccurrence élevée du TOC avec diérents\ntroubles anxieux (76 % selon le DSM-5) est à l’origine des cas\ncliniques dans lesquels on note une anxiété généralisée ou un\ntrouble panique chez un patient atteint d’un TOC ou, inversement,\ndes symptômes obsessionnels-compulsifs mineurs ou modérés\naccompagnant un quelconque trouble anxieux.\n",
+      "text_sha256": "98b226689711fc63ea77d3c6a0e5856a70bf1c437064ef4e8711ea633ae1ec66"
+    }
+  ],
+  "coordinates_sha256": "7b33bc0f6273f8ea459e2b223234fcbfe5c1c320d39b88874584947a9eadc5e8",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0473",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "456\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\neectuée en se basant sur les propos du patient. À partir d’une\nliste exhaustive des obsessions et des compulsions possibles\nselon leur contenu (voir l’encadré 21.1), le clinicien et le patient\ndéterminent les principales obsessions et compulsions présentes\nchez le patient. Par la suite, les symptômes ainsi identiés sont\névalués sur cinq dimensions (items) pour les obsessions et les\ncompulsions séparément :\n1. Durée de temps par jour ;\n2. Gêne (interférence) au quotidien ;\n3. Détresse (angoisse) associée ;\n4. Résistance aux symptômes ;\n5. Contrôle sur les symptômes.\nLa gravité de chaque item est cotée de 0 (absent) à 4, selon le\ndegré de la gravité déterminée explicitement. Par exemple, pour\nla durée de temps occupée par les symptômes par jour, l’absence\nde symptômes est cotée 0 ; une durée jusqu’à 1 heure est cotée 1 ;\nune durée jusqu’à 3 heures est cotée 2 ; une durée jusqu’à\n8 heures est cotée 3 ; et une durée de plus de 8 heures par jour\nest cotée 4. De cette manière, le pointage maximal d’intensité\npour les obsessions, ainsi que pour les compulsions, est de\n20 points et, pour l’ensemble des obsessions et des compulsions,\nde 40 points. Un pointage inférieur à 16 points est considéré\ncomme subsyndromique ou normal. Les patients atteints\nde trouble obsessionnel-compulsif inclus dans les protocoles de\nrecherche présentent le plus souvent un pointage de 26 ou\n27 points, c’est-à-dire une sévérité clinique modérée à marquée.\n21A.7 Diagnostic différentiel\net comorbidité\nLe diagnostic diérentiel vise à délimiter l’espace psychopatho-\nlogique du TOC par rapport aux autres troubles psychiques qui\ncomportent parfois des manifestations cliniques plus ou moins\nsemblables. Cependant, la tâche n’est pas toujours facile, les\nconcepts nosologiques n’étant que des approximations de la réalité\nclinique, dans laquelle le typique et l’atypique se chevauchent\net se juxtaposent à des formes transitoires d’autres troubles\npsychiques, sans respect des limites nosographiques présumées.\n21A.7.1 Personnalité obsessionnelle-\ncompulsive\nLa personnalité obsessionnelle-compulsive a en commun avec\nle TOC le contenu et les thèmes des préoccupations : règles,\nordre, propreté, accumulation, etc. Cependant, dans le cas de\nla personnalité obsessionnelle-compulsive, en principe, il n’y a\npas de symptômes obsessionnels-compulsifs comme tels et les\npréoccupations ne sont pas vécues comme égodystones, mais\nau contraire, comme égosyntones, c’est-à-dire conformes aux\nhabitudes, aux valeurs et au jugement de la personne.\nPourtant, plusieurs aspects de la relation entre traits de per-\nsonnalité obsessionnelle-compulsive et symptômes obsession-\nnels-compulsifs demeurent controversés et peu élucidés. Ce qui\nest clair, c’est qu’ils peuvent fort bien coexister. Dans ces cas, la\nfrontière entre les deux devient confuse. Par exemple, selon la tra-\ndition européenne la présence de symptômes mineurs est non\nseulement compatible avec le diagnostic de « personnalité anan-\nkastique » (terme équivalent pour personnalité obsessionnelle-\ncompulsive), mais elle en constitue un des critères diagnostiques. À\nl’opposé, les patients atteints d’un trouble obsessionnel-compulsif\nprésentent dans une proportion signicative, quoique variable\n(environ 30 %), une personnalité obsessionnelle-compulsive ou\ndes traits d’une telle personnalité. Ces derniers peuvent soit\nprécéder les symptômes, soit survenir ou s’accentuer au cours de\nl’évolution du TOC pour parfois s’atténuer ou disparaître après\nun traitement réussi du TOC. Dans d’autres cas encore, la per-\nsonnalité obsessionnelle-compulsive demeure en quelque sorte\ncomme une « cicatrice caractérielle » après la rémission complète\ndes symptômes obsessionnels-compulsifs. Cependant, dans la\nmajorité des cas, le TOC est cliniquement présent en l’absence\nd’un trouble de personnalité obsessionnelle-compulsive ou en\ncombinaison avec n’importe quel autre type de la personnalité.\n21A.7.2 Troubles anxieux\nLes préoccupations et les inquiétudes observées dans l’anxiété\ngénéralisée peuvent être répétitives et envahissantes, mais elles\nreprésentent des réactions excessives à l’égard de problèmes\nréels, par exemple, une rougeur sur la peau (serait-ce un can-\ncer ?), une infection quelconque (serait-ce une méningite ou la\nbactérie mangeuse de chair ?), un retard imprévu (serait-ce un\naccident ?), etc. Les inquiétudes anxieuses sont donc volatiles\net changeantes, peuvent disparaître une fois que la personne\nest rassurée ou céder la place à de nouvelles inquiétudes. En\nrevanche, les ruminations obsessionnelles sont des idées sté-\nréotypées qui font intrusion et qui ne se rapportent pas à des\nproblèmes réels, mais à des situations hypothétiques, très peu\nplausibles ou carrément impossibles. De plus, les patients obses-\nsionnels sont le plus souvent conscients de l’aspect absurde de\nleurs ruminations :\n• « Est-ce bien moi qui ai causé la mort de ma mère, en éternuant\ndans sa chambre, lors de ma visite à l’hôpital ? »\n• « Le sel de mer ne rend-il pas les marins sexuellement im-\npuissants ? »\n• « Les policiers ne vont-ils pas toujours à deux parce que chacun\nest aveugle d’un œil et donc, quand ils sont deux, cela leur\nfait au total deux yeux et donc une vue normale ? »\nC’est par l’absence d’attaques de panique que le TOC se dis-\ntingue du trouble panique, de l’agoraphobie, de la phobie sociale\nou des phobies spéciques. Par conséquent, les comportements\nd’évitement d’allure phobique qu’on peut observer chez certains\nobsessionnels, visent à esquiver des situations susceptibles de\ndéclencher des rituels obsessionnels-compulsifs et non pas des\nattaques de panique. Par exemple, un patient atteint de TOC avec\nune phobie d’impulsion de frapper, voire de tuer des enfants,\névite de sortir seul de chez lui, mais il peut sortir accompagné\nde son épouse ou d’un intervenant an de se garantir qu’il ne\nposera pas de gestes agressifs. Formellement, il présente donc\nune agoraphobie, mais elle n’est pas provoquée par l’appréhension\nd’attaques de panique, mais par des obsessions à contenu agressif.\nCependant, une cooccurrence élevée du TOC avec diérents\ntroubles anxieux (76 % selon le DSM-5) est à l’origine des cas\ncliniques dans lesquels on note une anxiété généralisée ou un\ntrouble panique chez un patient atteint d’un TOC ou, inversement,\ndes symptômes obsessionnels-compulsifs mineurs ou modérés\naccompagnant un quelconque trouble anxieux.\n",
+  "raw_text_sha256": "c1d00e4316af9db4039f243678b0687390892962227eb89976bba6c8504f2194",
+  "source_page_display": 474,
+  "source_page_index": 473
+}

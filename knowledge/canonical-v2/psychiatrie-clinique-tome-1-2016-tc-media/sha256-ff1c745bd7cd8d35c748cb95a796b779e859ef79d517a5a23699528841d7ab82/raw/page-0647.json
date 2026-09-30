@@ -1,0 +1,484 @@
+{
+  "block_sequence_sha256": "38711b970f4bf784a50519cb18558aea33e04e99e942c36a69149fd3addf5268",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0647-block-0001",
+      "order": 1,
+      "text": "630\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "190d5d3a82bfc5fada9071d4c01e1d2c92c76dc6468447acb748471b0a5b949f"
+    },
+    {
+      "bbox": [
+        50.400001525878906,
+        41.002296447753906,
+        375.937744140625,
+        53.320068359375
+      ],
+      "block_id": "page-0647-block-0002",
+      "order": 2,
+      "text": "TABLEAU 28.6 Affections médicales associées à des symptômes psychiatriques\n",
+      "text_sha256": "a44c4bea79a3dc2fa5c4040e423098d82df91d33f29c4ad1511b8d1238480003"
+    },
+    {
+      "bbox": [
+        115.4000015258789,
+        58.27412414550781,
+        523.4844970703125,
+        68.85029602050781
+      ],
+      "block_id": "page-0647-block-0003",
+      "order": 3,
+      "text": "Affections médicales\nAnxiété\nDépression\nPsychose\nManie\n",
+      "text_sha256": "6e644b0baaac6bb181b75a898edf3b4dc52ab2bf75fb92cd8faea41a942c6ff6"
+    },
+    {
+      "bbox": [
+        51.25,
+        74.12285614013672,
+        124.73100280761719,
+        84.14238739013672
+      ],
+      "block_id": "page-0647-block-0004",
+      "order": 4,
+      "text": "Neurologiques (suite)\n",
+      "text_sha256": "51b9be741f96e958a7504ee34e5757ce88739b7766ec9be9cd3429a7e4aee386"
+    },
+    {
+      "bbox": [
+        52.25,
+        92.6519546508789,
+        370.0,
+        102.4781265258789
+      ],
+      "block_id": "page-0647-block-0005",
+      "order": 5,
+      "text": "Migraine\n+\n+\n",
+      "text_sha256": "45085826e574405ca25de8faf0d6f7a68389431792cbdaba9f8e1c6a46a12655"
+    },
+    {
+      "bbox": [
+        52.25,
+        111.05195617675781,
+        442.3999938964844,
+        120.87812805175781
+      ],
+      "block_id": "page-0647-block-0006",
+      "order": 6,
+      "text": "Narcolepsie\n+\n+\n",
+      "text_sha256": "b0004542f9bebf6716923ef3c28858d10f84525883c03cf403aa571aa7ca5ab9"
+    },
+    {
+      "bbox": [
+        51.25,
+        129.4228515625,
+        98.06710815429688,
+        139.4423828125
+      ],
+      "block_id": "page-0647-block-0007",
+      "order": 7,
+      "text": "Traumatiques\n",
+      "text_sha256": "6a503d7be1814b7a292b096090b32e02884fe3b0a6056744544bdf71ae453601"
+    },
+    {
+      "bbox": [
+        52.25,
+        147.90196228027344,
+        122.8370132446289,
+        157.72813415527344
+      ],
+      "block_id": "page-0647-block-0008",
+      "order": 8,
+      "text": "Hématome sous-dural\n",
+      "text_sha256": "aff3adfb4130f8abcd574a62b300ca137e5ce7f368e4fc7e343ddf2f7cc48f45"
+    },
+    {
+      "bbox": [
+        52.25,
+        166.35195922851562,
+        515.0,
+        176.17813110351562
+      ],
+      "block_id": "page-0647-block-0009",
+      "order": 9,
+      "text": "Traumatisme craniocérébral\n+\n+\n+\n+\n",
+      "text_sha256": "ad9dd51f1b56cede04e1c5c31f3c110e814f005a4105a4ab0174e4bd99cf5109"
+    },
+    {
+      "bbox": [
+        52.25,
+        184.751953125,
+        370.0,
+        194.578125
+      ],
+      "block_id": "page-0647-block-0010",
+      "order": 10,
+      "text": "Traumatisme spinal grave\n+\n",
+      "text_sha256": "426aac50f20790955c0ba25a371e9665230a67d3222f2d52681fdaadc76ec57c"
+    },
+    {
+      "bbox": [
+        51.25,
+        203.1228485107422,
+        96.91600036621094,
+        213.1423797607422
+      ],
+      "block_id": "page-0647-block-0011",
+      "order": 11,
+      "text": "Respiratoires\n",
+      "text_sha256": "a430d6452b6a29b77887c44ce1fb8dd2ea5ec1111e5a52fa918df085864b5d79"
+    },
+    {
+      "bbox": [
+        52.25,
+        221.60195922851562,
+        370.0,
+        231.42813110351562
+      ],
+      "block_id": "page-0647-block-0012",
+      "order": 12,
+      "text": "Apnée obstructive\n+\n",
+      "text_sha256": "b3ba85acea72eb95f42e9df7ab17b158631b4c2178c8fc323675bf1f75dbf704"
+    },
+    {
+      "bbox": [
+        52.25,
+        240.0519561767578,
+        297.6499938964844,
+        249.8781280517578
+      ],
+      "block_id": "page-0647-block-0013",
+      "order": 13,
+      "text": "Asthme\n+\n",
+      "text_sha256": "c3c19594378143151f04964474ba55d57d204036832f321e17f530e3b020e324"
+    },
+    {
+      "bbox": [
+        52.25,
+        258.45196533203125,
+        297.6499938964844,
+        268.27813720703125
+      ],
+      "block_id": "page-0647-block-0014",
+      "order": 14,
+      "text": "Embolie pulmonaire\n+\n",
+      "text_sha256": "58acdbab5ac87e24402f8ef2678aa349c799936d7184699a52e7008e2761b166"
+    },
+    {
+      "bbox": [
+        52.25,
+        276.9019470214844,
+        442.3999938964844,
+        286.7281188964844
+      ],
+      "block_id": "page-0647-block-0015",
+      "order": 15,
+      "text": "Hypoxie, œdème pulmonaire\n+\n+\n",
+      "text_sha256": "fc6dc0f2aae5b26a7608ca2dcd48e973567680db28898e0f1de9fe272ad1cb5b"
+    },
+    {
+      "bbox": [
+        52.25,
+        295.3019714355469,
+        297.6499938964844,
+        305.1281433105469
+      ],
+      "block_id": "page-0647-block-0016",
+      "order": 16,
+      "text": "Maladie pulmonaire obstructive\n+\n",
+      "text_sha256": "6ac7048335398c0762f103e3adfb0f71e00c82218956bda45b8db9932c4c8f93"
+    },
+    {
+      "bbox": [
+        52.25,
+        313.751953125,
+        297.6499938964844,
+        323.578125
+      ],
+      "block_id": "page-0647-block-0017",
+      "order": 17,
+      "text": "Pneumothorax\n+\n",
+      "text_sha256": "d05bffa85e6206c287ecd615808e46d6ada9b1cf11b4721a8cb9421d7cd51d21"
+    },
+    {
+      "bbox": [
+        48.25,
+        332.34063720703125,
+        243.435791015625,
+        341.2088623046875
+      ],
+      "block_id": "page-0647-block-0018",
+      "order": 18,
+      "text": "Sources : Adapté de Cummins & Mega (2003) ; Moore & Puri (2012).\n",
+      "text_sha256": "12e05d9ad8a5f0bfc7b5679aea85173edad01e1a58d561fa5f15b672dfaab806"
+    },
+    {
+      "bbox": [
+        378.75,
+        41.45229721069336,
+        404.4342346191406,
+        53.42007064819336
+      ],
+      "block_id": "page-0647-block-0019",
+      "order": 19,
+      "text": "(suite)\n",
+      "text_sha256": "c684d6dbcdfd50f0ada227f799b5c0fb30e817ac3da61b4cbf208decde7f907b"
+    },
+    {
+      "bbox": [
+        50.5,
+        354.2023010253906,
+        461.95263671875,
+        366.570068359375
+      ],
+      "block_id": "page-0647-block-0020",
+      "order": 20,
+      "text": "TABLEAU 28.7 Médicaments et substances psychoactives associés à des symptômes psychiatriques\n",
+      "text_sha256": "9ae0272723877b5cd0367707486c97cd53f62179edc13d9df487b9a9fe67f849"
+    },
+    {
+      "bbox": [
+        97.70000457763672,
+        371.47412109375,
+        515.0345458984375,
+        382.05029296875
+      ],
+      "block_id": "page-0647-block-0021",
+      "order": 21,
+      "text": "Substances\nAnxiété\nDépression\nPsychose\nManie\n",
+      "text_sha256": "20f4fccd4cf75ad3d94903d65f07995047b1465e88fc7bc6795e37cf9fcde362"
+    },
+    {
+      "bbox": [
+        52.25,
+        387.45196533203125,
+        326.8999938964844,
+        397.27813720703125
+      ],
+      "block_id": "page-0647-block-0022",
+      "order": 22,
+      "text": "Alcool\n+\n+\n",
+      "text_sha256": "1bccb0e367ba723141a525f35c927b6bdc1fa1d2175f64145455b0ef73e057f9"
+    },
+    {
+      "bbox": [
+        52.25,
+        405.9019470214844,
+        97.8600082397461,
+        415.7281188964844
+      ],
+      "block_id": "page-0647-block-0023",
+      "order": 23,
+      "text": "Analgésiques :\n",
+      "text_sha256": "53b1c9667a5eeaf52f1373ad3213ef6e8623386db6cb126bc3e9c024bc1d6b11"
+    },
+    {
+      "bbox": [
+        60.900001525878906,
+        424.3019714355469,
+        506.54998779296875,
+        434.1281433105469
+      ],
+      "block_id": "page-0647-block-0024",
+      "order": 24,
+      "text": "Anti-inammatoires non stéroïdiens\n+\n+\n+\n+\n",
+      "text_sha256": "dd4dafb5471cb8470fa1c8fdf04b210a2aa1640a1c986e53fd25093e2f96dc65"
+    },
+    {
+      "bbox": [
+        61.25,
+        442.751953125,
+        416.75,
+        452.578125
+      ],
+      "block_id": "page-0647-block-0025",
+      "order": 25,
+      "text": "Narcotiques\n+\n+\n+\n",
+      "text_sha256": "5e791185450f4bbe73cab7d27b810576772b778620b30955d4d07b7421423884"
+    },
+    {
+      "bbox": [
+        61.25,
+        461.1519470214844,
+        237.09999084472656,
+        470.9781188964844
+      ],
+      "block_id": "page-0647-block-0026",
+      "order": 26,
+      "text": "Salicylates\n+\n",
+      "text_sha256": "10234cc7023387574538e5226ed1b859e9340ad0c001823a326d58e75ecbc3f9"
+    },
+    {
+      "bbox": [
+        52.25,
+        479.6019592285156,
+        506.54998779296875,
+        489.4281311035156
+      ],
+      "block_id": "page-0647-block-0027",
+      "order": 27,
+      "text": "Antibiotiques\n+\n+\n+\n+\n",
+      "text_sha256": "4172b3aabb2a87b9676aee6489ce958e0b899f5802a213c2d14b3acc6d2a6d3c"
+    },
+    {
+      "bbox": [
+        52.25,
+        498.001953125,
+        506.54998779296875,
+        507.828125
+      ],
+      "block_id": "page-0647-block-0028",
+      "order": 28,
+      "text": "Antiarythmiques\n+\n+\n+\n",
+      "text_sha256": "d332f43720783174a6e36415150350ace76e7668b3e717a5a43517746dfbc770"
+    },
+    {
+      "bbox": [
+        52.25,
+        516.4519653320312,
+        416.75,
+        526.2781372070312
+      ],
+      "block_id": "page-0647-block-0029",
+      "order": 29,
+      "text": "Anticholinergiques\n+\n",
+      "text_sha256": "f72c6c30c4a783aacf6ddb7d1e1fb5f1ffc7ed1ac7ab2e2afbc0eeea16eb4d24"
+    },
+    {
+      "bbox": [
+        52.25,
+        534.8519897460938,
+        506.54998779296875,
+        544.6781616210938
+      ],
+      "block_id": "page-0647-block-0030",
+      "order": 30,
+      "text": "Anticonvulsivants\n+\n+\n+\n+\n",
+      "text_sha256": "c330ddd315dd346a91939277023ed7f90e92d708ca62b057db5f3cff32b5bff7"
+    },
+    {
+      "bbox": [
+        52.25,
+        553.3019409179688,
+        506.54998779296875,
+        563.1281127929688
+      ],
+      "block_id": "page-0647-block-0031",
+      "order": 31,
+      "text": "Antihypertenseurs\n+\n+\n+\n+\n",
+      "text_sha256": "5302f6216607e8de58d57d22e347d50cb43b132d45718fef81d1062a1eafb716"
+    },
+    {
+      "bbox": [
+        52.25,
+        571.7019653320312,
+        506.54998779296875,
+        581.5281372070312
+      ],
+      "block_id": "page-0647-block-0032",
+      "order": 32,
+      "text": "Antiparkinsoniens\n+\n+\n+\n+\n",
+      "text_sha256": "5fb22ebd006bdca4c85d3cecbf64e53d07d9e721d5b42f65f3aa0472595a182d"
+    },
+    {
+      "bbox": [
+        52.25,
+        590.1519775390625,
+        506.54998779296875,
+        599.9781494140625
+      ],
+      "block_id": "page-0647-block-0033",
+      "order": 33,
+      "text": "Antipaludéens\n+\n+\n+\n+\n",
+      "text_sha256": "a9579239e90b2dee2abbc5e4706d4b23f56d60b3f4d8a91204cb598cbe8d12cc"
+    },
+    {
+      "bbox": [
+        52.25,
+        608.5519409179688,
+        506.54998779296875,
+        618.3781127929688
+      ],
+      "block_id": "page-0647-block-0034",
+      "order": 34,
+      "text": "Antinéoplasiques\n+\n+\n+\n",
+      "text_sha256": "fe159c6fe217fe1f4b3a42a8767f214038b0f4d64534b78f474458bd453360cd"
+    },
+    {
+      "bbox": [
+        52.25,
+        627.001953125,
+        506.54998779296875,
+        636.828125
+      ],
+      "block_id": "page-0647-block-0035",
+      "order": 35,
+      "text": "Antiviraux\n+\n+\n+\n+\n",
+      "text_sha256": "e444df5151dbea8fed2f536eaf9db28a6a505024bcded3244142c3e0fe12d2db"
+    },
+    {
+      "bbox": [
+        52.25,
+        645.4019775390625,
+        237.09999084472656,
+        655.2281494140625
+      ],
+      "block_id": "page-0647-block-0036",
+      "order": 36,
+      "text": "Caféine\n+\n",
+      "text_sha256": "1371bc26bf274c5d4af382c3af839efba5488a27a4a02665d477b89c524ac43c"
+    },
+    {
+      "bbox": [
+        52.25,
+        663.2514038085938,
+        506.54998779296875,
+        673.6781616210938
+      ],
+      "block_id": "page-0647-block-0037",
+      "order": 37,
+      "text": "Cimétidine (TagametMD)\n+\n+\n+\n",
+      "text_sha256": "5580e3c975410033f22cd3079bba8c545160e10d499e4bf314529c335f08d57a"
+    },
+    {
+      "bbox": [
+        52.25,
+        682.251953125,
+        506.54998779296875,
+        692.078125
+      ],
+      "block_id": "page-0647-block-0038",
+      "order": 38,
+      "text": "Contraceptifs oraux\n+\n+\n",
+      "text_sha256": "5dfbc686b6ebad064b3059b642f31fd670ac3655f528fba823c8c297406c6a6c"
+    },
+    {
+      "bbox": [
+        52.25,
+        700.7019653320312,
+        506.54998779296875,
+        710.5281372070312
+      ],
+      "block_id": "page-0647-block-0039",
+      "order": 39,
+      "text": "Corticostéroïdes\n+\n+\n+\n+\n",
+      "text_sha256": "e30e1e8cbf539e75178eb75602c8bca098ec5f7d3f3785e1fe10d46ec907b822"
+    }
+  ],
+  "coordinates_sha256": "a834d075247afab50be8b102b2dbd620a1533adbb0cfc3a3eb8ae766d321fd16",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0647",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "630\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nTABLEAU 28.6 Affections médicales associées à des symptômes psychiatriques\nAffections médicales\nAnxiété\nDépression\nPsychose\nManie\nNeurologiques (suite)\nMigraine\n+\n+\nNarcolepsie\n+\n+\nTraumatiques\nHématome sous-dural\nTraumatisme craniocérébral\n+\n+\n+\n+\nTraumatisme spinal grave\n+\nRespiratoires\nApnée obstructive\n+\nAsthme\n+\nEmbolie pulmonaire\n+\nHypoxie, œdème pulmonaire\n+\n+\nMaladie pulmonaire obstructive\n+\nPneumothorax\n+\nSources : Adapté de Cummins & Mega (2003) ; Moore & Puri (2012).\n(suite)\nTABLEAU 28.7 Médicaments et substances psychoactives associés à des symptômes psychiatriques\nSubstances\nAnxiété\nDépression\nPsychose\nManie\nAlcool\n+\n+\nAnalgésiques :\nAnti-inammatoires non stéroïdiens\n+\n+\n+\n+\nNarcotiques\n+\n+\n+\nSalicylates\n+\nAntibiotiques\n+\n+\n+\n+\nAntiarythmiques\n+\n+\n+\nAnticholinergiques\n+\nAnticonvulsivants\n+\n+\n+\n+\nAntihypertenseurs\n+\n+\n+\n+\nAntiparkinsoniens\n+\n+\n+\n+\nAntipaludéens\n+\n+\n+\n+\nAntinéoplasiques\n+\n+\n+\nAntiviraux\n+\n+\n+\n+\nCaféine\n+\nCimétidine (TagametMD)\n+\n+\n+\nContraceptifs oraux\n+\n+\nCorticostéroïdes\n+\n+\n+\n+\n",
+  "raw_text_sha256": "ef688b87e4358f160805fd117a8f07bb213baeac47ae9081a763d70632474c7e",
+  "source_page_display": 648,
+  "source_page_index": 647
+}

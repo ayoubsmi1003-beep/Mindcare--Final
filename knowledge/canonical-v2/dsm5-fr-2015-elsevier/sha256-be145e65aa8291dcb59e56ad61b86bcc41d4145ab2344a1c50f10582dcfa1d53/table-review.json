@@ -1,0 +1,1610 @@
+{
+  "generated": "table-structural-review",
+  "auto_ok": 19,
+  "needs_review": 102,
+  "tables": [
+    {
+      "table_id": "dsm5fr:table:1000:2",
+      "title": "Tableau 2. Échelle du niveau de fonctionnement de la personnalité (suite)",
+      "printed_pages": [
+        "1000",
+        "1000"
+      ],
+      "rows": 0,
+      "verdict": "needs_review",
+      "issues": [
+        "no-headers",
+        "no-rows"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1001:2",
+      "title": "Tableau 2. Échelle du niveau de fonctionnement de la personnalité (suite)",
+      "printed_pages": [
+        "1001",
+        "1001"
+      ],
+      "rows": 0,
+      "verdict": "needs_review",
+      "issues": [
+        "no-headers",
+        "no-rows"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1002:1",
+      "title": "Définitions des domaines et des facettes de traits d’un trouble de la personnalité dans le DSM-5",
+      "printed_pages": [
+        "1002",
+        "1004"
+      ],
+      "rows": 26,
+      "verdict": "auto_ok",
+      "issues": []
+    },
+    {
+      "table_id": "dsm5fr:table:1003:3",
+      "title": "Tableau 3. Déinitions des domaines et des facettes de traits d’un trouble",
+      "printed_pages": [
+        "1003",
+        "1003"
+      ],
+      "rows": 0,
+      "verdict": "needs_review",
+      "issues": [
+        "no-headers",
+        "no-rows"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1089:1",
+      "title": "Liste alphabétique des diagnostics et codes du DSM-5 (CIM-9-MC et CIM-10-MC)",
+      "printed_pages": [
+        "1089",
+        "1089"
+      ],
+      "rows": 64,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1090:1",
+      "title": "Liste alphabétique des diagnostics et codes du DSM-5 (CIM-9-MC et CIM-10-MC)",
+      "printed_pages": [
+        "1090",
+        "1090"
+      ],
+      "rows": 86,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1091:1",
+      "title": "Liste alphabétique des diagnostics et codes du DSM-5 (CIM-9-MC et CIM-10-MC)",
+      "printed_pages": [
+        "1091",
+        "1091"
+      ],
+      "rows": 79,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1092:1",
+      "title": "Liste alphabétique des diagnostics et codes du DSM-5 (CIM-9-MC et CIM-10-MC)",
+      "printed_pages": [
+        "1092",
+        "1092"
+      ],
+      "rows": 89,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1093:1",
+      "title": "Liste alphabétique des diagnostics et codes du DSM-5 (CIM-9-MC et CIM-10-MC)",
+      "printed_pages": [
+        "1093",
+        "1093"
+      ],
+      "rows": 110,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1094:1",
+      "title": "Liste alphabétique des diagnostics et codes du DSM-5 (CIM-9-MC et CIM-10-MC)",
+      "printed_pages": [
+        "1094",
+        "1094"
+      ],
+      "rows": 83,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1095:1",
+      "title": "Liste alphabétique des diagnostics et codes du DSM-5 (CIM-9-MC et CIM-10-MC)",
+      "printed_pages": [
+        "1095",
+        "1095"
+      ],
+      "rows": 85,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1096:1",
+      "title": "Liste alphabétique des diagnostics et codes du DSM-5 (CIM-9-MC et CIM-10-MC)",
+      "printed_pages": [
+        "1096",
+        "1096"
+      ],
+      "rows": 92,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1097:1",
+      "title": "Liste alphabétique des diagnostics et codes du DSM-5 (CIM-9-MC et CIM-10-MC)",
+      "printed_pages": [
+        "1097",
+        "1097"
+      ],
+      "rows": 100,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1098:1",
+      "title": "Liste alphabétique des diagnostics et codes du DSM-5 (CIM-9-MC et CIM-10-MC)",
+      "printed_pages": [
+        "1098",
+        "1098"
+      ],
+      "rows": 113,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1099:1",
+      "title": "Liste alphabétique des diagnostics et codes du DSM-5 (CIM-9-MC et CIM-10-MC)",
+      "printed_pages": [
+        "1099",
+        "1099"
+      ],
+      "rows": 95,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1100:1",
+      "title": "Liste alphabétique des diagnostics et codes du DSM-5 (CIM-9-MC et CIM-10-MC)",
+      "printed_pages": [
+        "1100",
+        "1100"
+      ],
+      "rows": 106,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1101:1",
+      "title": "Liste alphabétique des diagnostics et codes du DSM-5 (CIM-9-MC et CIM-10-MC)",
+      "printed_pages": [
+        "1101",
+        "1101"
+      ],
+      "rows": 99,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1102:1",
+      "title": "Liste alphabétique des diagnostics et codes du DSM-5 (CIM-9-MC et CIM-10-MC)",
+      "printed_pages": [
+        "1102",
+        "1102"
+      ],
+      "rows": 98,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1103:1",
+      "title": "Liste alphabétique des diagnostics et codes du DSM-5 (CIM-9-MC et CIM-10-MC)",
+      "printed_pages": [
+        "1103",
+        "1103"
+      ],
+      "rows": 99,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1104:1",
+      "title": "Liste alphabétique des diagnostics et codes du DSM-5 (CIM-9-MC et CIM-10-MC)",
+      "printed_pages": [
+        "1104",
+        "1104"
+      ],
+      "rows": 87,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1105:1",
+      "title": "Liste alphabétique des diagnostics et codes du DSM-5 (CIM-9-MC et CIM-10-MC)",
+      "printed_pages": [
+        "1105",
+        "1105"
+      ],
+      "rows": 95,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1106:1",
+      "title": "Liste alphabétique des diagnostics et codes du DSM-5 (CIM-9-MC et CIM-10-MC)",
+      "printed_pages": [
+        "1106",
+        "1106"
+      ],
+      "rows": 97,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1107:1",
+      "title": "Liste alphabétique des diagnostics et codes du DSM-5 (CIM-9-MC et CIM-10-MC)",
+      "printed_pages": [
+        "1107",
+        "1107"
+      ],
+      "rows": 80,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1108:1",
+      "title": "Liste alphabétique des diagnostics et codes du DSM-5 (CIM-9-MC et CIM-10-MC)",
+      "printed_pages": [
+        "1108",
+        "1108"
+      ],
+      "rows": 87,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1109:1",
+      "title": "Liste alphabétique des diagnostics et codes du DSM-5 (CIM-9-MC et CIM-10-MC)",
+      "printed_pages": [
+        "1109",
+        "1109"
+      ],
+      "rows": 90,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1110:1",
+      "title": "Liste alphabétique des diagnostics et codes du DSM-5 (CIM-9-MC et CIM-10-MC)",
+      "printed_pages": [
+        "1110",
+        "1110"
+      ],
+      "rows": 88,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1111:1",
+      "title": "Liste alphabétique des diagnostics et codes du DSM-5 (CIM-9-MC et CIM-10-MC)",
+      "printed_pages": [
+        "1111",
+        "1111"
+      ],
+      "rows": 84,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1112:1",
+      "title": "Liste alphabétique des diagnostics et codes du DSM-5 (CIM-9-MC et CIM-10-MC)",
+      "printed_pages": [
+        "1112",
+        "1112"
+      ],
+      "rows": 77,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1113:1",
+      "title": "Liste alphabétique des diagnostics et codes du DSM-5 (CIM-9-MC et CIM-10-MC)",
+      "printed_pages": [
+        "1113",
+        "1113"
+      ],
+      "rows": 94,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1114:1",
+      "title": "Liste alphabétique des diagnostics et codes du DSM-5 (CIM-9-MC et CIM-10-MC)",
+      "printed_pages": [
+        "1114",
+        "1114"
+      ],
+      "rows": 101,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1115:1",
+      "title": "Liste alphabétique des diagnostics et codes du DSM-5 (CIM-9-MC et CIM-10-MC)",
+      "printed_pages": [
+        "1115",
+        "1115"
+      ],
+      "rows": 28,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1117:1",
+      "title": "Liste numérique des diagnostics et codes du DSM-5 (CIM-9-MC)",
+      "printed_pages": [
+        "1117",
+        "1117"
+      ],
+      "rows": 53,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1118:1",
+      "title": "Liste numérique des diagnostics et codes du DSM-5 (CIM-9-MC)",
+      "printed_pages": [
+        "1118",
+        "1118"
+      ],
+      "rows": 79,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1119:1",
+      "title": "Liste numérique des diagnostics et codes du DSM-5 (CIM-9-MC)",
+      "printed_pages": [
+        "1119",
+        "1119"
+      ],
+      "rows": 80,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1120:1",
+      "title": "Liste numérique des diagnostics et codes du DSM-5 (CIM-9-MC)",
+      "printed_pages": [
+        "1120",
+        "1120"
+      ],
+      "rows": 75,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1121:1",
+      "title": "Liste numérique des diagnostics et codes du DSM-5 (CIM-9-MC)",
+      "printed_pages": [
+        "1121",
+        "1121"
+      ],
+      "rows": 76,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1122:1",
+      "title": "Liste numérique des diagnostics et codes du DSM-5 (CIM-9-MC)",
+      "printed_pages": [
+        "1122",
+        "1122"
+      ],
+      "rows": 76,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1123:1",
+      "title": "Liste numérique des diagnostics et codes du DSM-5 (CIM-9-MC)",
+      "printed_pages": [
+        "1123",
+        "1123"
+      ],
+      "rows": 80,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1124:1",
+      "title": "Liste numérique des diagnostics et codes du DSM-5 (CIM-9-MC)",
+      "printed_pages": [
+        "1124",
+        "1124"
+      ],
+      "rows": 80,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1125:1",
+      "title": "Liste numérique des diagnostics et codes du DSM-5 (CIM-9-MC)",
+      "printed_pages": [
+        "1125",
+        "1125"
+      ],
+      "rows": 78,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1126:1",
+      "title": "Liste numérique des diagnostics et codes du DSM-5 (CIM-9-MC)",
+      "printed_pages": [
+        "1126",
+        "1126"
+      ],
+      "rows": 80,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1127:1",
+      "title": "Liste numérique des diagnostics et codes du DSM-5 (CIM-9-MC)",
+      "printed_pages": [
+        "1127",
+        "1127"
+      ],
+      "rows": 79,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1128:1",
+      "title": "Liste numérique des diagnostics et codes du DSM-5 (CIM-9-MC)",
+      "printed_pages": [
+        "1128",
+        "1128"
+      ],
+      "rows": 80,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1129:1",
+      "title": "Liste numérique des diagnostics et codes du DSM-5 (CIM-9-MC)",
+      "printed_pages": [
+        "1129",
+        "1129"
+      ],
+      "rows": 75,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1130:1",
+      "title": "Liste numérique des diagnostics et codes du DSM-5 (CIM-9-MC)",
+      "printed_pages": [
+        "1130",
+        "1130"
+      ],
+      "rows": 75,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1131:1",
+      "title": "Liste numérique des diagnostics et codes du DSM-5 (CIM-9-MC)",
+      "printed_pages": [
+        "1131",
+        "1131"
+      ],
+      "rows": 74,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1132:1",
+      "title": "Liste numérique des diagnostics et codes du DSM-5 (CIM-9-MC)",
+      "printed_pages": [
+        "1132",
+        "1132"
+      ],
+      "rows": 77,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1133:1",
+      "title": "Liste numérique des diagnostics et codes du DSM-5 (CIM-9-MC)",
+      "printed_pages": [
+        "1133",
+        "1133"
+      ],
+      "rows": 15,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1135:1",
+      "title": "Liste numérique des diagnostics et codes du DSM-5 (CIM-10-MC)",
+      "printed_pages": [
+        "1135",
+        "1135"
+      ],
+      "rows": 50,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1136:1",
+      "title": "Liste numérique des diagnostics et codes du DSM-5 (CIM-10-MC)",
+      "printed_pages": [
+        "1136",
+        "1136"
+      ],
+      "rows": 74,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1137:1",
+      "title": "Liste numérique des diagnostics et codes du DSM-5 (CIM-10-MC)",
+      "printed_pages": [
+        "1137",
+        "1137"
+      ],
+      "rows": 76,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1138:1",
+      "title": "Liste numérique des diagnostics et codes du DSM-5 (CIM-10-MC)",
+      "printed_pages": [
+        "1138",
+        "1138"
+      ],
+      "rows": 76,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1139:1",
+      "title": "Liste numérique des diagnostics et codes du DSM-5 (CIM-10-MC)",
+      "printed_pages": [
+        "1139",
+        "1139"
+      ],
+      "rows": 73,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1140:1",
+      "title": "Liste numérique des diagnostics et codes du DSM-5 (CIM-10-MC)",
+      "printed_pages": [
+        "1140",
+        "1140"
+      ],
+      "rows": 71,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1141:1",
+      "title": "Liste numérique des diagnostics et codes du DSM-5 (CIM-10-MC)",
+      "printed_pages": [
+        "1141",
+        "1141"
+      ],
+      "rows": 74,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1142:1",
+      "title": "Liste numérique des diagnostics et codes du DSM-5 (CIM-10-MC)",
+      "printed_pages": [
+        "1142",
+        "1142"
+      ],
+      "rows": 73,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1143:1",
+      "title": "Liste numérique des diagnostics et codes du DSM-5 (CIM-10-MC)",
+      "printed_pages": [
+        "1143",
+        "1143"
+      ],
+      "rows": 71,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1144:1",
+      "title": "Liste numérique des diagnostics et codes du DSM-5 (CIM-10-MC)",
+      "printed_pages": [
+        "1144",
+        "1144"
+      ],
+      "rows": 74,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1145:1",
+      "title": "Liste numérique des diagnostics et codes du DSM-5 (CIM-10-MC)",
+      "printed_pages": [
+        "1145",
+        "1145"
+      ],
+      "rows": 74,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1146:1",
+      "title": "Liste numérique des diagnostics et codes du DSM-5 (CIM-10-MC)",
+      "printed_pages": [
+        "1146",
+        "1146"
+      ],
+      "rows": 73,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1147:1",
+      "title": "Liste numérique des diagnostics et codes du DSM-5 (CIM-10-MC)",
+      "printed_pages": [
+        "1147",
+        "1147"
+      ],
+      "rows": 72,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1148:1",
+      "title": "Liste numérique des diagnostics et codes du DSM-5 (CIM-10-MC)",
+      "printed_pages": [
+        "1148",
+        "1148"
+      ],
+      "rows": 75,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1149:1",
+      "title": "Liste numérique des diagnostics et codes du DSM-5 (CIM-10-MC)",
+      "printed_pages": [
+        "1149",
+        "1149"
+      ],
+      "rows": 78,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1150:1",
+      "title": "Liste numérique des diagnostics et codes du DSM-5 (CIM-10-MC)",
+      "printed_pages": [
+        "1150",
+        "1150"
+      ],
+      "rows": 77,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1151:1",
+      "title": "Liste numérique des diagnostics et codes du DSM-5 (CIM-10-MC)",
+      "printed_pages": [
+        "1151",
+        "1151"
+      ],
+      "rows": 81,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1152:1",
+      "title": "Liste numérique des diagnostics et codes du DSM-5 (CIM-10-MC)",
+      "printed_pages": [
+        "1152",
+        "1152"
+      ],
+      "rows": 82,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1153:1",
+      "title": "Liste numérique des diagnostics et codes du DSM-5 (CIM-10-MC)",
+      "printed_pages": [
+        "1153",
+        "1153"
+      ],
+      "rows": 81,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1154:1",
+      "title": "Liste numérique des diagnostics et codes du DSM-5 (CIM-10-MC)",
+      "printed_pages": [
+        "1154",
+        "1154"
+      ],
+      "rows": 79,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1155:1",
+      "title": "Liste numérique des diagnostics et codes du DSM-5 (CIM-10-MC)",
+      "printed_pages": [
+        "1155",
+        "1155"
+      ],
+      "rows": 78,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1156:1",
+      "title": "Liste numérique des diagnostics et codes du DSM-5 (CIM-10-MC)",
+      "printed_pages": [
+        "1156",
+        "1156"
+      ],
+      "rows": 76,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1157:1",
+      "title": "Liste numérique des diagnostics et codes du DSM-5 (CIM-10-MC)",
+      "printed_pages": [
+        "1157",
+        "1157"
+      ],
+      "rows": 81,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1158:1",
+      "title": "Liste numérique des diagnostics et codes du DSM-5 (CIM-10-MC)",
+      "printed_pages": [
+        "1158",
+        "1158"
+      ],
+      "rows": 72,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:1159:1",
+      "title": "Liste numérique des diagnostics et codes du DSM-5 (CIM-10-MC)",
+      "printed_pages": [
+        "1159",
+        "1159"
+      ],
+      "rows": 48,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:137:1",
+      "title": "Codes CIM-9-MC et CIM-10-MC des troubles psychotiques induits par une substance/un médicament",
+      "printed_pages": [
+        "137",
+        "137"
+      ],
+      "rows": 9,
+      "verdict": "auto_ok",
+      "issues": []
+    },
+    {
+      "table_id": "dsm5fr:table:179:1",
+      "title": "Codes des troubles bipolaires ou apparentés induits par une substance/un médicament",
+      "printed_pages": [
+        "179",
+        "179"
+      ],
+      "rows": 7,
+      "verdict": "auto_ok",
+      "issues": []
+    },
+    {
+      "table_id": "dsm5fr:table:201:1",
+      "title": "Codes du trouble dépressif caractérisé",
+      "printed_pages": [
+        "201",
+        "201"
+      ],
+      "rows": 7,
+      "verdict": "auto_ok",
+      "issues": []
+    },
+    {
+      "table_id": "dsm5fr:table:218:1",
+      "title": "Codes du trouble dépressif induit par une substance/un médicament",
+      "printed_pages": [
+        "218",
+        "218"
+      ],
+      "rows": 9,
+      "verdict": "auto_ok",
+      "issues": []
+    },
+    {
+      "table_id": "dsm5fr:table:283:1",
+      "title": "CIM-9-MC et CIM-10-MC du trouble anxieux induit par une substance/un médicament",
+      "printed_pages": [
+        283,
+        283
+      ],
+      "rows": 11,
+      "verdict": "auto_ok",
+      "issues": []
+    },
+    {
+      "table_id": "dsm5fr:table:283:1:alt-S1",
+      "title": "Codes CIM-9-MC et CIM-10-MC du trouble anxieux induit par une substance/un médicament",
+      "printed_pages": [
+        "283",
+        "283"
+      ],
+      "rows": 11,
+      "verdict": "needs_review",
+      "issues": [
+        "conflicting-reconstruction-variant"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:328:1",
+      "title": "CIM-9-MC et CIM-10-MC du trouble obsessionnel-compulsif ou apparenté induit par une substance/un médicament",
+      "printed_pages": [
+        328,
+        328
+      ],
+      "rows": 3,
+      "verdict": "auto_ok",
+      "issues": []
+    },
+    {
+      "table_id": "dsm5fr:table:37:1",
+      "title": "Tableau 1. Niveaux de sévérité du handicap intellectuel (trouble du développement intellectuel)",
+      "printed_pages": [
+        "37",
+        "39"
+      ],
+      "rows": 4,
+      "verdict": "auto_ok",
+      "issues": []
+    },
+    {
+      "table_id": "dsm5fr:table:536:G1",
+      "title": "Cotation des troubles du sommeil induits par une substance/un médicament",
+      "printed_pages": [
+        "536",
+        "536"
+      ],
+      "rows": 9,
+      "verdict": "needs_review",
+      "issues": [
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:537:U201",
+      "title": "tableau qui igure avec l’ensemble des crit",
+      "printed_pages": [
+        "537",
+        "537"
+      ],
+      "rows": 0,
+      "verdict": "needs_review",
+      "issues": [
+        "no-headers",
+        "no-rows"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:537:U202",
+      "title": "tableau igurant avec l’ensemble des crit",
+      "printed_pages": [
+        "537",
+        "537"
+      ],
+      "rows": 0,
+      "verdict": "needs_review",
+      "issues": [
+        "no-headers",
+        "no-rows"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:583:1",
+      "title": "Codes CIM-9-MC et CIM-10-MC pour les dysfonctions sexuelles induites par une substance/un médicament",
+      "printed_pages": [
+        "583",
+        "583"
+      ],
+      "rows": 6,
+      "verdict": "auto_ok",
+      "issues": []
+    },
+    {
+      "table_id": "dsm5fr:table:584:1",
+      "title": "Codes CIM-9-MC et CIM-10-MC pour les dysfonctions sexuelles induites par une substance/un médicament",
+      "printed_pages": [
+        "584",
+        "584"
+      ],
+      "rows": 6,
+      "verdict": "auto_ok",
+      "issues": []
+    },
+    {
+      "table_id": "dsm5fr:table:58:1",
+      "title": "Tableau 2. Niveaux de sévérité du trouble du spectre de l'autisme",
+      "printed_pages": [
+        "58",
+        "58"
+      ],
+      "rows": 3,
+      "verdict": "auto_ok",
+      "issues": []
+    },
+    {
+      "table_id": "dsm5fr:table:633:1",
+      "title": "Diagnostics associés aux classes de substances",
+      "printed_pages": [
+        "633",
+        "633"
+      ],
+      "rows": 11,
+      "verdict": "needs_review",
+      "issues": [
+        "ragged-rows:[4, 5, 8, 9, 11, 12]",
+        "header-width-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:777:1",
+      "title": "Atteintes neurocognitives",
+      "printed_pages": [
+        "777",
+        "779"
+      ],
+      "rows": 6,
+      "verdict": "needs_review",
+      "issues": [
+        "empty-cell-row-0",
+        "empty-cell-row-1",
+        "empty-cell-row-2",
+        "empty-cell-row-3",
+        "empty-cell-row-4",
+        "empty-cell-row-5"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:780:1",
+      "title": "Codes de l’état confusionnel dû à une intoxication par une substance",
+      "printed_pages": [
+        "780",
+        "781"
+      ],
+      "rows": 10,
+      "verdict": "auto_ok",
+      "issues": []
+    },
+    {
+      "table_id": "dsm5fr:table:788:1",
+      "title": "Codes étiologiques du trouble neurocognitif majeur et léger",
+      "printed_pages": [
+        "788",
+        "790"
+      ],
+      "rows": 13,
+      "verdict": "auto_ok",
+      "issues": []
+    },
+    {
+      "table_id": "dsm5fr:table:814:1",
+      "title": "Cotation de la sévérité de la lésion cérébrale traumatique",
+      "printed_pages": [
+        "814",
+        "814"
+      ],
+      "rows": 3,
+      "verdict": "auto_ok",
+      "issues": []
+    },
+    {
+      "table_id": "dsm5fr:table:814:1:alt-T6",
+      "title": "Tableau 2. Cotation de la sévérité de la lésion cérébrale traumatique",
+      "printed_pages": [
+        "814",
+        "814"
+      ],
+      "rows": 3,
+      "verdict": "needs_review",
+      "issues": [
+        "conflicting-reconstruction-variant"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:817:1",
+      "title": "Codes des troubles neurocognitifs induits par une substance/un médicament",
+      "printed_pages": [
+        "817",
+        "818"
+      ],
+      "rows": 9,
+      "verdict": "auto_ok",
+      "issues": []
+    },
+    {
+      "table_id": "dsm5fr:table:818:1",
+      "title": "Codes des troubles neurocognitifs induits par une substance/un médicament",
+      "printed_pages": [
+        "818",
+        "818"
+      ],
+      "rows": 4,
+      "verdict": "auto_ok",
+      "issues": []
+    },
+    {
+      "table_id": "dsm5fr:table:818:1:alt-T6",
+      "title": "Codes CIM-9-MC et CIM-10-MC du trouble neurocognitif induit par une substance/un médicament (sédatifs, autres substances)",
+      "printed_pages": [
+        "818",
+        "818"
+      ],
+      "rows": 4,
+      "verdict": "needs_review",
+      "issues": [
+        "conflicting-reconstruction-variant"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:915:1",
+      "title": "Autre trouble paraphilique spéciié",
+      "printed_pages": [
+        "915",
+        "915"
+      ],
+      "rows": 0,
+      "verdict": "needs_review",
+      "issues": [
+        "no-headers",
+        "no-rows"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:916:1",
+      "title": "Trouble paraphilique non spéciié",
+      "printed_pages": [
+        "916",
+        "916"
+      ],
+      "rows": 0,
+      "verdict": "needs_review",
+      "issues": [
+        "no-headers",
+        "no-rows"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:949:1",
+      "title": "Mesures et modèles émergents",
+      "printed_pages": [
+        "949",
+        "949"
+      ],
+      "rows": 0,
+      "verdict": "needs_review",
+      "issues": [
+        "no-headers",
+        "no-rows"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:950:1",
+      "title": "autres troubles psychotiques, remplie par le clinicien, est également fournie, de même",
+      "printed_pages": [
+        "950",
+        "950"
+      ],
+      "rows": 0,
+      "verdict": "needs_review",
+      "issues": [
+        "no-headers",
+        "no-rows"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:951:1",
+      "title": "Mesures d’évaluation",
+      "printed_pages": [
+        "951",
+        "951"
+      ],
+      "rows": 0,
+      "verdict": "needs_review",
+      "issues": [
+        "no-headers",
+        "no-rows"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:953:1",
+      "title": "Auto-évaluation symptomatique transversale de niveau 1 du DSM-5 — patient adulte : 13 domaines, seuils pour investigations supplémentaires et évaluations de niveau 2 associées",
+      "printed_pages": [
+        "953",
+        "953"
+      ],
+      "rows": 13,
+      "verdict": "needs_review",
+      "issues": [
+        "page-offset-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:953:1:alt-S6",
+      "title": "Tableau 1. Auto-évaluation symptomatique transversale de niveau 1 du DSM-5 – patient adulte : 13 domaines, seuils pour investigations supplémentaires et évaluations de niveau 2 associées",
+      "printed_pages": [
+        "953",
+        "953"
+      ],
+      "rows": 13,
+      "verdict": "needs_review",
+      "issues": [
+        "conflicting-reconstruction-variant"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:953:1:alt-T7",
+      "title": "Tableau 1. Auto-évaluation symptomatique transversale de niveau 1 du DSM",
+      "printed_pages": [
+        "953",
+        "953"
+      ],
+      "rows": 0,
+      "verdict": "needs_review",
+      "issues": [
+        "no-headers",
+        "no-rows",
+        "conflicting-reconstruction-variant"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:955:1",
+      "title": "Évaluation symptomatique transversale par le parent/adulte responsable, au niveau 1 du DSM-5, pour les enfants âgés de 6 à 17 ans : 12 domaines, seuils pour investigations supplémentaires et évaluations associées de niveau 2",
+      "printed_pages": [
+        "955",
+        "955"
+      ],
+      "rows": 14,
+      "verdict": "needs_review",
+      "issues": [
+        "page-offset-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:956:2",
+      "title": "Mesures d’évaluation",
+      "printed_pages": [
+        "956",
+        "956"
+      ],
+      "rows": 0,
+      "verdict": "needs_review",
+      "issues": [
+        "no-headers",
+        "no-rows"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:957:1",
+      "title": "Auto-évaluation symptomatique transversale niveau 1 – DSM-5 – Adulte",
+      "printed_pages": [
+        "957",
+        "958"
+      ],
+      "rows": 23,
+      "verdict": "needs_review",
+      "issues": [
+        "page-offset-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:957:1:alt-S6",
+      "title": "Auto-évaluation symptomatique transversale niveau 1 – DSM-5 – Adulte",
+      "printed_pages": [
+        "957",
+        "957"
+      ],
+      "rows": 13,
+      "verdict": "needs_review",
+      "issues": [
+        "empty-cell-row-0",
+        "empty-cell-row-1",
+        "empty-cell-row-2",
+        "empty-cell-row-3",
+        "empty-cell-row-4",
+        "empty-cell-row-5",
+        "empty-cell-row-6",
+        "empty-cell-row-7",
+        "empty-cell-row-8",
+        "empty-cell-row-9",
+        "empty-cell-row-10",
+        "empty-cell-row-11",
+        "empty-cell-row-12",
+        "conflicting-reconstruction-variant"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:957:1:alt-T7",
+      "title": "Auto-évaluation symptomatique transversale niveau 1 – DSM-5 – Adulte",
+      "printed_pages": [
+        "957",
+        "957"
+      ],
+      "rows": 0,
+      "verdict": "needs_review",
+      "issues": [
+        "no-headers",
+        "no-rows",
+        "conflicting-reconstruction-variant"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:959:1",
+      "title": "Évaluation symptomatique transversale parent/adulte responsable niveau 1 – DSM-5 – Enfant de 6-17 ans",
+      "printed_pages": [
+        "959",
+        "961"
+      ],
+      "rows": 25,
+      "verdict": "needs_review",
+      "issues": [
+        "page-offset-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:959:1:alt-S6",
+      "title": "Évaluation symptomatique transversale parent/adulte responsable niveau 1 – DSM-5 – Enfant de 6-17 ans",
+      "printed_pages": [
+        "959",
+        "959"
+      ],
+      "rows": 8,
+      "verdict": "needs_review",
+      "issues": [
+        "empty-cell-row-0",
+        "empty-cell-row-1",
+        "empty-cell-row-2",
+        "empty-cell-row-3",
+        "empty-cell-row-4",
+        "empty-cell-row-5",
+        "empty-cell-row-6",
+        "empty-cell-row-7",
+        "conflicting-reconstruction-variant"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:959:1:alt-T7",
+      "title": "Mesures d’évaluation",
+      "printed_pages": [
+        "959",
+        "959"
+      ],
+      "rows": 0,
+      "verdict": "needs_review",
+      "issues": [
+        "no-headers",
+        "no-rows",
+        "conflicting-reconstruction-variant"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:960:1",
+      "title": "Évaluation symptomatique transversale parent/adulte responsable niveau 1 – suite",
+      "printed_pages": [
+        "960",
+        "960"
+      ],
+      "rows": 11,
+      "verdict": "needs_review",
+      "issues": [
+        "empty-cell-row-0",
+        "empty-cell-row-1",
+        "empty-cell-row-2",
+        "empty-cell-row-3",
+        "empty-cell-row-4",
+        "empty-cell-row-5",
+        "empty-cell-row-6",
+        "empty-cell-row-7",
+        "empty-cell-row-8",
+        "empty-cell-row-9",
+        "empty-cell-row-10"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:960:1:alt-T7",
+      "title": "Mesures d’évaluation",
+      "printed_pages": [
+        "960",
+        "960"
+      ],
+      "rows": 0,
+      "verdict": "needs_review",
+      "issues": [
+        "no-headers",
+        "no-rows",
+        "conflicting-reconstruction-variant"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:962:1",
+      "title": "Évaluation dimensionnelle de la sévérité des symptômes",
+      "printed_pages": [
+        "962",
+        "962"
+      ],
+      "rows": 0,
+      "verdict": "needs_review",
+      "issues": [
+        "no-headers",
+        "no-rows"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:963:1",
+      "title": "Évaluation dimensionnelle de la sévérité des symptômes psychotiques par le clinicien",
+      "printed_pages": [
+        "963",
+        "964"
+      ],
+      "rows": 8,
+      "verdict": "needs_review",
+      "issues": [
+        "empty-cell-row-0",
+        "empty-cell-row-1",
+        "empty-cell-row-2",
+        "empty-cell-row-3",
+        "empty-cell-row-4",
+        "empty-cell-row-5",
+        "empty-cell-row-6",
+        "empty-cell-row-7",
+        "page-offset-mismatch"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:964:1",
+      "title": "Évaluation dimensionnelle de la sévérité des symptômes psychotiques par le clinicien – suite",
+      "printed_pages": [
+        "964",
+        "964"
+      ],
+      "rows": 4,
+      "verdict": "auto_ok",
+      "issues": []
+    },
+    {
+      "table_id": "dsm5fr:table:964:1:alt-T7",
+      "title": "Domaine",
+      "printed_pages": [
+        "964",
+        "964"
+      ],
+      "rows": 0,
+      "verdict": "needs_review",
+      "issues": [
+        "no-headers",
+        "no-rows",
+        "conflicting-reconstruction-variant"
+      ]
+    },
+    {
+      "table_id": "dsm5fr:table:986:1",
+      "title": "Éléments de fonctionnement de la personnalité",
+      "printed_pages": [
+        "986",
+        "986"
+      ],
+      "rows": 4,
+      "verdict": "auto_ok",
+      "issues": []
+    },
+    {
+      "table_id": "dsm5fr:table:998:1",
+      "title": "Échelle du niveau de fonctionnement de la personnalité",
+      "printed_pages": [
+        "998",
+        "1001"
+      ],
+      "rows": 5,
+      "verdict": "auto_ok",
+      "issues": []
+    },
+    {
+      "table_id": "dsm5fr:table:999:2",
+      "title": "Tableau 2. Échelle du niveau de fonctionnement de la personnalité (suite)",
+      "printed_pages": [
+        "999",
+        "999"
+      ],
+      "rows": 0,
+      "verdict": "needs_review",
+      "issues": [
+        "no-headers",
+        "no-rows"
+      ]
+    }
+  ]
+}

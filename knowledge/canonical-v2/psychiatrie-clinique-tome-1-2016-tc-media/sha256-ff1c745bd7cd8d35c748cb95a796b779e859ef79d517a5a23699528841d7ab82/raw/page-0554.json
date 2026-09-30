@@ -1,0 +1,256 @@
+{
+  "block_sequence_sha256": "a379228a02d7b308b1fcc0848928f0b76742a34f880e872f46f96e865ef766b3",
+  "blocks": [
+    {
+      "bbox": [
+        301.45001220703125,
+        747.525390625,
+        555.0,
+        758.8193359375
+      ],
+      "block_id": "page-0554-block-0001",
+      "order": 1,
+      "text": "Chapitre 25\nTroubles à symptomatologie somatique\n537\n",
+      "text_sha256": "91c42bee0dc4cb171e9022418809e24217d8690a3514c5c711b4b2edfa702ce6"
+    },
+    {
+      "bbox": [
+        56.400001525878906,
+        41.05229568481445,
+        349.0955505371094,
+        53.320068359375
+      ],
+      "block_id": "page-0554-block-0002",
+      "order": 2,
+      "text": "TABLEAU 25.4 Critères diagnostiques de la symptomatologie somatique\n",
+      "text_sha256": "86b4c41455e9d7512f1b9f825dc5143e0b88a97556bbf019526dd2db8e14a65c"
+    },
+    {
+      "bbox": [
+        82.5,
+        58.27412414550781,
+        494.8846130371094,
+        81.60029602050781
+      ],
+      "block_id": "page-0554-block-0003",
+      "order": 3,
+      "text": "DSM-5\nDSM-IV-TR\n300.82 (F45.1) Trouble à symptomatologie somatique\n300.81 (F45.0) Trouble somatisation\n",
+      "text_sha256": "ac94973e2f34b8a80408af7b04db40c6ea64be195ff37d33ce8c1ca8e03fcfb2"
+    },
+    {
+      "bbox": [
+        58.25,
+        87.001953125,
+        292.6470031738281,
+        96.828125
+      ],
+      "block_id": "page-0554-block-0004",
+      "order": 4,
+      "text": "A. Un ou plusieurs symptômes somatiques causes de détresse ou entraî-\n",
+      "text_sha256": "6f69476bdfafe038d3963bf5e34a56254489ee54266193dd831afbf386a6e102"
+    },
+    {
+      "bbox": [
+        58.25,
+        97.001953125,
+        285.9619445800781,
+        117.828125
+      ],
+      "block_id": "page-0554-block-0005",
+      "order": 5,
+      "text": "nant une altération signicative de la vie quotidienne.\nB. Pensées, sentiments ou comportements excessifs liés aux symptômes\n",
+      "text_sha256": "315d329128f84023ce4cd79bc4f15f953f5f339f8892ef130bbac160b68b646c"
+    },
+    {
+      "bbox": [
+        58.25,
+        118.001953125,
+        299.91357421875,
+        211.828125
+      ],
+      "block_id": "page-0554-block-0006",
+      "order": 6,
+      "text": "somatiques ou associés à des préoccupations sur la santé suscitées par\nces symptômes, se manifestant par au moins un des symptômes suivants :\n1. Pensées persistantes et excessives concernant la gravité de ses\nsymptômes.\n2. Persistance d’un niveau élevé d’anxiété concernant la santé ou les\nsymptômes.\n3. Temps et énergie excessifs dévolus à ces symptômes ou aux préoc-\ncupations concernant la santé.\nC. Bien qu’un symptôme spécique puisse ne pas être continuellement\n",
+      "text_sha256": "fa8c7eb3097f963656c2e1e2b034b212a1b151289812e4d8732fcc9105e593df"
+    },
+    {
+      "bbox": [
+        69.25,
+        212.001953125,
+        298.076171875,
+        221.828125
+      ],
+      "block_id": "page-0554-block-0007",
+      "order": 7,
+      "text": "présent, l’état symptomatique est durable (typiquement plus de 6 mois).\n",
+      "text_sha256": "144fb00c4022c4eee7588244631f069d66b791a9282e4158f78996623aa89684"
+    },
+    {
+      "bbox": [
+        308.25,
+        87.001953125,
+        533.4332275390625,
+        96.828125
+      ],
+      "block_id": "page-0554-block-0008",
+      "order": 8,
+      "text": "A. Antécédents de plaintes somatiques multiples, débutant avant l’âge\n",
+      "text_sha256": "93408a9e461baced9ccfeb6aa47093378101cde9174db58a1166bd61acb83d90"
+    },
+    {
+      "bbox": [
+        318.75,
+        97.001953125,
+        539.79638671875,
+        136.828125
+      ],
+      "block_id": "page-0554-block-0009",
+      "order": 9,
+      "text": "de 30 ans, se manifestant pendant une période de plusieurs années\net aboutissant à une demande de traitement ou bien à une altération\nsignicative du fonctionnement social, professionnel ou dans d’autres\ndomaines importants.\n",
+      "text_sha256": "e0d0ad3428cc5198b75cb210eef5a71495d29936000c8ca92c39b9c85b3aed3c"
+    },
+    {
+      "bbox": [
+        308.25,
+        230.40196228027344,
+        530.9812622070312,
+        240.22813415527344
+      ],
+      "block_id": "page-0554-block-0010",
+      "order": 10,
+      "text": "B. Chacun des critères suivants doit avoir été rempli, les symptômes eux-\n",
+      "text_sha256": "ec6e3b001ba644b2bfc78c39c9d8cc437e896c15361ddfc7ec8d9527cb4f1c5b"
+    },
+    {
+      "bbox": [
+        318.5500183105469,
+        240.40196228027344,
+        550.615966796875,
+        250.22813415527344
+      ],
+      "block_id": "page-0554-block-0011",
+      "order": 11,
+      "text": "mêmes survenant à n’importe quel moment de l’évolution de la perturbation :\n",
+      "text_sha256": "15d9e2a86b729a7bf0a26c2a118616d95fedc036d92a2bfc7c09863526ecb32c"
+    },
+    {
+      "bbox": [
+        319.25,
+        251.40194702148438,
+        538.009033203125,
+        261.2281188964844
+      ],
+      "block_id": "page-0554-block-0012",
+      "order": 12,
+      "text": "(1) quatre symptômes douloureux: antécédents de douleur touchant\n",
+      "text_sha256": "b366f74d8ed275f809d2295d25337c4c33976a950eb94891205125e2609b25ac"
+    },
+    {
+      "bbox": [
+        319.25,
+        261.4019470214844,
+        543.8444213867188,
+        302.2281188964844
+      ],
+      "block_id": "page-0554-block-0013",
+      "order": 13,
+      "text": "au moins quatre localisations ou fonctions du corps (p. ex., la tête,\nle dos, les articulations, les extrémités, la poitrine, le rectum, la\nmenstruation, les rapports sexuels, la miction)\n(2) deux symptômes gastro-intestinaux: antécédents d’au moins deux\n",
+      "text_sha256": "0e26875cb63e0bf579edb4f1104adead1e961499d582633709bf47a1478cf30c"
+    },
+    {
+      "bbox": [
+        319.25,
+        302.4019470214844,
+        546.60302734375,
+        378.2281188964844
+      ],
+      "block_id": "page-0554-block-0014",
+      "order": 14,
+      "text": "symptômes gastro-intestinaux autres que des douleurs (p. ex. :\n• des nausées,\n• des ballonnements,\n• des vomissements en dehors de la grossesse,\n• de la diarrhée,\n• une intolérance à plusieurs aliments différents.)\n(3) un symptôme sexuel: antécédents d’au moins un symptôme sexuel\n",
+      "text_sha256": "d7a18454e13dd7f725414dd6fce37b31071fabbe6f800ce0e429778ed6f500df"
+    },
+    {
+      "bbox": [
+        319.25,
+        378.4019470214844,
+        533.330322265625,
+        443.2281188964844
+      ],
+      "block_id": "page-0554-block-0015",
+      "order": 15,
+      "text": "ou de l’appareil génital autre qu’une douleur (p. ex. :\n• un désintérêt sexuel,\n• des anomalies de l’érection ou de l’éjaculation,\n• des règles irrégulières ou excessives,\n• des vomissements tout au long de la grossesse.\n(4) un symptôme pseudoneurologique: antécédents d’au moins un\n",
+      "text_sha256": "6e91024bd9088a094f5074e465cc712c9989a7d860719b209ed669b442436bb5"
+    },
+    {
+      "bbox": [
+        331.75,
+        443.4019470214844,
+        551.017822265625,
+        606.2281494140625
+      ],
+      "block_id": "page-0554-block-0016",
+      "order": 16,
+      "text": "symptôme ou d’un décit évoquant une affection neurologique, autre\nqu’une douleur (symptômes de conversion comme :\n• un trouble de la coordination ou de l’équilibre,\n• une paralysie ou une faiblesse musculaire localisée,\n• des difcultés de déglutition ou une « boule dans la gorge »,\n• une aphonie,\n• une rétention urinaire,\n• des hallucinations,\n• une perte de la sensibilité tactile ou douloureuse,\n• une diplopie,\n• une cécité,\n• une surdité,\n• des crises convulsives ;\n• des symptômes dissociatifs comme une amnésie ;\n• une perte de conscience autre qu’un évanouissement.)\n",
+      "text_sha256": "d5e6599722e9b840aec1181cb3f4f3cc58ffae26c7edc15b953e553fc4024be7"
+    },
+    {
+      "bbox": [
+        308.25,
+        614.9519653320312,
+        365.6868896484375,
+        624.7781372070312
+      ],
+      "block_id": "page-0554-block-0017",
+      "order": 17,
+      "text": "C. soit (1) soit (2) :\n",
+      "text_sha256": "fcced5845a74c147cfb30aebf291ea0949c5c05e855f16d265754495bd44bc9d"
+    },
+    {
+      "bbox": [
+        319.25,
+        625.9519653320312,
+        538.3327026367188,
+        635.7781372070312
+      ],
+      "block_id": "page-0554-block-0018",
+      "order": 18,
+      "text": "(1) après des examens médicaux appropriés, aucun des symptômes\n",
+      "text_sha256": "1554ab3a4b2978b2cd0a70e0a5cc52484446e2a7f76170be86e5224639a134ec"
+    },
+    {
+      "bbox": [
+        319.25,
+        635.9519653320312,
+        547.4470825195312,
+        676.7781372070312
+      ],
+      "block_id": "page-0554-block-0019",
+      "order": 19,
+      "text": "du critère B ne peut s’expliquer complètement ni par une affection\nmédicale générale connue, ni par les effets directs d’une substance\n(p. ex., une substance donnant lieu à abus, un médicament) ;\n(2) quand il existe une relation avec une affection médicale générale,\n",
+      "text_sha256": "4ae5809e39b1322d61154e3ba38a0c59e2eb3002eac668a1be3f572e4a202869"
+    },
+    {
+      "bbox": [
+        332.0500183105469,
+        676.9519653320312,
+        541.0472412109375,
+        716.7781372070312
+      ],
+      "block_id": "page-0554-block-0020",
+      "order": 20,
+      "text": "les symptômes physiques ou l’altération du fonctionnement social\nou professionnel qui en résultent sont nettement disproportionnés\npar rapport à ce que laisseraient prévoir l’histoire de la maladie,\nl’examen physique ou les examens complémentaires.\n",
+      "text_sha256": "eedfeb761902cdd57ebad36f9cbb1df535219dfe5fc7ec5ab02a7e68bca8cc77"
+    }
+  ],
+  "coordinates_sha256": "113c787acc7d96fbace06d9fc1fc2c3e72176f0584d47aea97757569e51656f3",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0554",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 25\nTroubles à symptomatologie somatique\n537\nTABLEAU 25.4 Critères diagnostiques de la symptomatologie somatique\nDSM-5\nDSM-IV-TR\n300.82 (F45.1) Trouble à symptomatologie somatique\n300.81 (F45.0) Trouble somatisation\nA. Un ou plusieurs symptômes somatiques causes de détresse ou entraî-\nnant une altération signicative de la vie quotidienne.\nB. Pensées, sentiments ou comportements excessifs liés aux symptômes\nsomatiques ou associés à des préoccupations sur la santé suscitées par\nces symptômes, se manifestant par au moins un des symptômes suivants :\n1. Pensées persistantes et excessives concernant la gravité de ses\nsymptômes.\n2. Persistance d’un niveau élevé d’anxiété concernant la santé ou les\nsymptômes.\n3. Temps et énergie excessifs dévolus à ces symptômes ou aux préoc-\ncupations concernant la santé.\nC. Bien qu’un symptôme spécique puisse ne pas être continuellement\nprésent, l’état symptomatique est durable (typiquement plus de 6 mois).\nA. Antécédents de plaintes somatiques multiples, débutant avant l’âge\nde 30 ans, se manifestant pendant une période de plusieurs années\net aboutissant à une demande de traitement ou bien à une altération\nsignicative du fonctionnement social, professionnel ou dans d’autres\ndomaines importants.\nB. Chacun des critères suivants doit avoir été rempli, les symptômes eux-\nmêmes survenant à n’importe quel moment de l’évolution de la perturbation :\n(1) quatre symptômes douloureux: antécédents de douleur touchant\nau moins quatre localisations ou fonctions du corps (p. ex., la tête,\nle dos, les articulations, les extrémités, la poitrine, le rectum, la\nmenstruation, les rapports sexuels, la miction)\n(2) deux symptômes gastro-intestinaux: antécédents d’au moins deux\nsymptômes gastro-intestinaux autres que des douleurs (p. ex. :\n• des nausées,\n• des ballonnements,\n• des vomissements en dehors de la grossesse,\n• de la diarrhée,\n• une intolérance à plusieurs aliments différents.)\n(3) un symptôme sexuel: antécédents d’au moins un symptôme sexuel\nou de l’appareil génital autre qu’une douleur (p. ex. :\n• un désintérêt sexuel,\n• des anomalies de l’érection ou de l’éjaculation,\n• des règles irrégulières ou excessives,\n• des vomissements tout au long de la grossesse.\n(4) un symptôme pseudoneurologique: antécédents d’au moins un\nsymptôme ou d’un décit évoquant une affection neurologique, autre\nqu’une douleur (symptômes de conversion comme :\n• un trouble de la coordination ou de l’équilibre,\n• une paralysie ou une faiblesse musculaire localisée,\n• des difcultés de déglutition ou une « boule dans la gorge »,\n• une aphonie,\n• une rétention urinaire,\n• des hallucinations,\n• une perte de la sensibilité tactile ou douloureuse,\n• une diplopie,\n• une cécité,\n• une surdité,\n• des crises convulsives ;\n• des symptômes dissociatifs comme une amnésie ;\n• une perte de conscience autre qu’un évanouissement.)\nC. soit (1) soit (2) :\n(1) après des examens médicaux appropriés, aucun des symptômes\ndu critère B ne peut s’expliquer complètement ni par une affection\nmédicale générale connue, ni par les effets directs d’une substance\n(p. ex., une substance donnant lieu à abus, un médicament) ;\n(2) quand il existe une relation avec une affection médicale générale,\nles symptômes physiques ou l’altération du fonctionnement social\nou professionnel qui en résultent sont nettement disproportionnés\npar rapport à ce que laisseraient prévoir l’histoire de la maladie,\nl’examen physique ou les examens complémentaires.\n",
+  "raw_text_sha256": "8fdd44308a3c89115d516995fbcf6ba45253ccff1f7681fbfe667410ae83b402",
+  "source_page_display": 555,
+  "source_page_index": 554
+}

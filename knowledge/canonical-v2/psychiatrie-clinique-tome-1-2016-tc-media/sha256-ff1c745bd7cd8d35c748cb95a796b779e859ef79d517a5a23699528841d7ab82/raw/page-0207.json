@@ -1,0 +1,148 @@
+{
+  "block_sequence_sha256": "0fc41289ada952a7bbc23156e5fe7efcc061edd745971d08bc7ee1a9159859c5",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        471.6627197265625,
+        758.8693237304688
+      ],
+      "block_id": "page-0207-block-0001",
+      "order": 1,
+      "text": "190\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2 Déterminants bio-psycho-sociaux\n",
+      "text_sha256": "11b828c5064c5498586fc32fcdb74ef7e47f7e939662bd31968c985688078933"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.4630126953125,
+        427.45849609375
+      ],
+      "block_id": "page-0207-block-0002",
+      "order": 2,
+      "text": "Une importante étude longitudinale (Lupien & al., 1996) a\nété réalisée auprès de 51 individus en bonne santé et dont l’âge\nse situait entre 60 et 87 ans. Leur niveau de cortisol sanguin était\néchantillonné toutes les heures pendant 24 heures, et ce, une fois\npar année sur une période de 3 à 6 ans. Pour chaque participant,\nil était possible de mesurer le changement des niveaux de cortisol\navec les années. Trois sous-groupes de personnes âgées ont alors\nété identiés :\n• 37,9 % des sujets montraient une augmentation des niveaux\nde cortisol au l des années et ces niveaux étaient particuliè-\nrement élevés (groupe augmentation/niveaux élevés) ;\n• 46,7 % des sujets avaient également une augmentation des\nniveaux de cortisol avec le temps, mais leurs niveaux étaient\nsomme toute modérés (groupe augmentation/niveaux modérés) ;\n• 15,3 % des sujets montraient une diminution des niveaux de\ncortisol avec les années et présentaient des niveaux modérés\n(groupe diminution/niveaux modérés).\nLes sujets du groupe « augmentation/niveaux élevés » avaient\nune performance mnésique signicativement plus faible que\nceux des deux autres groupes, ce qui laissait entendre une asso-\nciation entre des niveaux chroniquement élevés de cortisol et la\nmémoire. On observait les décits de mémoire pour les tâches\nde mémoire explicite épisodique (le rappel des faits, des événe-\nments), laquelle dépend de l’hippocampe. En eet, la mémoire\nimplicite (les habiletés procédurales, les savoir-faire, les gestes\nroutiniers), qui n’est pas régie par l’hippocampe, ne diérait pas\nd’un groupe à l’autre. Finalement, il a été montré que le groupe\n« augmentation/niveaux élevés » avait un volume hippocampique\nplus petit de 14 %, comparativement au groupe « diminution/\nniveaux modérés ». On observait d’ailleurs une forte corrélation\nnégative entre le volume hippocampique et le degré d’élévation\ndes niveaux de cortisol. Ces résultats ont contribué à montrer\nque le processus de vieillissement chez l’humain est hétérogène.\n",
+      "text_sha256": "ab12e2a28b80032f2623e8152f9dc42bfc4bad3bee51b1ffc684d92b355b979d"
+    },
+    {
+      "bbox": [
+        306.0,
+        428.4658203125,
+        549.2314453125,
+        496.45849609375
+      ],
+      "block_id": "page-0207-block-0003",
+      "order": 3,
+      "text": "Ces données sont d’une importance capitale en clinique. En\neet, plusieurs personnes âgées ont de très bonnes performances\nmnésiques. Conséquemment, il ne faut pas banaliser les pertes\nde mémoire marquées, puisqu’elles ne font pas partie du proces-\nsus de vieillissement normal. On s’assure ainsi d’augmenter les\nchances de détection précoce de troubles mnésiques.\n",
+      "text_sha256": "daccda68bccf0fee0eea99d940db9933c978c7f6e39c32c7ebef618c93bd5e7e"
+    },
+    {
+      "bbox": [
+        306.0,
+        508.98681640625,
+        492.41778564453125,
+        557.12939453125
+      ],
+      "block_id": "page-0207-block-0004",
+      "order": 4,
+      "text": "8.10.7 Modulation de la mémoire\npar les glucocorticoïdes\nchez les personnes âgées\n",
+      "text_sha256": "5e9cf4ef1fceb76a82d48b004ecae751433622f88f1c2eff4971c5421ea6d3a9"
+    },
+    {
+      "bbox": [
+        306.0,
+        560.4658203125,
+        549.2501220703125,
+        639.95849609375
+      ],
+      "block_id": "page-0207-block-0005",
+      "order": 5,
+      "text": "Bien que ces résultats soient instructifs, la cause des décits\nmnésiques observés dans le groupe « augmentation/niveaux\nélevés » demeure incertaine. En eet, il est possible que les\nniveaux élevés de glucocorticoïdes (GCs) au moment du test de\nmémoire aient nui à la performance mnésique ou encore que\nl’exposition chronique à des niveaux élevés de GCs ait eu un eet\nsur la performance cognitive globalement.\n",
+      "text_sha256": "49fa81d43a79f2fe28e4cb8d6909736e611fdb420a4fa971b6eea19d2615108a"
+    },
+    {
+      "bbox": [
+        306.0,
+        640.9658203125,
+        549.2703247070312,
+        720.45849609375
+      ],
+      "block_id": "page-0207-block-0006",
+      "order": 6,
+      "text": "L’utilisation d’un protocole de déplétion-remplacement hor-\nmonal entraînant une variation forte et brutale des hormones\nde stress peut permettre d’élucider cette question. Ce protocole\nconsiste à diminuer signicativement les niveaux de GCs et de\nmesurer la performance mnésique. Par la suite, une autre manipu-\nlation pharmacologique vise à restaurer les niveaux de GCs à leur\nconcentration initiale et à évaluer de nouveau la performance de\n",
+      "text_sha256": "1d9265d24c61c81853873552462176923605c5b9840a0b24ed816c0232df0c54"
+    },
+    {
+      "bbox": [
+        48.0,
+        39.33681869506836,
+        242.95274353027344,
+        87.4793930053711
+      ],
+      "block_id": "page-0207-block-0007",
+      "order": 7,
+      "text": "8.10.5 Méthodologie pour mesurer\nl’effet des glucocorticoïdes\nsur la cognition\n",
+      "text_sha256": "f15bd58fbf38cdf8a265d77d84c37a3f68bac9306b41f3ab3a211600b8d7df84"
+    },
+    {
+      "bbox": [
+        48.0,
+        90.8158187866211,
+        291.4884033203125,
+        400.3085021972656
+      ],
+      "block_id": "page-0207-block-0008",
+      "order": 8,
+      "text": "Chez l’humain, on a recours à diérentes méthodes pour tenter de\ncomprendre le rôle des GCs sur la cognition. Les niveaux de GCs\npeuvent être modulés de façon endogène ou exogène. D’abord,\nil est possible d’exposer des sujets à un stresseur psychologique,\ncomme le Trier Social Stress Test (TSST), le plus utilisé à ce jour,\nqui consiste principalement à faire un exposé et une tâche de\ncalcul mental devant un comité d’experts qui prétendent évaluer\nla performance du sujet. D’autres études utilisent un stresseur\nphysique, le plus commun étant celui du test au froid (cold pressor\ntest). Au cours de ce test, le sujet doit immerger son bras dans\nun bassin d’eau très froide durant une certaine période de temps.\nCes deux types de stresseurs – psychologique et physique – ont\nmontré leur ecacité à provoquer une élévation des niveaux de\nGCs chez la majorité des sujets qui y sont exposés. Par contre, il\nest important de garder à l’esprit que ce genre de protocole agit\naussi à d’autres niveaux, car les eets ne sont pas limités à l’acti-\nvation de l’axe HHS. En eet, une élévation des caté cholamines\naccompagne habituellement l’augmentation des GCs. On peut\naussi penser qu’il y a des répercussions sur l’état d’esprit ou\nl’humeur des sujets, ce qui peut éventuellement se traduire par\nun biais cognitif qui risque d’inuencer leurs performances lors\nde diérentes tâches cognitives. Il n’en demeure pas moins que\nces protocoles, particulièrement celui qui fait appel au stresseur\npsychologique, ont une grande validité écologique (proche de\nla vraie vie), car ils sont bien représentatifs de la façon dont une\nvariation des niveaux de GCs peut aecter la cognition dans la\nvie de tous les jours.\n",
+      "text_sha256": "36320c55d7c9a6392c8c8e759e05c3347f488c4d8d682d5571fbadd283780cb5"
+    },
+    {
+      "bbox": [
+        48.0,
+        401.3158264160156,
+        291.4118957519531,
+        515.3085327148438
+      ],
+      "block_id": "page-0207-block-0009",
+      "order": 9,
+      "text": "D’autres études se tournent vers un protocole pharmacologique\nqui permet de moduler les niveaux de GCs de façon exogène.\nL’utilisation d’hydrocortisone (une forme de cortisol synthétique)\nagit en augmentant les niveaux de GCs. On utilise parfois la méty-\nrapone – qui agit en bloquant la conversion du 11-désoxycortisol\nen cortisol – pour évaluer les eets d’une diminution des niveaux\nde GCs. En combinant les méthodes pharmacologiques à celles\nplus valides sur le plan écologique, il est possible de comprendre\ncomment un stresseur peut aecter les processus cognitifs et de\ncibler précisément la contribution hormonale à cet eet.\n",
+      "text_sha256": "1a449036a43a78b74a5b26db50db4433dd91c190716ffb6cd8cb19c6b85acbc9"
+    },
+    {
+      "bbox": [
+        48.0,
+        524.8368530273438,
+        243.3867950439453,
+        556.9794311523438
+      ],
+      "block_id": "page-0207-block-0010",
+      "order": 10,
+      "text": "8.10.6 Glucocorticoïdes\net vieillissement différentiel\n",
+      "text_sha256": "ea40e57708b3d85944d0df629ef17c17098aeaad9bef89d9b0790ea8bd4146e3"
+    },
+    {
+      "bbox": [
+        48.0,
+        560.3158569335938,
+        291.4197998046875,
+        720.3085327148438
+      ],
+      "block_id": "page-0207-block-0011",
+      "order": 11,
+      "text": "Les travaux pionniers qui ont permis d’établir un lien entre les\nglucocorticoïdes et la cognition ont été réalisés auprès de per-\nsonnes âgées. Initialement, le déclin cognitif était vu comme une\ncaractéristique normale du vieillissement. Puis, en constatant que\ncertaines personnes âgées conservent des capacités cognitives\nintactes, les scientiques ont cherché à comprendre les raisons\nde cette variabilité chez les personnes âgées supérieure à celle des\njeunes adultes. C’est ainsi que des recherches ont tenté d’identier\ndes facteurs susceptibles de contribuer à cet eet de vieillisse-\nment diérentiel. Certaines études ont montré que l’exposition à\nlong terme au stress, et plus particulièrement aux hormones de\nstress, joue un rôle important dans le vieillissement. C’est ainsi\nque les scientiques se sont intéressés à l’activité de l’axe HHS\npour expliquer la variabilité cognitive chez les personnes âgées.\n",
+      "text_sha256": "d5be64531e83dc9aed2da60a83dc074305b9bba70b910063af76f3b9decc5330"
+    }
+  ],
+  "coordinates_sha256": "f0bf30df1b633acf20dade9a827b17c7cf6fb19717e197a736f3ca51abf752af",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0207",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "190\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2 Déterminants bio-psycho-sociaux\nUne importante étude longitudinale (Lupien & al., 1996) a\nété réalisée auprès de 51 individus en bonne santé et dont l’âge\nse situait entre 60 et 87 ans. Leur niveau de cortisol sanguin était\néchantillonné toutes les heures pendant 24 heures, et ce, une fois\npar année sur une période de 3 à 6 ans. Pour chaque participant,\nil était possible de mesurer le changement des niveaux de cortisol\navec les années. Trois sous-groupes de personnes âgées ont alors\nété identiés :\n• 37,9 % des sujets montraient une augmentation des niveaux\nde cortisol au l des années et ces niveaux étaient particuliè-\nrement élevés (groupe augmentation/niveaux élevés) ;\n• 46,7 % des sujets avaient également une augmentation des\nniveaux de cortisol avec le temps, mais leurs niveaux étaient\nsomme toute modérés (groupe augmentation/niveaux modérés) ;\n• 15,3 % des sujets montraient une diminution des niveaux de\ncortisol avec les années et présentaient des niveaux modérés\n(groupe diminution/niveaux modérés).\nLes sujets du groupe « augmentation/niveaux élevés » avaient\nune performance mnésique signicativement plus faible que\nceux des deux autres groupes, ce qui laissait entendre une asso-\nciation entre des niveaux chroniquement élevés de cortisol et la\nmémoire. On observait les décits de mémoire pour les tâches\nde mémoire explicite épisodique (le rappel des faits, des événe-\nments), laquelle dépend de l’hippocampe. En eet, la mémoire\nimplicite (les habiletés procédurales, les savoir-faire, les gestes\nroutiniers), qui n’est pas régie par l’hippocampe, ne diérait pas\nd’un groupe à l’autre. Finalement, il a été montré que le groupe\n« augmentation/niveaux élevés » avait un volume hippocampique\nplus petit de 14 %, comparativement au groupe « diminution/\nniveaux modérés ». On observait d’ailleurs une forte corrélation\nnégative entre le volume hippocampique et le degré d’élévation\ndes niveaux de cortisol. Ces résultats ont contribué à montrer\nque le processus de vieillissement chez l’humain est hétérogène.\nCes données sont d’une importance capitale en clinique. En\neet, plusieurs personnes âgées ont de très bonnes performances\nmnésiques. Conséquemment, il ne faut pas banaliser les pertes\nde mémoire marquées, puisqu’elles ne font pas partie du proces-\nsus de vieillissement normal. On s’assure ainsi d’augmenter les\nchances de détection précoce de troubles mnésiques.\n8.10.7 Modulation de la mémoire\npar les glucocorticoïdes\nchez les personnes âgées\nBien que ces résultats soient instructifs, la cause des décits\nmnésiques observés dans le groupe « augmentation/niveaux\nélevés » demeure incertaine. En eet, il est possible que les\nniveaux élevés de glucocorticoïdes (GCs) au moment du test de\nmémoire aient nui à la performance mnésique ou encore que\nl’exposition chronique à des niveaux élevés de GCs ait eu un eet\nsur la performance cognitive globalement.\nL’utilisation d’un protocole de déplétion-remplacement hor-\nmonal entraînant une variation forte et brutale des hormones\nde stress peut permettre d’élucider cette question. Ce protocole\nconsiste à diminuer signicativement les niveaux de GCs et de\nmesurer la performance mnésique. Par la suite, une autre manipu-\nlation pharmacologique vise à restaurer les niveaux de GCs à leur\nconcentration initiale et à évaluer de nouveau la performance de\n8.10.5 Méthodologie pour mesurer\nl’effet des glucocorticoïdes\nsur la cognition\nChez l’humain, on a recours à diérentes méthodes pour tenter de\ncomprendre le rôle des GCs sur la cognition. Les niveaux de GCs\npeuvent être modulés de façon endogène ou exogène. D’abord,\nil est possible d’exposer des sujets à un stresseur psychologique,\ncomme le Trier Social Stress Test (TSST), le plus utilisé à ce jour,\nqui consiste principalement à faire un exposé et une tâche de\ncalcul mental devant un comité d’experts qui prétendent évaluer\nla performance du sujet. D’autres études utilisent un stresseur\nphysique, le plus commun étant celui du test au froid (cold pressor\ntest). Au cours de ce test, le sujet doit immerger son bras dans\nun bassin d’eau très froide durant une certaine période de temps.\nCes deux types de stresseurs – psychologique et physique – ont\nmontré leur ecacité à provoquer une élévation des niveaux de\nGCs chez la majorité des sujets qui y sont exposés. Par contre, il\nest important de garder à l’esprit que ce genre de protocole agit\naussi à d’autres niveaux, car les eets ne sont pas limités à l’acti-\nvation de l’axe HHS. En eet, une élévation des caté cholamines\naccompagne habituellement l’augmentation des GCs. On peut\naussi penser qu’il y a des répercussions sur l’état d’esprit ou\nl’humeur des sujets, ce qui peut éventuellement se traduire par\nun biais cognitif qui risque d’inuencer leurs performances lors\nde diérentes tâches cognitives. Il n’en demeure pas moins que\nces protocoles, particulièrement celui qui fait appel au stresseur\npsychologique, ont une grande validité écologique (proche de\nla vraie vie), car ils sont bien représentatifs de la façon dont une\nvariation des niveaux de GCs peut aecter la cognition dans la\nvie de tous les jours.\nD’autres études se tournent vers un protocole pharmacologique\nqui permet de moduler les niveaux de GCs de façon exogène.\nL’utilisation d’hydrocortisone (une forme de cortisol synthétique)\nagit en augmentant les niveaux de GCs. On utilise parfois la méty-\nrapone – qui agit en bloquant la conversion du 11-désoxycortisol\nen cortisol – pour évaluer les eets d’une diminution des niveaux\nde GCs. En combinant les méthodes pharmacologiques à celles\nplus valides sur le plan écologique, il est possible de comprendre\ncomment un stresseur peut aecter les processus cognitifs et de\ncibler précisément la contribution hormonale à cet eet.\n8.10.6 Glucocorticoïdes\net vieillissement différentiel\nLes travaux pionniers qui ont permis d’établir un lien entre les\nglucocorticoïdes et la cognition ont été réalisés auprès de per-\nsonnes âgées. Initialement, le déclin cognitif était vu comme une\ncaractéristique normale du vieillissement. Puis, en constatant que\ncertaines personnes âgées conservent des capacités cognitives\nintactes, les scientiques ont cherché à comprendre les raisons\nde cette variabilité chez les personnes âgées supérieure à celle des\njeunes adultes. C’est ainsi que des recherches ont tenté d’identier\ndes facteurs susceptibles de contribuer à cet eet de vieillisse-\nment diérentiel. Certaines études ont montré que l’exposition à\nlong terme au stress, et plus particulièrement aux hormones de\nstress, joue un rôle important dans le vieillissement. C’est ainsi\nque les scientiques se sont intéressés à l’activité de l’axe HHS\npour expliquer la variabilité cognitive chez les personnes âgées.\n",
+  "raw_text_sha256": "b9cd8e7f4a7da77700945aaff9bb420889944c86c569580be584958c6f91b4a5",
+  "source_page_display": 208,
+  "source_page_index": 207
+}

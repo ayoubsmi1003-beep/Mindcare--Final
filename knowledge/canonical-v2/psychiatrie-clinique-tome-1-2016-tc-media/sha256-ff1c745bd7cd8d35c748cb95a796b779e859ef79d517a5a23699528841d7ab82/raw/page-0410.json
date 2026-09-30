@@ -1,0 +1,220 @@
+{
+  "block_sequence_sha256": "674bd2d0e4ed3faf338013450af02460858ec74b8fd0097b95b08d8f4902d584",
+  "blocks": [
+    {
+      "bbox": [
+        408.8999938964844,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0410-block-0001",
+      "order": 1,
+      "text": "Chapitre 19\nDépressions\n393\n",
+      "text_sha256": "1a7bda9bbbe75c2e30a2f2a4c643a72db75880eda5179121b9d599d86a0facc4"
+    },
+    {
+      "bbox": [
+        51.900001525878906,
+        34.49443435668945,
+        80.29249572753906,
+        81.32548522949219
+      ],
+      "block_id": "page-0410-block-0002",
+      "order": 2,
+      "text": "L’\n",
+      "text_sha256": "a3c9d23c8ba5c25faa47ede71990f790d2e77dc45600aa7f91c642aae5d014b5"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.91015625,
+        297.2903137207031,
+        259.7193298339844
+      ],
+      "block_id": "page-0410-block-0003",
+      "order": 3,
+      "text": "humeur est l’état émotionnel « de fond », stable et sou-\ntenu, qui colore notre perception de nous-mêmes et du\nmonde. Les dépressions sont des états où l’humeur est\ndominée par la tristesse et par la perte d’intérêt et de plaisir.\nCet état altère profondément la qualité de vie : les individus qui\nont souert de dépression en parlent souvent comme une des\nexpériences les plus diciles de leur vie, pire à maints égards que\nla douleur physique. Tout leur paraît pénible, dénué d’intérêt,\ncomme un temps pluvieux et gris qui durerait des mois sans\naucune éclaircie. Jacques Ferron, médecin et écrivain québécois,\nsujet lui-même à des épisodes dépressifs, en parle comme d’un\n« soleil noir dont les rayons glacés sont plus perçants que l’autre,\nrejoignant les profondeurs de l’âme, et font qu’il devient intolé-\nrable de vivre à la face de Dieu et des hommes » (Ferron, 1972,\np. 102). La dépression isole celui qui en soure de ses proches et\nl’empêche souvent de vaquer à ses activités ; elle s’accompagne\nd’un risque de suicide et de problèmes de santé physique. On\nne saurait donc trop insister sur l’importance d’identier et\nde traiter adéquatement les patients sourant de dépression.\n",
+      "text_sha256": "64e95c61481a737a52a66f1ea47d109f2ed9e928f6f08cc9fdbe887bb0fa37af"
+    },
+    {
+      "bbox": [
+        62.35000228881836,
+        273.9931640625,
+        249.27313232421875,
+        311.2689514160156
+      ],
+      "block_id": "page-0410-block-0004",
+      "order": 4,
+      "text": "19.1\nHistorique et évolution\ndu concept\n",
+      "text_sha256": "1968b954b38ac8e19780db9ec740ad68b91200f9a504318bd1d3effd95a65d3d"
+    },
+    {
+      "bbox": [
+        54.0,
+        325.16583251953125,
+        297.15673828125,
+        486.3085021972656
+      ],
+      "block_id": "page-0410-block-0005",
+      "order": 5,
+      "text": "La dépression est un phénomène connu depuis longtemps. Cinq\nsiècles avant Jésus-Christ, le médecin grec Hippocrate nomme\n« mélancolie » un état marqué par l’aversion à l’égard de la nour-\nriture, ainsi que par l’aaissement, l’insomnie, l’irritabilité et la\nnervosité. Ce mot signie « bile noire » et fait référence à l’hy-\npothèse étiologique alors en vigueur d’une surabondance de bile\nnoire sécrétée par la rate sous l’inuence de la planète Saturne.\nDeux millénaires plus tard, l’anglais Robert Burton publie en 1621\nson Anatomie de la mélancolie, un traité-euve autant médical\nque philosophique et historique. En 1840, l’aliéniste français\nEsquirol aurait été un des premiers à évoquer qu’une perturba-\ntion de l’humeur ou des « passions » jouait un rôle central dans\nla mélancolie. Le terme moderne de trouble aectif aurait été\nénoncé par le Britannique Maudsley (1835-1918).\n",
+      "text_sha256": "67862f33f355b52ea1b9d59a4b2c8d62a80f2f6f05cda9b7415a910602369182"
+    },
+    {
+      "bbox": [
+        54.0,
+        487.41583251953125,
+        297.61590576171875,
+        544.2584838867188
+      ],
+      "block_id": "page-0410-block-0006",
+      "order": 6,
+      "text": "Kraepelin (1856-1926) regroupe sous l’étiquette d’insanité\nmaniaco-dépressive tout le champ des troubles affectifs ; il\nsignale, le premier, la tendance familiale de ces troubles et note\nleur propension à la récidive avec des périodes de normalité\nentre les épisodes.\n",
+      "text_sha256": "29238b93d00029e84c68e027d210a67c0090e0ef4021987ddc60bfa7f9917467"
+    },
+    {
+      "bbox": [
+        54.0,
+        545.3658447265625,
+        297.3756408691406,
+        641.95849609375
+      ],
+      "block_id": "page-0410-block-0007",
+      "order": 7,
+      "text": "Il faut attendre les années 1950-1960 pour que les travaux de\nLeonhard, Angst, Perris, Winokur et d’autres fassent se cristalli-\nser la dichotomie entre trouble bipolaire et trouble unipolaire :\n• Le trouble bipolaire (maniaco-dépressif) concerne tous les\npatients manifestant des périodes d’exaltation de l’humeur\naccompagnées ou non de phases dépressives ;\n• le trouble unipolaire, plus fréquent, s’applique aux individus\nne sourant que de phases dépressives.\n",
+      "text_sha256": "a1207102677b8ba45dede81e09abcee873ace0bfe96dcaa79977e4e21629422d"
+    },
+    {
+      "bbox": [
+        54.0,
+        647.0658569335938,
+        297.26568603515625,
+        703.9085083007812
+      ],
+      "block_id": "page-0410-block-0008",
+      "order": 8,
+      "text": "On a longtemps divisé les dépressions de façon dichotomique\nan de tenir compte du fait que l’état dépressif survient chez\ncertains en réaction à des événements de vie diciles, alors que\nchez d’autres, il émerge spontanément, sans cause apparente. On\nleur attribuait alors l’une ou l’autre de ces origines :\n",
+      "text_sha256": "2409501034cb0146b41cff9663e881046f059fa1bbe1054c8a44fe029f2a375c"
+    },
+    {
+      "bbox": [
+        312.0,
+        39.22441482543945,
+        461.8048400878906,
+        65.47607421875
+      ],
+      "block_id": "page-0410-block-0009",
+      "order": 9,
+      "text": "• exogènes, situationnelles, réactives ;\n• endogènes, primaires, biologiques.\n",
+      "text_sha256": "f50cd23b2d7ebefae297705df1d83b048f1f0dde7519cbaf2e0a09ea8ab3a1bf"
+    },
+    {
+      "bbox": [
+        312.0,
+        69.9658203125,
+        555.0883178710938,
+        115.0584945678711
+      ],
+      "block_id": "page-0410-block-0010",
+      "order": 10,
+      "text": "Toutefois, cette distinction s’est avérée impossible à opé-\nrationnaliser sur le plan clinique. À partir du DSM-III (APA,\n1980), on fusionne donc ces dichotomies en un seul concept de\n« dépression majeure ».\n",
+      "text_sha256": "e93f2731d0ba9ca033465fd3d033ba7e9da066e0ab2c803919247f70557c19b2"
+    },
+    {
+      "bbox": [
+        319.0,
+        133.14317321777344,
+        452.1467590332031,
+        152.31895446777344
+      ],
+      "block_id": "page-0410-block-0011",
+      "order": 11,
+      "text": "19.2\nÉpidémiologie\n",
+      "text_sha256": "ec9191f773720f27f89d49742c872bac079839938c7ae88fbbe0b053955e4673"
+    },
+    {
+      "bbox": [
+        312.0,
+        166.11582946777344,
+        555.341064453125,
+        268.8584899902344
+      ],
+      "block_id": "page-0410-block-0012",
+      "order": 12,
+      "text": "La dépression génère un fardeau important de sourance et d’in-\ncapacité pour la personne atteinte comme pour son entourage.\nL’Organisation mondiale de la santé (OMS, 2001) estime que la\ndépression majeure est la première cause d’années de vie vécues\navec une incapacité et représentera, en 2020, la première cause de\nmorbidité dans les pays développés, devant les maladies cardio-\nvasculaires ischémiques. Le fait de vivre avec une personne en\ndépression augmente la probabilité que les proches développent\neux aussi des symptômes anxieux et dépressifs.\n",
+      "text_sha256": "811de3d5f8f65c6e4d1868c6cc87c4d52cab0006a9f3301fdd7317928206d850"
+    },
+    {
+      "bbox": [
+        312.0,
+        269.91583251953125,
+        555.2637329101562,
+        332.5585021972656
+      ],
+      "block_id": "page-0410-block-0013",
+      "order": 13,
+      "text": "Santé Canada (2002) mentionne les prévalences suivantes\nsur une année :\n• chez l’adulte :\n– dépression majeure : 4,1 à 4,8 % ;\n– dysthymie, trouble plus prolongé et moins intense : 0,8\n",
+      "text_sha256": "1282091d0dd26e53fc8d20d05fccff782600862aebe3215c21d2291e016f91db"
+    },
+    {
+      "bbox": [
+        312.0,
+        333.5658264160156,
+        555.5241088867188,
+        469.3584899902344
+      ],
+      "block_id": "page-0410-block-0014",
+      "order": 14,
+      "text": "à 3,1 %.\n• chez l’adolescent (prévalence accrue chez femmes) (Rocha\n& al., 2013) :\n– dépression : 4 à 9 %.\n• chez l’enfant d’âge préscolaire (sans diérence majeure entre\nles genres) :\n– dépression : 1 à 2,5 %.\nLa prévalence chez la personne âgée est probablement identique\nà celle de l’adulte. Toutefois, les aînés atteints de maladies physiques\nhandicapantes ou ceux vivant en milieux d’hébergement de soins\nde longue durée sont nettement plus à risque (Jacoby & al., 2008).\n",
+      "text_sha256": "d4cd38019077f0a221ac18d71f153ddea7640111ecd63ba88a2c862188ae8e73"
+    },
+    {
+      "bbox": [
+        312.0,
+        470.41583251953125,
+        555.5269775390625,
+        561.6085205078125
+      ],
+      "block_id": "page-0410-block-0015",
+      "order": 15,
+      "text": "Le risque pour toute personne de sourir d’un état dépressif\nau cours de sa vie (prévalence à vie) se situe autour de 15 %. Les\nfemmes sont 1,5 à 3 fois plus sujettes que les hommes à en sourir,\ncette prédominance apparaissant dès l’adolescence et se perpétuant\nensuite dans toutes les tranches d’âge. L’âge moyen de survenue\ndu premier épisode est 27 ans, mais 40 % des patients sourant de\ndépression présentent un premier épisode avant l’âge de 21 ans\n(Anderson & al., 2008).\n",
+      "text_sha256": "6066baebf542a9d0be4ea151cabfd244a6eefa733dd87155c450a742fa286e2d"
+    },
+    {
+      "bbox": [
+        319.0,
+        579.6931762695312,
+        416.87359619140625,
+        598.8689575195312
+      ],
+      "block_id": "page-0410-block-0016",
+      "order": 16,
+      "text": "19.3\nÉtiologie\n",
+      "text_sha256": "db814d15f5a5b25aa3cbf3075beb56b2664d6e0c97a737079536c6fcc1952258"
+    },
+    {
+      "bbox": [
+        312.0,
+        612.7158203125,
+        555.3868408203125,
+        703.9085083007812
+      ],
+      "block_id": "page-0410-block-0017",
+      "order": 17,
+      "text": "L’étiologie des troubles dépressifs reste une aaire complexe\nqui mettrait en cause une interaction encore incomplètement\ncomprise entre une vulnérabilité personnelle d’ordre biologique\nou génétique, les divers stress inhérents à l’existence que mènent\nles individus et leur personnalité. En outre, l’étude des causes\nest compliquée par d’abondantes théorisations qui ne sont pas\ntoujours faciles à séparer des données empiriques, sans compter\nque celles-ci se contredisent parfois.\n",
+      "text_sha256": "a47015febd7b1b220157dfdab3546832bda90f702531789ff47b154817963ddb"
+    }
+  ],
+  "coordinates_sha256": "8a51ceab587220f1f219595dd20fa8f13770e5c6d2eec462bba139777a4d97cf",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0410",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 19\nDépressions\n393\nL’\nhumeur est l’état émotionnel « de fond », stable et sou-\ntenu, qui colore notre perception de nous-mêmes et du\nmonde. Les dépressions sont des états où l’humeur est\ndominée par la tristesse et par la perte d’intérêt et de plaisir.\nCet état altère profondément la qualité de vie : les individus qui\nont souert de dépression en parlent souvent comme une des\nexpériences les plus diciles de leur vie, pire à maints égards que\nla douleur physique. Tout leur paraît pénible, dénué d’intérêt,\ncomme un temps pluvieux et gris qui durerait des mois sans\naucune éclaircie. Jacques Ferron, médecin et écrivain québécois,\nsujet lui-même à des épisodes dépressifs, en parle comme d’un\n« soleil noir dont les rayons glacés sont plus perçants que l’autre,\nrejoignant les profondeurs de l’âme, et font qu’il devient intolé-\nrable de vivre à la face de Dieu et des hommes » (Ferron, 1972,\np. 102). La dépression isole celui qui en soure de ses proches et\nl’empêche souvent de vaquer à ses activités ; elle s’accompagne\nd’un risque de suicide et de problèmes de santé physique. On\nne saurait donc trop insister sur l’importance d’identier et\nde traiter adéquatement les patients sourant de dépression.\n19.1\nHistorique et évolution\ndu concept\nLa dépression est un phénomène connu depuis longtemps. Cinq\nsiècles avant Jésus-Christ, le médecin grec Hippocrate nomme\n« mélancolie » un état marqué par l’aversion à l’égard de la nour-\nriture, ainsi que par l’aaissement, l’insomnie, l’irritabilité et la\nnervosité. Ce mot signie « bile noire » et fait référence à l’hy-\npothèse étiologique alors en vigueur d’une surabondance de bile\nnoire sécrétée par la rate sous l’inuence de la planète Saturne.\nDeux millénaires plus tard, l’anglais Robert Burton publie en 1621\nson Anatomie de la mélancolie, un traité-euve autant médical\nque philosophique et historique. En 1840, l’aliéniste français\nEsquirol aurait été un des premiers à évoquer qu’une perturba-\ntion de l’humeur ou des « passions » jouait un rôle central dans\nla mélancolie. Le terme moderne de trouble aectif aurait été\nénoncé par le Britannique Maudsley (1835-1918).\nKraepelin (1856-1926) regroupe sous l’étiquette d’insanité\nmaniaco-dépressive tout le champ des troubles affectifs ; il\nsignale, le premier, la tendance familiale de ces troubles et note\nleur propension à la récidive avec des périodes de normalité\nentre les épisodes.\nIl faut attendre les années 1950-1960 pour que les travaux de\nLeonhard, Angst, Perris, Winokur et d’autres fassent se cristalli-\nser la dichotomie entre trouble bipolaire et trouble unipolaire :\n• Le trouble bipolaire (maniaco-dépressif) concerne tous les\npatients manifestant des périodes d’exaltation de l’humeur\naccompagnées ou non de phases dépressives ;\n• le trouble unipolaire, plus fréquent, s’applique aux individus\nne sourant que de phases dépressives.\nOn a longtemps divisé les dépressions de façon dichotomique\nan de tenir compte du fait que l’état dépressif survient chez\ncertains en réaction à des événements de vie diciles, alors que\nchez d’autres, il émerge spontanément, sans cause apparente. On\nleur attribuait alors l’une ou l’autre de ces origines :\n• exogènes, situationnelles, réactives ;\n• endogènes, primaires, biologiques.\nToutefois, cette distinction s’est avérée impossible à opé-\nrationnaliser sur le plan clinique. À partir du DSM-III (APA,\n1980), on fusionne donc ces dichotomies en un seul concept de\n« dépression majeure ».\n19.2\nÉpidémiologie\nLa dépression génère un fardeau important de sourance et d’in-\ncapacité pour la personne atteinte comme pour son entourage.\nL’Organisation mondiale de la santé (OMS, 2001) estime que la\ndépression majeure est la première cause d’années de vie vécues\navec une incapacité et représentera, en 2020, la première cause de\nmorbidité dans les pays développés, devant les maladies cardio-\nvasculaires ischémiques. Le fait de vivre avec une personne en\ndépression augmente la probabilité que les proches développent\neux aussi des symptômes anxieux et dépressifs.\nSanté Canada (2002) mentionne les prévalences suivantes\nsur une année :\n• chez l’adulte :\n– dépression majeure : 4,1 à 4,8 % ;\n– dysthymie, trouble plus prolongé et moins intense : 0,8\nà 3,1 %.\n• chez l’adolescent (prévalence accrue chez femmes) (Rocha\n& al., 2013) :\n– dépression : 4 à 9 %.\n• chez l’enfant d’âge préscolaire (sans diérence majeure entre\nles genres) :\n– dépression : 1 à 2,5 %.\nLa prévalence chez la personne âgée est probablement identique\nà celle de l’adulte. Toutefois, les aînés atteints de maladies physiques\nhandicapantes ou ceux vivant en milieux d’hébergement de soins\nde longue durée sont nettement plus à risque (Jacoby & al., 2008).\nLe risque pour toute personne de sourir d’un état dépressif\nau cours de sa vie (prévalence à vie) se situe autour de 15 %. Les\nfemmes sont 1,5 à 3 fois plus sujettes que les hommes à en sourir,\ncette prédominance apparaissant dès l’adolescence et se perpétuant\nensuite dans toutes les tranches d’âge. L’âge moyen de survenue\ndu premier épisode est 27 ans, mais 40 % des patients sourant de\ndépression présentent un premier épisode avant l’âge de 21 ans\n(Anderson & al., 2008).\n19.3\nÉtiologie\nL’étiologie des troubles dépressifs reste une aaire complexe\nqui mettrait en cause une interaction encore incomplètement\ncomprise entre une vulnérabilité personnelle d’ordre biologique\nou génétique, les divers stress inhérents à l’existence que mènent\nles individus et leur personnalité. En outre, l’étude des causes\nest compliquée par d’abondantes théorisations qui ne sont pas\ntoujours faciles à séparer des données empiriques, sans compter\nque celles-ci se contredisent parfois.\n",
+  "raw_text_sha256": "8115fab6e80372a5022db269eb1092aab3688939ddb5b63073baa643e2cc73f3",
+  "source_page_display": 411,
+  "source_page_index": 410
+}

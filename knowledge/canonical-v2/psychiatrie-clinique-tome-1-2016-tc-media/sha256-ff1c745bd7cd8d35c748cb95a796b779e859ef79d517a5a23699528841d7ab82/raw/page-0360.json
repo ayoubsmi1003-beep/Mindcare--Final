@@ -1,0 +1,244 @@
+{
+  "block_sequence_sha256": "36e11d2d1c1f9b2db2ef09c475fe54952909b4487e709622df87ee84b3b92c8b",
+  "blocks": [
+    {
+      "bbox": [
+        396.8000183105469,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0360-block-0001",
+      "order": 1,
+      "text": "Chapitre 17\nSchizophrénies\n343\n",
+      "text_sha256": "439d4fa21603b3565244aed086d5c4af30ed0b2fbae2a5d40e5e2b1df08db81c"
+    },
+    {
+      "bbox": [
+        56.25,
+        41.002296447753906,
+        287.11578369140625,
+        53.320068359375
+      ],
+      "block_id": "page-0360-block-0002",
+      "order": 2,
+      "text": "TABLEAU 17.1 Critères diagnostiques de la schizophrénie\n",
+      "text_sha256": "a18e85e39f50c10ad9d1ded8d8b2eddf8a78c16ff1a1fa7b19688620abc74538"
+    },
+    {
+      "bbox": [
+        166.75,
+        59.52412414550781,
+        449.28802490234375,
+        70.10029602050781
+      ],
+      "block_id": "page-0360-block-0003",
+      "order": 3,
+      "text": "DSM-5\nDSM-IV-TR\n",
+      "text_sha256": "67d368c78be7842a2bc99b149901566bcadf3c9d62623ea48bafcc32b3563ffb"
+    },
+    {
+      "bbox": [
+        128.8000030517578,
+        75.22285461425781,
+        453.77801513671875,
+        85.24238586425781
+      ],
+      "block_id": "page-0360-block-0004",
+      "order": 4,
+      "text": "295.90 (F20.9) Schizophrénie\nSchizophrénie\n",
+      "text_sha256": "cd39d70ebb54233796a17f9df746e95755f8d3a367a21e3216423cae9013801b"
+    },
+    {
+      "bbox": [
+        58.25,
+        90.80195617675781,
+        280.91461181640625,
+        100.62812805175781
+      ],
+      "block_id": "page-0360-block-0005",
+      "order": 5,
+      "text": "D. Un trouble schizoaffectif, ou dépressif, ou un trouble bipolaire avec\n",
+      "text_sha256": "195ecd1f8ba81b13924a090492fba333db34e03bc8f2372223e74164cce8504c"
+    },
+    {
+      "bbox": [
+        68.75,
+        100.80195617675781,
+        300.0079345703125,
+        172.6281280517578
+      ],
+      "block_id": "page-0360-block-0006",
+      "order": 6,
+      "text": "manifestations psychotiques ont été exclus parce que :\n1) soit il n’y a pas eu d’épisode maniaque ou dépressif caractérisé\nconcurremment avec la phase active des symptômes ;\n2) soit, si des épisodes de trouble de l’humeur ont été présents pendant\nla phase active des symptômes, ils étaient présents seulement\npendant une courte période de temps sur la durée totale des phases\nactives et résiduelles de la maladie.\n",
+      "text_sha256": "c2bdbb866487ef5c61864ca222586bc716a7ba3fe31ec8ede4e886e689c55902"
+    },
+    {
+      "bbox": [
+        308.25,
+        90.80195617675781,
+        368.2310791015625,
+        100.62812805175781
+      ],
+      "block_id": "page-0360-block-0007",
+      "order": 7,
+      "text": "D. Idem à DSM-5.\n",
+      "text_sha256": "a25093c4e73c5e7e67b3176a2cccc790e8fc03ace507127f5b4c7ba5e37fc007"
+    },
+    {
+      "bbox": [
+        58.25,
+        179.2019500732422,
+        287.5470275878906,
+        189.0281219482422
+      ],
+      "block_id": "page-0360-block-0008",
+      "order": 8,
+      "text": "E. Le trouble n’est pas imputable aux effets physiologiques d’une subs-\n",
+      "text_sha256": "f9b5e0707ade11fabe9a436fbeb89b0d21db7f7c164045042d5ba6e2db9174cf"
+    },
+    {
+      "bbox": [
+        68.55000305175781,
+        189.2019500732422,
+        291.91937255859375,
+        209.0281219482422
+      ],
+      "block_id": "page-0360-block-0009",
+      "order": 9,
+      "text": "tance (p. ex. une drogue donnant lieu à abus, ou un médicament) ou à\nune autre pathologie médicale.\n",
+      "text_sha256": "1d9f441479dbf6bf78129a27f4e6622371db0c2d82cd42bf511a912fcfa9f1ed"
+    },
+    {
+      "bbox": [
+        308.25,
+        179.2019500732422,
+        367.39410400390625,
+        189.0281219482422
+      ],
+      "block_id": "page-0360-block-0010",
+      "order": 10,
+      "text": "E. Idem à DSM-5.\n",
+      "text_sha256": "623c5ec74498d33a47207c86c1d4b8bb5aae0042d0559cf373e98ababace68cc"
+    },
+    {
+      "bbox": [
+        58.25,
+        215.65196228027344,
+        283.3144836425781,
+        225.47813415527344
+      ],
+      "block_id": "page-0360-block-0011",
+      "order": 11,
+      "text": "F. S’il existe des antécédents de trouble du spectre de l’autisme ou de\n",
+      "text_sha256": "4a2ae1a33ae52aca7207293dad29bed0405147bcd2a3c39c2c57b527691b6695"
+    },
+    {
+      "bbox": [
+        67.4000015258789,
+        225.65196228027344,
+        298.98443603515625,
+        275.4781188964844
+      ],
+      "block_id": "page-0360-block-0012",
+      "order": 12,
+      "text": "trouble de la communication débutant dans l’enfance, le diagnostic\nsurajouté de schizophrénie est posé seulement si des symptômes\nhallucinatoires et délirants importants, en plus des autres symptômes de\nschizophrénie nécessaires au diagnostic, sont aussi présents pendant au\nmoins un mois (ou moins en cas de traitement efcace).\n",
+      "text_sha256": "06b62576a00f679c037ea69391b07afdbb81433c4b2064c9933fa0ecc59a0567"
+    },
+    {
+      "bbox": [
+        308.25,
+        215.65196228027344,
+        366.248291015625,
+        225.47813415527344
+      ],
+      "block_id": "page-0360-block-0013",
+      "order": 13,
+      "text": "F. Idem à DSM-5.\n",
+      "text_sha256": "27f350994248f7273de8065d110e782673c74b9f6edffd4b55718e7ebadc432a"
+    },
+    {
+      "bbox": [
+        58.25,
+        282.0519714355469,
+        299.0780029296875,
+        435.8781433105469
+      ],
+      "block_id": "page-0360-block-0014",
+      "order": 14,
+      "text": "Spécier si :\nLes spécications de l’évolution qui suivent ne doivent être utilisées\nqu’après une durée d’un an du trouble et si elles ne sont pas en contradic-\ntion avec les critères évolutifs propres au diagnostic :\nPremier épisode, actuellement en épisode aigu : Première manifestation\ndu trouble remplissant les critères diagnostiques de dénition et les critères\nde durée. Un épisode aigu est une période de temps durant laquelle les\ncritères symptomatiques sont remplis.\nPremier épisode, actuellement en rémission partielle : Une rémission\npartielle après un épisode antérieur est une période de temps durant\nlaquelle se maintient une amélioration et où les critères diagnostiques du\ntrouble ne sont que partiellement remplis.\nPremier épisode, actuellement en rémission complète : Une rémission\ncomplète après un épisode antérieur est une période de temps durant\nlaquelle aucun symptôme spécique de la maladie n’est présent.\n",
+      "text_sha256": "98f3fa45fa153a494f18b8a9e113477a414f53446dcddb0247c978f33d7cbe69"
+    },
+    {
+      "bbox": [
+        58.25,
+        442.4228515625,
+        297.2080383300781,
+        546.4423828125
+      ],
+      "block_id": "page-0360-block-0015",
+      "order": 15,
+      "text": "Épisodes multiples, actuellement épisode aigu : Des épisodes multiples\nne peuvent être établis qu’après un minimum de deux épisodes (un épi-\nsode, une rémission, et un minimum d’une rechute).\nÉpisodes multiples, actuellement en rémission partielle\nÉpisodes multiples, actuellement en rémission complète\nContinu : Les symptômes remplissant les critères symptomatiques\ndiagnostiques du trouble sont présents la majorité du temps de la maladie,\nles périodes de symptômes subliminaux étant très brefs au regard de\nl’ensemble de l’évolution.\nNon spécié\n",
+      "text_sha256": "cb07d6d146c794555b7b81187f09cc622f51707b57e705d3024dd059e358f8c2"
+    },
+    {
+      "bbox": [
+        58.25,
+        552.9019775390625,
+        108.88077545166016,
+        573.8424072265625
+      ],
+      "block_id": "page-0360-block-0016",
+      "order": 16,
+      "text": "Spécier si :\nAvec catatonie\n",
+      "text_sha256": "6fdcf7640a07b32856c5a5280b55497e6a20a3022ebc4b538cbcbd7a4666eec6"
+    },
+    {
+      "bbox": [
+        58.25,
+        580.3519897460938,
+        298.7223205566406,
+        651.1781616210938
+      ],
+      "block_id": "page-0360-block-0017",
+      "order": 17,
+      "text": "Spécier la sévérité actuelle :\nLa sévérité est cotée par une évaluation quantitative des symptômes\npsychotiques primaires, dont les idées délirantes, les hallucinations, la\ndésorganisation du discours, les comportements psychomoteurs anormaux,\net les symptômes négatifs. Chacun de ces symptômes peut être coté pour\nsa sévérité actuelle (le plus sévère au cours des 7 derniers jours) sur une\néchelle à 5 points, allant de 0 (absent) à 4 (présent et grave).\n",
+      "text_sha256": "f1c043ecb766f87b4c320ad86bc3b2631dcdb4ac2d8b1a1d37960ab3672eb58f"
+    },
+    {
+      "bbox": [
+        54.25,
+        657.9406127929688,
+        545.194091796875,
+        726.6749877929688
+      ],
+      "block_id": "page-0360-block-0018",
+      "order": 18,
+      "text": "Sources : APA (2015), p. 117-118 ; APA (2004a), p. 360-361.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004.\nAll rights reserved.\n",
+      "text_sha256": "760c542bf6475a63ab86b71c5195a04b05ddb90f61951710905a677865b4a087"
+    },
+    {
+      "bbox": [
+        290.8999938964844,
+        41.65229415893555,
+        316.53424072265625,
+        53.62006759643555
+      ],
+      "block_id": "page-0360-block-0019",
+      "order": 19,
+      "text": "(suite)\n",
+      "text_sha256": "c684d6dbcdfd50f0ada227f799b5c0fb30e817ac3da61b4cbf208decde7f907b"
+    }
+  ],
+  "coordinates_sha256": "7512a21f2a238a14193147f76a779a577861c86043c23b3b7837cd6517462a7b",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0360",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 17\nSchizophrénies\n343\nTABLEAU 17.1 Critères diagnostiques de la schizophrénie\nDSM-5\nDSM-IV-TR\n295.90 (F20.9) Schizophrénie\nSchizophrénie\nD. Un trouble schizoaffectif, ou dépressif, ou un trouble bipolaire avec\nmanifestations psychotiques ont été exclus parce que :\n1) soit il n’y a pas eu d’épisode maniaque ou dépressif caractérisé\nconcurremment avec la phase active des symptômes ;\n2) soit, si des épisodes de trouble de l’humeur ont été présents pendant\nla phase active des symptômes, ils étaient présents seulement\npendant une courte période de temps sur la durée totale des phases\nactives et résiduelles de la maladie.\nD. Idem à DSM-5.\nE. Le trouble n’est pas imputable aux effets physiologiques d’une subs-\ntance (p. ex. une drogue donnant lieu à abus, ou un médicament) ou à\nune autre pathologie médicale.\nE. Idem à DSM-5.\nF. S’il existe des antécédents de trouble du spectre de l’autisme ou de\ntrouble de la communication débutant dans l’enfance, le diagnostic\nsurajouté de schizophrénie est posé seulement si des symptômes\nhallucinatoires et délirants importants, en plus des autres symptômes de\nschizophrénie nécessaires au diagnostic, sont aussi présents pendant au\nmoins un mois (ou moins en cas de traitement efcace).\nF. Idem à DSM-5.\nSpécier si :\nLes spécications de l’évolution qui suivent ne doivent être utilisées\nqu’après une durée d’un an du trouble et si elles ne sont pas en contradic-\ntion avec les critères évolutifs propres au diagnostic :\nPremier épisode, actuellement en épisode aigu : Première manifestation\ndu trouble remplissant les critères diagnostiques de dénition et les critères\nde durée. Un épisode aigu est une période de temps durant laquelle les\ncritères symptomatiques sont remplis.\nPremier épisode, actuellement en rémission partielle : Une rémission\npartielle après un épisode antérieur est une période de temps durant\nlaquelle se maintient une amélioration et où les critères diagnostiques du\ntrouble ne sont que partiellement remplis.\nPremier épisode, actuellement en rémission complète : Une rémission\ncomplète après un épisode antérieur est une période de temps durant\nlaquelle aucun symptôme spécique de la maladie n’est présent.\nÉpisodes multiples, actuellement épisode aigu : Des épisodes multiples\nne peuvent être établis qu’après un minimum de deux épisodes (un épi-\nsode, une rémission, et un minimum d’une rechute).\nÉpisodes multiples, actuellement en rémission partielle\nÉpisodes multiples, actuellement en rémission complète\nContinu : Les symptômes remplissant les critères symptomatiques\ndiagnostiques du trouble sont présents la majorité du temps de la maladie,\nles périodes de symptômes subliminaux étant très brefs au regard de\nl’ensemble de l’évolution.\nNon spécié\nSpécier si :\nAvec catatonie\nSpécier la sévérité actuelle :\nLa sévérité est cotée par une évaluation quantitative des symptômes\npsychotiques primaires, dont les idées délirantes, les hallucinations, la\ndésorganisation du discours, les comportements psychomoteurs anormaux,\net les symptômes négatifs. Chacun de ces symptômes peut être coté pour\nsa sévérité actuelle (le plus sévère au cours des 7 derniers jours) sur une\néchelle à 5 points, allant de 0 (absent) à 4 (présent et grave).\nSources : APA (2015), p. 117-118 ; APA (2004a), p. 360-361.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004.\nAll rights reserved.\n(suite)\n",
+  "raw_text_sha256": "c0d996023fc85b3799a35b70a400251e42f8c211f1b27094db5442c146535eb1",
+  "source_page_display": 361,
+  "source_page_index": 360
+}

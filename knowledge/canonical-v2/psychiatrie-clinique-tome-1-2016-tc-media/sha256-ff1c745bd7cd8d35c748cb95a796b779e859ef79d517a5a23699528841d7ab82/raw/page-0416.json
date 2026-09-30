@@ -1,0 +1,424 @@
+{
+  "block_sequence_sha256": "dfe69aee007704f14394bfcaaa66441a9f01b05310ab414db251985eef644bf4",
+  "blocks": [
+    {
+      "bbox": [
+        408.8999938964844,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0416-block-0001",
+      "order": 1,
+      "text": "Chapitre 19\nDépressions\n399\n",
+      "text_sha256": "91300cae441df79648e90af6159670dd73a29fc9bb2a830ce90e0473b54728ed"
+    },
+    {
+      "bbox": [
+        56.25,
+        41.30229568481445,
+        385.7001953125,
+        53.62006759643555
+      ],
+      "block_id": "page-0416-block-0002",
+      "order": 2,
+      "text": "TABLEAU 19.3 Critères diagnostiques du trouble dépressif persistant (dysthymie)\n",
+      "text_sha256": "e783b6e495342c34ef7f635ce13fdc5559e841b1406a46b23e19a4d0e31a7084"
+    },
+    {
+      "bbox": [
+        81.25,
+        58.574119567871094,
+        467.2101135253906,
+        81.9002914428711
+      ],
+      "block_id": "page-0416-block-0003",
+      "order": 3,
+      "text": "DSM-5\nDSM-IV-TR\n300.4 (F34.1) Trouble dépressif persistant (dysthymie)\nTrouble dysthymique\n",
+      "text_sha256": "37867d21deb76ffa22fb0d32196afddd296732393e0f43b6bd599defa42eae0e"
+    },
+    {
+      "bbox": [
+        58.25,
+        87.05195617675781,
+        294.94049072265625,
+        96.87812805175781
+      ],
+      "block_id": "page-0416-block-0004",
+      "order": 4,
+      "text": "A. Humeur dépressive présente quasiment toute la journée, plus d’un jour\n",
+      "text_sha256": "7dbd3b520376f771db3f46ecb017b0525d5d05f77cdf99097974164eb188056e"
+    },
+    {
+      "bbox": [
+        58.25,
+        97.05195617675781,
+        295.1761474609375,
+        140.3781280517578
+      ],
+      "block_id": "page-0416-block-0005",
+      "order": 5,
+      "text": "sur deux, signalée par la personne ou observée par les autres, pendant\nau moins 2 ans.\nN.B.: Chez les enfants et les adolescents, l’humeur peut être irritable et\nla durée doit être d’au moins 1 an.\n",
+      "text_sha256": "1a7a5e433ea3427b4ebe50ce7706074feeb754d3cfdf405552c485adf410e803"
+    },
+    {
+      "bbox": [
+        308.25,
+        87.05195617675781,
+        367.8981018066406,
+        96.87812805175781
+      ],
+      "block_id": "page-0416-block-0006",
+      "order": 6,
+      "text": "A. Idem à DSM-5.\n",
+      "text_sha256": "17d5989bc13bdc24966ef82f371e7b88392c4ebe1bd8cdcdcd635723e9a91a6c"
+    },
+    {
+      "bbox": [
+        58.25,
+        148.9519500732422,
+        292.91412353515625,
+        158.7781219482422
+      ],
+      "block_id": "page-0416-block-0007",
+      "order": 7,
+      "text": "B. Quand le sujet est déprimé, il présente au moins deux des symptômes\n",
+      "text_sha256": "33d696dccde6314851808a9e8eac906e3554d22bf9cc6bce2cdca07be81d1c01"
+    },
+    {
+      "bbox": [
+        69.05000305175781,
+        158.9519500732422,
+        289.3413391113281,
+        240.7781219482422
+      ],
+      "block_id": "page-0416-block-0008",
+      "order": 8,
+      "text": "suivants :\n1. Perte d’appétit ou hyperphagie.\n2. Insomnie ou hypersomnie.\n3. Baisse d’énergie ou fatigue.\n4. Faible estime de soi.\n5. Difcultés de concentration ou difcultés à prendre des décisions.\n6. Sentiments de perte d’espoir.\n",
+      "text_sha256": "e6601244919e06e4a25b86b074e25e29cd0bd3c298b3c3cd16f270dc31702682"
+    },
+    {
+      "bbox": [
+        308.25,
+        148.9519500732422,
+        367.8981018066406,
+        158.7781219482422
+      ],
+      "block_id": "page-0416-block-0009",
+      "order": 9,
+      "text": "B. Idem à DSM-5.\n",
+      "text_sha256": "703f62df8ee835b259dd8e94c2103cd979d0ac69c184c555aa261a5bff070302"
+    },
+    {
+      "bbox": [
+        58.25,
+        249.40194702148438,
+        292.37054443359375,
+        259.2281188964844
+      ],
+      "block_id": "page-0416-block-0010",
+      "order": 10,
+      "text": "C. Au cours de la période de 2 ans (1 an pour les enfants et adolescents)\n",
+      "text_sha256": "5d62cb7224544b2b44855280e3025f50fd0ce9479fa90d71326696bc0a36a72d"
+    },
+    {
+      "bbox": [
+        68.9000015258789,
+        259.4019470214844,
+        300.5638122558594,
+        279.2281188964844
+      ],
+      "block_id": "page-0416-block-0011",
+      "order": 11,
+      "text": "de perturbation thymique, la personne n’a jamais eu de périodes de plus\nde 2 mois consécutifs sans présenter les symptômes des critères A et B.\n",
+      "text_sha256": "81ec2c4be1bdbe0e151a29ed1dbc06486da15ffa4a8883cf96c87d2ead4c2b6b"
+    },
+    {
+      "bbox": [
+        308.25,
+        249.40194702148438,
+        368.069091796875,
+        259.2281188964844
+      ],
+      "block_id": "page-0416-block-0012",
+      "order": 12,
+      "text": "C. Idem à DSM-5.\n",
+      "text_sha256": "e3115c8f08f85dfc1a8c901e597d6628d9cc927dde450ccede1ca1ec3dd04b8e"
+    },
+    {
+      "bbox": [
+        58.25,
+        287.8019714355469,
+        300.4697570800781,
+        297.6281433105469
+      ],
+      "block_id": "page-0416-block-0013",
+      "order": 13,
+      "text": "D. Les critères de trouble dépressif caractérisé peuvent être présents d’une\n",
+      "text_sha256": "d0309fca479553194889cc8c3bc9b60cc94eec5588faae45ac5551db3f9346c9"
+    },
+    {
+      "bbox": [
+        69.4000015258789,
+        297.8019714355469,
+        174.64358520507812,
+        307.6281433105469
+      ],
+      "block_id": "page-0416-block-0014",
+      "order": 14,
+      "text": "manière continue pendant 2 ans.\n",
+      "text_sha256": "bd07ee5b37c91e12743fefaf8699921950f9ff3fd707e97a8e7ad61266fdcf52"
+    },
+    {
+      "bbox": [
+        308.25,
+        287.8019714355469,
+        535.0078735351562,
+        297.6281433105469
+      ],
+      "block_id": "page-0416-block-0015",
+      "order": 15,
+      "text": "D. Au cours des deux premières années (de la première année pour\n",
+      "text_sha256": "cca6ee74863e7945265c6e7dd85937e04277fa5c41c5c63b8ac8df361dfa57b7"
+    },
+    {
+      "bbox": [
+        319.5,
+        297.8019714355469,
+        547.5970458984375,
+        347.6281433105469
+      ],
+      "block_id": "page-0416-block-0016",
+      "order": 16,
+      "text": "les enfants et les adolescents) de la perturbation thymique, aucun\népisode dépressif majeur n’a été présent ; c’est-à-dire que la pertur-\nbation thymique n’est pas mieux expliquée par un trouble dépressif\nmajeur chronique ou par un trouble dépressif majeur en rémission\npartielle.\n",
+      "text_sha256": "acbdfb1bfb3ecee051c3d43b4768c7ebe8767fd814b37b8d102d915f424ed5db"
+    },
+    {
+      "bbox": [
+        58.25,
+        356.251953125,
+        294.5163269042969,
+        366.078125
+      ],
+      "block_id": "page-0416-block-0017",
+      "order": 17,
+      "text": "E. Il n’y a jamais eu d’épisode maniaque ou hypomaniaque, et les critères\n",
+      "text_sha256": "db0fea32df24015c231a622fee6bce10523090437c6d294437ce7e93a1736bad"
+    },
+    {
+      "bbox": [
+        68.55000305175781,
+        366.251953125,
+        225.23890686035156,
+        376.078125
+      ],
+      "block_id": "page-0416-block-0018",
+      "order": 18,
+      "text": "du trouble cyclothymique n’ont jamais été réunis.\n",
+      "text_sha256": "9f7ab8096fba787afd661ddf8a6e8ea3e6b58256b16d0a25f964a2fd9f9fea62"
+    },
+    {
+      "bbox": [
+        308.25,
+        356.251953125,
+        367.39410400390625,
+        366.078125
+      ],
+      "block_id": "page-0416-block-0019",
+      "order": 19,
+      "text": "E. Idem à DSM-5.\n",
+      "text_sha256": "623c5ec74498d33a47207c86c1d4b8bb5aae0042d0559cf373e98ababace68cc"
+    },
+    {
+      "bbox": [
+        58.25,
+        384.6519470214844,
+        285.74700927734375,
+        394.4781188964844
+      ],
+      "block_id": "page-0416-block-0020",
+      "order": 20,
+      "text": "F. Le trouble n’est pas mieux expliqué par un trouble schizoaffectif per-\n",
+      "text_sha256": "57bf8de0d6381f395f54ca7aa8a2754b465302bbd568a20a82c94d623184d60d"
+    },
+    {
+      "bbox": [
+        67.4000015258789,
+        394.6519470214844,
+        293.0935974121094,
+        424.4781188964844
+      ],
+      "block_id": "page-0416-block-0021",
+      "order": 21,
+      "text": "sistant, une schizophrénie, un trouble délirant, un autre trouble spécié\nou non spécié du spectre de la schizophrénie ou un autre trouble\npsychotique.\n",
+      "text_sha256": "1749af308158171dce93300c2a78d62b8848e0ef11221791371378478a1647f7"
+    },
+    {
+      "bbox": [
+        308.25,
+        384.6519470214844,
+        527.334228515625,
+        394.4781188964844
+      ],
+      "block_id": "page-0416-block-0022",
+      "order": 22,
+      "text": "F. La perturbation thymique ne survient pas uniquement au cours de\n",
+      "text_sha256": "6e6432687b89616dd55b530a32744672a48c47bd3ac326c5e7c92def54583e60"
+    },
+    {
+      "bbox": [
+        317.3999938964844,
+        394.6519470214844,
+        538.7022094726562,
+        414.4781188964844
+      ],
+      "block_id": "page-0416-block-0023",
+      "order": 23,
+      "text": "l’évolution d’un trouble psychotique chronique, tels une schizophrénie\nou un trouble délirant.\n",
+      "text_sha256": "f99fcb2a7f5f362ee3dc4fa6817c081708e0790f1bbcb07b1aeb6eea0b2a814f"
+    },
+    {
+      "bbox": [
+        58.25,
+        433.1019592285156,
+        269.5470275878906,
+        442.9281311035156
+      ],
+      "block_id": "page-0416-block-0024",
+      "order": 24,
+      "text": "G. Les symptômes ne sont pas imputables aux effets physiolo-\n",
+      "text_sha256": "68b9c7820c9388b652dfb807ad0f537acbb8d0d0f5d8d1137e44a5de6d9ba2a1"
+    },
+    {
+      "bbox": [
+        69.9000015258789,
+        443.1019592285156,
+        288.88433837890625,
+        472.9281311035156
+      ],
+      "block_id": "page-0416-block-0025",
+      "order": 25,
+      "text": "giques directs d’une substance (p. ex., une drogue donnant lieu à\nabus, un médicament) ou d’une autre affection médicale (p. ex.,\nhypothyroïdie).\n",
+      "text_sha256": "7c1157f3e3e0c08c7fac07c09f9099cca8f3029388aa7da769ff76faa5d4ea4a"
+    },
+    {
+      "bbox": [
+        308.25,
+        433.1019592285156,
+        368.2310791015625,
+        442.9281311035156
+      ],
+      "block_id": "page-0416-block-0026",
+      "order": 26,
+      "text": "G. Idem à DSM-5.\n",
+      "text_sha256": "3463de267236bbfb2f5cfc507860c3ff4aa017b089b258fc175e91049f34df10"
+    },
+    {
+      "bbox": [
+        58.25,
+        481.501953125,
+        278.89947509765625,
+        491.328125
+      ],
+      "block_id": "page-0416-block-0027",
+      "order": 27,
+      "text": "H. Les symptômes entraînent une détresse cliniquement signicative\n",
+      "text_sha256": "6dc0af5821c84d5359bfa14d52b7beaac0442a6877532b68b874b18e94f9588e"
+    },
+    {
+      "bbox": [
+        69.25,
+        491.501953125,
+        278.4820251464844,
+        511.328125
+      ],
+      "block_id": "page-0416-block-0028",
+      "order": 28,
+      "text": "ou une altération du fonctionnement social, professionnel ou dans\nd’autres domaines importants.\n",
+      "text_sha256": "34effb668ef3edcb66fcbc9b168e1020e9f41d57c8c0094136d333f6f66bb73f"
+    },
+    {
+      "bbox": [
+        308.25,
+        481.501953125,
+        368.069091796875,
+        491.328125
+      ],
+      "block_id": "page-0416-block-0029",
+      "order": 29,
+      "text": "H. Idem à DSM-5.\n",
+      "text_sha256": "e2e66bbf1a2bb74b15c267e0b4c71669688d124e26bff17522bccc9dc935c564"
+    },
+    {
+      "bbox": [
+        58.25,
+        519.9519653320312,
+        279.9035949707031,
+        624.3923950195312
+      ],
+      "block_id": "page-0416-block-0030",
+      "order": 30,
+      "text": "Spécier si :\nAvec détresse anxieuse\nAvec caractéristiques mixtes\nAvec caractéristiques mélancoliques\nAvec caractéristiques atypiques\nAvec caractéristiques psychotiques congruentes à l’humeur\nAvec caractéristiques psychotiques non congruentes à l’humeur\nAvec début dans le péripartum\n",
+      "text_sha256": "a744b1146e97d3fac4a80a36b131e55baad456a47ab59a6ab72bb100bbc46349"
+    },
+    {
+      "bbox": [
+        308.25,
+        519.9519653320312,
+        408.3636169433594,
+        543.2781372070312
+      ],
+      "block_id": "page-0416-block-0031",
+      "order": 31,
+      "text": "Spécier si :\nAvec caractéristiques atypiques\n",
+      "text_sha256": "1db81b519cad02d828483935589959bad334eb71e454d92f7a6857de9c3e33d6"
+    },
+    {
+      "bbox": [
+        58.25,
+        633.8519897460938,
+        137.2160186767578,
+        670.7924194335938
+      ],
+      "block_id": "page-0416-block-0032",
+      "order": 32,
+      "text": "Spécier si :\nEn rémission partielle\nEn rémission complète\n",
+      "text_sha256": "cc30d0e13b97cf8977b86a3a6b83666f52c635c3a6f42e62b9e9068507cb5117"
+    },
+    {
+      "bbox": [
+        58.25,
+        681.3019409179688,
+        254.4302978515625,
+        718.2423706054688
+      ],
+      "block_id": "page-0416-block-0033",
+      "order": 33,
+      "text": "Spécier si :\nDébut précoce : Si début du trouble avant l’âge de 21 ans.\nDébut tardif : Si début du trouble à l’âge de 21 ans ou après.\n",
+      "text_sha256": "8c642000d38d56b09be3eccd9791b1a6d734a15621c95146856d8f1b6b591d30"
+    },
+    {
+      "bbox": [
+        308.25,
+        681.3019409179688,
+        357.0480041503906,
+        691.1281127929688
+      ],
+      "block_id": "page-0416-block-0034",
+      "order": 34,
+      "text": "Idem à DSM-5.\n",
+      "text_sha256": "73e2b1c81f4b0cae397bef13680b1ec0f40f117881c7e4acde37a2d30a373dea"
+    }
+  ],
+  "coordinates_sha256": "5aaca840f1d734f79783b4554c795581325ba096294e1b44d6c68f0607a8fa3a",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0416",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 19\nDépressions\n399\nTABLEAU 19.3 Critères diagnostiques du trouble dépressif persistant (dysthymie)\nDSM-5\nDSM-IV-TR\n300.4 (F34.1) Trouble dépressif persistant (dysthymie)\nTrouble dysthymique\nA. Humeur dépressive présente quasiment toute la journée, plus d’un jour\nsur deux, signalée par la personne ou observée par les autres, pendant\nau moins 2 ans.\nN.B.: Chez les enfants et les adolescents, l’humeur peut être irritable et\nla durée doit être d’au moins 1 an.\nA. Idem à DSM-5.\nB. Quand le sujet est déprimé, il présente au moins deux des symptômes\nsuivants :\n1. Perte d’appétit ou hyperphagie.\n2. Insomnie ou hypersomnie.\n3. Baisse d’énergie ou fatigue.\n4. Faible estime de soi.\n5. Difcultés de concentration ou difcultés à prendre des décisions.\n6. Sentiments de perte d’espoir.\nB. Idem à DSM-5.\nC. Au cours de la période de 2 ans (1 an pour les enfants et adolescents)\nde perturbation thymique, la personne n’a jamais eu de périodes de plus\nde 2 mois consécutifs sans présenter les symptômes des critères A et B.\nC. Idem à DSM-5.\nD. Les critères de trouble dépressif caractérisé peuvent être présents d’une\nmanière continue pendant 2 ans.\nD. Au cours des deux premières années (de la première année pour\nles enfants et les adolescents) de la perturbation thymique, aucun\népisode dépressif majeur n’a été présent ; c’est-à-dire que la pertur-\nbation thymique n’est pas mieux expliquée par un trouble dépressif\nmajeur chronique ou par un trouble dépressif majeur en rémission\npartielle.\nE. Il n’y a jamais eu d’épisode maniaque ou hypomaniaque, et les critères\ndu trouble cyclothymique n’ont jamais été réunis.\nE. Idem à DSM-5.\nF. Le trouble n’est pas mieux expliqué par un trouble schizoaffectif per-\nsistant, une schizophrénie, un trouble délirant, un autre trouble spécié\nou non spécié du spectre de la schizophrénie ou un autre trouble\npsychotique.\nF. La perturbation thymique ne survient pas uniquement au cours de\nl’évolution d’un trouble psychotique chronique, tels une schizophrénie\nou un trouble délirant.\nG. Les symptômes ne sont pas imputables aux effets physiolo-\ngiques directs d’une substance (p. ex., une drogue donnant lieu à\nabus, un médicament) ou d’une autre affection médicale (p. ex.,\nhypothyroïdie).\nG. Idem à DSM-5.\nH. Les symptômes entraînent une détresse cliniquement signicative\nou une altération du fonctionnement social, professionnel ou dans\nd’autres domaines importants.\nH. Idem à DSM-5.\nSpécier si :\nAvec détresse anxieuse\nAvec caractéristiques mixtes\nAvec caractéristiques mélancoliques\nAvec caractéristiques atypiques\nAvec caractéristiques psychotiques congruentes à l’humeur\nAvec caractéristiques psychotiques non congruentes à l’humeur\nAvec début dans le péripartum\nSpécier si :\nAvec caractéristiques atypiques\nSpécier si :\nEn rémission partielle\nEn rémission complète\nSpécier si :\nDébut précoce : Si début du trouble avant l’âge de 21 ans.\nDébut tardif : Si début du trouble à l’âge de 21 ans ou après.\nIdem à DSM-5.\n",
+  "raw_text_sha256": "34460dae98a597b3b42f5c746cbd4728719e09ed401115a594a9e28dfb66ece3",
+  "source_page_display": 417,
+  "source_page_index": 416
+}

@@ -1,0 +1,280 @@
+{
+  "block_sequence_sha256": "908b6a7a9cae1d289f4dd98e031382d8f0cea2cfbe13cd2b2f52f5b069c3b37f",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0377-block-0001",
+      "order": 1,
+      "text": "360\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "2c9e49e0fa18e1596936967a8b76d686ba610cebb1b24d9ae042da12a1168173"
+    },
+    {
+      "bbox": [
+        50.35000228881836,
+        41.002296447753906,
+        443.6836242675781,
+        53.320068359375
+      ],
+      "block_id": "page-0377-block-0002",
+      "order": 2,
+      "text": "TABLEAU 17.6 Posologie recommandée pour les antipsychotiques injectables IM – longue action\n",
+      "text_sha256": "c07742d8cbbeb60650a8b61a59906c6b4b64c28c4a877e36480ad8b855f8f0da"
+    },
+    {
+      "bbox": [
+        51.25,
+        58.27412414550781,
+        543.8615112304688,
+        81.14238739013672
+      ],
+      "block_id": "page-0377-block-0003",
+      "order": 3,
+      "text": "Nom scientique\nNom commercial\nDose IM approximative (mg)\nAdministration habituelle\nAntipsychotiques atypiques de 2e génération\n",
+      "text_sha256": "525267658fef8305aa464968225410acb4f4d37f3e91d733d421ae4d54190db6"
+    },
+    {
+      "bbox": [
+        259.70001220703125,
+        86.6519546508789,
+        412.5620422363281,
+        96.4781265258789
+      ],
+      "block_id": "page-0377-block-0004",
+      "order": 4,
+      "text": "Doses faibles\nDoses fortes\n",
+      "text_sha256": "8402fbe6a8c3451e2ea6dd809cd973666a88eebe2b0745eaa97ed9b803567b21"
+    },
+    {
+      "bbox": [
+        52.25,
+        104.45137023925781,
+        503.47601318359375,
+        114.87812805175781
+      ],
+      "block_id": "page-0377-block-0005",
+      "order": 5,
+      "text": "Rispéridone\nRisperdal ConstaMD\n12,5\n25,0\n37,5\n50,0\nAux 2 semaines\n",
+      "text_sha256": "817f3094b4687aa22f5a4899f382c14f88cd542f67fa74a8f8807dbdda55d1f1"
+    },
+    {
+      "bbox": [
+        52.25,
+        122.9013671875,
+        503.47601318359375,
+        133.328125
+      ],
+      "block_id": "page-0377-block-0006",
+      "order": 6,
+      "text": "Palipéridone\nInvega SustennaMD\n50,0\n75,0\n100,0\n150,0\nAux 4 semaines\n",
+      "text_sha256": "dd790a176e96af1765017b55226c36edf53b65cb0042c2591e9fef6d99593eca"
+    },
+    {
+      "bbox": [
+        52.25,
+        141.30137634277344,
+        503.47601318359375,
+        151.72813415527344
+      ],
+      "block_id": "page-0377-block-0007",
+      "order": 7,
+      "text": "Aripiprazole\nAbilify MaintenaMD\n150,0\n200,0\n300,0\n400,0\nAux 4 semaines\n",
+      "text_sha256": "c113f400bb43bba5240cadf8c3ed21ac5d395397750368342562d478534ca0c5"
+    },
+    {
+      "bbox": [
+        51.25,
+        154.27285766601562,
+        295.81280517578125,
+        167.29238891601562
+      ],
+      "block_id": "page-0377-block-0008",
+      "order": 8,
+      "text": "Antipsychotiques typiques, classiques de 1re génération (neuroleptiques)\n",
+      "text_sha256": "b884c656c688e7d110057f19a28c057542a2aa546506907c16834344b87b50fd"
+    },
+    {
+      "bbox": [
+        259.70001220703125,
+        172.751953125,
+        412.5620422363281,
+        182.578125
+      ],
+      "block_id": "page-0377-block-0009",
+      "order": 9,
+      "text": "Doses faibles\nDoses fortes\n",
+      "text_sha256": "8402fbe6a8c3451e2ea6dd809cd973666a88eebe2b0745eaa97ed9b803567b21"
+    },
+    {
+      "bbox": [
+        52.25,
+        190.6013641357422,
+        528.2302856445312,
+        201.0281219482422
+      ],
+      "block_id": "page-0377-block-0010",
+      "order": 10,
+      "text": "Fluphénazine\nModecateMD\n12,5\n25,0\n37,5\n50,0\nAux 2, 3 ou 4 semaines\n",
+      "text_sha256": "71b146317cf7927b901f1e2886dcbe90d1f842267ce7ea7539c4f481f09602f2"
+    },
+    {
+      "bbox": [
+        52.25,
+        209.00137329101562,
+        528.2302856445312,
+        219.42813110351562
+      ],
+      "block_id": "page-0377-block-0011",
+      "order": 11,
+      "text": "Flupentixol\nFluanxol DepotMD\n20,0\n40,0\n60,0\n80,0\nAux 2, 3 ou 4 semaines\n",
+      "text_sha256": "c676999ce4588c9ed943042a532fb68f57d3b1842ff0390a55649034b9eeebe2"
+    },
+    {
+      "bbox": [
+        52.25,
+        227.4513702392578,
+        503.47601318359375,
+        237.8781280517578
+      ],
+      "block_id": "page-0377-block-0012",
+      "order": 12,
+      "text": "Pipothiazine\nPiportil L4MD\n50,0\n100,0\n150,0\n250,0\nAux 4 semaines\n",
+      "text_sha256": "fe4f6e3a6ec65dbcec86f050b40853d1dee77600bbf6383cfd6b82fd98dd6c7b"
+    },
+    {
+      "bbox": [
+        52.25,
+        245.8513641357422,
+        503.47601318359375,
+        256.27813720703125
+      ],
+      "block_id": "page-0377-block-0013",
+      "order": 13,
+      "text": "Halopéridol\nHaldolMD*\n50,0\n100,0\n200,0\n300,0\nAux 4 semaines\n",
+      "text_sha256": "da092158ecbd79fd62fcaf7e3aa7d0904f90d5212650ecc8b346dff6e9719886"
+    },
+    {
+      "bbox": [
+        52.25,
+        264.3013610839844,
+        528.2302856445312,
+        274.7281188964844
+      ],
+      "block_id": "page-0377-block-0014",
+      "order": 14,
+      "text": "Zuclopenthixol\nClopixol DepotMD\n100,0\n200,0\n300,0\n400,0\nAux 2, 3 ou 4 semaines\n",
+      "text_sha256": "18d6cb1f76e591cb353ad89e15c6d7a3a18dd7340f6cba7e41b33e28e944bf1d"
+    },
+    {
+      "bbox": [
+        48.25,
+        283.39630126953125,
+        246.36459350585938,
+        292.67657470703125
+      ],
+      "block_id": "page-0377-block-0015",
+      "order": 15,
+      "text": "* Haldol n’est plus disponible. Seul le générique, Halopéridol, l’est.\n",
+      "text_sha256": "edda2c2355d9e346c4f49dfdd5ddf76003e4dd38ccdaadeb5d35f354883581f2"
+    },
+    {
+      "bbox": [
+        48.0,
+        316.2158203125,
+        291.0180358886719,
+        338.70849609375
+      ],
+      "block_id": "page-0377-block-0016",
+      "order": 16,
+      "text": "pas comment expliquer les eets indésirables qu’ils ressentent,\net ils cessent simplement leur médication.\n",
+      "text_sha256": "fb7db7b1e19cd2acd324701d928adb364612c00c7518c2a3f3175706f4f4caf0"
+    },
+    {
+      "bbox": [
+        48.0,
+        340.2658386230469,
+        291.4410095214844,
+        725.45849609375
+      ],
+      "block_id": "page-0377-block-0017",
+      "order": 17,
+      "text": "Parmi les eets indésirables rencontrés, citons les plus fréquents\net ceux qui occasionnent le plus d’inconfort chez les patients :\n• la sédation : certains patients disent qu’ils se sentent « zombies » ;\n• le gain de poids et les troubles métaboliques (hyperglycémie,\ndyslipidémie), qui sont surtout occasionnés par certains an-\ntipsychotiques atypiques (en ordre décroissant : olanzapine >\nclozapine > quétiapine > rispéridone) ;\n• les eets atropiniques (anticholinergiques) : sécheresse de\nla bouche, constipation, vision embrouillée. Ces eets désa-\ngréables peuvent parfois être atténués par une modication\nde la diète ;\n• les troubles sexuels (en lien avec l’hyperprolactinémie et les\neets anticholinergiques) : galactorrhée, baisse de libido,\ntrouble érectile, anorgasmie, absence d’éjaculation ;\n• les eets cardiovasculaires : tachycardie, hypotension orthos-\ntatique, étourdissements ;\n• les eets extrapyramidaux : parkinsonisme (bradykinésie,\ntremblements, rigidité), dystonie, akathisie, surtout provoqués\npar les antipsychotiques typiques. Ils peuvent habituellement\nêtre corrigés en diminuant la dose de l’antipsychotique ou\nen ajoutant un anticholinergique antiparkinsonien (p. ex.,\nprocyclidine, diphenhydramine, surtout pour le parkinso-\nnisme) ou un β-bloquant (p. ex., propranolol surtout pour\nl’akathisie ou les tremblements) ;\n• la dyskinésie tardive : un trouble du mouvement qui apparaît\naprès plusieurs années (rarement quelques mois) d’utilisa-\ntion des neuroleptiques classiques. Elle est beaucoup moins\nfréquente avec les atypiques. La dyskinésie disparaît souvent\nquand on cesse ou diminue le neuroleptique. La clozapine\net la quétiapine ont un eet antidyskinétique en plus de leur\neet antipsychotique.\n",
+      "text_sha256": "1f804a6358151e79e4c37f64eaa8ab752f26efe5b10e32d2be1d3fc800dce32c"
+    },
+    {
+      "bbox": [
+        326.0,
+        316.0241394042969,
+        543.9979248046875,
+        336.75030517578125
+      ],
+      "block_id": "page-0377-block-0018",
+      "order": 18,
+      "text": "Les effets indésirables des antipsychotiques sont présentés\nen détail au chapitre 68, à la section 68.6.\n",
+      "text_sha256": "ce4f1db73c0a4db5d5a6bcedc63362a3ceb1d7cc2ad89ee91d60fe33d3930dba"
+    },
+    {
+      "bbox": [
+        306.0,
+        345.3658142089844,
+        549.372314453125,
+        612.95849609375
+      ],
+      "block_id": "page-0377-block-0019",
+      "order": 19,
+      "text": "Plusieurs facteurs de risque importants pour les maladies\ncardiovasculaires et pulmonaires (p. ex., sédentarité, tabagisme,\nobésité) sont liés à la schizophrénie, soit primairement à la maladie\n(p. ex., symptômes négatifs qui poussent le patient à adopter un\nmode de vie sédentaire), soit à son traitement pharmacologique.\nAvec le suicide, ces maladies sont responsables d’une réduction de\nl’espérance de vie de près de 20 ans chez les personnes atteintes\nde schizophrénie. Elles comptent pour 60 % du risque d’augmen-\ntation de mortalité, ce qui est deux fois plus élevé que dans la\npopulation générale. Et le risque d’avoir un syndrome métabolique\nest deux à trois fois plus élevé (Hennekens & al., 2005). De plus,\nles maladies physiques ne sont souvent pas recherchées avec\nbeaucoup d’attention et sont donc peu traitées. Tous les patients\nqui prennent une médication antipsychotique doivent donc être\ninformés, an de les prévenir des risques élevés de surpoids et\nde troubles métaboliques associés. Il est important d’orir des\nconseils nutritionnels visant à modier les habitudes alimentaires\net d’inciter les patients à augmenter l’activité physique (Chalfoun\n& al., 2014). Les interventions oertes devraient aussi inclure de\nl’aide pour l’abandon du tabagisme (p. ex., timbres ou gommes\nde nicotine, ligne téléphonique « J’arrête » 1-866-JARRETE). Il\nfaut cependant parfois changer d’antipsychotique et en prescrire\nun qui comporte moins de risque de syndrome métabolique.\n",
+      "text_sha256": "57aa1896c25f7d45130341b9e36eb7ed1704849be911820d72418098828ccf0f"
+    },
+    {
+      "bbox": [
+        311.20001220703125,
+        618.5499877929688,
+        540.109619140625,
+        639.9503173828125
+      ],
+      "block_id": "page-0377-block-0020",
+      "order": 20,
+      "text": "i\nUn supplément d’information sur le programme « J’arrête »\nest disponible au www.jarrete.qc.ca.\n",
+      "text_sha256": "3e1d36b8d2135773565f49aba51e119ad068480590d419280112b6969aaab8c5"
+    },
+    {
+      "bbox": [
+        306.0,
+        650.3829956054688,
+        549.1898193359375,
+        701.1085205078125
+      ],
+      "block_id": "page-0377-block-0021",
+      "order": 21,
+      "text": "Étude de cas Pour illustrer l’utilisation clinique d’un antipsy-\nchotique à diérentes phases du traitement, prenons l’exemple\nd’un patient agité et halluciné qui arrive à l’urgence pour la\npremière fois.\n",
+      "text_sha256": "89a41f5a054cd8399e347228e06a28e2453d2831eb17c028abf0648de433ba0f"
+    },
+    {
+      "bbox": [
+        306.0,
+        702.7658081054688,
+        549.3662109375,
+        725.45849609375
+      ],
+      "block_id": "page-0377-block-0022",
+      "order": 22,
+      "text": "Une période d’observation de 24 à 48 heures sans médication\nantipsychotique est recommandée dans le cas d’un premier\n",
+      "text_sha256": "ae580c88374723c1428094670509f25b8a16453e1c5e45a970b6ae8bcc601aeb"
+    }
+  ],
+  "coordinates_sha256": "767edbc4e21c206838ede615f22354f84c50356e938fc33a6d41ca72e134d3be",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0377",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "360\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nTABLEAU 17.6 Posologie recommandée pour les antipsychotiques injectables IM – longue action\nNom scientique\nNom commercial\nDose IM approximative (mg)\nAdministration habituelle\nAntipsychotiques atypiques de 2e génération\nDoses faibles\nDoses fortes\nRispéridone\nRisperdal ConstaMD\n12,5\n25,0\n37,5\n50,0\nAux 2 semaines\nPalipéridone\nInvega SustennaMD\n50,0\n75,0\n100,0\n150,0\nAux 4 semaines\nAripiprazole\nAbilify MaintenaMD\n150,0\n200,0\n300,0\n400,0\nAux 4 semaines\nAntipsychotiques typiques, classiques de 1re génération (neuroleptiques)\nDoses faibles\nDoses fortes\nFluphénazine\nModecateMD\n12,5\n25,0\n37,5\n50,0\nAux 2, 3 ou 4 semaines\nFlupentixol\nFluanxol DepotMD\n20,0\n40,0\n60,0\n80,0\nAux 2, 3 ou 4 semaines\nPipothiazine\nPiportil L4MD\n50,0\n100,0\n150,0\n250,0\nAux 4 semaines\nHalopéridol\nHaldolMD*\n50,0\n100,0\n200,0\n300,0\nAux 4 semaines\nZuclopenthixol\nClopixol DepotMD\n100,0\n200,0\n300,0\n400,0\nAux 2, 3 ou 4 semaines\n* Haldol n’est plus disponible. Seul le générique, Halopéridol, l’est.\npas comment expliquer les eets indésirables qu’ils ressentent,\net ils cessent simplement leur médication.\nParmi les eets indésirables rencontrés, citons les plus fréquents\net ceux qui occasionnent le plus d’inconfort chez les patients :\n• la sédation : certains patients disent qu’ils se sentent « zombies » ;\n• le gain de poids et les troubles métaboliques (hyperglycémie,\ndyslipidémie), qui sont surtout occasionnés par certains an-\ntipsychotiques atypiques (en ordre décroissant : olanzapine >\nclozapine > quétiapine > rispéridone) ;\n• les eets atropiniques (anticholinergiques) : sécheresse de\nla bouche, constipation, vision embrouillée. Ces eets désa-\ngréables peuvent parfois être atténués par une modication\nde la diète ;\n• les troubles sexuels (en lien avec l’hyperprolactinémie et les\neets anticholinergiques) : galactorrhée, baisse de libido,\ntrouble érectile, anorgasmie, absence d’éjaculation ;\n• les eets cardiovasculaires : tachycardie, hypotension orthos-\ntatique, étourdissements ;\n• les eets extrapyramidaux : parkinsonisme (bradykinésie,\ntremblements, rigidité), dystonie, akathisie, surtout provoqués\npar les antipsychotiques typiques. Ils peuvent habituellement\nêtre corrigés en diminuant la dose de l’antipsychotique ou\nen ajoutant un anticholinergique antiparkinsonien (p. ex.,\nprocyclidine, diphenhydramine, surtout pour le parkinso-\nnisme) ou un β-bloquant (p. ex., propranolol surtout pour\nl’akathisie ou les tremblements) ;\n• la dyskinésie tardive : un trouble du mouvement qui apparaît\naprès plusieurs années (rarement quelques mois) d’utilisa-\ntion des neuroleptiques classiques. Elle est beaucoup moins\nfréquente avec les atypiques. La dyskinésie disparaît souvent\nquand on cesse ou diminue le neuroleptique. La clozapine\net la quétiapine ont un eet antidyskinétique en plus de leur\neet antipsychotique.\nLes effets indésirables des antipsychotiques sont présentés\nen détail au chapitre 68, à la section 68.6.\nPlusieurs facteurs de risque importants pour les maladies\ncardiovasculaires et pulmonaires (p. ex., sédentarité, tabagisme,\nobésité) sont liés à la schizophrénie, soit primairement à la maladie\n(p. ex., symptômes négatifs qui poussent le patient à adopter un\nmode de vie sédentaire), soit à son traitement pharmacologique.\nAvec le suicide, ces maladies sont responsables d’une réduction de\nl’espérance de vie de près de 20 ans chez les personnes atteintes\nde schizophrénie. Elles comptent pour 60 % du risque d’augmen-\ntation de mortalité, ce qui est deux fois plus élevé que dans la\npopulation générale. Et le risque d’avoir un syndrome métabolique\nest deux à trois fois plus élevé (Hennekens & al., 2005). De plus,\nles maladies physiques ne sont souvent pas recherchées avec\nbeaucoup d’attention et sont donc peu traitées. Tous les patients\nqui prennent une médication antipsychotique doivent donc être\ninformés, an de les prévenir des risques élevés de surpoids et\nde troubles métaboliques associés. Il est important d’orir des\nconseils nutritionnels visant à modier les habitudes alimentaires\net d’inciter les patients à augmenter l’activité physique (Chalfoun\n& al., 2014). Les interventions oertes devraient aussi inclure de\nl’aide pour l’abandon du tabagisme (p. ex., timbres ou gommes\nde nicotine, ligne téléphonique « J’arrête » 1-866-JARRETE). Il\nfaut cependant parfois changer d’antipsychotique et en prescrire\nun qui comporte moins de risque de syndrome métabolique.\ni\nUn supplément d’information sur le programme « J’arrête »\nest disponible au www.jarrete.qc.ca.\nÉtude de cas Pour illustrer l’utilisation clinique d’un antipsy-\nchotique à diérentes phases du traitement, prenons l’exemple\nd’un patient agité et halluciné qui arrive à l’urgence pour la\npremière fois.\nUne période d’observation de 24 à 48 heures sans médication\nantipsychotique est recommandée dans le cas d’un premier\n",
+  "raw_text_sha256": "2baa6033c3ddbb50c0e51a55ec5c2e4ea90e8af0ba0b785e16169c432e939569",
+  "source_page_display": 378,
+  "source_page_index": 377
+}

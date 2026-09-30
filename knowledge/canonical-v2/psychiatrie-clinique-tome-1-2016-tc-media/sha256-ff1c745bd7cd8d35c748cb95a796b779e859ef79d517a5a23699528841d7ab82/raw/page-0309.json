@@ -1,0 +1,148 @@
+{
+  "block_sequence_sha256": "6babcd98a8e435aa90b3bd93439689487e96e2eba46db52b22bb075c491a9c89",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        471.6627197265625,
+        758.8693237304688
+      ],
+      "block_id": "page-0309-block-0001",
+      "order": 1,
+      "text": "292\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2 Déterminants bio-psycho-sociaux\n",
+      "text_sha256": "07fa40e1f7ca4ee8668e061ff50c701e01212d2870d76d867a77f131c607c945"
+    },
+    {
+      "bbox": [
+        48.0,
+        39.63300704956055,
+        291.49090576171875,
+        385.45849609375
+      ],
+      "block_id": "page-0309-block-0002",
+      "order": 2,
+      "text": "Validité liée à un critère\nOn peut regrouper sous le terme de « validité liée à un critère »\n(criterion validity) un ensemble de techniques qui permettent\ntoutes d’étudier le pouvoir explicatif d’un instrument par l’exa-\nmen de ses relations avec d’autres mesures. La validité liée à un\ncritère comporte au moins quatre facettes :\n1. La validité prédictive se rapporte à la capacité d’une mesure\nprise aujourd’hui à prédire des phénomènes futurs. Par\nexemple, la validité des critères diagnostiques de la schizo-\nphrénie est étayée par la capacité de ce diagnostic à prédire des\nhandicaps de fonctionnement dans un avenir même lointain.\n2. La validité concourante (concurrent validity) est la qualité\nd’une mesure qui est corrélée avec le critère avec lequel elle\nest comparée, mesuré au même moment. Par exemple, la\nvalidité concourante d’une échelle de sévérité des symptômes\npsychiatriques est étayée par la démonstration qu’elle est\ncorrélée avec le niveau de fonctionnement.\n3. La validité convergente se rapporte au degré de corrélation\nentre deux mesures du même concept. Par exemple, la vali-\ndité d’une échelle de sévérité des symptômes dépressifs est\nétayée par la démonstration que cette échelle est fortement\ncorrélée avec l’échelle de Beck, utilisée depuis longtemps pour\ndéterminer la sévérité de tels symptômes.\n4. La validité divergente a trait à l’absence de corrélation entre\ndeux mesures de concepts opposés. Ainsi, on peut tâcher\nde distinguer les symptômes positifs et négatifs de la schi-\nzophrénie ; les analyses qui ne trouvent aucune corrélation\nentre les échelles mesurant ces deux dimensions soutiennent\nla validité divergente de ces deux concepts.\n",
+      "text_sha256": "62f3129a8a9012d91848b98da53bd1f6972fbc976b59b19ac39488fd52eae5ab"
+    },
+    {
+      "bbox": [
+        48.0,
+        396.3830261230469,
+        291.1690979003906,
+        491.45849609375
+      ],
+      "block_id": "page-0309-block-0003",
+      "order": 3,
+      "text": "Validité théorique (ou hypothéticodéductive)\nLa validité théorique (construct validity) se dénit comme la\nqualité d’une mesure qui est corrélée à d’autres mesures tel que\nprédit par la théorie. Par exemple, le concept de trouble aectif\nbipolaire présuppose qu’il est diérent de la schizophrénie. Ainsi,\ndes analyses étayent la validité théorique des critères du trouble\nbipolaire si elles établissent que, pour ces deux troubles, l’agré-\ngation familiale et le pronostic dièrent largement.\n",
+      "text_sha256": "171ddb92e9790e1523b00a19f156fa62d363b74d9029206e27091393d07ea873"
+    },
+    {
+      "bbox": [
+        48.0,
+        500.38299560546875,
+        291.27337646484375,
+        572.3085327148438
+      ],
+      "block_id": "page-0309-block-0004",
+      "order": 4,
+      "text": "Validité apparente\nLa validité apparente (face validity) est la qualité d’une mesure qui\ncontient les éléments généralement considérés comme propres\nau concept. Ainsi, les critères diagnostiques de la manie ont\nune validité apparente puisqu’ils recueillent le consensus des\npsychiatres quant aux manifestations de la manie.\n",
+      "text_sha256": "81bf2180d20095cdaf09b01dd445da7932d4bf70ff1405fd48fd081aa907fe02"
+    },
+    {
+      "bbox": [
+        48.0,
+        573.3658447265625,
+        291.3652648925781,
+        664.8085327148438
+      ],
+      "block_id": "page-0309-block-0005",
+      "order": 5,
+      "text": "Il est important de préciser que les évaluations de la délité\net de la validité d’un instrument donnent rarement des résultats\nparfaits et qu’il existe toujours une marge d’incertitude à ce\nsujet. Cette incertitude explique le grand nombre de recherches\nméthodologiques pour tester un même instrument de mesure.\nCe n’est souvent qu’après plusieurs années de recherche que la\ncommunauté scientique adopte une norme. L’histoire des DSM\nsuccessifs en est l’illustration sans équivoque.\n",
+      "text_sha256": "0140288e983fde8cdb6936aba91c84e60985c08b65cbc819ea198bb41e872935"
+    },
+    {
+      "bbox": [
+        48.0,
+        673.7330322265625,
+        291.1629333496094,
+        722.5585327148438
+      ],
+      "block_id": "page-0309-block-0006",
+      "order": 6,
+      "text": "Validité des diagnostics psychiatriques\nS’inspirant des concepts de validité liée à un critère et de validité\nthéorique, Robins & Guze (1970) ont établi cinq critères pour\ntester la validité des catégories diagnostiques en psychiatrie. Cette\n",
+      "text_sha256": "a78b141047802266d5a826d0bbea63b91d7a5a5840de21d2ef0b7117343d55f1"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.4017944335938,
+        327.3085021972656
+      ],
+      "block_id": "page-0309-block-0007",
+      "order": 7,
+      "text": "démarche est encore au centre de la nosologie psychiatrique\nactuelle. Le syndrome, quel qu’il soit, doit :\n1. Donner lieu à des manifestations cliniques bien caractérisées.\nPar exemple, il existe une longue tradition concernant la\ndescription des principales manifestations de la manie, telles\nl’euphorie, la logorrhée et l’agitation.\n2. Présenter des marqueurs biologiques distincts. Ce critère est\nrarement satisfait dans le cas des troubles psychiatriques, pour\nlesquels peu de marqueurs biologiques sont fermement établis.\n3. Avoir une délimitation claire par rapport à d’autres maladies,\nd’où la nécessité de critères d’exclusion. Par exemple, les psy-\nchoses dues à l’abus de drogues ne sont pas comprises dans\nle diagnostic de schizophrénie.\n4. Avoir une stabilité longitudinale et permettre de prédire\nl’évolution des personnes atteintes. Plusieurs études ont établi\nque le diagnostic de schizophrénie présente un haut degré\nde stabilité longitudinale et ont montré que les personnes\natteintes de schizophrénie sourent généralement de handi-\ncaps sociaux persistants.\n5. Présenter une agrégation familiale. Ainsi, de nombreuses\nétudes familiales ont montré que les maladies affectives\nsont plus fréquentes chez les proches des patients sourant\nde troubles aectifs et que la schizophrénie est plus fréquente\nchez les proches de personnes atteintes de schizophrénie.\n",
+      "text_sha256": "e0360f21e10ba22bbe8eac37062677d172795ae34c47e319451e4b26ecff9432"
+    },
+    {
+      "bbox": [
+        313.0,
+        348.3931579589844,
+        520.92578125,
+        367.5689392089844
+      ],
+      "block_id": "page-0309-block-0008",
+      "order": 8,
+      "text": "14.2\nÉpidémiologie descriptive\n",
+      "text_sha256": "300254e5b7bf915e3cd1ef28922996331a12b5c3c5f19f5ae3604c2fab5a05e9"
+    },
+    {
+      "bbox": [
+        306.0,
+        381.4658203125,
+        549.0970458984375,
+        438.15850830078125
+      ],
+      "block_id": "page-0309-block-0009",
+      "order": 9,
+      "text": "L’épidémiologie descriptive examine la fréquence des maladies\ndans la population. Ces données rendent possible une quantica-\ntion de l’état de santé de la population et facilitent la planication\ndes services de santé. Il est essentiel de diérencier les concepts\nd’incidence et de prévalence.\n",
+      "text_sha256": "471545edba787f0411fd30de319931f2fd916c827b2fc5ee426432438f844d1b"
+    },
+    {
+      "bbox": [
+        306.0,
+        449.7868347167969,
+        399.87493896484375,
+        465.9294128417969
+      ],
+      "block_id": "page-0309-block-0010",
+      "order": 10,
+      "text": "14.2.1 Incidence\n",
+      "text_sha256": "db2a649887ed468846a1c90e1dbb969b2c25142a4d87813d9660fa147a9fe2cc"
+    },
+    {
+      "bbox": [
+        306.0,
+        469.3158264160156,
+        549.378173828125,
+        722.5585327148438
+      ],
+      "block_id": "page-0309-block-0011",
+      "order": 11,
+      "text": "Le taux d’incidence, qui est le taux le plus informatif et recherché\nen épidémiologie, est calculé en divisant le nombre de nouveaux\ncas d’une maladie apparus au sein d’une population donnée pen-\ndant une période déterminée par le nombre de personnes-année\nà risque. La notion de « personnes-année à risque » se traduit\npar une valeur numérique qu’on obtient en additionnant la\ndurée d’observation pour chaque sujet. Elle permet de prendre\nen considération simultanément le nombre de participants à\nl’étude et le temps pendant lequel ils ont été observés. Ainsi, un\npatient qui a été observé pendant un an ajoute une personne-\nannée ; il ajoute deux personnes-année s’il a été observé pendant\ndeux ans, et ainsi de suite. Quant à la notion de personnes à\nrisque, elle correspond aux patients qui sont suivis au cours de\nl’étude, pour des durées qui peuvent varier selon les diverses\nmaladies ; ces personnes sont saines au début de l’étude, mais\nelles sont susceptibles de connaître un nouvel épisode de la\nmaladie considérée (de novo). En vertu de cette dénition, une\npersonne à risque ne présente pas nécessairement un risque\naccru d’avoir la maladie par rapport au reste de la population,\nbien que certaines études d’incidence ciblent des populations\nà risque accru (p. ex., des études sur l’incidence des maladies\ncardiaques chez les hommes de 40 ans et plus).\n",
+      "text_sha256": "e3d4f00af97c21c6e784a3c0ce62ae112c9c1e7cc288344a4cb11f98a86475fc"
+    }
+  ],
+  "coordinates_sha256": "078e0f7a9ff19bd5909be639437d0c83a38315747882c6dc39473bf44b45e833",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0309",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "292\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2 Déterminants bio-psycho-sociaux\nValidité liée à un critère\nOn peut regrouper sous le terme de « validité liée à un critère »\n(criterion validity) un ensemble de techniques qui permettent\ntoutes d’étudier le pouvoir explicatif d’un instrument par l’exa-\nmen de ses relations avec d’autres mesures. La validité liée à un\ncritère comporte au moins quatre facettes :\n1. La validité prédictive se rapporte à la capacité d’une mesure\nprise aujourd’hui à prédire des phénomènes futurs. Par\nexemple, la validité des critères diagnostiques de la schizo-\nphrénie est étayée par la capacité de ce diagnostic à prédire des\nhandicaps de fonctionnement dans un avenir même lointain.\n2. La validité concourante (concurrent validity) est la qualité\nd’une mesure qui est corrélée avec le critère avec lequel elle\nest comparée, mesuré au même moment. Par exemple, la\nvalidité concourante d’une échelle de sévérité des symptômes\npsychiatriques est étayée par la démonstration qu’elle est\ncorrélée avec le niveau de fonctionnement.\n3. La validité convergente se rapporte au degré de corrélation\nentre deux mesures du même concept. Par exemple, la vali-\ndité d’une échelle de sévérité des symptômes dépressifs est\nétayée par la démonstration que cette échelle est fortement\ncorrélée avec l’échelle de Beck, utilisée depuis longtemps pour\ndéterminer la sévérité de tels symptômes.\n4. La validité divergente a trait à l’absence de corrélation entre\ndeux mesures de concepts opposés. Ainsi, on peut tâcher\nde distinguer les symptômes positifs et négatifs de la schi-\nzophrénie ; les analyses qui ne trouvent aucune corrélation\nentre les échelles mesurant ces deux dimensions soutiennent\nla validité divergente de ces deux concepts.\nValidité théorique (ou hypothéticodéductive)\nLa validité théorique (construct validity) se dénit comme la\nqualité d’une mesure qui est corrélée à d’autres mesures tel que\nprédit par la théorie. Par exemple, le concept de trouble aectif\nbipolaire présuppose qu’il est diérent de la schizophrénie. Ainsi,\ndes analyses étayent la validité théorique des critères du trouble\nbipolaire si elles établissent que, pour ces deux troubles, l’agré-\ngation familiale et le pronostic dièrent largement.\nValidité apparente\nLa validité apparente (face validity) est la qualité d’une mesure qui\ncontient les éléments généralement considérés comme propres\nau concept. Ainsi, les critères diagnostiques de la manie ont\nune validité apparente puisqu’ils recueillent le consensus des\npsychiatres quant aux manifestations de la manie.\nIl est important de préciser que les évaluations de la délité\net de la validité d’un instrument donnent rarement des résultats\nparfaits et qu’il existe toujours une marge d’incertitude à ce\nsujet. Cette incertitude explique le grand nombre de recherches\nméthodologiques pour tester un même instrument de mesure.\nCe n’est souvent qu’après plusieurs années de recherche que la\ncommunauté scientique adopte une norme. L’histoire des DSM\nsuccessifs en est l’illustration sans équivoque.\nValidité des diagnostics psychiatriques\nS’inspirant des concepts de validité liée à un critère et de validité\nthéorique, Robins & Guze (1970) ont établi cinq critères pour\ntester la validité des catégories diagnostiques en psychiatrie. Cette\ndémarche est encore au centre de la nosologie psychiatrique\nactuelle. Le syndrome, quel qu’il soit, doit :\n1. Donner lieu à des manifestations cliniques bien caractérisées.\nPar exemple, il existe une longue tradition concernant la\ndescription des principales manifestations de la manie, telles\nl’euphorie, la logorrhée et l’agitation.\n2. Présenter des marqueurs biologiques distincts. Ce critère est\nrarement satisfait dans le cas des troubles psychiatriques, pour\nlesquels peu de marqueurs biologiques sont fermement établis.\n3. Avoir une délimitation claire par rapport à d’autres maladies,\nd’où la nécessité de critères d’exclusion. Par exemple, les psy-\nchoses dues à l’abus de drogues ne sont pas comprises dans\nle diagnostic de schizophrénie.\n4. Avoir une stabilité longitudinale et permettre de prédire\nl’évolution des personnes atteintes. Plusieurs études ont établi\nque le diagnostic de schizophrénie présente un haut degré\nde stabilité longitudinale et ont montré que les personnes\natteintes de schizophrénie sourent généralement de handi-\ncaps sociaux persistants.\n5. Présenter une agrégation familiale. Ainsi, de nombreuses\nétudes familiales ont montré que les maladies affectives\nsont plus fréquentes chez les proches des patients sourant\nde troubles aectifs et que la schizophrénie est plus fréquente\nchez les proches de personnes atteintes de schizophrénie.\n14.2\nÉpidémiologie descriptive\nL’épidémiologie descriptive examine la fréquence des maladies\ndans la population. Ces données rendent possible une quantica-\ntion de l’état de santé de la population et facilitent la planication\ndes services de santé. Il est essentiel de diérencier les concepts\nd’incidence et de prévalence.\n14.2.1 Incidence\nLe taux d’incidence, qui est le taux le plus informatif et recherché\nen épidémiologie, est calculé en divisant le nombre de nouveaux\ncas d’une maladie apparus au sein d’une population donnée pen-\ndant une période déterminée par le nombre de personnes-année\nà risque. La notion de « personnes-année à risque » se traduit\npar une valeur numérique qu’on obtient en additionnant la\ndurée d’observation pour chaque sujet. Elle permet de prendre\nen considération simultanément le nombre de participants à\nl’étude et le temps pendant lequel ils ont été observés. Ainsi, un\npatient qui a été observé pendant un an ajoute une personne-\nannée ; il ajoute deux personnes-année s’il a été observé pendant\ndeux ans, et ainsi de suite. Quant à la notion de personnes à\nrisque, elle correspond aux patients qui sont suivis au cours de\nl’étude, pour des durées qui peuvent varier selon les diverses\nmaladies ; ces personnes sont saines au début de l’étude, mais\nelles sont susceptibles de connaître un nouvel épisode de la\nmaladie considérée (de novo). En vertu de cette dénition, une\npersonne à risque ne présente pas nécessairement un risque\naccru d’avoir la maladie par rapport au reste de la population,\nbien que certaines études d’incidence ciblent des populations\nà risque accru (p. ex., des études sur l’incidence des maladies\ncardiaques chez les hommes de 40 ans et plus).\n",
+  "raw_text_sha256": "ae91d5c615dd78b678a0697b171be5863f00fe5fc176db5190759428439a9c6b",
+  "source_page_display": 310,
+  "source_page_index": 309
+}

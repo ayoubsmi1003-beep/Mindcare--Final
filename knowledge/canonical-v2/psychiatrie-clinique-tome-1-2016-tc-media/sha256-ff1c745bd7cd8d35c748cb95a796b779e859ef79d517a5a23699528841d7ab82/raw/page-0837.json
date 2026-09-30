@@ -1,0 +1,280 @@
+{
+  "block_sequence_sha256": "656c83ae4f5c79d1fcbbfd06e00424d08be476a4c9619c58fcf51347016ab39c",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0837-block-0001",
+      "order": 1,
+      "text": "820\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "692898105214824ac2096cc27665c943d8e244dd2d5863c4250e92446a0e37f1"
+    },
+    {
+      "bbox": [
+        50.0,
+        392.55230712890625,
+        415.3482360839844,
+        404.8700866699219
+      ],
+      "block_id": "page-0837-block-0002",
+      "order": 2,
+      "text": "TABLEAU 35.9 Fantaisies ou comportements masochistes et leurs contreparties sadiques\n",
+      "text_sha256": "1b53ebe3953e1b3ccf124fda3b897b7e31ff77846f528085b123f045d4d37152"
+    },
+    {
+      "bbox": [
+        95.20000457763672,
+        408.0741271972656,
+        251.345947265625,
+        418.6502990722656
+      ],
+      "block_id": "page-0837-block-0003",
+      "order": 3,
+      "text": "Fantaisies ou comportements masochistes\n",
+      "text_sha256": "8040e728568164d17872c21291107de1b4c4f05f732b84c07529dbf0519269da"
+    },
+    {
+      "bbox": [
+        118.70000457763672,
+        418.0741271972656,
+        227.90408325195312,
+        428.6502990722656
+      ],
+      "block_id": "page-0837-block-0004",
+      "order": 4,
+      "text": "(être soumis, humilié, souffrir)\n",
+      "text_sha256": "e77c4a82b4d3cbaaeddfe9e4cfa1ad58a04b20ac4d3397ce02a7902229c46042"
+    },
+    {
+      "bbox": [
+        352.0,
+        408.0741271972656,
+        494.94879150390625,
+        418.6502990722656
+      ],
+      "block_id": "page-0837-block-0005",
+      "order": 5,
+      "text": "Fantaisies ou comportements sadiques\n",
+      "text_sha256": "ec2f2f498d4434c47fc9f4c8d8e161ed3963b4ae5b3be83dd6e9cf1905600c79"
+    },
+    {
+      "bbox": [
+        365.1499938964844,
+        418.0741271972656,
+        481.8541564941406,
+        428.6502990722656
+      ],
+      "block_id": "page-0837-block-0006",
+      "order": 6,
+      "text": "(dominer, humilier, faire souffrir)\n",
+      "text_sha256": "ac171bd0b037107279bee327659a120cd2b8b4e009dc69118755661c3425d3f3"
+    },
+    {
+      "bbox": [
+        52.25,
+        432.9228515625,
+        213.74627685546875,
+        490.828125
+      ],
+      "block_id": "page-0837-block-0007",
+      "order": 7,
+      "text": "Être humilié :\n• Être soumis à des injures\n• Être forcé de marcher à quatre pattes\n• Être forcé de revêtir des habits du sexe opposé\n• Se faire uriner ou déféquer sur soi\n",
+      "text_sha256": "0646867d1c7a768fe8568f0b3a1c1538eaa2b815167d7225166871dedc92bad7"
+    },
+    {
+      "bbox": [
+        302.25,
+        432.9228515625,
+        471.5483703613281,
+        490.828125
+      ],
+      "block_id": "page-0837-block-0008",
+      "order": 8,
+      "text": "Humilier :\n• Injurier l’autre\n• Forcer l’autre à marcher à quatre pattes\n• Forcer l’autre à revêtir des habits du sexe opposé\n• Uriner ou déféquer sur l’autre\n",
+      "text_sha256": "86ed2813d667d17702130a935c439a1023e3579d685894a2177f6338997f9953"
+    },
+    {
+      "bbox": [
+        52.25,
+        497.37286376953125,
+        421.7770080566406,
+        519.2781372070312
+      ],
+      "block_id": "page-0837-block-0009",
+      "order": 9,
+      "text": "Subir une contrainte sensorielle :\n• Avoir les yeux bandés\nIniger une contrainte sensorielle :\n• Bander les yeux\n",
+      "text_sha256": "571e46ed47e97aa93d5d3ac3fdcc96416e261e5e2e0d02f118c00847d3812427"
+    },
+    {
+      "bbox": [
+        52.25,
+        525.7728881835938,
+        205.40811157226562,
+        583.6781616210938
+      ],
+      "block_id": "page-0837-block-0010",
+      "order": 10,
+      "text": "Subir une contrainte physique :\n• Être bâillonné\n• Être limité dans ses mouvements ou entravé\n• Être ligoté (bondage)\n• Être enfermé dans une cage\n",
+      "text_sha256": "e36b2a32b99e6141327b8c9b90553f688e40301117ffae9dc32c9c4041f09dea"
+    },
+    {
+      "bbox": [
+        302.25,
+        525.7728881835938,
+        464.72967529296875,
+        583.6781616210938
+      ],
+      "block_id": "page-0837-block-0011",
+      "order": 11,
+      "text": "Iniger une contrainte physique :\n• Bâillonner l’autre\n• Limiter les mouvements de l’autre ou l’entraver\n• Ligoter l’autre (bondage)\n• Enfermer l’autre dans une cage\n",
+      "text_sha256": "c824ddbebf69657873a6b3bb763593dc538f82c482b93ca4f7a562aa96ed426d"
+    },
+    {
+      "bbox": [
+        52.25,
+        590.2228393554688,
+        237.58929443359375,
+        708.1281127929688
+      ],
+      "block_id": "page-0837-block-0012",
+      "order": 12,
+      "text": "Subir une douleur physique :\n• Être pincé\n• Être frappé avec une baguette\n• Recevoir des fessées, être fouetté (agellation), battu\n• Être violé\n• Être transpercé\n• Être torturé, brûlé\n• Être coupé, recevoir des coups de couteau, être mutilé\n• Recevoir des décharges électriques\n• Être étranglé, être tué\n",
+      "text_sha256": "82ca28f8145685f19bbc637db5f4951b896141cb827579acd45e9d7371db27ba"
+    },
+    {
+      "bbox": [
+        302.25,
+        590.2228393554688,
+        491.10150146484375,
+        708.1281127929688
+      ],
+      "block_id": "page-0837-block-0013",
+      "order": 13,
+      "text": "Iniger une douleur physique :\n• Pincer l’autre\n• Frapper l’autre avec une baguette\n• Donner des fessées, fouetter (agellation), battre l’autre\n• Violer l’autre\n• Transpercer\n• Torturer, brûler l’autre\n• Couper, donner des coups de couteau, mutiler l’autre\n• Administrer des décharges électriques\n• Étrangler, tuer l’autre\n",
+      "text_sha256": "02b2e9ed2ad2ced032fabb062aca3ff085c28126126d8e86f5d6a43886ca6da7"
+    },
+    {
+      "bbox": [
+        48.25,
+        715.890625,
+        138.14016723632812,
+        724.7588500976562
+      ],
+      "block_id": "page-0837-block-0014",
+      "order": 14,
+      "text": "Source : Adapté de APA (2015).\n",
+      "text_sha256": "10c618e9758e00322778f24a7119d87f58804a6778570287350175b6d51f9c9c"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.9658203125,
+        290.7840270996094,
+        63.80849838256836
+      ],
+      "block_id": "page-0837-block-0015",
+      "order": 15,
+      "text": "consentants ou des victimes non consentantes et, dans les deux\ncas, c’est la sourance de l’autre qui est sexuellement excitante.\n",
+      "text_sha256": "e5b831dfe2e0c491f088771b578694f508a87b6b043ffcc9a054120f519a9fa8"
+    },
+    {
+      "bbox": [
+        48.0,
+        65.7158203125,
+        291.22705078125,
+        187.7584991455078
+      ],
+      "block_id": "page-0837-block-0016",
+      "order": 16,
+      "text": "Il importe de distinguer le viol du sadisme sexuel. Ces deux\nsituations ont en commun de la violence, de la cruauté et une indif-\nférence envers la sourance de la victime, mais leurs motivations\nsont diérentes. Les violeurs utilisent la violence pour forcer la\ncoopération de leur victime, pour exprimer de l’agression ou les\ndeux. Dans le trouble de sadisme sexuel, la violence, la domina-\ntion et l’iniction de douleur et d’humiliation sont une condition\npréférée ou nécessaire de l’excitation sexuelle. Seule une petite\nproportion des violeurs répondent aux critères diagnostiques du\ntrouble de sadisme sexuel (Frances & Wollert, 2012).\n",
+      "text_sha256": "db3a933e105153353f3bcbd5a516c4d20545473c072f5e26365a39d3241e493f"
+    },
+    {
+      "bbox": [
+        48.0,
+        189.61582946777344,
+        291.420654296875,
+        375.20849609375
+      ],
+      "block_id": "page-0837-block-0017",
+      "order": 17,
+      "text": "Bien qu’elles ne soient pas mentionnées dans les critères\ndiagnostiques du DSM-5, on reconnaît diérentes particularités\ndu sadisme sexuel :\n• l’abasiophilie : excitation par les individus à mobilité réduite ;\n• l’acrotomophilie : excitation par un partenaire amputé ;\n• l’agalmatophilie : excitation par les statues, les mannequins\net l’immobilité ;\n• la somnophilie : excitation par les individus endormis\nou inconscients ;\n• la forniphilie : excitation en forçant un humain à être un\nobjet inerte (p. ex., un meuble) ;\n• la salirophilie : excitation en souillant ou salissant les autres ;\n• la dacryphilie ou dacrylagnie : excitation par les larmes ou les\npleurs ;\n",
+      "text_sha256": "7bf93211c5849b5120b1ec2a0f69ba07e687a48278b02f470706462e50ba29e4"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.2610473632812,
+        202.70849609375
+      ],
+      "block_id": "page-0837-block-0018",
+      "order": 18,
+      "text": "• le vampirisme : excitation vis-à-vis du sang ou ce qui est\nassocié au sang ;\n• le dippoldisme : excitation par la fessée ou les châtiments\ncorporels inigés aux enfants ;\n• le zoosadisme : excitation en voyant sourir ou en faisant\nsourir un animal ;\n• la symphorophilie : excitation en assistant à ou en causant des\naccidents ou des catastrophes ;\n• l’érotophonophilie : excitation par la mort d’un être humain,\nle meurtre.\nLes critères diagnostiques du trouble de sadisme sexuel selon\nle DSM-5 et le DSM-IV-TR gurent au tableau 35.8 (voir la\npage précédente).\n",
+      "text_sha256": "9783a0cdd01960a1e16b0483312d0841d3f0aaf267cf984cb7300fde7010b421"
+    },
+    {
+      "bbox": [
+        306.0,
+        203.9658203125,
+        549.0704345703125,
+        249.7584991455078
+      ],
+      "block_id": "page-0837-block-0019",
+      "order": 19,
+      "text": "Le diagnostic diérentiel est à faire avec le trouble de la per-\nsonnalité antisociale, le trouble de masochisme sexuel, l’hyper-\nsexualité et les troubles d’utilisation de substances. Les aections\ncomorbides comprennent les autres troubles paraphiliques.\n",
+      "text_sha256": "3af3d797cd8a42495e701ddae304eb223005c441193b6697144582e3b5658493"
+    },
+    {
+      "bbox": [
+        306.0,
+        251.06582641601562,
+        549.3001098632812,
+        273.3085021972656
+      ],
+      "block_id": "page-0837-block-0020",
+      "order": 20,
+      "text": "Le tableau 35.9 recense un certain nombre de fantaisies ou de\ncomportements masochistes ainsi que leurs contreparties sadiques.\n",
+      "text_sha256": "b54dfc288d9036b292e2f1f5935fbd23b9331159e708f5473b81c9ad80e8049d"
+    },
+    {
+      "bbox": [
+        306.0,
+        284.1368103027344,
+        448.6315002441406,
+        300.2793884277344
+      ],
+      "block_id": "page-0837-block-0021",
+      "order": 21,
+      "text": "35.4.9 Autres paraphilies\n",
+      "text_sha256": "89588f5ae72141c479f14a8532e551c0dbd6f2e42f09cd2b0a495c37ad9b6ce6"
+    },
+    {
+      "bbox": [
+        306.0,
+        303.8658142089844,
+        549.2063598632812,
+        375.20849609375
+      ],
+      "block_id": "page-0837-block-0022",
+      "order": 22,
+      "text": "Cette catégorie regroupe des paraphilies qui ne répondent aux\ncritères d’aucune des catégories ci-haut et que l’on observe plus\nrarement. De façon non exhaustive, le DSM-5 fait mention de\ndiérents exemples d’excitation sexuelle auxquels on peut ajouter :\n• la scatologie téléphonique : appels téléphoniques obscènes\nparticulièrement à des étrangers ;\n",
+      "text_sha256": "7cb109145bda6d52305a7ca70eec1a6b0f22d3d2d1d4865eecb5f01096913008"
+    }
+  ],
+  "coordinates_sha256": "2520c91296459a567a33f8040f1fbfb80d9746da811ea811f0110561127e5d81",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0837",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "820\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nTABLEAU 35.9 Fantaisies ou comportements masochistes et leurs contreparties sadiques\nFantaisies ou comportements masochistes\n(être soumis, humilié, souffrir)\nFantaisies ou comportements sadiques\n(dominer, humilier, faire souffrir)\nÊtre humilié :\n• Être soumis à des injures\n• Être forcé de marcher à quatre pattes\n• Être forcé de revêtir des habits du sexe opposé\n• Se faire uriner ou déféquer sur soi\nHumilier :\n• Injurier l’autre\n• Forcer l’autre à marcher à quatre pattes\n• Forcer l’autre à revêtir des habits du sexe opposé\n• Uriner ou déféquer sur l’autre\nSubir une contrainte sensorielle :\n• Avoir les yeux bandés\nIniger une contrainte sensorielle :\n• Bander les yeux\nSubir une contrainte physique :\n• Être bâillonné\n• Être limité dans ses mouvements ou entravé\n• Être ligoté (bondage)\n• Être enfermé dans une cage\nIniger une contrainte physique :\n• Bâillonner l’autre\n• Limiter les mouvements de l’autre ou l’entraver\n• Ligoter l’autre (bondage)\n• Enfermer l’autre dans une cage\nSubir une douleur physique :\n• Être pincé\n• Être frappé avec une baguette\n• Recevoir des fessées, être fouetté (agellation), battu\n• Être violé\n• Être transpercé\n• Être torturé, brûlé\n• Être coupé, recevoir des coups de couteau, être mutilé\n• Recevoir des décharges électriques\n• Être étranglé, être tué\nIniger une douleur physique :\n• Pincer l’autre\n• Frapper l’autre avec une baguette\n• Donner des fessées, fouetter (agellation), battre l’autre\n• Violer l’autre\n• Transpercer\n• Torturer, brûler l’autre\n• Couper, donner des coups de couteau, mutiler l’autre\n• Administrer des décharges électriques\n• Étrangler, tuer l’autre\nSource : Adapté de APA (2015).\nconsentants ou des victimes non consentantes et, dans les deux\ncas, c’est la sourance de l’autre qui est sexuellement excitante.\nIl importe de distinguer le viol du sadisme sexuel. Ces deux\nsituations ont en commun de la violence, de la cruauté et une indif-\nférence envers la sourance de la victime, mais leurs motivations\nsont diérentes. Les violeurs utilisent la violence pour forcer la\ncoopération de leur victime, pour exprimer de l’agression ou les\ndeux. Dans le trouble de sadisme sexuel, la violence, la domina-\ntion et l’iniction de douleur et d’humiliation sont une condition\npréférée ou nécessaire de l’excitation sexuelle. Seule une petite\nproportion des violeurs répondent aux critères diagnostiques du\ntrouble de sadisme sexuel (Frances & Wollert, 2012).\nBien qu’elles ne soient pas mentionnées dans les critères\ndiagnostiques du DSM-5, on reconnaît diérentes particularités\ndu sadisme sexuel :\n• l’abasiophilie : excitation par les individus à mobilité réduite ;\n• l’acrotomophilie : excitation par un partenaire amputé ;\n• l’agalmatophilie : excitation par les statues, les mannequins\net l’immobilité ;\n• la somnophilie : excitation par les individus endormis\nou inconscients ;\n• la forniphilie : excitation en forçant un humain à être un\nobjet inerte (p. ex., un meuble) ;\n• la salirophilie : excitation en souillant ou salissant les autres ;\n• la dacryphilie ou dacrylagnie : excitation par les larmes ou les\npleurs ;\n• le vampirisme : excitation vis-à-vis du sang ou ce qui est\nassocié au sang ;\n• le dippoldisme : excitation par la fessée ou les châtiments\ncorporels inigés aux enfants ;\n• le zoosadisme : excitation en voyant sourir ou en faisant\nsourir un animal ;\n• la symphorophilie : excitation en assistant à ou en causant des\naccidents ou des catastrophes ;\n• l’érotophonophilie : excitation par la mort d’un être humain,\nle meurtre.\nLes critères diagnostiques du trouble de sadisme sexuel selon\nle DSM-5 et le DSM-IV-TR gurent au tableau 35.8 (voir la\npage précédente).\nLe diagnostic diérentiel est à faire avec le trouble de la per-\nsonnalité antisociale, le trouble de masochisme sexuel, l’hyper-\nsexualité et les troubles d’utilisation de substances. Les aections\ncomorbides comprennent les autres troubles paraphiliques.\nLe tableau 35.9 recense un certain nombre de fantaisies ou de\ncomportements masochistes ainsi que leurs contreparties sadiques.\n35.4.9 Autres paraphilies\nCette catégorie regroupe des paraphilies qui ne répondent aux\ncritères d’aucune des catégories ci-haut et que l’on observe plus\nrarement. De façon non exhaustive, le DSM-5 fait mention de\ndiérents exemples d’excitation sexuelle auxquels on peut ajouter :\n• la scatologie téléphonique : appels téléphoniques obscènes\nparticulièrement à des étrangers ;\n",
+  "raw_text_sha256": "e40b7e475b0e267e03b545c960755cd11d37f0604ca373581b0addf7d5417a33",
+  "source_page_display": 838,
+  "source_page_index": 837
+}

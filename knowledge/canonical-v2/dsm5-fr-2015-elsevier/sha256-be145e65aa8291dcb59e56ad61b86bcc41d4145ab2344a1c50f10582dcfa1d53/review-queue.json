@@ -1,0 +1,27 @@
+{
+  "book_id": "dsm5-fr-2015-elsevier",
+  "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+  "queue": [
+    {
+      "priority": "P0",
+      "code": "human-medical-review",
+      "reason": "Automated gates PASS; clinical validation by the doctor required before any activation."
+    },
+    {
+      "priority": "P1",
+      "code": "coverage-only-pages",
+      "reason": "411 full-text fallback pages remain; 4534 new atoms added this pass, coverage fallbacks retained for provenance.",
+      "unit_ids": "see units.jsonl extraction_status=coverage_only"
+    },
+    {
+      "priority": "P1",
+      "code": "tables",
+      "reason": "102/121 tables need layout/meaning review (table-review.json); 19 structurally clean."
+    },
+    {
+      "priority": "P1",
+      "code": "xrefs",
+      "reason": "297 truncated/ambiguous xrefs kept unresolved; 69 resolved this pass."
+    }
+  ]
+}

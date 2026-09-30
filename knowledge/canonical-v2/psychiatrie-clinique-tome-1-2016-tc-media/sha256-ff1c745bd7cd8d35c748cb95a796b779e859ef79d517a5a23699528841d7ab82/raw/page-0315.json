@@ -1,0 +1,184 @@
+{
+  "block_sequence_sha256": "749471d8ce3faf7068b547c38b8226409952453106e48ccb114d386ad10f1294",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        471.6627197265625,
+        758.8693237304688
+      ],
+      "block_id": "page-0315-block-0001",
+      "order": 1,
+      "text": "298\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2 Déterminants bio-psycho-sociaux\n",
+      "text_sha256": "98dcc3be53b56309713fcebc1b62d8f35d238fdf3943a78ba15c2795b39ecc8f"
+    },
+    {
+      "bbox": [
+        313.0,
+        44.4931640625,
+        542.2938842773438,
+        63.6689453125
+      ],
+      "block_id": "page-0315-block-0002",
+      "order": 2,
+      "text": "14.4\nÉpidémiologie expérimentale\n",
+      "text_sha256": "ca1bf2c2d908069d7383e6d3d084aa163fc59266d7c6c960117680da875bcbda"
+    },
+    {
+      "bbox": [
+        306.0,
+        77.4658203125,
+        549.4498291015625,
+        156.95849609375
+      ],
+      "block_id": "page-0315-block-0003",
+      "order": 3,
+      "text": "Dans les études expérimentales, tout comme dans les études\nde cohorte, les sujets sont sélectionnés selon qu’ils ont été\nexposés ou non à un facteur de risque ou qu’ils sont l’objet de\nl’expérimentation. À la diérence des études de cohorte, dans\nles études expérimentales, c’est le chercheur qui décide à quelle\nintervention le patient sera soumis. On distingue deux types\nd’études expérimentales.\n",
+      "text_sha256": "274bf97e2e0e7bc1849bc1ab61289a916c8bd1af6d7a0a2018dc72c8ffd47c0f"
+    },
+    {
+      "bbox": [
+        306.0,
+        167.48681640625,
+        512.6474609375,
+        183.62939453125
+      ],
+      "block_id": "page-0315-block-0004",
+      "order": 4,
+      "text": "14.4.1 Études de prévention primaire\n",
+      "text_sha256": "1f3764796862ff6119ab92b97178327a6ea7fe1688ee6e0c79b9a0cc862f4e0d"
+    },
+    {
+      "bbox": [
+        306.0,
+        186.9658203125,
+        549.5144653320312,
+        266.45849609375
+      ],
+      "block_id": "page-0315-block-0005",
+      "order": 5,
+      "text": "Dans les études de prévention primaire, on évalue l’ecacité d’une\nintervention visant à prévenir l’apparition d’une maladie chez des\nsujets exempts de cette maladie. Le but de l’épidémiologie est la\nprévention des maladies. Sans connaissances exactes quant aux\ncauses des maladies, les programmes de prévention risquent de\nreposer sur de bonnes intentions ou sur des intérêts politiques,\nsans que l’ecacité ne soit démontrée.\n",
+      "text_sha256": "febffde404e4e906522b8a8ac857830892ddfedf353a4f50bbe9bb302555b83f"
+    },
+    {
+      "bbox": [
+        306.0,
+        267.4658203125,
+        549.4487915039062,
+        519.45849609375
+      ],
+      "block_id": "page-0315-block-0006",
+      "order": 6,
+      "text": "Le lien entre les connaissances relatives à l’étiologie et les\nprogrammes de prévention est illustré par les maladies cardio-\nvasculaires. En eet, les études épidémiologiques incriminant\nle tabagisme en tant que facteur de risque dans de nombreuses\nmaladies ont permis d’élaborer des programmes d’intervention\nvisant à réduire le tabagisme et d’évaluer l’ecacité de ces mesures\nqui ont d’importantes répercussions sur la santé de la population.\nEn psychiatrie, compte tenu des limites des connaissances quant\nà l’étiologie des troubles mentaux, il est plus dicile d’élaborer\ndes programmes de prévention primaire, une situation que les\nprogrès à venir en recherche étiologique pourront corriger en\nfournissant des bases plus solides à de tels programmes. Par\nexemple, on sait aujourd’hui que même les troubles psychotiques\ngraves comme la schizophrénie ne relèvent pas strictement de\ncauses génétiques, puisque certaines personnes présentant une\nvulnérabilité génétique ne développent pas la maladie, ce qui\nsignie que des facteurs environnementaux épigénétiques inter-\nviennent dans l’expression de cette vulnérabilité (Rivollier & al.,\n2014), mais qu’ils sont pour le moment mal connus. Ainsi, en\nélucidant la pathophysiologie de la schizophrénie, les recherches\ngénétiques permettront de mieux comprendre l’interaction entre\nles facteurs génétiques et les facteurs environnementaux.\n",
+      "text_sha256": "feb1af24e8e701bc898ad62d3a2baa479f881107a136463e180ab03cfc43f859"
+    },
+    {
+      "bbox": [
+        306.0,
+        529.98681640625,
+        471.63043212890625,
+        546.12939453125
+      ],
+      "block_id": "page-0315-block-0007",
+      "order": 7,
+      "text": "14.4.2 Études thérapeutiques\n",
+      "text_sha256": "224f18918102b7fad5173207cc3951f24fb87e47a7bff8d1574e3d06cdfb945f"
+    },
+    {
+      "bbox": [
+        306.0,
+        549.4658203125,
+        549.3361206054688,
+        724.95849609375
+      ],
+      "block_id": "page-0315-block-0008",
+      "order": 8,
+      "text": "Les études thérapeutiques visent à évaluer l’ecacité et les eets\nindésirables des interventions proposées aux patients en vue d’at-\nténuer les symptômes par un traitement (prévention secondaire)\nou à réduire les eets d’une maladie sur leur fonctionnement\n(prévention tertiaire). Dans un contexte de rationalisation des\nchoix budgétaires, les interventions cliniques sont de plus en\nplus sujettes à évaluation. Puisque la validité de l’évaluation d’un\ntraitement repose sur plusieurs aspects, il importe :\n• de constituer un groupe de comparaison approprié. Le plus\nsouvent, il s’agit d’un autre groupe dont les patients sont\ntraités selon une autre modalité ou reçoivent un agent inactif\n(placebo) ; parfois, il s’agit du patient lui-même auquel on\nadministre successivement le traitement actif puis le placebo ;\n• d’éviter des biais de sélection, c’est-à-dire de veiller à ce que\nles patients soient recrutés et répartis de façon aléatoire\n",
+      "text_sha256": "4d2cec321779e362f605addd11c6242615c6ad2cce12e4cae6a39990bf74b2bd"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.9658203125,
+        291.20220947265625,
+        122.40850067138672
+      ],
+      "block_id": "page-0315-block-0009",
+      "order": 9,
+      "text": "possible que des mères d’enfants atteints de schizophrénie soient\nportées à se rappeler leur accouchement avec plus de détails\nlorsqu’elles sont questionnées sur leur histoire obstétricale, car\nelles cherchent une explication aux problèmes de leur enfant. À\nl’inverse, dans une étude de cohorte prospective, la mesure des\ncomplications périnatales est obtenue avant que la schizophrénie\nne se manifeste, prévenant ainsi le risque de biais d’information.\n",
+      "text_sha256": "f21112fb626484af55e163513160f4d044f7c58e309fd38b55a3d5856faa91da"
+    },
+    {
+      "bbox": [
+        48.0,
+        128.602294921875,
+        291.5478515625,
+        270.7585144042969
+      ],
+      "block_id": "page-0315-block-0010",
+      "order": 10,
+      "text": "Impact de la fréquence de la maladie et de l’exposition\nLes études cas-témoins sont plus ecaces, c’est-à-dire qu’elles\norent une puissance statistique plus élevée, lorsqu’il s’agit de\nmaladies rares (p. ex., la schizophrénie, dont le risque est de 1 %\ndans la population générale). En eet, si une étude de cohorte\nporte sur une maladie rare, il faut considérer un très grand nombre\nde cas pour conclure à la présence ou non d’une association\nentre l’exposition au facteur de risque et la maladie. À l’opposé,\nlorsque le pourcentage de personnes exposées est faible dans la\npopulation (p. ex., exposition à des métaux lourds dans certaines\nindustries), une telle association risque de ne pas être révélée par\nune étude cas-témoins.\n",
+      "text_sha256": "ab8cb9b911a2c8a0a2f4a94e36f430755446b4380f978083baeb0160d7eda146"
+    },
+    {
+      "bbox": [
+        48.0,
+        277.0022888183594,
+        291.2748718261719,
+        456.15850830078125
+      ],
+      "block_id": "page-0315-block-0011",
+      "order": 11,
+      "text": "Conséquences multiples d’un seul facteur de risque\nou facteurs de risques multiples d’une seule maladie\nLes études de cohorte sont appropriées pour étudier les consé-\nquences multiples d’un seul facteur de risque. Par exemple, une\nétude de cohorte comparant des enfants dont les parents sont\ndivorcés peut s’intéresser aux conséquences du divorce en ce qui\nconcerne divers diagnostics psychiatriques, la qualité de vie ou\nla satisfaction dans les relations interpersonnelles. À l’opposé,\nles études cas-témoins permettent d’étudier l’association entre\nplusieurs facteurs de risque et une maladie unique. Par exemple,\nune étude cas-témoins comparant des patients sourant de\ndépression majeure à des personnes non déprimées permet\nd’examiner simultanément le rôle de plusieurs facteurs, tels que\nla perte d’un parent en bas âge et d’autres événements stressants\ncomme la perte d’un emploi.\n",
+      "text_sha256": "6b9131cecd46cd267893cfd5c5b473e884802ba2517c8412ac2f57d46361997c"
+    },
+    {
+      "bbox": [
+        48.0,
+        462.352294921875,
+        291.210205078125,
+        509.95849609375
+      ],
+      "block_id": "page-0315-block-0012",
+      "order": 12,
+      "text": "Coût\nLes études cas-témoins sont généralement moins coûteuses\nque les études de cohorte et il est plus facile de constituer des\ngroupes de recherche.\n",
+      "text_sha256": "4506bbc61311ce80ab908bfc6d40910315621102110999f4eabb618cfc72ce0b"
+    },
+    {
+      "bbox": [
+        48.0,
+        516.1522827148438,
+        291.2290344238281,
+        612.5585327148438
+      ],
+      "block_id": "page-0315-block-0013",
+      "order": 13,
+      "text": "Chronologie des facteurs de risque par rapport\nà la survenue de la maladie\nLes études de cohorte facilitent l’évaluation de la chronologie\ndes facteurs de risque par rapport à celle de la maladie. En eet,\ndans les études de cohorte, les facteurs de risque sont mesurés\navant le début de la maladie, alors que, dans les études cas- témoins,\nles facteurs de risque sont mesurés rétrospectivement, après\nl’éclosion de la maladie.\n",
+      "text_sha256": "e237e587f4137dc33244aa6193621a897c9f60b087e67e8d661951c1802e93e2"
+    },
+    {
+      "bbox": [
+        48.0,
+        618.7523193359375,
+        291.38287353515625,
+        725.45849609375
+      ],
+      "block_id": "page-0315-block-0014",
+      "order": 14,
+      "text": "Maladies ayant une longue période de latence\nLes études cas-témoins sont plus avantageuses que les études\nde cohorte lorsqu’il s’agit de maladies ayant une longue période de\nlatence, c’est-à-dire lorsqu’il y a un long délai entre l’exposition\naux facteurs de risque et le début de la maladie. Ainsi, une étude\nde cohorte portant sur la relation entre les complications périna-\ntales et la schizophrénie nécessite un suivi complexe et coûteux\npendant quelques décennies, étant donné que la schizophrénie\nse manifeste fréquemment dans la vingtaine.\n",
+      "text_sha256": "9dbe160ed6cb8a136e1869a59ca3efe14d782c0b681c125321c89f73be2c80db"
+    }
+  ],
+  "coordinates_sha256": "f5b6a61b19685e309c0717428c5e1cd6f1fc2a2924e333bc31b54b16d9eda7fe",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0315",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "298\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2 Déterminants bio-psycho-sociaux\n14.4\nÉpidémiologie expérimentale\nDans les études expérimentales, tout comme dans les études\nde cohorte, les sujets sont sélectionnés selon qu’ils ont été\nexposés ou non à un facteur de risque ou qu’ils sont l’objet de\nl’expérimentation. À la diérence des études de cohorte, dans\nles études expérimentales, c’est le chercheur qui décide à quelle\nintervention le patient sera soumis. On distingue deux types\nd’études expérimentales.\n14.4.1 Études de prévention primaire\nDans les études de prévention primaire, on évalue l’ecacité d’une\nintervention visant à prévenir l’apparition d’une maladie chez des\nsujets exempts de cette maladie. Le but de l’épidémiologie est la\nprévention des maladies. Sans connaissances exactes quant aux\ncauses des maladies, les programmes de prévention risquent de\nreposer sur de bonnes intentions ou sur des intérêts politiques,\nsans que l’ecacité ne soit démontrée.\nLe lien entre les connaissances relatives à l’étiologie et les\nprogrammes de prévention est illustré par les maladies cardio-\nvasculaires. En eet, les études épidémiologiques incriminant\nle tabagisme en tant que facteur de risque dans de nombreuses\nmaladies ont permis d’élaborer des programmes d’intervention\nvisant à réduire le tabagisme et d’évaluer l’ecacité de ces mesures\nqui ont d’importantes répercussions sur la santé de la population.\nEn psychiatrie, compte tenu des limites des connaissances quant\nà l’étiologie des troubles mentaux, il est plus dicile d’élaborer\ndes programmes de prévention primaire, une situation que les\nprogrès à venir en recherche étiologique pourront corriger en\nfournissant des bases plus solides à de tels programmes. Par\nexemple, on sait aujourd’hui que même les troubles psychotiques\ngraves comme la schizophrénie ne relèvent pas strictement de\ncauses génétiques, puisque certaines personnes présentant une\nvulnérabilité génétique ne développent pas la maladie, ce qui\nsignie que des facteurs environnementaux épigénétiques inter-\nviennent dans l’expression de cette vulnérabilité (Rivollier & al.,\n2014), mais qu’ils sont pour le moment mal connus. Ainsi, en\nélucidant la pathophysiologie de la schizophrénie, les recherches\ngénétiques permettront de mieux comprendre l’interaction entre\nles facteurs génétiques et les facteurs environnementaux.\n14.4.2 Études thérapeutiques\nLes études thérapeutiques visent à évaluer l’ecacité et les eets\nindésirables des interventions proposées aux patients en vue d’at-\nténuer les symptômes par un traitement (prévention secondaire)\nou à réduire les eets d’une maladie sur leur fonctionnement\n(prévention tertiaire). Dans un contexte de rationalisation des\nchoix budgétaires, les interventions cliniques sont de plus en\nplus sujettes à évaluation. Puisque la validité de l’évaluation d’un\ntraitement repose sur plusieurs aspects, il importe :\n• de constituer un groupe de comparaison approprié. Le plus\nsouvent, il s’agit d’un autre groupe dont les patients sont\ntraités selon une autre modalité ou reçoivent un agent inactif\n(placebo) ; parfois, il s’agit du patient lui-même auquel on\nadministre successivement le traitement actif puis le placebo ;\n• d’éviter des biais de sélection, c’est-à-dire de veiller à ce que\nles patients soient recrutés et répartis de façon aléatoire\npossible que des mères d’enfants atteints de schizophrénie soient\nportées à se rappeler leur accouchement avec plus de détails\nlorsqu’elles sont questionnées sur leur histoire obstétricale, car\nelles cherchent une explication aux problèmes de leur enfant. À\nl’inverse, dans une étude de cohorte prospective, la mesure des\ncomplications périnatales est obtenue avant que la schizophrénie\nne se manifeste, prévenant ainsi le risque de biais d’information.\nImpact de la fréquence de la maladie et de l’exposition\nLes études cas-témoins sont plus ecaces, c’est-à-dire qu’elles\norent une puissance statistique plus élevée, lorsqu’il s’agit de\nmaladies rares (p. ex., la schizophrénie, dont le risque est de 1 %\ndans la population générale). En eet, si une étude de cohorte\nporte sur une maladie rare, il faut considérer un très grand nombre\nde cas pour conclure à la présence ou non d’une association\nentre l’exposition au facteur de risque et la maladie. À l’opposé,\nlorsque le pourcentage de personnes exposées est faible dans la\npopulation (p. ex., exposition à des métaux lourds dans certaines\nindustries), une telle association risque de ne pas être révélée par\nune étude cas-témoins.\nConséquences multiples d’un seul facteur de risque\nou facteurs de risques multiples d’une seule maladie\nLes études de cohorte sont appropriées pour étudier les consé-\nquences multiples d’un seul facteur de risque. Par exemple, une\nétude de cohorte comparant des enfants dont les parents sont\ndivorcés peut s’intéresser aux conséquences du divorce en ce qui\nconcerne divers diagnostics psychiatriques, la qualité de vie ou\nla satisfaction dans les relations interpersonnelles. À l’opposé,\nles études cas-témoins permettent d’étudier l’association entre\nplusieurs facteurs de risque et une maladie unique. Par exemple,\nune étude cas-témoins comparant des patients sourant de\ndépression majeure à des personnes non déprimées permet\nd’examiner simultanément le rôle de plusieurs facteurs, tels que\nla perte d’un parent en bas âge et d’autres événements stressants\ncomme la perte d’un emploi.\nCoût\nLes études cas-témoins sont généralement moins coûteuses\nque les études de cohorte et il est plus facile de constituer des\ngroupes de recherche.\nChronologie des facteurs de risque par rapport\nà la survenue de la maladie\nLes études de cohorte facilitent l’évaluation de la chronologie\ndes facteurs de risque par rapport à celle de la maladie. En eet,\ndans les études de cohorte, les facteurs de risque sont mesurés\navant le début de la maladie, alors que, dans les études cas- témoins,\nles facteurs de risque sont mesurés rétrospectivement, après\nl’éclosion de la maladie.\nMaladies ayant une longue période de latence\nLes études cas-témoins sont plus avantageuses que les études\nde cohorte lorsqu’il s’agit de maladies ayant une longue période de\nlatence, c’est-à-dire lorsqu’il y a un long délai entre l’exposition\naux facteurs de risque et le début de la maladie. Ainsi, une étude\nde cohorte portant sur la relation entre les complications périna-\ntales et la schizophrénie nécessite un suivi complexe et coûteux\npendant quelques décennies, étant donné que la schizophrénie\nse manifeste fréquemment dans la vingtaine.\n",
+  "raw_text_sha256": "8953d8077f89dbe1296dbf1e8415508a7a776fdb94546c4f0e80f07f433a4e6c",
+  "source_page_display": 316,
+  "source_page_index": 315
+}

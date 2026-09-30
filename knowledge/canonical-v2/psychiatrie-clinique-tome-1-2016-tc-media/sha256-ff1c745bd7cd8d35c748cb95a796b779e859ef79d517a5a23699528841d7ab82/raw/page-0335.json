@@ -1,0 +1,184 @@
+{
+  "block_sequence_sha256": "fceb137b0eba864dd3213d5904c369ca2df1aeb7e8b7d708c730a428c90b26c7",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0335-block-0001",
+      "order": 1,
+      "text": "318\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "179d2aaab46feecf53bc0f03b6c3289f01e955d5b718f39d982449f486bb6747"
+    },
+    {
+      "bbox": [
+        313.0,
+        43.893165588378906,
+        488.1440734863281,
+        63.068946838378906
+      ],
+      "block_id": "page-0335-block-0002",
+      "order": 2,
+      "text": "16.5\nVariété diagnostique\n",
+      "text_sha256": "94d94008c3167e859c6499e7f48cc40956dcb4b88bf8762813b00c792a900fc1"
+    },
+    {
+      "bbox": [
+        306.0,
+        76.9658203125,
+        549.1466674804688,
+        99.0584945678711
+      ],
+      "block_id": "page-0335-block-0003",
+      "order": 3,
+      "text": "Il faut spécier le thème délirant dominant. Le DSM-5 dénit six\nvariétés diagnostiques, qui sont énumérées ci-dessous.\n",
+      "text_sha256": "8316acc86e8d3d92c3031279180ebf5d7bc5170cc123beb71dcda824af319b9c"
+    },
+    {
+      "bbox": [
+        306.0,
+        109.73681640625,
+        457.5782470703125,
+        125.87939453125
+      ],
+      "block_id": "page-0335-block-0004",
+      "order": 4,
+      "text": "16.5.1 Type de persécution\n",
+      "text_sha256": "7832f22205a02ce688b8f7cae4797ceeaf4c6dc778bc093d49cb444cc26db735"
+    },
+    {
+      "bbox": [
+        306.0,
+        129.31582641601562,
+        549.45654296875,
+        325.65850830078125
+      ],
+      "block_id": "page-0335-block-0005",
+      "order": 5,
+      "text": "Aussi appelé « état paranoïde », « psychose paranoïde », « paraphré-\nnie », « délire de persécution », « délire de revendication », « délire\ndes sensitifs », « paranoïa litigieuse ou quérulente », le type\npersécuteur est la forme délirante la plus fréquente. Le patient\nest convaincu que lui ou l’un de ses proches est traité de façon\nmalveillante. Il perçoit une conspiration, des escroqueries, une\nsurveillance à son égard. Les autres pensent qu’il est homosexuel.\nIl craint d’être empoisonné ou drogué. Il se sent harcelé. On\nveut lui voler ses idées. On l’empêche de réaliser ses projets.\nCes patients peuvent itérativement porter à l’attention des auto-\nrités policières les malversations dont ils se sentent l’objet. Ils\ndeviennent amers, revendicateurs, irritables, agressifs et parfois\nmême violents envers ceux qu’ils perçoivent comme des persé-\ncuteurs. Contrairement au délire paranoïde de la schizophrénie\nqui est irréaliste et bizarre, le thème délirant persécuteur est\nélaboré de façon claire, systématique, reposant sur une certaine\nlogique idiosyncrasique.\n",
+      "text_sha256": "a4f70a6f612ea36f2cb4586d10d4b99397ad4be6cac4772654406c86795db017"
+    },
+    {
+      "bbox": [
+        306.0,
+        326.7658386230469,
+        549.5231323242188,
+        476.65850830078125
+      ],
+      "block_id": "page-0335-block-0006",
+      "order": 6,
+      "text": "Plusieurs délires portent sur des erreurs d’identication des\npersonnes ou des fausses reconnaissances ; ils peuvent accompa-\ngner le trouble délirant, mais aussi la schizophrénie, la dépres-\nsion et la maladie d’Alzheimer. Le thème délirant du syndrome\nde Capgras (délire des sosies) porte sur la conviction qu’une\npersonne a été remplacée par un double presque identique,\nmais malveillant, qu’un proche a été changé en quelqu’un qui\nlui ressemble, un sosie ou un imposteur. Dans le syndrome de\nFrégoli, le patient est convaincu que ses persécuteurs ont modié\nleur apparence faciale pour ressembler à des personnes de son\nentourage. Dans le délire des doubles subjectifs, le patient croit\nque des doubles identiques à lui existent ou qu’il habite dans le\ncorps de quelqu’un d’autre.\n",
+      "text_sha256": "fa75b7392d76ef83a3513d38e4fa0b80c925393eea00c8e5a073481ca2ecb6e4"
+    },
+    {
+      "bbox": [
+        306.0,
+        487.2868347167969,
+        434.6153259277344,
+        503.4294128417969
+      ],
+      "block_id": "page-0335-block-0007",
+      "order": 7,
+      "text": "16.5.2 Type somatique\n",
+      "text_sha256": "eb4e4f977cb4326114f1722671ff1a3781acfeadec5f222e85fc39409238acd9"
+    },
+    {
+      "bbox": [
+        306.0,
+        506.8658447265625,
+        549.0175170898438,
+        633.5585327148438
+      ],
+      "block_id": "page-0335-block-0008",
+      "order": 8,
+      "text": "Le type somatique est aussi appelé « psychose hypocondriaque »,\n« trouble somatodysmorphique » ou « parasitophobie » dans la\nlittérature psychiatrique. Le patient est convaincu d’être porteur\nd’une maladie grave ou que certains de ses organes (p. ex., ses\nintestins) ne fonctionnent plus. Ou encore, il est convaincu\nde dégager des odeurs nauséabondes par la peau, la bouche,\nle rectum ou le vagin. Il croit que des insectes ou des vers se\npromènent sous ou sur sa peau, que des parasites habitent son\ncorps (infestation). Il peut parfois même les dessiner. Il arrive\nqu’il se pince la peau pour les écraser aboutissant à une derma-\ntillomanie (skin picking).\n",
+      "text_sha256": "f3b62c3815546fb5b52dd78a3c612c4ec0643939d63037aa4b78e7da755337b0"
+    },
+    {
+      "bbox": [
+        306.0,
+        634.6658325195312,
+        549.3262939453125,
+        714.8585205078125
+      ],
+      "block_id": "page-0335-block-0009",
+      "order": 9,
+      "text": "Le thème délirant du syndrome de Cotard a pour objet la\ndétérioration, le pourrissement et même la disparition de divers\norganes à l’intérieur du corps (délire nihiliste). Les patients de ce\ntype consultent fréquemment divers médecins (autres que les\npsychiatres) pour obtenir une investigation ou un traitement de\nleur trouble qu’ils considèrent comme physique et non mental.\nComme dans l’hypocondrie, où le patient interprète la moindre\n",
+      "text_sha256": "1ca4a0f5902f6a0505b086fe22d58ddcf772f6f07ad2e28432b8d5e61897ba11"
+    },
+    {
+      "bbox": [
+        55.0,
+        43.893165588378906,
+        225.2013702392578,
+        63.068946838378906
+      ],
+      "block_id": "page-0335-block-0010",
+      "order": 10,
+      "text": "16.4\nDescription clinique\n",
+      "text_sha256": "5d141201d51515b2aec8dd9d1486f2a8813640d45eddae7883abf1a789293a9e"
+    },
+    {
+      "bbox": [
+        48.0,
+        76.8658218383789,
+        291.5757751464844,
+        453.8584899902344
+      ],
+      "block_id": "page-0335-block-0011",
+      "order": 11,
+      "text": "Le symptôme central du trouble délirant consiste en un délire\nrelativement plausible, présenté de façon claire par un patient\nconvaincu et même convaincant. Le médecin doit parfois eec-\ntuer une investigation plus poussée avant de conclure qu’il ne\ns’agit pas d’une situation réelle, mais bien d’un délire. En eet,\ncontrairement à la schizophrénie où le délire est bizarre, dans\nle trouble délirant, le délire est plausible, car il se rapporte à des\nsituations de la vie quotidienne, bien qu’on s’aperçoive assez\nfacilement que les déductions et conclusions du patient sont\nplutôt excessives et improbables. Les éléments de dénition\nd’un délire comportent une conviction erronée, irréductible par\nla logique et non conforme aux croyances de son groupe, plus\nspéciquement :\n• une conviction : pas seulement une croyance ou une opinion ;\n• des conclusions erronées : il faut parfois vérier auprès de\nl’entourage pour conclure que l’interprétation du patient est\nfausse ;\n• un raisonnement irréductible par la logique : ce n’est pas en\nprésentant des preuves qu’on peut convaincre un patient\ndélirant de ses erreurs de raisonnement. En fait, il se sent\nalors plutôt incompris, étant persuadé d’avoir raison, et peut\ndevenir méant, arrogant ou hostile, ou bien se renfermer ;\n• des croyances non conformes à celles de son groupe : l’individu\nqui partage les croyances d’une religion, d’une secte, d’une\nidéologie de groupe n’est pas délirant, sauf si les membres de\nce groupe même reconnaissent qu’il va beaucoup plus loin\nqu’eux dans ses convictions. Il y a donc un aspect idiosyncra-\nsique dans le délire, basé sur les perceptions et les déductions\npersonnelles du malade.\nLe tableau 16.2 présente une comparaison des critères diagnos-\ntiques du trouble délirant selon le DSM-5 et le DSM-IV-TR. On\nvoit qu’il y a eu peu de modications entre ces deux publications.\n",
+      "text_sha256": "bafe71cc746953372c508df21e55471adddd0f2c82bca794d62bd5e4a6959371"
+    },
+    {
+      "bbox": [
+        48.0,
+        454.8658142089844,
+        291.2530212402344,
+        522.8585205078125
+      ],
+      "block_id": "page-0335-block-0012",
+      "order": 12,
+      "text": "Il faut un bon sens clinique pour constater qu’un délire est\nune amplication irréaliste de situations vécues, comparative-\nment à un autre qui est bizarre, c’est-à-dire invraisemblable,\nincompréhensible, non associé à des expériences de vie possibles.\nParfois, des récits peuvent sembler farfelus tout en reposant sur\ndes éléments de réalité.\n",
+      "text_sha256": "880f8dc4af02f94965b6f3a6149734d38eac19131bfde74ddb8c96c654bceb5f"
+    },
+    {
+      "bbox": [
+        48.0,
+        523.8658447265625,
+        291.3099365234375,
+        603.3585205078125
+      ],
+      "block_id": "page-0335-block-0013",
+      "order": 13,
+      "text": "S’il survient des hallucinations auditives ou visuelles, elles ne\nsont pas envahissantes. En fait, la présence fréquente d’halluci-\nnations est incompatible avec le diagnostic de trouble délirant et\noriente plutôt vers celui de schizophrénie. Mais des hallucinations\ntactiles ou olfactives, même fréquentes, en lien avec un délire\nsomatique d’infestation (parasitose d’Ekbom) ou de putréfaction\nn’excluent pas un diagnostic de trouble délirant.\n",
+      "text_sha256": "28d85edc5e649077532dd518eb70344719e34acdff8c14aae112fbc567143136"
+    },
+    {
+      "bbox": [
+        48.0,
+        604.3658447265625,
+        291.1663818359375,
+        714.8585205078125
+      ],
+      "block_id": "page-0335-block-0014",
+      "order": 14,
+      "text": "Le délire est par ailleurs teinté par la culture du patient :\n• un Blanc nord-américain se sent surveillé par un système\nélectronique (micro, caméra), la police (FBI, CIA, GRC) ou\nla pègre ;\n• un Noir haïtien a plus souvent l’impression d’être menacé par\nles esprits et les inuences vaudou ;\n• un Inuit craint d’être attaqué par un ours blanc ;\n• un Maghrébin peut croire qu’on cherche à l’empoisonner ou\nque des djinns lui ont jeté un mauvais sort.\n",
+      "text_sha256": "785153517c86d9d5590ed832b760397f09a78ebaadc810b69907595c53366998"
+    }
+  ],
+  "coordinates_sha256": "b94d650ae555d1cb0125d9dd7b8985a7c6f42e99c50e985095643b17fc0712c2",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0335",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "318\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n16.5\nVariété diagnostique\nIl faut spécier le thème délirant dominant. Le DSM-5 dénit six\nvariétés diagnostiques, qui sont énumérées ci-dessous.\n16.5.1 Type de persécution\nAussi appelé « état paranoïde », « psychose paranoïde », « paraphré-\nnie », « délire de persécution », « délire de revendication », « délire\ndes sensitifs », « paranoïa litigieuse ou quérulente », le type\npersécuteur est la forme délirante la plus fréquente. Le patient\nest convaincu que lui ou l’un de ses proches est traité de façon\nmalveillante. Il perçoit une conspiration, des escroqueries, une\nsurveillance à son égard. Les autres pensent qu’il est homosexuel.\nIl craint d’être empoisonné ou drogué. Il se sent harcelé. On\nveut lui voler ses idées. On l’empêche de réaliser ses projets.\nCes patients peuvent itérativement porter à l’attention des auto-\nrités policières les malversations dont ils se sentent l’objet. Ils\ndeviennent amers, revendicateurs, irritables, agressifs et parfois\nmême violents envers ceux qu’ils perçoivent comme des persé-\ncuteurs. Contrairement au délire paranoïde de la schizophrénie\nqui est irréaliste et bizarre, le thème délirant persécuteur est\nélaboré de façon claire, systématique, reposant sur une certaine\nlogique idiosyncrasique.\nPlusieurs délires portent sur des erreurs d’identication des\npersonnes ou des fausses reconnaissances ; ils peuvent accompa-\ngner le trouble délirant, mais aussi la schizophrénie, la dépres-\nsion et la maladie d’Alzheimer. Le thème délirant du syndrome\nde Capgras (délire des sosies) porte sur la conviction qu’une\npersonne a été remplacée par un double presque identique,\nmais malveillant, qu’un proche a été changé en quelqu’un qui\nlui ressemble, un sosie ou un imposteur. Dans le syndrome de\nFrégoli, le patient est convaincu que ses persécuteurs ont modié\nleur apparence faciale pour ressembler à des personnes de son\nentourage. Dans le délire des doubles subjectifs, le patient croit\nque des doubles identiques à lui existent ou qu’il habite dans le\ncorps de quelqu’un d’autre.\n16.5.2 Type somatique\nLe type somatique est aussi appelé « psychose hypocondriaque »,\n« trouble somatodysmorphique » ou « parasitophobie » dans la\nlittérature psychiatrique. Le patient est convaincu d’être porteur\nd’une maladie grave ou que certains de ses organes (p. ex., ses\nintestins) ne fonctionnent plus. Ou encore, il est convaincu\nde dégager des odeurs nauséabondes par la peau, la bouche,\nle rectum ou le vagin. Il croit que des insectes ou des vers se\npromènent sous ou sur sa peau, que des parasites habitent son\ncorps (infestation). Il peut parfois même les dessiner. Il arrive\nqu’il se pince la peau pour les écraser aboutissant à une derma-\ntillomanie (skin picking).\nLe thème délirant du syndrome de Cotard a pour objet la\ndétérioration, le pourrissement et même la disparition de divers\norganes à l’intérieur du corps (délire nihiliste). Les patients de ce\ntype consultent fréquemment divers médecins (autres que les\npsychiatres) pour obtenir une investigation ou un traitement de\nleur trouble qu’ils considèrent comme physique et non mental.\nComme dans l’hypocondrie, où le patient interprète la moindre\n16.4\nDescription clinique\nLe symptôme central du trouble délirant consiste en un délire\nrelativement plausible, présenté de façon claire par un patient\nconvaincu et même convaincant. Le médecin doit parfois eec-\ntuer une investigation plus poussée avant de conclure qu’il ne\ns’agit pas d’une situation réelle, mais bien d’un délire. En eet,\ncontrairement à la schizophrénie où le délire est bizarre, dans\nle trouble délirant, le délire est plausible, car il se rapporte à des\nsituations de la vie quotidienne, bien qu’on s’aperçoive assez\nfacilement que les déductions et conclusions du patient sont\nplutôt excessives et improbables. Les éléments de dénition\nd’un délire comportent une conviction erronée, irréductible par\nla logique et non conforme aux croyances de son groupe, plus\nspéciquement :\n• une conviction : pas seulement une croyance ou une opinion ;\n• des conclusions erronées : il faut parfois vérier auprès de\nl’entourage pour conclure que l’interprétation du patient est\nfausse ;\n• un raisonnement irréductible par la logique : ce n’est pas en\nprésentant des preuves qu’on peut convaincre un patient\ndélirant de ses erreurs de raisonnement. En fait, il se sent\nalors plutôt incompris, étant persuadé d’avoir raison, et peut\ndevenir méant, arrogant ou hostile, ou bien se renfermer ;\n• des croyances non conformes à celles de son groupe : l’individu\nqui partage les croyances d’une religion, d’une secte, d’une\nidéologie de groupe n’est pas délirant, sauf si les membres de\nce groupe même reconnaissent qu’il va beaucoup plus loin\nqu’eux dans ses convictions. Il y a donc un aspect idiosyncra-\nsique dans le délire, basé sur les perceptions et les déductions\npersonnelles du malade.\nLe tableau 16.2 présente une comparaison des critères diagnos-\ntiques du trouble délirant selon le DSM-5 et le DSM-IV-TR. On\nvoit qu’il y a eu peu de modications entre ces deux publications.\nIl faut un bon sens clinique pour constater qu’un délire est\nune amplication irréaliste de situations vécues, comparative-\nment à un autre qui est bizarre, c’est-à-dire invraisemblable,\nincompréhensible, non associé à des expériences de vie possibles.\nParfois, des récits peuvent sembler farfelus tout en reposant sur\ndes éléments de réalité.\nS’il survient des hallucinations auditives ou visuelles, elles ne\nsont pas envahissantes. En fait, la présence fréquente d’halluci-\nnations est incompatible avec le diagnostic de trouble délirant et\noriente plutôt vers celui de schizophrénie. Mais des hallucinations\ntactiles ou olfactives, même fréquentes, en lien avec un délire\nsomatique d’infestation (parasitose d’Ekbom) ou de putréfaction\nn’excluent pas un diagnostic de trouble délirant.\nLe délire est par ailleurs teinté par la culture du patient :\n• un Blanc nord-américain se sent surveillé par un système\nélectronique (micro, caméra), la police (FBI, CIA, GRC) ou\nla pègre ;\n• un Noir haïtien a plus souvent l’impression d’être menacé par\nles esprits et les inuences vaudou ;\n• un Inuit craint d’être attaqué par un ours blanc ;\n• un Maghrébin peut croire qu’on cherche à l’empoisonner ou\nque des djinns lui ont jeté un mauvais sort.\n",
+  "raw_text_sha256": "29d113c400cb7e75a3aff2f1ddb37946fcdc514dc07680b2a84eb1f48c479a31",
+  "source_page_display": 336,
+  "source_page_index": 335
+}

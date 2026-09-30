@@ -1,0 +1,832 @@
+{
+  "block_sequence_sha256": "989b9b4686c13f869711032608c4389811a4e59a5e358b2c92cb1cebf061a4ec",
+  "blocks": [
+    {
+      "bbox": [
+        476.20001220703125,
+        747.5753784179688,
+        555.0199584960938,
+        758.8693237304688
+      ],
+      "block_id": "page-1112-block-0001",
+      "order": 1,
+      "text": "Références\nR15\n",
+      "text_sha256": "7d986b5b8100f3cac0d07a288c0bfeca9a54d7f94f8fef7b7c1591cd62e0a196"
+    },
+    {
+      "bbox": [
+        396.0,
+        40.68496322631836,
+        535.9175415039062,
+        57.923439025878906
+      ],
+      "block_id": "page-1112-block-0002",
+      "order": 2,
+      "text": "study of 535 incident cases », The Bristish Journal of\nPsychiatry, 187, p. 510-515.\n",
+      "text_sha256": "a1c97b6e7e46a52ad53aa716f1771353c95354f3a110297d84352a701854083b"
+    },
+    {
+      "bbox": [
+        396.0,
+        61.5849609375,
+        546.9548950195312,
+        87.8734359741211
+      ],
+      "block_id": "page-1112-block-0003",
+      "order": 3,
+      "text": "Axelrod, B. N. & Goldman, R. S. (1994). « Factor structure of\nthe negative symptom assessment », Psychiatry Research,\n52, p. 173-179.\n",
+      "text_sha256": "ac50e8a60fb4197951d180cf0aa66f0abfd96cf568be0980957c295a82966e9a"
+    },
+    {
+      "bbox": [
+        396.0,
+        91.53496551513672,
+        549.0850219726562,
+        117.8734359741211
+      ],
+      "block_id": "page-1112-block-0004",
+      "order": 4,
+      "text": "Becker, D. R. & al. (2006). Le modèle Individual Placement\nand Support (IPS) du soutien en emploi, Belgique,\nSocrate-Réhabilitation.\n",
+      "text_sha256": "2bdc72bf1b4e39c949c098619b1a42e758659555ddf4eb6d1f8966a1707bc70d"
+    },
+    {
+      "bbox": [
+        396.0,
+        121.53495788574219,
+        544.7625122070312,
+        147.8234405517578
+      ],
+      "block_id": "page-1112-block-0005",
+      "order": 5,
+      "text": "Bourque, F. & al. (2011). « A meta-analysis of the risk for\npsychotic disorders among rst- and second-generation\nimmigrants », Psychological Medicine, 41, p. 897-910.\n",
+      "text_sha256": "3cea21b64892338ac3e3eeb86ff0357a8f4b1cf8683ccaa1481a13b9aa8d0674"
+    },
+    {
+      "bbox": [
+        396.0,
+        151.48497009277344,
+        555.2478637695312,
+        177.7734375
+      ],
+      "block_id": "page-1112-block-0006",
+      "order": 6,
+      "text": "Bowie, C. R. & Harvey, P. D. (2005). « Cognition in schizophrenia :\nimpairments, determinants, and functional importance »,\nPsychiatric Clinics of North America, 28(3), p. 613-633.\n",
+      "text_sha256": "9c52298f8c6fafb087bb91a02d122bf4c7c5259e1e96fce7ccff699fc3ea2175"
+    },
+    {
+      "bbox": [
+        396.0,
+        181.43496704101562,
+        551.7074584960938,
+        207.7234344482422
+      ],
+      "block_id": "page-1112-block-0007",
+      "order": 7,
+      "text": "Brown, A.S. & Susser, E.S. (2008). « Prenatal nutritional\ndeciency and risk of adult schizophrenia », Schizophr Bull,\n34(6), p. 1054-1063.\n",
+      "text_sha256": "bd60a02e22a1151c0fcf7946acdf0588e699d0410d08e21c9f5eceb0f361c547"
+    },
+    {
+      "bbox": [
+        396.0,
+        211.3849639892578,
+        551.7075805664062,
+        237.67344665527344
+      ],
+      "block_id": "page-1112-block-0008",
+      "order": 8,
+      "text": "Cannon, T. D. & al. (2008). «Prediction of psychosis in\nhigh-risk youth : A multi-site longitudinal study in North\nAmerica », Archives of General Psychiatry, 65(1), p. 28-37.\n",
+      "text_sha256": "448f2160e90ca266e2329fc34daac8b8b3ed696235cac516e7625f431a4cc67d"
+    },
+    {
+      "bbox": [
+        396.0,
+        241.3349609375,
+        554.5175170898438,
+        267.6234436035156
+      ],
+      "block_id": "page-1112-block-0009",
+      "order": 9,
+      "text": "Caplan, R. (1994). « Thought Disorder in Childhood », Journal\nof the American Academy of Child & Adolescent Psychiatry,\n33(5), p. 605-615.\n",
+      "text_sha256": "165d32d2d5448bf76b265913f4277240d73ee2e76ba6fec004f8f26a1eda1136"
+    },
+    {
+      "bbox": [
+        396.0,
+        271.28497314453125,
+        550.1625366210938,
+        306.6734313964844
+      ],
+      "block_id": "page-1112-block-0010",
+      "order": 10,
+      "text": "Chalfoun, C. & al. (2014). « Amélioration de la santé\ncardiovasculaire par l’exercice physique chez les individus\natteints de schizophrénie : un guide de pratique »,Obésité,\njuin, France, Springer-Verlag, p. 1-17.\n",
+      "text_sha256": "2aefec4e4e18bcfdbd67675e961db35ffead2bc09c455876a63584a6b25236f8"
+    },
+    {
+      "bbox": [
+        396.0,
+        310.3349609375,
+        542.6000366210938,
+        345.6734313964844
+      ],
+      "block_id": "page-1112-block-0011",
+      "order": 11,
+      "text": "Chouinard, S. & al. (2003). « Retour à l’école de jeunes\npatients souffrant de troubles mentaux graves : premier\nregard sur un projet pilote montréalais », Santé mentale\nau Québec, 28(2), p. 273-290.\n",
+      "text_sha256": "8b401be137ef4d463ba26efa338a3cfe54c0752554db495db1a898658d4c5456"
+    },
+    {
+      "bbox": [
+        396.0,
+        349.3349609375,
+        549.5724487304688,
+        375.6234436035156
+      ],
+      "block_id": "page-1112-block-0012",
+      "order": 12,
+      "text": "Davies, G & al. (2003). « A systematic review and meta-\nanalysis of northern hemisphere season of birth studies in\nschizophrenia », Schizophr Bull, 29(3), p. 587-593.\n",
+      "text_sha256": "65ea61a862700fc1c1660e1f74446b410ac08c46d4a8888f9c883462baac36ba"
+    },
+    {
+      "bbox": [
+        396.0,
+        379.28497314453125,
+        543.635009765625,
+        405.5734558105469
+      ],
+      "block_id": "page-1112-block-0013",
+      "order": 13,
+      "text": "Donahoe, C. P. & al. (1995). Évaluation et entraînement à\nla résolution des problèmes interpersonnels, [en ligne],\nhttp://homepage.hispeed.ch/Jerome_Favrod/aipss.pdf.\n",
+      "text_sha256": "1e68dc488ed396832a76c8f561d57ad10faccb43c85ce2eadd6651810a8ba02b"
+    },
+    {
+      "bbox": [
+        396.0,
+        409.2349548339844,
+        549.0513916015625,
+        426.47344970703125
+      ],
+      "block_id": "page-1112-block-0014",
+      "order": 14,
+      "text": "Drew, L. (2013). « Clozapine and agranulocytosis : reas -\nsessing the risks », Australas Psychiatry, 21(4), p. 335-337.\n",
+      "text_sha256": "60e1eecd0d01674fa72eceec4f4b117e0c6d77ff2749a75d15c2276143d1cff1"
+    },
+    {
+      "bbox": [
+        396.0,
+        430.1349792480469,
+        548.5350952148438,
+        456.4234313964844
+      ],
+      "block_id": "page-1112-block-0015",
+      "order": 15,
+      "text": "Early Psychosis Guidelines Writing Group (2010). Australian\nClinical Guidelines for Early Psychosis, 2e éd., Melbourne,\nAustralie, Orygen Youth Health Center.\n",
+      "text_sha256": "32f519ecdecd118ead3dfa91bc33b8c71ef8b87d2539e48067af25b6a20b5af1"
+    },
+    {
+      "bbox": [
+        396.0,
+        460.1349792480469,
+        522.5625610351562,
+        477.3734436035156
+      ],
+      "block_id": "page-1112-block-0016",
+      "order": 16,
+      "text": "Emsley, R. & al. (2013). « The nature of relapse in\nschizophrenia », BMC Psychiatry, 13(50).\n",
+      "text_sha256": "6751be574fbffff5956241de53abe1d19cb35fbd806e0e327e5aaca33267e23e"
+    },
+    {
+      "bbox": [
+        396.0,
+        481.03497314453125,
+        549.9974975585938,
+        507.3234558105469
+      ],
+      "block_id": "page-1112-block-0017",
+      "order": 17,
+      "text": "Fowler, D. R. & al. (1995). Cognitive Behaviour Therapy for\nPsychosis : Theory and Practice, New York, NY, John Wiley\nand Sons.\n",
+      "text_sha256": "df9e75b6a2fbfb7199e2bdd9d3af86087acbe70f2c1c9bfbc4caa5c6b2f7ad82"
+    },
+    {
+      "bbox": [
+        396.0,
+        510.9849853515625,
+        518.5125732421875,
+        528.2234497070312
+      ],
+      "block_id": "page-1112-block-0018",
+      "order": 18,
+      "text": "Franck, N. (2012). Remédiation cognitive, Issy-\nles- Moulineaux, France, Elsevier Masson.\n",
+      "text_sha256": "659c8497fa970b91e84d46c009643be34b330d4138d81a6a8de401ed1ced906f"
+    },
+    {
+      "bbox": [
+        396.0,
+        531.8849487304688,
+        543.1576538085938,
+        549.1234741210938
+      ],
+      "block_id": "page-1112-block-0019",
+      "order": 19,
+      "text": "Frith, C. D. (1992). The Cognitive Neuropsychology of\nSchizophrenia, Hove, Royaume-Uni, Lawrence Erlbaum.\n",
+      "text_sha256": "208b9e9c455b4549654c200e858c2ce20b38761a740dcc05a81f9851f341b386"
+    },
+    {
+      "bbox": [
+        396.0,
+        552.7849731445312,
+        551.2785034179688,
+        579.0734252929688
+      ],
+      "block_id": "page-1112-block-0020",
+      "order": 20,
+      "text": "Gauvreau, C. (1977). « La mayonnaise ovale et le dossier de\nchaise médiéval », dans Les entrailles. Gauvreau – Œuvres\ncréatrices complètes, Montréal, Québec, Parti Pris.\n",
+      "text_sha256": "113deef776adb50e9ab6854e1ce963a622a69788171014de0a9d84dc9253401a"
+    },
+    {
+      "bbox": [
+        396.0,
+        582.7349853515625,
+        554.7825317382812,
+        609.0234375
+      ],
+      "block_id": "page-1112-block-0021",
+      "order": 21,
+      "text": "Gejman, P. V. & al. (2010). « The role of genetics in the etio-\nlogy of schizophrenia », Psychiatric Clinics of North America,\n33(1), p. 35-66.\n",
+      "text_sha256": "07816cfccff2c3ca6839683165722092d5d9097cc946c9943a3717beba7a8a33"
+    },
+    {
+      "bbox": [
+        396.0,
+        612.6849975585938,
+        543.3674926757812,
+        648.0734252929688
+      ],
+      "block_id": "page-1112-block-0022",
+      "order": 22,
+      "text": "Grant, D. A. & Berg, E. (1948). « A behavioral analysis\nof degree of reinforcement and ease of shifting to new\nresponses in Weigl-type card-sorting problem », Journal\nof Experimental Psychology, 38, p. 404-411.\n",
+      "text_sha256": "5688d27e86cc9529634658c9ab7efd000fbee742d4b75948d060954c529e6eeb"
+    },
+    {
+      "bbox": [
+        396.0,
+        651.7349853515625,
+        554.9048461914062,
+        687.0734252929688
+      ],
+      "block_id": "page-1112-block-0023",
+      "order": 23,
+      "text": "Harding, C. M. & al. (1987). « The Vermont longitudinal study of\npersons with severe mental illness, II. Long-term outcome of\nsubjects who retrospectively Met DSM-III criteria for schizoph-\nrenia », American Journal of Psychiatry, 144(6), p. 718-735.\n",
+      "text_sha256": "37fe011effa97d8cbb46c3e0579760ddce7da96b419da635925fd80e6c4ac5f4"
+    },
+    {
+      "bbox": [
+        396.0,
+        690.7349853515625,
+        552.266845703125,
+        717.0234375
+      ],
+      "block_id": "page-1112-block-0024",
+      "order": 24,
+      "text": "Harrison, G. & al. (2001). « Recovery from psychotic illness :\na 15- and 25-year international follow-up study », The\nBritish Journal of Psychiatry, 178, p. 506-517.\n",
+      "text_sha256": "3c1e5dfd8cc86280657877cf48d08dadb532b0a476786da9072949b27642c976"
+    },
+    {
+      "bbox": [
+        225.0,
+        40.68496322631836,
+        380.8575744628906,
+        57.87343978881836
+      ],
+      "block_id": "page-1112-block-0025",
+      "order": 25,
+      "text": "Cameron, N. (1959). « The paranoid pseudo-community\nrevisited », American Journal of Sociology, 65(1), p. 52-58.\n",
+      "text_sha256": "b8b958bbb820b2f3d1144fde9c27dd34bad82923b85c8f88ca0b680a1684cbc7"
+    },
+    {
+      "bbox": [
+        225.0,
+        61.484962463378906,
+        383.9052429199219,
+        78.72344207763672
+      ],
+      "block_id": "page-1112-block-0026",
+      "order": 26,
+      "text": "Chambon, O. & al. (1997). Techniques de psychothérapie\ncognitive des psychoses chroniques, Paris, France, Masson.\n",
+      "text_sha256": "bf9650ef0dbe125983901953a5394e3971b028993f51b235acb17a5313a1a25f"
+    },
+    {
+      "bbox": [
+        225.0,
+        82.3349609375,
+        374.43011474609375,
+        99.5234375
+      ],
+      "block_id": "page-1112-block-0027",
+      "order": 27,
+      "text": "Changeux, J.-P. (2002). L’Homme de vérité, Paris, France,\nOdile Jacob.\n",
+      "text_sha256": "9c16989726fb7804b714041ac392ebf4ddd2b28c3db654c91b9c095b05d6072a"
+    },
+    {
+      "bbox": [
+        225.0,
+        103.13496398925781,
+        378.47509765625,
+        129.3234405517578
+      ],
+      "block_id": "page-1112-block-0028",
+      "order": 28,
+      "text": "Coltheart, M. (2007). « Cognitive psychiatry and delusional\nbelief », Quarterly Journal of Experimental Psycholology,\n60(8), p. 1041-1062.\n",
+      "text_sha256": "dd3c5aed784291ad88b5c1a30db9c964a175a96be6504cd6f78ced71774cf2f8"
+    },
+    {
+      "bbox": [
+        225.0,
+        132.98497009277344,
+        373.7174987792969,
+        159.17344665527344
+      ],
+      "block_id": "page-1112-block-0029",
+      "order": 29,
+      "text": "Eckblad, M. & Chapman, L. J. (1986). «Development and\nvalidation of a scale for hypomanic personality », Journal\nof Abnormal Psychology, 95(3), p. 214-222.\n",
+      "text_sha256": "0e1703afd81f87013e0dc9ced6bdd7fe1aca61cffacb28710ac86f7e98a3d638"
+    },
+    {
+      "bbox": [
+        225.0,
+        162.7849578857422,
+        378.94866943359375,
+        198.0234375
+      ],
+      "block_id": "page-1112-block-0030",
+      "order": 30,
+      "text": "Edvardsen, J. A. (2009). A Genetic Spectrum Approach to\nAffective and Schizophrenic Disorders. A Twin- and Family\nStudy, thèse de doctorat (médecine), Psychiatric Research\nCentre of North Norway, Université d’Oslo.\n",
+      "text_sha256": "4ab2c443238356f449e1781f287dac49f9aba88de2b7b5f15c658869911cdc17"
+    },
+    {
+      "bbox": [
+        225.0,
+        201.6349639892578,
+        372.4458923339844,
+        218.8234405517578
+      ],
+      "block_id": "page-1112-block-0031",
+      "order": 31,
+      "text": "Erikson, E. (1974). Enfance et société, Neuchâtel, Suisse,\nDelachaux et Niestlé.\n",
+      "text_sha256": "b7140dda268f7784dae9d20bd9ba7c7ba77b9198da2ecb348876d15066fa5f19"
+    },
+    {
+      "bbox": [
+        225.0,
+        222.43496704101562,
+        381.10174560546875,
+        248.62344360351562
+      ],
+      "block_id": "page-1112-block-0032",
+      "order": 32,
+      "text": "Freud, S. (1967). « Remarques psychanalytiques sur l’au-\ntobiographie d’un cas de paranoïa », dans Bonaparte, M. &\nLoewenstein, R. M., Cinq psychanalyses, Paris, France, PUF.\n",
+      "text_sha256": "f90493b48fd7222aae5f2aad7ed2359a203b9498d4511daf274623f91f4b08ba"
+    },
+    {
+      "bbox": [
+        225.0,
+        252.28497314453125,
+        384.1499938964844,
+        287.47344970703125
+      ],
+      "block_id": "page-1112-block-0033",
+      "order": 33,
+      "text": "Kapur, S. (2003). « Psychosis as a state of aberrant\nsalience : A framework linking biology, phenomenology, and\npharmacology in schizophrenia »,American Journal of Psychiatry,\n160(1), p. 13-23.\n",
+      "text_sha256": "7f2f68d1f54a87a242635bf027863d6bdf7870509a006a721a6b29a220c0e436"
+    },
+    {
+      "bbox": [
+        225.0,
+        291.0849609375,
+        366.5675048828125,
+        317.3234558105469
+      ],
+      "block_id": "page-1112-block-0034",
+      "order": 34,
+      "text": "Klein, M. (1946). « Notes sur quelques mécanismes\nschizoïdes », dans Klein, M. & al., Développements de\nla psychanalyse, Paris, France, PUF.\n",
+      "text_sha256": "1a8bcd92a0c061a498737da379dfb918df58265f9ebd0a6ea281286b88b59a2b"
+    },
+    {
+      "bbox": [
+        225.0,
+        320.9349670410156,
+        379.09002685546875,
+        347.1234436035156
+      ],
+      "block_id": "page-1112-block-0035",
+      "order": 35,
+      "text": "Manschreck, T. C. & Khan, N. L. (2006). « Recent advances\nin the treatment of delusional disorder », Canadian Journal\nof Psychiatry, 51(2) p. 114-119.\n",
+      "text_sha256": "aecac7ca679c98e552bd9e582fa294a1f8fe93db5cbed9d504af538ff53433df"
+    },
+    {
+      "bbox": [
+        225.0,
+        350.7349548339844,
+        376.6625671386719,
+        367.9234313964844
+      ],
+      "block_id": "page-1112-block-0036",
+      "order": 36,
+      "text": "Munro, A. (1992). « Psychiatric disorders characterized by\ndelusions », Psychiatric Annals, 22(5), p. 232-240.\n",
+      "text_sha256": "e8ebd80e80c99e04139cde5a076b3dc5bb0824fa1b7520aa3e4b8dec6b2b88a7"
+    },
+    {
+      "bbox": [
+        225.0,
+        371.5849609375,
+        382.3374938964844,
+        388.7734375
+      ],
+      "block_id": "page-1112-block-0037",
+      "order": 37,
+      "text": "Organisation mondiale de la santé (OMS). (1993). Classication\ninternationale des maladies, Paris, Masson.\n",
+      "text_sha256": "73b6932a5b373f7551940508b1ebbcf1f093dbf1ad6445b15895e5fc8fe399fa"
+    },
+    {
+      "bbox": [
+        225.0,
+        392.3849792480469,
+        383.99749755859375,
+        418.5734558105469
+      ],
+      "block_id": "page-1112-block-0038",
+      "order": 38,
+      "text": "Peters, E. & al. (2004). « Measuring Delusional Ideation : The\n21-Item Peters et al Delusions Inventory (PDI) », Schizophre-\nnia Bulletin, 30(4), p. 1005-1022.\n",
+      "text_sha256": "d2f5efe666d4e540d7a8f34c2168fb6e44fccdca6f6535bc357651220f9dc2cf"
+    },
+    {
+      "bbox": [
+        225.0,
+        422.1849670410156,
+        376.2212219238281,
+        448.4234313964844
+      ],
+      "block_id": "page-1112-block-0039",
+      "order": 39,
+      "text": "Trower, P. & Chadwick, P. D. (1995). « Pathways to defense\nof the self : A theory of two types of paranoia », Clinical\nPsychology, 2(3), p. 263-278.\n",
+      "text_sha256": "4fc2c276a1b875151c17773033e1cf56d580a4de7ba88c677f731c51986ce677"
+    },
+    {
+      "bbox": [
+        225.0,
+        452.03497314453125,
+        378.635986328125,
+        469.22344970703125
+      ],
+      "block_id": "page-1112-block-0040",
+      "order": 40,
+      "text": "Verdoux H. & al. (1998). « A survey of delusional ideation in\nprimary-care patients », Psychol Med., 28(1), p. 127-134.\n",
+      "text_sha256": "c1aa75853df6f71314e59b4d5ab0d2a2aed3b73618341ecdbc8ebe586cfb96af"
+    },
+    {
+      "bbox": [
+        225.0,
+        472.8349609375,
+        379.7801513671875,
+        490.0234375
+      ],
+      "block_id": "page-1112-block-0041",
+      "order": 41,
+      "text": "Watzlawick, P. (1976). La réalité de la réalité, Paris, France,\nSeuil.\n",
+      "text_sha256": "f7eed82728b4a0d56aaadf0bf91c59b924dd4592bd65d5452bfc9e45ae5fb458"
+    },
+    {
+      "bbox": [
+        225.0,
+        500.3703308105469,
+        373.3475036621094,
+        529.0734252929688
+      ],
+      "block_id": "page-1112-block-0042",
+      "order": 42,
+      "text": "Chapitre 17\nAmador, X. F. (2007). Comment faire accepter son traite-\nment au malade, Paris, France, Retz.\n",
+      "text_sha256": "3e908f15c1a796e488d92b0f4e7106625d5c9749eab0c6fb3761222028965364"
+    },
+    {
+      "bbox": [
+        225.0,
+        532.6849975585938,
+        379.88525390625,
+        558.8734741210938
+      ],
+      "block_id": "page-1112-block-0043",
+      "order": 43,
+      "text": "American Psychiatric Association (APA). (2004a). DSM-IV-TR.\nCritères diagnostiques (Washington, DC, 2000). Traduction\nfrançaise par J.-D. Guelet al., Paris, Masson, 384 p.\n",
+      "text_sha256": "0ebf174512bc06342f7e986dd9e0f4e05b8d7cce0d51310baec71fc33170e4c0"
+    },
+    {
+      "bbox": [
+        225.0,
+        562.5349731445312,
+        382.42791748046875,
+        597.7234497070312
+      ],
+      "block_id": "page-1112-block-0044",
+      "order": 44,
+      "text": "American Psychiatric Association (APA). (2004b). « Practice\nguideline for the treatment of patients with schizophrenia,\nSecond Edition », The American Journal of Psychiatry,\n161(2), p. 1-56.\n",
+      "text_sha256": "8bfa0fc537eb767af37ce128a59737d53280cebe9011cefd7ffb0922be3c3bd4"
+    },
+    {
+      "bbox": [
+        225.0,
+        601.3349609375,
+        378.43463134765625,
+        627.5734252929688
+      ],
+      "block_id": "page-1112-block-0045",
+      "order": 45,
+      "text": "American Psychiatric Association (APA). (2006). Textbook\nof Schizophrenia, Washington, DC, American Psychiatric\nAssociation.\n",
+      "text_sha256": "23e6b7882081159ae19abe893adc0d561b4ac5008721ce071e264f5afee24467"
+    },
+    {
+      "bbox": [
+        225.0,
+        631.1849975585938,
+        378.5,
+        666.3734741210938
+      ],
+      "block_id": "page-1112-block-0046",
+      "order": 46,
+      "text": "American Psychiatric Association (APA). (2015). DSM-5 –\nManuel Diagnostique et Statistique des Troubles Mentaux.\nTraduction française par M.-A. Crocq, J.-D. Guelet al.,\nElsevier Masson SAS, Paris.\n",
+      "text_sha256": "9abdc7221827d2e516286759fe28a6461976091b7d5dc8ffca72c446615d7dc3"
+    },
+    {
+      "bbox": [
+        225.0,
+        669.9849853515625,
+        383.73248291015625,
+        696.2234497070312
+      ],
+      "block_id": "page-1112-block-0047",
+      "order": 47,
+      "text": "Andreasen, N. (1982). «Negative symptoms in schizophrenia.\nDenition and reliability » Archives of General Psychiatry,\n39(7), p. 784-788.\n",
+      "text_sha256": "06cb7fb3caa57963ef50d4a6890ae1cc6b7112bc157bb92f2ec9d69a78e2ec6c"
+    },
+    {
+      "bbox": [
+        225.0,
+        699.8349609375,
+        380.0150451660156,
+        717.0234375
+      ],
+      "block_id": "page-1112-block-0048",
+      "order": 48,
+      "text": "Arendt, M. & al. (2005). « Cannabis- induced psychosis and\nsubsequent schizophrenia-spectrum disorders : follow-up\n",
+      "text_sha256": "1b1286d3b0871ef9bffdc5b03193525f017d954954041ee1835286e6a4bf79a5"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.68496322631836,
+        208.6660614013672,
+        75.9234390258789
+      ],
+      "block_id": "page-1112-block-0049",
+      "order": 49,
+      "text": "Mojtabai, R. & al. (2003). « Clinical characteristics,\n4-year-course, and DSM-IV classication of patients with\nnon-affective acute remitting psychosis », American Journal\nof Psychiatry, 160(12), p. 2108-2115.\n",
+      "text_sha256": "5acc5c2a041011e8b3e7f743b42aaebf31e77f8cf8bfb74d87d43643bc6ba184"
+    },
+    {
+      "bbox": [
+        54.0,
+        79.53496551513672,
+        210.57748413085938,
+        132.7734375
+      ],
+      "block_id": "page-1112-block-0050",
+      "order": 50,
+      "text": "Möller, H. J. & al. (2010). « The Munich 15-year follow-up\nstudy (MUFUSSAD) on rst-hospitalized patients with\nschizophre nic or affective disorders : Comparison of psy-\nchopathological and psychosocial course and outcome and\nprediction of chronicity », European Archives of Psychiatry\nand Clinical Neurosciences, 260(5), p. 367-384.\n",
+      "text_sha256": "3073d2e327aed832a6bba56e8adaa5e24532d0949b4490ec6ac2ff434fcf6d60"
+    },
+    {
+      "bbox": [
+        54.0,
+        136.3849639892578,
+        195.5800018310547,
+        162.62344360351562
+      ],
+      "block_id": "page-1112-block-0051",
+      "order": 51,
+      "text": "Pillman, F. & Marneros, A. (2003). « Brief and acute\npsychoses : The development of concepts », History of\nPsychiatry, 14(54) Pt 2, p. 161-177.\n",
+      "text_sha256": "c28d8ee300d503a02e86321d78561d068b61042ac40d2173cd0621d0c7de2253"
+    },
+    {
+      "bbox": [
+        54.0,
+        166.23497009277344,
+        213.74752807617188,
+        192.42344665527344
+      ],
+      "block_id": "page-1112-block-0052",
+      "order": 52,
+      "text": "Pillman, F. & Marneros, A. (2006). « Longitudinal follow-up in\nacute and transient psychotic disorders and schizophrenia »,\nBritish Journal of Psychiatry, 187(9), p. 286-287.\n",
+      "text_sha256": "501b762d81f2f7985c556a28006f215aa0554e348b954fef4905e48ed077b2ee"
+    },
+    {
+      "bbox": [
+        54.0,
+        196.0849609375,
+        209.58294677734375,
+        222.2734375
+      ],
+      "block_id": "page-1112-block-0053",
+      "order": 53,
+      "text": "Pillman, F. & al. (2002). « The concordance of ICD-10 acute\nand transient psychosis and DSM-IV brief psychotic disor-\nder », Psychological Medicine, 32, p. 525-533.\n",
+      "text_sha256": "e28d3810eb106f8a36b3a52c9524a5f1b58a450cbdf1474db24d96597a39acca"
+    },
+    {
+      "bbox": [
+        54.0,
+        225.8849639892578,
+        213.28001403808594,
+        252.12344360351562
+      ],
+      "block_id": "page-1112-block-0054",
+      "order": 54,
+      "text": "Pillman, F. & al. (2003a). « Suicidal behaviour in acute and\ntransient psychotic disorders », Psychiatry Research, 117(3),\np. 199-209.\n",
+      "text_sha256": "b6cc67f8424f5a93262393435076a644bdecf4a6b7995cf956dbc4a18696899a"
+    },
+    {
+      "bbox": [
+        54.0,
+        255.73495483398438,
+        206.6786346435547,
+        281.9234313964844
+      ],
+      "block_id": "page-1112-block-0055",
+      "order": 55,
+      "text": "Pillman F. & al. (2003b). « Personality and social interactions\nin patients with acute brief psychoses », Journal of Nervous &\nMental Disease, 191(8), p. 503-508.\n",
+      "text_sha256": "c3d1900873c1bf7d358ef0ab75f9a3ec3ddfbab37cf776b4ade58bbb5e021e2f"
+    },
+    {
+      "bbox": [
+        54.0,
+        285.5849609375,
+        209.85256958007812,
+        311.7734375
+      ],
+      "block_id": "page-1112-block-0056",
+      "order": 56,
+      "text": "Reay, R. & al. (2010). « Incidence and diagnostic diversity in\nrst-episode psychosis », Acta Psychiatrica Scan dinavica,\n121(4), p. 315-319.\n",
+      "text_sha256": "8484096eaeaf084c01cad9fa5619c980447b1adf4c02ed7d6b9b8a70637f007e"
+    },
+    {
+      "bbox": [
+        54.0,
+        315.3849792480469,
+        197.41749572753906,
+        341.6234436035156
+      ],
+      "block_id": "page-1112-block-0057",
+      "order": 57,
+      "text": "Ringel, T. M. & al. (2004). « Sensory gating decit in a\nsubtype of chronic schizophrenic patients », Psychiatry\nResearch, 125(3), p. 237-245.\n",
+      "text_sha256": "06fd20539fb1b56b27f95c6a2b2f4f7afe038ab817d47211aeb326e83d0faa0d"
+    },
+    {
+      "bbox": [
+        54.0,
+        345.2349548339844,
+        213.39749145507812,
+        371.4234313964844
+      ],
+      "block_id": "page-1112-block-0058",
+      "order": 58,
+      "text": "Röttig, S. & al. (2005). « Is there evidence in the EEG for\nincreased epileptiform activity in ICD-10 acute and transient\npsychotic disorder ? », Psychopathology, 38(5), p. 281-284.\n",
+      "text_sha256": "ad156fab95c2d75e6aa3cac04314c05040c6aee2ec84730504aae39e7ab92ded"
+    },
+    {
+      "bbox": [
+        54.0,
+        375.0849609375,
+        200.4525909423828,
+        401.2734375
+      ],
+      "block_id": "page-1112-block-0059",
+      "order": 59,
+      "text": "Sajith, S. G. & al. (2002). « Acute polymorphic psychotic\ndisorder : Diagnostic stability over three years », Acta\nPsychiatrica Scandinavica, 105(2), p. 104-109.\n",
+      "text_sha256": "3a43616b2542a5bf5aa223a960620576a62e00f435ef5a8ace1828d06f4c024d"
+    },
+    {
+      "bbox": [
+        54.0,
+        404.8849792480469,
+        212.62771606445312,
+        431.1234436035156
+      ],
+      "block_id": "page-1112-block-0060",
+      "order": 60,
+      "text": "Singh, S. P. & al. (2004). « Acute and transient psychotic\ndisorders : Precursors, epidemiology », course and outcome,\nBritish Journal of Psychiatry, 185(12), p. 452-459.\n",
+      "text_sha256": "f9e7829ba951b2e41161be4ccebe940250b73f08153c6eb46bb62f47c98db231"
+    },
+    {
+      "bbox": [
+        54.0,
+        434.7349548339844,
+        212.69981384277344,
+        460.9234313964844
+      ],
+      "block_id": "page-1112-block-0061",
+      "order": 61,
+      "text": "Strik, W. K. & al. (1997). « Specic P300 features in patients\nwith cycloid psychosis », Acta Psychiatrica Scandinavica,\n95(1), p. 67-72.\n",
+      "text_sha256": "9359e6ad107e1a01935f2e0b92421a1f7901fd16777b6d8502fa549bc1b9675e"
+    },
+    {
+      "bbox": [
+        54.0,
+        464.5849609375,
+        207.70001220703125,
+        499.7734375
+      ],
+      "block_id": "page-1112-block-0062",
+      "order": 62,
+      "text": "Susser, E. & Wandereling, J. (1994). « Epidemiology of non-\naffective acute remitting psychosis vs. schizophrenia : Sex\nand sociocultural setting », Archives of General Psychiatry,\n51(4), p. 294-301.\n",
+      "text_sha256": "a2150a970e2285158f70f318ea7f130a1c5bb263365cc75fa73ecec401156490"
+    },
+    {
+      "bbox": [
+        54.0,
+        512.1203002929688,
+        208.06431579589844,
+        558.8234252929688
+      ],
+      "block_id": "page-1112-block-0063",
+      "order": 63,
+      "text": "Chapitre 16\nAmerican Psychiatric Association (APA). (1991). DSM-III-R.\nCritères diagnostiques (Washington, DC, 1980), traduction\nfrançaise par J. M. Dubroca & N. Ferrand, Paris, Masson,\n311 p.\n",
+      "text_sha256": "9998d023a9333d7c3be95548dd10a4f61ac4e95065f8dc8ce19dcbf514f6347b"
+    },
+    {
+      "bbox": [
+        54.0,
+        562.4849853515625,
+        208.06431579589844,
+        588.6734619140625
+      ],
+      "block_id": "page-1112-block-0064",
+      "order": 64,
+      "text": "American Psychiatric Association (APA). (1999). DSM-IV.\nCritères diagnostiques (Washington, DC, 1994), traduction\nfrançaise par J.-D. Guelet al., Paris, Masson, 239 p.\n",
+      "text_sha256": "d37e42b5ff2db34185474d90e9402ab2f3ced6369b14a3e3770587b20d60b131"
+    },
+    {
+      "bbox": [
+        54.0,
+        592.2849731445312,
+        208.06431579589844,
+        618.5234375
+      ],
+      "block_id": "page-1112-block-0065",
+      "order": 65,
+      "text": "American Psychiatric Association (APA). (2004). DSM-IV-TR.\nCritères diagnostiques (Washington, DC, 2000), traduction\nfrançaise par J.-D. Guelet al., Paris, Masson, 384 p.\n",
+      "text_sha256": "cc795871e3d7de9c258eb0f74c229ee8afd9ecc1082c9d74c16fd3b01c17c5ff"
+    },
+    {
+      "bbox": [
+        54.0,
+        622.1349487304688,
+        207.5,
+        657.3734741210938
+      ],
+      "block_id": "page-1112-block-0066",
+      "order": 66,
+      "text": "American Psychiatric Association (APA). (2015). DSM-5 –\nManuel Diagnostique et Statistique des Troubles Mentaux,\ntraduction française par M.-A. Crocq, J.-D. Guelet al.,\nElsevier Masson SAS, Paris.\n",
+      "text_sha256": "aceeda350f747ee13d34acf89ec1f97d6b17d72e990987462ce151dc3b7262d6"
+    },
+    {
+      "bbox": [
+        54.0,
+        660.9849853515625,
+        212.42750549316406,
+        687.1734619140625
+      ],
+      "block_id": "page-1112-block-0067",
+      "order": 67,
+      "text": "Bedford, A. & Foulds, G. A. (1976). « A new personal\ndisturbance scale (DSSI/sAD) », British Journal of Social and\nClinical Psychology, 15(4), p. 387-394.\n",
+      "text_sha256": "465c8b92fe1fdfc2834ccee3e530ca2cf42cd8d35906e7753c1d91469e0781ae"
+    },
+    {
+      "bbox": [
+        54.0,
+        690.8349609375,
+        210.03001403808594,
+        717.0234375
+      ],
+      "block_id": "page-1112-block-0068",
+      "order": 68,
+      "text": "Braun, C. & Suffren, S. (2011). « A general neuropsycholo-\ngical model of delusion », Cognitive Neuropsychiatry, 16(1),\np. 1-39.\n",
+      "text_sha256": "edb608123b0d25a19bd020d1bb2ea3a2519bd6da2b8233a52d05c8c399f9e5de"
+    }
+  ],
+  "coordinates_sha256": "fdb30a737bdca7d48d8f673292b524bc58d8bd362bf564a517c05a6632f78b00",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1112",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Références\nR15\nstudy of 535 incident cases », The Bristish Journal of\nPsychiatry, 187, p. 510-515.\nAxelrod, B. N. & Goldman, R. S. (1994). « Factor structure of\nthe negative symptom assessment », Psychiatry Research,\n52, p. 173-179.\nBecker, D. R. & al. (2006). Le modèle Individual Placement\nand Support (IPS) du soutien en emploi, Belgique,\nSocrate-Réhabilitation.\nBourque, F. & al. (2011). « A meta-analysis of the risk for\npsychotic disorders among rst- and second-generation\nimmigrants », Psychological Medicine, 41, p. 897-910.\nBowie, C. R. & Harvey, P. D. (2005). « Cognition in schizophrenia :\nimpairments, determinants, and functional importance »,\nPsychiatric Clinics of North America, 28(3), p. 613-633.\nBrown, A.S. & Susser, E.S. (2008). « Prenatal nutritional\ndeciency and risk of adult schizophrenia », Schizophr Bull,\n34(6), p. 1054-1063.\nCannon, T. D. & al. (2008). «Prediction of psychosis in\nhigh-risk youth : A multi-site longitudinal study in North\nAmerica », Archives of General Psychiatry, 65(1), p. 28-37.\nCaplan, R. (1994). « Thought Disorder in Childhood », Journal\nof the American Academy of Child & Adolescent Psychiatry,\n33(5), p. 605-615.\nChalfoun, C. & al. (2014). « Amélioration de la santé\ncardiovasculaire par l’exercice physique chez les individus\natteints de schizophrénie : un guide de pratique »,Obésité,\njuin, France, Springer-Verlag, p. 1-17.\nChouinard, S. & al. (2003). « Retour à l’école de jeunes\npatients souffrant de troubles mentaux graves : premier\nregard sur un projet pilote montréalais », Santé mentale\nau Québec, 28(2), p. 273-290.\nDavies, G & al. (2003). « A systematic review and meta-\nanalysis of northern hemisphere season of birth studies in\nschizophrenia », Schizophr Bull, 29(3), p. 587-593.\nDonahoe, C. P. & al. (1995). Évaluation et entraînement à\nla résolution des problèmes interpersonnels, [en ligne],\nhttp://homepage.hispeed.ch/Jerome_Favrod/aipss.pdf.\nDrew, L. (2013). « Clozapine and agranulocytosis : reas -\nsessing the risks », Australas Psychiatry, 21(4), p. 335-337.\nEarly Psychosis Guidelines Writing Group (2010). Australian\nClinical Guidelines for Early Psychosis, 2e éd., Melbourne,\nAustralie, Orygen Youth Health Center.\nEmsley, R. & al. (2013). « The nature of relapse in\nschizophrenia », BMC Psychiatry, 13(50).\nFowler, D. R. & al. (1995). Cognitive Behaviour Therapy for\nPsychosis : Theory and Practice, New York, NY, John Wiley\nand Sons.\nFranck, N. (2012). Remédiation cognitive, Issy-\nles- Moulineaux, France, Elsevier Masson.\nFrith, C. D. (1992). The Cognitive Neuropsychology of\nSchizophrenia, Hove, Royaume-Uni, Lawrence Erlbaum.\nGauvreau, C. (1977). « La mayonnaise ovale et le dossier de\nchaise médiéval », dans Les entrailles. Gauvreau – Œuvres\ncréatrices complètes, Montréal, Québec, Parti Pris.\nGejman, P. V. & al. (2010). « The role of genetics in the etio-\nlogy of schizophrenia », Psychiatric Clinics of North America,\n33(1), p. 35-66.\nGrant, D. A. & Berg, E. (1948). « A behavioral analysis\nof degree of reinforcement and ease of shifting to new\nresponses in Weigl-type card-sorting problem », Journal\nof Experimental Psychology, 38, p. 404-411.\nHarding, C. M. & al. (1987). « The Vermont longitudinal study of\npersons with severe mental illness, II. Long-term outcome of\nsubjects who retrospectively Met DSM-III criteria for schizoph-\nrenia », American Journal of Psychiatry, 144(6), p. 718-735.\nHarrison, G. & al. (2001). « Recovery from psychotic illness :\na 15- and 25-year international follow-up study », The\nBritish Journal of Psychiatry, 178, p. 506-517.\nCameron, N. (1959). « The paranoid pseudo-community\nrevisited », American Journal of Sociology, 65(1), p. 52-58.\nChambon, O. & al. (1997). Techniques de psychothérapie\ncognitive des psychoses chroniques, Paris, France, Masson.\nChangeux, J.-P. (2002). L’Homme de vérité, Paris, France,\nOdile Jacob.\nColtheart, M. (2007). « Cognitive psychiatry and delusional\nbelief », Quarterly Journal of Experimental Psycholology,\n60(8), p. 1041-1062.\nEckblad, M. & Chapman, L. J. (1986). «Development and\nvalidation of a scale for hypomanic personality », Journal\nof Abnormal Psychology, 95(3), p. 214-222.\nEdvardsen, J. A. (2009). A Genetic Spectrum Approach to\nAffective and Schizophrenic Disorders. A Twin- and Family\nStudy, thèse de doctorat (médecine), Psychiatric Research\nCentre of North Norway, Université d’Oslo.\nErikson, E. (1974). Enfance et société, Neuchâtel, Suisse,\nDelachaux et Niestlé.\nFreud, S. (1967). « Remarques psychanalytiques sur l’au-\ntobiographie d’un cas de paranoïa », dans Bonaparte, M. &\nLoewenstein, R. M., Cinq psychanalyses, Paris, France, PUF.\nKapur, S. (2003). « Psychosis as a state of aberrant\nsalience : A framework linking biology, phenomenology, and\npharmacology in schizophrenia »,American Journal of Psychiatry,\n160(1), p. 13-23.\nKlein, M. (1946). « Notes sur quelques mécanismes\nschizoïdes », dans Klein, M. & al., Développements de\nla psychanalyse, Paris, France, PUF.\nManschreck, T. C. & Khan, N. L. (2006). « Recent advances\nin the treatment of delusional disorder », Canadian Journal\nof Psychiatry, 51(2) p. 114-119.\nMunro, A. (1992). « Psychiatric disorders characterized by\ndelusions », Psychiatric Annals, 22(5), p. 232-240.\nOrganisation mondiale de la santé (OMS). (1993). Classication\ninternationale des maladies, Paris, Masson.\nPeters, E. & al. (2004). « Measuring Delusional Ideation : The\n21-Item Peters et al Delusions Inventory (PDI) », Schizophre-\nnia Bulletin, 30(4), p. 1005-1022.\nTrower, P. & Chadwick, P. D. (1995). « Pathways to defense\nof the self : A theory of two types of paranoia », Clinical\nPsychology, 2(3), p. 263-278.\nVerdoux H. & al. (1998). « A survey of delusional ideation in\nprimary-care patients », Psychol Med., 28(1), p. 127-134.\nWatzlawick, P. (1976). La réalité de la réalité, Paris, France,\nSeuil.\nChapitre 17\nAmador, X. F. (2007). Comment faire accepter son traite-\nment au malade, Paris, France, Retz.\nAmerican Psychiatric Association (APA). (2004a). DSM-IV-TR.\nCritères diagnostiques (Washington, DC, 2000). Traduction\nfrançaise par J.-D. Guelet al., Paris, Masson, 384 p.\nAmerican Psychiatric Association (APA). (2004b). « Practice\nguideline for the treatment of patients with schizophrenia,\nSecond Edition », The American Journal of Psychiatry,\n161(2), p. 1-56.\nAmerican Psychiatric Association (APA). (2006). Textbook\nof Schizophrenia, Washington, DC, American Psychiatric\nAssociation.\nAmerican Psychiatric Association (APA). (2015). DSM-5 –\nManuel Diagnostique et Statistique des Troubles Mentaux.\nTraduction française par M.-A. Crocq, J.-D. Guelet al.,\nElsevier Masson SAS, Paris.\nAndreasen, N. (1982). «Negative symptoms in schizophrenia.\nDenition and reliability » Archives of General Psychiatry,\n39(7), p. 784-788.\nArendt, M. & al. (2005). « Cannabis- induced psychosis and\nsubsequent schizophrenia-spectrum disorders : follow-up\nMojtabai, R. & al. (2003). « Clinical characteristics,\n4-year-course, and DSM-IV classication of patients with\nnon-affective acute remitting psychosis », American Journal\nof Psychiatry, 160(12), p. 2108-2115.\nMöller, H. J. & al. (2010). « The Munich 15-year follow-up\nstudy (MUFUSSAD) on rst-hospitalized patients with\nschizophre nic or affective disorders : Comparison of psy-\nchopathological and psychosocial course and outcome and\nprediction of chronicity », European Archives of Psychiatry\nand Clinical Neurosciences, 260(5), p. 367-384.\nPillman, F. & Marneros, A. (2003). « Brief and acute\npsychoses : The development of concepts », History of\nPsychiatry, 14(54) Pt 2, p. 161-177.\nPillman, F. & Marneros, A. (2006). « Longitudinal follow-up in\nacute and transient psychotic disorders and schizophrenia »,\nBritish Journal of Psychiatry, 187(9), p. 286-287.\nPillman, F. & al. (2002). « The concordance of ICD-10 acute\nand transient psychosis and DSM-IV brief psychotic disor-\nder », Psychological Medicine, 32, p. 525-533.\nPillman, F. & al. (2003a). « Suicidal behaviour in acute and\ntransient psychotic disorders », Psychiatry Research, 117(3),\np. 199-209.\nPillman F. & al. (2003b). « Personality and social interactions\nin patients with acute brief psychoses », Journal of Nervous &\nMental Disease, 191(8), p. 503-508.\nReay, R. & al. (2010). « Incidence and diagnostic diversity in\nrst-episode psychosis », Acta Psychiatrica Scan dinavica,\n121(4), p. 315-319.\nRingel, T. M. & al. (2004). « Sensory gating decit in a\nsubtype of chronic schizophrenic patients », Psychiatry\nResearch, 125(3), p. 237-245.\nRöttig, S. & al. (2005). « Is there evidence in the EEG for\nincreased epileptiform activity in ICD-10 acute and transient\npsychotic disorder ? », Psychopathology, 38(5), p. 281-284.\nSajith, S. G. & al. (2002). « Acute polymorphic psychotic\ndisorder : Diagnostic stability over three years », Acta\nPsychiatrica Scandinavica, 105(2), p. 104-109.\nSingh, S. P. & al. (2004). « Acute and transient psychotic\ndisorders : Precursors, epidemiology », course and outcome,\nBritish Journal of Psychiatry, 185(12), p. 452-459.\nStrik, W. K. & al. (1997). « Specic P300 features in patients\nwith cycloid psychosis », Acta Psychiatrica Scandinavica,\n95(1), p. 67-72.\nSusser, E. & Wandereling, J. (1994). « Epidemiology of non-\naffective acute remitting psychosis vs. schizophrenia : Sex\nand sociocultural setting », Archives of General Psychiatry,\n51(4), p. 294-301.\nChapitre 16\nAmerican Psychiatric Association (APA). (1991). DSM-III-R.\nCritères diagnostiques (Washington, DC, 1980), traduction\nfrançaise par J. M. Dubroca & N. Ferrand, Paris, Masson,\n311 p.\nAmerican Psychiatric Association (APA). (1999). DSM-IV.\nCritères diagnostiques (Washington, DC, 1994), traduction\nfrançaise par J.-D. Guelet al., Paris, Masson, 239 p.\nAmerican Psychiatric Association (APA). (2004). DSM-IV-TR.\nCritères diagnostiques (Washington, DC, 2000), traduction\nfrançaise par J.-D. Guelet al., Paris, Masson, 384 p.\nAmerican Psychiatric Association (APA). (2015). DSM-5 –\nManuel Diagnostique et Statistique des Troubles Mentaux,\ntraduction française par M.-A. Crocq, J.-D. Guelet al.,\nElsevier Masson SAS, Paris.\nBedford, A. & Foulds, G. A. (1976). « A new personal\ndisturbance scale (DSSI/sAD) », British Journal of Social and\nClinical Psychology, 15(4), p. 387-394.\nBraun, C. & Suffren, S. (2011). « A general neuropsycholo-\ngical model of delusion », Cognitive Neuropsychiatry, 16(1),\np. 1-39.\n",
+  "raw_text_sha256": "760f01f4e477079cb069e46bf1926cb9be5cd1b1fc0f7d1fe2b9d058f443834d",
+  "source_page_display": 1113,
+  "source_page_index": 1112
+}

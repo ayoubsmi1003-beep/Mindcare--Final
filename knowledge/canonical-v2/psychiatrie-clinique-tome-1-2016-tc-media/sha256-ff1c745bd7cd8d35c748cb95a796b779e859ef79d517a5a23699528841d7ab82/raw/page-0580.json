@@ -1,0 +1,160 @@
+{
+  "block_sequence_sha256": "8195edfbed2d733783b87ecf88d17f036b4611c636e718f497537f7946d60d6d",
+  "blocks": [
+    {
+      "bbox": [
+        381.75,
+        747.525390625,
+        555.0,
+        758.8193359375
+      ],
+      "block_id": "page-0580-block-0001",
+      "order": 1,
+      "text": "Chapitre 26\nDouleur chronique\n563\n",
+      "text_sha256": "f958a62a177fa3c8b51b23fdaaef2d60b06827112ca240422b01109688297a46"
+    },
+    {
+      "bbox": [
+        56.400001525878906,
+        41.002296447753906,
+        253.44625854492188,
+        53.320068359375
+      ],
+      "block_id": "page-0580-block-0002",
+      "order": 2,
+      "text": "FIGURE 26.4 Échelle douleur neuropathique DN4\n",
+      "text_sha256": "79967d74bfd41a5b897a7499a011947d1ab209c9610774ff15a6cdd24c1240eb"
+    },
+    {
+      "bbox": [
+        54.10000228881836,
+        504.59063720703125,
+        207.35824584960938,
+        513.4588623046875
+      ],
+      "block_id": "page-0580-block-0003",
+      "order": 3,
+      "text": "Source : Adapté de Bouhassira & al. (2005), p. 29-36.\n",
+      "text_sha256": "5e819e923d09ac3049a98e5ef77e00d991e1e08de2c9e894e13fb37e64b07ae2"
+    },
+    {
+      "bbox": [
+        54.0,
+        525.4658203125,
+        296.9007873535156,
+        558.95849609375
+      ],
+      "block_id": "page-0580-block-0004",
+      "order": 4,
+      "text": "le patient imite sciemment un comportement douloureux pour\nobtenir des avantages auxquels il n’a pas droit, tels que des opiacés,\nun gite ou une compensation nancière.\n",
+      "text_sha256": "ae33a6d5da5e8166a26118625048b5f5e1f997e88e84c357b2a89dba90bfb5c0"
+    },
+    {
+      "bbox": [
+        74.0,
+        564.97412109375,
+        277.1573486328125,
+        585.55029296875
+      ],
+      "block_id": "page-0580-block-0005",
+      "order": 5,
+      "text": "L’amplication de symptômes sensoriels et moteurs est\nprésentée en détail au chapitre 30.\n",
+      "text_sha256": "eab2e928d4b37458c5862ec117be5de6631ed95c9c1c8434d1355d4e5d317c4e"
+    },
+    {
+      "bbox": [
+        54.0,
+        603.48681640625,
+        148.5205078125,
+        619.62939453125
+      ],
+      "block_id": "page-0580-block-0006",
+      "order": 6,
+      "text": "26.8.3 Psychose\n",
+      "text_sha256": "482c879c1e5535864042002b10511e8ddb10e84e3465264697239d8b4cbc52f2"
+    },
+    {
+      "bbox": [
+        54.0,
+        622.9658203125,
+        297.643798828125,
+        725.45849609375
+      ],
+      "block_id": "page-0580-block-0007",
+      "order": 7,
+      "text": "La douleur peut aussi être un symptôme de psychose. La conviction\ndouloureuse peut cacher un processus délirant très élaboré que le\npatient parvient à encapsuler parfois en rationalisant, parfois en\nrefoulant la charge émotionnelle à l’origine de l’activité psychotique.\nIl devient important durant l’évaluation de ne pas confondre le\ndélire somatique avec une anxiété de nature hypocondriaque.\nLorsque le patient fait état d’une localisation inhabituelle, voire\nbizarre de la douleur, d’un renoncement à son soulagement ainsi\nqu’une description vague qui s’accompagne d’un aect restreint\n",
+      "text_sha256": "994e65b6e8355e77394287f7493b5a34e292e8f092ec7c38615f5d4b40991092"
+    },
+    {
+      "bbox": [
+        312.0,
+        525.4658203125,
+        555.2066650390625,
+        547.70849609375
+      ],
+      "block_id": "page-0580-block-0008",
+      "order": 8,
+      "text": "ou émoussé, l’hypothèse d’une psychose ou d’un trouble délirant\nmérite une plus grande attention de la part du médecin.\n",
+      "text_sha256": "72adf0e00ffe421d00626caf73c7310b4ade797047c3d9711b1f4c34ff151ba7"
+    },
+    {
+      "bbox": [
+        319.20001220703125,
+        566.1931762695312,
+        494.1440734863281,
+        585.2189331054688
+      ],
+      "block_id": "page-0580-block-0009",
+      "order": 9,
+      "text": "26.9\nVariété diagnostique\n",
+      "text_sha256": "ff9d6cddb3b186b204373ec333a9ae4a7232ce809d1af66de300cca45bf19648"
+    },
+    {
+      "bbox": [
+        312.0,
+        599.1658325195312,
+        554.87890625,
+        644.8085327148438
+      ],
+      "block_id": "page-0580-block-0010",
+      "order": 10,
+      "text": "Cette section décrit les principaux diagnostics en rapport avec\nles maladies du système nerveux spécialisé de la douleur, leur\nmode de présentation et les traitements ciblés en fonction des\nguides de pratique existants.\n",
+      "text_sha256": "bd1239d9482b5d19970f0ff78479f974878394b85de10a27d7df420125db3dff"
+    },
+    {
+      "bbox": [
+        312.0,
+        655.5868530273438,
+        554.9204711914062,
+        687.9293823242188
+      ],
+      "block_id": "page-0580-block-0011",
+      "order": 11,
+      "text": "26.9.1 Trouble à symptomatologie somatique\navec douleur prédominante\n",
+      "text_sha256": "88a49be860de83f05c8e848452492d831175a8d948be7aada490f53b7da1d0e6"
+    },
+    {
+      "bbox": [
+        312.0,
+        691.5158081054688,
+        555.0070190429688,
+        725.45849609375
+      ],
+      "block_id": "page-0580-block-0012",
+      "order": 12,
+      "text": "Le diagnostic de « trouble douloureux avec facteurs psycholo-\ngiques », avec ou sans aection médicale associée, a été éliminé\ndu DSM-5. Le diagnostic trouble douloureux est maintenant placé\n",
+      "text_sha256": "997f1ac1a4b67769b5f86dd3741eeef4ddecf3a0065c4698e67a89c6cb0bf586"
+    }
+  ],
+  "coordinates_sha256": "2dda5c7ad6fb9ae7e764ea6147bd33d29640dd673619e77a35950943f43015fd",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0580",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 26\nDouleur chronique\n563\nFIGURE 26.4 Échelle douleur neuropathique DN4\nSource : Adapté de Bouhassira & al. (2005), p. 29-36.\nle patient imite sciemment un comportement douloureux pour\nobtenir des avantages auxquels il n’a pas droit, tels que des opiacés,\nun gite ou une compensation nancière.\nL’amplication de symptômes sensoriels et moteurs est\nprésentée en détail au chapitre 30.\n26.8.3 Psychose\nLa douleur peut aussi être un symptôme de psychose. La conviction\ndouloureuse peut cacher un processus délirant très élaboré que le\npatient parvient à encapsuler parfois en rationalisant, parfois en\nrefoulant la charge émotionnelle à l’origine de l’activité psychotique.\nIl devient important durant l’évaluation de ne pas confondre le\ndélire somatique avec une anxiété de nature hypocondriaque.\nLorsque le patient fait état d’une localisation inhabituelle, voire\nbizarre de la douleur, d’un renoncement à son soulagement ainsi\nqu’une description vague qui s’accompagne d’un aect restreint\nou émoussé, l’hypothèse d’une psychose ou d’un trouble délirant\nmérite une plus grande attention de la part du médecin.\n26.9\nVariété diagnostique\nCette section décrit les principaux diagnostics en rapport avec\nles maladies du système nerveux spécialisé de la douleur, leur\nmode de présentation et les traitements ciblés en fonction des\nguides de pratique existants.\n26.9.1 Trouble à symptomatologie somatique\navec douleur prédominante\nLe diagnostic de « trouble douloureux avec facteurs psycholo-\ngiques », avec ou sans aection médicale associée, a été éliminé\ndu DSM-5. Le diagnostic trouble douloureux est maintenant placé\n",
+  "raw_text_sha256": "0e5fc1bba74878325678c454952f4a6ec10df67e46b85fc0b08288e9daa3a524",
+  "source_page_display": 581,
+  "source_page_index": 580
+}

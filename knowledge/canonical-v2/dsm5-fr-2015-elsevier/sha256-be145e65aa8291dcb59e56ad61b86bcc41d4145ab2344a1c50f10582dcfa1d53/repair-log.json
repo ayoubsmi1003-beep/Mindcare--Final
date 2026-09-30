@@ -1,0 +1,15 @@
+{
+  "tool": "pymupdf",
+  "tool_version": "1.28.2",
+  "operation": "replace corrupt 1-based pages with blank placeholders of identical size",
+  "blanked_1based": [
+    1137,
+    1140
+  ],
+  "reason": "Citra rust parser rejects inline-image constructs on these pages (inline image missing ID operator); PyMuPDF extracts them fine — content preserved in ORIGINAL, placeholders keep indices stable",
+  "original_sha256": "BE145E65AA8291DCB59E56AD61B86BCC41D4145AB2344A1C50F10582DCFA1D53",
+  "repaired_sha256": "6d2967e61ba3cfa28657f5a5da22e1f48aa1c0b1f8b3f09ea8b5ef3f1ffef835",
+  "page_count_preserved": 1275,
+  "indices_preserved": true,
+  "ocr_used": false
+}

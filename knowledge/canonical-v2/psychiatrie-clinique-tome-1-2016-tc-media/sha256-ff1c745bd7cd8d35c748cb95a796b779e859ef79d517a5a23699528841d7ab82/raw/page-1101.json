@@ -1,0 +1,784 @@
+{
+  "block_sequence_sha256": "f527ace4606fd126f97e405226698328c69931971443b8462bf44561562965a4",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        126.91150665283203,
+        758.8693237304688
+      ],
+      "block_id": "page-1101-block-0001",
+      "order": 1,
+      "text": "R4\nRéférences\n",
+      "text_sha256": "df0f2f4d7cac99ca5e2547f47d94373894367b80eae1a33d1284484aec4cb36f"
+    },
+    {
+      "bbox": [
+        390.0,
+        40.68496322631836,
+        525.8499755859375,
+        57.97343826293945
+      ],
+      "block_id": "page-1101-block-0002",
+      "order": 2,
+      "text": "processing studies », Journal of Affective Disorders,\n130(1-2), p. 66-74.\n",
+      "text_sha256": "d4c8af7e7d148003d70360a38246409916033afda5d71fac54460f51ffacbd31"
+    },
+    {
+      "bbox": [
+        390.0,
+        61.88496398925781,
+        546.9400024414062,
+        106.47344207763672
+      ],
+      "block_id": "page-1101-block-0003",
+      "order": 3,
+      "text": "Delvecchio, G. & al. (2011). « Common and distinct neural\ncorrelates of emotional process in bipolar disorder and\nmajor depressive disorder : A voxel-based meta-analysis of\nfunctional magnetic resonance imaging studies », European\nNeuropsychopharmacology, 22(2), p. 100-113.\n",
+      "text_sha256": "7fdbf38bcc506c4d08d058c5a9bbc2a7acd321a83d9f79b5a522b2ad3f8cc041"
+    },
+    {
+      "bbox": [
+        390.0,
+        109.88447570800781,
+        547.2879638671875,
+        136.7734375
+      ],
+      "block_id": "page-1101-block-0004",
+      "order": 4,
+      "text": "Dougall, N. J. & al. (2003). « The clinical use of 99mTc-HM-\nPAO-SPECT in Alzheimer’s disease », Advances in Biological\nPsy chiatry, 22, p. 4-37.\n",
+      "text_sha256": "3276945985028cfadcfba131de73df078ba2d626f980a0a91e254aa861b531a8"
+    },
+    {
+      "bbox": [
+        390.0,
+        140.68496704101562,
+        533.8801879882812,
+        157.9734344482422
+      ],
+      "block_id": "page-1101-block-0005",
+      "order": 5,
+      "text": "Drevets, W. C. (2000). « Neuroimaging Studies of Mood\nDisorders », Biological Psychiatry, 48(8), p. 813-829.\n",
+      "text_sha256": "e0664608f2b02d5b52dbf814f3abf101993f8b397f75d9312c25cdc3e846f32d"
+    },
+    {
+      "bbox": [
+        390.0,
+        161.8849639892578,
+        545.1505737304688,
+        188.2234344482422
+      ],
+      "block_id": "page-1101-block-0006",
+      "order": 6,
+      "text": "Fazel, R. & al. (2009). « Exposure to low-dose ionizing\nradiation », New England Journal of Medicine, 361(9),\np. 849-857.\n",
+      "text_sha256": "ebcd0bfab6ecb5caf4357aa546f14f7aa90aa6e46fd017f00a1d3fa4a0d27f74"
+    },
+    {
+      "bbox": [
+        390.0,
+        192.1349639892578,
+        536.0299682617188,
+        218.5234375
+      ],
+      "block_id": "page-1101-block-0007",
+      "order": 7,
+      "text": "Frankle, W. G. (2007). « Neuroreceptor imaging studies\nin schizophrenia », Harvard Review of Psychiatry, 15(5),\np. 212-232.\n",
+      "text_sha256": "5da1194b246e4685b5b2a1f448b5b3536d02e3a790f4afa3c0df3ff4f7cfdd92"
+    },
+    {
+      "bbox": [
+        390.0,
+        222.43496704101562,
+        536.75,
+        267.0234375
+      ],
+      "block_id": "page-1101-block-0008",
+      "order": 8,
+      "text": "Goto, H. & al. (2010). « Differential diagnosis of dementia\nwith Lewy bodies and Alzheimer Disaese using combined\nMR imagingand brain perfusion single-photon emission\ntomography », AJNR American Journal of Neuroradiology,\n31(4), p. 720-725.\n",
+      "text_sha256": "cdd3720e593d0b8aa23a3755ba9bef30ce657e39d609dd0bddfd4527e3cd8569"
+    },
+    {
+      "bbox": [
+        390.0,
+        270.9349670410156,
+        542.6875,
+        306.4234313964844
+      ],
+      "block_id": "page-1101-block-0009",
+      "order": 9,
+      "text": "Hallahan, B. & al. (2011). « Structural magnetic resonance\nimaging in bipolar disorder : An international collaborative\nmega-Analysis of individual adult patient data »,Biological\nPsychiatry, 69(4), p. 326-335.\n",
+      "text_sha256": "c02afe4d2328d6c92db0c7802dbdaabbdb318fbf739fab1bb709245056f808f0"
+    },
+    {
+      "bbox": [
+        390.0,
+        310.3349609375,
+        549.0515747070312,
+        336.72344970703125
+      ],
+      "block_id": "page-1101-block-0010",
+      "order": 10,
+      "text": "Hamilton, J. P. & al. (2008). « Amygdala volume in major\ndepressive disorder : A meta-analysis of magnetic resonance\nimaging studies »,Molecular Psychiatry, 13(11), p. 993-1000.\n",
+      "text_sha256": "63019089454f6e0b21270b5555244276cad2c69c6f6fd57a48ef881024a64fcc"
+    },
+    {
+      "bbox": [
+        390.0,
+        340.6349792480469,
+        546.7174072265625,
+        357.9234313964844
+      ],
+      "block_id": "page-1101-block-0011",
+      "order": 11,
+      "text": "Heiss, W. D. & Herholz, K. (2006). « Brain re ceptor imaging »,\nJournal of Nuclear Medicine, 47(2), p. 302-312.\n",
+      "text_sha256": "e09d4506de5b48df82f8a9efa8b8b16d921b7f27d5b74bc2c62083dfe52df9c5"
+    },
+    {
+      "bbox": [
+        390.0,
+        361.8349609375,
+        536.7774658203125,
+        388.22344970703125
+      ],
+      "block_id": "page-1101-block-0012",
+      "order": 12,
+      "text": "Jagust, W. & al. (2007). « What does uoro deoxyglucose\nPET imaging add to a cli nical diagnosis of dementia ? »,\nNeurology, 69(9), p. 871-877.\n",
+      "text_sha256": "f0b75af635e3cf217caa77bc5ccc3fd72b47414ac690c14c4aa6db18d77f96b7"
+    },
+    {
+      "bbox": [
+        390.0,
+        392.1349792480469,
+        547.7974853515625,
+        427.5734558105469
+      ],
+      "block_id": "page-1101-block-0013",
+      "order": 13,
+      "text": "Järnum, H. & al. (2011). « Longitudinal MRI study of cortical\nthickness, perfusion, and metabolite levels in major depres-\nsive disorder », Acta Psychiatrica Scandinavica, 124(6),\np. 435-446.\n",
+      "text_sha256": "d0468416d8cd101c3ea2ebc34312a19891169c22790fa3f8f2b8f51c0e8a6dcf"
+    },
+    {
+      "bbox": [
+        390.0,
+        431.4849548339844,
+        542.1251220703125,
+        476.0734558105469
+      ],
+      "block_id": "page-1101-block-0014",
+      "order": 14,
+      "text": "Johnson, K. A. & al. (2013). «Appropriate use criteria for\namyloid PET : A report of the Amyloid Imaging Task Force,\nthe Society of Nuclear Medicine and Molecular Imaging,\nand the Alzheimer’s Association », The Journal of Nuclear\nMedicine, 54, p. 476-490.\n",
+      "text_sha256": "5a6d745f83427db060272e6633e51f18f33f37ae9ce42d45de8415c70fe18a16"
+    },
+    {
+      "bbox": [
+        390.0,
+        479.9849548339844,
+        537.4238891601562,
+        506.3734436035156
+      ],
+      "block_id": "page-1101-block-0015",
+      "order": 15,
+      "text": "Jolivet, R. & al. (2009). « Deciphering neuron-glia\ncompartmentalization in cortical energy metabolism »,\nFrontiers in Neuroenergetics, 1, Article 4, p. 1-10.\n",
+      "text_sha256": "68b4fd76022fc09d4efe148fd777cf96eaeae6612b87920c836c7afa5cbdfb2b"
+    },
+    {
+      "bbox": [
+        390.0,
+        510.28497314453125,
+        538.320068359375,
+        545.7734375
+      ],
+      "block_id": "page-1101-block-0016",
+      "order": 16,
+      "text": "Kempton, M. J. & al. (2008). « Meta- analysis, database,\nand meta-regression of 98 structural imaging studies in\nbipolar disorder », Archive of General Psychiatry, 65(9),\np. 1017-1032.\n",
+      "text_sha256": "b87d8ef9c626d3eaf794e1ce78fc0de2126689a11c8b22bad81440267d324fcb"
+    },
+    {
+      "bbox": [
+        390.0,
+        549.6849975585938,
+        545.1630859375,
+        585.1734619140625
+      ],
+      "block_id": "page-1101-block-0017",
+      "order": 17,
+      "text": "Kempton, M. J. & al. (2011). « Structural neuroimaging\nstudies in major depressive disorder. Meta-analysis and\ncomparison with bipolar disorder », Archives of General\nPsychiatry, 68(7), p. 675-690.\n",
+      "text_sha256": "9710de7ab2bc4795705a80af5c192d1ccc7983005e3a9da00bcdc09b0f56c7c2"
+    },
+    {
+      "bbox": [
+        390.0,
+        589.0849609375,
+        537.8250122070312,
+        624.5234375
+      ],
+      "block_id": "page-1101-block-0018",
+      "order": 18,
+      "text": "Killiany, R. J. & al. (1993). « Temporal lobe regions on\nmagnetic resonance imaging identify patients with early\nAlzheimer’s disease », Archives of Neurology, 50(9),\np. 949-954.\n",
+      "text_sha256": "775f69a645fcf207520ea8d1eaed39145863d0f17f256a738a1f02630eb84da8"
+    },
+    {
+      "bbox": [
+        390.0,
+        628.4349975585938,
+        548.70751953125,
+        663.9234619140625
+      ],
+      "block_id": "page-1101-block-0019",
+      "order": 19,
+      "text": "Kima, M. J. & al. (2011). « Differential diagnosis of idiopathic\nnormal pressure hydrocephalus from other dementias using\ndiffusion tensor imaging », American Journal of Neuradio-\nlogy, 32(8), p. 1496-1503.\n",
+      "text_sha256": "74d1855dc4c7ce0f687136bd6422f1b1c79f07bff42a8337160e21cfe0717f7e"
+    },
+    {
+      "bbox": [
+        390.0,
+        667.8349609375,
+        548.8475341796875,
+        703.3234252929688
+      ],
+      "block_id": "page-1101-block-0020",
+      "order": 20,
+      "text": "Lahti, A. C. & al. (2009). « Modulation of limbic circuitry\npredicts treatment response to antipsychotic medication :\nA functional imaging study in schizo phrenia »,Neuropsycho-\npharmacology, 34(13), p. 2675-2690.\n",
+      "text_sha256": "98dbb5c17d15d9e5fcc71483e72e4924bb2535a8d948eb275ee518dc84be6916"
+    },
+    {
+      "bbox": [
+        390.0,
+        707.2349853515625,
+        544.6018676757812,
+        724.5234375
+      ],
+      "block_id": "page-1101-block-0021",
+      "order": 21,
+      "text": "Laruelle, M. (2000). « Imaging synaptic neurotrans-\nmission with in vivo binding competition techniques :\n",
+      "text_sha256": "1895555054c31d78ebe277f07b8b1c2d20ddc346a9314ca440680b2e0e2a1214"
+    },
+    {
+      "bbox": [
+        219.0,
+        40.68496322631836,
+        378.42498779296875,
+        66.97344207763672
+      ],
+      "block_id": "page-1101-block-0022",
+      "order": 22,
+      "text": "Appleby, B. S. & al. (2009). « Characteristics of established\nand proposed sporadic Creutzfeldt-Jakob disease variants »,\nArchives of Neurology, 66(2), p. 208-215.\n",
+      "text_sha256": "f5eb3a44de7a64a3bf8245c7372bc20fc536e845e01629479906c762f9e0b472"
+    },
+    {
+      "bbox": [
+        219.0,
+        70.8349609375,
+        375.0975036621094,
+        97.1234359741211
+      ],
+      "block_id": "page-1101-block-0023",
+      "order": 23,
+      "text": "Argawal, N. & al. (2010). «Update on the use of MRI for\nassessment and diagnosis of psychiatric diseases », Radio-\nlogy, 255(1), p. 23-41.\n",
+      "text_sha256": "61cfe22583cac2f14c8e0a47b356092605314af1eb2fd76e1aaa76e0334b18fc"
+    },
+    {
+      "bbox": [
+        219.0,
+        101.03496551513672,
+        377.5300598144531,
+        118.2734375
+      ],
+      "block_id": "page-1101-block-0024",
+      "order": 24,
+      "text": "Attwell, D. & al. (2010). « Glial and neuronal control of brain\nblood ow », Nature, 468, p. 232-243.\n",
+      "text_sha256": "917bf5a0dcafa5633bc9c46c5d6260b0122418a0be2a759321ace3695a7127c8"
+    },
+    {
+      "bbox": [
+        219.0,
+        122.13496398925781,
+        370.2150573730469,
+        148.42344665527344
+      ],
+      "block_id": "page-1101-block-0025",
+      "order": 25,
+      "text": "Ballard, C. G. & al. (2004). « Neuroimaging criteria do not\ndistinguish stroke patients with and without dementia »,\nNeurology, 63(6), p. 983-988.\n",
+      "text_sha256": "45880e2cbc74591cf688c7c532a5cd76108a70fa8842f247736696b6b66d1a57"
+    },
+    {
+      "bbox": [
+        219.0,
+        152.2849578857422,
+        369.4175109863281,
+        178.5734405517578
+      ],
+      "block_id": "page-1101-block-0026",
+      "order": 26,
+      "text": "Bearden, C. E. & al. (2007). « Greater cortical gray matter\ndensity in lithium-treated patients with bipolar disorder »,\nBiology Psychiatry, 62(1), p. 7-16.\n",
+      "text_sha256": "183832f69df1e6a6355e4b47a6b2e051e3c7d47f187643d993998a6558f2501b"
+    },
+    {
+      "bbox": [
+        219.0,
+        182.43496704101562,
+        373.3204345703125,
+        217.7734375
+      ],
+      "block_id": "page-1101-block-0027",
+      "order": 27,
+      "text": "Bertolino, A. & al. (2001). « The effect of treatment with\nantipsychotic drugs on brain N-acetylaspartate measures\nin patients with schizophrenia », Biological Psychiatry,\n49(1), p. 39-46.\n",
+      "text_sha256": "a0d8030a8e0219d185bca2d441e58e829fdb80d18a7e019752b1f68663ac9a7b"
+    },
+    {
+      "bbox": [
+        219.0,
+        221.6349639892578,
+        373.3828430175781,
+        247.9734344482422
+      ],
+      "block_id": "page-1101-block-0028",
+      "order": 28,
+      "text": "Beyer, J. L. & al. (2009). « Hyperintense MRI lesions in bipolar\ndisorder : A meta- analysis and review », International Review\nof Psychiatry, 21(4), p. 394-409.\n",
+      "text_sha256": "af8d47ce197e76d3d3d616413a6449b231468a32f4f31c88cf952d2bd345d6e1"
+    },
+    {
+      "bbox": [
+        219.0,
+        251.8349609375,
+        370.1474914550781,
+        278.1234436035156
+      ],
+      "block_id": "page-1101-block-0029",
+      "order": 29,
+      "text": "Birks, J. (2006). « Cholinesterase inhibitors for Alzhei-\nmer’s disease », Cochrane Database System Review,\n1,CD005593.\n",
+      "text_sha256": "87695c71503eb4c73760f4141513ec3ef50b1afc3521c88b5b113b9be335b4ff"
+    },
+    {
+      "bbox": [
+        219.0,
+        281.9849548339844,
+        378.4504089355469,
+        308.2734375
+      ],
+      "block_id": "page-1101-block-0030",
+      "order": 30,
+      "text": "Bohnen, N. I. & al. (2012). « Effectiveness and Safety of\n18F-FDG PET in the Evaluation of Dementia : A Review of the\nRecent Literature », Journal of Nuclear Medicine, 53, p. 59-71.\n",
+      "text_sha256": "71596ae7372e5843e57ac15487e9a7bd3c4e0006f671ef2b0d3706d4df065904"
+    },
+    {
+      "bbox": [
+        219.0,
+        312.1349792480469,
+        365.4110107421875,
+        338.4234313964844
+      ],
+      "block_id": "page-1101-block-0031",
+      "order": 31,
+      "text": "Bremner, D. (2007). « Neuroimaging in posttraumatic stress\ndisorder and other stress- related disorders »,Neuroimaging\nClinics of North America, 17(4), p. 523–ix.\n",
+      "text_sha256": "f4019873818474e7d458c84d3c0420e36791e7763725ce63401fddfa62762746"
+    },
+    {
+      "bbox": [
+        219.0,
+        342.28497314453125,
+        364.6499938964844,
+        368.5734558105469
+      ],
+      "block_id": "page-1101-block-0032",
+      "order": 32,
+      "text": "Brian, K. B. (1998). « CT Scans of First-Break Psychotic\nPatients in Good General Health », Psychiatric Services,\n49(2), p. 234-235.\n",
+      "text_sha256": "4ffc710e123e43d0b97afe3754dc16df7378f7aab48121cc101d5676790913f2"
+    },
+    {
+      "bbox": [
+        219.0,
+        372.4349670410156,
+        375.7633361816406,
+        407.8234558105469
+      ],
+      "block_id": "page-1101-block-0033",
+      "order": 33,
+      "text": "Burton, E. J. & al. (2004). « Cerebral atrophy in Parkinson’s\ndisease with and without dementia : a comparison with\nAlzheimer’s disease, dementia with Lewy bodies and\ncontrols », Brain, 127(4), p. 791-800.\n",
+      "text_sha256": "4cb3708cb3f7bf638a15a79c075d7cd66065d4f162cba91ca5b31e1b62ca04f0"
+    },
+    {
+      "bbox": [
+        219.0,
+        411.6849670410156,
+        368.580078125,
+        456.0734558105469
+      ],
+      "block_id": "page-1101-block-0034",
+      "order": 34,
+      "text": "Burton, E. J. & al. (2009). « Medial temporal lobe atrophy\non MRI differentiates Alzheimer’s disease from dementia\nwith Lewy bodies and vascular cognitive impairment : A\nprospective study with pathological verication of diag-\nnosis », Brain, 132(1), p. 195-203.\n",
+      "text_sha256": "da4fdd7acfb81334b3131a8a94f112390c0a192bbf03d5eb4d391f39eafe5858"
+    },
+    {
+      "bbox": [
+        219.0,
+        459.9349670410156,
+        375.1999816894531,
+        495.2734375
+      ],
+      "block_id": "page-1101-block-0035",
+      "order": 35,
+      "text": "Bustillo, J. R. & al. (2008). « Proton magnetic resonance\nspectroscopy during initial treatment with antipsy chotic\nmedication in schizophrenia », Neuropsychiphamacology,\n33(10), p. 2456-2466.\n",
+      "text_sha256": "578f3cabe2d514bb2b2af22b83842b295fe18608d9e24d3962386ba53b7d4c9a"
+    },
+    {
+      "bbox": [
+        219.0,
+        499.1349792480469,
+        374.9450378417969,
+        525.4734497070312
+      ],
+      "block_id": "page-1101-block-0036",
+      "order": 36,
+      "text": "Carota, A. & al. (2008). « A Squint of brain : A Capgras\nsyndrome variant », Journal of Neuropsychiatry and Clinical\nNeuro sciences, 20(1), p. 109-110.\n",
+      "text_sha256": "acd8679a317a6d7d6156d2f7077357b7102c70e03d3999cf61455cd7245ae322"
+    },
+    {
+      "bbox": [
+        219.0,
+        529.3349609375,
+        377.10650634765625,
+        555.6234741210938
+      ],
+      "block_id": "page-1101-block-0037",
+      "order": 37,
+      "text": "Chen, J. & Shi, S. (2011). « A review of neuroimaging studies\nof anxiety disorders in China », Neuropsychiatric Disease\nand Treatment, 7, p. 241-249.\n",
+      "text_sha256": "c1d113b859a7b0df53d34210c0c45e2bdc7d28c8b148411efd591e9b9858e4a3"
+    },
+    {
+      "bbox": [
+        219.0,
+        559.4849853515625,
+        373.5475158691406,
+        594.8234252929688
+      ],
+      "block_id": "page-1101-block-0038",
+      "order": 38,
+      "text": "Chiu, C. H. & al. (2011). « White matter abnormalities of\nfronto-striato-thalamic circuitry in obsessive-compulsive\ndisorder : A study using diffusion spectrum imaging tracto-\ngraphy », Psychiatry Research, 192(3), p. 176-182.\n",
+      "text_sha256": "b9f8294f60bcb7e4cf55938437eb4ecf8df0a397019d5935a49691c721662883"
+    },
+    {
+      "bbox": [
+        219.0,
+        598.6849975585938,
+        366.61749267578125,
+        624.9734497070312
+      ],
+      "block_id": "page-1101-block-0039",
+      "order": 39,
+      "text": "Coleman, R. E. (2005). « Positron emission tomography\ndiagnosis of Alzheimer’s disease », Neuroimag Clinics of\nNorth America, 15(4), p. 837-846.\n",
+      "text_sha256": "edbade127b04d8a301cec96a8d328dd1dba17dd3861bf8ce777cc758e299a757"
+    },
+    {
+      "bbox": [
+        219.0,
+        628.8349609375,
+        376.53497314453125,
+        664.2234497070312
+      ],
+      "block_id": "page-1101-block-0040",
+      "order": 40,
+      "text": "Dager, S. R. & al. (2008). « Research applications of\nmagnetic resonance spectroscopy to investigate psychiatric\ndisorders », Topics in Magnetic Resonance Imaging, 19(2),\np. 81-96.\n",
+      "text_sha256": "b09c61e2ea1df32d4fb3cb7e7d4fa9fd295621967d182f92fdb1b09e3ff96bb1"
+    },
+    {
+      "bbox": [
+        219.0,
+        668.0849609375,
+        373.697509765625,
+        703.4234619140625
+      ],
+      "block_id": "page-1101-block-0041",
+      "order": 41,
+      "text": "Davanzo, P. & al. (2001). « Decreased anterior cingulate\nmyo- inositol/creatine spectroscopy resonance with lithium\ntreatment in children with bipolar disorder »,Neuropsycho-\npharmacology, 24(4), p. 359-369.\n",
+      "text_sha256": "ea63cc8d8d8c59da1ddd7323ab8c201c91a12f4ef869a1bd2719dbc3e619adeb"
+    },
+    {
+      "bbox": [
+        219.0,
+        707.2849731445312,
+        372.3114929199219,
+        724.5234375
+      ],
+      "block_id": "page-1101-block-0042",
+      "order": 42,
+      "text": "Delaveau, P. & al. (2010). « Brain effects of antidepressants\nin major depression : A meta-analysis of emotional\n",
+      "text_sha256": "7851a4c992316a4e4ee2f4b928fda8ef134ebd26c4afae54fcca205ad7146400"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.68496322631836,
+        205.31822204589844,
+        67.07344055175781
+      ],
+      "block_id": "page-1101-block-0043",
+      "order": 43,
+      "text": "Lorenzetti, V. & al. (2009). « Structural abnormalities in\nmajor depressive disorder : A selective review of recent MRI\nstudies », Journal of Affective Disorders, 117(1-2), p. 1-17.\n",
+      "text_sha256": "3f75b8a85ef8d8cf6c74b0e2b2b931a1059e87ad592dcb031f7e6bd0d026a40b"
+    },
+    {
+      "bbox": [
+        48.0,
+        70.9849624633789,
+        196.09182739257812,
+        97.3734359741211
+      ],
+      "block_id": "page-1101-block-0044",
+      "order": 44,
+      "text": "Lucas, G. & al. (2007). « Serotonin (4) (5-HT4) receptor\nagonists are putative antidepressants with a rapid onset\nof action », Neuron, 55(5), p. 712-725.\n",
+      "text_sha256": "5517d29a3acc97a7ff6ff5111b8b5e501fce610315a866dc07664cd2352eeb04"
+    },
+    {
+      "bbox": [
+        48.0,
+        101.28496551513672,
+        206.29750061035156,
+        127.6734390258789
+      ],
+      "block_id": "page-1101-block-0045",
+      "order": 45,
+      "text": "Maas, J.W. (1975) « Biogenic amines and depression. Bioche-\nmincal and pharmacological separation of two types of depres-\nsion »,Archives of General Psychiatry, 32(11), p. 1357-1361.\n",
+      "text_sha256": "c6678907385f54919447697c9691a2bd56007303b54419e55fd67db2b7cd27df"
+    },
+    {
+      "bbox": [
+        48.0,
+        131.5849609375,
+        198.78501892089844,
+        157.9734344482422
+      ],
+      "block_id": "page-1101-block-0046",
+      "order": 46,
+      "text": "Mader, S. S. & Windelspecht, M. (2014). Biologie humaine,\n2e éd., Montréal, Québec, McGraw-Hill/Chenelière\nÉducation.\n",
+      "text_sha256": "5c9057126a4b75edf20b837570d57e39b98c8c572f1315feed453d43453e4242"
+    },
+    {
+      "bbox": [
+        48.0,
+        161.8849639892578,
+        182.30747985839844,
+        179.17344665527344
+      ],
+      "block_id": "page-1101-block-0047",
+      "order": 47,
+      "text": "Martin, J. H. (1996), Neuroanatomy, Text and Atlas,\nStamford, CT, Appleton and Lange.\n",
+      "text_sha256": "6a8c485b39324b279b951d163d170f62de3daabbe3c083d56d5df37730a3d531"
+    },
+    {
+      "bbox": [
+        48.0,
+        183.0849609375,
+        187.6074981689453,
+        209.4734344482422
+      ],
+      "block_id": "page-1101-block-0048",
+      "order": 48,
+      "text": "McKinley, M. P. & al. (2014). Anatomie et physiologie.\nUne approche intégrée. Montréal, Québec, McGraw-\nHill/Chenelière Éducation.\n",
+      "text_sha256": "bc714ce1c5679987ddf640ac5158d8ef5ddc2ed5cad69a28b09ee128dacce136"
+    },
+    {
+      "bbox": [
+        48.0,
+        213.3849639892578,
+        200.22752380371094,
+        230.67344665527344
+      ],
+      "block_id": "page-1101-block-0049",
+      "order": 49,
+      "text": "Meyer, J. S. & Quenzer, L. F. (2005). Psychopharmacology :\nDrugs, The brain and behavior, Sunderland, MA, Sinauer.\n",
+      "text_sha256": "947e4c8846ea516caa0b8c67a36978f98a72579612d758f96cbe544d4258d01a"
+    },
+    {
+      "bbox": [
+        48.0,
+        234.5849609375,
+        206.49749755859375,
+        251.87344360351562
+      ],
+      "block_id": "page-1101-block-0050",
+      "order": 50,
+      "text": "Parent, A. (2009). Histoire du cerveau. De l’Antiquité aux neu-\nrosciences. Québec, Québec, Presses de l’Université Laval.\n",
+      "text_sha256": "a38b5815a99e29d9cbc98f00e7fec74fdfca271833b0bc8412ad1b5a0e173d52"
+    },
+    {
+      "bbox": [
+        48.0,
+        255.78497314453125,
+        199.2277374267578,
+        282.1734313964844
+      ],
+      "block_id": "page-1101-block-0051",
+      "order": 51,
+      "text": "Picard, H. & al. (2008). « The role of cerebellum in schi-\nzophrenia : an update of clinical, cognitive, and functional\nevidences », Schizophrenia Bulletin, 34(1), p. 155-172.\n",
+      "text_sha256": "8e93d4827ca60f20b8166843f26b1d779730e0d2751b31e2a4df5f0df84211f6"
+    },
+    {
+      "bbox": [
+        48.0,
+        286.0849609375,
+        206.4801025390625,
+        312.47344970703125
+      ],
+      "block_id": "page-1101-block-0052",
+      "order": 52,
+      "text": "Rais, M. & al. (2008). « Excessive brain volume loss over time\nin cannabis-using rst episode schizophrenia patients »,\nAmerican Journal of Psychiatry, 165(4), p. 490-496.\n",
+      "text_sha256": "9a6bbc94f8865a8ba7835052f01428e1bef03d83bc9b165c72bc2b5c24fd8157"
+    },
+    {
+      "bbox": [
+        48.0,
+        316.3849792480469,
+        207.3975830078125,
+        361.0234375
+      ],
+      "block_id": "page-1101-block-0053",
+      "order": 53,
+      "text": "Roggenbach, J. & al. (2007). « Peripheral serotonergic\nmarkers in acutely suicidal patients. 1. Comparison of\nserotonergic platelet measures between suicidal individuals,\nnonsuicidal patients with major depression and healthy sub-\njects », Journal of Neural Transmission, 114(4), p. 479-487.\n",
+      "text_sha256": "e1e6ebc1d14d9717bc6f81d066c7e558e6fa9675720af1963f07f0e94be6f484"
+    },
+    {
+      "bbox": [
+        48.0,
+        364.9349670410156,
+        206.57284545898438,
+        400.4234313964844
+      ],
+      "block_id": "page-1101-block-0054",
+      "order": 54,
+      "text": "Rotge, J.-Y. & al.(2008). « Provocation of obsessive-compul-\nsive symptoms : A quantitative voxel-based meta-analysis of\nfunctional neuroimaging studies », Journal of Psychiatry and\nNeuroscience, 33(5), p. 405-412.\n",
+      "text_sha256": "f56d3ef84957dd12145655636b5adcde838f2fab130a50e5326890a38beb4692"
+    },
+    {
+      "bbox": [
+        48.0,
+        404.3349609375,
+        207.2051544189453,
+        439.8234558105469
+      ],
+      "block_id": "page-1101-block-0055",
+      "order": 55,
+      "text": "Spreux-Varoquaux, O. & al. (2001). « Differential abnormalities\nin plasma 5-HIAA and platelet serotonin concentrations in\nviolent suicide attempters : Relationships with impulsivity\nand depression », Life Sciences, 29(69), p. 647-657.\n",
+      "text_sha256": "bfd40eb84f1a20ab73f62c472f4a4a1cc2f2e8fbf93415800b7eeb47196c37ee"
+    },
+    {
+      "bbox": [
+        48.0,
+        443.7349548339844,
+        200.8300018310547,
+        470.1234436035156
+      ],
+      "block_id": "page-1101-block-0056",
+      "order": 56,
+      "text": "Stahl, S. M. (2010). « The serotonin-7 receptor as a novel\ntherapeutic target », Journal of Clinical Psychiatry, 71(11),\np. 1414-1415.\n",
+      "text_sha256": "889231b104725ea1463ba670d8e544381c90e65f91ebd13ecc9696ce5cb90a2f"
+    },
+    {
+      "bbox": [
+        48.0,
+        474.03497314453125,
+        201.3385009765625,
+        500.4234313964844
+      ],
+      "block_id": "page-1101-block-0057",
+      "order": 57,
+      "text": "Swardfager, W. & al. (2010). « A meta-analysis of cytokines\nin Alzheimer’s disease », Biological Psychiatry, 68(10),\np. 930-941.\n",
+      "text_sha256": "12d0d1444f7cc68289ea1f621436a9a9d3c13be83724c94b2abada0618c4e373"
+    },
+    {
+      "bbox": [
+        48.0,
+        504.3349609375,
+        201.217529296875,
+        530.7234497070312
+      ],
+      "block_id": "page-1101-block-0058",
+      "order": 58,
+      "text": "Takahashi, N. & al. (2011). « Linking oligodendrocyte and\nmyelin dysfunction to neurocircuitry abnormalities in schi-\nzophrenia », Progressive Neurobiology, 93(1), p. 13-24.\n",
+      "text_sha256": "efaf3454e8483286738f24968da327f9bb6d9158d1313f888ebb6ede3dfec4b3"
+    },
+    {
+      "bbox": [
+        48.0,
+        534.6349487304688,
+        198.78121948242188,
+        561.0234375
+      ],
+      "block_id": "page-1101-block-0059",
+      "order": 59,
+      "text": "Thayer, J. F. & Sternberg, E. M. (2010). « Neural aspects of\nimmunomodulation : Focus on the vagus nerve », Brain,\nBehavior, and Immunity, 24(8), p. 1223-1228.\n",
+      "text_sha256": "4c1e52524b1ba8688aa042c0399c38cc647c6820efbb2fbbc91863968b5274f0"
+    },
+    {
+      "bbox": [
+        48.0,
+        564.9349975585938,
+        206.65179443359375,
+        591.3234252929688
+      ],
+      "block_id": "page-1101-block-0060",
+      "order": 60,
+      "text": "Walterfang, M. & al. (2009). « Corpus callosum size and\nshape in rst-episode affective and schizophrenia-spectrum\ndisorder », Psychiatry Research, 173(1), p. 77-82.\n",
+      "text_sha256": "a3b8d765b5f5c8dc67189853e62abc302380a63afc10bbc68cdc9ca4892aa16b"
+    },
+    {
+      "bbox": [
+        48.0,
+        595.2349853515625,
+        196.24000549316406,
+        621.6234741210938
+      ],
+      "block_id": "page-1101-block-0061",
+      "order": 61,
+      "text": "Wang, Y. & al. (2015). « NeuroPep : a comprehensive\nresource of neuropeptides », Database (Oxford), 29 avril,\nbav038.\n",
+      "text_sha256": "31168c84523aedbdce9b027bb9dce820d0d0a7af6c5687a4d7026bbcb903d510"
+    },
+    {
+      "bbox": [
+        48.0,
+        625.5349731445312,
+        207.2007293701172,
+        642.8234252929688
+      ],
+      "block_id": "page-1101-block-0062",
+      "order": 62,
+      "text": "Wylie, K. & Tregellas, J. R. (2010). « The role of insula in\nschizophrenia », Schizophrenia Research, 123, p. 93-104.\n",
+      "text_sha256": "995e71a6ba322b24cbc07123a4f61ad1b2e6cf94c093faa628cd3810ef72364b"
+    },
+    {
+      "bbox": [
+        48.0,
+        646.7349853515625,
+        197.25283813476562,
+        673.1234741210938
+      ],
+      "block_id": "page-1101-block-0063",
+      "order": 63,
+      "text": "Yonekura, T. & al. (2014). « Relationship between salivary\ncortisol and dpression in adolescent survivors of a major\nnatural disaster », J Physiol Sci, 64(4), p. 261-267.\n",
+      "text_sha256": "5dcb997a48a5012a04fddf4d34bf6fbe771732d1346116010fd3801d51289c47"
+    },
+    {
+      "bbox": [
+        48.0,
+        686.5203247070312,
+        197.2700653076172,
+        724.5234375
+      ],
+      "block_id": "page-1101-block-0064",
+      "order": 64,
+      "text": "Chapitre 7\nAdriano, F. & al. (2011). « Hippocampal volume reduction\nin rst-episode and chronic schizophrenia : A review and\nmeta- analysis », Neuroscientist, 18(2), p. 180-200.\n",
+      "text_sha256": "2ef4d571f25fd0246503e85571ebc23425aec13a9f0ef42bf29a92399b4808fe"
+    }
+  ],
+  "coordinates_sha256": "ae1a8f83b238bf1548e0ee63565a9ab9c210ceb96b6dcf82e3955fb3ce329aa5",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1101",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "R4\nRéférences\nprocessing studies », Journal of Affective Disorders,\n130(1-2), p. 66-74.\nDelvecchio, G. & al. (2011). « Common and distinct neural\ncorrelates of emotional process in bipolar disorder and\nmajor depressive disorder : A voxel-based meta-analysis of\nfunctional magnetic resonance imaging studies », European\nNeuropsychopharmacology, 22(2), p. 100-113.\nDougall, N. J. & al. (2003). « The clinical use of 99mTc-HM-\nPAO-SPECT in Alzheimer’s disease », Advances in Biological\nPsy chiatry, 22, p. 4-37.\nDrevets, W. C. (2000). « Neuroimaging Studies of Mood\nDisorders », Biological Psychiatry, 48(8), p. 813-829.\nFazel, R. & al. (2009). « Exposure to low-dose ionizing\nradiation », New England Journal of Medicine, 361(9),\np. 849-857.\nFrankle, W. G. (2007). « Neuroreceptor imaging studies\nin schizophrenia », Harvard Review of Psychiatry, 15(5),\np. 212-232.\nGoto, H. & al. (2010). « Differential diagnosis of dementia\nwith Lewy bodies and Alzheimer Disaese using combined\nMR imagingand brain perfusion single-photon emission\ntomography », AJNR American Journal of Neuroradiology,\n31(4), p. 720-725.\nHallahan, B. & al. (2011). « Structural magnetic resonance\nimaging in bipolar disorder : An international collaborative\nmega-Analysis of individual adult patient data »,Biological\nPsychiatry, 69(4), p. 326-335.\nHamilton, J. P. & al. (2008). « Amygdala volume in major\ndepressive disorder : A meta-analysis of magnetic resonance\nimaging studies »,Molecular Psychiatry, 13(11), p. 993-1000.\nHeiss, W. D. & Herholz, K. (2006). « Brain re ceptor imaging »,\nJournal of Nuclear Medicine, 47(2), p. 302-312.\nJagust, W. & al. (2007). « What does uoro deoxyglucose\nPET imaging add to a cli nical diagnosis of dementia ? »,\nNeurology, 69(9), p. 871-877.\nJärnum, H. & al. (2011). « Longitudinal MRI study of cortical\nthickness, perfusion, and metabolite levels in major depres-\nsive disorder », Acta Psychiatrica Scandinavica, 124(6),\np. 435-446.\nJohnson, K. A. & al. (2013). «Appropriate use criteria for\namyloid PET : A report of the Amyloid Imaging Task Force,\nthe Society of Nuclear Medicine and Molecular Imaging,\nand the Alzheimer’s Association », The Journal of Nuclear\nMedicine, 54, p. 476-490.\nJolivet, R. & al. (2009). « Deciphering neuron-glia\ncompartmentalization in cortical energy metabolism »,\nFrontiers in Neuroenergetics, 1, Article 4, p. 1-10.\nKempton, M. J. & al. (2008). « Meta- analysis, database,\nand meta-regression of 98 structural imaging studies in\nbipolar disorder », Archive of General Psychiatry, 65(9),\np. 1017-1032.\nKempton, M. J. & al. (2011). « Structural neuroimaging\nstudies in major depressive disorder. Meta-analysis and\ncomparison with bipolar disorder », Archives of General\nPsychiatry, 68(7), p. 675-690.\nKilliany, R. J. & al. (1993). « Temporal lobe regions on\nmagnetic resonance imaging identify patients with early\nAlzheimer’s disease », Archives of Neurology, 50(9),\np. 949-954.\nKima, M. J. & al. (2011). « Differential diagnosis of idiopathic\nnormal pressure hydrocephalus from other dementias using\ndiffusion tensor imaging », American Journal of Neuradio-\nlogy, 32(8), p. 1496-1503.\nLahti, A. C. & al. (2009). « Modulation of limbic circuitry\npredicts treatment response to antipsychotic medication :\nA functional imaging study in schizo phrenia »,Neuropsycho-\npharmacology, 34(13), p. 2675-2690.\nLaruelle, M. (2000). « Imaging synaptic neurotrans-\nmission with in vivo binding competition techniques :\nAppleby, B. S. & al. (2009). « Characteristics of established\nand proposed sporadic Creutzfeldt-Jakob disease variants »,\nArchives of Neurology, 66(2), p. 208-215.\nArgawal, N. & al. (2010). «Update on the use of MRI for\nassessment and diagnosis of psychiatric diseases », Radio-\nlogy, 255(1), p. 23-41.\nAttwell, D. & al. (2010). « Glial and neuronal control of brain\nblood ow », Nature, 468, p. 232-243.\nBallard, C. G. & al. (2004). « Neuroimaging criteria do not\ndistinguish stroke patients with and without dementia »,\nNeurology, 63(6), p. 983-988.\nBearden, C. E. & al. (2007). « Greater cortical gray matter\ndensity in lithium-treated patients with bipolar disorder »,\nBiology Psychiatry, 62(1), p. 7-16.\nBertolino, A. & al. (2001). « The effect of treatment with\nantipsychotic drugs on brain N-acetylaspartate measures\nin patients with schizophrenia », Biological Psychiatry,\n49(1), p. 39-46.\nBeyer, J. L. & al. (2009). « Hyperintense MRI lesions in bipolar\ndisorder : A meta- analysis and review », International Review\nof Psychiatry, 21(4), p. 394-409.\nBirks, J. (2006). « Cholinesterase inhibitors for Alzhei-\nmer’s disease », Cochrane Database System Review,\n1,CD005593.\nBohnen, N. I. & al. (2012). « Effectiveness and Safety of\n18F-FDG PET in the Evaluation of Dementia : A Review of the\nRecent Literature », Journal of Nuclear Medicine, 53, p. 59-71.\nBremner, D. (2007). « Neuroimaging in posttraumatic stress\ndisorder and other stress- related disorders »,Neuroimaging\nClinics of North America, 17(4), p. 523–ix.\nBrian, K. B. (1998). « CT Scans of First-Break Psychotic\nPatients in Good General Health », Psychiatric Services,\n49(2), p. 234-235.\nBurton, E. J. & al. (2004). « Cerebral atrophy in Parkinson’s\ndisease with and without dementia : a comparison with\nAlzheimer’s disease, dementia with Lewy bodies and\ncontrols », Brain, 127(4), p. 791-800.\nBurton, E. J. & al. (2009). « Medial temporal lobe atrophy\non MRI differentiates Alzheimer’s disease from dementia\nwith Lewy bodies and vascular cognitive impairment : A\nprospective study with pathological verication of diag-\nnosis », Brain, 132(1), p. 195-203.\nBustillo, J. R. & al. (2008). « Proton magnetic resonance\nspectroscopy during initial treatment with antipsy chotic\nmedication in schizophrenia », Neuropsychiphamacology,\n33(10), p. 2456-2466.\nCarota, A. & al. (2008). « A Squint of brain : A Capgras\nsyndrome variant », Journal of Neuropsychiatry and Clinical\nNeuro sciences, 20(1), p. 109-110.\nChen, J. & Shi, S. (2011). « A review of neuroimaging studies\nof anxiety disorders in China », Neuropsychiatric Disease\nand Treatment, 7, p. 241-249.\nChiu, C. H. & al. (2011). « White matter abnormalities of\nfronto-striato-thalamic circuitry in obsessive-compulsive\ndisorder : A study using diffusion spectrum imaging tracto-\ngraphy », Psychiatry Research, 192(3), p. 176-182.\nColeman, R. E. (2005). « Positron emission tomography\ndiagnosis of Alzheimer’s disease », Neuroimag Clinics of\nNorth America, 15(4), p. 837-846.\nDager, S. R. & al. (2008). « Research applications of\nmagnetic resonance spectroscopy to investigate psychiatric\ndisorders », Topics in Magnetic Resonance Imaging, 19(2),\np. 81-96.\nDavanzo, P. & al. (2001). « Decreased anterior cingulate\nmyo- inositol/creatine spectroscopy resonance with lithium\ntreatment in children with bipolar disorder »,Neuropsycho-\npharmacology, 24(4), p. 359-369.\nDelaveau, P. & al. (2010). « Brain effects of antidepressants\nin major depression : A meta-analysis of emotional\nLorenzetti, V. & al. (2009). « Structural abnormalities in\nmajor depressive disorder : A selective review of recent MRI\nstudies », Journal of Affective Disorders, 117(1-2), p. 1-17.\nLucas, G. & al. (2007). « Serotonin (4) (5-HT4) receptor\nagonists are putative antidepressants with a rapid onset\nof action », Neuron, 55(5), p. 712-725.\nMaas, J.W. (1975) « Biogenic amines and depression. Bioche-\nmincal and pharmacological separation of two types of depres-\nsion »,Archives of General Psychiatry, 32(11), p. 1357-1361.\nMader, S. S. & Windelspecht, M. (2014). Biologie humaine,\n2e éd., Montréal, Québec, McGraw-Hill/Chenelière\nÉducation.\nMartin, J. H. (1996), Neuroanatomy, Text and Atlas,\nStamford, CT, Appleton and Lange.\nMcKinley, M. P. & al. (2014). Anatomie et physiologie.\nUne approche intégrée. Montréal, Québec, McGraw-\nHill/Chenelière Éducation.\nMeyer, J. S. & Quenzer, L. F. (2005). Psychopharmacology :\nDrugs, The brain and behavior, Sunderland, MA, Sinauer.\nParent, A. (2009). Histoire du cerveau. De l’Antiquité aux neu-\nrosciences. Québec, Québec, Presses de l’Université Laval.\nPicard, H. & al. (2008). « The role of cerebellum in schi-\nzophrenia : an update of clinical, cognitive, and functional\nevidences », Schizophrenia Bulletin, 34(1), p. 155-172.\nRais, M. & al. (2008). « Excessive brain volume loss over time\nin cannabis-using rst episode schizophrenia patients »,\nAmerican Journal of Psychiatry, 165(4), p. 490-496.\nRoggenbach, J. & al. (2007). « Peripheral serotonergic\nmarkers in acutely suicidal patients. 1. Comparison of\nserotonergic platelet measures between suicidal individuals,\nnonsuicidal patients with major depression and healthy sub-\njects », Journal of Neural Transmission, 114(4), p. 479-487.\nRotge, J.-Y. & al.(2008). « Provocation of obsessive-compul-\nsive symptoms : A quantitative voxel-based meta-analysis of\nfunctional neuroimaging studies », Journal of Psychiatry and\nNeuroscience, 33(5), p. 405-412.\nSpreux-Varoquaux, O. & al. (2001). « Differential abnormalities\nin plasma 5-HIAA and platelet serotonin concentrations in\nviolent suicide attempters : Relationships with impulsivity\nand depression », Life Sciences, 29(69), p. 647-657.\nStahl, S. M. (2010). « The serotonin-7 receptor as a novel\ntherapeutic target », Journal of Clinical Psychiatry, 71(11),\np. 1414-1415.\nSwardfager, W. & al. (2010). « A meta-analysis of cytokines\nin Alzheimer’s disease », Biological Psychiatry, 68(10),\np. 930-941.\nTakahashi, N. & al. (2011). « Linking oligodendrocyte and\nmyelin dysfunction to neurocircuitry abnormalities in schi-\nzophrenia », Progressive Neurobiology, 93(1), p. 13-24.\nThayer, J. F. & Sternberg, E. M. (2010). « Neural aspects of\nimmunomodulation : Focus on the vagus nerve », Brain,\nBehavior, and Immunity, 24(8), p. 1223-1228.\nWalterfang, M. & al. (2009). « Corpus callosum size and\nshape in rst-episode affective and schizophrenia-spectrum\ndisorder », Psychiatry Research, 173(1), p. 77-82.\nWang, Y. & al. (2015). « NeuroPep : a comprehensive\nresource of neuropeptides », Database (Oxford), 29 avril,\nbav038.\nWylie, K. & Tregellas, J. R. (2010). « The role of insula in\nschizophrenia », Schizophrenia Research, 123, p. 93-104.\nYonekura, T. & al. (2014). « Relationship between salivary\ncortisol and dpression in adolescent survivors of a major\nnatural disaster », J Physiol Sci, 64(4), p. 261-267.\nChapitre 7\nAdriano, F. & al. (2011). « Hippocampal volume reduction\nin rst-episode and chronic schizophrenia : A review and\nmeta- analysis », Neuroscientist, 18(2), p. 180-200.\n",
+  "raw_text_sha256": "7940387ff9e2f64f88d9b8bbef3e18f6b781997b8500077ac1e32a650545718c",
+  "source_page_display": 1102,
+  "source_page_index": 1101
+}

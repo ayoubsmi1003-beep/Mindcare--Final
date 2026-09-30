@@ -1,0 +1,88 @@
+{
+  "block_sequence_sha256": "529cb9d974f7112af6f193b175c5811ea0331f0dcfe6160ece4736f402d69de0",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        470.3879699707031,
+        758.8693237304688
+      ],
+      "block_id": "page-0123-block-0001",
+      "order": 1,
+      "text": "106\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2\nDéterminants bio-psycho-sociaux\n",
+      "text_sha256": "5d03d8f7c3e0cf5cb60e0a2b4395552cccbb15291b9005daab465613d7629c55"
+    },
+    {
+      "bbox": [
+        306.0,
+        420.41583251953125,
+        549.3248291015625,
+        584.5084838867188
+      ],
+      "block_id": "page-0123-block-0002",
+      "order": 2,
+      "text": "acétylation insusante des histones dans la schizophrénie\n(Tang & al., 2011).\nLes rôles des modications épigénétiques sont nombreux.\nCitons tout d’abord le développement de l’organisme, lors de\nl’embryogenèse, puis tout au long de la vie. Les cellules de l’or-\nganisme sont diérenciées, c’est-à-dire qu’elles se spécialisent\npour remplir une fonction précise dans l’organisme et répondre\nde manière parfois très diérente aux stimuli de l’environne-\nment : cellules de la peau, des organes, etc. L’établissement et le\nmaintien de la diérenciation cellulaire ne sont possibles que\ngrâce aux modications épigénétiques. Il est connu aujourd’hui\nque les mécanismes épigénétiques interviennent jusque dans\ndes phénomènes subtils de notre cerveau, par exemple dans la\nformation de la mémoire (Levenson & Sweatt, 2005).\n",
+      "text_sha256": "1fd2cddd59af7ce0a98df01aa5db826e4fe57cf3c071fd801ea0d9f1c6955e9b"
+    },
+    {
+      "bbox": [
+        306.0,
+        585.6658325195312,
+        549.44384765625,
+        724.45849609375
+      ],
+      "block_id": "page-0123-block-0003",
+      "order": 3,
+      "text": "Ce sont donc des changements environnementaux qui pro-\nvoquent les modications épigénétiques. De la nutrition aux\ntraumatismes physiques ou psychologiques, en passant par le\ntabagisme, tous les éléments physiques et sociaux de notre envi-\nronnement peuvent entraîner la modication épigénétique de\ncertains gènes et ainsi inuencer le phénotype de nos cellules et\nde nos organes. La compréhension des mécanismes épigénétiques\npermettra de mieux élucider le développement de certaines\nmaladies, comme le cancer ou le diabète. La participation de\nces mécanismes dans la genèse des maladies psychiatriques fait\naujourd’hui l’objet d’intenses recherches. En eet, l’épigénétique\npermet de relier la génétique des maladies psychiatriques induites\n",
+      "text_sha256": "8cd5a779171858f35fef02ce46fb8beb4fd307aec6c3a89301a5a2ad4ad55b5a"
+    },
+    {
+      "bbox": [
+        48.0,
+        420.41583251953125,
+        291.68572998046875,
+        724.45849609375
+      ],
+      "block_id": "page-0123-block-0004",
+      "order": 4,
+      "text": "bloquer la transcription du gène. Ainsi, plus une région est\ndensément méthylée, moins son activité transcriptionnelle\n(les gènes présents dans ces régions très méthylées sont donc\npeu ou pas transcrits en ARN, puis traduits en protéine) sera\ngrande. La méthylation des cytosines, et donc la régulation\népigénétique de certains gènes, peut se transmettre du parent\nà l’enfant. On peut alors parler d’une « hérédité épigénétique ».\n2. La modication des histones. Les histones sont des pro téines\nprésentes dans le noyau de la cellule, autour desquelles s’en-\nroule l’ADN ; la combinaison ADN-histones est désignée sous\nle nom de « chromatine ». Cette chromatine, qui résulte de\nl’enroulement de l’ADN à la manière d’un l sur une « bobine »\ndans le noyau de la cellule, peut être plus ou moins compacte.\nOr, plus la chromatine est compacte, moins les gènes présents\ndans la région compactée sont exprimés, car les enzymes de\ntranscription ne peuvent pas y accéder. Le degré de condensa-\ntion de l’ADN par les histones est régulé par les modications\nchimiques des histones elles-mêmes (acétylation, méthylation,\netc.). Par exemple, l’acétylation des histones tend à relâcher\nla chromatine, donc à permettre aux enzymes de restriction\nd’accéder à l’ADN, tandis que la méthylation des histones\nproduit l’eet inverse. Il s’agit donc d’une régulation ne et\ndynamique de l’expression génétique. Certains travaux laissent\npenser qu’il existerait des altérations dans les modications\népigénétiques des histones, par exemple, qu’il y aurait une\n",
+      "text_sha256": "d5c3fafbc32cd1d5053191a196b1cb8e77ad36eed131b46d11ca18293cad6bd0"
+    },
+    {
+      "bbox": [
+        50.35000228881836,
+        41.002296447753906,
+        251.2312774658203,
+        53.320068359375
+      ],
+      "block_id": "page-0123-block-0005",
+      "order": 5,
+      "text": "FIGURE 5.6 Modications épigénétiques de l’ADN\n",
+      "text_sha256": "38c88b2383bf69bb7fb17a3757f29c091f5af9ccd207ab35edf303a7be5cfb43"
+    },
+    {
+      "bbox": [
+        48.25,
+        349.5462951660156,
+        536.447509765625,
+        387.3265686035156
+      ],
+      "block_id": "page-0123-block-0006",
+      "order": 6,
+      "text": "Les modications épigénétiques les plus connues sont la méthylation de l’ADN et la modication des histones (représentées par des sphères grises). Les cytosines\nde l’ADN peuvent être méthylées (groupements méthyles CH3), ce qui inhibe l’expression du gène. Les histones peuvent porter des groupements acétyles\n(groupements COCH3), ce qui provoque le relâchement de l’ADN et permet l’expression des gènes, ou alors des groupements méthyles (groupement CH 3), ce qui\naugmente le compactage de l’ADN et empêche l’expression de tous les gènes contenus dans cette région.\n",
+      "text_sha256": "885be3f958f16f97844edac7589331da1799095872fa4f4fc8dbbbedcdbbe2af"
+    }
+  ],
+  "coordinates_sha256": "d407ae34cd2140a6e808f16e814b9a5482ee05a02d8bbcc428265961e29fdd99",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0123",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "106\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2\nDéterminants bio-psycho-sociaux\nacétylation insusante des histones dans la schizophrénie\n(Tang & al., 2011).\nLes rôles des modications épigénétiques sont nombreux.\nCitons tout d’abord le développement de l’organisme, lors de\nl’embryogenèse, puis tout au long de la vie. Les cellules de l’or-\nganisme sont diérenciées, c’est-à-dire qu’elles se spécialisent\npour remplir une fonction précise dans l’organisme et répondre\nde manière parfois très diérente aux stimuli de l’environne-\nment : cellules de la peau, des organes, etc. L’établissement et le\nmaintien de la diérenciation cellulaire ne sont possibles que\ngrâce aux modications épigénétiques. Il est connu aujourd’hui\nque les mécanismes épigénétiques interviennent jusque dans\ndes phénomènes subtils de notre cerveau, par exemple dans la\nformation de la mémoire (Levenson & Sweatt, 2005).\nCe sont donc des changements environnementaux qui pro-\nvoquent les modications épigénétiques. De la nutrition aux\ntraumatismes physiques ou psychologiques, en passant par le\ntabagisme, tous les éléments physiques et sociaux de notre envi-\nronnement peuvent entraîner la modication épigénétique de\ncertains gènes et ainsi inuencer le phénotype de nos cellules et\nde nos organes. La compréhension des mécanismes épigénétiques\npermettra de mieux élucider le développement de certaines\nmaladies, comme le cancer ou le diabète. La participation de\nces mécanismes dans la genèse des maladies psychiatriques fait\naujourd’hui l’objet d’intenses recherches. En eet, l’épigénétique\npermet de relier la génétique des maladies psychiatriques induites\nbloquer la transcription du gène. Ainsi, plus une région est\ndensément méthylée, moins son activité transcriptionnelle\n(les gènes présents dans ces régions très méthylées sont donc\npeu ou pas transcrits en ARN, puis traduits en protéine) sera\ngrande. La méthylation des cytosines, et donc la régulation\népigénétique de certains gènes, peut se transmettre du parent\nà l’enfant. On peut alors parler d’une « hérédité épigénétique ».\n2. La modication des histones. Les histones sont des pro téines\nprésentes dans le noyau de la cellule, autour desquelles s’en-\nroule l’ADN ; la combinaison ADN-histones est désignée sous\nle nom de « chromatine ». Cette chromatine, qui résulte de\nl’enroulement de l’ADN à la manière d’un l sur une « bobine »\ndans le noyau de la cellule, peut être plus ou moins compacte.\nOr, plus la chromatine est compacte, moins les gènes présents\ndans la région compactée sont exprimés, car les enzymes de\ntranscription ne peuvent pas y accéder. Le degré de condensa-\ntion de l’ADN par les histones est régulé par les modications\nchimiques des histones elles-mêmes (acétylation, méthylation,\netc.). Par exemple, l’acétylation des histones tend à relâcher\nla chromatine, donc à permettre aux enzymes de restriction\nd’accéder à l’ADN, tandis que la méthylation des histones\nproduit l’eet inverse. Il s’agit donc d’une régulation ne et\ndynamique de l’expression génétique. Certains travaux laissent\npenser qu’il existerait des altérations dans les modications\népigénétiques des histones, par exemple, qu’il y aurait une\nFIGURE 5.6 Modications épigénétiques de l’ADN\nLes modications épigénétiques les plus connues sont la méthylation de l’ADN et la modication des histones (représentées par des sphères grises). Les cytosines\nde l’ADN peuvent être méthylées (groupements méthyles CH3), ce qui inhibe l’expression du gène. Les histones peuvent porter des groupements acétyles\n(groupements COCH3), ce qui provoque le relâchement de l’ADN et permet l’expression des gènes, ou alors des groupements méthyles (groupement CH 3), ce qui\naugmente le compactage de l’ADN et empêche l’expression de tous les gènes contenus dans cette région.\n",
+  "raw_text_sha256": "38d99e7122dccfd33bdb77cc841c84c78402da5e48a0472cec5b802d11f4978d",
+  "source_page_display": 124,
+  "source_page_index": 123
+}

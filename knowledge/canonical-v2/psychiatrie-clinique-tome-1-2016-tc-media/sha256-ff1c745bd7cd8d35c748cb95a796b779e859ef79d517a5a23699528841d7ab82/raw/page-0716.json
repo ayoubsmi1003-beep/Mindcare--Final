@@ -1,0 +1,220 @@
+{
+  "block_sequence_sha256": "35c5efbab0dc883883eba7b9d9fa2907aa5cde22e59c0e8961a31bb7e34e8548",
+  "blocks": [
+    {
+      "bbox": [
+        315.3500061035156,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0716-block-0001",
+      "order": 1,
+      "text": "Chapitre 31\nTroubles des conduites alimentaires\n699\n",
+      "text_sha256": "d415079591e9be93d2a55b61c496190bea1b09b1d4240b96744dfc5d2836d182"
+    },
+    {
+      "bbox": [
+        51.900001525878906,
+        34.49443435668945,
+        71.20710754394531,
+        81.32548522949219
+      ],
+      "block_id": "page-0716-block-0002",
+      "order": 2,
+      "text": "L\n",
+      "text_sha256": "610fb9a67aa23c84d6c820f52dc2b6c3f8119e52e7dcb9dfc490127d38eb733c"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.91015625,
+        297.3164367675781,
+        144.5693359375
+      ],
+      "block_id": "page-0716-block-0003",
+      "order": 3,
+      "text": "es troubles des conduites alimentaires dont il est question\ndans ce chapitre sont l’anorexie mentale, la boulimie et les\ntroubles apparentés, tant chez l’adulte que chez l’enfant et\nl’adolescent. Le DSM-5 propose de regrouper les troubles ali-\nmentaires de la première et de la deuxième enfance dans cette\ndernière catégorie, puisque ce type de trouble peut se présenter\nà tous les âges. Les troubles apparentés se distinguent en trois\nsyndromes : le pica, le mérycisme et la restriction ou évitement\nde l’ingestion d’aliments.\n",
+      "text_sha256": "ce8087de9b74a4ecb986b05e0cbeae73e02c375207cc0b5d207f9246cce1878d"
+    },
+    {
+      "bbox": [
+        54.0,
+        145.9658203125,
+        296.7581481933594,
+        179.85850524902344
+      ],
+      "block_id": "page-0716-block-0004",
+      "order": 4,
+      "text": "L’anorexie et la boulimie survenant de façon largement\nmajoritaire chez les femmes, le genre féminin est utilisé dans\nce chapitre.\n",
+      "text_sha256": "6dd801f7c1b002b63df997ff5687e1ddeb5cd5f9b986486e6c14f15e7370914c"
+    },
+    {
+      "bbox": [
+        63.099998474121094,
+        198.39317321777344,
+        169.37277221679688,
+        217.3689422607422
+      ],
+      "block_id": "page-0716-block-0005",
+      "order": 5,
+      "text": "31.1\nHistorique\n",
+      "text_sha256": "cdcfe9c9cc88e9e52029d8ee748e9eb8b2c98c089e5a6350c6ac6b68a1103edc"
+    },
+    {
+      "bbox": [
+        54.0,
+        231.31582641601562,
+        297.1734924316406,
+        335.5085144042969
+      ],
+      "block_id": "page-0716-block-0006",
+      "order": 6,
+      "text": "C’est en 1689 que Morton fait une première description de\nl’anorexie mentale (appelée aussi « anorexie nerveuse» ou « ano-\nrexie»), reprise par Gull en 1868 en Angleterre et Lasègue en\n1873 en France. Il s’agissait d’un syndrome rare survenant chez\nles jeunes lles à la puberté et qu’on a attribué pendant longtemps\nà un trouble hypophysaire. En 1978, Hilde Bruch, une pionnière\ndans le domaine, a fait une brillante description de certaines\ncaractéristiques psychologiques de ces patientes et a contribué\nà mieux faire connaître cette entité.\n",
+      "text_sha256": "b70064e0d1c1e7f1c95bc7cab8ac56a20a423be93e8b20bdb4024d5ddf63e3e9"
+    },
+    {
+      "bbox": [
+        54.0,
+        336.7658386230469,
+        297.34918212890625,
+        382.3584899902344
+      ],
+      "block_id": "page-0716-block-0007",
+      "order": 7,
+      "text": "L’histoire de la boulimie est plus récente, puisque ce trouble\na été décrit par Russell en Angleterre en 1979 sous le terme de\nbulimia nervosa et qu’il a fait son apparition ocielle dans la\nnomenclature du DSM en 1980.\n",
+      "text_sha256": "4d5e9b6fc77bb757656fac0178b1d2c195dd5c6d5f1161601920838d5c48fd71"
+    },
+    {
+      "bbox": [
+        54.0,
+        383.6158142089844,
+        297.240966796875,
+        440.95849609375
+      ],
+      "block_id": "page-0716-block-0008",
+      "order": 8,
+      "text": "Le DSM-5 décrit une troisième entité, l’hyperphagie bou-\nlimique, en plus de comprendre une catégorie résiduelle\n(troubles alimentaires non spéciés), regroupant les troubles\nalimentaires ne satisfaisant pas aux critères établis pour l’ano-\nrexie et la boulimie.\n",
+      "text_sha256": "ea080d4e48464ce35479939458c57709040aac9a72fe959d79e2223cd4eb73d0"
+    },
+    {
+      "bbox": [
+        61.75,
+        459.44317626953125,
+        194.14675903320312,
+        478.4189453125
+      ],
+      "block_id": "page-0716-block-0009",
+      "order": 9,
+      "text": "31.2\nÉpidémiologie\n",
+      "text_sha256": "92eee82e6d9c4142f07473aeacd7eea6087594419c0086a20e329969792cb973"
+    },
+    {
+      "bbox": [
+        54.0,
+        492.3658142089844,
+        297.2834167480469,
+        725.45849609375
+      ],
+      "block_id": "page-0716-block-0010",
+      "order": 10,
+      "text": "Les diérentes études situent la prévalence à vie de l’anorexie\nmentale chez les femmes entre 1,1 et 2,2 %. Ce dernier pourcen-\ntage est le double de celui observé dans les échantillons cliniques\ndes troubles des conduites alimentaires (TCA) et il a été obtenu\ndans les études réalisées auprès de la population. On a noté une\naugmentation de l’incidence de l’anorexie jusque vers les années\n1970, mais on considère qu’elle est stabilisée maintenant. L’inci-\ndence la plus élevée s’observe chez les adolescentes de 15 à 19 ans,\nqui représentent environ 40 % des nouveaux cas, mais l’anorexie\npeut aussi apparaître plus tardivement. On note maintenant une\ntendance à l’apparition plus précoce du trouble alimentaire. Chez\nles adolescentes, il s’agit de la troisième maladie chronique en\nimportance. Il semble qu’environ 40 % des lles et 25 % des garçons\nentreprennent une diète à l’adolescence. L’anorexie demeure tou-\ntefois une maladie touchant bien davantage les femmes, la propor-\ntion étant de 10 à 15 femmes pour un homme. Cette proportion\nest similaire chez les adolescents. Par contre, chez les moins de\n12 ans, le ratio est plutôt de sept lles pour un garçon.\nSelon les résultats d’une étude du réseau de surveillance cana-\ndien en pédiatrie, l’incidence est de 2,6 cas pour 100 000 enfants,\n",
+      "text_sha256": "3584c37da19e0629024c537492cad3ab620de16b9ce88f41516225bab32850be"
+    },
+    {
+      "bbox": [
+        312.0,
+        40.81582260131836,
+        555.1387939453125,
+        62.80849838256836
+      ],
+      "block_id": "page-0716-block-0011",
+      "order": 11,
+      "text": "avec une incidence de 16,4 cas pour 100 000 lles de 12 ans\n(Katzman, 2005).\n",
+      "text_sha256": "89ea690d3b0b99ce7068003d7b2bbc03d9096852feeee25ad24e87031b7a05cc"
+    },
+    {
+      "bbox": [
+        312.0,
+        63.815818786621094,
+        555.3079833984375,
+        200.80850219726562
+      ],
+      "block_id": "page-0716-block-0012",
+      "order": 12,
+      "text": "La prévalence de la boulimie est évaluée de 1 à 2 %, une étude\nde Keski-Rahkonen et ses collaborateurs (2009) l’ayant estimée\nà 2,3 % dans la population générale. Selon cette même étude,\nla majorité des femmes atteintes de ce trouble (76 %) ont des\ncomportements purgatifs. Le pic d’incidence se situe entre 16 et\n20 ans, et les professionnels de la santé détectent moins du tiers\ndes personnes qui en sourent. Avant l’âge de 10 ans, les cas de\nboulimie répondant aux critères du DSM-5 sont rares. Ceci dit,\nbien qu’il n’y ait pas beaucoup d’études de prévalence, l’hyperpha-\ngie boulimique semble plus fréquente, particulièrement chez les\nenfants qui consultent pour un excès de poids. Elle est estimée\nà 6,2 % des enfants de 6 à 13 ans (Tanofsky-Kra & al., 2004).\n",
+      "text_sha256": "99cb3bb756913b0f28a6834633d572192157246094ab024dcba89dedccbd6771"
+    },
+    {
+      "bbox": [
+        312.0,
+        201.81582641601562,
+        555.447265625,
+        304.3085021972656
+      ],
+      "block_id": "page-0716-block-0013",
+      "order": 13,
+      "text": "La proportion des adolescentes et des jeunes femmes atteintes\nd’un TCA augmente à 10 % si on y ajoute toutes celles souf-\nfrant d’une forme partielle de ces syndromes. Bien que ne\nsatisfaisant pas à tous les critères diagnostiques, ces jeunes\nfemmes subissent une atteinte importante de leur fonctionne-\nment et de leur qualité de vie. Cela inclut également les enfants\nqui ne présentent souvent pas de perte de poids, mais plutôt une\nabsence de prise de poids. Leur sourance est cependant réelle\net plusieurs doivent être hospitalisés.\n",
+      "text_sha256": "8bf3b0e551c492c8211a5f441bc7193085c10f45ac0d2f933a5aea9ab1dd83b6"
+    },
+    {
+      "bbox": [
+        319.8000183105469,
+        320.5931701660156,
+        424.1156005859375,
+        339.5689392089844
+      ],
+      "block_id": "page-0716-block-0014",
+      "order": 14,
+      "text": "31.3\nÉtiologies\n",
+      "text_sha256": "727d1eccb18feb27307127a67f78fc9fb973c34c2e8a3cfbfbd802effd7c950d"
+    },
+    {
+      "bbox": [
+        312.0,
+        353.3158264160156,
+        554.9924926757812,
+        386.8085021972656
+      ],
+      "block_id": "page-0716-block-0015",
+      "order": 15,
+      "text": "L’étiologie des troubles des conduites alimentaires (TCA) est\nmultifactorielle puisqu’elle comporte des facteurs biologiques,\npsychologiques et sociaux.\n",
+      "text_sha256": "204a2fd8172c6a41f64d4edc521239ea68524d0e310c363725b6d93e316cfdcd"
+    },
+    {
+      "bbox": [
+        312.0,
+        397.3368225097656,
+        474.1630859375,
+        413.4794006347656
+      ],
+      "block_id": "page-0716-block-0016",
+      "order": 16,
+      "text": "31.3.1 Étiologies biologiques\n",
+      "text_sha256": "0de8b56b6d5b9a716633bd7aa94218eb00e412fe4e3e95b1a8f7f00c2e6b97ec"
+    },
+    {
+      "bbox": [
+        312.0,
+        416.8158264160156,
+        555.4476928710938,
+        725.3085327148438
+      ],
+      "block_id": "page-0716-block-0017",
+      "order": 17,
+      "text": "Les études génétiques ont montré une contribution importante\ndes gènes à l’étiologie de l’anorexie, expliquant de 50 à 80 % de la\nvariance dans les études de jumeaux. Ainsi, l’incidence de l’ano-\nrexie est de 7 % chez les proches de premier degré, alors qu’elle est\nde 1 à 2% dans la population générale. La concordance chez les\njumelles monozygotes est de 55 %, comparativement à 7 % chez\nles dizygotes. Diérentes anomalies ont été répertoriées, entre\nautres un polymorphisme des récepteurs sérotoninergiques et\ndopaminergiques. D’ailleurs, les recherches ont montré plusieurs\nindices d’un fonctionnement anormal :\n• des circuits sérotoninergiques associés à l’humeur dysphorique\net à l’évitement de la sourance ;\n• des circuits dopaminergiques associés à un dysfonctionnement\ndu système de récompense.\nCette vulnérabilité génétique peut s’exprimer dans un phéno-\ntype du tempérament présentant plusieurs traits prédisposant\nà l’anorexie :\n• émotivité négative (névrotisme) ;\n• inhibition ;\n• évitement de la sourance ;\n• perfectionnisme ;\n• conscience entéroceptive déciente (p. ex., ne pas reconnaître\nsa faim).\nPar ailleurs, plusieurs études indiquent que ces traits peuvent\nêtre indépendants d’une dénutrition et persister après la\n",
+      "text_sha256": "ea3a204f168bced82203bf772f96fb6dc5a74e3baebcf26bf7fa1739c4adbfe8"
+    }
+  ],
+  "coordinates_sha256": "3e73d00f05d3d413df1ba598bd12202f70004ea00cfc6ba472892a447abc608c",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0716",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 31\nTroubles des conduites alimentaires\n699\nL\nes troubles des conduites alimentaires dont il est question\ndans ce chapitre sont l’anorexie mentale, la boulimie et les\ntroubles apparentés, tant chez l’adulte que chez l’enfant et\nl’adolescent. Le DSM-5 propose de regrouper les troubles ali-\nmentaires de la première et de la deuxième enfance dans cette\ndernière catégorie, puisque ce type de trouble peut se présenter\nà tous les âges. Les troubles apparentés se distinguent en trois\nsyndromes : le pica, le mérycisme et la restriction ou évitement\nde l’ingestion d’aliments.\nL’anorexie et la boulimie survenant de façon largement\nmajoritaire chez les femmes, le genre féminin est utilisé dans\nce chapitre.\n31.1\nHistorique\nC’est en 1689 que Morton fait une première description de\nl’anorexie mentale (appelée aussi « anorexie nerveuse» ou « ano-\nrexie»), reprise par Gull en 1868 en Angleterre et Lasègue en\n1873 en France. Il s’agissait d’un syndrome rare survenant chez\nles jeunes lles à la puberté et qu’on a attribué pendant longtemps\nà un trouble hypophysaire. En 1978, Hilde Bruch, une pionnière\ndans le domaine, a fait une brillante description de certaines\ncaractéristiques psychologiques de ces patientes et a contribué\nà mieux faire connaître cette entité.\nL’histoire de la boulimie est plus récente, puisque ce trouble\na été décrit par Russell en Angleterre en 1979 sous le terme de\nbulimia nervosa et qu’il a fait son apparition ocielle dans la\nnomenclature du DSM en 1980.\nLe DSM-5 décrit une troisième entité, l’hyperphagie bou-\nlimique, en plus de comprendre une catégorie résiduelle\n(troubles alimentaires non spéciés), regroupant les troubles\nalimentaires ne satisfaisant pas aux critères établis pour l’ano-\nrexie et la boulimie.\n31.2\nÉpidémiologie\nLes diérentes études situent la prévalence à vie de l’anorexie\nmentale chez les femmes entre 1,1 et 2,2 %. Ce dernier pourcen-\ntage est le double de celui observé dans les échantillons cliniques\ndes troubles des conduites alimentaires (TCA) et il a été obtenu\ndans les études réalisées auprès de la population. On a noté une\naugmentation de l’incidence de l’anorexie jusque vers les années\n1970, mais on considère qu’elle est stabilisée maintenant. L’inci-\ndence la plus élevée s’observe chez les adolescentes de 15 à 19 ans,\nqui représentent environ 40 % des nouveaux cas, mais l’anorexie\npeut aussi apparaître plus tardivement. On note maintenant une\ntendance à l’apparition plus précoce du trouble alimentaire. Chez\nles adolescentes, il s’agit de la troisième maladie chronique en\nimportance. Il semble qu’environ 40 % des lles et 25 % des garçons\nentreprennent une diète à l’adolescence. L’anorexie demeure tou-\ntefois une maladie touchant bien davantage les femmes, la propor-\ntion étant de 10 à 15 femmes pour un homme. Cette proportion\nest similaire chez les adolescents. Par contre, chez les moins de\n12 ans, le ratio est plutôt de sept lles pour un garçon.\nSelon les résultats d’une étude du réseau de surveillance cana-\ndien en pédiatrie, l’incidence est de 2,6 cas pour 100 000 enfants,\navec une incidence de 16,4 cas pour 100 000 lles de 12 ans\n(Katzman, 2005).\nLa prévalence de la boulimie est évaluée de 1 à 2 %, une étude\nde Keski-Rahkonen et ses collaborateurs (2009) l’ayant estimée\nà 2,3 % dans la population générale. Selon cette même étude,\nla majorité des femmes atteintes de ce trouble (76 %) ont des\ncomportements purgatifs. Le pic d’incidence se situe entre 16 et\n20 ans, et les professionnels de la santé détectent moins du tiers\ndes personnes qui en sourent. Avant l’âge de 10 ans, les cas de\nboulimie répondant aux critères du DSM-5 sont rares. Ceci dit,\nbien qu’il n’y ait pas beaucoup d’études de prévalence, l’hyperpha-\ngie boulimique semble plus fréquente, particulièrement chez les\nenfants qui consultent pour un excès de poids. Elle est estimée\nà 6,2 % des enfants de 6 à 13 ans (Tanofsky-Kra & al., 2004).\nLa proportion des adolescentes et des jeunes femmes atteintes\nd’un TCA augmente à 10 % si on y ajoute toutes celles souf-\nfrant d’une forme partielle de ces syndromes. Bien que ne\nsatisfaisant pas à tous les critères diagnostiques, ces jeunes\nfemmes subissent une atteinte importante de leur fonctionne-\nment et de leur qualité de vie. Cela inclut également les enfants\nqui ne présentent souvent pas de perte de poids, mais plutôt une\nabsence de prise de poids. Leur sourance est cependant réelle\net plusieurs doivent être hospitalisés.\n31.3\nÉtiologies\nL’étiologie des troubles des conduites alimentaires (TCA) est\nmultifactorielle puisqu’elle comporte des facteurs biologiques,\npsychologiques et sociaux.\n31.3.1 Étiologies biologiques\nLes études génétiques ont montré une contribution importante\ndes gènes à l’étiologie de l’anorexie, expliquant de 50 à 80 % de la\nvariance dans les études de jumeaux. Ainsi, l’incidence de l’ano-\nrexie est de 7 % chez les proches de premier degré, alors qu’elle est\nde 1 à 2% dans la population générale. La concordance chez les\njumelles monozygotes est de 55 %, comparativement à 7 % chez\nles dizygotes. Diérentes anomalies ont été répertoriées, entre\nautres un polymorphisme des récepteurs sérotoninergiques et\ndopaminergiques. D’ailleurs, les recherches ont montré plusieurs\nindices d’un fonctionnement anormal :\n• des circuits sérotoninergiques associés à l’humeur dysphorique\net à l’évitement de la sourance ;\n• des circuits dopaminergiques associés à un dysfonctionnement\ndu système de récompense.\nCette vulnérabilité génétique peut s’exprimer dans un phéno-\ntype du tempérament présentant plusieurs traits prédisposant\nà l’anorexie :\n• émotivité négative (névrotisme) ;\n• inhibition ;\n• évitement de la sourance ;\n• perfectionnisme ;\n• conscience entéroceptive déciente (p. ex., ne pas reconnaître\nsa faim).\nPar ailleurs, plusieurs études indiquent que ces traits peuvent\nêtre indépendants d’une dénutrition et persister après la\n",
+  "raw_text_sha256": "fa54eadafc554d558e759db37cd490204744203b6cf763d9b3d9c90b0103dba4",
+  "source_page_display": 717,
+  "source_page_index": 716
+}

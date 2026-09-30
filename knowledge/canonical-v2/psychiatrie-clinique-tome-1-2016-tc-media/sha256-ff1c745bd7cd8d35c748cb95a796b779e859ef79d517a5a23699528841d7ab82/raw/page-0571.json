@@ -1,0 +1,112 @@
+{
+  "block_sequence_sha256": "809cb89f53a6c2406b041c3b9cd0b7859ea6216d0b75ff2862e07d0cbcfd964d",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0571-block-0001",
+      "order": 1,
+      "text": "554\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "607ac523b61e912db925a6a195f6026bb76133404089286b89ffa3e89287ae2d"
+    },
+    {
+      "bbox": [
+        48.0,
+        473.4658203125,
+        291.58624267578125,
+        725.45849609375
+      ],
+      "block_id": "page-0571-block-0002",
+      "order": 2,
+      "text": "que le diagnostic médical est si parfait que toutes les causes orga-\nniques de douleur peuvent être détectées, nous sommes loin,\nmalheureusement, d’une telle infaillibilité. » (Melzack & Wall,\n1989, p. 26) Le psychologue Ronald Melzack pense que si on\nqualie une douleur en termes psychologiques de névrose, c’est\npour cacher notre ignorance sur plusieurs aspects de la médecine\nde la douleur. Il propose alors un premier modèle intégrateur des\nfacteurs physiologiques et psychologiques de la douleur : la théorie\ndu portillon (gate control theory) qui ltre ou modie la perception\nde la douleur (Melzack & Wall, 1965). Par exemple, quand on se\nfait piquer par un moustique, la première chose qu’on fait, c’est de\nfrotter vigoureusement l’endroit meurtri, ce qui réduit la sensa-\ntion douloureuse. Selon cette théorie du portillon, la stimulation\nsélective des mécanorécepteurs (grosses bres aérentes A-β)\nnon douloureux (tact, pression, vibration) bloque la stimulation\ndes nocicepteurs (petites bres C et A-δ) au niveau de la moelle\népinière. Un interneurone inhibiteur de la corne dorsale de la\nmoelle épinière, activé par les grosses bres A-β non douloureuses\net inhibé par les petites bres C et A-δ, module à la baisse le signal\nnociceptif. C’est donc à la suite de cette intégration spinale, où\nla moelle a servi de portillon (gate), que les signaux nociceptifs\ns’acheminent vers le SNC.\n",
+      "text_sha256": "5c438e434c7d122e4761bd8150622f2cacf37f1a2de3e8a927eb2ce5854d3153"
+    },
+    {
+      "bbox": [
+        306.0,
+        474.4658203125,
+        549.4039306640625,
+        629.2584838867188
+      ],
+      "block_id": "page-0571-block-0003",
+      "order": 3,
+      "text": "Lorsque ces signaux nociceptifs stimulent les neurones au-delà\nd’un seuil d’excitabilité, la sensation douloureuse est perçue par\nle cerveau. Les neurones spinaux forment ainsi un « portillon de\ntransmission » de la douleur en modulant la perception douloureuse\ndès son entrée dans la moelle épinière. Les thérapies manuelles\ncutanées, musculaires (massothérapie) ou la neurostimulation\ntranscutanée (transcutaneous electrical nerve stimulation – TENS)\nproduisent ainsi leur action antalgique en fermant ce « portillon »\ndu contrôle médullaire de la douleur, un processus qui se produit\nà chaque niveau vertébral. Par exemple, la TENS conventionnelle\n(haute fréquence, basse intensité) réduit la perception de l’informa-\ntion nociceptive grâce au signal inhibiteur émis par une électrode\nplacée au niveau vertébral correspondant au territoire douloureux.\n",
+      "text_sha256": "4754d777122a800010d35dc54bbd69b8cc6c36b4aa3f538bdbf3c5c963b45636"
+    },
+    {
+      "bbox": [
+        306.0,
+        630.7658081054688,
+        549.6136474609375,
+        725.45849609375
+      ],
+      "block_id": "page-0571-block-0004",
+      "order": 4,
+      "text": "Melzack et Wall postulent l’existence d’un circuit parallèle\nconnectant le site périphérique douloureux directement au\nSNC, sans modulation préalable au niveau spinal. La présence\nde ce circuit parallèle permet de déclencher un signal central\ninhibiteur descendant pouvant moduler à son tour et simul-\ntanément l’activité de neurones et d’interneurones inhibiteurs\nselon l’état psychologique interne de la personne. Par exemple, la\ndouleur musculosquelettique des marathoniens est inhibée par\n",
+      "text_sha256": "fae2937b1a2c060b890e9a3e8f4b329792f95f2cfbe1a8bbaa3ad35de0054ebf"
+    },
+    {
+      "bbox": [
+        50.400001525878906,
+        41.002296447753906,
+        527.5723876953125,
+        53.320068359375
+      ],
+      "block_id": "page-0571-block-0005",
+      "order": 5,
+      "text": "FIGURE 26.2 Voies neuronales et neurotransmetteurs inuençant la sensibilité à la douleur chez les patients atteints\n",
+      "text_sha256": "d955c118c84042f16967aaa518d07e04fbd65ce5e9c79ec58ca55c64cd024fdc"
+    },
+    {
+      "bbox": [
+        101.05000305175781,
+        52.852294921875,
+        165.22750854492188,
+        64.820068359375
+      ],
+      "block_id": "page-0571-block-0006",
+      "order": 6,
+      "text": "de bromyalgie\n",
+      "text_sha256": "9560f8bd5aa60e91e70268944f9f0b4b48034e7be71ae7ee6108596794a7c2d9"
+    },
+    {
+      "bbox": [
+        48.25,
+        386.7906188964844,
+        526.877685546875,
+        425.5249938964844
+      ],
+      "block_id": "page-0571-block-0007",
+      "order": 7,
+      "text": "(+) Une augmentation des neurotransmetteurs facilitateurs (substance P, brain derived neurotrophic factor, glutamate) dans le LCR indique une augmentation des signaux\nnociceptifs, facilitant la transmission ascendante de la douleur.\n(–) Une diminution des neurotransmetteurs inhibiteurs (noradrénaline, sérotonine, dopamine) dans le LCR indique un défaut d’inhibition des signaux nociceptifs, facilitant\négalement la transmission de la douleur.\n",
+      "text_sha256": "56f23ab21b7269f27334625648f9f052144e204aa4a53095acc039ff930eff98"
+    },
+    {
+      "bbox": [
+        48.25,
+        431.7906188964844,
+        139.17018127441406,
+        440.6588439941406
+      ],
+      "block_id": "page-0571-block-0008",
+      "order": 8,
+      "text": "Source : Kuner (2010), p. 1260.\n",
+      "text_sha256": "4be57613545e5b77f03cc097df460298f352f71c5b9ffe146ac3ee0e53234636"
+    }
+  ],
+  "coordinates_sha256": "96cc89ad815b67f9447e3e700cdde306829129c60d2b054c29801b8abe9c917f",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0571",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "554\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nque le diagnostic médical est si parfait que toutes les causes orga-\nniques de douleur peuvent être détectées, nous sommes loin,\nmalheureusement, d’une telle infaillibilité. » (Melzack & Wall,\n1989, p. 26) Le psychologue Ronald Melzack pense que si on\nqualie une douleur en termes psychologiques de névrose, c’est\npour cacher notre ignorance sur plusieurs aspects de la médecine\nde la douleur. Il propose alors un premier modèle intégrateur des\nfacteurs physiologiques et psychologiques de la douleur : la théorie\ndu portillon (gate control theory) qui ltre ou modie la perception\nde la douleur (Melzack & Wall, 1965). Par exemple, quand on se\nfait piquer par un moustique, la première chose qu’on fait, c’est de\nfrotter vigoureusement l’endroit meurtri, ce qui réduit la sensa-\ntion douloureuse. Selon cette théorie du portillon, la stimulation\nsélective des mécanorécepteurs (grosses bres aérentes A-β)\nnon douloureux (tact, pression, vibration) bloque la stimulation\ndes nocicepteurs (petites bres C et A-δ) au niveau de la moelle\népinière. Un interneurone inhibiteur de la corne dorsale de la\nmoelle épinière, activé par les grosses bres A-β non douloureuses\net inhibé par les petites bres C et A-δ, module à la baisse le signal\nnociceptif. C’est donc à la suite de cette intégration spinale, où\nla moelle a servi de portillon (gate), que les signaux nociceptifs\ns’acheminent vers le SNC.\nLorsque ces signaux nociceptifs stimulent les neurones au-delà\nd’un seuil d’excitabilité, la sensation douloureuse est perçue par\nle cerveau. Les neurones spinaux forment ainsi un « portillon de\ntransmission » de la douleur en modulant la perception douloureuse\ndès son entrée dans la moelle épinière. Les thérapies manuelles\ncutanées, musculaires (massothérapie) ou la neurostimulation\ntranscutanée (transcutaneous electrical nerve stimulation – TENS)\nproduisent ainsi leur action antalgique en fermant ce « portillon »\ndu contrôle médullaire de la douleur, un processus qui se produit\nà chaque niveau vertébral. Par exemple, la TENS conventionnelle\n(haute fréquence, basse intensité) réduit la perception de l’informa-\ntion nociceptive grâce au signal inhibiteur émis par une électrode\nplacée au niveau vertébral correspondant au territoire douloureux.\nMelzack et Wall postulent l’existence d’un circuit parallèle\nconnectant le site périphérique douloureux directement au\nSNC, sans modulation préalable au niveau spinal. La présence\nde ce circuit parallèle permet de déclencher un signal central\ninhibiteur descendant pouvant moduler à son tour et simul-\ntanément l’activité de neurones et d’interneurones inhibiteurs\nselon l’état psychologique interne de la personne. Par exemple, la\ndouleur musculosquelettique des marathoniens est inhibée par\nFIGURE 26.2 Voies neuronales et neurotransmetteurs inuençant la sensibilité à la douleur chez les patients atteints\nde bromyalgie\n(+) Une augmentation des neurotransmetteurs facilitateurs (substance P, brain derived neurotrophic factor, glutamate) dans le LCR indique une augmentation des signaux\nnociceptifs, facilitant la transmission ascendante de la douleur.\n(–) Une diminution des neurotransmetteurs inhibiteurs (noradrénaline, sérotonine, dopamine) dans le LCR indique un défaut d’inhibition des signaux nociceptifs, facilitant\négalement la transmission de la douleur.\nSource : Kuner (2010), p. 1260.\n",
+  "raw_text_sha256": "c05d7efdc906029d729f6c505e6a885ca5c4493fa7f49707e917f9c4560c6686",
+  "source_page_display": 572,
+  "source_page_index": 571
+}

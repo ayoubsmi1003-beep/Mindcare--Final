@@ -1,0 +1,796 @@
+{
+  "block_sequence_sha256": "11026e8f8ac4b1ef0672edbfe0c29d6ef4095188ea83d7e13c5e877e3e97bcf6",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        425.7200012207031,
+        758.8693237304688
+      ],
+      "block_id": "page-1097-block-0001",
+      "order": 1,
+      "text": "1080\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 4\nOrganisation des soins\n",
+      "text_sha256": "86a9448e614224f4c1c9792af65a602df0b99f098caa8533832cbc7357203a5a"
+    },
+    {
+      "bbox": [
+        102.55229949951172,
+        461.09771728515625,
+        114.87007141113281,
+        720.6500244140625
+      ],
+      "block_id": "page-1097-block-0002",
+      "order": 2,
+      "text": "TABLEAU 48.2 Évolution des services psychiatriques au Québec\n",
+      "text_sha256": "b8477dd52f8233414193d4dac3e1e050dbd21970ec4341533b4af17af36afde1"
+    },
+    {
+      "bbox": [
+        140.82412719726562,
+        585.9464721679688,
+        151.40029907226562,
+        642.5
+      ],
+      "block_id": "page-1097-block-0003",
+      "order": 3,
+      "text": "Période asilaire\n",
+      "text_sha256": "a0e87c8edace614f8a37542bc698a4c594f615063feb602f72c65dd0b97bb165"
+    },
+    {
+      "bbox": [
+        150.82412719726562,
+        588.8510131835938,
+        161.40029907226562,
+        639.6000366210938
+      ],
+      "block_id": "page-1097-block-0004",
+      "order": 4,
+      "text": "et apparentée\n",
+      "text_sha256": "a36d43dda7f129f8b58a0bba48980cfdd4a70fc940f9c4f23b6fe4d160dc2180"
+    },
+    {
+      "bbox": [
+        160.82412719726562,
+        591.905029296875,
+        171.40029907226562,
+        636.6500244140625
+      ],
+      "block_id": "page-1097-block-0005",
+      "order": 5,
+      "text": "(1845-1910)\n",
+      "text_sha256": "26b9660c7dd1b233ed0eb4f41401bf6cdbadb084733fca8f19f8c7bf2685bcae"
+    },
+    {
+      "bbox": [
+        140.32412719726562,
+        487.097412109375,
+        150.90029907226562,
+        566.1500244140625
+      ],
+      "block_id": "page-1097-block-0006",
+      "order": 6,
+      "text": "Hôpital psychiatrique,\n",
+      "text_sha256": "2c50f2ab4ebf36ed3d17fcdc019288ef15f58c32d538b77ac8603a638794395d"
+    },
+    {
+      "bbox": [
+        150.32412719726562,
+        485.81951904296875,
+        160.90029907226562,
+        567.7000122070312
+      ],
+      "block_id": "page-1097-block-0007",
+      "order": 7,
+      "text": "afliation universitaire\n",
+      "text_sha256": "528865054c8881756991d18f83a475397d713501ee394b3018a9bac5291e343f"
+    },
+    {
+      "bbox": [
+        161.32412719726562,
+        504.5049743652344,
+        171.90029907226562,
+        549.25
+      ],
+      "block_id": "page-1097-block-0008",
+      "order": 8,
+      "text": "(1910-1960)\n",
+      "text_sha256": "53affba5bb6c2178dc2e385dee324801c85e4728523d5a49f147497a64a7074c"
+    },
+    {
+      "bbox": [
+        140.32412719726562,
+        381.97052001953125,
+        150.90029907226562,
+        471.8500061035156
+      ],
+      "block_id": "page-1097-block-0009",
+      "order": 9,
+      "text": "Système psychiatrique à\n",
+      "text_sha256": "74d5b3c43ab9ee0715e0ac226e790f8b59bf10d6f187dd2458870c8af34237b5"
+    },
+    {
+      "bbox": [
+        150.32412719726562,
+        384.676513671875,
+        160.90029907226562,
+        469.3500061035156
+      ],
+      "block_id": "page-1097-block-0010",
+      "order": 10,
+      "text": "multiples composantes\n",
+      "text_sha256": "08a4f9a49817bc132d5fb5523bcb90a00dc8d519a72f7a1de872d35f7a07164e"
+    },
+    {
+      "bbox": [
+        161.32412719726562,
+        415.4889831542969,
+        171.90029907226562,
+        438.6499938964844
+      ],
+      "block_id": "page-1097-block-0011",
+      "order": 11,
+      "text": "(1962)\n",
+      "text_sha256": "3b74a29d7ff17eaffecdd14acd6247d0e88ee25b7dec27bcd10fda571f2266a5"
+    },
+    {
+      "bbox": [
+        140.32412719726562,
+        265.29302978515625,
+        150.90029907226562,
+        369.1499938964844
+      ],
+      "block_id": "page-1097-block-0012",
+      "order": 12,
+      "text": "Système global intégrant les\n",
+      "text_sha256": "5abb5ab734221a240765e85eeae650df7b107a6b69c6318c482cd40288e982c5"
+    },
+    {
+      "bbox": [
+        150.32412719726562,
+        266.494140625,
+        160.90029907226562,
+        368.0500183105469
+      ],
+      "block_id": "page-1097-block-0013",
+      "order": 13,
+      "text": "soins physiques et mentaux\n",
+      "text_sha256": "410973aa84d6edf0290ef29cfa173dd63593719e56313929cd85aa7a2eede2aa"
+    },
+    {
+      "bbox": [
+        161.32412719726562,
+        305.6889953613281,
+        171.90029907226562,
+        328.8500061035156
+      ],
+      "block_id": "page-1097-block-0014",
+      "order": 14,
+      "text": "(1966)\n",
+      "text_sha256": "602d55108e9fcfed39be3c0e67696c0c4926421768962f0a427e8ead4e093ca2"
+    },
+    {
+      "bbox": [
+        119.82412719726562,
+        158.9532470703125,
+        130.40029907226562,
+        256.0
+      ],
+      "block_id": "page-1097-block-0015",
+      "order": 15,
+      "text": "Politique de santé mentale\n",
+      "text_sha256": "0c5d59ae71d2500db9f51af4ffac1af86650586316e9315a954858af97630eae"
+    },
+    {
+      "bbox": [
+        129.82412719726562,
+        159.09182739257812,
+        140.40029907226562,
+        255.75
+      ],
+      "block_id": "page-1097-block-0016",
+      "order": 16,
+      "text": "pour un partenariat élargi :\n",
+      "text_sha256": "add676dabbde152a2db79962baf4cf895bdc72a5566fb41c33e4f7feda9392e0"
+    },
+    {
+      "bbox": [
+        140.82412719726562,
+        167.32200622558594,
+        151.40029907226562,
+        247.35000610351562
+      ],
+      "block_id": "page-1097-block-0017",
+      "order": 17,
+      "text": "association du réseau\n",
+      "text_sha256": "4c54f53d748e6901f25dadc2b12b0e73f95ba021f9667c7bd6ee95dc12f423ec"
+    },
+    {
+      "bbox": [
+        150.82412719726562,
+        156.58792114257812,
+        161.40029907226562,
+        258.20001220703125
+      ],
+      "block_id": "page-1097-block-0018",
+      "order": 18,
+      "text": "ofciel avec les organismes\n",
+      "text_sha256": "f2f07db6fa029ad1df9d2fba54a47a25a466ed615e75fad4a86ae09911a5dda3"
+    },
+    {
+      "bbox": [
+        160.82412719726562,
+        169.25039672851562,
+        171.40029907226562,
+        245.5
+      ],
+      "block_id": "page-1097-block-0019",
+      "order": 19,
+      "text": "communautaires, les\n",
+      "text_sha256": "d3a93f9b639364e289c9c63c91b35ca25c9ca3a963d2cedfd407fcee0206984f"
+    },
+    {
+      "bbox": [
+        170.82412719726562,
+        166.20193481445312,
+        181.40029907226562,
+        248.65000915527344
+      ],
+      "block_id": "page-1097-block-0020",
+      "order": 20,
+      "text": "familles et les proches\n",
+      "text_sha256": "01224b981258e6cd3e9f66fc40abbae7e02d2a3bd560e1894c619d694db46c05"
+    },
+    {
+      "bbox": [
+        181.82412719726562,
+        185.10501098632812,
+        192.40029907226562,
+        229.85000610351562
+      ],
+      "block_id": "page-1097-block-0021",
+      "order": 21,
+      "text": "(1989-1998)\n",
+      "text_sha256": "55c1671bd48aeef54f847f267164289f53158eff752b7edad40684be46192a2e"
+    },
+    {
+      "bbox": [
+        130.82412719726562,
+        60.241371154785156,
+        141.40029907226562,
+        135.10000610351562
+      ],
+      "block_id": "page-1097-block-0022",
+      "order": 22,
+      "text": "Plan d’action pour la\n",
+      "text_sha256": "8d652a1684c08bf8ca57db69eec232a12c98096d38eeb17df8532ae206fa7106"
+    },
+    {
+      "bbox": [
+        140.82412719726562,
+        46.7504997253418,
+        151.40029907226562,
+        148.60000610351562
+      ],
+      "block_id": "page-1097-block-0023",
+      "order": 23,
+      "text": "transformation des services\n",
+      "text_sha256": "7f50d4f15e78b4097c7b72cc186f338774d052d0a43dee1915665b3b007b5de0"
+    },
+    {
+      "bbox": [
+        150.82412719726562,
+        62.3074951171875,
+        161.40029907226562,
+        132.75
+      ],
+      "block_id": "page-1097-block-0024",
+      "order": 24,
+      "text": "en santé mentale –\n",
+      "text_sha256": "4f849891271d3585fb861b23ab5dac0340ef3b074a29aa17434aa5ebb76a2064"
+    },
+    {
+      "bbox": [
+        160.82412719726562,
+        57.753997802734375,
+        171.40029907226562,
+        137.25
+      ],
+      "block_id": "page-1097-block-0025",
+      "order": 25,
+      "text": "Le virage ambulatoire\n",
+      "text_sha256": "159efe17354252d73b2a864bb430cfa4360b92e68e71ad67c8e772ac12813bbd"
+    },
+    {
+      "bbox": [
+        170.82412719726562,
+        75.25499725341797,
+        181.40029907226562,
+        120.0
+      ],
+      "block_id": "page-1097-block-0026",
+      "order": 26,
+      "text": "(1998-2005)\n",
+      "text_sha256": "9af4f02632cec3a5334b0d224fc8e03553951e10e79636d4fd8804b97241caac"
+    },
+    {
+      "bbox": [
+        197.4228515625,
+        189.04701232910156,
+        228.328125,
+        718.75
+      ],
+      "block_id": "page-1097-block-0027",
+      "order": 27,
+      "text": "Contentions\n• Contentions phy-\nsiques au besoin\n• Contentions phy-\nsiques au besoin\n• Contentions surtout\npharmacologiques\n• Contentions surtout\npharmacologiques\n• Le moins possible\n• Importance du\nconsentement\n",
+      "text_sha256": "332a0ef361bbf01d7dfad23d957f2becb3beef1aa53906da7828c5c1ec161d99"
+    },
+    {
+      "bbox": [
+        197.501953125,
+        79.24700164794922,
+        228.328125,
+        148.5500030517578
+      ],
+      "block_id": "page-1097-block-0028",
+      "order": 28,
+      "text": "• Le moins possible\n• Importance du\nconsentement\n",
+      "text_sha256": "a731dec54c29ba67fbeff3081269a735619ef368f49ecd5001a0b3189542b3a7"
+    },
+    {
+      "bbox": [
+        236.8728485107422,
+        581.3819580078125,
+        256.77813720703125,
+        718.75
+      ],
+      "block_id": "page-1097-block-0029",
+      "order": 29,
+      "text": "Objectifs\n• Hébergement pour\nprotéger l’individu\n",
+      "text_sha256": "aec587192a477dc3c5984ef00d6ce28a7497766c82ad54cfcf563e5ef0db1773"
+    },
+    {
+      "bbox": [
+        256.95196533203125,
+        602.3159790039062,
+        266.77813720703125,
+        640.7999877929688
+      ],
+      "block_id": "page-1097-block-0030",
+      "order": 30,
+      "text": "et la société\n",
+      "text_sha256": "f4783c27a874cc924223264f26b7172776adc619a85d3c7bddbf4e92d35caac0"
+    },
+    {
+      "bbox": [
+        236.9519500732422,
+        496.33197021484375,
+        256.77813720703125,
+        567.75
+      ],
+      "block_id": "page-1097-block-0031",
+      "order": 31,
+      "text": "• Hébergement pour\nprotéger l’individu\n",
+      "text_sha256": "af21a0b926825f0351568b2cf2e01e8db4752a0530e21f60009770822b6f6bdc"
+    },
+    {
+      "bbox": [
+        256.95196533203125,
+        517.2659912109375,
+        266.77813720703125,
+        555.75
+      ],
+      "block_id": "page-1097-block-0032",
+      "order": 32,
+      "text": "et la société\n",
+      "text_sha256": "f4783c27a874cc924223264f26b7172776adc619a85d3c7bddbf4e92d35caac0"
+    },
+    {
+      "bbox": [
+        236.9519500732422,
+        385.1766357421875,
+        267.77813720703125,
+        477.95001220703125
+      ],
+      "block_id": "page-1097-block-0033",
+      "order": 33,
+      "text": "• Désinstitutionalisation\n• Traitement près du milieu\nde vie\n",
+      "text_sha256": "bb67ac3963c524745c4e462cd1e3b63805570b955a8768e3591b217fc819d242"
+    },
+    {
+      "bbox": [
+        268.95196533203125,
+        380.8819885253906,
+        288.77813720703125,
+        477.95001220703125
+      ],
+      "block_id": "page-1097-block-0034",
+      "order": 34,
+      "text": "• La maladie mentale mérite\nle même investissement\n",
+      "text_sha256": "7663cd5d1cfb1b7dd04be60b9b9afcbf2286be5c719b8fda490fdad4d11ea708"
+    },
+    {
+      "bbox": [
+        288.95196533203125,
+        388.5950012207031,
+        298.77813720703125,
+        465.95001220703125
+      ],
+      "block_id": "page-1097-block-0035",
+      "order": 35,
+      "text": "que la maladie physique\n",
+      "text_sha256": "11aae43a3eb2a08e5db53cd6a6c3ef1f43b979cf7445b0623a2d473533c45c45"
+    },
+    {
+      "bbox": [
+        299.95196533203125,
+        382.08203125,
+        319.77813720703125,
+        477.95001220703125
+      ],
+      "block_id": "page-1097-block-0036",
+      "order": 36,
+      "text": "• Déstigmatisation de la\nmaladie mentale et de ses\n",
+      "text_sha256": "679cdd7bede58ddfcbac2c856af18c6e95dab29be6b2713c37657a3a3d887a62"
+    },
+    {
+      "bbox": [
+        319.95196533203125,
+        406.8110046386719,
+        329.77813720703125,
+        465.95001220703125
+      ],
+      "block_id": "page-1097-block-0037",
+      "order": 37,
+      "text": "lieux de traitement\n",
+      "text_sha256": "f32893ab370f05fa43f2da2c4947c3a7b4214b0d33078f409c955b445cd6c0d5"
+    },
+    {
+      "bbox": [
+        330.95196533203125,
+        383.88800048828125,
+        372.77813720703125,
+        477.95001220703125
+      ],
+      "block_id": "page-1097-block-0038",
+      "order": 38,
+      "text": "• Changement de loi\n• Prétention de prévention\n• Formation de divers types\nde professionnels\n",
+      "text_sha256": "5d96f6f953ab3a0f0d08666b06eb1081189d089f2073a4568bc5240985b8b343"
+    },
+    {
+      "bbox": [
+        236.9519500732422,
+        273.8389587402344,
+        246.7781219482422,
+        368.1499938964844
+      ],
+      "block_id": "page-1097-block-0039",
+      "order": 39,
+      "text": "Comme l’époque précédente,\n",
+      "text_sha256": "7e0dec547719f07ac76d0abbb1b20350866cd48df41b64a658b033062d9dfe5a"
+    },
+    {
+      "bbox": [
+        246.9519500732422,
+        352.8409729003906,
+        256.77813720703125,
+        368.1499938964844
+      ],
+      "block_id": "page-1097-block-0040",
+      "order": 40,
+      "text": "plus:\n",
+      "text_sha256": "cc369a31277900767b2fd4810d59acd7bd7ebb22fafae2ee0b6a299801b387b0"
+    },
+    {
+      "bbox": [
+        257.95196533203125,
+        268.9029846191406,
+        277.77813720703125,
+        368.1499938964844
+      ],
+      "block_id": "page-1097-block-0041",
+      "order": 41,
+      "text": "• Intégration de la santé phy-\nsique, sociale et mentale\n",
+      "text_sha256": "04c0eba3fd0d33ff56e74037276b20f24556262e348905d4cecc7dde609b61e4"
+    },
+    {
+      "bbox": [
+        236.9519500732422,
+        164.03897094726562,
+        246.7781219482422,
+        258.3500061035156
+      ],
+      "block_id": "page-1097-block-0042",
+      "order": 42,
+      "text": "Comme l’époque précédente,\n",
+      "text_sha256": "7e0dec547719f07ac76d0abbb1b20350866cd48df41b64a658b033062d9dfe5a"
+    },
+    {
+      "bbox": [
+        246.9519500732422,
+        241.89100646972656,
+        256.77813720703125,
+        258.3500061035156
+      ],
+      "block_id": "page-1097-block-0043",
+      "order": 43,
+      "text": "plus :\n",
+      "text_sha256": "d4ece6ddfc093e6438dea9069157bae0dac2ecc65138df6e70112c9206548086"
+    },
+    {
+      "bbox": [
+        257.95196533203125,
+        162.16026306152344,
+        277.77813720703125,
+        258.3500061035156
+      ],
+      "block_id": "page-1097-block-0044",
+      "order": 44,
+      "text": "• Identication de diverses\nclientèles et de gamme de\n",
+      "text_sha256": "b5e9c06b7ef53ea26ee2fa1cc75475f3f7ce2544c19beb0ef5a848a642472099"
+    },
+    {
+      "bbox": [
+        277.95196533203125,
+        183.88099670410156,
+        287.77813720703125,
+        246.35000610351562
+      ],
+      "block_id": "page-1097-block-0045",
+      "order": 45,
+      "text": "besoins de services\n",
+      "text_sha256": "cf4a062b48887ce708c265c5c3fd6f9fbd55958dbbd0dfc1fcf8bcb07181d686"
+    },
+    {
+      "bbox": [
+        288.95196533203125,
+        180.64999389648438,
+        308.77813720703125,
+        258.3500061035156
+      ],
+      "block_id": "page-1097-block-0046",
+      "order": 46,
+      "text": "• Notion d’intervention\nprécoce\n",
+      "text_sha256": "8d58e4bc38398635b8ab5ee9916c1a2de517e7e954ce392e68b249546cdcc726"
+    },
+    {
+      "bbox": [
+        309.95196533203125,
+        163.37864685058594,
+        329.77813720703125,
+        258.3500061035156
+      ],
+      "block_id": "page-1097-block-0047",
+      "order": 47,
+      "text": "• Recherche de solutions\ndans le milieu de vie de la\n",
+      "text_sha256": "59b38f154970f71f9dd895df0b15172c3880e4562022b0a584f21a38388e96be"
+    },
+    {
+      "bbox": [
+        329.95196533203125,
+        216.8570098876953,
+        339.77813720703125,
+        246.35000610351562
+      ],
+      "block_id": "page-1097-block-0048",
+      "order": 48,
+      "text": "personne\n",
+      "text_sha256": "f6a4866bf6b6cf2b4e573a5e7b6318a9762f593a52d3c10f8e55dbeb2d0dde3f"
+    },
+    {
+      "bbox": [
+        340.95196533203125,
+        158.10301208496094,
+        360.77813720703125,
+        258.3500061035156
+      ],
+      "block_id": "page-1097-block-0049",
+      "order": 49,
+      "text": "• Réadaptation et réintégra-\ntion sociale dans l’héberge-\n",
+      "text_sha256": "6ce5e01c85a101b918032cf5b4ebaa857189b009b9a0ec85b00aac003a84e918"
+    },
+    {
+      "bbox": [
+        360.95196533203125,
+        193.26834106445312,
+        370.77813720703125,
+        246.35000610351562
+      ],
+      "block_id": "page-1097-block-0050",
+      "order": 50,
+      "text": "ment et le travail\n",
+      "text_sha256": "77d72f25ff483064748c2c75609b4265c85cdc6be56922c8be334c3b7ee97e14"
+    },
+    {
+      "bbox": [
+        371.95196533203125,
+        169.08419799804688,
+        391.77813720703125,
+        258.3500061035156
+      ],
+      "block_id": "page-1097-block-0051",
+      "order": 51,
+      "text": "• Promotion de la défense\ndes droits\n",
+      "text_sha256": "c1fdde1e45d703fef73e279f0f4cb195515e9482ae25504f3efbafa9dde07df7"
+    },
+    {
+      "bbox": [
+        392.95196533203125,
+        177.35598754882812,
+        412.77813720703125,
+        258.3500061035156
+      ],
+      "block_id": "page-1097-block-0052",
+      "order": 52,
+      "text": "• Promotion de plan de\nservices individualisé,\n",
+      "text_sha256": "9b1a0f1f41f4ed926de119fad723b7b9f85546a9a8e0687de28c54ddf65d8c58"
+    },
+    {
+      "bbox": [
+        412.95196533203125,
+        164.10301208496094,
+        422.77813720703125,
+        246.35000610351562
+      ],
+      "block_id": "page-1097-block-0053",
+      "order": 53,
+      "text": "regroupant divers interve-\n",
+      "text_sha256": "7a5b8410ea0bb35c1157163421eb67fbdb4b54ec694920790e3bfd43d21fde83"
+    },
+    {
+      "bbox": [
+        422.95196533203125,
+        160.71852111816406,
+        432.77813720703125,
+        246.35000610351562
+      ],
+      "block_id": "page-1097-block-0054",
+      "order": 54,
+      "text": "nants et proches autour de\n",
+      "text_sha256": "71711a09ae0f2363630552178fbc9b350de09eb8d952a78d2dc79f401a5f1057"
+    },
+    {
+      "bbox": [
+        432.95196533203125,
+        165.88999938964844,
+        442.77813720703125,
+        246.35000610351562
+      ],
+      "block_id": "page-1097-block-0055",
+      "order": 55,
+      "text": "la personne en besoin de\n",
+      "text_sha256": "c533e37514044d53b026a3c9ec412d9c0787f319c17ddbdd0060d6a33b32884e"
+    },
+    {
+      "bbox": [
+        442.95196533203125,
+        220.52899169921875,
+        452.77813720703125,
+        246.35000610351562
+      ],
+      "block_id": "page-1097-block-0056",
+      "order": 56,
+      "text": "services\n",
+      "text_sha256": "5dabbca95cb41ffb476c60cd9d2ee2d2f173e16a81f65070647834a46ce262e3"
+    },
+    {
+      "bbox": [
+        453.95196533203125,
+        186.7969970703125,
+        495.77813720703125,
+        258.3500061035156
+      ],
+      "block_id": "page-1097-block-0057",
+      "order": 57,
+      "text": "• Déstigmatisation\n• Réadaptation\n• Réintégration dans\nla société\n",
+      "text_sha256": "7b73a194013ee5b1497b47bf0d4edaf66edbb041235d1c3049eb8113e8538278"
+    },
+    {
+      "bbox": [
+        236.9519500732422,
+        54.23897933959961,
+        246.7781219482422,
+        148.5500030517578
+      ],
+      "block_id": "page-1097-block-0058",
+      "order": 58,
+      "text": "Comme l’époque précédente,\n",
+      "text_sha256": "7e0dec547719f07ac76d0abbb1b20350866cd48df41b64a658b033062d9dfe5a"
+    },
+    {
+      "bbox": [
+        246.9519500732422,
+        132.09100341796875,
+        256.77813720703125,
+        148.5500030517578
+      ],
+      "block_id": "page-1097-block-0059",
+      "order": 59,
+      "text": "plus :\n",
+      "text_sha256": "d4ece6ddfc093e6438dea9069157bae0dac2ecc65138df6e70112c9206548086"
+    },
+    {
+      "bbox": [
+        257.95196533203125,
+        58.438995361328125,
+        277.77813720703125,
+        148.5500030517578
+      ],
+      "block_id": "page-1097-block-0060",
+      "order": 60,
+      "text": "• Appropriation du pouvoir\npar l’exercice d’un choix\n",
+      "text_sha256": "9a62a04bc9acbc637df201435004504172785719b7ea81bac5eb43a793d03961"
+    },
+    {
+      "bbox": [
+        277.95196533203125,
+        48.20640563964844,
+        287.77813720703125,
+        136.5500030517578
+      ],
+      "block_id": "page-1097-block-0061",
+      "order": 61,
+      "text": "libre et éclairé pour tous les\n",
+      "text_sha256": "81f1509e63b26667237c068e9f592351a89969a6fdc17b34e0dcad1314afc4c5"
+    },
+    {
+      "bbox": [
+        287.95196533203125,
+        46.71391296386719,
+        297.77813720703125,
+        136.5500030517578
+      ],
+      "block_id": "page-1097-block-0062",
+      "order": 62,
+      "text": "aspects du traitement et par\n",
+      "text_sha256": "9e1022d488ea1932ee53815a2db3b411058023fd2f7d04ff730a7e7eb264cabd"
+    },
+    {
+      "bbox": [
+        297.95196533203125,
+        52.452999114990234,
+        307.77813720703125,
+        136.5500030517578
+      ],
+      "block_id": "page-1097-block-0063",
+      "order": 63,
+      "text": "l’encouragement à partici-\n",
+      "text_sha256": "3e7e6c942ae9f26dfc4e6af8d71b44bb964ffcc5021f7ea28a85e7d460b00124"
+    },
+    {
+      "bbox": [
+        307.95196533203125,
+        64.58679962158203,
+        317.77813720703125,
+        136.5500030517578
+      ],
+      "block_id": "page-1097-block-0064",
+      "order": 64,
+      "text": "per à la vie associative\n",
+      "text_sha256": "864074812892e153b335c33fa3d37df6915e200fa8d6c7187f99d27aa4f36c6f"
+    },
+    {
+      "bbox": [
+        103.05229949951172,
+        431.1157531738281,
+        115.02007293701172,
+        456.75
+      ],
+      "block_id": "page-1097-block-0065",
+      "order": 65,
+      "text": "(suite)\n",
+      "text_sha256": "c684d6dbcdfd50f0ada227f799b5c0fb30e817ac3da61b4cbf208decde7f907b"
+    }
+  ],
+  "coordinates_sha256": "7ada18c67dbc0c5119aafd2a9cdb726b4518392fe0569110688cf4f0a264907e",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1097",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "1080\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 4\nOrganisation des soins\nTABLEAU 48.2 Évolution des services psychiatriques au Québec\nPériode asilaire\net apparentée\n(1845-1910)\nHôpital psychiatrique,\nafliation universitaire\n(1910-1960)\nSystème psychiatrique à\nmultiples composantes\n(1962)\nSystème global intégrant les\nsoins physiques et mentaux\n(1966)\nPolitique de santé mentale\npour un partenariat élargi :\nassociation du réseau\nofciel avec les organismes\ncommunautaires, les\nfamilles et les proches\n(1989-1998)\nPlan d’action pour la\ntransformation des services\nen santé mentale –\nLe virage ambulatoire\n(1998-2005)\nContentions\n• Contentions phy-\nsiques au besoin\n• Contentions phy-\nsiques au besoin\n• Contentions surtout\npharmacologiques\n• Contentions surtout\npharmacologiques\n• Le moins possible\n• Importance du\nconsentement\n• Le moins possible\n• Importance du\nconsentement\nObjectifs\n• Hébergement pour\nprotéger l’individu\net la société\n• Hébergement pour\nprotéger l’individu\net la société\n• Désinstitutionalisation\n• Traitement près du milieu\nde vie\n• La maladie mentale mérite\nle même investissement\nque la maladie physique\n• Déstigmatisation de la\nmaladie mentale et de ses\nlieux de traitement\n• Changement de loi\n• Prétention de prévention\n• Formation de divers types\nde professionnels\nComme l’époque précédente,\nplus:\n• Intégration de la santé phy-\nsique, sociale et mentale\nComme l’époque précédente,\nplus :\n• Identication de diverses\nclientèles et de gamme de\nbesoins de services\n• Notion d’intervention\nprécoce\n• Recherche de solutions\ndans le milieu de vie de la\npersonne\n• Réadaptation et réintégra-\ntion sociale dans l’héberge-\nment et le travail\n• Promotion de la défense\ndes droits\n• Promotion de plan de\nservices individualisé,\nregroupant divers interve-\nnants et proches autour de\nla personne en besoin de\nservices\n• Déstigmatisation\n• Réadaptation\n• Réintégration dans\nla société\nComme l’époque précédente,\nplus :\n• Appropriation du pouvoir\npar l’exercice d’un choix\nlibre et éclairé pour tous les\naspects du traitement et par\nl’encouragement à partici-\nper à la vie associative\n(suite)\n",
+  "raw_text_sha256": "ad8846c183782d6585cbf851741198bacd7ba6fbe7af36eb5e00fdb9f48201c2",
+  "source_page_display": 1098,
+  "source_page_index": 1097
+}

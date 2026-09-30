@@ -1,0 +1,712 @@
+{
+  "block_sequence_sha256": "153c169bab5dd18923747ea54c94da52ed04680d73d513026484429c53950305",
+  "blocks": [
+    {
+      "bbox": [
+        47.79999923706055,
+        38.31171798706055,
+        196.6610565185547,
+        60.77265548706055
+      ],
+      "block_id": "page-0011-block-0001",
+      "order": 1,
+      "text": "Table des matières\n",
+      "text_sha256": "7aa78783336aa4d772c05b64c32854ec0d1c2135d6f1756303905403aaba5f7f"
+    },
+    {
+      "bbox": [
+        50.0,
+        82.62222290039062,
+        87.5,
+        92.62222290039062
+      ],
+      "block_id": "page-0011-block-0002",
+      "order": 2,
+      "text": "TOME 1\n",
+      "text_sha256": "f9367d90c6125327c841f76f12bae7d9329f7bec9aba16e21e25219dfd901182"
+    },
+    {
+      "bbox": [
+        50.04999923706055,
+        101.8570327758789,
+        249.4240264892578,
+        115.3335952758789
+      ],
+      "block_id": "page-0011-block-0003",
+      "order": 3,
+      "text": "PARTIE 1\nIntroduction à la psychiatrie\n",
+      "text_sha256": "aedb9faf9050d114e53a8769f48e46725cfc4d10fbfecadf3d5ba44ff496e4a9"
+    },
+    {
+      "bbox": [
+        48.0,
+        123.63334655761719,
+        99.12449645996094,
+        134.1333465576172
+      ],
+      "block_id": "page-0011-block-0004",
+      "order": 4,
+      "text": "CHAPITRE\n",
+      "text_sha256": "36663b219db68c364045852d27f7a8cec2b30461eae0be833d6213825dc6ca58"
+    },
+    {
+      "bbox": [
+        73.0,
+        140.72666931152344,
+        290.94000244140625,
+        152.41612243652344
+      ],
+      "block_id": "page-0011-block-0005",
+      "order": 5,
+      "text": "1 \nPsychiatrie bio-psycho-sociale...............\n2\n",
+      "text_sha256": "ed86fcadf580f5632a06748689524c6b52e4ac9d5fcb00d645db996c405eb28c"
+    },
+    {
+      "bbox": [
+        73.0,
+        157.92666625976562,
+        290.9900207519531,
+        169.61611938476562
+      ],
+      "block_id": "page-0011-block-0006",
+      "order": 6,
+      "text": "2 \nRelation médecin-patient ........................... 21\n",
+      "text_sha256": "94c492108c3312efd6460a2bea1e45b21ef2009df6314d6cad1967ca91305622"
+    },
+    {
+      "bbox": [
+        73.0,
+        175.17666625976562,
+        291.0400085449219,
+        186.86611938476562
+      ],
+      "block_id": "page-0011-block-0007",
+      "order": 7,
+      "text": "3 \nExamen psychiatrique ................................. 35\n",
+      "text_sha256": "68cfb27258ec8005cd97f3df9dafdb667fb8d498a40b0baea48182a4d898de8a"
+    },
+    {
+      "bbox": [
+        73.0,
+        192.42666625976562,
+        291.0400085449219,
+        204.11611938476562
+      ],
+      "block_id": "page-0011-block-0008",
+      "order": 8,
+      "text": "4 \nÉvaluation neuropsychologique................. 77\n",
+      "text_sha256": "3525a019fd15b1eb1ce509fae98a27763991c64feaa19f93a0746ecabaa9c1d3"
+    },
+    {
+      "bbox": [
+        50.04999923706055,
+        218.30703735351562,
+        284.5080261230469,
+        231.78359985351562
+      ],
+      "block_id": "page-0011-block-0009",
+      "order": 9,
+      "text": "PARTIE 2\nDéterminants bio-psycho-sociaux\n",
+      "text_sha256": "375de7872884c37151ed6c5fc150092b141a0b96e52f0e9c65c6e33e87485fdf"
+    },
+    {
+      "bbox": [
+        48.0,
+        239.08334350585938,
+        99.12449645996094,
+        249.58334350585938
+      ],
+      "block_id": "page-0011-block-0010",
+      "order": 10,
+      "text": "CHAPITRE\n",
+      "text_sha256": "36663b219db68c364045852d27f7a8cec2b30461eae0be833d6213825dc6ca58"
+    },
+    {
+      "bbox": [
+        73.0,
+        256.1766662597656,
+        291.0400085449219,
+        267.8661193847656
+      ],
+      "block_id": "page-0011-block-0011",
+      "order": 11,
+      "text": "5 \nGénétique.......................................................... 93\n",
+      "text_sha256": "b14dfe9b3e4f06a0a973ffd169734ed8fbddb1caad991b0d8631ef2adec29247"
+    },
+    {
+      "bbox": [
+        73.0,
+        273.4266662597656,
+        291.0100402832031,
+        285.1161193847656
+      ],
+      "block_id": "page-0011-block-0012",
+      "order": 12,
+      "text": "6 \nNeurobiologie.................................................109\n",
+      "text_sha256": "74218e2388d1f99fdf69f54b20a231a051f18117716e811ce572d03972a22edf"
+    },
+    {
+      "bbox": [
+        73.0,
+        290.6766662597656,
+        291.0100402832031,
+        302.3661193847656
+      ],
+      "block_id": "page-0011-block-0013",
+      "order": 13,
+      "text": "7 \nImagerie cérébrale ....................................... 138\n",
+      "text_sha256": "cdbb7c9f4c6285ffadcfc10989702fd6561917f21c19c11b168a7f5bc5fba11c"
+    },
+    {
+      "bbox": [
+        73.0,
+        307.8766784667969,
+        291.0100402832031,
+        330.8161315917969
+      ],
+      "block_id": "page-0011-block-0014",
+      "order": 14,
+      "text": "8 \nPsychophysiologie\net neuropsychologie..................................... 158\n",
+      "text_sha256": "e46faf40095426c09a83cbcb0c720a306b244fc7fbfd43c0e7f265ebdad79ed8"
+    },
+    {
+      "bbox": [
+        73.0,
+        336.3766784667969,
+        291.0100402832031,
+        359.3161315917969
+      ],
+      "block_id": "page-0011-block-0015",
+      "order": 15,
+      "text": "9 \nDéveloppement\nde la personnalité......................................... 194\n",
+      "text_sha256": "371cfc65bf4f8c7e73ccaa2deb51ccbbc31dfd022bb6430d929a113a956661ce"
+    },
+    {
+      "bbox": [
+        68.0,
+        364.8766784667969,
+        291.0100402832031,
+        376.5661315917969
+      ],
+      "block_id": "page-0011-block-0016",
+      "order": 16,
+      "text": "10 \nCouples et familles....................................... 227\n",
+      "text_sha256": "18a984d9637309aa051da1ac865eb8745569845554a371448d6fa27147aa0e62"
+    },
+    {
+      "bbox": [
+        68.0,
+        382.1266784667969,
+        291.0100402832031,
+        393.8161315917969
+      ],
+      "block_id": "page-0011-block-0017",
+      "order": 17,
+      "text": "11 \nCulture et migration ..................................... 250\n",
+      "text_sha256": "95487eb8dbc7c8a832d1035b8d7cb4d34907573c75e853e4923bf41e6eb05025"
+    },
+    {
+      "bbox": [
+        68.0,
+        399.3766784667969,
+        291.0100402832031,
+        411.0661315917969
+      ],
+      "block_id": "page-0011-block-0018",
+      "order": 18,
+      "text": "12 \nTravail et invalidité........................................ 259\n",
+      "text_sha256": "1cddd284b188752805988a8b3d695c4b7ca40f94e0cffa075aee81ef72af045c"
+    },
+    {
+      "bbox": [
+        68.0,
+        416.57666015625,
+        291.0100402832031,
+        439.51611328125
+      ],
+      "block_id": "page-0011-block-0019",
+      "order": 19,
+      "text": "13 \nSociologie et maladies\nmentales ......................................................... 280\n",
+      "text_sha256": "0cc3bf399f36e315e0a8a2312f26737d479296c66cad3a4c2bb9bfd60f6521e0"
+    },
+    {
+      "bbox": [
+        68.0,
+        445.07666015625,
+        291.0100402832031,
+        456.76611328125
+      ],
+      "block_id": "page-0011-block-0020",
+      "order": 20,
+      "text": "14 \nÉpidémiologie ................................................ 289\n",
+      "text_sha256": "3472924fc73395066eba332057515a587bfa8402766388e6e3c0f7a708eb1bb0"
+    },
+    {
+      "bbox": [
+        50.04999923706055,
+        470.95703125,
+        290.935546875,
+        484.43359375
+      ],
+      "block_id": "page-0011-block-0021",
+      "order": 21,
+      "text": "PARTIE 3\nSyndromes cliniques psychiatriques\n",
+      "text_sha256": "56deb9d65828be4d47762a0897ce79b19ebfb29088640167ee5d0d1d314dde70"
+    },
+    {
+      "bbox": [
+        48.0,
+        491.73333740234375,
+        99.12449645996094,
+        502.23333740234375
+      ],
+      "block_id": "page-0011-block-0022",
+      "order": 22,
+      "text": "CHAPITRE\n",
+      "text_sha256": "36663b219db68c364045852d27f7a8cec2b30461eae0be833d6213825dc6ca58"
+    },
+    {
+      "bbox": [
+        68.0,
+        508.82666015625,
+        291.0100402832031,
+        520.51611328125
+      ],
+      "block_id": "page-0011-block-0023",
+      "order": 23,
+      "text": "15 \nTroubles psychotiques brefs ......................302\n",
+      "text_sha256": "beb153e208fde73ec7c1b9f9aaffb0acf8b06f0cc551dd0939d6706d1e7fe9a4"
+    },
+    {
+      "bbox": [
+        68.0,
+        526.07666015625,
+        291.0100402832031,
+        537.76611328125
+      ],
+      "block_id": "page-0011-block-0024",
+      "order": 24,
+      "text": "16 \nTroubles délirants ......................................... 312\n",
+      "text_sha256": "c03929f1bc9f8c5b5c463fd0c06b4ce0f5a41a0bffda5e07993491c2914568b6"
+    },
+    {
+      "bbox": [
+        68.0,
+        543.32666015625,
+        291.0100402832031,
+        555.01611328125
+      ],
+      "block_id": "page-0011-block-0025",
+      "order": 25,
+      "text": "17 \nSchizophrénies.............................................. 327\n",
+      "text_sha256": "64ed3cde2b82b3c588b62f84208ca347fb282cf62bc5183f3093e58a92d4b4d0"
+    },
+    {
+      "bbox": [
+        68.0,
+        560.5266723632812,
+        291.0100402832031,
+        572.2161254882812
+      ],
+      "block_id": "page-0011-block-0026",
+      "order": 26,
+      "text": "18 \nTroubles bipolaires .......................................372\n",
+      "text_sha256": "22f17a7728e6d78c3b0011aecb1511f704570948ac5e6e044580a79bd2304377"
+    },
+    {
+      "bbox": [
+        68.0,
+        577.7766723632812,
+        291.0100402832031,
+        589.4661254882812
+      ],
+      "block_id": "page-0011-block-0027",
+      "order": 27,
+      "text": "19 \nDépressions.................................................... 392\n",
+      "text_sha256": "d30cadee39676fa1bc3a5658a86ad3b652e126d16d3478585870ba90d88b02a6"
+    },
+    {
+      "bbox": [
+        68.0,
+        595.0266723632812,
+        291.0100402832031,
+        617.9661254882812
+      ],
+      "block_id": "page-0011-block-0028",
+      "order": 28,
+      "text": "20 \nTroubles anxieux, panique,\nphobies............................................................ 411\n",
+      "text_sha256": "b4025b13a23d6fd0452e25c034d23d4ce6f5955440ba67098c8d9c5a9b058076"
+    },
+    {
+      "bbox": [
+        68.0,
+        623.5266723632812,
+        291.0100402832031,
+        635.2161254882812
+      ],
+      "block_id": "page-0011-block-0029",
+      "order": 29,
+      "text": "21 \nTroubles obsessionnels-compulsifs.........446\n",
+      "text_sha256": "e435aeb9aad94b3d72b49fdae007006b8d5028db1efd4f4aff7af4705cc64f08"
+    },
+    {
+      "bbox": [
+        68.0,
+        640.7766723632812,
+        291.0100402832031,
+        652.4661254882812
+      ],
+      "block_id": "page-0011-block-0030",
+      "order": 30,
+      "text": "22 \nTroubles de l’adaptation.............................. 472\n",
+      "text_sha256": "601854f755b75bb3710058e28dd8fe63195140feba263f25aa0f69a464c9869c"
+    },
+    {
+      "bbox": [
+        68.0,
+        658.0266723632812,
+        291.0100402832031,
+        669.7161254882812
+      ],
+      "block_id": "page-0011-block-0031",
+      "order": 31,
+      "text": "23 \nTroubles liés au stress................................. 489\n",
+      "text_sha256": "1affc22268e817492abbfa449e2f8029091df458921e2ffeca7a3a6f1b8daf90"
+    },
+    {
+      "bbox": [
+        68.0,
+        675.2266845703125,
+        291.0100402832031,
+        686.9161376953125
+      ],
+      "block_id": "page-0011-block-0032",
+      "order": 32,
+      "text": "24 \nDissociations.................................................. 510\n",
+      "text_sha256": "2567cd64c2cbd307786f8d16f6336a5ac5afea274757e1ab464be60b96b53465"
+    },
+    {
+      "bbox": [
+        68.0,
+        692.4766845703125,
+        291.0100402832031,
+        715.4161376953125
+      ],
+      "block_id": "page-0011-block-0033",
+      "order": 33,
+      "text": "25 \nTroubles à symptomatologie\nsomatique.......................................................528\n",
+      "text_sha256": "874dbfb29231685ad2e52a5970f954a40cb23c54151d9bea8a482970562408f3"
+    },
+    {
+      "bbox": [
+        326.0,
+        83.32666015625,
+        549.010009765625,
+        95.01611328125
+      ],
+      "block_id": "page-0011-block-0034",
+      "order": 34,
+      "text": "26 \nDouleur chronique........................................ 550\n",
+      "text_sha256": "21afde1d8b5b3708ed277ba8959200b8b08da7b1a477843402898a9f9103e20e"
+    },
+    {
+      "bbox": [
+        326.0,
+        100.4266586303711,
+        549.010009765625,
+        112.1161117553711
+      ],
+      "block_id": "page-0011-block-0035",
+      "order": 35,
+      "text": "27 \nTroubles neurocognitifs............................... 578\n",
+      "text_sha256": "8ea732967ce93b01382102e3916d69f6ac6e5b7ed862103cc22bd28e3681821c"
+    },
+    {
+      "bbox": [
+        326.0,
+        117.52666473388672,
+        549.010009765625,
+        140.36611938476562
+      ],
+      "block_id": "page-0011-block-0036",
+      "order": 36,
+      "text": "28 \nTroubles mentaux dus\nà une affection médicale............................ 617\n",
+      "text_sha256": "87e8d0916c4b56a20478f53ab191c00753e8b0292cb04a3e3ee7d2a7efe161a6"
+    },
+    {
+      "bbox": [
+        326.0,
+        145.7766571044922,
+        549.010009765625,
+        168.5661163330078
+      ],
+      "block_id": "page-0011-block-0037",
+      "order": 37,
+      "text": "29 \nFacteurs psychologiques inuençant\ndes affections médicales............................ 664\n",
+      "text_sha256": "41323c2af75a3c864662cdf95588cde41dbe29bfe054cbd84a8b616e7898379f"
+    },
+    {
+      "bbox": [
+        326.0,
+        173.97666931152344,
+        549.010009765625,
+        185.66612243652344
+      ],
+      "block_id": "page-0011-block-0038",
+      "order": 38,
+      "text": "30 \nTroubles factices........................................... 686\n",
+      "text_sha256": "6ffab9612290c20ccc4dd59d3a456219fe148d8ce312ea9bbca923d1b5ccaf2d"
+    },
+    {
+      "bbox": [
+        326.0,
+        191.07666015625,
+        549.010009765625,
+        213.86611938476562
+      ],
+      "block_id": "page-0011-block-0039",
+      "order": 39,
+      "text": "31 \nTroubles des conduites\nalimentaires................................................... 698\n",
+      "text_sha256": "3ed3fd4092d09e49d487725ac3827d00802b32cf032ee90683d885e7fdc399e3"
+    },
+    {
+      "bbox": [
+        326.0,
+        219.2766571044922,
+        549.010009765625,
+        242.11611938476562
+      ],
+      "block_id": "page-0011-block-0040",
+      "order": 40,
+      "text": "32 \nTroubles du sommeil\net de la vigilance........................................... 714\n",
+      "text_sha256": "34cadd93c1146449c79d77aac249c58dd16af6439d3c7420fa168dae22f3783e"
+    },
+    {
+      "bbox": [
+        326.0,
+        247.52667236328125,
+        549.010009765625,
+        270.3161315917969
+      ],
+      "block_id": "page-0011-block-0041",
+      "order": 41,
+      "text": "33 \nSexualité normale\net dysfonctions sexuelles ........................... 750\n",
+      "text_sha256": "40b418d777be0fccc493a653339ace41e5246f337564a9ab66bdc70994e982f1"
+    },
+    {
+      "bbox": [
+        326.0,
+        275.7266540527344,
+        549.010009765625,
+        287.4161071777344
+      ],
+      "block_id": "page-0011-block-0042",
+      "order": 42,
+      "text": "34 \nDysphories de genre.................................... 784\n",
+      "text_sha256": "c96005ba4b3c14e51c41fcca6a6446a54ecf292cf3f4786f3a5ddcce9f724fa6"
+    },
+    {
+      "bbox": [
+        326.0,
+        292.82666015625,
+        549.010009765625,
+        304.51611328125
+      ],
+      "block_id": "page-0011-block-0043",
+      "order": 43,
+      "text": "35 \nParaphilies ......................................................806\n",
+      "text_sha256": "f6a466c84a70d52f96d23d735ec5b248f4558546cf90f2ee07e3eaf8ee75d2b3"
+    },
+    {
+      "bbox": [
+        326.0,
+        309.9266662597656,
+        549.010009765625,
+        343.8661193847656
+      ],
+      "block_id": "page-0011-block-0044",
+      "order": 44,
+      "text": "36 \nTroubles du contrôle\ndes impulsions et dépendances\ncomportementales ....................................... 827\n",
+      "text_sha256": "66116535a215e290b7b0df45738709509b16c58bd68a81630249776b004c272f"
+    },
+    {
+      "bbox": [
+        326.0,
+        349.27667236328125,
+        549.010009765625,
+        360.96612548828125
+      ],
+      "block_id": "page-0011-block-0045",
+      "order": 45,
+      "text": "37 \nTroubles liés à l’alcool................................. 849\n",
+      "text_sha256": "f47956ae76d4bbbf99252c676e86e59e815d6e33f1119b5492d62494f2504d8a"
+    },
+    {
+      "bbox": [
+        326.0,
+        366.3766784667969,
+        549.010009765625,
+        378.0661315917969
+      ],
+      "block_id": "page-0011-block-0046",
+      "order": 46,
+      "text": "38 \nToxicomanies................................................. 873\n",
+      "text_sha256": "ccc79ddab77ca0bf2d1624eee86f8227de4e4b597af5de986ab2786be43c3c2c"
+    },
+    {
+      "bbox": [
+        326.0,
+        383.4766540527344,
+        549.010009765625,
+        395.1661071777344
+      ],
+      "block_id": "page-0011-block-0047",
+      "order": 47,
+      "text": "39 \nToxicomanies et maladies mentales........ 909\n",
+      "text_sha256": "dcaee6b94f11f90b3c927853ad2d1d6b4966ad279ca2e1f3459ee815c574f902"
+    },
+    {
+      "bbox": [
+        326.0,
+        400.57666015625,
+        549.010009765625,
+        412.26611328125
+      ],
+      "block_id": "page-0011-block-0048",
+      "order": 48,
+      "text": "40 \nTroubles de la personnalité........................ 925\n",
+      "text_sha256": "04a73cab1dbbbbfbb3cdb4b250e3425a51cd98a3c440c8af3244cae52a645cd0"
+    },
+    {
+      "bbox": [
+        326.0,
+        417.6766662597656,
+        549.010009765625,
+        429.3661193847656
+      ],
+      "block_id": "page-0011-block-0049",
+      "order": 49,
+      "text": "41 \nDifférences reliées au sexe........................ 964\n",
+      "text_sha256": "d16f6c8de872a2889fc55daf9ecaf0a5a86b90bc202d02de2ba0ae370b86408f"
+    },
+    {
+      "bbox": [
+        308.0500183105469,
+        443.45703125,
+        487.12890625,
+        456.93359375
+      ],
+      "block_id": "page-0011-block-0050",
+      "order": 50,
+      "text": "PARTIE 4\nOrganisation des soins\n",
+      "text_sha256": "86f2f248116ed931f257e5a3d2db5454dc26e39c224e8c53a1fc69627fdc71e1"
+    },
+    {
+      "bbox": [
+        306.0,
+        464.0833435058594,
+        357.12451171875,
+        474.5833435058594
+      ],
+      "block_id": "page-0011-block-0051",
+      "order": 51,
+      "text": "CHAPITRE\n",
+      "text_sha256": "36663b219db68c364045852d27f7a8cec2b30461eae0be833d6213825dc6ca58"
+    },
+    {
+      "bbox": [
+        326.0,
+        481.02667236328125,
+        549.010009765625,
+        503.8161315917969
+      ],
+      "block_id": "page-0011-block-0052",
+      "order": 52,
+      "text": "42 \nInterdisciplinarité et travail\nd’équipe .......................................................... 980\n",
+      "text_sha256": "b43dc02268ebcb5803eeb547c999f158006902b4d4df33517294bb676c977d50"
+    },
+    {
+      "bbox": [
+        326.0,
+        509.2266845703125,
+        549.010009765625,
+        520.9161376953125
+      ],
+      "block_id": "page-0011-block-0053",
+      "order": 53,
+      "text": "43 \nRéseaux et partenariats .............................. 992\n",
+      "text_sha256": "19e5a38a9192ae9b8fe52ffd7cb468d26c3c70a36728c6f6e4bdc5754c399bc3"
+    },
+    {
+      "bbox": [
+        326.0,
+        526.32666015625,
+        548.9800415039062,
+        538.01611328125
+      ],
+      "block_id": "page-0011-block-0054",
+      "order": 54,
+      "text": "44 \nSoins en collaboration ...............................1004\n",
+      "text_sha256": "51ed92311d8b475957a3d695f52aaa170682f9e195794783c43aa338740d7764"
+    },
+    {
+      "bbox": [
+        326.0,
+        543.4266967773438,
+        548.9800415039062,
+        566.26611328125
+      ],
+      "block_id": "page-0011-block-0055",
+      "order": 55,
+      "text": "45 \nMaladie psychiatrique sévère\net persistante............................................... 1020\n",
+      "text_sha256": "d76c9770c5462f98d096a38e8f4dcce9b8dcf23a16b86db143d90fcc8c0118da"
+    },
+    {
+      "bbox": [
+        326.0,
+        571.6766967773438,
+        548.9800415039062,
+        594.4661254882812
+      ],
+      "block_id": "page-0011-block-0056",
+      "order": 56,
+      "text": "46 \nAspects psychiatriques\ndes soins palliatifs...................................... 1033\n",
+      "text_sha256": "9f4c0689fe9e19d6bcc48506dfc6eac3a755c14a77312f2d7114506d404259ca"
+    },
+    {
+      "bbox": [
+        326.0,
+        599.8766479492188,
+        548.9800415039062,
+        622.6661376953125
+      ],
+      "block_id": "page-0011-block-0057",
+      "order": 57,
+      "text": "47 \nÉvaluation de la qualité des soins\net maintien de la compétence.................1048\n",
+      "text_sha256": "61bedcbbb9a75ce75bb6fa8a1ca18741d57b160a8d7f8e5bf9d4a4d0309c77f7"
+    },
+    {
+      "bbox": [
+        306.0,
+        628.07666015625,
+        549.02001953125,
+        715.3858642578125
+      ],
+      "block_id": "page-0011-block-0058",
+      "order": 58,
+      "text": "48 \nÉvolution des services\npsychiatriques .............................................1066\nRéférences ...................................................................................\nR2\nIndex des auteurs........................................................................\nI1\nIndex des médicaments ............................................................ I15\nIndex des sujets........................................................................... I21\nCrédits ........................................................................................... C1\n",
+      "text_sha256": "8bb47ed58421865aec1b6afd86c146a917565d438360a06d3227d7652e8b6856"
+    }
+  ],
+  "coordinates_sha256": "079e09fda1f2371f8054267fafaf75e88bde11aa2748c3210df7ce73c6c878c7",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0011",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Table des matières\nTOME 1\nPARTIE 1\nIntroduction à la psychiatrie\nCHAPITRE\n1 \nPsychiatrie bio-psycho-sociale...............\n2\n2 \nRelation médecin-patient ........................... 21\n3 \nExamen psychiatrique ................................. 35\n4 \nÉvaluation neuropsychologique................. 77\nPARTIE 2\nDéterminants bio-psycho-sociaux\nCHAPITRE\n5 \nGénétique.......................................................... 93\n6 \nNeurobiologie.................................................109\n7 \nImagerie cérébrale ....................................... 138\n8 \nPsychophysiologie\net neuropsychologie..................................... 158\n9 \nDéveloppement\nde la personnalité......................................... 194\n10 \nCouples et familles....................................... 227\n11 \nCulture et migration ..................................... 250\n12 \nTravail et invalidité........................................ 259\n13 \nSociologie et maladies\nmentales ......................................................... 280\n14 \nÉpidémiologie ................................................ 289\nPARTIE 3\nSyndromes cliniques psychiatriques\nCHAPITRE\n15 \nTroubles psychotiques brefs ......................302\n16 \nTroubles délirants ......................................... 312\n17 \nSchizophrénies.............................................. 327\n18 \nTroubles bipolaires .......................................372\n19 \nDépressions.................................................... 392\n20 \nTroubles anxieux, panique,\nphobies............................................................ 411\n21 \nTroubles obsessionnels-compulsifs.........446\n22 \nTroubles de l’adaptation.............................. 472\n23 \nTroubles liés au stress................................. 489\n24 \nDissociations.................................................. 510\n25 \nTroubles à symptomatologie\nsomatique.......................................................528\n26 \nDouleur chronique........................................ 550\n27 \nTroubles neurocognitifs............................... 578\n28 \nTroubles mentaux dus\nà une affection médicale............................ 617\n29 \nFacteurs psychologiques inuençant\ndes affections médicales............................ 664\n30 \nTroubles factices........................................... 686\n31 \nTroubles des conduites\nalimentaires................................................... 698\n32 \nTroubles du sommeil\net de la vigilance........................................... 714\n33 \nSexualité normale\net dysfonctions sexuelles ........................... 750\n34 \nDysphories de genre.................................... 784\n35 \nParaphilies ......................................................806\n36 \nTroubles du contrôle\ndes impulsions et dépendances\ncomportementales ....................................... 827\n37 \nTroubles liés à l’alcool................................. 849\n38 \nToxicomanies................................................. 873\n39 \nToxicomanies et maladies mentales........ 909\n40 \nTroubles de la personnalité........................ 925\n41 \nDifférences reliées au sexe........................ 964\nPARTIE 4\nOrganisation des soins\nCHAPITRE\n42 \nInterdisciplinarité et travail\nd’équipe .......................................................... 980\n43 \nRéseaux et partenariats .............................. 992\n44 \nSoins en collaboration ...............................1004\n45 \nMaladie psychiatrique sévère\net persistante............................................... 1020\n46 \nAspects psychiatriques\ndes soins palliatifs...................................... 1033\n47 \nÉvaluation de la qualité des soins\net maintien de la compétence.................1048\n48 \nÉvolution des services\npsychiatriques .............................................1066\nRéférences ...................................................................................\nR2\nIndex des auteurs........................................................................\nI1\nIndex des médicaments ............................................................ I15\nIndex des sujets........................................................................... I21\nCrédits ........................................................................................... C1\n",
+  "raw_text_sha256": "753f6f8c81f69ca0c637be1560cd860be9c98c896d07974829df244ae2045e0e",
+  "source_page_display": 12,
+  "source_page_index": 11
+}

@@ -1,0 +1,148 @@
+{
+  "block_sequence_sha256": "70dc9c73975d834e991948a26e4ec35b3082e46f6516d97049769b13b738de06",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        130.7734375,
+        528.9652709960938,
+        175.6953125
+      ],
+      "block_id": "page-0019-block-0001",
+      "order": 1,
+      "text": "Psychiatrie bio-psycho-sociale\n",
+      "text_sha256": "a423735735e9e0d2523ce9fd88cc02ac248805266821eb9433f1388e84b96892"
+    },
+    {
+      "bbox": [
+        48.0,
+        223.25732421875,
+        161.62159729003906,
+        237.29541015625
+      ],
+      "block_id": "page-0019-block-0002",
+      "order": 2,
+      "text": "Pierre Lalonde, M.D., FRCPC\n",
+      "text_sha256": "9ca5397e139e015697ab74975ca4e07b345a207ec29d335320d1a95fbc9c3514"
+    },
+    {
+      "bbox": [
+        48.0,
+        240.67724609375,
+        267.9187316894531,
+        261.893798828125
+      ],
+      "block_id": "page-0019-block-0003",
+      "order": 3,
+      "text": "Psychiatre, programme des troubles psychotiques, Institut\nuniversitaire en santé mentale de Montréal\n",
+      "text_sha256": "762186758b5e26910e68bbebb456fba17afb098a7a46708839f50136c9d037b0"
+    },
+    {
+      "bbox": [
+        48.0,
+        265.67724609375,
+        271.5098876953125,
+        286.893798828125
+      ],
+      "block_id": "page-0019-block-0004",
+      "order": 4,
+      "text": "Professeur émérite, Département de psychiatrie, Faculté de\nmédecine, Université de Montréal\n",
+      "text_sha256": "06c0b05337845f030dce47ac20fda2f418431bbeba36eb5a7c23410df062d885"
+    },
+    {
+      "bbox": [
+        309.0,
+        223.25732421875,
+        436.7716369628906,
+        237.29541015625
+      ],
+      "block_id": "page-0019-block-0005",
+      "order": 5,
+      "text": "Georges-F. Pinard, M.D., FRCPC\n",
+      "text_sha256": "f2a35e16cb81e9c34206e07d98adada7f8f60851a42dbd59002ecebcf89132a8"
+    },
+    {
+      "bbox": [
+        309.0,
+        240.67724609375,
+        531.2681884765625,
+        261.893798828125
+      ],
+      "block_id": "page-0019-block-0006",
+      "order": 6,
+      "text": "Psychiatre, Clinique ambulatoire de santé mentale, Hôpital\nMaisonneuve-Rosemont (Montréal)\n",
+      "text_sha256": "d008055e49b6920abd979cf78971fb51bd7478281e8e67504ccc3c900e8b969e"
+    },
+    {
+      "bbox": [
+        309.0,
+        265.67724609375,
+        530.9392700195312,
+        286.893798828125
+      ],
+      "block_id": "page-0019-block-0007",
+      "order": 7,
+      "text": "Professeur agrégé de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\n",
+      "text_sha256": "f4bc23aed99fa29e8f7410379c6cebea846c1188b4a600c871ae8a6f9bc4dde5"
+    },
+    {
+      "bbox": [
+        48.0,
+        335.47442626953125,
+        289.0199890136719,
+        495.4732971191406
+      ],
+      "block_id": "page-0019-block-0008",
+      "order": 8,
+      "text": "1.1 \nSources de la psychiatrie ................................................... 3\n1.2 \nModèle bio-psycho-social ................................................. 4\n1.2.1 \nRejet de la dichotomie...............................................7\n1.2.2 \nCausalité circulaire.....................................................8\n1.3 \nSanté mentale...................................................................... 8\n1.3.1 \nPrévention en santé mentale....................................9\n1.3.2 \nPromotion de la santé mentale..............................10\n1.4 \nNosographie des maladies mentales..............................11\n1.4.1 \nHistorique..................................................................11\n1.4.2\nManuel diagnostique et statistique\ndes troubles mentaux (DSM-5) ...........................13\n1.4.3\nClassication internationale des maladies,\n10e révision (CIM-10) .............................................15\n",
+      "text_sha256": "bc401917a5a14f40c170bbdc48fbfc6703ae499f4119719cd0ad88ddc7cb6fd4"
+    },
+    {
+      "bbox": [
+        309.0,
+        335.47442626953125,
+        549.9900512695312,
+        456.39727783203125
+      ],
+      "block_id": "page-0019-block-0009",
+      "order": 9,
+      "text": "1.5 \nTransformations de la pratique\nde la psychiatrie ................................................................ 15\n1.5.1 \nVirage ambulatoire...................................................15\n1.5.2 \nPlan d’action en santé mentale au Québec..........16\n1.5.3 \nIntervention du système judiciaire .......................16\n1.6 \nÉducation et formation du médecin ..............................17\n1.7 \nPratique basée sur les données probantes ....................18\n1.7.1 \nSources d’information .............................................18\n1.7.2 \nTransfert des connaissances de la recherche\nvers la pratique clinique..........................................19\n",
+      "text_sha256": "43773a4cb23438f1903b9b4ae180adc1b643e8e0e30662b9b8b1ac93c52aca10"
+    },
+    {
+      "bbox": [
+        309.0,
+        461.47442626953125,
+        549.9900512695312,
+        471.31817626953125
+      ],
+      "block_id": "page-0019-block-0010",
+      "order": 10,
+      "text": "Lectures complémentaires......................................................... 20\n",
+      "text_sha256": "37c6ee1fa7f581df2896dc60c695247bcc60da0f9608a006584c3aaca681d773"
+    },
+    {
+      "bbox": [
+        319.5,
+        2.3810577392578125,
+        555.0,
+        122.38105773925781
+      ],
+      "block_id": "page-0019-block-0011",
+      "order": 11,
+      "text": "CHAPITRE1\n",
+      "text_sha256": "5b51172f4002b2f484578589fc4817ec87b5d6f7f073c56030c795e86edeee7c"
+    }
+  ],
+  "coordinates_sha256": "667acbe5687d9711d18b23469b6b1b212217f3a295c6ce7e1a801e97de53a04a",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0019",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Psychiatrie bio-psycho-sociale\nPierre Lalonde, M.D., FRCPC\nPsychiatre, programme des troubles psychotiques, Institut\nuniversitaire en santé mentale de Montréal\nProfesseur émérite, Département de psychiatrie, Faculté de\nmédecine, Université de Montréal\nGeorges-F. Pinard, M.D., FRCPC\nPsychiatre, Clinique ambulatoire de santé mentale, Hôpital\nMaisonneuve-Rosemont (Montréal)\nProfesseur agrégé de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\n1.1 \nSources de la psychiatrie ................................................... 3\n1.2 \nModèle bio-psycho-social ................................................. 4\n1.2.1 \nRejet de la dichotomie...............................................7\n1.2.2 \nCausalité circulaire.....................................................8\n1.3 \nSanté mentale...................................................................... 8\n1.3.1 \nPrévention en santé mentale....................................9\n1.3.2 \nPromotion de la santé mentale..............................10\n1.4 \nNosographie des maladies mentales..............................11\n1.4.1 \nHistorique..................................................................11\n1.4.2\nManuel diagnostique et statistique\ndes troubles mentaux (DSM-5) ...........................13\n1.4.3\nClassication internationale des maladies,\n10e révision (CIM-10) .............................................15\n1.5 \nTransformations de la pratique\nde la psychiatrie ................................................................ 15\n1.5.1 \nVirage ambulatoire...................................................15\n1.5.2 \nPlan d’action en santé mentale au Québec..........16\n1.5.3 \nIntervention du système judiciaire .......................16\n1.6 \nÉducation et formation du médecin ..............................17\n1.7 \nPratique basée sur les données probantes ....................18\n1.7.1 \nSources d’information .............................................18\n1.7.2 \nTransfert des connaissances de la recherche\nvers la pratique clinique..........................................19\nLectures complémentaires......................................................... 20\nCHAPITRE1\n",
+  "raw_text_sha256": "949a074418b5a0031068d5b1ed0f0b5ed8e1e41e1a1eaaf025bd1f9c1c58e34e",
+  "source_page_display": 20,
+  "source_page_index": 19
+}

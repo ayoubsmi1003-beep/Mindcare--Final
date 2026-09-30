@@ -1,0 +1,700 @@
+{
+  "block_sequence_sha256": "085c2ff60136249d76c00b50647585457f32c4e52a57d7d3bf137eae4fa528a4",
+  "blocks": [
+    {
+      "bbox": [
+        476.20001220703125,
+        747.5753784179688,
+        555.0199584960938,
+        758.8693237304688
+      ],
+      "block_id": "page-1136-block-0001",
+      "order": 1,
+      "text": "Références\nR39\n",
+      "text_sha256": "5b2b4d2cac6dab61853fc09bffeeaa37109233255137d9a6351c1cd06d37e015"
+    },
+    {
+      "bbox": [
+        396.0,
+        40.68496322631836,
+        551.0775756835938,
+        67.32344055175781
+      ],
+      "block_id": "page-1136-block-0002",
+      "order": 2,
+      "text": "Association des conseils des médecins, dentistes et pharmaciens\ndu Québec. (2010). Évaluation de la qualité de l’acte : ABC à\nl’usage des CMDP, Montréal, Québec.\n",
+      "text_sha256": "6608fe1b6e110d4f8a02263d159a30b92dd7a45e286ca7d8e82451ae78eb46af"
+    },
+    {
+      "bbox": [
+        396.0,
+        71.3349609375,
+        551.8651733398438,
+        97.9234390258789
+      ],
+      "block_id": "page-1136-block-0003",
+      "order": 3,
+      "text": "Bellavance, C. & al. (2013). L’évaluation de l’acte médical –\nGuide d’exercice du Collège des médecins du Québec,\nMontréal, Québec, Collège des médecins du Québec.\n",
+      "text_sha256": "d855d962e952db70ea335bb2b1b253ae5d4734b2ba1d291774f9a874017d5e30"
+    },
+    {
+      "bbox": [
+        396.0,
+        101.9349594116211,
+        544.5526733398438,
+        128.5734405517578
+      ],
+      "block_id": "page-1136-block-0004",
+      "order": 4,
+      "text": "Boustrelle, A. & al. (2009). L’évaluation: concepts et\nméthodes, Montréal, Québec, Presses de l’Université de\nMontréal.\n",
+      "text_sha256": "4d45d10d21f396a969f70e40ab6f690d45a19fd13673f4837e77c4e6b6db27e9"
+    },
+    {
+      "bbox": [
+        396.0,
+        132.5849609375,
+        554.012451171875,
+        159.2234344482422
+      ],
+      "block_id": "page-1136-block-0005",
+      "order": 5,
+      "text": "Campbell, C. & al. (2010). « Competency-based continuing\nprofessional development », Medical Teacher, 32(8),\np. 657-662.\n",
+      "text_sha256": "e561ec340800625af2ffa163224edd65dc0b12f2801ab386c48beef9d7bb76f2"
+    },
+    {
+      "bbox": [
+        396.0,
+        163.23497009277344,
+        552.8975219726562,
+        199.0234375
+      ],
+      "block_id": "page-1136-block-0006",
+      "order": 6,
+      "text": "Chaire de recherche du Canada en implantation de la prise de déci-\nsion partagée dans les soins primaires. (2010). Développement\nprofessionnel continu (DPC), [en ligne], http://decision.\nchaire.fmed.ulaval.ca/index.php ?id=105.\n",
+      "text_sha256": "9f1047a2545328c152b290e76cc990af1be13e0afcb4f5ad62103d281fff73e3"
+    },
+    {
+      "bbox": [
+        396.0,
+        203.0849609375,
+        553.8375244140625,
+        238.87344360351562
+      ],
+      "block_id": "page-1136-block-0007",
+      "order": 7,
+      "text": "Collège des médecins du Québec. (2007). Le plan d’autogestion\nde développement professionnel continu, [en ligne], www.\ncmq.org/fr/MedecinsMembres/Dpc/~/media/Files/DPC/\nDPC%20complet.pdf ?81407.\n",
+      "text_sha256": "7e4985d990ecc1ce1f35699789d554ea9cc6e50aeffe15b6abcfd41b7622aed7"
+    },
+    {
+      "bbox": [
+        396.0,
+        242.93496704101562,
+        551.0160522460938,
+        287.9234313964844
+      ],
+      "block_id": "page-1136-block-0008",
+      "order": 8,
+      "text": "Collège royal des médecins et chirurgiens du Canada. (2011).\nExposé de principe du Comité de l’agrément : L’Agrément\nde l’année de formation clinique de base, [en ligne], www.\nroyalcollege.ca/portal/page/portal/rc/common/documents/\naccreditation/basic_clinical_year_f.pdf.\n",
+      "text_sha256": "46dfe21bab31f3f096f46908733fa406d480947f10f4b0c421edd2b81f8c84f9"
+    },
+    {
+      "bbox": [
+        396.0,
+        291.9849548339844,
+        553.0350952148438,
+        346.22344970703125
+      ],
+      "block_id": "page-1136-block-0009",
+      "order": 9,
+      "text": "Collège royal des médecins et chirurgiens du Canada, Collège des\nmédecins de famille du Canada, Collège des médecins du Québec.\n(2011a).Agrément : Normes A – Normes générales appli-\ncables à l’université et aux centres afliés, [en ligne], www.\ncmq.org/fr/EtudiantsResidents/Agrement/~/media/Files/\nAgrements/normes-A-agre ments-2013.pdf ?81402.\n",
+      "text_sha256": "a3e3e83859c8dd69bc16a54a5fbc34fd107290e1d2e9a4ca54047b4d02f18b71"
+    },
+    {
+      "bbox": [
+        396.0,
+        350.2349548339844,
+        554.3527221679688,
+        404.47344970703125
+      ],
+      "block_id": "page-1136-block-0010",
+      "order": 10,
+      "text": "Collège royal des médecins et chirurgiens du Canada, Collège\ndes médecins de famille du Canada, Collège des médecins du\nQuébec. (2011b). Normes générales applicables à tous les\nprogrammes de résidence : normes B, [en ligne], www.cfpc.\nca/uploadedFiles/Education/_PDFs/Blue_Book_B_Stan-\ndards_January_2011_French_Final.pdf .\n",
+      "text_sha256": "0e019caa5a79b133f43b71448df62fd67f78b80c91248fac96cefccb4c171294"
+    },
+    {
+      "bbox": [
+        396.0,
+        408.4849548339844,
+        552.8500366210938,
+        435.1234436035156
+      ],
+      "block_id": "page-1136-block-0011",
+      "order": 11,
+      "text": "Davis, D. & Davis, N. (2010). « Selecting educational\ninterventions for knowledge translation », Canadian Medical\nAssociation Journal, 182(2), p. E89-E93.\n",
+      "text_sha256": "797fff3d61da3597b271ffc371b1c2aa51bfd22468a98bde6b4f1a5c0425a740"
+    },
+    {
+      "bbox": [
+        396.0,
+        439.1349792480469,
+        549.5939331054688,
+        484.1734313964844
+      ],
+      "block_id": "page-1136-block-0012",
+      "order": 12,
+      "text": "England, M. J. & al. (2006). Improving the quality of health\ncare for mental and substance-use conditions : Quality\nchasm series, Committee on Crossing the Quality Chasm :\nAdaptation to mental health and addictive disorders,\nWashington, DC, National Academies Press.\n",
+      "text_sha256": "14a6487f7f772bac048ed376e5c74fb7b611179ca4188194c5c0c1252445c6f0"
+    },
+    {
+      "bbox": [
+        396.0,
+        488.1849670410156,
+        548.91015625,
+        524.0234375
+      ],
+      "block_id": "page-1136-block-0013",
+      "order": 13,
+      "text": "Frank, J. R. (dir.). (2005). Le cadre de compétences Can-\nMEDS 2005 pour les médecins. L’excellence des normes,\ndes médecins et des soins, Ottawa, Ontario, Collège royal\ndes médecins et chirurgiens du Canada.\n",
+      "text_sha256": "81045f9888e803a5d0f601969b9168e9fb5416823a9a3a764dc7a4fed808267b"
+    },
+    {
+      "bbox": [
+        396.0,
+        528.0349731445312,
+        550.177490234375,
+        573.0734252929688
+      ],
+      "block_id": "page-1136-block-0014",
+      "order": 14,
+      "text": "Gervais, Y. & Thiffault, J. (2011). « Évaluation du raisonne-\nment clinique lors des visites d’inspection professionnelle.\nJournée des experts du comité d’inspection profes-\nsionnelle », Journée des experts du comité d’inspection\nprofessionnelle, CMQ, 1er avril.\n",
+      "text_sha256": "3a6cce8a5dcb877c50c1ee4292f40608adae58100f1f9ec07b76b6ccb8ee7a3b"
+    },
+    {
+      "bbox": [
+        396.0,
+        577.0849609375,
+        543.1300048828125,
+        612.9234619140625
+      ],
+      "block_id": "page-1136-block-0015",
+      "order": 15,
+      "text": "Hermann, R. C. & al. (2006). « Statistica benchmarks\nfor process measures of quality of care for mental and\nsubstance use disorders », Psychiatric Services, 57(10),\np. 1461-1467.\n",
+      "text_sha256": "c4da84b3b0b318cba9fd4413bc2d98b4ded938a80ba18dcb9f3123c5cc332d0c"
+    },
+    {
+      "bbox": [
+        396.0,
+        616.9349975585938,
+        546.0726318359375,
+        652.7734375
+      ],
+      "block_id": "page-1136-block-0016",
+      "order": 16,
+      "text": "Kates, N. & al. (2011). « L’évolution des soins de santé\nmentale en collaboration au Canada : Une vision d’avenir\npartagée. Énoncé de principe », Revue canadienne de\npsychiatrie, 56(5), p. 1-12.\n",
+      "text_sha256": "ef0d414b58593a95dababf4b5a0413745b3d1d68def979c5127b91578f3216c5"
+    },
+    {
+      "bbox": [
+        396.0,
+        656.7849731445312,
+        553.4625854492188,
+        683.3734741210938
+      ],
+      "block_id": "page-1136-block-0017",
+      "order": 17,
+      "text": "Kilbourne, A. M. & al. (2010). « Challenges and opportunities\nin measuring the quality of mental health care »,Canadian\nJournal of Psychiatry, 55(9), p. 549-557.\n",
+      "text_sha256": "27b6e4c6061c36505e13dc0e5de24deda5e425928564df01495afd6e315beacf"
+    },
+    {
+      "bbox": [
+        396.0,
+        687.4349975585938,
+        550.6049194335938,
+        714.0234375
+      ],
+      "block_id": "page-1136-block-0018",
+      "order": 18,
+      "text": "Ladouceur, R. (2009). « Réponses aux questions soulevées\npar le plan de DPC du Collège des médecins du Québec »,\nLe Collège, 49(3), p. 21.\n",
+      "text_sha256": "79ad2a5e048ee94ced904108554d145db90a4615eaeb6dac0472a7c235f8d999"
+    },
+    {
+      "bbox": [
+        225.0,
+        40.68496322631836,
+        381.1775817871094,
+        75.97344207763672
+      ],
+      "block_id": "page-1136-block-0019",
+      "order": 19,
+      "text": "Gagnon, P. & al. (2008). «La recherche de sens à la suite\nd’un diagnostic de cancer : une intervention pour améliorer\nla qualité de vie existentielle et globale », Les cahiers\nfrancophones de soins palliatifs, 9(1), p. 57-69.\n",
+      "text_sha256": "d2fe6a93b8db2c4a039e52ad2222b96705681df6440add4e664642a110b270d7"
+    },
+    {
+      "bbox": [
+        225.0,
+        79.8349609375,
+        380.0943298339844,
+        115.1234359741211
+      ],
+      "block_id": "page-1136-block-0020",
+      "order": 20,
+      "text": "Gagnon, P. & al. (2010). «Psychothérapie de la dignité : une\nintervention pour réduire la détresse psychologique chez\nles personnes en soins palliatifs », Psycho-oncologie, 4(3),\np. 169-175.\n",
+      "text_sha256": "67dbfce8bb266bdea95809ad170488b57670d2826b5b08511a29c759cd239658"
+    },
+    {
+      "bbox": [
+        225.0,
+        118.9349594116211,
+        381.1050109863281,
+        154.2234344482422
+      ],
+      "block_id": "page-1136-block-0021",
+      "order": 21,
+      "text": "Gaudreau, J.-D. & al. (2005). « Fast, systematic, and\ncontinuous delirium assessment in hospitalized patients :\nThe nursing delirium screening scale », Journal of Pain and\nSymptom Management, 29(4), p. 368-375.\n",
+      "text_sha256": "5f4aad69c2beaa22c2d431e662824feb3c175d8e2bb6792f4a8e3cbb10ebfc5a"
+    },
+    {
+      "bbox": [
+        225.0,
+        158.0849609375,
+        376.06500244140625,
+        184.3234405517578
+      ],
+      "block_id": "page-1136-block-0022",
+      "order": 22,
+      "text": "Grassi, L. (2007). « Bereavement in families with relatives\ndying of cancer », Current Opinion in Supportive Palliative\nCare, 1(1), p. 43-49.\n",
+      "text_sha256": "130f9c7b39958e0f191917ac9b84fc3aa907a308f0f45a1750ce8e8d1b7ce82f"
+    },
+    {
+      "bbox": [
+        225.0,
+        188.18496704101562,
+        380.54998779296875,
+        214.42344665527344
+      ],
+      "block_id": "page-1136-block-0023",
+      "order": 23,
+      "text": "Irving, G. & Lloyd-Williams, M. (2010). «Depression in\nadvanced cancer », European Journal of Oncology Nursing,\n14(5), p. 395-399.\n",
+      "text_sha256": "f407c74b3bfac111ddf42b53e06b2b522ddc4438bcc80b42e98c2526f4dbd019"
+    },
+    {
+      "bbox": [
+        225.0,
+        218.2849578857422,
+        379.5975036621094,
+        253.5734405517578
+      ],
+      "block_id": "page-1136-block-0024",
+      "order": 24,
+      "text": "Irwin, S. A. & al. (2011). « Psychiatry resident education in\npalliative care : Opportunities, desired training, and outco-\nmes of a targeted educational intervention », Psychosoma-\ntics, 52(6), p. 530-536.\n",
+      "text_sha256": "ff1b522b02f45eb33b2bb7548694afe649699ff1c7530626b99e8be08e4ef5ca"
+    },
+    {
+      "bbox": [
+        225.0,
+        257.3849792480469,
+        364.6151123046875,
+        274.6234436035156
+      ],
+      "block_id": "page-1136-block-0025",
+      "order": 25,
+      "text": "Kubler-Ross, E. (1977). La mort : dernière étape de la\ncroissance, Montréal, Québec, Québec Amérique.\n",
+      "text_sha256": "b822e6f6e2cce605d5cfe83076d738aca097a237f8ae5fc237cbefdc43186e80"
+    },
+    {
+      "bbox": [
+        225.0,
+        278.4849548339844,
+        383.3180847167969,
+        313.7734375
+      ],
+      "block_id": "page-1136-block-0026",
+      "order": 26,
+      "text": "LeMay, K. & Wilson, K. G. (2008). « Treatment of existential\ndistress in life threatening illness : A review of manualized\ninterventions », Clinical Psychology Review, 28(3),\np. 472-493.\n",
+      "text_sha256": "2952b9b2cbfe422ab367e5c4b75b053f67f3a921bd9f93cd183578c1a26ab9ab"
+    },
+    {
+      "bbox": [
+        225.0,
+        317.5849609375,
+        380.0199890136719,
+        352.8734436035156
+      ],
+      "block_id": "page-1136-block-0027",
+      "order": 27,
+      "text": "Levenson, J. L. (2011). The American Psychiatric Publishing\nTextbook of Psychosomatic Medicine : Psychiatric Care\nof the Medically Ill, Arlington, VA, American Psychiatric\nPublishing.\n",
+      "text_sha256": "40715d857db20d1dd99dc3c1b64a205302a452af7487858d1ae32510d1a74367"
+    },
+    {
+      "bbox": [
+        225.0,
+        356.7349548339844,
+        378.2799987792969,
+        382.97344970703125
+      ],
+      "block_id": "page-1136-block-0028",
+      "order": 28,
+      "text": "Massie, M. J. & al. (1983). « Delirium in terminally ill\ncancer patients », American Journal of Psychiatry, 140(8),\np. 1048-1050.\n",
+      "text_sha256": "ca408c34dc93f69d6f3041c66bc3ee87848079d945e6dcaffaac0a0ae807e837"
+    },
+    {
+      "bbox": [
+        225.0,
+        386.8349609375,
+        380.60772705078125,
+        422.1234436035156
+      ],
+      "block_id": "page-1136-block-0029",
+      "order": 29,
+      "text": "National Comprehensive Cancer Network. (2014). NCCN Clinical\nPractice Guidelines in Oncology. Distress Management.\nVersion 2., Fort Washington, PA, National Comprehensive\nCancer Network.\n",
+      "text_sha256": "2772d0efe96af03f4bd143030ae38c05f23fa5df3c5b51a49b57676228e7902c"
+    },
+    {
+      "bbox": [
+        225.0,
+        425.9349670410156,
+        381.456787109375,
+        461.22344970703125
+      ],
+      "block_id": "page-1136-block-0030",
+      "order": 30,
+      "text": "Puchalski, C. & al. (2009). « Improving the quality of spiritual\ncare as a dimension of palliative care : The report of the\nConsensus Conference », Journal of Palliative Medicine,\n12(10), p. 885-904.\n",
+      "text_sha256": "be567070dca56aec5512218317e79206fa26db70ea2c8e14d7a9b2cce7eeb6fb"
+    },
+    {
+      "bbox": [
+        225.0,
+        465.0849609375,
+        378.947509765625,
+        500.3734436035156
+      ],
+      "block_id": "page-1136-block-0031",
+      "order": 31,
+      "text": "Robinson, S. & al. (2014). « A Review of the Construct of\nDemoralization : History, Denitions, and Future Directions\nfor Palliative Care », American Journal of Hospice & Pallia-\ntive Medicine, texte numérique, format ePub.\n",
+      "text_sha256": "b33e0988b4ee6995194301fd7188d379295016e162346551744306b95209ffd9"
+    },
+    {
+      "bbox": [
+        225.0,
+        504.2349548339844,
+        376.77508544921875,
+        530.4734497070312
+      ],
+      "block_id": "page-1136-block-0032",
+      "order": 32,
+      "text": "Rosenstein, D. L. (2011). « Depression and end-of-life care\nfor patients with cancer », Dialogues in Clinical Neuro-\nsciences, 13(1), p. 101-108.\n",
+      "text_sha256": "90bcd89ad684334b98f2e3b7ef3251528ab07cbebac2e314e438c57c447fa5c3"
+    },
+    {
+      "bbox": [
+        225.0,
+        534.3349609375,
+        371.0975036621094,
+        551.5234375
+      ],
+      "block_id": "page-1136-block-0033",
+      "order": 33,
+      "text": "Stroebe, M. & al. (2007). « Health outcomes of bereave-\nment », Lancet, 370(9603), p. 1960-1973.\n",
+      "text_sha256": "24829600971119bb9ebe12ebc386288d10b95af12f83be34e93ad502f6584464"
+    },
+    {
+      "bbox": [
+        225.0,
+        555.3849487304688,
+        382.3475036621094,
+        581.6234741210938
+      ],
+      "block_id": "page-1136-block-0034",
+      "order": 34,
+      "text": "Roth, A. J. & Massie, M.J . (2007). « Anxiety and its manage-\nment in advanced cancer », Current Opinion in Supportive\nand Palliative Care, 1, p. 50-56.\n",
+      "text_sha256": "91948d76133c02c975948236bd02012e390617301a956a7061f9fffe9518769a"
+    },
+    {
+      "bbox": [
+        225.0,
+        585.4849853515625,
+        376.41961669921875,
+        611.7234497070312
+      ],
+      "block_id": "page-1136-block-0035",
+      "order": 35,
+      "text": "Walkup, J. T. & al. (2001). « Fluvoxamine for the treatment\nof anxiety disorders in children and adolescents », New\nEngland Journal of Medicine, 344(17), p. 1279-1285.\n",
+      "text_sha256": "cd613bfc519de6652bc0d5c4d1a96f58b1a404a1c6e5b7e705c56f382550edf3"
+    },
+    {
+      "bbox": [
+        225.0,
+        615.5849609375,
+        379.4101257324219,
+        641.8234252929688
+      ],
+      "block_id": "page-1136-block-0036",
+      "order": 36,
+      "text": "Wein, S. & al. (2010). « The oncolologist’s role in managing\ndepression, anxiety, and demoralization with advanced\ncancer », The Cancer Journal, 16(5), p. 493- 499.\n",
+      "text_sha256": "f92a8c6e7c9874f429b06ec626d7b0dff003fb2ba3f9dacda6e2124e45b58522"
+    },
+    {
+      "bbox": [
+        225.0,
+        645.6849975585938,
+        381.7975158691406,
+        671.9234619140625
+      ],
+      "block_id": "page-1136-block-0037",
+      "order": 37,
+      "text": "Zaider, T. & Kissane, D. W. (2009). « The assessment and\nmanagement of family distress during palliative care »,Cur-\nrent Opinion in Supportive Palliative Care, 3(1), p. 67-71.\n",
+      "text_sha256": "732fff57266f82ef06bf87b8e9f6ef7e7401b7367c6d51845203eee4dc9384d4"
+    },
+    {
+      "bbox": [
+        225.0,
+        685.2703247070312,
+        365.90252685546875,
+        714.0234375
+      ],
+      "block_id": "page-1136-block-0038",
+      "order": 38,
+      "text": "Chapitre 47\nAgrément Canada. (2010). Pratiques organisationnelles\nrequises, [en ligne], www.accreditation.ca.\n",
+      "text_sha256": "30fd43b01ec844ddc1073499d5b770ea69d34fdcc67e576f55193b2967756bea"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.68496322631836,
+        208.94253540039062,
+        76.1234359741211
+      ],
+      "block_id": "page-1136-block-0039",
+      "order": 39,
+      "text": "Trieman, N. & Leff, J. (2002). « Long-term outcome of long-\nstay psychiatric in-patients considered unsuitable to live in\nthe community. TAPS Project 44 », The British Journal of\nPsychiatry, 181, p. 428-432.\n",
+      "text_sha256": "ec1f7d17ebb7551ed7e2bbba42c5f6f2d08a5f8191efb5bcd7d8a9b4c4d26db7"
+    },
+    {
+      "bbox": [
+        54.0,
+        79.9849624633789,
+        206.4781951904297,
+        115.4234390258789
+      ],
+      "block_id": "page-1136-block-0040",
+      "order": 40,
+      "text": "Trudel, J. F. & Lesage, A. (2005). « Le sort des patients\nsouffrant de troubles mentaux très graves et persistants\nlorsqu’il n’y a pas d’hôpital psychiatrique : étude de cas »,\nSanté Mentale au Québec, 30(1), p. 47-71.\n",
+      "text_sha256": "3ea7606f823ee8cdd3b9ab839beeb088a48afe30db7e1f939fdcfbe1f2d7a181"
+    },
+    {
+      "bbox": [
+        54.0,
+        119.3349609375,
+        211.85000610351562,
+        163.8234405517578
+      ],
+      "block_id": "page-1136-block-0041",
+      "order": 41,
+      "text": "Vanasse, A. & al. (2012). « Treatment prevalence and\nincidence of schizophrenia in Quebec using a population\nhealth services perspective : different algorithms, different\nestimates », Social Psychiatry and Psychiatric Epidemiology,\n47(4), p. 533-543.\n",
+      "text_sha256": "2094daa87b5d028ccf390b63f6307f9a05c8523afc4e2832efaed3fecbe75324"
+    },
+    {
+      "bbox": [
+        54.0,
+        167.68496704101562,
+        210.13002014160156,
+        221.2734375
+      ],
+      "block_id": "page-1136-block-0042",
+      "order": 42,
+      "text": "Vandevelde, S. & al. (2004). « The development of the\ntherapeutic community in correctional establishments : A\ncomparative retrospective account of the ‘‘Democratic’’\nMaxwell Jones TC and the Hierarchical Concept-Based TC\nin Prison », International Journal of Social Psychiatry, 50(1),\np. 66-79.\n",
+      "text_sha256": "f3443ffe869900923bba23082debd6c636dce4d07e3eea6be36723f9ca473719"
+    },
+    {
+      "bbox": [
+        54.0,
+        225.18496704101562,
+        213.58909606933594,
+        242.42344665527344
+      ],
+      "block_id": "page-1136-block-0043",
+      "order": 43,
+      "text": "Vasquez, L. (1989). « L’approche systémique de la chronicité :\nProblématique », Psychologie médicale, 21(2), p. 216-218.\n",
+      "text_sha256": "d9e5d9ed2b9c9ee31d8a37a72c077a706b0f8aeb9b6f1c4efa121a0a6053fda4"
+    },
+    {
+      "bbox": [
+        54.0,
+        246.3349609375,
+        212.7875213623047,
+        281.7734375
+      ],
+      "block_id": "page-1136-block-0044",
+      "order": 44,
+      "text": "Villeneuve, K. & al. (2010). « Meta-analysis of rates of\ndrop-out from psychosocial treatment among persons with\nschizophrenia spectrum disorder », Schizophrenia Research,\n121(1-3), p. 266-270.\n",
+      "text_sha256": "f99485094f8f4f0d21f42afadcc449e646a995b5139b52b1c3cc5e743f70adf4"
+    },
+    {
+      "bbox": [
+        54.0,
+        295.1203308105469,
+        211.68048095703125,
+        342.1234436035156
+      ],
+      "block_id": "page-1136-block-0045",
+      "order": 45,
+      "text": "Chapitre 46\nBreitbart, W. (2002). « Spirituality and meaning in supportive\ncare : spirituality-and meaning-centered group psychothe-\nrapy interventions in advanced cancer », Supportive Care in\nCancer, 10(4), p. 272-280.\n",
+      "text_sha256": "2e7ef166805289f025e357987dc9ab2bd23dbc13b92b8fe002a905bee8c8cbd6"
+    },
+    {
+      "bbox": [
+        54.0,
+        346.03497314453125,
+        208.86752319335938,
+        381.47344970703125
+      ],
+      "block_id": "page-1136-block-0046",
+      "order": 46,
+      "text": "Breitbart, W. & al. (2002). « The delirium experience :\ndelirium recall and delirium-related distress in hospitalized\npatients with cancer, their spouses/caregivers, and their\nnurses », Psychosomatics, 43(3), p. 183-94.\n",
+      "text_sha256": "ff7af29b9e002e9cec75df44fbff470f25eaa9484387cbd9d3b3097812ea8d93"
+    },
+    {
+      "bbox": [
+        54.0,
+        385.3349609375,
+        211.6750946044922,
+        402.6234436035156
+      ],
+      "block_id": "page-1136-block-0047",
+      "order": 47,
+      "text": "Canada. (2015). Carter c. Canada (Procureur général), 2015\nCSC 5, Cour suprême du Canada.\n",
+      "text_sha256": "eb596a2a592e30611531561b5cb138248c844b5403f222ed1fa68623679253af"
+    },
+    {
+      "bbox": [
+        54.0,
+        406.4849548339844,
+        206.83531188964844,
+        432.8234558105469
+      ],
+      "block_id": "page-1136-block-0048",
+      "order": 48,
+      "text": "Chochinov, H. M. & Breitbart, W. (2009), Handbook of Psy-\nchiatry in Palliative Medicine, 2e éd., New York, NY, Oxford\nUniversity Press.\n",
+      "text_sha256": "86003c56b0363dbf436f11e4d77735532fbe2df3b5cab156fa9f351cf346f2fd"
+    },
+    {
+      "bbox": [
+        54.0,
+        436.7349548339844,
+        209.28749084472656,
+        463.0734558105469
+      ],
+      "block_id": "page-1136-block-0049",
+      "order": 49,
+      "text": "Chochinov, H. M. & al. (2005). « Dignity therapy : a novel\npsychotherapeutic intervention for patients near the end of\nlife », Journal of Clinical Oncology, 23(24), p. 5520-5525.\n",
+      "text_sha256": "fe9433ec601ca7a1c2f39a856a27de59252db6866726d77fe27ad605a5ad63a3"
+    },
+    {
+      "bbox": [
+        54.0,
+        466.9849548339844,
+        203.22720336914062,
+        502.3734436035156
+      ],
+      "block_id": "page-1136-block-0050",
+      "order": 50,
+      "text": "Coalition canadienne pour la santé mentale des personnes âgées\n(CCSMPA). (2006). Lignes directrices nationales de la\nCCSMPA sur la santé mentale chez les aînés, Toronto,\nCanada, CCSMPA.\n",
+      "text_sha256": "81618a334f626a3c7699431831635ea88406a4c647ef683725de2a0ccce42eaf"
+    },
+    {
+      "bbox": [
+        54.0,
+        506.28497314453125,
+        204.02000427246094,
+        541.6734619140625
+      ],
+      "block_id": "page-1136-block-0051",
+      "order": 51,
+      "text": "Commission spéciale « Mourir dans la dignité ». (2012). Mourir\ndans la dignité, [en ligne], www.assnat.qc.ca/fr/travaux-\nparlementaires/commissions/CSMD/mandats/Man-\ndat-12989/index.html.\n",
+      "text_sha256": "86256412917c85d4ffa08119722d61b46989cbe22ee1e9b04e2b8c7005154af4"
+    },
+    {
+      "bbox": [
+        54.0,
+        545.5849609375,
+        211.95750427246094,
+        562.8734741210938
+      ],
+      "block_id": "page-1136-block-0052",
+      "order": 52,
+      "text": "Cyrulnik, B. & Jorland, G. (2012), Résilience : connaissances\nde base, Paris, France, Odile Jacob.\n",
+      "text_sha256": "5c205c22fd9b7b81ecc292d991c6a6063ac1f0b24ddea0002801f5c1a44c3550"
+    },
+    {
+      "bbox": [
+        54.0,
+        566.7349853515625,
+        197.05833435058594,
+        584.0234375
+      ],
+      "block_id": "page-1136-block-0053",
+      "order": 53,
+      "text": "De M’Uzan, M. (1977). De l’art à la mort, Paris, France,\nGallimard.\n",
+      "text_sha256": "c6f9bc10454f5be816382d60169eb40300efbe0de377b20d97e1cc4b60f75da2"
+    },
+    {
+      "bbox": [
+        54.0,
+        587.8849487304688,
+        205.61761474609375,
+        623.3234252929688
+      ],
+      "block_id": "page-1136-block-0054",
+      "order": 54,
+      "text": "Dumont, S. & al. (2006). «Caring for a loved one with\nadvanced cancer : Determinants of psychological distress\nin family caregivers », Journal of Palliative Medicine, 9(4),\np. 912-921.\n",
+      "text_sha256": "c017b73dc1fe38e170eec71ff1be6927c52f6746d2901e4d0358d670ec89272b"
+    },
+    {
+      "bbox": [
+        54.0,
+        627.2349853515625,
+        197.59359741210938,
+        644.4734497070312
+      ],
+      "block_id": "page-1136-block-0055",
+      "order": 55,
+      "text": "Frankl, V. E. (2006). Découvrir un sens à sa vie avec la\nlogothérapie, Montréal, Québec, Éditions de l’Homme.\n",
+      "text_sha256": "81dfe879868cc949677a69e3fd7ecda6d1a02aee295a8aec88c6bd9bbfe4cd34"
+    },
+    {
+      "bbox": [
+        54.0,
+        648.3849487304688,
+        209.97750854492188,
+        683.7734375
+      ],
+      "block_id": "page-1136-block-0056",
+      "order": 56,
+      "text": "Gagnon, P. & al. (2000). « Delirium in terminal cancer : A\nprospective study using daily screening, early diagnosis,\nand continuous monitoring », Journal of Pain and Symptom\nManagement, 19, p. 412-426.\n",
+      "text_sha256": "2f80d9482c1d41fe1c031298ee8172d854b499457b81e2cf4f19a235a1c0c7fa"
+    },
+    {
+      "bbox": [
+        54.0,
+        687.6849975585938,
+        202.4300079345703,
+        714.0234375
+      ],
+      "block_id": "page-1136-block-0057",
+      "order": 57,
+      "text": "Gagnon, P. & al. (2002). « Delirium in advanced cancer :\nA psychoeducational intervention for family caregivers »,\nJournal of Palliative Care, 18(4), p. 253-261.\n",
+      "text_sha256": "b2c9aa8c9091065b66e55dc786f9627db4e1bc5873e3b6369a12dd9dd5678c63"
+    }
+  ],
+  "coordinates_sha256": "1295256515ccbfdb66c74e1034a0e628418ef3e606f106b006c670433092bf2b",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1136",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Références\nR39\nAssociation des conseils des médecins, dentistes et pharmaciens\ndu Québec. (2010). Évaluation de la qualité de l’acte : ABC à\nl’usage des CMDP, Montréal, Québec.\nBellavance, C. & al. (2013). L’évaluation de l’acte médical –\nGuide d’exercice du Collège des médecins du Québec,\nMontréal, Québec, Collège des médecins du Québec.\nBoustrelle, A. & al. (2009). L’évaluation: concepts et\nméthodes, Montréal, Québec, Presses de l’Université de\nMontréal.\nCampbell, C. & al. (2010). « Competency-based continuing\nprofessional development », Medical Teacher, 32(8),\np. 657-662.\nChaire de recherche du Canada en implantation de la prise de déci-\nsion partagée dans les soins primaires. (2010). Développement\nprofessionnel continu (DPC), [en ligne], http://decision.\nchaire.fmed.ulaval.ca/index.php ?id=105.\nCollège des médecins du Québec. (2007). Le plan d’autogestion\nde développement professionnel continu, [en ligne], www.\ncmq.org/fr/MedecinsMembres/Dpc/~/media/Files/DPC/\nDPC%20complet.pdf ?81407.\nCollège royal des médecins et chirurgiens du Canada. (2011).\nExposé de principe du Comité de l’agrément : L’Agrément\nde l’année de formation clinique de base, [en ligne], www.\nroyalcollege.ca/portal/page/portal/rc/common/documents/\naccreditation/basic_clinical_year_f.pdf.\nCollège royal des médecins et chirurgiens du Canada, Collège des\nmédecins de famille du Canada, Collège des médecins du Québec.\n(2011a).Agrément : Normes A – Normes générales appli-\ncables à l’université et aux centres afliés, [en ligne], www.\ncmq.org/fr/EtudiantsResidents/Agrement/~/media/Files/\nAgrements/normes-A-agre ments-2013.pdf ?81402.\nCollège royal des médecins et chirurgiens du Canada, Collège\ndes médecins de famille du Canada, Collège des médecins du\nQuébec. (2011b). Normes générales applicables à tous les\nprogrammes de résidence : normes B, [en ligne], www.cfpc.\nca/uploadedFiles/Education/_PDFs/Blue_Book_B_Stan-\ndards_January_2011_French_Final.pdf .\nDavis, D. & Davis, N. (2010). « Selecting educational\ninterventions for knowledge translation », Canadian Medical\nAssociation Journal, 182(2), p. E89-E93.\nEngland, M. J. & al. (2006). Improving the quality of health\ncare for mental and substance-use conditions : Quality\nchasm series, Committee on Crossing the Quality Chasm :\nAdaptation to mental health and addictive disorders,\nWashington, DC, National Academies Press.\nFrank, J. R. (dir.). (2005). Le cadre de compétences Can-\nMEDS 2005 pour les médecins. L’excellence des normes,\ndes médecins et des soins, Ottawa, Ontario, Collège royal\ndes médecins et chirurgiens du Canada.\nGervais, Y. & Thiffault, J. (2011). « Évaluation du raisonne-\nment clinique lors des visites d’inspection professionnelle.\nJournée des experts du comité d’inspection profes-\nsionnelle », Journée des experts du comité d’inspection\nprofessionnelle, CMQ, 1er avril.\nHermann, R. C. & al. (2006). « Statistica benchmarks\nfor process measures of quality of care for mental and\nsubstance use disorders », Psychiatric Services, 57(10),\np. 1461-1467.\nKates, N. & al. (2011). « L’évolution des soins de santé\nmentale en collaboration au Canada : Une vision d’avenir\npartagée. Énoncé de principe », Revue canadienne de\npsychiatrie, 56(5), p. 1-12.\nKilbourne, A. M. & al. (2010). « Challenges and opportunities\nin measuring the quality of mental health care »,Canadian\nJournal of Psychiatry, 55(9), p. 549-557.\nLadouceur, R. (2009). « Réponses aux questions soulevées\npar le plan de DPC du Collège des médecins du Québec »,\nLe Collège, 49(3), p. 21.\nGagnon, P. & al. (2008). «La recherche de sens à la suite\nd’un diagnostic de cancer : une intervention pour améliorer\nla qualité de vie existentielle et globale », Les cahiers\nfrancophones de soins palliatifs, 9(1), p. 57-69.\nGagnon, P. & al. (2010). «Psychothérapie de la dignité : une\nintervention pour réduire la détresse psychologique chez\nles personnes en soins palliatifs », Psycho-oncologie, 4(3),\np. 169-175.\nGaudreau, J.-D. & al. (2005). « Fast, systematic, and\ncontinuous delirium assessment in hospitalized patients :\nThe nursing delirium screening scale », Journal of Pain and\nSymptom Management, 29(4), p. 368-375.\nGrassi, L. (2007). « Bereavement in families with relatives\ndying of cancer », Current Opinion in Supportive Palliative\nCare, 1(1), p. 43-49.\nIrving, G. & Lloyd-Williams, M. (2010). «Depression in\nadvanced cancer », European Journal of Oncology Nursing,\n14(5), p. 395-399.\nIrwin, S. A. & al. (2011). « Psychiatry resident education in\npalliative care : Opportunities, desired training, and outco-\nmes of a targeted educational intervention », Psychosoma-\ntics, 52(6), p. 530-536.\nKubler-Ross, E. (1977). La mort : dernière étape de la\ncroissance, Montréal, Québec, Québec Amérique.\nLeMay, K. & Wilson, K. G. (2008). « Treatment of existential\ndistress in life threatening illness : A review of manualized\ninterventions », Clinical Psychology Review, 28(3),\np. 472-493.\nLevenson, J. L. (2011). The American Psychiatric Publishing\nTextbook of Psychosomatic Medicine : Psychiatric Care\nof the Medically Ill, Arlington, VA, American Psychiatric\nPublishing.\nMassie, M. J. & al. (1983). « Delirium in terminally ill\ncancer patients », American Journal of Psychiatry, 140(8),\np. 1048-1050.\nNational Comprehensive Cancer Network. (2014). NCCN Clinical\nPractice Guidelines in Oncology. Distress Management.\nVersion 2., Fort Washington, PA, National Comprehensive\nCancer Network.\nPuchalski, C. & al. (2009). « Improving the quality of spiritual\ncare as a dimension of palliative care : The report of the\nConsensus Conference », Journal of Palliative Medicine,\n12(10), p. 885-904.\nRobinson, S. & al. (2014). « A Review of the Construct of\nDemoralization : History, Denitions, and Future Directions\nfor Palliative Care », American Journal of Hospice & Pallia-\ntive Medicine, texte numérique, format ePub.\nRosenstein, D. L. (2011). « Depression and end-of-life care\nfor patients with cancer », Dialogues in Clinical Neuro-\nsciences, 13(1), p. 101-108.\nStroebe, M. & al. (2007). « Health outcomes of bereave-\nment », Lancet, 370(9603), p. 1960-1973.\nRoth, A. J. & Massie, M.J . (2007). « Anxiety and its manage-\nment in advanced cancer », Current Opinion in Supportive\nand Palliative Care, 1, p. 50-56.\nWalkup, J. T. & al. (2001). « Fluvoxamine for the treatment\nof anxiety disorders in children and adolescents », New\nEngland Journal of Medicine, 344(17), p. 1279-1285.\nWein, S. & al. (2010). « The oncolologist’s role in managing\ndepression, anxiety, and demoralization with advanced\ncancer », The Cancer Journal, 16(5), p. 493- 499.\nZaider, T. & Kissane, D. W. (2009). « The assessment and\nmanagement of family distress during palliative care »,Cur-\nrent Opinion in Supportive Palliative Care, 3(1), p. 67-71.\nChapitre 47\nAgrément Canada. (2010). Pratiques organisationnelles\nrequises, [en ligne], www.accreditation.ca.\nTrieman, N. & Leff, J. (2002). « Long-term outcome of long-\nstay psychiatric in-patients considered unsuitable to live in\nthe community. TAPS Project 44 », The British Journal of\nPsychiatry, 181, p. 428-432.\nTrudel, J. F. & Lesage, A. (2005). « Le sort des patients\nsouffrant de troubles mentaux très graves et persistants\nlorsqu’il n’y a pas d’hôpital psychiatrique : étude de cas »,\nSanté Mentale au Québec, 30(1), p. 47-71.\nVanasse, A. & al. (2012). « Treatment prevalence and\nincidence of schizophrenia in Quebec using a population\nhealth services perspective : different algorithms, different\nestimates », Social Psychiatry and Psychiatric Epidemiology,\n47(4), p. 533-543.\nVandevelde, S. & al. (2004). « The development of the\ntherapeutic community in correctional establishments : A\ncomparative retrospective account of the ‘‘Democratic’’\nMaxwell Jones TC and the Hierarchical Concept-Based TC\nin Prison », International Journal of Social Psychiatry, 50(1),\np. 66-79.\nVasquez, L. (1989). « L’approche systémique de la chronicité :\nProblématique », Psychologie médicale, 21(2), p. 216-218.\nVilleneuve, K. & al. (2010). « Meta-analysis of rates of\ndrop-out from psychosocial treatment among persons with\nschizophrenia spectrum disorder », Schizophrenia Research,\n121(1-3), p. 266-270.\nChapitre 46\nBreitbart, W. (2002). « Spirituality and meaning in supportive\ncare : spirituality-and meaning-centered group psychothe-\nrapy interventions in advanced cancer », Supportive Care in\nCancer, 10(4), p. 272-280.\nBreitbart, W. & al. (2002). « The delirium experience :\ndelirium recall and delirium-related distress in hospitalized\npatients with cancer, their spouses/caregivers, and their\nnurses », Psychosomatics, 43(3), p. 183-94.\nCanada. (2015). Carter c. Canada (Procureur général), 2015\nCSC 5, Cour suprême du Canada.\nChochinov, H. M. & Breitbart, W. (2009), Handbook of Psy-\nchiatry in Palliative Medicine, 2e éd., New York, NY, Oxford\nUniversity Press.\nChochinov, H. M. & al. (2005). « Dignity therapy : a novel\npsychotherapeutic intervention for patients near the end of\nlife », Journal of Clinical Oncology, 23(24), p. 5520-5525.\nCoalition canadienne pour la santé mentale des personnes âgées\n(CCSMPA). (2006). Lignes directrices nationales de la\nCCSMPA sur la santé mentale chez les aînés, Toronto,\nCanada, CCSMPA.\nCommission spéciale « Mourir dans la dignité ». (2012). Mourir\ndans la dignité, [en ligne], www.assnat.qc.ca/fr/travaux-\nparlementaires/commissions/CSMD/mandats/Man-\ndat-12989/index.html.\nCyrulnik, B. & Jorland, G. (2012), Résilience : connaissances\nde base, Paris, France, Odile Jacob.\nDe M’Uzan, M. (1977). De l’art à la mort, Paris, France,\nGallimard.\nDumont, S. & al. (2006). «Caring for a loved one with\nadvanced cancer : Determinants of psychological distress\nin family caregivers », Journal of Palliative Medicine, 9(4),\np. 912-921.\nFrankl, V. E. (2006). Découvrir un sens à sa vie avec la\nlogothérapie, Montréal, Québec, Éditions de l’Homme.\nGagnon, P. & al. (2000). « Delirium in terminal cancer : A\nprospective study using daily screening, early diagnosis,\nand continuous monitoring », Journal of Pain and Symptom\nManagement, 19, p. 412-426.\nGagnon, P. & al. (2002). « Delirium in advanced cancer :\nA psychoeducational intervention for family caregivers »,\nJournal of Palliative Care, 18(4), p. 253-261.\n",
+  "raw_text_sha256": "03b52cd11351f19b2eab802ef6ad0548981ba07650bd2b3ef6ada00bbed1e008",
+  "source_page_display": 1137,
+  "source_page_index": 1136
+}

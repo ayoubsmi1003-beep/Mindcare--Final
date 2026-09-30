@@ -1,0 +1,148 @@
+{
+  "block_sequence_sha256": "5fa7ebd572dae1daf30d26427b49498d60b1f462fc136a4474f4af6f6ba42950",
+  "blocks": [
+    {
+      "bbox": [
+        54.0,
+        140.5734405517578,
+        448.46270751953125,
+        185.4953155517578
+      ],
+      "block_id": "page-0038-block-0001",
+      "order": 1,
+      "text": "Relation médecin-patient\n",
+      "text_sha256": "58fdfd5013da906dacc61a1373bedb5bff23bab9ba6609f059efdab0f2a48567"
+    },
+    {
+      "bbox": [
+        54.0,
+        233.9573211669922,
+        207.45899963378906,
+        247.9954071044922
+      ],
+      "block_id": "page-0038-block-0002",
+      "order": 2,
+      "text": "François Sirois, M.D., PH.D. (philosophie)\n",
+      "text_sha256": "df5dc242c136308cca0e7e8b954964e9664ccf5bf243d966b1fe9d86d0b7155d"
+    },
+    {
+      "bbox": [
+        54.0,
+        251.37725830078125,
+        280.3762512207031,
+        272.59381103515625
+      ],
+      "block_id": "page-0038-block-0003",
+      "order": 3,
+      "text": "Psychiatre consultant et psychanalyste, Institut universitaire\nde cardiologie et pneumologie de Québec\n",
+      "text_sha256": "4bef696ce5abf7fd817c0e277af5119f7a9bb40c840300894ad1068dfa8a8289"
+    },
+    {
+      "bbox": [
+        54.0,
+        276.37725830078125,
+        293.1807861328125,
+        297.59381103515625
+      ],
+      "block_id": "page-0038-block-0004",
+      "order": 4,
+      "text": "Professeur titulaire de clinique, Département de psychiatrie et\nneurosciences, Faculté de médecine, Université Laval (Québec)\n",
+      "text_sha256": "682752899862c39631ed442e47c909e3d64e1372907b14bd2cbe69960a87804e"
+    },
+    {
+      "bbox": [
+        54.0,
+        346.1744079589844,
+        294.989990234375,
+        382.0972595214844
+      ],
+      "block_id": "page-0038-block-0005",
+      "order": 5,
+      "text": "2.1 \nConception des rapports médecin-patient.................. 22\n2.1.1 \nPerception sociale du médecin............................. 22\n2.1.2 \nModèles conceptuels .............................................. 23\n",
+      "text_sha256": "3c72830b187d1598d8eec120a6821ea5cd78675d17e5dc717b5ca767ced086d5"
+    },
+    {
+      "bbox": [
+        54.0,
+        387.0744323730469,
+        294.989990234375,
+        396.9181823730469
+      ],
+      "block_id": "page-0038-block-0006",
+      "order": 6,
+      "text": "2.2 \nCommunication entre médecin et patient................... 24\n",
+      "text_sha256": "99126dce5a7aef5b496866716f1190d906b68d75d9b2ba5e311122f4a6208efb"
+    },
+    {
+      "bbox": [
+        54.0,
+        401.97442626953125,
+        294.989990234375,
+        463.89727783203125
+      ],
+      "block_id": "page-0038-block-0007",
+      "order": 7,
+      "text": "2.3 \nDimensions et enjeux...................................................... 26\n2.3.1 \nObservance............................................................... 26\n2.3.2 \nConsentement.......................................................... 27\n2.3.3 \nCondentialité ......................................................... 28\n2.3.4 \nConance et attentes .............................................. 29\n",
+      "text_sha256": "1e563315aece1d20a1b8632b40988d6872ddae9530f28c398e8e1f598f4f3103"
+    },
+    {
+      "bbox": [
+        312.0,
+        346.1744079589844,
+        552.9900512695312,
+        382.0972595214844
+      ],
+      "block_id": "page-0038-block-0008",
+      "order": 8,
+      "text": "2.4 \nDicultés et glissements................................................ 30\n2.4.1 \nPatients diciles...................................................... 30\n2.4.2 \nMédecins vulnérables............................................. 31\n",
+      "text_sha256": "61c4165c5390b5e0423db4c755b552458f97ecb06e39e085f2f11a58a4b173f6"
+    },
+    {
+      "bbox": [
+        312.0,
+        387.0744323730469,
+        552.9900512695312,
+        435.9972839355469
+      ],
+      "block_id": "page-0038-block-0009",
+      "order": 9,
+      "text": "2.5 \nNouvelles voies................................................................. 32\n2.5.1 \nChangements technologiques............................... 32\n2.5.2 \nChangements professionnels ................................ 32\n2.5.3 \nChangements sociaux............................................. 32\n",
+      "text_sha256": "544502f3aa1b93a7d3a3782dc41eef770a49a41a5d83db82aab202c602b732f5"
+    },
+    {
+      "bbox": [
+        312.0,
+        440.97442626953125,
+        552.9900512695312,
+        450.81817626953125
+      ],
+      "block_id": "page-0038-block-0010",
+      "order": 10,
+      "text": "Lectures complémentaires........................................................ 34\n",
+      "text_sha256": "5cdc2a3ef0f7ba0ae2c83a521d284952174433fb55c96900a610379aa066f7e6"
+    },
+    {
+      "bbox": [
+        325.5,
+        3.1810531616210938,
+        561.0,
+        123.18104553222656
+      ],
+      "block_id": "page-0038-block-0011",
+      "order": 11,
+      "text": "CHAPITRE2\n",
+      "text_sha256": "45000d735eff5ba34d2860950ad403370132deb45b5beeef6d995ab3fccb4684"
+    }
+  ],
+  "coordinates_sha256": "21688d38e3319d662c413a528a5a0459e10599cf67a6036042a0f85398474613",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0038",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Relation médecin-patient\nFrançois Sirois, M.D., PH.D. (philosophie)\nPsychiatre consultant et psychanalyste, Institut universitaire\nde cardiologie et pneumologie de Québec\nProfesseur titulaire de clinique, Département de psychiatrie et\nneurosciences, Faculté de médecine, Université Laval (Québec)\n2.1 \nConception des rapports médecin-patient.................. 22\n2.1.1 \nPerception sociale du médecin............................. 22\n2.1.2 \nModèles conceptuels .............................................. 23\n2.2 \nCommunication entre médecin et patient................... 24\n2.3 \nDimensions et enjeux...................................................... 26\n2.3.1 \nObservance............................................................... 26\n2.3.2 \nConsentement.......................................................... 27\n2.3.3 \nCondentialité ......................................................... 28\n2.3.4 \nConance et attentes .............................................. 29\n2.4 \nDicultés et glissements................................................ 30\n2.4.1 \nPatients diciles...................................................... 30\n2.4.2 \nMédecins vulnérables............................................. 31\n2.5 \nNouvelles voies................................................................. 32\n2.5.1 \nChangements technologiques............................... 32\n2.5.2 \nChangements professionnels ................................ 32\n2.5.3 \nChangements sociaux............................................. 32\nLectures complémentaires........................................................ 34\nCHAPITRE2\n",
+  "raw_text_sha256": "d6556a66e80a7d04b55d6f56d2ad58ff3d93b2d299f1514e91b819b68b1a6538",
+  "source_page_display": 39,
+  "source_page_index": 38
+}

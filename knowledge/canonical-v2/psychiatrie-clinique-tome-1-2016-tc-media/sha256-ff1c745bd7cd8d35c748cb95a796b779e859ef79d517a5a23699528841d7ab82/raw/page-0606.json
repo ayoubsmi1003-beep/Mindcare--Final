@@ -1,0 +1,220 @@
+{
+  "block_sequence_sha256": "1593f0e201ef07a2e8ee8083d3542c6a00a28982a26cfdc06d49125f57ed24ff",
+  "blocks": [
+    {
+      "bbox": [
+        362.5,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0606-block-0001",
+      "order": 1,
+      "text": "Chapitre 27\nTroubles neurocognitifs\n589\n",
+      "text_sha256": "f6ef224151841a5258396e938661d3c0423b10d73eaa614cc5013a949b89448d"
+    },
+    {
+      "bbox": [
+        56.25,
+        41.002296447753906,
+        530.4016723632812,
+        53.320068359375
+      ],
+      "block_id": "page-0606-block-0002",
+      "order": 2,
+      "text": "ENCADRÉ 27.2 Critères diagnostiques de la démence selon le National Institute of Aging et l’Alzheimer’s Association\n",
+      "text_sha256": "a5938385d82a4642c09031a4f197ea940ff4dbe1a9c0c98126e5c7afaf7f8147"
+    },
+    {
+      "bbox": [
+        58.25,
+        61.37285614013672,
+        527.2420654296875,
+        172.47813415527344
+      ],
+      "block_id": "page-0606-block-0003",
+      "order": 3,
+      "text": "Critères diagnostiques essentiels :\n1. Il y a présence de symptômes cognitifs et comportementaux (neuropsychiatriques) qui :\na) interfèrent avec la capacité de fonctionner au travail ou dans les activités habituelles ;\nb) représentent un déclin du niveau antérieur de fonctionnement et de performance ;\nc) ne sont pas expliqués par un delirium ou un trouble psychiatrique majeur.\n2. L’atteinte cognitive est détectée et diagnostiquée par la combinaison d’une anamnèse recueillie auprès du patient et d’un proche et au moyen\nd’une évaluation cognitive objective, soit un examen mental ou une évaluation neuropsychologique lorsque l’histoire et l’évaluation ne peuvent\nconduire à un diagnostic certain.\n3. Le trouble cognitif ou du comportement met en cause au minimum deux des domaines suivants :\na) difculté d’acquisition ou de rétention de nouvelles informations : répéter les mêmes questions ou tenir des conversations répétitives, perdre\n",
+      "text_sha256": "1f7cfd92f529dcb23cdc3d0317adc75c2f32dd7fd156962dd9cc3159e608244a"
+    },
+    {
+      "bbox": [
+        69.55000305175781,
+        172.4519500732422,
+        534.2160034179688,
+        194.078125
+      ],
+      "block_id": "page-0606-block-0004",
+      "order": 4,
+      "text": "ses effets personnels, oublier certains événements ou ses rendez-vous, se perdre sur une route familière ;\nb) difcultés de raisonnement et d’exécution des tâches complexes, ainsi qu’un jugement pauvre : pauvre compréhension des règles de sécurité,\n",
+      "text_sha256": "7e0a7e3785e6f744bbbc18ac0afaad29ff19e4978bfb91577158c9f5ef4c6341"
+    },
+    {
+      "bbox": [
+        69.55000305175781,
+        194.0519561767578,
+        537.9779663085938,
+        215.67813110351562
+      ],
+      "block_id": "page-0606-block-0005",
+      "order": 5,
+      "text": "incapacité à gérer ses nances, pauvre capacité de décision, difcultés de planication ou de séquençage des tâches ;\nc) atteinte visuospatiale : incapacité de reconnaître des visages ou des objets communs ou de trouver des objets en vue directe malgré une bonne\n",
+      "text_sha256": "9a9a974277088ee4d0e7a069375583be1d2c8503fa8db2066ef4519a4e25e9ef"
+    },
+    {
+      "bbox": [
+        69.55000305175781,
+        215.65196228027344,
+        547.8220825195312,
+        237.2781219482422
+      ],
+      "block_id": "page-0606-block-0006",
+      "order": 6,
+      "text": "acuité, incapacité à exécuter des ordres simples, ou d’utiliser des vêtements pour s’habiller ;\nd) atteinte des fonctions langagières (parler, écrire, lire) : difculté à penser aux mots communs au moment de parler, hésitations, erreurs de langage,\n",
+      "text_sha256": "c8303927c3ced21799feeffc847c42c36dda7e2ce82ccf5fa571409a66b01577"
+    },
+    {
+      "bbox": [
+        69.55000305175781,
+        237.251953125,
+        531.0661010742188,
+        258.8781433105469
+      ],
+      "block_id": "page-0606-block-0007",
+      "order": 7,
+      "text": "d’orthographe ou d’écriture ;\ne) changements de personnalité, de l’humeur ou du comportent : des uctuations de l’humeur non caractéristiques telles que de l’agitation, une\n",
+      "text_sha256": "a3765eb998b30907f13b5cd9f9073386f9253a5c2fa5a1af0add48567089afd2"
+    },
+    {
+      "bbox": [
+        82.25,
+        258.8519592285156,
+        531.5472412109375,
+        278.4781188964844
+      ],
+      "block_id": "page-0606-block-0008",
+      "order": 8,
+      "text": "diminution de la motivation, de l’initiative, de l’apathie, une perte de dynamisme, un retrait social, une diminution de l’intérêt pour les activités\npassées, des comportements sociaux inacceptables.\n",
+      "text_sha256": "f06fa9a1012306b3f1479d1d37b366d41929f33cce8d3ec766f9821e986c015b"
+    },
+    {
+      "bbox": [
+        58.25,
+        284.37286376953125,
+        536.427001953125,
+        351.27813720703125
+      ],
+      "block_id": "page-0606-block-0009",
+      "order": 9,
+      "text": "Critères diagnostiques probables :\nEn plus des critères diagnostics essentiels de démence énoncés ci-haut, le patient atteint de DTA présente les caractéristiques suivantes :\n1. Un début insidieux ;\n2. Une histoire claire d’aggravation de la cognition, rapportée par un proche ou par l’observation directe ;\n3. Les décits cognitifs initiaux et les plus manifestes à l’histoire et à l’examen concernent l’une des catégories suivantes :\na) présentation amnésique : il s’agit de la présentation syndromique la plus commune de la DTA. Les décits touchent l’apprentissage et le rappel\n",
+      "text_sha256": "202b6310fc4945d856ebfb63b20c5ee3dcb7b9adb314b01d576b0d0c84f871a2"
+    },
+    {
+      "bbox": [
+        70.25,
+        351.251953125,
+        365.2170715332031,
+        371.8781433105469
+      ],
+      "block_id": "page-0606-block-0010",
+      "order": 10,
+      "text": "de nouveau matériel. Il y a également une atteinte d’au moins un autre domaine cognitif ;\nb) présentation non amnésique se caractérisant par :\n",
+      "text_sha256": "61c5d0e0764fc8c925c5c62d07a090e91d0104694d531977589a98d356ddabc0"
+    },
+    {
+      "bbox": [
+        58.25,
+        372.8158264160156,
+        540.6839599609375,
+        506.27813720703125
+      ],
+      "block_id": "page-0606-block-0011",
+      "order": 11,
+      "text": "•\ndes troubles du langage : le manque du mot est le plus fréquent, mais d’autres fonctions langagières peuvent être touchées, et des décits\ntouchent d’autres fonctions cognitives,\n•\ndes troubles visuospatiaux : décits évidents en cognition spatiale, incluant l’agnosie visuelle, la prosopagnosie (trouble de la reconnaissance\ndes visages), la simultanagnosie (incapacité à voir plus d’un objet à la fois), et l’alexie (trouble de la lecture). D’autres fonctions cognitives\npeuvent présenter des décits,\n•\ndes dysfonctions exécutives : altération du raisonnement, du jugement et de la résolution de problèmes. Des décits dans d’autres fonctions\ncognitives sont aussi présents.\n4. Le diagnostic ne doit pas être retenu s’il y a évidence :\na) d’une maladie vasculaire cérébrale substantielle concomitante ;\nb) ou des caractéristiques principales de la démence à corps de Lewy autres que la démence elle-même ;\nc) ou des symptômes manifestes de trouble du comportement en accord avec une démence frontotemporale ;\nd) ou des symptômes manifestes d’aphasie primaire progressive ;\ne) ou des indices d’une autre maladie neurologique concurrente active, ou d’une comorbidité médicale non neurologique ou l’utilisation\n",
+      "text_sha256": "a6b20b1485317569b9e8e1357904ac56d67bb53f48c064a43dae595ed379e370"
+    },
+    {
+      "bbox": [
+        82.25,
+        506.251953125,
+        262.8030090332031,
+        516.078125
+      ],
+      "block_id": "page-0606-block-0012",
+      "order": 12,
+      "text": "d’une médication avec un effet potentiel sur la cognition.\n",
+      "text_sha256": "7c12c8ab748f6ad58516b6777c24b6fca4875d23d9d8fa523b07415a71901f9a"
+    },
+    {
+      "bbox": [
+        54.25,
+        523.8406372070312,
+        174.132080078125,
+        532.7088623046875
+      ],
+      "block_id": "page-0606-block-0013",
+      "order": 13,
+      "text": "Source : Adapté de McKhann & al. (2011).\n",
+      "text_sha256": "a1221b3e710297df5bace5c88e89fbd22c10ec1ccfa26e1550410fef4955c080"
+    },
+    {
+      "bbox": [
+        312.0,
+        558.0158081054688,
+        555.1231079101562,
+        616.8085327148438
+      ],
+      "block_id": "page-0606-block-0014",
+      "order": 14,
+      "text": "clés se trouvent au niveau du thalamus, du fornix, de la base\ndu tronc cérébral, du noyau caudé et du genou ou du bras\nantérieur de la capsule interne. Toutefois, ces caractéristiques\npeuvent aussi être retrouvées dans la DTA et chez des indi-\nvidus non déments.\n",
+      "text_sha256": "96ec05b92e0d8f5d62b6a56cd59bee7f7255fe8e3f92a5026d4c46bd3e5048dc"
+    },
+    {
+      "bbox": [
+        312.0,
+        618.3658447265625,
+        555.2904663085938,
+        725.45849609375
+      ],
+      "block_id": "page-0606-block-0015",
+      "order": 15,
+      "text": "Dans 51 à 67 % des cas (Agronin, 2008), la DV survient dans\nla période suivant un accident vasculaire cérébral (AVC), mais\nl’état cognitif peut être instable en post-AVC et peut s’amé-\nliorer. Si une hémorragie intracérébrale est en cause, comme\ndans le cas d’une hémorragie sous-arachnoïdienne, on parle\nalors d’encéphalopathie statique, parce qu’on ne s’attend pas à\nune progression des décits cognitifs. Le tableau 27.5 résume\nles symptômes neuropsychiatriques d’un AVC en fonction de\nla localisation.\n",
+      "text_sha256": "35e042932ae2c6170d4a73c110937b9eb57e774f3d103dbd09bdc00ece47ebe2"
+    },
+    {
+      "bbox": [
+        56.29999923706055,
+        558.0523071289062,
+        280.1435241699219,
+        570.3700561523438
+      ],
+      "block_id": "page-0606-block-0016",
+      "order": 16,
+      "text": "FIGURE 27.1 Caractéristiques pathologiques classiques\n",
+      "text_sha256": "1b8dce03a949843b1442c03e2db0456a303cca6eb5fb20afe76196ff3e8fb1ed"
+    },
+    {
+      "bbox": [
+        105.80000305175781,
+        569.9022827148438,
+        213.14950561523438,
+        581.8700561523438
+      ],
+      "block_id": "page-0606-block-0017",
+      "order": 17,
+      "text": "de la maladie d’Alzheimer\n",
+      "text_sha256": "6b9a48e6c60269a996220cb2ce87376e12d708f47e94021627c1aeee2d62f417"
+    }
+  ],
+  "coordinates_sha256": "279e502d438258da9017fc0037f9854b528f15c377d5ffd197ca59945a9df91b",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0606",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 27\nTroubles neurocognitifs\n589\nENCADRÉ 27.2 Critères diagnostiques de la démence selon le National Institute of Aging et l’Alzheimer’s Association\nCritères diagnostiques essentiels :\n1. Il y a présence de symptômes cognitifs et comportementaux (neuropsychiatriques) qui :\na) interfèrent avec la capacité de fonctionner au travail ou dans les activités habituelles ;\nb) représentent un déclin du niveau antérieur de fonctionnement et de performance ;\nc) ne sont pas expliqués par un delirium ou un trouble psychiatrique majeur.\n2. L’atteinte cognitive est détectée et diagnostiquée par la combinaison d’une anamnèse recueillie auprès du patient et d’un proche et au moyen\nd’une évaluation cognitive objective, soit un examen mental ou une évaluation neuropsychologique lorsque l’histoire et l’évaluation ne peuvent\nconduire à un diagnostic certain.\n3. Le trouble cognitif ou du comportement met en cause au minimum deux des domaines suivants :\na) difculté d’acquisition ou de rétention de nouvelles informations : répéter les mêmes questions ou tenir des conversations répétitives, perdre\nses effets personnels, oublier certains événements ou ses rendez-vous, se perdre sur une route familière ;\nb) difcultés de raisonnement et d’exécution des tâches complexes, ainsi qu’un jugement pauvre : pauvre compréhension des règles de sécurité,\nincapacité à gérer ses nances, pauvre capacité de décision, difcultés de planication ou de séquençage des tâches ;\nc) atteinte visuospatiale : incapacité de reconnaître des visages ou des objets communs ou de trouver des objets en vue directe malgré une bonne\nacuité, incapacité à exécuter des ordres simples, ou d’utiliser des vêtements pour s’habiller ;\nd) atteinte des fonctions langagières (parler, écrire, lire) : difculté à penser aux mots communs au moment de parler, hésitations, erreurs de langage,\nd’orthographe ou d’écriture ;\ne) changements de personnalité, de l’humeur ou du comportent : des uctuations de l’humeur non caractéristiques telles que de l’agitation, une\ndiminution de la motivation, de l’initiative, de l’apathie, une perte de dynamisme, un retrait social, une diminution de l’intérêt pour les activités\npassées, des comportements sociaux inacceptables.\nCritères diagnostiques probables :\nEn plus des critères diagnostics essentiels de démence énoncés ci-haut, le patient atteint de DTA présente les caractéristiques suivantes :\n1. Un début insidieux ;\n2. Une histoire claire d’aggravation de la cognition, rapportée par un proche ou par l’observation directe ;\n3. Les décits cognitifs initiaux et les plus manifestes à l’histoire et à l’examen concernent l’une des catégories suivantes :\na) présentation amnésique : il s’agit de la présentation syndromique la plus commune de la DTA. Les décits touchent l’apprentissage et le rappel\nde nouveau matériel. Il y a également une atteinte d’au moins un autre domaine cognitif ;\nb) présentation non amnésique se caractérisant par :\n•\ndes troubles du langage : le manque du mot est le plus fréquent, mais d’autres fonctions langagières peuvent être touchées, et des décits\ntouchent d’autres fonctions cognitives,\n•\ndes troubles visuospatiaux : décits évidents en cognition spatiale, incluant l’agnosie visuelle, la prosopagnosie (trouble de la reconnaissance\ndes visages), la simultanagnosie (incapacité à voir plus d’un objet à la fois), et l’alexie (trouble de la lecture). D’autres fonctions cognitives\npeuvent présenter des décits,\n•\ndes dysfonctions exécutives : altération du raisonnement, du jugement et de la résolution de problèmes. Des décits dans d’autres fonctions\ncognitives sont aussi présents.\n4. Le diagnostic ne doit pas être retenu s’il y a évidence :\na) d’une maladie vasculaire cérébrale substantielle concomitante ;\nb) ou des caractéristiques principales de la démence à corps de Lewy autres que la démence elle-même ;\nc) ou des symptômes manifestes de trouble du comportement en accord avec une démence frontotemporale ;\nd) ou des symptômes manifestes d’aphasie primaire progressive ;\ne) ou des indices d’une autre maladie neurologique concurrente active, ou d’une comorbidité médicale non neurologique ou l’utilisation\nd’une médication avec un effet potentiel sur la cognition.\nSource : Adapté de McKhann & al. (2011).\nclés se trouvent au niveau du thalamus, du fornix, de la base\ndu tronc cérébral, du noyau caudé et du genou ou du bras\nantérieur de la capsule interne. Toutefois, ces caractéristiques\npeuvent aussi être retrouvées dans la DTA et chez des indi-\nvidus non déments.\nDans 51 à 67 % des cas (Agronin, 2008), la DV survient dans\nla période suivant un accident vasculaire cérébral (AVC), mais\nl’état cognitif peut être instable en post-AVC et peut s’amé-\nliorer. Si une hémorragie intracérébrale est en cause, comme\ndans le cas d’une hémorragie sous-arachnoïdienne, on parle\nalors d’encéphalopathie statique, parce qu’on ne s’attend pas à\nune progression des décits cognitifs. Le tableau 27.5 résume\nles symptômes neuropsychiatriques d’un AVC en fonction de\nla localisation.\nFIGURE 27.1 Caractéristiques pathologiques classiques\nde la maladie d’Alzheimer\n",
+  "raw_text_sha256": "e8be2d20cee80b23881736aacd474fb938453ce3b2a329b17451e36d32288c0e",
+  "source_page_display": 607,
+  "source_page_index": 606
+}

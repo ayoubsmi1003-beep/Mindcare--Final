@@ -1,0 +1,268 @@
+{
+  "block_sequence_sha256": "db134ff5855c258005727f5ad19d71568a2900a15f4eebc9babe6a8eb0ba17b6",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        477.3144836425781,
+        758.8693237304688
+      ],
+      "block_id": "page-0561-block-0001",
+      "order": 1,
+      "text": "544\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3\nSyndromes cliniques psychiatriques\n",
+      "text_sha256": "60bc036fc4e540fa9413b2b22f0757197fc8441e8a9e31970b4c12ecbb29b8f3"
+    },
+    {
+      "bbox": [
+        306.0,
+        229.2658233642578,
+        549.061279296875,
+        339.8085021972656
+      ],
+      "block_id": "page-0561-block-0002",
+      "order": 2,
+      "text": "suivi où le médecin peut le rassurer de nouveau, donner des\nexplications sur la nature de ses symptômes et viser un retour\nà un fonctionnement optimal. Un tel suivi se traduit par des\neets bénéques :\n• diminution du nombre d’examens non nécessaires et de leurs\ncomplications iatrogéniques potentielles ;\n• diminution de la détresse et de l’invalidité du malade ;\n• amélioration de la relation entre le patient et son médecin ;\n• diminution des coûts de santé.\n",
+      "text_sha256": "2a5ce206110c9820f46c2a5f3928571bcc693c7e518cc52445391af01d32459a"
+    },
+    {
+      "bbox": [
+        306.0,
+        351.3368225097656,
+        421.5585021972656,
+        367.4794006347656
+      ],
+      "block_id": "page-0561-block-0003",
+      "order": 3,
+      "text": "25.5.2 Comorbidités\n",
+      "text_sha256": "8e6e3e578c152f63ea11f78dd26db5493307d19f859cc3d796174c9960440b2a"
+    },
+    {
+      "bbox": [
+        306.0,
+        370.8158264160156,
+        549.3237915039062,
+        484.8584899902344
+      ],
+      "block_id": "page-0561-block-0004",
+      "order": 4,
+      "text": "Il existe une forte relation entre les somatisations et les troubles\npsychiatriques. Les symptômes physiques font partie intégrante\nde plusieurs troubles psychiatriques et peuvent masquer le dia-\ngnostic, surtout si les symptômes psychologiques sont minimisés\nou niés par le patient (Lieb, 2007). Ainsi, les patients préfèrent\nconsidérer leur détresse psychologique, s’ils la reconnaissent,\ncomme la conséquence d’une maladie non encore diagnosti-\nquée, plutôt qu’une cause de leur maladie. Un tel comportement\ndiminue l’ecacité du médecin en complexiant le dépistage des\naections psychiatriques.\n",
+      "text_sha256": "626faaa4c1be7d230e653e525d7ffb59f6155b8c914a43e6c69f451595e54b54"
+    },
+    {
+      "bbox": [
+        306.0,
+        485.8658142089844,
+        549.3241577148438,
+        576.9085083007812
+      ],
+      "block_id": "page-0561-block-0005",
+      "order": 5,
+      "text": "La somatisation a été longtemps perçue comme une défense\ncontre la reconnaissance d’un trouble psychiatrique. Cependant,\nun nombre croissant de recherches montrent qu’au contraire,\nles symptômes physiques, et particulièrement leur nombre, sont\nde bons indicateurs de troubles dépressifs ou anxieux, et ce,\négalement dans le contexte de maladies physiques chroniques\ntelles que le diabète, l’arthrite, les maladies pulmonaires, etc.\n(Katon & al., 2007).\n",
+      "text_sha256": "57f6a81facc8f1218a0d26dbb49564d2b5939e2a9d813afb51813f79f61963e3"
+    },
+    {
+      "bbox": [
+        306.0,
+        577.9158325195312,
+        549.355224609375,
+        634.4085083007812
+      ],
+      "block_id": "page-0561-block-0006",
+      "order": 6,
+      "text": "Le diagnostic diérentiel n’est pas facile à faire entre un\ntrouble psychiatrique associé à des malaises physiques et une\nmaladie physique accompagnée de symptômes psychiatriques.\nSuivent quelques nuances qui peuvent aider à distinguer entre\nces deux composantes.\n",
+      "text_sha256": "5bf6fc055b34270eda5fc05a2d953ea24107329b524d2af830d7efdebd6d76c5"
+    },
+    {
+      "bbox": [
+        306.0,
+        642.2830200195312,
+        549.4883422851562,
+        725.45849609375
+      ],
+      "block_id": "page-0561-block-0007",
+      "order": 7,
+      "text": "Anxiété et somatisations\nLes troubles anxieux (particulièrement le trouble panique) sont\nsouvent accompagnés de symptômes physiques. Ces patients, en\nquête d’une explication organique, peuvent présenter des peurs\net même des croyances hypocondriaques diciles à rassurer.\nHabituellement, les croyances n’ont pas l’intensité et l’insistance de\ncelles de l’hypocondriaque et elles s’atténuent en dehors des crises.\n",
+      "text_sha256": "bd2316ac71fef39e2f0f41f4c39a16f26634623a2a0b3324b00e15ee532a56b1"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.9658203125,
+        291.1240234375,
+        108.95849609375
+      ],
+      "block_id": "page-0561-block-0008",
+      "order": 8,
+      "text": "évaluation de plus en plus poussée, que le médecin ne juge pas\nnécessaire. Dans un tel contexte, l’évaluation doit s’inspirer d’une\ndémarche rationnelle et structurée, selon laquelle le diagnostic\nd’un TSS n’est envisagé qu’après l’élimination d’autres psycho-\npathologies (voir la gure 25.2 et le tableau 25.3) qui peuvent se\nprésenter sur un mode de somatisations.\n",
+      "text_sha256": "0406d0b4297c2916fbbf63a7a5ef530f8e9bf9d44d08d2a6beb5b9da7ffc5959"
+    },
+    {
+      "bbox": [
+        48.0,
+        106.76582336425781,
+        291.3526611328125,
+        246.95849609375
+      ],
+      "block_id": "page-0561-block-0009",
+      "order": 9,
+      "text": "En 1re ligne médicale, on constate un chevauchement des pré-\nsentations cliniques des troubles psychiatriques les plus courants\n(voir la gure 25.3). La somatisation peut colorer la présentation\nclinique de certains troubles dépressifs (dépression somatisée)\nou troubles anxieux (anxiété principalement somatique). Tout\ncompte fait, il est reconnu qu’un trouble dépressif peut se présen-\nter avec une symptomatologie anxieuse importante. Quant aux\nTSS (trouble somatoforme) où la somatisation est prédominante,\nils s’accompagnent fréquemment des symptômes dépressifs\n(dysphorie, fatigue, perte d’intérêt, etc.) ou anxieux (inquiétudes\nface à la maladie, trouble de sommeil, etc.) complexiant ainsi\nles dés diagnostiques du médecin de 1re ligne.\n",
+      "text_sha256": "224dee6e40abd228cd92b30a4eea8b8e0c32e4fa8d6e06d521802d97df9d0070"
+    },
+    {
+      "bbox": [
+        48.0,
+        247.9658203125,
+        291.5569763183594,
+        327.45849609375
+      ],
+      "block_id": "page-0561-block-0010",
+      "order": 10,
+      "text": "L’encadré 25.2 propose une liste de diagnostics diérentiels\npermettant de structurer l’approche du médecin en lui suggérant\nde commencer par éliminer les aections médicales ou psy-\nchiatriques susceptibles de bénécier de thérapies spéciques\nreconnues comme ecaces pour envisager en dernier lieu les\nTSS à moins qu’on ait une suspicion qu’il s’agit d’une production\nvolontaire de symptômes.\n",
+      "text_sha256": "2c2e16682fec09933a0a5f91b8db336db1d6a57f5e4e93b13cb3e7f6a33a63df"
+    },
+    {
+      "bbox": [
+        308.3500061035156,
+        41.05229568481445,
+        485.85552978515625,
+        53.320068359375
+      ],
+      "block_id": "page-0561-block-0011",
+      "order": 11,
+      "text": "TABLEAU 25.8 Formes aiguës et chroniques\n",
+      "text_sha256": "3998a54ec090fd27bfe708dac0dd9df5da0e38028aea4023c80791ba2f8a44d0"
+    },
+    {
+      "bbox": [
+        365.95001220703125,
+        52.852294921875,
+        440.8882751464844,
+        64.820068359375
+      ],
+      "block_id": "page-0561-block-0012",
+      "order": 12,
+      "text": "des somatisations\n",
+      "text_sha256": "b06044db9f85201fe4dde0a7b103bf5a39050919aa9d3aa3406e34cb13be5e72"
+    },
+    {
+      "bbox": [
+        310.25,
+        69.77412414550781,
+        506.8070068359375,
+        204.5281219482422
+      ],
+      "block_id": "page-0561-block-0013",
+      "order": 13,
+      "text": "Aigu\nChronique\n• Trouble somatique d’étiologie\nà préciser\n• Troubles à symptomatologie\nsomatique non spéciés\n• Trouble de l’adaptation (p. ex., deuil)\n• Trouble dépressif\n• Trouble anxieux\n– Anxiété généralisée\n– Trouble panique\n• Conversion\n• Simulation\n",
+      "text_sha256": "d567007f7677136f94e98c6bbbf50e90eb2d71acc2ed00497dbe17135f71d313"
+    },
+    {
+      "bbox": [
+        431.25,
+        83.70195770263672,
+        541.6946411132812,
+        177.5281219482422
+      ],
+      "block_id": "page-0561-block-0014",
+      "order": 14,
+      "text": "• Trouble à symptomatologie\nsomatique\n• Dépendance médicamenteuse\n• Trouble douloureux chronique\n• Invalidité ayant entrainé une\nprocédure de compensation\n(gains secondaires)\n• Trouble factice avec symptômes\nphysiques\n",
+      "text_sha256": "d45c615b840a3d55571a0aa25ee4f368c3c8fcde047d4e1cd76c748e61b7ee23"
+    },
+    {
+      "bbox": [
+        48.0,
+        517.4658203125,
+        291.166259765625,
+        539.95849609375
+      ],
+      "block_id": "page-0561-block-0015",
+      "order": 15,
+      "text": "Il est également utile de distinguer les formes aiguës de\nsomatisation, des formes plus chroniques (voir le tableau 25.8).\n",
+      "text_sha256": "e073ac686d9d4b22e0371b747468cef233f580c3354e8272041907314153f2bc"
+    },
+    {
+      "bbox": [
+        48.0,
+        550.98681640625,
+        213.73097229003906,
+        567.12939453125
+      ],
+      "block_id": "page-0561-block-0016",
+      "order": 16,
+      "text": "25.5.1 Limites de l’évaluation\n",
+      "text_sha256": "402ce74de0c7d682b8d530779a049674e5a6755072ffe3084d493fda77c130be"
+    },
+    {
+      "bbox": [
+        48.0,
+        570.9658203125,
+        291.3990478515625,
+        689.45849609375
+      ],
+      "block_id": "page-0561-block-0017",
+      "order": 17,
+      "text": "Dans de nombreux cas, les résultats négatifs des évaluations ne\nsusent pas à rassurer les patients ni à faire disparaître leurs\nsymptômes. Il est fréquemment observé qu’ils continuent à res-\nsentir des douleurs thoraciques après un ECG à l’eort négatif et\nque, pour les deux tiers d’entre eux, la douleur est susamment\nintense pour interférer avec les activités habituelles. De façon\nsimilaire, plusieurs auteurs ont observé un taux plus élevé de\nmorbidité à la suite d’une angiographie négative : les trois quarts\ndes patients continuent à éprouver de la douleur et la moitié\ndemeurent invalides.\n",
+      "text_sha256": "7754afad8969cc4c5b5cd071bff60e39f211061a6c1f57befa2fbe531ecc6db9"
+    },
+    {
+      "bbox": [
+        48.0,
+        690.9658203125,
+        291.1165466308594,
+        725.45849609375
+      ],
+      "block_id": "page-0561-block-0018",
+      "order": 18,
+      "text": "On voit que le fait de rassurer le patient, en se basant unique-\nment sur les résultats négatifs d’un examen, ne sut généralement\npas et que le patient inquiet nécessite davantage, c’est-à-dire un\n",
+      "text_sha256": "fa25e59f3f708990d7e314ca647ee91486d5291885fce4c6e0fa951cb2c3b249"
+    },
+    {
+      "bbox": [
+        50.400001525878906,
+        341.7023010253906,
+        278.1847839355469,
+        354.02008056640625
+      ],
+      "block_id": "page-0561-block-0019",
+      "order": 19,
+      "text": "ENCADRÉ 25.2 Diagnostic différentiel des somatisations\n",
+      "text_sha256": "c97f6bac8c866f79a1bb3d35b7c22b489e7d24b242a36bff1bcbae1b8ae237c1"
+    },
+    {
+      "bbox": [
+        52.25,
+        362.1519470214844,
+        221.18508911132812,
+        485.6084899902344
+      ],
+      "block_id": "page-0561-block-0020",
+      "order": 20,
+      "text": "• Trouble somatique d’étiologie à préciser\n• Trouble affectif\n• Trouble anxieux\n• Dépendance médicamenteuse\n• Trouble de la personnalité\n• Trouble psychotique\n• Trouble neurocognitif ou trouble neurodégénératif\n• Troubles à symptomatologie somatique\n• Production volontaire de symptômes\n– Simulation\n– Trouble factice\n",
+      "text_sha256": "4a14dec2cbb2a62d218aeee0504db7ef0ff2533307bccf5ed09eae79f2e5d951"
+    },
+    {
+      "bbox": [
+        48.25,
+        493.7406311035156,
+        163.9051971435547,
+        502.6088562011719
+      ],
+      "block_id": "page-0561-block-0021",
+      "order": 21,
+      "text": "Source : Adapté de Stern (2010), p. 174.\n",
+      "text_sha256": "4ae48e1bcd703f697b11c684e3936c074a3a99537215cc75f26e8b97c5018b39"
+    }
+  ],
+  "coordinates_sha256": "a44661f5995210a2dcee825f10033a05755c96b0f88ac315cdc54ffdd9f141ce",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0561",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "544\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3\nSyndromes cliniques psychiatriques\nsuivi où le médecin peut le rassurer de nouveau, donner des\nexplications sur la nature de ses symptômes et viser un retour\nà un fonctionnement optimal. Un tel suivi se traduit par des\neets bénéques :\n• diminution du nombre d’examens non nécessaires et de leurs\ncomplications iatrogéniques potentielles ;\n• diminution de la détresse et de l’invalidité du malade ;\n• amélioration de la relation entre le patient et son médecin ;\n• diminution des coûts de santé.\n25.5.2 Comorbidités\nIl existe une forte relation entre les somatisations et les troubles\npsychiatriques. Les symptômes physiques font partie intégrante\nde plusieurs troubles psychiatriques et peuvent masquer le dia-\ngnostic, surtout si les symptômes psychologiques sont minimisés\nou niés par le patient (Lieb, 2007). Ainsi, les patients préfèrent\nconsidérer leur détresse psychologique, s’ils la reconnaissent,\ncomme la conséquence d’une maladie non encore diagnosti-\nquée, plutôt qu’une cause de leur maladie. Un tel comportement\ndiminue l’ecacité du médecin en complexiant le dépistage des\naections psychiatriques.\nLa somatisation a été longtemps perçue comme une défense\ncontre la reconnaissance d’un trouble psychiatrique. Cependant,\nun nombre croissant de recherches montrent qu’au contraire,\nles symptômes physiques, et particulièrement leur nombre, sont\nde bons indicateurs de troubles dépressifs ou anxieux, et ce,\négalement dans le contexte de maladies physiques chroniques\ntelles que le diabète, l’arthrite, les maladies pulmonaires, etc.\n(Katon & al., 2007).\nLe diagnostic diérentiel n’est pas facile à faire entre un\ntrouble psychiatrique associé à des malaises physiques et une\nmaladie physique accompagnée de symptômes psychiatriques.\nSuivent quelques nuances qui peuvent aider à distinguer entre\nces deux composantes.\nAnxiété et somatisations\nLes troubles anxieux (particulièrement le trouble panique) sont\nsouvent accompagnés de symptômes physiques. Ces patients, en\nquête d’une explication organique, peuvent présenter des peurs\net même des croyances hypocondriaques diciles à rassurer.\nHabituellement, les croyances n’ont pas l’intensité et l’insistance de\ncelles de l’hypocondriaque et elles s’atténuent en dehors des crises.\névaluation de plus en plus poussée, que le médecin ne juge pas\nnécessaire. Dans un tel contexte, l’évaluation doit s’inspirer d’une\ndémarche rationnelle et structurée, selon laquelle le diagnostic\nd’un TSS n’est envisagé qu’après l’élimination d’autres psycho-\npathologies (voir la gure 25.2 et le tableau 25.3) qui peuvent se\nprésenter sur un mode de somatisations.\nEn 1re ligne médicale, on constate un chevauchement des pré-\nsentations cliniques des troubles psychiatriques les plus courants\n(voir la gure 25.3). La somatisation peut colorer la présentation\nclinique de certains troubles dépressifs (dépression somatisée)\nou troubles anxieux (anxiété principalement somatique). Tout\ncompte fait, il est reconnu qu’un trouble dépressif peut se présen-\nter avec une symptomatologie anxieuse importante. Quant aux\nTSS (trouble somatoforme) où la somatisation est prédominante,\nils s’accompagnent fréquemment des symptômes dépressifs\n(dysphorie, fatigue, perte d’intérêt, etc.) ou anxieux (inquiétudes\nface à la maladie, trouble de sommeil, etc.) complexiant ainsi\nles dés diagnostiques du médecin de 1re ligne.\nL’encadré 25.2 propose une liste de diagnostics diérentiels\npermettant de structurer l’approche du médecin en lui suggérant\nde commencer par éliminer les aections médicales ou psy-\nchiatriques susceptibles de bénécier de thérapies spéciques\nreconnues comme ecaces pour envisager en dernier lieu les\nTSS à moins qu’on ait une suspicion qu’il s’agit d’une production\nvolontaire de symptômes.\nTABLEAU 25.8 Formes aiguës et chroniques\ndes somatisations\nAigu\nChronique\n• Trouble somatique d’étiologie\nà préciser\n• Troubles à symptomatologie\nsomatique non spéciés\n• Trouble de l’adaptation (p. ex., deuil)\n• Trouble dépressif\n• Trouble anxieux\n– Anxiété généralisée\n– Trouble panique\n• Conversion\n• Simulation\n• Trouble à symptomatologie\nsomatique\n• Dépendance médicamenteuse\n• Trouble douloureux chronique\n• Invalidité ayant entrainé une\nprocédure de compensation\n(gains secondaires)\n• Trouble factice avec symptômes\nphysiques\nIl est également utile de distinguer les formes aiguës de\nsomatisation, des formes plus chroniques (voir le tableau 25.8).\n25.5.1 Limites de l’évaluation\nDans de nombreux cas, les résultats négatifs des évaluations ne\nsusent pas à rassurer les patients ni à faire disparaître leurs\nsymptômes. Il est fréquemment observé qu’ils continuent à res-\nsentir des douleurs thoraciques après un ECG à l’eort négatif et\nque, pour les deux tiers d’entre eux, la douleur est susamment\nintense pour interférer avec les activités habituelles. De façon\nsimilaire, plusieurs auteurs ont observé un taux plus élevé de\nmorbidité à la suite d’une angiographie négative : les trois quarts\ndes patients continuent à éprouver de la douleur et la moitié\ndemeurent invalides.\nOn voit que le fait de rassurer le patient, en se basant unique-\nment sur les résultats négatifs d’un examen, ne sut généralement\npas et que le patient inquiet nécessite davantage, c’est-à-dire un\nENCADRÉ 25.2 Diagnostic différentiel des somatisations\n• Trouble somatique d’étiologie à préciser\n• Trouble affectif\n• Trouble anxieux\n• Dépendance médicamenteuse\n• Trouble de la personnalité\n• Trouble psychotique\n• Trouble neurocognitif ou trouble neurodégénératif\n• Troubles à symptomatologie somatique\n• Production volontaire de symptômes\n– Simulation\n– Trouble factice\nSource : Adapté de Stern (2010), p. 174.\n",
+  "raw_text_sha256": "2f14222944b99edb5c7ff578bd09a5bc14d0e24617841dff73093db8bd9a3b74",
+  "source_page_display": 562,
+  "source_page_index": 561
+}

@@ -1,0 +1,88 @@
+{
+  "block_sequence_sha256": "137ea44b880e7814290fb845a039b9761f6f05fc964f996bb61d956e7f45b8fd",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        471.6627197265625,
+        758.8693237304688
+      ],
+      "block_id": "page-0179-block-0001",
+      "order": 1,
+      "text": "162\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2 Déterminants bio-psycho-sociaux\n",
+      "text_sha256": "1e3692e9e3a11dd594becdf1d3520e872b4b43762db204c66b820d643634983c"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.3884887695312,
+        344.95849609375
+      ],
+      "block_id": "page-0179-block-0002",
+      "order": 2,
+      "text": "étapes de traitement de l’information au niveau perceptuel,\ncognitif ou moteur.\n• Les composantes les plus précoces sont dites exogènes et\nsont principalement inuencées par les demandes cognitives\nde bas niveau comme l’intensité ou les propriétés physiques\n(P-50, Na Pa).\n• Les composantes endogènes, plus tardives, sont associées\nau traitement des stimuli de haut niveau comme l’attention\n(Mismatch negativity, N-200 ; N2Pc), la mémoire (P-300,\nLPC [late positive component]) ou le langage (N-400,\nP-600). La négativité de discordance (Mismatch negativity)\nest une composante des potentiels évoqués qui révèle qu’un\nsujet a perçu un changement du stimulus, par exemple\nlorsqu’un nouveau stimulus apparaît dans une séquence de\nstimuli identiques.\nLorsqu’on demande à un sujet d’accomplir une tâche particu-\nlière (discrimination, décision, reconnaissance, etc.), un troisième\ntype d’activité se superpose à l’EEG spontané et au potentiel évoqué\npar la stimulation. Cette activité, qui correspond aux opérations\nde traitement que le sujet eectue pour analyser l’information, est\nappelée « potentiels liés aux événements » ou encore « potentiels\névoqués cognitifs ». Il est admis que chaque composante de ce\ntype de potentiel constitue un indice physiologique d’une étape\nspécique du traitement de l’information. La gure 8.4 illustre\nla hiérarchie de ces potentiels évoqués en réponse à des stimuli\nauditifs selon diérentes échelles de temps.\n",
+      "text_sha256": "d7c4270088f34f3685b65739ab7c0f982ccb645d6fe5a6c3b2bba00ca18ae283"
+    },
+    {
+      "bbox": [
+        306.0,
+        345.9658203125,
+        549.2308959960938,
+        413.95849609375
+      ],
+      "block_id": "page-0179-block-0003",
+      "order": 3,
+      "text": "À l’heure actuelle, la neuropsychologie expérimentale a pour\ntâche de mesurer et d’analyser chez les humains les changements\ndans leurs capacités perceptuelles, mnésiques, intellectuelles, orga-\nnisationnelles, ainsi que les modications mentales qui résultent\nd’un trouble cérébral, comme un accident cérébrovasculaire, une\nlésion chirurgicale, une intoxication ou une commotion cérébrale.\n",
+      "text_sha256": "0ad19408a6bddeba35b537883e1440b3c5039a6fdd4d6ca230738ae642cb4f3b"
+    },
+    {
+      "bbox": [
+        48.0,
+        265.4658203125,
+        291.382568359375,
+        413.95849609375
+      ],
+      "block_id": "page-0179-block-0004",
+      "order": 4,
+      "text": "l’enregistrement repose sur le principe de base de l’EEG. Par\nune technique relativement simple, le moyennage, il est possible\nd’extraire de l’EEG, des potentiels évoqués qui correspondent\nà l’activité cérébrale provoquée par une stimulation sensorielle\ndéterminée (visuelle, auditive ou somesthésique). Les potentiels\névoqués cognitifs sont identiés par une amplitude (P = positive\nou N = négative) et un moment d’apparition spécique (latence\nen millisecondes) par rapport à cet événement (c.-à-d. stimulus\net/ou réponse) et constituent un indice psychophysiologique du\nfonctionnement du système nerveux central. Par exemple, l’onde\nN-200, ou N2, est la composante négative apparaissant 200 ms\naprès l’apparition du stimulus. On considère que ces diérentes\ncomposantes représentent en temps réel, la chronométrie des\n",
+      "text_sha256": "53f7b93feabe89f1ee430b9ae194e75eaa4b5d2dc54ea2739f9e1918c9f32aaa"
+    },
+    {
+      "bbox": [
+        50.25,
+        41.002296447753906,
+        212.68551635742188,
+        53.320068359375
+      ],
+      "block_id": "page-0179-block-0005",
+      "order": 5,
+      "text": "FIGURE 8.3 Potentiels évoqués cognitifs\n",
+      "text_sha256": "9fb99d3fcd7cbe31378936aa0501cf81646ef1989fc921cd443b4b2d83ea9756"
+    },
+    {
+      "bbox": [
+        50.25,
+        438.05230712890625,
+        236.87301635742188,
+        450.3700866699219
+      ],
+      "block_id": "page-0179-block-0006",
+      "order": 6,
+      "text": "FIGURE 8.4 Hiérarchie des potentiels évoqués\n",
+      "text_sha256": "a6767f80787d38beb366b7c6b716dd2b8f1981c4c5d4b7a0b588e022a4379c40"
+    }
+  ],
+  "coordinates_sha256": "2692a9f02a0e73dd0429ad9c807aa17dd2b79e367a068b8cc2e06e6206ce0a54",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0179",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "162\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2 Déterminants bio-psycho-sociaux\nétapes de traitement de l’information au niveau perceptuel,\ncognitif ou moteur.\n• Les composantes les plus précoces sont dites exogènes et\nsont principalement inuencées par les demandes cognitives\nde bas niveau comme l’intensité ou les propriétés physiques\n(P-50, Na Pa).\n• Les composantes endogènes, plus tardives, sont associées\nau traitement des stimuli de haut niveau comme l’attention\n(Mismatch negativity, N-200 ; N2Pc), la mémoire (P-300,\nLPC [late positive component]) ou le langage (N-400,\nP-600). La négativité de discordance (Mismatch negativity)\nest une composante des potentiels évoqués qui révèle qu’un\nsujet a perçu un changement du stimulus, par exemple\nlorsqu’un nouveau stimulus apparaît dans une séquence de\nstimuli identiques.\nLorsqu’on demande à un sujet d’accomplir une tâche particu-\nlière (discrimination, décision, reconnaissance, etc.), un troisième\ntype d’activité se superpose à l’EEG spontané et au potentiel évoqué\npar la stimulation. Cette activité, qui correspond aux opérations\nde traitement que le sujet eectue pour analyser l’information, est\nappelée « potentiels liés aux événements » ou encore « potentiels\névoqués cognitifs ». Il est admis que chaque composante de ce\ntype de potentiel constitue un indice physiologique d’une étape\nspécique du traitement de l’information. La gure 8.4 illustre\nla hiérarchie de ces potentiels évoqués en réponse à des stimuli\nauditifs selon diérentes échelles de temps.\nÀ l’heure actuelle, la neuropsychologie expérimentale a pour\ntâche de mesurer et d’analyser chez les humains les changements\ndans leurs capacités perceptuelles, mnésiques, intellectuelles, orga-\nnisationnelles, ainsi que les modications mentales qui résultent\nd’un trouble cérébral, comme un accident cérébrovasculaire, une\nlésion chirurgicale, une intoxication ou une commotion cérébrale.\nl’enregistrement repose sur le principe de base de l’EEG. Par\nune technique relativement simple, le moyennage, il est possible\nd’extraire de l’EEG, des potentiels évoqués qui correspondent\nà l’activité cérébrale provoquée par une stimulation sensorielle\ndéterminée (visuelle, auditive ou somesthésique). Les potentiels\névoqués cognitifs sont identiés par une amplitude (P = positive\nou N = négative) et un moment d’apparition spécique (latence\nen millisecondes) par rapport à cet événement (c.-à-d. stimulus\net/ou réponse) et constituent un indice psychophysiologique du\nfonctionnement du système nerveux central. Par exemple, l’onde\nN-200, ou N2, est la composante négative apparaissant 200 ms\naprès l’apparition du stimulus. On considère que ces diérentes\ncomposantes représentent en temps réel, la chronométrie des\nFIGURE 8.3 Potentiels évoqués cognitifs\nFIGURE 8.4 Hiérarchie des potentiels évoqués\n",
+  "raw_text_sha256": "7ef0eb038a904b99d5e5a22535744d5aa54c98bf5af6f0709da8a1dda3a09477",
+  "source_page_display": 180,
+  "source_page_index": 179
+}

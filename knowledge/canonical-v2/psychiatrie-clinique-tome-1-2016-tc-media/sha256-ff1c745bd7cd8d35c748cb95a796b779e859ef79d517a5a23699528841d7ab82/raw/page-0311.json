@@ -1,0 +1,184 @@
+{
+  "block_sequence_sha256": "09feddf58e445858842458b37bdecf4fc276d76272dc46269f1ad863ba01a5fb",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        471.6627197265625,
+        758.8693237304688
+      ],
+      "block_id": "page-0311-block-0001",
+      "order": 1,
+      "text": "294\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2 Déterminants bio-psycho-sociaux\n",
+      "text_sha256": "5714cc53ebab906eef8724c3dd1dadd67586af38524e2031a1990f9a7b2c4a90"
+    },
+    {
+      "bbox": [
+        306.0,
+        343.73681640625,
+        430.5223083496094,
+        359.87939453125
+      ],
+      "block_id": "page-0311-block-0002",
+      "order": 2,
+      "text": "14.3.2 Rôle du hasard\n",
+      "text_sha256": "be241cd09203854f9be8e11bee8cca4c8cafb17ebe165e5afb9c87ff0325cfd5"
+    },
+    {
+      "bbox": [
+        306.0,
+        363.2158203125,
+        549.353271484375,
+        546.20849609375
+      ],
+      "block_id": "page-0311-block-0003",
+      "order": 3,
+      "text": "Pour juger d’une association, d’une corrélation entre des variables,\nil faut déterminer si elle est statistiquement signicative ou si\nelle est due au hasard. La meilleure façon d’étudier l’association\nentre une maladie et un facteur de risque consisterait à étudier\ncette corrélation dans l’ensemble de la population, mais cela est\nimpossible à moins de s’intéresser à une population très spécique,\nlimitée en nombre. C’est pourquoi les chercheurs sélectionnent un\néchantillon aléatoire (représentatif) de la population de référence.\nPuisque des sujets diérents forment des échantillons successifs, il\nest plausible d’observer des uctuations dans les estimations de la\nforce de l’association. Plus l’échantillon est grand, plus l’estimation\nde la force de l’association est précise. éoriquement, le hasard\nde l’échantillonnage fait en sorte qu’une certaine proportion des\néchantillons aléatoires possibles conrme l’existence d’une asso-\nciation, même en l’absence d’une association réelle. La probabilité\nd’une telle erreur correspond à la valeur p des tests statistiques.\n",
+      "text_sha256": "e175f552ca7e7a8b4d2e5ebe80672e0410a42b28a5ad63aea30c05fe442b7f34"
+    },
+    {
+      "bbox": [
+        306.0,
+        547.2158203125,
+        549.3802490234375,
+        661.20849609375
+      ],
+      "block_id": "page-0311-block-0004",
+      "order": 4,
+      "text": "Cette valeur p correspond à la probabilité d’observer une asso-\nciation en l’absence d’une association réelle et relève du hasard\ninhérent au processus d’échantillonnage. Pour savoir si l’association\nest statistiquement signicative, on doit comparer cette valeur p\navec un seuil de signication statistique établi au préalable comme\nle niveau à partir duquel une association est déclarée signicative.\nPar convention, on adopte généralement un seuil de signication de\n0,05, ce qui signie qu’une association pourrait survenir 5 fois sur 100\nsous l’eet du hasard. Ainsi, une valeurpinférieure à 0,05 (p< 0,05)\nindique que l’association est statistiquement signicative.\n",
+      "text_sha256": "d0b3e4d8dff0328a9106414134a9a22e6cf331d9f9087ad96ca0be95bd601623"
+    },
+    {
+      "bbox": [
+        306.0,
+        662.2158203125,
+        549.3269653320312,
+        720.70849609375
+      ],
+      "block_id": "page-0311-block-0005",
+      "order": 5,
+      "text": "On obtient la valeurpau moyen de tests statistiques spéciques\naux mesures d’association telles que le test t, le khi carré ( χ2)\net le test F :\n• le test t (ou test de Student) permet de comparer les moyennes\nde deux groupes par rapport à une variable continue (p. ex.,\n",
+      "text_sha256": "23b8d5859711dfa5175e43ff9e2d79351dbcf5f17f133bb6051f3aeb06037a93"
+    },
+    {
+      "bbox": [
+        48.0,
+        345.3658142089844,
+        291.01751708984375,
+        379.0085144042969
+      ],
+      "block_id": "page-0311-block-0006",
+      "order": 6,
+      "text": "comme l’hospitalisation en psychiatrie, l’urgence pour fins\npsychiatriques, les hôpitaux de jour et les cliniques ambula-\ntoires de psychiatrie (voir la figure 14.1).\n",
+      "text_sha256": "0bb12213f521e929e17cd6d74e164bb9cb1828911b1c9276cfda071a9716fa12"
+    },
+    {
+      "bbox": [
+        55.0,
+        401.1431579589844,
+        259.4701843261719,
+        420.3189392089844
+      ],
+      "block_id": "page-0311-block-0007",
+      "order": 7,
+      "text": "14.3\nÉpidémiologie analytique\n",
+      "text_sha256": "796f09dccfaff43ad90eb85342057eaa4742271cae44de05b3d9147277b25f88"
+    },
+    {
+      "bbox": [
+        48.0,
+        434.2158203125,
+        291.19085693359375,
+        491.0585021972656
+      ],
+      "block_id": "page-0311-block-0008",
+      "order": 8,
+      "text": "L’épidémiologie analytique vise à déterminer si la présence de\ncertains facteurs (facteurs de risque) est associée à un risque\naccru de maladie. La recherche d’une telle relation causale\nimplique l’examen de sept critères correspondant à autant\nd’étapes à franchir.\n",
+      "text_sha256": "cca4b85eca66b5c959a22e9a7cbf2fc8fe53f2323d836398c0ca484fcb84536e"
+    },
+    {
+      "bbox": [
+        48.0,
+        505.18682861328125,
+        219.8800506591797,
+        521.3294067382812
+      ],
+      "block_id": "page-0311-block-0009",
+      "order": 9,
+      "text": "14.3.1 Force d’une association\n",
+      "text_sha256": "ce806840e5a1c66207ec53a54af6f0e76c03d6e32ae9873e7cd8a978aa704a95"
+    },
+    {
+      "bbox": [
+        48.0,
+        524.7658081054688,
+        291.4850158691406,
+        720.70849609375
+      ],
+      "block_id": "page-0311-block-0010",
+      "order": 10,
+      "text": "Tout d’abord, il faut quantier la force de l’association. Divers\ntypes de mesures d’association sont proposées pour quantier\nl’association entre deux variables. Celles-ci sont fonction du type\nde variables (continues ou catégorielles), du devis de recherche\nutilisé (cas témoin ou cohorte), du nombre de groupes sujets\net du nombre de variables étudiées (analyses univariées lors de\nl’étude de l’association entre deux variables et multivariées lors\nde l’étude de plus de deux variables). En épidémiologie, on estime\nl’association entre deux variables catégorielles au moyen d’un\nrapport de cotes (odds ratio). Par exemple, un rapport de cotes\nde 2 pour quantier l’association entre le statut économique\n(faible [0] ou élevé [1]) et la prévalence de la dépression signi-\ne que la probabilité de présenter une dépression au cours d’une\npériode donnée est deux fois plus élevée chez les personnes à\nfaible revenu que chez celles à revenu élevé. Cette association ne\npermet toutefois pas de conclure sur la causalité entre le revenu\npersonnel et la dépression.\n",
+      "text_sha256": "b7ca977979696d6519d9f65853c2464d16c9ff8e64784e24712532910ace49c3"
+    },
+    {
+      "bbox": [
+        50.25,
+        41.002296447753906,
+        512.9996337890625,
+        53.320068359375
+      ],
+      "block_id": "page-0311-block-0011",
+      "order": 11,
+      "text": "FIGURE 14.1 Modèle épidémiologique du rapport entre l’utilisation des services de base, des services spécialisés\n",
+      "text_sha256": "4fa55e7ec3261b7121e1f60e31983cb8dcacbebfdaf3a5cc97afa98ddd13e719"
+    },
+    {
+      "bbox": [
+        99.9000015258789,
+        52.852294921875,
+        257.8601379394531,
+        64.820068359375
+      ],
+      "block_id": "page-0311-block-0012",
+      "order": 12,
+      "text": "et la prévalence des troubles mentaux\n",
+      "text_sha256": "00aee46db46924f0e32f7131c9fa18ae0055920a94891aae70237f1e8a7eef24"
+    },
+    {
+      "bbox": [
+        48.25,
+        285.4906311035156,
+        233.45538330078125,
+        294.2250061035156
+      ],
+      "block_id": "page-0311-block-0013",
+      "order": 13,
+      "text": "Les pourcentages expriment les taux dans la population générale.\n",
+      "text_sha256": "e622fd4a8ca37e58a792b99d19b15d6e5158b16626d0665ee6de0919491619bd"
+    },
+    {
+      "bbox": [
+        48.0,
+        299.4906311035156,
+        116.52799987792969,
+        308.3588562011719
+      ],
+      "block_id": "page-0311-block-0014",
+      "order": 14,
+      "text": "Source : Lesage (1996).\n",
+      "text_sha256": "e01cc68664a9e62dae5d9168817e5414f1c32852912ded445fed0c60876f77e3"
+    }
+  ],
+  "coordinates_sha256": "42929016176abb85406eeab697276f196b450c87c4f3fc486d2b25a6ac5f0493",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0311",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "294\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2 Déterminants bio-psycho-sociaux\n14.3.2 Rôle du hasard\nPour juger d’une association, d’une corrélation entre des variables,\nil faut déterminer si elle est statistiquement signicative ou si\nelle est due au hasard. La meilleure façon d’étudier l’association\nentre une maladie et un facteur de risque consisterait à étudier\ncette corrélation dans l’ensemble de la population, mais cela est\nimpossible à moins de s’intéresser à une population très spécique,\nlimitée en nombre. C’est pourquoi les chercheurs sélectionnent un\néchantillon aléatoire (représentatif) de la population de référence.\nPuisque des sujets diérents forment des échantillons successifs, il\nest plausible d’observer des uctuations dans les estimations de la\nforce de l’association. Plus l’échantillon est grand, plus l’estimation\nde la force de l’association est précise. éoriquement, le hasard\nde l’échantillonnage fait en sorte qu’une certaine proportion des\néchantillons aléatoires possibles conrme l’existence d’une asso-\nciation, même en l’absence d’une association réelle. La probabilité\nd’une telle erreur correspond à la valeur p des tests statistiques.\nCette valeur p correspond à la probabilité d’observer une asso-\nciation en l’absence d’une association réelle et relève du hasard\ninhérent au processus d’échantillonnage. Pour savoir si l’association\nest statistiquement signicative, on doit comparer cette valeur p\navec un seuil de signication statistique établi au préalable comme\nle niveau à partir duquel une association est déclarée signicative.\nPar convention, on adopte généralement un seuil de signication de\n0,05, ce qui signie qu’une association pourrait survenir 5 fois sur 100\nsous l’eet du hasard. Ainsi, une valeurpinférieure à 0,05 (p< 0,05)\nindique que l’association est statistiquement signicative.\nOn obtient la valeurpau moyen de tests statistiques spéciques\naux mesures d’association telles que le test t, le khi carré ( χ2)\net le test F :\n• le test t (ou test de Student) permet de comparer les moyennes\nde deux groupes par rapport à une variable continue (p. ex.,\ncomme l’hospitalisation en psychiatrie, l’urgence pour fins\npsychiatriques, les hôpitaux de jour et les cliniques ambula-\ntoires de psychiatrie (voir la figure 14.1).\n14.3\nÉpidémiologie analytique\nL’épidémiologie analytique vise à déterminer si la présence de\ncertains facteurs (facteurs de risque) est associée à un risque\naccru de maladie. La recherche d’une telle relation causale\nimplique l’examen de sept critères correspondant à autant\nd’étapes à franchir.\n14.3.1 Force d’une association\nTout d’abord, il faut quantier la force de l’association. Divers\ntypes de mesures d’association sont proposées pour quantier\nl’association entre deux variables. Celles-ci sont fonction du type\nde variables (continues ou catégorielles), du devis de recherche\nutilisé (cas témoin ou cohorte), du nombre de groupes sujets\net du nombre de variables étudiées (analyses univariées lors de\nl’étude de l’association entre deux variables et multivariées lors\nde l’étude de plus de deux variables). En épidémiologie, on estime\nl’association entre deux variables catégorielles au moyen d’un\nrapport de cotes (odds ratio). Par exemple, un rapport de cotes\nde 2 pour quantier l’association entre le statut économique\n(faible [0] ou élevé [1]) et la prévalence de la dépression signi-\ne que la probabilité de présenter une dépression au cours d’une\npériode donnée est deux fois plus élevée chez les personnes à\nfaible revenu que chez celles à revenu élevé. Cette association ne\npermet toutefois pas de conclure sur la causalité entre le revenu\npersonnel et la dépression.\nFIGURE 14.1 Modèle épidémiologique du rapport entre l’utilisation des services de base, des services spécialisés\net la prévalence des troubles mentaux\nLes pourcentages expriment les taux dans la population générale.\nSource : Lesage (1996).\n",
+  "raw_text_sha256": "e478cabf81055f95c1bb8e283c796aec3c7a428d9f3ebc8260b0e37478cafc1b",
+  "source_page_display": 312,
+  "source_page_index": 311
+}

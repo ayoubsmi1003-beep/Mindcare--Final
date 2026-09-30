@@ -1,0 +1,760 @@
+{
+  "block_sequence_sha256": "8c0425a081ef95351b320946b8475cf8bce18b150ca3fb6792f30a36315398e6",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        126.91150665283203,
+        758.8693237304688
+      ],
+      "block_id": "page-1117-block-0001",
+      "order": 1,
+      "text": "R20\nRéférences\n",
+      "text_sha256": "214ba5f1dad51cde19ac1dabbff2f23428d03c80385592e368ddb2310c1c72b5"
+    },
+    {
+      "bbox": [
+        390.0,
+        40.68496322631836,
+        547.6150512695312,
+        66.97344207763672
+      ],
+      "block_id": "page-1117-block-0002",
+      "order": 2,
+      "text": "Grinage, B. D. (2003). «Diagnosis and Management of Post-\ntraumatic Stress Disorder», American Family Physician,\n68(12), p. 2401-2409.\n",
+      "text_sha256": "d37fad1523d0a8b6cb6799d4913b4a2e0c4b61bb11ab1ec4fdee131bdd35538d"
+    },
+    {
+      "bbox": [
+        390.0,
+        70.8349609375,
+        544.3402099609375,
+        97.1234359741211
+      ],
+      "block_id": "page-1117-block-0003",
+      "order": 3,
+      "text": "Guay, S. & Marchand, A. (2006). Les troubles reliés aux\névénements traumatiques, Montréal, Québec, Les Presses\nde l’Université de Montréal.\n",
+      "text_sha256": "3d24d2e35f806852732d4a30e60424e9eee7a12a09a120ea3dc5f0827db64a30"
+    },
+    {
+      "bbox": [
+        390.0,
+        101.03496551513672,
+        548.6456909179688,
+        136.37344360351562
+      ],
+      "block_id": "page-1117-block-0004",
+      "order": 4,
+      "text": "Guay, S. & al. (2006). « Exploring the links between post-\ntraumatic stress disorder and social support: Processes and\npotential research avenues », Journal of Traumatic Stress,\n19, p. 327-338.\n",
+      "text_sha256": "ea456d131e6f6c2facc0a4e162778b731617f7c7cc234e49ced51849e0249592"
+    },
+    {
+      "bbox": [
+        390.0,
+        140.23497009277344,
+        546.985107421875,
+        175.5734405517578
+      ],
+      "block_id": "page-1117-block-0005",
+      "order": 5,
+      "text": "Hedges, D. & Woon, F. L. M. (2007). « Structural magne-\ntic resonance imaging findings in posttraumatic stress\ndisorder and their response to treatment : a systematic\nreview », Current Psychiatry Reviews, 3(2), p. 85-93.\n",
+      "text_sha256": "1eb46833bbeb1054bc45deb2e4bd52f352a646c81989acd5cafab2972373bfd8"
+    },
+    {
+      "bbox": [
+        390.0,
+        179.43496704101562,
+        546.4938354492188,
+        205.7234344482422
+      ],
+      "block_id": "page-1117-block-0006",
+      "order": 6,
+      "text": "Holmes, T. H. & Rahe, R. H. (1967). « The social readjustment\nrating scale», Journal of Psychosomatic Research, 11(2),\np. 213-218.\n",
+      "text_sha256": "8bb778bf2186d094d19aedc4b3bf1dee71c53f3af54087852d384230bc3f8221"
+    },
+    {
+      "bbox": [
+        390.0,
+        209.5849609375,
+        529.5474853515625,
+        235.87344360351562
+      ],
+      "block_id": "page-1117-block-0007",
+      "order": 7,
+      "text": "Institute of Medicine. (2007). Treatment of Posttrauma-\ntic Stress Disorder : An Assessment of the Evidence,\nWashington, DC, National Academies Press.\n",
+      "text_sha256": "a2539560a1b0af26d92b7a7fbc8c19d84d83e36643428753f9021974d6ee48b3"
+    },
+    {
+      "bbox": [
+        390.0,
+        239.7849578857422,
+        549.0676879882812,
+        247.9734344482422
+      ],
+      "block_id": "page-1117-block-0008",
+      "order": 8,
+      "text": "Jehel, L. (2006). Psychotraumatologie, Paris, France, Dunod.\n",
+      "text_sha256": "09fa99a2f30bc7fa2c8f210e85f86ed51d5ad3d24f3eeba223e101a7f6404333"
+    },
+    {
+      "bbox": [
+        390.0,
+        251.8349609375,
+        546.3975219726562,
+        287.1734313964844
+      ],
+      "block_id": "page-1117-block-0009",
+      "order": 9,
+      "text": "Katzman, M. A. & al. (2014). « Canadian clinical practice\nguidelines for the management of anxiety, posttraumatic\nstress and obsessive-compulsive disorders», BMC Psychia-\ntry, 14(suppl 1), p. S1.\n",
+      "text_sha256": "fe441fb9f916726bc5e0fe2a6244146ce50e0579867df3ab0c048dabec6fddf2"
+    },
+    {
+      "bbox": [
+        390.0,
+        291.03497314453125,
+        544.8800659179688,
+        335.4234313964844
+      ],
+      "block_id": "page-1117-block-0010",
+      "order": 10,
+      "text": "Kilpatrick, D. G. & al. (2003). « Violence and risk of PTSD,\nmajor depression, substance abuse/dependance, and\ncomorbidity : Results from the national survey of adoles-\ncents », Journal of Consulting and Clinical Psychology,\n71(4), p. 692-700.\n",
+      "text_sha256": "0450aed2b0d543245a3e8440e947c09fbf74871fa7f50732dbd22c4d9373bfa8"
+    },
+    {
+      "bbox": [
+        390.0,
+        339.28497314453125,
+        541.811279296875,
+        365.5734558105469
+      ],
+      "block_id": "page-1117-block-0011",
+      "order": 11,
+      "text": "Kirmayer, L. J. & Sartorius, N. (2007). «Cultural models and\nsomatic syndromes», Psychosomatic Medicine, 69(9),\np. 832-840.\n",
+      "text_sha256": "9a7e60459390bf1fd825dde8f88b93f877431b77977e6fb3118c12abaecf9295"
+    },
+    {
+      "bbox": [
+        390.0,
+        369.4349670410156,
+        533.8600463867188,
+        404.8234558105469
+      ],
+      "block_id": "page-1117-block-0012",
+      "order": 12,
+      "text": "Londborg, P. D. & al. (2001). «Sertraline treatment of\nposttraumatic stress disorder : Results of 24 weeks of\nopen-label continuation treatment», Journal of Clinical\nPsychiatry, 62(5), p. 325-331.\n",
+      "text_sha256": "745830b020727cf2cf34e1f335da2d786110579f3fc96ed8147f0166ffdce819"
+    },
+    {
+      "bbox": [
+        390.0,
+        408.6849670410156,
+        545.7899780273438,
+        453.0734558105469
+      ],
+      "block_id": "page-1117-block-0013",
+      "order": 13,
+      "text": "Matar, M.A. & al. (2009). «Alprazolam treatment\nimmediately after stress exposure interferes with the\nnormal HPA-stress response and increase vulnerability to\nsubsequent stress in an animal model of PTSD», European\nNeuropsychopharmacy, 19(4), 283-295.\n",
+      "text_sha256": "69aa79bbe8126ed19ea90b223dac29e8118a3cd8dc4147d70e08523c693c80e2"
+    },
+    {
+      "bbox": [
+        390.0,
+        456.9349670410156,
+        540.4027709960938,
+        492.2734375
+      ],
+      "block_id": "page-1117-block-0014",
+      "order": 14,
+      "text": "Mayer, E. (2007). « Somatic manifestations of traumatic\nstress », dans Kirmayer, L. J. & al. (dir.), Understanding\nTrauma, Cambridge, Royaume-Uni, Cambridge University\nPress, p. 142-170.\n",
+      "text_sha256": "92ba5068ff6f7873ee166f43c17582d2d33e102e2cf2002898afc8305cb145ef"
+    },
+    {
+      "bbox": [
+        390.0,
+        496.1349792480469,
+        533.217529296875,
+        513.3734130859375
+      ],
+      "block_id": "page-1117-block-0015",
+      "order": 15,
+      "text": "Meichenbaum, D. & Jaremko, D. (1989). Stress Reduction\nand Prevention, New York, NY, Springer US.\n",
+      "text_sha256": "bc3fc1ada2bc762cb566024f04a16f8bf22edf51b201a69ceb21888600c90a78"
+    },
+    {
+      "bbox": [
+        390.0,
+        517.2849731445312,
+        545.0450439453125,
+        561.6734619140625
+      ],
+      "block_id": "page-1117-block-0016",
+      "order": 16,
+      "text": "Mollica, R. F. & al. (1992). « The Harvard Trauma Question-\nnaire : Validating a cross-cultural instrument for measuring\ntorture, trauma, and posttraumatic stress disorder in Indo-\nchinese refugees », Journal of Nervous & Mental Disease,\n180(2), p. 111-116.\n",
+      "text_sha256": "2031b91e45aae405339cdb048138bb70d74d90383f690859584ed31c7c38c51a"
+    },
+    {
+      "bbox": [
+        390.0,
+        565.5349731445312,
+        547.7515869140625,
+        600.8734741210938
+      ],
+      "block_id": "page-1117-block-0017",
+      "order": 17,
+      "text": "National Comorbidity Survey. (2007). Table 1. Lifetime Preva-\nlence of DSM-IV/WMH-CIDI Disorders by Sex and Cohort\n(n=9282), [en ligne], www.hcp.med.harvard.edu/ncs/ftpdir/\nNCS-R_Lifetime_Prevalence_Estimates.pdf.\n",
+      "text_sha256": "279e4f59b2c022f02b1d92b48fbac670203ea6f6b2dcee83a2030348933164e2"
+    },
+    {
+      "bbox": [
+        390.0,
+        604.7349853515625,
+        535.5575561523438,
+        631.0234375
+      ],
+      "block_id": "page-1117-block-0018",
+      "order": 18,
+      "text": "Prins, A. & al. (2003). « The primary care PTSD screen\n(PC-PTSD) : Development and operating characteristics\n(PDF) », Primary Care Psychiatry, 9(1), p. 9-14.\n",
+      "text_sha256": "623f4fb231c673751a74e0f63e737cae9216897f5c6d4999902f57b56f949568"
+    },
+    {
+      "bbox": [
+        390.0,
+        634.8849487304688,
+        548.510009765625,
+        661.2234497070312
+      ],
+      "block_id": "page-1117-block-0019",
+      "order": 19,
+      "text": "Resick, P. A. & Calhoun, K. S. (2001). Clinical Handbook of\nPsychological Disorders : A Step-by-Step Treatment manuel,\n3e éd., New York, Guilford Press, p. 60-113.\n",
+      "text_sha256": "7a8f882729bed798dc38a6b33667fc211961903a4b3ddf3872df6a8cb9774998"
+    },
+    {
+      "bbox": [
+        390.0,
+        665.0849609375,
+        549.2982788085938,
+        682.3234252929688
+      ],
+      "block_id": "page-1117-block-0020",
+      "order": 20,
+      "text": "Stahl S. M. (2008).Stahl’s Essential Psychopharmacology,\n3e éd., Cambridge, Royaune-Uni, Cambridge University Presse.\n",
+      "text_sha256": "1efde2fb50e4a54ef67b7bba69bf2fd2ae8d70154efd1d71e993c5e1ee0119dc"
+    },
+    {
+      "bbox": [
+        390.0,
+        686.1849975585938,
+        542.3201293945312,
+        703.4234619140625
+      ],
+      "block_id": "page-1117-block-0021",
+      "order": 21,
+      "text": "Van der Hart, O. & al. (2006). The Haunted Self, New York,\nW.W., Norton & Company.\n",
+      "text_sha256": "6b6672f7b73588220ef98dc71af753935b769555cfe09b6bf8caef20f0c74051"
+    },
+    {
+      "bbox": [
+        390.0,
+        707.2849731445312,
+        532.2050170898438,
+        724.5234375
+      ],
+      "block_id": "page-1117-block-0022",
+      "order": 22,
+      "text": "Veterans Affairs/Department of Defense. (2010). Clinical\nPractice Guideline for Management of Post-Traumatic\n",
+      "text_sha256": "bf8500a25f85e51f2add7c4c3e6cf5cf607a27c1a062d9471370f9f4abb4e6af"
+    },
+    {
+      "bbox": [
+        219.0,
+        40.68496322631836,
+        376.9515686035156,
+        57.87343978881836
+      ],
+      "block_id": "page-1117-block-0023",
+      "order": 23,
+      "text": "in occupational and primary health care », Scandinavian\nJournal of Work, Environment & Health, 29(6), p. 478-487.\n",
+      "text_sha256": "cf95d770185150f9f05fb61300b179f2224856f3937be08b6a3ef8f3f6e2c86f"
+    },
+    {
+      "bbox": [
+        219.0,
+        61.684959411621094,
+        373.92999267578125,
+        105.9234390258789
+      ],
+      "block_id": "page-1117-block-0024",
+      "order": 24,
+      "text": "Van der Klink, J. J. & al. (2003). « Reducing long term\nsickness absence by an activating intervention in\nadjustment disorders : A cluster randomised controlled\ndesign », Occupational and Environmental Medicine, 60(6),\np. 429-437.\n",
+      "text_sha256": "a66f5dba898688a41bac06c0bb2ba48d3ae8dc8fed5f166f6367eb7f1c0856c9"
+    },
+    {
+      "bbox": [
+        219.0,
+        109.7349624633789,
+        376.7513732910156,
+        144.9734344482422
+      ],
+      "block_id": "page-1117-block-0025",
+      "order": 25,
+      "text": "Weiten, W. & al. (2012). « Coping processes » dans Weiten,\nW. & al. (dir.), Psychology Applied to Modern Life : Adjust-\nment in the 21st century, 10e éd., Stamford, CT, Wadsworth\nCengage Learning, p. 104-137.\n",
+      "text_sha256": "90061be6be7847fc08fe97507e52c74c408d716f271d5a7781dce6abcdbdc14d"
+    },
+    {
+      "bbox": [
+        219.0,
+        158.2703094482422,
+        376.6499938964844,
+        205.0234375
+      ],
+      "block_id": "page-1117-block-0026",
+      "order": 26,
+      "text": "Chapitre 23\nAhmadi, K. & al. (2013). « Malingering and PTSD : Detecting\nmalingering and war related PTSD by Miller Forensic\nAssessment of Symptoms Test (M-FAST) », BMC Psychiatry,\n13(154), doi:10.1186/1471-244X-13-154.\n",
+      "text_sha256": "43222922ec3cb75562050115884acdf1f16e0e28f901e90fbbb7068aea62f9a9"
+    },
+    {
+      "bbox": [
+        219.0,
+        208.8349609375,
+        373.88525390625,
+        235.0734405517578
+      ],
+      "block_id": "page-1117-block-0027",
+      "order": 27,
+      "text": "American Psychiatric Association (APA). (2004a). DSM-IV-TR.\nCritères diagnostiques (Washington, DC, 2000). Traduction\nfrançaise par J.-D. Guelet al., Paris, Masson, 384 p.\n",
+      "text_sha256": "0ebf174512bc06342f7e986dd9e0f4e05b8d7cce0d51310baec71fc33170e4c0"
+    },
+    {
+      "bbox": [
+        219.0,
+        238.8849639892578,
+        368.8470153808594,
+        274.0734558105469
+      ],
+      "block_id": "page-1117-block-0028",
+      "order": 28,
+      "text": "American Psychiatric Association (APA). (2004b). «Practice\nguidelines for the treatment of patients with acute stress\ndisorder and posttraumatic stress disorder», American\nJournal of Psychiatry, 161(11), p. 1-57.\n",
+      "text_sha256": "c35b424e56a178e63f4a9f5da450dddcde6b34976fe6f94f6c7e28c112ecce4e"
+    },
+    {
+      "bbox": [
+        219.0,
+        277.8849792480469,
+        374.197509765625,
+        304.1234436035156
+      ],
+      "block_id": "page-1117-block-0029",
+      "order": 29,
+      "text": "American Psychiatric Association (APA). (2006). Practice\nGuidelines for the Treatment of Psychiatric Disorders Com-\npendium, Arlington, VA, American Psychiatric Association.\n",
+      "text_sha256": "0a095071b1af438e9d381e14b673e547b794d92333b8ab55dc52ab5ed0283d47"
+    },
+    {
+      "bbox": [
+        219.0,
+        307.9349670410156,
+        358.36749267578125,
+        352.1734313964844
+      ],
+      "block_id": "page-1117-block-0030",
+      "order": 30,
+      "text": "American Psychiatric Association (APA). (2009). Practice\nGuidelines for the Treatment of Patients with Acute\nStress Disorder and Posttraumatic Stress Disor-\nder, [en ligne], http://psychiatryonline.org/content.\naspx ?bookid=28&sectionid=1682793.\n",
+      "text_sha256": "49fd5a338e899512318c54b778a874aa110881e4cdb273df14320b74a30cf0dd"
+    },
+    {
+      "bbox": [
+        219.0,
+        355.9849548339844,
+        372.5,
+        391.22344970703125
+      ],
+      "block_id": "page-1117-block-0031",
+      "order": 31,
+      "text": "American Psychiatric Association (APA). (2015). DSM-5 –\nManuel Diagnostique et Statistique des Troubles Mentaux.\nTraduction française par M.-A. Crocq, J.-D. Guel & al.,\nElsevier Masson SAS, Paris.\n",
+      "text_sha256": "7e3c45f0755e921194830b62c49300363bc47b27788cdf903fafc25ba0333316"
+    },
+    {
+      "bbox": [
+        219.0,
+        395.03497314453125,
+        365.1900634765625,
+        430.22344970703125
+      ],
+      "block_id": "page-1117-block-0032",
+      "order": 32,
+      "text": "Association des psychiatres du Canada. (2006). «Guide de\npratique clinique : traitement des troubles anxieux»,\nRevue canadienne de psychiatrie, 51(8), supplément 2,\np. 57S-64S.\n",
+      "text_sha256": "63921af833d26e485bf337fa66d5d2b25e1e14172ce06f8466f4cc25e4830382"
+    },
+    {
+      "bbox": [
+        219.0,
+        434.03497314453125,
+        369.3646240234375,
+        487.2734375
+      ],
+      "block_id": "page-1117-block-0033",
+      "order": 33,
+      "text": "Australian Centre for Posttraumatic Mental Health. (2007).\nAustralian Guidelines for the Treatment of Adults with\nAcute Stress Disorder and Posttraumatic Stress Disorder :\nPractitioner Guide, Australian Government, National Health\nand Medical Research Council, [en ligne], www.acpmh.\nunimelb.edu.au.\n",
+      "text_sha256": "47d9bfcbbbb449f411ae18914434838a3458d783353be77d5bd853f14c8c7e1b"
+    },
+    {
+      "bbox": [
+        219.0,
+        491.1349792480469,
+        376.8635559082031,
+        526.3234252929688
+      ],
+      "block_id": "page-1117-block-0034",
+      "order": 34,
+      "text": "Bajor, L. A. & al. (2011). « The psychopharmacology algorith\nproject at the Harvard South Shore program : an update\non posttraumatic stress disorder », Harvard Rev Psychiatry,\n19(5), p. 240-258.\n",
+      "text_sha256": "e39c0e465107deebff0b7bc9c66d2a9ab906b96d2b368b5af2ed33f6297005dd"
+    },
+    {
+      "bbox": [
+        219.0,
+        530.1349487304688,
+        375.1474914550781,
+        556.3734741210938
+      ],
+      "block_id": "page-1117-block-0035",
+      "order": 35,
+      "text": "Benedek, D. M. & Wynn, G. H. (2011). Clinical Manual for\nManagement of PTSD, Washington, DC, American Psychia-\ntric Publishing.\n",
+      "text_sha256": "cc6f330eba2d3352abc4a90cab9685c7adbae7d0ca8a13cca127f8d912c922b8"
+    },
+    {
+      "bbox": [
+        219.0,
+        560.1849975585938,
+        370.3299865722656,
+        595.4234619140625
+      ],
+      "block_id": "page-1117-block-0036",
+      "order": 36,
+      "text": "Bremner, D. & al. (1995). «MRI-Based Measurement of\nHippocampal Volume in Patients With Combat-Related\nPosttraumatic Stress Disorder», Am J Psychiatry, 152(7),\np. 973-981.\n",
+      "text_sha256": "5b81cf81f82bff732c9c55de9f1b741438d5526961784933962956478bfd1e4e"
+    },
+    {
+      "bbox": [
+        219.0,
+        599.2349853515625,
+        370.26263427734375,
+        643.4234619140625
+      ],
+      "block_id": "page-1117-block-0037",
+      "order": 37,
+      "text": "Cloitre, M. & al. (2012). The ISTSS Expert Consensus\nTreatment Guidelines For Complex PTSD In Adults, [en\nligne], www.istss.org/AM/Template.cfm ?Section=ISTSS_\nComplex_PTSD_Treatment_Guidelines&Template=/CM/\nContentDisplay.cfm&ContentID=5185.\n",
+      "text_sha256": "b13201cb8f943a22f7c198e8b834de40d4f616d136cc7dcf2a2b74277c3d9d59"
+    },
+    {
+      "bbox": [
+        219.0,
+        647.2849731445312,
+        376.61993408203125,
+        682.4734497070312
+      ],
+      "block_id": "page-1117-block-0038",
+      "order": 38,
+      "text": "Eye movement desensitization and reprocessing. (2012). Emdria’s\nDenition of EMDR, [en ligne], http://emdrcanada.org/\nwp-content/uploads/2012/12/EMDRIA-Denition-of-EMDR.\npdf.\n",
+      "text_sha256": "e9d488cabc2a73c97c4ffedeb693c9337950d235a12aa8d91fd13eb93f1ddbec"
+    },
+    {
+      "bbox": [
+        219.0,
+        686.2849731445312,
+        360.1999816894531,
+        703.5234375
+      ],
+      "block_id": "page-1117-block-0039",
+      "order": 39,
+      "text": "Foa, E. B. & al. (2009). Effective Treatments for PTSD,\n2e éd., New York, NY, Guilford Press.\n",
+      "text_sha256": "ebcddfbf28678fe77cd65d2a775a397585afa004dbbb174c99eb446d7a217302"
+    },
+    {
+      "bbox": [
+        219.0,
+        707.3349609375,
+        372.17010498046875,
+        724.5234375
+      ],
+      "block_id": "page-1117-block-0040",
+      "order": 40,
+      "text": "Friedman, M. J. & al. (2007). Handbook of PTSD, New York,\nNY, The Guilford Press.\n",
+      "text_sha256": "6c7243797abc148aa1ddf14951e0a9fef783dff88db4fc1058e76c2fce527acf"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.68496322631836,
+        190.8100128173828,
+        57.87343978881836
+      ],
+      "block_id": "page-1117-block-0041",
+      "order": 41,
+      "text": "Monat, A. & al. (dir.) (2007). The Praeger Handbook on\nStress and Coping, Westport, CT, Praeger.\n",
+      "text_sha256": "25c502e57aee43f44f380222057b12ba46792f16ee3390f9c6d8a82c65b0495f"
+    },
+    {
+      "bbox": [
+        48.0,
+        61.684959411621094,
+        197.29750061035156,
+        96.9234390258789
+      ],
+      "block_id": "page-1117-block-0042",
+      "order": 42,
+      "text": "Montel, S. & al. (2012). « Cerveau, comportement et\nadaptation, dans Tarquinio, C. & Spitz É. (dir.), Psycho-\nlogie de l’adaptation, Bruxelles, Begique, De Boeck,\np. 13-30.\n",
+      "text_sha256": "fb53f70edf2babd5de7af3a5ff5f5dad79cfec08652db1a9b809ea073baaac76"
+    },
+    {
+      "bbox": [
+        48.0,
+        100.7349624633789,
+        201.03256225585938,
+        144.9734344482422
+      ],
+      "block_id": "page-1117-block-0043",
+      "order": 43,
+      "text": "Noel, J. M. & Curtis, J. L. (2013). « The pharmacological\nmanagement of stress reactions », dans Everly, Jr. G. S. &\nLating, J. M. (dir.), A Clinical Guide to the Treatment of the\nHuman Stress Response, 3e éd., New York, NY, Springer,\np. 317-329.\n",
+      "text_sha256": "59e1078e475f5a567abcb697c9b2be5007de085863782d2ff38e5680c79f4cc1"
+    },
+    {
+      "bbox": [
+        48.0,
+        148.7849578857422,
+        201.2832794189453,
+        175.0234375
+      ],
+      "block_id": "page-1117-block-0044",
+      "order": 44,
+      "text": "O’connor, M. F. (2012). « Immunological and neuroimaging\nbiomarkers of complicated grief », Dialogues in Clinical\nNeuroscience, 14(2), p. 141-148.\n",
+      "text_sha256": "0ddc99cbfc09b9b4d31efebe829850bd8323e4f804eaa5743e36125d244b2a61"
+    },
+    {
+      "bbox": [
+        48.0,
+        178.8349609375,
+        192.1725311279297,
+        205.0234375
+      ],
+      "block_id": "page-1117-block-0045",
+      "order": 45,
+      "text": "Oxman, T. E. & al. (1994). « Frequency and correlates of\nadjustment disorder related to cardiac surgery in older\npatients », Psychosomatics, 35(6), p. 557-568.\n",
+      "text_sha256": "e5260d7d18dfb9e00cf860ea326a9904d01290576e2857d594577e8222f7e897"
+    },
+    {
+      "bbox": [
+        48.0,
+        208.8349609375,
+        207.20758056640625,
+        235.0734405517578
+      ],
+      "block_id": "page-1117-block-0046",
+      "order": 46,
+      "text": "Pelkonen, M. & al. (2005). « Suicidality in adjustment\ndisorder : Clinical characteristics of adolescent outpatients »,\nEuropean Child & Adolescent Psychiatry, 14(3), p. 174-180.\n",
+      "text_sha256": "65049a11276db6e0ba3ae545e421568f104d378a6148a3c86daa59f2d81c316e"
+    },
+    {
+      "bbox": [
+        48.0,
+        238.8849639892578,
+        193.93490600585938,
+        265.0734558105469
+      ],
+      "block_id": "page-1117-block-0047",
+      "order": 47,
+      "text": "Portzky, G. & al. (2005). « Adjustement disorder and the\ncourse of the suicidal process in adolescents », Journal\nof Affective Disorders, 87(2-3), p. 265-270.\n",
+      "text_sha256": "cb3f98dbd0c33209bebfc7e87eb367dd54ee82ec8c8d462a836b4bc5192054a7"
+    },
+    {
+      "bbox": [
+        48.0,
+        268.8849792480469,
+        194.45303344726562,
+        286.1234436035156
+      ],
+      "block_id": "page-1117-block-0048",
+      "order": 48,
+      "text": "Salovey, P. & Mayer, J. D. (1990). « Emotional intelligence »,\nImagination, Cognition, and Personality, 9, p. 185-211.\n",
+      "text_sha256": "11f79cc94fb47e4c34f33393259691537c2b23fefebb4e3a8ea6df06a8da177f"
+    },
+    {
+      "bbox": [
+        48.0,
+        289.9349670410156,
+        196.6075897216797,
+        325.1234436035156
+      ],
+      "block_id": "page-1117-block-0049",
+      "order": 49,
+      "text": "Sarason, I. G. & al. (1978). « Assessing the impact of life\nchanges : Development of the Life Experiences Survey »,\nJournal of Consulting and Clinical Psychology, 46(5),\np. 932-946.\n",
+      "text_sha256": "7daca9b60b656333f7efebb8b05c62528fad84849c687993a0b572dd142716d2"
+    },
+    {
+      "bbox": [
+        48.0,
+        328.9849548339844,
+        193.33889770507812,
+        355.1734313964844
+      ],
+      "block_id": "page-1117-block-0050",
+      "order": 50,
+      "text": "Schnyder, U. & Valach. L. (1997). « Suicide attempters in\na psychiatric emergency room population », General &\nHospital Psychiatry, 19(2), p. 119-129.\n",
+      "text_sha256": "21c31d6991a9d5e7571a437656eb0220ba3b2b34b4f53f66d071775c6438a27d"
+    },
+    {
+      "bbox": [
+        48.0,
+        358.9849548339844,
+        204.93017578125,
+        385.22344970703125
+      ],
+      "block_id": "page-1117-block-0051",
+      "order": 51,
+      "text": "Séguin, M. & al. (dir.) (2012). Intervention en situation de\ncrise et en contexte traumatique, 2e éd., Montréal, Québec,\nGaëtan Morin, Chenelière Éducation.\n",
+      "text_sha256": "e66e54051ac4f2bcba2cc194cbf6952921f56aea13a784d64d8b997e8c13b5e3"
+    },
+    {
+      "bbox": [
+        48.0,
+        389.03497314453125,
+        204.1475067138672,
+        406.22344970703125
+      ],
+      "block_id": "page-1117-block-0052",
+      "order": 52,
+      "text": "Selye, H. (1975). Le stress de la vie : le problème de l’adap-\ntation, Paris, France, Gallimard.\n",
+      "text_sha256": "61d803eff6e0b940221dc56aa99ab684712591ed53f5633d9aedc711d6e4da40"
+    },
+    {
+      "bbox": [
+        48.0,
+        410.03497314453125,
+        207.05616760253906,
+        454.2734375
+      ],
+      "block_id": "page-1117-block-0053",
+      "order": 53,
+      "text": "Sickmann, H. M. & al. (2014). « Does stress elicit depression ?\nEvidence from clinical and preclinical studies », dans\nPariante, C.M. & Lapis-Bluhm, M. D. (dir.), Behavioral\nNeurobiology of Stress-Related Disorders, New York, NY,\nSpringer, p. 123-159.\n",
+      "text_sha256": "363da800263cff710a69bfb7762b8b7b8413af3156dca6844390b97e7a8d200b"
+    },
+    {
+      "bbox": [
+        48.0,
+        458.0849609375,
+        196.78147888183594,
+        493.3234558105469
+      ],
+      "block_id": "page-1117-block-0054",
+      "order": 54,
+      "text": "Sifneos, P. E. (1989). « Brief dynamic and crisis therapy »,\ndans Kaplan, H. I. &Sadock. B. J. (dir.), Comprehensive\nTextbook of Psychiatry, vol. 2, 5e éd., Baltimore, MD,\nWilliams & Wilkins. p. 1562-1567\n",
+      "text_sha256": "bccc639de2b9026876b78d2d54fd479e93c0ead904cafc09032ad75192a14ae2"
+    },
+    {
+      "bbox": [
+        48.0,
+        497.1349792480469,
+        197.1600799560547,
+        523.3234252929688
+      ],
+      "block_id": "page-1117-block-0055",
+      "order": 55,
+      "text": "Sodi, R. (1987). « Un entretien avec Primo Levi », dans\nBelpoliti, M. (dir.) Primo Levi, Conversations et entretiens\n1963-1987, Paris, Robert Laffont, 1998, p. 220-236.\n",
+      "text_sha256": "3a510c434b9e1ae3aac0546153b1d75b8596797021b4c6f41c251d1d98b93660"
+    },
+    {
+      "bbox": [
+        48.0,
+        527.1349487304688,
+        199.97012329101562,
+        553.3734741210938
+      ],
+      "block_id": "page-1117-block-0056",
+      "order": 56,
+      "text": "Southwick, S. M. & Charney, D. S. (2012). Resilience : The\nscience of Mastering life’s greatest challenges, New York,\nNY, Cambridge University Press.\n",
+      "text_sha256": "894707d03708130677d441db383115df7e682cda3937d1363dbfdeb83b465911"
+    },
+    {
+      "bbox": [
+        48.0,
+        557.1849975585938,
+        202.04750061035156,
+        574.3734741210938
+      ],
+      "block_id": "page-1117-block-0057",
+      "order": 57,
+      "text": "Spiegel, D. (1996). « Cancer and depression », Britisih Jour-\nnal of Psychiatry Supplement, 30, p. 109-116.\n",
+      "text_sha256": "9003c04fed8df3adc2aab956a40d2736d71ede8c6fdac582f7f30586fd5d3b0c"
+    },
+    {
+      "bbox": [
+        48.0,
+        578.1849975585938,
+        201.12001037597656,
+        604.4234619140625
+      ],
+      "block_id": "page-1117-block-0058",
+      "order": 58,
+      "text": "Sroufe, L. A. & al. (2005). The development of the person :\nThe Minnesota Study of Risk and Adaptation from Birth to\nAdulthood, New York, NY, Guilford Press.\n",
+      "text_sha256": "ddc4e7877fd99274738765b279fba9ccc7adc89f8ae50d925b98c0a927e70fb3"
+    },
+    {
+      "bbox": [
+        48.0,
+        608.2349853515625,
+        203.91278076171875,
+        643.4234619140625
+      ],
+      "block_id": "page-1117-block-0059",
+      "order": 59,
+      "text": "Strain, J. J. (1998). « Adjustment disorder : A multisite study\nof its utilization and interventions in the consultation-liaison\npsychiatry setting », General & Hospital Psychiatry, 20(3),\np. 139-149.\n",
+      "text_sha256": "64244f065bff378a40a44a13a089d3f2a409efad217d265bf6db2064007556a7"
+    },
+    {
+      "bbox": [
+        48.0,
+        647.2849731445312,
+        196.8386993408203,
+        682.4734497070312
+      ],
+      "block_id": "page-1117-block-0060",
+      "order": 60,
+      "text": "Swanson, S. A. & Colman, I. (2013). « Association between\nexposure to suicide and suicidality outcomes in youth »,\nCanadian Medical Association Journal, 185(10),\np. 870-877.\n",
+      "text_sha256": "0b90e9e0fa4ef59db00301a05f81856fb236d0b1d0621830ce654766c46088b9"
+    },
+    {
+      "bbox": [
+        48.0,
+        686.2849731445312,
+        206.0575714111328,
+        703.5234375
+      ],
+      "block_id": "page-1117-block-0061",
+      "order": 61,
+      "text": "Vaillant, G. E. (1998 [1977]). Adaptation to Life, Cambridge,\nMA, Harvard University Press.\n",
+      "text_sha256": "40da93823e5109e3bdcbb9d6b19bc38397c56686ddeef2236820faa98f363cdb"
+    },
+    {
+      "bbox": [
+        48.0,
+        707.3349609375,
+        193.76564025878906,
+        724.5234375
+      ],
+      "block_id": "page-1117-block-0062",
+      "order": 62,
+      "text": "Van Der Klink, J. J. & Van Dijk, F. J. (2003). « Dutch\npractice guidelines for managing adjustment disorders\n",
+      "text_sha256": "3811040cbe4a81273728f9ff21b89ad1b75ac4053b01097d2d3b9792a88c6d49"
+    }
+  ],
+  "coordinates_sha256": "d271dc5664594e18e43ea275bf9448216554fbbc7f1b7ca08dff8320283c8a78",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1117",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "R20\nRéférences\nGrinage, B. D. (2003). «Diagnosis and Management of Post-\ntraumatic Stress Disorder», American Family Physician,\n68(12), p. 2401-2409.\nGuay, S. & Marchand, A. (2006). Les troubles reliés aux\névénements traumatiques, Montréal, Québec, Les Presses\nde l’Université de Montréal.\nGuay, S. & al. (2006). « Exploring the links between post-\ntraumatic stress disorder and social support: Processes and\npotential research avenues », Journal of Traumatic Stress,\n19, p. 327-338.\nHedges, D. & Woon, F. L. M. (2007). « Structural magne-\ntic resonance imaging findings in posttraumatic stress\ndisorder and their response to treatment : a systematic\nreview », Current Psychiatry Reviews, 3(2), p. 85-93.\nHolmes, T. H. & Rahe, R. H. (1967). « The social readjustment\nrating scale», Journal of Psychosomatic Research, 11(2),\np. 213-218.\nInstitute of Medicine. (2007). Treatment of Posttrauma-\ntic Stress Disorder : An Assessment of the Evidence,\nWashington, DC, National Academies Press.\nJehel, L. (2006). Psychotraumatologie, Paris, France, Dunod.\nKatzman, M. A. & al. (2014). « Canadian clinical practice\nguidelines for the management of anxiety, posttraumatic\nstress and obsessive-compulsive disorders», BMC Psychia-\ntry, 14(suppl 1), p. S1.\nKilpatrick, D. G. & al. (2003). « Violence and risk of PTSD,\nmajor depression, substance abuse/dependance, and\ncomorbidity : Results from the national survey of adoles-\ncents », Journal of Consulting and Clinical Psychology,\n71(4), p. 692-700.\nKirmayer, L. J. & Sartorius, N. (2007). «Cultural models and\nsomatic syndromes», Psychosomatic Medicine, 69(9),\np. 832-840.\nLondborg, P. D. & al. (2001). «Sertraline treatment of\nposttraumatic stress disorder : Results of 24 weeks of\nopen-label continuation treatment», Journal of Clinical\nPsychiatry, 62(5), p. 325-331.\nMatar, M.A. & al. (2009). «Alprazolam treatment\nimmediately after stress exposure interferes with the\nnormal HPA-stress response and increase vulnerability to\nsubsequent stress in an animal model of PTSD», European\nNeuropsychopharmacy, 19(4), 283-295.\nMayer, E. (2007). « Somatic manifestations of traumatic\nstress », dans Kirmayer, L. J. & al. (dir.), Understanding\nTrauma, Cambridge, Royaume-Uni, Cambridge University\nPress, p. 142-170.\nMeichenbaum, D. & Jaremko, D. (1989). Stress Reduction\nand Prevention, New York, NY, Springer US.\nMollica, R. F. & al. (1992). « The Harvard Trauma Question-\nnaire : Validating a cross-cultural instrument for measuring\ntorture, trauma, and posttraumatic stress disorder in Indo-\nchinese refugees », Journal of Nervous & Mental Disease,\n180(2), p. 111-116.\nNational Comorbidity Survey. (2007). Table 1. Lifetime Preva-\nlence of DSM-IV/WMH-CIDI Disorders by Sex and Cohort\n(n=9282), [en ligne], www.hcp.med.harvard.edu/ncs/ftpdir/\nNCS-R_Lifetime_Prevalence_Estimates.pdf.\nPrins, A. & al. (2003). « The primary care PTSD screen\n(PC-PTSD) : Development and operating characteristics\n(PDF) », Primary Care Psychiatry, 9(1), p. 9-14.\nResick, P. A. & Calhoun, K. S. (2001). Clinical Handbook of\nPsychological Disorders : A Step-by-Step Treatment manuel,\n3e éd., New York, Guilford Press, p. 60-113.\nStahl S. M. (2008).Stahl’s Essential Psychopharmacology,\n3e éd., Cambridge, Royaune-Uni, Cambridge University Presse.\nVan der Hart, O. & al. (2006). The Haunted Self, New York,\nW.W., Norton & Company.\nVeterans Affairs/Department of Defense. (2010). Clinical\nPractice Guideline for Management of Post-Traumatic\nin occupational and primary health care », Scandinavian\nJournal of Work, Environment & Health, 29(6), p. 478-487.\nVan der Klink, J. J. & al. (2003). « Reducing long term\nsickness absence by an activating intervention in\nadjustment disorders : A cluster randomised controlled\ndesign », Occupational and Environmental Medicine, 60(6),\np. 429-437.\nWeiten, W. & al. (2012). « Coping processes » dans Weiten,\nW. & al. (dir.), Psychology Applied to Modern Life : Adjust-\nment in the 21st century, 10e éd., Stamford, CT, Wadsworth\nCengage Learning, p. 104-137.\nChapitre 23\nAhmadi, K. & al. (2013). « Malingering and PTSD : Detecting\nmalingering and war related PTSD by Miller Forensic\nAssessment of Symptoms Test (M-FAST) », BMC Psychiatry,\n13(154), doi:10.1186/1471-244X-13-154.\nAmerican Psychiatric Association (APA). (2004a). DSM-IV-TR.\nCritères diagnostiques (Washington, DC, 2000). Traduction\nfrançaise par J.-D. Guelet al., Paris, Masson, 384 p.\nAmerican Psychiatric Association (APA). (2004b). «Practice\nguidelines for the treatment of patients with acute stress\ndisorder and posttraumatic stress disorder», American\nJournal of Psychiatry, 161(11), p. 1-57.\nAmerican Psychiatric Association (APA). (2006). Practice\nGuidelines for the Treatment of Psychiatric Disorders Com-\npendium, Arlington, VA, American Psychiatric Association.\nAmerican Psychiatric Association (APA). (2009). Practice\nGuidelines for the Treatment of Patients with Acute\nStress Disorder and Posttraumatic Stress Disor-\nder, [en ligne], http://psychiatryonline.org/content.\naspx ?bookid=28&sectionid=1682793.\nAmerican Psychiatric Association (APA). (2015). DSM-5 –\nManuel Diagnostique et Statistique des Troubles Mentaux.\nTraduction française par M.-A. Crocq, J.-D. Guel & al.,\nElsevier Masson SAS, Paris.\nAssociation des psychiatres du Canada. (2006). «Guide de\npratique clinique : traitement des troubles anxieux»,\nRevue canadienne de psychiatrie, 51(8), supplément 2,\np. 57S-64S.\nAustralian Centre for Posttraumatic Mental Health. (2007).\nAustralian Guidelines for the Treatment of Adults with\nAcute Stress Disorder and Posttraumatic Stress Disorder :\nPractitioner Guide, Australian Government, National Health\nand Medical Research Council, [en ligne], www.acpmh.\nunimelb.edu.au.\nBajor, L. A. & al. (2011). « The psychopharmacology algorith\nproject at the Harvard South Shore program : an update\non posttraumatic stress disorder », Harvard Rev Psychiatry,\n19(5), p. 240-258.\nBenedek, D. M. & Wynn, G. H. (2011). Clinical Manual for\nManagement of PTSD, Washington, DC, American Psychia-\ntric Publishing.\nBremner, D. & al. (1995). «MRI-Based Measurement of\nHippocampal Volume in Patients With Combat-Related\nPosttraumatic Stress Disorder», Am J Psychiatry, 152(7),\np. 973-981.\nCloitre, M. & al. (2012). The ISTSS Expert Consensus\nTreatment Guidelines For Complex PTSD In Adults, [en\nligne], www.istss.org/AM/Template.cfm ?Section=ISTSS_\nComplex_PTSD_Treatment_Guidelines&Template=/CM/\nContentDisplay.cfm&ContentID=5185.\nEye movement desensitization and reprocessing. (2012). Emdria’s\nDenition of EMDR, [en ligne], http://emdrcanada.org/\nwp-content/uploads/2012/12/EMDRIA-Denition-of-EMDR.\npdf.\nFoa, E. B. & al. (2009). Effective Treatments for PTSD,\n2e éd., New York, NY, Guilford Press.\nFriedman, M. J. & al. (2007). Handbook of PTSD, New York,\nNY, The Guilford Press.\nMonat, A. & al. (dir.) (2007). The Praeger Handbook on\nStress and Coping, Westport, CT, Praeger.\nMontel, S. & al. (2012). « Cerveau, comportement et\nadaptation, dans Tarquinio, C. & Spitz É. (dir.), Psycho-\nlogie de l’adaptation, Bruxelles, Begique, De Boeck,\np. 13-30.\nNoel, J. M. & Curtis, J. L. (2013). « The pharmacological\nmanagement of stress reactions », dans Everly, Jr. G. S. &\nLating, J. M. (dir.), A Clinical Guide to the Treatment of the\nHuman Stress Response, 3e éd., New York, NY, Springer,\np. 317-329.\nO’connor, M. F. (2012). « Immunological and neuroimaging\nbiomarkers of complicated grief », Dialogues in Clinical\nNeuroscience, 14(2), p. 141-148.\nOxman, T. E. & al. (1994). « Frequency and correlates of\nadjustment disorder related to cardiac surgery in older\npatients », Psychosomatics, 35(6), p. 557-568.\nPelkonen, M. & al. (2005). « Suicidality in adjustment\ndisorder : Clinical characteristics of adolescent outpatients »,\nEuropean Child & Adolescent Psychiatry, 14(3), p. 174-180.\nPortzky, G. & al. (2005). « Adjustement disorder and the\ncourse of the suicidal process in adolescents », Journal\nof Affective Disorders, 87(2-3), p. 265-270.\nSalovey, P. & Mayer, J. D. (1990). « Emotional intelligence »,\nImagination, Cognition, and Personality, 9, p. 185-211.\nSarason, I. G. & al. (1978). « Assessing the impact of life\nchanges : Development of the Life Experiences Survey »,\nJournal of Consulting and Clinical Psychology, 46(5),\np. 932-946.\nSchnyder, U. & Valach. L. (1997). « Suicide attempters in\na psychiatric emergency room population », General &\nHospital Psychiatry, 19(2), p. 119-129.\nSéguin, M. & al. (dir.) (2012). Intervention en situation de\ncrise et en contexte traumatique, 2e éd., Montréal, Québec,\nGaëtan Morin, Chenelière Éducation.\nSelye, H. (1975). Le stress de la vie : le problème de l’adap-\ntation, Paris, France, Gallimard.\nSickmann, H. M. & al. (2014). « Does stress elicit depression ?\nEvidence from clinical and preclinical studies », dans\nPariante, C.M. & Lapis-Bluhm, M. D. (dir.), Behavioral\nNeurobiology of Stress-Related Disorders, New York, NY,\nSpringer, p. 123-159.\nSifneos, P. E. (1989). « Brief dynamic and crisis therapy »,\ndans Kaplan, H. I. &Sadock. B. J. (dir.), Comprehensive\nTextbook of Psychiatry, vol. 2, 5e éd., Baltimore, MD,\nWilliams & Wilkins. p. 1562-1567\nSodi, R. (1987). « Un entretien avec Primo Levi », dans\nBelpoliti, M. (dir.) Primo Levi, Conversations et entretiens\n1963-1987, Paris, Robert Laffont, 1998, p. 220-236.\nSouthwick, S. M. & Charney, D. S. (2012). Resilience : The\nscience of Mastering life’s greatest challenges, New York,\nNY, Cambridge University Press.\nSpiegel, D. (1996). « Cancer and depression », Britisih Jour-\nnal of Psychiatry Supplement, 30, p. 109-116.\nSroufe, L. A. & al. (2005). The development of the person :\nThe Minnesota Study of Risk and Adaptation from Birth to\nAdulthood, New York, NY, Guilford Press.\nStrain, J. J. (1998). « Adjustment disorder : A multisite study\nof its utilization and interventions in the consultation-liaison\npsychiatry setting », General & Hospital Psychiatry, 20(3),\np. 139-149.\nSwanson, S. A. & Colman, I. (2013). « Association between\nexposure to suicide and suicidality outcomes in youth »,\nCanadian Medical Association Journal, 185(10),\np. 870-877.\nVaillant, G. E. (1998 [1977]). Adaptation to Life, Cambridge,\nMA, Harvard University Press.\nVan Der Klink, J. J. & Van Dijk, F. J. (2003). « Dutch\npractice guidelines for managing adjustment disorders\n",
+  "raw_text_sha256": "d6b56d22358f281379d6a54e3e9aa26e6a581c9588fb3c190b3aee3190dde6eb",
+  "source_page_display": 1118,
+  "source_page_index": 1117
+}

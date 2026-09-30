@@ -1,0 +1,352 @@
+{
+  "block_sequence_sha256": "3765d930eddfbbf2d36468c8cc4091802a52cf802c1143fcbf38e2e3ee673661",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0581-block-0001",
+      "order": 1,
+      "text": "564\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "093fd92288982d40feb61142668eef542e3634207c76d9609b2682f123b61669"
+    },
+    {
+      "bbox": [
+        50.35000228881836,
+        128.25230407714844,
+        372.6473083496094,
+        140.5200653076172
+      ],
+      "block_id": "page-0581-block-0002",
+      "order": 2,
+      "text": "TABLEAU 26.6 Critères diagnostiques du trouble à symptomatologie somatique\n",
+      "text_sha256": "aafc378c2f5a148af3e6988e9b9689a1da953b20dcddf8f88411b1c08e90aca2"
+    },
+    {
+      "bbox": [
+        161.40000915527344,
+        145.47412109375,
+        443.53802490234375,
+        156.05029296875
+      ],
+      "block_id": "page-0581-block-0003",
+      "order": 3,
+      "text": "DSM-5\nDSM-IV-TR\n",
+      "text_sha256": "67d368c78be7842a2bc99b149901566bcadf3c9d62623ea48bafcc32b3563ffb"
+    },
+    {
+      "bbox": [
+        71.45000457763672,
+        158.32286071777344,
+        498.3835144042969,
+        177.34239196777344
+      ],
+      "block_id": "page-0581-block-0004",
+      "order": 4,
+      "text": "300.82 (F45.1) Trouble à symptomatologie somatique (TSS)\n307.80 (F45.4) Trouble douloureux associés\nà des facteurs psychologiques\n",
+      "text_sha256": "a6ba1427493cb8f830aaaf876eeb13f0f13e3620539a26f29d4bd1d6e924d5ae"
+    },
+    {
+      "bbox": [
+        302.25,
+        182.60195922851562,
+        544.9285888671875,
+        242.42813110351562
+      ],
+      "block_id": "page-0581-block-0005",
+      "order": 5,
+      "text": "On estime que des facteurs psychologiques jouent un rôle majeur dans le\ndéclenchement, l’intensité, l’aggravation ou la persistance de la douleur.\n(S’il existe une affection médicale générale concomitante, elle ne doit pas\njouer un rôle majeur dans le déclenchement, l’intensité, l’aggravation, ou la\npersistance de la douleur.) On ne fait pas le diagnostic de ce type de Trouble\ndouloureux si les critères d’un Trouble somatisation sont également réunis.\n",
+      "text_sha256": "f72900de35a27ccc4106282e3a3c40922e9ad7ca03e6ce2bcc1fde78466a4acc"
+    },
+    {
+      "bbox": [
+        52.25,
+        251.001953125,
+        288.447021484375,
+        260.828125
+      ],
+      "block_id": "page-0581-block-0006",
+      "order": 6,
+      "text": "A. Un ou plusieurs symptômes somatiques, causes de détresse ou entraî-\n",
+      "text_sha256": "d6fe00d30a0f632a4e3da782616a9cfe99b2303b4123193b1f2f7d6a473bcc37"
+    },
+    {
+      "bbox": [
+        63.10000228881836,
+        261.001953125,
+        232.21546936035156,
+        270.828125
+      ],
+      "block_id": "page-0581-block-0007",
+      "order": 7,
+      "text": "nant une altération signicative de la vie quotidienne.\n",
+      "text_sha256": "bd725d37da688c55ef0dc196b656a6e12664f5e08c581382f12bfd794b8bc185"
+    },
+    {
+      "bbox": [
+        302.25,
+        251.001953125,
+        529.4388427734375,
+        260.828125
+      ],
+      "block_id": "page-0581-block-0008",
+      "order": 8,
+      "text": "A. Une douleur dans une ou plusieurs localisations anatomiques est au\n",
+      "text_sha256": "af441605268d0f6c69d9258894936f0de677393137dd743dd403a996a89e9e81"
+    },
+    {
+      "bbox": [
+        302.25,
+        261.001953125,
+        542.8886108398438,
+        291.828125
+      ],
+      "block_id": "page-0581-block-0009",
+      "order": 9,
+      "text": "centre du tableau clinique, et cette douleur est d’une intensité sufsante\npour justier un examen clinique.\nB. La douleur est à l’origine d’une souffrance cliniquement signicative\n",
+      "text_sha256": "91272aa779f171a4a48f8836d9443f5c4ba0716f5e0abbcebf919ec3acee3a8c"
+    },
+    {
+      "bbox": [
+        313.1000061035156,
+        292.001953125,
+        530.3322143554688,
+        311.828125
+      ],
+      "block_id": "page-0581-block-0010",
+      "order": 10,
+      "text": "ou d’une altération du fonctionnement social, professionnel, ou dans\nd’autres domaines importants.\n",
+      "text_sha256": "5c1ddce4a8385768082981a37a4481a5d3ee18c8e986f0e9a348686fc75cf5e4"
+    },
+    {
+      "bbox": [
+        52.25,
+        320.45196533203125,
+        284.7256774902344,
+        330.27813720703125
+      ],
+      "block_id": "page-0581-block-0011",
+      "order": 11,
+      "text": "B. Pensées, sentiments et comportements excessifs liés aux symptômes\n",
+      "text_sha256": "e19d6cdbe1606c97a45b4ebb44cbe0b70ca626c6eab7bfcf0e270dc515258ef8"
+    },
+    {
+      "bbox": [
+        63.10000228881836,
+        330.45196533203125,
+        289.947021484375,
+        413.27813720703125
+      ],
+      "block_id": "page-0581-block-0012",
+      "order": 12,
+      "text": "somatiques ou à des préoccupations sur la santé suscitées par ces\nsymptômes, se manifestant par au moins un des éléments suivants :\n1. Pensées persistantes et excessives concernant la gravité de ses\nsymptômes.\n2. Persistance d’un niveau élevé d’anxiété concernant la santé ou les\nsymptômes.\n3. Temps et énergie excessifs dévolus à ces symptômes ou aux préoc-\ncupations concernant la santé.\n",
+      "text_sha256": "56ccba5257e34dc3d39ebe0968550d65c3d2adf4427ea56cb708796cf1aac95b"
+    },
+    {
+      "bbox": [
+        302.25,
+        320.45196533203125,
+        530.3009033203125,
+        330.27813720703125
+      ],
+      "block_id": "page-0581-block-0013",
+      "order": 13,
+      "text": "C. On estime que des facteurs psychologiques jouent un rôle important\n",
+      "text_sha256": "f31bcc2f811e0dba99eed36013f18d83551e31e9fbf2a85dd0aa7bdb1113d141"
+    },
+    {
+      "bbox": [
+        313.25,
+        330.45196533203125,
+        532.8706665039062,
+        350.27813720703125
+      ],
+      "block_id": "page-0581-block-0014",
+      "order": 14,
+      "text": "dans le déclenchement, l’intensité, l’aggravation ou la persistance de\nla douleur.\n",
+      "text_sha256": "6fd0d72240e43073d1645f0ce127a2a8329add901053628f3379daf4450b38e2"
+    },
+    {
+      "bbox": [
+        302.25,
+        421.8519592285156,
+        537.4285278320312,
+        431.6781311035156
+      ],
+      "block_id": "page-0581-block-0015",
+      "order": 15,
+      "text": "D. Le symptôme ou le décit n’est pas produit intentionnellement ou feint\n",
+      "text_sha256": "758c09e8a3eee5ed80ffe393da0b69752e6fdd98d44ce55b2e25226c1d3a0633"
+    },
+    {
+      "bbox": [
+        302.25,
+        431.8519592285156,
+        530.7089233398438,
+        452.6781311035156
+      ],
+      "block_id": "page-0581-block-0016",
+      "order": 16,
+      "text": "(comme dans le Trouble factice ou la Simulation).\nE. La douleur n’est pas mieux expliquée par un Trouble de l’humeur, un\n",
+      "text_sha256": "acb8065a4b1302b7e5fdcf92587002d284a6e96ebda12cb67a2f9e34e9ece701"
+    },
+    {
+      "bbox": [
+        312.5500183105469,
+        452.8519592285156,
+        542.5252075195312,
+        472.6781311035156
+      ],
+      "block_id": "page-0581-block-0017",
+      "order": 17,
+      "text": "Trouble anxieux ou un Trouble psychotique et ne répond pas aux critères\nde la Dyspareunie.\n",
+      "text_sha256": "a673566e90c84a52344f9cba59dafe7695044b73a8cc0f01df23e15bb91ba942"
+    },
+    {
+      "bbox": [
+        52.25,
+        481.3019714355469,
+        293.67010498046875,
+        491.1281433105469
+      ],
+      "block_id": "page-0581-block-0018",
+      "order": 18,
+      "text": "C. Bien qu’un symptôme somatique donné puisse ne pas être continuellement\n",
+      "text_sha256": "24d16d8111a7014f000da28cb41fa5fb759a6b81e425727b8c594f5e01b37e1c"
+    },
+    {
+      "bbox": [
+        62.85000228881836,
+        491.3019714355469,
+        282.51422119140625,
+        501.1281433105469
+      ],
+      "block_id": "page-0581-block-0019",
+      "order": 19,
+      "text": "présent, l’état symptomatique est durable (typiquement plus de 6 mois).\n",
+      "text_sha256": "144fb00c4022c4eee7588244631f069d66b791a9282e4158f78996623aa89684"
+    },
+    {
+      "bbox": [
+        52.25,
+        509.70196533203125,
+        281.6661071777344,
+        550.5281372070312
+      ],
+      "block_id": "page-0581-block-0020",
+      "order": 20,
+      "text": "Spécier si :\nAvec douleur prédominante (anciennement trouble douloureux) : Cette\nspécication concerne les individus dont les symptômes somatiques\nconsistent principalement en une douleur.\n",
+      "text_sha256": "4b47d20f13eaf96572982247da7fddc5f806a70f999060261a3e9f12119be384"
+    },
+    {
+      "bbox": [
+        52.25,
+        559.1519775390625,
+        286.36737060546875,
+        589.9781494140625
+      ],
+      "block_id": "page-0581-block-0021",
+      "order": 21,
+      "text": "Spécier si :\nChronique: Une évolution chronique est caractérisée par des symptômes\nsévères, un handicap marqué et une durée prolongée (plus de 6 mois).\n",
+      "text_sha256": "7f4d7115446bf689a8e12fc2c1968a0376ff1373b756bb1ad5fe8920ebed7e84"
+    },
+    {
+      "bbox": [
+        302.25,
+        559.1519775390625,
+        419.9952697753906,
+        591.0924072265625
+      ],
+      "block_id": "page-0581-block-0022",
+      "order": 22,
+      "text": "Spécier si :\nAigu: durée inférieure à 6 mois\nChronique: durée de 6 mois ou plus\n",
+      "text_sha256": "bf896adeafe910cf2e20a0a833bd9df4d7e67c5b38069ce32deb85d313f0c0b0"
+    },
+    {
+      "bbox": [
+        52.25,
+        599.6019897460938,
+        285.545654296875,
+        662.4281616210938
+      ],
+      "block_id": "page-0581-block-0023",
+      "order": 23,
+      "text": "Spécier la sévérité actuelle :\nLéger: Seulement l’un des symptômes spéciés au critère B est présent.\nMoyen: Deux symptômes ou plus spéciés au critère B sont présents.\nGrave: Deux ou plus des symptômes spéciés au critère B sont présents\net sont associés à des plaintes somatiques multiples (ou à un symptôme\nsomatique très sévère).\n",
+      "text_sha256": "fa22a86e1c9d69eb04b4aae29d5a568e5699998ba6e8d328358394dd8178faf7"
+    },
+    {
+      "bbox": [
+        48.25,
+        671.1203002929688,
+        548.4738159179688,
+        700.625
+      ],
+      "block_id": "page-0581-block-0024",
+      "order": 24,
+      "text": "Sources: APA (2015), p. 367 ; APA (2004), p. 582-583.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American Psychiatric\nAssociation,DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris, 2015. All rights reserved.\n",
+      "text_sha256": "e552e14baf45e1e1f64610632c5a3aa431f8e975fe5fe59f92fa34ea0e06f3db"
+    },
+    {
+      "bbox": [
+        48.25,
+        706.890625,
+        526.610107421875,
+        724.625
+      ],
+      "block_id": "page-0581-block-0025",
+      "order": 25,
+      "text": "Traduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation,DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\n",
+      "text_sha256": "12ed7cea618ee657b8988e6b4bda4ec9cea458d5f4a41e44899e176dc040e9cb"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.9658203125,
+        291.0120849609375,
+        62.95849609375
+      ],
+      "block_id": "page-0581-block-0026",
+      "order": 26,
+      "text": "parmi la catégorie diagnostique du trouble à symptomatologie\nsomatique (TSS) avec douleur prédominante.\n",
+      "text_sha256": "d9d29761414260d6aba0a961ed2643b15e6a27ac0f0f08cc3c981bbd69a592c2"
+    },
+    {
+      "bbox": [
+        48.0,
+        71.8330078125,
+        291.40264892578125,
+        108.95849609375
+      ],
+      "block_id": "page-0581-block-0027",
+      "order": 27,
+      "text": "Étiologies et comorbidités\nLorsqu’il existe une maladie douloureuse chronique, par exemple, le\ncôlon irritable, le patient doit présenter des distorsions cognitives,\n",
+      "text_sha256": "3db22b64dd9008109342ab5578d54b7da2b60cb3b23d732935362f589e459a84"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.27490234375,
+        108.95849609375
+      ],
+      "block_id": "page-0581-block-0028",
+      "order": 28,
+      "text": "émotionnelles et comportementales (critère B) en rapport avec sa\nmaladie pour qu’un diagnostic de TSS avec douleur prédominante\nse superpose au diagnostic physique (voir le tableau 26.6). Dans un\ntel cas, les diagnostics évoqués sont ceux de syndrome du côlon\nirritable et TSS avec douleur prédominante. Tous les syndromes\ndouloureux chroniques peuvent être associés au trouble à symp-\n",
+      "text_sha256": "e33891da0b7026e5d8acd216a417dca0f7b86dfbde89fc54ecad15f7f6c7c049"
+    }
+  ],
+  "coordinates_sha256": "24874a5d13cece7962b4241754a60aa395aab9c0eacb29641fbb4ac8e538876d",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0581",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "564\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nTABLEAU 26.6 Critères diagnostiques du trouble à symptomatologie somatique\nDSM-5\nDSM-IV-TR\n300.82 (F45.1) Trouble à symptomatologie somatique (TSS)\n307.80 (F45.4) Trouble douloureux associés\nà des facteurs psychologiques\nOn estime que des facteurs psychologiques jouent un rôle majeur dans le\ndéclenchement, l’intensité, l’aggravation ou la persistance de la douleur.\n(S’il existe une affection médicale générale concomitante, elle ne doit pas\njouer un rôle majeur dans le déclenchement, l’intensité, l’aggravation, ou la\npersistance de la douleur.) On ne fait pas le diagnostic de ce type de Trouble\ndouloureux si les critères d’un Trouble somatisation sont également réunis.\nA. Un ou plusieurs symptômes somatiques, causes de détresse ou entraî-\nnant une altération signicative de la vie quotidienne.\nA. Une douleur dans une ou plusieurs localisations anatomiques est au\ncentre du tableau clinique, et cette douleur est d’une intensité sufsante\npour justier un examen clinique.\nB. La douleur est à l’origine d’une souffrance cliniquement signicative\nou d’une altération du fonctionnement social, professionnel, ou dans\nd’autres domaines importants.\nB. Pensées, sentiments et comportements excessifs liés aux symptômes\nsomatiques ou à des préoccupations sur la santé suscitées par ces\nsymptômes, se manifestant par au moins un des éléments suivants :\n1. Pensées persistantes et excessives concernant la gravité de ses\nsymptômes.\n2. Persistance d’un niveau élevé d’anxiété concernant la santé ou les\nsymptômes.\n3. Temps et énergie excessifs dévolus à ces symptômes ou aux préoc-\ncupations concernant la santé.\nC. On estime que des facteurs psychologiques jouent un rôle important\ndans le déclenchement, l’intensité, l’aggravation ou la persistance de\nla douleur.\nD. Le symptôme ou le décit n’est pas produit intentionnellement ou feint\n(comme dans le Trouble factice ou la Simulation).\nE. La douleur n’est pas mieux expliquée par un Trouble de l’humeur, un\nTrouble anxieux ou un Trouble psychotique et ne répond pas aux critères\nde la Dyspareunie.\nC. Bien qu’un symptôme somatique donné puisse ne pas être continuellement\nprésent, l’état symptomatique est durable (typiquement plus de 6 mois).\nSpécier si :\nAvec douleur prédominante (anciennement trouble douloureux) : Cette\nspécication concerne les individus dont les symptômes somatiques\nconsistent principalement en une douleur.\nSpécier si :\nChronique: Une évolution chronique est caractérisée par des symptômes\nsévères, un handicap marqué et une durée prolongée (plus de 6 mois).\nSpécier si :\nAigu: durée inférieure à 6 mois\nChronique: durée de 6 mois ou plus\nSpécier la sévérité actuelle :\nLéger: Seulement l’un des symptômes spéciés au critère B est présent.\nMoyen: Deux symptômes ou plus spéciés au critère B sont présents.\nGrave: Deux ou plus des symptômes spéciés au critère B sont présents\net sont associés à des plaintes somatiques multiples (ou à un symptôme\nsomatique très sévère).\nSources: APA (2015), p. 367 ; APA (2004), p. 582-583.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American Psychiatric\nAssociation,DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation,DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\nparmi la catégorie diagnostique du trouble à symptomatologie\nsomatique (TSS) avec douleur prédominante.\nÉtiologies et comorbidités\nLorsqu’il existe une maladie douloureuse chronique, par exemple, le\ncôlon irritable, le patient doit présenter des distorsions cognitives,\némotionnelles et comportementales (critère B) en rapport avec sa\nmaladie pour qu’un diagnostic de TSS avec douleur prédominante\nse superpose au diagnostic physique (voir le tableau 26.6). Dans un\ntel cas, les diagnostics évoqués sont ceux de syndrome du côlon\nirritable et TSS avec douleur prédominante. Tous les syndromes\ndouloureux chroniques peuvent être associés au trouble à symp-\n",
+  "raw_text_sha256": "6d8a4030c4cae2db0a19e5f4c3bd16f200ebc0e65cf7949ac0cc65b43fbf7f26",
+  "source_page_display": 582,
+  "source_page_index": 581
+}

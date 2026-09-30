@@ -1,0 +1,160 @@
+{
+  "block_sequence_sha256": "8112bee36132a2f8841693e628fff887dadc0cd39477757b31fc06d4a4e480b1",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        470.3879699707031,
+        758.8693237304688
+      ],
+      "block_id": "page-0111-block-0001",
+      "order": 1,
+      "text": "94\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2\nDéterminants bio-psycho-sociaux\n",
+      "text_sha256": "0c79447107b83ecfa4390cb861399e4699fd31e0bfb2b5a17b90f8ab0346383d"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.502685546875,
+        272.45849609375
+      ],
+      "block_id": "page-0111-block-0002",
+      "order": 2,
+      "text": "de cellules composant un être humain comporte de 20 000 à\n25 000 gènes. Par comparaison, la mouche drosophile possède\n13 000 gènes, tandis que le rat et la souris comptent un nombre\nde gènes équivalent à celui de l’être humain. Les gènes sont\nregroupés au sein de chromosomes, au nombre de 23 paires\nchez l’humain (voir la gure 5.1), hérités l’un du père, l’autre de\nla mère au moment de la fécondation. Chacune des cellules du\ncorps renferme des copies identiques de tous les chromosomes.\nLe rôle de l’ADN non codant est longtemps resté inconnu et ne\nsert pas à synthétiser de l’ARN dans la cellule. Pour mieux com-\nprendre les questions que cet ADN non codant a suscitées au\nsein de la communauté scientique, il faut savoir que la totalité\ndes séquences codantes des gènes représente moins de 2 % de la\nlongueur totale du génome. Les chercheurs ont donc longtemps\nété confrontés à un phénomène paradoxal : si l’immense majorité\ndu matériel génétique d’une cellule, son ADN non codant, ne sert\npas à produire de protéines, à quoi peut-il bien servir ? On sait\naujourd’hui que l’ADN non codant possède certaines propriétés\nstructurelles qui lui permettent de réguler l’expression de gènes\n(Nair & Howard, 2013).\n",
+      "text_sha256": "00574bff097a849d3818c910d9039ce8b03dc5470bd1d4fb448c31c04e89adb3"
+    },
+    {
+      "bbox": [
+        308.3000183105469,
+        284.0022888183594,
+        491.3205261230469,
+        296.320068359375
+      ],
+      "block_id": "page-0111-block-0003",
+      "order": 3,
+      "text": "FIGURE 5.1 Caryotype montrant les 23 paires\n",
+      "text_sha256": "5d53010ef28cb22a80ef5726f2f4ebe35ecacade290ba2c7545a56ec886bc8a3"
+    },
+    {
+      "bbox": [
+        353.95001220703125,
+        295.852294921875,
+        480.9827575683594,
+        307.820068359375
+      ],
+      "block_id": "page-0111-block-0004",
+      "order": 4,
+      "text": "de chromosomes d’un individu\n",
+      "text_sha256": "6dafd79a431fd9d2a8bd3f5aaf228e84aec6040f94b9825d491d93070280f73c"
+    },
+    {
+      "bbox": [
+        306.0,
+        567.3658447265625,
+        549.28369140625,
+        725.45849609375
+      ],
+      "block_id": "page-0111-block-0005",
+      "order": 5,
+      "text": "Voici les dénitions de quelques notions et termes usuels\nen génétique.\n• Le génotype est l’information génétique portée par le génome\n(la totalité des allèles de tous les gènes d’un individu).\n• Les phénotypes sont les manifestations observables du gé-\nnotype, d’un point de vue anatomique, physiologique, molé-\nculaire, etc. (p. ex., la couleur des yeux ou les symptômes ou\ncomportements associés à la dépression).\n• Les allèles désignent les diérentes versions d’un même gène,\nqui peuvent résulter de polymorphismes et qui sont ensuite\ntransmises aux générations suivantes.\n• Les marqueurs génétiques sont des séquences d’ADN dont\nla localisation sur un chromosome est connue et dont les\n",
+      "text_sha256": "494ae3492b51ca41209aca4dcf2b359385d74939918c16e8b3274ba6a6a1093f"
+    },
+    {
+      "bbox": [
+        45.900001525878906,
+        34.49443435668945,
+        65.20710754394531,
+        81.32548522949219
+      ],
+      "block_id": "page-0111-block-0006",
+      "order": 6,
+      "text": "L\n",
+      "text_sha256": "610fb9a67aa23c84d6c820f52dc2b6c3f8119e52e7dcb9dfc490127d38eb733c"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.91015625,
+        291.19378662109375,
+        132.41934204101562
+      ],
+      "block_id": "page-0111-block-0007",
+      "order": 7,
+      "text": "a génétique humaine a accompli des progrès considérables\nau cours des dernières années : la compréhension du génome\nhumain progresse rapidement et on a déjà réussi à identier\nun grand nombre de gènes aectant la susceptibilité vis-à-vis\nde diverses maladies complexes. Ces avancées permettent de\nmieux comprendre plusieurs mécanismes expliquant les causes\ndes maladies mentales et elles auront des répercussions impor-\ntantes sur la pratique psychiatrique.\n",
+      "text_sha256": "8e4a90bf1b96defef36993c448bb490d51ef3854f72a6f4c74c9c7e5a7ebd5f0"
+    },
+    {
+      "bbox": [
+        48.0,
+        133.7158203125,
+        291.3347473144531,
+        361.45849609375
+      ],
+      "block_id": "page-0111-block-0008",
+      "order": 8,
+      "text": "La génétique psychiatrique comporte trois composantes\ncomplémentaires :\n1. L’épidémiologie génétique, qui étudie la fréquence et la ré-\npartition des maladies. Elle vise notamment à déterminer si\nune maladie est transmise génétiquement et comment elle\nse transmet.\n2. L’identication des gènes de susceptibilité, c’est-à-dire des\ngènes qui prédisposent à la survenue d’une maladie. Il est\npossible d’identier ces gènes à l’aide des méthodes de la\ngénétique moléculaire et de la statistique génétique.\n3. L’intervention des mécanismes épigénétiques, qui englobent\ntous les phénomènes prétranscriptionnels au cours desquels\nl’environnement interagit avec le code génétique an de pro-\nvoquer ou d’atténuer l’expression de la maladie.\nLorsqu’on connaît les gènes de susceptibilité ou les mécanismes\népigénétiques de régulation qui prédisposent à une maladie, il\ndevient possible d’identier les protéines dont la synthèse est\ngouvernée par les gènes. L’analyse des protéines proprement\ndite dépasse le cadre du présent chapitre.\n",
+      "text_sha256": "068b0b30b596888bb52802ec33bccb047bfb3dceb914716cf6b4e3ef9efc13a5"
+    },
+    {
+      "bbox": [
+        48.0,
+        362.5658264160156,
+        291.01751708984375,
+        396.3085021972656
+      ],
+      "block_id": "page-0111-block-0009",
+      "order": 9,
+      "text": "Grâce à son système de santé publique, la stabilité de sa popu-\nlation et sa relative homogénéité génétique, le Québec constitue\nune région privilégiée pour mener de telles études.\n",
+      "text_sha256": "df0020d9240041d10811e931331c51648f0e91c1dc256f74e1049d6e1f9eebd6"
+    },
+    {
+      "bbox": [
+        60.0,
+        414.7431640625,
+        213.08517456054688,
+        433.7189636230469
+      ],
+      "block_id": "page-0111-block-0010",
+      "order": 10,
+      "text": "5.1\nConcepts de base\n",
+      "text_sha256": "a6ef62083ce3df2692910c55cb8eecfede8a153b6d5676fd5f70ea23acff574a"
+    },
+    {
+      "bbox": [
+        48.0,
+        447.5658264160156,
+        291.4755859375,
+        597.5585327148438
+      ],
+      "block_id": "page-0111-block-0011",
+      "order": 11,
+      "text": "Il est nécessaire de connaître un certain nombre de concepts de\nbase en génétique pour comprendre l’application des méthodes\nde recherche génétique dans le domaine des maladies psychia-\ntriques. Tout d’abord, il est important de souligner que les gènes\nne conditionnent pas directement nos réactions ou nos pensées à\nl’égard des événements de la vie courante. Dans le cas de maladies\ncomplexes, les gènes ne provoquent pas eux-mêmes les halluci-\nnations ou les délires liés à la schizophrénie. Un gène encode des\nprotéines, c’est-à-dire qu’il porte une information génétique qui\ndétermine la production d’une protéine. Ces protéines modient\nles réponses de la cellule aux stimuli extérieurs. L’organisation des\ncellules entre elles à la suite de ces réponses aecte la physiologie\ncérébrale, ce qui engendre ensuite des comportements.\n",
+      "text_sha256": "c968a1426f0dc0c799473ec4d30daaef7f073e8825a716651131b3df5b15b4f7"
+    },
+    {
+      "bbox": [
+        48.0,
+        598.7158203125,
+        291.09844970703125,
+        725.45849609375
+      ],
+      "block_id": "page-0111-block-0012",
+      "order": 12,
+      "text": "Le génome désigne l’ensemble du matériel génétique contenu\ndans chacune des cellules d’un organisme, sous forme d’acide\ndésoxyribonucléique (ADN). L’ADN est le vecteur de l’informa-\ntion génétique pour tous les êtres vivants et on peut distinguer\ndes régions de l’ADN codantes (c.-à-d. les gènes, mais aussi de\nl’ADN codant pour les séquences d’acides ribonucléiques parti-\nculiers appelés « ARN de régulation », qui serviront à modier\nl’expression de certains gènes) et des régions non codantes. Dans\nla cellule, les gènes sont formés de sections d’ADN intervenant\ndirectement dans la synthèse ou dans l’expression de protéines.\nOn estime que l’ADN présent dans chacune des 10 000 milliards\n",
+      "text_sha256": "6a78e12d9a8d90925b47ac5600192a4a5c7061006c8f9de0979dd76a35520b09"
+    }
+  ],
+  "coordinates_sha256": "8a1fc5653529f965b39697cf0d4bf18cbe366b963fe32e4d78fb42ece5c9c7ad",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0111",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "94\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2\nDéterminants bio-psycho-sociaux\nde cellules composant un être humain comporte de 20 000 à\n25 000 gènes. Par comparaison, la mouche drosophile possède\n13 000 gènes, tandis que le rat et la souris comptent un nombre\nde gènes équivalent à celui de l’être humain. Les gènes sont\nregroupés au sein de chromosomes, au nombre de 23 paires\nchez l’humain (voir la gure 5.1), hérités l’un du père, l’autre de\nla mère au moment de la fécondation. Chacune des cellules du\ncorps renferme des copies identiques de tous les chromosomes.\nLe rôle de l’ADN non codant est longtemps resté inconnu et ne\nsert pas à synthétiser de l’ARN dans la cellule. Pour mieux com-\nprendre les questions que cet ADN non codant a suscitées au\nsein de la communauté scientique, il faut savoir que la totalité\ndes séquences codantes des gènes représente moins de 2 % de la\nlongueur totale du génome. Les chercheurs ont donc longtemps\nété confrontés à un phénomène paradoxal : si l’immense majorité\ndu matériel génétique d’une cellule, son ADN non codant, ne sert\npas à produire de protéines, à quoi peut-il bien servir ? On sait\naujourd’hui que l’ADN non codant possède certaines propriétés\nstructurelles qui lui permettent de réguler l’expression de gènes\n(Nair & Howard, 2013).\nFIGURE 5.1 Caryotype montrant les 23 paires\nde chromosomes d’un individu\nVoici les dénitions de quelques notions et termes usuels\nen génétique.\n• Le génotype est l’information génétique portée par le génome\n(la totalité des allèles de tous les gènes d’un individu).\n• Les phénotypes sont les manifestations observables du gé-\nnotype, d’un point de vue anatomique, physiologique, molé-\nculaire, etc. (p. ex., la couleur des yeux ou les symptômes ou\ncomportements associés à la dépression).\n• Les allèles désignent les diérentes versions d’un même gène,\nqui peuvent résulter de polymorphismes et qui sont ensuite\ntransmises aux générations suivantes.\n• Les marqueurs génétiques sont des séquences d’ADN dont\nla localisation sur un chromosome est connue et dont les\nL\na génétique humaine a accompli des progrès considérables\nau cours des dernières années : la compréhension du génome\nhumain progresse rapidement et on a déjà réussi à identier\nun grand nombre de gènes aectant la susceptibilité vis-à-vis\nde diverses maladies complexes. Ces avancées permettent de\nmieux comprendre plusieurs mécanismes expliquant les causes\ndes maladies mentales et elles auront des répercussions impor-\ntantes sur la pratique psychiatrique.\nLa génétique psychiatrique comporte trois composantes\ncomplémentaires :\n1. L’épidémiologie génétique, qui étudie la fréquence et la ré-\npartition des maladies. Elle vise notamment à déterminer si\nune maladie est transmise génétiquement et comment elle\nse transmet.\n2. L’identication des gènes de susceptibilité, c’est-à-dire des\ngènes qui prédisposent à la survenue d’une maladie. Il est\npossible d’identier ces gènes à l’aide des méthodes de la\ngénétique moléculaire et de la statistique génétique.\n3. L’intervention des mécanismes épigénétiques, qui englobent\ntous les phénomènes prétranscriptionnels au cours desquels\nl’environnement interagit avec le code génétique an de pro-\nvoquer ou d’atténuer l’expression de la maladie.\nLorsqu’on connaît les gènes de susceptibilité ou les mécanismes\népigénétiques de régulation qui prédisposent à une maladie, il\ndevient possible d’identier les protéines dont la synthèse est\ngouvernée par les gènes. L’analyse des protéines proprement\ndite dépasse le cadre du présent chapitre.\nGrâce à son système de santé publique, la stabilité de sa popu-\nlation et sa relative homogénéité génétique, le Québec constitue\nune région privilégiée pour mener de telles études.\n5.1\nConcepts de base\nIl est nécessaire de connaître un certain nombre de concepts de\nbase en génétique pour comprendre l’application des méthodes\nde recherche génétique dans le domaine des maladies psychia-\ntriques. Tout d’abord, il est important de souligner que les gènes\nne conditionnent pas directement nos réactions ou nos pensées à\nl’égard des événements de la vie courante. Dans le cas de maladies\ncomplexes, les gènes ne provoquent pas eux-mêmes les halluci-\nnations ou les délires liés à la schizophrénie. Un gène encode des\nprotéines, c’est-à-dire qu’il porte une information génétique qui\ndétermine la production d’une protéine. Ces protéines modient\nles réponses de la cellule aux stimuli extérieurs. L’organisation des\ncellules entre elles à la suite de ces réponses aecte la physiologie\ncérébrale, ce qui engendre ensuite des comportements.\nLe génome désigne l’ensemble du matériel génétique contenu\ndans chacune des cellules d’un organisme, sous forme d’acide\ndésoxyribonucléique (ADN). L’ADN est le vecteur de l’informa-\ntion génétique pour tous les êtres vivants et on peut distinguer\ndes régions de l’ADN codantes (c.-à-d. les gènes, mais aussi de\nl’ADN codant pour les séquences d’acides ribonucléiques parti-\nculiers appelés « ARN de régulation », qui serviront à modier\nl’expression de certains gènes) et des régions non codantes. Dans\nla cellule, les gènes sont formés de sections d’ADN intervenant\ndirectement dans la synthèse ou dans l’expression de protéines.\nOn estime que l’ADN présent dans chacune des 10 000 milliards\n",
+  "raw_text_sha256": "5323f0e14399bff8a60719ddd1d3f643ccaee44e47157c39bba0fceee770238a",
+  "source_page_display": 112,
+  "source_page_index": 111
+}

@@ -1,0 +1,508 @@
+{
+  "block_sequence_sha256": "881ec80eb77b46cfb2a1bd172f8036e52aa66fd3e17821cf79c94da51c98ce39",
+  "blocks": [
+    {
+      "bbox": [
+        362.5,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0610-block-0001",
+      "order": 1,
+      "text": "Chapitre 27\nTroubles neurocognitifs\n593\n",
+      "text_sha256": "1f5c2e0e81243dcea66f0ba1f2efed43e33968004477e7a9786c4c1aa5dd9598"
+    },
+    {
+      "bbox": [
+        58.25,
+        430.12286376953125,
+        278.9200134277344,
+        440.14239501953125
+      ],
+      "block_id": "page-0610-block-0002",
+      "order": 2,
+      "text": "Début abrupt\n2\n",
+      "text_sha256": "cd433f52edc2591827218e213fae1cabfd1ad78ea257e0c3bcc5ded91e3b27d8"
+    },
+    {
+      "bbox": [
+        58.25,
+        444.9728698730469,
+        278.9200134277344,
+        454.9924011230469
+      ],
+      "block_id": "page-0610-block-0003",
+      "order": 3,
+      "text": "Détérioration par palier\n1\n",
+      "text_sha256": "889b87621216b0d2b2e0a6d440ed418df2c71598ad5cdd11409a1bd5fc3cb2a4"
+    },
+    {
+      "bbox": [
+        58.25,
+        459.7728576660156,
+        278.9200134277344,
+        469.7923889160156
+      ],
+      "block_id": "page-0610-block-0004",
+      "order": 4,
+      "text": "Évolution uctuante\n2\n",
+      "text_sha256": "b3d323308063182c5c74b9da51fac0292c5418bdf27b4d55d50987ac4cd7800f"
+    },
+    {
+      "bbox": [
+        58.25,
+        474.62286376953125,
+        278.9200134277344,
+        484.64239501953125
+      ],
+      "block_id": "page-0610-block-0005",
+      "order": 5,
+      "text": "Confusion nocturne\n1\n",
+      "text_sha256": "346f68cf506fbfe26a209d098c3b60e81b48e978f3025303422c1c2193dadc51"
+    },
+    {
+      "bbox": [
+        58.25,
+        489.4228515625,
+        278.9200134277344,
+        499.4423828125
+      ],
+      "block_id": "page-0610-block-0006",
+      "order": 6,
+      "text": "Préservation de la personnalité\n1\n",
+      "text_sha256": "a22f845bd0343804e0828b7cee5dec012370b5c886f297c88275229ec58b5e30"
+    },
+    {
+      "bbox": [
+        58.25,
+        504.27288818359375,
+        278.9200134277344,
+        514.2924194335938
+      ],
+      "block_id": "page-0610-block-0007",
+      "order": 7,
+      "text": "Dépression\n1\n",
+      "text_sha256": "5bd8eb2e97af880c5957154692a0df668930000fa1cd420f0310b1ccfa183a61"
+    },
+    {
+      "bbox": [
+        58.25,
+        519.0728759765625,
+        278.9200134277344,
+        529.0924072265625
+      ],
+      "block_id": "page-0610-block-0008",
+      "order": 8,
+      "text": "Plaintes somatiques\n1\n",
+      "text_sha256": "b1ea1acf05e36a71b9ed28e055faf7de4ccc8c188ec9c596d49b64299fb61ba5"
+    },
+    {
+      "bbox": [
+        58.25,
+        533.9228515625,
+        278.9200134277344,
+        543.9423828125
+      ],
+      "block_id": "page-0610-block-0009",
+      "order": 9,
+      "text": "Incontinence émotionnelle\n1\n",
+      "text_sha256": "559bd4ed2e4895a9d6f40e0cc571873dcc5b9e91b4401b2ca140dbb5e4d2b078"
+    },
+    {
+      "bbox": [
+        58.25,
+        548.7228393554688,
+        278.9200134277344,
+        558.7423706054688
+      ],
+      "block_id": "page-0610-block-0010",
+      "order": 10,
+      "text": "Hypertension\n1\n",
+      "text_sha256": "e48285b45be25a2acdedab3ba159d353c5634e59238a29457a891ed6f675c840"
+    },
+    {
+      "bbox": [
+        58.25,
+        563.5728759765625,
+        278.9200134277344,
+        573.5924072265625
+      ],
+      "block_id": "page-0610-block-0011",
+      "order": 11,
+      "text": "Histoire d’AVC\n2\n",
+      "text_sha256": "856e8bd26c5882a3b97ded2924e9cd6feed69b7eb8888efa988f4ccd1bb17d5c"
+    },
+    {
+      "bbox": [
+        58.25,
+        578.3728637695312,
+        278.9200134277344,
+        588.3923950195312
+      ],
+      "block_id": "page-0610-block-0012",
+      "order": 12,
+      "text": "Athérosclérose associée\n1\n",
+      "text_sha256": "2ebba83114e4702d2e278be3774f584279896b80629532d0ff38a6df226f22da"
+    },
+    {
+      "bbox": [
+        58.25,
+        593.2228393554688,
+        278.9200134277344,
+        603.2423706054688
+      ],
+      "block_id": "page-0610-block-0013",
+      "order": 13,
+      "text": "Symptômes neurologiques focaux\n2\n",
+      "text_sha256": "eef3d89a46af42fa706174b08c1d69aef8cfa0c40c8ab9ff601a83995f2c0b60"
+    },
+    {
+      "bbox": [
+        58.25,
+        608.0228881835938,
+        248.79212951660156,
+        672.9281616210938
+      ],
+      "block_id": "page-0610-block-0014",
+      "order": 14,
+      "text": "Signes neurologiques focaux :\n• réexes ostéotendineux vifs ;\n• Babinski ;\n• syndrome pseudobulbaire ;\n• troubles de la marche ;\n• faiblesse d’une extrémité d’un membre (bras ou jambe).\n",
+      "text_sha256": "a2fbb8c551d34c86b08bccd76fd1e9884ad93caa3f3e86763acc0459cb208b6b"
+    },
+    {
+      "bbox": [
+        274.6000061035156,
+        608.0228881835938,
+        278.9200134277344,
+        618.0424194335938
+      ],
+      "block_id": "page-0610-block-0015",
+      "order": 15,
+      "text": "2\n",
+      "text_sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3"
+    },
+    {
+      "bbox": [
+        56.25,
+        408.5022888183594,
+        241.12277221679688,
+        421.52008056640625
+      ],
+      "block_id": "page-0610-block-0016",
+      "order": 16,
+      "text": "TABLEAU 27.7 Échelle d’ischémie d’Hachinski\n",
+      "text_sha256": "43d764ccbdc5c966ea4ae5f1b1a21a2e275715d3f14b4307e7ccfca7851d4145"
+    },
+    {
+      "bbox": [
+        53.85000228881836,
+        677.8406372070312,
+        174.53199768066406,
+        686.7088623046875
+      ],
+      "block_id": "page-0610-block-0017",
+      "order": 17,
+      "text": "Source : Adapté de Hachinski & al. (1975).\n",
+      "text_sha256": "1ec71f9006761fb0e5543fc24862f8d5cc386989794d3bdf9083dbb1aed5f9de"
+    },
+    {
+      "bbox": [
+        312.0,
+        408.4658203125,
+        555.033935546875,
+        522.45849609375
+      ],
+      "block_id": "page-0610-block-0018",
+      "order": 18,
+      "text": "figure 27.2) et des névrites de Lewy dans le cortex, surtout\nau niveau des lobes frontaux et des lobes temporaux, mais\naussi de l’amygdale, du cortex occipital et de la rétine. On\npeut trouver également des plaques amyloïdes, mais à un\ndegré moindre que dans la DTA, et on trouve peu ou pas\nd’enchevêtrements neurofibrillaires. Parfois, on constate une\nréduction des niveaux d’acétylcholine et de sérotonine ainsi\nqu’une perte de 40 à 60 % des niveaux de dopamine (contre\n85 % dans la démence due à la maladie de Parkinson et 0 %\ndans la DTA) (Goldmann & al., 2008).\n",
+      "text_sha256": "cbf419919d08150bd2688db9b0efbfca7dad537ceb3db668d5bfa36c88d9cb20"
+    },
+    {
+      "bbox": [
+        312.0,
+        527.352294921875,
+        555.1248779296875,
+        687.45849609375
+      ],
+      "block_id": "page-0610-block-0019",
+      "order": 19,
+      "text": "Trouble neurocognitif dû à une infection par le VIH\nLe trouble neurocognitif dû au virus de l’immunodécience\nhumaine (VIH) se caractérise par :\n• des oublis, une atteinte de l’attention, de la concentration, de\nl’abstraction, du langage, de la résolution de problèmes ;\n• des dicultés visuospatiales ;\n• de l’apathie, une lenteur ;\n• des symptômes dépressifs et un retrait social.\nChez l’enfant, elle se traduit par un retard de développement,\nune hypertonie, une microcéphalie et une calcification des\nnoyaux gris centraux. Chez l’adulte, on observe dans le LCR\nune protéinorachie normale ou légèrement augmentée, une\nlégère lymphocytose et on peut y isoler directement le VIH. À\n",
+      "text_sha256": "0b52939b5b4f3df5cef7050e12bf82a4f868871c0ac76c4a465dcff95b347994"
+    },
+    {
+      "bbox": [
+        54.0,
+        379.6906433105469,
+        233.1012725830078,
+        388.5588684082031
+      ],
+      "block_id": "page-0610-block-0020",
+      "order": 20,
+      "text": "Sources : Adapté de Levenson (2011) ; Weiner & Lipton (2009).\n",
+      "text_sha256": "01b03d002d36dcd8f28ee1f88f083d26b2dffc3528b3254cb8bbc778a85b9024"
+    },
+    {
+      "bbox": [
+        121.8499984741211,
+        60.52412414550781,
+        515.6090087890625,
+        71.10029602050781
+      ],
+      "block_id": "page-0610-block-0021",
+      "order": 21,
+      "text": "Facteurs\nDémence corticale\nDémence sous-corticale\n",
+      "text_sha256": "2e9de94067749cfe84ed7b94b8b1cb5539acaf844ddd24cac5b6a2ccd803a337"
+    },
+    {
+      "bbox": [
+        59.25,
+        76.9228515625,
+        308.85504150390625,
+        97.828125
+      ],
+      "block_id": "page-0610-block-0022",
+      "order": 22,
+      "text": "Type de démence\nDTA\nDémence frontotemporale\n",
+      "text_sha256": "8beb93881b4c4d5a4473b160772c224668c7411e6bbf5e021d9869406b55f4bb"
+    },
+    {
+      "bbox": [
+        392.8999938964844,
+        77.001953125,
+        464.6930236816406,
+        97.828125
+      ],
+      "block_id": "page-0610-block-0023",
+      "order": 23,
+      "text": "Maladie de Parkinson\nMaladie de Huntington\n",
+      "text_sha256": "c778419a73d507bea9e888b470d80785e3a5d8079bd1b27756a9e80a41249713"
+    },
+    {
+      "bbox": [
+        59.25,
+        103.3228530883789,
+        296.4010925292969,
+        124.2281265258789
+      ],
+      "block_id": "page-0610-block-0024",
+      "order": 24,
+      "text": "Mémoire\nAmnésie\nTrouble de l’encodage\n",
+      "text_sha256": "1e352002ab157e4d64f970cece138611bd350271a07579953b629a7f21888b9d"
+    },
+    {
+      "bbox": [
+        392.8999938964844,
+        103.4019546508789,
+        448.3780517578125,
+        124.2281265258789
+      ],
+      "block_id": "page-0610-block-0025",
+      "order": 25,
+      "text": "Distraction\nTrouble du rappel\n",
+      "text_sha256": "85ebe470c71ed970f89671b69ee0c1b734e7b9b84e8413dcce5512b62cbcc942"
+    },
+    {
+      "bbox": [
+        59.25,
+        129.77285766601562,
+        422.8789978027344,
+        139.79238891601562
+      ],
+      "block_id": "page-0610-block-0026",
+      "order": 26,
+      "text": "Mémoire de rappel\nDiminuée\nDiminuée\n",
+      "text_sha256": "a40160d802b474baad58e54156043b9fd6f5183f509b4891737fdb8ba87bc5fb"
+    },
+    {
+      "bbox": [
+        59.25,
+        145.1728515625,
+        419.5670166015625,
+        155.1923828125
+      ],
+      "block_id": "page-0610-block-0027",
+      "order": 27,
+      "text": "Mémoire de reconnaissance\nAgnosie\nNormale\n",
+      "text_sha256": "e8273c62848b19c7074191b653a8f9e9580f9a515c26838320930128343245e5"
+    },
+    {
+      "bbox": [
+        59.25,
+        160.6228485107422,
+        413.0509948730469,
+        170.6423797607422
+      ],
+      "block_id": "page-0610-block-0028",
+      "order": 28,
+      "text": "Mémoire avec indiçage\nInefcace\nAidant\n",
+      "text_sha256": "ab23735fcf8d7ac3d3ced7cf96cbf8d6da7c863b67689110818834d37dd89d9e"
+    },
+    {
+      "bbox": [
+        59.25,
+        176.02285766601562,
+        422.8789978027344,
+        186.04238891601562
+      ],
+      "block_id": "page-0610-block-0029",
+      "order": 29,
+      "text": "Mémoire procédurale\nNormale\nDiminuée\n",
+      "text_sha256": "eb03972420e61d74db2eb94eebdc86732a80db08d502d3c9141a285340f58f7a"
+    },
+    {
+      "bbox": [
+        59.25,
+        191.4728546142578,
+        418.3789978027344,
+        201.4923858642578
+      ],
+      "block_id": "page-0610-block-0030",
+      "order": 30,
+      "text": "Vitesse des processus\nNormale\nRalentie\n",
+      "text_sha256": "ed4e9234909f59e019c06fb5da375507fc5d5499aa91a70b52108f5cb0de4f5f"
+    },
+    {
+      "bbox": [
+        59.25,
+        206.8728485107422,
+        338.2538757324219,
+        226.7781219482422
+      ],
+      "block_id": "page-0610-block-0031",
+      "order": 31,
+      "text": "Fonctions exécutives\nAltération de l’attention partagée et\ndes processus d’inhibition\n",
+      "text_sha256": "e689a8f5c53ff69a967fd8a419c2c377e1cee4d002f8fbbbe71a9a3fde6e6049"
+    },
+    {
+      "bbox": [
+        392.8999938964844,
+        206.9519500732422,
+        542.6173706054688,
+        226.7781219482422
+      ],
+      "block_id": "page-0610-block-0032",
+      "order": 32,
+      "text": "Altération majeure ayant des répercussions sur\nles autres fonctions cognitives\n",
+      "text_sha256": "6e2571483622d06753c44304636864fa7153bf351edf2111b006624a9a292df7"
+    },
+    {
+      "bbox": [
+        59.25,
+        232.32286071777344,
+        415.7330017089844,
+        242.34239196777344
+      ],
+      "block_id": "page-0610-block-0033",
+      "order": 33,
+      "text": "Calcul\nDiminué\nNormal\n",
+      "text_sha256": "991384f55d63c03ae68e497b5596bd9707212b611cdeb73d8523564b5d1d0a0b"
+    },
+    {
+      "bbox": [
+        59.25,
+        247.7228546142578,
+        450.1130065917969,
+        257.74237060546875
+      ],
+      "block_id": "page-0610-block-0034",
+      "order": 34,
+      "text": "Visuoperception\nDiminution importante\nLégère diminution\n",
+      "text_sha256": "aac45b7617c22c9a826547656f191a27aa9ea0c7d18db108adc12e3926baed6e"
+    },
+    {
+      "bbox": [
+        59.25,
+        263.1728515625,
+        425.0570068359375,
+        273.1923828125
+      ],
+      "block_id": "page-0610-block-0035",
+      "order": 35,
+      "text": "Langage\nAphasie\nDysarthrie\n",
+      "text_sha256": "0b99021c2b1d1aacf46f910a04ab61728e42521490a57cbabbee5873ffe2399f"
+    },
+    {
+      "bbox": [
+        59.25,
+        278.5728454589844,
+        423.0679931640625,
+        288.5923767089844
+      ],
+      "block_id": "page-0610-block-0036",
+      "order": 36,
+      "text": "Praxies\nAtteintes\nNormales\n",
+      "text_sha256": "d36b072cf5aef1b9c7eb622fadf3a335c418080f54e8c4ba043d723f5e307599"
+    },
+    {
+      "bbox": [
+        59.25,
+        294.0228576660156,
+        468.958984375,
+        325.9281311035156
+      ],
+      "block_id": "page-0610-block-0037",
+      "order": 37,
+      "text": "Démarche\nNormale jusqu’à tardivement\nFestinante (à petits pas)\nParkinsonienne\nMagnétique\n",
+      "text_sha256": "bbc2fa8a5dc6d6afbc7db4a745e938cac4b9edbe670e1c684ead3d41e4be1a25"
+    },
+    {
+      "bbox": [
+        59.25,
+        331.4228515625,
+        475.5040588378906,
+        341.4423828125
+      ],
+      "block_id": "page-0610-block-0038",
+      "order": 38,
+      "text": "Signes extrapyramidaux\nRares ou tardifs\nTrès marqués et précoces\n",
+      "text_sha256": "a9a2bbcaca636066ac012800970cc5263140c637e812fc00ac24cb2123907f26"
+    },
+    {
+      "bbox": [
+        59.25,
+        346.87286376953125,
+        449.05999755859375,
+        356.89239501953125
+      ],
+      "block_id": "page-0610-block-0039",
+      "order": 39,
+      "text": "Syndrome affectif\nMoins fréquent\nFréquent et grave\n",
+      "text_sha256": "3147390c5a399868e65c5ff23cb66956609e9966f7dff9b09ac9e4d2397d7977"
+    },
+    {
+      "bbox": [
+        59.25,
+        362.3228454589844,
+        440.6321105957031,
+        372.3423767089844
+      ],
+      "block_id": "page-0610-block-0040",
+      "order": 40,
+      "text": "Personnalité\nPréservée\nApathie, inertie\n",
+      "text_sha256": "f80d27d3b2f57484759f0a4f7783219eac0f681ecc87ee671af64ed0fba3459c"
+    },
+    {
+      "bbox": [
+        56.29999923706055,
+        41.002296447753906,
+        460.365966796875,
+        54.02006912231445
+      ],
+      "block_id": "page-0610-block-0041",
+      "order": 41,
+      "text": "TABLEAU 27.6 Comparaison des atteintes cognitives dans les démences corticale et sous-corticale\n",
+      "text_sha256": "ed340538484a3562be1e3884e79e87830f2519480632329ae5f6011e8e48772e"
+    }
+  ],
+  "coordinates_sha256": "dc463f10b152f557fa54ca419f9ae4f2ea54c7ba6b5da6515f3499cc2a51dbb0",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0610",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 27\nTroubles neurocognitifs\n593\nDébut abrupt\n2\nDétérioration par palier\n1\nÉvolution uctuante\n2\nConfusion nocturne\n1\nPréservation de la personnalité\n1\nDépression\n1\nPlaintes somatiques\n1\nIncontinence émotionnelle\n1\nHypertension\n1\nHistoire d’AVC\n2\nAthérosclérose associée\n1\nSymptômes neurologiques focaux\n2\nSignes neurologiques focaux :\n• réexes ostéotendineux vifs ;\n• Babinski ;\n• syndrome pseudobulbaire ;\n• troubles de la marche ;\n• faiblesse d’une extrémité d’un membre (bras ou jambe).\n2\nTABLEAU 27.7 Échelle d’ischémie d’Hachinski\nSource : Adapté de Hachinski & al. (1975).\nfigure 27.2) et des névrites de Lewy dans le cortex, surtout\nau niveau des lobes frontaux et des lobes temporaux, mais\naussi de l’amygdale, du cortex occipital et de la rétine. On\npeut trouver également des plaques amyloïdes, mais à un\ndegré moindre que dans la DTA, et on trouve peu ou pas\nd’enchevêtrements neurofibrillaires. Parfois, on constate une\nréduction des niveaux d’acétylcholine et de sérotonine ainsi\nqu’une perte de 40 à 60 % des niveaux de dopamine (contre\n85 % dans la démence due à la maladie de Parkinson et 0 %\ndans la DTA) (Goldmann & al., 2008).\nTrouble neurocognitif dû à une infection par le VIH\nLe trouble neurocognitif dû au virus de l’immunodécience\nhumaine (VIH) se caractérise par :\n• des oublis, une atteinte de l’attention, de la concentration, de\nl’abstraction, du langage, de la résolution de problèmes ;\n• des dicultés visuospatiales ;\n• de l’apathie, une lenteur ;\n• des symptômes dépressifs et un retrait social.\nChez l’enfant, elle se traduit par un retard de développement,\nune hypertonie, une microcéphalie et une calcification des\nnoyaux gris centraux. Chez l’adulte, on observe dans le LCR\nune protéinorachie normale ou légèrement augmentée, une\nlégère lymphocytose et on peut y isoler directement le VIH. À\nSources : Adapté de Levenson (2011) ; Weiner & Lipton (2009).\nFacteurs\nDémence corticale\nDémence sous-corticale\nType de démence\nDTA\nDémence frontotemporale\nMaladie de Parkinson\nMaladie de Huntington\nMémoire\nAmnésie\nTrouble de l’encodage\nDistraction\nTrouble du rappel\nMémoire de rappel\nDiminuée\nDiminuée\nMémoire de reconnaissance\nAgnosie\nNormale\nMémoire avec indiçage\nInefcace\nAidant\nMémoire procédurale\nNormale\nDiminuée\nVitesse des processus\nNormale\nRalentie\nFonctions exécutives\nAltération de l’attention partagée et\ndes processus d’inhibition\nAltération majeure ayant des répercussions sur\nles autres fonctions cognitives\nCalcul\nDiminué\nNormal\nVisuoperception\nDiminution importante\nLégère diminution\nLangage\nAphasie\nDysarthrie\nPraxies\nAtteintes\nNormales\nDémarche\nNormale jusqu’à tardivement\nFestinante (à petits pas)\nParkinsonienne\nMagnétique\nSignes extrapyramidaux\nRares ou tardifs\nTrès marqués et précoces\nSyndrome affectif\nMoins fréquent\nFréquent et grave\nPersonnalité\nPréservée\nApathie, inertie\nTABLEAU 27.6 Comparaison des atteintes cognitives dans les démences corticale et sous-corticale\n",
+  "raw_text_sha256": "3feeb2f2b5e60b005153bf7e6348ef249adad0a6b3972320345ee780b3e76b3d",
+  "source_page_display": 611,
+  "source_page_index": 610
+}

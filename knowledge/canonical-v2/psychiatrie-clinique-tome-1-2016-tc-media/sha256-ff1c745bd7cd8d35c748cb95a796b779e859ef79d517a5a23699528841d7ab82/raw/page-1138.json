@@ -1,0 +1,1444 @@
+{
+  "block_sequence_sha256": "69f7feb954152c142a88ea176dad142fcd9b551fbf267f8b74414f7aea202431",
+  "blocks": [
+    {
+      "bbox": [
+        54.0,
+        132.5849609375,
+        160.152587890625,
+        140.7734375
+      ],
+      "block_id": "page-1138-block-0001",
+      "order": 1,
+      "text": "Adénohypophyse : hypophyse antérieure\n",
+      "text_sha256": "6b479794219b8b53a7271d28d7f67f84af7125a28f9bbadbbef643e6cb1a7d90"
+    },
+    {
+      "bbox": [
+        54.0,
+        144.2849578857422,
+        205.9700927734375,
+        152.4734344482422
+      ],
+      "block_id": "page-1138-block-0002",
+      "order": 2,
+      "text": "Adhérence (adhésion) interthalamique : commissure grise\n",
+      "text_sha256": "a29ba8556c89e582c1b527d6dc6873f537e1925609042311506cde67f2e4830a"
+    },
+    {
+      "bbox": [
+        54.0,
+        156.0349578857422,
+        117.5750732421875,
+        164.2234344482422
+      ],
+      "block_id": "page-1138-block-0003",
+      "order": 3,
+      "text": "Adrénaline : épinéphrine\n",
+      "text_sha256": "e339150834219a9f25daa4b9a5d24cd2b4032c6168e24c3846d8deb707f6cf5c"
+    },
+    {
+      "bbox": [
+        54.0,
+        167.73497009277344,
+        198.92015075683594,
+        185.62344360351562
+      ],
+      "block_id": "page-1138-block-0004",
+      "order": 4,
+      "text": "Aire auditive temporale : cortex auditif primaire, aire de\nWernicke\n",
+      "text_sha256": "281819b42eb2ff15cd81bf4ecdb0d7acf00b5fbc0fe6b2bfada80df7176be794"
+    },
+    {
+      "bbox": [
+        54.0,
+        189.1349639892578,
+        207.0726318359375,
+        207.0734405517578
+      ],
+      "block_id": "page-1138-block-0005",
+      "order": 5,
+      "text": "Aire corticale prémotrice : aire prémotrice, aire prémotrice\nprimaire, cortex prémoteur\n",
+      "text_sha256": "4dae6f3b6a631733f4a2eeb0ef06ef533067f852dc596de1eb2952288f6f65ed"
+    },
+    {
+      "bbox": [
+        54.0,
+        210.5849609375,
+        192.0313262939453,
+        228.4734344482422
+      ],
+      "block_id": "page-1138-block-0006",
+      "order": 6,
+      "text": "Aire corticale visuelle : cortex occipital, cortex visuel,\ncortex visuel occipital, lobe occipital\n",
+      "text_sha256": "e63010717e3245db6cf7d3a55e15315a6db3d139733cccf9c41a6f061bf393f9"
+    },
+    {
+      "bbox": [
+        54.0,
+        231.98497009277344,
+        196.72265625,
+        249.87344360351562
+      ],
+      "block_id": "page-1138-block-0007",
+      "order": 7,
+      "text": "Aire de Wernicke : cortex auditif primaire, aire auditive\ntemporale\n",
+      "text_sha256": "a73cd2ae8ff4813e13051ddcca438b72bd9c5b19e9ebed106155c837087d9279"
+    },
+    {
+      "bbox": [
+        54.0,
+        253.43496704101562,
+        144.24508666992188,
+        261.6234436035156
+      ],
+      "block_id": "page-1138-block-0008",
+      "order": 8,
+      "text": "Aire entorhinale : cortex entorhinal\n",
+      "text_sha256": "001aa8a29598f67701aa662a108dc5c86cc6c3c048f539d3c6847580a04334ee"
+    },
+    {
+      "bbox": [
+        54.0,
+        265.1349792480469,
+        188.44883728027344,
+        283.0234375
+      ],
+      "block_id": "page-1138-block-0009",
+      "order": 9,
+      "text": "Aire fusiforme des visages : gyrus fusiforme, lobule\nfusiforme\n",
+      "text_sha256": "45004d287028c58171bd055237470cdf3b47e9d2bc4f7b598a5225d093179c88"
+    },
+    {
+      "bbox": [
+        54.0,
+        286.53497314453125,
+        174.55258178710938,
+        294.72344970703125
+      ],
+      "block_id": "page-1138-block-0010",
+      "order": 10,
+      "text": "Aire motrice primaire : cortex moteur primaire\n",
+      "text_sha256": "980bd1699f8daec31a3a8e36915f38112d69e6ccd2e535cadbaedc6b21d74189"
+    },
+    {
+      "bbox": [
+        54.0,
+        298.28497314453125,
+        195.38006591796875,
+        306.47344970703125
+      ],
+      "block_id": "page-1138-block-0011",
+      "order": 11,
+      "text": "Aire motrice supplémentaire : cortex moteur antérieur\n",
+      "text_sha256": "9128b2bb0accab21f1379840c7ad8527e61028f3f1350bd3c4217bbc5eb2e785"
+    },
+    {
+      "bbox": [
+        54.0,
+        309.9849548339844,
+        195.29937744140625,
+        327.8734436035156
+      ],
+      "block_id": "page-1138-block-0012",
+      "order": 12,
+      "text": "Aire parahippocampique : cortex parahippocampique,\ngyrus parahippocampique\n",
+      "text_sha256": "d78704279a38c3c3de231af4f2559224502296fb01fb7e88f6ca38e3ee8f8968"
+    },
+    {
+      "bbox": [
+        54.0,
+        331.3849792480469,
+        200.39764404296875,
+        349.3234558105469
+      ],
+      "block_id": "page-1138-block-0013",
+      "order": 13,
+      "text": "Aire prémotrice, aire prémotrice primaire : aire corticale\nprémotrice, cortex prémoteur\n",
+      "text_sha256": "03f074c57749fefe87087817f909481e7c0ef7a2128f02fb9a76be0355cc39f0"
+    },
+    {
+      "bbox": [
+        54.0,
+        352.8349609375,
+        134.330078125,
+        361.0234375
+      ],
+      "block_id": "page-1138-block-0014",
+      "order": 14,
+      "text": "Amygdale : corps amygdaloïde\n",
+      "text_sha256": "6e2f02e2c0fd0a48ef0d8f9a6e83eb3a8fa888d4309aa6cc119701ab32383097"
+    },
+    {
+      "bbox": [
+        54.0,
+        364.53497314453125,
+        181.7075958251953,
+        372.72344970703125
+      ],
+      "block_id": "page-1138-block-0015",
+      "order": 15,
+      "text": "Aqueduc de Sylvius : aqueduc du mésencéphale\n",
+      "text_sha256": "60c8e45edeb3562118929f82b5f8ef07119f6353a8249860a0a0eb0823f8696d"
+    },
+    {
+      "bbox": [
+        54.0,
+        376.2349548339844,
+        128.42007446289062,
+        384.4234313964844
+      ],
+      "block_id": "page-1138-block-0016",
+      "order": 16,
+      "text": "Bulbe olfactif : cortex olfactif\n",
+      "text_sha256": "7407979acdad2f800d9e288977fab36304e32cda2021a5282c448e7f663cac21"
+    },
+    {
+      "bbox": [
+        54.0,
+        387.9349670410156,
+        205.5200958251953,
+        405.8734436035156
+      ],
+      "block_id": "page-1138-block-0017",
+      "order": 17,
+      "text": "Canal central de la moelle épinière : canal de l’épendyme\nde la moelle épinière\n",
+      "text_sha256": "0e5e03551f8ed04ff3bd5471ea0c752a9a93e444b5def69851e822662c95d56a"
+    },
+    {
+      "bbox": [
+        54.0,
+        409.3849792480469,
+        205.5200653076172,
+        427.2734375
+      ],
+      "block_id": "page-1138-block-0018",
+      "order": 18,
+      "text": "Canal de l’épendyme de la moelle épinière : canal central\nde la moelle épinière\n",
+      "text_sha256": "418b6b5c027ff3606ca3e870791ef4dfd39c530da7b1cf637e2bd7734968129c"
+    },
+    {
+      "bbox": [
+        54.0,
+        430.78497314453125,
+        172.43014526367188,
+        438.97344970703125
+      ],
+      "block_id": "page-1138-block-0019",
+      "order": 19,
+      "text": "Cingulum : cortex cingulaire, gyrus cingulaire\n",
+      "text_sha256": "dcddb8520e029c739153322288a94a0e504812440c7e64baade66cf9e4bf19a6"
+    },
+    {
+      "bbox": [
+        54.0,
+        442.53497314453125,
+        110.09008026123047,
+        450.72344970703125
+      ],
+      "block_id": "page-1138-block-0020",
+      "order": 20,
+      "text": "Circonvolution : gyrus\n",
+      "text_sha256": "ae512f47007948c9f5acf3c98053c41f7825686d25a13e4c8e20f0edd78f065e"
+    },
+    {
+      "bbox": [
+        54.0,
+        454.2349548339844,
+        187.8951873779297,
+        462.4234313964844
+      ],
+      "block_id": "page-1138-block-0021",
+      "order": 21,
+      "text": "Cloison transparente : septum, septum pellucidium\n",
+      "text_sha256": "bec26f4f97c3c5ccde74822b142fcaafe9e77bd396212049c0824080e78eafeb"
+    },
+    {
+      "bbox": [
+        54.0,
+        465.9349670410156,
+        206.25511169433594,
+        474.1234436035156
+      ],
+      "block_id": "page-1138-block-0022",
+      "order": 22,
+      "text": "Commissure grise : adhérence (adhésion) interthalamique\n",
+      "text_sha256": "0fbf21db3b2d5e0e6f34a284bb832498008a56f95d67cb1a211a498c85af3e0c"
+    },
+    {
+      "bbox": [
+        54.0,
+        477.6349792480469,
+        134.61508178710938,
+        485.8234558105469
+      ],
+      "block_id": "page-1138-block-0023",
+      "order": 23,
+      "text": "Corps amygdaloïde : amygdale\n",
+      "text_sha256": "418255060fbe0cd923ec8514281190885d71da58bb871b958edd815c59c125bc"
+    },
+    {
+      "bbox": [
+        54.0,
+        489.3849792480469,
+        187.4051971435547,
+        507.2734375
+      ],
+      "block_id": "page-1138-block-0024",
+      "order": 24,
+      "text": "Corps strié : néostriatum, striatum (noyau caudé et\nputamen)\n",
+      "text_sha256": "5f4dfc3667721874846f48f2839d659e7a0b319db138c9800146fd8e74d858c8"
+    },
+    {
+      "bbox": [
+        54.0,
+        510.78497314453125,
+        117.13257598876953,
+        518.9734497070312
+      ],
+      "block_id": "page-1138-block-0025",
+      "order": 25,
+      "text": "Cortex : substance grise\n",
+      "text_sha256": "269dd44c9b2c01764d62694d19241ba36fe44a2e379ba05e5600c4c9f217decf"
+    },
+    {
+      "bbox": [
+        54.0,
+        522.4849853515625,
+        207.91256713867188,
+        540.4234619140625
+      ],
+      "block_id": "page-1138-block-0026",
+      "order": 26,
+      "text": "Cortex auditif primaire (temporal) : aire auditive temporale,\naire de Wernicke\n",
+      "text_sha256": "169e44a4226683e26a6358e5b6c8784fb590162473bcda0e7e0670bf004baf3c"
+    },
+    {
+      "bbox": [
+        54.0,
+        543.9349975585938,
+        140.52508544921875,
+        552.1234741210938
+      ],
+      "block_id": "page-1138-block-0027",
+      "order": 27,
+      "text": "Cortex cérébral : substance grise\n",
+      "text_sha256": "ed9bde355f91963634e81d84900bbb3b7a64a97d5121167a3ada9199dbb9dbb4"
+    },
+    {
+      "bbox": [
+        54.0,
+        555.6349487304688,
+        172.43014526367188,
+        563.8234252929688
+      ],
+      "block_id": "page-1138-block-0028",
+      "order": 28,
+      "text": "Cortex cingulaire : cingulum, gyrus cingulaire\n",
+      "text_sha256": "cd69165f18022c2fdc3a593eb248f363ee2310bd0c14004413eb963c63686ab0"
+    },
+    {
+      "bbox": [
+        54.0,
+        567.3349609375,
+        144.53009033203125,
+        575.5234375
+      ],
+      "block_id": "page-1138-block-0029",
+      "order": 29,
+      "text": "Cortex entorhinal : aire entorhinale\n",
+      "text_sha256": "de071bda2507a164e1c85b88e11eb1fd36b08e1492137b8eb7f174c41cb44b82"
+    },
+    {
+      "bbox": [
+        54.0,
+        579.0349731445312,
+        123.7250747680664,
+        587.2234497070312
+      ],
+      "block_id": "page-1138-block-0030",
+      "order": 30,
+      "text": "Cortex frontal : lobe frontal\n",
+      "text_sha256": "e5436f15c0634fd99018aa66a5e59c0e9735a703deb1b72ac77dc484b607d584"
+    },
+    {
+      "bbox": [
+        54.0,
+        590.7849731445312,
+        167.39007568359375,
+        598.9734497070312
+      ],
+      "block_id": "page-1138-block-0031",
+      "order": 31,
+      "text": "Cortex frontal inférieur : cortex orbitofrontal\n",
+      "text_sha256": "d7570db69a384c481accba89af11a433fcebfa7d4cd1ab7324ec020e701b9606"
+    },
+    {
+      "bbox": [
+        54.0,
+        602.4849853515625,
+        153.4176483154297,
+        610.6734619140625
+      ],
+      "block_id": "page-1138-block-0032",
+      "order": 32,
+      "text": "Cortex insulaire : insula, lobe insulaire\n",
+      "text_sha256": "a724ae011ca11b352eb227f08dfe0dcee81e4f1d42dd31a45a0078644fa28db9"
+    },
+    {
+      "bbox": [
+        54.0,
+        614.1849975585938,
+        145.91757202148438,
+        622.3734741210938
+      ],
+      "block_id": "page-1138-block-0033",
+      "order": 33,
+      "text": "Cortex limbique : système limbique\n",
+      "text_sha256": "bf36b9c4b02eedc315ff3c1c730c2ad106aae6c7f20f129f6f12f10edf1c5112"
+    },
+    {
+      "bbox": [
+        54.0,
+        625.8849487304688,
+        195.6650848388672,
+        634.0734252929688
+      ],
+      "block_id": "page-1138-block-0034",
+      "order": 34,
+      "text": "Cortex moteur antérieur : aire motrice supplémentaire\n",
+      "text_sha256": "febce6f31ec1f9984ff874d11a5eab96050f5545f69bbe3181e5f1107d102265"
+    },
+    {
+      "bbox": [
+        54.0,
+        637.6349487304688,
+        174.83758544921875,
+        645.8234252929688
+      ],
+      "block_id": "page-1138-block-0035",
+      "order": 35,
+      "text": "Cortex moteur primaire : aire motrice primaire\n",
+      "text_sha256": "7be06a2dfd9e39d06315e36044d5a7036f3f50f490f7f78674b6c0a28fd90f86"
+    },
+    {
+      "bbox": [
+        54.0,
+        649.3349609375,
+        212.4796905517578,
+        667.2234497070312
+      ],
+      "block_id": "page-1138-block-0036",
+      "order": 36,
+      "text": "Cortex occipital : aire corticale visuelle, cortex visuel, cortex\nvisuel occipital, lobe occipital\n",
+      "text_sha256": "3406138da1b973d515b03a05d6f2076b6c608a67d2c155e4af8725975fcedacc"
+    },
+    {
+      "bbox": [
+        54.0,
+        670.7349853515625,
+        212.37985229492188,
+        688.6734619140625
+      ],
+      "block_id": "page-1138-block-0037",
+      "order": 37,
+      "text": "Cortex occipital ventral : cortex visuel ventral, gyrus occipital\ninférieur\n",
+      "text_sha256": "5ff85cbba610a2249bc77cb71d44f5cfdabec063209a8f0930b436490c492faa"
+    },
+    {
+      "bbox": [
+        225.0,
+        132.5849609375,
+        299.840087890625,
+        140.7734375
+      ],
+      "block_id": "page-1138-block-0038",
+      "order": 38,
+      "text": "Cortex olfactif : bulbe olfactif\n",
+      "text_sha256": "dd131a8f76acacb5fcd9382ea0963e464ad5766bb7359abf31b124d799ae2cf7"
+    },
+    {
+      "bbox": [
+        225.0,
+        144.0849609375,
+        374.34283447265625,
+        161.8234405517578
+      ],
+      "block_id": "page-1138-block-0039",
+      "order": 39,
+      "text": "Cortex orbitofrontal : cortex frontal inférieur, gyrus frontal\ninférieur\n",
+      "text_sha256": "416f31bd8485a7548d8ebbdaf9f13d1bbba486caf97acdd7261b438cb750d535"
+    },
+    {
+      "bbox": [
+        225.0,
+        165.1349639892578,
+        366.57940673828125,
+        182.8234405517578
+      ],
+      "block_id": "page-1138-block-0040",
+      "order": 40,
+      "text": "Cortex parahippocampique : aire parahippocampique,\ngyrus parahippocampique\n",
+      "text_sha256": "e6f4dcd871d2ba14a47df37eb8e9c8d938dc425a1b9beb6354931ff269253745"
+    },
+    {
+      "bbox": [
+        225.0,
+        186.18496704101562,
+        300.26007080078125,
+        194.37344360351562
+      ],
+      "block_id": "page-1138-block-0041",
+      "order": 41,
+      "text": "Cortex pariétal : lobe pariétal\n",
+      "text_sha256": "81dcf7e267b2ba44beae61a575f46e1726c93b28a536ec2cf624beeb0f211706"
+    },
+    {
+      "bbox": [
+        225.0,
+        197.68496704101562,
+        315.2825927734375,
+        205.87344360351562
+      ],
+      "block_id": "page-1138-block-0042",
+      "order": 42,
+      "text": "Cortex préfrontal : gyrus préfrontal\n",
+      "text_sha256": "947a100ca2d947d80eb0562de8a0709f5d944163f33303085d1d5200bdc14c2c"
+    },
+    {
+      "bbox": [
+        225.0,
+        209.23497009277344,
+        372.1650390625,
+        226.92344665527344
+      ],
+      "block_id": "page-1138-block-0043",
+      "order": 43,
+      "text": "Cortex préfrontal dorsolatéral médian : cortex préfrontal\ndorsomédian\n",
+      "text_sha256": "99374cb561342ba6c639cef6efdd6504e53e2e893a90e03543a672c36fce6906"
+    },
+    {
+      "bbox": [
+        225.0,
+        230.23497009277344,
+        360.6650390625,
+        247.9734344482422
+      ],
+      "block_id": "page-1138-block-0044",
+      "order": 44,
+      "text": "Cortex préfrontal inférieur : cortex préfrontal orbital,\ncortex préfrontal ventral\n",
+      "text_sha256": "57cb852d79750f7a3805cb1b3a9ffda798be27835649f36c312e3619bdc41a29"
+    },
+    {
+      "bbox": [
+        225.0,
+        251.28497314453125,
+        360.1302490234375,
+        268.97344970703125
+      ],
+      "block_id": "page-1138-block-0045",
+      "order": 45,
+      "text": "Cortex préfrontal orbital : cortex préfrontal inférieur,\ncortex préfrontal ventral\n",
+      "text_sha256": "6a97f59c51b583163dd440b6b1caedc929be9170c687f6b9e9975f4497213618"
+    },
+    {
+      "bbox": [
+        225.0,
+        272.3349609375,
+        353.1651611328125,
+        290.0234375
+      ],
+      "block_id": "page-1138-block-0046",
+      "order": 46,
+      "text": "Cortex prémoteur : aire corticale prémotrice, aire\nprémotrice, aire prémotrice primaire\n",
+      "text_sha256": "64b6dbd50933ca9c819ea2473d64982658250d57df9f2932920dee38d65e17ef"
+    },
+    {
+      "bbox": [
+        225.0,
+        293.3349609375,
+        336.80755615234375,
+        301.5234375
+      ],
+      "block_id": "page-1138-block-0047",
+      "order": 47,
+      "text": "Cortex somatosensoriel : gyrus postcentral\n",
+      "text_sha256": "f356db4c37339449d96af5e05bb8048660a4dbcdc1ffb8048c37ba11a21927de"
+    },
+    {
+      "bbox": [
+        225.0,
+        304.8849792480469,
+        350.81011962890625,
+        313.0734558105469
+      ],
+      "block_id": "page-1138-block-0048",
+      "order": 48,
+      "text": "Cortex temporal : gyrus temporal, lobe temporal\n",
+      "text_sha256": "8eae359ac820e3cdb432f13f114eada41c3dc1597473712f406a2d7d41722258"
+    },
+    {
+      "bbox": [
+        225.0,
+        316.3849792480469,
+        380.9607849121094,
+        334.0734558105469
+      ],
+      "block_id": "page-1138-block-0049",
+      "order": 49,
+      "text": "Cortex visuel : aire corticale visuelle, cortex occipital, cortex\nvisuel occipital, lobe occipital\n",
+      "text_sha256": "843fecb77e51e363e504530cb88569268dd76ae0e054087e8652b8d1be140f5b"
+    },
+    {
+      "bbox": [
+        225.0,
+        337.4349670410156,
+        380.1316223144531,
+        355.1234436035156
+      ],
+      "block_id": "page-1138-block-0050",
+      "order": 50,
+      "text": "Cortex visuel occipital : aire corticale visuelle, cortex visuel,\ncortex occipital, lobe occipital\n",
+      "text_sha256": "ed19cd718723ab871905736dfdf4a822632ac3eaca9856ccb0c0b21766138e60"
+    },
+    {
+      "bbox": [
+        225.0,
+        358.4349670410156,
+        383.37646484375,
+        376.1734313964844
+      ],
+      "block_id": "page-1138-block-0051",
+      "order": 51,
+      "text": "Cortex visuel ventral : cortex occipital ventral, gyrus occipital\ninférieur\n",
+      "text_sha256": "09c4a2c73e8c9d49e1959d6ccab13247360eb926c049d60b9aa8a46df61b66da"
+    },
+    {
+      "bbox": [
+        225.0,
+        379.4849548339844,
+        288.39715576171875,
+        387.6734313964844
+      ],
+      "block_id": "page-1138-block-0052",
+      "order": 52,
+      "text": "Épinéphrine : adrénaline\n",
+      "text_sha256": "71bc27e3ae0d34bcfe5b0f08dc0a1076223b3c528c8633e1002db6cbc6c714c5"
+    },
+    {
+      "bbox": [
+        225.0,
+        390.9849548339844,
+        313.9326477050781,
+        399.1734313964844
+      ],
+      "block_id": "page-1138-block-0053",
+      "order": 53,
+      "text": "Épiphyse : glande pinéale, pinéale\n",
+      "text_sha256": "5015b03bfff360e77212925ad0eb72f8d263f8e05808336d781b28d711544072"
+    },
+    {
+      "bbox": [
+        225.0,
+        402.53497314453125,
+        340.70758056640625,
+        410.72344970703125
+      ],
+      "block_id": "page-1138-block-0054",
+      "order": 54,
+      "text": "Filum terminal : queue de la moelle épinière\n",
+      "text_sha256": "4e2f670e9ab0616fece1c9d584f3af81fe16874ab84398c5dc76da39a2f8e68b"
+    },
+    {
+      "bbox": [
+        225.0,
+        414.03497314453125,
+        263.6075744628906,
+        422.22344970703125
+      ],
+      "block_id": "page-1138-block-0055",
+      "order": 55,
+      "text": "Fornix : trigone\n",
+      "text_sha256": "7da72bfacc4063e18d7d18447ccf589b143e462fb36c2340f1a84e3cff648609"
+    },
+    {
+      "bbox": [
+        225.0,
+        425.5849609375,
+        314.4951477050781,
+        433.7734375
+      ],
+      "block_id": "page-1138-block-0056",
+      "order": 56,
+      "text": "Glande pinéale : épiphyse, pinéale\n",
+      "text_sha256": "e0a383d34451448359ea69cdf66bfeb368746e3ef2cababe8f2f660d47a27027"
+    },
+    {
+      "bbox": [
+        225.0,
+        437.0849609375,
+        300.72509765625,
+        445.2734375
+      ],
+      "block_id": "page-1138-block-0057",
+      "order": 57,
+      "text": "Glande pituitaire : hypophyse\n",
+      "text_sha256": "d2bd3d8237ab73029b69f128ec1615f6d3af80d4ddb5c8234721a70d72d15d0d"
+    },
+    {
+      "bbox": [
+        225.0,
+        448.5849609375,
+        292.0925598144531,
+        456.7734375
+      ],
+      "block_id": "page-1138-block-0058",
+      "order": 58,
+      "text": "Globus pallidus : pallidum\n",
+      "text_sha256": "b78bd86db5f474b13c7e186abf1e92fa5d4dae97daeec4652fab054e591d62a1"
+    },
+    {
+      "bbox": [
+        225.0,
+        460.1349792480469,
+        280.94757080078125,
+        468.3234558105469
+      ],
+      "block_id": "page-1138-block-0059",
+      "order": 59,
+      "text": "Gyrus : circonvolution\n",
+      "text_sha256": "f5aafa8dc65ab021ee4e216ea4b75a0633b7d6730d6cf563b93e1c777da144b5"
+    },
+    {
+      "bbox": [
+        225.0,
+        471.6349792480469,
+        343.28765869140625,
+        479.8234558105469
+      ],
+      "block_id": "page-1138-block-0060",
+      "order": 60,
+      "text": "Gyrus cingulaire : cingulum, cortex cingulaire\n",
+      "text_sha256": "66e6a2d0c22cc3ed1759f1fcbbbd554999e9e0a79f058b5072843d931c2d8a88"
+    },
+    {
+      "bbox": [
+        225.0,
+        483.1349792480469,
+        346.5102233886719,
+        500.8734436035156
+      ],
+      "block_id": "page-1138-block-0061",
+      "order": 61,
+      "text": "Gyrus frontal inférieur : cortex frontal inférieur,\ncortex orbitofrontal\n",
+      "text_sha256": "c4e4a4f3694658584de0f5e93c1700b55fea3fccccd84bb6967ca401e72115f3"
+    },
+    {
+      "bbox": [
+        225.0,
+        504.1849670410156,
+        384.364990234375,
+        512.3734130859375
+      ],
+      "block_id": "page-1138-block-0062",
+      "order": 62,
+      "text": "Gyrus fusiforme : aire fusiforme des visages, lobule fusiforme\n",
+      "text_sha256": "1b2432abb12b5237f3e44f290343fd45cb0782585a65dbc26b5180a8c0dcabf7"
+    },
+    {
+      "bbox": [
+        225.0,
+        515.6849975585938,
+        370.6551208496094,
+        533.4234619140625
+      ],
+      "block_id": "page-1138-block-0063",
+      "order": 63,
+      "text": "Gyrus occipital inférieur : cortex occipital ventral, cortex\nvisuel ventral\n",
+      "text_sha256": "0af00c0eb1bc4eb42e40052bf191dc805525392f91defafe617016f7155377e7"
+    },
+    {
+      "bbox": [
+        225.0,
+        536.7349853515625,
+        364.7589111328125,
+        554.4234619140625
+      ],
+      "block_id": "page-1138-block-0064",
+      "order": 64,
+      "text": "Gyrus parahippocampique : aire parahippocampique,\ncortex parahippocampique\n",
+      "text_sha256": "ee9dd497f47af2822f338136fba05713839bb627e2e1c68f2ba6dead688bb449"
+    },
+    {
+      "bbox": [
+        225.0,
+        557.7849731445312,
+        376.070068359375,
+        565.9734497070312
+      ],
+      "block_id": "page-1138-block-0065",
+      "order": 65,
+      "text": "Gyrus pariétal antérieur : partie rostrale du cortex pariétal\n",
+      "text_sha256": "dbe9861528994ed2359257e29c0bf0400a7af970f20580a9a9e299709831cbf2"
+    },
+    {
+      "bbox": [
+        225.0,
+        569.2849731445312,
+        358.10760498046875,
+        577.4734497070312
+      ],
+      "block_id": "page-1138-block-0066",
+      "order": 66,
+      "text": "Gyrus pariétal postcentral : cortex somatosensoriel\n",
+      "text_sha256": "f3c95f0168b05f58cc4c7c5a47e9d42a55f09d78cc22dcc0d7396c6d4189c6a4"
+    },
+    {
+      "bbox": [
+        225.0,
+        580.7849731445312,
+        315.14007568359375,
+        588.9734497070312
+      ],
+      "block_id": "page-1138-block-0067",
+      "order": 67,
+      "text": "Gyrus préfrontal : cortex préfrontal\n",
+      "text_sha256": "b6fc8f76ca3e8dc6870cfc4ffdeabcb4e71181fab124ac1c189bf4a30e714138"
+    },
+    {
+      "bbox": [
+        225.0,
+        592.3349609375,
+        350.6676330566406,
+        600.5234375
+      ],
+      "block_id": "page-1138-block-0068",
+      "order": 68,
+      "text": "Gyrus temporal : cortex temporal, lobe temporal\n",
+      "text_sha256": "3f986bf74556ab5ba2ea5e6faf2367abcbeb23a7fcc7a4964ef7bea3b6047397"
+    },
+    {
+      "bbox": [
+        225.0,
+        603.8349609375,
+        364.7526550292969,
+        621.5234375
+      ],
+      "block_id": "page-1138-block-0069",
+      "order": 69,
+      "text": "Gyrus temporal médian : gyrus temporal moyen, lobe\ntemporal médian\n",
+      "text_sha256": "5f48628ab604599818096e61a061243202f4df406c56d141dabd6c75d41dfd98"
+    },
+    {
+      "bbox": [
+        225.0,
+        624.8849487304688,
+        364.752685546875,
+        642.5734252929688
+      ],
+      "block_id": "page-1138-block-0070",
+      "order": 70,
+      "text": "Gyrus temporal moyen : gyrus temporal médian, lobe\ntemporal médian\n",
+      "text_sha256": "d5f9f48b05615463bf61ba5a0f350311a9142d28231ba01d882bedb60261c19d"
+    },
+    {
+      "bbox": [
+        225.0,
+        645.9349975585938,
+        300.590087890625,
+        654.1234741210938
+      ],
+      "block_id": "page-1138-block-0071",
+      "order": 71,
+      "text": "Hypophyse : glande pituitaire\n",
+      "text_sha256": "e580d9cff1df68d371563b672974a8713fe0314af8dc1425c2a0e36371264a65"
+    },
+    {
+      "bbox": [
+        225.0,
+        657.4349975585938,
+        331.16009521484375,
+        665.6234741210938
+      ],
+      "block_id": "page-1138-block-0072",
+      "order": 72,
+      "text": "Hypophyse antérieure : adénohypophyse\n",
+      "text_sha256": "48ce2a67c0b6c1d95feb2c5227d9850e6b457e94370cd6d0fe1e847a6ac8803b"
+    },
+    {
+      "bbox": [
+        225.0,
+        668.9349975585938,
+        332.96759033203125,
+        677.1234741210938
+      ],
+      "block_id": "page-1138-block-0073",
+      "order": 73,
+      "text": "Hypophyse postérieure : neurohypophyse\n",
+      "text_sha256": "a7eb9da25e39e8dc0ccaa479dd1dfe4a1832e6d5a4f89db52c08d22e8031ecdc"
+    },
+    {
+      "bbox": [
+        225.0,
+        680.4849853515625,
+        323.57763671875,
+        688.6734619140625
+      ],
+      "block_id": "page-1138-block-0074",
+      "order": 74,
+      "text": "Insula : cortex insulaire, lobe insulaire\n",
+      "text_sha256": "fe0917d10e0fb0cb61904517275afcd3d611a5c4ecae01ee61ad6e7d8cfac3d3"
+    },
+    {
+      "bbox": [
+        396.0,
+        132.5849609375,
+        466.7000732421875,
+        140.7734375
+      ],
+      "block_id": "page-1138-block-0075",
+      "order": 75,
+      "text": "Lobe frontal : cortex frontal\n",
+      "text_sha256": "fc326cddc4c12c23a604666dbfc52084741a68e994a8014d11db177da25a9717"
+    },
+    {
+      "bbox": [
+        396.0,
+        144.0849609375,
+        496.39263916015625,
+        152.2734375
+      ],
+      "block_id": "page-1138-block-0076",
+      "order": 76,
+      "text": "Lobe insulaire : cortex insulaire, insula\n",
+      "text_sha256": "ff709ffa38bf48f2bda0fa09e2d20c4c4db5ee567aac385195d1aa9906812042"
+    },
+    {
+      "bbox": [
+        396.0,
+        155.5849609375,
+        547.9644775390625,
+        173.3234405517578
+      ],
+      "block_id": "page-1138-block-0077",
+      "order": 77,
+      "text": "Lobe occipital : aire corticale visuelle, cortex visuel, cortex\noccipital, cortex visuel occipital, lobe occipital\n",
+      "text_sha256": "f41680622c2318984b5069ad366c1e38ea7cbe7a38a8112f7e2a1f4b18c6a3ff"
+    },
+    {
+      "bbox": [
+        396.0,
+        176.6349639892578,
+        472.2350769042969,
+        184.8234405517578
+      ],
+      "block_id": "page-1138-block-0078",
+      "order": 78,
+      "text": "Lobe pariétal : cortex pariétal\n",
+      "text_sha256": "443255ed2dc871e7b615405aee16b390baacbb1827b889b2a3b6197643b29534"
+    },
+    {
+      "bbox": [
+        396.0,
+        188.1349639892578,
+        522.7850952148438,
+        196.3234405517578
+      ],
+      "block_id": "page-1138-block-0079",
+      "order": 79,
+      "text": "Lobe temporal : cortex temporal, gyrus temporal\n",
+      "text_sha256": "96fc5617c7df4b0e7db8dbad836149e73a0bbf0f3823afff7e038b501b59cc45"
+    },
+    {
+      "bbox": [
+        396.0,
+        199.6349639892578,
+        538.80517578125,
+        217.3234405517578
+      ],
+      "block_id": "page-1138-block-0080",
+      "order": 80,
+      "text": "Lobe temporal médian : gyrus temporal médian, gyrus\ntemporal moyen\n",
+      "text_sha256": "11b976becd1b31af959559953269d76b7fff31787f184d2dbd2a09195e3e2edc"
+    },
+    {
+      "bbox": [
+        396.0,
+        220.6349639892578,
+        554.630126953125,
+        228.8234405517578
+      ],
+      "block_id": "page-1138-block-0081",
+      "order": 81,
+      "text": "Lobule fusiforme : aire fusiforme des visages, gyrus fusiforme\n",
+      "text_sha256": "8594e37c1bf770635e74fd107b087a7cbac681ae1750094e1461f775772f829e"
+    },
+    {
+      "bbox": [
+        396.0,
+        232.1349639892578,
+        555.32763671875,
+        240.3234405517578
+      ],
+      "block_id": "page-1138-block-0082",
+      "order": 82,
+      "text": "Néostriatum : corps strié, striatum (noyau caudé et putamen)\n",
+      "text_sha256": "e69426fc4bb99dfadd0fe287285f79365884f2d1f0fbfeb6296a20a57b96c1a6"
+    },
+    {
+      "bbox": [
+        396.0,
+        243.68496704101562,
+        504.1025695800781,
+        251.87344360351562
+      ],
+      "block_id": "page-1138-block-0083",
+      "order": 83,
+      "text": "Neurohypophyse : hypophyse postérieure\n",
+      "text_sha256": "4bbd246124765c0ce8dd4fb579c2b68d4d3dad6730f4c52977613bc5f4a71f6a"
+    },
+    {
+      "bbox": [
+        396.0,
+        255.18496704101562,
+        539.7344360351562,
+        272.8734436035156
+      ],
+      "block_id": "page-1138-block-0084",
+      "order": 84,
+      "text": "Noyau basal de Meynert : Nucleus Basalis de Meynert,\nnoyau basal magnocellulaire (chez le rat)\n",
+      "text_sha256": "760588f6f2f6a4aa4569aec2b7b5caec9377099d64ef387a14bedebc3c03b1d6"
+    },
+    {
+      "bbox": [
+        396.0,
+        276.1849670410156,
+        549.0795288085938,
+        293.8734436035156
+      ],
+      "block_id": "page-1138-block-0085",
+      "order": 85,
+      "text": "Noyau basal magnocellulaire (chez le rat) : noyau basal de\nMeynert, Nucleus Basalis de Meynert\n",
+      "text_sha256": "2224db9abf5776be46064cc27238a8390cb6f1586d79de5f96a873cd5bfef3ad"
+    },
+    {
+      "bbox": [
+        396.0,
+        297.1849670410156,
+        503.508544921875,
+        305.3734436035156
+      ],
+      "block_id": "page-1138-block-0086",
+      "order": 86,
+      "text": "Noyaux de la base : noyaux gris centraux\n",
+      "text_sha256": "3c4f3cb25bf1190e0d5723acb8da6bb2f292ac2bff97c327363d13763f2ddd14"
+    },
+    {
+      "bbox": [
+        396.0,
+        308.7349548339844,
+        487.9850769042969,
+        316.9234313964844
+      ],
+      "block_id": "page-1138-block-0087",
+      "order": 87,
+      "text": "Noyaux du pont : noyaux pontiques\n",
+      "text_sha256": "44bfe85d3d0f8199154d5f5e91dfa0e40ad700d958822a948cb69e066bc48f6a"
+    },
+    {
+      "bbox": [
+        396.0,
+        320.2349548339844,
+        503.5386657714844,
+        328.4234313964844
+      ],
+      "block_id": "page-1138-block-0088",
+      "order": 88,
+      "text": "Noyaux gris centraux : noyaux de la base\n",
+      "text_sha256": "52b3db0cace11b7f91d07f2d2c47b842c214b8146c4a429da8b04d6f77351f1f"
+    },
+    {
+      "bbox": [
+        396.0,
+        331.7349548339844,
+        487.9850769042969,
+        339.9234313964844
+      ],
+      "block_id": "page-1138-block-0089",
+      "order": 89,
+      "text": "Noyaux pontiques : noyaux du pont\n",
+      "text_sha256": "b4575f233959c77b8d6a3745ec108e595b0d6a9f200655c122b9b648f296a6ed"
+    },
+    {
+      "bbox": [
+        396.0,
+        343.2349548339844,
+        462.6650695800781,
+        351.4234313964844
+      ],
+      "block_id": "page-1138-block-0090",
+      "order": 90,
+      "text": "Pallidum : globus pallidus\n",
+      "text_sha256": "ec6bec8762f9d91e3501b4fd899668f2179b5c7e830ace5d7ca26bf43ec67132"
+    },
+    {
+      "bbox": [
+        396.0,
+        354.7349548339844,
+        483.4851379394531,
+        362.9234313964844
+      ],
+      "block_id": "page-1138-block-0091",
+      "order": 91,
+      "text": "Partie antérieure : rostre, rostrum\n",
+      "text_sha256": "f4784c38962b2f62f2fc9bcf0ebee9cb9b48ea5f5682fd6f49b452a6e5443dbf"
+    },
+    {
+      "bbox": [
+        396.0,
+        366.2349548339844,
+        552.5142211914062,
+        374.4234313964844
+      ],
+      "block_id": "page-1138-block-0092",
+      "order": 92,
+      "text": "Partie antérieure du corps calleux : rostrum du corps calleux\n",
+      "text_sha256": "98cdf3e004016c9e095558e5ca2bcc3123ec2cf9e84e89545bc9648a68c9ce9e"
+    },
+    {
+      "bbox": [
+        396.0,
+        377.7349548339844,
+        555.1597900390625,
+        395.47344970703125
+      ],
+      "block_id": "page-1138-block-0093",
+      "order": 93,
+      "text": "Partie postérieure (caudale) du corps calleux : cortex\nrétrosplénial, splénium du corps calleux, queue du corps calleux\n",
+      "text_sha256": "6cbbd22037919d3f5374f2e2df5d0cff1607f7f0d8bb84c4eec1d507ecd6f376"
+    },
+    {
+      "bbox": [
+        396.0,
+        398.78497314453125,
+        485.0676574707031,
+        406.97344970703125
+      ],
+      "block_id": "page-1138-block-0094",
+      "order": 94,
+      "text": "Pinéale : épiphyse, glande pinéale\n",
+      "text_sha256": "ac95c7f152330c7837773d1c06822e2553344100c195153c5ec110e445ca5a5c"
+    },
+    {
+      "bbox": [
+        396.0,
+        410.28497314453125,
+        447.3875732421875,
+        418.47344970703125
+      ],
+      "block_id": "page-1138-block-0095",
+      "order": 95,
+      "text": "Pont : protubérance\n",
+      "text_sha256": "a64ce3110cd44a32b700343a000a24b1b2bbf01d6c2c07397fc5998c25c380f1"
+    },
+    {
+      "bbox": [
+        396.0,
+        421.78497314453125,
+        447.3875732421875,
+        429.97344970703125
+      ],
+      "block_id": "page-1138-block-0096",
+      "order": 96,
+      "text": "Protubérance : pont\n",
+      "text_sha256": "7fb02b97271b318a27dcfbfbe5474236463ab5915781d265e68c5c5ec0055f08"
+    },
+    {
+      "bbox": [
+        396.0,
+        433.28497314453125,
+        511.1675720214844,
+        441.47344970703125
+      ],
+      "block_id": "page-1138-block-0097",
+      "order": 97,
+      "text": "Queue de la moelle épinière : lum terminal\n",
+      "text_sha256": "3e8d52d56772c949f4319d19d31864c8530cf193a127a274a6a56a9bd448d36f"
+    },
+    {
+      "bbox": [
+        396.0,
+        444.78497314453125,
+        551.775146484375,
+        462.5234375
+      ],
+      "block_id": "page-1138-block-0098",
+      "order": 98,
+      "text": "Queue du corps calleux : cortex rétrosplénial, splénium du\ncorps calleux, partie postérieure (caudale) du corps calleux\n",
+      "text_sha256": "3b5d0188b7bea5df8cbdb7128128f9f4fdc4ef3e800ffa88cc0f22a741b47c9f"
+    },
+    {
+      "bbox": [
+        396.0,
+        465.8349609375,
+        554.2925415039062,
+        483.5234375
+      ],
+      "block_id": "page-1138-block-0099",
+      "order": 99,
+      "text": "Région corticale préfrontale ventrolatérale : cortex préfrontal\nventrolatéral\n",
+      "text_sha256": "16ebf3639fb4a18fa025be0cc27a5fa317b5433cc5d254cb34bd05bd9f6d8614"
+    },
+    {
+      "bbox": [
+        396.0,
+        486.8349609375,
+        484.8801574707031,
+        495.0234375
+      ],
+      "block_id": "page-1138-block-0100",
+      "order": 100,
+      "text": "Rostrum : rostre, partie antérieure\n",
+      "text_sha256": "002e91bad0bc43f6eb0d7c2e910a7601ad3074f257a230386798ce76c1c3ffd9"
+    },
+    {
+      "bbox": [
+        396.0,
+        498.3349609375,
+        555.211181640625,
+        506.5234375
+      ],
+      "block_id": "page-1138-block-0101",
+      "order": 101,
+      "text": "Rostrum du corps calleux : partie antérieure du corps calleux\n",
+      "text_sha256": "2fea0acff788063ece1aaad4739272ec975231a376a793d770b9012ce9643120"
+    },
+    {
+      "bbox": [
+        396.0,
+        509.8349609375,
+        436.38507080078125,
+        518.0234375
+      ],
+      "block_id": "page-1138-block-0102",
+      "order": 102,
+      "text": "Scissure : sillon\n",
+      "text_sha256": "cac11632f628d7ec9a6380014b95be27ce4a3d604b6865e4a7fc8a24bdcb1609"
+    },
+    {
+      "bbox": [
+        396.0,
+        521.3349609375,
+        499.3625793457031,
+        529.5234375
+      ],
+      "block_id": "page-1138-block-0103",
+      "order": 103,
+      "text": "Scissure centrale : scissure de Rolando\n",
+      "text_sha256": "31391df6bf7381415626e8036e26d022c550f3a232086627b4b7f29972e37442"
+    },
+    {
+      "bbox": [
+        396.0,
+        532.8849487304688,
+        499.3625793457031,
+        541.0734252929688
+      ],
+      "block_id": "page-1138-block-0104",
+      "order": 104,
+      "text": "Scissure de Rolando : scissure centrale\n",
+      "text_sha256": "8851f1d32fc13a83ec6f99b1c4ff93fec5722d4650b0a97420a9a294073cc870"
+    },
+    {
+      "bbox": [
+        396.0,
+        544.3849487304688,
+        494.0837097167969,
+        552.5734252929688
+      ],
+      "block_id": "page-1138-block-0105",
+      "order": 105,
+      "text": "Scissure de Sylvius : scissure latérale\n",
+      "text_sha256": "a8a4a43e93d0ef00967df78b4384cd9a07e78a386253c69d36b169e792043d46"
+    },
+    {
+      "bbox": [
+        396.0,
+        555.8849487304688,
+        532.85009765625,
+        564.0734252929688
+      ],
+      "block_id": "page-1138-block-0106",
+      "order": 106,
+      "text": "Scissure interhémisphérique : scissure longitudinale\n",
+      "text_sha256": "3d43911fe6db7343262eb81edb325949ea3bad688ce841f94d06d99c1847c731"
+    },
+    {
+      "bbox": [
+        396.0,
+        567.3849487304688,
+        494.33758544921875,
+        575.5734252929688
+      ],
+      "block_id": "page-1138-block-0107",
+      "order": 107,
+      "text": "Scissure latérale : scissure de Sylvius\n",
+      "text_sha256": "88cb7cda0ba32258a052e976a16c0d38cc676bbca184fe258433946cec8d70fb"
+    },
+    {
+      "bbox": [
+        396.0,
+        578.8849487304688,
+        524.8785400390625,
+        587.0734252929688
+      ],
+      "block_id": "page-1138-block-0108",
+      "order": 108,
+      "text": "Scissure longitudinale : sillon interhémisphérique\n",
+      "text_sha256": "e6dcaf9e1907b156ebf3cdc1f876f4d9324bd2147557045740995edc6abe6f6c"
+    },
+    {
+      "bbox": [
+        396.0,
+        590.3849487304688,
+        529.7377319335938,
+        598.5734252929688
+      ],
+      "block_id": "page-1138-block-0109",
+      "order": 109,
+      "text": "Septum : cloison transparente, septum pellucidium\n",
+      "text_sha256": "10b31102503aefeb6104c890d137b6aca24eac3ee5683be088e2ee9b5ca4a71a"
+    },
+    {
+      "bbox": [
+        396.0,
+        601.8849487304688,
+        529.7376708984375,
+        610.0734252929688
+      ],
+      "block_id": "page-1138-block-0110",
+      "order": 110,
+      "text": "Septum pellucidium : cloison transparente, septum\n",
+      "text_sha256": "3658163e188659d67c782e1f921f7da83c45b2f068baf5ba1b00b2abc79fc8f3"
+    },
+    {
+      "bbox": [
+        396.0,
+        613.4349975585938,
+        436.38507080078125,
+        621.6234741210938
+      ],
+      "block_id": "page-1138-block-0111",
+      "order": 111,
+      "text": "Sillon : scissure\n",
+      "text_sha256": "39bfd9205b2613aa48e32eef00d85820ce3ed2969682e54421320c0cf55b02cb"
+    },
+    {
+      "bbox": [
+        396.0,
+        624.9349975585938,
+        554.6050415039062,
+        642.6234741210938
+      ],
+      "block_id": "page-1138-block-0112",
+      "order": 112,
+      "text": "Splénium du corps calleux : cortex rétrosplénial, partie\npostérieure (caudale) du corps calleux, queue du corps calleux\n",
+      "text_sha256": "983c5605a9c620381ec8bddc9ff2902f6d365f955884a394fc3987e551860aca"
+    },
+    {
+      "bbox": [
+        396.0,
+        645.9349975585938,
+        555.2906494140625,
+        654.1234741210938
+      ],
+      "block_id": "page-1138-block-0113",
+      "order": 113,
+      "text": "Striatum (noyau caudé et putamen) : corps strié, néostriatum\n",
+      "text_sha256": "94163e34d5022b848295c2da6d6dd1b6277911912f52da94c437fac43207079e"
+    },
+    {
+      "bbox": [
+        396.0,
+        657.4349975585938,
+        482.3675842285156,
+        665.6234741210938
+      ],
+      "block_id": "page-1138-block-0114",
+      "order": 114,
+      "text": "Substance grise : cortex cérébral\n",
+      "text_sha256": "27ff1e5750d538d9e60b70e15039ed2f5327af7a9e362e9f44f7f2c91ace65f1"
+    },
+    {
+      "bbox": [
+        396.0,
+        668.9349975585938,
+        487.76007080078125,
+        677.1234741210938
+      ],
+      "block_id": "page-1138-block-0115",
+      "order": 115,
+      "text": "Système limbique : cortex limbique\n",
+      "text_sha256": "b1380718570830683b98fc5b8fc14a314fcf7276c14b731fcdeed8a4bb5f0de2"
+    },
+    {
+      "bbox": [
+        396.0,
+        680.4849853515625,
+        434.16259765625,
+        688.6734619140625
+      ],
+      "block_id": "page-1138-block-0116",
+      "order": 116,
+      "text": "Trigone : fornix\n",
+      "text_sha256": "41fafbb102d28dd9b9421a44c92a2ba423d33d05c6312d871befbdd6f479767d"
+    },
+    {
+      "bbox": [
+        54.0,
+        37.31171798706055,
+        249.67050170898438,
+        59.77265548706055
+      ],
+      "block_id": "page-1138-block-0117",
+      "order": 117,
+      "text": "Figures supplémentaires\n",
+      "text_sha256": "a8054ccdc16f1096a3d9962a2c5105111dbcf3250107b9e72503507af296d8cf"
+    },
+    {
+      "bbox": [
+        54.0,
+        80.04316711425781,
+        189.3664093017578,
+        98.96894836425781
+      ],
+      "block_id": "page-1138-block-0118",
+      "order": 118,
+      "text": "Liste des synonymes\n",
+      "text_sha256": "aaffad2486846c5461eb3e1f41e56d4810ad49cb8516564adb00dfab164d4eac"
+    },
+    {
+      "bbox": [
+        422.8000183105469,
+        747.3754272460938,
+        554.97998046875,
+        758.6693725585938
+      ],
+      "block_id": "page-1138-block-0119",
+      "order": 119,
+      "text": "Figures supplémentaires\nF1\n",
+      "text_sha256": "f9d588bae22fea2686940e1e98a7fd71623a575b91af9774b8f73e5be6a6154f"
+    }
+  ],
+  "coordinates_sha256": "ec6249380e6db321c1bfb4c9d60ae0e68ad3cacd93f5c5094e49767657c10958",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1138",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Adénohypophyse : hypophyse antérieure\nAdhérence (adhésion) interthalamique : commissure grise\nAdrénaline : épinéphrine\nAire auditive temporale : cortex auditif primaire, aire de\nWernicke\nAire corticale prémotrice : aire prémotrice, aire prémotrice\nprimaire, cortex prémoteur\nAire corticale visuelle : cortex occipital, cortex visuel,\ncortex visuel occipital, lobe occipital\nAire de Wernicke : cortex auditif primaire, aire auditive\ntemporale\nAire entorhinale : cortex entorhinal\nAire fusiforme des visages : gyrus fusiforme, lobule\nfusiforme\nAire motrice primaire : cortex moteur primaire\nAire motrice supplémentaire : cortex moteur antérieur\nAire parahippocampique : cortex parahippocampique,\ngyrus parahippocampique\nAire prémotrice, aire prémotrice primaire : aire corticale\nprémotrice, cortex prémoteur\nAmygdale : corps amygdaloïde\nAqueduc de Sylvius : aqueduc du mésencéphale\nBulbe olfactif : cortex olfactif\nCanal central de la moelle épinière : canal de l’épendyme\nde la moelle épinière\nCanal de l’épendyme de la moelle épinière : canal central\nde la moelle épinière\nCingulum : cortex cingulaire, gyrus cingulaire\nCirconvolution : gyrus\nCloison transparente : septum, septum pellucidium\nCommissure grise : adhérence (adhésion) interthalamique\nCorps amygdaloïde : amygdale\nCorps strié : néostriatum, striatum (noyau caudé et\nputamen)\nCortex : substance grise\nCortex auditif primaire (temporal) : aire auditive temporale,\naire de Wernicke\nCortex cérébral : substance grise\nCortex cingulaire : cingulum, gyrus cingulaire\nCortex entorhinal : aire entorhinale\nCortex frontal : lobe frontal\nCortex frontal inférieur : cortex orbitofrontal\nCortex insulaire : insula, lobe insulaire\nCortex limbique : système limbique\nCortex moteur antérieur : aire motrice supplémentaire\nCortex moteur primaire : aire motrice primaire\nCortex occipital : aire corticale visuelle, cortex visuel, cortex\nvisuel occipital, lobe occipital\nCortex occipital ventral : cortex visuel ventral, gyrus occipital\ninférieur\nCortex olfactif : bulbe olfactif\nCortex orbitofrontal : cortex frontal inférieur, gyrus frontal\ninférieur\nCortex parahippocampique : aire parahippocampique,\ngyrus parahippocampique\nCortex pariétal : lobe pariétal\nCortex préfrontal : gyrus préfrontal\nCortex préfrontal dorsolatéral médian : cortex préfrontal\ndorsomédian\nCortex préfrontal inférieur : cortex préfrontal orbital,\ncortex préfrontal ventral\nCortex préfrontal orbital : cortex préfrontal inférieur,\ncortex préfrontal ventral\nCortex prémoteur : aire corticale prémotrice, aire\nprémotrice, aire prémotrice primaire\nCortex somatosensoriel : gyrus postcentral\nCortex temporal : gyrus temporal, lobe temporal\nCortex visuel : aire corticale visuelle, cortex occipital, cortex\nvisuel occipital, lobe occipital\nCortex visuel occipital : aire corticale visuelle, cortex visuel,\ncortex occipital, lobe occipital\nCortex visuel ventral : cortex occipital ventral, gyrus occipital\ninférieur\nÉpinéphrine : adrénaline\nÉpiphyse : glande pinéale, pinéale\nFilum terminal : queue de la moelle épinière\nFornix : trigone\nGlande pinéale : épiphyse, pinéale\nGlande pituitaire : hypophyse\nGlobus pallidus : pallidum\nGyrus : circonvolution\nGyrus cingulaire : cingulum, cortex cingulaire\nGyrus frontal inférieur : cortex frontal inférieur,\ncortex orbitofrontal\nGyrus fusiforme : aire fusiforme des visages, lobule fusiforme\nGyrus occipital inférieur : cortex occipital ventral, cortex\nvisuel ventral\nGyrus parahippocampique : aire parahippocampique,\ncortex parahippocampique\nGyrus pariétal antérieur : partie rostrale du cortex pariétal\nGyrus pariétal postcentral : cortex somatosensoriel\nGyrus préfrontal : cortex préfrontal\nGyrus temporal : cortex temporal, lobe temporal\nGyrus temporal médian : gyrus temporal moyen, lobe\ntemporal médian\nGyrus temporal moyen : gyrus temporal médian, lobe\ntemporal médian\nHypophyse : glande pituitaire\nHypophyse antérieure : adénohypophyse\nHypophyse postérieure : neurohypophyse\nInsula : cortex insulaire, lobe insulaire\nLobe frontal : cortex frontal\nLobe insulaire : cortex insulaire, insula\nLobe occipital : aire corticale visuelle, cortex visuel, cortex\noccipital, cortex visuel occipital, lobe occipital\nLobe pariétal : cortex pariétal\nLobe temporal : cortex temporal, gyrus temporal\nLobe temporal médian : gyrus temporal médian, gyrus\ntemporal moyen\nLobule fusiforme : aire fusiforme des visages, gyrus fusiforme\nNéostriatum : corps strié, striatum (noyau caudé et putamen)\nNeurohypophyse : hypophyse postérieure\nNoyau basal de Meynert : Nucleus Basalis de Meynert,\nnoyau basal magnocellulaire (chez le rat)\nNoyau basal magnocellulaire (chez le rat) : noyau basal de\nMeynert, Nucleus Basalis de Meynert\nNoyaux de la base : noyaux gris centraux\nNoyaux du pont : noyaux pontiques\nNoyaux gris centraux : noyaux de la base\nNoyaux pontiques : noyaux du pont\nPallidum : globus pallidus\nPartie antérieure : rostre, rostrum\nPartie antérieure du corps calleux : rostrum du corps calleux\nPartie postérieure (caudale) du corps calleux : cortex\nrétrosplénial, splénium du corps calleux, queue du corps calleux\nPinéale : épiphyse, glande pinéale\nPont : protubérance\nProtubérance : pont\nQueue de la moelle épinière : lum terminal\nQueue du corps calleux : cortex rétrosplénial, splénium du\ncorps calleux, partie postérieure (caudale) du corps calleux\nRégion corticale préfrontale ventrolatérale : cortex préfrontal\nventrolatéral\nRostrum : rostre, partie antérieure\nRostrum du corps calleux : partie antérieure du corps calleux\nScissure : sillon\nScissure centrale : scissure de Rolando\nScissure de Rolando : scissure centrale\nScissure de Sylvius : scissure latérale\nScissure interhémisphérique : scissure longitudinale\nScissure latérale : scissure de Sylvius\nScissure longitudinale : sillon interhémisphérique\nSeptum : cloison transparente, septum pellucidium\nSeptum pellucidium : cloison transparente, septum\nSillon : scissure\nSplénium du corps calleux : cortex rétrosplénial, partie\npostérieure (caudale) du corps calleux, queue du corps calleux\nStriatum (noyau caudé et putamen) : corps strié, néostriatum\nSubstance grise : cortex cérébral\nSystème limbique : cortex limbique\nTrigone : fornix\nFigures supplémentaires\nListe des synonymes\nFigures supplémentaires\nF1\n",
+  "raw_text_sha256": "192227c9271153edbbef7ca1324ecb6960636acf7498ce121b457ddabd2e7ede",
+  "source_page_display": 1139,
+  "source_page_index": 1138
+}

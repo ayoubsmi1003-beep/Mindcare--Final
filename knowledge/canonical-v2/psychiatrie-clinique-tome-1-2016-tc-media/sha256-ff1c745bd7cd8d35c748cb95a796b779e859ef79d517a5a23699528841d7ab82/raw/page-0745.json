@@ -1,0 +1,208 @@
+{
+  "block_sequence_sha256": "63bb7cf091d144ac53bf0baada01ae1d4716b30ed4e6bd474784547bb81393e6",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0745-block-0001",
+      "order": 1,
+      "text": "728\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "916d85346e82b6d273eb71d339d4f6f160712e88663a5fc458151fe2efd33ed0"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.9658203125,
+        291.373291015625,
+        135.875
+      ],
+      "block_id": "page-0745-block-0002",
+      "order": 2,
+      "text": "• les désaturations de 4 % ou plus (D) ;\n• le ronement (SNR).\nLes données suggèrent qu’il s’agit d’un cas modéré qui nécessi-\nterait donc une investigation plus poussée. De tels enregistrements\nne peuvent déterminer à quels moments le patient dort et est\néveillé. On ne peut pas non plus déterminer si les apnées et les\ndésaturations sont associées à des réveils, des irrégularités du\nrythme cardiaque, une activité EEG atypique, etc.\n",
+      "text_sha256": "d9da948fcc35516944821205d9a86c86333f5bea7b44940170f5973a53f3167a"
+    },
+    {
+      "bbox": [
+        48.0,
+        136.9658203125,
+        291.6285095214844,
+        308.375
+      ],
+      "block_id": "page-0745-block-0003",
+      "order": 3,
+      "text": "Il peut arriver que l’examen de dépistage des apnées au cours du\nsommeil n’ait été mené qu’avec un nombre réduit de mesures comme\nl’eort et le ot respiratoires, voire seulement une estimation de\nl’oxymétrie. Bien que dans certains cas, cette pratique puisse servir au\nsuivi d’un patient dont les apnées ont déjà été dûment documentées,\nelles ne sont pas susantes pour établir avec certitude un premier\ndiagnostic d’apnées du sommeil. En eet, la polysomnographie sert\nnon seulement à mesurer certains paramètres respiratoires, mais\nelle permet d’estimer l’impact des irrégularités de la respiration\nsur le sommeil lui-même et même de détecter d’autres troubles du\nsommeil insoupçonnés. Ainsi, on sait non seulement si les apnées\nsont associées à des réveils, à des mouvements corporels ou à des\nirrégularités du rythme cardiaque, mais on peut également vérier\nla présence de mouvements périodiques des jambes au cours du\nsommeil, d’activité EEG atypique, etc.\n",
+      "text_sha256": "aefed644d450f0a3bc1b95253942f017c7c7429e913d4ee2b9fad8d23c022df9"
+    },
+    {
+      "bbox": [
+        48.0,
+        309.4658203125,
+        291.2197570800781,
+        558.375
+      ],
+      "block_id": "page-0745-block-0004",
+      "order": 4,
+      "text": "En plus des mesures de quantité et de qualité du sommeil (voir\nla section 32.1), les rapports de PSG présentent le plus souvent\nles résultats suivants :\n• le nombre de mouvements périodiques des jambes par heure\nde sommeil et par stade de sommeil ;\n• l’index d’événements respiratoires, c’est-à-dire le nombre\nd’apnées et d’hypopnées par heure de sommeil (et habituelle-\nment par stade de sommeil). La gravité du syndrome d’apnée\ndu sommeil est établie comme suit :\n– léger : 5 à 14 apnées par heure ;\n– modéré : 15 à 30 par heure ;\n– grave : plus de 30 par heure.\n• le volume du ronement en décibels pour chaque position\nde sommeil ;\n• le pouls, en battement par minute : minimum, maximum et\nmoyenne au cours de la nuit ;\n• la position du dormeur lors des apnées (dorsale, ventrale, côté\ngauche, côté droit) ;\n• les données d’oxymétrie :\n– la saturation, en pourcentage : minimum, maximum et\n",
+      "text_sha256": "577fd5e57dc04057f46c54273d97abbc150062079953783ec1ebcbd05ad7f891"
+    },
+    {
+      "bbox": [
+        60.04999923706055,
+        559.4658203125,
+        290.8221130371094,
+        582.875
+      ],
+      "block_id": "page-0745-block-0005",
+      "order": 5,
+      "text": "moyenne au cours de la nuit ;\n– le temps passé à différents niveaux de saturation au\n",
+      "text_sha256": "0cb05cd27197d878beefb8535ddf331ba18195755c14a5cd23ae54595063eec3"
+    },
+    {
+      "bbox": [
+        60.04999923706055,
+        583.9658203125,
+        291.440673828125,
+        630.375
+      ],
+      "block_id": "page-0745-block-0006",
+      "order": 6,
+      "text": "cours de la nuit : de 90 % à 100 %, 80 % à 89 %, 70 % à\n79 %, 60 % à 70 % (les mesures inférieures à 60 % sont\npeu fiables) ;\n– le nombre et la durée moyenne des désaturations sous le\n",
+      "text_sha256": "cb7b168612a61efdbfeff33acdd2d0e289c2bf23cb9fc366f2cc675984ff06cf"
+    },
+    {
+      "bbox": [
+        60.04999923706055,
+        631.4658203125,
+        290.98931884765625,
+        654.875
+      ],
+      "block_id": "page-0745-block-0007",
+      "order": 7,
+      "text": "seuil critique (4 % ou plus) ;\n– le temps de données manquantes (capteur non fonctionnel\n",
+      "text_sha256": "db9bfd62e387f0a7c0982bb1e51cf859b21061401a60c937d4c1ab4757d961a3"
+    },
+    {
+      "bbox": [
+        60.04999923706055,
+        655.9658203125,
+        291.24749755859375,
+        679.375
+      ],
+      "block_id": "page-0745-block-0008",
+      "order": 8,
+      "text": "ou enlevé) ;\n– une représentation graphique de ces mesures échelonnées\n",
+      "text_sha256": "de73014fa70aca0b5feece9aeb737d5baf42f558214e0ccbc88399b64e26683d"
+    },
+    {
+      "bbox": [
+        48.0,
+        680.4658203125,
+        291.1048889160156,
+        715.375
+      ],
+      "block_id": "page-0745-block-0009",
+      "order": 9,
+      "text": "sur toute la nuit.\nLe rapport PSG fait aussi état des événements cliniques notés\nlors de la lecture du tracé : arythmies cardiaques, mouvements\n",
+      "text_sha256": "63bf3c8c937909d04d014b2ada41a7b62a1eb7a3b363d7677133e76ebe74e7a1"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.22021484375,
+        86.17500305175781
+      ],
+      "block_id": "page-0745-block-0010",
+      "order": 10,
+      "text": "corporels, réveils associés à un événement clinique (apnée,\nmouvement périodique des jambes, bruxisme, etc.), ainsi que\ntout autre mesure demandée par le médecin traitant ou jugée\nutile par les spécialistes du sommeil.\n",
+      "text_sha256": "2889cb20fec6a4f15c60790e09f1ba441bbe1066a43c40bf620f88fa1c34ab2a"
+    },
+    {
+      "bbox": [
+        306.0,
+        96.8868179321289,
+        411.3005065917969,
+        113.0293960571289
+      ],
+      "block_id": "page-0745-block-0011",
+      "order": 11,
+      "text": "32.3.3 Actigraphie\n",
+      "text_sha256": "e61b37369d91f5f438bba7a2c3842dff5f0e61391ac7f9ce3eda794f7b610581"
+    },
+    {
+      "bbox": [
+        306.0,
+        116.4658203125,
+        549.5517578125,
+        370.625
+      ],
+      "block_id": "page-0745-block-0012",
+      "order": 12,
+      "text": "L’actigraphie est une méthode d’estimation du cycle veille- sommeil\nréalisée à partir d’un enregistrement des périodes d’activité motrice\net de repos. L’actigraphe se présente généralement sous forme de\nmontre-bracelet qui enregistre les mouvements de façon continue\ngrâce à un accéléromètre. Il s’agit d’une méthode pratique, non\ninvasive et portable qui ore la possibilité d’obtenir un portrait\nobjectif global des habitudes de sommeil d’une personne dans\nson milieu naturel, pendant plusieurs jours (voir la gure 32.8).\nSon emploi se fait souvent en conjonction avec l’agenda de som-\nmeil. Par contre, l’actigraphie ne permet pas l’étude des stades du\nsommeil comme le fait la PSG. De plus, les études montrent que\nl’actigraphie présente soit un problème de sensibilité à identier\nun état de sommeil, soit un problème de spécicité à identier\nles réveils nocturnes, tant chez les enfants d’âge préscolaire que\nles adolescents et les adultes. Ainsi, l’actigraphie est peu utile\nchez les patients insomniaques, qui peuvent demeurer gés dans\nleur lit, parfaitement réveillés, en pleine période de rumination\nmentale, alors que les algorithmes interprètent cette immobilité\ncomme du sommeil. Plus récemment, des applications moins\ndispendieuses ou même gratuites pour téléphones intelligents\net tablettes électroniques ont fait leur apparition, mais aucune\nétude objective publiée ne conrme leur délité ni leur validité.\n",
+      "text_sha256": "954e6ff5cc9e35caaf5f7a010cc7e9ca9d8674acd3b7ca2f73d16dbca43d66c6"
+    },
+    {
+      "bbox": [
+        306.0,
+        381.3368225097656,
+        457.53973388671875,
+        397.4794006347656
+      ],
+      "block_id": "page-0745-block-0013",
+      "order": 13,
+      "text": "32.3.4 Vidéosomnographie\n",
+      "text_sha256": "b7af741859cc1a40c3d6d88331c758bde6a2d6c29fbaa71f85dc98e49451e360"
+    },
+    {
+      "bbox": [
+        306.0,
+        400.91583251953125,
+        549.2183837890625,
+        504.1750183105469
+      ],
+      "block_id": "page-0745-block-0014",
+      "order": 14,
+      "text": "L’enregistrement audiovisuel du sommeil au domicile peut s’avé-\nrer la seule alternative valable si le patient ne peut se déplacer\nau laboratoire (symptômes graves ou soins requis, transport\ninaccessible, etc.). L’analyse de la vidéosomnographie peut être\nlongue et fastidieuse, mais de tels enregistrements, qu’ils soient\nfaits au laboratoire ou au domicile, livrent des observations\ncliniques utiles sur la lumière et les bruits environnants, sur les\nmouvements et les sons (ronement, vocalisations, etc.) émis par\nle patient, de même que lors de cauchemars et autres parasomnies.\n",
+      "text_sha256": "6fbd742c05b8d96f279884cddbb0cbcd1fc986daf2804b07819be9b71faa0a19"
+    },
+    {
+      "bbox": [
+        306.0,
+        514.8868408203125,
+        510.70068359375,
+        531.0294189453125
+      ],
+      "block_id": "page-0745-block-0015",
+      "order": 15,
+      "text": "32.3.5 Évaluations complémentaires\n",
+      "text_sha256": "48dc3b17a12c02da6c95113eec3df5b6908c11547e5619d9de9e0a95bc8b47f0"
+    },
+    {
+      "bbox": [
+        306.0,
+        534.4658203125,
+        549.4021606445312,
+        715.375
+      ],
+      "block_id": "page-0745-block-0016",
+      "order": 16,
+      "text": "Selon le cas, le médecin peut demander des évaluations\ncomplémentaires :\n• un EEG pour éliminer le diagnostic d’épilepsie ;\n• une imagerie cérébrale pour vérier l’hypothèse d’un dom-\nmage cérébral ;\n• une évaluation neuropsychologique pour évaluer les fonctions\nmentales supérieures.\nOn ne s’étonne jamais assez de constater que des patients\nqui consultent en clinique spécialisée pour un problème de\nsommeil n’ont préalablement pas eu un bilan de santé récent y\ncompris une formule sanguine complète, un examen des voies\nrespiratoires supérieures ni aucun autre examen visant à exami-\nner des causes primaires possiblement associées à un mauvais\nsommeil (p. ex., allergies et intolérances alimentaires ou autre,\nreux gastro-œsophagien, eets indésirables de médicaments).\n",
+      "text_sha256": "1716311c2204f9ae3651fb054a16b267f83f483390e4df9e456144ee8836df5a"
+    }
+  ],
+  "coordinates_sha256": "58c92467ea6efada49ec06c375846dbf14c610adf522ff9da4b5cb79c41528f4",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0745",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "728\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n• les désaturations de 4 % ou plus (D) ;\n• le ronement (SNR).\nLes données suggèrent qu’il s’agit d’un cas modéré qui nécessi-\nterait donc une investigation plus poussée. De tels enregistrements\nne peuvent déterminer à quels moments le patient dort et est\néveillé. On ne peut pas non plus déterminer si les apnées et les\ndésaturations sont associées à des réveils, des irrégularités du\nrythme cardiaque, une activité EEG atypique, etc.\nIl peut arriver que l’examen de dépistage des apnées au cours du\nsommeil n’ait été mené qu’avec un nombre réduit de mesures comme\nl’eort et le ot respiratoires, voire seulement une estimation de\nl’oxymétrie. Bien que dans certains cas, cette pratique puisse servir au\nsuivi d’un patient dont les apnées ont déjà été dûment documentées,\nelles ne sont pas susantes pour établir avec certitude un premier\ndiagnostic d’apnées du sommeil. En eet, la polysomnographie sert\nnon seulement à mesurer certains paramètres respiratoires, mais\nelle permet d’estimer l’impact des irrégularités de la respiration\nsur le sommeil lui-même et même de détecter d’autres troubles du\nsommeil insoupçonnés. Ainsi, on sait non seulement si les apnées\nsont associées à des réveils, à des mouvements corporels ou à des\nirrégularités du rythme cardiaque, mais on peut également vérier\nla présence de mouvements périodiques des jambes au cours du\nsommeil, d’activité EEG atypique, etc.\nEn plus des mesures de quantité et de qualité du sommeil (voir\nla section 32.1), les rapports de PSG présentent le plus souvent\nles résultats suivants :\n• le nombre de mouvements périodiques des jambes par heure\nde sommeil et par stade de sommeil ;\n• l’index d’événements respiratoires, c’est-à-dire le nombre\nd’apnées et d’hypopnées par heure de sommeil (et habituelle-\nment par stade de sommeil). La gravité du syndrome d’apnée\ndu sommeil est établie comme suit :\n– léger : 5 à 14 apnées par heure ;\n– modéré : 15 à 30 par heure ;\n– grave : plus de 30 par heure.\n• le volume du ronement en décibels pour chaque position\nde sommeil ;\n• le pouls, en battement par minute : minimum, maximum et\nmoyenne au cours de la nuit ;\n• la position du dormeur lors des apnées (dorsale, ventrale, côté\ngauche, côté droit) ;\n• les données d’oxymétrie :\n– la saturation, en pourcentage : minimum, maximum et\nmoyenne au cours de la nuit ;\n– le temps passé à différents niveaux de saturation au\ncours de la nuit : de 90 % à 100 %, 80 % à 89 %, 70 % à\n79 %, 60 % à 70 % (les mesures inférieures à 60 % sont\npeu fiables) ;\n– le nombre et la durée moyenne des désaturations sous le\nseuil critique (4 % ou plus) ;\n– le temps de données manquantes (capteur non fonctionnel\nou enlevé) ;\n– une représentation graphique de ces mesures échelonnées\nsur toute la nuit.\nLe rapport PSG fait aussi état des événements cliniques notés\nlors de la lecture du tracé : arythmies cardiaques, mouvements\ncorporels, réveils associés à un événement clinique (apnée,\nmouvement périodique des jambes, bruxisme, etc.), ainsi que\ntout autre mesure demandée par le médecin traitant ou jugée\nutile par les spécialistes du sommeil.\n32.3.3 Actigraphie\nL’actigraphie est une méthode d’estimation du cycle veille- sommeil\nréalisée à partir d’un enregistrement des périodes d’activité motrice\net de repos. L’actigraphe se présente généralement sous forme de\nmontre-bracelet qui enregistre les mouvements de façon continue\ngrâce à un accéléromètre. Il s’agit d’une méthode pratique, non\ninvasive et portable qui ore la possibilité d’obtenir un portrait\nobjectif global des habitudes de sommeil d’une personne dans\nson milieu naturel, pendant plusieurs jours (voir la gure 32.8).\nSon emploi se fait souvent en conjonction avec l’agenda de som-\nmeil. Par contre, l’actigraphie ne permet pas l’étude des stades du\nsommeil comme le fait la PSG. De plus, les études montrent que\nl’actigraphie présente soit un problème de sensibilité à identier\nun état de sommeil, soit un problème de spécicité à identier\nles réveils nocturnes, tant chez les enfants d’âge préscolaire que\nles adolescents et les adultes. Ainsi, l’actigraphie est peu utile\nchez les patients insomniaques, qui peuvent demeurer gés dans\nleur lit, parfaitement réveillés, en pleine période de rumination\nmentale, alors que les algorithmes interprètent cette immobilité\ncomme du sommeil. Plus récemment, des applications moins\ndispendieuses ou même gratuites pour téléphones intelligents\net tablettes électroniques ont fait leur apparition, mais aucune\nétude objective publiée ne conrme leur délité ni leur validité.\n32.3.4 Vidéosomnographie\nL’enregistrement audiovisuel du sommeil au domicile peut s’avé-\nrer la seule alternative valable si le patient ne peut se déplacer\nau laboratoire (symptômes graves ou soins requis, transport\ninaccessible, etc.). L’analyse de la vidéosomnographie peut être\nlongue et fastidieuse, mais de tels enregistrements, qu’ils soient\nfaits au laboratoire ou au domicile, livrent des observations\ncliniques utiles sur la lumière et les bruits environnants, sur les\nmouvements et les sons (ronement, vocalisations, etc.) émis par\nle patient, de même que lors de cauchemars et autres parasomnies.\n32.3.5 Évaluations complémentaires\nSelon le cas, le médecin peut demander des évaluations\ncomplémentaires :\n• un EEG pour éliminer le diagnostic d’épilepsie ;\n• une imagerie cérébrale pour vérier l’hypothèse d’un dom-\nmage cérébral ;\n• une évaluation neuropsychologique pour évaluer les fonctions\nmentales supérieures.\nOn ne s’étonne jamais assez de constater que des patients\nqui consultent en clinique spécialisée pour un problème de\nsommeil n’ont préalablement pas eu un bilan de santé récent y\ncompris une formule sanguine complète, un examen des voies\nrespiratoires supérieures ni aucun autre examen visant à exami-\nner des causes primaires possiblement associées à un mauvais\nsommeil (p. ex., allergies et intolérances alimentaires ou autre,\nreux gastro-œsophagien, eets indésirables de médicaments).\n",
+  "raw_text_sha256": "795e687751708f4328d207b77fa2a3333f1414f65e3e73988a71a54153ec733e",
+  "source_page_display": 746,
+  "source_page_index": 745
+}

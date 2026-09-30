@@ -1,0 +1,340 @@
+{
+  "block_sequence_sha256": "5c10389362085580de6827327312c48d89fcf7b2435d0f7bcb974f9b953ecfea",
+  "blocks": [
+    {
+      "bbox": [
+        286.70001220703125,
+        747.525390625,
+        555.0,
+        758.8193359375
+      ],
+      "block_id": "page-0790-block-0001",
+      "order": 1,
+      "text": "Chapitre 33\nSexualité normale et dysfonctions sexuelles\n773\n",
+      "text_sha256": "80b3a57e85e361e91e7d24ee48b30cfd4e174bfdeb1213f07ea081dc2c9c297c"
+    },
+    {
+      "bbox": [
+        56.75,
+        41.05229568481445,
+        308.3375244140625,
+        53.320068359375
+      ],
+      "block_id": "page-0790-block-0002",
+      "order": 2,
+      "text": "TABLEAU 33.9 Critères diagnostiques de l’éjaculation précoce\n",
+      "text_sha256": "64a39552ad101a129d08b271232e8f43382d6c987936c5a98b69649afbabf3e6"
+    },
+    {
+      "bbox": [
+        91.80000305175781,
+        58.27412414550781,
+        465.65850830078125,
+        81.60029602050781
+      ],
+      "block_id": "page-0790-block-0003",
+      "order": 3,
+      "text": "DSM-5\nDSM-IV-TR\n302.75 (F52.4) Éjaculation prématurée (précoce)\nÉjaculation précoce\n",
+      "text_sha256": "feb53987456929cde285704216dd7d373bf711833038d1de8731ad69143ae4d7"
+    },
+    {
+      "bbox": [
+        58.75,
+        86.751953125,
+        301.0780029296875,
+        96.578125
+      ],
+      "block_id": "page-0790-block-0004",
+      "order": 4,
+      "text": "A. Trouble de l’éjaculation persistant ou répété survenant pendant le rapport\n",
+      "text_sha256": "c0137d7ecc31255dce78f40a0fa6af455a1d2ad7443adec8e99a77e283dae9c5"
+    },
+    {
+      "bbox": [
+        58.75,
+        96.751953125,
+        295.3945617675781,
+        147.578125
+      ],
+      "block_id": "page-0790-block-0005",
+      "order": 5,
+      "text": "sexuel avec un partenaire, approximativement dans la minute suivant la\npénétration vaginale, et avant que l’homme ne souhaite éjaculer.\nN.B.: Bien que le diagnostic d’éjaculation précoce puisse s’appliquer aux\nsujets ayant des activités sexuelles non vaginales, le critère spécique de\ndurée n’a pas été établi pour ces activités.\n",
+      "text_sha256": "450d4ab83fd4ce1b354ee792d6457509b64ac3643a7d929435425d0ea7174cc5"
+    },
+    {
+      "bbox": [
+        308.75,
+        86.751953125,
+        522.2969970703125,
+        96.578125
+      ],
+      "block_id": "page-0790-block-0006",
+      "order": 6,
+      "text": "A) Trouble de l’éjaculation persistant ou répété lors de stimulations\n",
+      "text_sha256": "79b42477515c9b24c0cd7f8a42d1d51f222a7171ea7b861d6bacd07842d9c357"
+    },
+    {
+      "bbox": [
+        319.3999938964844,
+        96.751953125,
+        548.615234375,
+        146.578125
+      ],
+      "block_id": "page-0790-block-0007",
+      "order": 7,
+      "text": "sexuelles minimes avant, pendant, ou juste après la pénétration, et\navant que le sujet ne souhaite éjaculer. Le clinicien doit tenir compte\ndes facteurs qui modient la durée de la phase d’excitation sexuelle tels\nque l’âge, la nouveauté de l’expérience sexuelle ou du partenaire et la\nfréquence de l’activité sexuelle récente.\n",
+      "text_sha256": "3e41d7f8ba94fffed3cb8500730429f813124e780fadf0414f6df7a814cc3a11"
+    },
+    {
+      "bbox": [
+        58.75,
+        156.15196228027344,
+        298.7395324707031,
+        165.97813415527344
+      ],
+      "block_id": "page-0790-block-0008",
+      "order": 8,
+      "text": "B. Le symptôme du critère A doit avoir été présent depuis au moins 6 mois\n",
+      "text_sha256": "53a0a56b55ca1b73e7c390ea3321097ac31eb5871ded665896b2bdb4e3313964"
+    },
+    {
+      "bbox": [
+        69.5999984741211,
+        166.15196228027344,
+        298.99700927734375,
+        195.97813415527344
+      ],
+      "block_id": "page-0790-block-0009",
+      "order": 9,
+      "text": "et être éprouvé par l’homme dans presque toutes ou toutes (approxima-\ntivement 75-100 %) les occasions d’activité sexuelle (dans un contexte\nsituationnel identié ou, si de type généralisé, dans tous les contextes).\n",
+      "text_sha256": "6edcba612c4ea7c209885cdc73451b00f332c8f7ab26032e3e6ed4f41c7e0dd8"
+    },
+    {
+      "bbox": [
+        58.75,
+        204.60195922851562,
+        282.22918701171875,
+        214.42813110351562
+      ],
+      "block_id": "page-0790-block-0010",
+      "order": 10,
+      "text": "C. Les symptômes du critère A provoquent une détresse cliniquement\n",
+      "text_sha256": "8169ddd48390f3f46aa0203d04a9763b004c0f96d74bd43bf9bc366cb3535419"
+    },
+    {
+      "bbox": [
+        69.75,
+        214.60195922851562,
+        165.42901611328125,
+        224.42813110351562
+      ],
+      "block_id": "page-0790-block-0011",
+      "order": 11,
+      "text": "signicative chez la personne.\n",
+      "text_sha256": "3b2ab4428ceaf861fed53e96f554a8a39fd6c27135bed84cfccc2474c4547cef"
+    },
+    {
+      "bbox": [
+        308.75,
+        204.60195922851562,
+        545.3970336914062,
+        214.42813110351562
+      ],
+      "block_id": "page-0790-block-0012",
+      "order": 12,
+      "text": "B) La perturbation est à l’origine d’une souffrance marquée ou de difcul-\n",
+      "text_sha256": "c24065991d9b48b662b4c292721f0e509329431484f2546e2a2897dfd2cb357a"
+    },
+    {
+      "bbox": [
+        319.75,
+        214.60195922851562,
+        387.9610290527344,
+        224.42813110351562
+      ],
+      "block_id": "page-0790-block-0013",
+      "order": 13,
+      "text": "tés interpersonnelles.\n",
+      "text_sha256": "dbda55e061f7e46d52991a5d0943efa9e7e9bb59422136083fdb2b6dc8b23074"
+    },
+    {
+      "bbox": [
+        58.75,
+        233.001953125,
+        232.0144805908203,
+        242.828125
+      ],
+      "block_id": "page-0790-block-0014",
+      "order": 14,
+      "text": "D. La dysfonction sexuelle n’est pas mieux expliquée :\n",
+      "text_sha256": "1e10dee1532bdf7ad7781bbe5a2ed5006f459846034b972131e0af54fdef1332"
+    },
+    {
+      "bbox": [
+        69.75,
+        244.001953125,
+        298.8148498535156,
+        296.828125
+      ],
+      "block_id": "page-0790-block-0015",
+      "order": 15,
+      "text": "• par un trouble mental non sexuel,\n• comme la conséquence d’une souffrance sévère liée à une relation,\n• par d’autres facteurs de stress signicatifs,\net n’est pas due aux effets d’une substance, d’un médicament ou d’une\nautre affection médicale.\n",
+      "text_sha256": "5c45264c82ad1854b990a88907292ae9987cf206483759726eb7dcdc04521ffc"
+    },
+    {
+      "bbox": [
+        308.75,
+        233.001953125,
+        535.9014282226562,
+        242.828125
+      ],
+      "block_id": "page-0790-block-0016",
+      "order": 16,
+      "text": "C) L’éjaculation précoce n’est pas due exclusivement aux effets directs\n",
+      "text_sha256": "b46dc993c13800d52985c974834ea0e0c0129333406e38f5cd4faed0106434f7"
+    },
+    {
+      "bbox": [
+        319.8999938964844,
+        243.001953125,
+        477.2604064941406,
+        252.828125
+      ],
+      "block_id": "page-0790-block-0017",
+      "order": 17,
+      "text": "d’une substance (p. ex., un sevrage aux opiacés).\n",
+      "text_sha256": "8fbe43f3a1b7f6eb3679fd403d4da8be481d421a59ebb2ea85e1dab50cf92abd"
+    },
+    {
+      "bbox": [
+        58.75,
+        305.45196533203125,
+        297.0974426269531,
+        399.27813720703125
+      ],
+      "block_id": "page-0790-block-0018",
+      "order": 18,
+      "text": "Spécier le type : (voir le tableau 33.4)\nSpécier la sévérité actuelle :\nLéger: L’éjaculation se produit approximativement dans les 30 secondes à\n1 minute suivant la pénétration vaginale.\nMoyen: L’éjaculation se produit approximativement dans les 15 à 30\nsecondes suivant la pénétration vaginale.\nGrave : L’éjaculation se produit avant l’activité sexuelle, au début de\nl’activité sexuelle ou approximativement dans les 15 secondes suivant la\npénétration vaginale.\n",
+      "text_sha256": "5b02c2ec58bbff17d5aefda5933d1590d50113e488ee0da72fa4c941bc269ed4"
+    },
+    {
+      "bbox": [
+        308.75,
+        305.45196533203125,
+        446.3479919433594,
+        315.27813720703125
+      ],
+      "block_id": "page-0790-block-0019",
+      "order": 19,
+      "text": "Spécier le sous-type (voir le tableau 33.4)\n",
+      "text_sha256": "13a6e522e199b748857b6babf642c13fb4fa40efe88a626e4494f2f5e63d1775"
+    },
+    {
+      "bbox": [
+        54.75,
+        408.0406188964844,
+        553.0841064453125,
+        446.4750061035156
+      ],
+      "block_id": "page-0790-block-0020",
+      "order": 20,
+      "text": "Sources : APA (2015), p. 525 ; APA (2004), p. 639.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris,\n2015. All rights reserved.\n",
+      "text_sha256": "7edcd73352fbbbf9d5b25ae6a4a304283234d11f06129db4c03ba3e3af053b67"
+    },
+    {
+      "bbox": [
+        54.75,
+        452.7406311035156,
+        553.9182739257812,
+        479.4750061035156
+      ],
+      "block_id": "page-0790-block-0021",
+      "order": 21,
+      "text": "Traduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All\nrights reserved.\n",
+      "text_sha256": "07c7b5b3ebb9b3583f03af319372e10dbad05fd4d681a1b59654fbcc4ff17abd"
+    },
+    {
+      "bbox": [
+        54.25,
+        506.45123291015625,
+        297.2567138671875,
+        679.1085205078125
+      ],
+      "block_id": "page-0790-block-0022",
+      "order": 22,
+      "text": "Étiologie Dans certains cas, l’éjaculation précoce découlerait\nd’une prédisposition causée par une hypersensibilité du système\nsympathique, qui abaisse le seuil de ce réexe (McMahon & al.,\n2006). D’après Waldinger (2002), il existe une dysfonction neuro-\nbiologique comportant une vulnérabilité génétique pour un délai\ncourt de l’éjaculation intravaginale, qui est liée à une diminution\nde la neurotransmission sérotoninergique centrale et/ou une dys-\nfonction des récepteurs centraux à la sérotonine (5-HT2c, 5-HT1a,\n5-HT1b). Cet auteur postule que le problème d’éjaculation précoce\na une occurrence familiale, car 92 % des éjaculateurs précoces ont\ndes pères ou des frères sourant du même problème. D’après\n(Michetti, 2007), on observe des taux signicativement plus éle-\nvés d’alexithymie chez les patients atteints d’éjaculation précoce\nque dans le groupe témoin. Ces études montrent que l’étiologie\nde l’éjaculation précoce est organique plutôt que psychologique.\n",
+      "text_sha256": "e62ffb8192f141452e25939b88ba712a692ba05617d558c3cc5696b47b4fdff2"
+    },
+    {
+      "bbox": [
+        54.25,
+        680.1158447265625,
+        296.8423767089844,
+        725.1085205078125
+      ],
+      "block_id": "page-0790-block-0023",
+      "order": 23,
+      "text": "Une hypothèse évolutionniste a aussi été proposée : dans\nl’histoire ancienne de l’homme, l’éjaculateur précoce avait plus de\nchances de disséminer rapidement ses gênes avant d’être attrapé\npar un prédateur (préservation de l’espèce).\n",
+      "text_sha256": "265ccb02648df6c485630e807392dc25e9140329452294afdae95340d4baee60"
+    },
+    {
+      "bbox": [
+        312.0,
+        507.26580810546875,
+        554.9244384765625,
+        573.6585083007812
+      ],
+      "block_id": "page-0790-block-0024",
+      "order": 24,
+      "text": "Les autres facteurs peuvent être :\n• des facteurs biologiques :\n– infections locales (p. ex., urétrite, prostatite) ;\n– eets indésirables de médicaments (p. ex., α-bloquants) ;\n– lésions neurologiques (si le trouble éjaculatoire est acquis,\n",
+      "text_sha256": "fd65ee5684d171f55e9f1ca4e5d8161a9fd4522b82cc9948728935ac7b899509"
+    },
+    {
+      "bbox": [
+        312.0,
+        575.1158447265625,
+        555.1624145507812,
+        625.5084838867188
+      ],
+      "block_id": "page-0790-block-0025",
+      "order": 25,
+      "text": "c.-à-d. s’il survient après une période de fonctionnement\nsexuel normal) ;\n• des facteurs psychologiques :\n– manque d’apprentissages ou de maîtrise d’habiletés. Un\n",
+      "text_sha256": "e895618a44252e920b0101195dd68a2ecce70786ff314ab7e786e259fd872cb2"
+    },
+    {
+      "bbox": [
+        324.0,
+        626.9658203125,
+        555.2542114257812,
+        687.3585205078125
+      ],
+      "block_id": "page-0790-block-0026",
+      "order": 26,
+      "text": "ensemble de facteurs reliés à l’utilisation de son corps\ninuence la capacité à gérer son excitation, non seulement\nla contraction musculaire, mais aussi les respirations sac-\ncadées, les mouvements corporels restreints et rapides ;\n– rare sont les hommes ayant cette diculté n’ayant pas une\n",
+      "text_sha256": "4d826f8d2c877fe83260aca63a3d7c110dfd34a79408e65938bdbdbdbb4e9676"
+    },
+    {
+      "bbox": [
+        324.0,
+        688.8158569335938,
+        554.8460083007812,
+        725.2584838867188
+      ],
+      "block_id": "page-0790-block-0027",
+      "order": 27,
+      "text": "rapidité généralisée dans toutes les activités quotidiennes\n(marcher, manger, parler, bouger) ;\n– premières expériences sexuelles stressantes ;\n",
+      "text_sha256": "4286c19bd0972cfb1c7dbc7a4359f75b9beff1061f954bab0573fb5a35447b77"
+    }
+  ],
+  "coordinates_sha256": "6df55ea4ed1a1e2ef6ed9a43331597162da2754a905b6a934e654c4d5e9220d3",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0790",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 33\nSexualité normale et dysfonctions sexuelles\n773\nTABLEAU 33.9 Critères diagnostiques de l’éjaculation précoce\nDSM-5\nDSM-IV-TR\n302.75 (F52.4) Éjaculation prématurée (précoce)\nÉjaculation précoce\nA. Trouble de l’éjaculation persistant ou répété survenant pendant le rapport\nsexuel avec un partenaire, approximativement dans la minute suivant la\npénétration vaginale, et avant que l’homme ne souhaite éjaculer.\nN.B.: Bien que le diagnostic d’éjaculation précoce puisse s’appliquer aux\nsujets ayant des activités sexuelles non vaginales, le critère spécique de\ndurée n’a pas été établi pour ces activités.\nA) Trouble de l’éjaculation persistant ou répété lors de stimulations\nsexuelles minimes avant, pendant, ou juste après la pénétration, et\navant que le sujet ne souhaite éjaculer. Le clinicien doit tenir compte\ndes facteurs qui modient la durée de la phase d’excitation sexuelle tels\nque l’âge, la nouveauté de l’expérience sexuelle ou du partenaire et la\nfréquence de l’activité sexuelle récente.\nB. Le symptôme du critère A doit avoir été présent depuis au moins 6 mois\net être éprouvé par l’homme dans presque toutes ou toutes (approxima-\ntivement 75-100 %) les occasions d’activité sexuelle (dans un contexte\nsituationnel identié ou, si de type généralisé, dans tous les contextes).\nC. Les symptômes du critère A provoquent une détresse cliniquement\nsignicative chez la personne.\nB) La perturbation est à l’origine d’une souffrance marquée ou de difcul-\ntés interpersonnelles.\nD. La dysfonction sexuelle n’est pas mieux expliquée :\n• par un trouble mental non sexuel,\n• comme la conséquence d’une souffrance sévère liée à une relation,\n• par d’autres facteurs de stress signicatifs,\net n’est pas due aux effets d’une substance, d’un médicament ou d’une\nautre affection médicale.\nC) L’éjaculation précoce n’est pas due exclusivement aux effets directs\nd’une substance (p. ex., un sevrage aux opiacés).\nSpécier le type : (voir le tableau 33.4)\nSpécier la sévérité actuelle :\nLéger: L’éjaculation se produit approximativement dans les 30 secondes à\n1 minute suivant la pénétration vaginale.\nMoyen: L’éjaculation se produit approximativement dans les 15 à 30\nsecondes suivant la pénétration vaginale.\nGrave : L’éjaculation se produit avant l’activité sexuelle, au début de\nl’activité sexuelle ou approximativement dans les 15 secondes suivant la\npénétration vaginale.\nSpécier le sous-type (voir le tableau 33.4)\nSources : APA (2015), p. 525 ; APA (2004), p. 639.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris,\n2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All\nrights reserved.\nÉtiologie Dans certains cas, l’éjaculation précoce découlerait\nd’une prédisposition causée par une hypersensibilité du système\nsympathique, qui abaisse le seuil de ce réexe (McMahon & al.,\n2006). D’après Waldinger (2002), il existe une dysfonction neuro-\nbiologique comportant une vulnérabilité génétique pour un délai\ncourt de l’éjaculation intravaginale, qui est liée à une diminution\nde la neurotransmission sérotoninergique centrale et/ou une dys-\nfonction des récepteurs centraux à la sérotonine (5-HT2c, 5-HT1a,\n5-HT1b). Cet auteur postule que le problème d’éjaculation précoce\na une occurrence familiale, car 92 % des éjaculateurs précoces ont\ndes pères ou des frères sourant du même problème. D’après\n(Michetti, 2007), on observe des taux signicativement plus éle-\nvés d’alexithymie chez les patients atteints d’éjaculation précoce\nque dans le groupe témoin. Ces études montrent que l’étiologie\nde l’éjaculation précoce est organique plutôt que psychologique.\nUne hypothèse évolutionniste a aussi été proposée : dans\nl’histoire ancienne de l’homme, l’éjaculateur précoce avait plus de\nchances de disséminer rapidement ses gênes avant d’être attrapé\npar un prédateur (préservation de l’espèce).\nLes autres facteurs peuvent être :\n• des facteurs biologiques :\n– infections locales (p. ex., urétrite, prostatite) ;\n– eets indésirables de médicaments (p. ex., α-bloquants) ;\n– lésions neurologiques (si le trouble éjaculatoire est acquis,\nc.-à-d. s’il survient après une période de fonctionnement\nsexuel normal) ;\n• des facteurs psychologiques :\n– manque d’apprentissages ou de maîtrise d’habiletés. Un\nensemble de facteurs reliés à l’utilisation de son corps\ninuence la capacité à gérer son excitation, non seulement\nla contraction musculaire, mais aussi les respirations sac-\ncadées, les mouvements corporels restreints et rapides ;\n– rare sont les hommes ayant cette diculté n’ayant pas une\nrapidité généralisée dans toutes les activités quotidiennes\n(marcher, manger, parler, bouger) ;\n– premières expériences sexuelles stressantes ;\n",
+  "raw_text_sha256": "d6097f0e71e62505cdce8bc4e812269c1405efb8354e2dff4f77b81196cd717c",
+  "source_page_display": 791,
+  "source_page_index": 790
+}

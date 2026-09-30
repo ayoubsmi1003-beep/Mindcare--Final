@@ -1,0 +1,76 @@
+{
+  "block_sequence_sha256": "cb8308cc0c405dbaf381cc3d222e43a68c72a67874b960e8fff62e10120c7b21",
+  "blocks": [
+    {
+      "bbox": [
+        422.8000183105469,
+        747.3754272460938,
+        554.97998046875,
+        758.6693725585938
+      ],
+      "block_id": "page-1160-block-0001",
+      "order": 1,
+      "text": "Figures supplémentaires\nF23\n",
+      "text_sha256": "565c2df8c5515a1975c10edf6ac84ace5e75f59a8e7b5c2a54961d218e0ebf92"
+    },
+    {
+      "bbox": [
+        56.35000228881836,
+        41.002296447753906,
+        533.9969482421875,
+        53.320068359375
+      ],
+      "block_id": "page-1160-block-0002",
+      "order": 2,
+      "text": "FIGURE 42 Effets des systèmes nerveux autonomes sympathique et parasympathique sur leurs effecteurs viscéraux\n",
+      "text_sha256": "27f68cb5b8311d104ec44c0246e2a6855d1fc25d558a3749e59a27ca1af02ec9"
+    },
+    {
+      "bbox": [
+        54.25,
+        435.1906433105469,
+        402.01385498046875,
+        444.0588684082031
+      ],
+      "block_id": "page-1160-block-0003",
+      "order": 3,
+      "text": "Source : McKinley, M. P. & al. (2014). Anatomie et physiologie – Une approche intégrée, McGraw-Hill/Chenelière Éducation.\n",
+      "text_sha256": "65bfdf1080fbca920940f43ebd76f5248e077071c9e3d2ab397aed6c3cff0c9b"
+    },
+    {
+      "bbox": [
+        56.25,
+        451.80230712890625,
+        295.50653076171875,
+        464.1200866699219
+      ],
+      "block_id": "page-1160-block-0004",
+      "order": 4,
+      "text": "FIGURE 43 Axe hypothalamo-hypophyso-surrénalien (HHS)\n",
+      "text_sha256": "42bcdb91011c014d172af8727b9c59cc4033401973cd019eb0a564d032830aa9"
+    },
+    {
+      "bbox": [
+        54.25,
+        720.8406372070312,
+        517.826171875,
+        729.7088623046875
+      ],
+      "block_id": "page-1160-block-0005",
+      "order": 5,
+      "text": "Source : Lupien, S. J. & al. (2009). « Effects of stress throughout the lifespan on the brain, behaviour and cognition », Nature Reviews Neuroscience, 10, p. 434-445.\n",
+      "text_sha256": "67a646d059161472c62cccc1536f85e7560d801de8b51a8aa16aed7542e04770"
+    }
+  ],
+  "coordinates_sha256": "67dea70b527520e2a94547cceaaedaf72aeae0b0b563f44ce556a72903856ad0",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1160",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Figures supplémentaires\nF23\nFIGURE 42 Effets des systèmes nerveux autonomes sympathique et parasympathique sur leurs effecteurs viscéraux\nSource : McKinley, M. P. & al. (2014). Anatomie et physiologie – Une approche intégrée, McGraw-Hill/Chenelière Éducation.\nFIGURE 43 Axe hypothalamo-hypophyso-surrénalien (HHS)\nSource : Lupien, S. J. & al. (2009). « Effects of stress throughout the lifespan on the brain, behaviour and cognition », Nature Reviews Neuroscience, 10, p. 434-445.\n",
+  "raw_text_sha256": "ab6128a9697a0ba001ded12a67556c96eba0e81ff4038eed75d6d509ade81e40",
+  "source_page_display": 1161,
+  "source_page_index": 1160
+}

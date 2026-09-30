@@ -1,0 +1,136 @@
+{
+  "block_sequence_sha256": "b59365b84e6c484ae868e10caa273346cfb53b2c6457ae3aa4ec170036041c2d",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        470.3879699707031,
+        758.8693237304688
+      ],
+      "block_id": "page-0115-block-0001",
+      "order": 1,
+      "text": "98\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2\nDéterminants bio-psycho-sociaux\n",
+      "text_sha256": "a6360f807bc8bfd35b99b27168e08e9c8e36c4913085b880476aeb999668be12"
+    },
+    {
+      "bbox": [
+        318.0,
+        40.9658203125,
+        549.1828002929688,
+        122.65850067138672
+      ],
+      "block_id": "page-0115-block-0002",
+      "order": 2,
+      "text": "maladies entraînant un décès avant que le malade puisse\navoir des enfants. Parmi la fratrie des personnes aectées,\nune personne sur quatre est aectée, une personne sur deux\nest porteuse d’une des deux copies du gène défectueux\nsans sourir de la maladie, et une personne sur quatre ne\nporte aucune de ces copies ;\nc) la transmission mendélienne liée au sexe, selon laquelle les\n",
+      "text_sha256": "3609c8f5540d9e74f54dcec72ea2e40dc3dc0a87e522f13e820c7105b13911e5"
+    },
+    {
+      "bbox": [
+        306.0,
+        123.7158203125,
+        549.3880615234375,
+        599.70849609375
+      ],
+      "block_id": "page-0115-block-0003",
+      "order": 3,
+      "text": "gènes de susceptibilité sont situés sur les chromosomes\nX ou Y (p. ex., le syndrome du X fragile, la myopathie de\nDuchenne ou le syndrome de Klinefelter). Dans de tels cas,\nla transmission suit des patterns complexes, et le risque\nde transmettre la maladie ou d’en être atteint dépend du\nsexe de l’individu. Puisque les garçons héritent d’un seul\nchromosome X (celui de leur mère) et du chromosome Y\nde leur père, toute mutation dans un gène du chromo-\nsome X, même récessive, causera la maladie. C’est le cas\npar exemple de la myopathie de Duchenne, une maladie\nrécessive liée au chromosome X et dont les malades sont\ndes garçons dans une proportion de 99,9 %. Les filles\npeuvent transmettre la mutation à leurs enfants, mais elles\nne tombent pas malades grâce à la copie du gène non muté\nde leur second chromosome X.\n2. La transmission polygénique, selon laquelle plusieurs\ngènes contribuent de façon indépendante à la susceptibilité\nde sourir d’une maladie, déterminant un continuum de\nvulnérabilité. Chaque individu présente un certain niveau\nde vulnérabilité, lequel est déterminé par son nombre de\nfacteurs de risque génétiques et environnementaux. Si cette\nvulnérabilité dépasse un seuil donné, il sourira de la maladie.\nSi le nombre de facteurs de risque est insusant pour que\nsurvienne la maladie, l’individu peut tout de même être porteur\nde certains gènes de susceptibilité sans toutefois exprimer la\nmaladie. Par exemple, plusieurs gènes sont en cause dans la\nplupart des types d’hypertension artérielle et c’est leur eet\ncombiné qui est éventuellement responsable de l’élévation de\nla pression artérielle au-dessus d’un seuil critique.\nLes analyses de ségrégation laissent penser que la transmission\nfamiliale des troubles psychiatriques est polygénique. Cependant,\non ne peut pas tirer de conclusion dénitive en raison, notam-\nment, des faiblesses méthodologiques des études sur lesquelles\nrepose cette conclusion. De plus, il est probable que chaque\nsyndrome psychiatrique regroupe plusieurs maladies distinctes,\nc’est pourquoi on parle d’hétérogénéité génétique de la maladie, et\nque chacune de ces maladies présente un mode de transmission\nspécique (voir la sous-section 5.3.5). Ainsi, il est plausible que\ncette apparente transmission polygénique des troubles psychia-\ntriques résulte d’un regroupement de plusieurs maladies dont\ncertaines se transmettraient selon un mode mendélien.\n",
+      "text_sha256": "e39f236c336cb660d187f3ee55e5845714804c8b5acf775cc8e59342ad36b398"
+    },
+    {
+      "bbox": [
+        317.3500061035156,
+        618.0431518554688,
+        510.36602783203125,
+        654.9689331054688
+      ],
+      "block_id": "page-0115-block-0004",
+      "order": 4,
+      "text": "5.3\nIdentication des gènes\nde susceptibilité\n",
+      "text_sha256": "5839e84af643e8496868a438b5df99b9803e4c5da088db052bcdb5c783692799"
+    },
+    {
+      "bbox": [
+        306.0,
+        668.8158569335938,
+        549.0386352539062,
+        725.45849609375
+      ],
+      "block_id": "page-0115-block-0005",
+      "order": 5,
+      "text": "Étant donné l’importance des facteurs génétiques en cause dans\nplusieurs maladies psychiatriques, il faut procéder à l’identication\nde leurs gènes de susceptibilité, des mécanismes de l’expression\nd’un gène en plusieurs protéines diérentes, ainsi que des méca-\nnismes épigénétiques qui peuvent venir modier cette expression.\n",
+      "text_sha256": "c9a820038e46661632f93ac5c7f02a91e0290ee7882fbbc2fc4088ec1203a658"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.9658203125,
+        291.24078369140625,
+        248.9084930419922
+      ],
+      "block_id": "page-0115-block-0006",
+      "order": 6,
+      "text": "révèlent un certain degré de spécicité du risque, comme on l’a\nmentionné plus haut, elles dénotent aussi un certain degré de\nnon-spécicité. En eet, certaines études rapportent un risque\nlégèrement plus élevé de troubles bipolaires chez les parents\ndu premier degré de personnes atteintes de schizophrénie que\ncelui retrouvé dans la population générale (Van Snellenberg &\nDe Candia, 2009), quoique le risque de troubles bipolaires chez\nles apparentés de personnes atteintes de schizophrénie soit plus\nbas que le risque de troubles bipolaires chez les apparentés de\npersonnes atteintes de troubles bipolaires. De plus, la structure\nfactorielle des symptômes psychotiques (c.-à-d. la dichotomie\nentre les symptômes positifs et négatifs) est commune aux formes\nfamiliales de schizophrénie et de troubles bipolaires, ce qui peut\nlaisser entendre que les facteurs étiologiques sous-tendant ces\ndimensions psychopathologiques sont communs aux deux\nsyndromes. Par ailleurs Maziade & al. (2009a) ont aussi montré\nque la schizophrénie et les troubles bipolaires partagent des\nmécanismes génétiques moléculaires.\n",
+      "text_sha256": "6387a2e1abc9b8d8aeaf74d3efa32ef3feb5d9dfb0194970b7fde751e253c79f"
+    },
+    {
+      "bbox": [
+        48.0,
+        259.5868225097656,
+        206.11276245117188,
+        275.7294006347656
+      ],
+      "block_id": "page-0115-block-0007",
+      "order": 7,
+      "text": "5.2.6 Mode de transmission\n",
+      "text_sha256": "3e70489f8ed069840b2d57e3192ec165097c32d0cfdfe9651096d0a72cd9ca41"
+    },
+    {
+      "bbox": [
+        48.0,
+        279.16583251953125,
+        291.5204162597656,
+        456.2585144042969
+      ],
+      "block_id": "page-0115-block-0008",
+      "order": 8,
+      "text": "Après avoir montré qu’une maladie est transmise génétiquement,\nil faut tenter de déterminer son mode de transmission, puisque\ncelui-ci inue sur la méthodologie à utiliser pour identier les\ngènes de susceptibilité. On mesure d’abord le mode de trans-\nmission en mesurant le risque de développer la maladie chez\nles parents du premier degré (parents, fratrie et enfants) et du\ndeuxième degré (grands-parents, oncles et tantes, cousins et\ncousines) de personnes atteintes de maladies psychiatriques. Par\nla suite, on procède à des analyses statistiques, appelées « analyses\nde ségrégation », an de déterminer le mode de transmission le\nplus probable en comparant le pattern de transmission observé\navec lespatternscaractéristiques des modes de transmission. Il est\nutile de distinguer deux grands groupes de transmission génétique :\n1. La transmission mendélienne (voir la gure 5.3), qui comprend :\na) la transmission mendélienne dominante, selon laquelle une\n",
+      "text_sha256": "836a0ee3ac63892bb4ae609fd6e810b4864b03a4ac90edcabaff5c40dd8313d8"
+    },
+    {
+      "bbox": [
+        60.0,
+        457.41583251953125,
+        291.4645080566406,
+        597.6585083007812
+      ],
+      "block_id": "page-0115-block-0009",
+      "order": 9,
+      "text": "seule copie du gène défectueux est susante pour déve-\nlopper la maladie. Par exemple, les personnes présentant\nla mutation causant la chorée de Huntington portent cette\nmutation à la naissance et souriront de la maladie à coup\nsûr. Elles courent aussi le risque de la transmettre à leurs\ndescendants. Dans les maladies à transmission dominante,\nle risque d’avoir hérité du gène défectueux causant la ma-\nladie est de 50 % chez les enfants et les parents du premier\ndegré (fratrie, parents, enfants) d’une personne malade, et\nce risque diminue de moitié chez les parents du deuxième\ndegré (cousins, cousines, oncles, tantes, grands-parents) ;\nb) la transmission mendélienne récessive, selon laquelle\n",
+      "text_sha256": "85ca45844e5fda731f78b18fb2de6644f6756b9c3d801bdc4fb7b45c7134c9fa"
+    },
+    {
+      "bbox": [
+        72.0,
+        598.8158569335938,
+        291.3090515136719,
+        725.45849609375
+      ],
+      "block_id": "page-0115-block-0010",
+      "order": 10,
+      "text": "deux copies (les deux allèles) du gène défectueux sont\nnécessaires pour voir apparaître la maladie. Par exemple,\ndans la brose kystique et la phénylcétonurie, les enfants\nporteurs de deux copies du gène défectueux ont un risque\nde 100 % de sourir de la maladie. Par contre, chez ceux\nqui n’en possèdent qu’une copie le risque est nul ; toutefois,\nils demeurent porteurs asymptomatiques. Généralement,\nle père et la mère d’une personne sourant d’une maladie\nà transmission récessive ne sont pas aectés, puisqu’ils\nn’ont chacun qu’une des deux copies du gène défectueux\net parce que beaucoup de maladies récessives sont des\n",
+      "text_sha256": "089be2ae8db10ec772344d3ed37964cd91603c00360eb67a80c926e36b7ab786"
+    }
+  ],
+  "coordinates_sha256": "04cab4de6ffa5227d03afb39f03ed1977b5cb150bb66e2a76ec21db8f15abcd5",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0115",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "98\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2\nDéterminants bio-psycho-sociaux\nmaladies entraînant un décès avant que le malade puisse\navoir des enfants. Parmi la fratrie des personnes aectées,\nune personne sur quatre est aectée, une personne sur deux\nest porteuse d’une des deux copies du gène défectueux\nsans sourir de la maladie, et une personne sur quatre ne\nporte aucune de ces copies ;\nc) la transmission mendélienne liée au sexe, selon laquelle les\ngènes de susceptibilité sont situés sur les chromosomes\nX ou Y (p. ex., le syndrome du X fragile, la myopathie de\nDuchenne ou le syndrome de Klinefelter). Dans de tels cas,\nla transmission suit des patterns complexes, et le risque\nde transmettre la maladie ou d’en être atteint dépend du\nsexe de l’individu. Puisque les garçons héritent d’un seul\nchromosome X (celui de leur mère) et du chromosome Y\nde leur père, toute mutation dans un gène du chromo-\nsome X, même récessive, causera la maladie. C’est le cas\npar exemple de la myopathie de Duchenne, une maladie\nrécessive liée au chromosome X et dont les malades sont\ndes garçons dans une proportion de 99,9 %. Les filles\npeuvent transmettre la mutation à leurs enfants, mais elles\nne tombent pas malades grâce à la copie du gène non muté\nde leur second chromosome X.\n2. La transmission polygénique, selon laquelle plusieurs\ngènes contribuent de façon indépendante à la susceptibilité\nde sourir d’une maladie, déterminant un continuum de\nvulnérabilité. Chaque individu présente un certain niveau\nde vulnérabilité, lequel est déterminé par son nombre de\nfacteurs de risque génétiques et environnementaux. Si cette\nvulnérabilité dépasse un seuil donné, il sourira de la maladie.\nSi le nombre de facteurs de risque est insusant pour que\nsurvienne la maladie, l’individu peut tout de même être porteur\nde certains gènes de susceptibilité sans toutefois exprimer la\nmaladie. Par exemple, plusieurs gènes sont en cause dans la\nplupart des types d’hypertension artérielle et c’est leur eet\ncombiné qui est éventuellement responsable de l’élévation de\nla pression artérielle au-dessus d’un seuil critique.\nLes analyses de ségrégation laissent penser que la transmission\nfamiliale des troubles psychiatriques est polygénique. Cependant,\non ne peut pas tirer de conclusion dénitive en raison, notam-\nment, des faiblesses méthodologiques des études sur lesquelles\nrepose cette conclusion. De plus, il est probable que chaque\nsyndrome psychiatrique regroupe plusieurs maladies distinctes,\nc’est pourquoi on parle d’hétérogénéité génétique de la maladie, et\nque chacune de ces maladies présente un mode de transmission\nspécique (voir la sous-section 5.3.5). Ainsi, il est plausible que\ncette apparente transmission polygénique des troubles psychia-\ntriques résulte d’un regroupement de plusieurs maladies dont\ncertaines se transmettraient selon un mode mendélien.\n5.3\nIdentication des gènes\nde susceptibilité\nÉtant donné l’importance des facteurs génétiques en cause dans\nplusieurs maladies psychiatriques, il faut procéder à l’identication\nde leurs gènes de susceptibilité, des mécanismes de l’expression\nd’un gène en plusieurs protéines diérentes, ainsi que des méca-\nnismes épigénétiques qui peuvent venir modier cette expression.\nrévèlent un certain degré de spécicité du risque, comme on l’a\nmentionné plus haut, elles dénotent aussi un certain degré de\nnon-spécicité. En eet, certaines études rapportent un risque\nlégèrement plus élevé de troubles bipolaires chez les parents\ndu premier degré de personnes atteintes de schizophrénie que\ncelui retrouvé dans la population générale (Van Snellenberg &\nDe Candia, 2009), quoique le risque de troubles bipolaires chez\nles apparentés de personnes atteintes de schizophrénie soit plus\nbas que le risque de troubles bipolaires chez les apparentés de\npersonnes atteintes de troubles bipolaires. De plus, la structure\nfactorielle des symptômes psychotiques (c.-à-d. la dichotomie\nentre les symptômes positifs et négatifs) est commune aux formes\nfamiliales de schizophrénie et de troubles bipolaires, ce qui peut\nlaisser entendre que les facteurs étiologiques sous-tendant ces\ndimensions psychopathologiques sont communs aux deux\nsyndromes. Par ailleurs Maziade & al. (2009a) ont aussi montré\nque la schizophrénie et les troubles bipolaires partagent des\nmécanismes génétiques moléculaires.\n5.2.6 Mode de transmission\nAprès avoir montré qu’une maladie est transmise génétiquement,\nil faut tenter de déterminer son mode de transmission, puisque\ncelui-ci inue sur la méthodologie à utiliser pour identier les\ngènes de susceptibilité. On mesure d’abord le mode de trans-\nmission en mesurant le risque de développer la maladie chez\nles parents du premier degré (parents, fratrie et enfants) et du\ndeuxième degré (grands-parents, oncles et tantes, cousins et\ncousines) de personnes atteintes de maladies psychiatriques. Par\nla suite, on procède à des analyses statistiques, appelées « analyses\nde ségrégation », an de déterminer le mode de transmission le\nplus probable en comparant le pattern de transmission observé\navec lespatternscaractéristiques des modes de transmission. Il est\nutile de distinguer deux grands groupes de transmission génétique :\n1. La transmission mendélienne (voir la gure 5.3), qui comprend :\na) la transmission mendélienne dominante, selon laquelle une\nseule copie du gène défectueux est susante pour déve-\nlopper la maladie. Par exemple, les personnes présentant\nla mutation causant la chorée de Huntington portent cette\nmutation à la naissance et souriront de la maladie à coup\nsûr. Elles courent aussi le risque de la transmettre à leurs\ndescendants. Dans les maladies à transmission dominante,\nle risque d’avoir hérité du gène défectueux causant la ma-\nladie est de 50 % chez les enfants et les parents du premier\ndegré (fratrie, parents, enfants) d’une personne malade, et\nce risque diminue de moitié chez les parents du deuxième\ndegré (cousins, cousines, oncles, tantes, grands-parents) ;\nb) la transmission mendélienne récessive, selon laquelle\ndeux copies (les deux allèles) du gène défectueux sont\nnécessaires pour voir apparaître la maladie. Par exemple,\ndans la brose kystique et la phénylcétonurie, les enfants\nporteurs de deux copies du gène défectueux ont un risque\nde 100 % de sourir de la maladie. Par contre, chez ceux\nqui n’en possèdent qu’une copie le risque est nul ; toutefois,\nils demeurent porteurs asymptomatiques. Généralement,\nle père et la mère d’une personne sourant d’une maladie\nà transmission récessive ne sont pas aectés, puisqu’ils\nn’ont chacun qu’une des deux copies du gène défectueux\net parce que beaucoup de maladies récessives sont des\n",
+  "raw_text_sha256": "a610b703f2c0b6e48f7f7735567ab4a906dcc1858639bd68c18367663ecfd541",
+  "source_page_display": 116,
+  "source_page_index": 115
+}

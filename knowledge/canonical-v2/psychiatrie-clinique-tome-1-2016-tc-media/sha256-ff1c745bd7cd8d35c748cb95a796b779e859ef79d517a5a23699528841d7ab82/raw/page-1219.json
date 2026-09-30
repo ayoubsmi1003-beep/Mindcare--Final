@@ -1,0 +1,184 @@
+{
+  "block_sequence_sha256": "22ff1c134255120332de88e5097dd0047e0965ec56dc3af08c013731e6102b92",
+  "blocks": [
+    {
+      "bbox": [
+        240.5,
+        750.9761352539062,
+        346.23370361328125,
+        759.1761474609375
+      ],
+      "block_id": "page-1219-block-0001",
+      "order": 1,
+      "text": "www.cheneliere.ca/lalonde\n",
+      "text_sha256": "91a07669d6e9e7f98160cfcdb30aac36f827f71a845dab3c93ab3485a951303a"
+    },
+    {
+      "bbox": [
+        468.6000061035156,
+        711.107666015625,
+        545.8390502929688,
+        718.107666015625
+      ],
+      "block_id": "page-1219-block-0002",
+      "order": 2,
+      "text": "ISBN 978-2-7650-4770-4\n",
+      "text_sha256": "f9c018030ff56a93c0aff59424b7de6aa67983b818ab94d817dff7ae6e3e346c"
+    },
+    {
+      "bbox": [
+        377.1499938964844,
+        41.046485900878906,
+        558.28759765625,
+        282.6021423339844
+      ],
+      "block_id": "page-1219-block-0003",
+      "order": 3,
+      "text": "Le docteur Pierre Lalonde,\nM.D., FRCPC, a fait ses\nétudes de médecine et de\npsychiatrie à l’Université de\nMontréal. Dès le début de sa\ncarrière, le docteur Lalonde\ns’est intéressé à trois volets\nde la psychiatrie : les soins,\nl’enseignement et la recherche. Auteur de\nnombreuses publications, il est maintenant\nprofesseur émérite au Département de psy-\nchiatrie de l’Université de Montréal. À l’Institut\nuniversitaire en santé mentale de Montréal, il a\nfondé le Programme jeunes adultes (schizo-\nphrénie) pour offrir traitement et réadaptation\nà des jeunes souffrant de schizophrénie tout en\napportant soutien et information à leur famille.\nIl a ainsi été reconnu NAMI Exemplary Psychia-\ntrist par la National Alliance for Mentally Ill et\nil a reçu de nombreux prix, dont le prix Excel-\nlence académique et le prix Heinz-Lehmann\nd’excellence en psychiatrie.\n",
+      "text_sha256": "8322d8835c697d4f1531d37db2956639341eb0969c8a68be5d9d075f26e20a81"
+    },
+    {
+      "bbox": [
+        377.1499938964844,
+        332.9465026855469,
+        557.900146484375,
+        574.5021362304688
+      ],
+      "block_id": "page-1219-block-0004",
+      "order": 4,
+      "text": "Le docteurGeorges-F. Pinard,\nM.D., FRCPC, a fait ses\nétudes de médecine et de\npsychiatrie à l’Université de\nMontréal. Il est maintenant\nprofesseur agrégé de clinique\nau Département de psychia-\ntrie de l’Université de Mont-\nréal. Il a coédité l’ouvrage Clinical Assessment of\nDangerousness: Empirical Contributions avec la\ndocteure Linda S. Pagani (2001, 2010) aux\nPresses de l’Université Cambridge. Cet ouvrage\na connu un rayonnement international récom-\npensé par le prix Réalisation de l’année de\nl’Association des médecins-psychiatres du\nQuébec. Le docteur Pinard a été médecin exa-\nminateur pour le Collège royal des médecins et\nchirurgiens du Canada et pour le Conseil médi-\ncal du Canada. De 1990 à aujourd’hui,\nil a pratiqué à l’Institut Philippe-Pinel\nde Montréal, à l’Hôpital Louis-H.-Lafontaine,\npuis à l’Hôpital Maisonneuve-Rosemont.\n",
+      "text_sha256": "84dcb4082f722aea4c35f06fa24e9ac94c1f042bbad160ddb97ed55f66f1e989"
+    },
+    {
+      "bbox": [
+        41.75,
+        40.49609375,
+        354.3710632324219,
+        122.76945495605469
+      ],
+      "block_id": "page-1219-block-0005",
+      "order": 5,
+      "text": "ette quatrième édition du premier manuel de psychiatrie québécois\nfait suite aux trois éditions précédentes (1980, 1988 et 2001) et\ncondense 35 ans d’évolution de la psychiatrie. Afin de bien couvrir\nl’ampleur de l’avancement des connaissances, les nombreux sujets ont été\nrépartis en deux tomes :\ntome i\n",
+      "text_sha256": "59e0c6a48894b85230eaaf2c322d212614da23ff5893185ed9e544dc07b161ee"
+    },
+    {
+      "bbox": [
+        50.750003814697266,
+        132.49609375,
+        320.2810974121094,
+        144.224609375
+      ],
+      "block_id": "page-1219-block-0006",
+      "order": 6,
+      "text": "Introduction à la psychiatrie\nSyndromes cliniques\n",
+      "text_sha256": "e6261f05e3c49716826748cd9acba363a40cbb053dc544b6fd814f64086c1554"
+    },
+    {
+      "bbox": [
+        50.750003814697266,
+        148.49609375,
+        329.6715393066406,
+        160.224609375
+      ],
+      "block_id": "page-1219-block-0007",
+      "order": 7,
+      "text": "Déterminants bio-psycho-sociaux\nOrganisation des soins\n",
+      "text_sha256": "744586153c6e2e9e71194f3ed35c57a11113c8fdeb9db8bff62cdd7db6ccb20a"
+    },
+    {
+      "bbox": [
+        41.75,
+        167.7694549560547,
+        103.95750427246094,
+        184.7694549560547
+      ],
+      "block_id": "page-1219-block-0008",
+      "order": 8,
+      "text": "tome ii\n",
+      "text_sha256": "ceda68316cd98e4bd6b4788f9b706fa6a725f90b13c3fbaa9db4fbb4876987d3"
+    },
+    {
+      "bbox": [
+        50.750003814697266,
+        194.49609375,
+        353.6532287597656,
+        262.224609375
+      ],
+      "block_id": "page-1219-block-0009",
+      "order": 9,
+      "text": "Spécialités psychiatriques\nTraitements\nSituations de crise \nTraitements biologiques\nPsychiatrie légale \nTraitements psychosociaux\nPédopsychiatrie\nGérontopsychiatrie\n",
+      "text_sha256": "4122f1206047f1952593a19c33043f4b70612e8fabdaf6ba499ee9399ed31881"
+    },
+    {
+      "bbox": [
+        41.75,
+        271.49609375,
+        353.760009765625,
+        319.224609375
+      ],
+      "block_id": "page-1219-block-0010",
+      "order": 10,
+      "text": "Près de 200 psychiatres, cliniciens et chercheurs, sous la direction des\ndocteurs Pierre Lalonde et Georges-F. Pinard, ont été associés à la rédac-\ntion des 85 chapitres qui touchent les diverses psychopathologies classi-\nquement décrites dans les manuels de psychiatrie et leur traitement.\n",
+      "text_sha256": "56d235ddce5d03cc8c8b2319ac99fae7ad68d392f1b8efce04a3dde49d4e08ca"
+    },
+    {
+      "bbox": [
+        41.75,
+        325.49609375,
+        354.5627746582031,
+        445.224609375
+      ],
+      "block_id": "page-1219-block-0011",
+      "order": 11,
+      "text": "Cet ouvrage s’appuie sur une approche bio-psycho-sociale éclectique qui\nsert de trait d’union dans cette diversité conceptuelle et qui permet de\nconcilier, en une synthèse harmonieuse, des données scientifiques complé-\nmentaires pour une meilleure compréhension du comportement humain\nnormal et pathologique. La psychiatrie contemporaine doit continuellement\nfaire l’intégration de ces trois composantes – biologique, psychique et\nsociale – de l’être humain pour arriver à des diagnostics plus précis et des\ntraitements mieux adaptés aux différentes facettes des difficultés que\nvivent les patients aux prises avec une maladie mentale ou d’autres\nproblèmes de santé mentale.\n",
+      "text_sha256": "62919707ddff175067ec228b0d6f0a4a554d10cce8415c7d80b49a3b5da17e74"
+    },
+    {
+      "bbox": [
+        41.75,
+        451.49609375,
+        353.8635559082031,
+        535.224609375
+      ],
+      "block_id": "page-1219-block-0012",
+      "order": 12,
+      "text": "Pour le lecteur francophone, ce manuel ouvre une fenêtre sur la psychia-\ntrie nord-américaine, fondée sur une méthode scientifique et descriptive\nqui est à la base de la nosographie du Diagnostic and Statistical Manual\n(DSM-5), et il fait systématiquement le lien avec l’empirisme et le raffi-\nnement de la psychiatrie européenne, notamment quant à sa richesse\nsémiologique. Il fait le point sur les connaissances actuelles – bien que\ntoujours à enrichir – de la psychiatrie contemporaine.\n",
+      "text_sha256": "e04d1917b08809b5c8c5d8083f88642ff4a767171ccaf21a8373f7be04c0b1cf"
+    },
+    {
+      "bbox": [
+        41.75,
+        541.49609375,
+        353.760009765625,
+        613.224609375
+      ],
+      "block_id": "page-1219-block-0013",
+      "order": 13,
+      "text": "Unique en son genre en français, l’ouvrage s’adresse en particulier aux\nmédecins de famille et aux étudiants en sciences de la santé. Les psy-\nchiatres et les autres professionnels de la santé y trouveront aussi une\ninformation accessible et pratique. Facile à lire, ce livre rend enfin la\npsychiatrie compréhensible et intéressante, même pour le profane, sans\npour autant faire de concessions quant à la rigueur scientifique.\n",
+      "text_sha256": "e55cadfa8207ba7db171c00edd1d6e85f99d1216d408a77da2623d5043eac239"
+    },
+    {
+      "bbox": [
+        39.60000228881836,
+        38.71953201293945,
+        71.1217041015625,
+        86.0157241821289
+      ],
+      "block_id": "page-1219-block-0014",
+      "order": 14,
+      "text": "C\n",
+      "text_sha256": "12f37a8a84034d3e623d726fe10e5031f4df997ac13f4d5571b5a90c41fb84fe"
+    }
+  ],
+  "coordinates_sha256": "1e5b317d3031e19a821f6df606621b8fe14aa670d66f740ee0c971a90b825761",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1219",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "www.cheneliere.ca/lalonde\nISBN 978-2-7650-4770-4\nLe docteur Pierre Lalonde,\nM.D., FRCPC, a fait ses\nétudes de médecine et de\npsychiatrie à l’Université de\nMontréal. Dès le début de sa\ncarrière, le docteur Lalonde\ns’est intéressé à trois volets\nde la psychiatrie : les soins,\nl’enseignement et la recherche. Auteur de\nnombreuses publications, il est maintenant\nprofesseur émérite au Département de psy-\nchiatrie de l’Université de Montréal. À l’Institut\nuniversitaire en santé mentale de Montréal, il a\nfondé le Programme jeunes adultes (schizo-\nphrénie) pour offrir traitement et réadaptation\nà des jeunes souffrant de schizophrénie tout en\napportant soutien et information à leur famille.\nIl a ainsi été reconnu NAMI Exemplary Psychia-\ntrist par la National Alliance for Mentally Ill et\nil a reçu de nombreux prix, dont le prix Excel-\nlence académique et le prix Heinz-Lehmann\nd’excellence en psychiatrie.\nLe docteurGeorges-F. Pinard,\nM.D., FRCPC, a fait ses\nétudes de médecine et de\npsychiatrie à l’Université de\nMontréal. Il est maintenant\nprofesseur agrégé de clinique\nau Département de psychia-\ntrie de l’Université de Mont-\nréal. Il a coédité l’ouvrage Clinical Assessment of\nDangerousness: Empirical Contributions avec la\ndocteure Linda S. Pagani (2001, 2010) aux\nPresses de l’Université Cambridge. Cet ouvrage\na connu un rayonnement international récom-\npensé par le prix Réalisation de l’année de\nl’Association des médecins-psychiatres du\nQuébec. Le docteur Pinard a été médecin exa-\nminateur pour le Collège royal des médecins et\nchirurgiens du Canada et pour le Conseil médi-\ncal du Canada. De 1990 à aujourd’hui,\nil a pratiqué à l’Institut Philippe-Pinel\nde Montréal, à l’Hôpital Louis-H.-Lafontaine,\npuis à l’Hôpital Maisonneuve-Rosemont.\nette quatrième édition du premier manuel de psychiatrie québécois\nfait suite aux trois éditions précédentes (1980, 1988 et 2001) et\ncondense 35 ans d’évolution de la psychiatrie. Afin de bien couvrir\nl’ampleur de l’avancement des connaissances, les nombreux sujets ont été\nrépartis en deux tomes :\ntome i\nIntroduction à la psychiatrie\nSyndromes cliniques\nDéterminants bio-psycho-sociaux\nOrganisation des soins\ntome ii\nSpécialités psychiatriques\nTraitements\nSituations de crise \nTraitements biologiques\nPsychiatrie légale \nTraitements psychosociaux\nPédopsychiatrie\nGérontopsychiatrie\nPrès de 200 psychiatres, cliniciens et chercheurs, sous la direction des\ndocteurs Pierre Lalonde et Georges-F. Pinard, ont été associés à la rédac-\ntion des 85 chapitres qui touchent les diverses psychopathologies classi-\nquement décrites dans les manuels de psychiatrie et leur traitement.\nCet ouvrage s’appuie sur une approche bio-psycho-sociale éclectique qui\nsert de trait d’union dans cette diversité conceptuelle et qui permet de\nconcilier, en une synthèse harmonieuse, des données scientifiques complé-\nmentaires pour une meilleure compréhension du comportement humain\nnormal et pathologique. La psychiatrie contemporaine doit continuellement\nfaire l’intégration de ces trois composantes – biologique, psychique et\nsociale – de l’être humain pour arriver à des diagnostics plus précis et des\ntraitements mieux adaptés aux différentes facettes des difficultés que\nvivent les patients aux prises avec une maladie mentale ou d’autres\nproblèmes de santé mentale.\nPour le lecteur francophone, ce manuel ouvre une fenêtre sur la psychia-\ntrie nord-américaine, fondée sur une méthode scientifique et descriptive\nqui est à la base de la nosographie du Diagnostic and Statistical Manual\n(DSM-5), et il fait systématiquement le lien avec l’empirisme et le raffi-\nnement de la psychiatrie européenne, notamment quant à sa richesse\nsémiologique. Il fait le point sur les connaissances actuelles – bien que\ntoujours à enrichir – de la psychiatrie contemporaine.\nUnique en son genre en français, l’ouvrage s’adresse en particulier aux\nmédecins de famille et aux étudiants en sciences de la santé. Les psy-\nchiatres et les autres professionnels de la santé y trouveront aussi une\ninformation accessible et pratique. Facile à lire, ce livre rend enfin la\npsychiatrie compréhensible et intéressante, même pour le profane, sans\npour autant faire de concessions quant à la rigueur scientifique.\nC\n",
+  "raw_text_sha256": "59b1655e3f1eab69f3e389ea9e32684f4caf80fb94538ee319b8baa005d2bdb4",
+  "source_page_display": 1220,
+  "source_page_index": 1219
+}

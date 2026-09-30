@@ -1,0 +1,112 @@
+{
+  "block_sequence_sha256": "b5832ea4fd863c96ff9f62694269056af28a835df2c4e3350c3bc240ceb1d690",
+  "blocks": [
+    {
+      "bbox": [
+        305.8500061035156,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0740-block-0001",
+      "order": 1,
+      "text": "Chapitre 32\nTroubles du sommeil et de la vigilance\n723\n",
+      "text_sha256": "5ab80b0ca33954d45a4e7cac15004f0172e82082b6de48cfd89a830edac6dcea"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.9658203125,
+        297.1405029296875,
+        157.85850524902344
+      ],
+      "block_id": "page-0740-block-0002",
+      "order": 2,
+      "text": "niveau de l’hypothalamus antérieur (région préoptique), alors\nque les malades comateux portaient des lésions au niveau de\nl’hypothalamus postérieur ou de la partie haute du mésen-\ncéphale. Il s’agit là de la première démonstration indiquant\nque des régions cérébrales distinctes puissent être responsables\nde l’éveil et du sommeil, spéciquement. En eet, on croyait\njusqu’alors que le sommeil venait passivement, par manque\nde stimulation, mais les observations de Von Economo ont\npermis d’établir une conception active de l’induction et du\nmaintien du sommeil.\n",
+      "text_sha256": "dd1a4436bbe2887c13fb12138bf31e3334ef470721fda3068a5f95187a945437"
+    },
+    {
+      "bbox": [
+        54.0,
+        159.2158203125,
+        297.34954833984375,
+        414.20849609375
+      ],
+      "block_id": "page-0740-block-0003",
+      "order": 3,
+      "text": "Les recherches qui ont suivi ont permis de caractériser les\nréseaux responsables de l’éveil et du sommeil. On peut synthé-\ntiquement en illustrer la hiérarchie par trois interrupteurs de\ncircuits, dont la représentation est faite à la gure 32.5 :\n1. Hypothalamus : interrupteur qui permet l’alternance entre\nl’éveil et le sommeil ;\n2. alamus : interrupteur du passage ou du blocage de l’infor-\nmation vers le cortex ;\n3. Tronc cérébral : interrupteur qui permet l’alternance entre\nle sommeil lent et le sommeil paradoxal.\nCes interrupteurs fonctionnent grâce à l’activation de leurs\nrécepteurs (excitateurs ou inhibiteurs) par des neurotransmet-\nteurs et des neuromodulateurs. Par exemple, de nombreuses\nmolécules dont l’hypocrétine (appelée également « orexine »),\nl’histamine, le glutamate, l’acétylcholine, la dopamine, la\nsérotonine et la noradrénaline gouvernent les diérentes com-\nposantes de l’éveil (comportement, motricité, EEG, etc.) (Brown\n& al., 2012). L’adénosine, qui d’une part inhibe la neurotrans-\nmission dans le système de l’éveil (on note au passage que le café\nest un antagoniste de l’adénosine) et, d’autre part, désinhibe la\nneurotransmission GABAergique responsable du sommeil lent,\n",
+      "text_sha256": "c07a1dce78815d499dbd552f29a104a12b2a79ee0cd2db34980314e2b48ae66a"
+    },
+    {
+      "bbox": [
+        312.0,
+        40.9658203125,
+        555.1747436523438,
+        62.95849609375
+      ],
+      "block_id": "page-0740-block-0004",
+      "order": 4,
+      "text": "doit faire basculer l’interrupteur hypothalamique pour que le\nsommeil apparaisse.\n",
+      "text_sha256": "f68b51cfe0adac20fd1e3ef065931b9add69640c3068333e82ca249b6c41d1c3"
+    },
+    {
+      "bbox": [
+        312.0,
+        63.9658203125,
+        555.2488403320312,
+        154.95849609375
+      ],
+      "block_id": "page-0740-block-0005",
+      "order": 5,
+      "text": "Avec l’endormissement, la neurotransmission GABAergique\nfait aussi basculer l’interrupteur thalamique en hyperpolarisant\nles neurones responsables du transfert de l’information sen-\nsorielle vers le cortex. Ainsi, le cerveau est protégé contre les\nstimulations du monde extérieur, sauf celles qui sont d’intensité\nsusante ou signiante pour soi (p. ex., une odeur particulière,\nune stimulation douloureuse, le son d’un téléavertisseur, les\npleurs d’un bébé, etc.).\n",
+      "text_sha256": "9d961b45bdafc3e95e657a3782e092a289a18a9893117f59fe6151e85c8cd734"
+    },
+    {
+      "bbox": [
+        312.0,
+        155.9658203125,
+        555.1790161132812,
+        413.95849609375
+      ],
+      "block_id": "page-0740-block-0006",
+      "order": 6,
+      "text": "L’interrupteur sommeil lent-sommeil paradoxal du tronc\ncérébral est constitué par deux groupes de neurones dont l’activité\noscille de façon réciproque :\n• les neurones aminergiques (sérotonine, noradrénaline, etc.)\nresponsables de l’inhibition du sommeil paradoxal ;\n• les neurones cholinergiques spéciquement responsables\nde l’induction et du maintien du sommeil paradoxal.\nÀ mesure que s’écoule le temps passé en sommeil lent, l’in-\nterrupteur devient instable et veut basculer. En eet, l’activité\ndes neurones aminergiques diminue progressivement avec\nl’accumulation de sommeil lent profond et, conséquemment,\ncelle des neurones cholinergiques augmente tout autant jusqu’à\nce qu’un seuil soit franchi, au-delà duquel le sommeil paradoxal\napparaît. À mesure que le temps en sommeil paradoxal s’al-\nlonge, l’inverse se produit : les neurones cholinergiques actifs\nen sommeil paradoxal excitent les neurones aminergiques qui\ndeviennent de moins en moins silencieux, jusqu’à ce que le\nseuil soit franchi dans la direction inverse et que le sommeil\nlent prévale à nouveau. L’alternance sommeil lent-sommeil\nparadoxal oscille ainsi toute la nuit, avec de plus en plus de\nsommeil paradoxal par cycle de 90 minutes selon le modèle\nmathématique des cycles limites.\n",
+      "text_sha256": "974b06ec692aa8996724103faf565e9979bb6c776e4d3539d017d3dd0f04b2e7"
+    },
+    {
+      "bbox": [
+        56.25,
+        439.5022888183594,
+        555.1304321289062,
+        451.8700866699219
+      ],
+      "block_id": "page-0740-block-0007",
+      "order": 7,
+      "text": "FIGURE 32.5 Représentation schématique des trois principaux interrupteurs neurophysiologiques de l’éveil et du sommeil\n",
+      "text_sha256": "c1086da1638bff29125b00e50184e0b459e9b4d88d2cdb5c416271aa9219b780"
+    },
+    {
+      "bbox": [
+        54.25,
+        670.8703002929688,
+        523.4063720703125,
+        688.6749877929688
+      ],
+      "block_id": "page-0740-block-0008",
+      "order": 8,
+      "text": "Légende : 1. Hypothalamus : interrupteur qui permet l’alternance entre l’éveil et le sommeil. 2. Thalamus : interrupteur du passage ou du blocage de l’information vers\nle cortex. 3. Tronc cérébral : interrupteur qui permet l’alternance entre le sommeil lent et le sommeil paradoxal.\n",
+      "text_sha256": "72254b84e750d1eea19b9b0db14ac0b31636bc0fd25e742fc1331a1fe00f8e9b"
+    }
+  ],
+  "coordinates_sha256": "e3c25670084df34f3f49318d00b1f0211a8506efc7776d6b8e191ea5499037ec",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0740",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 32\nTroubles du sommeil et de la vigilance\n723\nniveau de l’hypothalamus antérieur (région préoptique), alors\nque les malades comateux portaient des lésions au niveau de\nl’hypothalamus postérieur ou de la partie haute du mésen-\ncéphale. Il s’agit là de la première démonstration indiquant\nque des régions cérébrales distinctes puissent être responsables\nde l’éveil et du sommeil, spéciquement. En eet, on croyait\njusqu’alors que le sommeil venait passivement, par manque\nde stimulation, mais les observations de Von Economo ont\npermis d’établir une conception active de l’induction et du\nmaintien du sommeil.\nLes recherches qui ont suivi ont permis de caractériser les\nréseaux responsables de l’éveil et du sommeil. On peut synthé-\ntiquement en illustrer la hiérarchie par trois interrupteurs de\ncircuits, dont la représentation est faite à la gure 32.5 :\n1. Hypothalamus : interrupteur qui permet l’alternance entre\nl’éveil et le sommeil ;\n2. alamus : interrupteur du passage ou du blocage de l’infor-\nmation vers le cortex ;\n3. Tronc cérébral : interrupteur qui permet l’alternance entre\nle sommeil lent et le sommeil paradoxal.\nCes interrupteurs fonctionnent grâce à l’activation de leurs\nrécepteurs (excitateurs ou inhibiteurs) par des neurotransmet-\nteurs et des neuromodulateurs. Par exemple, de nombreuses\nmolécules dont l’hypocrétine (appelée également « orexine »),\nl’histamine, le glutamate, l’acétylcholine, la dopamine, la\nsérotonine et la noradrénaline gouvernent les diérentes com-\nposantes de l’éveil (comportement, motricité, EEG, etc.) (Brown\n& al., 2012). L’adénosine, qui d’une part inhibe la neurotrans-\nmission dans le système de l’éveil (on note au passage que le café\nest un antagoniste de l’adénosine) et, d’autre part, désinhibe la\nneurotransmission GABAergique responsable du sommeil lent,\ndoit faire basculer l’interrupteur hypothalamique pour que le\nsommeil apparaisse.\nAvec l’endormissement, la neurotransmission GABAergique\nfait aussi basculer l’interrupteur thalamique en hyperpolarisant\nles neurones responsables du transfert de l’information sen-\nsorielle vers le cortex. Ainsi, le cerveau est protégé contre les\nstimulations du monde extérieur, sauf celles qui sont d’intensité\nsusante ou signiante pour soi (p. ex., une odeur particulière,\nune stimulation douloureuse, le son d’un téléavertisseur, les\npleurs d’un bébé, etc.).\nL’interrupteur sommeil lent-sommeil paradoxal du tronc\ncérébral est constitué par deux groupes de neurones dont l’activité\noscille de façon réciproque :\n• les neurones aminergiques (sérotonine, noradrénaline, etc.)\nresponsables de l’inhibition du sommeil paradoxal ;\n• les neurones cholinergiques spéciquement responsables\nde l’induction et du maintien du sommeil paradoxal.\nÀ mesure que s’écoule le temps passé en sommeil lent, l’in-\nterrupteur devient instable et veut basculer. En eet, l’activité\ndes neurones aminergiques diminue progressivement avec\nl’accumulation de sommeil lent profond et, conséquemment,\ncelle des neurones cholinergiques augmente tout autant jusqu’à\nce qu’un seuil soit franchi, au-delà duquel le sommeil paradoxal\napparaît. À mesure que le temps en sommeil paradoxal s’al-\nlonge, l’inverse se produit : les neurones cholinergiques actifs\nen sommeil paradoxal excitent les neurones aminergiques qui\ndeviennent de moins en moins silencieux, jusqu’à ce que le\nseuil soit franchi dans la direction inverse et que le sommeil\nlent prévale à nouveau. L’alternance sommeil lent-sommeil\nparadoxal oscille ainsi toute la nuit, avec de plus en plus de\nsommeil paradoxal par cycle de 90 minutes selon le modèle\nmathématique des cycles limites.\nFIGURE 32.5 Représentation schématique des trois principaux interrupteurs neurophysiologiques de l’éveil et du sommeil\nLégende : 1. Hypothalamus : interrupteur qui permet l’alternance entre l’éveil et le sommeil. 2. Thalamus : interrupteur du passage ou du blocage de l’information vers\nle cortex. 3. Tronc cérébral : interrupteur qui permet l’alternance entre le sommeil lent et le sommeil paradoxal.\n",
+  "raw_text_sha256": "180b458a4584e06fe92907a83f3dc48cee53f81589c9e97f921936bdc50a6ae9",
+  "source_page_display": 741,
+  "source_page_index": 740
+}

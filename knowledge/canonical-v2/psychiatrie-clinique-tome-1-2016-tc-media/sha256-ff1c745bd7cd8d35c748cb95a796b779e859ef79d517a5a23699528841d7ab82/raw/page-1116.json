@@ -1,0 +1,784 @@
+{
+  "block_sequence_sha256": "807e0eeb1d86067bf5cb265c37f7fd4fb4686603fe4685c2d72d8cb18524d0c8",
+  "blocks": [
+    {
+      "bbox": [
+        476.20001220703125,
+        747.5753784179688,
+        555.0199584960938,
+        758.8693237304688
+      ],
+      "block_id": "page-1116-block-0001",
+      "order": 1,
+      "text": "Références\nR19\n",
+      "text_sha256": "bd8e06f83beede9c38985d8d7506ff31753ebd4adc91528648c52a8bf2742a68"
+    },
+    {
+      "bbox": [
+        396.0,
+        40.68496322631836,
+        545.4695434570312,
+        76.0234375
+      ],
+      "block_id": "page-1116-block-0002",
+      "order": 2,
+      "text": "Hameed, U. & al. (2005). « Antidepressant treatment in the\nprimary care ofce : Outcomes for adjustment disorder\nversus major depression », Annals of Clinical Psychiatry,\n17(2), p. 77-81.\n",
+      "text_sha256": "715c7eab87e62c6b54def45566816d34a7294443b0e92ba4b66e3d655a4a4cc5"
+    },
+    {
+      "bbox": [
+        396.0,
+        79.88496398925781,
+        542.6500244140625,
+        106.22344207763672
+      ],
+      "block_id": "page-1116-block-0003",
+      "order": 3,
+      "text": "Hayes, S.C. & al. (1999). Acceptance and Commitment\nTherapy : An Experiential Approach to Behavior Change,\nNew York, Guilford Press.\n",
+      "text_sha256": "32012eee4619d1ffd71a62121d24f15019ae385ff9f775b15f87ba4da5796591"
+    },
+    {
+      "bbox": [
+        396.0,
+        110.0849609375,
+        552.9923706054688,
+        145.42344665527344
+      ],
+      "block_id": "page-1116-block-0004",
+      "order": 4,
+      "text": "Hellhammer, D. H. (2008). « Principles of crosstalk between\nbrain and body – Glandotropy, ergotropy, and trophotropy »,\ndans Hellhammer, D. H. & Hellhammer, J. (dir.), Stress : The\nBrain-Body Connection, Bâle, Suisse, Karger, p. 21-38.\n",
+      "text_sha256": "e5901fcf526c1b037800600e6db61a1049a641b1752125ad80f8907fef573d5e"
+    },
+    {
+      "bbox": [
+        396.0,
+        149.2849578857422,
+        554.3475341796875,
+        175.5734405517578
+      ],
+      "block_id": "page-1116-block-0005",
+      "order": 5,
+      "text": "Hillard, J. R. & al. (1987). « A retrospective study of adoles-\ncents’visits to a general hospital psychiatric emergency ser-\nvice », American Journal of Psychiatry, 144(4), p. 432-436.\n",
+      "text_sha256": "40acafb695a2a81b5b62d15c02d2883bd8cfc39a803585c193fabd69586da4cb"
+    },
+    {
+      "bbox": [
+        396.0,
+        179.43496704101562,
+        547.1799926757812,
+        205.7234344482422
+      ],
+      "block_id": "page-1116-block-0006",
+      "order": 6,
+      "text": "Holmes, T. H. & Rahe, R. (1967). « The social readjustment\nrating scale », Journal of Psychosomatic Research, 11(2),\np. 213-218.\n",
+      "text_sha256": "3d784f3134e16b60307cfe60764ac4b897ecbab531659eac587ff6998b29365f"
+    },
+    {
+      "bbox": [
+        396.0,
+        209.5849609375,
+        553.7626342773438,
+        235.87344360351562
+      ],
+      "block_id": "page-1116-block-0007",
+      "order": 7,
+      "text": "Horowitz, M. J. (2011). Stress Response Syndromes : PTSD,\nGrief, Adjustment, and Dissociative Disorders, Lanham, MD,\nJason Aronson.\n",
+      "text_sha256": "d68192058db0d122f11186a430197494c2c318bf057d6ce0faaef0b81e46aef0"
+    },
+    {
+      "bbox": [
+        396.0,
+        239.7849578857422,
+        554.0175170898438,
+        266.0734558105469
+      ],
+      "block_id": "page-1116-block-0008",
+      "order": 8,
+      "text": "Jones, R. & al. (2002). « Readmission rates for adjustment\ndisorders : Comparison with other mood disorders », Journal\nof Affective Disorders, 71(1-3), p. 199-203.\n",
+      "text_sha256": "7bb9dbdd5cc2567eb84406b7039dcfecff29748315b027032a9aae0430528814"
+    },
+    {
+      "bbox": [
+        396.0,
+        269.9349670410156,
+        547.987548828125,
+        296.22344970703125
+      ],
+      "block_id": "page-1116-block-0009",
+      "order": 9,
+      "text": "Jovanovic, H. & al. (2011). « Chronic stress is linked to\n5-HT1a receptor changes and functional disintegration of\nthe limbic networks », NeuroImage, 55(3), p. 1178-1188.\n",
+      "text_sha256": "6fe2b74a68f8aea613acb643a195cc38f4a4fce8534420214ec505672dd01a22"
+    },
+    {
+      "bbox": [
+        396.0,
+        300.0849609375,
+        554.3538208007812,
+        326.3734436035156
+      ],
+      "block_id": "page-1116-block-0010",
+      "order": 10,
+      "text": "Kanner, A. D. & al. (1981). « Comparison of two modes of\nstress measurement : Daily hassles and uplifts versus major\nlife events » Journal of Behavioral Medicine, 4(1), p. 1-39.\n",
+      "text_sha256": "eee95f7f3abd3692e692cc360eb6b7560b10b8af1927e825c8002333357419af"
+    },
+    {
+      "bbox": [
+        396.0,
+        330.2349548339844,
+        550.197509765625,
+        365.5734558105469
+      ],
+      "block_id": "page-1116-block-0011",
+      "order": 11,
+      "text": "Karren, K. J. & al. (2014). « The disease-resistant persona-\nlity », dans Karren, K. J. & al., (dir.), Mind Body Health :The\nEffects of Attitudes, Emotions and Relationships, 5e éd.,\nBoston, MA, Pearson, p. 83-103.\n",
+      "text_sha256": "aacec00ac4beace2b9b70920d3124ea501accf437b64aa2511645dd401edaed9"
+    },
+    {
+      "bbox": [
+        396.0,
+        369.4349670410156,
+        552.9940185546875,
+        395.7734375
+      ],
+      "block_id": "page-1116-block-0012",
+      "order": 12,
+      "text": "Katz, D. L. & al. (2015). « Diet and immunity », dans Katz, D.\nL. & al. (dir.), Nutrition in Clinical Practice, 3e éd., Philadel-\nphie, PA, Wolters Kluwer, p. 215-226.\n",
+      "text_sha256": "7e6bb8fad0b971241d238708ccfb26eb958ecee805e7c82dadc7e4ee8879d5a8"
+    },
+    {
+      "bbox": [
+        396.0,
+        399.6349792480469,
+        549.280029296875,
+        425.9234313964844
+      ],
+      "block_id": "page-1116-block-0013",
+      "order": 13,
+      "text": "Kellermann, M. & al. (1999). « Screening for depressive\nsymptoms in the acute phase of stroke », General Hospital\nPsychiatry, 21(2), p. 116-121.\n",
+      "text_sha256": "bb3207656cd3eb47e8050df4253d8271b9642d0dd7194eb7d88b9ee68ee5b3b8"
+    },
+    {
+      "bbox": [
+        396.0,
+        429.78497314453125,
+        546.7975463867188,
+        465.1234436035156
+      ],
+      "block_id": "page-1116-block-0014",
+      "order": 14,
+      "text": "Kivimäki, M. & al. (2013). « Associations of job strain and\nlifestyle riskfactors with risk of coronary artery disease :\nA meta-analysis of individual participant data », Canadian\nMedical Association Journal, 185(9), p. 763-769.\n",
+      "text_sha256": "3f1df22ab46050bec20717399e92afbfedebcacd43e62cd8f5d25c55a1b2aa15"
+    },
+    {
+      "bbox": [
+        396.0,
+        468.9849548339844,
+        549.3375854492188,
+        495.2734375
+      ],
+      "block_id": "page-1116-block-0015",
+      "order": 15,
+      "text": "Lanius, R. A. & al. (dir.) (2010). The impact of early life\ntrauma on health and disease: The hidden epidemic, New\nYork, NY, Cambridge University Press.\n",
+      "text_sha256": "191b097a94c3057f18d8c5892c36e78adc6ded670f6cbac4b26d55e1a710f80f"
+    },
+    {
+      "bbox": [
+        396.0,
+        499.1349792480469,
+        546.3651733398438,
+        516.3734741210938
+      ],
+      "block_id": "page-1116-block-0016",
+      "order": 16,
+      "text": "Lazarus, R. S. & Folkman, S. (1984). Stress, Appraisal, and\nCoping, New York, NY, Springer.\n",
+      "text_sha256": "4d77cb4c05e5ec1fa6bf177f73189296e9bdfdda46c9145af5b14e57efaf39c7"
+    },
+    {
+      "bbox": [
+        396.0,
+        520.2849731445312,
+        549.1650390625,
+        555.6234741210938
+      ],
+      "block_id": "page-1116-block-0017",
+      "order": 17,
+      "text": "Maercker, A. & al. (2008). « Adjustment disorders, post-\ntraumatic stress disorder, and depressive disorders in old\nage : Findings from a community survey », Comprehensive\nPsychiatry, 49(2), p. 113-120.\n",
+      "text_sha256": "2b86f82d645dccd3d51a7056f1ee481fdba6986c2b5a66a212c289631a6d099a"
+    },
+    {
+      "bbox": [
+        396.0,
+        559.4849853515625,
+        554.85009765625,
+        585.7734375
+      ],
+      "block_id": "page-1116-block-0018",
+      "order": 18,
+      "text": "Markowitz, J. C. & al. (1992). Interpersonal psychotherapy of\ndepressed HIV-positive outpatients, Hospital & Community\nPsychiatry, 43(9), p. 885-890.\n",
+      "text_sha256": "8553b8abf298a45d3042e748a92b7519c1010ab30aec66b481eee1d4a5024930"
+    },
+    {
+      "bbox": [
+        396.0,
+        589.6349487304688,
+        544.6128540039062,
+        624.9734497070312
+      ],
+      "block_id": "page-1116-block-0019",
+      "order": 19,
+      "text": "Martin-Guehl, C. (2008). « Vulnérabilité : aspects psycho-\nlogiques chez l’enfant et l’adolescent », dans Rouillon, F.\n(dir.), Vulnérabilité et troubles de l’adaptation, Issy-Les-\nMoulineaux, France, Elsevier Masson, p. 31-42.\n",
+      "text_sha256": "180c81d9c485e68e1d368d6d791f69c310e97f36f42a8773eac9273f454743ad"
+    },
+    {
+      "bbox": [
+        396.0,
+        628.8349609375,
+        539.5485229492188,
+        655.1234741210938
+      ],
+      "block_id": "page-1116-block-0020",
+      "order": 20,
+      "text": "Meichenbaum, D. (1996). « Stress inoculation training for\ncoping with stressors », The Clinical Psychologist, 49,\np. 4-7.\n",
+      "text_sha256": "b267931ff3ebfab02c0256172af95f50c1fee6f83e7f974439d817cc7fc5f5fa"
+    },
+    {
+      "bbox": [
+        396.0,
+        659.0349731445312,
+        546.3199462890625,
+        694.3734741210938
+      ],
+      "block_id": "page-1116-block-0021",
+      "order": 21,
+      "text": "Mezzich, J. E. & al. (1989). « DSM-III disorders in a large\nsample of psychiatric patients : Frequency and specicity\nof diagnoses », American Journal of Psychiatry, 146(2),\np. 212-219.\n",
+      "text_sha256": "edc8ec0ce186e8de64bd3ad0b59ab52fbcdf56e1c45973fa05ca020511f6a975"
+    },
+    {
+      "bbox": [
+        396.0,
+        698.2349853515625,
+        545.987548828125,
+        724.5234375
+      ],
+      "block_id": "page-1116-block-0022",
+      "order": 22,
+      "text": "Millon, T. & al. (1982). Millon Behavioral Health Inventory\nManual, 3e éd., Minneapolis, MN, National Computer\nSystems.\n",
+      "text_sha256": "2a7344ef312aeaf1cfa4da0af6960378e339a8d0be1d40956cebe3081a2b4496"
+    },
+    {
+      "bbox": [
+        225.0,
+        40.68496322631836,
+        378.0124816894531,
+        66.8734359741211
+      ],
+      "block_id": "page-1116-block-0023",
+      "order": 23,
+      "text": "Stein, D. J. & al. (2009). « Obsessive- compulsive disorder :\nDiagnostic and treatment issues », Psychiatric Clinics of\nNorth America, 32(3), p. 665-685.\n",
+      "text_sha256": "ac0987d5f104843c8ffc6f127d4bf2199e5cb8d0bf1603bb87c362e27906eff8"
+    },
+    {
+      "bbox": [
+        225.0,
+        70.7349624633789,
+        368.57513427734375,
+        96.9234390258789
+      ],
+      "block_id": "page-1116-block-0024",
+      "order": 24,
+      "text": "Stewart, S. E. & al. (2013). « Genome-wide association\nstudy of obsessive-compulsive disorder », Molecular\nPsychiatry, 18(7), p. 788-798.\n",
+      "text_sha256": "95d3399931fa3d11f1be5d0328167ad800b3067d93a01f7da8d8c98490c4329c"
+    },
+    {
+      "bbox": [
+        225.0,
+        100.7349624633789,
+        383.1171875,
+        126.97344207763672
+      ],
+      "block_id": "page-1116-block-0025",
+      "order": 25,
+      "text": "Todorov, C. & al. (2000). « On the pharmacotherapy of\nobsessive-compulsive disorder : Is a consensus possible ? »,\nCanadian Journal of Psychiatry, 45(3), p. 257-262.\n",
+      "text_sha256": "3f0225272aeb5402ac218846f9ff40f9853a2199dda9f217970d4aeb491192f3"
+    },
+    {
+      "bbox": [
+        225.0,
+        130.7849578857422,
+        378.5749816894531,
+        156.9734344482422
+      ],
+      "block_id": "page-1116-block-0026",
+      "order": 26,
+      "text": "Tolin, D. F. & al. (2008). «The economic and social burden\nof compulsive hoarding », Psychiatry Research, 160(2),\np. 200-211.\n",
+      "text_sha256": "afdf0af4f4677f0b64a910f442bb8382a59f653a16f2888835f4d391313ee99d"
+    },
+    {
+      "bbox": [
+        225.0,
+        170.2703094482422,
+        379.88525390625,
+        208.0234375
+      ],
+      "block_id": "page-1116-block-0027",
+      "order": 27,
+      "text": "Chapitre 22\nAmerican Psychiatric Association (APA). (2004). DSM-IV-TR.\nCritères diagnostiques (Washington, DC, 2000). Traduction\nfrançaise par J.-D. Guelet al., Paris, Masson, 384 p.\n",
+      "text_sha256": "a6f5d35d5815e0559d5f790812b7efd4b21c3010ad5a5dfdb5b3d77077cb2a39"
+    },
+    {
+      "bbox": [
+        225.0,
+        211.8349609375,
+        376.4499816894531,
+        247.0734405517578
+      ],
+      "block_id": "page-1116-block-0028",
+      "order": 28,
+      "text": "American Psychiatric Association (APA). (2015). DSM-5 –\nManuel Diagnostique et Statistique des Troubles Mentaux.\nTraduction française par M.-A. Crocq, J.-D. Guelet al.,\nElsevier Masson SAS, Paris.\n",
+      "text_sha256": "9abdc7221827d2e516286759fe28a6461976091b7d5dc8ffca72c446615d7dc3"
+    },
+    {
+      "bbox": [
+        225.0,
+        250.88497924804688,
+        381.6756591796875,
+        277.0734558105469
+      ],
+      "block_id": "page-1116-block-0029",
+      "order": 29,
+      "text": "Andreasen, N. C. & Hoenk, P. R. (1982). « The predictive value\nof adjustment disorders : A follow-up study », American\nJournal of Psychiatry, 139(5), p. 584-590.\n",
+      "text_sha256": "2dba13899f6b44a37beaa8bd74331d15932b718ab15d31efbaa73a575e06d68d"
+    },
+    {
+      "bbox": [
+        225.0,
+        280.9349670410156,
+        381.6000061035156,
+        307.1234436035156
+      ],
+      "block_id": "page-1116-block-0030",
+      "order": 30,
+      "text": "Andreasen. N. C. & Wasek, P. (1980). « Adjustment disorders\nin adolescents and adults », Archives of General Psychiatry,\n37(10), p. 1166-1170.\n",
+      "text_sha256": "f21b979eb1a9d32cca890f3718602bba5242d5bb2415df0162f2eb08e0d78b0d"
+    },
+    {
+      "bbox": [
+        225.0,
+        310.9349670410156,
+        375.8475036621094,
+        328.1234436035156
+      ],
+      "block_id": "page-1116-block-0031",
+      "order": 31,
+      "text": "Casey, P. (2014). « Adjustment disorders : New developpe-\nments », Current Psychiatry Reports, 16, p. 451-458.\n",
+      "text_sha256": "d16644674298798b678eff909018900f426fad86326a84baddc6f13241051547"
+    },
+    {
+      "bbox": [
+        225.0,
+        331.9349670410156,
+        381.39996337890625,
+        358.1734313964844
+      ],
+      "block_id": "page-1116-block-0032",
+      "order": 32,
+      "text": "Casey, P. & al. (2006). « Can adjustment disorder and\ndepressive episode be distinguished ? Results from ODIN »,\nJournal of Affective Disorders, 92(2-3), p. 291-297.\n",
+      "text_sha256": "b7210c618f69ced5ccd05cd3c924e8cc4ada7dd03848e30b2f0689fe4fb39446"
+    },
+    {
+      "bbox": [
+        225.0,
+        361.9849548339844,
+        372.2031555175781,
+        397.22344970703125
+      ],
+      "block_id": "page-1116-block-0033",
+      "order": 33,
+      "text": "Daruna, J. H. (2012). « Immune function enhancement »,\ndans Daruna, J. H. (éd.), Introduction to Psychoneu-\nroimmunology, 2e éd., San Diego, CA, Academic Press,\np. 249-273.\n",
+      "text_sha256": "6d3dad53ead18d2774c736b14098a7b59e5715d9ba0917441225940c13901a58"
+    },
+    {
+      "bbox": [
+        225.0,
+        401.03497314453125,
+        382.6075744628906,
+        418.22344970703125
+      ],
+      "block_id": "page-1116-block-0034",
+      "order": 34,
+      "text": "Derogatis, L. (1980). The Derogatis Stress Prole, Baltimore,\nMD, Clinical Psychometric Research.\n",
+      "text_sha256": "c0d90ac29f80576ea120cc8a95974bc8994236a55af92f4b4852ee44c944f785"
+    },
+    {
+      "bbox": [
+        225.0,
+        422.03497314453125,
+        370.84869384765625,
+        448.2734375
+      ],
+      "block_id": "page-1116-block-0035",
+      "order": 35,
+      "text": "Ehlert, U. (2013). « Enduring psychobiological effects of\nchildhood adversity », Psychoneuroendocrinology, 38,\np. 1850-1857.\n",
+      "text_sha256": "9e19bc1296dafa491e7f53445130b16d8000e6b775c60fa45be9a7c7f1dc4a17"
+    },
+    {
+      "bbox": [
+        225.0,
+        452.0849609375,
+        376.41497802734375,
+        478.2734375
+      ],
+      "block_id": "page-1116-block-0036",
+      "order": 36,
+      "text": "Everly, G. S., Jr. (1979). Strategies for coping with stress :\nAn assessment scale, Washington, DC, Ofce of Health\nPromotion, Department of Health and Human Services.\n",
+      "text_sha256": "f0a9b541c5e6b641aa3cd8252c0c7127a8e6654b58a4da219581c0e9950d088b"
+    },
+    {
+      "bbox": [
+        225.0,
+        482.0849609375,
+        378.0325622558594,
+        526.3234252929688
+      ],
+      "block_id": "page-1116-block-0037",
+      "order": 37,
+      "text": "Everly, G. S., Jr. & Lating, J. M. (2013a). « Measurement\nof the human stress response », dans Everly, G. S. Jr &\nLating, J. M. (dir.), A Clinical Guide to the Treatment of the\nHuman Stress Response, 3e éd., New York, NY, Springer,\np. 103-126.\n",
+      "text_sha256": "0b27a4de052abd606bdebc0140b1c09f8961740b9f2964908b7ee435f147fece"
+    },
+    {
+      "bbox": [
+        225.0,
+        530.1349487304688,
+        383.0525207519531,
+        556.3734741210938
+      ],
+      "block_id": "page-1116-block-0038",
+      "order": 38,
+      "text": "Everly, G. S. Jr. & Lating, J. M. (dir.) (2013b). A Clinical Guide\nto the Treatment of the Human Stress Response, 3e éd.,\nNew York, NY, Springer.\n",
+      "text_sha256": "a103857a7a37cd870c62cebf29c29340775c8dbae7fcd8a0b8c54c4b329eea05"
+    },
+    {
+      "bbox": [
+        225.0,
+        560.1849975585938,
+        378.0616149902344,
+        586.3734741210938
+      ],
+      "block_id": "page-1116-block-0039",
+      "order": 39,
+      "text": "Fabrega, H. Jr. & al. (1986). « Descriptive validity of DSM-III\ndepressions », The Journal of Nervous and Mental Disor-\nders, 174(10), p. 573-584.\n",
+      "text_sha256": "6894f5582e266fe97e58c72a1f2561d7fac6f50ee14760801a033ee0d76b8821"
+    },
+    {
+      "bbox": [
+        225.0,
+        590.1849975585938,
+        381.447509765625,
+        616.4234619140625
+      ],
+      "block_id": "page-1116-block-0040",
+      "order": 40,
+      "text": "Fabrega, H. Jr. & al. (1987). « Adjustment disorder as a mar-\nginal or transitional illness category in DSM-III », Archives\nof General Psychiatry, 44(6), p. 567-572.\n",
+      "text_sha256": "98b99fc80eb23c07f8215c48c5ab87d37b13a8f6be8d249311dba2e18496835b"
+    },
+    {
+      "bbox": [
+        225.0,
+        620.2349853515625,
+        379.4574890136719,
+        655.4734497070312
+      ],
+      "block_id": "page-1116-block-0041",
+      "order": 41,
+      "text": "Feder, A. & al. (2011). « Neurobiology of resilience », dans\nSouthwick, S. M. & al. (dir.), Resilience and Mental Health :\nChallenges Across the Lifespan, New York, NY, Cambridge\nUniversity Press, p. 1-29.\n",
+      "text_sha256": "dbeaa3800b4f6a69c0625a4d62eb03106c2cdec225fb7be64958eb8b5ae98125"
+    },
+    {
+      "bbox": [
+        225.0,
+        659.2849731445312,
+        379.6999816894531,
+        685.4734497070312
+      ],
+      "block_id": "page-1116-block-0042",
+      "order": 42,
+      "text": "Frankel, M. (2001). « Ego enhancing treatment of adjust-\nment disorder of later life », Journal of Geriatric Psychiatry,\n34, p. 221-223.\n",
+      "text_sha256": "541bb34a1caedb96f5a595bf3b124ef3e0b136f4c67ef93867d90c1d964f522a"
+    },
+    {
+      "bbox": [
+        225.0,
+        689.2849731445312,
+        381.26123046875,
+        724.5234375
+      ],
+      "block_id": "page-1116-block-0043",
+      "order": 43,
+      "text": "Gonzalez-Jaimes, E. I. & Turnbull-Plaza, B. (2003). « Selection\nof psychotherapeutic treatment for adjustment disorder\nwith depressive mood due to acute myocardial infarction »,\nArchives of Medical Research, 34(4), p. 298-304.\n",
+      "text_sha256": "fddc32bbd00eebba9b064d90b6bfa1bef5efeb05b19a090a34b593fd6a75693c"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.68496322631836,
+        207.47760009765625,
+        76.0234375
+      ],
+      "block_id": "page-1116-block-0044",
+      "order": 44,
+      "text": "Evans, D. W. & al. (1997). « Ritual, habit, and perfectio-\nnism : the prevalence and development of compulsive-like\nbehaviour in normal young children », Child Development,\n68(1), p. 58-68.\n",
+      "text_sha256": "f9605ddbbb748dad0b08552fef97b576f551177fc92c5730b561f5e689728cec"
+    },
+    {
+      "bbox": [
+        54.0,
+        79.88496398925781,
+        211.6800079345703,
+        106.22344207763672
+      ],
+      "block_id": "page-1116-block-0045",
+      "order": 45,
+      "text": "Fineberg, H. V. (2013). « The paradox of disease prevention :\ncelebrated in principle, resisted in practice », JAMA, 310(1),\np. 85-90.\n",
+      "text_sha256": "3efaa37cc7c2eab62954f94a062e5f5713d8b535b45d56800ab0ef8d6380a20f"
+    },
+    {
+      "bbox": [
+        54.0,
+        110.0849609375,
+        209.14248657226562,
+        154.4734344482422
+      ],
+      "block_id": "page-1116-block-0046",
+      "order": 46,
+      "text": "Franklin, M. E. & al. (2012). «Cognitive behavioural therapy\nin obsessive-compulsive disorder : State of the art », dans\nZohar, J. (dir.), Obsessive-Compulsive Disorder, Current\nScience and Clinical Practice, Chichester, Royaume-Uni,\nJohn Wiley & Sons, p. 58-70.\n",
+      "text_sha256": "65e9a5933a11f499f20cd401a00e9c05f8e6a2951622c59764a91050b5db25f7"
+    },
+    {
+      "bbox": [
+        54.0,
+        158.3349609375,
+        205.11001586914062,
+        184.62344360351562
+      ],
+      "block_id": "page-1116-block-0047",
+      "order": 47,
+      "text": "Frost, R. O. & Hart, L. (1996). «A cognitive-behavioral\nmodel of compulsive hoarding », Behaviour Research and\nTherapy, 34(4), p. 341-350.\n",
+      "text_sha256": "f7d2eae39ea2a766728354bcee037e35c883b02708593a6a68349bb8c59711d9"
+    },
+    {
+      "bbox": [
+        54.0,
+        188.48497009277344,
+        204.69769287109375,
+        214.7734375
+      ],
+      "block_id": "page-1116-block-0048",
+      "order": 48,
+      "text": "Goodman, W. K. & al. (1989). « The Yale-Brown Obsessive-\ncompulsive Scale. I. Development, use, and reliability »,\nArchives of General Psychiatry, 46(11), p. 1006-1011.\n",
+      "text_sha256": "0c65150c8e053f6aae270b6fb833850dca1bbc04fc8b8e27beac88b5589a0437"
+    },
+    {
+      "bbox": [
+        54.0,
+        218.6349639892578,
+        210.85751342773438,
+        244.9734344482422
+      ],
+      "block_id": "page-1116-block-0049",
+      "order": 49,
+      "text": "Grant, J. E. & al. (2007). «Late-onset obsessive compulsive\ndisorder : Clinical characteristics and psychiatric comorbi-\ndity », Psychiatry research, 152(1), p. 21-27.\n",
+      "text_sha256": "45b96f8a9899acdf462a95b8f954f2d08506f20be520c7cae5764681d0827790"
+    },
+    {
+      "bbox": [
+        54.0,
+        248.8349609375,
+        203.7250213623047,
+        275.1234436035156
+      ],
+      "block_id": "page-1116-block-0050",
+      "order": 50,
+      "text": "Iervolino, A. C. & al. (2009). « Prevalence and heritability\nof compulsive hoarding : a twin study » American Journal\nof Psychiatry, 166(10), p. 1156-1161.\n",
+      "text_sha256": "3439e5f8c3e06bd01dc54b40f0f1b0a887e9b3366f06b9967be1534e4c8fbfc9"
+    },
+    {
+      "bbox": [
+        54.0,
+        278.9849548339844,
+        190.35252380371094,
+        296.22344970703125
+      ],
+      "block_id": "page-1116-block-0051",
+      "order": 51,
+      "text": "Laplanche, J. & Pontalis, J. B. (1981). Vocabulaire de\nla psychanalyse, Paris, France, PUF.\n",
+      "text_sha256": "20ffc7b98cce719abd58c6e6ebd25638d5288d70f65ebd6f9373a2a1db88d1b9"
+    },
+    {
+      "bbox": [
+        54.0,
+        300.0849609375,
+        212.6908416748047,
+        335.4234313964844
+      ],
+      "block_id": "page-1116-block-0052",
+      "order": 52,
+      "text": "Leckman, J. F. & al. (2010). « Obsessive-compulsive disorder :\nA review of the diagnostic criteria and possible subtypes\nand dimensional speciers for DSM-V », Depress Anxiety,\n27(6), p. 507-527.\n",
+      "text_sha256": "11fc79e7a82c29902e36a8194f83869465741538c616f9e1233f4f96ee0a0914"
+    },
+    {
+      "bbox": [
+        54.0,
+        339.28497314453125,
+        207.4250030517578,
+        365.5734558105469
+      ],
+      "block_id": "page-1116-block-0053",
+      "order": 53,
+      "text": "Maia, T. V. & al. (2008). « The neural bases of obsessive-\ncompulsive disorder in children and adults »,Development\nand Psychopathology, 20(4), p. 1251-1283.\n",
+      "text_sha256": "278d177e2124d56ffe5830faaee458942d06c71f6e47211c9d98fdda0d8af450"
+    },
+    {
+      "bbox": [
+        54.0,
+        369.4349670410156,
+        202.38002014160156,
+        395.7734375
+      ],
+      "block_id": "page-1116-block-0054",
+      "order": 54,
+      "text": "Mataix-Cols, D. & al. (2010). « Hoarding disorder : A new\ndiagnostic for DSM-5 ? », Depression and anxiety, 27(6),\np. 556-572.\n",
+      "text_sha256": "f0b5965429e1377030f0d6c3bd6a6699414c1a47808fa68ff320ce955ee2dc53"
+    },
+    {
+      "bbox": [
+        54.0,
+        399.6349792480469,
+        209.7183380126953,
+        434.97344970703125
+      ],
+      "block_id": "page-1116-block-0055",
+      "order": 55,
+      "text": "Menchon, J. M. (2012). «Assessment », dans Zohar, J. (dir.),\nAssessment in Obsessive-Compulsive Disorder, Current\nScience and Clinical Practice, Tel Aviv, Israel, John Wiley\n& Sons.\n",
+      "text_sha256": "b0afbe743d4f4fbf8e23fe3fdd20461e30758956990d7e8dc7e4fc6ac715ee27"
+    },
+    {
+      "bbox": [
+        54.0,
+        438.8349609375,
+        205.15701293945312,
+        474.1734313964844
+      ],
+      "block_id": "page-1116-block-0056",
+      "order": 56,
+      "text": "Mundo, E. & al. (1997). « Long-term pharmacotherapy\nof obsessive-compulsive disorder : A double-blind\ncontrolled study », Journal of Clinical Psychopharma-\ncology, 17(1), p. 4-10.\n",
+      "text_sha256": "9855f6a772c14cda01e756765af91bd82e3c71e27f7472cc13ba3b180532e7aa"
+    },
+    {
+      "bbox": [
+        54.0,
+        478.03497314453125,
+        200.4358367919922,
+        495.2734375
+      ],
+      "block_id": "page-1116-block-0057",
+      "order": 57,
+      "text": "Muroff, J. & al. (2014). Group Treatment for Hoarding\nDisorder, New York, États-Unis, Oxford University Press.\n",
+      "text_sha256": "f126a7bcb1d9718031a664bb26cc6a15f15173c3033e8a97dddea855edc3a87b"
+    },
+    {
+      "bbox": [
+        54.0,
+        499.1349792480469,
+        209.95016479492188,
+        534.5234375
+      ],
+      "block_id": "page-1116-block-0058",
+      "order": 58,
+      "text": "Pallanti, S. & al. (2012). «Approaches of treatment\nresistance », dans Zohar, J. (dir.), Obsessive-Compulsive\nDisorder, Current Science and Clinical Practice, Chichester,\nRoyaume-Uni, John Wiley & Sons, p. 3-23.\n",
+      "text_sha256": "48071d639e7ae4b5030229310bf31725badcb0ac88fafb9a761990e487f6c944"
+    },
+    {
+      "bbox": [
+        54.0,
+        538.3849487304688,
+        205.20001220703125,
+        573.7234497070312
+      ],
+      "block_id": "page-1116-block-0059",
+      "order": 59,
+      "text": "Pampaloni, I. & al. (2010). « High-dose selective serotonin\nreuptake inhibitors in OCD : A systematic retrospective\ncase notes survey », Journal of Psychopharmacology, 34,\np. 1439-1445.\n",
+      "text_sha256": "860b2d029bf522030b7adcffed28ffeba27a8eeed1566908ac0931132f8154db"
+    },
+    {
+      "bbox": [
+        54.0,
+        577.5849609375,
+        211.5127716064453,
+        612.9234619140625
+      ],
+      "block_id": "page-1116-block-0060",
+      "order": 60,
+      "text": "Pauls, D. L. (2012). «The genetics of obsessive-compulsive\ndisorder : Current status », dans Zohar, J. (dir.), Obsessive-\nCompulsive Disorder, Current Science and Clinical Practice,\nChichester, Royaume-Uni, John Wiley & Sons, p. 277-292.\n",
+      "text_sha256": "240e0b1abeeeb161ea5c506ed3e12f75a1836b2129ad1019e5f3c4eb3fe65a36"
+    },
+    {
+      "bbox": [
+        54.0,
+        616.7849731445312,
+        208.73500061035156,
+        634.0234375
+      ],
+      "block_id": "page-1116-block-0061",
+      "order": 61,
+      "text": "Phillips, K. A. (2001). «Body Dysmorphic disorder », Review\nof Psychiatry, 20, p. 67-94.\n",
+      "text_sha256": "36a5a88fb457e2edb0557dc775608f90ced0d392a327a47eb8fc29dee0d3704f"
+    },
+    {
+      "bbox": [
+        54.0,
+        637.8849487304688,
+        211.33250427246094,
+        664.2234497070312
+      ],
+      "block_id": "page-1116-block-0062",
+      "order": 62,
+      "text": "Plimpton, E. & al. (2009). «Compulsive hoarding in children :\nsix case studies », International Journal of Cognitive Psy-\nchotherapy, 2(1), p. 88-104.\n",
+      "text_sha256": "02e094c1150dfdf612bbabddeb138a524d5677f6f92f10d16632b3fc56f925c0"
+    },
+    {
+      "bbox": [
+        54.0,
+        668.0849609375,
+        213.00758361816406,
+        694.3734741210938
+      ],
+      "block_id": "page-1116-block-0063",
+      "order": 63,
+      "text": "Ravindran, A. V. & al. (2009). « Obsessive-Compulsive\nSpectrum Disorders : A review of the Evidence-Based Treat-\nments », Canadian Journal of Psychiatry, 54(5), p. 331-343.\n",
+      "text_sha256": "e1b00ba343d75e1d39c4c96467e89fb8c7aa2c19e656ea74a295d6ecbf81f6d3"
+    },
+    {
+      "bbox": [
+        54.0,
+        698.2349853515625,
+        200.385009765625,
+        724.5234375
+      ],
+      "block_id": "page-1116-block-0064",
+      "order": 64,
+      "text": "Skoog, G. & Skoog, I. (1999). « A 40-year follow-up of\npatients with obsessive-compulsive disorder », Archives\nin General Psychiatry, 56(2), p. 121-127.\n",
+      "text_sha256": "fcc838ddeb3c84c8576f4952f2861d091f12f68a8bfd17815af449598f2758dc"
+    }
+  ],
+  "coordinates_sha256": "fc34bfcae5d78a7d49dfc0845941634985cc995fb256190e1b32a8b087e2cc69",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1116",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Références\nR19\nHameed, U. & al. (2005). « Antidepressant treatment in the\nprimary care ofce : Outcomes for adjustment disorder\nversus major depression », Annals of Clinical Psychiatry,\n17(2), p. 77-81.\nHayes, S.C. & al. (1999). Acceptance and Commitment\nTherapy : An Experiential Approach to Behavior Change,\nNew York, Guilford Press.\nHellhammer, D. H. (2008). « Principles of crosstalk between\nbrain and body – Glandotropy, ergotropy, and trophotropy »,\ndans Hellhammer, D. H. & Hellhammer, J. (dir.), Stress : The\nBrain-Body Connection, Bâle, Suisse, Karger, p. 21-38.\nHillard, J. R. & al. (1987). « A retrospective study of adoles-\ncents’visits to a general hospital psychiatric emergency ser-\nvice », American Journal of Psychiatry, 144(4), p. 432-436.\nHolmes, T. H. & Rahe, R. (1967). « The social readjustment\nrating scale », Journal of Psychosomatic Research, 11(2),\np. 213-218.\nHorowitz, M. J. (2011). Stress Response Syndromes : PTSD,\nGrief, Adjustment, and Dissociative Disorders, Lanham, MD,\nJason Aronson.\nJones, R. & al. (2002). « Readmission rates for adjustment\ndisorders : Comparison with other mood disorders », Journal\nof Affective Disorders, 71(1-3), p. 199-203.\nJovanovic, H. & al. (2011). « Chronic stress is linked to\n5-HT1a receptor changes and functional disintegration of\nthe limbic networks », NeuroImage, 55(3), p. 1178-1188.\nKanner, A. D. & al. (1981). « Comparison of two modes of\nstress measurement : Daily hassles and uplifts versus major\nlife events » Journal of Behavioral Medicine, 4(1), p. 1-39.\nKarren, K. J. & al. (2014). « The disease-resistant persona-\nlity », dans Karren, K. J. & al., (dir.), Mind Body Health :The\nEffects of Attitudes, Emotions and Relationships, 5e éd.,\nBoston, MA, Pearson, p. 83-103.\nKatz, D. L. & al. (2015). « Diet and immunity », dans Katz, D.\nL. & al. (dir.), Nutrition in Clinical Practice, 3e éd., Philadel-\nphie, PA, Wolters Kluwer, p. 215-226.\nKellermann, M. & al. (1999). « Screening for depressive\nsymptoms in the acute phase of stroke », General Hospital\nPsychiatry, 21(2), p. 116-121.\nKivimäki, M. & al. (2013). « Associations of job strain and\nlifestyle riskfactors with risk of coronary artery disease :\nA meta-analysis of individual participant data », Canadian\nMedical Association Journal, 185(9), p. 763-769.\nLanius, R. A. & al. (dir.) (2010). The impact of early life\ntrauma on health and disease: The hidden epidemic, New\nYork, NY, Cambridge University Press.\nLazarus, R. S. & Folkman, S. (1984). Stress, Appraisal, and\nCoping, New York, NY, Springer.\nMaercker, A. & al. (2008). « Adjustment disorders, post-\ntraumatic stress disorder, and depressive disorders in old\nage : Findings from a community survey », Comprehensive\nPsychiatry, 49(2), p. 113-120.\nMarkowitz, J. C. & al. (1992). Interpersonal psychotherapy of\ndepressed HIV-positive outpatients, Hospital & Community\nPsychiatry, 43(9), p. 885-890.\nMartin-Guehl, C. (2008). « Vulnérabilité : aspects psycho-\nlogiques chez l’enfant et l’adolescent », dans Rouillon, F.\n(dir.), Vulnérabilité et troubles de l’adaptation, Issy-Les-\nMoulineaux, France, Elsevier Masson, p. 31-42.\nMeichenbaum, D. (1996). « Stress inoculation training for\ncoping with stressors », The Clinical Psychologist, 49,\np. 4-7.\nMezzich, J. E. & al. (1989). « DSM-III disorders in a large\nsample of psychiatric patients : Frequency and specicity\nof diagnoses », American Journal of Psychiatry, 146(2),\np. 212-219.\nMillon, T. & al. (1982). Millon Behavioral Health Inventory\nManual, 3e éd., Minneapolis, MN, National Computer\nSystems.\nStein, D. J. & al. (2009). « Obsessive- compulsive disorder :\nDiagnostic and treatment issues », Psychiatric Clinics of\nNorth America, 32(3), p. 665-685.\nStewart, S. E. & al. (2013). « Genome-wide association\nstudy of obsessive-compulsive disorder », Molecular\nPsychiatry, 18(7), p. 788-798.\nTodorov, C. & al. (2000). « On the pharmacotherapy of\nobsessive-compulsive disorder : Is a consensus possible ? »,\nCanadian Journal of Psychiatry, 45(3), p. 257-262.\nTolin, D. F. & al. (2008). «The economic and social burden\nof compulsive hoarding », Psychiatry Research, 160(2),\np. 200-211.\nChapitre 22\nAmerican Psychiatric Association (APA). (2004). DSM-IV-TR.\nCritères diagnostiques (Washington, DC, 2000). Traduction\nfrançaise par J.-D. Guelet al., Paris, Masson, 384 p.\nAmerican Psychiatric Association (APA). (2015). DSM-5 –\nManuel Diagnostique et Statistique des Troubles Mentaux.\nTraduction française par M.-A. Crocq, J.-D. Guelet al.,\nElsevier Masson SAS, Paris.\nAndreasen, N. C. & Hoenk, P. R. (1982). « The predictive value\nof adjustment disorders : A follow-up study », American\nJournal of Psychiatry, 139(5), p. 584-590.\nAndreasen. N. C. & Wasek, P. (1980). « Adjustment disorders\nin adolescents and adults », Archives of General Psychiatry,\n37(10), p. 1166-1170.\nCasey, P. (2014). « Adjustment disorders : New developpe-\nments », Current Psychiatry Reports, 16, p. 451-458.\nCasey, P. & al. (2006). « Can adjustment disorder and\ndepressive episode be distinguished ? Results from ODIN »,\nJournal of Affective Disorders, 92(2-3), p. 291-297.\nDaruna, J. H. (2012). « Immune function enhancement »,\ndans Daruna, J. H. (éd.), Introduction to Psychoneu-\nroimmunology, 2e éd., San Diego, CA, Academic Press,\np. 249-273.\nDerogatis, L. (1980). The Derogatis Stress Prole, Baltimore,\nMD, Clinical Psychometric Research.\nEhlert, U. (2013). « Enduring psychobiological effects of\nchildhood adversity », Psychoneuroendocrinology, 38,\np. 1850-1857.\nEverly, G. S., Jr. (1979). Strategies for coping with stress :\nAn assessment scale, Washington, DC, Ofce of Health\nPromotion, Department of Health and Human Services.\nEverly, G. S., Jr. & Lating, J. M. (2013a). « Measurement\nof the human stress response », dans Everly, G. S. Jr &\nLating, J. M. (dir.), A Clinical Guide to the Treatment of the\nHuman Stress Response, 3e éd., New York, NY, Springer,\np. 103-126.\nEverly, G. S. Jr. & Lating, J. M. (dir.) (2013b). A Clinical Guide\nto the Treatment of the Human Stress Response, 3e éd.,\nNew York, NY, Springer.\nFabrega, H. Jr. & al. (1986). « Descriptive validity of DSM-III\ndepressions », The Journal of Nervous and Mental Disor-\nders, 174(10), p. 573-584.\nFabrega, H. Jr. & al. (1987). « Adjustment disorder as a mar-\nginal or transitional illness category in DSM-III », Archives\nof General Psychiatry, 44(6), p. 567-572.\nFeder, A. & al. (2011). « Neurobiology of resilience », dans\nSouthwick, S. M. & al. (dir.), Resilience and Mental Health :\nChallenges Across the Lifespan, New York, NY, Cambridge\nUniversity Press, p. 1-29.\nFrankel, M. (2001). « Ego enhancing treatment of adjust-\nment disorder of later life », Journal of Geriatric Psychiatry,\n34, p. 221-223.\nGonzalez-Jaimes, E. I. & Turnbull-Plaza, B. (2003). « Selection\nof psychotherapeutic treatment for adjustment disorder\nwith depressive mood due to acute myocardial infarction »,\nArchives of Medical Research, 34(4), p. 298-304.\nEvans, D. W. & al. (1997). « Ritual, habit, and perfectio-\nnism : the prevalence and development of compulsive-like\nbehaviour in normal young children », Child Development,\n68(1), p. 58-68.\nFineberg, H. V. (2013). « The paradox of disease prevention :\ncelebrated in principle, resisted in practice », JAMA, 310(1),\np. 85-90.\nFranklin, M. E. & al. (2012). «Cognitive behavioural therapy\nin obsessive-compulsive disorder : State of the art », dans\nZohar, J. (dir.), Obsessive-Compulsive Disorder, Current\nScience and Clinical Practice, Chichester, Royaume-Uni,\nJohn Wiley & Sons, p. 58-70.\nFrost, R. O. & Hart, L. (1996). «A cognitive-behavioral\nmodel of compulsive hoarding », Behaviour Research and\nTherapy, 34(4), p. 341-350.\nGoodman, W. K. & al. (1989). « The Yale-Brown Obsessive-\ncompulsive Scale. I. Development, use, and reliability »,\nArchives of General Psychiatry, 46(11), p. 1006-1011.\nGrant, J. E. & al. (2007). «Late-onset obsessive compulsive\ndisorder : Clinical characteristics and psychiatric comorbi-\ndity », Psychiatry research, 152(1), p. 21-27.\nIervolino, A. C. & al. (2009). « Prevalence and heritability\nof compulsive hoarding : a twin study » American Journal\nof Psychiatry, 166(10), p. 1156-1161.\nLaplanche, J. & Pontalis, J. B. (1981). Vocabulaire de\nla psychanalyse, Paris, France, PUF.\nLeckman, J. F. & al. (2010). « Obsessive-compulsive disorder :\nA review of the diagnostic criteria and possible subtypes\nand dimensional speciers for DSM-V », Depress Anxiety,\n27(6), p. 507-527.\nMaia, T. V. & al. (2008). « The neural bases of obsessive-\ncompulsive disorder in children and adults »,Development\nand Psychopathology, 20(4), p. 1251-1283.\nMataix-Cols, D. & al. (2010). « Hoarding disorder : A new\ndiagnostic for DSM-5 ? », Depression and anxiety, 27(6),\np. 556-572.\nMenchon, J. M. (2012). «Assessment », dans Zohar, J. (dir.),\nAssessment in Obsessive-Compulsive Disorder, Current\nScience and Clinical Practice, Tel Aviv, Israel, John Wiley\n& Sons.\nMundo, E. & al. (1997). « Long-term pharmacotherapy\nof obsessive-compulsive disorder : A double-blind\ncontrolled study », Journal of Clinical Psychopharma-\ncology, 17(1), p. 4-10.\nMuroff, J. & al. (2014). Group Treatment for Hoarding\nDisorder, New York, États-Unis, Oxford University Press.\nPallanti, S. & al. (2012). «Approaches of treatment\nresistance », dans Zohar, J. (dir.), Obsessive-Compulsive\nDisorder, Current Science and Clinical Practice, Chichester,\nRoyaume-Uni, John Wiley & Sons, p. 3-23.\nPampaloni, I. & al. (2010). « High-dose selective serotonin\nreuptake inhibitors in OCD : A systematic retrospective\ncase notes survey », Journal of Psychopharmacology, 34,\np. 1439-1445.\nPauls, D. L. (2012). «The genetics of obsessive-compulsive\ndisorder : Current status », dans Zohar, J. (dir.), Obsessive-\nCompulsive Disorder, Current Science and Clinical Practice,\nChichester, Royaume-Uni, John Wiley & Sons, p. 277-292.\nPhillips, K. A. (2001). «Body Dysmorphic disorder », Review\nof Psychiatry, 20, p. 67-94.\nPlimpton, E. & al. (2009). «Compulsive hoarding in children :\nsix case studies », International Journal of Cognitive Psy-\nchotherapy, 2(1), p. 88-104.\nRavindran, A. V. & al. (2009). « Obsessive-Compulsive\nSpectrum Disorders : A review of the Evidence-Based Treat-\nments », Canadian Journal of Psychiatry, 54(5), p. 331-343.\nSkoog, G. & Skoog, I. (1999). « A 40-year follow-up of\npatients with obsessive-compulsive disorder », Archives\nin General Psychiatry, 56(2), p. 121-127.\n",
+  "raw_text_sha256": "e317a71a49608b5d598c25877957854d645a24d408f3d6608f04e8884a30df9f",
+  "source_page_display": 1117,
+  "source_page_index": 1116
+}

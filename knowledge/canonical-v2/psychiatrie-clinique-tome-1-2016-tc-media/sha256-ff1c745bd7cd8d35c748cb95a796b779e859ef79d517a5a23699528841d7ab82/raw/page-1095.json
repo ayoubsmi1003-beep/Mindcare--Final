@@ -1,0 +1,1144 @@
+{
+  "block_sequence_sha256": "247d68a7d139778c3a6e78ef23508d568c4e3fe3011aa3bd3ec0efcb4b21929e",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        425.7200012207031,
+        758.8693237304688
+      ],
+      "block_id": "page-1095-block-0001",
+      "order": 1,
+      "text": "1078\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 4\nOrganisation des soins\n",
+      "text_sha256": "8b08be1696df082896d13231fb5dbb7e093383152014296fcca527c1ae0ddc4e"
+    },
+    {
+      "bbox": [
+        47.002296447753906,
+        461.09771728515625,
+        59.320068359375,
+        720.6500244140625
+      ],
+      "block_id": "page-1095-block-0002",
+      "order": 2,
+      "text": "TABLEAU 48.2 Évolution des services psychiatriques au Québec\n",
+      "text_sha256": "b8477dd52f8233414193d4dac3e1e050dbd21970ec4341533b4af17af36afde1"
+    },
+    {
+      "bbox": [
+        85.27412414550781,
+        585.9464721679688,
+        95.85029602050781,
+        642.5
+      ],
+      "block_id": "page-1095-block-0003",
+      "order": 3,
+      "text": "Période asilaire\n",
+      "text_sha256": "a0e87c8edace614f8a37542bc698a4c594f615063feb602f72c65dd0b97bb165"
+    },
+    {
+      "bbox": [
+        95.27412414550781,
+        588.8510131835938,
+        105.85029602050781,
+        639.6000366210938
+      ],
+      "block_id": "page-1095-block-0004",
+      "order": 4,
+      "text": "et apparentée\n",
+      "text_sha256": "a36d43dda7f129f8b58a0bba48980cfdd4a70fc940f9c4f23b6fe4d160dc2180"
+    },
+    {
+      "bbox": [
+        105.27412414550781,
+        591.905029296875,
+        115.85029602050781,
+        636.6500244140625
+      ],
+      "block_id": "page-1095-block-0005",
+      "order": 5,
+      "text": "(1845-1910)\n",
+      "text_sha256": "26b9660c7dd1b233ed0eb4f41401bf6cdbadb084733fca8f19f8c7bf2685bcae"
+    },
+    {
+      "bbox": [
+        84.77412414550781,
+        487.097412109375,
+        95.35029602050781,
+        566.1500244140625
+      ],
+      "block_id": "page-1095-block-0006",
+      "order": 6,
+      "text": "Hôpital psychiatrique,\n",
+      "text_sha256": "2c50f2ab4ebf36ed3d17fcdc019288ef15f58c32d538b77ac8603a638794395d"
+    },
+    {
+      "bbox": [
+        94.77412414550781,
+        485.81951904296875,
+        105.35029602050781,
+        567.7000122070312
+      ],
+      "block_id": "page-1095-block-0007",
+      "order": 7,
+      "text": "afliation universitaire\n",
+      "text_sha256": "528865054c8881756991d18f83a475397d713501ee394b3018a9bac5291e343f"
+    },
+    {
+      "bbox": [
+        105.77412414550781,
+        504.5049743652344,
+        116.35029602050781,
+        549.25
+      ],
+      "block_id": "page-1095-block-0008",
+      "order": 8,
+      "text": "(1910-1960)\n",
+      "text_sha256": "53affba5bb6c2178dc2e385dee324801c85e4728523d5a49f147497a64a7074c"
+    },
+    {
+      "bbox": [
+        84.77412414550781,
+        381.97052001953125,
+        95.35029602050781,
+        471.8500061035156
+      ],
+      "block_id": "page-1095-block-0009",
+      "order": 9,
+      "text": "Système psychiatrique à\n",
+      "text_sha256": "74d5b3c43ab9ee0715e0ac226e790f8b59bf10d6f187dd2458870c8af34237b5"
+    },
+    {
+      "bbox": [
+        94.77412414550781,
+        384.676513671875,
+        105.35029602050781,
+        469.3500061035156
+      ],
+      "block_id": "page-1095-block-0010",
+      "order": 10,
+      "text": "multiples composantes\n",
+      "text_sha256": "08a4f9a49817bc132d5fb5523bcb90a00dc8d519a72f7a1de872d35f7a07164e"
+    },
+    {
+      "bbox": [
+        105.77412414550781,
+        415.4889831542969,
+        116.35029602050781,
+        438.6499938964844
+      ],
+      "block_id": "page-1095-block-0011",
+      "order": 11,
+      "text": "(1962)\n",
+      "text_sha256": "3b74a29d7ff17eaffecdd14acd6247d0e88ee25b7dec27bcd10fda571f2266a5"
+    },
+    {
+      "bbox": [
+        84.77412414550781,
+        265.29302978515625,
+        95.35029602050781,
+        369.1499938964844
+      ],
+      "block_id": "page-1095-block-0012",
+      "order": 12,
+      "text": "Système global intégrant les\n",
+      "text_sha256": "5abb5ab734221a240765e85eeae650df7b107a6b69c6318c482cd40288e982c5"
+    },
+    {
+      "bbox": [
+        94.77412414550781,
+        266.494140625,
+        105.35029602050781,
+        368.0500183105469
+      ],
+      "block_id": "page-1095-block-0013",
+      "order": 13,
+      "text": "soins physiques et mentaux\n",
+      "text_sha256": "410973aa84d6edf0290ef29cfa173dd63593719e56313929cd85aa7a2eede2aa"
+    },
+    {
+      "bbox": [
+        105.77412414550781,
+        305.6889953613281,
+        116.35029602050781,
+        328.8500061035156
+      ],
+      "block_id": "page-1095-block-0014",
+      "order": 14,
+      "text": "(1966)\n",
+      "text_sha256": "602d55108e9fcfed39be3c0e67696c0c4926421768962f0a427e8ead4e093ca2"
+    },
+    {
+      "bbox": [
+        64.27412414550781,
+        158.9532470703125,
+        74.85029602050781,
+        256.0
+      ],
+      "block_id": "page-1095-block-0015",
+      "order": 15,
+      "text": "Politique de santé mentale\n",
+      "text_sha256": "0c5d59ae71d2500db9f51af4ffac1af86650586316e9315a954858af97630eae"
+    },
+    {
+      "bbox": [
+        74.27412414550781,
+        159.09182739257812,
+        84.85029602050781,
+        255.75
+      ],
+      "block_id": "page-1095-block-0016",
+      "order": 16,
+      "text": "pour un partenariat élargi :\n",
+      "text_sha256": "add676dabbde152a2db79962baf4cf895bdc72a5566fb41c33e4f7feda9392e0"
+    },
+    {
+      "bbox": [
+        85.27412414550781,
+        167.32200622558594,
+        95.85029602050781,
+        247.35000610351562
+      ],
+      "block_id": "page-1095-block-0017",
+      "order": 17,
+      "text": "association du réseau\n",
+      "text_sha256": "4c54f53d748e6901f25dadc2b12b0e73f95ba021f9667c7bd6ee95dc12f423ec"
+    },
+    {
+      "bbox": [
+        95.27412414550781,
+        156.58792114257812,
+        105.85029602050781,
+        258.20001220703125
+      ],
+      "block_id": "page-1095-block-0018",
+      "order": 18,
+      "text": "ofciel avec les organismes\n",
+      "text_sha256": "f2f07db6fa029ad1df9d2fba54a47a25a466ed615e75fad4a86ae09911a5dda3"
+    },
+    {
+      "bbox": [
+        105.27412414550781,
+        169.25039672851562,
+        115.85029602050781,
+        245.5
+      ],
+      "block_id": "page-1095-block-0019",
+      "order": 19,
+      "text": "communautaires, les\n",
+      "text_sha256": "d3a93f9b639364e289c9c63c91b35ca25c9ca3a963d2cedfd407fcee0206984f"
+    },
+    {
+      "bbox": [
+        115.27412414550781,
+        166.20193481445312,
+        125.85029602050781,
+        248.65000915527344
+      ],
+      "block_id": "page-1095-block-0020",
+      "order": 20,
+      "text": "familles et les proches\n",
+      "text_sha256": "01224b981258e6cd3e9f66fc40abbae7e02d2a3bd560e1894c619d694db46c05"
+    },
+    {
+      "bbox": [
+        126.27412414550781,
+        185.10501098632812,
+        136.8502960205078,
+        229.85000610351562
+      ],
+      "block_id": "page-1095-block-0021",
+      "order": 21,
+      "text": "(1989-1998)\n",
+      "text_sha256": "55c1671bd48aeef54f847f267164289f53158eff752b7edad40684be46192a2e"
+    },
+    {
+      "bbox": [
+        75.27412414550781,
+        60.241371154785156,
+        85.85029602050781,
+        135.10000610351562
+      ],
+      "block_id": "page-1095-block-0022",
+      "order": 22,
+      "text": "Plan d’action pour la\n",
+      "text_sha256": "8d652a1684c08bf8ca57db69eec232a12c98096d38eeb17df8532ae206fa7106"
+    },
+    {
+      "bbox": [
+        85.27412414550781,
+        46.7504997253418,
+        95.85029602050781,
+        148.60000610351562
+      ],
+      "block_id": "page-1095-block-0023",
+      "order": 23,
+      "text": "transformation des services\n",
+      "text_sha256": "7f50d4f15e78b4097c7b72cc186f338774d052d0a43dee1915665b3b007b5de0"
+    },
+    {
+      "bbox": [
+        95.27412414550781,
+        62.3074951171875,
+        105.85029602050781,
+        132.75
+      ],
+      "block_id": "page-1095-block-0024",
+      "order": 24,
+      "text": "en santé mentale –\n",
+      "text_sha256": "4f849891271d3585fb861b23ab5dac0340ef3b074a29aa17434aa5ebb76a2064"
+    },
+    {
+      "bbox": [
+        105.27412414550781,
+        57.753997802734375,
+        115.85029602050781,
+        137.25
+      ],
+      "block_id": "page-1095-block-0025",
+      "order": 25,
+      "text": "Le virage ambulatoire\n",
+      "text_sha256": "159efe17354252d73b2a864bb430cfa4360b92e68e71ad67c8e772ac12813bbd"
+    },
+    {
+      "bbox": [
+        115.27412414550781,
+        75.25499725341797,
+        125.85029602050781,
+        120.0
+      ],
+      "block_id": "page-1095-block-0026",
+      "order": 26,
+      "text": "(1998-2005)\n",
+      "text_sha256": "9af4f02632cec3a5334b0d224fc8e03553951e10e79636d4fd8804b97241caac"
+    },
+    {
+      "bbox": [
+        141.8728485107422,
+        579.552978515625,
+        161.7781219482422,
+        718.75
+      ],
+      "block_id": "page-1095-block-0027",
+      "order": 27,
+      "text": "Organisation\n• Un petit nombre\nd’asiles assez rapi-\n",
+      "text_sha256": "be69cfe3c808147209516b9e0cab542d41b90fc24e1ec2848b40348a8eb57b42"
+    },
+    {
+      "bbox": [
+        161.9519500732422,
+        579.7349853515625,
+        171.7781219482422,
+        640.7999877929688
+      ],
+      "block_id": "page-1095-block-0028",
+      "order": 28,
+      "text": "dement surpeuplés\n",
+      "text_sha256": "374ba1d5ddd4e73c7ccfd6b5dcb159f4b5952bac8ac91f96b7ef8fffe6c6f5b4"
+    },
+    {
+      "bbox": [
+        171.9519500732422,
+        593.4960327148438,
+        181.7781219482422,
+        640.7999877929688
+      ],
+      "block_id": "page-1095-block-0029",
+      "order": 29,
+      "text": "dirigés par des\n",
+      "text_sha256": "ffd2a86e11e42f3bb44b238e1745069dc88e91f03820456798834f95972e1a48"
+    },
+    {
+      "bbox": [
+        181.9519500732422,
+        606.833984375,
+        191.7781219482422,
+        640.7999877929688
+      ],
+      "block_id": "page-1095-block-0030",
+      "order": 30,
+      "text": "religieuses\n",
+      "text_sha256": "37e4fd2c750b52dba5edd8f02f1b8701b5c9a8d76bb28ba78a70a5ca5820759f"
+    },
+    {
+      "bbox": [
+        141.9519500732422,
+        485.7581481933594,
+        183.7781219482422,
+        567.75
+      ],
+      "block_id": "page-1095-block-0031",
+      "order": 31,
+      "text": "• Surpeuplement accru\n• Hébergement priorisé-\n• Dirigé par des com-\nmunautés religieuses\n",
+      "text_sha256": "00458b32160dfb167c6c1d5eda4e42c5bf46c94f8c436a69412a748996cc8481"
+    },
+    {
+      "bbox": [
+        141.9519500732422,
+        379.1449890136719,
+        161.7781219482422,
+        477.95001220703125
+      ],
+      "block_id": "page-1095-block-0032",
+      "order": 32,
+      "text": "• Hôpitaux généraux avec un\ndépartement de psychiatrie\n",
+      "text_sha256": "c5b4f9345b309e96109b1aa9904b78471d8faaef4589a4f44914273b7b067b3a"
+    },
+    {
+      "bbox": [
+        162.9519500732422,
+        419.2400207519531,
+        182.7781219482422,
+        477.95001220703125
+      ],
+      "block_id": "page-1095-block-0033",
+      "order": 33,
+      "text": "• Petits hôpitaux\npsychiatriques\n",
+      "text_sha256": "49f77423e84e801264b5cf9fc913a4178632bd26e8a0d110f5864f1a56d047ef"
+    },
+    {
+      "bbox": [
+        183.9519500732422,
+        383.0780029296875,
+        247.7781219482422,
+        477.95001220703125
+      ],
+      "block_id": "page-1095-block-0034",
+      "order": 34,
+      "text": "• Cliniques ambulatoires\n• Foyers\n• Centre de jour et de nuit\n• Dirigé par des psychiatres\n• Assurance hospitalisation\n(1961)\n",
+      "text_sha256": "3bceb8d28fa7965c0042aedbf15044f48043439c7e659092ecaa5f6b6d164b46"
+    },
+    {
+      "bbox": [
+        141.9519500732422,
+        267.94097900390625,
+        161.7781219482422,
+        368.1499938964844
+      ],
+      "block_id": "page-1095-block-0035",
+      "order": 35,
+      "text": "• Hiérarchie d’établissements\nCLSC-CH-CHS-CHU-CHSP\n",
+      "text_sha256": "68e98c6950ba3388818edfd10abbfa54187feea97a89f009cd5cd3e0631a84c6"
+    },
+    {
+      "bbox": [
+        162.9519500732422,
+        280.8559875488281,
+        182.7781219482422,
+        368.1499938964844
+      ],
+      "block_id": "page-1095-block-0036",
+      "order": 36,
+      "text": "• Intégration des services\nsociaux aux services\n",
+      "text_sha256": "016fef23d5f2bd33dd47ffcc498547dd26e4bc75d8c1723798c0f0fa44b4c54f"
+    },
+    {
+      "bbox": [
+        182.9519500732422,
+        328.7359924316406,
+        192.7781219482422,
+        356.1499938964844
+      ],
+      "block_id": "page-1095-block-0037",
+      "order": 37,
+      "text": "de santé\n",
+      "text_sha256": "d4dc49ff7c007b55f4021834a63dacb943a9e55f6994cf31e1cbaad6f5adc65c"
+    },
+    {
+      "bbox": [
+        193.9519500732422,
+        274.5919494628906,
+        213.7781219482422,
+        368.1499938964844
+      ],
+      "block_id": "page-1095-block-0038",
+      "order": 38,
+      "text": "• Assurance-maladie (carte\nsoleil, 1970)\n",
+      "text_sha256": "2978674aeef39b2cbc381a46aa713e8cf3c4afa7b9c22f57385589c67d6f6bf2"
+    },
+    {
+      "bbox": [
+        141.9519500732422,
+        162.52902221679688,
+        161.7781219482422,
+        258.3500061035156
+      ],
+      "block_id": "page-1095-block-0039",
+      "order": 39,
+      "text": "• Reconnaissance des orga-\nnismes communautaires et\n",
+      "text_sha256": "b3991638494eaf38d1945412085fb6cfeddcf1d16c88ab779e1fbf9e4d506a01"
+    },
+    {
+      "bbox": [
+        161.9519500732422,
+        160.7835235595703,
+        171.7781219482422,
+        246.35000610351562
+      ],
+      "block_id": "page-1095-block-0040",
+      "order": 40,
+      "text": "des organismes de défense\n",
+      "text_sha256": "eab6ef30b28503f3c54405ede1beb84e80bc57d619e04db2ce777c935376c6db"
+    },
+    {
+      "bbox": [
+        171.9519500732422,
+        160.41751098632812,
+        181.7781219482422,
+        246.35000610351562
+      ],
+      "block_id": "page-1095-block-0041",
+      "order": 41,
+      "text": "des droits représentés dans\n",
+      "text_sha256": "4d06c9bf8829a8e44143ecfe58de275e9bf0f2068db84a5be02c94dd742c492b"
+    },
+    {
+      "bbox": [
+        181.9519500732422,
+        163.345458984375,
+        191.7781219482422,
+        246.35000610351562
+      ],
+      "block_id": "page-1095-block-0042",
+      "order": 42,
+      "text": "les structures nationales et\n",
+      "text_sha256": "ea756427fb3963c22ab4beeec95e6c8b14f9168efe8b33d7851e62a0e95a71d1"
+    },
+    {
+      "bbox": [
+        191.9519500732422,
+        214.27413940429688,
+        201.7781219482422,
+        246.35000610351562
+      ],
+      "block_id": "page-1095-block-0043",
+      "order": 43,
+      "text": "régionales\n",
+      "text_sha256": "d10fa05edf363e646a64231ae18846f4983cd3e00e04f19c0b675be1cda2cb53"
+    },
+    {
+      "bbox": [
+        202.9519500732422,
+        161.20098876953125,
+        222.7781219482422,
+        258.3500061035156
+      ],
+      "block_id": "page-1095-block-0044",
+      "order": 44,
+      "text": "• Ajustement de l’allocation\ndes ressources nancières\n",
+      "text_sha256": "7088882f146d21739e43c151ece8c26997a18c17b41904f738530c8225f2f526"
+    },
+    {
+      "bbox": [
+        141.9519500732422,
+        46.936981201171875,
+        161.7781219482422,
+        148.5500030517578
+      ],
+      "block_id": "page-1095-block-0045",
+      "order": 45,
+      "text": "• Consultation des utilisateurs\nde services via leurs asso-\n",
+      "text_sha256": "3642a36493db9866a237b3de1912a1383a8c964925cf16ba424ab3eb66943091"
+    },
+    {
+      "bbox": [
+        161.9519500732422,
+        51.8184814453125,
+        171.7781219482422,
+        136.5500030517578
+      ],
+      "block_id": "page-1095-block-0046",
+      "order": 46,
+      "text": "ciations pour les modalités\n",
+      "text_sha256": "05cee0701548153e636835cdeb1cf7773ffedde015c211648dcf05d62a781bf8"
+    },
+    {
+      "bbox": [
+        171.9519500732422,
+        49.933990478515625,
+        181.7781219482422,
+        136.5500030517578
+      ],
+      "block_id": "page-1095-block-0047",
+      "order": 47,
+      "text": "d’organisation des services\n",
+      "text_sha256": "fed53324cfc280bc18b5ce112d41a6fd68d18be533d4622d5c8630d97f22705f"
+    },
+    {
+      "bbox": [
+        256.3228454589844,
+        591.1580200195312,
+        276.2281188964844,
+        718.75
+      ],
+      "block_id": "page-1095-block-0048",
+      "order": 48,
+      "text": "Promoteurs\n• Gouvernement ;\ncommunautés\n",
+      "text_sha256": "64de8129f29f84d88f1aeea08fd38ce26b4664fb4a9123e2791c198d62942fa3"
+    },
+    {
+      "bbox": [
+        276.4019470214844,
+        606.833984375,
+        286.2281188964844,
+        640.7999877929688
+      ],
+      "block_id": "page-1095-block-0049",
+      "order": 49,
+      "text": "religieuses\n",
+      "text_sha256": "37e4fd2c750b52dba5edd8f02f1b8701b5c9a8d76bb28ba78a70a5ca5820759f"
+    },
+    {
+      "bbox": [
+        256.4019470214844,
+        396.1549987792969,
+        287.2281188964844,
+        567.75
+      ],
+      "block_id": "page-1095-block-0050",
+      "order": 50,
+      "text": "• Gouvernement ; com-\nmunautés religieuses\n• Psychiatres\n• Direction des services\npsychiatriques\n",
+      "text_sha256": "595089f2d8fb4d7ae158f95bbe7fd7c2da5f9d98804dbb1d7ef6b86f76dba34a"
+    },
+    {
+      "bbox": [
+        288.4019470214844,
+        398.695556640625,
+        298.2281188964844,
+        477.95001220703125
+      ],
+      "block_id": "page-1095-block-0051",
+      "order": 51,
+      "text": "• Ministère de la Santé\n",
+      "text_sha256": "f838be2265324315a975fdc7db3422ac06d5ca60c7eb58aea3a032d5602dbf8f"
+    },
+    {
+      "bbox": [
+        256.4019470214844,
+        159.1677703857422,
+        276.2281188964844,
+        368.1499938964844
+      ],
+      "block_id": "page-1095-block-0052",
+      "order": 52,
+      "text": "• Technocrates (rationalisa-\ntion bureaucratique)\n• Comité de la santé mentale\ndu Québec (CSMQ) :\n",
+      "text_sha256": "513eeda3b7cae9defa7d722212a0c931053a1cd6a6118a8f1dade15cdfeebcbb"
+    },
+    {
+      "bbox": [
+        276.4019470214844,
+        167.2849884033203,
+        286.2281188964844,
+        246.35000610351562
+      ],
+      "block_id": "page-1095-block-0053",
+      "order": 53,
+      "text": "composé de divers types\n",
+      "text_sha256": "7ca14651feaaf9573433900fd9d9586ef7c4029e05517b4f4d62af421cb5a17b"
+    },
+    {
+      "bbox": [
+        286.4019470214844,
+        182.20700073242188,
+        296.2281188964844,
+        246.35000610351562
+      ],
+      "block_id": "page-1095-block-0054",
+      "order": 54,
+      "text": "de professionnels et\n",
+      "text_sha256": "2bd44d0ad37823dfb4064b6f25ba63bae3c4bbc4aa027ee86a55fce32a82af8d"
+    },
+    {
+      "bbox": [
+        296.4019470214844,
+        204.38299560546875,
+        306.2281188964844,
+        246.35000610351562
+      ],
+      "block_id": "page-1095-block-0055",
+      "order": 55,
+      "text": "universitaires\n",
+      "text_sha256": "63ae62b09b8de4eae3049f0c34680380d3eef1e79937b29d00fb583c25d75435"
+    },
+    {
+      "bbox": [
+        256.4019470214844,
+        65.98555755615234,
+        276.2281188964844,
+        148.5500030517578
+      ],
+      "block_id": "page-1095-block-0056",
+      "order": 56,
+      "text": "• Ministère de la Santé ;\nabolition du CSMQ\n",
+      "text_sha256": "7a31af3ccad8dc072cdd8502f5c50d6eaca55986760d0e3d54c665bd1b5cda57"
+    },
+    {
+      "bbox": [
+        314.7228698730469,
+        679.7620239257812,
+        324.7424011230469,
+        718.75
+      ],
+      "block_id": "page-1095-block-0057",
+      "order": 57,
+      "text": "Documents\n",
+      "text_sha256": "5789f94bd426dcb372368f7fb3fd01b0f26d8dcc6403b86b7f4116d1b0f4a20f"
+    },
+    {
+      "bbox": [
+        314.8019714355469,
+        597.9960327148438,
+        334.7424011230469,
+        718.75
+      ],
+      "block_id": "page-1095-block-0058",
+      "order": 58,
+      "text": "fondateurs\n• Rapports\nd’inspecteurs\n",
+      "text_sha256": "a6b298b476de6d242bfd512233430f49fedb0c19ea68ea15c1628ca097e4f28a"
+    },
+    {
+      "bbox": [
+        335.8019714355469,
+        586.0979614257812,
+        355.6281433105469,
+        652.7999877929688
+      ],
+      "block_id": "page-1095-block-0059",
+      "order": 59,
+      "text": "• Livres de Pinel et\nTucke\n",
+      "text_sha256": "35bc3af6616b74a860d43b545ec15f2be39b03df15f02f57e0fd46329ed86854"
+    },
+    {
+      "bbox": [
+        356.8019714355469,
+        580.6890258789062,
+        376.6281433105469,
+        652.7999877929688
+      ],
+      "block_id": "page-1095-block-0060",
+      "order": 60,
+      "text": "• Rapports des pro-\npriétaires de l’asile\n",
+      "text_sha256": "2053fc6326de3820aa2f5099a2aeb5db0aa24a25cb3aa6f451416f8d39301e17"
+    },
+    {
+      "bbox": [
+        314.8019714355469,
+        379.989990234375,
+        334.6281433105469,
+        567.75
+      ],
+      "block_id": "page-1095-block-0061",
+      "order": 61,
+      "text": "• Rapports des\nsurintendants\n•\nLes fous crient au secours,\n",
+      "text_sha256": "6a68ded22873a0024f44bcb266d0a086aa1d12cbb2512e8f5bfce6a471ee419b"
+    },
+    {
+      "bbox": [
+        324.8019714355469,
+        433.43182373046875,
+        334.6281433105469,
+        465.95001220703125
+      ],
+      "block_id": "page-1095-block-0062",
+      "order": 62,
+      "text": "J. C. Pagé\n",
+      "text_sha256": "049d34e575f082fc2830ea126bbe3e6ef1ed84e581c8904363d16aab6343c11e"
+    },
+    {
+      "bbox": [
+        335.8019714355469,
+        382.6859130859375,
+        345.6281433105469,
+        477.95001220703125
+      ],
+      "block_id": "page-1095-block-0063",
+      "order": 63,
+      "text": "•\nRapport Bédard, Lazure et\n",
+      "text_sha256": "12e7ac6c246b6302bde016c4c3a5572ba23eeb388dd5cddd55521eab1cd61810"
+    },
+    {
+      "bbox": [
+        345.8019714355469,
+        418.17401123046875,
+        355.6281433105469,
+        465.95001220703125
+      ],
+      "block_id": "page-1095-block-0064",
+      "order": 64,
+      "text": "Roberts (1962)\n",
+      "text_sha256": "ca5700f4f177b8c72a68433f1ba9863105442773fae4c5c18ce3598b1c210a42"
+    },
+    {
+      "bbox": [
+        314.8019714355469,
+        288.52398681640625,
+        334.6281433105469,
+        368.1499938964844
+      ],
+      "block_id": "page-1095-block-0065",
+      "order": 65,
+      "text": "• Rapport Castonguay-\nNepveu (1966-1974)\n",
+      "text_sha256": "dc0c5c9c2d3021a0616730c17ba7476f38aad1614bb5495ddbc60503065fc5c1"
+    },
+    {
+      "bbox": [
+        335.8019714355469,
+        280.739013671875,
+        355.6281433105469,
+        368.1499938964844
+      ],
+      "block_id": "page-1095-block-0066",
+      "order": 66,
+      "text": "• Loi sur la santé et les\nservices sociaux (1971)\n",
+      "text_sha256": "7b7877a8a4e31c3054cc23122d929c7b1788130af6b2465339f41f0067933477"
+    },
+    {
+      "bbox": [
+        314.8019714355469,
+        157.99122619628906,
+        324.6281433105469,
+        258.3500061035156
+      ],
+      "block_id": "page-1095-block-0067",
+      "order": 67,
+      "text": "•\nPolitique de Santé mentale :\n",
+      "text_sha256": "bfa50eb38913939f2c0fb6f81cba1fd846ce99418a4538bca831c8b30dd396c7"
+    },
+    {
+      "bbox": [
+        324.8019714355469,
+        165.47598266601562,
+        334.6281433105469,
+        246.35000610351562
+      ],
+      "block_id": "page-1095-block-0068",
+      "order": 68,
+      "text": "pour un partenariat élargi\n",
+      "text_sha256": "a5d5dc80c7a7cb6ffe0b885eb746ee189d2161bd8ae99cc33f0a824fa2f1351d"
+    },
+    {
+      "bbox": [
+        334.8019714355469,
+        225.07400512695312,
+        344.6281433105469,
+        246.35000610351562
+      ],
+      "block_id": "page-1095-block-0069",
+      "order": 69,
+      "text": "(1989)\n",
+      "text_sha256": "45fd087cb9f7f2cdc4085c33ed537d9702450ff62a315ef0ec838bff91a028cf"
+    },
+    {
+      "bbox": [
+        314.8019714355469,
+        50.00299835205078,
+        324.6281433105469,
+        148.5500030517578
+      ],
+      "block_id": "page-1095-block-0070",
+      "order": 70,
+      "text": "•\nPlan d’action pour la trans-\n",
+      "text_sha256": "3eadea77b0764619d115d91aadd705f797b11d083366b3b342f356d3be63c173"
+    },
+    {
+      "bbox": [
+        324.8019714355469,
+        54.649986267089844,
+        334.6281433105469,
+        136.5500030517578
+      ],
+      "block_id": "page-1095-block-0071",
+      "order": 71,
+      "text": "formation des services en\n",
+      "text_sha256": "675595088bbb17e83dc88ac4945be3253378dfdcefeffe13b1f33e33ee37f2d8"
+    },
+    {
+      "bbox": [
+        334.8019714355469,
+        47.84699630737305,
+        344.6281433105469,
+        136.5500030517578
+      ],
+      "block_id": "page-1095-block-0072",
+      "order": 72,
+      "text": "santé mentale (1998-2005)\n",
+      "text_sha256": "638ad7cc57edc14f02e89c654c14ae403a1fb7727e7d29f567709f3565362243"
+    },
+    {
+      "bbox": [
+        385.1728515625,
+        688.4110107421875,
+        395.1923828125,
+        718.75
+      ],
+      "block_id": "page-1095-block-0073",
+      "order": 73,
+      "text": "Contexte\n",
+      "text_sha256": "216722373e97eb83f7c1465f57c946b91a584d39aaad22865bdc72833c098e89"
+    },
+    {
+      "bbox": [
+        385.251953125,
+        380.0179748535156,
+        405.1923828125,
+        718.75
+      ],
+      "block_id": "page-1095-block-0074",
+      "order": 74,
+      "text": "d’approche\n• Paternalisme\ncharitable\n• Paternalisme\ncharitable\n• Dé organisationnel dans\nles hôpitaux psychiatriques\n",
+      "text_sha256": "694aa162ada88e2dd7907a3fd1723b9bdefdac95ffd320088ac3c5ea3feeab04"
+    },
+    {
+      "bbox": [
+        405.251953125,
+        402.0680236816406,
+        415.078125,
+        465.95001220703125
+      ],
+      "block_id": "page-1095-block-0075",
+      "order": 75,
+      "text": "et dans les hôpitaux\n",
+      "text_sha256": "8c2142d6f3fbbd2518fc40f2fdc7ab1f7ead5f0ac346bd88053b50d621f6df36"
+    },
+    {
+      "bbox": [
+        415.251953125,
+        379.0589294433594,
+        425.078125,
+        465.95001220703125
+      ],
+      "block_id": "page-1095-block-0076",
+      "order": 76,
+      "text": "généraux, surtout en milieu\n",
+      "text_sha256": "6023c86539e4fa9f14a267cee9426eabc1cd400710e63632b10acea028994a72"
+    },
+    {
+      "bbox": [
+        425.251953125,
+        440.6419982910156,
+        435.078125,
+        465.95001220703125
+      ],
+      "block_id": "page-1095-block-0077",
+      "order": 77,
+      "text": "régional\n",
+      "text_sha256": "e0742a5c038366d7c6499d1b45ffde07dbb101623077eed8090f8943027bf765"
+    },
+    {
+      "bbox": [
+        385.251953125,
+        65.11898803710938,
+        405.078125,
+        368.1499938964844
+      ],
+      "block_id": "page-1095-block-0078",
+      "order": 78,
+      "text": "• État-providence et respon-\nsable pour sa population\n• Organisation régionalisée\n• Services de proximité ;\nrationalisation selon le\n",
+      "text_sha256": "908767123d057ad4d896e4a63aee0f590b2d2016cf2fe4af072ea3ff42460fb1"
+    },
+    {
+      "bbox": [
+        405.251953125,
+        63.27198791503906,
+        415.078125,
+        136.5500030517578
+      ],
+      "block_id": "page-1095-block-0079",
+      "order": 79,
+      "text": "degré de spécialisation\n",
+      "text_sha256": "eac2a772ccb998df2d90f7e6d9e64246341743f26e7fa0d93f0d63aeaeb3eab6"
+    },
+    {
+      "bbox": [
+        443.5728454589844,
+        693.4240112304688,
+        453.5923767089844,
+        718.75
+      ],
+      "block_id": "page-1095-block-0080",
+      "order": 80,
+      "text": "Modèle\n",
+      "text_sha256": "295c8125b27e480509c89c1d43f461be7f5fb94900ccbeed5286cb3bf2260995"
+    },
+    {
+      "bbox": [
+        443.6519470214844,
+        378.8529968261719,
+        463.5923767089844,
+        718.75
+      ],
+      "block_id": "page-1095-block-0081",
+      "order": 81,
+      "text": "d’intervention\n• Grandes institutions\nd’hébergement\n• Grandes institutions\nd’hébergement\n• Équipe psychiatrique :\nmédecin, inrmière, travail-\n",
+      "text_sha256": "88bd1aa2031e18b72dc29de3f8630017d17cb9e1f617f45c437cbbeea92d0596"
+    },
+    {
+      "bbox": [
+        463.6519470214844,
+        378.9779052734375,
+        473.4781188964844,
+        465.95001220703125
+      ],
+      "block_id": "page-1095-block-0082",
+      "order": 82,
+      "text": "leur social, ergothérapeute,\n",
+      "text_sha256": "90de3fdb269c2a682131fc8b200265e1caeeb1bcb9198c5738721bb2c0284318"
+    },
+    {
+      "bbox": [
+        473.6519470214844,
+        390.389892578125,
+        483.4781188964844,
+        465.95001220703125
+      ],
+      "block_id": "page-1095-block-0083",
+      "order": 83,
+      "text": "psychologue, éducateur\n",
+      "text_sha256": "ddf4e9f64b348c792dae16f67f1e9a92a509c097424346e83e357ad695bde958"
+    },
+    {
+      "bbox": [
+        443.6519470214844,
+        168.2030029296875,
+        463.4781188964844,
+        368.1499938964844
+      ],
+      "block_id": "page-1095-block-0084",
+      "order": 84,
+      "text": "• Équipe psychiatrique plus\néquipe médicale de CLSC\n• Partenariat entre profes-\nsionnels et organismes\n",
+      "text_sha256": "d7359b2b1e75bf77c4524d6808d87838e6c56c8b16e029bcad41775ffe967cfd"
+    },
+    {
+      "bbox": [
+        463.6519470214844,
+        177.51451110839844,
+        473.4781188964844,
+        246.35000610351562
+      ],
+      "block_id": "page-1095-block-0085",
+      "order": 85,
+      "text": "du réseau de la santé\n",
+      "text_sha256": "a39df2450e735fea87271515c4041e9d3cf81647e1a8b565816c3c86b4970f6f"
+    },
+    {
+      "bbox": [
+        473.6519470214844,
+        187.68798828125,
+        483.4781188964844,
+        246.35000610351562
+      ],
+      "block_id": "page-1095-block-0086",
+      "order": 86,
+      "text": "et des organismes\n",
+      "text_sha256": "ad41eda67918738ca00e977639fb51a367581dcad28c711288dbafe28f374a0c"
+    },
+    {
+      "bbox": [
+        483.6519470214844,
+        193.18699645996094,
+        493.4781188964844,
+        246.35000610351562
+      ],
+      "block_id": "page-1095-block-0087",
+      "order": 87,
+      "text": "communautaires\n",
+      "text_sha256": "379e3efee4db894fb05eece98655fd945d8af6345d8f2107f354927a4f92b2f5"
+    },
+    {
+      "bbox": [
+        443.6519470214844,
+        58.40299987792969,
+        463.4781188964844,
+        148.5500030517578
+      ],
+      "block_id": "page-1095-block-0088",
+      "order": 88,
+      "text": "• Partenariat entre profes-\nsionnels et organismes\n",
+      "text_sha256": "e104ea46e0fc7f0df0fd5368d73c1cdb7eb1522ebe3830e72436a8bb068e3c25"
+    },
+    {
+      "bbox": [
+        463.6519470214844,
+        67.71451568603516,
+        473.4781188964844,
+        136.5500030517578
+      ],
+      "block_id": "page-1095-block-0089",
+      "order": 89,
+      "text": "du réseau de la santé\n",
+      "text_sha256": "a39df2450e735fea87271515c4041e9d3cf81647e1a8b565816c3c86b4970f6f"
+    },
+    {
+      "bbox": [
+        473.6519470214844,
+        77.88799285888672,
+        483.4781188964844,
+        136.5500030517578
+      ],
+      "block_id": "page-1095-block-0090",
+      "order": 90,
+      "text": "et des organismes\n",
+      "text_sha256": "ad41eda67918738ca00e977639fb51a367581dcad28c711288dbafe28f374a0c"
+    },
+    {
+      "bbox": [
+        483.6519470214844,
+        83.38700103759766,
+        493.4781188964844,
+        136.5500030517578
+      ],
+      "block_id": "page-1095-block-0091",
+      "order": 91,
+      "text": "communautaires\n",
+      "text_sha256": "379e3efee4db894fb05eece98655fd945d8af6345d8f2107f354927a4f92b2f5"
+    },
+    {
+      "bbox": [
+        494.6519470214844,
+        47.089988708496094,
+        525.4781494140625,
+        148.5500030517578
+      ],
+      "block_id": "page-1095-block-0092",
+      "order": 92,
+      "text": "• Colloque motivationnel\n• Poids consultatif accru\ndes organisations d’usagers\n",
+      "text_sha256": "6d2821125e3a2684545372457a9622b3bd838f7c5dbd286c74fe9d8eb7e1c342"
+    },
+    {
+      "bbox": [
+        525.6519775390625,
+        67.8169937133789,
+        535.4781494140625,
+        136.5500030517578
+      ],
+      "block_id": "page-1095-block-0093",
+      "order": 93,
+      "text": "de défense des droits\n",
+      "text_sha256": "0147b2e830efe1d019c62454601bea39c91731bcbc99b362e93d3590014e201f"
+    },
+    {
+      "bbox": [
+        535.6519775390625,
+        77.49199676513672,
+        545.4781494140625,
+        136.5500030517578
+      ],
+      "block_id": "page-1095-block-0094",
+      "order": 94,
+      "text": "et des pairs aidant\n",
+      "text_sha256": "efe7b97fddbbc047e9113593e881900ce2f79bc921b2ffbd8a8ef02053e9c6d6"
+    }
+  ],
+  "coordinates_sha256": "bb085e9ad7a3ca73fc386121330ed7b6bf977a6ceec76c5486e6dc515e3eb038",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1095",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "1078\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 4\nOrganisation des soins\nTABLEAU 48.2 Évolution des services psychiatriques au Québec\nPériode asilaire\net apparentée\n(1845-1910)\nHôpital psychiatrique,\nafliation universitaire\n(1910-1960)\nSystème psychiatrique à\nmultiples composantes\n(1962)\nSystème global intégrant les\nsoins physiques et mentaux\n(1966)\nPolitique de santé mentale\npour un partenariat élargi :\nassociation du réseau\nofciel avec les organismes\ncommunautaires, les\nfamilles et les proches\n(1989-1998)\nPlan d’action pour la\ntransformation des services\nen santé mentale –\nLe virage ambulatoire\n(1998-2005)\nOrganisation\n• Un petit nombre\nd’asiles assez rapi-\ndement surpeuplés\ndirigés par des\nreligieuses\n• Surpeuplement accru\n• Hébergement priorisé-\n• Dirigé par des com-\nmunautés religieuses\n• Hôpitaux généraux avec un\ndépartement de psychiatrie\n• Petits hôpitaux\npsychiatriques\n• Cliniques ambulatoires\n• Foyers\n• Centre de jour et de nuit\n• Dirigé par des psychiatres\n• Assurance hospitalisation\n(1961)\n• Hiérarchie d’établissements\nCLSC-CH-CHS-CHU-CHSP\n• Intégration des services\nsociaux aux services\nde santé\n• Assurance-maladie (carte\nsoleil, 1970)\n• Reconnaissance des orga-\nnismes communautaires et\ndes organismes de défense\ndes droits représentés dans\nles structures nationales et\nrégionales\n• Ajustement de l’allocation\ndes ressources nancières\n• Consultation des utilisateurs\nde services via leurs asso-\nciations pour les modalités\nd’organisation des services\nPromoteurs\n• Gouvernement ;\ncommunautés\nreligieuses\n• Gouvernement ; com-\nmunautés religieuses\n• Psychiatres\n• Direction des services\npsychiatriques\n• Ministère de la Santé\n• Technocrates (rationalisa-\ntion bureaucratique)\n• Comité de la santé mentale\ndu Québec (CSMQ) :\ncomposé de divers types\nde professionnels et\nuniversitaires\n• Ministère de la Santé ;\nabolition du CSMQ\nDocuments\nfondateurs\n• Rapports\nd’inspecteurs\n• Livres de Pinel et\nTucke\n• Rapports des pro-\npriétaires de l’asile\n• Rapports des\nsurintendants\n•\nLes fous crient au secours,\nJ. C. Pagé\n•\nRapport Bédard, Lazure et\nRoberts (1962)\n• Rapport Castonguay-\nNepveu (1966-1974)\n• Loi sur la santé et les\nservices sociaux (1971)\n•\nPolitique de Santé mentale :\npour un partenariat élargi\n(1989)\n•\nPlan d’action pour la trans-\nformation des services en\nsanté mentale (1998-2005)\nContexte\nd’approche\n• Paternalisme\ncharitable\n• Paternalisme\ncharitable\n• Dé organisationnel dans\nles hôpitaux psychiatriques\net dans les hôpitaux\ngénéraux, surtout en milieu\nrégional\n• État-providence et respon-\nsable pour sa population\n• Organisation régionalisée\n• Services de proximité ;\nrationalisation selon le\ndegré de spécialisation\nModèle\nd’intervention\n• Grandes institutions\nd’hébergement\n• Grandes institutions\nd’hébergement\n• Équipe psychiatrique :\nmédecin, inrmière, travail-\nleur social, ergothérapeute,\npsychologue, éducateur\n• Équipe psychiatrique plus\néquipe médicale de CLSC\n• Partenariat entre profes-\nsionnels et organismes\ndu réseau de la santé\net des organismes\ncommunautaires\n• Partenariat entre profes-\nsionnels et organismes\ndu réseau de la santé\net des organismes\ncommunautaires\n• Colloque motivationnel\n• Poids consultatif accru\ndes organisations d’usagers\nde défense des droits\net des pairs aidant\n",
+  "raw_text_sha256": "17ef6279e7eab9c3612ec2ac3cbffdd4929f0963074797f7f3957fa4f0c323ad",
+  "source_page_display": 1096,
+  "source_page_index": 1095
+}

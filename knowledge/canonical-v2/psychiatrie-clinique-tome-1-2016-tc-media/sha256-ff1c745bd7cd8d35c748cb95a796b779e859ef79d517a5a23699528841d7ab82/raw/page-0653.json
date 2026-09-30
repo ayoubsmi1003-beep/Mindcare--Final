@@ -1,0 +1,352 @@
+{
+  "block_sequence_sha256": "0df83e8ed3f9b110deafb53ac2e6ec5f253b4907402f073bf108581d53ef7d21",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0653-block-0001",
+      "order": 1,
+      "text": "636\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "00e87855450622cfc586421e1b1533d0b00fd2c81220dfc1bd18e0719327d314"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.0540771484375,
+        74.45849609375
+      ],
+      "block_id": "page-0653-block-0002",
+      "order": 2,
+      "text": "font partie de l’arsenal thérapeutique pour atténuer la fatigue et\nl’apathie associées à certaines aections comme le cancer, le VIH,\nla sclérose en plaques, les AVC ou les traumas crâniens.\n",
+      "text_sha256": "2fe7f7e2a64ec90e4ca90703a81864c0d0d6a0f4345377973dae5d548994a311"
+    },
+    {
+      "bbox": [
+        313.0,
+        92.4931640625,
+        549.4420776367188,
+        111.6689453125
+      ],
+      "block_id": "page-0653-block-0003",
+      "order": 3,
+      "text": "28.3\nTroubles mentaux spéciques\n",
+      "text_sha256": "b11c284597895856a7dd0db82019b8a9cdd679e1cb45f802471302f63e0c561e"
+    },
+    {
+      "bbox": [
+        306.0,
+        125.4658203125,
+        548.972412109375,
+        147.45849609375
+      ],
+      "block_id": "page-0653-block-0004",
+      "order": 4,
+      "text": "Quelques troubles mentaux sont associés à des maladies physiques\nou à la corticothérapie.\n",
+      "text_sha256": "dcbce8b8caefe0805fd97b68cba5261af5bf793843c2bfdefe02c89458629c03"
+    },
+    {
+      "bbox": [
+        306.0,
+        156.98681640625,
+        399.5551452636719,
+        173.12939453125
+      ],
+      "block_id": "page-0653-block-0005",
+      "order": 5,
+      "text": "28.3.1 Catatonie\n",
+      "text_sha256": "26c597d6c817214658ab8c97fbdb7d2f996bc9d1e9999b80e0839abc884dce6a"
+    },
+    {
+      "bbox": [
+        306.0,
+        176.4658203125,
+        549.3327026367188,
+        331.95849609375
+      ],
+      "block_id": "page-0653-block-0006",
+      "order": 6,
+      "text": "La catatonie est un terme descriptif pour un trouble comporte-\nmental qui peut survenir dans plusieurs situations incluant un\ntrouble neurodéveloppemental, une schizophrénie, une dépression\net d’autres aections médicales. Elle peut s’inscrire dans l’une\ndes trois catégories suivantes :\n• en association avec un trouble mental (p. ex., catatonie associée\nà la schizophrénie) ;\n• en association avec une affection médicale (voir le ta-\nbleau 28.11);\n• comme une catatonie non spéciée si les critères diagnostiques\nsont insusants.\nLe diagnostic DSM-5 repose sur la présence d’au moins trois\nsymptômes psychomoteurs (voir le tableau 28.10).\n",
+      "text_sha256": "058c46dc621aa7811d02c10cce50ed1aa5232e3a05104642f206f1c9a7941b5a"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.9658203125,
+        291.1913757324219,
+        63.108497619628906
+      ],
+      "block_id": "page-0653-block-0007",
+      "order": 7,
+      "text": "et les interactions médicamenteuses pharmacocinétiques et\npharmacodynamiques avec les autres médicaments prescrits.\n",
+      "text_sha256": "d5b56254f23ccbdeec2b381731bdd762c6f599470b631ce49bf5b2561790acc5"
+    },
+    {
+      "bbox": [
+        48.0,
+        64.3158187866211,
+        291.4459228515625,
+        250.1584930419922
+      ],
+      "block_id": "page-0653-block-0008",
+      "order": 8,
+      "text": "Dans le cadre d’une hospitalisation, le psychiatre en consul-\ntation-liaison a une occasion spéciale de « faire le ménage », de\ndiminuer ou de cesser certains psychotropes, particulièrement\nchez les personnes âgées. La simplicité est porteuse d’ecience.\nUne attention est portée à la charge anticholinergique glo-\nbale de la médication et à son eet potentiel sur l’allongement\nde l’intervalle QTc à l’ECG. Parfois, la situation clinique exige de\nmodier, de suspendre ou même de cesser des médicaments. Un\nsyndrome malin des neuroleptiques causé par un antipsychotique,\nun syndrome de sécrétion inappropriée d’hormone antidiurétique\n(SIADH) associé à un ISRS ou une toxicité rénale secondaire au\nlithium en sont des exemples. La voie d’administration peut deve-\nnir un enjeu avec des problèmes médicaux comme un statut «nil\nper os» (NPO) préopératoire, une dysphagie, une obstruction ou\nune malabsorption intestinale. D’autres options thérapeutiques\nsont parfois proposées en substitution.\n",
+      "text_sha256": "d825b9971d88170f6c4cfa37703417b21fbd0c09bfa764cc50ef84b8ea305c33"
+    },
+    {
+      "bbox": [
+        48.0,
+        251.31582641601562,
+        291.47381591796875,
+        331.95849609375
+      ],
+      "block_id": "page-0653-block-0009",
+      "order": 9,
+      "text": "Les traitements pharmacologiques des troubles psychia-\ntriques spéciques décrits en détail aux chapitres 66 à 71, sont\nglobalement les mêmes pour les patients physiquement malades.\nDes interventions spécialisées sont toutefois décrites pour des\naections médicales spéciques dans les prochaines sections de\nce chapitre. Par exemple, l’administration de psychostimulants\ncomme le méthylphénidate (RitalinMD) et le modanil ( AlertecMD),\n",
+      "text_sha256": "2273ac49790061cf3d4ce4a1ad011e18601d0162ef5bdf149ffaa1f404660089"
+    },
+    {
+      "bbox": [
+        50.25,
+        352.2522888183594,
+        267.5447692871094,
+        364.570068359375
+      ],
+      "block_id": "page-0653-block-0010",
+      "order": 10,
+      "text": "TABLEAU 28.10 Critères diagnostiques de la catatonie\n",
+      "text_sha256": "8e0a0fe804aa7ae31027115486a61b30f476679cae2ea57d9199febf83987d89"
+    },
+    {
+      "bbox": [
+        160.75,
+        372.5241394042969,
+        443.53802490234375,
+        383.1003112792969
+      ],
+      "block_id": "page-0653-block-0011",
+      "order": 11,
+      "text": "DSM-5\nDSM-IV-TR\n",
+      "text_sha256": "67d368c78be7842a2bc99b149901566bcadf3c9d62623ea48bafcc32b3563ffb"
+    },
+    {
+      "bbox": [
+        65.30000305175781,
+        391.2741394042969,
+        528.4187622070312,
+        411.8503112792969
+      ],
+      "block_id": "page-0653-block-0012",
+      "order": 12,
+      "text": "293.89 (F06.1) Trouble catatonique dû à une autre affection\nmédicale\nTrouble catatonique dû à une affection médicale générale\n",
+      "text_sha256": "51f67c6f950967367d33618b4e488909cc7759e98d7ba563090c40c7aea12b00"
+    },
+    {
+      "bbox": [
+        52.25,
+        420.251953125,
+        273.3100891113281,
+        430.078125
+      ],
+      "block_id": "page-0653-block-0013",
+      "order": 13,
+      "text": "A. Le tableau clinique est dominé par au moins trois des symptômes\n",
+      "text_sha256": "7538a4fb89ad6ebe70a71fd39fa631c60069ce8c0b85218df640bb4ec832aacb"
+    },
+    {
+      "bbox": [
+        64.25,
+        430.251953125,
+        93.54300689697266,
+        440.078125
+      ],
+      "block_id": "page-0653-block-0014",
+      "order": 14,
+      "text": "suivants :\n",
+      "text_sha256": "3f59132c0efe384c4e3b626f99a0d174b6b2d54f99d20454b345ac2b82f4f2e4"
+    },
+    {
+      "bbox": [
+        64.25,
+        441.251953125,
+        291.4007263183594,
+        652.078125
+      ],
+      "block_id": "page-0653-block-0015",
+      "order": 15,
+      "text": "1. Stupeur (c.-à-d. absence d’activité psychomotrice ; pas de relation\nactive avec l’environnement)\n2. Catalepsiea (c.-à-d. induction d’une posture maintenue passive-\nment et contre la gravité)\n3. Flexibilité cireuseb (c.-à-d. résistance légère ou nette lors du\npositionnement induit par l’examinateur)\n4. Mutisme (c.-à-d. absence ou quasi-absence de réponse verbale\n[N.B : non applicable si secondaire à une aphasie connue])\n5. Négativisme (opposition ou absence de réponse aux instructions\nou à des stimuli externes)\n6. Prise de posture (c.-à-d. maintien actif, contre la gravité, d’une\nposture adoptée spontanément)\n7. Maniérisme (c.-à-d. caricatures bizarres ou solennelles d’actions\nordinaires)\n8. Stéréotypie (c.-à-d. mouvements non dirigés vers un but, répétitifs\net anormalement fréquents)\n9. Agitation, non inuencée par des stimuli externes\n10. Expression faciale grimaçante\n11. Écholalie (c.-à-d. répétition de paroles d’un autre)\n12. Échopraxie (c.-à-d. reproduction des mouvements d’un autre)\n",
+      "text_sha256": "ebd36d8f2226f46435fc8005167d62fa2a7e03ff55502993aad0adce50853671"
+    },
+    {
+      "bbox": [
+        302.25,
+        420.251953125,
+        452.1866149902344,
+        430.078125
+      ],
+      "block_id": "page-0653-block-0016",
+      "order": 16,
+      "text": "A. Présence de catatonie qui se manifeste par\n",
+      "text_sha256": "58bd3cfb9df6e81392c07799c34c30911fa76b0fb26b49d6d4704c3aaa87cd72"
+    },
+    {
+      "bbox": [
+        314.25,
+        441.251953125,
+        389.3730163574219,
+        451.078125
+      ],
+      "block_id": "page-0653-block-0017",
+      "order": 17,
+      "text": "une immobilité motrice,\n",
+      "text_sha256": "f82e85ec8d4ae613922e0c4df602a399607e18ebd9d839e628838e264b3e2327"
+    },
+    {
+      "bbox": [
+        314.25,
+        504.251953125,
+        354.156005859375,
+        514.078125
+      ],
+      "block_id": "page-0653-block-0018",
+      "order": 18,
+      "text": "un mutisme,\n",
+      "text_sha256": "5f48e5f128b59cdb7943773cc2e53961501312bc73190a73854d0dd3dfd84b0c"
+    },
+    {
+      "bbox": [
+        314.25,
+        526.251953125,
+        392.55902099609375,
+        536.078125
+      ],
+      "block_id": "page-0653-block-0019",
+      "order": 19,
+      "text": "un négativisme extrême,\n",
+      "text_sha256": "093a78d0b4b0c0bc31223855665f14dcd2ff720db80f8939196b9f6f0c704c68"
+    },
+    {
+      "bbox": [
+        314.25,
+        547.251953125,
+        455.0580139160156,
+        557.078125
+      ],
+      "block_id": "page-0653-block-0020",
+      "order": 20,
+      "text": "des anomalies des mouvements volontaires,\n",
+      "text_sha256": "e5f625b2230c997b1824e9583961d42473446d2e93e74947ee327df328e5aafc"
+    },
+    {
+      "bbox": [
+        314.25,
+        567.251953125,
+        540.5570068359375,
+        587.078125
+      ],
+      "block_id": "page-0653-block-0021",
+      "order": 21,
+      "text": "une activité motrice excessive (sans but apparent et non inuencée par\ndes stimuli externes),\n",
+      "text_sha256": "2333563885474a4026c0b34d28a7c317bd71fe78ac2188a1df54cb9ee61a9574"
+    },
+    {
+      "bbox": [
+        314.25,
+        631.251953125,
+        364.7850036621094,
+        652.078125
+      ],
+      "block_id": "page-0653-block-0022",
+      "order": 22,
+      "text": "de l’écholalie,\nde l’échopraxie.\n",
+      "text_sha256": "12ef2a1712d6372037d4ecd6a25b6eccf91a0f822483de85d1c4bbcbc4708976"
+    },
+    {
+      "bbox": [
+        52.25,
+        660.6519775390625,
+        269.5153503417969,
+        670.4781494140625
+      ],
+      "block_id": "page-0653-block-0023",
+      "order": 23,
+      "text": "B. Mise en évidence d’après l’anamnèse, l’examen physique ou les\n",
+      "text_sha256": "15297efdddf0767b2bb0514816f3670bae8bbd6df01b324e466f34e05064a656"
+    },
+    {
+      "bbox": [
+        64.25,
+        670.6519775390625,
+        258.98809814453125,
+        690.4781494140625
+      ],
+      "block_id": "page-0653-block-0024",
+      "order": 24,
+      "text": "examens complémentaires que le trouble est la conséquence\nphysio p athologique directe d’une autre affection médicale.\n",
+      "text_sha256": "99257654601ab91e9cd8af9cdb1062804a58ca5d48a5d32fbf51bc7e9f46c7dc"
+    },
+    {
+      "bbox": [
+        302.25,
+        660.6519775390625,
+        363.048095703125,
+        670.4781494140625
+      ],
+      "block_id": "page-0653-block-0025",
+      "order": 25,
+      "text": "B. Idem à DSM-5.\n",
+      "text_sha256": "703f62df8ee835b259dd8e94c2103cd979d0ac69c184c555aa261a5bff070302"
+    },
+    {
+      "bbox": [
+        52.25,
+        699.1019897460938,
+        286.49407958984375,
+        708.9281616210938
+      ],
+      "block_id": "page-0653-block-0026",
+      "order": 26,
+      "text": "C. La perturbation n’est pas mieux expliquée par un autre trouble mental\n",
+      "text_sha256": "ec02125531be9dde1cad5dedb88d24d76b29d28bb1a7880705fd41d69844933e"
+    },
+    {
+      "bbox": [
+        64.25,
+        709.1019897460938,
+        160.07948303222656,
+        718.9281616210938
+      ],
+      "block_id": "page-0653-block-0027",
+      "order": 27,
+      "text": "(p. ex., un épisode maniaque).\n",
+      "text_sha256": "871de38a5cf87a6dba0131833b97c7dfe99f6ff798a4975829d61a9d7dcae1af"
+    },
+    {
+      "bbox": [
+        302.25,
+        699.1019897460938,
+        363.069091796875,
+        708.9281616210938
+      ],
+      "block_id": "page-0653-block-0028",
+      "order": 28,
+      "text": "C. Idem à DSM-5.\n",
+      "text_sha256": "e3115c8f08f85dfc1a8c901e597d6628d9cc927dde450ccede1ca1ec3dd04b8e"
+    }
+  ],
+  "coordinates_sha256": "3e76ebb93d43b800af0cdca7f8419e14e48e8aa8c86f411c2529fbfd86d84492",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0653",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "636\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nfont partie de l’arsenal thérapeutique pour atténuer la fatigue et\nl’apathie associées à certaines aections comme le cancer, le VIH,\nla sclérose en plaques, les AVC ou les traumas crâniens.\n28.3\nTroubles mentaux spéciques\nQuelques troubles mentaux sont associés à des maladies physiques\nou à la corticothérapie.\n28.3.1 Catatonie\nLa catatonie est un terme descriptif pour un trouble comporte-\nmental qui peut survenir dans plusieurs situations incluant un\ntrouble neurodéveloppemental, une schizophrénie, une dépression\net d’autres aections médicales. Elle peut s’inscrire dans l’une\ndes trois catégories suivantes :\n• en association avec un trouble mental (p. ex., catatonie associée\nà la schizophrénie) ;\n• en association avec une affection médicale (voir le ta-\nbleau 28.11);\n• comme une catatonie non spéciée si les critères diagnostiques\nsont insusants.\nLe diagnostic DSM-5 repose sur la présence d’au moins trois\nsymptômes psychomoteurs (voir le tableau 28.10).\net les interactions médicamenteuses pharmacocinétiques et\npharmacodynamiques avec les autres médicaments prescrits.\nDans le cadre d’une hospitalisation, le psychiatre en consul-\ntation-liaison a une occasion spéciale de « faire le ménage », de\ndiminuer ou de cesser certains psychotropes, particulièrement\nchez les personnes âgées. La simplicité est porteuse d’ecience.\nUne attention est portée à la charge anticholinergique glo-\nbale de la médication et à son eet potentiel sur l’allongement\nde l’intervalle QTc à l’ECG. Parfois, la situation clinique exige de\nmodier, de suspendre ou même de cesser des médicaments. Un\nsyndrome malin des neuroleptiques causé par un antipsychotique,\nun syndrome de sécrétion inappropriée d’hormone antidiurétique\n(SIADH) associé à un ISRS ou une toxicité rénale secondaire au\nlithium en sont des exemples. La voie d’administration peut deve-\nnir un enjeu avec des problèmes médicaux comme un statut «nil\nper os» (NPO) préopératoire, une dysphagie, une obstruction ou\nune malabsorption intestinale. D’autres options thérapeutiques\nsont parfois proposées en substitution.\nLes traitements pharmacologiques des troubles psychia-\ntriques spéciques décrits en détail aux chapitres 66 à 71, sont\nglobalement les mêmes pour les patients physiquement malades.\nDes interventions spécialisées sont toutefois décrites pour des\naections médicales spéciques dans les prochaines sections de\nce chapitre. Par exemple, l’administration de psychostimulants\ncomme le méthylphénidate (RitalinMD) et le modanil ( AlertecMD),\nTABLEAU 28.10 Critères diagnostiques de la catatonie\nDSM-5\nDSM-IV-TR\n293.89 (F06.1) Trouble catatonique dû à une autre affection\nmédicale\nTrouble catatonique dû à une affection médicale générale\nA. Le tableau clinique est dominé par au moins trois des symptômes\nsuivants :\n1. Stupeur (c.-à-d. absence d’activité psychomotrice ; pas de relation\nactive avec l’environnement)\n2. Catalepsiea (c.-à-d. induction d’une posture maintenue passive-\nment et contre la gravité)\n3. Flexibilité cireuseb (c.-à-d. résistance légère ou nette lors du\npositionnement induit par l’examinateur)\n4. Mutisme (c.-à-d. absence ou quasi-absence de réponse verbale\n[N.B : non applicable si secondaire à une aphasie connue])\n5. Négativisme (opposition ou absence de réponse aux instructions\nou à des stimuli externes)\n6. Prise de posture (c.-à-d. maintien actif, contre la gravité, d’une\nposture adoptée spontanément)\n7. Maniérisme (c.-à-d. caricatures bizarres ou solennelles d’actions\nordinaires)\n8. Stéréotypie (c.-à-d. mouvements non dirigés vers un but, répétitifs\net anormalement fréquents)\n9. Agitation, non inuencée par des stimuli externes\n10. Expression faciale grimaçante\n11. Écholalie (c.-à-d. répétition de paroles d’un autre)\n12. Échopraxie (c.-à-d. reproduction des mouvements d’un autre)\nA. Présence de catatonie qui se manifeste par\nune immobilité motrice,\nun mutisme,\nun négativisme extrême,\ndes anomalies des mouvements volontaires,\nune activité motrice excessive (sans but apparent et non inuencée par\ndes stimuli externes),\nde l’écholalie,\nde l’échopraxie.\nB. Mise en évidence d’après l’anamnèse, l’examen physique ou les\nexamens complémentaires que le trouble est la conséquence\nphysio p athologique directe d’une autre affection médicale.\nB. Idem à DSM-5.\nC. La perturbation n’est pas mieux expliquée par un autre trouble mental\n(p. ex., un épisode maniaque).\nC. Idem à DSM-5.\n",
+  "raw_text_sha256": "17aef4825508a0b6f4a68d7dd3acee15abca96f6776281b29370ab4a79ea5a9d",
+  "source_page_display": 654,
+  "source_page_index": 653
+}

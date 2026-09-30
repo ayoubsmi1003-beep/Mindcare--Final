@@ -1,0 +1,20 @@
+{
+  "outil": "charger-connaissance-taylor.mjs",
+  "ecrire": true,
+  "source_id": "corpus-taylor",
+  "titre": "The Maudsley Prescribing Guidelines in Psychiatry",
+  "version": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+  "langue": "en",
+  "statut": "reviewed",
+  "approbation": "en-attente",
+  "unites_totales": 7861,
+  "unites_epurees": [
+    "tu-fa178dad5772486f",
+    "tu-d465713c5d2b8e86"
+  ],
+  "chunks": 7859,
+  "ecrits": {
+    "sources": 1,
+    "chunks": 7859
+  }
+}

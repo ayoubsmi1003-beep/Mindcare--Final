@@ -1,0 +1,652 @@
+{
+  "block_sequence_sha256": "b51e8507b050f5c4d12d275aacb33d00cf90a309eae5e929b79ea59056ec1d84",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        106.5719985961914,
+        758.8693237304688
+      ],
+      "block_id": "page-1201-block-0001",
+      "order": 1,
+      "text": "I40\nIndex\n",
+      "text_sha256": "98840fb6c2f51698688bc7748e2670f3d1128ef9535258af9b3650e7bf587772"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.59453201293945,
+        205.9116668701172,
+        90.41728973388672
+      ],
+      "block_id": "page-1201-block-0002",
+      "order": 2,
+      "text": "neurobiologie, 110-137\nneurochirurgie, 461\nneuroéthique, 1212\nneurogenèse, 102, 107, 119, 212, 394,\n",
+      "text_sha256": "14d9e5721430586f6e8ab8ef4b70fafa2eb518bf1fd664bd5d5a9e8613d57280"
+    },
+    {
+      "bbox": [
+        48.0,
+        91.4701156616211,
+        191.79469299316406,
+        128.36727905273438
+      ],
+      "block_id": "page-1201-block-0003",
+      "order": 3,
+      "text": "474, 493, 1484\nneurohormones, 417\nneuroleptiques, 281, 337-338, 340,\n",
+      "text_sha256": "5ebd61babb863ecc2376a16ef0a04abc1e336315fa974f002cef116286719529"
+    },
+    {
+      "bbox": [
+        57.0,
+        129.47012329101562,
+        189.82765197753906,
+        166.36729431152344
+      ],
+      "block_id": "page-1201-block-0004",
+      "order": 4,
+      "text": "358, 359-360t, 582, 594, 1071,\n1396, 1460, 1518\nréactions indésirables des __,\n",
+      "text_sha256": "392164cb6e30b21c9a987967fec407ed5e96abbb386d5ddc70be07b9e883b980"
+    },
+    {
+      "bbox": [
+        48.0,
+        167.4201202392578,
+        197.93150329589844,
+        217.0172882080078
+      ],
+      "block_id": "page-1201-block-0005",
+      "order": 5,
+      "text": "1111-1112t\nneuromodulateurs, 117, 723\nneuromodulation, 117, 1561-1565\nneurones\n",
+      "text_sha256": "e2d5b8edb5758f1937a4f6e060f0051813c882326d1b21008c05fd0c8c3c4b85"
+    },
+    {
+      "bbox": [
+        57.0,
+        218.0701141357422,
+        202.66123962402344,
+        242.31729125976562
+      ],
+      "block_id": "page-1201-block-0006",
+      "order": 6,
+      "text": "aminergiques, 723\ncholinergiques, 112-113, 117, 123,\n",
+      "text_sha256": "1bd3c50982c50d733a4803ace779ecfaacbc4737f40e0aa36eaa5a66a7efbb47"
+    },
+    {
+      "bbox": [
+        57.0,
+        243.3701171875,
+        206.86331176757812,
+        280.2673034667969
+      ],
+      "block_id": "page-1201-block-0007",
+      "order": 7,
+      "text": "128, 723\ndiencéphaliques, 123, 125\ndopaminergiques, 111, 113, 124-125,\n",
+      "text_sha256": "166744d676e3ba71f6a796589dcea86334c46730563275507f7121d8b4f51e96"
+    },
+    {
+      "bbox": [
+        48.0,
+        281.3701171875,
+        195.4429931640625,
+        368.91729736328125
+      ],
+      "block_id": "page-1201-block-0008",
+      "order": 8,
+      "text": "338, 833, 851-852, 897, 1464\ndu gyrus cingulaire, 114\nhistaminergiques, 129\nmésencéphaliques, 133\nmonoaminergiques, 128\nspinaux, 554\nneuropeptides, 133-134, 133f, 417,\n",
+      "text_sha256": "2778ee52c7a8d6e1ff87fa3fa0f7af374912adb2aa59ff0c6c0505532309e514"
+    },
+    {
+      "bbox": [
+        48.0,
+        369.9701232910156,
+        197.0955047607422,
+        394.21728515625
+      ],
+      "block_id": "page-1201-block-0009",
+      "order": 9,
+      "text": "477, 494, 1148, 1148-1149t\nneuroplasicité, 102, 474, 532, 1381,\n",
+      "text_sha256": "931a1dcf0f90e1a673ecd300bd523be04ad09015cb8955d9d90935cbe4db3c05"
+    },
+    {
+      "bbox": [
+        48.0,
+        395.2701110839844,
+        163.78350830078125,
+        419.5173034667969
+      ],
+      "block_id": "page-1201-block-0010",
+      "order": 10,
+      "text": "1484, 1764\nneuropsychologie, 159-163\n",
+      "text_sha256": "7f570b728ba22022ad112ab578f98e91eaac05e94efab32d1f8be72240c31198"
+    },
+    {
+      "bbox": [
+        57.0,
+        420.57012939453125,
+        201.2342987060547,
+        432.16729736328125
+      ],
+      "block_id": "page-1201-block-0011",
+      "order": 11,
+      "text": "des problèmes de la perception et\n",
+      "text_sha256": "020e4e46379759ce0e7aa42af70b89c92974921e8a764122cc1946c26b13fcb9"
+    },
+    {
+      "bbox": [
+        57.0,
+        433.2701110839844,
+        203.44097900390625,
+        457.5173034667969
+      ],
+      "block_id": "page-1201-block-0012",
+      "order": 12,
+      "text": "de la reconnaissance, 169\ntroubles du spectre de l’autisme et\n",
+      "text_sha256": "b53400a51bfa0ba9a42d5f4d0fc29f1184ba4e570c18a607ab2e8feb5ff7481a"
+    },
+    {
+      "bbox": [
+        48.0,
+        458.57012939453125,
+        180.20777893066406,
+        482.8172912597656
+      ],
+      "block_id": "page-1201-block-0013",
+      "order": 13,
+      "text": "__, 1276-1277\nneurostimulation transcutanée\n",
+      "text_sha256": "852ea66e2521d1a789d1392f6fd81dbde29ca2a1604fc4aca2100f90841b901d"
+    },
+    {
+      "bbox": [
+        48.0,
+        483.8701171875,
+        201.592529296875,
+        533.46728515625
+      ],
+      "block_id": "page-1201-block-0014",
+      "order": 14,
+      "text": "(transcutaneous electrical nerve\nstimulation, TENS), 554, 576\nneurotoxines, 580, 615\nneurotransmetteurs, 117, 121-134,\n",
+      "text_sha256": "41d84e934c694ce96c32f82e60645f389ef4bc6391ddcb2f0acd6e099e93e877"
+    },
+    {
+      "bbox": [
+        57.0,
+        534.5201416015625,
+        202.74562072753906,
+        571.4172973632812
+      ],
+      "block_id": "page-1201-block-0015",
+      "order": 15,
+      "text": "122f, 723, 828\nacétylcholine, 128, 129f\nacide γ-aminobutyrique, 130, 439,\n",
+      "text_sha256": "ec9e2074a82e6ca32ee1cb514f530bbf347dffc88165902ff2424fecc72a0068"
+    },
+    {
+      "bbox": [
+        57.0,
+        572.4701538085938,
+        205.5929412841797,
+        596.7672729492188
+      ],
+      "block_id": "page-1201-block-0016",
+      "order": 16,
+      "text": "1541\ndopamine, 121-124, 126f, 316, 332,\n",
+      "text_sha256": "a058912e9fc4a44367521527b9e4c58f1f479b5deeacff31fda1c3cc1b5fb314"
+    },
+    {
+      "bbox": [
+        57.0,
+        597.8201293945312,
+        188.91078186035156,
+        622.0673217773438
+      ],
+      "block_id": "page-1201-block-0017",
+      "order": 17,
+      "text": "337-338, 1149t\ndysfonctions des __, 337, 1148,\n",
+      "text_sha256": "a273e132cafdd8c866ce31e231daf31091b6b1ac9e4eb5554ac6718bd54a4247"
+    },
+    {
+      "bbox": [
+        57.0,
+        623.1201171875,
+        202.4610595703125,
+        660.0673217773438
+      ],
+      "block_id": "page-1201-block-0018",
+      "order": 18,
+      "text": "1148-1149t\nendocannabinoïdes, 131-133\nglutamate, 129-131, 332, 338, 375,\n",
+      "text_sha256": "3d09b6731dd5433317a1de0f8acbe45e8cd8866f375caf913a19f7c166e96f42"
+    },
+    {
+      "bbox": [
+        57.0,
+        661.1201171875,
+        206.8350067138672,
+        710.6672973632812
+      ],
+      "block_id": "page-1201-block-0019",
+      "order": 19,
+      "text": "477, 1149t\nhistamine, 119, 122, 129, 130f, 580\nmonoaminergiques, 394, 417, 1482\nneuropeptides, 122f, 133-134, 417,\n",
+      "text_sha256": "5bbe6dba13b9f74044bc62e3f3af5fa5a00d33ed3e78425077317684ccbcb390"
+    },
+    {
+      "bbox": [
+        75.0,
+        711.7201538085938,
+        148.9495086669922,
+        723.3173217773438
+      ],
+      "block_id": "page-1201-block-0020",
+      "order": 20,
+      "text": "1148, 1148-1149t\n",
+      "text_sha256": "74dd3e6a7cfb68c9fe00f7bfe265f80bceb089f01ba4f369043a61b37601ee5e"
+    },
+    {
+      "bbox": [
+        228.0,
+        40.82011795043945,
+        375.94842529296875,
+        52.41728591918945
+      ],
+      "block_id": "page-1201-block-0021",
+      "order": 21,
+      "text": "noradrénaline, 122f, 224, 437, 493-\n",
+      "text_sha256": "6dbbc22ac6ba5d56cb1c85ce09286dcc150cfe239675f6b6f11e6e4adc29a7d9"
+    },
+    {
+      "bbox": [
+        228.0,
+        53.520118713378906,
+        361.5090026855469,
+        90.41728973388672
+      ],
+      "block_id": "page-1201-block-0022",
+      "order": 22,
+      "text": "494, 828f, 842, 1149t, 1485,\n1537\nsérotonine, 126, 332f, 338, 417,\n",
+      "text_sha256": "53aa02241f71c2ce8211ff68bf6cd967e439fec0e547e03bdcb1e56e09f1edb3"
+    },
+    {
+      "bbox": [
+        219.0,
+        91.4701156616211,
+        365.14300537109375,
+        115.71728515625
+      ],
+      "block_id": "page-1201-block-0023",
+      "order": 23,
+      "text": "828f, 448t\nneurotransmission, 117-136, 143,\n",
+      "text_sha256": "ea6f201cbafcd536ec1347412b266cd42789822030899e0abd9f6bb7c201eba2"
+    },
+    {
+      "bbox": [
+        219.0,
+        116.7701187133789,
+        363.6219482421875,
+        153.71728515625
+      ],
+      "block_id": "page-1201-block-0024",
+      "order": 24,
+      "text": "449\nnévralgies cervicobrachiales, 558\nnévrose, 12-13, 218-219, 412-414,\n",
+      "text_sha256": "4585b42875556ed2007194bf7bd97abd5e6acf897cd5dca300888c388b9a0b8a"
+    },
+    {
+      "bbox": [
+        219.0,
+        154.77012634277344,
+        375.57373046875,
+        191.6672821044922
+      ],
+      "block_id": "page-1201-block-0025",
+      "order": 25,
+      "text": "429, 454, 490, 551, 554, 926-927,\n1588, 1605, 1741\nnicotine, 882-884, 883t\n",
+      "text_sha256": "5f8bc71a9f1796a4b94615d5aab9245b44994e3b0d070152cf639af15032e58a"
+    },
+    {
+      "bbox": [
+        228.0,
+        192.72012329101562,
+        337.8343505859375,
+        204.31729125976562
+      ],
+      "block_id": "page-1201-block-0026",
+      "order": 26,
+      "text": "diérences reliées au sexe\n",
+      "text_sha256": "5bca5f3ec05855a67960d6284e19f2d68c9b0dbc434c05097db218abe7c4481c"
+    },
+    {
+      "bbox": [
+        219.0,
+        205.4201202392578,
+        374.9014892578125,
+        242.31729125976562
+      ],
+      "block_id": "page-1201-block-0027",
+      "order": 27,
+      "text": "et __, 966-967\nnocicepteurs, 494, 551-554, 557, 572\nnociception, 552, 555-557, 562, 568,\n",
+      "text_sha256": "d1f548c1b7ebdf595d72c309faad8782ed2240e62388a29e0acb2f9601291b48"
+    },
+    {
+      "bbox": [
+        219.0,
+        243.3701171875,
+        376.21246337890625,
+        280.2673034667969
+      ],
+      "block_id": "page-1201-block-0028",
+      "order": 28,
+      "text": "573\nnon-jugement, 1714-1715\nnon-responsabilité criminelle, 1193,\n",
+      "text_sha256": "bba6ec3b4744420359cf890dcc4c22b8a69692821f9a916bf8efe5d09bba3db5"
+    },
+    {
+      "bbox": [
+        219.0,
+        281.3701171875,
+        364.6815185546875,
+        305.6172790527344
+      ],
+      "block_id": "page-1201-block-0029",
+      "order": 29,
+      "text": "1197\nnon-stimulants, 1317, 1521-1534\n",
+      "text_sha256": "118d497658da2faba5f161ed89ef5899d8a755cebc098b7f74f894c370071eab"
+    },
+    {
+      "bbox": [
+        228.0,
+        306.6701354980469,
+        359.5847473144531,
+        318.2673034667969
+      ],
+      "block_id": "page-1201-block-0030",
+      "order": 30,
+      "text": "trouble de décit de l’attention\n",
+      "text_sha256": "306063dbe572b0b1cd8c914583b329864e00cc054572f92dfe38507abce8347b"
+    },
+    {
+      "bbox": [
+        219.0,
+        319.32012939453125,
+        367.1100158691406,
+        356.21728515625
+      ],
+      "block_id": "page-1201-block-0031",
+      "order": 31,
+      "text": "avec ou sans hyperactivité\n(TDA/H) et __, 1521-1534\nnoradrénaline, 114f, 122-124, 123f,\n",
+      "text_sha256": "340d1e4572b24e9fc62936d4206ffcd49195dbc4c29fe3223fbaf41f971ff0b7"
+    },
+    {
+      "bbox": [
+        219.0,
+        357.32012939453125,
+        373.6619873046875,
+        394.21728515625
+      ],
+      "block_id": "page-1201-block-0032",
+      "order": 32,
+      "text": "394, 493, 534, 552, 828, 1145,\n1304, 1482, 1482f\nnormalité, 9, 203, 281-288, 293, 413,\n",
+      "text_sha256": "5cb7ebec2cd71830c615293a284a0c5d4e867446d3368633fb44368d946b48ee"
+    },
+    {
+      "bbox": [
+        219.0,
+        395.2701110839844,
+        338.66619873046875,
+        444.8672790527344
+      ],
+      "block_id": "page-1201-block-0033",
+      "order": 33,
+      "text": "625, 667, 788, 850, 1382\nsexuelle, 807\nTSA et __, 1280t, 282\nnorme(s)\n",
+      "text_sha256": "2903a55f7d8c2e7f4c68afb2e5a9ffcebd4f24791456d44bd95ca39511bb85c3"
+    },
+    {
+      "bbox": [
+        219.0,
+        445.9201354980469,
+        372.593994140625,
+        495.46728515625
+      ],
+      "block_id": "page-1201-block-0034",
+      "order": 34,
+      "text": "CanMEDS, 17, 17f\nd’Agrément Canada, 1056-1058\nen santé mentale, 1057-1058\nnosographie des maladies mentales,\n",
+      "text_sha256": "4d89d8b64364513d3ccdc0bc254d34e9b6d9598a8fa4eaa0b57429bdd285afec"
+    },
+    {
+      "bbox": [
+        219.0,
+        496.5201110839844,
+        332.4414978027344,
+        520.8173217773438
+      ],
+      "block_id": "page-1201-block-0035",
+      "order": 35,
+      "text": "11-15\nnoyau(x), voir aussi gures\n",
+      "text_sha256": "3c09291bbbf53446f07bfdabb605c4afe1dc446bf40defc1f5019903e1ee8583"
+    },
+    {
+      "bbox": [
+        228.0,
+        521.931640625,
+        363.593017578125,
+        546.1173095703125
+      ],
+      "block_id": "page-1201-block-0036",
+      "order": 36,
+      "text": "supplémentaires\naccumbens, 112, 477, 494t, 833,\n",
+      "text_sha256": "ff0b26d9fe0023158f095360112b9d78a336faa705f7997cc9670bb85cdcbc3c"
+    },
+    {
+      "bbox": [
+        228.0,
+        547.1701049804688,
+        370.34295654296875,
+        660.0673217773438
+      ],
+      "block_id": "page-1201-block-0037",
+      "order": 37,
+      "text": "851, 876\nantérieur, 112f\narqué, 112f\nbasal de Meynert, 112\ncaudé, 111, 174f, 336f, 462f\ncérébelleux, 115\ndorsomédial, 112f\ndu raphé, 114f, 494t\ngris centraux, 111, 174f, 179, 202,\n",
+      "text_sha256": "e93758bbdb954be746162c74c2818fcc3224b672614c3470cdaab1b07775bb45"
+    },
+    {
+      "bbox": [
+        228.0,
+        661.1201171875,
+        330.84893798828125,
+        723.3173217773438
+      ],
+      "block_id": "page-1201-block-0038",
+      "order": 38,
+      "text": "449, 494t, 876, 1304\nintralaminaires, 112\nparaventriculaire, 112f\npostérieur, 112f\npréoptique, 112f\n",
+      "text_sha256": "df7822e5cea71dff142caa74a634813fa48a318246a377ef18e3a5167817b6de"
+    },
+    {
+      "bbox": [
+        390.0,
+        40.82011795043945,
+        527.5830078125,
+        141.61729431152344
+      ],
+      "block_id": "page-1201-block-0039",
+      "order": 39,
+      "text": "sous-corticaux, 115\nsuprachiasmatiques, 112f, 715\nsupraoptique, 112f\nthalamiques, 174\nventromédial, 112f\nnucléotides, 95\nnuvitisme (streaking), 813\nnycthémère, 719\n",
+      "text_sha256": "4ecdfe8074b9c02567809facd900e376a6c0400e279f334e7eeff6480daba12f"
+    },
+    {
+      "bbox": [
+        390.0,
+        147.35704040527344,
+        547.908935546875,
+        175.56729125976562
+      ],
+      "block_id": "page-1201-block-0040",
+      "order": 40,
+      "text": "O\nobésité, 48t, 702, 707, 711, 737, 1312,\n",
+      "text_sha256": "86839c7148df03f38758da5b827684973c390f88ed3565989f45689652fa3baa"
+    },
+    {
+      "bbox": [
+        390.0,
+        176.72012329101562,
+        548.6099853515625,
+        226.5172882080078
+      ],
+      "block_id": "page-1201-block-0041",
+      "order": 41,
+      "text": "1316, 1466t, 1475\nobjection de conscience, 1202\nobjet-Soi (self-object), 1596\nobsession(s), 322, 452-453, 455, 673t,\n",
+      "text_sha256": "d5124060e78ff41dd88c1dc1a179b7c087e3c0491d92a1c51d6dcdf4d3e29c3d"
+    },
+    {
+      "bbox": [
+        390.0,
+        227.6701202392578,
+        540.8045043945312,
+        277.46728515625
+      ],
+      "block_id": "page-1201-block-0042",
+      "order": 42,
+      "text": "1223, voir aussi compulsions et\ntroubles obsessionnels-\ncompulsifs\nobsession d’une dysmorphie\n",
+      "text_sha256": "58defb4e7b5e6737927102d86752a6fc3ce7694a031faabb4426ebd34bb562d3"
+    },
+    {
+      "bbox": [
+        390.0,
+        278.39453125,
+        537.2849731445312,
+        302.96728515625
+      ],
+      "block_id": "page-1201-block-0043",
+      "order": 43,
+      "text": "corporelle, 463-465\nocytocine, 204, 211, 417, 440, 477-\n",
+      "text_sha256": "ef552fbfa42937f938d66945a331d4c116e2eff61d7227de9a3ca0f9bccb6e7f"
+    },
+    {
+      "bbox": [
+        390.0,
+        304.1201171875,
+        537.8113403320312,
+        341.16729736328125
+      ],
+      "block_id": "page-1201-block-0044",
+      "order": 44,
+      "text": "478, 760, 811, 1149t, 1284\nŒdipe, 213-214\nœstrogène, 197-198, 478, 756, 758,\n",
+      "text_sha256": "1fd203d062ae88f5efd50e5255a53b12ec80dc5f4e40370e478f5cee7b546d1d"
+    },
+    {
+      "bbox": [
+        390.0,
+        342.32012939453125,
+        548.5338134765625,
+        443.0672912597656
+      ],
+      "block_id": "page-1201-block-0045",
+      "order": 45,
+      "text": "789, 803, 811, 967, 969, 971, 973-\n974, 976-977, 1147\nOce de la personne, 1073\nomnipotence, 1592t\nontologénétiques, principes, 196\nopérationalisme, 1259\nopinion médicolégale, 1192t\nopioïdes, 896-901, 898t, 899t\n",
+      "text_sha256": "46a11732f5d669e509c844e1f426e3cca5615a4e4a817e50a2dd3f729e28b4ab"
+    },
+    {
+      "bbox": [
+        399.0,
+        444.2201232910156,
+        534.6328125,
+        455.8172912597656
+      ],
+      "block_id": "page-1201-block-0046",
+      "order": 46,
+      "text": "diérences reliées au sexe et __,\n",
+      "text_sha256": "b84daa9a8f4f3ecf4a0d106b25066a8ce44a49b0bcf216c27ea736e0d0afce03"
+    },
+    {
+      "bbox": [
+        390.0,
+        456.9701232910156,
+        444.6000061035156,
+        481.3172912597656
+      ],
+      "block_id": "page-1201-block-0047",
+      "order": 47,
+      "text": "965\noptimisation\n",
+      "text_sha256": "3232d4270cbab744b6b721ba6840faf2b546efecb26204dff9b5e020ae07b5aa"
+    },
+    {
+      "bbox": [
+        399.0,
+        482.4701232910156,
+        544.4776000976562,
+        494.0672912597656
+      ],
+      "block_id": "page-1201-block-0048",
+      "order": 48,
+      "text": "de la dose (de la médication), 407,\n",
+      "text_sha256": "aa1937cc9518f6360dc0a5385d6b7b6b1aca3733ddefd35d9daeed3180c4b2e6"
+    },
+    {
+      "bbox": [
+        390.0,
+        495.1701354980469,
+        528.59033203125,
+        532.2672729492188
+      ],
+      "block_id": "page-1201-block-0049",
+      "order": 49,
+      "text": "1303, 1498\nsélective, 1385\nordonnance de soins, 325, 1180-\n",
+      "text_sha256": "ba87a960e50713587e46cb75d1ca67de975dd95f64b861adbf57e862289ce347"
+    },
+    {
+      "bbox": [
+        390.0,
+        533.4201049804688,
+        525.948486328125,
+        570.46728515625
+      ],
+      "block_id": "page-1201-block-0050",
+      "order": 50,
+      "text": "1182, 1462\norganes génitaux féminins, 752f\norganisation, 185-186\n",
+      "text_sha256": "1b4cf76fc97aa26aed3c165ca4d2a5bf78778c9f7b3400791a01a12da61831bd"
+    },
+    {
+      "bbox": [
+        390.0,
+        571.6201171875,
+        540.0626220703125,
+        646.9172973632812
+      ],
+      "block_id": "page-1201-block-0051",
+      "order": 51,
+      "text": "des idées, 1222\ndes services psychiatriques, 1071\ndes soins, 980-1082\ndu travail, 261, 266-267, 983-984\nsomatotopique, 178\norganisme(s)\n",
+      "text_sha256": "109fe812f4c3598901082cd21a52d47fe16c7918481093c00ce00c9cae4cae73"
+    },
+    {
+      "bbox": [
+        390.0,
+        648.0701293945312,
+        536.148193359375,
+        710.6173095703125
+      ],
+      "block_id": "page-1201-block-0052",
+      "order": 52,
+      "text": "caractéristiques de l’__, 195-198\ncommunautaires, 998, 1073\ndu secteur public, 998\norganogenèse, 281\norgasme, 751-782, 811-817, 823,\n",
+      "text_sha256": "669241be4014ee8e438704171ce27b0d940a456fa5bc29ed89761253f45e554c"
+    },
+    {
+      "bbox": [
+        408.0,
+        711.7201538085938,
+        454.26300048828125,
+        723.3173217773438
+      ],
+      "block_id": "page-1201-block-0053",
+      "order": 53,
+      "text": "1490, 1492\n",
+      "text_sha256": "e94b4f2721a8d24e66aa35b1907dcdd88b10029d662dd73447a0d350acf457c2"
+    }
+  ],
+  "coordinates_sha256": "801ae984b0a7b3b4659da8e11fe70553d9b814870d9a423bb8c2c287a5341d7f",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1201",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "I40\nIndex\nneurobiologie, 110-137\nneurochirurgie, 461\nneuroéthique, 1212\nneurogenèse, 102, 107, 119, 212, 394,\n474, 493, 1484\nneurohormones, 417\nneuroleptiques, 281, 337-338, 340,\n358, 359-360t, 582, 594, 1071,\n1396, 1460, 1518\nréactions indésirables des __,\n1111-1112t\nneuromodulateurs, 117, 723\nneuromodulation, 117, 1561-1565\nneurones\naminergiques, 723\ncholinergiques, 112-113, 117, 123,\n128, 723\ndiencéphaliques, 123, 125\ndopaminergiques, 111, 113, 124-125,\n338, 833, 851-852, 897, 1464\ndu gyrus cingulaire, 114\nhistaminergiques, 129\nmésencéphaliques, 133\nmonoaminergiques, 128\nspinaux, 554\nneuropeptides, 133-134, 133f, 417,\n477, 494, 1148, 1148-1149t\nneuroplasicité, 102, 474, 532, 1381,\n1484, 1764\nneuropsychologie, 159-163\ndes problèmes de la perception et\nde la reconnaissance, 169\ntroubles du spectre de l’autisme et\n__, 1276-1277\nneurostimulation transcutanée\n(transcutaneous electrical nerve\nstimulation, TENS), 554, 576\nneurotoxines, 580, 615\nneurotransmetteurs, 117, 121-134,\n122f, 723, 828\nacétylcholine, 128, 129f\nacide γ-aminobutyrique, 130, 439,\n1541\ndopamine, 121-124, 126f, 316, 332,\n337-338, 1149t\ndysfonctions des __, 337, 1148,\n1148-1149t\nendocannabinoïdes, 131-133\nglutamate, 129-131, 332, 338, 375,\n477, 1149t\nhistamine, 119, 122, 129, 130f, 580\nmonoaminergiques, 394, 417, 1482\nneuropeptides, 122f, 133-134, 417,\n1148, 1148-1149t\nnoradrénaline, 122f, 224, 437, 493-\n494, 828f, 842, 1149t, 1485,\n1537\nsérotonine, 126, 332f, 338, 417,\n828f, 448t\nneurotransmission, 117-136, 143,\n449\nnévralgies cervicobrachiales, 558\nnévrose, 12-13, 218-219, 412-414,\n429, 454, 490, 551, 554, 926-927,\n1588, 1605, 1741\nnicotine, 882-884, 883t\ndiérences reliées au sexe\net __, 966-967\nnocicepteurs, 494, 551-554, 557, 572\nnociception, 552, 555-557, 562, 568,\n573\nnon-jugement, 1714-1715\nnon-responsabilité criminelle, 1193,\n1197\nnon-stimulants, 1317, 1521-1534\ntrouble de décit de l’attention\navec ou sans hyperactivité\n(TDA/H) et __, 1521-1534\nnoradrénaline, 114f, 122-124, 123f,\n394, 493, 534, 552, 828, 1145,\n1304, 1482, 1482f\nnormalité, 9, 203, 281-288, 293, 413,\n625, 667, 788, 850, 1382\nsexuelle, 807\nTSA et __, 1280t, 282\nnorme(s)\nCanMEDS, 17, 17f\nd’Agrément Canada, 1056-1058\nen santé mentale, 1057-1058\nnosographie des maladies mentales,\n11-15\nnoyau(x), voir aussi gures\nsupplémentaires\naccumbens, 112, 477, 494t, 833,\n851, 876\nantérieur, 112f\narqué, 112f\nbasal de Meynert, 112\ncaudé, 111, 174f, 336f, 462f\ncérébelleux, 115\ndorsomédial, 112f\ndu raphé, 114f, 494t\ngris centraux, 111, 174f, 179, 202,\n449, 494t, 876, 1304\nintralaminaires, 112\nparaventriculaire, 112f\npostérieur, 112f\npréoptique, 112f\nsous-corticaux, 115\nsuprachiasmatiques, 112f, 715\nsupraoptique, 112f\nthalamiques, 174\nventromédial, 112f\nnucléotides, 95\nnuvitisme (streaking), 813\nnycthémère, 719\nO\nobésité, 48t, 702, 707, 711, 737, 1312,\n1316, 1466t, 1475\nobjection de conscience, 1202\nobjet-Soi (self-object), 1596\nobsession(s), 322, 452-453, 455, 673t,\n1223, voir aussi compulsions et\ntroubles obsessionnels-\ncompulsifs\nobsession d’une dysmorphie\ncorporelle, 463-465\nocytocine, 204, 211, 417, 440, 477-\n478, 760, 811, 1149t, 1284\nŒdipe, 213-214\nœstrogène, 197-198, 478, 756, 758,\n789, 803, 811, 967, 969, 971, 973-\n974, 976-977, 1147\nOce de la personne, 1073\nomnipotence, 1592t\nontologénétiques, principes, 196\nopérationalisme, 1259\nopinion médicolégale, 1192t\nopioïdes, 896-901, 898t, 899t\ndiérences reliées au sexe et __,\n965\noptimisation\nde la dose (de la médication), 407,\n1303, 1498\nsélective, 1385\nordonnance de soins, 325, 1180-\n1182, 1462\norganes génitaux féminins, 752f\norganisation, 185-186\ndes idées, 1222\ndes services psychiatriques, 1071\ndes soins, 980-1082\ndu travail, 261, 266-267, 983-984\nsomatotopique, 178\norganisme(s)\ncaractéristiques de l’__, 195-198\ncommunautaires, 998, 1073\ndu secteur public, 998\norganogenèse, 281\norgasme, 751-782, 811-817, 823,\n1490, 1492\n",
+  "raw_text_sha256": "07ac1c522e401a325f668aa09d88eb16616ad8d6d24ab46b5cdee5bafbbae1f0",
+  "source_page_display": 1202,
+  "source_page_index": 1201
+}

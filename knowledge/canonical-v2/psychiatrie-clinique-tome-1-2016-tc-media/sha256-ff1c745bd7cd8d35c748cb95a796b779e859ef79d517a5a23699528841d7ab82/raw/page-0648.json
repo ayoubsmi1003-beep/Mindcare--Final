@@ -1,0 +1,436 @@
+{
+  "block_sequence_sha256": "9ce72e9b527009708be4d1415958f4b89abc52f095469e1b2bfeff7c9c38a9ca",
+  "blocks": [
+    {
+      "bbox": [
+        270.70001220703125,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0648-block-0001",
+      "order": 1,
+      "text": "Chapitre 28\nTroubles mentaux dus à une aection médicale\n631\n",
+      "text_sha256": "dbef44e60b0deb09ff8547d326552f1a68a845258fb42bc598e7fc0c1ef313b4"
+    },
+    {
+      "bbox": [
+        56.5,
+        41.002296447753906,
+        467.95263671875,
+        53.320068359375
+      ],
+      "block_id": "page-0648-block-0002",
+      "order": 2,
+      "text": "TABLEAU 28.7 Médicaments et substances psychoactives associés à des symptômes psychiatriques\n",
+      "text_sha256": "9ae0272723877b5cd0367707486c97cd53f62179edc13d9df487b9a9fe67f849"
+    },
+    {
+      "bbox": [
+        103.70000457763672,
+        58.27412414550781,
+        521.0344848632812,
+        68.85029602050781
+      ],
+      "block_id": "page-0648-block-0003",
+      "order": 3,
+      "text": "Substances\nAnxiété\nDépression\nPsychose\nManie\n",
+      "text_sha256": "20f4fccd4cf75ad3d94903d65f07995047b1465e88fc7bc6795e37cf9fcde362"
+    },
+    {
+      "bbox": [
+        58.25,
+        74.70195770263672,
+        512.5499877929688,
+        84.52812957763672
+      ],
+      "block_id": "page-0648-block-0004",
+      "order": 4,
+      "text": "Digitale\n+\n+\n+\n",
+      "text_sha256": "6312648c71c686acdc8aa979790148e6aa49deb16fee8527c8f2b944672b2a72"
+    },
+    {
+      "bbox": [
+        58.25,
+        94.1519546508789,
+        512.5499877929688,
+        103.9781265258789
+      ],
+      "block_id": "page-0648-block-0005",
+      "order": 5,
+      "text": "Hormones thyroïdiennes\n+\n+\n+\n",
+      "text_sha256": "ba0fabd6226a6e8386dfe6630d09f60366d27bb4079a0d669affce5f5733ee75"
+    },
+    {
+      "bbox": [
+        58.25,
+        113.55195617675781,
+        512.5499877929688,
+        124.1654281616211
+      ],
+      "block_id": "page-0648-block-0006",
+      "order": 6,
+      "text": "Interféron α\n+\n+\n+\n+\n",
+      "text_sha256": "a1505d845aa2ccf7bc90fe5dbbce5599ad3de21c9ec4ed9c47c382b952d7a96f"
+    },
+    {
+      "bbox": [
+        58.25,
+        132.9513702392578,
+        512.5499877929688,
+        143.3781280517578
+      ],
+      "block_id": "page-0648-block-0007",
+      "order": 7,
+      "text": "Isoniazide (RimifonMD)\n+\n+\n+\n+\n",
+      "text_sha256": "dccafaf68b265d9d28c1aa91e720d3f1e92b16e4158df9015b89303bdb7f981f"
+    },
+    {
+      "bbox": [
+        58.25,
+        152.3513641357422,
+        422.75,
+        162.7781219482422
+      ],
+      "block_id": "page-0648-block-0008",
+      "order": 8,
+      "text": "Isotrétinoïne (AccutaneMD)\n+\n+\n",
+      "text_sha256": "b3458a26c3ebf7c10b3690d0b8e8b425ca77ad2efdb012bb3a8886ac6b3401c4"
+    },
+    {
+      "bbox": [
+        58.25,
+        172.40196228027344,
+        160.70867919921875,
+        192.22813415527344
+      ],
+      "block_id": "page-0648-block-0009",
+      "order": 9,
+      "text": "Métaux lourds : mercure, plomb,\nmanganèse\n",
+      "text_sha256": "35e7979bf3368b985633df8a1ccd15a72128379cec9376af5dcea799b9804c54"
+    },
+    {
+      "bbox": [
+        237.6999969482422,
+        172.40196228027344,
+        422.75,
+        182.22813415527344
+      ],
+      "block_id": "page-0648-block-0010",
+      "order": 10,
+      "text": "+\n+\n",
+      "text_sha256": "b97360453e94d30e428314623d7a0a77369f66ae3588f50f13bb1ff1354b1d12"
+    },
+    {
+      "bbox": [
+        58.25,
+        201.2013702392578,
+        332.8999938964844,
+        211.6281280517578
+      ],
+      "block_id": "page-0648-block-0011",
+      "order": 11,
+      "text": "Métoclopramide (ReglanMD)\n+\n",
+      "text_sha256": "447a13d85700a8fe6412fd99c245a451b252360ee4036564241dac68818434be"
+    },
+    {
+      "bbox": [
+        58.25,
+        221.251953125,
+        243.09999084472656,
+        231.078125
+      ],
+      "block_id": "page-0648-block-0012",
+      "order": 12,
+      "text": "Oxyde et dioxyde de carbone\n+\n",
+      "text_sha256": "bc54d48bb524b79259bce6435a6c22b3854e4ce29630eae264bc646fd126f20d"
+    },
+    {
+      "bbox": [
+        58.25,
+        240.65196228027344,
+        512.5499877929688,
+        250.47813415527344
+      ],
+      "block_id": "page-0648-block-0013",
+      "order": 13,
+      "text": "Sédatifs-hypnotiques\n+\n+\n+\n+\n",
+      "text_sha256": "caafec7ee9e6a347d31423e01c9bf0d07d5856e7ac782737d5638bb848d4a233"
+    },
+    {
+      "bbox": [
+        58.25,
+        260.1019592285156,
+        422.75,
+        269.9281311035156
+      ],
+      "block_id": "page-0648-block-0014",
+      "order": 14,
+      "text": "Solvants volatils\n+\n+\n",
+      "text_sha256": "e1df0bac29f16c234a0ba27319db1bf8071228f90157299b74217630c4b1d035"
+    },
+    {
+      "bbox": [
+        58.25,
+        279.501953125,
+        512.5499877929688,
+        289.328125
+      ],
+      "block_id": "page-0648-block-0015",
+      "order": 15,
+      "text": "Stimulants et hallucinogènes\n+\n+\n+\n",
+      "text_sha256": "86a3e3741189477f38a9c27a57c12f6c8c4ae6db956dcefda6200dc9f228c54f"
+    },
+    {
+      "bbox": [
+        58.25,
+        298.35137939453125,
+        332.8999938964844,
+        308.77813720703125
+      ],
+      "block_id": "page-0648-block-0016",
+      "order": 16,
+      "text": "Tétrabénazine (NitomanMD)\n+\n",
+      "text_sha256": "d4dd76324b233d9fa7dc8a0e54c3f3cddb361d4066963e9c5f7e91dc8399d810"
+    },
+    {
+      "bbox": [
+        58.25,
+        318.3519592285156,
+        512.5499877929688,
+        328.1781311035156
+      ],
+      "block_id": "page-0648-block-0017",
+      "order": 17,
+      "text": "Théophylline\n+\n+\n+\n",
+      "text_sha256": "09e97ac97ac274ca92dfc43ecf277216420baa3f90e936cf56466ae045727ab0"
+    },
+    {
+      "bbox": [
+        58.25,
+        337.8019714355469,
+        512.5499877929688,
+        347.6281433105469
+      ],
+      "block_id": "page-0648-block-0018",
+      "order": 18,
+      "text": "Yohimbine\n+\n+\n+\n",
+      "text_sha256": "067fff109adab1ec6d11f808c7dceabf13c7d1f1585169fb73ef198661a085e7"
+    },
+    {
+      "bbox": [
+        58.25,
+        357.20196533203125,
+        135.531005859375,
+        367.02813720703125
+      ],
+      "block_id": "page-0648-block-0019",
+      "order": 19,
+      "text": "Sevrage de substances :\n",
+      "text_sha256": "07aca1fed0b03d9124b0264882d275a3918b2b7049d64ab7d7f8b5b2b660b4ad"
+    },
+    {
+      "bbox": [
+        62.400001525878906,
+        376.6519470214844,
+        332.8999938964844,
+        386.4781188964844
+      ],
+      "block_id": "page-0648-block-0020",
+      "order": 20,
+      "text": "Alcool\n+\n+\n",
+      "text_sha256": "1bccb0e367ba723141a525f35c927b6bdc1fa1d2175f64145455b0ef73e057f9"
+    },
+    {
+      "bbox": [
+        62.400001525878906,
+        396.0519714355469,
+        512.5499877929688,
+        405.8781433105469
+      ],
+      "block_id": "page-0648-block-0021",
+      "order": 21,
+      "text": "Amphétamines\n+\n+\n+\n",
+      "text_sha256": "c10ac4051c3a93d274336f09e0cce30400d4734e6b8435e3ef9ea80f66edc129"
+    },
+    {
+      "bbox": [
+        62.400001525878906,
+        415.501953125,
+        243.09999084472656,
+        425.328125
+      ],
+      "block_id": "page-0648-block-0022",
+      "order": 22,
+      "text": "Anticholinergiques\n+\n",
+      "text_sha256": "f72c6c30c4a783aacf6ddb7d1e1fb5f1ffc7ed1ac7ab2e2afbc0eeea16eb4d24"
+    },
+    {
+      "bbox": [
+        62.75,
+        434.95196533203125,
+        512.5499877929688,
+        444.77813720703125
+      ],
+      "block_id": "page-0648-block-0023",
+      "order": 23,
+      "text": "Baclofène\n+\n+\n",
+      "text_sha256": "814c93053204f0721eff5b44417bf59790b559c8268eae465d182b3e6e57dca4"
+    },
+    {
+      "bbox": [
+        62.75,
+        454.3519592285156,
+        332.8999938964844,
+        464.1781311035156
+      ],
+      "block_id": "page-0648-block-0024",
+      "order": 24,
+      "text": "Barbituriques\n+\n+\n",
+      "text_sha256": "a81d432c72162555a3a8ab6d6d3291039d621ee065304ea9edbc037ab9ad59ea"
+    },
+    {
+      "bbox": [
+        62.75,
+        473.8019714355469,
+        332.8999938964844,
+        483.6281433105469
+      ],
+      "block_id": "page-0648-block-0025",
+      "order": 25,
+      "text": "Benzodiazépines\n+\n+\n",
+      "text_sha256": "d892ee094edacb3dc54adcc69d97190607cea07a80bdb691a0148e5f1f7c6712"
+    },
+    {
+      "bbox": [
+        62.75,
+        493.20196533203125,
+        243.09999084472656,
+        503.02813720703125
+      ],
+      "block_id": "page-0648-block-0026",
+      "order": 26,
+      "text": "Caféine\n+\n",
+      "text_sha256": "1371bc26bf274c5d4af382c3af839efba5488a27a4a02665d477b89c524ac43c"
+    },
+    {
+      "bbox": [
+        62.75,
+        512.6519775390625,
+        332.8999938964844,
+        522.4781494140625
+      ],
+      "block_id": "page-0648-block-0027",
+      "order": 27,
+      "text": "Corticostéroïdes\n+\n+\n",
+      "text_sha256": "b33814c02774a7b6219aa9dcd069fa1d5f4acce6add80672be9facf942672547"
+    },
+    {
+      "bbox": [
+        62.75,
+        532.0519409179688,
+        512.5499877929688,
+        541.8781127929688
+      ],
+      "block_id": "page-0648-block-0028",
+      "order": 28,
+      "text": "Nicotine\n+\n+\n",
+      "text_sha256": "1cdb7c4146b8a2b12e754b30bcd13878ad546cacadbc86b0d8cd801b57880f53"
+    },
+    {
+      "bbox": [
+        62.75,
+        550.9013671875,
+        512.5499877929688,
+        561.328125
+      ],
+      "block_id": "page-0648-block-0029",
+      "order": 29,
+      "text": "Propranolol (InderalMD)\n+\n+\n",
+      "text_sha256": "59cb9c8d9e3bf5fb0d6a3601f38d787ca653fcafd961ee2cc7eccd830a6d16cd"
+    },
+    {
+      "bbox": [
+        54.25,
+        570.5906372070312,
+        249.435791015625,
+        579.4588623046875
+      ],
+      "block_id": "page-0648-block-0030",
+      "order": 30,
+      "text": "Sources : Adapté de Cummins & Mega (2003) ; Moore & Puri (2012).\n",
+      "text_sha256": "12e05d9ad8a5f0bfc7b5679aea85173edad01e1a58d561fa5f15b672dfaab806"
+    },
+    {
+      "bbox": [
+        54.0,
+        614.0868530273438,
+        208.3321990966797,
+        630.2294311523438
+      ],
+      "block_id": "page-0648-block-0031",
+      "order": 31,
+      "text": "28.2.4 Outils diagnostiques\n",
+      "text_sha256": "d30aa82eb6d7836c67840e04609497300f6b3854d79e827de608ff3a427ce276"
+    },
+    {
+      "bbox": [
+        54.0,
+        633.5658569335938,
+        297.125244140625,
+        655.5585327148438
+      ],
+      "block_id": "page-0648-block-0032",
+      "order": 32,
+      "text": "Cette section considère l’ensemble des examens complémentaires\nà l’évaluation clinique des malades.\n",
+      "text_sha256": "005b2c0e35de0e0d614fb94d44dca5d517f5a5b76f09078ee0a363eeb4cc5024"
+    },
+    {
+      "bbox": [
+        54.0,
+        669.4330444335938,
+        297.01751708984375,
+        718.0585327148438
+      ],
+      "block_id": "page-0648-block-0033",
+      "order": 33,
+      "text": "Tests de laboratoire\nLes analyses biochimiques sanguines et autres examens de labo-\nratoires complètent l’évaluation psychiatrique an de corroborer\nune impression clinique ou d’identier une cause biologique à\n",
+      "text_sha256": "21e998279418b82a7893ed8b04315f3fbdd0da797cbc81d83d0247c16e433037"
+    },
+    {
+      "bbox": [
+        312.0,
+        615.7158203125,
+        555.2188110351562,
+        718.20849609375
+      ],
+      "block_id": "page-0648-block-0034",
+      "order": 34,
+      "text": "un tableau symptomatique. Il est recommandé de demander des\nexamens lorsqu’ils sont cliniquement pertinents et non pas de\nfaçon routinière. Le choix des tests de dépistage pour un trouble\nmental de novo tient compte de leur facilité d’accès et d’admi-\nnistration, leur sensibilité et leur spécicité, les implications de\nl’obtention de résultats anormaux et les coûts associés (Smith &\nHogan, 2016). Le tableau 28.8 propose des tests de laboratoires,\ncommuns et spéciques, qui sont considérés lors de l’évaluation\nd’un trouble mental.\n",
+      "text_sha256": "b0ab33ed91acb5fe91c9557ccc264fd613853bf53af2bc83f567309904bc3ff4"
+    },
+    {
+      "bbox": [
+        470.20001220703125,
+        41.45229721069336,
+        495.8842468261719,
+        53.42007064819336
+      ],
+      "block_id": "page-0648-block-0035",
+      "order": 35,
+      "text": "(suite)\n",
+      "text_sha256": "c684d6dbcdfd50f0ada227f799b5c0fb30e817ac3da61b4cbf208decde7f907b"
+    }
+  ],
+  "coordinates_sha256": "0459c5589f43b45eee956e0c1797aeffd070be13d7206ec6e2228b76eb811dbe",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0648",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 28\nTroubles mentaux dus à une aection médicale\n631\nTABLEAU 28.7 Médicaments et substances psychoactives associés à des symptômes psychiatriques\nSubstances\nAnxiété\nDépression\nPsychose\nManie\nDigitale\n+\n+\n+\nHormones thyroïdiennes\n+\n+\n+\nInterféron α\n+\n+\n+\n+\nIsoniazide (RimifonMD)\n+\n+\n+\n+\nIsotrétinoïne (AccutaneMD)\n+\n+\nMétaux lourds : mercure, plomb,\nmanganèse\n+\n+\nMétoclopramide (ReglanMD)\n+\nOxyde et dioxyde de carbone\n+\nSédatifs-hypnotiques\n+\n+\n+\n+\nSolvants volatils\n+\n+\nStimulants et hallucinogènes\n+\n+\n+\nTétrabénazine (NitomanMD)\n+\nThéophylline\n+\n+\n+\nYohimbine\n+\n+\n+\nSevrage de substances :\nAlcool\n+\n+\nAmphétamines\n+\n+\n+\nAnticholinergiques\n+\nBaclofène\n+\n+\nBarbituriques\n+\n+\nBenzodiazépines\n+\n+\nCaféine\n+\nCorticostéroïdes\n+\n+\nNicotine\n+\n+\nPropranolol (InderalMD)\n+\n+\nSources : Adapté de Cummins & Mega (2003) ; Moore & Puri (2012).\n28.2.4 Outils diagnostiques\nCette section considère l’ensemble des examens complémentaires\nà l’évaluation clinique des malades.\nTests de laboratoire\nLes analyses biochimiques sanguines et autres examens de labo-\nratoires complètent l’évaluation psychiatrique an de corroborer\nune impression clinique ou d’identier une cause biologique à\nun tableau symptomatique. Il est recommandé de demander des\nexamens lorsqu’ils sont cliniquement pertinents et non pas de\nfaçon routinière. Le choix des tests de dépistage pour un trouble\nmental de novo tient compte de leur facilité d’accès et d’admi-\nnistration, leur sensibilité et leur spécicité, les implications de\nl’obtention de résultats anormaux et les coûts associés (Smith &\nHogan, 2016). Le tableau 28.8 propose des tests de laboratoires,\ncommuns et spéciques, qui sont considérés lors de l’évaluation\nd’un trouble mental.\n(suite)\n",
+  "raw_text_sha256": "e56290a90ff35b6dd04330cc508b18507437d4c23c2275f4beb593ddec19f468",
+  "source_page_display": 649,
+  "source_page_index": 648
+}

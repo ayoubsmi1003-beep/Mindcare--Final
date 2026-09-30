@@ -1,0 +1,208 @@
+{
+  "block_sequence_sha256": "1d2dc1cbadbbcef4ee29fa696ad8214125f63b33cd7c1bce7d11a9a43a370b69",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        180.42501831054688,
+        758.8693237304688
+      ],
+      "block_id": "page-1143-block-0001",
+      "order": 1,
+      "text": "F6\nFigures supplémentaires\n",
+      "text_sha256": "6adfd6c9b39c1ebab4cdaaf25d2064f658219cf3e3b651c2c3537bbb3cedfc9d"
+    },
+    {
+      "bbox": [
+        50.400001525878906,
+        41.002296447753906,
+        242.416259765625,
+        53.320068359375
+      ],
+      "block_id": "page-1143-block-0002",
+      "order": 2,
+      "text": "FIGURE 6 Mémoires et localisations cérébrales\n",
+      "text_sha256": "7c3baf0d7c84430b92228a42aca7db2300aa3cf24943ae046f5c5d351e1b2419"
+    },
+    {
+      "bbox": [
+        48.25,
+        363.9406433105469,
+        374.6700134277344,
+        372.8088684082031
+      ],
+      "block_id": "page-1143-block-0003",
+      "order": 3,
+      "text": "Source : Jaffard, R. (2011). La diversité de la mémoire. Préface d’un dossier Hors Série de la revue Pour la science.\n",
+      "text_sha256": "f32fd1584beff70c8f1b0beafc86516f79daff6f3eedc568f94a91c9649b7451"
+    },
+    {
+      "bbox": [
+        50.20000076293945,
+        406.602294921875,
+        310.49810791015625,
+        418.9200744628906
+      ],
+      "block_id": "page-1143-block-0004",
+      "order": 4,
+      "text": "FIGURE 7 Wisconsin Cart Sorting Test, test de pairage de cartes\n",
+      "text_sha256": "2ecccbccf52778fe852e5acbcd4171e6e023bf281112b44c5f201bee52dc1e4c"
+    },
+    {
+      "bbox": [
+        48.04999923706055,
+        552.390625,
+        356.9289855957031,
+        561.187744140625
+      ],
+      "block_id": "page-1143-block-0005",
+      "order": 5,
+      "text": "Consigne : Quatre cartes afchant des couleurs, formes et nombres différents, sont placées sur le bureau.\n",
+      "text_sha256": "166841a7a24070f3db744464951e61742ddda223679d31227a995c21677b78cb"
+    },
+    {
+      "bbox": [
+        48.04999923706055,
+        565.890625,
+        337.6168212890625,
+        574.625
+      ],
+      "block_id": "page-1143-block-0006",
+      "order": 6,
+      "text": "On demande au participant d’associer une à une, les 128 cartes avec l’une des quatre cartes de base.\n",
+      "text_sha256": "16fedab023c05b16bba5fc5fee7d94b89abfcabca21deadd09a22851ee84a550"
+    },
+    {
+      "bbox": [
+        48.04999923706055,
+        579.390625,
+        492.48388671875,
+        588.125
+      ],
+      "block_id": "page-1143-block-0007",
+      "order": 7,
+      "text": "L’examinateur ne dit pas au participant comment pairer les cartes ; il lui indique seulement si l’association avec la carte de base est correcte ou non correcte.\n",
+      "text_sha256": "d46a74034811994b100628d0b87d8bd973e8e6cbcd72002f494f9ae7ec12488c"
+    },
+    {
+      "bbox": [
+        48.04999923706055,
+        592.890625,
+        272.5618896484375,
+        601.625
+      ],
+      "block_id": "page-1143-block-0008",
+      "order": 8,
+      "text": "Le participant doit faire des essais pour découvrir la façon d’apparier les cartes.\n",
+      "text_sha256": "62f6369471bc691f79bb91b34854492e4f625f0f9c802e7bceba219abf08cefd"
+    },
+    {
+      "bbox": [
+        48.04999923706055,
+        606.390625,
+        398.7528076171875,
+        615.125
+      ],
+      "block_id": "page-1143-block-0009",
+      "order": 9,
+      "text": "Après dix associations correctes, l’examinateur indique que la onzième association avec la carte de base n’est plus correcte.\n",
+      "text_sha256": "1a2bac84ed0e95544cb4125785d917735b298166d8a067bd00849c6b153615b0"
+    },
+    {
+      "bbox": [
+        48.04999923706055,
+        619.890625,
+        488.94720458984375,
+        628.625
+      ],
+      "block_id": "page-1143-block-0010",
+      "order": 10,
+      "text": "Le participant doit faire de nouveaux essais pour découvrir la nouvelle façon de pairer les cartes suivantes avec la seule répo nse « correct » – « pas correct ».\n",
+      "text_sha256": "0633fd33796f879816892f125ffaf857e8e47bcbe6660125cc3c95f42355b7dc"
+    },
+    {
+      "bbox": [
+        48.04999923706055,
+        633.390625,
+        528.3873291015625,
+        651.625
+      ],
+      "block_id": "page-1143-block-0011",
+      "order": 11,
+      "text": "Quand le participant a trouvé la bonne règle d’association, il doit maintenir cette façon de faire jusqu’à ce qu’elle change à nouveau. La nouvelle règle trouvée, il doit alors\ninhiber l’ancienne, désormais non pertinente.\n",
+      "text_sha256": "54efe7d069d0d11902e47571c89a84e800e4c2d70a5e329feea7e89b7dd8d275"
+    },
+    {
+      "bbox": [
+        48.04999923706055,
+        657.187744140625,
+        94.35400390625,
+        665.187744140625
+      ],
+      "block_id": "page-1143-block-0012",
+      "order": 12,
+      "text": "Application :\n",
+      "text_sha256": "51647838718b8067ba258154c1cb850bc7e1ca29416a2de456fce4deca95553e"
+    },
+    {
+      "bbox": [
+        48.04999923706055,
+        669.890625,
+        305.3793029785156,
+        678.625
+      ],
+      "block_id": "page-1143-block-0013",
+      "order": 13,
+      "text": "Ce test permet d’évaluer les capacités d’anticipation, de planication, de conceptualisation.\n",
+      "text_sha256": "69aecaba148f23e6e0c25262f300cbe16d71830f421e99546a23174b552a6791"
+    },
+    {
+      "bbox": [
+        48.04999923706055,
+        683.390625,
+        242.8586883544922,
+        692.125
+      ],
+      "block_id": "page-1143-block-0014",
+      "order": 14,
+      "text": "Pour le réussir, il faut une exibilité mentale vs persévération, rigidité.\n",
+      "text_sha256": "1573ba2ec8752831508b3acfe9382981a006519c1edabd1857541b3464482d4b"
+    },
+    {
+      "bbox": [
+        48.04999923706055,
+        696.890625,
+        264.008544921875,
+        705.625
+      ],
+      "block_id": "page-1143-block-0015",
+      "order": 15,
+      "text": "Il faut une capacité d’adaptation à l’environnement, aux règles qui changent.\n",
+      "text_sha256": "a2c304fca416e656548a35d2c66b3599aa78fecc4e02f5a258121312cdd490b7"
+    },
+    {
+      "bbox": [
+        48.04999923706055,
+        710.390625,
+        499.1260681152344,
+        728.625
+      ],
+      "block_id": "page-1143-block-0016",
+      "order": 16,
+      "text": "Les patients ayant des lésions préfrontales ont beaucoup de difcultés à réussir ce test, en particulier ceux qui ont des lésions dorsolatérales du lobe préfrontal,\nqui tendent à persévérer dans leurs anciennes règles d’association.\n",
+      "text_sha256": "f0fc14dc67ec84d5b64c7d37afae42eb51c0dea1db8f4d9c08f16fe273931d10"
+    }
+  ],
+  "coordinates_sha256": "024d5ed8092977f201d8ab96b29d32e92f93e7541951a4d82a521da685147130",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1143",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "F6\nFigures supplémentaires\nFIGURE 6 Mémoires et localisations cérébrales\nSource : Jaffard, R. (2011). La diversité de la mémoire. Préface d’un dossier Hors Série de la revue Pour la science.\nFIGURE 7 Wisconsin Cart Sorting Test, test de pairage de cartes\nConsigne : Quatre cartes afchant des couleurs, formes et nombres différents, sont placées sur le bureau.\nOn demande au participant d’associer une à une, les 128 cartes avec l’une des quatre cartes de base.\nL’examinateur ne dit pas au participant comment pairer les cartes ; il lui indique seulement si l’association avec la carte de base est correcte ou non correcte.\nLe participant doit faire des essais pour découvrir la façon d’apparier les cartes.\nAprès dix associations correctes, l’examinateur indique que la onzième association avec la carte de base n’est plus correcte.\nLe participant doit faire de nouveaux essais pour découvrir la nouvelle façon de pairer les cartes suivantes avec la seule répo nse « correct » – « pas correct ».\nQuand le participant a trouvé la bonne règle d’association, il doit maintenir cette façon de faire jusqu’à ce qu’elle change à nouveau. La nouvelle règle trouvée, il doit alors\ninhiber l’ancienne, désormais non pertinente.\nApplication :\nCe test permet d’évaluer les capacités d’anticipation, de planication, de conceptualisation.\nPour le réussir, il faut une exibilité mentale vs persévération, rigidité.\nIl faut une capacité d’adaptation à l’environnement, aux règles qui changent.\nLes patients ayant des lésions préfrontales ont beaucoup de difcultés à réussir ce test, en particulier ceux qui ont des lésions dorsolatérales du lobe préfrontal,\nqui tendent à persévérer dans leurs anciennes règles d’association.\n",
+  "raw_text_sha256": "9749beb1563d7bd817c8771acb3c752dc10b10c7c7f23fca5fdd814248b93e81",
+  "source_page_display": 1144,
+  "source_page_index": 1143
+}

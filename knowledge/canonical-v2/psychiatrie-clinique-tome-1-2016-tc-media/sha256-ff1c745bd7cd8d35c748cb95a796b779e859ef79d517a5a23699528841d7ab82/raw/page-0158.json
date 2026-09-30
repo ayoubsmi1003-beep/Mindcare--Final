@@ -1,0 +1,136 @@
+{
+  "block_sequence_sha256": "5877ce9c5f76be2b3452f1a1025ee8763c6cf002c2569cd3ff52df872810f57d",
+  "blocks": [
+    {
+      "bbox": [
+        388.75,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0158-block-0001",
+      "order": 1,
+      "text": "Chapitre 7\nImagerie cérébrale\n141\n",
+      "text_sha256": "1bc06c6faece4d4dcc69583a8e4e4ecce6a56c9e15cf3ec720b8acaf90e4316d"
+    },
+    {
+      "bbox": [
+        312.0,
+        261.4658203125,
+        555.0187377929688,
+        306.45849609375
+      ],
+      "block_id": "page-0158-block-0002",
+      "order": 2,
+      "text": "distribution commerciale de la molécule la plus utilisée en TEP\nà des ns cliniques (le uorodéoxyglucose marqué au uor 18,\n18FDG) sont maintenant bien établis, et rendent ces examens\nplus accessibles.\n",
+      "text_sha256": "7fa5bee726c9b8f3689fd3ae4d8cef025afc5f84ccd2d56fed8d5d8b1e1725e0"
+    },
+    {
+      "bbox": [
+        312.0,
+        316.98681640625,
+        546.1611328125,
+        349.12939453125
+      ],
+      "block_id": "page-0158-block-0003",
+      "order": 3,
+      "text": "7.2.2 Études du ot sanguin et du\nmétabolisme énergétique cérébraux\n",
+      "text_sha256": "c51d5ed96dd321751740eda31db09cae9284a816776ef7c1054041f3108b9864"
+    },
+    {
+      "bbox": [
+        312.0,
+        352.4658203125,
+        555.27392578125,
+        581.45849609375
+      ],
+      "block_id": "page-0158-block-0004",
+      "order": 4,
+      "text": "La neurotransmission repose sur l’échange de signaux entre\nles cellules nerveuses, échanges qui se font le plus souvent par\nle biais de neurotransmetteurs. Cette signalisation intercellu-\nlaire entraîne des modications de la répartition de diérents\nions au niveau des membranes des neurones, et souvent aussi\ndes cellules gliales. Ces modications doivent être ensuite\ncorrigées, ce qui nécessite la consommation d’énergie générée\nessentiellement par l’oxydation de glucose. Plusieurs études\nmontrent que la transmission synaptique est, de loin, la prin-\ncipale source de consommation d’énergie par le cerveau. Par\nailleurs, les synapses à glutamate constituent environ 90 %\ndes synapses corticales ; le reste est essentiellement de type\nGABAergique, dont l’activation ne consomme probablement\nque peu d’énergie. On peut donc considérer que ce sont les\nbesoins de la transmission glutamatergique qui dominent le\nbilan énergétique du cerveau. Si on assimile l’activité cérébrale\nà son activité de transmission synaptique (au glutamate), on\npeut admettre que l’évaluation de la consommation d’énergie\ndans une région cérébrale reète l’intensité des transmissions\nsynaptiques dans cette région.\n",
+      "text_sha256": "239433440eba56a94e834bf4698d5f379caae3c7457a1aef3a4c7f8010a5f579"
+    },
+    {
+      "bbox": [
+        312.0,
+        582.4658203125,
+        555.318359375,
+        725.45849609375
+      ],
+      "block_id": "page-0158-block-0005",
+      "order": 5,
+      "text": "Seule la TEP permet des mesures directes in vivo de la consom-\nmation d’énergie par le cerveau par l’intermédiaire :\n• de son utilisation du glucose réalisée à l’aide d’analogues du\nglucose, principalement le 18FDG, maintenant disponibles de\nfaçon routinière, à tout le moins dans les grands centres ;\n• de son utilisation de l’oxygène moléculaire marqué par l’15O,\nun examen rarement pratiqué en raison de sa complexité\ntechnique.\nIl est cependant possible de procéder d’une façon diérente :\nl’intensité de la transmission synaptique glutamatergique est\négalement couplée au ot sanguin se rendant à une région céré-\nbrale donnée (les mécanismes de ce couplage sont cependant\n",
+      "text_sha256": "67261aa7c7eeaf012701c785e95375fee8d640b498c0297e6d7b481cb97604da"
+    },
+    {
+      "bbox": [
+        54.0,
+        243.7658233642578,
+        297.3891296386719,
+        334.7585144042969
+      ],
+      "block_id": "page-0158-block-0006",
+      "order": 6,
+      "text": "Les études planaires et la TEMP sont en général les plus simples\net les moins coûteuses à réaliser, donc les plus disponibles. Elles\nfont appel aux mêmes types de radiopharmaceutiques, faciles à\nobtenir, marqués par des atomes radioactifs (p. ex., le technétium\n99m et l’iode 123) émettant directement un seul photon (d’où\nle nom de tomographie d’émission monophotonique), et aux\nmêmes types de détecteurs, appelés caméra Anger (du nom de\nleur inventeur, Hal O. Anger, voir la gure 7.1).\n",
+      "text_sha256": "266c93151e302de0d883193583e9b5ebd84414f1464da1acc3c3d48b2684ce44"
+    },
+    {
+      "bbox": [
+        54.0,
+        335.7658386230469,
+        297.4032897949219,
+        438.2585144042969
+      ],
+      "block_id": "page-0158-block-0007",
+      "order": 7,
+      "text": "Les acquisitions planaires donnent des images en deux dimen-\nsions (équivalentes, p. ex., à une radiographie du crâne) ; les\nacquisitions TEMP utilisent la tomographie (c.-à-d. une série\nde coupes qui peuvent être reconstruites en trois dimensions\npar ordinateur), durant laquelle de nombreuses images planaires\nsont prises tout autour du malade ; puis l’ordinateur utilise cette\ninformation circonférentielle pour restituer des images en trois\ndimensions de la répartition de la radioactivité dans le cerveau\ndu patient.\n",
+      "text_sha256": "9dfff17362204e47b12dd5ff42190a5203d35a7b7b5e6874196f4d07d305519c"
+    },
+    {
+      "bbox": [
+        54.0,
+        439.2658386230469,
+        297.18206787109375,
+        564.7584838867188
+      ],
+      "block_id": "page-0158-block-0008",
+      "order": 8,
+      "text": "Les études TEP font appel à des atomes radioactifs (les\nplus fréquemment utilisés sont le carbone-11 et le uor-18)\ndiérents de ceux utilisés pour les deux approches précédentes\n(CT-Scan et TEMP). Ces atomes émettent des positrons, qui\nsont de petites particules qui vont ensuite rapidement réagir\navec les électrons du patient pour émettre alors deux photons\nqui s’éloignent l’un de l’autre selon des trajets opposés à 180°. Les\ncaméras TEP (voir la gure 7.2), diérentes des caméras Anger,\nse servent de l’information fournie par ces deux photons pour\nreconstruire directement en trois dimensions la distribution\nde la radioactivité.\n",
+      "text_sha256": "56cf7afb23462856dd13f039b000c9888b75fb0bbe4469dfe21011bb0d8db8b8"
+    },
+    {
+      "bbox": [
+        54.0,
+        565.7658081054688,
+        297.521240234375,
+        725.7584838867188
+      ],
+      "block_id": "page-0158-block-0009",
+      "order": 9,
+      "text": "Une autre diérence entre les atomes radioactifs de la TEP et\nceux de la TEMP est liée à la courte durée de vie des premiers :\nils se décomposent très vite, et il faut les produire à proximité\nde leur site d’utilisation à l’aide d’un cyclotron, ce qui entraîne\ndes frais d’immobilisation et d’opération élevés. Les caméras\nTEP sont également plus complexes, donc plus coûteuses.\nLa TEP est au total moins disponible que ne le sont le CT-scan et la\nTEMP. Par contre, elle donne des images de meilleure qualité. La\ngure 37 des gures supplémentaires illustre deux coupes venant\napproximativement du même niveau anatomique transaxial et\npermet de comparer la résolution des deux techniques. La TEP\nore une information anatomique supérieure et elle permet\nl’emploi de radiopharmaceutiques plus variés, ciblant davan-\ntage de molécules d’intérêt biologique. De plus, des réseaux de\n",
+      "text_sha256": "338ace3020205cb87b024165b263b6a7b371a528bcbe3a22bad7eb90b0e31df8"
+    },
+    {
+      "bbox": [
+        57.35000228881836,
+        41.002296447753906,
+        409.82525634765625,
+        54.320068359375
+      ],
+      "block_id": "page-0158-block-0010",
+      "order": 10,
+      "text": "FIGURE 7.1 Caméra TEMP Anger\nFIGURE 7.2 Caméra TEP\n",
+      "text_sha256": "bf16fa17b82c38ad30e51ba534274358a3df6e00181739b84d4d213559d6c7ec"
+    }
+  ],
+  "coordinates_sha256": "c8f35e364b4277eb7e626230640308ce988821adc52eb7683befec82e162fdf5",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0158",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 7\nImagerie cérébrale\n141\ndistribution commerciale de la molécule la plus utilisée en TEP\nà des ns cliniques (le uorodéoxyglucose marqué au uor 18,\n18FDG) sont maintenant bien établis, et rendent ces examens\nplus accessibles.\n7.2.2 Études du ot sanguin et du\nmétabolisme énergétique cérébraux\nLa neurotransmission repose sur l’échange de signaux entre\nles cellules nerveuses, échanges qui se font le plus souvent par\nle biais de neurotransmetteurs. Cette signalisation intercellu-\nlaire entraîne des modications de la répartition de diérents\nions au niveau des membranes des neurones, et souvent aussi\ndes cellules gliales. Ces modications doivent être ensuite\ncorrigées, ce qui nécessite la consommation d’énergie générée\nessentiellement par l’oxydation de glucose. Plusieurs études\nmontrent que la transmission synaptique est, de loin, la prin-\ncipale source de consommation d’énergie par le cerveau. Par\nailleurs, les synapses à glutamate constituent environ 90 %\ndes synapses corticales ; le reste est essentiellement de type\nGABAergique, dont l’activation ne consomme probablement\nque peu d’énergie. On peut donc considérer que ce sont les\nbesoins de la transmission glutamatergique qui dominent le\nbilan énergétique du cerveau. Si on assimile l’activité cérébrale\nà son activité de transmission synaptique (au glutamate), on\npeut admettre que l’évaluation de la consommation d’énergie\ndans une région cérébrale reète l’intensité des transmissions\nsynaptiques dans cette région.\nSeule la TEP permet des mesures directes in vivo de la consom-\nmation d’énergie par le cerveau par l’intermédiaire :\n• de son utilisation du glucose réalisée à l’aide d’analogues du\nglucose, principalement le 18FDG, maintenant disponibles de\nfaçon routinière, à tout le moins dans les grands centres ;\n• de son utilisation de l’oxygène moléculaire marqué par l’15O,\nun examen rarement pratiqué en raison de sa complexité\ntechnique.\nIl est cependant possible de procéder d’une façon diérente :\nl’intensité de la transmission synaptique glutamatergique est\négalement couplée au ot sanguin se rendant à une région céré-\nbrale donnée (les mécanismes de ce couplage sont cependant\nLes études planaires et la TEMP sont en général les plus simples\net les moins coûteuses à réaliser, donc les plus disponibles. Elles\nfont appel aux mêmes types de radiopharmaceutiques, faciles à\nobtenir, marqués par des atomes radioactifs (p. ex., le technétium\n99m et l’iode 123) émettant directement un seul photon (d’où\nle nom de tomographie d’émission monophotonique), et aux\nmêmes types de détecteurs, appelés caméra Anger (du nom de\nleur inventeur, Hal O. Anger, voir la gure 7.1).\nLes acquisitions planaires donnent des images en deux dimen-\nsions (équivalentes, p. ex., à une radiographie du crâne) ; les\nacquisitions TEMP utilisent la tomographie (c.-à-d. une série\nde coupes qui peuvent être reconstruites en trois dimensions\npar ordinateur), durant laquelle de nombreuses images planaires\nsont prises tout autour du malade ; puis l’ordinateur utilise cette\ninformation circonférentielle pour restituer des images en trois\ndimensions de la répartition de la radioactivité dans le cerveau\ndu patient.\nLes études TEP font appel à des atomes radioactifs (les\nplus fréquemment utilisés sont le carbone-11 et le uor-18)\ndiérents de ceux utilisés pour les deux approches précédentes\n(CT-Scan et TEMP). Ces atomes émettent des positrons, qui\nsont de petites particules qui vont ensuite rapidement réagir\navec les électrons du patient pour émettre alors deux photons\nqui s’éloignent l’un de l’autre selon des trajets opposés à 180°. Les\ncaméras TEP (voir la gure 7.2), diérentes des caméras Anger,\nse servent de l’information fournie par ces deux photons pour\nreconstruire directement en trois dimensions la distribution\nde la radioactivité.\nUne autre diérence entre les atomes radioactifs de la TEP et\nceux de la TEMP est liée à la courte durée de vie des premiers :\nils se décomposent très vite, et il faut les produire à proximité\nde leur site d’utilisation à l’aide d’un cyclotron, ce qui entraîne\ndes frais d’immobilisation et d’opération élevés. Les caméras\nTEP sont également plus complexes, donc plus coûteuses.\nLa TEP est au total moins disponible que ne le sont le CT-scan et la\nTEMP. Par contre, elle donne des images de meilleure qualité. La\ngure 37 des gures supplémentaires illustre deux coupes venant\napproximativement du même niveau anatomique transaxial et\npermet de comparer la résolution des deux techniques. La TEP\nore une information anatomique supérieure et elle permet\nl’emploi de radiopharmaceutiques plus variés, ciblant davan-\ntage de molécules d’intérêt biologique. De plus, des réseaux de\nFIGURE 7.1 Caméra TEMP Anger\nFIGURE 7.2 Caméra TEP\n",
+  "raw_text_sha256": "9e9a774e70f55cdf4e620f9d7729667fb1d203b42e03ffecf33aac27ea5c3d6d",
+  "source_page_display": 159,
+  "source_page_index": 158
+}

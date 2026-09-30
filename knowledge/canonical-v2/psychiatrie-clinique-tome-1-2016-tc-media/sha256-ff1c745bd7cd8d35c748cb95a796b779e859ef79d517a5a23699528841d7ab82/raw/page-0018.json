@@ -1,0 +1,76 @@
+{
+  "block_sequence_sha256": "501662898aa7e46c160ed89c81e347d37e382a7d0752cc9d6c4cd4b16c958f71",
+  "blocks": [
+    {
+      "bbox": [
+        398.8999938964844,
+        -50.99560546875,
+        658.9000244140625,
+        758.7081909179688
+      ],
+      "block_id": "page-0018-block-0001",
+      "order": 1,
+      "text": "11\n",
+      "text_sha256": "25d4f2a86deb5e2574bb3210b67bb24fcc4afb19f93a7b65a057daa874a9d18e"
+    },
+    {
+      "bbox": [
+        84.0,
+        394.7660217285156,
+        300.0,
+        420.2035217285156
+      ],
+      "block_id": "page-0018-block-0002",
+      "order": 2,
+      "text": "1 \nPsychiatrie bio-psycho-sociale........................2\n2 \nRelation médecin-patient ..............................21\n",
+      "text_sha256": "0347b2868a4ff8ecddb360014b083014b33ced5715c60f0748d2dfbae28956db"
+    },
+    {
+      "bbox": [
+        331.5,
+        394.7660217285156,
+        547.5,
+        420.2035217285156
+      ],
+      "block_id": "page-0018-block-0003",
+      "order": 3,
+      "text": "3 \nExamen psychiatrique ....................................35\n4 \nÉvaluation neuropsychologique....................77\n",
+      "text_sha256": "30cfdb95bb2a321f5128d87f8853cfe5db5c435fc71b17634d5d6f2a4111a0f2"
+    },
+    {
+      "bbox": [
+        48.0,
+        170.7292938232422,
+        338.5010681152344,
+        278.88165283203125
+      ],
+      "block_id": "page-0018-block-0004",
+      "order": 4,
+      "text": "Introduction\nà la psychiatrie\n",
+      "text_sha256": "cf9fd94511485f9a2934de7a235621e43c9db9d7af0621cbc40eb9188ececf5e"
+    },
+    {
+      "bbox": [
+        240.60000610351562,
+        70.84444427490234,
+        385.2432556152344,
+        108.84444427490234
+      ],
+      "block_id": "page-0018-block-0005",
+      "order": 5,
+      "text": "PARTIE\n",
+      "text_sha256": "0e054fd62c9a877920b13d9a515f145b5819af2695746e6dfd91efa1e2c5806b"
+    }
+  ],
+  "coordinates_sha256": "0c580d8328671beadc5790d3b9b355ffb9aee263f695de74207a39e723784f28",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0018",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "11\n1 \nPsychiatrie bio-psycho-sociale........................2\n2 \nRelation médecin-patient ..............................21\n3 \nExamen psychiatrique ....................................35\n4 \nÉvaluation neuropsychologique....................77\nIntroduction\nà la psychiatrie\nPARTIE\n",
+  "raw_text_sha256": "156260082b166b6ddf699cac17a6bbb52831e2d30f70781b24a3e234f3e001cb",
+  "source_page_display": 19,
+  "source_page_index": 18
+}

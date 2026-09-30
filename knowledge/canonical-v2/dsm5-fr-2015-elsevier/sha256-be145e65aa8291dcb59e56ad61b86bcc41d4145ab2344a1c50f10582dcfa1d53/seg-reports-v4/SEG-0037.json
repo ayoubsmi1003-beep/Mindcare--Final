@@ -1,0 +1,84 @@
+{
+  "book_id": "dsm5-fr-2015-elsevier",
+  "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+  "segment": "seg-0901-0925.pdf",
+  "source_page_start": 901,
+  "source_page_end": 925,
+  "page_count": 25,
+  "segment_sha256": "b55d10db9d9cb7c153c7e1f49a8f156d0369f5bc61587a4b2ff0db04dee7a7d5",
+  "candidate_reconciliation": "reconciliation-v10",
+  "units": 547,
+  "tables": 0,
+  "concepts": 112,
+  "xrefs": 18,
+  "pages_with_no_text": [],
+  "uncertain": [
+    901,
+    902,
+    904,
+    905,
+    908,
+    909,
+    911,
+    912,
+    913,
+    915,
+    916,
+    917,
+    920,
+    921,
+    924,
+    925
+  ],
+  "fallback_pages": [
+    901,
+    902,
+    904,
+    905,
+    908,
+    909,
+    911,
+    912,
+    913,
+    915,
+    916,
+    917,
+    920,
+    921,
+    924,
+    925
+  ],
+  "extractors": {
+    "pymupdf-fallback": 13,
+    "pymupdf-original-text-layer": 534
+  },
+  "citra": {
+    "status": "not_attempted_parallel_task_interrupted",
+    "failed_segment_pages": [],
+    "failed_source_pages": [],
+    "fallback_used": true
+  },
+  "line_counts": {
+    "units": 547,
+    "tables": 0,
+    "concepts": 112,
+    "xrefs": 18
+  },
+  "files": {
+    "units": "reconciliation-v10/units.jsonl",
+    "tables": "reconciliation-v10/tables.jsonl",
+    "concepts": "reconciliation-v10/concepts.jsonl",
+    "xrefs": "reconciliation-v10/xrefs.jsonl"
+  },
+  "structure_candidate": "structure-v2.candidate.json",
+  "status": "CANDIDATE_REVIEW_REQUIRED",
+  "canonical_promotion_authorized": false,
+  "summary_line": "SEG seg-0901-0925.pdf: units=547 tables=0 concepts=112 xrefs=18 | pages with no text: [] | uncertain: [901, 902, 904, 905, 908, 909, 911, 912, 913, 915, 916, 917, 920, 921, 924, 925] | citra-failed-pages: [] | notes: Citra was not replayed for this segment; report is manifest-only and does not claim a fresh Citra result.; Fallback pages are explicitly uncertain and routed to review.",
+  "fallback_verification": {
+    "method": "pymupdf-get_text",
+    "ocr_used": false,
+    "page_count": 25,
+    "empty_pages": [],
+    "segment_sha256": "b55d10db9d9cb7c153c7e1f49a8f156d0369f5bc61587a4b2ff0db04dee7a7d5"
+  }
+}

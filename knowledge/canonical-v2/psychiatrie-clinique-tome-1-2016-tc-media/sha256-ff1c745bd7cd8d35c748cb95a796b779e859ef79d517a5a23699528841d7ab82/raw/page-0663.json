@@ -1,0 +1,124 @@
+{
+  "block_sequence_sha256": "5a86fe5a3ccdc972a78db2afe509972397f17e933a18a9e21aa45010c2bbd368",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0663-block-0001",
+      "order": 1,
+      "text": "646\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "1aca0489b0db290bb15aaed9214c5a9d54debd9dd055ed0097f69b8ba9719836"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.3773193359375,
+        416.70849609375
+      ],
+      "block_id": "page-0663-block-0002",
+      "order": 2,
+      "text": "Pour un patient séropositif qui se présente avec un tableau de\nmanie ou d’hypomanie, les étiologies possibles sont les suivantes\n(Corr, 2012) :\n• un trouble bipolaire comorbide ;\n• une manie médicamenteuse (induite par les traitements\nantidépresseurs, les corticostéroïdes ou due aux eets indé-\nsirables des antirétroviraux tels que la zidovudine, l’efavirenz,\nle ganciclovir, l’acyclovir, l’interféron) ;\n• une manie causée par l’usage de drogues ;\n• une manie secondaire à une infection ou aection opportuniste\ndu CNS (méningite à cryptocoques, encéphalite herpétique,\nneurosyphilis ou un lymphome du CNS) ;\n• une progression de la neurotoxicité reliée directement au VIH\n(AIDS mania).\nCette forme de manie secondaire se distingue de la manie\nspontanée par certaines caractéristiques :\n• un ralentissement psychomoteur ; tableau clinique atypique :\nquand les atteintes cognitives sont importantes (c.-à-d. dans\nla démence associée au VIH), les patients sont très ralentis,\npas d’augmentation d’énergie ni d’agitation, même s’ils ont\nd’autres symptômes de manie (perte de sommeil) ;\n• des troubles neurocognitifs graves ;\n• une humeur irritable et non euphorique ;\n• la gravité de la présentation clinique avec délire paranoïde et\nfréquentes hallucinations auditives et visuelles.\nL’occurrence de manie secondaire, bien que faible (1,2 % pour\nles patients VIH+ et 4,3 % pour les patients au stade avancé du\nsida), demeure supérieure à celle de la population générale. Les\nthymorégulateurs sont à éviter en raison de leurs eets au niveau\ncognitif. Des antipsychotiques atypiques à faible dose peuvent\ntoutefois être utilisés.\n",
+      "text_sha256": "0efaf87e0b05fb8ef925954598375f9c4921e3a0466c9e1c262c9fd26ab6eeab"
+    },
+    {
+      "bbox": [
+        306.0,
+        417.7158203125,
+        549.292236328125,
+        497.2585144042969
+      ],
+      "block_id": "page-0663-block-0003",
+      "order": 3,
+      "text": "Des symptômes psychotiques de novo (0,2 à 15 %) chez les\npatients séropositifs peuvent être dus aux abus de substances et\nd’alcool ; ils sont aussi induits par les médicaments antirétroviraux\nou secondaires à l’immunosuppression et aux infections opportu-\nnistes du CNS. Chez 65 % des patients, on observe une composante\naective (en général, de la manie). Les antipsychotiques peuvent\nêtre utiles, mais normalement, l’usage à long terme n’est pas requis.\n",
+      "text_sha256": "c58af270182cd5f40beb667d93493214c7d11982826f58d664539f9ca5af57c3"
+    },
+    {
+      "bbox": [
+        306.0,
+        498.3158264160156,
+        549.2908325195312,
+        554.8085327148438
+      ],
+      "block_id": "page-0663-block-0004",
+      "order": 4,
+      "text": "Des cas de délires centrés sur la conviction d’être atteint du sida\nont été rapportés, conduisant parfois à des tentatives de suicide.\nDevant l’apparition de symptômes psychotiques et maniaques,\nl’imagerie cérébrale et la ponction lombaire s’imposent chez les\npatients sidéens.\n",
+      "text_sha256": "5bf78f2f0a6470391dfa4166b8291be9db7ef19be501cdcb3b96f91139d2c716"
+    },
+    {
+      "bbox": [
+        306.0,
+        555.8658447265625,
+        549.277587890625,
+        658.4085083007812
+      ],
+      "block_id": "page-0663-block-0005",
+      "order": 5,
+      "text": "L’infection au VIH constitue un facteur de risque important\nde troubles sexuels (39-59 %) (Gallego & al., 2011). Un certain\nnombre d’hommes séropositifs sourent de problèmes érectiles\net une grande majorité des patients (97 %) connaissent une baisse\nde leur libido. Une atteinte neurologique, un hypoandrogénisme,\ndes eets indésirables des traitements, une dépression, un désin-\nvestissement libidinal consécutif à l’annonce de la séropositivité\net des dicultés du lien avec son partenaire peuvent contribuer\nà ces dysfonctions sexuelles.\n",
+      "text_sha256": "4535d0b8eac3d4e4f77b3c35cdbe893a552a4c8d501244d2affb85f96a0e8440"
+    },
+    {
+      "bbox": [
+        306.0,
+        665.2830200195312,
+        549.0175170898438,
+        725.45849609375
+      ],
+      "block_id": "page-0663-block-0006",
+      "order": 6,
+      "text": "Troubles cognitifs\nDepuis l’utilisation de la trithérapie, l’incidence des complications\nneurologiques classiques connues dans les premières années de\nl’épidémie du VIH a nettement diminué. Le delirium reste l’af-\nfection la plus fréquente (40 à 65 %) observée chez les patients\n",
+      "text_sha256": "409db958205c0ea510f329f5f3fb174bab3b8eddd8c5e34d57e4706f95ca9aae"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.9658203125,
+        291.2415466308594,
+        417.7585144042969
+      ],
+      "block_id": "page-0663-block-0007",
+      "order": 7,
+      "text": "stade avancé de la maladie. Parmi les facteurs qui peuvent inuer\nsur la survenue d’une dépression, on trouve :\n• le sexe féminin ;\n• une situation socio-économique défavorable ;\n• l’absence de soutien social ;\n• la violence domestique ;\n• des antécédents familiaux de dépression ;\n• une pathologie psychiatrique préexistante ;\n• une toxicomanie ;\n• l’alcoolisme ;\n• des situations de deuil et de perte ;\n• une charge virale élevée ;\n• une perte de poids ;\n• la présence de symptômes physiques multiples ;\n• la coexistence d’une hépatite C.\nCertains des symptômes somatiques (asthénie, troubles de\nsommeil, anorexie et perte de poids) peuvent être dus :\n• à l’infection et à la progression du VIH ;\n• aux infections opportunistes ;\n• à la neurotoxicité directement reliée au VIH ;\n• aux eets indésirables de certains médicaments (les antirétro-\nviraux tels que l’efavirenz, les corticostéroïdes, l’interféron α\n(IFN-α) pour traiter l’hépatite C comorbide, la chimiothérapie\npour traiter les cancers comorbides) ;\n• aux endocrinopathies (hypothyroïdie, hypogonadisme retrouvé\nchez 13 à 17 % des hommes séropositifs).\nCes aections peuvent mimer des symptômes psychiatriques\nde dépression majeure et doivent être considérées quand une\naltération de l’humeur se produit.\n",
+      "text_sha256": "1bf0e9cd624a564ece3342827a041da2ea475b9e6690fc97f346f2812bdcd9fd"
+    },
+    {
+      "bbox": [
+        48.0,
+        418.91583251953125,
+        291.01751708984375,
+        645.5084838867188
+      ],
+      "block_id": "page-0663-block-0008",
+      "order": 8,
+      "text": "Malgré la diminution significative des taux de suicide\ndepuis l’avènement des nouvelles trithérapies antirétrovi-\nrales, les patients infectés par le VIH décèdent par suicide\nde façon nettement plus élevée, en comparaison à la popu-\nlation générale. Vis-à-vis d’une symptomatologie dépressive\nou à toute autre présentation clinique s’inscrivant dans le\ncontexte d’un trouble de l’humeur, il est donc important\nd’évaluer le potentiel suicidaire. Les facteurs de risque pour\nle suicide sont :\n• des caractéristiques psychosociales :\n– le sexe masculin ;\n– un âge avancé ;\n– un réseau de soutien insusant ;\n– le chômage ;\n– des pertes multiples reliées à l’infection au VIH.\n• des problèmes de santé personnels :\n– des antécédents de maladie psychiatrique ;\n– des antécédents personnels ou familiaux de tentatives\n",
+      "text_sha256": "f35aa6559021d4cae8486361f10a83baac5055c64aaadf7cddeaa5701ccf69a8"
+    },
+    {
+      "bbox": [
+        60.0,
+        646.7158203125,
+        264.8050842285156,
+        725.45849609375
+      ],
+      "block_id": "page-0663-block-0009",
+      "order": 9,
+      "text": "de suicide ou de suicide complété ;\n– un résultat élevé de névrotisme ;\n– un locus de contrôle externe ;\n– une toxicomanie ;\n– une infection au VIH par injection de substances ;\n– un stade clinique avancé de l’infection par le VIH.\n",
+      "text_sha256": "2884e2297465cd5fb43c691f422e8029e757f92077a89075909d06bbd025f489"
+    }
+  ],
+  "coordinates_sha256": "f9ed25b42432b8482e983c9ad5342412e4aef6b82aaed3b4ee45d795e47c9cba",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0663",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "646\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nPour un patient séropositif qui se présente avec un tableau de\nmanie ou d’hypomanie, les étiologies possibles sont les suivantes\n(Corr, 2012) :\n• un trouble bipolaire comorbide ;\n• une manie médicamenteuse (induite par les traitements\nantidépresseurs, les corticostéroïdes ou due aux eets indé-\nsirables des antirétroviraux tels que la zidovudine, l’efavirenz,\nle ganciclovir, l’acyclovir, l’interféron) ;\n• une manie causée par l’usage de drogues ;\n• une manie secondaire à une infection ou aection opportuniste\ndu CNS (méningite à cryptocoques, encéphalite herpétique,\nneurosyphilis ou un lymphome du CNS) ;\n• une progression de la neurotoxicité reliée directement au VIH\n(AIDS mania).\nCette forme de manie secondaire se distingue de la manie\nspontanée par certaines caractéristiques :\n• un ralentissement psychomoteur ; tableau clinique atypique :\nquand les atteintes cognitives sont importantes (c.-à-d. dans\nla démence associée au VIH), les patients sont très ralentis,\npas d’augmentation d’énergie ni d’agitation, même s’ils ont\nd’autres symptômes de manie (perte de sommeil) ;\n• des troubles neurocognitifs graves ;\n• une humeur irritable et non euphorique ;\n• la gravité de la présentation clinique avec délire paranoïde et\nfréquentes hallucinations auditives et visuelles.\nL’occurrence de manie secondaire, bien que faible (1,2 % pour\nles patients VIH+ et 4,3 % pour les patients au stade avancé du\nsida), demeure supérieure à celle de la population générale. Les\nthymorégulateurs sont à éviter en raison de leurs eets au niveau\ncognitif. Des antipsychotiques atypiques à faible dose peuvent\ntoutefois être utilisés.\nDes symptômes psychotiques de novo (0,2 à 15 %) chez les\npatients séropositifs peuvent être dus aux abus de substances et\nd’alcool ; ils sont aussi induits par les médicaments antirétroviraux\nou secondaires à l’immunosuppression et aux infections opportu-\nnistes du CNS. Chez 65 % des patients, on observe une composante\naective (en général, de la manie). Les antipsychotiques peuvent\nêtre utiles, mais normalement, l’usage à long terme n’est pas requis.\nDes cas de délires centrés sur la conviction d’être atteint du sida\nont été rapportés, conduisant parfois à des tentatives de suicide.\nDevant l’apparition de symptômes psychotiques et maniaques,\nl’imagerie cérébrale et la ponction lombaire s’imposent chez les\npatients sidéens.\nL’infection au VIH constitue un facteur de risque important\nde troubles sexuels (39-59 %) (Gallego & al., 2011). Un certain\nnombre d’hommes séropositifs sourent de problèmes érectiles\net une grande majorité des patients (97 %) connaissent une baisse\nde leur libido. Une atteinte neurologique, un hypoandrogénisme,\ndes eets indésirables des traitements, une dépression, un désin-\nvestissement libidinal consécutif à l’annonce de la séropositivité\net des dicultés du lien avec son partenaire peuvent contribuer\nà ces dysfonctions sexuelles.\nTroubles cognitifs\nDepuis l’utilisation de la trithérapie, l’incidence des complications\nneurologiques classiques connues dans les premières années de\nl’épidémie du VIH a nettement diminué. Le delirium reste l’af-\nfection la plus fréquente (40 à 65 %) observée chez les patients\nstade avancé de la maladie. Parmi les facteurs qui peuvent inuer\nsur la survenue d’une dépression, on trouve :\n• le sexe féminin ;\n• une situation socio-économique défavorable ;\n• l’absence de soutien social ;\n• la violence domestique ;\n• des antécédents familiaux de dépression ;\n• une pathologie psychiatrique préexistante ;\n• une toxicomanie ;\n• l’alcoolisme ;\n• des situations de deuil et de perte ;\n• une charge virale élevée ;\n• une perte de poids ;\n• la présence de symptômes physiques multiples ;\n• la coexistence d’une hépatite C.\nCertains des symptômes somatiques (asthénie, troubles de\nsommeil, anorexie et perte de poids) peuvent être dus :\n• à l’infection et à la progression du VIH ;\n• aux infections opportunistes ;\n• à la neurotoxicité directement reliée au VIH ;\n• aux eets indésirables de certains médicaments (les antirétro-\nviraux tels que l’efavirenz, les corticostéroïdes, l’interféron α\n(IFN-α) pour traiter l’hépatite C comorbide, la chimiothérapie\npour traiter les cancers comorbides) ;\n• aux endocrinopathies (hypothyroïdie, hypogonadisme retrouvé\nchez 13 à 17 % des hommes séropositifs).\nCes aections peuvent mimer des symptômes psychiatriques\nde dépression majeure et doivent être considérées quand une\naltération de l’humeur se produit.\nMalgré la diminution significative des taux de suicide\ndepuis l’avènement des nouvelles trithérapies antirétrovi-\nrales, les patients infectés par le VIH décèdent par suicide\nde façon nettement plus élevée, en comparaison à la popu-\nlation générale. Vis-à-vis d’une symptomatologie dépressive\nou à toute autre présentation clinique s’inscrivant dans le\ncontexte d’un trouble de l’humeur, il est donc important\nd’évaluer le potentiel suicidaire. Les facteurs de risque pour\nle suicide sont :\n• des caractéristiques psychosociales :\n– le sexe masculin ;\n– un âge avancé ;\n– un réseau de soutien insusant ;\n– le chômage ;\n– des pertes multiples reliées à l’infection au VIH.\n• des problèmes de santé personnels :\n– des antécédents de maladie psychiatrique ;\n– des antécédents personnels ou familiaux de tentatives\nde suicide ou de suicide complété ;\n– un résultat élevé de névrotisme ;\n– un locus de contrôle externe ;\n– une toxicomanie ;\n– une infection au VIH par injection de substances ;\n– un stade clinique avancé de l’infection par le VIH.\n",
+  "raw_text_sha256": "e70b1a6cc252fa250ad285f229d28512eeb6b42a7e36e9e508013051f6f29cd6",
+  "source_page_display": 664,
+  "source_page_index": 663
+}

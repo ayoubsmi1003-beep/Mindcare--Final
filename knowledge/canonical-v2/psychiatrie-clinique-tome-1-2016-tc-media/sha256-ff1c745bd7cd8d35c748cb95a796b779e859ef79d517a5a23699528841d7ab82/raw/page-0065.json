@@ -1,0 +1,244 @@
+{
+  "block_sequence_sha256": "8b4634b210f416ca4eb09a26cce2753202c433bd91747a156bab3c8c5daf1125",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        447.807861328125,
+        758.8693237304688
+      ],
+      "block_id": "page-0065-block-0001",
+      "order": 1,
+      "text": "48\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 1\nIntroduction à la psychiatrie\n",
+      "text_sha256": "c7792a943b825e34ca279022d2020fc044ff71aee5bdfe884d32445e46a5c3ee"
+    },
+    {
+      "bbox": [
+        50.0,
+        41.002296447753906,
+        290.72027587890625,
+        53.320068359375
+      ],
+      "block_id": "page-0065-block-0002",
+      "order": 2,
+      "text": "TABLEAU 3.3 Structure et terminologie de l’examen mental\n",
+      "text_sha256": "6c7e2bddb15395b020b5b8168c2b214fbed4c4c28c926dc4ac1976f7dd4d058c"
+    },
+    {
+      "bbox": [
+        51.25,
+        58.52412414550781,
+        124.50450897216797,
+        69.10029602050781
+      ],
+      "block_id": "page-0065-block-0003",
+      "order": 3,
+      "text": "Apparence générale\n",
+      "text_sha256": "92f497fec060a37e195109794809144dfac6c55dbcc54a1d2ce3e22c05ec81a1"
+    },
+    {
+      "bbox": [
+        52.25,
+        74.37285614013672,
+        226.6471405029297,
+        84.39238739013672
+      ],
+      "block_id": "page-0065-block-0004",
+      "order": 4,
+      "text": "Âge apparent\n• Plus jeune, plus vieux\n",
+      "text_sha256": "b070e41608fa8ccb9d549c9a7cb31e396bcd7533a9f870c86d508e0e987f3f81"
+    },
+    {
+      "bbox": [
+        52.25,
+        92.8228530883789,
+        420.98272705078125,
+        113.7281265258789
+      ],
+      "block_id": "page-0065-block-0005",
+      "order": 5,
+      "text": "Morphologie\n• Amaigri, émacié, cachectique, ectomorphe, mésomorphe, endomorphe, androgyne\n• Embonpoint, obésité, obésité morbide\n",
+      "text_sha256": "6ca02ce06ba71a8115a2183cd022a29fa50159b5350d4a687fc67069aa98e13d"
+    },
+    {
+      "bbox": [
+        52.25,
+        122.22285461425781,
+        515.4146728515625,
+        154.1281280517578
+      ],
+      "block_id": "page-0065-block-0006",
+      "order": 6,
+      "text": "Tenue vestimentaire\n• Vêtements sales, maculés de ___, souillés, usés, déchirés, propres, décontractés, ternes, colorés\n• Tenue générale négligée, débraillée, malpropre, propre, soignée, excentrique, amboyante, élégante, recherchée\n• Reet du groupe d’appartenance (p. ex., habits militaires, hippie, punk, hip-hop, hipster, preppy )\n",
+      "text_sha256": "97e47ad301f6208a2783a543b3d1409f49b007a261939af6c567907349c2cde8"
+    },
+    {
+      "bbox": [
+        52.25,
+        162.6728515625,
+        313.7679138183594,
+        172.6923828125
+      ],
+      "block_id": "page-0065-block-0007",
+      "order": 7,
+      "text": "Hygiène corporelle\n• Soignée, parfumée, limite, négligée, malodorante\n",
+      "text_sha256": "3cec333f575f0f4d06b7ff59330a9fb277a95541e050cdfb2ae0de9e4bff36c4"
+    },
+    {
+      "bbox": [
+        52.25,
+        181.07286071777344,
+        376.3567810058594,
+        191.09239196777344
+      ],
+      "block_id": "page-0065-block-0008",
+      "order": 8,
+      "text": "Odeur\n• Fétide, nauséabonde, haleine éthylique, odeur de cannabis, de tabac\n",
+      "text_sha256": "42a09b08675c90fbb794a3fc6437ea2975ab7c6700ed525a9788d7859e7b04cd"
+    },
+    {
+      "bbox": [
+        52.25,
+        199.52285766601562,
+        364.3086853027344,
+        242.42813110351562
+      ],
+      "block_id": "page-0065-block-0009",
+      "order": 9,
+      "text": "Signes distinctifs\n• Tatouages, perçages corporels, cicatrices, acné, pâleur, rougeurs\n• Doigts jaunis par la cigarette\n• Marques d’automutilation, scarication\n• Maquillage (discret, grossier, rutilant, théâtral)\n",
+      "text_sha256": "29bd499b2737c9d5b5c682508a94306825eb91bf5f2656f74913b2c2bba5e11e"
+    },
+    {
+      "bbox": [
+        52.25,
+        250.9228515625,
+        135.31100463867188,
+        270.9423828125
+      ],
+      "block_id": "page-0065-block-0010",
+      "order": 10,
+      "text": "Particularités physiques\névidentes\n",
+      "text_sha256": "514b031cfcd6a42ca907e5a840e3d2575791adc44daf03c50c6c16fe98abf4be"
+    },
+    {
+      "bbox": [
+        146.25,
+        251.001953125,
+        312.41204833984375,
+        293.828125
+      ],
+      "block_id": "page-0065-block-0011",
+      "order": 11,
+      "text": "• Faciès suggestif d’un syndrome chromosomique\n• Signes dysmorphiques\n• Difformités\n• Amputation (doigt, membre)\n",
+      "text_sha256": "fab85b2705a888ff8409bd8799de2c99cc9214455182f550d7c78dede0128017"
+    },
+    {
+      "bbox": [
+        51.25,
+        299.2741394042969,
+        138.14651489257812,
+        309.8503112792969
+      ],
+      "block_id": "page-0065-block-0012",
+      "order": 12,
+      "text": "Collaboration et abilité\n",
+      "text_sha256": "49023124ad3d9dc44b56000b91435d60c4f41c732252581ee82e736ce2a6cb09"
+    },
+    {
+      "bbox": [
+        52.25,
+        315.12286376953125,
+        512.643310546875,
+        357.02813720703125
+      ],
+      "block_id": "page-0065-block-0013",
+      "order": 13,
+      "text": "Collaboration\n• Coopérant : amical, attentif, intéressé, volonté de plaire, conciliant, complaisant\n• Non coopérant : évasif, ou, réservé, mutique, « je ne sais pas » fréquents\n• Collabore de son mieux ou veut collaborer mais… (p. ex., en présence de symptômes envahissants empêchant\nune collaboration optimale malgré les bonnes intentions du patient)\n",
+      "text_sha256": "37ecfad50bcaef1b9952fbe3aa90697346773da43a097c36ffeb0087f535e2b7"
+    },
+    {
+      "bbox": [
+        52.25,
+        365.5728454589844,
+        337.5121154785156,
+        463.4781188964844
+      ],
+      "block_id": "page-0065-block-0014",
+      "order": 14,
+      "text": "Fiabilité\n• Fiable\n• Indices de abilité douteuse :\n– incohérences à l’histoire\n– informations collatérales absentes ou contradictoires\n– opposition (passive, négativisme, oppositionisme)\n– désorganisation (de la pensée, du comportement)\n– hallucinations envahissantes\n– état de conscience altéré\n– trouble cognitif\n",
+      "text_sha256": "083d7c9733963a5b61c915007bd0765dae492193794089c18c4fc79746e7cf2a"
+    },
+    {
+      "bbox": [
+        51.25,
+        468.92413330078125,
+        131.28750610351562,
+        479.50030517578125
+      ],
+      "block_id": "page-0065-block-0015",
+      "order": 15,
+      "text": "Disposition et attitude\n",
+      "text_sha256": "069f30c0e84a520d6de4f74cc8b88ae78c9a5b909ba6aa9dff3c387d5bb5d2f7"
+    },
+    {
+      "bbox": [
+        52.25,
+        484.7728576660156,
+        446.314208984375,
+        494.7923889160156
+      ],
+      "block_id": "page-0065-block-0016",
+      "order": 16,
+      "text": "Contact visuel\n• Bon, soutenu, pauvre, évitant, absent, vide, fuyant, séducteur, menaçant, xe, yeux baissés\n",
+      "text_sha256": "79521928497484cd3cdbe0a2528e7df63e7e86fb57090dd0c9147cd1ae372e26"
+    },
+    {
+      "bbox": [
+        52.25,
+        503.2228698730469,
+        108.89600372314453,
+        533.2423706054688
+      ],
+      "block_id": "page-0065-block-0017",
+      "order": 17,
+      "text": "Caractéristiques\nde la disposition\net de l’attitude\n",
+      "text_sha256": "f772a4ff84463c76da37131dc9166324c84909ca54e423efca9ea002e9d712c7"
+    },
+    {
+      "bbox": [
+        146.25,
+        503.3019714355469,
+        542.7340087890625,
+        589.1281127929688
+      ],
+      "block_id": "page-0065-block-0018",
+      "order": 18,
+      "text": "• Ouverte, franche, relationnelle, amicale, engagée, courtoise, respectueuse, polie, rafnée\n• Perplexe, tendue, distante, timide, interprétative, méante, soupçonneuse, hostile, revendicatrice, craintive, hypervigilante\n• Grossière, familière, désinhibée, séductrice, dramatique, théâtrale, immature, naïve\n• Nonchalante, apathique, somnolente\n• Agressive : pointe du doigt, serre les poings, etc.\n• Hautaine, dédaigneuse, arrogante, impolie, insultante, sarcastique, méprisante, obséquieuse, impertinente, ère,\nimpressionnante\n• Contrôlante, autoritaire, intimidante, inquiétante, provocatrice, menaçante, agressive\n",
+      "text_sha256": "ac95b880f8db45bba63485842d5a7e866f75531fcf9be7047730f078b09ede9e"
+    },
+    {
+      "bbox": [
+        52.25,
+        597.6228637695312,
+        508.71337890625,
+        629.5281372070312
+      ],
+      "block_id": "page-0065-block-0019",
+      "order": 19,
+      "text": "Posture\n• Affaissée, penchée, crispée, nonchalante, prostrée, la tête penchée entre les mains, la tête relevée, afrmative\n• Assise, couchée, agenouillée, instable, debout, alitée, position fœtale, allongée, apathique, détournée\n• Flexibilité cireuse\n",
+      "text_sha256": "689d8c8b62a7b2b78dcc28e6a23a079bf92fc8fe2fb661bd64d7e9e44a3a714c"
+    }
+  ],
+  "coordinates_sha256": "5bbc5d5375699b700cf33fb97d8f75bebc299b735ba975ff913ef1905e6f4a0d",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0065",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "48\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 1\nIntroduction à la psychiatrie\nTABLEAU 3.3 Structure et terminologie de l’examen mental\nApparence générale\nÂge apparent\n• Plus jeune, plus vieux\nMorphologie\n• Amaigri, émacié, cachectique, ectomorphe, mésomorphe, endomorphe, androgyne\n• Embonpoint, obésité, obésité morbide\nTenue vestimentaire\n• Vêtements sales, maculés de ___, souillés, usés, déchirés, propres, décontractés, ternes, colorés\n• Tenue générale négligée, débraillée, malpropre, propre, soignée, excentrique, amboyante, élégante, recherchée\n• Reet du groupe d’appartenance (p. ex., habits militaires, hippie, punk, hip-hop, hipster, preppy )\nHygiène corporelle\n• Soignée, parfumée, limite, négligée, malodorante\nOdeur\n• Fétide, nauséabonde, haleine éthylique, odeur de cannabis, de tabac\nSignes distinctifs\n• Tatouages, perçages corporels, cicatrices, acné, pâleur, rougeurs\n• Doigts jaunis par la cigarette\n• Marques d’automutilation, scarication\n• Maquillage (discret, grossier, rutilant, théâtral)\nParticularités physiques\névidentes\n• Faciès suggestif d’un syndrome chromosomique\n• Signes dysmorphiques\n• Difformités\n• Amputation (doigt, membre)\nCollaboration et abilité\nCollaboration\n• Coopérant : amical, attentif, intéressé, volonté de plaire, conciliant, complaisant\n• Non coopérant : évasif, ou, réservé, mutique, « je ne sais pas » fréquents\n• Collabore de son mieux ou veut collaborer mais… (p. ex., en présence de symptômes envahissants empêchant\nune collaboration optimale malgré les bonnes intentions du patient)\nFiabilité\n• Fiable\n• Indices de abilité douteuse :\n– incohérences à l’histoire\n– informations collatérales absentes ou contradictoires\n– opposition (passive, négativisme, oppositionisme)\n– désorganisation (de la pensée, du comportement)\n– hallucinations envahissantes\n– état de conscience altéré\n– trouble cognitif\nDisposition et attitude\nContact visuel\n• Bon, soutenu, pauvre, évitant, absent, vide, fuyant, séducteur, menaçant, xe, yeux baissés\nCaractéristiques\nde la disposition\net de l’attitude\n• Ouverte, franche, relationnelle, amicale, engagée, courtoise, respectueuse, polie, rafnée\n• Perplexe, tendue, distante, timide, interprétative, méante, soupçonneuse, hostile, revendicatrice, craintive, hypervigilante\n• Grossière, familière, désinhibée, séductrice, dramatique, théâtrale, immature, naïve\n• Nonchalante, apathique, somnolente\n• Agressive : pointe du doigt, serre les poings, etc.\n• Hautaine, dédaigneuse, arrogante, impolie, insultante, sarcastique, méprisante, obséquieuse, impertinente, ère,\nimpressionnante\n• Contrôlante, autoritaire, intimidante, inquiétante, provocatrice, menaçante, agressive\nPosture\n• Affaissée, penchée, crispée, nonchalante, prostrée, la tête penchée entre les mains, la tête relevée, afrmative\n• Assise, couchée, agenouillée, instable, debout, alitée, position fœtale, allongée, apathique, détournée\n• Flexibilité cireuse\n",
+  "raw_text_sha256": "583befbae56a9c76c43571566717acf7f94ac85f118fdc85d8fdb366c0f9e256",
+  "source_page_display": 66,
+  "source_page_index": 65
+}

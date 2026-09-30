@@ -1,0 +1,340 @@
+{
+  "block_sequence_sha256": "a81f1d05cf1a61c8cf2d764b8438c23680b32a767bd33df5f878f63404e779d1",
+  "blocks": [
+    {
+      "bbox": [
+        270.70001220703125,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0638-block-0001",
+      "order": 1,
+      "text": "Chapitre 28\nTroubles mentaux dus à une aection médicale\n621\n",
+      "text_sha256": "eab8f2474f05c93cd4b0aa6b531078f7d188704c46426b96bcf4294db000a62a"
+    },
+    {
+      "bbox": [
+        312.0,
+        570.3658447265625,
+        555.1073608398438,
+        629.0585327148438
+      ],
+      "block_id": "page-0638-block-0002",
+      "order": 2,
+      "text": "psychiatrique (p. ex., trouble psychotique, catatonie ou dépression)\ndû à une autre aection médicale est posé en excluant un trouble\nde l’adaptation à une maladie physique grave et invalidante ou\nun trouble mental induit par une substance telle qu’une drogue\n(p. ex., un hallucinogène) ou un médicament (p. ex., des stéroïdes).\n",
+      "text_sha256": "e9dfcb0620d928aadf702883e0311f278f1e93d15fe703b89b0c8efa36a556a4"
+    },
+    {
+      "bbox": [
+        312.0,
+        630.6158447265625,
+        555.426025390625,
+        725.45849609375
+      ],
+      "block_id": "page-0638-block-0003",
+      "order": 3,
+      "text": "L’évolution du trouble mental dû à une autre aection médicale\npeut se révéler transitoire, récurrente ou cyclique en fonction des\nexacerbations et rémissions de la maladie physique sous-jacente.\nLa résolution des symptômes psychiatriques qui suit de façon\nparallèle la rémission de la maladie physique traitée avec succès\nconfirme d’une certaine façon le diagnostic. Cependant les\nsymptômes psychiatriques peuvent persister au-delà de la gué-\nrison de la maladie physique et nécessitent alors un traitement\n",
+      "text_sha256": "7754f11c4f1224baea0aa54afa577ae0278adcaca680068f5781053822970569"
+    },
+    {
+      "bbox": [
+        56.35000228881836,
+        41.002296447753906,
+        435.6236572265625,
+        53.320068359375
+      ],
+      "block_id": "page-0638-block-0004",
+      "order": 4,
+      "text": "TABLEAU 28.1 Types de comorbidité entre un trouble psychiatrique et une affection médicale\n",
+      "text_sha256": "2c18b0f2229aaa55abd2b75e06d50afa12aaf0e10fee53fc28b6cf2b5371ddac"
+    },
+    {
+      "bbox": [
+        115.75,
+        61.27412414550781,
+        489.7690124511719,
+        71.85029602050781
+      ],
+      "block_id": "page-0638-block-0005",
+      "order": 5,
+      "text": "Comorbidité\nRelations\nExemples\n",
+      "text_sha256": "308665a46039d67f5cf2e66d66a74fc83e4cdbc5ca01235ac2e166eecb7d3e87"
+    },
+    {
+      "bbox": [
+        58.25,
+        79.45195770263672,
+        366.9638977050781,
+        99.27812957763672
+      ],
+      "block_id": "page-0638-block-0006",
+      "order": 6,
+      "text": "Trouble psychiatrique prémorbide\n• Existe de façon indépendante et précède\nhabituellement la maladie physique\n",
+      "text_sha256": "62481651220cfefcb5affabcdafeb103c615616cfc5cd08e019f6d9756fb67d9"
+    },
+    {
+      "bbox": [
+        392.6000061035156,
+        79.45195770263672,
+        537.9843139648438,
+        120.27812957763672
+      ],
+      "block_id": "page-0638-block-0007",
+      "order": 7,
+      "text": "• Trouble de la personnalité chez un patient\nhospitalisé pour une tuberculose\n• Phobie sociale chez un patient opéré pour\nune fracture\n",
+      "text_sha256": "8d2a59accbd3bef40e54215dbba7c9b8779baff2c2ec85b476ae60d91532a393"
+    },
+    {
+      "bbox": [
+        58.25,
+        127.90196228027344,
+        382.5410461425781,
+        189.72813415527344
+      ],
+      "block_id": "page-0638-block-0008",
+      "order": 8,
+      "text": "Trouble psychiatrique associé\n• Événement entraînant la maladie physique\net psychiatrique\n• Habitudes de vie et comportements déviants\naugmentant le risque d’une maladie physique\n• Facteurs de risque bidirectionnels et méca-\nnismes physiopathologiques communs\n",
+      "text_sha256": "e22fb00b0a6b8efd6fb45545bf00f949d783620af263e7311b06c8f5d916b945"
+    },
+    {
+      "bbox": [
+        392.6000061035156,
+        127.90196228027344,
+        548.7396240234375,
+        220.72813415527344
+      ],
+      "block_id": "page-0638-block-0009",
+      "order": 9,
+      "text": "• Trouble de stress post-traumatique et trauma\ncrânien après un accident grave de la route\n• Endocardite chez un patient utilisant des\ndrogues injectables\n• Maladie coronarienne apparue chez un\npatient porteur d’une schizophrénie, fumeur\net sédentaire\n• Dépression majeure chez un patient présen-\ntant un infarctus du myocarde\n",
+      "text_sha256": "b50decba037943c3165a18687a45b0bd8e1c295b6cef49366f141a1077b2659e"
+    },
+    {
+      "bbox": [
+        58.25,
+        228.3019561767578,
+        209.7375946044922,
+        248.1281280517578
+      ],
+      "block_id": "page-0638-block-0010",
+      "order": 10,
+      "text": "Trouble psychiatrique secondaire à une maladie\nphysique\n",
+      "text_sha256": "0cf13dc181ecf6c6a3d4e92ee79ad0f8d1fbe42e1ac65ad6a520d6d9d7ca5d32"
+    },
+    {
+      "bbox": [
+        225.40000915527344,
+        228.3019561767578,
+        379.492919921875,
+        259.1281433105469
+      ],
+      "block_id": "page-0638-block-0011",
+      "order": 11,
+      "text": "• Prodrome d’une affection médicale\n• Conséquence physiologique directe d’une\naffection médicale (cérébrale ou systémique)\n",
+      "text_sha256": "fbc933b3369672efe3f64259ac2bd3f25199b498523cb31c88234d76efd0abce"
+    },
+    {
+      "bbox": [
+        392.6000061035156,
+        228.3019561767578,
+        544.3789672851562,
+        270.1281433105469
+      ],
+      "block_id": "page-0638-block-0012",
+      "order": 12,
+      "text": "• Dépression survenant avant qu’on découvre\nun cancer du pancréas\n• Dépression après un AVC\n• Anxiété secondaire à une hyperthyroïdie\n",
+      "text_sha256": "f1b379748db8f818a79f858b20914d2bb4bc66f4c14403f8625014fabb7367aa"
+    },
+    {
+      "bbox": [
+        58.25,
+        277.751953125,
+        213.91140747070312,
+        297.578125
+      ],
+      "block_id": "page-0638-block-0013",
+      "order": 13,
+      "text": "Trouble psychiatrique secondaire aux traitements\nmédicaux\n",
+      "text_sha256": "936a255515c637d96686d766ef4a4d595e88a0f0c54220fc1d3e94ae717e2359"
+    },
+    {
+      "bbox": [
+        225.40000915527344,
+        277.751953125,
+        372.49700927734375,
+        297.578125
+      ],
+      "block_id": "page-0638-block-0014",
+      "order": 14,
+      "text": "• Associé à des mécanismes physiopatholo-\ngiques et une vulnérabilité individuelle\n",
+      "text_sha256": "655dee45690d3d00da924e93770392a9d34583c36a2e0739996af25752d40a05"
+    },
+    {
+      "bbox": [
+        392.6000061035156,
+        277.751953125,
+        519.6289672851562,
+        309.578125
+      ],
+      "block_id": "page-0638-block-0015",
+      "order": 15,
+      "text": "• Delirium secondaire aux opiacés\n• Dépression secondaire à l’interféron\n• Anxiété secondaire aux stéroïdes\n",
+      "text_sha256": "5ac31f83c49d8169fb450bffd1c020dfb01fc72a840111525488aa1fd5bf199b"
+    },
+    {
+      "bbox": [
+        58.25,
+        317.1519470214844,
+        200.37106323242188,
+        336.9781188964844
+      ],
+      "block_id": "page-0638-block-0016",
+      "order": 16,
+      "text": "Trouble physique secondaire aux traitements\npsychiatriques\n",
+      "text_sha256": "2f1c3ff7dae5f5234c9c124c419c60d978586805b0652f527c0b44bc0ea4b8df"
+    },
+    {
+      "bbox": [
+        225.40000915527344,
+        317.1519470214844,
+        372.49700927734375,
+        336.9781188964844
+      ],
+      "block_id": "page-0638-block-0017",
+      "order": 17,
+      "text": "• Associé à des mécanismes physiopatholo-\ngiques et une vulnérabilité individuelle\n",
+      "text_sha256": "655dee45690d3d00da924e93770392a9d34583c36a2e0739996af25752d40a05"
+    },
+    {
+      "bbox": [
+        392.6000061035156,
+        317.1519470214844,
+        544.5746459960938,
+        368.9781188964844
+      ],
+      "block_id": "page-0638-block-0018",
+      "order": 18,
+      "text": "• Syndrome métabolique associé aux\nantipsychotiques\n• Toxicité rénale associée au lithium\n• Syndrome malin des neuroleptiques associé\naux antipsychotiques\n",
+      "text_sha256": "fcdc9c8e01bc944b6ceee3fadd6c3e8f0ebb4c43b30403a4ff55a19e9bd706da"
+    },
+    {
+      "bbox": [
+        58.25,
+        376.6019592285156,
+        178.419189453125,
+        396.4281311035156
+      ],
+      "block_id": "page-0638-block-0019",
+      "order": 19,
+      "text": "Trouble physique associé à un facteur\npsychologique\n",
+      "text_sha256": "f1d0fda9837ef6b815a20178a294e91064c0bb66e04d6bbd57460ff514c80e4f"
+    },
+    {
+      "bbox": [
+        225.40000915527344,
+        376.6019592285156,
+        533.2559814453125,
+        406.4281311035156
+      ],
+      "block_id": "page-0638-block-0020",
+      "order": 20,
+      "text": "• Vulnérabilité individuelle\n• Trouble à symptomatologie somatique et\ntroubles apparentés (autrefois troubles\nsomatoformes)\n",
+      "text_sha256": "98944b25132f67f012b9b64339ac2bf03adf127f9b902375d4c343220fb81241"
+    },
+    {
+      "bbox": [
+        58.25,
+        414.001953125,
+        371.1672058105469,
+        443.828125
+      ],
+      "block_id": "page-0638-block-0021",
+      "order": 21,
+      "text": "Réaction psychologique à la maladie\n• Dépend des expériences antérieures, de\nla perception de la maladie, des capacités\nd’adaptation et du soutien\n",
+      "text_sha256": "2429a98ae9136cc3471c17928c9fb5e6e0259c87033f18405d7f1bf06ae37c5b"
+    },
+    {
+      "bbox": [
+        392.6000061035156,
+        414.001953125,
+        525.6949462890625,
+        486.828125
+      ],
+      "block_id": "page-0638-block-0022",
+      "order": 22,
+      "text": "• Peur de la mort associée à un cancer\n• Dépression associée à l’annonce d’un\ndiagnostic de VIH\n• Révolte/déni associé à un diabète\ninsulinodépendant\n• Anxiété associée à une hospitalisation\ntrès éloignée de son domicile\n",
+      "text_sha256": "d66bcbcf49bc3a3405e567e7458761cedbf484ee57adf086e9b177c5a3bd75ca"
+    },
+    {
+      "bbox": [
+        58.25,
+        494.45196533203125,
+        372.9933776855469,
+        524.2781372070312
+      ],
+      "block_id": "page-0638-block-0023",
+      "order": 23,
+      "text": "Réaction psychologique aux traitements\n• Dépend des expériences antérieures, de la\nperception des traitements, des capacités\nd’adaptation et du soutien\n",
+      "text_sha256": "f4846ac85963e862efbf21eacac28e13a029e9092b0e66547fceb6cefcacdf92"
+    },
+    {
+      "bbox": [
+        392.6000061035156,
+        494.45196533203125,
+        549.148193359375,
+        545.2781372070312
+      ],
+      "block_id": "page-0638-block-0024",
+      "order": 24,
+      "text": "• Dépression associée à une hystérectomie\nchez une jeune femme\n• Appréhension de la douleur associée aux\nchangements de pansements pour un patient\ngravement brûlé\n",
+      "text_sha256": "e008332b40427d0fd1aba7cec665e1634c2fefd6e101241ec99e641f148c9083"
+    },
+    {
+      "bbox": [
+        54.0,
+        568.7868041992188,
+        205.0677032470703,
+        584.9293823242188
+      ],
+      "block_id": "page-0638-block-0025",
+      "order": 25,
+      "text": "28.2.2 Description clinique\n",
+      "text_sha256": "129eed7788d2f97f74e8e3f2ef4047975ca90d0d492372f733fb101ab67bee72"
+    },
+    {
+      "bbox": [
+        54.0,
+        588.2658081054688,
+        297.07427978515625,
+        690.7584838867188
+      ],
+      "block_id": "page-0638-block-0026",
+      "order": 26,
+      "text": "Un trouble mental (secondaire) dû à une autre affection\nmédicale se caractérise par l’apparition de symptômes psy-\nchiatriques dans le contexte d’une maladie physique avérée.\nDes affections médicales peuvent ainsi mimer différents\ntroubles psychiatriques. Parmi les critères diagnostiques\nétablis par le DSM-5, il y a ceux relevant de divers troubles\npsychiatriques décrits en détail aux chapitres 15 à 41, et cinq\ncritères sont communs à tous les troubles mentaux dus à une\nautre affection médicale. Ils sont décrits dans l’encadré 28.2.\n",
+      "text_sha256": "43c0737f7d467b3c87e19d4ca3c1d127172a468b92b9127ff87801cd51fe7576"
+    },
+    {
+      "bbox": [
+        54.0,
+        691.7658081054688,
+        297.2989196777344,
+        725.2584838867188
+      ],
+      "block_id": "page-0638-block-0027",
+      "order": 27,
+      "text": "En présence d’un tableau symptomatique prédominant spéci-\nque attribué aux eets physiologiques d’une maladie physique,\non pose le diagnostic qui lui est associé. Le diagnostic de trouble\n",
+      "text_sha256": "51b5ff301976da0cafd6e72073cbb36a460aba946914d77727fe751eee828c3c"
+    }
+  ],
+  "coordinates_sha256": "1b09533eba1f4094ec4fe78b85c4a3da122e6d1456d6485de7abe92c212688c7",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0638",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 28\nTroubles mentaux dus à une aection médicale\n621\npsychiatrique (p. ex., trouble psychotique, catatonie ou dépression)\ndû à une autre aection médicale est posé en excluant un trouble\nde l’adaptation à une maladie physique grave et invalidante ou\nun trouble mental induit par une substance telle qu’une drogue\n(p. ex., un hallucinogène) ou un médicament (p. ex., des stéroïdes).\nL’évolution du trouble mental dû à une autre aection médicale\npeut se révéler transitoire, récurrente ou cyclique en fonction des\nexacerbations et rémissions de la maladie physique sous-jacente.\nLa résolution des symptômes psychiatriques qui suit de façon\nparallèle la rémission de la maladie physique traitée avec succès\nconfirme d’une certaine façon le diagnostic. Cependant les\nsymptômes psychiatriques peuvent persister au-delà de la gué-\nrison de la maladie physique et nécessitent alors un traitement\nTABLEAU 28.1 Types de comorbidité entre un trouble psychiatrique et une affection médicale\nComorbidité\nRelations\nExemples\nTrouble psychiatrique prémorbide\n• Existe de façon indépendante et précède\nhabituellement la maladie physique\n• Trouble de la personnalité chez un patient\nhospitalisé pour une tuberculose\n• Phobie sociale chez un patient opéré pour\nune fracture\nTrouble psychiatrique associé\n• Événement entraînant la maladie physique\net psychiatrique\n• Habitudes de vie et comportements déviants\naugmentant le risque d’une maladie physique\n• Facteurs de risque bidirectionnels et méca-\nnismes physiopathologiques communs\n• Trouble de stress post-traumatique et trauma\ncrânien après un accident grave de la route\n• Endocardite chez un patient utilisant des\ndrogues injectables\n• Maladie coronarienne apparue chez un\npatient porteur d’une schizophrénie, fumeur\net sédentaire\n• Dépression majeure chez un patient présen-\ntant un infarctus du myocarde\nTrouble psychiatrique secondaire à une maladie\nphysique\n• Prodrome d’une affection médicale\n• Conséquence physiologique directe d’une\naffection médicale (cérébrale ou systémique)\n• Dépression survenant avant qu’on découvre\nun cancer du pancréas\n• Dépression après un AVC\n• Anxiété secondaire à une hyperthyroïdie\nTrouble psychiatrique secondaire aux traitements\nmédicaux\n• Associé à des mécanismes physiopatholo-\ngiques et une vulnérabilité individuelle\n• Delirium secondaire aux opiacés\n• Dépression secondaire à l’interféron\n• Anxiété secondaire aux stéroïdes\nTrouble physique secondaire aux traitements\npsychiatriques\n• Associé à des mécanismes physiopatholo-\ngiques et une vulnérabilité individuelle\n• Syndrome métabolique associé aux\nantipsychotiques\n• Toxicité rénale associée au lithium\n• Syndrome malin des neuroleptiques associé\naux antipsychotiques\nTrouble physique associé à un facteur\npsychologique\n• Vulnérabilité individuelle\n• Trouble à symptomatologie somatique et\ntroubles apparentés (autrefois troubles\nsomatoformes)\nRéaction psychologique à la maladie\n• Dépend des expériences antérieures, de\nla perception de la maladie, des capacités\nd’adaptation et du soutien\n• Peur de la mort associée à un cancer\n• Dépression associée à l’annonce d’un\ndiagnostic de VIH\n• Révolte/déni associé à un diabète\ninsulinodépendant\n• Anxiété associée à une hospitalisation\ntrès éloignée de son domicile\nRéaction psychologique aux traitements\n• Dépend des expériences antérieures, de la\nperception des traitements, des capacités\nd’adaptation et du soutien\n• Dépression associée à une hystérectomie\nchez une jeune femme\n• Appréhension de la douleur associée aux\nchangements de pansements pour un patient\ngravement brûlé\n28.2.2 Description clinique\nUn trouble mental (secondaire) dû à une autre affection\nmédicale se caractérise par l’apparition de symptômes psy-\nchiatriques dans le contexte d’une maladie physique avérée.\nDes affections médicales peuvent ainsi mimer différents\ntroubles psychiatriques. Parmi les critères diagnostiques\nétablis par le DSM-5, il y a ceux relevant de divers troubles\npsychiatriques décrits en détail aux chapitres 15 à 41, et cinq\ncritères sont communs à tous les troubles mentaux dus à une\nautre affection médicale. Ils sont décrits dans l’encadré 28.2.\nEn présence d’un tableau symptomatique prédominant spéci-\nque attribué aux eets physiologiques d’une maladie physique,\non pose le diagnostic qui lui est associé. Le diagnostic de trouble\n",
+  "raw_text_sha256": "ceca71dfa2a06b504a5e137ed8761c13b5486bd5d85c547a5d0b39a106825b7b",
+  "source_page_display": 639,
+  "source_page_index": 638
+}

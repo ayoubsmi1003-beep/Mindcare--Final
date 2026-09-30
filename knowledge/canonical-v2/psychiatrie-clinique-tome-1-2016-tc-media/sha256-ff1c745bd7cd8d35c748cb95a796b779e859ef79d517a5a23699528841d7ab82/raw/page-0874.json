@@ -1,0 +1,304 @@
+{
+  "block_sequence_sha256": "9cd16bca56d64e94e4a9fa92c5256dcc299e1947217c1618d82c540d16816265",
+  "blocks": [
+    {
+      "bbox": [
+        370.6000061035156,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0874-block-0001",
+      "order": 1,
+      "text": "Chapitre 37\nTroubles liés à l’alcool\n857\n",
+      "text_sha256": "a0cf132c856448e0cb8125d4c5b6e0bfee5b3e4493f9e5b2e42e6d58cf095a59"
+    },
+    {
+      "bbox": [
+        56.54999923706055,
+        41.45229721069336,
+        340.0626525878906,
+        53.77006912231445
+      ],
+      "block_id": "page-0874-block-0002",
+      "order": 2,
+      "text": "TABLEAU 37.1 Critères diagnostiques du trouble de l’usage de l’alcool\n",
+      "text_sha256": "587b52af72c67f9561cf0767a7eeaaf31e9980183c350a5432f6aa81853837c4"
+    },
+    {
+      "bbox": [
+        68.95000457763672,
+        58.72412109375,
+        522.2630004882812,
+        114.9281234741211
+      ],
+      "block_id": "page-0874-block-0003",
+      "order": 3,
+      "text": "DSM-5\nDSM-IV-TR\nDSM-IV-TR\nTrouble de l’usage de l’alcool\nAbus d’une substance\nDépendance à une substance\n10. Tolérance, dénie par l’un des symp-\ntômes suivants :\na. Besoin de quantités notablement\n",
+      "text_sha256": "ed73edcf24cb2cfd5e749191f38963c3de2bfb1591c40038bfd4c14385d5020c"
+    },
+    {
+      "bbox": [
+        83.25,
+        115.1019515991211,
+        210.3097381591797,
+        145.92813110351562
+      ],
+      "block_id": "page-0874-block-0004",
+      "order": 4,
+      "text": "plus fortes d’alcool pour obtenir une\nintoxication ou l’effet désiré.\nb. Effet notablement diminué en cas de\n",
+      "text_sha256": "c3b3ab2ed5f8fb999737eddb2db38880eec8c8bf6acfa02cbad9e872b9894454"
+    },
+    {
+      "bbox": [
+        95.25,
+        146.10195922851562,
+        211.4178009033203,
+        165.92813110351562
+      ],
+      "block_id": "page-0874-block-0005",
+      "order": 5,
+      "text": "l’usage continu de la même quantité\nd’alcool.\n",
+      "text_sha256": "baf5097338317edc501af8b64d083fe27231269a5e288fec73d5537e1e08219f"
+    },
+    {
+      "bbox": [
+        391.25,
+        84.1019515991211,
+        450.8659973144531,
+        93.9281234741211
+      ],
+      "block_id": "page-0874-block-0006",
+      "order": 6,
+      "text": "1) Idem à DSM-5.\n",
+      "text_sha256": "aa91f7f578547e84499a08a234ee6749691528cc6836a4d6d0c38a8afd1946f6"
+    },
+    {
+      "bbox": [
+        68.95000457763672,
+        168.501953125,
+        211.64012145996094,
+        199.328125
+      ],
+      "block_id": "page-0874-block-0007",
+      "order": 7,
+      "text": "11. Sevrage caractérisé par l’une ou l’autre\ndes manifestations suivantes :\na. Syndrome de sevrage caractéristique\n",
+      "text_sha256": "7ec403629b97c95427287de44d3007db5f6b8768daed7987ab46d621456e2d9d"
+    },
+    {
+      "bbox": [
+        83.25,
+        199.501953125,
+        211.39352416992188,
+        230.328125
+      ],
+      "block_id": "page-0874-block-0008",
+      "order": 8,
+      "text": "de l’alcool (voir les critères A et B du\ntableau 37.4).\nb. L’alcool (ou une substance très\n",
+      "text_sha256": "bc31cdaf3c263b0a7d5da8e326f6f4b1008bf37fc239594242264c246601fe9f"
+    },
+    {
+      "bbox": [
+        95.25,
+        230.501953125,
+        211.59811401367188,
+        260.328125
+      ],
+      "block_id": "page-0874-block-0009",
+      "order": 9,
+      "text": "proche, telle qu’une benzodiazépine)\nest pris pour soulager ou éviter les\nsymptômes de sevrage.\n",
+      "text_sha256": "c542fb7e1ced3e8d1012e0352257def8be1da41027f58babce109da44b6f5d0d"
+    },
+    {
+      "bbox": [
+        391.25,
+        168.501953125,
+        450.8659973144531,
+        178.328125
+      ],
+      "block_id": "page-0874-block-0010",
+      "order": 10,
+      "text": "2) Idem à DSM-5.\n",
+      "text_sha256": "d9840b3fe229d8d7a93eb7423adef63e2307fcbe0d52851fa2b6c13c8e883795"
+    },
+    {
+      "bbox": [
+        58.25,
+        262.95196533203125,
+        525.7820434570312,
+        481.1781311035156
+      ],
+      "block_id": "page-0874-block-0011",
+      "order": 11,
+      "text": "Spécier si :\nAvec dépendance physique :\nPrésence d’une tolérance ou d’un sevrage\n(c.-à-d. des items 1 ou 2).\nSans dépendance physique :\nAbsence de tolérance ou de sevrage\n(c.-à-d. tant de l’item 1 que de l’item 2).\nSpécier si :\nEn rémission précoce : Après que tous les\ncritères du trouble de l’usage de l’alcool aient\nété préalablement remplis, plus aucun ne l’a été\npendant au moins 3 mois mais pendant moins\nde 12 mois (à l’exception du critère A4, « Envie\nimpérieuse [craving], fort désir ou besoin pression\nde consommer de l’alcool », qui peut être rempli).\nEn rémission prolongée : Après que tous les\ncritères du trouble de l’usage de l’alcool aient été\npréalablement remplis, plus aucun ne l’a été pendant\nau moins 12 mois (à l’exception du critère A4, « Envie\nimpérieuse [craving], fort désir ou besoin pression\nde consommer de l’alcool », qui peut être rempli).\n",
+      "text_sha256": "e414fb1d1848efcae7bd01d355d351232bc7433112c8c52cbd958785ef34a46a"
+    },
+    {
+      "bbox": [
+        391.25,
+        339.3519592285156,
+        506.8639831542969,
+        404.2923889160156
+      ],
+      "block_id": "page-0874-block-0012",
+      "order": 12,
+      "text": "Spécications de l’évolution :\n0 Rémission précoce complète\n0 Rémission précoce partielle\n0 Rémission prolongée complète\n0 Rémission prolongée partielle\n2 Traitement par agoniste\n",
+      "text_sha256": "ed099984f75e475e1c010d55d390bc90bebe54ec82c5d42b78ff5aef13d329e8"
+    },
+    {
+      "bbox": [
+        58.25,
+        483.8019714355469,
+        215.07546997070312,
+        524.6281127929688
+      ],
+      "block_id": "page-0874-block-0013",
+      "order": 13,
+      "text": "Spécier si :\nEn environnement protégé : Cette spécication\nsupplémentaire est utilisée si le sujet est dans un\nenvironnement où l’accès à l’alcool est limité.\n",
+      "text_sha256": "730234f43d875807b5d436f09814d4ce7c7ab04003270d2d8b25bee4d8cc41e5"
+    },
+    {
+      "bbox": [
+        391.25,
+        483.8019714355469,
+        491.5369873046875,
+        504.7424011230469
+      ],
+      "block_id": "page-0874-block-0014",
+      "order": 14,
+      "text": "Spécications de l’évolution :\n1 En environnement protégé\n",
+      "text_sha256": "eea497c61176611a758986af5d979e0c2fa600a340173b6ee7d31da1e575bb53"
+    },
+    {
+      "bbox": [
+        58.25,
+        527.2019653320312,
+        216.8029327392578,
+        591.0281372070312
+      ],
+      "block_id": "page-0874-block-0015",
+      "order": 15,
+      "text": "[…]\nSpécier la sévérité actuelle\n305.00 (F10.10) Léger : Présence de 2-3 symptômes\n303.90 (F10.20) Moyen :Présence de 4-5 symptômes\n303.90 (F10.20) Grave : Présence de 6 symptômes\nou plus.\n",
+      "text_sha256": "ae59fdff99bd761871cfc2cecdb8810f4068d92b788cc75b5fe23bfdcf793148"
+    },
+    {
+      "bbox": [
+        224.75,
+        527.2019653320312,
+        367.2110595703125,
+        537.0281372070312
+      ],
+      "block_id": "page-0874-block-0016",
+      "order": 16,
+      "text": "B) Les symptômes n'ont jamais atteint, pour\n",
+      "text_sha256": "7dbdd1f350e59aca6e774bd0643c3390844edc130a60f366dc55372b072bcbd9"
+    },
+    {
+      "bbox": [
+        235.75,
+        537.2019653320312,
+        366.9825744628906,
+        557.0281372070312
+      ],
+      "block_id": "page-0874-block-0017",
+      "order": 17,
+      "text": "cette classe de substance, les critères de\nla Dépendance à une susbstance.\n",
+      "text_sha256": "a17b71340785c135ac5306258dd7d9848f38f97920dc5be7db3221938b91da13"
+    },
+    {
+      "bbox": [
+        391.25,
+        527.2019653320312,
+        482.86102294921875,
+        548.1423950195312
+      ],
+      "block_id": "page-0874-block-0018",
+      "order": 18,
+      "text": "Spécications de l’évolution :\nLégère/moyenne/grave\n",
+      "text_sha256": "b41c31d09cbd4a0b114a6f666d9df82eecf87bee352a82c5bd10d3d02414ca54"
+    },
+    {
+      "bbox": [
+        54.25,
+        594.8406372070312,
+        241.71080017089844,
+        603.7088623046875
+      ],
+      "block_id": "page-0874-block-0019",
+      "order": 19,
+      "text": "Sources : APA (2015), p. 583-584 ; APA (2004), p. 230, 228-229.\n",
+      "text_sha256": "05236d6652980578fea232313f57091bdc7583a5c63c027f9de0f4095082feb3"
+    },
+    {
+      "bbox": [
+        54.25,
+        607.8406372070312,
+        535.4806518554688,
+        634.5750122070312
+      ],
+      "block_id": "page-0874-block-0020",
+      "order": 20,
+      "text": "Traduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\n",
+      "text_sha256": "d1e2a281d01f1237f716bfb933581f8135592b601f1b1579862a0656634f5460"
+    },
+    {
+      "bbox": [
+        54.25,
+        638.8406372070312,
+        545.194091796875,
+        665.5750122070312
+      ],
+      "block_id": "page-0874-block-0021",
+      "order": 21,
+      "text": "Traduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004.\nAll rights reserved.\n",
+      "text_sha256": "243709fe0bbde845639c05a08cd4ae4601450ec5670085ab5e9038dcd165d7c3"
+    },
+    {
+      "bbox": [
+        54.0,
+        680.4658203125,
+        297.22442626953125,
+        725.45849609375
+      ],
+      "block_id": "page-0874-block-0022",
+      "order": 22,
+      "text": "conséquences de la consommation sur la vie de la personne\nsont plus ou moins importantes. Celles-ci se manifestent par\nl’exposition à des situations où cela peut être physiquement\ndangereux (la conduite automobile), par la dégradation des\n",
+      "text_sha256": "b4bf29b454c352ba029c65157264fc9590ef0a1549fce708e07fa4efaa6d12cd"
+    },
+    {
+      "bbox": [
+        312.0,
+        680.4658203125,
+        555.150634765625,
+        725.45849609375
+      ],
+      "block_id": "page-0874-block-0023",
+      "order": 23,
+      "text": "relations familiales, la perte du travail, l’itinérance, l’isolement\net l’indigence. En plus de la détresse psychologique, plusieurs\ntroubles de santé mentale peuvent être induits par le trouble\nde l’usage de l’alcool, surtout si celui-ci est grave.\n",
+      "text_sha256": "f6ec81c24720d5b2b43b4ea469da6939485016f9156e74f2e3aebfc93b5a7628"
+    },
+    {
+      "bbox": [
+        342.1499938964844,
+        41.40229415893555,
+        367.78424072265625,
+        53.37006759643555
+      ],
+      "block_id": "page-0874-block-0024",
+      "order": 24,
+      "text": "(suite)\n",
+      "text_sha256": "c684d6dbcdfd50f0ada227f799b5c0fb30e817ac3da61b4cbf208decde7f907b"
+    }
+  ],
+  "coordinates_sha256": "3d2e06b10fd1d4db0913d51da6f745a34b4f54921ae4ef4765ae1ca71118762b",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0874",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 37\nTroubles liés à l’alcool\n857\nTABLEAU 37.1 Critères diagnostiques du trouble de l’usage de l’alcool\nDSM-5\nDSM-IV-TR\nDSM-IV-TR\nTrouble de l’usage de l’alcool\nAbus d’une substance\nDépendance à une substance\n10. Tolérance, dénie par l’un des symp-\ntômes suivants :\na. Besoin de quantités notablement\nplus fortes d’alcool pour obtenir une\nintoxication ou l’effet désiré.\nb. Effet notablement diminué en cas de\nl’usage continu de la même quantité\nd’alcool.\n1) Idem à DSM-5.\n11. Sevrage caractérisé par l’une ou l’autre\ndes manifestations suivantes :\na. Syndrome de sevrage caractéristique\nde l’alcool (voir les critères A et B du\ntableau 37.4).\nb. L’alcool (ou une substance très\nproche, telle qu’une benzodiazépine)\nest pris pour soulager ou éviter les\nsymptômes de sevrage.\n2) Idem à DSM-5.\nSpécier si :\nAvec dépendance physique :\nPrésence d’une tolérance ou d’un sevrage\n(c.-à-d. des items 1 ou 2).\nSans dépendance physique :\nAbsence de tolérance ou de sevrage\n(c.-à-d. tant de l’item 1 que de l’item 2).\nSpécier si :\nEn rémission précoce : Après que tous les\ncritères du trouble de l’usage de l’alcool aient\nété préalablement remplis, plus aucun ne l’a été\npendant au moins 3 mois mais pendant moins\nde 12 mois (à l’exception du critère A4, « Envie\nimpérieuse [craving], fort désir ou besoin pression\nde consommer de l’alcool », qui peut être rempli).\nEn rémission prolongée : Après que tous les\ncritères du trouble de l’usage de l’alcool aient été\npréalablement remplis, plus aucun ne l’a été pendant\nau moins 12 mois (à l’exception du critère A4, « Envie\nimpérieuse [craving], fort désir ou besoin pression\nde consommer de l’alcool », qui peut être rempli).\nSpécications de l’évolution :\n0 Rémission précoce complète\n0 Rémission précoce partielle\n0 Rémission prolongée complète\n0 Rémission prolongée partielle\n2 Traitement par agoniste\nSpécier si :\nEn environnement protégé : Cette spécication\nsupplémentaire est utilisée si le sujet est dans un\nenvironnement où l’accès à l’alcool est limité.\nSpécications de l’évolution :\n1 En environnement protégé\n[…]\nSpécier la sévérité actuelle\n305.00 (F10.10) Léger : Présence de 2-3 symptômes\n303.90 (F10.20) Moyen :Présence de 4-5 symptômes\n303.90 (F10.20) Grave : Présence de 6 symptômes\nou plus.\nB) Les symptômes n'ont jamais atteint, pour\ncette classe de substance, les critères de\nla Dépendance à une susbstance.\nSpécications de l’évolution :\nLégère/moyenne/grave\nSources : APA (2015), p. 583-584 ; APA (2004), p. 230, 228-229.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004.\nAll rights reserved.\nconséquences de la consommation sur la vie de la personne\nsont plus ou moins importantes. Celles-ci se manifestent par\nl’exposition à des situations où cela peut être physiquement\ndangereux (la conduite automobile), par la dégradation des\nrelations familiales, la perte du travail, l’itinérance, l’isolement\net l’indigence. En plus de la détresse psychologique, plusieurs\ntroubles de santé mentale peuvent être induits par le trouble\nde l’usage de l’alcool, surtout si celui-ci est grave.\n(suite)\n",
+  "raw_text_sha256": "c44226ff5c59b458c4ba160a118d0791aa60e13218e2ff3cf4987692fa11e98c",
+  "source_page_display": 875,
+  "source_page_index": 874
+}

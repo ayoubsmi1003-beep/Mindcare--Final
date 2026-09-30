@@ -1,0 +1,196 @@
+{
+  "block_sequence_sha256": "478f660233ccb3482996d570ac99c5eebd4afe8ecb641a0b438ab331b3b9d2e5",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        425.7200012207031,
+        758.8693237304688
+      ],
+      "block_id": "page-1015-block-0001",
+      "order": 1,
+      "text": "998\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 4\nOrganisation des soins\n",
+      "text_sha256": "26abdf37cec5a55c9156a38b7436663f5498918c5c29688fe0323221d07ac78d"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.5289916992188,
+        109.40850067138672
+      ],
+      "block_id": "page-1015-block-0002",
+      "order": 2,
+      "text": "préoccupations intimes du patient. C’est ce dernier qui nous\nguide dans le choix des sujets abordables. On peut appliquer la\nmême méthode pour les liens entre intervenants de diverses ins-\ntitutions. Si le patient ne donne pas l’autorisation de transmettre\ndes informations cliniques aux partenaires, on peut organiser\nune rencontre en sa présence.\n",
+      "text_sha256": "e3aa8cf7b07c7ef467bf6b91b62503b8486cb9e363143405c4a00bba31741e95"
+    },
+    {
+      "bbox": [
+        306.0,
+        120.38301086425781,
+        549.2296752929688,
+        192.45849609375
+      ],
+      "block_id": "page-1015-block-0003",
+      "order": 3,
+      "text": "Réseaux de soins\nIl existe trois niveaux dans la hiérachisation des soins qui vise une\nrépartition homogène des organismes participants. L’intégration\ndes usagers dans les processus décisionnels s’étend de la parti-\ncipation à des conseils d’administration à l’intégration d’usagers\ndevenus pairs aidants dans les équipes soignantes.\n",
+      "text_sha256": "74b2fabcacc50a61f0b290ae1d254481aec8f191e162af1107e0f2dde6e62653"
+    },
+    {
+      "bbox": [
+        306.0,
+        197.45230102539062,
+        549.2786254882812,
+        313.8584899902344
+      ],
+      "block_id": "page-1015-block-0004",
+      "order": 4,
+      "text": "Composition des réseaux de soins\nOn peut comprendre la structure des réseaux sous deux aspects :\ncelui de la verticalité conduisant à une stratication des consti-\ntuants et celui de l’ouverture qui prend en compte le nombre et\nla qualité des échanges entre l’organisme participant au réseau\net ses alliés.\nServices de 1re, 2e et 3e ligne Comme stipulé dans le PASM, la\nstratication séparant les 1re, 2e et 3e lignes ne connaît pas de\nfrontières strictes et elle peut conduire à l’enchevêtrement des\norganismes participants.\n",
+      "text_sha256": "ae16935425a7f5521f5cce723de01f9787aeffc6e521e4d6850d28fc0dea7a14"
+    },
+    {
+      "bbox": [
+        306.0,
+        311.8158264160156,
+        549.247314453125,
+        493.70849609375
+      ],
+      "block_id": "page-1015-block-0005",
+      "order": 5,
+      "text": "La 1re ligne comprend les équipes de santé mentale et les\nservices courants des CLSC, les cliniques, les GMF, les unités de\nmédecine familiale (UMF), de même que les cabinets privés et\nles ressources alternatives (organismes communautaires). Selon\nle mode de nancement, on distingue sur le plan administratif :\n• les organismes du secteur public, tels les CSLC ;\n• les organismes communautaires (organismes sans but lucratif,\nen général centrés sur la réadaptation ou les groupes d’en-\ntraide et des problématiques spéciques comme la violence\nconjugale, l’itinérance).\nCertaines ressources ont toutefois une appartenance mixte,\nc’est-à-dire qu’elles sont nancées par les organismes gouver-\nnementaux et établissent des contrats de service avec les CSSS ;\nil en est ainsi de certains centres de crise et de certains services\nspécialisés en toxicomanie.\n",
+      "text_sha256": "5107029342ba2427313d96fd9da58213ed6b8c3094ada27e25e56896c1faeed6"
+    },
+    {
+      "bbox": [
+        306.0,
+        491.66583251953125,
+        549.2637939453125,
+        563.2584838867188
+      ],
+      "block_id": "page-1015-block-0006",
+      "order": 6,
+      "text": "La 2e ligne est constituée du secteur hospitalier, qui assure,\navec la participation de certains organismes communautaires,\nles soins dans les situations complexes, par exemple les maladies\nmentales sévères, les cas de double diagnostic (comorbidité) ou\nles situations conduisant à une rupture avec la société (violence\nconjugale, criminalité).\n",
+      "text_sha256": "36799e69ff2bae721f7dbe3ec211c9127285715ec625df1aef7c33de7eeed890"
+    },
+    {
+      "bbox": [
+        306.0,
+        561.2158203125,
+        549.2157592773438,
+        598.0585327148438
+      ],
+      "block_id": "page-1015-block-0007",
+      "order": 7,
+      "text": "La 3e ligne, en lien avec le pôle universitaire, assure les soins\nsurspécialisés (programmes pour troubles alimentaires, troubles\nde la personnalité ou psychose débutante).\n",
+      "text_sha256": "7abedd6bc67b4f274f5d9d39e186f74b42cda0473b608a82eb095b030986919e"
+    },
+    {
+      "bbox": [
+        306.0,
+        599.1658325195312,
+        549.0175170898438,
+        656.0084838867188
+      ],
+      "block_id": "page-1015-block-0008",
+      "order": 8,
+      "text": "Dans cette structuration, on remarque que les niveaux de\nservice ne sont associés ni à un lieu ni à un fournisseur en par-\nticulier. C’est la raison pour laquelle les équipes travaillant dans\nla communauté et orant des services de plus en plus spécialisés\nsont considérées, dans certains cas, comme des services de 2e\n",
+      "text_sha256": "465be3a58689eb922e797688c2c65bdfc591422b99b82f3e6c5fec2d2e6b242e"
+    },
+    {
+      "bbox": [
+        306.0,
+        653.9658203125,
+        549.3406982421875,
+        725.5585327148438
+      ],
+      "block_id": "page-1015-block-0009",
+      "order": 9,
+      "text": "ligne, et non plus de 1re ligne exclusivement.\nImportance du PASM et des pairs aidants Pour inspirer le PASM,\nLalonde & Lesage (2003) ont élaboré une dénition des contours\ndes 1re, 2e et 3e lignes de services en santé mentale. Ils évitent ainsi\nle piège des classications qui varient selon les perspectives de\nchaque acteur du système de soins et favorisent la complémentarité\n",
+      "text_sha256": "365e2a2c55da3f7a446acb95a1ccca13a1de313d563fc736388520a00f6a7f2e"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.9658203125,
+        291.340087890625,
+        189.45849609375
+      ],
+      "block_id": "page-1015-block-0010",
+      "order": 10,
+      "text": "participe à une prise en charge collective du problème. On cherche\nainsi à renforcer la cohésion du groupe pour mieux soutenir le\npatient (Blanchet & Messier, 2001). Ce mode d’intervention s’est\ndéveloppé et diversié en Europe et en Amérique du Nord. Au\nQuébec, Blanchet et ses collaborateurs ont contribué à son essor\ndans l’eervescence de la psychiatrie communautaire à l’Hôpital\nDouglas (Desmarais & al.,1987). Selon ce processus, le patient, son\nréseau primaire et l’équipe soignante (souvent deux intervenants)\nconfrontent leur vision du problème et le redénissent pour mettre\nen commun des solutions. Des techniques spéciques comme\nl’aération de la composition du réseau, la diversication et la\ntransformation de la qualité des liens le distinguent de l’approche\nfamiliale systémique.\n",
+      "text_sha256": "1e340a46294ef9e5cb676d234040a1c24003e896ca6b0f1e549b4384ff976239"
+    },
+    {
+      "bbox": [
+        48.0,
+        190.4658203125,
+        291.1685791015625,
+        292.95849609375
+      ],
+      "block_id": "page-1015-block-0011",
+      "order": 11,
+      "text": "Il n’existe pas d’évaluation systématique des interventions\nde réseaux à court et long terme. On ne connaît donc pas leur\ninfluence sur le réseau de soutien des patients (Blanchet &\nMessier, 2001). Empiriquement, les bénéces des interventions\nsont clairs lorsqu’il s’agit de dénouer des impasses cliniques. Le\nfait de réunir autour d’une même table les personnes concer-\nnées par la problématique d’un patient fait maintenant partie de\nl’arsenal quotidien des cliniciens. Du point de vue de l’ecience,\non s’interroge toutefois sur le coût de la méthode.\n",
+      "text_sha256": "169910baa78f450e54ca856bc41673e54d487983ec0ecc7b37d74d1f2f53a7c1"
+    },
+    {
+      "bbox": [
+        48.0,
+        293.9658203125,
+        291.5355224609375,
+        526.95849609375
+      ],
+      "block_id": "page-1015-block-0012",
+      "order": 12,
+      "text": "Les pratiques de réseau, selon la conception actuelle, cor-\nrespondent à l’instauration d’un plan de soins sur mesure pour\nchaque patient. Tous les intervenants concernés par la probléma-\ntique d’un patient agissent de façon concertée en dénissant un\nplan de soins ainsi que la distribution des rôles selon un modèle\ninterdisciplinaire.\nLa problématique du suicide est l’exemple\nmême des interventions s’appuyant sur des protocoles de soins.\nLa continuité des interventions est ici codiée :\n• le protocole « MARCO », à Montréal, dont l’objectif est\nd’orir aux personnes en détresse suicidaire une aide rapide\net personnalisée et un suivi mieux coordonné avec d’autres\norganismes. Par exemple, une personne qui entre à l’urgence\nd’un hôpital suite à une tentative de suicide peut être rappelée\nrapidement par un organisme partenaire orant des services\nspéciques à sa situation (un suivi psychosocial au CLSC,\nune aide en toxicomanie, etc.). Elle n’a donc pas à refaire elle-\nmême une demande d’aide ailleurs ou à répéter son histoire\npersonnelle à nouveau.\n• le protocole « PASCAL », qui ore des services similaires à\nLaval.\n",
+      "text_sha256": "97befe9b2edd4ab40a6ed84277e904ea40b2697e6af15287ae76f050ef80b93c"
+    },
+    {
+      "bbox": [
+        68.0,
+        534.97412109375,
+        279.9765930175781,
+        545.55029296875
+      ],
+      "block_id": "page-1015-block-0013",
+      "order": 13,
+      "text": "L’interdisciplinarité est présentée en détail au chapitre 42.\n",
+      "text_sha256": "6239d60c63b705266fd62197a712a7428f3e178a89cdebbd592ae73717a5a581"
+    },
+    {
+      "bbox": [
+        48.0,
+        553.9658203125,
+        291.13421630859375,
+        575.95849609375
+      ],
+      "block_id": "page-1015-block-0014",
+      "order": 14,
+      "text": "Le suivi étroit des patients évalués à l’urgence pour un geste\nsuicidaire en constitue une autre forme.\n",
+      "text_sha256": "a49705179393d4b7c976670b823d7963c695e4d1857b460bae5cfbc91984e47f"
+    },
+    {
+      "bbox": [
+        48.0,
+        576.9658203125,
+        291.41741943359375,
+        725.45849609375
+      ],
+      "block_id": "page-1015-block-0015",
+      "order": 15,
+      "text": "Par respect du droit à la condentialité du patient, les inter-\nvenants se sentent limités dans leurs échanges d’informations\navec l’entourage et d’autres soignants. À l’extrême, ils peuvent\ninvoquer le secret professionnel de façon défensive pour éviter de\ncommuniquer certaines informations, alors qu’il sut en général\nde convenir avec le patient des sujets qui peuvent être abordés\nen groupe et de ceux qui relèvent du secret de la relation duelle,\ncomme on procède en thérapie familiale. En eet, lorsqu’un\nmembre de la famille cherche à obtenir des informations sur\nl’état de santé et les soins prodigués sans que le patient ne soit\nprésent, il est en général préférable de proposer une rencontre\nfamiliale. On peut alors comprendre et intervenir sur la dynamique\nrelationnelle et commencer la psychoéducation sans révéler les\n",
+      "text_sha256": "3de183a153f2877236c72e63d034e30c7718b7ec5dd1cef6fbd3e9ebf5083d75"
+    }
+  ],
+  "coordinates_sha256": "fbbcba38423fb0891b09f57a037d206c46ef78ed4b8ebef1678e3cc563180451",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1015",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "998\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 4\nOrganisation des soins\npréoccupations intimes du patient. C’est ce dernier qui nous\nguide dans le choix des sujets abordables. On peut appliquer la\nmême méthode pour les liens entre intervenants de diverses ins-\ntitutions. Si le patient ne donne pas l’autorisation de transmettre\ndes informations cliniques aux partenaires, on peut organiser\nune rencontre en sa présence.\nRéseaux de soins\nIl existe trois niveaux dans la hiérachisation des soins qui vise une\nrépartition homogène des organismes participants. L’intégration\ndes usagers dans les processus décisionnels s’étend de la parti-\ncipation à des conseils d’administration à l’intégration d’usagers\ndevenus pairs aidants dans les équipes soignantes.\nComposition des réseaux de soins\nOn peut comprendre la structure des réseaux sous deux aspects :\ncelui de la verticalité conduisant à une stratication des consti-\ntuants et celui de l’ouverture qui prend en compte le nombre et\nla qualité des échanges entre l’organisme participant au réseau\net ses alliés.\nServices de 1re, 2e et 3e ligne Comme stipulé dans le PASM, la\nstratication séparant les 1re, 2e et 3e lignes ne connaît pas de\nfrontières strictes et elle peut conduire à l’enchevêtrement des\norganismes participants.\nLa 1re ligne comprend les équipes de santé mentale et les\nservices courants des CLSC, les cliniques, les GMF, les unités de\nmédecine familiale (UMF), de même que les cabinets privés et\nles ressources alternatives (organismes communautaires). Selon\nle mode de nancement, on distingue sur le plan administratif :\n• les organismes du secteur public, tels les CSLC ;\n• les organismes communautaires (organismes sans but lucratif,\nen général centrés sur la réadaptation ou les groupes d’en-\ntraide et des problématiques spéciques comme la violence\nconjugale, l’itinérance).\nCertaines ressources ont toutefois une appartenance mixte,\nc’est-à-dire qu’elles sont nancées par les organismes gouver-\nnementaux et établissent des contrats de service avec les CSSS ;\nil en est ainsi de certains centres de crise et de certains services\nspécialisés en toxicomanie.\nLa 2e ligne est constituée du secteur hospitalier, qui assure,\navec la participation de certains organismes communautaires,\nles soins dans les situations complexes, par exemple les maladies\nmentales sévères, les cas de double diagnostic (comorbidité) ou\nles situations conduisant à une rupture avec la société (violence\nconjugale, criminalité).\nLa 3e ligne, en lien avec le pôle universitaire, assure les soins\nsurspécialisés (programmes pour troubles alimentaires, troubles\nde la personnalité ou psychose débutante).\nDans cette structuration, on remarque que les niveaux de\nservice ne sont associés ni à un lieu ni à un fournisseur en par-\nticulier. C’est la raison pour laquelle les équipes travaillant dans\nla communauté et orant des services de plus en plus spécialisés\nsont considérées, dans certains cas, comme des services de 2e\nligne, et non plus de 1re ligne exclusivement.\nImportance du PASM et des pairs aidants Pour inspirer le PASM,\nLalonde & Lesage (2003) ont élaboré une dénition des contours\ndes 1re, 2e et 3e lignes de services en santé mentale. Ils évitent ainsi\nle piège des classications qui varient selon les perspectives de\nchaque acteur du système de soins et favorisent la complémentarité\nparticipe à une prise en charge collective du problème. On cherche\nainsi à renforcer la cohésion du groupe pour mieux soutenir le\npatient (Blanchet & Messier, 2001). Ce mode d’intervention s’est\ndéveloppé et diversié en Europe et en Amérique du Nord. Au\nQuébec, Blanchet et ses collaborateurs ont contribué à son essor\ndans l’eervescence de la psychiatrie communautaire à l’Hôpital\nDouglas (Desmarais & al.,1987). Selon ce processus, le patient, son\nréseau primaire et l’équipe soignante (souvent deux intervenants)\nconfrontent leur vision du problème et le redénissent pour mettre\nen commun des solutions. Des techniques spéciques comme\nl’aération de la composition du réseau, la diversication et la\ntransformation de la qualité des liens le distinguent de l’approche\nfamiliale systémique.\nIl n’existe pas d’évaluation systématique des interventions\nde réseaux à court et long terme. On ne connaît donc pas leur\ninfluence sur le réseau de soutien des patients (Blanchet &\nMessier, 2001). Empiriquement, les bénéces des interventions\nsont clairs lorsqu’il s’agit de dénouer des impasses cliniques. Le\nfait de réunir autour d’une même table les personnes concer-\nnées par la problématique d’un patient fait maintenant partie de\nl’arsenal quotidien des cliniciens. Du point de vue de l’ecience,\non s’interroge toutefois sur le coût de la méthode.\nLes pratiques de réseau, selon la conception actuelle, cor-\nrespondent à l’instauration d’un plan de soins sur mesure pour\nchaque patient. Tous les intervenants concernés par la probléma-\ntique d’un patient agissent de façon concertée en dénissant un\nplan de soins ainsi que la distribution des rôles selon un modèle\ninterdisciplinaire.\nLa problématique du suicide est l’exemple\nmême des interventions s’appuyant sur des protocoles de soins.\nLa continuité des interventions est ici codiée :\n• le protocole « MARCO », à Montréal, dont l’objectif est\nd’orir aux personnes en détresse suicidaire une aide rapide\net personnalisée et un suivi mieux coordonné avec d’autres\norganismes. Par exemple, une personne qui entre à l’urgence\nd’un hôpital suite à une tentative de suicide peut être rappelée\nrapidement par un organisme partenaire orant des services\nspéciques à sa situation (un suivi psychosocial au CLSC,\nune aide en toxicomanie, etc.). Elle n’a donc pas à refaire elle-\nmême une demande d’aide ailleurs ou à répéter son histoire\npersonnelle à nouveau.\n• le protocole « PASCAL », qui ore des services similaires à\nLaval.\nL’interdisciplinarité est présentée en détail au chapitre 42.\nLe suivi étroit des patients évalués à l’urgence pour un geste\nsuicidaire en constitue une autre forme.\nPar respect du droit à la condentialité du patient, les inter-\nvenants se sentent limités dans leurs échanges d’informations\navec l’entourage et d’autres soignants. À l’extrême, ils peuvent\ninvoquer le secret professionnel de façon défensive pour éviter de\ncommuniquer certaines informations, alors qu’il sut en général\nde convenir avec le patient des sujets qui peuvent être abordés\nen groupe et de ceux qui relèvent du secret de la relation duelle,\ncomme on procède en thérapie familiale. En eet, lorsqu’un\nmembre de la famille cherche à obtenir des informations sur\nl’état de santé et les soins prodigués sans que le patient ne soit\nprésent, il est en général préférable de proposer une rencontre\nfamiliale. On peut alors comprendre et intervenir sur la dynamique\nrelationnelle et commencer la psychoéducation sans révéler les\n",
+  "raw_text_sha256": "db69bf960538310779e94396ed0cc9eb07926f9d717c92832b8c58a12df07807",
+  "source_page_display": 1016,
+  "source_page_index": 1015
+}

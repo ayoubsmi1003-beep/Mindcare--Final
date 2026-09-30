@@ -1,0 +1,82 @@
+{
+  "status": "AWAITING_DOCTOR_REVIEW",
+  "canonical_promotion_authorized": false,
+  "activation_authorized": false,
+  "scope": "DSM-5 only",
+  "identity": {
+    "book_id": "dsm5-fr-2015-elsevier",
+    "source_pdf": "Books/DSM-5_Manuel-diagnostique-et-statistique-des-troubles-mentaux.pdf",
+    "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+    "source_sha256": "be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+    "source_pages": 1275,
+    "v2_segment": "seg-1126-1150-v2.pdf",
+    "repaired_source_pages": [
+      1137,
+      1140
+    ]
+  },
+  "review_priorities": [
+    {
+      "priority": "P0",
+      "code": "clinical-content",
+      "count_units_needing_review": 7772,
+      "count_tables_needing_review": 121,
+      "count_unresolved_xrefs": 364,
+      "artifacts": [
+        "reconciliation-v10/units.jsonl",
+        "reconciliation-v10/tables.jsonl",
+        "reconciliation-v10/concepts.jsonl",
+        "reconciliation-v10/xrefs.jsonl"
+      ]
+    },
+    {
+      "priority": "P1",
+      "code": "provenance-and-quarantine",
+      "legacy_coverage_units_reclassified": 411,
+      "quarantined_unit_relation_refs": 2,
+      "quarantined_xref_records": 8,
+      "quarantined_concept_extra_fields": 1,
+      "artifacts": [
+        "reconciliation-v10/unit-relation-quarantine.jsonl",
+        "reconciliation-v10/xref-quarantine.jsonl",
+        "reconciliation-v10/concept-extra-fields-quarantine.jsonl",
+        "units-COV-v2.manifest.json"
+      ]
+    },
+    {
+      "priority": "P1",
+      "code": "segment-replay",
+      "citra_failed_segment": "seg-1126-1150-v2.pdf",
+      "citra_failed_source_pages": [
+        1137,
+        1140
+      ],
+      "segments_not_replayed": 50,
+      "artifact": "seg-reports-v3/manifest.json"
+    },
+    {
+      "priority": "P1",
+      "code": "structure-candidate",
+      "artifact": "structure-v2.candidate.json",
+      "canonical_promotion_authorized": false
+    }
+  ],
+  "hashes": {
+    "source_sha256": "be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+    "candidate_output_sha256": {
+      "units": "116c04e814d67e764a227b2ab82550b204b55c30790a8ad57607d8e87c484e82",
+      "tables": "d466304ae612d6551736fa401cc39b0378b924548395ab79270093d01086b520",
+      "concepts": "8e769905ec5c524a4e9a0337da6f0aa44f72994fb95f8b260882b1eaf425dcd2",
+      "xrefs": "43c756106861d85d00c657fabcbddd124e2eacac337ce1f8cbfef119ac4bcc7e"
+    },
+    "v2_segment_sha256": "4bd2f8ebe255b49c66f3f516a869dc7332173081f6afebb9ab2986d9fc25e6fb"
+  },
+  "explicitly_not_authorized": [
+    "canonical replacement of current units.jsonl/tables.jsonl/concepts.jsonl/xrefs.jsonl",
+    "PostgreSQL or migrations",
+    "embeddings or chunk regeneration",
+    "activation or active knowledge base insertion",
+    "other books or six-book reconciliation"
+  ],
+  "doctor_decision_required": "Record an explicit human decision for each P0/P1 residual category. No LLM inference may convert needs_review/unresolved to approved."
+}

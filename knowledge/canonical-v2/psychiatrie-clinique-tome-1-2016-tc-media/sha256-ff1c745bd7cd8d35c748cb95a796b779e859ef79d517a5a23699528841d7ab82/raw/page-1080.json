@@ -1,0 +1,76 @@
+{
+  "block_sequence_sha256": "7fca4b9e187176005a06c99ce72720506b1d11131c0381edd78a0ce233942518",
+  "blocks": [
+    {
+      "bbox": [
+        209.25,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-1080-block-0001",
+      "order": 1,
+      "text": "Chapitre 47\nÉvaluation de la qualité des soins et maintien de la compétence\n1063\n",
+      "text_sha256": "563676418ac8a8e94606cdcb86e9e405d83d28ffaf7df4ab77b2ce65d0a362d8"
+    },
+    {
+      "bbox": [
+        56.20000076293945,
+        41.002296447753906,
+        334.8865966796875,
+        53.320068359375
+      ],
+      "block_id": "page-1080-block-0002",
+      "order": 2,
+      "text": "FIGURE 47.1 Étape n˚ 5 – Ma synthèse annuelle des activités de DPC\n",
+      "text_sha256": "a3db6db2767b29d8ac234d0e5a0eec4a824e165f94000359369c8020c8c02136"
+    },
+    {
+      "bbox": [
+        53.25,
+        604.2906494140625,
+        341.11859130859375,
+        625.1588745117188
+      ],
+      "block_id": "page-1080-block-0003",
+      "order": 3,
+      "text": "Le Collège des médecins du Québec publie des formulaires à l’usage des médecins au www.cmq.org.\nSource : Collège des médecins du Québec (2007).\n",
+      "text_sha256": "4853f1687f0d96711e33564f6592db69352149cddf8ddfd874d9a77993d3010c"
+    },
+    {
+      "bbox": [
+        54.0,
+        635.7244262695312,
+        296.8489685058594,
+        713.9260864257812
+      ],
+      "block_id": "page-1080-block-0004",
+      "order": 4,
+      "text": "• lecture de périodiques, recherches sur Internet ;\n• enregistrements audio, vidéo infoPOEM (patient-oriented\nevidence that matters) sous forme de balados (podcast) ;\n• élaboration de guides de pratique ;\n• élaboration du programme d’enseignement ;\n• élaboration des examens ;\n",
+      "text_sha256": "9acedd6c1be87342eceeaa627c98c7a3b669aa10b478e7fec431472c7a204b17"
+    },
+    {
+      "bbox": [
+        312.0,
+        635.7244262695312,
+        534.7974853515625,
+        713.9260864257812
+      ],
+      "block_id": "page-1080-block-0005",
+      "order": 5,
+      "text": "• évaluation par les pairs ;\n• comité sur la sécurité des patients, la qualité des soins.\nSection 3 : Activités d’évaluation :\n• évaluation de la pratique ;\n• programme d’autoévaluation ;\n• simulations.\n",
+      "text_sha256": "4807c7f076f613e0b65151c325594b676fb5183fa95114a1fa4f731252c1c48b"
+    }
+  ],
+  "coordinates_sha256": "ce0a3bc6176cc84fba129d8539ad791548122b14ecf39a4c96d44299bc4676ab",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1080",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 47\nÉvaluation de la qualité des soins et maintien de la compétence\n1063\nFIGURE 47.1 Étape n˚ 5 – Ma synthèse annuelle des activités de DPC\nLe Collège des médecins du Québec publie des formulaires à l’usage des médecins au www.cmq.org.\nSource : Collège des médecins du Québec (2007).\n• lecture de périodiques, recherches sur Internet ;\n• enregistrements audio, vidéo infoPOEM (patient-oriented\nevidence that matters) sous forme de balados (podcast) ;\n• élaboration de guides de pratique ;\n• élaboration du programme d’enseignement ;\n• élaboration des examens ;\n• évaluation par les pairs ;\n• comité sur la sécurité des patients, la qualité des soins.\nSection 3 : Activités d’évaluation :\n• évaluation de la pratique ;\n• programme d’autoévaluation ;\n• simulations.\n",
+  "raw_text_sha256": "5d4a44d716b91e55adbb5644f1f11304136cb5da46960eef9e2312d4296e500c",
+  "source_page_display": 1081,
+  "source_page_index": 1080
+}

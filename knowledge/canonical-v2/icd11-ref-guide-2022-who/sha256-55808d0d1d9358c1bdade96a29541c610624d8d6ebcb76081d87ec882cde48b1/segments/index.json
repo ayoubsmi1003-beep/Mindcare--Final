@@ -1,0 +1,100 @@
+{
+ "segment_pages": 25,
+ "segments": [
+  {
+   "file": "seg-0001-0025.pdf",
+   "src_1based_start": 1,
+   "src_1based_end": 25
+  },
+  {
+   "file": "seg-0026-0050.pdf",
+   "src_1based_start": 26,
+   "src_1based_end": 50
+  },
+  {
+   "file": "seg-0051-0075.pdf",
+   "src_1based_start": 51,
+   "src_1based_end": 75
+  },
+  {
+   "file": "seg-0076-0100.pdf",
+   "src_1based_start": 76,
+   "src_1based_end": 100
+  },
+  {
+   "file": "seg-0101-0125.pdf",
+   "src_1based_start": 101,
+   "src_1based_end": 125
+  },
+  {
+   "file": "seg-0126-0150.pdf",
+   "src_1based_start": 126,
+   "src_1based_end": 150
+  },
+  {
+   "file": "seg-0151-0175.pdf",
+   "src_1based_start": 151,
+   "src_1based_end": 175
+  },
+  {
+   "file": "seg-0176-0200.pdf",
+   "src_1based_start": 176,
+   "src_1based_end": 200
+  },
+  {
+   "file": "seg-0201-0225.pdf",
+   "src_1based_start": 201,
+   "src_1based_end": 225
+  },
+  {
+   "file": "seg-0226-0250.pdf",
+   "src_1based_start": 226,
+   "src_1based_end": 250
+  },
+  {
+   "file": "seg-0251-0275.pdf",
+   "src_1based_start": 251,
+   "src_1based_end": 275
+  },
+  {
+   "file": "seg-0276-0300.pdf",
+   "src_1based_start": 276,
+   "src_1based_end": 300
+  },
+  {
+   "file": "seg-0301-0325.pdf",
+   "src_1based_start": 301,
+   "src_1based_end": 325
+  },
+  {
+   "file": "seg-0326-0350.pdf",
+   "src_1based_start": 326,
+   "src_1based_end": 350
+  },
+  {
+   "file": "seg-0351-0375.pdf",
+   "src_1based_start": 351,
+   "src_1based_end": 375
+  },
+  {
+   "file": "seg-0376-0400.pdf",
+   "src_1based_start": 376,
+   "src_1based_end": 400
+  },
+  {
+   "file": "seg-0401-0425.pdf",
+   "src_1based_start": 401,
+   "src_1based_end": 425
+  },
+  {
+   "file": "seg-0426-0450.pdf",
+   "src_1based_start": 426,
+   "src_1based_end": 450
+  },
+  {
+   "file": "seg-0451-0473.pdf",
+   "src_1based_start": 451,
+   "src_1based_end": 473
+  }
+ ]
+}

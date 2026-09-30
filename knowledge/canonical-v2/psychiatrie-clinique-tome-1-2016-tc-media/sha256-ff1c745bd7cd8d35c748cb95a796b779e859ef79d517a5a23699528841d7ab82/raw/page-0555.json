@@ -1,0 +1,208 @@
+{
+  "block_sequence_sha256": "8e6d94fdd45812b1e299b846fa0a7dcece4b7ca086d212f582bce78d5b6a57bb",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        477.3144836425781,
+        758.8693237304688
+      ],
+      "block_id": "page-0555-block-0001",
+      "order": 1,
+      "text": "538\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3\nSyndromes cliniques psychiatriques\n",
+      "text_sha256": "5448ac9981f917b8c476414f00f620751fe6167232e1bbb85c667254af77e7f4"
+    },
+    {
+      "bbox": [
+        50.400001525878906,
+        41.05229568481445,
+        343.0955505371094,
+        53.320068359375
+      ],
+      "block_id": "page-0555-block-0002",
+      "order": 2,
+      "text": "TABLEAU 25.4 Critères diagnostiques de la symptomatologie somatique\n",
+      "text_sha256": "86b4c41455e9d7512f1b9f825dc5143e0b88a97556bbf019526dd2db8e14a65c"
+    },
+    {
+      "bbox": [
+        76.5,
+        58.27412414550781,
+        518.1553344726562,
+        94.828125
+      ],
+      "block_id": "page-0555-block-0003",
+      "order": 3,
+      "text": "DSM-5\nDSM-IV-TR\n300.82 (F45.1) Trouble à symptomatologie somatique\n300.81 (F45.0) Trouble somatisation\nD. Les symptômes ne sont pas produits intentionnellement ou feints\n",
+      "text_sha256": "1dfd93e70a3c5743bec47273331f32101422437cdb58344d51f2cce01e13afba"
+    },
+    {
+      "bbox": [
+        311.0500183105469,
+        95.001953125,
+        467.2329406738281,
+        104.828125
+      ],
+      "block_id": "page-0555-block-0004",
+      "order": 4,
+      "text": "(comme dans le Trouble factice ou la Simulation).\n",
+      "text_sha256": "7528e71423288d437f7d9e3ce71010dfc1bf073bd57f9d9935fcc9371b345608"
+    },
+    {
+      "bbox": [
+        52.25,
+        109.4019546508789,
+        289.6456604003906,
+        246.22813415527344
+      ],
+      "block_id": "page-0555-block-0005",
+      "order": 5,
+      "text": "Spécier si :\nAvec douleur prédominante (antérieurement trouble douloureux) : Cette\nspécication concerne les individus dont les symptômes somatiques com-\nprennent principalement la douleur.\nSpécier si :\nChronique: Une évolution chronique est caractérisée par des symptômes\nsévères, un handicap marqué et une durée prolongée (plus de 6 mois).\nSpécier la sévérité actuelle :\nLégère: Seulement l’un des symptômes spéciés au critère B est présent.\nMoyenne: Deux symptômes ou plus spéciés au critère B sont présents.\nGrave: Deux symptômes ou plus spéciés au critère B sont présents et\nsont associés à des plaintes somatiques multiples (ou à un symptôme\nsomatique très sévère).\n",
+      "text_sha256": "2796be66174d2e419b6c0a5b3fa97c3b8fe56bbc38a49329d7962a71ae2a14ef"
+    },
+    {
+      "bbox": [
+        48.25,
+        252.97030639648438,
+        547.7838745117188,
+        312.4750061035156
+      ],
+      "block_id": "page-0555-block-0006",
+      "order": 6,
+      "text": "Sources: APA (2015), p. 367 ; APA (2004), p. 480.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris,\n2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation, DSM-IV-TR - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\n",
+      "text_sha256": "8e5be2abe3b7ae7a1b8a7d05f482892d4ae7769e89699e9340a00a90682d8e6a"
+    },
+    {
+      "bbox": [
+        48.0,
+        327.4658203125,
+        291.321533203125,
+        552.95849609375
+      ],
+      "block_id": "page-0555-block-0007",
+      "order": 7,
+      "text": "• des symptômes gastro-intestinaux incluant nausées, vomis-\nsements, douleur abdominale, gaz, ballonnement, diarrhées ;\n• des symptômes cardiopulmonaires incluant douleur thora-\ncique, étourdissement, soue court, palpitations, etc. ;\n• des symptômes neurologiques incluant pertes de conscience,\nfaiblesse musculaire, vision embrouillée, dicultés à la marche,\namnésie, pseudocrises épileptiques, etc. ;\n• des symptômes gynécologiques et urinaires incluant dys-\npareunie, dysménorrhée, coïtalgie, etc.\nLe critère B du DSM-5 prend en considération les pensées,\nles émotions et les comportements qui peuvent inuencer le\nrecours aux soins et la diculté à se trouver rassuré. Ce critère\nqualié de « positif et d’inclusif » permet d’améliorer le proces-\nsus diagnostique en évitant de recourir, comme le stipulait le\nDSM-IV-TR, à un diagnostic d’exclusion « absence de pathologie\nmédicale ». Cette nouvelle catégorie vise à mieux reéter la réalité\nclinique en trouvant un meilleur consensus auprès des médecins.\nOn espère que le seuil psychopathologique soit mieux identié,\nsurtout en intégrant des critères psychologiques (critères B).\n",
+      "text_sha256": "e8ac6bd413e9266001a669ba4f468a842ec83a8eb1bfe23b5482656cdc7ed9ba"
+    },
+    {
+      "bbox": [
+        48.0,
+        553.9658203125,
+        291.0100402832031,
+        587.45849609375
+      ],
+      "block_id": "page-0555-block-0008",
+      "order": 8,
+      "text": "Le DSM-5 ore la possibilité de spécier si la douleur est\nprédominante, la persistance (plus de six mois) et l’intensité\n(légère à grave) du trouble.\n",
+      "text_sha256": "e90e1e7333af7b1ace37f3894623e1708ea74a8ae86400a371f0ad122c9d9fd4"
+    },
+    {
+      "bbox": [
+        48.0,
+        596.3330078125,
+        291.3100280761719,
+        725.45849609375
+      ],
+      "block_id": "page-0555-block-0009",
+      "order": 9,
+      "text": "Comorbidités\nIl est commun de constater la coexistence de troubles dépres-\nsifs ou anxieux (dans 50 à 75 % des cas selon les études). On\npeut retracer la présence de ces troubles avant l’installation du\nTSS, mais ceux-ci sont le plus souvent perçus par les patients\ncomme une conséquence de leurs malaises somatiques persis-\ntants ou de leur maladie qui n’a pas encore été diagnostiquée.\nCes troubles sont décrits comme la source des limitations de\nleurs activités quotidiennes. Ils mentionnent fréquemment au\nmédecin : « Si vous aviez à vivre avec cette douleur, docteur, vous\nseriez déprimé comme moi ! », traduisant leur sentiment d’être\n",
+      "text_sha256": "85b557b4671fd2bc16bb40c843b080e7893bdee12154d89009f37001dc584cdc"
+    },
+    {
+      "bbox": [
+        306.0,
+        327.4658203125,
+        549.104248046875,
+        349.70849609375
+      ],
+      "block_id": "page-0555-block-0010",
+      "order": 10,
+      "text": "incompris. Une bonne anamnèse s’impose pour départager les\ndiérents syndromes.\n",
+      "text_sha256": "bc0a22b085ef9d2242ad8793efcff50b890b2c74bc4fbe95d889bccb5fae0c28"
+    },
+    {
+      "bbox": [
+        306.0,
+        350.9658203125,
+        549.3986206054688,
+        431.90850830078125
+      ],
+      "block_id": "page-0555-block-0011",
+      "order": 11,
+      "text": "De plus, il n’est pas rare de rencontrer des dysfonctionnements\nà long terme dans lesquels on retrouve des traits de personnalité\n(sensibilité interpersonnelle, perfectionnisme, névrotisme, etc.)\nqui peuvent s’inscrire dans un trouble de personnalité comorbide\n(dans 30 à 70 % des cas selon les études). Les dysfonctionne-\nments les plus fréquents sont reliés à la personnalité évitante,\nparanoïde et obsessionnelle compulsive.\n",
+      "text_sha256": "10fee6b340a93640e03fbaec2db72e80192328c77612a5c45b5f044a5175f362"
+    },
+    {
+      "bbox": [
+        306.0,
+        440.9830017089844,
+        548.6246948242188,
+        478.6084899902344
+      ],
+      "block_id": "page-0555-block-0012",
+      "order": 12,
+      "text": "Approche thérapeutique\nL’approche thérapeutique s’inscrit dans l’approche générale\nglobale proposée à la sous-section 25.5.1.\n",
+      "text_sha256": "fcdc4677f1408ee20db87c8185a8708db8c6b5b4bb52590faad0bb118a8ed104"
+    },
+    {
+      "bbox": [
+        306.0,
+        489.3868103027344,
+        485.15557861328125,
+        521.7794189453125
+      ],
+      "block_id": "page-0555-block-0013",
+      "order": 13,
+      "text": "25.4.2 Crainte excessive d’avoir\nune maladie\n",
+      "text_sha256": "0e97ab67f465a6a1c1f85e5e7b9f22a94d046415a2ae32c497dcf51f69ee48a1"
+    },
+    {
+      "bbox": [
+        306.0,
+        525.3658447265625,
+        549.0175170898438,
+        559.3085327148438
+      ],
+      "block_id": "page-0555-block-0014",
+      "order": 14,
+      "text": "La crainte excessive d’avoir une maladie est une nouvelle caté-\ngorie pour rendre compte des appréhensions, des peurs, des\ncomportements d’évitement face à la maladie.\n",
+      "text_sha256": "b4ccd7d63c86b2f440c581cbbbfc62f1d6df2e84ffc1c2ae41c8b7964b23841c"
+    },
+    {
+      "bbox": [
+        306.0,
+        568.4330444335938,
+        549.3445434570312,
+        725.45849609375
+      ],
+      "block_id": "page-0555-block-0015",
+      "order": 15,
+      "text": "Historique\nCette nouvelle catégorie du DSM-5 inclut des formes légères d’anxiété\nreliée à la maladie antérieurement diagnostiquée « hypocondrie » qui\npeuvent inciter à chercher ou non des soins médicaux. Les patients\navec hypocondrie s’inscrivent dans deux sous-groupes distincts :\n• le premier réunit 75 % des patients hypocondriaques qui pré-\nsentent de multiples symptômes somatiques prédominants\nqui s’appuient sur leurs principales préoccupations et qui sont\ndiagnostiqués comme un TSS dans le DSM-5 ;\n• le second compte 25 % des hypocondriaques, qui manifestent\nune crainte excessive d’avoir une maladie ; il est composé de\npatients avec des symptômes somatiques minimes ou absents,\nqui sont fortement associés à de l’anxiété ou à des craintes\n",
+      "text_sha256": "1afe76f7334c7540f9a2b8056c2fd17f4b447fd520f6886af8525e29cc220258"
+    },
+    {
+      "bbox": [
+        345.1000061035156,
+        41.40229415893555,
+        370.7342529296875,
+        53.37006759643555
+      ],
+      "block_id": "page-0555-block-0016",
+      "order": 16,
+      "text": "(suite)\n",
+      "text_sha256": "c684d6dbcdfd50f0ada227f799b5c0fb30e817ac3da61b4cbf208decde7f907b"
+    }
+  ],
+  "coordinates_sha256": "b45c9c2a15d0213b75300be72334ad401ce9882c4e4ceccad01e067013228c5f",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0555",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "538\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3\nSyndromes cliniques psychiatriques\nTABLEAU 25.4 Critères diagnostiques de la symptomatologie somatique\nDSM-5\nDSM-IV-TR\n300.82 (F45.1) Trouble à symptomatologie somatique\n300.81 (F45.0) Trouble somatisation\nD. Les symptômes ne sont pas produits intentionnellement ou feints\n(comme dans le Trouble factice ou la Simulation).\nSpécier si :\nAvec douleur prédominante (antérieurement trouble douloureux) : Cette\nspécication concerne les individus dont les symptômes somatiques com-\nprennent principalement la douleur.\nSpécier si :\nChronique: Une évolution chronique est caractérisée par des symptômes\nsévères, un handicap marqué et une durée prolongée (plus de 6 mois).\nSpécier la sévérité actuelle :\nLégère: Seulement l’un des symptômes spéciés au critère B est présent.\nMoyenne: Deux symptômes ou plus spéciés au critère B sont présents.\nGrave: Deux symptômes ou plus spéciés au critère B sont présents et\nsont associés à des plaintes somatiques multiples (ou à un symptôme\nsomatique très sévère).\nSources: APA (2015), p. 367 ; APA (2004), p. 480.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris,\n2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation, DSM-IV-TR - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\n• des symptômes gastro-intestinaux incluant nausées, vomis-\nsements, douleur abdominale, gaz, ballonnement, diarrhées ;\n• des symptômes cardiopulmonaires incluant douleur thora-\ncique, étourdissement, soue court, palpitations, etc. ;\n• des symptômes neurologiques incluant pertes de conscience,\nfaiblesse musculaire, vision embrouillée, dicultés à la marche,\namnésie, pseudocrises épileptiques, etc. ;\n• des symptômes gynécologiques et urinaires incluant dys-\npareunie, dysménorrhée, coïtalgie, etc.\nLe critère B du DSM-5 prend en considération les pensées,\nles émotions et les comportements qui peuvent inuencer le\nrecours aux soins et la diculté à se trouver rassuré. Ce critère\nqualié de « positif et d’inclusif » permet d’améliorer le proces-\nsus diagnostique en évitant de recourir, comme le stipulait le\nDSM-IV-TR, à un diagnostic d’exclusion « absence de pathologie\nmédicale ». Cette nouvelle catégorie vise à mieux reéter la réalité\nclinique en trouvant un meilleur consensus auprès des médecins.\nOn espère que le seuil psychopathologique soit mieux identié,\nsurtout en intégrant des critères psychologiques (critères B).\nLe DSM-5 ore la possibilité de spécier si la douleur est\nprédominante, la persistance (plus de six mois) et l’intensité\n(légère à grave) du trouble.\nComorbidités\nIl est commun de constater la coexistence de troubles dépres-\nsifs ou anxieux (dans 50 à 75 % des cas selon les études). On\npeut retracer la présence de ces troubles avant l’installation du\nTSS, mais ceux-ci sont le plus souvent perçus par les patients\ncomme une conséquence de leurs malaises somatiques persis-\ntants ou de leur maladie qui n’a pas encore été diagnostiquée.\nCes troubles sont décrits comme la source des limitations de\nleurs activités quotidiennes. Ils mentionnent fréquemment au\nmédecin : « Si vous aviez à vivre avec cette douleur, docteur, vous\nseriez déprimé comme moi ! », traduisant leur sentiment d’être\nincompris. Une bonne anamnèse s’impose pour départager les\ndiérents syndromes.\nDe plus, il n’est pas rare de rencontrer des dysfonctionnements\nà long terme dans lesquels on retrouve des traits de personnalité\n(sensibilité interpersonnelle, perfectionnisme, névrotisme, etc.)\nqui peuvent s’inscrire dans un trouble de personnalité comorbide\n(dans 30 à 70 % des cas selon les études). Les dysfonctionne-\nments les plus fréquents sont reliés à la personnalité évitante,\nparanoïde et obsessionnelle compulsive.\nApproche thérapeutique\nL’approche thérapeutique s’inscrit dans l’approche générale\nglobale proposée à la sous-section 25.5.1.\n25.4.2 Crainte excessive d’avoir\nune maladie\nLa crainte excessive d’avoir une maladie est une nouvelle caté-\ngorie pour rendre compte des appréhensions, des peurs, des\ncomportements d’évitement face à la maladie.\nHistorique\nCette nouvelle catégorie du DSM-5 inclut des formes légères d’anxiété\nreliée à la maladie antérieurement diagnostiquée « hypocondrie » qui\npeuvent inciter à chercher ou non des soins médicaux. Les patients\navec hypocondrie s’inscrivent dans deux sous-groupes distincts :\n• le premier réunit 75 % des patients hypocondriaques qui pré-\nsentent de multiples symptômes somatiques prédominants\nqui s’appuient sur leurs principales préoccupations et qui sont\ndiagnostiqués comme un TSS dans le DSM-5 ;\n• le second compte 25 % des hypocondriaques, qui manifestent\nune crainte excessive d’avoir une maladie ; il est composé de\npatients avec des symptômes somatiques minimes ou absents,\nqui sont fortement associés à de l’anxiété ou à des craintes\n(suite)\n",
+  "raw_text_sha256": "d39d54837ae61114c5344c824180805c04e5676ab39c88fdfdefabcc2f972037",
+  "source_page_display": 556,
+  "source_page_index": 555
+}

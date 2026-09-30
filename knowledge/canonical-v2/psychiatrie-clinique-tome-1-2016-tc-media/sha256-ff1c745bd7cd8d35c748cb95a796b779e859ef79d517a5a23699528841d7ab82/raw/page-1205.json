@@ -1,0 +1,712 @@
+{
+  "block_sequence_sha256": "7bedbe20a894eda5996af7ebf83accb6edfdcfe40e63775533604446ee881d3d",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        106.5719985961914,
+        758.8693237304688
+      ],
+      "block_id": "page-1205-block-0001",
+      "order": 1,
+      "text": "I44\nIndex\n",
+      "text_sha256": "46e517f16c967f24b286e23be1c1065625b78626c63bdfead43443869d5d95d3"
+    },
+    {
+      "bbox": [
+        57.0,
+        40.82011795043945,
+        174.71548461914062,
+        77.46728515625
+      ],
+      "block_id": "page-1205-block-0002",
+      "order": 2,
+      "text": "de type stéroïdien, 120\ndes glucocorticoïdes, 189f\ndopaminergiques, 113, 125,\n",
+      "text_sha256": "2797199a021921e5bed09438ee7491331b46048ecac87b22dd2177ad7920babe"
+    },
+    {
+      "bbox": [
+        57.0,
+        78.3701171875,
+        202.7049560546875,
+        127.51728820800781
+      ],
+      "block_id": "page-1205-block-0003",
+      "order": 3,
+      "text": "128-129, 147, 699, 851-852,\n876-877, 897, 976, 1463-1465,\n1468, 1471-1475, 1483\nGABA, 117, 119, 125, 130-131,\n",
+      "text_sha256": "312fc8fff7f0abcce9fbb50da73e1cc3ce4da8bfa2cabef4f4f3a1ba59c1a994"
+    },
+    {
+      "bbox": [
+        57.0,
+        128.4201202392578,
+        199.69125366210938,
+        190.06729125976562
+      ],
+      "block_id": "page-1205-block-0004",
+      "order": 4,
+      "text": "133, 148, 851-852, 876t, 877,\n884, 969, 1446-1447, 1451\nglucocorticoïdes, 1125\nionotropes, 117, 119f, 120\nmétabotropes, 117-120, 123, 125,\n",
+      "text_sha256": "3546155824be43c0bffc90c6120cb9354cf0144012e1109aab9455a153c29205"
+    },
+    {
+      "bbox": [
+        57.0,
+        190.97012329101562,
+        196.12887573242188,
+        215.06729125976562
+      ],
+      "block_id": "page-1205-block-0005",
+      "order": 5,
+      "text": "127, 129-130, 134\nnoradrénergiques, 113, 117, 123,\n",
+      "text_sha256": "94edba40e5e5460fa2f9015f54725fb317202a44b5bf9f9335f6018c2cb6de16"
+    },
+    {
+      "bbox": [
+        57.0,
+        216.02012634277344,
+        190.57957458496094,
+        240.11729431152344
+      ],
+      "block_id": "page-1205-block-0006",
+      "order": 6,
+      "text": "129, 135, 1482\nopioïdes, 375, 493, 506, 525, 552,\n",
+      "text_sha256": "f86f3037819284577b3ee7a6115a1b4e5bfb6064961ad120db7dd58541c258af"
+    },
+    {
+      "bbox": [
+        57.0,
+        241.02012634277344,
+        206.86334228515625,
+        277.66729736328125
+      ],
+      "block_id": "page-1205-block-0007",
+      "order": 7,
+      "text": "556, 568, 573, 851, 865, 875-877,\n896, 897, 898, 900-901, 1495\nsérotoninergiques, 127, 135, 148,\n",
+      "text_sha256": "7dfde96a15f259d7fdd5797daa8346c369d161cd19bebec56f627fe538512bb6"
+    },
+    {
+      "bbox": [
+        48.0,
+        278.57012939453125,
+        204.57521057128906,
+        327.71728515625
+      ],
+      "block_id": "page-1205-block-0008",
+      "order": 8,
+      "text": "338, 699, 876, 894, 1125, 1381,\n1447, 1455, 1464-1465, 1471,\n1484, 1490, 1493, 1514\nrééducation\n",
+      "text_sha256": "3db2c1078ada25f380e3b96685be2d1928b3347665a302db690f6f0488715714"
+    },
+    {
+      "bbox": [
+        57.0,
+        328.6201171875,
+        200.32508850097656,
+        352.71728515625
+      ],
+      "block_id": "page-1205-block-0009",
+      "order": 9,
+      "text": "orthophonique, 1344\nrespiratoire, 442, 444, 1619, 1624,\n",
+      "text_sha256": "4e0c59582694c9d76ab99c2366352800f12bb78d591eaaacd7f0d1ae67bb7501"
+    },
+    {
+      "bbox": [
+        48.0,
+        353.6201171875,
+        192.23350524902344,
+        402.7673034667969
+      ],
+      "block_id": "page-1205-block-0010",
+      "order": 10,
+      "text": "1661\nréévaluation, 1617\nreectoporn, 813\nréformes (en santé mentale), 993-\n",
+      "text_sha256": "5878359952ef1a0e7ca1dd6cabbd6470f1a121afcda604bd1f2cc33a0aa000cc"
+    },
+    {
+      "bbox": [
+        48.0,
+        403.4445495605469,
+        193.81394958496094,
+        427.7673034667969
+      ],
+      "block_id": "page-1205-block-0011",
+      "order": 11,
+      "text": "996, 1066-1083\nrefoulement, 219, 511-512, 514, 674,\n",
+      "text_sha256": "975337b31e8935f285fab973e1ab1537de9ff86005b42ec1dea22ace62fbd16d"
+    },
+    {
+      "bbox": [
+        48.0,
+        428.7201232910156,
+        206.56761169433594,
+        452.8172912597656
+      ],
+      "block_id": "page-1205-block-0012",
+      "order": 12,
+      "text": "1589, 1590-1591t, 1597, 1796-1597\nrégimes de protection, 1168, 1171-\n",
+      "text_sha256": "0f1ca54af6bedd6bb391a504586a58807c844b35e6d2473eea97456b26b60ede"
+    },
+    {
+      "bbox": [
+        48.0,
+        453.4945373535156,
+        195.9280548095703,
+        490.3672790527344
+      ],
+      "block_id": "page-1205-block-0013",
+      "order": 13,
+      "text": "1173\nrégions sous-corticales, 552\nrégression, 218, 275, 282, 306, 328,\n",
+      "text_sha256": "34cc95748124dd60b0c2600e9c3c1114c3ad6972c4e6773b5b9456be1cdfb023"
+    },
+    {
+      "bbox": [
+        48.0,
+        491.2701110839844,
+        197.87245178222656,
+        527.8673095703125
+      ],
+      "block_id": "page-1205-block-0014",
+      "order": 14,
+      "text": "400t, 450, 522, 670, 1358-1359,\n1583\nréinsertion, 274, 282, 330, 367-368,\n",
+      "text_sha256": "ffd561cf68a140f56ec7bffb86d0ffc109c016494ae2f4ef06519763e8e655dc"
+    },
+    {
+      "bbox": [
+        48.0,
+        528.8201293945312,
+        205.8753662109375,
+        565.4172973632812
+      ],
+      "block_id": "page-1205-block-0015",
+      "order": 15,
+      "text": "921, 994, 1021, 1074, 1693, 1699,\n1767-1785\nrejet, 283, 476, 1280, 1320, 1782, voir\n",
+      "text_sha256": "7b0f162fedecdcc3d1d8c77f8cb0373765edea7930d27388d9836c4d8165c1e6"
+    },
+    {
+      "bbox": [
+        48.0,
+        566.3201293945312,
+        142.44898986816406,
+        615.46728515625
+      ],
+      "block_id": "page-1205-block-0016",
+      "order": 16,
+      "text": "aussi exclusion\nparental, 1365-1366\nsocial, 420\nrelation(s)\n",
+      "text_sha256": "3665b00ec46b2a74370585f6322beb839a0bf087e9e1506433440860b61c2e82"
+    },
+    {
+      "bbox": [
+        57.0,
+        616.3701171875,
+        186.3992462158203,
+        703.0673217773438
+      ],
+      "block_id": "page-1205-block-0017",
+      "order": 17,
+      "text": "aectives, 1126\nd’objet, 932, 1594-1596, 1595f\nde collaboration, 1114, 1616\nde contrôle, 1114\nde travail, 267-268\nempathique, 1570\ninterpersonnelles, 1023, 1333-\n",
+      "text_sha256": "e6d1c0371b29630d716d39709268152a99c7cd0dcd0ce583c8dd96b9adcbf5a2"
+    },
+    {
+      "bbox": [
+        75.0,
+        703.9701538085938,
+        124.5989990234375,
+        715.5673217773438
+      ],
+      "block_id": "page-1205-block-0018",
+      "order": 18,
+      "text": "1335t, 1409\n",
+      "text_sha256": "f86c771602ce5ea68e6ef8290e6f8db5c33691230f50aa536d09fc7cdf1f57eb"
+    },
+    {
+      "bbox": [
+        228.0,
+        40.82011795043945,
+        363.41094970703125,
+        64.96728515625
+      ],
+      "block_id": "page-1205-block-0019",
+      "order": 19,
+      "text": "médecin-malade, 545\nmédecin-patient, 22-34, 36, 38,\n",
+      "text_sha256": "c4762c98bddcc6a5c5a98689bb87da3b26a51aa157d3a2616cd59d4d2cbe8bfd"
+    },
+    {
+      "bbox": [
+        237.0,
+        65.8701171875,
+        345.7275085449219,
+        89.90943145751953
+      ],
+      "block_id": "page-1205-block-0020",
+      "order": 20,
+      "text": "1008, 1221\nthérapie motivationnelle\n",
+      "text_sha256": "0bb8774f4180a4c486061bc2ad762d18c5d2eb58854bd2aaac309c928bc29f6d"
+    },
+    {
+      "bbox": [
+        228.0,
+        91.90943908691406,
+        359.375,
+        127.51728820800781
+      ],
+      "block_id": "page-1205-block-0021",
+      "order": 21,
+      "text": "et __, 1708\nmère-enfant, 792\nparent-enfant, 514, 1027-1028,\n",
+      "text_sha256": "34d49f37567f25cc05ff1e532cad866c1a2f72be7a5648cd3128e3920578a149"
+    },
+    {
+      "bbox": [
+        228.0,
+        128.4201202392578,
+        354.31402587890625,
+        177.56729125976562
+      ],
+      "block_id": "page-1205-block-0022",
+      "order": 22,
+      "text": "1126, 1291, 1299\npère-enfant, 239, 792\npsychiatre-patient, 1202\nsexuelles, 750-783, voir aussi\n",
+      "text_sha256": "ae4a60d91b32e0fe3ec19570ca927aa2d2a585b5d03d86d1d95737092cd57f32"
+    },
+    {
+      "bbox": [
+        228.0,
+        178.47012329101562,
+        360.0438232421875,
+        202.56729125976562
+      ],
+      "block_id": "page-1205-block-0023",
+      "order": 23,
+      "text": "paraphilies\nsociales, 86, 251, 285, 328, 348,\n",
+      "text_sha256": "67990db5e596f440a644a8a9f3225c4f8fbcb28776a91b62bb7220d4c85ed3a0"
+    },
+    {
+      "bbox": [
+        228.0,
+        203.47012329101562,
+        377.0976867675781,
+        240.11729431152344
+      ],
+      "block_id": "page-1205-block-0024",
+      "order": 24,
+      "text": "408, 479, 484, 846, 1184, 1333-\n1335t, 1608, 1735\nthérapeutique, 21-34, 1572-1573,\n",
+      "text_sha256": "11ee08c5fd98c6cb57e49b09917c1fb6b39749ecc6c7b2fb0f3e37e7aa0e00e8"
+    },
+    {
+      "bbox": [
+        228.0,
+        241.02012634277344,
+        360.10052490234375,
+        265.1172790527344
+      ],
+      "block_id": "page-1205-block-0025",
+      "order": 25,
+      "text": "1740\ntransfert/contre-transfert, 252,\n",
+      "text_sha256": "cd557c0bcc75f0c9cf817d21927c07299838d6943b8266bc3c8b378da6e475a7"
+    },
+    {
+      "bbox": [
+        219.0,
+        266.07012939453125,
+        370.9102783203125,
+        315.16729736328125
+      ],
+      "block_id": "page-1205-block-0026",
+      "order": 26,
+      "text": "950\nurogénitales, 753\nrelativisme, 283\nrelaxation, 485, 547, 576, 732, 1164,\n",
+      "text_sha256": "b2b9d6d052ac8f907a97386b1cf8366c940759e97130cd9c97359bdc9c167ab8"
+    },
+    {
+      "bbox": [
+        228.0,
+        315.89453125,
+        354.2691650390625,
+        352.71728515625
+      ],
+      "block_id": "page-1205-block-0027",
+      "order": 27,
+      "text": "1751-1756\nentraînement à la __, 1619\nmusculaire progressive, 1751,\n",
+      "text_sha256": "3d1a97adb59769b7d9231b3df9beb51193e043113ab82d77d4bcdef228eb7397"
+    },
+    {
+      "bbox": [
+        219.0,
+        353.6201171875,
+        369.55999755859375,
+        390.2673034667969
+      ],
+      "block_id": "page-1205-block-0028",
+      "order": 28,
+      "text": "1753\npersonnes âgées et __, 1392\nremédiation cognitive, 1667-1679,\n",
+      "text_sha256": "9f190d0de9993354a30d3dce248529d703660b9ce4e4ba01d23f0ab7fafb4023"
+    },
+    {
+      "bbox": [
+        219.0,
+        391.1701354980469,
+        363.49566650390625,
+        427.7673034667969
+      ],
+      "block_id": "page-1205-block-0029",
+      "order": 29,
+      "text": "1779-1780\npersonnes âgées et __, 1392\nréminiscences, 493, 497, 499, 504,\n",
+      "text_sha256": "2555f9e87897d3ed9219b3abe97e6984572e4cfda897a7cb621f5cd05bdd4f93"
+    },
+    {
+      "bbox": [
+        219.0,
+        428.7201232910156,
+        375.9930114746094,
+        452.8172912597656
+      ],
+      "block_id": "page-1205-block-0030",
+      "order": 30,
+      "text": "520, 522, 526, 894\nremords, 50t, 55, 829, 831, 940t, 946,\n",
+      "text_sha256": "6263e2cb130e15513f15c011cc0e79274439430ad0bde6394b227732fca2c955"
+    },
+    {
+      "bbox": [
+        219.0,
+        453.7201232910156,
+        376.6012268066406,
+        477.8172912597656
+      ],
+      "block_id": "page-1205-block-0031",
+      "order": 31,
+      "text": "1140t, 1148, 1281t, 1314, 1323\nrencontre de verbalisation d’émotion\n",
+      "text_sha256": "574aa18f41374e0ae9cb281abe13f8b05b889dc7f0c467a835bf7c6a97facdd8"
+    },
+    {
+      "bbox": [
+        219.0,
+        478.7701110839844,
+        327.57574462890625,
+        502.8672790527344
+      ],
+      "block_id": "page-1205-block-0032",
+      "order": 32,
+      "text": "(debrieng), 508\nrenforcement, 1613-1615\n",
+      "text_sha256": "0ed33fd3106220db3a4d333a48777c6ccba12419a49cc86ed0d8d8c05ec2c364"
+    },
+    {
+      "bbox": [
+        219.0,
+        503.7701416015625,
+        363.1483459472656,
+        552.9172973632812
+      ],
+      "block_id": "page-1205-block-0033",
+      "order": 33,
+      "text": "négatif, 1260f, 1613, 1628\npositif, 1260f, 1324, 1613, 1628\nrentabilité, 996\nrépartition des tâches (de l’équipe\n",
+      "text_sha256": "df5a726042566c36f00592328eb1dcce4109e56130d0d62230e53317e9465e74"
+    },
+    {
+      "bbox": [
+        219.0,
+        553.8201293945312,
+        352.75030517578125,
+        590.46728515625
+      ],
+      "block_id": "page-1205-block-0034",
+      "order": 34,
+      "text": "interdisciplinaire), 982-983\nrepérage proactif, 922\nréponse\n",
+      "text_sha256": "3e148e04221e9832b3e87263d60c4dda38d3f6b0f9c7de0fac3c2f88fcc74fa8"
+    },
+    {
+      "bbox": [
+        219.0,
+        591.3701171875,
+        362.04901123046875,
+        703.0673217773438
+      ],
+      "block_id": "page-1205-block-0035",
+      "order": 35,
+      "text": "aective, 1732\ncognitive, 1641\nmotrice, 1641\nopérante, 1629\nphysiologique, 1641\nsexuelle, 756-759, 757f\nreprésentation, 206, 1588\nrépression, 282, 661t, 1590t, 1797\nréseau(x), 996-1001\n",
+      "text_sha256": "17579144c3ec76da1fbacc3a4a29321840b7612a3d9e30a4363e3168aa0b2740"
+    },
+    {
+      "bbox": [
+        228.0,
+        703.9701538085938,
+        373.11663818359375,
+        715.5673217773438
+      ],
+      "block_id": "page-1205-block-0036",
+      "order": 36,
+      "text": "de soutien, 1085-1085, 1465, 1777\n",
+      "text_sha256": "ce602b8235d497f4ebaae9e8d7b464724518e18aa6ccfffed48a7f6d3eaa0b95"
+    },
+    {
+      "bbox": [
+        399.0,
+        40.82011795043945,
+        538.1099243164062,
+        52.41728591918945
+      ],
+      "block_id": "page-1205-block-0037",
+      "order": 37,
+      "text": "sociaux, 230f, 266, 527, 800, 845,\n",
+      "text_sha256": "08e318848b1e735c7a153c7e000e06cd53015057956179356092e0d906cf725a"
+    },
+    {
+      "bbox": [
+        390.0,
+        53.3701171875,
+        530.6751708984375,
+        77.46728515625
+      ],
+      "block_id": "page-1205-block-0038",
+      "order": 38,
+      "text": "993, 996\nrésidences de type familial, 1026,\n",
+      "text_sha256": "29874ef32219176ca79131a98cb3a08b0624307c6e52b91b20e316d07c34d60a"
+    },
+    {
+      "bbox": [
+        390.0,
+        78.3701171875,
+        428.7554931640625,
+        102.46728515625
+      ],
+      "block_id": "page-1205-block-0039",
+      "order": 39,
+      "text": "1393\nrésidents\n",
+      "text_sha256": "ae2e5d9bf2e9e9149b1b9ef4c06c89153794caf4766fb05fde39651bd3b0056a"
+    },
+    {
+      "bbox": [
+        390.0,
+        103.42012023925781,
+        530.6929931640625,
+        127.51728820800781
+      ],
+      "block_id": "page-1205-block-0040",
+      "order": 40,
+      "text": "formation des __, 1008-1010\nrésilience, 68, 69t, 195, 196t, 230,\n",
+      "text_sha256": "2d841dcc14dce03c952bc22ba5f0237f1768921d38946e15b0f7068c02af8142"
+    },
+    {
+      "bbox": [
+        390.0,
+        128.4201202392578,
+        547.3113403320312,
+        190.06729125976562
+      ],
+      "block_id": "page-1205-block-0041",
+      "order": 41,
+      "text": "239, 242, 473, 477, 487, 791, 934,\n1133, 1791t\nen n de vie, 1036\nvieillissement et __, 1385\nrésistance, 1578\n",
+      "text_sha256": "a6bd272b2e960f2fc406e633eb36640289633692af6daae73ba67b2b0511080b"
+    },
+    {
+      "bbox": [
+        390.0,
+        190.97012329101562,
+        532.66552734375,
+        240.11729431152344
+      ],
+      "block_id": "page-1205-block-0042",
+      "order": 42,
+      "text": "au stress, 232, 366\naux traitements, 147, 378, 1107\nresocialisation, 282\nrésolution de problème, 85t, 229-\n",
+      "text_sha256": "30c5bdcf4d17f30de789b48cf2274a528406ff45d2c538ef4593bf2c023c155f"
+    },
+    {
+      "bbox": [
+        390.0,
+        241.02012634277344,
+        545.3113403320312,
+        277.66729736328125
+      ],
+      "block_id": "page-1205-block-0043",
+      "order": 43,
+      "text": "230, 238, 479, 603t, 700, 1637-\n1639, 1647, 1650, 1731\nrespect, 214, 230, 241, 804, 951, 998,\n",
+      "text_sha256": "ec0acaf6fac2270713d0531ebd84753d6d0fe86dc95279b60976166808fcc009"
+    },
+    {
+      "bbox": [
+        399.0,
+        278.57012939453125,
+        544.6167602539062,
+        315.16729736328125
+      ],
+      "block_id": "page-1205-block-0044",
+      "order": 44,
+      "text": "1000-1001, 1636\nde l’humanité, 1201\ndes intentions d’un patient inapte,\n",
+      "text_sha256": "5c4e21f8a53809ff95edf7bf2142ebc0f78ba593f0bf2e517455416a1ff2a1d2"
+    },
+    {
+      "bbox": [
+        390.0,
+        316.1201171875,
+        540.1355590820312,
+        340.21728515625
+      ],
+      "block_id": "page-1205-block-0045",
+      "order": 45,
+      "text": "1202\nrespiration diaphragmatique, 1619,\n",
+      "text_sha256": "e430564cfebe4fa87e6ece7e3dc5f7baad2f18a9a83e8ff8a93d175dc9585e62"
+    },
+    {
+      "bbox": [
+        390.0,
+        341.1201171875,
+        545.7120971679688,
+        365.21728515625
+      ],
+      "block_id": "page-1205-block-0046",
+      "order": 46,
+      "text": "1754-1755\nresponsabilisation, 80, 282, 836, 924,\n",
+      "text_sha256": "6985d139d382d2e6222dfdf5699e2b0e19eca20ae4e203058e25f9bf8627d1dc"
+    },
+    {
+      "bbox": [
+        390.0,
+        366.1201171875,
+        533.6661987304688,
+        390.2673034667969
+      ],
+      "block_id": "page-1205-block-0047",
+      "order": 47,
+      "text": "1079t, 1109, 1197, 1616, 1773\nresponsabilité, 1182-1184, 1202\n",
+      "text_sha256": "2525feeaa30e3971424d45169fa52889769640a1aa916ac9d4d4aeae8185fd32"
+    },
+    {
+      "bbox": [
+        399.0,
+        391.1701354980469,
+        548.6759033203125,
+        415.2673034667969
+      ],
+      "block_id": "page-1205-block-0048",
+      "order": 48,
+      "text": "civile, 1182-1183\ncriminelle, 1189, 1192-1193, voir aussi\n",
+      "text_sha256": "a982d568b63a7eb2556a9d29ab822a7472a36d83603ba03b0780be712d343fae"
+    },
+    {
+      "bbox": [
+        390.0,
+        416.1701354980469,
+        539.5325317382812,
+        490.3672790527344
+      ],
+      "block_id": "page-1205-block-0049",
+      "order": 49,
+      "text": "non-responsabilité criminelle\ndéontologique, 1183-1184\nlégale, 1182\nmédicale, 984-985\nprofessionnelle, 984-985\nrestriction ou évitement de l’inges-\n",
+      "text_sha256": "8b28564688b29065c3094d047cd02d25d42ea3790e92b19756fa4a753598dc4c"
+    },
+    {
+      "bbox": [
+        390.0,
+        491.2701110839844,
+        536.3690185546875,
+        515.3673095703125
+      ],
+      "block_id": "page-1205-block-0050",
+      "order": 50,
+      "text": "tion d’aliments, 705, 706t, 707\nrestriction physique, 1262, voir\n",
+      "text_sha256": "de7362b1344438d431e5788fcdec775487ad96dc1fefb924fed01da70fa977a5"
+    },
+    {
+      "bbox": [
+        390.0,
+        516.2701416015625,
+        547.9336547851562,
+        552.9172973632812
+      ],
+      "block_id": "page-1205-block-0051",
+      "order": 51,
+      "text": "contention\nrestructuration cognitive, 1614, 1647\nrésumé, 18, 27, 41t, 68, 76, 1712-\n",
+      "text_sha256": "dc7a836a6e9fe48e0836605135af835b580be00b1d38dbe672442a56f26e48d5"
+    },
+    {
+      "bbox": [
+        390.0,
+        553.8201293945312,
+        538.1600341796875,
+        577.9172973632812
+      ],
+      "block_id": "page-1205-block-0052",
+      "order": 52,
+      "text": "1714\nrétablissement, 1768-1785, 1772t,\n",
+      "text_sha256": "3029e46dc498dcbb231e6dbba69e7bf7cc3928ecf7a4cbd6eb51cef7c8141b2d"
+    },
+    {
+      "bbox": [
+        390.0,
+        578.8701171875,
+        431.3484802246094,
+        602.96728515625
+      ],
+      "block_id": "page-1205-block-0053",
+      "order": 53,
+      "text": "1773f\nretard\n",
+      "text_sha256": "53c5116d7833c072fcdbe77acf35d5a3f21477753e19bd0618bbf3cef6d0890d"
+    },
+    {
+      "bbox": [
+        399.0,
+        603.8701171875,
+        535.342529296875,
+        615.46728515625
+      ],
+      "block_id": "page-1205-block-0054",
+      "order": 54,
+      "text": "global du développement, 1243,\n",
+      "text_sha256": "e7fe55a82a18068e294f29eece363bdcf77e35b1f6ea4ec0949079bbd6cf15f4"
+    },
+    {
+      "bbox": [
+        399.0,
+        616.3701171875,
+        547.4325561523438,
+        640.46728515625
+      ],
+      "block_id": "page-1205-block-0055",
+      "order": 55,
+      "text": "1249\nmental, voir trouble du développe-\n",
+      "text_sha256": "3418d7ae64a4665899b9c0275b47b87b77bd639c4b8309ab8eeb70ece75973a9"
+    },
+    {
+      "bbox": [
+        390.0,
+        641.4201049804688,
+        489.46343994140625,
+        665.5172729492188
+      ],
+      "block_id": "page-1205-block-0056",
+      "order": 56,
+      "text": "ment intellectuel\nretrait\n",
+      "text_sha256": "f0c1af870ae077edcdc818fb7b6605ac25bbebecacf31cc1920f71071eff0bc7"
+    },
+    {
+      "bbox": [
+        399.0,
+        666.4201049804688,
+        531.3921508789062,
+        703.0673217773438
+      ],
+      "block_id": "page-1205-block-0057",
+      "order": 57,
+      "text": "autistique, 1594t\nde stimuli, 1262\nsocial, 344, 396, 481-482, 1387,\n",
+      "text_sha256": "ac7181275131e8721342260352b4a1f0cfb34151ece128de8ba6c9547bc8502a"
+    },
+    {
+      "bbox": [
+        417.0,
+        703.9701538085938,
+        514.0642700195312,
+        715.5673217773438
+      ],
+      "block_id": "page-1205-block-0058",
+      "order": 58,
+      "text": "1404, 1418, 1676, 1772\n",
+      "text_sha256": "e1a9bbdd8adfca34568ffc27012dae88eb77e7bd7b0ac380a0ba58addcf754ac"
+    }
+  ],
+  "coordinates_sha256": "159a14f60d4ac0d9d6b79f298f6be2bbfc6cc018bfe897aea459f74e71a7deec",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1205",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "I44\nIndex\nde type stéroïdien, 120\ndes glucocorticoïdes, 189f\ndopaminergiques, 113, 125,\n128-129, 147, 699, 851-852,\n876-877, 897, 976, 1463-1465,\n1468, 1471-1475, 1483\nGABA, 117, 119, 125, 130-131,\n133, 148, 851-852, 876t, 877,\n884, 969, 1446-1447, 1451\nglucocorticoïdes, 1125\nionotropes, 117, 119f, 120\nmétabotropes, 117-120, 123, 125,\n127, 129-130, 134\nnoradrénergiques, 113, 117, 123,\n129, 135, 1482\nopioïdes, 375, 493, 506, 525, 552,\n556, 568, 573, 851, 865, 875-877,\n896, 897, 898, 900-901, 1495\nsérotoninergiques, 127, 135, 148,\n338, 699, 876, 894, 1125, 1381,\n1447, 1455, 1464-1465, 1471,\n1484, 1490, 1493, 1514\nrééducation\northophonique, 1344\nrespiratoire, 442, 444, 1619, 1624,\n1661\nréévaluation, 1617\nreectoporn, 813\nréformes (en santé mentale), 993-\n996, 1066-1083\nrefoulement, 219, 511-512, 514, 674,\n1589, 1590-1591t, 1597, 1796-1597\nrégimes de protection, 1168, 1171-\n1173\nrégions sous-corticales, 552\nrégression, 218, 275, 282, 306, 328,\n400t, 450, 522, 670, 1358-1359,\n1583\nréinsertion, 274, 282, 330, 367-368,\n921, 994, 1021, 1074, 1693, 1699,\n1767-1785\nrejet, 283, 476, 1280, 1320, 1782, voir\naussi exclusion\nparental, 1365-1366\nsocial, 420\nrelation(s)\naectives, 1126\nd’objet, 932, 1594-1596, 1595f\nde collaboration, 1114, 1616\nde contrôle, 1114\nde travail, 267-268\nempathique, 1570\ninterpersonnelles, 1023, 1333-\n1335t, 1409\nmédecin-malade, 545\nmédecin-patient, 22-34, 36, 38,\n1008, 1221\nthérapie motivationnelle\net __, 1708\nmère-enfant, 792\nparent-enfant, 514, 1027-1028,\n1126, 1291, 1299\npère-enfant, 239, 792\npsychiatre-patient, 1202\nsexuelles, 750-783, voir aussi\nparaphilies\nsociales, 86, 251, 285, 328, 348,\n408, 479, 484, 846, 1184, 1333-\n1335t, 1608, 1735\nthérapeutique, 21-34, 1572-1573,\n1740\ntransfert/contre-transfert, 252,\n950\nurogénitales, 753\nrelativisme, 283\nrelaxation, 485, 547, 576, 732, 1164,\n1751-1756\nentraînement à la __, 1619\nmusculaire progressive, 1751,\n1753\npersonnes âgées et __, 1392\nremédiation cognitive, 1667-1679,\n1779-1780\npersonnes âgées et __, 1392\nréminiscences, 493, 497, 499, 504,\n520, 522, 526, 894\nremords, 50t, 55, 829, 831, 940t, 946,\n1140t, 1148, 1281t, 1314, 1323\nrencontre de verbalisation d’émotion\n(debrieng), 508\nrenforcement, 1613-1615\nnégatif, 1260f, 1613, 1628\npositif, 1260f, 1324, 1613, 1628\nrentabilité, 996\nrépartition des tâches (de l’équipe\ninterdisciplinaire), 982-983\nrepérage proactif, 922\nréponse\naective, 1732\ncognitive, 1641\nmotrice, 1641\nopérante, 1629\nphysiologique, 1641\nsexuelle, 756-759, 757f\nreprésentation, 206, 1588\nrépression, 282, 661t, 1590t, 1797\nréseau(x), 996-1001\nde soutien, 1085-1085, 1465, 1777\nsociaux, 230f, 266, 527, 800, 845,\n993, 996\nrésidences de type familial, 1026,\n1393\nrésidents\nformation des __, 1008-1010\nrésilience, 68, 69t, 195, 196t, 230,\n239, 242, 473, 477, 487, 791, 934,\n1133, 1791t\nen n de vie, 1036\nvieillissement et __, 1385\nrésistance, 1578\nau stress, 232, 366\naux traitements, 147, 378, 1107\nresocialisation, 282\nrésolution de problème, 85t, 229-\n230, 238, 479, 603t, 700, 1637-\n1639, 1647, 1650, 1731\nrespect, 214, 230, 241, 804, 951, 998,\n1000-1001, 1636\nde l’humanité, 1201\ndes intentions d’un patient inapte,\n1202\nrespiration diaphragmatique, 1619,\n1754-1755\nresponsabilisation, 80, 282, 836, 924,\n1079t, 1109, 1197, 1616, 1773\nresponsabilité, 1182-1184, 1202\ncivile, 1182-1183\ncriminelle, 1189, 1192-1193, voir aussi\nnon-responsabilité criminelle\ndéontologique, 1183-1184\nlégale, 1182\nmédicale, 984-985\nprofessionnelle, 984-985\nrestriction ou évitement de l’inges-\ntion d’aliments, 705, 706t, 707\nrestriction physique, 1262, voir\ncontention\nrestructuration cognitive, 1614, 1647\nrésumé, 18, 27, 41t, 68, 76, 1712-\n1714\nrétablissement, 1768-1785, 1772t,\n1773f\nretard\nglobal du développement, 1243,\n1249\nmental, voir trouble du développe-\nment intellectuel\nretrait\nautistique, 1594t\nde stimuli, 1262\nsocial, 344, 396, 481-482, 1387,\n1404, 1418, 1676, 1772\n",
+  "raw_text_sha256": "0b3c14e6f386054a4087e4fc7145c150c1fd90bf564bf1f162e7f384d2b49e97",
+  "source_page_display": 1206,
+  "source_page_index": 1205
+}

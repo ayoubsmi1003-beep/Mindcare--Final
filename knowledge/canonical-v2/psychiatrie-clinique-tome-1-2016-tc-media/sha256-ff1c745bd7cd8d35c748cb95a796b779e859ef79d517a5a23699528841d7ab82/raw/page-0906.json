@@ -1,0 +1,220 @@
+{
+  "block_sequence_sha256": "96395ab1d0d36152a5832ac77912adc2e8321fe6d9c8bfcfb6acd489b1a66471",
+  "blocks": [
+    {
+      "bbox": [
+        402.45001220703125,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0906-block-0001",
+      "order": 1,
+      "text": "Chapitre 38\nToxicomanies\n889\n",
+      "text_sha256": "e55b2a841739226cef4330f053f71f14021497c81d5398f1a86105031777e9a2"
+    },
+    {
+      "bbox": [
+        312.0,
+        401.352294921875,
+        555.6185302734375,
+        705.45849609375
+      ],
+      "block_id": "page-0906-block-0002",
+      "order": 2,
+      "text": "Sevrage\nLa prise régulière de petites doses de benzodiazépines, même sur\nune longue période, peut être cessée sans hospitalisation en dimi-\nnuant graduellement les doses. Ce sevrage s’eectue sur plusieurs\nsemaines ou plusieurs mois (p. ex., réduction de 5 à 10 % de la dose\ninitiale par semaine). Dans certains cas, l’arrêt de l’emploi régulier de\nfortes doses d’anxiolytiques peut entraîner de l’anxiété grave, de la\nconfusion, de l’agitation et des convulsions ; le sevrage nécessite alors\nune hospitalisation. Le traitement consiste à utiliser une molécule\nde la même classe que celle qui a fait l’objet de l’abus (benzodiazé-\npines ou barbituriques), mais possédant une longue durée d’action\n(p. ex., le diazépam ou le urazépam). La posologie de départ se\ncalcule à l’aide de tables d’équivalence (voir le tableau 38.11) et\ndoit être ajustée selon les quantités consommées, de même que la\ntolérance du patient. Il faut noter que les équivalences ne font pas\nl’unanimité parmi les laboratoires ayant étudié les caractéristiques\npharmacocinétiques de ce type de molécules ; par conséquent,\nle calcul d’équivalence doit se faire en prenant en considération\ncette variabilité. Le but est d’enrayer les signes ou les symptômes\nde sevrage, tout en évitant l’intoxication. Une fois déterminée la\nposologie de stabilisation, elle est maintenue pendant environ 48\nheures. Si le sevrage doit être achevé rapidement, la désintoxica-\ntion ou la réduction progressive de la médication s’accomplit en\ndiminuant la dose initiale par tranche maximale de 10 à 15 % par\njour. Le rythme du processus de diminution peut être ajusté s’il y a\napparition de symptômes signicatifs de sevrage ou d’intoxication.\n",
+      "text_sha256": "9dfabc7f855217c75b47640389ab55c93e26028417532a9ebcbad0d51715c12b"
+    },
+    {
+      "bbox": [
+        54.0,
+        401.352294921875,
+        297.3734436035156,
+        705.45849609375
+      ],
+      "block_id": "page-0906-block-0003",
+      "order": 3,
+      "text": "Intoxication\nL’intoxication est caractérisée par l’anesthésie, un coma, ainsi\nque des troubles respiratoires et cardiaques. La durée des symp-\ntômes dépend de la durée de vie des substances en cause. Le\ntraitement consiste :\n• à surveiller et maintenir la ventilation et la circulation ;\n• à eectuer un lavage gastrique si les absorptions sont récentes\n(une heure et moins) ;\n• à administrer du charbon de bois activé après le lavage\ngastrique ;\n• à alcaliniser les urines dans le cas d’intoxication au phéno-\nbarbital ;\n• à administrer du umazémil (AnexateMD), un antagoniste des\nbenzodiazépines, à utiliser dans certains cas graves (en doses\nintraveineuses progressives de 0,2 mg, 0,3 mg puis 0,5 mg,\npouvant être administrées toutes les 30 secondes jusqu’à l’eet\ndésiré, pour un maximum de 5 mg).\nLe traitement du delirium d’intoxication est non pharmaco-\nlogique. Il exige l’observation du patient dans un milieu protégé\npour éviter qu’il ne se blesse. Ce tableau est habituellement de\ncourte durée, mais il peut se prolonger pendant des semaines\nchez les personnes âgées. Ces intoxications peuvent aussi\nentraîner un tableau de dépression de courte durée. Le risque\nsuicidaire doit être évalué et l’hospitalisation est parfois\nnécessaire.\n",
+      "text_sha256": "37de1dba01b995553dff63977fddc7c2b1bfa166b5a8995fe520dc21d2201308"
+    },
+    {
+      "bbox": [
+        56.20000076293945,
+        41.002296447753906,
+        441.3930969238281,
+        53.320068359375
+      ],
+      "block_id": "page-0906-block-0004",
+      "order": 4,
+      "text": "TABLEAU 38.8 Critères diagnostiques de l’intoxication à un sédatif, hypnotique ou anxiolytique\n",
+      "text_sha256": "bf21c1825a543e97d99fec31df998c6941bf13952a57f11c9a1e1fd2c248b5ff"
+    },
+    {
+      "bbox": [
+        217.40000915527344,
+        60.67412567138672,
+        500.28802490234375,
+        71.25029754638672
+      ],
+      "block_id": "page-0906-block-0005",
+      "order": 5,
+      "text": "DSM-5\nDSM-IV-TR\n",
+      "text_sha256": "67d368c78be7842a2bc99b149901566bcadf3c9d62623ea48bafcc32b3563ffb"
+    },
+    {
+      "bbox": [
+        112.3499984741211,
+        76.72285461425781,
+        529.7520141601562,
+        95.74238586425781
+      ],
+      "block_id": "page-0906-block-0006",
+      "order": 6,
+      "text": "292.89 (F13.0x) Intoxication à un sédatif, hypnotique ou anxiolytique\nIntoxication aux sédatifs,\nhypnotiques et anxiolytiques\n",
+      "text_sha256": "9a72b9cb12bf3897a2eb026e81177727cc5751ec81810a53ce42e08d09ef9468"
+    },
+    {
+      "bbox": [
+        58.150001525878906,
+        101.80195617675781,
+        458.447998046875,
+        111.62812805175781
+      ],
+      "block_id": "page-0906-block-0007",
+      "order": 7,
+      "text": "A. Usage récent d’un sédatif, hypnotique ou anxiolytique.\nIdem à DSM-5.\n",
+      "text_sha256": "a32911c2c18414f58533f99dcc47d0444ced30960101f2efd2da5afbbaf266d1"
+    },
+    {
+      "bbox": [
+        58.150001525878906,
+        120.20195007324219,
+        396.5560607910156,
+        130.0281219482422
+      ],
+      "block_id": "page-0906-block-0008",
+      "order": 8,
+      "text": "B. Changements comportementaux ou psychologiques inadaptés, cliniquement signicatifs, par exemple :\n",
+      "text_sha256": "be79048e3decf366ebdfc9ccf37f940c841f11693364674b3071d201e3c6cf12"
+    },
+    {
+      "bbox": [
+        58.150001525878906,
+        131.2019500732422,
+        368.2874450683594,
+        184.0281219482422
+      ],
+      "block_id": "page-0906-block-0009",
+      "order": 9,
+      "text": "• comportement sexuel ou agressivité inappropriée ;\n• labilité de l’humeur ;\n• altération du jugement.\n[Ces changements] se sont développés pendant ou peu après l’usage d’un sédatif, hypnotique ou\nanxiolytique.\n",
+      "text_sha256": "ff098fc40fae7668a74544fe6dceefabbc2bf3747537ddb85db69bbab0613cdf"
+    },
+    {
+      "bbox": [
+        409.6499938964844,
+        120.20195007324219,
+        458.447998046875,
+        130.0281219482422
+      ],
+      "block_id": "page-0906-block-0010",
+      "order": 10,
+      "text": "Idem à DSM-5.\n",
+      "text_sha256": "73e2b1c81f4b0cae397bef13680b1ec0f40f117881c7e4acde37a2d30a373dea"
+    },
+    {
+      "bbox": [
+        58.150001525878906,
+        192.65196228027344,
+        388.4212341308594,
+        202.47813415527344
+      ],
+      "block_id": "page-0906-block-0011",
+      "order": 11,
+      "text": "C. Au moins un des signes ou symptômes suivants, se développant pendant ou peu après l’usage d’un\n",
+      "text_sha256": "f864b76cee9b91bf843b5870acca28f2ae8b3528adb2e8608b1bd690350e1ec5"
+    },
+    {
+      "bbox": [
+        69.9000015258789,
+        202.65196228027344,
+        267.8394775390625,
+        278.4781188964844
+      ],
+      "block_id": "page-0906-block-0012",
+      "order": 12,
+      "text": "sédatif, d’un hypnotique ou d’un anxiolytique :\n1. Discours bredouillant.\n2. Incoordination motrice.\n3. Démarche ébrieuse.\n4. Nystagmus.\n5. Altération cognitive (p. ex. de l’attention ou de la mémoire).\n6. Stupeur ou coma.\n",
+      "text_sha256": "eeb04455c081c24b05393b8bbbb276945fb046ccbb9edd6e222d249d9c84a8f9"
+    },
+    {
+      "bbox": [
+        409.6499938964844,
+        192.65196228027344,
+        458.447998046875,
+        202.47813415527344
+      ],
+      "block_id": "page-0906-block-0013",
+      "order": 13,
+      "text": "Idem à DSM-5.\n",
+      "text_sha256": "73e2b1c81f4b0cae397bef13680b1ec0f40f117881c7e4acde37a2d30a373dea"
+    },
+    {
+      "bbox": [
+        58.150001525878906,
+        287.0519714355469,
+        383.2261657714844,
+        296.8781433105469
+      ],
+      "block_id": "page-0906-block-0014",
+      "order": 14,
+      "text": "D. Les signes et symptômes ne sont pas dus à une affection médicale générale, et ne sont pas mieux\n",
+      "text_sha256": "c16f00b519dd47499037a43a290cd8f4195711bf585cf6ebeb14b4d213364c02"
+    },
+    {
+      "bbox": [
+        69.30000305175781,
+        297.0519714355469,
+        340.0901794433594,
+        306.8781433105469
+      ],
+      "block_id": "page-0906-block-0015",
+      "order": 15,
+      "text": "expliqués par un autre trouble mental, dont une intoxication par une autre substance.\n",
+      "text_sha256": "a727643b8b25c4b020bdefd197072dd14269f3e1cfe9596d4f03d9ab6a0bbb47"
+    },
+    {
+      "bbox": [
+        409.6499938964844,
+        287.0519714355469,
+        458.447998046875,
+        296.8781433105469
+      ],
+      "block_id": "page-0906-block-0016",
+      "order": 16,
+      "text": "Idem à DSM-5.\n",
+      "text_sha256": "73e2b1c81f4b0cae397bef13680b1ec0f40f117881c7e4acde37a2d30a373dea"
+    },
+    {
+      "bbox": [
+        54.150001525878906,
+        315.640625,
+        554.0411376953125,
+        384.375
+      ],
+      "block_id": "page-0906-block-0017",
+      "order": 17,
+      "text": "Sources : APA (2015), p. 659 ; APA (2004), p. 332-333.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris,\n2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All\nrights reserved.\n",
+      "text_sha256": "5aa160fadb292b7452a9c5577224d04ce115e41ff3a072fce09d59d292992305"
+    }
+  ],
+  "coordinates_sha256": "b727fe434f0773fbfbdca6f7f9eec1ba8272434d3382e5055ef1fb379062afca",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0906",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 38\nToxicomanies\n889\nSevrage\nLa prise régulière de petites doses de benzodiazépines, même sur\nune longue période, peut être cessée sans hospitalisation en dimi-\nnuant graduellement les doses. Ce sevrage s’eectue sur plusieurs\nsemaines ou plusieurs mois (p. ex., réduction de 5 à 10 % de la dose\ninitiale par semaine). Dans certains cas, l’arrêt de l’emploi régulier de\nfortes doses d’anxiolytiques peut entraîner de l’anxiété grave, de la\nconfusion, de l’agitation et des convulsions ; le sevrage nécessite alors\nune hospitalisation. Le traitement consiste à utiliser une molécule\nde la même classe que celle qui a fait l’objet de l’abus (benzodiazé-\npines ou barbituriques), mais possédant une longue durée d’action\n(p. ex., le diazépam ou le urazépam). La posologie de départ se\ncalcule à l’aide de tables d’équivalence (voir le tableau 38.11) et\ndoit être ajustée selon les quantités consommées, de même que la\ntolérance du patient. Il faut noter que les équivalences ne font pas\nl’unanimité parmi les laboratoires ayant étudié les caractéristiques\npharmacocinétiques de ce type de molécules ; par conséquent,\nle calcul d’équivalence doit se faire en prenant en considération\ncette variabilité. Le but est d’enrayer les signes ou les symptômes\nde sevrage, tout en évitant l’intoxication. Une fois déterminée la\nposologie de stabilisation, elle est maintenue pendant environ 48\nheures. Si le sevrage doit être achevé rapidement, la désintoxica-\ntion ou la réduction progressive de la médication s’accomplit en\ndiminuant la dose initiale par tranche maximale de 10 à 15 % par\njour. Le rythme du processus de diminution peut être ajusté s’il y a\napparition de symptômes signicatifs de sevrage ou d’intoxication.\nIntoxication\nL’intoxication est caractérisée par l’anesthésie, un coma, ainsi\nque des troubles respiratoires et cardiaques. La durée des symp-\ntômes dépend de la durée de vie des substances en cause. Le\ntraitement consiste :\n• à surveiller et maintenir la ventilation et la circulation ;\n• à eectuer un lavage gastrique si les absorptions sont récentes\n(une heure et moins) ;\n• à administrer du charbon de bois activé après le lavage\ngastrique ;\n• à alcaliniser les urines dans le cas d’intoxication au phéno-\nbarbital ;\n• à administrer du umazémil (AnexateMD), un antagoniste des\nbenzodiazépines, à utiliser dans certains cas graves (en doses\nintraveineuses progressives de 0,2 mg, 0,3 mg puis 0,5 mg,\npouvant être administrées toutes les 30 secondes jusqu’à l’eet\ndésiré, pour un maximum de 5 mg).\nLe traitement du delirium d’intoxication est non pharmaco-\nlogique. Il exige l’observation du patient dans un milieu protégé\npour éviter qu’il ne se blesse. Ce tableau est habituellement de\ncourte durée, mais il peut se prolonger pendant des semaines\nchez les personnes âgées. Ces intoxications peuvent aussi\nentraîner un tableau de dépression de courte durée. Le risque\nsuicidaire doit être évalué et l’hospitalisation est parfois\nnécessaire.\nTABLEAU 38.8 Critères diagnostiques de l’intoxication à un sédatif, hypnotique ou anxiolytique\nDSM-5\nDSM-IV-TR\n292.89 (F13.0x) Intoxication à un sédatif, hypnotique ou anxiolytique\nIntoxication aux sédatifs,\nhypnotiques et anxiolytiques\nA. Usage récent d’un sédatif, hypnotique ou anxiolytique.\nIdem à DSM-5.\nB. Changements comportementaux ou psychologiques inadaptés, cliniquement signicatifs, par exemple :\n• comportement sexuel ou agressivité inappropriée ;\n• labilité de l’humeur ;\n• altération du jugement.\n[Ces changements] se sont développés pendant ou peu après l’usage d’un sédatif, hypnotique ou\nanxiolytique.\nIdem à DSM-5.\nC. Au moins un des signes ou symptômes suivants, se développant pendant ou peu après l’usage d’un\nsédatif, d’un hypnotique ou d’un anxiolytique :\n1. Discours bredouillant.\n2. Incoordination motrice.\n3. Démarche ébrieuse.\n4. Nystagmus.\n5. Altération cognitive (p. ex. de l’attention ou de la mémoire).\n6. Stupeur ou coma.\nIdem à DSM-5.\nD. Les signes et symptômes ne sont pas dus à une affection médicale générale, et ne sont pas mieux\nexpliqués par un autre trouble mental, dont une intoxication par une autre substance.\nIdem à DSM-5.\nSources : APA (2015), p. 659 ; APA (2004), p. 332-333.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris,\n2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All\nrights reserved.\n",
+  "raw_text_sha256": "437c04f53f4d1677dbf55dbfd7e245afa3d8827080c549a7f64c8eb472e5b43d",
+  "source_page_display": 907,
+  "source_page_index": 906
+}

@@ -1,0 +1,9 @@
+{
+  "outil": "activer-connaissance-taylor-v2.mjs",
+  "approbateur": "00000000-0000-0000-0000-0000000000e1",
+  "role_approbateur": "practitioner",
+  "source_id": "9c2fd184-297e-504e-8c95-ffd06896e420",
+  "chunker": "taylor-units-v2-candidate",
+  "chunks_actives": 9344,
+  "v1_reste_quarantaine": true
+}

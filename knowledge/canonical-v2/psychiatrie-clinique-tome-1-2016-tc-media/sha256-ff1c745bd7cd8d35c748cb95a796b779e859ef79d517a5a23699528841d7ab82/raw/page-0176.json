@@ -1,0 +1,172 @@
+{
+  "block_sequence_sha256": "ad8c1e5a88a6ff3ab9986d239b17d15b4f8197694e5a07de27a615392826f1a4",
+  "blocks": [
+    {
+      "bbox": [
+        307.1000061035156,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0176-block-0001",
+      "order": 1,
+      "text": "Chapitre 8\nPsychophysiologie et neuropsychologie\n159\n",
+      "text_sha256": "6149ffcb6ef446735f50ceb5e4bdc932b8deaeb6f5f018ca5730bfc22281292e"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.74531173706055,
+        295.0069885253906,
+        50.66816329956055
+      ],
+      "block_id": "page-0176-block-0002",
+      "order": 2,
+      "text": "8.6 \nÉmotions.......................................................................175\n",
+      "text_sha256": "0aa0d7214e62401f4d83688f0ef801af0ab69ac119686c9467dedfee33d1c907"
+    },
+    {
+      "bbox": [
+        54.0,
+        54.235939025878906,
+        295.0069885253906,
+        138.197265625
+      ],
+      "block_id": "page-0176-block-0003",
+      "order": 3,
+      "text": "8.6.1 \nSubstrats neurobiologiques liés aux émotions .... 176\n8.6.2 \nTroubles reliés au traitement des émotions..... 177\n8.7 \nMotricité.......................................................................178\n8.7.1 \nFonctions du cortex moteur primaire\net organisation somatotopique........................... 178\n8.7.2 \nFonctions du cortex prémoteur et sélection\ndu mouvement....................................................... 178\n",
+      "text_sha256": "1bab537e832bed68b5e28bbe302a0face2edcf3ad25c5e53e00ea6cd480ace49"
+    },
+    {
+      "bbox": [
+        78.0,
+        141.68594360351562,
+        295.0040283203125,
+        151.54727172851562
+      ],
+      "block_id": "page-0176-block-0004",
+      "order": 4,
+      "text": "8.7.3 \nFonctions du cervelet et apprentissage moteur... 179\n",
+      "text_sha256": "5bb2f85f67c22a07cc30fe46280eb206f7c9ce11b2aab228fd0c2a37d2144fa4"
+    },
+    {
+      "bbox": [
+        54.0,
+        155.0359344482422,
+        295.0069885253906,
+        265.697265625
+      ],
+      "block_id": "page-0176-block-0005",
+      "order": 5,
+      "text": "8.7.4 \nNoyaux gris centraux et modulation motrice...... 179\n8.7.5 \nFonctions de l’aire motrice supplémentaire\net exécution des mouvements............................. 180\n8.7.6 \nTroubles de la motricité....................................... 180\n8.8 \nLangage.........................................................................182\n8.8.1 \nFondements neuropsychologiques\ndu langage expressif et réceptif........................... 182\n8.8.2 \nAspects neurolinguistiques................................. 183\n8.8.3 \nTroubles du langage.............................................. 184\n",
+      "text_sha256": "ad3ce8b38e2fa5804f11d0b0f9234a42f7d02bf7399a2eaaa2ba6e9d98444401"
+    },
+    {
+      "bbox": [
+        312.0,
+        40.6953125,
+        553.0070190429688,
+        265.6181640625
+      ],
+      "block_id": "page-0176-block-0006",
+      "order": 6,
+      "text": "8.9 \nFonctions exécutives.................................................... 185\n8.9.1 \nOrganisation et planication .............................. 185\n8.9.2 \nFlexibilité mentale................................................. 186\n8.9.3 \nAbstraction............................................................. 186\n8.9.4 \nJugement ................................................................. 187\n8.9.5 \nAutocontrôle .......................................................... 188\n8.10 Hormones et stress ...................................................... 188\n8.10.1 Catégories d’hormones ........................................ 188\n8.10.2 Stress........................................................................ 188\n8.10.3 Axe hypothalamo-hypophyso-surrénalien....... 189\n8.10.4 Caractéristiques des glucocorticoïdes............... 189\n8.10.5 Méthodologie pour mesurer l’eet\ndes glucocorticoïdes sur la cognition................ 190\n8.10.6 \nGlucocorticoïdes et vieillissement diérentiel .... 190\n8.10.7 Modulation de la mémoire par les\nglucocorticoïdes chez les personnes âgées....... 190\n8.10.8 Glucocorticoïdes et mémoire ............................. 191\nLectures complémentaires .................................................... 193\n",
+      "text_sha256": "f865d8867ff5982ee8858121a3356e656af920cc8938b5f7b401f245d10879d9"
+    },
+    {
+      "bbox": [
+        323.95001220703125,
+        337.8931579589844,
+        427.91900634765625,
+        357.0689392089844
+      ],
+      "block_id": "page-0176-block-0007",
+      "order": 7,
+      "text": "8.1\nHistorique\n",
+      "text_sha256": "e02c0965e662bf0eb39559309c2750d9d1d61c0f10228ea78237fdf66335a7c7"
+    },
+    {
+      "bbox": [
+        312.0,
+        370.8658142089844,
+        555.3515014648438,
+        450.3584899902344
+      ],
+      "block_id": "page-0176-block-0008",
+      "order": 8,
+      "text": "An de bien comprendre les thèmes sous-jacents à la psycho-\nphysiologie et à la neuropsychologie, il convient d’établir leurs\nassises historiques. Comme toute approche historique, ce cha-\npitre n’a pas la prétention de tout couvrir de façon exhaustive\nni même d’être objectif, mais plutôt d’expliquer les fondements\npsychobiologiques de la psychopathologie et ainsi de faire des\nliens avec les approches en psychiatrie clinique moderne.\n",
+      "text_sha256": "4bf56a498782be9862fee50745bd1678c0cc7f835c5a6d9c318d22463a20b03b"
+    },
+    {
+      "bbox": [
+        312.0,
+        463.3868103027344,
+        479.14276123046875,
+        495.5293884277344
+      ],
+      "block_id": "page-0176-block-0009",
+      "order": 9,
+      "text": "8.1.1 \nDe l’Antiquité\nau Siècle des lumières\n",
+      "text_sha256": "4d9dffe79fdedd857798edfc32bc39676b936e4e7b82a8f605f3b6249044e836"
+    },
+    {
+      "bbox": [
+        312.0,
+        498.8658142089844,
+        555.3141479492188,
+        601.3585205078125
+      ],
+      "block_id": "page-0176-block-0010",
+      "order": 10,
+      "text": "Les racines profondes de la psychophysiologie cognitive et de\nla neuropsychologie remontent à l’Égypte ancienne puisque l’on\na découvert un traité hiéroglyphique de chirurgie remontant à\n3000 av. J.-C. (voir la gure 8.1). Découvert en 1882 et déchiré\nen 1930, cet ouvrage décrit 48 cas de blessures à la tête et au cou\net fait état des conséquences de ces atteintes cérébrales dans la\ncommande du mouvement ou de la parole (Changeux, 1983). Il\nconstitue à ce jour le compte rendu le plus ancien faisant référence\nau mot « cerveau » (les hiéroglyphes dans l’encadré).\n",
+      "text_sha256": "f0b8f95884c4bce82d30f39b6222acd225989c6ee1b743349c0217f969d02f3c"
+    },
+    {
+      "bbox": [
+        312.0,
+        602.3658447265625,
+        555.4067993164062,
+        681.8585205078125
+      ],
+      "block_id": "page-0176-block-0011",
+      "order": 11,
+      "text": "Pourtant, cette idée que le cerveau constitue l’organe qui\nassure le contrôle du corps était bien en avance sur son temps, car\npour les Hébreux, les Mésopotamiens et certains Grecs comme\nHomère, c’est le cœur qui était la source de nos sentiments et de\nnotre intelligence. Connue sous le nom de « cardiocentrisme »,\ncette approche philosophique était également défendue par\nAristote. Par contre, d’autres médecins de la Grèce antique,\n",
+      "text_sha256": "34c972df6a5d790fc8f65a201e79ef685615defbe095348ae6f06346b1711984"
+    },
+    {
+      "bbox": [
+        51.900001525878906,
+        328.49444580078125,
+        71.20710754394531,
+        375.32550048828125
+      ],
+      "block_id": "page-0176-block-0012",
+      "order": 12,
+      "text": "L\n",
+      "text_sha256": "610fb9a67aa23c84d6c820f52dc2b6c3f8119e52e7dcb9dfc490127d38eb733c"
+    },
+    {
+      "bbox": [
+        54.0,
+        334.91015625,
+        297.4997253417969,
+        681.7193603515625
+      ],
+      "block_id": "page-0176-block-0013",
+      "order": 13,
+      "text": "e cerveau humain est de loin l’organe le plus complexe,\npuisqu’il contient environ 100 milliards de neurones reliés\nchimiquement par un nombre moyen de 10 000 synapses.\nCette capacité phénoménale de possibilités d’agencement et de\nréorganisation de ces synapses confère au cerveau une propriété\ninnée de pouvoir créer, ou en tout cas d’apprendre, de décou-\nvrir, puis d’utiliser des règles conventionnelles de combinaison\ndes représentations arbitraires qu’il a emmagasinées dans une\nrecherche de causalités. Le cerveau est donc génétiquement\nprogrammé de manière à pouvoir trier et mettre en mémoire\ndes informations en provenance soit de l’environnement, soit\nde son propre corps. Avec les percées théoriques majeures et\nles développements technologiques des dernières décennies,\nla psychophysiologie et la neuropsychologie représentent des\ndisciplines stratégiquement bien positionnées pour comprendre\nà la fois le fonctionnement cérébral et les troubles rencontrés\nen psychiatrie clinique. La psychophysiologie, au sens littéral,\ndérive du mot grec psyche, esprit, mental, et phusis, la nature,\nqui est l’étude du fonctionnement des organismes vivants et de\nleurs composants. La neuropsychologie est une discipline qui\nexamine ces types de relations complexes entre le fonctionnement\ndes structures cérébrales et les opérations mentales supérieures.\nPar l’utilisation de techniques telles que l’électrophysiologie\ncognitive, l’imagerie cérébrale par résonance magnétique ou\nencore la tomographie par émission de positrons (TEP), l’ap-\nproche psychophysiologique permet d’étudier plus directement\nle fonctionnement cérébral (qu’on peut mesurer) sous-tendant\nles fonctions mentales (qu’on peut manipuler). Souvent, ces\nfonctions ne sont pas accessibles par les méthodes neuropsy-\nchologiques traditionnelles.\n",
+      "text_sha256": "04e837dcbf35a40949e9d0224af541ec2c0512885c0740f8e8633a0b0427722f"
+    }
+  ],
+  "coordinates_sha256": "93f793644c393214ec83f9d85172638d74b3f229ce3a7cc9c812d65eacd51947",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0176",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 8\nPsychophysiologie et neuropsychologie\n159\n8.6 \nÉmotions.......................................................................175\n8.6.1 \nSubstrats neurobiologiques liés aux émotions .... 176\n8.6.2 \nTroubles reliés au traitement des émotions..... 177\n8.7 \nMotricité.......................................................................178\n8.7.1 \nFonctions du cortex moteur primaire\net organisation somatotopique........................... 178\n8.7.2 \nFonctions du cortex prémoteur et sélection\ndu mouvement....................................................... 178\n8.7.3 \nFonctions du cervelet et apprentissage moteur... 179\n8.7.4 \nNoyaux gris centraux et modulation motrice...... 179\n8.7.5 \nFonctions de l’aire motrice supplémentaire\net exécution des mouvements............................. 180\n8.7.6 \nTroubles de la motricité....................................... 180\n8.8 \nLangage.........................................................................182\n8.8.1 \nFondements neuropsychologiques\ndu langage expressif et réceptif........................... 182\n8.8.2 \nAspects neurolinguistiques................................. 183\n8.8.3 \nTroubles du langage.............................................. 184\n8.9 \nFonctions exécutives.................................................... 185\n8.9.1 \nOrganisation et planication .............................. 185\n8.9.2 \nFlexibilité mentale................................................. 186\n8.9.3 \nAbstraction............................................................. 186\n8.9.4 \nJugement ................................................................. 187\n8.9.5 \nAutocontrôle .......................................................... 188\n8.10 Hormones et stress ...................................................... 188\n8.10.1 Catégories d’hormones ........................................ 188\n8.10.2 Stress........................................................................ 188\n8.10.3 Axe hypothalamo-hypophyso-surrénalien....... 189\n8.10.4 Caractéristiques des glucocorticoïdes............... 189\n8.10.5 Méthodologie pour mesurer l’eet\ndes glucocorticoïdes sur la cognition................ 190\n8.10.6 \nGlucocorticoïdes et vieillissement diérentiel .... 190\n8.10.7 Modulation de la mémoire par les\nglucocorticoïdes chez les personnes âgées....... 190\n8.10.8 Glucocorticoïdes et mémoire ............................. 191\nLectures complémentaires .................................................... 193\n8.1\nHistorique\nAn de bien comprendre les thèmes sous-jacents à la psycho-\nphysiologie et à la neuropsychologie, il convient d’établir leurs\nassises historiques. Comme toute approche historique, ce cha-\npitre n’a pas la prétention de tout couvrir de façon exhaustive\nni même d’être objectif, mais plutôt d’expliquer les fondements\npsychobiologiques de la psychopathologie et ainsi de faire des\nliens avec les approches en psychiatrie clinique moderne.\n8.1.1 \nDe l’Antiquité\nau Siècle des lumières\nLes racines profondes de la psychophysiologie cognitive et de\nla neuropsychologie remontent à l’Égypte ancienne puisque l’on\na découvert un traité hiéroglyphique de chirurgie remontant à\n3000 av. J.-C. (voir la gure 8.1). Découvert en 1882 et déchiré\nen 1930, cet ouvrage décrit 48 cas de blessures à la tête et au cou\net fait état des conséquences de ces atteintes cérébrales dans la\ncommande du mouvement ou de la parole (Changeux, 1983). Il\nconstitue à ce jour le compte rendu le plus ancien faisant référence\nau mot « cerveau » (les hiéroglyphes dans l’encadré).\nPourtant, cette idée que le cerveau constitue l’organe qui\nassure le contrôle du corps était bien en avance sur son temps, car\npour les Hébreux, les Mésopotamiens et certains Grecs comme\nHomère, c’est le cœur qui était la source de nos sentiments et de\nnotre intelligence. Connue sous le nom de « cardiocentrisme »,\ncette approche philosophique était également défendue par\nAristote. Par contre, d’autres médecins de la Grèce antique,\nL\ne cerveau humain est de loin l’organe le plus complexe,\npuisqu’il contient environ 100 milliards de neurones reliés\nchimiquement par un nombre moyen de 10 000 synapses.\nCette capacité phénoménale de possibilités d’agencement et de\nréorganisation de ces synapses confère au cerveau une propriété\ninnée de pouvoir créer, ou en tout cas d’apprendre, de décou-\nvrir, puis d’utiliser des règles conventionnelles de combinaison\ndes représentations arbitraires qu’il a emmagasinées dans une\nrecherche de causalités. Le cerveau est donc génétiquement\nprogrammé de manière à pouvoir trier et mettre en mémoire\ndes informations en provenance soit de l’environnement, soit\nde son propre corps. Avec les percées théoriques majeures et\nles développements technologiques des dernières décennies,\nla psychophysiologie et la neuropsychologie représentent des\ndisciplines stratégiquement bien positionnées pour comprendre\nà la fois le fonctionnement cérébral et les troubles rencontrés\nen psychiatrie clinique. La psychophysiologie, au sens littéral,\ndérive du mot grec psyche, esprit, mental, et phusis, la nature,\nqui est l’étude du fonctionnement des organismes vivants et de\nleurs composants. La neuropsychologie est une discipline qui\nexamine ces types de relations complexes entre le fonctionnement\ndes structures cérébrales et les opérations mentales supérieures.\nPar l’utilisation de techniques telles que l’électrophysiologie\ncognitive, l’imagerie cérébrale par résonance magnétique ou\nencore la tomographie par émission de positrons (TEP), l’ap-\nproche psychophysiologique permet d’étudier plus directement\nle fonctionnement cérébral (qu’on peut mesurer) sous-tendant\nles fonctions mentales (qu’on peut manipuler). Souvent, ces\nfonctions ne sont pas accessibles par les méthodes neuropsy-\nchologiques traditionnelles.\n",
+  "raw_text_sha256": "02905f50a28ce12aa27f45741ddf07836376af00f268ed87c62e01dfb2825739",
+  "source_page_display": 177,
+  "source_page_index": 176
+}

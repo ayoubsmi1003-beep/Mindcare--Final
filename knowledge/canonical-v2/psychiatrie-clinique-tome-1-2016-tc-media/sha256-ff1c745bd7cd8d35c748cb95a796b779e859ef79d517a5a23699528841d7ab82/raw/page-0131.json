@@ -1,0 +1,88 @@
+{
+  "block_sequence_sha256": "be682267f6515c4b4d97dd36046c31141e6e06c283963e8ed87f8eec2e4bd02d",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        471.6627197265625,
+        758.8693237304688
+      ],
+      "block_id": "page-0131-block-0001",
+      "order": 1,
+      "text": "114\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2 Déterminants bio-psycho-sociaux\n",
+      "text_sha256": "960764e4f7e50ff99f98c1d9968d445205533824d2cfde37eba99f53cbb755cd"
+    },
+    {
+      "bbox": [
+        306.0,
+        471.4658203125,
+        549.311279296875,
+        725.0585327148438
+      ],
+      "block_id": "page-0131-block-0002",
+      "order": 2,
+      "text": "compulsions observées dans le trouble obsessionnel-compulsif\nsont attribuées à un mauvais fonctionnement des connexions\nen boucle entre la partie antérieure du gyrus cingulaire et le\ncortex orbitofrontal (Rotge & al., 2008). Le gyrus cingulaire\nintervient également dans la sensation de la douleur.\n• Le cortex piriforme, ou cortex olfactif, est localisé dans la\npartie antérieure du lobe temporal. Il participe à la perception\ndes odeurs et à la mémoire olfactive.\n• Le gyrus parahippocampique est une circonvolution constituée\nde néocortex située sur la face interne de l’hémisphère tout\njuste sous l’hippocampe (voir les gures supplémentaires).\n• La formation hippocampique, située dans la partie médiane\ndu lobe temporal, sous le plancher du ventricule latéral, est\nde l’archicortex (voir les gures supplémentaires). Elle est\ndivisée en trois composantes soit l’hippocampe, le subiculum\net le gyrus denté. La formation hippocampique est liée au\ncortex olfactif par l’aire entorhinale, une région voisine du\ngyrus parahippocampique (voir les gures supplémentaires),\nau néocortex, à l’hypothalamus et en particulier, au corps\nmamillaire, à l’hippocampe controlatéral, au locus cœruleus\net aux diérents noyaux du raphé.\n",
+      "text_sha256": "308729fbe66e339cc389efe86027d81ca28154f223bd69fdce21eff66940999e"
+    },
+    {
+      "bbox": [
+        48.0,
+        471.4658203125,
+        291.3065185546875,
+        516.6585083007812
+      ],
+      "block_id": "page-0131-block-0003",
+      "order": 3,
+      "text": "en mettant de l’avant les troubles mnésiques causés par une\ndégénérescence des corps mamillaires et du thalamus médian,\nen relation avec une décience en thiamine (vitamine B6) à cause\nde la malnutrition.\n",
+      "text_sha256": "a2049537185cb51f166755ce97b7f8dad3390b9352b311f7e9de92dbda191e36"
+    },
+    {
+      "bbox": [
+        48.0,
+        517.7658081054688,
+        291.26800537109375,
+        725.0585327148438
+      ],
+      "block_id": "page-0131-block-0004",
+      "order": 4,
+      "text": "Le cortex limbique (du latinlimbus,« autour »), qui est essentielle-\nment de l’archicortex et du paléocortex, forme un anneau « autour »\ndu corps calleux et du diencéphale (voir les gures supplémentaires).\nL’anatomie précise du système limbique n’est pas encore clairement\ndénie, mais tous les auteurs reconnaissent qu’il est composé de\nstructures corticales (cortex limbique) et sous- corticales (situées\nsous le cortex cérébral). Les composantes anatomiques dièrent\nparfois selon les auteurs, mais elles incluent habituellement :\n• Le gyrus cingulaire, qui recouvre la partie dorsale du corps\ncalleux (voir les gures supplémentaires). Une stimulation\nélectrique de sa partie antérieure entraîne une uctuation de la\npression artérielle, une dilatation pupillaire, une augmentation\nde la salivation, une inhibition du péristaltisme intestinal et\nune contraction vésicale. Par ailleurs, la stimulation de la partie\ndorsale du cingulum produit chez l’animal des mouvements\nde toilettage (grooming) et une sensation de plaisir. Le cin-\ngulum est un faisceau d’axones qui relie les neurones du gyrus\ncingulaire à diérentes structures du système limbique. Les\n",
+      "text_sha256": "76a633f75a5b3278d2532085e4786940e4888589d97388b976b940590840d18a"
+    },
+    {
+      "bbox": [
+        50.400001525878906,
+        41.002296447753906,
+        155.72938537597656,
+        53.320068359375
+      ],
+      "block_id": "page-0131-block-0005",
+      "order": 5,
+      "text": "FIGURE 6.3 Tronc cérébral\n",
+      "text_sha256": "2855a7600dc0c35fe9163ff24f7b8fa062af547d591a95623e9df8c914ff46d7"
+    },
+    {
+      "bbox": [
+        48.0,
+        436.890625,
+        132.7361602783203,
+        445.75885009765625
+      ],
+      "block_id": "page-0131-block-0006",
+      "order": 6,
+      "text": "Source : Martin (1996), p. 87.\n",
+      "text_sha256": "ee4bfb0cd2649fa61271191e79920aa699df4de0be3e365ca8935504643c215b"
+    }
+  ],
+  "coordinates_sha256": "2c8746a59029f9c203040851030c59592472e54aa303049596b6586f75ae1072",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0131",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "114\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 2 Déterminants bio-psycho-sociaux\ncompulsions observées dans le trouble obsessionnel-compulsif\nsont attribuées à un mauvais fonctionnement des connexions\nen boucle entre la partie antérieure du gyrus cingulaire et le\ncortex orbitofrontal (Rotge & al., 2008). Le gyrus cingulaire\nintervient également dans la sensation de la douleur.\n• Le cortex piriforme, ou cortex olfactif, est localisé dans la\npartie antérieure du lobe temporal. Il participe à la perception\ndes odeurs et à la mémoire olfactive.\n• Le gyrus parahippocampique est une circonvolution constituée\nde néocortex située sur la face interne de l’hémisphère tout\njuste sous l’hippocampe (voir les gures supplémentaires).\n• La formation hippocampique, située dans la partie médiane\ndu lobe temporal, sous le plancher du ventricule latéral, est\nde l’archicortex (voir les gures supplémentaires). Elle est\ndivisée en trois composantes soit l’hippocampe, le subiculum\net le gyrus denté. La formation hippocampique est liée au\ncortex olfactif par l’aire entorhinale, une région voisine du\ngyrus parahippocampique (voir les gures supplémentaires),\nau néocortex, à l’hypothalamus et en particulier, au corps\nmamillaire, à l’hippocampe controlatéral, au locus cœruleus\net aux diérents noyaux du raphé.\nen mettant de l’avant les troubles mnésiques causés par une\ndégénérescence des corps mamillaires et du thalamus médian,\nen relation avec une décience en thiamine (vitamine B6) à cause\nde la malnutrition.\nLe cortex limbique (du latinlimbus,« autour »), qui est essentielle-\nment de l’archicortex et du paléocortex, forme un anneau « autour »\ndu corps calleux et du diencéphale (voir les gures supplémentaires).\nL’anatomie précise du système limbique n’est pas encore clairement\ndénie, mais tous les auteurs reconnaissent qu’il est composé de\nstructures corticales (cortex limbique) et sous- corticales (situées\nsous le cortex cérébral). Les composantes anatomiques dièrent\nparfois selon les auteurs, mais elles incluent habituellement :\n• Le gyrus cingulaire, qui recouvre la partie dorsale du corps\ncalleux (voir les gures supplémentaires). Une stimulation\nélectrique de sa partie antérieure entraîne une uctuation de la\npression artérielle, une dilatation pupillaire, une augmentation\nde la salivation, une inhibition du péristaltisme intestinal et\nune contraction vésicale. Par ailleurs, la stimulation de la partie\ndorsale du cingulum produit chez l’animal des mouvements\nde toilettage (grooming) et une sensation de plaisir. Le cin-\ngulum est un faisceau d’axones qui relie les neurones du gyrus\ncingulaire à diérentes structures du système limbique. Les\nFIGURE 6.3 Tronc cérébral\nSource : Martin (1996), p. 87.\n",
+  "raw_text_sha256": "d238e65f70ab1155f0a64cac62102643423a518bb1d23ccf0fb59162448017a5",
+  "source_page_display": 132,
+  "source_page_index": 131
+}

@@ -1,0 +1,364 @@
+{
+  "block_sequence_sha256": "c8d60c7db5152bb8b3546a6ab2a201a86d68bca3ed7b5c9e3a104d9c1e1da8ea",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.53765869140625,
+        758.8693237304688
+      ],
+      "block_id": "page-0499-block-0001",
+      "order": 1,
+      "text": "482\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "5f430413df3a49a1ced084e4d43738ae4c28215725da01d865f94a663169aa65"
+    },
+    {
+      "bbox": [
+        50.35000228881836,
+        41.002296447753906,
+        318.01776123046875,
+        53.320068359375
+      ],
+      "block_id": "page-0499-block-0002",
+      "order": 2,
+      "text": "TABLEAU 22.1 Critères diagnostiques des troubles de l’adaptation\n",
+      "text_sha256": "bdc5400b4b222b3b3c653b1c37724c59b3bd6b0dafbfc682c4a311be6fe2fa96"
+    },
+    {
+      "bbox": [
+        135.75,
+        56.27412414550781,
+        469.07012939453125,
+        79.14238739013672
+      ],
+      "block_id": "page-0499-block-0003",
+      "order": 3,
+      "text": "DSM-5\nDSM-IV-TR\nTroubles de l’adaptation\nTroubles de l’adaptation\n",
+      "text_sha256": "40e006f8c8a8991d882b286f93a4a829f2ef119c63d6885e24f317b32a6baa49"
+    },
+    {
+      "bbox": [
+        52.25,
+        84.4019546508789,
+        287.4483337402344,
+        94.2281265258789
+      ],
+      "block_id": "page-0499-block-0004",
+      "order": 4,
+      "text": "A. Survenue de symptômes émotionnels ou comportementaux en réponse\n",
+      "text_sha256": "99ea2fac61bd53691c49e34c99bcf108ba36e81159da98756c4097df2527099e"
+    },
+    {
+      "bbox": [
+        60.75,
+        94.4019546508789,
+        291.800537109375,
+        114.2281265258789
+      ],
+      "block_id": "page-0499-block-0005",
+      "order": 5,
+      "text": "à un ou plusieurs facteurs de stress identiables dans les 3 mois suivant\nl’exposition au(x) facteur(s) de stress.\n",
+      "text_sha256": "0089f02be7d440e48f43968d7614fd3736b2edbab01936ad3a6c961a98f37215"
+    },
+    {
+      "bbox": [
+        310.0,
+        84.4019546508789,
+        364.94482421875,
+        94.2281265258789
+      ],
+      "block_id": "page-0499-block-0006",
+      "order": 6,
+      "text": "A. Idem à DSM-5\n",
+      "text_sha256": "b7646f30d3e3b2e6d10483614b496ada20308507e5a36a961890900b39c2647c"
+    },
+    {
+      "bbox": [
+        52.25,
+        122.80195617675781,
+        296.9883117675781,
+        132.6281280517578
+      ],
+      "block_id": "page-0499-block-0007",
+      "order": 7,
+      "text": "B. Ces symptômes ou comportements sont cliniquement signicatifs, comme\n",
+      "text_sha256": "467fdca246c399899828b5576861a35189a50cf15bcf6cf26ccc017bea25ed63"
+    },
+    {
+      "bbox": [
+        60.75,
+        132.8019561767578,
+        302.0656433105469,
+        194.6281280517578
+      ],
+      "block_id": "page-0499-block-0008",
+      "order": 8,
+      "text": "en témoigne un ou les deux éléments suivants :\n1. Détresse marquée hors de proportion par rapport à la gravité ou à l’intensité\ndu facteur de stress, compte tenu du contexte externe et des facteurs cultu-\nrels qui pourraient inuencer la gravité des symptômes et la présentation.\n2. Altération signicative du fonctionnement social, professionnel, ou dans\nd’autres domaines importants.\n",
+      "text_sha256": "86bd534cdc5838b77f4a973be3a176e0b7f4e4baeab2c26988de4b86be823cf9"
+    },
+    {
+      "bbox": [
+        310.0,
+        122.80195617675781,
+        364.94482421875,
+        132.6281280517578
+      ],
+      "block_id": "page-0499-block-0009",
+      "order": 9,
+      "text": "B. Idem à DSM-5\n",
+      "text_sha256": "e600b0fcc4acc00a2320274342246dadb6d17263cfd411b99419f91fe1ec31e8"
+    },
+    {
+      "bbox": [
+        52.25,
+        203.251953125,
+        296.8569030761719,
+        213.078125
+      ],
+      "block_id": "page-0499-block-0010",
+      "order": 10,
+      "text": "C. La perturbation causée par le facteur de stress ne répond pas aux critères\n",
+      "text_sha256": "3cfe012e670aab4efbf44533d59ac155799150089aefae42f36daea39d6e5735"
+    },
+    {
+      "bbox": [
+        60.900001525878906,
+        213.251953125,
+        293.08349609375,
+        233.078125
+      ],
+      "block_id": "page-0499-block-0011",
+      "order": 11,
+      "text": "d’un autre trouble mental et n’est pas simplement une exacerbation d’un\ntrouble mental préexistant.\n",
+      "text_sha256": "e4598f74b02fbefc3b87d7b2f99d06caef8e2d125e73b42192d1b677aae0ab39"
+    },
+    {
+      "bbox": [
+        310.0,
+        203.251953125,
+        365.0948791503906,
+        213.078125
+      ],
+      "block_id": "page-0499-block-0012",
+      "order": 12,
+      "text": "C. Idem à DSM-5\n",
+      "text_sha256": "851f77c4b9cac25958e0a5d51739e5c4a11e14d25c062a7f487625615f590fe4"
+    },
+    {
+      "bbox": [
+        52.25,
+        241.65196228027344,
+        365.2679138183594,
+        251.47813415527344
+      ],
+      "block_id": "page-0499-block-0013",
+      "order": 13,
+      "text": "D. Les symptômes ne sont pas ceux d’un deuil normal.\nD. Idem à DSM-5\n",
+      "text_sha256": "5ffa7300512c975e468692caeacb882b8b95579db2158a370f8f1a67d6a6a793"
+    },
+    {
+      "bbox": [
+        52.25,
+        260.1019592285156,
+        280.6263122558594,
+        269.9281311035156
+      ],
+      "block_id": "page-0499-block-0014",
+      "order": 14,
+      "text": "E. Une fois que le facteur de stress ou ses conséquences sont terminés,\n",
+      "text_sha256": "a0af32c8fd57312bd9eac8b5250e4cc506cfd73d37d457718d230b6d9808990e"
+    },
+    {
+      "bbox": [
+        60.20000076293945,
+        270.1019592285156,
+        288.5061340332031,
+        289.9281311035156
+      ],
+      "block_id": "page-0499-block-0015",
+      "order": 15,
+      "text": "les symptômes ne persistent pas au-delà d’une période additionnelle de\n6 mois.\n",
+      "text_sha256": "de76770386bfb31bdf8cc6669b9e5a77f93e636ef16af181b748e16b4d126508"
+    },
+    {
+      "bbox": [
+        310.0,
+        260.1019592285156,
+        364.44488525390625,
+        269.9281311035156
+      ],
+      "block_id": "page-0499-block-0016",
+      "order": 16,
+      "text": "E. Idem à DSM-5\n",
+      "text_sha256": "45a76cef89c4eac968d299456c5fe8c8cee5f3176449999adaa4d35fd3632e83"
+    },
+    {
+      "bbox": [
+        52.25,
+        298.501953125,
+        107.52900695800781,
+        308.328125
+      ],
+      "block_id": "page-0499-block-0017",
+      "order": 17,
+      "text": "Spécier le type :\n",
+      "text_sha256": "51859a3ba8784db95f67bb0c27a2e36e515bef83cb2f151ebeb8df30dc1c861e"
+    },
+    {
+      "bbox": [
+        52.25,
+        331.4228515625,
+        301.99700927734375,
+        414.328125
+      ],
+      "block_id": "page-0499-block-0018",
+      "order": 18,
+      "text": "309.0 (F43.21) Avec humeur dépressive : Baisse de l’humeur, larmoiement\nou sentiment de désespoir sont au premier plan.\n309.24 (F43.22) Avec anxiété : Nervosité, inquiétude, énervement, ou\nanxiété de séparation sont au premier plan.\n309.28 (F43.23) Mixte avec anxiété et humeur dépressive : Une combinai-\nson de dépression et d’anxiété est au premier plan.\n309.3 (F43.24) Avec perturbation des conduites : La perturbation des\nconduites est au premier plan.\n",
+      "text_sha256": "14282dfb103085b41ab1c10c70ec7f03026c7875cfda7f77724f6b716d0050eb"
+    },
+    {
+      "bbox": [
+        52.25,
+        445.4228515625,
+        299.5191955566406,
+        496.328125
+      ],
+      "block_id": "page-0499-block-0019",
+      "order": 19,
+      "text": "309.4 (F43.25) Avec perturbation mixte des émotions et des conduites :\nLes symptômes émotionnels (p. ex. dépression, anxiété) et la perturbation des\nconduites sont au premier plan.\n309.9 (F43.20) Non spécié : Pour les réactions inadaptées qui ne sont pas\nclassables comme un des sous-types spéciques du trouble de l’adaptation.\n",
+      "text_sha256": "22a00aba93d96afd0c93ae1b9e94df1395454ee3783ec96a5afda1d26fb45c97"
+    },
+    {
+      "bbox": [
+        310.0,
+        298.501953125,
+        497.76953125,
+        341.4423828125
+      ],
+      "block_id": "page-0499-block-0020",
+      "order": 20,
+      "text": "Spécier si :\nAigu : si la perturbation persiste moins de 6 mois\nChronique : si la perturbation persiste 6 mois ou plus. […]\navec humeur dépressive : Idem à DSM-5\n",
+      "text_sha256": "4763e312c81caa63751e8992dd1026ab037a5c1b9b778fbf9b5251f75b4aabd4"
+    },
+    {
+      "bbox": [
+        310.0,
+        352.4228515625,
+        405.488037109375,
+        362.4423828125
+      ],
+      "block_id": "page-0499-block-0021",
+      "order": 21,
+      "text": "avec anxiété : Idem à DSM-5\n",
+      "text_sha256": "8c6d0520031f7957a1c24161f34a57e7cd1b6dacc5d4b2ae5de7cdf866d3f4f1"
+    },
+    {
+      "bbox": [
+        310.0,
+        373.4228515625,
+        512.0380249023438,
+        383.4423828125
+      ],
+      "block_id": "page-0499-block-0022",
+      "order": 22,
+      "text": "avec à la fois anxiété et humeur dépressive : Idem à DSM-5\n",
+      "text_sha256": "3048e63d5b3a7252fd6fcae6863aa1399f8348640f351408ec5faef8438a0599"
+    },
+    {
+      "bbox": [
+        310.0,
+        394.4228515625,
+        544.0392456054688,
+        465.328125
+      ],
+      "block_id": "page-0499-block-0023",
+      "order": 23,
+      "text": "avec perturbation des conduites : [...] une perturbation des conduites\nqui comporte une violation des droits d’autrui ou des normes et des\nrègles essentielles de la vie sociale, compte tenu de l’âge du sujet (p. ex.,\nl’école buissonnière, le vandalisme, une conduite automobile imprudente,\ndes bagarres, un manquement à ses responsabilités légales).\navec perturbation à la fois des émotions et des conduites : Idem à\nDSM-5\n",
+      "text_sha256": "689a710902ca9fa5b6acaa7b12e27bbdc11c7053cc242c8d1ed53919cdba63fe"
+    },
+    {
+      "bbox": [
+        310.0,
+        476.4228515625,
+        536.39501953125,
+        516.328125
+      ],
+      "block_id": "page-0499-block-0024",
+      "order": 24,
+      "text": "non spécié : […] des réactions inadaptées (p. ex., des plaintes soma-\ntiques, un retrait social ou une inhibition au travail ou à l’école) à des\nfacteurs de stress (stresseurs), qui ne peuvent pas être classées parmi les\nsous-types spéciques de troubles de l’adaptation.\n",
+      "text_sha256": "d792363f88da5b1059e4669d2fa8f334307950f9d8db3dcf9a7b892888804041"
+    },
+    {
+      "bbox": [
+        48.25,
+        525.140625,
+        549.0757446289062,
+        572.875
+      ],
+      "block_id": "page-0499-block-0025",
+      "order": 25,
+      "text": "Sources : APA (2015), p. 339-340 ; APA (2004), p. 787-788.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American Psychiatric\nAssociation,DSM-5 - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation,DSM-IV-TR - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\n",
+      "text_sha256": "7bd50a5c92e136da2f3d094bd2d7eba7d00b334381c4fd91ea9d250eb3cec947"
+    },
+    {
+      "bbox": [
+        55.150001525878906,
+        590.2431640625,
+        228.89320373535156,
+        609.2189331054688
+      ],
+      "block_id": "page-0499-block-0026",
+      "order": 26,
+      "text": "22.6\nOutils diagnostiques\n",
+      "text_sha256": "39b65a0f11f8397ada5343c653ec76535786097e547216981b7c4470e1af72a1"
+    },
+    {
+      "bbox": [
+        48.0,
+        622.9658203125,
+        291.45184326171875,
+        725.45849609375
+      ],
+      "block_id": "page-0499-block-0027",
+      "order": 27,
+      "text": "Il existe de nombreux outils et grilles utiles dans les domaines\ndes troubles anxieux et des troubles dépressifs, mais il ne semble\npas exister d’outil psychométrique spécique et validé pour les\ntroubles de l’adaptation. Cette absence est peut-être justement\ndue à la diculté de concevoir un outil qui recenserait des\nsymptômes non spéciques pour en arriver à un diagnostic\nspécique. Il existe cependant des instruments d’évaluation pour\nle syndrome d’épuisement professionnel (burn-out), un concept\nqui se rapproche des troubles de l’adaptation, appliqué en santé\n",
+      "text_sha256": "3973dbe26e29008b8653aab5fc24b319573f1c542e0b4719d4dbf500bb6f1124"
+    },
+    {
+      "bbox": [
+        306.0,
+        587.2658081054688,
+        549.1217041015625,
+        609.70849609375
+      ],
+      "block_id": "page-0499-block-0028",
+      "order": 28,
+      "text": "du travail, mais qui n’est pas un synonyme et qui, de toute façon,\nn’est pas une entité diagnostique dans le DSM-5.\n",
+      "text_sha256": "4279e36e831d66bf84c4b22715ceb57adebf43f3b2242b7e279518ac521654b8"
+    },
+    {
+      "bbox": [
+        306.0,
+        611.2158203125,
+        549.0008544921875,
+        725.45849609375
+      ],
+      "block_id": "page-0499-block-0029",
+      "order": 29,
+      "text": "Everly & Lating (2013a) ont recensé un ensemble de grilles et\nde techniques utilisées pour mesurer la réponse au stress dans\nson sens large et que l’on utilise surtout en recherche :\n• les échelles de stresseurs sont des inventaires autorapportés\nqui évaluent l’exposition des patients à des stresseurs, des\névénements de la vie critiques :\n– laSocial Readjustment Rating Scale(Holmes & Rahe, 1967) ;\n– le Life Experiences Survey (Sarason & al., 1978) ;\n– la Hassles Scale (Kanner & al., 1981) ;\n",
+      "text_sha256": "86aaabe4be9c40203d1a57e1ee7a378b973276771c585183761026828b956dee"
+    }
+  ],
+  "coordinates_sha256": "715b31833663a11350d874c2b2e5ea3d98bdde2f474e8205a810a8db9e2e939d",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0499",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "482\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nTABLEAU 22.1 Critères diagnostiques des troubles de l’adaptation\nDSM-5\nDSM-IV-TR\nTroubles de l’adaptation\nTroubles de l’adaptation\nA. Survenue de symptômes émotionnels ou comportementaux en réponse\nà un ou plusieurs facteurs de stress identiables dans les 3 mois suivant\nl’exposition au(x) facteur(s) de stress.\nA. Idem à DSM-5\nB. Ces symptômes ou comportements sont cliniquement signicatifs, comme\nen témoigne un ou les deux éléments suivants :\n1. Détresse marquée hors de proportion par rapport à la gravité ou à l’intensité\ndu facteur de stress, compte tenu du contexte externe et des facteurs cultu-\nrels qui pourraient inuencer la gravité des symptômes et la présentation.\n2. Altération signicative du fonctionnement social, professionnel, ou dans\nd’autres domaines importants.\nB. Idem à DSM-5\nC. La perturbation causée par le facteur de stress ne répond pas aux critères\nd’un autre trouble mental et n’est pas simplement une exacerbation d’un\ntrouble mental préexistant.\nC. Idem à DSM-5\nD. Les symptômes ne sont pas ceux d’un deuil normal.\nD. Idem à DSM-5\nE. Une fois que le facteur de stress ou ses conséquences sont terminés,\nles symptômes ne persistent pas au-delà d’une période additionnelle de\n6 mois.\nE. Idem à DSM-5\nSpécier le type :\n309.0 (F43.21) Avec humeur dépressive : Baisse de l’humeur, larmoiement\nou sentiment de désespoir sont au premier plan.\n309.24 (F43.22) Avec anxiété : Nervosité, inquiétude, énervement, ou\nanxiété de séparation sont au premier plan.\n309.28 (F43.23) Mixte avec anxiété et humeur dépressive : Une combinai-\nson de dépression et d’anxiété est au premier plan.\n309.3 (F43.24) Avec perturbation des conduites : La perturbation des\nconduites est au premier plan.\n309.4 (F43.25) Avec perturbation mixte des émotions et des conduites :\nLes symptômes émotionnels (p. ex. dépression, anxiété) et la perturbation des\nconduites sont au premier plan.\n309.9 (F43.20) Non spécié : Pour les réactions inadaptées qui ne sont pas\nclassables comme un des sous-types spéciques du trouble de l’adaptation.\nSpécier si :\nAigu : si la perturbation persiste moins de 6 mois\nChronique : si la perturbation persiste 6 mois ou plus. […]\navec humeur dépressive : Idem à DSM-5\navec anxiété : Idem à DSM-5\navec à la fois anxiété et humeur dépressive : Idem à DSM-5\navec perturbation des conduites : [...] une perturbation des conduites\nqui comporte une violation des droits d’autrui ou des normes et des\nrègles essentielles de la vie sociale, compte tenu de l’âge du sujet (p. ex.,\nl’école buissonnière, le vandalisme, une conduite automobile imprudente,\ndes bagarres, un manquement à ses responsabilités légales).\navec perturbation à la fois des émotions et des conduites : Idem à\nDSM-5\nnon spécié : […] des réactions inadaptées (p. ex., des plaintes soma-\ntiques, un retrait social ou une inhibition au travail ou à l’école) à des\nfacteurs de stress (stresseurs), qui ne peuvent pas être classées parmi les\nsous-types spéciques de troubles de l’adaptation.\nSources : APA (2015), p. 339-340 ; APA (2004), p. 787-788.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American Psychiatric\nAssociation,DSM-5 - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS, Paris, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation,DSM-IV-TR - Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\n22.6\nOutils diagnostiques\nIl existe de nombreux outils et grilles utiles dans les domaines\ndes troubles anxieux et des troubles dépressifs, mais il ne semble\npas exister d’outil psychométrique spécique et validé pour les\ntroubles de l’adaptation. Cette absence est peut-être justement\ndue à la diculté de concevoir un outil qui recenserait des\nsymptômes non spéciques pour en arriver à un diagnostic\nspécique. Il existe cependant des instruments d’évaluation pour\nle syndrome d’épuisement professionnel (burn-out), un concept\nqui se rapproche des troubles de l’adaptation, appliqué en santé\ndu travail, mais qui n’est pas un synonyme et qui, de toute façon,\nn’est pas une entité diagnostique dans le DSM-5.\nEverly & Lating (2013a) ont recensé un ensemble de grilles et\nde techniques utilisées pour mesurer la réponse au stress dans\nson sens large et que l’on utilise surtout en recherche :\n• les échelles de stresseurs sont des inventaires autorapportés\nqui évaluent l’exposition des patients à des stresseurs, des\névénements de la vie critiques :\n– laSocial Readjustment Rating Scale(Holmes & Rahe, 1967) ;\n– le Life Experiences Survey (Sarason & al., 1978) ;\n– la Hassles Scale (Kanner & al., 1981) ;\n",
+  "raw_text_sha256": "3be4310979dc818c3e666842ed3ad07c0e053b4952f7ae4cb2fe4722379024bb",
+  "source_page_display": 500,
+  "source_page_index": 499
+}

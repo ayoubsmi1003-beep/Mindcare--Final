@@ -1,0 +1,304 @@
+{
+  "block_sequence_sha256": "83d1506ebb933ab6957cede1f926e369a7930d6c939759ea92b1b7e9f3b1fd02",
+  "blocks": [
+    {
+      "bbox": [
+        305.8500061035156,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0762-block-0001",
+      "order": 1,
+      "text": "Chapitre 32\nTroubles du sommeil et de la vigilance\n745\n",
+      "text_sha256": "62ecc08f05cf83ebbb303d334a80dd94d4d67ad3e0ab018d9a483af9ff2a8396"
+    },
+    {
+      "bbox": [
+        56.25,
+        41.002296447753906,
+        479.8888854980469,
+        53.320068359375
+      ],
+      "block_id": "page-0762-block-0002",
+      "order": 2,
+      "text": "TABLEAU 32.12 Critères diagnostiques du trouble de l’alternance veille-sommeil lié au rythme circadien\n",
+      "text_sha256": "74ae061b5fc58f4d574acb9a1791f33f839de2026544d49bf9dd622371f48050"
+    },
+    {
+      "bbox": [
+        177.75,
+        62.72412109375,
+        460.53802490234375,
+        73.30029296875
+      ],
+      "block_id": "page-0762-block-0003",
+      "order": 3,
+      "text": "DSM-5\nDSM-IV-TR\n",
+      "text_sha256": "67d368c78be7842a2bc99b149901566bcadf3c9d62623ea48bafcc32b3563ffb"
+    },
+    {
+      "bbox": [
+        90.55000305175781,
+        82.3741226196289,
+        289.89697265625,
+        102.9502944946289
+      ],
+      "block_id": "page-0762-block-0004",
+      "order": 4,
+      "text": "307.45 (G47.2_) Trouble de l’alternance veille-sommeil\nlié au rythme circadien\n",
+      "text_sha256": "ace72fefb1c2090399652501077b77fde0acd07c283599e358632c8253c3cbff"
+    },
+    {
+      "bbox": [
+        334.3999938964844,
+        81.8741226196289,
+        546.820068359375,
+        103.4502944946289
+      ],
+      "block_id": "page-0762-block-0005",
+      "order": 5,
+      "text": "307.45 (F51.2) Trouble du sommeil lié au rythme circadien\n(auparavant Trouble du rythme veille-sommeil)\n",
+      "text_sha256": "ec56b1dd36056957b559e63a7b1be4a0bc41272b712c3a92477e4e53566fd94a"
+    },
+    {
+      "bbox": [
+        58.25,
+        108.95195770263672,
+        315.197021484375,
+        118.77812957763672
+      ],
+      "block_id": "page-0762-block-0006",
+      "order": 6,
+      "text": "A. Fractionnement persistant ou récurrent du sommeil qui s’explique principale-\n",
+      "text_sha256": "6fb9b6337bec590fa9c39354e3253f0e6edf939dafb7076e3a01ccb82a28ba52"
+    },
+    {
+      "bbox": [
+        70.25,
+        118.95195770263672,
+        319.3470153808594,
+        148.7781219482422
+      ],
+      "block_id": "page-0762-block-0007",
+      "order": 7,
+      "text": "ment par une perturbation du système circadien ou par un décalage entre le\nrythme circadien endogène et l’horaire veille-sommeil approprié à l’environne-\nment physique d’un individu, ou à ses activités sociales ou professionnelles.\n",
+      "text_sha256": "0f8d7d41cf4b3d90c503f40f4eacceb0a974413f312388d687415d575a2385f8"
+    },
+    {
+      "bbox": [
+        330.25,
+        108.95195770263672,
+        391.048095703125,
+        118.77812957763672
+      ],
+      "block_id": "page-0762-block-0008",
+      "order": 8,
+      "text": "A. Idem à DSM-5.\n",
+      "text_sha256": "17d5989bc13bdc24966ef82f371e7b88392c4ebe1bd8cdcdcd635723e9a91a6c"
+    },
+    {
+      "bbox": [
+        58.25,
+        153.35195922851562,
+        295.0733337402344,
+        163.17813110351562
+      ],
+      "block_id": "page-0762-block-0009",
+      "order": 9,
+      "text": "B. La perturbation du sommeil entraîne de la somnolence excessive et/ou\n",
+      "text_sha256": "946fbbe5ba36aa03dacdb89972ba6fef31109d149bb1ca58e7f2b29b9fba4d01"
+    },
+    {
+      "bbox": [
+        70.25,
+        163.35195922851562,
+        114.9530029296875,
+        173.17813110351562
+      ],
+      "block_id": "page-0762-block-0010",
+      "order": 10,
+      "text": "de l’insomnie.\n",
+      "text_sha256": "d7eb01457e56897779c4962082eac440366fa81643525677d1dbda85fb88d5e0"
+    },
+    {
+      "bbox": [
+        330.25,
+        177.8019561767578,
+        534.6769409179688,
+        187.6281280517578
+      ],
+      "block_id": "page-0762-block-0011",
+      "order": 11,
+      "text": "C. La perturbation ne survient pas exclusivement au cours d’un\n",
+      "text_sha256": "78fa1cc002a3e6f777dfc73fad36a376411976385591fb3fdfe5f9bd6c7e929a"
+    },
+    {
+      "bbox": [
+        342.25,
+        187.8019561767578,
+        516.8631591796875,
+        197.6281280517578
+      ],
+      "block_id": "page-0762-block-0012",
+      "order": 12,
+      "text": "autre trouble du sommeil ou d’un autre trouble mental.\n",
+      "text_sha256": "094786525f8c04644e58f97d986f06f8c1bfa75bd280d07e16e2e5e154c16bd1"
+    },
+    {
+      "bbox": [
+        330.25,
+        202.2019500732422,
+        540.7242431640625,
+        212.0281219482422
+      ],
+      "block_id": "page-0762-block-0013",
+      "order": 13,
+      "text": "D. La perturbation n’est pas liée aux effets physiologiques directs\n",
+      "text_sha256": "f14d1da5e766a1ca7691d7f7b49791bd6870fa7e2609a8fdb4fe72ff8a1ded26"
+    },
+    {
+      "bbox": [
+        342.25,
+        212.2019500732422,
+        543.8561401367188,
+        232.0281219482422
+      ],
+      "block_id": "page-0762-block-0014",
+      "order": 14,
+      "text": "d’une substance (p. ex., une substance donnant lieu à abus, un\nmédicament) ou d’une affection médicale générale.\n",
+      "text_sha256": "62f9426b4128eef20ef6bc4e3db80c6b5dc536d8076ba2b9492b29b4aac9a08f"
+    },
+    {
+      "bbox": [
+        58.25,
+        236.65196228027344,
+        312.86798095703125,
+        246.47813415527344
+      ],
+      "block_id": "page-0762-block-0015",
+      "order": 15,
+      "text": "C. La perturbation du sommeil est à l’origine d’une détresse marquée ou d’une\n",
+      "text_sha256": "da54e4c9b1a6570cb36ab9bb932a2a90907ae31368b2ee549888597848374c85"
+    },
+    {
+      "bbox": [
+        70.25,
+        246.65196228027344,
+        316.7216491699219,
+        266.4781188964844
+      ],
+      "block_id": "page-0762-block-0016",
+      "order": 16,
+      "text": "altération du fonctionnement social, professionnel ou dans d’autres domaines\nimportants.\n",
+      "text_sha256": "2132e70179a87b4ad4a2bec2e36848f232cf55b26a6f58817c4817b94824b7f6"
+    },
+    {
+      "bbox": [
+        330.25,
+        236.65196228027344,
+        391.048095703125,
+        246.47813415527344
+      ],
+      "block_id": "page-0762-block-0017",
+      "order": 17,
+      "text": "B. Idem à DSM-5.\n",
+      "text_sha256": "703f62df8ee835b259dd8e94c2103cd979d0ac69c184c555aa261a5bff070302"
+    },
+    {
+      "bbox": [
+        58.25,
+        271.0519714355469,
+        320.2594909667969,
+        529.9923706054688
+      ],
+      "block_id": "page-0762-block-0018",
+      "order": 18,
+      "text": "Spécier le type :\n307.45 (G47.21) Type avec retard de phase : Endormissements et réveils tardifs\npersistants avec incapacité de s’endormir ou de s’éveiller plus précocement selon\nun horaire plus conventionnel.\n• Familial : Antécédents familiaux de retard de phase.\n• Superposé à une alternance veille-sommeil différente de 24 heures :\nLe type retard de phase peut se superposer à un autre trouble de l’alternance\nveille-sommeil lié au rythme circadien, l’alternance veille-sommeil différente\nde 24 heures.\n307.45 (G47.22) Type avec avance de phase : Endormissements et réveils pré-\ncoces persistants avec incapacité de s’endormir ou de s’éveiller plus tardivement\nselon un horaire plus conventionnel.\n• Familial : Antécédents familiaux d’avance de phase.\n307.45 (G47.23) Type rythme veille-sommeil irrégulier : Désorganisation\ntemporelle des rythmes veille-sommeil caractérisée par une variabilité quotidienne\ndes périodes de veille et de sommeil.\n307.45 (G47.24) Type alternance veille-sommeil différente de 24 heures :\nAbsence de synchronisation entre les cycles veille-sommeil et les variations envi-\nronnementales reposant sur un cycle de 24 heures, avec une dérive constante (en\ngénéral un retard croissant) de l’heure du coucher et du réveil.\n307.45 (G47.26) Type travail posté : Insomnie pendant la principale période de\nsommeil et/ou somnolence excessive (y compris l’endormissement involontaire)\ndurant la principale période de veille en rapport avec un travail posté (c.-à-d.\nnécessitant des horaires de travail non conventionnels).\n307.45 (G47.20) Type non spécié\n",
+      "text_sha256": "34830c66fcf754498e46898827d9febe31aff83c56f87426887c2607dcf35aaa"
+    },
+    {
+      "bbox": [
+        330.25,
+        271.0519714355469,
+        543.2276611328125,
+        311.8781433105469
+      ],
+      "block_id": "page-0762-block-0019",
+      "order": 19,
+      "text": "Spécier le type :\nType avec retard de phase : endormissements et réveils tardifs\npersistants avec incapacité à s’endormir ou s’éveiller à un moment\nplus précoce.\n",
+      "text_sha256": "80b2a27cd38932cd822b5a4f8de7bcb196855c5ebc8f8128438719ef2813df30"
+    },
+    {
+      "bbox": [
+        330.25,
+        477.9728698730469,
+        543.3351440429688,
+        589.8781127929688
+      ],
+      "block_id": "page-0762-block-0020",
+      "order": 20,
+      "text": "Type travail posté : insomnie pendant la principale période de\nsommeil ou somnolence excessive durant la principale période de\nveille en rapport avec un travail posté de nuit ou des modications\nfréquentes des horaires de travail.\nType non spécié : (p. ex., avec avance de phase, alternance\nveille-sommeil différente de 24 heures, alternance veille-sommeil\nirrégulière, ou autre modèle non spécié).\nType changement de fuseaux horaires (jet-lag) : périodes de\nsommeil et de veille survenant à des moments inappropriés de la\njournée selon l’heure locale après des voyages répétés comportant\nle passage de plus d’un fuseau horaire.\n",
+      "text_sha256": "75d50df74bad49e2b3b8fb532ce6019ffe1829a263af05a90cf3976793d7b51e"
+    },
+    {
+      "bbox": [
+        58.25,
+        594.501953125,
+        300.7637634277344,
+        647.4423828125
+      ],
+      "block_id": "page-0762-block-0021",
+      "order": 21,
+      "text": "Spécier le type :\nÉpisodique : Symptômes sont présents depuis au moins 1 mois mais moins\nde 3 mois.\nPersistant : Symptômes présents depuis 3 mois ou plus.\nRécurrent : Au moins deux épisodes sur une période d’un an.\n",
+      "text_sha256": "a08fe4c2f5bc480b0a2b4a8b8a9e34c76158c3be894936d17b1d46bc221674ac"
+    },
+    {
+      "bbox": [
+        54.25,
+        654.0906372070312,
+        226.59071350097656,
+        662.9588623046875
+      ],
+      "block_id": "page-0762-block-0022",
+      "order": 22,
+      "text": "Sources: APA (2015), p. 458-459 ; APA (2004), p. 727-728.\n",
+      "text_sha256": "537323e17327dc73eb73562db23440fb2c91fe8feb3ffd4e7693e32a9b9c1770"
+    },
+    {
+      "bbox": [
+        54.25,
+        669.0906372070312,
+        535.40087890625,
+        695.8250122070312
+      ],
+      "block_id": "page-0762-block-0023",
+      "order": 23,
+      "text": "Traduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\n",
+      "text_sha256": "d1e2a281d01f1237f716bfb933581f8135592b601f1b1579862a0656634f5460"
+    },
+    {
+      "bbox": [
+        54.25,
+        702.0906372070312,
+        545.1941528320312,
+        728.8250122070312
+      ],
+      "block_id": "page-0762-block-0024",
+      "order": 24,
+      "text": "Traduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004.\nAll rights reserved.\n",
+      "text_sha256": "243709fe0bbde845639c05a08cd4ae4601450ec5670085ab5e9038dcd165d7c3"
+    }
+  ],
+  "coordinates_sha256": "0c186e3ff26c9bcc31431bfca9411be9a9c54afc0768de4af84341e400a98267",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0762",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 32\nTroubles du sommeil et de la vigilance\n745\nTABLEAU 32.12 Critères diagnostiques du trouble de l’alternance veille-sommeil lié au rythme circadien\nDSM-5\nDSM-IV-TR\n307.45 (G47.2_) Trouble de l’alternance veille-sommeil\nlié au rythme circadien\n307.45 (F51.2) Trouble du sommeil lié au rythme circadien\n(auparavant Trouble du rythme veille-sommeil)\nA. Fractionnement persistant ou récurrent du sommeil qui s’explique principale-\nment par une perturbation du système circadien ou par un décalage entre le\nrythme circadien endogène et l’horaire veille-sommeil approprié à l’environne-\nment physique d’un individu, ou à ses activités sociales ou professionnelles.\nA. Idem à DSM-5.\nB. La perturbation du sommeil entraîne de la somnolence excessive et/ou\nde l’insomnie.\nC. La perturbation ne survient pas exclusivement au cours d’un\nautre trouble du sommeil ou d’un autre trouble mental.\nD. La perturbation n’est pas liée aux effets physiologiques directs\nd’une substance (p. ex., une substance donnant lieu à abus, un\nmédicament) ou d’une affection médicale générale.\nC. La perturbation du sommeil est à l’origine d’une détresse marquée ou d’une\naltération du fonctionnement social, professionnel ou dans d’autres domaines\nimportants.\nB. Idem à DSM-5.\nSpécier le type :\n307.45 (G47.21) Type avec retard de phase : Endormissements et réveils tardifs\npersistants avec incapacité de s’endormir ou de s’éveiller plus précocement selon\nun horaire plus conventionnel.\n• Familial : Antécédents familiaux de retard de phase.\n• Superposé à une alternance veille-sommeil différente de 24 heures :\nLe type retard de phase peut se superposer à un autre trouble de l’alternance\nveille-sommeil lié au rythme circadien, l’alternance veille-sommeil différente\nde 24 heures.\n307.45 (G47.22) Type avec avance de phase : Endormissements et réveils pré-\ncoces persistants avec incapacité de s’endormir ou de s’éveiller plus tardivement\nselon un horaire plus conventionnel.\n• Familial : Antécédents familiaux d’avance de phase.\n307.45 (G47.23) Type rythme veille-sommeil irrégulier : Désorganisation\ntemporelle des rythmes veille-sommeil caractérisée par une variabilité quotidienne\ndes périodes de veille et de sommeil.\n307.45 (G47.24) Type alternance veille-sommeil différente de 24 heures :\nAbsence de synchronisation entre les cycles veille-sommeil et les variations envi-\nronnementales reposant sur un cycle de 24 heures, avec une dérive constante (en\ngénéral un retard croissant) de l’heure du coucher et du réveil.\n307.45 (G47.26) Type travail posté : Insomnie pendant la principale période de\nsommeil et/ou somnolence excessive (y compris l’endormissement involontaire)\ndurant la principale période de veille en rapport avec un travail posté (c.-à-d.\nnécessitant des horaires de travail non conventionnels).\n307.45 (G47.20) Type non spécié\nSpécier le type :\nType avec retard de phase : endormissements et réveils tardifs\npersistants avec incapacité à s’endormir ou s’éveiller à un moment\nplus précoce.\nType travail posté : insomnie pendant la principale période de\nsommeil ou somnolence excessive durant la principale période de\nveille en rapport avec un travail posté de nuit ou des modications\nfréquentes des horaires de travail.\nType non spécié : (p. ex., avec avance de phase, alternance\nveille-sommeil différente de 24 heures, alternance veille-sommeil\nirrégulière, ou autre modèle non spécié).\nType changement de fuseaux horaires (jet-lag) : périodes de\nsommeil et de veille survenant à des moments inappropriés de la\njournée selon l’heure locale après des voyages répétés comportant\nle passage de plus d’un fuseau horaire.\nSpécier le type :\nÉpisodique : Symptômes sont présents depuis au moins 1 mois mais moins\nde 3 mois.\nPersistant : Symptômes présents depuis 3 mois ou plus.\nRécurrent : Au moins deux épisodes sur une période d’un an.\nSources: APA (2015), p. 458-459 ; APA (2004), p. 727-728.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004.\nAll rights reserved.\n",
+  "raw_text_sha256": "e8d101f174749e9093483acd0ffa5d0f41becae0150fb7ffc39a4d1efe1572a4",
+  "source_page_display": 763,
+  "source_page_index": 762
+}

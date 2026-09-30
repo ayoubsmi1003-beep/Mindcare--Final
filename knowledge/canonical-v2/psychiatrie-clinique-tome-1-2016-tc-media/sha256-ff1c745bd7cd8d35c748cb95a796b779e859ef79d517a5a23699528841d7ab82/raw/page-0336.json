@@ -1,0 +1,340 @@
+{
+  "block_sequence_sha256": "a65f433d8628c1795ed6ff607b0d79eb101bed63c279aa612f4f50ac59844bce",
+  "blocks": [
+    {
+      "bbox": [
+        385.5500183105469,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0336-block-0001",
+      "order": 1,
+      "text": "Chapitre 16\nTroubles délirants\n319\n",
+      "text_sha256": "3380f081a46c48c1c155fe9a75612f9ee0872571cfc2a3ea93025c7c7ad0973c"
+    },
+    {
+      "bbox": [
+        56.29999923706055,
+        41.002296447753906,
+        285.0092468261719,
+        53.320068359375
+      ],
+      "block_id": "page-0336-block-0002",
+      "order": 2,
+      "text": "TABLEAU 16.2 Critères diagnostiques du trouble délirant\n",
+      "text_sha256": "eae7392035011fd96ff54234a0252eba8f6c21da5b0d83e72f4418b6f7d89093"
+    },
+    {
+      "bbox": [
+        58.25,
+        58.27412414550781,
+        461.1501159667969,
+        94.2281265258789
+      ],
+      "block_id": "page-0336-block-0003",
+      "order": 3,
+      "text": "DSM-5\nDSM-IV-TR\n297.1 (F22.0) Trouble délirant\nTrouble délirant\nA. Présence d’une (ou de plusieurs) idée(s) délirante(s) pendant une durée\n",
+      "text_sha256": "624c7f4a8b8cef42eee99ffa821e772a63a70e3b36188fb0e7a10432fcc0611b"
+    },
+    {
+      "bbox": [
+        66.75,
+        94.4019546508789,
+        125.88980102539062,
+        104.2281265258789
+      ],
+      "block_id": "page-0336-block-0004",
+      "order": 4,
+      "text": "de 1 mois ou plus.\n",
+      "text_sha256": "0445c03d9dcc96db4d604e2cd949d099d6ba7e4550412b81bd09a8a900a55768"
+    },
+    {
+      "bbox": [
+        317.5,
+        84.4019546508789,
+        524.09716796875,
+        94.2281265258789
+      ],
+      "block_id": "page-0336-block-0005",
+      "order": 5,
+      "text": "A. Idées délirantes non bizarres (c.-à-d. impliquant des situations\n",
+      "text_sha256": "7fc76691701d4b88a5b11ca36c26a89709b60da198607e9dbfeff8a9b1343980"
+    },
+    {
+      "bbox": [
+        326.0,
+        94.4019546508789,
+        490.5407409667969,
+        181.22813415527344
+      ],
+      "block_id": "page-0336-block-0006",
+      "order": 6,
+      "text": "rencontrées dans la réalité telles que :\n• être poursuivi(e) ;\n• être empoisonné(e) ;\n• être contaminé(e) ;\n• être aimé(e) à distance ;\n• ou être trompé(e) par le conjoint ou le partenaire ;\n• ou être atteint(e) d’une maladie) ;\npersistant au moins 1 mois.\n",
+      "text_sha256": "21ecc740b8ef1b5b5d2af006d3bb071ca998c733bd6498528e5a2d119f1b1d3e"
+    },
+    {
+      "bbox": [
+        58.25,
+        185.8019561767578,
+        305.32977294921875,
+        226.6281280517578
+      ],
+      "block_id": "page-0336-block-0007",
+      "order": 7,
+      "text": "B. Le critère A de la schizophrénie n’a jamais été rempli.\nN.B. : Si des hallucinations sont présentes, elles ne sont pas prééminentes et\nelles sont en rapport avec le thème du délire (p. ex. la sensation d’être infesté\npar des insectes associée à des idées délirantes d’infestation).\n",
+      "text_sha256": "2f74f48f951e727815e72628bca61b65e26398d9bcff71336779851b9ec3de75"
+    },
+    {
+      "bbox": [
+        317.5,
+        185.8019561767578,
+        543.8414916992188,
+        216.6281280517578
+      ],
+      "block_id": "page-0336-block-0008",
+      "order": 8,
+      "text": "B. N’a jamais répondu au Critère A de la Schizophrénie.\nN.B. : Des hallucinations tactiles et olfactives peuvent être présentes\ndans le trouble délirant si elles sont en rapport avec le thème du délire.\n",
+      "text_sha256": "5c8d79942031c8b8bdb89b3c01bf6d53e797acb3cc0f9dd0f50e9df41718e596"
+    },
+    {
+      "bbox": [
+        58.25,
+        231.251953125,
+        293.90679931640625,
+        241.078125
+      ],
+      "block_id": "page-0336-block-0009",
+      "order": 9,
+      "text": "C. En dehors de l’impact de l’idée (des idées) délirante(s) ou de ses (leurs)\n",
+      "text_sha256": "f0179dde3e6661a51a0dfcfa69a5734d9450894afa1ff793c422472177e5aa3e"
+    },
+    {
+      "bbox": [
+        66.9000015258789,
+        241.251953125,
+        293.5356750488281,
+        261.078125
+      ],
+      "block_id": "page-0336-block-0010",
+      "order": 10,
+      "text": "ramications, il n’y a pas d’altération marquée du fonctionnement ni de\nsingularités ou de bizarreries manifestes du comportement.\n",
+      "text_sha256": "fb86147cad91e4439d19852875b9fe2f5379131e95cfb89d235492464769f1a0"
+    },
+    {
+      "bbox": [
+        317.5,
+        231.251953125,
+        374.7548828125,
+        241.078125
+      ],
+      "block_id": "page-0336-block-0011",
+      "order": 11,
+      "text": "C. Idem à DSM-5.\n",
+      "text_sha256": "e3115c8f08f85dfc1a8c901e597d6628d9cc927dde450ccede1ca1ec3dd04b8e"
+    },
+    {
+      "bbox": [
+        58.25,
+        265.6519470214844,
+        285.8516540527344,
+        275.4781188964844
+      ],
+      "block_id": "page-0336-block-0012",
+      "order": 12,
+      "text": "D. Si des épisodes maniaques ou dépressifs caractérisés sont survenus\n",
+      "text_sha256": "b77081b20ddd008ceac633a301b434380326ee6a23cc21e8ea1183b635c31109"
+    },
+    {
+      "bbox": [
+        67.05000305175781,
+        275.6519470214844,
+        298.2676086425781,
+        295.4781188964844
+      ],
+      "block_id": "page-0336-block-0013",
+      "order": 13,
+      "text": "concomitamment, ils ont été de durée brève comparativement à la durée\nglobale de la période délirante.\n",
+      "text_sha256": "d6794e177f3aeb5c7c30baed3e5ca447ae17549b53b7a928acd053e09587afb5"
+    },
+    {
+      "bbox": [
+        317.5,
+        265.6519470214844,
+        530.4795532226562,
+        275.4781188964844
+      ],
+      "block_id": "page-0336-block-0014",
+      "order": 14,
+      "text": "D. En cas de survenue simultanée d’épisodes thymiques et d’idées\n",
+      "text_sha256": "5a6e9eafc3c875140a1de3ff81fa01cc0c45bca0ead9f1a54601321766bc8603"
+    },
+    {
+      "bbox": [
+        326.3000183105469,
+        275.6519470214844,
+        535.768798828125,
+        295.4781188964844
+      ],
+      "block_id": "page-0336-block-0015",
+      "order": 15,
+      "text": "délirantes, la durée totale des épisodes thymiques a été brève par\nrapport à la durée des périodes de délire.\n",
+      "text_sha256": "ee44fc3f7047207968ca31b213926ac8c53c04cd74c96275dfcfbc4219b8510b"
+    },
+    {
+      "bbox": [
+        58.25,
+        300.1019592285156,
+        296.9561462402344,
+        309.9281311035156
+      ],
+      "block_id": "page-0336-block-0016",
+      "order": 16,
+      "text": "E. La perturbation n’est pas due aux effets physiologiques d’une substance\n",
+      "text_sha256": "332f5295b568deb424e2e49c3a3cd780bdfb2f5d5d1cecfeddec3926b9fbb54e"
+    },
+    {
+      "bbox": [
+        66.25,
+        310.1019592285156,
+        296.9155578613281,
+        339.9281311035156
+      ],
+      "block_id": "page-0336-block-0017",
+      "order": 17,
+      "text": "ou d’une autre affection médicale et elle n’est pas mieux expliquée par\nun autre trouble mental comme l’obsession d’une dysmorphie corporelle\nou un trouble obsessionnel-compulsif.\n",
+      "text_sha256": "ea9fe575d56807ded89f613ba84601c906e695bd055ba0e1285073825f49aa31"
+    },
+    {
+      "bbox": [
+        317.5,
+        300.1019592285156,
+        524.8051147460938,
+        309.9281311035156
+      ],
+      "block_id": "page-0336-block-0018",
+      "order": 18,
+      "text": "E. La perturbation n’est pas due aux effets physiologiques directs\n",
+      "text_sha256": "4d019e0e5862356a1146ba123a90fa7b696a986a46743b6c039d64d4c55659ff"
+    },
+    {
+      "bbox": [
+        325.5,
+        310.1019592285156,
+        527.416015625,
+        329.9281311035156
+      ],
+      "block_id": "page-0336-block-0019",
+      "order": 19,
+      "text": "d’une substance (p. ex., une substance donnant lieu à un abus,\nun médicament) ou d’une affection médicale générale.\n",
+      "text_sha256": "243ac82e48d777458e19396d5d49a00176ddc4e1a21994d44a03c7ef7fa35593"
+    },
+    {
+      "bbox": [
+        58.25,
+        344.501953125,
+        135.964111328125,
+        431.4423828125
+      ],
+      "block_id": "page-0336-block-0020",
+      "order": 20,
+      "text": "Spécier le type :\nType de persécution\nType somatique\nType érotomaniaque\nType mégalomaniaque\nType de jalousie\nType mixte\nType non spécié\n",
+      "text_sha256": "2b76e22ee37a061ead2e6496d52a5aaaf90ef0b68e26a688b1100d4d11845ff9"
+    },
+    {
+      "bbox": [
+        317.5,
+        344.501953125,
+        528.9949340820312,
+        375.328125
+      ],
+      "block_id": "page-0336-block-0021",
+      "order": 21,
+      "text": "Spécication du type: la désignation des types suivants est fondée\nsur le thème délirant proéminent :\nIdem à DSM-5.\n",
+      "text_sha256": "1020ea5a968b42942b8c33bf8267313c4e541708c6f015a9908ea0ef45186828"
+    },
+    {
+      "bbox": [
+        58.25,
+        435.95196533203125,
+        130.89471435546875,
+        456.89239501953125
+      ],
+      "block_id": "page-0336-block-0022",
+      "order": 22,
+      "text": "Spécier si :\nAvec contenu bizarre\n",
+      "text_sha256": "ca818aa64a46490312d9a08b4164a3aa47d5435f1092efa7b142b919fbd69ac9"
+    },
+    {
+      "bbox": [
+        58.25,
+        462.5519714355469,
+        252.76177978515625,
+        560.4923706054688
+      ],
+      "block_id": "page-0336-block-0023",
+      "order": 23,
+      "text": "Spécier si :\nPremier épisode, actuellement en épisode aigu\nPremier épisode, actuellement en rémission partielle\nPremier épisode, actuellement en rémission complète\nMultiples épisodes, actuellement en épisode aigu\nMultiples épisodes, actuellement en rémission partielle\nMultiples épisodes, actuellement en rémission complète\nContinu\nNon spécié\n",
+      "text_sha256": "4acedd49a7a82891398148d1c7b3282914b6a2d083df619903c9478035d87179"
+    },
+    {
+      "bbox": [
+        58.25,
+        564.9519653320312,
+        299.0809631347656,
+        584.7781372070312
+      ],
+      "block_id": "page-0336-block-0024",
+      "order": 24,
+      "text": "Spécier la sévérité actuelle [sur une échelle à 5 points, allant de 0 (absent)\nà 4 (présent et grave)] (voir le tableau 17.2)\n",
+      "text_sha256": "771a09679a5f9d0c1991331428c053af2d897499626ab930fbd34a7677dfcbed"
+    },
+    {
+      "bbox": [
+        54.0,
+        594.2406616210938,
+        226.34071350097656,
+        603.10888671875
+      ],
+      "block_id": "page-0336-block-0025",
+      "order": 25,
+      "text": "Sources : APA (2015), p. 107-108 ; APA (2004), p. 380-381.\n",
+      "text_sha256": "6f46fbf95fb4878502d90078ad6d1331d53fc5829a1eef4ffea9e729241c2437"
+    },
+    {
+      "bbox": [
+        54.0,
+        609.2406616210938,
+        535.15087890625,
+        635.9750366210938
+      ],
+      "block_id": "page-0336-block-0026",
+      "order": 26,
+      "text": "Traduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\n",
+      "text_sha256": "d1e2a281d01f1237f716bfb933581f8135592b601f1b1579862a0656634f5460"
+    },
+    {
+      "bbox": [
+        54.0,
+        642.2406616210938,
+        544.9441528320312,
+        668.9750366210938
+      ],
+      "block_id": "page-0336-block-0027",
+      "order": 27,
+      "text": "Traduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004.\nAll rights reserved.\n",
+      "text_sha256": "243709fe0bbde845639c05a08cd4ae4601450ec5670085ab5e9038dcd165d7c3"
+    }
+  ],
+  "coordinates_sha256": "cd024f05415e8d42bef5751d471414d120ee93d1500d0afb58f836e87134d988",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0336",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 16\nTroubles délirants\n319\nTABLEAU 16.2 Critères diagnostiques du trouble délirant\nDSM-5\nDSM-IV-TR\n297.1 (F22.0) Trouble délirant\nTrouble délirant\nA. Présence d’une (ou de plusieurs) idée(s) délirante(s) pendant une durée\nde 1 mois ou plus.\nA. Idées délirantes non bizarres (c.-à-d. impliquant des situations\nrencontrées dans la réalité telles que :\n• être poursuivi(e) ;\n• être empoisonné(e) ;\n• être contaminé(e) ;\n• être aimé(e) à distance ;\n• ou être trompé(e) par le conjoint ou le partenaire ;\n• ou être atteint(e) d’une maladie) ;\npersistant au moins 1 mois.\nB. Le critère A de la schizophrénie n’a jamais été rempli.\nN.B. : Si des hallucinations sont présentes, elles ne sont pas prééminentes et\nelles sont en rapport avec le thème du délire (p. ex. la sensation d’être infesté\npar des insectes associée à des idées délirantes d’infestation).\nB. N’a jamais répondu au Critère A de la Schizophrénie.\nN.B. : Des hallucinations tactiles et olfactives peuvent être présentes\ndans le trouble délirant si elles sont en rapport avec le thème du délire.\nC. En dehors de l’impact de l’idée (des idées) délirante(s) ou de ses (leurs)\nramications, il n’y a pas d’altération marquée du fonctionnement ni de\nsingularités ou de bizarreries manifestes du comportement.\nC. Idem à DSM-5.\nD. Si des épisodes maniaques ou dépressifs caractérisés sont survenus\nconcomitamment, ils ont été de durée brève comparativement à la durée\nglobale de la période délirante.\nD. En cas de survenue simultanée d’épisodes thymiques et d’idées\ndélirantes, la durée totale des épisodes thymiques a été brève par\nrapport à la durée des périodes de délire.\nE. La perturbation n’est pas due aux effets physiologiques d’une substance\nou d’une autre affection médicale et elle n’est pas mieux expliquée par\nun autre trouble mental comme l’obsession d’une dysmorphie corporelle\nou un trouble obsessionnel-compulsif.\nE. La perturbation n’est pas due aux effets physiologiques directs\nd’une substance (p. ex., une substance donnant lieu à un abus,\nun médicament) ou d’une affection médicale générale.\nSpécier le type :\nType de persécution\nType somatique\nType érotomaniaque\nType mégalomaniaque\nType de jalousie\nType mixte\nType non spécié\nSpécication du type: la désignation des types suivants est fondée\nsur le thème délirant proéminent :\nIdem à DSM-5.\nSpécier si :\nAvec contenu bizarre\nSpécier si :\nPremier épisode, actuellement en épisode aigu\nPremier épisode, actuellement en rémission partielle\nPremier épisode, actuellement en rémission complète\nMultiples épisodes, actuellement en épisode aigu\nMultiples épisodes, actuellement en rémission partielle\nMultiples épisodes, actuellement en rémission complète\nContinu\nNon spécié\nSpécier la sévérité actuelle [sur une échelle à 5 points, allant de 0 (absent)\nà 4 (présent et grave)] (voir le tableau 17.2)\nSources : APA (2015), p. 107-108 ; APA (2004), p. 380-381.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004.\nAll rights reserved.\n",
+  "raw_text_sha256": "697b1d7c851553bfecf8db6773ea0027e2bb2e79316ba37de853ebfa14919144",
+  "source_page_display": 337,
+  "source_page_index": 336
+}

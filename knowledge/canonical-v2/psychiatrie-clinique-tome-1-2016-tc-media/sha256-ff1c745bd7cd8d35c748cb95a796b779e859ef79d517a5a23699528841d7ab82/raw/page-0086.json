@@ -1,0 +1,208 @@
+{
+  "block_sequence_sha256": "5bcf53c0fff30ab8c3a9397536c43c075374cfbe32713eb276cc48976c6ddef8",
+  "blocks": [
+    {
+      "bbox": [
+        374.20001220703125,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0086-block-0001",
+      "order": 1,
+      "text": "Chapitre 3\nExamen psychiatrique\n69\n",
+      "text_sha256": "d9be3cf55b13b7884e062f8aaab91890b022ae50c44b56178d9cc202d7518f4e"
+    },
+    {
+      "bbox": [
+        96.55000305175781,
+        58.824119567871094,
+        507.1709899902344,
+        69.4002914428711
+      ],
+      "block_id": "page-0086-block-0002",
+      "order": 2,
+      "text": "Facteurs\nBiologiques\nPsychologiques\nSociaux\n",
+      "text_sha256": "2f550a55d37d88f8ae7ea3a89aec178abe151e85fecceff21efb1390a3d5a6de"
+    },
+    {
+      "bbox": [
+        58.25,
+        74.6728515625,
+        274.3306884765625,
+        149.578125
+      ],
+      "block_id": "page-0086-block-0003",
+      "order": 3,
+      "text": "Prédisposants\n• Oncle psychotique\n• Suicide du père\n• Mère dépressive\n• Parents alcooliques\n• Frère toxicomane\n• Histoire d’anoxie cérébrale\nà la naissance (APGAR bas)\n",
+      "text_sha256": "f50139dc1a86b4af652f25c0aa3266621f4fe97801a590e505c0ab83af11c683"
+    },
+    {
+      "bbox": [
+        297.3999938964844,
+        74.751953125,
+        416.5623779296875,
+        106.578125
+      ],
+      "block_id": "page-0086-block-0004",
+      "order": 4,
+      "text": "• Insécurité de base\n• Incapacité à gérer l’anxiété\n• Sentiment d’incompétence du Soi\n",
+      "text_sha256": "b45fbf9b967f6eee1dc730a8bf79dcaff517591f0b6f032d0f3f4e7c9e352d16"
+    },
+    {
+      "bbox": [
+        435.3999938964844,
+        74.751953125,
+        550.1220703125,
+        159.578125
+      ],
+      "block_id": "page-0086-block-0005",
+      "order": 5,
+      "text": "• Négligence, violence parentale\n• Abus en bas âge\n• Intimidation, rejet par les pairs\n• Placements répétitifs en foyers\nd’accueil\n• Séparation, maladie des parents\nen bas âge\n• Immigration\n",
+      "text_sha256": "b95bc5dd1a4ac8f4ddb876b3e48f4f5b20f1dfb878349ffc0a7b6b04b28a8251"
+    },
+    {
+      "bbox": [
+        58.25,
+        168.1228485107422,
+        286.91802978515625,
+        252.0281219482422
+      ],
+      "block_id": "page-0086-block-0006",
+      "order": 6,
+      "text": "Perpétuants\n• Abus d’alcool ou d’autres\ndrogues\n• Alimentation inappropriée\n• Six hospitalisations antérieures\n• Inobservance ou prise erratique\nde la médication\n• Symptômes psychotiques\npersistants\n",
+      "text_sha256": "ea4cb4f7260456ea5ced348cc34990d18aece25156a3154213e4635b1b364c65"
+    },
+    {
+      "bbox": [
+        297.3999938964844,
+        168.2019500732422,
+        423.13653564453125,
+        360.02813720703125
+      ],
+      "block_id": "page-0086-block-0007",
+      "order": 7,
+      "text": "• Tempérament timide, inquiet, inhibé\n• Impulsivité\n• Décit de mentalisation, de théorie\nde l’esprit\n• Absence d’intériorisation des\ninterdits\n• Faible estime de soi\n• Déni de la maladie, manque\nd’autocritique\n• Attitude désabusée, défaitiste\n• Besoins de dépendance\n• Crainte de l’attachement\n• Crainte de l’abandon\n• Sensibilité au rejet\n• Difculté à faire conance\nà autrui\n• Difculté d’adaptation aux\nchangements\n",
+      "text_sha256": "3dbb41c3321efdcfb1a9246b6645e258ade7a2054aa9da467780f0785747952c"
+    },
+    {
+      "bbox": [
+        435.3999938964844,
+        168.2019500732422,
+        550.1470336914062,
+        336.02813720703125
+      ],
+      "block_id": "page-0086-block-0008",
+      "order": 8,
+      "text": "• Incapacité à maintenir\nun emploi\n• Manque d’assiduité aux\nrendez-vous\n• Insécurité nancière (perte d’em-\nploi, absence de revenu, etc.)\n• Absence de relations signica-\ntives, solitude\n• Difculté d’intégration sociale\n• Instabilité conjugale\n• Haute expressivité émotive dans\nla famille\n• Fréquentation de milieux\nmarginaux\n• Misère sociale, instabilité du\nlieu de résidence, itinérance\n",
+      "text_sha256": "4c8bbdaec5c44d157637575e21b42adaa479b08cc8a4513456583428d231a18a"
+    },
+    {
+      "bbox": [
+        58.25,
+        368.5228576660156,
+        284.6624755859375,
+        473.4281311035156
+      ],
+      "block_id": "page-0086-block-0009",
+      "order": 9,
+      "text": "Protecteurs\n• Prise régulière de\nla médication IM\n• Pilulier supervisé\n• Arrêt des drogues depuis\ntrois ans\n• Exercice pour contrôler\nson poids\n• Suivi d’un régime alimentaire\n• Engagement dans le suivi avec\nson médecin\n",
+      "text_sha256": "67b2f6b68a11207a4706e0bf9cfc30764f1159b60491425ae917cd67a31a1280"
+    },
+    {
+      "bbox": [
+        297.3999938964844,
+        368.6019592285156,
+        423.022216796875,
+        454.4281311035156
+      ],
+      "block_id": "page-0086-block-0010",
+      "order": 10,
+      "text": "• Attachement à son frère\n• Intelligence supérieure\n• Peu de décits cognitifs signicatifs\n• Intéressé à ses études\n• Résilience malgré l’adversité\n• Ambition, projets d’avenir\nimportants\n• Bonne intériorisation des interdits\n",
+      "text_sha256": "a58d6d2bcf884471b495c0e04947727701f984b309e5f9a20e5b802a08817e57"
+    },
+    {
+      "bbox": [
+        435.3999938964844,
+        368.6019592285156,
+        545.903564453125,
+        496.4281311035156
+      ],
+      "block_id": "page-0086-block-0011",
+      "order": 11,
+      "text": "• Soutien d’un frère et\nde sa mère\n• Vit en milieu supervisé\n• Suivi intensif à domicile\n• Respecte son suivi médical\net en psychothérapie\n• Ordonnance de traitement\net d’hébergement\n• Bon réseau social\n• Participe aux réunions des AA\n• Fait appel au centre de crise\n• Emploi (études) à temps partiel\n",
+      "text_sha256": "81a21092835487ad62a360a2b3b78d6a312e4e4b8549d4b6c079e4a130df7507"
+    },
+    {
+      "bbox": [
+        58.25,
+        504.97283935546875,
+        279.86822509765625,
+        578.8781127929688
+      ],
+      "block_id": "page-0086-block-0012",
+      "order": 12,
+      "text": "Précipitants\n• Arrêt de la médication depuis\ndeux mois\n• Consommation de cannabis,\nd’amphétamines\n• Pneumonie\n• Défaillance cardiaque\n• Fracture\n",
+      "text_sha256": "7d9c0649aecd786dbe4b983012a5d4f4b9245c04f9dc695a404b9298988c0aec"
+    },
+    {
+      "bbox": [
+        297.3999938964844,
+        505.05194091796875,
+        424.0013122558594,
+        567.8781127929688
+      ],
+      "block_id": "page-0086-block-0013",
+      "order": 13,
+      "text": "• Inquiétudes face à son avenir\n• Baisse de l’estime de soi, sentiment\nd’échec, d’humiliation\n• Réapparition progressive de symp-\ntômes dépressifs\n• Hallucinations impérieuses\n",
+      "text_sha256": "6f8e67541c9756fa48e2e437c388138b5298b148813605ad1ec0c45592742789"
+    },
+    {
+      "bbox": [
+        435.3999938964844,
+        505.05194091796875,
+        547.9390258789062,
+        685.8781127929688
+      ],
+      "block_id": "page-0086-block-0014",
+      "order": 14,
+      "text": "• Perte d’emploi il y a deux\nsemaines\n• Séparation conjugale\n• Mauvaise assiduité aux rendez-\nvous avec son thérapeute\n• Critiques et rejet de la part\nde sa mère\n• Conjoint en phase terminale\nd’un cancer\n• Décès d’un parent, d’un ami\n• Départ des enfants (nid vide)\n• Itinérance\n• Déménagement\n• Réaménagement du milieu\nde travail\n• Conit avec un collègue\n• Litige, comparution en cour\n",
+      "text_sha256": "c286a93f28902047069f0c61395fd626680779b7256798c4b93345e0791beff2"
+    },
+    {
+      "bbox": [
+        54.25,
+        694.640625,
+        526.8999633789062,
+        712.375
+      ],
+      "block_id": "page-0086-block-0015",
+      "order": 15,
+      "text": "* Le contenu de ce tableau ne s’applique pas à un patient spécique, mais propose plutôt des exemples permettant de mettre en lumière les raisons d’une consultation\npsychiatrique. À partir de ce tableau, il est possible de formuler un énoncé regroupant les éléments bio-psycho-sociaux qui résument la situation d’un patient donné.\n",
+      "text_sha256": "9e591ad609cad99910aefd684bf285192869a64b5628cb2ccb27e4192b3a5747"
+    },
+    {
+      "bbox": [
+        56.20000076293945,
+        41.002296447753906,
+        360.1325378417969,
+        53.320068359375
+      ],
+      "block_id": "page-0086-block-0016",
+      "order": 16,
+      "text": "TABLEAU 3.9 Éléments pouvant gurer dans une formulation de synthèse*\n",
+      "text_sha256": "1a174952a2cb72de446f8388793677691c970dcc7ba9e8cf83b942912adaf5e1"
+    }
+  ],
+  "coordinates_sha256": "b8349c3ca80695e7648eb8669053ff771f5cf4142937bc772cf033fe1d989cc9",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0086",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 3\nExamen psychiatrique\n69\nFacteurs\nBiologiques\nPsychologiques\nSociaux\nPrédisposants\n• Oncle psychotique\n• Suicide du père\n• Mère dépressive\n• Parents alcooliques\n• Frère toxicomane\n• Histoire d’anoxie cérébrale\nà la naissance (APGAR bas)\n• Insécurité de base\n• Incapacité à gérer l’anxiété\n• Sentiment d’incompétence du Soi\n• Négligence, violence parentale\n• Abus en bas âge\n• Intimidation, rejet par les pairs\n• Placements répétitifs en foyers\nd’accueil\n• Séparation, maladie des parents\nen bas âge\n• Immigration\nPerpétuants\n• Abus d’alcool ou d’autres\ndrogues\n• Alimentation inappropriée\n• Six hospitalisations antérieures\n• Inobservance ou prise erratique\nde la médication\n• Symptômes psychotiques\npersistants\n• Tempérament timide, inquiet, inhibé\n• Impulsivité\n• Décit de mentalisation, de théorie\nde l’esprit\n• Absence d’intériorisation des\ninterdits\n• Faible estime de soi\n• Déni de la maladie, manque\nd’autocritique\n• Attitude désabusée, défaitiste\n• Besoins de dépendance\n• Crainte de l’attachement\n• Crainte de l’abandon\n• Sensibilité au rejet\n• Difculté à faire conance\nà autrui\n• Difculté d’adaptation aux\nchangements\n• Incapacité à maintenir\nun emploi\n• Manque d’assiduité aux\nrendez-vous\n• Insécurité nancière (perte d’em-\nploi, absence de revenu, etc.)\n• Absence de relations signica-\ntives, solitude\n• Difculté d’intégration sociale\n• Instabilité conjugale\n• Haute expressivité émotive dans\nla famille\n• Fréquentation de milieux\nmarginaux\n• Misère sociale, instabilité du\nlieu de résidence, itinérance\nProtecteurs\n• Prise régulière de\nla médication IM\n• Pilulier supervisé\n• Arrêt des drogues depuis\ntrois ans\n• Exercice pour contrôler\nson poids\n• Suivi d’un régime alimentaire\n• Engagement dans le suivi avec\nson médecin\n• Attachement à son frère\n• Intelligence supérieure\n• Peu de décits cognitifs signicatifs\n• Intéressé à ses études\n• Résilience malgré l’adversité\n• Ambition, projets d’avenir\nimportants\n• Bonne intériorisation des interdits\n• Soutien d’un frère et\nde sa mère\n• Vit en milieu supervisé\n• Suivi intensif à domicile\n• Respecte son suivi médical\net en psychothérapie\n• Ordonnance de traitement\net d’hébergement\n• Bon réseau social\n• Participe aux réunions des AA\n• Fait appel au centre de crise\n• Emploi (études) à temps partiel\nPrécipitants\n• Arrêt de la médication depuis\ndeux mois\n• Consommation de cannabis,\nd’amphétamines\n• Pneumonie\n• Défaillance cardiaque\n• Fracture\n• Inquiétudes face à son avenir\n• Baisse de l’estime de soi, sentiment\nd’échec, d’humiliation\n• Réapparition progressive de symp-\ntômes dépressifs\n• Hallucinations impérieuses\n• Perte d’emploi il y a deux\nsemaines\n• Séparation conjugale\n• Mauvaise assiduité aux rendez-\nvous avec son thérapeute\n• Critiques et rejet de la part\nde sa mère\n• Conjoint en phase terminale\nd’un cancer\n• Décès d’un parent, d’un ami\n• Départ des enfants (nid vide)\n• Itinérance\n• Déménagement\n• Réaménagement du milieu\nde travail\n• Conit avec un collègue\n• Litige, comparution en cour\n* Le contenu de ce tableau ne s’applique pas à un patient spécique, mais propose plutôt des exemples permettant de mettre en lumière les raisons d’une consultation\npsychiatrique. À partir de ce tableau, il est possible de formuler un énoncé regroupant les éléments bio-psycho-sociaux qui résument la situation d’un patient donné.\nTABLEAU 3.9 Éléments pouvant gurer dans une formulation de synthèse*\n",
+  "raw_text_sha256": "1d39973db1fe53204decf0e7fd3bdec49db8b44b2f1e68f5b39c6c7716b697aa",
+  "source_page_display": 87,
+  "source_page_index": 86
+}

@@ -1,0 +1,304 @@
+{
+  "block_sequence_sha256": "94bc990e3c2442ed5aad0cd4f6953dd339202e1ba18e1876d2de584af3b6568d",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0421-block-0001",
+      "order": 1,
+      "text": "404\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "519f9a1404c9616b4f261d183a5db4b55630624a6448317277fa75e952d868c8"
+    },
+    {
+      "bbox": [
+        50.25,
+        41.002296447753906,
+        239.0595245361328,
+        53.320068359375
+      ],
+      "block_id": "page-0421-block-0002",
+      "order": 2,
+      "text": "TABLEAU 19.5 Manifestations de la dépression\n",
+      "text_sha256": "1847c3adb45c87855b6c7a29c17245d09d1cec92a01de05ad5c90961e273dc62"
+    },
+    {
+      "bbox": [
+        107.20000457763672,
+        52.852294921875,
+        223.70851135253906,
+        64.820068359375
+      ],
+      "block_id": "page-0421-block-0003",
+      "order": 3,
+      "text": "chez l’enfant et l’adolescent\n",
+      "text_sha256": "8be22c9ef923e8fcd2fadfe8a27e325ec1c9122cdc0f293be5b482067f265888"
+    },
+    {
+      "bbox": [
+        51.54999923706055,
+        69.77412414550781,
+        83.83100891113281,
+        80.35029602050781
+      ],
+      "block_id": "page-0421-block-0004",
+      "order": 4,
+      "text": "Score au\n",
+      "text_sha256": "6a78ac06561c1376cfaeb1b7489d9527e65db44bbafb91a5106f08c5d46df718"
+    },
+    {
+      "bbox": [
+        56.0,
+        79.77412414550781,
+        79.21800231933594,
+        90.35029602050781
+      ],
+      "block_id": "page-0421-block-0005",
+      "order": 5,
+      "text": "PHQ-9\n",
+      "text_sha256": "b552c33fe0745bd1bfd70cee11483456c4b93188c5d6be57b05be2b8f899a331"
+    },
+    {
+      "bbox": [
+        96.05000305175781,
+        69.77412414550781,
+        141.9635009765625,
+        80.35029602050781
+      ],
+      "block_id": "page-0421-block-0006",
+      "order": 6,
+      "text": "Gravité de la\n",
+      "text_sha256": "56cac53e548b64528dee772cb9c06573fdad3b5827b66be462d6030004ebe717"
+    },
+    {
+      "bbox": [
+        98.8499984741211,
+        74.77412414550781,
+        255.05450439453125,
+        90.35029602050781
+      ],
+      "block_id": "page-0421-block-0007",
+      "order": 7,
+      "text": "dépression\nConduite suggérée\n",
+      "text_sha256": "65436aaf3ac80c4d10ca8f9cf0fad6ad74a8bfda1ba757354055c6f2cd540bb0"
+    },
+    {
+      "bbox": [
+        52.25,
+        95.62285614013672,
+        178.73500061035156,
+        105.64238739013672
+      ],
+      "block_id": "page-0421-block-0008",
+      "order": 8,
+      "text": "0-4\nAucune à minime\nAucune\n",
+      "text_sha256": "f6e8ff5eedf59cc654a52275cbfabd2bdae12ba98ec1fff7401837757b5d3201"
+    },
+    {
+      "bbox": [
+        52.25,
+        114.0728530883789,
+        284.9245300292969,
+        133.97813415527344
+      ],
+      "block_id": "page-0421-block-0009",
+      "order": 9,
+      "text": "5-9\nLégère\nVigilance ; répéter PHQ-9 au cours du\nsuivi établi selon le jugement du clinicien\n",
+      "text_sha256": "c749b83e2abedd9027d76b8c09bc4baeb14425a91f37fe2a753f18a88171f27d"
+    },
+    {
+      "bbox": [
+        52.25,
+        142.4728546142578,
+        263.1010437011719,
+        163.3781280517578
+      ],
+      "block_id": "page-0421-block-0010",
+      "order": 10,
+      "text": "10-14\nModérée\nConsidérer thérapie-counseling\nPrévoir suivi ou pharmacothérapie\n",
+      "text_sha256": "356baf6a01a409873c7e6c7b8cc795479664fbbf00f09cb2d1d41c588212e815"
+    },
+    {
+      "bbox": [
+        52.25,
+        171.9228515625,
+        131.34701538085938,
+        191.828125
+      ],
+      "block_id": "page-0421-block-0011",
+      "order": 11,
+      "text": "15-19\nModérément\ngrave\n",
+      "text_sha256": "c4de13fcac4f1fc689cf91ccbfee146ad2a8d38f6a0f29a65dd2c2c1a9bcdbea"
+    },
+    {
+      "bbox": [
+        154.75,
+        172.001953125,
+        280.5055847167969,
+        191.828125
+      ],
+      "block_id": "page-0421-block-0012",
+      "order": 12,
+      "text": "Traitement actif avec pharmacothérapie\nou psychothérapie\n",
+      "text_sha256": "5eaef95116565c5a98d3979281f95ca702d8a8d675666faa70bfb21db44cd172"
+    },
+    {
+      "bbox": [
+        52.25,
+        200.32286071777344,
+        268.8631896972656,
+        251.22813415527344
+      ],
+      "block_id": "page-0421-block-0013",
+      "order": 13,
+      "text": "20-27\nGrave\nEntreprendre immédiatement la\npharmacothérapie\nEn cas d’atteinte grave du fonction-\nnement ou de mauvaise réponse au\ntraitement, envoyer en psychiatrie\n",
+      "text_sha256": "94c5e5280f8a67c85f7e784990711fe776b80f9e509d2cbfe046c3f5ad8339f0"
+    },
+    {
+      "bbox": [
+        48.25,
+        259.9906311035156,
+        180.2841339111328,
+        268.8588562011719
+      ],
+      "block_id": "page-0421-block-0014",
+      "order": 14,
+      "text": "Sources : Adapté de Kroenke & Spitzer (2002).\n",
+      "text_sha256": "d0317d8f64092295abbc556db1e0604020fd62bf63d5b6fc3e3ed266fc3a2ed9"
+    },
+    {
+      "bbox": [
+        48.0,
+        304.1158142089844,
+        291.4044494628906,
+        498.6084899902344
+      ],
+      "block_id": "page-0421-block-0015",
+      "order": 15,
+      "text": "Par ailleurs, aucun test de laboratoire ne permet à l’heure\nactuelle de conrmer ou d’inrmer un diagnostic de dépression.\nBien que l’on ait mis en évidence de nombreuses anomalies de\nnature endocrinienne, immunologique, sérotoninergique, bio-\nchimique et neurophysiologique, ainsi que diverses altérations\nrévélées par la neuro-imagerie fonctionnelle, aucune n’est à ce\njour susamment sensible ou spécique. Ainsi en est-il du test de\nsuppression à la dexaméthasone, qui montre chez de nombreux\ndéprimés une hyperactivité de l’axe hypothalamo-hypophyso-\nsurrénalien, mais qui est trop imprécis pour être d’une quel-\nconque utilité dans le processus diagnostique (Mössner & al.,\n2007). Une petite étude récente est arrivée à un niveau accep-\ntable de sensibilité (91 %) et de spécicité (81 %) en combinant\nles résultats de neuf biomarqueurs sériques, mais, avant d’aller\nplus loin, il importe de conrmer ces résultats à plus large\néchelle et d’en examiner les conséquences cliniques (Papakostas\n& al., 2011).\n",
+      "text_sha256": "1263d715123ff2139a4824eb5a16baca1bdcde635bc89ea6132be20ad1562850"
+    },
+    {
+      "bbox": [
+        313.70001220703125,
+        43.84316635131836,
+        498.0784912109375,
+        80.8189468383789
+      ],
+      "block_id": "page-0421-block-0016",
+      "order": 16,
+      "text": "19.8\nDiagnostic différentiel\net comorbidité\n",
+      "text_sha256": "1621b956621b252b54f744a1b916c611da9fa885ecfb846d32663fc307f6af87"
+    },
+    {
+      "bbox": [
+        306.0,
+        94.7158203125,
+        549.4646606445312,
+        406.0585021972656
+      ],
+      "block_id": "page-0421-block-0017",
+      "order": 17,
+      "text": "Devant un syndrome dépressif, le médecin doit d’abord écar-\nter l’éventualité d’une aection purement médicale (trouble\ndépressif dû à une autre aection médicale dans le DSM-5). Il\nimporte de rechercher en particulier les signes d’anémie (et ses\ndiverses causes) et d’hypothyroïdie, surtout chez les plus de 50 ans\n(Whooley & Simon, 2000). D’autres perturbations endocriniennes\n(hyperthyroïdie, maladie de Cushing, insusance surrénalienne,\nhyperparathyroïdie) ou des maladies inflammatoires (lupus\nérythémateux, etc.) peuvent être également en cause, mais elles\nsont plus rares et sont habituellement dénoncées par des symp-\ntômes plus spéciques. Devant un état où dominent fatigue et\nperte de poids malgré un appétit préservé, le médecin doit penser\nà une néoplasie. Chez la personne âgée, une humeur dépressive,\nde l’asthénie, un ralentissement moteur et un désintérêt peuvent\nfaire partie des symptômes inauguraux d’une maladie de Parkinson,\nd’une démence de type Alzheimer ou d’origine vasculaire. Dans\nles atteintes vasculaires sous-corticales, on note souvent un état\nd’apathie et une perte d’initiative, mais sans symptômes thymiques\nou neurovégétatifs. Par ailleurs, certains médicaments peuvent\ncauser ou aggraver des états dépressifs. Il est souvent dicile\nd’établir un lien de causalité de façon irréfutable, car les données\nsont généralement minces, basées sur des études de cas, rare-\nment étayées par des échelles de mesure de dépression ; de plus,\nfatigue et symptômes dépressifs sont souvent mal diérenciés. Le\ntableau 19.6 propose une liste basée sur les meilleures données\ndisponibles. Cette liste n’est pas exhaustive et certains patients\npeuvent manifester une réaction inhabituelle ou idiosyncrasique.\n",
+      "text_sha256": "87c3af7a364f5baaca0aba7ccdae5f185394e88521bd4db6f28ad76af683c069"
+    },
+    {
+      "bbox": [
+        306.0,
+        407.1158142089844,
+        549.472412109375,
+        498.6084899902344
+      ],
+      "block_id": "page-0421-block-0018",
+      "order": 18,
+      "text": "L’interface entre troubles anxieux et troubles dépressifs est\ndicile à cerner : bien que les symptômes anxieux ne fassent\npas formellement partie des critères de dépression, ils sont la\nrègle plutôt que l’exception : jusqu’à 90 % des individus déprimés\nprésentent des symptômes anxieux et 50 % présentent les critères\nd’au moins un trouble anxieux selon la dénition du DSM-5.\nC’est pourquoi plusieurs arment que les troubles anxieux\n(particulièrement l’anxiété généralisée) et les troubles dépressifs\n",
+      "text_sha256": "0d81fa906dc4479652f1236df0cad94f0b4af6ae90ed10af18d57e167be22fb5"
+    },
+    {
+      "bbox": [
+        50.25,
+        529.5523071289062,
+        301.3960876464844,
+        541.9201049804688
+      ],
+      "block_id": "page-0421-block-0019",
+      "order": 19,
+      "text": "TABLEAU 19.6 Médicaments pouvant causer un état dépressif\n",
+      "text_sha256": "6cc252ab708e0f888ddf295fc592e6703f87b99ff5a15a728bde4d805977f134"
+    },
+    {
+      "bbox": [
+        68.25,
+        546.8241577148438,
+        538.0835571289062,
+        567.4003295898438
+      ],
+      "block_id": "page-0421-block-0020",
+      "order": 20,
+      "text": "Association bien documentée\nAssociation possible\nAssociation peu probable,\nbien que souvent mentionnée\n",
+      "text_sha256": "94e9605d3700455aee3aa3feeb2e61fb3598c11ff9cc66195995696d74a32212"
+    },
+    {
+      "bbox": [
+        52.25,
+        572.8019409179688,
+        185.38218688964844,
+        699.6281127929688
+      ],
+      "block_id": "page-0421-block-0021",
+      "order": 21,
+      "text": "• Corticostéroïdes\n• Méoquine (antipaludéen)\n• Interféron-α (traitement hépatite C)\n• Interleukine-2 (antinéoplasique)\n• Leuprolide, goséréline (agonistes\nde l’hormone de libération de la\ngonadotrophine)\n• Éfavirenz (antirétroviral)\n• Flunarizine (bloqueur des canaux\ncalciques, antimigraineux)\n• Vigabatrine, phénobarbital, topiramate\n(anticonvulsivants)\n",
+      "text_sha256": "fc9dd1b0b8e58cdb68d2996f0e7bb7216eb5803b35f9dabc6fc69a045c417c33"
+    },
+    {
+      "bbox": [
+        199.5,
+        572.8019409179688,
+        393.6291198730469,
+        707.1281127929688
+      ],
+      "block_id": "page-0421-block-0022",
+      "order": 22,
+      "text": "• Clomiphène\n• Antihypertenseurs :\n– Méthyldopa\n– Réserpine\n– Clonidine\n• Digoxine en surdosage\n• Tétrabénazine (analogue de la réserpine)\n• Sédatifs-hypnotiques\n• Isotrétinoïne (anti-acné)\n• Varénicline (arrêt du tabagisme)\n• Busulfan, carmustine, vincristine, vinblastine, pémétrexed\net divers autres antinéoplasiques\n",
+      "text_sha256": "af08797fdbb945a6e5dcf0753cc9e1846fcc0c82269fd39fa72d7e4b0271b97a"
+    },
+    {
+      "bbox": [
+        423.0,
+        573.1674194335938,
+        496.739990234375,
+        594.1781616210938
+      ],
+      "block_id": "page-0421-block-0023",
+      "order": 23,
+      "text": "•\nβ-bloquants\n• Contraceptifs oraux\n",
+      "text_sha256": "d9c6c0a05d73d00e1687149ef414d28290aa320ecc903fb5abac6311f7ae9c38"
+    },
+    {
+      "bbox": [
+        48.25,
+        715.890625,
+        234.3839874267578,
+        724.7588500976562
+      ],
+      "block_id": "page-0421-block-0024",
+      "order": 24,
+      "text": "Sources : Adapté de Celano & al. (2011) ; Patten & Barbui (2004).\n",
+      "text_sha256": "8d6be1050708faa3e6601b35d44f27bbd8985f784dbe89a0e2cbe79f195a23ae"
+    }
+  ],
+  "coordinates_sha256": "55bf84320600d6f12e735f6e1a9a5731092a6ae771d7a47451c4333ce34ac773",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0421",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "404\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nTABLEAU 19.5 Manifestations de la dépression\nchez l’enfant et l’adolescent\nScore au\nPHQ-9\nGravité de la\ndépression\nConduite suggérée\n0-4\nAucune à minime\nAucune\n5-9\nLégère\nVigilance ; répéter PHQ-9 au cours du\nsuivi établi selon le jugement du clinicien\n10-14\nModérée\nConsidérer thérapie-counseling\nPrévoir suivi ou pharmacothérapie\n15-19\nModérément\ngrave\nTraitement actif avec pharmacothérapie\nou psychothérapie\n20-27\nGrave\nEntreprendre immédiatement la\npharmacothérapie\nEn cas d’atteinte grave du fonction-\nnement ou de mauvaise réponse au\ntraitement, envoyer en psychiatrie\nSources : Adapté de Kroenke & Spitzer (2002).\nPar ailleurs, aucun test de laboratoire ne permet à l’heure\nactuelle de conrmer ou d’inrmer un diagnostic de dépression.\nBien que l’on ait mis en évidence de nombreuses anomalies de\nnature endocrinienne, immunologique, sérotoninergique, bio-\nchimique et neurophysiologique, ainsi que diverses altérations\nrévélées par la neuro-imagerie fonctionnelle, aucune n’est à ce\njour susamment sensible ou spécique. Ainsi en est-il du test de\nsuppression à la dexaméthasone, qui montre chez de nombreux\ndéprimés une hyperactivité de l’axe hypothalamo-hypophyso-\nsurrénalien, mais qui est trop imprécis pour être d’une quel-\nconque utilité dans le processus diagnostique (Mössner & al.,\n2007). Une petite étude récente est arrivée à un niveau accep-\ntable de sensibilité (91 %) et de spécicité (81 %) en combinant\nles résultats de neuf biomarqueurs sériques, mais, avant d’aller\nplus loin, il importe de conrmer ces résultats à plus large\néchelle et d’en examiner les conséquences cliniques (Papakostas\n& al., 2011).\n19.8\nDiagnostic différentiel\net comorbidité\nDevant un syndrome dépressif, le médecin doit d’abord écar-\nter l’éventualité d’une aection purement médicale (trouble\ndépressif dû à une autre aection médicale dans le DSM-5). Il\nimporte de rechercher en particulier les signes d’anémie (et ses\ndiverses causes) et d’hypothyroïdie, surtout chez les plus de 50 ans\n(Whooley & Simon, 2000). D’autres perturbations endocriniennes\n(hyperthyroïdie, maladie de Cushing, insusance surrénalienne,\nhyperparathyroïdie) ou des maladies inflammatoires (lupus\nérythémateux, etc.) peuvent être également en cause, mais elles\nsont plus rares et sont habituellement dénoncées par des symp-\ntômes plus spéciques. Devant un état où dominent fatigue et\nperte de poids malgré un appétit préservé, le médecin doit penser\nà une néoplasie. Chez la personne âgée, une humeur dépressive,\nde l’asthénie, un ralentissement moteur et un désintérêt peuvent\nfaire partie des symptômes inauguraux d’une maladie de Parkinson,\nd’une démence de type Alzheimer ou d’origine vasculaire. Dans\nles atteintes vasculaires sous-corticales, on note souvent un état\nd’apathie et une perte d’initiative, mais sans symptômes thymiques\nou neurovégétatifs. Par ailleurs, certains médicaments peuvent\ncauser ou aggraver des états dépressifs. Il est souvent dicile\nd’établir un lien de causalité de façon irréfutable, car les données\nsont généralement minces, basées sur des études de cas, rare-\nment étayées par des échelles de mesure de dépression ; de plus,\nfatigue et symptômes dépressifs sont souvent mal diérenciés. Le\ntableau 19.6 propose une liste basée sur les meilleures données\ndisponibles. Cette liste n’est pas exhaustive et certains patients\npeuvent manifester une réaction inhabituelle ou idiosyncrasique.\nL’interface entre troubles anxieux et troubles dépressifs est\ndicile à cerner : bien que les symptômes anxieux ne fassent\npas formellement partie des critères de dépression, ils sont la\nrègle plutôt que l’exception : jusqu’à 90 % des individus déprimés\nprésentent des symptômes anxieux et 50 % présentent les critères\nd’au moins un trouble anxieux selon la dénition du DSM-5.\nC’est pourquoi plusieurs arment que les troubles anxieux\n(particulièrement l’anxiété généralisée) et les troubles dépressifs\nTABLEAU 19.6 Médicaments pouvant causer un état dépressif\nAssociation bien documentée\nAssociation possible\nAssociation peu probable,\nbien que souvent mentionnée\n• Corticostéroïdes\n• Méoquine (antipaludéen)\n• Interféron-α (traitement hépatite C)\n• Interleukine-2 (antinéoplasique)\n• Leuprolide, goséréline (agonistes\nde l’hormone de libération de la\ngonadotrophine)\n• Éfavirenz (antirétroviral)\n• Flunarizine (bloqueur des canaux\ncalciques, antimigraineux)\n• Vigabatrine, phénobarbital, topiramate\n(anticonvulsivants)\n• Clomiphène\n• Antihypertenseurs :\n– Méthyldopa\n– Réserpine\n– Clonidine\n• Digoxine en surdosage\n• Tétrabénazine (analogue de la réserpine)\n• Sédatifs-hypnotiques\n• Isotrétinoïne (anti-acné)\n• Varénicline (arrêt du tabagisme)\n• Busulfan, carmustine, vincristine, vinblastine, pémétrexed\net divers autres antinéoplasiques\n•\nβ-bloquants\n• Contraceptifs oraux\nSources : Adapté de Celano & al. (2011) ; Patten & Barbui (2004).\n",
+  "raw_text_sha256": "7d94becd99d8059d5947cf0f500cfe8ee85aedc8b614de175c19c26d67616822",
+  "source_page_display": 422,
+  "source_page_index": 421
+}

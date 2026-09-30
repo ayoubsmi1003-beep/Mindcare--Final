@@ -1,0 +1,52 @@
+{
+  "block_sequence_sha256": "59b7913a01988b951e259a7cae841176186e725261f9e2bad19f7f495f4cf0a3",
+  "blocks": [
+    {
+      "bbox": [
+        420.6000061035156,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0118-block-0001",
+      "order": 1,
+      "text": "Chapitre 5\nGénétique\n101\n",
+      "text_sha256": "946ce5fac6ec67075ed4bb6dd7553b62f90ab2f91d61afebd1df140875e9b9d4"
+    },
+    {
+      "bbox": [
+        56.29999923706055,
+        41.002296447753906,
+        416.6557922363281,
+        53.320068359375
+      ],
+      "block_id": "page-0118-block-0002",
+      "order": 2,
+      "text": "FIGURE 5.5 Génogramme illustrant l’étude de liaison génétique à l’intérieur des familles\n",
+      "text_sha256": "a8f5de3980a190c659c3d98a19caf90e2d7705d0b38846cfd87b527e770fe2b7"
+    },
+    {
+      "bbox": [
+        54.25,
+        595.8463134765625,
+        374.91668701171875,
+        653.1265869140625
+      ],
+      "block_id": "page-0118-block-0003",
+      "order": 3,
+      "text": "Les cercles indiquent les femmes, les carrés indiquent les hommes.\nLes gures pleines désignent les personnes affectées.\nUne barre horizontale indique un mariage et les niveaux successifs désignent les générations consécutives.\nLes chiffres sous les gures indiquent les allèles au locus utilisé comme marqueur.\nDans les familles 1 et 2, le marqueur et la maladie sont liés ; dans la famille 3, ils ne le sont pas.\n",
+      "text_sha256": "219a3924df0582ea491207a09b41141a01e5405efb0952b0ecdb2161763a3a0a"
+    }
+  ],
+  "coordinates_sha256": "77946ed18f572aa478af829b308b653b88390e1a6dc91cec6051134ccf20981b",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0118",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 5\nGénétique\n101\nFIGURE 5.5 Génogramme illustrant l’étude de liaison génétique à l’intérieur des familles\nLes cercles indiquent les femmes, les carrés indiquent les hommes.\nLes gures pleines désignent les personnes affectées.\nUne barre horizontale indique un mariage et les niveaux successifs désignent les générations consécutives.\nLes chiffres sous les gures indiquent les allèles au locus utilisé comme marqueur.\nDans les familles 1 et 2, le marqueur et la maladie sont liés ; dans la famille 3, ils ne le sont pas.\n",
+  "raw_text_sha256": "1bd6c63b562d9c23717d8a874accd7128457fa0c6523b70a42febad1d221cde4",
+  "source_page_display": 119,
+  "source_page_index": 118
+}

@@ -1,0 +1,100 @@
+{
+  "block_sequence_sha256": "f41325c089d9c0c7d1f39695e6fb09f7a72f073e1de96f486910c3f0c58964db",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        347.72442626953125,
+        289.02203369140625,
+        638.6472778320312
+      ],
+      "block_id": "page-1021-block-0001",
+      "order": 1,
+      "text": "44.1 Épidémiologie .............................................................. 1005\n44.2 Historique..................................................................... 1006\n44.3 Bases théoriques.......................................................... 1007\n44.3.1 Dénitions ............................................................1007\n44.3.2 Principes communs aux soins\nen collaboration...................................................1007\n44.3.3 Modèle et objectifs des soins\nen collaboration...................................................1008\n44.4 Formation des résidents ............................................. 1008\n44.4.1 Résidents en médecine familiale ...................... 1008\n44.4.2 Résidents en psychiatrie..................................... 1009\n44.4.3 Buts et composantes\nde la formation des résidents ............................1009\n44.5 Modalités d’application .............................................. 1010\n44.5.1 Système mieux intégré pour les problèmes\nde santé mentale et de toxicomanie.................1010\n44.5.2 Modèles de collaboration ..................................1011\n44.5.3 Professionnels de psychiatrie travaillant\nau sein d’équipes de 1re ligne.............................1012\n44.5.4 Rôle du médecin de famille...............................1014\n44.5.5 Rôles des autres membres de l’équipe.............1014\n44.5.6 Intégration de cliniciens de 1re ligne au\nsein des services de psychiatrie ........................ 1014\n44.5.7 Mise en œuvre d’un projet collaboratif........... 1015\n",
+      "text_sha256": "102c2f59ce1370d5688d0d4dce1fa8fe535b47a48b8b400d41f59dfcc6e374f6"
+    },
+    {
+      "bbox": [
+        306.0,
+        347.72442626953125,
+        547.0220336914062,
+        406.56817626953125
+      ],
+      "block_id": "page-1021-block-0002",
+      "order": 2,
+      "text": "44.6 Ecacité selon les données probantes ..................... 1015\n44.6.1 Composantes clés des programmes\necaces .................................................................1015\n44.6.2 Quatre exemples de programmes ecaces....1016\nLectures complémentaires.................................................... 1019\n",
+      "text_sha256": "b4b2dd94805170e788812abcfbdb8c693c9ea57d47b09e7aeaf73e1143e7a3db"
+    },
+    {
+      "bbox": [
+        48.0,
+        224.65011596679688,
+        144.17160034179688,
+        237.15011596679688
+      ],
+      "block_id": "page-1021-block-0003",
+      "order": 3,
+      "text": "Nick Kates, M.D., FRCPC\n",
+      "text_sha256": "3271ca4d5432605b030789e48ed49c0a4712bc819d253f2897f00e0d6423dece"
+    },
+    {
+      "bbox": [
+        48.0,
+        241.02725219726562,
+        275.5201110839844,
+        262.2438049316406
+      ],
+      "block_id": "page-1021-block-0004",
+      "order": 4,
+      "text": "Psychiatre, équipe de santé familiale d’Hamilton, St. Joseph’s\nHealthcare (Hamilton, Ontario)\n",
+      "text_sha256": "bcbea2257ded8c568b0d08cafb59f17c236f09b57a21e1889c3d12c211227515"
+    },
+    {
+      "bbox": [
+        48.0,
+        266.0272521972656,
+        291.1161804199219,
+        298.2438049316406
+      ],
+      "block_id": "page-1021-block-0005",
+      "order": 5,
+      "text": "Professeur, directeur, Département de psychiatrie et des sciences\nneurocomportementales, École de médecine Michael G. DeGroote,\nUniversité McMaster (Hamilton, Ontario)\n",
+      "text_sha256": "3f9ad367b1b9910e064433880f81a23a19c9c8d4150534f382d345e7f5a5ec86"
+    },
+    {
+      "bbox": [
+        48.0,
+        131.37344360351562,
+        396.78436279296875,
+        176.29531860351562
+      ],
+      "block_id": "page-1021-block-0006",
+      "order": 6,
+      "text": "Soins en collaboration\n",
+      "text_sha256": "de145d3e92e84075c47e3beb79bdf822c7fc3baeeab6ee43fbb775f584bef9fd"
+    },
+    {
+      "bbox": [
+        257.1000061035156,
+        3.1810531616210938,
+        555.0,
+        123.18104553222656
+      ],
+      "block_id": "page-1021-block-0007",
+      "order": 7,
+      "text": "CHAPITRE44\n",
+      "text_sha256": "3aa222f4648e3e20dda86608d5c0ecf97127e73c544b4310a7b5a0cc0d2c7a2b"
+    }
+  ],
+  "coordinates_sha256": "9eb49a470093679bbc57590c3d8100f647f02186f6126380341044cabc56c0ea",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1021",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "44.1 Épidémiologie .............................................................. 1005\n44.2 Historique..................................................................... 1006\n44.3 Bases théoriques.......................................................... 1007\n44.3.1 Dénitions ............................................................1007\n44.3.2 Principes communs aux soins\nen collaboration...................................................1007\n44.3.3 Modèle et objectifs des soins\nen collaboration...................................................1008\n44.4 Formation des résidents ............................................. 1008\n44.4.1 Résidents en médecine familiale ...................... 1008\n44.4.2 Résidents en psychiatrie..................................... 1009\n44.4.3 Buts et composantes\nde la formation des résidents ............................1009\n44.5 Modalités d’application .............................................. 1010\n44.5.1 Système mieux intégré pour les problèmes\nde santé mentale et de toxicomanie.................1010\n44.5.2 Modèles de collaboration ..................................1011\n44.5.3 Professionnels de psychiatrie travaillant\nau sein d’équipes de 1re ligne.............................1012\n44.5.4 Rôle du médecin de famille...............................1014\n44.5.5 Rôles des autres membres de l’équipe.............1014\n44.5.6 Intégration de cliniciens de 1re ligne au\nsein des services de psychiatrie ........................ 1014\n44.5.7 Mise en œuvre d’un projet collaboratif........... 1015\n44.6 Ecacité selon les données probantes ..................... 1015\n44.6.1 Composantes clés des programmes\necaces .................................................................1015\n44.6.2 Quatre exemples de programmes ecaces....1016\nLectures complémentaires.................................................... 1019\nNick Kates, M.D., FRCPC\nPsychiatre, équipe de santé familiale d’Hamilton, St. Joseph’s\nHealthcare (Hamilton, Ontario)\nProfesseur, directeur, Département de psychiatrie et des sciences\nneurocomportementales, École de médecine Michael G. DeGroote,\nUniversité McMaster (Hamilton, Ontario)\nSoins en collaboration\nCHAPITRE44\n",
+  "raw_text_sha256": "692f4baaea1f19529547cd357c58eec163c6b998d556368778ed75cfb2a362e2",
+  "source_page_display": 1022,
+  "source_page_index": 1021
+}

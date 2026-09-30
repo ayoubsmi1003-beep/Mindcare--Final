@@ -1,0 +1,76 @@
+{
+  "block_sequence_sha256": "0e3e2a51d54a8ca8df3d7a8bb2739bffacf3e31675ca93fe459e37f957c75d56",
+  "blocks": [
+    {
+      "bbox": [
+        422.8000183105469,
+        747.3754272460938,
+        554.97998046875,
+        758.6693725585938
+      ],
+      "block_id": "page-1152-block-0001",
+      "order": 1,
+      "text": "Figures supplémentaires\nF15\n",
+      "text_sha256": "0cbcaa23941a2171990d8dbcd0e6734a388e975378fad3f6173671ba74e2234f"
+    },
+    {
+      "bbox": [
+        56.45000076293945,
+        41.002296447753906,
+        204.5858154296875,
+        53.320068359375
+      ],
+      "block_id": "page-1152-block-0002",
+      "order": 2,
+      "text": "FIGURE 23 Noyaux du tronc cérébral\n",
+      "text_sha256": "bb153854d8d314e1f6fad033aff1cc2f94cd9d44f0a09670d11a8e77fa313b2d"
+    },
+    {
+      "bbox": [
+        54.25,
+        433.59063720703125,
+        340.8526611328125,
+        442.4588623046875
+      ],
+      "block_id": "page-1152-block-0003",
+      "order": 3,
+      "text": "Source : Martin, J. H. (1996). Neuroanatomy, Text and Atlas, Stamford, CT, Appleton and Lange, p. 87.\n",
+      "text_sha256": "0707505b3f681a7f731665d7c1d8859beefa1532347d1afce2a59f206f7836b3"
+    },
+    {
+      "bbox": [
+        56.35000228881836,
+        479.0022888183594,
+        189.2519989013672,
+        491.320068359375
+      ],
+      "block_id": "page-1152-block-0004",
+      "order": 4,
+      "text": "FIGURE 24 Électrocardiogramme\n",
+      "text_sha256": "853ba83af735e4d6b9d6d00b898330719c4b7de4d5354ec388f7d699dce03757"
+    },
+    {
+      "bbox": [
+        54.25,
+        693.5406494140625,
+        135.54283142089844,
+        702.4088745117188
+      ],
+      "block_id": "page-1152-block-0005",
+      "order": 5,
+      "text": "Source : Med on line (2015).\n",
+      "text_sha256": "d1457b9341dc0c1539f0e993504d4ca0b5a4ec3935bf356f7d9dcf80ba4b6c3d"
+    }
+  ],
+  "coordinates_sha256": "6d3a90eca8ff9013d759e225ccfbbc268647748e5e270787e912a7cc4d028c2a",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1152",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Figures supplémentaires\nF15\nFIGURE 23 Noyaux du tronc cérébral\nSource : Martin, J. H. (1996). Neuroanatomy, Text and Atlas, Stamford, CT, Appleton and Lange, p. 87.\nFIGURE 24 Électrocardiogramme\nSource : Med on line (2015).\n",
+  "raw_text_sha256": "0500dbbf45dd1a18c61c225db1fac8684c227d2406c4e10a84a0c9afe4d5ccb5",
+  "source_page_display": 1153,
+  "source_page_index": 1152
+}

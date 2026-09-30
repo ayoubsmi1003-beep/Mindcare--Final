@@ -1,0 +1,304 @@
+{
+  "block_sequence_sha256": "7088775abe6e2c313da8f759066fad7bc62a4804c58b1b0c074ad0a757d073b9",
+  "blocks": [
+    {
+      "bbox": [
+        362.5,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0632-block-0001",
+      "order": 1,
+      "text": "Chapitre 27\nTroubles neurocognitifs\n615\n",
+      "text_sha256": "f1182a2c5e348c94842f6bb079b90a4e53ff127b82e94acf92954beed7e8bd27"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.9658203125,
+        297.12847900390625,
+        74.45849609375
+      ],
+      "block_id": "page-0632-block-0002",
+      "order": 2,
+      "text": "L’encadré 27.13 énumère les critères diagnostiques du trouble\namnésique, qui était décrit dans le DSM-IV-TR mais qui a été\nretiré du DSM-5.\n",
+      "text_sha256": "a7bbcaf0276bba456b86017fb385be7e8d32959e3ecb48ef9e6944476013c9cb"
+    },
+    {
+      "bbox": [
+        54.0,
+        75.4658203125,
+        297.2435607910156,
+        160.95849609375
+      ],
+      "block_id": "page-0632-block-0003",
+      "order": 3,
+      "text": "Le DSM-IV-TR décrivait trois types de troubles amnésiques :\n• le trouble amnésique dû à une aection médicale générale ; il\nest transitoire si l’altération de la mémoire dure un mois ou\nmoins et chronique si elle dure plus d’un mois.\n• le trouble amnésique persistant induit par une substance ;\n• le trouble amnésique non spécié, si le diagnostic ne répond\npas aux critères des deux précédents.\n",
+      "text_sha256": "ffc5ac5b3fc6edc4c265e385e525133ee78e843e3413d5df854437847ff97fe6"
+    },
+    {
+      "bbox": [
+        54.0,
+        173.48681640625,
+        173.31683349609375,
+        189.62939453125
+      ],
+      "block_id": "page-0632-block-0004",
+      "order": 4,
+      "text": "27.4.2 Épidémiologie\n",
+      "text_sha256": "75c208425969bac7740625a297a121efc2b3fe7ec715df60a8fd2bdb71dd9d34"
+    },
+    {
+      "bbox": [
+        54.0,
+        192.9658203125,
+        297.2427673339844,
+        237.95849609375
+      ],
+      "block_id": "page-0632-block-0005",
+      "order": 5,
+      "text": "Aucune étude épidémiologique ne semble avoir établi la prévalence\nou l’incidence de ce trouble. Toutefois, les troubles amnésiques\nsont plus fréquents chez les patients abusant de l’alcool ou font\nsuite à un traumatisme crânien.\n",
+      "text_sha256": "ccbb926471da800a4099ba9c3015b8692dfb601dddd7c8684e51191a1869379a"
+    },
+    {
+      "bbox": [
+        54.0,
+        248.48681640625,
+        149.48678588867188,
+        264.62939453125
+      ],
+      "block_id": "page-0632-block-0006",
+      "order": 6,
+      "text": "27.4.3 Étiologies\n",
+      "text_sha256": "97b53e02590803b944610942a86ffd842dd3529dd3b42f46f596038be74d8f80"
+    },
+    {
+      "bbox": [
+        54.0,
+        267.9658203125,
+        297.43927001953125,
+        457.45849609375
+      ],
+      "block_id": "page-0632-block-0007",
+      "order": 7,
+      "text": "Les principales causes de troubles amnésiques sont :\n• la décience en thiamine (vitamine B1) ;\n• l’hypoglycémie ;\n• l’hypoxie (notamment les tentatives non fatales de pendaison\net d’empoisonnement au monoxyde de carbone) ;\n• des aections cérébrales primaires telles l’encéphalite herpé-\ntique, l’épilepsie, la sclérose en plaques ;\n• des atteintes thalamiques, des corps mamillaires, de l’hippo-\ncampe ou du lobe temporal (tumeur, AVC) ;\n• l’amnésie globale transitoire (trouble vasculaire cérébral\nimpliquant les artères vertébrobasilaires) ;\n• des procédures neurochirurgicales ;\n• l’électroconvulsivothérapie (ECT) ;\n• l’usage de substances : l’alcool, les sédatifs hypnotiques (les benzo-\ndiazépines et des préparations en vente libre), les anticonvulsivants,\n",
+      "text_sha256": "2b8782f8c8371fe0b1de84b46ada6366e05fba4ecb3354fd294f5a33427fdd56"
+    },
+    {
+      "bbox": [
+        312.0,
+        40.9658203125,
+        555.0175170898438,
+        111.3584976196289
+      ],
+      "block_id": "page-0632-block-0008",
+      "order": 8,
+      "text": "le méthotrexate intrathécal, les neurotoxines (plomb, mercure,\ninsecticides organophosphorés et solvants industriels).\nLa décience en thiamine, l’hypoglycémie, l’hypoxie et l’en-\ncéphalite herpétique ont pour eet d’endommager les lobes\ntemporaux, en particulier l’hippocampe, et sont ainsi associées\nà l’apparition de troubles amnésiques.\n",
+      "text_sha256": "6ec92ddd3680438ca661cfb5e0ffe0e08614503f1b23bceb442a31ce379d03c2"
+    },
+    {
+      "bbox": [
+        312.0,
+        112.41582489013672,
+        555.3967895507812,
+        261.90850830078125
+      ],
+      "block_id": "page-0632-block-0009",
+      "order": 9,
+      "text": "Les structures neuroanatomiques majeures intervenant\ndans la mémoire sont le diencéphale, dont le thalamus et le\nlobe temporal médian (hippocampe, corps mamillaires et\namygdale). Mais la localisation et la distribution des processus\nmnésiques sont complexes et concernent plusieurs régions\ncérébrales. Habituellement, l’amnésie résulte de dommages\nbilatéraux de ces structures, mais on a décrit quelques cas de\ndommage unilatéral, et les atteintes de l’hémisphère gauche\nseraient plus critiques. L’hippocampe gauche est relativement\nspécialisé dans la mémoire verbale et l’hippocampe droit dans\nles mémoires non verbales. Avec l’altération du lobe frontal,\ndes symptômes accompagnateurs sont présents, tels que la\nconfabulation et l’apathie.\n",
+      "text_sha256": "332a28faca23dcb3166187039e391369cc765d6976a7c27e895d84e4bc0f6d33"
+    },
+    {
+      "bbox": [
+        312.0,
+        262.2261962890625,
+        555.2412719726562,
+        319.8085021972656
+      ],
+      "block_id": "page-0632-block-0010",
+      "order": 10,
+      "text": "L’utilisation du triazolam (HalcionMD) a été associée à tort à\nl’amnésie antérograde, alors que ce sont toutes les benzodiazépines\nqui peuvent être impliquées, proportionnellement à la dose. À\ndes doses de 0,25 mg ou moins, le triazolam ne provoque pas\nplus d’amnésie que les autres benzodiazépines.\n",
+      "text_sha256": "31f668455e01e83c19fea7df1cbbcfffd743baa7e167a83ab4b01b2eeeec6cf8"
+    },
+    {
+      "bbox": [
+        312.0,
+        330.3868103027344,
+        463.0177001953125,
+        346.5293884277344
+      ],
+      "block_id": "page-0632-block-0011",
+      "order": 11,
+      "text": "27.4.4 Description clinique\n",
+      "text_sha256": "078b06ab2866e222731609ab5b43083b72976dc3605b190bad10cd7b8acbcb38"
+    },
+    {
+      "bbox": [
+        312.0,
+        349.9658203125,
+        555.495849609375,
+        725.45849609375
+      ],
+      "block_id": "page-0632-block-0012",
+      "order": 12,
+      "text": "La mémoire à court terme et la mémoire récente (dernière décennie)\nsont habituellement aectées. La mémoire immédiate reste intacte,\nde même que la mémoire d’informations bien apprises ou d’événe-\nments du passé ancien. Des changements subtils ou grossiers de la\npersonnalité peuvent accompagner les troubles de mémoire et les\npatients peuvent être apathiques, manquer d’initiative, connaître\ndes épisodes d’agitation sans provocation préalable ou paraître trop\namicaux. Ils peuvent aussi être confus, perplexes, et peuvent tenter\nde camouer leur confusion par des réponses confabulatoires.\nL’autocritique est déciente quant à leur aection. Un trouble\namnésique peut être causé par des aections spéciques :\n• Leblackout alcoolique survient après un abus sévère d’alcool et\nle patient est conscient d’être incapable de se rappeler la période\ndurant laquelle il était intoxiqué. Des comportements malheureux\ndont des agissements violents peuvent parfois y être associés.\n• L’électroconvulsivothérapie (ECT) est associée à une amnésie\nrétrograde (perte du souvenir des événements de vie survenus\navant le traitement) d’une période de plusieurs minutes qui débute\navant l’ECT et à une amnésie antérograde (pas d’acquisition\nde nouveaux souvenirs à partir du moment du traitement) qui\ndébute après l’ECT. L’amnésie antérograde se résorbe habituel-\nlement en cinq heures. Toutefois, des décits mnésiques légers\npeuvent persister pendant un à deux mois après l’ECT, mais ils\nsont habituellement disparus six à neuf mois après le traitement.\n• Un trauma crânien est souvent associé à une période d’am-\nnésie rétrograde menant à l’incident traumatique et à une\namnésie de l’incident traumatique lui-même. Il peut y avoir\nune corrélation entre l’importance du trauma crânien et la\ndurée et la gravité du syndrome amnésique. La meilleure\ncorrélation de l’amélioration éventuelle de l’amnésie est le\ndegré d’amélioration clinique observée durant la première\nsemaine après que le patient a repris connaissance.\n",
+      "text_sha256": "07418150363e657f876750813b2bf89b743b9a6d2e60619ef7f2b1c1620a6ee1"
+    },
+    {
+      "bbox": [
+        109.1500015258789,
+        502.3741149902344,
+        241.757080078125,
+        523.2423706054688
+      ],
+      "block_id": "page-0632-block-0013",
+      "order": 13,
+      "text": "DSM-IV-TR\n294.0 (F04) Trouble amnésique dû à…\n",
+      "text_sha256": "4399710c5c288ec9097acc2622c3981a3c13cb8a973060fe6ff683223107c22f"
+    },
+    {
+      "bbox": [
+        58.10000228881836,
+        527.751953125,
+        291.6575622558594,
+        537.578125
+      ],
+      "block_id": "page-0632-block-0014",
+      "order": 14,
+      "text": "A. Apparition d’une altération de la mémoire dont témoigne une altération\n",
+      "text_sha256": "a12333e6de0f12686923d652ffeccf1d8d9b7c473472ecc94fa28a8a835d190d"
+    },
+    {
+      "bbox": [
+        66.25,
+        537.751953125,
+        292.02813720703125,
+        557.578125
+      ],
+      "block_id": "page-0632-block-0015",
+      "order": 15,
+      "text": "de la capacité à apprendre des informations nouvelles ou à se rappeler\nles informations apprises antérieurement.\n",
+      "text_sha256": "0220ffe2279d04471bbb8fee7caa6bfaea4ea0885c623c24e837bc4fb9f1ebd6"
+    },
+    {
+      "bbox": [
+        58.10000228881836,
+        562.1519775390625,
+        290.8970031738281,
+        571.9781494140625
+      ],
+      "block_id": "page-0632-block-0016",
+      "order": 16,
+      "text": "B. La perturbation de la mémoire est à l’origine d’une altération signica-\n",
+      "text_sha256": "c7db22de26fc0a258ec8188bc4a6d9210109c4922d8d9a1790ad98123b7876b2"
+    },
+    {
+      "bbox": [
+        66.5999984741211,
+        572.1519775390625,
+        289.59832763671875,
+        591.9781494140625
+      ],
+      "block_id": "page-0632-block-0017",
+      "order": 17,
+      "text": "tive du fonctionnement social ou professionnel et représente un déclin\nsignicatif par rapport au niveau de fonctionnement antérieur.\n",
+      "text_sha256": "324127319af27c86f458ffa94fc087941f79944d85a5fc3b409aa00d06c612a0"
+    },
+    {
+      "bbox": [
+        58.10000228881836,
+        596.6019897460938,
+        290.6531066894531,
+        606.4281616210938
+      ],
+      "block_id": "page-0632-block-0018",
+      "order": 18,
+      "text": "C. La perturbation de la mémoire ne survient pas exclusivement au cours\n",
+      "text_sha256": "d0ac67d3e4384bb84b142d877ab0886b70bb47a16e4441b3454e2f2b9de60ad4"
+    },
+    {
+      "bbox": [
+        66.75,
+        606.6019897460938,
+        216.7554931640625,
+        616.4281616210938
+      ],
+      "block_id": "page-0632-block-0019",
+      "order": 19,
+      "text": "de l’évolution d’un delirium ou d’une démence.\n",
+      "text_sha256": "b5bb630cd4347e85ca220f7e24b19999853d9016367750238a22aaae3d21e25e"
+    },
+    {
+      "bbox": [
+        58.10000228881836,
+        621.0519409179688,
+        285.8107604980469,
+        630.8781127929688
+      ],
+      "block_id": "page-0632-block-0020",
+      "order": 20,
+      "text": "D. Mise en évidence d’après l’histoire de la maladie, l’examen physique\n",
+      "text_sha256": "6d43e4db3592eadb480fc8df3f26de3282b6163ad1e7fdaaff026e0b5c46efcc"
+    },
+    {
+      "bbox": [
+        66.9000015258789,
+        631.0519409179688,
+        278.947021484375,
+        660.8781127929688
+      ],
+      "block_id": "page-0632-block-0021",
+      "order": 21,
+      "text": "ou les examens complémentaires que la perturbation est la consé-\nquence physiologique directe d’une affection médicale générale\n(notamment un traumatisme physique).\n",
+      "text_sha256": "fbaaf396b30b05990eaa61f772d2497bcf941b7fe4017ec77bfb003120865431"
+    },
+    {
+      "bbox": [
+        57.20000076293945,
+        473.55230712890625,
+        256.42803955078125,
+        486.570068359375
+      ],
+      "block_id": "page-0632-block-0022",
+      "order": 22,
+      "text": "ENCADRÉ 27.13 Critères diagnostiques du trouble\n",
+      "text_sha256": "1d4c0c8f2d9911aa3e78662519c77bf3da5b6025bab1666ff00cd5fcfc62c911"
+    },
+    {
+      "bbox": [
+        118.95000457763672,
+        486.102294921875,
+        164.3150177001953,
+        498.070068359375
+      ],
+      "block_id": "page-0632-block-0023",
+      "order": 23,
+      "text": "amnésique\n",
+      "text_sha256": "7b7cfdc914d452377e76bf76294bed666943b1d9cfbfb5063e53c62c2ef4657b"
+    },
+    {
+      "bbox": [
+        54.0,
+        667.890625,
+        296.4520263671875,
+        724.625
+      ],
+      "block_id": "page-0632-block-0024",
+      "order": 24,
+      "text": "Source : APA (2004a), p. 204.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic\nand Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles\nMentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris,\n2004. All rights reserved.\n",
+      "text_sha256": "169cc21e4d0932108d618fd8fa75d968712cbc064ec52096824049ad4c086f29"
+    }
+  ],
+  "coordinates_sha256": "8facbc7bef2ffb56dd94ac2fd50d240857f3eae569e8fe47a0df2ca3752a7d1f",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0632",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 27\nTroubles neurocognitifs\n615\nL’encadré 27.13 énumère les critères diagnostiques du trouble\namnésique, qui était décrit dans le DSM-IV-TR mais qui a été\nretiré du DSM-5.\nLe DSM-IV-TR décrivait trois types de troubles amnésiques :\n• le trouble amnésique dû à une aection médicale générale ; il\nest transitoire si l’altération de la mémoire dure un mois ou\nmoins et chronique si elle dure plus d’un mois.\n• le trouble amnésique persistant induit par une substance ;\n• le trouble amnésique non spécié, si le diagnostic ne répond\npas aux critères des deux précédents.\n27.4.2 Épidémiologie\nAucune étude épidémiologique ne semble avoir établi la prévalence\nou l’incidence de ce trouble. Toutefois, les troubles amnésiques\nsont plus fréquents chez les patients abusant de l’alcool ou font\nsuite à un traumatisme crânien.\n27.4.3 Étiologies\nLes principales causes de troubles amnésiques sont :\n• la décience en thiamine (vitamine B1) ;\n• l’hypoglycémie ;\n• l’hypoxie (notamment les tentatives non fatales de pendaison\net d’empoisonnement au monoxyde de carbone) ;\n• des aections cérébrales primaires telles l’encéphalite herpé-\ntique, l’épilepsie, la sclérose en plaques ;\n• des atteintes thalamiques, des corps mamillaires, de l’hippo-\ncampe ou du lobe temporal (tumeur, AVC) ;\n• l’amnésie globale transitoire (trouble vasculaire cérébral\nimpliquant les artères vertébrobasilaires) ;\n• des procédures neurochirurgicales ;\n• l’électroconvulsivothérapie (ECT) ;\n• l’usage de substances : l’alcool, les sédatifs hypnotiques (les benzo-\ndiazépines et des préparations en vente libre), les anticonvulsivants,\nle méthotrexate intrathécal, les neurotoxines (plomb, mercure,\ninsecticides organophosphorés et solvants industriels).\nLa décience en thiamine, l’hypoglycémie, l’hypoxie et l’en-\ncéphalite herpétique ont pour eet d’endommager les lobes\ntemporaux, en particulier l’hippocampe, et sont ainsi associées\nà l’apparition de troubles amnésiques.\nLes structures neuroanatomiques majeures intervenant\ndans la mémoire sont le diencéphale, dont le thalamus et le\nlobe temporal médian (hippocampe, corps mamillaires et\namygdale). Mais la localisation et la distribution des processus\nmnésiques sont complexes et concernent plusieurs régions\ncérébrales. Habituellement, l’amnésie résulte de dommages\nbilatéraux de ces structures, mais on a décrit quelques cas de\ndommage unilatéral, et les atteintes de l’hémisphère gauche\nseraient plus critiques. L’hippocampe gauche est relativement\nspécialisé dans la mémoire verbale et l’hippocampe droit dans\nles mémoires non verbales. Avec l’altération du lobe frontal,\ndes symptômes accompagnateurs sont présents, tels que la\nconfabulation et l’apathie.\nL’utilisation du triazolam (HalcionMD) a été associée à tort à\nl’amnésie antérograde, alors que ce sont toutes les benzodiazépines\nqui peuvent être impliquées, proportionnellement à la dose. À\ndes doses de 0,25 mg ou moins, le triazolam ne provoque pas\nplus d’amnésie que les autres benzodiazépines.\n27.4.4 Description clinique\nLa mémoire à court terme et la mémoire récente (dernière décennie)\nsont habituellement aectées. La mémoire immédiate reste intacte,\nde même que la mémoire d’informations bien apprises ou d’événe-\nments du passé ancien. Des changements subtils ou grossiers de la\npersonnalité peuvent accompagner les troubles de mémoire et les\npatients peuvent être apathiques, manquer d’initiative, connaître\ndes épisodes d’agitation sans provocation préalable ou paraître trop\namicaux. Ils peuvent aussi être confus, perplexes, et peuvent tenter\nde camouer leur confusion par des réponses confabulatoires.\nL’autocritique est déciente quant à leur aection. Un trouble\namnésique peut être causé par des aections spéciques :\n• Leblackout alcoolique survient après un abus sévère d’alcool et\nle patient est conscient d’être incapable de se rappeler la période\ndurant laquelle il était intoxiqué. Des comportements malheureux\ndont des agissements violents peuvent parfois y être associés.\n• L’électroconvulsivothérapie (ECT) est associée à une amnésie\nrétrograde (perte du souvenir des événements de vie survenus\navant le traitement) d’une période de plusieurs minutes qui débute\navant l’ECT et à une amnésie antérograde (pas d’acquisition\nde nouveaux souvenirs à partir du moment du traitement) qui\ndébute après l’ECT. L’amnésie antérograde se résorbe habituel-\nlement en cinq heures. Toutefois, des décits mnésiques légers\npeuvent persister pendant un à deux mois après l’ECT, mais ils\nsont habituellement disparus six à neuf mois après le traitement.\n• Un trauma crânien est souvent associé à une période d’am-\nnésie rétrograde menant à l’incident traumatique et à une\namnésie de l’incident traumatique lui-même. Il peut y avoir\nune corrélation entre l’importance du trauma crânien et la\ndurée et la gravité du syndrome amnésique. La meilleure\ncorrélation de l’amélioration éventuelle de l’amnésie est le\ndegré d’amélioration clinique observée durant la première\nsemaine après que le patient a repris connaissance.\nDSM-IV-TR\n294.0 (F04) Trouble amnésique dû à…\nA. Apparition d’une altération de la mémoire dont témoigne une altération\nde la capacité à apprendre des informations nouvelles ou à se rappeler\nles informations apprises antérieurement.\nB. La perturbation de la mémoire est à l’origine d’une altération signica-\ntive du fonctionnement social ou professionnel et représente un déclin\nsignicatif par rapport au niveau de fonctionnement antérieur.\nC. La perturbation de la mémoire ne survient pas exclusivement au cours\nde l’évolution d’un delirium ou d’une démence.\nD. Mise en évidence d’après l’histoire de la maladie, l’examen physique\nou les examens complémentaires que la perturbation est la consé-\nquence physiologique directe d’une affection médicale générale\n(notamment un traumatisme physique).\nENCADRÉ 27.13 Critères diagnostiques du trouble\namnésique\nSource : APA (2004a), p. 204.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic\nand Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American\nPsychiatric Association, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles\nMentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris,\n2004. All rights reserved.\n",
+  "raw_text_sha256": "6d299d49a365e84f352d35fa762dd6520d13c0e216e70233cff42ea7ae9403ac",
+  "source_page_display": 633,
+  "source_page_index": 632
+}

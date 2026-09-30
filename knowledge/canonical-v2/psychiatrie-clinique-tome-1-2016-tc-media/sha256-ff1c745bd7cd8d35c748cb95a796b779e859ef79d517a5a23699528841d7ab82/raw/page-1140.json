@@ -1,0 +1,52 @@
+{
+  "block_sequence_sha256": "8a5dce219600aa89f097627d5de086d0b9b8c9c574a506dcc20b8d2d6fba43fd",
+  "blocks": [
+    {
+      "bbox": [
+        422.8000183105469,
+        747.3754272460938,
+        554.97998046875,
+        758.6693725585938
+      ],
+      "block_id": "page-1140-block-0001",
+      "order": 1,
+      "text": "Figures supplémentaires\nF3\n",
+      "text_sha256": "c892bd017c83b3e33330dec0a9a18c2d7b0beea0dd64b54635a673b01fc501db"
+    },
+    {
+      "bbox": [
+        56.400001525878906,
+        41.002296447753906,
+        236.18287658691406,
+        53.320068359375
+      ],
+      "block_id": "page-1140-block-0002",
+      "order": 2,
+      "text": "FIGURE 3 Gyrus et sillons de la face externe\n",
+      "text_sha256": "fa0026ad5fa2276fbf9e8e2270a9bfd6fe975aa03a5a2f32e31aed0ea8e6ecda"
+    },
+    {
+      "bbox": [
+        56.400001525878906,
+        332.2522888183594,
+        241.20301818847656,
+        344.6200866699219
+      ],
+      "block_id": "page-1140-block-0003",
+      "order": 3,
+      "text": "FIGURE 4 Coupe longitudinale de l’encéphale\n",
+      "text_sha256": "2f7ddf7f7c0a0bdc254d4991982743ae8277d7e4a06d8480f5e37d64f7aa3abc"
+    }
+  ],
+  "coordinates_sha256": "7a1c6edd1c156c223dea7a3130504d9ea44a253e0ee7b3d904f9a2e4be104ae8",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1140",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Figures supplémentaires\nF3\nFIGURE 3 Gyrus et sillons de la face externe\nFIGURE 4 Coupe longitudinale de l’encéphale\n",
+  "raw_text_sha256": "f22a448d7d0c2fe72180d23d69ad551fb08ece78ed592ecf239e9b6ad3012ef6",
+  "source_page_display": 1141,
+  "source_page_index": 1140
+}

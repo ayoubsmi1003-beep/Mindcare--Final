@@ -1,0 +1,136 @@
+{
+  "block_sequence_sha256": "35a964d1f74d017493729033f732925b18f42bbb563d817072e91d45b7916445",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        342.1244201660156,
+        289.010009765625,
+        531.0473022460938
+      ],
+      "block_id": "page-0545-block-0001",
+      "order": 1,
+      "text": "25.1 Évolution des concepts ..................................................529\n25.1.1 Historique............................................................... 529\n25.1.2 Dénition et classication................................... 530\n25.1.3 Troubles à symptomatologie somatique........... 531\n25.2 Épidémiologie .................................................................533\n25.3 Étiologies ......................................................................... 533\n25.3.1 Facteurs prédisposants......................................... 534\n25.3.2 Facteurs précipitants ............................................ 535\n25.3.3 Facteurs perpétuants ............................................ 535\n25.4 Variétés diagnostiques...................................................536\n25.4.1 Troubles à symptomatologie somatique........... 536\n25.4.2 Crainte excessive d’avoir une maladie............... 538\n25.4.3 Conversion.............................................................. 540\n25.4.4 Troubles à symptomatologie somatique\nspéciés ou non spéciés..................................... 542\n",
+      "text_sha256": "beec370445da9bb3fc605e59c65f2caf51bb51f0926f8f3ff7be02aeb444724e"
+    },
+    {
+      "bbox": [
+        306.0,
+        342.1244201660156,
+        547.010009765625,
+        439.9681701660156
+      ],
+      "block_id": "page-0545-block-0002",
+      "order": 2,
+      "text": "25.5 Évaluation et diagnostic diérentiel............................542\n25.5.1 Limites de l’évaluation.......................................... 544\n25.5.2 Comorbidités.......................................................... 544\n25.6 Approches thérapeutiques ............................................545\n25.6.1 Approche générale globale.................................. 545\n25.6.2 Approches psychothérapeutiques\nspéciques............................................................... 547\nLectures complémentaires.......................................................549\n",
+      "text_sha256": "3812a4b415a35bf0bbf0c9b238a473752de9b4a6f9d464348231627d81c45650"
+    },
+    {
+      "bbox": [
+        48.0,
+        246.55734252929688,
+        131.32850646972656,
+        260.5954284667969
+      ],
+      "block_id": "page-0545-block-0003",
+      "order": 3,
+      "text": "PIERRE VERRIER, M.D.\n",
+      "text_sha256": "bc32ddbbac51658c7970b75d13d7ca2ec50b50105b4f7bf87230e49f876ed1cf"
+    },
+    {
+      "bbox": [
+        48.0,
+        263.9772644042969,
+        287.92626953125,
+        285.1938171386719
+      ],
+      "block_id": "page-0545-block-0004",
+      "order": 4,
+      "text": "Psychiatre, Service de médecine psychosomatique et de consul-\ntation-liaison, Hôpital du Sacré-Cœur de Montréal\n",
+      "text_sha256": "2b5feedf016f4f6781d8ee28c2ec6e63729f32d78b607751968f7d94bb7508bb"
+    },
+    {
+      "bbox": [
+        48.0,
+        288.9772644042969,
+        269.9393005371094,
+        310.1938171386719
+      ],
+      "block_id": "page-0545-block-0005",
+      "order": 5,
+      "text": "Professeur agrégé de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\n",
+      "text_sha256": "f4bc23aed99fa29e8f7410379c6cebea846c1188b4a600c871ae8a6f9bc4dde5"
+    },
+    {
+      "bbox": [
+        306.0,
+        246.55734252929688,
+        458.30902099609375,
+        260.5954284667969
+      ],
+      "block_id": "page-0545-block-0006",
+      "order": 6,
+      "text": "DONALD BOUTHILLIER, PH. D. (psychologie)\n",
+      "text_sha256": "d0d7cd70483cdc90dbcfc098b8967e925b947d5f93333cdd244c0f841260450b"
+    },
+    {
+      "bbox": [
+        306.0,
+        263.9772644042969,
+        524.4732666015625,
+        285.1938171386719
+      ],
+      "block_id": "page-0545-block-0007",
+      "order": 7,
+      "text": "Psychologue, Service de médecine psychosomatique et de\nconsultation-liaison, Hôpital du Sacré-Cœur de Montréal\n",
+      "text_sha256": "5f667617c64da40784d6d6af5e44008cf4d510b66aadcf8476b6b36745e9a54d"
+    },
+    {
+      "bbox": [
+        306.0,
+        288.9772644042969,
+        535.0219116210938,
+        310.1938171386719
+      ],
+      "block_id": "page-0545-block-0008",
+      "order": 8,
+      "text": "Professeur chargé de cours, Faculté d’éducation permanente,\nUniversité de Montréal\n",
+      "text_sha256": "a15f3510486d312604c0124903fada94ad381698c0dce0a0ea6557791fc92ea5"
+    },
+    {
+      "bbox": [
+        48.0,
+        131.5734405517578,
+        489.5747375488281,
+        218.4953155517578
+      ],
+      "block_id": "page-0545-block-0009",
+      "order": 9,
+      "text": "Troubles à symptomatologie\nsomatique\n",
+      "text_sha256": "a64d159809427ca6852ed0d9273606e6793c2fb942dc6a5fe0b97279bd48bf48"
+    },
+    {
+      "bbox": [
+        263.1000061035156,
+        2.3810577392578125,
+        561.0,
+        122.38105773925781
+      ],
+      "block_id": "page-0545-block-0010",
+      "order": 10,
+      "text": "CHAPITRE25\n",
+      "text_sha256": "b903fbf32bd1d2524efbbb9696dbcbd2e09e6c3fc2f3f5d8c0fbdedeaba89e43"
+    }
+  ],
+  "coordinates_sha256": "d2bcc49b652d7cdd43e6b522fe5425116f4e03f65093d78fe30f22cadd5a15d1",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0545",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "25.1 Évolution des concepts ..................................................529\n25.1.1 Historique............................................................... 529\n25.1.2 Dénition et classication................................... 530\n25.1.3 Troubles à symptomatologie somatique........... 531\n25.2 Épidémiologie .................................................................533\n25.3 Étiologies ......................................................................... 533\n25.3.1 Facteurs prédisposants......................................... 534\n25.3.2 Facteurs précipitants ............................................ 535\n25.3.3 Facteurs perpétuants ............................................ 535\n25.4 Variétés diagnostiques...................................................536\n25.4.1 Troubles à symptomatologie somatique........... 536\n25.4.2 Crainte excessive d’avoir une maladie............... 538\n25.4.3 Conversion.............................................................. 540\n25.4.4 Troubles à symptomatologie somatique\nspéciés ou non spéciés..................................... 542\n25.5 Évaluation et diagnostic diérentiel............................542\n25.5.1 Limites de l’évaluation.......................................... 544\n25.5.2 Comorbidités.......................................................... 544\n25.6 Approches thérapeutiques ............................................545\n25.6.1 Approche générale globale.................................. 545\n25.6.2 Approches psychothérapeutiques\nspéciques............................................................... 547\nLectures complémentaires.......................................................549\nPIERRE VERRIER, M.D.\nPsychiatre, Service de médecine psychosomatique et de consul-\ntation-liaison, Hôpital du Sacré-Cœur de Montréal\nProfesseur agrégé de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\nDONALD BOUTHILLIER, PH. D. (psychologie)\nPsychologue, Service de médecine psychosomatique et de\nconsultation-liaison, Hôpital du Sacré-Cœur de Montréal\nProfesseur chargé de cours, Faculté d’éducation permanente,\nUniversité de Montréal\nTroubles à symptomatologie\nsomatique\nCHAPITRE25\n",
+  "raw_text_sha256": "0952c909a2c1031b69f83a4cbe64d5137ec4de5cbbe165620f11e3c0f320b042",
+  "source_page_display": 546,
+  "source_page_index": 545
+}

@@ -1,0 +1,83 @@
+{
+  "book_id": "dsm5-fr-2015-elsevier",
+  "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+  "segment": "seg-0676-0700.pdf",
+  "source_page_start": 676,
+  "source_page_end": 700,
+  "page_count": 25,
+  "segment_sha256": "920673f9e367b3291bf75f2c956c4809d7864f1f905b2f78f485532ebc88f415",
+  "candidate_reconciliation": "reconciliation-v10",
+  "units": 150,
+  "tables": 1,
+  "concepts": 66,
+  "xrefs": 6,
+  "pages_with_no_text": [],
+  "uncertain": [
+    676,
+    677,
+    678,
+    679,
+    680,
+    682,
+    684,
+    686,
+    690,
+    691,
+    692,
+    693,
+    694,
+    695,
+    696,
+    697,
+    698,
+    699,
+    700
+  ],
+  "fallback_pages": [
+    676,
+    677,
+    678,
+    679,
+    680,
+    682,
+    684,
+    686,
+    690,
+    691,
+    692,
+    693,
+    694,
+    695,
+    696,
+    697,
+    698,
+    699,
+    700
+  ],
+  "extractors": {
+    "pymupdf-original-text-layer": 132,
+    "pymupdf-fallback": 18
+  },
+  "citra": {
+    "status": "not_replayed",
+    "failed_segment_pages": [],
+    "failed_source_pages": [],
+    "fallback_used": false
+  },
+  "line_counts": {
+    "units": 150,
+    "tables": 1,
+    "concepts": 66,
+    "xrefs": 6
+  },
+  "files": {
+    "units": "reconciliation-v10/units.jsonl",
+    "tables": "reconciliation-v10/tables.jsonl",
+    "concepts": "reconciliation-v10/concepts.jsonl",
+    "xrefs": "reconciliation-v10/xrefs.jsonl"
+  },
+  "structure_candidate": "structure-v2.candidate.json",
+  "status": "CANDIDATE_REVIEW_REQUIRED",
+  "canonical_promotion_authorized": false,
+  "summary_line": "SEG seg-0676-0700.pdf: units=150 tables=1 concepts=66 xrefs=6 | pages with no text: [] | uncertain: [676, 677, 678, 679, 680, 682, 684, 686, 690, 691, 692, 693, 694, 695, 696, 697, 698, 699, 700] | citra-failed-pages: [] | notes: Citra was not replayed for this segment; report is manifest-only and does not claim a fresh Citra result.; Fallback pages are explicitly uncertain and routed to review."
+}

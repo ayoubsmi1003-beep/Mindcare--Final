@@ -1,0 +1,148 @@
+{
+  "block_sequence_sha256": "e81a303e096cf2b091532d140f1216c4ca449f18af9f1f18041f8d7fe6619ead",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0741-block-0001",
+      "order": 1,
+      "text": "724\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "2a22829bd9e5c7feea0ed326f5206c2f7f6fced506f813c37e2e6415b3d567fa"
+    },
+    {
+      "bbox": [
+        55.150001525878906,
+        43.84316635131836,
+        232.86959838867188,
+        62.818946838378906
+      ],
+      "block_id": "page-0741-block-0002",
+      "order": 2,
+      "text": "32.2\nÉvolution du concept\n",
+      "text_sha256": "158f3932268ab69325783d362ddc629a0c09094394989b3fcf8faa904172f149"
+    },
+    {
+      "bbox": [
+        48.0,
+        76.5658187866211,
+        291.3076171875,
+        202.05850219726562
+      ],
+      "block_id": "page-0741-block-0003",
+      "order": 3,
+      "text": "Du point de vue historique, la description de critères diagnos-\ntiques concernant les troubles du sommeil est récente, puisque\nce n’est qu’en 1979 que l’Association of Sleep Disorders Centers\nen a publié la première liste et que celle de l’American Psychiatric\nAssociation ne date que de 1987, à l’occasion de la parution du\nDSM-III-TR. Dans le but de faciliter la tâche des cliniciens non\nexperts en troubles du sommeil, le DSM-5 propose d’inclure\ncertains diagnostics, même si la CIM de l’Organisation mondiale\nde la santé n’en fait pas mention. Le tableau 32.2 fait la liste des\ntroubles de l’alternance veille-sommeil répertoriés dans le DSM-5\nen parallèle avec la classication du DSM-IV-TR.\n",
+      "text_sha256": "b951af3596b0961ba87ed7a1d73e4406cc54583cb198417843325ba40b993536"
+    },
+    {
+      "bbox": [
+        48.0,
+        203.06582641601562,
+        291.43927001953125,
+        547.0585327148438
+      ],
+      "block_id": "page-0741-block-0004",
+      "order": 4,
+      "text": "Les « troubles du sommeil liés à un autre trouble mental »\net les « troubles du sommeil dus à une aection médicale géné-\nrale » qui étaient dans le DSM-IV ont été retirés du le DSM-5 au\nprot d’une identication des aections coexistantes associées à\nchaque trouble du sommeil. Ce changement attire l’attention sur\nl’interaction et la bidirectionnalité entre les eets d’un trouble du\nsommeil et les diagnostics coexistants, assurant ainsi que l’on porte\nune attention particulière aux troubles du sommeil d’un patient\nen plus des autres diagnostics qu’il peut présenter. Par exemple,\non utilise désormais le diagnostic « d’insomnie » plutôt que celui\nd’insomnie primaire du DSM-IV-TR an d’éviter la dichotomie\nqui distinguait « insomnie primaire » et « insomnie secondaire »\n(liés à un autre trouble mental) qui prévalait antérieurement dans\ncette version du DSM. Un autre changement de la classication\ndes troubles du sommeil dans le DSM-5 par rapport à celle du\nDSM-IV-TR est la distinction maintenant faite entre la narco-\nlepsie, désormais associée à une décience en hypocrétine, et\nles autres formes d’hypersomnie. Les preuves à l’appui de cette\ndistinction existent bel et bien, mais les tests de dosage de l’hypo-\ncrétine sont pour l’instant complexes et nécessitent une ponction\nlombaire. D’ici à ce que des tests moins lourds et moins invasifs\nsoient disponibles (p. ex., par dosage sanguin ou par imagerie), la\nprésence de cataplexie demeure un critère valide. Enn, certains\nregrettent la disparition des références spéciquement liées à\nl’âge et au développement. Les autres changements notables qui\nmarquent le passage du DSM-IV-TR au DSM-5 touchent une\nréorganisation nosographique des « troubles du sommeil liés à la\nrespiration » et du « trouble du sommeil lié au rythme circadien »,\nlaquelle reète les avancées dans la compréhension de l’étiologie\net des nouvelles possibilités de traitement.\n",
+      "text_sha256": "fe9a9f474868aeb80d1d9399ac552d1d3091285f7b29a7ce2fa004357304fadd"
+    },
+    {
+      "bbox": [
+        48.0,
+        548.0658569335938,
+        291.4893798828125,
+        627.5585327148438
+      ],
+      "block_id": "page-0741-block-0005",
+      "order": 5,
+      "text": "Par ailleurs, il est à noter que la classication internationale\ndes troubles du sommeil publiée par l’American Academy of Sleep\nMedicine en 2014 donne une vision alternative des troubles du\nsommeil, toute aussi pertinente sur le plan de la réalité clinique,\nen précisant certains sous-types mentionnés dans ce chapitre\net en décrivant d’autres troubles du sommeil non répertoriés\ndans le DSM-5.\n",
+      "text_sha256": "9aeff8f44ba86115607bef60e164aa39804109002202874f46d0efb9a1a9f65e"
+    },
+    {
+      "bbox": [
+        55.20000076293945,
+        645.8432006835938,
+        220.6165771484375,
+        682.7689819335938
+      ],
+      "block_id": "page-0741-block-0006",
+      "order": 6,
+      "text": "32.3\nÉvaluation et outils\ndiagnostiques\n",
+      "text_sha256": "7c1f7445c4c837ae6f24b9744940d510d65ca3c0a7e6d8cfba7d838dddbb97a8"
+    },
+    {
+      "bbox": [
+        48.0,
+        696.5658569335938,
+        291.1478271484375,
+        730.0585327148438
+      ],
+      "block_id": "page-0741-block-0007",
+      "order": 7,
+      "text": "L’entrevue d’évaluation clinique d’un trouble du sommeil est\nidéalement précédée par la réception de questionnaires rem-\nplis par le patient. La plupart des questionnaires de dépistage\n",
+      "text_sha256": "47365c6e33dc42665651a7b88d00039c27cbe307a89d099fe028f67d1380b264"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.1356811523438,
+        109.3084945678711
+      ],
+      "block_id": "page-0741-block-0008",
+      "order": 8,
+      "text": "cherchent à isoler une série de symptômes précis et peuvent\ndonc être assez longs. Nous discutons ci-dessous de leurs\navantages et inconvénients. Les cliniques spécialisées peuvent\négalement choisir de procéder à une évaluation plus poussée\navant le rendez-vous, selon le dossier du patient ou si des\nhypothèses existent déjà.\n",
+      "text_sha256": "22a5ba2095bd2d24c1e4839b062f881df02acba93ad016870ad8f5f1c6368ee9"
+    },
+    {
+      "bbox": [
+        306.0,
+        119.93681335449219,
+        430.61102294921875,
+        136.0793914794922
+      ],
+      "block_id": "page-0741-block-0009",
+      "order": 9,
+      "text": "32.3.1 Questionnaires\n",
+      "text_sha256": "9235d3947f2773c2fc7cc362bfbbeed36470cec59ace265fc3ecb8f24fcb57aa"
+    },
+    {
+      "bbox": [
+        306.0,
+        139.4658203125,
+        549.3738403320312,
+        649.0084838867188
+      ],
+      "block_id": "page-0741-block-0010",
+      "order": 10,
+      "text": "Il n’existe à peu près pas de questionnaires validés en français\nselon des normes statistiques solides. Une recherche dans Internet\navec les mots « questionnaire des troubles du sommeil » génère\ntout de même une bonne quantité de formulaires créés par\ndes cliniques et des laboratoires spécialisés et qui peuvent être\nadaptés, y compris la traduction de questionnaires en langue\nanglaise comme :\n• l’Insomnia Severity Index(pour les adultes) (Bastien &al., 2001) ;\n• le Pittsburgh Sleep Quality Index (pour les adultes) (Buysse\n& al., 1989) ;\n• le Children Sleep Habit Questionnaire (pour les enfants)\n(Owens & al., 2000) ;\n• la Epworth Sleepiness Scale (pour la somnolence des adultes)\n(Johns, 1991) ;\n• la Pediatric Daytime Sleepiness Scale (pour la somnolence\ndes enfants) (Drake & al., 2003) ;\n• leMorningness/Eveningness Questionnaire(pour le chronotype\ndes adultes) (Horne & Ostberg, 1976) ;\n• le Children’s ChronoType Questionnaire (pour le chronotype\ndes enfants) (Werner & al., 2009).\nL’expérience montre que cinq questions et la tenue d’un\nagenda de sommeil (voir la figure 32.6) pendant les deux\nsemaines précédant le rendez-vous peuvent suffire à bien\ncaractériser les habitudes de sommeil d’un patient. L’informa-\ntion contenue dans ces deux documents permet de structurer\nl’entrevue en fonction des hypothèses qu’ils soulèvent. Ces\ncinq questions, auxquelles le patient répond en se basant\nsubjectivement sur ses habitudes au cours du dernier mois,\nsont les suivantes :\n1. Combien de minutes s’écoulent avant que vous vous\nendormiez ?\n2. Pendant combien de minutes êtes-vous réveillé pendant la nuit ?\n3. À quelle heure vous couchez-vous :\na) les soirs de semaine ?\nb) les ns de semaine ?\n4. À quelle heure vous levez-vous :\na) en semaine ?\nb) les ns de semaine ?\n5. Êtes-vous satisfait de votre sommeil ?\nL’agenda de sommeil, quant à lui, est sans doute l’outil de\nprédilection des cliniciens spécialisés ou non en sommeil.\n",
+      "text_sha256": "afe4a868c12bafbbdb73ded9a10672e0dbdc5263ae79d4fd20439f53f4f7dd2e"
+    },
+    {
+      "bbox": [
+        306.0,
+        650.0658569335938,
+        549.1183471679688,
+        730.0585327148438
+      ],
+      "block_id": "page-0741-block-0011",
+      "order": 11,
+      "text": "Plusieurs versions diérentes de cet outil sont disponibles sur\nInternet. Il s’agit habituellement d’un formulaire sous forme de\ntableau chronologique où l’on indique les heures de coucher, de\nlever, de réveils nocturnes ainsi que les événements diurnes signi-\ncatifs tels que la prise de médicaments, l’occurrence de siestes,\nou tout autre élément jugé pertinent. Il faut compter au moins\ndeux semaines consécutives de mesures, idéalement trois, an\n",
+      "text_sha256": "8a9064130f53695819cf6a0867ec6de3f71827db0a64f1ce91dd2c63e5417e5e"
+    }
+  ],
+  "coordinates_sha256": "36b082fe0a4299bda07e719b2c4414c86e3d998cd2d6e7045f6c8c7969717c76",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0741",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "724\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n32.2\nÉvolution du concept\nDu point de vue historique, la description de critères diagnos-\ntiques concernant les troubles du sommeil est récente, puisque\nce n’est qu’en 1979 que l’Association of Sleep Disorders Centers\nen a publié la première liste et que celle de l’American Psychiatric\nAssociation ne date que de 1987, à l’occasion de la parution du\nDSM-III-TR. Dans le but de faciliter la tâche des cliniciens non\nexperts en troubles du sommeil, le DSM-5 propose d’inclure\ncertains diagnostics, même si la CIM de l’Organisation mondiale\nde la santé n’en fait pas mention. Le tableau 32.2 fait la liste des\ntroubles de l’alternance veille-sommeil répertoriés dans le DSM-5\nen parallèle avec la classication du DSM-IV-TR.\nLes « troubles du sommeil liés à un autre trouble mental »\net les « troubles du sommeil dus à une aection médicale géné-\nrale » qui étaient dans le DSM-IV ont été retirés du le DSM-5 au\nprot d’une identication des aections coexistantes associées à\nchaque trouble du sommeil. Ce changement attire l’attention sur\nl’interaction et la bidirectionnalité entre les eets d’un trouble du\nsommeil et les diagnostics coexistants, assurant ainsi que l’on porte\nune attention particulière aux troubles du sommeil d’un patient\nen plus des autres diagnostics qu’il peut présenter. Par exemple,\non utilise désormais le diagnostic « d’insomnie » plutôt que celui\nd’insomnie primaire du DSM-IV-TR an d’éviter la dichotomie\nqui distinguait « insomnie primaire » et « insomnie secondaire »\n(liés à un autre trouble mental) qui prévalait antérieurement dans\ncette version du DSM. Un autre changement de la classication\ndes troubles du sommeil dans le DSM-5 par rapport à celle du\nDSM-IV-TR est la distinction maintenant faite entre la narco-\nlepsie, désormais associée à une décience en hypocrétine, et\nles autres formes d’hypersomnie. Les preuves à l’appui de cette\ndistinction existent bel et bien, mais les tests de dosage de l’hypo-\ncrétine sont pour l’instant complexes et nécessitent une ponction\nlombaire. D’ici à ce que des tests moins lourds et moins invasifs\nsoient disponibles (p. ex., par dosage sanguin ou par imagerie), la\nprésence de cataplexie demeure un critère valide. Enn, certains\nregrettent la disparition des références spéciquement liées à\nl’âge et au développement. Les autres changements notables qui\nmarquent le passage du DSM-IV-TR au DSM-5 touchent une\nréorganisation nosographique des « troubles du sommeil liés à la\nrespiration » et du « trouble du sommeil lié au rythme circadien »,\nlaquelle reète les avancées dans la compréhension de l’étiologie\net des nouvelles possibilités de traitement.\nPar ailleurs, il est à noter que la classication internationale\ndes troubles du sommeil publiée par l’American Academy of Sleep\nMedicine en 2014 donne une vision alternative des troubles du\nsommeil, toute aussi pertinente sur le plan de la réalité clinique,\nen précisant certains sous-types mentionnés dans ce chapitre\net en décrivant d’autres troubles du sommeil non répertoriés\ndans le DSM-5.\n32.3\nÉvaluation et outils\ndiagnostiques\nL’entrevue d’évaluation clinique d’un trouble du sommeil est\nidéalement précédée par la réception de questionnaires rem-\nplis par le patient. La plupart des questionnaires de dépistage\ncherchent à isoler une série de symptômes précis et peuvent\ndonc être assez longs. Nous discutons ci-dessous de leurs\navantages et inconvénients. Les cliniques spécialisées peuvent\négalement choisir de procéder à une évaluation plus poussée\navant le rendez-vous, selon le dossier du patient ou si des\nhypothèses existent déjà.\n32.3.1 Questionnaires\nIl n’existe à peu près pas de questionnaires validés en français\nselon des normes statistiques solides. Une recherche dans Internet\navec les mots « questionnaire des troubles du sommeil » génère\ntout de même une bonne quantité de formulaires créés par\ndes cliniques et des laboratoires spécialisés et qui peuvent être\nadaptés, y compris la traduction de questionnaires en langue\nanglaise comme :\n• l’Insomnia Severity Index(pour les adultes) (Bastien &al., 2001) ;\n• le Pittsburgh Sleep Quality Index (pour les adultes) (Buysse\n& al., 1989) ;\n• le Children Sleep Habit Questionnaire (pour les enfants)\n(Owens & al., 2000) ;\n• la Epworth Sleepiness Scale (pour la somnolence des adultes)\n(Johns, 1991) ;\n• la Pediatric Daytime Sleepiness Scale (pour la somnolence\ndes enfants) (Drake & al., 2003) ;\n• leMorningness/Eveningness Questionnaire(pour le chronotype\ndes adultes) (Horne & Ostberg, 1976) ;\n• le Children’s ChronoType Questionnaire (pour le chronotype\ndes enfants) (Werner & al., 2009).\nL’expérience montre que cinq questions et la tenue d’un\nagenda de sommeil (voir la figure 32.6) pendant les deux\nsemaines précédant le rendez-vous peuvent suffire à bien\ncaractériser les habitudes de sommeil d’un patient. L’informa-\ntion contenue dans ces deux documents permet de structurer\nl’entrevue en fonction des hypothèses qu’ils soulèvent. Ces\ncinq questions, auxquelles le patient répond en se basant\nsubjectivement sur ses habitudes au cours du dernier mois,\nsont les suivantes :\n1. Combien de minutes s’écoulent avant que vous vous\nendormiez ?\n2. Pendant combien de minutes êtes-vous réveillé pendant la nuit ?\n3. À quelle heure vous couchez-vous :\na) les soirs de semaine ?\nb) les ns de semaine ?\n4. À quelle heure vous levez-vous :\na) en semaine ?\nb) les ns de semaine ?\n5. Êtes-vous satisfait de votre sommeil ?\nL’agenda de sommeil, quant à lui, est sans doute l’outil de\nprédilection des cliniciens spécialisés ou non en sommeil.\nPlusieurs versions diérentes de cet outil sont disponibles sur\nInternet. Il s’agit habituellement d’un formulaire sous forme de\ntableau chronologique où l’on indique les heures de coucher, de\nlever, de réveils nocturnes ainsi que les événements diurnes signi-\ncatifs tels que la prise de médicaments, l’occurrence de siestes,\nou tout autre élément jugé pertinent. Il faut compter au moins\ndeux semaines consécutives de mesures, idéalement trois, an\n",
+  "raw_text_sha256": "60b7768a04ddb0538e8bb0ebc86798da5c7c7fc480fe8302ea348c20b140d066",
+  "source_page_display": 742,
+  "source_page_index": 741
+}

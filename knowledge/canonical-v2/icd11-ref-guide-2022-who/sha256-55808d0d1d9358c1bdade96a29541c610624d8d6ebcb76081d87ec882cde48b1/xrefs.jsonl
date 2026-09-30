@@ -1,0 +1,35 @@
+{"from_unit": "icd11rg-u-33-002", "target_text": "see 1.1.5.2", "target_unit": "icd11rg-u-34-002", "status": "resolved"}
+{"from_unit": "icd11rg-u-35-001", "target_text": "see Section 2.11 for further information", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-37-002", "target_text": "For further information please see 3.4 The Content Model", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-39-002", "target_text": "Codes starting with 'X' indicate an extension code (see 2.9)", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-41-001", "target_text": "Refer to 2.9.", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-41-002", "target_text": "Special tabulation lists (refer to section 2.25)", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-42-001", "target_text": "Refer to 2.10.", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-42-003", "target_text": "(See 3.12 Annex A: ICD-11 Updating and Maintenance)", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-43-001", "target_text": "(See Section 2.21 for more information.)", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-43-003", "target_text": "(See Section 1.4 for more information.)", "target_unit": "icd11rg-u-43-002", "status": "resolved"}
+{"from_unit": "icd11rg-u-44-001", "target_text": "See 3.12 Annex A: ICD-11 Updating and Maintenance for more detailed information.", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-44-002", "target_text": "(See 3.12 Annex A: ICD-11 Updating and Maintenance)", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-48-001", "target_text": "there is a section on extension codes (2.9)", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-48-001", "target_text": "one on Traditional medicine (1.5)", "target_unit": "icd11rg-u-44-001", "status": "resolved"}
+{"from_unit": "icd11rg-u-48-001", "target_text": "for tabulation and reporting only (2.25)", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-52-002", "target_text": "See 1.2.5 Foundation Component and Tabular lists of ICD-11", "target_unit": "icd11rg-u-35-002", "status": "resolved"}
+{"from_unit": "icd11rg-u-57-001", "target_text": "Refer to section 2.12 Electronic recording and reporting", "target_unit": "icd11rg-u-63-002", "status": "resolved"}
+{"from_unit": "icd11rg-u-65-001", "target_text": "See Sections 2.17.2 Selecting the underlying cause of death and 2.17 Coding instructions for mortality", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-66-001", "target_text": "See Sections 2.17.2 Selecting the underlying cause of death and 2.17 Coding instructions for mortality", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-66-002", "target_text": "See 3.14 Annex C: Annexes for Mortality Coding for further details and guidance", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-68-001", "target_text": "See 3.14.14 Target list of causes of death for verbal autopsy with corresponding ICD-11 codes", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-71-001", "target_text": "See Section 2.17.3 Find the starting point (Steps SP1 to SP8)", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-72-002", "target_text": "See also Step SP4", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-72-002", "target_text": "see Step SP5", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-100-001", "target_text": "See Mortality Annex 3.14.8 for a list of the conditions that can cause diabetes", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-104-002", "target_text": "except those listed in Section (2.19.1.2.1)", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-105-002", "target_text": "injury priority list in the Mortality Annex (3.14.5)", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-109-001", "target_text": "injury priority list in the Mortality Annex (3.14.5)", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-111-003", "target_text": "Section 2.19.2.11 Pneumonia", "target_unit": "icd11rg-u-109-001", "status": "resolved"}
+{"from_unit": "icd11rg-u-111-004", "target_text": "Mortality Annex (3.14.9 List of conditions to be considered obvious consequences of surgery and other invasive medical procedures)", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-112-001", "target_text": "injury priority list in the Mortality Annex (3.14.5)", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-123-001", "target_text": "Step SP8 Conditions unlikely to cause death", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-22-001", "target_text": "we suggest you start with Part 1", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-22-001", "target_text": "we suggest you start with Part 2", "target_unit": null, "status": "unresolved"}
+{"from_unit": "icd11rg-u-22-001", "target_text": "we suggest you start with Part 3", "target_unit": null, "status": "unresolved"}

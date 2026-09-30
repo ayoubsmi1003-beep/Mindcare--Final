@@ -1,0 +1,736 @@
+{
+  "block_sequence_sha256": "f6f557c689a23aa732135837e96b2a6fc9e47fd40fb76016bfad299f05c19367",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        126.91150665283203,
+        758.8693237304688
+      ],
+      "block_id": "page-1133-block-0001",
+      "order": 1,
+      "text": "R36\nRéférences\n",
+      "text_sha256": "46ed58121fea0bef28879d74cc4fcc5d39b93e02e6f4713b5f538fbac522bec0"
+    },
+    {
+      "bbox": [
+        390.0,
+        40.68496322631836,
+        547.3699951171875,
+        85.6234359741211
+      ],
+      "block_id": "page-1133-block-0002",
+      "order": 2,
+      "text": "Oandasan, I. & al. (2006). Le travail en équipe dans les\nservices de santé: promouvoir un travail en équipe efcace\ndans les services de santé au Canada. Recommandations\net synthèse pour politiques, Ottawa, Fondation canadienne\nde la recherche sur les services de santé.\n",
+      "text_sha256": "361f7579b42b2b2edf93a23f8661456957c51b2c0442c4e79628766544af15d8"
+    },
+    {
+      "bbox": [
+        390.0,
+        89.63496398925781,
+        546.7974853515625,
+        116.22344207763672
+      ],
+      "block_id": "page-1133-block-0003",
+      "order": 3,
+      "text": "Organisation mondiale de la santé. (2010). Framework for\nAction on Interprofessional Education and Practice Collabo-\nration, Diana Hopkins (dir.), Genève, Freelance.\n",
+      "text_sha256": "7fb1caa2e909da44c84dbf538c4059c983498eccccada9f8c841e35191145af5"
+    },
+    {
+      "bbox": [
+        390.0,
+        120.2349624633789,
+        544.4125366210938,
+        137.62344360351562
+      ],
+      "block_id": "page-1133-block-0004",
+      "order": 4,
+      "text": "Philips-Nootens, S. & al. (2007). Éléments de responsabilité\ncivile médicale, 3e éd., Cowansville, Yvon Blais.\n",
+      "text_sha256": "ad53d6e695a0cb8ea587cd418eafb63fb2cfa796f9120c0229a357f88e49b935"
+    },
+    {
+      "bbox": [
+        390.0,
+        141.5849609375,
+        547.8975219726562,
+        186.5734405517578
+      ],
+      "block_id": "page-1133-block-0005",
+      "order": 5,
+      "text": "Pronovost, L. & Jinchereau, F. (1986). « Le travail interdiscipli-\nnaire », conférence d’ouverture, Actes du colloque de l’As-\nsociation des hôpitaux du Québec: La multidisciplinarité,\nun concept à développer et à promouvoir, Saint- Hyacinthe,\nnovembre.\n",
+      "text_sha256": "33d42e71f9b0700550214a862d1642e05cdb9fe054b9d44310937249703cba42"
+    },
+    {
+      "bbox": [
+        390.0,
+        190.5849609375,
+        547.2626342773438,
+        217.12344360351562
+      ],
+      "block_id": "page-1133-block-0006",
+      "order": 6,
+      "text": "Provencher, H. & al. (2012). L’intégration des pairs aidants\ndans des équipes de suivi et de soutien, Québec, Université\nLaval.\n",
+      "text_sha256": "cf3d3153ee32499728ca81e08bc15c9b93bbfbac9c71479e015e8ae6e0bef438"
+    },
+    {
+      "bbox": [
+        390.0,
+        221.1349639892578,
+        541.402587890625,
+        247.7234344482422
+      ],
+      "block_id": "page-1133-block-0007",
+      "order": 7,
+      "text": "Rosen, A. & Callaly. T. (2005). « Interdisciplinary teamwork\nand leadership : issues for psychiatrists », Australasian\nPsychiatry, 13(3), p. 234-240.\n",
+      "text_sha256": "474c447fc9fdb293776b13b5e92f64c91ac7268f65c36b0318a19566c99b2ca2"
+    },
+    {
+      "bbox": [
+        390.0,
+        251.73495483398438,
+        549.2515869140625,
+        278.2734375
+      ],
+      "block_id": "page-1133-block-0008",
+      "order": 8,
+      "text": "Rowe, M. & al. (2007). « A peer-support, group intervention to\nreduce substance use and criminality among persons with\nsevere mental illness », Psychiatric Services, 58(7), p. 955-961.\n",
+      "text_sha256": "a25385a68a8519bd9250aaf4e76ca412422e9fa23840a95eaf21ccad2bd94b54"
+    },
+    {
+      "bbox": [
+        390.0,
+        282.28497314453125,
+        548.8660278320312,
+        308.8734436035156
+      ],
+      "block_id": "page-1133-block-0009",
+      "order": 9,
+      "text": "Sells, D. & al. (2006). « The treatment relationship in peer-\nbased and regular case management for clients with severe\nmental illness », Psychiatric Services, 57(8), p. 1179-1184.\n",
+      "text_sha256": "bb1be627350769b780ff79f968d978b8079bc80fe5ad25ab2b9622ea0d00a6c2"
+    },
+    {
+      "bbox": [
+        390.0,
+        312.8849792480469,
+        546.947509765625,
+        339.4234313964844
+      ],
+      "block_id": "page-1133-block-0010",
+      "order": 10,
+      "text": "Sledge, W. & al. (2011). « Effectiveness of peer support in\nreducing readmissions of persons with multiple hospitaliza-\ntions », Psychiatric Services, 62, p. 541-543.\n",
+      "text_sha256": "9dbbe7b90396a96ef321d11dddc2340c1b98f4f33989cb74fd2f2d58bc28805c"
+    },
+    {
+      "bbox": [
+        390.0,
+        343.4349670410156,
+        542.6775512695312,
+        360.8234558105469
+      ],
+      "block_id": "page-1133-block-0011",
+      "order": 11,
+      "text": "Tuckman, B. W. (1965). « Developmental sequence in small\ngroups », Psychological Bulletin, 63(6), p. 384-399.\n",
+      "text_sha256": "2c671cbf2f59ebde123f84f63ca5d5848b20272dd65d37a53b2057ac41354dfa"
+    },
+    {
+      "bbox": [
+        390.0,
+        374.3203125,
+        547.890625,
+        412.5734558105469
+      ],
+      "block_id": "page-1133-block-0012",
+      "order": 12,
+      "text": "Chapitre 43\nAlbert, M. & al. (1998). « Social networks and mental health\nservice utilisation-A literature review », International Journal\nof Social Psychiatry, 44(4), p. 248-266.\n",
+      "text_sha256": "c3d4c68c42ad0606b71c3ccd0bd5d3498b09c35bc7fa7a1890f70b6c7169ad23"
+    },
+    {
+      "bbox": [
+        390.0,
+        416.5849609375,
+        542.3099975585938,
+        443.1734313964844
+      ],
+      "block_id": "page-1133-block-0013",
+      "order": 13,
+      "text": "Armitage, G. D. & al. (2009). « Health systems integration :\nState of the evidence », International Journal of Integrated\nCare, 9, ISSN 1568-4156, [en ligne], www.ijic.org.\n",
+      "text_sha256": "c82c763d96dcd535c7927742e4c0f1d08f15d32c17a7f8e5b3932b5ae4f98b71"
+    },
+    {
+      "bbox": [
+        390.0,
+        447.1849670410156,
+        545.7415771484375,
+        473.72344970703125
+      ],
+      "block_id": "page-1133-block-0014",
+      "order": 14,
+      "text": "Bantman, P. (2004). « Réseaux et psychiatrie : Réexions sur\nl’utilisation du terme de réseau dans le champ médico-\nsocial », Vie sociale et traitements, 81, p. 25-29.\n",
+      "text_sha256": "caa1fb59d5a3922216054b85fed42a896dc5651a01743060d061de37985fb4df"
+    },
+    {
+      "bbox": [
+        390.0,
+        477.7349548339844,
+        547.72900390625,
+        513.5234375
+      ],
+      "block_id": "page-1133-block-0015",
+      "order": 15,
+      "text": "Beaucage, C. & al. (2009). « La dépression majeure en\npremière ligne et les impacts cliniques des stratégies d’inter-\nvention : une revue de littérature », Santé mentale au Québec,\n34(1), p. 77-100.\n",
+      "text_sha256": "83f48cd255060f3f13af3f62f32b2050f9a4f8509ab6bdcd2130e06620ba81a3"
+    },
+    {
+      "bbox": [
+        390.0,
+        517.4849853515625,
+        539.05517578125,
+        553.2734375
+      ],
+      "block_id": "page-1133-block-0016",
+      "order": 16,
+      "text": "Blanchet, L. & Messier, M. J. (2001). « Réseaux et parte-\nnariat », dans Lalonde, P. & al. (dir.), Psychiatrie clinique:\napproche bio-psycho-sociale, Montréal, Québec, Gaëtan\nMorin, p. 1722-1745.\n",
+      "text_sha256": "c0a09d5cfa272875ec039720b79240981166dc8c15756ab98a0691012a0913a6"
+    },
+    {
+      "bbox": [
+        390.0,
+        557.2849731445312,
+        543.75,
+        593.0234375
+      ],
+      "block_id": "page-1133-block-0017",
+      "order": 17,
+      "text": "Bonsack, C. & al. (2007). « Étude qualitative des attentes\nd’un réseau sanitaire et social pour suivi des troubles\npsychiatriques sévères dans la communauté », Encéphale,\n33(5), p. 751-761.\n",
+      "text_sha256": "646be986e336737868f4e52441628cc2f81e3faa46640097fe26737f1020ed25"
+    },
+    {
+      "bbox": [
+        390.0,
+        597.0349731445312,
+        546.4974975585938,
+        623.6234741210938
+      ],
+      "block_id": "page-1133-block-0018",
+      "order": 18,
+      "text": "Bourque, D. (2008). Concertation et partenariat; entre levier\net piège du développement des communautés, Québec,\nQuébec, Presses de l’université du Québec.\n",
+      "text_sha256": "bba133d633440c0bf85364e4e7e88f1b4530c6e3fd64daba003e9bb70601dad2"
+    },
+    {
+      "bbox": [
+        390.0,
+        627.6349487304688,
+        549.3779907226562,
+        654.1734619140625
+      ],
+      "block_id": "page-1133-block-0019",
+      "order": 19,
+      "text": "Caron, J. & Guay, S. (2005). « Soutien social et santé mentale :\nconcept, mesures, recherches récentes et implications pour\nles cliniciens », Santé mentale au Québec, 30(2), p. 15-41.\n",
+      "text_sha256": "a26a2a4643ab30fca77ed977d84288e15e4f0f163fe2a5951cf7eec3f32fe96a"
+    },
+    {
+      "bbox": [
+        390.0,
+        658.1849975585938,
+        544.3041381835938,
+        693.9734497070312
+      ],
+      "block_id": "page-1133-block-0020",
+      "order": 20,
+      "text": "Carpentier, N. & White, D. (2002). « Cohesion of the primary\nsocial network and sustained service use before the rst\npsychiatric hospitalization », Journal of Behavioral Health\nServices & Research, 29(4), p. 404-418.\n",
+      "text_sha256": "9e89d17567527887fb8c93785a8f8accc4514321456d7a35764dc6b43ef0b778"
+    },
+    {
+      "bbox": [
+        390.0,
+        697.9349975585938,
+        543.8975219726562,
+        724.5234375
+      ],
+      "block_id": "page-1133-block-0021",
+      "order": 21,
+      "text": "Carrière, M. (2001). « Le partenariat dans le champ des\ntroubles mentaux dix ans après la politique de santé men-\ntale », Santé mentale au Québec, 26(1), p. 216-241.\n",
+      "text_sha256": "1cf423261c7df92b16c051a11b5a00e8daf871f0fdb40066a5e32da8e89d3756"
+    },
+    {
+      "bbox": [
+        219.0,
+        40.68496322631836,
+        364.6050720214844,
+        67.32344055175781
+      ],
+      "block_id": "page-1133-block-0022",
+      "order": 22,
+      "text": "Association québécoise pour la réadaptation sociale. (2014).\nProgramme québécois pairs-aidants réseau, [en ligne],\nwww.aqrp-sm.org/projets/pairs-aidants.\n",
+      "text_sha256": "27aa607efcb54065f98930f252ffd03137d9fa0bec66f4c494c77aa49800834f"
+    },
+    {
+      "bbox": [
+        219.0,
+        71.38496398925781,
+        373.30999755859375,
+        98.0234375
+      ],
+      "block_id": "page-1133-block-0023",
+      "order": 23,
+      "text": "Bass, B. (1999). « Two decades of research and develop-\nment in transformational leadership », European Journal of\nWork and Organizational Psychology, 8(1), p. 9-32.\n",
+      "text_sha256": "b7cbc7467fc24a7aab0c2d76bdf8fe9dee321570a4f8c198316cbbb050069104"
+    },
+    {
+      "bbox": [
+        219.0,
+        102.0849609375,
+        378.4551696777344,
+        119.5234375
+      ],
+      "block_id": "page-1133-block-0024",
+      "order": 24,
+      "text": "Bass, B. (2008). The Bass Handbook of Leadership : Theory,\nResearch and Managerial Application, New York, Free Press.\n",
+      "text_sha256": "3bd4147d6e2e348ad5d4d4593aa9ab55198e41094ae1ef86302e6e6a658f5e3b"
+    },
+    {
+      "bbox": [
+        219.0,
+        123.53495788574219,
+        375.8746337890625,
+        168.67344665527344
+      ],
+      "block_id": "page-1133-block-0025",
+      "order": 25,
+      "text": "Beaulieu, M. D. & al. (2006). L’implantation des groupes\nde médecine de famille : le dé de la réorganisation de\nla pratique et de la collaboration interprofessionnelle,\nChaire Dr Sadok Besrour en médecine familiale, Montréal,\nQuébec.\n",
+      "text_sha256": "d3136aaae9b1b2aa8c26856fef4688049e24be9a9ded5ac5d9fd9a8905062808"
+    },
+    {
+      "bbox": [
+        219.0,
+        172.73497009277344,
+        376.142578125,
+        190.12344360351562
+      ],
+      "block_id": "page-1133-block-0026",
+      "order": 26,
+      "text": "Burns, T. (2004). Community Mental Health Teams : A Guide\nto Current Practices, New York, Oxford University Press.\n",
+      "text_sha256": "d6702d97d5ca679261867e75149d8be7bf857ca23e960bfe032a807620302053"
+    },
+    {
+      "bbox": [
+        219.0,
+        194.18496704101562,
+        373.8326416015625,
+        239.3234405517578
+      ],
+      "block_id": "page-1133-block-0027",
+      "order": 27,
+      "text": "Consortium pancanadien pour l’interprofessionnalisme en santé.\n(2010). Référentiel national de compétences en matière\nd’interprofessionnalisme/Consortium pancanadien pour\nl’interprofessionnalisme en santé, [en ligne], www.cihc.ca/\nresources/publications.\n",
+      "text_sha256": "5d948c2210c0d9ef8f4b759f4e335e4199402bcdcf760bb5632470731f6631bf"
+    },
+    {
+      "bbox": [
+        219.0,
+        243.3849639892578,
+        375.1396789550781,
+        270.0234375
+      ],
+      "block_id": "page-1133-block-0028",
+      "order": 28,
+      "text": "Corrigan P. W. & al. (2000). « Mental health team leadership\nand consumers satisfaction and quality of life », Psychiatric\nServices, 51(6), p. 781-785.\n",
+      "text_sha256": "495be58270909a597a94897691cd908aafc936422383b9fec96e4ac32d8ff85b"
+    },
+    {
+      "bbox": [
+        219.0,
+        274.0849609375,
+        372.6549987792969,
+        300.72344970703125
+      ],
+      "block_id": "page-1133-block-0029",
+      "order": 29,
+      "text": "Corrigan P. W. & al. (2002). « Transformational leadership\nand the mental health team », Administration and Policy in\nMental Health, 30(2), p. 97-108.\n",
+      "text_sha256": "8869ea44450f92eb0cbed26c1487d17f3c91779a0c0965337a2eb1f86cc45911"
+    },
+    {
+      "bbox": [
+        219.0,
+        304.78497314453125,
+        370.49749755859375,
+        340.6734313964844
+      ],
+      "block_id": "page-1133-block-0030",
+      "order": 30,
+      "text": "D’Amour, D. & al. (2005). « The conceptual basis for inter-\nprofessional collaboration : Core concepts and theoretical\nframeworks », Journal of Interprofessional Care, suppl 1,\np. 116-131.\n",
+      "text_sha256": "51acd601f87e670fa3e27594968578f752dd0cc305a5330c698f7a245032b975"
+    },
+    {
+      "bbox": [
+        219.0,
+        344.6849670410156,
+        376.6474914550781,
+        380.5734558105469
+      ],
+      "block_id": "page-1133-block-0031",
+      "order": 31,
+      "text": "D’Amour, D. & al. (2008). « A model and typology of collabo-\nration between professionals in healthcare organisations »,\nBMC Health Services Research, 8(188), [en ligne], www.\nbiomedcentral.com/1472-6963/8/188.\n",
+      "text_sha256": "6024bee83b29ca927234dd5ebcff774997d6a28b05e8fa52f94961dd815926ab"
+    },
+    {
+      "bbox": [
+        219.0,
+        384.6349792480469,
+        374.0838928222656,
+        420.5234375
+      ],
+      "block_id": "page-1133-block-0032",
+      "order": 32,
+      "text": "Diamond, R. J. (1996). « Multidisciplinary teamwork », dans\nVacaro, J. V. & Clark, G. H. (dir.), Practicing Psychiatry in the\nCommunity, a Manual, Washington, American Psychiatric\nPress, p. 343-361.\n",
+      "text_sha256": "4ca0e4f92626e0efd9bee9695ba56a5db0410620684df73efa307d724ae6f625"
+    },
+    {
+      "bbox": [
+        219.0,
+        424.5849609375,
+        375.9100646972656,
+        451.22344970703125
+      ],
+      "block_id": "page-1133-block-0033",
+      "order": 33,
+      "text": "Drake, R. E. & al. (2009). « Share decision making in mental\nhealth : prospects for personalized medicine », Dialogues in\nClinical Neurosciences, 11(4), p. 455-463.\n",
+      "text_sha256": "885047ab4c1499d99c87c137fd04eac44275fa895a1a7f5c91c6169476d6ae86"
+    },
+    {
+      "bbox": [
+        219.0,
+        455.28497314453125,
+        375.3625183105469,
+        472.6734313964844
+      ],
+      "block_id": "page-1133-block-0034",
+      "order": 34,
+      "text": "Fiorelli, J. (1988). « Power in work groups : Team member’s\nperspectives », Human Relations, 41(1), p. 1-12.\n",
+      "text_sha256": "f10e03618086eef93ae3da9046627102ef4c40e65030cf2971a27b108b145ba0"
+    },
+    {
+      "bbox": [
+        219.0,
+        476.7349548339844,
+        377.98284912109375,
+        531.0734252929688
+      ],
+      "block_id": "page-1133-block-0035",
+      "order": 35,
+      "text": "Frank, J. R. (2005). Le cadre de compétences CanMEDS\n2005 pour les médecins. L’excellence des normes, des\nmédecins et des soins, Collège royal des médecins et\nchirurgiens du Canada, [en ligne], www.royalcollege.ca/por-\ntal/page/portal/rc/common/documents/canmeds/resources/\npublications/framework_full_f.pdf.\n",
+      "text_sha256": "2759655597e677f7223b7e2048b1821d14c8442ff3e9bec7b2ab6a63d6419cb3"
+    },
+    {
+      "bbox": [
+        219.0,
+        535.1349487304688,
+        377.6825866699219,
+        561.7734375
+      ],
+      "block_id": "page-1133-block-0036",
+      "order": 36,
+      "text": "Frese, F. & al. (2001). « Integrating evidence-based practices\nand the recovery model », Psychiatric Services, 52(11),\np. 1462-1468.\n",
+      "text_sha256": "c43bf2e867fdd8d011dd8e4981f4a0873d377d641ee5f39bac7f3f1fdcc16a94"
+    },
+    {
+      "bbox": [
+        219.0,
+        565.8349609375,
+        374.7975158691406,
+        601.7234497070312
+      ],
+      "block_id": "page-1133-block-0037",
+      "order": 37,
+      "text": "Herrman, H. & al. (2002). « The roles and relationships of\npsychiatrists and other service providers in mental health\nservices », Australian and New Zealand Journal of Psychia-\ntry, 36, p. 75-80.\n",
+      "text_sha256": "66ea7fc20a5c1a169dc2aae53d999b1293eb3d7837c5f504135adea4b747d359"
+    },
+    {
+      "bbox": [
+        219.0,
+        605.7849731445312,
+        371.1145935058594,
+        641.6734619140625
+      ],
+      "block_id": "page-1133-block-0038",
+      "order": 38,
+      "text": "Hinkin, T. R. & Schrieschiem, C. A. (1989). « Development\nand application of new scales to measure the French and\nRaven (1959) bases of social power », Journal of Applied\nPsychology, 74(4), p. 561-567.\n",
+      "text_sha256": "fb54f5bd53994fd3d051cb5b5644d65a74084de413086162e121d59cbf8e1070"
+    },
+    {
+      "bbox": [
+        219.0,
+        645.6849975585938,
+        369.239990234375,
+        663.1234741210938
+      ],
+      "block_id": "page-1133-block-0039",
+      "order": 39,
+      "text": "Hôpital Louis-H. Lafontaine. (2012). Guide d’élaboration du\nPII/PSI, Montréal, Québec.\n",
+      "text_sha256": "7dc27f124ae440c5a4b5f4ccf0404d85f746805324f6650d6712ec53dc8e9c4f"
+    },
+    {
+      "bbox": [
+        219.0,
+        667.1849975585938,
+        375.7525939941406,
+        693.8234252929688
+      ],
+      "block_id": "page-1133-block-0040",
+      "order": 40,
+      "text": "Lahey, W. & Currie, R. (2005). « Regulatory and medico-legal\nbarriers to interprofessional practice », Journal of Interpro-\nfessional Care, suppl. 1, p. 197-223.\n",
+      "text_sha256": "dfc0c62575109179d232e51c6dda61c32fb4d050416ec0ecd055dbcb6e672337"
+    },
+    {
+      "bbox": [
+        219.0,
+        697.8849487304688,
+        373.30670166015625,
+        724.5234375
+      ],
+      "block_id": "page-1133-block-0041",
+      "order": 41,
+      "text": "Nolte, J. & Tremblay, M. (2005). Enhancing Interdisciplinary\nCollaboration in Primary Health Care in Canada, Ottawa,\nLes soins de santé primaires.\n",
+      "text_sha256": "5d40a82ad4dd2295b283eb7b33ff5d5de005ccf3ef81ed6aee1c2ad61c6b682d"
+    },
+    {
+      "bbox": [
+        48.0,
+        40.68496322631836,
+        204.1750030517578,
+        67.07344055175781
+      ],
+      "block_id": "page-1133-block-0042",
+      "order": 42,
+      "text": "Hughes, P. & al. (2002). « Assessment of guidelines for good\npractice in psychosocial care of mothers after stillbirth : A\ncohort study », Lancet, 360(9345), p. 114-118.\n",
+      "text_sha256": "cd748491b49aa17f8d64d1e77ff5e20dfa53583bb24b948507c0587efc585bed"
+    },
+    {
+      "bbox": [
+        48.0,
+        70.9849624633789,
+        196.53057861328125,
+        97.3734359741211
+      ],
+      "block_id": "page-1133-block-0043",
+      "order": 43,
+      "text": "Huybrechts, K. F. & al. (2014). « Antidpressant Use in\nPregnancy and the Risk of Cardiac Defects »,N Engl J Med,\n370, p. 2397-2407.\n",
+      "text_sha256": "7e9720bea8d41719acd2f7f590f4ced6e92e663cc272c5aac2dd2416dc1e0499"
+    },
+    {
+      "bbox": [
+        48.0,
+        101.28496551513672,
+        204.5850067138672,
+        136.7734375
+      ],
+      "block_id": "page-1133-block-0044",
+      "order": 44,
+      "text": "Kornstein, S. & al. (2000). « Gender differences in treatment\nresponse to sertraline versus imipramine in chronic\ndepression », American Journal of Psychiatry, 157(9),\np. 1445-1452.\n",
+      "text_sha256": "d30366d9d1b486d940b4ce26ecb11349a0de0017da90c343b4bf1ad256a6009a"
+    },
+    {
+      "bbox": [
+        48.0,
+        140.68496704101562,
+        200.52000427246094,
+        176.17344665527344
+      ],
+      "block_id": "page-1133-block-0045",
+      "order": 45,
+      "text": "Love, E. & al. (2010). « Effect of interpregnancy interval on\noutcomes of pregnancy after miscarriage : Retrospective\nanalysis of hospital episode : Statistics in Scotland, British\nMedical Journal, 341(3967), p. 1-8.\n",
+      "text_sha256": "c1561d913d2cdfcc630eb52d79e4da06882370d4ab998f5394f662a065151ee5"
+    },
+    {
+      "bbox": [
+        48.0,
+        180.0849609375,
+        204.38250732421875,
+        215.5734405517578
+      ],
+      "block_id": "page-1133-block-0046",
+      "order": 46,
+      "text": "National Collaborating Centre for Mental Health. (2007).\nAntenatal and Postnatal Mental Health: The NICE Guideline\non Clinical Management and Service Guidance, London,\nThe National Collaborating Centre for Mental Health.\n",
+      "text_sha256": "64d77db4f6552e48e4953ff5a497d84bd38691a1cbfbb25364f4b5d1a0ce745f"
+    },
+    {
+      "bbox": [
+        48.0,
+        219.48497009277344,
+        201.4396514892578,
+        236.7734375
+      ],
+      "block_id": "page-1133-block-0047",
+      "order": 47,
+      "text": "Palmsten, K. & al. (2013). « Antidepressant use and risk for\npreeclampsia », Epidemiology, 24(5), p. 682-691.\n",
+      "text_sha256": "555566095232a84e3e7d92ff0a09caec46b74c23caf4914a4b954d2da66545b4"
+    },
+    {
+      "bbox": [
+        48.0,
+        240.68496704101562,
+        191.22999572753906,
+        267.0734558105469
+      ],
+      "block_id": "page-1133-block-0048",
+      "order": 48,
+      "text": "Pratchett, L. & al. (2010). « Trauma and violence : Are\nwomen the weaker sex ? », Psychiatric Clinics of North\nAmerica, 33(2), p. 465-474.\n",
+      "text_sha256": "ff0fa5e3e8e80de761b795f52eca8107a50a1dad1b143741ae55379b573a259d"
+    },
+    {
+      "bbox": [
+        48.0,
+        270.9849548339844,
+        206.98251342773438,
+        297.3734436035156
+      ],
+      "block_id": "page-1133-block-0049",
+      "order": 49,
+      "text": "Quitkin, F. & al. (2002). « Are there differences between\nwomen’s and men’s antidepressant responses ? »,American\nJournal of Psychiatry, 159(11), p. 1848-1854.\n",
+      "text_sha256": "7d6ff0de292bc8a8fce08c83e8fc1d133826f22d67bf78c1a51983f9c4bf35fe"
+    },
+    {
+      "bbox": [
+        48.0,
+        301.28497314453125,
+        200.28001403808594,
+        327.6734313964844
+      ],
+      "block_id": "page-1133-block-0050",
+      "order": 50,
+      "text": "Rucklidge, J. (2010). « Gender differences in attention-\ndecit/hyperactivity disorder », Psychiatric Clinics of North\nAmerica, 33(2), p. 357-373.\n",
+      "text_sha256": "81617b512a18c9a8e943ae45fe1ba65d59f578f6ca07aa16ac0ca4fd3a7b83a7"
+    },
+    {
+      "bbox": [
+        48.0,
+        331.5849609375,
+        203.95750427246094,
+        367.0734558105469
+      ],
+      "block_id": "page-1133-block-0051",
+      "order": 51,
+      "text": "Soares, C. & Frey, B. (2010). « Challenges and opportunities\nto manage depression during the menopausal transition\nand beyond », Psychiatric Clinics of North America, 33(2),\np. 295-308.\n",
+      "text_sha256": "426c8383682ec0f194cbe133e74f9a7032a33c79aa810e09093b53667a3e3ffe"
+    },
+    {
+      "bbox": [
+        48.0,
+        370.9849548339844,
+        199.7389678955078,
+        415.5234375
+      ],
+      "block_id": "page-1133-block-0052",
+      "order": 52,
+      "text": "Statistique Canada. (2015). Chart 1. Percentage of Current\nand Daily Smokers, by Sex, Household Population 12 and\nOlder, Canada, 2001 to 2011. [en ligne], www.statcan.\ngc.ca/pub/82-624-x/2012001/article/chart/11676-01-\nchart1-eng.htm.\n",
+      "text_sha256": "84203454fb93814051513d9309dd8b320a2485a606b72a74ac555d70c8e83469"
+    },
+    {
+      "bbox": [
+        48.0,
+        419.4349670410156,
+        200.21250915527344,
+        454.9234313964844
+      ],
+      "block_id": "page-1133-block-0053",
+      "order": 53,
+      "text": "Tolin, D. & Foa, E. (2006). « Sex differences in trauma and\npost-traumatic stress disorder : A quantitative review of\n25 years of research », Psychological Bulletin, 132(6),\np. 959-992.\n",
+      "text_sha256": "c2c3aa5e91a4c2405dfbddd95d733677b3768a909105c672e1716fe805b4a0a2"
+    },
+    {
+      "bbox": [
+        48.0,
+        458.8349609375,
+        203.8975067138672,
+        485.22344970703125
+      ],
+      "block_id": "page-1133-block-0054",
+      "order": 54,
+      "text": "Vigod, S. & al. (2010). « Approach to premenstrual dyspho-\nria for the mental health practitioner », Psychiatric Clinics\nof North America, 33(2), p. 257-272.\n",
+      "text_sha256": "47f20d3fdda86328d622001d8ec279bc01bae226b990ab626cab18422be1d311"
+    },
+    {
+      "bbox": [
+        48.0,
+        489.1349792480469,
+        199.84510803222656,
+        524.6234741210938
+      ],
+      "block_id": "page-1133-block-0055",
+      "order": 55,
+      "text": "Vigod, S. N. & al. (2012). « Temporal trends in general and\nage-specic fertility rates among women with schizoph-\nrenia (1996-2009) : a population-based study in Ontario,\nCanada », Schizophrenia Res, 139, p. 169-175.\n",
+      "text_sha256": "772f4380a5c6484a8cb3bc2db6f2a44fe81f2a2c1fe2d2ac9670b414d7248d40"
+    },
+    {
+      "bbox": [
+        48.0,
+        528.5349731445312,
+        202.77500915527344,
+        564.0234375
+      ],
+      "block_id": "page-1133-block-0056",
+      "order": 56,
+      "text": "Wickramaratne, P. & al. (2011). « Children of depressed\nmothers 1 year after remission of maternal depression :\nFindings from the STAR*D-Child Study », American Journal\nof Psychiatry, 168(9), p. 593-602.\n",
+      "text_sha256": "7fb2b7a9f9fce4fff9fcdf3f64f90ac1dbda3a884077cd8c09173dfaec0bcfce"
+    },
+    {
+      "bbox": [
+        48.0,
+        567.9349975585938,
+        199.54002380371094,
+        594.3234252929688
+      ],
+      "block_id": "page-1133-block-0057",
+      "order": 57,
+      "text": "Wilkins, K. & al. (2010). « Depressive symptoms related to\ninfertility and infertility treatments », Psychiatric Clinics of\nNorth America, 33(2), p. 309-321.\n",
+      "text_sha256": "ce05d0255de3753cf87b4e4aae77639b41ed9c0237781c9b369b57123b5cec35"
+    },
+    {
+      "bbox": [
+        48.0,
+        607.7203369140625,
+        191.8300018310547,
+        654.8234252929688
+      ],
+      "block_id": "page-1133-block-0058",
+      "order": 58,
+      "text": "Chapitre 42\nAarons, G. A. (2006). « Transformational and transac-\ntional leadership : Association with attitudes toward\nevidence-based practice », Psychiatric Services, 57(8),\np. 1162-1169.\n",
+      "text_sha256": "5d6779e1454fd4c1662c355c6271dc8ea21ee5f9bf56d0908db8db8140281378"
+    },
+    {
+      "bbox": [
+        48.0,
+        658.7349853515625,
+        207.05751037597656,
+        694.2234497070312
+      ],
+      "block_id": "page-1133-block-0059",
+      "order": 59,
+      "text": "Association canadienne de protection médicale. (2008). [En ligne],\nhttps://oplfrpd5.cmpa-acpm.ca/documents/10179/24937/\n06_collaborative_care-f.pdf/2fba5377-e28c-494e-a14b-\n2736d3f5161e?version=1.1.\n",
+      "text_sha256": "501655d80d7f6e5f548705719d89ab9b5d02ba12ff4b9dcc7304d7aae0421d5a"
+    },
+    {
+      "bbox": [
+        48.0,
+        698.1349487304688,
+        202.59002685546875,
+        724.5234375
+      ],
+      "block_id": "page-1133-block-0060",
+      "order": 60,
+      "text": "Association des hôpitaux du Québec. (2004). Guide de pratique\npour les équipes de suivi intensif dans la communauté,\nMontréal, Publications de l’AHQ.\n",
+      "text_sha256": "d4c3b1f5f09c0a286ec6b336a6a93e94702d4cd57fea80e2f09570174e28d3de"
+    }
+  ],
+  "coordinates_sha256": "692cc6305c57e0fd98b32a838bd93e795b8369cedb499231a29fb4aac9ebd7c8",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1133",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "R36\nRéférences\nOandasan, I. & al. (2006). Le travail en équipe dans les\nservices de santé: promouvoir un travail en équipe efcace\ndans les services de santé au Canada. Recommandations\net synthèse pour politiques, Ottawa, Fondation canadienne\nde la recherche sur les services de santé.\nOrganisation mondiale de la santé. (2010). Framework for\nAction on Interprofessional Education and Practice Collabo-\nration, Diana Hopkins (dir.), Genève, Freelance.\nPhilips-Nootens, S. & al. (2007). Éléments de responsabilité\ncivile médicale, 3e éd., Cowansville, Yvon Blais.\nPronovost, L. & Jinchereau, F. (1986). « Le travail interdiscipli-\nnaire », conférence d’ouverture, Actes du colloque de l’As-\nsociation des hôpitaux du Québec: La multidisciplinarité,\nun concept à développer et à promouvoir, Saint- Hyacinthe,\nnovembre.\nProvencher, H. & al. (2012). L’intégration des pairs aidants\ndans des équipes de suivi et de soutien, Québec, Université\nLaval.\nRosen, A. & Callaly. T. (2005). « Interdisciplinary teamwork\nand leadership : issues for psychiatrists », Australasian\nPsychiatry, 13(3), p. 234-240.\nRowe, M. & al. (2007). « A peer-support, group intervention to\nreduce substance use and criminality among persons with\nsevere mental illness », Psychiatric Services, 58(7), p. 955-961.\nSells, D. & al. (2006). « The treatment relationship in peer-\nbased and regular case management for clients with severe\nmental illness », Psychiatric Services, 57(8), p. 1179-1184.\nSledge, W. & al. (2011). « Effectiveness of peer support in\nreducing readmissions of persons with multiple hospitaliza-\ntions », Psychiatric Services, 62, p. 541-543.\nTuckman, B. W. (1965). « Developmental sequence in small\ngroups », Psychological Bulletin, 63(6), p. 384-399.\nChapitre 43\nAlbert, M. & al. (1998). « Social networks and mental health\nservice utilisation-A literature review », International Journal\nof Social Psychiatry, 44(4), p. 248-266.\nArmitage, G. D. & al. (2009). « Health systems integration :\nState of the evidence », International Journal of Integrated\nCare, 9, ISSN 1568-4156, [en ligne], www.ijic.org.\nBantman, P. (2004). « Réseaux et psychiatrie : Réexions sur\nl’utilisation du terme de réseau dans le champ médico-\nsocial », Vie sociale et traitements, 81, p. 25-29.\nBeaucage, C. & al. (2009). « La dépression majeure en\npremière ligne et les impacts cliniques des stratégies d’inter-\nvention : une revue de littérature », Santé mentale au Québec,\n34(1), p. 77-100.\nBlanchet, L. & Messier, M. J. (2001). « Réseaux et parte-\nnariat », dans Lalonde, P. & al. (dir.), Psychiatrie clinique:\napproche bio-psycho-sociale, Montréal, Québec, Gaëtan\nMorin, p. 1722-1745.\nBonsack, C. & al. (2007). « Étude qualitative des attentes\nd’un réseau sanitaire et social pour suivi des troubles\npsychiatriques sévères dans la communauté », Encéphale,\n33(5), p. 751-761.\nBourque, D. (2008). Concertation et partenariat; entre levier\net piège du développement des communautés, Québec,\nQuébec, Presses de l’université du Québec.\nCaron, J. & Guay, S. (2005). « Soutien social et santé mentale :\nconcept, mesures, recherches récentes et implications pour\nles cliniciens », Santé mentale au Québec, 30(2), p. 15-41.\nCarpentier, N. & White, D. (2002). « Cohesion of the primary\nsocial network and sustained service use before the rst\npsychiatric hospitalization », Journal of Behavioral Health\nServices & Research, 29(4), p. 404-418.\nCarrière, M. (2001). « Le partenariat dans le champ des\ntroubles mentaux dix ans après la politique de santé men-\ntale », Santé mentale au Québec, 26(1), p. 216-241.\nAssociation québécoise pour la réadaptation sociale. (2014).\nProgramme québécois pairs-aidants réseau, [en ligne],\nwww.aqrp-sm.org/projets/pairs-aidants.\nBass, B. (1999). « Two decades of research and develop-\nment in transformational leadership », European Journal of\nWork and Organizational Psychology, 8(1), p. 9-32.\nBass, B. (2008). The Bass Handbook of Leadership : Theory,\nResearch and Managerial Application, New York, Free Press.\nBeaulieu, M. D. & al. (2006). L’implantation des groupes\nde médecine de famille : le dé de la réorganisation de\nla pratique et de la collaboration interprofessionnelle,\nChaire Dr Sadok Besrour en médecine familiale, Montréal,\nQuébec.\nBurns, T. (2004). Community Mental Health Teams : A Guide\nto Current Practices, New York, Oxford University Press.\nConsortium pancanadien pour l’interprofessionnalisme en santé.\n(2010). Référentiel national de compétences en matière\nd’interprofessionnalisme/Consortium pancanadien pour\nl’interprofessionnalisme en santé, [en ligne], www.cihc.ca/\nresources/publications.\nCorrigan P. W. & al. (2000). « Mental health team leadership\nand consumers satisfaction and quality of life », Psychiatric\nServices, 51(6), p. 781-785.\nCorrigan P. W. & al. (2002). « Transformational leadership\nand the mental health team », Administration and Policy in\nMental Health, 30(2), p. 97-108.\nD’Amour, D. & al. (2005). « The conceptual basis for inter-\nprofessional collaboration : Core concepts and theoretical\nframeworks », Journal of Interprofessional Care, suppl 1,\np. 116-131.\nD’Amour, D. & al. (2008). « A model and typology of collabo-\nration between professionals in healthcare organisations »,\nBMC Health Services Research, 8(188), [en ligne], www.\nbiomedcentral.com/1472-6963/8/188.\nDiamond, R. J. (1996). « Multidisciplinary teamwork », dans\nVacaro, J. V. & Clark, G. H. (dir.), Practicing Psychiatry in the\nCommunity, a Manual, Washington, American Psychiatric\nPress, p. 343-361.\nDrake, R. E. & al. (2009). « Share decision making in mental\nhealth : prospects for personalized medicine », Dialogues in\nClinical Neurosciences, 11(4), p. 455-463.\nFiorelli, J. (1988). « Power in work groups : Team member’s\nperspectives », Human Relations, 41(1), p. 1-12.\nFrank, J. R. (2005). Le cadre de compétences CanMEDS\n2005 pour les médecins. L’excellence des normes, des\nmédecins et des soins, Collège royal des médecins et\nchirurgiens du Canada, [en ligne], www.royalcollege.ca/por-\ntal/page/portal/rc/common/documents/canmeds/resources/\npublications/framework_full_f.pdf.\nFrese, F. & al. (2001). « Integrating evidence-based practices\nand the recovery model », Psychiatric Services, 52(11),\np. 1462-1468.\nHerrman, H. & al. (2002). « The roles and relationships of\npsychiatrists and other service providers in mental health\nservices », Australian and New Zealand Journal of Psychia-\ntry, 36, p. 75-80.\nHinkin, T. R. & Schrieschiem, C. A. (1989). « Development\nand application of new scales to measure the French and\nRaven (1959) bases of social power », Journal of Applied\nPsychology, 74(4), p. 561-567.\nHôpital Louis-H. Lafontaine. (2012). Guide d’élaboration du\nPII/PSI, Montréal, Québec.\nLahey, W. & Currie, R. (2005). « Regulatory and medico-legal\nbarriers to interprofessional practice », Journal of Interpro-\nfessional Care, suppl. 1, p. 197-223.\nNolte, J. & Tremblay, M. (2005). Enhancing Interdisciplinary\nCollaboration in Primary Health Care in Canada, Ottawa,\nLes soins de santé primaires.\nHughes, P. & al. (2002). « Assessment of guidelines for good\npractice in psychosocial care of mothers after stillbirth : A\ncohort study », Lancet, 360(9345), p. 114-118.\nHuybrechts, K. F. & al. (2014). « Antidpressant Use in\nPregnancy and the Risk of Cardiac Defects »,N Engl J Med,\n370, p. 2397-2407.\nKornstein, S. & al. (2000). « Gender differences in treatment\nresponse to sertraline versus imipramine in chronic\ndepression », American Journal of Psychiatry, 157(9),\np. 1445-1452.\nLove, E. & al. (2010). « Effect of interpregnancy interval on\noutcomes of pregnancy after miscarriage : Retrospective\nanalysis of hospital episode : Statistics in Scotland, British\nMedical Journal, 341(3967), p. 1-8.\nNational Collaborating Centre for Mental Health. (2007).\nAntenatal and Postnatal Mental Health: The NICE Guideline\non Clinical Management and Service Guidance, London,\nThe National Collaborating Centre for Mental Health.\nPalmsten, K. & al. (2013). « Antidepressant use and risk for\npreeclampsia », Epidemiology, 24(5), p. 682-691.\nPratchett, L. & al. (2010). « Trauma and violence : Are\nwomen the weaker sex ? », Psychiatric Clinics of North\nAmerica, 33(2), p. 465-474.\nQuitkin, F. & al. (2002). « Are there differences between\nwomen’s and men’s antidepressant responses ? »,American\nJournal of Psychiatry, 159(11), p. 1848-1854.\nRucklidge, J. (2010). « Gender differences in attention-\ndecit/hyperactivity disorder », Psychiatric Clinics of North\nAmerica, 33(2), p. 357-373.\nSoares, C. & Frey, B. (2010). « Challenges and opportunities\nto manage depression during the menopausal transition\nand beyond », Psychiatric Clinics of North America, 33(2),\np. 295-308.\nStatistique Canada. (2015). Chart 1. Percentage of Current\nand Daily Smokers, by Sex, Household Population 12 and\nOlder, Canada, 2001 to 2011. [en ligne], www.statcan.\ngc.ca/pub/82-624-x/2012001/article/chart/11676-01-\nchart1-eng.htm.\nTolin, D. & Foa, E. (2006). « Sex differences in trauma and\npost-traumatic stress disorder : A quantitative review of\n25 years of research », Psychological Bulletin, 132(6),\np. 959-992.\nVigod, S. & al. (2010). « Approach to premenstrual dyspho-\nria for the mental health practitioner », Psychiatric Clinics\nof North America, 33(2), p. 257-272.\nVigod, S. N. & al. (2012). « Temporal trends in general and\nage-specic fertility rates among women with schizoph-\nrenia (1996-2009) : a population-based study in Ontario,\nCanada », Schizophrenia Res, 139, p. 169-175.\nWickramaratne, P. & al. (2011). « Children of depressed\nmothers 1 year after remission of maternal depression :\nFindings from the STAR*D-Child Study », American Journal\nof Psychiatry, 168(9), p. 593-602.\nWilkins, K. & al. (2010). « Depressive symptoms related to\ninfertility and infertility treatments », Psychiatric Clinics of\nNorth America, 33(2), p. 309-321.\nChapitre 42\nAarons, G. A. (2006). « Transformational and transac-\ntional leadership : Association with attitudes toward\nevidence-based practice », Psychiatric Services, 57(8),\np. 1162-1169.\nAssociation canadienne de protection médicale. (2008). [En ligne],\nhttps://oplfrpd5.cmpa-acpm.ca/documents/10179/24937/\n06_collaborative_care-f.pdf/2fba5377-e28c-494e-a14b-\n2736d3f5161e?version=1.1.\nAssociation des hôpitaux du Québec. (2004). Guide de pratique\npour les équipes de suivi intensif dans la communauté,\nMontréal, Publications de l’AHQ.\n",
+  "raw_text_sha256": "caf4e86530bcfa19037030a618856674d85c799f58ee4dc1c39a1e506d53af14",
+  "source_page_display": 1134,
+  "source_page_index": 1133
+}

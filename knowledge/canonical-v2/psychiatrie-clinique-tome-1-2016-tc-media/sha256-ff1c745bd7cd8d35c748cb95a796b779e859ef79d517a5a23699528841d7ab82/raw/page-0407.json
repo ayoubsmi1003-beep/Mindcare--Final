@@ -1,0 +1,232 @@
+{
+  "block_sequence_sha256": "de48286b688b7d4ebc857c0e6adacdde256ad839a6623f604fadc2c772c7966f",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        477.3144836425781,
+        758.8693237304688
+      ],
+      "block_id": "page-0407-block-0001",
+      "order": 1,
+      "text": "390\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3\nSyndromes cliniques psychiatriques\n",
+      "text_sha256": "1a5f0d045ca12e8b84239dfa6a1521b2cf96942a7546953464753ea33759d0e4"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.2075805664062,
+        139.95849609375
+      ],
+      "block_id": "page-0407-block-0002",
+      "order": 2,
+      "text": "chez les femmes, mais toutes les études ne conrment pas cette\nobservation. Par contre, on retrouve un lien entre un premier\népisode de type dépressif et :\n• un début de la maladie plus précoce ;\n• une fréquence plus élevée d’épisodes dépressifs au cours de\nl’évolution du trouble bipolaire ;\n• un risque suicidaire plus élevé ;\n• une fréquence accrue de cycles rapides.\n",
+      "text_sha256": "d28388a1ce1b26f78b446e5aa05329e0e4a5b712a131f24d38e91d1362432290"
+    },
+    {
+      "bbox": [
+        306.0,
+        144.9658203125,
+        549.1267700195312,
+        212.95849609375
+      ],
+      "block_id": "page-0407-block-0003",
+      "order": 3,
+      "text": "Il faut aussi souligner que lorsque les premiers épisodes sont\ndépressifs, le diagnostic de trouble bipolaire ne peut être porté,\nd’où un retard à l’introduction d’un traitement spécique (p. ex.,\nle lithium). Par ailleurs, chez les patients dont le premier épisode\nest maniaque, l’évolution du trouble bipolaire s’accompagnerait\nd’un plus grand nombre d’épisodes avec symptômes psychotiques.\n",
+      "text_sha256": "452862379f5836790b6fb7721a1646fbddc24b99e332ed12fbb78751a9143269"
+    },
+    {
+      "bbox": [
+        306.0,
+        213.9658203125,
+        549.79833984375,
+        408.45849609375
+      ],
+      "block_id": "page-0407-block-0004",
+      "order": 4,
+      "text": "Le nombre d’épisodes est très variable d’un individu à l’autre,\nmais chez les patients non traités, la récurrence est la règle. Les\nétudes contemporaines indiquent même un plus haut taux de\nrechute que les études plus anciennes. Des aspects méthodo-\nlogiques peuvent expliquer les diérences de résultats entre ces\nétudes, mais plusieurs auteurs soulèvent une autre hypothèse :\nl’utilisation des antidépresseurs depuis leur introduction à la n\ndes années 1950 et surtout depuis l’arrivée des ISRS, plus faciles\nà utiliser que les antidépresseurs tricycliques, a inuencé les taux\nde rechutes en augmentant le risque de virage maniaque chez les\npatients traités lors d’un épisode dépressif. La consommation\nd’alcool et de drogues est aussi fréquemment évoquée, mais il\nest dicile de savoir si cette consommation a provoqué le TB ou\nsi elle en est la conséquence. Pour ce qui est de la fréquence des\népisodes, on note avec le temps une diminution de la durée de la\nrémission interépisodes (hypothèse du kindlingproposée par Post),\nla durée des épisodes restant assez stable pour un même patient.\n",
+      "text_sha256": "a6e86ecd9ca09e863099dadd59f2521bc07f92fbc87bade6e816c278f3feeef8"
+    },
+    {
+      "bbox": [
+        306.0,
+        409.4658203125,
+        549.4473876953125,
+        519.95849609375
+      ],
+      "block_id": "page-0407-block-0005",
+      "order": 5,
+      "text": "Parmi les aections médicales et les traitements augmentant\nles risques de rechute, soulignons :\n• les aections endocriniennes (hyperthyroïdie, syndrome de\nCushing) ;\n• les accidents vasculaires cérébraux ;\n• les traitements par certains médicaments (p. ex., les corticoïdes,\nla L-dopa ou les agonistes dopaminergiques) ;\n• les antidépresseurs et les psychostimulants. Ceux-ci sont, parmi\nles psychotropes, les molécules les plus souvent en cause.\n",
+      "text_sha256": "248b7e20844a4c35b5ee0497850add8f8ad42e3a3163722e98241cdc2f1b0ff2"
+    },
+    {
+      "bbox": [
+        306.0,
+        524.9658203125,
+        549.3291015625,
+        581.45849609375
+      ],
+      "block_id": "page-0407-block-0006",
+      "order": 6,
+      "text": "Chez la femme, la grossesse et la naissance d’un enfant sont\ndes facteurs précipitants bien connus, le TB pouvant notamment\nse manifester après l’accouchement par une dépression postpar-\ntum, qui constitue une urgence médicale. Les décalages horaires\npeuvent aussi provoquer un épisode maniaque.\n",
+      "text_sha256": "b789ed548e4900d4911102f1c84db91850ad872424dfcd2a74c0c56d7271c69b"
+    },
+    {
+      "bbox": [
+        306.0,
+        591.98681640625,
+        448.5582275390625,
+        608.12939453125
+      ],
+      "block_id": "page-0407-block-0007",
+      "order": 7,
+      "text": "18.8.2 Suivi à long terme\n",
+      "text_sha256": "b2c5d41cd0ae835df12cdde41b5161e0201ded82103c615057137f051d3202a1"
+    },
+    {
+      "bbox": [
+        306.0,
+        611.4658203125,
+        549.3845825195312,
+        725.45849609375
+      ],
+      "block_id": "page-0407-block-0008",
+      "order": 8,
+      "text": "D’après les quelques études qui portent sur un suivi de longue\ndurée (jusqu’à 40 ans, mais en général sur des périodes beaucoup\nplus courtes de quatre à cinq ans), on constate que 25 % des patients\nprésentent une rémission complète (Goodwin & Jamison, 2007),\ndonc le trois quarts feront des rechutes au cours de leur vie, même\navec un traitement adapté. La survenue d’états mixtes, de cycles\nrapides, la présence de troubles comorbides (surtout abus et\ndépendance à l’alcool et aux drogues) sont des facteurs de mauvais\npronostic. Après une rechute, la plupart des patients récupèrent\nsur le plan syndromique (disparition des critères du DSM-5 d’un\n",
+      "text_sha256": "f968c05b79f843d01d5265ab8f2889d25b0d8347e2fec80cdc55f808267ca48c"
+    },
+    {
+      "bbox": [
+        48.0,
+        39.33681869506836,
+        210.91458129882812,
+        55.47939682006836
+      ],
+      "block_id": "page-0407-block-0009",
+      "order": 9,
+      "text": "18.7.3 Interventions sociales\n",
+      "text_sha256": "d176da71ccd21300fdc8c270cac293a9d26ba44d285b4ae317a623830392589c"
+    },
+    {
+      "bbox": [
+        48.0,
+        59.01582336425781,
+        291.40087890625,
+        139.60850524902344
+      ],
+      "block_id": "page-0407-block-0010",
+      "order": 10,
+      "text": "Même si le médecin fournit de telles informations à son patient,\nil est maintenant reconnu que des séances plus formelles de psy-\nchoéducation en groupe peuvent avoir une grande inuence sur\ndiérents aspects de l’évolution de la maladie (meilleure adhésion\nau traitement, diminution des rechutes, augmentation des délais\nde récurrence). Il semble bien établi que ce sont les patients\nredevenus euthymiques qui en bénécient le plus.\n",
+      "text_sha256": "06eeb96c2c65e5d106dbcb5e67a1123ff7444c6eb6455f5612957a14cb1fa533"
+    },
+    {
+      "bbox": [
+        48.0,
+        140.7658233642578,
+        291.20794677734375,
+        342.20849609375
+      ],
+      "block_id": "page-0407-block-0011",
+      "order": 11,
+      "text": "Plusieurs modules de psychoéducation en groupe ont été\nélaborés pour les patients et leur famille, par exemple :\n•\nColorado family-focused psychoeducation (Morris & al.,\n2007). Il s’agit d’une adaptation d’un programme de thérapie\nfamiliale destinée aux personnes atteintes de schizophrénie\net à leurs proches, mais aussi ecace pour le TB. Cette thé-\nrapie comptant 21 rencontres étalées sur neuf mois prend\nnotamment en compte la sensibilité des patients bipolaires\naux fortes émotions exprimées (critiques, hostilité, conits)\ndans leur entourage. Il ore un entraînement à la commu-\nnication : pratique d’expression et d’écoute ecaces dans les\ninterrelations et habiletés de négociation assorties de devoirs\nà la maison et d’un entraînement à la résolution de problèmes.\n•\nBarcelona family psychoeducation (Reinares, 2010). Il s’agit\nd’un programme psychoéducatif étalé sur 12 sessions de\n90 minutes, centré sur une information structurée à propos\ndu trouble bipolaire et sur les habiletés pour y faire face.\n",
+      "text_sha256": "eed81384c906d96f9598746994ceeac3bdd40dee085cfff2d16cd1e805e2b442"
+    },
+    {
+      "bbox": [
+        48.0,
+        347.41583251953125,
+        291.2591857910156,
+        404.6084899902344
+      ],
+      "block_id": "page-0407-block-0012",
+      "order": 12,
+      "text": "Les sessions de groupe permettent un partage des expériences\nentre les patients et leurs proches et une discussion au sujet des ren-\nseignements fournis par les cliniciens qui animent ces rencontres.\nElles favorisent une meilleure intégration des informations qui\npeuvent être plus facilement applicables dans la vie quotidienne.\n",
+      "text_sha256": "5c94a13bf8e08483b32f9c856a732f2a52cca0dce85478c2fc1d8ce0fba7f580"
+    },
+    {
+      "bbox": [
+        48.0,
+        405.8158264160156,
+        291.1454772949219,
+        474.70849609375
+      ],
+      "block_id": "page-0407-block-0013",
+      "order": 13,
+      "text": "Certains organismes, comme Revivre (au Québec), orent\nun soutien par le biais des lignes d’information ou d’écoute,\ndes groupes d’entraide, des conférences, des ateliers d’auto-\ngestion, etc., qui permettent aux personnes aux prises avec un\nTB de partager leur vécu et leurs émotions en présence d’une\npersonne-ressource.\n",
+      "text_sha256": "744b45853656598caf11584f9c2d488e9bdebba5f80d5cc75e76bc40b911ac4d"
+    },
+    {
+      "bbox": [
+        53.20000076293945,
+        480.3000183105469,
+        270.4369812011719,
+        501.6502990722656
+      ],
+      "block_id": "page-0407-block-0014",
+      "order": 14,
+      "text": "i\nUn supplément d’information sur Revivre est disponible\nau www.revivre.org.\n",
+      "text_sha256": "e31eaa949ad847c50740877a7e28c1a62008814d726e41972212f36af8e76c6f"
+    },
+    {
+      "bbox": [
+        55.60000228881836,
+        527.5431518554688,
+        240.99530029296875,
+        564.6689453125
+      ],
+      "block_id": "page-0407-block-0015",
+      "order": 15,
+      "text": "18.8\nÉvolution des troubles\nbipolaires\n",
+      "text_sha256": "e84b3060571e39f58efbd4fbdd015fe7b910975503c8bd01dbfd75247c3196b0"
+    },
+    {
+      "bbox": [
+        48.0,
+        578.6158447265625,
+        291.2804870605469,
+        659.20849609375
+      ],
+      "block_id": "page-0407-block-0016",
+      "order": 16,
+      "text": "Entre les premiers symptômes et l’établissement du diagnostic de\nTB, il peut s’écouler une dizaine d’années. Considérant l’impor-\ntance de la période charnière que constitue la n de l’adolescence\net le début de l’âge adulte (p. ex., choix et fondation de la vie\nprofessionnelle et aective), les conséquences à long terme d’un\ndiagnostic et/ou d’une prise en charge thérapeutique inadéquats\nou tardifs sont importantes.\n",
+      "text_sha256": "c4849d6ef467b1d2f288da045301f907a52b4ff703b47cc2047ef9da6e61a870"
+    },
+    {
+      "bbox": [
+        48.0,
+        671.9368286132812,
+        256.9040832519531,
+        688.0794067382812
+      ],
+      "block_id": "page-0407-block-0017",
+      "order": 17,
+      "text": "18.8.1 Caractéristiques des épisodes\n",
+      "text_sha256": "3fd8febd20bef73133b0211a4463b6e35975e34799119815cc83f396ca1dc823"
+    },
+    {
+      "bbox": [
+        48.0,
+        691.6158447265625,
+        290.8600158691406,
+        725.45849609375
+      ],
+      "block_id": "page-0407-block-0018",
+      "order": 18,
+      "text": "Le premier épisode d’un trouble bipolaire de type I peut être\ntout autant (50 % des cas) maniaque que dépressif. Il est plus\nsouvent maniaque chez les hommes et plus souvent dépressif\n",
+      "text_sha256": "917003d595bd58203b28d08507c46ba9f1d9f28b047889f4a4790be71fcc7a40"
+    }
+  ],
+  "coordinates_sha256": "85352f343e3943e329348fc604e7b0ee546025ca5c7ca2867f0d30643b7459b0",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0407",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "390\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3\nSyndromes cliniques psychiatriques\nchez les femmes, mais toutes les études ne conrment pas cette\nobservation. Par contre, on retrouve un lien entre un premier\népisode de type dépressif et :\n• un début de la maladie plus précoce ;\n• une fréquence plus élevée d’épisodes dépressifs au cours de\nl’évolution du trouble bipolaire ;\n• un risque suicidaire plus élevé ;\n• une fréquence accrue de cycles rapides.\nIl faut aussi souligner que lorsque les premiers épisodes sont\ndépressifs, le diagnostic de trouble bipolaire ne peut être porté,\nd’où un retard à l’introduction d’un traitement spécique (p. ex.,\nle lithium). Par ailleurs, chez les patients dont le premier épisode\nest maniaque, l’évolution du trouble bipolaire s’accompagnerait\nd’un plus grand nombre d’épisodes avec symptômes psychotiques.\nLe nombre d’épisodes est très variable d’un individu à l’autre,\nmais chez les patients non traités, la récurrence est la règle. Les\nétudes contemporaines indiquent même un plus haut taux de\nrechute que les études plus anciennes. Des aspects méthodo-\nlogiques peuvent expliquer les diérences de résultats entre ces\nétudes, mais plusieurs auteurs soulèvent une autre hypothèse :\nl’utilisation des antidépresseurs depuis leur introduction à la n\ndes années 1950 et surtout depuis l’arrivée des ISRS, plus faciles\nà utiliser que les antidépresseurs tricycliques, a inuencé les taux\nde rechutes en augmentant le risque de virage maniaque chez les\npatients traités lors d’un épisode dépressif. La consommation\nd’alcool et de drogues est aussi fréquemment évoquée, mais il\nest dicile de savoir si cette consommation a provoqué le TB ou\nsi elle en est la conséquence. Pour ce qui est de la fréquence des\népisodes, on note avec le temps une diminution de la durée de la\nrémission interépisodes (hypothèse du kindlingproposée par Post),\nla durée des épisodes restant assez stable pour un même patient.\nParmi les aections médicales et les traitements augmentant\nles risques de rechute, soulignons :\n• les aections endocriniennes (hyperthyroïdie, syndrome de\nCushing) ;\n• les accidents vasculaires cérébraux ;\n• les traitements par certains médicaments (p. ex., les corticoïdes,\nla L-dopa ou les agonistes dopaminergiques) ;\n• les antidépresseurs et les psychostimulants. Ceux-ci sont, parmi\nles psychotropes, les molécules les plus souvent en cause.\nChez la femme, la grossesse et la naissance d’un enfant sont\ndes facteurs précipitants bien connus, le TB pouvant notamment\nse manifester après l’accouchement par une dépression postpar-\ntum, qui constitue une urgence médicale. Les décalages horaires\npeuvent aussi provoquer un épisode maniaque.\n18.8.2 Suivi à long terme\nD’après les quelques études qui portent sur un suivi de longue\ndurée (jusqu’à 40 ans, mais en général sur des périodes beaucoup\nplus courtes de quatre à cinq ans), on constate que 25 % des patients\nprésentent une rémission complète (Goodwin & Jamison, 2007),\ndonc le trois quarts feront des rechutes au cours de leur vie, même\navec un traitement adapté. La survenue d’états mixtes, de cycles\nrapides, la présence de troubles comorbides (surtout abus et\ndépendance à l’alcool et aux drogues) sont des facteurs de mauvais\npronostic. Après une rechute, la plupart des patients récupèrent\nsur le plan syndromique (disparition des critères du DSM-5 d’un\n18.7.3 Interventions sociales\nMême si le médecin fournit de telles informations à son patient,\nil est maintenant reconnu que des séances plus formelles de psy-\nchoéducation en groupe peuvent avoir une grande inuence sur\ndiérents aspects de l’évolution de la maladie (meilleure adhésion\nau traitement, diminution des rechutes, augmentation des délais\nde récurrence). Il semble bien établi que ce sont les patients\nredevenus euthymiques qui en bénécient le plus.\nPlusieurs modules de psychoéducation en groupe ont été\nélaborés pour les patients et leur famille, par exemple :\n•\nColorado family-focused psychoeducation (Morris & al.,\n2007). Il s’agit d’une adaptation d’un programme de thérapie\nfamiliale destinée aux personnes atteintes de schizophrénie\net à leurs proches, mais aussi ecace pour le TB. Cette thé-\nrapie comptant 21 rencontres étalées sur neuf mois prend\nnotamment en compte la sensibilité des patients bipolaires\naux fortes émotions exprimées (critiques, hostilité, conits)\ndans leur entourage. Il ore un entraînement à la commu-\nnication : pratique d’expression et d’écoute ecaces dans les\ninterrelations et habiletés de négociation assorties de devoirs\nà la maison et d’un entraînement à la résolution de problèmes.\n•\nBarcelona family psychoeducation (Reinares, 2010). Il s’agit\nd’un programme psychoéducatif étalé sur 12 sessions de\n90 minutes, centré sur une information structurée à propos\ndu trouble bipolaire et sur les habiletés pour y faire face.\nLes sessions de groupe permettent un partage des expériences\nentre les patients et leurs proches et une discussion au sujet des ren-\nseignements fournis par les cliniciens qui animent ces rencontres.\nElles favorisent une meilleure intégration des informations qui\npeuvent être plus facilement applicables dans la vie quotidienne.\nCertains organismes, comme Revivre (au Québec), orent\nun soutien par le biais des lignes d’information ou d’écoute,\ndes groupes d’entraide, des conférences, des ateliers d’auto-\ngestion, etc., qui permettent aux personnes aux prises avec un\nTB de partager leur vécu et leurs émotions en présence d’une\npersonne-ressource.\ni\nUn supplément d’information sur Revivre est disponible\nau www.revivre.org.\n18.8\nÉvolution des troubles\nbipolaires\nEntre les premiers symptômes et l’établissement du diagnostic de\nTB, il peut s’écouler une dizaine d’années. Considérant l’impor-\ntance de la période charnière que constitue la n de l’adolescence\net le début de l’âge adulte (p. ex., choix et fondation de la vie\nprofessionnelle et aective), les conséquences à long terme d’un\ndiagnostic et/ou d’une prise en charge thérapeutique inadéquats\nou tardifs sont importantes.\n18.8.1 Caractéristiques des épisodes\nLe premier épisode d’un trouble bipolaire de type I peut être\ntout autant (50 % des cas) maniaque que dépressif. Il est plus\nsouvent maniaque chez les hommes et plus souvent dépressif\n",
+  "raw_text_sha256": "3d9cf7d9b4cd318ddc52268ee37f63fd2e3096bf752d6e0e6307ec3453e141c2",
+  "source_page_display": 408,
+  "source_page_index": 407
+}

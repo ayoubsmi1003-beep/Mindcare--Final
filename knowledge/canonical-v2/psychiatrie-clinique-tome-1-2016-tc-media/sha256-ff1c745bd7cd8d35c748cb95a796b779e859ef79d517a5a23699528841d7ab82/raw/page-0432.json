@@ -1,0 +1,736 @@
+{
+  "block_sequence_sha256": "324170e671eb75b07836c0950274cc6e12dab32338207afcd5205f4da0628196",
+  "blocks": [
+    {
+      "bbox": [
+        317.1499938964844,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0432-block-0001",
+      "order": 1,
+      "text": "Chapitre 20\nTroubles anxieux, panique, phobies\n415\n",
+      "text_sha256": "43aeecdbf2b07911aa1097bdc1300b558829a0449bb5a93aea588d36d2267566"
+    },
+    {
+      "bbox": [
+        56.10000228881836,
+        133.852294921875,
+        487.45892333984375,
+        146.22007751464844
+      ],
+      "block_id": "page-0432-block-0002",
+      "order": 2,
+      "text": "TABLEAU 20.1 Prévalence à vie des troubles anxieux : synthèse des données de 41 études internationales\n",
+      "text_sha256": "2b5828ddc3053967d1b7b9d19b8fd07d7c359ab1a7979ff1603a9eaf20cea7d2"
+    },
+    {
+      "bbox": [
+        79.05000305175781,
+        171.12413024902344,
+        140.34861755371094,
+        181.70030212402344
+      ],
+      "block_id": "page-0432-block-0003",
+      "order": 3,
+      "text": "Troubles anxieux\n",
+      "text_sha256": "1ed43efa85cce6baa41eb1c1f1b5352ea91217fb9f72b9dbf381023a29fe2777"
+    },
+    {
+      "bbox": [
+        169.90000915527344,
+        161.12413024902344,
+        238.927001953125,
+        181.70030212402344
+      ],
+      "block_id": "page-0432-block-0004",
+      "order": 4,
+      "text": "Prévalence la plus\nbasse documentée\n",
+      "text_sha256": "547a4a009b367c37c1a9e05ddafe2c604efe7ec32b99232ba55104da5323f8d5"
+    },
+    {
+      "bbox": [
+        198.3000030517578,
+        181.12413024902344,
+        210.43150329589844,
+        191.70030212402344
+      ],
+      "block_id": "page-0432-block-0005",
+      "order": 5,
+      "text": "(%)\n",
+      "text_sha256": "3af3e7fd0547d605ac51ccc3590dd6ce7a03ff017484301b084b4d4a88d2cae3"
+    },
+    {
+      "bbox": [
+        246.6999969482422,
+        160.62413024902344,
+        318.0164794921875,
+        181.20030212402344
+      ],
+      "block_id": "page-0432-block-0006",
+      "order": 6,
+      "text": "Prévalence la plus\nélevée documentée\n",
+      "text_sha256": "0d70d82e3f2f1179a40500ce7384f7f86c3b6fc831ff2ac58b54553efa7cdddd"
+    },
+    {
+      "bbox": [
+        276.25,
+        181.62413024902344,
+        288.3815002441406,
+        192.20030212402344
+      ],
+      "block_id": "page-0432-block-0007",
+      "order": 7,
+      "text": "(%)\n",
+      "text_sha256": "3af3e7fd0547d605ac51ccc3590dd6ce7a03ff017484301b084b4d4a88d2cae3"
+    },
+    {
+      "bbox": [
+        325.75,
+        161.12413024902344,
+        394.81170654296875,
+        181.70030212402344
+      ],
+      "block_id": "page-0432-block-0008",
+      "order": 8,
+      "text": "Ordre de variation\nentre la plus basse\n",
+      "text_sha256": "ad8b9ed19b27af01622beed4199d490e634a04cfc065461e01b1cb27600786c5"
+    },
+    {
+      "bbox": [
+        330.5500183105469,
+        181.12413024902344,
+        390.26702880859375,
+        191.70030212402344
+      ],
+      "block_id": "page-0432-block-0009",
+      "order": 9,
+      "text": "et la plus élevée\n",
+      "text_sha256": "c71f56f769ac76d0f14b9fe0f200f85440075c941417dbb43f925a85d2e24c68"
+    },
+    {
+      "bbox": [
+        405.6000061035156,
+        151.12413024902344,
+        470.8669738769531,
+        161.70030212402344
+      ],
+      "block_id": "page-0432-block-0010",
+      "order": 10,
+      "text": "Ordre de variation\n",
+      "text_sha256": "be3e960f1194cf26984a0071a62203784a59a9f68108fa92a6b631d4a2b53f5e"
+    },
+    {
+      "bbox": [
+        408.5500183105469,
+        161.12413024902344,
+        468.0010070800781,
+        181.70030212402344
+      ],
+      "block_id": "page-0432-block-0011",
+      "order": 11,
+      "text": "à travers toutes\nles études selon\n",
+      "text_sha256": "c7a3d85ba3986c31b3bd8768945568a920e7c72db5fb1b05d58ccff33d6795af"
+    },
+    {
+      "bbox": [
+        413.45001220703125,
+        181.12413024902344,
+        462.95452880859375,
+        191.70030212402344
+      ],
+      "block_id": "page-0432-block-0012",
+      "order": 12,
+      "text": "l’intervalle de\n",
+      "text_sha256": "d73a57e7e1990f2a5ba19e200286712730fb27b9bfd8bc5f93debc895b8395a4"
+    },
+    {
+      "bbox": [
+        420.3999938964844,
+        191.12413024902344,
+        455.9205017089844,
+        201.70030212402344
+      ],
+      "block_id": "page-0432-block-0013",
+      "order": 13,
+      "text": "conance\n",
+      "text_sha256": "0e57a1c6d841b4b9e867b1565c4211d48372cdb4d177a7f9a24b58a5e15cf0be"
+    },
+    {
+      "bbox": [
+        486.95001220703125,
+        160.62413024902344,
+        545.5079956054688,
+        182.20030212402344
+      ],
+      "block_id": "page-0432-block-0014",
+      "order": 14,
+      "text": "Estimation\nla plus probable\n",
+      "text_sha256": "b97dd132266ef366140e26bf48b557f0b5ecbc07a7d3a468057b6bbaa48afc23"
+    },
+    {
+      "bbox": [
+        510.0500183105469,
+        181.62413024902344,
+        522.1815185546875,
+        192.20030212402344
+      ],
+      "block_id": "page-0432-block-0015",
+      "order": 15,
+      "text": "(%)\n",
+      "text_sha256": "3af3e7fd0547d605ac51ccc3590dd6ce7a03ff017484301b084b4d4a88d2cae3"
+    },
+    {
+      "bbox": [
+        57.900001525878906,
+        207.02285766601562,
+        520.6500244140625,
+        217.04238891601562
+      ],
+      "block_id": "page-0432-block-0016",
+      "order": 16,
+      "text": "Trouble panique\n0,1 (Taiwan)\n3,2 (Italie)\n25 fois\n2,7 fois\n1,0\n",
+      "text_sha256": "670303e2a79264e640ec49854eae15e0d9f32b6420cca10b6b69c490c34d59f9"
+    },
+    {
+      "bbox": [
+        57.900001525878906,
+        225.4228515625,
+        520.6500244140625,
+        235.4423828125
+      ],
+      "block_id": "page-0432-block-0017",
+      "order": 17,
+      "text": "Agoraphobie\n0,7 (Hong Kong)\n10,8 (Suisse)\n15 fois\n2,2 fois\n1,6\n",
+      "text_sha256": "a6edb600ae028875e9443c0a3b8d8dd7a5b4739b913dfe76003bbd23a18ce5b3"
+    },
+    {
+      "bbox": [
+        57.900001525878906,
+        243.9519500732422,
+        306.03900146484375,
+        263.77813720703125
+      ],
+      "block_id": "page-0432-block-0018",
+      "order": 18,
+      "text": "Phobie sociale\n0,5 (Corée)\n45,6 (Oudmourtie,\nRussie)\n",
+      "text_sha256": "9061eb32b991da05df90b6ecbaf2d53aa7b1e6f43d2c1526e94d6e398e0b9724"
+    },
+    {
+      "bbox": [
+        349.25,
+        243.8728485107422,
+        520.6500244140625,
+        253.8923797607422
+      ],
+      "block_id": "page-0432-block-0019",
+      "order": 19,
+      "text": "86 fois\n2,8 fois\n3,6\n",
+      "text_sha256": "a03560104f7cf1002ea2952143cf7192393e5f3d4b56b82e2440bfa9bc053bad"
+    },
+    {
+      "bbox": [
+        57.900001525878906,
+        272.2728576660156,
+        520.6500244140625,
+        282.2923889160156
+      ],
+      "block_id": "page-0432-block-0020",
+      "order": 20,
+      "text": "Phobie spécique\n0,6 (Italie)\n11,3 (États-Unis)\n18 fois\n2,3 fois\n5,3\n",
+      "text_sha256": "0145a9311a4627c15002688a691344e2712c77a16ddedb50c999e9194d8418a1"
+    },
+    {
+      "bbox": [
+        57.900001525878906,
+        290.7228698730469,
+        520.6500244140625,
+        300.7424011230469
+      ],
+      "block_id": "page-0432-block-0021",
+      "order": 21,
+      "text": "Trouble obsessionnel-compulsif\n*\n*\n11 fois\n2,0 fois\n1,3\n",
+      "text_sha256": "cab149786c6b9fff80f4907df4c7a5f33cbadfbf7cd8068757e0adbef38999ec"
+    },
+    {
+      "bbox": [
+        57.900001525878906,
+        309.20196533203125,
+        112.5570068359375,
+        329.02813720703125
+      ],
+      "block_id": "page-0432-block-0022",
+      "order": 22,
+      "text": "Trouble de stress\npost-traumatique\n",
+      "text_sha256": "39614d04a9a19defadfaa72a221f788b346cd1572eec0fc8ca7d3459d58aa085"
+    },
+    {
+      "bbox": [
+        202.90000915527344,
+        309.12286376953125,
+        520.6500244140625,
+        319.14239501953125
+      ],
+      "block_id": "page-0432-block-0023",
+      "order": 23,
+      "text": "*\n*\n62 fois\n12,0 fois\n2,1\n",
+      "text_sha256": "e69a22f63166dbbcb60e31a0a935f62e2160a18713efcf1469ad1ff527df11d0"
+    },
+    {
+      "bbox": [
+        57.900001525878906,
+        337.6519470214844,
+        296.6880187988281,
+        357.4781188964844
+      ],
+      "block_id": "page-0432-block-0024",
+      "order": 24,
+      "text": "Anxiété généralisée\n1,9 (Suisse)\n31,1 (Nouvelle-\nZélande)\n",
+      "text_sha256": "e759c20a0dd8aec2e1fdb9948fc1612545ade3dd2a837dbe0c0253dd4ea06b7e"
+    },
+    {
+      "bbox": [
+        349.25,
+        337.5728454589844,
+        520.6500244140625,
+        347.5923767089844
+      ],
+      "block_id": "page-0432-block-0025",
+      "order": 25,
+      "text": "16 fois\n2,3 fois\n6,2\n",
+      "text_sha256": "9c43f8772967849ac77cb03cec061bc2fe8dcf42ab6207fa1cc4a770d9116723"
+    },
+    {
+      "bbox": [
+        57.900001525878906,
+        365.9728698730469,
+        520.6199951171875,
+        375.9924011230469
+      ],
+      "block_id": "page-0432-block-0026",
+      "order": 26,
+      "text": "Troubles anxieux\n9,2 (Corée)\n28,7 (Suisse)\n3 fois\n1,7 fois\n16,6\n",
+      "text_sha256": "f549ab1975ee51558ac840ba8a6394a15f71dcfb33abef4fdbdf6c0127ddd3eb"
+    },
+    {
+      "bbox": [
+        53.900001525878906,
+        384.6906433105469,
+        175.8206024169922,
+        405.25885009765625
+      ],
+      "block_id": "page-0432-block-0027",
+      "order": 27,
+      "text": "* Non rapporté dans la publication originale\nSource : Adapté de Somers & al. (2006).\n",
+      "text_sha256": "13a837b14e6927dd72c9fa2383f8eb44145214073558964b3ecc9a2fef4312e8"
+    },
+    {
+      "bbox": [
+        56.45000076293945,
+        445.1523132324219,
+        504.2088928222656,
+        457.52008056640625
+      ],
+      "block_id": "page-0432-block-0028",
+      "order": 28,
+      "text": "TABLEAU 20.2 Prévalence annuelle des troubles anxieux : synthèse des données de 41 études internationales\n",
+      "text_sha256": "c6248c26f9f34af61031fe27f10d385297f8e817003a59981a8f4908fe318e38"
+    },
+    {
+      "bbox": [
+        79.4000015258789,
+        482.42413330078125,
+        140.6986083984375,
+        493.00030517578125
+      ],
+      "block_id": "page-0432-block-0029",
+      "order": 29,
+      "text": "Troubles anxieux\n",
+      "text_sha256": "1ed43efa85cce6baa41eb1c1f1b5352ea91217fb9f72b9dbf381023a29fe2777"
+    },
+    {
+      "bbox": [
+        180.8000030517578,
+        465.92413330078125,
+        228.81300354003906,
+        487.50030517578125
+      ],
+      "block_id": "page-0432-block-0030",
+      "order": 30,
+      "text": "Prévalence\nla plus basse\n",
+      "text_sha256": "66ed1e791cdb4955f5a5c142bfbf8e000f8a076f38666b65528cce757dc5337c"
+    },
+    {
+      "bbox": [
+        182.10000610351562,
+        487.92413330078125,
+        227.29150390625,
+        498.50030517578125
+      ],
+      "block_id": "page-0432-block-0031",
+      "order": 31,
+      "text": "documentée\n",
+      "text_sha256": "36095623ee28c218df7cfbfd4dc28f0fffabee3b25eaeae5350dd181f8224524"
+    },
+    {
+      "bbox": [
+        198.65000915527344,
+        498.92413330078125,
+        210.78150939941406,
+        509.50030517578125
+      ],
+      "block_id": "page-0432-block-0032",
+      "order": 32,
+      "text": "(%)\n",
+      "text_sha256": "3af3e7fd0547d605ac51ccc3590dd6ce7a03ff017484301b084b4d4a88d2cae3"
+    },
+    {
+      "bbox": [
+        257.6000061035156,
+        465.92413330078125,
+        307.90252685546875,
+        487.50030517578125
+      ],
+      "block_id": "page-0432-block-0033",
+      "order": 33,
+      "text": "Prévalence\nla plus élevée\n",
+      "text_sha256": "18aeba478e288e7939254cf8ca5b460a7def1e88e53a6d2eeb7a45dd76a1d544"
+    },
+    {
+      "bbox": [
+        260.0500183105469,
+        487.92413330078125,
+        305.24151611328125,
+        498.50030517578125
+      ],
+      "block_id": "page-0432-block-0034",
+      "order": 34,
+      "text": "documentée\n",
+      "text_sha256": "36095623ee28c218df7cfbfd4dc28f0fffabee3b25eaeae5350dd181f8224524"
+    },
+    {
+      "bbox": [
+        276.6000061035156,
+        498.92413330078125,
+        288.73150634765625,
+        509.50030517578125
+      ],
+      "block_id": "page-0432-block-0035",
+      "order": 35,
+      "text": "(%)\n",
+      "text_sha256": "3af3e7fd0547d605ac51ccc3590dd6ce7a03ff017484301b084b4d4a88d2cae3"
+    },
+    {
+      "bbox": [
+        326.0500183105469,
+        472.42413330078125,
+        395.1117248535156,
+        493.00030517578125
+      ],
+      "block_id": "page-0432-block-0036",
+      "order": 36,
+      "text": "Ordre de variation\nentre la plus basse\n",
+      "text_sha256": "ad8b9ed19b27af01622beed4199d490e634a04cfc065461e01b1cb27600786c5"
+    },
+    {
+      "bbox": [
+        330.8500061035156,
+        492.42413330078125,
+        390.5670166015625,
+        503.00030517578125
+      ],
+      "block_id": "page-0432-block-0037",
+      "order": 37,
+      "text": "et la plus élevée\n",
+      "text_sha256": "c71f56f769ac76d0f14b9fe0f200f85440075c941417dbb43f925a85d2e24c68"
+    },
+    {
+      "bbox": [
+        405.8999938964844,
+        462.42413330078125,
+        471.1669616699219,
+        473.00030517578125
+      ],
+      "block_id": "page-0432-block-0038",
+      "order": 38,
+      "text": "Ordre de variation\n",
+      "text_sha256": "be3e960f1194cf26984a0071a62203784a59a9f68108fa92a6b631d4a2b53f5e"
+    },
+    {
+      "bbox": [
+        408.8999938964844,
+        472.42413330078125,
+        468.3509826660156,
+        493.00030517578125
+      ],
+      "block_id": "page-0432-block-0039",
+      "order": 39,
+      "text": "à travers toutes\nles études selon\n",
+      "text_sha256": "c7a3d85ba3986c31b3bd8768945568a920e7c72db5fb1b05d58ccff33d6795af"
+    },
+    {
+      "bbox": [
+        413.8000183105469,
+        492.42413330078125,
+        463.30450439453125,
+        503.00030517578125
+      ],
+      "block_id": "page-0432-block-0040",
+      "order": 40,
+      "text": "l’intervalle de\n",
+      "text_sha256": "d73a57e7e1990f2a5ba19e200286712730fb27b9bfd8bc5f93debc895b8395a4"
+    },
+    {
+      "bbox": [
+        420.75,
+        502.42413330078125,
+        456.2705078125,
+        513.0003051757812
+      ],
+      "block_id": "page-0432-block-0041",
+      "order": 41,
+      "text": "conance\n",
+      "text_sha256": "0e57a1c6d841b4b9e867b1565c4211d48372cdb4d177a7f9a24b58a5e15cf0be"
+    },
+    {
+      "bbox": [
+        484.0,
+        471.92413330078125,
+        549.0654907226562,
+        482.50030517578125
+      ],
+      "block_id": "page-0432-block-0042",
+      "order": 42,
+      "text": "Estimation la plus\n",
+      "text_sha256": "e002dd72bede08c634d53ae5f777a2bfec40502871072f2764124dff23500d29"
+    },
+    {
+      "bbox": [
+        500.45001220703125,
+        481.92413330078125,
+        532.4555053710938,
+        492.50030517578125
+      ],
+      "block_id": "page-0432-block-0043",
+      "order": 43,
+      "text": "probable\n",
+      "text_sha256": "bc1f0bc46e2798702298d7f2465e3a2862079bf013dcb76379093a9336c6d3ee"
+    },
+    {
+      "bbox": [
+        510.3999938964844,
+        492.92413330078125,
+        522.531494140625,
+        503.50030517578125
+      ],
+      "block_id": "page-0432-block-0044",
+      "order": 44,
+      "text": "(%)\n",
+      "text_sha256": "3af3e7fd0547d605ac51ccc3590dd6ce7a03ff017484301b084b4d4a88d2cae3"
+    },
+    {
+      "bbox": [
+        58.25,
+        518.3228759765625,
+        522.8499755859375,
+        528.3424072265625
+      ],
+      "block_id": "page-0432-block-0045",
+      "order": 45,
+      "text": "Trouble panique\n0,1 (Taiwan)\n3,8 (Hollande)\n29 fois\n2,7 fois\n1,2\n",
+      "text_sha256": "009eda193d6468efc55b3fc8a294e92784389f636f104d79602ca6a78f2806bf"
+    },
+    {
+      "bbox": [
+        58.25,
+        536.8519897460938,
+        294.76800537109375,
+        556.6781616210938
+      ],
+      "block_id": "page-0432-block-0046",
+      "order": 46,
+      "text": "Agoraphobie\n0,6 (Italie)\n2,9 (Nouvelle-\nZélande)\n",
+      "text_sha256": "e67cdec4df700f679340e85a1b27980b02838563053738552c8af7f9379ffb92"
+    },
+    {
+      "bbox": [
+        348.5,
+        536.7728881835938,
+        521.8500366210938,
+        546.7924194335938
+      ],
+      "block_id": "page-0432-block-0047",
+      "order": 47,
+      "text": "4,5 fois\n2,3 fois\n3,8\n",
+      "text_sha256": "c8c215b87f1108ab382507428c1f0addf9d63b3a88c85a8de7045d83d152f5b6"
+    },
+    {
+      "bbox": [
+        58.25,
+        565.251953125,
+        308.4389953613281,
+        585.078125
+      ],
+      "block_id": "page-0432-block-0048",
+      "order": 48,
+      "text": "Phobie sociale\n2,3 (France)\n44,2 (Oudmourtie,\nRussie)\n",
+      "text_sha256": "afbfbca4378562115b16aa9dbb257b79112a6fbdb9382a60a6b0ea1dd9b03a10"
+    },
+    {
+      "bbox": [
+        349.6000061035156,
+        565.1728515625,
+        521.8500366210938,
+        575.1923828125
+      ],
+      "block_id": "page-0432-block-0049",
+      "order": 49,
+      "text": "19 fois\n2,1 fois\n4,5\n",
+      "text_sha256": "3cc0ec6252514f260768dc6f66d0eab12788ba08c6e4a7eed55f5fe2806f74db"
+    },
+    {
+      "bbox": [
+        58.25,
+        593.6228637695312,
+        521.8500366210938,
+        603.6423950195312
+      ],
+      "block_id": "page-0432-block-0050",
+      "order": 50,
+      "text": "Phobie spécique\n0,2 (Irlande du Nord)\n8,8 (États-Unis)\n44 fois\n6,0 fois\n3,0\n",
+      "text_sha256": "8cc530676cc27872162f664b71b79497379e40931eb5b41b0e1d039d8ba43bfc"
+    },
+    {
+      "bbox": [
+        58.25,
+        612.0228881835938,
+        521.8500366210938,
+        622.0424194335938
+      ],
+      "block_id": "page-0432-block-0051",
+      "order": 51,
+      "text": "Trouble obsessionnel-compulsif\n*\n*\n14 fois\n3,0 fois\n0,5\n",
+      "text_sha256": "5cf19981093ac17da4b542a6e0ee5ba957ed9fe2c71581d2680d826dc7811c4b"
+    },
+    {
+      "bbox": [
+        58.25,
+        630.5519409179688,
+        112.90699768066406,
+        650.3781127929688
+      ],
+      "block_id": "page-0432-block-0052",
+      "order": 52,
+      "text": "Trouble de stress\npost-traumatique\n",
+      "text_sha256": "39614d04a9a19defadfaa72a221f788b346cd1572eec0fc8ca7d3459d58aa085"
+    },
+    {
+      "bbox": [
+        203.1999969482422,
+        630.4728393554688,
+        522.8499755859375,
+        640.4923706054688
+      ],
+      "block_id": "page-0432-block-0053",
+      "order": 53,
+      "text": "*\n*\n33 fois\n37,0 fois\n1,2\n",
+      "text_sha256": "b7bdf2df5e235867e686dd6612d45c1e2f23b420901fe52bcd6db93b19862cce"
+    },
+    {
+      "bbox": [
+        58.25,
+        658.9519653320312,
+        297.0379943847656,
+        678.7781372070312
+      ],
+      "block_id": "page-0432-block-0054",
+      "order": 54,
+      "text": "Anxiété généralisée\n0,2 (Irlande du Nord)\n12,7 (Nouvelle-\nZélande)\n",
+      "text_sha256": "652d2f83d3e27cd85262fae7efb6939abdddae6bfed26fa4d8987727769bc182"
+    },
+    {
+      "bbox": [
+        349.6000061035156,
+        658.8728637695312,
+        521.8500366210938,
+        668.8923950195312
+      ],
+      "block_id": "page-0432-block-0055",
+      "order": 55,
+      "text": "85 fois\n3,0 fois\n2,6\n",
+      "text_sha256": "cb4a2bf19f5aa32087f1bf48fc7dd9c10044ba9e29da74c9e85526f947022e9e"
+    },
+    {
+      "bbox": [
+        58.25,
+        687.3228759765625,
+        522.02001953125,
+        697.3424072265625
+      ],
+      "block_id": "page-0432-block-0056",
+      "order": 56,
+      "text": "Troubles anxieux\n4,2 (Italie)\n17,2 (États-Unis)\n4 fois\n1,9 fois\n10,6\n",
+      "text_sha256": "a8f46655385e41157846caa1438d19ab615242962d4e5debc60db26eff650294"
+    },
+    {
+      "bbox": [
+        54.25,
+        705.9906616210938,
+        176.17059326171875,
+        726.558837890625
+      ],
+      "block_id": "page-0432-block-0057",
+      "order": 57,
+      "text": "* Non rapporté dans la publication originale\nSource : Adapté de Somers & al. (2006).\n",
+      "text_sha256": "13a837b14e6927dd72c9fa2383f8eb44145214073558964b3ecc9a2fef4312e8"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.9658203125,
+        297.2367248535156,
+        97.45849609375
+      ],
+      "block_id": "page-0432-block-0058",
+      "order": 58,
+      "text": "Le DSM-5 rapporte une prévalence annuelle des troubles\nanxieux à l’âge adulte aux États-Unis comme suit : trouble panique\n– 2 à 3 % ; agoraphobie – 1,7 % ; anxiété (phobie) sociale – 7 % ;\nphobie spécique – 7 à 9 % ; anxiété de séparation – 1 à 2 %.\nLa comparaison avec l’estimation annuelle la plus probable des\n",
+      "text_sha256": "bc592245d04dfcb2e5543d9fb7e6ea7b1f2f667b87f0546c17d2bd59f1fd0845"
+    },
+    {
+      "bbox": [
+        312.0,
+        40.9658203125,
+        555.19580078125,
+        62.95849609375
+      ],
+      "block_id": "page-0432-block-0059",
+      "order": 59,
+      "text": "études internationales révèle une variation de l’ordre de deux à\ntrois fois (voir le tableau 20.2).\n",
+      "text_sha256": "39b5906326ba3265e9cbbd9b4ae1b1bf2bfe542e14e26460667fb00fda587c4b"
+    },
+    {
+      "bbox": [
+        312.0,
+        63.9658203125,
+        555.0175170898438,
+        97.45849609375
+      ],
+      "block_id": "page-0432-block-0060",
+      "order": 60,
+      "text": "De multiples raisons expliquent cette variabilité, parmi les-\nquelles les instruments épidémiologiques et les critères diagnos-\ntiques utilisés pour la collecte des données, le pays où l’étude\n",
+      "text_sha256": "17587a1982c977f9d0567d70e6c58e9aceca4237b60b00d2df068633b2a4e1e3"
+    }
+  ],
+  "coordinates_sha256": "d2ecc6e7ea78bd98683c625180fa544c28f0410d898b4fc8b468ae31184908b3",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0432",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 20\nTroubles anxieux, panique, phobies\n415\nTABLEAU 20.1 Prévalence à vie des troubles anxieux : synthèse des données de 41 études internationales\nTroubles anxieux\nPrévalence la plus\nbasse documentée\n(%)\nPrévalence la plus\nélevée documentée\n(%)\nOrdre de variation\nentre la plus basse\net la plus élevée\nOrdre de variation\nà travers toutes\nles études selon\nl’intervalle de\nconance\nEstimation\nla plus probable\n(%)\nTrouble panique\n0,1 (Taiwan)\n3,2 (Italie)\n25 fois\n2,7 fois\n1,0\nAgoraphobie\n0,7 (Hong Kong)\n10,8 (Suisse)\n15 fois\n2,2 fois\n1,6\nPhobie sociale\n0,5 (Corée)\n45,6 (Oudmourtie,\nRussie)\n86 fois\n2,8 fois\n3,6\nPhobie spécique\n0,6 (Italie)\n11,3 (États-Unis)\n18 fois\n2,3 fois\n5,3\nTrouble obsessionnel-compulsif\n*\n*\n11 fois\n2,0 fois\n1,3\nTrouble de stress\npost-traumatique\n*\n*\n62 fois\n12,0 fois\n2,1\nAnxiété généralisée\n1,9 (Suisse)\n31,1 (Nouvelle-\nZélande)\n16 fois\n2,3 fois\n6,2\nTroubles anxieux\n9,2 (Corée)\n28,7 (Suisse)\n3 fois\n1,7 fois\n16,6\n* Non rapporté dans la publication originale\nSource : Adapté de Somers & al. (2006).\nTABLEAU 20.2 Prévalence annuelle des troubles anxieux : synthèse des données de 41 études internationales\nTroubles anxieux\nPrévalence\nla plus basse\ndocumentée\n(%)\nPrévalence\nla plus élevée\ndocumentée\n(%)\nOrdre de variation\nentre la plus basse\net la plus élevée\nOrdre de variation\nà travers toutes\nles études selon\nl’intervalle de\nconance\nEstimation la plus\nprobable\n(%)\nTrouble panique\n0,1 (Taiwan)\n3,8 (Hollande)\n29 fois\n2,7 fois\n1,2\nAgoraphobie\n0,6 (Italie)\n2,9 (Nouvelle-\nZélande)\n4,5 fois\n2,3 fois\n3,8\nPhobie sociale\n2,3 (France)\n44,2 (Oudmourtie,\nRussie)\n19 fois\n2,1 fois\n4,5\nPhobie spécique\n0,2 (Irlande du Nord)\n8,8 (États-Unis)\n44 fois\n6,0 fois\n3,0\nTrouble obsessionnel-compulsif\n*\n*\n14 fois\n3,0 fois\n0,5\nTrouble de stress\npost-traumatique\n*\n*\n33 fois\n37,0 fois\n1,2\nAnxiété généralisée\n0,2 (Irlande du Nord)\n12,7 (Nouvelle-\nZélande)\n85 fois\n3,0 fois\n2,6\nTroubles anxieux\n4,2 (Italie)\n17,2 (États-Unis)\n4 fois\n1,9 fois\n10,6\n* Non rapporté dans la publication originale\nSource : Adapté de Somers & al. (2006).\nLe DSM-5 rapporte une prévalence annuelle des troubles\nanxieux à l’âge adulte aux États-Unis comme suit : trouble panique\n– 2 à 3 % ; agoraphobie – 1,7 % ; anxiété (phobie) sociale – 7 % ;\nphobie spécique – 7 à 9 % ; anxiété de séparation – 1 à 2 %.\nLa comparaison avec l’estimation annuelle la plus probable des\nétudes internationales révèle une variation de l’ordre de deux à\ntrois fois (voir le tableau 20.2).\nDe multiples raisons expliquent cette variabilité, parmi les-\nquelles les instruments épidémiologiques et les critères diagnos-\ntiques utilisés pour la collecte des données, le pays où l’étude\n",
+  "raw_text_sha256": "e6acab6a5c85967c6437dd9d9fbc1942c9fdcfcf6b007da5a4f560c045e6dfe0",
+  "source_page_display": 433,
+  "source_page_index": 432
+}

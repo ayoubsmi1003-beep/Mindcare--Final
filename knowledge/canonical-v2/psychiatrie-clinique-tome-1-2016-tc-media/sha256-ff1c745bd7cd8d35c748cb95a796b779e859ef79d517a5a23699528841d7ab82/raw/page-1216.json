@@ -1,0 +1,124 @@
+{
+  "block_sequence_sha256": "884a06de88aa75d68d0da373b3e8d01fbaf9c9d5d4ff9d676fc4fb8d44958a65",
+  "blocks": [
+    {
+      "bbox": [
+        496.5,
+        747.5753784179688,
+        555.02001953125,
+        758.8693237304688
+      ],
+      "block_id": "page-1216-block-0001",
+      "order": 1,
+      "text": "Index\nI55\n",
+      "text_sha256": "2769e70caf0325d70642bf73d8c7a76c5744d4f93acd609531b3660dbf08c7de"
+    },
+    {
+      "bbox": [
+        54.0,
+        40.82011795043945,
+        170.17201232910156,
+        64.96728515625
+      ],
+      "block_id": "page-1216-block-0002",
+      "order": 2,
+      "text": "virus neurotrophiques, 334\nvoie(s), voir figures\n",
+      "text_sha256": "a8e093463edf202af2fac2c763ccd9f8d2776412756bad5a6452df58da3e2491"
+    },
+    {
+      "bbox": [
+        63.0,
+        65.98164367675781,
+        188.9064178466797,
+        140.21728515625
+      ],
+      "block_id": "page-1216-block-0003",
+      "order": 3,
+      "text": "supplémentaires\nlimbiques, 552\nmésocorticale, 335f\nmésolimbique, 335f\nspinoparabrachiale, 553f\nspinothalamique latérale, 552\n",
+      "text_sha256": "2bca276ced4ec074882c28f6ac675c65ac42641be8592ed47ac82cf2a42875f2"
+    },
+    {
+      "bbox": [
+        225.0,
+        40.82011795043945,
+        350.2485046386719,
+        77.51728820800781
+      ],
+      "block_id": "page-1216-block-0004",
+      "order": 4,
+      "text": "tubéro-infundibulaire, 335f\nvisuelle centrale, 167f\nvol\n",
+      "text_sha256": "c23b2c0c4022a8bc6e260c35dae41a4ee11d370382cdfe74cf580640eaf01ff2"
+    },
+    {
+      "bbox": [
+        225.0,
+        78.4701156616211,
+        319.6600036621094,
+        115.16728973388672
+      ],
+      "block_id": "page-1216-block-0005",
+      "order": 5,
+      "text": "compulsif, 832\nde la pensée, 522\nvoyeurisme, 812-813,\n",
+      "text_sha256": "5b844495527b074c91fc47ac1f02bb9db40254ae8c79f9aeb25866a06d3de150"
+    },
+    {
+      "bbox": [
+        234.0,
+        116.1201171875,
+        335.34893798828125,
+        140.21728515625
+      ],
+      "block_id": "page-1216-block-0006",
+      "order": 6,
+      "text": "813t\nphotographie et __, 812\n",
+      "text_sha256": "b4cfb762db915b043cdda1ebb2df718507c4913f30304e4b45a1e0680474475b"
+    },
+    {
+      "bbox": [
+        396.0,
+        39.75703048706055,
+        540.864501953125,
+        67.90449523925781
+      ],
+      "block_id": "page-1216-block-0007",
+      "order": 7,
+      "text": "W\nWorld Health Organisation Disa-\n",
+      "text_sha256": "a8e8752054dae1fac51660c798121e908b0ff2c8593d845ee968be38dc05b35e"
+    },
+    {
+      "bbox": [
+        414.0,
+        69.23164367675781,
+        528.0504760742188,
+        93.51728820800781
+      ],
+      "block_id": "page-1216-block-0008",
+      "order": 8,
+      "text": "bility Assessment Schedule\n(WHODAS 2.0), 71\n",
+      "text_sha256": "8846b8bc3003833bbddffa2a90e30e6573b6505674d7fe50fcb70d15dfa8833f"
+    },
+    {
+      "bbox": [
+        396.0,
+        99.25703430175781,
+        456.39599609375,
+        140.21728515625
+      ],
+      "block_id": "page-1216-block-0009",
+      "order": 9,
+      "text": "Z\nzolpidem, 732\nzoophilie, 820\n",
+      "text_sha256": "3797ee945730df60553045bb83308ebe38ed4ba5592fe3592cd52d196e350979"
+    }
+  ],
+  "coordinates_sha256": "b68432cfbbe14f7b70c63136ffd0e4648078fb1bbd0577090a0608effcf2ef66",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-1216",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Index\nI55\nvirus neurotrophiques, 334\nvoie(s), voir figures\nsupplémentaires\nlimbiques, 552\nmésocorticale, 335f\nmésolimbique, 335f\nspinoparabrachiale, 553f\nspinothalamique latérale, 552\ntubéro-infundibulaire, 335f\nvisuelle centrale, 167f\nvol\ncompulsif, 832\nde la pensée, 522\nvoyeurisme, 812-813,\n813t\nphotographie et __, 812\nW\nWorld Health Organisation Disa-\nbility Assessment Schedule\n(WHODAS 2.0), 71\nZ\nzolpidem, 732\nzoophilie, 820\n",
+  "raw_text_sha256": "955eb6b146eb4d91cda054ccaf55b8d54b0cae130cdfb534162e9a016fedb832",
+  "source_page_display": 1217,
+  "source_page_index": 1216
+}

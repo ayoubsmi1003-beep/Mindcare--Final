@@ -1,0 +1,172 @@
+{
+  "block_sequence_sha256": "fdb0bdd84dbd3b9b261caaca3e445bca0eef5a0f39878377070be4a7106c96fb",
+  "blocks": [
+    {
+      "bbox": [
+        54.0,
+        131.0734405517578,
+        476.66424560546875,
+        175.9953155517578
+      ],
+      "block_id": "page-0942-block-0001",
+      "order": 1,
+      "text": "Troubles de la personnalité\n",
+      "text_sha256": "3620f1e783977b62e700fd6f031fb8deb9944b5f8f2e2514f97fd92c08999a40"
+    },
+    {
+      "bbox": [
+        54.0,
+        226.50010681152344,
+        157.97158813476562,
+        239.00010681152344
+      ],
+      "block_id": "page-0942-block-0002",
+      "order": 2,
+      "text": "Pierre David, M.D., FRCPC\n",
+      "text_sha256": "5d92a7351feb54eab036245ab4d31f52dbdad2479f6bbf3efe689d3f020bcc21"
+    },
+    {
+      "bbox": [
+        54.0,
+        242.8772430419922,
+        289.513427734375,
+        275.09381103515625
+      ],
+      "block_id": "page-0942-block-0003",
+      "order": 3,
+      "text": "Psychiatre, chef médical, Programme des troubles relationnels\net de la personnalité, Institut universitaire en santé mentale de\nMontréal\n",
+      "text_sha256": "d9015a5b49e51056177b1f7246771b2cbbdf59ec2bf3b83d431ae5b5aba14f45"
+    },
+    {
+      "bbox": [
+        54.0,
+        278.87725830078125,
+        277.8392028808594,
+        300.09381103515625
+      ],
+      "block_id": "page-0942-block-0004",
+      "order": 4,
+      "text": "Professeur adjoint de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\n",
+      "text_sha256": "55794a101d286e95c09a0e659ed59983b705db069bfa7912758e835ca36bd33a"
+    },
+    {
+      "bbox": [
+        54.0,
+        310.0001220703125,
+        196.12159729003906,
+        322.5001220703125
+      ],
+      "block_id": "page-0942-block-0005",
+      "order": 5,
+      "text": "Félix-Antoine Bérubé, M.D., FRCPC\n",
+      "text_sha256": "c709527cdbecbdf08ffb8022b45e33f3a7281e7a3c4d67ab529a2cfef25b2dfc"
+    },
+    {
+      "bbox": [
+        54.0,
+        326.37725830078125,
+        296.92626953125,
+        347.59381103515625
+      ],
+      "block_id": "page-0942-block-0006",
+      "order": 6,
+      "text": "Psychiatre, Programme des troubles relationnels et de la person-\nnalité, Institut universitaire en santé mentale de Montréal\n",
+      "text_sha256": "93ca98999254ac00b1ebf3a1e7ea389d5a15b07fe613d4e3092ab315379d6ae9"
+    },
+    {
+      "bbox": [
+        54.0,
+        351.37725830078125,
+        277.8392028808594,
+        372.59381103515625
+      ],
+      "block_id": "page-0942-block-0007",
+      "order": 7,
+      "text": "Professeur adjoint de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\n",
+      "text_sha256": "55794a101d286e95c09a0e659ed59983b705db069bfa7912758e835ca36bd33a"
+    },
+    {
+      "bbox": [
+        312.0,
+        226.50010681152344,
+        444.5216369628906,
+        239.00010681152344
+      ],
+      "block_id": "page-0942-block-0008",
+      "order": 8,
+      "text": "Christiane Bertelli, M.D., FRCPC\n",
+      "text_sha256": "e3761262e38e03bf71c59ab7d314876d60951203eeb70ba650bec18ec0f4df97"
+    },
+    {
+      "bbox": [
+        311.95001220703125,
+        242.8772430419922,
+        545.5515747070312,
+        264.09381103515625
+      ],
+      "block_id": "page-0942-block-0009",
+      "order": 9,
+      "text": "Psychiatre, responsable, Programme des troubles relationnels,\nPavillon Albert-Prévost, Hôpital du Sacré-Cœur de Montréal\n",
+      "text_sha256": "7821f3b9a697ccaf9d9611cc5c42b6fddcda2f30869e7ffa6bc813e7798a4c53"
+    },
+    {
+      "bbox": [
+        311.95001220703125,
+        267.87725830078125,
+        545.2076416015625,
+        300.09381103515625
+      ],
+      "block_id": "page-0942-block-0010",
+      "order": 10,
+      "text": "Professeure adjointe de clinique, directrice du programme\nd’enseignement à la résidence en psychiatrie, Département de\nPsychiatrie, Faculté de médecine, Université de Montréal\n",
+      "text_sha256": "d3f7c7895a4ab5cd26615c916e3d414f9a84c6ff4012c825984364743f3938e3"
+    },
+    {
+      "bbox": [
+        53.95000076293945,
+        412.1744079589844,
+        294.9599914550781,
+        679.0972900390625
+      ],
+      "block_id": "page-0942-block-0011",
+      "order": 11,
+      "text": "40.1 Historique et évolution du concept .............................926\n40.2 Épidémiologie .................................................................928\n40.3 Étiologies ......................................................................... 929\n40.3.1 Étiologies biologiques........................................... 930\n40.3.2 Étiologies psychologiques.................................... 931\n40.3.3 Étiologies sociales.................................................. 934\n40.4 Description clinique.......................................................935\n40.4.1 Évolution des critères diagnostiques................. 935\n40.4.2 Modèle alternatif de classication\ndu DSM-5................................................................ 935\n40.4.3 Comparaison des critères DSM-5 ..................... 941\n40.5 Variété diagnostique ......................................................941\nGroupe A (bizarre, excentrique) ....................................... 941\n40.5.1 Personnalité paranoïde......................................... 941\n40.5.2 Personnalité schizoïde.......................................... 942\n40.5.3 Personnalité schizotypique.................................. 942\nGroupe B (intense, dramatique)........................................ 942\n40.5.4 Personnalité limite (borderline) .......................... 942\n40.5.5 Personnalité histrionique..................................... 942\n40.5.6 Personnalité antisociale........................................ 943\n40.5.7 Personnalité narcissique ...................................... 943\n",
+      "text_sha256": "4e3d8d95be764206e6a431bdf423a6a3fb1c003b4321ca6fe0a94b320059ac0a"
+    },
+    {
+      "bbox": [
+        311.95001220703125,
+        412.2359313964844,
+        552.9600219726562,
+        614.0181884765625
+      ],
+      "block_id": "page-0942-block-0012",
+      "order": 12,
+      "text": "Groupe C (anxieuse, craintive).......................................... 943\n40.5.8 Personnalité obsessionnelle-compulsive .......... 943\n40.5.9 Personnalité évitante ............................................ 943\n40.5.10 Personnalité dépendante...................................... 944\n40.5.11 Trouble de la personnalité non spécié............ 947\n40.6 Évaluation........................................................................ 947\n40.7 Outils diagnostiques ......................................................951\n40.8 Traitements ..................................................................... 952\n40.8.1 Principes généraux................................................ 952\n40.8.2 Niveaux de soins.................................................... 956\n40.8.3 Traitements biologiques ...................................... 958\n40.8.4 Traitements psychologiques ............................... 959\n40.9 Évolution et pronostic....................................................962\nLectures complémentaires.......................................................963\nLectures complémentaires pour les patients\net les proches.............................................................................. 963\n",
+      "text_sha256": "b4341885921343a1809c0667369e5c6733e2608f8fe6ca12f5e9bd4751b1e3b9"
+    },
+    {
+      "bbox": [
+        263.1000061035156,
+        2.3810577392578125,
+        561.0,
+        122.38105773925781
+      ],
+      "block_id": "page-0942-block-0013",
+      "order": 13,
+      "text": "CHAPITRE40\n",
+      "text_sha256": "ed644a6186af4e369f9620a2860a601d75fcd3e18c58976a2138c3ba3c3e590d"
+    }
+  ],
+  "coordinates_sha256": "8687cdccef7a249d0c684cb2433b6fbc5797ccb59096572ffe50d0a9e001f29b",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0942",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Troubles de la personnalité\nPierre David, M.D., FRCPC\nPsychiatre, chef médical, Programme des troubles relationnels\net de la personnalité, Institut universitaire en santé mentale de\nMontréal\nProfesseur adjoint de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\nFélix-Antoine Bérubé, M.D., FRCPC\nPsychiatre, Programme des troubles relationnels et de la person-\nnalité, Institut universitaire en santé mentale de Montréal\nProfesseur adjoint de clinique, Département de psychiatrie,\nFaculté de médecine, Université de Montréal\nChristiane Bertelli, M.D., FRCPC\nPsychiatre, responsable, Programme des troubles relationnels,\nPavillon Albert-Prévost, Hôpital du Sacré-Cœur de Montréal\nProfesseure adjointe de clinique, directrice du programme\nd’enseignement à la résidence en psychiatrie, Département de\nPsychiatrie, Faculté de médecine, Université de Montréal\n40.1 Historique et évolution du concept .............................926\n40.2 Épidémiologie .................................................................928\n40.3 Étiologies ......................................................................... 929\n40.3.1 Étiologies biologiques........................................... 930\n40.3.2 Étiologies psychologiques.................................... 931\n40.3.3 Étiologies sociales.................................................. 934\n40.4 Description clinique.......................................................935\n40.4.1 Évolution des critères diagnostiques................. 935\n40.4.2 Modèle alternatif de classication\ndu DSM-5................................................................ 935\n40.4.3 Comparaison des critères DSM-5 ..................... 941\n40.5 Variété diagnostique ......................................................941\nGroupe A (bizarre, excentrique) ....................................... 941\n40.5.1 Personnalité paranoïde......................................... 941\n40.5.2 Personnalité schizoïde.......................................... 942\n40.5.3 Personnalité schizotypique.................................. 942\nGroupe B (intense, dramatique)........................................ 942\n40.5.4 Personnalité limite (borderline) .......................... 942\n40.5.5 Personnalité histrionique..................................... 942\n40.5.6 Personnalité antisociale........................................ 943\n40.5.7 Personnalité narcissique ...................................... 943\nGroupe C (anxieuse, craintive).......................................... 943\n40.5.8 Personnalité obsessionnelle-compulsive .......... 943\n40.5.9 Personnalité évitante ............................................ 943\n40.5.10 Personnalité dépendante...................................... 944\n40.5.11 Trouble de la personnalité non spécié............ 947\n40.6 Évaluation........................................................................ 947\n40.7 Outils diagnostiques ......................................................951\n40.8 Traitements ..................................................................... 952\n40.8.1 Principes généraux................................................ 952\n40.8.2 Niveaux de soins.................................................... 956\n40.8.3 Traitements biologiques ...................................... 958\n40.8.4 Traitements psychologiques ............................... 959\n40.9 Évolution et pronostic....................................................962\nLectures complémentaires.......................................................963\nLectures complémentaires pour les patients\net les proches.............................................................................. 963\nCHAPITRE40\n",
+  "raw_text_sha256": "b03f7b5c888817940b651edee209d52d9a54d24a69bf4f5c518af1a789a90778",
+  "source_page_display": 943,
+  "source_page_index": 942
+}

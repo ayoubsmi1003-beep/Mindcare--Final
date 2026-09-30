@@ -1,0 +1,292 @@
+{
+  "block_sequence_sha256": "dbbc1b12a1887d7d3a4adabe2bea74b3fdbfed1d7a2a65cfaf3efa6d47ff8e6f",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        477.3144836425781,
+        758.8693237304688
+      ],
+      "block_id": "page-0903-block-0001",
+      "order": 1,
+      "text": "886\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3\nSyndromes cliniques psychiatriques\n",
+      "text_sha256": "76cb4634ab5d315d550817a24696612acfbbe2438e25e581488573b1d25d121d"
+    },
+    {
+      "bbox": [
+        48.0,
+        419.4658203125,
+        291.1143798828125,
+        441.45849609375
+      ],
+      "block_id": "page-0903-block-0002",
+      "order": 2,
+      "text": "des eets délétères du cannabis sur la fonction sexuelle ont été\nmontrés, particulièrement chez les hommes.\n",
+      "text_sha256": "ee819255392f50749471873e9fcafc9a66b4b085ed940fde7f2081c17795efae"
+    },
+    {
+      "bbox": [
+        48.0,
+        447.3330078125,
+        291.4886169433594,
+        530.45849609375
+      ],
+      "block_id": "page-0903-block-0003",
+      "order": 3,
+      "text": "Traitements des troubles liés au cannabis\nL’amélioration des connaissances sur les substrats neurobio-\nlogiques des troubles liés à l’usage du cannabis a permis le\ndéveloppement d’un certain nombre d’interventions qui ne se\nsont montrées jusqu’à maintenant que partiellement ecaces,\nnotamment pour le sevrage et la prévention de la rechute chez\nles personnes dépendantes.\n",
+      "text_sha256": "819fbefc37053515fc01ef41c8cfed3c425c369c3453d8ba2817ec10cb45b0ed"
+    },
+    {
+      "bbox": [
+        48.0,
+        535.352294921875,
+        291.3556213378906,
+        593.45849609375
+      ],
+      "block_id": "page-0903-block-0004",
+      "order": 4,
+      "text": "Intoxication au cannabis\nL’intoxication au cannabis ne requiert généralement pas d’inter-\nvention spécique ou invasive, sauf dans le cas de complications\npsychiatriques (anxiété importante ou psychose) où un traitement\nmédical est parfois nécessaire.\n",
+      "text_sha256": "c37e4742d70ff6d1b89bf0bc14e865e15c7e70fadfb9a541087daef412f3c0d0"
+    },
+    {
+      "bbox": [
+        48.0,
+        598.352294921875,
+        291.4126281738281,
+        725.45849609375
+      ],
+      "block_id": "page-0903-block-0005",
+      "order": 5,
+      "text": "Sevrage et prévention de la rechute\nIl n’y pas de traitement pharmacologique approuvé pour la\ndépendance au cannabis. Des agents comme la néfazodone\n(600 mg/jour), le bupropion (300 mg/jour) et l’acide valproϊque\n(1 500 mg/jour) se sont montrés inecaces dans des études cli-\nniques. Toutefois, certaines données semblent indiquer que des\nmolécules ciblant les récepteurs CB1 pourraient être utiles. C’est\nle cas du dronabinol (MarinolMD), un THC synthétique, qui agit\ncomme agoniste des récepteurs CB1, qui soulage ecacement\nles symptômes de sevrage du cannabis et qui diminue l’utilisa-\ntion de cette substance chez des patients dépendants (Levin &\n",
+      "text_sha256": "8aa4b5efb8b0d0beb64a27ca0c172c906c1d0a295d15f9ec4441ea08c51150b7"
+    },
+    {
+      "bbox": [
+        50.54999923706055,
+        41.002296447753906,
+        251.0685272216797,
+        53.320068359375
+      ],
+      "block_id": "page-0903-block-0006",
+      "order": 6,
+      "text": "ENCADRÉ 38.3 Critères diagnostiques du sevrage\n",
+      "text_sha256": "6391c5afaf72d08df6fdc018bad3205980da93bb6c149ad3510f219a35f016b7"
+    },
+    {
+      "bbox": [
+        110.0,
+        52.852294921875,
+        160.04124450683594,
+        64.820068359375
+      ],
+      "block_id": "page-0903-block-0007",
+      "order": 7,
+      "text": "au cannabis\n",
+      "text_sha256": "e008098937860d6e84fd90bf24bc2e54630167fa28976912002dee960e6e48b0"
+    },
+    {
+      "bbox": [
+        103.3499984741211,
+        72.87285614013672,
+        231.7516632080078,
+        93.89238739013672
+      ],
+      "block_id": "page-0903-block-0008",
+      "order": 8,
+      "text": "DSM-5\n292.0 (F12.288) Sevrage du cannabis\n",
+      "text_sha256": "969e122f9f94430a4b21f61b94cb040ab6eeb32846f3867c4c0e8eaf9925008e"
+    },
+    {
+      "bbox": [
+        52.25,
+        102.3519515991211,
+        274.9090881347656,
+        112.1781234741211
+      ],
+      "block_id": "page-0903-block-0009",
+      "order": 9,
+      "text": "A. Arrêt d’un usage du cannabis qui a été massif et prolongé (c.-à-d.\n",
+      "text_sha256": "21adb36cb20bd32cc6ed6ee9df97e7915bc02c9077f82f149820b944fa6a5689"
+    },
+    {
+      "bbox": [
+        64.25,
+        112.3519515991211,
+        273.6318054199219,
+        132.17813110351562
+      ],
+      "block_id": "page-0903-block-0010",
+      "order": 10,
+      "text": "consommation habituellement quotidienne ou presque durant une\npériode d’au moins quelques mois).\n",
+      "text_sha256": "6cd6704954ccb52a4b7b3e809ff06e765a1dc44355d0cda89cc606a90d2b5106"
+    },
+    {
+      "bbox": [
+        52.25,
+        140.8019561767578,
+        270.9229431152344,
+        150.6281280517578
+      ],
+      "block_id": "page-0903-block-0011",
+      "order": 11,
+      "text": "B. Au moins trois des signes et symptômes se développent dans un\n",
+      "text_sha256": "75a8df06dee48117993e50bf5f5177675f092136a02894f7d4249fa9489d068b"
+    },
+    {
+      "bbox": [
+        64.25,
+        150.8019561767578,
+        286.0970153808594,
+        257.62811279296875
+      ],
+      "block_id": "page-0903-block-0012",
+      "order": 12,
+      "text": "délai d’environ une semaine après le critère A :\n1. Irritabilité, colère, ou agressivité.\n2. Nervosité ou anxiété.\n3. Troubles du sommeil (p. ex. insomnie, rêves perturbants).\n4. Diminution de l’appétit ou perte de poids.\n5. Fébrilité.\n6. Thymie dépressive.\n7. Au moins un des symptômes physiques suivants cause de l’incon-\nfort signicatif : douleurs abdominales, instabilité/tremblements,\nsueurs, èvre, frissons ou céphalées.\n",
+      "text_sha256": "ccc028c666c0cc168a7da1d78faf348d3e4b7635d0bc272c5d58e985a1ff6ba4"
+    },
+    {
+      "bbox": [
+        52.25,
+        266.20196533203125,
+        262.8191223144531,
+        276.02813720703125
+      ],
+      "block_id": "page-0903-block-0013",
+      "order": 13,
+      "text": "C. Les signes ou symptômes du critère B causent une souffrance\n",
+      "text_sha256": "d6e3738ed0ed572f79db332d8794203bcb2786456518b21f4a4a9972289f1153"
+    },
+    {
+      "bbox": [
+        64.25,
+        276.20196533203125,
+        283.85888671875,
+        296.02813720703125
+      ],
+      "block_id": "page-0903-block-0014",
+      "order": 14,
+      "text": "cliniquement signicative ou une altération du fonctionnement social,\nprofessionnel, ou dans d’autres domaines importants.\n",
+      "text_sha256": "8401a7285853fb73dc479f4a14698e1ee44b971c5d40173c37ca8537e2758dd2"
+    },
+    {
+      "bbox": [
+        52.25,
+        304.6519470214844,
+        267.5384826660156,
+        314.4781188964844
+      ],
+      "block_id": "page-0903-block-0015",
+      "order": 15,
+      "text": "D. Les signes ou symptômes ne sont pas dus à une autre affection\n",
+      "text_sha256": "44e86defe90d3b304c62f021a1bc0b869b035fa2080e6e169e4b668d7f5a4459"
+    },
+    {
+      "bbox": [
+        64.25,
+        314.6519470214844,
+        284.6035461425781,
+        334.4781188964844
+      ],
+      "block_id": "page-0903-block-0016",
+      "order": 16,
+      "text": "médicale et ne sont pas mieux expliqués par un autre trouble mental,\ndont une intoxication ou un sevrage d’une autre substance.\n",
+      "text_sha256": "fae149de3f7b0a3a0bbd92d6a49e9751c741883882ef369a3bc9e6b722197bf5"
+    },
+    {
+      "bbox": [
+        48.25,
+        343.2406311035156,
+        288.60601806640625,
+        399.9750061035156
+      ],
+      "block_id": "page-0903-block-0017",
+      "order": 17,
+      "text": "Source : APA (2015), p. 615.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic\nand Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles\nMentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson\nSAS, Paris, 2015. All rights reserved.\n",
+      "text_sha256": "9d7609b3968b92dfe6e9df00bc3a384a04756ce4f8912c306582affd05103176"
+    },
+    {
+      "bbox": [
+        306.0,
+        40.9658203125,
+        549.425537109375,
+        132.9084930419922
+      ],
+      "block_id": "page-0903-block-0018",
+      "order": 18,
+      "text": "Kleber, 2008). En attendant l’approbation de tels médicaments\nau Canada pour le sevrage et la dépendance au cannabis, le trai-\ntement symptomatique à l’aide, par exemple, d’un sédatif pour\nl’insomnie et d’un anxiolytique pour l’anxiété, demeure la seule\navenue disponible sur le plan pharmacologique. Des molécules\nau faible potentiel de dépendance (trazodone 25 à 100 mg,\ndiphenhydramine 25 à 100 mg ou quétiapine 25 à 50 mg) sont\nà privilégier en PRN.\n",
+      "text_sha256": "f16b2f90a38e26a74d283ca7d0bf8de69f23abfdacb3b64c0d2d8bd0ca4c2a0e"
+    },
+    {
+      "bbox": [
+        306.0,
+        137.95230102539062,
+        549.6201171875,
+        266.40850830078125
+      ],
+      "block_id": "page-0903-block-0019",
+      "order": 19,
+      "text": "Troubles induits par le cannabis\nLa psychose induite par le cannabis peut être adéquatement\ntraitée à l’aide d’un antipsychotique de deuxième génération\n(p. ex., l’olanzapine, la quétiapine ou la rispéridone), avec un\nsevrage progressif selon l’évolution de la symptomatologie. Il\nest important d’assurer un suivi après la résolution de l’épisode\npsychotique puisque bon nombre de patients présentent éven-\ntuellement un trouble psychotique primaire qui a été activé par\nle cannabis. Le patient et ses proches doivent aussi être informés\ndes symptômes psychotiques susceptibles d’apparaître an de\npermettre une intervention précoce.\n",
+      "text_sha256": "926b1fab3ea1bd38d3fbeb832f5b8251679e8b7c75ce2fab0a12eda8ce4235be"
+    },
+    {
+      "bbox": [
+        306.0,
+        267.5658264160156,
+        549.259765625,
+        359.5085144042969
+      ],
+      "block_id": "page-0903-block-0020",
+      "order": 20,
+      "text": "Il est possible de traiter à court terme un trouble anxieux\ninduit par le cannabis par des mesures non pharmacologiques\net, si l’intensité des symptômes le justie, de façon transitoire\nà l’aide de benzodiazépines (p. ex., lorazépam ou clonazépam).\nOn peut également envisager un traitement à l’aide d’un antidé-\npresseur (ISRS) si les symptômes persistent et si l’on soupçonne\nun trouble anxieux primaire sous-jacent, en suivant les guides\nde pratique recommandée pour ces troubles.\n",
+      "text_sha256": "f8482f43e838fadcaaf183bedfc0ee2d1b349d3d57dc0f0d3e9890eff8000e99"
+    },
+    {
+      "bbox": [
+        306.0,
+        373.1368103027344,
+        438.21954345703125,
+        389.2793884277344
+      ],
+      "block_id": "page-0903-block-0021",
+      "order": 21,
+      "text": "38.5.4 Solvants volatils\n",
+      "text_sha256": "00079fdc77eaa6391ca026b2334eb917de30ab87384c0d3037c4f343fb04f315"
+    },
+    {
+      "bbox": [
+        306.0,
+        392.7658386230469,
+        549.5556030273438,
+        678.9085083007812
+      ],
+      "block_id": "page-0903-block-0022",
+      "order": 22,
+      "text": "Les solvants volatils, aussi nommés «gas» et « sni », comprennent\nune vaste gamme de produits chimiques dont les eets physiques\net psychologiques sont semblables. Font partie de cette catégorie :\n• les hydrocarbures aliphatiques et aromatiques (essence, colle,\ndiluant pour la peinture et peintures en aérosol) ;\n• les hydrocarbures halogénés (gaz d’aérosol, liquide correcteur\net produits de nettoyage) ;\n• d’autres produits contenant des esters, des cétones et des\nglycols.\nLes solvants volatils sont souvent les premières substances\npsychotropes que découvrent les enfants et les adolescents,\ncar ils sont faciles d’accès, peu coûteux et faciles à dissimuler.\nL’Enquête sur les toxicomanies au Canada de 2004 révèle que\n1,9 % des garçons et 0,7 % des lles de 15 ans et plus ont déjà fait\nusage de substances inhalées (Santé Canada, 2004). Des études\nréalisées dans des écoles secondaires du Canada montrent que\nla plupart des jeunes qui abusent de solvants ont entre 10 et\n17 ans, le pic étant atteint entre 12 et 15 ans. L’utilisation\nde solvants volatils est aussi populaire chez les adolescents de\ncertains milieux défavorisés. Au Québec, le taux d’utilisation\nserait particulièrement élevé chez les minorités autochtones. Il\nne semble pas y avoir de diérence importante entre les taux de\nconsommation chez les lles et les garçons et l’utilisation semble\ndevenir moins fréquente avec la hausse du niveau scolaire.\n",
+      "text_sha256": "da8c1945e8a51d89fa81482969278c68d75695f046493db604b932297c52650c"
+    },
+    {
+      "bbox": [
+        306.0,
+        680.0658569335938,
+        549.1430053710938,
+        725.45849609375
+      ],
+      "block_id": "page-0903-block-0023",
+      "order": 23,
+      "text": "Les solvants volatils sont inhalés à l’aide d’un sac de papier ou\nde plastique, d’un linge imbibé ou directement du contenant. Ils\nsont rapidement absorbés par les poumons et sont diusés à tra-\nvers le corps et le SNC sur lequel ils exercent un eet dépresseur.\n",
+      "text_sha256": "12ca153026436c7921fdba2a1ee20605b8351b214c2311bef7ec75fc130be5ae"
+    }
+  ],
+  "coordinates_sha256": "6a674e94a6eb73d067fe3780e7038f601d33adcde12550fe3e961e2b79817fe9",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0903",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "886\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3\nSyndromes cliniques psychiatriques\ndes eets délétères du cannabis sur la fonction sexuelle ont été\nmontrés, particulièrement chez les hommes.\nTraitements des troubles liés au cannabis\nL’amélioration des connaissances sur les substrats neurobio-\nlogiques des troubles liés à l’usage du cannabis a permis le\ndéveloppement d’un certain nombre d’interventions qui ne se\nsont montrées jusqu’à maintenant que partiellement ecaces,\nnotamment pour le sevrage et la prévention de la rechute chez\nles personnes dépendantes.\nIntoxication au cannabis\nL’intoxication au cannabis ne requiert généralement pas d’inter-\nvention spécique ou invasive, sauf dans le cas de complications\npsychiatriques (anxiété importante ou psychose) où un traitement\nmédical est parfois nécessaire.\nSevrage et prévention de la rechute\nIl n’y pas de traitement pharmacologique approuvé pour la\ndépendance au cannabis. Des agents comme la néfazodone\n(600 mg/jour), le bupropion (300 mg/jour) et l’acide valproϊque\n(1 500 mg/jour) se sont montrés inecaces dans des études cli-\nniques. Toutefois, certaines données semblent indiquer que des\nmolécules ciblant les récepteurs CB1 pourraient être utiles. C’est\nle cas du dronabinol (MarinolMD), un THC synthétique, qui agit\ncomme agoniste des récepteurs CB1, qui soulage ecacement\nles symptômes de sevrage du cannabis et qui diminue l’utilisa-\ntion de cette substance chez des patients dépendants (Levin &\nENCADRÉ 38.3 Critères diagnostiques du sevrage\nau cannabis\nDSM-5\n292.0 (F12.288) Sevrage du cannabis\nA. Arrêt d’un usage du cannabis qui a été massif et prolongé (c.-à-d.\nconsommation habituellement quotidienne ou presque durant une\npériode d’au moins quelques mois).\nB. Au moins trois des signes et symptômes se développent dans un\ndélai d’environ une semaine après le critère A :\n1. Irritabilité, colère, ou agressivité.\n2. Nervosité ou anxiété.\n3. Troubles du sommeil (p. ex. insomnie, rêves perturbants).\n4. Diminution de l’appétit ou perte de poids.\n5. Fébrilité.\n6. Thymie dépressive.\n7. Au moins un des symptômes physiques suivants cause de l’incon-\nfort signicatif : douleurs abdominales, instabilité/tremblements,\nsueurs, èvre, frissons ou céphalées.\nC. Les signes ou symptômes du critère B causent une souffrance\ncliniquement signicative ou une altération du fonctionnement social,\nprofessionnel, ou dans d’autres domaines importants.\nD. Les signes ou symptômes ne sont pas dus à une autre affection\nmédicale et ne sont pas mieux expliqués par un autre trouble mental,\ndont une intoxication ou un sevrage d’une autre substance.\nSource : APA (2015), p. 615.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic\nand Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles\nMentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson\nSAS, Paris, 2015. All rights reserved.\nKleber, 2008). En attendant l’approbation de tels médicaments\nau Canada pour le sevrage et la dépendance au cannabis, le trai-\ntement symptomatique à l’aide, par exemple, d’un sédatif pour\nl’insomnie et d’un anxiolytique pour l’anxiété, demeure la seule\navenue disponible sur le plan pharmacologique. Des molécules\nau faible potentiel de dépendance (trazodone 25 à 100 mg,\ndiphenhydramine 25 à 100 mg ou quétiapine 25 à 50 mg) sont\nà privilégier en PRN.\nTroubles induits par le cannabis\nLa psychose induite par le cannabis peut être adéquatement\ntraitée à l’aide d’un antipsychotique de deuxième génération\n(p. ex., l’olanzapine, la quétiapine ou la rispéridone), avec un\nsevrage progressif selon l’évolution de la symptomatologie. Il\nest important d’assurer un suivi après la résolution de l’épisode\npsychotique puisque bon nombre de patients présentent éven-\ntuellement un trouble psychotique primaire qui a été activé par\nle cannabis. Le patient et ses proches doivent aussi être informés\ndes symptômes psychotiques susceptibles d’apparaître an de\npermettre une intervention précoce.\nIl est possible de traiter à court terme un trouble anxieux\ninduit par le cannabis par des mesures non pharmacologiques\net, si l’intensité des symptômes le justie, de façon transitoire\nà l’aide de benzodiazépines (p. ex., lorazépam ou clonazépam).\nOn peut également envisager un traitement à l’aide d’un antidé-\npresseur (ISRS) si les symptômes persistent et si l’on soupçonne\nun trouble anxieux primaire sous-jacent, en suivant les guides\nde pratique recommandée pour ces troubles.\n38.5.4 Solvants volatils\nLes solvants volatils, aussi nommés «gas» et « sni », comprennent\nune vaste gamme de produits chimiques dont les eets physiques\net psychologiques sont semblables. Font partie de cette catégorie :\n• les hydrocarbures aliphatiques et aromatiques (essence, colle,\ndiluant pour la peinture et peintures en aérosol) ;\n• les hydrocarbures halogénés (gaz d’aérosol, liquide correcteur\net produits de nettoyage) ;\n• d’autres produits contenant des esters, des cétones et des\nglycols.\nLes solvants volatils sont souvent les premières substances\npsychotropes que découvrent les enfants et les adolescents,\ncar ils sont faciles d’accès, peu coûteux et faciles à dissimuler.\nL’Enquête sur les toxicomanies au Canada de 2004 révèle que\n1,9 % des garçons et 0,7 % des lles de 15 ans et plus ont déjà fait\nusage de substances inhalées (Santé Canada, 2004). Des études\nréalisées dans des écoles secondaires du Canada montrent que\nla plupart des jeunes qui abusent de solvants ont entre 10 et\n17 ans, le pic étant atteint entre 12 et 15 ans. L’utilisation\nde solvants volatils est aussi populaire chez les adolescents de\ncertains milieux défavorisés. Au Québec, le taux d’utilisation\nserait particulièrement élevé chez les minorités autochtones. Il\nne semble pas y avoir de diérence importante entre les taux de\nconsommation chez les lles et les garçons et l’utilisation semble\ndevenir moins fréquente avec la hausse du niveau scolaire.\nLes solvants volatils sont inhalés à l’aide d’un sac de papier ou\nde plastique, d’un linge imbibé ou directement du contenant. Ils\nsont rapidement absorbés par les poumons et sont diusés à tra-\nvers le corps et le SNC sur lequel ils exercent un eet dépresseur.\n",
+  "raw_text_sha256": "21203fd374c1e0b5ef5ddd11b6f5b5d2fa8f9b835328a977d99aa0cd4e33dc6a",
+  "source_page_display": 904,
+  "source_page_index": 903
+}

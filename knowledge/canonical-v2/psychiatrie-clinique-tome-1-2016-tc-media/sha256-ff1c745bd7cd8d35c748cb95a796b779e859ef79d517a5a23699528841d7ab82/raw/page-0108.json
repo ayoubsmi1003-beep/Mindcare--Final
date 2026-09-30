@@ -1,0 +1,316 @@
+{
+  "block_sequence_sha256": "1750c88222ff21434669b2b3e5dad731f7981b5c2f121e7babeabbbe8587add7",
+  "blocks": [
+    {
+      "bbox": [
+        337.5,
+        747.5753784179688,
+        555.0,
+        758.8693237304688
+      ],
+      "block_id": "page-0108-block-0001",
+      "order": 1,
+      "text": "Chapitre 4\nÉvaluation neuropsychologique\n91\n",
+      "text_sha256": "8c91fa68896f6cfad445409c60a170bb20d9c8aaf5362ac80ed22e58565aaa8d"
+    },
+    {
+      "bbox": [
+        56.5,
+        41.002296447753906,
+        272.6103515625,
+        53.320068359375
+      ],
+      "block_id": "page-0108-block-0002",
+      "order": 2,
+      "text": "TABLEAU 4.4 Évaluation neuropsychologique : synthèse\n",
+      "text_sha256": "ec40a11041361cd0e65c8161ca16f9b06327504a7bd8a9ff34ac1703f2050682"
+    },
+    {
+      "bbox": [
+        188.6999969482422,
+        59.12285614013672,
+        420.57537841796875,
+        69.14238739013672
+      ],
+      "block_id": "page-0108-block-0003",
+      "order": 3,
+      "text": "Fonctions examinées et quelques instruments couramment utilisés\n",
+      "text_sha256": "44a3af35cf9bcdd7ce1e82c2b437fb67b9726439cd885d8816dacbba74c58329"
+    },
+    {
+      "bbox": [
+        58.25,
+        75.6019515991211,
+        127.967041015625,
+        105.4281234741211
+      ],
+      "block_id": "page-0108-block-0004",
+      "order": 4,
+      "text": "Fonctions langagières\net du calcul (fonctions\ninstrumentales)\n",
+      "text_sha256": "444b4d639201d007ecfce141ec25c275880679640474526473ba20537dd0bee9"
+    },
+    {
+      "bbox": [
+        139.0,
+        75.6019515991211,
+        326.8475036621094,
+        157.42813110351562
+      ],
+      "block_id": "page-0108-block-0005",
+      "order": 5,
+      "text": "•\nBoston Naming Test – nommer une série de 60 images\n• Scène du vol de biscuits\n• Test de lecture de Chapman Cook\n• Calcul mental du WAIS-IV\n• Calculs écrits (Visual Spatial Quantitative Battery)\n• WIAT (Échelle de rendement individuel de Wechsler)\n•\nToken test\n",
+      "text_sha256": "026e3899aff157532e48e3e59ae39b2c9534c958f480e52b2cb17cab6bcb9beb"
+    },
+    {
+      "bbox": [
+        58.25,
+        166.0519561767578,
+        114.98209381103516,
+        195.8781280517578
+      ],
+      "block_id": "page-0108-block-0006",
+      "order": 6,
+      "text": "Fonctions activa-\ntrices, exécutives,\nautorégulatrices\n",
+      "text_sha256": "5b24016b824dea34049ecdb50d3f148847e169e3c4adb1469b1c9ebf39ecba60"
+    },
+    {
+      "bbox": [
+        139.0,
+        166.0519561767578,
+        517.9760131835938,
+        351.8781433105469
+      ],
+      "block_id": "page-0108-block-0007",
+      "order": 7,
+      "text": "• Test des similitudes (WAIS-IV)\n• Test de compréhension (WAIS-IV)\n• Proverbes\n• Questionnaires (p. ex., inventaire de dépression ou d’anxiété de Beck, questionnaire des comportements adaptatifs,\nquestionnaire sur les comportements frontaux)\n• Fluence verbale : nombre de mots émis par minute\n• Production graphique\n•\nWisconsin card sorting test\n• Tour de Londres\n• Traçage de pistes A et B (Trail Making Test)\n• Test de Stroop (conditions d’inhibition et de exibilité)\n• Labyrinthes (Porteus)\n• Test de Hayling : Montrer des phrases incomplètes, à n prévisible, qu’il faut compléter par une n inattendue\n(p. ex., il a posté sa lettre sans mettre de…)\n•\nDelis-Kaplan Executive Function System D-KEFS (Batterie exécutive)\n•\nBehavioural Assessment of the Dysexecutive Syndrome BADS (Batterie exécutive)\n",
+      "text_sha256": "d2482a1ccaeecbffd8b738ede9489dc7b79816bf7aa1dcec76d0e3b6ffb63acd"
+    },
+    {
+      "bbox": [
+        58.25,
+        360.45196533203125,
+        288.790283203125,
+        406.27813720703125
+      ],
+      "block_id": "page-0108-block-0008",
+      "order": 8,
+      "text": "Rendement intellectuel\n• Échelle d’intelligence générale de Wechsler\n• Autres échelles d’intelligence générale\n• Matrices de Raven\n• Leiter\n",
+      "text_sha256": "be140663fdd1b0ad7a32eea9053f930da1ca3c329dc990184cb59e304d147819"
+    },
+    {
+      "bbox": [
+        58.25,
+        414.9019470214844,
+        119.60952758789062,
+        434.7281188964844
+      ],
+      "block_id": "page-0108-block-0009",
+      "order": 9,
+      "text": "Capacité à consentir\nau traitement\n",
+      "text_sha256": "05a5ed7c4659e65a0132b174450da764ad710197082686de73636add02c94ece"
+    },
+    {
+      "bbox": [
+        139.0,
+        414.9019470214844,
+        325.943115234375,
+        436.7281188964844
+      ],
+      "block_id": "page-0108-block-0010",
+      "order": 10,
+      "text": "•\nMacArthur Competence Assessment Tool for Treatment\n•\nCritères de la Nouvelle-Écosse\n",
+      "text_sha256": "3530386f8931da86814df30c13480ed4432bac0b6846da3e3ff4b24e52278bcf"
+    },
+    {
+      "bbox": [
+        265.0,
+        443.2228698730469,
+        344.1460266113281,
+        453.2424011230469
+      ],
+      "block_id": "page-0108-block-0011",
+      "order": 11,
+      "text": "Analyse et conclusions\n",
+      "text_sha256": "d300f0d86cb833c4a11497c4a2aa9e443152cd159bf6c6eaa70d100680e58ea8"
+    },
+    {
+      "bbox": [
+        58.25,
+        459.751953125,
+        376.7493591308594,
+        469.578125
+      ],
+      "block_id": "page-0108-block-0012",
+      "order": 12,
+      "text": "Analyse quantitative\n• Correction, quantication, cotation par rapport aux données normatives\n",
+      "text_sha256": "8d1e067d05a6c8bb8c317db94e7eb5bff585d2021e14d0ba819f31a59f0d2891"
+    },
+    {
+      "bbox": [
+        58.25,
+        478.1519470214844,
+        546.8108520507812,
+        497.9781188964844
+      ],
+      "block_id": "page-0108-block-0013",
+      "order": 13,
+      "text": "Analyse qualitative\n• Analyse des processus en cause et du fonctionnement clinique pouvant expliquer le rendement en fonction des observations\ncliniques et de l’histoire du sujet\n",
+      "text_sha256": "edfb7272517b4dd2cc8ccaa8e8cbf565565bd6aedfe685cdbadec4d8a9a62aca"
+    },
+    {
+      "bbox": [
+        58.25,
+        506.60198974609375,
+        340.3578186035156,
+        516.4281616210938
+      ],
+      "block_id": "page-0108-block-0014",
+      "order": 14,
+      "text": "Analyse globale\n• À la lumière de l’état clinique et du contexte de la demande\n",
+      "text_sha256": "a96735b0c38fa832e0f23a7859366e42250d591f00c674448e6a78b282439f9b"
+    },
+    {
+      "bbox": [
+        54.25,
+        525.1906127929688,
+        553.5144653320312,
+        551.9249877929688
+      ],
+      "block_id": "page-0108-block-0015",
+      "order": 15,
+      "text": "Note : D’autres fonctions peuvent être examinées selon la demande et selon les observations comportementales effectuées en cours d’examen. Les fonctions mentionnées gurent\nparmi celles habituellement analysées lors de l’évaluation neuropsychologique. Les épreuves psychométriques mentionnées ne constituent que certains exemples couramment\nutilisés. Une panoplie d’instruments sont disponibles dans l’évaluation de chacune des fonctions et de nouveaux instruments et données normatives se développent constamment.\n",
+      "text_sha256": "250cdff30db0817c03efc140d9d4a36953f3ae6e3a8a8e027cc3b0ae3296b60b"
+    },
+    {
+      "bbox": [
+        275.0,
+        41.502296447753906,
+        300.6342468261719,
+        53.470069885253906
+      ],
+      "block_id": "page-0108-block-0016",
+      "order": 16,
+      "text": "(suite)\n",
+      "text_sha256": "c684d6dbcdfd50f0ada227f799b5c0fb30e817ac3da61b4cbf208decde7f907b"
+    },
+    {
+      "bbox": [
+        54.0,
+        571.359375,
+        222.91200256347656,
+        589.328125
+      ],
+      "block_id": "page-0108-block-0017",
+      "order": 17,
+      "text": "Lectures complémentaires\n",
+      "text_sha256": "a63665748f6f6aa4046621ac3e5b53857ebef6bf2c2f475217e47dfa03f03493"
+    },
+    {
+      "bbox": [
+        54.0,
+        602.138671875,
+        211.94100952148438,
+        612.0791015625
+      ],
+      "block_id": "page-0108-block-0018",
+      "order": 18,
+      "text": "N C. A. & al. (2013). e Encyclope-\n",
+      "text_sha256": "8ba81def412ad9d47f110eadbbe55bced500c2d6afc01c13c9ecb46a052d1add"
+    },
+    {
+      "bbox": [
+        66.0,
+        612.138671875,
+        210.890380859375,
+        632.0791015625
+      ],
+      "block_id": "page-0108-block-0019",
+      "order": 19,
+      "text": "dia of Neuropsychological Disorders,\nNew York, NY, Springer Publishing Co.\n",
+      "text_sha256": "a6399006bc0bee98670f1298051993d82c991f1a5ec9379d1fbc9efae450b7ab"
+    },
+    {
+      "bbox": [
+        225.0,
+        602.138671875,
+        365.28997802734375,
+        612.0791015625
+      ],
+      "block_id": "page-0108-block-0020",
+      "order": 20,
+      "text": "S, X. (2009). « L’individualisation\n",
+      "text_sha256": "f03f7513d269ed49290c1c0baf093d023f694d8c1b017c4f08738caa7709b5c2"
+    },
+    {
+      "bbox": [
+        237.0,
+        612.138671875,
+        381.030029296875,
+        642.0791015625
+      ],
+      "block_id": "page-0108-block-0021",
+      "order": 21,
+      "text": "des fonctions exécutives : historique et\nrepères », Revue de neuropsychologie, 1,\np. 16-23.\n",
+      "text_sha256": "168e5a352166ce6941601285d0c1c54232e04acaad004a11ca71f592954833fe"
+    },
+    {
+      "bbox": [
+        396.0,
+        602.138671875,
+        531.2554321289062,
+        612.0791015625
+      ],
+      "block_id": "page-0108-block-0022",
+      "order": 22,
+      "text": "S, D. T. & K, R. T. (2013).\n",
+      "text_sha256": "2dcea5f3309fb745e81c1259ef870f8069eeac0830d10403b1eb698237873caf"
+    },
+    {
+      "bbox": [
+        396.0,
+        612.138671875,
+        546.5849609375,
+        654.0791015625
+      ],
+      "block_id": "page-0108-block-0023",
+      "order": 23,
+      "text": "Principles of Frontal Lobe Functions,\n2e éd., New York, NY, Oxford Univer-\nsity Press.\nLe cerveau.com, [en ligne], http://\n",
+      "text_sha256": "a0b3ecae867301ac3bd36e2993b25ed6d55c45b14fa5b9818642517190e197f0"
+    },
+    {
+      "bbox": [
+        408.0,
+        654.138671875,
+        479.98260498046875,
+        664.0791015625
+      ],
+      "block_id": "page-0108-block-0024",
+      "order": 24,
+      "text": "lecerveau.mcgill.ca.\n",
+      "text_sha256": "fc157aae9b7c436a2a23ab3c4a4a47a1dc37a158eea137c8e52716f9f65eff32"
+    },
+    {
+      "bbox": [
+        422.8500061035156,
+        58.322853088378906,
+        444.33099365234375,
+        68.3423843383789
+      ],
+      "block_id": "page-0108-block-0025",
+      "order": 25,
+      "text": "(suite)\n",
+      "text_sha256": "c684d6dbcdfd50f0ada227f799b5c0fb30e817ac3da61b4cbf208decde7f907b"
+    }
+  ],
+  "coordinates_sha256": "88896002a9e28881fd84d5d7572d5862eee4fb75915b7daf3d541a78f12abe21",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0108",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "Chapitre 4\nÉvaluation neuropsychologique\n91\nTABLEAU 4.4 Évaluation neuropsychologique : synthèse\nFonctions examinées et quelques instruments couramment utilisés\nFonctions langagières\net du calcul (fonctions\ninstrumentales)\n•\nBoston Naming Test – nommer une série de 60 images\n• Scène du vol de biscuits\n• Test de lecture de Chapman Cook\n• Calcul mental du WAIS-IV\n• Calculs écrits (Visual Spatial Quantitative Battery)\n• WIAT (Échelle de rendement individuel de Wechsler)\n•\nToken test\nFonctions activa-\ntrices, exécutives,\nautorégulatrices\n• Test des similitudes (WAIS-IV)\n• Test de compréhension (WAIS-IV)\n• Proverbes\n• Questionnaires (p. ex., inventaire de dépression ou d’anxiété de Beck, questionnaire des comportements adaptatifs,\nquestionnaire sur les comportements frontaux)\n• Fluence verbale : nombre de mots émis par minute\n• Production graphique\n•\nWisconsin card sorting test\n• Tour de Londres\n• Traçage de pistes A et B (Trail Making Test)\n• Test de Stroop (conditions d’inhibition et de exibilité)\n• Labyrinthes (Porteus)\n• Test de Hayling : Montrer des phrases incomplètes, à n prévisible, qu’il faut compléter par une n inattendue\n(p. ex., il a posté sa lettre sans mettre de…)\n•\nDelis-Kaplan Executive Function System D-KEFS (Batterie exécutive)\n•\nBehavioural Assessment of the Dysexecutive Syndrome BADS (Batterie exécutive)\nRendement intellectuel\n• Échelle d’intelligence générale de Wechsler\n• Autres échelles d’intelligence générale\n• Matrices de Raven\n• Leiter\nCapacité à consentir\nau traitement\n•\nMacArthur Competence Assessment Tool for Treatment\n•\nCritères de la Nouvelle-Écosse\nAnalyse et conclusions\nAnalyse quantitative\n• Correction, quantication, cotation par rapport aux données normatives\nAnalyse qualitative\n• Analyse des processus en cause et du fonctionnement clinique pouvant expliquer le rendement en fonction des observations\ncliniques et de l’histoire du sujet\nAnalyse globale\n• À la lumière de l’état clinique et du contexte de la demande\nNote : D’autres fonctions peuvent être examinées selon la demande et selon les observations comportementales effectuées en cours d’examen. Les fonctions mentionnées gurent\nparmi celles habituellement analysées lors de l’évaluation neuropsychologique. Les épreuves psychométriques mentionnées ne constituent que certains exemples couramment\nutilisés. Une panoplie d’instruments sont disponibles dans l’évaluation de chacune des fonctions et de nouveaux instruments et données normatives se développent constamment.\n(suite)\nLectures complémentaires\nN C. A. & al. (2013). e Encyclope-\ndia of Neuropsychological Disorders,\nNew York, NY, Springer Publishing Co.\nS, X. (2009). « L’individualisation\ndes fonctions exécutives : historique et\nrepères », Revue de neuropsychologie, 1,\np. 16-23.\nS, D. T. & K, R. T. (2013).\nPrinciples of Frontal Lobe Functions,\n2e éd., New York, NY, Oxford Univer-\nsity Press.\nLe cerveau.com, [en ligne], http://\nlecerveau.mcgill.ca.\n(suite)\n",
+  "raw_text_sha256": "9a9c6c52c8954cbbc37ff80f9f332e27d008555647598154b0de87c42a825d27",
+  "source_page_display": 109,
+  "source_page_index": 108
+}

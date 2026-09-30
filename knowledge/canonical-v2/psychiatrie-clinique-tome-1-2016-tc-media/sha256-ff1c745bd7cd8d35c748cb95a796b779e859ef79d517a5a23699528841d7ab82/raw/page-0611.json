@@ -1,0 +1,304 @@
+{
+  "block_sequence_sha256": "66c9bc7231b891173b12ba3205e7da6c8ca22c19b94ce871c7709abd2d1cfef8",
+  "blocks": [
+    {
+      "bbox": [
+        48.0,
+        747.5753784179688,
+        478.5376892089844,
+        758.8693237304688
+      ],
+      "block_id": "page-0611-block-0001",
+      "order": 1,
+      "text": "594\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\n",
+      "text_sha256": "77537a3335a846a33e35ea0b3cdc11e3067571a499f265f8eac4de11bf265d8f"
+    },
+    {
+      "bbox": [
+        50.25,
+        417.55230712890625,
+        534.5685424804688,
+        429.9200744628906
+      ],
+      "block_id": "page-0611-block-0002",
+      "order": 2,
+      "text": "ENCADRÉ 27.3 Critères de consensus de la démence à corps de Lewy selon le Dementia with Lewy bodies Consortium\n",
+      "text_sha256": "eddc4663c43966519e8d4c0f9ba54ec5a49027c7feb78cff9c5703b3755f9ed8"
+    },
+    {
+      "bbox": [
+        52.25,
+        437.9228515625,
+        539.7879638671875,
+        692.828125
+      ],
+      "block_id": "page-0611-block-0003",
+      "order": 3,
+      "text": "Caractéristique centrale :\n• Démence.\nCaractéristiques essentielles :\n• Cognition uctuante : Épisodes de somnolence diurne, sieste de plus de deux heures, regard xe prolongé ou discours désorganisé durant quelques\nsecondes à quelques jours.\n• Hallucinations visuelles : Images détaillées, récurrentes et bien formées, de personnes ou d’animaux, de couleur ou de forme abstraite, ou encore\nillusions visuelles. Relativement rares dans la DTA ; leur valeur prédictive dans la DCL est de 83 %.\n• Parkinsonisme spontané : Peut être aussi grave que dans la maladie de Parkinson, mais est le plus souvent léger, bilatéral et symétrique et avec peu\nou pas de tremblements.\nCaractéristiques suggestives :\n• Trouble du comportement lié au sommeil paradoxal : Activité motrice souvent de nature violente, se manifestant durant le sommeil MOR (mouvements\noculaires rapides) qui surviennent tardivement au cours de la nuit et qui sont associés à des rêves dont le patient garde un souvenir précis.\n• Très forte sensibilité aux neuroleptiques qui n’est pas liée à la dose. Elle est pire pour les neuroleptiques classiques que pour les atypiques et se caractérise\npar un parkinsonisme important (parfois irréversible), un trouble de la conscience, un syndrome malin des neuroleptiques, de la confusion ou une dysfonction\nautonomique. Elle augmente la mortalité par deux à trois fois. Une bonne tolérance aux neuroleptiques n’exclut toutefois pas le diagnostic de DCL ;\n– captation faible du transporteur de la dopamine dans les noyaux gris centraux.\nCaractéristiques appuyant le diagnostic :\n• Dysfonction autonomique grave : Elle est précoce et se présente avec de l’hypotension orthostatique, une instabilité cardiovasculaire (dénervation\nsympathique cardiaque à la scintigraphie du myocarde), de la rétention ou de l’incontinence urinaire, de la constipation, des symptômes gastro-\nintestinaux et de l’impuissance.\n• Chutes répétées.\n• Syncope ou perte de conscience transitoire.\n• Hallucinations autres que visuelles.\n",
+      "text_sha256": "5f4350c05a0f3db154bfff0e193183a0e8af05516958bcb0d0b7c8fd585209b0"
+    },
+    {
+      "bbox": [
+        123.70000457763672,
+        60.324119567871094,
+        406.03802490234375,
+        70.9002914428711
+      ],
+      "block_id": "page-0611-block-0004",
+      "order": 4,
+      "text": "DSM-5\nDSM-IV-TR\n",
+      "text_sha256": "67d368c78be7842a2bc99b149901566bcadf3c9d62623ea48bafcc32b3563ffb"
+    },
+    {
+      "bbox": [
+        58.95000076293945,
+        75.1728515625,
+        213.40989685058594,
+        95.1923828125
+      ],
+      "block_id": "page-0611-block-0005",
+      "order": 5,
+      "text": "294.1x (F02.8x) Trouble neurocognitif majeur\ndû à une autre affection médicale\n",
+      "text_sha256": "5f730d09f8e2254e9ad3c843e6f40a09878dda5ecdf3b1f1190955099ff36a52"
+    },
+    {
+      "bbox": [
+        259.3999938964844,
+        75.1728515625,
+        512.4491577148438,
+        85.1923828125
+      ],
+      "block_id": "page-0611-block-0006",
+      "order": 6,
+      "text": "F02.x [294.1x] Démences dues à d’autres affections médicales générales\n",
+      "text_sha256": "bf2a2cd68bda2d1fca1d106de2a55ac0404fcd7c380e2b3b7fcd6bdd5af251b0"
+    },
+    {
+      "bbox": [
+        52.650001525878906,
+        99.70195770263672,
+        216.25552368164062,
+        109.52812957763672
+      ],
+      "block_id": "page-0611-block-0007",
+      "order": 7,
+      "text": "A. Les critères d’un trouble neurocognitif majeur ou\n",
+      "text_sha256": "9ab02fe89d7bc7a1c99bd57706c8f24fc5b7a355e3a12f356d6876836f25d90a"
+    },
+    {
+      "bbox": [
+        52.650001525878906,
+        109.70195770263672,
+        212.3470001220703,
+        130.5281219482422
+      ],
+      "block_id": "page-0611-block-0008",
+      "order": 8,
+      "text": "léger sont remplis (voir l’encadré 27.1).\nB. Les antécédents, l’examen clinique ou des exa-\n",
+      "text_sha256": "bbf64857616822387ad94b37a16de9f921f88a8638856657392fd3cfe79248b0"
+    },
+    {
+      "bbox": [
+        52.650001525878906,
+        130.7019500732422,
+        218.47158813476562,
+        171.5281219482422
+      ],
+      "block_id": "page-0611-block-0009",
+      "order": 9,
+      "text": "mens complémentaires permettent d’établir que\nle trouble neurocognitif est la conséquence phy-\nsiopathologique d’une autre affection médicale.\nC. Les décits cognitifs ne sont pas mieux expliqués\n",
+      "text_sha256": "ae7f32b716848da93e8130af45b52da648d0c1adccb07029454b7dc4ad05e0e6"
+    },
+    {
+      "bbox": [
+        61.29999923706055,
+        171.7019500732422,
+        211.81137084960938,
+        201.5281219482422
+      ],
+      "block_id": "page-0611-block-0010",
+      "order": 10,
+      "text": "par un autre trouble mental ou par un autre\ntrouble neurocognitif spécique (p. ex., maladie\nd’Alzheimer, infection par le VIH).\n",
+      "text_sha256": "55d739a65f691fef7d44a518cf47696a5459618f6f60859248ef0b055f0aad80"
+    },
+    {
+      "bbox": [
+        227.75,
+        99.70195770263672,
+        468.2986755371094,
+        109.52812957763672
+      ],
+      "block_id": "page-0611-block-0011",
+      "order": 11,
+      "text": "A. Apparition de décits cognitifs multiples, comme en témoignent à la fois :\n",
+      "text_sha256": "478f63c2527c41a5cfbf839ac90c70ca6d71f568506f711472f4111073077d73"
+    },
+    {
+      "bbox": [
+        236.75,
+        110.70195770263672,
+        514.3602905273438,
+        120.52812957763672
+      ],
+      "block_id": "page-0611-block-0012",
+      "order": 12,
+      "text": "(1) une altération de la mémoire (altération de la capacité à apprendre des informations\n",
+      "text_sha256": "403230d59d9be416f422dc7b273346912136ed421c4c505970e9e035b75cf93b"
+    },
+    {
+      "bbox": [
+        236.75,
+        120.70195007324219,
+        468.1922912597656,
+        141.5281219482422
+      ],
+      "block_id": "page-0611-block-0013",
+      "order": 13,
+      "text": "nouvelles ou à se rappeler les informations apprises antérieurement) ;\n(2) une (ou plusieurs) des perturbations cognitives suivantes :\n",
+      "text_sha256": "a18802dfed022f51703aa89083982fd0da48079ad13cd8498ec4819f4f336608"
+    },
+    {
+      "bbox": [
+        246.89999389648438,
+        142.7019500732422,
+        524.90234375,
+        163.5281219482422
+      ],
+      "block_id": "page-0611-block-0014",
+      "order": 14,
+      "text": "(a) aphasie (perturbation du langage),\n(b) apraxie (altération de la capacité à réaliser une activité motrice malgré des fonctions\n",
+      "text_sha256": "37a852a831fc6c05bab0f7608ef7979ea47ce155308597064f7fa9831473e29e"
+    },
+    {
+      "bbox": [
+        246.89999389648438,
+        163.7019500732422,
+        521.8753662109375,
+        184.5281219482422
+      ],
+      "block_id": "page-0611-block-0015",
+      "order": 15,
+      "text": "motrices intactes),\n(c) agnosie (impossibilité de reconnaître ou d’identier des objets malgré des fonctions\n",
+      "text_sha256": "5575b6c889a12057428a687e2817fa7c9386fbb6428216bdee7662df117586cc"
+    },
+    {
+      "bbox": [
+        246.89999389648438,
+        184.7019500732422,
+        513.9199829101562,
+        205.5281219482422
+      ],
+      "block_id": "page-0611-block-0016",
+      "order": 16,
+      "text": "sensorielles intactes),\n(d) perturbation des fonctions exécutives (faire des projets, organiser, ordonner dans\n",
+      "text_sha256": "75fbbf213275d85d0c4e10d5c83a5d271bad732b30b220c5920cce39db201f58"
+    },
+    {
+      "bbox": [
+        257.0500183105469,
+        205.7019500732422,
+        376.5995178222656,
+        215.5281219482422
+      ],
+      "block_id": "page-0611-block-0017",
+      "order": 17,
+      "text": "le temps, avoir une pensée abstraite).\n",
+      "text_sha256": "f57419c23d0b0339f5b60282888520d389e0323db8facdde21c088cc25b9239f"
+    },
+    {
+      "bbox": [
+        227.75,
+        220.10195922851562,
+        514.8704833984375,
+        229.92813110351562
+      ],
+      "block_id": "page-0611-block-0018",
+      "order": 18,
+      "text": "B. Les décits cognitifs des critères A1 et A2 sont tous les deux à l’origine d’une altération\n",
+      "text_sha256": "39ba799364e3e5e5a92ec4a1ddbcda2a6b3003afdd40510131a8e85908c64075"
+    },
+    {
+      "bbox": [
+        236.25,
+        230.10195922851562,
+        525.9441528320312,
+        249.92813110351562
+      ],
+      "block_id": "page-0611-block-0019",
+      "order": 19,
+      "text": "signicative du fonctionnement social ou professionnel et représentent un déclin signicatif\npar rapport au niveau de fonctionnement antérieur.\n",
+      "text_sha256": "47929b0a3fe60eb19184e64024bdd26b4a7fe39f9bd5c2414e1b0939326d040d"
+    },
+    {
+      "bbox": [
+        227.75,
+        254.55197143554688,
+        536.947021484375,
+        264.3781433105469
+      ],
+      "block_id": "page-0611-block-0020",
+      "order": 20,
+      "text": "C. Mise en évidence, d’après l’histoire de la maladie, l’examen physique ou les examens complé-\n",
+      "text_sha256": "d62707a1698225eaf9dc6f3190907e9a46542a3bd966110c84f5628d2586338d"
+    },
+    {
+      "bbox": [
+        236.40000915527344,
+        264.5519714355469,
+        543.5540161132812,
+        316.6164245605469
+      ],
+      "block_id": "page-0611-block-0021",
+      "order": 21,
+      "text": "mentaires que la perturbation est la conséquence physiologique directe d’une affection médicale\ngénérale autre que la maladie d’Alzheimer ou une affection cérébrovasculaire (p. ex., infection\npar le VIH, traumatisme crânien, maladie de Parkinson, maladie de Huntington, maladie de\nPick, maladie de Creutzfeldt-Jakob, hydrocéphalie à pression normale, hypothyroïdie, tumeur\ncérébrale, ou carence en vitamine B12).\n",
+      "text_sha256": "74708ab8b51e5d324df7af52bcd051481144b71bb92f104919e3011c13213062"
+    },
+    {
+      "bbox": [
+        227.75,
+        318.95196533203125,
+        502.60247802734375,
+        328.77813720703125
+      ],
+      "block_id": "page-0611-block-0022",
+      "order": 22,
+      "text": "D. Les décits ne surviennent pas exclusivement au cours de l’évolution d’un delirium.\n",
+      "text_sha256": "34d831f67b799672497ff05595183db7688e195ccdbe5c7a0bdd0043d65537f8"
+    },
+    {
+      "bbox": [
+        50.60000228881836,
+        40.95229721069336,
+        456.5781555175781,
+        53.970069885253906
+      ],
+      "block_id": "page-0611-block-0023",
+      "order": 23,
+      "text": "TABLEAU 27.8 Critères diagnostiques de la démence due à d’autres affections médicales générales\n",
+      "text_sha256": "b802432ec686ceae851e309dad6544fcd9bdc050cb02fdceac151a758e000f75"
+    },
+    {
+      "bbox": [
+        48.0,
+        333.7406311035156,
+        548.455810546875,
+        393.4750061035156
+      ],
+      "block_id": "page-0611-block-0024",
+      "order": 24,
+      "text": "Sources : APA (2015), p. 756 ; APA (2004)a, p. 193-195.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\n",
+      "text_sha256": "67186e7f45214e24ec415953b5dd61c1213289293dee42b32db4208f61ce8154"
+    }
+  ],
+  "coordinates_sha256": "1c817e2b278ea8310c23839256b0acf2aa5e384978a9c5014a0b6768f7fb3d6a",
+  "extraction_status": "extracted",
+  "page_id": "psychiatrie-clinique-tome-1-2016-tc-media:page-0611",
+  "parser": {
+    "name": "local-native-parser",
+    "version": "local-native-parser-v1"
+  },
+  "raw_text": "594\nPsychiatrie clinique : approche bio-psycho-sociale | PARTIE 3 Syndromes cliniques psychiatriques\nENCADRÉ 27.3 Critères de consensus de la démence à corps de Lewy selon le Dementia with Lewy bodies Consortium\nCaractéristique centrale :\n• Démence.\nCaractéristiques essentielles :\n• Cognition uctuante : Épisodes de somnolence diurne, sieste de plus de deux heures, regard xe prolongé ou discours désorganisé durant quelques\nsecondes à quelques jours.\n• Hallucinations visuelles : Images détaillées, récurrentes et bien formées, de personnes ou d’animaux, de couleur ou de forme abstraite, ou encore\nillusions visuelles. Relativement rares dans la DTA ; leur valeur prédictive dans la DCL est de 83 %.\n• Parkinsonisme spontané : Peut être aussi grave que dans la maladie de Parkinson, mais est le plus souvent léger, bilatéral et symétrique et avec peu\nou pas de tremblements.\nCaractéristiques suggestives :\n• Trouble du comportement lié au sommeil paradoxal : Activité motrice souvent de nature violente, se manifestant durant le sommeil MOR (mouvements\noculaires rapides) qui surviennent tardivement au cours de la nuit et qui sont associés à des rêves dont le patient garde un souvenir précis.\n• Très forte sensibilité aux neuroleptiques qui n’est pas liée à la dose. Elle est pire pour les neuroleptiques classiques que pour les atypiques et se caractérise\npar un parkinsonisme important (parfois irréversible), un trouble de la conscience, un syndrome malin des neuroleptiques, de la confusion ou une dysfonction\nautonomique. Elle augmente la mortalité par deux à trois fois. Une bonne tolérance aux neuroleptiques n’exclut toutefois pas le diagnostic de DCL ;\n– captation faible du transporteur de la dopamine dans les noyaux gris centraux.\nCaractéristiques appuyant le diagnostic :\n• Dysfonction autonomique grave : Elle est précoce et se présente avec de l’hypotension orthostatique, une instabilité cardiovasculaire (dénervation\nsympathique cardiaque à la scintigraphie du myocarde), de la rétention ou de l’incontinence urinaire, de la constipation, des symptômes gastro-\nintestinaux et de l’impuissance.\n• Chutes répétées.\n• Syncope ou perte de conscience transitoire.\n• Hallucinations autres que visuelles.\nDSM-5\nDSM-IV-TR\n294.1x (F02.8x) Trouble neurocognitif majeur\ndû à une autre affection médicale\nF02.x [294.1x] Démences dues à d’autres affections médicales générales\nA. Les critères d’un trouble neurocognitif majeur ou\nléger sont remplis (voir l’encadré 27.1).\nB. Les antécédents, l’examen clinique ou des exa-\nmens complémentaires permettent d’établir que\nle trouble neurocognitif est la conséquence phy-\nsiopathologique d’une autre affection médicale.\nC. Les décits cognitifs ne sont pas mieux expliqués\npar un autre trouble mental ou par un autre\ntrouble neurocognitif spécique (p. ex., maladie\nd’Alzheimer, infection par le VIH).\nA. Apparition de décits cognitifs multiples, comme en témoignent à la fois :\n(1) une altération de la mémoire (altération de la capacité à apprendre des informations\nnouvelles ou à se rappeler les informations apprises antérieurement) ;\n(2) une (ou plusieurs) des perturbations cognitives suivantes :\n(a) aphasie (perturbation du langage),\n(b) apraxie (altération de la capacité à réaliser une activité motrice malgré des fonctions\nmotrices intactes),\n(c) agnosie (impossibilité de reconnaître ou d’identier des objets malgré des fonctions\nsensorielles intactes),\n(d) perturbation des fonctions exécutives (faire des projets, organiser, ordonner dans\nle temps, avoir une pensée abstraite).\nB. Les décits cognitifs des critères A1 et A2 sont tous les deux à l’origine d’une altération\nsignicative du fonctionnement social ou professionnel et représentent un déclin signicatif\npar rapport au niveau de fonctionnement antérieur.\nC. Mise en évidence, d’après l’histoire de la maladie, l’examen physique ou les examens complé-\nmentaires que la perturbation est la conséquence physiologique directe d’une affection médicale\ngénérale autre que la maladie d’Alzheimer ou une affection cérébrovasculaire (p. ex., infection\npar le VIH, traumatisme crânien, maladie de Parkinson, maladie de Huntington, maladie de\nPick, maladie de Creutzfeldt-Jakob, hydrocéphalie à pression normale, hypothyroïdie, tumeur\ncérébrale, ou carence en vitamine B12).\nD. Les décits ne surviennent pas exclusivement au cours de l’évolution d’un delirium.\nTABLEAU 27.8 Critères diagnostiques de la démence due à d’autres affections médicales générales\nSources : APA (2015), p. 756 ; APA (2004)a, p. 193-195.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (Copyright 2013). American\nPsychiatric Association, DSM-5 – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par M.-A. Crocq, J.-D. Guelet al., Elsevier Masson SAS,\nParis, 2015. All rights reserved.\nTraduction française reproduite avec l’autorisation d’Elsevier Masson SAS. Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (Copyright 2004). American Psychiatric\nAssociation, DSM-IV-TR – Manuel Diagnostique et Statistique des Troubles Mentaux. Traduction française par J.-D. Guelet al., Elsevier Masson SAS, Paris, 2004. All rights reserved.\n",
+  "raw_text_sha256": "77db5bdb84722a2910932d684b1858a36253973eacc8b9b7db7fca937f8a3eb8",
+  "source_page_display": 612,
+  "source_page_index": 611
+}
