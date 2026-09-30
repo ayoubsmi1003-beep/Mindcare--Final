@@ -12,7 +12,7 @@ export function formaterLectureLocale(intent: NomIntention, valeur: ValeurSafe, 
   if ("nonLues" in valeur) return a.notifications(valeur.nonLues);
   if ("encaisseDzd" in valeur) return a.finance(valeur.encaisseDzd, valeur.enAttenteDzd);
   if ("totalEncaisseDzd" in valeur) return [a.finance(valeur.totalEncaisseDzd, valeur.totalEnAttenteDzd), ...(valeur.complet ? [] : [a.lectureTronquee])].join("\n");
-  if ("enAttente" in valeur) return a.finance(0, valeur.totalDzd);
+  if ("enAttente" in valeur) return a.enAttente(valeur.totalDzd);
   if ("evenements" in valeur) return [
     ...valeur.evenements.map((e) => a.evenement(e.le, e.genre)), ...(valeur.provenance.some((p) => p.tronque) ? [a.lectureTronquee] : []),
   ].join("\n") || a.inconnu;

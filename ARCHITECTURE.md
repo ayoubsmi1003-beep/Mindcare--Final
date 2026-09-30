@@ -49,6 +49,7 @@ avant tout appel externe (`server/jarvis/pseudonymize.ts`).
 | Re-bascule → `cloud-dev` d'une base réelle | trigger `assert_synthetic` ne requalifie pas le passé (`016:246-248`) | écritures futures barrées, lignes existantes non vérifiées | ne JAMAIS rebasculer ; futur : garde anti-retour (décision humaine, 3B-D3) |
 | `audit_append` / `nom_recherche` TO PUBLIC | risque LOW vérifié (Phase 3) | inchangés en 3B | durcissement = migration dessinée, jamais de grep-chasse (décision humaine, 3B-D4) |
 | Portes connaissance (tests unitaires : payloads string) | `ligneValide` écartait `Date` (ligne jugée malformée) | node-pg rend `timestamptz` en `Date` → corpus approuvé INVISIBLE sur substrat réel (trouvé R3-D, aurait rendu R3 aveugle) | corrigé : `normaliserHorodatage` (service, frontière pg) + 2 tests Date (connaissance-service.test.ts) |
+| `stockage.ts` historique proposé | ajoutait `p_inclure_historique` aux deux RPC | PostgreSQL local et migrations 092/093 : signatures à 3 et 2 paramètres, aucun paramètre historique | corrigé le 2026-09-30 : signatures installées exactes ; historique explicitement refusé ; migrations inchangées ; preuve `alexa-knowledge-gates.test.ts` |
 
 ## CHIFFREMENT (état, pas intention — REQUIRED = constitution)
 

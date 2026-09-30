@@ -3,3 +3,15 @@
   vert  | mode | hybride (BGE-M3 local, coherence prouvee, parite EVENTEE-pin-a-revoir) | base=mindcare | cas=46 | calib=A3
   vert  | FR-01 issue | attendu=aucune obtenu=aucune
   vert  | FR-01-prov | provenance complete
+  vert  | FR-02 issue | attendu=pertinent obtenu=pertinent
+  vert  | FR-02-gold | e214a52c-ca50-5e5b-be02-ce29faaf0d91@Catalogue
+  vert  | FR-02-top1 | e214a52c-ca50-5e5b-be02-ce29faaf0d91
+  vert  | FR-02-cit | fait present au top-1
+  vert  | FR-02-ver | attendu=2026-09-15 obtenu=2026-09-15
+  vert  | FR-02-prov | provenance complete
+  vert  | FR-03 issue | attendu=pertinent obtenu=pertinent
+  ROUGE | FR-03-gold | absent du top-5 (top1=9ed1c042-fd2b-5599-a470-8c93b0566739@Section II — Critères diagnostiques et codes › Troubles bipolaires et apparentés › Trouble bipolaire de type I › Critères diagnostiques)
+  vert  | FR-03-top1 | 9ed1c042-fd2b-5599-a470-8c93b0566739
+  ROUGE | FR-03-cit | fait ABSENT du top-1 (Trouble bipolaire de type II — Critères diagnostiques)
+  vert  | FR-03-ver | attendu=sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53 obtenu=sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53
+  vert  | FR-03-prov | provenance complete

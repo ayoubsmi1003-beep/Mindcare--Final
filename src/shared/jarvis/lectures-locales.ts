@@ -42,5 +42,5 @@ export function planifierLecturesLocales(texte: string): readonly IntentValide[]
 
 export function poursuitIntention(texte: string): boolean {
   const t = normaliserTexteIdentite(texte).replace(/[.!?؟]+$/u, "");
-  return /^(?:et (?:avant|apres|la precedente|ensuite)|avant ca|continue|continuer|و قبل|قبل هذا|كمل)$/u.test(t);
+  return /^(?:(?:et |و )?(?:avant(?: ca)?|apres|la precedente|ensuite|قبل(?: هذا)?)|continue|continuer|كمل)$/u.test(t);
 }

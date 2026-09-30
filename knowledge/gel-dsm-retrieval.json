@@ -1,0 +1,60 @@
+{
+  "$comment": "Gel DSM-5 retrieval (2026-09-28). Index sémantique construit + mesuré, NON expédié : l'hybride calibré A3 régresse 5 cas du golden gelé. Comportement production = lexical gelé M10-A (inchangé). Ne pas réactiver sans session de calibration dédiée.",
+  "corpus": {
+    "source": "dsm5-fr-2015-elsevier",
+    "source_id": "9ed1c042-fd2b-5599-a470-8c93b0566739",
+    "version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+    "chunks_actifs": 12815,
+    "chunker": "struct-v2",
+    "exclusions": 5
+  },
+  "index": {
+    "couverture": "12815/12815",
+    "recette": "local-onnx/BAAI/bge-m3@5617a9f61b028005a4858fdac845db406aefb181, 1024d, cosine, L2-native",
+    "amendement": "knowledge/recette-embedding-amendement-struct-v2.json (PROPOSE→REALISE)",
+    "dims_invalides": 0,
+    "orphelins": 0,
+    "doublons": 0,
+    "inactive_ecrites": 0,
+    "mauvaise_source_version": 0,
+    "mutations_chunks_canoniques": 0,
+    "ecritures_tables_patient": 0
+  },
+  "gouvernance": {
+    "decision": "G1-A (2026-09-27) : exception étroite DSM-actif, double clé (flag --exception-dsm-active + uuid épinglé)",
+    "empreinte": "autres sources actives identiques pré/post, DSM +écritures exact",
+    "uniformite": "0 dérive (périmètre exception)",
+    "finalisation": "PASS, 0 écriture résiduelle"
+  },
+  "golden": {
+    "lexical_A3": "116 verts / 7 ROUGE connus (DJ-02, WD-02, TY-01)",
+    "hybride_A3_vecteur": "111 verts / 13 ROUGE",
+    "regressions_hybride": [
+      "FR-03 : top-1 type I au lieu de type II (confusion vectorielle I/II)",
+      "FR-05 : pertinent au lieu d'aucune (faux positif vectoriel)",
+      "GV-04 : top-1 source Taylor au lieu de l'or DSM (fuite inter-livres)",
+      "FW-02 : aucune au lieu de pertinent (lexical perdu)",
+      "WD-02 : pertinent au lieu de faible (sur-récupération)"
+    ],
+    "decision_expedition": "NON-EXPEDIE : hybride < lexical sur attentes gelées. Index conservé comme artefact pour calibration future. Reranker cross-encoder : non activé (sans objet). Expansion : OFF (inchangé)."
+  },
+  "regression": {
+    "suite": "1475 passed / 0 failed / 63 skipped",
+    "tsc": "PASS",
+    "build": "PASS"
+  },
+  "fichiers": {
+    "modifies": [
+      "scripts/remplir-embeddings-sql.mjs (exception G1-A : sélection/garde/empreinte, défaut octet-identique)",
+      "scripts/remplir-embeddings.mjs (flag --exception-dsm-active, namespace R3_LOT_NS, uniformité périmètre)",
+      "tests/unit/connaissance-backfill-r3.test.ts (+8 tests exception/uniformité)",
+      "tests/unit/connaissance-transport-socket.test.ts (+1 test namespacement)"
+    ],
+    "crees": [
+      "knowledge/recette-embedding-amendement-struct-v2.json",
+      "knowledge/.sortie-m10-reponses.nemotron-v42.json (ré-évaluation 4 résidus, artefact séparé)",
+      "knowledge/gel-dsm-retrieval.json (ce fichier)"
+    ],
+    "intouches": ["prompt.ts (v4.2)", "rubrique", "migrations", "corpus", "patient", ".env", "autres livres"]
+  }
+}

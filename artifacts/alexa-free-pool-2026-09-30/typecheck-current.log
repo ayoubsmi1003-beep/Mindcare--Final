@@ -1,0 +1,1 @@
+src/services/jarvis-boucle.ts(731,39): error TS2322: Type '"fil"' is not assignable to type 'SourceFil | "explicite"'.

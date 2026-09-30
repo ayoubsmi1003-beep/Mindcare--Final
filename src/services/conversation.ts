@@ -376,6 +376,7 @@ let travailEnCours: {
   readonly conversationId: string;
   readonly intentionPrecedente: NomIntention | null;
   readonly patientId: string | null;
+  readonly rangSeance?: number;
   readonly patientLibelle: string | null;
   readonly poseA: number;
 } | null = null;
@@ -391,7 +392,7 @@ let travailEnCours: {
 export function lireTravailValide(
   conversationId: string,
   maintenantMs: number = Date.now(),
-): { readonly conversationId: string; readonly intentionPrecedente: NomIntention | null; readonly patientId: string } | null {
+): { readonly conversationId: string; readonly intentionPrecedente: NomIntention | null; readonly patientId: string; readonly rangSeance?: number } | null {
   const t = travailEnCours;
   if (t === null || t.conversationId !== conversationId) return null;
   if (t.patientId === null || maintenantMs - t.poseA >= TTL_CONTEXTE_MS) return null;
@@ -404,7 +405,7 @@ export function lireTravailValide(
         ? ancreEnAttente.id
         : null;
   if (filId === null || filId !== t.patientId) return null;
-  return { conversationId: t.conversationId, intentionPrecedente: t.intentionPrecedente, patientId: t.patientId };
+  return { conversationId: t.conversationId, intentionPrecedente: t.intentionPrecedente, patientId: t.patientId, ...(t.rangSeance !== undefined ? { rangSeance: t.rangSeance } : {}) };
 }
 
 /**
@@ -418,7 +419,7 @@ export function lireTravailValide(
 export function retenirTravail(
   conversationId: string,
   resolution:
-    | { readonly verdict: VerdictResolution; readonly intentionRetenu: NomIntention | null }
+    | { readonly verdict: VerdictResolution; readonly intentionRetenu: NomIntention | null; readonly rangSeance?: number }
     | undefined,
 ): void {
   const patient = resolution?.verdict.patient;
@@ -430,6 +431,7 @@ export function retenirTravail(
     conversationId,
     intentionPrecedente: resolution?.intentionRetenu ?? null,
     patientId: patient.id,
+    ...(resolution?.rangSeance !== undefined ? { rangSeance: resolution.rangSeance } : {}),
     patientLibelle: patient.libelle,
     poseA: Date.now(),
   };

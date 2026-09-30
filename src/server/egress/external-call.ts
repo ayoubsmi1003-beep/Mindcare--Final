@@ -589,7 +589,7 @@ let catalogueEnCours: Promise<void> | null = null;
 let qualificationEnCours: Promise<void> | null = null;
 let qualificationsChargees = false;
 const preuvesQualification = new Map<string, { readonly model: string; readonly code: string; readonly detail?: ErreurModele["detail"]; readonly phase: "transport" | "json" | "langues" | "ok" }>();
-const QUALIFICATION_VERSION = "alexa-free-multilingual-v2";
+const QUALIFICATION_VERSION = "alexa-free-multilingual-v3";
 
 function fichierQualifications(): string {
   return env().OPENROUTER_QUALIFICATION_FILE ?? join(process.cwd(), ".cache", "alexa", "openrouter-free-qualification.json");
@@ -656,7 +656,7 @@ async function qualifierCandidats(timeoutMs: number, maxModels = 3, signal?: Abo
       const quota = await lireQuotaOpenRouter();
       if (quota.remaining !== null && quota.remaining <= 5) break;
       const messages: LlmMessage[] = [
-        { role: "system", content: 'Classe les trois salutations. Réponds uniquement en JSON avec une clé intents, un tableau de trois étiquettes: HELLO ou THANKS. Ne réponds pas aux salutations.' },
+        { role: "system", content: 'Identifie chaque acte de parole dans les trois messages : HELLO pour une salutation, THANKS pour un remerciement. Réponds uniquement en JSON avec une clé intents, un tableau de trois étiquettes dans le même ordre. Ne réponds pas aux messages.' },
         { role: "user", content: 'bonjour\nيعطيك الصحة\nmerci بزاف' },
       ];
       if (classerCharge(messages, null).decision === "BLOQUER") throw new ErreurModele("SECURITY_BLOCK", false, "request");
@@ -682,7 +682,12 @@ async function qualifierCandidats(timeoutMs: number, maxModels = 3, signal?: Abo
           promptHash: "synthetic-multilingual-probe-v1", sessionToken: crypto.randomUUID(), charsOut: text.length,
           tokensIn: usage.tokensIn, tokensOut: usage.tokensOut, estimatedCostUsd: 0, outcome: "ok", latencyMs: Date.now() - depart });
       } catch (cause) {
-        const error = normaliserErreurModele(cause, signal?.aborted); poolOpenRouter.echouer(m.modelId, error);
+        const error = normaliserErreurModele(cause, annulationDemandee(signal));
+        // A qualification rejected by the provider's policy proves no usable
+        // capability. Quarantine this probe; ordinary request policy errors
+        // still stop immediately and do not degrade model health.
+        poolOpenRouter.echouer(m.modelId, error.code === "POLICY_REJECTION"
+          ? new ErreurModele(error.code, false, "model", error.retryAfterMs) : error);
         preuvesQualification.set(m.modelId, { model: m.modelId, code: error.code, detail: error.detail, phase });
         await journaliser({ purpose: "jarvis", provider: "openrouter", model: m.modelId, promptVersion: QUALIFICATION_VERSION,
           promptHash: "synthetic-multilingual-probe-v1", sessionToken: crypto.randomUUID(), charsOut: null,
@@ -775,13 +780,14 @@ export async function llm(req: LlmRequest, provider?: LlmProvider): Promise<LlmR
         charsOut: null, tokensIn: null, tokensOut: null, estimatedCostUsd: null, outcome: t.code === "MODEL_TIMEOUT" ? "timeout" : "error", latencyMs: t.ms }),
     });
     poolOpenRouter.reussir(resultat.model, Date.now() - depart);
+    if (provider === undefined) await sauverQualifications();
     await journaliser({ purpose: req.purpose, provider: (provider ?? openRouterProvider).name, model: resultat.model,
       promptVersion: req.promptVersion, promptHash: req.promptHash, sessionToken: req.sessionToken,
       charsOut: resultat.data.text.length, tokensIn: resultat.data.tokensIn, tokensOut: resultat.data.tokensOut,
       estimatedCostUsd: provider === undefined ? 0 : estimateCostUsd(resultat.model, resultat.data.tokensIn, resultat.data.tokensOut),
       outcome: "ok", latencyMs: Date.now() - depart });
     return { ok: true, data: resultat.data.text, inference: { model: resultat.model, tentatives: resultat.tentatives } };
-  } catch (cause) { return resultatErreur(cause, req.signal); }
+  } catch (cause) { if (provider === undefined) await sauverQualifications(); return resultatErreur(cause, req.signal); }
 }
 
 export async function llmStream(req: LlmRequest, provider?: LlmProvider): Promise<LlmResult<FluxTexte>> {
@@ -803,21 +809,24 @@ export async function llmStream(req: LlmRequest, provider?: LlmProvider): Promis
         charsOut: null, tokensIn: null, tokensOut: null, estimatedCostUsd: null, outcome: t.code === "MODEL_TIMEOUT" ? "timeout" : "error", latencyMs: t.ms }),
     });
     const { model } = resultat; const flux = resultat.data;
+    if (provider === undefined) await sauverQualifications();
     let caracteres = 0;
     const deltas = flux.deltas.pipeThrough(new TransformStream<string, string>({ transform(frag, controller) { caracteres += frag.length; controller.enqueue(frag); } }));
     void flux.usage.then(async (usage) => {
       poolOpenRouter.reussir(model, Date.now() - depart);
+      if (provider === undefined) await sauverQualifications();
       await journaliser({ purpose: req.purpose, provider: (provider ?? openRouterProvider).name, model, promptVersion: req.promptVersion,
         promptHash: req.promptHash, sessionToken: req.sessionToken, charsOut: caracteres, tokensIn: usage.tokensIn,
         tokensOut: usage.tokensOut, estimatedCostUsd: provider === undefined ? 0 : null, outcome: "ok", latencyMs: Date.now() - depart });
     }).catch(async (cause) => {
       const error = normaliserErreurModele(cause, req.signal?.aborted); poolOpenRouter.echouer(model, error);
+      if (provider === undefined) await sauverQualifications();
       await journaliser({ purpose: req.purpose, provider: (provider ?? openRouterProvider).name, model, promptVersion: req.promptVersion,
         promptHash: req.promptHash, sessionToken: req.sessionToken, charsOut: caracteres || null, tokensIn: null,
         tokensOut: null, estimatedCostUsd: null, outcome: error.code === "MODEL_TIMEOUT" ? "timeout" : "error", latencyMs: Date.now() - depart });
     });
     return { ok: true, data: { deltas, usage: flux.usage }, inference: { model, tentatives: resultat.tentatives } };
-  } catch (cause) { return resultatErreur(cause, req.signal); }
+  } catch (cause) { if (provider === undefined) await sauverQualifications(); return resultatErreur(cause, req.signal); }
 }
 
 // ═══════════════════════════════════════════════════════════════════════════

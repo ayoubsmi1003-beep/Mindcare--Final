@@ -1,0 +1,138 @@
+{
+  "recipe_id": "r3-struct-v2-2026-09-24",
+  "status": "approved_for_structural_certification",
+  "activation_allowed": false,
+  "embedding_execution_allowed": false,
+  "approval_record": "STRUCT-V2-APPROVAL-RECORD.json",
+  "book_id": "dsm5-fr-2015-elsevier",
+  "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+  "chunker_version": "struct-v2",
+  "normalisation": "nfkc-espace-v1",
+  "embedding_text_field": "texte_indexable",
+  "language": "fr",
+  "model": "BAAI/bge-m3",
+  "model_revision": "5617a9f61b028005a4858fdac845db406aefb181",
+  "dimensions": 1024,
+  "max_tokens": 1024,
+  "document_contract": {
+    "knowledge_entry_id": "dsm5-fr-2015-elsevier",
+    "source_id": "dsm5-fr-2015-elsevier",
+    "canonical_title": "DSM-5 — Manuel diagnostique et statistique des troubles mentaux",
+    "edition": "5e édition, traduction française (DSM-5, Fifth Edition 1-1276)",
+    "language": "fr",
+    "publisher": "Elsevier Masson",
+    "publication_year": 2015,
+    "source_version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+    "provenance_status": "registered",
+    "approval_status": {
+      "canonical_layer": "approved",
+      "structural_policies": "approved",
+      "chunk_layer": "approved_for_structural_certification",
+      "activation": "not_approved"
+    },
+    "review_status": "certified_pending_embedding_handoff",
+    "source_evidence": "book.json"
+  },
+  "chunk_contract": {
+    "chunk_id": {
+      "required": true,
+      "artifact_field": "chunk_id",
+      "status": "present"
+    },
+    "chunk_hash": {
+      "required": true,
+      "artifact_field": "texte_hash",
+      "status": "mapped_without_renaming"
+    },
+    "parent_knowledge_entry_id": {
+      "required": true,
+      "artifact_field": "book_id",
+      "status": "mapped_as_canonical_document_entry_id"
+    },
+    "source_version": {
+      "required": true,
+      "artifact_field": "source_version",
+      "status": "present"
+    },
+    "language": {
+      "required": true,
+      "artifact_field": "langue",
+      "status": "present"
+    },
+    "section_chapter_hierarchy": {
+      "required": true,
+      "artifact_field": "structural_path",
+      "status": "present"
+    },
+    "section_path": {
+      "required": true,
+      "artifact_field": "structural_path",
+      "status": "present"
+    },
+    "pdf_page": {
+      "required": true,
+      "artifact_field": "page_start/page_end",
+      "status": "present_but_distinct_from_printed_page"
+    },
+    "printed_page": {
+      "required": false,
+      "artifact_field": "printed_page_start/printed_page_end",
+      "status": "nullable_by_approved_policy"
+    },
+    "page_confidence_status": {
+      "required": true,
+      "artifact_field": "page_map_status",
+      "status": "preserved_by_approved_policy"
+    },
+    "chunk_ordinal": {
+      "required": true,
+      "artifact_field": "occurrence",
+      "status": "present"
+    },
+    "chunking_strategy_version": {
+      "required": true,
+      "artifact_field": "chunker_version",
+      "status": "present"
+    },
+    "text_integrity_status": {
+      "required": true,
+      "artifact_field": "texte_hash/texte_indexable",
+      "status": "validated_structurally_not_clinically"
+    },
+    "duplicate_status": {
+      "required": true,
+      "artifact_field": "texte_hash",
+      "status": "policy_approved_no_automatic_merge"
+    },
+    "quarantine_status": {
+      "required": true,
+      "artifact_field": "quarantine_report",
+      "status": "88_quarantined_approved_policy; remaining_structurally_certified"
+    }
+  },
+  "preflight_gates": [
+    "artifact_digest",
+    "book_and_source_identity",
+    "struct-v2_required_fields",
+    "text_hash_and_id_determinism",
+    "indexable_text_determinism",
+    "source_version_metadata_approval",
+    "page_map_approval",
+    "duplicate_and_fallback_review",
+    "short_fragment_review",
+    "a_mark_review",
+    "table_and_xref_review",
+    "one_to_one_resume_checkpoint",
+    "quarantine_separation"
+  ],
+  "production_blockers": [
+    "embedding_execution_separate_task",
+    "activation_and_gate_c_separate_task"
+  ],
+  "diagnostic_vectors": {
+    "path": "knowledge/canonical-v2/dsm5-fr-2015-elsevier/sha256-be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53/embeddings-v2.jsonl",
+    "count": 88,
+    "production_compatible": false,
+    "disposition": "quarantine"
+  }
+}

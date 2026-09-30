@@ -30,6 +30,7 @@ export const alexa = {
   seance: (date: string) => `Séance du ${date}`,
   rdv: (patient: string, debut: string, fin: string) => `${patient} — ${debut} à ${fin}.`,
   finance: (encaisse: number, attente: number) => `Encaissé : ${encaisse} DZD. En attente : ${attente} DZD.`,
+  enAttente: (attente: number) => `En attente : ${attente} DZD.`,
   document: (type: string, date: string) => `${type} — émis le ${date}.`,
   evenement: (date: string, genre: string) => `${date} — ${genre}.`,
   contexteChange: "Le contexte a changé pendant cette lecture. Répétez votre demande dans le dossier actuel.",

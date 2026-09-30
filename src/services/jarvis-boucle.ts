@@ -185,6 +185,7 @@ export interface ResolutionBilan {
   readonly intentionChainee: NomIntention | null;
   /** Nom à retenir pour le tour suivant (`null` = classifier frais). */
   readonly intentionRetenu: NomIntention | null;
+  readonly rangSeance?: number;
 }
 
 /**
@@ -196,6 +197,7 @@ export interface TravailPrecedent {
   readonly conversationId: string;
   readonly intentionPrecedente: NomIntention | null;
   readonly patientId: string | null;
+  readonly rangSeance?: number;
 }
 
 export interface RappelsTour {
@@ -669,7 +671,20 @@ export async function executerTour(
     }
   }
 
-  const lectures = deps.lecturesLocales === true ? planifierLecturesLocales(params.message) : null;
+  let lectures = deps.lecturesLocales === true ? planifierLecturesLocales(params.message) : null;
+  let rangSeance = 0;
+  if (deps.lecturesLocales === true && lectures === null && poursuitIntention(params.message)) {
+    const travail = params.travail;
+    const cible = cibleValide();
+    if (travail?.conversationId !== params.conversationId || cible === null || cible.id !== travail.patientId
+      || travail.intentionPrecedente !== "GET_CONSULTATION_HISTORY") {
+      return bilanClarificationM02(alexa.format, verdict, null);
+    }
+    const precedent = travail.rangSeance ?? 0;
+    if (!Number.isInteger(precedent) || precedent < 0 || precedent >= 19) return bilanClarificationM02(alexa.lectureTronquee, verdict, null);
+    rangSeance = precedent + 1;
+    lectures = [{ name: "GET_CONSULTATION_HISTORY", entities: {}, references: { pronomSansAntecedent: false, homonymePossible: false }, confidence: 1, missingInformation: [] }];
+  }
   if (lectures !== null) {
     const appels: TraceAppel[] = [...tracesSonde];
     const textes: string[] = [];
@@ -695,7 +710,7 @@ export async function executerTour(
       appels.push(trace);
       if (signal.aborted || cibleValide() !== cible || carteCourante() !== localCarte) return err({ code: "conflit", message: alexa.contexteChange });
       if (!resultat.ok || resultat.donnees === null) return err({ code: resultat.motifEchec === "interdit" ? "interdit" : "indisponible", message: resultat.motifEchec === "interdit" ? fr.erreurs.interdit : alexa.lectureIndisponible });
-      textes.push(formaterLectureLocale(lecture.name, resultat.donnees)); intentionRetenu = lecture.name;
+      textes.push(formaterLectureLocale(lecture.name, resultat.donnees, rangSeance)); intentionRetenu = lecture.name;
       if (estPatientSpecifique(capacite) && cible !== null) ancreCandidate = { id: cible.id, libelle: cible.libelle };
       if (lecture.name === "GET_NEXT_PATIENT") {
         // A compound follow-up cannot reuse the previous target when the
@@ -713,13 +728,14 @@ export async function executerTour(
           // Explicit next-patient selection is read from the SQL gate, never guessed.
           textes[textes.length - 1] = localCarte.rendre(textes[textes.length - 1]!);
           adopterResolution({ etat: "explicite", cible: { id, libelle, numeroDossier: "", origine: "recherche" } }, Date.now());
+          verdict = { etat: "unique", source: "fil", patient: { id, libelle } };
           localCarte = reinitialiserCarte();
         } else if (lectures.length > 1) return bilanClarificationM02(fr.jarvis.contexte.preciserPatient, verdict, null);
       }
     }
     return ok({ texte: textes.join("\n\n"), chemin: "patient", interrompu: false, persiste: false,
       appels, runId, snapshots: [], preuves: [], propositionInconnue: null, ancreCandidate,
-      resolution: { verdict, intentionChainee: null, intentionRetenu } });
+      resolution: { verdict, intentionChainee: null, intentionRetenu, ...(intentionRetenu === "GET_CONSULTATION_HISTORY" ? { rangSeance } : {}) } });
   }
 
   /**

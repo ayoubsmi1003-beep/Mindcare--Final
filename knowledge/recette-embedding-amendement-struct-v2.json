@@ -1,0 +1,27 @@
+{
+  "$comment": "Amendement PROPOSE (non actif) : admission struct-v2 (DSM-5) au perimetre d'embedding. Ne modifie ni la recette epinglee r2-2026-09-16, ni le corpus, ni les gardes. Prend effet seulement avec (1) decision humaine sur la garde sources-active et (2) admission struct-v2 dans CHUNKERS_ACCEPTES.",
+  "base_recette": "knowledge/recette-embedding-pinee.json (r2-2026-09-16, BAAI/bge-m3 rev 5617a9f, 1024d, cosine, L2-native)",
+  "portee": {
+    "source": "DSM-5 — Manuel diagnostique et statistique des troubles mentaux",
+    "source_id": "9ed1c042-fd2b-5599-a470-8c93b0566739",
+    "version": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+    "chunker": "struct-v2",
+    "chunks_actifs": 12815
+  },
+  "pilote_sans_ecriture": {
+    "date": "2026-09-27",
+    "echantillon": 24,
+    "empreintes_poids": "OK",
+    "temoin_tokens": "OK",
+    "dims_1024": "24/24",
+    "octet_identiques_rerun": "24/24",
+    "norme_L2": "24/24",
+    "debit_lot8_lignes_s": 0.1,
+    "projection_12815_lot8_h": 35.6,
+    "levier": "--lot-inference 64 prouve bit-identique (sonde-determinisme-lot) ; commentaire R3 : Taylor ~2h a N=64, soit ~3.3h projetes pour DSM",
+    "contrainte_machine": "poste dev ~1 Go RAM libre au moment du pilote ; session ONNX pic ~1.6 Go (bench R2) — passe complete de preference sur machine degagee",
+    "ecritures_db": 0
+  },
+  "statut": "REALISE 2026-09-28 — backfill 12815/12815, finalisation PASS, gel : knowledge/gel-dsm-retrieval.json",
+  "gel": "knowledge/gel-dsm-retrieval.json"
+}

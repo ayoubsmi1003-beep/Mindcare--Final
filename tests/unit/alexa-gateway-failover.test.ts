@@ -10,7 +10,7 @@ beforeEach(async () => {
   vi.resetModules();
   directory = await mkdtemp(join(tmpdir(), "alexa-gateway-"));
   const file = join(directory, "qualification.json");
-  await writeFile(file, JSON.stringify({ version: "alexa-free-multilingual-v2", at: Date.now(),
+  await writeFile(file, JSON.stringify({ version: "alexa-free-multilingual-v3", at: Date.now(),
     models: ids.map((id, i) => ({ id, qualification: { json: true, streaming: true, qualite: 1, latenceMs: 10 + i } })) }));
   vi.stubEnv("MINDCARE_DATABASE_URL", "postgresql://test:test@127.0.0.1:1/test");
   vi.stubEnv("OPENROUTER_API_KEY", "synthetic"); vi.stubEnv("OPENROUTER_QUALIFICATION_FILE", file);
