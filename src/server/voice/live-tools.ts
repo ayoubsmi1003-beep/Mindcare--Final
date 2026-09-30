@@ -48,7 +48,8 @@ export async function lireOutilLive(client: ClientSql, name: string, args: unkno
     if (name === "get_today_agenda" || name === "get_next_patient") {
       if (!z.object({}).strict().safeParse(args).success) return unavailable();
       const day = new Intl.DateTimeFormat("en-CA", { timeZone: "Africa/Algiers", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
-      const dashboard = objet(await lire(client, "dashboard_today", { p_day: day }));
+      const rawDashboard = await lire(client, "dashboard_today", { p_day: day });
+      const dashboard = objet(rawDashboard) ?? lignes(rawDashboard)[0];
       if (!dashboard) return unavailable();
       const appointments = name === "get_next_patient" ? (dashboard.suivant ? [dashboard.suivant] : []) : dashboard.journee;
       const safe: Record<string, unknown>[] = [];

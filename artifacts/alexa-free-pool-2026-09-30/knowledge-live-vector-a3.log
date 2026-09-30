@@ -29,3 +29,112 @@
   vert  | AR-03-prov | provenance complete
   vert  | DJ-01 issue | attendu=aucune obtenu=aucune
   vert  | DJ-01-prov | provenance complete
+  ROUGE | DJ-02 issue | attendu=faible obtenu=aucune
+  vert  | DJ-02-prov | provenance complete
+  vert  | DJ-03 issue | attendu=aucune obtenu=aucune
+  vert  | DJ-03-prov | provenance complete
+  vert  | XL-01 issue | attendu=aucune obtenu=aucune
+  vert  | XL-01-prov | provenance complete
+  vert  | XL-02 issue | attendu=aucune obtenu=aucune
+  vert  | XL-02-prov | provenance complete
+  vert  | DT-01 issue | attendu=aucune obtenu=aucune
+  vert  | DT-01-prov | provenance complete
+  vert  | DT-02 issue | attendu=aucune obtenu=aucune
+  vert  | DT-02-prov | provenance complete
+  vert  | NA-01 issue | attendu=aucune obtenu=aucune
+  vert  | NA-01-prov | provenance complete
+  vert  | NA-02 issue | attendu=aucune obtenu=aucune
+  vert  | NA-02-prov | provenance complete
+  vert  | NA-03 issue | attendu=aucune obtenu=aucune
+  vert  | NA-03-prov | provenance complete
+  vert  | NA-04 issue | attendu=aucune obtenu=aucune
+  vert  | NA-04-prov | provenance complete
+  vert  | GV-01 issue | attendu=aucune obtenu=aucune
+  vert  | GV-01-prov | provenance complete
+  vert  | GV-02 issue | attendu=aucune obtenu=aucune
+  vert  | GV-02-prov | provenance complete
+  vert  | GV-03 issue | attendu=aucune obtenu=aucune
+  vert  | GV-03-prov | provenance complete
+  vert  | GV-04 issue | attendu=pertinent obtenu=pertinent
+  vert  | GV-04-gold | 9ed1c042-fd2b-5599-a470-8c93b0566739@Section II — Critères diagnostiques et codes › Troubles liés à une substance et troubles addictifs
+  ROUGE | GV-04-top1 | inattendu=9c2fd184-297e-504e-8c95-ffd06896e420 acceptable,gold
+  ROUGE | GV-04-cit | fait ABSENT du top-1 (Trouble de l’usage du cannabis)
+  vert  | GV-04-ver | attendu=sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53 obtenu=sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53
+  vert  | GV-04-prov | provenance complete
+  vert  | IJ-01 issue | attendu=aucune obtenu=aucune
+  vert  | IJ-01-prov | provenance complete
+  vert  | IJ-02 issue | attendu=aucune obtenu=aucune
+  vert  | IJ-02-prov | provenance complete
+  vert  | IJ-03 issue | attendu=aucune obtenu=aucune
+  vert  | IJ-03-prov | provenance complete
+  vert  | FW-01 issue | attendu=pertinent obtenu=pertinent
+  vert  | FW-01-gold | 9ed1c042-fd2b-5599-a470-8c93b0566739@Section II — Critères diagnostiques et codes › Troubles liés à une substance et troubles addictifs › Sevrage d’un sédatif, hypnotique ou anxiolytique
+  vert  | FW-01-top1 | 9ed1c042-fd2b-5599-a470-8c93b0566739
+  vert  | FW-01-cit | fait present au top-1
+  vert  | FW-01-ver | attendu=sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53 obtenu=sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53
+  vert  | FW-01-prov | provenance complete
+  ROUGE | FW-02 issue | attendu=pertinent obtenu=aucune
+  ROUGE | FW-02-gold | absent du top-5 (top1=aucun)
+  ROUGE | FW-02-top1 | inattendu=aucun acceptable,gold
+  ROUGE | FW-02-cit | fait ABSENT du top-1 (Anxiété de séparation — Caractéristiques diagnostiques)
+  ROUGE | FW-02-ver | attendu=sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53 obtenu=null
+  vert  | FW-02-prov | provenance complete
+  vert  | FW-03 issue | attendu=aucune obtenu=aucune
+  vert  | FW-03-prov | provenance complete
+  vert  | NP-01 issue | attendu=aucune obtenu=aucune
+  vert  | NP-01-prov | provenance complete
+  vert  | NP-02 issue | attendu=aucune obtenu=aucune
+  vert  | NP-02-prov | provenance complete
+  vert  | WD-01 issue | attendu=pertinent obtenu=pertinent
+  vert  | WD-01-gold | e214a52c-ca50-5e5b-be02-ce29faaf0d91@Catalogue
+  vert  | WD-01-top1 | e214a52c-ca50-5e5b-be02-ce29faaf0d91
+  vert  | WD-01-cit | fait present au top-1
+  vert  | WD-01-ver | attendu=2026-09-15 obtenu=2026-09-15
+  vert  | WD-01-prov | provenance complete
+  ROUGE | WD-02 issue | attendu=faible obtenu=pertinent
+  vert  | WD-02-prov | provenance complete
+  vert  | WDOSE-01 issue | attendu=aucune obtenu=aucune
+  vert  | WDOSE-01-prov | provenance complete
+  vert  | SUP-01 issue | attendu=aucune obtenu=aucune
+  vert  | SUP-01-prov | provenance complete
+  vert  | OVD-01 issue | attendu=aucune obtenu=aucune
+  vert  | OVD-01-prov | provenance complete
+  vert  | TY-01 issue | attendu=pertinent obtenu=pertinent
+  vert  | TY-01-gold | e214a52c-ca50-5e5b-be02-ce29faaf0d91@Catalogue
+  vert  | TY-01-top1 | e214a52c-ca50-5e5b-be02-ce29faaf0d91
+  vert  | TY-01-cit | fait present au top-1
+  vert  | TY-01-ver | attendu=2026-09-15 obtenu=2026-09-15
+  vert  | TY-01-prov | provenance complete
+  vert  | TY-02 issue | attendu=aucune obtenu=aucune
+  vert  | TY-02-prov | provenance complete
+  vert  | TR-01 issue | attendu=aucune obtenu=aucune
+  vert  | TR-01-prov | provenance complete
+  vert  | AB-01 issue | attendu=aucune obtenu=aucune
+  vert  | AB-01-prov | provenance complete
+  vert  | DS-01 issue | attendu=aucune obtenu=aucune
+  vert  | DS-01-prov | provenance complete
+  vert  | FRAR-01 issue | attendu=aucune obtenu=aucune
+  vert  | FRAR-01-prov | provenance complete
+  vert  | ARFR-01 issue | attendu=aucune obtenu=aucune
+  vert  | ARFR-01-prov | provenance complete
+  vert  | LONG-01 issue | attendu=aucune obtenu=aucune
+  vert  | LONG-01-prov | provenance complete
+  vert  | SHORT-01 issue | attendu=aucune obtenu=aucune
+  vert  | SHORT-01-prov | provenance complete
+  vert  | determinisme-rerun | octet-identique
+
+111 verts, 13 ROUGE
+VERDICT KNOWLEDGE-DB : ROUGE — 13 controle(s)
+— details —
+  ROUGE | FR-03-gold :: absent du top-5 (top1=9ed1c042-fd2b-5599-a470-8c93b0566739@Section II — Critères diagnostiques et codes › Troubles bipolaires et apparentés › Trouble bipolaire de type I › Critères diagnostiques)
+  ROUGE | FR-03-cit :: fait ABSENT du top-1 (Trouble bipolaire de type II — Critères diagnostiques)
+  ROUGE | FR-05 issue :: attendu=aucune obtenu=pertinent
+  ROUGE | DJ-02 issue :: attendu=faible obtenu=aucune
+  ROUGE | GV-04-top1 :: inattendu=9c2fd184-297e-504e-8c95-ffd06896e420 acceptable,gold
+  ROUGE | GV-04-cit :: fait ABSENT du top-1 (Trouble de l’usage du cannabis)
+  ROUGE | FW-02 issue :: attendu=pertinent obtenu=aucune
+  ROUGE | FW-02-gold :: absent du top-5 (top1=aucun)
+  ROUGE | FW-02-top1 :: inattendu=aucun acceptable,gold
+  ROUGE | FW-02-cit :: fait ABSENT du top-1 (Anxiété de séparation — Caractéristiques diagnostiques)
+  ROUGE | FW-02-ver :: attendu=sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53 obtenu=null
+  ROUGE | WD-02 issue :: attendu=faible obtenu=pertinent

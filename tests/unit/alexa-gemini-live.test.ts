@@ -44,11 +44,11 @@ describe("Gemini native Live egress", () => {
     const socket = Socket.sockets[0]!;
     expect(socket.sent[0]).toMatchObject({ setup: { model: "models/gemini-3.8-live",
       generationConfig: { responseModalities: ["AUDIO"] } } });
-    await r.data.sendAudio("AAAA");
-    expect(socket.sent.at(-1)).toEqual({ realtimeInput: { audio: { data: "AAAA", mimeType: "audio/pcm;rate=16000" } } });
-    socket.receive({ serverContent: { modelTurn: { parts: [{ inlineData: { data: "AAAA", mimeType: "audio/pcm;rate=24000" } }] }, turnComplete: true } });
+    await r.data.sendAudio("AAAAAA==");
+    expect(socket.sent.at(-1)).toEqual({ realtimeInput: { audio: { data: "AAAAAA==", mimeType: "audio/pcm;rate=16000" } } });
+    socket.receive({ serverContent: { modelTurn: { parts: [{ inlineData: { data: "AAAAAA==", mimeType: "audio/pcm;rate=24000" } }] }, turnComplete: true } });
     await new Promise((resolve) => setTimeout(resolve, 0));
-    expect(events).toContainEqual({ type: "audio", data: "AAAA", sampleRate: 24000 });
+    expect(events).toContainEqual({ type: "audio", data: "AAAAAA==", sampleRate: 24000 });
     expect(events).toContainEqual({ type: "turn_complete" });
     r.data.close(); expect(socket.readyState).toBe(3);
   });

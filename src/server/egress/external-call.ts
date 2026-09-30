@@ -1041,7 +1041,7 @@ export async function ouvrirGeminiLive(req: {
   if (e.JARVIS_ENABLED === "false" || e.JARVIS_VOICE_ENABLED === "false" || !key || req.signal?.aborted)
     return llmErr("configuration", alexaLive.indisponible);
   const refusal = await garderVoix(true);
-  if (refusal !== null) { diagnosticLive("deployment-refused"); return llmErr(refusal.error.code, alexaLive.indisponible); }
+  if (refusal !== null && !refusal.ok) { diagnosticLive("deployment-refused"); return llmErr(refusal.error.code, alexaLive.indisponible); }
   if (typeof WebSocket === "undefined") return llmErr("configuration", alexaLive.indisponible);
   const started = Date.now();
   diagnosticLive("connection-requested");
@@ -1138,14 +1138,14 @@ export async function ouvrirGeminiLive(req: {
       for (const call of m.toolCall?.functionCalls ?? []) {
         if (!ready || pending.has(call.id)) continue;
         const control = new AbortController(); pending.set(call.id, control);
-        const timer = setTimeout(() => control.abort(), 12_000);
+        const timer = setTimeout(() => control.abort("tool-timeout"), 12_000);
         emit({ type: "thinking" }); diagnosticLive("tool-requested");
         try {
           const result = await Promise.race([
             req.executeTool(call.name, call.args ?? {}, control.signal),
             new Promise<Record<string, unknown>>((resolve) => control.signal.addEventListener("abort", () => resolve({ status: "unavailable" }), { once: true })),
           ]);
-          if (closed || control.signal.aborted) continue;
+          if (closed || (control.signal.aborted && control.signal.reason !== "tool-timeout")) continue;
           await guard();
           const serialized = JSON.stringify(result); charsOut += serialized.length;
           if (Buffer.byteLength(serialized) > 24_000) throw new Error("live-tool-size");
