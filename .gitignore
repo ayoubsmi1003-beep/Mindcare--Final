@@ -85,5 +85,46 @@ playwright-report/
 test-results/
 # Playwright CLI output (may contain credentials)
 .playwright-cli/
-# Scratch SDD (ledgers, briefs, review packages) � jamais commit�.
+# Scratch SDD (ledgers, briefs, review packages) � jamais commit�.
 .superpowers/
+
+# Livres sources (PDF commerciaux sous copyright) — locaux uniquement,
+# jamais committés. Sauvegarde externe, pas git.
+Books/
+
+# Corpus canoniques générés (régénérables depuis Books/ via le pipeline).
+# Le package Taylor 14e déjà suivi reste suivi : ces règles ne s'appliquent
+# qu'aux nouveaux paquets non versionnés (nota : quota LFS libre ~1 Go,
+# insuffisant pour ~900 Mo de corpus + 273 Mo de modèles).
+knowledge/canonical-v2/dsm5-fr-2015-elsevier/
+knowledge/canonical-v2/icd11-ref-guide-2022-who/
+knowledge/canonical-v2/psychiatrie-clinique-tome-1-2016-tc-media/
+knowledge/canonical-v2/psychiatrie-clinique-tome-2-2016-tc-media/
+knowledge/canonical-v2/stahl-prescribers-guide-7e-cup/
+knowledge/.sortie-*
+knowledge/.taylor-backfill*.err
+knowledge/.lot-socket*
+
+# Artefacts temporaires d'ingestion / debug segmentation (racine)
+_seg_*.png
+_seg_*.txt
+_segc_*.png
+_img_pg*.png
+_dump_*.txt
+_seg_c_pages/
+_seg_c_renders/
+scanA?.py
+scanA?.txt
+m08live.txt
+_test_p75_0.png
+
+# Bundle voix : python embarqué + paquets pip régénérables par
+# `scripts/preparer-voix-native.mjs` (seuls assets LFS + configs sont suivis)
+resources/voix/packages/
+resources/voix/python/
+scripts/__pycache__/
+
+# Caches et sorties d'outillage régénérables
+.cache/
+artifacts/
+graphify-out/
