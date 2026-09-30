@@ -8,6 +8,10 @@
 
 "use client";
 
+import { useEffect, useState } from "react";
+import { abonnerLive, basculerLive } from "@/services/alexa-live";
+import type { VueVoix } from "@/services/jarvis-reveil";
+import { alexaLive } from "@/i18n/alexa-live";
 import { fr } from "@/i18n/fr";
 import type { EtatConversationPublique } from "@/services/conversation";
 
@@ -15,17 +19,23 @@ import { SiriOrb } from "./ui/siri-orb";
 import { Icone, type NomIcone } from "./ui/Icones";
 
 export function HeroAlexaLune({ etat }: { readonly etat: EtatConversationPublique }): React.JSX.Element {
+  const [voix, setVoix] = useState<VueVoix | null>(null);
+  useEffect(() => abonnerLive(setVoix), []);
+  const actif = voix !== null && voix.etat !== "desactive" && voix.etat !== "erreur";
   return (
     <div className="animate-fondu-monte flex flex-col items-center px-4 text-center motion-reduce:animate-none">
       {/* L'orbe mène l'état vide à pleine force : c'est le pic de l'écran,
           pas un pictogramme — le titre `text-display` suit, les pastilles se
           taisent autour. */}
-      <span className="inline-flex items-center justify-center overflow-hidden rounded-full">
+      <button type="button" onClick={basculerLive} aria-label={actif ? alexaLive.arreter : alexaLive.disponible}
+        aria-pressed={actif} disabled={etat.carteEcriture !== null && !actif}
+        className="inline-flex cursor-pointer items-center justify-center overflow-hidden rounded-full border-0 bg-transparent p-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-action-600">
         <SiriOrb
           size="112px"
-          etat={etat.carteEcriture !== null ? "ecoute" : etat.etat === "envoi" || etat.etat === "flux" ? "traitement" : "idle"}
+          etat={actif ? voix.etat === "parole" ? "parole" : voix.etat === "ecoute" ? "ecoute" : "traitement"
+            : etat.carteEcriture !== null ? "ecoute" : etat.etat === "envoi" || etat.etat === "flux" ? "traitement" : "idle"}
         />
-      </span>
+      </button>
       <h2 className="m-0 mt-4 font-ui text-display font-semibold tracking-display text-night-ink">
         {fr.jarvis.titre}
       </h2>

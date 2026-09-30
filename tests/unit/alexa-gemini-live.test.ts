@@ -6,6 +6,8 @@ const config = vi.hoisted(() => ({
 const gate = vi.hoisted(() => ({ cloud: true }));
 vi.mock("@/server/env", () => ({ env: () => config }));
 vi.mock("@/server/db/withCaller", () => ({
+  withCaller: async (_actor: string | null, fn: (q: unknown) => unknown) => fn({ query: async (sql: string) =>
+    sql.includes("is_cloud_dev") ? [{ cloud: gate.cloud }] : [] }),
   withEgressGate: async (fn: (q: unknown) => unknown) => fn({ query: async (sql: string) =>
     sql.includes("is_cloud_dev") ? [{ cloud: gate.cloud }] : [] }),
 }));
@@ -57,6 +59,26 @@ describe("Gemini native Live egress", () => {
     const r = await gateway.ouvrirGeminiLive({ sessionToken: "00000000-0000-4000-8000-000000000001",
       currentPatientId: null, onEvent: () => {}, executeTool: async () => ({}) });
     expect(r.ok).toBe(false); expect(Socket.sockets).toHaveLength(0);
+  });
+  it("keeps the database synthetic-deployment lock even with a configured cloud key", async () => {
+    vi.stubGlobal("WebSocket", Socket); gate.cloud = false;
+    const r = await gateway.ouvrirGeminiLive({ sessionToken: crypto.randomUUID(), currentPatientId: null,
+      onEvent: () => {}, executeTool: async () => ({}) });
+    expect(r.ok).toBe(false); expect(Socket.sockets).toHaveLength(0);
+  });
+  it("closes once and aborts pending tools when the client leaves", async () => {
+    vi.stubGlobal("WebSocket", Socket);
+    const abort = new AbortController(), events: unknown[] = [], signals: AbortSignal[] = [];
+    const r = await gateway.ouvrirGeminiLive({ sessionToken: crypto.randomUUID(), currentPatientId: null, signal: abort.signal,
+      onEvent: (event) => events.push(event), executeTool: async (_name, _args, signal) => {
+        signals.push(signal); return new Promise(() => {});
+      } });
+    expect(r.ok).toBe(true); if (!r.ok) return;
+    Socket.sockets[0]!.receive({ toolCall: { functionCalls: [{ id: "pending", name: "get_patient_summary", args: {} }] } });
+    await new Promise((resolve) => setTimeout(resolve, 0));
+    abort.abort(); r.data.close();
+    expect(signals[0]?.aborted).toBe(true);
+    expect(events.filter((event) => (event as { type: string }).type === "closed")).toHaveLength(1);
   });
   it("returns tool results with the exact call ID and preserves multilingual conversational context", async () => {
     vi.stubGlobal("WebSocket", Socket);

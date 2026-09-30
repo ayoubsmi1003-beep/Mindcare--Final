@@ -1,6 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Isolated production verification preserves the app's active .next build.
+  distDir: process.env["MINDCARE_LIVE_CHECK"] === "1" ? ".next-live-check" : ".next",
   reactStrictMode: true,
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },

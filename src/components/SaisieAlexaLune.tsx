@@ -1,8 +1,7 @@
 /**
  * La zone de saisie Alexa Lune — 21st.dev moon, gestes MindCare.
  *
- * MÊME CONTRAT que `SaisieJarvis` (écrire + Envoyer, MAINTENIR pour parler,
- * Stop pendant un flux, dictée relue avant envoi, erreur voix nommée) mais
+ * MÊME CONTRAT que `SaisieJarvis` (texte confirmé et voix Live en lecture seule) mais
  * géométrie de la référence : textarea auto-extensible en haut, rangée
  * voix-à-gauche / envoi-à-droite en bas, boîte en verre sombre.
  *
@@ -15,18 +14,13 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 
 import { fr } from "@/i18n/fr";
+import { alexaLive } from "@/i18n/alexa-live";
 import { cn } from "@/lib/utils";
-import {
-  annulerDictee,
-  arreterEtTranscrire,
-  demarrerDictee,
-  detecterCapacitesVoix,
-} from "@/services/jarvis-voix";
+import { abonnerLive, basculerLive, arreterLive } from "@/services/alexa-live";
+import type { VueVoix } from "@/services/jarvis-reveil";
 import type { EtatConversationPublique } from "@/services/conversation";
 
 import { Icone } from "./ui/Icones";
-
-type PhaseDictee = "inerte" | "ecoute" | "transcription";
 
 interface AutoResizeOptions {
   readonly minHeight: number;
@@ -82,46 +76,14 @@ export function SaisieAlexaLune({
     minHeight: 48,
     maxHeight: 150,
   });
-  const [phase, setPhase] = useState<PhaseDictee>("inerte");
-  const [messageVoix, setMessageVoix] = useState<string | null>(null);
-
-  // SSR-sûr : `false` tant que `window` n'existe pas ; l'écart serveur/client
-  // ne porte que sur un bouton inerte, jamais sur du contenu.
-  const [voixPossible] = useState(() => detecterCapacitesVoix().dicteePossible);
+  const [voix, setVoix] = useState<VueVoix | null>(null);
+  useEffect(() => abonnerLive(setVoix), []);
+  const actif = voix !== null && voix.etat !== "desactive" && voix.etat !== "erreur";
+  const messageVoix = actif || voix?.etat === "erreur" ? voix?.raison ?? null : null;
+  const libelleVoix = actif ? alexaLive.arreter : alexaLive.disponible;
 
   const fluxEnCours = etat.etat === "envoi" || etat.etat === "flux";
-  const bloque =
-    fluxEnCours || etat.carteEcriture !== null || phase === "ecoute" || phase === "transcription";
-
-  const demarrer = useCallback(async () => {
-    if (phase !== "inerte") return;
-    setMessageVoix(null);
-    setPhase("ecoute");
-    const r = await demarrerDictee();
-    if (!r.ok) {
-      setPhase("inerte");
-      setMessageVoix(r.error.message);
-    }
-  }, [phase]);
-
-  const relacher = useCallback(async () => {
-    if (phase !== "ecoute") return;
-    setPhase("transcription");
-    const r = await arreterEtTranscrire();
-    if (r.ok) {
-      const courant = etat.saisie;
-      onChangerSaisie(courant === "" ? r.data : `${courant} ${r.data}`.trim());
-      textareaRef.current?.focus();
-    } else {
-      setMessageVoix(r.error.message);
-    }
-    setPhase("inerte");
-  }, [etat.saisie, onChangerSaisie, phase, textareaRef]);
-
-  const annuler = useCallback(() => {
-    annulerDictee();
-    setPhase("inerte");
-  }, []);
+  const bloque = fluxEnCours || etat.carteEcriture !== null || actif;
 
   // Une amorce remplit le champ depuis le parent : la hauteur suit.
   useEffect(() => {
@@ -143,7 +105,7 @@ export function SaisieAlexaLune({
               e.preventDefault();
               onEnvoyer();
             }
-            if (e.key === "Escape" && phase === "ecoute") annuler();
+            if (e.key === "Escape" && actif) arreterLive();
           }}
           disabled={bloque}
           placeholder={fr.jarvis.invite}
@@ -175,47 +137,27 @@ export function SaisieAlexaLune({
             </span>
           ) : (
             <>
-              {/* DICTÉE — presser-pour-parler, même protocole que le panneau. */}
+              {/* Continuous Live session, identical to the side panel. */}
               <button
                 type="button"
-                {...(phase === "ecoute"
-                  ? {
-                      onPointerUp: () => void relacher(),
-                      onPointerLeave: () => void relacher(),
-                      onKeyDown: (e: React.KeyboardEvent) => {
-                        if (e.key === "Escape") annuler();
-                      },
-                    }
-                  : {
-                      onPointerDown: () => void demarrer(),
-                    })}
-                disabled={voixPossible === false || bloque}
-                aria-label={phase === "ecoute" ? fr.jarvis.voix.ecoute : fr.jarvis.voix.parler}
-                title={
-                  voixPossible === false
-                    ? fr.jarvis.voix.microIndisponible
-                    : phase === "ecoute"
-                      ? fr.jarvis.voix.ecoute
-                      : fr.jarvis.voix.parler
-                }
-                aria-pressed={phase === "ecoute"}
+                onClick={basculerLive}
+                disabled={etat.carteEcriture !== null && !actif}
+                aria-label={libelleVoix}
+                title={voix?.raison ?? libelleVoix}
+                aria-pressed={actif}
                 className={cn(
                   "inline-flex min-h-target min-w-0 select-none items-center justify-center rounded-md border px-3 font-ui text-label transition duration-quick ease-soft",
-                  phase === "ecoute"
+                  actif
                     ? "lune-alexa-ecoute cursor-pointer border-night-rule text-night-ink"
                     : "cursor-pointer border-night-rule bg-transparent text-night-ink-soft hover:bg-chrome-survol hover:text-night-ink",
-                  (voixPossible === false || bloque) && "cursor-not-allowed opacity-disabled",
+                  etat.carteEcriture !== null && !actif && "cursor-not-allowed opacity-disabled",
                 )}
               >
                 <span className="shrink-0">
                   <Icone nom="audio" taille={16} />
                 </span>
                 <span className="truncate pl-2">
-                  {phase === "ecoute"
-                    ? fr.jarvis.voix.ecoute
-                    : phase === "transcription"
-                      ? fr.jarvis.voix.transcription
-                      : fr.jarvis.voix.parler}
+                  {libelleVoix}
                 </span>
               </button>
 
@@ -242,7 +184,7 @@ export function SaisieAlexaLune({
 
       {/* L'erreur voix vit ici, une ligne — le clavier reste utilisable. */}
       {messageVoix !== null && (
-        <p role="status" className="m-0 font-ui text-label text-attention">
+        <p role="status" className={`m-0 font-ui text-label ${voix?.etat === "erreur" ? "text-attention" : "text-night-ink-soft"}`}>
           {messageVoix}
         </p>
       )}

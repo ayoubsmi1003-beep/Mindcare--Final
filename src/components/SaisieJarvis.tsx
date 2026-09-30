@@ -1,37 +1,16 @@
-/**
- * La zone de saisie Jarvis — V-JARVIS-CORE.
- *
- * PARTAGEE par le panneau et l'ecran plein. Trois gestes, jamais plus :
- *  - ecrire + Envoyer ;
- *  - MAINTENIR pour parler : le micro ne s'allume que sous le doigt, il
- *    s'eteint au relachement et la transcription atterrit dans le champ,
- *    ou elle est RELUE avant envoi (jamais d'envoi vocal direct) ;
- *  - Arreter un flux en cours.
- *
- * LA DICTEE N'ENVOIE RIEN ELLE-MEME. Le texte transcrit passe par la meme
- * relecture humaine qu'une frappe clavier — c'est ce qui rend la voix un
- * peripherique de saisie, pas une voie d'ecriture parallele.
- *
- * Les erreurs voix s'affichent ICI, en une ligne nommee — jamais `alert()`,
- * jamais un message du serveur relaye brut.
- */
+/** Text keeps the existing confirmation flow; the microphone opens read-only Live. */
 
 "use client";
 
-import { useCallback, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { fr } from "@/i18n/fr";
-import {
-  annulerDictee,
-  arreterEtTranscrire,
-  demarrerDictee,
-  detecterCapacitesVoix,
-} from "@/services/jarvis-voix";
+import { alexaLive } from "@/i18n/alexa-live";
+import { abonnerLive, basculerLive } from "@/services/alexa-live";
+import type { VueVoix } from "@/services/jarvis-reveil";
 import type { EtatConversationPublique } from "@/services/conversation";
 
 import { Icone } from "./ui/Icones";
-
-type PhaseDictee = "inerte" | "ecoute" | "transcription";
 
 export function SaisieJarvis({
   etat,
@@ -45,46 +24,14 @@ export function SaisieJarvis({
   readonly onInterrompre: () => void;
 }): React.JSX.Element {
   const champRef = useRef<HTMLInputElement | null>(null);
-  const [phase, setPhase] = useState<PhaseDictee>("inerte");
-  const [messageVoix, setMessageVoix] = useState<string | null>(null);
-
-  // SSR-sur : la fonction rend false tant que `window` n'existe pas ; l'ecart
-  // serveur/client ne porte que sur un bouton inerte, jamais sur du contenu.
-  const [voixPossible] = useState(() => detecterCapacitesVoix().dicteePossible);
+  const [voix, setVoix] = useState<VueVoix | null>(null);
+  useEffect(() => abonnerLive(setVoix), []);
+  const actif = voix !== null && voix.etat !== "desactive" && voix.etat !== "erreur";
+  const messageVoix = actif || voix?.etat === "erreur" ? voix?.raison ?? null : null;
+  const libelleVoix = actif ? alexaLive.arreter : alexaLive.disponible;
 
   const fluxEnCours = etat.etat === "envoi" || etat.etat === "flux";
-  const bloque =
-    fluxEnCours || etat.carteEcriture !== null || phase === "ecoute" || phase === "transcription";
-
-  const demarrer = useCallback(async () => {
-    if (phase !== "inerte") return;
-    setMessageVoix(null);
-    setPhase("ecoute");
-    const r = await demarrerDictee();
-    if (!r.ok) {
-      setPhase("inerte");
-      setMessageVoix(r.error.message);
-    }
-  }, [phase]);
-
-  const relacher = useCallback(async () => {
-    if (phase !== "ecoute") return;
-    setPhase("transcription");
-    const r = await arreterEtTranscrire();
-    if (r.ok) {
-      const courant = etat.saisie;
-      onChangerSaisie(courant === "" ? r.data : `${courant} ${r.data}`.trim());
-      champRef.current?.focus();
-    } else {
-      setMessageVoix(r.error.message);
-    }
-    setPhase("inerte");
-  }, [etat.saisie, onChangerSaisie, phase]);
-
-  const annuler = useCallback(() => {
-    annulerDictee();
-    setPhase("inerte");
-  }, []);
+  const bloque = fluxEnCours || etat.carteEcriture !== null || actif;
 
   return (
     /*
@@ -130,32 +77,14 @@ export function SaisieJarvis({
           </button>
         ) : (
           <>
-            {/* DICTEE — presser-pour-parler. Inerte NOMMEE si le navigateur
-                n'a pas l'API : un bouton qui n'ecoute pas apprend que les
-                commandes mentent ; ici il dit pourquoi il n'ecoute pas. */}
+            {/* A click starts a continuous session; the same button stops it. */}
             <button
               type="button"
-              {...(phase === "ecoute"
-                ? {
-                    onPointerUp: () => void relacher(),
-                    onPointerLeave: () => void relacher(),
-                    onKeyDown: (e) => {
-                      if (e.key === "Escape") annuler();
-                    },
-                  }
-                : {
-                    onPointerDown: () => void demarrer(),
-                  })}
-              disabled={voixPossible === false || bloque}
-              aria-label={phase === "ecoute" ? fr.jarvis.voix.ecoute : fr.jarvis.voix.parler}
-              title={
-                voixPossible === false
-                  ? fr.jarvis.voix.microIndisponible
-                  : phase === "ecoute"
-                    ? fr.jarvis.voix.ecoute
-                    : fr.jarvis.voix.parler
-              }
-              aria-pressed={phase === "ecoute"}
+              onClick={basculerLive}
+              disabled={etat.carteEcriture !== null && !actif}
+              aria-label={libelleVoix}
+              title={voix?.raison ?? libelleVoix}
+              aria-pressed={actif}
               className={[
                 /*
                   ⚠️ CE BOUTON CÈDE, ET L'ENVOI NON — MESURÉ À L'ÉCRAN.
@@ -169,10 +98,10 @@ export function SaisieJarvis({
                   inchangés, donc rien n'est perdu pour personne.
                 */
                 "inline-flex min-h-target min-w-0 shrink select-none items-center justify-center rounded-md border px-3 font-ui text-label transition duration-quick ease-soft",
-                phase === "ecoute"
+                actif
                   ? "cursor-pointer border-ai-500 bg-ai-50 text-ai-600"
                   : "cursor-pointer border-rule bg-paper text-ink-700 hover:bg-sunken",
-                voixPossible === false || bloque
+                etat.carteEcriture !== null && !actif
                   ? "cursor-not-allowed bg-sunken text-ink-500 opacity-disabled"
                   : "",
               ].join(" ")}
@@ -181,7 +110,7 @@ export function SaisieJarvis({
                 <Icone nom="audio" taille={16} />
               </span>
               <span className="truncate pl-2">
-                {phase === "ecoute" ? fr.jarvis.voix.ecoute : fr.jarvis.voix.parler}
+                {libelleVoix}
               </span>
             </button>
 
@@ -203,7 +132,7 @@ export function SaisieJarvis({
       {/* L'erreur voix vit ici, une ligne, sans masquer la saisie — le clavier
           reste utilisable pendant qu'elle est affichee. */}
       {messageVoix !== null && (
-        <p role="status" className="m-0 font-ui text-label text-attention-ink">
+        <p role="status" className={`m-0 font-ui text-label ${voix?.etat === "erreur" ? "text-attention-ink" : "text-ink-500"}`}>
           {messageVoix}
         </p>
       )}

@@ -728,7 +728,7 @@ export async function executerTour(
           // Explicit next-patient selection is read from the SQL gate, never guessed.
           textes[textes.length - 1] = localCarte.rendre(textes[textes.length - 1]!);
           adopterResolution({ etat: "explicite", cible: { id, libelle, numeroDossier: "", origine: "recherche" } }, Date.now());
-          verdict = { etat: "unique", source: "fil", patient: { id, libelle } };
+          verdict = { etat: "unique", source: "explicite", patient: { id, libelle } };
           localCarte = reinitialiserCarte();
         } else if (lectures.length > 1) return bilanClarificationM02(fr.jarvis.contexte.preciserPatient, verdict, null);
       }

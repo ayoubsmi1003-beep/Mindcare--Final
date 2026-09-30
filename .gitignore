@@ -26,6 +26,7 @@ volumes/
 # Node / build
 node_modules/
 .next/
+.next-live-check/
 dist/
 build/
 *.log

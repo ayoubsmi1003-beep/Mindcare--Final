@@ -29,7 +29,8 @@
     "**/*.tsx",
     "**/*.mts",
     "**/*.cts",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    ".next-live-check/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",

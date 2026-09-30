@@ -1,7 +1,7 @@
 import { z } from "zod";
 import type { ClientSql, ArgsJarvis } from "@/server/jarvis/client-sql";
 
-export interface ContexteLive { currentPatientId: string | null; referencedPatientId: string | null }
+export interface ContexteLive { currentPatientId: string | null; referencedPatientId: string | null; targetUnresolved?: boolean }
 const PatientArgs = z.object({ patient_id: z.guid().optional(), query: z.string().trim().min(2).max(80).optional() }).strict()
   .refine((a) => !(a.patient_id && a.query));
 const Recherche = z.object({ query: z.string().trim().min(2).max(80) }).strict();
@@ -43,7 +43,12 @@ export async function lireOutilLive(client: ClientSql, name: string, args: unkno
   try {
     if (signal?.aborted) return unavailable();
     if (name === "search_patient") {
-      const v = Recherche.safeParse(args); return v.success ? await chercher(client, v.data.query) : unavailable();
+      const v = Recherche.safeParse(args); if (!v.success) return unavailable();
+      const result = await chercher(client, v.data.query);
+      const found = result.status === "ok" && "patients" in result ? result.patients[0]?.patient_id : null;
+      context.referencedPatientId = typeof found === "string" ? found : null;
+      context.targetUnresolved = result.status !== "ok";
+      return result;
     }
     if (name === "get_today_agenda" || name === "get_next_patient") {
       if (!z.object({}).strict().safeParse(args).success) return unavailable();
@@ -60,15 +65,24 @@ export async function lireOutilLive(client: ClientSql, name: string, args: unkno
         safe.push({ patient: identite(p), starts_at: appointment.starts_at ?? null,
           ends_at: appointment.ends_at ?? null, status: appointment.status ?? null, kind: appointment.kind ?? null });
       }
-      return signal?.aborted ? unavailable() : { status: "ok", day, appointments: safe };
+      if (signal?.aborted) return unavailable();
+      if (name === "get_next_patient") {
+        const patient = objet(safe[0]?.patient);
+        context.referencedPatientId = safe.length === 1 && typeof patient?.patient_id === "string" ? patient.patient_id : null;
+        context.targetUnresolved = context.referencedPatientId === null;
+      }
+      return { status: "ok", day, appointments: safe };
     }
     if (!["get_patient", "get_current_patient", "get_patient_summary", "get_patient_consultations", "get_patient_treatments"].includes(name)) return unavailable();
     const v = PatientArgs.safeParse(args); if (!v.success) return unavailable();
     if (name === "get_current_patient" && Object.keys(v.data).length > 0) return unavailable();
+    if (name !== "get_current_patient" && !v.data.patient_id && !v.data.query && context.targetUnresolved) return unavailable();
     let id = name === "get_current_patient" ? context.currentPatientId : v.data.patient_id ?? context.referencedPatientId ?? context.currentPatientId;
     if (v.data.query) {
       const search = await chercher(client, v.data.query);
-      if (search.status !== "ok" || !("patients" in search)) return search;
+      if (search.status !== "ok" || !("patients" in search)) {
+        context.referencedPatientId = null; context.targetUnresolved = true; return search;
+      }
       const match = search.patients[0]; id = typeof match?.patient_id === "string" ? match.patient_id : null;
     }
     if (!id || signal?.aborted) return unavailable();
@@ -100,6 +114,7 @@ export async function lireOutilLive(client: ClientSql, name: string, args: unkno
     }
     if (signal?.aborted || new TextEncoder().encode(JSON.stringify(result)).length > 24_000) return unavailable();
     context.referencedPatientId = id;
+    context.targetUnresolved = false;
     return result;
   } catch { return unavailable(); }
 }

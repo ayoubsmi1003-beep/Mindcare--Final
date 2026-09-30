@@ -27,7 +27,8 @@
  * rien ne sait pseudonymiser ; à la sortie sort du TEXTE déjà composé. 034
  * développe le raisonnement.
  */
-import { withEgressGate } from "@/server/db/withCaller";
+import { withCaller, withEgressGate } from "@/server/db/withCaller";
+import { createHash } from "node:crypto";
 import { classerCharge, MESSAGE_REFUS_FRONTIERE } from "@/server/egress/classification";
 import { env } from "@/server/env";
 import { mkdir, readFile, rename, writeFile } from "node:fs/promises";
@@ -38,6 +39,7 @@ import { PoolModelesGratuits, type BesoinModele, type QualificationModele, type 
 import { conduireInference } from "./tentatives-inference";
 import { z } from "zod";
 import { alexaLive } from "@/i18n/alexa-live";
+import { instructionAlexaLive } from "@/i18n/alexa-live-instruction";
 import type { EvenementGemini } from "@/shared/jarvis/live";
 import { OUTILS_LIVE } from "@/server/voice/live-tools";
 
@@ -919,10 +921,11 @@ async function garderVoix(forcer = false): Promise<LlmResult<never> | null> {
   // ci-dessus est un réglage de fichier, celui-ci est un état de la BASE.
   // Deux verrous indépendants, dont un que l'environnement ne peut pas ouvrir.
   //
-  // Ici aussi la connexion privilégiée disparaît : `app.is_cloud_dev()` est
-  // exécutable par `mindcare_app`, donc `withEgressGate` suffit.
+  // 016 permits anon to read deployment metadata. The connection role is
+  // NOINHERIT and cannot read it: use the existing anonymous read scope,
+  // while boundary audit writes keep their separate withEgressGate scope.
   try {
-    const cloud = await withEgressGate(async (q) => {
+    const cloud = await withCaller(null, async (q) => {
       const lignes = await q.query<{ cloud: boolean | null }>(
         "SELECT app.is_cloud_dev() AS cloud",
       );
@@ -1005,6 +1008,7 @@ function nomFichierPour(mimeType: string): string | null {
 
 // Native Live audio shares this egress boundary, never a browser provider key.
 const GEMINI_LIVE_MODEL = "gemini-3.8-live";
+const GEMINI_LIVE_PROMPT_HASH = createHash("sha256").update(instructionAlexaLive).digest("hex");
 const MessageGemini = z.object({
   setupComplete: z.unknown().optional(),
   serverContent: z.object({
@@ -1026,7 +1030,7 @@ export interface SessionGeminiLive {
 
 /** Structured stage metadata only: never keys, URLs, audio, transcripts or IDs. */
 export function diagnosticLive(stage: string, count?: number): void {
-  if (env().ALEXA_LIVE_DEBUG === "true") console.info(JSON.stringify({ event: "alexa.live", stage,
+  if (env().ALEXA_LIVE_DEBUG === "true") console.warn(JSON.stringify({ event: "alexa.live", stage,
     ...(count === undefined ? {} : { count }) }));
 }
 
@@ -1058,15 +1062,20 @@ export async function ouvrirGeminiLive(req: {
   const emit = (event: EvenementGemini) => { if (!closed) req.onEvent(event); };
   const finish = (failed: boolean) => {
     if (closed) return;
-    if (ready) emit({ type: failed ? "error" : "closed" });
     closed = true; clearTimeout(timeout); clearTimeout(idle);
     req.signal?.removeEventListener("abort", cancel);
     for (const control of pending.values()) control.abort(); pending.clear();
-    socket.close(); diagnosticLive(failed ? "connection-failed" : "session-closed");
+    try { socket.close(); } catch { /* The connection may not have opened. */ }
+    if (ready) { try { req.onEvent({ type: failed ? "error" : "closed" }); } catch { /* Cleanup still completes. */ } }
+    diagnosticLive(failed ? "connection-failed" : "session-closed");
     if (!ready) resolveReady(llmErr("indisponible", alexaLive.indisponible));
     void journaliser({ purpose: "voix-entree", provider: "google", model: GEMINI_LIVE_MODEL,
-      promptVersion: "alexa-live-readonly-v1", promptHash: "native-audio-synthetic-only", sessionToken: req.sessionToken,
+      promptVersion: "alexa-live-readonly-v1", promptHash: GEMINI_LIVE_PROMPT_HASH, sessionToken: req.sessionToken,
       charsOut, tokensIn: null, tokensOut: null, estimatedCostUsd: null,
+      outcome: failed ? "error" : "ok", latencyMs: Date.now() - started });
+    if (!firstOutput) void journaliser({ purpose: "voix-sortie", provider: "google", model: GEMINI_LIVE_MODEL,
+      promptVersion: "alexa-live-readonly-v1", promptHash: GEMINI_LIVE_PROMPT_HASH, sessionToken: req.sessionToken,
+      charsOut: null, tokensIn: null, tokensOut: null, estimatedCostUsd: null,
       outcome: failed ? "error" : "ok", latencyMs: Date.now() - started });
   };
   const cancel = () => finish(false);
@@ -1104,7 +1113,7 @@ export async function ouvrirGeminiLive(req: {
     try {
       diagnosticLive("websocket-open");
       send({ setup: { model: `models/${GEMINI_LIVE_MODEL}`, generationConfig: { responseModalities: ["AUDIO"] },
-        systemInstruction: { parts: [{ text: `${alexaLive.instruction}\nCurrent MindCare context: current_patient_id = ${req.currentPatientId ?? "none"}` }] },
+        systemInstruction: { parts: [{ text: `${instructionAlexaLive}\nCurrent MindCare context: current_patient_id = ${req.currentPatientId ?? "none"}` }] },
         inputAudioTranscription: {}, tools: [{ functionDeclarations: OUTILS_LIVE }] } });
     } catch { finish(true); }
   });
@@ -1136,7 +1145,7 @@ export async function ouvrirGeminiLive(req: {
       if (c?.turnComplete) { emit({ type: "turn_complete" }); diagnosticLive("turn-complete"); }
       for (const id of m.toolCallCancellation?.ids ?? []) { pending.get(id)?.abort(); pending.delete(id); }
       for (const call of m.toolCall?.functionCalls ?? []) {
-        if (!ready || pending.has(call.id)) continue;
+        if (closed || !ready || pending.has(call.id)) continue;
         const control = new AbortController(); pending.set(call.id, control);
         const timer = setTimeout(() => control.abort("tool-timeout"), 12_000);
         emit({ type: "thinking" }); diagnosticLive("tool-requested");

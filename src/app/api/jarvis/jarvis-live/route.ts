@@ -75,6 +75,7 @@ export async function POST(req: Request): Promise<Response> {
   };
   sessions.set(id, session);
   req.signal.addEventListener("abort", session.dispose, { once: true });
+  if (req.signal.aborted) { session.dispose(); return unavailable(); }
   const emit = (event: EvenementLive) => {
     if (disposed) return;
     if (!controller) { queued.push(event); if (queued.length > 32) session.dispose(); return; }
@@ -89,6 +90,7 @@ export async function POST(req: Request): Promise<Response> {
       const result = await lireOutilLive(client, name, args, context, signal);
       if (disposed || signal.aborted || revision !== session.revision) return { status: "unavailable" };
       session.context.referencedPatientId = context.referencedPatientId;
+      session.context.targetUnresolved = context.targetUnresolved === true;
       diagnosticLive("tool-executed");
       return result;
     },
@@ -99,6 +101,7 @@ export async function POST(req: Request): Promise<Response> {
     start(c) {
       controller = c; emit({ type: "ready", sessionId: id });
       for (const event of queued.splice(0)) emit(event);
+      if (disposed) return;
       heartbeat = setInterval(() => { try { c.enqueue(encoder.encode("\n")); } catch { session.dispose(); } }, 15_000);
     },
     cancel: () => session.dispose(),

@@ -13,7 +13,7 @@
 
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 import { fr } from "@/i18n/fr";
 import {
@@ -33,6 +33,7 @@ import {
   type PatientActif,
 } from "@/services/patient-actif";
 import { cibleValide } from "@/services/jarvis-contexte";
+import { arreterLive } from "@/services/alexa-live";
 
 import { CarteConfirmation } from "./CarteConfirmation";
 import { FilJarvis } from "./FilJarvis";
@@ -61,6 +62,12 @@ export function PanneauJarvis({
   const [etat, setEtat] = useState<EtatConversationPublique | null>(null);
   const [patientActif, setPatientActif] = useState<PatientActif | null>(null);
   const [maintenant, setMaintenant] = useState<number>(() => Date.now());
+  const etaitOuvert = useRef(ouvert);
+
+  useEffect(() => {
+    if (etaitOuvert.current && !ouvert) arreterLive();
+    etaitOuvert.current = ouvert;
+  }, [ouvert]);
 
   useEffect(() => abonnerConversation(setEtat), []);
   // Phase 3 : l'écran ALIMENTE la cible — `definirContextePatient` n'avait
