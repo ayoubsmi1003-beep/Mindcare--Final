@@ -23,12 +23,21 @@
  * Aucune donnée saisie ne part dans un `console.log` (I5) : ce composant ne
  * journalise rien, jamais.
  *
- * v9 — LA CARTE EST COMPOSÉE. L'en-tête de carte porte la marque (le mark au
- * trait, blanc sur sa pastille de dégradé — le seul dégradé de la carte, et
- * c'est l'orbe du produit), le titre, et les états d'erreur prennent la place
- * qu'ils ont toujours eue : entre le titre et les champs, JAMAIS après le
- * bouton — une erreur qu'on découvre en bas d'un formulaire est une erreur
- * qu'on ne relit pas.
+ * v10 — AUTH-SWITCH VERT/BLANC, SANS INSCRIPTION NI SOCIAL. La référence
+ * 21st.dev `AuthSwitch` apporte la composition (carte scindée, pastilles
+ * pleine-largeur, bouton pilule) ; le reste est refusé pour des raisons
+ * métier, pas de goût :
+ *   · pas de mode `sign-up` : un cabinet n'a pas d'inscription publique, une
+ *     bascule « Créez votre compte » serait une porte d'enregistrement
+ *     sauvage (loi 18-07, audit) ;
+ *   · pas de `SocialIcons` : OAuth externe sur des dossiers de psychiatrie,
+ *     en local-first et souvent hors ligne, est une fuite, pas une fonction ;
+ *   · pas de dégradé violet ni de `<style>` en ligne : `tokens.css` seul
+ *     (I10), teinte `--grad-auth` verte déjà au catalogue ;
+ *   · pas d'emoji en guise d'icônes : libellés liés + pastille de marque.
+ * Il reste exactement : e-mail + mot de passe + bouton Se connecter.
+ * Les états d'erreur gardent leur place : entre le titre et les champs,
+ * JAMAIS après le bouton.
  */
 
 "use client";
@@ -37,7 +46,7 @@ import { useId, useState } from "react";
 
 import { fr } from "@/i18n/fr";
 import { Bouton } from "./ui/Bouton";
-import { Icone, MarqueMindCare } from "./ui/Icones";
+import { Icone } from "./ui/Icones";
 
 export interface FormulaireConnexionProps {
   readonly onSubmit: (email: string, motDePasse: string) => void;
@@ -68,24 +77,22 @@ export function FormulaireConnexion({
     onSubmit(email, motDePasse);
   }
 
+  // Pastille AuthSwitch : gris de la maquette = `--sunken`, anneau vert au
+  // focus-clavier. `rounded-full` : la géométrie pilule de la référence.
+  // Aucune valeur en dur — `tailwind.config.ts` ne connaît que des jetons.
+  const classePastille =
+    "min-h-target-lg w-full rounded-full border border-rule bg-sunken px-6 py-4 font-ui text-body text-ink-900 outline-none transition duration-quick ease-soft placeholder:text-ink-300 hover:border-ink-300 focus-visible:border-action-600 focus-visible:outline focus-visible:outline-action-600 focus-visible:outline-offset disabled:cursor-not-allowed disabled:opacity-disabled";
+
   return (
-    <div className="flex w-full flex-col gap-6 rounded-xl border border-rule bg-card p-10 shadow-lift3 max-w-form">
-      {/* L'en-tête de marque de la carte : le mark dans son orbe, le titre.
-          C'est le même mark que le rail — l'application se reconnaît avant
-          qu'on ait lu un mot. */}
-      <div className="flex items-center gap-4">
-        <span
-          aria-hidden="true"
-          className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-grad-orb text-on-brand shadow-glow-brand"
-        >
-          <MarqueMindCare taille={28} />
-        </span>
-        <div className="flex min-w-0 flex-col">
-          <h1 className="m-0 font-ui text-title font-semibold text-ink-900">
-            {fr.connexion.titre}
-          </h1>
-          <p className="m-0 font-ui text-label text-ink-500">{fr.connexion.accroche}</p>
-        </div>
+    <div className="flex w-full flex-col gap-6 bg-card p-8 tablet:p-12">
+      {/* Titre de la colonne formulaire — le `<h1>` unique de l'écran. La
+          marque vit dans le panneau vert (page.tsx), pas ici : un seul
+          orbe par écran, pas deux. */}
+      <div className="flex min-w-0 flex-col gap-2 text-center tablet:text-left">
+        <h1 className="m-0 font-ui text-display font-bold text-ink-900">
+          {fr.connexion.titre}
+        </h1>
+        <p className="m-0 font-ui text-body text-ink-500">{fr.connexion.accroche}</p>
       </div>
 
       {/* Hors ligne : ton neutre, jamais --attention ni --critical (§4.1). */}
@@ -150,7 +157,8 @@ export function FormulaireConnexion({
             disabled={enCours}
             value={email}
             onChange={(event) => setEmail(event.target.value)}
-            className="min-h-target-lg w-full rounded-md border border-rule bg-card px-4 py-3 font-ui text-body text-ink-900 outline-none transition duration-quick ease-soft placeholder:text-ink-300 hover:border-ink-300 focus-visible:outline focus-visible:outline-action-600 focus-visible:outline-offset disabled:cursor-not-allowed disabled:bg-sunken disabled:opacity-disabled"
+            placeholder={fr.connexion.champEmail}
+            className={classePastille}
           />
         </div>
 
@@ -169,11 +177,12 @@ export function FormulaireConnexion({
             disabled={enCours}
             value={motDePasse}
             onChange={(event) => setMotDePasse(event.target.value)}
-            className="min-h-target-lg w-full rounded-md border border-rule bg-card px-4 py-3 font-ui text-body text-ink-900 outline-none transition duration-quick ease-soft placeholder:text-ink-300 hover:border-ink-300 focus-visible:outline focus-visible:outline-action-600 focus-visible:outline-offset disabled:cursor-not-allowed disabled:bg-sunken disabled:opacity-disabled"
+            placeholder={fr.connexion.champMotDePasse}
+            className={classePastille}
           />
         </div>
 
-        <div className="mt-2">
+        <div className="mt-2 flex justify-center tablet:justify-start">
           <Bouton
             type="submit"
             rang="principal"

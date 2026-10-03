@@ -49,7 +49,13 @@ import {
 import { useSessionEcran } from "@/components/useSessionEcran";
 import { fr } from "@/i18n/fr";
 import { createAppointment, type ConsultationKind } from "@/services/appointments";
-import { searchPatients, type PatientListItem } from "@/services/patients";
+import {
+  creerPatient,
+  normaliserTelephone,
+  searchPatients,
+  telephoneValide,
+  type PatientListItem,
+} from "@/services/patients";
 import { listPractitioners, type Practitioner } from "@/services/practitioners";
 
 const DUREE_PAR_DEFAUT = 30;
@@ -112,6 +118,18 @@ export default function PageNouveauRendezVous(): React.JSX.Element {
   const [resultats, setResultats] = useState<readonly PatientListItem[] | undefined>(undefined);
   const [patient, setPatient] = useState<PatientListItem | undefined>(undefined);
 
+  // Création inline : l'assistante saisit prénom + nom + téléphone + naissance,
+  // le dossier est créé puis sélectionné pour ce rendez-vous.
+  const [modePatient, setModePatient] = useState<"existant" | "nouveau">("existant");
+  const [nouveauPrenom, setNouveauPrenom] = useState("");
+  const [nouveauNom, setNouveauNom] = useState("");
+  const [nouveauTel, setNouveauTel] = useState("");
+  const [nouveauNaissance, setNouveauNaissance] = useState("");
+  const [erreurNPrenom, setErreurNPrenom] = useState<string | undefined>(undefined);
+  const [erreurNNom, setErreurNNom] = useState<string | undefined>(undefined);
+  const [erreurNTel, setErreurNTel] = useState<string | undefined>(undefined);
+  const [creationPatient, setCreationPatient] = useState(false);
+
   const [debutLocal, setDebutLocal] = useState("");
   const [duree, setDuree] = useState(String(DUREE_PAR_DEFAUT));
   const [notes, setNotes] = useState("");
@@ -161,6 +179,47 @@ export default function PageNouveauRendezVous(): React.JSX.Element {
       annule = true;
     };
   }, [requetePatient]);
+
+  function creerEtSelectionner(): void {
+    setMessageErreur(undefined);
+    const tel = normaliserTelephone(nouveauTel);
+    setNouveauTel(tel);
+    const refusPrenom = nouveauPrenom.trim() === "" ? fr.patients.creation.champRequis : undefined;
+    const refusNom = nouveauNom.trim() === "" ? fr.patients.creation.champRequis : undefined;
+    const refusTel =
+      tel === "" || telephoneValide(tel)
+        ? tel === ""
+          ? fr.patients.creation.champRequis
+          : undefined
+        : fr.patients.telephoneRefuse;
+    setErreurNPrenom(refusPrenom);
+    setErreurNNom(refusNom);
+    setErreurNTel(refusTel);
+    if (refusPrenom !== undefined || refusNom !== undefined || refusTel !== undefined) return;
+
+    // La base reste l'autorité (garde doublon 23505 → `doublonRefuse`) ;
+    // le formulaire ne fait que précéder, comme `FormulaireCreation`.
+    setCreationPatient(true);
+    void creerPatient({
+      firstName: nouveauPrenom.trim(),
+      lastName: nouveauNom.trim(),
+      phone: tel,
+      ...(nouveauNaissance === "" ? {} : { birthDate: nouveauNaissance }),
+      ...(praticienneId === "" ? {} : { practitionerId: praticienneId }),
+    }).then((result) => {
+      setCreationPatient(false);
+      if (!result.ok) {
+        setHorsLigne(result.error.code === "hors-ligne");
+        setMessageErreur(result.error.message);
+        return;
+      }
+      // `Patient` étend `PatientListItem` : sélection directe, le RDV suit.
+      setPatient(result.data);
+      setModePatient("existant");
+      setResultats(undefined);
+      setRequetePatient(undefined);
+    });
+  }
 
   function enregistrer(): void {
     setMessageErreur(undefined);
@@ -232,6 +291,75 @@ export default function PageNouveauRendezVous(): React.JSX.Element {
           </label>
 
           {patient === undefined ? (
+            <div style={{ display: "flex", gap: "var(--s-2)" }}>
+              <Bouton
+                rang="secondaire"
+                taille="compact"
+                enfonce={modePatient === "existant"}
+                onClick={() => setModePatient("existant")}
+              >
+                {fr.agenda.patientExistant}
+              </Bouton>
+              <Bouton
+                rang="secondaire"
+                taille="compact"
+                enfonce={modePatient === "nouveau"}
+                onClick={() => setModePatient("nouveau")}
+              >
+                {fr.agenda.patientNouveau}
+              </Bouton>
+            </div>
+          ) : null}
+
+          {patient === undefined && modePatient === "nouveau" ? (
+            <div style={{ display: "flex", flexDirection: "column", gap: "var(--s-3)" }}>
+              <p className="font-ui text-body text-ink-500">{fr.agenda.nouveauPatientIndication}</p>
+              <ChampTexte
+                libelle={fr.patients.prenom}
+                valeur={nouveauPrenom}
+                onChange={(v) => {
+                  setNouveauPrenom(v);
+                  setErreurNPrenom(undefined);
+                }}
+                requis
+                {...(erreurNPrenom === undefined ? {} : { erreur: erreurNPrenom })}
+              />
+              <ChampTexte
+                libelle={fr.patients.nom}
+                valeur={nouveauNom}
+                onChange={(v) => {
+                  setNouveauNom(v);
+                  setErreurNNom(undefined);
+                }}
+                requis
+                {...(erreurNNom === undefined ? {} : { erreur: erreurNNom })}
+              />
+              <ChampTexte
+                libelle={fr.patients.telephone}
+                valeur={nouveauTel}
+                onChange={(v) => {
+                  setNouveauTel(v);
+                  setErreurNTel(undefined);
+                }}
+                indication={fr.patients.formatTelephone}
+                requis
+                {...(erreurNTel === undefined ? {} : { erreur: erreurNTel })}
+              />
+              <ChampTexte
+                libelle={fr.patients.dateNaissance}
+                type="date"
+                valeur={nouveauNaissance}
+                onChange={setNouveauNaissance}
+              />
+              <div>
+                <Bouton rang="principal" onClick={creerEtSelectionner} disabled={creationPatient}>
+                  {fr.agenda.creerEtSelectionner}
+                </Bouton>
+              </div>
+            </div>
+          ) : null}
+
+          {patient === undefined && modePatient === "existant" ? (
             <>
               <div style={{ display: "flex", gap: "var(--s-3)" }}>
                 <input
@@ -282,7 +410,9 @@ export default function PageNouveauRendezVous(): React.JSX.Element {
                 </ul>
               ) : null}
             </>
-          ) : (
+          ) : null}
+
+          {patient !== undefined ? (
             /* Patient choisi : la sélection est un FAIT ACQUIS, elle se lit
                comme tel — surface teal discrète, et un seul geste pour revenir
                en arrière. */
@@ -301,7 +431,7 @@ export default function PageNouveauRendezVous(): React.JSX.Element {
                 {fr.patients.rechercher}
               </Bouton>
             </div>
-          )}
+          ) : null}
         </fieldset>
 
         <ChampSelection

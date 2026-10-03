@@ -1,12 +1,12 @@
-/** Text keeps the existing confirmation flow; the microphone opens read-only Live. */
+/** Text and local microphone share the server turn; writes retain confirmation. */
 
 "use client";
 
 import { useEffect, useRef, useState } from "react";
 
 import { fr } from "@/i18n/fr";
-import { alexaLive } from "@/i18n/alexa-live";
-import { abonnerLive, basculerLive } from "@/services/alexa-live";
+import { alexa } from "@/i18n/alexa";
+import { abonnerVoixLocale, basculerVoixLocale } from "@/services/alexa-local";
 import type { VueVoix } from "@/services/jarvis-reveil";
 import type { EtatConversationPublique } from "@/services/conversation";
 
@@ -25,10 +25,10 @@ export function SaisieJarvis({
 }): React.JSX.Element {
   const champRef = useRef<HTMLInputElement | null>(null);
   const [voix, setVoix] = useState<VueVoix | null>(null);
-  useEffect(() => abonnerLive(setVoix), []);
+  useEffect(() => abonnerVoixLocale(setVoix), []);
   const actif = voix !== null && voix.etat !== "desactive" && voix.etat !== "erreur";
   const messageVoix = actif || voix?.etat === "erreur" ? voix?.raison ?? null : null;
-  const libelleVoix = actif ? alexaLive.arreter : alexaLive.disponible;
+  const libelleVoix = actif ? alexa.voixArreter : alexa.voixDemarrer;
 
   const fluxEnCours = etat.etat === "envoi" || etat.etat === "flux";
   const bloque = fluxEnCours || etat.carteEcriture !== null || actif;
@@ -80,7 +80,7 @@ export function SaisieJarvis({
             {/* A click starts a continuous session; the same button stops it. */}
             <button
               type="button"
-              onClick={basculerLive}
+              onClick={basculerVoixLocale}
               disabled={etat.carteEcriture !== null && !actif}
               aria-label={libelleVoix}
               title={voix?.raison ?? libelleVoix}

@@ -2,7 +2,7 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 import { executerTour, type DependancesBoucle } from "@/services/jarvis-boucle";
 import { definirCible, effacerCible } from "@/services/jarvis-contexte";
 import { ok } from "@/services/result";
-import type { ContexteExecution, CapaciteEnregistree, ValeurSafe } from "@/services/jarvis-capacites";
+import type { ContexteExecution, ValeurSafe } from "@/services/jarvis-capacites";
 const patientA = { id: "00000000-0000-4000-8000-000000000011", libelle: "SYNTHETIQUE A", numeroDossier: "", origine: "recherche" as const };
 const patientB = { ...patientA, id: "00000000-0000-4000-8000-000000000012", libelle: "SYNTHETIQUE B" };
 afterEach(() => effacerCible());
@@ -10,7 +10,7 @@ function dependencies(handlers: Record<string, (args: unknown, ctx: ContexteExec
   return { lecturesLocales: true, description: () => "", transport: vi.fn(async () => { throw Error("External transport must not run"); }),
     registre: (nom) => handlers[nom] ? { nom, description: "fixture", budgetOctets: 10000,
       champsAttendus: nom === "get_current_medications" ? "patientId" : "",
-      lancer: async (args, ctx) => ok(await handlers[nom]!(args, ctx)) } as CapaciteEnregistree : null };
+      lancer: async (args, ctx) => ok(await handlers[nom]!(args, ctx)) } : null };
 }
 const tour = (message: string, deps: DependancesBoucle) => executerTour({ message, conversationId: "synthetic-conversation" }, {}, new AbortController().signal, deps);
 describe("existing tool loop local route, no external patient inference", () => {
@@ -45,7 +45,7 @@ describe("existing tool loop local route, no external patient inference", () => 
   });
   it("an empty next-patient result never reads the previous patient's treatment", async () => {
     definirCible(patientA);
-    const treatment = vi.fn(async () => ({ enCours: { actifs: [], enPause: [] }, historique: null, provenance: [] }));
+    const treatment = vi.fn(async (_args: unknown, ctx: ContexteExecution) => ({ patient: ctx.carte.patient(patientA.id, patientA.libelle), enCours: { actifs: [], enPause: [] }, historique: null, provenance: [] }));
     const deps = dependencies({ get_next_patient: async () => ({ creneaux: [], provenance: [] }), get_current_medications: treatment });
     await tour("Qui vient après ? et montre son traitement", deps);
     expect(treatment).not.toHaveBeenCalled();
@@ -53,9 +53,10 @@ describe("existing tool loop local route, no external patient inference", () => 
   });
   it.each(["et avant ça", "و قبل هذا", "et قبل هذا"])("authorized same-conversation follow-up stays local: %s", async (message) => {
     definirCible(patientA);
-    const notes = vi.fn(async () => ({ seances: [
-      { le: "2026-09-30", note: null }, { le: "2026-09-29", note: null },
-    ], provenance: [] }));
+    const notes = vi.fn(async (_args: unknown, ctx: ContexteExecution) => ({ patient: ctx.carte.patient(patientA.id, patientA.libelle), seances: [
+      { patient: ctx.carte.patient(patientA.id, patientA.libelle), le: "2026-09-30", close: true, type: null, note: null, provenance: [] },
+      { patient: ctx.carte.patient(patientA.id, patientA.libelle), le: "2026-09-29", close: true, type: null, note: null, provenance: [] },
+    ], tronque: false, provenance: [] }));
     const deps = dependencies({ get_consultation_history: notes });
     const result = await executerTour({ message, conversationId: "synthetic-conversation", travail: {
       conversationId: "synthetic-conversation", patientId: patientA.id, intentionPrecedente: "GET_CONSULTATION_HISTORY", rangSeance: 0,

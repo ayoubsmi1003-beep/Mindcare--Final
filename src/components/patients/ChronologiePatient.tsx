@@ -26,6 +26,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import { Bouton, EtatVide, PastilleIcone, Squelette } from "@/components/ui";
+import { Icone } from "@/components/ui/Icones";
 import type { NomIcone } from "@/components/ui";
 import { fr } from "@/i18n/fr";
 import {
@@ -34,6 +35,12 @@ import {
   type TimelineEvent,
   type TimelineLabelKey,
 } from "@/services/patients";
+import { getConsultation } from "@/services/consultations";
+import { chargerAnalyse } from "@/services/jarvis";
+import {
+  DetailSeanceAccordion,
+  type DetailSeanceChargee,
+} from "@/components/consultation/DetailSeanceAccordion";
 
 import { heure, jourLong, moisLong } from "./format";
 
@@ -142,7 +149,117 @@ function detailLisible(evenement: TimelineEvent): string | null {
   }
 }
 
+/**
+ * Une ligne consultation — LE MÊME pli que dans la séance en cours.
+ *
+ * Avant, elle naviguait vers `/consultation/[id]` : quitter la fiche pour
+ * relire une note, c'est perdre le dossier des yeux. Maintenant les notes
+ * se déplient ICI, via le même `DetailSeanceAccordion` — une seule
+ * implémentation, les deux écrans ne divergent pas. Le lien vers la séance
+ * reste, discret, en bas du pli, pour le cas où il faut tout le contexte.
+ *
+ * ⚠️ Le dépliage charge via `get_consultation`, qui journalise sa lecture
+ * (règle 6) : relire une séance est un accès au dossier, même depuis la
+ * fiche. La porte rend `c.id` comme `event_id` pour ce type (048).
+ */
+function LigneConsultation({ evenement }: { readonly evenement: TimelineEvent }): React.JSX.Element {
+  const [ouvert, setOuvert] = useState(false);
+  const [detail, setDetail] = useState<DetailSeanceChargee | undefined>(undefined);
+
+  const jour = jourLong(evenement.occurredAt);
+  const h = heure(evenement.occurredAt);
+
+  function basculer(): void {
+    if (ouvert) {
+      setOuvert(false);
+      return;
+    }
+    setOuvert(true);
+    if (detail !== undefined) return;
+    // Les deux lectures partent ENSEMBLE : l'analyse n'est pas une suite de
+    // la note, et les enchaîner doublerait l'attente pour rien.
+    void Promise.all([
+      getConsultation(evenement.eventId),
+      chargerAnalyse(evenement.eventId),
+    ]).then(([resSeance, resAnalyse]) => {
+      const charge: DetailSeanceChargee = {
+        seance: resSeance.ok ? resSeance.data : null,
+        analyse: resAnalyse.ok ? resAnalyse.data : null,
+        erreur: resSeance.ok ? undefined : resSeance.error.message,
+      };
+      setDetail(charge);
+    });
+  }
+
+  return (
+    <li className="flex gap-4 py-4">
+      {/* Le filet de temps : une colonne fine, continue, qui relie les
+          événements sans les encadrer chacun dans une carte. */}
+      <div className="flex shrink-0 flex-col items-center gap-2">
+        <PastilleIcone nom={ICONES[evenement.eventType]} ton="neutre" />
+        <span aria-hidden="true" className="w-0 grow border-l border-rule" />
+      </div>
+
+      <div className="flex min-w-0 grow flex-col gap-1 pb-2">
+        <button
+          type="button"
+          onClick={basculer}
+          aria-expanded={ouvert}
+          className="flex min-w-0 flex-wrap items-center gap-x-3 gap-y-1 rounded text-left outline-none transition duration-instant ease-soft focus-visible:outline focus-visible:outline-action-600 focus-visible:outline-offset"
+        >
+          <span className="font-ui text-body font-medium text-ink-900">
+            {LIBELLES[evenement.labelKey]}
+          </span>
+          <span className="font-ui text-label tracking-label text-ink-500 tabular-nums">
+            {jour ?? fr.etats.texteAbsent}
+            {h === null ? null : ` · ${h}`}
+          </span>
+          {evenement.practitionerName === null ? null : (
+            <span className="truncate font-ui text-label tracking-label text-ink-500">
+              {evenement.practitionerName}
+            </span>
+          )}
+          <span
+            aria-hidden="true"
+            className={[
+              "shrink-0 text-ink-500 transition-transform duration-quick",
+              ouvert ? "rotate-90" : "",
+            ].join(" ")}
+          >
+            <Icone nom="chevron" taille={16} />
+          </span>
+        </button>
+
+        {ouvert ? (
+          <div className="flex min-w-0 flex-col gap-3 pt-2">
+            {detail === undefined ? (
+              <Squelette lignes={4} />
+            ) : (
+              <DetailSeanceAccordion detail={detail} />
+            )}
+            <span>
+              <Link
+                href={`/consultation/${evenement.eventId}`}
+                className="rounded font-ui text-label tracking-label text-action-600 underline decoration-rule underline-offset-2 outline-none hover:decoration-action-600 focus-visible:outline focus-visible:outline-action-600 focus-visible:outline-offset"
+              >
+                {fr.patients.actions.ouvrirConsultation} →
+              </Link>
+            </span>
+          </div>
+        ) : null}
+      </div>
+    </li>
+  );
+}
+
 function LigneEvenement({ evenement }: { readonly evenement: TimelineEvent }): React.JSX.Element {
+  // Les consultations se déplient sur place (notes directes) ; les autres
+  // événements n'ont pas d'écran propre — les rendre cliquables promettrait
+  // une destination qui n'existe pas.
+  if (evenement.eventType === "consultation") {
+    return <LigneConsultation evenement={evenement} />;
+  }
+
   const detail = detailLisible(evenement);
   const jour = jourLong(evenement.occurredAt);
   const h = heure(evenement.occurredAt);
@@ -158,24 +275,9 @@ function LigneEvenement({ evenement }: { readonly evenement: TimelineEvent }): R
 
       <div className="flex min-w-0 grow flex-col gap-1 pb-2">
         <div className="flex min-w-0 flex-wrap items-baseline gap-x-3 gap-y-1">
-          {/* ⚠️ UNE CONSULTATION S'OUVRE, LE RESTE SE LIT. La porte rend `c.id`
-              comme `event_id` pour ce type (048) : le lien est direct, sans
-              lecture supplémentaire. Les autres événements n'ont pas d'écran
-              propre — les rendre cliquables promettrait une destination qui
-              n'existe pas. */}
-          {evenement.eventType === "consultation" ? (
-            <Link
-              href={`/consultation/${evenement.eventId}`}
-              aria-label={`${LIBELLES[evenement.labelKey]} — ${fr.patients.actions.ouvrirConsultation}`}
-              className="rounded font-ui text-body font-medium text-ink-900 underline decoration-rule underline-offset-4 outline-none transition duration-instant ease-soft hover:decoration-action-600 focus-visible:outline focus-visible:outline-action-600 focus-visible:outline-offset"
-            >
-              {LIBELLES[evenement.labelKey]}
-            </Link>
-          ) : (
-            <span className="font-ui text-body font-medium text-ink-900">
-              {LIBELLES[evenement.labelKey]}
-            </span>
-          )}
+          <span className="font-ui text-body font-medium text-ink-900">
+            {LIBELLES[evenement.labelKey]}
+          </span>
           <span className="font-ui text-label tracking-label text-ink-500 tabular-nums">
             {jour ?? fr.etats.texteAbsent}
             {h === null ? null : ` · ${h}`}

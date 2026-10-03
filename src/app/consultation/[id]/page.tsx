@@ -78,21 +78,26 @@ import { ColonnePatient } from "@/components/consultation/cockpit/ColonnePatient
 import { DepuisDerniere } from "@/components/consultation/cockpit/DepuisDerniere";
 import { EtatClinique } from "@/components/consultation/cockpit/EtatClinique";
 import { FocusSeance } from "@/components/consultation/cockpit/FocusSeance";
-import { MesuresSeance } from "@/components/consultation/cockpit/MesuresSeance";
+import { MesuresSeance, type CleMesure } from "@/components/consultation/cockpit/MesuresSeance";
 import { NotesStructurees } from "@/components/consultation/cockpit/NotesStructurees";
 import { RailContexte } from "@/components/consultation/cockpit/RailContexte";
 import { TarifInline } from "@/components/consultation/cockpit/TarifInline";
 import { ajouterPiste, appliquerFocus } from "@/components/consultation/cockpit/modele-cockpit";
-import { CarteIdentite } from "@/components/patients/CarteIdentite";
-import {
-  ListeSignaux,
-  PointDeSituation,
-  SectionDepuisDerniere,
-} from "@/components/patients/SectionsDeterministes";
+import { CarteResumeCas, type ResumeEtat } from "@/components/patients/CarteResumeCas";
+import { PointDeSituation } from "@/components/patients/SectionsDeterministes";
 import { PanneauTraitements } from "@/components/patients/PanneauTraitements";
 import { PanneauRendezVous } from "@/components/patients/PanneauRendezVous";
 import { SectionDocumentsPatient } from "@/components/documents/SectionDocumentsPatient";
-import { getPatientWorkspace, type PatientWorkspace } from "@/services/patients";
+import {
+  getPatientWorkspace,
+  type PatientWorkspace,
+  type SourceResume,
+} from "@/services/patients";
+import {
+  chargerResumeCas,
+  genererResumeCas,
+  verifierFraicheurResume,
+} from "@/services/resume-cas";
 import { useSessionEcran } from "@/components/useSessionEcran";
 import { fr } from "@/i18n/fr";
 import {
@@ -1083,6 +1088,77 @@ export default function PageConsultation(): React.JSX.Element {
     setDossier(undefined);
   }
 
+  // ── RÉSUMÉ DU CAS — la même carte que la fiche patient, sans relecture ──
+  //
+  // `dossier.resume` vient déjà de `get_patient_workspace` : aucun appel
+  // supplémentaire à l'ouverture. `chargerResumeCas` ne relit le persisté
+  // qu'une fois (les workspaces anciens omettent le champ), et la génération
+  // ne part que sur geste explicite — l'IA ne bloque jamais la séance.
+  const [resumeEtat, setResumeEtat] = useState<ResumeEtat>({
+    resume: null,
+    generationEnCours: false,
+    indisponible: false,
+  });
+
+  useEffect(() => {
+    if (dossier === undefined || dossier === null) return;
+    const charge = dossier.resume;
+    setResumeEtat((s) => ({ ...s, resume: charge ?? null }));
+    if (patientId === null) return;
+    let annule = false;
+    if (charge !== null) {
+      void verifierFraicheurResume(patientId).then((status) => {
+        if (annule || !status.ok) return;
+        setResumeEtat((s) =>
+          s.resume !== null ? { ...s, resume: { ...s.resume, aJour: status.data.aJour } } : s,
+        );
+      });
+    }
+    void chargerResumeCas(patientId).then((saved) => {
+      if (annule) return;
+      if (saved.ok) {
+        setResumeEtat((s) => ({ ...s, resume: saved.data.resume }));
+      } else {
+        setResumeEtat((s) => (s.resume === null ? { ...s, indisponible: true } : s));
+      }
+    });
+    return () => {
+      annule = true;
+    };
+  }, [dossier, patientId]);
+
+  function genererResume(): void {
+    if (patientId === null) return;
+    void genererResumeCas(patientId).then((result) => {
+      if (result.ok) {
+        setResumeEtat({ resume: result.data.resume, generationEnCours: false, indisponible: false });
+      } else {
+        setResumeEtat((s) => ({ ...s, generationEnCours: false, indisponible: true }));
+      }
+    });
+  }
+
+  /** Preuve → fait : bascule sur l'onglet de consultation qui porte la source. */
+  function ouvrirSourceResume(source: SourceResume): void {
+    switch (source.t) {
+      case "diagnostic":
+      case "echelle":
+      case "prescription":
+      case "treatment":
+        setOnglet("traitement");
+        break;
+      case "consultation":
+        setOnglet("historique");
+        break;
+      case "rdv":
+        setOnglet("rendezVous");
+        break;
+      case "document":
+        setOnglet("documents");
+        break;
+    }
+  }
+
   // ── COCKPIT — état local, aucune lecture ─────────────────────────────────
   //
   // `focusSelection`/`focusLibre` meurent avec l'écran : ce sont des aides de
@@ -1090,8 +1166,7 @@ export default function PageConsultation(): React.JSX.Element {
   // d'affichage, comme un tiroir).
   const [focusSelection, setFocusSelection] = useState<readonly string[]>([]);
   const [focusLibre, setFocusLibre] = useState("");
-  // V10 — mesures 1-10 : aides de saisie comme le focus, meurent avec l'écran.
-  // Chaque choix inscrit « Libellé : X/10 » dans Subjectif via `saveNote`.
+  // Mesures 1–10 conservées dans cet écran, indépendantes des notes libres.
   const [mesures, setMesures] = useState<{ anxiete: number | null; sommeil: number | null; humeur: number | null }>({
     anxiete: null,
     sommeil: null,
@@ -1169,13 +1244,9 @@ export default function PageConsultation(): React.JSX.Element {
     enregistrerSoap("subjective", appliquerFocus(soap.subjective, ajouts));
   }
 
-  const LIBELLES_MESURE = { anxiete: "Anxiété", sommeil: "Sommeil", humeur: "Humeur" } as const;
-
-  function appliquerMesure(cle: keyof typeof LIBELLES_MESURE, valeur: number): void {
+  function appliquerMesure(cle: CleMesure, valeur: number): void {
     if (!noteModifiable || seanceClose) return;
     setMesures((m) => ({ ...m, [cle]: valeur }));
-    const phrase = `${LIBELLES_MESURE[cle]} : ${String(valeur)}/10`;
-    enregistrerSoap("subjective", ajouterPiste(soap.subjective, phrase));
   }
 
   function enregistrerMaintenant(): void {
@@ -1855,31 +1926,24 @@ export default function PageConsultation(): React.JSX.Element {
               <Squelette lignes={6} />
             ) : onglet === "resume" ? (
               /*
-                LE RÉSUMÉ D'AVANT-SÉANCE — DÉTERMINISTE, ZÉRO IA.
+                LE RÉSUMÉ DU CAS — LA MÊME CARTE QUE LA FICHE PATIENT.
 
-                Les trois sections viennent telles quelles de l'écran Patient.
-                Aucune n'appelle de modèle : « Depuis la dernière fois » est un
-                DIFF FACTUEL calculé sur les seules données du dossier
-                (prescription, document émis, échelle passée), et « Point de
-                situation » est le repli honnête qui ne s'appelle jamais
-                « résumé ». Ce qui s'affiche ici est donc vrai même quand la
-                passerelle est tombée — I20, et la règle 8 sur le fictif.
-
-                Elles sont réemployées SANS COPIE : la même règle de calcul sert
-                les deux écrans, donc les deux ne peuvent pas diverger.
+                `CarteResumeCas` (IA sourcée + preuves navigables + signalement)
+                remplace l'ancien bloc déterministe : les deux écrans ne peuvent
+                plus diverger. Le repli honnête reste `PointDeSituation`
+                (données directes, jamais appelé « résumé ») quand l'IA est
+                indisponible sans résumé valide — même règle que `/patients/[id]`.
               */
               <div className="mx-auto flex w-full max-w-lecture flex-col gap-8">
-                <PointDeSituation espace={dossier} />
-                <SectionDepuisDerniere espace={dossier} />
-                <ListeSignaux espace={dossier} />
-                {/* L'IDENTITÉ EN DERNIER, ET C'EST VOULU. Ce que la praticienne
-                    cherche avant de recevoir, c'est ce qui a CHANGÉ ; l'âge et
-                    le téléphone se consultent, ils ne s'annoncent pas. Les
-                    placer en tête repousserait le seul contenu daté sous la
-                    ligne de flottaison. C'est aussi la SEULE carte d'identité
-                    de cet écran — l'en-tête porte déjà le nom, et le redire en
-                    grand ferait deux titres pour un patient. */}
-                <CarteIdentite espace={dossier} />
+                <CarteResumeCas
+                  etat={resumeEtat}
+                  onEtatChange={setResumeEtat}
+                  onOuvrirSource={ouvrirSourceResume}
+                  onGenerer={genererResume}
+                />
+                {resumeEtat.indisponible && resumeEtat.resume === null ? (
+                  <PointDeSituation espace={dossier} />
+                ) : null}
               </div>
             ) : onglet === "traitement" ? (
               <PanneauTraitements

@@ -33,7 +33,7 @@ import {
   type PatientActif,
 } from "@/services/patient-actif";
 import { cibleValide } from "@/services/jarvis-contexte";
-import { arreterLive } from "@/services/alexa-live";
+import { arreterVoixLocale } from "@/services/alexa-local";
 
 import { CarteConfirmation } from "./CarteConfirmation";
 import { FilJarvis } from "./FilJarvis";
@@ -65,7 +65,7 @@ export function PanneauJarvis({
   const etaitOuvert = useRef(ouvert);
 
   useEffect(() => {
-    if (etaitOuvert.current && !ouvert) arreterLive();
+    if (etaitOuvert.current && !ouvert) arreterVoixLocale();
     etaitOuvert.current = ouvert;
   }, [ouvert]);
 

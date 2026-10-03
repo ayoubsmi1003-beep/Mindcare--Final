@@ -1,6 +1,7 @@
 "use client";
 
 import { fr } from "@/i18n/fr";
+import { frConsultationCockpit } from "@/i18n/consultation-cockpit";
 
 import { SelecteurEchelle } from "./SelecteurEchelle";
 
@@ -8,8 +9,8 @@ import { SelecteurEchelle } from "./SelecteurEchelle";
  * Mesures de séance 1–10 — Anxiété / Sommeil / Humeur.
  *
  * V11 : UNE carte, TROIS lignes compactes (curseur + 1-clic), UNE aide.
- * N'écrit RIEN seule : `onMesurer(cle, valeur)` remonte, la page inscrit
- * `« Anxiété : 6/10 »` dans Subjectif via `saveNote` (même chemin que Focus).
+ * `onMesurer(cle, valeur)` met à jour les valeurs locales de l'écran.
+ * Les cinq notes restent à la rédaction de la praticienne.
  * Label texte obligatoire, teinte unique verte — pas de gradient sévérité.
  */
 export type CleMesure = "anxiete" | "sommeil" | "humeur";
@@ -45,7 +46,7 @@ export function MesuresSeance({
           {renseignees}/3
         </p>
       </div>
-      <p className="m-0 font-ui text-label text-ink-500">{cockpit.mesuresAide}</p>
+      <p className="m-0 font-ui text-label text-ink-500">{frConsultationCockpit.mesuresAide}</p>
       <div className="divide-y divide-rule">
         <SelecteurEchelle
           id="mesure-anxiete"

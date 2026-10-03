@@ -20,12 +20,12 @@ const ROUTE = readFileSync(
 );
 
 describe("pré-routage JEV — bornes d'intégration", () => {
-  it("le flag OFF par défaut existe et la route le consulte", () => {
+  it("la politique gratuite garde JEV désactivé et la route consulte cette garde", () => {
     expect(ROUTE).toContain("jevActif()");
     const env = readFileSync(join(process.cwd(), "src/server/env.ts"), "utf8");
     expect(env).toContain("JARVIS_JEV_ENABLED");
-    // Convention stricte conservée : seule la chaîne "true" active.
-    expect(env).toMatch(/jevActif\(\): boolean \{\s*\n?\s*return env\(\)\.JARVIS_JEV_ENABLED === "true";/);
+    // Le flag historique ne peut activer l'endpoint JEV payé.
+    expect(env).toMatch(/jevActif\(\): boolean \{[^}]*return false;/);
   });
 
   it("le commit est exclu AVANT tout appel JEV (ordre = propriété)", () => {

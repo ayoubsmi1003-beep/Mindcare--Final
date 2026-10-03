@@ -10,7 +10,7 @@ import { fr } from "@/i18n/fr";
  * UNE ligne par mesure : libellé + curseur + valeur. Le curseur natif porte
  * le clavier (←/→) et le tactile ; la rangée de 10 pastilles porte le 1-clic
  * sans scroll. Teinte unique verte, jamais de gradient sévérité.
- * N'écrit RIEN seul : `onChoisir` remonte, la page écrit via `saveNote`.
+ * `onChoisir` remonte la valeur locale sans écrire dans les notes.
  */
 export function SelecteurEchelle({
   id,

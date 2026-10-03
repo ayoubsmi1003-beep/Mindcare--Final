@@ -17,6 +17,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 import { SiriOrb } from "@/components/ui/siri-orb";
 import { fr } from "@/i18n/fr";
+import Link from "next/link";
 import type { EtatConversationPublique } from "@/services/conversation";
 import {
   arreterLecture,
@@ -143,6 +144,17 @@ export function FilJarvis({
                 {preuve.section === null ? "" : ` · ${preuve.section}`} · v{preuve.version}
               </span>
             ))}
+            {(tour.alexaSources?.length ?? 0) > 0 ? (
+              <details className="pl-1 font-ui text-label text-ink-500">
+                <summary className="cursor-pointer">{fr.patients.resume.sources}</summary>
+                <div className="mt-2 flex flex-wrap gap-2">
+                  {[...new Map(tour.alexaSources?.map(source => [source.id, source])).values()].map(source => {
+                    const href = source.type === "consultation" ? `/consultation/${encodeURIComponent(source.id)}` : source.type === "appointment" ? "/agenda" : (source.type === "treatment" || source.type === "diagnostic" || source.type === "scale") && tour.sourcePatientId ? `/patients/${encodeURIComponent(tour.sourcePatientId)}` : null;
+                    return href ? <Link className="underline underline-offset-4" key={source.id} href={href}>{source.label}</Link> : <span key={source.id}>{source.label}</span>;
+                  })}
+                </div>
+              </details>
+            ) : null}
             <div className="flex items-end gap-1">
               <p
                 className={[

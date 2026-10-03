@@ -10,6 +10,7 @@ let courant: { processus: ChildProcessWithoutNullStreams; canal: CanalVoixNative
 let preparation: Promise<void> | null = null;
 let idle: ReturnType<typeof setTimeout> | undefined;
 let generation = 0;
+let sessionContinue: string | null = null;
 function configurationVoix() {
  const e = env(), root = e.ALEXA_VOICE_ASSETS ? dirname(e.ALEXA_VOICE_ASSETS) : join(process.cwd(), "resources", "voix");
  return { active: e.ALEXA_LOCAL_VOICE === "true", assets: e.ALEXA_VOICE_ASSETS ?? join(root, "assets"),
@@ -42,6 +43,7 @@ async function verifierAssets(): Promise<void> {
 export function arreterVoixNative(sessionId?: string): void {
  const c = courant; if (sessionId !== undefined && c !== null && c.sessionId !== sessionId) return;
  generation++; clearTimeout(idle); courant = null;
+ sessionContinue = null;
  if (c !== null) { c.processus.kill(); c.canal.echouer(); }
 }
 function ouvrir(sessionId: string): NonNullable<typeof courant> {
@@ -72,16 +74,25 @@ function ouvrir(sessionId: string): NonNullable<typeof courant> {
  processus.on("exit", () => { canal.echouer(); if (courant?.processus === processus) courant = null; });
  courant = { processus, canal, sessionId }; return courant;
 }
-export async function demanderVoixNative(entree: EntreeVoix, signal?: AbortSignal): Promise<ReponseVoix> {
+/** Verify pinned assets and start the existing resident process; no speech readiness claim. */
+export async function preparerVoixNative(sessionId: string, signal?: AbortSignal, continueSession = false): Promise<void> {
  if (env().ALEXA_LOCAL_VOICE !== "true" || signal?.aborted) throw new Error("configuration: voix-locale");
+ if (!/^[a-f0-9]{64}$/u.test(sessionId)) throw new Error("configuration: session");
  const epoch = generation;
  preparation ??= verifierAssets().catch((e: unknown) => { preparation = null; throw e; });
  await preparation;
  if (signal?.aborted || epoch !== generation) throw new Error("annulee");
  clearTimeout(idle);
+ const worker = ouvrir(sessionId);
+ if (continueSession) sessionContinue = sessionId;
+ idle = setTimeout(() => { if (courant === worker) arreterVoixNative(sessionId); }, 15 * 60_000); idle.unref();
+}
+export async function demanderVoixNative(entree: EntreeVoix, signal?: AbortSignal): Promise<ReponseVoix> {
+ await preparerVoixNative(entree.sessionId, signal);
+ clearTimeout(idle);
  const worker = ouvrir(entree.sessionId);
- try { return await worker.canal.demander(entree, signal, 30000); }
+ try { return await worker.canal.demander(entree, signal, entree.action === "stt" ? 90_000 : 30_000); }
  finally {
-  idle = setTimeout(() => { if (courant === worker) arreterVoixNative(entree.sessionId); }, 60000); idle.unref();
+  idle = setTimeout(() => { if (courant === worker) arreterVoixNative(entree.sessionId); }, sessionContinue === entree.sessionId ? 15 * 60_000 : 60000); idle.unref();
  }
 }

@@ -10,11 +10,13 @@
  * responsabilité, citations vérifiées deux fois (passerelle puis porte).
  */
 
+import { z } from "zod";
 import { db } from "./db";
 import { logFieldsFor } from "./errors";
 import { log } from "./log";
 import { err, ok, type Result } from "./result";
 import { versContenu, type ResumeDernier } from "./patients";
+import { alexa } from "@/i18n/alexa";
 
 interface ResumeRowBrut {
   readonly id: string;
@@ -22,10 +24,35 @@ interface ResumeRowBrut {
   readonly genere_le: string;
   readonly genere_par: string | null;
   readonly content: unknown;
+  readonly aJour?: boolean;
 }
 
 export interface ResultatGeneration {
   readonly resume: ResumeDernier;
+}
+
+const savedSummary = z.object({
+  id: z.uuid(), version: z.number().int().positive(), genere_le: z.string(), genere_par: z.string().nullable(),
+  content: z.unknown().refine(value => typeof value === "object" && value !== null && !Array.isArray(value)),
+  aJour: z.boolean(),
+}).strict();
+
+/** Post-render read: some existing workspace versions omit their summary field. */
+export async function chargerResumeCas(patientId: string): Promise<Result<{ readonly resume: ResumeDernier | null }>> {
+  const result = await db().rpc<unknown>("get_alexa_case_summary", { p_patient_id: patientId });
+  if (!result.ok) return err(result.error);
+  if (result.data[0] === null) return ok({ resume: null });
+  const parsed = savedSummary.safeParse(result.data[0]);
+  if (!parsed.success) return err({ code: "indisponible", message: alexa.lectureIndisponible, context: "alexa.summary.read" });
+  return ok({ resume: { ...versResumeDernier(parsed.data), aJour: parsed.data.aJour } });
+}
+
+/** Database compares the whole clinical revision, including updates that do not change counts. */
+export async function verifierFraicheurResume(patientId: string): Promise<Result<{ readonly aJour: boolean }>> {
+  const result = await db().rpc<{ readonly aJour: boolean }>("get_alexa_summary_status", { p_patient_id: patientId });
+  if (!result.ok) return err(result.error);
+  const status = result.data[0];
+  return status ? ok(status) : err({ code: "indisponible", message: alexa.lectureIndisponible, context: "alexa.summary.status" });
 }
 
 function versResumeDernier(row: ResumeRowBrut): ResumeDernier {
@@ -37,7 +64,7 @@ function versResumeDernier(row: ResumeRowBrut): ResumeDernier {
     // Une génération qui vient d'aboutir est par définition à jour des faits
     // qu'elle a lus ; le prochain passage par le workspace recalculera
     // `a_jour` en base si quelque chose bouge entre-temps.
-    aJour: true,
+    aJour: row.aJour ?? true,
     // ⚠️ MÊME NORMALISATION QUE LA LECTURE. Ce fichier en portait une copie
     // « volontairement petite » ; avec deux schémas à distinguer, deux copies
     // auraient divergé — et la divergence se serait vue comme un résumé vide

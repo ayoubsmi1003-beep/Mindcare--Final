@@ -53,6 +53,7 @@ export const DOMAINES_SOURCE = [
   "diagnostic",
   "echelle",
   "prescription",
+  "treatment",
   "consultation",
   "rdv",
   "document",

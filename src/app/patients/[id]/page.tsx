@@ -28,7 +28,7 @@
 "use client";
 
 import { useParams, useRouter } from "next/navigation";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 import { AppShell } from "@/components/AppShell";
 import { SectionDocumentsPatient } from "@/components/documents/SectionDocumentsPatient";
@@ -68,7 +68,7 @@ import {
   effacerPatientActif,
 } from "@/services/patient-actif";
 import { purgerContexteSession } from "@/services/conversation";
-import { genererResumeCas } from "@/services/resume-cas";
+import { chargerResumeCas, genererResumeCas, verifierFraicheurResume } from "@/services/resume-cas";
 import { startConsultation } from "@/services/consultations";
 import type { SourceResume } from "@/services/patients";
 import {
@@ -90,6 +90,9 @@ export default function PageFichePatient(): React.JSX.Element {
   const router = useRouter();
   const params = useParams<{ id: string }>();
   const id = params.id;
+  const patientScope = useRef(id);
+  patientScope.current = id;
+  const resultGeneration = useRef(0);
 
   const [utilisateur, setUtilisateur] = useState<CurrentUser | null | undefined>(undefined);
   const [espace, setEspace] = useState<PatientWorkspace | null | undefined>(undefined);
@@ -140,8 +143,16 @@ export default function PageFichePatient(): React.JSX.Element {
 
   useEffect(() => {
     let annule = false;
+    const generation = ++resultGeneration.current;
+    const actuel = () => !annule && patientScope.current === id && resultGeneration.current === generation;
+    const invalidate = () => { resultGeneration.current++; };
+    setEspace(undefined);
+    setResumeEtat({ resume: null, generationEnCours: false, indisponible: false });
+    setMessageErreur(undefined);
+    setEnModification(null);
+    setErreurModification(undefined);
     void getPatientWorkspace(id).then((result) => {
-      if (annule) return;
+      if (!actuel()) return;
       if (!result.ok) {
         setHorsLigne(result.error.code === "hors-ligne");
         setMessageErreur(result.error.message);
@@ -150,21 +161,36 @@ export default function PageFichePatient(): React.JSX.Element {
       }
       setHorsLigne(false);
       setMessageErreur(undefined);
+      if (result.data && result.data.identite.id !== id) { setEspace(null); return; }
       setEspace(result.data);
       setResumeEtat((s) => ({
         ...s,
         resume: result.data?.resume ?? null,
         generationEnCours: false,
       }));
+      const resumeCharge = result.data?.resume;
+      if (resumeCharge) void verifierFraicheurResume(id).then(status => {
+        if (!actuel() || !status.ok) return;
+        setResumeEtat(s => actuel() && s.resume?.id === resumeCharge.id && s.resume.version === resumeCharge.version
+          ? { ...s, resume: { ...s.resume, aJour: status.data.aJour } } : s);
+      });
+      // Read the persisted summary separately without delaying the workspace.
+      // The generation lease also rejects this read after a new summary save.
+      if (result.data) void chargerResumeCas(id).then(saved => {
+        if (!actuel()) return;
+        if (saved.ok) setResumeEtat(s => actuel() ? { ...s, resume: saved.data.resume } : s);
+        else setResumeEtat(s => actuel() && s.resume === null ? { ...s, indisponible: true } : s);
+      });
     });
     return () => {
       annule = true;
+      invalidate();
     };
   }, [id]);
 
   // ── Contexte patient actif — publication + effacement GARANTI. ──────────
   useEffect(() => {
-    if (espace !== null && espace !== undefined) {
+    if (espace !== null && espace !== undefined && espace.identite.id === id) {
       definirPatientActif({
         id: espace.identite.id,
         nom: `${espace.identite.lastName.toUpperCase()} ${espace.identite.firstName}`,
@@ -174,7 +200,7 @@ export default function PageFichePatient(): React.JSX.Element {
     return () => {
       effacerPatientActif();
     };
-  }, [espace]);
+  }, [espace, id]);
 
   function deconnecter(): void {
     // Phase 3 : la cible Jarvis et le contexte d'outil meurent avec la
@@ -207,6 +233,7 @@ export default function PageFichePatient(): React.JSX.Element {
     }
     setErreurModification(undefined);
     void getPatient(id).then((result) => {
+      if (patientScope.current !== id) return;
       if (!result.ok) {
         setErreurModification(result.error.message);
         return;
@@ -220,23 +247,33 @@ export default function PageFichePatient(): React.JSX.Element {
   }
 
   function apresModification(): void {
+    if (patientScope.current !== id) return;
+    const generation = ++resultGeneration.current;
+    const actuel = () => patientScope.current === id && resultGeneration.current === generation;
     setEnModification(null);
     void getPatientWorkspace(id).then((result) => {
-      if (result.ok && result.data !== null) setEspace(result.data);
+      if (actuel() && result.ok && result.data !== null && result.data.identite.id === id) {
+        setEspace(result.data);
+        setResumeEtat(s => actuel() ? { ...s, generationEnCours: false, resume: s.resume ? { ...s.resume, aJour: false } : null } : s);
+      }
     });
   }
 
   // ── Génération du résumé — post-rendu, repli honnête sur échec. ─────────
   const generer = useCallback((): void => {
+    if (patientScope.current !== id) return;
+    const generation = ++resultGeneration.current;
+    const actuel = () => patientScope.current === id && resultGeneration.current === generation;
     void genererResumeCas(id).then((result) => {
+      if (!actuel()) return;
       if (result.ok) {
-        setResumeEtat({
+        setResumeEtat(s => actuel() ? {
           resume: result.data.resume,
           generationEnCours: false,
           indisponible: false,
-        });
+        } : s);
       } else {
-        setResumeEtat((s) => ({ ...s, generationEnCours: false, indisponible: true }));
+        setResumeEtat((s) => actuel() ? { ...s, generationEnCours: false, indisponible: true } : s);
       }
     });
   }, [id]);
@@ -271,6 +308,7 @@ export default function PageFichePatient(): React.JSX.Element {
         setOnglet("clinique");
         break;
       case "prescription":
+      case "treatment":
         setOnglet("traitements");
         break;
       case "consultation":
@@ -357,7 +395,7 @@ export default function PageFichePatient(): React.JSX.Element {
           onModifier={ouvrirModification}
         />
 
-        <BandeauAujourdhui espace={espace} />
+        <BandeauAujourdhui espace={{ ...espace, resume: resumeEtat.resume }} />
 
         <div>
           <Onglets
@@ -381,17 +419,14 @@ export default function PageFichePatient(): React.JSX.Element {
                  lecture : qui, où en est-on, et ce qui s'est passé. */
               <div className="mx-auto flex w-full max-w-lecture min-w-0 flex-col gap-8">
                 <CarteResumeCas
-                  etat={{
-                    ...resumeEtat,
-                    resume: resumeEtat.resume ?? espace.resume ?? null,
-                  }}
+                  etat={resumeEtat}
                   onEtatChange={setResumeEtat}
                   onGenerer={generer}
                   onOuvrirSource={ouvrirSource}
                 />
                 {montrerPointSituation ? <PointDeSituation espace={espace} /> : null}
                 <SectionDepuisDerniere espace={espace} />
-                <ListeSignaux espace={{ ...espace, resume: resumeEtat.resume ?? espace.resume }} />
+                <ListeSignaux espace={{ ...espace, resume: resumeEtat.resume }} />
                 <CarteProchaineEcheance agenda={espace.agenda} documents={espace.documents} />
 
                 {/* L'ADMINISTRATIF EN BAS, ET C'EST UN CHOIX DE HIÉRARCHIE, PAS
@@ -436,8 +471,14 @@ export default function PageFichePatient(): React.JSX.Element {
                 traitementsV2={espace.traitementsV2 ?? null}
                 patientId={espace.identite.id}
                 onRefresh={() => {
+                  if (patientScope.current !== id) return;
+                  const generation = ++resultGeneration.current;
+                  const actuel = () => patientScope.current === id && resultGeneration.current === generation;
                   void getPatientWorkspace(id).then((res) => {
-                    if (res.ok && res.data) setEspace(res.data);
+                    if (actuel() && res.ok && res.data?.identite.id === id) {
+                      setEspace(res.data);
+                      setResumeEtat(s => actuel() ? { ...s, generationEnCours: false, resume: s.resume ? { ...s.resume, aJour: false } : null } : s);
+                    }
                   });
                 }}
               />

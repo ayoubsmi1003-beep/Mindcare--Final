@@ -3,7 +3,7 @@
  *
  * ═══ CE COMPOSANT NE DÉTIENT AUCUN ÉTAT VOCAL ═══
  *
- * La vérité vit dans `services/alexa-live.ts`, un singleton de module. Ce
+ * La vérité vit dans `services/alexa-local.ts`, un singleton de module. Ce
  * composant s'y ABONNE et n'en garde qu'un miroir. C'est ce qui permet à l'orbe
  * du panneau, à celui de l'en-tête et à tout futur point d'entrée d'afficher
  * exactement la même chose sans se coordonner.
@@ -29,8 +29,8 @@
 import { useEffect, useRef, useState } from "react";
 
 import { fr } from "@/i18n/fr";
-import { alexaLive } from "@/i18n/alexa-live";
-import { abonnerLive, basculerLive, niveauLive } from "@/services/alexa-live";
+import { alexa } from "@/i18n/alexa";
+import { abonnerVoixLocale, basculerVoixLocale, niveauVoixLocale } from "@/services/alexa-local";
 import type { EtatVoix, VueVoix } from "@/services/jarvis-reveil";
 
 import { SiriOrb } from "./ui/siri-orb";
@@ -91,7 +91,7 @@ export function OrbeVoix({ taille = 32 }: Props): React.JSX.Element {
   const [vue, setVue] = useState<VueVoix | null>(null);
   const noyauRef = useRef<HTMLSpanElement>(null);
 
-  useEffect(() => abonnerLive(setVue), []);
+  useEffect(() => abonnerVoixLocale(setVue), []);
 
   const etat = vue?.etat ?? "desactive";
 
@@ -105,15 +105,15 @@ export function OrbeVoix({ taille = 32 }: Props): React.JSX.Element {
     }
     let image = 0;
     const battre = (): void => {
-      noyauRef.current?.style.setProperty("--niveau", niveauLive().toFixed(3));
+      noyauRef.current?.style.setProperty("--niveau", niveauVoixLocale().toFixed(3));
       image = requestAnimationFrame(battre);
     };
     image = requestAnimationFrame(battre);
     return () => cancelAnimationFrame(image);
   }, [etat]);
 
-  // The original click unlocks the audio context; another click closes Live.
-  const libelle = etat === "desactive" ? alexaLive.disponible : fr.jarvis.voix.reveil.etats[etat];
+  // The original click unlocks local capture; another click closes the microphone.
+  const libelle = etat === "desactive" ? alexa.voixDemarrer : fr.jarvis.voix.reveil.etats[etat];
   const detail = vue?.raison ?? libelle;
   const apparence = APPARENCE[etat];
   // ⚠️ « désactivé » N'EST PAS « inerte ». L'orbe éteint reste cliquable —
@@ -128,7 +128,7 @@ export function OrbeVoix({ taille = 32 }: Props): React.JSX.Element {
   return (
     <button
       type="button"
-      onClick={basculerLive}
+      onClick={basculerVoixLocale}
       aria-label={`${libelle} — ${detail}`}
       title={detail}
       className={[

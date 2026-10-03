@@ -21,6 +21,11 @@
  */
 
 import { fr } from "@/i18n/fr";
+import { adoptAlexaConversation, clearAlexaConversation, ensureAlexaConversation, envoyerTourAlexa, AlexaTurnError } from "./alexa-turn";
+import { navigateAlexa } from "./alexa-navigation";
+import { abonnerTourVoixLocale, arreterVoixLocale } from "./alexa-local";
+import { stageLabels } from "@/i18n/alexa-dialogue";
+import { planRequest } from "@/shared/alexa/request-plan";
 import { libelleEtape } from "@/i18n/etapes";
 
 import { getSession } from "./auth";
@@ -81,6 +86,7 @@ import { log } from "./log";
 import { err, ok, type Result } from "./result";
 import type { AppError } from "./errors";
 import type { PatientActif } from "./patient-actif";
+import type { AlexaSource } from "@/shared/alexa/turn";
 
 // ═══════════════════════════════════════════════════════════════════════════
 // ÉTAT PUBLIC
@@ -102,6 +108,8 @@ export type EtatConversation =
   | "erreur";
 
 export interface TourConversation {
+  readonly alexaSources?: readonly AlexaSource[];
+  readonly sourcePatientId?: string | null;
   readonly id: string;
   readonly role: "humain" | "jarvis" | "systeme";
   readonly texte: string;
@@ -470,6 +478,7 @@ export function definirContextePatient(
   patientActifCourant = patient;
   const change = adopterPatientActif(patient, maintenantMs);
   if (change) {
+    controleurEnCours?.abort();
     contexteDossiers = [];
     contextePraticienId = null;
   }
@@ -484,6 +493,8 @@ export function definirContextePatient(
  * `patient_id`, 058).
  */
 export function purgerContexteSession(): void {
+  controleurEnCours?.abort();
+  clearAlexaConversation();
   patientActifCourant = null;
   // [Changer] et la déconnexion effacent AUSSI l'ancre. Quitter un patient et
   // continuer d'y répondre par pronom au tour suivant serait le contraire de
@@ -521,7 +532,7 @@ export function changerSaisie(valeur: string): void {
  * UUID local. Idempotent : une seule ligne par session d'écran.
  */
 async function assurerConversation(): Promise<Result<string>> {
-  if (interne.conversationId !== null) return ok(interne.conversationId);
+  if (interne.conversationId !== null) { adoptAlexaConversation(interne.conversationId); return ok(interne.conversationId); }
 
   const resultat = await db().rpc<string>("start_jarvis_conversation", {});
   if (!resultat.ok) {
@@ -536,6 +547,7 @@ async function assurerConversation(): Promise<Result<string>> {
     return err({ code: "interdit", message: fr.erreurs.interdit, context: "conversation:start" });
   }
   interne.conversationId = id;
+  adoptAlexaConversation(id);
   return ok(id);
 }
 
@@ -921,6 +933,67 @@ export async function refuserCarte(): Promise<void> {
 
 let controleurEnCours: AbortController | null = null;
 
+async function envoyerAlexaUnifie(message: string): Promise<void> {
+  interne.erreur = null;
+  interne.saisie = "";
+  ajouterTour({ role: "humain", texte: message });
+  const tour = ajouterTour({ role: "jarvis", texte: "" });
+  const controller = new AbortController();
+  controleurEnCours = controller;
+  interne.etat = "envoi";
+  publier();
+  try {
+    interne.conversationId = await ensureAlexaConversation();
+    const result = await envoyerTourAlexa(message, controller.signal, {
+      onSentence: text => {
+        const current = interne.tours.find(t => t.id === tour.id);
+        remplacerTour(tour.id, { texte: `${current?.texte ? `${current.texte}\n` : ""}${text}` });
+        interne.etat = "flux";
+        publier();
+      },
+      onStage: stage => { interne.etapeEnCours = stageLabels[stage as keyof typeof stageLabels] ?? null; publier(); },
+    });
+    remplacerTour(tour.id, { texte: result.texte, persiste: result.persiste, porteUneIdentite: false, alexaSources: result.sources, sourcePatientId: result.patientId });
+    interne.etat = "composition";
+    if (result.navigation) navigateAlexa(result.navigation);
+  } catch (error) {
+    if (controller.signal.aborted) {
+      remplacerTour(tour.id, { interrompu: true });
+      interne.etat = "composition";
+    } else {
+      if (error instanceof AlexaTurnError && error.partial) remplacerTour(tour.id, { interrompu: true, persiste: false });
+      interne.erreur = { code: "indisponible", message: error instanceof AlexaTurnError ? error.message : fr.erreurs.indisponible, context: "alexa.turn" };
+      interne.etat = "erreur";
+    }
+  } finally {
+    if (controleurEnCours === controller) controleurEnCours = null;
+    interne.etapeEnCours = null;
+    publier();
+  }
+}
+
+// Voice and keyboard share the same visible conversation and server-owned clinical brain.
+const voiceTurns = new Map<string, string>();
+abonnerTourVoixLocale(event => {
+  if (!voiceTurns.has(event.id)) {
+    ajouterTour({ role: "humain", texte: event.texte });
+    const response = ajouterTour({ role: "jarvis", texte: "" });
+    voiceTurns.set(event.id, response.id);
+    while (voiceTurns.size > 8) voiceTurns.delete(voiceTurns.keys().next().value as string);
+  }
+  const response = voiceTurns.get(event.id);
+  if (response && (event.reponse !== undefined || event.error !== undefined)) remplacerTour(response, {
+    ...(event.reponse !== undefined ? { texte: event.reponse } : {}), porteUneIdentite: false,
+    ...(event.sources !== undefined ? { alexaSources: event.sources } : {}),
+    ...(event.patientId !== undefined ? { sourcePatientId: event.patientId } : {}),
+    ...(event.persiste !== undefined ? { persiste: event.persiste } : {}),
+    ...(event.error === "interrompu" ? { interrompu: true } : {}),
+  });
+  interne.etat = event.reponse === undefined && event.error === undefined ? "envoi" : "composition";
+  if (event.reponse !== undefined || event.error !== undefined) interne.etapeEnCours = null;
+  publier();
+});
+
 /**
  * Envoie un tour EN FLUX. Résout quand le tour est terminé (fin, interruption
  * ou erreur) ; les fragments arrivent dans l'état partagé au fil de l'eau.
@@ -934,6 +1007,11 @@ export async function envoyer(messageBrut: string): Promise<void> {
   if (interne.etat === "envoi" || interne.etat === "flux") return;
   // Une carte en attente bloque la saisie : décider d'abord (L2).
   if (interne.carteEcriture !== null) return;
+
+  if (planRequest(message, null).intent !== "proposal") {
+    await envoyerAlexaUnifie(message);
+    return;
+  }
 
   interne.erreur = null;
   interne.saisie = "";
@@ -1249,6 +1327,7 @@ export async function envoyer(messageBrut: string): Promise<void> {
 
 /** Stop — l'utilisateur coupe le flux ; le serveur notera le tour interrompu. */
 export function interrompre(): void {
+  arreterVoixLocale();
   controleurEnCours?.abort();
 }
 

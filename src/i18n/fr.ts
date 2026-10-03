@@ -698,6 +698,11 @@ export const fr = {
       "Ce rendez-vous est introuvable. Rien n'a été modifié. Vérifiez le lien, ou revenez à l'agenda.",
 
     patient: "Patient",
+    patientExistant: "Patient existant",
+    patientNouveau: "Nouveau patient",
+    creerEtSelectionner: "Créer et sélectionner",
+    nouveauPatientIndication:
+      "Crée le dossier puis le sélectionne pour ce rendez-vous. La base refuse les doublons.",
     patientNonRattache: "Aucun dossier rattaché",
     /** Rendue à la place du bouton « Démarrer la séance » quand la praticienne
      * connectée n'est pas celle du rendez-vous. Ne dit rien qui ne soit déjà

@@ -9,9 +9,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { abonnerLive, basculerLive } from "@/services/alexa-live";
+import { abonnerVoixLocale, basculerVoixLocale } from "@/services/alexa-local";
 import type { VueVoix } from "@/services/jarvis-reveil";
-import { alexaLive } from "@/i18n/alexa-live";
+import { alexa } from "@/i18n/alexa";
 import { fr } from "@/i18n/fr";
 import type { EtatConversationPublique } from "@/services/conversation";
 
@@ -20,14 +20,14 @@ import { Icone, type NomIcone } from "./ui/Icones";
 
 export function HeroAlexaLune({ etat }: { readonly etat: EtatConversationPublique }): React.JSX.Element {
   const [voix, setVoix] = useState<VueVoix | null>(null);
-  useEffect(() => abonnerLive(setVoix), []);
+  useEffect(() => abonnerVoixLocale(setVoix), []);
   const actif = voix !== null && voix.etat !== "desactive" && voix.etat !== "erreur";
   return (
     <div className="animate-fondu-monte flex flex-col items-center px-4 text-center motion-reduce:animate-none">
       {/* L'orbe mène l'état vide à pleine force : c'est le pic de l'écran,
           pas un pictogramme — le titre `text-display` suit, les pastilles se
           taisent autour. */}
-      <button type="button" onClick={basculerLive} aria-label={actif ? alexaLive.arreter : alexaLive.disponible}
+      <button type="button" onClick={basculerVoixLocale} aria-label={actif ? alexa.voixArreter : alexa.voixDemarrer}
         aria-pressed={actif} disabled={etat.carteEcriture !== null && !actif}
         className="inline-flex cursor-pointer items-center justify-center overflow-hidden rounded-full border-0 bg-transparent p-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-action-600">
         <SiriOrb

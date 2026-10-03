@@ -1,23 +1,15 @@
 /**
- * LE MODÈLE N'EST NOMMÉ QUE DANS LA PASSERELLE.
+ * LE MODÈLE N'EST NOMMÉ QUE DANS LA PASSERELLE — SINGLE-MODEL.
  *
- * ═══ LE DÉFAUT MESURÉ, ET POURQUOI IL COMPTAIT ═══
- * `jarvis-analyze-session` et `jarvis-resume-cas` recopiaient à la main la
- * chaîne de résolution du modèle pour renseigner `p_model` — la valeur écrite
- * dans la trace d'AUDIT. Le modèle réellement appelé était pourtant déjà le bon :
- * `llm()` résout dans la passerelle, et lui seul. C'est donc la valeur
- * ENREGISTRÉE qui divergeait.
+ * Décision humaine 2026-10-03 : `qwen/qwen3.7-flash` payant, primary-only.
+ * `resolveModel()` ne lit plus AUCUNE surcharge (`OPENROUTER_MODEL`,
+ * `LLM_MODEL`, `JARVIS_CHAT_MODEL`, `JARVIS_RESUME_MODEL`) : un seul candidat,
+ * une seule tentative, via la clé OpenRouter serveur.
  *
- * ⚠️ ET ELLE DIVERGEAIT VRAIMENT, pas seulement en théorie. `resume-cas`
- * écrivait `env().OPENROUTER_MODEL ?? "<repli>"` — sans `LLM_MODEL`. Avec
- * `LLM_MODEL` seul posé, l'appel partait sur ce modèle-là pendant que l'audit
- * inscrivait le repli. Une trace d'audit qui nomme un modèle qui n'a pas servi
- * est pire qu'une trace absente : elle est crue.
- *
- * Ces tests gardent les trois propriétés, pas la mise en forme :
+ * Ces tests gardent les propriétés, pas la mise en forme :
  *   1. la résolution est UNE, et vit dans la passerelle ;
  *   2. les deux routes ne portent plus de nom de modèle en dur ;
- *   3. la précédence `OPENROUTER_MODEL > LLM_MODEL > repli` est respectée.
+ *   3. aucune variable d'environnement ne change le modèle résolu.
  */
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
@@ -25,6 +17,7 @@ import { join } from "node:path";
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
 
 import { resolveModel } from "../../src/server/egress/external-call";
+import { ALEXA_PRIMARY_MODEL } from "../../src/server/alexa/model-policy";
 import { reinitialiserEnv } from "../../src/server/env";
 
 const ROUTES = [
@@ -80,33 +73,50 @@ describe("aucun nom de modèle en dur hors de la passerelle", () => {
       expect(fautives).toEqual([]);
     });
 
-    it(`${route} passe par la résolution de la passerelle`, () => {
+    it(`${route} conserve une résolution unique ou le résumé local sans modèle externe`, () => {
       // ⚠️ On vérifie l'APPEL, pas seulement l'absence de littéral. Sans cette
       // assertion, supprimer purement et simplement `p_model` ferait passer le
       // test précédent tout en supprimant la trace d'audit.
       const source = readFileSync(join(process.cwd(), route), "utf8");
+      if (route.endsWith("jarvis-resume-cas/route.ts")) {
+        expect(source).toContain('from "@/app/api/alexa/summary/route"');
+        const summary = readFileSync(join(process.cwd(), "src/app/api/alexa/summary/route.ts"), "utf8");
+        expect(summary).toContain("buildCaseSummary(context");
+        expect(summary).toContain('p_model: "local-structured"');
+        expect(summary).not.toContain("inferAlexa(");
+        return;
+      }
       expect(source).toContain("resolveModel");
       expect(source).toContain('from "@/server/egress/external-call"');
     });
   }
 });
 
-describe("la précédence de configuration est celle de la passerelle", () => {
-  it("OPENROUTER_MODEL prime sur tout", () => {
-    process.env.OPENROUTER_MODEL = "essai/modele-a";
-    process.env.LLM_MODEL = "essai/modele-b";
-    reinitialiserEnv();
-    expect(resolveModel()).toBe("essai/modele-a");
+describe("résolution single-model : aucune surcharge d'environnement", () => {
+  it("le primary unique est qwen/qwen3.7-flash", () => {
+    expect(ALEXA_PRIMARY_MODEL).toBe("qwen/qwen3.7-flash");
+    expect(resolveModel()).toBe("qwen/qwen3.7-flash");
+    expect(resolveModel("jarvis")).toBe("qwen/qwen3.7-flash");
+    expect(resolveModel("resume-cas")).toBe("qwen/qwen3.7-flash");
   });
 
-  it("LLM_MODEL sert quand OPENROUTER_MODEL est absent", () => {
-    // ⚠️ C'EST EXACTEMENT LE CAS QUE `resume-cas` RATAIT. Il ignorait
-    // `LLM_MODEL` et inscrivait le repli dans l'audit pendant que l'appel
-    // partait sur `LLM_MODEL`.
-    delete process.env.OPENROUTER_MODEL;
-    process.env.LLM_MODEL = "essai/modele-b";
+  it("OPENROUTER_MODEL / LLM_MODEL ne changent plus rien", () => {
+    process.env.OPENROUTER_MODEL = "qwen/modele-a:free";
+    process.env.LLM_MODEL = "qwen/modele-b:free";
     reinitialiserEnv();
-    expect(resolveModel()).toBe("essai/modele-b");
+    expect(resolveModel()).toBe(ALEXA_PRIMARY_MODEL);
+    expect(resolveModel("jarvis")).toBe(ALEXA_PRIMARY_MODEL);
+    expect(resolveModel("resume-cas")).toBe(ALEXA_PRIMARY_MODEL);
+  });
+
+  it("JARVIS_CHAT_MODEL / JARVIS_RESUME_MODEL ne changent plus rien", () => {
+    process.env.OPENROUTER_MODEL = "qwen/global:free";
+    process.env.JARVIS_CHAT_MODEL = "qwen/chat-libre:free";
+    process.env.JARVIS_RESUME_MODEL = "qwen/resume-libre:free";
+    reinitialiserEnv();
+    expect(resolveModel()).toBe(ALEXA_PRIMARY_MODEL);
+    expect(resolveModel("jarvis")).toBe(ALEXA_PRIMARY_MODEL);
+    expect(resolveModel("resume-cas")).toBe(ALEXA_PRIMARY_MODEL);
   });
 
   it("sans configuration, le repli est celui de la passerelle — et il est unique", () => {
@@ -121,53 +131,10 @@ describe("la précédence de configuration est celle de la passerelle", () => {
       join(process.cwd(), "src/server/egress/external-call.ts"),
       "utf8",
     );
-    expect(passerelle).toContain(repli);
+    expect(passerelle).toContain("ALEXA_PRIMARY_MODEL");
+    expect(readFileSync(join(process.cwd(), "src/server/alexa/model-policy.ts"), "utf8")).toContain(repli);
     for (const route of ROUTES) {
       expect(readFileSync(join(process.cwd(), route), "utf8")).not.toContain(repli);
     }
-  });
-
-  it("le repli courant est gemini-3.8-flash (décision Slice 1)", () => {
-    delete process.env.OPENROUTER_MODEL;
-    delete process.env.LLM_MODEL;
-    reinitialiserEnv();
-    expect(resolveModel()).toBe("google/gemini-3.8-flash");
-    expect(resolveModel("jarvis")).toBe("google/gemini-3.8-flash");
-    expect(resolveModel("resume-cas")).toBe("google/gemini-3.8-flash");
-  });
-});
-
-describe("la surcharge par usage ne fuit jamais sur l'autre usage", () => {
-  it("JARVIS_CHAT_MODEL ne change que le chemin jarvis", () => {
-    process.env.JARVIS_CHAT_MODEL = "essai/chat-libre";
-    reinitialiserEnv();
-    expect(resolveModel("jarvis")).toBe("essai/chat-libre");
-    // Le résumé garde le global — une surcharge de test ne peut pas
-    // silencieusement changer le modèle du dossier clinique.
-    expect(resolveModel("resume-cas")).toBe("google/gemini-3.8-flash");
-    expect(resolveModel()).toBe("google/gemini-3.8-flash");
-  });
-
-  it("JARVIS_RESUME_MODEL ne change que le chemin resume-cas", () => {
-    process.env.JARVIS_RESUME_MODEL = "essai/resume-libre";
-    reinitialiserEnv();
-    expect(resolveModel("resume-cas")).toBe("essai/resume-libre");
-    expect(resolveModel("jarvis")).toBe("google/gemini-3.8-flash");
-  });
-
-  it("OPENROUTER_MODEL reste le global quand aucune surcharge n'est posée", () => {
-    process.env.OPENROUTER_MODEL = "essai/global";
-    reinitialiserEnv();
-    expect(resolveModel()).toBe("essai/global");
-    expect(resolveModel("jarvis")).toBe("essai/global");
-    expect(resolveModel("resume-cas")).toBe("essai/global");
-  });
-
-  it("la surcharge prime sur le global pour son usage seul", () => {
-    process.env.OPENROUTER_MODEL = "essai/global";
-    process.env.JARVIS_CHAT_MODEL = "essai/chat-libre";
-    reinitialiserEnv();
-    expect(resolveModel("jarvis")).toBe("essai/chat-libre");
-    expect(resolveModel("resume-cas")).toBe("essai/global");
   });
 });

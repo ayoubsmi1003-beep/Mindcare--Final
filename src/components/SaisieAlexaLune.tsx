@@ -1,7 +1,7 @@
 /**
  * La zone de saisie Alexa Lune — 21st.dev moon, gestes MindCare.
  *
- * MÊME CONTRAT que `SaisieJarvis` (texte confirmé et voix Live en lecture seule) mais
+ * MÊME CONTRAT que `SaisieJarvis` (texte confirmé et voix locale) mais
  * géométrie de la référence : textarea auto-extensible en haut, rangée
  * voix-à-gauche / envoi-à-droite en bas, boîte en verre sombre.
  *
@@ -14,9 +14,9 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 
 import { fr } from "@/i18n/fr";
-import { alexaLive } from "@/i18n/alexa-live";
+import { alexa } from "@/i18n/alexa";
 import { cn } from "@/lib/utils";
-import { abonnerLive, basculerLive, arreterLive } from "@/services/alexa-live";
+import { abonnerVoixLocale, basculerVoixLocale, arreterVoixLocale } from "@/services/alexa-local";
 import type { VueVoix } from "@/services/jarvis-reveil";
 import type { EtatConversationPublique } from "@/services/conversation";
 
@@ -77,10 +77,10 @@ export function SaisieAlexaLune({
     maxHeight: 150,
   });
   const [voix, setVoix] = useState<VueVoix | null>(null);
-  useEffect(() => abonnerLive(setVoix), []);
+  useEffect(() => abonnerVoixLocale(setVoix), []);
   const actif = voix !== null && voix.etat !== "desactive" && voix.etat !== "erreur";
   const messageVoix = actif || voix?.etat === "erreur" ? voix?.raison ?? null : null;
-  const libelleVoix = actif ? alexaLive.arreter : alexaLive.disponible;
+  const libelleVoix = actif ? alexa.voixArreter : alexa.voixDemarrer;
 
   const fluxEnCours = etat.etat === "envoi" || etat.etat === "flux";
   const bloque = fluxEnCours || etat.carteEcriture !== null || actif;
@@ -105,7 +105,7 @@ export function SaisieAlexaLune({
               e.preventDefault();
               onEnvoyer();
             }
-            if (e.key === "Escape" && actif) arreterLive();
+            if (e.key === "Escape" && actif) arreterVoixLocale();
           }}
           disabled={bloque}
           placeholder={fr.jarvis.invite}
@@ -137,10 +137,10 @@ export function SaisieAlexaLune({
             </span>
           ) : (
             <>
-              {/* Continuous Live session, identical to the side panel. */}
+              {/* Continuous local session, identical to the side panel. */}
               <button
                 type="button"
-                onClick={basculerLive}
+                onClick={basculerVoixLocale}
                 disabled={etat.carteEcriture !== null && !actif}
                 aria-label={libelleVoix}
                 title={voix?.raison ?? libelleVoix}

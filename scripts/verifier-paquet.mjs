@@ -131,8 +131,42 @@ console.log(`[paquet] ${surDisque.length} fichiers sur disque, ${dansAsar.length
  */
 const HORS_DEPENDANCES = /(^|\/)node_modules\//;
 
+// Les roues Python sont conservées intégralement : le worker vérifie chaque
+// fichier de cet inventaire épinglé. Une exclusion par le seul nom packages/
+// laisserait entrer un outil du dépôt. L'exception exige le chemin connu ET
+// l'empreinte réelle, avec la même empreinte d'inventaire que le runtime voix.
+const INVENTAIRE_VOIX_SHA256 = "9b29537de4562809a6a641c18ec7d1c7e320be8a4fa6162f24ffbbe1d78cb281";
+const pinsVoix = new Map();
+const validationsVoix = new Map();
+const fichierInventaireVoix = path.join(CIBLE, "resources", "voix", "inventory.json");
+if (existsSync(fichierInventaireVoix)) {
+  try {
+    const contenu = readFileSync(fichierInventaireVoix);
+    if (createHash("sha256").update(contenu).digest("hex") !== INVENTAIRE_VOIX_SHA256) throw new Error("empreinte");
+    for (const entree of JSON.parse(contenu.toString("utf8"))) {
+      if (typeof entree.path === "string" && entree.path.startsWith("packages/") && /^[a-f0-9]{64}$/.test(entree.sha256)) {
+        pinsVoix.set(`resources/voix/${entree.path}`, entree.sha256);
+      }
+    }
+  } catch {
+    refuser("inventaire voix non conforme au runtime épinglé :", ["resources/voix/inventory.json"]);
+  }
+}
+function dependanceVoixEpinglee(relatif) {
+  if (!pinsVoix.has(relatif)) return false;
+  if (!validationsVoix.has(relatif)) {
+    let conforme = false;
+    try {
+      conforme = createHash("sha256").update(readFileSync(path.join(CIBLE, relatif))).digest("hex") === pinsVoix.get(relatif);
+    } catch { /* Une dépendance absente ou illisible n'obtient aucune exception. */ }
+    validationsVoix.set(relatif, conforme);
+  }
+  return validationsVoix.get(relatif);
+}
+
 const INTERDITS = [
   [/(^|\/)\.env($|\.)/, "un fichier .env", "partout"],
+  [/(^|\/)\.cache\//, "un cache de développement ou de qualification", "partout"],
   [/(^|\/)\.git\//, "des métadonnées git", "partout"],
   // `app-update.yml` : descripteur de mise a jour automatique deduit du dépôt
   // git par electron-builder. Aucun mécanisme de mise à jour n'existe dans
@@ -154,12 +188,30 @@ const INTERDITS = [
 ];
 
 for (const [motif, quoi, portee] of INTERDITS) {
-  const candidats = portee === "partout" ? inventaire : inventaire.filter((f) => !HORS_DEPENDANCES.test(f));
-  const fautifs = candidats.filter((f) => motif.test(f));
+  const fautifs = inventaire.filter((f) => {
+    if (!motif.test(f)) return false;
+    if (portee === "dépôt" && (HORS_DEPENDANCES.test(f) || dependanceVoixEpinglee(f))) return false;
+    // Cette complétion tierce est inerte sous Windows et fait partie de la
+    // roue épinglée ; aucun autre shell, même sous packages/, n'est autorisé.
+    if (quoi === "un script shell" && f === "resources/voix/packages/tqdm/completion.sh" && dependanceVoixEpinglee(f)) return false;
+    return true;
+  });
   if (fautifs.length > 0) {
     refuser(`le paquet contient ${quoi} (${fautifs.length}) :`, fautifs.slice(0, 10));
   }
 }
+
+// Vérifier la liste fermée réellement assemblée, y compris un nouveau script
+// qui ne porte aucun des préfixes d'outillage connus ci-dessus.
+const SCRIPTS_LIVRES = new Set([
+  "native-voice-worker.py", "garde-origine.mjs", "verifier-base.mjs", "sauvegarde.mjs",
+  "lib/dburl.mjs", "lib/base-locale.mjs",
+]);
+const scriptsNonLivres = inventaire.filter((f) => {
+  const relatif = /^resources\/serveur\/scripts\/(.+)$/.exec(f)?.[1];
+  return relatif !== undefined && !SCRIPTS_LIVRES.has(relatif);
+});
+if (scriptsNonLivres.length > 0) refuser("des scripts hors de la liste livrée sont empaquetés :", scriptsNonLivres.slice(0, 10));
 
 // ── 2. Ce qui DOIT être là ──────────────────────────────────────────────────
 //

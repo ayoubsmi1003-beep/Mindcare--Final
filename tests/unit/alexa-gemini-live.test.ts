@@ -1,97 +1,68 @@
-import { afterEach, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
-const config = vi.hoisted(() => ({
-  VOICE_PROVIDER: "cloud", GEMINI_API_KEY: "synthetic-test-key", ALEXA_LIVE_DEBUG: "false",
+const controls = vi.hoisted(() => ({
+  config: { VOICE_PROVIDER: "cloud", GEMINI_API_KEY: "synthetic-test-key", ALEXA_LIVE_DEBUG: "false" },
+  query: vi.fn(), environment: vi.fn(),
 }));
-const gate = vi.hoisted(() => ({ cloud: true }));
-vi.mock("@/server/env", () => ({ env: () => config }));
+vi.mock("@/server/env", () => ({ env: () => { controls.environment(); return controls.config; } }));
 vi.mock("@/server/db/withCaller", () => ({
-  withCaller: async (_actor: string | null, fn: (q: unknown) => unknown) => fn({ query: async (sql: string) =>
-    sql.includes("is_cloud_dev") ? [{ cloud: gate.cloud }] : [] }),
-  withEgressGate: async (fn: (q: unknown) => unknown) => fn({ query: async (sql: string) =>
-    sql.includes("is_cloud_dev") ? [{ cloud: gate.cloud }] : [] }),
+  withCaller: async (_actor: string | null, fn: (q: unknown) => unknown) => fn({ query: controls.query }),
+  withEgressGate: async (fn: (q: unknown) => unknown) => fn({ query: controls.query }),
 }));
-import * as gateway from "@/server/egress/external-call";
+import { ouvrirGeminiLive } from "@/server/egress/external-call";
 
+const connect = vi.fn();
 class Socket extends EventTarget {
-  static sockets: Socket[] = [];
   readyState = 0;
   bufferedAmount = 0;
-  sent: unknown[] = [];
   constructor(readonly url: string) {
-    super(); Socket.sockets.push(this);
+    super(); connect(url);
     queueMicrotask(() => { this.readyState = 1; this.dispatchEvent(new Event("open")); });
   }
   send(text: string) {
-    const data = JSON.parse(text) as { setup?: unknown };
-    this.sent.push(data);
-    if (data.setup) queueMicrotask(() => this.receive({ setupComplete: {} }));
+    if ((JSON.parse(text) as { setup?: unknown }).setup) {
+      queueMicrotask(() => this.dispatchEvent(new MessageEvent("message", {
+        data: JSON.stringify({ setupComplete: {} }),
+      })));
+    }
   }
-  receive(data: unknown) { this.dispatchEvent(new MessageEvent("message", { data: JSON.stringify(data) })); }
   close() { this.readyState = 3; this.dispatchEvent(new Event("close")); }
 }
 
-afterEach(() => { vi.unstubAllGlobals(); Socket.sockets = []; config.VOICE_PROVIDER = "cloud"; gate.cloud = true; });
+beforeEach(() => {
+  vi.clearAllMocks();
+  controls.config.VOICE_PROVIDER = "cloud";
+  controls.config.GEMINI_API_KEY = "synthetic-test-key";
+  controls.query.mockImplementation(async (sql: string) => sql.includes("is_cloud_dev") ? [{ cloud: true }] : []);
+  vi.stubGlobal("WebSocket", Socket);
+});
+afterEach(() => vi.unstubAllGlobals());
 
-describe("Gemini native Live egress", () => {
-  it("has a native Live entry point instead of the STT/text/TTS chain", () => {
-    expect(gateway).toHaveProperty("ouvrirGeminiLive", expect.any(Function));
+describe("retired Gemini Live egress", () => {
+  it.each(["cloud", "local"])("refuses %s configuration before secrets, database, network or tools", async (provider) => {
+    controls.config.VOICE_PROVIDER = provider;
+    const onEvent = vi.fn(), executeTool = vi.fn();
+    const result = await ouvrirGeminiLive({
+      sessionToken: "00000000-0000-4000-8000-000000000001", currentPatientId: null,
+      onEvent, executeTool,
+    });
+    if (result.ok) result.data.close();
+    expect(result).toMatchObject({ ok: false, error: { code: "configuration" } });
+    expect(connect).not.toHaveBeenCalled();
+    expect(controls.environment).not.toHaveBeenCalled();
+    expect(controls.query).not.toHaveBeenCalled();
+    expect(executeTool).not.toHaveBeenCalled();
+    expect(onEvent).not.toHaveBeenCalled();
   });
-  it("opens the requested native model, sends PCM and returns provider audio in the same session", async () => {
-    vi.stubGlobal("WebSocket", Socket);
-    const events: unknown[] = [];
-    const r = await gateway.ouvrirGeminiLive({ sessionToken: "00000000-0000-4000-8000-000000000001",
-      currentPatientId: null, onEvent: (e) => events.push(e), executeTool: async () => ({ status: "unavailable" }) });
-    expect(r.ok).toBe(true); if (!r.ok) return;
-    const socket = Socket.sockets[0]!;
-    expect(socket.sent[0]).toMatchObject({ setup: { model: "models/gemini-3.8-live",
-      generationConfig: { responseModalities: ["AUDIO"] } } });
-    await r.data.sendAudio("AAAAAA==");
-    expect(socket.sent.at(-1)).toEqual({ realtimeInput: { audio: { data: "AAAAAA==", mimeType: "audio/pcm;rate=16000" } } });
-    socket.receive({ serverContent: { modelTurn: { parts: [{ inlineData: { data: "AAAAAA==", mimeType: "audio/pcm;rate=24000" } }] }, turnComplete: true } });
-    await new Promise((resolve) => setTimeout(resolve, 0));
-    expect(events).toContainEqual({ type: "audio", data: "AAAAAA==", sampleRate: 24000 });
-    expect(events).toContainEqual({ type: "turn_complete" });
-    r.data.close(); expect(socket.readyState).toBe(3);
-  });
-  it("refuses local deployment mode before opening a cloud socket", async () => {
-    vi.stubGlobal("WebSocket", Socket); config.VOICE_PROVIDER = "local";
-    const r = await gateway.ouvrirGeminiLive({ sessionToken: "00000000-0000-4000-8000-000000000001",
-      currentPatientId: null, onEvent: () => {}, executeTool: async () => ({}) });
-    expect(r.ok).toBe(false); expect(Socket.sockets).toHaveLength(0);
-  });
-  it("keeps the database synthetic-deployment lock even with a configured cloud key", async () => {
-    vi.stubGlobal("WebSocket", Socket); gate.cloud = false;
-    const r = await gateway.ouvrirGeminiLive({ sessionToken: crypto.randomUUID(), currentPatientId: null,
-      onEvent: () => {}, executeTool: async () => ({}) });
-    expect(r.ok).toBe(false); expect(Socket.sockets).toHaveLength(0);
-  });
-  it("closes once and aborts pending tools when the client leaves", async () => {
-    vi.stubGlobal("WebSocket", Socket);
-    const abort = new AbortController(), events: unknown[] = [], signals: AbortSignal[] = [];
-    const r = await gateway.ouvrirGeminiLive({ sessionToken: crypto.randomUUID(), currentPatientId: null, signal: abort.signal,
-      onEvent: (event) => events.push(event), executeTool: async (_name, _args, signal) => {
-        signals.push(signal); return new Promise(() => {});
-      } });
-    expect(r.ok).toBe(true); if (!r.ok) return;
-    Socket.sockets[0]!.receive({ toolCall: { functionCalls: [{ id: "pending", name: "get_patient_summary", args: {} }] } });
-    await new Promise((resolve) => setTimeout(resolve, 0));
-    abort.abort(); r.data.close();
-    expect(signals[0]?.aborted).toBe(true);
-    expect(events.filter((event) => (event as { type: string }).type === "closed")).toHaveLength(1);
-  });
-  it("returns tool results with the exact call ID and preserves multilingual conversational context", async () => {
-    vi.stubGlobal("WebSocket", Socket);
-    const tool = vi.fn(async () => ({ status: "ok", resume: { contenu: "synthetic exact summary" } }));
-    const r = await gateway.ouvrirGeminiLive({ sessionToken: "00000000-0000-4000-8000-000000000001",
-      currentPatientId: null, onEvent: () => {}, executeTool: tool });
-    expect(r.ok).toBe(true); if (!r.ok) return;
-    const socket = Socket.sockets[0]!;
-    socket.receive({ toolCall: { functionCalls: [{ id: "call-1", name: "get_patient_summary", args: {} }] } });
-    await new Promise((resolve) => setTimeout(resolve, 0));
-    expect(tool).toHaveBeenCalledWith("get_patient_summary", {}, expect.any(AbortSignal));
-    expect(socket.sent.at(-1)).toMatchObject({ toolResponse: { functionResponses: [{ id: "call-1",
-      name: "get_patient_summary", response: { result: { resume: { contenu: "synthetic exact summary" } } } }] } });
-    expect(Socket.sockets).toHaveLength(1); r.data.close();
+
+  it("keeps the retirement fail-closed for an already aborted request", async () => {
+    const signal = AbortSignal.abort();
+    const result = await ouvrirGeminiLive({
+      sessionToken: "00000000-0000-4000-8000-000000000001", currentPatientId: null,
+      signal, onEvent: () => {}, executeTool: async () => ({}),
+    });
+    expect(result.ok).toBe(false);
+    expect(connect).not.toHaveBeenCalled();
+    expect(controls.query).not.toHaveBeenCalled();
   });
 });

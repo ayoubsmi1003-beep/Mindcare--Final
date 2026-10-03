@@ -236,11 +236,12 @@ describe("les domaines de citation", () => {
     expect(item?.sources.map((s) => s.t)).toEqual(["consultation"]);
   });
 
-  it("la liste des domaines reste celle de la migration 053", () => {
+  it("conserve les domaines historiques et le traitement courant ajouté par 120", () => {
     expect([...DOMAINES_SOURCE]).toEqual([
       "diagnostic",
       "echelle",
       "prescription",
+      "treatment",
       "consultation",
       "rdv",
       "document",

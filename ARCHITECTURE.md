@@ -50,6 +50,8 @@ avant tout appel externe (`server/jarvis/pseudonymize.ts`).
 | `audit_append` / `nom_recherche` TO PUBLIC | risque LOW vérifié (Phase 3) | inchangés en 3B | durcissement = migration dessinée, jamais de grep-chasse (décision humaine, 3B-D4) |
 | Portes connaissance (tests unitaires : payloads string) | `ligneValide` écartait `Date` (ligne jugée malformée) | node-pg rend `timestamptz` en `Date` → corpus approuvé INVISIBLE sur substrat réel (trouvé R3-D, aurait rendu R3 aveugle) | corrigé : `normaliserHorodatage` (service, frontière pg) + 2 tests Date (connaissance-service.test.ts) |
 | `stockage.ts` historique proposé | ajoutait `p_inclure_historique` aux deux RPC | PostgreSQL local et migrations 092/093 : signatures à 3 et 2 paramètres, aucun paramètre historique | corrigé le 2026-09-30 : signatures installées exactes ; historique explicitement refusé ; migrations inchangées ; preuve `alexa-knowledge-gates.test.ts` |
+| Workspace 053 : champ optionnel `resume` | Workspace 089 omet ce champ | Résumé sauvegardé absent du workspace ; checkpoint PostgreSQL 21 contrôles PASS | Lecture auditée `get_alexa_case_summary` ajoutée par 121, appliquée ; migrations antérieures immuables ; persistance UI après actualisation PASS |
+| `context/alexa-v2.md` : free-only, aucune autorisation de modèle payant | `model-policy.ts` : `qwen/qwen3.7-flash` payant primary-only, `resolveModel()` sans surcharge, 1 tentative | décision humaine 2026-10-03 (solde OpenRouter vide : repli local jusqu'au rechargement) | pool `:free`/bascule Gemini conservés en maintenance explicite hors tour ; `max_price` 0,05/0,20 |
 
 ## CHIFFREMENT (état, pas intention — REQUIRED = constitution)
 

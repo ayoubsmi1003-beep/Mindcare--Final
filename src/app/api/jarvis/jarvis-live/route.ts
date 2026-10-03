@@ -1,13 +1,13 @@
 import { createHash, randomUUID } from "node:crypto";
 import { cookies } from "next/headers";
 import { NOM_COOKIE } from "@/server/auth/session";
-import { env } from "@/server/env";
-import { ouvrirGeminiLive, diagnosticLive, type SessionGeminiLive } from "@/server/egress/external-call";
+import { ouvrirGeminiLive, diagnosticLive, geminiLiveAutorise, type SessionGeminiLive } from "@/server/egress/external-call";
 import { clientSql } from "@/server/jarvis/client-sql";
 import { lireOutilLive, patientFictif, type ContexteLive } from "@/server/voice/live-tools";
 import { lireCorpsVoix } from "@/server/voice/corps";
 import { CommandeLive, type EvenementLive } from "@/shared/jarvis/live";
 import { alexaLive } from "@/i18n/alexa-live";
+import { alexa } from "@/i18n/alexa";
 import { identite, echec, succes } from "../_commun";
 
 export const runtime = "nodejs";
@@ -23,14 +23,15 @@ const unavailable = () => echec("configuration", alexaLive.indisponible);
 
 export async function GET(): Promise<Response> {
   if (await identite() === null) return unavailable();
-  const e = env();
-  return Response.json({ ok: true, data: { model: "gemini-3.8-live", keyConfigured: Boolean(e.GEMINI_API_KEY || e.GOOGLE_API_KEY),
-    cloudSelected: e.VOICE_PROVIDER === "cloud", voiceEnabled: e.JARVIS_VOICE_ENABLED !== "false" && e.JARVIS_ENABLED !== "false" } },
+  return Response.json({ ok: true, data: { status: "retired", provider: "local", cloudEnabled: false,
+    replacement: "/api/alexa/turn" } },
   { headers: { "Cache-Control": "no-store" } });
 }
 
 export async function POST(req: Request): Promise<Response> {
   const actor = await identite();
+  if (!actor) return echec("non-authentifie", alexaLive.indisponible);
+  if (!geminiLiveAutorise()) return echec("voix-cloud-retiree", alexa.frontiere);
   const cookie = (await cookies()).get(NOM_COOKIE)?.value;
   if (!actor || !cookie) return echec("non-authentifie", alexaLive.indisponible);
   const v = CommandeLive.safeParse(await lireCorpsVoix(req, 64_000));

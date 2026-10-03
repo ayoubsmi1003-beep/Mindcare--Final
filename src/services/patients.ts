@@ -637,6 +637,7 @@ export type TypeSourceResume =
   | "diagnostic"
   | "echelle"
   | "prescription"
+  | "treatment"
   | "consultation"
   | "rdv"
   | "document";
@@ -645,6 +646,7 @@ const TYPES_SOURCE: readonly TypeSourceResume[] = [
   "diagnostic",
   "echelle",
   "prescription",
+  "treatment",
   "consultation",
   "rdv",
   "document",

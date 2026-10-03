@@ -10,13 +10,15 @@
  * POURQUOI `router.replace` ET PAS `push` : après une connexion réussie, le
  * bouton Retour ne doit pas ramener sur un formulaire de connexion déjà utilisé.
  *
- * v9 — L'ÉCRAN D'ENTRÉE EST COMPOSÉ. Deux colonnes au-dessus de la rupture
- * `tablet` : le panneau de marque à gauche (le dégradé `--grad-auth`, le mark,
- * l'accroche, le semis de feuilles en filigrane), le formulaire à droite dans
- * sa carte opaque. En dessous, le panneau de marque se replie en en-tête au-
- * dessus de la carte — jamais supprimé : c'est lui qui dit « vous êtes chez
- * MindCare » à la première heure. Aucune valeur du formulaire ne repose sur le
- * dégradé : la carte reste blanche et opaque, à contraste constant (§4.2).
+ * v10 — AUTH-SWITCH VERT/BLANC, FIGÉ EN CONNEXION SEULE. La carte est
+ * scindée comme la référence 21st.dev (panneau vert à gauche, formulaire
+ * blanc à droite, pastilles pilule), mais SANS bascule `sign-up` ni social :
+ * un cabinet n'a ni inscription publique ni OAuth externe (loi 18-07,
+ * local-first). Le panneau vert est statique — marque, accroche, semis de
+ * feuilles en filigrane. En dessous de `tablet`, il se replie en bandeau
+ * au-dessus du formulaire — jamais supprimé. Aucune valeur du formulaire
+ * ne repose sur le dégradé : la colonne droite reste blanche et opaque,
+ * à contraste constant (§4.2).
  */
 
 "use client";
@@ -87,30 +89,33 @@ export default function PageConnexion(): React.JSX.Element {
     /* Le titre de l'écran est le `<h1>` du formulaire lui-même : en ajouter
         un second ici donnerait deux titres de premier niveau sur une page
         qui n'a qu'un sujet, et un lecteur d'écran annoncerait la même chose
-        deux fois. Le panneau de marque ne porte donc aucun titre — le mark
-        et l'accroche sont des images et du texte d'accompagnement. */
+        deux fois. Le panneau vert ne porte donc aucun titre — le mark et
+        l'accroche sont des images et du texte d'accompagnement. */
     <main
-      className="flex min-h-viewport items-center justify-center p-6"
-      /* V3 — `--grad-auth`, au catalogue fermé d'ADR-022, qui nomme
-       * explicitement l'écran de connexion parmi les surfaces où la couleur
-       * est autorisée. v9 ajoute le reflet : une source de lumière, donc une
-       * épaisseur, sur ce qui était un aplat. */
-      style={{ background: "var(--grad-auth)", fontFamily: "var(--font-ui)" }}
+      className="flex min-h-viewport items-center justify-center bg-canevas p-6"
+      style={{ fontFamily: "var(--font-ui)" }}
     >
-      <div className="relative flex w-full max-w-auth items-stretch justify-center gap-10 tablet:justify-between">
-        {/* Le reflet, sous les deux colonnes — décor pur, jamais une encre. */}
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 hidden bg-grad-hero-reflet tablet:block"
-        />
-
-        {/* ── Le panneau de marque — au-dessus de la rupture `tablet` ────── */}
-        <div className="sur-marque relative hidden flex-1 flex-col justify-between py-8 tablet:flex">
-          <div className="flex items-center gap-4 text-on-brand">
+      {/* La carte scindée AuthSwitch : vert à gauche, blanc à droite.
+          `overflow-hidden` + `rounded-3xl` : la courbe de la référence, sans
+          cercle positionné en dur. Le fond de page reste `--canevas`
+          (menthe clair) — le vert ne vit QUE dans le panneau, jamais en
+          aplat plein écran qui écraserait le contraste. */}
+      <div className="grid w-full max-w-auth overflow-hidden rounded-3xl border border-rule bg-card shadow-elevee tablet:grid-cols-2">
+        {/* ── Panneau vert — statique, jamais une bascule sign-up ─────────── */}
+        <div className="sur-marque relative flex flex-col justify-between gap-8 overflow-hidden bg-grad-brand p-8 text-on-brand tablet:p-12">
+          {/* Reflet : source de lumière sur le dégradé, décor pur. */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 bg-reflet"
+          />
+          <div className="relative flex items-center gap-4">
             <MarqueMindCare taille={44} titre="MindCare OS" />
-            <span className="font-ui text-title font-semibold">MindCare OS</span>
+            <span className="flex min-w-0 flex-col">
+              <span className="font-ui text-title font-semibold">MindCare OS</span>
+              <span className="font-ui text-label">{fr.coquille.marqueSousTitre}</span>
+            </span>
           </div>
-          <div className="flex flex-col gap-3 text-on-brand">
+          <div className="relative flex flex-col gap-4">
             <p className="m-0 font-ui text-title font-semibold">
               {fr.connexion.accroche}
             </p>
@@ -118,16 +123,8 @@ export default function PageConnexion(): React.JSX.Element {
           </div>
         </div>
 
-        {/* ── Le panneau de marque REPLIÉ — l'en-tête au-dessus de la carte ── */}
-        <div className="sur-marque absolute -top-2 left-0 right-0 flex items-center justify-center gap-3 pb-4 text-on-brand tablet:hidden">
-          <MarqueMindCare taille={32} titre="MindCare OS" />
-          <span className="font-ui text-body font-semibold">MindCare OS</span>
-        </div>
-
-        {/* La carte, à contraste constant — aucune valeur ne repose sur le
-            dégradé. Au-dessus de la rupture, elle occupe la colonne droite ;
-            en dessous, elle se pose sous l'en-tête replié. */}
-        <div className="relative mt-12 flex w-full justify-center tablet:mt-0 tablet:w-auto">
+        {/* ── Colonne formulaire — blanche, opaque, contraste constant ────── */}
+        <div className="relative flex w-full items-center justify-center">
           <FormulaireConnexion
             onSubmit={handleSubmit}
             enCours={enCours}

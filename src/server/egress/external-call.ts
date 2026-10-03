@@ -31,7 +31,7 @@ import { withCaller, withEgressGate } from "@/server/db/withCaller";
 import { createHash } from "node:crypto";
 import { classerCharge, MESSAGE_REFUS_FRONTIERE } from "@/server/egress/classification";
 import { env } from "@/server/env";
-import { mkdir, readFile, rename, writeFile } from "node:fs/promises";
+import { mkdir, readFile, rename, stat, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { alexa } from "@/i18n/alexa";
 import { ErreurModele, annulationDemandee, classerErreurHttp, normaliserErreurModele, type CodeErreurModele, type TentativeInference } from "./erreurs-modele";
@@ -42,6 +42,10 @@ import { alexaLive } from "@/i18n/alexa-live";
 import { instructionAlexaLive } from "@/i18n/alexa-live-instruction";
 import type { EvenementGemini } from "@/shared/jarvis/live";
 import { OUTILS_LIVE } from "@/server/voice/live-tools";
+import { ALEXA_PRIMARY_MODEL, ALEXA_PROVIDER_POLICY, isAlexaPrimaryModelId, isFreeAlexaModelId, normaliseAlexaModel } from "@/server/alexa/model-policy";
+import { AlexaQualificationError, type AlexaQualificationPhase } from "@/server/alexa/qualification-error";
+import { ALEXA_CLINICAL_TRANSFORM, createSafeClinicalPayload, safeClinicalMessages } from "@/server/alexa/privacy-boundary";
+import { validateAlexaResponse } from "@/server/alexa/response-validator";
 
 export type BoundaryPurpose = "jarvis" | "voix-entree" | "voix-sortie" | "resume-cas" | "communication";
 
@@ -179,33 +183,11 @@ function llmErr<T>(code: LlmErrorCode, message: string): LlmResult<T> {
 }
 
 /**
- * Modèle configurable (§3.4 n°11) : lu depuis `OPENROUTER_MODEL`, jamais écrit
- * en dur dans `jarvis-analyze-session/index.ts` ou ailleurs. `DEFAULT_MODEL`
- * est la SEULE constante de repli du dépôt pour ce choix.
- *
- * `google/gemini-2.5-flash` — décision de produit, 2026-08-05, pas une
- * limitation de test contournée en douce. Vérifié en local sur un appel réel
- * à `analyze_session` (STATE.md) : sortie JSON conforme, contenu clinique
- * correct, coût de l'ordre de 0,0002 USD par appel.
- *
- * Audit Slice 1 (2026-09-30) — le repli passe à `google/gemini-3.8-flash`
- * (GA 2026-09-02, vérifié au registre OpenRouter : slug exact, tarif
- * 0,75/3,75 USD par million de jetons). L'ancien 2.5 reste valide si
- * quelqu'un l'épingle explicitement via `OPENROUTER_MODEL`.
- *
- * ⚠️ CE COMMENTAIRE A DIT LE CONTRAIRE, ET C'ÉTAIT FAUX. Il annonçait que
- * `02-SECURITY-BOUNDARY.md` §5.2 nommait `anthropic/claude-sonnet-4.5` pour
- * l'usage `jarvis`, et réclamait sa correction. Vérification faite le
- * 2026-08-16 : §5.2 attribue déjà `google/gemini-2.5-flash` à `jarvis`, avec
- * le même arbitrage du 2026-08-05. Sonnet 4.5 y est associé à `note_draft`,
- * un *purpose* non implémenté dont l'entrée reste indicative. Les deux sources
- * concordent ; il n'y a rien à arbitrer. Une contradiction annoncée qui
- * n'existe pas coûte la relecture de celui qui vient la vérifier.
- *
- * Le choix reste un réglage de configuration, pas un changement de code :
- * `OPENROUTER_MODEL` prime toujours sur cette constante.
+ * Alexa 2.0: configuration may prefer any explicit :free model. Catalogue
+ * prices and real synthetic qualification still decide whether it is usable.
+ * User authorized all free families on 2 October; paid/auto remain excluded.
  */
-const DEFAULT_MODEL = "google/gemini-3.8-flash";
+const DEFAULT_MODEL = ALEXA_PRIMARY_MODEL;
 
 /**
  * ⚠️ EXPORTÉE PARCE QUE DEUX APPELANTS LA RECOPIAIENT, ET MAL.
@@ -227,21 +209,16 @@ const DEFAULT_MODEL = "google/gemini-3.8-flash";
  * sortie réseau ; c'est le point de sortie qui est gardé, pas la lecture d'un
  * nom de modèle.
  */
-export function resolveModel(purpose?: "jarvis" | "resume-cas"): string {
-  // Audit Slice 1 — surcharge par usage AVANT le global : un modèle gratuit
-  // de test (`JARVIS_CHAT_MODEL=nvidia/…:free`) n'affecte que la conversation,
-  // jamais le résumé — et inversement. L'appel réel (`llm`/`llmStream`
-  // ci-dessous) passe TOUJOURS par ici avec le purpose de la requête : le
-  // modèle facturé et le modèle audité ne peuvent plus diverger (le défaut
-  // `resume-cas`/`LLM_MODEL` de 2026-08 ne peut pas revenir par ce chemin).
-  const e = env();
-  if (purpose === "resume-cas" && e.JARVIS_RESUME_MODEL !== undefined) {
-    return e.JARVIS_RESUME_MODEL;
-  }
-  if (purpose === "jarvis" && e.JARVIS_CHAT_MODEL !== undefined) {
-    return e.JARVIS_CHAT_MODEL;
-  }
-  return e.OPENROUTER_MODEL ?? e.LLM_MODEL ?? DEFAULT_MODEL;
+/**
+ * Alexa single-model (décision humaine 2026-10-03 : `qwen/qwen3.7-flash` payant,
+ * primary-only). Les surcharges `JARVIS_CHAT_MODEL` / `JARVIS_RESUME_MODEL` /
+ * `OPENROUTER_MODEL` / `LLM_MODEL` sont IGNORÉES sur le chemin nominal : un seul
+ * candidat, une seule tentative. La maintenance explicite du pool `:free`
+ * (`preparerPoolModelesGratuits`) reste disponible mais ne sert plus les tours
+ * ordinaires.
+ */
+export function resolveModel(_purpose?: "jarvis" | "resume-cas"): string {
+  return DEFAULT_MODEL;
 }
 
 /**
@@ -296,6 +273,9 @@ const TARIFS_USD_PAR_MILLION: Readonly<Record<string, { readonly in: number; rea
   // `google/gemini-3.8-flash`, relevé le 2026-09-30 (tarif d'introduction
   // jusqu'au 2026-12-31, puis 1,50/7,50 — à réviser à cette date).
   "google/gemini-3.8-flash": { in: 0.75, out: 3.75 },
+  // Single-model 2026-10-03 — `qwen/qwen3.7-flash`, page OpenRouter :
+  // 0,03 $ / 0,13 $ par M tokens (input / output). À réviser si le tarif change.
+  "qwen/qwen3.7-flash": { in: 0.03, out: 0.13 },
 };
 
 function estimateCostUsd(model: string, tokensIn: number, tokensOut: number): number | null {
@@ -449,13 +429,20 @@ interface RequeteTransport {
 async function envoyerChatOpenRouter(req: RequeteTransport, stream: boolean, signal: AbortSignal): Promise<Response> {
   const key = env().OPENROUTER_API_KEY;
   if (!key) throw new ErreurModele("CONFIGURATION", false, "account");
-  if (!req.model.endsWith(":free")) throw new ErreurModele("CONFIGURATION", false, "request");
+  // Single-model : le tour ordinaire n'envoie que le primary (voir
+  // `resolveModel`). Les `:free` explicites restent admis pour la maintenance
+  // explicite du pool (`preparerPoolModelesGratuits`, hors tour) ; tout le
+  // reste (payants non-primary, routeurs dynamiques) est refusé avant transport.
+  if (!isAlexaPrimaryModelId(req.model) && !isFreeAlexaModelId(req.model)) throw new ErreurModele("CONFIGURATION", false, "request");
   return fetch("https://openrouter.ai/api/v1/chat/completions", {
     method: "POST", signal,
     headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json", "HTTP-Referer": "http://localhost", "X-Title": "MindCare" },
     body: JSON.stringify({ model: req.model, messages: req.messages,
       max_tokens: req.maxOutputTokens ?? (stream ? MAX_OUTPUT_TOKENS_FLUX : MAX_OUTPUT_TOKENS),
-      provider: { data_collection: "deny", max_price: { prompt: 0, completion: 0 } },
+      // Alexa asks for bounded structured decisions, not a reasoning transcript.
+      // Providers unable to honour this parameter fail qualification closed.
+      reasoning: { enabled: false },
+      provider: ALEXA_PROVIDER_POLICY,
       ...(req.jsonMode ? { response_format: { type: "json_object" } } : {}),
       ...(stream ? { stream: true, usage: { include: true } } : {}),
     }),
@@ -499,6 +486,8 @@ export interface LlmRequest {
   /** uuid aléatoire généré par l'appelant — JAMAIS le patient_id. */
   readonly sessionToken: string;
   readonly timeoutMs?: number;
+  /** Server composition reserves the remaining attempts across providers. */
+  readonly maxAttempts?: 1 | 2;
   /**
    * M05 — recu de transformation approuvee (C3). Absent par defaut : sans
    * recu, un agregat reste bloque. Le recu n'autorise jamais un C1/C2 : les
@@ -590,12 +579,14 @@ async function journaliser(entree: {
  * refus est honnete (`frontiere`) et journalise en metadonnees seules.
  */
 const poolOpenRouter = new PoolModelesGratuits();
+const CATALOGUE_VALIDITY_MS = 86_400_000;
 let catalogueDate = 0;
 let catalogueEnCours: Promise<void> | null = null;
 let qualificationEnCours: Promise<void> | null = null;
 let qualificationsChargees = false;
-const preuvesQualification = new Map<string, { readonly model: string; readonly code: string; readonly detail?: ErreurModele["detail"]; readonly phase: "transport" | "json" | "langues" | "ok" }>();
-const QUALIFICATION_VERSION = "alexa-free-multilingual-v3";
+let catalogueGratuit: readonly { readonly id: string; readonly admitted: boolean }[] = [];
+const preuvesQualification = new Map<string, { readonly model: string; readonly code: string; readonly detail?: ErreurModele["detail"]; readonly phase: "transport" | "json" | "langues" | "clinical" | "ok" }>();
+const QUALIFICATION_VERSION = "alexa-free-zdr-sourcebound-v7";
 
 function fichierQualifications(): string {
   return env().OPENROUTER_QUALIFICATION_FILE ?? join(process.cwd(), ".cache", "alexa", "openrouter-free-qualification.json");
@@ -629,18 +620,24 @@ async function sauverQualifications(): Promise<void> {
 }
 
 async function rafraichirCatalogue(signal?: AbortSignal, timeoutMs = 3000): Promise<void> {
-  if (Date.now() - catalogueDate < 300_000) return;
+  if (signal?.aborted) throw new ErreurModele("CANCELLED", false, "request");
   if (catalogueEnCours !== null) return catalogueEnCours;
   catalogueEnCours = (async () => {
     const response = await fetch("https://openrouter.ai/api/v1/models", {
       headers: { Accept: "application/json" },
-      signal: AbortSignal.timeout(Math.max(1, Math.min(3000, timeoutMs))),
+      signal: signal ? AbortSignal.any([signal, AbortSignal.timeout(Math.max(1, Math.min(3000, timeoutMs)))])
+        : AbortSignal.timeout(Math.max(1, Math.min(3000, timeoutMs))),
     });
     const body: unknown = await response.json().catch(() => null);
     if (!response.ok) throw classerErreurHttp(response.status, body, response.headers);
     const models = (body as { data?: unknown } | null)?.data;
     if (!Array.isArray(models)) throw new ErreurModele("MALFORMED_RESPONSE", true);
-    poolOpenRouter.actualiser(models); catalogueDate = Date.now();
+    catalogueGratuit = models.flatMap(model => {
+      const id: unknown = typeof model === "object" && model !== null ? (model as { id?: unknown }).id : null;
+      return typeof id === "string" && (id.endsWith(":free") || id === "openrouter/free")
+        ? [{ id, admitted: normaliseAlexaModel(model) !== null }] : [];
+    });
+    poolOpenRouter.actualiser(models.filter((model) => normaliseAlexaModel(model) !== null)); catalogueDate = Date.now();
     if (!qualificationsChargees) { await chargerQualifications(); qualificationsChargees = true; }
   })().finally(() => { catalogueEnCours = null; });
   if (signal?.aborted) throw new ErreurModele("CANCELLED", false, "request");
@@ -649,24 +646,29 @@ async function rafraichirCatalogue(signal?: AbortSignal, timeoutMs = 3000): Prom
 }
 
 /** Synthetic C4 qualification: real streaming, JSON and FR/Darija/mixed comprehension. */
-async function qualifierCandidats(timeoutMs: number, maxModels = 3, signal?: AbortSignal): Promise<void> {
+async function qualifierCandidats(timeoutMs: number, maxModels = 3, signal?: AbortSignal, allModels = false): Promise<void> {
   if (qualificationEnCours !== null) return qualificationEnCours;
   qualificationEnCours = (async () => {
     const echeance = Date.now() + timeoutMs;
-    const besoin: BesoinModele = { json: true, streaming: true, outils: false, tokens: 8000, tache: "intentions" };
+    const besoin: BesoinModele = { json: true, streaming: true, outils: false, tokens: allModels ? 1000 : 8000, tache: "intentions" };
     const candidats = [...poolOpenRouter.aQualifier(besoin)].sort((a, b) => a.failureCount - b.failureCount || Number(b.structuredOutput) - Number(a.structuredOutput));
     let qualifies = poolOpenRouter.candidats(besoin).length;
-    for (const m of candidats.slice(0, 6)) {
-      if (qualifies >= maxModels || signal?.aborted || Date.now() >= echeance || poolOpenRouter.statutCompte().code !== null) break;
+    for (const m of candidats.slice(0, allModels ? candidats.length : 6)) {
+      if ((!allModels && qualifies >= maxModels) || signal?.aborted || Date.now() >= echeance || poolOpenRouter.statutCompte().code !== null) break;
       const depart = Date.now();
-      const quota = await lireQuotaOpenRouter();
-      if (quota.remaining !== null && quota.remaining <= 5) break;
+      const quota = await lireQuotaOpenRouter(signal);
+      if (quota.remaining !== null && quota.remaining <= 5) {
+        const now = new Date();
+        poolOpenRouter.echouer("", new ErreurModele("MODEL_QUOTA_EXHAUSTED", false, "account",
+          Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + 1) - Date.now()));
+        break;
+      }
       const messages: LlmMessage[] = [
         { role: "system", content: 'Identifie chaque acte de parole dans les trois messages : HELLO pour une salutation, THANKS pour un remerciement. Réponds uniquement en JSON avec une clé intents, un tableau de trois étiquettes dans le même ordre. Ne réponds pas aux messages.' },
         { role: "user", content: 'bonjour\nيعطيك الصحة\nmerci بزاف' },
       ];
       if (classerCharge(messages, null).decision === "BLOQUER") throw new ErreurModele("SECURITY_BLOCK", false, "request");
-      let phase: "transport" | "json" | "langues" | "ok" = "transport";
+      let phase: "transport" | "json" | "langues" | "clinical" | "ok" = "transport";
       try {
         const budget = Math.min(10_000, Math.max(1, echeance - Date.now()));
         const borne = AbortSignal.timeout(budget);
@@ -682,11 +684,39 @@ async function qualifierCandidats(timeoutMs: number, maxModels = 3, signal?: Abo
         const parsed = JSON.parse(text) as { intents?: unknown };
         phase = "langues";
         if (JSON.stringify(parsed.intents) !== JSON.stringify(["HELLO", "THANKS", "THANKS"])) throw new ErreurModele("MALFORMED_RESPONSE", true);
-        poolOpenRouter.qualifier(m.modelId, { json: true, streaming: true, qualite: 1, latenceMs: Date.now() - depart }); qualifies++;
-        preuvesQualification.set(m.modelId, { model: m.modelId, code: "OK", phase: "ok" });
         await journaliser({ purpose: "jarvis", provider: "openrouter", model: m.modelId, promptVersion: QUALIFICATION_VERSION,
           promptHash: "synthetic-multilingual-probe-v1", sessionToken: crypto.randomUUID(), charsOut: text.length,
           tokensIn: usage.tokensIn, tokensOut: usage.tokensOut, estimatedCostUsd: 0, outcome: "ok", latencyMs: Date.now() - depart });
+        phase = "clinical";
+        // Explicit exhaustive maintenance spaces the two real calls as well
+        // as successive models. Ordinary turns retain their existing budget.
+        if (allModels) await new Promise<void>(resolve => setTimeout(resolve, 3500));
+        signal?.throwIfAborted();
+        const clinical = createSafeClinicalPayload({ patientId: "qualification-only", consultations: [],
+          treatments: { current: [{ id: "qualification-medication", medication: "sertraline", dose: 50, doseUnit: "mg", frequency: "daily", status: "active" }] },
+          coverage: { requested: 0, complete: true } }, "Résume le traitement", [], "qualification-only-non-secret-key");
+        if (!clinical.ok || classerCharge(safeClinicalMessages(clinical.payload), { transformId: ALEXA_CLINICAL_TRANSFORM }).decision === "BLOQUER")
+          throw new ErreurModele("SECURITY_BLOCK", false, "request");
+        const clinicalQuota = await lireQuotaOpenRouter(signal);
+        if (clinicalQuota.remaining !== null && clinicalQuota.remaining <= 5) {
+          const now = new Date();
+          throw new ErreurModele("MODEL_QUOTA_EXHAUSTED", false, "account",
+            Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + 1) - Date.now());
+        }
+        // Maintenance can measure a slower clinical probe without changing an
+        // ordinary turn's own deadline or the doctor's qualification targets.
+        const remaining = Math.min(20000, echeance - Date.now());
+        if (remaining <= 0) throw new ErreurModele("MODEL_TIMEOUT", true);
+        const clinicalSignal = AbortSignal.timeout(remaining);
+        const synthetic = await openRouterProvider.complete({ messages: safeClinicalMessages(clinical.payload), model: m.modelId,
+          timeoutMs: remaining, maxOutputTokens: 512, json: true, jsonMode: m.structuredOutput,
+          signal: signal ? AbortSignal.any([signal, clinicalSignal]) : clinicalSignal });
+        if (!validateAlexaResponse(JSON.parse(synthetic.text), clinical.payload).ok) throw new ErreurModele("MALFORMED_RESPONSE", true);
+        poolOpenRouter.qualifier(m.modelId, { json: true, streaming: true, qualite: 2, latenceMs: Date.now() - depart }); qualifies++;
+        preuvesQualification.set(m.modelId, { model: m.modelId, code: "OK", phase: "ok" });
+        await journaliser({ purpose: "jarvis", provider: "openrouter", model: m.modelId, promptVersion: QUALIFICATION_VERSION,
+          promptHash: "synthetic-coded-clinical-probe-v1", sessionToken: crypto.randomUUID(), charsOut: synthetic.text.length,
+          tokensIn: synthetic.tokensIn, tokensOut: synthetic.tokensOut, estimatedCostUsd: 0, outcome: "ok", latencyMs: Date.now() - depart });
       } catch (cause) {
         const error = normaliserErreurModele(cause, annulationDemandee(signal));
         // A qualification rejected by the provider's policy proves no usable
@@ -699,18 +729,23 @@ async function qualifierCandidats(timeoutMs: number, maxModels = 3, signal?: Abo
           promptHash: "synthetic-multilingual-probe-v1", sessionToken: crypto.randomUUID(), charsOut: null,
           tokensIn: null, tokensOut: null, estimatedCostUsd: null, outcome: error.code === "MODEL_TIMEOUT" ? "timeout" : "error", latencyMs: Date.now() - depart });
       }
-      if (qualifies < maxModels && Date.now() + 3500 < echeance) await new Promise((r) => setTimeout(r, 3500));
+      if (allModels) await sauverQualifications();
+      if ((allModels || qualifies < maxModels) && Date.now() + 3500 < echeance && !signal?.aborted
+        && poolOpenRouter.statutCompte().code === null) await new Promise((r) => setTimeout(r, 3500));
     }
     await sauverQualifications();
   })().finally(() => { qualificationEnCours = null; });
   return qualificationEnCours;
 }
 
-export async function lireQuotaOpenRouter(): Promise<{ readonly remaining: number | null; readonly used: number | null; readonly limit: number | null }> {
+export async function lireQuotaOpenRouter(signal?: AbortSignal): Promise<{ readonly remaining: number | null; readonly used: number | null; readonly limit: number | null }> {
+  if (signal?.aborted) throw new ErreurModele("CANCELLED", false, "request");
   const key = env().OPENROUTER_API_KEY;
   if (!key) throw new ErreurModele("CONFIGURATION", false, "account");
-  const response = await fetch("https://openrouter.ai/api/v1/key", { headers: { Authorization: `Bearer ${key}` }, signal: AbortSignal.timeout(3000) });
+  const response = await fetch("https://openrouter.ai/api/v1/key", { headers: { Authorization: `Bearer ${key}` },
+    signal: signal ? AbortSignal.any([signal, AbortSignal.timeout(3000)]) : AbortSignal.timeout(3000) });
   const body: unknown = await response.json().catch(() => null);
+  if (signal?.aborted) throw new ErreurModele("CANCELLED", false, "request");
   if (!response.ok) throw classerErreurHttp(response.status, body, response.headers);
   const quota = (body as { data?: { free_model_daily_requests?: { remaining?: unknown; used?: unknown; limit?: unknown } } } | null)?.data?.free_model_daily_requests;
   const number = (v: unknown) => typeof v === "number" && Number.isFinite(v) ? v : null;
@@ -718,35 +753,35 @@ export async function lireQuotaOpenRouter(): Promise<{ readonly remaining: numbe
 }
 
 /** Server-only diagnostics; returns IDs and closed health metadata, never keys or prompts. */
-export async function preparerPoolModelesGratuits(opts: { readonly timeoutMs?: number; readonly maxModels?: number; readonly signal?: AbortSignal } = {}) {
-  await rafraichirCatalogue(opts.signal);
-  const quota = await lireQuotaOpenRouter();
-  if (quota.remaining !== null && quota.remaining <= 5) {
-    const maintenant = new Date();
-    const reprise = Date.UTC(maintenant.getUTCFullYear(), maintenant.getUTCMonth(), maintenant.getUTCDate() + 1) - Date.now();
-    poolOpenRouter.echouer("", new ErreurModele("MODEL_QUOTA_EXHAUSTED", false, "account", reprise));
-    await sauverQualifications();
-  } else {
-    await qualifierCandidats(Math.min(60_000, opts.timeoutMs ?? 30_000), Math.min(3, opts.maxModels ?? 3), opts.signal);
+export async function preparerPoolModelesGratuits(opts: { readonly timeoutMs?: number; readonly maxModels?: number; readonly allModels?: boolean; readonly signal?: AbortSignal } = {}) {
+  let phase: AlexaQualificationPhase = "catalog";
+  try {
+    await rafraichirCatalogue(opts.signal);
+    phase = "quota";
+    const quota = await lireQuotaOpenRouter(opts.signal);
+    if (quota.remaining !== null && quota.remaining <= 5) {
+      const maintenant = new Date();
+      const reprise = Date.UTC(maintenant.getUTCFullYear(), maintenant.getUTCMonth(), maintenant.getUTCDate() + 1) - Date.now();
+      poolOpenRouter.echouer("", new ErreurModele("MODEL_QUOTA_EXHAUSTED", false, "account", reprise));
+      await sauverQualifications();
+    } else {
+      phase = "probes";
+      await qualifierCandidats(Math.max(1, Math.min(opts.allModels ? 600_000 : 60_000, opts.timeoutMs ?? 30_000)),
+        Math.min(3, opts.maxModels ?? 3), opts.signal, opts.allModels === true);
+    }
+    return { quota, compte: poolOpenRouter.statutCompte(), catalogue: catalogueGratuit, modeles: poolOpenRouter.instantane(), probes: [...preuvesQualification.values()] };
+  } catch (cause) {
+    throw new AlexaQualificationError(phase, cause, annulationDemandee(opts.signal));
   }
-  return { quota, compte: poolOpenRouter.statutCompte(), modeles: poolOpenRouter.instantane(), probes: [...preuvesQualification.values()] };
 }
 
-function besoinInference(req: LlmRequest, streaming: boolean): BesoinModele {
-  return { tache: req.besoin?.tache ?? (req.purpose === "resume-cas" ? "resume" : "conversation"),
-    json: req.besoin?.json ?? false, streaming, outils: req.besoin?.outils ?? false,
-    tokens: req.besoin?.tokens ?? Math.ceil(req.messages.reduce((n, m) => n + m.content.length, 0) / 2) + (streaming ? MAX_OUTPUT_TOKENS_FLUX : MAX_OUTPUT_TOKENS) };
-}
-
-async function candidatsInference(req: LlmRequest, streaming: boolean, provider: LlmProvider | undefined, echeance: number): Promise<readonly string[]> {
+async function candidatsInference(req: LlmRequest, _streaming: boolean, provider: LlmProvider | undefined): Promise<readonly string[]> {
   if (provider !== undefined) return [resolveModel(req.purpose)]; // Existing synthetic provider seam: no external network.
   if (!env().OPENROUTER_API_KEY) throw new ErreurModele("CONFIGURATION", false, "account");
-  await rafraichirCatalogue(req.signal, echeance - Date.now());
-  const besoin = besoinInference(req, streaming);
-  if (poolOpenRouter.candidats(besoin).length === 0) await qualifierCandidats(Math.max(0, echeance - Date.now()), 3, req.signal);
-  const compte = poolOpenRouter.statutCompte();
-  if (compte.code !== null) throw new ErreurModele(compte.code, false, "account", compte.until - Date.now());
-  return poolOpenRouter.candidats(besoin, resolveModel(req.purpose)).map((m) => m.modelId);
+  // Single-model : le primary payant est servi directement via la clé
+  // OpenRouter, sans découverte catalogue, sans qualification et sans pool.
+  // La maintenance `preparerPoolModelesGratuits` reste explicite et hors tour.
+  return [resolveModel(req.purpose)];
 }
 
 function resultatErreur<T>(cause: unknown, signal?: AbortSignal): LlmResult<T> {
@@ -772,25 +807,23 @@ export async function llm(req: LlmRequest, provider?: LlmProvider): Promise<LlmR
   if (!(await autoriserInference(req))) return llmErr("frontiere", MESSAGE_REFUS_FRONTIERE);
   const budget = req.timeoutMs ?? env().OPENROUTER_MODEL_TIMEOUT_MS ?? TIMEOUT_MS_DEFAUT;
   try {
-    const modeles = await candidatsInference(req, false, provider, depart + budget);
+    const modeles = await candidatsInference(req, false, provider);
     const resultat = await conduireInference(modeles, async (model, timeoutMs, signal) => {
-      const m = poolOpenRouter.instantane().find((candidate) => candidate.modelId === model);
+      // Single-model : le primary supporte `response_format` (qualifié le
+      // 2026-10-03 via OpenRouter `supported_parameters`) — pas de lookup pool.
       return (provider ?? openRouterProvider).complete({ messages: req.messages, model, timeoutMs,
         signal: req.signal ? AbortSignal.any([signal, req.signal]) : signal,
-        json: req.besoin?.json ?? false, jsonMode: (req.besoin?.json ?? false) && (m?.structuredOutput ?? false) });
-    }, { timeoutMs: Math.max(0, budget - (Date.now() - depart)), ...(req.signal ? { signal: req.signal } : {}),
-      ...(provider === undefined ? { reserver: (m: string) => poolOpenRouter.reserver(m) } : {}),
-      surEchec: (m, e) => poolOpenRouter.echouer(m, e),
+        json: req.besoin?.json ?? false, jsonMode: req.besoin?.json ?? false });
+    }, { timeoutMs: Math.max(0, budget - (Date.now() - depart)), maxAttempts: 1, ...(req.signal ? { signal: req.signal } : {}),
       surTentative: (t) => t.code === "OK" ? undefined : journaliser({ purpose: req.purpose, provider: (provider ?? openRouterProvider).name,
         model: t.model, promptVersion: req.promptVersion, promptHash: req.promptHash, sessionToken: req.sessionToken,
         charsOut: null, tokensIn: null, tokensOut: null, estimatedCostUsd: null, outcome: t.code === "MODEL_TIMEOUT" ? "timeout" : "error", latencyMs: t.ms }),
     });
-    poolOpenRouter.reussir(resultat.model, Date.now() - depart);
     if (provider === undefined) await sauverQualifications();
     await journaliser({ purpose: req.purpose, provider: (provider ?? openRouterProvider).name, model: resultat.model,
       promptVersion: req.promptVersion, promptHash: req.promptHash, sessionToken: req.sessionToken,
       charsOut: resultat.data.text.length, tokensIn: resultat.data.tokensIn, tokensOut: resultat.data.tokensOut,
-      estimatedCostUsd: provider === undefined ? 0 : estimateCostUsd(resultat.model, resultat.data.tokensIn, resultat.data.tokensOut),
+      estimatedCostUsd: estimateCostUsd(resultat.model, resultat.data.tokensIn, resultat.data.tokensOut),
       outcome: "ok", latencyMs: Date.now() - depart });
     return { ok: true, data: resultat.data.text, inference: { model: resultat.model, tentatives: resultat.tentatives } };
   } catch (cause) { if (provider === undefined) await sauverQualifications(); return resultatErreur(cause, req.signal); }
@@ -801,15 +834,13 @@ export async function llmStream(req: LlmRequest, provider?: LlmProvider): Promis
   if (!(await autoriserInference(req))) return llmErr("frontiere", MESSAGE_REFUS_FRONTIERE);
   const budget = req.timeoutMs ?? env().OPENROUTER_MODEL_TIMEOUT_MS ?? TIMEOUT_MS_DEFAUT;
   try {
-    const modeles = await candidatsInference(req, true, provider, depart + budget);
+    const modeles = await candidatsInference(req, true, provider);
     const resultat = await conduireInference(modeles, (model, timeoutMs, signal) => (provider ?? openRouterProvider).stream({
       messages: req.messages, model, timeoutMs, idleTimeoutMs: budget,
       deadlineMs: depart + budget, json: req.besoin?.json ?? false,
-      jsonMode: (req.besoin?.json ?? false) && (poolOpenRouter.instantane().find((m) => m.modelId === model)?.structuredOutput ?? false),
+      jsonMode: req.besoin?.json ?? false,
       signal: req.signal ? AbortSignal.any([signal, req.signal]) : signal,
-    }), { timeoutMs: Math.max(0, budget - (Date.now() - depart)), ...(req.signal ? { signal: req.signal } : {}),
-      ...(provider === undefined ? { reserver: (m: string) => poolOpenRouter.reserver(m) } : {}),
-      surEchec: (m, e) => poolOpenRouter.echouer(m, e),
+    }), { timeoutMs: Math.max(0, budget - (Date.now() - depart)), maxAttempts: 1, ...(req.signal ? { signal: req.signal } : {}),
       surTentative: (t) => t.code === "OK" ? undefined : journaliser({ purpose: req.purpose, provider: (provider ?? openRouterProvider).name,
         model: t.model, promptVersion: req.promptVersion, promptHash: req.promptHash, sessionToken: req.sessionToken,
         charsOut: null, tokensIn: null, tokensOut: null, estimatedCostUsd: null, outcome: t.code === "MODEL_TIMEOUT" ? "timeout" : "error", latencyMs: t.ms }),
@@ -819,13 +850,12 @@ export async function llmStream(req: LlmRequest, provider?: LlmProvider): Promis
     let caracteres = 0;
     const deltas = flux.deltas.pipeThrough(new TransformStream<string, string>({ transform(frag, controller) { caracteres += frag.length; controller.enqueue(frag); } }));
     void flux.usage.then(async (usage) => {
-      poolOpenRouter.reussir(model, Date.now() - depart);
       if (provider === undefined) await sauverQualifications();
       await journaliser({ purpose: req.purpose, provider: (provider ?? openRouterProvider).name, model, promptVersion: req.promptVersion,
         promptHash: req.promptHash, sessionToken: req.sessionToken, charsOut: caracteres, tokensIn: usage.tokensIn,
-        tokensOut: usage.tokensOut, estimatedCostUsd: provider === undefined ? 0 : null, outcome: "ok", latencyMs: Date.now() - depart });
+        tokensOut: usage.tokensOut, estimatedCostUsd: usage.tokensIn == null || usage.tokensOut == null ? null : estimateCostUsd(model, usage.tokensIn, usage.tokensOut), outcome: "ok", latencyMs: Date.now() - depart });
     }).catch(async (cause) => {
-      const error = normaliserErreurModele(cause, req.signal?.aborted); poolOpenRouter.echouer(model, error);
+      const error = normaliserErreurModele(cause, req.signal?.aborted);
       if (provider === undefined) await sauverQualifications();
       await journaliser({ purpose: req.purpose, provider: (provider ?? openRouterProvider).name, model, promptVersion: req.promptVersion,
         promptHash: req.promptHash, sessionToken: req.sessionToken, charsOut: caracteres || null, tokensIn: null,
@@ -1034,6 +1064,15 @@ export function diagnosticLive(stage: string, count?: number): void {
     ...(count === undefined ? {} : { count }) }));
 }
 
+/** Alexa 2 keeps audio and speech synthesis local. No environment setting re-enables cloud voice. */
+function voixCloudAutorisee(): boolean {
+  return false;
+}
+
+export function geminiLiveAutorise(): boolean {
+  return voixCloudAutorisee();
+}
+
 export async function ouvrirGeminiLive(req: {
   readonly sessionToken: string;
   readonly currentPatientId: string | null;
@@ -1041,6 +1080,7 @@ export async function ouvrirGeminiLive(req: {
   readonly executeTool: (name: string, args: unknown, signal: AbortSignal) => Promise<Record<string, unknown>>;
   readonly signal?: AbortSignal;
 }): Promise<LlmResult<SessionGeminiLive>> {
+  if (!geminiLiveAutorise()) return llmErr("configuration", alexa.frontiere);
   const e = env(), key = e.GEMINI_API_KEY || e.GOOGLE_API_KEY;
   if (e.JARVIS_ENABLED === "false" || e.JARVIS_VOICE_ENABLED === "false" || !key || req.signal?.aborted)
     return llmErr("configuration", alexaLive.indisponible);
@@ -1172,6 +1212,7 @@ export const groqSttProvider: SttProvider = {
   name: "groq",
 
   async transcribe(req) {
+    if (!voixCloudAutorisee()) throw new Error("configuration: voix-cloud-retiree");
     const clef = env().GROQ_API_KEY;
     if (clef === undefined || clef === "") {
       throw new Error("configuration: GROQ_API_KEY absente");
@@ -1238,6 +1279,7 @@ export const elevenLabsTtsProvider: TtsProvider = {
   name: "elevenlabs",
 
   async synthesize(req) {
+    if (!voixCloudAutorisee()) throw new Error("configuration: voix-cloud-retiree");
     const clef = env().ELEVENLABS_API_KEY;
     if (clef === undefined || clef === "") {
       throw new Error("configuration: ELEVENLABS_API_KEY absente");
@@ -1314,6 +1356,7 @@ export async function stt(
   req: SttRequest,
   provider: SttProvider = groqSttProvider,
 ): Promise<LlmResult<string>> {
+  if (!voixCloudAutorisee()) return llmErr("configuration", alexa.frontiere);
   const refus = await garderVoix();
   if (refus !== null) return refus;
 
@@ -1368,6 +1411,7 @@ export async function tts(
   req: TtsRequest,
   provider: TtsProvider = elevenLabsTtsProvider,
 ): Promise<LlmResult<{ readonly audio: Uint8Array; readonly mimeType: string }>> {
+  if (!voixCloudAutorisee()) return llmErr("configuration", alexa.frontiere);
   const refus = await garderVoix();
   if (refus !== null) return refus;
 

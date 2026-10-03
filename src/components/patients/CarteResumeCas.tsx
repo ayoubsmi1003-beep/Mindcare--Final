@@ -26,6 +26,7 @@ import { Bouton } from "@/components/ui";
 import { ChampTexte } from "@/components/ui";
 import { PanneauInfo } from "@/components/ui";
 import { fr } from "@/i18n/fr";
+import { alexaSummary } from "@/i18n/alexa-summary";
 import {
   signalerResume,
   type ItemResume,
@@ -67,13 +68,21 @@ export function CarteResumeCas({
          quoi en faire. Ce qui compte n'est pas d'où vient le texte mais s'il
          est juste et sourcé — la provenance est dite une fois, en bas, et
          chaque affirmation porte ses preuves. */
-      className="flex flex-col gap-5 rounded-2xl border border-rule bg-card px-5 py-5 shadow-carte"
+      className="flex flex-col gap-5 rounded-2xl border border-rule bg-card px-6 py-6 shadow-carte"
+      style={{ backgroundImage: "var(--grad-tuile-menthe)" }}
     >
       <div className="flex flex-wrap items-center justify-between gap-2">
         <h2 className="font-ui text-title font-bold tracking-title text-ink-900">
           {fr.patients.resume.titre}
         </h2>
-        {r !== null ? <ChipFraicheur resume={r} /> : null}
+        {r !== null ? (
+          <div className="flex items-center gap-3">
+            <ChipFraicheur resume={r} />
+            <Bouton rang="discret" disabled={etat.generationEnCours} onClick={lancer}>
+              {fr.patients.resume.actualiser}
+            </Bouton>
+          </div>
+        ) : null}
       </div>
 
       {etat.generationEnCours ? (
@@ -113,6 +122,14 @@ export function CarteResumeCas({
               résumé » sur tous les dossiers jusqu'à leur régénération. */}
           {r.contenu.schema === 2 ? (
             <>
+              <p className="font-ui text-body leading-relaxed text-ink-700">{alexaSummary.structured}</p>
+              {r.contenu.apercu.contexte.length > 0 ? (
+                <BlocSection titre={fr.patients.resume.enBref}>
+                  {r.contenu.apercu.contexte.map((item, idx) => (
+                    <ItemPreuve key={`c${String(idx)}`} item={item} onOuvrirSource={onOuvrirSource} />
+                  ))}
+                </BlocSection>
+              ) : null}
               {/* L'APERÇU, EN PREMIER ET TOUJOURS. Il est composé en base, pas
                   rédigé par le modèle : c'est la seule section sur laquelle on
                   peut se fier sans rouvrir le dossier. */}
@@ -128,16 +145,37 @@ export function CarteResumeCas({
                     .filter((x): x is string => x !== null && x !== "")
                     .join(" · ")}
                 </p>
-                {r.contenu.apercu.diagnostics.map((item, idx) => (
-                  <ItemPreuve key={`d${String(idx)}`} item={item} onOuvrirSource={onOuvrirSource} />
-                ))}
-                {r.contenu.apercu.traitements.map((item, idx) => (
-                  <ItemPreuve key={`t${String(idx)}`} item={item} onOuvrirSource={onOuvrirSource} />
-                ))}
-                {r.contenu.apercu.contexte.map((item, idx) => (
-                  <ItemPreuve key={`c${String(idx)}`} item={item} onOuvrirSource={onOuvrirSource} />
-                ))}
+                <div className="grid gap-5 md:grid-cols-2">
+                  {r.contenu.apercu.diagnostics.length > 0 ? (
+                    <div className="flex flex-col gap-3 rounded-xl border border-rule bg-card p-4">
+                      <h4 className="font-ui text-label font-semibold text-ink-500">{alexaSummary.diagnoses}</h4>
+                      {r.contenu.apercu.diagnostics.map((item, idx) => (
+                        <ItemPreuve key={`d${String(idx)}`} item={item} onOuvrirSource={onOuvrirSource} />
+                      ))}
+                    </div>
+                  ) : null}
+                  {r.contenu.apercu.traitements.length > 0 ? (
+                    <div className="flex flex-col gap-3 rounded-xl border border-rule bg-card p-4">
+                      <h4 className="font-ui text-label font-semibold text-ink-500">{alexaSummary.treatments}</h4>
+                      {r.contenu.apercu.traitements.map((item, idx) => (
+                        <ItemPreuve key={`t${String(idx)}`} item={item} onOuvrirSource={onOuvrirSource} />
+                      ))}
+                    </div>
+                  ) : null}
+                </div>
               </BlocSection>
+
+              {r.contenu.etatActuel.length > 0 ? (
+                <BlocSection titre={alexaSummary.recentDetails}>
+                  <div className="grid gap-3 md:grid-cols-2">
+                    {r.contenu.etatActuel.map((item, idx) => (
+                      <div key={idx} className={`rounded-xl border border-rule bg-card p-4 ${idx === 0 ? "md:col-span-2" : ""}`}>
+                        <ItemPreuve item={item} onOuvrirSource={onOuvrirSource} />
+                      </div>
+                    ))}
+                  </div>
+                </BlocSection>
+              ) : null}
 
               {/* Le parcours, année par année, la plus récente en tête. */}
               {r.contenu.chronologie.map((periode) => (
@@ -156,13 +194,6 @@ export function CarteResumeCas({
                 </BlocSection>
               ) : null}
 
-              {r.contenu.etatActuel.length > 0 ? (
-                <BlocSection titre={fr.patients.resume.etatActuel}>
-                  {r.contenu.etatActuel.map((item, idx) => (
-                    <ItemPreuve key={idx} item={item} onOuvrirSource={onOuvrirSource} />
-                  ))}
-                </BlocSection>
-              ) : null}
             </>
           ) : (
             <>
@@ -201,20 +232,10 @@ export function CarteResumeCas({
 
           {!r.aJour ? (
             <p className="font-ui text-label tracking-label text-attention-ink">
-              {fr.patients.resume.modifieDepuis}.{" "}
-              <Bouton rang="discret" onClick={lancer}>
-                {fr.patients.resume.actualiser}
-              </Bouton>
+              {fr.patients.resume.modifieDepuis}.
             </p>
           ) : null}
 
-          {!etat.generationEnCours ? (
-            <p>
-              <Bouton rang="discret" onClick={lancer}>
-                {fr.patients.resume.actualiser}
-              </Bouton>
-            </p>
-          ) : null}
 
           <Signalement summaryId={r.id} />
         </>
@@ -260,7 +281,7 @@ function ItemPreuve({
 
   return (
     <div className="flex flex-col gap-1">
-      <p className="font-ui text-body text-ink-900">
+      <p className="whitespace-pre-line break-words font-ui text-body leading-relaxed text-ink-900">
         {item.texte}
         {item.sources.length > 0 ? (
           <>
@@ -312,6 +333,8 @@ function libelleSource(s: SourceResume): string {
       return `${fr.patients.sections.echelles} · ${fr.patients.onglets.clinique}`;
     case "prescription":
       return `${fr.patients.sections.dernierePrescription} · ${fr.patients.onglets.traitements}`;
+    case "treatment":
+      return fr.patients.onglets.traitements;
     case "consultation":
       return `${fr.patients.sections.derniereConsultation} · ${fr.patients.onglets.chronologie}`;
     case "rdv":

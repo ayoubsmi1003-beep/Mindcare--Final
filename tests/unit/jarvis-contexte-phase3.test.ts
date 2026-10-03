@@ -16,15 +16,14 @@
  *    → clarification, sans deviner.
  * 10. A→B : après B, la carte ne connaît plus aucune identité de A.
  * 11. `quitterContexte` ([Changer]) vide les deux magasins.
- * 12. Clarification `envoyer` : tours locaux humain + « De quel patient
- *    parlez-vous ? », ZÉRO conversation créée en base, ZÉRO `patient_id`
- *    dans ce qui est publié.
+ * 12. Clarification `envoyer` : cerveau serveur partagé, chat local seulement,
+ *    zéro lecture de dossier et zéro modèle ; aucun patient adopté.
  *
  * Horloge injectée partout (`maintenantMs`) : aucun `setTimeout`, aucune
  * attente réelle de 15 minutes. AUCUNE DONNÉE PATIENT réelle, AUCUN ACCÈS
  * BASE — les seuls chemins exécutés sont purs ou échouent avant tout réseau.
  */
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 
 import { fr } from "../../src/i18n/fr";
 import {
@@ -57,6 +56,10 @@ import type { CapaciteEnregistree } from "../../src/services/jarvis-capacites";
 import type { RefPatient } from "../../src/services/jarvis-identite";
 import type { TourFlux } from "../../src/services/jarvis";
 import { ok } from "../../src/services/result";
+import { db, setDbPort } from "../../src/services/db";
+import { runAlexa } from "../../src/server/alexa/orchestrator";
+import { turnInput } from "../../src/shared/alexa/turn";
+import { dialogue } from "../../src/i18n/alexa-dialogue";
 import { KARIM, MAHMOUD } from "../fixtures/patients";
 
 const T0 = Date.parse("2026-09-03T10:00:00+01:00");
@@ -269,23 +272,54 @@ describe("[Changer] et persistance", () => {
     expect(fr.jarvis.contexte.preciserPatient).toBe("De quel patient parlez-vous ?");
   });
 
-  it("12. clarification envoyer : locale, sans conversation base, sans patient_id", async () => {
+  it("12. clarification envoyer : cerveau local partagé, sans dossier ni modèle", async () => {
     purgerContexteSession();
     effacerPatientActif();
     const vus: { etat: string; conversationId: string | null; tours: readonly { role: string; texte: string }[] }[] = [];
     const desabonner = abonnerConversation((e) =>
       vus.push({ etat: e.etat, conversationId: e.conversationId, tours: e.tours }),
     );
+    const originalPort = db();
+    const chatId = crypto.randomUUID(), chatCalls: string[] = [], clinicalCalls: string[] = [];
+    const inference = vi.fn(async () => { throw new Error("Aucun modèle sans dossier"); });
+    setDbPort({
+      ...originalPort,
+      rpc: async <T>(name: string) => {
+        chatCalls.push(name);
+        if (name !== "start_jarvis_conversation") throw new Error("Écriture inattendue");
+        const rows: unknown = [chatId];
+        return ok(rows as T[]);
+      },
+      invokeFunctionStream: async (name, raw, signal) => {
+        expect(name).toBe("alexa-turn");
+        const input = turnInput.parse(raw);
+        expect(input.appContext.patientId).toBeNull();
+        let records = "";
+        await runAlexa(input, { actor: "phase3-clarification", infer: inference,
+          db: { rpc: async name => { clinicalCalls.push(name); throw new Error("Lecture de dossier interdite"); } },
+          knowledge: { rpc: async () => { throw new Error("Connaissance non demandée"); } },
+        }, event => { records += `data: ${JSON.stringify(event)}\n\n`; }, signal ?? new AbortController().signal);
+        return ok(new ReadableStream<Uint8Array>({ start(controller) {
+          controller.enqueue(new TextEncoder().encode(records)); controller.close();
+        } }));
+      },
+    });
     try {
       await envoyer("Et ses médicaments ?");
     } finally {
       desabonner();
+      setDbPort(originalPort);
+      purgerContexteSession();
     }
     const dernier = vus[vus.length - 1];
-    expect(dernier?.conversationId).toBeNull();
+    expect(dernier?.conversationId).toBe(chatId);
+    expect(dernier?.etat).toBe("composition");
     const textes = (dernier?.tours ?? []).map((t) => `${t.role}:${t.texte}`);
     expect(textes).toContain("humain:Et ses médicaments ?");
-    expect(textes).toContain("jarvis:De quel patient parlez-vous ?");
-    expect(JSON.stringify(dernier)).not.toMatch(/patientId|patient_id/);
+    expect(textes).toContain(`jarvis:${dialogue("fr").patient}`);
+    expect(chatCalls).toEqual(["start_jarvis_conversation"]);
+    expect(clinicalCalls).toEqual([]);
+    expect(inference).not.toHaveBeenCalled();
+    expect(dernier?.tours.at(-1)).toMatchObject({ sourcePatientId: null, alexaSources: [] });
   });
 });

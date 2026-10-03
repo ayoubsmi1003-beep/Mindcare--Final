@@ -34,6 +34,8 @@
  *      appel distant dans la decision (§28 de la mission).
  */
 
+import { ALEXA_CLINICAL_TRANSFORM, isSafeClinicalEnvelope } from "@/server/alexa/privacy-boundary";
+
 export type ClasseDonnees = "C1" | "C2" | "C3" | "C4" | "INCONNU";
 
 export type DecisionEgress = "AUTORISER" | "BLOQUER";
@@ -52,12 +54,11 @@ export interface RecuTransformation {
 
 /**
  * Registre FERME des transformations dont la sortie est requalifiee C3.
- * Aujourd'hui une seule entree, documentee, sans producteur en production :
- * aucun appelant ne presente ce recu, donc C3 reste bloque partout jusqu'a
- * ce qu'un producteur dedie (hors M05) l'adopte. Ajouter une entree exige une
- * decision humaine explicite.
+ * Finance reste un agregat pur. Alexa 2.0 ajoute, par demande explicite,
+ * uniquement la projection codee emise et figee par son producteur local.
+ * Le recu seul ne declassifie jamais une charge libre ou pseudonymisee.
  */
-export const TRANSFORMATIONS_APPROUVEES: readonly string[] = ["agg-finance-v1"] as const;
+export const TRANSFORMATIONS_APPROUVEES: readonly string[] = ["agg-finance-v1", ALEXA_CLINICAL_TRANSFORM] as const;
 
 /** Refus honnete, delivre quand le local est requis mais indisponible (M13). */
 export const MESSAGE_REFUS_LOCAL =
@@ -223,10 +224,17 @@ function classePersonne(texteAbaisse: string): ClasseDonnees {
 }
 
 /**
- * Verdict sur la charge ENTIERE. `recu` ne peut qu'autoriser un agregat pur
- * sans aucun autre signal : les octets gagnent toujours contre le recu.
+ * Verdict sur la charge ENTIERE. Chaque transformation a une forme fermee ;
+ * les octets et la preuve d'emission locale gagnent contre le recu seul.
  */
 export function classerCharge(charge: unknown, recu: RecuTransformation | null): VerdictEgress {
+  // Alexa 2.0 approval covers this closed coded projection only. A receipt
+  // cannot authorise prose, unknown fields, conversation replay or another prompt.
+  if (recu?.transformId === ALEXA_CLINICAL_TRANSFORM) {
+    return isSafeClinicalEnvelope(charge)
+      ? { decision: "AUTORISER", classe: "C3", motif: "c3:alexa-clinical-minimal-v1" }
+      : { decision: "BLOQUER", classe: "INCONNU", motif: "inconnu:alexa-envelope-invalide" };
+  }
   const brut = serialiser(charge);
   const base = normaliserBase(brut);
   // Variantes : base64 decode, espaces interlettres recolles, "+" de query.

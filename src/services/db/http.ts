@@ -312,12 +312,12 @@ export const httpDbPort: DbPort = {
    * entre la phase 4 et la phase 5. Les écrans cliniques, eux, fonctionnent.
    */
   invokeFunction: <T>(name: string, body: unknown, signal?: AbortSignal) =>
-    poster<T>(`/api/jarvis/${encodeURIComponent(name)}`, body, `http.invoke:${name}`, signal),
+    poster<T>(name === "alexa-summary" ? "/api/alexa/summary" : name === "alexa-qualify" ? "/api/alexa/qualify" : `/api/jarvis/${encodeURIComponent(name)}`, body, `http.invoke:${name}`, signal),
 
   invokeFunctionStream: async (name: string, body: unknown, signal?: AbortSignal) => {
     let reponse: Response;
     try {
-      reponse = await fetch(`/api/jarvis/${encodeURIComponent(name)}`, {
+      reponse = await fetch(name === "alexa-turn" ? "/api/alexa/turn" : `/api/jarvis/${encodeURIComponent(name)}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),

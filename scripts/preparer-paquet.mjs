@@ -116,12 +116,27 @@ if (!existsSync(path.join(AUTONOME, "server.js"))) {
 // hier — exactement le genre de résidu qu'une liste blanche existe pour
 // empêcher. On efface, toujours.
 etape("nettoyage de resources/serveur…");
+if (path.relative(RACINE, CIBLE) !== path.join("resources", "serveur")) {
+  throw new Error("cible d'assemblage hors du dossier attendu");
+}
 rmSync(CIBLE, { recursive: true, force: true });
 mkdirSync(CIBLE, { recursive: true });
 
 // ── 3. Le serveur autonome (server.js, .next/server, node_modules tracés) ────
 etape("copie de la sortie autonome…");
 cpSync(AUTONOME, CIBLE, { recursive: true });
+
+// Le traçage peut recopier tout scripts/ et les dépendances voix. Les scripts
+// seront recréés depuis SCRIPTS_LIVRES ; Electron fournit déjà la voix dans
+// resources/voix, à côté du backend, avec ses chemins serveur explicites.
+for (const relatif of ["scripts", ".cache", path.join("resources", "voix")]) {
+  const copieTracee = path.resolve(CIBLE, relatif);
+  const sousCible = path.relative(CIBLE, copieTracee);
+  if (!sousCible || sousCible.startsWith("..") || path.isAbsolute(sousCible)) {
+    throw new Error("copie tracée hors du backend assemblé");
+  }
+  rmSync(copieTracee, { recursive: true, force: true });
+}
 
 // ── 3bis. LE `.env` QUE NEXT RECOPIE DE LUI-MÊME ─────────────────────────────
 //

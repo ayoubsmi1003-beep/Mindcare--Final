@@ -42,7 +42,7 @@ export class CanalVoixNative {
     if (valeur instanceof Error) reject(valeur); else resolve(valeur);
    };
    const annuler = () => { this.detruire(); terminer(new Error("annulee")); };
-   const minuteur = setTimeout(() => { this.detruire(); terminer(new Error("timeout")); }, Math.min(60000, timeoutMs));
+   const minuteur = setTimeout(() => { this.detruire(); terminer(new Error("timeout")); }, Math.min(90_000, timeoutMs));
    this.courante = { entree, recevoir: (r) => terminer(r), rejeter: (e) => terminer(e) };
    signal?.addEventListener("abort", annuler, { once: true });
    try { this.ecrire(JSON.stringify(entree) + "\n"); } catch { this.detruire(); terminer(new Error("runtime")); }
