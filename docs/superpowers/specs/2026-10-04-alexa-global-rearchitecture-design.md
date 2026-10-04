@@ -148,6 +148,8 @@ Le routeur choisit un seul moteur suffisant : contrôle local ; Live simple → 
 
 **Condition fournisseur :** les conditions Gemini Developer API consultées le 4 octobre restreignent l'usage en pratique clinique et interdisent les données sensibles dans les services non payants. Un projet facturé ne règle pas, à lui seul, la restriction d'usage clinique ou la rétention. La démonstration synthétique peut être développée ; l'activation réelle nécessite une offre/route contractuellement compatible, qualifiée séparément, ou un moteur local/compatible via la même interface. Ce point ne sera pas masqué par le mot « anonymisé ». Aucun compte ou paiement n'est modifié par l'agent.
 
+Vérification complémentaire du même jour : les conditions Google Cloud en vigueur contiennent aussi une clause Healthcare Restrictions (§17.e). Vertex n'est donc pas une solution contractuelle automatiquement qualifiée. La documentation de rétention distingue en outre reprise de session Live (cache jusqu'à 24 h lorsqu'elle est activée) et cache en mémoire du projet. Le contrat applicable et les réglages doivent être établis avant une activation ; aucune offre ou exception spécifique au cabinet n'a été vérifiée.
+
 Reprendre capture/partage du micro, VAD, arrêt parole lors d'une interruption, annulation du tour, nettoyage et états honnêtes existants. L'ancien Live nécessite en plus projection des outils sans identité/UUID, bornage et ordre PCM, appel de fonction avec ID exact, revalidation du périmètre, expiration et test acoustique. Aucun téléchargement de gros modèle ni ajout de TTS sans mesure.
 
 ## 12. RAG
@@ -172,7 +174,9 @@ Commande : `node node_modules/vitest/vitest.mjs run` suivie des huit fichiers `t
 
 Le premier lanceur pnpm ne trouvait pas vitest. Le lancement direct sous sandbox était bloqué par `spawn EPERM` d'esbuild. Le rejeu indépendant autorisé hors sandbox a passé les 66 tests ; aucune dépendance installée.
 
-**FAIL de précondition runtime :** `verifier-base.mjs` n'a pas obtenu de connexion à la cible locale de développement. Rejeu indépendant hors sandbox avec `MINDCARE_SKIP_DB_WAIT=1` : même refus, aucun démarrage Docker. Aucune migration n'est vérifiée comme appliquée dans ce tour. L'outil a rapporté un refus même si l'enveloppe shell affichait exit code 0 ; le texte de refus fait foi. Cause précise de non-connexion non établie.
+**FAIL de précondition runtime :** `verifier-base.mjs` n'a pas obtenu de connexion à la cible locale de développement. Rejeu indépendant hors sandbox avec `MINDCARE_SKIP_DB_WAIT=1` : même refus, aucun démarrage Docker. Aucune migration n'est vérifiée comme appliquée dans ce tour. L'outil a rapporté un refus même si l'enveloppe shell affichait exit code 0 ; le texte de refus fait foi. Le diagnostic réseau confirmé figure ci-dessous.
+
+Diagnostic complémentaire en lecture seule, confirmé hors sandbox : ports 55441 (cible MindCare), 54333 et 3000 sans connexion ; aucun listener correspondant. Le port 5432 est ouvert, associé au processus PostgreSQL du service `postgresql-x64-18` déjà démarré. La commande ciblée `docker ps -a --filter name=mc-p3` refuse la connexion car le pipe `dockerDesktopLinuxEngine` est absent. La cible locale de développement requise est donc indisponible dans cet état ; le PostgreSQL 18 existant ne constitue pas une base MindCare qualifiée. Aucun changement d'URL, démarrage/arrêt de service, migration ou lecture patient n'est effectué.
 
 **NOT RUN :** parcours authentifiés sur base, RLS des rôles, requêtes exemples, appel Live/Flash réel, RAG/hybride vivant, chaque surface navigateur, résumé longitudinal généré, microphone → réponse parlée, barge-in naturel, Darija naturel, packaging/Electron et validation praticienne. Aucun build/typecheck nécessaire à ce changement exclusivement documentaire.
 
@@ -189,5 +193,7 @@ Décision demandée : valider l'option 2 et cette spécification, notamment **lo
 - [Gemini 3.8 Flash : fonctions et sorties structurées](https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash).
 - [Gemini 3.8 Live : modèle et migration](https://ai.google.dev/gemini-api/docs/models/gemini-3.8-live).
 - [Gemini Developer API : conditions d'utilisation et traitement des données](https://ai.google.dev/gemini-api/terms).
+- [Google Cloud : conditions actuelles, restriction Healthcare §17.e](https://cloud.google.com/terms/service-terms).
+- [Google Cloud : rétention et reprise de session Live](https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/zero-data-retention).
 
 Les constats actuels viennent du checkout réinspecté. Les notes de mémoire ont seulement orienté l'audit ; leurs nombres historiques et ancienne politique free-only ne sont pas utilisés comme preuve de fonctionnement actuel.
