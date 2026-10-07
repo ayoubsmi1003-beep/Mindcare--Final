@@ -19,7 +19,11 @@
 
 import { readFileSync } from "node:fs";
 
-import { Pool, type PoolConfig } from "pg";
+import { Pool, types, type PoolConfig } from "pg";
+
+export function dateCivilePg(value: string): string { return value; }
+// DATE is a civil date, never a timezone-bearing JavaScript Date.
+types.setTypeParser(1082, dateCivilePg);
 
 /**
  * L'URL de connexion ne porte PAS de valeur par défaut, et ne doit pas en
