@@ -952,3 +952,6 @@ le trigger inerte.
 ---
 
 *Fin du document. Prochain livrable : `02-SECURITY-BOUNDARY.md` — passerelle de pseudonymisation, gestion des secrets, contrat exact des appels STT/LLM.*
+
+## Documents éditables — décision du 7 octobre 2026
+Schéma approuvé : document_drafts et document_draft_revisions (migration 129), colonnes additives content_json, renderer_version, page_manifest, source_draft_id et prescription_id sur documents. Enum ordonnance (128). Les contraintes, portes et droits exécutables figurent dans les migrations ; détails de la décision dans docs/ADR-DOCUMENTS-EDITOR.md. Aucun historique clinique réécrit.
