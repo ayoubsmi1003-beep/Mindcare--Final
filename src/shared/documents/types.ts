@@ -17,7 +17,7 @@ export interface Draft {
 }
 export interface DraftPreview {
   readonly draftId:string;readonly revision:number;readonly contentHash:string;readonly rendererVersion:string;readonly html:string;
-  readonly readiness:{readonly canIssue:boolean;readonly reasons:readonly DocumentReason[]};readonly identityVersion:string;
+  readonly content:DocumentContent;readonly readiness:{readonly canIssue:boolean;readonly reasons:readonly DocumentReason[]};readonly identityVersion:string;
 }
 export interface PageSlice {readonly path:readonly number[];readonly from:number;readonly to:number}
 export interface PageManifest {readonly rendererVersion:string;readonly contentHash:string;readonly pages:readonly (readonly PageSlice[])[]}

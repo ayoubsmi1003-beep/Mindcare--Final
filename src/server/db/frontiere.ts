@@ -40,7 +40,7 @@ const Scalaire = z.union([z.string().max(65_536), z.number(), z.boolean(), z.nul
  */
 const CleArgument = z.string().regex(/^[a-z_][a-z0-9_]*$/, "clé d'argument invalide");
 
-export const EntreeRpc = z.object({
+const EntreeRpcStandard = z.object({
   name: z.string().min(1).max(128),
   // `.record()` avec 32 clés au plus : une fonction SQL de ce dépôt en prend au
   // maximum une poignée. La borne existe pour qu'un corps JSON gigantesque ne
@@ -50,6 +50,11 @@ export const EntreeRpc = z.object({
   }),
 });
 
+/** Only the closed document save contract has a larger scalar body. SQL still validates UTF-8 size and structure. */
+export const EntreeRpc = z.union([EntreeRpcStandard,z.object({
+ name:z.literal("save_editable_document_draft"),
+ args:z.object({p_id:z.string().uuid(),p_revision:z.number().int().positive(),p_content:z.string().max(204800),p_variables:z.string().max(65536),p_date:z.string().regex(/^\d{4}-\d{2}-\d{2}$/)}).strict()
+})]);
 const Filtre = z.object({
   column: z.string().min(1).max(128),
   op: z.enum(["eq", "neq", "gt", "gte", "lt", "lte"]),

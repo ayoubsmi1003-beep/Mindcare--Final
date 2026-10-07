@@ -377,6 +377,7 @@ const LIGNE_PRESCRIPTION = z.object({
 });
 
 const PRESCRIPTION = z.object({
+  document_status: z.enum(["issued","voided"]).optional(),
   id: z.string(),
   prescribed_at: z.string(),
   is_handwritten: z.boolean(),
@@ -517,6 +518,7 @@ export interface LignePrescription {
 }
 
 export interface PrescriptionResume {
+  readonly documentStatus?: "issued" | "voided";
   readonly id: string;
   readonly prescribedAt: string;
   readonly isHandwritten: boolean;
@@ -928,6 +930,7 @@ function versEspaceTravail(brut: z.infer<typeof ESPACE_TRAVAIL>): PatientWorkspa
                 ? null
                 : {
                     id: brut.traitements.derniere_prescription.id,
+                    documentStatus: brut.traitements.derniere_prescription.document_status ?? "issued",
                     prescribedAt:
                       brut.traitements.derniere_prescription.prescribed_at,
                     isHandwritten:

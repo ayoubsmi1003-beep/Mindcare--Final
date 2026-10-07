@@ -195,7 +195,7 @@ export interface SafeFinanceContext {
 export interface SafeDocumentContext {
   readonly documents: readonly {
     readonly ref: RefDocument;
-    readonly type: TypeDocument;
+    readonly type: TypeDocument | "ordonnance";
     readonly emisLe: string;
     readonly nombreImpressions: number;
   }[];

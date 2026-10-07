@@ -91,7 +91,7 @@ END $$;
 CREATE FUNCTION app.document_template_json(p_html text) RETURNS jsonb LANGUAGE plpgsql IMMUTABLE SET search_path=app,pg_catalog AS $$
 DECLARE part text[]; outnodes jsonb:='[]'; pending_list jsonb:='[]'; paragraph jsonb; textvalue text;
 BEGIN
- FOR part IN SELECT regexp_matches(p_html,'<(p|li)>(.*?)</\1>','gs') LOOP
+ FOR part IN SELECT regexp_matches(p_html,'<(p|li)>([^<]*)</(p|li)>','gs') LOOP
   textvalue:=part[2];
   IF textvalue~'<[^>]+>' THEN RAISE EXCEPTION 'TemplateStructureRequiresReview'; END IF;
   textvalue:=replace(replace(replace(replace(replace(textvalue,'&amp;','&'),'&lt;','<'),'&gt;','>'),'&quot;','"'),'&#39;',chr(39));

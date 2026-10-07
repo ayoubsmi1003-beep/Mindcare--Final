@@ -91,7 +91,7 @@ export const TYPES_DOCUMENT: readonly TypeDocument[] = [
 
 export interface Document {
   readonly id: string;
-  readonly docType: TypeDocument;
+  readonly docType: TypeDocument | "ordonnance";
   readonly docNumber: string;
   /** Absent sur les lignes de liste — seule `getDocument` le rend. */
   readonly renderedHtml: string | null;
@@ -116,7 +116,7 @@ export interface Document {
 
 interface DocumentRow {
   readonly document_id: string;
-  readonly doc_type: TypeDocument;
+  readonly doc_type: TypeDocument | "ordonnance";
   readonly doc_number: string;
   readonly rendered_html?: string;
   readonly variables?: Record<string, unknown>;
@@ -357,7 +357,7 @@ export async function getDocumentReadiness(): Promise<Result<DocumentReadiness>>
 // ---------------------------------------------------------------------------
 export interface ListDocumentsFilters {
   readonly query?: string | null;
-  readonly type?: TypeDocument | null;
+  readonly type?: TypeDocument | "ordonnance" | null;
   readonly status?: StatutDocument | null;
   readonly limit?: number;
   readonly offset?: number;

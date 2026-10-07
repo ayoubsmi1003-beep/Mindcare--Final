@@ -119,3 +119,8 @@ export async function updateProfil(patch: {
   log.info("profil.maj", { count: 1 });
   return ok(undefined);
 }
+
+export async function updateDocumentOrderNumber(value:string):Promise<Result<void>>{
+ const result=await db().rpc<unknown>("update_document_order_number",{p_order_number:value});
+ return result.ok?ok(undefined):err(result.error);
+}

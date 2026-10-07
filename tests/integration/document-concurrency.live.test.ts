@@ -1,0 +1,30 @@
+import {describe,it,expect} from "vitest";
+import {execFileSync,execFile} from "node:child_process";
+import {readFileSync,writeFileSync} from "node:fs";
+import {randomUUID} from "node:crypto";
+import {promisify} from "node:util";
+import {resolve} from "node:path";
+const run=promisify(execFile),database="mindcare_documents_replay_20261007";
+describe.skipIf(process.env["MINDCARE_DOCUMENTS_CHECKPOINT"]!=="1")("concurrent issue on disposable isolated PostgreSQL",()=>{
+ it("returns one piece and number to both simultaneous callers",async()=>{
+ const source=readFileSync("scripts/checkpoint-document-issue-editor.sql","utf8");
+ let fixture=source.slice(0,source.indexOf("SELECT app.create_editable_document_draft("));
+ const ids=new Map<string,string>();
+ fixture=fixture.replace(/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/g,value=>{if(!ids.has(value))ids.set(value,randomUUID());return ids.get(value)!;});
+ const actor=ids.get("d1000000-0000-4000-8000-000000000001")!,patient=ids.get("d2000000-0000-4000-8000-000000000001")!;
+ fixture+="SELECT app.create_editable_document_draft('"+patient+"','justification','{\"date_consultation\":\"07/10/2026\"}') AS created \\gset\n";
+ fixture+="SELECT app.preview_editable_document_draft((:'created'::jsonb->>'id')::uuid,1) AS preview \\gset\n";
+ fixture+="RESET ROLE;\nSELECT jsonb_build_object('id',:'created'::jsonb->>'id','hash',:'preview'::jsonb->>'contentHash','identity',:'preview'::jsonb->>'identityVersion','length',char_length(app.document_node_text(:'preview'::jsonb#>'{content,content,0}')));\nCOMMIT;\n";
+ const file=resolve(".superpowers/sdd/2026-10-07-documents-editor/concurrency-fixture.sql");writeFileSync(file,fixture);
+ execFileSync("docker",["cp",file,"mc-p3:/tmp/document-concurrency-fixture.sql"]);
+ const output=execFileSync("docker",["exec","mc-p3","psql","-U","postgres","-d",database,"-tA","-v","ON_ERROR_STOP=1","-f","/tmp/document-concurrency-fixture.sql"],{encoding:"utf8"});
+ const row=JSON.parse(output.split("\n").find(line=>line.startsWith("{"))!) as {id:string;hash:string;identity:string;length:number};
+ for(const value of [row.id,row.hash,row.identity,actor])expect(value).toMatch(/^[a-f0-9-]+$/);
+ const manifest=JSON.stringify({contentHash:row.hash,rendererVersion:"v1",pages:[[{path:[0],from:0,to:row.length}]]});
+ const query="BEGIN;SELECT set_config('request.jwt.claim.sub','"+actor+"',true);SET LOCAL ROLE authenticated;SELECT app.issue_editable_document_draft('"+row.id+"',1,'"+row.hash+"','"+row.identity+"','"+manifest+"');COMMIT;";
+ const outputs=await Promise.all([run("docker",["exec","mc-p3","psql","-U","postgres","-d",database,"-tA","-v","ON_ERROR_STOP=1","-c",query]),run("docker",["exec","mc-p3","psql","-U","postgres","-d",database,"-tA","-v","ON_ERROR_STOP=1","-c",query])]);
+ const pieces=outputs.map(r=>JSON.parse(r.stdout.split("\n").find(line=>line.startsWith("{"))!) as {documentId:string;docNumber:string});
+ expect(pieces[0]).toEqual(pieces[1]);expect(pieces[0]!.docNumber).toMatch(/^DOC-\d{4}-00001$/);
+ const count=execFileSync("docker",["exec","mc-p3","psql","-U","postgres","-d",database,"-tA","-c","SELECT count(*) FROM app.documents WHERE source_draft_id='"+row.id+"'"],{encoding:"utf8"});expect(count.trim()).toBe("1");
+ },30000);
+});

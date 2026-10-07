@@ -11,6 +11,7 @@
  * sous l'identité que `withCaller` a posée à partir du cookie.
  */
 
+import { documentBoundaryDiagnostic } from "@/server/db/boundary-diagnostic";
 import { NextResponse } from "next/server";
 
 import { EntreeRpc, rpcAutorise } from "@/server/db/frontiere";
@@ -71,7 +72,7 @@ export async function POST(requete: Request): Promise<NextResponse> {
   const resultat = await withCaller(ctx.userId, async (q) => {
     const port = faireePgPort(q, "api.rpc");
     return port.rpc<Record<string, unknown>>(name, args);
-  }).catch(() => null);
+  }).catch((cause) => {documentBoundaryDiagnostic("transaction",cause);return null;});
 
   if (resultat === null) return refus("indisponible", 503);
   if (!resultat.ok) {

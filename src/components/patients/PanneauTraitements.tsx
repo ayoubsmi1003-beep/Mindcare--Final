@@ -5,6 +5,7 @@
  */
 
 "use client";
+import { documentsEditor as documentsText } from "@/i18n/documents-editor";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
@@ -657,6 +658,7 @@ export function PanneauTraitements({
                   {jourLong(derniere.prescribedAt) ?? fr.etats.texteAbsent}
                   {derniere.practitionerName ? ` · ${derniere.practitionerName}` : ""}
                 </span>
+                {derniere.documentStatus === "voided" ? <Badge ton="neutre">{documentsText.voided}</Badge> : null}
                 {derniere.isHandwritten ? <Badge ton="neutre">{fr.patients.traitements.manuscrite}</Badge> : null}
               </div>
               <ul className="m-0 list-none p-0">

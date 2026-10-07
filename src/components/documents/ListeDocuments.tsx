@@ -1,4 +1,6 @@
 "use client";
+import { documentLabels } from "@/i18n/documents-editor";
+
 
 /**
  * Liste Documents — cartes premium, état + numéro + patient + actions.
@@ -66,7 +68,7 @@ export function ListeDocuments({
                   <PastilleIcone nom="documents" ton={annule ? "neutre" : "action"} />
                   <div className="flex min-w-0 flex-col gap-1.5">
                     <p className="truncate font-ui text-body font-medium leading-body text-ink-900">
-                      {fr.documents.types[d.docType]}
+                      {documentLabels[d.docType]}
                     </p>
                     <p className="flex flex-wrap items-center gap-x-2 gap-y-0.5 font-ui text-label leading-label text-ink-500">
                       {d.patientNom !== null || d.patientPrenom !== null ? (

@@ -1,3 +1,4 @@
+import { documentsEditor as documentsText } from "@/i18n/documents-editor";
 /**
  * Sections DÉTERMINISTES de la vue 360 — zéro IA.
  *
@@ -247,7 +248,7 @@ export function PointDeSituation({
           <dd className="font-ui text-body tabular-nums text-ink-900">
             {px === null
               ? "—"
-              : `${String(px.lignes.length)} · ${jourEtHeure(px.prescribedAt)}`}
+              : `${String(px.lignes.length) + (px.documentStatus === "voided" ? " · " + documentsText.voided : "")} · ${jourEtHeure(px.prescribedAt)}`}
           </dd>
         </div>
 

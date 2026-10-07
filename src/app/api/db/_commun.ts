@@ -15,6 +15,7 @@
  * son propre périmètre.
  */
 
+import { documentBoundaryDiagnostic } from "@/server/db/boundary-diagnostic";
 import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 
@@ -60,7 +61,8 @@ export async function preparer(): Promise<Contexte | NextResponse> {
       // (`pg_proc`, `pg_class`), jamais une donnée du cabinet.
       await withCaller(null, (q) => verifierAllowlist(q));
     });
-  } catch {
+  } catch (cause) {
+    documentBoundaryDiagnostic("startup",cause);
     // Allowlist incohérente ou base injoignable. Aucun détail ne sort : le
     // message nomme des fonctions et va au journal du serveur, pas au réseau.
     return refus("indisponible", 503);
@@ -72,7 +74,8 @@ export async function preparer(): Promise<Contexte | NextResponse> {
   let userId: string | null;
   try {
     userId = await resoudreSession(jeton);
-  } catch {
+  } catch (cause) {
+    documentBoundaryDiagnostic("session",cause);
     return refus("indisponible", 503);
   }
 

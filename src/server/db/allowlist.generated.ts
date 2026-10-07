@@ -14,6 +14,7 @@
 
 export const RPC_AUTORISES: ReadonlySet<string> = new Set([
   "amend_note",
+  "archive_editable_document_draft",
   "cancel_appointment",
   "check_slot_available",
   "close_consultation",
@@ -38,11 +39,13 @@ export const RPC_AUTORISES: ReadonlySet<string> = new Set([
   "confirmer_apres_reverification",
   "create_appointment",
   "create_charge",
+  "create_editable_document_draft",
   "create_patient",
   "dashboard_today",
   "day_revenue",
   "delete_charge",
   "document_readiness",
+  "duplicate_editable_document_draft",
   "execute_jarvis_action",
   "find_similar_patients",
   "flag_case_summary",
@@ -54,6 +57,8 @@ export const RPC_AUTORISES: ReadonlySet<string> = new Set([
   "get_consultation_analysis",
   "get_consultation_payment",
   "get_document",
+  "get_editable_document_draft",
+  "get_editable_document_snapshot",
   "get_finance_overview",
   "get_jarvis_history",
   "get_live_history",
@@ -69,10 +74,13 @@ export const RPC_AUTORISES: ReadonlySet<string> = new Set([
   "get_sessions_payments_list",
   "get_treatment_history",
   "issue_document",
+  "issue_editable_document_draft",
   "list_agenda",
   "list_amendments",
   "list_day_payments",
+  "list_document_draft_revisions",
   "list_documents",
+  "list_editable_document_drafts",
   "list_live_runs",
   "list_patient_documents",
   "list_patient_timeline",
@@ -83,6 +91,7 @@ export const RPC_AUTORISES: ReadonlySet<string> = new Set([
   "mark_notification_read",
   "nombre_en_lettres",
   "pause_treatment",
+  "preview_editable_document_draft",
   "propose_jarvis_action",
   "reception_board",
   "record_payment_collected",
@@ -90,6 +99,8 @@ export const RPC_AUTORISES: ReadonlySet<string> = new Set([
   "renew_treatment",
   "restart_treatment",
   "resume_treatment",
+  "revise_issued_document",
+  "save_editable_document_draft",
   "save_note",
   "save_raw_notes",
   "search_knowledge_lexical",
@@ -105,6 +116,7 @@ export const RPC_AUTORISES: ReadonlySet<string> = new Set([
   "update_appointment",
   "update_cabinet",
   "update_charge",
+  "update_document_order_number",
   "update_patient",
   "update_profile",
   "update_treatment",
@@ -119,4 +131,4 @@ export const RELATIONS_AUTORISEES: Readonly<Record<string, readonly string[]>> =
 };
 
 /** Nombre d'entrées, pour que le contrôle de démarrage puisse le journaliser. */
-export const NB_RPC = 97;
+export const NB_RPC = 109;
