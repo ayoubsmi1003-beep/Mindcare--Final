@@ -37,3 +37,6 @@ papier de référence).
 ## DO NOT LOAD
 Finance, Jarvis (sauf `create_document_draft`), agenda, `fr.ts` entier,
 `STATE.md`, migrations hors `030`/`043`–`045`/`061`.
+
+## Editable document doors (approved 2026-10-07)
+Drafts use audited create/get/list/save/revisions/archive/duplicate gates. Preview resolves bound identity fields in SQL and records revision, content hash and identity version. Issue requires the saved preview and a complete Unicode slice manifest, reconstructs HTML from validated JSON, and allocates one number inside the same transaction. Retrying an issued draft returns the same snapshot. Legacy issued HTML is unchanged. Schema: forward migrations 128-130; DocumentContent and PageManifest are the closed contracts under src/shared/documents.
