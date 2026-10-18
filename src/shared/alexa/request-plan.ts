@@ -1,8 +1,9 @@
 import { parsePatientMention } from "./patient-mention";
 import { mentionsMedication } from "./medications";
 import { isBoundedPublicQuestion } from "./public-question";
+import { agendaSelection, isGlobalWhoAgenda } from "./agenda-plan";
 
-export type AlexaIntent = "history" | "current_consultation" | "notes" | "diagnoses" | "scales" | "dialogue" | "general" | "navigation" | "treatments" | "treatment_changes" | "summary" | "preparation" | "longitudinal" | "knowledge" | "agenda" | "receipts" | "proposal" | "clarify";
+export type AlexaIntent = "history" | "current_consultation" | "notes" | "diagnoses" | "scales" | "dialogue" | "general" | "navigation" | "treatments" | "treatment_changes" | "summary" | "preparation" | "longitudinal" | "knowledge" | "agenda" | "receipts" | "patient_search" | "proposal" | "clarify" | "app_help" | "clock" | "profile" | "documents" | "patient_finance";
 export type AlexaLanguage = "fr" | "ar" | "mixed";
 export type ClinicalFocus = "sleep" | "anxiety" | "mood" | "risk" | "symptoms";
 export interface WorkingReference {
@@ -13,14 +14,27 @@ export interface WorkingReference {
   selectionBefore?: { startedAt: string; id: string };
   operation?: "compare" | "summarize";
   focus?: ClinicalFocus;
+  agendaDay?: string;
+  agendaRequestedOnly?: boolean;
+  patientFilter?: "all" | "missing_identity_card" | "missing_phone" | "missing_email";
+  outputShape?: "count" | "list" | "fact" | "explanation";
+  patients?: readonly {patientId:string;label:string}[];
+  listOffset?: number;
+  listTotal?: number;
+  pendingPlan?: RequestPlan;
+  selectedPatientId?: string;
 }
 export interface RequestPlan extends WorkingReference {
+  helpTopic?: string;
+  knowledgeQuery?: string;
+  patientReference?: {kind:"current" | "previous" | "next" | "ordinal";value:string};
   language: AlexaLanguage;
   before?: { startedAt: string; id: string };
   /** Explicitly requested governed book excerpts, kept separate from patient facts. */
   includeKnowledge?: true;
   dialogueAct?: "hello" | "thanks" | "help" | "presence";
   navigationTarget?: "agenda" | "patients" | "dashboard" | "patient";
+  clarification?: "agenda-period" | "next-patient-period" | "patient" | "content" | "destination" | "date" | "operation" | "local-unavailable";
 }
 
 function requestedCount(text: string): number | null {
@@ -111,7 +125,7 @@ function isNumberWord(word: string): boolean { return numberWords.has(word) || (
 /** Possessive requests address the working patient, including attached Arabic pronouns. */
 export function requestsPatientScope(text: string): boolean {
   const normalized = text.normalize("NFKD").replace(/\p{M}/gu, "").toLowerCase();
-  return /\b(?:son|ses|sa|ce patient|cette patiente|du patient|de la patiente|prend[-\s]+(?:il|elle))\b|المريض|المريضة|تاعو|تاعها|(?:مواعيد|موعد|اجندت?)(?:ه|ها|هم|هن|و)(?!\p{L})/u.test(normalized);
+  return /\b(?:son|ses|sa|ce dossier|ce patient|cette patiente|du patient|de la patiente|dossier (?:selectionne|courant|actuel)|prend[-\s]+(?:il|elle))\b|المريض|المريضة|تاعو|تاعها|(?:مواعيد|موعد|اجندت?)(?:ه|ها|هم|هن|و)(?!\p{L})/u.test(normalized);
 }
 const agendaRequest = /agenda|prochain patient|patient suivant|المريض التالي|مواعيد|موعد|planning|rendez[\s-]?vous|\brdv\b/u;
 /** Shared routing predicate; whitespace and Darija cannot change dossier scope. */
@@ -122,7 +136,6 @@ export function requestsNextPatient(text: string): boolean {
 }
 // The audited dashboard only supports today. An explicit other period cannot
 // be silently replaced by today's appointments, including in a mixed request.
-const unsupportedAgendaPeriod = /\b(?:demain|hier|semaine|mois|annee|lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche|janvier|fevrier|mars|avril|mai|juin|juillet|aout|septembre|octobre|novembre|decembre)\b|\p{N}{1,4}\s*[/.-]\s*\p{N}{1,4}|\b(?:du|le)\s+\d{1,2}\b|غدوة|غدا|البارح|امس|أمس|اسبوع|أسبوع|الاسبوع|الأسبوع|الشهر|السنة/u;
 
 /** Only an explicit, global cash read for today uses the daily dashboard gate. */
 function requestsDailyReceipts(text: string): boolean {
@@ -146,15 +159,18 @@ function routeRequest(text: string, previous: WorkingReference | null): RequestP
   const focus = clinicalFocus(normalized);
   const operation = /compar|قارن|مقارن/u.test(normalized) ? "compare" : /resum|synth|لخص|تلخيص|ملخص/u.test(normalized) ? "summarize" : undefined;
   // Writes always retain the existing human confirmation boundary.
-  if (/supprim|effac|signer|clotur|fermer|ajout|prescri|modifi(?!cation)|augment|arrete.*trait|(?:prepar|redig|gener).{0,60}brouillon|حذف|امسح|وقع|زيد.*دوز/u.test(normalized)) return { intent: "proposal", count: 1, language };
+  if (/supprim|effac|\bsigne(?:r)?\b|clotur|fermer|ajout|prescri|modifi(?!cation)|augment|arrete.*trait|(?:prepar|redig|gener).{0,60}brouillon|حذف|امسح|وقع|زيد.*دوز/u.test(normalized)) return { intent: "proposal", count: 1, language };
   if (/(?:n['’]|ne\s+|pas\s+)(?:ouvre|ouvrir|va|aller)|(?:ouvre|ouvrir|va|aller)\b.{0,30}\b(?:pas|jamais)\b|لا\s+(?:تفتح|تروح|افتح)|ما\s+(?:تفتح|تروح)/u.test(normalized)) return { intent: "clarify", count: 1, language };
+  // Admit the complete public question before loose clinical word fragments
+  // ("photosynthese" contains "synthese"). The egress privacy gate still runs.
+  if (!patientWording && isBoundedPublicQuestion(text)) return { intent: "general", count: 1, language };
   // Next-patient scope comes from the audited agenda, never the active dossier.
   // Compound clinical requests remain unsupported and must not reuse it.
   if (requestsNextPatient(normalized)) {
     const clinical = /traitement|medicament|dose|posolog|ordonnance|diagnosti|notes?|resum|synth|seance|consultation|symptom|evolu|علاج|دواء|جرعة|تشخيص|ملاحظ|ملخص|لخص|جلس|استشار|اعراض/u.test(normalized);
     return { intent: clinical ? "clarify" : "agenda", count: 1, language };
   }
-  if (/^\s*(?:resume[- ]moi ma journee|aide[- ]moi a preparer ma journee|prepare ma journee|ma journee)\s*[?!.]*\s*$/u.test(normalized)) return { intent: "agenda", count: 1, language };
+  if (/^\s*(?:resume(?:[- ]moi)? ma journee|aide[- ]moi a preparer ma journee|prepare ma journee|ma journee)\s*[?!.]*\s*$/u.test(normalized)) return { intent: "agenda", count: 1, language };
   if (/^\s*recherch(?:e|er)\s+(?:un|le|des)\s+dossiers?\s*[?!.]*\s*$/u.test(normalized)) return { intent: "navigation", navigationTarget: "patients", count: 1, language };
   if (/^\s*(?:alexa[\s,،:]+)?(?:(?:s['’]il te plait|svp|من فضلك)[\s,،:]+)?(?:(?:peux[ -]tu|tu peux)\s+)?(?:ouvre|ouvrir|va|aller)\b|^\s*(?:alexa[\s,،:]+)?(?:افتح|روح)/u.test(normalized)) {
     const navigationTarget = /agenda|اجندة/u.test(normalized) ? "agenda"
@@ -198,11 +214,10 @@ function routeRequest(text: string, previous: WorkingReference | null): RequestP
   }
   if (/resume|resum|synthese|cas|ملخص|لخص/u.test(normalized)) return { intent: "summary", count: 5, language };
   if (/comment va (?:ce patient|cette patiente)|كيف(?:اش)?\s+راه\s+المريض/u.test(normalized)) return { intent: "summary", count: 5, language };
-  if (agendaRequest.test(normalized)) return { intent: "agenda", count: 1, language };
+  if (agendaRequest.test(normalized) || isGlobalWhoAgenda(normalized)) return { intent: "agenda", count: 1, language };
   // General questions must never acquire the currently open patient's record.
   if (/diagnosti|تشخيص/u.test(normalized)) return { intent: "diagnoses", count: 1, language };
   if (/\bnotes?\b|symptom|ملاحظ|اعراض/u.test(normalized) || (patientWording && focus)) return { intent: "notes", count: 5, language, ...(focus ? { focus } : {}) };
-  if (!patientWording && isBoundedPublicQuestion(text)) return { intent: "general", count: 1, language };
   if (patientWording) return { intent: "clarify", count: 1, language };
   if (clinicalTopic || /definition|explique|qu.est.ce|اشرح|ما هو|ما هي/u.test(normalized) || /\b(?:livres?|ouvrages?|references?|dsm|taylor|maudsley|stahl)\b|الكتب|الكتاب|المراجع|المصادر/u.test(normalized)) return { intent: "knowledge", count: 1, language };
   return { intent: "clarify", count: 1, language };
@@ -219,12 +234,39 @@ function clinicalFocus(text: string): ClinicalFocus | undefined {
 
 /** An explicit book request alone must not read the currently open patient's record. */
 export function planRequest(text: string, previous: WorkingReference | null): RequestPlan {
+  const shortcut=text.normalize("NFKD").replace(/\p{M}/gu,"").toLowerCase().trim();
+  const language=/\p{Script=Arabic}/u.test(text)?"ar" as const:"fr" as const;
+  if(/^(?:quelle heure est[- ]il(?: a alger)?|il est quelle heure|شحال الساعة|كم الساعة)[?!.؟\s]*$/u.test(shortcut))return {intent:"clock",count:1,language};
+  // Exact, bounded local reads remain available without a model qualification.
+  const listMatch=/^(combien de |liste (?:les |des )?|montre (?:les |la liste des )?|quels sont les )patients(?: (?:sans|qui n['’]ont pas de) (telephone|numero de telephone|piece d['’]identite|carte d['’]identite|email))?[?!.\s]*$/u.exec(shortcut);
+  const arabicMatch=/^(شحال من|عدد|شكون|قائمة) (?:مريض|المرضى|مرضى)(?: (?:بلا|بدون) (نوميرو|رقم هاتف|بطاقة تعريف|ايميل))?[؟?!.\s]*$/u.exec(shortcut);
+  const matched=listMatch??arabicMatch;
+  if(matched) {
+    const field=matched[2]??"";
+    return {intent:"patient_search",count:20,language,outputShape:/^(?:combien|شحال|عدد)/u.test(shortcut)?"count":"list",patientFilter:/email|ايميل/u.test(field)?"missing_email":/identite|بطاقة/u.test(field)?"missing_identity_card":field?"missing_phone":"all"};
+  }
+  if(/^(?:comment|explique(?:z)?|aide(?:[- ]moi)?|كيف|كيفاش)\b|^(?:كيف|كيفاش)\s/u.test(shortcut)) {
+    const topic=/sign(?:er|ature)|signer la note|توقيع|نوقع/u.test(shortcut)?"sign_consultation"
+      : /tarif|prix.*seance|سعر/u.test(shortcut)?"change_tariff"
+      : /clotur|نغلق/u.test(shortcut)?"close_consultation"
+      : /(?:creer|nouveau|creation).*patient|نزيد.*مريض/u.test(shortcut)?"create_patient"
+      : /imprim.*ordonnance|ordonnance.*imprim/u.test(shortcut)?"print_prescription":null;
+    if(topic)return {intent:"app_help",count:1,language,helpTopic:topic};
+  }
+  if(previous?.patientFilter!==undefined && /^(?:lesquels|et lesquels|la suite|suite|suivant|شكون|كمل)[?!.؟\s]*$/iu.test(text.trim()))
+    return {intent:"patient_search",count:20,language:/[\u0600-\u06ff]/u.test(text)?"ar":"fr",patientFilter:previous.patientFilter??"all",outputShape:"list"};
   const plan = routeRequest(text, previous);
   if (plan.intent === "proposal") return plan;
   const normalized = text.normalize("NFKD").replace(/\p{M}/gu, "").toLowerCase();
-  if ((agendaRequest.test(normalized) || requestsNextPatient(normalized)) && unsupportedAgendaPeriod.test(normalized)) return { intent: "clarify", count: 1, language: plan.language };
-  if (plan.intent === "agenda" || plan.intent === "navigation") return plan;
-  const books = /\b(?:dsm|livres?|references?|ouvrages?)\b|المراجع|المصادر|الكتب|الكتاب/u.test(normalized);
+  if (plan.intent === "agenda") {
+    const selection = agendaSelection(text, !requestsNextPatient(text) && previous?.intent === "agenda" ? previous.agendaDay : undefined);
+    const today = agendaSelection("today")?.day;
+    if (!selection) return { intent: "clarify", count: 1, language: plan.language, clarification: "agenda-period" };
+    if (requestsNextPatient(text) && (selection.day !== today || selection.requestedOnly)) return { intent: "clarify", count: 1, language: plan.language, clarification: "next-patient-period" };
+    return { ...plan, agendaDay: selection.day, agendaRequestedOnly: selection.requestedOnly };
+  }
+  if (plan.intent === "navigation") return plan;
+  const books = /\b(?:dsm|taylor|maudsley|livres?|references?|ouvrages?)\b|المراجع|المصادر|الكتب|الكتاب/u.test(normalized);
   if (!books) return plan;
   const record = /\b(?:ce patient|cette patiente|dossier|du cas|consultations?|seances?|actuel(?:le)?s?|son traitement|ses traitements|son diagnostic|ses symptomes|notes?)\b|هذا المريض|هذه المريضة|الحالي|الحالية|ملف|جلس|استشار|تاعو|تاعها/u.test(normalized)
     || (["history", "current_consultation", "notes", "diagnoses", "scales", "treatments", "treatment_changes", "summary", "preparation", "longitudinal"].includes(plan.intent) && parsePatientMention(text).status !== "none");

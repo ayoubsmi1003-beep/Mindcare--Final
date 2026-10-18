@@ -1,15 +1,5 @@
-/**
- * LE MODÈLE N'EST NOMMÉ QUE DANS LA PASSERELLE — SINGLE-MODEL.
- *
- * Décision humaine 2026-10-03 : `qwen/qwen3.7-flash` payant, primary-only.
- * `resolveModel()` ne lit plus AUCUNE surcharge (`OPENROUTER_MODEL`,
- * `LLM_MODEL`, `JARVIS_CHAT_MODEL`, `JARVIS_RESUME_MODEL`) : un seul candidat,
- * une seule tentative, via la clé OpenRouter serveur.
- *
- * Ces tests gardent les propriétés, pas la mise en forme :
- *   1. la résolution est UNE, et vit dans la passerelle ;
- *   2. les deux routes ne portent plus de nom de modèle en dur ;
- *   3. aucune variable d'environnement ne change le modèle résolu.
+/** Model names live in the server gateway; only free preferences are accepted.
+ * Catalogue qualification and zero-price transport guards remain mandatory.
  */
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
@@ -82,41 +72,48 @@ describe("aucun nom de modèle en dur hors de la passerelle", () => {
         expect(source).toContain('from "@/app/api/alexa/summary/route"');
         const summary = readFileSync(join(process.cwd(), "src/app/api/alexa/summary/route.ts"), "utf8");
         expect(summary).toContain("buildCaseSummary(context");
-        expect(summary).toContain('p_model: "local-structured"');
+        expect(summary).toContain('p_model: ALEXA_CONVERSATION_MODEL');
+        expect(summary).toContain('summarizeClinicalContext(context');
         expect(summary).not.toContain("inferAlexa(");
         return;
       }
-      expect(source).toContain("resolveModel");
-      expect(source).toContain('from "@/server/egress/external-call"');
+      expect(source).toContain("generateSessionSummary");
+      expect(source).not.toContain("external-call");
+      const session = readFileSync(join(process.cwd(), "src/server/alexa/session-summary.ts"), "utf8");
+      expect(session).toContain("p_model: ALEXA_CONVERSATION_MODEL");
+      expect(session).toContain("synthesizeClinicalNarrative");
     });
   }
 });
 
-describe("résolution single-model : aucune surcharge d'environnement", () => {
-  it("le primary unique est qwen/qwen3.7-flash", () => {
-    expect(ALEXA_PRIMARY_MODEL).toBe("qwen/qwen3.7-flash");
-    expect(resolveModel()).toBe("qwen/qwen3.7-flash");
-    expect(resolveModel("jarvis")).toBe("qwen/qwen3.7-flash");
-    expect(resolveModel("resume-cas")).toBe("qwen/qwen3.7-flash");
-  });
-
-  it("OPENROUTER_MODEL / LLM_MODEL ne changent plus rien", () => {
-    process.env.OPENROUTER_MODEL = "qwen/modele-a:free";
-    process.env.LLM_MODEL = "qwen/modele-b:free";
-    reinitialiserEnv();
+describe("résolution free-only : préférences bornées", () => {
+  it("le modèle par défaut respecte la politique gratuite", () => {
+    expect(ALEXA_PRIMARY_MODEL).toBe(ALEXA_PRIMARY_MODEL);
     expect(resolveModel()).toBe(ALEXA_PRIMARY_MODEL);
     expect(resolveModel("jarvis")).toBe(ALEXA_PRIMARY_MODEL);
     expect(resolveModel("resume-cas")).toBe(ALEXA_PRIMARY_MODEL);
   });
 
-  it("JARVIS_CHAT_MODEL / JARVIS_RESUME_MODEL ne changent plus rien", () => {
+  it("OPENROUTER_MODEL prime sur LLM_MODEL pour une préférence gratuite", () => {
+    process.env.OPENROUTER_MODEL = "qwen/modele-a:free";
+    process.env.LLM_MODEL = "qwen/modele-b:free";
+    reinitialiserEnv();
+    for (const purpose of [undefined, "jarvis", "resume-cas"] as const) expect(resolveModel(purpose)).toBe("qwen/modele-a:free");
+  });
+  it("les préférences gratuites sont spécifiques au but", () => {
     process.env.OPENROUTER_MODEL = "qwen/global:free";
     process.env.JARVIS_CHAT_MODEL = "qwen/chat-libre:free";
     process.env.JARVIS_RESUME_MODEL = "qwen/resume-libre:free";
     reinitialiserEnv();
+    expect(resolveModel()).toBe("qwen/chat-libre:free");
+    expect(resolveModel("jarvis")).toBe("qwen/chat-libre:free");
+    expect(resolveModel("resume-cas")).toBe("qwen/resume-libre:free");
+  });
+  it("une préférence payante ou automatique ne peut autoriser le modèle", () => {
+    process.env.OPENROUTER_MODEL = "qwen/qwen3.7-flash";
+    process.env.JARVIS_CHAT_MODEL = "openrouter/auto";
+    reinitialiserEnv();
     expect(resolveModel()).toBe(ALEXA_PRIMARY_MODEL);
-    expect(resolveModel("jarvis")).toBe(ALEXA_PRIMARY_MODEL);
-    expect(resolveModel("resume-cas")).toBe(ALEXA_PRIMARY_MODEL);
   });
 
   it("sans configuration, le repli est celui de la passerelle — et il est unique", () => {

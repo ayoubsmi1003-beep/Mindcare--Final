@@ -1,0 +1,4 @@
+export const consultationReadCopy={
+ title:'Consultation enregistrée',patient:'Patient',practitioner:'Praticien',status:'État',started:'Début',ended:'Fin',duration:'Durée enregistrée',kind:'Type du rendez-vous',appointment:'Rendez-vous lié',note:'Note SOAP',signed:'Signée le',signer:'Signataire',lock:'Échéance de verrouillage',missing:'Non renseigné',none:'Aucune',draft:'Brouillon non signé',signedStatus:'Signée',working:'Consultation en cours',closed:'Consultation terminée',
+ noAnalysis:'Aucune analyse enregistrée pour cette consultation.',analysis:'Analyse IA enregistrée — contenu à vérifier, distinct des faits signés du dossier.',version:'Version',generated:'Enregistrée le',model:'Modèle d’origine',source:'Portée enregistrée',partial:'Contenu partiel ; une suite est disponible.',changed:'Le contenu a changé ; reprenez la lecture.',
+} as const;

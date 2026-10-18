@@ -35,10 +35,12 @@
  * `scripts/verifier-paquet.mjs` le VÉRIFIE sur l'artefact final : ici c'est
  * une intention, là-bas c'est une preuve.
  */
-import { cpSync, existsSync, mkdirSync, readdirSync, rmSync } from "node:fs";
+import { cpSync, existsSync, mkdirSync, readdirSync, realpathSync, rmSync } from "node:fs";
 import { spawnSync } from "node:child_process";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { createRequire } from "node:module";
+import { auditServerDependencies } from "./lib/electron-runtime-audit.mjs";
 
 const RACINE = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const AUTONOME = path.join(RACINE, ".next", "standalone");
@@ -59,7 +61,9 @@ const SCRIPTS_LIVRES = [
   "verifier-base.mjs",
   "sauvegarde.mjs",
   path.join("lib", "dburl.mjs"),
+  path.join("lib", "pg-env.mjs"),
   path.join("lib", "base-locale.mjs"),
+  path.join("lib", "alexa-migrations.mjs"),
 ];
 
 function etape(message) {
@@ -81,6 +85,8 @@ function etape(message) {
 // jonction NTFS — le mécanisme que pnpm et npm emploient déjà sous Windows
 // pour la même raison. Rien d'autre dans le dépôt n'en dépend, et un lien de
 // fichier ou une erreur d'un autre code remontent intacts.
+const alexaAssets=spawnSync(process.execPath,[path.join(RACINE,"scripts/prepare-alexa-model.mjs")],{cwd:RACINE,stdio:"inherit",windowsHide:true});
+if(alexaAssets.status!==0)throw new Error("LocalModelPackagingFailed");
 etape("construction Next.js (sortie autonome)…");
 // Le binaire de Next par son CHEMIN, pas par `createRequire` : la règle
 // `no-restricted-imports` du dépôt interdit `node:module`, et un chemin
@@ -136,6 +142,131 @@ for (const relatif of ["scripts", ".cache", path.join("resources", "voix")]) {
     throw new Error("copie tracée hors du backend assemblé");
   }
   rmSync(copieTracee, { recursive: true, force: true });
+}
+
+// ── 3ter. Les pairs d'exécution de Next que le traçage manque sous pnpm ─────
+//
+// ⚠️ MESURÉ, PAS SUPPOSÉ. Le serveur autonome mourait au lancement :
+// `Cannot find module 'styled-jsx/package.json'` puis
+// `Cannot find module '@swc/helpers/...'` puis `Cannot find module '@next/env'`
+// (requires d'exécution de Next).
+// Le traçage `standalone` ne voit pas ces `require`, et sous pnpm ils ne sont
+// pas remontés à la racine de `node_modules` — ni tracés, ni trouvables. On
+// les rapatrie depuis le magasin pnpm, versions résolues dynamiquement
+// (jamais d'épinglage en dur ici). La liste est fermée et chaque absence est
+// un refus : un pair manquant = un backend qui ne démarre pas (trouvé par
+// échec réel du provisionnement packagé, 2026-10-07).
+etape("rapatriement des pairs d'exécution Next manqués par le traçage…");
+{
+  const magasin = path.join(RACINE, "node_modules", ".pnpm");
+  const dossierMagasin = (nom) => {
+    const base = nom.replace("/", "+");
+    return readdirSync(magasin).filter((d) => d === nom || d.startsWith(`${base}@`));
+  };
+  const PAIRS = ["styled-jsx", "@swc/helpers", "@next/env", "client-only"];
+  for (const nom of PAIRS) {
+    const source = dossierMagasin(nom)
+      .map((d) => path.join(magasin, d, "node_modules", nom))
+      .find((p) => existsSync(path.join(p, "package.json")));
+    if (source === undefined) {
+      console.error(`[paquet] ${nom} introuvable dans node_modules/.pnpm — lancer \`pnpm install\`.`);
+      process.exit(1);
+    }
+    cpSync(source, path.join(CIBLE, "node_modules", nom), { recursive: true, dereference: true });
+    console.log(`[paquet]   rapatrié : ${nom}`);
+  }
+}
+
+// ── 3quater. L'arbre `pg` COMPLET, pas sa seule racine ────────────────────────
+//
+// ⚠️ MESURÉ, PAS SUPPOSÉ. Le traçage recopie `node_modules/pg` (serveur) mais
+// PAS ses voisins pnpm (`pg-types`, `pg-connection-string`, `pg-pool`,
+// `pgpass`…) : toute route adossée à la base rendait 500 sur le paquet
+// (`/api/auth/session` anonyme en 500 là où le dev rend 200 `data:null` —
+// trouvé par échec e2e réel C1.1 sur le bundle empaqueté, 2026-10-07).
+// Pire : les dépendances TRANSITIVES (`postgres-array` via `pg-types`…)
+// vivent dans leurs propres entrées `.pnpm/postgres-array@*/…`, hors de portée
+// d'une copie des seuls voisins directs (trouvé par refus du §7, 2026-10-07).
+// On rapatrie donc la FERMETURE complète (liste fermée ci-dessous, versions
+// résolues dynamiquement, liens déréférencés — cf. §3ter). Sans cela, l'EMR
+// empaqueté ne lit AUCUNE donnée.
+etape("complétude de l'arbre pg…");
+{
+  const magasin = path.join(RACINE, "node_modules", ".pnpm");
+  // Fermeture de `pg@8` (package.json du paquet + graphe transitif) + `tslib`
+  // (requis par `@swc/helpers` du §3ter). Sont EXCLUS à dessein : `pg-native`
+  // (liaison native optionnelle, jamais chargée par le chemin par défaut —
+  // `pg/lib/native` n'est exigé par personne), `tape`/`pff` (tests de
+  // `pg-types`, jamais chargés) et `babel-plugin-macros` (outillage babel de
+  // `styled-jsx`, temps de compilation uniquement) — fermeture calculée par
+  // analyse statique des `require` de l'arbre empaqueté, 2026-10-07.
+  const FERMETURE_PG = [
+    "pg",
+    "pg-cloudflare",
+    "pg-connection-string",
+    "pg-int8",
+    "pg-pool",
+    "pg-protocol",
+    "pg-types",
+    "pgpass",
+    "postgres-array",
+    "postgres-bytea",
+    "postgres-date",
+    "postgres-interval",
+    "split2",
+    "tslib",
+    "xtend",
+  ];
+  const dossierMagasinPg = (nom) => {
+    const base = nom.replace("/", "+");
+    const candidats = existsSync(magasin) ? readdirSync(magasin).filter((d) => d === nom || d.startsWith(`${base}@`)) : [];
+    if (candidats.length !== 1) {
+      console.error(
+        `[paquet] ${nom} : ${candidats.length} candidats dans node_modules/.pnpm (${candidats.join(",") || "aucun"}) — résolution ambiguë, mettre à jour FERMETURE_PG.`,
+      );
+      process.exit(1);
+    }
+    return path.join(magasin, candidats[0], "node_modules", nom);
+  };
+  for (const nom of FERMETURE_PG) {
+    const source = dossierMagasinPg(nom);
+    if (!existsSync(path.join(source, "package.json"))) {
+      console.error(`[paquet] ${nom} introuvable dans node_modules/.pnpm — lancer \`pnpm install\`.`);
+      process.exit(1);
+    }
+    // `dereference: true` — OBLIGATOIRE : dans le magasin pnpm, les
+    // dépendances secondaires sont des LIENS vers `../../<nom>@x/…`.
+    // Recopiés tels quels, ce seraient des liens pendants dans l'arbre du
+    // paquet (trouvé par refus du §7, 2026-10-07).
+    cpSync(source, path.join(CIBLE, "node_modules", nom), { recursive: true, dereference: true });
+  }
+  console.log("[paquet]   arbre pg complet rapatrié");
+}
+
+// ONNX est importé dynamiquement par le serveur. Les versions web et Node
+// diffèrent : résoudre le pair via le chemin pnpm réel du runtime Node.
+etape("complétude des runtimes React, Zod et ONNX…");
+{
+  for (const name of ["react-dom", "zod"]) {
+    cpSync(realpathSync(path.join(RACINE, "node_modules", name)), path.join(CIBLE, "node_modules", name), { recursive: true, dereference: true });
+  }
+  const reactResolver = createRequire(path.join(realpathSync(path.join(RACINE, "node_modules", "react-dom")), "package.json"));
+  let schedulerRoot = path.dirname(reactResolver.resolve("scheduler"));
+  while (!existsSync(path.join(schedulerRoot, "package.json"))) {
+    const parent = path.dirname(schedulerRoot);
+    if (parent === schedulerRoot) throw new Error("Racine scheduler introuvable");
+    schedulerRoot = parent;
+  }
+  cpSync(schedulerRoot, path.join(CIBLE, "node_modules", "scheduler"), { recursive: true, dereference: true });
+  const sourceOnnx = realpathSync(path.join(RACINE, "node_modules", "onnxruntime-node"));
+  const resolver = createRequire(path.join(sourceOnnx, "package.json"));
+  let sourceCommon = path.dirname(resolver.resolve("onnxruntime-common"));
+  while (!existsSync(path.join(sourceCommon, "package.json"))) {
+    const parent = path.dirname(sourceCommon);
+    if (parent === sourceCommon) throw new Error("Racine onnxruntime-common introuvable");
+    sourceCommon = parent;
+  }
+  cpSync(sourceCommon, path.join(CIBLE, "node_modules", "onnxruntime-common"), { recursive: true, dereference: true });
 }
 
 // ── 3bis. LE `.env` QUE NEXT RECOPIE DE LUI-MÊME ─────────────────────────────
@@ -232,6 +363,113 @@ for (const relatif of SCRIPTS_LIVRES) {
   const destination = path.join(CIBLE, "scripts", relatif);
   mkdirSync(path.dirname(destination), { recursive: true });
   cpSync(source, destination);
+}
+
+// ── 7. Preuve de démarrage du serveur assemblé ───────────────────────────────
+//
+// Un pair manquant (§3ter) ou un arbre incomplet (§3quater) ne se voit qu'au
+// lancement, sur le poste du cabinet. On démarre donc le `server.js` assemblé
+// ici même, sur un port de sonde fixe (43119, jamais un port de production),
+// et on exige son « Ready » PUIS une session anonyme saine : `GET
+// /api/auth/session` sans cookie doit rendre 200 `{"ok":true,"data":null}`
+// SANS toucher la base (`resoudreSession(undefined)` rend null avant tout
+// accès). Cette sonde charge toute la chaîne d'import des routes
+// (`session → withCaller → pool → pg`) : un `pg-types` manquant la fait
+// passer en 500 et refuse l'assemblage (trouvé par échec e2e C1.1, 2026-10-07).
+// Le serveur de sonde est tué aussitôt — preuve, jamais backend.
+const erreursRuntime = auditServerDependencies(CIBLE);
+if (erreursRuntime.length > 0) {
+  console.error("[paquet] dépendances runtime incomplètes :", erreursRuntime.join("; "));
+  process.exit(1);
+}
+etape("chargement des dépendances runtime vérifié");
+etape("preuve de démarrage du serveur assemblé…");
+{
+  const { spawn } = await import("node:child_process");
+  const sonderSessionAnonyme = async () => {
+    const ctl = new AbortController();
+    const garde = setTimeout(() => ctl.abort(), 10_000);
+    try {
+      const r = await fetch("http://127.0.0.1:43119/api/auth/session", { signal: ctl.signal });
+      const corps = (await r.text()).slice(0, 200);
+      return r.status === 200 && corps.includes('"data":null');
+    } catch {
+      return false;
+    } finally {
+      clearTimeout(garde);
+    }
+  };
+  await new Promise((resoudre) => {
+    const fils = spawn(process.execPath, [path.join(CIBLE, "server.js")], {
+      cwd: CIBLE,
+      env: { ...process.env, PORT: "43119", HOSTNAME: "127.0.0.1" },
+      stdio: ["ignore", "pipe", "pipe"],
+    });
+    let sortie = "";
+    let pret = false;
+    let fini = false;
+    const minuteur = setTimeout(() => {
+      fils.kill();
+      console.error("[paquet] le serveur assemblé ne dit pas « Ready » sous 120 s.");
+      console.error(sortie);
+      process.exit(1);
+    }, 120_000);
+    const terminer = (ok, message) => {
+      if (fini) return;
+      fini = true;
+      clearTimeout(minuteur);
+      fils.kill();
+      if (!ok) {
+        console.error(message);
+        process.exit(1);
+      }
+      console.log(message);
+      resoudre(undefined);
+    };
+    const refuserManquant = () => {
+      const manquant = /Cannot find module '([^']+)'/.exec(sortie);
+      if (manquant !== null) {
+        terminer(false, `[paquet] module d'exécution manquant : ${manquant[1]} — compléter §3ter/§3quater.`);
+      }
+    };
+    const sonderApresPret = async () => {
+      for (let essai = 0; essai < 10; essai += 1) {
+        await new Promise((r) => setTimeout(r, 1000));
+        if (await sonderSessionAnonyme()) {
+          terminer(true, "[paquet]   serveur assemblé : Ready + session anonyme saine (preuve de démarrage)");
+          return;
+        }
+      }
+      terminer(false, "[paquet] /api/auth/session anonyme ne rend pas 200 data:null — chaîne d'import des routes brisée.");
+    };
+    fils.stdout?.on("data", (d) => {
+      sortie += d.toString();
+      if (sortie.length > 6000) sortie = sortie.slice(-6000);
+      if (!pret && /Ready in|started server on/i.test(sortie)) {
+        pret = true;
+        void sonderApresPret();
+      }
+      refuserManquant();
+    });
+    fils.stderr?.on("data", (d) => {
+      sortie += d.toString();
+      if (sortie.length > 6000) sortie = sortie.slice(-6000);
+      refuserManquant();
+    });
+    fils.on("exit", (code) => {
+      if (!sortie.includes("Ready")) {
+        clearTimeout(minuteur);
+        console.error(`[paquet] le serveur assemblé s'est terminé (code ${String(code)}) sans dire « Ready ».`);
+        console.error(sortie.slice(-1500));
+        process.exit(1);
+      }
+    });
+    fils.on("error", (e) => {
+      clearTimeout(minuteur);
+      console.error(`[paquet] lancement du serveur assemblé impossible : ${e.message}`);
+      process.exit(1);
+    });
+  });
 }
 
 etape(`prêt : ${path.relative(RACINE, CIBLE)}`);

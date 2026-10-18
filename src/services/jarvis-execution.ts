@@ -1,3 +1,4 @@
+import {readAlexaActionOutcome,type AlexaActionOutcome} from "./alexa-action-outcome";
 /**
  * `jarvis-execution.ts` — M06 · le SEUL chemin service d'exécution vérifiée.
  *
@@ -129,12 +130,14 @@ export type IssueExecution = ExecutionAboutie | ExecutionEchouee;
 export interface DependancesExecution {
   readonly executer: (actionId: string) => Promise<Result<string>>;
   readonly verifierPour: (outil: string) => CapaciteEcritureEnregistree | null;
+  readonly reconcilier?: (actionId:string)=>Promise<AlexaActionOutcome|null>;
   readonly delaiMs: number;
   readonly maintenant: () => number;
 }
 
 const DEPENDANCES_REELLES: DependancesExecution = {
   executer: (actionId) => executerAction(actionId),
+  reconcilier:readAlexaActionOutcome,
   verifierPour: (outil) => capaciteEcriture(outil),
   delaiMs: DELAI_EXECUTION_MS,
   maintenant: () => Date.now(),
@@ -268,7 +271,14 @@ export async function executerEcritureConfirmee(
   }
 
   // 2 · EXÉCUTER — par `actionId` seul. Aucun argument client ne voyage.
-  const sort = await executerAvecDelai(deps.executer, entree.actionId, deps.delaiMs);
+  let sort = await executerAvecDelai(deps.executer, entree.actionId, deps.delaiMs);
+  if((sort.expire||sort.rupture)&&deps.reconcilier){
+    let timeout:ReturnType<typeof setTimeout>|undefined;
+    try{
+      const outcome=await Promise.race([deps.reconcilier(entree.actionId).catch(()=>null),new Promise<null>(resolve=>{timeout=setTimeout(()=>resolve(null),5000);})]);
+      if(outcome?.state==="executed"&&outcome.tool===entree.outil&&outcome.affectedId)sort={expire:false,rupture:false,resultat:{ok:true,data:outcome.affectedId}};
+    }finally{clearTimeout(timeout);}
+  }
 
   // 3 · Délai dépassé = INCONNUE. L'écriture a PU être validée sans que la
   // réponse ne revienne : ni succès, ni échec, aucun rejeu (toutes les

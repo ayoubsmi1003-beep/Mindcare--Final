@@ -1,0 +1,23 @@
+export const applicationLabels:Record<string,string>={name:'Cabinet',address:'Adresse',phone:'Téléphone',full_name:'Nom professionnel',title:'Titre',speciality_fr:'Spécialité',speciality_ar:'Spécialité (arabe)',order_number:'N° d’Ordre',revenu_periode:'Recettes de la période',charges_periode:'Charges de la période',resultat_net_periode:'Résultat net de la période',nb_seances_periode:'Séances de la période',panier_moyen:'Montant moyen par séance',impayes_total:'Impayés connus, toutes dates',impayes_count:'Paiements impayés, toutes dates',revenu_aujourdhui:'Recettes aujourd’hui',revenu_semaine:'Recettes de la semaine',revenu_mois:'Recettes du mois',nb_charges_recurrentes:'Charges récurrentes',total_recurrent_mensuel:'Charges récurrentes, rythme mensuel',total_ponctuel_periode:'Charges ponctuelles de la période'};
+export const applicationReadCopy={
+ documentCoverage:(from:number,to:number,total:number,complete:boolean)=>`Texte enregistré : caractères ${from+1}-${to} / ${total}.${complete?' Lecture complète.':' Lecture partielle ; demandez « la suite du document ».'}`, 
+ missing:'Non renseigné',unknown:'Non établi',currency:' DZD',chargePopulation:'Liste : charges récurrentes actives (toutes dates) et charges ponctuelles de cette période.',recordMissing:'Dossier non renseigné',notArrived:'Non enregistrée',adminMissing:'Non renseignées',appointmentName:'Rendez-vous',
+ finance:{
+  typeName:(key:string)=>key==='__non_rattache__'?'Séance non rattachée':key.replace(/_/gu,' ').replace(/^./u,c=>c.toLocaleUpperCase('fr')),
+
+  currentClock:'Les indicateurs aujourd’hui/semaine/mois utilisent la date courante de la base ; les impayés portent sur toutes dates.',
+  evolution:'Six mois se terminant au mois de la date courante de la base, indépendamment de la période demandée.',
+  revenueTypes:'Recettes par type de consultation',chargeCategories:'Charges par catégorie',
+  amounts:'Montants et parts calculés par la base ; aucun total déduit de cette liste.',
+  revenue:'Recettes',charges:'Charges',net:'Résultat net',sessions:'séance(s)',pending:'présence d’un impayé',
+  cashDates:'Calendrier des encaissements : date d’encaissement ; indicateur d’impayé : date de création du paiement.',
+  groupedTypes:'Nombre de séances encaissées par jour et par type ; les types restants sont regroupés sous « autres » par la base.',
+  attention:'Impayés toutes dates et au plus trois prochaines échéances affichées, à la date courante de la base ; aucune échéance passée incluse.',
+  deadlineCap:'La porte limite la liste à trois échéances : la présence d’autres échéances n’est pas établie.',
+  noDeadline:'Aucune échéance à venir dans ce panneau.',oldest:'Ancienneté du plus ancien impayé',days:'jour(s)',remaining:'jour(s) restant(s)',
+  deadline:' ; échéance ',
+ },
+ period:(from:string,to:string)=>'Période du '+from+' au '+to+' inclus.',
+ page:(from:number,to:number,total:number)=>'Liste partielle : '+from+'–'+to+' / '+total+'.',
+ appointment:{started:'Début',duration:'Durée',minutes:'minutes',kind:'Type',status:'Statut',practitioner:'Praticien',source:'Source',arrived:'Arrivée',admin:'Notes administratives'},
+} as const;

@@ -22,6 +22,8 @@ appId: os.mindcare.cabinet
 # d'installation. `package.json#name` (`mindcare-os`) reste l'identifiant
 # technique ; les deux ne se confondent pas.
 productName: MindCare OS
+extraMetadata:
+  mindcareDeployment: clinic-auto
 # La VERSION vient de `package.json` — source unique. Elle nomme
 # l'installateur, s'affiche dans « Applications et fonctionnalités », et est
 # ce que `app.getVersion()` rend au canal preload `mindcare:version`.
@@ -62,6 +64,23 @@ asar: true
 # `node server.js` pour le backend, `psql -f` pour le SQL, `initdb.exe` /
 # `pg_ctl.exe` pour le cluster.
 extraResources:
+  - from: resources/alexa/local-model
+    to: alexa/local-model
+    filter:
+      - "MiniCPM-V-4_7-1B-Q4_K_M.gguf"
+      - "llama-b11429.zip"
+      - "runtime-b11429/*.exe"
+      - "runtime-b11429/*.dll"
+  - from: src/i18n/cabinet-desktop.fr.json
+    to: cabinet/messages-fr.json
+  - from: resources/snapshot/purge-synthetic.sql
+    to: cabinet/purge-synthetic.sql
+  - from: scripts/configurer-cabinet.ps1
+    to: cabinet/configurer-cabinet.ps1
+  - from: scripts/lancer-serveur-cabinet.cmd
+    to: cabinet/lancer-serveur-cabinet.cmd
+  - from: docs/deploiement-cabinet.md
+    to: cabinet/deploiement-cabinet.md
   - from: resources/voix
     to: voix
   # `resources/serveur` est assemblé par `scripts/preparer-paquet.mjs` : la
@@ -80,6 +99,7 @@ extraResources:
   # README subsiste.
   - from: resources/pgsql
     to: pgsql
+  # Aucun instantané clinique dans l'installateur commun.
 
 win:
   target:
@@ -128,7 +148,7 @@ nsis:
   # pouvoir lire ce qui va se passer et choisir le disque — sur un poste de
   # cabinet, le disque système n'est pas toujours celui qui a la place.
   oneClick: false
-  allowToChangeInstallationDirectory: true
+  allowToChangeInstallationDirectory: false
   createDesktopShortcut: true
   createStartMenuShortcut: true
   shortcutName: MindCare OS
@@ -148,3 +168,4 @@ nsis:
   installerLanguages:
     - fr_FR
   language: "1036"
+

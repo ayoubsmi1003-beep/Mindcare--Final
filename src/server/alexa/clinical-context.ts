@@ -48,7 +48,7 @@ export async function buildClinicalContext(db: Pick<DbPort, "rpc">, scope: { rea
     }
     if (first === undefined || last === undefined) throw new ClinicalContextError("invalid-context");
     return { ...first, consultations, coverage: { requested: request.count, returned: consultations.length,
-      complete: complete && first.treatments.historyComplete && consultations.length === request.count,
+      complete: complete && first.treatments.historyComplete && (consultations.length === request.count || !last.coverage.hasMore),
       hasMore: last.coverage.hasMore, ...(last.coverage.next === undefined ? {} : { next: last.coverage.next }) } };
   } catch (error) {
     if (error instanceof ClinicalContextError) throw error;

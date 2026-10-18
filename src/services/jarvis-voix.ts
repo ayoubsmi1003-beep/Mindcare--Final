@@ -2,8 +2,8 @@
  * La voix de Jarvis — V-JARVIS-CORE.
  *
  * Dictée : `MediaRecorder` presser-pour-parler → base64 → Edge
- * `jarvis-voice-in` (Groq Whisper). Lecture : bouton par bulle → Edge
- * `jarvis-voice-out` (ElevenLabs) en flux binaire → Blob URL → élément audio.
+ * `jarvis-voice-in` (Gemini Transcribe). Lecture : bouton par bulle → API
+ * `jarvis-voice-out` (Gemini TTS) en flux binaire → Blob URL → élément audio.
  *
  * ═══ FRONTIÈRES, ET ELLES NE BOUGENT PAS ═══
  * · Le transport passe PAR LE PORT (`invokeFunction`/`invokeFunctionStream`)
@@ -357,9 +357,10 @@ export function arreterLecture(): void {
  */
 export async function lireTexte(
   texte: string,
-  _porteUneIdentite = false,
+  porteUneIdentite = false,
 ): Promise<Result<true>> {
   arreterLecture(); // un seul son à la fois — relire A remplace B, sans doublon
+  if (porteUneIdentite) return err({ code: "interdit", message: fr.jarvis.voix.indisponible });
 
   // Plafond côté client, aligné sur la passerelle (2000 car.) : refus immédiat
   // lisible plutôt qu'un aller-retour voué à l'échec.
@@ -401,7 +402,7 @@ export async function lireTexte(
     const demarre = new Promise<boolean>((resoudre) => {
       audio.onplaying = () => {
         if (generation !== generationLecture || controle.signal.aborted) { resoudre(false); return; }
-        publierLecture(true, "local");
+        publierLecture(true, "cloud");
         resoudre(true);
       };
       audio.onerror = () => resoudre(false);

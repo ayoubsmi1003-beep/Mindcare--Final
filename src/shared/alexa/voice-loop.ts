@@ -1,13 +1,13 @@
 import type { AlexaNavigation, AlexaSource } from "./turn";
 
 export interface TrameVoix { readonly samples: Float32Array; readonly sampleRate: number }
-export interface ResultatTourVoix { readonly texte: string; readonly sources?: readonly AlexaSource[]; readonly patientId?: string | null; readonly persiste?: boolean; readonly navigation?: AlexaNavigation; readonly speechLimited?: true }
+export interface ResultatTourVoix { readonly texte: string; readonly sources?: readonly AlexaSource[]; readonly patientId?: string | null; readonly persiste?: boolean; readonly navigation?: AlexaNavigation; readonly speechAllowed?:boolean; readonly speechLimited?: true }
 export interface TourVoix extends Omit<ResultatTourVoix, "texte"> { readonly id: string; readonly texte: string; readonly reponse?: string; readonly error?: "capture" | "stt" | "turn" | "tts" | "interrompu" }
 export type PhaseVoixLocale = "desactive" | "reveille" | "ecoute" | "traitement" | "parole" | "erreur";
 export interface PortsVoixLocale {
   ouvrir: (recevoir: (frame: TrameVoix) => void) => Promise<() => void>;
-  transcrire: (samples: Float32Array, rate: number, signal: AbortSignal) => Promise<string>;
-  repondre: (text: string, signal: AbortSignal, sentence: (text: string) => void) => Promise<ResultatTourVoix>;
+  transcrire: (samples: Float32Array, rate: number, signal: AbortSignal) => Promise<string|{texte:string;utteranceId:string}>;
+  repondre: (text: string, signal: AbortSignal, sentence: (text: string) => void,clientTurnId:string) => Promise<ResultatTourVoix>;
   lire: (text: string, signal: AbortSignal, playing: () => void) => Promise<void>;
   couper: () => void;
   phase: (state: PhaseVoixLocale, error?: "capture" | "stt" | "turn" | "tts") => void;
@@ -43,10 +43,11 @@ export function creerBoucleVoixLocale(ports: PortsVoixLocale) {
     let stage: "stt" | "turn" | "tts" = "stt";
     try {
       ports.phase("traitement");
-      const texte = (await ports.transcrire(samples, sampleRate, c.signal)).trim();
+      const transcribed=await ports.transcrire(samples,sampleRate,c.signal);
+      const texte=(typeof transcribed==="string"?transcribed:transcribed.texte).trim();
       if (!alive(epoch, c)) return;
       if (!texte) { ports.phase("ecoute"); return; }
-      touch(); const id = crypto.randomUUID(); pendingTurn = { id, texte }; ports.tour({ id, texte }); stage = "turn";
+      touch(); const id = typeof transcribed==="string"?crypto.randomUUID():transcribed.utteranceId; pendingTurn = { id, texte }; ports.tour({ id, texte }); stage = "turn";
       let count = 0, chars = 0, audioError = false, speechLimited = false, queue = Promise.resolve();
       const enqueue = (text: string) => {
         if (!alive(epoch, c) || !text.trim()) return;
@@ -66,13 +67,14 @@ export function creerBoucleVoixLocale(ports: PortsVoixLocale) {
         const segments = text.split(/\r?\n|(?<=[.!?؟。])\s+(?=[\p{L}«])/u);
         for (const segment of segments) enqueue(segment);
       };
-      const result = await ports.repondre(texte, c.signal, sentence);
+      const result = await ports.repondre(texte, c.signal, ()=>{},id);
       if (!alive(epoch, c)) return;
-      if (count === 0) sentence(result.texte);
+      if (result.speechAllowed!==false)sentence(result.texte);
       pendingTurn = null; ports.tour({ id, texte, reponse: result.texte,
         ...(result.sources !== undefined ? { sources: result.sources } : {}),
         ...(result.patientId !== undefined ? { patientId: result.patientId } : {}),
         ...(result.persiste !== undefined ? { persiste: result.persiste } : {}),
+        speechAllowed:result.speechAllowed===true,
         ...(speechLimited ? { speechLimited: true } : {}),
       });
       stage = "tts"; await queue;

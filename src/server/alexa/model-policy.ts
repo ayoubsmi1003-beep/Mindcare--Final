@@ -1,26 +1,30 @@
 import { normaliserModeleGratuit, type ModeleGratuit } from "@/server/egress/modeles-gratuits";
 
 /**
- * Alexa single-model policy (décision humaine : Qwen 3.7 Flash payant, primary-only).
- *
- * Remplace la politique « all-openrouter :free » autorisée le 2 octobre
- * (pool multi-familles à prix nul, `max_price: {0,0}`, failover ×2).
- * Le tour ordinaire n'a plus qu'UN candidat, sans surcharge d'env, sans
- * qualification catalogue et sans bascule Gemini : `resolveModel()` renvoie
- * toujours `ALEXA_PRIMARY_MODEL`, `candidatsInference()` ne propose que lui.
- *
- * `isFreeAlexaModelId` / `normaliseAlexaModel` restent exportés pour les tests
- * du pool de maintenance, mais ne gardent plus le chemin nominal.
+ * Free-only policy requested on 2026-10-04. Catalogue prices, real synthetic
+ * qualification and the immutable zero-price transport ceiling all apply.
+ * Gemini is restricted to a confirmed unpaid project and synthetic deployment.
  */
-export const ALEXA_PRIMARY_MODEL = "qwen/qwen3.7-flash";
+/** Current delivery pins. All active Alexa transports import these values. */
+export const ALEXA_CONVERSATION_MODEL = "MiniCPM-V-4_7-1B-Q4_K_M.gguf";
+// Retained provider pin for dormant cloud qualification; conversation uses MiniCPM.
+export const ALEXA_DIRECT_MODEL = "gemini-3.5-flash";
+export const ALEXA_STT_MODEL = "gemini-3.5-transcribe";
+export const ALEXA_TTS_MODEL = "gemini-3.8-flash-tts";
+export const ALEXA_TTS_VOICE = "Kore";
+export const ALEXA_LIVE_MODEL = "gemini-3.8-live";
+
+// Legacy free-pool qualification policy; not Alexa's delivery transport.
+export const ALEXA_PRIMARY_MODEL = "qwen/qwen3.8-27b:free";
+export const ALEXA_GEMINI_FREE_MODEL = "gemini-3.5-flash-lite";
+// Smallest general text model listed in Groq's Free Plan limits (2026-10-04).
+export const ALEXA_GROQ_FREE_MODEL = "openai/gpt-oss-20b";
 export const ALEXA_PROVIDER_POLICY = Object.freeze({
   data_collection: "deny" as const, zdr: true, require_parameters: true,
-  // Tarif OpenRouter relevé le 2026-10-03 : 0,03 $ / 0,13 $ par M tokens
-  // (input / output). Marge : 0,05 / 0,20 — borne anti-dérapage, pas un blanc-seing.
-  max_price: Object.freeze({ prompt: 0.05, completion: 0.2 }),
+  max_price: Object.freeze({ prompt: 0, completion: 0 }), sort: "latency" as const,
 });
 
-/** Le seul modèle autorisé sur le chemin nominal : le primary payant. */
+/** Preference only; selection must still pass catalogue and qualification. */
 export function isAlexaPrimaryModelId(id: unknown): id is string {
   return id === ALEXA_PRIMARY_MODEL;
 }

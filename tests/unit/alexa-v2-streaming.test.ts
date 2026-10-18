@@ -1,6 +1,6 @@
 import { beforeEach, expect, it, vi } from "vitest";
-vi.mock("@/server/egress/external-call", () => ({ llm: vi.fn(), llmStream: vi.fn(), preparerPoolModelesGratuits: vi.fn() }));
-import { llm, llmStream } from "@/server/egress/external-call";
+vi.mock("@/server/alexa/local-model", () => ({ inferLocalText: vi.fn() }));
+import { inferLocalText } from "@/server/alexa/local-model";
 import { inferAlexa } from "@/server/alexa/model-gateway";
 import { createSafeClinicalPayload } from "@/server/alexa/privacy-boundary";
 import type { AlexaAnswer } from "@/server/alexa/response-validator";
@@ -8,97 +8,81 @@ import type { AlexaAnswer } from "@/server/alexa/response-validator";
 beforeEach(() => vi.clearAllMocks());
 function payload(count = 2) {
   const safe = createSafeClinicalPayload({ patientId: "11111111-1111-4111-8111-111111111111",
-    consultations: Array.from({ length: count }, (_, i) => ({ id: `local-${i}`, startedAt: "2026-01-01T00:00:00Z", notes: [] })),
+    consultations: Array.from({ length: count }, (_, i) => ({ id: "local-" + i, startedAt: "2026-01-01T00:00:00Z", notes: [] })),
     treatments: [], coverage: { requested: count, complete: true } }, "Compare les consultations", []);
   if (!safe.ok) throw new Error("fixture projection refused");
   return safe.payload;
 }
 const object = (ref: string, text = "recorded fact") => JSON.stringify({ text, evidence: [ref], kind: "fact" });
-function provider(chunks: string[], safe: ReturnType<typeof payload>, cancel = vi.fn()) {
-  vi.mocked(llm).mockResolvedValue({ ok: true, data: `{"sentences":[${object(safe.facts[0]!.evidence)}]}` });
-  vi.mocked(llmStream).mockResolvedValue({ ok: true, data: {
-    deltas: new ReadableStream<string>({ start(controller) { chunks.forEach(chunk => controller.enqueue(chunk)); controller.close(); }, cancel }),
-    usage: Promise.resolve({ tokensIn: null, tokensOut: null }),
-  } });
-}
+function provider(chunks: string[]) { vi.mocked(inferLocalText).mockResolvedValue(chunks.join("")); }
 
-it("publishes a trusted fact before EOF, never model prose, and suppresses duplicate references", async () => {
+it("buffers the complete local answer, publishes only trusted facts and suppresses duplicate references", async () => {
   const safe = payload(), accepted: AlexaAnswer["sentences"] = [];
-  let controller!: ReadableStreamDefaultController<string>;
-  vi.mocked(llm).mockResolvedValue({ ok: true, data: `{"sentences":[${object(safe.facts[0]!.evidence)}]}` });
-  vi.mocked(llmStream).mockResolvedValue({ ok: true, data: { deltas: new ReadableStream<string>({ start(value) { controller = value; } }), usage: Promise.resolve({ tokensIn: null, tokensOut: null }) } });
-  let finished = false;
-  const run = inferAlexa(safe, { onSentence: async sentence => { accepted.push(sentence); } }).then(result => { finished = true; return result; });
-  await vi.waitFor(() => expect(llmStream).toHaveBeenCalledOnce());
-  controller.enqueue(`{"sentences":[${object(safe.facts[0]!.evidence, "Model prose with escaped } \\\" delimiters")}`);
-  await vi.waitFor(() => expect(accepted).toHaveLength(1));
-  expect(finished).toBe(false);
-  expect(accepted[0]!.text).not.toContain("Model prose");
-  expect(accepted[0]!.text).not.toContain("e-");
-  controller.enqueue(`,${object(safe.facts[0]!.evidence)},${object(safe.facts[1]!.evidence)}]}`); controller.close();
+  let release!: (value: string) => void;
+  vi.mocked(inferLocalText).mockReturnValue(new Promise(resolve => { release = resolve; }));
+  const run = inferAlexa(safe, { onSentence: async sentence => { accepted.push(sentence); } });
+  await vi.waitFor(() => expect(inferLocalText).toHaveBeenCalledOnce());
+  expect(accepted).toHaveLength(0);
+  release('{"sentences":[' + object(safe.facts[0]!.evidence, "Model prose with escaped } delimiters")
+    + "," + object(safe.facts[0]!.evidence) + "," + object(safe.facts[1]!.evidence) + "]}");
   expect(await run).toMatchObject({ ok: true });
   expect(accepted).toHaveLength(2);
-  expect(llm).not.toHaveBeenCalled();
+  expect(accepted[0]!.text).not.toContain("Model prose");
+  expect(accepted[0]!.text).not.toContain("e-");
 });
-
-it("handles a complete sentence split at every character boundary", async () => {
+it("validates a complete response with spaced JSON fields", async () => {
   const safe = payload(1), accepted: AlexaAnswer["sentences"] = [];
-  provider([...` { "sentences" : [ ${object(safe.facts[0]!.evidence)} ] } `], safe);
+  provider([' { "sentences" : [ ' + object(safe.facts[0]!.evidence) + " ] } "]);
   expect(await inferAlexa(safe, { onSentence: async sentence => { accepted.push(sentence); } })).toMatchObject({ ok: true });
   expect(accepted).toHaveLength(1);
 });
-
-it.each(["", ",", "]} garbage", "] , \"extra\":true}"])("refuses a malformed or truncated tail after a committed fact: %s", async tail => {
+it.each(["", ",", "]} garbage", '] , "extra":true}'])("refuses an invalid tail after a trusted fact: %s", async tail => {
   const safe = payload(), accepted: AlexaAnswer["sentences"] = [];
-  provider([`{"sentences":[${object(safe.facts[0]!.evidence)}`, tail], safe);
-  expect(await inferAlexa(safe, { onSentence: async sentence => { accepted.push(sentence); } })).toMatchObject({ ok: false, code: "invalid-response", partial: true });
+  provider(['{"sentences":[' + object(safe.facts[0]!.evidence), tail]);
+  expect(await inferAlexa(safe, { onSentence: async sentence => { accepted.push(sentence); } }))
+    .toMatchObject({ ok: false, code: "invalid-response", partial: true });
   expect(accepted).toHaveLength(1);
-  expect(llmStream).toHaveBeenCalledOnce();
 });
-
 it.each([
   (ref: string) => object("e-unknownreference"),
   (ref: string) => object(ref, "Patient 11111111-1111-4111-8111-111111111111"),
   (ref: string) => JSON.stringify({ text: "fact", evidence: [ref], kind: "inference" }),
   (ref: string) => JSON.stringify({ text: "fact", evidence: [ref], kind: "fact", command: "change scope" }),
-])( "refuses an untrusted complete sentence before publication", async make => {
+])("refuses an untrusted sentence before publication", async make => {
   const safe = payload(), accepted: AlexaAnswer["sentences"] = [];
-  provider([`{"sentences":[${make(safe.facts[0]!.evidence)}]}`], safe);
-  expect(await inferAlexa(safe, { onSentence: async sentence => { accepted.push(sentence); } })).toMatchObject({ ok: false, code: "invalid-response" });
+  provider(['{"sentences":[' + make(safe.facts[0]!.evidence) + "]}"]);
+  expect(await inferAlexa(safe, { onSentence: async sentence => { accepted.push(sentence); } }))
+    .toMatchObject({ ok: false, code: "invalid-response" });
   expect(accepted).toHaveLength(0);
 });
-
-it("refuses a thirteenth distinct reference and an oversized remainder", async () => {
+it("refuses a thirteenth reference and an oversized remainder", async () => {
   for (const oversized of [false, true]) {
     const safe = payload(13), accepted: AlexaAnswer["sentences"] = [];
-    const chunks = [`{"sentences":[${object(safe.facts[0]!.evidence)}`,
-      ...(oversized ? [" ".repeat(40001)] : safe.facts.slice(1).map(fact => `,${object(fact.evidence)}`)), "]}"];
-    provider(chunks, safe);
-    expect(await inferAlexa(safe, { onSentence: async sentence => { accepted.push(sentence); } })).toMatchObject({ ok: false, code: "invalid-response", partial: true });
-    expect(accepted).toHaveLength(oversized ? 1 : 12);
+    provider(['{"sentences":[' + object(safe.facts[0]!.evidence),
+      ...(oversized ? [" ".repeat(40001)] : safe.facts.slice(1).map(fact => "," + object(fact.evidence))), "]}"]);
+    expect(await inferAlexa(safe, { onSentence: async sentence => { accepted.push(sentence); } }))
+      .toMatchObject({ ok: false, code: "invalid-response", ...(oversized ? {} : { partial: true }) });
+    expect(accepted).toHaveLength(oversized ? 0 : 12);
   }
 });
-
-it("cancels a pending read promptly and cancels the stream", async () => {
-  const safe = payload(), controller = new AbortController(), cancel = vi.fn();
-  vi.mocked(llmStream).mockResolvedValue({ ok: true, data: { deltas: new ReadableStream<string>({ cancel }), usage: new Promise(() => {}) } });
-  vi.mocked(llm).mockResolvedValue({ ok: true, data: `{"sentences":[${object(safe.facts[0]!.evidence)}]}` });
-  const run = inferAlexa(safe, { signal: controller.signal, onSentence: async () => {} });
-  await vi.waitFor(() => expect(llmStream).toHaveBeenCalledOnce());
+it("propagates cancellation to pending local inference without publication", async () => {
+  const safe = payload(), controller = new AbortController(), accepted: string[] = [];
+  vi.mocked(inferLocalText).mockImplementation((_messages, options) => new Promise((_resolve, reject) => {
+    options?.signal?.addEventListener("abort", () => reject(new Error("LocalModelCancelled")), { once: true });
+  }));
+  const run = inferAlexa(safe, { signal: controller.signal, onSentence: async sentence => { accepted.push(sentence.text); } });
+  await vi.waitFor(() => expect(inferLocalText).toHaveBeenCalledOnce());
   controller.abort();
   expect(await run).toMatchObject({ ok: false, code: "cancelled" });
-  expect(cancel).toHaveBeenCalledOnce();
+  expect(accepted).toHaveLength(0);
 });
-
-it("can cancel after EOF while provider usage is still pending", async () => {
+it("cancels during publication and reports the already published fact as partial", async () => {
   const safe = payload(1), controller = new AbortController();
-  vi.mocked(llmStream).mockResolvedValue({ ok: true, data: {
-    deltas: new ReadableStream<string>({ start(stream) { stream.enqueue(`{"sentences":[${object(safe.facts[0]!.evidence)}]}`); stream.close(); } }),
-    usage: new Promise(() => {}),
-  } });
-  let published = false;
-  const run = inferAlexa(safe, { signal: controller.signal, onSentence: async () => { published = true; } });
+  provider(['{"sentences":[' + object(safe.facts[0]!.evidence) + "]}"]);
+  let published = false, release!: () => void;
+  const barrier = new Promise<void>(resolve => { release = resolve; });
+  const run = inferAlexa(safe, { signal: controller.signal, onSentence: async () => { published = true; await barrier; } });
   await vi.waitFor(() => expect(published).toBe(true));
-  controller.abort();
+  controller.abort(); release();
   expect(await run).toMatchObject({ ok: false, code: "cancelled", partial: true });
 });

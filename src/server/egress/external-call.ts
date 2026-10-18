@@ -42,10 +42,11 @@ import { alexaLive } from "@/i18n/alexa-live";
 import { instructionAlexaLive } from "@/i18n/alexa-live-instruction";
 import type { EvenementGemini } from "@/shared/jarvis/live";
 import { OUTILS_LIVE } from "@/server/voice/live-tools";
-import { ALEXA_PRIMARY_MODEL, ALEXA_PROVIDER_POLICY, isAlexaPrimaryModelId, isFreeAlexaModelId, normaliseAlexaModel } from "@/server/alexa/model-policy";
+import { ALEXA_PRIMARY_MODEL, ALEXA_GEMINI_FREE_MODEL, ALEXA_GROQ_FREE_MODEL, ALEXA_PROVIDER_POLICY, isFreeAlexaModelId, normaliseAlexaModel } from "@/server/alexa/model-policy";
 import { AlexaQualificationError, type AlexaQualificationPhase } from "@/server/alexa/qualification-error";
 import { ALEXA_CLINICAL_TRANSFORM, createSafeClinicalPayload, safeClinicalMessages } from "@/server/alexa/privacy-boundary";
 import { validateAlexaResponse } from "@/server/alexa/response-validator";
+import { knowledgeAnswerJsonSchema, type LlmOutputContract } from "@/shared/alexa/knowledge-answer";
 
 export type BoundaryPurpose = "jarvis" | "voix-entree" | "voix-sortie" | "resume-cas" | "communication";
 
@@ -85,6 +86,7 @@ export interface LlmProvider {
     readonly signal?: AbortSignal;
     readonly json?: boolean;
     readonly jsonMode?: boolean;
+    readonly outputContract?: LlmOutputContract;
     readonly maxOutputTokens?: number;
   }): Promise<{ readonly text: string; readonly tokensIn: number; readonly tokensOut: number }>;
   stream(req: {
@@ -95,6 +97,7 @@ export interface LlmProvider {
     readonly signal?: AbortSignal;
     readonly json?: boolean;
     readonly jsonMode?: boolean;
+    readonly outputContract?: LlmOutputContract;
     readonly maxOutputTokens?: number;
     readonly idleTimeoutMs?: number;
     /** Absolute total deadline; meaningful deltas never extend it. */
@@ -210,15 +213,14 @@ const DEFAULT_MODEL = ALEXA_PRIMARY_MODEL;
  * nom de modèle.
  */
 /**
- * Alexa single-model (décision humaine 2026-10-03 : `qwen/qwen3.7-flash` payant,
- * primary-only). Les surcharges `JARVIS_CHAT_MODEL` / `JARVIS_RESUME_MODEL` /
- * `OPENROUTER_MODEL` / `LLM_MODEL` sont IGNORÉES sur le chemin nominal : un seul
- * candidat, une seule tentative. La maintenance explicite du pool `:free`
- * (`preparerPoolModelesGratuits`) reste disponible mais ne sert plus les tours
- * ordinaires.
+ * Free-only preference. Paid/auto environment overrides cannot authorize a
+ * provider. The catalogue and explicit qualification decide actual selection.
  */
-export function resolveModel(_purpose?: "jarvis" | "resume-cas"): string {
-  return DEFAULT_MODEL;
+export function resolveModel(purpose?: "jarvis" | "resume-cas"): string {
+  const config = env();
+  const preferred = (purpose === "resume-cas" ? config.JARVIS_RESUME_MODEL : config.JARVIS_CHAT_MODEL)
+    ?? config.OPENROUTER_MODEL ?? config.LLM_MODEL;
+  return isFreeAlexaModelId(preferred) ? preferred : DEFAULT_MODEL;
 }
 
 /**
@@ -279,13 +281,15 @@ const TARIFS_USD_PAR_MILLION: Readonly<Record<string, { readonly in: number; rea
 };
 
 function estimateCostUsd(model: string, tokensIn: number, tokensOut: number): number | null {
+  if (isFreeAlexaModelId(model) || model === ALEXA_GEMINI_FREE_MODEL || model === ALEXA_GROQ_FREE_MODEL) return 0;
   const tarif = TARIFS_USD_PAR_MILLION[model];
   if (tarif === undefined) return null;
   return (tokensIn / 1_000_000) * tarif.in + (tokensOut / 1_000_000) * tarif.out;
 }
 
 interface OpenRouterResponse {
-  readonly choices?: ReadonlyArray<{ readonly message?: { readonly content?: string } }>;
+  readonly choices?: ReadonlyArray<{ readonly finish_reason?: string | null;
+    readonly message?: { readonly content?: string | null; readonly refusal?: unknown } }>;
   readonly usage?: { readonly prompt_tokens?: number; readonly completion_tokens?: number };
 }
 
@@ -313,7 +317,9 @@ export const openRouterProvider: LlmProvider = {
       const body: unknown = await response.json().catch(() => null);
       if (!response.ok) throw classerErreurHttp(response.status, body, response.headers);
       if (!isOpenRouterResponse(body)) throw new ErreurModele("MALFORMED_RESPONSE", true);
-      const text = body.choices?.[0]?.message?.content;
+      const choice = body.choices?.[0];
+      if (choice?.finish_reason === "content_filter" || choice?.message?.refusal) throw new ErreurModele("POLICY_REJECTION", false, "request");
+      const text = choice?.message?.content;
       if (typeof text !== "string" || text.trim() === "") throw new ErreurModele("MALFORMED_RESPONSE", true);
       if (req.json) { try { JSON.parse(text); } catch { throw new ErreurModele("MALFORMED_RESPONSE", true); } }
       return { text, tokensIn: body.usage?.prompt_tokens ?? 0, tokensOut: body.usage?.completion_tokens ?? 0 };
@@ -371,11 +377,12 @@ export const openRouterProvider: LlmProvider = {
               if (typeof raw !== "object" || raw === null) throw new ErreurModele("MALFORMED_RESPONSE", true, "model", 0, "invalid-event");
               const event = raw as {
                 error?: { code?: number };
-                choices?: { delta?: { content?: unknown }; finish_reason?: string | null }[];
+                choices?: { delta?: { content?: unknown; refusal?: unknown }; finish_reason?: string | null }[];
                 usage?: { prompt_tokens?: number; completion_tokens?: number };
               };
               if (event.error) throw classerErreurHttp(event.error.code ?? 502, raw, response.headers);
               const choice = event.choices?.[0];
+              if (choice?.finish_reason === "content_filter" || choice?.delta?.refusal) throw new ErreurModele("POLICY_REJECTION", false, "request");
               if (choice?.finish_reason === "error") throw new ErreurModele("PROVIDER_UNAVAILABLE", true);
               if (choice?.finish_reason === "length") throw new ErreurModele("MALFORMED_RESPONSE", true, "model", 0, "truncated");
               if (choice?.finish_reason === "stop") finish = true;
@@ -429,11 +436,8 @@ interface RequeteTransport {
 async function envoyerChatOpenRouter(req: RequeteTransport, stream: boolean, signal: AbortSignal): Promise<Response> {
   const key = env().OPENROUTER_API_KEY;
   if (!key) throw new ErreurModele("CONFIGURATION", false, "account");
-  // Single-model : le tour ordinaire n'envoie que le primary (voir
-  // `resolveModel`). Les `:free` explicites restent admis pour la maintenance
-  // explicite du pool (`preparerPoolModelesGratuits`, hors tour) ; tout le
-  // reste (payants non-primary, routeurs dynamiques) est refusé avant transport.
-  if (!isAlexaPrimaryModelId(req.model) && !isFreeAlexaModelId(req.model)) throw new ErreurModele("CONFIGURATION", false, "request");
+  // Final cost guard, including direct transport callers and qualification.
+  if (!isFreeAlexaModelId(req.model)) throw new ErreurModele("CONFIGURATION", false, "request");
   return fetch("https://openrouter.ai/api/v1/chat/completions", {
     method: "POST", signal,
     headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json", "HTTP-Referer": "http://localhost", "X-Title": "MindCare" },
@@ -449,8 +453,295 @@ async function envoyerChatOpenRouter(req: RequeteTransport, stream: boolean, sig
   });
 }
 
-export function resolveLlmProvider(_model: string): LlmProvider {
-  return openRouterProvider;
+export function resolveLlmProvider(model: string): LlmProvider {
+  return model === ALEXA_GEMINI_FREE_MODEL ? geminiFreeProvider : model === ALEXA_GROQ_FREE_MODEL ? groqFreeProvider : openRouterProvider;
+}
+
+// Gemini's unpaid tier is a development alternative, never a real-patient provider.
+// The operator's free-tier assertion is key-bound and expires after 24 hours.
+const GEMINI_QUALIFICATION_VERSION = "alexa-gemini-free-v1";
+let geminiMaintenanceKey: string | null = null;
+let geminiCooldownUntil = 0;
+function geminiKey(): string | undefined { return env().GEMINI_API_KEY || env().GOOGLE_API_KEY; }
+function geminiQualificationFile(): string {
+  return env().GEMINI_FREE_QUALIFICATION_FILE ?? join(process.cwd(), ".cache", "alexa", "gemini-free-qualification.json");
+}
+async function confirmationGeminiValide(maintenance = false): Promise<boolean> {
+  const key = geminiKey(); if (!key || geminiCooldownUntil > Date.now()) return false;
+  const keyHash = createHash("sha256").update(key).digest("hex");
+  if (maintenance && geminiMaintenanceKey === keyHash) return true;
+  try {
+    const proof = JSON.parse(await readFile(geminiQualificationFile(), "utf8")) as Record<string, unknown>;
+    return proof.version === GEMINI_QUALIFICATION_VERSION && proof.model === ALEXA_GEMINI_FREE_MODEL
+      && proof.freeTierConfirmed === true && proof.keyHash === keyHash && typeof proof.at === "number"
+      && proof.at <= Date.now() && Date.now() - proof.at < 86_400_000;
+  } catch { return false; }
+}
+async function deploymentSynthetique(signal?: AbortSignal): Promise<boolean> {
+  try {
+    signal?.throwIfAborted();
+    return await withCaller(null, async q => {
+      signal?.throwIfAborted();
+      const rows = await q.query<{ cloud: boolean }>("SELECT app.is_cloud_dev() AS cloud");
+      signal?.throwIfAborted();
+      return rows[0]?.cloud === true;
+    });
+  }
+  catch { return false; }
+}
+const geminiFreeProvider: LlmProvider = {
+  name: "gemini-free",
+  async complete(req) {
+    if (req.signal?.aborted) throw normaliserErreurModele(req.signal.reason, annulationDemandee(req.signal));
+    if (req.model !== ALEXA_GEMINI_FREE_MODEL || !(await confirmationGeminiValide(true))) throw new ErreurModele("CONFIGURATION", false, "request");
+    if (!(await deploymentSynthetique(req.signal))) throw new ErreurModele("SECURITY_BLOCK", false, "request");
+    req.signal?.throwIfAborted();
+    const signal = req.signal ? AbortSignal.any([req.signal, AbortSignal.timeout(req.timeoutMs)]) : AbortSignal.timeout(req.timeoutMs);
+    try {
+      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${ALEXA_GEMINI_FREE_MODEL}:generateContent`, {
+        method: "POST", signal, headers: { "Content-Type": "application/json", "x-goog-api-key": geminiKey()! },
+        body: JSON.stringify({
+          systemInstruction: { parts: req.messages.filter(m => m.role === "system").map(m => ({ text: m.content })) },
+          contents: req.messages.filter(m => m.role !== "system").map(m => ({ role: m.role === "assistant" ? "model" : "user", parts: [{ text: m.content }] })),
+          generationConfig: { maxOutputTokens: req.maxOutputTokens ?? MAX_OUTPUT_TOKENS,
+            ...(req.json ? { responseMimeType: "application/json" } : {}),
+            ...(req.outputContract === "alexa-knowledge-v1" ? { responseJsonSchema: knowledgeAnswerJsonSchema } : {}) },
+        }),
+      });
+      const raw: unknown = await response.json().catch(() => null);
+      if (!response.ok) {
+        const error = classerErreurHttp(response.status, raw, response.headers);
+        if (response.status === 429) geminiCooldownUntil = Date.now() + Math.max(60_000, error.retryAfterMs);
+        throw error;
+      }
+      signal.throwIfAborted();
+      if (typeof raw !== "object" || raw === null) throw new ErreurModele("MALFORMED_RESPONSE", true);
+      const body = raw as { readonly promptFeedback?: { readonly blockReason?: unknown };
+        readonly candidates?: readonly { readonly finishReason?: string; readonly content?: { readonly parts?: readonly { readonly thought?: unknown; readonly text?: unknown }[] } }[];
+        readonly usageMetadata?: { readonly promptTokenCount?: number; readonly candidatesTokenCount?: number } };
+      const candidate = body?.candidates?.[0];
+      if (body.promptFeedback?.blockReason || (typeof candidate?.finishReason === "string" && ["SAFETY", "BLOCKLIST", "PROHIBITED_CONTENT", "SPII", "RECITATION", "IMAGE_SAFETY"].includes(candidate.finishReason)))
+        throw new ErreurModele("POLICY_REJECTION", false, "request");
+      const text = candidate?.content?.parts?.filter((part): part is { readonly text: string } => !part.thought && typeof part.text === "string")
+        .map(part => part.text).join("");
+      if (candidate?.finishReason !== "STOP" || typeof text !== "string" || !text.trim() || text.length > 40_000) throw new ErreurModele("MALFORMED_RESPONSE", true);
+      if (req.json) { try { JSON.parse(text); } catch { throw new ErreurModele("MALFORMED_RESPONSE", true); } }
+      return { text, tokensIn: body?.usageMetadata?.promptTokenCount ?? 0, tokensOut: body?.usageMetadata?.candidatesTokenCount ?? 0 };
+    } catch (cause) { throw normaliserErreurModele(cause, annulationDemandee(req.signal)); }
+  },
+  async stream(req) {
+    // Buffered fallback: the complete validated transport finishes before any delta is exposed.
+    const result = await this.complete(req);
+    return { deltas: new ReadableStream<string>({ start(c) { c.enqueue(result.text); c.close(); } }),
+      usage: Promise.resolve({ tokensIn: result.tokensIn, tokensOut: result.tokensOut }) };
+  },
+};
+
+/**
+ * Delivery direct call (Electron): fixed Gemini model, server key, no pool,
+ * no qualification file, no synthetic-deployment gate, no fallback. The ONLY
+ * fetch-based Gemini transport Alexa may use — the lint egress rule keeps it
+ * in this file. Callers validate content and map every failure to a safe
+ * local envelope; text always remains usable.
+ */
+export interface PartieGeminiDirecte { readonly text?: string; readonly thought?: boolean;
+  readonly audio?: { readonly mimeType?: string; readonly data?: string } }
+export interface ResultatGeminiDirect { readonly blocked: boolean; readonly finishReason?: string; readonly parts: readonly PartieGeminiDirecte[] }
+export async function appelGeminiDirect(options: {
+  readonly model: string; readonly system?: string;
+  readonly parts: readonly ({ readonly kind: "text"; readonly text: string } | { readonly kind: "audio"; readonly mimeType: string; readonly data: string })[];
+  readonly json?: boolean; readonly maxOutputTokens?: number; readonly thinkingLevel?: "minimal"; readonly audioVoice?: string;
+  readonly timeoutMs?: number; readonly signal?: AbortSignal;
+}): Promise<ResultatGeminiDirect> {
+  const key = env().GEMINI_API_KEY || env().GOOGLE_API_KEY;
+  if (!key || !key.trim()) throw new ErreurModele("CONFIGURATION", false, "account");
+  const timeout = AbortSignal.timeout(Math.max(1, Math.min(90_000, options.timeoutMs ?? 15000)));
+  const signal = options.signal ? AbortSignal.any([options.signal, timeout]) : timeout;
+  options.signal?.throwIfAborted();
+  try {
+    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${options.model}:generateContent`, {
+      method: "POST", signal, headers: { "Content-Type": "application/json", "x-goog-api-key": key },
+      body: JSON.stringify({
+        ...(options.system ? { systemInstruction: { parts: [{ text: options.system }] } } : {}),
+        contents: [{ parts: options.parts.map(part => part.kind === "text"
+          ? { text: part.text } : { inlineData: { mimeType: part.mimeType, data: part.data } }) }],
+        generationConfig: { maxOutputTokens: options.maxOutputTokens ?? 1024,
+          ...(options.thinkingLevel ? { thinkingConfig: { thinkingLevel: options.thinkingLevel } } : {}),
+          ...(options.json ? { responseMimeType: "application/json" } : {}),
+          ...(options.audioVoice ? { responseModalities: ["AUDIO"],
+            speech_config: { voice_config: { prebuilt_voice_config: { voice_name: options.audioVoice } } } } : {}) },
+      }),
+    });
+    const raw: unknown = await response.json().catch(() => null);
+    if (!response.ok) throw classerErreurHttp(response.status, raw, response.headers);
+    const body = raw as { readonly promptFeedback?: { readonly blockReason?: unknown };
+      readonly candidates?: readonly { readonly finishReason?: string;
+        readonly content?: { readonly parts?: readonly { readonly thought?: unknown; readonly text?: unknown;
+          readonly inlineData?: { readonly mimeType?: string; readonly data?: string } }[] } }[] };
+    if (body?.promptFeedback?.blockReason) return { blocked: true, parts: [] };
+    const parts = (body?.candidates?.[0]?.content?.parts ?? []).map(part => ({
+      ...(typeof part.text === "string" ? { text: part.text } : {}),
+      ...(part.thought ? { thought: true as const } : {}),
+      ...(part.inlineData?.data ? { audio: { ...(part.inlineData.mimeType ? { mimeType: part.inlineData.mimeType } : {}), data: part.inlineData.data } } : {}),
+    }));
+    return { blocked: false, parts, ...(body?.candidates?.[0]?.finishReason ? { finishReason: body.candidates[0].finishReason } : {}) };
+  } catch (cause) { throw normaliserErreurModele(cause, annulationDemandee(options.signal)); }
+}
+
+/** Dedicated Gemini audio models use Interactions, not generateContent. */
+/** Pre-transport ADR-024 admission, rechecked on every Gemini audio request. */
+export async function admitGeminiVoice(signal?:AbortSignal):Promise<void>{
+ signal?.throwIfAborted();
+ if(await garderVoix(true)!==null)throw new Error("AlexaVoiceAdmission");
+ signal?.throwIfAborted();
+}
+export async function appelGeminiInteraction(options: {
+  readonly model: "gemini-3.5-transcribe" | "gemini-3.8-flash-tts";
+  readonly audio?: string; readonly text?: string; readonly voice?: string;
+  readonly language?: "fr" | "ar" | "auto"; readonly signal?: AbortSignal;
+}): Promise<{ readonly text: string; readonly audio: { readonly data: string; readonly mimeType: string } | null }> {
+  await admitGeminiVoice(options.signal);
+  const started=Date.now(),sessionToken=crypto.randomUUID();
+  let outcome:"ok"|"error"="error";
+  const key = env().GEMINI_API_KEY || env().GOOGLE_API_KEY;
+  if (!key?.trim()) throw new Error("AlexaVoiceKey");
+  const signal = options.signal ? AbortSignal.any([options.signal, AbortSignal.timeout(90_000)]) : AbortSignal.timeout(90_000);
+  options.signal?.throwIfAborted();
+  const transcription = options.model === "gemini-3.5-transcribe";
+  try {
+  const response = await fetch("https://generativelanguage.googleapis.com/v1beta/interactions", {
+    method: "POST", signal, headers: { "Content-Type": "application/json", "x-goog-api-key": key },
+    body: JSON.stringify({ model: options.model, store: false,
+      input: transcription ? [{ type: "audio", mime_type: "audio/wav", data: options.audio }]
+        : [{ type: "user_input", content: [{ type: "text", text: options.text }] }],
+      ...(transcription ? { generation_config: { transcription_config: {
+        mode: { type: "verbatim" }, language_codes: options.language === "fr" ? ["fr-FR"] : options.language === "ar" ? ["ar-EG"] : [],
+      } } } : { response_format: { type: "audio" }, generation_config: { speech_config: [{ voice: options.voice ?? "Kore" }] } }),
+    }),
+  });
+  const raw: unknown = await response.json().catch(() => null);
+  if (!response.ok) throw new Error(`AlexaVoiceHTTP${response.status}`);
+  const body = raw as { readonly status?: string; readonly steps?: readonly { readonly type?: string;
+    readonly content?: readonly { readonly type?: string; readonly text?: string; readonly data?: string; readonly mime_type?: string }[] }[] } | null;
+  if (body?.status !== "completed") throw new Error("AlexaVoiceIncomplete");
+  const parts = body.steps?.filter(step => step.type === "model_output").flatMap(step => step.content ?? []) ?? [];
+  const text = parts.filter(part => part.type === "text" && typeof part.text === "string").map(part => part.text).join("");
+  const audio = parts.filter(part => part.type === "audio" && typeof part.data === "string").at(-1);
+  outcome="ok";
+  return { text, audio: audio?.data ? { data: audio.data, mimeType: audio.mime_type ?? "audio/wav" } : null };
+  } finally {await journaliser({purpose:transcription?"voix-entree":"voix-sortie",provider:"gemini",model:options.model,promptVersion:"alexa-gemini-voice-v1",promptHash:createHash("sha256").update(options.model).digest("hex"),sessionToken,charsOut:transcription?(options.audio?.length??0):(options.text?.length??0),tokensIn:null,tokensOut:null,estimatedCostUsd:null,outcome,latencyMs:Date.now()-started});}
+}
+
+export async function preparerGeminiGratuit(opts: { readonly freeTierConfirmed?: boolean; readonly timeoutMs?: number; readonly signal?: AbortSignal } = {}) {
+  if (opts.signal?.aborted) throw new ErreurModele("CANCELLED", false, "request");
+  const key = geminiKey();
+  if (!key || opts.freeTierConfirmed !== true) throw new ErreurModele("CONFIGURATION", false, "request");
+  const keyHash = createHash("sha256").update(key).digest("hex");
+  geminiMaintenanceKey = keyHash;
+  const depart = Date.now();
+  try {
+    const messages: LlmMessage[] = [{ role: "system", content: 'Classe les trois actes de parole : HELLO pour une salutation, THANKS pour un remerciement. Réponds uniquement en JSON : {"intents":[trois étiquettes dans l’ordre]}.' },
+      { role: "user", content: "bonjour\nيعطيك الصحة\nmerci بزاف" }];
+    if (classerCharge(messages, null).decision === "BLOQUER") throw new ErreurModele("SECURITY_BLOCK", false, "request");
+    const result = await geminiFreeProvider.complete({ model: ALEXA_GEMINI_FREE_MODEL, messages, json: true, maxOutputTokens: 512,
+      timeoutMs: Math.max(1, Math.min(10000, opts.timeoutMs ?? 10000)), ...(opts.signal ? { signal: opts.signal } : {}) });
+    const answer = JSON.parse(result.text) as { readonly intents?: unknown } | null;
+    if (JSON.stringify(answer?.intents) !== JSON.stringify(["HELLO", "THANKS", "THANKS"])) throw new ErreurModele("MALFORMED_RESPONSE", true);
+    const path = geminiQualificationFile(); await mkdir(dirname(path), { recursive: true });
+    const temp = `${path}.${crypto.randomUUID()}.tmp`;
+    await writeFile(temp, JSON.stringify({ version: GEMINI_QUALIFICATION_VERSION, at: Date.now(), model: ALEXA_GEMINI_FREE_MODEL, keyHash, freeTierConfirmed: true }), { mode: 0o600 });
+    await rename(temp, path);
+    await journaliser({ purpose: "jarvis", provider: "gemini-free", model: ALEXA_GEMINI_FREE_MODEL, promptVersion: GEMINI_QUALIFICATION_VERSION,
+      promptHash: "synthetic-multilingual-probe-v1", sessionToken: crypto.randomUUID(), charsOut: result.text.length, tokensIn: result.tokensIn,
+      tokensOut: result.tokensOut, estimatedCostUsd: 0, outcome: "ok", latencyMs: Date.now() - depart });
+    return { model: ALEXA_GEMINI_FREE_MODEL, qualified: true, latencyMs: Date.now() - depart, syntheticOnly: true };
+  } finally { geminiMaintenanceKey = null; }
+}
+
+const GROQ_QUALIFICATION_VERSION = "alexa-groq-free-v1";
+let groqMaintenanceKey: string | null = null;
+let groqCooldownUntil = 0;
+function groqQualificationFile(): string {
+  return env().GROQ_FREE_QUALIFICATION_FILE ?? join(process.cwd(), ".cache", "alexa", "groq-free-qualification.json");
+}
+async function confirmationGroqValide(maintenance = false): Promise<boolean> {
+  const key = env().GROQ_API_KEY; if (!key || groqCooldownUntil > Date.now()) return false;
+  const keyHash = createHash("sha256").update(key).digest("hex");
+  if (maintenance && groqMaintenanceKey === keyHash) return true;
+  try {
+    const proof = JSON.parse(await readFile(groqQualificationFile(), "utf8")) as Record<string, unknown>;
+    return proof.version === GROQ_QUALIFICATION_VERSION && proof.model === ALEXA_GROQ_FREE_MODEL
+      && proof.freeTierConfirmed === true && proof.keyHash === keyHash && typeof proof.at === "number"
+      && proof.at <= Date.now() && Date.now() - proof.at < 86_400_000;
+  } catch { return false; }
+}
+const groqFreeProvider: LlmProvider = {
+  name: "groq-free",
+  async complete(req) {
+    if (req.signal?.aborted) throw normaliserErreurModele(req.signal.reason, annulationDemandee(req.signal));
+    if (req.model !== ALEXA_GROQ_FREE_MODEL || !(await confirmationGroqValide(true))) throw new ErreurModele("CONFIGURATION", false, "request");
+    if (!(await deploymentSynthetique(req.signal))) throw new ErreurModele("SECURITY_BLOCK", false, "request");
+    req.signal?.throwIfAborted();
+    const signal = req.signal ? AbortSignal.any([req.signal, AbortSignal.timeout(req.timeoutMs)]) : AbortSignal.timeout(req.timeoutMs);
+    try {
+      const response = await fetch("https://api.groq.com/openai/v1/chat/completions", { method: "POST", signal,
+        headers: { Authorization: `Bearer ${env().GROQ_API_KEY}`, "Content-Type": "application/json" },
+        body: JSON.stringify({ model: ALEXA_GROQ_FREE_MODEL, messages: req.messages,
+          max_completion_tokens: req.maxOutputTokens ?? MAX_OUTPUT_TOKENS, reasoning_effort: "low", reasoning_format: "hidden", temperature: 0,
+          ...(req.outputContract === "alexa-knowledge-v1"
+            ? { response_format: { type: "json_schema", json_schema: { name: "alexa_knowledge", strict: true, schema: knowledgeAnswerJsonSchema } } }
+            : req.json ? { response_format: { type: "json_object" } } : {}) }),
+      });
+      const body: unknown = await response.json().catch(() => null);
+      if (!response.ok) {
+        const error = classerErreurHttp(response.status, body, response.headers);
+        if (response.status === 429) groqCooldownUntil = Date.now() + Math.max(60_000, error.retryAfterMs);
+        // Closed diagnostics only: neither the provider message nor failed_generation is logged.
+        const providerError = body as { error?: { code?: unknown; message?: unknown } } | null;
+        console.warn("[groq-free] request-failed", response.status, error.code,
+          providerError?.error?.code === "json_validate_failed" ? "json-validation"
+            : typeof providerError?.error?.message === "string" && /reasoning_format/.test(providerError.error.message) ? "reasoning-parameter" : "other");
+        throw error;
+      }
+      signal.throwIfAborted();
+      if (!isOpenRouterResponse(body)) throw new ErreurModele("MALFORMED_RESPONSE", true);
+      const choice = body?.choices?.[0]; const text = choice?.message?.content;
+      if (choice?.finish_reason === "content_filter" || choice?.message?.refusal)
+        throw new ErreurModele("POLICY_REJECTION", false, "request");
+      if (choice?.finish_reason !== "stop" || typeof text !== "string" || !text.trim() || text.length > 40_000) throw new ErreurModele("MALFORMED_RESPONSE", true);
+      if (req.json) { try { JSON.parse(text); } catch { throw new ErreurModele("MALFORMED_RESPONSE", true); } }
+      return { text, tokensIn: body?.usage?.prompt_tokens ?? 0, tokensOut: body?.usage?.completion_tokens ?? 0 };
+    } catch (cause) { throw normaliserErreurModele(cause, annulationDemandee(req.signal)); }
+  },
+  async stream(req) {
+    const result = await this.complete(req);
+    return { deltas: new ReadableStream<string>({ start(c) { c.enqueue(result.text); c.close(); } }),
+      usage: Promise.resolve({ tokensIn: result.tokensIn, tokensOut: result.tokensOut }) };
+  },
+};
+export async function preparerGroqGratuit(opts: { readonly freeTierConfirmed?: boolean; readonly timeoutMs?: number; readonly signal?: AbortSignal } = {}) {
+  if (opts.signal?.aborted) throw new ErreurModele("CANCELLED", false, "request");
+  const key = env().GROQ_API_KEY;
+  if (!key || opts.freeTierConfirmed !== true) throw new ErreurModele("CONFIGURATION", false, "request");
+  const keyHash = createHash("sha256").update(key).digest("hex");
+  groqMaintenanceKey = keyHash; const depart = Date.now();
+  try {
+    const messages: LlmMessage[] = [{ role: "system", content: 'Classe les trois actes de parole : HELLO pour une salutation, THANKS pour un remerciement. Réponds uniquement en JSON : {"intents":[trois étiquettes dans l’ordre]}.' },
+      { role: "user", content: "bonjour\nيعطيك الصحة\nmerci بزاف" }];
+    if (classerCharge(messages, null).decision === "BLOQUER") throw new ErreurModele("SECURITY_BLOCK", false, "request");
+    const result = await groqFreeProvider.complete({ model: ALEXA_GROQ_FREE_MODEL, messages, json: true, maxOutputTokens: 512,
+      timeoutMs: Math.max(1, Math.min(10000, opts.timeoutMs ?? 10000)), ...(opts.signal ? { signal: opts.signal } : {}) });
+    const answer = JSON.parse(result.text) as { readonly intents?: unknown } | null;
+    if (JSON.stringify(answer?.intents) !== JSON.stringify(["HELLO", "THANKS", "THANKS"])) throw new ErreurModele("MALFORMED_RESPONSE", true);
+    const path = groqQualificationFile(); await mkdir(dirname(path), { recursive: true });
+    const temp = `${path}.${crypto.randomUUID()}.tmp`;
+    await writeFile(temp, JSON.stringify({ version: GROQ_QUALIFICATION_VERSION, at: Date.now(), model: ALEXA_GROQ_FREE_MODEL, keyHash, freeTierConfirmed: true }), { mode: 0o600 });
+    await rename(temp, path);
+    await journaliser({ purpose: "jarvis", provider: "groq-free", model: ALEXA_GROQ_FREE_MODEL, promptVersion: GROQ_QUALIFICATION_VERSION,
+      promptHash: "synthetic-multilingual-probe-v1", sessionToken: crypto.randomUUID(), charsOut: result.text.length,
+      tokensIn: result.tokensIn, tokensOut: result.tokensOut, estimatedCostUsd: 0, outcome: "ok", latencyMs: Date.now() - depart });
+    return { model: ALEXA_GROQ_FREE_MODEL, qualified: true, latencyMs: Date.now() - depart, syntheticOnly: true };
+  } finally { groqMaintenanceKey = null; }
 }
 
 function estTransitoire(cause: unknown): boolean {
@@ -488,6 +779,10 @@ export interface LlmRequest {
   readonly timeoutMs?: number;
   /** Server composition reserves the remaining attempts across providers. */
   readonly maxAttempts?: 1 | 2;
+  readonly maxOutputTokens?: number;
+  readonly preferSmallFreeModel?: boolean;
+  /** Server-owned closed contract; never an arbitrary client-provided schema. */
+  readonly outputContract?: LlmOutputContract;
   /**
    * M05 — recu de transformation approuvee (C3). Absent par defaut : sans
    * recu, un agregat reste bloque. Le recu n'autorise jamais un C1/C2 : les
@@ -608,6 +903,9 @@ async function chargerQualifications(): Promise<void> {
   } catch { /* A missing/stale local qualification never authorizes a model. */ }
 }
 async function sauverQualifications(): Promise<void> {
+  // A failed cold catalogue lookup owns no pool state and must not erase
+  // usable qualification from a previous process.
+  if (catalogueDate === 0) return;
   const path = fichierQualifications();
   const models = poolOpenRouter.instantane().map((m) => ({ id: m.modelId, qualification: m.qualification,
     health: { failureCount: m.failureCount, cooldownUntil: m.cooldownUntil, latencyMs: m.latencyMs, lastFailureCode: m.lastFailureCode } }));
@@ -621,6 +919,7 @@ async function sauverQualifications(): Promise<void> {
 
 async function rafraichirCatalogue(signal?: AbortSignal, timeoutMs = 3000): Promise<void> {
   if (signal?.aborted) throw new ErreurModele("CANCELLED", false, "request");
+  if (catalogueDate > 0 && Date.now() - catalogueDate < CATALOGUE_VALIDITY_MS) return;
   if (catalogueEnCours !== null) return catalogueEnCours;
   catalogueEnCours = (async () => {
     const response = await fetch("https://openrouter.ai/api/v1/models", {
@@ -651,7 +950,9 @@ async function qualifierCandidats(timeoutMs: number, maxModels = 3, signal?: Abo
   qualificationEnCours = (async () => {
     const echeance = Date.now() + timeoutMs;
     const besoin: BesoinModele = { json: true, streaming: true, outils: false, tokens: allModels ? 1000 : 8000, tache: "intentions" };
-    const candidats = [...poolOpenRouter.aQualifier(besoin)].sort((a, b) => a.failureCount - b.failureCount || Number(b.structuredOutput) - Number(a.structuredOutput));
+    const preferred = resolveModel("jarvis");
+    const candidats = [...poolOpenRouter.aQualifier(besoin)].sort((a, b) => a.failureCount - b.failureCount
+      || (a.modelId === preferred ? -1 : b.modelId === preferred ? 1 : 0) || Number(b.structuredOutput) - Number(a.structuredOutput));
     let qualifies = poolOpenRouter.candidats(besoin).length;
     for (const m of candidats.slice(0, allModels ? candidats.length : 6)) {
       if ((!allModels && qualifies >= maxModels) || signal?.aborted || Date.now() >= echeance || poolOpenRouter.statutCompte().code !== null) break;
@@ -775,13 +1076,67 @@ export async function preparerPoolModelesGratuits(opts: { readonly timeoutMs?: n
   }
 }
 
-async function candidatsInference(req: LlmRequest, _streaming: boolean, provider: LlmProvider | undefined): Promise<readonly string[]> {
+function besoinInference(req: LlmRequest, streaming: boolean): BesoinModele {
+  return { tache: req.besoin?.tache ?? (req.purpose === "resume-cas" ? "resume" : "conversation"), json: req.besoin?.json ?? false,
+    streaming, outils: req.besoin?.outils ?? false,
+    tokens: req.besoin?.tokens ?? Math.ceil(req.messages.reduce((n, m) => n + m.content.length, 0) / 2) + (streaming ? MAX_OUTPUT_TOKENS_FLUX : MAX_OUTPUT_TOKENS) };
+}
+async function candidatsInference(req: LlmRequest, streaming: boolean, provider: LlmProvider | undefined): Promise<readonly string[]> {
+  req.signal?.throwIfAborted();
   if (provider !== undefined) return [resolveModel(req.purpose)]; // Existing synthetic provider seam: no external network.
+  const [preuveGemini, preuveGroq] = await Promise.all([confirmationGeminiValide(), confirmationGroqValide()]);
+  req.signal?.throwIfAborted();
+  const synthetique = (preuveGemini || preuveGroq) && await deploymentSynthetique(req.signal);
+  req.signal?.throwIfAborted();
+  const gemini = preuveGemini && synthetique; const groq = preuveGroq && synthetique;
+  const alternatives = [...(groq ? [ALEXA_GROQ_FREE_MODEL] : []), ...(gemini ? [ALEXA_GEMINI_FREE_MODEL] : [])];
+  // Two already-qualified small providers need no unrelated catalogue round trip.
+  if (req.preferSmallFreeModel && alternatives.length === 2) return alternatives;
+  let modeles: string[] = [];
+  if (env().OPENROUTER_API_KEY) {
+    try {
+      await rafraichirCatalogue(req.signal, Math.min(3000, req.timeoutMs ?? 3000));
+      // Qualification is explicit maintenance, never an unbounded cold-turn delay.
+      modeles = poolOpenRouter.candidats(besoinInference(req, streaming), resolveModel(req.purpose)).map(m => m.modelId);
+    } catch (cause) {
+      const error = normaliserErreurModele(cause, annulationDemandee(req.signal));
+      if ((!gemini && !groq) || !error.recoverable || error.scope !== "model") throw error;
+    }
+  }
+  if (alternatives.length) return (req.preferSmallFreeModel ? [...alternatives, ...modeles] : [...modeles.slice(0, 1), ...alternatives, ...modeles.slice(1)]).slice(0, 2);
+  const compte = poolOpenRouter.statutCompte();
+  if (compte.code !== null) throw new ErreurModele(compte.code, false, "account", compte.until - Date.now());
   if (!env().OPENROUTER_API_KEY) throw new ErreurModele("CONFIGURATION", false, "account");
-  // Single-model : le primary payant est servi directement via la clé
-  // OpenRouter, sans découverte catalogue, sans qualification et sans pool.
-  // La maintenance `preparerPoolModelesGratuits` reste explicite et hors tour.
-  return [resolveModel(req.purpose)];
+  return modeles.slice(0, 2);
+}
+
+function jsonMode(model: string, req: LlmRequest, provider?: LlmProvider): boolean {
+  return (req.besoin?.json ?? false) && (provider !== undefined || model === ALEXA_GEMINI_FREE_MODEL || model === ALEXA_GROQ_FREE_MODEL
+    || poolOpenRouter.instantane().find(m => m.modelId === model)?.structuredOutput === true);
+}
+function noterEchec(model: string, error: ErreurModele): void {
+  if (isFreeAlexaModelId(model)) poolOpenRouter.echouer(model, error);
+  else if (error.recoverable && error.scope === "model") {
+    const until = Date.now() + Math.max(60_000, error.retryAfterMs);
+    if (model === ALEXA_GEMINI_FREE_MODEL) geminiCooldownUntil = until;
+    if (model === ALEXA_GROQ_FREE_MODEL) groqCooldownUntil = until;
+  }
+}
+function reserverModele(model: string): boolean { return model === ALEXA_GEMINI_FREE_MODEL || model === ALEXA_GROQ_FREE_MODEL || poolOpenRouter.reserver(model); }
+
+/** Includes file/SQL/catalogue preflight in the same request deadline. */
+async function avecBudget<T>(timeoutMs: number, signal: AbortSignal | undefined, operation: (bounded: AbortSignal) => Promise<T>): Promise<T> {
+  if (signal?.aborted) throw normaliserErreurModele(signal.reason, annulationDemandee(signal));
+  if (timeoutMs <= 0) throw new ErreurModele("MODEL_TIMEOUT", true);
+  const timeout = AbortSignal.timeout(Math.max(1, Math.floor(Math.min(60_000, timeoutMs))));
+  const bounded = signal ? AbortSignal.any([signal, timeout]) : timeout;
+  let abort!: () => void;
+  const stopped = new Promise<never>((_, reject) => {
+    abort = () => reject(normaliserErreurModele(bounded.reason, annulationDemandee(bounded)));
+    bounded.addEventListener("abort", abort, { once: true });
+  });
+  try { return await Promise.race([operation(bounded), stopped]); }
+  finally { bounded.removeEventListener("abort", abort); }
 }
 
 function resultatErreur<T>(cause: unknown, signal?: AbortSignal): LlmResult<T> {
@@ -807,20 +1162,25 @@ export async function llm(req: LlmRequest, provider?: LlmProvider): Promise<LlmR
   if (!(await autoriserInference(req))) return llmErr("frontiere", MESSAGE_REFUS_FRONTIERE);
   const budget = req.timeoutMs ?? env().OPENROUTER_MODEL_TIMEOUT_MS ?? TIMEOUT_MS_DEFAUT;
   try {
-    const modeles = await candidatsInference(req, false, provider);
+    const modeles = await avecBudget(budget - (Date.now() - depart), req.signal,
+      signal => candidatsInference({ ...req, signal }, false, provider));
     const resultat = await conduireInference(modeles, async (model, timeoutMs, signal) => {
-      // Single-model : le primary supporte `response_format` (qualifié le
-      // 2026-10-03 via OpenRouter `supported_parameters`) — pas de lookup pool.
-      return (provider ?? openRouterProvider).complete({ messages: req.messages, model, timeoutMs,
+      return (provider ?? resolveLlmProvider(model)).complete({ messages: req.messages, model, timeoutMs,
         signal: req.signal ? AbortSignal.any([signal, req.signal]) : signal,
-        json: req.besoin?.json ?? false, jsonMode: req.besoin?.json ?? false });
-    }, { timeoutMs: Math.max(0, budget - (Date.now() - depart)), maxAttempts: 1, ...(req.signal ? { signal: req.signal } : {}),
-      surTentative: (t) => t.code === "OK" ? undefined : journaliser({ purpose: req.purpose, provider: (provider ?? openRouterProvider).name,
+        json: req.besoin?.json ?? false, jsonMode: jsonMode(model, req, provider),
+        ...(req.outputContract ? { outputContract: req.outputContract } : {}),
+        ...(req.maxOutputTokens ? { maxOutputTokens: Math.max(1, Math.min(MAX_OUTPUT_TOKENS, req.maxOutputTokens)) } : {}) });
+    }, { timeoutMs: Math.max(0, budget - (Date.now() - depart)), maxAttempts: req.maxAttempts ?? 2, firstAttemptTimeoutMs: 4000,
+      ...(provider === undefined ? { reserver: reserverModele, surEchec: noterEchec } : {}),
+      basculerApresQuota: (model, suivant) => resolveLlmProvider(model).name !== resolveLlmProvider(suivant).name,
+      ...(req.signal ? { signal: req.signal } : {}),
+      // Boundary metadata is best-effort; SQL latency must not consume the backup deadline.
+      surTentative: (t) => { if (t.code !== "OK") void journaliser({ purpose: req.purpose, provider: (provider ?? resolveLlmProvider(t.model)).name,
         model: t.model, promptVersion: req.promptVersion, promptHash: req.promptHash, sessionToken: req.sessionToken,
-        charsOut: null, tokensIn: null, tokensOut: null, estimatedCostUsd: null, outcome: t.code === "MODEL_TIMEOUT" ? "timeout" : "error", latencyMs: t.ms }),
+        charsOut: null, tokensIn: null, tokensOut: null, estimatedCostUsd: null, outcome: t.code === "MODEL_TIMEOUT" ? "timeout" : "error", latencyMs: t.ms }); },
     });
-    if (provider === undefined) await sauverQualifications();
-    await journaliser({ purpose: req.purpose, provider: (provider ?? openRouterProvider).name, model: resultat.model,
+    if (provider === undefined) { poolOpenRouter.reussir(resultat.model, Date.now() - depart); await sauverQualifications(); }
+    void journaliser({ purpose: req.purpose, provider: (provider ?? resolveLlmProvider(resultat.model)).name, model: resultat.model,
       promptVersion: req.promptVersion, promptHash: req.promptHash, sessionToken: req.sessionToken,
       charsOut: resultat.data.text.length, tokensIn: resultat.data.tokensIn, tokensOut: resultat.data.tokensOut,
       estimatedCostUsd: estimateCostUsd(resultat.model, resultat.data.tokensIn, resultat.data.tokensOut),
@@ -834,30 +1194,36 @@ export async function llmStream(req: LlmRequest, provider?: LlmProvider): Promis
   if (!(await autoriserInference(req))) return llmErr("frontiere", MESSAGE_REFUS_FRONTIERE);
   const budget = req.timeoutMs ?? env().OPENROUTER_MODEL_TIMEOUT_MS ?? TIMEOUT_MS_DEFAUT;
   try {
-    const modeles = await candidatsInference(req, true, provider);
-    const resultat = await conduireInference(modeles, (model, timeoutMs, signal) => (provider ?? openRouterProvider).stream({
+    const modeles = await avecBudget(budget - (Date.now() - depart), req.signal,
+      signal => candidatsInference({ ...req, signal }, true, provider));
+    const resultat = await conduireInference(modeles, (model, timeoutMs, signal) => (provider ?? resolveLlmProvider(model)).stream({
       messages: req.messages, model, timeoutMs, idleTimeoutMs: budget,
       deadlineMs: depart + budget, json: req.besoin?.json ?? false,
-      jsonMode: req.besoin?.json ?? false,
+      jsonMode: jsonMode(model, req, provider),
+      ...(req.outputContract ? { outputContract: req.outputContract } : {}),
+      ...(req.maxOutputTokens ? { maxOutputTokens: Math.max(1, Math.min(MAX_OUTPUT_TOKENS_FLUX, req.maxOutputTokens)) } : {}),
       signal: req.signal ? AbortSignal.any([signal, req.signal]) : signal,
-    }), { timeoutMs: Math.max(0, budget - (Date.now() - depart)), maxAttempts: 1, ...(req.signal ? { signal: req.signal } : {}),
-      surTentative: (t) => t.code === "OK" ? undefined : journaliser({ purpose: req.purpose, provider: (provider ?? openRouterProvider).name,
+    }), { timeoutMs: Math.max(0, budget - (Date.now() - depart)), maxAttempts: req.maxAttempts ?? 2, firstAttemptTimeoutMs: 4000,
+      ...(provider === undefined ? { reserver: reserverModele, surEchec: noterEchec } : {}),
+      basculerApresQuota: (model, suivant) => resolveLlmProvider(model).name !== resolveLlmProvider(suivant).name,
+      ...(req.signal ? { signal: req.signal } : {}),
+      surTentative: (t) => { if (t.code !== "OK") void journaliser({ purpose: req.purpose, provider: (provider ?? resolveLlmProvider(t.model)).name,
         model: t.model, promptVersion: req.promptVersion, promptHash: req.promptHash, sessionToken: req.sessionToken,
-        charsOut: null, tokensIn: null, tokensOut: null, estimatedCostUsd: null, outcome: t.code === "MODEL_TIMEOUT" ? "timeout" : "error", latencyMs: t.ms }),
+        charsOut: null, tokensIn: null, tokensOut: null, estimatedCostUsd: null, outcome: t.code === "MODEL_TIMEOUT" ? "timeout" : "error", latencyMs: t.ms }); },
     });
     const { model } = resultat; const flux = resultat.data;
     if (provider === undefined) await sauverQualifications();
     let caracteres = 0;
     const deltas = flux.deltas.pipeThrough(new TransformStream<string, string>({ transform(frag, controller) { caracteres += frag.length; controller.enqueue(frag); } }));
     void flux.usage.then(async (usage) => {
-      if (provider === undefined) await sauverQualifications();
-      await journaliser({ purpose: req.purpose, provider: (provider ?? openRouterProvider).name, model, promptVersion: req.promptVersion,
+      if (provider === undefined) { poolOpenRouter.reussir(model, Date.now() - depart); await sauverQualifications(); }
+      await journaliser({ purpose: req.purpose, provider: (provider ?? resolveLlmProvider(model)).name, model, promptVersion: req.promptVersion,
         promptHash: req.promptHash, sessionToken: req.sessionToken, charsOut: caracteres, tokensIn: usage.tokensIn,
         tokensOut: usage.tokensOut, estimatedCostUsd: usage.tokensIn == null || usage.tokensOut == null ? null : estimateCostUsd(model, usage.tokensIn, usage.tokensOut), outcome: "ok", latencyMs: Date.now() - depart });
     }).catch(async (cause) => {
       const error = normaliserErreurModele(cause, req.signal?.aborted);
-      if (provider === undefined) await sauverQualifications();
-      await journaliser({ purpose: req.purpose, provider: (provider ?? openRouterProvider).name, model, promptVersion: req.promptVersion,
+      if (provider === undefined) { noterEchec(model, error); await sauverQualifications(); }
+      await journaliser({ purpose: req.purpose, provider: (provider ?? resolveLlmProvider(model)).name, model, promptVersion: req.promptVersion,
         promptHash: req.promptHash, sessionToken: req.sessionToken, charsOut: caracteres || null, tokensIn: null,
         tokensOut: null, estimatedCostUsd: null, outcome: error.code === "MODEL_TIMEOUT" ? "timeout" : "error", latencyMs: Date.now() - depart });
     });

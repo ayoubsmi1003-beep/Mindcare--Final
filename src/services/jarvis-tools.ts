@@ -338,6 +338,7 @@ function versSnakeCase(args: Record<string, unknown>): Record<string, unknown> {
 export async function proposerAction<N extends ToolEcriture>(
   entree: {
     readonly conversationId: string;
+    readonly actionId?: string;
     readonly demandeUtilisateur: string;
     readonly outil: N;
     readonly args: ArgsDe<N>;
@@ -351,6 +352,7 @@ export async function proposerAction<N extends ToolEcriture>(
     // (ADR-020). La porte fait le cast en jsonb et échoue bruyamment si le
     // contenu n'est pas un objet.
     p_tool_args: JSON.stringify(versSnakeCase(entree.args)),
+    ...(entree.actionId?{p_action_id:entree.actionId}:{}),
   });
 
   if (!resultat.ok) {

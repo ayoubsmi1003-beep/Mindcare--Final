@@ -16,6 +16,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 
 import { SiriOrb } from "@/components/ui/siri-orb";
+import { agentCopy } from "@/i18n/alexa-agent";
 import { fr } from "@/i18n/fr";
 import Link from "next/link";
 import type { EtatConversationPublique } from "@/services/conversation";
@@ -149,12 +150,14 @@ export function FilJarvis({
                 <summary className="cursor-pointer">{fr.patients.resume.sources}</summary>
                 <div className="mt-2 flex flex-wrap gap-2">
                   {[...new Map(tour.alexaSources?.map(source => [source.id, source])).values()].map(source => {
-                    const href = source.type === "consultation" ? `/consultation/${encodeURIComponent(source.id)}` : source.type === "appointment" ? "/agenda" : (source.type === "treatment" || source.type === "diagnostic" || source.type === "scale") && tour.sourcePatientId ? `/patients/${encodeURIComponent(tour.sourcePatientId)}` : null;
+                    const href = source.provenance?.["draftId"] ? "/documents?draft="+encodeURIComponent(String(source.provenance["draftId"])) : source.type === "patient" ? "/patients/"+encodeURIComponent(source.id) : source.type==="document" ? "/documents?document="+encodeURIComponent(source.id) : source.type === "consultation" ? `/consultation/${encodeURIComponent(source.id)}` : source.type === "appointment" ? "/agenda" : (source.type === "treatment" || source.type === "diagnostic" || source.type === "scale") && tour.sourcePatientId ? `/patients/${encodeURIComponent(tour.sourcePatientId)}` : null;
                     return href ? <Link className="underline underline-offset-4" key={source.id} href={href}>{source.label}</Link> : <span key={source.id}>{source.label}</span>;
                   })}
                 </div>
               </details>
             ) : null}
+            {tour.alexaStatus?<span role="status" className="pl-1 font-ui text-label text-ink-500">{agentCopy[/\p{Script=Arabic}/u.test(tour.texte)?"ar":"fr"][tour.alexaStatus==="cancelled"?"cancelled":tour.alexaStatus]}</span>:null}
+            {tour.alexaParts?.length?<details className="pl-1 font-ui text-label text-ink-700"><summary>{agentCopy[/\p{Script=Arabic}/u.test(tour.texte)?"ar":"fr"].partTitle}</summary>{tour.alexaParts.map(p=><div key={p.id}>{p.goal} — {agentCopy[/\p{Script=Arabic}/u.test(tour.texte)?"ar":"fr"].outcomes[p.status]}{p.reason?' · '+p.reason:''}</div>)}</details>:null}
             <div className="flex items-end gap-1">
               <p
                 className={[
@@ -164,7 +167,7 @@ export function FilJarvis({
                 style={{ maxWidth: compact ? "var(--bulle-jarvis-max)" : "46rem" }}
               >
                 {tour.texte}
-                {tour.interrompu === true && (
+                {tour.interrompu === true && (!tour.alexaStatus || tour.alexaStatus === "cancelled") && (
                   <span className="ml-2 font-ui text-label italic text-ink-500">
                     {fr.jarvis.flux.interrompue}
                   </span>
@@ -220,3 +223,4 @@ export function FilJarvis({
     </div>
   );
 }
+

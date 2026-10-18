@@ -49,6 +49,7 @@ export const RPC_AUTORISES: ReadonlySet<string> = new Set([
   "execute_jarvis_action",
   "find_similar_patients",
   "flag_case_summary",
+  "get_alexa_action_outcome",
   "get_alexa_case_summary",
   "get_alexa_summary_status",
   "get_appointment",
@@ -75,6 +76,9 @@ export const RPC_AUTORISES: ReadonlySet<string> = new Set([
   "get_treatment_history",
   "issue_document",
   "issue_editable_document_draft",
+  "legacy_get_report",
+  "legacy_list_reviews",
+  "legacy_resolve_review",
   "list_agenda",
   "list_amendments",
   "list_day_payments",
@@ -131,4 +135,4 @@ export const RELATIONS_AUTORISEES: Readonly<Record<string, readonly string[]>> =
 };
 
 /** Nombre d'entrées, pour que le contrôle de démarrage puisse le journaliser. */
-export const NB_RPC = 109;
+export const NB_RPC = 113;

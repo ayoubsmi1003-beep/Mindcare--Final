@@ -46,6 +46,8 @@
 
 "use client";
 
+import { narrativeCopy } from "@/i18n/alexa-narrative";
+
 import { useParams, useRouter } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 
@@ -974,7 +976,15 @@ export default function PageConsultation(): React.JSX.Element {
     const generation = generationAnalyse.current;
     const seanceDemande = id;
 
-    void analyzeSession(id, controleur.signal).then((result) => {
+    void (async () => {
+      // Analyse the saved text currently visible, including pending SOAP edits.
+      if (seance?.status === "open" && (minuteurBrut.current !== undefined || minuteurSoap.current !== undefined)) {
+        if (!await viderLesAttentes()) { setEnAnalyse(false); return; }
+      }
+      if (controleur.signal.aborted) return;
+      return analyzeSession(id, controleur.signal);
+    })().then((result) => {
+      if (!result) return;
       // Réponse tardive ignorée (§3.4 n°8) : la page a démonté, la séance a
       // changé, ou un appel plus récent a déjà pris la main. On ne touche à
       // AUCUN état — un run obsolète n'écrase jamais le run actif.
@@ -1014,6 +1024,7 @@ export default function PageConsultation(): React.JSX.Element {
         return;
       }
       setAnalyse(result.data);
+      if (result.data.persistee) genererResume();
     });
   }
 
@@ -1653,13 +1664,13 @@ export default function PageConsultation(): React.JSX.Element {
                   <Bouton
                     rang="secondaire"
                     onClick={analyserSeance}
-                    disabled={enAnalyse || brut.trim() === ""}
+                    disabled={enAnalyse || (brut.trim() === "" && CHAMPS_SOAP.every(champ => soap[champ].trim() === ""))}
                   >
                     {fr.consultation.analyserLaSeance}
                   </Bouton>
                 </div>
 
-                {brut.trim() === "" && !enAnalyse && analyse === null ? (
+                {(brut.trim() === "" && CHAMPS_SOAP.every(champ => soap[champ].trim() === "")) && !enAnalyse && analyse === null ? (
                   <EtatVide message={fr.consultation.analyseAucuneNote} />
                 ) : null}
 
@@ -1702,7 +1713,12 @@ export default function PageConsultation(): React.JSX.Element {
                   <div className="flex flex-col gap-6">
                     {/* SA-03 — la portée, dite avant le contenu : sur les
                         seules notes du jour, ou avec N notes antérieures. */}
-                    <PanneauInfo>{libelleSourcesAnalyse(analyse.sources.historiqueNotes)}</PanneauInfo>
+                    {analyse.resume ? <>
+                      <p className="font-ui text-body leading-relaxed text-ink-900">{analyse.resume}</p>
+                      <p className="font-ui text-label text-ink-500">{narrativeCopy.draft}{analyse.complete === false ? " " + narrativeCopy.limited : ""}</p>
+                    </> : <PanneauInfo>{libelleSourcesAnalyse(analyse.sources.historiqueNotes)}</PanneauInfo>}
+                    <details open={analyse.resume ? undefined : true}>
+                      <summary className="cursor-pointer font-ui text-label text-ink-500">{narrativeCopy.details}</summary>
                     <div className="flex flex-col gap-3">
                       <p className="font-ui text-label font-medium uppercase tracking-label text-ink-500">
                         {fr.consultation.noteStructureeTitre}
@@ -1750,6 +1766,7 @@ export default function PageConsultation(): React.JSX.Element {
                         </ul>
                       )}
                     </div>
+                    </details>
                   </div>
                 )}
               </div>

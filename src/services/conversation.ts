@@ -1,3 +1,4 @@
+import {readAlexaHistory} from "@/shared/alexa/history";
 /**
  * Le gestionnaire de conversation Jarvis — V-JARVIS-CORE.
  *
@@ -23,10 +24,10 @@
 import { fr } from "@/i18n/fr";
 import { adoptAlexaConversation, clearAlexaConversation, ensureAlexaConversation, envoyerTourAlexa, AlexaTurnError } from "./alexa-turn";
 import { navigateAlexa } from "./alexa-navigation";
-import { abonnerTourVoixLocale, arreterVoixLocale } from "./alexa-local";
+import { abonnerTourVoixLocale, abonnerPropositionVoixLocale, arreterVoixLocale } from "./alexa-local";
 import { stageLabels } from "@/i18n/alexa-dialogue";
-import { planRequest } from "@/shared/alexa/request-plan";
 import { libelleEtape } from "@/i18n/etapes";
+import {alexaProposalLabels} from "./alexa-proposal";
 
 import { getSession } from "./auth";
 import { db } from "./db";
@@ -108,6 +109,8 @@ export type EtatConversation =
   | "erreur";
 
 export interface TourConversation {
+  readonly alexaStatus?:import("@/shared/alexa/agent").AgentTerminal;
+  readonly alexaParts?:readonly import("@/shared/alexa/agent").RequestPart[];
   readonly alexaSources?: readonly AlexaSource[];
   readonly sourcePatientId?: string | null;
   readonly id: string;
@@ -181,6 +184,7 @@ const interne: EtatInterne = {
   etapeEnCours: null,
 };
 
+let historyGeneration = 0;
 const abonnes = new Set<Abonne>();
 
 function publier(): void {
@@ -493,7 +497,11 @@ export function definirContextePatient(
  * `patient_id`, 058).
  */
 export function purgerContexteSession(): void {
+  // A late read from the previous scope must never repopulate the conversation.
+  historyGeneration++;
   controleurEnCours?.abort();
+  controleurEnCours = null;
+  arreterVoixLocale();
   clearAlexaConversation();
   patientActifCourant = null;
   // [Changer] et la déconnexion effacent AUSSI l'ancre. Quitter un patient et
@@ -506,6 +514,8 @@ export function purgerContexteSession(): void {
   contextePraticienId = null;
   effacerCible();
   effacerPatientActif();
+  Object.assign(interne, { etat: "vide", conversationId: null, tours: [], saisie: "", carteEcriture: null, erreur: null, chargementHistorique: false, etapeEnCours: null });
+  publier();
 }
 
 /**
@@ -559,24 +569,28 @@ async function assurerConversation(): Promise<Result<string>> {
  * elles apparaissent comme mentions système.
  */
 export async function chargerHistorique(): Promise<void> {
-  if (interne.chargementHistorique || interne.conversationId === null) return;
+  if (interne.chargementHistorique || interne.tours.length > 0) return;
+  const ownHistory = ++historyGeneration;
   interne.chargementHistorique = true;
   publier();
 
   const resultat = await db().rpc<{
-    conversationId: string;
+    conversationId: string | null;
     messages: readonly {
-      id: string;
+      id?: string;
       rang: number;
       role: "humain" | "jarvis";
       contenu: string;
       outil: Record<string, unknown> | null;
       statut: "complet" | "interrompu";
-      creeA: string;
+      createdAt: string;
     }[];
   }>("get_jarvis_history", { p_limit: 50 });
 
+  if (ownHistory !== historyGeneration) return;
   interne.chargementHistorique = false;
+  // Sending a new turn while the read was pending takes precedence.
+  if (interne.tours.length > 0) { publier(); return; }
 
   if (!resultat.ok) {
     log.error("conversation.historique", logFieldsFor(resultat.error));
@@ -589,6 +603,10 @@ export async function chargerHistorique(): Promise<void> {
   }
 
   const hist = resultat.data[0];
+  if (typeof hist?.conversationId === "string" && hist.conversationId) {
+    interne.conversationId = hist.conversationId;
+    adoptAlexaConversation(hist.conversationId);
+  }
   // ⚠️ PAS de `Array.isArray(hist.messages)` ici : sur un tableau `readonly`,
   // cette garde rétrécit vers `any[]` et fait perdre tout le typage — quinze
   // erreurs eslint à la clé. Le contrat de la porte est typé ci-dessus ; la
@@ -597,22 +615,24 @@ export async function chargerHistorique(): Promise<void> {
   if (messages.length > 0) {
     const reconstruits: TourConversation[] = [];
     for (const m of messages) {
+      const messageId = m.id ?? `${hist?.conversationId ?? "history"}:${m.rang}:${m.role}`;
       reconstruits.push({
-        id: m.id,
+        id: messageId,
         role: m.role,
         texte: m.contenu,
+        ...(m.role==="jarvis"?readAlexaHistory(m.outil):{}),
         ...(m.statut === "interrompu" && { interrompu: true }),
       });
       if (m.outil !== null && typeof m.outil === "object" && typeof m.outil["nom"] === "string") {
         reconstruits.push({
-          id: `${m.id}-outil`,
+          id: `${messageId}-outil`,
           role: "systeme",
           texte: `${fr.jarvis.historique.outil} ${String(m.outil["nom"])}`,
         });
       }
       if (m.role === "jarvis" && m.statut === "interrompu") {
         reconstruits.push({
-          id: `${m.id}-coupure`,
+          id: `${messageId}-coupure`,
           role: "systeme",
           texte: fr.jarvis.historique.interrompue,
         });
@@ -728,7 +748,11 @@ async function proposerEcritureRegistre(
   args: unknown,
   demande: string,
   runId: string | null = null,
+  labels?:ReadonlyMap<string,string>,
+  guard?:()=>void,
+  actionId?:string,
 ): Promise<boolean> {
+  guard?.();
   const capacite = capaciteEcriture(nom);
   if (capacite === null) return false;
 
@@ -741,12 +765,14 @@ async function proposerEcritureRegistre(
   }
 
   const prepare = await capacite.preparer(resolus, carteIdentite());
+  guard?.();
   if (!prepare.ok) {
     ajouterTour({ role: "systeme", texte: prepare.error.message });
     return true;
   }
 
   const conversationId = await assurerConversation();
+  guard?.();
   if (!conversationId.ok) {
     ajouterTour({ role: "systeme", texte: conversationId.error.message });
     return true;
@@ -760,17 +786,21 @@ async function proposerEcritureRegistre(
     // c'est la CONTRAINTE EN BASE qui refuse un nom non admis, pas ce type.
     outil: nom as ToolEcriture,
     args: prepare.data.args as never,
+    ...(actionId?{actionId}:{}),
   });
   if (!propose.ok) {
+    guard?.();
     ajouterTour({ role: "systeme", texte: propose.error.message });
     return true;
   }
+
+  try {guard?.();} catch(error) {await refuserAction(propose.data);throw error;}
 
   interne.carteEcriture = {
     actionId: propose.data,
     outil: nom,
     titre: prepare.data.titre,
-    champs: prepare.data.champs,
+    champs: prepare.data.champs.map(field=>({...field,valeur:labels?.get(field.valeur)??field.valeur})),
     critique: capacite.critique,
   };
   // Mémorisé pour la VÉRIFICATION post-exécution : sans les arguments, on ne
@@ -886,6 +916,7 @@ export async function accepterCarte(): Promise<void> {
     outil: carte.outil,
     argsCanoniques: args,
   });
+  const draftDestination=issue.ok&&carte.outil==="create_editable_document_draft"?`/documents?draft=${encodeURIComponent(issue.affecteId)}`:null;
   // M09 reliquat · le constat vérifié rejoint l'anneau (liaison action +
   // issue + tour proposant), sans toucher au chemin d'exécution.
   capterApprobation({
@@ -905,6 +936,7 @@ export async function accepterCarte(): Promise<void> {
       : { role: "systeme", texte: issue.message },
   );
   publier();
+  if(draftDestination&&typeof window!=="undefined")window.location.assign(draftDestination);
 }
 
 /** Refuser est le défaut : aucune raison demandée. */
@@ -938,25 +970,39 @@ async function envoyerAlexaUnifie(message: string): Promise<void> {
   interne.saisie = "";
   ajouterTour({ role: "humain", texte: message });
   const tour = ajouterTour({ role: "jarvis", texte: "" });
+  const ownHistory = historyGeneration;
   const controller = new AbortController();
+  const ownsTurn = () => controleurEnCours === controller && historyGeneration === ownHistory;
+  const page=typeof window === "undefined" ? null : window.location.pathname,patientAtStart=patientActifCourant?.id??null;
+  const guard=()=>{controller.signal.throwIfAborted();if(!ownsTurn()||(typeof window === "undefined" ? null : window.location.pathname)!==page||(patientActifCourant?.id??null)!==patientAtStart||interne.carteEcriture!==null)throw new Error("ProposalScopeChanged");};
   controleurEnCours = controller;
   interne.etat = "envoi";
   publier();
   try {
-    interne.conversationId = await ensureAlexaConversation();
+    const conversationId = await ensureAlexaConversation();
+    if (!ownsTurn()) return;
+    controller.signal.throwIfAborted();
+    interne.conversationId = conversationId;
+    const submissionId=crypto.randomUUID();
     const result = await envoyerTourAlexa(message, controller.signal, {
+      clientTurnId:submissionId,
       onSentence: text => {
+        if (!ownsTurn() || controller.signal.aborted) return;
         const current = interne.tours.find(t => t.id === tour.id);
         remplacerTour(tour.id, { texte: `${current?.texte ? `${current.texte}\n` : ""}${text}` });
         interne.etat = "flux";
         publier();
       },
-      onStage: stage => { interne.etapeEnCours = stageLabels[stage as keyof typeof stageLabels] ?? null; publier(); },
+      onStage: stage => { if (!ownsTurn() || controller.signal.aborted) return; interne.etapeEnCours = stageLabels[stage as keyof typeof stageLabels] ?? null; publier(); },
     });
-    remplacerTour(tour.id, { texte: result.texte, persiste: result.persiste, porteUneIdentite: false, alexaSources: result.sources, sourcePatientId: result.patientId });
-    interne.etat = "composition";
+    if (!ownsTurn()) return;
+    controller.signal.throwIfAborted();
+    remplacerTour(tour.id, { texte: result.texte, persiste: result.persiste, porteUneIdentite: result.speechAllowed!==true, ...(result.status?{alexaStatus:result.status}:{}),...(result.parts?{alexaParts:result.parts}:{}), alexaSources: result.sources, sourcePatientId: result.patientId });
+    interne.etat = result.proposal?"envoi":"composition";
     if (result.navigation) navigateAlexa(result.navigation);
+    if(result.proposal){const labels=await alexaProposalLabels(result.proposal,result.patientId,db());guard();await proposerEcritureRegistre(result.proposal.tool,result.proposal.args,message,null,labels,guard,result.proposal.actionId);if (ownsTurn()) interne.etat="composition";}
   } catch (error) {
+    if (!ownsTurn()) return;
     if (controller.signal.aborted) {
       remplacerTour(tour.id, { interrompu: true });
       interne.etat = "composition";
@@ -966,14 +1012,24 @@ async function envoyerAlexaUnifie(message: string): Promise<void> {
       interne.etat = "erreur";
     }
   } finally {
-    if (controleurEnCours === controller) controleurEnCours = null;
-    interne.etapeEnCours = null;
-    publier();
+    if (ownsTurn()) {
+      controleurEnCours = null;
+      interne.etapeEnCours = null;
+      publier();
+    }
   }
 }
 
 // Voice and keyboard share the same visible conversation and server-owned clinical brain.
 const voiceTurns = new Map<string, string>();
+  abonnerPropositionVoixLocale(async (proposal,text,patientId,signal)=>{
+    if(interne.carteEcriture!==null)return;
+    const page=typeof window === "undefined" ? null : window.location.pathname,patientAtStart=patientActifCourant?.id??null;
+    const guard=()=>{signal.throwIfAborted();if((typeof window === "undefined" ? null : window.location.pathname)!==page||(patientActifCourant?.id??null)!==patientAtStart||interne.carteEcriture!==null)throw new Error("ProposalScopeChanged");};
+    const labels=await alexaProposalLabels(proposal,patientId,db());
+    guard();
+    await proposerEcritureRegistre(proposal.tool,proposal.args,text,null,labels,guard,proposal.actionId);
+});
 abonnerTourVoixLocale(event => {
   if (!voiceTurns.has(event.id)) {
     ajouterTour({ role: "humain", texte: event.texte });
@@ -983,7 +1039,7 @@ abonnerTourVoixLocale(event => {
   }
   const response = voiceTurns.get(event.id);
   if (response && (event.reponse !== undefined || event.error !== undefined)) remplacerTour(response, {
-    ...(event.reponse !== undefined ? { texte: event.reponse } : {}), porteUneIdentite: false,
+    ...(event.reponse !== undefined ? { texte: event.reponse } : {}), porteUneIdentite: event.speechAllowed!==true,
     ...(event.sources !== undefined ? { alexaSources: event.sources } : {}),
     ...(event.patientId !== undefined ? { sourcePatientId: event.patientId } : {}),
     ...(event.persiste !== undefined ? { persiste: event.persiste } : {}),
@@ -1008,10 +1064,13 @@ export async function envoyer(messageBrut: string): Promise<void> {
   // Une carte en attente bloque la saisie : décider d'abord (L2).
   if (interne.carteEcriture !== null) return;
 
-  if (planRequest(message, null).intent !== "proposal") {
-    await envoyerAlexaUnifie(message);
-    return;
-  }
+  await envoyerAlexaUnifie(message);
+}
+
+/** Legacy API retained for explicit compatibility callers; the Alexa UI uses only server dispatch. */
+export async function envoyerJarvisHistorique(messageBrut:string):Promise<void> {
+  const message=messageBrut.trim();
+  if(!message||interne.etat==="envoi"||interne.etat==="flux"||interne.carteEcriture!==null)return;
 
   interne.erreur = null;
   interne.saisie = "";

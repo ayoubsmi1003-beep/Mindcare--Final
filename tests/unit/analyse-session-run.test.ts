@@ -114,8 +114,8 @@ afterEach(() => {
 });
 
 describe("le délai est une borne d'architecture, pas un chiffre inventé", () => {
-  it("DELAI_ANALYSE_MS vaut le budget de tour existant (60 s)", () => {
-    expect(DELAI_ANALYSE_MS).toBe(60_000);
+  it("DELAI_ANALYSE_MS couvre le démarrage du modèle local borné (180 s)", () => {
+    expect(DELAI_ANALYSE_MS).toBe(180_000);
   });
 });
 

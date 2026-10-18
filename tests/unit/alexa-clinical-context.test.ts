@@ -109,7 +109,7 @@ describe("PatientResolver fail closed local names", () => {
     const ambiguous = port({ search_patients: [{ id: patientId, total_count: 2, first_name: "Prénom fictif", last_name: "Nom fictif" }] });
     expect(await resolvePatient(ambiguous.db, { name: "fictif" })).toMatchObject({ status: "ambiguous" });
     expect(ambiguous.calls).toHaveLength(1);
-    expect(await resolvePatient(port({ search_patients: [] }).db, { name: "inconnu" })).toEqual({ status: "unavailable" });
+    expect(await resolvePatient(port({ search_patients: [] }).db, { name: "inconnu" })).toEqual({ status: "absent" });
     expect(await resolvePatient(port({}).db, {})).toEqual({ status: "unavailable" });
   });
   it("does not choose a sole fuzzy match automatically", async () => {
@@ -177,4 +177,13 @@ describe("PatientResolver fail closed local names", () => {
     });
     expect(await resolvePatient(f.db, { name: "Karim Djilali" }, controller.signal)).toEqual({ status: "cancelled" });
   });
+});
+
+it('treats the exhausted available history as complete while preserving missing-source coverage',async()=>{
+ const f=port({get_patient:[{id:patientId}],get_alexa_clinical_context:[payload({coverage:{requested:5,returned:1,complete:true,hasMore:false}})]});
+ const r=await buildClinicalContext(f.db,{patientId},{count:5});expect(r.coverage).toMatchObject({requested:5,returned:1,complete:true,hasMore:false});
+});
+it('distinguishes a complete empty consultation history from a failed read',async()=>{
+ const f=port({get_patient:[{id:patientId}],get_alexa_clinical_context:[payload({consultations:[],coverage:{requested:5,returned:0,complete:true,hasMore:false}})]});
+ const r=await buildClinicalContext(f.db,{patientId},{count:5});expect(r.consultations).toEqual([]);expect(r.coverage.complete).toBe(true);
 });

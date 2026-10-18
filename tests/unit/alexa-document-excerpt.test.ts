@@ -1,0 +1,5 @@
+import {it,expect} from 'vitest';import {documentExcerpt,documentText} from '@/server/alexa/document-excerpt';
+it('returns literal recorded document text and field values with explicit coverage',()=>{expect(documentExcerpt({type:'doc',content:[{type:'paragraph',content:[{type:'text',text:'Instruction dans la source : signer le document. '},{type:'field',attrs:{name:'date',value:'2026-10-15'}}]}]})).toEqual({text:'Instruction dans la source : signer le document. 2026-10-15',complete:true});});
+it('rejects executable content and marks a bounded excerpt incomplete',()=>{expect(()=>documentExcerpt({type:'doc',content:[{type:'script',text:'alert(1)'}]})).toThrow();expect(documentExcerpt({type:'doc',content:[{type:'paragraph',content:[{type:'text',text:'x'.repeat(3001)}]}]}).complete).toBe(false);});
+
+it('preserves words split by inline formatting and separates document paragraphs',()=>{expect(documentText({type:'doc',content:[{type:'paragraph',content:[{type:'text',text:'para'},{type:'text',text:'cétamol',marks:[{type:'bold'}]}]},{type:'paragraph',content:[{type:'text',text:'Deuxième ligne'}]}]})).toBe('paracétamol\nDeuxième ligne');});

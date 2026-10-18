@@ -28,6 +28,8 @@ import { err, ok, type Result } from "./result";
 import { validerPreuves, type PreuveConnnaissance } from "@/shared/jarvis/preuves";
 
 export interface AnalyseSeance {
+  readonly resume?: string | undefined;
+  readonly complete?: boolean | undefined;
   readonly noteStructuree: NoteSoap;
   readonly evolution: readonly string[];
   readonly pointsNonExplores: readonly string[];
@@ -60,6 +62,8 @@ export interface AnalyseSources {
 }
 
 interface AnalyseSeanceRow {
+  readonly resume?: string | undefined;
+  readonly complete?: boolean | undefined;
   readonly noteStructuree: {
     readonly subjective: string;
     readonly objective: string;
@@ -122,7 +126,7 @@ function lireSourcesEnregistrees(valeur: unknown): AnalyseSources {
  * terminal : on cesse d'attendre, on libère, l'écran propose `Réessayer`
  * (nouveau run, jamais résurrection de l'ancien).
  */
-export const DELAI_ANALYSE_MS = 60_000;
+export const DELAI_ANALYSE_MS = 180_000;
 
 /**
  * Runs actifs par séance — le vol unique d'exécution (§10).
@@ -264,6 +268,8 @@ async function executerAnalyse(
     }
 
     return ok({
+      resume: result.data.resume,
+      complete: result.data.complete,
       noteStructuree: {
         subjective: result.data.noteStructuree.subjective,
         objective: result.data.noteStructuree.objective,
@@ -326,6 +332,8 @@ export async function chargerAnalyse(
     Array.isArray(v) ? v.filter((x): x is string => typeof x === "string") : [];
 
   return ok({
+    resume: typeof c["resume"] === "string" ? c["resume"] : undefined,
+    complete: c["complete"] === true,
     noteStructuree: {
       subjective: champ(n["subjective"]),
       objective: champ(n["objective"]),

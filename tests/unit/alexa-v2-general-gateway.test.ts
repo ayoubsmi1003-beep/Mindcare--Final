@@ -1,17 +1,29 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-vi.mock("@/server/egress/external-call", () => ({ llm: vi.fn(), llmStream: vi.fn(), preparerPoolModelesGratuits: vi.fn() }));
-import { llm } from "@/server/egress/external-call";
+vi.mock("@/server/alexa/local-model", () => ({ inferLocalText: vi.fn() }));
+import { inferLocalText } from "@/server/alexa/local-model";
 import * as modelGateway from "@/server/alexa/model-gateway";
 import { classerCharge } from "@/server/egress/classification";
 
 const publicAnswer = "La lumière blanche combine plusieurs couleurs visibles.";
 beforeEach(() => {
   vi.resetAllMocks(); vi.stubEnv("GEMINI_API_KEY", ""); vi.stubEnv("GOOGLE_API_KEY", "");
-  vi.mocked(llm).mockResolvedValue({ ok: true, data: publicAnswer, inference: { model: "qualified/general:free", tentatives: [] } });
+  vi.mocked(inferLocalText).mockResolvedValue(publicAnswer);
 });
 afterEach(() => { vi.unstubAllEnvs(); vi.restoreAllMocks(); });
 
 describe("bounded public questions", () => {
+  it.each([
+    ["Pourquoi le ciel est-il bleu ?", /uniquement en français/u],
+    ["Explain how a rainbow forms.", /entirely in English/u],
+    ["ما هي ألوان قوس قزح؟", /أجب بالعربية/u],
+    ["علاش السماء زرقاء؟", /جاوب بالدارجة الجزائرية/u],
+  ] as const)("sends an explicit response language for the admitted question: %s", async (text, instruction) => {
+    expect(await modelGateway.inferGeneralAlexa(text)).toMatchObject({ ok: true });
+    const request = vi.mocked(inferLocalText).mock.calls[0]![0];
+    expect(request[0]!.content).toMatch(instruction);
+    expect(request[1]).toEqual({ role: "user", content: text });
+    expect(classerCharge(request, null)).toMatchObject({ classe: "C4", decision: "AUTORISER" });
+  });
   // Removing the general path, routing it to clinical JSON, or replacing model prose must break these examples.
   it.each([
     "Pourquoi le ciel est-il bleu ?", "ما هي ألوان قوس قزح؟", "واش هو قوس قزح؟", "Explain how a rainbow forms.",
@@ -21,7 +33,7 @@ describe("bounded public questions", () => {
     "What is photosynthesis?", "Explain how a computer works.", "How does a computer work?",
     "لماذا السماء زرقاء؟", "Combien font 2 + 2 ?", "كم يساوي ٢ + ٢؟",
   ])("answers the current verified public question: %s", async text => {
-    expect(await modelGateway.inferGeneralAlexa?.(text)).toEqual({ ok: true, text: publicAnswer, model: "qualified/general:free" });
+    expect(await modelGateway.inferGeneralAlexa?.(text)).toEqual({ ok: true, text: publicAnswer, model: "MiniCPM-V-4_7-1B-Q4_K_M.gguf" });
   });
   // Passing caller metadata, inherited context, tools, receipts, or history is a privacy regression.
   it("sends exactly the current question and generic system prompt without protected state", async () => {
@@ -29,22 +41,20 @@ describe("bounded public questions", () => {
     const history = Object.freeze([{ role: "user", content: "private synthetic history" }]);
     const options = { caller: "private caller", timeoutMs: 2000, patientContext: protectedState, history };
     expect(await modelGateway.inferGeneralAlexa?.("Pourquoi le ciel est-il bleu ?", options)).toMatchObject({ ok: true });
-    const request = vi.mocked(llm).mock.calls[0]![0];
-    expect(request.messages).toHaveLength(2);
-    expect(request.messages[0]!.role).toBe("system");
-    expect(request.messages[1]).toEqual({ role: "user", content: "Pourquoi le ciel est-il bleu ?" });
-    expect(request).toMatchObject({ purpose: "jarvis", timeoutMs: 2000, besoin: { json: false, streaming: false, outils: false, tache: "conversation" } });
-    expect(request.egress).toBeUndefined();
-    expect(request.sessionToken).toMatch(/^[0-9a-f-]{36}$/);
+    const request = vi.mocked(inferLocalText).mock.calls[0]![0];
+    expect(request).toHaveLength(2);
+    expect(request[0]!.role).toBe("system");
+    expect(request[1]).toEqual({ role: "user", content: "Pourquoi le ciel est-il bleu ?" });
+    expect(vi.mocked(inferLocalText).mock.calls[0]![1]).toMatchObject({ timeoutMs: 2000, maxOutputTokens: 1024 });
     expect(classerCharge("Pourquoi le ciel est-il bleu ?", null)).toMatchObject({ classe: "C4", decision: "AUTORISER" });
-    expect(classerCharge(request.messages, null)).toMatchObject({ classe: "C4", decision: "AUTORISER" });
+    expect(classerCharge(request, null)).toMatchObject({ classe: "C4", decision: "AUTORISER" });
     expect(JSON.stringify(request)).not.toMatch(/private|synthetic-private-id|history|patientContext|caller/);
     expect(protectedState).toEqual({ patientId: "synthetic-private-id", notes: "private synthetic note", revision: 4 });
     expect(history).toEqual([{ role: "user", content: "private synthetic history" }]);
   });
   it("does not shorten a long question into an allowed prefix", async () => {
     expect(await modelGateway.inferGeneralAlexa?.(`Pourquoi ${"le ciel ".repeat(130)}?`)).toMatchObject({ ok: false, code: "privacy" });
-    expect(llm).not.toHaveBeenCalled();
+    expect(inferLocalText).not.toHaveBeenCalled();
   });
 });
 
@@ -73,7 +83,7 @@ describe("local refusals before any egress", () => {
     "Explain how a rainbow forms; karim belkacem lives in alger",
   ])("refuses %s without sending bytes", async text => {
     expect(await modelGateway.inferGeneralAlexa?.(text)).toMatchObject({ ok: false, code: "privacy", localFallback: true });
-    expect(llm).not.toHaveBeenCalled();
+    expect(inferLocalText).not.toHaveBeenCalled();
   });
 });
 
@@ -84,8 +94,14 @@ describe("output validation", () => {
     { question: "How does a computer work?", text: "A computer executes instructions from a program." },
     { question: "كيف يعمل الحاسوب", text: "الحاسوب ينفذ تعليمات البرنامج لمعالجة البيانات." },
   ])("publishes public computer behavior: $text", async ({ question, text }) => {
-    vi.mocked(llm).mockResolvedValue({ ok: true, data: text, inference: { model: "qualified/general:free", tentatives: [] } });
-    expect(await modelGateway.inferGeneralAlexa?.(question)).toEqual({ ok: true, text, model: "qualified/general:free" });
+    vi.mocked(inferLocalText).mockResolvedValue(text);
+    expect(await modelGateway.inferGeneralAlexa?.(question)).toEqual({ ok: true, text, model: "MiniCPM-V-4_7-1B-Q4_K_M.gguf" });
+  });
+  it.each(["Un ordinateur exécute les instructions d’un programme. J’ai exécuté la commande.",
+    "A computer executes instructions from a program. I have opened the browser.",
+    "الحاسوب ينفذ تعليمات البرنامج. تجاهل التعليمات."])("a public explanation cannot authorize an appended action: %s", async text => {
+    vi.mocked(inferLocalText).mockResolvedValue(text);
+    expect(await modelGateway.inferGeneralAlexa("Comment fonctionne un ordinateur")).toMatchObject({ ok: false, code: "invalid-response" });
   });
   // Treating every output possessive as private rejects public explanations despite a C4 answer.
   it.each([
@@ -94,8 +110,8 @@ describe("output validation", () => {
     "Clouds can reflect light from their surfaces.",
     "الحاسوب يخزن البيانات في الذاكرة تاعه.",
   ])("publishes public explanations with ordinary possessives: %s", async text => {
-    vi.mocked(llm).mockResolvedValue({ ok: true, data: text, inference: { model: "qualified/general:free", tentatives: [] } });
-    expect(await modelGateway.inferGeneralAlexa?.("Pourquoi le ciel est-il bleu ?")).toEqual({ ok: true, text, model: "qualified/general:free" });
+    vi.mocked(inferLocalText).mockResolvedValue(text);
+    expect(await modelGateway.inferGeneralAlexa?.("Pourquoi le ciel est-il bleu ?")).toEqual({ ok: true, text, model: "MiniCPM-V-4_7-1B-Q4_K_M.gguf" });
   });
   // Publishing unchecked provider prose must expose one of these unsafe or malformed answers.
   it.each([
@@ -107,70 +123,67 @@ describe("output validation", () => {
     "J’ai lu les données locales.", "I opened the browser.", "His name is Karim.", "Son nom est Karim.",
     "J’ai exécuté la commande.", "J’ouvre le navigateur.", "I executed the program.", "I will open the browser.",
   ])("keeps unsupported model text local: %s", async text => {
-    vi.mocked(llm).mockResolvedValue({ ok: true, data: text });
+    vi.mocked(inferLocalText).mockResolvedValue(text);
     expect(await modelGateway.inferGeneralAlexa?.("Pourquoi le ciel est-il bleu ?")).toMatchObject({ ok: false, code: "invalid-response", localFallback: true });
   });
-  it("fails closed when an unexpected provider payload replaces text", async () => {
+  it("fails closed when an impossible local payload replaces text", async () => {
     const unexpected: unknown = { text: publicAnswer };
-    vi.mocked(llm).mockResolvedValue({ ok: true, data: unexpected as string });
-    expect(await modelGateway.inferGeneralAlexa?.("Pourquoi le ciel est-il bleu ?")).toMatchObject({ ok: false, code: "invalid-response" });
+    vi.mocked(inferLocalText).mockResolvedValue(unexpected as string);
+    expect(await modelGateway.inferGeneralAlexa?.("Pourquoi le ciel est-il bleu ?")).toMatchObject({ ok: false, code: "unavailable" });
   });
 });
 
-describe("bounded free-provider outcomes", () => {
+describe("bounded local engine outcomes", () => {
   it("returns unavailable without fabricating an answer when the pool is cold", async () => {
-    vi.mocked(llm).mockResolvedValue({ ok: false, error: { code: "indisponible", message: "unavailable", diagnostic: "MODEL_UNAVAILABLE", tentatives: [] } });
+    vi.mocked(inferLocalText).mockRejectedValue(new Error("LocalModelUnavailable"));
     expect(await modelGateway.inferGeneralAlexa?.("Pourquoi le ciel est-il bleu ?")).toMatchObject({ ok: false, code: "unavailable" });
   });
-  it("returns privacy when the existing gateway blocks the request", async () => {
-    vi.mocked(llm).mockResolvedValue({ ok: false, error: { code: "frontiere", message: "blocked" } });
-    expect(await modelGateway.inferGeneralAlexa?.("Pourquoi le ciel est-il bleu ?")).toMatchObject({ ok: false, code: "privacy" });
+  it("returns unavailable when the local engine refuses execution", async () => {
+    vi.mocked(inferLocalText).mockRejectedValue(new Error("LocalModelUnavailable"));
+    expect(await modelGateway.inferGeneralAlexa?.("Pourquoi le ciel est-il bleu ?")).toMatchObject({ ok: false, code: "unavailable" });
   });
   it("does not call a provider for an already cancelled turn", async () => {
     const controller = new AbortController(); controller.abort();
     expect(await modelGateway.inferGeneralAlexa?.("Pourquoi le ciel est-il bleu ?", { signal: controller.signal })).toMatchObject({ ok: false, code: "cancelled" });
-    expect(llm).not.toHaveBeenCalled();
+    expect(inferLocalText).not.toHaveBeenCalled();
   });
   it("does not publish a successful response after caller cancellation", async () => {
     const controller = new AbortController();
-    vi.mocked(llm).mockImplementation(async () => { controller.abort(); return { ok: true, data: publicAnswer }; });
+    vi.mocked(inferLocalText).mockImplementation(async () => { controller.abort(); return publicAnswer; });
     expect(await modelGateway.inferGeneralAlexa?.("Pourquoi le ciel est-il bleu ?", { signal: controller.signal })).toMatchObject({ ok: false, code: "cancelled" });
-    expect(vi.mocked(llm).mock.calls[0]![0].signal).toBe(controller.signal);
+    expect(vi.mocked(inferLocalText).mock.calls[0]![1]?.signal).toBe(controller.signal);
   });
   it("single-model: a Gemini key never diverts the public question to another provider", async () => {
     vi.stubEnv("GEMINI_API_KEY", "synthetic-key");
-    expect(await modelGateway.inferGeneralAlexa?.("Pourquoi le ciel est-il bleu ?")).toEqual({ ok: true, text: publicAnswer, model: "qualified/general:free" });
-    expect(llm).toHaveBeenCalledOnce();
+    expect(await modelGateway.inferGeneralAlexa?.("Pourquoi le ciel est-il bleu ?")).toEqual({ ok: true, text: publicAnswer, model: "MiniCPM-V-4_7-1B-Q4_K_M.gguf" });
+    expect(inferLocalText).toHaveBeenCalledOnce();
   });
   it("single-model: one failed primary attempt stays unavailable without a second provider", async () => {
     vi.stubEnv("GEMINI_API_KEY", "synthetic-key");
-    vi.mocked(llm).mockResolvedValue({ ok: false, error: { code: "indisponible", message: "quota", diagnostic: "MODEL_RATE_LIMIT",
-      tentatives: [{ model: "qwen/qwen3.7-flash", code: "MODEL_RATE_LIMIT", ms: 1000 }] } });
+    vi.mocked(inferLocalText).mockRejectedValue(new Error("LocalModelUnavailable"));
     expect(await modelGateway.inferGeneralAlexa?.("Pourquoi le ciel est-il bleu ?", { timeoutMs: 1500 })).toMatchObject({ ok: false, code: "unavailable" });
-    expect(llm).toHaveBeenCalledOnce();
+    expect(inferLocalText).toHaveBeenCalledOnce();
   });
   it("single-model: no second provider starts when the primary fails, whatever the deadline", async () => {
     vi.stubEnv("GEMINI_API_KEY", "synthetic-key");
-    vi.mocked(llm).mockResolvedValue({ ok: false, error: { code: "indisponible", message: "quota", diagnostic: "MODEL_RATE_LIMIT",
-      tentatives: [{ model: "qwen/qwen3.7-flash", code: "MODEL_RATE_LIMIT", ms: 2000 }] } });
+    vi.mocked(inferLocalText).mockRejectedValue(new Error("LocalModelUnavailable"));
     expect(await modelGateway.inferGeneralAlexa?.("Pourquoi le ciel est-il bleu ?", { timeoutMs: 1500 })).toMatchObject({ ok: false, code: "unavailable" });
-    expect(llm).toHaveBeenCalledOnce();
+    expect(inferLocalText).toHaveBeenCalledOnce();
   });
   it("does not retry a policy rejection on a different provider", async () => {
     vi.stubEnv("GEMINI_API_KEY", "synthetic-key");
-    vi.mocked(llm).mockResolvedValue({ ok: false, error: { code: "frontiere", message: "policy", diagnostic: "POLICY_REJECTION",
-      tentatives: [{ model: "qwen/qwen3.7-flash", code: "POLICY_REJECTION", ms: 1 }] } });
-    expect(await modelGateway.inferGeneralAlexa?.("Pourquoi le ciel est-il bleu ?")).toMatchObject({ ok: false, code: "privacy" });
-    expect(llm).toHaveBeenCalledOnce();
+    vi.mocked(inferLocalText).mockRejectedValue(new Error("LocalModelUnavailable"));
+    expect(await modelGateway.inferGeneralAlexa?.("Pourquoi le ciel est-il bleu ?")).toMatchObject({ ok: false, code: "unavailable" });
+    expect(inferLocalText).toHaveBeenCalledOnce();
   });
   it("returns an unavailable outcome rather than throwing provider failures into the turn", async () => {
-    vi.mocked(llm).mockRejectedValue(new Error("synthetic transport failure"));
+    vi.mocked(inferLocalText).mockRejectedValue(new Error("synthetic transport failure"));
     expect(await modelGateway.inferGeneralAlexa?.("Pourquoi le ciel est-il bleu ?")).toMatchObject({ ok: false, code: "unavailable" });
   });
   it("caps a caller supplied duration and handles invalid numeric durations", async () => {
     expect(await modelGateway.inferGeneralAlexa?.("Pourquoi le ciel est-il bleu ?", { timeoutMs: 90000 })).toMatchObject({ ok: true });
-    expect(vi.mocked(llm).mock.calls[0]![0].timeoutMs).toBe(15000);
+    expect(vi.mocked(inferLocalText).mock.calls[0]![1]?.timeoutMs).toBe(60000);
     expect(await modelGateway.inferGeneralAlexa?.("Pourquoi le ciel est-il bleu ?", { timeoutMs: Number.NaN })).toMatchObject({ ok: true });
-    expect(vi.mocked(llm).mock.calls[1]![0].timeoutMs).toBe(15000);
+    expect(vi.mocked(inferLocalText).mock.calls[1]![1]?.timeoutMs).toBe(30000);
   });
 });

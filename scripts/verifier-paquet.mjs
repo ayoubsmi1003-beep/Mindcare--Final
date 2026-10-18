@@ -49,6 +49,7 @@ import { createHash } from "node:crypto";
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { auditElectronModules, readAsarModules, readAsarPackage, auditServerDependencies } from "./lib/electron-runtime-audit.mjs";
 
 const RACINE = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const CIBLE = path.resolve(process.argv[2] ?? path.join(RACINE, "dist", "win-unpacked"));
@@ -112,6 +113,19 @@ const inventaire = [...surDisque, ...dansAsar];
 console.log(`[paquet] ${CIBLE}`);
 console.log(`[paquet] ${surDisque.length} fichiers sur disque, ${dansAsar.length} dans app.asar`);
 
+// Vérifier les imports effectivement émis, avant toute installation.
+if (existsSync(cheminAsar)) {
+  try {
+    const erreurs = auditElectronModules(readAsarModules(cheminAsar));
+    if (erreurs.length > 0) refuser("imports Electron non résolus ou hors allowlist :", erreurs);
+    if (readAsarPackage(cheminAsar).mindcareDeployment !== "clinic-auto") refuser("métadonnées de connexion automatique absentes :", ["clinic-auto requis"]);
+  } catch {
+    refuser("archive Electron illisible :", ["resources/app.asar"]);
+  }
+}
+const erreursRuntime = auditServerDependencies(path.join(CIBLE, "resources", "serveur"));
+if (erreursRuntime.length > 0) refuser("dépendances du serveur non chargeables :", erreursRuntime);
+
 // ── 1. Ce qui NE DOIT PAS être là ───────────────────────────────────────────
 
 /**
@@ -165,6 +179,7 @@ function dependanceVoixEpinglee(relatif) {
 }
 
 const INTERDITS = [
+  [/\.(pfx|p12|dpapi|key|env)$/i, "un secret privé ou une configuration de machine", "partout"],
   [/(^|\/)\.env($|\.)/, "un fichier .env", "partout"],
   [/(^|\/)\.cache\//, "un cache de développement ou de qualification", "partout"],
   [/(^|\/)\.git\//, "des métadonnées git", "partout"],
@@ -205,13 +220,16 @@ for (const [motif, quoi, portee] of INTERDITS) {
 // qui ne porte aucun des préfixes d'outillage connus ci-dessus.
 const SCRIPTS_LIVRES = new Set([
   "native-voice-worker.py", "garde-origine.mjs", "verifier-base.mjs", "sauvegarde.mjs",
-  "lib/dburl.mjs", "lib/base-locale.mjs",
+  "lib/dburl.mjs", "lib/pg-env.mjs", "lib/base-locale.mjs", "lib/alexa-migrations.mjs",
 ]);
 const scriptsNonLivres = inventaire.filter((f) => {
   const relatif = /^resources\/serveur\/scripts\/(.+)$/.exec(f)?.[1];
   return relatif !== undefined && !SCRIPTS_LIVRES.has(relatif);
 });
 if (scriptsNonLivres.length > 0) refuser("des scripts hors de la liste livrée sont empaquetés :", scriptsNonLivres.slice(0, 10));
+const FICHIERS_CABINET = new Set(["configurer-cabinet.ps1", "lancer-serveur-cabinet.cmd", "deploiement-cabinet.md", "purge-synthetic.sql", "messages-fr.json"]);
+const cabinetNonLivres = surDisque.filter(f => f.startsWith("resources/cabinet/") && !FICHIERS_CABINET.has(f.slice("resources/cabinet/".length)));
+if (cabinetNonLivres.length > 0) refuser("ressources cabinet non autorisées :", cabinetNonLivres);
 
 // ── 2. Ce qui DOIT être là ──────────────────────────────────────────────────
 //
@@ -224,11 +242,21 @@ const REQUIS = [
   ["resources/app.asar", "le paquet applicatif"],
   ["app.asar!/dist-electron/main/index.js", "le processus principal"],
   ["app.asar!/dist-electron/preload/index.cjs", "le preload"],
+  ["app.asar!/dist-electron/main/serveur-cabinet.js", "le serveur cabinet indépendant"],
+  ["app.asar!/dist-electron/main/bureau-cabinet.js", "la connexion automatique"],
+  ["app.asar!/dist-electron/main/decouverte-cabinet.js", "la découverte locale"],
+  ["app.asar!/dist-electron/preload/cabinet.cjs", "le pont de première connexion"],
+  ["resources/cabinet/purge-synthetic.sql", "la finalisation sans fixtures d'une base neuve"],
+  ["resources/cabinet/messages-fr.json", "les messages français de connexion"],
+  ["resources/cabinet/configurer-cabinet.ps1", "la configuration des postes du cabinet"],
+  ["resources/cabinet/lancer-serveur-cabinet.cmd", "le lancement par la tâche Windows"],
+  ["resources/cabinet/deploiement-cabinet.md", "la procédure de déploiement"],
   ["resources/serveur/server.js", "le backend Next.js autonome"],
   ["resources/serveur/scripts/verifier-base.mjs", "le contrôle de schéma au démarrage"],
   ["resources/serveur/scripts/lib/base-locale.mjs", "le cycle de vie de la base (dépendance de verifier-base)"],
   ["resources/serveur/scripts/garde-origine.mjs", "la garde de port"],
   ["resources/serveur/scripts/sauvegarde.mjs", "la sauvegarde"],
+  ["resources/serveur/scripts/lib/pg-env.mjs", "la configuration libpq sans identifiants en arguments"],
   ["resources/serveur/supabase/bootstrap/010_app_role.sql", "le bootstrap du rôle applicatif"],
   ["resources/pgsql/bin/initdb.exe", "les binaires PostgreSQL empaquetés"],
   ["resources/pgsql/lib/vector.dll", "l'extension pgvector (M07, RAG)"],
@@ -256,11 +284,17 @@ if (migrations.length === 0) {
   refuser("aucune migration empaquetée :", ["resources/serveur/supabase/migrations/ est vide"]);
 }
 
+// L'installateur commun ne transporte aucune base clinique.
+const forbiddenSnapshots = surDisque.filter(f => f.startsWith('resources/snapshot/'));
+if (forbiddenSnapshots.length) refuser('Une base clinique est incluse dans le paquet commun :', forbiddenSnapshots);
+
 // ── 3. Aucune URL PostgreSQL porteuse d'identifiants ────────────────────────
 
 const URL_AVEC_IDENTIFIANTS = /postgres(?:ql)?:\/\/[^\s'"`$;]+:[^\s'"`$;@]+@/;
 const porteurs = [];
 for (const relatif of surDisque) {
+  // `base.dump` est un binaire vérifié par sha256 (§2b), pas du texte à scanner.
+  if (relatif === "resources/snapshot/base.dump") continue;
   const complet = path.join(CIBLE, relatif);
   if (statSync(complet).size > 64 * 1024 * 1024) continue; // binaires PostgreSQL
   const contenu = readFileSync(complet).toString("latin1");
@@ -331,3 +365,4 @@ if (!existsSync(dirExtensionSource)) {
 
 if (echecs === 0) console.log("✅ paquet conforme à la liste blanche du plan (§I)");
 process.exit(echecs === 0 ? 0 : 1);
+

@@ -31,6 +31,9 @@
 
 import { z } from "zod";
 
+import { getDraft } from "./document-drafts";
+import { getPatient } from "./patients";
+import { documentsEditor,documentLabels } from "@/i18n/documents-editor";
 import { getAppointment } from "./appointments";
 import { getCurrentUser } from "./authz";
 import { getConsultation } from "./consultations";
@@ -564,7 +567,16 @@ const preparerBrouillonDocument: CapaciteEcriture<ArgsBrouillon> = {
  * pas une lacune. `scripts/eval-registre-sans-suppression.mjs` echoue si un nom
  * de suppression apparait ici.
  */
+
+const editableDraft:CapaciteEcriture<{patientId:string;documentType:"bonne_sante_mentale"|"suivi_medical"|"certificat_medical"|"justification";variables:string}>={
+ nom:"create_editable_document_draft",description:documentsEditor.draft,critique:true,
+ entree:z.object({patientId:Guid,documentType:z.enum(["bonne_sante_mentale","suivi_medical","certificat_medical","justification"]),variables:z.string().max(500).refine(v=>{try{return z.record(z.string().max(80),z.string().max(300)).safeParse(JSON.parse(v)).success;}catch{return false;}})}).strict(),
+ precondition:async args=>{const p=await getPatient(args.patientId);return p.ok&&p.data?ok(undefined):err({code:"introuvable",message:fr.erreurs.introuvable});},
+ carte:(args,carte)=>({titre:fr.jarvis.carte.creerBrouillonDocument,champs:[{libelle:fr.jarvis.carte.champPatient,valeur:carte.rendre(args.patientId)},{libelle:fr.jarvis.carte.champTypeDocument,valeur:documentLabels[args.documentType]},{libelle:documentsEditor.draft,valeur:args.variables}]}),
+ verifier:async(args,id)=>{const r=await getDraft(id);return r.ok&&r.data&&r.data.id===id&&r.data.patientId===args.patientId&&r.data.kind===args.documentType&&!r.data.issuedDocumentId&&JSON.stringify(Object.entries(r.data.variables).sort())===JSON.stringify(Object.entries(JSON.parse(args.variables) as Record<string,string>).sort())?ok(undefined):err({code:"regle-metier",message:fr.jarvis.ecriture.nonVerifiee});}
+};
 const ECRITURES: readonly CapaciteEcritureEnregistree[] = [
+  enregistrer(editableDraft),
   enregistrer(creerRendezVous),
   enregistrer(decalerRendezVous),
   enregistrer(annulerRendezVous),

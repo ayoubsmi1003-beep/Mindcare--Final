@@ -1,0 +1,303 @@
+import { summarizeClinicalContext, relativeClinicalDate } from "./clinical-narrative";
+import { narrativeCopy } from "@/i18n/alexa-narrative";
+import {requestsPatientScope} from "@/shared/alexa/request-plan";
+import {frenchRequestAdmission} from "@/shared/alexa/request-contract";
+import {readConsultation} from "./consultation-reads";
+import {inferNativeGeneralAlexa,canAnswerGeneralAlexa} from "./model-gateway";
+import {readApplication,readFinanceView,readAppointment} from "./application-reads";
+import {notePageResult} from "./note-pages";
+import {noteReadQuerySchema,noteCursorSchema,noteContinuation} from "@/shared/alexa/note-query";
+import {clinicalSectionComplete} from "./clinical-coverage";
+import {alexaRecordCopy} from "@/i18n/alexa-records";
+import {documentText,issuedDocumentText} from './document-excerpt';
+import {documentPage} from './document-page';
+import { z } from "zod";
+import type { DbPort, RpcArgs } from "@/services/db/port";
+import type { ClientSql } from "@/server/jarvis/client-sql";
+import type { TurnInput, AlexaSource, AlexaProposal } from "@/shared/alexa/turn";
+import { ALEXA_AGENT_LANGUAGE,cabinetFinanceModes,AgentReadError,patientListContinuation,patientMetricConditions,agentSchemas, conditionKey, type AgentCall, type AgentResult } from "@/shared/alexa/agent";
+import { agentCopy } from "@/i18n/alexa-agent";
+import { resolvePatient } from "./patient-resolver";
+import { buildClinicalContext } from "./clinical-context";
+import { localResponse } from "./local-response";
+import { readKnowledge } from "./knowledge-adapter";
+import { resolveAgentPeriod,explicitAgentPeriod } from "./agent-period";
+import {parsePatientMention} from "./patient-mention";
+import {resolveListedReference} from "./conversation-state";
+
+const count = z.number().int().nonnegative().safe();
+const patientRow = z.object({id:z.uuid(),first_name:z.string().max(200),last_name:z.string().max(200),missing:z.array(z.enum(["phone","identity_card","birth_date","sex"])),completed_consultations:count.nullable(),outstanding_balance:count.nullable()}).strict();
+const patientResult = z.object({total:count,rows:z.array(patientRow).max(20),metrics:z.record(z.string(),count),unknownAge:count,revision:z.string().regex(/^[a-f0-9]{32}$/),asOf:z.string(),conditions:z.array(agentSchemas.declare_request.shape.parts.element.shape.conditions.element),complete:z.literal(true),offset:count}).strict();
+const recordRow = z.object({id:z.uuid(),patientId:z.uuid().nullable(),label:z.string().max(500),at:z.string().nullable(),status:z.string().max(50),amount:count.nullable()}).strict();
+const recordResult = z.object({total:count,rows:z.array(recordRow).max(20),totals:z.record(z.string(),count),complete:z.literal(true),offset:count}).strict();
+
+/** Only this closed catalogue reaches server-side, actor-bound SQL doors. No browser service imports. */
+export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:ClientSql) {
+ const language=ALEXA_AGENT_LANGUAGE, copy=agentCopy[language],recordsCopy=alexaRecordCopy[language];
+ const labels:Readonly<Record<string,string>>=recordsCopy.labels;
+ const label=(value:string)=>labels[value]??value;
+ const failure=(call:AgentCall,status:AgentResult["status"],text:string,code:string):AgentResult=>({callId:call.id,status,complete:false,text,evidence:[],conditionKeys:[],error:{code,retryable:false}});
+ async function rpc(name:string,args:RpcArgs,signal:AbortSignal,allowEmpty=false):Promise<unknown>{
+  signal.throwIfAborted(); let result=await db.rpc<unknown>(name,args); signal.throwIfAborted();
+  if(!result.ok&&["40001","40P01","08006","08003"].includes(result.error.technical??"")&&!signal.aborted){result=await db.rpc<unknown>(name,args);signal.throwIfAborted();}
+  if(!result.ok)throw new AgentReadError(result.error.technical==="42501"?"permission":result.error.technical==="57014"?"timeout":result.error.technical==="40001"?"changed":"database");
+  if(allowEmpty&&result.data.length===0)return null;
+  if(result.data.length!==1)throw new AgentReadError("malformed");
+  return result.data[0];
+ }
+ return async function execute(call:AgentCall,asOf:string,prior:readonly AgentResult[],signal:AbortSignal,original?:string):Promise<AgentResult>{
+  const schema=agentSchemas[call.name as keyof typeof agentSchemas];
+  if(!schema||!schema.safeParse(call.args).success)return failure(call,"error",copy.unavailable,"invalid");
+  const a=call.args;
+  const result:AgentResult={callId:call.id,status:"ok",complete:true,text:"",evidence:[],conditionKeys:[]};
+  if(call.name==="query_patients"){
+   const parsed=agentSchemas.query_patients.parse(a),{partIds:_ids,reusePrevious,...spec}=parsed;
+   // Follow-up retains the exact filter, time anchor and revision, never an unfiltered page.
+   const previous=[...prior].reverse().find(r=>["ok","empty"].includes(r.status)&&r.data&&typeof r.data==="object"&&"patientQuery" in r.data)?.data as {patientQuery?:typeof spec;asOf?:string;revision?:string;offset?:number;rows?:unknown[]}|undefined;
+   const implicitList=patientListContinuation(input.text)&&!!previous?.patientQuery;
+   if(reusePrevious&&!previous?.patientQuery)return failure(call,"needs_input",copy.missing,"previous-query-unavailable");
+   if((reusePrevious||implicitList)&&previous?.patientQuery){
+    if(previous.patientQuery.mode==="metrics"&&(previous.patientQuery.metrics?.length??0)>1 )return failure(call,"needs_input",copy.missing,"ambiguous-metric");
+    const mode=implicitList?"list":parsed.mode;
+    const nextPage=mode==="list"&&previous.patientQuery.mode==="list"?(previous.offset??0)+(previous.rows?.length??0):0;
+    const nextOffset=implicitList?nextPage:parsed.offset??nextPage;
+    for(const key of Object.keys(spec))delete (spec as Record<string,unknown>)[key];
+    Object.assign(spec,previous.patientQuery,{mode,offset:nextOffset,...(previous.revision?{revision:previous.revision}:{})});
+    if(mode!=="metrics"){
+      spec.filters=[...(previous.patientQuery.filters??[]),...(previous.patientQuery.mode==="metrics"?patientMetricConditions[previous.patientQuery.metrics![0]!]:[])];delete spec.metrics;
+    }
+    asOf=previous.asOf??asOf;
+   }
+   // Review of an agenda result is explicitly scoped to the returned patient references.
+   if(parsed.mode==="review"&&!parsed.patientIds){
+    const agenda=[...prior].reverse().find(r=>r.data&&typeof r.data==="object"&&"agendaPatientIds" in r.data)?.data as {agendaPatientIds:string[];hasMore:boolean;offset?:number}|undefined;
+    if(!agenda||agenda.hasMore||(agenda.offset??0)!==0)return failure(call,"needs_input",recordsCopy.agendaCoverage,"agenda-coverage");
+    spec.patientIds=agenda.agendaPatientIds; spec.filters=[...(spec.filters??[]),{field:"administrative_incomplete",op:"eq",value:true}];
+   }
+   const raw=await rpc("search_patients",{p_spec:JSON.stringify(spec),p_as_of:asOf},signal);
+   const value=patientResult.parse(raw);
+   if(spec.metrics?.some(metric=>value.metrics[metric]===undefined))throw new AgentReadError("malformed");
+   if(value.rows.length>value.total||new Set(value.rows.map(r=>r.id)).size!==value.rows.length)throw new Error("InvalidResult");
+   result.data={...value,patientQuery:spec,hasMore:spec.mode!=="count"&&spec.mode!=="metrics"&&value.offset+value.rows.length<value.total};
+   result.conditionKeys=[...value.conditions.map(conditionKey),...(spec.metrics??[]).flatMap(m=>patientMetricConditions[m].map(conditionKey))];
+   result.evidence=value.rows.map(p=>({id:p.id,type:"patient",label:`${p.first_name} ${p.last_name}`}));
+   result.evidence.unshift({id:call.id,type:"query",label:recordsCopy.populations[spec.population??"active"]+" "+value.asOf,version:value.revision,provenance:{gate:"search_patients",asOf:value.asOf,total:value.total}});
+   const labels:Record<string,string>={phone:recordsCopy.phone,identity_card:recordsCopy.id_document_number,birth_date:recordsCopy.birth_date,sex:recordsCopy.sex};
+   result.text=spec.mode==="metrics"?Object.entries(value.metrics).map(([k,n])=>`${copy.metrics[k as keyof typeof copy.metrics]??k} : ${n}`).join("\n"):`${value.total} ${copy.count}`;
+   if(value.rows.length)result.text+="\n"+value.rows.map(p=>`${p.first_name} ${p.last_name}${p.outstanding_balance!==null?` — ${p.outstanding_balance} DZD`:""}${spec.mode==="review"?` — ${p.missing.map(f=>labels[f]).join(", ")}`:""}`).join("\n");
+   if(spec.mode==="review")result.text+=`\n${copy.fields}`;
+   result.text+=`\n${recordsCopy.populations[spec.population??"active"]} ${copy.definition.replace(/^Actifs visibles ; |^المرضى النشطون المتاحون؛ /u,"")}`;
+   if(spec.filters?.some(f=>f.field==="age"))result.text+=`\n${copy.unknownAge} : ${value.unknownAge}`;
+   if(spec.mode!=="count"&&spec.mode!=="metrics"&&value.offset+value.rows.length<value.total)result.text+=`\n${value.offset+1}–${value.offset+value.rows.length} / ${value.total}`;
+   if(!value.total)result.status="empty";
+   return result;
+  }
+  if(call.name==="answer_general"){
+   const question=String(a["question"]),normalize=(v:string)=>v.normalize("NFKC").toLocaleLowerCase().replace(/\s+/gu," ");
+   if(!normalize(input.text+" "+(original??"")).includes(normalize(question))||!canAnswerGeneralAlexa(question))return failure(call,"unsupported",copy.generalRestricted,"general-question-not-admitted");
+   const answer=await inferNativeGeneralAlexa(question,signal);
+   if(!answer.ok)return failure(call,"error",copy.modelUnavailable,"general-"+answer.code);
+   return {callId:call.id,status:"ok",complete:true,text:copy.generalIntro+"\n"+answer.text,data:{answer:answer.text},conditionKeys:[],evidence:[{id:call.id,type:"query",label:copy.generalSource,provenance:{gate:"local_model",provider:"local",model:answer.model}}]};
+  }
+  if(call.name==="query_app")return readApplication(call.id,String(a["view"]),rpc,signal);
+  let patientId:string|undefined;
+  const humanMention=parsePatientMention(input.text),humanPatient=!!input.patientName||humanMention.status!=='none';
+  const namedRecordScope=(humanPatient||requestsPatientScope(input.text))&&['query_consultations','query_documents','query_agenda','query_finance'].includes(call.name);
+  if(call.name==='query_finance'&&namedRecordScope&&cabinetFinanceModes.some(mode=>mode===a['mode']))return failure(call,'unsupported',copy.unsupported,'CabinetOverviewCannotIgnoreNamedPatient');
+  if(namedRecordScope||a["patientId"]||a["patientName"]||call.name==="get_patient_context"||call.name==="prepare_action"||(call.name==="navigate"&&a["target"]==="patient")){
+   const mention=parsePatientMention(input.text);
+   if(mention.status==="ambiguous")return failure(call,"needs_input",copy.patient,"patient-ambiguous");
+   const explicitName=input.patientName??(mention.status==="named"?mention.name:undefined);
+   const proposedName=explicitName??(typeof a["patientName"]==="string"?a["patientName"]:undefined);
+   const normalize=(text:string)=>text.normalize("NFKD").replace(/\p{M}/gu,"").toLocaleLowerCase();
+   if(proposedName&&!explicitName&&!normalize(input.text+" "+(original??"")).includes(normalize(proposedName)))return failure(call,"needs_input",copy.patient,"patient-reference-not-supplied");
+   const candidates=prior.flatMap(r=>r.data&&typeof r.data==="object"&&"candidates" in r.data?z.array(z.object({patientId:z.uuid(),label:z.string()})).safeParse(r.data.candidates).data??[]:[]);
+   const selected=resolveListedReference(input.text,candidates);
+   const proposedId=selected??(typeof a["patientId"]==="string"?a["patientId"]:input.appContext.patientId??undefined);
+   const known=proposedId&&(proposedId===input.appContext.patientId||proposedId===selected||input.text.includes(proposedId)||prior.some(r=>r.patientId===proposedId||r.evidence.some(e=>e.type==="patient"&&e.id===proposedId)));
+   if(!proposedName&&proposedId&&!known)return failure(call,"needs_input",copy.patient,"patient-reference-not-verified");
+   let resolutionFailure:AgentReadError|undefined;
+   const resolutionDb:Pick<DbPort,"rpc">={rpc:async<T>(name:string,args:RpcArgs)=>{
+    try{const response=await db.rpc<T>(name,args);if(!response.ok)resolutionFailure=new AgentReadError(response.error.technical==="42501"?"permission":response.error.technical==="57014"?"timeout":response.error.technical==="40001"?"changed":"database");return response;}
+    catch(error){resolutionFailure=new AgentReadError("database");throw error;}
+   }};
+   const resolved=await resolvePatient(resolutionDb,proposedName?{name:proposedName}:proposedId?{patientId:proposedId}:{},signal);
+   signal.throwIfAborted();if(resolutionFailure)throw resolutionFailure;
+   if(resolved.status!=="resolved"){
+    const missing=failure(call,"needs_input",copy.patient,"patient-unresolved");
+    if(resolved.status==="ambiguous") {missing.text+="\n"+resolved.candidates.map(p=>p.label).join("\n");missing.data={candidates:resolved.candidates};}
+    return missing;
+   }
+   patientId=resolved.patientId; result.patientId=patientId;
+  }
+  if(call.name==="get_patient_context"){
+   if(a["section"]==="notes"){
+    const {partIds:_parts,patientName:_name,patientId:_patient,count:_count,section:_section,reusePrevious,...query}=agentSchemas.get_patient_context.parse(a);
+    let spec=noteReadQuerySchema.parse({...query,patientId});
+    const previous=[...prior].reverse().find(r=>r.data&&typeof r.data==="object"&&"noteQuery" in r.data&&"next" in r.data&&r.data.next)?.data as {noteQuery?:unknown;next?:unknown;revision?:string;asOf?:string}|undefined;
+    if(reusePrevious||noteContinuation(input.text)){
+     if(!previous?.noteQuery||!previous.next)return failure(call,"needs_input",copy.noContinuation,"note-continuation-unavailable");
+     const saved=noteReadQuerySchema.parse(previous.noteQuery);if(saved.patientId!==patientId)throw new AgentReadError("permission");
+     spec=noteReadQuerySchema.parse({...saved,...noteCursorSchema.parse(previous.next),revision:previous.revision});asOf=z.iso.datetime({offset:true}).parse(previous.asOf);
+    }
+    if(spec.consultationId&&!input.text.includes(spec.consultationId)&&!input.appContext.page.includes(spec.consultationId)&&!prior.some(r=>r.evidence.some(e=>e.type==="consultation"&&e.id===spec.consultationId)))return failure(call,"needs_input",copy.missing,"consultation-reference-not-verified");
+    return notePageResult(await rpc("query_alexa_note_sections",{p_spec:JSON.stringify(spec),p_as_of:asOf},signal),call.id,spec,asOf);
+   }
+   if(a["section"]==="profile"){
+    const row=await rpc("get_patient",{p_id:patientId!},signal);
+    const text=z.string().nullable();
+    const p=z.object({id:z.uuid(),record_number:z.string(),first_name:z.string(),last_name:z.string(),birth_date:z.union([z.string(),z.date()]).nullable(),phone:text,phone_alt:text,id_document_number:text,id_document_issuer:text,sex:text,marital_status:text,address:text,emergency_contact:z.json(),notes_admin:text,is_active:z.boolean()}).parse(row);
+    const display=(value:unknown):string=>value instanceof Date?value.toISOString().slice(0,10):typeof value==="string"?label(value.trim()||recordsCopy.missing):recordsCopy.missing;
+    const emergency=z.object({name:text.nullish(),relation:text.nullish(),phone:text.nullish()}).safeParse(p.emergency_contact);
+    const contact=p.emergency_contact===null?recordsCopy.missing:emergency.success?Object.values(emergency.data).filter((value):value is string=>typeof value==="string"&&!!value.trim()).join(" · ")||recordsCopy.missing:JSON.stringify(p.emergency_contact);
+    result.data=p;result.text=p.first_name+" "+p.last_name+"\n"+(["record_number","birth_date","sex","marital_status","phone","phone_alt","address","id_document_number","id_document_issuer","notes_admin"] as const).map(key=>recordsCopy.profile[key]+" : "+display(p[key])).join("\n")+"\n"+recordsCopy.profile.emergency_contact+" : "+contact+"\n"+recordsCopy.profile.is_active+" : "+label(p.is_active?"active":"inactive");
+    result.evidence=[{id:p.id,type:"patient",label:`${p.first_name} ${p.last_name}`}];return result;
+   }
+   const authorizedContext=await buildClinicalContext(db,{patientId:patientId!},{count:typeof a["count"]==="number"?a["count"]:5},signal);
+   // These complete recorded arrays are already authorized by the clinical gate. This projection changes no permissions.
+   const context={...authorizedContext,diagnoses:authorizedContext.diagnoses.filter(d=>(a['diagnosisState']!=='active'||d.resolvedAt===null)&&(a['diagnosisState']!=='resolved'||d.resolvedAt!==null)&&(a['diagnosisRole']!=='primary'||d.primary)&&(a['diagnosisRole']!=='secondary'||!d.primary)),treatments:{...authorizedContext.treatments,current:authorizedContext.treatments.current.filter(t=>!a['treatmentState']||a['treatmentState']==='all'||t.status===a['treatmentState'])}};
+   if(a['treatmentState']&&a['treatmentState']!=='all'){const ids=new Set(context.treatments.current.map(t=>t.id));context.treatments.history=context.treatments.history.filter(h=>ids.has(h.treatmentId));}
+   const section=typeof a["section"]==="string"?a["section"]:"history";
+   const intent=section==="treatments"?"treatments":section==="diagnoses"?"diagnoses":section==="scales"?"scales":section==="current"?"current_consultation":"history";
+   const intents=section==="summary"?["diagnoses","treatments","scales","current_consultation","history"] as const:[intent] as const;
+   const sentences=intents.flatMap(selected=>localResponse(context,{intent:selected,count:context.consultations.length||1,language},[]));
+   const common={patientId:context.patientId,sourceRevision:context.sourceRevision};
+   result.data=section==="summary"?{...common,summary:{diagnoses:context.diagnoses,treatments:context.treatments,scales:context.scales,currentConsultation:context.currentConsultation??null,consultations:context.consultations,coverage:context.coverage}}:section==="diagnoses"?{...common,diagnoses:context.diagnoses}:section==="scales"?{...common,scales:context.scales}:section==="treatments"?{...common,treatments:context.treatments}:section==="current"?{...common,currentConsultation:context.currentConsultation??null}:{...common,consultations:context.consultations,coverage:context.coverage};
+   const evidence=new Map(sentences.flatMap(s=>s.sources).map(source=>[JSON.stringify([source.type,source.id,source.version]),source]));
+   result.evidence=[{id:call.id,type:"query",label:copy.clinicalRead,version:context.sourceRevision,provenance:{gate:"get_alexa_clinical_context",section,...(typeof a['diagnosisState']==='string'?{diagnosisState:a['diagnosisState']}:{}),...(typeof a['diagnosisRole']==='string'?{diagnosisRole:a['diagnosisRole']}:{}),...(typeof a['treatmentState']==='string'?{treatmentState:a['treatmentState']}:{})}},...evidence.values()];
+   result.text=sentences.map(s=>s.text).join("\n");
+   if(section === "summary") {
+    const narrative = await summarizeClinicalContext(context, signal);
+    result.text = narrative.text + (narrative.complete ? "" : " " + narrativeCopy.limited);
+    const latest = context.consultations[0];
+    if (latest && !/\b(?:date|quand|exact)\b/iu.test(input.text)) result.text += " " + narrativeCopy.lastVisit(relativeClinicalDate(latest.startedAt, asOf));
+    result.presentation = "inference";
+    if (!narrative.complete) { result.complete=false; result.status="partial"; return result; }
+   }
+   result.complete=section==="summary"?["history","treatments","current"].every(selected=>clinicalSectionComplete(context,selected)):clinicalSectionComplete(context,section);result.status=result.complete?"ok":"partial";return result;
+  }
+  if(call.name==="navigate"){
+   const target=a["target"] as "patient"|"agenda"|"patients"|"dashboard";
+   result.navigation=target==="patient"?{target,patientId:patientId!}:{target};result.text=copy.navigationReady;return result;
+  }
+  if(call.name==="search_knowledge"){
+   const found=await readKnowledge(knowledge,String(a["query"]),signal);
+   result.complete=found.etat==="ok";result.status=found.etat==="panne"?"error":found.etat==="sans-preuve"?"empty":found.etat==="faible"?"partial":"ok";
+   result.data=found;result.evidence=found.preuves.map(p=>({id:p.chunkId,type:"knowledge",label:`${p.titre} — ${p.section}`,version:p.version}));
+   result.text=found.preuves.map(p=>`${p.titre} — ${p.section}\n${p.extrait}`).join("\n")||copy.unsupported;return result;
+  }
+  if(call.name==="prepare_action"){
+   const {action,...slots}=agentSchemas.prepare_action.parse(a); const args:AlexaProposal["args"]={};
+   if(action==="create_appointment") {if(!slots.startsAt||!slots.durationMinutes)return failure(call,"needs_input",copy.date,"slots");Object.assign(args,{patientId:patientId!,startsAt:slots.startsAt,durationMinutes:slots.durationMinutes});}
+   else if(action==="create_editable_document_draft") {if(!slots.documentType)return failure(call,"needs_input",copy.type,"slots");Object.assign(args,{patientId:patientId!,documentType:slots.documentType,variables:JSON.stringify(slots.variables??{})});}
+   else if(["reschedule_appointment","cancel_appointment","mark_patient_arrived"].includes(action)){
+    if(!slots.appointmentId)return failure(call,"needs_input",copy.missing,"slots");
+    const p=z.object({id:z.uuid(),patient_id:z.uuid()}).parse(await rpc("get_appointment",{p_id:slots.appointmentId},signal));
+    if(p.patient_id!==patientId)throw new Error("ScopeChanged"); args["appointmentId"]=p.id;
+    if(action==="reschedule_appointment"){if(!slots.startsAt)return failure(call,"needs_input",copy.date,"slots");args["nouveauDebut"]=slots.startsAt;if(slots.durationMinutes)args["nouvelleDureeMinutes"]=slots.durationMinutes;}
+    if(action==="cancel_appointment"){if(!slots.reason)return failure(call,"needs_input",copy.missing,"slots");args["motif"]=slots.reason;}
+   }else{
+    if(!slots.consultationId)return failure(call,"needs_input",copy.missing,"slots");
+    const c=z.object({id:z.uuid(),patient_id:z.uuid()}).parse(await rpc("get_consultation",{p_id:slots.consultationId},signal));
+    if(c.patient_id!==patientId)throw new Error("ScopeChanged");args["consultationId"]=c.id;
+    if(action==="set_consultation_price"){if(slots.amountDzd===undefined)return failure(call,"needs_input",copy.missing,"slots");args["amountDzd"]=slots.amountDzd;}
+    else{const p=z.object({payment_id:z.uuid()}).parse(await rpc("get_consultation_payment",{p_consultation_id:c.id},signal));if(slots.paymentId&&slots.paymentId!==p.payment_id)throw new Error("ScopeChanged");args["paymentId"]=p.payment_id;}
+   }
+   result.proposal={tool:action,args,actionId:input.clientTurnId};result.text=copy.confirmation;return result;
+  }
+  if(call.name==="query_consultations"&&a["view"]){
+   const spec=agentSchemas.query_consultations.parse(a);
+   if(spec.reusePrevious){
+    const saved=[...prior].reverse().find(r=>r.data&&typeof r.data==="object"&&"consultationQuery" in r.data&&"nextTextOffset" in r.data&&typeof r.data.nextTextOffset==="number")?.data as {consultationQuery?:unknown;asOf?:string;nextTextOffset?:number;revision?:string}|undefined;
+    if(!saved||saved.nextTextOffset===undefined)return failure(call,"needs_input",copy.missing,"analysis-continuation-unavailable");
+    const query=agentSchemas.query_consultations.parse({...saved.consultationQuery as object,partIds:["continuation"]});
+    if(query.view!=="analysis"||!query.consultationId)throw new AgentReadError("malformed");
+    Object.assign(spec,query,{textOffset:saved.nextTextOffset,revision:saved.revision});asOf=z.iso.datetime({offset:true}).parse(saved.asOf);
+   }
+   if(!spec.consultationId)return failure(call,"needs_input",copy.missing,"consultation-reference-not-verified");
+   const id=spec.consultationId;
+   if(!input.text.includes(id)&&!input.appContext.page.includes(id)&&!prior.some(r=>r.evidence.some(e=>e.type==="consultation"&&e.id===id)))return failure(call,"needs_input",copy.missing,"consultation-reference-not-verified");
+   const result=await readConsultation(call.id,id,spec.view!,patientId??input.appContext.patientId??undefined,spec.textOffset??0,spec.revision,rpc,signal);
+   if(result.data&&typeof result.data==="object")result.data={...result.data,asOf};return result;
+  }
+  if(call.name==="query_agenda"&&typeof a["appointmentId"]==="string"){
+   const id=a["appointmentId"];if(!input.text.includes(id)&&!prior.some(r=>r.evidence.some(e=>e.type==="appointment"&&e.id===id)))return failure(call,"needs_input",copy.missing,"appointment-reference-not-verified");
+   return readAppointment(call.id,id,patientId,rpc,signal);
+  }
+  if(["query_agenda","query_consultations","query_finance","query_documents"].includes(call.name)){
+   const {partIds:_parts,patientName:_name,patientId:_patient,...spec}=a;
+   if(call.name==='query_finance'&&spec['reusePrevious']){
+    const saved=[...prior].reverse().find(r=>r.data&&typeof r.data==='object'&&'financeQuery' in r.data&&'nextOffset' in r.data)?.data as {financeQuery?:unknown;nextOffset?:number;revision?:string;asOf?:string}|undefined;
+    if(!saved||saved.nextOffset===undefined)return failure(call,'needs_input',copy.noContinuation,'finance-continuation-unavailable');
+    const query=agentSchemas.query_finance.parse({...saved.financeQuery as object,partIds:['continuation'],offset:saved.nextOffset,revision:saved.revision});
+    if(query.mode!=='calendar'||!query.from||!query.to||!saved.asOf||!saved.revision)throw new AgentReadError('malformed');
+    for(const key of Object.keys(spec))delete spec[key];
+    Object.assign(spec,{mode:query.mode,from:query.from,to:query.to,offset:query.offset,revision:query.revision});asOf=z.iso.datetime({offset:true}).parse(saved.asOf);
+   }
+   if(call.name==='query_documents'&&spec['reusePrevious']){
+    const saved=[...prior].reverse().find(r=>r.data&&typeof r.data==='object'&&'documentQuery' in r.data&&'nextTextOffset' in r.data)?.data as {documentQuery?:unknown;nextTextOffset?:number;revision?:string;asOf?:string}|undefined;
+    if(!saved||saved.nextTextOffset===undefined)return failure(call,'needs_input',copy.noContinuation,'document-continuation-unavailable');
+    const query=agentSchemas.query_documents.parse({...saved.documentQuery as object,partIds:['continuation'],textOffset:saved.nextTextOffset,revision:saved.revision});
+    if(!(query.documentId||query.draftId)||!saved.asOf||!saved.revision)throw new AgentReadError('malformed');
+    for(const key of Object.keys(spec))delete spec[key];
+    const {partIds:_ids,...savedSpec}=query;Object.assign(spec,savedSpec);asOf=z.iso.datetime({offset:true}).parse(saved.asOf);
+   }
+   const textOffset=typeof spec['textOffset']==='number'?spec['textOffset']:0,documentRevision=typeof spec['revision']==='string'?spec['revision']:undefined;
+   if(call.name==='query_documents')for(const key of ['textOffset','revision','reusePrevious'])delete spec[key];
+   const documentId=typeof spec['draftId']==='string'?spec['draftId']:typeof spec['documentId']==='string'?spec['documentId']:undefined;
+   if(documentId&&!input.text.includes(documentId)&&!prior.some(r=>r.evidence.some(e=>e.type==='document'&&(e.id===documentId||e.provenance?.['draftId']===documentId))))return failure(call,'needs_input',copy.missing,'document-reference-not-verified');
+   if(spec['draftId'])spec['status']='draft';
+   if(patientId)spec["patientId"]=patientId;
+   if((!!spec["from"])!==(!!spec["to"]))return failure(call,"needs_input",copy.date,"period");
+   if(typeof spec["period"]==="string"){
+    const period=resolveAgentPeriod(spec["period"],asOf);
+    if(!period||!["jour","plage"].includes(period.type))return failure(call,"needs_input",copy.date,"period");
+    const first=period.type==="jour"?period.jour:period.type==="plage"?period.du:"";
+    const last=period.type==="jour"?period.jour:period.type==="plage"?period.au:"";
+    const next=new Date(`${last}T12:00:00Z`);next.setUTCDate(next.getUTCDate()+1);
+    const from=`${first}T00:00:00+01:00`,to=`${next.toISOString().slice(0,10)}T00:00:00+01:00`;
+    if(typeof spec["from"]==="string"&&typeof spec["to"]==="string"&&(Date.parse(spec["from"])!==Date.parse(from)||Date.parse(spec["to"])!==Date.parse(to)))return failure(call,"needs_input",recordsCopy.periodConflict,"period-conflict");
+    spec["from"]=from;spec["to"]=to;
+   }
+   delete spec["period"];
+   const requestedPeriod=explicitAgentPeriod(input.text,asOf);
+   const groundedDomain=call.name==='query_agenda'||(call.name==='query_finance'&&frenchRequestAdmission(input.text,false).tools?.includes('query_finance'));
+   if(requestedPeriod&&groundedDomain&&typeof spec['from']==='string'&&typeof spec['to']==='string'&&(Date.parse(spec['from'])!==Date.parse(requestedPeriod.from)||Date.parse(spec['to'])!==Date.parse(requestedPeriod.to)))return failure(call,'needs_input',recordsCopy.periodConflict,'requested-period-mismatch');
+   if((!!spec["from"])!==(!!spec["to"]))return failure(call,"needs_input",copy.date,"period");
+   if(call.name==="query_agenda"&&!spec["from"])return failure(call,"needs_input",copy.date,"period");
+   if(call.name==="query_finance"&&cabinetFinanceModes.some(mode=>mode===spec["mode"])){
+    if(typeof spec["from"]!=="string"||typeof spec["to"]!=="string")return failure(call,"needs_input",copy.date,"period");
+    const value=await readFinanceView(call.id,String(spec["mode"]),spec["from"],spec["to"],typeof spec["offset"]==="number"?spec["offset"]:0,(name,args,signal)=>rpc(name,args,signal,true),signal,typeof spec['revision']==='string'?spec['revision']:undefined);
+    if(spec['mode']==='calendar'&&value.data&&typeof value.data==='object')value.data={...value.data,financeQuery:{mode:'calendar',from:spec['from'],to:spec['to']},asOf};return value;
+   }
+   const value=recordResult.parse(await rpc("query_alexa_records",{p_domain:call.name.slice(6),p_spec:JSON.stringify(spec),p_as_of:asOf},signal));
+   result.data={...value,...(call.name==="query_agenda"?{agendaPatientIds:[...new Set(value.rows.flatMap(r=>r.patientId?[r.patientId]:[]))],hasMore:value.offset+value.rows.length<value.total}:{})};
+   result.evidence=value.rows.map((r):AlexaSource=>({id:call.name==="query_finance"&&r.patientId?r.patientId:r.id,type:call.name==="query_agenda"?"appointment":call.name==="query_documents"?"document":call.name==="query_finance"?"patient":"consultation",label:r.label,...(r.status==="draft"?{provenance:{draftId:r.id}}:call.name==="query_finance"?{provenance:{paymentId:r.id}}:{})}));
+   result.text=`${value.total} ${recordsCopy.count}\n`+value.rows.map(r=>`${label(r.label)} — ${r.at?new Date(r.at).toLocaleString(language==="fr"?"fr-DZ":"ar-DZ",{timeZone:"Africa/Algiers"}):""} — ${label(r.status)}${r.amount!==null?` — ${r.amount} DZD`:""}`).join("\n");
+   result.evidence.unshift({id:call.id,type:"query",label:recordsCopy.count+" : "+value.total,provenance:{gate:"query_alexa_records",domain:call.name.slice(6),asOf}});
+   if(Object.keys(value.totals).length)result.text+="\n"+Object.entries(value.totals).map(([k,n])=>`${label(k)} : ${n}`).join("\n");
+   if(call.name==="query_finance"&&(spec["from"]||spec["to"]))result.text+="\n"+(spec["state"]==="collected"?recordsCopy.dateCollected:recordsCopy.dateCreated);
+   if(value.offset+value.rows.length<value.total)result.text+=`\n${value.offset+1}–${value.offset+value.rows.length} / ${value.total}`;
+   result.status=value.total?"ok":"empty";
+   if(call.name==='query_documents'&&documentId&&value.rows.some(r=>r.id===documentId)){
+    let text:string,sourceRevision:string|number;
+    if(spec['draftId']){
+     const draft=z.object({id:z.uuid(),patientId:z.uuid(),content:z.unknown(),revision:count}).parse(await rpc('get_editable_document_draft',{p_id:documentId},signal));
+     if(draft.id!==documentId||(spec['patientId']&&draft.patientId!==spec['patientId']))throw new AgentReadError('permission');
+     text=documentText(draft.content);sourceRevision=draft.revision;
+    }else{
+     const doc=z.object({document_id:z.uuid(),patient_id:z.uuid(),rendered_html:z.string().max(200000).nullable().optional()}).parse(await rpc('get_document',{p_id:documentId},signal));
+     if(doc.document_id!==documentId||(spec['patientId']&&doc.patient_id!==spec['patientId']))throw new AgentReadError('permission');
+     text=issuedDocumentText(doc.rendered_html??'');sourceRevision=doc.rendered_html??'';
+    }
+    if(!text)return failure(call,'unsupported',copy.unsupported,'document-content-unavailable');
+    const page=documentPage(documentId,text,sourceRevision,spec,textOffset,documentRevision);
+    result.data={...value,...page,asOf};result.text+='\n« '+page.document.excerpt+' »\n'+page.coverage;result.complete=page.complete;
+    result.evidence=result.evidence.map(e=>e.type==='document'?{...e,version:page.revision}:e);
+    if(!result.complete)result.status='partial';
+   }
+   return result;
+  }
+  return failure(call,"unsupported",copy.unsupported,"unsupported");
+ };
+}

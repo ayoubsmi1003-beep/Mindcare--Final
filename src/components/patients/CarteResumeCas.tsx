@@ -26,6 +26,7 @@ import { Bouton } from "@/components/ui";
 import { ChampTexte } from "@/components/ui";
 import { PanneauInfo } from "@/components/ui";
 import { fr } from "@/i18n/fr";
+import { narrativeCopy } from "@/i18n/alexa-narrative";
 import { alexaSummary } from "@/i18n/alexa-summary";
 import {
   signalerResume,
@@ -122,7 +123,7 @@ export function CarteResumeCas({
               résumé » sur tous les dossiers jusqu'à leur régénération. */}
           {r.contenu.schema === 2 ? (
             <>
-              <p className="font-ui text-body leading-relaxed text-ink-700">{alexaSummary.structured}</p>
+              <p className="font-ui text-body leading-relaxed text-ink-700">{narrativeCopy.draft}</p>
               {r.contenu.apercu.contexte.length > 0 ? (
                 <BlocSection titre={fr.patients.resume.enBref}>
                   {r.contenu.apercu.contexte.map((item, idx) => (
@@ -133,6 +134,8 @@ export function CarteResumeCas({
               {/* L'APERÇU, EN PREMIER ET TOUJOURS. Il est composé en base, pas
                   rédigé par le modèle : c'est la seule section sur laquelle on
                   peut se fier sans rouvrir le dossier. */}
+              <details>
+                <summary className="cursor-pointer font-ui text-label text-ink-500">{narrativeCopy.details}</summary>
               <BlocSection titre={fr.patients.resume.apercu}>
                 <p className="font-ui text-body font-medium text-ink-900">
                   {[
@@ -193,7 +196,7 @@ export function CarteResumeCas({
                   ))}
                 </BlocSection>
               ) : null}
-
+              </details>
             </>
           ) : (
             <>

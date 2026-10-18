@@ -45,6 +45,7 @@ import { fileURLToPath } from "node:url";
 import pg from "pg";
 
 import { garantirBaseLocale } from "./lib/base-locale.mjs";
+import { requiredAlexaMigrations } from "./lib/alexa-migrations.mjs";
 
 const RACINE = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -169,7 +170,7 @@ if (url === undefined || url.trim() === "") {
 
 let attendues;
 try {
-  attendues = readdirSync(path.join(RACINE, "supabase", "migrations"))
+  attendues = requiredAlexaMigrations(readdirSync(path.join(RACINE, "supabase", "migrations")),process.env.ALEXA_NATIVE_AGENT_ENABLED==="1")
     .filter((f) => f.endsWith(".sql"))
     .map((f) => f.slice(0, -4))
     .sort();

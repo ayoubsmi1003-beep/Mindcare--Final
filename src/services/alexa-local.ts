@@ -10,6 +10,12 @@ import { abonnerPatientActif, patientActifCourant } from "./patient-actif";
 import { navigateAlexa } from "./alexa-navigation";
 import { dialogue } from "@/i18n/alexa-dialogue";
 import { planRequest } from "@/shared/alexa/request-plan";
+import type { AlexaProposal } from "@/shared/alexa/turn";
+
+const proposalSubscribers=new Set<(proposal:AlexaProposal,text:string,patientId:string|null,signal:AbortSignal)=>Promise<void>>();
+export function abonnerPropositionVoixLocale(handler:(proposal:AlexaProposal,text:string,patientId:string|null,signal:AbortSignal)=>Promise<void>):()=>void {
+  proposalSubscribers.add(handler);return ()=>{proposalSubscribers.delete(handler);};
+}
 
 const subscribers = new Set<(view: VueVoix) => void>();
 const turnSubscribers = new Set<(turn: TourVoix) => void>();
@@ -51,6 +57,7 @@ async function ouvrirCapture(receive: (frame: TrameVoix) => void): Promise<() =>
     context = new AudioContext({ latencyHint: "interactive" });
     const resume = context.resume();
     const prepared = controlWorker("prepare", AbortSignal.any([preparing.signal, AbortSignal.timeout(30_000)]));
+    const admission=await prepared; if(!admission.ok)throw new Error("voice-admission");
     const access = await prendreMicro(); if (!access.ok) throw new Error("microphone");
     if (released) { access.data.rendre(); throw new Error("cancelled"); }
     prise = access.data; await resume; preparing.signal.throwIfAborted();
@@ -85,7 +92,7 @@ async function lireLocalement(text: string, signal: AbortSignal, playing: () => 
   const abort = () => { arreterLecture(); rejectEnd(new Error("cancelled")); };
   signal.addEventListener("abort", abort, { once: true });
   unsubscribe = abonnerLecture((active, source) => {
-    if (active && source === "local") { seen = true; playing(); }
+    if (active && source === "cloud") { seen = true; playing(); }
     else if (active) { arreterLecture(); rejectEnd(new Error("local-only")); }
     else if (seen) resolveEnd();
   });
@@ -104,9 +111,13 @@ const loop = creerBoucleVoixLocale({
       pcmBase64: base64(encoderPCM16([samples], rate)), sampleRate: 16000, runId, utteranceId, langue: "auto",
     }, signal);
     if (!result.ok || result.data.runId !== runId || result.data.utteranceId !== utteranceId) throw new Error("stt");
-    return result.data.texte;
+    return {texte:result.data.texte,utteranceId};
   },
-  repondre: (text, signal, onSentence) => envoyerTourAlexa(text, signal, { onSentence }),
+  repondre: async (text, signal, onSentence,clientTurnId) => {
+    const result=await envoyerTourAlexa(text,signal,{onSentence,clientTurnId});signal.throwIfAborted();
+    if(result.proposal)for(const handler of proposalSubscribers){signal.throwIfAborted();await handler(result.proposal,text,result.patientId,signal);}
+    return result;
+  },
   navigate: navigateAlexa,
   speechLimitNotice: text => dialogue(planRequest(text, null).language).speechLimit,
   lire: lireLocalement,
@@ -117,7 +128,7 @@ const loop = creerBoucleVoixLocale({
       : error === "tts" ? alexa.tts : error ? alexa.interrompu
       : etat === "reveille" ? alexa.voixPreparation : etat === "ecoute" ? alexa.voixEcoute
       : etat === "traitement" ? alexa.voixReflexion : etat === "parole" ? alexa.voixParole : null;
-    view = { etat, raison, reveilArme: false, sourceParole: etat === "parole" ? "local" : null };
+    view = { etat, raison, reveilArme: false, sourceParole: etat === "parole" ? "cloud" : null };
     for (const subscriber of subscribers) subscriber(view);
   },
   tour: (turn) => {

@@ -1,10 +1,16 @@
 import { isMedicationName } from "./medications";
 
 const common = new Set([
+  "secondaire", "secondaires", "cabinet",
+  "document", "documents", "certificat", "certificats", "justification", "justifications", "justificatif", "justificatifs", "brouillon", "brouillons", "emis", "emise", "emises", "delivre", "delivree", "delivres", "delivrees",
+  "termine", "terminee", "termines", "terminees", "clos", "close", "closes", "cloture", "cloturee", "clotures", "cloturees", "ouvert", "ouverte", "ouverts", "ouvertes", "signe", "signee", "signes", "signees", "non",
+  "brut", "brute", "bruts", "brutes", "actif", "active", "actifs", "actives", "inactif", "inactive", "inactifs", "inactives", "principal", "principale", "principaux", "principales", "arrete", "arretee", "arretes", "arretees", "resolu", "resolue", "resolus", "resolues", "nouveau", "nouvelle", "nouveaux", "nouvelles", "suivi", "paiement", "paiements", "urgence",
   "la", "le", "les", "un", "une", "du", "des", "ses", "son", "sa", "ce", "cet", "cette", "mon", "ma", "mes", "notre", "nos",
   "derniere", "dernieres", "dernier", "derniers", "patient", "patiente", "patients", "consultation", "consultations", "seance", "seances",
   "traitement", "traitements", "medicament", "medicaments", "debut", "cas", "dossier", "clinique", "synthetique", "complet", "complete", "medical", "medicale", "psychiatrique", "global", "globale",
-  "actuel", "actuelle", "actuels", "precedent", "precedente", "recent", "recente", "cette", "semaine", "mois", "jour", "aujourd'hui", "hier",
+  "travail", "subjectif", "subjective", "subjectifs", "subjectives", "objectif", "objective", "objectifs", "objectives", "evaluation", "plan", "conduite", "anamnese", "rectificatif", "rectificatifs",
+  "naissance", "numero", "carte", "piece", "identite", "telephone", "telephones", "adresse", "adresses", "coordonnees", "sexe", "administratif", "administrative", "administratifs", "administratives",
+  "selectionne", "selectionnee", "selectionnes", "selectionnees", "courant", "courante", "courants", "courantes", "actuel", "actuelle", "actuels", "precedent", "precedente", "recent", "recente", "cette", "semaine", "mois", "jour", "aujourd'hui", "hier", "demain", "aujourd’hui",
   "passe", "passee", "passes", "passees", "ancien", "ancienne", "anciens", "anciennes",
   "avant", "apres", "depuis", "avec", "sans", "et", "pour", "chez", "de", "du", "en", "au", "a", "il", "elle",
   "selon", "dsm", "livre", "livres", "reference", "references",
@@ -43,7 +49,7 @@ export function parsePatientMention(text: string): PatientMention {
   const names = new Map<string, string>();
   const normalized = folded(text);
   const explicitPatient = /\b(?:patiente?s?|dossier)\b|المريض|المريضة|ملف/u.test(normalized);
-  const localFieldPattern = /\b(?:resume|synthese|consultations?|seances?|traitements?|medicaments?|diagnostics?|notes?|dossier|patiente?s?|prend|dose|posologie|frequence|ordonnance|symptomes?|scores?|echelles?|sommeil|humeur|agenda|rdv|rendez[- ]vous|historique)\b|ملخص|لخص|جلس|استشار|العلاج|الدواء|الملاحظات|اعراض|الاعراض/gu;
+  const localFieldPattern = /\b(?:resume|synthese|consultations?|seances?|traitements?|medicaments?|diagnostics?|notes?|dossier|patiente?s?|prend|dose|posologie|frequence|ordonnance|symptomes?|scores?|echelles?|sommeil|humeur|agenda|rdv|rendez[- ]vous|historique|documents?|certificats?|justifications?|brouillons?|telephones?|coordonnees?|adresses?|contacts?|naissance|identite|sexe|situation familiale|paiements?)\b|ملخص|لخص|جلس|استشار|العلاج|الدواء|الملاحظات|اعراض|الاعراض/gu;
   const localFieldRead = [...normalized.matchAll(localFieldPattern)].length > 0;
   // A single noun in a general symptom/diagnosis question is a topic.
   // Named single patients remain explicit through patient/dossier or quotes.
@@ -65,8 +71,13 @@ export function parsePatientMention(text: string): PatientMention {
   };
   const quoted = [...text.matchAll(/[«“"]([^»”"]{2,80})[»”"]/gu)];
   for (const match of quoted) {
-    add(match[1]?.trim());
+    // A quoted search term is content, not a patient identity. Explicit quoted names remain supported.
+    if (!/\b(?:mot|expression|phrase|texte|terme)\s*$/iu.test(text.slice(0, match.index))) add(match[1]?.trim());
     nameRanges.push([match.index, match.index + match[0].length]);
+  }
+  // Alphanumeric labels are copied from the request, never selected by their ordinal.
+  for (const match of text.matchAll(/\bpatiente?\s+\d{1,4}\s+([\p{L}][\p{L}\p{M}'’-]{1,})/giu)) {
+    if (!/^(?:an|ans|mois|jours?|consultations?|seances?)$/iu.test(match[1]!)) add(match[0], match.index);
   }
   const medicineQuestion = /dose|posolog|traitement|m[ée]dicament|effets?|contre.?indications?|fonctionne|m[ée]canisme/iu.test(text);
   // Establish direct identities first so an apostrophe inside a surname
@@ -88,6 +99,10 @@ export function parsePatientMention(text: string): PatientMention {
     if (nameRanges.some(([start, end]) => match.index >= start && match.index < end)) continue;
     // French possessive grammar alone does not establish a dossier scope.
     if (/^(?:de|du)\s|^d['’]/u.test(folded(match[0])) && !localFieldRead && !explicitPatient) continue;
+    // A workflow purpose after "pour" is not a person; explicit/quoted names and surnames remain eligible.
+    if (/^pour\s/u.test(folded(match[0])) && /^(?:revue|relecture|validation|verification|confirmation|signature|impression|archivage)(?:$|\s+(?:de|du|des|par|et)\b)/u.test(folded(match[1] ?? ""))) continue;
+    // This stored document kind is a noun phrase; its patient follows a separate introducer.
+    if (/^bonne\s+sant[eé]\s+mentale\b/iu.test(match[1] ?? "") && /\bcertificats?\s*$/iu.test(text.slice(0, match.index))) continue;
     const candidate = candidateName(match[1]);
     if (generalSingleTopic(candidate, text.slice(0, match.index))) continue;
     // In medication questions an unquoted drug is a topic. A separately named

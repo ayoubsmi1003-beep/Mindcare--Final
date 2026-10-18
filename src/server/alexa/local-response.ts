@@ -3,6 +3,7 @@ import type { AlexaEvent, AlexaSource } from "@/shared/alexa/turn";
 import { dialogue } from "@/i18n/alexa-dialogue";
 import type { RequestPlan } from "./request-plan";
 import { consultationExcerpts } from "./note-excerpts";
+import {alexaRecordCopy} from "@/i18n/alexa-records";
 import { summaryDialogue } from "@/i18n/alexa-summary";
 
 const identifier = /[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}|\b(?:\+?213|0)[567]\d{8}\b|[\w.+-]+@[\w.-]+\.[a-z]{2,}/giu;
@@ -94,7 +95,9 @@ export function localResponse(context: ClinicalContext, plan: RequestPlan, token
   if (plan.intent !== "history") {
     push(copy.treatment(context.treatments.current.length));
     for (const treatment of context.treatments.current) {
-      push([treatment.medication, treatment.dose, treatment.doseUnit, treatment.frequency, copy.states[treatment.status]].filter(Boolean).join(" · "), all.filter(s => s.id === treatment.id));
+      const fields=alexaRecordCopy.fr.treatmentFields;
+      const details=[treatment.medication,treatment.dose,treatment.doseUnit,treatment.frequency,copy.states[treatment.status],fields.startDate+' : '+treatment.startDate,...(treatment.endDate?[fields.endDate+' : '+treatment.endDate]:[]),...(treatment.timing.length?[fields.timing+' : '+treatment.timing.join(', ')]:[]),...(treatment.instructions?[fields.instructions+' : '+treatment.instructions]:[])];
+      push(details.filter(Boolean).join(" · "),all.filter(s=>s.id===treatment.id));
     }
   }
   // Older consultations outside an explicit last-N request do not make that
