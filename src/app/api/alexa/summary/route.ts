@@ -26,11 +26,11 @@ export async function POST(request: Request): Promise<Response> {
     const narrative = await summarizeClinicalContext(context, signal, true);
     if (!narrative.generated) return echec("analyse-indisponible", narrativeCopy.failed);
     const content = buildCaseSummary(context, patient.identityTokens);
-    content.apercu.contexte = [{ texte: narrative.text + (narrative.complete ? "" : " " + narrativeCopy.limited), sources: [...context.consultations, ...(context.currentConsultation ? [context.currentConsultation] : [])].map(c => ({ t: "consultation" as const, id: c.id })) }];
+    content.apercu.contexte = [{ texte: narrative.text + (narrative.method === "source_selection" ? " " + narrativeCopy.selected : "") + (narrative.complete ? "" : " " + narrativeCopy.limited), sources: [...context.consultations, ...(context.currentConsultation ? [context.currentConsultation] : [])].map(c => ({ t: "consultation" as const, id: c.id })) }];
     if (await readClinicalSourceRevision(db, { patientId: patient.patientId }, signal) !== context.sourceRevision) return echec("contexte-change", alexa.contexteChange);
     signal.throwIfAborted();
     const saved = await db.rpc<Record<string, unknown>>("save_alexa_case_summary", { p_patient_id: patient.patientId, p_content: JSON.stringify(content),
-      p_source_state: JSON.stringify({ alexaSourceRevision: context.sourceRevision, alexaNoteAreas: 5, coverage: context.coverage, limited: !narrative.complete }),
+      p_source_state: JSON.stringify({ alexaSourceRevision: context.sourceRevision, alexaNoteAreas: 5, coverage: context.coverage, limited: !narrative.complete, method: narrative.method }),
       p_model: ALEXA_CONVERSATION_MODEL, p_prompt_version: NARRATIVE_VERSION, p_prompt_hash: NARRATIVE_HASH });
     if (!saved.ok || !saved.data[0]) return echec("indisponible", alexa.lectureIndisponible);
     const persisted = await db.rpc<Record<string, unknown>>("get_alexa_case_summary", { p_patient_id: patient.patientId });

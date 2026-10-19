@@ -5,10 +5,10 @@ import { inferLocalText } from "./local-model";
 import { consultationExcerpts } from "./note-excerpts";
 import { narrativeCopy as copy } from "@/i18n/alexa-narrative";
 
-export const NARRATIVE_VERSION = "alexa-narrative-fr-v1";
+export const NARRATIVE_VERSION = "alexa-narrative-fr-v2";
 export const NARRATIVE_HASH = createHash("sha256").update(NARRATIVE_VERSION + copy.prompt).digest("hex");
-export interface NarrativeSource { id: string; text: string; at?: string; state?: "open" | "closed" }
-export interface ClinicalNarrative { text: string; complete: boolean; generated: boolean; sourceIds: string[] }
+export interface NarrativeSource { id: string; text: string; at?: string; state?: "open" | "closed"; originalText?: string; attribution?: "unsigned" | "correction" | "plan" }
+export interface ClinicalNarrative { text: string; complete: boolean; generated: boolean; sourceIds: string[]; method?: "reformulated" | "source_selection" }
 const answerSchema = z.object({ sentences: z.array(z.object({ text: z.string().trim().min(10).max(500), evidence: z.array(z.object({ id: z.string().min(1).max(80), quote: z.string().trim().min(10).max(600) }).strict()).min(1).max(6) }).strict()).min(1).max(4) }).strict();
 const fold = (value: string) => value.normalize("NFKD").replace(/\p{M}/gu, "").toLowerCase().replace(/\s+/gu, " ").trim();
 const unsafe = /ignore.{0,40}(?:instruction|consigne)|(?:system|assistant|developer)\s*:|(?:execute|appelle).{0,30}(?:outil|tool)|<\/?[a-z][^>]*>|\/api\//iu;
@@ -30,7 +30,7 @@ export function relativeClinicalDate(date: string, asOf: string): string {
 }
 export function consultationNarrativeSources(c: ClinicalConsultation): { sources: NarrativeSource[]; complete: boolean } {
   const selected = consultationExcerpts(c, undefined, 30000, 100, 12000);
-  return { sources: selected.excerpts.map((e, i) => ({ id: `${c.id}:${i}`, at: c.startedAt, state: c.endedAt === null ? "open" : "closed", text: `${e.amendmentAt ? copy.correction : ""}${e.unsigned ? copy.unsigned : ""}${e.area ? copyArea[e.area] + " : " : ""}${e.text}` })), complete: !selected.omitted };
+  return { sources: selected.excerpts.map((e, i) => ({ id: `${c.id}:${i}`, originalText: e.text, ...(e.amendmentAt ? {attribution: "correction" as const} : e.unsigned ? {attribution: "unsigned" as const} : e.area === "plan" ? {attribution: "plan" as const} : {}), at: c.startedAt, state: c.endedAt === null ? "open" : "closed", text: `${e.amendmentAt ? copy.correction : ""}${e.unsigned ? copy.unsigned : ""}${e.area ? copyArea[e.area] + " : " : ""}${e.text}` })), complete: !selected.omitted };
 }
 const copyArea = copy.noteAreas;
 
@@ -44,6 +44,8 @@ export function validateClinicalNarrative(value: unknown, sources: readonly Narr
     for (const citation of sentence.evidence) {
       const source = sources.find(s => s.id === citation.id);
       if (!source || unsafe.test(citation.quote) || !fold(source.text).includes(fold(citation.quote))) return null;
+      const field = fold(source.originalText ?? source.text);
+      if ((negative.test(field) || /\b(?:hypothese|possible|suspect|a explorer|a confirmer|prevu|propose|envisage|programme)\b/u.test(field)) && !fold(sentence.text).includes(field)) return null;
       quotes.push(citation.quote);
     }
     const proof = fold(quotes.join(" ")), text = fold(sentence.text);
@@ -60,6 +62,31 @@ export function validateClinicalNarrative(value: unknown, sources: readonly Narr
   return text.length <= 1100 && text.split(/\s+/u).length <= 150 ? text : null;
 }
 
+/** The rejected prose is never displayed. Only whole, known source fields can be recovered. */
+function recoverClinicalSelection(value: unknown, sources: readonly NarrativeSource[], includeAll = false): Pick<ClinicalNarrative, "text" | "sourceIds"> | null {
+  const parsed = answerSchema.safeParse(value);
+  if (!parsed.success) return null;
+  const ids = new Set(parsed.data.sentences.flatMap(sentence => sentence.evidence.map(e => e.id)));
+  if (!ids.size || ids.size > 6 || [...ids].some(id => !sources.some(s => s.id === id))) return null;
+  const selected = sources.filter(s => includeAll || ids.has(s.id));
+  const groups: {prefix: string | null; at: string | undefined; texts: string[]}[] = [];
+  for (const source of selected) {
+    const text = (source.originalText ?? source.text).replace(/\s+/gu, " ").trim();
+    // Structured domain objects must not be presented as clinical prose.
+    if (!text || unsafe.test(text) || /^[{[]/u.test(text)) return null;
+    const prefix = source.attribution === "correction" ? copy.recordedCorrection
+      : source.attribution === "unsigned" ? copy.recordedDraft
+      : source.attribution === "plan" ? copy.recordedPlan
+      : /^(?:je\b|j[’']|nous\b)/iu.test(text) ? copy.recordedAuthor : null;
+    const sentence = /[.!?…]$/u.test(text) ? text : text + ".";
+    const last = groups.at(-1);
+    if (last && last.prefix === prefix && last.at === source.at) last.texts.push(sentence);
+    else groups.push({prefix, at: source.at, texts: [sentence]});
+  }
+  const text = groups.map(group => group.prefix ? group.prefix + "« " + group.texts.join(" ") + " »" : group.texts.join(" ")).join(" ");
+  return text.length <= 1100 && text.split(/\s+/u).length <= 150 ? {text,sourceIds:selected.map(s=>s.id)} : null;
+}
+
 export async function synthesizeClinicalNarrative(sources: readonly NarrativeSource[], signal: AbortSignal): Promise<ClinicalNarrative> {
   const available = sources.filter(s => s.text.trim() && !unsafe.test(s.text));
   const projected: NarrativeSource[] = []; let characters = 0;
@@ -71,10 +98,19 @@ export async function synthesizeClinicalNarrative(sources: readonly NarrativeSou
   const complete = projected.length === sources.length;
   if (!projected.length) return { text: sources.length ? copy.unavailable : copy.empty, complete: sources.length === 0, generated: false, sourceIds: [] };
   try {
-    const raw = await inferLocalText([{ role: "system", content: copy.prompt }, { role: "user", content: JSON.stringify({ sources: projected }) }], { jsonSchema: z.toJSONSchema(answerSchema), maxOutputTokens: 1024, timeoutMs: 170000, signal });
+    const raw = await inferLocalText([{ role: "system", content: copy.prompt }, { role: "user", content: JSON.stringify({ sources: projected.map(({originalText: _original, attribution: _attribution, ...source}) => source) }) }], { jsonSchema: z.toJSONSchema(answerSchema), maxOutputTokens: 1024, timeoutMs: 170000, signal });
     signal.throwIfAborted();
-    const text = validateClinicalNarrative(JSON.parse(raw), projected);
-    if (text) return { text, complete, generated: true, sourceIds: projected.map(s => s.id) };
+    const value: unknown = JSON.parse(raw);
+    const text = validateClinicalNarrative(value, projected);
+    const parsed = answerSchema.safeParse(value);
+    const cited = parsed.success ? [...new Set(parsed.data.sentences.flatMap(s => s.evidence.map(e => e.id)))] : [];
+    const covered = cited.length === projected.length && projected.every(s => cited.includes(s.id));
+    if (text && covered) return { text, complete, generated: true, sourceIds: cited, method: "reformulated" };
+    const all = recoverClinicalSelection(value, projected, true);
+    if (all) return { ...all, complete, generated: true, method: "source_selection" };
+    if (text) return { text, complete: false, generated: true, sourceIds: cited, method: "reformulated" };
+    const selected = recoverClinicalSelection(value, projected);
+    if (selected) return { ...selected, complete: complete && selected.sourceIds.length === projected.length, generated: true, method: "source_selection" };
   } catch { signal.throwIfAborted(); }
   // No fabricated prose if the small local model cannot support its own claims.
   return { text: copy.unavailable, complete: false, generated: false, sourceIds: [] };

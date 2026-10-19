@@ -37,7 +37,7 @@ export async function generateSessionSummary(db: Pick<DbPort, "rpc">, consultati
   const digest = consultationNotesDigest(consultation);
   if (consultationNotesDigest(await readSession(db, consultationId, signal)) !== digest) throw new SessionSummaryError("changed");
   const soap = consultation.notes[0];
-  const content = { resume: narrative.text, notesDigest: digest, complete: input.complete && narrative.complete, generated: true,
+  const content = { resume: narrative.text, method: narrative.method ?? "reformulated", notesDigest: digest, complete: input.complete && narrative.complete, generated: true,
     noteStructuree: { subjective: soap?.subjective ?? "", objective: soap?.objective ?? "", assessment: soap?.assessment ?? "", plan: soap?.plan ?? "" }, evolution: [], pointsNonExplores: [] };
   const saved = await db.rpc<{ id: string; version: number; content: unknown }>("save_session_analysis", {
     p_consultation_id: consultationId, p_content: JSON.stringify(content),
@@ -46,14 +46,14 @@ export async function generateSessionSummary(db: Pick<DbPort, "rpc">, consultati
   });
   const row = saved.ok ? saved.data[0] : undefined;
   if (saved.ok && !row) throw new SessionSummaryError("changed");
-  let persisted = false; let persistedResume = content.resume; let persistedComplete = content.complete;
+  let persisted = false; let persistedResume = content.resume; let persistedComplete = content.complete; let persistedMethod: typeof content.method | undefined = content.method;
   if (row) {
-    const readback = await db.rpc<{ id: string; content: { notesDigest?: string; resume?: string; complete?: boolean } }>("get_consultation_analysis", { p_consultation_id: consultationId });
+    const readback = await db.rpc<{ id: string; content: { notesDigest?: string; resume?: string; complete?: boolean; method?: "reformulated" | "source_selection" } }>("get_consultation_analysis", { p_consultation_id: consultationId });
     const stored = readback.ok ? readback.data[0] : undefined;
     if (stored?.id === row.id && stored.content.notesDigest === digest && typeof stored.content.resume === "string") {
-      persisted = true; persistedResume = stored.content.resume; persistedComplete = stored.content.complete === true;
+      persisted = true; persistedResume = stored.content.resume; persistedComplete = stored.content.complete === true; persistedMethod = stored.content.method;
     }
   }
 
-  return { ...content, resume: persistedResume, complete: persistedComplete, analyseId: persisted ? row!.id : null, version: persisted ? row!.version : null, persistee: persisted, sources: { historiqueNotes: 0 } };
+  return { ...content, method: persistedMethod, resume: persistedResume, complete: persistedComplete, analyseId: persisted ? row!.id : null, version: persisted ? row!.version : null, persistee: persisted, sources: { historiqueNotes: 0 } };
 }

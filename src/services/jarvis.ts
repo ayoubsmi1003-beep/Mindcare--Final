@@ -29,6 +29,7 @@ import { validerPreuves, type PreuveConnnaissance } from "@/shared/jarvis/preuve
 
 export interface AnalyseSeance {
   readonly resume?: string | undefined;
+  readonly method?: "reformulated" | "source_selection" | undefined;
   readonly complete?: boolean | undefined;
   readonly noteStructuree: NoteSoap;
   readonly evolution: readonly string[];
@@ -63,6 +64,7 @@ export interface AnalyseSources {
 
 interface AnalyseSeanceRow {
   readonly resume?: string | undefined;
+  readonly method?: "reformulated" | "source_selection" | undefined;
   readonly complete?: boolean | undefined;
   readonly noteStructuree: {
     readonly subjective: string;
@@ -269,6 +271,7 @@ async function executerAnalyse(
 
     return ok({
       resume: result.data.resume,
+      method: result.data.method,
       complete: result.data.complete,
       noteStructuree: {
         subjective: result.data.noteStructuree.subjective,
@@ -332,6 +335,7 @@ export async function chargerAnalyse(
     Array.isArray(v) ? v.filter((x): x is string => typeof x === "string") : [];
 
   return ok({
+    method: c["method"] === "source_selection" ? "source_selection" : c["method"] === "reformulated" ? "reformulated" : undefined,
     resume: typeof c["resume"] === "string" ? c["resume"] : undefined,
     complete: c["complete"] === true,
     noteStructuree: {

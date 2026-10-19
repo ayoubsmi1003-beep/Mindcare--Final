@@ -168,7 +168,7 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    result.text=sentences.map(s=>s.text).join("\n");
    if(section === "summary") {
     const narrative = await summarizeClinicalContext(context, signal);
-    result.text = narrative.text + (narrative.complete ? "" : " " + narrativeCopy.limited);
+    result.text = narrative.text + (narrative.method === "source_selection" ? " " + narrativeCopy.selected : "") + (narrative.complete ? "" : " " + narrativeCopy.limited);
     const latest = context.consultations[0];
     if (latest && !/\b(?:date|quand|exact)\b/iu.test(input.text)) result.text += " " + narrativeCopy.lastVisit(relativeClinicalDate(latest.startedAt, asOf));
     result.presentation = "inference";

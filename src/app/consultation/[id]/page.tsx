@@ -1715,7 +1715,7 @@ export default function PageConsultation(): React.JSX.Element {
                         seules notes du jour, ou avec N notes antérieures. */}
                     {analyse.resume ? <>
                       <p className="font-ui text-body leading-relaxed text-ink-900">{analyse.resume}</p>
-                      <p className="font-ui text-label text-ink-500">{narrativeCopy.draft}{analyse.complete === false ? " " + narrativeCopy.limited : ""}</p>
+                      <p className="font-ui text-label text-ink-500">{narrativeCopy.draft}{analyse.method === "source_selection" ? " " + narrativeCopy.selected : ""}{analyse.complete === false ? " " + narrativeCopy.limited : ""}</p>
                     </> : <PanneauInfo>{libelleSourcesAnalyse(analyse.sources.historiqueNotes)}</PanneauInfo>}
                     <details open={analyse.resume ? undefined : true}>
                       <summary className="cursor-pointer font-ui text-label text-ink-500">{narrativeCopy.details}</summary>

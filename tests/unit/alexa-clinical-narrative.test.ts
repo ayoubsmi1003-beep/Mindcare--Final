@@ -54,3 +54,54 @@ it('rejects the actual synthetic MiniCPM response that rewrites a negative claus
   const source={id:'s1',text:'Le patient ne rapporte pas d’idées suicidaires. Le sommeil reste perturbé.'};
   expect(validateClinicalNarrative(response("Le patient ne rapporte pas d'idées suicidaires, mais le sommeil reste perturbé.",source.text),[source])).toBeNull();
 });
+
+describe('whole-field recovery from rejected prose',()=>{
+  it('discards the proposed interpretation and restores whole fields with their qualifiers',async()=>{
+    const sources=[{id:'s1',text:'Le patient ne rapporte pas d’idées suicidaires. Le sommeil reste perturbé.'},{id:'s2',text:'L’hypothèse d’un trouble anxieux reste à explorer. Un agenda du sommeil a été proposé par la médecin.'}];
+    const invalid={sentences:[{text:"Le patient ne rapporte pas d'idées suicidaires, ce qui suggère une absence de symptômes suicidaires.",evidence:[{id:'s1',quote:"Le patient ne rapporte pas d'idées suicidaires."}]},{text:"Le sommeil reste perturbé, ce qui peut être un signe d'anxiété.",evidence:[{id:'s2',quote:'Le sommeil reste perturbé.'}]}]};
+    vi.mocked(inferLocalText).mockResolvedValue(JSON.stringify(invalid));
+    const result=await synthesizeClinicalNarrative(sources,new AbortController().signal);
+    expect(result).toMatchObject({generated:true,method:'source_selection',complete:true,sourceIds:['s1','s2']});
+    for(const source of sources)expect(result.text).toContain(source.text);
+    expect(result.text).not.toMatch(/suggère|signe d’anxiété|Subjectif\s*:/iu);
+    expect(result.text).not.toContain('\n');
+  });
+  it('does not salvage a foreign source id or truncate an oversized cited field',async()=>{
+    for(const [sources,output]of [[[proof],response('Le patient reçoit 200 mg.',proof.text,'foreign')],[[{id:'s1',text:'Une longue note. '.repeat(90)}],response('Le patient reçoit 200 mg.','Une longue note.')]] as const){
+      vi.mocked(inferLocalText).mockResolvedValue(JSON.stringify(output));
+      expect((await synthesizeClinicalNarrative(sources,new AbortController().signal)).generated).toBe(false);
+    }
+  });
+  it('keeps a late attribution to a relative attached to a negative finding',async()=>{
+    const source={id:'s1',text:'Pas d’idées suicidaires rapportées. Cela concerne la sœur ; le patient n’a pas été interrogé sur ce point.'};
+    vi.mocked(inferLocalText).mockResolvedValue(JSON.stringify(response('Le patient nie toute idée suicidaire.',source.text)));
+    const r=await synthesizeClinicalNarrative([source],new AbortController().signal);
+    expect(r.generated).toBe(true);expect(r.text).toContain(source.text);
+  });
+});
+
+it('rejects even an exact negative clause when its field has a later attribution',()=>{
+  const source={id:'s1',text:'Pas d’idées suicidaires. Cela concerne la sœur, pas le patient.'};
+  expect(validateClinicalNarrative(response('Pas d’idées suicidaires.','Pas d’idées suicidaires.'),[source])).toBeNull();
+});
+it('does not recite SOAP labels when recovering a plan or an unsigned source',async()=>{
+  const input=consultationNarrativeSources(c).sources;
+  vi.mocked(inferLocalText).mockResolvedValue(JSON.stringify(response('Le patient reçoit 200 mg.','citation incorrecte',input[4]!.id)));
+  const r=await synthesizeClinicalNarrative(input,new AbortController().signal);
+  expect(r.generated).toBe(true);expect(r.method).toBe('source_selection');expect(r.text).toContain(c.notes[0]!.plan);expect(r.text).not.toMatch(/\bPlan\s*:/u);
+});
+
+it('recovers a short omitted decision instead of claiming a complete one-field summary',async()=>{
+  const plan={id:'s2',text:'La dose de TEST est passée de 50 mg à 100 mg.'};
+  vi.mocked(inferLocalText).mockResolvedValue(JSON.stringify(response(proof.text)));
+  const r=await synthesizeClinicalNarrative([proof,plan],new AbortController().signal);
+  expect(r.text).toContain(plan.text);expect(r.complete).toBe(true);expect(r.sourceIds).toEqual(['s1','s2']);expect(r.method).toBe('source_selection');
+});
+it('reports incomplete synthesis and only its real citations when an omitted field cannot fit',async()=>{
+  const long={id:'s2',text:'Une observation longue. '.repeat(100)};
+  vi.mocked(inferLocalText).mockResolvedValue(JSON.stringify(response(proof.text)));
+  const r=await synthesizeClinicalNarrative([proof,long],new AbortController().signal);
+  expect(r.generated).toBe(true);expect(r.complete).toBe(false);expect(r.sourceIds).toEqual(['s1']);expect(r.text).toBe(proof.text);
+});
+
+it('does not turn a planned follow-up into an executed action',()=>{const source={id:'s1',text:'Dernière séance : le patient rapporte une diminution des tensions familiales. La médecin a prévu de poursuivre le suivi.'};expect(validateClinicalNarrative(response('En fin de séance, les tensions diminuent et la médecin continue le suivi.',source.text),[source])).toBeNull();});
