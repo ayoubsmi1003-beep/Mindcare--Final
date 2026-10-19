@@ -62,12 +62,14 @@ export function validateClinicalNarrative(value: unknown, sources: readonly Narr
 
 export async function synthesizeClinicalNarrative(sources: readonly NarrativeSource[], signal: AbortSignal): Promise<ClinicalNarrative> {
   const available = sources.filter(s => s.text.trim() && !unsafe.test(s.text));
-  const safe = available.slice(0, 60);
-  // Share the context across sources; retain the end carrying the recorded plan.
-  const allowance = Math.max(80, Math.floor(6500 / Math.max(safe.length, 1)));
-  const projected = safe.map(s => ({ ...s, text: s.text.length > allowance ? s.text.slice(-allowance) : s.text }));
-  const complete = safe.length === sources.length && safe.every((s, i) => s.text === projected[i]?.text);
-  if (!projected.length) return { text: copy.empty, complete, generated: false, sourceIds: [] };
+  const projected: NarrativeSource[] = []; let characters = 0;
+  for (const source of available) {
+    // Never remove a qualifier at either end of a recorded field.
+    if (projected.length >= 20 || characters + source.text.length > 5500) continue;
+    projected.push(source); characters += source.text.length;
+  }
+  const complete = projected.length === sources.length;
+  if (!projected.length) return { text: sources.length ? copy.unavailable : copy.empty, complete: sources.length === 0, generated: false, sourceIds: [] };
   try {
     const raw = await inferLocalText([{ role: "system", content: copy.prompt }, { role: "user", content: JSON.stringify({ sources: projected }) }], { jsonSchema: z.toJSONSchema(answerSchema), maxOutputTokens: 1024, timeoutMs: 170000, signal });
     signal.throwIfAborted();
@@ -75,8 +77,7 @@ export async function synthesizeClinicalNarrative(sources: readonly NarrativeSou
     if (text) return { text, complete, generated: true, sourceIds: projected.map(s => s.id) };
   } catch { signal.throwIfAborted(); }
   // No fabricated prose if the small local model cannot support its own claims.
-  const excerpts = projected.slice(0, 4).map(s => `« ${s.text.slice(0, 200)} »`);
-  return { text: `${copy.unavailable} ${excerpts.join(" ")}`, complete: false, generated: false, sourceIds: projected.slice(0, 4).map(s => s.id) };
+  return { text: copy.unavailable, complete: false, generated: false, sourceIds: [] };
 }
 
 /** Fresh session summaries first; original notes remain the fallback for old/unanalysed visits. */
