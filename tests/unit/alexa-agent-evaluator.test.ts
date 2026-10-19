@@ -9,7 +9,24 @@ const baseSpec = {
 const baseRecord = {
  events:[{type:'done',status:'completed',parts:[]}],calls:[],queries:[],ms:10,
 };
+it('rejects a wrong or absent navigation destination independently of a completed ledger',()=>{
+ const spec={...baseSpec,expected:{status:'completed',navigation:{target:'documents'},noSql:true}};
+ expect(evaluateAlexaCase(spec,baseRecord).status).toBe('FAIL');
+ expect(evaluateAlexaCase(spec,{...baseRecord,events:[{type:'done',status:'completed',parts:[],navigation:{target:'finances'}}]}).status).toBe('FAIL');
+ expect(evaluateAlexaCase(spec,{...baseRecord,events:[{type:'done',status:'completed',parts:[],navigation:{target:'documents'}}]}).status).toBe('PASS');
+ expect(evaluateAlexaCase(spec,{...baseRecord,events:[{type:'done',status:'completed',parts:[],navigation:{target:'documents'}}],queries:[{name:'get_patient'}]}).status).toBe('FAIL');
+});
 const specWith = (expected:Record<string,unknown>) => ({...baseSpec,expected:{...baseSpec.expected,...expected}});
+it('independently rejects an unrequested disclosed value',()=>{
+ const spec=specWith({textExcludes:['ID-FICTIF']});
+ expect(evaluateAlexaCase(spec,baseRecord).status).toBe('PASS');
+ expect(evaluateAlexaCase(spec,{...baseRecord,events:[...baseRecord.events,{type:'sentence',text:'Téléphone : 0000000001 ; identité : ID-FICTIF.',kind:'fact',sources:[patient]}]}).status).toBe('FAIL');
+});
+it('independently rejects a read outside the permitted database gates',()=>{
+ const spec=specWith({permittedRpcNames:['get_patient']});
+ expect(evaluateAlexaCase(spec,{...baseRecord,queries:[{name:'get_patient'}]}).status).toBe('PASS');
+ expect(evaluateAlexaCase(spec,{...baseRecord,queries:[{name:'query_alexa_records'}]}).status).toBe('FAIL');
+});
 const countSpec = specWith({count:25,rpcResults:[{name:'search_patients',args:{p_spec:{mode:'count'}},path:['total'],equals:25}]});
 const countRecord = {
  ...baseRecord,events:[...baseRecord.events,{type:'sentence',kind:'fact',text:'25 patients actifs.',sources:[]}],

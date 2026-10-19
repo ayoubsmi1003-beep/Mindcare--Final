@@ -1,5 +1,5 @@
 import { ALEXA_CONVERSATION_MODEL } from "@/server/alexa/model-policy";
-import { summarizeClinicalContext, NARRATIVE_HASH, NARRATIVE_VERSION } from "@/server/alexa/clinical-narrative";
+import { summarizeClinicalContext, clinicalNarrativeReferences, NARRATIVE_HASH, NARRATIVE_VERSION } from "@/server/alexa/clinical-narrative";
 import { narrativeCopy } from "@/i18n/alexa-narrative";
 import { z } from "zod";
 import { identite, echec, succes } from "@/app/api/jarvis/_commun";
@@ -26,7 +26,7 @@ export async function POST(request: Request): Promise<Response> {
     const narrative = await summarizeClinicalContext(context, signal, true);
     if (!narrative.generated) return echec("analyse-indisponible", narrativeCopy.failed);
     const content = buildCaseSummary(context, patient.identityTokens);
-    content.apercu.contexte = [{ texte: narrative.text + (narrative.method === "source_selection" ? " " + narrativeCopy.selected : "") + (narrative.complete ? "" : " " + narrativeCopy.limited), sources: [...context.consultations, ...(context.currentConsultation ? [context.currentConsultation] : [])].map(c => ({ t: "consultation" as const, id: c.id })) }];
+    content.apercu.contexte = [{ texte: narrative.text + (narrative.method === "source_selection" ? " " + narrativeCopy.selected : "") + (narrative.complete ? "" : " " + narrativeCopy.limited), sources: clinicalNarrativeReferences(context,narrative.sourceIds) }];
     if (await readClinicalSourceRevision(db, { patientId: patient.patientId }, signal) !== context.sourceRevision) return echec("contexte-change", alexa.contexteChange);
     signal.throwIfAborted();
     const saved = await db.rpc<Record<string, unknown>>("save_alexa_case_summary", { p_patient_id: patient.patientId, p_content: JSON.stringify(content),

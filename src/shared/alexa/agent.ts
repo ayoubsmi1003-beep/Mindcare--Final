@@ -4,7 +4,7 @@ import type { AlexaSource, AlexaProposal, AlexaNavigation } from "./turn";
 
 /** Current native Alexa qualification language, independent of names in source records. */
 export const ALEXA_AGENT_LANGUAGE = "fr" as const;
-/** Metadata plus three bounded inference rounds and a tool/persistence margin on slow local hardware. */
+/** Default rounds for actions/dependencies; independent reads share these unchanged call/time caps. */
 export const ALEXA_NATIVE_BUDGET = { rounds:3, calls:6, parallel:2, inferenceMs:85000, marginMs:20000 } as const;
 export const ALEXA_NATIVE_DEADLINE_MS = (1+ALEXA_NATIVE_BUDGET.rounds)*ALEXA_NATIVE_BUDGET.inferenceMs+ALEXA_NATIVE_BUDGET.marginMs;
 
@@ -68,14 +68,21 @@ export const queryPatientsSchema = z.object({ partIds, mode: z.enum(["count", "l
 }).strict().refine(v => v.mode !== "metrics" || !!v.metrics?.length, "MetricsRequired")
  .refine(v=>v.mode==="metrics"||v.metrics===undefined,"MetricsOnlyForMetricsMode");
 export const cabinetFinanceModes = ["overview","charges","composition","evolution","calendar","attention"] as const;
+const actionSlots:Readonly<Record<string,readonly string[]>>={
+ create_appointment:['startsAt','durationMinutes'],reschedule_appointment:['appointmentId','startsAt','durationMinutes'],
+ cancel_appointment:['appointmentId','reason'],mark_patient_arrived:['appointmentId'],
+ set_consultation_price:['consultationId','amountDzd'],record_payment_collected:['consultationId','paymentId'],
+ create_editable_document_draft:['documentType','variables'],
+};
+export const actionArgumentKeys=(action:string):readonly string[]=>['partIds','action','patientId','patientName',...(actionSlots[action]??[])];
 export const agentSchemas = {
   declare_request: z.object({ parts: z.array(partSchema).min(1).max(12) }).strict(),
   query_patients: queryPatientsSchema,
   get_patient_context: z.object({ partIds, ...patient,
     diagnosisState:z.enum(['all','active','resolved']).optional(),diagnosisRole:z.enum(['all','primary','secondary']).optional(),treatmentState:z.enum(['all','active','paused','stopped']).optional(),
-    count: z.number().int().min(1).max(20).optional(), section: z.enum(["summary", "history", "treatments", "profile", "diagnoses", "scales", "current", "notes"]).describe("profile : téléphone, coordonnées, identité et administratif ; summary : résumé clinique ; diagnoses : diagnostics ; scales : échelles ; treatments : traitements ; history : consultations passées ; current : séance en cours ; notes : texte intégral des notes par pages.").optional(), ...noteQuerySchema.shape }).strict().refine(v=>v.section==='diagnoses'||[v.diagnosisState,v.diagnosisRole].every(x=>x===undefined),'DiagnosisFiltersRequireDiagnosesSection').refine(v=>v.section==='treatments'||v.treatmentState===undefined,'TreatmentFilterRequiresTreatmentsSection').refine(v=>v.section!=="notes"||v.count===undefined,"NoteCountNotSupported").refine(v => !!v.from === !!v.to && (!v.from || Date.parse(v.from) < Date.parse(v.to!)), "InvalidPeriod").refine(v => v.section === "notes" || [v.consultationId,v.area,v.query,v.from,v.to,v.status,v.offset,v.textOffset,v.maxCharacters,v.revision,v.reusePrevious].every(x => x === undefined), "NoteArgumentsRequireNotesSection"),
+    count: z.number().int().min(1).max(20).optional(), section: z.enum(["summary", "history", "treatments", "profile", "diagnoses", "scales", "current", "notes"]).describe("profile : téléphone, coordonnées, identité et administratif ; summary : résumé clinique ; diagnoses : diagnostics ; scales : échelles ; treatments : traitements ; history : consultations passées ; current : séance en cours ; notes : texte intégral des notes par pages.").optional(), ...noteQuerySchema.shape }).strict().refine(v=>v.section==='diagnoses'||[v.diagnosisState,v.diagnosisRole].every(x=>x===undefined),'DiagnosisFiltersRequireDiagnosesSection').refine(v=>v.section==='treatments'||v.treatmentState===undefined,'TreatmentFilterRequiresTreatmentsSection').refine(v=>v.section!=="notes"||v.count===undefined,"NoteCountNotSupported").refine(v=>v.reusePrevious!==true||[v.consultationId,v.area,v.query,v.from,v.to,v.status,v.offset,v.textOffset,v.maxCharacters,v.revision].every(x=>x===undefined),"ContinuationUsesSavedNoteQuery").refine(v => !!v.from === !!v.to && (!v.from || Date.parse(v.from) < Date.parse(v.to!)), "InvalidPeriod").refine(v => v.section === "notes" || [v.consultationId,v.area,v.query,v.from,v.to,v.status,v.offset,v.textOffset,v.maxCharacters,v.revision,v.reusePrevious].every(x => x === undefined), "NoteArgumentsRequireNotesSection"),
   query_consultations: z.object({ partIds, ...patient, ...period, consultationId:z.uuid().optional(),view:z.enum(["details","analysis"]).optional(),textOffset:z.number().int().min(0).max(1000000).optional(),revision:z.string().regex(/^[a-f0-9]{64}$/).optional(),reusePrevious:z.boolean().optional(),status: z.enum(["all", "open", "closed", "unsigned"]).optional(), mode: z.enum(["count", "list", "group"]).optional(), offset: z.number().int().min(0).max(10000).optional() }).strict().refine(v=>!v.view||!!v.consultationId||v.reusePrevious===true,"ConsultationReferenceRequired").refine(v=>!v.consultationId||!!v.view,"ConsultationViewRequired").refine(v=>!v.view||[v.period,v.from,v.to,v.status,v.mode,v.offset].every(x=>x===undefined),"DetailCannotIgnoreFilters").refine(v=>v.view==="analysis"||[v.textOffset,v.revision,v.reusePrevious].every(x=>x===undefined),"AnalysisCursorOnly"),
-  query_app: z.object({partIds,view:z.enum(["cabinet","practitioner"])}).strict(),
+  query_app: z.object({partIds,...patient,motif:z.enum(["rappel_rendez_vous","document_pret"]).optional(),view:z.enum(["cabinet","practitioner","notifications","system","message_draft"]),offset:z.number().int().min(0).max(10000).optional(),revision:z.string().regex(/^[a-f0-9]{32}$/).optional()}).strict().refine(v=>v.view==='notifications'||[v.offset,v.revision].every(x=>x===undefined),'NotificationCursorOnly').refine(v=>v.view==='message_draft'?!!v.motif:[v.motif,v.patientId,v.patientName].every(x=>x===undefined),'MessageDraftScopeOnly'),
   query_agenda: z.object({ partIds, appointmentId:z.uuid().optional(), ...patient, ...period, statuses: z.array(z.enum(["requested", "confirmed", "arrived", "in_session", "completed", "no_show", "cancelled"])).min(1).max(7).optional(), offset:z.number().int().min(0).max(10000).optional() }).strict().refine(v=>!v.appointmentId||[v.from,v.to,v.period,v.statuses,v.offset].every(x=>x===undefined),"DetailCannotIgnoreFilters"),
   query_documents: z.object({ partIds, ...patient, ...period, documentId: z.uuid().optional(), draftId: z.uuid().optional(),
     kind: z.enum(["bonne_sante_mentale", "suivi_medical", "certificat_medical", "justification", "ordonnance"]).optional(), status: z.enum(["issued", "voided", "draft"]).optional(), query: z.string().max(160).optional(), offset: z.number().int().min(0).max(10000).optional(), textOffset:z.number().int().min(0).max(1000000).optional(),revision:z.string().regex(/^[a-f0-9]{64}$/).optional(),reusePrevious:z.boolean().optional() }).strict()
@@ -91,8 +98,8 @@ export const agentSchemas = {
     appointmentId: z.uuid().optional(), consultationId: z.uuid().optional(), paymentId: z.uuid().optional(),
     startsAt: z.iso.datetime({ offset: true }).optional(), durationMinutes: z.number().int().min(5).max(240).optional(), amountDzd: z.number().int().min(0).max(1000000).optional(),
     reason: z.string().trim().min(3).max(300).optional(), documentType: z.enum(["bonne_sante_mentale", "suivi_medical", "certificat_medical", "justification"]).optional(), variables: z.record(z.string().max(80), z.string().max(300)).optional(),
-  }).strict(),
-  navigate: z.object({ partIds, target: z.enum(["patients", "agenda", "dashboard", "patient"]), ...patient }).strict(),
+  }).strict().refine(v=>Object.keys(v).every(k=>actionArgumentKeys(v.action).includes(k)),'UnexpectedActionArguments'),
+  navigate: z.object({ partIds, target: z.enum(["patients", "agenda", "dashboard", "patient", "documents", "finances", "parametres", "jarvis"]), ...patient }).strict(),
   ask_doctor: z.object({ partIds, question: z.string().trim().min(1).max(500) }).strict(),
 } as const;
 export type AgentToolName = keyof typeof agentSchemas;

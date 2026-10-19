@@ -1,0 +1,896 @@
+{
+  "version": 1,
+  "languages": [
+    "fr"
+  ],
+  "fixture": "alexa_eval synthetic only",
+  "fixtureAsOf": "2026-10-15T12:00:00Z",
+  "fixtureCabinet": "a2000000-0000-4000-8000-000000000001",
+  "actors": {
+    "owner": "a1000000-0000-4000-8000-000000000001",
+    "assistant": "a1000000-0000-4000-8000-000000000002",
+    "other": "a1000000-0000-4000-8000-000000000003"
+  },
+  "baseline": {
+    "status": "NOT RUN",
+    "reason": "New office and mixed-patient questions; independent expected values before execution."
+  },
+  "scope": "French only; exact office reads, closed navigation, unsent administrative drafts and concise sourced answers. No real patient, sending or clinical acceptance.",
+  "cases": [
+    {
+      "id": "office-fr-01",
+      "scenario": 26,
+      "language": "fr",
+      "input": "Combien de notifications non lues ai-je ?",
+      "permittedToolSequence": [
+        [
+          "declare_request"
+        ],
+        [
+          "query_app"
+        ]
+      ],
+      "expectedManifest": {
+        "requiredParts": [
+          "query_app"
+        ],
+        "filters": [],
+        "unsupportedParts": []
+      },
+      "expected": {
+        "status": "completed",
+        "exactParts": 1,
+        "noBusinessWrite": true,
+        "textIncludes": [
+          "notification",
+          "0"
+        ],
+        "rpcResults": [
+          {
+            "name": "get_alexa_office_status",
+            "args": {
+              "p_view": "notifications"
+            },
+            "path": [
+              "total"
+            ],
+            "equals": 0
+          },
+          {
+            "name": "get_alexa_office_status",
+            "args": {
+              "p_view": "notifications"
+            },
+            "path": [
+              "unread"
+            ],
+            "equals": 0
+          }
+        ]
+      },
+      "timing": {
+        "deadlineMs": 180000
+      }
+    },
+    {
+      "id": "office-fr-02",
+      "scenario": 26,
+      "language": "fr",
+      "input": "Montre les notifications du cabinet.",
+      "permittedToolSequence": [
+        [
+          "declare_request"
+        ],
+        [
+          "query_app"
+        ]
+      ],
+      "expectedManifest": {
+        "requiredParts": [
+          "query_app"
+        ],
+        "filters": [],
+        "unsupportedParts": []
+      },
+      "expected": {
+        "status": "completed",
+        "exactParts": 1,
+        "noBusinessWrite": true,
+        "textIncludes": [
+          "notification",
+          "0"
+        ],
+        "rpcResults": [
+          {
+            "name": "get_alexa_office_status",
+            "args": {
+              "p_view": "notifications"
+            },
+            "path": [
+              "total"
+            ],
+            "equals": 0
+          },
+          {
+            "name": "get_alexa_office_status",
+            "args": {
+              "p_view": "notifications"
+            },
+            "path": [
+              "unread"
+            ],
+            "equals": 0
+          }
+        ]
+      },
+      "timing": {
+        "deadlineMs": 180000
+      }
+    },
+    {
+      "id": "office-fr-03",
+      "scenario": 26,
+      "language": "fr",
+      "input": "Quel est le nombre total de notifications ?",
+      "permittedToolSequence": [
+        [
+          "declare_request"
+        ],
+        [
+          "query_app"
+        ]
+      ],
+      "expectedManifest": {
+        "requiredParts": [
+          "query_app"
+        ],
+        "filters": [],
+        "unsupportedParts": []
+      },
+      "expected": {
+        "status": "completed",
+        "exactParts": 1,
+        "noBusinessWrite": true,
+        "textIncludes": [
+          "notification",
+          "0"
+        ],
+        "rpcResults": [
+          {
+            "name": "get_alexa_office_status",
+            "args": {
+              "p_view": "notifications"
+            },
+            "path": [
+              "total"
+            ],
+            "equals": 0
+          },
+          {
+            "name": "get_alexa_office_status",
+            "args": {
+              "p_view": "notifications"
+            },
+            "path": [
+              "unread"
+            ],
+            "equals": 0
+          }
+        ]
+      },
+      "timing": {
+        "deadlineMs": 180000
+      }
+    },
+    {
+      "id": "office-fr-04",
+      "scenario": 26,
+      "language": "fr",
+      "input": "Quel est l’état du système ?",
+      "permittedToolSequence": [
+        [
+          "declare_request"
+        ],
+        [
+          "query_app"
+        ]
+      ],
+      "expectedManifest": {
+        "requiredParts": [
+          "query_app"
+        ],
+        "filters": [],
+        "unsupportedParts": []
+      },
+      "expected": {
+        "status": "completed",
+        "exactParts": 1,
+        "noBusinessWrite": true,
+        "textIncludes": [
+          "2026-10-15",
+          "13:00"
+        ],
+        "rpcResults": [
+          {
+            "name": "get_alexa_office_status",
+            "args": {
+              "p_view": "system"
+            },
+            "path": [
+              "environment"
+            ],
+            "equals": "cloud-dev"
+          }
+        ]
+      },
+      "timing": {
+        "deadlineMs": 180000
+      }
+    },
+    {
+      "id": "office-fr-05",
+      "scenario": 26,
+      "language": "fr",
+      "input": "Quelle heure est-il au cabinet ?",
+      "permittedToolSequence": [
+        [
+          "declare_request"
+        ],
+        [
+          "query_app"
+        ]
+      ],
+      "expectedManifest": {
+        "requiredParts": [
+          "query_app"
+        ],
+        "filters": [],
+        "unsupportedParts": []
+      },
+      "expected": {
+        "status": "completed",
+        "exactParts": 1,
+        "noBusinessWrite": true,
+        "textIncludes": [
+          "2026-10-15",
+          "13:00"
+        ],
+        "rpcResults": [
+          {
+            "name": "get_alexa_office_status",
+            "args": {
+              "p_view": "system"
+            },
+            "path": [
+              "environment"
+            ],
+            "equals": "cloud-dev"
+          }
+        ]
+      },
+      "timing": {
+        "deadlineMs": 180000
+      }
+    },
+    {
+      "id": "office-fr-06",
+      "scenario": 26,
+      "language": "fr",
+      "input": "Quel environnement de déploiement est enregistré ?",
+      "permittedToolSequence": [
+        [
+          "declare_request"
+        ],
+        [
+          "query_app"
+        ]
+      ],
+      "expectedManifest": {
+        "requiredParts": [
+          "query_app"
+        ],
+        "filters": [],
+        "unsupportedParts": []
+      },
+      "expected": {
+        "status": "completed",
+        "exactParts": 1,
+        "noBusinessWrite": true,
+        "textIncludes": [
+          "2026-10-15",
+          "13:00"
+        ],
+        "rpcResults": [
+          {
+            "name": "get_alexa_office_status",
+            "args": {
+              "p_view": "system"
+            },
+            "path": [
+              "environment"
+            ],
+            "equals": "cloud-dev"
+          }
+        ]
+      },
+      "timing": {
+        "deadlineMs": 180000
+      }
+    },
+    {
+      "id": "office-fr-07",
+      "scenario": 26,
+      "language": "fr",
+      "input": "Ouvre les documents.",
+      "permittedToolSequence": [
+        [
+          "declare_request"
+        ],
+        [
+          "navigate"
+        ]
+      ],
+      "expectedManifest": {
+        "requiredParts": [
+          "navigate"
+        ],
+        "filters": [],
+        "unsupportedParts": []
+      },
+      "expected": {
+        "status": "completed",
+        "exactParts": 1,
+        "noBusinessWrite": true,
+        "navigation": {
+          "target": "documents"
+        },
+        "noSql": true
+      },
+      "timing": {
+        "deadlineMs": 180000
+      }
+    },
+    {
+      "id": "office-fr-08",
+      "scenario": 26,
+      "language": "fr",
+      "input": "Va aux finances.",
+      "permittedToolSequence": [
+        [
+          "declare_request"
+        ],
+        [
+          "navigate"
+        ]
+      ],
+      "expectedManifest": {
+        "requiredParts": [
+          "navigate"
+        ],
+        "filters": [],
+        "unsupportedParts": []
+      },
+      "expected": {
+        "status": "completed",
+        "exactParts": 1,
+        "noBusinessWrite": true,
+        "navigation": {
+          "target": "finances"
+        },
+        "noSql": true
+      },
+      "timing": {
+        "deadlineMs": 180000
+      }
+    },
+    {
+      "id": "office-fr-09",
+      "scenario": 26,
+      "language": "fr",
+      "input": "Ouvre les paramètres du cabinet.",
+      "permittedToolSequence": [
+        [
+          "declare_request"
+        ],
+        [
+          "navigate"
+        ]
+      ],
+      "expectedManifest": {
+        "requiredParts": [
+          "navigate"
+        ],
+        "filters": [],
+        "unsupportedParts": []
+      },
+      "expected": {
+        "status": "completed",
+        "exactParts": 1,
+        "noBusinessWrite": true,
+        "navigation": {
+          "target": "parametres"
+        },
+        "noSql": true
+      },
+      "timing": {
+        "deadlineMs": 180000
+      }
+    },
+    {
+      "id": "office-fr-10",
+      "scenario": 26,
+      "language": "fr",
+      "input": "Ouvre Alexa.",
+      "permittedToolSequence": [
+        [
+          "declare_request"
+        ],
+        [
+          "navigate"
+        ]
+      ],
+      "expectedManifest": {
+        "requiredParts": [
+          "navigate"
+        ],
+        "filters": [],
+        "unsupportedParts": []
+      },
+      "expected": {
+        "status": "completed",
+        "exactParts": 1,
+        "noBusinessWrite": true,
+        "navigation": {
+          "target": "jarvis"
+        },
+        "noSql": true
+      },
+      "timing": {
+        "deadlineMs": 180000
+      }
+    },
+    {
+      "id": "office-fr-11",
+      "scenario": 26,
+      "language": "fr",
+      "input": "Prépare un rappel de rendez-vous pour Ayoub Salmi.",
+      "permittedToolSequence": [
+        [
+          "declare_request"
+        ],
+        [
+          "query_app"
+        ]
+      ],
+      "expectedManifest": {
+        "requiredParts": [
+          "query_app"
+        ],
+        "filters": [],
+        "unsupportedParts": []
+      },
+      "expected": {
+        "status": "completed",
+        "exactParts": 1,
+        "noBusinessWrite": true,
+        "textIncludes": [
+          "Brouillon non envoyé",
+          "16 octobre 2026",
+          "09:00",
+          "Aucun message n’a été envoyé ni enregistré"
+        ],
+        "sourceRefs": [
+          {
+            "type": "patient",
+            "id": "a3000000-0000-4000-8000-000000000001"
+          },
+          {
+            "type": "appointment",
+            "id": "b1000000-0000-4000-8000-000000000001"
+          }
+        ],
+        "rpcResults": [
+          {
+            "name": "get_alexa_reminder_context",
+            "args": {
+              "p_patient_id": "a3000000-0000-4000-8000-000000000001"
+            },
+            "path": [
+              "appointment",
+              "id"
+            ],
+            "equals": "b1000000-0000-4000-8000-000000000001"
+          }
+        ],
+        "permittedRpcNames": [
+          "search_patients",
+          "get_patient",
+          "get_alexa_reminder_context"
+        ]
+      },
+      "timing": {
+        "deadlineMs": 180000
+      }
+    },
+    {
+      "id": "office-fr-12",
+      "scenario": 26,
+      "language": "fr",
+      "input": "Prépare un rappel de rendez-vous pour Belkacem Nadia.",
+      "permittedToolSequence": [
+        [
+          "declare_request"
+        ],
+        [
+          "query_app"
+        ]
+      ],
+      "expectedManifest": {
+        "requiredParts": [
+          "query_app"
+        ],
+        "filters": [],
+        "unsupportedParts": []
+      },
+      "expected": {
+        "status": "completed",
+        "exactParts": 1,
+        "noBusinessWrite": true,
+        "textIncludes": [
+          "Brouillon non envoyé",
+          "16 octobre 2026",
+          "10:00",
+          "Aucun message n’a été envoyé ni enregistré"
+        ],
+        "sourceRefs": [
+          {
+            "type": "patient",
+            "id": "a3000000-0000-4000-8000-000000000002"
+          },
+          {
+            "type": "appointment",
+            "id": "b1000000-0000-4000-8000-000000000002"
+          }
+        ],
+        "rpcResults": [
+          {
+            "name": "get_alexa_reminder_context",
+            "args": {
+              "p_patient_id": "a3000000-0000-4000-8000-000000000002"
+            },
+            "path": [
+              "appointment",
+              "id"
+            ],
+            "equals": "b1000000-0000-4000-8000-000000000002"
+          }
+        ],
+        "permittedRpcNames": [
+          "search_patients",
+          "get_patient",
+          "get_alexa_reminder_context"
+        ]
+      },
+      "timing": {
+        "deadlineMs": 180000
+      }
+    },
+    {
+      "id": "office-fr-13",
+      "scenario": 26,
+      "language": "fr",
+      "input": "Rédige un message de document prêt pour Ayoub Salmi.",
+      "permittedToolSequence": [
+        [
+          "declare_request"
+        ],
+        [
+          "query_app"
+        ]
+      ],
+      "expectedManifest": {
+        "requiredParts": [
+          "query_app"
+        ],
+        "filters": [],
+        "unsupportedParts": []
+      },
+      "expected": {
+        "status": "completed",
+        "exactParts": 1,
+        "noBusinessWrite": true,
+        "textIncludes": [
+          "Brouillon non envoyé",
+          "Ayoub Salmi",
+          "Aucun message n’a été envoyé ni enregistré"
+        ],
+        "sourceRefs": [
+          {
+            "type": "patient",
+            "id": "a3000000-0000-4000-8000-000000000001"
+          },
+          {
+            "type": "document",
+            "id": "ab000000-0000-4000-8000-000000000001"
+          }
+        ],
+        "permittedRpcNames": [
+          "search_patients",
+          "get_patient",
+          "query_alexa_records"
+        ]
+      },
+      "timing": {
+        "deadlineMs": 180000
+      }
+    },
+    {
+      "id": "office-fr-14",
+      "scenario": 26,
+      "language": "fr",
+      "input": "Quel est le téléphone de Ayoub Salmi ?",
+      "permittedToolSequence": [
+        [
+          "declare_request"
+        ],
+        [
+          "get_patient_context"
+        ]
+      ],
+      "expectedManifest": {
+        "requiredParts": [
+          "get_patient_context"
+        ],
+        "filters": [],
+        "unsupportedParts": []
+      },
+      "expected": {
+        "status": "completed",
+        "exactParts": 1,
+        "noBusinessWrite": true,
+        "textIncludes": [
+          "0000000001"
+        ],
+        "textExcludes": [
+          "FICTIF-ID-AYOUB",
+          "Notes administratives",
+          "Adresse fictive"
+        ],
+        "sourceRefs": [
+          {
+            "type": "patient",
+            "id": "a3000000-0000-4000-8000-000000000001"
+          }
+        ]
+      },
+      "timing": {
+        "deadlineMs": 180000
+      }
+    },
+    {
+      "id": "office-fr-15",
+      "scenario": 26,
+      "language": "fr",
+      "input": "Quels sont les téléphones de Ayoub Salmi ?",
+      "permittedToolSequence": [
+        [
+          "declare_request"
+        ],
+        [
+          "get_patient_context"
+        ]
+      ],
+      "expectedManifest": {
+        "requiredParts": [
+          "get_patient_context"
+        ],
+        "filters": [],
+        "unsupportedParts": []
+      },
+      "expected": {
+        "status": "completed",
+        "exactParts": 1,
+        "noBusinessWrite": true,
+        "textIncludes": [
+          "0000000001"
+        ],
+        "textExcludes": [
+          "FICTIF-ID-AYOUB",
+          "Notes administratives",
+          "Adresse fictive"
+        ],
+        "sourceRefs": [
+          {
+            "type": "patient",
+            "id": "a3000000-0000-4000-8000-000000000001"
+          }
+        ]
+      },
+      "timing": {
+        "deadlineMs": 180000
+      }
+    },
+    {
+      "id": "office-fr-16",
+      "scenario": 26,
+      "language": "fr",
+      "input": "Résume les trois premières consultations de Ayoub Salmi.",
+      "permittedToolSequence": [
+        [
+          "declare_request"
+        ],
+        [
+          "get_patient_context"
+        ]
+      ],
+      "expectedManifest": {
+        "requiredParts": [
+          "get_patient_context"
+        ],
+        "filters": [],
+        "unsupportedParts": []
+      },
+      "expected": {
+        "status": "failed",
+        "exactParts": 1,
+        "noBusinessWrite": true,
+        "textIncludes": [
+          "premières consultations",
+          "pas encore prise en charge"
+        ],
+        "permittedRpcNames": []
+      },
+      "timing": {
+        "deadlineMs": 180000
+      }
+    },
+    {
+      "id": "office-fr-17",
+      "scenario": 26,
+      "language": "fr",
+      "input": "Montre les documents contenant « sommeil bleu » de Ayoub Salmi.",
+      "permittedToolSequence": [
+        [
+          "declare_request"
+        ],
+        [
+          "query_documents"
+        ]
+      ],
+      "expectedManifest": {
+        "requiredParts": [
+          "query_documents"
+        ],
+        "filters": [],
+        "unsupportedParts": []
+      },
+      "expected": {
+        "status": "failed",
+        "exactParts": 1,
+        "noBusinessWrite": true,
+        "textIncludes": [
+          "recherche dans le contenu",
+          "pas prise en charge"
+        ],
+        "permittedRpcNames": []
+      },
+      "timing": {
+        "deadlineMs": 180000
+      }
+    },
+    {
+      "id": "office-fr-18",
+      "scenario": 26,
+      "language": "fr",
+      "input": "Montre le téléphone de Ayoub Salmi et montre les coordonnées de Belkacem Nadia.",
+      "permittedToolSequence": [
+        [
+          "declare_request"
+        ],
+        [
+          "get_patient_context"
+        ]
+      ],
+      "expectedManifest": {
+        "requiredParts": [
+          "ayoub_phone",
+          "nadia_contacts"
+        ],
+        "filters": [],
+        "unsupportedParts": []
+      },
+      "expected": {
+        "status": "completed",
+        "exactParts": 2,
+        "noBusinessWrite": true,
+        "textIncludes": [
+          "0000000001",
+          "Nadia Belkacem"
+        ],
+        "responseFields": [
+          {
+            "label": "Téléphone",
+            "value": "0000000001",
+            "source": {
+              "type": "patient",
+              "id": "a3000000-0000-4000-8000-000000000001"
+            }
+          },
+          {
+            "label": "Téléphone",
+            "value": "Non renseigné",
+            "source": {
+              "type": "patient",
+              "id": "a3000000-0000-4000-8000-000000000002"
+            }
+          }
+        ],
+        "sourceSets": [
+          {
+            "type": "patient",
+            "ids": [
+              "a3000000-0000-4000-8000-000000000001",
+              "a3000000-0000-4000-8000-000000000002"
+            ]
+          }
+        ],
+        "rpcResults": [
+          {
+            "name": "get_patient",
+            "args": {
+              "p_id": "a3000000-0000-4000-8000-000000000001"
+            },
+            "path": [
+              "phone"
+            ],
+            "equals": "0000000001"
+          },
+          {
+            "name": "get_patient",
+            "args": {
+              "p_id": "a3000000-0000-4000-8000-000000000002"
+            },
+            "path": [
+              "phone"
+            ],
+            "equals": "        "
+          }
+        ]
+      },
+      "timing": {
+        "deadlineMs": 180000
+      }
+    },
+    {
+      "id": "office-fr-19",
+      "scenario": 26,
+      "language": "fr",
+      "input": "Quelle est l’adresse électronique de Ayoub Salmi ?",
+      "permittedToolSequence": [
+        [
+          "declare_request"
+        ],
+        [
+          "get_patient_context"
+        ]
+      ],
+      "expectedManifest": {
+        "requiredParts": [
+          "get_patient_context"
+        ],
+        "filters": [],
+        "unsupportedParts": []
+      },
+      "expected": {
+        "status": "failed",
+        "exactParts": 1,
+        "noBusinessWrite": true,
+        "responseConcepts": [["e-mail", "adresse électronique"], ["pas pris en charge", "non pris en charge"]],
+        "permittedRpcNames": []
+      },
+      "timing": {
+        "deadlineMs": 180000
+      }
+    }
+  ]
+}

@@ -10,7 +10,23 @@ type Rpc=(name:string,args:RpcArgs,signal:AbortSignal)=>Promise<unknown>;
 const text=z.string().nullable(),money=z.number().int().safe(),amount=z.number().int().nonnegative().safe();
 
 function result(callId:string,data:unknown,lines:string[],gate:string):AgentResult{return {callId,status:'ok',complete:true,data,text:lines.join('\n'),conditionKeys:[],evidence:[{id:callId,type:'query',label:gate,provenance:{gate}}]};}
-export async function readApplication(callId:string,view:string,rpc:Rpc,signal:AbortSignal):Promise<AgentResult>{
+export async function readApplication(callId:string,view:string,rpc:Rpc,signal:AbortSignal,options:{asOf?:string;offset?:number;revision?:string}={}):Promise<AgentResult>{
+ if(view==='notifications'||view==='system'){
+  const gate='get_alexa_office_status',raw=await rpc(gate,{p_view:view,p_offset:options.offset??0,p_revision:options.revision??null},signal);
+  if(view==='system'){
+   const value=z.object({view:z.literal('system'),environment:z.enum(['cloud-dev','self-hosted'])}).strict().parse(raw);
+   const instant=z.iso.datetime({offset:true}).parse(options.asOf),date=new Date(instant),timezone='Africa/Algiers';
+   const localDate=new Intl.DateTimeFormat('en-CA',{timeZone:timezone,year:'numeric',month:'2-digit',day:'2-digit'}).format(date);
+   const localTime=new Intl.DateTimeFormat('fr-FR',{timeZone:timezone,hour:'2-digit',minute:'2-digit',hour12:false}).format(date);
+   return result(callId,{...value,asOf:instant,localDate,localTime,timezone},[copy.office.system(value.environment,localDate,localTime)],gate);
+  }
+  const value=z.object({view:z.literal('notifications'),total:amount,unread:amount,kinds:z.array(z.object({kind:z.string().min(1).max(120),total:amount,unread:amount}).strict()).max(20),totalKinds:amount,offset:amount,hasMore:z.boolean(),revision:z.string().regex(/^[a-f0-9]{32}$/)}).strict().parse(raw);
+  if(value.offset!==(options.offset??0)||value.unread>value.total||value.kinds.some(k=>k.unread>k.total)||new Set(value.kinds.map(k=>k.kind)).size!==value.kinds.length||value.hasMore!==(value.offset+value.kinds.length<value.totalKinds)||value.kinds.reduce((n,k)=>n+k.total,0)>value.total||value.kinds.reduce((n,k)=>n+k.unread,0)>value.unread)throw new AgentReadError('malformed');
+  if(options.revision&&options.revision!==value.revision)throw new AgentReadError('changed');
+  const r=result(callId,{...value,...(value.hasMore?{nextOffset:value.offset+value.kinds.length}:{})},[copy.office.notifications(value.total,value.unread),...value.kinds.map(k=>copy.office.kind(copy.office.kinds[k.kind]??k.kind,k.total,k.unread)),...(value.hasMore?[copy.page(value.offset+1,value.offset+value.kinds.length,value.totalKinds)]:[])],gate);
+  r.complete=!value.hasMore;r.status=value.hasMore?'partial':value.total?'ok':'empty';return r;
+ }
+ if(!['cabinet','practitioner'].includes(view))throw new AgentReadError('malformed');
  const gate=view==='cabinet'?'get_my_cabinet':'get_my_profile';
  const raw=await rpc(gate,{},signal);
  const row=view==='cabinet'?z.object({id:z.uuid(),name:z.string(),address:text,phone:text}).parse(raw):z.object({id:z.uuid(),full_name:z.string(),title:text,speciality_fr:text,speciality_ar:text,order_number:text,phone:text}).parse(raw);

@@ -10,7 +10,7 @@ export const turnInput = z.object({
 export type TurnInput = z.infer<typeof turnInput>;
 export const alexaNavigationSchema = z.union([
   z.object({ target: z.literal("patient"), patientId: z.uuid() }).strict(),
-  z.object({ target: z.enum(["agenda", "patients", "dashboard"]) }).strict(),
+  z.object({ target: z.enum(["agenda", "patients", "dashboard", "documents", "finances", "parametres", "jarvis"]) }).strict(),
 ]);
 export type AlexaNavigation = z.infer<typeof alexaNavigationSchema>;
 export const alexaProposalSchema = z.object({actionId:z.uuid().optional(),tool:z.string().min(1).max(80),args:z.record(z.string().max(80),z.union([z.string().max(500),z.number().finite(),z.boolean(),z.null()]))}).strict();

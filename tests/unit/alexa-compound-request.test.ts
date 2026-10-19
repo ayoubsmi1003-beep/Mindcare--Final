@@ -1,11 +1,33 @@
 import {it,expect} from 'vitest';
-import {constrainRequestedOutputs,frenchRequestedOutputs,patientConditionsGrounded} from '@/shared/alexa/request-contract';
+import {constrainRequestedOutputs,frenchRequestedOutputs,patientConditionsGrounded,frenchPatientCompoundContract,frenchPatientCountContract,countContractHints} from '@/shared/alexa/request-contract';
 import {runAgentLoop} from '@/server/alexa/agent-loop';
 import type {LocalCompletion} from '@/server/alexa/local-model-protocol';
 const text='Trouve les patients adultes avec au moins trois consultations terminées, un solde restant positif et aucune consultation terminée depuis 90 jours. Compte-les, liste-les et trie par solde décroissant.';
 const input={text,conversationId:'compound-guard',clientTurnId:'11111111-1111-4111-8111-111111111111',appContext:{patientId:null,page:'/jarvis'}};
 const calls=(name:string,args:Record<string,unknown>):LocalCompletion=>({kind:'calls',calls:[{id:'c'+name,name,args}],message:{role:'assistant',content:null},tokensIn:1,tokensOut:1});
 const conditions=['age:gte:18','completed_consultations:gte:3','outstanding_balance:gt:0','no_completed_days:eq:90'];
+it.each([
+ 'Trouve les patients adultes actifs ayant au moins trois consultations terminées, un solde impayé et aucune consultation terminée depuis 90 jours. Compte-les et liste-les par solde décroissant.',
+ 'Donne la liste et le nombre des patients actifs majeurs avec au moins trois consultations closes, des impayés et aucune consultation close depuis 90 jours ; soldes du plus élevé au plus faible.',
+])('retains every equivalent French compound predicate and its sort: %s',query=>{
+ const c=frenchPatientCompoundContract(query);expect(c?.conditions.map(p=>p.field+':'+p.op+':'+p.value).sort()).toEqual([...conditions].sort());expect(c?.sort).toBe('outstanding_desc');expect(patientConditionsGrounded(c!.conditions,query)).toBe(true);
+});
+it.each([
+ 'Combien de patients sont actifs ? Parmi les actifs, combien n’ont pas de numéro d’identité, ont moins de 18 ans, et n’ont eu aucune consultation terminée dans les six derniers mois ? Donne chaque nombre séparément.',
+ 'Compte toute la patientèle active, puis séparément les actifs sans numéro d’identité, les actifs de moins de dix-huit ans et les actifs sans consultation terminée dans les six derniers mois.',
+])('identifies all four expressly separate metric categories without turning them into an AND query: %s',query=>{
+ const c=frenchPatientCountContract(query);expect(c?.clauses).toHaveLength(4);
+ expect(countContractHints(c!).map(h=>h.conditions)).toEqual([[],['identity_card:missing'],['age:lt:18'],['no_completed_months:eq:6']]);
+});
+it.each([
+ 'Combien de patients sont actifs ? Parmi les actifs, combien n’ont pas de numéro d’identité, n’ont pas moins de dix-huit ans, et n’ont eu aucune consultation terminée dans les six derniers mois ? Donne chaque nombre séparément.',
+ 'Compte toute la patientèle active, puis séparément les actifs pas sans numéro d’identité, les actifs de moins de 18 ans et les actifs sans consultation terminée dans les six derniers mois.',
+ 'Combien de patients actifs sous antidépresseur ? Combien sont sans carte d’identité ? Combien sont mineurs ? Combien n’ont pas consulté depuis six derniers mois ? Donne chaque nombre séparément.',
+ 'Compte les patients actifs avec un téléphone renseigné, puis séparément les actifs sans numéro d’identité, les actifs de moins de 18 ans et les actifs sans consultation terminée dans les six derniers mois.',
+ 'Compte la patientèle active, puis séparément les actifs sans numéro d’identité et sans adresse électronique, les actifs de moins de 18 ans et les actifs sans consultation terminée dans les six derniers mois.',
+])('does not silently drop an additional material filter from a separate-metric format: %s',query=>{
+ expect(frenchPatientCountContract(query)).toBeNull();
+});
 it('rejects numeric thresholds invented from an adult or attendance condition',()=>{expect(patientConditionsGrounded([{field:'age',op:'gte',value:65}],text)).toBe(false);expect(patientConditionsGrounded([{field:'no_completed_days',op:'eq',value:60}],text)).toBe(false);});
 it('blocks a native ledger that splits one compound population into unrelated partial filters before any SQL',async()=>{
  let i=0,reads=0;const steps=[calls('declare_request',{parts:[{id:'p1',goal:'Adultes',tool:'query_patients',conditions:['age:gte:65','completed_consultations:gte:3'],dependsOn:[]},{id:'p2',goal:'Solde',tool:'query_finance',conditions:['balance:gt:0'],dependsOn:[]}]}),calls('query_patients',{partIds:['p1'],mode:'list'})];
@@ -20,7 +42,7 @@ it('keeps both requested outputs and every predicate in one sorted list query, e
 it('projects only the explicitly requested compound conditions and both outputs into native metadata',async()=>{
  let schema:Record<string,unknown>|undefined;
  await runAgentLoop({...input,conversationId:'compound-native-schema',text:text.replace('trois','quatre').replace('90','120')},{actor:'compound-native-schema',infer:async(_m,o)=>{schema=o.tools?.find(t=>t.function.name==='declare_request')?.function.parameters;throw Error('Capture only');},execute:async()=>{throw Error('No read');}},new AbortController().signal);
- const parts=(schema?.properties as Record<string,Record<string,unknown>>)?.parts;expect(parts?.minItems).toBe(2);expect(parts?.maxItems).toBe(2);const props=(parts?.items as {properties:Record<string,unknown>}).properties;expect(props.tool).toMatchObject({enum:['query_patients']});expect(props.conditions).toMatchObject({minItems:4,maxItems:4,items:{enum:['age:gte:18','no_completed_days:eq:120','completed_consultations:gte:4','outstanding_balance:gt:0']}});
+ const parts=(schema?.properties as Record<string,Record<string,unknown>>)?.parts;expect(parts?.minItems).toBe(2);expect(parts?.maxItems).toBe(2);const tuple=parts?.prefixItems as {properties:Record<string,unknown>}[];expect(tuple).toHaveLength(2);expect(parts).not.toHaveProperty('items');for(const row of tuple){expect(row.properties.tool).toMatchObject({enum:['query_patients']});expect(row.properties.conditions).toMatchObject({minItems:4,maxItems:4,prefixItems:[{const:'age:gte:18'},{const:'no_completed_days:eq:120'},{const:'completed_consultations:gte:4'},{const:'outstanding_balance:gt:0'}]});}
 });
 it('does not accept a single agenda answer as completion of four explicit application requests',async()=>{
  let i=0,reads=0;const steps=[calls('declare_request',{parts:[{id:'p1',goal:'Agenda',tool:'query_agenda',conditions:[],dependsOn:[]}]}),calls('query_agenda',{partIds:['p1'],period:'demain'})];

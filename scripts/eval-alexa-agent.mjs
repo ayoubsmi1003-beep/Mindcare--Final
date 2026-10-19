@@ -4,6 +4,7 @@ import { resolve, join, relative, isAbsolute } from "node:path";
 import { pathToFileURL, fileURLToPath } from "node:url";
 import { createRequire } from "node:module";
 import { createHash, randomUUID } from "node:crypto";
+import {finalizeAlexaAdmission} from './lib/alexa-eval-admission.mjs';
 
 const invocationCwd = process.cwd();
 const root = resolve(fileURLToPath(new URL("../", import.meta.url)));
@@ -128,6 +129,8 @@ for (const spec of manifest.cases) {
   const started = Date.now();
   const events = [];
   const calls = [];
+  const liveCalls = [];
+  const dispatchedCalls = [];
   const queries = [];
   const faults = [];
   const timings = { inference: [], tools: [], firstVisible: null };
@@ -171,6 +174,7 @@ for (const spec of manifest.cases) {
         knowledge: api.clientSql(actor),
         native: true,
         agentAsOf: fixtureAsOf,
+        agentObserve: call => dispatchedCalls.push(call),
         agentInfer: async (messages, options) => {
           if (spec.expected.fault?.kind === "model-unavailable") throw new Error("LocalModelUnavailable");
           const time = Date.now();
@@ -191,6 +195,7 @@ for (const spec of manifest.cases) {
             for (const call of result.calls) {
               const schema = call.name === "declare_request" ? api.compactDeclarationSchema : api.agentSchemas[call.name];
               calls.push({ name: call.name, args: structuredClone(call.args), valid: schema?.safeParse(call.args).success === true });
+              liveCalls.push({call,schema});
             }
           }
           return result;
@@ -202,6 +207,8 @@ for (const spec of manifest.cases) {
       },
       AbortSignal.timeout(api.ALEXA_NATIVE_DEADLINE_MS),
     );
+    const acceptedIds=new Set(events.filter(e=>e.type==='done').flatMap(e=>(e.parts??[]).flatMap(p=>p.resultRefs??[])));
+    for(const [index,entry] of liveCalls.entries())calls[index]=finalizeAlexaAdmission(calls[index],entry.call,entry.schema,acceptedIds,dispatchedCalls.find(call=>call.id===entry.call.id));
     const record = {
       id: spec.id,
       requestBudgetMs: api.ALEXA_NATIVE_DEADLINE_MS,

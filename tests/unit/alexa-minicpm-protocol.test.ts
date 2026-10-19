@@ -1,5 +1,5 @@
 import { expect, it } from "vitest";
-import { buildLocalRequest, parseLocalAnswer, localModelFailureCode } from "@/server/alexa/local-model-protocol";
+import { buildLocalRequest, parseLocalAnswer, localModelFailureCode, assertLocalContextFits } from "@/server/alexa/local-model-protocol";
 import { assertLocalAssetAccess, localAssetLayout } from "@/server/alexa/local-model-assets";
 
 const messages = [{ role: "user" as const, content: "Bonjour" }];
@@ -102,4 +102,10 @@ it('reports only closed local failure codes, never arbitrary exception messages 
  expect(localModelFailureCode(new Error('LocalModelAssetAccess'))).toBe('LocalModelAssetAccess');
  expect(localModelFailureCode(new DOMException('Deadline','TimeoutError'))).toBe('LocalModelTimeout');
  for(const error of [new Error('Patient FICTIF phone 0000000001'),{message:'LocalModelIntegrity'},null])expect(localModelFailureCode(error)).toBe('AgentLoopFailure');
+});
+
+it('classifies an oversized real token array as context overflow, retaining output and safety reserves',()=>{
+ expect(()=>assertLocalContextFits({tokens:Array(2944).fill(1)},1024)).not.toThrow();
+ for(const count of [2945,4096,4097,12000])expect(()=>assertLocalContextFits({tokens:Array(count).fill(1)},1024)).toThrow('LocalModelContext');
+ expect(()=>assertLocalContextFits({tokens:[1,'invalid']},512)).toThrow();
 });

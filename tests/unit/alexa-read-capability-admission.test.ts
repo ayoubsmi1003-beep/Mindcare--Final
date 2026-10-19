@@ -267,3 +267,22 @@ it.each([
 it('keeps displaying prepared documents a read operation', () => {
   expect(frenchRequestAdmission('Affiche les brouillons de certificats déjà préparés.', false).tools).toEqual(['query_documents']);
 });
+
+it.each([
+ ['Résume le cas du patient sélectionné.', 'summary'],
+ ['Quels diagnostics sont enregistrés pour le patient sélectionné ?', 'diagnoses'],
+ ['Quel traitement est enregistré pour le patient sélectionné ?', 'treatments'],
+ ['Quelles échelles ont été remplies pour le patient sélectionné ?', 'scales'],
+])('does not offer note-only arguments for %s',async(text,section)=>{
+ const schema=await exposedReadSchema(text,'get_patient_context');
+ expect(frenchReadArgumentBindings(frenchRequestAdmission(text,false),'get_patient_context')).toMatchObject({section});
+ for(const field of ['consultationId','area','query','from','to','status','offset','textOffset','maxCharacters','revision','reusePrevious'])expect(schema?.properties).not.toHaveProperty(field);
+});
+it('dispatches a bound summary once without requiring the model to repeat grounded slots',async()=>{
+ const text='Résume le cas du patient sélectionné.';
+ const execute=vi.fn(async(c:{id:string})=>({callId:c.id,status:'ok' as const,complete:true,text:'Le patient rapporte des difficultés familiales.',evidence:[],conditionKeys:[]}));
+ let step=0;
+ await runAgentLoop({...input,text},{actor:'read-scope',execute,infer:async()=>step++===0?call('d','declare_request',{parts:[{id:'p',goal:text,tool:'get_patient_context',conditions:[],dependsOn:[]}]}):call('r','get_patient_context',{partIds:['p']})},new AbortController().signal);
+ expect(execute).toHaveBeenCalledTimes(1);
+ expect(execute.mock.calls[0]?.[0]).toMatchObject({name:'get_patient_context',args:{partIds:['p'],section:'summary'}});
+});

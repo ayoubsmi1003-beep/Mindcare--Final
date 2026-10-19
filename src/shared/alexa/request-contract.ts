@@ -1,9 +1,36 @@
+import {requestedConsultationCount,requestsOldestConsultations} from "./request-plan";
 import {parsePatientMention} from "./patient-mention";
 import type {RequestPart,SupportedCondition} from './agent';
 const fold=(value:string)=>value.normalize('NFKD').replace(/\p{M}/gu,'').replace(/[’‘]/gu,"'").toLocaleLowerCase();
 export interface FrenchCountContract {clauses:readonly string[];}
+function closedMetricFragment(text:string,field?:SupportedCondition['field']):boolean{
+ const header='compte comptes comptez combien nombre total effectif patients patient dossiers dossier patientele actif actifs active actives tous toutes tout toute la le les de du des sont est';
+ const prefix='puis separement les le la de du des actifs active actives sont combien n ont pas sans eu et';
+ const words=field==='identity_card'?prefix+' numero numeros d identite carte cartes piece pieces nationale nationales national':field==='age'?prefix+' moins dix huit 18 ans enfant enfants mineur mineurs':field==='no_completed_months'?prefix+' aucune aucun consultation consultations terminee terminees termine termines close closes dans six 6 dernier derniers mois depuis':header;
+ const allowed=new Set(words.split(' '));
+ return (fold(text).match(/[\p{L}\p{N}]+/gu)??[]).every(word=>allowed.has(word));
+}
+function separateMetricClauses(text:string):readonly string[]|null|undefined{
+ const plain=fold(text);
+ if(!/\b(?:separement|chaque nombre)\b/u.test(plain))return undefined;
+ if(! /\b(?:patients?|patientele)\b/u.test(plain)||/\b(?:agenda|rendez[- ]vous|finance|prepar\w*|modifi\w*|ouvre|lis)\b/u.test(plain))return null;
+ const fragments=text.split(/[.,?;]|\bet\s+(?=(?:les|des|ces)\s+actifs?\b|n['’]ont\b|ont\s+moins)/iu).map(s=>s.trim()).filter(Boolean);
+ const clauses:string[]=[];const seen=new Set<string>();
+ for(const fragment of fragments){
+  const p=fold(fragment),conditions=explicitConditions(fragment)??[];
+  if(!conditions.length&&/^parmi (?:les|ces) actifs$|^donne chaque nombre separement$/u.test(p))continue;
+  if(!clauses.length&&!conditions.length&&/\b(?:actifs?|actives?)\b/u.test(p)&&/\b(?:patients?|patientele)\b/u.test(p)&&closedMetricFragment(fragment)){clauses.push(fragment);continue;}
+  if(conditions.length!==1)return null;
+  const c=conditions[0]!,metric=key(c);
+  if((c.field==='age'&&/\bpas\b/u.test(p))||/\bpas\s+(?:sans|aucun\w*)\b/u.test(p))return null;
+  if(!['["identity_card","missing",null]','["age","lt",18]','["no_completed_months","eq",6]'].includes(metric)||seen.has(metric)||!closedMetricFragment(fragment,c.field))return null;
+  seen.add(metric);clauses.push(fragment);
+ }
+ return clauses.length===4&&seen.size===3?clauses:null;
+}
 /** An output constraint only: it never chooses a gate, queries records or invents an answer. */
 export function frenchPatientCountContract(text:string):FrenchCountContract|null {
+ const separate=separateMetricClauses(text);if(separate!==undefined)return separate?{clauses:separate}:null;
  const plain=fold(text),combien=[...text.matchAll(/\bcombien\b/giu)],starts=(combien.length?combien:[...text.matchAll(/\b(?:nombre(?:\s+total)?|total|effectif|d[ée]compte|taille(?=\s+de\s+la\s+patient[èe]le)|compte(?:r|z)?(?=\s+(?:tous|toutes|les?|des?|patients?|dossiers?|fiches?)))/giu)]).map(m=>m.index);
  const presentation=[...plain.matchAll(/\b(?:donne|affiche|montre)\w*/gu)],singleLeadingPresentation=presentation.length===1&&presentation[0]!.index===0&&presentation[0]!.index<starts[0]!;
  if(!starts.length||! /\b(?:patients?|dossiers?|fiches?|patientele)\b/u.test(plain)||/\b(?:lis|lire|expliqu\w*|resum\w*|detaill\w*|compar\w*|list\w*|lesquels|lesquelles|prepar\w*|cre[er]\w*|modifi\w*|annul\w*|ouvre\w*)\b|\b(?:leurs?|les)\s+noms?\b/u.test(plain)||(presentation.length>0&&!singleLeadingPresentation))return null;
@@ -17,7 +44,7 @@ export function frenchPatientCountContract(text:string):FrenchCountContract|null
  return clauses.length<=12?{clauses}:null;
 }
 const key=(c:SupportedCondition)=>JSON.stringify([c.field,c.op,c.value]);
-const mentions:Record<SupportedCondition['field'],RegExp>={phone:/\b(?:telephones?|portables?|mobiles?)\b/u,identity_card:/\b(?:identite|identification nationale|cni|carte nationale|carte d[' ]?identite|piece d[' ]?identite|document d[' ]?identite|numero national)\b/u,birth_date:/\b(?:naissance|age)\b/u,sex:/\bsexe\b/u,age:/\b(?:age|ages?|ans?|anniversaires?|adultes?|enfants?|mineurs?)\b/u,completed_consultations:/\b(?:consult\w*|seances?|vus?|recus?)\b/u,outstanding_balance:/\b(?:soldes?|impayes?|dettes?|encaisse\w*|paiements?)\b/u,no_completed_days:/\b(?:consult\w*|seances?|assiste\w*|vus?|recus?)\b/u,no_completed_months:/\b(?:consult\w*|seances?|assiste\w*|vus?|recus?)\b/u,administrative_incomplete:/\b(?:administrati\w*|dossiers?)\b/u};
+const mentions:Record<SupportedCondition['field'],RegExp>={phone:/\b(?:telephones?|portables?|mobiles?)\b/u,identity_card:/\b(?:identite|identification nationale|cni|carte nationale|carte d[' ]?identite|piece d[' ]?identite|document d[' ]?identite|numero national)\b/u,birth_date:/\b(?:naissance|age)\b/u,sex:/\bsexe\b/u,age:/\b(?:age|ages?|ans?|anniversaires?|adultes?|majeurs?|enfants?|mineurs?)\b/u,completed_consultations:/\b(?:consult\w*|seances?|vus?|recus?)\b/u,outstanding_balance:/\b(?:soldes?|impayes?|dettes?|encaisse\w*|paiements?)\b/u,no_completed_days:/\b(?:consult\w*|seances?|assiste\w*|vus?|recus?)\b/u,no_completed_months:/\b(?:consult\w*|seances?|assiste\w*|vus?|recus?)\b/u,administrative_incomplete:/\b(?:administrati\w*|dossiers?)\b/u};
 /** Predicate admission is independent of a model-generated goal or cited database value. */
 export function patientConditionsGrounded(conditions:readonly SupportedCondition[],text:string):boolean {
  const plain=fold(text),missing=/\bsans\b|\baucun\w*\b|\bpas\b|\bmanquant\w*\b|\bmanque\w*\b|\bnuls?\b|\babsent\w*\b|\binconnu\w*\b|\bnon\s+(?:renseigne\w*|enregistre\w*)\b|\bvides?\b/u.test(plain);
@@ -40,14 +67,15 @@ function explicitConditions(text:string):SupportedCondition[]|null {
  if((missing&&/\bnaissance\b/u.test(value))||/\bage\s+(?:est\s+)?(?:inconnu|non renseigne|manquant)/u.test(value))add('birth_date','missing',null);
  if(missing&&/\bsexe\b/u.test(value))add('sex','missing',null);
  if(/\b(?:enfants?|mineurs?)\b|moins de\s*18\s*ans|pas encore\s*18\s*ans|pas atteint\s+(?:leur\s+)?18\s+anniversaire/u.test(value))add('age','lt',18);
- else if(/\badultes?\b|(?:au moins\s+18\s+ans?|18\s+ans?\s+ou\s+plus)/u.test(value))add('age','gte',18);
+ else if(/\b(?:adultes?|majeurs?)\b|(?:au moins\s+18\s+ans?|18\s+ans?\s+ou\s+plus)/u.test(value))add('age','gte',18);
  for(const match of value.matchAll(/\b(moins de|au moins|plus de)\s*(\d+)\s*ans?\b/gu)){const age=Number(match[2]);if(age<=120)add('age',match[1]==='moins de'?'lt':match[1]==='au moins'?'gte':'gt',age);}
- if(missing&&/\bconsult\w*\b/u.test(value)&&/(?:six|6)\s+mois/u.test(value))add('no_completed_months','eq',6);
- const recent=/\b(?:aucune?|sans|pas de)\s+(?:consultations?|seances?)\s+(?:(?:termine|cloture|complete)\w*\s+)?(?:depuis|dans les|au cours des)\s+(\d+)\s+jours/gu;
+ if(missing&&/\bconsult\w*\b/u.test(value)&&/(?:six|6)\s+(?:derniers?\s+)?mois/u.test(value))add('no_completed_months','eq',6);
+ const recent=/\b(?:aucune?|sans|pas de)\s+(?:consultations?|seances?|visites?)\s+(?:(?:termine|cloture|complete|clos|acheve)\w*\s+)?(?:depuis|dans les|au cours des)\s+(\d+)\s+(?:derniers\s+)?jours/gu;
  for(const m of value.matchAll(recent))if(Number(m[1])>0&&Number(m[1])<=3650)add('no_completed_days','eq',Number(m[1]));
- const minimum=/(?:au moins|minimum(?: de)?|>=)\s*(\d+)\s+(?:consultations?|seances?)\s+(?:termine|cloture|complete)\w*/gu;
+ const minimum=/(?:au moins|au minimum|minimum(?: de)?|>=)\s*(\d+)\s+(?:consultations?|seances?)\s+(?:termine|cloture|complete|clos|acheve)\w*/gu;
  for(const m of value.matchAll(minimum))if(Number(m[1])<=1000000)add('completed_consultations','gte',Number(m[1]));
- if(/\b(?:solde(?: restant)?|reste a payer|impayes?)\s+(?:strictement )?positi\w*|\bsolde\s*(?:restant\s*)?>\s*0\b/u.test(value))add('outstanding_balance','gt',0);
+ const noDebt=/\b(?:sans|aucun\w*|pas de|pas d')\s*(?:impayes?|dettes?|soldes?)\b/u.test(value);
+ if(!noDebt&&/\b(?:solde(?: restant)?|reste a payer|impayes?|dettes?|montant a encaisser)\s+(?:strictement )?positi\w*|\bsolde\s*(?:restant\s*)?>\s*0\b|\bsolde impaye\b|\bdes impayes\b|\bsolde du superieur a 0\b/u.test(value))add('outstanding_balance','gt',0);
  if(/\bjamais\b/u.test(value)&&/\b(?:consult\w*|vus?|recus?)\b/u.test(value))add('completed_consultations','eq',0);
  return conditions.length?conditions:null;
 }
@@ -93,15 +121,26 @@ export function constrainCountDeclaration(parts:RequestPart[],contract:FrenchCou
  });
 }
 
-export type FrenchReadTool='query_agenda'|'query_patients'|'query_consultations'|'get_patient_context'|'query_documents'|'query_finance'|'query_app'|'search_knowledge'|'prepare_action';
-export interface FrenchReadTarget {tool:FrenchReadTool;applicationView?:'cabinet'|'practitioner';financeMode?:'charges'|'overview';patientSection?:'summary'|'history'|'treatments'|'profile'|'diagnoses'|'scales'|'current'|'notes';consultationMode?:'count'|'list';consultationStatus?:'all'|'open'|'closed'|'unsigned';unboundedPeriod?:boolean;noteArea?:'working'|'subjective'|'objective'|'assessment'|'plan'|'amendment'|'structured';noteQuery?:string;diagnosisState?:'all'|'active'|'resolved';diagnosisRole?:'all'|'primary'|'secondary';treatmentState?:'all'|'active'|'paused'|'stopped';documentKind?:'bonne_sante_mentale'|'suivi_medical'|'certificat_medical'|'justification'|'ordonnance';documentStatus?:'issued'|'draft';documentAllKinds?:boolean;}
+export type FrenchReadTool='query_agenda'|'query_patients'|'query_consultations'|'get_patient_context'|'query_documents'|'query_finance'|'query_app'|'search_knowledge'|'prepare_action'|'navigate';
+export interface FrenchReadTarget {tool:FrenchReadTool;navigationTarget?:'patient'|'patients'|'agenda'|'dashboard'|'documents'|'finances'|'parametres'|'jarvis';consultationCount?:number;messageKind?:'rappel_rendez_vous'|'document_pret';applicationView?:'cabinet'|'practitioner'|'notifications'|'system'|'message_draft';financeMode?:'charges'|'overview';patientSection?:'summary'|'history'|'treatments'|'profile'|'diagnoses'|'scales'|'current'|'notes';consultationMode?:'count'|'list';consultationStatus?:'all'|'open'|'closed'|'unsigned';unboundedPeriod?:boolean;noteArea?:'working'|'subjective'|'objective'|'assessment'|'plan'|'amendment'|'structured';noteQuery?:string;diagnosisState?:'all'|'active'|'resolved';diagnosisRole?:'all'|'primary'|'secondary';treatmentState?:'all'|'active'|'paused'|'stopped';documentKind?:'bonne_sante_mentale'|'suivi_medical'|'certificat_medical'|'justification'|'ordonnance';documentStatus?:'issued'|'draft';documentAllKinds?:boolean;}
 export type FrenchRequestAdmission=Omit<FrenchReadTarget,'tool'>&{tools?:readonly string[];profileOnly:boolean;preparationAction?:'create_editable_document_draft'|'create_appointment';preparationDocumentType?:'bonne_sante_mentale'|'suivi_medical'|'certificat_medical'|'justification'};
 const patientAnchor=(plain:string,text:string)=>/\b(?:patients?|dossiers?|personnes?|selectionn\w*|son|sa|ses)\b/u.test(plain)||/\b[A-ZÀ-Ö][a-zà-ö]+\s+[A-ZÀ-Ö][a-zà-ö]+\b/u.test(text);
 /** Positive French phrases map to existing, audited read gates; this never grants write authority. */
+function messageDraftTarget(text:string):'rappel_rendez_vous'|'document_pret'|undefined{
+ const plain=fold(text);
+ if(!/\b(?:prepare\w*|redige\w*|brouillon)\b/u.test(plain)||! /\b(?:message|sms|rappel)\b/u.test(plain))return;
+ return /\brendez[- ]vous|\brdv\b/u.test(plain)?'rappel_rendez_vous':/\bdocument\b/u.test(plain)&&/\bpret|disponib|mise a disposition/u.test(plain)?'document_pret':undefined;
+}
 function frenchReadTargets(text:string):FrenchReadTarget[]{
  const plain=fold(text),anchor=patientAnchor(plain,text),targets:FrenchReadTarget[]=[];
+ const messageKind=messageDraftTarget(text);if(messageKind)return [{tool:'query_app',applicationView:'message_draft',messageKind}];
  const add=(target:FrenchReadTarget)=>{if(!targets.some(existing=>existing.tool===target.tool&&existing.applicationView===target.applicationView&&existing.financeMode===target.financeMode&&existing.patientSection===target.patientSection&&existing.consultationMode===target.consultationMode&&existing.documentKind===target.documentKind&&existing.documentStatus===target.documentStatus))targets.push(target);};
- const mention=parsePatientMention(text),periodText=mention.status==='named'?plain.replace(fold(mention.name),''):plain;
+ const mention=parsePatientMention(text);
+ if(/^(?:alexa[, :]+)?(?:(?:peux[- ]tu|tu peux)\s+)?(?:ouvre|ouvrir|va|aller)\b/u.test(plain)){
+  const destination=/\b(?:parametres|reglages)\b/u.test(plain)?'parametres':/\b(?:finances|comptabilite)\b/u.test(plain)?'finances':/\bdocuments\b/u.test(plain)?'documents':/\b(?:jarvis|alexa)\b/u.test(plain.replace(/^alexa[, :]+/u,''))?'jarvis':/\bagenda\b/u.test(plain)?'agenda':/\b(?:tableau de bord|dashboard)\b/u.test(plain)?'dashboard':/\bliste des patients\b/u.test(plain)?'patients':undefined;
+  if(destination&&mention.status!=='named'&&!/\b(?:patient|patiente|son|sa|ses|ce dossier)\b/u.test(plain))return [{tool:'navigate',navigationTarget:destination}];
+ }
+ const periodText=mention.status==='named'?plain.replace(fold(mention.name),''):plain;
  const unboundedPeriod=!/(?<![\p{L}\p{N}_-])(?:19|20)\d{2}(?![\p{L}\p{N}_-])|(?<![\p{L}\p{N}_-])\d{1,4}[-/]\d{1,2}[-/]\d{1,4}(?![\p{L}\p{N}_-])|\ble\s+\d{1,2}\b|\b(?:depuis|entre|avant|apres|jusqu\w*|pendant|derni\w*|preced\w*|prochain\w*|mois|semaines?|annees?|jours?|janvier|fevrier|mars|avril|mai|juin|juillet|aout|septembre|octobre|novembre|decembre|aujourd.hui|hier|demain|dates?|periode)\b/u.test(periodText);
  const knowledge=/\b(?:dsm(?:\s*[- ]?5)?|cim(?:\s*[- ]?11)?|icd(?:\s*[- ]?11)?|taylor|maudsley|selon (?:la|le|les) (?:reference|livre|ouvrage|manuel)|dans (?:le|les) livres?)\b/u.test(plain);
  if(knowledge)add({tool:'search_knowledge'});
@@ -130,15 +169,18 @@ function frenchReadTargets(text:string):FrenchReadTarget[]{
  const financeCore=/\b(?:chiffre d.affaires|recettes?|revenus?|depenses?|impayes?|soldes?|resultat net|paiements?|encaissements?|indicateurs? financiers?|synthese de caisse|bilan financier)\b/u.test(plain);
  const financialCharges=/\bcharges?\b/u.test(plain)&&/\b(?:enregistr\w*|depenses?|du mois|de ce mois|ce mois|cette periode|total|repartition|financ\w*|factures?)\b/u.test(plain)&&! /\belectriqu\w*|electrostat\w*\b/u.test(plain);
  if((financeCore||financialCharges)&&!knowledge){const financeMode:FrenchReadTarget['financeMode']=anchor?undefined:/\b(?:charges?|depenses?)\b/u.test(plain)?'charges':/\b(?:chiffre d.affaires|resultat net|bilan financier|recettes?|revenus?|indicateurs? financiers?|synthese de caisse)\b/u.test(plain)?'overview':undefined;add({tool:'query_finance',...(financeMode?{financeMode}:{})});}
- const cabinetView=/\b(?:cabinet|clinique)\b/u.test(plain)?'cabinet' as const:undefined;
- const practitionerView=/\b(?:praticien\w*|medecin|docteur|mon profil professionnel)\b/u.test(plain)?'practitioner' as const:undefined;
+ if(/\bnotifications?\b/u.test(plain))add({tool:'query_app',applicationView:'notifications'});
+ if(/\b(?:etat|statut|environnement|heure|date)\b/u.test(plain)&&/\b(?:systeme|serveur|deploiement|cabinet)\b/u.test(plain))add({tool:'query_app',applicationView:'system'});
+ const specificOffice=targets.some(t=>t.tool==='query_app'&&['notifications','system'].includes(t.applicationView??''));
+ const cabinetView=!specificOffice&&/\b(?:cabinet|clinique)\b/u.test(plain)?'cabinet' as const:undefined;
+ const practitionerView=!specificOffice&&/\b(?:praticien\w*|medecin|docteur|mon profil professionnel)\b/u.test(plain)?'practitioner' as const:undefined;
  if(cabinetView||practitionerView){const applicationView=cabinetView&&practitionerView?undefined:cabinetView??practitionerView;add({tool:'query_app',...(applicationView?{applicationView}:{})});}
  if(anchor||notes||summaryRequested){
-  const patientSection:FrenchReadTarget['patientSection']=summaryRequested?'summary':notes?'notes':/\bdiagnosti\w*\b/u.test(plain)?'diagnoses':/\b(?:echelles?|scores?)\b/u.test(plain)?'scales':/\b(?:traitements?|medicaments?|prescriptions?)\b/u.test(plain)?'treatments':/\b(?:seance en cours|consultation en cours|actuellement en consultation)\b/u.test(plain)?'current':/\bhistorique\b/u.test(plain)?'history':/\b(?:resume|synthese) clinique\b/u.test(plain)?'summary':/\b(?:telephones?|coordonnees?|adresses?|naissance|ages?|sexe|identite|situation familiale|contact d.urgence|numero (?:de (?:carte|piece) d.identite|d.identite|de dossier)|profil|administrati\w*)\b/u.test(plain)?'profile':undefined;
+  const patientSection:FrenchReadTarget['patientSection']=summaryRequested?'summary':notes?'notes':/\bdiagnosti\w*\b/u.test(plain)?'diagnoses':/\b(?:echelles?|scores?)\b/u.test(plain)?'scales':/\b(?:traitements?|medicaments?|prescriptions?)\b/u.test(plain)?'treatments':/\b(?:seance en cours|consultation en cours|actuellement en consultation)\b/u.test(plain)?'current':/\bhistorique\b/u.test(plain)?'history':/\b(?:resume|synthese) clinique\b/u.test(plain)?'summary':/\b(?:e[- ]?mail|courriel|adresse electronique|telephones?|coordonnees?|adresses?|naissance|ages?|sexe|identite|situation familiale|contact d.urgence|numero (?:de (?:carte|piece) d.identite|d.identite|de dossier)|profil|administrati\w*)\b/u.test(plain)?'profile':undefined;
   const diagnosisStates=[...(/\bactif\w*\b/u.test(plain)?['active' as const]:[]),...(/\bresolu\w*\b/u.test(plain)?['resolved' as const]:[])];
   const diagnosisRoles=[...(/\bprincipa(?:l|le|ux|les)\b/u.test(plain)?['primary' as const]:[]),...(/\bsecondair\w*\b/u.test(plain)?['secondary' as const]:[])];
   const treatmentStates=[...(/\bactif\w*\b/u.test(plain)?['active' as const]:[]),...(/\b(?:pause|suspendu\w*)\b/u.test(plain)?['paused' as const]:[]),...(/\barrete\w*\b/u.test(plain)?['stopped' as const]:[])];
-  if(patientSection)add({tool:'get_patient_context',patientSection,...(patientSection==='diagnoses'&&diagnosisStates.length===1?{diagnosisState:diagnosisStates[0]}:{}),...(patientSection==='diagnoses'&&diagnosisRoles.length===1?{diagnosisRole:diagnosisRoles[0]}:{}),...(patientSection==='treatments'&&treatmentStates.length===1?{treatmentState:treatmentStates[0]}:{}),...(patientSection==='notes'&&noteArea?{noteArea}:{}),...(patientSection==='notes'&&noteQuery?{noteQuery}:{})});
+  if(patientSection)add({tool:'get_patient_context',patientSection,...(['summary','history'].includes(patientSection)&&!requestsOldestConsultations(text)&&requestedConsultationCount(text)!==null?{consultationCount:requestedConsultationCount(text)!}:{}),...(patientSection==='diagnoses'&&diagnosisStates.length===1?{diagnosisState:diagnosisStates[0]}:{}),...(patientSection==='diagnoses'&&diagnosisRoles.length===1?{diagnosisRole:diagnosisRoles[0]}:{}),...(patientSection==='treatments'&&treatmentStates.length===1?{treatmentState:treatmentStates[0]}:{}),...(patientSection==='notes'&&noteArea?{noteArea}:{}),...(patientSection==='notes'&&noteQuery?{noteQuery}:{})});
  }
  const patientQuery=/\b(?:patients|dossiers|patientele)\b/u.test(plain)&&(/\b(?:combien|nombre|total|compt\w*|liste\w*|lesquels|lesquelles|trouve\w*|recherch\w*|identifi\w*|actifs?|inactifs?|archives?|mineurs?|adultes?|enfants?|sans|aucun\w*|manquant\w*|impayes?|soldes?|dettes?)\b/u.test(plain));
  if(patientQuery)add({tool:'query_patients'});
@@ -156,13 +198,15 @@ function preparationTarget(text:string):Pick<FrenchRequestAdmission,'preparation
 
 /** Positive vocabulary narrows only a single supported domain; mixed requests retain the full native interpretation path. */
 export function frenchRequestAdmission(text:string,publicAllowed:boolean):FrenchRequestAdmission{
+ if(frenchRequestedOutputs(text))return {profileOnly:false};
+ const messageKind=messageDraftTarget(text);if(messageKind&&!frenchRequestedOutputs(text))return {tools:['query_app'],profileOnly:false,applicationView:'message_draft',messageKind};
  const plain=fold(text),write=/\b(?:creer|cree|ajouter|ajoute|ajoutez|enregistrer|enregistrez|modifier|modifie|modifiez|annuler|annule|annulez|supprimer|supprime|supprimez|signer|signe|signez|encaisser|encaissez|deplacer|deplace|deplacez|preparer|prepare|preparez|proposer|propose|proposez)\b/u.test(plain);
  if(write){const preparation=preparationTarget(text);return preparation?{tools:['prepare_action'],profileOnly:false,...preparation}:{profileOnly:false};}
  const clinical=/\b(?:notes?|historique|consult\w*|seances?|diagnosti\w*|traitements?|echelles?|symptom\w*|analyse\w*|ordonn\w*|certificats?|medic\w*|prescri\w*|therap\w*|stress|sommeil|risques?|humeur|sante|dsm|cim|icd|taylor|maudsley)\b/u.test(plain);
  const finance=/\b(?:chiffre d.affaires|recettes?|revenus?|depenses?|impayes?|soldes?|resultat net|paiements?|encaissements?)\b/u.test(plain);
  if(clinical&&finance)return {profileOnly:false};
  const targets=frenchReadTargets(text),domains=[...new Set(targets.map(target=>target.tool))];
- if(domains.length===1){const scopes=targets.filter(target=>target.tool===domains[0]);const common=Object.fromEntries(['applicationView','financeMode','patientSection','consultationMode','consultationStatus','unboundedPeriod','noteArea','noteQuery','diagnosisState','diagnosisRole','treatmentState','documentKind','documentStatus','documentAllKinds'].flatMap(key=>{const values=new Set(scopes.map(target=>target[key as keyof FrenchReadTarget]).filter(value=>value!==undefined));return values.size===1?[[key,[...values][0]]]:[]}));return {tools:domains,profileOnly:scopes.length===1&&scopes[0]?.tool==='get_patient_context'&&scopes[0].patientSection==='profile',...common};}
+ if(domains.length===1){const scopes=targets.filter(target=>target.tool===domains[0]);const common=Object.fromEntries(['messageKind','navigationTarget','consultationCount','applicationView','financeMode','patientSection','consultationMode','consultationStatus','unboundedPeriod','noteArea','noteQuery','diagnosisState','diagnosisRole','treatmentState','documentKind','documentStatus','documentAllKinds'].flatMap(key=>{const values=new Set(scopes.map(target=>target[key as keyof FrenchReadTarget]).filter(value=>value!==undefined));return values.size===1?[[key,[...values][0]]]:[]}));return {tools:domains,profileOnly:scopes.length===1&&scopes[0]?.tool==='get_patient_context'&&scopes[0].patientSection==='profile',...common};}
  const appReference=/\b(?:mindcare|alexa|application|logiciel|systeme|serveur|notifications?|messages?|factures?|recus?|frais|caisse|mois|semaine|periode|aujourd.hui|hier|demain|mon|ma|mes|notre|nos|ceci|cela|ca)\b/u.test(plain);
  if(publicAllowed&&!targets.length&&!appReference&&/^(?:pourquoi\b|comment fonctionne\w*\b|qu.est-ce que\b|explique(?:-moi)?\b)/u.test(plain)&&!/[;\n]/u.test(plain))return {tools:['answer_general'],profileOnly:false};
  return {profileOnly:false};
@@ -176,7 +220,7 @@ export function frenchPatientCompoundContract(text:string):FrenchCompoundContrac
  const plain=fold(text),conditions=explicitConditions(text)??[];
  if(!/\bpatients?\b/u.test(plain)||! /\b(?:trouve|cherch\w*|recherch\w*|liste\w*|affich\w*|montre\w*)\b/u.test(plain)||conditions.length<2)return null;
  if(/\b(?:ou|rendez-vous|rdv|agenda|dsm|taylor|maudsley|cabinet|email|courriel|archiv\w*|inacti\w*)\b|adresse electronique|chiffre d.affaires/u.test(plain))return null;
- const sort=/\b(?:trie\w*|class\w*|ordonn\w*)\b/u.test(plain)&&/\bsolde\b/u.test(plain)&&/\bdecroiss\w*\b|du plus (?:grand|eleve)/u.test(plain)?'outstanding_desc' as const:undefined;
+ const sort=/\b(?:soldes?|dettes?|impayes?)\s+(?:decroiss\w*|du plus (?:grand|eleve))\b|\bdu plus gros solde au plus petit\b/u.test(plain)?'outstanding_desc' as const:undefined;
  return {text,conditions,count:/\b(?:compt\w*|combien|nombre|total)\b/u.test(plain),...(sort?{sort}:{})};
 }
 export function compoundContractHints(contract:FrenchCompoundContract){return (contract.count?['count','list']:['list']).map(id=>({id,goal:id==='count'?(contract.text.match(/\b(?:compt\w*|combien|nombre|total)\b[^.!?]*/iu)?.[0]??contract.text):contract.text,tool:'query_patients',conditions:contract.conditions.map(c=>c.field+':'+c.op+(c.value===null?'':':'+c.value))}));}
@@ -189,8 +233,8 @@ export function constrainCompoundDeclaration(parts:RequestPart[],contract:French
 
 /** Counts explicit coordinated application requests only; it grants no domain authority or business action. */
 export function frenchRequestedOutputs(text:string):string[]|null{
- if(!/\b(?:patients?|dossiers?|consult\w*|rendez[- ]vous|agenda|documents?|paiements?|encaissements?|recettes?|cabinet)\b/u.test(fold(text)))return null;
- const markers=[...text.matchAll(/(?:^|[,;]\s*|\b(?:et|puis)\s+)((?:affich|montr|trouv|cherch|recherch|identifi|r[ée]sum|pr[ée]par|compt|donn|lis|lire|ouvr|compar|expliqu)\p{L}*)\b/giu)];
+ if(!frenchReadTargets(text).length&&!preparationTarget(text))return null;
+ const markers=[...text.matchAll(/(?:^|[,;]\s*|\b(?:et|puis)\s+)((?:affich|montr|trouv|cherch|recherch|identifi|r[ée]sum|pr[ée]par|compt|donn|lis|lire|ouvr|compar|expliqu|cr[ée]|ajout|enregistr|modifi|annul|supprim|sign|encaiss|d[ée]pla|r[ée]dig|r[èe]gl)\p{L}*)\b/giu)];
  if(markers.length<2||markers.length>12||markers[0]!.index!==0)return null;
  return markers.map((match,index)=>text.slice(match.index+match[0].length-match[1]!.length,markers[index+1]?.index??text.length).replace(/[\s,;]+$/u,'').trim());
 }
@@ -208,6 +252,7 @@ export function constrainRequestedOutputs(parts:RequestPart[],outputs:readonly s
 export function requestedReadTool(goal:string,original:string):FrenchReadTool|undefined{
  const plain=fold(goal);
  if(isAdministrativeReview(goal,original)||(/\b(?:champs? manquants?|corrections?)\b/u.test(plain)&&/\b(?:dossiers?|patient\w*|revue)\b/u.test(plain)&&!/\b(?:modifi\w*|enregistr\w*|corrige\w*|sauvegard\w*)\b/u.test(plain)))return 'query_patients';
+ if(messageDraftTarget(goal))return 'query_app';
  if(preparationTarget(goal))return 'prepare_action';
  const goalDomains=[...new Set(frenchReadTargets(goal).map(target=>target.tool))];
  if(goalDomains.length===1)return goalDomains[0];
@@ -222,13 +267,14 @@ export function isAdministrativeReview(goal:string,original:string):boolean{
 }
 
 /** Values grounded in the requested read, shared by native schemas and validated dispatch. */
-export function frenchReadArgumentBindings(scope:FrenchRequestAdmission,tool:string):Record<string,string>{
- const values:Record<string,string>={};
+export function frenchReadArgumentBindings(scope:FrenchRequestAdmission,tool:string):Record<string,string|number>{
+ const values:Record<string,string|number>={};
+ if(tool==='navigate'&&scope.navigationTarget)values['target']=scope.navigationTarget;
  if(tool==='prepare_action'){if(scope.preparationAction)values['action']=scope.preparationAction;if(scope.preparationDocumentType)values['documentType']=scope.preparationDocumentType;}
- if(tool==='get_patient_context'&&scope.patientSection){values['section']=scope.patientSection;if(scope.diagnosisState)values['diagnosisState']=scope.diagnosisState;if(scope.diagnosisRole)values['diagnosisRole']=scope.diagnosisRole;if(scope.treatmentState)values['treatmentState']=scope.treatmentState;if(scope.patientSection==='notes'){if(scope.noteArea)values['area']=scope.noteArea;if(scope.noteQuery)values['query']=scope.noteQuery;}}
+ if(tool==='get_patient_context'&&scope.patientSection){values['section']=scope.patientSection;if(scope.consultationCount!==undefined)values['count']=scope.consultationCount;if(scope.diagnosisState)values['diagnosisState']=scope.diagnosisState;if(scope.diagnosisRole)values['diagnosisRole']=scope.diagnosisRole;if(scope.treatmentState)values['treatmentState']=scope.treatmentState;if(scope.patientSection==='notes'){if(scope.noteArea)values['area']=scope.noteArea;if(scope.noteQuery)values['query']=scope.noteQuery;}}
  if(tool==='query_consultations'){if(scope.consultationMode)values['mode']=scope.consultationMode;if(scope.consultationStatus)values['status']=scope.consultationStatus;}
  if(tool==='query_finance'&&scope.financeMode)values['mode']=scope.financeMode;
- if(tool==='query_app'&&scope.applicationView)values['view']=scope.applicationView;
+ if(tool==='query_app'&&scope.applicationView){values['view']=scope.applicationView;if(scope.messageKind)values['motif']=scope.messageKind;}
  if(tool==='query_documents'){if(scope.documentKind)values['kind']=scope.documentKind;if(scope.documentStatus)values['status']=scope.documentStatus;}
  return values;
 }

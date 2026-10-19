@@ -2,10 +2,11 @@ import { createHash } from "node:crypto";
 import { z } from "zod";
 import type { ClinicalContext, ClinicalConsultation } from "@/shared/alexa/clinical";
 import { inferLocalText } from "./local-model";
+import { localModelFailureCode } from "./local-model-protocol";
 import { consultationExcerpts } from "./note-excerpts";
 import { narrativeCopy as copy } from "@/i18n/alexa-narrative";
 
-export const NARRATIVE_VERSION = "alexa-narrative-fr-v2";
+export const NARRATIVE_VERSION = "alexa-narrative-fr-v3";
 export const NARRATIVE_HASH = createHash("sha256").update(NARRATIVE_VERSION + copy.prompt).digest("hex");
 export interface NarrativeSource { id: string; text: string; at?: string; state?: "open" | "closed"; originalText?: string; attribution?: "unsigned" | "correction" | "plan" }
 export interface ClinicalNarrative { text: string; complete: boolean; generated: boolean; sourceIds: string[]; method?: "reformulated" | "source_selection" }
@@ -33,6 +34,21 @@ export function consultationNarrativeSources(c: ClinicalConsultation): { sources
   return { sources: selected.excerpts.map((e, i) => ({ id: `${c.id}:${i}`, originalText: e.text, ...(e.amendmentAt ? {attribution: "correction" as const} : e.unsigned ? {attribution: "unsigned" as const} : e.area === "plan" ? {attribution: "plan" as const} : {}), at: c.startedAt, state: c.endedAt === null ? "open" : "closed", text: `${e.amendmentAt ? copy.correction : ""}${e.unsigned ? copy.unsigned : ""}${e.area ? copyArea[e.area] + " : " : ""}${e.text}` })), complete: !selected.omitted };
 }
 const copyArea = copy.noteAreas;
+
+/** Paragraph references describe its cited evidence, not every record read by the gate. */
+export function clinicalNarrativeReferences(context: ClinicalContext, sourceIds: readonly string[]): {t:"consultation"|"diagnostic"|"treatment";id:string}[] {
+  const references=new Map<string,{t:"consultation"|"diagnostic"|"treatment";id:string}>();
+  for(const c of [...(context.currentConsultation?[context.currentConsultation]:[]),...context.consultations]){
+    const reference={t:"consultation" as const,id:c.id};references.set(c.id,reference);
+    for(const source of consultationNarrativeSources(c).sources)references.set(source.id,reference);
+  }
+  for(const d of context.diagnoses)references.set(d.id,{t:"diagnostic",id:d.id});
+  for(const t of context.treatments.current)references.set(t.id,{t:"treatment",id:t.id});
+  for(const h of context.treatments.history)references.set(h.id,{t:"treatment",id:h.treatmentId});
+  const selected=new Map<string,{t:"consultation"|"diagnostic"|"treatment";id:string}>();
+  for(const id of sourceIds){const reference=references.get(id);if(!reference)throw Error("InvalidNarrativeReference");selected.set(reference.t+":"+reference.id,reference);}
+  return [...selected.values()];
+}
 
 /** Fail closed on unsupported amounts, polarity reversal, invented citations or instructions. */
 export function validateClinicalNarrative(value: unknown, sources: readonly NarrativeSource[]): string | null {
@@ -95,11 +111,13 @@ export async function synthesizeClinicalNarrative(sources: readonly NarrativeSou
     if (projected.length >= 20 || characters + source.text.length > 5500) continue;
     projected.push(source); characters += source.text.length;
   }
-  const complete = projected.length === sources.length;
+  let complete = projected.length === sources.length;
   if (!projected.length) return { text: sources.length ? copy.unavailable : copy.empty, complete: sources.length === 0, generated: false, sourceIds: [] };
-  try {
-    const raw = await inferLocalText([{ role: "system", content: copy.prompt }, { role: "user", content: JSON.stringify({ sources: projected.map(({originalText: _original, attribution: _attribution, ...source}) => source) }) }], { jsonSchema: z.toJSONSchema(answerSchema), maxOutputTokens: 1024, timeoutMs: 170000, signal });
-    signal.throwIfAborted();
+  const boundedSignal = AbortSignal.any([signal, AbortSignal.timeout(170000)]);
+  // Context rejection happens before generation. Fit whole fields within the same deadline.
+  while (projected.length) try {
+    const raw = await inferLocalText([{ role: "system", content: copy.prompt }, { role: "user", content: JSON.stringify({ sources: projected.map(({originalText: _original, attribution: _attribution, ...source}) => source) }) }], { jsonSchema: z.toJSONSchema(answerSchema), maxOutputTokens: 1024, timeoutMs: 170000, signal: boundedSignal });
+    boundedSignal.throwIfAborted();
     const value: unknown = JSON.parse(raw);
     const text = validateClinicalNarrative(value, projected);
     const parsed = answerSchema.safeParse(value);
@@ -111,18 +129,30 @@ export async function synthesizeClinicalNarrative(sources: readonly NarrativeSou
     if (text) return { text, complete: false, generated: true, sourceIds: cited, method: "reformulated" };
     const selected = recoverClinicalSelection(value, projected);
     if (selected) return { ...selected, complete: complete && selected.sourceIds.length === projected.length, generated: true, method: "source_selection" };
-  } catch { signal.throwIfAborted(); }
+    break;
+  } catch (error) {
+    signal.throwIfAborted();
+    if (!boundedSignal.aborted && error instanceof Error && error.message === "LocalModelContext") { projected.pop(); complete = false; continue; }
+    console.warn("[alexa-narrative] failure", localModelFailureCode(error));
+    break;
+  }
   // No fabricated prose if the small local model cannot support its own claims.
   return { text: copy.unavailable, complete: false, generated: false, sourceIds: [] };
 }
 
 /** Fresh session summaries first; original notes remain the fallback for old/unanalysed visits. */
-export async function summarizeClinicalContext(context: ClinicalContext, signal: AbortSignal, wholeRecord = false): Promise<ClinicalNarrative> {
+export async function summarizeClinicalContext(context: ClinicalContext, signal: AbortSignal, wholeRecord = true): Promise<ClinicalNarrative> {
   let complete = context.coverage.complete && (!wholeRecord || !context.coverage.hasMore);
   const sources: NarrativeSource[] = [];
-  for (const c of [...context.consultations, ...(context.currentConsultation ? [context.currentConsultation] : [])]) {
-    const saved = z.object({ resume: z.string().min(1).max(1500), notesDigest: z.string(), complete: z.literal(true), generated: z.literal(true) }).safeParse(c.analysis?.content);
-    if (saved.success && saved.data.notesDigest === consultationNotesDigest(c)) sources.push({ id: c.id, text: saved.data.resume, at: c.startedAt, state: c.endedAt === null ? "open" : "closed" });
+  const visits=[...(context.currentConsultation ? [context.currentConsultation] : []), ...context.consultations]
+    .filter((c,index,all)=>all.findIndex(other=>other.id===c.id)===index)
+    .sort((a,b)=>Date.parse(b.startedAt)-Date.parse(a.startedAt)||b.id.localeCompare(a.id));
+  for (const c of wholeRecord?visits:visits.slice(0,context.coverage.requested)) {
+    const saved = z.object({ resume: z.string().min(1).max(1500), notesDigest: z.string(), complete: z.boolean(), generated: z.literal(true) }).safeParse(c.analysis?.content);
+    if (saved.success && saved.data.notesDigest === consultationNotesDigest(c)) {
+      sources.push({ id: c.id, text: saved.data.resume, at: c.startedAt, state: c.endedAt === null ? "open" : "closed" });
+      complete &&= saved.data.complete;
+    }
     else { const raw = consultationNarrativeSources(c); sources.push(...raw.sources); complete &&= raw.complete; }
   }
   for (const d of context.diagnoses) sources.push({ id: d.id, text: JSON.stringify({ diagnosticDocumente: d.label, resolu: d.resolvedAt !== null }) });

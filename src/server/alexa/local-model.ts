@@ -10,7 +10,7 @@ import { semanticRequestSchema } from "@/shared/alexa/semantic-request";
 import { LOCAL_SEMANTIC_PROMPT } from "@/i18n/alexa-semantic";
 import { ALEXA_CONVERSATION_MODEL } from "./model-policy";
 import { localAssetLayout, verifyLocalAssetAccess } from "./local-model-assets";
-import { buildLocalRequest, localModelTimeoutMs, parseLocalAnswer, parseLocalCompletion, type LocalCompletion, type LocalMessage, type LocalTextOptions } from "./local-model-protocol";
+import { assertLocalContextFits, buildLocalRequest, localModelTimeoutMs, parseLocalAnswer, parseLocalCompletion, type LocalCompletion, type LocalMessage, type LocalTextOptions } from "./local-model-protocol";
 
 export const LOCAL_MODEL_PIN = {
   model: ALEXA_CONVERSATION_MODEL,
@@ -19,13 +19,24 @@ export const LOCAL_MODEL_PIN = {
   archiveSha256: "1283323272b04cd07905816a597a0da810918102de958f4ff6f7bbaa70ed2efe",
   runtimeManifestSha256: "a57e54357f5ca5a5fa0d70de662a076fc2150232bccd183abaf5d83982694465",
 } as const;
-let child: ChildProcess | null = null, busy = false;
 /** Scale CPU inference to available cores, capped at the measured four-thread point. */
 export function localModelThreadCountFor(available: number): number {
   return Math.max(1, Math.min(4, Math.floor(available)));
 }
-let idle: ReturnType<typeof setTimeout> | undefined;
-const token = randomBytes(32).toString("hex");
+interface LocalRuntimeState {
+  child: ChildProcess | null;
+  busy: boolean;
+  idle: ReturnType<typeof setTimeout> | undefined;
+  token: string;
+  identity: string;
+  exitHookSet: boolean;
+}
+// Next routes and hot reloads must share the authenticated process and its one inference slot.
+const runtimeHost = globalThis as typeof globalThis & { mindcareAlexaLocalRuntime?: LocalRuntimeState };
+const runtimeIdentity = [LOCAL_MODEL_PIN.sha256, LOCAL_MODEL_PIN.runtimeManifestSha256, process.cwd()].join(":");
+const runtimeState = runtimeHost.mindcareAlexaLocalRuntime ??= {
+  child: null, busy: false, idle: undefined, token: randomBytes(32).toString("hex"), identity: runtimeIdentity, exitHookSet: false,
+};
 /** Qualification is operational evidence, never a privacy or SQL authorization. */
 export async function localSemanticQualified(): Promise<boolean> {
   try {
@@ -40,7 +51,7 @@ function loopback(path: "/health" | "/v1/chat/completions" | "/apply-template" |
   return new Promise((resolve, reject) => {
     signal.throwIfAborted();
     const req = httpRequest({ hostname: "127.0.0.1", port: 18082, path, method: body === undefined ? "GET" : "POST", signal,
-      headers: { Authorization: "Bearer " + token, "Content-Type": "application/json" } }, res => {
+      headers: { Authorization: "Bearer " + runtimeState.token, "Content-Type": "application/json" } }, res => {
       const chunks: Buffer[] = []; let bytes = 0;
       res.on("data", (chunk: Buffer) => { bytes += chunk.length; if (bytes > 96000) { res.destroy(new Error("LocalModelOutput")); return; } chunks.push(chunk); });
       res.on("end", () => resolve({ status: res.statusCode ?? 500, body: Buffer.concat(chunks).toString("utf8") }));
@@ -55,17 +66,17 @@ async function hash(path: string, signal: AbortSignal) {
   return value.digest("hex");
 }
 export async function releaseLocalModel(): Promise<void> {
-  clearTimeout(idle); idle = undefined;
-  const handle = child; child = null;
+  clearTimeout(runtimeState.idle); runtimeState.idle = undefined;
+  const handle = runtimeState.child; runtimeState.child = null;
   if (handle && handle.exitCode === null && handle.signalCode === null) {
     const stopped = new Promise<void>(resolve => handle.once("exit", () => resolve()));
     handle.kill();
     await Promise.race([stopped, new Promise<void>(resolve => { const timer = setTimeout(resolve, 5000); timer.unref(); })]);
   }
 }
-process.once("exit", () => { child?.kill(); });
+if (!runtimeState.exitHookSet) { runtimeState.exitHookSet = true; process.once("exit", () => { runtimeState.child?.kill(); }); }
 async function prepare(signal: AbortSignal): Promise<void> {
-  if (child && child.exitCode === null && child.signalCode === null) return;
+  if (runtimeState.child && runtimeState.child.exitCode === null && runtimeState.child.signalCode === null) return;
   const layout = localAssetLayout(), model = join(layout.root, LOCAL_MODEL_PIN.model);
   const directory = join(layout.root, "runtime-" + LOCAL_MODEL_PIN.runtime), runtime = join(directory, "llama-server.exe");
   await verifyLocalAssetAccess(layout.root, layout.packaged);
@@ -79,46 +90,54 @@ async function prepare(signal: AbortSignal): Promise<void> {
     throw new Error("LocalModelIntegrity");
   signal.throwIfAborted();
   const handle = spawn(runtime, ["-m", model, "--host", "127.0.0.1", "--port", "18082", "-c", "4096", "-t", String(localModelThreadCountFor(availableParallelism())), "--parallel", "1",
-    "--jinja", "--reasoning", "off", "--no-context-shift", "--no-warmup", "--api-key", token, "--no-webui", "--log-disable"],
+    "--jinja", "--reasoning", "off", "--no-context-shift", "--no-warmup", "--api-key", runtimeState.token, "--no-webui", "--log-disable"],
   { cwd: directory, windowsHide: true, stdio: "ignore",
     env: { NODE_ENV: "production", SystemRoot: process.env["SystemRoot"] ?? "C:\\Windows", WINDIR: process.env["WINDIR"] ?? "C:\\Windows", OMP_NUM_THREADS: "2" } });
-  child = handle;
+  runtimeState.child = handle;
   let failed = false; handle.once("error", () => { failed = true; });
   // Integrity, startup and inference share the caller's bounded deadline.
   for (;;) {
     signal.throwIfAborted();
     if (failed || handle.exitCode !== null || handle.signalCode !== null) throw new Error("LocalModelUnavailable");
-    try { if ((await loopback("/health", AbortSignal.any([signal, AbortSignal.timeout(500)]))).status === 200) return; } catch { /* bounded local startup */ }
+    try {
+      if ((await loopback("/health", AbortSignal.any([signal, AbortSignal.timeout(500)]))).status === 200) {
+        const authenticated = await loopback("/tokenize", signal, JSON.stringify({content:"MindCare",add_special:false}));
+        if (authenticated.status !== 200) throw new Error("LocalModelUnavailable");
+        return;
+      }
+    } catch (error) { if (error instanceof Error && error.message === "LocalModelUnavailable") throw error; /* bounded local startup */ }
     await new Promise(resolve => setTimeout(resolve, 100));
   }
 }
 /** Local inference only. Callers retain their privacy admission and response validators. */
 async function inferLocalRaw(messages: readonly LocalMessage[], options: LocalTextOptions = {}): Promise<string> {
+  if (runtimeState.identity !== runtimeIdentity) throw new Error("LocalModelIntegrity");
   const body = JSON.stringify(buildLocalRequest(messages, options));
-  if (busy) throw new Error("LocalModelBusy");
+  if (runtimeState.busy) throw new Error("LocalModelBusy");
   const timeout = localModelTimeoutMs(options);
   const signal = AbortSignal.any([...(options.signal ? [options.signal] : []), AbortSignal.timeout(Math.ceil(timeout))]);
-  signal.throwIfAborted(); busy = true; clearTimeout(idle);
+  signal.throwIfAborted(); runtimeState.busy = true; clearTimeout(runtimeState.idle);
   try {
     await prepare(signal);
     const template = await loopback("/apply-template", signal, body);
     if (template.status !== 200) throw new Error("LocalModelInput");
     const rendered = z.object({ prompt: z.string().max(64000) }).parse(JSON.parse(template.body));
     const tokenized = await loopback("/tokenize", signal, JSON.stringify({ content: rendered.prompt, add_special: true }));
-    const tokens = z.object({ tokens: z.array(z.number().int()).max(4096) }).parse(JSON.parse(tokenized.body));
-    if (tokens.tokens.length + (options.maxOutputTokens ?? 512) + 128 > 4096) throw new Error("LocalModelContext");
+    assertLocalContextFits(JSON.parse(tokenized.body), options.maxOutputTokens ?? 512);
     const response = await loopback("/v1/chat/completions", signal, body);
     signal.throwIfAborted();
     if (response.status !== 200) throw new Error("LocalModelUnavailable");
     return response.body;
-  } catch(error) { await releaseLocalModel();
+  } catch(error) {
+    // A preflight overflow does not damage the authenticated runtime; the caller can fit its sources.
+    if (!(error instanceof Error && error.message === "LocalModelContext")) await releaseLocalModel();
     if(signal.aborted)throw signal.reason;
     if(error instanceof Error&&/^LocalModel(?:Input|Context|Integrity|AssetAccess|Timeout|Unavailable)$/.test(error.message))throw error;
     throw new Error("LocalModelUnavailable");
   }
   finally {
-    busy = false;
-    if (child) { idle = setTimeout(() => { void releaseLocalModel(); }, 60000); idle.unref(); }
+    runtimeState.busy = false;
+    if (runtimeState.child) { runtimeState.idle = setTimeout(() => { void releaseLocalModel(); }, 60000); runtimeState.idle.unref(); }
   }
 }
 export async function inferLocalText(messages: readonly LocalMessage[], options: LocalTextOptions = {}): Promise<string> {

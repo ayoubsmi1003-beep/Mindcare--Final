@@ -84,3 +84,10 @@ export function parseLocalAnswer(raw: string): string {
   if (value.kind !== "answer") throw new Error("LocalModelOutput");
   return value.text;
 }
+
+/** Count the runtime's exact rendered tokens, including requests already beyond the window. */
+export function assertLocalContextFits(value: unknown, outputTokens: number): void {
+  // The loopback transport bounds this response to 96 KB; token count must not be clipped.
+  const parsed = z.object({ tokens: z.array(z.number().int()) }).parse(value);
+  if (parsed.tokens.length + outputTokens + 128 > 4096) throw new Error("LocalModelContext");
+}

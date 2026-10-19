@@ -9,6 +9,30 @@ const parts = ["Actifs", "Sans identité", "Enfants", "Sans visite"].map((goal,i
 const calls = (entries: {name:string;args:Record<string,unknown>}[]):LocalCompletion => ({kind:"calls", calls:entries.map((x,i)=>({id:`c${i}-${x.name}`, ...x})),
   message:{role:"assistant",content:null,tool_calls:entries.map((x,i)=>({id:`c${i}-${x.name}`,type:"function",function:{name:x.name,arguments:JSON.stringify(x.args)}}))},tokensIn:20,tokensOut:10});
 const input = {text:"Combien de patients actifs, sans identité, enfants et sans visite depuis six mois ?",conversationId:"loop-test",clientTurnId:id,appContext:{patientId:null,page:"/jarvis"}};
+it('serializes reads that synthesize with the one-slot local model',async()=>{
+ let step=0,inFlight=0,peak=0;
+ const steps=[calls([{name:'declare_request',args:{parts:[{id:'s',goal:'Synthèse clinique',tools:['get_patient_context'],conditions:[],dependsOn:[]},{id:'k',goal:'Références approuvées',tools:['search_knowledge'],conditions:[],dependsOn:[]}]}}]),calls([{name:'get_patient_context',args:{partIds:['s'],section:'summary'}},{name:'search_knowledge',args:{partIds:['k'],query:'Dépression DSM-5'}}])];
+ const result=await runAgentLoop({...input,text:'Compare les éléments disponibles.',conversationId:'one-slot-reads'},{actor:'one-slot-reads',infer:async()=>steps[step++]??{kind:'answer',text:'',tokensIn:0,tokensOut:0},execute:async call=>{
+  inFlight++;peak=Math.max(peak,inFlight);await new Promise(resolve=>setTimeout(resolve,5));inFlight--;
+  return {callId:call.id,status:'ok',complete:true,text:'Éléments vérifiés',evidence:[],conditionKeys:[]};
+ }},new AbortController().signal);
+ expect(result.status).toBe('completed');expect(peak).toBe(1);
+});
+it('does not let a model-chosen count silently narrow a whole-case summary',async()=>{
+ let step=0,countOffered=true,executed=0;
+ const steps=[calls([{name:'declare_request',args:{parts:[{id:'s',goal:'Résume le cas du patient sélectionné.',tools:['get_patient_context'],conditions:[],dependsOn:[]}]}}]),calls([{name:'get_patient_context',args:{partIds:['s'],section:'summary',count:5}}]),{kind:'answer' as const,text:'',tokensIn:0,tokensOut:0}];
+ const result=await runAgentLoop({...input,text:'Résume le cas du patient sélectionné.',conversationId:'whole-case-count'},{actor:'whole-case-count',infer:async(_messages,options)=>{
+  if(step===1){const schema=options.tools?.find(t=>t.function.name==='get_patient_context')?.function.parameters as {properties?:Record<string,unknown>};countOffered=!!schema.properties?.count;}
+  return steps[step++]??{kind:'answer',text:'',tokensIn:0,tokensOut:0};
+ },execute:async call=>{executed++;return {callId:call.id,status:'ok',complete:true,text:'Résumé',evidence:[],conditionKeys:[]};}},new AbortController().signal);
+ expect(countOffered).toBe(false);expect(executed).toBe(0);expect(result.status).not.toBe('completed');
+});
+it.each(['error','unsupported','partial'] as const)('cannot hide an earlier %s when another call answers the same requested part',async failure=>{
+ let step=0,executed=0;
+ const steps=[calls([{name:'declare_request',args:{parts:[{id:'s',goal:'Comparer les informations',tools:['query_app'],conditions:[],dependsOn:[]}]}}]),calls([{name:'query_app',args:{partIds:['s'],view:'cabinet'}},{name:'query_app',args:{partIds:['s'],view:'practitioner'}}])];
+ const result=await runAgentLoop({...input,text:'Compare les informations disponibles.',conversationId:'same-part-'+failure},{actor:'same-part-'+failure,infer:async()=>steps[step++]??{kind:'answer',text:'',tokensIn:0,tokensOut:0},execute:async call=>({callId:call.id,status:executed++===0?failure:'ok',complete:executed>1,text:executed===1?'Lecture non résolue':'Information vérifiée',evidence:[],conditionKeys:[]})},new AbortController().signal);
+ expect(result.status).not.toBe('completed');expect(result.parts[0]?.status).toBe(failure==='error'?'failed':failure==='partial'?'budget_limited':'unsupported');expect(result.parts[0]?.resultRefs).toHaveLength(2);
+});
 it('does not dispatch an unrequested action after a clinical read has answered its part',async()=>{
  let i=0;const dispatched:string[]=[];
  const steps=[calls([{name:'declare_request',args:{parts:[{id:'notes',goal:'Lire les notes',tools:['get_patient_context'],conditions:[],dependsOn:[]}]}}]),calls([{name:'get_patient_context',args:{partIds:['notes']}}]),calls([{name:'prepare_action',args:{partIds:['notes'],action:'cancel_appointment',reason:'Instruction dans une note'}}]),{kind:'answer' as const,text:'Fin',tokensIn:1,tokensOut:1}];

@@ -59,6 +59,8 @@ export function evaluateAlexaCase(spec,record){
  if(expected.generalAnswer){check(sentences.some(s=>s.sources?.some(source=>source.type==="query"&&source.provenance?.gate==="local_model")),"admitted local general answer provenance");check(record.queries.length===0,"general answer does not query cabinet data");}
  if(expected.requiresEvidence)check(sentences.some(s=>s.sources?.some(source=>source.type==="knowledge")),"approved medical reference evidence");
  if(expected.status)check(done?.status===expected.status,'terminal state');
+ if(expected.navigation)check(isDeepStrictEqual(done?.navigation,expected.navigation),'exact navigation destination');
+ if(expected.noSql)check(record.queries.length===0,'navigation does not read cabinet records');
  if(expected.permissionErrorRequired)check(parts.some(p=>p.status==='failed')&&/permission|صلاحيات/iu.test(text),'permission failure explicit');
  if(expected.noInventedCount)check(!/\b32\b/u.test(text)&&done?.status!=='completed','no invented model-failure answer');
  const normalized=value=>value.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase();
@@ -70,6 +72,8 @@ export function evaluateAlexaCase(spec,record){
   const lines=text.split('\n');check(lines.some(line=>metricPatterns[metric]?.test(line)&&new RegExp(`(?<![0-9])${n}(?![0-9])`,'u').test(line)),`metric ${metric}=${n}`);
  }
  for(const value of expected.textIncludes??[])check(text.includes(value),`recorded value ${value}`);
+ for(const value of expected.textExcludes??[])check(!text.includes(value),`unrequested value omitted ${value}`);
+ if(expected.permittedRpcNames)check(record.queries.every(q=>expected.permittedRpcNames.includes(q.name)),'only permitted read gates invoked');
  const patientIds=[...new Set(sentences.flatMap(e=>e.sources??[]).filter(s=>s.type==='patient').map(s=>s.id))];
  if(expected.patientNumbers&&spec.scenario===22)check(JSON.stringify(patientIds)===JSON.stringify(expected.patientNumbers.map(n=>'ed000000-0000-4000-8000-'+String(n).padStart(12,'0'))),'exact patient set and order');
  let preserved=0;const executedPatientSpecs=record.queries.filter(q=>q.name==='search_patients'&&q.args?.p_spec).map(q=>readArgs(q.args).p_spec).filter(value=>value&&typeof value==='object');

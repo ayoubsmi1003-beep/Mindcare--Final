@@ -105,3 +105,32 @@ it('reports incomplete synthesis and only its real citations when an omitted fie
 });
 
 it('does not turn a planned follow-up into an executed action',()=>{const source={id:'s1',text:'Dernière séance : le patient rapporte une diminution des tensions familiales. La médecin a prévu de poursuivre le suivi.'};expect(validateClinicalNarrative(response('En fin de séance, les tensions diminuent et la médecin continue le suivi.',source.text),[source])).toBeNull();});
+
+it('fits the exact runtime context by removing whole fields and reports partial coverage',async()=>{
+ const second={id:'s2',text:'Une deuxième observation complète.'};
+ const third={id:'s3',text:'Une troisième observation complète.'};
+ const seen:string[][]=[];
+ vi.mocked(inferLocalText).mockImplementation(async messages=>{
+  const body=JSON.parse(String(messages[1]!.content));seen.push(body.sources.map((s:{id:string})=>s.id));
+  if(body.sources.length>1)throw Error('LocalModelContext');
+  return JSON.stringify(response(proof.text));
+ });
+ const result=await synthesizeClinicalNarrative([proof,second,third],new AbortController().signal);
+ expect(seen).toEqual([['s1','s2','s3'],['s1','s2'],['s1']]);
+ expect(result).toMatchObject({generated:true,complete:false,sourceIds:['s1'],text:proof.text});
+});
+it('does not retry unavailable inference as if it were a context overflow',async()=>{
+ let attempts=0;vi.mocked(inferLocalText).mockImplementation(async()=>{attempts++;throw Error('LocalModelUnavailable');});
+ expect((await synthesizeClinicalNarrative([proof],new AbortController().signal)).generated).toBe(false);
+ expect(attempts).toBe(1);
+});
+it('can reuse a fresh verified partial session paragraph while keeping the whole-case coverage partial',async()=>{
+ const resume='Le patient rapporte une humeur triste.';
+ const context:ClinicalContext={patientId:'a3000000-0000-4000-8000-000000000001',consultations:[{...c,analysis:{id:'b3000000-0000-4000-8000-000000000001',version:1,content:{resume,notesDigest:consultationNotesDigest(c),complete:false,generated:true}}}],diagnoses:[],scales:[],treatments:{current:[],history:[],historyComplete:true},sourceRevision:'a'.repeat(64),coverage:{requested:1,returned:1,complete:true,hasMore:false}};
+ vi.mocked(inferLocalText).mockImplementation(async messages=>{
+  const body=JSON.parse(String(messages[1]!.content));expect(body.sources).toEqual([{id:c.id,text:resume,at:c.startedAt,state:'closed'}]);
+  return JSON.stringify(response(resume,resume,c.id));
+ });
+ const result=await summarizeClinicalContext(context,new AbortController().signal);
+ expect(result).toMatchObject({generated:true,complete:false,text:resume,sourceIds:[c.id]});
+});

@@ -37,6 +37,13 @@ export interface RequestPlan extends WorkingReference {
   clarification?: "agenda-period" | "next-patient-period" | "patient" | "content" | "destination" | "date" | "operation" | "local-unavailable";
 }
 
+export function requestedConsultationCount(text: string): number | null {
+  const normalized = text.normalize("NFKD").replace(/\p{M}/gu, "").toLowerCase();
+  return requestedCount(normalized) ?? (/\b(?:la|une)\s+(?:toute\s+)?(?:derniere|premiere)\s+(?:consultation|seance)\b/u.test(normalized) ? 1 : null);
+}
+export function requestsOldestConsultations(text: string): boolean {
+  return /\b(?:premieres?|premiers?)\s+(?:consultations?|seances?)\b/u.test(text.normalize("NFKD").replace(/\p{M}/gu, "").toLowerCase());
+}
 function requestedCount(text: string): number | null {
   const value = text.replace(/[٠-٩]/g, c => String(c.charCodeAt(0) - 0x0660)).replace(/[۰-۹]/g, c => String(c.charCodeAt(0) - 0x06f0));
   for (const noun of value.matchAll(/(?<!\p{L})(?:consultations?|seances?|(?:ال)?(?:جلسة|جلسات|جلستان|جلستين|استشارة|استشارات|استشارتان|استشارتين))(?!\p{L})/gu)) {

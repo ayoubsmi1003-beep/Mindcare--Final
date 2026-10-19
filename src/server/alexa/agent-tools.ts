@@ -1,12 +1,16 @@
+import {applicationReadCopy} from "@/i18n/alexa-application";
+import {profileCopy} from "@/i18n/alexa-profile";
+import {readMessageDraft} from "./message-draft";
+import {patientProfileSchema,profileAnswer,profileNeedsClarification} from "./profile-answer";
 import { summarizeClinicalContext, relativeClinicalDate } from "./clinical-narrative";
 import { narrativeCopy } from "@/i18n/alexa-narrative";
-import {requestsPatientScope} from "@/shared/alexa/request-plan";
-import {frenchRequestAdmission} from "@/shared/alexa/request-contract";
+import {requestedConsultationCount,requestsOldestConsultations,requestsPatientScope} from "@/shared/alexa/request-plan";
+import {frenchRequestAdmission,frenchRequestedOutputs} from "@/shared/alexa/request-contract";
 import {readConsultation} from "./consultation-reads";
 import {inferNativeGeneralAlexa,canAnswerGeneralAlexa} from "./model-gateway";
 import {readApplication,readFinanceView,readAppointment} from "./application-reads";
 import {notePageResult} from "./note-pages";
-import {noteReadQuerySchema,noteCursorSchema,noteContinuation} from "@/shared/alexa/note-query";
+import {noteReadQuerySchema,noteCursorSchema,noteContinuation,noteQueryGrounded,documentBodySearchRequested} from "@/shared/alexa/note-query";
 import {clinicalSectionComplete} from "./clinical-coverage";
 import {alexaRecordCopy} from "@/i18n/alexa-records";
 import {documentText,issuedDocumentText} from './document-excerpt';
@@ -45,10 +49,22 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
   if(result.data.length!==1)throw new AgentReadError("malformed");
   return result.data[0];
  }
- return async function execute(call:AgentCall,asOf:string,prior:readonly AgentResult[],signal:AbortSignal,original?:string):Promise<AgentResult>{
+ return async function execute(call:AgentCall,asOf:string,prior:readonly AgentResult[],signal:AbortSignal,original?:string,requestedGoal?:string):Promise<AgentResult>{
   const schema=agentSchemas[call.name as keyof typeof agentSchemas];
   if(!schema||!schema.safeParse(call.args).success)return failure(call,"error",copy.unavailable,"invalid");
   const a=call.args;
+  const requestText=requestedGoal??original??input.text;
+  const identityText=requestedGoal&&parsePatientMention(requestedGoal).status!=='none'?requestedGoal:input.text;
+  if((call.name==='query_consultations'||(call.name==='get_patient_context'&&['summary','history'].includes(String(a["section"]))))&&requestsOldestConsultations(requestText))return failure(call,"unsupported",narrativeCopy.oldestUnavailable,"oldest-consultations-unsupported");
+  if(call.name==='get_patient_context'&&a["section"]==='notes'&&typeof a["query"]==='string'&&!a["reusePrevious"]&&!noteContinuation(input.text)&&!noteQueryGrounded(requestText,a["query"]))return failure(call,"error",copy.unavailable,"unrequested-note-content-filter");
+  if(call.name==='get_patient_context'&&a["section"]==='profile'){
+   if(/\b(?:e[- ]?mail|courriel|adresse electronique)\b/u.test(requestText.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase()))return failure(call,'unsupported',profileCopy.emailUnavailable,'patient-email-unsupported');
+   if(profileNeedsClarification(requestText))return failure(call,'needs_input',profileCopy.askField,'administrative-field-missing');
+  }
+  if(call.name==='query_documents'&&!a['documentId']&&!a['draftId']&&!a['reusePrevious']&&documentBodySearchRequested(requestText))return failure(call,'unsupported',applicationReadCopy.documentSearchUnsupported,'document-body-search-unsupported');
+  if(call.name==='query_documents'&&typeof a['query']==='string'&&!a['reusePrevious']&&!noteQueryGrounded(requestText,a['query']))return failure(call,'error',copy.unavailable,'unrequested-document-filter');
+  const requestedCounts=(frenchRequestedOutputs(requestText)??[requestText]).map(requestedConsultationCount).filter((n):n is number=>n!==null);
+  if(call.name==='get_patient_context'&&a["section"]==='summary'&&a["count"]!==undefined&&!requestedCounts.includes(Number(a["count"])))return failure(call,"error",copy.unavailable,"unrequested-summary-count");
   const result:AgentResult={callId:call.id,status:"ok",complete:true,text:"",evidence:[],conditionKeys:[]};
   if(call.name==="query_patients"){
    const parsed=agentSchemas.query_patients.parse(a),{partIds:_ids,reusePrevious,...spec}=parsed;
@@ -99,15 +115,15 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    if(!answer.ok)return failure(call,"error",copy.modelUnavailable,"general-"+answer.code);
    return {callId:call.id,status:"ok",complete:true,text:copy.generalIntro+"\n"+answer.text,data:{answer:answer.text},conditionKeys:[],evidence:[{id:call.id,type:"query",label:copy.generalSource,provenance:{gate:"local_model",provider:"local",model:answer.model}}]};
   }
-  if(call.name==="query_app")return readApplication(call.id,String(a["view"]),rpc,signal);
+  if(call.name==="query_app"&&a["view"]!=="message_draft")return readApplication(call.id,String(a["view"]),rpc,signal,{asOf,...(typeof a["offset"]==='number'?{offset:a["offset"]}:{}),...(typeof a["revision"]==='string'?{revision:a["revision"]}:{})});
   let patientId:string|undefined;
-  const humanMention=parsePatientMention(input.text),humanPatient=!!input.patientName||humanMention.status!=='none';
-  const namedRecordScope=(humanPatient||requestsPatientScope(input.text))&&['query_consultations','query_documents','query_agenda','query_finance'].includes(call.name);
+  const humanMention=parsePatientMention(identityText),humanPatient=!!input.patientName||humanMention.status!=='none';
+  const namedRecordScope=(humanPatient||requestsPatientScope(identityText))&&['query_consultations','query_documents','query_agenda','query_finance'].includes(call.name);
   if(call.name==='query_finance'&&namedRecordScope&&cabinetFinanceModes.some(mode=>mode===a['mode']))return failure(call,'unsupported',copy.unsupported,'CabinetOverviewCannotIgnoreNamedPatient');
-  if(namedRecordScope||a["patientId"]||a["patientName"]||call.name==="get_patient_context"||call.name==="prepare_action"||(call.name==="navigate"&&a["target"]==="patient")){
-   const mention=parsePatientMention(input.text);
+  if(namedRecordScope||a["patientId"]||a["patientName"]||call.name==="get_patient_context"||call.name==="prepare_action"||(call.name==="query_app"&&a["view"]==="message_draft")||(call.name==="navigate"&&a["target"]==="patient")){
+   const mention=parsePatientMention(identityText);
    if(mention.status==="ambiguous")return failure(call,"needs_input",copy.patient,"patient-ambiguous");
-   const explicitName=input.patientName??(mention.status==="named"?mention.name:undefined);
+   const explicitName=mention.status==="named"?mention.name:input.patientName;
    const proposedName=explicitName??(typeof a["patientName"]==="string"?a["patientName"]:undefined);
    const normalize=(text:string)=>text.normalize("NFKD").replace(/\p{M}/gu,"").toLocaleLowerCase();
    if(proposedName&&!explicitName&&!normalize(input.text+" "+(original??"")).includes(normalize(proposedName)))return failure(call,"needs_input",copy.patient,"patient-reference-not-supplied");
@@ -130,6 +146,7 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    }
    patientId=resolved.patientId; result.patientId=patientId;
   }
+  if(call.name==="query_app"&&a["view"]==="message_draft")return readMessageDraft(call.id,patientId!,String(a["motif"]),asOf,rpc,signal);
   if(call.name==="get_patient_context"){
    if(a["section"]==="notes"){
     const {partIds:_parts,patientName:_name,patientId:_patient,count:_count,section:_section,reusePrevious,...query}=agentSchemas.get_patient_context.parse(a);
@@ -145,15 +162,11 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    }
    if(a["section"]==="profile"){
     const row=await rpc("get_patient",{p_id:patientId!},signal);
-    const text=z.string().nullable();
-    const p=z.object({id:z.uuid(),record_number:z.string(),first_name:z.string(),last_name:z.string(),birth_date:z.union([z.string(),z.date()]).nullable(),phone:text,phone_alt:text,id_document_number:text,id_document_issuer:text,sex:text,marital_status:text,address:text,emergency_contact:z.json(),notes_admin:text,is_active:z.boolean()}).parse(row);
-    const display=(value:unknown):string=>value instanceof Date?value.toISOString().slice(0,10):typeof value==="string"?label(value.trim()||recordsCopy.missing):recordsCopy.missing;
-    const emergency=z.object({name:text.nullish(),relation:text.nullish(),phone:text.nullish()}).safeParse(p.emergency_contact);
-    const contact=p.emergency_contact===null?recordsCopy.missing:emergency.success?Object.values(emergency.data).filter((value):value is string=>typeof value==="string"&&!!value.trim()).join(" · ")||recordsCopy.missing:JSON.stringify(p.emergency_contact);
-    result.data=p;result.text=p.first_name+" "+p.last_name+"\n"+(["record_number","birth_date","sex","marital_status","phone","phone_alt","address","id_document_number","id_document_issuer","notes_admin"] as const).map(key=>recordsCopy.profile[key]+" : "+display(p[key])).join("\n")+"\n"+recordsCopy.profile.emergency_contact+" : "+contact+"\n"+recordsCopy.profile.is_active+" : "+label(p.is_active?"active":"inactive");
+    const p=patientProfileSchema.parse(row);
+    result.data=p;result.text=profileAnswer(p,requestText,asOf);
     result.evidence=[{id:p.id,type:"patient",label:`${p.first_name} ${p.last_name}`}];return result;
    }
-   const authorizedContext=await buildClinicalContext(db,{patientId:patientId!},{count:typeof a["count"]==="number"?a["count"]:5},signal);
+   const authorizedContext=await buildClinicalContext(db,{patientId:patientId!},{count:typeof a["count"]==="number"?a["count"]:a["section"]==="summary"?100:5},signal);
    // These complete recorded arrays are already authorized by the clinical gate. This projection changes no permissions.
    const context={...authorizedContext,diagnoses:authorizedContext.diagnoses.filter(d=>(a['diagnosisState']!=='active'||d.resolvedAt===null)&&(a['diagnosisState']!=='resolved'||d.resolvedAt!==null)&&(a['diagnosisRole']!=='primary'||d.primary)&&(a['diagnosisRole']!=='secondary'||!d.primary)),treatments:{...authorizedContext.treatments,current:authorizedContext.treatments.current.filter(t=>!a['treatmentState']||a['treatmentState']==='all'||t.status===a['treatmentState'])}};
    if(a['treatmentState']&&a['treatmentState']!=='all'){const ids=new Set(context.treatments.current.map(t=>t.id));context.treatments.history=context.treatments.history.filter(h=>ids.has(h.treatmentId));}
@@ -167,7 +180,9 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    result.evidence=[{id:call.id,type:"query",label:copy.clinicalRead,version:context.sourceRevision,provenance:{gate:"get_alexa_clinical_context",section,...(typeof a['diagnosisState']==='string'?{diagnosisState:a['diagnosisState']}:{}),...(typeof a['diagnosisRole']==='string'?{diagnosisRole:a['diagnosisRole']}:{}),...(typeof a['treatmentState']==='string'?{treatmentState:a['treatmentState']}:{})}},...evidence.values()];
    result.text=sentences.map(s=>s.text).join("\n");
    if(section === "summary") {
-    const narrative = await summarizeClinicalContext(context, signal);
+    const narrative = await summarizeClinicalContext(context, signal, !requestedCounts.includes(Number(a["count"])));
+    if (!narrative.generated && narrative.complete) return {...result,status:"empty",complete:true,text:narrative.text};
+    if (!narrative.generated) return {...result,status:"error",complete:false,text:narrative.text,error:{code:"clinical-synthesis-unavailable",retryable:false}};
     result.text = narrative.text + (narrative.method === "source_selection" ? " " + narrativeCopy.selected : "") + (narrative.complete ? "" : " " + narrativeCopy.limited);
     const latest = context.consultations[0];
     if (latest && !/\b(?:date|quand|exact)\b/iu.test(input.text)) result.text += " " + narrativeCopy.lastVisit(relativeClinicalDate(latest.startedAt, asOf));
@@ -177,7 +192,7 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    result.complete=section==="summary"?["history","treatments","current"].every(selected=>clinicalSectionComplete(context,selected)):clinicalSectionComplete(context,section);result.status=result.complete?"ok":"partial";return result;
   }
   if(call.name==="navigate"){
-   const target=a["target"] as "patient"|"agenda"|"patients"|"dashboard";
+   const target=a["target"] as "patient"|"agenda"|"patients"|"dashboard"|"documents"|"finances"|"parametres"|"jarvis";
    result.navigation=target==="patient"?{target,patientId:patientId!}:{target};result.text=copy.navigationReady;return result;
   }
   if(call.name==="search_knowledge"){
@@ -273,11 +288,11 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    const value=recordResult.parse(await rpc("query_alexa_records",{p_domain:call.name.slice(6),p_spec:JSON.stringify(spec),p_as_of:asOf},signal));
    result.data={...value,...(call.name==="query_agenda"?{agendaPatientIds:[...new Set(value.rows.flatMap(r=>r.patientId?[r.patientId]:[]))],hasMore:value.offset+value.rows.length<value.total}:{})};
    result.evidence=value.rows.map((r):AlexaSource=>({id:call.name==="query_finance"&&r.patientId?r.patientId:r.id,type:call.name==="query_agenda"?"appointment":call.name==="query_documents"?"document":call.name==="query_finance"?"patient":"consultation",label:r.label,...(r.status==="draft"?{provenance:{draftId:r.id}}:call.name==="query_finance"?{provenance:{paymentId:r.id}}:{})}));
-   result.text=`${value.total} ${recordsCopy.count}\n`+value.rows.map(r=>`${label(r.label)} — ${r.at?new Date(r.at).toLocaleString(language==="fr"?"fr-DZ":"ar-DZ",{timeZone:"Africa/Algiers"}):""} — ${label(r.status)}${r.amount!==null?` — ${r.amount} DZD`:""}`).join("\n");
+   result.text=call.name==='query_consultations'&&spec['mode']==='count'?applicationReadCopy.consultationCount(value.total,spec['status']):`${value.total} ${recordsCopy.count}\n`+value.rows.map(r=>`${label(r.label)} — ${r.at?new Date(r.at).toLocaleString(language==="fr"?"fr-DZ":"ar-DZ",{timeZone:"Africa/Algiers"}):""} — ${label(r.status)}${r.amount!==null?` — ${r.amount} DZD`:""}`).join("\n");
    result.evidence.unshift({id:call.id,type:"query",label:recordsCopy.count+" : "+value.total,provenance:{gate:"query_alexa_records",domain:call.name.slice(6),asOf}});
    if(Object.keys(value.totals).length)result.text+="\n"+Object.entries(value.totals).map(([k,n])=>`${label(k)} : ${n}`).join("\n");
    if(call.name==="query_finance"&&(spec["from"]||spec["to"]))result.text+="\n"+(spec["state"]==="collected"?recordsCopy.dateCollected:recordsCopy.dateCreated);
-   if(value.offset+value.rows.length<value.total)result.text+=`\n${value.offset+1}–${value.offset+value.rows.length} / ${value.total}`;
+   if(!['count','totals'].includes(String(spec['mode']))&&value.rows.length&&value.offset+value.rows.length<value.total)result.text+=`\n${value.offset+1}–${value.offset+value.rows.length} / ${value.total}`;
    result.status=value.total?"ok":"empty";
    if(call.name==='query_documents'&&documentId&&value.rows.some(r=>r.id===documentId)){
     let text:string,sourceRevision:string|number;

@@ -16,6 +16,7 @@ export const narrativeCopy = {
   empty: "Aucun élément clinique n’est renseigné pour cette séance.",
   missingAnalyses: "Les séances sans résumé récent sont reprises depuis leurs notes.",
   noNotes: "Aucune note à analyser pour cette séance.",
+  oldestUnavailable: "La sélection des premières consultations n’est pas encore prise en charge ici. Consultez l’historique du dossier ; aucune sélection des dernières consultations n’a été substituée.",
   changed: "Les notes ont changé pendant l’analyse. Relancez-la pour utiliser la dernière version.",
   failed: "Le résumé n’a pas pu être généré. Les notes restent disponibles.",
   scope: (count: number) => `D’après les ${count} consultation${count > 1 ? "s" : ""} disponibles`,

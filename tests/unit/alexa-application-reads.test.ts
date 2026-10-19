@@ -1,10 +1,25 @@
 import {scriptedAlexaRpc} from '../helpers/alexa-rpc';
 import {expect,it,vi} from 'vitest';
+vi.mock('@/server/alexa/clinical-narrative',async original=>({...await original<object>(),summarizeClinicalContext:vi.fn()}));
+import {summarizeClinicalContext} from '@/server/alexa/clinical-narrative';
 import {agentExecutor} from '@/server/alexa/agent-tools';
 import {agentSchemas} from '@/shared/alexa/agent';
 const patient='22222222-2222-4222-8222-222222222222',record='33333333-3333-4333-8333-333333333333';
 const input={text:'Affiche les informations demandées.',conversationId:'all-app-reads',clientTurnId:'11111111-1111-4111-8111-111111111111',appContext:{patientId:patient,page:'/patients/'+patient}};
 const asOf='2026-10-15T12:00:00.000Z';
+it('answers a complete consultation count naturally without a fictitious empty-page range',async()=>{
+ const rpc=vi.fn().mockResolvedValue({ok:true,data:[{total:26,rows:[],totals:{},complete:true,offset:0}]});
+ const result=await agentExecutor({...input,text:'Compte les consultations terminées.',appContext:{patientId:null,page:'/jarvis'}},{rpc},{rpc:vi.fn()})({id:'count',name:'query_consultations',args:{partIds:['c'],mode:'count',status:'closed'}},asOf,[],new AbortController().signal);
+ expect(result.text).toBe('26 consultations terminées.');expect(result).toMatchObject({status:'ok',complete:true});
+});
+it.each(['Résume les trois premières consultations de Ayoub Salmi.','Liste les premières consultations de ce patient.'])('blocks an unsupported oldest selection before reading any patient: %s',async text=>{
+ const rpc=vi.fn();const result=await agentExecutor({...input,text},{rpc},{rpc:vi.fn()})({id:'oldest',name:'get_patient_context',args:{partIds:['s'],section:'summary'}},asOf,[],new AbortController().signal);
+ expect(result.status).toBe('unsupported');expect(rpc).not.toHaveBeenCalled();expect(summarizeClinicalContext).not.toHaveBeenCalled();
+});
+it('blocks an invented model count on a whole-case request before any SQL',async()=>{
+ const rpc=vi.fn();const result=await agentExecutor({...input,text:'Résume le cas du patient sélectionné.'},{rpc},{rpc:vi.fn()})({id:'s',name:'get_patient_context',args:{partIds:['s'],section:'summary',count:5}},asOf,[],new AbortController().signal);
+ expect(result).toMatchObject({status:'error',error:{code:'unrequested-summary-count'}});expect(rpc).not.toHaveBeenCalled();
+});
 it.each(['diagnoses','scales'])('answers the recorded %s without treating unrelated missing consultations as a failure',async section=>{
  const context={patientId:patient,consultations:[],treatments:{current:[],history:[],historyComplete:true},sourceRevision:'a'.repeat(64),coverage:{requested:5,returned:0,complete:false,hasMore:false},diagnoses:[{id:record,label:'Diagnostic fictif consigné',code:'F-TEST',primary:true,onsetDate:null,resolvedAt:null}],scales:[{id:record,name:'Échelle fictive',administeredAt:asOf,score:8,interpretation:'Résultat fictif'}]};
  const rpc=scriptedAlexaRpc(async(name:string)=>({ok:true as const,data:[name==='get_patient'?{id:patient}:context]}));
@@ -50,11 +65,14 @@ it('blocks reversed finance periods and refuses ignored note count arguments',()
  expect(agentSchemas.get_patient_context.safeParse({partIds:['r'],section:'notes',count:5}).success).toBe(false);
 });
 
-it('summarizes diagnoses, treatments, scales, current consultation and history together with their own sources',async()=>{
+it('retains authorized diagnoses, treatments, scales, current consultation and history while delegating the concise paragraph',async()=>{
+ vi.mocked(summarizeClinicalContext).mockResolvedValueOnce({text:'Le patient rapporte des difficultés familiales.',complete:true,generated:true,sourceIds:[]});
  const context={patientId:patient,consultations:[{id:record,startedAt:'2026-10-01T09:00:00Z',endedAt:'2026-10-01T09:30:00Z',rawNotes:'Fait historique fictif',rawNotesVersion:'b'.repeat(64),notes:[]}],currentConsultation:{id:'44444444-4444-4444-8444-444444444444',startedAt:'2026-10-15T09:00:00Z',endedAt:null,rawNotes:'Séance courante fictive',rawNotesVersion:'c'.repeat(64),notes:[]},treatments:{current:[{id:'55555555-5555-4555-8555-555555555555',medication:'Traitement fictif',version:1,status:'active',dose:'25',doseUnit:'mg',frequency:'matin',timing:[],instructions:null,startDate:'2026-10-01',endDate:null}],history:[],historyComplete:true},sourceRevision:'a'.repeat(64),coverage:{requested:1,returned:1,complete:true,hasMore:false},diagnoses:[{id:'66666666-6666-4666-8666-666666666666',label:'Diagnostic fictif consigné',code:'F-TEST',primary:true,onsetDate:null,resolvedAt:null}],scales:[{id:'77777777-7777-4777-8777-777777777777',name:'Échelle fictive',administeredAt:asOf,score:8,interpretation:'Résultat fictif'}]};
  const rpc=scriptedAlexaRpc(async(name:string)=>({ok:true as const,data:[name==='get_patient'?{id:patient}:context]}));
- const r=await agentExecutor({...input,text:'Résume les éléments cliniques de ce dossier.'},{rpc},{rpc:vi.fn()})({id:'s',name:'get_patient_context',args:{partIds:['s'],section:'summary',count:1}},asOf,[],new AbortController().signal);
- for(const fact of ['Diagnostic fictif consigné','Traitement fictif','Échelle fictive','Séance courante fictive','Fait historique fictif'])expect(r.text).toContain(fact);
+ const r=await agentExecutor({...input,text:'Résume la dernière consultation de ce dossier.'},{rpc},{rpc:vi.fn()})({id:'s',name:'get_patient_context',args:{partIds:['s'],section:'summary',count:1}},asOf,[],new AbortController().signal);
+ expect(r.text).toContain('Le patient rapporte des difficultés familiales.');
+ expect(r.data).toMatchObject({summary:{diagnoses:context.diagnoses,treatments:context.treatments,scales:context.scales,currentConsultation:context.currentConsultation,consultations:context.consultations}});
+ expect(summarizeClinicalContext).toHaveBeenCalledWith(expect.objectContaining({patientId:patient,consultations:context.consultations}),expect.any(AbortSignal),false);
  for(const type of ['diagnostic','treatment','scale','consultation'])expect(r.evidence.some(e=>e.type===type)).toBe(true);
  expect(r.data).toHaveProperty('summary');expect(r.complete).toBe(true);
 });
@@ -62,3 +80,20 @@ it('summarizes diagnoses, treatments, scales, current consultation and history t
 it('rejects an empty OR-status filter rather than presenting an accidental empty agenda',()=>{expect(agentSchemas.query_agenda.safeParse({partIds:['p'],period:'demain',statuses:[]}).success).toBe(false);});
 
 it('rejects a finance request with no explicit view before any authoritative read',()=>{expect(agentSchemas.query_finance.safeParse({partIds:['f'],period:'ce mois'}).success).toBe(false);});
+
+it('reports a model synthesis failure as an error rather than an inferred partial answer',async()=>{
+ vi.mocked(summarizeClinicalContext).mockResolvedValueOnce({text:'La synthèse fiable est indisponible.',complete:false,generated:false,sourceIds:[]});
+ const context={patientId:patient,consultations:[],treatments:{current:[],history:[],historyComplete:true},sourceRevision:'a'.repeat(64),coverage:{requested:5,returned:0,complete:true,hasMore:false},diagnoses:[],scales:[]};
+ const rpc=scriptedAlexaRpc(async(name:string)=>({ok:true as const,data:[name==='get_patient'?{id:patient}:context]}));
+ const r=await agentExecutor(input,{rpc},{rpc:vi.fn()})({id:'s',name:'get_patient_context',args:{partIds:['s'],section:'summary'}},asOf,[],new AbortController().signal);
+ expect(r).toMatchObject({status:'error',complete:false,error:{code:'clinical-synthesis-unavailable'}});
+ expect(r.presentation).toBeUndefined();
+});
+
+it('returns authoritative empty clinical coverage as empty rather than a model outage',async()=>{
+ vi.mocked(summarizeClinicalContext).mockResolvedValueOnce({text:'Aucun élément clinique renseigné.',complete:true,generated:false,sourceIds:[]});
+ const context={patientId:patient,consultations:[],treatments:{current:[],history:[],historyComplete:true},sourceRevision:'a'.repeat(64),coverage:{requested:5,returned:0,complete:true,hasMore:false},diagnoses:[],scales:[]};
+ const rpc=scriptedAlexaRpc(async(name:string)=>({ok:true as const,data:[name==='get_patient'?{id:patient}:context]}));
+ const result=await agentExecutor(input,{rpc},{rpc:vi.fn()})({id:'e',name:'get_patient_context',args:{partIds:['e'],section:'summary'}},asOf,[],new AbortController().signal);
+ expect(result).toMatchObject({status:'empty',complete:true});expect(result.error).toBeUndefined();expect(result.presentation).toBeUndefined();
+});

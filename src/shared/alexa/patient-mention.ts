@@ -1,7 +1,7 @@
 import { isMedicationName } from "./medications";
 
 const common = new Set([
-  "secondaire", "secondaires", "cabinet",
+  "secondaire", "secondaires", "cabinet", "rendez-vous", "rendez",
   "document", "documents", "certificat", "certificats", "justification", "justifications", "justificatif", "justificatifs", "brouillon", "brouillons", "emis", "emise", "emises", "delivre", "delivree", "delivres", "delivrees",
   "termine", "terminee", "termines", "terminees", "clos", "close", "closes", "cloture", "cloturee", "clotures", "cloturees", "ouvert", "ouverte", "ouverts", "ouvertes", "signe", "signee", "signes", "signees", "non",
   "brut", "brute", "bruts", "brutes", "actif", "active", "actifs", "actives", "inactif", "inactive", "inactifs", "inactives", "principal", "principale", "principaux", "principales", "arrete", "arretee", "arretes", "arretees", "resolu", "resolue", "resolus", "resolues", "nouveau", "nouvelle", "nouveaux", "nouvelles", "suivi", "paiement", "paiements", "urgence",
