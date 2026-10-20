@@ -1,8 +1,9 @@
-import { expect, it } from "vitest";
+import { afterEach, expect, it, vi } from "vitest";
 import { buildLocalRequest, parseLocalAnswer, localModelFailureCode, assertLocalContextFits } from "@/server/alexa/local-model-protocol";
 import { assertLocalAssetAccess, localAssetLayout } from "@/server/alexa/local-model-assets";
 
 const messages = [{ role: "user" as const, content: "Bonjour" }];
+afterEach(()=>vi.unstubAllEnvs());
 const response = (content: unknown, finish_reason = "stop", extra = {}) => JSON.stringify({
   choices: [{ finish_reason, message: { role: "assistant", content, ...extra } }],
 });
@@ -22,8 +23,8 @@ it("rejects nonfinite or unbounded output budgets", () => {
     expect(() => buildLocalRequest(messages, { maxOutputTokens: value })).toThrow("LocalModelInput");
 });
 it("accepts bounded multi-part inference and rejects invalid timeouts before runtime access", () => {
-  for (const timeoutMs of [90000, 170000, 180000]) expect(() => buildLocalRequest(messages, { timeoutMs })).not.toThrow();
-  for (const timeoutMs of [NaN, Infinity, 0, -1, 180001]) expect(() => buildLocalRequest(messages, { timeoutMs })).toThrow("LocalModelInput");
+  for (const timeoutMs of [90000, 170000, 180000, 240000]) expect(() => buildLocalRequest(messages, { timeoutMs })).not.toThrow();
+  for (const timeoutMs of [NaN, Infinity, 0, -1, 240001]) expect(() => buildLocalRequest(messages, { timeoutMs })).toThrow("LocalModelInput");
 });
 it("accepts one complete assistant answer without interpreting it as tools", () => {
   expect(parseLocalAnswer(response("Bonjour."))).toBe("Bonjour.");
@@ -39,6 +40,15 @@ it("refuses ambiguity between multiple candidate answers", () => {
   const value = JSON.parse(response("one"));
   value.choices.push({ finish_reason: "stop", message: { role: "assistant", content: "two" } });
   expect(() => parseLocalAnswer(JSON.stringify(value))).toThrow("LocalModelOutput");
+});
+it("uses an explicit absolute SSD cache only in development and preserves the packaged model root",()=>{
+  vi.stubEnv("ALEXA_LOCAL_MODEL_ROOT","C:\\FastModels\\alexa");
+  expect(localAssetLayout("G:\\Final mindcare")).toEqual({root:"C:\\FastModels\\alexa",packaged:false});
+  expect(localAssetLayout("C:\\Program Files\\MindCare\\resources\\serveur")).toEqual({root:"C:\\Program Files\\MindCare\\resources\\alexa\\local-model",packaged:true});
+});
+it.each(["relative/models","\\ambiguous","\\\\server\\models"])("rejects relative or network development model roots: %s",root=>{
+  vi.stubEnv("ALEXA_LOCAL_MODEL_ROOT",root);
+  expect(()=>localAssetLayout("G:\\Final mindcare")).toThrow("LocalModelAssetAccess");
 });
 it("resolves only the fixed packaged sibling or development cache", () => {
   expect(localAssetLayout("C:\\Program Files\\MindCare\\resources\\serveur")).toEqual({

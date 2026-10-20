@@ -3,9 +3,9 @@ const { direct } = vi.hoisted(() => ({ direct: vi.fn() }));
 vi.mock("@/server/alexa/local-model", () => ({ inferLocalText: direct }));
 import { inferGeneralAlexa } from "@/server/alexa/model-gateway";
 afterEach(() => direct.mockReset());
-it("answers a public question through the fixed local MiniCPM", async () => {
+it("answers a public question through the fixed local Qwen3.5 4B", async () => {
   direct.mockResolvedValue("La lumière se disperse dans les gouttes d’eau.");
-  expect(await inferGeneralAlexa("Comment se forme un arc-en-ciel ?", { openGeneral: true })).toMatchObject({ ok: true, model: "MiniCPM-V-4_7-1B-Q4_K_M.gguf" });
+  expect(await inferGeneralAlexa("Comment se forme un arc-en-ciel ?", { openGeneral: true })).toMatchObject({ ok: true, model: "Qwen_Qwen3.5-2B-Q4_K_M.gguf" });
   expect(direct.mock.calls[0]![0][1]).toEqual({ role: "user", content: "Comment se forme un arc-en-ciel ?" });
   expect(direct.mock.calls[0]![1]).toMatchObject({ maxOutputTokens: 1024 });
   expect(Number.isInteger(direct.mock.calls[0]![1].timeoutMs)).toBe(true);

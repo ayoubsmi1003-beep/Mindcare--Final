@@ -290,7 +290,7 @@ export async function runAgentLoop(input: TurnInput, deps: AgentLoopDependencies
       }
       const wasDeclared=declared;
       const outputCount=countContract?.clauses.length??(compoundContract?(compoundContract.count?2:1):requestedOutputs?.length??Math.max(1,parts.length));
-      const completion = await infer(messages, { tools:catalogue, toolChoice:declared&&parts.some(p=>p.status==="pending"&&p.tools?.length)?"required":declared?"auto":"declare_request",signal, timeoutMs: Math.min(ALEXA_NATIVE_BUDGET.inferenceMs*(steps===1?2:1), remaining), maxOutputTokens:outputCount>1||input.text.length>300?1024:512 });
+      const completion = await infer(messages, { tools:catalogue, toolChoice:declared&&parts.some(p=>p.status==="pending"&&p.tools?.length)?"required":declared?"auto":"declare_request",signal, timeoutMs: Math.min(240000,ALEXA_NATIVE_BUDGET.inferenceMs*(steps===1?2:1), remaining), maxOutputTokens:outputCount>1||input.text.length>300?1024:512 });
       tokensIn += completion.tokensIn; tokensOut += completion.tokensOut;
       if (completion.kind === "answer") {
         if((!declared||parts.some(p=>p.status==="pending"&&p.tools?.length))&&plainRecovery++<1){messages.push({role:"user",content:declared?"Aucun résultat de données ne peut être déduit de cette réponse. Termine les parties en attente avec les fonctions autorisées et leurs partIds.":agentDeclarationRecovery});continue;}

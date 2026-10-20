@@ -27,7 +27,7 @@ it('keeps a closed failure reason in server diagnostics without logging request 
 it('allows cold first interpretation on slow hardware without extending subsequent inference or the whole-turn cap',async()=>{
  const budgets:number[]=[];let step=0;
  const r=await runAgentLoop({text:'Combien de patients actifs ?',conversationId:crypto.randomUUID(),clientTurnId:crypto.randomUUID(),appContext:{patientId:null,page:'/jarvis'}},{actor:'cold-simple',infer:async(_m,options)=>{budgets.push(options.timeoutMs??0);return ++step===1?call('d','declare_request',{parts:[{id:'p',goal:'Patients actifs',tool:'query_patients',conditions:[],dependsOn:[]}]}):call('q','query_patients',{partIds:['p'],mode:'count'});},execute:async c=>({callId:c.id,status:'ok',complete:true,text:'2 patients',conditionKeys:[],evidence:[]})},new AbortController().signal);
- expect(r.status).toBe('completed');expect(budgets[0]).toBe(170000);expect(budgets[1]).toBeLessThanOrEqual(85000);expect(AGENT_LIMITS.deadlineMs).toBe(360000);
+ expect(r.status).toBe('completed');expect(budgets[0]).toBe(240000);expect(budgets[1]).toBeLessThanOrEqual(120000);expect(AGENT_LIMITS.deadlineMs).toBe(500000);expect(AGENT_LIMITS.deadlineMs).toBeLessThan(AGENT_LIMITS.ttlMs);
 });
 
 async function countBeforeRetry(){
@@ -37,7 +37,7 @@ async function countBeforeRetry(){
 it('gives the first resumed domain call the cold-start allowance without re-declaring its existing query',async()=>{
  const {request,actor}=await countBeforeRetry();let timeout=0,tools:string[]=[];
  await runAgentLoop({...request,text:'Lesquels ?',clientTurnId:crypto.randomUUID()},{actor,infer:async(_m,o)=>{timeout=o.timeoutMs??0;tools=o.tools?.map(t=>t.function.name)??[];throw Error('LocalModelUnavailable');},execute:vi.fn()},new AbortController().signal);
- expect(tools).toContain('query_patients');expect(tools).not.toContain('declare_request');expect(timeout).toBe(170000);
+ expect(tools).toContain('query_patients');expect(tools).not.toContain('declare_request');expect(timeout).toBe(240000);
 });
 it('retains the exact saved patient query after a failed follow-up so a retry does not broaden or lose it',async()=>{
  const {request,actor,condition}=await countBeforeRetry();const r=await runAgentLoop({...request,text:'Lesquels ?',clientTurnId:crypto.randomUUID()},{actor,infer:async()=>{throw Error('LocalModelUnavailable');},execute:vi.fn()},new AbortController().signal);

@@ -5,7 +5,7 @@ import type { AlexaSource, AlexaProposal, AlexaNavigation } from "./turn";
 /** Current native Alexa qualification language, independent of names in source records. */
 export const ALEXA_AGENT_LANGUAGE = "fr" as const;
 /** Default rounds for actions/dependencies; independent reads share these unchanged call/time caps. */
-export const ALEXA_NATIVE_BUDGET = { rounds:3, calls:6, parallel:2, inferenceMs:85000, marginMs:20000 } as const;
+export const ALEXA_NATIVE_BUDGET = { rounds:3, calls:6, parallel:2, inferenceMs:120000, marginMs:20000 } as const;
 export const ALEXA_NATIVE_DEADLINE_MS = (1+ALEXA_NATIVE_BUDGET.rounds)*ALEXA_NATIVE_BUDGET.inferenceMs+ALEXA_NATIVE_BUDGET.marginMs;
 
 export const conditionSchema = z.object({

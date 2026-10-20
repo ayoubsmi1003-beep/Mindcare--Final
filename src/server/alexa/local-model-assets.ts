@@ -1,11 +1,13 @@
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
-import { basename, dirname, join, resolve } from "node:path";
+import { basename, dirname, isAbsolute, join, resolve } from "node:path";
 
 export function localAssetLayout(cwd = process.cwd()): { root: string; packaged: boolean } {
   const here = resolve(cwd);
   const packaged = basename(here).toLowerCase() === "serveur" && basename(dirname(here)).toLowerCase() === "resources";
-  return { root: packaged ? join(dirname(here), "alexa", "local-model") : join(here, ".cache", "alexa", "minicpm"), packaged };
+  const configured=packaged?undefined:process.env["ALEXA_LOCAL_MODEL_ROOT"];
+  if(configured&&(!isAbsolute(configured)||! /^[A-Za-z]:[\\/]/u.test(configured)))throw new Error("LocalModelAssetAccess");
+  return { root: packaged ? join(dirname(here), "alexa", "local-model") : configured?resolve(configured):join(here, ".cache", "alexa", "minicpm"), packaged };
 }
 interface AssetAccess {
   readonly sid: string; readonly protectedLocation: boolean;

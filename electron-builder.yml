@@ -67,7 +67,7 @@ extraResources:
   - from: resources/alexa/local-model
     to: alexa/local-model
     filter:
-      - "MiniCPM-V-4_7-1B-Q4_K_M.gguf"
+      - "Qwen_Qwen3.5-2B-Q4_K_M.gguf"
       - "llama-b11429.zip"
       - "runtime-b11429/*.exe"
       - "runtime-b11429/*.dll"
