@@ -46,5 +46,8 @@ export type ConsultationCursor = z.infer<typeof consultationCursorSchema>;
 export interface ClinicalContextRequest {
   readonly count: number;
   readonly before?: ConsultationCursor;
+  /** Inclusive lower bound and exclusive upper bound for a complete consultation window. */
+  readonly from?: string;
+  readonly to?: string;
   readonly purpose?: "summary" | "history" | "preparation" | "longitudinal";
 }

@@ -2,7 +2,7 @@ import {applicationReadCopy} from "@/i18n/alexa-application";
 import {profileCopy} from "@/i18n/alexa-profile";
 import {readMessageDraft} from "./message-draft";
 import {patientProfileSchema,profileAnswer,profileNeedsClarification} from "./profile-answer";
-import { summarizeClinicalContext, relativeClinicalDate } from "./clinical-narrative";
+import { extractRecurringClinicalTheme, summarizeClinicalConsultations, summarizeClinicalContext, relativeClinicalDate } from "./clinical-narrative";
 import { narrativeCopy } from "@/i18n/alexa-narrative";
 import {requestedConsultationCount,requestsOldestConsultations,requestsPatientScope} from "@/shared/alexa/request-plan";
 import {frenchRequestAdmission,frenchRequestedOutputs} from "@/shared/alexa/request-contract";
@@ -23,6 +23,7 @@ import { ALEXA_AGENT_LANGUAGE,cabinetFinanceModes,AgentReadError,patientListCont
 import { agentCopy } from "@/i18n/alexa-agent";
 import { resolvePatient } from "./patient-resolver";
 import { buildClinicalContext } from "./clinical-context";
+import type { ClinicalContext } from "@/shared/alexa/clinical";
 import { localResponse } from "./local-response";
 import { readKnowledge } from "./knowledge-adapter";
 import { resolveAgentPeriod,explicitAgentPeriod } from "./agent-period";
@@ -166,11 +167,12 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
     result.data=p;result.text=profileAnswer(p,requestText,asOf);
     result.evidence=[{id:p.id,type:"patient",label:`${p.first_name} ${p.last_name}`}];return result;
    }
-   const authorizedContext=await buildClinicalContext(db,{patientId:patientId!},{count:typeof a["count"]==="number"?a["count"]:a["section"]==="summary"?100:5},signal);
+   const section=typeof a["section"]==="string"?a["section"]:"history",rangedSummary=section==="summary"&&typeof a["from"]==="string"&&typeof a["to"]==="string";
+   const authorizedContext=await buildClinicalContext(db,{patientId:patientId!},{count:typeof a["count"]==="number"?a["count"]:section==="summary"?100:5,...(rangedSummary?{from:a["from"] as string,to:a["to"] as string}:{})},signal);
    // These complete recorded arrays are already authorized by the clinical gate. This projection changes no permissions.
-   const context={...authorizedContext,diagnoses:authorizedContext.diagnoses.filter(d=>(a['diagnosisState']!=='active'||d.resolvedAt===null)&&(a['diagnosisState']!=='resolved'||d.resolvedAt!==null)&&(a['diagnosisRole']!=='primary'||d.primary)&&(a['diagnosisRole']!=='secondary'||!d.primary)),treatments:{...authorizedContext.treatments,current:authorizedContext.treatments.current.filter(t=>!a['treatmentState']||a['treatmentState']==='all'||t.status===a['treatmentState'])}};
+   const {currentConsultation:_currentConsultation,...withoutCurrent}=authorizedContext;
+   const context:ClinicalContext=rangedSummary?{...withoutCurrent,diagnoses:[],scales:[],treatments:{current:[],history:[],historyComplete:true}}:{...authorizedContext,diagnoses:authorizedContext.diagnoses.filter(d=>(a['diagnosisState']!=='active'||d.resolvedAt===null)&&(a['diagnosisState']!=='resolved'||d.resolvedAt!==null)&&(a['diagnosisRole']!=='primary'||d.primary)&&(a['diagnosisRole']!=='secondary'||!d.primary)),treatments:{...authorizedContext.treatments,current:authorizedContext.treatments.current.filter(t=>!a['treatmentState']||a['treatmentState']==='all'||t.status===a['treatmentState'])}};
    if(a['treatmentState']&&a['treatmentState']!=='all'){const ids=new Set(context.treatments.current.map(t=>t.id));context.treatments.history=context.treatments.history.filter(h=>ids.has(h.treatmentId));}
-   const section=typeof a["section"]==="string"?a["section"]:"history";
    const intent=section==="treatments"?"treatments":section==="diagnoses"?"diagnoses":section==="scales"?"scales":section==="current"?"current_consultation":"history";
    const intents=section==="summary"?["diagnoses","treatments","scales","current_consultation","history"] as const:[intent] as const;
    const sentences=intents.flatMap(selected=>localResponse(context,{intent:selected,count:context.consultations.length||1,language},[]));
@@ -179,17 +181,26 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    const evidence=new Map(sentences.flatMap(s=>s.sources).map(source=>[JSON.stringify([source.type,source.id,source.version]),source]));
    result.evidence=[{id:call.id,type:"query",label:copy.clinicalRead,version:context.sourceRevision,provenance:{gate:"get_alexa_clinical_context",section,...(typeof a['diagnosisState']==='string'?{diagnosisState:a['diagnosisState']}:{}),...(typeof a['diagnosisRole']==='string'?{diagnosisRole:a['diagnosisRole']}:{}),...(typeof a['treatmentState']==='string'?{treatmentState:a['treatmentState']}:{})}},...evidence.values()];
    result.text=sentences.map(s=>s.text).join("\n");
+   let summaryComplete=false;
    if(section === "summary") {
-    const narrative = await summarizeClinicalContext(context, signal, !requestedCounts.includes(Number(a["count"])));
+    if(rangedSummary&&typeof a["count"]==="number"&&context.coverage.complete&&context.consultations.length!==a["count"]){
+     result.text=`La période contient ${context.consultations.length} consultations terminées, alors que la demande en indique ${a["count"]}. Je ne peux pas confirmer qu’il s’agit du même ensemble.`;
+     result.status="partial";result.complete=false;result.error={code:"requested-period-count-mismatch",retryable:false};return result;
+    }
+    const normalizedRequest=requestText.normalize("NFKD").replace(/\p{M}/gu,"").toLowerCase();
+    const recurringThemeRequest=/\b(?:theme|motif|element) recurrent\b/u.test(normalizedRequest);
+    const narrative = (recurringThemeRequest ? extractRecurringClinicalTheme(context) : null)
+      ?? (rangedSummary?await summarizeClinicalConsultations(context,signal):await summarizeClinicalContext(context, signal, !requestedCounts.includes(Number(a["count"]))));
+    summaryComplete=narrative.complete;
     if (!narrative.generated && narrative.complete) return {...result,status:"empty",complete:true,text:narrative.text};
     if (!narrative.generated) return {...result,status:"error",complete:false,text:narrative.text,error:{code:"clinical-synthesis-unavailable",retryable:false}};
     result.text = narrative.text + (narrative.method === "source_selection" ? " " + narrativeCopy.selected : "") + (narrative.complete ? "" : " " + narrativeCopy.limited);
     const latest = context.consultations[0];
-    if (latest && !/\b(?:date|quand|exact)\b/iu.test(input.text)) result.text += " " + narrativeCopy.lastVisit(relativeClinicalDate(latest.startedAt, asOf));
+    if (latest && !rangedSummary && narrative.method !== "structured" && !/\b(?:date|quand|exact)\b/iu.test(input.text)) result.text += " " + narrativeCopy.lastVisit(relativeClinicalDate(latest.startedAt, asOf));
     result.presentation = "inference";
     if (!narrative.complete) { result.complete=false; result.status="partial"; return result; }
    }
-   result.complete=section==="summary"?["history","treatments","current"].every(selected=>clinicalSectionComplete(context,selected)):clinicalSectionComplete(context,section);result.status=result.complete?"ok":"partial";return result;
+   result.complete=section==="summary"?(rangedSummary?summaryComplete:["history","treatments","current"].every(selected=>clinicalSectionComplete(context,selected))):clinicalSectionComplete(context,section);result.status=result.complete?"ok":"partial";return result;
   }
   if(call.name==="navigate"){
    const target=a["target"] as "patient"|"agenda"|"patients"|"dashboard"|"documents"|"finances"|"parametres"|"jarvis";

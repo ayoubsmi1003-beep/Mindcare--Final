@@ -8,10 +8,11 @@ import { narrativeCopy as copy } from "@/i18n/alexa-narrative";
 
 export const NARRATIVE_VERSION = "alexa-narrative-fr-v3";
 export const NARRATIVE_HASH = createHash("sha256").update(NARRATIVE_VERSION + copy.prompt).digest("hex");
-export interface NarrativeSource { id: string; text: string; at?: string; state?: "open" | "closed"; originalText?: string; attribution?: "unsigned" | "correction" | "plan" }
-export interface ClinicalNarrative { text: string; complete: boolean; generated: boolean; sourceIds: string[]; method?: "reformulated" | "source_selection" }
+export interface NarrativeSource { id: string; text: string; at?: string; state?: "open" | "closed"; consultationId?: string; originalText?: string; attribution?: "unsigned" | "correction" | "plan" }
+export interface ClinicalNarrative { text: string; complete: boolean; generated: boolean; sourceIds: string[]; method?: "reformulated" | "source_selection" | "structured" }
 const answerSchema = z.object({ sentences: z.array(z.object({ text: z.string().trim().min(10).max(500), evidence: z.array(z.object({ id: z.string().min(1).max(80), quote: z.string().trim().min(10).max(600) }).strict()).min(1).max(6) }).strict()).min(1).max(4) }).strict();
 const fold = (value: string) => value.normalize("NFKD").replace(/\p{M}/gu, "").toLowerCase().replace(/\s+/gu, " ").trim();
+const quoteFold = (value:string)=>fold(value).replace(/[’‘`]/gu,"'").replace(/[\p{P}\p{S}]/gu," ").replace(/\s+/gu," ").trim();
 const unsafe = /ignore.{0,40}(?:instruction|consigne)|(?:system|assistant|developer)\s*:|(?:execute|appelle).{0,30}(?:outil|tool)|<\/?[a-z][^>]*>|\/api\//iu;
 const negative = /\b(?:pas|sans|aucun|aucune|nie|absence|jamais|ni)\b/u;
 const numbers = (text: string): string[] => fold(text).match(/\d+(?:[.,]\d+)?(?:\s*(?:mg|mcg|g|ml|%))?/gu) ?? [];
@@ -31,7 +32,7 @@ export function relativeClinicalDate(date: string, asOf: string): string {
 }
 export function consultationNarrativeSources(c: ClinicalConsultation): { sources: NarrativeSource[]; complete: boolean } {
   const selected = consultationExcerpts(c, undefined, 30000, 100, 12000);
-  return { sources: selected.excerpts.map((e, i) => ({ id: `${c.id}:${i}`, originalText: e.text, ...(e.amendmentAt ? {attribution: "correction" as const} : e.unsigned ? {attribution: "unsigned" as const} : e.area === "plan" ? {attribution: "plan" as const} : {}), at: c.startedAt, state: c.endedAt === null ? "open" : "closed", text: `${e.amendmentAt ? copy.correction : ""}${e.unsigned ? copy.unsigned : ""}${e.area ? copyArea[e.area] + " : " : ""}${e.text}` })), complete: !selected.omitted };
+  return { sources: selected.excerpts.map((e, i) => ({ id: `${c.id}:${i}`, consultationId:c.id, originalText: e.text, ...(e.amendmentAt ? {attribution: "correction" as const} : e.unsigned ? {attribution: "unsigned" as const} : e.area === "plan" ? {attribution: "plan" as const} : {}), at: c.startedAt, state: c.endedAt === null ? "open" : "closed", text: `${e.amendmentAt ? copy.correction : ""}${e.unsigned ? copy.unsigned : ""}${e.area ? copyArea[e.area] + " : " : ""}${e.text}` })), complete: !selected.omitted };
 }
 const copyArea = copy.noteAreas;
 
@@ -51,31 +52,46 @@ export function clinicalNarrativeReferences(context: ClinicalContext, sourceIds:
 }
 
 /** Fail closed on unsupported amounts, polarity reversal, invented citations or instructions. */
-export function validateClinicalNarrative(value: unknown, sources: readonly NarrativeSource[]): string | null {
+function checkClinicalNarrative(value: unknown, sources: readonly NarrativeSource[]): {text:string|null;rejection?:string} {
   const parsed = answerSchema.safeParse(value);
-  if (!parsed.success) return null;
+  if (!parsed.success) return {text:null,rejection:"schema"};
   for (const sentence of parsed.data.sentences) {
     const quotes: string[] = [];
-    if (unsafe.test(sentence.text) || /\n|^\s*[-*\d]|\b(?:SOAP|subjectif\s*:|objectif\s*:|évaluation\s*:|plan\s*:)/iu.test(sentence.text)) return null;
+    if (unsafe.test(sentence.text) || /\n|^\s*[-*\d]|\b(?:SOAP|subjectif\s*:|objectif\s*:|évaluation\s*:|plan\s*:)/iu.test(sentence.text)) return {text:null,rejection:"format"};
     for (const citation of sentence.evidence) {
       const source = sources.find(s => s.id === citation.id);
-      if (!source || unsafe.test(citation.quote) || !fold(source.text).includes(fold(citation.quote))) return null;
-      const field = fold(source.originalText ?? source.text);
-      if ((negative.test(field) || /\b(?:hypothese|possible|suspect|a explorer|a confirmer|prevu|propose|envisage|programme)\b/u.test(field)) && !fold(sentence.text).includes(field)) return null;
+      if (!source) return {text:null,rejection:"citation-id"};
+      if (unsafe.test(citation.quote) || !quoteFold(source.text).includes(quoteFold(citation.quote))) return {text:null,rejection:"citation-quote"};
+      // Preserve qualifiers attached to the cited excerpt, while allowing a
+      // positive fact to be summarized when another note clause is negative.
+      const field = fold(citation.quote), sentenceText = fold(sentence.text);
+      const qualified = negative.test(field) || /\b(?:hypothese|possible|suspect|a explorer|a confirmer|prevu|propose|envisage|programme)\b/u.test(field);
+      if (qualified && !sentenceText.includes(field)) return {text:null,rejection:"qualifier"};
+      // A negative finding can change meaning when its note assigns it to
+      // someone other than the patient or says the patient was not assessed.
+      const sourceContext = fold(source.originalText ?? source.text);
+      const attribution = sourceContext.match(/\b(?:cela|ceci|cette information|cette idee|ce fait)\s+(?:concerne|se rapporte a|est attribue a)\s+[^.!?;]*/u)
+        ?? sourceContext.match(/\b(?:le|la) patient(?:e)?\s+n['’]a\s+pas\s+ete\s+interroge[^.!?;]*/u);
+      if (qualified && attribution && !sentenceText.includes(attribution[0])) return {text:null,rejection:"attribution"};
       quotes.push(citation.quote);
     }
     const proof = fold(quotes.join(" ")), text = fold(sentence.text);
     const supported = numbers(proof); let position = 0;
-    for (const quantity of numbers(text)) { const index = supported.indexOf(quantity, position); if (index < 0) return null; position = index + 1; }
+    for (const quantity of numbers(text)) { const index = supported.indexOf(quantity, position); if (index < 0) return {text:null,rejection:"number"}; position = index + 1; }
     // A negative must stay attached to its exact clinical clause.
-    if ((negative.test(proof) || negative.test(text)) && !proof.includes(text)) return null;
-    if (/\b(?:hypothese|possible|suspect|a explorer|a confirmer)\b/u.test(proof) && !/\b(?:hypothese|possible|suspect|explor|confirmer)\w*\b/u.test(text)) return null;
+    if ((negative.test(proof) || negative.test(text)) && !proof.includes(text)) return {text:null,rejection:"polarity"};
+    if (/\b(?:hypothese|possible|suspect|a explorer|a confirmer)\b/u.test(proof) && !/\b(?:hypothese|possible|suspect|explor|confirmer)\w*\b/u.test(text)) return {text:null,rejection:"uncertainty"};
     const words = text.match(/[\p{L}]{5,}/gu) ?? [];
-    if (!words.length || words.filter(w => proof.includes(w)).length / words.length < 0.5) return null;
-    if (/\b(?:je|j’ai|j'ai|nous avons)\b/u.test(text) || /\b(?:doit prendre|il faut prescrire|je recommande)\b/u.test(text)) return null;
+    const narrativeGlue = new Set(["patient","patiente","patients","patientes","note","notes","consultation","consultations","seance","seances","dossier","theme","themes","motif","motifs","suivi","historique","resume","synthese","evolution","cours","paragraphe","revient","reviennent","mentionne","mentionnent","indique","indiquent","rapporte","rapportent","decrit","decrivent","consigne","consignent","contient","contiennent","presente","presentent","montre","montrent","relate","relatent","evoque","evoquent","concerne","concernent","porte","portent","autour","recurrent","recurrents","disponible","disponibles","ensemble","element","elements","plusieurs","chaque","selon","affirme","affirment","retrouve","retrouvent","parle","parlent","constate","constatent","rapport","rapports","mention","mentions"]);
+    const contentWords=words.filter(word=>!narrativeGlue.has(word));
+    if (!contentWords.length || contentWords.some(word=>!proof.includes(word))) return {text:null,rejection:"grounding"};
+    if (/\b(?:je|j’ai|j'ai|nous avons)\b/u.test(text) || /\b(?:doit prendre|il faut prescrire|je recommande)\b/u.test(text)) return {text:null,rejection:"prescription"};
   }
   const text = parsed.data.sentences.map(s => s.text.trim()).join(" ");
-  return text.length <= 1100 && text.split(/\s+/u).length <= 150 ? text : null;
+  return text.length <= 1100 && text.split(/\s+/u).length <= 150 ? {text} : {text:null,rejection:"length"};
+}
+export function validateClinicalNarrative(value: unknown, sources: readonly NarrativeSource[]): string | null {
+ return checkClinicalNarrative(value,sources).text;
 }
 
 /** The rejected prose is never displayed. Only whole, known source fields can be recovered. */
@@ -108,27 +124,38 @@ export async function synthesizeClinicalNarrative(sources: readonly NarrativeSou
   const projected: NarrativeSource[] = []; let characters = 0;
   for (const source of available) {
     // Never remove a qualifier at either end of a recorded field.
-    if (projected.length >= 20 || characters + source.text.length > 5500) continue;
+    if (projected.length >= 40 || characters + source.text.length > 5500) continue;
     projected.push(source); characters += source.text.length;
   }
   let complete = projected.length === sources.length;
   if (!projected.length) return { text: sources.length ? copy.unavailable : copy.empty, complete: sources.length === 0, generated: false, sourceIds: [] };
+  const maxOutputTokens=new Set(projected.flatMap(source=>source.consultationId?[source.consultationId]:[])).size>1?320:384;
   const boundedSignal = AbortSignal.any([signal, AbortSignal.timeout(170000)]);
   // Context rejection happens before generation. Fit whole fields within the same deadline.
   while (projected.length) try {
-    const raw = await inferLocalText([{ role: "system", content: copy.prompt }, { role: "user", content: JSON.stringify({ sources: projected.map(({originalText: _original, attribution: _attribution, ...source}) => source) }) }], { jsonSchema: z.toJSONSchema(answerSchema), maxOutputTokens: 384, timeoutMs: 170000, signal: boundedSignal });
+    const sourceAliases=new Map(projected.map((source,index)=>[`s${index+1}`,source.id]));
+    const visitAliases=new Map([...new Set(projected.flatMap(source=>source.consultationId?[source.consultationId]:[]))].map((id,index)=>[id,`v${index+1}`]));
+    const modelSources=projected.map(({originalText:_original,attribution:_attribution,consultationId,...source},index)=>({
+      ...source,id:`s${index+1}`,...(consultationId?{visit:visitAliases.get(consultationId)}:{}),
+    }));
+    const raw = await inferLocalText([{ role: "system", content: copy.prompt }, { role: "user", content: JSON.stringify({ sources: modelSources }) }], { jsonSchema: z.toJSONSchema(answerSchema), maxOutputTokens, timeoutMs: 170000, signal: boundedSignal });
     boundedSignal.throwIfAborted();
-    const value: unknown = JSON.parse(raw);
-    const text = validateClinicalNarrative(value, projected);
+    const modelValue: unknown = JSON.parse(raw),parsedModel=answerSchema.safeParse(modelValue);
+    const value: unknown=parsedModel.success?{...parsedModel.data,sentences:parsedModel.data.sentences.map(sentence=>({...sentence,evidence:sentence.evidence.map(citation=>({...citation,id:sourceAliases.get(citation.id)??citation.id}))}))}:modelValue;
+    const validation = checkClinicalNarrative(value, projected), text = validation.text;
     const parsed = answerSchema.safeParse(value);
     const cited = parsed.success ? [...new Set(parsed.data.sentences.flatMap(s => s.evidence.map(e => e.id)))] : [];
-    const covered = cited.length === projected.length && projected.every(s => cited.includes(s.id));
+    const visits=new Set(projected.flatMap(source=>source.consultationId?[source.consultationId]:[]));
+    const covered=visits.size>1
+      ?[...visits].every(consultationId=>projected.some(source=>source.consultationId===consultationId&&cited.includes(source.id)))
+      :cited.length===projected.length&&projected.every(source=>cited.includes(source.id));
     if (text && covered) return { text, complete, generated: true, sourceIds: cited, method: "reformulated" };
     const all = recoverClinicalSelection(value, projected, true);
     if (all) return { ...all, complete, generated: true, method: "source_selection" };
     if (text) return { text, complete: false, generated: true, sourceIds: cited, method: "reformulated" };
     const selected = recoverClinicalSelection(value, projected);
     if (selected) return { ...selected, complete: complete && selected.sourceIds.length === projected.length, generated: true, method: "source_selection" };
+    console.warn("[alexa-narrative] rejected", validation.rejection??(!parsed.success?"schema":"recovery"));
     break;
   } catch (error) {
     signal.throwIfAborted();
@@ -138,6 +165,42 @@ export async function synthesizeClinicalNarrative(sources: readonly NarrativeSou
   }
   // No fabricated prose if the small local model cannot support its own claims.
   return { text: copy.unavailable, complete: false, generated: false, sourceIds: [] };
+}
+
+/** Fast, evidence-only answer when separate visits explicitly label the same recurring theme. */
+export function extractRecurringClinicalTheme(context: ClinicalContext): ClinicalNarrative | null {
+  const visits = [...(context.currentConsultation ? [context.currentConsultation] : []), ...context.consultations]
+    .filter((visit, index, all) => all.findIndex(other => other.id === visit.id) === index);
+  const recurringLabel = /\b(?:th[èe]me|motif|[ée]l[ée]ment)\s+r[ée]currente?\s*[:–—-]?\s*[«“"]([^»”"]{3,100})[»”"]/giu;
+  const groups = new Map<string, { value: string; visits: Set<string>; sourceIds: Set<string> }>();
+  let complete = context.coverage.complete && !context.coverage.hasMore;
+  for (const visit of visits) {
+    const selected = consultationNarrativeSources(visit);
+    complete &&= selected.complete;
+    for (const source of selected.sources) {
+      const sourceText = source.originalText ?? source.text;
+      for (const match of sourceText.matchAll(recurringLabel)) {
+        const value = match[1]?.trim().replace(/\s+/gu, " ");
+        if (!value || unsafe.test(value)) continue;
+        const key = fold(value);
+        const group = groups.get(key) ?? { value, visits: new Set<string>(), sourceIds: new Set<string>() };
+        if (!group.visits.has(visit.id)) {
+          group.visits.add(visit.id);
+          group.sourceIds.add(source.id);
+        }
+        groups.set(key, group);
+      }
+    }
+  }
+  const ranked = [...groups.values()].sort((a, b) => b.visits.size - a.visits.size);
+  if (!ranked[0] || ranked[0].visits.size < 2 || ranked[0].visits.size === ranked[1]?.visits.size) return null;
+  return {
+    text: copy.recurringTheme(ranked[0].value),
+    complete,
+    generated: true,
+    sourceIds: [...ranked[0].sourceIds],
+    method: "structured",
+  };
 }
 
 /** Fresh session summaries first; original notes remain the fallback for old/unanalysed visits. */
@@ -150,7 +213,7 @@ export async function summarizeClinicalContext(context: ClinicalContext, signal:
   for (const c of wholeRecord?visits:visits.slice(0,context.coverage.requested)) {
     const saved = z.object({ resume: z.string().min(1).max(1500), notesDigest: z.string(), complete: z.boolean(), generated: z.literal(true) }).safeParse(c.analysis?.content);
     if (saved.success && saved.data.notesDigest === consultationNotesDigest(c)) {
-      sources.push({ id: c.id, text: saved.data.resume, at: c.startedAt, state: c.endedAt === null ? "open" : "closed" });
+      sources.push({ id: c.id, text: saved.data.resume, at: c.startedAt, state: c.endedAt === null ? "open" : "closed", consultationId:c.id });
       complete &&= saved.data.complete;
     }
     else { const raw = consultationNarrativeSources(c); sources.push(...raw.sources); complete &&= raw.complete; }
@@ -160,4 +223,19 @@ export async function summarizeClinicalContext(context: ClinicalContext, signal:
   for (const h of context.treatments.history) sources.push({ id: h.id, text: JSON.stringify({ changementEnregistre: h.occurredAt, avant: h.previous, apres: h.next, motif: h.reason }) });
   const result = await synthesizeClinicalNarrative(sources, signal);
   return { ...result, complete: complete && result.complete };
+}
+
+/** Summarizes only consultations already selected by an authorized, bounded read. */
+export async function summarizeClinicalConsultations(context:ClinicalContext,signal:AbortSignal):Promise<ClinicalNarrative>{
+ const visits=[...context.consultations].filter((c,index,all)=>all.findIndex(other=>other.id===c.id)===index).sort((a,b)=>Date.parse(b.startedAt)-Date.parse(a.startedAt)||b.id.localeCompare(a.id));
+ let complete=context.coverage.complete&&!context.coverage.hasMore;
+ if(!visits.length)return {text:complete?"Aucune consultation terminée n’est enregistrée pendant cette période.":copy.limited,complete,generated:false,sourceIds:[]};
+ const sources:NarrativeSource[]=[];
+ for(const visit of visits){
+  const saved=z.object({resume:z.string().min(1).max(1500),notesDigest:z.string(),complete:z.boolean(),generated:z.literal(true)}).safeParse(visit.analysis?.content);
+  if(saved.success&&saved.data.notesDigest===consultationNotesDigest(visit)){sources.push({id:visit.id,text:saved.data.resume,at:visit.startedAt,state:visit.endedAt===null?"open":"closed",consultationId:visit.id});complete&&=saved.data.complete;}
+  else{const raw=consultationNarrativeSources(visit);sources.push(...raw.sources);complete&&=raw.complete;}
+ }
+ const result=await synthesizeClinicalNarrative(sources,signal);
+ return {...result,complete:complete&&result.complete};
 }

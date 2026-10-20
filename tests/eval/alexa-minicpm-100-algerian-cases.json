@@ -475,11 +475,7 @@
       },
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
-          "get_patient_context",
-          "query_consultations"
+          "get_patient_context"
         ]
       ],
       "expectedManifest": {
@@ -493,6 +489,17 @@
         "status": "completed",
         "exactParts": 1,
         "noBusinessWrite": true,
+        "toolArguments": [
+          {
+            "name": "get_patient_context",
+            "args": {
+              "section": "summary",
+              "count": 6,
+              "from": "2026-04-01T00:00:00+01:00",
+              "to": "2026-10-01T00:00:00+01:00"
+            }
+          }
+        ],
         "responseConcepts": [
           [
             "sommeil fragmenté",
@@ -1568,11 +1575,7 @@
       },
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
-          "get_patient_context",
-          "query_consultations"
+          "get_patient_context"
         ]
       ],
       "expectedManifest": {
@@ -1586,6 +1589,17 @@
         "status": "completed",
         "exactParts": 1,
         "noBusinessWrite": true,
+        "toolArguments": [
+          {
+            "name": "get_patient_context",
+            "args": {
+              "section": "summary",
+              "count": 6,
+              "from": "2026-04-01T00:00:00+01:00",
+              "to": "2026-10-01T00:00:00+01:00"
+            }
+          }
+        ],
         "responseConcepts": [
           [
             "charge de travail",
@@ -2336,11 +2350,7 @@
       },
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
-          "get_patient_context",
-          "query_consultations"
+          "get_patient_context"
         ]
       ],
       "expectedManifest": {
@@ -2354,6 +2364,17 @@
         "status": "completed",
         "exactParts": 1,
         "noBusinessWrite": true,
+        "toolArguments": [
+          {
+            "name": "get_patient_context",
+            "args": {
+              "section": "summary",
+              "count": 6,
+              "from": "2026-04-01T00:00:00+01:00",
+              "to": "2026-10-01T00:00:00+01:00"
+            }
+          }
+        ],
         "responseConcepts": [
           [
             "communication familiale",
@@ -3029,11 +3050,7 @@
       },
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
-          "get_patient_context",
-          "query_consultations"
+          "get_patient_context"
         ]
       ],
       "expectedManifest": {
@@ -3047,6 +3064,17 @@
         "status": "completed",
         "exactParts": 1,
         "noBusinessWrite": true,
+        "toolArguments": [
+          {
+            "name": "get_patient_context",
+            "args": {
+              "section": "summary",
+              "count": 6,
+              "from": "2026-04-01T00:00:00+01:00",
+              "to": "2026-10-01T00:00:00+01:00"
+            }
+          }
+        ],
         "responseConcepts": [
           [
             "organisation quotidienne",
@@ -3721,11 +3749,7 @@
       },
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
-          "get_patient_context",
-          "query_consultations"
+          "get_patient_context"
         ]
       ],
       "expectedManifest": {
@@ -3739,6 +3763,17 @@
         "status": "completed",
         "exactParts": 1,
         "noBusinessWrite": true,
+        "toolArguments": [
+          {
+            "name": "get_patient_context",
+            "args": {
+              "section": "summary",
+              "count": 6,
+              "from": "2026-04-01T00:00:00+01:00",
+              "to": "2026-10-01T00:00:00+01:00"
+            }
+          }
+        ],
         "responseConcepts": [
           [
             "concentration",
@@ -4301,11 +4336,7 @@
       },
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
-          "get_patient_context",
-          "query_consultations"
+          "get_patient_context"
         ]
       ],
       "expectedManifest": {
@@ -4319,6 +4350,17 @@
         "status": "completed",
         "exactParts": 1,
         "noBusinessWrite": true,
+        "toolArguments": [
+          {
+            "name": "get_patient_context",
+            "args": {
+              "section": "summary",
+              "count": 6,
+              "from": "2026-04-01T00:00:00+01:00",
+              "to": "2026-10-01T00:00:00+01:00"
+            }
+          }
+        ],
         "responseConcepts": [
           [
             "expression des émotions",
@@ -4878,11 +4920,7 @@
       },
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
-          "get_patient_context",
-          "query_consultations"
+          "get_patient_context"
         ]
       ],
       "expectedManifest": {
@@ -4896,6 +4934,17 @@
         "status": "completed",
         "exactParts": 1,
         "noBusinessWrite": true,
+        "toolArguments": [
+          {
+            "name": "get_patient_context",
+            "args": {
+              "section": "summary",
+              "count": 6,
+              "from": "2026-04-01T00:00:00+01:00",
+              "to": "2026-10-01T00:00:00+01:00"
+            }
+          }
+        ],
         "responseConcepts": [
           [
             "soutien social",
@@ -5454,11 +5503,7 @@
       },
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
-          "get_patient_context",
-          "query_consultations"
+          "get_patient_context"
         ]
       ],
       "expectedManifest": {
@@ -5472,6 +5517,17 @@
         "status": "completed",
         "exactParts": 1,
         "noBusinessWrite": true,
+        "toolArguments": [
+          {
+            "name": "get_patient_context",
+            "args": {
+              "section": "summary",
+              "count": 6,
+              "from": "2026-04-01T00:00:00+01:00",
+              "to": "2026-10-01T00:00:00+01:00"
+            }
+          }
+        ],
         "responseConcepts": [
           [
             "activités de détente",
@@ -5973,11 +6029,7 @@
       },
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
-          "get_patient_context",
-          "query_consultations"
+          "get_patient_context"
         ]
       ],
       "expectedManifest": {
@@ -5991,6 +6043,17 @@
         "status": "completed",
         "exactParts": 1,
         "noBusinessWrite": true,
+        "toolArguments": [
+          {
+            "name": "get_patient_context",
+            "args": {
+              "section": "summary",
+              "count": 6,
+              "from": "2026-04-01T00:00:00+01:00",
+              "to": "2026-10-01T00:00:00+01:00"
+            }
+          }
+        ],
         "responseConcepts": [
           [
             "adaptation à un changement",
@@ -6492,11 +6555,7 @@
       },
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
-          "get_patient_context",
-          "query_consultations"
+          "get_patient_context"
         ]
       ],
       "expectedManifest": {
@@ -6510,6 +6569,17 @@
         "status": "completed",
         "exactParts": 1,
         "noBusinessWrite": true,
+        "toolArguments": [
+          {
+            "name": "get_patient_context",
+            "args": {
+              "section": "summary",
+              "count": 6,
+              "from": "2026-04-01T00:00:00+01:00",
+              "to": "2026-10-01T00:00:00+01:00"
+            }
+          }
+        ],
         "responseConcepts": [
           [
             "rythme des journées",

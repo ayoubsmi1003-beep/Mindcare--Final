@@ -2,7 +2,7 @@ import { frenchRequestAdmission } from "@/shared/alexa/request-contract";
 import { describe, expect, it, vi } from "vitest";
 vi.mock("@/server/alexa/local-model", () => ({ inferLocalText: vi.fn() }));
 import { inferLocalText } from "@/server/alexa/local-model";
-import { consultationNotesDigest, consultationNarrativeSources, relativeClinicalDate, summarizeClinicalContext, synthesizeClinicalNarrative, validateClinicalNarrative } from "@/server/alexa/clinical-narrative";
+import { consultationNotesDigest, consultationNarrativeSources, relativeClinicalDate, summarizeClinicalConsultations, summarizeClinicalContext, synthesizeClinicalNarrative, validateClinicalNarrative } from "@/server/alexa/clinical-narrative";
 import type { ClinicalConsultation, ClinicalContext } from "@/shared/alexa/clinical";
 const c: ClinicalConsultation = { id: "a4000000-0000-4000-8000-000000000001", startedAt: "2026-10-01T08:00:00Z", endedAt: "2026-10-01T09:00:00Z", rawNotes: "Conflits familiaux avec les parents.", notes: [{ id: "a5000000-0000-4000-8000-000000000001", version: "1", status: "signed", subjective: "Le patient rapporte une humeur triste.", objective: "Le contact est préservé.", assessment: "Les difficultés familiales persistent.", plan: "La dose de TEST est passée de 50 mg à 100 mg.", amendments: [] }] };
 const proof = { id: "s1", text: "Le patient rapporte une humeur triste et des conflits familiaux avec ses parents." };
@@ -15,10 +15,24 @@ describe("French concise grounded clinical paragraphs", () => {
   });
   it.each([["2026-10-17T23:30:00Z", "2026-10-18T01:00:00Z", "aujourd’hui"], ["2026-10-17T12:00:00Z", "2026-10-18T12:00:00Z", "hier"], ["2026-09-20T12:00:00Z", "2026-10-18T12:00:00Z", "il y a 28 jours"]])("uses cabinet-local relative dates %s", (date, now, expected) => { expect(relativeClinicalDate(date, now)).toBe(expected); });
   it("accepts a short paragraph with exact support and no field recitation", () => { expect(validateClinicalNarrative(response("Le patient rapporte une humeur triste et des conflits familiaux avec ses parents."), [proof])).toBe(proof.text); });
+  it("accepts exact cited words when only quotation punctuation differs",()=>{
+    const source={id:"s1",text:"Le patient rapporte « une humeur triste »."};
+    expect(validateClinicalNarrative(response("Le patient rapporte une humeur triste.","Le patient rapporte \"une humeur triste\""),[source])).toBe("Le patient rapporte une humeur triste.");
+  });
   it("keeps the inference output budget aligned with its concise paragraph prompt", async () => {
     vi.mocked(inferLocalText).mockResolvedValue(JSON.stringify(response(proof.text)));
     await synthesizeClinicalNarrative([proof], new AbortController().signal);
     expect(inferLocalText).toHaveBeenCalledWith(expect.any(Array), expect.objectContaining({ maxOutputTokens: 384 }));
+  });
+  it("uses short model citation ids and maps a validated citation back to its exact clinical source",async()=>{
+    const source={id:"a4000000-0000-4000-8000-000000000001:0",text:proof.text,consultationId:"a4000000-0000-4000-8000-000000000001"};
+    vi.mocked(inferLocalText).mockImplementation(async messages=>{
+      const body=JSON.parse(String(messages[1]!.content)) as {sources:{id:string;visit?:string}[]};
+      expect(body.sources).toEqual([{id:"s1",visit:"v1",text:proof.text}]);
+      return JSON.stringify(response(proof.text,proof.text,"s1"));
+    });
+    const result=await synthesizeClinicalNarrative([source],new AbortController().signal);
+    expect(result).toMatchObject({generated:true,complete:true,text:proof.text,sourceIds:[source.id]});
   });
   it.each([
     response("Le patient reçoit maintenant 200 mg de TEST."),
@@ -33,18 +47,49 @@ describe("French concise grounded clinical paragraphs", () => {
   it("reports a short honest failure without clipped clinical quotations", async () => { vi.mocked(inferLocalText).mockRejectedValue(Error("LocalModelUnavailable")); const r = await synthesizeClinicalNarrative([proof], new AbortController().signal); expect(r.generated).toBe(false); expect(r.complete).toBe(false); expect(r.text).not.toContain("«"); expect(r.text.length).toBeLessThan(150); });
   it("uses a fresh session paragraph instead of dumping SOAP, and rejects stale session summaries", async () => {
     const resume = proof.text; const context: ClinicalContext = { patientId: "a3000000-0000-4000-8000-000000000001", consultations: [{ ...c, analysis: { id: "b3000000-0000-4000-8000-000000000001", version: 1, content: { resume, notesDigest: consultationNotesDigest(c), complete: true, generated: true } } }], diagnoses: [], scales: [], treatments: { current: [], history: [], historyComplete: true }, sourceRevision: "a".repeat(64), coverage: { requested: 1, returned: 1, complete: true, hasMore: false } };
-    vi.mocked(inferLocalText).mockImplementation(async messages => { const body = JSON.parse(messages[1]!.content as string); expect(body.sources).toEqual([{ id: c.id, text: resume, at: c.startedAt, state: 'closed' }]); return JSON.stringify(response(resume, resume, c.id)); });
+    vi.mocked(inferLocalText).mockImplementation(async messages => { const body = JSON.parse(messages[1]!.content as string); expect(body.sources).toEqual([{ id: 's1', visit:'v1', text: resume, at: c.startedAt, state: 'closed' }]); return JSON.stringify(response(resume, resume, 's1')); });
     const r = await summarizeClinicalContext(context, new AbortController().signal); expect(r.text).toBe(resume); expect(r.complete).toBe(true);
     context.consultations[0]!.notes[0]!.plan = "Plan corrigé.";
     vi.mocked(inferLocalText).mockImplementation(async messages => { expect(String(messages[1]!.content)).toContain("Plan corrigé"); return "{}"; });
     expect((await summarizeClinicalContext(context, new AbortController().signal)).generated).toBe(false);
   });
+  it("keeps all five note areas from six visits available while citing each visit in one case paragraph",async()=>{
+    const visits=Array.from({length:6},(_,i)=>({...c,id:`b6100000-0000-4000-8000-${String(i+1).padStart(12,'0')}`,startedAt:`2026-${String(i+4).padStart(2,'0')}-20T08:00:00Z`,notes:c.notes.map((note,j)=>({...note,id:`b6200000-0000-4000-8000-${String(i*5+j+1).padStart(12,'0')}`}))}));
+    const context:ClinicalContext={patientId:'a3000000-0000-4000-8000-000000000001',consultations:visits,diagnoses:[],scales:[],treatments:{current:[],history:[],historyComplete:true},sourceRevision:'a'.repeat(64),coverage:{requested:6,returned:6,complete:true,hasMore:false}};
+    vi.mocked(inferLocalText).mockImplementation(async (messages,options)=>{
+      expect(options?.maxOutputTokens).toBe(320);
+      const body=JSON.parse(String(messages[1]!.content)) as {sources:{id:string;text:string;visit?:string}[]};
+      expect(body.sources).toHaveLength(30);
+      const consultationIds=[...new Set(body.sources.map(source=>source.visit))];
+      const evidence=consultationIds.map(id=>{const source=body.sources.find(candidate=>candidate.visit===id&&candidate.text.includes('Le patient rapporte une humeur triste.'))!;return {id:source.id,quote:source.text};});
+      expect(evidence).toHaveLength(6);
+      return JSON.stringify({sentences:[{text:'Le patient rapporte une humeur triste.',evidence}]});
+    });
+    const result=await summarizeClinicalContext(context,new AbortController().signal);
+    expect(result).toMatchObject({generated:true,complete:true,text:'Le patient rapporte une humeur triste.'});
+    expect(result.sourceIds).toHaveLength(6);
+  });
+  it("summarizes only the consultations in a bounded window, excluding the current session and all-time diagnoses or treatments",async()=>{
+    const visits=Array.from({length:6},(_,i)=>({...c,id:`b6300000-0000-4000-8000-${String(i+1).padStart(12,'0')}`,startedAt:`2026-${String(i+4).padStart(2,'0')}-20T08:00:00Z`,rawNotes:null,notes:c.notes.map((note,j)=>({...note,id:`b6400000-0000-4000-8000-${String(i*5+j+1).padStart(12,'0')}`}))}));
+    const context:ClinicalContext={patientId:'a3000000-0000-4000-8000-000000000001',currentConsultation:{...c,rawNotes:'CURRENT_ONLY_SECRET'},consultations:visits,diagnoses:[{id:'b6500000-0000-4000-8000-000000000001',label:'DIAGNOSIS_OUTSIDE_PERIOD',code:null,primary:true,onsetDate:null,resolvedAt:null}],scales:[],treatments:{current:[{id:'b6600000-0000-4000-8000-000000000001',medication:'TREATMENT_OUTSIDE_PERIOD',status:'active',dose:'99',doseUnit:'mg',frequency:null,timing:[],instructions:null,startDate:'2026-10-01',endDate:null,version:1}],history:[],historyComplete:true},sourceRevision:'a'.repeat(64),coverage:{requested:100,returned:6,complete:true,hasMore:false}};
+    let captured:{sources:{id:string;text:string;visit?:string}[]}|undefined;
+    vi.mocked(inferLocalText).mockImplementation(async messages=>{
+      captured=JSON.parse(String(messages[1]!.content)) as {sources:{id:string;text:string;visit?:string}[]};
+      const evidence=[...new Set(captured.sources.map(source=>source.visit))].map(visit=>{const source=captured!.sources.find(item=>item.visit===visit&&item.text.includes('Le patient rapporte une humeur triste.'))!;return {id:source.id,quote:source.text};});
+      return JSON.stringify({sentences:[{text:'Le patient rapporte une humeur triste.',evidence}]});
+    });
+    const result=await summarizeClinicalConsultations(context,new AbortController().signal);
+    expect(captured?.sources).toHaveLength(24);expect(JSON.stringify(captured)).not.toContain('CURRENT_ONLY_SECRET');expect(JSON.stringify(captured)).not.toContain('DIAGNOSIS_OUTSIDE_PERIOD');expect(JSON.stringify(captured)).not.toContain('TREATMENT_OUTSIDE_PERIOD');
+    expect(result).toMatchObject({generated:true,complete:true,text:'Le patient rapporte une humeur triste.'});expect(result.sourceIds).toHaveLength(6);
+  });
 });
 
 it.each(["Résume les notes des trois dernières consultations de Ayoub Salmi.", "Fais une synthèse du cas du patient sélectionné.", "Résume en bref ses consultations et ses traitements."])("routes a summary to synthesis rather than a note dump: %s", text => { const a=frenchRequestAdmission(text,false);expect(a.tools).toEqual(["get_patient_context"]);expect(a.patientSection).toBe("summary"); });
+it("routes a recurring-theme question through whole-case synthesis instead of returning one raw note page",()=>{const a=frenchRequestAdmission("Quel est le thème récurrent des notes de Amel Bensaid ?",false);expect(a.patientSection).toBe("summary");});
 it("retains exact quotation requests",()=>{expect(frenchRequestAdmission("Recopie mot pour mot les notes de Ayoub Salmi.",false).patientSection).toBe("notes");});
 
 it('blocks moving a negative between independent clinical claims',()=>{const source={id:'s1',text:'Pas d’idées suicidaires. Insomnie persistante.'};expect(validateClinicalNarrative(response('Idées suicidaires, sans insomnie persistante.',source.text),[source])).toBeNull();});
+it('validates a quoted positive fact without requiring unrelated negative text from the same visit',()=>{const quote='Les notes mentionnent une concentration suivie.';const source={id:'s1',text:quote+' Aucun médicament ni changement.',originalText:quote+' Aucun médicament ni changement.'};expect(validateClinicalNarrative(response(quote,quote),[source])).toBe(quote);});
 it.each(['Résume le DSM-5.','Résume la photosynthèse.'])("does not admit clinical reads for a public/book summary: %s",text=>{expect(frenchRequestAdmission(text,false).tools??[]).not.toContain('get_patient_context');});
 it('keeps a requested note-area filter on summary wording',()=>{const a=frenchRequestAdmission('Résume les notes subjectives de Ayoub Salmi.',false);expect(a.patientSection).toBe('notes');expect(a.noteArea).toBe('subjective');});
 
@@ -133,8 +178,8 @@ it('can reuse a fresh verified partial session paragraph while keeping the whole
  const resume='Le patient rapporte une humeur triste.';
  const context:ClinicalContext={patientId:'a3000000-0000-4000-8000-000000000001',consultations:[{...c,analysis:{id:'b3000000-0000-4000-8000-000000000001',version:1,content:{resume,notesDigest:consultationNotesDigest(c),complete:false,generated:true}}}],diagnoses:[],scales:[],treatments:{current:[],history:[],historyComplete:true},sourceRevision:'a'.repeat(64),coverage:{requested:1,returned:1,complete:true,hasMore:false}};
  vi.mocked(inferLocalText).mockImplementation(async messages=>{
-  const body=JSON.parse(String(messages[1]!.content));expect(body.sources).toEqual([{id:c.id,text:resume,at:c.startedAt,state:'closed'}]);
-  return JSON.stringify(response(resume,resume,c.id));
+  const body=JSON.parse(String(messages[1]!.content));expect(body.sources).toEqual([{id:'s1',visit:'v1',text:resume,at:c.startedAt,state:'closed'}]);
+  return JSON.stringify(response(resume,resume,'s1'));
  });
  const result=await summarizeClinicalContext(context,new AbortController().signal);
  expect(result).toMatchObject({generated:true,complete:false,text:resume,sourceIds:[c.id]});

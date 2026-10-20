@@ -12,6 +12,16 @@ it('routes a named national-identity lookup through the patient profile gate',()
  expect(admission.tools).toEqual(['get_patient_context']);
  expect(admission.patientSection).toBe('profile');
 });
+it('binds an explicit French month range to a named clinical summary',()=>{
+ const admission=frenchRequestAdmission('Résume en un seul paragraphe l’évolution racontée dans les six consultations d’avril à septembre 2026 de Amel Bensaid.',false);
+ expect(admission).toMatchObject({tools:['get_patient_context'],patientSection:'summary',consultationCount:6,from:'2026-04-01T00:00:00+01:00',to:'2026-10-01T00:00:00+01:00'});
+});
+it('does not infer a year or accept reversed months in a clinical summary range',()=>{
+ for(const text of ['Résume le cas de Amel Bensaid d’avril à septembre.','Résume le cas de Amel Bensaid de septembre à avril 2026.']){
+  const admission=frenchRequestAdmission(text,false);
+  expect(admission.from,text).toBeUndefined();expect(admission.to,text).toBeUndefined();
+ }
+});
 it('compiles a bounded list of French patient metrics before native dispatch',()=>{
  const text='Pour le cabinet, compte les dossiers actifs, ceux sans identité nationale, les mineurs et les patients sans consultation achevée au cours des six derniers mois.';
  const contract=frenchPatientCountContract(text);

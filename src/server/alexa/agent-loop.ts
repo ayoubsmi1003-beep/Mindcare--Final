@@ -88,7 +88,7 @@ function directSinglePatientReadCall(text:string,clientTurnId:string,selectedPat
  if(/\b(?:et|puis|ainsi que)\b/u.test(plain))return null;
  const tool=requestedReadTool(text,text),scope=frenchRequestAdmission(text,false);
  const namedProfile=scope.profileOnly&&scope.patientSection==='profile'&&!selectedPatientId&&parsePatientMention(text).status==='named';
- const wholeSummary=scope.patientSection==='summary'&&scope.unboundedPeriod===true&&(!!selectedPatientId||parsePatientMention(text).status==='named');
+ const wholeSummary=scope.patientSection==='summary'&&(scope.unboundedPeriod===true||!!scope.from&&!!scope.to)&&(!!selectedPatientId||parsePatientMention(text).status==='named');
  if(tool!=='get_patient_context'||scope.tools?.length!==1||scope.tools[0]!==tool||(!namedProfile&&!wholeSummary))return null;
  const id='requested_1',args={partIds:[id],...frenchReadArgumentBindings(scope,tool)};
  if(!agentSchemas[tool].safeParse(args).success)return null;

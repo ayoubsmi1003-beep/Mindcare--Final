@@ -113,10 +113,11 @@ it('dispatches one unbounded patient-case summary through its exact authorized r
  expect(inferenceCalls).toBe(0);expect(callsSeen).toEqual([{name:'get_patient_context',args:{partIds:['requested_1'],section:'summary'}}]);
  expect(result.status).toBe('completed');expect(result.parts).toMatchObject([{id:'requested_1',status:'answered',tools:['get_patient_context']}]);
 });
-it('does not drop an explicit date range from a patient-case summary shortcut',async()=>{
- const text='Résume le cas de Amel Bensaid d’avril à septembre 2026.';let inferenceCalls=0;
- const result=await runAgentLoop({...input,text,conversationId:'dated-summary-not-direct'},{actor:'dated-summary-not-direct',infer:async()=>{inferenceCalls++;return {kind:'answer',text:'',tokensIn:0,tokensOut:0};},execute:async call=>({callId:call.id,status:'ok',complete:true,text:'Réponse de test',evidence:[],conditionKeys:[]})},new AbortController().signal);
- expect(inferenceCalls).toBeGreaterThan(0);expect(result.status).not.toBe('completed');
+it('routes an explicit patient-case date range directly without dropping either boundary',async()=>{
+ const text='Résume en un seul paragraphe l’évolution racontée dans les six consultations d’avril à septembre 2026 de Amel Bensaid.';let inferenceCalls=0;const callsSeen:Record<string,unknown>[]=[];
+ const result=await runAgentLoop({...input,text,conversationId:'dated-summary-direct'},{actor:'dated-summary-direct',infer:async()=>{inferenceCalls++;throw new Error('Unexpected model call');},observeCall:call=>callsSeen.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,text:'Résumé des consultations de la période.',patientId:id,evidence:[],conditionKeys:[]})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);expect(callsSeen).toEqual([{name:'get_patient_context',args:{partIds:['requested_1'],section:'summary',count:6,from:'2026-04-01T00:00:00+01:00',to:'2026-10-01T00:00:00+01:00'}}]);
+ expect(result).toMatchObject({status:'completed',parts:[{id:'requested_1',status:'answered',tools:['get_patient_context']}]});
 });
 it('keeps an explicit consultation period out of the all-time direct-read shortcut',async()=>{
  const text='Pour Amel Bensaid, quel est le thème récurrent des notes et combien de consultations terminées sont enregistrées pendant les six derniers mois ?';

@@ -27,6 +27,33 @@ function port(responses: Record<string, unknown> | ((name: string, args: RpcArgs
 }
 
 describe("ClinicalContextEngine scoped audited reads", () => {
+  it("reads through the lower boundary of a closed month range and excludes outside consultations", async () => {
+    const visit=(index:number,startedAt:string)=>({...consultation(index),startedAt,endedAt:new Date(Date.parse(startedAt)+3600000).toISOString()});
+    const pages=[
+      [visit(40,"2026-10-01T00:00:00+01:00"),...Array.from({length:19},(_,i)=>visit(39-i,`2026-09-${String(19-i).padStart(2,'0')}T12:00:00+01:00`))],
+      [visit(20,"2026-04-01T00:00:00+01:00"),...Array.from({length:19},(_,i)=>visit(19-i,`2026-03-${String(31-i).padStart(2,'0')}T23:00:00+01:00`))],
+    ];
+    const f=port((name,args)=>{
+      if(name==="get_patient")return [{id:patientId}];
+      const page=args.p_before_id?1:0,rows=pages[page]!;
+      return [payload({consultations:rows,coverage:{requested:args.p_limit,returned:rows.length,complete:true,hasMore:true,next:{startedAt:rows.at(-1)!.startedAt,id:rows.at(-1)!.id}}})];
+    });
+    const context=await buildClinicalContext(f.db,{patientId},{count:100,from:"2026-04-01T00:00:00+01:00",to:"2026-10-01T00:00:00+01:00"});
+    expect(context.consultations.map(v=>v.id)).toEqual([...pages[0]!.slice(1),pages[1]![0]!].map(v=>v.id));
+    expect(context.coverage).toMatchObject({complete:true,hasMore:false,returned:20});
+    expect(f.calls.filter(call=>call.name==="get_alexa_clinical_context")).toHaveLength(2);
+  });
+  it("marks a bounded window incomplete when the 100-visit cap is reached before its lower boundary",async()=>{
+    let page=0;
+    const f=port((name,args)=>{
+      if(name==="get_patient")return [{id:patientId}];
+      const pageIndex=page++,rows=Array.from({length:20},(_,i)=>{const index=100-pageIndex*20-i,startedAt=new Date(Date.parse('2026-09-30T20:00:00Z')+index*1000).toISOString();return {...consultation(index),startedAt,endedAt:new Date(Date.parse(startedAt)+3600000).toISOString()};});
+      return [payload({consultations:rows,coverage:{requested:20,returned:20,complete:true,hasMore:true,next:{startedAt:rows.at(-1)!.startedAt,id:rows.at(-1)!.id}}})];
+    });
+    const context=await buildClinicalContext(f.db,{patientId},{count:100,from:'2026-04-01T00:00:00+01:00',to:'2026-10-01T00:00:00+01:00'});
+    expect(context.consultations).toHaveLength(100);expect(context.coverage).toMatchObject({complete:false,hasMore:true,returned:100});
+    expect(f.calls.filter(call=>call.name==='get_alexa_clinical_context')).toHaveLength(5);
+  });
   it("authorizes through get_patient before a direct chronological clinical page", async () => {
     const f = port({ get_patient: [{ id: patientId }], get_alexa_clinical_context: [payload()] });
     const context = await buildClinicalContext(f.db, { patientId }, { count: 1 });
@@ -95,6 +122,8 @@ describe("ClinicalContextEngine scoped audited reads", () => {
     const clean = port({});
     for (const count of [0, 101, 1.5]) await expect(buildClinicalContext(clean.db, { patientId }, { count })).rejects.toMatchObject({ code: "invalid-request" });
     await expect(buildClinicalContext(clean.db, { patientId }, { count: 1, before: { id: otherId, startedAt: "not a date" } })).rejects.toMatchObject({ code: "invalid-request" });
+    await expect(buildClinicalContext(clean.db,{patientId},{count:5,from:'2026-10-01T00:00:00+01:00'})).rejects.toMatchObject({code:'invalid-request'});
+    await expect(buildClinicalContext(clean.db,{patientId},{count:5,from:'2026-10-02T00:00:00+01:00',to:'2026-10-01T00:00:00+01:00'})).rejects.toMatchObject({code:'invalid-request'});
     expect(clean.calls).toEqual([]);
   });
 });
