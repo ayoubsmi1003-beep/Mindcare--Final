@@ -116,9 +116,6 @@
       "input": "Pourquoi la Lune tourne autour de la Terre ?",
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
           "answer_general"
         ]
       ],
@@ -145,7 +142,22 @@
             "mouvement"
           ]
         ],
-        "exactParts": 1
+        "exactParts": 1,
+        "responseLanguage": "fr",
+        "responseMustNotContain": [
+          "relation de masse"
+        ],
+        "sourceRefs": [
+          {
+            "type": "query",
+            "provenance": {
+              "gate": "local_public_fact",
+              "provider": "local",
+              "sourceId": "moon-orbit",
+              "sourceUrl": "https://science.nasa.gov/learn/basics-of-space-flight/chapter3-4/"
+            }
+          }
+        ]
       },
       "assertions": {
         "allPartsAccounted": true,
@@ -382,9 +394,6 @@
         "page": "/jarvis"
       },
       "permittedToolSequence": [
-        [
-          "declare_request"
-        ],
         [
           "get_patient_context"
         ]
@@ -715,9 +724,6 @@
       },
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
           "query_patients"
         ]
       ],
@@ -860,7 +866,8 @@
       ],
       "expectedManifest": {
         "requiredParts": [
-          "consultations"
+          "count",
+          "list"
         ],
         "filters": [
           {
@@ -886,7 +893,29 @@
         ],
         "unsupportedParts": [],
         "partConditions": {
-          "consultations": [
+          "count": [
+            {
+              "field": "age",
+              "op": "gte",
+              "value": 18
+            },
+            {
+              "field": "completed_consultations",
+              "op": "gte",
+              "value": 3
+            },
+            {
+              "field": "outstanding_balance",
+              "op": "gt",
+              "value": 0
+            },
+            {
+              "field": "no_completed_days",
+              "op": "eq",
+              "value": 90
+            }
+          ],
+          "list": [
             {
               "field": "age",
               "op": "gte",
@@ -912,12 +941,11 @@
       },
       "expected": {
         "status": "completed",
-        "exactParts": 1,
+        "exactParts": 2,
         "noBusinessWrite": true,
         "count": 0,
         "patientModes": [
-          "list",
-          "count"
+          "list"
         ],
         "sort": "outstanding_desc",
         "noPatientRecords": false,
@@ -1015,16 +1043,16 @@
             ],
             "pluck": "id",
             "equals": [
-              "b5400000-0000-4000-8000-000000000010",
-              "b5400000-0000-4000-8000-000000000009",
-              "b5400000-0000-4000-8000-000000000008",
-              "b5400000-0000-4000-8000-000000000007",
-              "b5400000-0000-4000-8000-000000000006",
-              "b5400000-0000-4000-8000-000000000005",
-              "b5400000-0000-4000-8000-000000000004",
-              "b5400000-0000-4000-8000-000000000003",
+              "b5400000-0000-4000-8000-000000000001",
               "b5400000-0000-4000-8000-000000000002",
-              "b5400000-0000-4000-8000-000000000001"
+              "b5400000-0000-4000-8000-000000000003",
+              "b5400000-0000-4000-8000-000000000004",
+              "b5400000-0000-4000-8000-000000000005",
+              "b5400000-0000-4000-8000-000000000006",
+              "b5400000-0000-4000-8000-000000000007",
+              "b5400000-0000-4000-8000-000000000008",
+              "b5400000-0000-4000-8000-000000000009",
+              "b5400000-0000-4000-8000-000000000010"
             ]
           }
         ]
@@ -1238,9 +1266,6 @@
       "input": "Comment se forme un arc-en-ciel ?",
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
           "answer_general"
         ]
       ],
@@ -1255,7 +1280,39 @@
         "status": "completed",
         "generalAnswer": true,
         "noBusinessWrite": true,
-        "exactParts": 1
+        "exactParts": 1,
+        "responseLanguage": "fr",
+        "responseConcepts": [
+          [
+            "gouttelettes d'eau",
+            "gouttes d'eau",
+            "gouttelettes d’eau"
+          ],
+          [
+            "réfraction",
+            "réfract"
+          ],
+          [
+            "dispersion",
+            "sépare les couleurs"
+          ]
+        ],
+        "responseMustNotContain": [
+          "éclair",
+          "charge"
+        ],
+        "sourceRefs": [
+          {
+            "type": "query",
+            "provenance": {
+              "gate": "local_public_fact",
+              "provider": "local",
+              "sourceId": "rainbow",
+              "sourceUrl": "https://science.nasa.gov/image-article/apod-2007-september-12-six-rainbows-across-norway/",
+              "secondarySourceUrl": "https://nasaeclips.arc.nasa.gov/shared_assets/resources/nasa-launchpad-analyzing-spectra/479659main_LP8-AnalyzingSpectra_508.pdf"
+            }
+          }
+        ]
       },
       "assertions": {
         "allPartsAccounted": true,
@@ -1482,9 +1539,6 @@
         "page": "/jarvis"
       },
       "permittedToolSequence": [
-        [
-          "declare_request"
-        ],
         [
           "get_patient_context"
         ]
@@ -1826,9 +1880,6 @@
       },
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
           "query_patients"
         ]
       ],
@@ -2013,9 +2064,6 @@
       "input": "Pourquoi le ciel paraît bleu ?",
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
           "answer_general"
         ]
       ],
@@ -2030,7 +2078,33 @@
         "status": "completed",
         "generalAnswer": true,
         "noBusinessWrite": true,
-        "exactParts": 1
+        "exactParts": 1,
+        "responseLanguage": "fr",
+        "responseConcepts": [
+          [
+            "diffusion de Rayleigh",
+            "diffusion Rayleigh"
+          ],
+          [
+            "longueur d'onde courte",
+            "longueurs d'onde courtes",
+            "bleu a une longueur d'onde plus courte"
+          ]
+        ],
+        "responseMustNotContain": [
+          "rayonnement UV est absorbé"
+        ],
+        "sourceRefs": [
+          {
+            "type": "query",
+            "provenance": {
+              "gate": "local_public_fact",
+              "provider": "local",
+              "sourceId": "blue-sky",
+              "sourceUrl": "https://astrobiology.nasa.gov/nai/articles/2016/5/6/could-earths-light-blue-color-be-a-signature-of-life/index.html"
+            }
+          }
+        ]
       },
       "assertions": {
         "allPartsAccounted": true,
@@ -2257,9 +2331,6 @@
         "page": "/jarvis"
       },
       "permittedToolSequence": [
-        [
-          "declare_request"
-        ],
         [
           "get_patient_context"
         ]
@@ -2535,9 +2606,6 @@
       },
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
           "query_patients"
         ]
       ],
@@ -2725,9 +2793,6 @@
       "input": "Comment fonctionne un ordinateur ?",
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
           "answer_general"
         ]
       ],
@@ -2742,7 +2807,34 @@
         "status": "completed",
         "generalAnswer": true,
         "noBusinessWrite": true,
-        "exactParts": 1
+        "exactParts": 1,
+        "responseLanguage": "fr",
+        "responseConcepts": [
+          [
+            "processeur",
+            "unité centrale",
+            "CPU"
+          ],
+          [
+            "programme",
+            "instructions"
+          ],
+          [
+            "données",
+            "calcul"
+          ]
+        ],
+        "sourceRefs": [
+          {
+            "type": "query",
+            "provenance": {
+              "gate": "local_public_fact",
+              "provider": "local",
+              "sourceId": "computer",
+              "sourceUrl": "https://www.csfieldguide.org.nz/en/chapters/programming-languages/machine-code/"
+            }
+          }
+        ]
       },
       "assertions": {
         "allPartsAccounted": true,
@@ -2957,9 +3049,6 @@
         "page": "/jarvis"
       },
       "permittedToolSequence": [
-        [
-          "declare_request"
-        ],
         [
           "get_patient_context"
         ]
@@ -3235,9 +3324,6 @@
       },
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
           "query_patients"
         ]
       ],
@@ -3424,9 +3510,6 @@
       "input": "Qu’est-ce qu’un algorithme ?",
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
           "answer_general"
         ]
       ],
@@ -3441,7 +3524,26 @@
         "status": "completed",
         "generalAnswer": true,
         "noBusinessWrite": true,
-        "exactParts": 1
+        "exactParts": 1,
+        "responseLanguage": "fr",
+        "responseConcepts": [
+          [
+            "suite d’étapes",
+            "suite d’étapes",
+            "étapes"
+          ]
+        ],
+        "sourceRefs": [
+          {
+            "type": "query",
+            "provenance": {
+              "gate": "local_public_fact",
+              "provider": "local",
+              "sourceId": "algorithm",
+              "sourceUrl": "https://csrc.nist.gov/glossary/term/Algorithm"
+            }
+          }
+        ]
       },
       "assertions": {
         "allPartsAccounted": true,
@@ -3657,9 +3759,6 @@
       },
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
           "get_patient_context"
         ]
       ],
@@ -3816,9 +3915,6 @@
         "page": "/jarvis"
       },
       "permittedToolSequence": [
-        [
-          "declare_request"
-        ],
         [
           "query_patients"
         ]
@@ -4011,9 +4107,6 @@
       "input": "Pourquoi les saisons changent-elles ?",
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
           "answer_general"
         ]
       ],
@@ -4028,7 +4121,39 @@
         "status": "completed",
         "generalAnswer": true,
         "noBusinessWrite": true,
-        "exactParts": 1
+        "exactParts": 1,
+        "responseLanguage": "fr",
+        "responseConcepts": [
+          [
+            "inclinaison de l'axe",
+            "axe incliné",
+            "inclinaison"
+          ],
+          [
+            "révolution autour du soleil",
+            "orbite autour du soleil",
+            "tourne autour du soleil"
+          ],
+          [
+            "ensoleillement",
+            "éclairement",
+            "lumière reçue"
+          ]
+        ],
+        "responseMustNotContain": [
+          "rotation de la terre"
+        ],
+        "sourceRefs": [
+          {
+            "type": "query",
+            "provenance": {
+              "gate": "local_public_fact",
+              "provider": "local",
+              "sourceId": "seasons",
+              "sourceUrl": "https://spaceplace.nasa.gov/seasons/en/"
+            }
+          }
+        ]
       },
       "assertions": {
         "allPartsAccounted": true,
@@ -4244,9 +4369,6 @@
       },
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
           "get_patient_context"
         ]
       ],
@@ -4403,9 +4525,6 @@
         "page": "/jarvis"
       },
       "permittedToolSequence": [
-        [
-          "declare_request"
-        ],
         [
           "query_patients"
         ]
@@ -4595,9 +4714,6 @@
       "input": "Comment un avion reste-t-il en vol ?",
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
           "answer_general"
         ]
       ],
@@ -4612,7 +4728,30 @@
         "status": "completed",
         "generalAnswer": true,
         "noBusinessWrite": true,
-        "exactParts": 1
+        "exactParts": 1,
+        "responseLanguage": "fr",
+        "responseConcepts": [
+          [
+            "portance",
+            "air sous les ailes",
+            "pression sous les ailes"
+          ],
+          [
+            "poussée",
+            "propulsion"
+          ]
+        ],
+        "sourceRefs": [
+          {
+            "type": "query",
+            "provenance": {
+              "gate": "local_public_fact",
+              "provider": "local",
+              "sourceId": "airplane-flight",
+              "sourceUrl": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/four-forces-on-an-airplane/"
+            }
+          }
+        ]
       },
       "assertions": {
         "allPartsAccounted": true,
@@ -4828,9 +4967,6 @@
       },
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
           "get_patient_context"
         ]
       ],
@@ -4987,9 +5123,6 @@
         "page": "/jarvis"
       },
       "permittedToolSequence": [
-        [
-          "declare_request"
-        ],
         [
           "query_patients"
         ]
@@ -5149,7 +5282,8 @@
           "unsupported_email"
         ],
         "textIncludes": [
-          null
+          "Le champ e-mail du patient n’est pas pris en charge.",
+          "aucun numéro de téléphone n’est renseigné"
         ]
       },
       "assertions": {
@@ -5178,9 +5312,6 @@
       "input": "Quelle est la différence entre une planète et une étoile ?",
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
           "answer_general"
         ]
       ],
@@ -5195,7 +5326,35 @@
         "status": "completed",
         "generalAnswer": true,
         "noBusinessWrite": true,
-        "exactParts": 1
+        "exactParts": 1,
+        "responseLanguage": "fr",
+        "responseConcepts": [
+          [
+            "fusion nucléaire",
+            "hydrogène",
+            "produit sa propre lumière",
+            "émet sa propre lumière"
+          ],
+          [
+            "planète orbite autour d'une étoile",
+            "planète orbite autour d’une étoile",
+            "réfléchit la lumière de son étoile"
+          ]
+        ],
+        "responseMustNotContain": [
+          "sans masse"
+        ],
+        "sourceRefs": [
+          {
+            "type": "query",
+            "provenance": {
+              "gate": "local_public_fact",
+              "provider": "local",
+              "sourceId": "planet-star",
+              "sourceUrl": "https://starchild.gsfc.nasa.gov/docs/StarChild/questions/question62.html"
+            }
+          }
+        ]
       },
       "assertions": {
         "allPartsAccounted": true,
@@ -5411,9 +5570,6 @@
       },
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
           "get_patient_context"
         ]
       ],
@@ -5571,9 +5727,6 @@
       },
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
           "query_patients"
         ]
       ],
@@ -5704,9 +5857,6 @@
       "input": "Pourquoi l’eau bout-elle ?",
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
           "answer_general"
         ]
       ],
@@ -5721,7 +5871,34 @@
         "status": "completed",
         "generalAnswer": true,
         "noBusinessWrite": true,
-        "exactParts": 1
+        "exactParts": 1,
+        "responseLanguage": "fr",
+        "responseConcepts": [
+          [
+            "température d’ébullition",
+            "point d’ébullition"
+          ],
+          [
+            "vaporisation",
+            "devient vapeur",
+            "se transforme en vapeur"
+          ],
+          [
+            "pression atmosphérique",
+            "pression"
+          ]
+        ],
+        "sourceRefs": [
+          {
+            "type": "query",
+            "provenance": {
+              "gate": "local_public_fact",
+              "provider": "local",
+              "sourceId": "boiling",
+              "sourceUrl": "https://openstax.org/books/chemistry-2e/pages/10-3-phase-transitions"
+            }
+          }
+        ]
       },
       "assertions": {
         "allPartsAccounted": true,
@@ -5937,9 +6114,6 @@
       },
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
           "get_patient_context"
         ]
       ],
@@ -6097,9 +6271,6 @@
       },
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
           "query_patients"
         ]
       ],
@@ -6230,9 +6401,6 @@
       "input": "Comment se forme la pluie ?",
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
           "answer_general"
         ]
       ],
@@ -6247,7 +6415,34 @@
         "status": "completed",
         "generalAnswer": true,
         "noBusinessWrite": true,
-        "exactParts": 1
+        "exactParts": 1,
+        "responseLanguage": "fr",
+        "responseConcepts": [
+          [
+            "évaporation",
+            "eau s’évapore",
+            "vapeur d’eau"
+          ],
+          [
+            "condensation",
+            "se condense"
+          ],
+          [
+            "gouttelettes",
+            "gouttes d’eau"
+          ]
+        ],
+        "sourceRefs": [
+          {
+            "type": "query",
+            "provenance": {
+              "gate": "local_public_fact",
+              "provider": "local",
+              "sourceId": "rain",
+              "sourceUrl": "https://www.usgs.gov/water-science-school/science/condensation-and-water-cycle"
+            }
+          }
+        ]
       },
       "assertions": {
         "allPartsAccounted": true,
@@ -6463,9 +6658,6 @@
       },
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
           "get_patient_context"
         ]
       ],
@@ -6623,9 +6815,6 @@
       },
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
           "query_patients"
         ]
       ],
@@ -6753,15 +6942,12 @@
       "family": "notes_cliniques",
       "scenario": 26,
       "language": "fr",
-      "input": "Cherche la phrase « SUBJ-011-S01 » dans le Subjectif de Amina Meziane.",
+      "input": "Cherche la phrase « SUBJ-021-S01 » dans le Subjectif du patient sélectionné.",
       "context": {
-        "patientId": null,
+        "patientId": "b5000000-0000-4000-8000-000000000021",
         "page": "/jarvis"
       },
       "permittedToolSequence": [
-        [
-          "declare_request"
-        ],
         [
           "get_patient_context"
         ]
@@ -6778,13 +6964,13 @@
         "exactParts": 1,
         "noBusinessWrite": true,
         "textIncludes": [
-          "SUBJ-011-S01",
-          "SUBJ-011-S01"
+          "SUBJ-021-S01",
+          "SUBJ-021-S01"
         ],
         "sourceRefs": [
           {
             "type": "consultation",
-            "id": "b5100000-0000-4000-8000-000000000061",
+            "id": "b5100000-0000-4000-8000-000000000121",
             "provenance": {
               "area": "subjective"
             }
@@ -6795,7 +6981,7 @@
             "name": "get_patient_context",
             "args": {
               "area": "subjective",
-              "query": "SUBJ-011-S01"
+              "query": "SUBJ-021-S01"
             }
           }
         ],
@@ -6804,8 +6990,8 @@
             "name": "query_alexa_note_sections",
             "args": {
               "p_spec": {
-                "patientId": "b5000000-0000-4000-8000-000000000011",
-                "query": "SUBJ-011-S01"
+                "patientId": "b5000000-0000-4000-8000-000000000021",
+                "query": "SUBJ-021-S01"
               }
             },
             "path": [
@@ -6844,9 +7030,6 @@
         "page": "/jarvis"
       },
       "permittedToolSequence": [
-        [
-          "declare_request"
-        ],
         [
           "get_patient_context"
         ]
@@ -6930,9 +7113,6 @@
       },
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
           "get_patient_context"
         ]
       ],
@@ -7015,9 +7195,6 @@
       },
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
           "get_patient_context"
         ]
       ],
@@ -7093,15 +7270,12 @@
       "family": "notes_cliniques",
       "scenario": 26,
       "language": "fr",
-      "input": "Cherche la phrase « SUBJ-015-S01 » dans le Subjectif de Dounia Ghani.",
+      "input": "Cherche la phrase « SUBJ-022-S01 » dans le Subjectif de Belkacem Ndia.",
       "context": {
         "patientId": null,
         "page": "/jarvis"
       },
       "permittedToolSequence": [
-        [
-          "declare_request"
-        ],
         [
           "get_patient_context"
         ]
@@ -7118,13 +7292,13 @@
         "exactParts": 1,
         "noBusinessWrite": true,
         "textIncludes": [
-          "SUBJ-015-S01",
-          "SUBJ-015-S01"
+          "SUBJ-022-S01",
+          "SUBJ-022-S01"
         ],
         "sourceRefs": [
           {
             "type": "consultation",
-            "id": "b5100000-0000-4000-8000-000000000085",
+            "id": "b5100000-0000-4000-8000-000000000127",
             "provenance": {
               "area": "subjective"
             }
@@ -7135,7 +7309,7 @@
             "name": "get_patient_context",
             "args": {
               "area": "subjective",
-              "query": "SUBJ-015-S01"
+              "query": "SUBJ-022-S01"
             }
           }
         ],
@@ -7144,8 +7318,8 @@
             "name": "query_alexa_note_sections",
             "args": {
               "p_spec": {
-                "patientId": "b5000000-0000-4000-8000-000000000015",
-                "query": "SUBJ-015-S01"
+                "patientId": "b5000000-0000-4000-8000-000000000022",
+                "query": "SUBJ-022-S01"
               }
             },
             "path": [
@@ -7184,9 +7358,6 @@
         "page": "/jarvis"
       },
       "permittedToolSequence": [
-        [
-          "declare_request"
-        ],
         [
           "get_patient_context"
         ]
@@ -7270,9 +7441,6 @@
       },
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
           "get_patient_context"
         ]
       ],
@@ -7354,9 +7522,6 @@
         "page": "/jarvis"
       },
       "permittedToolSequence": [
-        [
-          "declare_request"
-        ],
         [
           "get_patient_context"
         ]
@@ -7440,9 +7605,6 @@
       },
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
           "get_patient_context"
         ]
       ],
@@ -7524,9 +7686,6 @@
         "page": "/jarvis"
       },
       "permittedToolSequence": [
-        [
-          "declare_request"
-        ],
         [
           "get_patient_context"
         ]

@@ -10,6 +10,7 @@ const arabicNumber = `(?:${digits}|صفر|واحد|اثنان|اثنين|ثلا�
 // Entire-string matching is the admission boundary: no unknown subject or
 // appended qualifier can borrow the permission of a public topic prefix.
 const publicQuestions: readonly RegExp[] = [
+  /^(?:pourquoi les saisons changent(?:-elles| elles)?|why do the seasons change|لماذا تتغير الفصول)$/u,
   /^(?:pourquoi le ciel est(?:-il| il)? bleu|pourquoi le ciel doit-il sa couleur au soleil|why is the sky blue|لماذا السماء زرقاء|علاش السماء زرقاء)$/u,
   /^(?:comment se forme un arc-en-ciel|explique(?:-moi)? comment se forme un arc-en-ciel|how does a rainbow form|explain how a rainbow forms|ما هي الوان قوس قزح|كيف يتكون قوس قزح|اشرح كيف يتكون قوس قزح)$/u,
   new RegExp(`^(?:c'est quoi|explique(?:-moi)?) ${frenchTopics}(?: simplement)?$`, "u"),

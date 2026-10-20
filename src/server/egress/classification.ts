@@ -35,6 +35,7 @@
  */
 
 import { ALEXA_CLINICAL_TRANSFORM, isSafeClinicalEnvelope } from "@/server/alexa/privacy-boundary";
+import { ALEXA_KNOWLEDGE_TRANSFORM, isIssuedKnowledgeEnvelope } from "@/server/alexa/knowledge-envelope";
 
 export type ClasseDonnees = "C1" | "C2" | "C3" | "C4" | "INCONNU";
 
@@ -263,6 +264,15 @@ export function classerCharge(charge: unknown, recu: RecuTransformation | null):
   // R6 : injection / exfiltration explicite, meme sans identifiant visible.
   if (MOTIF_INJECTION.test(abaisse) || MOTIF_DESTINATION_EXTERNE.test(abaisse)) {
     return { decision: "BLOQUER", classe: "INCONNU", motif: "inconnu:injection-ou-exfiltration" };
+  }
+
+  // Public book examples can mention people. Only the exact immutable envelope
+  // issued from approved C4 retrieval is eligible; identifiers, patient tokens
+  // and injection above still block. Raw questions are never included.
+  if (recu?.transformId === ALEXA_KNOWLEDGE_TRANSFORM) {
+    return isIssuedKnowledgeEnvelope(charge)
+      ? { decision: "AUTORISER", classe: "C4", motif: "c4:approved-book-evidence" }
+      : { decision: "BLOQUER", classe: "INCONNU", motif: "inconnu:knowledge-envelope-invalide" };
   }
 
   // Pour les heuristiques de PERSONNE (noms, references), on ne regarde que

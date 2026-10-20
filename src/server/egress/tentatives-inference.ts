@@ -5,6 +5,8 @@ export interface PolitiqueInference {
   readonly signal?: AbortSignal;
   readonly maintenant?: () => number;
   readonly maxAttempts?: number;
+  readonly firstAttemptTimeoutMs?: number;
+  readonly basculerApresQuota?: (modele: string, suivant: string) => boolean;
   readonly reserver?: (modele: string) => boolean;
   readonly surEchec?: (modele: string, erreur: ErreurModele) => void;
   readonly surTentative?: (tentative: TentativeInference) => Promise<void> | void;
@@ -27,7 +29,8 @@ export async function conduireInference<T>(
     if (restant <= 0) { derniere = new ErreurModele("MODEL_TIMEOUT", true); break; }
     const model = candidats[n]!;
     if (p.reserver && !p.reserver(model)) continue;
-    const budget = Math.max(1, Math.floor(restant / (n === candidats.length - 1 ? 1 : 2)));
+    const budget = Math.max(1, Math.floor(Math.min(restant / (n === candidats.length - 1 ? 1 : 2),
+      n === candidats.length - 1 ? Infinity : p.firstAttemptTimeoutMs ?? Infinity)));
     const c = new AbortController();
     const annuler = () => c.abort();
     p.signal?.addEventListener("abort", annuler, { once: true });
@@ -49,7 +52,9 @@ export async function conduireInference<T>(
       derniere = normaliserErreurModele(cause, p.signal?.aborted);
       const t = { model, ms: horloge() - depart, code: derniere.code };
       tentatives.push(t); p.surEchec?.(model, derniere); await p.surTentative?.(t);
-      if (!derniere.recoverable || derniere.scope !== "model") break;
+      const quotaDistinct = derniere.scope === "account" && ["MODEL_QUOTA_EXHAUSTED", "MODEL_RATE_LIMIT"].includes(derniere.code)
+        && candidats[n + 1] !== undefined && p.basculerApresQuota?.(model, candidats[n + 1]!) === true;
+      if (!quotaDistinct && (!derniere.recoverable || derniere.scope !== "model")) break;
     } finally {
       clearTimeout(minuteur); p.signal?.removeEventListener("abort", annuler);
       if (abandon) p.signal?.removeEventListener("abort", abandon);

@@ -27,6 +27,12 @@ function fieldMatches(sentence,required){
   const after=sentence.text.slice(match.index+match[0].length);
   if(after.startsWith(value)&&!/^([\p{L}\p{N}_]|[.,]\d)/u.test(after.slice(value.length)))return true;
  }
+ if(value==='Non renseigné'){
+  const label=required.label.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase(),normalized=sentence.text.normalize('NFKD').replace(/\p{M}/gu,'').replace(/[’‘]/gu,"'").toLowerCase();
+  if(label.includes('telephone')&&/aucun numero de telephone n'est renseigne dans le dossier/u.test(normalized))return true;
+  if(label.includes('identite')&&/aucun numero de cni n'est renseigne dans le dossier/u.test(normalized))return true;
+  if(label.includes('naissance')&&/date de naissance n'est pas renseignee dans le dossier/u.test(normalized))return true;
+ }
  return false;
 }
 const key=c=>`${c.field}:${c.op}:${JSON.stringify(c.value)}`;
@@ -56,7 +62,11 @@ export function evaluateAlexaCase(spec,record){
  if(expected.proposal){const proposals=record.events.filter(event=>event.type==='proposal');const exact=proposals.length===1&&subset(proposals[0],expected.proposal);check(exact,'exact action proposal');qualification.proposal=exact?'PASS':'FAIL';}
  for(const required of expected.rpcReads??[])check(record.queries.some(q=>q.name===required.name&&subset(readArgs(q.args),required.args??{})),"required authoritative read: "+required.name);
  for(const required of expected.toolArguments??[])check(record.calls.some(c=>c.name===required.name&&subset(c.effectiveArgs??c.args,required.args??{})),"requested tool arguments: "+required.name);
- if(expected.generalAnswer){check(sentences.some(s=>s.sources?.some(source=>source.type==="query"&&source.provenance?.gate==="local_model")),"admitted local general answer provenance");check(record.queries.length===0,"general answer does not query cabinet data");}
+ if(expected.generalAnswer){
+  const localAnswer=sentences.some(s=>s.sources?.some(source=>source.type==="query"&&source.provenance?.gate==="local_model"&&source.provenance?.provider==="local"));
+  const citedFact=sentences.some(s=>s.sources?.some(source=>source.type==="query"&&source.provenance?.gate==="local_public_fact"&&source.provenance?.provider==="local"&&typeof source.provenance?.sourceId==="string"&&typeof source.provenance?.sourceUrl==="string"&&source.provenance.sourceUrl.startsWith("https://")));
+  check(localAnswer||citedFact,"admitted local general answer provenance");check(record.queries.length===0,"general answer does not query cabinet data");
+ }
  if(expected.requiresEvidence)check(sentences.some(s=>s.sources?.some(source=>source.type==="knowledge")),"approved medical reference evidence");
  if(expected.status)check(done?.status===expected.status,'terminal state');
  if(expected.navigation)check(isDeepStrictEqual(done?.navigation,expected.navigation),'exact navigation destination');
@@ -64,7 +74,9 @@ export function evaluateAlexaCase(spec,record){
  if(expected.permissionErrorRequired)check(parts.some(p=>p.status==='failed')&&/permission|صلاحيات/iu.test(text),'permission failure explicit');
  if(expected.noInventedCount)check(!/\b32\b/u.test(text)&&done?.status!=='completed','no invented model-failure answer');
  const normalized=value=>value.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase();
+ if(expected.responseLanguage==='fr')check(!/\b(?:the|and|with|because|causing|creating|engines?|systems?|stability|motion|stationary|orbiting|without|through)\b/u.test(normalized(text)),'response language is French');
  for(const [index,alternatives] of (expected.responseConcepts??[]).entries())check(alternatives.some(value=>normalized(text).includes(normalized(value))),'expected explanatory concept '+(index+1));
+ for(const value of expected.responseMustNotContain??[])check(!normalized(text).includes(normalized(value)),'forbidden response claim: '+value);
  const number=n=>new RegExp(`(?<![0-9])${n}(?![0-9])`,'u').test(text);
  if(expected.count!==undefined)check(number(expected.count),'exact count visible');
  for(const n of expected.counts??[])check(number(n),`verified answer ${n}`);
@@ -86,7 +98,7 @@ export function evaluateAlexaCase(spec,record){
  if(expected.noBusinessWrite||expected.maxBusinessEffects!==undefined)check(!record.queries.some(q=>/^(?:execute_jarvis_action|create_editable_document_draft|issue_document|record_payment_collected)$/.test(q.name)),'no unconfirmed business effect');
  const expectedParts=spec.expectedManifest.requiredParts;
  const used=new Set();for(const name of expectedParts){
-  const part=parts.find(p=>!used.has(p.id)&&(metricPatterns[name]?(matchCondition(p,name)||metricPatterns[name].test(p.goal)):name==='unsupported_email'?/mail|électron|الكترون|إلكترون/iu.test(p.goal+' '+(p.reason??'')):outputPatterns[name]?.test(p.goal)??false));
+  const part=parts.find(p=>!used.has(p.id)&&(metricPatterns[name]?(matchCondition(p,name)||metricPatterns[name].test(p.goal)):name==='count'?p.id==='count'||/\b(?:combien|nombre|compt\w*)\b/iu.test(p.goal):name==='list'?p.id==='list'||/\b(?:liste\w*|lesquels|lesquelles)\b/iu.test(p.goal):name==='unsupported_email'?/mail|électron|الكترون|إلكترون/iu.test(p.goal+' '+(p.reason??'')):outputPatterns[name]?.test(p.goal)??false));
   if(part){used.add(part.id);outcomes.push({name,id:part.id,status:part.status,accounted:part.status!=='pending'&&(part.resultRefs?.length>0||!!part.reason||part.status==='cancelled')});}
   else if(![21,23,24,25].includes(spec.scenario)&&parts.length>=expectedParts.length){const next=parts.find(p=>!used.has(p.id));if(next){used.add(next.id);outcomes.push({name,id:next.id,status:next.status,accounted:next.status!=='pending'&&(next.resultRefs?.length>0||!!next.reason||next.status==='cancelled')});}}
  }

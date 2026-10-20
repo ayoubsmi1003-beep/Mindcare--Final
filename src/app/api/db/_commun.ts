@@ -50,12 +50,12 @@ export async function preparer(): Promise<Contexte | NextResponse> {
     await verifierUneFois(async () => {
       const etat = await verifierDemarrage(process.cwd());
       if (!etat.ok) {
-        throw new Error(
+        throw Object.assign(new Error(
           `schema non servable (${etat.probleme ?? "inconnu"})` +
             (etat.migrationsManquantes !== undefined
               ? ` — manquantes : ${etat.migrationsManquantes.join(", ")}`
               : ""),
-        );
+        ), { code: etat.causeCode });
       }
       // Le contrôle tourne SOUS IDENTITÉ NULLE : il ne lit que des catalogues
       // (`pg_proc`, `pg_class`), jamais une donnée du cabinet.

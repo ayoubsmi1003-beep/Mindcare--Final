@@ -85,6 +85,11 @@ function lireUrl(): string {
  */
 const REGLAGES: Omit<PoolConfig, "connectionString"> = {
   max: 10,
+  // Keep one established connection across idle periods; avoid a new SCRAM
+  // handshake on the next search when the desktop is busy.
+  min: 1,
+  keepAlive: true,
+  keepAliveInitialDelayMillis: 10_000,
   idleTimeoutMillis: 30_000,
   connectionTimeoutMillis: 5_000,
   allowExitOnIdle: false,
@@ -117,7 +122,8 @@ export function obtenirPool(): Pool {
     return existant;
   }
 
-  const cree = new Pool({ ...REGLAGES, connectionString: lireUrl() });
+  const url = lireUrl(); const target = new URL(url); console.warn("[db-target]", { host: target.hostname, port: target.port, pid: process.pid });
+  const cree = new Pool({ ...REGLAGES, connectionString: url });
 
   /**
    * Une erreur sur une connexion INACTIVE (coupure réseau, redémarrage du

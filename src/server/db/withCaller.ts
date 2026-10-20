@@ -58,6 +58,7 @@
 import type { PoolClient, QueryResultRow } from "pg";
 
 import { obtenirPool } from "./pool";
+import { acquireConnection } from "./connection-recovery";
 
 /**
  * La seule chose qu'un appelant reçoit : de quoi exécuter une requête, et rien
@@ -116,7 +117,7 @@ export async function withCaller<T>(
   userId: string | null,
   fn: (q: Querier) => Promise<T>,
 ): Promise<T> {
-  const client = await obtenirPool().connect();
+  const client = await acquireConnection(() => { const pool = obtenirPool(); const started = performance.now(); return pool.connect().catch((cause: unknown) => { console.warn("[db-acquire]", { elapsedMs: Math.round(performance.now()-started), total: pool.totalCount, idle: pool.idleCount, waiting: pool.waitingCount, target: new URL(pool.options.connectionString ?? "postgres://unknown").host }); throw cause; }); });
   try {
     await client.query("BEGIN");
     await client.query(userId === null ? ROLE_VISITEUR : ROLE_CONNECTE);
@@ -182,7 +183,7 @@ export async function withCaller<T>(
  * `scripts/preflight.sh` le vérifie : seul `src/server/auth/**` l'appelle.
  */
 export async function withAuthGate<T>(fn: (q: Querier) => Promise<T>): Promise<T> {
-  const client = await obtenirPool().connect();
+  const client = await acquireConnection(() => { const pool = obtenirPool(); const started = performance.now(); return pool.connect().catch((cause: unknown) => { console.warn("[db-acquire]", { elapsedMs: Math.round(performance.now()-started), total: pool.totalCount, idle: pool.idleCount, waiting: pool.waitingCount, target: new URL(pool.options.connectionString ?? "postgres://unknown").host }); throw cause; }); });
   try {
     await client.query("BEGIN");
     // Pas de SET LOCAL ROLE : c'est tout l'objet de cette enveloppe.

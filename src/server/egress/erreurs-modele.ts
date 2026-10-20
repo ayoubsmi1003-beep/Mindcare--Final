@@ -30,8 +30,11 @@ export function annulationDemandee(signal?: AbortSignal): boolean {
     && !(reason instanceof Error && reason.name === "TimeoutError");
 }
 
+interface QuotaViolation { readonly quotaId?: unknown; readonly quotaMetric?: unknown }
+interface ProviderErrorDetail { readonly "@type"?: unknown; readonly retryDelay?: unknown; readonly violations?: readonly QuotaViolation[] }
+
 export function classerErreurHttp(status: number, body: unknown, headers: Headers, now = Date.now()): ErreurModele {
-  const o = body as { error?: { message?: unknown; metadata?: { provider_name?: unknown; provider_code?: unknown } } } | null;
+  const o = body as { error?: { message?: unknown; metadata?: { provider_name?: unknown; provider_code?: unknown }; details?: readonly ProviderErrorDetail[] } } | null;
   const message = typeof o?.error?.message === "string" ? o.error.message : "";
   const retry = headers.get("retry-after");
   const reset = headers.get("x-ratelimit-reset");
@@ -45,7 +48,16 @@ export function classerErreurHttp(status: number, body: unknown, headers: Header
   if (status === 429) {
     const upstream = o?.error?.metadata?.provider_name !== undefined || o?.error?.metadata?.provider_code !== undefined;
     const plateforme = headers.has("x-ratelimit-remaining") || headers.has("x-ratelimit-limit") || !upstream;
-    const quotidien = /daily|per.day|quota|quotidien/i.test(message);
+    const details: readonly ProviderErrorDetail[] = Array.isArray(o?.error?.details) ? o.error.details : [];
+    const quotas: readonly QuotaViolation[] = details.filter(d => d?.["@type"] === "type.googleapis.com/google.rpc.QuotaFailure")
+      .flatMap(d => Array.isArray(d.violations) ? d.violations as readonly QuotaViolation[] : []);
+    const quotidien = quotas.some(v => /per.?day|daily/i.test(String(v.quotaId ?? "") + " " + String(v.quotaMetric ?? "")))
+      || /daily|per[ ._-]?day|quotidien/i.test(message);
+    for (const detail of details) {
+      if (detail?.["@type"] !== "type.googleapis.com/google.rpc.RetryInfo" || typeof detail.retryDelay !== "string") continue;
+      const seconds = /^(\d+(?:\.\d+)?)s$/.exec(detail.retryDelay);
+      if (seconds && Number.isFinite(Number(seconds[1]))) retryMs = Math.max(retryMs, Number(seconds[1]) * 1000);
+    }
     const attente = quotidien && retryMs === 0 ? Date.UTC(new Date(now).getUTCFullYear(), new Date(now).getUTCMonth(), new Date(now).getUTCDate() + 1) - now : retryMs;
     return new ErreurModele(quotidien ? "MODEL_QUOTA_EXHAUSTED" : "MODEL_RATE_LIMIT", !plateforme, plateforme ? "account" : "model", attente || 60_000);
   }

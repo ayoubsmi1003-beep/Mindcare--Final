@@ -31,12 +31,14 @@
 import { readdirSync } from "node:fs";
 import path from "node:path";
 
+import { databaseErrorCode } from "@/server/db/boundary-diagnostic";
 import { withCaller } from "@/server/db/withCaller";
 
 export interface EtatDemarrage {
   readonly ok: boolean;
   readonly probleme?: string;
   readonly detail?: string;
+  readonly causeCode?: string;
   readonly migrationsManquantes?: readonly string[];
 }
 
@@ -122,6 +124,7 @@ export async function verifierDemarrage(racine: string): Promise<EtatDemarrage> 
     return {
       ok: false,
       probleme: "base-injoignable",
+      causeCode: databaseErrorCode(e),
       // Volontairement sans le message brut : il peut contenir l'URL de
       // connexion, donc le mot de passe de la base.
       detail:

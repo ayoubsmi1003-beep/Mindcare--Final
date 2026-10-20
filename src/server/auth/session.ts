@@ -117,7 +117,7 @@ export async function ouvrirSession(
 ): Promise<SessionOuverte | null> {
   return withAuthGate(async (q) => {
     const verif = await q.query<{ id: string | null }>(
-      "SELECT auth.verify_password($1, $2) AS id",
+      "SELECT auth.verify_login($1, $2) AS id",
       [email, motDePasse],
     );
     const userId = verif[0]?.id ?? null;

@@ -1,4 +1,5 @@
 import type { AlexaLanguage } from "@/shared/alexa/request-plan";
+type AgendaStatus = "requested" | "confirmed" | "arrived" | "in_session" | "completed" | "no_show";
 
 const messages = {
   fr: {
@@ -7,8 +8,10 @@ const messages = {
     presence: "Oui, je suis là. Que souhaitez-vous consulter ?",
     opening: { agenda: "J’ouvre l’agenda.", patients: "J’ouvre la liste des patients.", dashboard: "J’ouvre le tableau de bord.", patient: "J’ouvre le dossier sélectionné et vérifié." },
     help: "Je peux lire les diagnostics, traitements et consultations du dossier choisi, montrer des extraits des notes, préparer une consultation, consulter le planning du jour et rechercher les références approuvées. Les actions sur le dossier demandent votre confirmation.",
-    clarify: "Pouvez-vous préciser : résumé, consultations, traitement ou préparation ?",
-    patient: "Choisissez le dossier à consulter. Le nom seul ne permet pas une sélection certaine.",
+    clarify: "Quel point souhaitez-vous vérifier ?",
+    agendaClarify: "Pour quelle date souhaitez-vous voir les rendez-vous ? Vous pouvez donner un jour précis.",
+    nextPatientClarify: "Le prochain patient est celui du planning d’aujourd’hui. Pour une autre date, demandez son planning.",
+    patient: "Quel dossier souhaitez-vous consulter ? Un nom exact unique permet une sélection vérifiée.",
     unavailable: "Cette lecture est indisponible. Le dossier reste accessible.",
     stale: "Le dossier a changé pendant la lecture. Répétez votre demande.",
     proposal: "Cette action nécessite une proposition et votre confirmation dans le panneau Alexa.",
@@ -23,6 +26,8 @@ const messages = {
     separateKnowledge: "Références générales : ces extraits ne constituent pas une conclusion ou une recommandation pour ce dossier.",
     agenda: "Le planning reste accessible dans l’agenda du cabinet.",
     emptyAgenda: "Aucun rendez-vous visible dans la période demandée.",
+    agendaPeriod: (date: string, requested: boolean) => `Planning du ${date}${requested ? " — demandes à confirmer" : ""}.`,
+    agendaEntry: (name: string | null, time: string, status: AgendaStatus) => `${name ?? "Patient non renseigné"} · ${time} : ${{ requested: "à confirmer", confirmed: "attendu", arrived: "arrivé", in_session: "en consultation", completed: "terminé", no_show: "absent" }[status]}.`,
     receiptsUnavailable: "Les encaissements du jour sont indisponibles. Vous pouvez consulter le tableau de bord.",
     receipts: (date: string, amount: string, count: number, scope: "cabinet" | "praticienne") => `Le ${date}, encaissé : ${amount} DZD pour ${count} séance(s) (${scope === "cabinet" ? "caisse du cabinet" : "caisse de la praticienne"}).`,
     emptyChanges: "Aucun changement de traitement enregistré n’est disponible.",
@@ -54,7 +59,9 @@ const messages = {
     presence: "نعم، راني هنا. واش تحبي تشوفي؟",
     opening: { agenda: "نفتح الأجندة.", patients: "نفتح قائمة المرضى.", dashboard: "نفتح لوحة المتابعة.", patient: "نفتح الملف المختار والمتحقّق منه." },
     help: "نقدر نقرا التشخيصات والعلاج والجلسات من الملف المختار، نعرض مقاطع من الملاحظات، نحضر الاستشارة، نشوف مواعيد اليوم ونبحث في المراجع المعتمدة. أي تغيير في الملف يحتاج تأكيدك.",
-    clarify: "وضّحي الطلب: ملخص، جلسات، علاج أو تحضير الاستشارة؟",
+    clarify: "ما هي المعلومة التي تريدين التحقق منها؟",
+    agendaClarify: "في أي تاريخ تحبي تشوفي المواعيد؟ تقدري تحددي نهار معيّن.",
+    nextPatientClarify: "المريض التالي يخص مواعيد اليوم. لتاريخ آخر، اطلبي مواعيد ذلك النهار.",
     patient: "اختاري الملف محلياً. الاسم وحده لا يكفي لاختيار مريض بثقة.",
     unavailable: "القراءة غير متاحة حالياً. الملف يبقى متاحاً.",
     stale: "تغيّر الملف أثناء القراءة. عاودي الطلب.",
@@ -70,6 +77,8 @@ const messages = {
     separateKnowledge: "مراجع عامة: هذه المقاطع ليست استنتاجاً أو توصية تخص هذا الملف.",
     agenda: "المواعيد متاحة في أجندة العيادة.",
     emptyAgenda: "ما كاين حتى موعد ظاهر في الفترة المطلوبة.",
+    agendaPeriod: (date: string, requested: boolean) => `مواعيد ${date}${requested ? " — طلبات تستنى التأكيد" : ""}.`,
+    agendaEntry: (name: string | null, time: string, status: AgendaStatus) => `${name ?? "المريض غير مسجّل"} · ${time}: ${{ requested: "يستنى التأكيد", confirmed: "منتظر", arrived: "وصل", in_session: "في الاستشارة", completed: "مكتمل", no_show: "غائب" }[status]}.`,
     receiptsUnavailable: "مداخيل اليوم غير متاحة حالياً. تقدري تشوفي لوحة المتابعة.",
     receipts: (date: string, amount: string, count: number, scope: "cabinet" | "praticienne") => `${date}: دخلنا ${amount} دج على ${count} جلسة (${scope === "cabinet" ? "صندوق العيادة" : "صندوق الطبيبة"}).`,
     emptyChanges: "ما كاين حتى تغيير علاج مسجّل ومتاح.",

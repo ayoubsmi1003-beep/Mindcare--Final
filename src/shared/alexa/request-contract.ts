@@ -111,7 +111,7 @@ function explicitConditions(text:string):SupportedCondition[]|null {
  const minimum=/(?:au moins|au minimum|minimum(?: de)?|>=)\s*(\d+)\s+(?:consultations?|seances?)\s+(?:termine|cloture|complete|clos|acheve)\w*/gu;
  for(const m of value.matchAll(minimum))if(Number(m[1])<=1000000)add('completed_consultations','gte',Number(m[1]));
  const noDebt=/\b(?:sans|aucun\w*|pas de|pas d')\s*(?:impayes?|dettes?|soldes?)\b/u.test(value);
- if(!noDebt&&/\b(?:solde(?: restant)?|reste a payer|impayes?|dettes?|montant a encaisser)\s+(?:strictement )?positi\w*|\bsolde\s*(?:restant\s*)?>\s*0\b|\bsolde impaye\b|\bdes impayes\b|\bsolde du superieur a 0\b/u.test(value))add('outstanding_balance','gt',0);
+ if(!noDebt&&/\b(?:solde(?: restant)?|solde restant du|reste a payer|impayes?|dettes?|montant a encaisser)\s+(?:strictement )?positi\w*|\bsolde\s*(?:restant\s*)?>\s*0\b|\bsolde impaye\b|\bdes impayes\b|\bsolde du superieur a 0\b/u.test(value))add('outstanding_balance','gt',0);
  if(/\bjamais\b/u.test(value)&&/\b(?:consult\w*|vus?|recus?)\b/u.test(value))add('completed_consultations','eq',0);
  return conditions.length?conditions:null;
 }
@@ -179,7 +179,7 @@ function frenchReadTargets(text:string):FrenchReadTarget[]{
  const periodText=mention.status==='named'?plain.replace(fold(mention.name),''):plain;
  const monthRange=explicitFrenchMonthRange(periodText);
  const unboundedPeriod=!/(?<![\p{L}\p{N}_-])(?:19|20)\d{2}(?![\p{L}\p{N}_-])|(?<![\p{L}\p{N}_-])\d{1,4}[-/]\d{1,2}[-/]\d{1,4}(?![\p{L}\p{N}_-])|\ble\s+\d{1,2}\b|\b(?:depuis|entre|avant|apres|jusqu\w*|pendant|derni\w*|preced\w*|prochain\w*|mois|semaines?|annees?|jours?|janvier|fevrier|mars|avril|mai|juin|juillet|aout|septembre|octobre|novembre|decembre|aujourd.hui|hier|demain|dates?|periode)\b/u.test(periodText);
- const knowledge=/\b(?:dsm(?:\s*[- ]?5)?|cim(?:\s*[- ]?11)?|icd(?:\s*[- ]?11)?|taylor|maudsley|selon (?:la|le|les) (?:reference|livre|ouvrage|manuel)|dans (?:le|les) livres?)\b/u.test(plain);
+ const knowledge=/\b(?:dsm(?:\s*[- ]?5)?|cim(?:\s*[- ]?11)?|icd(?:\s*[- ]?11)?|taylor|maudsley|stahl|selon (?:la|le|les) (?:reference|livre|ouvrage|manuel)|dans (?:le|les) livres?)\b/u.test(plain);
  if(knowledge)add({tool:'search_knowledge'});
  if(/\b(?:agenda|rendez[- ]?vous|rdv)\b/u.test(plain)&&/\b(?:montre|affich|liste|donne|combien|nombre|prochain|demain|aujourd.hui|semaine|mois|jour|agenda|rendez[- ]?vous|rdv)\b/u.test(plain))add({tool:'query_agenda'});
  const summaryStyle=/\b(?:resum\w*|synthes\w*|en bref|theme recurrent|motif recurrent|element recurrent)\b/u.test(plain)&&!/\b(?:mot pour mot|texte integral|citation exacte|recopie)\b/u.test(plain);
@@ -211,7 +211,7 @@ function frenchReadTargets(text:string):FrenchReadTarget[]{
  if(/\bnotifications?\b/u.test(plain))add({tool:'query_app',applicationView:'notifications'});
  if(/\b(?:etat|statut|environnement|heure|date)\b/u.test(plain)&&/\b(?:systeme|serveur|deploiement|cabinet)\b/u.test(plain))add({tool:'query_app',applicationView:'system'});
  const specificOffice=targets.some(t=>t.tool==='query_app'&&['notifications','system'].includes(t.applicationView??''));
- const cabinetView=!specificOffice&&/\b(?:cabinet|clinique)\b/u.test(plain)?'cabinet' as const:undefined;
+ const cabinetView=!specificOffice&&!targets.some(target=>target.tool==='query_agenda')&&/\b(?:cabinet|clinique)\b/u.test(plain)?'cabinet' as const:undefined;
  const practitionerView=!specificOffice&&/\b(?:praticien\w*|medecin|docteur|mon profil professionnel)\b/u.test(plain)?'practitioner' as const:undefined;
  if(cabinetView||practitionerView){const applicationView=cabinetView&&practitionerView?undefined:cabinetView??practitionerView;add({tool:'query_app',...(applicationView?{applicationView}:{})});}
  if(anchor||notes||summaryRequested){
@@ -247,7 +247,7 @@ export function frenchRequestAdmission(text:string,publicAllowed:boolean):French
  const targets=frenchReadTargets(text),domains=[...new Set(targets.map(target=>target.tool))];
  if(domains.length===1){const scopes=targets.filter(target=>target.tool===domains[0]);const common=Object.fromEntries(['messageKind','navigationTarget','consultationCount','applicationView','financeMode','patientSection','consultationMode','consultationStatus','unboundedPeriod','from','to','noteArea','noteQuery','diagnosisState','diagnosisRole','treatmentState','documentKind','documentStatus','documentAllKinds'].flatMap(key=>{const values=new Set(scopes.map(target=>target[key as keyof FrenchReadTarget]).filter(value=>value!==undefined));return values.size===1?[[key,[...values][0]]]:[]}));return {tools:domains,profileOnly:scopes.length===1&&scopes[0]?.tool==='get_patient_context'&&scopes[0].patientSection==='profile',...common};}
  const appReference=/\b(?:mindcare|alexa|application|logiciel|systeme|serveur|notifications?|messages?|factures?|recus?|frais|caisse|mois|semaine|periode|aujourd.hui|hier|demain|mon|ma|mes|notre|nos|ceci|cela|ca)\b/u.test(plain);
- if(publicAllowed&&!targets.length&&!appReference&&/^(?:pourquoi\b|comment fonctionne\w*\b|qu.est-ce que\b|explique(?:-moi)?\b)/u.test(plain)&&!/[;\n]/u.test(plain))return {tools:['answer_general'],profileOnly:false};
+ if(publicAllowed&&!targets.length&&!appReference&&/^(?:pourquoi\b|comment\b|qu.est-ce\s+que\b|qu.est-ce\s+qu[' ]\w+|quel(?:le)?s?\b|explique(?:-moi)?\b)/u.test(plain)&&!/[;\n]/u.test(plain))return {tools:['answer_general'],profileOnly:false};
  return {profileOnly:false};
 }
 /** Lexical hints contain requested slots only, never inferred records, values or dispatch authority. */
@@ -257,7 +257,7 @@ export interface FrenchCompoundContract {text:string;conditions:SupportedConditi
 /** Only an explicit conjunctive patient-set request is constrained; domain execution stays model-selected and gated. */
 export function frenchPatientCompoundContract(text:string):FrenchCompoundContract|null{
  const plain=fold(text),conditions=explicitConditions(text)??[];
- if(!/\bpatients?\b/u.test(plain)||! /\b(?:trouve|cherch\w*|recherch\w*|liste\w*|affich\w*|montre\w*)\b/u.test(plain)||conditions.length<2)return null;
+ if(!/\b(?:patients?|adultes?|majeurs?|enfants?|mineurs?)\b/u.test(plain)||! /\b(?:trouve|cherch\w*|recherch\w*|liste\w*|affich\w*|montre\w*)\b/u.test(plain)||conditions.length<2)return null;
  if(/\b(?:ou|rendez-vous|rdv|agenda|dsm|taylor|maudsley|cabinet|email|courriel|archiv\w*|inacti\w*)\b|adresse electronique|chiffre d.affaires/u.test(plain))return null;
  const sort=/\b(?:soldes?|dettes?|impayes?)\s+(?:decroiss\w*|du plus (?:grand|eleve))\b|\bdu plus gros solde au plus petit\b/u.test(plain)?'outstanding_desc' as const:undefined;
  return {text,conditions,count:/\b(?:compt\w*|combien|nombre|total)\b/u.test(plain),...(sort?{sort}:{})};
@@ -273,9 +273,9 @@ export function constrainCompoundDeclaration(parts:RequestPart[],contract:French
 /** Counts explicit coordinated application requests only; it grants no domain authority or business action. */
 export function frenchRequestedOutputs(text:string):string[]|null{
  if(!frenchReadTargets(text).length&&!preparationTarget(text))return null;
- const markers=[...text.matchAll(/(?:^|[,;]\s*|\b(?:et|puis)\s+)((?:affich|montr|trouv|cherch|recherch|identifi|r[ée]sum|pr[ée]par|compt|donn|lis|lire|ouvr|compar|expliqu|cr[ée]|ajout|enregistr|modifi|annul|supprim|sign|encaiss|d[ée]pla|r[ée]dig|r[èe]gl)\p{L}*)\b/giu)];
+ const markers=[...text.matchAll(/(?:^|[,;]\s*|\b(?:et|puis)\s+)((?:affich|montr|trouv|rep[èe]r|cherch|recherch|identifi|r[ée]sum|pr[ée]par|compt|donn|lis|lire|ouvr|compar|expliqu|cr[ée]|ajout|enregistr|modifi|annul|supprim|sign|encaiss|d[ée]pla|r[ée]dig|r[èe]gl)\p{L}*)\b/giu)];
  if(markers.length>=2&&markers.length<=12&&markers[0]!.index===0)return markers.map((match,index)=>text.slice(match.index+match[0].length-match[1]!.length,markers[index+1]?.index??text.length).replace(/[\s,;]+$/u,'').trim());
- const sharedVerb=text.match(/^\s*(?:alexa[, :]\s*)?((?:affich|montr|trouv|cherch|recherch|identifi|r[ée]sum|pr[ée]par|compt|donn|lis|lire|ouvr|compar|expliqu|cr[ée]|ajout|enregistr|modifi|annul|supprim|sign|encaiss|d[ée]pla|r[èe]dig)\p{L}*)\s+/iu);
+ const sharedVerb=text.match(/^\s*(?:alexa[, :]\s*)?((?:affich|montr|trouv|rep[èe]r|cherch|recherch|identifi|r[ée]sum|pr[ée]par|compt|donn|lis|lire|ouvr|compar|expliqu|cr[ée]|ajout|enregistr|modifi|annul|supprim|sign|encaiss|d[ée]pla|r[èe]dig)\p{L}*)\s+/iu);
  if(sharedVerb){
   const commaItems=text.slice(sharedVerb[0].length).replace(/[?؟!.]+$/u,'').split(/\s*,\s*/u).filter(Boolean),items=commaItems.flatMap(item=>{
    const coordinated=item.split(/\s+et\s+/iu),left=coordinated.length===2?parsePatientMention(coordinated[0]!):{status:'none' as const},right=coordinated.length===2?parsePatientMention(coordinated[1]!):{status:'none' as const};
@@ -286,7 +286,7 @@ export function frenchRequestedOutputs(text:string):string[]|null{
    if(goals.every(goal=>requestedReadTool(goal,text)))return goals;
   }
  }
- const separators=[...text.matchAll(/\s+\b(?:et|puis)\s+(?=(?:combien|quel(?:le|s|les)?|qui|comment|pourquoi|où|quand)\b)/giu)];
+ const separators=[...text.matchAll(/\s+\b(?:et|puis)\s+(?=(?:combien|quel(?:le|s|les)?|qui|comment|pourquoi|où|quand|le\s+rep[èe]re|la\s+référence)\b)/giu)];
  if(!separators.length||separators.length>5)return null;
  const clauses:string[]=[];let start=0;
  for(const separator of separators){clauses.push(text.slice(start,separator.index).trim().replace(/[\s,;]+$/u,''));start=separator.index+separator[0].length;}

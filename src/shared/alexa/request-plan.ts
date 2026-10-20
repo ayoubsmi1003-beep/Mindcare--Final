@@ -273,7 +273,7 @@ export function planRequest(text: string, previous: WorkingReference | null): Re
     return { ...plan, agendaDay: selection.day, agendaRequestedOnly: selection.requestedOnly };
   }
   if (plan.intent === "navigation") return plan;
-  const books = /\b(?:dsm|taylor|maudsley|livres?|references?|ouvrages?)\b|المراجع|المصادر|الكتب|الكتاب/u.test(normalized);
+  const books = /\b(?:dsm|taylor|maudsley|stahl|livres?|references?|ouvrages?)\b|المراجع|المصادر|الكتب|الكتاب/u.test(normalized);
   if (!books) return plan;
   const record = /\b(?:ce patient|cette patiente|dossier|du cas|consultations?|seances?|actuel(?:le)?s?|son traitement|ses traitements|son diagnostic|ses symptomes|notes?)\b|هذا المريض|هذه المريضة|الحالي|الحالية|ملف|جلس|استشار|تاعو|تاعها/u.test(normalized)
     || (["history", "current_consultation", "notes", "diagnoses", "scales", "treatments", "treatment_changes", "summary", "preparation", "longitudinal"].includes(plan.intent) && parsePatientMention(text).status !== "none");
