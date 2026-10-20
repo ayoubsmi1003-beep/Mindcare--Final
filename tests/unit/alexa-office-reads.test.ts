@@ -15,6 +15,10 @@ it('keeps complete notification totals independent of the displayed kind page',a
  expect(r).toMatchObject({status:'partial',complete:false,data:{total:83,unread:72,nextOffset:1}});
  expect(r.text).toContain('83');expect(r.text).toContain('72');expect(r.text).not.toContain('payload');
 });
+it('phrases an empty notification result naturally instead of using parenthesized plurals',async()=>{
+ const r=await readApplication('empty','notifications',vi.fn().mockResolvedValue({view:'notifications',total:0,unread:0,kinds:[],totalKinds:0,offset:0,hasMore:false,revision:'a'.repeat(32)}),signal);
+ expect(r.text).toBe('Aucune notification n’est visible pour le moment.');
+});
 it('uses the admitted cabinet clock and recorded environment without claiming service health',async()=>{
  const r=await readApplication('o','system',vi.fn().mockResolvedValue({view:'system',environment:'self-hosted'}),signal,{asOf:'2026-10-15T23:30:00Z'});
  expect(r.data).toMatchObject({environment:'self-hosted',localDate:'2026-10-16',timezone:'Africa/Algiers'});

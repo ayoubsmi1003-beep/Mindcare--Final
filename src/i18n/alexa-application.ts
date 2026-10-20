@@ -4,7 +4,7 @@ export const applicationReadCopy={
  consultationCount:(n:number,status:unknown)=>`${n} consultation${n===1?'':'s'}${status==='closed'?(n===1?' terminée':' terminées'):status==='open'?' en cours':status==='unsigned'?(n===1?' non signée':' non signées'):''}.`,
  documentSearchUnsupported:'La recherche dans le contenu de tous les documents n’est pas prise en charge. Je peux lister les documents et lire le texte d’un document identifié ; aucun résultat filtré par contenu n’a été inventé.',
  office:{
-  notifications:(total:number,unread:number)=>`Vous avez ${unread} notification(s) non lue(s) sur ${total} notification(s) visibles.`,
+  notifications:(total:number,unread:number)=>total===0&&unread===0?'Aucune notification n’est visible pour le moment.':unread===0?`Vous n’avez aucune notification non lue. ${total===1?'Une notification est visible.':`${total} notifications sont visibles.`}`:`Vous avez ${unread} ${unread===1?'notification non lue':'notifications non lues'} sur ${total} ${total===1?'notification visible':'notifications visibles'}.`,
   kind:(kind:string,total:number,unread:number)=>`${kind} : ${unread} non lue(s) sur ${total}.`,
   system:(environment:string,date:string,time:string)=>`Le déploiement est ${environment==='self-hosted'?'auto-hébergé':'en mode de développement synthétique'}. Au cabinet, nous sommes le ${date} à ${time} (heure d’Alger). Cette lecture ne contrôle pas l’état de chaque service.`,
   kinds:notificationKinds,

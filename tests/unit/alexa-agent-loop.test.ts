@@ -1,6 +1,7 @@
 import { expect, it } from "vitest";
 import { runAgentLoop,restoreAgentTask,savedAgentTask } from "@/server/alexa/agent-loop";
 import { AgentReadError, queryPatientsSchema, validateLedger } from "@/shared/alexa/agent";
+import {frenchRequestedOutputs,requestedReadTool,frenchRequestAdmission} from '@/shared/alexa/request-contract';
 import {z} from 'zod';
 import type { LocalCompletion } from "@/server/alexa/local-model-protocol";
 
@@ -26,6 +27,137 @@ it('does not let a model-chosen count silently narrow a whole-case summary',asyn
   return steps[step++]??{kind:'answer',text:'',tokensIn:0,tokensOut:0};
  },execute:async call=>{executed++;return {callId:call.id,status:'ok',complete:true,text:'Résumé',evidence:[],conditionKeys:[]};}},new AbortController().signal);
  expect(countOffered).toBe(false);expect(executed).toBe(0);expect(result.status).not.toBe('completed');
+});
+it.each([
+ 'Quel numéro national est enregistré pour Lina Ziani ?',
+ 'Quel numéro de CNI est enregistré pour Yacine Amrani ?',
+ 'Le dossier de Riad Khelifi contient-il un numéro de CNI ?',
+ 'Peux-tu vérifier si Samir Ferhat a un numéro de carte d’identité ?',
+ 'Quel est l’identifiant de la carte nationale de Sarah Boudiaf ?',
+])('binds a named French identity read to the profile gate: %s',async text=>{
+ let inferenceCalls=0,dispatched:Record<string,unknown>|undefined;
+ const result=await runAgentLoop({...input,text,conversationId:'profile-read-'+text},{actor:'profile-read-'+text,infer:async()=>{inferenceCalls++;throw new Error('Unexpected model call');},execute:async call=>{
+  dispatched=call.args;
+  return {callId:call.id,status:'ok',complete:true,patientId:id,text:'Numéro national : Non renseigné.',evidence:[{id,type:'patient',label:'Patient fictif'}],conditionKeys:[]};
+ }},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);expect(dispatched).toMatchObject({partIds:['requested_1'],section:'profile'});
+ expect(result.parts).toHaveLength(1);expect(result.parts[0]).toMatchObject({id:'requested_1',goal:text,status:'answered'});
+});
+it.each([
+ ["Ouvre l'agenda",'agenda'],
+ ['Va au tableau de bord','dashboard'],
+ ['Ouvre la liste des patients','patients'],
+ ['Ouvre les documents','documents'],
+ ['Va aux finances','finances'],
+ ['Ouvre les paramètres du cabinet','parametres'],
+ ['Ouvre Alexa','jarvis'],
+])('uses the closed French route for one explicit global navigation: %s',async(text,target)=>{
+ let inferenceCalls=0,dispatched:Record<string,unknown>|undefined;
+ expect(frenchRequestAdmission(text,false)).toMatchObject({tools:['navigate'],navigationTarget:target});
+ const result=await runAgentLoop({...input,text,conversationId:'direct-nav-'+text},{actor:'direct-nav-'+text,infer:async()=>{inferenceCalls++;throw new Error('Unexpected model call');},execute:async call=>{
+  dispatched=call.args;
+  return {callId:call.id,status:'ok',complete:true,text:'Page prête.',evidence:[],conditionKeys:[],navigation:{target:target as 'agenda'|'dashboard'|'patients'|'documents'|'finances'|'parametres'|'jarvis'}};
+ }},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);expect(dispatched).toMatchObject({partIds:['requested_1'],target});expect(result).toMatchObject({status:'completed',navigation:{target}});
+});
+it.each(['Combien de notifications non lues ai-je ?','Montre les notifications du cabinet.','Quel est le nombre total de notifications ?'])('uses the audited notification gate without model selection: %s',async text=>{
+ let inferenceCalls=0,dispatched:Record<string,unknown>|undefined;
+ expect(frenchRequestAdmission(text,false)).toMatchObject({tools:['query_app'],applicationView:'notifications'});
+ const result=await runAgentLoop({...input,text,conversationId:'direct-notifications-'+text},{actor:'direct-notifications-'+text,infer:async()=>{inferenceCalls++;throw new Error('Unexpected model call');},execute:async call=>{
+  dispatched={name:call.name,...call.args};
+  return {callId:call.id,status:'ok',complete:true,text:'Aucune notification n’est visible pour le moment.',evidence:[],conditionKeys:[]};
+ }},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);expect(dispatched).toMatchObject({name:'query_app',partIds:['requested_1'],view:'notifications'});expect(result).toMatchObject({status:'completed'});
+});
+it('keeps a raw note page out of MiniCPM context before an independent second read',async()=>{
+ const text='Pour Amel Bensaid, quelles sont les notes de consultation et combien de consultations terminées sont enregistrées ?';
+ const goals=frenchRequestedOutputs(text);expect(goals).toHaveLength(2);
+ const tools=goals!.map(goal=>requestedReadTool(goal,text));let step=0,modelReply:Record<string,unknown>|undefined;
+ const steps:LocalCompletion[]=[
+  calls([{name:'declare_request',args:{parts:goals!.map((goal,i)=>({id:`p${i+1}`,goal,tool:tools[i],conditions:[],dependsOn:[]}))}}]),
+  calls([{name:'get_patient_context',args:{partIds:['p1'],section:'notes'}}]),
+  calls([{name:'query_consultations',args:{partIds:['p2'],mode:'count'}}]),
+  {kind:'answer',text:'Le thème revient dans les notes ; six consultations sont terminées.',tokensIn:20,tokensOut:12},
+ ];
+ const result=await runAgentLoop({...input,text,conversationId:'compact-note-result'},{actor:'compact-note-result',infer:async(messages)=>{
+  if(step===2){const last=messages.at(-1);modelReply=last?.role==='tool'?JSON.parse(String(last.content)) as Record<string,unknown>:undefined;}
+  return steps[step++]??steps.at(-1)!;
+ },execute:async call=>call.name==='get_patient_context'
+  ?{callId:call.id,status:'ok',complete:true,text:'Sommeil fragmenté. '+('Note clinique fictive. '.repeat(300)),data:{rawNotes:'NOTE_BODY_MUST_STAY_OUT_OF_MODEL_CONTEXT'},evidence:[{id:'consultation-a',type:'consultation',label:'Consultation fictive'}],conditionKeys:[]}
+  :{callId:call.id,status:'ok',complete:true,text:'6 consultations terminées.',data:{count:6},evidence:[],conditionKeys:[]}
+ },new AbortController().signal);
+ expect(result.parts.every(part=>part.status==='answered')).toBe(true);
+ expect(modelReply).toMatchObject({status:'ok',complete:true});
+ expect(modelReply?.data).toBeUndefined();expect(String(modelReply?.text)).toContain('Sommeil fragmenté');expect(String(modelReply?.text).length).toBeLessThan(1000);
+ expect(JSON.stringify(modelReply)).not.toContain('NOTE_BODY_MUST_STAY_OUT_OF_MODEL_CONTEXT');
+});
+it('executes an explicit recurring-theme and completed-consultation count with the authorized gates, without a MiniCPM declaration',async()=>{
+ const text='Pour Amel Bensaid, quel est le thème récurrent des notes et combien de consultations terminées sont enregistrées ?';
+ const callsSeen:Record<string,unknown>[]=[];let inferenceCalls=0;
+ const result=await runAgentLoop({...input,text,conversationId:'direct-theme-and-count'},{actor:'direct-theme-and-count',infer:async()=>{inferenceCalls++;throw new Error('Unexpected model call');},observeCall:call=>callsSeen.push({name:call.name,args:call.args}),execute:async(call,_asOf,prior,_signal,original,goal)=>{
+  expect(prior).toHaveLength(0);expect(original).toBe(text);
+  const answer=call.name==='get_patient_context'?'Les notes font ressortir le thème récurrent « sommeil fragmenté ».':'6 consultations terminées.';
+  return {callId:call.id,status:'ok',complete:true,text:answer,patientId:id,evidence:[],conditionKeys:[]};
+ }},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);
+ expect(callsSeen).toEqual([
+  {name:'get_patient_context',args:{partIds:['requested_1'],section:'summary'}},
+  {name:'query_consultations',args:{partIds:['requested_2'],mode:'count',status:'closed'}},
+ ]);
+ expect(result.status).toBe('completed');expect(result.parts.map(part=>part.status)).toEqual(['answered','answered']);
+ expect(result.sentences).toEqual(['Les notes font ressortir le thème récurrent « sommeil fragmenté ».','6 consultations terminées.']);
+});
+it('dispatches one unbounded patient-case summary through its exact authorized read gate',async()=>{
+ const text='Résume le cas de Amel Bensaid.';let inferenceCalls=0;const callsSeen:Record<string,unknown>[]=[];
+ const result=await runAgentLoop({...input,text,conversationId:'direct-whole-summary'},{actor:'direct-whole-summary',infer:async()=>{inferenceCalls++;throw new Error('Unexpected model call');},observeCall:call=>callsSeen.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,text:'Le fil conducteur des consultations est le sommeil fragmenté.',patientId:id,evidence:[],conditionKeys:[]})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);expect(callsSeen).toEqual([{name:'get_patient_context',args:{partIds:['requested_1'],section:'summary'}}]);
+ expect(result.status).toBe('completed');expect(result.parts).toMatchObject([{id:'requested_1',status:'answered',tools:['get_patient_context']}]);
+});
+it('does not drop an explicit date range from a patient-case summary shortcut',async()=>{
+ const text='Résume le cas de Amel Bensaid d’avril à septembre 2026.';let inferenceCalls=0;
+ const result=await runAgentLoop({...input,text,conversationId:'dated-summary-not-direct'},{actor:'dated-summary-not-direct',infer:async()=>{inferenceCalls++;return {kind:'answer',text:'',tokensIn:0,tokensOut:0};},execute:async call=>({callId:call.id,status:'ok',complete:true,text:'Réponse de test',evidence:[],conditionKeys:[]})},new AbortController().signal);
+ expect(inferenceCalls).toBeGreaterThan(0);expect(result.status).not.toBe('completed');
+});
+it('keeps an explicit consultation period out of the all-time direct-read shortcut',async()=>{
+ const text='Pour Amel Bensaid, quel est le thème récurrent des notes et combien de consultations terminées sont enregistrées pendant les six derniers mois ?';
+ let inferenceCalls=0;const result=await runAgentLoop({...input,text,conversationId:'theme-count-period'},{actor:'theme-count-period',infer:async()=>{inferenceCalls++;return {kind:'answer',text:'',tokensIn:0,tokensOut:0};},execute:async call=>({callId:call.id,status:'ok',complete:true,text:'Réponse de test',evidence:[],conditionKeys:[]})},new AbortController().signal);
+ expect(inferenceCalls).toBeGreaterThan(0);expect(result.status).not.toBe('completed');
+ expect(result.parts.map(part=>part.status)).not.toEqual(['answered','answered']);
+});
+it('preserves a verified result and reports an actual read failure in the sibling part',async()=>{
+ const text='Pour Amel Bensaid, quel est le thème récurrent des notes et combien de consultations terminées sont enregistrées ?';
+ let inferenceCalls=0;const result=await runAgentLoop({...input,text,conversationId:'theme-count-partial'},{actor:'theme-count-partial',infer:async()=>{inferenceCalls++;throw new Error('Unexpected model call');},execute:async call=>{
+  if(call.name==='query_consultations')throw new Error('synthetic database fault');
+  return {callId:call.id,status:'ok',complete:true,text:'Les notes font ressortir le thème récurrent « sommeil fragmenté ».',evidence:[],conditionKeys:[]};
+ }},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);expect(result.status).toBe('partial');
+ expect(result.parts.map(part=>part.status)).toEqual(['answered','failed']);
+ expect(result.sentences).toContain('Les notes font ressortir le thème récurrent « sommeil fragmenté ».');
+ expect(result.sentences.some(sentence=>sentence.includes('requête de données a échoué'))).toBe(true);
+});
+it('keeps a partial note read pending and allows its saved cursor to resume in the same turn',async()=>{
+ const text='Pour Amel Bensaid, quelles sont les notes de consultation et combien de consultations terminées sont enregistrées ?';
+ const goals=frenchRequestedOutputs(text)!;let step=0,continuationMarker:unknown;const callsSeen:Record<string,unknown>[]=[];
+ const sequence:LocalCompletion[]=[
+  calls([{name:'declare_request',args:{parts:goals.map((goal,i)=>({id:`p${i+1}`,goal,tool:requestedReadTool(goal,text),conditions:[],dependsOn:[]}))}}]),
+  calls([{name:'get_patient_context',args:{partIds:['p1'],section:'notes'}}]),
+  calls([{name:'query_consultations',args:{partIds:['p2'],mode:'count'}}]),
+  calls([{name:'get_patient_context',args:{partIds:['p1'],section:'notes',reusePrevious:true}}]),
+ ];
+ const result=await runAgentLoop({...input,text,conversationId:'notes-cursor-same-turn'},{actor:'notes-cursor-same-turn',infer:async(messages)=>{
+  const toolMessage=[...messages].reverse().find(message=>message.role==='tool'&&String(message.content).includes('continuation'));
+  if(toolMessage)continuationMarker=JSON.parse(String(toolMessage.content)).continuation;
+  return sequence[step++]??{kind:'answer',text:'',tokensIn:0,tokensOut:0};
+ },execute:async(call,_asOf,prior)=>{
+  callsSeen.push(call.args);
+  if(call.name==='get_patient_context'&&!call.args['reusePrevious'])return {callId:call.id,status:'partial',complete:false,text:'Première page des notes.',data:{patientId:'b5000000-0000-4000-8000-000000000001',total:10,noteQuery:{patientId:'b5000000-0000-4000-8000-000000000001'},asOf:'2026-10-20T11:00:00Z',revision:'a'.repeat(32),next:{offset:5,textOffset:0}},evidence:[],conditionKeys:[]};
+  if(call.name==='get_patient_context')return {callId:call.id,status:'ok',complete:true,text:'Dernière page des notes.',data:{patientId:'b5000000-0000-4000-8000-000000000001',total:10,noteQuery:{patientId:'b5000000-0000-4000-8000-000000000001'},asOf:'2026-10-20T11:00:00Z',revision:'a'.repeat(32)},evidence:[],conditionKeys:[]};
+  return {callId:call.id,status:'ok',complete:true,text:'Six consultations terminées.',data:{count:6},evidence:[],conditionKeys:[]};
+ }},new AbortController().signal);
+ expect(continuationMarker).toMatchObject({available:true,tool:'get_patient_context',reusePrevious:true});
+ expect(callsSeen.find(args=>args['reusePrevious'])).toMatchObject({partIds:['p1'],section:'notes',reusePrevious:true});
+ expect(result.status).toBe('completed');expect(result.parts.every(part=>part.status==='answered')).toBe(true);
+ expect(result.parts.find(part=>part.id==='p1')?.resultRefs).toHaveLength(2);
 });
 it.each(['error','unsupported','partial'] as const)('cannot hide an earlier %s when another call answers the same requested part',async failure=>{
  let step=0,executed=0;

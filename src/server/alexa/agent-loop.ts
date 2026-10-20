@@ -49,6 +49,12 @@ export interface AgentOutcome { status: AgentTerminal; parts: RequestPart[]; res
 function partAllowsTool(part:RequestPart,name:string):boolean {
   return name==="ask_doctor" || (part.tools===undefined?name==="query_patients"&&part.conditions.length>0:part.tools.some(tool=>tool===name));
 }
+function noteCursor(result:AgentResult):{remainingPages:number}|null {
+ if(!result.data||typeof result.data!=="object")return null;
+ const data=result.data as Record<string,unknown>,cursor=noteCursorSchema.safeParse(data["next"]),total=data["total"];
+ if(!("noteQuery" in data)||!cursor.success||typeof total!=="number"||!Number.isSafeInteger(total)||total<0)return null;
+ return {remainingPages:Math.min(8,Math.max(0,Math.ceil((total-cursor.data.offset)/5)))};
+}
 const patientQueryDescriptors=new Set(["actif","actifs","active","actives","adulte","adultes","enfant","enfants","mineur","mineurs","majeur","majeurs","archive","archives","inactif","inactifs","incomplete","incomplets","complete","complets","sans","avec","identite","carte","telephone","visite","consultation","consultations","patient","patients","dossier","dossiers"]);
 const normalizedPatientQuery=(value:string)=>value.normalize("NFKD").replace(/\p{M}/gu,"").toLocaleLowerCase().trim().replace(/\s+/gu," ");
 function explicitPatientQueryName(text:string):string|undefined {
@@ -56,6 +62,65 @@ function explicitPatientQueryName(text:string):string|undefined {
   if(mention.status!=="named")return undefined;
   const words=normalizedPatientQuery(mention.name).split(" ");
   return words.length&&words.every(word=>patientQueryDescriptors.has(word))?undefined:mention.name;
+}
+function directRecurringThemeCountCalls(outputs:readonly string[]|null, original:string, clientTurnId:string):{part:RequestPart;call:AgentCall}[]|null {
+ if(!outputs||outputs.length<2||outputs.length>AGENT_LIMITS.calls)return null;
+ let hasTheme=false,hasCompletedCount=false;
+ const prepared=outputs.map((goal,index)=>{
+  const tool=requestedReadTool(goal,original),scope=frenchRequestAdmission(goal,false);
+  if(!tool||scope.tools?.length!==1||scope.tools[0]!==tool)return null;
+  if(tool==='get_patient_context'){
+   const plain=goal.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase();
+   if(scope.patientSection!=='summary'||!/\b(?:theme|motif|element)\s+recurrent\b/u.test(plain))return null;
+   hasTheme=true;
+  }else if(tool==='query_consultations'){
+   if(scope.consultationMode!=='count'||scope.consultationStatus!=='closed'||!scope.unboundedPeriod)return null;
+   hasCompletedCount=true;
+  }else return null;
+  const id=`requested_${index+1}`,args={partIds:[id],...frenchReadArgumentBindings(scope,tool)};
+  if(!agentSchemas[tool].safeParse(args).success)return null;
+  return {part:{id,goal,tools:[tool],conditions:[],dependsOn:[],status:'pending' as const,resultRefs:[]},call:{id:`direct-${clientTurnId}-${id}`,name:tool,args}};
+ });
+ return hasTheme&&hasCompletedCount&&prepared.every((entry):entry is NonNullable<typeof entry>=>entry!==null)?prepared:null;
+}
+function directSinglePatientReadCall(text:string,clientTurnId:string,selectedPatientId:string|null):{part:RequestPart;call:AgentCall}|null {
+ const plain=text.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase();
+ if(/\b(?:et|puis|ainsi que)\b/u.test(plain))return null;
+ const tool=requestedReadTool(text,text),scope=frenchRequestAdmission(text,false);
+ const namedProfile=scope.profileOnly&&scope.patientSection==='profile'&&!selectedPatientId&&parsePatientMention(text).status==='named';
+ const wholeSummary=scope.patientSection==='summary'&&scope.unboundedPeriod===true&&(!!selectedPatientId||parsePatientMention(text).status==='named');
+ if(tool!=='get_patient_context'||scope.tools?.length!==1||scope.tools[0]!==tool||(!namedProfile&&!wholeSummary))return null;
+ const id='requested_1',args={partIds:[id],...frenchReadArgumentBindings(scope,tool)};
+ if(!agentSchemas[tool].safeParse(args).success)return null;
+ return {part:{id,goal:text,tools:[tool],conditions:[],dependsOn:[],status:'pending',resultRefs:[]},call:{id:`direct-${clientTurnId}-${id}`,name:tool,args}};
+}
+function directGlobalNavigationCall(text:string,clientTurnId:string):{part:RequestPart;call:AgentCall}|null {
+ const scope=frenchRequestAdmission(text,false),target=scope.navigationTarget;
+ if(scope.tools?.length!==1||scope.tools[0]!=='navigate'||!target||target==='patient'||parsePatientMention(text).status!=='none')return null;
+ const plain=text.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase().replace(/^alexa[, :]+/u,'');
+ const command=plain.replace(/^(?:(?:peux[- ]tu|tu peux)\s+)?(?:ouvre|ouvrir|va|aller)\s+/u,'').replace(/[.!?]+$/u,'').trim();
+ const accepted:Partial<Record<NonNullable<typeof target>,RegExp>>={
+  agenda:/^(?:l['’]agenda|agenda)$/u,
+  dashboard:/^(?:le tableau de bord|au tableau de bord|tableau de bord|dashboard)$/u,
+  patients:/^(?:la liste des patients|liste des patients)$/u,
+  documents:/^(?:les documents|documents)$/u,
+  finances:/^(?:les finances|aux finances|finances)$/u,
+  parametres:/^(?:les parametres(?: du cabinet)?|parametres(?: du cabinet)?|les reglages(?: du cabinet)?|reglages(?: du cabinet)?)$/u,
+  jarvis:/^(?:alexa|jarvis)$/u,
+ };
+ if(!accepted[target]?.test(command))return null;
+ const id='requested_1',args={partIds:[id],target};
+ if(!agentSchemas.navigate.safeParse(args).success)return null;
+ return {part:{id,goal:text,tools:['navigate'],conditions:[],dependsOn:[],status:'pending',resultRefs:[]},call:{id:`direct-${clientTurnId}-${id}`,name:'navigate',args}};
+}
+function directNotificationsReadCall(text:string,clientTurnId:string,requestedOutputs:readonly string[]|null):{part:RequestPart;call:AgentCall}|null {
+ if(requestedOutputs&&requestedOutputs.length>1)return null;
+ if(/\b(?:et|puis|ensuite|ou|mais)\b|[;\n]/iu.test(text))return null;
+ const scope=frenchRequestAdmission(text,false);
+ if(scope.tools?.length!==1||scope.tools[0]!=='query_app'||scope.applicationView!=='notifications')return null;
+ const id='requested_1',args={partIds:[id],...frenchReadArgumentBindings(scope,'query_app')};
+ if(!agentSchemas.query_app.safeParse(args).success)return null;
+ return {part:{id,goal:text,tools:['query_app'],conditions:[],dependsOn:[],status:'pending',resultRefs:[]},call:{id:`direct-${clientTurnId}-${id}`,name:'query_app',args}};
 }
 function compact(value:unknown):unknown {
   if(Array.isArray(value))return value.map(compact);
@@ -95,13 +160,13 @@ export async function runAgentLoop(input: TurnInput, deps: AgentLoopDependencies
     tasks.delete(key);return {status:"cancelled",parts:prior.parts.map(p=>({...p,status:"cancelled",reason:copy.cancelled})),results:[],sentences:[copy.cancelled],sources:[],patientId:null,tokensIn:0,tokensOut:0};
   }
   const signal = AbortSignal.any([externalSignal, AbortSignal.timeout(AGENT_LIMITS.deadlineMs)]);
-  const fullPrompt=agentPrompt(language,asOf);
+  const fullPrompt=agentPrompt(language,asOf)+"\nSi un résultat indique continuation.available=true, reprends cette même lecture avec le même partId, section notes et reusePrevious=true. Continue tant que le budget le permet ; ne présente jamais une page partielle comme un dossier complet.";
   const continuingClarification=prior?.parts.some(p=>p.status==="needs_input");
   const previousContext=prior?{...(continuingClarification?{original:prior.original,pending:prior.parts.filter(p=>p.status!=="answered")}:{}),lastResults:prior.results.slice(-2).map(r=>({data:r.data&&typeof r.data==="object"&&"patientQuery" in r.data?{patientQuery:r.data.patientQuery}:undefined}))}:null;
   const admittedTools=admission.tools??(countContract?['query_patients']:undefined);
   const promptTools=admittedTools?.length===1&&admittedTools[0]==='answer_general'?admittedTools:undefined;
   const messages: LocalMessage[] = [{role:"system",content:agentMetadataPrompt(promptTools)+(admittedTools?"\nOutils de domaine admis pour cette demande : "+admittedTools.join(", ")+". Déclare uniquement l’un de ces outils.":"")+(countContract?"\nSorties et conditions explicites à conserver, sans donnée ni permission supplémentaire : "+JSON.stringify(countContractHints(countContract)):"")+(compoundContract?"\nSorties et conditions explicites de la population à conserver, sans donnée ni permission supplémentaire : "+JSON.stringify(compoundContractHints(compoundContract)):"")+(requestedOutputs?"\nSorties explicites : chaque goal doit reprendre exactement une clause, une fois : "+JSON.stringify(requestedOutputs):"")},{role:"user",content:input.text+"\nPatient sélectionné : "+(input.appContext.patientId?"oui":"non")+(prior?"\nDemande précédente : "+JSON.stringify(previousContext):"")}];
-  let parts: RequestPart[] = [], results: AgentResult[] = [], declared = false, calls = 0, rounds = 0, steps = 0, tokensIn = 0, tokensOut = 0, finalText = "",inferenceFailed=false,resumingPatientQuery=false,resumingNoteQuery=false,resumingConsultationQuery=false,resumingFinanceQuery=false,resumingDocumentQuery=false,plainRecovery=0;
+  let parts: RequestPart[] = [], results: AgentResult[] = [], declared = false, calls = 0, rounds = 0, steps = 0, tokensIn = 0, tokensOut = 0, finalText = "",inferenceFailed=false,resumingPatientQuery=false,resumingNoteQuery=false,resumingConsultationQuery=false,resumingFinanceQuery=false,resumingDocumentQuery=false,plainRecovery=0,noteContinuationBudget=0;
   const focus=input.text.normalize('NFKD').replace(/\p{M}/gu,'').replace(/[’‘]/gu,"'").toLowerCase().trim().replace(/[?!.]+$/gu,'');
   const continuationKind=noteContinuation(input.text)?'any':/^(?:(?:la suite|suite)(?: du)?\s+)?(?:le\s+)?(?:document|brouillon)$/u.test(focus)?'document':/^(?:(?:la suite|suite)(?: du)?\s+)?(?:le\s+)?calendrier(?: financier)?$/u.test(focus)?'calendar':/^(?:(?:la suite|suite)(?: de)?\s+)?(?:l'|la\s+)?analyse$/u.test(focus)?'analysis':/^(?:(?:la suite|suite)(?: des?| de la)?\s+)?(?:les?\s+)?notes$/u.test(focus)?'notes':null;
   const unfinished=continuationKind?prior?.results.flatMap(r=>{
@@ -134,20 +199,52 @@ export async function runAgentLoop(input: TurnInput, deps: AgentLoopDependencies
       parts=[{id:"continuation",goal:input.text,tools:["query_patients"],conditions,dependsOn:[],status:"pending",resultRefs:[],...(query.population?{population:query.population}:{}),...(query.query?{literalQuery:query.query}:{})}];declared=true;resumingPatientQuery=true;
     }
   }
+  const directSummaryCall=!declared&&!prior&&!requestedOutputs&&!countContract&&!compoundContract?directSinglePatientReadCall(input.text,input.clientTurnId,input.appContext.patientId):null;
+  const directReadCalls=!declared&&!prior?directRecurringThemeCountCalls(requestedOutputs,input.text,input.clientTurnId):null;
+  const directOfficeReadCall=!declared&&!prior?directNotificationsReadCall(input.text,input.clientTurnId,requestedOutputs):null;
+  const directNavigationCall=!declared&&!prior&&!requestedOutputs?directGlobalNavigationCall(input.text,input.clientTurnId):null;
+  const directCalls=directReadCalls??(directSummaryCall?[directSummaryCall]:directOfficeReadCall?[directOfficeReadCall]:directNavigationCall?[directNavigationCall]:null);
+  if(directCalls){parts=directCalls.map(entry=>entry.part);declared=true;}
   const infer = deps.infer ?? inferLocalCompletion;
   const readTools=new Set(['query_patients','get_patient_context','query_consultations','query_agenda','query_documents','query_finance','query_app','search_knowledge']);
   // A small model may emit independent calls one at a time. Finish declared human
   // outputs within the same six-call/deadline caps; dependencies and actions keep three rounds.
-  const roundLimit=()=>declared&&requestedOutputs?.length===parts.length&&parts.every(p=>!p.dependsOn.length&&p.tools?.length===1&&readTools.has(p.tools[0]!))
-    ?Math.min(AGENT_LIMITS.calls,Math.max(AGENT_LIMITS.rounds,parts.length)):AGENT_LIMITS.rounds;
+  const roundLimit=()=>{
+    const base=declared&&requestedOutputs?.length===parts.length&&parts.every(p=>!p.dependsOn.length&&p.tools?.length===1&&readTools.has(p.tools[0]!))
+      ?Math.min(AGENT_LIMITS.calls,Math.max(AGENT_LIMITS.rounds,parts.length)):AGENT_LIMITS.rounds;
+    return base+noteContinuationBudget;
+  };
   try {
-    while (rounds < roundLimit() && steps++ < Math.max(5,roundLimit()+1)) {
+    if(directCalls){
+      for(let offset=0;offset<directCalls.length;offset+=AGENT_LIMITS.parallel){
+        signal.throwIfAborted();deps.onStage?.();
+        const batch=directCalls.slice(offset,offset+AGENT_LIMITS.parallel);
+        const settled=await Promise.allSettled(batch.map(({call,part})=>Promise.resolve().then(()=>{
+          deps.observeCall?.(structuredClone(call));
+          return deps.execute(call,asOf,[...(prior?.results??[]),...results],signal,input.text,part.goal);
+        })));
+        settled.forEach((entry,index)=>{
+          const scheduled=batch[index]!,part=parts.find(candidate=>candidate.id===scheduled.part.id)!;
+          if(entry.status==='rejected'){
+            const userStopped=externalSignal.aborted&&!(externalSignal.reason instanceof Error&&/Timeout/i.test(externalSignal.reason.name+externalSignal.reason.message));
+            const failureCode=entry.reason instanceof AgentReadError?entry.reason.code:entry.reason instanceof z.ZodError?'malformed':'database';
+            part.status=userStopped?'cancelled':signal.aborted?'budget_limited':'failed';
+            part.reason=userStopped?copy.cancelled:signal.aborted?copy.budget:copy.errors[failureCode];
+            return;
+          }
+          const result={...entry.value,callId:scheduled.call.id};results.push(result);part.resultRefs.push(scheduled.call.id);
+          part.status=result.proposal?'proposed':result.status==='needs_input'?'needs_input':result.status==='unsupported'?'unsupported':result.status==='error'?'failed':result.complete?'answered':'budget_limited';
+          if(!['answered','proposed'].includes(part.status))part.reason=result.text;
+        });
+      }
+    }
+    while (!directCalls && rounds < roundLimit() && steps++ < Math.max(5,roundLimit()+1)) {
       signal.throwIfAborted(); deps.onStage?.();
       const remaining = AGENT_LIMITS.deadlineMs - (Date.now() - now);
       if (remaining < 500) break;
       if(declared){
         messages[0]={role:"system",content:`Appelle les fonctions natives pour répondre avec les données réelles et les partIds enregistrés. ${fullPrompt}\nSorties demandées : ${JSON.stringify(parts)}\nContexte précédent : ${JSON.stringify(previousContext)}`};
-        messages[1]={role:"user",content:input.text+`\nIdentifiant du patient fourni par l’application : ${input.appContext.patientId??"aucun"}`};
+        messages[1]={role:"user",content:input.text+`\nPatient sélectionné : ${input.appContext.patientId?"oui":"non"}\nIdentifiant du patient fourni par l’application : ${input.appContext.patientId??"aucun"}`};
       }
       const selectedTools=new Set<string>(parts.filter(p=>p.status==="pending").flatMap(p=>p.tools??[]));
       if(!selectedTools.size&&!input.appContext.patientId&&parts.some(p=>p.conditions.length)&&parts.every(p=>!p.dependsOn.length))selectedTools.add("query_patients");
@@ -367,7 +464,8 @@ export async function runAgentLoop(input: TurnInput, deps: AgentLoopDependencies
          call.args={...call.args,mode:'count'};
         }
         const scopedParts=parts.filter(p=>Array.isArray(call.args['partIds'])&&call.args['partIds'].includes(p.id));
-        const readScope=scopedParts.length===1?frenchRequestAdmission(scopedParts[0]!.goal,false):admission;
+        const partScope=scopedParts.length===1?frenchRequestAdmission(scopedParts[0]!.goal,false):undefined;
+        const readScope=admission.profileOnly&&admission.tools?.includes(call.name)?admission:partScope?.tools?.includes(call.name)?partScope:admission;
         if(['query_consultations','query_documents'].includes(call.name)&&readScope.unboundedPeriod&&['period','from','to'].some(field=>call.args[field]!==undefined)){replies.set(call.id,'{"error":"UnrequestedConsultationPeriod"}');continue;}
         if(call.name==='query_documents'&&readScope.documentAllKinds&&call.args['kind']!==undefined){replies.set(call.id,'{"error":"UnrequestedDocumentKind"}');continue;}
         const bindings=frenchReadArgumentBindings(readScope,call.name);
@@ -410,8 +508,8 @@ export async function runAgentLoop(input: TurnInput, deps: AgentLoopDependencies
           parsed=schema.safeParse({...call.args,population:selected[0]!.population??"active",...(mode==="metrics"?{}:{filters:[...known.values()]}),...(query?{query}:{})});
         }
         const blocked = !declared || !parsed?.success || !ids.length || selected.length !== ids.length || selected.some(p => p.status!=="pending"||!partAllowsTool(p,call.name)||p.dependsOn.some(id => parts.find(q => q.id === id)?.status !== "answered"));
-        if (blocked || calls >= AGENT_LIMITS.calls) {
-          if(calls>=AGENT_LIMITS.calls)selected.forEach(p => { p.status="budget_limited";p.reason=copy.budget; });
+        if (blocked || calls >= AGENT_LIMITS.calls+noteContinuationBudget) {
+          if(calls>=AGENT_LIMITS.calls+noteContinuationBudget)selected.forEach(p => { p.status="budget_limited";p.reason=copy.budget; });
           replies.set(call.id,JSON.stringify({error:"InvalidArgumentsOrDependency",...(!parsed?.success&&parsed?{issues:parsed.error.issues.slice(0,6).map(issue=>({code:issue.code,path:issue.path}))}:{}),...(call.name==="query_patients"?{hint:"metrics requires mode=metrics; count/list/review omit metrics. Keep the registered partIds."}:{}),...(call.name==="query_finance"?{hint:"Choisir un mode financier explicite : overview pour chiffre d’affaires, recettes encaissées et bilan du cabinet (sans state ni patient) ; list/totals/group pour les lignes de paiement. Conserver les partIds et la période demandée."}:{}),pendingPartIds:parts.filter(p=>p.status==="pending").map(p=>p.id)})); continue;
         }
         calls++; batch.push({ call: { ...call, args: parsed.data! }, ids });
@@ -439,15 +537,21 @@ export async function runAgentLoop(input: TurnInput, deps: AgentLoopDependencies
           const targets = parts.filter(p => ids.includes(p.id));
           const missingCondition = targets.some(p => p.conditions.some(c => !result.conditionKeys.includes(conditionKey(c))));
           if (missingCondition && ["ok", "empty", "partial"].includes(result.status)) result = { callId: call.id, status: "unsupported", complete: false, evidence: [], text: copy.unsupported, conditionKeys: [], error: { code: "condition-not-applied", retryable: false } };
+          const nextNotePage=noteCursor(result);
+          if(nextNotePage)noteContinuationBudget=Math.max(noteContinuationBudget,nextNotePage.remainingPages);
           results.push(result);
           for (const p of targets) {
-            const outcomes=results.filter(r=>r.callId===call.id||p.resultRefs.includes(r.callId));
+            const outcomes=results.filter(r=>(r.callId===call.id||p.resultRefs.includes(r.callId))&&!noteCursor(r));
             const outcome=outcomes.find(r=>r.status==='error')??outcomes.find(r=>r.status==='unsupported')??outcomes.find(r=>r.status==='needs_input')??outcomes.find(r=>!r.complete&&!r.proposal)??outcomes.find(r=>r.proposal)??result;
-            p.status = outcome.proposal ? "proposed" : outcome.status === "needs_input" ? "needs_input" : outcome.status === "unsupported" ? "unsupported" : outcome.status === "error" ? "failed" : outcome.complete ? "answered" : "budget_limited";
-            p.resultRefs.push(call.id); if (!["answered", "proposed"].includes(p.status)) p.reason = outcome.text;
+            p.status = nextNotePage ? "pending" : outcome.proposal ? "proposed" : outcome.status === "needs_input" ? "needs_input" : outcome.status === "unsupported" ? "unsupported" : outcome.status === "error" ? "failed" : outcome.complete ? "answered" : "budget_limited";
+            p.resultRefs.push(call.id); if(nextNotePage)delete p.reason; else if(!["answered", "proposed"].includes(p.status))p.reason = outcome.text;
           }
-          const payload = JSON.stringify({ ...result, text: result.text.slice(0, 3000) });
-          replies.set(call.id,Buffer.byteLength(payload, "utf8") <= 8000 ? payload : JSON.stringify({ callId: call.id, status: result.status, complete: result.complete, summary: result.text.slice(0, 1200), evidence: result.evidence.slice(0, 6) }));
+          const modelTextLimit=call.name==="get_patient_context"&&call.args["section"]==="notes"?900:1800;
+          const modelResult={callId:result.callId,status:result.status,complete:result.complete,text:result.text.slice(0,modelTextLimit),conditionKeys:result.conditionKeys,
+            evidence:result.evidence.slice(0,24).map(({id,type,label})=>({id,type,label:label.slice(0,120)})),
+            ...(nextNotePage?{continuation:{available:true,tool:"get_patient_context",section:"notes",reusePrevious:true}}:{}),
+            ...(result.error?{error:result.error}:{}),...(result.proposal?{proposal:result.proposal}:{}),...(result.navigation?{navigation:result.navigation}:{}),...(result.presentation?{presentation:result.presentation}:{})};
+          replies.set(call.id,JSON.stringify(modelResult));
         }
       }
       for(const call of completion.calls)messages.push({role:"tool",tool_call_id:call.id,content:replies.get(call.id)??'{"error":"Unavailable"}'});

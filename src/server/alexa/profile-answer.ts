@@ -14,7 +14,7 @@ function requestedProfileFields(question:string):Field[]|null{
   if(!requested.has('phone_alt')||/\btelephones\b/u.test(plain)&&! /\bsecondaires?\b/u.test(plain)||/\bprincipal\b/u.test(plain))requested.add('phone');
  }
  if(/\bcoordonnees?\b/u.test(plain))for(const key of ['phone','phone_alt','address'] as const)requested.add(key);
- if(/\b(?:identite|cni|cin)|carte d.identite|piece d.identite/u.test(plain))requested.add('id_document_number');
+ if(/\b(?:identite|identification nationale|cni|cin|carte d.identite|carte nationale|piece d.identite|numero national)\b/u.test(plain))requested.add('id_document_number');
  if(/\b(?:delivr\w*|emetteur|autorite)\b/u.test(plain))requested.add('id_document_issuer');
  if(/\badresses?\b/u.test(plain))requested.add('address');
  if(/\bnaissance\b/u.test(plain))requested.add('birth_date');
@@ -34,16 +34,19 @@ export function profileAnswer(p:z.infer<typeof patientProfileSchema>,question:st
  const emergency=z.object({name:text.nullish(),relation:text.nullish(),phone:text.nullish()}).safeParse(p.emergency_contact);
  const contact=p.emergency_contact===null?copy.missing:emergency.success?Object.values(emergency.data).filter((value):value is string=>typeof value==='string'&&!!value.trim()).join(' · ')||copy.missing:JSON.stringify(p.emergency_contact);
  const fields=requestedProfileFields(question);if(!fields)return profileCopy.askField;
- const values=fields.map(key=>{
-  if(key==='emergency_contact')return copy.profile[key]+' : '+contact;
-  if(key==='is_active')return copy.profile[key]+' : '+(p.is_active?labels['active']:labels['inactive']);
+ const valueFor=(key:Field):string=>{
+  if(key==='emergency_contact')return contact;
+  if(key==='is_active')return labels[p.is_active?'active':'inactive']!;
   if(key==='age'){
    const birth=p.birth_date instanceof Date?p.birth_date.toISOString().slice(0,10):p.birth_date?.slice(0,10);
    const today=new Intl.DateTimeFormat('en-CA',{timeZone:'Africa/Algiers',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(z.iso.datetime({offset:true}).parse(asOf)));
    const years=birth?Number(today.slice(0,4))-Number(birth.slice(0,4))-(today.slice(5)<birth.slice(5)?1:0):null;
-   return profileCopy.ageLabel+' : '+(!birth?copy.missing:birth>today||!Number.isFinite(years)?profileCopy.invalidBirth:profileCopy.age(years!));
+   return !birth?copy.missing:birth>today||!Number.isFinite(years)?profileCopy.invalidBirth:profileCopy.age(years!);
   }
-  return copy.profile[key]+' : '+display(p[key]);
- });
- return profileCopy.one(p.first_name+' '+p.last_name,values.map(value=>value.replace(/\s+/gu,' ').trim()));
+  return display(p[key]);
+ };
+ const name=p.first_name+' '+p.last_name;
+ if(fields.length===1){const field=fields[0]!;return profileCopy.singleField(name,field,field==='age'?profileCopy.ageLabel:copy.profile[field],valueFor(field),copy.missing);}
+ const values=fields.map(key=>`${key==='age'?profileCopy.ageLabel:copy.profile[key]} : ${valueFor(key)}`);
+ return profileCopy.one(name,values.map(value=>value.replace(/\s+/gu,' ').trim()));
 }

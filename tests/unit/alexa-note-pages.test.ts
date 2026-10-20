@@ -20,6 +20,17 @@ it('reads quoted source data through the audited note gate with explicit page co
  expect(result.text).toContain(row.text);expect(result.text).toContain('partielle');expect(result.data).toMatchObject({noteQuery:{patientId:patient,consultationId:consultation},next:page.next});
  expect(result.evidence).toEqual(expect.arrayContaining([expect.objectContaining({id:consultation,type:'consultation',provenance:expect.objectContaining({area:'working',textOffset:0})})]));
 });
+it('resolves a named patient when a note search names only the Subjectif section',async()=>{
+ const nameInput={text:'Cherche la phrase « SUBJ-011-S01 » dans le Subjectif de Amina Meziane.',conversationId:'named-subjective-note',clientTurnId:'11111111-1111-4111-8111-111111111111',appContext:{patientId:null,page:'/jarvis'}};
+ const namedPage={...page,patientId:patient,total:1,complete:true,next:undefined,rows:[{...row,area:'subjective' as const,text:'Code de cette zone : SUBJ-011-S01.',textLength:33}]};
+ const rpc=vi.fn().mockImplementation(async(name:string)=>({ok:true,data:name==='search_patients'?[{id:patient,first_name:'Amina',last_name:'Meziane',total_count:1}]:name==='get_patient'?[{id:patient,first_name:'Amina',last_name:'Meziane'}]:[namedPage]}));
+ const execute=agentExecutor(nameInput,{rpc},{rpc:vi.fn()});
+ const result=await execute({id:'named-note',name:'get_patient_context',args:{partIds:['named-note'],section:'notes',area:'subjective',query:'SUBJ-011-S01'}},'2026-10-20T11:00:00Z',[],new AbortController().signal);
+ const noteRead=rpc.mock.calls.find(c=>c[0]==='query_alexa_note_sections');
+ expect(result.status).toBe('ok');expect(result.patientId).toBe(patient);expect(result.text).toContain('SUBJ-011-S01');
+ expect(JSON.parse((noteRead?.[1] as {p_spec:string}).p_spec)).toMatchObject({patientId:patient,query:'SUBJ-011-S01'});
+ expect(result.evidence).toContainEqual(expect.objectContaining({id:consultation,type:'consultation',provenance:expect.objectContaining({area:'subjective'})}));
+});
 it('refuses an invented consultation reference before reading its contents',async()=>{
  const {rpc,execute}=executor();const result=await execute({id:'n',name:'get_patient_context',args},'2026-10-15T12:00:00Z',[],new AbortController().signal);
  expect(result.status).toBe('needs_input');expect(rpc.mock.calls.some(c=>c[0]==='query_alexa_note_sections')).toBe(false);

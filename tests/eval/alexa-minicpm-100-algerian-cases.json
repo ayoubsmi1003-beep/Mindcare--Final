@@ -174,9 +174,6 @@
       },
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
           "query_app"
         ]
       ],
@@ -193,7 +190,7 @@
         "noBusinessWrite": true,
         "textIncludes": [
           "notification",
-          "0"
+          "Aucune"
         ],
         "rpcResults": [
           {
@@ -418,7 +415,7 @@
             "type": "consultation",
             "id": "b5100000-0000-4000-8000-000000000006",
             "provenance": {
-              "area": "structured"
+              "area": "working"
             }
           }
         ],
@@ -1280,9 +1277,6 @@
       },
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
           "query_app"
         ]
       ],
@@ -1299,7 +1293,7 @@
         "noBusinessWrite": true,
         "textIncludes": [
           "notification",
-          "0"
+          "Aucune"
         ],
         "rpcResults": [
           {
@@ -1514,7 +1508,7 @@
             "type": "consultation",
             "id": "b5100000-0000-4000-8000-000000000012",
             "provenance": {
-              "area": "structured"
+              "area": "working"
             }
           }
         ],
@@ -2051,9 +2045,6 @@
       },
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
           "query_app"
         ]
       ],
@@ -2070,7 +2061,7 @@
         "noBusinessWrite": true,
         "textIncludes": [
           "notification",
-          "0"
+          "Aucune"
         ],
         "rpcResults": [
           {
@@ -2285,7 +2276,7 @@
             "type": "consultation",
             "id": "b5100000-0000-4000-8000-000000000018",
             "provenance": {
-              "area": "structured"
+              "area": "working"
             }
           }
         ],
@@ -2759,9 +2750,6 @@
       },
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
           "navigate"
         ]
       ],
@@ -2981,7 +2969,7 @@
             "type": "consultation",
             "id": "b5100000-0000-4000-8000-000000000024",
             "provenance": {
-              "area": "structured"
+              "area": "working"
             }
           }
         ],
@@ -3454,9 +3442,6 @@
       },
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
           "navigate"
         ]
       ],
@@ -3676,7 +3661,7 @@
             "type": "consultation",
             "id": "b5100000-0000-4000-8000-000000000030",
             "provenance": {
-              "area": "structured"
+              "area": "working"
             }
           }
         ],
@@ -3953,8 +3938,15 @@
         "status": "completed",
         "exactParts": 2,
         "noBusinessWrite": true,
-        "textIncludes": [
-          null
+        "responseFields": [
+          {
+            "label": "Téléphone",
+            "value": "Non renseigné",
+            "source": {
+              "type": "patient",
+              "id": "b5000000-0000-4000-8000-000000000001"
+            }
+          }
         ],
         "count": 1
       },
@@ -4029,9 +4021,6 @@
         "page": "/jarvis"
       },
       "permittedToolSequence": [
-        [
-          "declare_request"
-        ],
         [
           "navigate"
         ]
@@ -4252,7 +4241,7 @@
             "type": "consultation",
             "id": "b5100000-0000-4000-8000-000000000036",
             "provenance": {
-              "area": "structured"
+              "area": "working"
             }
           }
         ],
@@ -4610,9 +4599,6 @@
       },
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
           "navigate"
         ]
       ],
@@ -4832,7 +4818,7 @@
             "type": "consultation",
             "id": "b5100000-0000-4000-8000-000000000042",
             "provenance": {
-              "area": "structured"
+              "area": "working"
             }
           }
         ],
@@ -5189,9 +5175,6 @@
       },
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
           "navigate"
         ]
       ],
@@ -5411,7 +5394,7 @@
             "type": "consultation",
             "id": "b5100000-0000-4000-8000-000000000048",
             "provenance": {
-              "area": "structured"
+              "area": "working"
             }
           }
         ],
@@ -5711,9 +5694,6 @@
       },
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
           "navigate"
         ]
       ],
@@ -5933,7 +5913,7 @@
             "type": "consultation",
             "id": "b5100000-0000-4000-8000-000000000054",
             "provenance": {
-              "area": "structured"
+              "area": "working"
             }
           }
         ],
@@ -6233,9 +6213,6 @@
       },
       "permittedToolSequence": [
         [
-          "declare_request"
-        ],
-        [
           "navigate"
         ]
       ],
@@ -6455,7 +6432,7 @@
             "type": "consultation",
             "id": "b5100000-0000-4000-8000-000000000060",
             "provenance": {
-              "area": "structured"
+              "area": "working"
             }
           }
         ],

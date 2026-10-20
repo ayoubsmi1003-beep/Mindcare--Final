@@ -33,6 +33,11 @@ describe("Alexa patient identity grammar stays local and explicit", () => {
     ["traitement du Parkinson", "Parkinson"],
     ["Lis les notes de travail de Ayoub Salmi", "Ayoub Salmi"],
     ["Lis le dossier du patient «Travail»", "Travail"],
+    ["Peux-tu vérifier si Samir Ferhat a un numéro de carte d’identité ?", "Samir Ferhat"],
+    ["Quel est l’identifiant de la carte nationale de Sarah Boudiaf ?", "Sarah Boudiaf"],
+    ["Le dossier de Riad Khelifi contient-il un numéro de CNI ?", "Riad Khelifi"],
+    ["Cherche la phrase « SUBJ-011-S01 » dans le Subjectif de Amina Meziane.", "Amina Meziane"],
+    ["Cherche le code « SUBJ-015-S01 » dans la partie subjective de Dounia Ghani.", "Dounia Ghani"],
   ])("extracts only the stated patient name: %s", (text, name) => {
     expect(parsePatientMention(text)).toEqual({ status: "named", name });
   });
@@ -135,6 +140,15 @@ it.each([
 });
 it('keeps two explicit alphanumeric labels ambiguous', () => {
  expect(parsePatientMention('Compare Patient 01 Evaluation et Patient 02 Evaluation.')).toEqual({status:'ambiguous'});
+});
+it.each([
+ ['Cherche la référence «REPERE-001-S06» dans les notes de Patient Test001.','Patient Test001'],
+ ['Quel est le numéro de carte d’identité de Patient Test050 ?','Patient Test050'],
+])('resolves a named synthetic test label with a trailing numeric suffix: %s',(text,name)=>{
+ expect(parsePatientMention(text)).toEqual({status:'named',name});
+});
+it('keeps two named synthetic test labels ambiguous',()=>{
+ expect(parsePatientMention('Compare les notes de Patient Test001 et Patient Test002.')).toEqual({status:'ambiguous'});
 });
 it('does not promote a patient age to an alphanumeric identity', () => {
  expect(parsePatientMention('Lis les notes du patient de 18 ans.')).toEqual({status:'none'});
