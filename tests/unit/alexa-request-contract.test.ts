@@ -21,6 +21,18 @@ it('compiles a bounded list of French patient metrics before native dispatch',()
  ]);
  expect(countContractParts(contract!).map(part=>part.tools)).toEqual(Array(4).fill(['query_patients']));
 });
+it('normalizes common French four-metric list phrasings to the same closed conditions',()=>{
+ const inputs=[
+  'Indique séparément le nombre d’actifs, de numéros d’identité manquants, de patients mineurs et d’absences de consultation sur six mois.',
+  'Fais un bilan en quatre points : effectif actif, identité manquante, patients de moins de 18 ans, absence de consultation clôturée depuis six mois.',
+  'Quels sont les quatre nombres correspondants aux patients actifs, aux CNI manquantes, aux moins de 18 ans et aux patients sans visite terminée sur six mois ?',
+ ];
+ for(const text of inputs){
+  const contract=frenchPatientCountContract(text);
+  expect(contract?.clauses,text).toHaveLength(4);
+  expect(countContractHints(contract!).map(item=>item.conditions)).toEqual([[],['identity_card:missing'],['age:lt:18'],['no_completed_months:eq:6']]);
+ }
+});
 it('splits a named-patient note question from its completed-consultation count',()=>{
  const text='Pour Amel Bensaid, quel est le thème récurrent des notes et combien de consultations terminées sont enregistrées ?';
  const outputs=frenchRequestedOutputs(text);

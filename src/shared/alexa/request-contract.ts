@@ -30,8 +30,8 @@ function separateMetricClauses(text:string):readonly string[]|null|undefined{
 }
 /** An output constraint only: it never chooses a gate, queries records or invents an answer. */
 export function frenchPatientCountContract(text:string):FrenchCountContract|null {
- const separate=separateMetricClauses(text);if(separate!==undefined)return separate?{clauses:separate}:null;
  const enumerated=enumeratedPatientMetricClauses(text);if(enumerated!==undefined)return enumerated?{clauses:enumerated}:null;
+ const separate=separateMetricClauses(text);if(separate!==undefined)return separate?{clauses:separate}:null;
  const plain=fold(text),combien=[...text.matchAll(/\bcombien\b/giu)],starts=(combien.length?combien:[...text.matchAll(/\b(?:nombre(?:\s+total)?|total|effectif|d[ée]compte|taille(?=\s+de\s+la\s+patient[èe]le)|compte(?:r|z)?(?=\s+(?:tous|toutes|les?|des?|patients?|dossiers?|fiches?)))/giu)]).map(m=>m.index);
  const presentation=[...plain.matchAll(/\b(?:donne|affiche|montre)\w*/gu)],singleLeadingPresentation=presentation.length===1&&presentation[0]!.index===0&&presentation[0]!.index<starts[0]!;
  if(!starts.length||! /\b(?:patients?|dossiers?|fiches?|patientele)\b/u.test(plain)||/\b(?:lis|lire|expliqu\w*|resum\w*|detaill\w*|compar\w*|list\w*|lesquels|lesquelles|prepar\w*|cre[er]\w*|modifi\w*|annul\w*|ouvre\w*)\b|\b(?:leurs?|les)\s+noms?\b/u.test(plain)||(presentation.length>0&&!singleLeadingPresentation))return null;
@@ -46,14 +46,14 @@ export function frenchPatientCountContract(text:string):FrenchCountContract|null
 }
 /** Recognize a closed list of patient metrics following one explicit count verb. */
 function enumeratedPatientMetricClauses(text:string):readonly string[]|undefined{
- const prefix=text.match(/^\s*(?:pour\s+le\s+cabinet\s*,\s*)?(?:compte(?:r|z)?|d[ée]nombre(?:r|z)?|calcule(?:r|z)?|donne(?:r|z)?\s+(?:le|les)?)\s+/iu);
+ const prefix=text.match(/^\s*(?:pour\s+le\s+cabinet\s*,\s*)?(?:compte(?:r|z)?|d[ée]nombre(?:r|z)?|calcule(?:r|z)?|donne(?:r|z)?\s+(?:le|les)?|donne(?:r|z)?\s+(?:quatre\s+)?chiffres?\s*:\s*|indique(?:r|z)?\s+(?:s[ée]par[ée]ment\s+)?le\s+nombre\s+d[’']|fais\s+(?:un\s+)?bilan\s+en\s+quatre\s+points?\s*:\s*|quels?\s+sont\s+les\s+quatre\s+nombres?\s+correspondants?\s+aux?|je\s+veux\s+(?:le\s+)?total\s+(?:de|des))(?:\s+|(?=actifs?\b))/iu);
  if(!prefix)return undefined;
  const tail=text.slice(prefix[0].length),clauses=tail.split(/[,;]|\b(?:et|puis)\b/iu).map(clause=>clause.trim().replace(/^[,;\s]+|[,;\s?.!]+$/gu,'')).filter(Boolean);
  if(clauses.length<2||clauses.length>7)return undefined;
  if(/\b(?:agenda|rendez[- ]?vous|rdv|recettes?|revenus?|charges?|documents?|emails?|courriels?)\b/u.test(fold(tail)))return undefined;
  const metricFor=(clause:string):string|null=>{
   const plain=fold(clause),conditions=explicitConditions(clause)??[];
-  if(!conditions.length&&/\b(?:patients?|dossiers?)\s+actifs?\b/u.test(plain)&&! /\b(?:sans|aucun\w*|pas|manquant\w*)\b/u.test(plain))return 'active';
+  if(!conditions.length&&(/\b(?:patients?|dossiers?)\s+actifs?\b|\beffectif\s+actif\b|^actifs?$\b/u.test(plain))&&! /\b(?:sans|aucun\w*|pas|manquant\w*)\b/u.test(plain))return 'active';
   if(conditions.length!==1)return null;
   const condition=conditions[0]!;
   if(condition.field==='identity_card'&&condition.op==='missing')return 'missing_identity_card';
@@ -69,10 +69,10 @@ function enumeratedPatientMetricClauses(text:string):readonly string[]|undefined
  return clauses;
 }
 const key=(c:SupportedCondition)=>JSON.stringify([c.field,c.op,c.value]);
-const mentions:Record<SupportedCondition['field'],RegExp>={phone:/\b(?:telephones?|portables?|mobiles?)\b/u,identity_card:/\b(?:identite|identification nationale|cni|carte nationale|carte d[' ]?identite|piece d[' ]?identite|document d[' ]?identite|numero national)\b/u,birth_date:/\b(?:naissance|age)\b/u,sex:/\bsexe\b/u,age:/\b(?:age|ages?|ans?|anniversaires?|adultes?|majeurs?|enfants?|mineurs?)\b/u,completed_consultations:/\b(?:consult\w*|seances?|vus?|recus?)\b/u,outstanding_balance:/\b(?:soldes?|impayes?|dettes?|encaisse\w*|paiements?)\b/u,no_completed_days:/\b(?:consult\w*|seances?|assiste\w*|vus?|recus?)\b/u,no_completed_months:/\b(?:consult\w*|seances?|assiste\w*|vus?|recus?)\b/u,administrative_incomplete:/\b(?:administrati\w*|dossiers?)\b/u};
+const mentions:Record<SupportedCondition['field'],RegExp>={phone:/\b(?:telephones?|portables?|mobiles?)\b/u,identity_card:/\b(?:identite|identification nationale|cni|carte nationale|carte d[' ]?identite|piece d[' ]?identite|document d[' ]?identite|numero national)\b/u,birth_date:/\b(?:naissance|age)\b/u,sex:/\bsexe\b/u,age:/\b(?:age|ages?|ans?|anniversaires?|adultes?|majeurs?|enfants?|mineurs?)\b/u,completed_consultations:/\b(?:consult\w*|seances?|vus?|recus?|visites?|suivis?)\b/u,outstanding_balance:/\b(?:soldes?|impayes?|dettes?|encaisse\w*|paiements?)\b/u,no_completed_days:/\b(?:consult\w*|seances?|assiste\w*|vus?|recus?|visites?|suivis?)\b/u,no_completed_months:/\b(?:consult\w*|seances?|assiste\w*|vus?|recus?|visites?|suivis?)\b/u,administrative_incomplete:/\b(?:administrati\w*|dossiers?)\b/u};
 /** Predicate admission is independent of a model-generated goal or cited database value. */
 export function patientConditionsGrounded(conditions:readonly SupportedCondition[],text:string):boolean {
- const plain=fold(text),missing=/\bsans\b|\baucun\w*\b|\bpas\b|\bmanquant\w*\b|\bmanque\w*\b|\bnuls?\b|\babsent\w*\b|\binconnu\w*\b|\bnon\s+(?:renseigne\w*|enregistre\w*)\b|\bvides?\b/u.test(plain);
+  const plain=fold(text),missing=/\bsans\b|\baucun\w*\b|\bpas\b|\bmanquant\w*\b|\bmanque\w*\b|\bnuls?\b|\babsences?\b|\babsent\w*\b|\binconnu\w*\b|\bnon\s+(?:renseigne\w*|enregistre\w*)\b|\bvides?\b/u.test(plain);
  const numeric=['age','completed_consultations','outstanding_balance'] as const;
  for(const field of numeric){let min=Number.NEGATIVE_INFINITY,max=Number.POSITIVE_INFINITY;for(const c of conditions.filter(item=>item.field===field&&typeof item.value==='number')){const n=c.value as number;if(c.op==='gte')min=Math.max(min,n);if(c.op==='gt')min=Math.max(min,n+1);if(c.op==='lt')max=Math.min(max,n-1);if(c.op==='eq'){min=Math.max(min,n);max=Math.min(max,n);}}if(min>max)return false;}
  const explicit=explicitConditions(text)??[];
@@ -85,7 +85,7 @@ export function patientConditionsGrounded(conditions:readonly SupportedCondition
 /** Conservative checks for the explicit count vocabulary already in the capability contract. */
 function explicitConditions(text:string):SupportedCondition[]|null {
  const numbers:Record<string,string>={zero:'0',un:'1',une:'1',deux:'2',trois:'3',quatre:'4',cinq:'5',six:'6',sept:'7',huit:'8',neuf:'9',dix:'10',onze:'11',douze:'12',treize:'13',quatorze:'14',quinze:'15',seize:'16','dix-sept':'17','dix-huit':'18','dix-huitieme':'18','dix-neuf':'19',vingt:'20'};
- const value=fold(text).replace(/\b(?:dix[- ]huitieme|dix[- ](?:sept|huit|neuf)|zero|un|une|deux|trois|quatre|cinq|six|sept|huit|neuf|dix|onze|douze|treize|quatorze|quinze|seize|vingt)\b/gu,word=>numbers[word.replace(/ /gu,'-')]!),conditions:SupportedCondition[]=[],missing=/\bsans\b|\baucun\w*\b|\bpas\b|\bmanquant\w*\b|\bmanque\w*\b|\bnuls?\b|\babsent\w*\b|\bnon\s+(?:renseigne\w*|enregistre\w*)\b|\bvides?\b/u.test(value);
+  const value=fold(text).replace(/\b(?:dix[- ]huitieme|dix[- ](?:sept|huit|neuf)|zero|un|une|deux|trois|quatre|cinq|six|sept|huit|neuf|dix|onze|douze|treize|quatorze|quinze|seize|vingt)\b/gu,word=>numbers[word.replace(/ /gu,'-')]!),conditions:SupportedCondition[]=[],missing=/\bsans\b|\baucun\w*\b|\bpas\b|\bmanquant\w*\b|\bmanque\w*\b|\bnuls?\b|\babsences?\b|\babsent\w*\b|\bnon\s+(?:renseigne\w*|enregistre\w*)\b|\bvides?\b/u.test(value);
  const add=(field:SupportedCondition['field'],op:SupportedCondition['op'],n:SupportedCondition['value'])=>{const condition={field,op,value:n};if(!conditions.some(existing=>key(existing)===key(condition)))conditions.push(condition);};
  if(missing&&/\b(?:identite|identification nationale|cni|carte nationale|carte d[' ]?identite|piece d[' ]?identite|document d[' ]?identite|numero national)\b/u.test(value))add('identity_card','missing',null);
  if(missing&&/\btelephones?\b/u.test(value))add('phone','missing',null);
@@ -94,7 +94,7 @@ function explicitConditions(text:string):SupportedCondition[]|null {
  if(/\b(?:enfants?|mineurs?)\b|moins de\s*18\s*ans|pas encore\s*18\s*ans|pas atteint\s+(?:leur\s+)?18\s+anniversaire/u.test(value))add('age','lt',18);
  else if(/\b(?:adultes?|majeurs?)\b|(?:au moins\s+18\s+ans?|18\s+ans?\s+ou\s+plus)/u.test(value))add('age','gte',18);
  for(const match of value.matchAll(/\b(moins de|au moins|plus de)\s*(\d+)\s*ans?\b/gu)){const age=Number(match[2]);if(age<=120)add('age',match[1]==='moins de'?'lt':match[1]==='au moins'?'gte':'gt',age);}
- if(missing&&/\bconsult\w*\b/u.test(value)&&/(?:six|6)\s+(?:derniers?\s+)?mois/u.test(value))add('no_completed_months','eq',6);
+  if(missing&&/\b(?:consult\w*|visites?|suivis?)\b/u.test(value)&&/(?:six|6)\s+(?:derniers?\s+)?mois/u.test(value))add('no_completed_months','eq',6);
  const recent=/\b(?:aucune?|sans|pas de)\s+(?:consultations?|seances?|visites?)\s+(?:(?:termine|cloture|complete|clos|acheve)\w*\s+)?(?:depuis|dans les|au cours des)\s+(\d+)\s+(?:derniers\s+)?jours/gu;
  for(const m of value.matchAll(recent))if(Number(m[1])>0&&Number(m[1])<=3650)add('no_completed_days','eq',Number(m[1]));
  const minimum=/(?:au moins|au minimum|minimum(?: de)?|>=)\s*(\d+)\s+(?:consultations?|seances?)\s+(?:termine|cloture|complete|clos|acheve)\w*/gu;
