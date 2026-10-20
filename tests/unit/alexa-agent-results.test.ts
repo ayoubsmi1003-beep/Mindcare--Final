@@ -1,6 +1,20 @@
 import { expect, it, vi } from 'vitest';
 import { agentExecutor } from '@/server/alexa/agent-tools';
 import {queryPatientsSchema} from '@/shared/alexa/agent';
+it.each([
+ ['2026-10-20T11:00:00Z','2026-10-21T08:00:00Z','demain à 9 h'],
+ ['2026-10-20T23:30:00Z','2026-10-21T08:30:00Z',"aujourd’hui à 9 h 30"],
+])('renders agenda dates naturally in French using the frozen Algiers day: %s',async(asOf,at,expected)=>{
+ const appointmentId='33333333-3333-4333-8333-333333333333',patientId='22222222-2222-4222-8222-222222222222';
+ const row={id:appointmentId,patientId,label:'Amel Bensaid',at,status:'confirmed',amount:null};
+ const rpc=vi.fn().mockResolvedValue({ok:true,data:[{total:1,rows:[row],totals:{},complete:true,offset:0}]});
+ const execute=agentExecutor({text:'Montre les rendez-vous du cabinet.',conversationId:'french-agenda',clientTurnId:crypto.randomUUID(),appContext:{patientId:null,page:'/jarvis'}},{rpc},{rpc:vi.fn()});
+ const result=await execute({id:'agenda',name:'query_agenda',args:{partIds:['agenda'],from:'2026-10-21T00:00:00+01:00',to:'2026-10-22T00:00:00+01:00'}},asOf,[],new AbortController().signal);
+ expect(result.text).toContain(expected);expect(result.text).toContain('Amel Bensaid');expect(result.text).toContain('1 rendez-vous');
+ expect(result.text).not.toMatch(/\b(?:AM|PM)\b|Résultat\(s\)/u);
+ expect(result.data).toMatchObject({total:1,rows:[row]});expect(result.evidence).toContainEqual(expect.objectContaining({id:appointmentId,type:'appointment'}));
+ expect(rpc.mock.calls[0]?.[0]).toBe('query_alexa_records');expect(rpc.mock.calls[0]?.[1].p_as_of).toBe(asOf);
+});
 it.each(['Affiche son profil.','Affiche son profil. ملاحظة'])('reads the full profile with French framing: %s',async text=>{
  const patientId='22222222-2222-4222-8222-222222222222';
  const profile={id:patientId,record_number:'EVAL-PROFILE',first_name:'Patiente',last_name:'Fictive',birth_date:'1988-02-03',phone:'0550000000',phone_alt:'0660000000',id_document_number:'ID-FICTIF',id_document_issuer:'Commune fictive',sex:'F',marital_status:'marie',address:'Adresse fictive à Alger',emergency_contact:{name:'Contact fictif',relation:'Sœur',phone:'0770000000'},notes_admin:'Préfère le matin',is_active:true};

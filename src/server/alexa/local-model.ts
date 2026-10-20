@@ -14,7 +14,7 @@ import { assertLocalContextFits, buildLocalRequest, localModelTimeoutMs, parseLo
 
 export const LOCAL_MODEL_PIN = {
   model: ALEXA_CONVERSATION_MODEL,
-  sha256: "57a1085840f497d764a7fc5d346922dbde961efb54cc792ea81d694fd846a1d8",
+  sha256: "588c6c94c82f756b86dba35c42ed9ba9ec187d65824eb52f039c347df563e63d",
   architecture: "qwen35", runtime: "b11429",
   archiveSha256: "1283323272b04cd07905816a597a0da810918102de958f4ff6f7bbaa70ed2efe",
   runtimeManifestSha256: "a57e54357f5ca5a5fa0d70de662a076fc2150232bccd183abaf5d83982694465",

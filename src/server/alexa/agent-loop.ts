@@ -228,7 +228,11 @@ export async function runAgentLoop(input: TurnInput, deps: AgentLoopDependencies
           if(tool.function.name==='get_patient_context'){if(toolAdmission.patientSection!=='diagnoses')for(const field of ['diagnosisState','diagnosisRole'])delete properties[field];if(toolAdmission.patientSection!=='treatments')delete properties['treatmentState'];}
           if(tool.function.name==='get_patient_context'&&toolAdmission.patientSection){
            properties['section']={type:'string',enum:[toolAdmission.patientSection]};
-           if(toolAdmission.patientSection==='notes'){delete properties['count'];if(!noteSearchRequested(input.text))delete properties['query'];}
+           if(toolAdmission.patientSection==='notes'){
+            delete properties['count'];if(!noteSearchRequested(input.text))delete properties['query'];
+            if(toolAdmission.unboundedPeriod){delete properties['from'];delete properties['to'];}
+            if(!toolAdmission.consultationStatus)delete properties['status'];
+           }
            else for(const field of ['consultationId','area','query','from','to','status','offset','textOffset','maxCharacters','revision','reusePrevious'])delete properties[field];
           }
          if(tool.function.name==='query_app'&&toolAdmission.applicationView){

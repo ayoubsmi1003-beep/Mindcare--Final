@@ -6,8 +6,8 @@ import { normaliserModeleGratuit, type ModeleGratuit } from "@/server/egress/mod
  * Gemini is restricted to a confirmed unpaid project and synthetic deployment.
  */
 /** Current delivery pins. All active Alexa transports import these values. */
-export const ALEXA_CONVERSATION_MODEL = "Qwen_Qwen3.5-2B-Q4_K_M.gguf";
-// Retained provider pin for dormant cloud qualification; conversation uses local Qwen3.5.
+export const ALEXA_CONVERSATION_MODEL = "MiniCPM-V-4_7-1B-Q4_K_M.gguf";
+// Retained provider pin for dormant cloud qualification; conversation uses local MiniCPM.
 export const ALEXA_DIRECT_MODEL = "gemini-3.5-flash";
 export const ALEXA_STT_MODEL = "gemini-3.5-transcribe";
 export const ALEXA_TTS_MODEL = "gemini-3.8-flash-tts";

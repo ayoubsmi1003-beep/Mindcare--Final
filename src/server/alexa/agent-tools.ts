@@ -12,7 +12,7 @@ import {readApplication,readFinanceView,readAppointment} from "./application-rea
 import {notePageResult} from "./note-pages";
 import {noteReadQuerySchema,noteCursorSchema,noteContinuation,noteQueryGrounded,documentBodySearchRequested} from "@/shared/alexa/note-query";
 import {clinicalSectionComplete} from "./clinical-coverage";
-import {alexaRecordCopy} from "@/i18n/alexa-records";
+import {alexaRecordCopy,frenchAgendaCopy} from "@/i18n/alexa-records";
 import {documentText,issuedDocumentText} from './document-excerpt';
 import {documentPage} from './document-page';
 import { z } from "zod";
@@ -288,7 +288,12 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    const value=recordResult.parse(await rpc("query_alexa_records",{p_domain:call.name.slice(6),p_spec:JSON.stringify(spec),p_as_of:asOf},signal));
    result.data={...value,...(call.name==="query_agenda"?{agendaPatientIds:[...new Set(value.rows.flatMap(r=>r.patientId?[r.patientId]:[]))],hasMore:value.offset+value.rows.length<value.total}:{})};
    result.evidence=value.rows.map((r):AlexaSource=>({id:call.name==="query_finance"&&r.patientId?r.patientId:r.id,type:call.name==="query_agenda"?"appointment":call.name==="query_documents"?"document":call.name==="query_finance"?"patient":"consultation",label:r.label,...(r.status==="draft"?{provenance:{draftId:r.id}}:call.name==="query_finance"?{provenance:{paymentId:r.id}}:{})}));
-   result.text=call.name==='query_consultations'&&spec['mode']==='count'?applicationReadCopy.consultationCount(value.total,spec['status']):`${value.total} ${recordsCopy.count}\n`+value.rows.map(r=>`${label(r.label)} — ${r.at?new Date(r.at).toLocaleString(language==="fr"?"fr-DZ":"ar-DZ",{timeZone:"Africa/Algiers"}):""} — ${label(r.status)}${r.amount!==null?` — ${r.amount} DZD`:""}`).join("\n");
+   if(call.name==='query_agenda'){
+    result.text=[frenchAgendaCopy.count(value.total),...value.rows.map(r=>{
+     const when=r.at?frenchAgendaCopy.when(relativeClinicalDate(r.at,asOf),new Intl.DateTimeFormat('fr-FR',{timeZone:'Africa/Algiers',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).format(new Date(r.at))):'';
+     return frenchAgendaCopy.row(label(r.label),when,label(r.status));
+    })].join('\n');
+   }else result.text=call.name==='query_consultations'&&spec['mode']==='count'?applicationReadCopy.consultationCount(value.total,spec['status']):`${value.total} ${recordsCopy.count}\n`+value.rows.map(r=>`${label(r.label)} — ${r.at?new Date(r.at).toLocaleString(language==="fr"?"fr-DZ":"ar-DZ",{timeZone:"Africa/Algiers"}):""} — ${label(r.status)}${r.amount!==null?` — ${r.amount} DZD`:""}`).join("\n");
    result.evidence.unshift({id:call.id,type:"query",label:recordsCopy.count+" : "+value.total,provenance:{gate:"query_alexa_records",domain:call.name.slice(6),asOf}});
    if(Object.keys(value.totals).length)result.text+="\n"+Object.entries(value.totals).map(([k,n])=>`${label(k)} : ${n}`).join("\n");
    if(call.name==="query_finance"&&(spec["from"]||spec["to"]))result.text+="\n"+(spec["state"]==="collected"?recordsCopy.dateCollected:recordsCopy.dateCreated);

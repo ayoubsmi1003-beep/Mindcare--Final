@@ -55,7 +55,7 @@ export function evaluateAlexaCase(spec,record){
  strictCheck(expected.sourceSets,'sourceSets',required=>'exact emitted record set: '+required.type,required=>{const ids=[...new Set(sentences.flatMap(sentence=>sentence.sources??[]).filter(source=>source.type===required.type).map(source=>source.id))];return Array.isArray(required.ids)&&isDeepStrictEqual(ids,required.ids);});
  if(expected.proposal){const proposals=record.events.filter(event=>event.type==='proposal');const exact=proposals.length===1&&subset(proposals[0],expected.proposal);check(exact,'exact action proposal');qualification.proposal=exact?'PASS':'FAIL';}
  for(const required of expected.rpcReads??[])check(record.queries.some(q=>q.name===required.name&&subset(readArgs(q.args),required.args??{})),"required authoritative read: "+required.name);
- for(const required of expected.toolArguments??[])check(record.calls.some(c=>c.name===required.name&&subset(c.args,required.args??{})),"requested tool arguments: "+required.name);
+ for(const required of expected.toolArguments??[])check(record.calls.some(c=>c.name===required.name&&subset(c.effectiveArgs??c.args,required.args??{})),"requested tool arguments: "+required.name);
  if(expected.generalAnswer){check(sentences.some(s=>s.sources?.some(source=>source.type==="query"&&source.provenance?.gate==="local_model")),"admitted local general answer provenance");check(record.queries.length===0,"general answer does not query cabinet data");}
  if(expected.requiresEvidence)check(sentences.some(s=>s.sources?.some(source=>source.type==="knowledge")),"approved medical reference evidence");
  if(expected.status)check(done?.status===expected.status,'terminal state');

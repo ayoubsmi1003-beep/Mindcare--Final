@@ -4,7 +4,7 @@ const { local, cloud } = vi.hoisted(() => ({
 }));
 vi.mock("@/server/alexa/local-model", () => ({
   inferLocalText: local,
-  LOCAL_MODEL_PIN: { model: "Qwen_Qwen3.5-2B-Q4_K_M.gguf" },
+  LOCAL_MODEL_PIN: { model: "MiniCPM-V-4_7-1B-Q4_K_M.gguf" },
 }));
 vi.mock("@/server/egress/external-call", () => ({ appelGeminiDirect: cloud }));
 import { inferAlexa, inferGeneralAlexa } from "@/server/alexa/model-gateway";
@@ -26,7 +26,7 @@ it("answers an admitted public question locally even when a Gemini key exists", 
   vi.stubEnv("GEMINI_API_KEY", "synthetic-key");
   local.mockResolvedValue("La lumière se disperse dans les gouttes d’eau.");
   expect(await inferGeneralAlexa("Comment se forme un arc-en-ciel ?", { openGeneral: true }))
-    .toMatchObject({ ok: true, model: "Qwen_Qwen3.5-2B-Q4_K_M.gguf" });
+    .toMatchObject({ ok: true, model: "MiniCPM-V-4_7-1B-Q4_K_M.gguf" });
   expect(local.mock.calls[0]![0]).toEqual([
     expect.objectContaining({ role: "system" }), { role: "user", content: "Comment se forme un arc-en-ciel ?" },
   ]);
@@ -38,7 +38,7 @@ it.each([false, true])("validates coded facts for the buffered path (onSentence=
     { text: "recorded fact", evidence: [payload.facts[0]!.evidence], kind: "fact" },
   ] }));
   const result = await inferAlexa(payload, streaming ? { onSentence: async sentence => { published.push(sentence.text); } } : {});
-  expect(result).toMatchObject({ ok: true, model: "Qwen_Qwen3.5-2B-Q4_K_M.gguf" });
+  expect(result).toMatchObject({ ok: true, model: "MiniCPM-V-4_7-1B-Q4_K_M.gguf" });
   expect(JSON.stringify(local.mock.calls[0]![0])).not.toContain("fixture-local");
   if (streaming) expect(published).toHaveLength(1);
   expect(cloud).not.toHaveBeenCalled();

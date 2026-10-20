@@ -39,3 +39,21 @@ it('does not offer free-text search for an unfiltered note-area read, and recove
  },execute:async c=>{executed++;expect(c.args).toMatchObject({section:'notes',area:'subjective'});expect(c.args).not.toHaveProperty('query');return {callId:c.id,status:'ok',complete:true,text:'Subjectif enregistré.',conditionKeys:[],evidence:[]};}},new AbortController().signal);
  expect(result.status).toBe('completed');expect(offered).toBe(false);expect(executed).toBe(1);
 });
+it('does not offer note date or status filters unless the request includes them',async()=>{
+ const text='Cherche la référence « REPERE-001-S06 » dans les notes de Amel Bensaid.';let step=0,offered:string[]=[];
+ const result=await runAgentLoop({text,conversationId:'note-filter-schema',clientTurnId:'11111111-1111-4111-8111-111111111112',appContext:{patientId:null,page:'/jarvis'}},{actor:'note-filter-schema',infer:async(_messages,options)=>{
+  if(step++===0)return {kind:'calls',calls:[{id:'declare',name:'declare_request',args:{parts:[{id:'n',goal:text,tool:'get_patient_context',conditions:[],dependsOn:[]}]}}],message:{role:'assistant',content:null,tool_calls:[]},tokensIn:1,tokensOut:1};
+  const schema=options.tools?.find(t=>t.function.name==='get_patient_context')?.function.parameters as {properties?:Record<string,unknown>};offered=Object.keys(schema.properties??{});
+  return {kind:'answer',text:'Fin de vérification.',tokensIn:1,tokensOut:1};
+ },execute:async()=>{throw new Error('The schema check must not dispatch a tool.');}},new AbortController().signal);
+ expect(result.status).toBe('failed');expect(offered).not.toContain('from');expect(offered).not.toContain('to');expect(offered).not.toContain('status');
+});
+it('keeps explicit date bounds available for a note search using a custom date range',async()=>{
+ const text='Cherche le mot « sommeil » dans les notes de Ayoub Salmi entre le 1 juin et le 15 juin 2026.';let step=0,offered:string[]=[];
+ await runAgentLoop({text,conversationId:'note-filter-explicit-dates',clientTurnId:'11111111-1111-4111-8111-111111111113',appContext:{patientId:null,page:'/jarvis'}},{actor:'note-filter-explicit-dates',infer:async(_messages,options)=>{
+  if(step++===0)return {kind:'calls',calls:[{id:'declare',name:'declare_request',args:{parts:[{id:'n',goal:text,tool:'get_patient_context',conditions:[],dependsOn:[]}]}}],message:{role:'assistant',content:null,tool_calls:[]},tokensIn:1,tokensOut:1};
+  const schema=options.tools?.find(t=>t.function.name==='get_patient_context')?.function.parameters as {properties?:Record<string,unknown>};offered=Object.keys(schema.properties??{});
+  return {kind:'answer',text:'Fin de vérification.',tokensIn:1,tokensOut:1};
+ },execute:async()=>{throw new Error('The schema check must not dispatch a tool.');}},new AbortController().signal);
+ expect(offered).toContain('from');expect(offered).toContain('to');
+});

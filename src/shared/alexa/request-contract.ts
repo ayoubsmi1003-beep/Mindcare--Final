@@ -151,7 +151,7 @@ function frenchReadTargets(text:string):FrenchReadTarget[]{
  const requestedAreas=areas.filter(([,pattern])=>pattern.test(plain)).map(([area])=>area);
  const summaryRequested=summaryStyle&&(anchor||notes||/\b(?:consult\w*|seances?|cas)\b/u.test(plain))&&!knowledge&&requestedAreas.length===0;
  const noteArea=requestedAreas.length===1?requestedAreas[0]:undefined;
- const queryMatch=text.match(/(?:\bmot|\bexpression|\bphrase)\s+[«“"]?(.+?)[»”"]?(?=\s+dans\b|$)/iu);
+ const queryMatch=text.match(/(?:\bmot|\bexpression|\bphrase|\bcode|\br[eé]f[eé]rence|\br[eé]p[èe]re)\s+[«“"]?(.+?)[»”"]?(?=\s+dans\b|$)/iu);
  const noteQuery=queryMatch?.[1]?.replace(/[»”"?.!]+$/u,'').trim();
  const document=/\b(?:documents?|brouillons?|certificats?|ordonnances?|justificatifs?)\b/u.test(plain);
  if(document&&!knowledge){
@@ -159,11 +159,13 @@ function frenchReadTargets(text:string):FrenchReadTarget[]{
   const documentStatus:FrenchReadTarget['documentStatus']=/\b(?:emis|delivre|signes?)\b/u.test(plain)?'issued':/\b(?:brouillons?|non signes?)\b/u.test(plain)?'draft':undefined;
   add({tool:'query_documents',unboundedPeriod,documentAllKinds:!documentKind,...(documentKind?{documentKind}:{}),...(documentStatus?{documentStatus}:{})});
  }
+ const consultationText=notes&&noteQuery?plain.replace(fold(noteQuery),''):plain;
+ const requestedConsultationStatus=/\b(?:termine\w*|clos\w*|cloture\w*|acheve\w*|ferme\w*)\b/u.test(consultationText)?'closed' as const:/\b(?:ouvert\w*|en cours)\b/u.test(consultationText)?'open' as const:undefined;
  const consultation=/\b(?:consult\w*|seances?)\b/u.test(plain);
  if(consultation&&!notes&&!knowledge&&!summaryRequested){
   const detail=/\b(?:details?|duree|analys\w*)\b/u.test(plain);
   const consultationMode:FrenchReadTarget['consultationMode']=detail?undefined:/\b(?:liste\w*|historique)\b/u.test(plain)?'list':/\b(?:combien|nombre|total|compte|comptabilise)\b/u.test(plain)?'count':'list';
-  const consultationStatus:FrenchReadTarget['consultationStatus']=detail?undefined:/\b(?:non signe\w*|sans signature)\b/u.test(plain)?'unsigned':/\b(?:termine\w*|clos\w*|cloture\w*|acheve\w*)\b/u.test(plain)?'closed':/\b(?:ouvert\w*|en cours)\b/u.test(plain)?'open':'all';
+  const consultationStatus:FrenchReadTarget['consultationStatus']=detail?undefined:/\b(?:non signe\w*|sans signature)\b/u.test(plain)?'unsigned':requestedConsultationStatus??'all';
   add({tool:'query_consultations',unboundedPeriod,...(consultationMode?{consultationMode}:{}),...(consultationStatus?{consultationStatus}:{})});
  }
  const financeCore=/\b(?:chiffre d.affaires|recettes?|revenus?|depenses?|impayes?|soldes?|resultat net|paiements?|encaissements?|indicateurs? financiers?|synthese de caisse|bilan financier)\b/u.test(plain);
@@ -176,11 +178,11 @@ function frenchReadTargets(text:string):FrenchReadTarget[]{
  const practitionerView=!specificOffice&&/\b(?:praticien\w*|medecin|docteur|mon profil professionnel)\b/u.test(plain)?'practitioner' as const:undefined;
  if(cabinetView||practitionerView){const applicationView=cabinetView&&practitionerView?undefined:cabinetView??practitionerView;add({tool:'query_app',...(applicationView?{applicationView}:{})});}
  if(anchor||notes||summaryRequested){
-  const patientSection:FrenchReadTarget['patientSection']=summaryRequested?'summary':notes?'notes':/\bdiagnosti\w*\b/u.test(plain)?'diagnoses':/\b(?:echelles?|scores?)\b/u.test(plain)?'scales':/\b(?:traitements?|medicaments?|prescriptions?)\b/u.test(plain)?'treatments':/\b(?:seance en cours|consultation en cours|actuellement en consultation)\b/u.test(plain)?'current':/\bhistorique\b/u.test(plain)?'history':/\b(?:resume|synthese) clinique\b/u.test(plain)?'summary':/\b(?:e[- ]?mail|courriel|adresse electronique|telephones?|coordonnees?|adresses?|naissance|ages?|sexe|identite|situation familiale|contact d.urgence|numero (?:de (?:carte|piece) d.identite|d.identite|de dossier)|profil|administrati\w*)\b/u.test(plain)?'profile':undefined;
+  const patientSection:FrenchReadTarget['patientSection']=summaryRequested?'summary':notes?'notes':/\bdiagnosti\w*\b/u.test(plain)?'diagnoses':/\b(?:echelles?|scores?)\b/u.test(plain)?'scales':/\b(?:traitements?|medicaments?|prescriptions?)\b/u.test(plain)?'treatments':/\b(?:seance en cours|consultation en cours|actuellement en consultation)\b/u.test(plain)?'current':/\bhistorique\b/u.test(plain)?'history':/\b(?:resume|synthese) clinique\b/u.test(plain)?'summary':/\b(?:e[- ]?mail|courriel|adresse electronique|telephones?|coordonnees?|adresses?|naissance|ages?|sexe|identite|cni|cin|situation familiale|contact d.urgence|numero (?:de (?:carte|piece) d.identite|d.identite|de dossier)|profil|administrati\w*)\b/u.test(plain)?'profile':undefined;
   const diagnosisStates=[...(/\bactif\w*\b/u.test(plain)?['active' as const]:[]),...(/\bresolu\w*\b/u.test(plain)?['resolved' as const]:[])];
   const diagnosisRoles=[...(/\bprincipa(?:l|le|ux|les)\b/u.test(plain)?['primary' as const]:[]),...(/\bsecondair\w*\b/u.test(plain)?['secondary' as const]:[])];
   const treatmentStates=[...(/\bactif\w*\b/u.test(plain)?['active' as const]:[]),...(/\b(?:pause|suspendu\w*)\b/u.test(plain)?['paused' as const]:[]),...(/\barrete\w*\b/u.test(plain)?['stopped' as const]:[])];
-  if(patientSection)add({tool:'get_patient_context',patientSection,...(['summary','history'].includes(patientSection)&&!requestsOldestConsultations(text)&&requestedConsultationCount(text)!==null?{consultationCount:requestedConsultationCount(text)!}:{}),...(patientSection==='diagnoses'&&diagnosisStates.length===1?{diagnosisState:diagnosisStates[0]}:{}),...(patientSection==='diagnoses'&&diagnosisRoles.length===1?{diagnosisRole:diagnosisRoles[0]}:{}),...(patientSection==='treatments'&&treatmentStates.length===1?{treatmentState:treatmentStates[0]}:{}),...(patientSection==='notes'&&noteArea?{noteArea}:{}),...(patientSection==='notes'&&noteQuery?{noteQuery}:{})});
+  if(patientSection)add({tool:'get_patient_context',patientSection,...(['summary','history'].includes(patientSection)&&!requestsOldestConsultations(text)&&requestedConsultationCount(text)!==null?{consultationCount:requestedConsultationCount(text)!}:{}),...(patientSection==='diagnoses'&&diagnosisStates.length===1?{diagnosisState:diagnosisStates[0]}:{}),...(patientSection==='diagnoses'&&diagnosisRoles.length===1?{diagnosisRole:diagnosisRoles[0]}:{}),...(patientSection==='treatments'&&treatmentStates.length===1?{treatmentState:treatmentStates[0]}:{}),...(patientSection==='notes'?{unboundedPeriod,...(requestedConsultationStatus?{consultationStatus:requestedConsultationStatus}:{})}:{}),...(patientSection==='notes'&&noteArea?{noteArea}:{}),...(patientSection==='notes'&&noteQuery?{noteQuery}:{})});
  }
  const patientQuery=/\b(?:patients|dossiers|patientele)\b/u.test(plain)&&(/\b(?:combien|nombre|total|compt\w*|liste\w*|lesquels|lesquelles|trouve\w*|recherch\w*|identifi\w*|actifs?|inactifs?|archives?|mineurs?|adultes?|enfants?|sans|aucun\w*|manquant\w*|impayes?|soldes?|dettes?)\b/u.test(plain));
  if(patientQuery)add({tool:'query_patients'});
@@ -271,7 +273,7 @@ export function frenchReadArgumentBindings(scope:FrenchRequestAdmission,tool:str
  const values:Record<string,string|number>={};
  if(tool==='navigate'&&scope.navigationTarget)values['target']=scope.navigationTarget;
  if(tool==='prepare_action'){if(scope.preparationAction)values['action']=scope.preparationAction;if(scope.preparationDocumentType)values['documentType']=scope.preparationDocumentType;}
- if(tool==='get_patient_context'&&scope.patientSection){values['section']=scope.patientSection;if(scope.consultationCount!==undefined)values['count']=scope.consultationCount;if(scope.diagnosisState)values['diagnosisState']=scope.diagnosisState;if(scope.diagnosisRole)values['diagnosisRole']=scope.diagnosisRole;if(scope.treatmentState)values['treatmentState']=scope.treatmentState;if(scope.patientSection==='notes'){if(scope.noteArea)values['area']=scope.noteArea;if(scope.noteQuery)values['query']=scope.noteQuery;}}
+ if(tool==='get_patient_context'&&scope.patientSection){values['section']=scope.patientSection;if(scope.consultationCount!==undefined)values['count']=scope.consultationCount;if(scope.diagnosisState)values['diagnosisState']=scope.diagnosisState;if(scope.diagnosisRole)values['diagnosisRole']=scope.diagnosisRole;if(scope.treatmentState)values['treatmentState']=scope.treatmentState;if(scope.patientSection==='notes'){if(scope.noteArea)values['area']=scope.noteArea;else if(scope.noteQuery)values['area']='all';if(scope.noteQuery)values['query']=scope.noteQuery;if(scope.consultationStatus)values['status']=scope.consultationStatus;}}
  if(tool==='query_consultations'){if(scope.consultationMode)values['mode']=scope.consultationMode;if(scope.consultationStatus)values['status']=scope.consultationStatus;}
  if(tool==='query_finance'&&scope.financeMode)values['mode']=scope.financeMode;
  if(tool==='query_app'&&scope.applicationView){values['view']=scope.applicationView;if(scope.messageKind)values['motif']=scope.messageKind;}

@@ -33,7 +33,7 @@ describe("bounded public questions", () => {
     "What is photosynthesis?", "Explain how a computer works.", "How does a computer work?",
     "لماذا السماء زرقاء؟", "Combien font 2 + 2 ?", "كم يساوي ٢ + ٢؟",
   ])("answers the current verified public question: %s", async text => {
-    expect(await modelGateway.inferGeneralAlexa?.(text)).toEqual({ ok: true, text: publicAnswer, model: "Qwen_Qwen3.5-2B-Q4_K_M.gguf" });
+    expect(await modelGateway.inferGeneralAlexa?.(text)).toEqual({ ok: true, text: publicAnswer, model: "MiniCPM-V-4_7-1B-Q4_K_M.gguf" });
   });
   // Passing caller metadata, inherited context, tools, receipts, or history is a privacy regression.
   it("sends exactly the current question and generic system prompt without protected state", async () => {
@@ -95,7 +95,7 @@ describe("output validation", () => {
     { question: "كيف يعمل الحاسوب", text: "الحاسوب ينفذ تعليمات البرنامج لمعالجة البيانات." },
   ])("publishes public computer behavior: $text", async ({ question, text }) => {
     vi.mocked(inferLocalText).mockResolvedValue(text);
-    expect(await modelGateway.inferGeneralAlexa?.(question)).toEqual({ ok: true, text, model: "Qwen_Qwen3.5-2B-Q4_K_M.gguf" });
+    expect(await modelGateway.inferGeneralAlexa?.(question)).toEqual({ ok: true, text, model: "MiniCPM-V-4_7-1B-Q4_K_M.gguf" });
   });
   it.each(["Un ordinateur exécute les instructions d’un programme. J’ai exécuté la commande.",
     "A computer executes instructions from a program. I have opened the browser.",
@@ -111,7 +111,7 @@ describe("output validation", () => {
     "الحاسوب يخزن البيانات في الذاكرة تاعه.",
   ])("publishes public explanations with ordinary possessives: %s", async text => {
     vi.mocked(inferLocalText).mockResolvedValue(text);
-    expect(await modelGateway.inferGeneralAlexa?.("Pourquoi le ciel est-il bleu ?")).toEqual({ ok: true, text, model: "Qwen_Qwen3.5-2B-Q4_K_M.gguf" });
+    expect(await modelGateway.inferGeneralAlexa?.("Pourquoi le ciel est-il bleu ?")).toEqual({ ok: true, text, model: "MiniCPM-V-4_7-1B-Q4_K_M.gguf" });
   });
   // Publishing unchecked provider prose must expose one of these unsafe or malformed answers.
   it.each([
@@ -155,7 +155,7 @@ describe("bounded local engine outcomes", () => {
   });
   it("single-model: a Gemini key never diverts the public question to another provider", async () => {
     vi.stubEnv("GEMINI_API_KEY", "synthetic-key");
-    expect(await modelGateway.inferGeneralAlexa?.("Pourquoi le ciel est-il bleu ?")).toEqual({ ok: true, text: publicAnswer, model: "Qwen_Qwen3.5-2B-Q4_K_M.gguf" });
+    expect(await modelGateway.inferGeneralAlexa?.("Pourquoi le ciel est-il bleu ?")).toEqual({ ok: true, text: publicAnswer, model: "MiniCPM-V-4_7-1B-Q4_K_M.gguf" });
     expect(inferLocalText).toHaveBeenCalledOnce();
   });
   it("single-model: one failed primary attempt stays unavailable without a second provider", async () => {
