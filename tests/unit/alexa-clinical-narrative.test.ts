@@ -15,6 +15,11 @@ describe("French concise grounded clinical paragraphs", () => {
   });
   it.each([["2026-10-17T23:30:00Z", "2026-10-18T01:00:00Z", "aujourd’hui"], ["2026-10-17T12:00:00Z", "2026-10-18T12:00:00Z", "hier"], ["2026-09-20T12:00:00Z", "2026-10-18T12:00:00Z", "il y a 28 jours"]])("uses cabinet-local relative dates %s", (date, now, expected) => { expect(relativeClinicalDate(date, now)).toBe(expected); });
   it("accepts a short paragraph with exact support and no field recitation", () => { expect(validateClinicalNarrative(response("Le patient rapporte une humeur triste et des conflits familiaux avec ses parents."), [proof])).toBe(proof.text); });
+  it("keeps the inference output budget aligned with its concise paragraph prompt", async () => {
+    vi.mocked(inferLocalText).mockResolvedValue(JSON.stringify(response(proof.text)));
+    await synthesizeClinicalNarrative([proof], new AbortController().signal);
+    expect(inferLocalText).toHaveBeenCalledWith(expect.any(Array), expect.objectContaining({ maxOutputTokens: 384 }));
+  });
   it.each([
     response("Le patient reçoit maintenant 200 mg de TEST."),
     response("Le patient rapporte une humeur triste.", "citation inventée"),

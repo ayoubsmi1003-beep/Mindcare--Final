@@ -116,7 +116,7 @@ export async function synthesizeClinicalNarrative(sources: readonly NarrativeSou
   const boundedSignal = AbortSignal.any([signal, AbortSignal.timeout(170000)]);
   // Context rejection happens before generation. Fit whole fields within the same deadline.
   while (projected.length) try {
-    const raw = await inferLocalText([{ role: "system", content: copy.prompt }, { role: "user", content: JSON.stringify({ sources: projected.map(({originalText: _original, attribution: _attribution, ...source}) => source) }) }], { jsonSchema: z.toJSONSchema(answerSchema), maxOutputTokens: 1024, timeoutMs: 170000, signal: boundedSignal });
+    const raw = await inferLocalText([{ role: "system", content: copy.prompt }, { role: "user", content: JSON.stringify({ sources: projected.map(({originalText: _original, attribution: _attribution, ...source}) => source) }) }], { jsonSchema: z.toJSONSchema(answerSchema), maxOutputTokens: 384, timeoutMs: 170000, signal: boundedSignal });
     boundedSignal.throwIfAborted();
     const value: unknown = JSON.parse(raw);
     const text = validateClinicalNarrative(value, projected);
