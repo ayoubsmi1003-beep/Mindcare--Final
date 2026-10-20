@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from 'vitest';
-import { creerSessionSondeCabinet, essayerConnexionCabinetConnu } from '../../electron/main/connexion-cabinet';
+import { creerSessionSondeCabinet, essayerConnexionCabinetConnu, creerStabiliteSondeCabinet } from '../../electron/main/connexion-cabinet';
 
 describe('connexion d’un poste déjà approuvé', () => {
   it('essaie directement l’origine approuvée avant de demander une découverte réseau', async () => {
@@ -35,5 +35,44 @@ describe('sonde réseau du cabinet', () => {
     await expect(sessionSonde.fetch('https://cabinet.local:43118/api/health', init)).resolves.toMatchObject({ ok: true });
     expect(fromPartition).toHaveBeenCalledExactlyOnceWith('mindcare-clinic-health', { cache: false });
     expect(fetch).toHaveBeenCalledExactlyOnceWith('https://cabinet.local:43118/api/health', init);
+  });
+});
+
+describe('stabilité de la sonde réseau du cabinet', () => {
+  it('ignore une seule sonde échouée et reste stable si la sonde suivante réussit', () => {
+    const stabilite = creerStabiliteSondeCabinet();
+
+    expect(stabilite.echec()).toBe(false);
+    expect(stabilite.succes()).toBe(false);
+    expect(stabilite.echec()).toBe(false);
+  });
+
+  it('n’affiche la reconnexion qu’après deux échecs consécutifs', () => {
+    const stabilite = creerStabiliteSondeCabinet();
+
+    expect(stabilite.echec()).toBe(false);
+    expect(stabilite.echec()).toBe(true);
+    expect(stabilite.echec()).toBe(false);
+  });
+
+  it('attend deux succès consécutifs avant de réafficher l’application', () => {
+    const stabilite = creerStabiliteSondeCabinet();
+
+    stabilite.echec();
+    expect(stabilite.echec()).toBe(true);
+    expect(stabilite.succes()).toBe(false);
+    expect(stabilite.succes()).toBe(true);
+    expect(stabilite.succes()).toBe(false);
+  });
+
+  it('recommence le compte de récupération après un nouvel échec', () => {
+    const stabilite = creerStabiliteSondeCabinet();
+
+    stabilite.echec();
+    stabilite.echec();
+    stabilite.succes();
+    expect(stabilite.echec()).toBe(false);
+    expect(stabilite.succes()).toBe(false);
+    expect(stabilite.succes()).toBe(true);
   });
 });

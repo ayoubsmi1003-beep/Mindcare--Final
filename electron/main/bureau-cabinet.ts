@@ -7,7 +7,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { appairerCabinet, choisirCabinet, decouvrirCabinets, type CabinetDecouvert, type ConfianceCabinet } from './decouverte-cabinet.js';
 import { configurerOrigineCabinet } from './config.js';
-import { attendreCabinet, creerSessionSondeCabinet, essayerConnexionCabinetConnu, validerOrigineCabinet } from './connexion-cabinet.js';
+import { attendreCabinet, creerSessionSondeCabinet, creerStabiliteSondeCabinet, essayerConnexionCabinetConnu, validerOrigineCabinet } from './connexion-cabinet.js';
 import { verifierCertificatCabinet } from './confiance-cabinet.js';
 
 const ICI = path.dirname(fileURLToPath(import.meta.url));
@@ -156,17 +156,20 @@ export async function connecterBureauCabinet(): Promise<{mode:'client'|'host'; o
   throw new Error('Application fermée.');
 }
 export function surveillerCabinet(fenetre: BrowserWindow): void {
-  let busy = false; let interrompu = false;
+  let busy = false;
+  const stabilite = creerStabiliteSondeCabinet();
   const timer = setInterval(async () => {
     if (busy || arret || fenetre.isDestroyed() || !confiance) return;
     busy = true;
     try {
       await attendreCabinet(confiance.origin,(url,options)=>obtenirSessionSonde().fetch(url,options),3000);
-      if (interrompu) { interrompu=false; ecran?.hide(); fenetre.show(); }
+      if (stabilite.succes()) { ecran?.hide(); fenetre.show(); }
     } catch {
-      interrompu = true; fenetre.hide(); statut(messages.reconnecting!);
-      await afficherEcran();
-      // La récupération réutilise uniquement l’origine et le certificat déjà approuvés.
+      if (stabilite.echec()) {
+        fenetre.hide(); statut(messages.reconnecting!);
+        await afficherEcran();
+        // La récupération réutilise uniquement l’origine et le certificat déjà approuvés.
+      }
     } finally { busy=false; }
   },5000);
   timer.unref(); fenetre.once('closed',()=>clearInterval(timer));

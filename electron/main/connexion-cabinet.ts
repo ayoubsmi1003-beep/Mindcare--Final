@@ -28,6 +28,28 @@ export function creerSessionSondeCabinet<T extends { fetch: SondeFetch }>(
   return fromPartition("mindcare-clinic-health", { cache: false });
 }
 
+/** A single transient timeout must not bounce the application to its reconnect window. */
+export function creerStabiliteSondeCabinet(): { echec(): boolean; succes(): boolean } {
+  let echecs = 0;
+  let succes = 0;
+  let interrompu = false;
+  return {
+    echec() {
+      succes = 0;
+      if (++echecs < 2 || interrompu) return false;
+      interrompu = true;
+      return true;
+    },
+    succes() {
+      echecs = 0;
+      if (!interrompu || ++succes < 2) return false;
+      interrompu = false;
+      succes = 0;
+      return true;
+    },
+  };
+}
+
 /** L'adresse partagée est une origine HTTPS du réseau du cabinet. */
 export function validerOrigineCabinet(input: string): string {
   if (!/^https:\/\/[a-zA-Z0-9.[\]:-]+\/?$/.test(input)) throw new Error("CONFIGURATION_CABINET: origine HTTPS invalide.");
