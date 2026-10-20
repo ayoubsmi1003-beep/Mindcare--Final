@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { PoolModelesGratuits } from "../../src/server/egress/modeles-gratuits";
 import { ErreurModele, classerErreurHttp } from "../../src/server/egress/erreurs-modele";
 import { conduireInference } from "../../src/server/egress/tentatives-inference";
@@ -107,9 +107,43 @@ describe("trois tentatives distinctes dans une échéance unique", () => {
     await expect(conduireInference(["a", "b"], async () => "incorrect", { timeoutMs: 1000, signal: c.signal })).rejects.toMatchObject({ code: "CANCELLED" });
   });
   it("borne un transport qui ignore AbortSignal et réserve du temps au modèle suivant", async () => {
-    const start = Date.now();
-    const r = await conduireInference(["a", "b"], async (id) => id === "a" ? new Promise<string>(() => {}) : "ok", { timeoutMs: 120 });
-    expect(r.model).toBe("b");
-    expect(Date.now() - start).toBeLessThan(250);
+    vi.useFakeTimers();
+    try {
+      const start = Date.now();
+      const pending = conduireInference(["a", "b"], async (id) => id === "a" ? new Promise<string>(() => {}) : "ok", { timeoutMs: 120 });
+      await vi.advanceTimersByTimeAsync(60);
+      const r = await pending;
+      expect(r.model).toBe("b");
+      expect(r.tentatives).toMatchObject([{ model: "a", code: "MODEL_TIMEOUT" }, { model: "b", code: "OK" }]);
+      expect(Date.now() - start).toBeLessThan(120);
+    } finally { vi.useRealTimers(); }
   });
+  it("switches a hung first provider after four seconds within the shared fifteen-second budget", async () => {
+    vi.useFakeTimers();
+    try {
+      const start = Date.now();
+      const pending = conduireInference(["a", "b"], async id => id === "a" ? new Promise<string>(() => {}) : "ok",
+        { timeoutMs: 15_000, firstAttemptTimeoutMs: 4000, maxAttempts: 2 });
+      await vi.advanceTimersByTimeAsync(4000);
+      expect(await pending).toMatchObject({ data: "ok", model: "b", tentatives: [{ model: "a", code: "MODEL_TIMEOUT" }, { model: "b", code: "OK" }] });
+      expect(Date.now() - start).toBe(4000);
+    } finally { vi.useRealTimers(); }
+  });
+});
+
+it("classifies Gemini minute quota with its provider retry delay", () => {
+  const retryDelay = "12.5s";
+  const body = { error: { message: "Quota exceeded", details: [
+    { "@type": "type.googleapis.com/google.rpc.QuotaFailure", violations: [{ quotaId: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier" }] },
+    { "@type": "type.googleapis.com/google.rpc.RetryInfo", retryDelay },
+  ] } };
+  expect(classerErreurHttp(429, body, new Headers())).toMatchObject({ code: "MODEL_RATE_LIMIT", retryAfterMs: 12500 });
+});
+it("classifies Gemini daily quota without losing the provider reset delay", () => {
+  const retryDelay = "81457s";
+  const body = { error: { message: "Quota exceeded", details: [
+    { "@type": "type.googleapis.com/google.rpc.QuotaFailure", violations: [{ quotaId: "GenerateRequestsPerDayPerProjectPerModel-FreeTier" }] },
+    { "@type": "type.googleapis.com/google.rpc.RetryInfo", retryDelay },
+  ] } };
+  expect(classerErreurHttp(429, body, new Headers())).toMatchObject({ code: "MODEL_QUOTA_EXHAUSTED", retryAfterMs: 81457000 });
 });

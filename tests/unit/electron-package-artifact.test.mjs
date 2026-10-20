@@ -20,6 +20,8 @@ afterEach(() => {
 });
 
 function artifact() {
+  // Partial fixture for file-policy rejection. Whole-package acceptance uses
+  // the real built artifact, including its dependencies, ASAR and snapshot.
   const directory = mkdtempSync(path.join(tmpdir(), "mindcare-package-test-"));
   fixtures.push(directory);
   const put = (relative, data = "") => {
@@ -57,10 +59,13 @@ function verify(directory) {
   });
 }
 
-test("accepts only unchanged inventory-pinned wheel tests and the pinned completion asset", () => {
+test("does not reject unchanged inventory-pinned assets in an incomplete fixture", () => {
   const { directory } = artifact();
   const result = verify(directory);
-  assert.equal(result.status, 0, result.stderr);
+  assert.equal(result.status, 1, "The deliberately incomplete package must remain refused");
+  assert.match(result.stderr, /le paquet est incomplet/);
+  assert.ok(!result.stderr.includes(pinnedTest), result.stderr);
+  assert.ok(!result.stderr.includes(pinnedShell), result.stderr);
 });
 
 test("rejects first-party checkpoint tooling and arbitrary files under voice packages", () => {

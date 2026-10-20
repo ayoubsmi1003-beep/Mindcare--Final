@@ -12,6 +12,8 @@ export interface BinairesPg {
   readonly pgCtl: string;
   readonly psql: string;
   readonly postgres: string;
+  /** Restauration de l'instantané de production (§D) — conservé par `elaguer-pgsql.mjs`. */
+  readonly pgRestore: string;
 }
 
 /**
@@ -26,5 +28,6 @@ export function localiserBinaires(resourcesDir: string): BinairesPg {
     pgCtl: path.join(bin, "pg_ctl.exe"),
     psql: path.join(bin, "psql.exe"),
     postgres: path.join(bin, "postgres.exe"),
+    pgRestore: path.join(bin, "pg_restore.exe"),
   };
 }

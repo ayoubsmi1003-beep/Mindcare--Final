@@ -113,18 +113,23 @@ export function contenuPgHba(): string {
  * résoudre ce que gérerait sinon un superviseur maison).
  */
 export function commandeEnregistrerService(bin: BinairesPg, dataDir: string, journalDir: string): Commande {
+  const journalNormalise = path.resolve(journalDir).replaceAll("\\", "/");
+  if (/["\r\n]/.test(journalNormalise)) throw new Error("Chemin de journal PostgreSQL invalide.");
   return {
     cmd: bin.pgCtl,
     args: [
       "register",
       "--pgdata",
       dataDir,
-      "--servicename",
+      "-N",
       NOM_SERVICE,
-      "--startup=auto",
+      "-S",
+      "auto",
       "--wait",
-      "--log",
-      path.join(journalDir, "postgres.log"),
+      // `--log` appartient uniquement à `pg_ctl start/restart`. Pour un
+      // service Windows, les options de journal passent au serveur via -o.
+      "-o",
+      `-c logging_collector=on -c log_destination=stderr -c "log_directory=${journalNormalise}" -c log_filename=postgres.log`,
     ],
   };
 }

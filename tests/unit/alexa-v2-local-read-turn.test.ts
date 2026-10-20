@@ -62,11 +62,11 @@ it.each([
   "Analyse l'évolution du traitement",
   "Traitement: est-il compatible ?",
   "العلاج: هل هو مناسب؟",
-])("preserves the interpretation path and its limits for %s", async text => {
+])("keeps private interpretation local and reports its limits for %s", async text => {
   const infer = vi.fn(unavailable), events: AlexaEvent[] = [];
   await runAlexa(input(text), { actor, db, knowledge, build: async (_db, _scope, request) => context(request.count), infer }, event => events.push(event), new AbortController().signal);
-  expect(infer).toHaveBeenCalledOnce();
-  expect(events).toContainEqual({ type: "stage", stage: "analysis" });
+  expect(infer).not.toHaveBeenCalled();
+  expect(events).toContainEqual({ type: "stage", stage: "validation" });
   expect(events.at(-1)).toMatchObject({ type: "done", limited: true });
 });
 

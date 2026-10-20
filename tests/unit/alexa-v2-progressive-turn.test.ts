@@ -1,3 +1,4 @@
+import { conversationState } from "@/server/alexa/conversation-state";
 import { beforeEach, expect, it, vi } from "vitest";
 import { runAlexa } from "@/server/alexa/orchestrator";
 import { readKnowledge } from "@/server/alexa/knowledge-adapter";
@@ -20,39 +21,35 @@ const input = (text: string): TurnInput => ({ text, clientTurnId: patientId, con
   appContext: { patientId, page: "/patients/unit" } });
 beforeEach(() => { vi.clearAllMocks(); vi.mocked(readKnowledge).mockResolvedValue({ etat: "sans-preuve", preuves: [] }); });
 
-it("publishes before inference completes and supplements missing requested facts without duplicate sources", async () => {
+it("validates the complete local answer before publishing and never invokes clinical cloud inference", async () => {
   const events: AlexaEvent[] = [];
+  const infer = vi.fn(async () => { throw new Error("Private context must remain local"); });
   await runAlexa(input("Analyse les 20 dernières consultations"), { db, knowledge, actor,
-    build: async (_db, _scope, request) => context(request.count), infer: async (payload, options) => {
-      const item = { text: "recorded fact", evidence: [payload.facts[0]!.evidence], kind: "fact" as const };
-      await options?.onSentence?.(item);
-      expect(events.filter(event => event.type === "sentence")).toHaveLength(1);
-      expect(events.some(event => event.type === "done")).toBe(false);
-      return { ok: true, model: "qwen/synthetic:free", data: { sentences: [item] } };
-    } }, event => events.push(event), new AbortController().signal);
-  const ids = events.filter(event => event.type === "sentence").flatMap(event => event.sources.map(source => source.id));
-  expect(ids).toHaveLength(20);
+    build: async (_db, _scope, request) => context(request.count), infer },
+    event => events.push(event), new AbortController().signal);
+  expect(infer).not.toHaveBeenCalled();
+  const sentences = events.filter(event => event.type === "sentence");
+  const ids = sentences.flatMap(event => event.sources.map(source => source.id));
   expect(new Set(ids).size).toBe(20);
+  expect(new Set(sentences.map(event => JSON.stringify(event))).size).toBe(sentences.length);
   expect(events.at(-1)).toMatchObject({ type: "done", coverage: { returned: 20 }, limited: true });
 });
 
-it.each(["source", "scope", "tail"])("refuses a complete answer after a streamed fact and changed %s", async cause => {
+it.each(["source", "scope", "read-failure"])("publishes no private answer after a changed %s", async cause => {
   const events: AlexaEvent[] = [];
   let reads = 0;
   const turn = { ...input("Analyse les deux dernières consultations"), conversationId: `changed-${cause}` };
   await runAlexa(turn, { db, knowledge, actor,
-    build: async (_db, _scope, request) => context(request.count, cause === "source" && ++reads > 2 ? "b".repeat(64) : "a".repeat(64)),
-    infer: async (payload, options) => {
-      const item = { text: "recorded fact", evidence: [payload.facts[0]!.evidence], kind: "fact" as const };
-      await options?.onSentence?.(item);
-      if (cause === "scope") await runAlexa({ ...input("traitement actuel"), conversationId: turn.conversationId,
-        appContext: { patientId: null, page: "/agenda" } }, { db, knowledge, actor }, () => {}, new AbortController().signal);
-      if (cause === "tail") return { ok: false, code: "invalid-response", localFallback: true, partial: true };
-      if (cause === "source") await options?.onSentence?.({ ...item, evidence: [payload.facts[1]!.evidence] });
-      return { ok: true, model: "qwen/synthetic:free", data: { sentences: [item] } };
-    } }, event => events.push(event), new AbortController().signal);
-  expect(events.filter(event => event.type === "sentence")).toHaveLength(1);
-  expect(events.at(-1)).toMatchObject({ type: "error", partial: true });
+    build: async (_db, _scope, request) => {
+      if (++reads > 1) {
+        if (cause === "read-failure") throw new Error("Source unavailable");
+        if (cause === "scope") conversationState.clear(actor, turn.conversationId);
+      }
+      return context(request.count, cause === "source" && reads > 1 ? "b".repeat(64) : "a".repeat(64));
+    },
+  }, event => events.push(event), new AbortController().signal);
+  expect(events.filter(event => event.type === "sentence")).toHaveLength(0);
+  expect(events.at(-1)).toMatchObject({ type: "error", code: cause === "read-failure" ? "unavailable" : "stale" });
   expect(events.some(event => event.type === "done")).toBe(false);
 });
 

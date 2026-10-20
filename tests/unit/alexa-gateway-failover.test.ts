@@ -5,7 +5,7 @@ import { basename, dirname, join, resolve } from "node:path";
 vi.mock("@/server/db", () => ({ withEgressGate: async (fn: (q: unknown) => Promise<unknown>) => fn({ query: vi.fn() }) }));
 let directory: string;
 const ids = ["qwen/essai-a:free", "qwen/essai-b:free", "qwen/essai-c:free"];
-const PRIMARY = "qwen/qwen3.7-flash";
+const PRIMARY = ids[0];
 const originalFetch = globalThis.fetch;
 beforeEach(async () => {
   vi.resetModules();
@@ -53,7 +53,7 @@ describe("production gateway, faults injected only at its real fetch transport",
       if (String(url).endsWith("/key")) return Response.json({ data: { free_model_daily_requests: { remaining: 47, used: 3, limit: 50 } } });
       const body = JSON.parse(init!.body as string) as { model: string; provider: unknown };
       calls.push(body.model);
-      expect(body.provider).toEqual({ data_collection: "deny", zdr: true, require_parameters: true, max_price: { prompt: 0.05, completion: 0.2 } });
+      expect(body.provider).toEqual({ data_collection: "deny", zdr: true, require_parameters: true, max_price: { prompt: 0, completion: 0 }, sort: "latency" });
       return Response.json({ error: { metadata: { provider_name: "upstream" } } }, { status: 429 });
     });
     const { preparerPoolModelesGratuits } = await import("@/server/egress/external-call");
@@ -119,20 +119,20 @@ describe("production gateway, faults injected only at its real fetch transport",
     expect(JSON.stringify(error)).not.toContain("private timeout metadata");
     expect(vi.mocked(globalThis.fetch).mock.calls.some(([url]) => String(url).endsWith("/chat/completions"))).toBe(false);
   });
-  it("single-model: a 429 fails after exactly one primary attempt, audit exposes it", async () => {
+  it("a model 429 allows exactly one distinct free fallback", async () => {
     const calls = transport(async () => Response.json({ error: { metadata: { provider_name: "upstream" } } }, { status: 429 }));
     const { llm } = await maintainedGateway();
     vi.mocked(globalThis.fetch).mockClear();
     const result = await llm({ ...request, besoin: { json: true } });
-    expect(result).toMatchObject({ ok: false, error: { diagnostic: "MODEL_RATE_LIMIT", tentatives: [{ model: PRIMARY, code: "MODEL_RATE_LIMIT" }] } });
-    expect(calls).toEqual([PRIMARY]);
+    expect(result).toMatchObject({ ok: false, error: { diagnostic: "MODEL_RATE_LIMIT", tentatives: [{ model: PRIMARY, code: "MODEL_RATE_LIMIT" }, { model: ids[1], code: "MODEL_RATE_LIMIT" }] } });
+    expect(calls).toEqual(ids.slice(0, 2));
     expect(vi.mocked(globalThis.fetch).mock.calls.every(([url]) => String(url).endsWith("/chat/completions"))).toBe(true);
   });
-  it("single-model: no second attempt exists — one failure is final", async () => {
+  it("never consumes a third model in an ordinary turn", async () => {
     const calls = transport(async () => Response.json({ error: { metadata: { provider_name: "upstream" } } }, { status: 429 }));
     const { llm } = await maintainedGateway();
     expect((await llm(request)).ok).toBe(false);
-    expect(calls).toEqual([PRIMARY]);
+    expect(calls).toEqual(ids.slice(0, 2));
   });
   it.each(["complete", "stream"] as const)("single-model: one OpenRouter attempt on the primary (%s)", async mode => {
     const calls = transport(async () => Response.json({ error: { metadata: { provider_name: "upstream" } } }, { status: 429 }));
@@ -141,21 +141,21 @@ describe("production gateway, faults injected only at its real fetch transport",
     expect(result).toMatchObject({ ok: false, error: { tentatives: [{ model: PRIMARY, code: "MODEL_RATE_LIMIT" }] } });
     expect(calls).toEqual([PRIMARY]);
   });
-  it("single-model: an empty qualification file does not gate the ordinary turn", async () => {
+  it("an unqualified cold pool fails quickly without paid calls or automatic probes", async () => {
     await writeFile(join(directory, "qualification.json"), JSON.stringify({ version: "alexa-free-zdr-sourcebound-v7", at: Date.now(), models: [] }));
     const calls = transport(async () => Response.json({ choices: [{ message: { content: '{"ok":true}' } }], usage: {} }));
     const { llm } = await import("@/server/egress/external-call");
-    expect(await llm(request)).toMatchObject({ ok: true, inference: { model: PRIMARY } });
-    expect(calls).toEqual([PRIMARY]);
+    expect(await llm(request)).toMatchObject({ ok: false });
+    expect(calls).toEqual([]);
   });
-  it("single-model: a cold process calls the primary directly, no discovery", async () => {
+  it("a cold process validates current zero-price catalogue and cached qualification", async () => {
     const calls = transport(async () => Response.json({ choices: [{ message: { content: '{"ok":true}' } }], usage: {} }));
     const { llm } = await import("@/server/egress/external-call");
     expect(await llm(request)).toMatchObject({ ok: true, inference: { model: PRIMARY } });
     expect(calls).toEqual([PRIMARY]);
-    expect(vi.mocked(globalThis.fetch).mock.calls.some(([url]) => String(url).endsWith("/models"))).toBe(false);
+    expect(vi.mocked(globalThis.fetch).mock.calls.some(([url]) => String(url).endsWith("/models"))).toBe(true);
   });
-  it("single-model: expired catalog metadata does not gate the ordinary turn", async () => {
+  it("expired catalogue metadata is refreshed before inference", async () => {
     const calls = transport(async () => Response.json({ choices: [{ message: { content: '{"ok":true}' } }], usage: {} }));
     const { llm } = await maintainedGateway();
     vi.mocked(globalThis.fetch).mockClear();
@@ -185,11 +185,11 @@ describe("production gateway, faults injected only at its real fetch transport",
     const { llm } = await maintainedGateway();
     expect((await llm(request)).ok).toBe(false); expect(calls).toEqual([PRIMARY]);
   });
-  it("single-model: invalid JSON fails closed on the primary without a silent accept", async () => {
+  it("invalid JSON fails closed after one distinct free fallback", async () => {
     const calls = transport(async () => Response.json({ choices: [{ message: { content: "broken" } }] }));
     const { llm } = await maintainedGateway();
     expect(await llm({ ...request, besoin: { json: true } })).toMatchObject({ ok: false });
-    expect(calls).toEqual([PRIMARY]);
+    expect(calls).toEqual(ids.slice(0, 2));
   });
   it("C1/C2 refusal performs zero catalogue or inference requests", async () => {
     const fetch = vi.fn(); globalThis.fetch = fetch;

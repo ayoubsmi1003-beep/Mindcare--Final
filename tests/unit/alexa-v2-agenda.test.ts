@@ -15,7 +15,7 @@ async function ask(suivant: unknown, visible: boolean, text = "le prochain patie
     calls.push(name);
     return { ok: true, data: (visible ? [{ id: patientId, first_name: "Synthetic", last_name: "Test" }] : []) as T[] };
   } };
-  const knowledge: ClientSql = { rpc: async <T>(name: string) => { calls.push(name); const fixture: unknown = { suivant, journee: suivant ? [suivant] : [] }; return { data: fixture as T, error: null }; } };
+  const knowledge: ClientSql = { rpc: async <T>(name: string) => { calls.push(name); const fixture: unknown = name === "list_agenda" ? (suivant ? [{ ...appointment, first_name: "Synthetic", last_name: "Test" }] : []) : { suivant, journee: suivant ? [suivant] : [] }; return { data: fixture as T, error: null }; } };
   await runAlexa({ text, conversationId: crypto.randomUUID(), clientTurnId: patientId, appContext: { patientId: null, page: "/jarvis" } },
     { actor: "agenda-test", db, knowledge }, event => events.push(event), new AbortController().signal);
   return { events, calls };
@@ -39,11 +39,11 @@ it("reports an empty next appointment without reusing a previous patient", async
 
 it("preserves the working patient for a global agenda read without adopting appointment identities", async () => {
   const { events, calls } = await ask(appointment, true, "agenda");
-  expect(calls).toEqual(["dashboard_today"]);
+  expect(calls).toEqual(["list_agenda"]);
   expect(events.at(-1)).toMatchObject({ type: "done", patientId: null, patientScope: "preserve" });
 });
 
-it.each(["Voir l'agenda de demain", "agenda d'hier", "planning de la semaine", "agenda du 15/10/2026", "موعد غدوة", "موعد أمس", "موعد هذا الأسبوع", "agenda demain وفق المراجع"])("does not silently replace an unsupported agenda period with today: %s", text => {
+it.each(["planning de la semaine", "agenda du 15/10/2026", "موعد أمس", "موعد هذا الأسبوع"])("does not silently replace an unsupported agenda period with today: %s", text => {
   expect(planRequest(text, null).intent).toBe("clarify");
 });
 
@@ -69,7 +69,7 @@ async function patientAgenda(text: string, found = true) {
     return { ok: true, data: (found ? [{ id: patientId, first_name: "Nadia", last_name: "Test", total_count: 1 }] : []) as T[] };
   } };
   const other = { ...appointment, id: "33333333-3333-4333-8333-333333333333", patient_id: "44444444-4444-4444-8444-444444444444" };
-  const knowledge: ClientSql = { rpc: async <T>(name: string) => { calls.push(name); const data: unknown = { suivant: other, journee: [appointment, other] }; return { data: data as T, error: null }; } };
+  const knowledge: ClientSql = { rpc: async <T>(name: string) => { calls.push(name); const data: unknown = name === "list_agenda" ? [appointment, other].map(a => ({ ...a, first_name: "Synthetic", last_name: "Test" })) : { suivant: other, journee: [appointment, other] }; return { data: data as T, error: null }; } };
   await runAlexa({ text, conversationId: crypto.randomUUID(), clientTurnId: patientId, appContext: { patientId, page: "/jarvis" } },
     { actor: "named-agenda", db, knowledge }, event => events.push(event), new AbortController().signal);
   return { events, calls };
@@ -77,7 +77,7 @@ async function patientAgenda(text: string, found = true) {
 
 it.each(["Les rendez-vous de Nadia Test aujourd'hui", "موعد تاع «Nadia Test» اليوم", "Son rendez-vous aujourd'hui", "Ses rendez-vous du jour", "موعد المريض اليوم", "مواعيدها اليوم", "موعده اليوم", "موعدو اليوم"])("audits patient scope and excludes other appointments for %s", async text => {
   const { events, calls } = await patientAgenda(text);
-  expect(calls).toEqual(text.includes("Nadia") ? ["search_patients", "get_patient", "dashboard_today"] : ["get_patient", "dashboard_today"]);
+  expect(calls).toEqual(text.includes("Nadia") ? ["search_patients", "get_patient", "list_agenda"] : ["get_patient", "list_agenda"]);
   const sources = events.filter(event => event.type === "sentence").flatMap(event => event.sources.map(source => source.id));
   expect(sources).toEqual([appointmentId]);
   expect(events.at(-1)).toMatchObject({ type: "done", patientId, patientScope: "replace", limited: false });
@@ -96,4 +96,8 @@ it.each(["Les rendez-vous de «Nadia Test» et de «Omar Test» aujourd'hui", "O
   expect(calls).toEqual([]);
   expect(events.at(-1)).toMatchObject({ type: "done", patientId: null, patientScope: "replace", limited: true });
   expect(events.at(-1)).not.toHaveProperty("navigation");
+});
+
+it.each(["Voir l'agenda de demain", "agenda d'hier", "موعد غدوة"])("uses an explicit dated agenda scope for %s", text => {
+  expect(planRequest(text, null)).toMatchObject({ intent: "agenda", agendaDay: expect.stringMatching(/^\d{4}-\d{2}-\d{2}$/) });
 });

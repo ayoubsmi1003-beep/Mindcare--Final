@@ -8,25 +8,24 @@ beforeEach(() => {
   process.env.OPENROUTER_API_KEY = "synthetic-key"; reinitialiserEnv();
 });
 afterEach(() => { globalThis.fetch = originalFetch; delete process.env.OPENROUTER_API_KEY; reinitialiserEnv(); });
-const requete = { model: "qwen/qwen3.7-flash", messages: [{ role: "user" as const, content: "Bonjour" }], timeoutMs: 100 };
+const requete = { model: "qwen/qwen3.8-27b:free", messages: [{ role: "user" as const, content: "Bonjour" }], timeoutMs: 100 };
 
 function sse(text: string): Response { return new Response(text, { headers: { "Content-Type": "text/event-stream" } }); }
 describe("transport OpenRouter réel, fault injection limitée à fetch", () => {
-  it("n'autorise que le primary single-model et les :free explicites (maintenance), sous la même politique de confidentialité", async () => {
+  it("refuse tout modèle payant et impose un plafond de prix nul", async () => {
     const calls: Record<string, unknown>[] = [];
     globalThis.fetch = vi.fn(async (_, init) => { calls.push(JSON.parse(init!.body as string));
       return Response.json({ choices: [{ message: { content: "Bonjour" } }] }); });
     // Payants non-primary et routeurs dynamiques : refusés avant transport.
-    for (const model of ["qwen/payant", "google/gemma-3-27b-it", "openrouter/auto", "openai/gpt-6-astra"])
+    for (const model of ["qwen/qwen3.7-flash", "qwen/payant", "google/gemma-3-27b-it", "openrouter/auto", "openai/gpt-6-astra"])
       await expect(openRouterProvider.complete({ ...requete, model })).rejects.toMatchObject({ code: "CONFIGURATION" });
     expect(calls).toHaveLength(0);
-    // Le tour ordinaire n'envoie que le primary (voir `resolveModel`) ; les
-    // `:free` explicites ne servent qu'aux sondes de maintenance hors tour.
+    // La sélection appartient au pool qualifié ; ce transport impose le gratuit.
     await openRouterProvider.complete({ ...requete, model: "google/gemma-3-27b-it:free" });
     expect(calls[0]?.model).toBe("google/gemma-3-27b-it:free");
     await openRouterProvider.complete(requete);
-    expect(calls[1]?.model).toBe("qwen/qwen3.7-flash");
-    expect(calls[1]?.provider).toEqual({ data_collection: "deny", zdr: true, require_parameters: true, max_price: { prompt: 0.05, completion: 0.2 } });
+    expect(calls[1]?.model).toBe("qwen/qwen3.8-27b:free");
+    expect(calls[1]?.provider).toEqual({ data_collection: "deny", zdr: true, require_parameters: true, max_price: { prompt: 0, completion: 0 }, sort: "latency" });
   });
   it("reserves the bounded token budget for the structured answer rather than hidden reasoning", async () => {
     let body: Record<string, unknown> = {};
@@ -34,7 +33,7 @@ describe("transport OpenRouter réel, fault injection limitée à fetch", () => 
     await openRouterProvider.complete({ ...requete, maxOutputTokens: 512, json: true, jsonMode: true });
     expect(body.reasoning).toEqual({ enabled: false });
     expect(body.max_tokens).toBe(512);
-    expect(body.provider).toEqual({ data_collection: "deny", zdr: true, require_parameters: true, max_price: { prompt: 0.05, completion: 0.2 } });
+    expect(body.provider).toEqual({ data_collection: "deny", zdr: true, require_parameters: true, max_price: { prompt: 0, completion: 0 }, sort: "latency" });
   });
   it("ne publie pas un faux succès sur EOF prématuré", async () => {
     globalThis.fetch = vi.fn(async () => new Response(new ReadableStream<Uint8Array>({

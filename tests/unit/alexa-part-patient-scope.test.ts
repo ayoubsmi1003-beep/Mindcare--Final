@@ -21,6 +21,26 @@ it('passes only exact human clauses as internal per-part scope',async()=>{
  const r=await runAgentLoop(input,{actor:'part-scopes',infer:async()=>step++===0?call([{name:'declare_request',args:{parts:goals.map((goal,i)=>({id:'p'+i,goal,tool:'get_patient_context',conditions:[],dependsOn:[]}))}}]):call(goals.map((_goal,i)=>({name:'get_patient_context',args:{partIds:['p'+i]}}))),execute:async(c,_a,_p,_s,_o,goal)=>{scopes.push(goal);return {callId:c.id,status:'ok',complete:true,text:'Information vérifiée',evidence:[],conditionKeys:[]};}},new AbortController().signal);
  expect(r.status).toBe('completed');expect(scopes).toEqual(goals);
 });
+it('keeps named sub-question identity ahead of a stale global patient name',async()=>{
+ const ayoubRow={id:ayoub,record_number:'FICTIF-A',first_name:'Ayoub',last_name:'Salmi',birth_date:null,phone:'0000000001',phone_alt:null,id_document_number:null,id_document_issuer:null,sex:'M',marital_status:null,address:null,emergency_contact:null,notes_admin:null,is_active:true,total_count:1};
+ const nadiaRow={id:nadia,record_number:'FICTIF-N',first_name:'Nadia',last_name:'Belkacem',birth_date:null,phone:'0000000004',phone_alt:null,id_document_number:null,id_document_issuer:null,sex:'F',marital_status:null,address:null,emergency_contact:null,notes_admin:null,is_active:true,total_count:1};
+ const searches:string[]=[];
+ const rpc=scriptedAlexaRpc(async(name,args)=>{
+  if(name==='search_patients'){
+   const query=String(args.p_query);searches.push(query);
+   const row=/belkacem|nadia/iu.test(query)?nadiaRow:ayoubRow;
+   return {ok:true as const,data:[row]};
+  }
+  if(name==='get_patient')return {ok:true as const,data:[args.p_id===nadia?nadiaRow:ayoubRow]};
+  throw new Error(`Unexpected RPC ${name}`);
+ });
+ const scopedInput={...input,patientName:'Ayoub Salmi'};
+ const r=await runAgentLoop(scopedInput,{actor:'stale-global-name',infer:async()=>{throw new Error('Direct reads should not invoke the model');},execute:(call,asOf,prior,signal,original,goal)=>agentExecutor(scopedInput,{rpc},{rpc:vi.fn()})(call,asOf,prior,signal,original,goal)},new AbortController().signal);
+ expect(searches).toContain('Belkacem Nadia');
+ expect(r.results.map(result=>result.patientId)).toEqual([ayoub,nadia]);
+ expect(r.results[0]?.text).toContain('0000000001');
+ expect(r.results[1]?.text).toContain('0000000004');
+});
 it('also gives a single explicitly named patient priority over a stale global patientName',async()=>{
  const row={id:nadia,record_number:'FICTIF-N',first_name:'Nadia',last_name:'Belkacem',birth_date:null,phone:'0000000004',phone_alt:null,id_document_number:null,id_document_issuer:null,sex:'F',marital_status:null,address:null,emergency_contact:null,notes_admin:null,is_active:true,total_count:1};
  const rpc=scriptedAlexaRpc(async()=>({ok:true as const,data:[row]}));

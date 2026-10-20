@@ -77,6 +77,26 @@ it('retains authorized diagnoses, treatments, scales, current consultation and h
  expect(r.data).toHaveProperty('summary');expect(r.complete).toBe(true);
 });
 
+it('links a clinical summary to the authorized patient dossier as well as its clinical evidence',async()=>{
+ vi.mocked(summarizeClinicalContext).mockResolvedValueOnce({text:'Résumé clinique fictif.',complete:true,generated:true,sourceIds:[record]});
+ const context={patientId:patient,consultations:[{id:record,startedAt:'2026-10-01T09:00:00Z',endedAt:'2026-10-01T09:30:00Z',rawNotes:'Fait clinique fictif',rawNotesVersion:'b'.repeat(64),notes:[]}],treatments:{current:[],history:[],historyComplete:true},sourceRevision:'a'.repeat(64),coverage:{requested:1,returned:1,complete:true,hasMore:false},diagnoses:[],scales:[]};
+ const rpc=scriptedAlexaRpc(async(name:string)=>({ok:true as const,data:[name==='get_patient'?{id:patient}:context]}));
+ const result=await agentExecutor({...input,text:'Résume la dernière consultation de ce dossier.'},{rpc},{rpc:vi.fn()})({id:'linked-summary',name:'get_patient_context',args:{partIds:['summary'],section:'summary',count:1}},asOf,[],new AbortController().signal);
+ expect(result.evidence).toContainEqual(expect.objectContaining({id:patient,type:'patient'}));
+ expect(result.evidence).toContainEqual(expect.objectContaining({id:record,type:'consultation'}));
+});
+
+it('answers an explicitly repeated documented theme without waiting for whole-case generation',async()=>{
+ const visits=Array.from({length:3},(_,i)=>({id:`88888888-8888-4888-8888-${String(i+1).padStart(12,'0')}`,startedAt:`2026-0${3-i}-10T09:00:00Z`,endedAt:`2026-0${3-i}-10T09:30:00Z`,notes:[{id:`99999999-9999-4999-8999-${String(i+1).padStart(12,'0')}`,version:'1',status:'signed',subjective:'Le patient décrit un sommeil fragmenté.',objective:'Aucun examen clinique renseigné.',assessment:'Thème récurrent « sommeil fragmenté ».',plan:'Une habitude du soir sera discutée.',amendments:[]}]}));
+ const context={patientId:patient,consultations:visits,diagnoses:[],scales:[],treatments:{current:[],history:[],historyComplete:true},sourceRevision:'a'.repeat(64),coverage:{requested:3,returned:3,complete:true,hasMore:false}};
+ const rpc=scriptedAlexaRpc(async(name:string)=>({ok:true as const,data:[name==='get_patient'?{id:patient}:context]}));
+ vi.mocked(summarizeClinicalContext).mockReset();
+ const result=await agentExecutor({...input,text:'Quel est le thème récurrent des notes de ce patient ?'},{rpc},{rpc:vi.fn()})({id:'theme',name:'get_patient_context',args:{partIds:['theme'],section:'summary'}},asOf,[],new AbortController().signal);
+ expect(summarizeClinicalContext).not.toHaveBeenCalled();
+ expect(result).toMatchObject({status:'ok',complete:true,text:'Les notes font ressortir le thème récurrent « sommeil fragmenté ».',presentation:'inference'});
+ expect([...new Set(result.evidence.filter(e=>e.type==='consultation').map(e=>e.id))].sort()).toEqual(visits.map(visit=>visit.id).sort());
+});
+
 it('rejects an empty OR-status filter rather than presenting an accidental empty agenda',()=>{expect(agentSchemas.query_agenda.safeParse({partIds:['p'],period:'demain',statuses:[]}).success).toBe(false);});
 
 it('rejects a finance request with no explicit view before any authoritative read',()=>{expect(agentSchemas.query_finance.safeParse({partIds:['f'],period:'ce mois'}).success).toBe(false);});

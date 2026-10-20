@@ -14,8 +14,10 @@ export const PORT_BACKEND = 43117;
  * processus principal ne la lit qu'à ce moment — jamais de sonde par
  * `setTimeout` arbitraire ici (règle 13 de la mission).
  */
+let origineCabinet: string | undefined;
+export function configurerOrigineCabinet(origin: string): void { origineCabinet = origin; }
 export function urlDepart(): string {
-  return process.env["MINDCARE_START_URL"] ?? `http://127.0.0.1:${PORT_BACKEND}`;
+  return origineCabinet ?? process.env["MINDCARE_START_URL"] ?? `http://127.0.0.1:${PORT_BACKEND}`;
 }
 
 export const EST_PACKAGE = process.env["MINDCARE_ELECTRON_ENV"] === "production";

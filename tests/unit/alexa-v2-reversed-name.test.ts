@@ -1,3 +1,4 @@
+import { fixtureRows } from "../helpers/rpc-fixture";
 import { describe, expect, it } from "vitest";
 import { resolvePatient } from "@/server/alexa/patient-resolver";
 import type { DbPort, RpcArgs } from "@/services/db/port";
@@ -7,8 +8,8 @@ const row = { id, first_name: "Mohamed", last_name: "Belkacem", total_count: "1"
 function door(searches: Record<string, readonly typeof row[]>, verified: typeof row = row) {
   const queries: string[] = [];
   const db = { rpc: async <T>(name: string, args: RpcArgs) => {
-    if (name === "search_patients") { queries.push(String(args.p_query)); return { ok: true as const, data: (searches[String(args.p_query)] ?? []) as unknown as readonly T[] }; }
-    return { ok: true as const, data: [verified] as unknown as readonly T[] };
+    if (name === "search_patients") { queries.push(String(args.p_query)); return fixtureRows<T>(searches[String(args.p_query)] ?? []); }
+    return fixtureRows<T>([verified]);
   } } satisfies Pick<DbPort, "rpc">;
   return { db, queries };
 }
@@ -34,7 +35,7 @@ describe("audited reversed full patient names", () => {
   });
   it("does not reverse a single incomplete name or reuse an older patient", async () => {
     const { db, queries } = door({});
-    expect((await resolvePatient(db, { name: "Belkacem", patientId: id })).status).toBe("unavailable");
+    expect((await resolvePatient(db, { name: "Belkacem", patientId: id })).status).toBe("absent");
     expect(queries).toEqual(["Belkacem"]);
   });
 });

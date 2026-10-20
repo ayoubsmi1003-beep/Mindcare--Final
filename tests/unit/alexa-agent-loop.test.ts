@@ -1,7 +1,10 @@
 import { expect, it } from "vitest";
+import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
 import { runAgentLoop,restoreAgentTask,savedAgentTask } from "@/server/alexa/agent-loop";
-import { AgentReadError, queryPatientsSchema, validateLedger } from "@/shared/alexa/agent";
-import {frenchRequestedOutputs,requestedReadTool,frenchRequestAdmission} from '@/shared/alexa/request-contract';
+import {explicitAgentPeriod} from '@/server/alexa/agent-period';
+import { AgentReadError, conditionKey, patientMetricConditions, queryPatientsSchema, validateLedger } from "@/shared/alexa/agent";
+import {frenchRequestedOutputs,requestedReadTool,frenchRequestAdmission,frenchPatientCompoundContract} from '@/shared/alexa/request-contract';
 import {z} from 'zod';
 import type { LocalCompletion } from "@/server/alexa/local-model-protocol";
 
@@ -10,6 +13,12 @@ const parts = ["Actifs", "Sans identité", "Enfants", "Sans visite"].map((goal,i
 const calls = (entries: {name:string;args:Record<string,unknown>}[]):LocalCompletion => ({kind:"calls", calls:entries.map((x,i)=>({id:`c${i}-${x.name}`, ...x})),
   message:{role:"assistant",content:null,tool_calls:entries.map((x,i)=>({id:`c${i}-${x.name}`,type:"function",function:{name:x.name,arguments:JSON.stringify(x.args)}}))},tokensIn:20,tokensOut:10});
 const input = {text:"Combien de patients actifs, sans identité, enfants et sans visite depuis six mois ?",conversationId:"loop-test",clientTurnId:id,appContext:{patientId:null,page:"/jarvis"}};
+const evalCases=(JSON.parse(readFileSync(resolve(process.cwd(),"tests/eval/alexa-minicpm-100-algerian-cases.json"),"utf8")) as {cases:Array<{id:string;family:string;input:string;context:{patientId:string|null;page:string};expected:{toolArguments:Array<{name:string;args:Record<string,unknown>}>}}>} ).cases;
+const multiMetricCases=evalCases.filter(testCase=>testCase.family==="questions_multiples_completeness");
+const noteCases=evalCases.filter(testCase=>testCase.family==="notes_cliniques");
+const generalCases=evalCases.filter(testCase=>testCase.family==="question_generale_llm");
+const diagnosisCases=evalCases.filter(testCase=>testCase.family==="diagnostics_fictifs");
+const agendaCases=evalCases.filter(testCase=>testCase.family==="agenda");
 it('serializes reads that synthesize with the one-slot local model',async()=>{
  let step=0,inFlight=0,peak=0;
  const steps=[calls([{name:'declare_request',args:{parts:[{id:'s',goal:'Synthèse clinique',tools:['get_patient_context'],conditions:[],dependsOn:[]},{id:'k',goal:'Références approuvées',tools:['search_knowledge'],conditions:[],dependsOn:[]}]}}]),calls([{name:'get_patient_context',args:{partIds:['s'],section:'summary'}},{name:'search_knowledge',args:{partIds:['k'],query:'Dépression DSM-5'}}])];
@@ -43,6 +52,29 @@ it.each([
  expect(inferenceCalls).toBe(0);expect(dispatched).toMatchObject({partIds:['requested_1'],section:'profile'});
  expect(result.parts).toHaveLength(1);expect(result.parts[0]).toMatchObject({id:'requested_1',goal:text,status:'answered'});
 });
+it('routes a named completed-consultation count through the exact read tool without model selection',async()=>{
+ const text='Combien de consultations terminées sont enregistrées pour Amel Bensaid ?';let inferenceCalls=0;const observed:Record<string,unknown>[]=[];
+ expect(frenchRequestAdmission(text,false)).toMatchObject({tools:['query_consultations'],consultationMode:'count',consultationStatus:'closed'});
+ const result=await runAgentLoop({...input,text,conversationId:'direct-consultation-count'},{actor:'direct-consultation-count',infer:async()=>{inferenceCalls++;throw new Error('Unexpected model call');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,patientId:id,text:'6 consultations terminées.',evidence:[{id,type:'patient',label:'Patient fictif'}],conditionKeys:[]})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);expect(observed).toEqual([{name:'query_consultations',args:{partIds:['requested_1'],patientName:'Amel Bensaid',mode:'count',status:'closed'}}]);
+ expect(result).toMatchObject({status:'completed',parts:[{id:'requested_1',status:'answered',tools:['query_consultations']} ]});
+});
+it.each(diagnosisCases)('routes a named diagnosis read through the patient-context gate without model selection: $id',async testCase=>{
+ let inferenceCalls=0;const observed:Record<string,unknown>[]=[];
+ expect(frenchRequestAdmission(testCase.input,false)).toMatchObject({tools:['get_patient_context'],patientSection:'diagnoses'});
+ const result=await runAgentLoop({...input,text:testCase.input,conversationId:'direct-diagnosis-'+testCase.id,appContext:testCase.context},{actor:'direct-diagnosis-'+testCase.id,infer:async()=>{inferenceCalls++;throw new Error('Unexpected model call');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,patientId:id,text:'Marqueur de test fictif.',evidence:[{id,type:'diagnostic',label:'Marqueur de test fictif'}],conditionKeys:[]})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);expect(observed).toEqual([{name:'get_patient_context',args:{partIds:['requested_1'],section:'diagnoses'}}]);
+ expect(result).toMatchObject({status:'completed',parts:[{id:'requested_1',status:'answered',tools:['get_patient_context']}]});
+});
+it.each(agendaCases)('routes a single French tomorrow-agenda read through its bounded date gate: $id',async testCase=>{
+ let inferenceCalls=0;const observed:Record<string,unknown>[]=[];
+ expect(frenchRequestedOutputs(testCase.input)).toBeNull();expect(frenchRequestAdmission(testCase.input,false)).toMatchObject({tools:['query_agenda']});
+ expect(explicitAgentPeriod(testCase.input,'2026-10-20T11:00:00Z')).toMatchObject({from:'2026-10-21T00:00:00+01:00',to:'2026-10-22T00:00:00+01:00'});
+ const result=await runAgentLoop({...input,text:testCase.input,conversationId:'direct-agenda-'+testCase.id,appContext:testCase.context},{actor:'direct-agenda-'+testCase.id,asOf:'2026-10-20T11:00:00Z',infer:async()=>{inferenceCalls++;throw new Error('Unexpected model call');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,text:'Rendez-vous fictif vérifié.',evidence:[{id:'33333333-3333-4333-8333-333333333333',type:'appointment',label:'Demain'}],conditionKeys:[]})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);expect(observed).toHaveLength(1);expect(observed[0]).toMatchObject({name:'query_agenda',args:{partIds:['requested_1'],from:'2026-10-21T00:00:00+01:00',to:'2026-10-22T00:00:00+01:00'}});
+ if(testCase.id==='mc-100-079')expect((observed[0]?.args as Record<string,unknown>).patientName).toBe('Amel Bensaid');
+ expect(result).toMatchObject({status:'completed',parts:[{id:'requested_1',status:'answered',tools:['query_agenda']}]});
+});
 it.each([
  ["Ouvre l'agenda",'agenda'],
  ['Va au tableau de bord','dashboard'],
@@ -68,6 +100,73 @@ it.each(['Combien de notifications non lues ai-je ?','Montre les notifications d
   return {callId:call.id,status:'ok',complete:true,text:'Aucune notification n’est visible pour le moment.',evidence:[],conditionKeys:[]};
  }},new AbortController().signal);
  expect(inferenceCalls).toBe(0);expect(dispatched).toMatchObject({name:'query_app',partIds:['requested_1'],view:'notifications'});expect(result).toMatchObject({status:'completed'});
+});
+it.each(noteCases)('executes an explicit, validated note search through the notes gate without model selection: $id',async testCase=>{
+ let inferenceCalls=0;const observed:Record<string,unknown>[]=[];
+ const expectedArgs=testCase.expected.toolArguments.find(entry=>entry.name==='get_patient_context')?.args;
+ const result=await runAgentLoop({...input,text:testCase.input,conversationId:'direct-notes-'+testCase.id,appContext:testCase.context},{actor:'direct-notes-'+testCase.id,infer:async()=>{inferenceCalls++;throw new Error('Unexpected model call');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,text:'Marqueur de consultation retrouvé.',patientId:testCase.context.patientId??id,evidence:[],conditionKeys:[]})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);expect(observed).toEqual([{name:'get_patient_context',args:{partIds:['requested_1'],section:'notes',...expectedArgs}}]);
+ expect(result).toMatchObject({status:'completed',parts:[{id:'requested_1',status:'answered',tools:['get_patient_context']}]});
+});
+it.each(multiMetricCases)('executes all independently requested French cabinet metrics in one authorized read: $id',async testCase=>{
+ let inferenceCalls=0;const observed:Record<string,unknown>[]=[];
+ const result=await runAgentLoop({...input,text:testCase.input,conversationId:'direct-metrics-'+testCase.id},{actor:'direct-metrics-'+testCase.id,infer:async()=>{inferenceCalls++;throw new Error('Unexpected model call');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,text:'Métriques vérifiées pour les patients actifs.',data:{metrics:Object.fromEntries((call.args['metrics'] as string[]).map(metric=>[metric,1]))},evidence:[{id:call.id,type:'query',label:'Patients actifs'}],conditionKeys:[]})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);expect(observed).toHaveLength(1);expect(observed[0]).toMatchObject({name:'query_patients',args:{mode:'metrics',population:'active',metrics:['active','missing_identity_card','children','not_seen_6m']}});
+ expect((observed[0]?.args as Record<string,unknown>)['partIds']).toHaveLength(4);
+ expect(result.status).toBe('completed');expect(result.parts).toHaveLength(4);expect(result.parts.every(part=>part.status==='answered')).toBe(true);
+});
+it('runs a mixed agenda and administrative review as dependent authorized reads with a four-part ledger',async()=>{
+ const text='Montre les rendez-vous de demain, repère les dossiers administratifs incomplets parmi ces patients, résume les champs manquants et prépare une liste de corrections à vérifier.';
+ expect(frenchRequestedOutputs(text)).toHaveLength(4);
+ const patients=Array.from({length:10},(_,i)=>`b5000000-0000-4000-8000-${String(i+1).padStart(12,'0')}`),appointments=Array.from({length:10},(_,i)=>`b5400000-0000-4000-8000-${String(i+1).padStart(12,'0')}`),reviewed=patients.slice(0,8),observed:Record<string,unknown>[]=[];let inferenceCalls=0;
+ const result=await runAgentLoop({...input,text,conversationId:'direct-agenda-review'},{actor:'direct-agenda-review',asOf:'2026-10-20T11:00:00Z',infer:async()=>{inferenceCalls++;throw Error('Unexpected model call');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async(call,_asOf,prior)=>{
+  if(call.name==='query_agenda')return {callId:call.id,status:'ok',complete:true,text:'10 rendez-vous demain.',data:{total:10,rows:appointments.map(id=>({id})),offset:0,agendaPatientIds:patients,hasMore:false},evidence:appointments.map(id=>({id,type:'appointment' as const,label:'Rendez-vous fictif'})),conditionKeys:[]};
+  expect(call.name).toBe('query_patients');expect(prior.some(item=>item.data&&typeof item.data==='object'&&'agendaPatientIds' in item.data)).toBe(true);
+  return {callId:call.id,status:'ok',complete:true,text:'8 dossiers incomplets.',data:{total:8,rows:reviewed.map(id=>({id,missing:['phone']})),complete:true},evidence:reviewed.map(id=>({id,type:'patient' as const,label:'Patient fictif'})),conditionKeys:[conditionKey({field:'administrative_incomplete',op:'eq',value:true})]};
+ }},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);expect(observed.map(call=>call.name)).toEqual(['query_agenda','query_patients']);expect(observed[0]).toMatchObject({args:{from:'2026-10-21T00:00:00+01:00',to:'2026-10-22T00:00:00+01:00'}});expect(observed[1]).toMatchObject({args:{mode:'review',filters:[{field:'administrative_incomplete',op:'eq',value:true}],partIds:['requested_2','requested_3','requested_4']}});
+ expect(result.status).toBe('completed');expect(result.parts.map(part=>part.id)).toEqual(['requested_1','requested_2','requested_3','requested_4']);expect(result.parts.every(part=>part.status==='answered')).toBe(true);expect(result.parts.slice(1).every(part=>part.dependsOn.includes('requested_1'))).toBe(true);expect(result.sentences.join('\n')).toMatch(/aucune correction n[’']a été enregistrée/i);expect(result.sentences.join('\n')).toMatch(/à vérifier dans chaque dossier/i);
+});
+it('answers a mixed three-metric and agenda request while retaining verified metrics after an agenda failure',async()=>{
+ const text='Combien de patients sont actifs, combien n’ont pas de CNI, combien ont moins de 18 ans et quels rendez-vous sont prévus demain ?',observed:Record<string,unknown>[]=[];let inferenceCalls=0;
+ const result=await runAgentLoop({...input,text,conversationId:'mixed-metrics-agenda-failure'},{actor:'mixed-metrics-agenda-failure',asOf:'2026-10-20T11:00:00Z',infer:async()=>{inferenceCalls++;throw Error('Unexpected model call');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>{
+  if(call.name==='query_agenda')throw new AgentReadError('database');
+  const metrics=['active','missing_identity_card','children'];expect(call.name).toBe('query_patients');return {callId:call.id,status:'ok',complete:true,text:'Patients actifs : 47\nSans identité : 9\nEnfants : 7',data:{metrics:{active:47,missing_identity_card:9,children:7}},evidence:[{id:call.id,type:'query',label:'Métriques vérifiées'}],conditionKeys:metrics.flatMap(metric=>patientMetricConditions[metric as keyof typeof patientMetricConditions].map(conditionKey))};
+ }},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);expect(observed).toHaveLength(2);expect(observed.find(call=>call.name==='query_patients')).toMatchObject({args:{mode:'metrics',population:'active',metrics:['active','missing_identity_card','children'],partIds:['requested_1','requested_2','requested_3']}});expect(result.status).toBe('partial');expect(result.parts).toHaveLength(4);expect(result.parts.filter(part=>part.status==='answered')).toHaveLength(3);expect(result.parts.find(part=>part.id==='requested_4')).toMatchObject({status:'failed',tools:['query_agenda']});
+});
+it('executes a supported compound count-and-list as one atomic filtered query',async()=>{
+ const text='Trouve les adultes ayant au moins trois consultations terminées, un solde restant dû positif et aucune consultation terminée depuis 90 jours. Donne le nombre, la liste et trie par solde décroissant.';
+ const contract=frenchPatientCompoundContract(text);expect(contract).not.toBeNull();let inferenceCalls=0;const observed:Record<string,unknown>[]=[];
+ const result=await runAgentLoop({...input,text,conversationId:'direct-compound-filter'},{actor:'direct-compound-filter',infer:async()=>{inferenceCalls++;throw new Error('Unexpected model call');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'empty',complete:true,text:'0 patient correspondant.',data:{total:0,rows:[],complete:true,offset:0},evidence:[{id:call.id,type:'query',label:'Filtre patient vérifié'}],conditionKeys:contract!.conditions.map(conditionKey)})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);expect(observed).toHaveLength(1);expect(observed[0]).toMatchObject({name:'query_patients',args:{mode:'list',population:'active',sort:'outstanding_desc',limit:20,filters:contract!.conditions}});expect((observed[0]?.args as Record<string,unknown>).partIds).toEqual(['count','list']);
+ expect(result.status).toBe('completed');expect(result.parts.map(part=>part.id)).toEqual(['count','list']);expect(result.parts.every(part=>part.status==='answered')).toBe(true);
+});
+const namedReadRouteCases=[
+ {id:'mc-100-094',parts:2,calls:2,status:'completed'},
+ {id:'mc-100-095',parts:2,calls:2,status:'completed'},
+ {id:'mc-100-097',parts:3,calls:3,status:'completed'},
+ {id:'mc-100-098',parts:2,calls:2,status:'completed'},
+ {id:'mc-100-099',parts:2,calls:1,status:'completed'},
+ {id:'mc-100-100',parts:2,calls:1,status:'partial'},
+] as const;
+it.each(namedReadRouteCases)('routes independent named fields and counts through exact read gates: $id',async route=>{
+ const testCase=evalCases.find(item=>item.id===route.id);expect(testCase).toBeDefined();let inferenceCalls=0;const observed:Record<string,unknown>[]=[];
+ const result=await runAgentLoop({...input,text:testCase!.input,conversationId:'named-route-'+route.id},{actor:'named-route-'+route.id,asOf:'2026-10-20T11:00:00Z',infer:async()=>{inferenceCalls++;throw Error('Unexpected model call');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>{
+  if(route.id==='mc-100-095'&&call.name==='get_patient_context')return {callId:call.id,status:'partial',complete:false,text:'Page de notes partielle.',data:{total:11,rows:[{consultationId:'90000000-0000-4000-8000-000000000095',startedAt:'2026-10-19T09:00:00+01:00',area:'working',text:'REPERE-001-S06'},{consultationId:'90000000-0000-4000-8000-000000000094',startedAt:'2026-10-18T09:00:00+01:00',area:'working',text:'Note antérieure.'}],noteQuery:{offset:0}},evidence:[{id:call.id,type:'query',label:'Lecture des notes',provenance:{gate:'query_alexa_note_sections',total:11}},{id:'90000000-0000-4000-8000-000000000095',type:'consultation',label:'Dernière consultation'}],conditionKeys:[]};
+  return {callId:call.id,status:'ok',complete:true,text:call.name==='query_consultations'?'6 consultations terminées.':call.name==='query_agenda'?'1 rendez-vous demain.':call.args['section']==='notes'?'REPERE-001-S06':'Coordonnées vérifiées.',evidence:[{id:call.id,type:'query',label:'Lecture vérifiée'}],conditionKeys:[]};
+ }},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);expect(observed).toHaveLength(route.calls);expect(result.parts).toHaveLength(route.parts);expect(result.status).toBe(route.status);if(route.id==='mc-100-095'){expect(observed).toContainEqual(expect.objectContaining({name:'get_patient_context',args:expect.objectContaining({section:'notes',patientName:'Amel Bensaid'})}));expect(result.parts.find(part=>part.id==='requested_2')?.status).toBe('answered');expect(result.results.find(item=>item.callId.includes('requested_2'))?.text).toContain('REPERE-001-S06');}if(route.id==='mc-100-099')expect(observed[0]).toMatchObject({name:'get_patient_context',args:{section:'profile',partIds:['requested_1','requested_2']}});if(route.id==='mc-100-100'){expect(result.parts.find(part=>part.status==='unsupported')).toBeDefined();expect(observed.every(call=>call.name==='get_patient_context')).toBe(true);}
+});
+it.each(generalCases)('routes an explicitly admitted public question to the local answer tool without a selection turn: $id',async testCase=>{
+ let inferenceCalls=0;const observed:Record<string,unknown>[]=[];
+ const result=await runAgentLoop({...input,text:testCase.input,conversationId:'direct-general-'+testCase.id},{actor:'direct-general-'+testCase.id,infer:async()=>{inferenceCalls++;throw new Error('Public domain is already admitted');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,text:'Réponse générale locale.',evidence:[{id:call.id,type:'query',label:'Réponse locale',provenance:{gate:'local_model'}}],conditionKeys:[]})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);expect(observed).toEqual([{name:'answer_general',args:{partIds:['requested_1'],question:testCase.input}}]);
+ expect(result).toMatchObject({status:'completed',parts:[{id:'requested_1',goal:testCase.input,tools:['answer_general'],status:'answered'}]});
+});
+it('lets synthetic evaluations observe only the result status and safe error code',async()=>{
+ const observed:unknown[]=[];const result=await runAgentLoop({...input,text:'Comment fonctionne un ordinateur ?',conversationId:'observe-direct-result'},{actor:'observe-direct-result',observeResult:value=>observed.push(value),execute:async call=>({callId:call.id,status:'error',complete:false,text:'Réponse indisponible.',evidence:[],conditionKeys:[],error:{code:'general-invalid-response',retryable:false}})},new AbortController().signal);
+ expect(result.status).toBe('failed');expect(observed).toEqual([{callId:expect.any(String),name:'answer_general',status:'error',errorCode:'general-invalid-response'}]);
 });
 it('keeps a raw note page out of MiniCPM context before an independent second read',async()=>{
  const text='Pour Amel Bensaid, quelles sont les notes de consultation et combien de consultations terminées sont enregistrées ?';
@@ -327,10 +426,11 @@ it('cannot coalesce two different populations into a purported single count',asy
  const r=await runAgentLoop({...input,text:'Combien de patients actifs avons-nous ?',conversationId:'different-populations-contract'},{actor:'different-populations-contract',infer:async()=>{if(i++===0)return steps[0]!;throw Error('No valid repair');},execute:async()=>{reads++;throw Error('No dispatch');}},new AbortController().signal);
  expect(reads).toBe(0);expect(r.parts).toHaveLength(1);expect(r.parts[0]?.status).not.toBe('answered');
 });
-it('accounts explicitly for all four count clauses after an incomplete native declaration',async()=>{
- let i=0,reads=0;const steps=[calls([{name:'declare_request',args:{parts:[{id:'a',goal:'actifs',tool:'query_patients',conditions:[],dependsOn:[]},{id:'b',goal:'enfants',tool:'query_patients',conditions:['age:lt:18'],dependsOn:[]}]}}])];
- const r=await runAgentLoop({...input,text:'Combien de patients actifs, combien sans identité, combien d’enfants et combien sans consultation terminée depuis six mois ?',conversationId:'four-count-omission-contract'},{actor:'four-count-omission-contract',infer:async()=>{if(i++===0)return steps[0]!;throw Error('No valid repair');},execute:async()=>{reads++;throw Error('No dispatch');}},new AbortController().signal);
- expect(reads).toBe(0);expect(r.parts).toHaveLength(4);expect(r.parts.every(p=>p.status!=='answered')).toBe(true);expect(r.parts[3]?.goal).toContain('six mois');
+it('answers a complete four-metric request through one typed read even when MiniCPM is unavailable',async()=>{
+ let inferenceCalls=0,reads=0;const observed:Record<string,unknown>[]=[];
+ const r=await runAgentLoop({...input,text:'Combien de patients actifs, combien sans identité, combien d’enfants et combien sans consultation terminée depuis six mois ?',conversationId:'four-count-omission-contract'},{actor:'four-count-omission-contract',infer:async()=>{inferenceCalls++;throw Error('Model should not be needed for this closed read');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>{reads++;return {callId:call.id,status:'ok',complete:true,text:'Métriques vérifiées.',data:{metrics:Object.fromEntries((call.args['metrics'] as string[]).map(metric=>[metric,1]))},evidence:[],conditionKeys:[]};}},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);expect(reads).toBe(1);expect(observed[0]).toMatchObject({name:'query_patients',args:{mode:'metrics',metrics:['active','missing_identity_card','children','not_seen_6m']}});
+ expect(r.parts).toHaveLength(4);expect(r.parts.every(part=>part.status==='answered')).toBe(true);expect(r.status).toBe('completed');
 });
 it('never substitutes identity-number counts for the unsupported email field',async()=>{
  let i=0,reads=0;const steps=[calls([{name:'declare_request',args:{parts:[{id:'a',goal:'sans identité',tool:'query_patients',conditions:['identity_card:missing'],dependsOn:[]}]}}])];
@@ -361,16 +461,17 @@ it('blocks an unrequested missing-identity predicate in a positive phone lookup'
  let i=0,reads=0;const r=await runAgentLoop({...input,text:'Quel est le téléphone enregistré du patient sélectionné ?',conversationId:'phone-not-missing-id'},{actor:'phone-not-missing-id',infer:async()=>{if(i++===0)return calls([{name:'declare_request',args:{parts:[{id:'a',goal:'Téléphone',tool:'query_patients',conditions:['identity_card:missing'],dependsOn:[]}]}}]);throw Error('No repair');},execute:async()=>{reads++;throw Error('No read');}},new AbortController().signal);expect(reads).toBe(0);expect(r.status).toBe('failed');
 });
 
-it('gives native intent declaration the actual selected-patient state and a French capability map',async()=>{
- let captured:readonly {role:string;content?:string|null}[]=[];
- await runAgentLoop({...input,text:'Quel est le téléphone du patient sélectionné ?',conversationId:'metadata-selected-patient',appContext:{patientId:'22222222-2222-4222-8222-222222222222',page:'/patients/22222222-2222-4222-8222-222222222222'}},{actor:'metadata-selected-patient',infer:async messages=>{captured=messages;throw Error('Capture only');},execute:async()=>{throw Error('No execution');}},new AbortController().signal);
- expect(captured[1]?.content).toContain('Patient sélectionné : oui');expect(captured[0]?.content).toContain('get_patient_context :');expect(captured[0]?.content).toContain('answer_general :');expect(captured[0]?.content).toContain('query_finance :');
+it('routes a selected-patient phone read directly through the patient-context gate',async()=>{
+ let inferenceCalls=0;const observed:Record<string,unknown>[]=[];
+ const patient='22222222-2222-4222-8222-222222222222';
+ const result=await runAgentLoop({...input,text:'Quel est le téléphone du patient sélectionné ?',conversationId:'metadata-selected-patient',appContext:{patientId:patient,page:'/patients/'+patient}},{actor:'metadata-selected-patient',infer:async()=>{inferenceCalls++;throw Error('Unexpected model call');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,patientId:patient,text:'Téléphone vérifié.',evidence:[{id:patient,type:'patient',label:'Dossier patient'}],conditionKeys:[]})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);expect(observed).toEqual([{name:'get_patient_context',args:{partIds:['requested_1'],section:'profile'}}]);expect(result.status).toBe('completed');
 });
 
-it('does not offer unknown record IDs or redundant absolute dates for one whole relative period',async()=>{
- let i=0,parameters:Record<string,unknown>={};
- await runAgentLoop({...input,text:'Quels sont les rendez-vous de demain ?',conversationId:'grounded-agenda-catalogue'},{actor:'grounded-agenda-catalogue',infer:async(_m,o)=>{if(i++===0)return calls([{name:'declare_request',args:{parts:[{id:'a',goal:'Demain',tool:'query_agenda',conditions:[],dependsOn:[]}]}}]);parameters=o.tools!.find(t=>t.function.name==='query_agenda')!.function.parameters;return calls([{name:'query_agenda',args:{partIds:['a'],period:'demain'}}]);},execute:async call=>({callId:call.id,status:'empty',complete:true,text:'0 rendez-vous',conditionKeys:[],evidence:[]})},new AbortController().signal);
- const properties=parameters.properties as Record<string,unknown>;for(const field of ['appointmentId','patientId','patientName'])expect(properties).not.toHaveProperty(field);expect(properties).toHaveProperty('period');expect(properties).not.toHaveProperty('from');expect(properties).not.toHaveProperty('to');expect(parameters.required).toContain('period');
+it('routes a whole relative agenda period with bounded dates and no invented record identifiers',async()=>{
+ const observed:Record<string,unknown>[]=[];
+ await runAgentLoop({...input,text:'Quels sont les rendez-vous de demain ?',conversationId:'grounded-agenda-catalogue'},{actor:'grounded-agenda-catalogue',asOf:'2026-10-20T11:00:00Z',infer:async()=>{throw Error('Unexpected model call');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'empty',complete:true,text:'0 rendez-vous',conditionKeys:[],evidence:[]})},new AbortController().signal);
+ expect(observed).toEqual([{name:'query_agenda',args:{partIds:['requested_1'],from:'2026-10-21T00:00:00+01:00',to:'2026-10-22T00:00:00+01:00'}}]);
 });
 
 it.each(['Quels sont les rendez-vous du 2026-10-01 au 2026-10-15 ?','Montre les rendez-vous de demain entre 9h et 12h.','Quels sont les rendez-vous demain dans la matinée ?','Montre les rendez-vous demain en fin de journée.'])('keeps precise bounds available for the fully specified window %s',async text=>{

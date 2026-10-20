@@ -1,12 +1,41 @@
 import {it,expect,vi} from 'vitest';
 import {agentExecutor} from '@/server/alexa/agent-tools';
 import {runAgentLoop} from '@/server/alexa/agent-loop';
+import {inferNativeGeneralAlexa} from '@/server/alexa/model-gateway';
+import {inferLocalText} from '@/server/alexa/local-model';
 vi.mock('@/server/alexa/local-model',()=>({inferLocalCompletion:vi.fn(),inferLocalText:vi.fn(async()=> 'La Lune reste en orbite grâce à la gravité et à sa vitesse.')}));
 const id='11111111-1111-4111-8111-111111111111';
 const input={text:'Pourquoi la Lune tourne autour de la Terre ?',conversationId:'general-tool',clientTurnId:id,appContext:{patientId:null,page:'/jarvis'}};
+it('answers a supported public fact from the local reference without running a model or database query',async()=>{
+ vi.mocked(inferLocalText).mockClear();
+ const result=await inferNativeGeneralAlexa(input.text,new AbortController().signal);
+ expect(result).toMatchObject({ok:true,model:null,reference:{id:'moon-orbit',label:'NASA — How Orbits Work'}});
+ if(result.ok){expect(result.text).toContain('gravité');expect(result.text).toContain('vitesse');}
+ expect(inferLocalText).not.toHaveBeenCalled();
+});
+it('uses a local source to explain the processor, program instructions and data',async()=>{
+ vi.mocked(inferLocalText).mockClear();
+ const result=await inferNativeGeneralAlexa('Comment fonctionne un ordinateur ?',new AbortController().signal);
+ expect(result).toMatchObject({ok:true,model:null,reference:{id:'computer'}});
+ if(result.ok){expect(result.text).toContain('processeur');expect(result.text).toContain('instructions');expect(result.text).toContain('données');}
+ expect(inferLocalText).not.toHaveBeenCalled();
+});
+it('retains MiniCPM for a safe public question with no verified local fact',async()=>{
+ vi.mocked(inferLocalText).mockClear().mockResolvedValueOnce('La buée se forme lorsque la vapeur d’eau refroidit et se condense.');
+ const question='Pourquoi un miroir se couvre-t-il de buée ?',signal=new AbortController().signal;
+ const result=await inferNativeGeneralAlexa(question,signal);
+ expect(result).toMatchObject({ok:true,model:expect.any(String)});
+ expect(vi.mocked(inferLocalText)).toHaveBeenCalledWith(expect.arrayContaining([expect.objectContaining({role:'user',content:question})]),expect.objectContaining({signal}));
+});
+it('fails closed on a mixed-English public answer',async()=>{
+ vi.mocked(inferLocalText).mockClear().mockResolvedValueOnce('Un miroir se couvre de vapeur because the temperature falls.');
+ const result=await inferNativeGeneralAlexa('Pourquoi un miroir se couvre-t-il de buée ?',new AbortController().signal);
+ expect(result).toMatchObject({ok:false,code:'invalid-response'});
+});
 it('uses a separate admitted local general answer without a database read',async()=>{
+ vi.mocked(inferLocalText).mockClear();
  const rpc=vi.fn();const r=await agentExecutor(input,{rpc},{rpc:vi.fn()})({id:'g',name:'answer_general',args:{partIds:['g'],question:input.text}},'2026-10-15T12:00:00Z',[],new AbortController().signal);
- expect(r).toMatchObject({complete:true});expect(r.text).toContain('Réponse générale');expect(r.text).toContain('gravité');expect(rpc).not.toHaveBeenCalled();
+ expect(r).toMatchObject({complete:true});expect(r.text).toContain('gravité');expect(r.text).toContain('vitesse');expect(r.evidence).toContainEqual(expect.objectContaining({type:'query',provenance:expect.objectContaining({gate:'local_public_fact',sourceId:'moon-orbit'})}));expect(rpc).not.toHaveBeenCalled();expect(inferLocalText).not.toHaveBeenCalled();
 });
 it.each(['Quel est le chiffre d’affaires ?','Quels sont les impayés ?','Quel diagnostic est enregistré ?','Combien de patients actifs ?'])('cannot replace an application/clinical answer with general prose: %s',async question=>{
  const rpc=vi.fn();const r=await agentExecutor({...input,text:question},{rpc},{rpc:vi.fn()})({id:'g',name:'answer_general',args:{partIds:['g'],question}},'2026-10-15T12:00:00Z',[],new AbortController().signal);

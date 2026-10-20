@@ -37,3 +37,14 @@ export class ConversationState {
 }
 
 export const conversationState = new ConversationState();
+
+/** An ordinal is a local selection, never an instruction or an arbitrary identifier. */
+export function resolveListedReference(text:string,candidates:readonly {patientId:string;label:string}[]):string|null {
+  const value=text.normalize("NFKD").replace(/\p{M}/gu,"").toLocaleLowerCase("fr").replace(/[?!.؟]/gu,"").trim();
+  const normalized=value.replace(/^(?:le|la|patient|المريض)\s+/u,"");
+  const ordinals:Record<string,number>={premier:1,premiere:1,deuxieme:2,second:2,seconde:2,troisieme:3,quatrieme:4,cinquieme:5,"الاول":1,"الثاني":2,"الثالث":3};
+  const index=/^\d{1,2}$/u.test(normalized)?Number(normalized):ordinals[normalized];
+  if(index!==undefined)return candidates[index-1]?.patientId??null;
+  const exact=candidates.filter(c=>c.label.normalize("NFKD").replace(/\p{M}/gu,"").toLocaleLowerCase("fr")===value);
+  return exact.length===1?exact[0]!.patientId:null;
+}

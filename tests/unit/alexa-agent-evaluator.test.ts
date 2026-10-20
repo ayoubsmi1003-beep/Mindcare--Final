@@ -96,6 +96,12 @@ describe('sources et champs réellement émis',()=>{
  const spec=specWith({sourceRefs:[patient],responseFields:[{label:'Téléphone',value:'0550000000',source:patient}]});
  const record={...baseRecord,events:[...baseRecord.events,{type:'sentence',kind:'fact',text:'Téléphone : 0550000000.',sources:[patient]}]};
  it('accepte une valeur factuelle avec libellé et source du même patient',()=>expect(evaluateAlexaCase(spec,record).status).toBe('PASS'));
+ it('qualifie explicitement un champ administratif absent avec la source du bon patient',()=>{
+  const missingSpec=specWith({sourceRefs:[patient],responseFields:[{label:'Téléphone',value:'Non renseigné',source:patient}]});
+  const missing={...baseRecord,events:[...baseRecord.events,{type:'sentence',kind:'fact',text:'Téléphone : Non renseigné.',sources:[patient]}]};
+  expect(evaluateAlexaCase(missingSpec,missing).status).toBe('PASS');
+  expect(evaluateAlexaCase(missingSpec,{...missing,events:[...baseRecord.events,{type:'sentence',kind:'fact',text:'Téléphone : Non renseigné.',sources:[{...patient,id:'patient-b'}]}]}).status).toBe('FAIL');
+ });
  it.each([
   ['mauvais patient',{...patient,id:'patient-b'}],
   ['mauvais type',{...patient,type:'query'}],
@@ -168,3 +174,13 @@ it('qualifies a single exact reviewable proposal with no business execution',()=
 it('distinguishes all agenda patients from the subset with administrative gaps',()=>{const spec={...baseSpec,scenario:23,expectedManifest:{requiredParts:['tomorrow_agenda','administrative_gaps','missing_fields','review_corrections'],filters:[]},expected:{status:'completed',reviewOnly:true,agendaCount:2,agendaPatientIds:['patient-a','patient-b'],findingPatientIds:['patient-b']}};const parts=['Agenda demain','Dossiers administratifs incomplets','Champs manquants','Corrections pour revue'].map((goal,i)=>({id:'p'+i,goal,status:'answered',conditions:[],resultRefs:['r']}));const record={...baseRecord,events:[{type:'done',status:'completed',parts},{type:'sentence',kind:'fact',text:'Aucune correction n’a été enregistrée.',sources:[{type:'appointment',id:'appointment-a'},{type:'appointment',id:'appointment-b'},{type:'patient',id:'patient-b'}]}],queries:[{name:'search_patients',args:{p_spec:JSON.stringify({mode:'review',patientIds:['patient-a','patient-b']})}}]};expect(evaluateAlexaCase(spec,record).status).toBe('PASS');expect(evaluateAlexaCase(spec,{...record,queries:[{name:'search_patients',args:{p_spec:JSON.stringify({mode:'review',patientIds:['patient-b']})}}]}).failures).toContain('administrative review scoped to agenda patients');});
 
 it('rejects altered diagnostic labels even when every expected source ID remains present',()=>{const spec=specWith({sourceSets:[{type:'diagnostic',ids:['diag-one']}],textIncludes:['Diagnostic FICTIF attendu','FICTIF-1','non résolu']});const record={...baseRecord,events:[...baseRecord.events,{type:'sentence',kind:'fact',text:'Diagnostic enregistré : Diagnostic FICTIF attendu (FICTIF-1) · non résolu.',sources:[{type:'diagnostic',id:'diag-one'}]}]};expect(evaluateAlexaCase(spec,record).status).toBe('PASS');const wrong={...record,events:[record.events[0],{...record.events[1],text:'Diagnostic enregistré : contenu remplacé.'}]};expect(evaluateAlexaCase(spec,wrong).status).toBe('FAIL');});
+
+it('accepts a verified local public fact as the source for a general answer',()=>{
+ const provenance={gate:'local_public_fact',provider:'local',sourceId:'moon-orbit',sourceUrl:'https://science.nasa.gov/learn/basics-of-space-flight/chapter3-4/'};
+ const spec=specWith({generalAnswer:true,responseConcepts:[['gravité'],['vitesse']],sourceRefs:[{type:'query',provenance}]});
+ const source={type:'query',id:'call-general',label:'NASA — How Orbits Work',provenance};
+ const events=[...baseRecord.events,{type:'sentence',kind:'fact',text:'La gravité terrestre agit sur la Lune, tandis que sa vitesse la maintient en orbite.',sources:[source]}];
+ expect(evaluateAlexaCase(spec,{...baseRecord,events}).status).toBe('PASS');
+ const wrongSource={...source,provenance:{...provenance,sourceId:'unverified'}};
+ expect(evaluateAlexaCase(spec,{...baseRecord,events:[...baseRecord.events,{...events.at(-1),sources:[wrongSource]}]}).status).toBe('FAIL');
+});

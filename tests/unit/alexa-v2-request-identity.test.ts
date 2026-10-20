@@ -40,11 +40,11 @@ describe("Alexa local explicit identity extraction", () => {
   ])("does not mistake clinical/date/context words for a patient: %s", text => expect(patientMention(text)).toBeUndefined());
   it("does not silently reuse the current patient when a directly named patient is unknown", async () => {
     const calls: string[] = [];
-    const db = { rpc: async <T>(name: string) => { calls.push(name); return { ok: true as const, data: [] as readonly T[] }; } } satisfies Pick<DbPort, "rpc">;
+    const db = { rpc: async <T>(name: string,args:Record<string,unknown>) => { calls.push(name); const data=name==='search_patients'&&typeof args.p_spec==='string'?[{total:0,rows:[],metrics:{},unknownAge:0,revision:'a'.repeat(32),asOf:'2026-10-15T12:00:00Z',conditions:[],complete:true,offset:0}]:[]; return { ok: true as const, data: data as readonly T[] }; } } satisfies Pick<DbPort, "rpc">;
     const name = patientMention("résumé Nadia Inconnue");
     expect(name).toBe("Nadia Inconnue");
     if (name === undefined) throw new Error("explicit name fixture was not resolved");
-    expect(await resolvePatient(db, { patientId: "00000000-0000-4000-8000-000000000001", name })).toEqual({ status: "unavailable" });
+    expect(await resolvePatient(db, { patientId: "00000000-0000-4000-8000-000000000001", name })).toEqual({ status: "absent" });
     expect(calls).not.toContain("get_patient"); // Both name orders may be searched; a failed name never reads the old dossier.
   });
 });

@@ -2,7 +2,7 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 import type { TourVoix } from "@/shared/alexa/voice-loop";
 import type { EtatConversationPublique } from "@/services/conversation";
 const { voice } = vi.hoisted(() => ({ voice: { callback: null as ((event: TourVoix) => void) | null } }));
-vi.mock("@/services/alexa-local", () => ({ abonnerTourVoixLocale: (callback: (event: TourVoix) => void) => { voice.callback = callback; return () => {}; }, arreterVoixLocale: () => {} }));
+vi.mock("@/services/alexa-local", () => ({ abonnerPropositionVoixLocale: () => () => {}, abonnerTourVoixLocale: (callback: (event: TourVoix) => void) => { voice.callback = callback; return () => {}; }, arreterVoixLocale: () => {} }));
 import { abonnerConversation, purgerContexteSession } from "@/services/conversation";
 const subscriptions: (() => void)[] = [];
 afterEach(() => { for (const unsubscribe of subscriptions.splice(0)) unsubscribe(); purgerContexteSession(); });

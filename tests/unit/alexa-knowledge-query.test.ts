@@ -1,3 +1,4 @@
+import { LIMITES } from "@/server/knowledge/recherche";
 import { describe, expect, it } from "vitest";
 import { readKnowledge } from "@/server/alexa/knowledge-adapter";
 import type { ArgsJarvis, ClientSql } from "@/server/jarvis/client-sql";
@@ -151,7 +152,7 @@ describe("bounded Alexa lexical question planning", () => {
   });
 
   it("omits an oversized whole passage and flags the omission instead of cutting a dose or negation", async () => {
-    const { client } = boundary([row(MAUDSLEY, "Dose sertraline. ".repeat(300))]);
+    const { client } = boundary([row(MAUDSLEY, "Dose sertraline. ".repeat(LIMITES.BUDGET_OCTETS))]);
     expect(await readKnowledge(client, "dose sertraline selon Maudsley")).toMatchObject({
       etat: "sans-preuve", preuves: [], omittedLongPassages: true,
     });
@@ -159,7 +160,7 @@ describe("bounded Alexa lexical question planning", () => {
 
   it("qualifies complete retained passages after omitting an oversized candidate", async () => {
     const { client } = boundary([
-      row(MAUDSLEY, "Dose sertraline. ".repeat(300), { chunk_id: "too-long" }),
+      row(MAUDSLEY, "Dose sertraline. ".repeat(LIMITES.BUDGET_OCTETS), { chunk_id: "too-long" }),
       row(MAUDSLEY, "Dose sertraline. Restriction complete.", { chunk_id: "complete" }),
     ]);
     const result = await readKnowledge(client, "dose sertraline selon Maudsley");
@@ -168,7 +169,7 @@ describe("bounded Alexa lexical question planning", () => {
   });
 
   it("does not reveal the presence of an unapproved oversized passage", async () => {
-    const { client } = boundary([row(MAUDSLEY, "Dose sertraline. ".repeat(300), { source_approuvee_le: null })]);
+    const { client } = boundary([row(MAUDSLEY, "Dose sertraline. ".repeat(LIMITES.BUDGET_OCTETS), { source_approuvee_le: null })]);
     const result = await readKnowledge(client, "dose sertraline selon Maudsley");
     expect(result).toMatchObject({ etat: "sans-preuve", preuves: [] });
     expect(result).not.toHaveProperty("omittedLongPassages");
@@ -180,4 +181,12 @@ describe("bounded Alexa lexical question planning", () => {
     await readKnowledge(client, "Quelles contre-indications de sertraline selon Maudsley ?");
     expect(calls.map(call => call.args["p_requete"])).toEqual(["dose sertraline", "contraindications sertraline"]);
   });
+});
+
+it("measures the whole passage budget in UTF-8 bytes for Arabic text", async () => {
+  const text = `Dose sertraline. ${"ع".repeat(Math.ceil(LIMITES.BUDGET_OCTETS / 2))}`;
+  expect(text.length).toBeLessThan(LIMITES.BUDGET_OCTETS);
+  expect(Buffer.byteLength(text, "utf8")).toBeGreaterThan(LIMITES.BUDGET_OCTETS);
+  const { client } = boundary([row(MAUDSLEY, text)]);
+  expect(await readKnowledge(client, "dose sertraline selon Maudsley")).toMatchObject({ etat: "sans-preuve", preuves: [], omittedLongPassages: true });
 });

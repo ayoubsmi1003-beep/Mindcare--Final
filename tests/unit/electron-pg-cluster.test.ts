@@ -99,7 +99,16 @@ describe("commandes de service Windows", () => {
     const bin = localiserBinaires("C:\\res\\pgsql");
     const c = commandeEnregistrerService(bin, "C:\\ProgramData\\MindCare\\data", "C:\\ProgramData\\MindCare\\logs");
     expect(c.args).toContain(NOM_SERVICE);
-    expect(c.args).toContain("--startup=auto");
+    // Les binaires Windows livrés n'acceptent pas les options longues du service.
+    expect(c.args).toContain("-N");
+    expect(c.args).toContain("-S");
+    expect(c.args[c.args.indexOf("-S") + 1]).toBe("auto");
+    expect(c.args).not.toContain("--servicename");
+    expect(c.args).not.toContain("--startup=auto");
+    // PostgreSQL 16 réserve --log à start/restart; register le refuse.
+    expect(c.args).not.toContain("--log");
+    expect(c.args).toContain("-o");
+    expect(c.args.join(" ")).toContain("logging_collector=on");
   });
 
   it("démarrer/arrêter ciblent le même service que l'enregistrement", () => {

@@ -21,11 +21,11 @@ it("rejects a changed record before any clinical sentence is published", async (
   expect(events.at(-1)).toMatchObject({ type: "error", code: "stale" });
 });
 
-it("preserves exact-N coverage if the model only selects one of twenty consultations", async () => {
+it("preserves exact-N coverage locally without invoking a clinical cloud model", async () => {
   const events: AlexaEvent[] = []; let modelCalls = 0;
   await runAlexa({ ...input("all-twenty"), text: "Analyse les 20 dernières consultations" }, { actor: "unit-actor", db, knowledge, build: async (_db, _scope, request) => context(request.count),
     infer: async payload => { modelCalls++; return { ok: true, model: "qwen/synthetic:free", data: { sentences: [{ text: "Une seule séance.", kind: "fact", evidence: [payload.facts[0]!.evidence] }] } }; } }, event => events.push(event), new AbortController().signal);
-  expect(modelCalls).toBe(1);
+  expect(modelCalls).toBe(0);
   const sentences = events.filter((event): event is Extract<AlexaEvent, { type: "sentence" }> => event.type === "sentence");
   expect(new Set(sentences.flatMap(event => event.sources.map(source => source.id))).size).toBe(20);
   expect(sentences.map(event => event.text).join(" ")).not.toContain("Une seule séance.");

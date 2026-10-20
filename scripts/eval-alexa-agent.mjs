@@ -133,6 +133,7 @@ for (const spec of manifest.cases) {
   const dispatchedCalls = [];
   const queries = [];
   const faults = [];
+  const toolResults = [];
   const timings = { inference: [], tools: [], firstVisible: null };
   const actor = actorIds[spec.expected.actor ?? "owner"];
   const port = api.alexaDb(actor);
@@ -175,6 +176,7 @@ for (const spec of manifest.cases) {
         native: true,
         agentAsOf: fixtureAsOf,
         agentObserve: call => dispatchedCalls.push(call),
+        agentObserveResult: observation => toolResults.push(observation),
         agentInfer: async (messages, options) => {
           if (spec.expected.fault?.kind === "model-unavailable") throw new Error("LocalModelUnavailable");
           const time = Date.now();
@@ -209,12 +211,19 @@ for (const spec of manifest.cases) {
     );
     const acceptedIds=new Set(events.filter(e=>e.type==='done').flatMap(e=>(e.parts??[]).flatMap(p=>p.resultRefs??[])));
     for(const [index,entry] of liveCalls.entries())calls[index]=finalizeAlexaAdmission(calls[index],entry.call,entry.schema,acceptedIds,dispatchedCalls.find(call=>call.id===entry.call.id));
+    const modelCallIds=new Set(liveCalls.map(entry=>entry.call.id));
+    for(const call of dispatchedCalls){
+      if(modelCallIds.has(call.id))continue;
+      const schema=api.agentSchemas[call.name];
+      calls.push({id:call.id,name:call.name,args:structuredClone(call.args),effectiveArgs:structuredClone(call.args),valid:schema?.safeParse(call.args).success===true,source:'server-contract'});
+    }
     const record = {
       id: spec.id,
       requestBudgetMs: api.ALEXA_NATIVE_DEADLINE_MS,
       inferenceBudgetMs: api.ALEXA_NATIVE_BUDGET.inferenceMs,
       events,
       calls,
+      toolResults,
       queries,
       faults,
       timings,

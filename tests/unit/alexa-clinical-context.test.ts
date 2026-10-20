@@ -138,8 +138,21 @@ describe("PatientResolver fail closed local names", () => {
     const ambiguous = port({ search_patients: [{ id: patientId, total_count: 2, first_name: "Prénom fictif", last_name: "Nom fictif" }] });
     expect(await resolvePatient(ambiguous.db, { name: "fictif" })).toMatchObject({ status: "ambiguous" });
     expect(ambiguous.calls).toHaveLength(1);
-    expect(await resolvePatient(port({ search_patients: [] }).db, { name: "inconnu" })).toEqual({ status: "absent" });
+    const absent=port((name,args)=>name==='search_patients'&&typeof args.p_spec==='string'?[{total:0,rows:[],metrics:{},unknownAge:0,revision:'a'.repeat(32),asOf:'2026-10-15T12:00:00Z',conditions:[],complete:true,offset:0}]:[]);
+    expect(await resolvePatient(absent.db, { name: "inconnu" })).toEqual({ status: "absent" });
     expect(await resolvePatient(port({}).db, {})).toEqual({ status: "unavailable" });
+  });
+  it("resolves an explicitly named archived patient through the authorized typed population gate",async()=>{
+    const f=port((name,args)=>{
+      if(name==='search_patients'&&typeof args.p_spec==='string')return [{total:1,rows:[{id:patientId,first_name:'Ilyes',last_name:'Bouguerra'}],metrics:{},unknownAge:0,revision:'a'.repeat(32),asOf:'2026-10-15T12:00:00Z',conditions:[],complete:true,offset:0}];
+      if(name==='search_patients')return [];
+      if(name==='get_patient')return [{id:patientId,first_name:'Ilyes',last_name:'Bouguerra'}];
+      return [];
+    });
+    const result=await resolvePatient(f.db,{name:'Ilyes Bouguerra'},undefined,'2026-10-15T12:00:00Z');
+    expect(result).toMatchObject({status:'resolved',patientId});
+    expect(f.calls.map(call=>call.name)).toEqual(['search_patients','search_patients','search_patients','get_patient']);
+    expect(JSON.parse(String(f.calls[2]?.args.p_spec))).toMatchObject({mode:'list',population:'archived',query:'Ilyes Bouguerra',limit:20,offset:0});
   });
   it("does not choose a sole fuzzy match automatically", async () => {
     const f = port({ search_patients: [{ id: patientId, total_count: 1, first_name: "Nadia", last_name: "Test" }] });

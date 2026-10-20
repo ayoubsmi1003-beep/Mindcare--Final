@@ -6,11 +6,18 @@ import { localModelFailureCode } from "./local-model-protocol";
 import { consultationExcerpts } from "./note-excerpts";
 import { narrativeCopy as copy } from "@/i18n/alexa-narrative";
 
-export const NARRATIVE_VERSION = "alexa-narrative-fr-v3";
-export const NARRATIVE_HASH = createHash("sha256").update(NARRATIVE_VERSION + copy.prompt).digest("hex");
+export const NARRATIVE_VERSION = "alexa-narrative-fr-v5";
+export const NARRATIVE_HASH = createHash("sha256").update(NARRATIVE_VERSION + copy.prompt + copy.multiVisitPrompt + copy.multiVisitRetryPrompt).digest("hex");
 export interface NarrativeSource { id: string; text: string; at?: string; state?: "open" | "closed"; consultationId?: string; originalText?: string; attribution?: "unsigned" | "correction" | "plan" }
 export interface ClinicalNarrative { text: string; complete: boolean; generated: boolean; sourceIds: string[]; method?: "reformulated" | "source_selection" | "structured" }
-const answerSchema = z.object({ sentences: z.array(z.object({ text: z.string().trim().min(10).max(500), evidence: z.array(z.object({ id: z.string().min(1).max(80), quote: z.string().trim().min(10).max(600) }).strict()).min(1).max(6) }).strict()).min(1).max(4) }).strict();
+const answerSchema = z.object({ sentences: z.array(z.object({ text: z.string().trim().min(10).max(500), evidence: z.array(z.object({ id: z.string().min(1).max(80), quote: z.string().trim().min(10).max(600) }).strict()).min(1).max(20) }).strict()).min(1).max(4) }).strict();
+function multiVisitAnswerSchemaFor(aliases: readonly string[]) {
+  const citation = (id:string) => z.object({ id:z.literal(id), quote:z.string().trim().min(10).max(64) }).strict();
+  const citations=aliases.map(citation);
+  if(!citations.length)throw new Error("NarrativeVisitScope");
+  const requiredCitations=z.tuple([citations[0]!,...citations.slice(1)] as [typeof citations[number],...typeof citations[number][]]);
+  return z.object({ sentences: z.array(z.object({ text: z.string().trim().min(10).max(400), evidence: requiredCitations }).strict()).length(1) }).strict();
+}
 const fold = (value: string) => value.normalize("NFKD").replace(/\p{M}/gu, "").toLowerCase().replace(/\s+/gu, " ").trim();
 const quoteFold = (value:string)=>fold(value).replace(/[’‘`]/gu,"'").replace(/[\p{P}\p{S}]/gu," ").replace(/\s+/gu," ").trim();
 const unsafe = /ignore.{0,40}(?:instruction|consigne)|(?:system|assistant|developer)\s*:|(?:execute|appelle).{0,30}(?:outil|tool)|<\/?[a-z][^>]*>|\/api\//iu;
@@ -119,6 +126,28 @@ function recoverClinicalSelection(value: unknown, sources: readonly NarrativeSou
   return text.length <= 1100 && text.split(/\s+/u).length <= 150 ? {text,sourceIds:selected.map(s=>s.id)} : null;
 }
 
+function groupSourcesByConsultation(sources: readonly NarrativeSource[]): NarrativeSource[] {
+  const groups = new Map<string, NarrativeSource[]>();
+  for (const source of sources) {
+    const key = source.consultationId ? `visit:${source.consultationId}` : `source:${source.id}`;
+    const group = groups.get(key) ?? [];
+    group.push(source);
+    groups.set(key, group);
+  }
+  return [...groups.values()].map(group => {
+    const first = group[0]!;
+    const consultationId = first.consultationId;
+    return {
+      id: consultationId ?? first.id,
+      text: group.map(source => source.text).join("\n"),
+      originalText: group.map(source => source.originalText ?? source.text).join("\n"),
+      ...(first.at ? { at: first.at } : {}),
+      ...(group.some(source => source.state === "open") ? { state: "open" as const } : first.state ? { state: first.state } : {}),
+      ...(consultationId ? { consultationId } : {}),
+    };
+  });
+}
+
 export async function synthesizeClinicalNarrative(sources: readonly NarrativeSource[], signal: AbortSignal): Promise<ClinicalNarrative> {
   const available = sources.filter(s => s.text.trim() && !unsafe.test(s.text));
   const projected: NarrativeSource[] = []; let characters = 0;
@@ -129,27 +158,44 @@ export async function synthesizeClinicalNarrative(sources: readonly NarrativeSou
   }
   let complete = projected.length === sources.length;
   if (!projected.length) return { text: sources.length ? copy.unavailable : copy.empty, complete: sources.length === 0, generated: false, sourceIds: [] };
-  const maxOutputTokens=new Set(projected.flatMap(source=>source.consultationId?[source.consultationId]:[])).size>1?320:384;
   const boundedSignal = AbortSignal.any([signal, AbortSignal.timeout(170000)]);
+  let multiVisitRetries=0;
   // Context rejection happens before generation. Fit whole fields within the same deadline.
   while (projected.length) try {
-    const sourceAliases=new Map(projected.map((source,index)=>[`s${index+1}`,source.id]));
-    const visitAliases=new Map([...new Set(projected.flatMap(source=>source.consultationId?[source.consultationId]:[]))].map((id,index)=>[id,`v${index+1}`]));
-    const modelSources=projected.map(({originalText:_original,attribution:_attribution,consultationId,...source},index)=>({
+    const visitIds=new Set(projected.flatMap(source=>source.consultationId?[source.consultationId]:[]));
+    const multiVisit=visitIds.size>1;
+    const validationSources=multiVisit?groupSourcesByConsultation(projected):projected;
+    const sourceAliases=new Map(validationSources.map((source,index)=>[`s${index+1}`,source.id]));
+    const responseSchema=multiVisit?multiVisitAnswerSchemaFor([...sourceAliases.keys()]):answerSchema;
+    const systemPrompt=multiVisit?(multiVisitRetries?copy.multiVisitRetryPrompt:copy.multiVisitPrompt):copy.prompt;
+    const maxOutputTokens=multiVisit?Math.min(340,160+visitIds.size*16):384;
+    const visitAliases=new Map([...new Set(validationSources.flatMap(source=>source.consultationId?[source.consultationId]:[]))].map((id,index)=>[id,`v${index+1}`]));
+    const modelSources=validationSources.map(({originalText:_original,attribution:_attribution,consultationId,...source},index)=>({
       ...source,id:`s${index+1}`,...(consultationId?{visit:visitAliases.get(consultationId)}:{}),
     }));
-    const raw = await inferLocalText([{ role: "system", content: copy.prompt }, { role: "user", content: JSON.stringify({ sources: modelSources }) }], { jsonSchema: z.toJSONSchema(answerSchema), maxOutputTokens, timeoutMs: 170000, signal: boundedSignal });
+    const raw = await inferLocalText([{ role: "system", content: systemPrompt }, { role: "user", content: JSON.stringify({ sources: modelSources }) }], { jsonSchema: z.toJSONSchema(responseSchema), maxOutputTokens, timeoutMs: 170000, signal: boundedSignal });
     boundedSignal.throwIfAborted();
-    const modelValue: unknown = JSON.parse(raw),parsedModel=answerSchema.safeParse(modelValue);
-    const value: unknown=parsedModel.success?{...parsedModel.data,sentences:parsedModel.data.sentences.map(sentence=>({...sentence,evidence:sentence.evidence.map(citation=>({...citation,id:sourceAliases.get(citation.id)??citation.id}))}))}:modelValue;
-    const validation = checkClinicalNarrative(value, projected), text = validation.text;
+    const modelValue: unknown = JSON.parse(raw),parsedModel=responseSchema.safeParse(modelValue);
+    if(!parsedModel.success){
+      if(multiVisit&&multiVisitRetries<1){multiVisitRetries++;continue;}
+      if(multiVisit){console.warn("[alexa-narrative] rejected","schema");break;}
+    }
+    const parsedAnswer=answerSchema.safeParse(modelValue);
+    const value: unknown=parsedAnswer.success?{...parsedAnswer.data,sentences:parsedAnswer.data.sentences.map(sentence=>({...sentence,evidence:sentence.evidence.map(citation=>({...citation,id:sourceAliases.get(citation.id)??citation.id}))}))}:modelValue;
+    const validation = checkClinicalNarrative(value, validationSources), text = validation.text;
     const parsed = answerSchema.safeParse(value);
     const cited = parsed.success ? [...new Set(parsed.data.sentences.flatMap(s => s.evidence.map(e => e.id)))] : [];
     const visits=new Set(projected.flatMap(source=>source.consultationId?[source.consultationId]:[]));
     const covered=visits.size>1
-      ?[...visits].every(consultationId=>projected.some(source=>source.consultationId===consultationId&&cited.includes(source.id)))
-      :cited.length===projected.length&&projected.every(source=>cited.includes(source.id));
+      ?[...visits].every(consultationId=>cited.includes(consultationId))
+      :cited.length===validationSources.length&&validationSources.every(source=>cited.includes(source.id));
     if (text && covered) return { text, complete, generated: true, sourceIds: cited, method: "reformulated" };
+    if (multiVisit) {
+      if(multiVisitRetries<1){multiVisitRetries++;continue;}
+      if(text)return { text, complete: false, generated: true, sourceIds: cited, method: "reformulated" };
+      console.warn("[alexa-narrative] rejected", validation.rejection??(!parsed.success?"schema":"visit-coverage"));
+      break;
+    }
     const all = recoverClinicalSelection(value, projected, true);
     if (all) return { ...all, complete, generated: true, method: "source_selection" };
     if (text) return { text, complete: false, generated: true, sourceIds: cited, method: "reformulated" };
@@ -203,6 +249,30 @@ export function extractRecurringClinicalTheme(context: ClinicalContext): Clinica
   };
 }
 
+/** Summarizes a bounded history only when every visit explicitly records the same theme and a progress step. */
+export function extractStructuredClinicalProgression(context:ClinicalContext):ClinicalNarrative|null{
+ const visits=[...context.consultations].filter((visit,index,all)=>all.findIndex(other=>other.id===visit.id)===index).sort((a,b)=>Date.parse(a.startedAt)-Date.parse(b.startedAt)||a.id.localeCompare(b.id));
+ if(visits.length<2||!context.coverage.complete||context.coverage.hasMore)return null;
+ const themePattern=/\bth[èe]me\s+r[ée]current(?:e)?\s*[:–—-]?\s*[«“"]([^»”"]{3,100})[»”"]/giu;
+ const stepPattern=/(?:^|[^\p{L}\p{N}_])[ée]tape\s+observ[ée]e\s*[:–—-]\s*([^.;\n]{3,160})/giu;
+ const sourceIds=new Set<string>(),stages:string[]=[];let theme:string|undefined;
+ for(const visit of visits){
+  const selected=consultationNarrativeSources(visit);if(!selected.complete)return null;
+  const visitThemes=new Set<string>(),visitSteps=new Set<string>(),evidenceIds=new Set<string>();
+  for(const source of selected.sources){
+   const sourceText=source.originalText??source.text;if(unsafe.test(sourceText))continue;
+   for(const match of sourceText.matchAll(themePattern)){const value=match[1]?.trim().replace(/\s+/gu," ");if(value&&!unsafe.test(value)){visitThemes.add(value);evidenceIds.add(source.id);}}
+   for(const match of sourceText.matchAll(stepPattern)){const value=match[1]?.trim().replace(/\s+/gu," ");if(value&&!unsafe.test(value)){visitSteps.add(value);evidenceIds.add(source.id);}}
+  }
+  if(visitThemes.size!==1||visitSteps.size!==1)return null;
+  const visitTheme=[...visitThemes][0]!;
+  if(theme&&fold(theme)!==fold(visitTheme))return null;
+  theme??=visitTheme;stages.push([...visitSteps][0]!);for(const id of evidenceIds)sourceIds.add(id);
+ }
+ if(!theme||sourceIds.size<visits.length)return null;
+ return {text:copy.structuredProgression(theme,stages),complete:true,generated:true,sourceIds:[...sourceIds],method:"structured"};
+}
+
 /** Fresh session summaries first; original notes remain the fallback for old/unanalysed visits. */
 export async function summarizeClinicalContext(context: ClinicalContext, signal: AbortSignal, wholeRecord = true): Promise<ClinicalNarrative> {
   let complete = context.coverage.complete && (!wholeRecord || !context.coverage.hasMore);
@@ -230,6 +300,7 @@ export async function summarizeClinicalConsultations(context:ClinicalContext,sig
  const visits=[...context.consultations].filter((c,index,all)=>all.findIndex(other=>other.id===c.id)===index).sort((a,b)=>Date.parse(b.startedAt)-Date.parse(a.startedAt)||b.id.localeCompare(a.id));
  let complete=context.coverage.complete&&!context.coverage.hasMore;
  if(!visits.length)return {text:complete?"Aucune consultation terminée n’est enregistrée pendant cette période.":copy.limited,complete,generated:false,sourceIds:[]};
+ const structured=extractStructuredClinicalProgression(context);if(structured)return {...structured,complete:complete&&structured.complete};
  const sources:NarrativeSource[]=[];
  for(const visit of visits){
   const saved=z.object({resume:z.string().min(1).max(1500),notesDigest:z.string(),complete:z.boolean(),generated:z.literal(true)}).safeParse(visit.analysis?.content);

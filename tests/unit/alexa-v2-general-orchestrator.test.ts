@@ -1,12 +1,13 @@
 import { describe, expect, it, vi } from "vitest";
 import { runAlexa, type OrchestratorDependencies } from "@/server/alexa/orchestrator";
 import type { AlexaEvent, TurnInput } from "@/shared/alexa/turn";
+import type { inferGeneralAlexa } from "@/server/alexa/model-gateway";
 import { conversationState } from "@/server/alexa/conversation-state";
 
 function setup() {
   const rpc = vi.fn(async () => { throw new Error("general questions cannot read local data"); });
-  const general = vi.fn(async (_text: string) => ({ ok: true as const, text: "La lumière solaire contient plusieurs couleurs.", model: "qualified:free" }));
-  const deps = { actor: "general-orchestrator", db: { rpc }, knowledge: { rpc }, general } as unknown as OrchestratorDependencies;
+  const general = vi.fn<typeof inferGeneralAlexa>(async (_text: string) => ({ ok: true as const, text: "La lumière solaire contient plusieurs couleurs.", model: "qualified:free" }));
+  const deps: OrchestratorDependencies = { actor: "general-orchestrator", db: { rpc }, knowledge: { rpc }, general };
   const input: TurnInput = { text: "Pourquoi le ciel est bleu ?", conversationId: crypto.randomUUID(), clientTurnId: crypto.randomUUID(),
     appContext: { patientId: "a1000000-0000-4000-8000-000000001012", page: "/patients/a1000000-0000-4000-8000-000000001012" } };
   const events: AlexaEvent[] = [];
@@ -35,7 +36,7 @@ describe("public model answers never inherit a dossier", () => {
     expect(s.events.filter(event => event.type === "sentence" && event.kind === "inference")).toHaveLength(2);
   });
   it("reports a provider failure honestly without claiming to read recorded facts", async () => {
-    const s = setup(); s.general.mockResolvedValue({ ok: false, code: "unavailable", localFallback: true } as never); await s.run();
+    const s = setup(); s.general.mockResolvedValue({ ok: false, code: "unavailable", localFallback: true }); await s.run();
     const text = s.events.filter(event => event.type === "sentence").map(event => event.text).join(" ");
     expect(text).toMatch(/générale.*indisponible/); expect(text).not.toMatch(/faits structurés enregistrés/);
     expect(s.rpc).not.toHaveBeenCalled(); expect(s.events.at(-1)).toMatchObject({ type: "done", limited: true });

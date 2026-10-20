@@ -15,10 +15,9 @@
 
 import { randomBytes } from "node:crypto";
 import { spawn, type ChildProcess } from "node:child_process";
-import { appendFileSync, existsSync, readFileSync, writeFileSync, mkdirSync, readdirSync } from "node:fs";
+import { appendFileSync, existsSync, readFileSync, writeFileSync, mkdirSync, readdirSync, rmSync } from "node:fs";
 import { connect } from "node:net";
 import path from "node:path";
-import pg from "pg";
 
 import { localiserBinaires, type BinairesPg } from "./pg-binaires.js";
 import {
@@ -39,6 +38,8 @@ import {
   ecrireFichierEnvironnement,
   provisionnerBase,
   provisionnerRoleApplicatif,
+  restaurerInstantaneSiPresent,
+  finaliserCabinetNeuf,
 } from "./provisionnement.js";
 import type { Commande } from "./pg-cluster.js";
 
@@ -49,7 +50,8 @@ export const HOTE_PG = "127.0.0.1";
 export const NOM_BASE = "mindcare";
 export const SUPER_UTILISATEUR = "postgres";
 export const BUDGET_PG_MS = 30_000;
-export const BUDGET_BACKEND_MS = 30_000;
+// Measured cold Windows start: 46.1 s; bounded health/readiness checks remain.
+export const BUDGET_BACKEND_MS = 120_000;
 export const INTERVALLE_SONDE_MS = 300;
 
 // ── Contexte d'exécution (injecté depuis index.ts) ─────────────────────────
@@ -67,6 +69,8 @@ export interface ContexteDemarrage {
   readonly fichierEnv: string;
   /** Dossier temporaire pour pwfile initdb */
   readonly dossierTemp: string;
+  /** Dossier de l'instantané de production : `resources/snapshot` packagé, `resources/snapshot` du dépôt en dev */
+  readonly snapshotDir: string;
 }
 
 export interface ResultatDemarrage {
@@ -269,49 +273,99 @@ async function attendreSante(url: string, budgetMs: number): Promise<boolean> {
   return false;
 }
 
-// ── Vérification migrations (comme verifier-base.mjs, mais sans pg natif lourd) ─
+/**
+ * Préparation : la racine `/` doit répondre sans erreur serveur (HEAD, sans
+ * suivre le contenu). Distingue « le processus vit » (liveness ci-dessus) de
+ * « l'application sert » — un `server.js` incomplet répond OK à
+ * `/api/health` mais 500/404 à `/`, ce qui produisait l'écran blanc WS-3.
+ */
+async function sonderPreparation(origine: string, timeoutMs = 5000): Promise<boolean> {
+  const ctl = new AbortController();
+  const t = setTimeout(() => ctl.abort(), timeoutMs);
+  try {
+    const r = await fetch(`${origine}/`, { method: "HEAD", signal: ctl.signal, redirect: "manual" });
+    return r.status < 500;
+  } catch {
+    return false;
+  } finally {
+    clearTimeout(t);
+  }
+}
 
-async function verifierMigrations(serveurDir: string, fichierEnv: string): Promise<{ ok: boolean; detail?: string }> {
+// ── Vérification migrations (comme verifier-base.mjs, via psql empaqueté) ────
+//
+// ⚠️ PAS DE PILOTE `pg` DANS LE PROCESSUS PRINCIPAL — TROUVÉ PAR ÉCHEC RÉEL
+// À L'INSTALLATION. `app.asar` ne contient QUE `dist-electron` (aucun
+// `node_modules`) : `import pg from "pg"` y résolvait en développement (via le
+// `node_modules` du dépôt) et mourait sur le poste du cabinet avec
+// `ERR_MODULE_NOT_FOUND`, AVANT même l'orchestration — le dialogue d'exception
+// d'Electron, pas l'écran de récupération FR. Le processus principal n'importe
+// donc qu'`electron` et `node:*` ; PostgreSQL est interrogé par le `psql.exe`
+// empaqueté, comme `provisionnement.ts` le fait déjà.
+
+/**
+ * Lit `MINDCARE_DATABASE_URL` depuis le fichier d'environnement.
+ * BOM UTF-8 et CRLF Windows tolérés ; les guillemets d'encadrement retirés.
+ * Rend `undefined` si absente — jamais d'exception, jamais de secret journalisé.
+ */
+function lireUrlDepuisFichier(fichierEnv: string): string | undefined {
+  let texte: string;
+  try {
+    texte = readFileSync(fichierEnv, "utf8").replace(/^\uFEFF/, "");
+  } catch {
+    return undefined;
+  }
+  for (const ligne of texte.split("\n")) {
+    const nette = ligne.trim();
+    if (nette === "" || nette.startsWith("#")) continue;
+    const egal = nette.indexOf("=");
+    if (egal <= 0) continue;
+    if (nette.slice(0, egal).trim() !== "MINDCARE_DATABASE_URL") continue;
+    let valeur = nette.slice(egal + 1).trim();
+    if (
+      (valeur.startsWith('"') && valeur.endsWith('"')) ||
+      (valeur.startsWith("'") && valeur.endsWith("'"))
+    ) {
+      valeur = valeur.slice(1, -1);
+    }
+    return valeur === "" ? undefined : valeur;
+  }
+  return undefined;
+}
+
+// Exportée pour les tests d'intégration (cette fonction a déjà produit deux
+// échecs réels : `pg` dans l'asar, puis la pollution `SET\r\nt\r\n`).
+export async function verifierMigrations(
+  bin: BinairesPg,
+  serveurDir: string,
+  fichierEnv: string,
+): Promise<{ ok: boolean; detail?: string }> {
   // Charger DATABASE_URL depuis fichierEnv (même logique que verifier-base.mjs)
   let url: string | undefined = process.env["MINDCARE_DATABASE_URL"];
   if (url === undefined || url.trim() === "") {
-    try {
-      const texte = readFileSync(fichierEnv, "utf8");
-      for (const ligne of texte.split("\n")) {
-        const nette = ligne.trim();
-        if (nette === "" || nette.startsWith("#")) continue;
-        const egal = nette.indexOf("=");
-        if (egal <= 0) continue;
-        const cle = nette.slice(0, egal).trim();
-        if (cle === "MINDCARE_DATABASE_URL" && process.env[cle] === undefined) {
-          let valeur = nette.slice(egal + 1).trim();
-          if (
-            (valeur.startsWith('"') && valeur.endsWith('"')) ||
-            (valeur.startsWith("'") && valeur.endsWith("'"))
-          ) {
-            valeur = valeur.slice(1, -1);
-          }
-          url = valeur;
-          break;
-        }
-        // aussi essayer de lire directement sans passer par env
-        if (cle === "MINDCARE_DATABASE_URL" && url === undefined) {
-          let valeur = nette.slice(egal + 1).trim();
-          if (
-            (valeur.startsWith('"') && valeur.endsWith('"')) ||
-            (valeur.startsWith("'") && valeur.endsWith("'"))
-          ) {
-            valeur = valeur.slice(1, -1);
-          }
-          url = valeur;
-        }
-      }
-    } catch {
-      // fichier absent
-    }
+    url = lireUrlDepuisFichier(fichierEnv);
   }
   if (url === undefined || url.trim() === "") {
     return { ok: false, detail: "MINDCARE_DATABASE_URL est absente." };
+  }
+
+  // L'URL ne transite que décomposée en variables PG* du fils — jamais en
+  // argument (visible par tout processus) ni en journal.
+  let envPg: NodeJS.ProcessEnv;
+  try {
+    const u = new URL(url);
+    if (u.protocol !== "postgresql:" && u.protocol !== "postgres:") throw new Error("protocole");
+    envPg = {
+      ...process.env,
+      PGHOST: u.hostname,
+      PGPORT: u.port !== "" ? u.port : "5432",
+      PGDATABASE: decodeURIComponent(u.pathname.replace(/^\//, "")),
+      PGUSER: decodeURIComponent(u.username),
+      PGPASSWORD: decodeURIComponent(u.password),
+      PGCONNECT_TIMEOUT: "5",
+    };
+  } catch {
+    return { ok: false, detail: "MINDCARE_DATABASE_URL est illisible." };
   }
 
   let attendues: string[];
@@ -335,37 +389,55 @@ async function verifierMigrations(serveurDir: string, fichierEnv: string): Promi
   }
   if (attendues.length === 0) return { ok: false, detail: "Aucune migration sur le disque." };
 
-  const client = new pg.Client({ connectionString: url, connectionTimeoutMillis: 5000 });
-  try {
-    await client.connect();
-  } catch (e) {
-    const err = e as { code?: string; name?: string };
-    return { ok: false, detail: `La base de données ne répond pas. (${err.code ?? err.name ?? "erreur"})` };
+  const psql = (args: string[], roleAnon: boolean): Promise<{ code: number; sortie: string }> =>
+    new Promise((resoudre) => {
+      // `role=anon` en option de connexion (équivaut au `SET LOCAL ROLE anon`
+      // de verifier-base.mjs). Passer par `SET ROLE` en `-c` polluerait la
+      // sortie (`SET\r\nt\r\n` sous Windows) et casserait la comparaison
+      // exacte — trouvé par échec réel du provisionnement, 2026-10-07.
+      const env = roleAnon ? { ...envPg, PGOPTIONS: "-c role=anon" } : envPg;
+      const p = spawn(bin.psql, args, { env });
+      let sortie = "";
+      let erreur = "";
+      p.stdout?.on("data", (d: Buffer) => {
+        sortie += d.toString();
+      });
+      p.stderr?.on("data", (d: Buffer) => {
+        erreur += d.toString();
+      });
+      p.on("error", () => resoudre({ code: -1, sortie: "" }));
+      p.on("exit", (code) => resoudre({ code: code ?? -1, sortie: code === 0 ? sortie : erreur }));
+    });
+
+  // Même lecture que verifier-base.mjs : sous le rôle `anon` (072 rend
+  // `schema_migrations` lisible au démarrage), jamais en superutilisateur.
+  const joignable = await psql(["-tAX", "-c", "SELECT 1"], false);
+  if (joignable.code !== 0) {
+    return { ok: false, detail: "La base de données ne répond pas. (connexion impossible)" };
   }
-  try {
-    await client.query("BEGIN");
-    await client.query("SET LOCAL ROLE anon");
-    const schema = await client.query<{ present: boolean }>("SELECT EXISTS (SELECT 1 FROM pg_namespace WHERE nspname = 'app') AS present");
-    const present = (schema.rows[0] as { present: boolean } | undefined)?.present;
-    if (present !== true) {
-      await client.query("ROLLBACK").catch(() => {});
-      await client.end().catch(() => {});
-      return { ok: false, detail: "Le schéma « app » n'existe pas : la base n'a jamais été initialisée." };
-    }
-    const { rows } = await client.query("SELECT version FROM app.schema_migrations");
-    const appliquees = new Set(rows.map((r: { version: string }) => r.version));
-    const manquantes = attendues.filter((v) => !appliquees.has(v));
-    await client.query("COMMIT").catch(() => {});
-    await client.end().catch(() => {});
-    if (manquantes.length > 0) {
-      return { ok: false, detail: `${manquantes.length} migration(s) manquante(s) : ${manquantes.slice(0, 5).join(", ")}` };
-    }
-    return { ok: true };
-  } catch (e) {
-    await client.end().catch(() => {});
-    const err = e as { code?: string; name?: string; message?: string };
-    return { ok: false, detail: `Vérification du schéma impossible. (${err.code ?? err.name ?? err.message?.slice(0, 200) ?? "erreur"})` };
+  const schema = await psql(["-tAX", "-c", "SELECT EXISTS (SELECT 1 FROM pg_namespace WHERE nspname = 'app')"], true);
+  if (schema.code !== 0) {
+    return { ok: false, detail: "Vérification du schéma impossible. (rôle applicatif)" };
   }
+  if (schema.sortie.trim() !== "t") {
+    return { ok: false, detail: "Le schéma « app » n'existe pas : la base n'a jamais été initialisée." };
+  }
+  const versions = await psql(["-tAX", "-c", "SELECT version FROM app.schema_migrations"], true);
+  if (versions.code !== 0) {
+    return { ok: false, detail: "Vérification du schéma impossible. (registre illisible)" };
+  }
+  // Lignes `NNN_nom` uniquement : ignore tout verbiage éventuel de psql.
+  const appliquees = new Set(
+    versions.sortie
+      .split("\n")
+      .map((l) => l.trim())
+      .filter((l) => /^[0-9]{3}_[^ ]*$/.test(l)),
+  );
+  const manquantes = attendues.filter((v) => !appliquees.has(v));
+  if (manquantes.length > 0) {
+    return { ok: false, detail: `${manquantes.length} migration(s) manquante(s) : ${manquantes.slice(0, 5).join(", ")}` };
+  }
+  return { ok: true };
 }
 
 // ── Init cluster (premier lancement) ────────────────────────────────────────
@@ -377,6 +449,8 @@ async function initialiserCluster(
   dossierTemp: string,
 ): Promise<string> {
   const superPwd = randomBytes(32).toString("base64url");
+  mkdirSync(path.dirname(dataDir), {recursive:true});
+  writeFileSync(path.join(path.dirname(dataDir),"clinic-initialization.pending"),"Initialisation en cours\n");
   await avecFichierMotDePasseTemporaire(dossierTemp, superPwd, async (pwfile) => {
     await executer(commandeInitdb(bin, dataDir, pwfile));
     // PostgreSQL écoute : §C — on écrit la config dédiée MindCare (port 54333)
@@ -438,25 +512,9 @@ function spawnBackend(serveurDir: string, fichierEnv: string, journalDir: string
   env["ALEXA_VOICE_WORKER_DIR"] ??= path.join(serveurDir, "scripts");
   // Propager MINDCARE_DATABASE_URL si MINDCARE_ENV_FILE contient déjà la variable
   // (le serveur Next ne lit pas MINDCARE_ENV_FILE lui-même — voir src/server/db/pool.ts)
-  try {
-    const texte = readFileSync(fichierEnv, "utf8");
-    for (const ligne of texte.split("\n")) {
-      const nette = ligne.trim();
-      if (nette === "" || nette.startsWith("#")) continue;
-      const egal = nette.indexOf("=");
-      if (egal <= 0) continue;
-      const cle = nette.slice(0, egal).trim();
-      if (cle === "MINDCARE_DATABASE_URL" && env["MINDCARE_DATABASE_URL"] === undefined) {
-        let valeur = nette.slice(egal + 1).trim();
-        if ((valeur.startsWith('"') && valeur.endsWith('"')) || (valeur.startsWith("'") && valeur.endsWith("'"))) {
-          valeur = valeur.slice(1, -1);
-        }
-        (env as Record<string, string>)["MINDCARE_DATABASE_URL"] = valeur;
-        break;
-      }
-    }
-  } catch {
-    // fichier absent : verifierMigrations échouera plus tard avec un message FR
+  const urlFichier = lireUrlDepuisFichier(fichierEnv);
+  if (urlFichier !== undefined && env["MINDCARE_DATABASE_URL"] === undefined) {
+    (env as Record<string, string>)["MINDCARE_DATABASE_URL"] = urlFichier;
   }
 
   mkdirSync(journalDir, { recursive: true });
@@ -492,13 +550,15 @@ export interface OptionsOrchestration {
   readonly onEtat?: (etat: Etat, machine: EtatMachine) => void;
   /** En dev, sauter PG et aller direct au backend (pas de service) */
   readonly sauterPostgresEnDev?: boolean;
+  /** Crash du backend après son lancement (y compris après READY) — diagnostic, jamais silencieux. */
+  readonly onBackendCrash?: (detail: string) => void;
 }
 
 export async function orchestrerDemarrage(
   contexte: ContexteDemarrage,
   opts: OptionsOrchestration = {},
 ): Promise<ResultatDemarrage> {
-  const { onEtat, sauterPostgresEnDev } = opts;
+  const { onEtat, sauterPostgresEnDev, onBackendCrash } = opts;
   const modeDev = process.env["MINDCARE_ELECTRON_ENV"] !== "production" && sauterPostgresEnDev !== false ? true : false;
   // Si sauterPostgresEnDev est explicitement false, on ne saute pas même en dev
   const sauterPg = sauterPostgresEnDev === true || (modeDev && sauterPostgresEnDev !== false && !existsSync(contexte.resourcesPgsqlDir));
@@ -537,7 +597,8 @@ export async function orchestrerDemarrage(
           break;
         }
         const bin = localiserBinaires(contexte.resourcesPgsqlDir);
-        const runtimeOk = existsSync(bin.initdb) && existsSync(bin.pgCtl) && existsSync(bin.psql);
+        const runtimeOk =
+          existsSync(bin.initdb) && existsSync(bin.pgCtl) && existsSync(bin.psql) && existsSync(bin.pgRestore);
         if (!runtimeOk) {
           machine = reduire(machine, { type: "RUNTIME_ABSENT", detail: `Dossier ${contexte.resourcesPgsqlDir} incomplet` });
           emettre(machine);
@@ -588,10 +649,18 @@ export async function orchestrerDemarrage(
           const bin = localiserBinaires(contexte.resourcesPgsqlDir);
           // Si on vient d'initialiser, on a le superPwd et le cluster est neuf
           // On tente d'abord le service Windows, fallback pg_ctl direct en dev
-          const estDev = process.env["MINDCARE_ELECTRON_ENV"] !== "production";
-          try {
-            await enregistrerEtDemarrerService(bin, contexte.dataDir, contexte.journalDir);
-          } catch (e) {
+          const estDev = modeDev;
+          const premierLancement = superPwdPremierLancement !== null && !premierLancementEffectue;
+          // Reprise (RECOVERY) : si PostgreSQL répond déjà, on ne
+          // ré-enregistre ni ne redémarre le service — `pg_ctl start` sur un
+          // serveur en cours échoue (« another server might be running ») et
+          // transformerait une reprise saine en FAILED. Sauf premier
+          // lancement, où le démarrage est obligatoire avant provisionnement.
+          const dejaJoignable = premierLancement ? false : await attendrePort(HOTE_PG, PORT_PG, 2000);
+          if (!dejaJoignable) {
+            try {
+              await enregistrerEtDemarrerService(bin, contexte.dataDir, contexte.journalDir);
+            } catch (e) {
             const msg = String((e as Error).message);
             const isAccessDenied =
               msg.toLowerCase().includes("access is denied") ||
@@ -608,6 +677,9 @@ export async function orchestrerDemarrage(
             } else {
               throw e;
             }
+          }
+          } else {
+            console.log("[mindcare] PostgreSQL répond déjà — reprise sans redémarrage.");
           }
           // Si premier lancement, provisionner la base maintenant que PG est démarré
           if (superPwdPremierLancement !== null && !premierLancementEffectue) {
@@ -626,6 +698,32 @@ export async function orchestrerDemarrage(
             const mdpApp = await provisionnerRoleApplicatif(cible, contexte.serveurDir);
             await ecrireFichierEnvironnement(contexte.fichierEnv, HOTE_PG, PORT_PG, NOM_BASE, mdpApp);
             premierLancementEffectue = true;
+            // §D — premier lancement UNIQUEMENT : restaurer l'instantané de
+            // production s'il est empaqueté (marqueur absent). Échec → refus
+            // terminal (base partielle, on ne sert jamais dessus).
+            try {
+              const res = await restaurerInstantaneSiPresent(
+                bin,
+                cible,
+                contexte.snapshotDir,
+                path.dirname(contexte.dataDir),
+                { clusterNeuf: true },
+              );
+              if (res.restaure) {
+                console.log(`[mindcare] instantané restauré (${res.patientCount ?? "?"} patients).`);
+              }
+              else if (process.env['MINDCARE_ELECTRON_ENV'] === 'production') {
+                await finaliserCabinetNeuf(cible,path.join(contexte.serveurDir,"..","cabinet","purge-synthetic.sql"),true);
+              }
+              rmSync(path.join(path.dirname(contexte.dataDir),"clinic-initialization.pending"),{force:true});
+            } catch (e) {
+              machine = reduire(machine, {
+                type: "RESTAURATION_ECHOUEE",
+                detail: sanitiser((e as Error).message).slice(0, 600),
+              });
+              emettre(machine);
+              break;
+            }
           }
           machine = reduire(machine, { type: "SERVICE_DEMARRE" });
         } catch (e) {
@@ -664,15 +762,12 @@ export async function orchestrerDemarrage(
       }
 
       case "RUNNING_MIGRATIONS": {
-        if (premierLancementEffectue) {
-          // Déjà provisionné à l'étape STARTING_DATABASE
-          machine = reduire(machine, { type: "MIGRATIONS_A_JOUR" });
-          emettre(machine);
-          break;
-        }
-        // Vérification comme verifier-base.mjs (sans superuser)
+        // Vérification systématique, Y COMPRIS juste après un provisionnement
+        // ou une restauration : c'est la porte qui prouve que la base (nouvelle
+        // ou restaurée) correspond exactement aux migrations du disque.
         try {
-          const res = await verifierMigrations(contexte.serveurDir, contexte.fichierEnv);
+          const bin = localiserBinaires(contexte.resourcesPgsqlDir);
+          const res = await verifierMigrations(bin, contexte.serveurDir, contexte.fichierEnv);
           if (res.ok) {
             machine = reduire(machine, { type: "MIGRATIONS_A_JOUR" });
           } else {
@@ -718,21 +813,26 @@ export async function orchestrerDemarrage(
         }
         try {
           backend = spawnBackend(contexte.serveurDir, contexte.fichierEnv, contexte.journalDir);
-          // Donner 800ms au backend pour crasher immédiatement (EADDRINUSE, erreur de config)
+          // Fenêtre bornée de détection de crash immédiat (EADDRINUSE, config
+          // invalide) : c'est la SORTIE du processus qui décide, pas un délai
+          // d'espoir — après 800 ms sans sortie, on passe aux sondes réelles.
           await new Promise((r) => setTimeout(r, 800));
-          if (backend.exitCode !== null && backend.exitCode !== 0) {
-            const detail = `Processus backend terminé (code ${backend.exitCode})`;
-            machine = reduire(machine, { type: "PORT_OCCUPE", detail });
-            backend = undefined;
-          } else if (backend.exitCode !== null) {
-            machine = reduire(machine, { type: "BACKEND_CRASH", detail: `exit ${backend.exitCode}` });
+          if (backend.exitCode !== null) {
+            // Toute sortie immédiate est un crash (y compris code 0 : le
+            // serveur ne doit jamais se terminer seul au démarrage).
+            const detail = `Processus backend terminé au démarrage (code ${backend.exitCode})`;
+            machine = reduire(machine, { type: "BACKEND_CRASH", detail });
             backend = undefined;
           } else {
-            // Écouter un crash ultérieur pour passer en RECOVERY si on était READY
-            backend.on("exit", (code, sig) => {
-              // Si on est déjà READY, la machine gère BACKEND_CRASH ; sinon on loggue
-              if (machine.etat === "READY") {
-                // Ne pas muter la machine ici (hors boucle), juste logger
+            // Crash ultérieur (y compris après READY) : diagnostic via rappel,
+            // la machine à états ne mute pas hors de sa boucle.
+            backend.on("exit", (code, signal) => {
+              const detail = `backend terminé (code ${String(code)}, signal ${String(signal)})`;
+              console.error(`[mindcare] ${detail}`);
+              try {
+                onBackendCrash?.(detail);
+              } catch {
+                // ignore
               }
             });
             machine = reduire(machine, { type: "BACKEND_DEMARRE" });
@@ -763,7 +863,17 @@ export async function orchestrerDemarrage(
 
       case "HEALTH_CHECK": {
         const santeUrl = `${urlDepart()}/api/health`;
-        const ok = await sonderSante(santeUrl, 3000);
+        // Vivacité 3 tentatives (un premier octet lent — JIT froid, scan AV —
+        // ne doit pas déclencher une lourde reprise), puis préparation : la
+        // racine `/` doit répondre sans erreur serveur.
+        let ok = false;
+        for (let essai = 0; essai < 3 && !ok; essai += 1) {
+          if (essai > 0) await new Promise((r) => setTimeout(r, 1000));
+          ok = await sonderSante(santeUrl, 3000);
+        }
+        if (ok) {
+          ok = await sonderPreparation(urlDepart());
+        }
         if (ok) machine = reduire(machine, { type: "SANTE_OK" });
         else machine = reduire(machine, { type: "SANTE_ECHEC", detail: `GET ${santeUrl} → non-OK` });
         emettre(machine);

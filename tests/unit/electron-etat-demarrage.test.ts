@@ -146,4 +146,41 @@ describe("machine à états de démarrage", () => {
     const apres = reduire(m, { type: "SANTE_OK" });
     expect(apres).toBe(m);
   });
+
+  it("restauration de l'instantané en échec → FAILED migration-echouee, jamais de base partielle servie", () => {
+    // La restauration a lieu DANS la branche STARTING_DATABASE (avant
+    // SERVICE_DEMARRE) : l'événement y est émis pendant cet état.
+    const m = joue([
+      { type: "RUNTIME_PRESENT" },
+      { type: "CLUSTER_PRESENT" },
+      { type: "RESTAURATION_ECHOUEE", detail: "Restauration de l'instantané : sha256 incohérente" },
+    ]);
+    expect(m.etat).toBe("FAILED");
+    expect(m.cause).toBe("migration-echouee");
+    expect(m.detail).toContain("Restauration");
+  });
+
+  it("crash immédiat du backend → une reprise bornée puis FAILED backend-crash", () => {
+    const m1 = joue([
+      { type: "RUNTIME_PRESENT" },
+      { type: "CLUSTER_PRESENT" },
+      { type: "SERVICE_DEMARRE" },
+      { type: "BASE_JOIGNABLE" },
+      { type: "MIGRATIONS_A_JOUR" },
+      { type: "BACKEND_CRASH", detail: "exit 1" },
+    ]);
+    expect(m1.etat).toBe("RECOVERY");
+    expect(m1.cause).toBe("backend-crash");
+    const m2 = [
+      { type: "REESSAYER" as const },
+      { type: "RUNTIME_PRESENT" as const },
+      { type: "CLUSTER_PRESENT" as const },
+      { type: "SERVICE_DEMARRE" as const },
+      { type: "BASE_JOIGNABLE" as const },
+      { type: "MIGRATIONS_A_JOUR" as const },
+      { type: "BACKEND_CRASH" as const, detail: "exit 1" },
+    ].reduce(reduire, m1);
+    expect(m2.etat).toBe("FAILED");
+    expect(m2.cause).toBe("backend-crash");
+  });
 });

@@ -41,6 +41,7 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
  const language=ALEXA_AGENT_LANGUAGE, copy=agentCopy[language],recordsCopy=alexaRecordCopy[language];
  const labels:Readonly<Record<string,string>>=recordsCopy.labels;
  const label=(value:string)=>labels[value]??value;
+ const patientSource=(patientId:string):AlexaSource=>({id:patientId,type:"patient",label:"Dossier patient"});
  const failure=(call:AgentCall,status:AgentResult["status"],text:string,code:string):AgentResult=>({callId:call.id,status,complete:false,text,evidence:[],conditionKeys:[],error:{code,retryable:false}});
  async function rpc(name:string,args:RpcArgs,signal:AbortSignal,allowEmpty=false):Promise<unknown>{
   signal.throwIfAborted(); let result=await db.rpc<unknown>(name,args); signal.throwIfAborted();
@@ -55,7 +56,9 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
   if(!schema||!schema.safeParse(call.args).success)return failure(call,"error",copy.unavailable,"invalid");
   const a=call.args;
   const requestText=requestedGoal??original??input.text;
-  const identityText=requestedGoal&&parsePatientMention(requestedGoal).status!=='none'?requestedGoal:input.text;
+  // A multi-part task must not leak a name-like word from a sibling question into this read.
+  // Each registered sub-question owns its identity scope; absent a goal, retain the original turn.
+  const identityText=requestedGoal??input.text;
   if((call.name==='query_consultations'||(call.name==='get_patient_context'&&['summary','history'].includes(String(a["section"]))))&&requestsOldestConsultations(requestText))return failure(call,"unsupported",narrativeCopy.oldestUnavailable,"oldest-consultations-unsupported");
   if(call.name==='get_patient_context'&&a["section"]==='notes'&&typeof a["query"]==='string'&&!a["reusePrevious"]&&!noteContinuation(input.text)&&!noteQueryGrounded(requestText,a["query"]))return failure(call,"error",copy.unavailable,"unrequested-note-content-filter");
   if(call.name==='get_patient_context'&&a["section"]==='profile'){
@@ -89,7 +92,7 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    if(parsed.mode==="review"&&!parsed.patientIds){
     const agenda=[...prior].reverse().find(r=>r.data&&typeof r.data==="object"&&"agendaPatientIds" in r.data)?.data as {agendaPatientIds:string[];hasMore:boolean;offset?:number}|undefined;
     if(!agenda||agenda.hasMore||(agenda.offset??0)!==0)return failure(call,"needs_input",recordsCopy.agendaCoverage,"agenda-coverage");
-    spec.patientIds=agenda.agendaPatientIds; spec.filters=[...(spec.filters??[]),{field:"administrative_incomplete",op:"eq",value:true}];
+    spec.patientIds=agenda.agendaPatientIds; spec.filters=[...(spec.filters??[]).filter(condition=>condition.field!=="administrative_incomplete"),{field:"administrative_incomplete",op:"eq",value:true}];
    }
    const raw=await rpc("search_patients",{p_spec:JSON.stringify(spec),p_as_of:asOf},signal);
    const value=patientResult.parse(raw);
@@ -114,7 +117,8 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    if(!normalize(input.text+" "+(original??"")).includes(normalize(question))||!canAnswerGeneralAlexa(question))return failure(call,"unsupported",copy.generalRestricted,"general-question-not-admitted");
    const answer=await inferNativeGeneralAlexa(question,signal);
    if(!answer.ok)return failure(call,"error",copy.modelUnavailable,"general-"+answer.code);
-   return {callId:call.id,status:"ok",complete:true,text:copy.generalIntro+"\n"+answer.text,data:{answer:answer.text},conditionKeys:[],evidence:[{id:call.id,type:"query",label:copy.generalSource,provenance:{gate:"local_model",provider:"local",model:answer.model}}]};
+   const provenance=answer.reference?{gate:"local_public_fact",provider:"local",sourceId:answer.reference.id,sourceUrl:answer.reference.sourceUrl,...(answer.reference.secondarySourceUrl?{secondarySourceUrl:answer.reference.secondarySourceUrl}:{})}:{gate:"local_model",provider:"local",model:answer.model};
+   return {callId:call.id,status:"ok",complete:true,text:answer.text,data:{answer:answer.text},conditionKeys:[],evidence:[{id:call.id,type:"query",label:answer.reference?.label??copy.generalSource,provenance}]};
   }
   if(call.name==="query_app"&&a["view"]!=="message_draft")return readApplication(call.id,String(a["view"]),rpc,signal,{asOf,...(typeof a["offset"]==='number'?{offset:a["offset"]}:{}),...(typeof a["revision"]==='string'?{revision:a["revision"]}:{})});
   let patientId:string|undefined;
@@ -138,7 +142,7 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
     try{const response=await db.rpc<T>(name,args);if(!response.ok)resolutionFailure=new AgentReadError(response.error.technical==="42501"?"permission":response.error.technical==="57014"?"timeout":response.error.technical==="40001"?"changed":"database");return response;}
     catch(error){resolutionFailure=new AgentReadError("database");throw error;}
    }};
-   const resolved=await resolvePatient(resolutionDb,proposedName?{name:proposedName}:proposedId?{patientId:proposedId}:{},signal);
+   const resolved=await resolvePatient(resolutionDb,proposedName?{name:proposedName}:proposedId?{patientId:proposedId}:{},signal,asOf);
    signal.throwIfAborted();if(resolutionFailure)throw resolutionFailure;
    if(resolved.status!=="resolved"){
     const missing=failure(call,"needs_input",copy.patient,"patient-unresolved");
@@ -159,7 +163,8 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
      spec=noteReadQuerySchema.parse({...saved,...noteCursorSchema.parse(previous.next),revision:previous.revision});asOf=z.iso.datetime({offset:true}).parse(previous.asOf);
     }
     if(spec.consultationId&&!input.text.includes(spec.consultationId)&&!input.appContext.page.includes(spec.consultationId)&&!prior.some(r=>r.evidence.some(e=>e.type==="consultation"&&e.id===spec.consultationId)))return failure(call,"needs_input",copy.missing,"consultation-reference-not-verified");
-    return notePageResult(await rpc("query_alexa_note_sections",{p_spec:JSON.stringify(spec),p_as_of:asOf},signal),call.id,spec,asOf);
+    const page=await notePageResult(await rpc("query_alexa_note_sections",{p_spec:JSON.stringify(spec),p_as_of:asOf},signal),call.id,spec,asOf);
+    page.evidence.unshift(patientSource(patientId!));return page;
    }
    if(a["section"]==="profile"){
     const row=await rpc("get_patient",{p_id:patientId!},signal);
@@ -179,7 +184,7 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    const common={patientId:context.patientId,sourceRevision:context.sourceRevision};
    result.data=section==="summary"?{...common,summary:{diagnoses:context.diagnoses,treatments:context.treatments,scales:context.scales,currentConsultation:context.currentConsultation??null,consultations:context.consultations,coverage:context.coverage}}:section==="diagnoses"?{...common,diagnoses:context.diagnoses}:section==="scales"?{...common,scales:context.scales}:section==="treatments"?{...common,treatments:context.treatments}:section==="current"?{...common,currentConsultation:context.currentConsultation??null}:{...common,consultations:context.consultations,coverage:context.coverage};
    const evidence=new Map(sentences.flatMap(s=>s.sources).map(source=>[JSON.stringify([source.type,source.id,source.version]),source]));
-   result.evidence=[{id:call.id,type:"query",label:copy.clinicalRead,version:context.sourceRevision,provenance:{gate:"get_alexa_clinical_context",section,...(typeof a['diagnosisState']==='string'?{diagnosisState:a['diagnosisState']}:{}),...(typeof a['diagnosisRole']==='string'?{diagnosisRole:a['diagnosisRole']}:{}),...(typeof a['treatmentState']==='string'?{treatmentState:a['treatmentState']}:{})}},...evidence.values()];
+   result.evidence=[patientSource(patientId!),{id:call.id,type:"query",label:copy.clinicalRead,version:context.sourceRevision,provenance:{gate:"get_alexa_clinical_context",section,...(typeof a['diagnosisState']==='string'?{diagnosisState:a['diagnosisState']}:{}),...(typeof a['diagnosisRole']==='string'?{diagnosisRole:a['diagnosisRole']}:{}),...(typeof a['treatmentState']==='string'?{treatmentState:a['treatmentState']}:{})}},...evidence.values()];
    result.text=sentences.map(s=>s.text).join("\n");
    let summaryComplete=false;
    if(section === "summary") {

@@ -1,18 +1,31 @@
 import { jetoniser } from "@/server/knowledge/rerank";
-
+import { META_MOTS_LIVRE, planifierExpansionBilingue, VERSION_TERMINOLOGIE } from "@/server/knowledge/terminologie-bilingue";
 // Titles observed in the approved local corpus. Aliases never approve a source.
 const BOOKS = [
   { marker: /\bdsm(?:\s*-?\s*5)?\b/u,
     title: "DSM-5 — Manuel diagnostique et statistique des troubles mentaux", language: "fr" },
   { marker: /\b(?:maudsley|taylor)\b/u,
     title: "The Maudsley Prescribing Guidelines in Psychiatry", language: "en" },
+  { marker: /\bstahl\b/u,
+    title: "Prescriber's Guide (Stahl's Essential Psychopharmacology)", language: "en" },
 ] as const;
 
+// Mots-outils de la QUESTION : ils ne sont pas du contenu clinique et
+// n'existent pas dans le corpus indexe. La porte lexicale est un ET : un seul
+// de ces mots dans la requete suffit a la faire echouer. Ils sont donc
+// retires AVANT la porte, jamais du texte source.
 const SCAFFOLD = new Set([
   "quels", "quelles", "comment", "explique", "expliquer", "parle", "parler", "dit", "dis", "dire",
   "montre", "selon", "apres", "livre", "livres", "ouvrage", "manuel", "references", "reference",
   "sources", "source", "difference", "compare", "comparer", "entre", "chez",
   "what", "which", "how", "explain", "tell", "says", "according", "to", "the", "of", "in", "and", "book",
+  // Verbes et connecteurs de la question anglaise : « what does the book say
+  // about X ? » — aucun de ces mots n'est du contenu clinique, et leur
+  // presence rendrait la requete introuvable.
+  "say", "does", "do", "did", "about", "shows", "show", "gives", "give", "means",
+  "mean", "refers", "refer", "state", "states", "list", "lists", "describe",
+  "describes", "mention", "mentions", "contain", "contains", "provide",
+  "provides", "there", "here", "any", "all", "some", "same", "other", "others",
   "واش", "يقول", "حسب", "اشرح", "شرح", "شنو", "وش", "كتاب", "مرجع", "مراجع", "chno", "wach", "3la",
 ]);
 
@@ -33,9 +46,23 @@ const ALIASES: Readonly<Record<string, readonly [string, string]>> = {
 
 export interface KnowledgeQueryPlan {
   readonly queries: readonly string[];
+  /**
+   * Référence de classement PAR LOT, alignée sur `queries` : la requête `i`
+   * est classée contre `references[i]`. Sans cela, un lot anglais (issu de
+   * l'expansion bilingue) serait mesuré contre une référence française :
+   * couverture ~0, score ~0, preuve jamais remontée.
+   */
+  readonly references: readonly string[];
   readonly relevanceQuery: string;
   readonly language: "fr" | "en" | "toutes";
   readonly sourceTitle: string | null;
+  readonly sectionFocus?: string;
+  readonly sectionLeaf?: string;
+  /**
+   * Version de la couche de terminologie bilingue qui a produit ce plan.
+   * Absent si aucune expansion n'a eu lieu. Trace d'audit de la requête.
+   */
+  readonly terminologieVersion?: string;
 }
 
 function normalize(text: string): string {
@@ -59,7 +86,22 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
   const book = books[0];
   const named = normalized.match(/(?:\b(?:selon|d['’]apres|according to)|حسب)\s+(?:(?:le|la|les|the)\s+)?(?:(?:livre|ouvrage|manuel|book|كتاب|مرجع)\s+)?([\p{L}\p{N}-]+)/u)?.[1];
   const namedBook = normalized.match(/(?:\b(?:livre|ouvrage|book)|كتاب|مرجع)\s+(?:de\s+)?([\p{L}\p{N}-]+)/u)?.[1];
-  const generic = new Set(["references", "sources", "litterature", "criteres", "symptomes", "livres", "مراجع", "معايير"]);
+  // Mots qui NE sont PAS un nom de livre : verbes et connecteurs de la
+  // question (« que dit le LIVRE de … », « what does the BOOK say about … »),
+  // et mots STRUCTURELS (« le livre du TABLEAU », « the book SECTION »).
+  // Sans eux, la garde « livre inconnu » confondait une tournure de question
+  // avec le nom d'un livre et refusait la question sans raison.
+  const generic = new Set(["references", "sources", "litterature", "criteres", "symptomes", "livres",
+    "say", "says", "me", "dis", "dit", "contient", "mentionne", "parle", "donne",
+    "tableau", "tableaux", "table", "tables", "chapitre", "section", "sections",
+    "rubrique", "rubriques", "page", "pages", "figure", "figures",
+    "the", "and", "for", "on", "in", "at", "with", "from", "to", "of", "us",
+    "a", "an", "that", "this", "it", "its", "here", "there", "what", "which",
+    "how", "why", "who", "about", "does", "do", "did", "means", "mean",
+    // Connecteurs francais : « que dit le livre SUR … », « le livre DE LA … »
+    "sur", "au", "aux", "en", "dans", "la", "le", "les", "un", "une", "du",
+    "des", "que", "quoi", "quel", "quelle", "et", "ou", "mais", "donc", "alors",
+    "مراجع", "معايير"]);
   for (const name of [named, namedBook]) {
     if (name && !generic.has(name) && !BOOKS.some(known => known.marker.test(name))) return null;
   }
@@ -75,21 +117,66 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
   const tokens = [...new Set(terms.filter(token => !SCAFFOLD.has(token))
     .map(token => ALIASES[token]?.[english ? 1 : 0] ?? token))];
   if (tokens.length === 0) return null;
+  // Une question qui ne porte QUE des mots META du livre (« que dit le livre
+  // du tableau de la page 1109 ? ») n'a aucun terme de contenu : la porte
+  // lexicale (un ET) ne peut rien matcher. On rend alors l'ANCRE DE PAGE
+  // comme terme de recherche — le marqueur de page `[... p.NNN|src:NNN]` est
+  // present dans le texte indexe. Sans cela, la question rendrait
+  // « sans-preuve » au lieu de viser la page demandee.
+  const metaSeulement = tokens.every(token => META_MOTS_LIVRE.has(token));
+  if (metaSeulement) {
+    const pages = lexemes.filter(l => /^\d+$/u.test(l));
+    if (pages.length === 0) return null;
+    tokens.push(...pages);
+  }
   let queries = [tokens.join(" ")];
+  // Référence de classement PAR LOT : chaque requête est classée contre sa
+  // PROPRE référence (celle qui l'a fait remonter). Sans cela, un lot anglais
+  // serait mesuré contre une référence française : couverture ~0, score ~0,
+  // et la preuve ne remonterait jamais.
+  let references: string[] = [queries[0] as string];
+  // Expansion bilingue gouvernée : le concept clinique (FR ou EN) est remplace
+  // par les INTITULÉS DE RUBRIQUES REELS du corpus — le seul vocabulaire qui
+  // existe dans l'index. Les requetes d'origine sont conservees : la couche
+  // AJOUTE des candidats, elle n'en retire aucun.
+  const bilingue = planifierExpansionBilingue(normalized, tokens);
+  if (bilingue.actif && bilingue.requetes.length > 0) {
+    queries = [...queries, ...bilingue.requetes];
+    references = [...references, ...bilingue.requetes];
+  }
   // Type I must survive the baseline's one-letter token exclusion. A comparison
   // gets two exact lexical AND queries, never an OR query or a drug-only fallback.
   const typeI = /\btype\s+i\b/u.test(normalized);
   const typeII = /(?:\btype\s+ii\b|\b(?:et|vs|versus)\s+ii\b)/u.test(normalized);
   if (typeI && typeII) {
     const common = tokens.filter(token => !["type", "ii", "vs", "versus"].includes(token)).join(" ");
-    queries = [`${common} type i`, `${common} type ii`];
-  } else if (typeI) queries = [`${queries[0]} i`];
+    // Les lots d'expansion bilingue sont CONSERVES : la comparaison de types
+    // ne doit pas supprimer les rubriques candidates du concept clinique.
+    const conservees = references.slice(1);
+    queries = [`${common} type i`, `${common} type ii`, ...conservees];
+    references = [queries[0] as string, queries[1] as string, ...conservees];
+  } else if (typeI) {
+    const conservees = references.slice(1);
+    queries = [`${queries[0]} i`, ...conservees];
+    references = [queries[0] as string, ...conservees];
+  }
   if (queries.some(query => query.length > 500)) return null;
-  return { queries, relevanceQuery: queries.join(" "), language, sourceTitle: book?.title ?? null };
+  // An explicitly named diagnostic entity must not be substituted by a
+  // differential diagnosis merely mentioning it in the body of another section.
+  const sectionFocus = book?.language === "fr" && /\btrouble depressif caracterise\b/u.test(normalized)
+    ? "trouble depressif caracterise" : undefined;
+  const sectionLeaf = sectionFocus && /\b(?:criteres|symptomes)\b/u.test(normalized) ? "criteres diagnostiques" : undefined;
+  return { queries, references, relevanceQuery: queries.join(" "), language, sourceTitle: book?.title ?? null, ...(sectionFocus ? { sectionFocus } : {}), ...(sectionLeaf ? { sectionLeaf } : {}), ...(bilingue.actif ? { terminologieVersion: bilingue.version } : {}) };
 }
 
 /** Requested-book matching restricts already-governed rows; it grants no access. */
 export function matchesRequestedBook(row: unknown, plan: KnowledgeQueryPlan): boolean {
+  if (typeof row !== "object" || row === null || !("source_titre" in row) || typeof row.source_titre !== "string"
+    || !BOOKS.some(book => normalize(book.title) === normalize(row.source_titre as string))) return false;
+  if (plan.sectionLeaf && !(typeof row === "object" && row !== null && "section" in row && typeof row.section === "string"
+    && normalize(row.section).split("›").at(-1)?.trim() === plan.sectionLeaf)) return false;
+  if (plan.sectionFocus && !(typeof row === "object" && row !== null && "section" in row && typeof row.section === "string"
+    && normalize(row.section).split("›").some(section => section.trim() === plan.sectionFocus))) return false;
   if (plan.sourceTitle === null) return true;
   return typeof row === "object" && row !== null && "source_titre" in row
     && typeof row.source_titre === "string" && normalize(row.source_titre) === normalize(plan.sourceTitle);

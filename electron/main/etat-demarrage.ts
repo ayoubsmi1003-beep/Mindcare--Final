@@ -69,6 +69,7 @@ export type Evenement =
   | { readonly type: "MIGRATIONS_A_JOUR" }
   | { readonly type: "MIGRATIONS_MANQUANTES"; readonly detail?: string }
   | { readonly type: "MIGRATION_ECHOUEE"; readonly detail?: string }
+  | { readonly type: "RESTAURATION_ECHOUEE"; readonly detail?: string }
   | { readonly type: "BACKEND_DEMARRE" }
   | { readonly type: "BACKEND_INJOIGNABLE"; readonly detail?: string }
   | { readonly type: "BACKEND_CRASH"; readonly detail?: string }
@@ -121,6 +122,10 @@ export function reduire(m: EtatMachine, e: Evenement): EtatMachine {
     case "STARTING_DATABASE":
       if (e.type === "SERVICE_DEMARRE") return { ...m, etat: "WAITING_DATABASE" };
       if (e.type === "PORT_OCCUPE") return echec(m, "port-occupe", e.detail);
+      // Restauration de l'instantané de production (§D) : échec terminal,
+      // cause « migration-echouee » (la base est partielle, on refuse de
+      // servir). Le détail porte le préfixe « Restauration de l'instantané ».
+      if (e.type === "RESTAURATION_ECHOUEE") return echec(m, "migration-echouee", e.detail);
       break;
 
     case "WAITING_DATABASE":
@@ -138,6 +143,10 @@ export function reduire(m: EtatMachine, e: Evenement): EtatMachine {
     case "STARTING_BACKEND":
       if (e.type === "BACKEND_DEMARRE") return { ...m, etat: "WAITING_BACKEND" };
       if (e.type === "PORT_OCCUPE") return echec(m, "port-occupe", e.detail);
+      // Crash immédiat du fils (config invalide, EADDRINUSE…) : une reprise
+      // bornée, puis échec terminal. Sans cette branche l'événement était
+      // ignoré et la boucle tournait jusqu'à épuisement des itérations.
+      if (e.type === "BACKEND_CRASH") return echecOuRecuperation(m, "backend-crash", e.detail);
       break;
 
     case "WAITING_BACKEND":

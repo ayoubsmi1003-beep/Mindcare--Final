@@ -54,6 +54,14 @@ it('rejects a tautological public answer that lacks independently expected causa
  expect(evaluateAlexaCase(spec,record).status).toBe('FAIL');
  expect(evaluateAlexaCase(spec,{...record,events:[record.events[0],{type:'sentence',text:'La gravité attire la Lune ; sa vitesse maintient son orbite.'}]}).status).toBe('PASS');
 });
+it('rejects general answers with contradicted facts or English code-switching',()=>{
+ const spec={id:'general-quality',scenario:26,language:'fr',permittedToolSequence:[],timing:{deadlineMs:240000},expectedManifest:{requiredParts:[],filters:[]},expected:{status:'completed',responseLanguage:'fr',responseConcepts:[['fusion nucléaire','produit sa propre lumière'],['planète','orbite']],responseMustNotContain:['sans masse']}};
+ const events=[{type:'done',status:'completed',parts:[]},{type:'sentence',text:'Une étoile produit sa propre lumière par fusion nucléaire ; une planète orbite autour d’elle, in motion.'}];
+ const result=evaluateAlexaCase(spec,{events,calls:[],queries:[],ms:10});
+ expect(result.status).toBe('FAIL');expect(result.failures).toContain('response language is French');
+ const falseFact={...events[1],text:'Une étoile produit sa propre lumière par fusion nucléaire, mais elle est sans masse. Une planète orbite autour d’elle.'};
+ const falseResult=evaluateAlexaCase(spec,{events:[events[0],falseFact],calls:[],queries:[],ms:10});expect(falseResult.failures).toContain('forbidden response claim: sans masse');
+});
 
 it('rejects four correctly labelled but failed parts with no agenda or administrative read',()=>{
  const spec=manifest.cases.find(c=>c.id==='23-fr')!;const goals=['Agenda de demain','Dossiers administratifs incomplets','Champs manquants','Corrections pour revue'];const record={events:[{type:'done',status:'failed',parts:goals.map((goal,i)=>({id:'p'+i,goal,conditions:[],status:'failed',resultRefs:[],reason:'Model unavailable'}))}],calls:[],queries:[],ms:10};const result=evaluateAlexaCase(spec,record);expect(result.status).toBe('FAIL');expect(result.failures).toContain('supported administrative workflow completed');expect(result.failures).toContain('administrative review scoped to agenda patients');

@@ -1,8 +1,19 @@
 import { LIMITES, orchestrerRecherche } from "@/server/knowledge/recherche";
 import { CALIBRATION_A3 } from "@/server/knowledge/rerank";
+import { SEUIL_FAIBLESSE, SEUIL_PERTINENCE } from "@/server/knowledge/preuve";
 import { lignePorteRecuperable, porteLexicale, validerLignePorte } from "@/server/knowledge/stockage";
+import type { RetrievedEvidence } from "@/server/knowledge/types";
 import type { ClientSql } from "@/server/jarvis/client-sql";
 import { matchesRequestedBook, planKnowledgeQuery } from "./knowledge-query";
+
+/** Une preuve structurée, telle que rendue par l'orchestration gouvernée. */
+type Preuve = RetrievedEvidence;
+
+const issuedKnowledgeResults = new WeakSet<object>();
+/** Only immutable evidence returned by the governed SQL retrieval can be summarized externally. */
+export function isIssuedKnowledgeResult(value: unknown): boolean {
+  return typeof value === "object" && value !== null && issuedKnowledgeResults.has(value) && Object.isFrozen(value);
+}
 
 /** Explicit lexical freeze. Assets being present must never activate vector retrieval. */
 export async function readKnowledge(client: ClientSql, question: string, signal?: AbortSignal) {
@@ -18,6 +29,23 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
       if (result.error || !Array.isArray(result.data)) return { etat: "panne" as const, preuves: [] };
       batches.push(result.data.filter(row => matchesRequestedBook(row, plan)));
     }
+    // A prefix can remove a dose qualifier or negation. Keep whole bounded chunks,
+    // and flag approved oversized passages without exposing rejected-source existence.
+    let omittedLongPassages = false;
+    const lots: { reference: string; lignes: unknown[] }[] = [];
+    for (const [index, batch] of batches.entries()) {
+      const complete: unknown[] = [];
+      for (const candidate of batch) {
+        const row = validerLignePorte(candidate);
+        if (row === null || !lignePorteRecuperable(row)) continue;
+        if (Buffer.byteLength(row.texte, "utf8") > LIMITES.BUDGET_OCTETS) { omittedLongPassages = true; continue; }
+        complete.push(row);
+      }
+      // Chaque lot est classé contre SA référence : c'est elle qui l'a fait
+      // remonter. Un lot anglais issu de l'expansion bilingue ne doit pas être
+      // mesuré contre une référence française (couverture ~0, preuve perdue).
+      lots.push({ reference: plan.references[index] ?? plan.relevanceQuery, lignes: complete });
+    }
     // Fair bounded merge for the two type queries; the first query cannot evict the second.
     const candidates: unknown[] = [];
     for (let index = 0; index < LIMITES.LEXICAL && candidates.length < LIMITES.LEXICAL; index++) {
@@ -25,21 +53,51 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
         if (batch[index] !== undefined && candidates.length < LIMITES.LEXICAL) candidates.push(batch[index]);
       }
     }
-    // A prefix can remove a dose qualifier or negation. Keep whole bounded chunks,
-    // and flag approved oversized passages without exposing rejected-source existence.
-    const complete: unknown[] = [];
-    let omittedLongPassages = false;
-    for (const candidate of candidates) {
-      const row = validerLignePorte(candidate);
-      if (row === null || !lignePorteRecuperable(row)) continue;
-      if (row.texte.length > 4000) { omittedLongPassages = true; continue; }
-      complete.push(row);
+    void candidates;
+    // Classement par lot : chaque lot produit ses preuves, classées contre SA
+    // propre référence (celle qui l'a fait remonter). Les lots sont des
+    // REFORMULATIONS de la MÊME question (requête d'origine + rubriques
+    // candidates) : leurs scores de pertinence sont donc comparables, et la
+    // fusion se fait au MEILLEUR SCORE — pas par tour de rôle, qui laisserait
+    // un lot faible évincer la meilleure réponse d'un lot fort.
+    const parLot: Preuve[][] = [];
+    for (const lot of lots) {
+      const search = await orchestrerRecherche(lot.reference, lot.lignes, [], undefined, CALIBRATION_A3);
+      signal?.throwIfAborted();
+      parLot.push([...search.evidences]);
     }
-    const search = await orchestrerRecherche(plan.relevanceQuery, complete, [], undefined, CALIBRATION_A3);
-    signal?.throwIfAborted();
-    return { etat: search.evidences.length === 0 ? "sans-preuve" as const : search.issue === "faible" ? "faible" as const : "ok" as const,
+    // Les lots sont des REFORMULATIONS de la MÊME question (requête
+    // d'origine, puis rubriques candidates). Leurs scores de pertinence sont
+    // comparables : la fusion se fait au MEILLEUR SCORE. À égalité de score,
+    // l'ordre des lots départage — la requête d'origine d'abord (c'est la
+    // lecture la plus littérale de la question), puis les rubriques par ordre
+    // de couverture décroissante du corpus.
+    const tous: { preuve: Preuve; lot: number; rang: number }[] = [];
+    parLot.forEach((evidences, lot) => {
+      evidences.forEach((preuve, rang) => tous.push({ preuve, lot, rang }));
+    });
+    const vus = new Set<string>();
+    const preuves: Preuve[] = [];
+    const ordonnes = [...tous].sort((a, b) => b.preuve.evidence_relevance - a.preuve.evidence_relevance
+      || a.lot - b.lot || a.rang - b.rang);
+    for (const { preuve } of ordonnes) {
+      if (preuves.length >= LIMITES.FINAL) break;
+      if (vus.has(preuve.chunkId)) continue;
+      vus.add(preuve.chunkId);
+      preuves.push(preuve);
+    }
+    const issue = preuves.length === 0 ? "aucune" as const
+      : preuves.some(p => p.evidence_relevance >= SEUIL_PERTINENCE) ? "pertinent" as const
+      : preuves.some(p => p.evidence_relevance >= SEUIL_FAIBLESSE) ? "faible" as const
+      : "aucune" as const;
+    const result = { etat: preuves.length === 0 ? "sans-preuve" as const : issue === "faible" ? "faible" as const : "ok" as const,
       ...(omittedLongPassages ? { omittedLongPassages: true as const } : {}),
-      preuves: search.evidences.map(e => ({ titre: e.sourceTitre, section: e.section, version: e.sourceVersion, extrait: e.texte,
+      preuves: preuves.map(e => ({ titre: e.sourceTitre, section: e.section, version: e.sourceVersion, extrait: e.texte,
         sourceId: e.sourceId, chunkId: e.chunkId, versionChunk: e.versionChunk, unitId: e.unitId, parentTexteHash: e.parentTexteHash, enfantIndex: e.enfantIndex, enfantsTotal: e.enfantsTotal })) };
+    for (const proof of result.preuves) Object.freeze(proof);
+    Object.freeze(result.preuves);
+    Object.freeze(result);
+    issuedKnowledgeResults.add(result);
+    return result;
   } catch { signal?.throwIfAborted(); return { etat: "panne" as const, preuves: [] }; }
 }

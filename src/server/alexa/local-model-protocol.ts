@@ -16,7 +16,7 @@ export interface LocalTextOptions {
 /** Bounded CPU inference; the caller's abort signal can impose a shorter whole-turn deadline. */
 export function localModelTimeoutMs(options: LocalTextOptions = {}): number {
   const timeout = options.timeoutMs ?? 60000;
-  if (!Number.isFinite(timeout) || timeout < 1 || timeout > 180000) throw new Error("LocalModelInput");
+  if (!Number.isFinite(timeout) || timeout < 1 || timeout > 240000) throw new Error("LocalModelInput");
   return Math.ceil(timeout);
 }
 /** Deliberately excludes exception text, arguments, prompts and source content from operational logs. */

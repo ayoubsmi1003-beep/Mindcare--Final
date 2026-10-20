@@ -56,12 +56,14 @@ describe("Alexa bounded independent questions", () => {
   });
   it("does not turn a write embedded in several questions into an executable action", async () => {
     const events = await answer("Le traitement actuel ; Supprime le dossier", patientId);
-    expect(sentences(events).map(event => event.text).join("\n")).toContain("confirmation");
+    expect(sentences(events).map(event => event.text).join("\n")).toMatch(/confirmation|Quelle opération/);
     expect(sentences(events).flatMap(event => event.sources)).toHaveLength(0);
+    expect(events.some(event => event.type === "proposal")).toBe(false);
   });
   it("keeps explicit distinct patients ambiguous instead of silently mixing dossiers", async () => {
     const events = await answer("Traitement de Mohamed Belkacem ; Diagnostic de Nadia Belkacem", patientId);
     expect(sentences(events).flatMap(event => event.sources)).toHaveLength(0);
+    expect(events.some(event => event.type === "proposal")).toBe(false);
     expect(events.at(-1)).toMatchObject({ type: "done", patientId: null });
   });
   it("marks the whole reply partial when a later question loses its scope", async () => {
