@@ -1,11 +1,45 @@
 import {expect,it} from 'vitest';
-import {constrainCountDeclaration,frenchPatientCountContract} from '@/shared/alexa/request-contract';
+import {constrainCountDeclaration,countContractHints,countContractParts,frenchPatientCountContract,frenchRequestAdmission,frenchRequestedOutputs,requestedReadTool} from '@/shared/alexa/request-contract';
 import type {RequestPart,SupportedCondition} from '@/shared/alexa/agent';
 const part=(conditions:SupportedCondition[]):RequestPart=>({id:'p',goal:'Nombre',tools:['query_patients'],conditions,dependsOn:[],status:'pending',resultRefs:[]});
 it('leaves a count plus another read to native multi-output interpretation',()=>{
  expect(frenchPatientCountContract('Combien de patients actifs ? Lis les notes du dossier courant.')).toBeNull();
  expect(frenchPatientCountContract('Combien de patients actifs et explique leur répartition ?')).toBeNull();
  expect(frenchPatientCountContract('Combien de patients sans numéro de document d’identité et combien de recettes ?')).toBeNull();
+});
+it('routes a named national-identity lookup through the patient profile gate',()=>{
+ const admission=frenchRequestAdmission('Quel numéro national est enregistré pour Lina Ziani ?',false);
+ expect(admission.tools).toEqual(['get_patient_context']);
+ expect(admission.patientSection).toBe('profile');
+});
+it('compiles a bounded list of French patient metrics before native dispatch',()=>{
+ const text='Pour le cabinet, compte les dossiers actifs, ceux sans identité nationale, les mineurs et les patients sans consultation achevée au cours des six derniers mois.';
+ const contract=frenchPatientCountContract(text);
+ expect(contract?.clauses).toHaveLength(4);
+ expect(countContractHints(contract!).map(item=>item.conditions)).toEqual([
+  [],['identity_card:missing'],['age:lt:18'],['no_completed_months:eq:6'],
+ ]);
+ expect(countContractParts(contract!).map(part=>part.tools)).toEqual(Array(4).fill(['query_patients']));
+});
+it('splits a named-patient note question from its completed-consultation count',()=>{
+ const text='Pour Amel Bensaid, quel est le thème récurrent des notes et combien de consultations terminées sont enregistrées ?';
+ const outputs=frenchRequestedOutputs(text);
+ expect(outputs).toEqual([
+  'Pour Amel Bensaid, quel est le thème récurrent des notes',
+  'Pour Amel Bensaid, combien de consultations terminées sont enregistrées ?',
+ ]);
+ expect(outputs!.map(goal=>requestedReadTool(goal,text))).toEqual(['get_patient_context','query_consultations']);
+});
+it('splits a French shared-verb list into reads for each explicitly named patient',()=>{
+ const text='Donne le téléphone de Amina Meziane, la date de naissance de Sofiane Cherif et le nombre de consultations de Amel Bensaid.';
+ const outputs=frenchRequestedOutputs(text);
+ expect(outputs).toEqual([
+  'Donne le téléphone de Amina Meziane',
+  'Donne la date de naissance de Sofiane Cherif',
+  'Donne le nombre de consultations de Amel Bensaid.',
+ ]);
+ expect(outputs!.map(goal=>requestedReadTool(goal,text))).toEqual(['get_patient_context','get_patient_context','query_consultations']);
+ expect(frenchRequestedOutputs('Donne le téléphone et la date de naissance de Amel Bensaid.')).toBeNull();
 });
 it('preserves additional requested compound predicates beyond a recognized missing-field hint',()=>{
  const conditions:SupportedCondition[]=[{field:'identity_card',op:'missing',value:null},{field:'completed_consultations',op:'gte',value:3}];

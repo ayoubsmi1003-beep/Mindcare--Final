@@ -31,6 +31,7 @@ function separateMetricClauses(text:string):readonly string[]|null|undefined{
 /** An output constraint only: it never chooses a gate, queries records or invents an answer. */
 export function frenchPatientCountContract(text:string):FrenchCountContract|null {
  const separate=separateMetricClauses(text);if(separate!==undefined)return separate?{clauses:separate}:null;
+ const enumerated=enumeratedPatientMetricClauses(text);if(enumerated!==undefined)return enumerated?{clauses:enumerated}:null;
  const plain=fold(text),combien=[...text.matchAll(/\bcombien\b/giu)],starts=(combien.length?combien:[...text.matchAll(/\b(?:nombre(?:\s+total)?|total|effectif|d[ée]compte|taille(?=\s+de\s+la\s+patient[èe]le)|compte(?:r|z)?(?=\s+(?:tous|toutes|les?|des?|patients?|dossiers?|fiches?)))/giu)]).map(m=>m.index);
  const presentation=[...plain.matchAll(/\b(?:donne|affiche|montre)\w*/gu)],singleLeadingPresentation=presentation.length===1&&presentation[0]!.index===0&&presentation[0]!.index<starts[0]!;
  if(!starts.length||! /\b(?:patients?|dossiers?|fiches?|patientele)\b/u.test(plain)||/\b(?:lis|lire|expliqu\w*|resum\w*|detaill\w*|compar\w*|list\w*|lesquels|lesquelles|prepar\w*|cre[er]\w*|modifi\w*|annul\w*|ouvre\w*)\b|\b(?:leurs?|les)\s+noms?\b/u.test(plain)||(presentation.length>0&&!singleLeadingPresentation))return null;
@@ -42,6 +43,30 @@ export function frenchPatientCountContract(text:string):FrenchCountContract|null
  if(starts.length===1&&text.slice(starts[0]).includes(',')&&!/^[^,]+,\s*(?:sans inclure|en excluant|hors)\b[^,]*$/iu.test(text.slice(starts[0])))return null;
  const clauses=starts.length===1?[text.trim()]:starts.map((at,i)=>text.slice(at,starts[i+1]??text.length).replace(/[,;\s]+(?:et\s*)?$/iu,'').trim());
  return clauses.length<=12?{clauses}:null;
+}
+/** Recognize a closed list of patient metrics following one explicit count verb. */
+function enumeratedPatientMetricClauses(text:string):readonly string[]|undefined{
+ const prefix=text.match(/^\s*(?:pour\s+le\s+cabinet\s*,\s*)?(?:compte(?:r|z)?|d[ée]nombre(?:r|z)?|calcule(?:r|z)?|donne(?:r|z)?\s+(?:le|les)?)\s+/iu);
+ if(!prefix)return undefined;
+ const tail=text.slice(prefix[0].length),clauses=tail.split(/[,;]|\b(?:et|puis)\b/iu).map(clause=>clause.trim().replace(/^[,;\s]+|[,;\s?.!]+$/gu,'')).filter(Boolean);
+ if(clauses.length<2||clauses.length>7)return undefined;
+ if(/\b(?:agenda|rendez[- ]?vous|rdv|recettes?|revenus?|charges?|documents?|emails?|courriels?)\b/u.test(fold(tail)))return undefined;
+ const metricFor=(clause:string):string|null=>{
+  const plain=fold(clause),conditions=explicitConditions(clause)??[];
+  if(!conditions.length&&/\b(?:patients?|dossiers?)\s+actifs?\b/u.test(plain)&&! /\b(?:sans|aucun\w*|pas|manquant\w*)\b/u.test(plain))return 'active';
+  if(conditions.length!==1)return null;
+  const condition=conditions[0]!;
+  if(condition.field==='identity_card'&&condition.op==='missing')return 'missing_identity_card';
+  if(condition.field==='phone'&&condition.op==='missing')return 'missing_phone';
+  if(condition.field==='age'&&condition.op==='lt'&&condition.value===18)return 'children';
+  if(condition.field==='birth_date'&&condition.op==='missing')return 'unknown_age';
+  if(condition.field==='no_completed_months'&&condition.op==='eq'&&condition.value===6)return 'not_seen_6m';
+  if(condition.field==='completed_consultations'&&condition.op==='eq'&&condition.value===0)return 'never_seen';
+  return null;
+ };
+ const metrics=clauses.map(metricFor);
+ if(metrics.some(metric=>!metric)||new Set(metrics).size!==metrics.length||! /\b(?:patients?|dossiers?)\b/u.test(fold(tail)))return undefined;
+ return clauses;
 }
 const key=(c:SupportedCondition)=>JSON.stringify([c.field,c.op,c.value]);
 const mentions:Record<SupportedCondition['field'],RegExp>={phone:/\b(?:telephones?|portables?|mobiles?)\b/u,identity_card:/\b(?:identite|identification nationale|cni|carte nationale|carte d[' ]?identite|piece d[' ]?identite|document d[' ]?identite|numero national)\b/u,birth_date:/\b(?:naissance|age)\b/u,sex:/\bsexe\b/u,age:/\b(?:age|ages?|ans?|anniversaires?|adultes?|majeurs?|enfants?|mineurs?)\b/u,completed_consultations:/\b(?:consult\w*|seances?|vus?|recus?)\b/u,outstanding_balance:/\b(?:soldes?|impayes?|dettes?|encaisse\w*|paiements?)\b/u,no_completed_days:/\b(?:consult\w*|seances?|assiste\w*|vus?|recus?)\b/u,no_completed_months:/\b(?:consult\w*|seances?|assiste\w*|vus?|recus?)\b/u,administrative_incomplete:/\b(?:administrati\w*|dossiers?)\b/u};
@@ -79,7 +104,7 @@ function explicitConditions(text:string):SupportedCondition[]|null {
  if(/\bjamais\b/u.test(value)&&/\b(?:consult\w*|vus?|recus?)\b/u.test(value))add('completed_consultations','eq',0);
  return conditions.length?conditions:null;
 }
-export function countContractParts(contract:FrenchCountContract):RequestPart[]{return contract.clauses.map((goal,i)=>({id:'requested_'+(i+1),goal:goal.slice(0,300),tools:[],conditions:explicitConditions(goal)??[],dependsOn:[],status:'pending',resultRefs:[]}));}
+export function countContractParts(contract:FrenchCountContract):RequestPart[]{return contract.clauses.map((goal,i)=>({id:'requested_'+(i+1),goal:goal.slice(0,300),tools:['query_patients'],population:requestedPopulation(goal),conditions:explicitConditions(goal)??[],dependsOn:[],status:'pending',resultRefs:[]}));}
 function requestedPopulation(text:string):NonNullable<RequestPart['population']>{
  const plain=fold(text);
  if(/\b(?:inactifs?|archives?)\b/u.test(plain))return 'archived';
@@ -178,7 +203,7 @@ function frenchReadTargets(text:string):FrenchReadTarget[]{
  const practitionerView=!specificOffice&&/\b(?:praticien\w*|medecin|docteur|mon profil professionnel)\b/u.test(plain)?'practitioner' as const:undefined;
  if(cabinetView||practitionerView){const applicationView=cabinetView&&practitionerView?undefined:cabinetView??practitionerView;add({tool:'query_app',...(applicationView?{applicationView}:{})});}
  if(anchor||notes||summaryRequested){
-  const patientSection:FrenchReadTarget['patientSection']=summaryRequested?'summary':notes?'notes':/\bdiagnosti\w*\b/u.test(plain)?'diagnoses':/\b(?:echelles?|scores?)\b/u.test(plain)?'scales':/\b(?:traitements?|medicaments?|prescriptions?)\b/u.test(plain)?'treatments':/\b(?:seance en cours|consultation en cours|actuellement en consultation)\b/u.test(plain)?'current':/\bhistorique\b/u.test(plain)?'history':/\b(?:resume|synthese) clinique\b/u.test(plain)?'summary':/\b(?:e[- ]?mail|courriel|adresse electronique|telephones?|coordonnees?|adresses?|naissance|ages?|sexe|identite|cni|cin|situation familiale|contact d.urgence|numero (?:de (?:carte|piece) d.identite|d.identite|de dossier)|profil|administrati\w*)\b/u.test(plain)?'profile':undefined;
+  const patientSection:FrenchReadTarget['patientSection']=summaryRequested?'summary':notes?'notes':/\bdiagnosti\w*\b/u.test(plain)?'diagnoses':/\b(?:echelles?|scores?)\b/u.test(plain)?'scales':/\b(?:traitements?|medicaments?|prescriptions?)\b/u.test(plain)?'treatments':/\b(?:seance en cours|consultation en cours|actuellement en consultation)\b/u.test(plain)?'current':/\bhistorique\b/u.test(plain)?'history':/\b(?:resume|synthese) clinique\b/u.test(plain)?'summary':/\b(?:e[- ]?mail|courriel|adresse electronique|telephones?|coordonnees?|adresses?|naissance|ages?|sexe|identite|identite nationale|identification nationale|cni|cin|situation familiale|contact d.urgence|numero national|numero (?:de (?:carte|piece) d.identite|d.identite|de dossier)|profil|administrati\w*)\b/u.test(plain)?'profile':undefined;
   const diagnosisStates=[...(/\bactif\w*\b/u.test(plain)?['active' as const]:[]),...(/\bresolu\w*\b/u.test(plain)?['resolved' as const]:[])];
   const diagnosisRoles=[...(/\bprincipa(?:l|le|ux|les)\b/u.test(plain)?['primary' as const]:[]),...(/\bsecondair\w*\b/u.test(plain)?['secondary' as const]:[])];
   const treatmentStates=[...(/\bactif\w*\b/u.test(plain)?['active' as const]:[]),...(/\b(?:pause|suspendu\w*)\b/u.test(plain)?['paused' as const]:[]),...(/\barrete\w*\b/u.test(plain)?['stopped' as const]:[])];
@@ -237,8 +262,31 @@ export function constrainCompoundDeclaration(parts:RequestPart[],contract:French
 export function frenchRequestedOutputs(text:string):string[]|null{
  if(!frenchReadTargets(text).length&&!preparationTarget(text))return null;
  const markers=[...text.matchAll(/(?:^|[,;]\s*|\b(?:et|puis)\s+)((?:affich|montr|trouv|cherch|recherch|identifi|r[ée]sum|pr[ée]par|compt|donn|lis|lire|ouvr|compar|expliqu|cr[ée]|ajout|enregistr|modifi|annul|supprim|sign|encaiss|d[ée]pla|r[ée]dig|r[èe]gl)\p{L}*)\b/giu)];
- if(markers.length<2||markers.length>12||markers[0]!.index!==0)return null;
- return markers.map((match,index)=>text.slice(match.index+match[0].length-match[1]!.length,markers[index+1]?.index??text.length).replace(/[\s,;]+$/u,'').trim());
+ if(markers.length>=2&&markers.length<=12&&markers[0]!.index===0)return markers.map((match,index)=>text.slice(match.index+match[0].length-match[1]!.length,markers[index+1]?.index??text.length).replace(/[\s,;]+$/u,'').trim());
+ const sharedVerb=text.match(/^\s*(?:alexa[, :]\s*)?((?:affich|montr|trouv|cherch|recherch|identifi|r[ée]sum|pr[ée]par|compt|donn|lis|lire|ouvr|compar|expliqu|cr[ée]|ajout|enregistr|modifi|annul|supprim|sign|encaiss|d[ée]pla|r[èe]dig)\p{L}*)\s+/iu);
+ if(sharedVerb){
+  const commaItems=text.slice(sharedVerb[0].length).replace(/[?؟!.]+$/u,'').split(/\s*,\s*/u).filter(Boolean),items=commaItems.flatMap(item=>{
+   const coordinated=item.split(/\s+et\s+/iu),left=coordinated.length===2?parsePatientMention(coordinated[0]!):{status:'none' as const},right=coordinated.length===2?parsePatientMention(coordinated[1]!):{status:'none' as const};
+   return left.status==='named'&&right.status==='named'&&left.name!==right.name?coordinated:[item];
+  }),names=items.map(item=>{const mention=parsePatientMention(item);return mention.status==='named'?fold(mention.name):null;});
+  if(items.length>=2&&items.length<=8&&names.every((name):name is string=>!!name)&&new Set(names).size===names.length){
+   const ending=text.match(/[?؟!.]+\s*$/u)?.[0]??'',goals=items.map((item,index)=>`${sharedVerb[1]} ${item.trim()}${index===items.length-1?ending:''}`);
+   if(goals.every(goal=>requestedReadTool(goal,text)))return goals;
+  }
+ }
+ const separators=[...text.matchAll(/\s+\b(?:et|puis)\s+(?=(?:combien|quel(?:le|s|les)?|qui|comment|pourquoi|où|quand)\b)/giu)];
+ if(!separators.length||separators.length>5)return null;
+ const clauses:string[]=[];let start=0;
+ for(const separator of separators){clauses.push(text.slice(start,separator.index).trim().replace(/[\s,;]+$/u,''));start=separator.index+separator[0].length;}
+ clauses.push(text.slice(start).trim());
+ const mention=parsePatientMention(text),patientName=mention.status==='named'?mention.name:null,patientPrefix=patientName?`Pour ${patientName}, `:'';
+ const goals=clauses.map((goal,index)=>{
+  const cleaned=goal.replace(/[?!.]+$/u,'').trim();
+  const withPatient=patientPrefix&&patientName&&!fold(cleaned).includes(fold(patientName))?patientPrefix+cleaned:cleaned;
+  return withPatient+(index===clauses.length-1?(goal.match(/[\u00a0\u202f ]?[?？]$/u)?.[0]??''):'');
+ });
+ if(goals.length<2||goals.some(goal=>!goal||!requestedReadTool(goal,text)))return null;
+ return goals;
 }
 export function constrainRequestedOutputs(parts:RequestPart[],outputs:readonly string[]):RequestPart[]{
  const norm=(s:string)=>fold(s).replace(/[.!?]+$/gu,'').trim();
