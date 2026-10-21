@@ -23,7 +23,6 @@ import { localiserBinaires, type BinairesPg } from "./pg-binaires.js";
 import {
   NOM_SERVICE,
   VERSION_ATTENDUE,
-  commandeArreterService,
   commandeDemarrerService,
   commandeEnregistrerService,
   commandeInitdb,
@@ -42,6 +41,7 @@ import {
   finaliserCabinetNeuf,
 } from "./provisionnement.js";
 import type { Commande } from "./pg-cluster.js";
+import { arreterBackend, observerSortieBackend } from "./processus-backend.js";
 
 // ── Constantes packagées ────────────────────────────────────────────────────
 
@@ -264,9 +264,10 @@ async function sonderSante(url: string, timeoutMs = 2000): Promise<boolean> {
   }
 }
 
-async function attendreSante(url: string, budgetMs: number): Promise<boolean> {
+async function attendreSante(url: string, budgetMs: number, signal?: AbortSignal): Promise<boolean> {
   const echeance = Date.now() + budgetMs;
   while (Date.now() < echeance) {
+    if (signal?.aborted) return false;
     if (await sonderSante(url, 2000)) return true;
     await new Promise((r) => setTimeout(r, INTERVALLE_SONDE_MS));
   }
@@ -524,6 +525,7 @@ function spawnBackend(serveurDir: string, fichierEnv: string, journalDir: string
     cwd: serveurDir,
     env,
     stdio: ["ignore", "pipe", "pipe"],
+    windowsHide: true,
   });
   // Rediriger stdout/stderr vers fichier (best effort)
   // Piping simple : append au fichier backend.log
@@ -547,6 +549,7 @@ function spawnBackend(serveurDir: string, fichierEnv: string, journalDir: string
 // ── Orchestration principale ────────────────────────────────────────────────
 
 export interface OptionsOrchestration {
+  readonly signal?: AbortSignal;
   readonly onEtat?: (etat: Etat, machine: EtatMachine) => void;
   /** En dev, sauter PG et aller direct au backend (pas de service) */
   readonly sauterPostgresEnDev?: boolean;
@@ -558,7 +561,7 @@ export async function orchestrerDemarrage(
   contexte: ContexteDemarrage,
   opts: OptionsOrchestration = {},
 ): Promise<ResultatDemarrage> {
-  const { onEtat, sauterPostgresEnDev, onBackendCrash } = opts;
+  const { onEtat, sauterPostgresEnDev, onBackendCrash, signal } = opts;
   const modeDev = process.env["MINDCARE_ELECTRON_ENV"] !== "production" && sauterPostgresEnDev !== false ? true : false;
   // Si sauterPostgresEnDev est explicitement false, on ne saute pas même en dev
   const sauterPg = sauterPostgresEnDev === true || (modeDev && sauterPostgresEnDev !== false && !existsSync(contexte.resourcesPgsqlDir));
@@ -587,6 +590,9 @@ export async function orchestrerDemarrage(
   const MAX_ITERATIONS = 20;
 
   while (machine.etat !== "READY" && machine.etat !== "FAILED" && iterations < MAX_ITERATIONS) {
+    if (signal?.aborted) {
+      return { etat: { ...machine, etat: 'FAILED', cause: 'backend-injoignable', detail: 'STARTUP_CANCELLED' }, backend };
+    }
     iterations += 1;
     switch (machine.etat) {
       case "CHECKING_RUNTIME": {
@@ -826,8 +832,7 @@ export async function orchestrerDemarrage(
           } else {
             // Crash ultérieur (y compris après READY) : diagnostic via rappel,
             // la machine à états ne mute pas hors de sa boucle.
-            backend.on("exit", (code, signal) => {
-              const detail = `backend terminé (code ${String(code)}, signal ${String(signal)})`;
+            observerSortieBackend(backend, (detail) => {
               console.error(`[mindcare] ${detail}`);
               try {
                 onBackendCrash?.(detail);
@@ -846,7 +851,7 @@ export async function orchestrerDemarrage(
 
       case "WAITING_BACKEND": {
         const santeUrl = `${urlDepart()}/api/health`;
-        const ok = await attendreSante(santeUrl, BUDGET_BACKEND_MS);
+        const ok = await attendreSante(santeUrl, BUDGET_BACKEND_MS, signal);
         if (ok) {
           machine = reduire(machine, { type: "SANTE_OK" });
         } else {
@@ -883,10 +888,11 @@ export async function orchestrerDemarrage(
       case "RECOVERY": {
         // Nettoyer backend avant reprise
         if (backend) {
-          try {
-            backend.kill();
-          } catch {
-            // ignore
+          try { await arreterBackend(backend); }
+          catch {
+            machine = { ...machine, etat: "FAILED", cause: "backend-crash", detail: "BACKEND_STOP_TIMEOUT" };
+            emettre(machine);
+            break;
           }
           backend = undefined;
         }
@@ -907,13 +913,4 @@ export async function orchestrerDemarrage(
   return { etat: machine, backend };
 }
 
-export function tuerBackend(backend: ChildProcess | undefined): void {
-  if (!backend) return;
-  try {
-    backend.kill();
-  } catch {
-    // ignore
-  }
-  // Tenter d'arrêter le service Windows si on l'a démarré (best effort)
-  executer(commandeArreterService()).catch(() => {});
-}
+export const tuerBackend = arreterBackend;

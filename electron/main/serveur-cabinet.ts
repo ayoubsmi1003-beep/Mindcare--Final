@@ -1,11 +1,13 @@
 import { execFile, type ChildProcess } from "node:child_process";
-import { appendFileSync, existsSync, mkdirSync, readFileSync, statSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { createSecureContext } from "node:tls";
 import { PORT_BACKEND } from "./config.js";
 import { validerOrigineCabinet } from "./connexion-cabinet.js";
 import { orchestrerDemarrage } from "./orchestrateur.js";
+import { arreterBackend } from "./processus-backend.js";
+import { journalDesktop } from "./journal-desktop.js";
 import { demarrerProxyCabinet } from "./proxy-cabinet.js";
 import { annoncerCabinet } from "./decouverte-cabinet.js";
 import type { Socket } from "node:dgram";
@@ -77,34 +79,41 @@ async function demarrerServeur(fichier: string): Promise<void> {
   process.env["CORS_ORIGINS"] = config.origin;
   const journalDir = path.join(config.racineDonnees, "logs");
   mkdirSync(journalDir, { recursive: true });
-  const journal = (message: string) => appendFileSync(path.join(journalDir, "clinic-server.log"), `${new Date().toISOString()} [cabinet] ${message}\n`);
+  const journal = (message: string) => journalDesktop(journalDir, message);
   let backend: ChildProcess | undefined;
   let proxy: Awaited<ReturnType<typeof demarrerProxyCabinet>> | undefined;
   let annonce: Socket | undefined;
   let fermeture = false;
+  const annulation = new AbortController();
+  let demarrage: ReturnType<typeof orchestrerDemarrage> | undefined;
   const arreter = (code: number) => {
     if (fermeture) return;
     fermeture = true;
-    journal(`arrêt code=${code}`);
+    annulation.abort();
+    journal(code === 0 ? 'SERVER_STOP' : 'SERVER_FAILED');
     proxy?.closeAllConnections(); proxy?.close();
     annonce?.close();
-    backend?.kill();
+    void (async () => {
+      const resultat = await demarrage;
+      await arreterBackend(backend ?? resultat?.backend);
+    })().catch(() => journal('BACKEND_STOP_FAILED')).finally(() => { process.exit(code); });
     // Le service PostgreSQL persiste; il n'appartient pas à une fenêtre Electron.
-    const timer = setTimeout(() => process.exit(code), 1000); timer.unref();
-    process.exitCode = code;
   };
   process.once("SIGTERM", () => arreter(0)); process.once("SIGINT", () => arreter(0));
-  journal("démarrage");
-  const resultat = await orchestrerDemarrage({
+  journal('SERVER_START');
+  demarrage = orchestrerDemarrage({
     resourcesPgsqlDir: path.join(config.resourcesDir, "pgsql"), serveurDir: path.join(config.resourcesDir, "serveur"),
     snapshotDir: path.join(config.resourcesDir, "snapshot"), dataDir: path.join(config.racineDonnees, "data"),
     fichierEnv: path.join(config.racineDonnees, "mindcare.env"), journalDir, dossierTemp: path.join(journalDir, "tmp"),
-  }, { sauterPostgresEnDev: false, onEtat: etat => journal(`état=${etat}`), onBackendCrash: () => { journal("backend arrêté"); arreter(1); } });
+  }, { signal: annulation.signal, sauterPostgresEnDev: false, onEtat: etat => journal(`STATE_${etat}`), onBackendCrash: () => { journal('BACKEND_UNEXPECTED_EXIT'); arreter(1); } });
+  const resultat = await demarrage;
   backend = resultat.backend;
-  if (resultat.etat.etat !== "READY") { journal(`démarrage refusé cause=${resultat.etat.cause ?? "inconnue"}`); arreter(1); return; }
+  if (fermeture) return;
+  if (resultat.etat.etat !== "READY") { journal('STARTUP_REFUSED'); arreter(1); return; }
   try {
     proxy = await demarrerProxyCabinet({ origin: config.origin, pfx, passphrase, upstreamPort: PORT_BACKEND });
-    proxy.on("error", () => { journal("transport HTTPS arrêté"); arreter(1); });
+    proxy.on("error", () => { journal('HTTPS_FAILED'); arreter(1); });
+    try {
     const identity = JSON.parse(readFileSync(path.join(config.racineDonnees, "clinic-identity.json"), "utf8")) as {id: string};
     const publicCertificate = new X509Certificate(readFileSync(path.join(config.racineDonnees, "clinic-public.cer"))).toString();
     annonce = await annoncerCabinet({id:identity.id, origin:config.origin}, publicCertificate, () => {
@@ -115,9 +124,10 @@ async function demarrerServeur(fichier: string): Promise<void> {
         return invitation;
       } catch { return undefined; }
     });
-    annonce.on("error", () => { journal("découverte interrompue"); arreter(1); });
-    journal("READY HTTPS — base et schéma vérifiés");
-  } catch { journal("écoute HTTPS impossible"); arreter(1); }
+    annonce.on("error", () => { journal('DISCOVERY_UNAVAILABLE'); annonce?.close(); annonce = undefined; });
+    } catch { journal('DISCOVERY_UNAVAILABLE'); }
+    journal('HTTPS_READY');
+  } catch { journal('HTTPS_START_FAILED'); arreter(1); }
 }
 
 // Importable pour vérification sans lancer de service, créer de base ou lire de secret.

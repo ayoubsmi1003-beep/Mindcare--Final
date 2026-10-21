@@ -204,7 +204,11 @@ function habillage(
     // Enfoncé = choix ACTIF : teinte profonde + graisse, jamais de décalage de
     // bordure (un `border-2` bougerait la mise en page à chaque bascule) et
     // jamais de glyphe (les icônes sont dessinées, pas des caractères).
-    enfonce === true ? "border-action-600 bg-action-100 font-semibold text-ink-900" : "",
+    // `!` (important) : les teintes du rang de base (`bg-card`, `border-rule`)
+    // posent les MÊMES propriétés CSS — sans important, c'est l'ordre de la
+    // feuille générée qui décide du gagnant, pas l'ordre des classes, et le
+    // choix actif reste invisible (horaires Matin/Midi/Soir des traitements).
+    enfonce === true ? "!border-action-600 !bg-action-100 font-semibold text-ink-900" : "",
     pleineLargeur ? "w-full" : "",
   ].join(" ");
 }

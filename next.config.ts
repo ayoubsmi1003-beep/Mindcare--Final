@@ -9,7 +9,8 @@ const nextConfig: NextConfig = {
   // Perf pass: zod est le seul gros lib côté client (validation partout).
   // `optimizePackageImports` évite d'embarquer tout zod quand seule une
   // poignée de schémas est importée par route.
-  experimental: { optimizePackageImports: ["zod"] },
+  // Bound build workers on the delivery PC to avoid memory pressure.
+  experimental: { cpus: 1, optimizePackageImports: ["zod"] },
   compiler: {
     removeConsole:
       process.env.NODE_ENV === "production" ? { exclude: ["error", "warn"] } : false,

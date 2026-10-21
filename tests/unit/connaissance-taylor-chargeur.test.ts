@@ -21,7 +21,7 @@ const LIVRE = join(RACINE, "knowledge", "canonical-v2",
   "maudsley-prescribing-guidelines-2021-taylor-14e",
   "sha256-14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0");
 
-let LOT = [];
+let LOT: ReturnType<typeof chunksDepuisUnitesTaylor> = [];
 beforeAll(() => {
   const entree = entreeTaylor(RACINE);
   const ctx = {

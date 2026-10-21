@@ -128,7 +128,7 @@ describe("M08-D2 — déterminisme + quarantaine", () => {
       { unit_id: "u-a", unit_type: "prose", source_block_ids: [] },
       { unit_id: "u-b", unit_type: "heading", source_block_ids: [] },
     ];
-    const { gardees, epurees } = filtrerUnitesSuresTaylor(RACINE, saines as never);
+    const { gardees, epurees } = filtrerUnitesSuresTaylor(RACINE, saines);
     expect(epurees).toEqual([]);
     expect(gardees).toHaveLength(2);
   });

@@ -2279,6 +2279,28 @@ export const fr = {
       notificationLue: "Notification lue.",
     },
   },
+
+  /**
+   * Migration legacy Syglab (126) — indicateurs de provenance et file de revue.
+   * Données historiques : jamais présentées comme des saisies du jour.
+   */
+  migration: {
+    historiqueImporte: "Historique importé",
+    sourceSyglab: "Source : Syglab",
+    donneesHistoriques: "Données historiques",
+    dateInconnue: "Date inconnue — historique importé",
+    revue: {
+      titre: "Revue de migration",
+      enAttente: "En attente",
+      confirmee: "Confirmée",
+      rejetee: "Rejetée",
+      resolue: "Résolue",
+      differee: "Différée",
+      garderSepares: "Garder séparés",
+      fusionConfirmee: "Fusion confirmée",
+      trancher: "Trancher",
+    },
+  },
 } as const;
 
 export type Fr = typeof fr;

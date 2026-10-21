@@ -58,6 +58,7 @@ function fusionne(surcharge: Partial<CandidatFusionne> & { chunkId: string }): C
     texte: "Catalogue — SERTRALINE ALMUS — 50 mg",
     scoreLexical: 0.5,
     scoreVectoriel: 0.5,
+    unitId: null, parentTexteHash: null, enfantIndex: null, enfantsTotal: null,
     ...surcharge,
   };
 }

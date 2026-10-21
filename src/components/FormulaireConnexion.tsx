@@ -35,7 +35,7 @@
  *   · pas de dégradé violet ni de `<style>` en ligne : `tokens.css` seul
  *     (I10), teinte `--grad-auth` verte déjà au catalogue ;
  *   · pas d'emoji en guise d'icônes : libellés liés + pastille de marque.
- * Il reste exactement : e-mail + mot de passe + bouton Se connecter.
+ * Il reste exactement : nom d’utilisateur + mot de passe + bouton Se connecter.
  * Les états d'erreur gardent leur place : entre le titre et les champs,
  * JAMAIS après le bouton.
  */
@@ -45,6 +45,7 @@
 import { useId, useState } from "react";
 
 import { fr } from "@/i18n/fr";
+import { login } from "@/i18n/login";
 import { Bouton } from "./ui/Bouton";
 import { Icone } from "./ui/Icones";
 
@@ -147,17 +148,21 @@ export function FormulaireConnexion({
             htmlFor={emailId}
             className="font-ui text-label font-medium tracking-label text-ink-700"
           >
-            {fr.connexion.champEmail}
+            {login.username}
           </label>
           <input
             id={emailId}
-            type="email"
-            autoComplete="email"
+            type="text"
+            autoComplete="username"
+            autoCapitalize="none"
+            autoCorrect="off"
+            spellCheck={false}
+            maxLength={320}
             required
             disabled={enCours}
             value={email}
             onChange={(event) => setEmail(event.target.value)}
-            placeholder={fr.connexion.champEmail}
+            placeholder={login.username}
             className={classePastille}
           />
         </div>

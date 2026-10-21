@@ -39,6 +39,7 @@ function candidat(surcharge: Partial<CandidatFusionne> & { chunkId: string }): C
     texte: "La sertraline 50 mg est une option de première intention.",
     scoreLexical: null,
     scoreVectoriel: 0.7,
+    unitId: null, parentTexteHash: null, enfantIndex: null, enfantsTotal: null,
     ...surcharge,
   };
 }

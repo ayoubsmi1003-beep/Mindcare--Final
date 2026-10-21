@@ -28,6 +28,12 @@ import { defineConfig } from "vitest/config";
 import path from "node:path";
 
 export default defineConfig({
+  // Vite's SSR transform otherwise leaves CLI hashbangs after prepended imports.
+  // Keep the executable scripts intact and strip only that line in the test loader.
+  plugins: [{ name: "cli-hashbang", enforce: "pre", transform(code, id) {
+    if (id.endsWith(".mjs") && code.startsWith("#!")) return code.replace(/^#![^\r\n]*(?:\r?\n|$)/, "");
+    return null;
+  } }],
   resolve: {
     alias: { "@": path.resolve(import.meta.dirname, "src") },
   },

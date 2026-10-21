@@ -248,7 +248,11 @@ const MOTS_VIDES: ReadonlySet<string> = new Set([
   "quelle", "qui", "sa", "se", "ses", "son", "sur", "ta", "te", "tes", "toi",
   "ton", "tous", "tout", "toute", "toutes", "tu", "un", "une", "vos", "votre",
   "vous", "est", "sont", "etre", "avoir", "fait", "comme", "ou",
-  "ما", "هي", "هو", "في", "من", "على", "الى", "إلى", "ان", "أن", "هل",
+  // Mots-outils anglais : sans eux, la porte lexicale (AND) ne matche
+  // AUCUN texte anglais (la requete conserve "is", "are", "does"...).
+  // Mesure Stahl 7e : MRR 0,133 -> 0,378 sur 100 questions reelles.
+    "ما", "هي", "هو", "في", "من", "على", "الى", "إلى", "ان", "أن", "هل",
+  "is", "are", "was", "were", "be", "been", "being", "am", "do", "does", "did", "has", "have", "had", "can", "could", "should", "would", "will", "shall", "may", "a", "an", "the", "and", "or", "but", "if", "of", "at", "by", "for", "with", "about", "into", "from", "up", "down", "out", "off", "over", "under", "then", "there", "here", "its", "it", "this", "that", "these", "those", "as", "than", "what", "which", "who", "whom", "whose", "when", "where", "why", "how", "all", "any", "some", "no", "not", "only", "own", "same", "so", "too", "very",
   "هذا", "هذه", "ذلك", "تلك", "التي", "الذي", "الذين", "مع", "عن", "كل",
   "لم", "لن", "قد", "ثم", "او", "أو", "بين", "بعد", "قبل", "حتى", "كما",
   "لكن", "بل",

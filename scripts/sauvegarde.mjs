@@ -33,6 +33,7 @@ import { createReadStream, createWriteStream, mkdirSync, statSync } from "node:f
 import { readFile, unlink, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { pipeline } from "node:stream/promises";
+import { pgEnv } from "./lib/pg-env.mjs";
 
 const MAGIE = Buffer.from("MCBK1\0\0\0", "binary"); // en-tête de format, 8 octets
 
@@ -106,20 +107,30 @@ async function dechiffrer(source, destination, phrase) {
 /** Les comptages qui décident si une restauration est fidèle. */
 const TABLES_MESUREES = [
   "app.patients",
+  "app.medications",
   "app.appointments",
   "app.consultations",
   "app.clinical_notes",
   "app.payments",
   "app.documents",
   "app.profiles",
+  "auth.users",
+  "app.patient_treatments",
+  "app.prescriptions",
+  "app.prescription_lines",
+  "app.schema_migrations",
   "audit.log",
 ];
+
+function executerPg(cmd, args, url) {
+  return executer(cmd, args, { env: { ...process.env, ...pgEnv(url) } });
+}
 
 async function compter(psql, url) {
   const requete = TABLES_MESUREES.map(
     (t) => `SELECT '${t}' AS t, count(*)::text AS n FROM ${t}`,
   ).join(" UNION ALL ");
-  const r = await executer(psql, ["-d", url, "-tAF", "|", "-c", requete]);
+  const r = await executerPg(psql, ["-tAF", "|", "-c", requete], url);
   if (r.code !== 0) throw new Error(`comptage impossible : ${r.erreur.trim()}`);
   const out = new Map();
   for (const ligne of r.sortie.trim().split("\n")) {
@@ -137,6 +148,28 @@ async function main() {
   const psql = process.env.PSQL ?? "psql";
   const pgRestore = process.env.PG_RESTORE ?? "pg_restore";
   const urlAdmin = process.env.MINDCARE_ADMIN_DATABASE_URL ?? url;
+  pgEnv(url); // Refus d'une configuration illisible avant toute commande.
+
+  // Vérifier la séparation AVANT pg_dump, chiffrement ou commande de création.
+  // Une erreur de configuration ne peut jamais transformer un drill en reset.
+  let nomBase;
+  if (process.env.MINDCARE_RESTORE_TEST_DB !== undefined) {
+    const source = new URL(url);
+    const cible = new URL(process.env.MINDCARE_RESTORE_TEST_DB);
+    const admin = new URL(urlAdmin);
+    const nomSource = decodeURIComponent(source.pathname.replace(/^\//, ""));
+    nomBase = decodeURIComponent(cible.pathname.replace(/^\//, ""));
+    if (nomBase === nomSource) throw new Error("La cible de restauration doit être distincte de la base de production.");
+    if (["postgres", "template0", "template1"].includes(nomBase)) throw new Error("Base de restauration réservée : refus.");
+    if (!/^[a-zA-Z_][a-zA-Z0-9_]{0,62}$/.test(nomBase)) throw new Error("Nom de base de restauration invalide.");
+    const serveur = (u) => `${u.hostname.toLowerCase()}:${u.port || "5432"}`;
+    if (serveur(source) !== serveur(cible) || serveur(admin) !== serveur(cible)) {
+      throw new Error("La restauration et la création doivent utiliser le même serveur local que la source.");
+    }
+    if (![source, cible, admin].every((u) => ["postgresql:", "postgres:"].includes(u.protocol))) {
+      throw new Error("Protocole de base de restauration invalide.");
+    }
+  }
 
   mkdirSync(dossier, { recursive: true });
   const horodatage = new Date().toISOString().replace(/[:.]/g, "-");
@@ -147,7 +180,7 @@ async function main() {
 
   // ── 1 · le cliché ────────────────────────────────────────────────────────
   console.log("1 · pg_dump");
-  const dump = await executer(pgDump, ["-Fc", "-f", brut, "-d", url]);
+  const dump = await executerPg(pgDump, ["-Fc", "-f", brut], url);
   if (dump.code !== 0) {
     console.error(`  🔴 pg_dump a échoué : ${dump.erreur.trim().slice(0, 300)}`);
     process.exit(1);
@@ -200,17 +233,20 @@ async function main() {
   await dechiffrer(chiffre, rendu, phrase);
   console.log("  ✅ déchiffré");
 
-  const nomBase = new URL(baseEssai).pathname.replace(/^\//, "");
-  await executer(psql, ["-d", urlAdmin, "-c", `DROP DATABASE IF EXISTS "${nomBase}"`]);
-  const cree = await executer(psql, ["-d", urlAdmin, "-c", `CREATE DATABASE "${nomBase}"`]);
+  // Une base déjà existante fait échouer CREATE : jamais de DROP préalable.
+  const cree = await executerPg(psql, ["-c", `CREATE DATABASE "${nomBase}"`], urlAdmin);
   if (cree.code !== 0) {
     console.error(`  🔴 création de la base d'essai impossible : ${cree.erreur.trim().slice(0, 200)}`);
     process.exit(1);
   }
 
-  // `pg_restore` signale des avertissements bénins (rôles absents) : on juge
-  // sur les COMPTAGES, pas sur son code de sortie.
-  await executer(pgRestore, ["-d", baseEssai, "--no-owner", "--no-privileges", rendu]);
+  // Conserver propriétaires et privilèges : les portes DEFINER ne doivent
+  // jamais devenir des portes postgres par perte des rôles de sécurité.
+  const restaure = await executerPg(pgRestore, ["--dbname", nomBase, "--exit-on-error", rendu], baseEssai);
+  if (restaure.code !== 0) {
+    await unlink(rendu).catch(() => {});
+    throw new Error("La restauration a échoué ; la base d'essai est conservée pour diagnostic. Aucun verdict vert.");
+  }
   await unlink(rendu).catch(() => {});
 
   console.log("6 · comparaison source ↔ restauration");
@@ -223,7 +259,7 @@ async function main() {
     console.log(`  ${ok ? "✅" : "🔴"} ${t.padEnd(22)} source=${n} restaure=${m ?? "(absente)"}`);
   }
 
-  await executer(psql, ["-d", urlAdmin, "-c", `DROP DATABASE IF EXISTS "${nomBase}"`]);
+  await executerPg(psql, ["-c", `DROP DATABASE IF EXISTS "${nomBase}"`], urlAdmin);
 
   console.log("");
   if (ecarts === 0) {

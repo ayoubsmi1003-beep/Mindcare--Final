@@ -263,10 +263,8 @@ describe("A · happy path : 5 tours, un seul patient", () => {
     });
     // Mécanisme : le client envoie le repli (l'intent du tour précédent) ;
     // le serveur l'ignorerait ici (classification valide prioritaire).
-    expect(t2.recus[0]?.intentionChainee).toEqual({
-      nom: "GET_PATIENT_CONTEXT",
-      conversationId: conv,
-    });
+    // The explicit history request does not inherit the preceding context intent.
+    expect(t2.recus[0]?.intentionChainee).toBeUndefined();
     expect(r2.data.resolution?.intentionRetenu).toBe("GET_CONSULTATION_HISTORY");
     assertSansUuidBrut(t2.recus);
     const travail3: TravailPrecedent = {
@@ -318,10 +316,7 @@ describe("A · happy path : 5 tours, un seul patient", () => {
     );
     expect(r4.ok).toBe(true);
     if (!r4.ok) return;
-    expect(t4.recus[0]?.intentionChainee).toEqual({
-      nom: "GET_CONSULTATION_HISTORY",
-      conversationId: conv,
-    });
+    expect(t4.recus[0]?.intentionChainee).toBeUndefined();
     expect(temoin.sondes.length).toBe(sondesApresT3);
 
     // ── T5 : « son traitement » ──

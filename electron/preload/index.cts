@@ -7,10 +7,9 @@
  * renderer continue de se comporter comme un client non fiable, exactement
  * comme dans le navigateur aujourd'hui (§5 de la mission).
  *
- * Les canaux `ouvrirJournaux` et `lancerSauvegarde` sont ajoutés aux étapes
- * ultérieures du plan (I, J) ; ils sont déclarés ici pour fixer la forme
- * définitive de la surface IPC dès l'étape 1, mais renvoient un refus
- * explicite tant que le processus principal ne les implémente pas.
+ * Les canaux `ouvrirJournaux` et `lancerSauvegarde` ouvrent le dossier des
+ * journaux et exécutent la sauvegarde chiffrée — résultats typés
+ * `{ok, message}`, aucun secret ni chemin arbitraire exposé.
  *
  * ⚠️ EXTENSION `.cts`, PAS `.ts` — TROUVÉ PAR ÉCHEC RÉEL À L'INSTALLATION.
  * `package.json` du dépôt porte `"type": "module"`, et ce fichier est
@@ -30,7 +29,15 @@
  */
 import { contextBridge, ipcRenderer } from "electron";
 
+interface ResultatCanal {
+  readonly ok: boolean;
+  readonly message: string;
+}
+
 const API_MINDCARE = {
+  retryStartup(): Promise<void> {
+    return ipcRenderer.invoke("mindcare:retry-startup");
+  },
   getVersion(): Promise<string> {
     return ipcRenderer.invoke("mindcare:version");
   },
@@ -41,10 +48,12 @@ const API_MINDCARE = {
     ipcRenderer.on("mindcare:etat-demarrage", ecouteur);
     return () => ipcRenderer.removeListener("mindcare:etat-demarrage", ecouteur);
   },
-  openLogsFolder(): Promise<void> {
+  // Dossiers chiffrés + journaux (§D, étape 12) : résultats typés, jamais de
+  // secret ni de chemin arbitraire — le renderer ne choisit rien.
+  openLogsFolder(): Promise<ResultatCanal> {
     return ipcRenderer.invoke("mindcare:ouvrir-journaux");
   },
-  runBackup(): Promise<void> {
+  runBackup(): Promise<ResultatCanal> {
     return ipcRenderer.invoke("mindcare:lancer-sauvegarde");
   },
 } as const;

@@ -7,7 +7,7 @@ import { describe, expect, it } from "vitest";
 import { recupererPreuves, type RpcPreuves } from "../../src/server/jarvis/preuves-recherche";
 import { construireBlocPreuves } from "../../src/shared/jarvis/preuves";
 
-const clientVide: RpcPreuves = { rpc: async <T,>() => ({ data: [] as unknown as T, error: null }) };
+const clientVide: RpcPreuves = { rpc: async <T,>() => ({ data: [] as T, error: null }) };
 const clientPanne: RpcPreuves = { rpc: async () => ({ data: null, error: { message: "boom" } }) };
 
 describe("recupererPreuves : etat explicite", () => {

@@ -59,7 +59,7 @@ describe("garde egress composio", () => {
       versionOutil: async () => "v_test",
       executer: async (args) => {
         appels.push(args);
-        return { idExterne: "wamid.test" };
+        return { idExterne: "wamid.test", refus: null };
       },
     };
   }

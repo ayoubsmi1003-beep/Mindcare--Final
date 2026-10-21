@@ -2,6 +2,7 @@ import {frenchRequestAdmission,frenchRequestedOutputs,requestedReadTool,frenchPa
 import {it,expect,vi} from 'vitest';
 import {runAgentLoop} from '@/server/alexa/agent-loop';
 import type {LocalCompletion,LocalTextOptions} from '@/server/alexa/local-model-protocol';
+import type {AgentCall} from '@/shared/alexa/agent';
 const input={text:'Quel est le chiffre d’affaires de ce mois ?',conversationId:'domain',clientTurnId:'11111111-1111-4111-8111-111111111111',appContext:{patientId:null,page:'/jarvis'}};
 it('recognizes every supported predicate in the approved French compound-patient query',()=>{
  const text='Trouve les adultes ayant au moins trois consultations terminées, un solde restant dû positif et aucune consultation terminée depuis 90 jours. Donne le nombre, la liste et trie par solde décroissant.';
@@ -14,12 +15,12 @@ it.each(['Quel est le chiffre d’affaires de ce mois ?','Donne les recettes de 
  expect(execute).not.toHaveBeenCalled();expect(r.status).not.toBe('completed');expect(r.sentences.join(' ')).not.toContain('32 patients');
 });
 it('dispatches an admitted public question through the local-answer gate without a database read',async()=>{
- const text='Pourquoi les objets tombent-ils vers le sol ?',execute=vi.fn(async(c:{id:string})=>({callId:c.id,status:'ok' as const,complete:true,text:'Réponse générale locale.',evidence:[{id:c.id,type:'query',label:'Réponse générale',provenance:{gate:'local_model',provider:'local'}}],conditionKeys:[]})),infer=vi.fn();
+ const text='Pourquoi les objets tombent-ils vers le sol ?',execute=vi.fn(async(c:AgentCall)=>({callId:c.id,status:'ok' as const,complete:true,text:'Réponse générale locale.',evidence:[{id:c.id,type:'query' as const,label:'Réponse générale',provenance:{gate:'local_model',provider:'local'}}],conditionKeys:[]})),infer=vi.fn();
  const result=await runAgentLoop({...input,text,conversationId:crypto.randomUUID()},{actor:'domain',infer,execute},new AbortController().signal);
  expect(infer).not.toHaveBeenCalled();expect(execute).toHaveBeenCalledTimes(1);expect(execute.mock.calls[0]?.[0]).toMatchObject({name:'answer_general',args:{question:text}});expect(result.status).toBe('completed');
 });
 it('projects an administrative profile read without note-only arguments for a simple selected-patient field question',async()=>{
- const observed:Record<string,unknown>[]=[];const infer=vi.fn();const execute=vi.fn(async(c:{id:string})=>({callId:c.id,status:'ok' as const,complete:true,text:'Téléphone : 0000000001',evidence:[],conditionKeys:[]}));
+ const observed:Record<string,unknown>[]=[];const infer=vi.fn();const execute=vi.fn(async(c:AgentCall)=>({callId:c.id,status:'ok' as const,complete:true,text:'Téléphone : 0000000001',evidence:[],conditionKeys:[]}));
  const result=await runAgentLoop({...input,text:'Quel est le téléphone du patient sélectionné ?',conversationId:crypto.randomUUID(),appContext:{patientId:'22222222-2222-4222-8222-222222222222',page:'/patients/22222222-2222-4222-8222-222222222222'}},{actor:'domain',infer,observeCall:call=>observed.push({name:call.name,args:call.args}),execute},new AbortController().signal);
  expect(infer).not.toHaveBeenCalled();expect(result.status).toBe('completed');expect(observed[0]).toMatchObject({name:'get_patient_context',args:{section:'profile'}});expect(Object.keys(observed[0]!.args as object).sort()).toEqual(['partIds','section']);expect(execute.mock.calls[0]?.[0]).toMatchObject({args:{section:'profile'}});
 });
@@ -36,7 +37,7 @@ it('keeps historical reads when combined with an administrative field',()=>{expe
 it('does not interpret electrical charges as financial charges',()=>{expect(frenchRequestAdmission('Pourquoi les charges électriques s’attirent-elles ?',true).tools).toEqual(['answer_general']);});
 
 it('answers four supported counts in one authoritative metrics read',async()=>{
- const text='Combien de patients actifs, combien sans identité, combien d’enfants et combien sans consultation terminée depuis six mois ?',execute=vi.fn(async(c:{id:string;args:Record<string,unknown>})=>({callId:c.id,status:'ok' as const,complete:true,text:'Patients actifs : 4\nSans identité : 1\nEnfants : 1\nSans consultation terminée depuis six mois : 2',data:{metrics:{active:4,missing_identity_card:1,children:1,not_seen_6m:2}},evidence:[],conditionKeys:[]})),infer=vi.fn();
+ const text='Combien de patients actifs, combien sans identité, combien d’enfants et combien sans consultation terminée depuis six mois ?',execute=vi.fn(async(c:AgentCall)=>({callId:c.id,status:'ok' as const,complete:true,text:'Patients actifs : 4\nSans identité : 1\nEnfants : 1\nSans consultation terminée depuis six mois : 2',data:{metrics:{active:4,missing_identity_card:1,children:1,not_seen_6m:2}},evidence:[],conditionKeys:[]})),infer=vi.fn();
  const result=await runAgentLoop({...input,text,conversationId:crypto.randomUUID()},{actor:'counts',execute,infer},new AbortController().signal);
  expect(infer).not.toHaveBeenCalled();expect(execute).toHaveBeenCalledTimes(1);expect(execute.mock.calls[0]?.[0]).toMatchObject({name:'query_patients',args:{mode:'metrics',metrics:['active','missing_identity_card','children','not_seen_6m']}});expect(result.parts).toHaveLength(4);expect(result.parts.every(p=>p.status==='answered')).toBe(true);
 });
@@ -46,7 +47,7 @@ it.each(['Quels patients sont actifs ?','Quel est le téléphone du patient sél
  await runAgentLoop({...input,text,conversationId:crypto.randomUUID()},{actor:'operation',execute,infer:async()=>step++===0?call('d','declare_request',{parts:[{id:'p',goal:'Patients',tool:'query_patients',conditions:[],dependsOn:[]}]}):call('bad','query_patients',{partIds:['p'],mode:'count'})},new AbortController().signal);expect(execute).not.toHaveBeenCalled();
 });
 it('keeps irrelevant patient-tool instructions out of a positively admitted public request',async()=>{
- const text='Pourquoi le ciel est bleu ?',execute=vi.fn(async(c:{id:string})=>({callId:c.id,status:'ok' as const,complete:true,text:'Réponse générale locale.',evidence:[],conditionKeys:[]})),infer=vi.fn();await runAgentLoop({...input,text,conversationId:crypto.randomUUID()},{actor:'context',execute,infer},new AbortController().signal);expect(infer).not.toHaveBeenCalled();expect(execute.mock.calls[0]?.[0]).toMatchObject({name:'answer_general'});expect(execute.mock.calls[0]?.[0].name).not.toBe('query_patients');
+ const text='Pourquoi le ciel est bleu ?',execute=vi.fn(async(c:AgentCall)=>({callId:c.id,status:'ok' as const,complete:true,text:'Réponse générale locale.',evidence:[],conditionKeys:[]})),infer=vi.fn();await runAgentLoop({...input,text,conversationId:crypto.randomUUID()},{actor:'context',execute,infer},new AbortController().signal);expect(infer).not.toHaveBeenCalled();expect(execute.mock.calls[0]?.[0]).toMatchObject({name:'answer_general'});expect(execute.mock.calls[0]?.[0].name).not.toBe('query_patients');
 });
 it('does not offer no-tool metadata for an explicit supported finance request',async()=>{
  let options:LocalTextOptions|undefined;await runAgentLoop({...input,conversationId:crypto.randomUUID()},{actor:'context',execute:vi.fn(),infer:async(_m,o)=>{options=o;throw Error('Capture only');}},new AbortController().signal);
@@ -54,10 +55,10 @@ it('does not offer no-tool metadata for an explicit supported finance request',a
 });
 
 it('does not offer a clarification escape for an already admitted complete public question',async()=>{
- const text='Pourquoi la Lune tourne autour de la Terre ?',execute=vi.fn(async(c:{id:string})=>({callId:c.id,status:'ok' as const,complete:true,text:'Réponse générale locale.',evidence:[],conditionKeys:[]})),infer=vi.fn();await runAgentLoop({...input,text,conversationId:crypto.randomUUID()},{actor:'public',execute,infer},new AbortController().signal);expect(infer).not.toHaveBeenCalled();expect(execute.mock.calls[0]?.[0]).toMatchObject({name:'answer_general',args:{question:text}});
+ const text='Pourquoi la Lune tourne autour de la Terre ?',execute=vi.fn(async(c:AgentCall)=>({callId:c.id,status:'ok' as const,complete:true,text:'Réponse générale locale.',evidence:[],conditionKeys:[]})),infer=vi.fn();await runAgentLoop({...input,text,conversationId:crypto.randomUUID()},{actor:'public',execute,infer},new AbortController().signal);expect(infer).not.toHaveBeenCalled();expect(execute.mock.calls[0]?.[0]).toMatchObject({name:'answer_general',args:{question:text}});
 });
 it('rejects a model-only request to repeat a complete admitted public question',async()=>{
- const text='Pourquoi le ciel est bleu ?',execute=vi.fn(async(c:{id:string})=>({callId:c.id,status:'ok' as const,complete:true,text:'Réponse générale locale.',evidence:[],conditionKeys:[]})),infer=vi.fn();const r=await runAgentLoop({...input,text,conversationId:crypto.randomUUID()},{actor:'public',execute,infer},new AbortController().signal);expect(infer).not.toHaveBeenCalled();expect(execute).toHaveBeenCalledTimes(1);expect(execute.mock.calls[0]?.[0]).toMatchObject({name:'answer_general',args:{question:text}});expect(r.status).toBe('completed');
+ const text='Pourquoi le ciel est bleu ?',execute=vi.fn(async(c:AgentCall)=>({callId:c.id,status:'ok' as const,complete:true,text:'Réponse générale locale.',evidence:[],conditionKeys:[]})),infer=vi.fn();const r=await runAgentLoop({...input,text,conversationId:crypto.randomUUID()},{actor:'public',execute,infer},new AbortController().signal);expect(infer).not.toHaveBeenCalled();expect(execute).toHaveBeenCalledTimes(1);expect(execute.mock.calls[0]?.[0]).toMatchObject({name:'answer_general',args:{question:text}});expect(r.status).toBe('completed');
 });
 
 it('requires an explicit finance view and recovers without dispatching a default payment list',async()=>{

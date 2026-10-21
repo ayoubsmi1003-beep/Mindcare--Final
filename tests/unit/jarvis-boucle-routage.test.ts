@@ -551,8 +551,8 @@ describe("filtre M04 : la chainee ne filtre jamais (le serveur decide)", () => {
     );
     expect(bilan.ok).toBe(true);
     if (!bilan.ok) return;
-    // Preuve du montage : la chainee a bien ete construite sur ce tour...
-    expect(bilan.data.resolution?.intentionChainee).toBe("GET_PATIENT_CONTEXT");
+    // Explicit consultation requests are freshly classified, not chained from context.
+    expect(bilan.data.resolution?.intentionChainee).toBeNull();
     // ...mais elle ne filtre pas : la proposition d'une autre famille passe,
     // comme le serveur l'aurait autorise sous son intent decide.
     expect(executions).toEqual(["get_consultation_history"]);

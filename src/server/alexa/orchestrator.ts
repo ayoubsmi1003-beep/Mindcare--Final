@@ -50,6 +50,9 @@ export interface OrchestratorDependencies {
 /** Native tool selection remains subject to server validation, identity and scope gates. */
 export async function runAlexa(input: TurnInput, dependencies: OrchestratorDependencies, emit: (event: AlexaEvent) => void, signal: AbortSignal): Promise<void> {
   if (dependencies.native) {
+    // Courtesies use the same closed dialogue grammar as the established UI.
+    // A greeting never needs patient lookup or a model inference slot.
+    if (planRequest(input.text, null).intent === 'dialogue') return runAlexaSingle(input, dependencies, emit, signal);
     const lease=conversationState.begin(dependencies.actor,input.conversationId,input.appContext.patientId,input.appContext.page);
     const result=await runAgentLoop(input,{actor:dependencies.actor,...(dependencies.agentAsOf?{asOf:dependencies.agentAsOf}:{}),...(dependencies.agentInfer?{infer:dependencies.agentInfer}:{}),...(dependencies.agentObserve?{observeCall:dependencies.agentObserve}:{}),...(dependencies.agentObserveResult?{observeResult:dependencies.agentObserveResult}:{}),execute:agentExecutor(input,dependencies.db,dependencies.knowledge),onStage:()=>emit({type:"stage",stage:"analysis"})},signal);
     if(!conversationState.isCurrent(lease)) {emit({type:"error",code:"stale",message:dialogue("fr").stale});return;}

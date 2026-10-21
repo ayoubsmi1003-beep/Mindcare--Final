@@ -1,8 +1,12 @@
 # Alexa globale — audit et spécification du 4 octobre 2026
 
-Statut : **AUDIT EFFECTUÉ, SPÉCIFICATION À VALIDER, IMPLEMENTATION NON COMMENCÉE**.
+Statut au 5 octobre : **AUDIT EFFECTUÉ ; CONTINUATION DE L'IMPLÉMENTATION DEMANDÉE EXPLICITEMENT ; TRANCHE FOURNISSEURS GRATUITS IMPLÉMENTÉE, ACCEPTATION NAVIGATEUR PARTIELLE ET VOIX À FAIRE**.
 Checkout audité : `v7-design`, HEAD `e7b2bbf`. Le fichier non suivi `pnpm` était présent avant l'audit ; il est conservé.
 Demande : prompt maître de 50 sections joint à cette conversation. Ce document distingue le fonctionnement constaté, la cible demandée et les conditions de qualification.
+
+Évolution autorisée après l'audit : OpenRouter strictement gratuit, quotas gratuits Gemini/Groq confirmés par l'utilisateur, bascule bornée dans la passerelle existante. Le plan et les limites de cette tranche figurent dans `docs/superpowers/plans/2026-10-04-alexa-free-routing.md`. Les constats ci-dessous décrivent l'audit du 4 octobre ; cette tranche ne termine ni la réarchitecture globale ni son objectif actif.
+
+La dernière instruction directe demande de poursuivre jusqu'au but, sans revisiter la connexion, et de poser des questions simples, RAG, modèle, complexes et métier dans le navigateur visible. Elle autorise la continuation des corrections et de l'architecture décrite ici ; une ancienne demande de revue ne constitue plus un arrêt général. Elle n'autorise ni identifiants/notes libres vers le cloud, ni modèle payant, ni mutation clinique sans confirmation. Chaque nouvel appel modèle passe par la véritable interface visible.
 
 ## 1. Mission et limites
 
@@ -182,11 +186,19 @@ Diagnostic complémentaire en lecture seule, confirmé hors sandbox : ports 5544
 
 Pour l'implémentation : tests de compréhension sémantique par paraphrases inédites FR/AR/darija/EN/mixte ; plan composé ; filtres métier et pagination ; liste→deuxième→dernière→précédente ; changement de page et isolement acteur ; injection en note/résultat ; refus zero-byte des identifiants, reçus falsifiés et outils/arguments inconnus ; refus des écritures non confirmées ; conservation langue/negation/doses/incertitudes ; synthèses individuelles et longitudinale avec revision/invalidation ; vrais checkpoints SQL en rollback sur données synthétiques ; qualification fournisseur sans PII ; corpus positif/abstention/citations réel ; navigateur et acoustic test avec parole humaine. Reprise réelle du scénario final du prompt depuis le dashboard.
 
+### 14.1. Revérification réelle du 5 octobre
+
+Ces résultats remplacent le blocage runtime de l'audit initial, sans effacer son historique : démarrage normal avec garde d'origine/base PASS, cible `mc-p3` / `mindcare` explicitement synthétique, 112 migrations à jour. Le checkpoint existant `scripts/checkpoint-alexa-context.sql` a exécuté **27 contrôles PASS en PostgreSQL**, puis `ROLLBACK` : rôles, périmètre praticien, curseur stable sur 100 consultations, cinq rubriques de notes, sources du résumé, version et invalidation. Aucune migration appliquée, fixture conservée ou donnée patient réelle utilisée par cette passe.
+
+Retrieval réel sur les 46 cas du golden existant, calibration A3 : **lexical 116 PASS / 7 FAIL** ; **hybride BGE-M3 local 111 PASS / 13 FAIL**, dont parité du tokenizer en échec. Les résultats reproduisent les baselines gelées : confusion DSM type I/II, faux positif, source inter-livres et perte d'une preuve lexicale dans le candidat hybride. Les corpus, goldens, recette, gel et mode production ne sont pas modifiés. Une indexation présente n'est donc pas une qualification du RAG hybride.
+
+Le bundle client reconstruit ne contient aucun marqueur `OPENROUTER`, `GROQ`, `ELEVENLABS`, `GEMINI_API_KEY` ou `GOOGLE_API_KEY` (contrôle ciblé PASS). Qualifications et réponses publiques réelles sur les fournisseurs gratuits : voir le plan de la tranche et `artifacts/alexa-free-routing-2026-10-04/RESULTS.md`. Ces preuves ne valident pas encore le planner sémantique, une synthèse longitudinale IA ni le parcours acoustique. Le 5 octobre, après autorisation explicite de lire les identifiants privés puis demande de synchroniser le mot de passe modifié dans `.env`, le hash du seul owner de développement a été actualisé sous garde locale/cloud-dev. La connexion normale avec le mot de passe courant est PASS. Six tours publics réels ont ensuite été observés dans le navigateur : réponses correctes en français, arabe et anglais, darija comprise mais surtout arabe standard, et deux tours indisponibles après timeout Groq puis Gemini (bascule à environ quatre secondes). La réception navigateur est donc PARTIAL ; les fichiers de qualification temporairement retenus pour une tentative de test OpenRouter ont tous été restaurés après les blocages du contrôle navigateur. Les autres lectures, réponses navigateur isolées OpenRouter/Gemini et l'acceptation acoustique restent NOT RUN.
+
 ## 15. Livraison et décisions de revue
 
-Ordre de réalisation après validation : contrats + compréhension/outils/références ; frontière privée + adaptateurs ; synthèses individuelles/longitudinale ; RAG réel qualifié ; voix/surfaces/performance ; acceptation. Garder les changements en petits ensembles vérifiables, sans déployer une architecture concurrente. Les détails de tâches/fichiers et commandes seront dans le plan d'implémentation après revue de cette spécification.
+Ordre de réalisation autorisé par la continuation explicite : contrats + compréhension/outils/références ; frontière privée + adaptateurs ; synthèses individuelles/longitudinale ; RAG réel qualifié ; voix/surfaces/performance ; acceptation. Garder les changements en petits ensembles vérifiables, sans déployer une architecture concurrente. Les détails de tâches/fichiers et commandes sont suivis dans les plans d'implémentation.
 
-Décision demandée : valider l'option 2 et cette spécification, notamment **local pour la voix de vrais dossiers / Live pour qualification synthétique**, et **activation clinique de Gemini conditionnée à une route compatible**. Cela préserve les frontières du prompt tout en permettant l'implémentation du cœur. La cible native Live sur de vrais dossiers reste une exigence non réconciliée, pas un succès annoncé.
+La continuation explicite permet l'implémentation du cœur sans nouvelle demande de validation générale. Les frontières restent **local pour la voix de vrais dossiers / Live pour qualification synthétique**, et **activation clinique de Gemini conditionnée à une route compatible**. La cible native Live sur de vrais dossiers reste une exigence non réconciliée, pas un succès annoncé.
 
 ## Références fournisseur consultées
 

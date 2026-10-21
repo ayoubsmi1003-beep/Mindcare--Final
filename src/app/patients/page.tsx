@@ -41,8 +41,6 @@ import { useEffect, useState } from "react";
 import { AppShell } from "@/components/AppShell";
 import { EnTeteAnnuaire, LignePatient } from "@/components/patients/LignePatient";
 import {
-  BandeauHorsLigne,
-  BlocErreur,
   ChampRecherche,
   EtatVide,
   LienBouton,
@@ -69,11 +67,10 @@ const DELAI_CHARGEMENT_MS = 10_000;
  * ⚠️ LE DÉBOUNCE N'EST PAS QU'UN CONFORT : CHAQUE APPEL ÉCRIT UNE LIGNE
  * D'AUDIT. `app.search_patients` journalise une trace `recherche` par appel.
  * Interroger à chaque frappe noierait `audit.log` sous une ligne par caractère
- * — un journal légal illisible, ce qui revient à ne pas en avoir. 250 ms est
- * sous le seuil de perception d'une pause pour une frappe courante, et
- * regroupe un mot entier en un seul appel.
+ * — un journal légal illisible, ce qui revient à ne pas en avoir. 140 ms
+ * regroupe les frappes rapprochées tout en affichant rapidement les résultats.
  */
-const DEBOUNCE_MS = 250;
+const DEBOUNCE_MS = 140;
 
 /** Sous deux caractères, la recherche coûte plus qu'elle ne trie. */
 const LONGUEUR_MIN = 2;
@@ -90,6 +87,9 @@ export default function PagePatients(): React.JSX.Element {
   const [saisie, setSaisie] = useState("");
   const [requete, setRequete] = useState("");
   const [page, setPage] = useState<Page<PatientListItem> | undefined>(undefined);
+  const [pageRequete, setPageRequete] = useState<string | undefined>(undefined);
+  const [relance, setRelance] = useState(0);
+  const [relanceSession, setRelanceSession] = useState(0);
   const [messageErreur, setMessageErreur] = useState<string | undefined>(undefined);
   const [horsLigne, setHorsLigne] = useState(false);
   const [chargement, setChargement] = useState(true);
@@ -133,7 +133,7 @@ export default function PagePatients(): React.JSX.Element {
     return () => {
       annule = true;
     };
-  }, [router]);
+  }, [router, relanceSession]);
 
   // Le débounce — voir la constante. Une saisie plus courte que le seuil
   // remet la liste complète plutôt que de laisser le dernier résultat à
@@ -156,12 +156,13 @@ export default function PagePatients(): React.JSX.Element {
     if (sessionTranchee !== true) return;
     let annule = false;
     setChargement(true);
+    setMessageErreur(undefined);
+    setHorsLigne(false);
 
     const minuteur = setTimeout(() => {
       if (annule) return;
       setHorsLigne(false);
-      setMessageErreur(fr.delaiDepasse);
-      setPage(undefined);
+      setMessageErreur("La recherche prend plus de temps que prévu.");
       setChargement(false);
     }, DELAI_CHARGEMENT_MS);
 
@@ -172,21 +173,21 @@ export default function PagePatients(): React.JSX.Element {
       if (annule) return;
       if (!result.ok) {
         setHorsLigne(result.error.code === "hors-ligne");
-        setMessageErreur(result.error.message);
-        setPage(undefined);
+        setMessageErreur("La recherche n’a pas pu être actualisée.");
         setChargement(false);
         return;
       }
       setHorsLigne(false);
       setMessageErreur(undefined);
       setPage(result.data);
+      setPageRequete(requete);
       setChargement(false);
     });
     return () => {
       annule = true;
       clearTimeout(minuteur);
     };
-  }, [requete, sessionTranchee]);
+  }, [requete, sessionTranchee, relance]);
 
   // Fermeture de session depuis l'interface. `replace` et pas `push` : le
   // bouton Retour ne doit pas ramener sur un écran de dossiers après une
@@ -216,10 +217,8 @@ export default function PagePatients(): React.JSX.Element {
   if (sessionTranchee === false) {
     return (
       <main className="flex flex-col gap-4 p-8">
-        {horsLigne ? <BandeauHorsLigne /> : null}
-        <BlocErreur
-          message={horsLigne ? fr.erreurs["hors-ligne"] : fr.erreurs["non-authentifie"]}
-        />
+        <p role="status" className="text-sm text-ink-500">Connexion au service en cours.</p>
+        <button type="button" onClick={() => { setSessionTranchee(undefined); setRelanceSession(value => value + 1); }}>Réessayer</button>
       </main>
     );
   }
@@ -264,6 +263,7 @@ export default function PagePatients(): React.JSX.Element {
         onSubmit={(event) => {
           event.preventDefault();
           setRequete(saisie.trim());
+          setRelance(value => value + 1);
         }}
         className="mb-5"
       >
@@ -275,18 +275,21 @@ export default function PagePatients(): React.JSX.Element {
         />
       </form>
 
-      {horsLigne ? <BandeauHorsLigne /> : null}
-
-      {messageErreur !== undefined && !horsLigne ? (
-        <BlocErreur message={messageErreur} />
+      {messageErreur !== undefined ? (
+        <div role="status" className="mb-3 flex items-center gap-3 text-sm text-ink-500">
+          <span>{horsLigne ? "Connexion interrompue." : messageErreur} {page !== undefined ? "Les derniers résultats restent affichés." : "Réessayez la recherche."}</span>
+          <button type="button" className="font-medium underline underline-offset-4" onClick={() => setRelance(value => value + 1)}>Réessayer</button>
+        </div>
       ) : null}
 
       {/* V1.5 — squelette, jamais un mot d'attente (05-UX-CONTRACT.md §2) : il
           occupe la place des lignes de la liste, de sorte que l'arrivée des
-          dossiers ne décale rien. */}
-      {chargement ? <Squelette lignes={6} /> : null}
+          dossiers ne décale rien. UNIQUEMENT au premier chargement : pendant
+          une recherche, l'ancienne liste reste à l'écran (rassis-pendant-
+          revalidation) au lieu de clignoter en squelette à chaque frappe. */}
+      {chargement && page === undefined ? <Squelette lignes={6} /> : null}
 
-      {!chargement && page !== undefined && page.rows.length === 0 ? (
+      {!chargement && messageErreur === undefined && pageRequete === requete && page !== undefined && page.rows.length === 0 ? (
         /* Deux phrases distinctes selon qu'une recherche est en cours ou non —
            « rien ne correspond » et « rien n'est visible » ne disent pas la
            même chose, et les confondre ferait croire à un dossier manquant.
@@ -298,13 +301,15 @@ export default function PagePatients(): React.JSX.Element {
         />
       ) : null}
 
-      {!chargement && page !== undefined && page.rows.length > 0 ? (
+      {page !== undefined && (page.rows.length > 0 || chargement) ? (
         <>
           <p className="font-ui text-label font-medium tabular-nums text-ink-500">
             {page.total} {fr.patients.comptage} · {fr.patients.listeActifsSeulement}
+            {pageRequete !== requete ? " · Résultats précédents — recherche non actualisée" : ""}
+            {chargement ? ` · ${fr.etats.chargement}` : ""}
           </p>
 
-          <div className="mt-4 overflow-hidden rounded-2xl border border-rule bg-card shadow-carte">
+          <div aria-busy={chargement || undefined} className="mt-4 overflow-hidden rounded-2xl border border-rule bg-card shadow-carte">
             <EnTeteAnnuaire />
             <ul className="m-0 list-none p-0">
               {page.rows.map((patient) => (

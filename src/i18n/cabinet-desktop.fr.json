@@ -1,0 +1,23 @@
+{
+  "search": "Recherche du cabinet MindCare…",
+  "startingLocal": "Démarrage des services MindCare…",
+  "localUnavailable": "Le service MindCare ne répond pas. Vos données restent conservées. Réessayez ; si le problème persiste, contactez le support.",
+  "retryLocal": "Réessayer",
+  "reconnecting": "Connexion au cabinet interrompue. Reconnexion…",
+  "missing": "Cabinet MindCare introuvable sur le réseau local. Vérifiez que le PC du médecin est allumé et que MindCare est disponible.",
+  "found": "Cabinet MindCare trouvé. Connectez ce poste avec une invitation du PC médecin.",
+  "prepare": "Préparation du cabinet sur le PC médecin…",
+  "retry": "Connexion interrompue. Vérifiez l’invitation et réessayez.",
+  "hostButton": "Utiliser ce PC comme PC médecin",
+  "hostHelp": "Première installation du cabinet uniquement. Sur un autre poste, attendez que le PC du médecin soit disponible.",
+  "invitationLabel": "Invitation du PC médecin",
+  "pairButton": "Connecter ce poste",
+  "pairHelp": "Sur le PC médecin : MindCare → Connecter un autre poste. Cette étape ne se fait qu'une fois.",
+  "inviteMenu": "Connecter un autre poste",
+  "quit": "Quitter",
+  "invitationTitle": "Invitation MindCare",
+  "invitationBefore": "Sur l'autre poste, saisissez cette invitation dans MindCare :",
+  "invitationAfter": "Elle expire dans cinq minutes.",
+  "close": "Fermer",
+  "invitationFailed": "Impossible de créer l’invitation. Réessayez sur le PC médecin."
+}

@@ -6,7 +6,7 @@ export const documentsEditor = {
 
   save:"Enregistrer", saving:"Enregistrement…", saved:"Enregistré", dirty:"Modifications non enregistrées", edit:"Modifier", preview:"Aperçu",
 
-  issue:"Émettre", print:"Imprimer", duplicate:"Dupliquer", newRevision:"Nouvelle version", archive:"Archiver", restore:"Restaurer", close:"Fermer",
+  issueForPrint:"Émettre pour imprimer", issuing:"Émission…", printAfterIssue:"Après confirmation, le bouton Imprimer sera disponible en haut du document.", issue:"Émettre", print:"Imprimer", duplicate:"Dupliquer", newRevision:"Nouvelle version", archive:"Archiver", restore:"Restaurer", close:"Fermer",
 
   patient:"Patient", kind:"Type de document", documentDate:"Date du document", fields:"Champs du document", history:"Historique", choosePatient:"Choisir un dossier",
 

@@ -1198,6 +1198,29 @@ les citations « ADR-022 » du code désignent §4.2 repris par ADR-025.
 
 ---
 
+### ADR-041 — Stahl 7e : source canonique complète, découpeur `stahl-units-v1`, troisième livre
+**Date.** 2026-10-20. **Statut.** ACTIVE pour le contrat, le schéma et le découpeur ; **l'activation clinique reste interdite** (acte humain signé, non exécuté).
+
+**Objet.** Ingestion canonique complète de *Prescriber's Guide (Stahl's Essential Psychopharmacology)*, 7ᵉ éd., Cambridge University Press, 2021 — `Books/prescribers-guide-stahls-essential-psychopharmacology.pdf`, SHA-256 `cf23ef7b70e7c6e099a5a43d994adb2f34ef06718643932611f5e91eeba180e3`, 2 697 pages physiques, texte natif (zéro page scannée, **zéro OCR**).
+
+**Décision humaine explicite.** Cible arrêtée par le commanditaire le 2026-10-20 : c'est le seul PDF de Stahl présent sur la machine ; le manuel *Essential Psychopharmacology* (parties, chapitres, appendices) **n'existe pas** dans le dépôt et reste hors périmètre. Périmètre d'agents : ingestion canonique jusqu'à la **quarantaine** (source `reviewed`, chunks `inactive`). L'activation n'est pas exécutée par l'agent : elle reste un acte humain signé, comme pour Maudsley (D1-V2).
+
+**Schéma.** **Aucune migration.** Vérifié sur la base vivante : `chunker_version` n'a aucune CHECK ; `knowledge_sources.statut` accepte déjà `reviewed`/`active` ; `knowledge_chunks` porte déjà les colonnes de lignée D3-A (`unit_id`, `parent_texte_hash`, `enfant_index`, `enfants_total`). Le projection reste mono-directionnel JSON → PostgreSQL.
+
+**Découpeur `stahl-units-v1`.** Structure-aware : 1 chunk parent par unité canonique ; scission verbatim sur frontières de phrase (rejointure exacte prouvée : 311/311) ; seuil **1 200 caractères**, calibré par mesure sur le tokenizer épinglé (max 399 tokens, 0 chunk au-delà de la fenêtre de 512). Deux décisions structurantes :
+1. **le chemin de titres vit dans la colonne `texte`** (et pas seulement dans `section`) — le backfill vectorise `c.texte`, et dans un ouvrage de 152 monographies la preuve seule (« 50-200 mg/day ») n'identifie pas le médicament ; modèle suivi : `struct-v2` (DSM-5), pas Taylor ;
+2. **le marqueur de page `[book p.<folio>|src:<page>]` est dans le texte** — convention déjà en production (DSM-5, Taylor) ; la citation page-exacte ne coûte donc **aucune migration** (les portes SQL ont un contrat de retour verrouillé).
+
+**Clef d'index de section.** 20 clés L2 brutes → 12 clés d'index (8 variantes de casse fusionnées vers le modèle de monographie). Le chemin **brut** reste dans `units.jsonl` ; la table de correspondance est explicite (`structure-casing-proposals.json`). Une faute **imprimée** probable (`Specia Populations`, 3 unités) reste **isolée** et soumise à relecture : aucune correction silencieuse.
+
+**Autorité clinique.** 1 100 éléments en file de revue (948 unités + 152 fiches médicaments) + 39 constats nouveaux (25 anomalies de cellule de tableau, 5 agents d'index non résolus, 3 atomes chiffrés illisibles, 3 pages blanches/courtes, 1 référence de page imprimée, 1 faute candidate, 1 lot de renvois) = **1 139 éléments**. Tout reste `needs_review` : les doses ne sont jamais `auto_ok`.
+
+**Constat transversal — mots-outils anglais.** La porte lexicale est un AND (`plainto_tsquery`) ; `MOTS_VIDES` ne contenait que du français et de l'arabe. Un mot-outil anglais résiduel (`is`, `are`, `does`) rend **toute** correspondance impossible sur un livre anglais. Mesure sur 100 questions réelles (Stahl 7e) : MRR 0,133 → 0,378 avec le correctif. **Même constat sur le livre Maudsley déjà actif** : le défaut est préexistant et partagé, il n'est pas introduit par cette ingestion. Correctif : `docs/reports/patches/2026-10-20-stahl-integration-3-mots-outils-anglais.patch` (livré, **non appliqué** — surface d'une autre session).
+
+**Troisième livre.** `BOOKS` (`src/server/alexa/knowledge-query.ts`) est une liste **fermée** : `matchesRequestedBook()` refuse toute source absente de la liste. L'invariant « pas de troisième source » (test `alexa-final-two-books.test.ts`) est **levé** par la directive ; il est réécrit en invariant à **trois** livres, **propriété de sécurité conservée** (source hors liste toujours refusée ; un livre nommé cible uniquement ce livre). Patch : `2026-10-20-stahl-integration-1-books.patch` et `-2-test-trois-livres.patch` (livrés, **non appliqués**).
+
+**Ce qui n'est pas tranché ici.** L'identité de l'approbateur (`…e1` est `is_active = false` ; `…a1` owner est actif et a activé DSM-5 — précédent, pas décision) ; la revue clinique des 1 139 éléments ; la décision sur la faute imprimée ; l'élargissement des listes fermées de découpeurs (`CHUNKERS_ACCEPTES`, `validerIdChunk`, `VERSIONS_CHUNKER` — patch `2026-10-20-stahl-integration-4-allowlists.patch` livré, non appliqué).
+
 ---
 
 ## M08 HUMAN DECISION GATE — Taylor 2021 (ouvert, en attente de décisions humaines)

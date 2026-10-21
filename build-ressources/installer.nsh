@@ -20,10 +20,26 @@
 ; l'utilisatrice à l'écran.
 ; ═══════════════════════════════════════════════════════════════════════════
 
+; L'ancien désinstallateur déplace chaque dépendance dans son dossier temporaire.
+; Un profil Windows long dépasse MAX_PATH pendant cette étape d'une mise à jour.
+; TEMP/TMP sont modifiés uniquement pour ce processus et ses enfants, jamais Windows.
+!macro customInit
+  System::Call 'kernel32::SetEnvironmentVariable(t "TEMP", t "$WINDIR\Temp") i.r0'
+  System::Call 'kernel32::SetEnvironmentVariable(t "TMP", t "$WINDIR\Temp") i.r0'
+!macroend
 !macro customInstall
   DetailPrint "Les donnees du cabinet seront conservees dans $%ProgramData%\MindCare."
   DetailPrint "Ce dossier est independant de l'application : une mise a jour ou une"
   DetailPrint "desinstallation ne le modifie pas."
+  ; Mise à jour d'un hôte déjà installé : renouveler sa tâche avec le même dossier de données.
+  ; Installation neuve : aucune base n'est créée avant le choix PC médecin dans MindCare.
+  ; NSIS est 32 bits; Sysnative lance PowerShell 64 bits pour Program Files et les modules Windows.
+  nsExec::ExecToLog '"$WINDIR\Sysnative\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -NonInteractive -Command "$$ErrorActionPreference=$\'Stop$\'; $$d=Join-Path $$env:ProgramData $\'MindCare\desktop.json$\'; if (Test-Path -LiteralPath $$d) { if ((Get-Content -Raw -LiteralPath $$d | ConvertFrom-Json).mode -eq $\'host$\') { & ([ScriptBlock]::Create([IO.File]::ReadAllText($\'$INSTDIR\resources\cabinet\configurer-cabinet.ps1$\'))) -Mode Host -InstallDir $\'$INSTDIR$\' | Out-Null } }"'
+  Pop $0
+  ${If} $0 != 0
+    MessageBox MB_ICONSTOP "La mise a jour du cabinet a ete interrompue. Les donnees sont conservees. Contactez le support."
+    Abort
+  ${EndIf}
 !macroend
 
 !macro customUnInstall
@@ -48,5 +64,5 @@
   ; doit jamais l'être. `deleteAppDataOnUninstall: false` (electron-builder.yml)
   ; couvre de son côté %APPDATA%\MindCare, où vivent les journaux.
   DetailPrint "Les donnees du cabinet ($1) sont conservees."
-  MessageBox MB_ICONINFORMATION "MindCare OS a ete desinstalle.$\r$\n$\r$\nLes donnees du cabinet ont ete CONSERVEES dans :$\r$\n$1$\r$\n$\r$\nReinstaller MindCare OS les retrouvera telles quelles. Pour les supprimer definitivement, il faut effacer ce dossier a la main."
+  DetailPrint "Desinstallation terminee. Les donnees du cabinet restent dans $1."
 !macroend

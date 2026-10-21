@@ -203,7 +203,7 @@ describe("D3 — refus propre de l'acte clinique (exemption absence-dite)", () =
 
 describe("D4-broaden — renvoi sémantique (acte de recours exigé)", () => {
   const CTX = { etat: "sans-preuve", fournis: [], versions: [], corpus: CORPUS, extraits: "", medical: true };
-  const renvoiDe = (texte) =>
+  const renvoiDe = (texte: string) =>
     evaluerReponse(texte, CTX).checks.find((c) => c.nom === "renvoi")?.ok;
 
   it("wordings réels PRESCR-rep2 et DIAG-rep1 → VERT", () => {

@@ -30,18 +30,18 @@ export function assertLocalAssetAccess(value: AssetAccess, packaged: boolean): v
   }
 }
 const accessScript = "\n$ErrorActionPreference = 'Stop'\ntry {\n  $assetRoot = [IO.Path]::GetFullPath($env:MINDCARE_MINICPM_ASSET_ROOT)\n  $identitySid = [Security.Principal.WindowsIdentity]::GetCurrent().User.Value\n  $programFilesRoot = [Environment]::GetFolderPath('ProgramFiles')\n  $protectedLocation = $assetRoot.StartsWith($programFilesRoot.TrimEnd('\\') + '\\', [StringComparison]::OrdinalIgnoreCase)\n  $paths = [Collections.Generic.List[string]]::new()\n  $paths.Add($assetRoot)\n  foreach ($item in @(Get-ChildItem -LiteralPath $assetRoot -Recurse -Force -ErrorAction Stop)) { $paths.Add($item.FullName) }\n  $ancestor = [IO.DirectoryInfo]::new($assetRoot).Parent\n  while ($null -ne $ancestor) {\n    $item = Get-Item -LiteralPath $ancestor.FullName -Force\n    if (($item.Attributes -band [IO.FileAttributes]::ReparsePoint) -ne 0) { throw 'UnsafeAsset' }\n    if ($protectedLocation) { $paths.Add($ancestor.FullName) }\n    $ancestor = $ancestor.Parent\n  }\n  $entries = @()\n  foreach ($assetPath in $paths) {\n    $item = Get-Item -LiteralPath $assetPath -Force\n    if (($item.Attributes -band [IO.FileAttributes]::ReparsePoint) -ne 0) { throw 'UnsafeAsset' }\n    $acl = Get-Acl -LiteralPath $assetPath\n    $rules = @($acl.GetAccessRules($true, $true, [Security.Principal.SecurityIdentifier]) | Where-Object { ($_.PropagationFlags -band [Security.AccessControl.PropagationFlags]::InheritOnly) -eq 0 } | ForEach-Object {\n      @{ sid=$_.IdentityReference.Value;\n         allow=($_.AccessControlType -eq 'Allow'); rights=[int]$_.FileSystemRights }\n    })\n    $isAncestor = $assetPath -ne $assetRoot -and $assetRoot.StartsWith($assetPath.TrimEnd('\\') + '\\', [StringComparison]::OrdinalIgnoreCase)\n    $entries += @{ owner=$acl.GetOwner([Security.Principal.SecurityIdentifier]).Value; ancestor=$isAncestor; volumeRoot=([IO.Path]::GetPathRoot($assetPath) -eq $assetPath); rules=$rules }\n  }\n  @{ sid=$identitySid; protectedLocation=$protectedLocation; entries=$entries } | ConvertTo-Json -Depth 5 -Compress\n} catch { [Console]::Error.WriteLine('LocalModelAssetAccess'); exit 1 }\n";
-export async function readLocalAssetAccess(root: string): Promise<AssetAccess> {
+export async function readLocalAssetAccess(root: string, signal?: AbortSignal): Promise<AssetAccess> {
   if (process.platform !== "win32") throw new Error("LocalModelAssetAccess");
   try {
     const { stdout } = await promisify(execFile)("C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
       ["-NoProfile", "-NonInteractive", "-Command", accessScript],
-      { windowsHide: true, timeout: 15000, maxBuffer: 256000, encoding: "utf8",
+      { windowsHide: true, timeout: 60000, signal, maxBuffer: 256000, encoding: "utf8",
         env: { NODE_ENV: "production", SystemRoot: "C:\\Windows", WINDIR: "C:\\Windows", MINDCARE_MINICPM_ASSET_ROOT: root } });
     return JSON.parse(stdout) as AssetAccess;
   } catch { throw new Error("LocalModelAssetAccess"); }
 }
 
-export async function verifyLocalAssetAccess(root: string, packaged: boolean): Promise<void> {
-  assertLocalAssetAccess(await readLocalAssetAccess(root), packaged);
+export async function verifyLocalAssetAccess(root: string, packaged: boolean, signal?: AbortSignal): Promise<void> {
+  assertLocalAssetAccess(await readLocalAssetAccess(root, signal), packaged);
 }
 

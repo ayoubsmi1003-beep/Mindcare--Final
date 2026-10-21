@@ -10,6 +10,7 @@ import { semanticRequestSchema } from "@/shared/alexa/semantic-request";
 import { LOCAL_SEMANTIC_PROMPT } from "@/i18n/alexa-semantic";
 import { ALEXA_CONVERSATION_MODEL } from "./model-policy";
 import { localAssetLayout, verifyLocalAssetAccess } from "./local-model-assets";
+import { LocalModelSlot } from "./local-model-slot";
 import { assertLocalContextFits, buildLocalRequest, localModelTimeoutMs, parseLocalAnswer, parseLocalCompletion, type LocalCompletion, type LocalMessage, type LocalTextOptions } from "./local-model-protocol";
 
 export const LOCAL_MODEL_PIN = {
@@ -25,7 +26,7 @@ export function localModelThreadCountFor(available: number): number {
 }
 interface LocalRuntimeState {
   child: ChildProcess | null;
-  busy: boolean;
+  slot: LocalModelSlot;
   idle: ReturnType<typeof setTimeout> | undefined;
   token: string;
   identity: string;
@@ -35,7 +36,7 @@ interface LocalRuntimeState {
 const runtimeHost = globalThis as typeof globalThis & { mindcareAlexaLocalRuntime?: LocalRuntimeState };
 const runtimeIdentity = [LOCAL_MODEL_PIN.sha256, LOCAL_MODEL_PIN.runtimeManifestSha256, process.cwd()].join(":");
 const runtimeState = runtimeHost.mindcareAlexaLocalRuntime ??= {
-  child: null, busy: false, idle: undefined, token: randomBytes(32).toString("hex"), identity: runtimeIdentity, exitHookSet: false,
+  child: null, slot: new LocalModelSlot(), idle: undefined, token: randomBytes(32).toString("hex"), identity: runtimeIdentity, exitHookSet: false,
 };
 /** Qualification is operational evidence, never a privacy or SQL authorization. */
 export async function localSemanticQualified(): Promise<boolean> {
@@ -79,7 +80,7 @@ async function prepare(signal: AbortSignal): Promise<void> {
   if (runtimeState.child && runtimeState.child.exitCode === null && runtimeState.child.signalCode === null) return;
   const layout = localAssetLayout(), model = join(layout.root, LOCAL_MODEL_PIN.model);
   const directory = join(layout.root, "runtime-" + LOCAL_MODEL_PIN.runtime), runtime = join(directory, "llama-server.exe");
-  await verifyLocalAssetAccess(layout.root, layout.packaged);
+  await verifyLocalAssetAccess(layout.root, layout.packaged, signal);
   signal.throwIfAborted();
   if (await hash(model, signal) !== LOCAL_MODEL_PIN.sha256
     || await hash(join(layout.root, "llama-" + LOCAL_MODEL_PIN.runtime + ".zip"), signal) !== LOCAL_MODEL_PIN.archiveSha256)
@@ -113,10 +114,10 @@ async function prepare(signal: AbortSignal): Promise<void> {
 async function inferLocalRaw(messages: readonly LocalMessage[], options: LocalTextOptions = {}): Promise<string> {
   if (runtimeState.identity !== runtimeIdentity) throw new Error("LocalModelIntegrity");
   const body = JSON.stringify(buildLocalRequest(messages, options));
-  if (runtimeState.busy) throw new Error("LocalModelBusy");
   const timeout = localModelTimeoutMs(options);
   const signal = AbortSignal.any([...(options.signal ? [options.signal] : []), AbortSignal.timeout(Math.ceil(timeout))]);
-  signal.throwIfAborted(); runtimeState.busy = true; clearTimeout(runtimeState.idle);
+  const releaseSlot = await runtimeState.slot.acquire(signal);
+  clearTimeout(runtimeState.idle);
   try {
     await prepare(signal);
     const template = await loopback("/apply-template", signal, body);
@@ -136,8 +137,8 @@ async function inferLocalRaw(messages: readonly LocalMessage[], options: LocalTe
     throw new Error("LocalModelUnavailable");
   }
   finally {
-    runtimeState.busy = false;
     if (runtimeState.child) { runtimeState.idle = setTimeout(() => { void releaseLocalModel(); }, 60000); runtimeState.idle.unref(); }
+    releaseSlot();
   }
 }
 export async function inferLocalText(messages: readonly LocalMessage[], options: LocalTextOptions = {}): Promise<string> {

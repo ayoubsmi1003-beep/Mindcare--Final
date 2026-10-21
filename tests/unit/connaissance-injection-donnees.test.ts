@@ -55,6 +55,7 @@ describe("texte piégé = donnée, jamais instruction (n°13)", () => {
         langue: "fr" as const,
         texte: piege,
         score: 0.9,
+        unitId: null, parentTexteHash: null, enfantIndex: null, enfantsTotal: null,
       })),
       [],
     );
@@ -150,6 +151,7 @@ describe("chaîne empoisonnée de bout en bout, hors ligne (H0.6)", () => {
         langue: c.langue,
         texte: c.texte,
         score: 0.9,
+        unitId: null, parentTexteHash: null, enfantIndex: null, enfantsTotal: null,
       })),
       [],
     );
@@ -179,6 +181,7 @@ describe("chaîne empoisonnée de bout en bout, hors ligne (H0.6)", () => {
         langue: c.langue,
         texte: c.texte,
         score: 0.9,
+        unitId: null, parentTexteHash: null, enfantIndex: null, enfantsTotal: null,
       })),
       [],
     );

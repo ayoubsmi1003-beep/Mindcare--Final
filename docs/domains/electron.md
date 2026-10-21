@@ -34,3 +34,28 @@ STALE CONNU (non corrigé ici — hors fichiers autorisés): `CLAUDE.md` §2,
 l'exécutable exige 16.
 FORBIDDEN: secret/DB-URL vers le renderer · `loadURL` avant READY · réparation
 silencieuse d'un schéma incomplet · `supabase db reset` (hook).
+
+MISE À JOUR 2026-10-21 : un cabinet déjà approuvé utilise sa confiance persistée,
+sans nouvelle fenêtre de découverte. Le moniteur ne masque plus la fenêtre
+principale après un échec de santé ; le démarrage et les erreurs restent dans
+cette même fenêtre, avec une nouvelle tentative explicite. Le serveur local
+reste nécessaire et fonctionne en arrière-plan. Sa tâche protégée peut être
+démarrée par un utilisateur normal, sans droit de modifier son action.
+Les arrêts intentionnels attendent la fermeture du backend avant une reprise
+et ne stoppent pas le service PostgreSQL partagé. Les diagnostics de cycle de
+vie sont bornés et limités aux codes techniques.
+
+Le runtime de production ne contient aucun mode `synthetic-eval` ni cabinet de
+démonstration. Les essais avec fixtures doivent préparer une base jetable
+isolée, sans restaurer ni modifier le cabinet. Le modèle conserve ses contrôles
+de droits et d'intégrité ; les résumés et le chat partagent un créneau
+d'inférence avec annulation et délai borné. Les compteurs simples reconnus
+passent par les portes SQL auditées existantes. La disponibilité de la synthèse
+exige encore un modèle capable de produire une réponse dont les sources sont
+validées.
+
+Les sorties locales de build et d'évaluation ne sont pas une source de vérité.
+Un test de stabilité sur ce PC ne vaut pas qualification sur Windows vierge ou
+sur deux PC physiques. L'ancien cabinet installé conserve un schéma de 149
+migrations : ne pas y activer le chemin Alexa natif avant la mise à niveau
+contrôlée des migrations 159–170 et sa validation.

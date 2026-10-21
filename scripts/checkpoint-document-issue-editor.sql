@@ -33,6 +33,8 @@ UPDATE app.profiles SET order_number='TEST-01' WHERE id='d1000000-0000-4000-8000
 SET LOCAL ROLE authenticated;
 SELECT app.issue_editable_document_draft(current_setting('task.issue_draft')::uuid,1,:'preview'::jsonb->>'contentHash',:'preview'::jsonb->>'identityVersion',:'manifest') AS issued \gset
 SELECT pg_temp.check_doc(:'issued'::jsonb->>'documentId' IS NOT NULL,'issue persisted');
+SELECT pg_temp.check_doc(position('N° d’Ordre : '||(:'issued'::jsonb->>'docNumber') IN (:'issued'::jsonb->>'html'))>0,'header carries the issued document number');
+SELECT pg_temp.check_doc(position('TEST-01' IN (:'issued'::jsonb->>'html'))=0,'professional test number is not a document serial');
 SELECT pg_temp.check_doc(app.issue_editable_document_draft(current_setting('task.issue_draft')::uuid,1,:'preview'::jsonb->>'contentHash',:'preview'::jsonb->>'identityVersion',:'manifest')->>'documentId'=:'issued'::jsonb->>'documentId','retry exact same piece');
 SELECT pg_temp.check_doc(app.verify_document_hash((:'issued'::jsonb->>'documentId')::uuid),'issued HTML hash');
 SELECT app.create_editable_document_draft('d2000000-0000-4000-8000-000000000002','justification','{"date_consultation":"07/10/2026"}') AS missing \gset
@@ -41,5 +43,13 @@ RESET ROLE;
 SELECT pg_temp.check_doc((SELECT count(*)=1 FROM app.documents WHERE cabinet_id='d0000000-0000-4000-8000-000000000001'),'no duplicate piece');
 SELECT pg_temp.check_doc((SELECT current_value=1 FROM app.counters WHERE cabinet_id='d0000000-0000-4000-8000-000000000001' AND scope='document'),'no extra number');
 DO $$ BEGIN BEGIN UPDATE app.documents SET content_json='{}' WHERE source_draft_id=current_setting('task.issue_draft')::uuid; RAISE EXCEPTION 'IssuedMutationAccepted';EXCEPTION WHEN raise_exception THEN IF SQLERRM='IssuedMutationAccepted' THEN RAISE;END IF;END;END $$;
+SET LOCAL ROLE authenticated;
+SELECT app.create_editable_document_draft('d2000000-0000-4000-8000-000000000001','justification','{"date_consultation":"07/10/2026"}') AS second_draft \gset
+SELECT app.preview_editable_document_draft((:'second_draft'::jsonb->>'id')::uuid,1) AS second_preview \gset
+SELECT jsonb_build_object('contentHash',:'second_preview'::jsonb->>'contentHash','rendererVersion','v1','pages','[[{"path":[0],"from":0,"to":30}]]'::jsonb) AS second_manifest \gset
+SELECT app.issue_editable_document_draft((:'second_draft'::jsonb->>'id')::uuid,1,:'second_preview'::jsonb->>'contentHash',:'second_preview'::jsonb->>'identityVersion',:'second_manifest') AS second_issued \gset
+SELECT pg_temp.check_doc(:'second_issued'::jsonb->>'docNumber'<>:'issued'::jsonb->>'docNumber','each document has a unique serial');
+SELECT pg_temp.check_doc(position('N° d’Ordre : '||(:'second_issued'::jsonb->>'docNumber') IN (:'second_issued'::jsonb->>'html'))>0,'second document carries its own serial');
+SELECT pg_temp.check_doc(app.verify_document_hash((:'second_issued'::jsonb->>'documentId')::uuid),'second numbered HTML hash');
 ROLLBACK;
 \echo DOCUMENT ISSUE CHECKPOINT PASS

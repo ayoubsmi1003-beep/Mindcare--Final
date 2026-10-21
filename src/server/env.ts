@@ -54,6 +54,8 @@ const Schema = z.object({
   VOICE_PROVIDER: z.string().optional(),
   GEMINI_API_KEY: z.string().optional(),
   GOOGLE_API_KEY: z.string().optional(),
+  GEMINI_FREE_QUALIFICATION_FILE: z.string().optional(),
+  GROQ_FREE_QUALIFICATION_FILE: z.string().optional(),
   ALEXA_LIVE_DEBUG: z.enum(["true", "false"]).default("false"),
 
   // ── Interrupteurs Jarvis ───────────────────────────────────────────────

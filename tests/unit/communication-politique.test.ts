@@ -60,7 +60,7 @@ describe("décision d'envoi", () => {
   it("met en file quand le réseau manque, jamais en succès", () => {
     const d = deciderEnvoi({ consentement: true, signalPatient: false, connecte: false, horsLigne: true });
     expect(d.decision).toBe("file");
-    expect(d.etatCible).toBe("queued");
+    expect(d.decision === "file" && d.etatCible).toBe("queued");
   });
 
   it("autorise le cas nominal", () => {

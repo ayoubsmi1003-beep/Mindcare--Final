@@ -43,6 +43,8 @@
  * Un build vert n'est pas la preuve que les fontes sont là.
  */
 
+import Script from "next/script";
+import { extensionMarkerScript } from "@/shared/hydration/extension-marker";
 import type { ReactNode } from "react";
 
 import {
@@ -165,6 +167,7 @@ export default function RootLayout({
           qui défile, pas la page — la disposition d'application classique, où
           le mobilier reste fixe et où seul ce qu'on lit bouge. */}
       <body className="flex h-screen flex-col overflow-hidden">
+        {process.env.NODE_ENV === "development" ? <Script id="extension-hydration-compatibility" strategy="beforeInteractive" dangerouslySetInnerHTML={{__html:extensionMarkerScript}} /> : null}
         {/* ADR-016 — posé À LA RACINE, donc impossible à oublier sur un écran.
             Placé dans un layout par page, il manquerait exactement là où on ne
             l'a pas prévu, c'est-à-dire là où on en aurait besoin.

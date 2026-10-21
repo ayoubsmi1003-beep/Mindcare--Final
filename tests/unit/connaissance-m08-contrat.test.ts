@@ -76,7 +76,7 @@ describe("M08-A — le contrat a exactement trois états nommés", () => {
   });
 
   it("sans-preuve : bloc nommé, jamais un vide interprété comme succès", async () => {
-    const client: RpcPreuves = { rpc: async <T,>() => ({ data: [] as unknown as T, error: null }) };
+    const client: RpcPreuves = { rpc: async <T,>() => ({ data: [] as T, error: null }) };
     const { preuves, etat } = await recupererPreuves(client, "question sans réponse");
     expect(etat).toBe("sans-preuve");
     const bloc = construireBlocPreuves(preuves, etat);
@@ -106,7 +106,7 @@ describe("M08-A — le contrat a exactement trois états nommés", () => {
             source_revue_a_jour: true,
             source_remplacee_par: null,
           },
-        ] as unknown as T,
+        ] as T,
         error: null,
       }),
     };
@@ -245,7 +245,7 @@ describe("M08-G — la réponse ne peut citer que ce qui a été rendu", () => {
 
 describe("M08-H/I — non-réponse et multi-source", () => {
   it("question hors corpus → sans-preuve, le bloc interdit de prétendre le contraire", async () => {
-    const client: RpcPreuves = { rpc: async <T,>() => ({ data: [] as unknown as T, error: null }) };
+    const client: RpcPreuves = { rpc: async <T,>() => ({ data: [] as T, error: null }) };
     const { etat } = await recupererPreuves(client, "que dit le DSM de la licorne rose ?");
     expect(etat).toBe("sans-preuve");
     expect(construireBlocPreuves([], etat)).toContain("AUCUNE_PREUVE");

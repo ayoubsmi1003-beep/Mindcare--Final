@@ -7,8 +7,9 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { appairerCabinet, choisirCabinet, decouvrirCabinets, type CabinetDecouvert, type ConfianceCabinet } from './decouverte-cabinet.js';
 import { configurerOrigineCabinet } from './config.js';
-import { attendreCabinet, creerSessionSondeCabinet, creerStabiliteSondeCabinet, essayerConnexionCabinetConnu, validerOrigineCabinet } from './connexion-cabinet.js';
+import { attendreCabinet, creerSessionSondeCabinet, creerStabiliteSondeCabinet, validerOrigineCabinet, ErreurConnexionCabinet } from './connexion-cabinet.js';
 import { verifierCertificatCabinet } from './confiance-cabinet.js';
+import { journalDesktop } from './journal-desktop.js';
 
 const ICI = path.dirname(fileURLToPath(import.meta.url));
 const RACINE = path.join(process.env['ProgramData'] ?? 'C:\\ProgramData', 'MindCare');
@@ -128,22 +129,22 @@ export async function connecterBureauCabinet(): Promise<{mode:'client'|'host'; o
   mkdirSync(app.getPath('userData'), {recursive:true});
   confiance = lireConfiance();
   Menu.setApplicationMenu(Menu.buildFromTemplate([{label:'MindCare', submenu:[{label:messages.inviteMenu!,click:()=>{void inviterPoste();}}, {role:'quit',label:messages.quit!}]}]));
-  const connexionDirecte = await essayerConnexionCabinetConnu(confiance, async origin => {
-    if (!confiance) throw new Error('Connexion du cabinet à vérifier.');
+  // Trusted startup belongs to the main window; discovery is enrollment only.
+  if (confiance) {
     appliquerConfiance(confiance);
-    await attendreCabinet(origin, (url, options) => obtenirSessionSonde().fetch(url, options), 4500);
-  });
-  if (connexionDirecte && confiance) return {mode:posteHote()?'host':'client',origin:confiance.origin};
+    return {mode:posteHote()?'host':'client',origin:confiance.origin};
+  }
   await afficherEcran();
   let recherches = 0;
   while (!arret) {
     if (actionEnCours) { await new Promise(r=>setTimeout(r,500)); continue; }
-    if (confiance) {
-      appliquerConfiance(confiance);
+    const approuvee = lireConfiance();
+    if (approuvee) {
+      appliquerConfiance(approuvee);
       try {
-        await attendreCabinet(confiance.origin,(url,options)=>obtenirSessionSonde().fetch(url,options),4500);
+        await attendreCabinet(approuvee.origin,(url,options)=>obtenirSessionSonde().fetch(url,options),4500);
         ecran?.hide();
-        return {mode:posteHote()?'host':'client',origin:confiance.origin};
+        return {mode:posteHote()?'host':'client',origin:approuvee.origin};
       } catch { /* Réessaie l’origine approuvée sans exiger UDP ni créer une autre base. */ }
       statut(messages.reconnecting!);
     } else {
@@ -158,19 +159,36 @@ export async function connecterBureauCabinet(): Promise<{mode:'client'|'host'; o
 export function surveillerCabinet(fenetre: BrowserWindow): void {
   let busy = false;
   const stabilite = creerStabiliteSondeCabinet();
+  const titre = fenetre.getTitle();
   const timer = setInterval(async () => {
     if (busy || arret || fenetre.isDestroyed() || !confiance) return;
     busy = true;
     try {
       await attendreCabinet(confiance.origin,(url,options)=>obtenirSessionSonde().fetch(url,options),3000);
-      if (stabilite.succes()) { ecran?.hide(); fenetre.show(); }
-    } catch {
+      journalDesktop(app.getPath('userData'), 'HEALTH_OK');
+      if (stabilite.succes()) fenetre.setTitle(titre);
+    } catch (error) {
+      journalDesktop(app.getPath('userData'), error instanceof ErreurConnexionCabinet ? error.code : 'HEALTH_FAILED');
       if (stabilite.echec()) {
-        fenetre.hide(); statut(messages.reconnecting!);
-        await afficherEcran();
-        // La récupération réutilise uniquement l’origine et le certificat déjà approuvés.
+        fenetre.setTitle(messages.reconnecting!);
       }
     } finally { busy=false; }
   },5000);
   timer.unref(); fenetre.once('closed',()=>clearInterval(timer));
+}
+
+export async function attendreConnexionCabinet(signal?: AbortSignal): Promise<void> {
+  if (!confiance) throw new Error('CONFIGURATION_CABINET');
+  if (posteHote()) {
+    try {
+      await attendreCabinet(confiance.origin, (url, options) => obtenirSessionSonde().fetch(url, options), 1500, signal);
+      return;
+    } catch { signal?.throwIfAborted(); }
+    // Start the existing, protected host task only; never provision another database.
+    await new Promise<void>(resolve => execFile(path.join(process.env['SystemRoot'] ?? 'C:\\Windows', 'System32', 'schtasks.exe'), ['/Run', '/TN', 'MindCare-Clinic-Server'], { windowsHide: true, timeout: 5000 }, error => {
+      journalDesktop(app.getPath('userData'), error ? 'HOST_TASK_START_FAILED' : 'HOST_TASK_START_REQUESTED');
+      resolve();
+    }));
+  }
+  await attendreCabinet(confiance.origin, (url, options) => obtenirSessionSonde().fetch(url, options), 120000, signal);
 }

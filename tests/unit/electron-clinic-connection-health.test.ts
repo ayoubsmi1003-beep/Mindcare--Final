@@ -26,7 +26,7 @@ describe('connexion d’un poste déjà approuvé', () => {
 
 describe('sonde réseau du cabinet', () => {
   it('utilise une session Electron non persistante isolée du renderer', async () => {
-    const fetch = vi.fn(async () => ({ ok: true, text: async () => '{"ok":true}' }));
+    const fetch = vi.fn(async (_url: string, _init?: RequestInit) => ({ ok: true, text: async () => '{"ok":true}' }));
     const fromPartition = vi.fn(() => ({ fetch }));
     const sessionSonde = creerSessionSondeCabinet(fromPartition);
     const signal = AbortSignal.timeout(500);

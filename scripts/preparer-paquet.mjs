@@ -130,7 +130,17 @@ mkdirSync(CIBLE, { recursive: true });
 
 // ── 3. Le serveur autonome (server.js, .next/server, node_modules tracés) ────
 etape("copie de la sortie autonome…");
-cpSync(AUTONOME, CIBLE, { recursive: true });
+cpSync(AUTONOME, CIBLE, {
+  recursive: true,
+  dereference: true,
+  // Exclude build caches, credentials and separately bundled voice before copying.
+  filter: source => {
+    const relatif = path.relative(AUTONOME, source);
+    const nom = path.basename(source);
+    return ![".cache", "scripts", path.join("resources", "voix")].some(exclu => relatif === exclu || relatif.startsWith(exclu + path.sep))
+      && nom !== ".env" && !nom.startsWith(".env.");
+  },
+});
 
 // Le traçage peut recopier tout scripts/ et les dépendances voix. Les scripts
 // seront recréés depuis SCRIPTS_LIVRES ; Electron fournit déjà la voix dans

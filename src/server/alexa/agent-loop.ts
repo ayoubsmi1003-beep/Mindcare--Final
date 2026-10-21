@@ -109,8 +109,9 @@ function directPatientMetricReadCall(contract:NonNullable<ReturnType<typeof fren
  const parts=countContractParts(contract),populations=new Set(parts.map(part=>part.population??'active'));
  const metricForPart=(part:RequestPart)=>Object.entries(patientMetricConditions).find(([,conditions])=>JSON.stringify(conditions.map(conditionKey).sort())===JSON.stringify(part.conditions.map(conditionKey).sort()))?.[0];
  const metrics=parts.map(metricForPart);
- if(parts.length<2||parts.length>7||populations.size!==1||![...populations].every(population=>population==='active')||metrics.some(metric=>!metric)||new Set(metrics).size!==parts.length||parts.some(part=>part.tools?.length!==1||part.tools[0]!=='query_patients'||part.dependsOn.length||part.literalQuery||part.unsupportedConditions?.length))return null;
- const call:AgentCall={id:`direct-${clientTurnId}-metrics`,name:'query_patients',args:{partIds:parts.map(part=>part.id),mode:'metrics',metrics,population:'active'}};
+ if(parts.length===1&&(parts[0]!.conditions.length!==1||constrainCountDeclaration(parts,contract).some(part=>part.unsupportedConditions?.length)))return null;
+ if(parts.length<1||parts.length>7||populations.size!==1||![...populations].every(population=>population==='active')||metrics.some(metric=>!metric)||new Set(metrics).size!==parts.length||parts.some(part=>part.tools?.length!==1||part.tools[0]!=='query_patients'||part.dependsOn.length||part.literalQuery||part.unsupportedConditions?.length))return null;
+ const call:AgentCall={id:`direct-${clientTurnId}-metrics`,name:'query_patients',args:parts.length===1?{partIds:[parts[0]!.id],mode:'count',filters:parts[0]!.conditions,population:'active'}:{partIds:parts.map(part=>part.id),mode:'metrics',metrics,population:'active'}};
  return {part:parts[0]!,parts,call};
 }
 function directPatientCompoundReadCall(contract:NonNullable<ReturnType<typeof frenchPatientCompoundContract>>,clientTurnId:string):{part:RequestPart;parts:RequestPart[];call:AgentCall}|null {
@@ -350,18 +351,19 @@ export async function runAgentLoop(input: TurnInput, deps: AgentLoopDependencies
       parts=[{id:"continuation",goal:input.text,tools:["query_patients"],conditions,dependsOn:[],status:"pending",resultRefs:[],...(query.population?{population:query.population}:{}),...(query.query?{literalQuery:query.query}:{})}];declared=true;resumingPatientQuery=true;
     }
   }
-  const directMetricRead=!declared&&!prior&&countContract&&!compoundContract?directPatientMetricReadCall(countContract,input.clientTurnId):null;
-  const directCompoundRead=!declared&&!prior&&compoundContract?directPatientCompoundReadCall(compoundContract,input.clientTurnId):null;
-  const directMixedMetricAgenda=!declared&&!prior&&!compoundContract?directMixedMetricAgendaCalls(input.text,input.clientTurnId,input.appContext.patientId,asOf):null;
-  const directPublicAnswer=!declared&&!prior&&!requestedOutputs&&!countContract&&!compoundContract&&completePublic?directPublicAnswerCall(input.text,input.clientTurnId):null;
-  const directNoteRead=!declared&&!prior&&!requestedOutputs&&!countContract&&!compoundContract?directPatientNoteReadCall(input.text,input.clientTurnId):null;
-  const directSummaryCall=!declared&&!prior&&!requestedOutputs&&!countContract&&!compoundContract?directSinglePatientReadCall(input.text,input.clientTurnId,input.appContext.patientId):null;
-  const directReadCalls=!declared&&!prior?directRecurringThemeCountCalls(requestedOutputs,input.text,input.clientTurnId):null;
-  const directOfficeReadCall=!declared&&!prior?directNotificationsReadCall(input.text,input.clientTurnId,requestedOutputs):null;
-  const directAgendaCall=!declared&&!prior&&!requestedOutputs&&!countContract&&!compoundContract?directAgendaReadCall(input.text,input.clientTurnId,input.appContext.patientId,asOf):null;
-  const directNavigationCall=!declared&&!prior&&!requestedOutputs?directGlobalNavigationCall(input.text,input.clientTurnId):null;
-  const directWorkflow=!declared&&!prior&&!countContract&&!compoundContract?directAgendaAdministrativeReview(input.text,input.clientTurnId,asOf):null;
-  const directNamedReads=!declared&&!prior&&!countContract&&!compoundContract?directNamedApplicationReads(input.text,input.clientTurnId,input.appContext.patientId,asOf):null;
+  const freshRead=!prior||prior.parts.every(part=>['answered','unsupported','failed','budget_limited','cancelled'].includes(part.status));
+  const directMetricRead=!declared&&freshRead&&countContract&&!compoundContract?directPatientMetricReadCall(countContract,input.clientTurnId):null;
+  const directCompoundRead=!declared&&freshRead&&compoundContract?directPatientCompoundReadCall(compoundContract,input.clientTurnId):null;
+  const directMixedMetricAgenda=!declared&&freshRead&&!compoundContract?directMixedMetricAgendaCalls(input.text,input.clientTurnId,input.appContext.patientId,asOf):null;
+  const directPublicAnswer=!declared&&freshRead&&!requestedOutputs&&!countContract&&!compoundContract&&completePublic?directPublicAnswerCall(input.text,input.clientTurnId):null;
+  const directNoteRead=!declared&&freshRead&&!requestedOutputs&&!countContract&&!compoundContract?directPatientNoteReadCall(input.text,input.clientTurnId):null;
+  const directSummaryCall=!declared&&freshRead&&!requestedOutputs&&!countContract&&!compoundContract?directSinglePatientReadCall(input.text,input.clientTurnId,input.appContext.patientId):null;
+  const directReadCalls=!declared&&freshRead?directRecurringThemeCountCalls(requestedOutputs,input.text,input.clientTurnId):null;
+  const directOfficeReadCall=!declared&&freshRead?directNotificationsReadCall(input.text,input.clientTurnId,requestedOutputs):null;
+  const directAgendaCall=!declared&&freshRead&&!requestedOutputs&&!countContract&&!compoundContract?directAgendaReadCall(input.text,input.clientTurnId,input.appContext.patientId,asOf):null;
+  const directNavigationCall=!declared&&freshRead&&!requestedOutputs?directGlobalNavigationCall(input.text,input.clientTurnId):null;
+  const directWorkflow=!declared&&freshRead&&!countContract&&!compoundContract?directAgendaAdministrativeReview(input.text,input.clientTurnId,asOf):null;
+  const directNamedReads=!declared&&freshRead&&!countContract&&!compoundContract?directNamedApplicationReads(input.text,input.clientTurnId,input.appContext.patientId,asOf):null;
   const directCalls:{part:RequestPart;call:AgentCall;parts?:RequestPart[];latestNoteReference?:boolean }[]|null=directWorkflow?null:directNamedReads?.calls??directMixedMetricAgenda??(directMetricRead?[directMetricRead]:directCompoundRead?[directCompoundRead]:directPublicAnswer?[directPublicAnswer]:directReadCalls??(directNoteRead?[directNoteRead]:directSummaryCall?[directSummaryCall]:directOfficeReadCall?[directOfficeReadCall]:directAgendaCall?[directAgendaCall]:directNavigationCall?[directNavigationCall]:null));
   if(directWorkflow){parts=directWorkflow.parts;declared=true;}else if(directNamedReads){parts=directNamedReads.parts;declared=true;}else if(directCalls){parts=directCalls.flatMap(entry=>entry.parts??[entry.part]);declared=true;}
   const infer = deps.infer ?? inferLocalCompletion;

@@ -32,7 +32,7 @@ export const PARAMETRES_RECETTE = [
  * Liste FERMÉE — tout autre découpeur = dérive = saut journalisé, jamais
  * ré-embedding aveugle. `struct-v2` (quarantaine DSM) reste EXCLU.
  */
-export const CHUNKERS_ACCEPTES = ["struct-v1", "struct-v1.1", "taylor-units-v1-proposed", "taylor-units-v2-candidate"];
+export const CHUNKERS_ACCEPTES = ["struct-v1", "struct-v1.1", "taylor-units-v1-proposed", "taylor-units-v2-candidate", "stahl-units-v1"];
 
 /**
  * Exception G1-A (décision humaine 2026-09-27, DSM uniquement) : la source
@@ -142,6 +142,7 @@ ORDER BY id ASC LIMIT $1`;
  * lot — échec fermé AVANT tout calcul (jamais d'embedding actif, même
  * jetable). Complète le filtre de sélection (défense en profondeur).
  */
+/** @param {string[]} ids @param {string | null} [exceptionSourceId] */
 export function sqlGardeLotActif(ids, exceptionSourceId = null) {
   for (const id of ids) validerIdChunk(id);
   // Exception G1-A : l'uuid DSM épinglé (et lui seul) est exempté du compte.
@@ -342,7 +343,7 @@ FROM app.knowledge_sources s WHERE s.id = $1::uuid`;
  * corpus Taylor namespacé anti-collision — D4 ACCEPT 2026-09-26, même
  * pattern que `dsm5-`, périmètre Taylor uniquement) — tout autre = refus. */
 export function validerIdChunk(id) {
-  if (typeof id !== "string" || !/^(?:[0-9a-f]{8}|dsm5-[0-9a-f]{8}|taylor-[0-9a-f]{8})$/.test(id)) {
+  if (typeof id !== "string" || !/^(?:[0-9a-f]{8}|dsm5-[0-9a-f]{8}|taylor-[0-9a-f]{8}|stahl-[0-9a-f]{12})$/.test(id)) {
     throw new Error(`Id de chunk inattendu (refus d'interpolation) : ${String(id).slice(0, 40)}`);
   }
   return id;

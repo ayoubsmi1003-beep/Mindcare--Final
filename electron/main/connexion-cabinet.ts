@@ -6,6 +6,11 @@ export type ConnexionCabinet = { mode: "standalone" | "auto" } | { mode: "client
 
 export type SondeOptions = { redirect: "error"; signal: AbortSignal; headers: Record<string, string>; credentials: "omit" };
 export type SondeFetch = (input: string, init: SondeOptions) => Promise<{ ok: boolean; text: () => Promise<string> }>;
+export class ErreurConnexionCabinet extends Error {
+  constructor(readonly code: 'TIMEOUT' | 'CONNECTION_REFUSED' | 'TLS_ERROR' | 'NETWORK_ERROR' | 'HTTP_ERROR' | 'INVALID_HEALTH_BODY') {
+    super('CABINET_INJOIGNABLE');
+  }
+}
 
 /** Une connexion déjà approuvée est testée sur son origine épinglée sans attendre UDP. */
 export async function essayerConnexionCabinetConnu(
@@ -106,14 +111,24 @@ export async function chargerAvecReconnexion(charger: () => Promise<unknown>, re
 }
 
 /** Sonde HTTPS bornée, avec la validation TLS normale de l'appelant. */
-export async function attendreCabinet(origin: string, effectuer: SondeFetch, delaiMs = 45_000): Promise<void> {
+export async function attendreCabinet(origin: string, effectuer: SondeFetch, delaiMs = 45_000, signal?: AbortSignal): Promise<void> {
   const fin = Date.now() + delaiMs;
+  let cause: ErreurConnexionCabinet['code'] = 'TIMEOUT';
   while (Date.now() < fin) {
+    signal?.throwIfAborted();
     try {
-      const reponse = await effectuer(`${origin}/api/health`, { redirect: "error", credentials: "omit", headers: { "Cache-Control": "no-store" }, signal: AbortSignal.timeout(Math.min(4000, Math.max(1, fin - Date.now()))) });
+      const timeout = AbortSignal.timeout(Math.min(4000, Math.max(1, fin - Date.now())));
+      const reponse = await effectuer(`${origin}/api/health`, { redirect: "error", credentials: "omit", headers: { "Cache-Control": "no-store" }, signal: signal ? AbortSignal.any([signal, timeout]) : timeout });
       if (reponse.ok && (await reponse.text()) === '{"ok":true}') return;
-    } catch { /* réseau ou certificat indisponible : aucune désactivation TLS */ }
+      cause = reponse.ok ? 'INVALID_HEALTH_BODY' : 'HTTP_ERROR';
+    } catch (error) {
+      const message = error instanceof Error ? error.message : '';
+      cause = /ERR_CONNECTION_REFUSED|ECONNREFUSED/.test(message) ? 'CONNECTION_REFUSED'
+        : /ERR_CERT|CERT_|TLS/.test(message) ? 'TLS_ERROR'
+        : error instanceof Error && ['TimeoutError', 'AbortError'].includes(error.name) ? 'TIMEOUT' : 'NETWORK_ERROR';
+    }
     await pause(Math.min(500, Math.max(0, fin - Date.now())));
   }
-  throw new Error("CABINET_INJOIGNABLE: vérifier que le poste Médecin est allumé, le Wi-Fi du cabinet et le certificat installé.");
+  signal?.throwIfAborted();
+  throw new ErreurConnexionCabinet(cause);
 }

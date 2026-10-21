@@ -364,10 +364,17 @@ const config = [
     // dépôt sur du code que personne n'y a écrit.
     ignores: [
       ".next/**",
+      ".next-live-check/**",
+      ".cache/**",
       "node_modules/**",
       "supabase/functions/**",
       ".claude/**",
       ".eval-out/**",
+      ".worktrees/**",
+      "doctor_old_data/**",
+      "outputs/**",
+      "reports/**",
+      "knowledge/eval/**",
       "resources/**",
       "serveur/**",
       "dist/**",
@@ -665,6 +672,18 @@ const config = [
       "local/no-fetch-hors-passerelle": "off",
       "no-restricted-syntax": "off",
     },
+  },
+  {
+    // Node CLI diagnostics may use createRequire; Supabase access remains restricted.
+    files: ["scripts/**/*.mjs"],
+    rules: { "no-restricted-imports": ["error", {
+      paths: [{ name: "@supabase/supabase-js", message: supabaseImportMessage }, { name: "@supabase/ssr", message: supabaseImportMessage }],
+      patterns: [{ group: ["@supabase/supabase-js/*", "@supabase/ssr/*"], message: supabaseImportMessage }],
+    }] },
+  },
+  {
+    files: ["tests/integration/legacy-migration.test.ts"],
+    rules: { "@typescript-eslint/no-restricted-imports": "off" },
   },
   // L'override qui vivait ici pour `supabase/functions/**/*.ts` (node:module
   // et l'import Supabase autorisés) est devenu mort : le dossier entier est

@@ -62,7 +62,10 @@ export function parseLocalCompletion(raw: string): LocalCompletion {
   try {
     const decoded:unknown=JSON.parse(raw);
     const finish=z.object({choices:z.array(z.object({finish_reason:z.string()})).length(1)}).safeParse(decoded);
-    if(finish.success&&finish.data.choices[0]!.finish_reason==="length")throw new Error("LocalModelTruncated");
+    if(finish.success&&finish.data.choices[0]!.finish_reason==="length"){
+      if(process.env.ALEXA_DEBUG_NARRATIVE==="1"){try{const c=(decoded as {choices?:{message?:{content?:string}}[]}).choices?.[0]?.message?.content;console.warn("[alexa-raw]",JSON.stringify(c??null).slice(0,1500));}catch{/* debug only */}}
+      throw new Error("LocalModelTruncated");
+    }
     const value = z.object({ choices: z.array(z.object({ finish_reason: z.enum(["stop", "tool_calls"]),
       message: z.object({ role: z.literal("assistant"), content: z.string().max(12000).nullable().optional(),
         tool_calls: z.array(nativeCall).max(6).optional(), reasoning_content: z.literal("").optional() }).passthrough() })).length(1),

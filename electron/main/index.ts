@@ -21,15 +21,18 @@
 
 import { app, BrowserWindow, ipcMain, net, session, shell } from "electron";
 import { spawn } from "node:child_process";
+import { randomBytes } from "node:crypto";
+import { hostname } from 'node:os';
 import type { ChildProcess } from "node:child_process";
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 import { configurerOrigineCabinet, urlDepart } from "./config.js";
-import { attendreCabinet, chargerConnexionCabinet, chargerAvecReconnexion, type ConnexionCabinet } from "./connexion-cabinet.js";
-import { connecterBureauCabinet, surveillerCabinet } from "./bureau-cabinet.js";
+import { attendreCabinet, chargerConnexionCabinet, type ConnexionCabinet } from "./connexion-cabinet.js";
+import { attendreConnexionCabinet, connecterBureauCabinet, surveillerCabinet } from "./bureau-cabinet.js";
 import { dossierDonnees, fichierEnvironnement, modeCourant } from "./chemins.js";
+import { journalDesktop } from "./journal-desktop.js";
 import {
   messageErreurFR,
   orchestrerDemarrage,
@@ -38,6 +41,15 @@ import {
 } from "./orchestrateur.js";
 
 const REPERTOIRE_ICI = path.dirname(fileURLToPath(import.meta.url));
+// Keep the pinned TLS hostname/SNI, but resolve this doctor's own service over loopback offline.
+if (app.isPackaged) {
+  try {
+    const config = chargerConnexionCabinet(path.join(process.env['ProgramData'] ?? 'C:\\ProgramData', 'MindCare', 'desktop.json'), 'clinic-host');
+    if ('origin' in config && new URL(config.origin).hostname.toLowerCase() === hostname().toLowerCase()) {
+      app.commandLine.appendSwitch('host-resolver-rules', `MAP ${hostname()} 127.0.0.1`);
+    }
+  } catch { /* First enrollment and remote workstations use their normal trusted path. */ }
+}
 
 let fenetrePrincipale: BrowserWindow | null = null;
 let fenetreErreur: BrowserWindow | null = null;
@@ -50,12 +62,22 @@ let contexteCourant: ContexteDemarrage | null = null;
 let applicationPrete = false;
 let connexionCabinet: ConnexionCabinet = { mode: "standalone" };
 let deploymentAutomatique = false;
+let fermetureEnCours = false;
+let demarrageEnCours = false;
+let erreurLocale = false;
+const annulationDemarrage = new AbortController();
+let travailDemarrage: Promise<void> | undefined;
+const diagnostic = (code: string, value?: number | boolean) => journalDesktop(app.getPath('userData'), code, value);
+diagnostic('STARTUP', app.isPackaged);
+app.on('child-process-gone', (_event, details) => diagnostic('CHILD_PROCESS_GONE', details.exitCode));
+process.on('uncaughtExceptionMonitor', (_error, origin) => diagnostic(origin === 'unhandledRejection' ? 'UNHANDLED_REJECTION' : 'UNCAUGHT_EXCEPTION'));
 
 const verrouObtenu = app.requestSingleInstanceLock();
 if (!verrouObtenu) {
   app.quit();
 } else {
   app.on("second-instance", () => {
+    diagnostic('SECOND_INSTANCE');
     const cible = fenetreErreur ?? fenetrePrincipale;
     if (cible) {
       if (cible.isMinimized()) cible.restore();
@@ -75,8 +97,17 @@ if (!verrouObtenu) {
     if (BrowserWindow.getAllWindows().length === 0) void lancerOrchestrationEtFenetre();
   });
 
-  app.on("before-quit", () => {
-    if (processusBackend) tuerBackend(processusBackend);
+  app.on("before-quit", (event) => {
+    if (fermetureEnCours) return;
+    fermetureEnCours = true;
+    diagnostic('BEFORE_QUIT');
+    annulationDemarrage.abort();
+    if (!processusBackend && !travailDemarrage) return;
+    event.preventDefault();
+    void (async () => {
+      await travailDemarrage?.catch(() => {});
+      await tuerBackend(processusBackend);
+    })().catch(() => console.error('[mindcare] BACKEND_STOP_FAILED')).finally(() => { processusBackend = undefined; app.quit(); });
   });
 }
 
@@ -126,6 +157,12 @@ function creerFenetrePrincipaleCachee(): BrowserWindow {
       allowRunningInsecureContent: false,
     },
   });
+  diagnostic('WINDOW_CREATED', fenetre.id);
+  fenetre.on('show', () => diagnostic('WINDOW_SHOW', fenetre.id));
+  fenetre.on('hide', () => diagnostic('WINDOW_HIDE', fenetre.id));
+  fenetre.on('close', () => diagnostic('WINDOW_CLOSE', fenetre.id));
+  fenetre.on('closed', () => diagnostic('WINDOW_CLOSED', fenetre.id));
+  fenetre.on('unresponsive', () => diagnostic('WINDOW_UNRESPONSIVE', fenetre.id));
 
   // Diagnostics : journaliser les échecs de chargement (preuve pour écran blanc).
   // WS-3 : un échec de la trame principale est MÉMORISÉ pour la garde
@@ -133,10 +170,12 @@ function creerFenetrePrincipaleCachee(): BrowserWindow {
   fenetre.webContents.on("did-fail-load", (_e, code, desc, url, isMainFrame) => {
     if (isMainFrame) {
       echecChargementPrincipal = `did-fail-load ${code} ${desc}`;
+      diagnostic('MAIN_LOAD_FAILED', code);
       console.error(`[web] ${echecChargementPrincipal}`);
     }
   });
   fenetre.webContents.on("render-process-gone", (_e, details) => {
+    diagnostic('RENDER_PROCESS_GONE', details.exitCode);
     console.error(`[web] render-process-gone ${details.reason}`);
   });
 
@@ -154,8 +193,9 @@ async function afficherFenetreErreur(
   journalDir: string,
 ): Promise<void> {
   if (deploymentAutomatique) {
-    titre = "Le cabinet MindCare est indisponible.";
-    detail = "Relancez MindCare sur le PC du médecin. Si le problème persiste, contactez le support.";
+    diagnostic('LOCAL_SERVICE_ERROR');
+    await afficherEtatLocal(true);
+    return;
   }
   if (fenetreErreur && !fenetreErreur.isDestroyed()) {
     fenetreErreur.focus();
@@ -219,9 +259,30 @@ function echapperHtml(s: string): string {
   return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 }
 
-async function lancerOrchestrationEtFenetre(): Promise<void> {
+async function afficherEtatLocal(erreur: boolean): Promise<void> {
+  if (fermetureEnCours) return;
+  if (!fenetrePrincipale || fenetrePrincipale.isDestroyed()) fenetrePrincipale = creerFenetrePrincipaleCachee();
+  erreurLocale = erreur;
+  const messages = JSON.parse(readFileSync(path.join(process.resourcesPath, 'cabinet', 'messages-fr.json'), 'utf8')) as Record<string, string>;
+  const nonce = randomBytes(18).toString('base64');
+  const html = `<!doctype html><html lang="fr"><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'nonce-${nonce}'"><title>MindCare OS</title><h1>MindCare OS</h1><p role="status">${echapperHtml(messages[erreur ? 'localUnavailable' : 'startingLocal']!)}</p>${erreur ? `<button id="retry">${echapperHtml(messages.retryLocal!)}</button><script nonce="${nonce}">document.getElementById('retry').onclick=()=>{document.getElementById('retry').disabled=true;window.mindcare.retryStartup()}</script>` : ''}</html>`;
+  await fenetrePrincipale.loadURL(`data:text/html;charset=utf-8,${encodeURIComponent(html)}`);
+  if (!fenetrePrincipale.isDestroyed()) fenetrePrincipale.show();
+}
+
+ipcMain.handle('mindcare:retry-startup', async event => {
+  if (event.sender !== fenetrePrincipale?.webContents || !erreurLocale || !event.senderFrame?.url.startsWith('data:text/html;') || demarrageEnCours || fermetureEnCours) return;
+  await lancerOrchestrationEtFenetre();
+});
+
+function lancerOrchestrationEtFenetre(): Promise<void> {
+  return travailDemarrage ??= executerOrchestrationEtFenetre().finally(() => { travailDemarrage = undefined; });
+}
+
+async function executerOrchestrationEtFenetre(): Promise<void> {
   // Si une fenêtre principale existe déjà et est prête (après READY), ne pas relancer
-  if (fenetrePrincipale && !fenetrePrincipale.isDestroyed() && fenetrePrincipale.isVisible()) return;
+  if (demarrageEnCours || fermetureEnCours || applicationPrete) return;
+  demarrageEnCours = true;
   const contexte = construireContexte();
   contexteCourant = contexte;
   const sauterPg = !app.isPackaged;
@@ -242,10 +303,12 @@ async function lancerOrchestrationEtFenetre(): Promise<void> {
       connexionCabinet = chargerConnexionCabinet(path.join(programData, "MindCare", "desktop.json"), deploymentAutomatique ? "clinic-auto" : definition.mindcareDeployment === "clinic-client" ? "clinic-client" : definition.mindcareDeployment === "clinic-host" ? "clinic-host" : "standalone");
       if (connexionCabinet.mode === "auto") connexionCabinet = await connecterBureauCabinet();
       if ("origin" in connexionCabinet) configurerOrigineCabinet(connexionCabinet.origin);
+      if (deploymentAutomatique) await afficherEtatLocal(false);
     }
     // La configuration est vérifiée avant toute fenêtre ou activité de base.
     if (!fenetrePrincipale || fenetrePrincipale.isDestroyed()) fenetrePrincipale = creerFenetrePrincipaleCachee();
     const res = connexionCabinet.mode === "standalone" ? await orchestrerDemarrage(contexte, {
+      signal: annulationDemarrage.signal,
       sauterPostgresEnDev: sauterPg,
       onEtat: (etat, machine) => {
         console.log(`[mindcare] état → ${etat} ${machine.cause ?? ""} ${machine.detail ?? ""}`.trim());
@@ -266,18 +329,20 @@ async function lancerOrchestrationEtFenetre(): Promise<void> {
         }
       },
     }) : await (async () => {
-      if (!deploymentAutomatique) await attendreCabinet(urlDepart(), (url, options) => net.fetch(url, options));
-      return { etat: { etat: "READY" as const, tentativesRecuperation: 0 }, backend: undefined };
+      if (deploymentAutomatique) await attendreConnexionCabinet(annulationDemarrage.signal);
+      else await attendreCabinet(urlDepart(), (url, options) => net.fetch(url, options));
+      return { etat: { etat: "READY" as const, tentativesRecuperation: 0 }, backend: undefined as ChildProcess | undefined };
     })();
 
     processusBackend = res.backend;
+    if (fermetureEnCours || !fenetrePrincipale || fenetrePrincipale.isDestroyed()) return;
 
     if (res.etat.etat === "READY") {
       // Succès : charger le backend puis afficher — avec garde WS-3 : tout
       // échec de chargement devient une fenêtre d'erreur FR, jamais du vide.
       echecChargementPrincipal = null;
       let montre = false;
-      fenetrePrincipale.once("ready-to-show", () => {
+      if (!deploymentAutomatique) fenetrePrincipale.once("ready-to-show", () => {
         montre = true;
         applicationPrete = true;
         fenetrePrincipale?.show();
@@ -285,8 +350,12 @@ async function lancerOrchestrationEtFenetre(): Promise<void> {
       });
       try {
         if (deploymentAutomatique) {
-          await chargerAvecReconnexion(() => fenetrePrincipale!.loadURL(urlDepart()), () => connecterBureauCabinet(), () => !fenetrePrincipale || fenetrePrincipale.isDestroyed());
+          await fenetrePrincipale.loadURL(urlDepart());
           if (!fenetrePrincipale || fenetrePrincipale.isDestroyed()) return;
+          montre = true;
+          applicationPrete = true;
+          erreurLocale = false;
+          surveillerCabinet(fenetrePrincipale);
         } else await fenetrePrincipale.loadURL(urlDepart());
       } catch (e) {
         const msg = e instanceof Error ? e.message : String(e);
@@ -300,7 +369,12 @@ async function lancerOrchestrationEtFenetre(): Promise<void> {
       }
       // Chien de garde : si `ready-to-show` ne vient jamais (trame principale
       // en échec silencieux), ne pas laisser une fenêtre invisible pour toujours.
-      await new Promise((r) => setTimeout(r, 20_000));
+      if (!montre) await new Promise<void>((resolve) => {
+        const terminer = () => { clearTimeout(timer); annulationDemarrage.signal.removeEventListener('abort', terminer); resolve(); };
+        const timer = setTimeout(terminer, 20_000);
+        annulationDemarrage.signal.addEventListener('abort', terminer, { once: true });
+        if (annulationDemarrage.signal.aborted) terminer();
+      });
       if (!montre && !fenetrePrincipale.isDestroyed()) {
         fenetrePrincipale.hide();
         await afficherFenetreErreur(
@@ -343,7 +417,7 @@ async function lancerOrchestrationEtFenetre(): Promise<void> {
     });
     if (fenetrePrincipale && !fenetrePrincipale.isDestroyed()) fenetrePrincipale.hide();
     await afficherFenetreErreur(titre, detail, contexte.journalDir);
-  }
+  } finally { demarrageEnCours = false; }
 }
 
 /**

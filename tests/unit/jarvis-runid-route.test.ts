@@ -34,10 +34,10 @@ describe("runId : valide a la frontiere, sans effet de bord", () => {
   });
 
   it("le runId de tour n'est jamais promu sessionToken", () => {
-    // UN SEUL `sessionToken: runId` existe : le classifieur NLU M01, dont le
+    // NLU and JEV each use their own server-generated run identifier; the client
     // run_id est deja le sessionToken par conception documentee. L'appel
     // raisonnement (chemin patient) garde son aleatoire par appel.
-    expect(route.match(/sessionToken: runId/g)?.length ?? 0).toBe(1);
+    expect(route.match(/sessionToken: runId/g)?.length ?? 0).toBe(2);
     expect(route).toContain("sessionToken: crypto.randomUUID()");
     // Le runId de tour (champ `runId` du corps) n'alimente aucun sessionToken.
     expect(route).not.toMatch(/sessionToken:[^;]*corps[^;]*runId/);

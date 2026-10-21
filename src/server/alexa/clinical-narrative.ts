@@ -58,6 +58,50 @@ export function clinicalNarrativeReferences(context: ClinicalContext, sourceIds:
   return [...selected.values()];
 }
 
+/**
+ * The model must cite a verbatim excerpt. Snap a paraphrase back onto the cited
+ * source when at least two of its words are present, so a copy drift cannot
+ * turn a supported fact into a rejection. A quote with no support is left
+ * untouched and still fails closed.
+ */
+function snapQuote(quote: string, sourceText: string): string | null {
+  const folded = quoteFold(sourceText), words = quote.trim().split(/\s+/u).filter(Boolean);
+  for (let length = words.length; length >= 2; length--)
+    for (let start = 0; start + length <= words.length; start++) {
+      const candidate = words.slice(start, start + length).join(" ");
+      if (candidate.length >= 10 && candidate.length <= 64 && folded.includes(quoteFold(candidate))) return candidate;
+    }
+  return null;
+}
+/** Last resort: the cited visit's own words that best cover the sentence. */
+function bestExcerpt(sentence: string, sourceText: string): string | null {
+  const wanted = new Set((sentence.match(/[\p{L}]{5,}/gu) ?? []).map(fold));
+  if (!wanted.size) return null;
+  const words = sourceText.split(/\s+/u).filter(Boolean);
+  let best: { quote: string; score: number } | null = null;
+  for (let length = Math.min(words.length, 14); length >= 2; length--)
+    for (let start = 0; start + length <= words.length; start++) {
+      const quote = words.slice(start, start + length).join(" ");
+      if (quote.length < 10 || quote.length > 64) continue;
+      let score = 0;
+      for (const word of quote.match(/[\p{L}]{5,}/gu) ?? []) if (wanted.has(fold(word))) score++;
+      if (score >= 2 && (!best || score > best.score)) best = { quote, score };
+    }
+  return best?.quote ?? null;
+}
+function snapNarrativeQuotes(value: unknown, sources: readonly NarrativeSource[]): unknown {
+  const parsed = answerSchema.safeParse(value);
+  if (!parsed.success) return value;
+  return { sentences: parsed.data.sentences.map(sentence => ({
+    ...sentence,
+    evidence: sentence.evidence.map(citation => {
+      const source = sources.find(s => s.id === citation.id);
+      const snapped = source ? snapQuote(citation.quote, source.text) ?? bestExcerpt(sentence.text, source.text) : null;
+      return snapped ? { ...citation, quote: snapped } : citation;
+    }),
+  })) };
+}
+
 /** Fail closed on unsupported amounts, polarity reversal, invented citations or instructions. */
 function checkClinicalNarrative(value: unknown, sources: readonly NarrativeSource[]): {text:string|null;rejection?:string} {
   const parsed = answerSchema.safeParse(value);
@@ -85,8 +129,10 @@ function checkClinicalNarrative(value: unknown, sources: readonly NarrativeSourc
     const proof = fold(quotes.join(" ")), text = fold(sentence.text);
     const supported = numbers(proof); let position = 0;
     for (const quantity of numbers(text)) { const index = supported.indexOf(quantity, position); if (index < 0) return {text:null,rejection:"number"}; position = index + 1; }
-    // A negative must stay attached to its exact clinical clause.
-    if ((negative.test(proof) || negative.test(text)) && !proof.includes(text)) return {text:null,rejection:"polarity"};
+    // A negation may not be introduced unless the cited evidence carries one. The
+    // per-citation qualifier check above already forces any quoted negation into
+    // the sentence, so a paraphrase of a positive fact stays allowed.
+    if (negative.test(text) && !negative.test(proof)) return {text:null,rejection:"polarity"};
     if (/\b(?:hypothese|possible|suspect|a explorer|a confirmer)\b/u.test(proof) && !/\b(?:hypothese|possible|suspect|explor|confirmer)\w*\b/u.test(text)) return {text:null,rejection:"uncertainty"};
     const words = text.match(/[\p{L}]{5,}/gu) ?? [];
     const narrativeGlue = new Set(["patient","patiente","patients","patientes","note","notes","consultation","consultations","seance","seances","dossier","theme","themes","motif","motifs","suivi","historique","resume","synthese","evolution","cours","paragraphe","revient","reviennent","mentionne","mentionnent","indique","indiquent","rapporte","rapportent","decrit","decrivent","consigne","consignent","contient","contiennent","presente","presentent","montre","montrent","relate","relatent","evoque","evoquent","concerne","concernent","porte","portent","autour","recurrent","recurrents","disponible","disponibles","ensemble","element","elements","plusieurs","chaque","selon","affirme","affirment","retrouve","retrouvent","parle","parlent","constate","constatent","rapport","rapports","mention","mentions"]);
@@ -158,22 +204,30 @@ export async function synthesizeClinicalNarrative(sources: readonly NarrativeSou
   }
   let complete = projected.length === sources.length;
   if (!projected.length) return { text: sources.length ? copy.unavailable : copy.empty, complete: sources.length === 0, generated: false, sourceIds: [] };
-  const boundedSignal = AbortSignal.any([signal, AbortSignal.timeout(170000)]);
+  const boundedSignal = AbortSignal.any([signal, AbortSignal.timeout(240000)]);
   let multiVisitRetries=0;
+  let lastRaw = "";
+  // A single summary sentence cannot cite an unbounded history: keep the six most recent visits.
+  const recentVisits = new Set<string>();
+  for (const source of projected) if (source.consultationId && (recentVisits.has(source.consultationId) || recentVisits.size < 6)) recentVisits.add(source.consultationId);
+  const kept = projected.filter(source => !source.consultationId || recentVisits.has(source.consultationId));
+  if (kept.length !== projected.length) { projected.splice(0, projected.length, ...kept); complete = false; }
   // Context rejection happens before generation. Fit whole fields within the same deadline.
   while (projected.length) try {
     const visitIds=new Set(projected.flatMap(source=>source.consultationId?[source.consultationId]:[]));
     const multiVisit=visitIds.size>1;
     const validationSources=multiVisit?groupSourcesByConsultation(projected):projected;
     const sourceAliases=new Map(validationSources.map((source,index)=>[`s${index+1}`,source.id]));
-    const responseSchema=multiVisit?multiVisitAnswerSchemaFor([...sourceAliases.keys()]):answerSchema;
+    const requiredAliases=validationSources.map((source,index)=>({source,alias:`s${index+1}`})).filter(entry=>entry.source.consultationId).map(entry=>entry.alias).slice(0,6);
+    const responseSchema=multiVisit?multiVisitAnswerSchemaFor(requiredAliases.length?requiredAliases:[...sourceAliases.keys()].slice(0,6)):answerSchema;
     const systemPrompt=multiVisit?(multiVisitRetries?copy.multiVisitRetryPrompt:copy.multiVisitPrompt):copy.prompt;
-    const maxOutputTokens=multiVisit?Math.min(340,160+visitIds.size*16):384;
+    const maxOutputTokens=multiVisit?Math.min(560,200+visitIds.size*70):560;
     const visitAliases=new Map([...new Set(validationSources.flatMap(source=>source.consultationId?[source.consultationId]:[]))].map((id,index)=>[id,`v${index+1}`]));
     const modelSources=validationSources.map(({originalText:_original,attribution:_attribution,consultationId,...source},index)=>({
       ...source,id:`s${index+1}`,...(consultationId?{visit:visitAliases.get(consultationId)}:{}),
     }));
-    const raw = await inferLocalText([{ role: "system", content: systemPrompt }, { role: "user", content: JSON.stringify({ sources: modelSources }) }], { jsonSchema: z.toJSONSchema(responseSchema), maxOutputTokens, timeoutMs: 170000, signal: boundedSignal });
+    const raw = await inferLocalText([{ role: "system", content: systemPrompt }, { role: "user", content: JSON.stringify({ sources: modelSources }) }], { jsonSchema: z.toJSONSchema(responseSchema), maxOutputTokens, timeoutMs: 240000, signal: boundedSignal });
+    lastRaw = raw;
     boundedSignal.throwIfAborted();
     const modelValue: unknown = JSON.parse(raw),parsedModel=responseSchema.safeParse(modelValue);
     if(!parsedModel.success){
@@ -181,7 +235,7 @@ export async function synthesizeClinicalNarrative(sources: readonly NarrativeSou
       if(multiVisit){console.warn("[alexa-narrative] rejected","schema");break;}
     }
     const parsedAnswer=answerSchema.safeParse(modelValue);
-    const value: unknown=parsedAnswer.success?{...parsedAnswer.data,sentences:parsedAnswer.data.sentences.map(sentence=>({...sentence,evidence:sentence.evidence.map(citation=>({...citation,id:sourceAliases.get(citation.id)??citation.id}))}))}:modelValue;
+    const value: unknown=snapNarrativeQuotes(parsedAnswer.success?{...parsedAnswer.data,sentences:parsedAnswer.data.sentences.map(sentence=>({...sentence,evidence:sentence.evidence.map(citation=>({...citation,id:sourceAliases.get(citation.id)??citation.id}))}))}:modelValue,validationSources);
     const validation = checkClinicalNarrative(value, validationSources), text = validation.text;
     const parsed = answerSchema.safeParse(value);
     const cited = parsed.success ? [...new Set(parsed.data.sentences.flatMap(s => s.evidence.map(e => e.id)))] : [];
@@ -194,6 +248,7 @@ export async function synthesizeClinicalNarrative(sources: readonly NarrativeSou
       if(multiVisitRetries<1){multiVisitRetries++;continue;}
       if(text)return { text, complete: false, generated: true, sourceIds: cited, method: "reformulated" };
       console.warn("[alexa-narrative] rejected", validation.rejection??(!parsed.success?"schema":"visit-coverage"));
+      if (process.env.ALEXA_DEBUG_NARRATIVE === "1") console.warn("[alexa-narrative] debug", JSON.stringify({ rejection: validation.rejection, value, sources: validationSources.map(s => ({ id: s.id, text: s.text.slice(0, 300) })) }).slice(0, 4000));
       break;
     }
     const all = recoverClinicalSelection(value, projected, true);
@@ -207,6 +262,7 @@ export async function synthesizeClinicalNarrative(sources: readonly NarrativeSou
     signal.throwIfAborted();
     if (!boundedSignal.aborted && error instanceof Error && error.message === "LocalModelContext") { projected.pop(); complete = false; continue; }
     console.warn("[alexa-narrative] failure", localModelFailureCode(error));
+    if (process.env.ALEXA_DEBUG_NARRATIVE === "1") console.warn("[alexa-narrative] debug", JSON.stringify(lastRaw).slice(0, 1200));
     break;
   }
   // No fabricated prose if the small local model cannot support its own claims.
@@ -274,8 +330,19 @@ export function extractStructuredClinicalProgression(context:ClinicalContext):Cl
 }
 
 /** Fresh session summaries first; original notes remain the fallback for old/unanalysed visits. */
+/** Domain objects must reach the model as readable text, never as "[object Object]". */
+function describeChangeValue(value: unknown, depth = 0): string {
+  if (value === null || value === undefined || value === "") return "non renseigné";
+  if (typeof value !== "object") return String(value);
+  if (depth >= 2) return "non renseigné";
+  const entries = Object.entries(value as Record<string, unknown>).filter(([, entry]) => entry !== null && entry !== undefined && entry !== "");
+  return entries.length ? entries.map(([key, entry]) => `${key} ${describeChangeValue(entry, depth + 1)}`).join(", ") : "non renseigné";
+}
 export async function summarizeClinicalContext(context: ClinicalContext, signal: AbortSignal, wholeRecord = true): Promise<ClinicalNarrative> {
   let complete = context.coverage.complete && (!wholeRecord || !context.coverage.hasMore);
+  // Same deterministic progression as a ranged summary: no model call, no drift.
+  const structured = extractStructuredClinicalProgression(context);
+  if (structured) return { ...structured, complete: complete && structured.complete };
   const sources: NarrativeSource[] = [];
   const visits=[...(context.currentConsultation ? [context.currentConsultation] : []), ...context.consultations]
     .filter((c,index,all)=>all.findIndex(other=>other.id===c.id)===index)
@@ -288,9 +355,9 @@ export async function summarizeClinicalContext(context: ClinicalContext, signal:
     }
     else { const raw = consultationNarrativeSources(c); sources.push(...raw.sources); complete &&= raw.complete; }
   }
-  for (const d of context.diagnoses) sources.push({ id: d.id, text: JSON.stringify({ diagnosticDocumente: d.label, resolu: d.resolvedAt !== null }) });
-  for (const t of context.treatments.current) sources.push({ id: t.id, text: JSON.stringify({ traitement: t.medication, dose: t.dose, unite: t.doseUnit, frequence: t.frequency, etat: t.status, instructions: t.instructions }) });
-  for (const h of context.treatments.history) sources.push({ id: h.id, text: JSON.stringify({ changementEnregistre: h.occurredAt, avant: h.previous, apres: h.next, motif: h.reason }) });
+  for (const d of context.diagnoses) sources.push({ id: d.id, text: `Diagnostic documenté : ${d.label} ; état : ${d.resolvedAt !== null ? "résolu" : "non résolu"}.` });
+  for (const t of context.treatments.current) sources.push({ id: t.id, text: `Traitement en cours : ${[t.medication, t.dose, t.doseUnit, t.frequency].filter(Boolean).join(" ")} ; état : ${t.status}.` });
+  for (const h of context.treatments.history) sources.push({ id: h.id, text: `Changement de traitement enregistré le ${h.occurredAt} ; précédent : ${describeChangeValue(h.previous)} ; nouveau : ${describeChangeValue(h.next)}${h.reason ? ` ; motif : ${h.reason}` : ""}.` });
   const result = await synthesizeClinicalNarrative(sources, signal);
   return { ...result, complete: complete && result.complete };
 }

@@ -34,6 +34,8 @@
   ],
   "exclude": [
     "node_modules",
+    "outputs",
+    "reports",
     // S6 — code Deno (supabase/functions/), incompatible avec ce projet TS :
     // `Deno` global et spécificateurs `npm:...` n'existent pas sous
     // `moduleResolution: "bundler"`. Décision actée avec l'utilisateur (plan

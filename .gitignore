@@ -123,9 +123,42 @@ _test_p75_0.png
 # `scripts/preparer-voix-native.mjs` (seuls assets LFS + configs sont suivis)
 resources/voix/packages/
 resources/voix/python/
+# Données d'import legacy (PII) — locales uniquement, jamais committées.
+doctor_old_data/
 scripts/__pycache__/
+
+# Instantané de production (PII : 1500+ dossiers) — produit par
+# `scripts/snapshot-production.mjs`, jamais committé. Seuls
+# `purge-synthetic.sql`, `gates.sql` et `README.md` sont suivis.
+resources/snapshot/base.dump
+resources/snapshot/manifest.json
+resources/snapshot/restore-evidence.json
+resources/snapshot/.*.dump
+resources/snapshot/.manifest-*.json
 
 # Caches et sorties d'outillage régénérables
 .cache/
 artifacts/
 graphify-out/
+
+# Modèle d'embedding BGE-M3 (2,27 Go) : hors Git par construction. La
+# recette épinglée (`knowledge/recette-embedding-pinee.json`) le déclare
+# « hors Git — cache local poste de mesure ». `resources/models/` n'est
+# qu'un emplacement de PAQUETAGE (M13) ; le cache de développement et le
+# chemin d'usage sont documentés dans `docs/RUNTIME-CONFIGURATION.md`.
+resources/models/
+
+# Worktrees locaux isolés ; seuls leurs commits sont partagés.
+.worktrees/
+
+# Données locales et résultats d'évaluation ; jamais source du cabinet.
+reports/
+outputs/
+knowledge/eval/
+.eval-out/
+
+# Modèles et runtime locaux téléchargeables ; la configuration de packaging
+# ne référence que les assets explicitement choisis.
+resources/alexa/local-model/*.gguf
+resources/alexa/local-model/runtime-*/
+resources/alexa/local-model/llama-*.zip

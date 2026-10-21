@@ -135,6 +135,8 @@ export const IntentSchema = z.strictObject({
   name: z.enum(NOMS_INTENTIONS),
   entities: z.strictObject({
     patientMention: MentionPatient.optional(),
+    patientFilter: z.enum(["all", "missing_identity_card"]).optional(),
+    knowledgeSource: z.enum(["public", "approved_books"]).optional(),
     dateMention: MentionJour.optional(),
     periode: z.enum(["jour", "semaine", "mois", "annee"]).optional(),
     motifBrouillon: z.enum(["rappel_rendez_vous", "document_pret"]).optional(),
@@ -270,7 +272,7 @@ export function mentionsEgales(a: string, b: string): boolean {
 
 /** Une ligne par intent, en français, sans jargon. Le prompt la recopie. */
 export const DESCRIPTION_INTENTIONS: Readonly<Record<NomIntention, string>> = {
-  SEARCH_PATIENT: "chercher un dossier patient par nom",
+  SEARCH_PATIENT: "chercher un dossier patient par nom ou lister les patients, notamment sans numéro de carte d'identité",
   GET_PATIENT_CONTEXT: "lire le dossier d'un patient nommé",
   GET_PATIENT_TIMELINE: "l'historique longitudinal d'un patient nommé",
   GET_CONSULTATION_HISTORY: "les séances passées d'un patient nommé",
@@ -299,7 +301,7 @@ export const DESCRIPTION_INTENTIONS: Readonly<Record<NomIntention, string>> = {
   RECORD_PAYMENT_COLLECTED: "encaisser un paiement (écriture, confirmation requise)",
   SET_CONSULTATION_PRICE: "fixer le tarif d'une consultation (écriture, confirmation requise)",
   CREATE_DOCUMENT_DRAFT: "préparer un brouillon de document (écriture, confirmation requise)",
-  GENERAL_KNOWLEDGE: "question de savoir général, sans dossier",
+  GENERAL_KNOWLEDGE: "question sans dossier : public non médical, ou approved_books pour connaissance médicale/DSM/Taylor/Maudsley",
   ASK_CLARIFICATION: "référence ambiguë ou pronom sans antécédent : demander lequel",
   UNKNOWN: "demande incomprise, vague ou hors périmètre",
 };

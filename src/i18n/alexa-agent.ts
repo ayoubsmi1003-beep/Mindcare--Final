@@ -1,3 +1,8 @@
+export function missingPatientFieldParagraph(total:number,population:'active'|'archived'|'all',field:'phone'|'identity_card'):string {
+ const scope=population==='active'?'patients actifs':population==='archived'?'patients archivés':'patients';
+ const label=field==='phone'?'numéro de téléphone':'numéro de carte d’identité';
+ return total===0?`Parmi les ${scope} de votre périmètre, aucun n’a de ${label} manquant.`:`Parmi les ${scope} de votre périmètre, ${total} ${total===1?'n’a':'n’ont'} pas de ${label} renseigné.`;
+}
 export const agentActionDescriptions={startsAt:'Date et heure ISO 8601 avec fuseau obligatoire : +01:00 pour Alger, ou Z. Conserver la date et l’heure demandées ; ne jamais inventer une information manquante.'};
 export const agentDescriptions = {
   "declare_request": "Enregistre chaque résultat demandé, ses conditions liées par ET et ses dépendances. Une partie par résultat. Aucun résultat de données à cette étape.",

@@ -107,11 +107,11 @@ describe("v2 dry-run : corpus réel, zéro écriture", () => {
   });
 
   it("verbatim : chaque parent scindé = jointure exacte de ses enfants", () => {
-    const parParent = new Map();
+    const parParent = new Map<string, typeof chunks>();
     for (const c of chunks) {
       const k = `${c.unit_id}|${c.occurrence}`;
       if (!parParent.has(k)) parParent.set(k, []);
-      parParent.get(k).push(c);
+      parParent.get(k)!.push(c);
     }
     let ok = 0;
     let ko = 0;

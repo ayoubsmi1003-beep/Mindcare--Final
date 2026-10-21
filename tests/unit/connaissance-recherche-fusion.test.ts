@@ -34,6 +34,7 @@ function brut(surcharge: Partial<CandidatBrut> & { chunkId: string }): CandidatB
     langue: "fr",
     texte: "La sertraline 50 mg est une option de première intention.",
     score: 0.8,
+    unitId: null, parentTexteHash: null, enfantIndex: null, enfantsTotal: null,
     ...surcharge,
   };
 }

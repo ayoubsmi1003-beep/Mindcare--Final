@@ -45,7 +45,12 @@ describe("D4 : allowlist explicite, jamais de joker", () => {
     expect(CHUNKERS_ACCEPTES).toContain("struct-v1");
     expect(CHUNKERS_ACCEPTES).toContain("struct-v1.1");
     expect(CHUNKERS_ACCEPTES).not.toContain("struct-v2");
-    expect(CHUNKERS_ACCEPTES).toHaveLength(4);
+      // Stahl 7e (ADR-041, 2026-10-20) : `stahl-units-v1` entre EXPLICITEMENT
+      // dans l'allowlist, comme `taylor-units-v1-proposed` avant lui. La liste
+      // reste une liste fermee, jamais un joker : toute entree doit y etre
+      // nommee, et son id de chunk valide par le meme alphabet.
+      expect(CHUNKERS_ACCEPTES).toContain("stahl-units-v1");
+      expect(CHUNKERS_ACCEPTES).toHaveLength(5);
   });
 
   it("alphabet taylor- accepté, injections refusées", () => {

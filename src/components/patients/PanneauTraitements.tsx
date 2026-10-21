@@ -63,7 +63,25 @@ function PaletteRecherche({
   const [resultats, setResultats] = useState<readonly MedicationCatalogItem[]>([]);
   const [idx, setIdx] = useState(0);
   const [chargement, setChargement] = useState(false);
+  const [erreur, setErreur] = useState<string | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  // Garde anti-course : sans elle, une frappe rapide (« do » puis
+  // « doliprane ») laisse la réponse lente écraser la réponse utile —
+  // l'écran affiche alors des résultats qui ne correspondent plus à la saisie.
+  const seqRef = useRef(0);
+  // Cache de session (requête normalisée → résultats) : effacer une lettre
+  // puis la retaper ne refait aucun aller-retour — la réponse est immédiate.
+  // Borné (60 entrées, la plus ancienne saute) : un cache sans plafond est
+  // une fuite déguisée en optimisation.
+  const cacheRef = useRef(new Map<string, readonly MedicationCatalogItem[]>());
+  function mettreEnCache(cle: string, lignes: readonly MedicationCatalogItem[]): void {
+    const c = cacheRef.current;
+    c.set(cle, lignes);
+    if (c.size > 60) {
+      const premiere = c.keys().next();
+      if (!premiere.done) c.delete(premiere.value);
+    }
+  }
 
   useEffect(() => {
     if (ouvert) {
@@ -71,6 +89,8 @@ function PaletteRecherche({
       setQ("");
       setResultats([]);
       setIdx(0);
+      setErreur(null);
+      seqRef.current += 1;
     }
   }, [ouvert]);
 
@@ -78,23 +98,49 @@ function PaletteRecherche({
     if (!ouvert) return;
     const aq = q.trim();
     if (aq.length < 2) {
+      seqRef.current += 1;
       setResultats([]);
+      setErreur(null);
+      setChargement(false);
       return;
     }
     const t = window.setTimeout(() => {
-      setChargement(true);
-      // 30, pas 10 : à 10 résultats, la liste tenait déjà entière dans
-      // `max-h-96` — rien à défiler, alors que le catalogue (15k lignes) en
-      // proposait davantage. Le conteneur défilait très bien ; il n'avait
-      // simplement rien au-delà du pli. 30 reste loin du catalogue entier
-      // (toujours filtré côté base, jamais chargé en bloc côté client).
-      void searchMedications(aq, 30).then((res) => {
+      const id = seqRef.current + 1;
+      seqRef.current = id;
+      // Réponse immédiate si déjà vue cette session : pas de chargement, pas
+      // d'appel — effacer/retaper une lettre ne touche plus le réseau.
+      const cle = aq.toLowerCase();
+      const connues = cacheRef.current.get(cle);
+      if (connues !== undefined) {
         setChargement(false);
-        if (!res.ok) return;
+        setErreur(null);
+        setResultats(connues);
+        setIdx(0);
+        return;
+      }
+      // Rassis-pendant-revalidation : on garde l'ancienne liste à l'écran et
+      // on signale la mise à jour par une ligne discrète (voir le rendu) au
+      // lieu de remplacer le tout par « Chargement… » à chaque frappe.
+      setChargement(true);
+      // 50 = plafond de la porte (min(max(limit,1),50)) : à 30 résultats,
+      // « paracetamol » (121 matchs) ou « amox » (139 matchs) masquaient
+      // les deux tiers du catalogue. 50 reste filtré côté base, jamais
+      // 15k lignes côté client.
+      void searchMedications(aq, 50).then((res) => {
+        if (seqRef.current !== id) return;
+        setChargement(false);
+        if (!res.ok) {
+          setResultats([]);
+          setIdx(0);
+          setErreur(res.error.message);
+          return;
+        }
+        setErreur(null);
+        mettreEnCache(cle, res.data);
         setResultats(res.data);
         setIdx(0);
       });
-    }, 200);
+    }, 140);
     return () => window.clearTimeout(t);
   }, [q, ouvert]);
 
@@ -152,14 +198,22 @@ function PaletteRecherche({
         </div>
 
         <div className="max-h-96 overflow-auto p-2">
-          {chargement ? (
+          {chargement && resultats.length === 0 ? (
             <p className="px-3 py-6 text-center font-ui text-body text-ink-500">{fr.etats.chargement}</p>
+          ) : erreur ? (
+            <p role="alert" className="px-3 py-6 text-center font-ui text-body text-critical">{erreur}</p>
           ) : resultats.length === 0 ? (
             <p className="px-3 py-6 text-center font-ui text-body text-ink-500">
               {q.trim().length < 2 ? fr.patients.traitementsV2.rechercherPlaceholder : fr.patients.traitementsV2.rechercheVide}
             </p>
           ) : (
-            <ul role="listbox" className="m-0 flex list-none flex-col gap-1 p-0">
+            <>
+              {chargement ? (
+                <p aria-live="polite" className="px-3 pb-1 font-ui text-label tracking-label text-ink-500">
+                  {fr.etats.chargement}
+                </p>
+              ) : null}
+              <ul role="listbox" aria-busy={chargement || undefined} className="m-0 flex list-none flex-col gap-1 p-0">
               {resultats.map((m, i) => (
                 <li key={m.id} role="option" aria-selected={i === idx}>
                   <button
@@ -174,7 +228,8 @@ function PaletteRecherche({
                   </button>
                 </li>
               ))}
-            </ul>
+              </ul>
+            </>
           )}
         </div>
 
@@ -376,14 +431,19 @@ function CarteTraitement({
               <span className="font-ui text-label tracking-label text-ink-500">{fr.patients.traitementsV2.horaires}</span>
               <div className="flex flex-wrap gap-2">
                 {[fr.patients.traitementsV2.horairesMatin, fr.patients.traitementsV2.horairesMidi, fr.patients.traitementsV2.horairesSoir].map((h) => {
-                  const active = timing.map((x) => x.toLowerCase()).includes(h.toLowerCase());
+                  const hMin = h.toLowerCase();
+                  const active = timing.some((x) => x.toLowerCase() === hMin);
                   return (
                     <Bouton
                       key={h}
                       type="button"
                       taille="compact"
                       enfonce={active}
-                      onClick={() => setTiming((prev) => (prev.includes(h) ? prev.filter((x) => x !== h) : [...prev, h]))}
+                      onClick={() =>
+                        setTiming((prev) =>
+                          prev.some((x) => x.toLowerCase() === hMin) ? prev.filter((x) => x.toLowerCase() !== hMin) : [...prev, h],
+                        )
+                      }
                     >
                       {h}
                     </Bouton>
@@ -728,14 +788,19 @@ export function PanneauTraitements({
               <span className="font-ui text-label tracking-label text-ink-500">{fr.patients.traitementsV2.horaires}</span>
               <div className="flex flex-wrap gap-2">
                 {[fr.patients.traitementsV2.horairesMatin, fr.patients.traitementsV2.horairesMidi, fr.patients.traitementsV2.horairesSoir].map((h) => {
-                  const active = timing.includes(h);
+                  const hMin = h.toLowerCase();
+                  const active = timing.some((x) => x.toLowerCase() === hMin);
                   return (
                     <Bouton
                       key={h}
                       type="button"
                       taille="compact"
                       enfonce={active}
-                      onClick={() => setTiming((prev) => (prev.includes(h) ? prev.filter((x) => x !== h) : [...prev, h]))}
+                      onClick={() =>
+                        setTiming((prev) =>
+                          prev.some((x) => x.toLowerCase() === hMin) ? prev.filter((x) => x.toLowerCase() !== hMin) : [...prev, h],
+                        )
+                      }
                     >
                       {h}
                     </Bouton>

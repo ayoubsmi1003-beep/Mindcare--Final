@@ -239,6 +239,12 @@ if ($Mode -eq 'Host') {
     $identity = New-ScheduledTaskPrincipal -UserId 'S-1-5-18' -LogonType ServiceAccount -RunLevel Highest
     if ($task -and $task.State -eq 'Running') { Stop-ScheduledTask -TaskName $taskName; Start-Sleep -Seconds 2 }
     Register-ScheduledTask -TaskName $taskName -Action $action -Trigger $trigger -Settings $settings -Principal $identity -Description 'Serveur clinique MindCare OS — configuration administrateur' -Force | Out-Null
+    # Users may start/read this fixed protected task, never edit its SYSTEM action.
+    $scheduler = New-Object -ComObject 'Schedule.Service'
+    $scheduler.Connect()
+    $registered = $scheduler.GetFolder('\').GetTask($taskName)
+    $taskDacl = $registered.GetSecurityDescriptor(4)
+    if (-not $taskDacl.Contains('(A;;GRGX;;;BU)')) { $registered.SetSecurityDescriptor(($taskDacl + '(A;;GRGX;;;BU)'), 0) }
     $ruleName = 'MindCare-Cabinet-HTTPS'
     $rule = Get-NetFirewallRule -Name $ruleName -ErrorAction SilentlyContinue
     if ($rule -and $rule.Group -ne 'MindCare OS Clinique') { throw 'Règle pare-feu existante non reconnue.' }
