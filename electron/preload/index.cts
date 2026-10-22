@@ -41,6 +41,18 @@ const API_MINDCARE = {
   getVersion(): Promise<string> {
     return ipcRenderer.invoke("mindcare:version");
   },
+  /**
+   * Alerte d'accueil — notification Windows native + clignotement de la barre
+   * des tâches, y compris fenêtre réduite. Rend `true` seulement si le
+   * processus principal a accepté la demande ; un `false` ne doit jamais être
+   * présenté comme une remise.
+   */
+  notifyDoctorCall(alerte: { readonly callId: string; readonly callerName: string }): Promise<boolean> {
+    return ipcRenderer.invoke("mindcare:notifier-appel", alerte);
+  },
+  stopDoctorCall(): Promise<boolean> {
+    return ipcRenderer.invoke("mindcare:arreter-appel");
+  },
   onStartupState(cb: (etat: string) => void): () => void {
     const ecouteur = (_evt: unknown, etat: unknown) => {
       if (typeof etat === "string") cb(etat);

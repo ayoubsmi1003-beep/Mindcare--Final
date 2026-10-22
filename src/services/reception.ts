@@ -69,6 +69,12 @@ export interface TableauAccueil {
   readonly journee: readonly RdvAccueil[];
   readonly demandes: readonly RdvAccueil[];
   readonly paiements: readonly PaiementAccueil[];
+  /**
+   * Horodatage SERVEUR de la lecture (`genere_a`, 046). Il permet de corriger
+   * l'écart d'horloge entre le poste d'accueil et le PC médecin : sans lui, une
+   * montre en avance de dix minutes affiche des retards qui n'existent pas.
+   */
+  readonly genereA: string | null;
 }
 
 interface RdvRow {
@@ -107,6 +113,7 @@ interface BoardRow {
   readonly journee: unknown;
   readonly demandes: unknown;
   readonly paiements: unknown;
+  readonly genere_a?: unknown;
 }
 
 function estTableau(valeur: unknown): valeur is readonly unknown[] {
@@ -181,6 +188,9 @@ export async function getReceptionBoard(
     journee: versRdvs(row.journee),
     demandes: versRdvs(row.demandes),
     paiements: versPaiements(row.paiements),
+    // `genere_a` vient de `now()` côté PostgreSQL. Absent d'un serveur plus
+    // ancien : on rend `null` plutôt qu'une heure inventée.
+    genereA: typeof row.genere_a === "string" ? row.genere_a : null,
   });
 }
 

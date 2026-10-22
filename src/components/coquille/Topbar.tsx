@@ -36,8 +36,11 @@
 "use client";
 
 import { fr } from "@/i18n/fr";
+import type { UserRole } from "@/services/authz";
 
 import { OrbeVoix } from "../OrbeVoix";
+import { BoutonAppelerSecretaire } from "./BoutonAppelerSecretaire";
+import { BoutonMessagesInternes } from "./MessagesInternes";
 
 export interface TopbarProps {
   /** L'identité de l'écran. Jamais un nom de patient sur un écran de lieu. */
@@ -52,6 +55,14 @@ export interface TopbarProps {
    * (règle 4) — ce qu'Alexa peut lire est décidé par la RLS.
    */
   readonly avecAlexa?: boolean;
+  /**
+   * Rôle de la personne connectée — COMPOSITION D'INTERFACE UNIQUEMENT.
+   *
+   * Le bouton d'appel n'existe pas pour l'accueil (elle ne s'appelle pas
+   * elle-même) ; la messagerie existe pour les deux. Ce que chacun peut
+   * réellement faire reste tranché par `app.call_assistant` et la RLS.
+   */
+  readonly role?: UserRole;
 }
 
 export function Topbar({
@@ -59,6 +70,7 @@ export function Topbar({
   sousTitre,
   actions,
   avecAlexa = false,
+  role,
 }: TopbarProps): React.JSX.Element {
   return (
     <header
@@ -90,6 +102,11 @@ export function Topbar({
 
       <div className="ml-auto flex shrink-0 items-center gap-3">
         {actions}
+        {/* L'alerte d'appel n'existe que pour le médecin : l'accueil ne
+            s'appelle pas elle-même. La composition est une commodité ; la
+            porte `app.call_assistant` refuse de toute façon tout autre rôle. */}
+        {role !== undefined && role !== "assistant" ? <BoutonAppelerSecretaire compact /> : null}
+        {role !== undefined ? <BoutonMessagesInternes role={role} /> : null}
         {/*
           L'orbe RENSEIGNE, il n'ouvre pas : c'est `BulleAlexa` qui ouvre. Deux
           commandes pour la même chose, côte à côte, feraient hésiter sans rien

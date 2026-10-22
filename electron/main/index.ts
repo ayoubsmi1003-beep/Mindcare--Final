@@ -19,7 +19,7 @@
  * secret ne transite vers le renderer.
  */
 
-import { app, BrowserWindow, ipcMain, net, session, shell } from "electron";
+import { app, BrowserWindow, ipcMain, net, Notification, session, shell } from "electron";
 import { spawn } from "node:child_process";
 import { randomBytes } from "node:crypto";
 import { hostname } from 'node:os';
@@ -41,6 +41,11 @@ import {
 } from "./orchestrateur.js";
 
 const REPERTOIRE_ICI = path.dirname(fileURLToPath(import.meta.url));
+// Windows 10/11 n'affiche une notification native que si l'application porte un
+// AppUserModelID stable, identique à `appId` d'electron-builder. Sans lui, le
+// toast est silencieusement ignoré sur un poste installé — pas d'erreur, pas de
+// notification, et l'accueil ne voit rien alors que le médecin a cliqué.
+app.setAppUserModelId("os.mindcare.cabinet");
 // Keep the pinned TLS hostname/SNI, but resolve this doctor's own service over loopback offline.
 if (app.isPackaged) {
   try {
@@ -155,6 +160,12 @@ function creerFenetrePrincipaleCachee(): BrowserWindow {
       nodeIntegration: false,
       webSecurity: true,
       allowRunningInsecureContent: false,
+      // ⚠️ INDISPENSABLE À L'ALERTE D'ACCUEIL. Chromium gèle les minuteurs d'une
+      // fenêtre réduite ; le flux SSE et le carillon cesseraient de fonctionner
+      // dès que l'accueil réduit MindCare — c'est-à-dire exactement quand
+      // l'alerte doit passer. Le renderer reste non fiable : ce réglage ne
+      // change que la cadence, jamais la surface de privilèges.
+      backgroundThrottling: false,
     },
   });
   diagnostic('WINDOW_CREATED', fenetre.id);
@@ -467,6 +478,106 @@ function posePermissionsRestreintes(): void {
 }
 
 ipcMain.handle("mindcare:version", () => app.getVersion());
+
+/**
+ * L'alerte « Appeler la secrétaire » côté processus principal.
+ *
+ * ═══ POURQUOI ELLE PASSE PAR ICI, ET PAS SEULEMENT PAR LE RENDU ═════════════
+ *
+ * Le renderer ne peut pas afficher une notification Windows native ni faire
+ * clignoter la barre des tâches : ce sont des API du processus principal. Or
+ * ces deux gestes sont ceux qui fonctionnent quand la fenêtre est RÉDUITE, ou
+ * quand Windows « Ne pas déranger » masque les toasts. Un bandeau React seul
+ * ne serait vu que par une personne déjà devant l'écran.
+ *
+ * ═══ CE QUE L'APPEL PROUVE, ET CE QU'IL NE PROUVE PAS ═══════════════════════
+ *
+ * `show()` rend la main sans garantir l'affichage : le système peut avoir coupé
+ * les notifications de l'application. L'interface ne prétend donc jamais qu'un
+ * son a été entendu ; le seul accusé fiable reste le clic « J'arrive ».
+ *
+ * ═══ SURFACE IPC — FERMÉE ET VALIDÉE ═══════════════════════════════════════
+ *
+ * Le renderer est non fiable (règle 4) : la charge est validée champ par champ,
+ * et l'expéditeur doit être la fenêtre principale. Aucun chemin, aucun texte
+ * libre n'est accepté — seulement un identifiant et un nom déjà affichés.
+ */
+const appelsSignales = new Set<string>();
+
+ipcMain.handle("mindcare:notifier-appel", (event, valeur: unknown): boolean => {
+  if (fenetrePrincipale === null || fenetrePrincipale.isDestroyed()) return false;
+  if (event.sender !== fenetrePrincipale.webContents) return false;
+  if (typeof valeur !== "object" || valeur === null) return false;
+
+  const charge = valeur as Record<string, unknown>;
+  const callId = charge["callId"];
+  const callerName = charge["callerName"];
+  if (typeof callId !== "string" || !/^[0-9a-f-]{36}$/i.test(callId)) return false;
+  if (typeof callerName !== "string" || callerName.length === 0 || callerName.length > 120) return false;
+
+  diagnostic("CALL_ALERT_RECEIVED", appelsSignales.has(callId));
+
+  // Un appel ne notifie qu'une fois, même si le flux le repousse ou si le
+  // renderer se remonte. Le renderer a son propre registre ; celui-ci est le
+  // dernier rempart avant le système.
+  if (appelsSignales.has(callId)) return false;
+  appelsSignales.add(callId);
+  if (appelsSignales.size > 200) {
+    // Bornage : on oublie les plus anciens identifiants. Un appel ne dure
+    // qu'une minute ; 200 entrées couvrent largement une journée.
+    const premier = appelsSignales.values().next().value;
+    if (typeof premier === "string") appelsSignales.delete(premier);
+  }
+
+  // Clignotement de la barre des tâches : fonctionne même si les toasts sont
+  // coupés par le système, et reste visible sur un bureau chargé.
+  try {
+    fenetrePrincipale.flashFrame(true);
+  } catch {
+    /* certaines sessions Windows refusent le clignotement : le toast reste */
+  }
+
+  try {
+    if (Notification.isSupported()) {
+      const notification = new Notification({
+        title: "MindCare OS — Appel du médecin",
+        body: `${callerName} vous demande.`,
+        urgency: "critical",
+        timeoutType: "never",
+      });
+      notification.on("click", () => {
+        try {
+          if (fenetrePrincipale === null || fenetrePrincipale.isDestroyed()) return;
+          if (fenetrePrincipale.isMinimized()) fenetrePrincipale.restore();
+          fenetrePrincipale.show();
+          fenetrePrincipale.focus();
+          fenetrePrincipale.flashFrame(false);
+        } catch {
+          /* fenêtre disparue entre-temps */
+        }
+      });
+      notification.show();
+    }
+  } catch {
+    // Un toast refusé n'est pas une raison de perdre l'alerte : le bandeau et
+    // le clignotement restent, et le médecin verra l'appel expirer.
+    diagnostic("CALL_ALERT_NOTIFICATION_FAILED");
+  }
+
+  return true;
+});
+
+/** Arrête le clignotement (accusé reçu ou appel expiré). */
+ipcMain.handle("mindcare:arreter-appel", (event): boolean => {
+  if (fenetrePrincipale === null || fenetrePrincipale.isDestroyed()) return false;
+  if (event.sender !== fenetrePrincipale.webContents) return false;
+  try {
+    fenetrePrincipale.flashFrame(false);
+    return true;
+  } catch {
+    return false;
+  }
+});
 
 interface ResultatCanal {
   readonly ok: boolean;

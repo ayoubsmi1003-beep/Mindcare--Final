@@ -2281,6 +2281,96 @@ export const fr = {
   },
 
   /**
+   * Collaboration interne du cabinet (migration 178) — alerte d'appel,
+   * messagerie médecin ↔ accueil, état de connexion et compte d'accueil.
+   *
+   * ⚠️ LES LIBELLÉS DE L'ALERTE NE PROMETTENT JAMAIS QU'UN SON A ÉTÉ ENTENDU.
+   * « Notification affichée » est vérifiable (le poste a accusé réception) ;
+   * « la secrétaire a entendu » ne l'est pas, et ne doit jamais s'écrire. Seul
+   * « elle arrive » (l'accusé humain) engage quelqu'un.
+   */
+  collaboration: {
+    appel: {
+      action: "Appeler la secrétaire",
+      enCours: "Appel en cours…",
+      envoye: "Appel envoyé — en attente du poste d'accueil",
+      remis: "Notification affichée à l'accueil",
+      acquitte: "La secrétaire a répondu : elle arrive",
+      expire: "Sans réponse de l'accueil",
+      indisponible: "Appel impossible : le poste d'accueil n'est pas joignable",
+      aide: "Alerte courte sur le poste d'accueil. Aucun appel audio n'est établi.",
+    },
+    alerteRecue: {
+      titre: "Le médecin vous demande",
+      avant: "Appel de",
+      jarrive: "J'arrive",
+      acquittee: "Réponse envoyée au médecin.",
+      echec: "Réponse non transmise — réessayez.",
+      expiree: "Cet appel a expiré.",
+      plusieurs: "Nouvel appel du médecin.",
+    },
+    messagerie: {
+      titre: "Messages du cabinet",
+      ouvrir: "Messages",
+      fermer: "Fermer le panneau",
+      vide: "Aucun message. Cette messagerie reste dans le cabinet.",
+      indication: "Message interne au cabinet",
+      placeholder: "Écrire un message…",
+      envoyer: "Envoyer",
+      envoiEnCours: "Envoi…",
+      nonEnvoye: "Non envoyé — le cabinet est injoignable. Le brouillon reste à l'écran.",
+      reessayer: "Réessayer",
+      envoye: "Envoyé",
+      remis: "Remis",
+      lu: "Lu",
+      nonLus: "non lus",
+      vous: "Vous",
+      prudence: "Messagerie interne — évitez d'y recopier des éléments cliniques.",
+    },
+    connexion: {
+      connecte: "Cabinet connecté",
+      synchronisation: "Synchronisation…",
+      reconnexion: "Reconnexion au cabinet…",
+      horsLigne: "Hors ligne — lecture seule",
+      horsLigneDetail:
+        "Connexion au PC du médecin interrompue. Les données affichées sont celles de la dernière synchronisation ; aucune modification ne sera enregistrée.",
+      derniereSynchro: "Dernière synchronisation",
+    },
+    compte: {
+      titre: "Cabinet & postes",
+      sousTitre: "Compte de l'accueil et postes autorisés",
+      accueilTitre: "Compte de l'accueil",
+      accueilAide:
+        "Un seul compte d'accueil par cabinet. Il sert à ouvrir MindCare sur le second poste, avec ses propres droits.",
+      identifiant: "Identifiant",
+      nomComplet: "Nom complet",
+      motDePasse: "Mot de passe",
+      motDePasseAide:
+        "10 caractères minimum. Laisser vide pour conserver le mot de passe actuel.",
+      actif: "Compte actif",
+      enregistrer: "Enregistrer le compte",
+      creer: "Créer le compte",
+      aucun: "Aucun compte d'accueil n'existe encore sur ce cabinet.",
+      enregistre: "Compte d'accueil enregistré.",
+      desactive: "Compte d'accueil désactivé : ses sessions sont fermées.",
+      postesTitre: "Postes appairés",
+      postesAide:
+        "Un poste s'appaire une seule fois avec un code d'invitation, puis se reconnecte seul. Révoquer un poste lui ferme l'accès immédiatement.",
+      inviter: "Connecter un autre poste",
+      revoquer: "Révoquer ce poste",
+      aucunPoste: "Aucun poste appairé pour le moment.",
+      derniereConnexion: "Dernière connexion",
+      jamais: "Jamais connecté",
+      reveque: "Poste révoqué.",
+      invitationTitre: "Invitation MindCare",
+      invitationAide:
+        "Saisissez ce code sur l'autre poste. Il expire dans cinq minutes et ne sert qu'une seule fois.",
+      indisponible:
+        "La gestion des postes n'est disponible que dans l'application installée sur le PC du médecin.",
+    },
+  },
+
+  /**
    * Migration legacy Syglab (126) — indicateurs de provenance et file de revue.
    * Données historiques : jamais présentées comme des saisies du jour.
    */

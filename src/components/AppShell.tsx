@@ -194,6 +194,7 @@ export function AppShell({
             {...(sousTitre === undefined ? {} : { sousTitre })}
             {...(actions === undefined ? {} : { actions })}
             avecAlexa={avecAlexa}
+            role={role}
           />
         )}
 

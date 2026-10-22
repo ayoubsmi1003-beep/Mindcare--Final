@@ -6,12 +6,35 @@ export function autoriserInitialisation(remote: string | undefined, local: strin
   return Boolean(address && local && (address === local.replace(/^::ffff:/, "") || address === "127.0.0.1" || address === "::1"));
 }
 
+/** Boucle locale stricte — la machine hôte elle-même, jamais le LAN. */
+export function adresseBoucleLocale(remote: string | undefined): boolean {
+  const address = remote?.replace(/^::ffff:/, "");
+  return address === "127.0.0.1" || address === "::1";
+}
+
+/** Les routes d'administration du cabinet : hôte physique uniquement. */
+const ROUTES_HOTE = ["/api/cabinet/invitation", "/api/cabinet/appareils", "/api/cabinet/appareils/revoquer"];
+
+function estRouteHote(pathname: string): boolean {
+  const propre = pathname.replace(/\/+$/, "");
+  return ROUTES_HOTE.some((route) => propre === route || propre.startsWith(`${route}/`));
+}
+
 export interface OptionsProxyCabinet {
   readonly origin: string;
   readonly pfx: Buffer;
   readonly passphrase: string;
   readonly upstreamPort: number;
   readonly listenHost?: "127.0.0.1" | "0.0.0.0" | "::";
+  /**
+   * Vérification du jeton de poste (178). Appelée pour toute requête NON
+   * locale, sauf `/api/health`. Rendre `false` ferme la porte AVANT toute
+   * session : un poste non appairé ne peut pas même tenter de se connecter.
+   *
+   * Absente en développement : le proxy reste alors dans son comportement
+   * historique (session obligatoire, jeton non exigé).
+   */
+  readonly verifierAppareil?: (jeton: string | undefined, adresseDistante: string | undefined) => boolean;
 }
 
 const SAUT = new Set(["connection", "keep-alive", "proxy-authenticate", "proxy-authorization", "te", "trailer", "transfer-encoding", "upgrade"]);
@@ -36,6 +59,20 @@ export async function demarrerProxyCabinet(options: OptionsProxyCabinet): Promis
     let pathname: string;
     try { pathname = decodeURIComponent(new URL(route, origin).pathname); } catch { refuser(400); return; }
     if (pathname.replace(/\/+$/, "") === "/api/auth/provisionner" && !autoriserInitialisation(entrant.socket.remoteAddress, entrant.socket.localAddress)) { refuser(403); return; }
+    // Les routes qui écrivent dans le dossier privé (invitation, registre des
+    // postes) ne sont atteignables que depuis la machine hôte. Le backend
+    // tourne sous SYSTEM ; les exposer au LAN donnerait à un poste appairé le
+    // droit de révoquer les autres.
+    const local = adresseBoucleLocale(entrant.socket.remoteAddress);
+    if (estRouteHote(pathname) && !local) { refuser(403); return; }
+    // Jeton de poste : exigé pour tout le LAN, jamais pour la machine hôte (qui
+    // EST l'autorité), jamais pour la sonde de santé (elle précède l'appairage
+    // et ne rend aucune donnée).
+    if (!local && pathname !== "/api/health" && options.verifierAppareil !== undefined) {
+      const brut = entrant.headers["x-mindcare-device"];
+      const jeton = Array.isArray(brut) ? brut[0] : brut;
+      if (!options.verifierAppareil(jeton, entrant.socket.remoteAddress)) { refuser(403); return; }
+    }
     const entetes = {
       ...filtrerEntetes(entrant.headers),
       host: adresse.host,

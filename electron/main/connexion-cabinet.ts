@@ -5,7 +5,7 @@ import { setTimeout as pause } from "node:timers/promises";
 export type ConnexionCabinet = { mode: "standalone" | "auto" } | { mode: "client" | "host"; origin: string };
 
 export type SondeOptions = { redirect: "error"; signal: AbortSignal; headers: Record<string, string>; credentials: "omit" };
-export type SondeFetch = (input: string, init: SondeOptions) => Promise<{ ok: boolean; text: () => Promise<string> }>;
+export type SondeFetch = (input: string, init: SondeOptions) => Promise<{ ok: boolean; status?: number; text: () => Promise<string> }>;
 export class ErreurConnexionCabinet extends Error {
   constructor(readonly code: 'TIMEOUT' | 'CONNECTION_REFUSED' | 'TLS_ERROR' | 'NETWORK_ERROR' | 'HTTP_ERROR' | 'INVALID_HEALTH_BODY') {
     super('CABINET_INJOIGNABLE');
@@ -80,7 +80,6 @@ export function validerOrigineCabinet(input: string): string {
 
 /** Un client sans configuration ne doit jamais provisionner une autre base. */
 export function chargerConnexionCabinet(fichier: string, artefact: "clinic-auto" | "clinic-client" | "clinic-host" | "standalone"): ConnexionCabinet {
-  // Le paquet unique ne dépend plus d'une adresse saisie par l'utilisateur.
   if (artefact === "clinic-auto") return { mode: "auto" };
   if (!existsSync(fichier)) {
     if (artefact !== "standalone") throw new Error("CONFIGURATION_CABINET: configurer ce poste avec l'adresse HTTPS du cabinet.");
@@ -131,4 +130,26 @@ export async function attendreCabinet(origin: string, effectuer: SondeFetch, del
   }
   signal?.throwIfAborted();
   throw new ErreurConnexionCabinet(cause);
+}
+
+/**
+ * Le poste a-t-il été révoqué par le médecin ?
+ *
+ * On interroge `/api/auth/session` SANS cookie : la route rend `401` pour une
+ * absence de session, mais le proxy refuse AVANT elle avec `403` si le jeton de
+ * poste est inconnu ou révoqué. Le statut suffit donc à distinguer les deux —
+ * et une panne réseau rend `false`, jamais « révoqué » par erreur.
+ */
+export async function appareilRevoque(origin: string, effectuer: SondeFetch): Promise<boolean> {
+  try {
+    const reponse = await effectuer(`${origin}/api/auth/session`, {
+      redirect: "error",
+      credentials: "omit",
+      headers: { "Cache-Control": "no-store" },
+      signal: AbortSignal.timeout(4000),
+    });
+    return reponse.status === 403;
+  } catch {
+    return false;
+  }
 }

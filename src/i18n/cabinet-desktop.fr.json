@@ -19,5 +19,11 @@
   "invitationBefore": "Sur l'autre poste, saisissez cette invitation dans MindCare :",
   "invitationAfter": "Elle expire dans cinq minutes.",
   "close": "Fermer",
-  "invitationFailed": "Impossible de créer l’invitation. Réessayez sur le PC médecin."
+  "invitationFailed": "Impossible de créer l’invitation. Réessayez sur le PC médecin.",
+  "appareilRevoque": "Ce poste a été révoqué par le médecin. Demandez une nouvelle invitation sur le PC médecin (Paramètres → Cabinet & postes), puis reconnectez ce poste.",
+  "diagnosticMenu": "Diagnostic de découverte",
+  "diagnosticTitle": "Diagnostic de découverte",
+  "diagnosticFound": "Cabinet MindCare détecté sur le réseau local :",
+  "diagnosticNone": "Aucun cabinet MindCare détecté sur le réseau local. Vérifiez que le PC du médecin est allumé, que MindCare y est configuré comme PC médecin, et que les deux PCs sont sur le même Wi-Fi.",
+  "diagnosticHint": "Cette vérification n’établit aucune connexion et ne modifie rien."
 }

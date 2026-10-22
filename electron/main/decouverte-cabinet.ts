@@ -3,7 +3,18 @@ import { createCipheriv, createDecipheriv, createHash, randomBytes } from 'node:
 import { networkInterfaces } from 'node:os';
 import { validerOrigineCabinet } from './connexion-cabinet.js';
 export interface CabinetDecouvert { id: string; origin: string; address?: string }
-export interface ConfianceCabinet { id: string; origin: string; certificate: string }
+export interface ConfianceCabinet {
+  id: string;
+  origin: string;
+  certificate: string;
+  /**
+   * Jeton du poste, remis UNE SEULE FOIS à l'appairage (178). Il n'accorde
+   * aucun droit : il prouve au proxy que la requête vient d'une machine que le
+   * médecin a autorisée. Absent pour un poste appairé avant cette version.
+   */
+  deviceId?: string;
+  deviceToken?: string;
+}
 export const PORT_DECOUVERTE = 43119;
 const GROUPE = '239.255.77.67';
 const SERVICE = 'mindcare-clinic-v1';
@@ -80,7 +91,37 @@ export async function decouvrirCabinets(ms = 1800, port = PORT_DECOUVERTE, targe
     return [...found.values()].filter(item => !conflictuels.has(item.id));
   } finally { try { socket.close(); } catch { /* Pas encore lié. */ } }
 }
-export async function annoncerCabinet(host: CabinetDecouvert, cert: string, invite: () => {secret: string; expiresAt: number} | undefined, port = PORT_DECOUVERTE): Promise<Socket> {
+export type Invite = () => { secret: string; expiresAt: number } | undefined;
+
+/**
+ * Options d'annonce — l'objet remplace peu à peu le simple callback.
+ *
+ * L'ancienne signature (`invite` seul) reste acceptée : les tests existants et
+ * `scripts/configurer-cabinet.ps1` continuent de fonctionner sans modification.
+ * Les callbacks ajoutés portent les garanties de la 178 : usage unique, verrou
+ * après cinq échecs, et remise d'un jeton de poste.
+ */
+export interface OptionsAnnonce {
+  readonly invitation: Invite;
+  /** Appelé AVANT l'envoi de la réponse : le code est brûlé. */
+  readonly consommer?: (secret: string) => void;
+  /** Un paquet d'appairage invalide (déchiffrement ou forme). */
+  readonly echec?: () => void;
+  /** Enregistre le poste et rend son jeton, une seule fois. */
+  readonly enregistrerAppareil?: (label: string) => { readonly deviceId: string; readonly deviceToken: string } | undefined;
+}
+
+function estOptions(valeur: Invite | OptionsAnnonce): valeur is OptionsAnnonce {
+  return typeof valeur === "object" && valeur !== null && typeof valeur.invitation === "function";
+}
+
+export async function annoncerCabinet(
+  host: CabinetDecouvert,
+  cert: string,
+  invite: Invite | OptionsAnnonce,
+  port = PORT_DECOUVERTE,
+): Promise<Socket> {
+  const options: OptionsAnnonce = estOptions(invite) ? invite : { invitation: invite };
   lireCabinet(host);
   const socket = createSocket({ type: 'udp4', reuseAddr: false });
   try { await lier(socket, port); } catch (error) { socket.close(); throw error; }
@@ -94,10 +135,41 @@ export async function annoncerCabinet(host: CabinetDecouvert, cert: string, invi
       if (Date.now() - fenetre > 1000) { budget = 0; fenetre = Date.now(); }
       if (++budget > 40) return;
       if (bytes.subarray(0, PREFIXE.length).equals(PREFIXE)) {
-        const invitation = invite(); if (!invitation || invitation.expiresAt < Date.now() || invitation.expiresAt > Date.now() + 310000) return;
-        const request = ouvrirInvitation(invitation.secret, bytes) as Record<string, unknown>;
-        if (request.kind !== 'request' || request.id !== host.id || typeof request.challenge !== 'string' || !/^[A-Za-z0-9_-]{24}$/.test(request.challenge)) return;
-        socket.send(scellerInvitation(invitation.secret, { kind: 'response', ...host, certificate: cert, challenge: request.challenge }), remote.port, remote.address, () => {});
+        const invitation = options.invitation();
+        if (!invitation || invitation.expiresAt < Date.now() || invitation.expiresAt > Date.now() + 310000) return;
+
+        let request: Record<string, unknown>;
+        try {
+          const ouvert = ouvrirInvitation(invitation.secret, bytes);
+          if (typeof ouvert !== 'object' || ouvert === null) { options.echec?.(); return; }
+          request = ouvert as Record<string, unknown>;
+        } catch {
+          // Le paquet porte le préfixe mais ne se déchiffre pas : tentative
+          // hostile ou code périmé. On compte, on ne répond rien.
+          options.echec?.();
+          return;
+        }
+
+        if (request.kind !== 'request' || request.id !== host.id || typeof request.challenge !== 'string' || !/^[A-Za-z0-9_-]{24}$/.test(request.challenge)) {
+          options.echec?.();
+          return;
+        }
+
+        // Le code est brûlé AVANT la réponse. Si le paquet se perd, le médecin
+        // en génère un autre — une fenêtre de rejeu fermée vaut mieux qu'un
+        // code qui traîne cinq minutes.
+        options.consommer?.(invitation.secret);
+        const label = typeof request.label === 'string' && request.label.length > 0 && request.label.length <= 80
+          ? request.label
+          : "Poste d'accueil";
+        const appareil = options.enregistrerAppareil?.(label);
+        socket.send(scellerInvitation(invitation.secret, {
+          kind: 'response',
+          ...host,
+          certificate: cert,
+          challenge: request.challenge,
+          ...(appareil === undefined ? {} : { deviceId: appareil.deviceId, deviceToken: appareil.deviceToken }),
+        }), remote.port, remote.address, () => {});
       } else {
         const query = JSON.parse(bytes.toString()) as Record<string, unknown>;
         if (query.service !== SERVICE || typeof query.challenge !== 'string' || !/^[A-Za-z0-9_-]{24}$/.test(query.challenge)) return;
@@ -107,7 +179,7 @@ export async function annoncerCabinet(host: CabinetDecouvert, cert: string, invi
   });
   return socket;
 }
-export async function appairerCabinet(host: CabinetDecouvert, secret: string, port = PORT_DECOUVERTE, ms = 3000): Promise<ConfianceCabinet> {
+export async function appairerCabinet(host: CabinetDecouvert, secret: string, port = PORT_DECOUVERTE, ms = 3000, label?: string): Promise<ConfianceCabinet> {
   lireCabinet(host); cle(secret);
   if (!host.address || !adresseLocale(host.address)) throw new Error('Cabinet introuvable.');
   const socket = createSocket('udp4'); const challenge = randomBytes(18).toString('base64url');
@@ -116,7 +188,9 @@ export async function appairerCabinet(host: CabinetDecouvert, secret: string, po
     return await new Promise<ConfianceCabinet>((resolve, reject) => {
       const finish = (value?: ConfianceCabinet) => { clearTimeout(timer); clearInterval(retry); value ? resolve(value) : reject(new Error('Invitation expirée ou incorrecte.')); };
       const timer = setTimeout(() => finish(), ms);
-      const packet = scellerInvitation(secret, { kind: 'request', id: host.id, challenge });
+      // `label` est le nom du poste, choisi par le poste lui-même. Il sert au
+      // médecin à reconnaître un appareil dans la liste, jamais à autoriser.
+      const packet = scellerInvitation(secret, { kind: 'request', id: host.id, challenge, label: typeof label === 'string' ? label.slice(0, 80) : undefined });
       const send = () => socket.send(packet, port, host.address, () => {});
       const retry = setInterval(send, 400);
       socket.on('error', () => finish());
@@ -126,7 +200,17 @@ export async function appairerCabinet(host: CabinetDecouvert, secret: string, po
           const value = ouvrirInvitation(secret, bytes) as Record<string, unknown>;
           const item = lireCabinet(value);
           if (value.kind !== 'response' || item.id !== host.id || item.origin !== host.origin || value.challenge !== challenge || typeof value.certificate !== 'string' || value.certificate.length > 8192) return;
-          finish({ ...item, certificate: value.certificate });
+          // Jeton de poste (178) : facultatif pour rester compatible avec un
+          // hôte qui n'aurait pas encore la migration. Un jeton mal formé est
+          // ignoré plutôt que de faire échouer tout l'appairage — le poste
+          // fonctionnera, mais le proxy le refusera jusqu'à un nouvel appairage.
+          const deviceId = typeof value.deviceId === 'string' && UUID.test(value.deviceId) ? value.deviceId : undefined;
+          const deviceToken = typeof value.deviceToken === 'string' && /^[A-Za-z0-9_-]{43}$/.test(value.deviceToken) ? value.deviceToken : undefined;
+          finish({
+            ...item,
+            certificate: value.certificate,
+            ...(deviceId !== undefined && deviceToken !== undefined ? { deviceId, deviceToken } : {}),
+          });
         } catch { /* Réponse non authentifiée refusée. */ }
       });
       send();

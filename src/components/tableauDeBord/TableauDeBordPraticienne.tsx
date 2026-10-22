@@ -38,6 +38,8 @@ import { fr } from "@/i18n/fr";
 import { getDashboardToday, type CreneauDuJour, type TableauDeBord } from "@/services/dashboard";
 import { aujourdHuiCabinet } from "@/services/finance-calendrier";
 import { startConsultation } from "@/services/consultations";
+import { useEvenementsCabinet } from "@/components/useEvenementsCabinet";
+import { EtatConnexionCabinet } from "@/components/coquille/EtatConnexionCabinet";
 
 import { BandeauAccueil } from "./BandeauAccueil";
 import { BlocBriefMatin } from "./BlocBriefMatin";
@@ -105,6 +107,19 @@ export function TableauDeBordPraticienne({
     const tick = setInterval(() => setMaintenant(new Date()), INTERVALLE_TICK_MS);
     return () => clearInterval(tick);
   }, []);
+
+  // Temps réel : un patient marqué arrivé à l'accueil, un encaissement
+  // confirmé, un rendez-vous déplacé — l'écran du médecin le voit en moins
+  // d'une seconde au lieu d'attendre les 120 s de l'interrogation de secours.
+  const surEvenement = useCallback((): void => {
+    void recharger();
+  }, [recharger]);
+
+  const { etat: etatFlux } = useEvenementsCabinet({
+    actif: true,
+    onEvenement: surEvenement,
+    onResynchronisation: surEvenement,
+  });
 
   /**
    * Ouvrir une séance depuis le tableau de bord.
@@ -195,6 +210,18 @@ export function TableauDeBordPraticienne({
   return (
     <div className="flex flex-col gap-6 lg:gap-8">
       {horsLigneSession ? <BandeauHorsLigne /> : null}
+
+      {/* L'état de la liaison au service du cabinet. Le médecin est l'hôte :
+          cette pastille lui dit surtout si le flux temps réel est vivant, pas
+          si ses données sont « synchronisées » — elles sont locales. */}
+      <div className="flex flex-wrap items-center gap-2">
+        <EtatConnexionCabinet etat={etatFlux} compact={false} />
+      </div>
+      {etatFlux === "reconnexion" || etatFlux === "hors_ligne" ? (
+        <p className="m-0 font-ui text-label text-attention-ink">
+          {fr.collaboration.connexion.horsLigneDetail}
+        </p>
+      ) : null}
 
       {/*
         ═══════════════════════════════════════════════════════════════════

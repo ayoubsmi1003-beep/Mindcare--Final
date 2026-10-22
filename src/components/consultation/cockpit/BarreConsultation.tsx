@@ -1,6 +1,7 @@
 "use client";
 
 import { Bouton, IndicateurEnregistrement } from "@/components/ui";
+import { BoutonAppelerSecretaire } from "@/components/coquille/BoutonAppelerSecretaire";
 import { fr } from "@/i18n/fr";
 
 /**
@@ -119,6 +120,10 @@ export function BarreConsultation({
         </span>
         {/* Zone 3 — primaire : gestes qui décident */}
         <span className="ms-auto flex shrink-0 flex-wrap items-center gap-2">
+          {/* L'alerte d'accueil vit ICI pendant une séance : `AppShell` retire
+              la barre supérieure en mode séance, et c'est justement le moment
+              où le médecin a le plus besoin de joindre l'accueil. */}
+          <BoutonAppelerSecretaire compact />
           <Bouton rang="secondaire" taille="compact" onClick={enregistrer} disabled={envoi}>
             {fr.actions.enregistrer}
           </Bouton>

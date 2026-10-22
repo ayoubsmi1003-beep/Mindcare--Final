@@ -450,3 +450,52 @@ export async function lireTestConnexion(canal: "whatsapp" | "facebook" | "instag
     readonly capacites: readonly { readonly nom: string; readonly disponible: boolean }[];
   }>(reponse, "http.communication.tester");
 }
+
+// ---------------------------------------------------------------------------
+// Gestion des postes du cabinet (migration 178)
+// ---------------------------------------------------------------------------
+// Ces trois appels sont les SEULS du dépôt à viser des routes d'administration
+// du cabinet. Elles ne sont atteignables que sur la machine hôte : le proxy
+// TLS refuse `/api/cabinet/*` depuis le LAN, et la porte
+// `app.autoriser_gestion_postes()` réserve le geste au médecin.
+//
+// ⚠️ AUCUNE DONNÉE PATIENT ICI : un nom de poste, un identifiant d'appareil et
+// un code d'invitation. Le code est un secret éphémère — il n'est jamais
+// journalisé.
+
+export interface PosteAppaire {
+  readonly deviceId: string;
+  readonly label: string;
+  readonly createdAt: string;
+  readonly lastSeenAt: string | null;
+  readonly revokedAt: string | null;
+  /** Vrai pour le poste qui interroge (comparaison d'empreinte côté serveur). */
+  readonly current: boolean;
+}
+
+export interface InvitationCabinet {
+  readonly code: string;
+  readonly expiresAt: string;
+}
+
+export async function lirePostesAppaires(): Promise<Result<readonly PosteAppaire[]>> {
+  let reponse: Response;
+  try {
+    reponse = await fetch("/api/cabinet/appareils", {
+      method: "GET",
+      credentials: "same-origin",
+      cache: "no-store",
+    });
+  } catch (brut) {
+    return err(toAppError(brut, "http.cabinet.postes"));
+  }
+  return lireEnveloppe<readonly PosteAppaire[]>(reponse, "http.cabinet.postes");
+}
+
+export function revoquerPosteAppaire(deviceId: string): Promise<Result<boolean>> {
+  return poster<boolean>("/api/cabinet/appareils/revoquer", { deviceId }, "http.cabinet.revoquer");
+}
+
+export function demanderInvitationAppairage(): Promise<Result<InvitationCabinet>> {
+  return poster<InvitationCabinet>("/api/cabinet/invitation", {}, "http.cabinet.invitation");
+}

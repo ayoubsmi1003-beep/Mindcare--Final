@@ -10,6 +10,8 @@ import { arreterBackend } from "./processus-backend.js";
 import { journalDesktop } from "./journal-desktop.js";
 import { demarrerProxyCabinet } from "./proxy-cabinet.js";
 import { annoncerCabinet } from "./decouverte-cabinet.js";
+import { cheminInvitation, consommerInvitation, enregistrerEchec, lireInvitation } from "./invitations.js";
+import { enregistrerAppareil, toucherAppareil, verifierJeton } from "./paired-devices.js";
 import type { Socket } from "node:dgram";
 import { X509Certificate } from "node:crypto";
 
@@ -62,6 +64,8 @@ async function demarrerServeur(fichier: string): Promise<void> {
   const config = chargerServeurCabinet(fichier);
   if (existsSync(path.join(config.racineDonnees, "clinic-initialization.pending"))) throw new Error("Initialisation du cabinet interrompue; reprise contrôlée requise.");
   const prive = path.dirname(fichier);
+  const fichierInvitation = cheminInvitation(prive);
+  const fichierAppareils = path.join(prive, "paired-devices.json");
   const pfx = readFileSync(path.join(prive, "clinic.pfx"));
   const passphrase = await descelerSecretTls(path.join(prive, "clinic-pfx-password.dpapi"));
   createSecureContext({ pfx, passphrase, minVersion: "TLSv1.2" });
@@ -111,18 +115,36 @@ async function demarrerServeur(fichier: string): Promise<void> {
   if (fermeture) return;
   if (resultat.etat.etat !== "READY") { journal('STARTUP_REFUSED'); arreter(1); return; }
   try {
-    proxy = await demarrerProxyCabinet({ origin: config.origin, pfx, passphrase, upstreamPort: PORT_BACKEND });
+    proxy = await demarrerProxyCabinet({
+      origin: config.origin,
+      pfx,
+      passphrase,
+      upstreamPort: PORT_BACKEND,
+      // Le jeton de poste est vérifié AVANT la session : un appareil non
+      // appairé ne peut pas même tenter de se connecter. La machine hôte et
+      // `/api/health` en sont dispensées (voir `proxy-cabinet.ts`).
+      verifierAppareil: (jeton) => {
+        const appareil = verifierJeton(fichierAppareils, jeton);
+        if (appareil === undefined) return false;
+        toucherAppareil(fichierAppareils, appareil.deviceId);
+        return true;
+      },
+    });
     proxy.on("error", () => { journal('HTTPS_FAILED'); arreter(1); });
     try {
     const identity = JSON.parse(readFileSync(path.join(config.racineDonnees, "clinic-identity.json"), "utf8")) as {id: string};
     const publicCertificate = new X509Certificate(readFileSync(path.join(config.racineDonnees, "clinic-public.cer"))).toString();
-    annonce = await annoncerCabinet({id:identity.id, origin:config.origin}, publicCertificate, () => {
-      try {
-        const file = path.join(prive, "clinic-invitation.json");
-        if (statSync(file).size > 512) return undefined;
-        const invitation = JSON.parse(readFileSync(file, "utf8")) as {secret:string; expiresAt:number};
-        return invitation;
-      } catch { return undefined; }
+    annonce = await annoncerCabinet({id:identity.id, origin:config.origin}, publicCertificate, {
+      // Lecture à chaque demande : le code est créé par la route
+      // `/api/cabinet/invitation` (processus backend, compte SYSTEM), pas par
+      // ce processus — un cache rendrait une invitation invisible.
+      invitation: () => {
+        const invitation = lireInvitation(fichierInvitation);
+        return invitation === undefined ? undefined : { secret: invitation.secret, expiresAt: invitation.expiresAt };
+      },
+      consommer: () => consommerInvitation(fichierInvitation),
+      echec: () => enregistrerEchec(fichierInvitation),
+      enregistrerAppareil: (label) => enregistrerAppareil(fichierAppareils, label),
     });
     annonce.on("error", () => { journal('DISCOVERY_UNAVAILABLE'); annonce?.close(); annonce = undefined; });
     } catch { journal('DISCOVERY_UNAVAILABLE'); }
