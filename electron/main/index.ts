@@ -33,6 +33,7 @@ import { attendreCabinet, chargerConnexionCabinet, type ConnexionCabinet } from 
 import { attendreConnexionCabinet, connecterBureauCabinet, surveillerCabinet } from "./bureau-cabinet.js";
 import { dossierDonnees, fichierEnvironnement, modeCourant } from "./chemins.js";
 import { journalDesktop } from "./journal-desktop.js";
+import { garantirInstallation } from "./installation-auto.js";
 import {
   messageErreurFR,
   orchestrerDemarrage,
@@ -90,7 +91,15 @@ if (!verrouObtenu) {
     }
   });
 
-  app.whenReady().then(() => {
+  app.whenReady().then(async () => {
+    // Un lancement depuis le Bureau, une clé USB ou le dossier de build ne peut
+    // pas héberger le serveur : Windows refuserait la configuration. On propose
+    // donc une installation vers un emplacement protégé AVANT toute fenêtre.
+    // `false` = copie effectuée (ou refus) : cette instance s'arrête.
+    if (!(await garantirInstallation())) {
+      app.quit();
+      return;
+    }
     void lancerOrchestrationEtFenetre();
   });
 
