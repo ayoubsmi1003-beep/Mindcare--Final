@@ -314,7 +314,11 @@ async function executerOrchestrationEtFenetre(): Promise<void> {
       connexionCabinet = chargerConnexionCabinet(path.join(programData, "MindCare", "desktop.json"), deploymentAutomatique ? "clinic-auto" : definition.mindcareDeployment === "clinic-client" ? "clinic-client" : definition.mindcareDeployment === "clinic-host" ? "clinic-host" : "standalone");
       if (connexionCabinet.mode === "auto") connexionCabinet = await connecterBureauCabinet();
       if ("origin" in connexionCabinet) configurerOrigineCabinet(connexionCabinet.origin);
-      if (deploymentAutomatique) await afficherEtatLocal(false);
+      // ⚠️ PAS D'ÉCRAN D'ATTENTE ICI. Il était affiché AVANT de savoir si le
+      // service répond : un démarrage sain montrait donc « Démarrage des
+      // services… » pendant une seconde, puis l'application — exactement le
+      // clignotement qu'on veut éviter. L'écran d'attente n'apparaît plus que
+      // si l'attente dépasse 2,5 s (voir plus bas).
     }
     // La configuration est vérifiée avant toute fenêtre ou activité de base.
     if (!fenetrePrincipale || fenetrePrincipale.isDestroyed()) fenetrePrincipale = creerFenetrePrincipaleCachee();
@@ -340,8 +344,23 @@ async function executerOrchestrationEtFenetre(): Promise<void> {
         }
       },
     }) : await (async () => {
-      if (deploymentAutomatique) await attendreConnexionCabinet(annulationDemarrage.signal);
-      else await attendreCabinet(urlDepart(), (url, options) => net.fetch(url, options));
+      if (deploymentAutomatique) {
+        // L'écran d'attente est DIFFÉRÉ : si le cabinet répond en moins de
+        // 2,5 s (cas normal d'un poste déjà configuré), l'utilisateur voit
+        // directement son application, sans écran intermédiaire. Le message
+        // n'apparaît que si l'attente se prolonge réellement.
+        const attente = attendreConnexionCabinet(annulationDemarrage.signal);
+        const surAttente = setTimeout(() => {
+          if (!fermetureEnCours && !applicationPrete) void afficherEtatLocal(false);
+        }, 2500);
+        try {
+          await attente;
+        } finally {
+          clearTimeout(surAttente);
+        }
+      } else {
+        await attendreCabinet(urlDepart(), (url, options) => net.fetch(url, options));
+      }
       return { etat: { etat: "READY" as const, tentativesRecuperation: 0 }, backend: undefined as ChildProcess | undefined };
     })();
 
