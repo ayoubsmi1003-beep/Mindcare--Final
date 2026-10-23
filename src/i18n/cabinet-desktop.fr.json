@@ -25,5 +25,7 @@
   "diagnosticTitle": "Diagnostic de découverte",
   "diagnosticFound": "Cabinet MindCare détecté sur le réseau local :",
   "diagnosticNone": "Aucun cabinet MindCare détecté sur le réseau local. Vérifiez que le PC du médecin est allumé, que MindCare y est configuré comme PC médecin, et que les deux PCs sont sur le même Wi-Fi.",
-  "diagnosticHint": "Cette vérification n’établit aucune connexion et ne modifie rien."
+  "diagnosticHint": "Cette vérification n’établit aucune connexion et ne modifie rien.",
+  "installationRefuseeTitre": "Emplacement du dossier MindCare",
+  "installationRefusee": "Windows a refusé la configuration : le dossier MindCare doit être protégé contre les modifications d’un utilisateur ordinaire. Placez-le dans C:\\Program Files\\MindCare OS, ou dans un dossier créé par un administrateur à la racine du disque (par exemple C:\\MindCare), puis relancez MindCare. Une copie sur le Bureau, dans votre profil ou sur une clé USB ne peut pas être configurée."
 }

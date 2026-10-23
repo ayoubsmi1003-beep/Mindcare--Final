@@ -79,8 +79,21 @@ function Get-ClinicTree([string]$Target) {
     }
 }
 function Assert-ClinicInstall([string]$Install) {
-    $programFiles = [Environment]::GetFolderPath([Environment+SpecialFolder]::ProgramFiles)
-    if (-not $programFiles -or -not $Install.StartsWith($programFiles.TrimEnd('\') + '\', [StringComparison]::OrdinalIgnoreCase)) { throw 'Installer MindCare dans Program Files avec les droits administrateur avant de configurer le serveur.' }
+    # ⚠️ CE QUI PROTÈGE N'EST PAS L'EMPLACEMENT, C'EST L'ACL.
+    #
+    # La version précédente exigeait `Program Files` et refusait tout le reste.
+    # C'était un raccourci : Program Files n'est sûr que parce qu'un
+    # utilisateur ordinaire n'y écrit pas. Un dossier copié depuis une clé USB
+    # dans `C:\MindCare` par un administrateur offre exactement la même
+    # garantie ; le refuser n'ajoutait aucune sécurité, seulement une étape.
+    #
+    # On vérifie donc la propriété réelle, sur CHAQUE fichier et sur la chaîne
+    # des parents : propriétaire Administrateurs/SYSTEM/TrustedInstaller, et
+    # aucune autorisation d'écriture, de suppression ou de changement de
+    # permissions accordée à un autre SID. Une copie dans le profil
+    # utilisateur, sur le Bureau ou sur un support FAT/exFAT échoue ici — et
+    # c'est voulu.
+    if (-not (Test-Path -LiteralPath $Install -PathType Container)) { throw 'Dossier d''installation introuvable.' }
     foreach ($file in @(Get-ClinicTree $Install)) {
         if ([IO.Directory]::Exists($file)) { $acl = [IO.Directory]::GetAccessControl($file) } else { $acl = [IO.File]::GetAccessControl($file) }
         Test-AdministratorAcl $acl $false

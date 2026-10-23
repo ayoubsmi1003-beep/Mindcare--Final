@@ -142,6 +142,19 @@ async function afficherEcran(): Promise<void> {
   ecran.show();
 }
 function psQuote(value: string): string { return "'" + value.replaceAll("'", "''") + "'"; }
+
+/**
+ * L'installation du cabinet a été refusée par Windows (emplacement modifiable,
+ * ACL insuffisantes, UAC annulé). Distincte d'une invitation invalide : le
+ * message affiché doit dire quoi faire du dossier, pas « réessayez ».
+ */
+class ErreurInstallation extends Error {
+  constructor() {
+    super('CONFIGURATION_REFUSEE');
+    this.name = 'ErreurInstallation';
+  }
+}
+
 async function executerInstallation(mode: 'Host' | 'Client', extra = ''): Promise<void> {
   const install = path.dirname(process.execPath);
   const script = path.join(process.resourcesPath, 'cabinet', 'configurer-cabinet.ps1');
@@ -150,7 +163,16 @@ async function executerInstallation(mode: 'Host' | 'Client', extra = ''): Promis
   const encoded = Buffer.from(command, 'utf16le').toString('base64');
   const powershell = path.join(process.env['SystemRoot'] ?? 'C:\\Windows', 'System32', 'WindowsPowerShell', 'v1.0', 'powershell.exe');
   const launch = `$p=Start-Process -FilePath ${psQuote(powershell)} -WindowStyle Hidden -Verb RunAs -Wait -PassThru -ArgumentList @('-NoProfile','-NonInteractive','-EncodedCommand',${psQuote(encoded)}); exit $p.ExitCode`;
-  await new Promise<void>((resolve, reject) => execFile(powershell, ['-NoProfile','-NonInteractive','-Command',launch], {windowsHide:true, timeout:180000}, error => error ? reject(new Error('Installation du cabinet interrompue. Relancez MindCare.')) : resolve()));
+  await new Promise<void>((resolve, reject) => execFile(powershell, ['-NoProfile','-NonInteractive','-Command',launch], {windowsHide:true, timeout:180000}, error => error ? reject(new ErreurInstallation()) : resolve()));
+}
+
+async function afficherRefusInstallation(): Promise<void> {
+  await dialog.showMessageBox({
+    type: 'error',
+    title: messages.installationRefuseeTitre!,
+    message: messages.installationRefusee!,
+    buttons: [messages.close!],
+  });
 }
 async function inviterPoste(): Promise<void> {
   if (!posteHote() || actionEnCours) return;
@@ -161,7 +183,10 @@ async function inviterPoste(): Promise<void> {
     writeFileSync(request, JSON.stringify({secret, expiresAt:Date.now()+300000}), {mode:0o600});
     await executerInstallation('Host', `-InvitationFile ${psQuote(request)}`);
     await dialog.showMessageBox({type:'info', title:messages.inviteMenu!, message:messages.invitationTitle!, detail:`${messages.invitationBefore}\n\n${secret.match(/.{1,4}/g)!.join(' ')}\n\n${messages.invitationAfter}`, buttons:[messages.close!]});
-  } catch { await dialog.showMessageBox({type:'error', message:messages.invitationFailed!}); }
+  } catch (error) {
+    if (error instanceof ErreurInstallation) { await afficherRefusInstallation(); }
+    else { await dialog.showMessageBox({type:'error', message:messages.invitationFailed!}); }
+  }
   finally { rmSync(request,{force:true}); actionEnCours = false; }
 }
 ipcMain.handle('mindcare:cabinet-action', async (event, value: unknown) => {
@@ -189,7 +214,10 @@ ipcMain.handle('mindcare:cabinet-action', async (event, value: unknown) => {
         writeFileSync(fichierConfiance(),JSON.stringify(paired),{mode:0o600}); confiance = paired; avertissement = undefined;
       } finally { rmSync(certFile,{force:true}); }
     }
-  } catch { statut(messages.retry!, false, true); }
+  } catch (error) {
+    if (error instanceof ErreurInstallation) { await afficherRefusInstallation(); }
+    statut(messages.retry!, false, true);
+  }
   finally { actionEnCours = false; }
 });
 app.on('before-quit', () => { arret = true; });
