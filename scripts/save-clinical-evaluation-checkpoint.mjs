@@ -14,7 +14,7 @@ const run=(command,args,env=process.env)=>execFileSync(command,args,{cwd:root,en
 const sourceCommit=run('git',['rev-parse','HEAD']).trim();
 mkdirSync(destination,{recursive:true});
 // Apply the evaluation folder's existing protected ACL before writing any data.
-run('C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe',['-NoProfile','-NonInteractive','-Command',"$ErrorActionPreference='Stop'; Set-Acl -LiteralPath $env:MINDCARE_CHECKPOINT_DESTINATION -AclObject (Get-Acl -LiteralPath $env:MINDCARE_CHECKPOINT_ACL_SOURCE)"],{...process.env,MINDCARE_CHECKPOINT_DESTINATION:destination,MINDCARE_CHECKPOINT_ACL_SOURCE:privateRoot});
+run('C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe',['-NoProfile','-NonInteractive','-Command',"$ErrorActionPreference='Stop'; Set-Acl -LiteralPath $env:MINDCARE_CHECKPOINT_DESTINATION -AclObject (Get-Acl -LiteralPath $env:MINDCARE_CHECKPOINT_ACL_SOURCE)"],{...process.env,PSModulePath:'C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\Modules',MINDCARE_CHECKPOINT_DESTINATION:destination,MINDCARE_CHECKPOINT_ACL_SOURCE:privateRoot});
 const dump='/tmp/mindcare-saved-checkpoint.dump',roles='/tmp/mindcare-saved-checkpoint-roles.sql';
 run('docker',['exec',isolation.target,'pg_dump','-U','postgres','-Fc','-f',dump,isolation.database]);
 run('docker',['exec',isolation.target,'pg_restore','--list',dump]);
