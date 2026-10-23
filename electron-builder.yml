@@ -63,6 +63,18 @@ asar: true
 # qu'elles doivent être LUES OU EXÉCUTÉES par autre chose qu'Electron :
 # `node server.js` pour le backend, `psql -f` pour le SQL, `initdb.exe` /
 # `pg_ctl.exe` pour le cluster.
+#
+# `extraFiles` (différent de `extraResources`) place ces deux fichiers À LA
+# RACINE de l'application, à côté de l'exécutable : le script de copie retrouve
+# ainsi `MindCare OS.exe` dans son propre dossier. Ils permettent l'installation
+# sans NSIS : double-clic, choix Médecin/Accueil, raccourci Bureau, permissions
+# protégées — sans toucher à `%ProgramData%\MindCare`.
+extraFiles:
+  - from: scripts/installer-portable.ps1
+    to: Installer-Portable-MindCare.ps1
+  - from: scripts/installer-portable.cmd
+    to: Installer-MindCare.cmd
+
 extraResources:
   - from: resources/alexa/local-model
     to: alexa/local-model
