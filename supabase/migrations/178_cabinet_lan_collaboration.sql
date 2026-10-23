@@ -99,6 +99,15 @@ COMMENT ON ROLE staff_gatekeeper IS
 GRANT USAGE ON SCHEMA app  TO staff_gatekeeper;
 GRANT USAGE ON SCHEMA auth TO staff_gatekeeper;
 
+-- ⚠️ LE TRANSFERT DE PROPRIÉTÉ EXIGE QUE LE NOUVEAU PROPRIÉTAIRE PUISSE CRÉER
+-- DANS LE SCHÉMA. Sur une installation locale, `postgres` est superutilisateur
+-- et PostgreSQL saute ce contrôle : la migration passerait sans ces deux
+-- lignes. Ailleurs (rôle de migration non superutilisateur), elle échouerait en
+-- 42501 après une longue série verte — c'est exactement le défaut que 029 §0
+-- documente. On nomme donc le privilège, puis on le retire en §8.
+GRANT CREATE ON SCHEMA app TO app_gatekeeper;
+GRANT CREATE ON SCHEMA app TO staff_gatekeeper;
+
 -- Privilèges NOMMÉS, un par un. Pas de DELETE sur auth.users ni app.profiles :
 -- une suppression de compte n'est pas un geste de cette version (la
 -- désactivation passe par `is_active`, et l'historique clinique reste dû).
