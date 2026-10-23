@@ -27,9 +27,9 @@ export async function buildClinicalContext(db: Pick<DbPort, "rpc">, scope: { rea
     let last: ClinicalContext | undefined;
     let complete = true;
     let crossedLowerBoundary=false,rowsSeen=0;
-    while (bounded ? rowsSeen<100&&!crossedLowerBoundary&&(last===undefined||last.coverage.hasMore) : consultations.length < request.count) {
+    while (bounded ? rowsSeen<100&&!crossedLowerBoundary&&(last===undefined||last.coverage.hasMore) : request.all || consultations.length < request.count) {
       active(signal);
-      const limit = Math.min(20, bounded?100-rowsSeen:request.count-consultations.length);
+      const limit = Math.min(20, bounded?100-rowsSeen:request.all?20:request.count-consultations.length);
       const result = await db.rpc<unknown>("get_alexa_clinical_context", { p_patient_id: scope.patientId, p_limit: limit,
         p_before_at: before?.startedAt ?? null, p_before_id: before?.id ?? null });
       active(signal);
@@ -65,7 +65,7 @@ export async function buildClinicalContext(db: Pick<DbPort, "rpc">, scope: { rea
     if (first === undefined || last === undefined) throw new ClinicalContextError("invalid-context");
     const rangeHasMore=bounded&& !crossedLowerBoundary&&last.coverage.hasMore;
     const rangeComplete=bounded&&(crossedLowerBoundary||!last.coverage.hasMore);
-    return { ...first, consultations, coverage: { requested: bounded?100:request.count, returned: consultations.length,
+    return { ...first, consultations, coverage: { requested: bounded?100:request.all?Math.max(1,consultations.length):request.count, returned: consultations.length,
       complete: bounded ? complete&&rangeComplete : complete&&first.treatments.historyComplete&&(consultations.length===request.count||!last.coverage.hasMore),
       hasMore: bounded?rangeHasMore:last.coverage.hasMore, ...((bounded?rangeHasMore:last.coverage.hasMore)&&last.coverage.next!==undefined?{next:last.coverage.next}:{}) } };
   } catch (error) {

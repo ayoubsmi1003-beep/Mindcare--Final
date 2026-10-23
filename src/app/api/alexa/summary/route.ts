@@ -1,5 +1,5 @@
 import { ALEXA_CONVERSATION_MODEL } from "@/server/alexa/model-policy";
-import { summarizeClinicalContext, clinicalNarrativeReferences, NARRATIVE_HASH, NARRATIVE_VERSION } from "@/server/alexa/clinical-narrative";
+import { summarizeClinicalCaseContext, clinicalNarrativeReferences, CASE_NARRATIVE_HASH, CASE_NARRATIVE_VERSION } from "@/server/alexa/clinical-narrative";
 import { narrativeCopy } from "@/i18n/alexa-narrative";
 import { z } from "zod";
 import { identite, echec, succes } from "@/app/api/jarvis/_commun";
@@ -18,20 +18,23 @@ export async function POST(request: Request): Promise<Response> {
   const input = z.object({ patientId: z.uuid() }).strict().safeParse(await request.json().catch(() => null));
   if (!input.success) return echec("requete-invalide", alexa.format);
   const db = alexaDb(actor);
-  const signal = AbortSignal.any([request.signal, AbortSignal.timeout(180_000)]);
+  // Serial local inference over a long record can exceed one hour on the
+  // supported low-memory PCs. Keep a finite limit and browser cancellation.
+  const signal = AbortSignal.any([request.signal, AbortSignal.timeout(14_400_000)]);
   try {
     const patient = await resolvePatient(db, { patientId: input.data.patientId }, signal);
     if (patient.status !== "resolved") return echec("indisponible", alexa.lectureIndisponible);
-    const context = await buildClinicalContext(db, { patientId: patient.patientId }, { count: 100, purpose: "summary" }, signal);
-    const narrative = await summarizeClinicalContext(context, signal, true);
-    if (!narrative.generated) return echec("analyse-indisponible", narrativeCopy.failed);
+    const context = await buildClinicalContext(db, { patientId: patient.patientId }, { count: 100, purpose: "summary", all:true }, signal);
+    const narrative = await summarizeClinicalCaseContext(context, signal);
+    if (!narrative.generated) return narrative.complete?echec('regle-metier',narrative.text):echec("analyse-indisponible", narrativeCopy.failed);
+    if(!narrative.complete)return echec('analyse-indisponible',narrativeCopy.limited);
     const content = buildCaseSummary(context, patient.identityTokens);
     content.apercu.contexte = [{ texte: narrative.text + (narrative.method === "source_selection" ? " " + narrativeCopy.selected : "") + (narrative.complete ? "" : " " + narrativeCopy.limited), sources: clinicalNarrativeReferences(context,narrative.sourceIds) }];
     if (await readClinicalSourceRevision(db, { patientId: patient.patientId }, signal) !== context.sourceRevision) return echec("contexte-change", alexa.contexteChange);
     signal.throwIfAborted();
     const saved = await db.rpc<Record<string, unknown>>("save_alexa_case_summary", { p_patient_id: patient.patientId, p_content: JSON.stringify(content),
       p_source_state: JSON.stringify({ alexaSourceRevision: context.sourceRevision, alexaNoteAreas: 5, coverage: context.coverage, limited: !narrative.complete, method: narrative.method }),
-      p_model: ALEXA_CONVERSATION_MODEL, p_prompt_version: NARRATIVE_VERSION, p_prompt_hash: NARRATIVE_HASH });
+      p_model: ALEXA_CONVERSATION_MODEL, p_prompt_version: CASE_NARRATIVE_VERSION, p_prompt_hash: CASE_NARRATIVE_HASH });
     if (!saved.ok || !saved.data[0]) return echec("indisponible", alexa.lectureIndisponible);
     const persisted = await db.rpc<Record<string, unknown>>("get_alexa_case_summary", { p_patient_id: patient.patientId });
     if (!persisted.ok || !persisted.data[0]) return echec("indisponible", alexa.lectureIndisponible);

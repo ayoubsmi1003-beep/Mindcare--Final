@@ -16,6 +16,7 @@
 
 import type { NoteSoap } from "./consultations";
 import { db } from "./db";
+import {SESSION_NARRATIVE_VERSION} from '@/shared/alexa/clinical';
 import {
   erreurDepuisEnveloppeEdge,
   logFieldsFor,
@@ -29,7 +30,7 @@ import { validerPreuves, type PreuveConnnaissance } from "@/shared/jarvis/preuve
 
 export interface AnalyseSeance {
   readonly resume?: string | undefined;
-  readonly method?: "reformulated" | "source_selection" | undefined;
+  readonly method?: "reformulated" | "extractive" | "source_selection" | undefined;
   readonly complete?: boolean | undefined;
   readonly noteStructuree: NoteSoap;
   readonly evolution: readonly string[];
@@ -64,7 +65,7 @@ export interface AnalyseSources {
 
 interface AnalyseSeanceRow {
   readonly resume?: string | undefined;
-  readonly method?: "reformulated" | "source_selection" | undefined;
+  readonly method?: "reformulated" | "extractive" | "source_selection" | undefined;
   readonly complete?: boolean | undefined;
   readonly noteStructuree: {
     readonly subjective: string;
@@ -82,6 +83,7 @@ interface AnalyseSeanceRow {
 
 /** La ligne rendue par `app.get_consultation_analysis` (067). */
 interface AnalyseEnregistreeRow {
+  readonly prompt_version?:string;
   readonly id: string;
   readonly version: number;
   readonly content: unknown;
@@ -128,7 +130,7 @@ function lireSourcesEnregistrees(valeur: unknown): AnalyseSources {
  * terminal : on cesse d'attendre, on libère, l'écran propose `Réessayer`
  * (nouveau run, jamais résurrection de l'ancien).
  */
-export const DELAI_ANALYSE_MS = 180_000;
+export const DELAI_ANALYSE_MS = 900_000;
 
 /**
  * Runs actifs par séance — le vol unique d'exécution (§10).
@@ -319,7 +321,7 @@ export async function chargerAnalyse(
   }
 
   const ligne = result.data[0];
-  if (ligne === undefined) return ok(null);
+  if (ligne === undefined || ligne.prompt_version!==SESSION_NARRATIVE_VERSION) return ok(null);
 
   // Le contenu vient de NOTRE porte, mais il a été écrit par un modèle : on le
   // lit avec la même défiance qu'une entrée réseau. Une forme inattendue rend
@@ -335,7 +337,7 @@ export async function chargerAnalyse(
     Array.isArray(v) ? v.filter((x): x is string => typeof x === "string") : [];
 
   return ok({
-    method: c["method"] === "source_selection" ? "source_selection" : c["method"] === "reformulated" ? "reformulated" : undefined,
+    method: c["method"] === "source_selection" ? "source_selection" : c["method"] === "reformulated" ? "reformulated" : c["method"] === "extractive" ? "extractive" : undefined,
     resume: typeof c["resume"] === "string" ? c["resume"] : undefined,
     complete: c["complete"] === true,
     noteStructuree: {

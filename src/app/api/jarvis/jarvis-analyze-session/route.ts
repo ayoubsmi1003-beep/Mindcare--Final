@@ -12,7 +12,10 @@ export async function POST(request: Request): Promise<Response> {
   if (!actor) return echec("non-authentifie", copy.failed);
   const input = z.object({ consultationId: z.uuid() }).strict().safeParse(await request.json().catch(() => null));
   if (!input.success) return echec("requete-invalide", copy.failed);
-  const signal = AbortSignal.any([request.signal, AbortSignal.timeout(180000)]);
+  const signal = AbortSignal.any([request.signal, AbortSignal.timeout(900000)]);
   try { return succes(await generateSessionSummary(alexaDb(actor), input.data.consultationId, signal)); }
-  catch (error) { return error instanceof SessionSummaryError && error.code === "empty" ? echec("regle-metier", copy.noNotes) : error instanceof SessionSummaryError && error.code === "changed" ? echec("contexte-change", copy.changed) : echec("analyse-indisponible", copy.failed); }
+  catch (error) {
+    if(process.env.ALEXA_DEBUG_NARRATIVE==='1')console.warn('[session-summary] terminal',error instanceof SessionSummaryError?error.code:error instanceof Error?error.name:'unknown');
+    return error instanceof SessionSummaryError && error.code === "empty" ? echec("regle-metier", copy.noNotes) : error instanceof SessionSummaryError && error.code === "changed" ? echec("contexte-change", copy.changed) : echec("analyse-indisponible", copy.failed);
+  }
 }

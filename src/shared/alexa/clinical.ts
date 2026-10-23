@@ -1,4 +1,8 @@
 import { z } from "zod";
+import { sessionDetailsSchema } from './session-details';
+
+/** Derived paragraphs must be regenerated after their validation policy changes. */
+export const SESSION_NARRATIVE_VERSION='alexa-narrative-fr-v27';
 
 const id = z.string().uuid();
 const nullableText = z.string().nullable();
@@ -11,8 +15,9 @@ export const clinicalNoteSchema = z.object({
 export const clinicalConsultationSchema = z.object({
   id, startedAt: z.string().datetime({ offset: true }), endedAt: z.string().datetime({ offset: true }).nullable(),
   rawNotes: nullableText.optional(), rawNotesVersion: z.string().optional(),
+  sessionDetails: sessionDetailsSchema.nullable().optional(),
   notes: z.array(clinicalNoteSchema),
-  analysis: z.object({ id, version: z.number().int().positive(), content: z.unknown() }).strict().optional(),
+  analysis: z.object({ id, version: z.number().int().positive(), content: z.unknown(),model:z.string().optional(),promptHash:z.string().optional() }).strict().optional(),
 }).strict();
 const treatmentSnapshotSchema = z.object({
   status: z.enum(["active", "paused", "stopped"]).nullable(), dose: nullableText, doseUnit: nullableText,
@@ -44,6 +49,7 @@ export type ClinicalConsultation = z.infer<typeof clinicalConsultationSchema>;
 export type ClinicalTreatment = z.infer<typeof clinicalTreatmentSchema>;
 export type ConsultationCursor = z.infer<typeof consultationCursorSchema>;
 export interface ClinicalContextRequest {
+  readonly all?: boolean;
   readonly count: number;
   readonly before?: ConsultationCursor;
   /** Inclusive lower bound and exclusive upper bound for a complete consultation window. */

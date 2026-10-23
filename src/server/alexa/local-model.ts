@@ -20,9 +20,9 @@ export const LOCAL_MODEL_PIN = {
   archiveSha256: "1283323272b04cd07905816a597a0da810918102de958f4ff6f7bbaa70ed2efe",
   runtimeManifestSha256: "a57e54357f5ca5a5fa0d70de662a076fc2150232bccd183abaf5d83982694465",
 } as const;
-/** Scale CPU inference to available cores, capped at the measured four-thread point. */
+/** The two-core delivery PC measures 10.4 tokens/s with one thread, versus 0.8 with four. */
 export function localModelThreadCountFor(available: number): number {
-  return Math.max(1, Math.min(4, Math.floor(available)));
+  return available <= 4 ? 1 : Math.max(1, Math.min(4, Math.floor(available)));
 }
 interface LocalRuntimeState {
   child: ChildProcess | null;
@@ -90,10 +90,10 @@ async function prepare(signal: AbortSignal): Promise<void> {
   if (files.length !== 50 || createHash("sha256").update(manifest.join("\n")).digest("hex") !== LOCAL_MODEL_PIN.runtimeManifestSha256)
     throw new Error("LocalModelIntegrity");
   signal.throwIfAborted();
-  const handle = spawn(runtime, ["-m", model, "--host", "127.0.0.1", "--port", "18082", "-c", "4096", "-t", String(localModelThreadCountFor(availableParallelism())), "--batch-size", "128", "--ubatch-size", "128", "--load-mode", "none", "--parallel", "1",
+  const handle = spawn(runtime, ["-m", model, "--host", "127.0.0.1", "--port", "18082", "-c", "4096", "-t", String(localModelThreadCountFor(availableParallelism())), "--gpu-layers", "0", "--batch-size", "128", "--ubatch-size", "128", "--load-mode", "none", "--parallel", "1",
     "--jinja", "--reasoning", "off", "--no-context-shift", "--no-warmup", "--api-key", runtimeState.token, "--no-webui", "--log-disable"],
   { cwd: directory, windowsHide: true, stdio: "ignore",
-    env: { NODE_ENV: "production", SystemRoot: process.env["SystemRoot"] ?? "C:\\Windows", WINDIR: process.env["WINDIR"] ?? "C:\\Windows", OMP_NUM_THREADS: "2" } });
+    env: { NODE_ENV: "production", SystemRoot: process.env["SystemRoot"] ?? "C:\\Windows", WINDIR: process.env["WINDIR"] ?? "C:\\Windows", OMP_NUM_THREADS: String(localModelThreadCountFor(availableParallelism())) } });
   runtimeState.child = handle;
   let failed = false; handle.once("error", () => { failed = true; });
   // Integrity, startup and inference share the caller's bounded deadline.

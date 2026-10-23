@@ -14,6 +14,12 @@ it("builds a bounded tool-free request preserving message roles", () => {
       chat_template_kwargs: { enable_thinking: false } });
   expect(buildLocalRequest(messages)).not.toHaveProperty("tools");
 });
+it('normalizes JavaScript escaped slashes in native schema patterns without changing literal data',()=>{
+  const schema={type:'object',properties:{score:{type:'string',pattern:'^8\\/10$'},literal:{const:{pattern:'^8\\/10$'}},choices:{enum:[{pattern:'^8\\/10$'}]},nested:{type:'array',items:{type:'string',pattern:'^a\\/b$'}}}};
+  const expected={properties:{score:{pattern:'^8/10$'},literal:{const:{pattern:'^8\\/10$'}},choices:{enum:[{pattern:'^8\\/10$'}]},nested:{items:{pattern:'^a/b$'}}}};
+  expect(buildLocalRequest(messages,{jsonSchema:schema})).toMatchObject({response_format:{json_schema:{schema:expected}}});
+  expect(schema.properties.score.pattern).toBe('^8\\/10$');
+});
 it.each([{ value: [] }, { value: [{ role: "tool", content: "SQL" }] }, { value: [{ role: "user", content: "x".repeat(65000) }] }])
 ("rejects invalid input instead of trimming or forwarding it", ({ value }) => {
   expect(() => buildLocalRequest(value)).toThrow("LocalModelInput");
@@ -23,8 +29,8 @@ it("rejects nonfinite or unbounded output budgets", () => {
     expect(() => buildLocalRequest(messages, { maxOutputTokens: value })).toThrow("LocalModelInput");
 });
 it("accepts bounded multi-part inference and rejects invalid timeouts before runtime access", () => {
-  for (const timeoutMs of [90000, 170000, 180000, 240000]) expect(() => buildLocalRequest(messages, { timeoutMs })).not.toThrow();
-  for (const timeoutMs of [NaN, Infinity, 0, -1, 240001]) expect(() => buildLocalRequest(messages, { timeoutMs })).toThrow("LocalModelInput");
+  for (const timeoutMs of [90000, 170000, 180000, 240000, 900000]) expect(() => buildLocalRequest(messages, { timeoutMs })).not.toThrow();
+  for (const timeoutMs of [NaN, Infinity, 0, -1, 900001]) expect(() => buildLocalRequest(messages, { timeoutMs })).toThrow("LocalModelInput");
 });
 it("accepts one complete assistant answer without interpreting it as tools", () => {
   expect(parseLocalAnswer(response("Bonjour."))).toBe("Bonjour.");

@@ -57,14 +57,14 @@ export function MesuresSeance({
         />
         <SelecteurEchelle
           id="mesure-sommeil"
-          libelle="Sommeil"
+          libelle={frConsultationCockpit.sommeil}
           valeur={valeurs.sommeil}
           onChoisir={(v) => onMesurer("sommeil", v)}
           modifiable={modifiable}
         />
         <SelecteurEchelle
           id="mesure-humeur"
-          libelle="Humeur"
+          libelle={frConsultationCockpit.humeur}
           valeur={valeurs.humeur}
           onChoisir={(v) => onMesurer("humeur", v)}
           modifiable={modifiable}

@@ -1,6 +1,8 @@
 // Compléments du cockpit : `fr.ts` reste gelé jusqu'à la découpe Phase 6.
 export const frConsultationCockpit = {
-  mesuresAide: "Curseur ou flèches — les valeurs restent dans cet écran, les notes sont rédigées séparément.",
+  mesuresAide: "Mesures enregistrées avec la séance : 1 = difficulté minimale, 10 = difficulté maximale. Les notes restent séparées.",
+  sommeil: 'Difficultés de sommeil',
+  humeur: 'Humeur dégradée',
   reperes: {
     titre: "Repères pour la consultation",
     aide: "Changements documentés et points à vérifier",

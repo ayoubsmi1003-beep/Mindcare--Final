@@ -16,7 +16,7 @@ export interface LocalTextOptions {
 /** Bounded CPU inference; the caller's abort signal can impose a shorter whole-turn deadline. */
 export function localModelTimeoutMs(options: LocalTextOptions = {}): number {
   const timeout = options.timeoutMs ?? 60000;
-  if (!Number.isFinite(timeout) || timeout < 1 || timeout > 240000) throw new Error("LocalModelInput");
+  if (!Number.isFinite(timeout) || timeout < 1 || timeout > 900000) throw new Error("LocalModelInput");
   return Math.ceil(timeout);
 }
 /** Deliberately excludes exception text, arguments, prompts and source content from operational logs. */
@@ -31,6 +31,16 @@ const message = z.discriminatedUnion("role", [
   z.object({ role: z.literal("assistant"), content: z.string().nullable(), tool_calls: z.array(nativeCall).min(1).max(6).optional() }).strict(),
   z.object({ role: z.literal("tool"), content: z.string().min(1), tool_call_id: z.string().min(1).max(100) }).strict(),
 ]);
+/** b11429 drops a pattern containing JS's optional \/ escape. Keep its equivalent native spelling. */
+function nativeJsonSchema(value:unknown):unknown{
+  if(Array.isArray(value))return value.map(nativeJsonSchema);
+  if(value===null||typeof value!=='object')return value;
+  return Object.fromEntries(Object.entries(value).map(([key,child])=>{
+    if(['const','enum','default','examples'].includes(key))return [key,child];
+    if(key==='pattern'&&typeof child==='string')return [key,child.replace(/(\\+)\//gu,(_match,slashes:string)=>(slashes.length%2?slashes.slice(1):slashes)+'/')];
+    return [key,nativeJsonSchema(child)];
+  }));
+}
 export function buildLocalRequest(messages: unknown, options: LocalTextOptions = {}) {
   const parsed = z.array(message).min(1).max(options.tools ? 24 : 4).safeParse(messages);
   const budget = options.maxOutputTokens ?? 512;
@@ -52,7 +62,7 @@ export function buildLocalRequest(messages: unknown, options: LocalTextOptions =
   return { model: "local", stream: false, temperature: 0, max_tokens: budget,
     reasoning_effort: "none", chat_template_kwargs: { enable_thinking: false }, messages: parsed.data,
     ...(options.tools ? { tools: options.tools, tool_choice: options.toolChoice==="declare_request"?{type:"function",function:{name:"declare_request"}}:options.toolChoice??"auto", parallel_tool_calls: true } : {}),
-    ...(options.jsonSchema ? { response_format: { type: "json_schema", json_schema: { name: "alexa_response", strict: true, schema: options.jsonSchema } } }
+    ...(options.jsonSchema ? { response_format: { type: "json_schema", json_schema: { name: "alexa_response", strict: true, schema: nativeJsonSchema(options.jsonSchema) } } }
       : options.json ? { response_format: { type: "json_object" } } : {}),
   };
 }

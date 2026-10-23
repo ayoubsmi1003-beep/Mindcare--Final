@@ -22,6 +22,7 @@
  * délai et son abandon qu'on mesure, pas un simulacre. Aucun appel
  * fournisseur réel, aucune base.
  */
+import {SESSION_NARRATIVE_VERSION} from '../../src/shared/alexa/clinical';
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
 vi.mock("../../src/services/log", () => ({
@@ -114,8 +115,8 @@ afterEach(() => {
 });
 
 describe("le délai est une borne d'architecture, pas un chiffre inventé", () => {
-  it("DELAI_ANALYSE_MS couvre le démarrage du modèle local borné (180 s)", () => {
-    expect(DELAI_ANALYSE_MS).toBe(180_000);
+  it("DELAI_ANALYSE_MS allows a slow local analysis while remaining cancellable (15 min)", () => {
+    expect(DELAI_ANALYSE_MS).toBe(900_000);
   });
 });
 
@@ -266,6 +267,7 @@ describe("relecture : la portée survit à la persistance (SA-03)", () => {
     const ligne: unknown = {
       id: "a1",
       version: 2,
+      prompt_version: SESSION_NARRATIVE_VERSION,
       content: contenu,
       ...(etat !== undefined && { source_state: etat }),
     };
@@ -289,12 +291,21 @@ describe("relecture : la portée survit à la persistance (SA-03)", () => {
     pointsNonExplores: [],
   };
 
+  it('hides a saved paragraph from an older narrative validation policy',async()=>{
+    const {chargerAnalyse}=await import('../../src/services/jarvis');
+    const port=portLecture(CONTENU,{historique_notes:1});
+    const obsolete:unknown={id:'a-obsolete',version:2,content:CONTENU,prompt_version:'alexa-narrative-fr-v15'};
+    setDbPort({...port,rpc:async<T>()=>ok([obsolete] as readonly T[])});
+    expect(await chargerAnalyse('c-relue')).toEqual(ok(null));
+  });
+
   it("`source_state` objet est relu (2 notes antérieures)", async () => {
     const { chargerAnalyse } = await import("../../src/services/jarvis");
     setDbPort(portLecture(CONTENU, { historique_notes: 2 }));
 
     const relue = await chargerAnalyse("c-relue");
     expect(relue.ok).toBe(true);
+    if(relue.ok)expect(relue.data).not.toBeNull();
     if (!relue.ok || relue.data === null) return;
     expect(relue.data.sources).toEqual({ historiqueNotes: 2 });
   });

@@ -18,8 +18,12 @@ it("treats the gate's explicit null as an unavailable or absent summary without 
   rpc.mockResolvedValue({ ok: true, data: [null] });
   expect(await chargerResumeCas(id)).toEqual({ ok: true, data: { resume: null } });
 });
+it('treats the actual pg scalar-null envelope as an absent summary',async()=>{
+  rpc.mockResolvedValue({ok:true,data:[]});
+  expect(await chargerResumeCas(id)).toEqual({ok:true,data:{resume:null}});
+});
 it("rejects malformed metadata rather than presenting a false empty summary", async () => {
-  for (const data of [[], [{ ...row, aJour: "true" }], [{ ...row, version: -1 }], [{ ...row, content: undefined }]]) {
+  for (const data of [[{ ...row, aJour: "true" }], [{ ...row, version: -1 }], [{ ...row, content: undefined }]]) {
     rpc.mockResolvedValue({ ok: true, data });
     expect((await chargerResumeCas(id)).ok).toBe(false);
   }

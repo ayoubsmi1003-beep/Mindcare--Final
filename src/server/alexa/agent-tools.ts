@@ -2,7 +2,7 @@ import {applicationReadCopy} from "@/i18n/alexa-application";
 import {profileCopy} from "@/i18n/alexa-profile";
 import {readMessageDraft} from "./message-draft";
 import {patientProfileSchema,profileAnswer,profileNeedsClarification} from "./profile-answer";
-import { extractRecurringClinicalTheme, summarizeClinicalConsultations, summarizeClinicalContext, relativeClinicalDate } from "./clinical-narrative";
+import { extractRecurringClinicalTheme, summarizeClinicalConsultations, summarizeClinicalContext, summarizeClinicalCaseContext, relativeClinicalDate } from "./clinical-narrative";
 import { narrativeCopy } from "@/i18n/alexa-narrative";
 import {requestedConsultationCount,requestsOldestConsultations,requestsPatientScope} from "@/shared/alexa/request-plan";
 import {frenchRequestAdmission,frenchRequestedOutputs} from "@/shared/alexa/request-contract";
@@ -11,6 +11,7 @@ import {inferNativeGeneralAlexa,canAnswerGeneralAlexa} from "./model-gateway";
 import {readApplication,readFinanceView,readAppointment} from "./application-reads";
 import {notePageResult} from "./note-pages";
 import {noteReadQuerySchema,noteCursorSchema,noteContinuation,noteQueryGrounded,documentBodySearchRequested} from "@/shared/alexa/note-query";
+import {measureChanges} from '@/shared/alexa/session-details';
 import {clinicalSectionComplete} from "./clinical-coverage";
 import {alexaRecordCopy,frenchAgendaCopy} from "@/i18n/alexa-records";
 import {documentText,issuedDocumentText} from './document-excerpt';
@@ -166,7 +167,26 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
      spec=noteReadQuerySchema.parse({...saved,...noteCursorSchema.parse(previous.next),revision:previous.revision});asOf=z.iso.datetime({offset:true}).parse(previous.asOf);
     }
     if(spec.consultationId&&!input.text.includes(spec.consultationId)&&!input.appContext.page.includes(spec.consultationId)&&!prior.some(r=>r.evidence.some(e=>e.type==="consultation"&&e.id===spec.consultationId)))return failure(call,"needs_input",copy.missing,"consultation-reference-not-verified");
-    const page=await notePageResult(await rpc("query_alexa_note_sections",{p_spec:JSON.stringify(spec),p_as_of:asOf},signal),call.id,spec,asOf);
+    const requested=requestText.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase();
+    if(spec.area==='structured'&&!spec.from&&!spec.to&&!spec.consultationId&&frenchRequestAdmission(requestText,false).unboundedPeriod===true&&/\bmesures\b[^.!?]*\bevolu\w*/u.test(requested)){
+     const context=await buildClinicalContext(db,{patientId:patientId!},{count:100,all:true},signal);
+     const visits=[...new Map([...context.consultations,...(context.currentConsultation?[context.currentConsultation]:[])].map(v=>[v.id,v])).values()].sort((a,b)=>a.startedAt.localeCompare(b.startedAt)||a.id.localeCompare(b.id));
+     const date=(at:string)=>new Intl.DateTimeFormat('fr-FR',{timeZone:'Africa/Algiers'}).format(new Date(at));
+     const lines=visits.slice(1).flatMap((v,index)=>{const before=visits[index]!,changes=measureChanges(before.sessionDetails,v.sessionDetails);return changes.length?[narrativeCopy.comparisonDates(date(before.startedAt),date(v.startedAt))+' '+changes.map(c=>narrativeCopy.measureChange(narrativeCopy.measureLabels[c.key],c.previous,c.current,c.delta)).join(' ')]:[];});
+     const complete=context.coverage.complete&&visits.length>1&&visits.every(v=>v.sessionDetails&&Object.values(v.sessionDetails.mesures).every(value=>value!==null));
+     return {...result,status:complete?'ok':'partial',complete,text:lines.length?narrativeCopy.measuresHistory(visits.length)+' '+lines.join(' '):narrativeCopy.comparisonMissing,
+      evidence:[patientSource(patientId!),{id:call.id,type:'query',label:copy.clinicalRead,version:context.sourceRevision,provenance:{gate:'get_alexa_clinical_context',section:'sessionDetails',consultations:visits.length}},...visits.map(v=>({id:v.id,type:'consultation' as const,label:date(v.startedAt)}))],
+      data:{patientId,sourceRevision:context.sourceRevision,coverage:context.coverage,measureEvolution:visits.map(v=>({consultationId:v.id,startedAt:v.startedAt,sessionDetails:v.sessionDetails??null}))}};
+    }
+    const olderDifficulty=/\bdifficulte\w*\b[^.!?]*\bune ancienne consultation\b/u.test(requested),followUp=spec.area==='plan'&&/\b(?:suivi|suite)(?:\s+\w+){0,2}\s+prevu\w*\b/u.test(requested);
+    if(!spec.consultationId&&!spec.from&&!spec.to&&(olderDifficulty||followUp)){
+     const context=await buildClinicalContext(db,{patientId:patientId!},{count:2},signal);
+     const visits=[...context.consultations,...(context.currentConsultation?[context.currentConsultation]:[])].sort((a,b)=>b.startedAt.localeCompare(a.startedAt)||b.id.localeCompare(a.id));
+     const selected=visits[olderDifficulty?1:0];
+     if(!selected)return {...result,status:'empty',complete:true,text:narrativeCopy.olderSessionMissing,evidence:[patientSource(patientId!),{id:call.id,type:'query',label:copy.clinicalRead,version:context.sourceRevision,provenance:{gate:'get_alexa_clinical_context'}}]};
+     spec={...spec,consultationId:selected.id};
+    }
+    const page=await notePageResult(await rpc("query_alexa_note_sections",{p_spec:JSON.stringify(spec),p_as_of:asOf},signal),call.id,spec,asOf,requestText);
     page.evidence.unshift(patientSource(patientId!));return page;
    }
    if(a["section"]==="profile"){
@@ -176,7 +196,7 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
     result.evidence=[{id:p.id,type:"patient",label:`${p.first_name} ${p.last_name}`}];return result;
    }
    const section=typeof a["section"]==="string"?a["section"]:"history",rangedSummary=section==="summary"&&typeof a["from"]==="string"&&typeof a["to"]==="string";
-   const authorizedContext=await buildClinicalContext(db,{patientId:patientId!},{count:typeof a["count"]==="number"?a["count"]:section==="summary"?100:5,...(rangedSummary?{from:a["from"] as string,to:a["to"] as string}:{})},signal);
+   const authorizedContext=await buildClinicalContext(db,{patientId:patientId!},{count:typeof a["count"]==="number"?a["count"]:section==="summary"?100:5,all:section==='summary'&&!rangedSummary&&!requestedCounts.includes(Number(a['count'])),...(rangedSummary?{from:a["from"] as string,to:a["to"] as string}:{})},signal);
    // These complete recorded arrays are already authorized by the clinical gate. This projection changes no permissions.
    const {currentConsultation:_currentConsultation,...withoutCurrent}=authorizedContext;
    const context:ClinicalContext=rangedSummary?{...withoutCurrent,diagnoses:[],scales:[],treatments:{current:[],history:[],historyComplete:true}}:{...authorizedContext,diagnoses:authorizedContext.diagnoses.filter(d=>(a['diagnosisState']!=='active'||d.resolvedAt===null)&&(a['diagnosisState']!=='resolved'||d.resolvedAt!==null)&&(a['diagnosisRole']!=='primary'||d.primary)&&(a['diagnosisRole']!=='secondary'||!d.primary)),treatments:{...authorizedContext.treatments,current:authorizedContext.treatments.current.filter(t=>!a['treatmentState']||a['treatmentState']==='all'||t.status===a['treatmentState'])}};
@@ -184,6 +204,10 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    const intent=section==="treatments"?"treatments":section==="diagnoses"?"diagnoses":section==="scales"?"scales":section==="current"?"current_consultation":"history";
    const intents=section==="summary"?["diagnoses","treatments","scales","current_consultation","history"] as const:[intent] as const;
    const sentences=intents.flatMap(selected=>localResponse(context,{intent:selected,count:context.consultations.length||1,language},[]));
+   if(section==='treatments'&&/\b(?:chang\w*|modifi\w*|historique)\b/u.test(requestText.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase())){
+    const histories=context.treatments.history.length?context.treatments.history.map(h=>[h]):[[]];
+    for(const history of histories)sentences.push(...localResponse({...context,treatments:{...context.treatments,history}},{intent:'treatment_changes',count:1,language},[]));
+   }
    const common={patientId:context.patientId,sourceRevision:context.sourceRevision};
    result.data=section==="summary"?{...common,summary:{diagnoses:context.diagnoses,treatments:context.treatments,scales:context.scales,currentConsultation:context.currentConsultation??null,consultations:context.consultations,coverage:context.coverage}}:section==="diagnoses"?{...common,diagnoses:context.diagnoses}:section==="scales"?{...common,scales:context.scales}:section==="treatments"?{...common,treatments:context.treatments}:section==="current"?{...common,currentConsultation:context.currentConsultation??null}:{...common,consultations:context.consultations,coverage:context.coverage};
    const evidence=new Map(sentences.flatMap(s=>s.sources).map(source=>[JSON.stringify([source.type,source.id,source.version]),source]));
@@ -198,7 +222,7 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
     const normalizedRequest=requestText.normalize("NFKD").replace(/\p{M}/gu,"").toLowerCase();
     const recurringThemeRequest=/\b(?:theme|motif|element) recurrent\b/u.test(normalizedRequest);
     const narrative = (recurringThemeRequest ? extractRecurringClinicalTheme(context) : null)
-      ?? (rangedSummary?await summarizeClinicalConsultations(context,signal):await summarizeClinicalContext(context, signal, !requestedCounts.includes(Number(a["count"]))));
+      ?? (rangedSummary?await summarizeClinicalConsultations(context,signal):!requestedCounts.includes(Number(a["count"]))?await summarizeClinicalCaseContext(context,signal):await summarizeClinicalContext(context,signal,false));
     summaryComplete=narrative.complete;
     if (!narrative.generated && narrative.complete) return {...result,status:"empty",complete:true,text:narrative.text};
     if (!narrative.generated) return {...result,status:"error",complete:false,text:narrative.text,error:{code:"clinical-synthesis-unavailable",retryable:false}};
@@ -253,6 +277,13 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    if(!input.text.includes(id)&&!input.appContext.page.includes(id)&&!prior.some(r=>r.evidence.some(e=>e.type==="consultation"&&e.id===id)))return failure(call,"needs_input",copy.missing,"consultation-reference-not-verified");
    const result=await readConsultation(call.id,id,spec.view!,patientId??input.appContext.patientId??undefined,spec.textOffset??0,spec.revision,rpc,signal);
    if(result.data&&typeof result.data==="object")result.data={...result.data,asOf};return result;
+  }
+  if(call.name==='query_agenda'&&patientId&&!a['appointmentId']&&!a['from']&&!a['to']&&!a['period']&&/\bprochain rendez[- ]vous\b/u.test(requestText.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase())&&!/\b(?:demain|aujourd.hui|hier|avant|apres|depuis|entre|pendant|semaine|mois|annee)\b|\d{1,2}[-/]\d{1,2}|\b(?:19|20)\d{2}\b/u.test(requestText.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase())){
+   const workspace=z.object({identite:z.object({id:z.uuid()}),agenda:z.object({prochain_rendez_vous:z.object({id:z.uuid()}).nullable()})}).parse(await rpc('get_patient_workspace',{p_id:patientId},signal));
+   if(workspace.identite.id!==patientId)throw new AgentReadError('permission');
+   const source:AlexaSource={id:call.id,type:'query',label:copy.clinicalRead,provenance:{gate:'get_patient_workspace',field:'agenda.prochain_rendez_vous'}};
+   if(!workspace.agenda.prochain_rendez_vous)return {...result,status:'empty',complete:true,text:narrativeCopy.nextAppointmentMissing,evidence:[patientSource(patientId),source],data:{patientId,nextAppointment:null}};
+   const upcoming=await readAppointment(call.id,workspace.agenda.prochain_rendez_vous.id,patientId,rpc,signal);upcoming.evidence.push(source);return upcoming;
   }
   if(call.name==="query_agenda"&&typeof a["appointmentId"]==="string"){
    const id=a["appointmentId"];if(!input.text.includes(id)&&!prior.some(r=>r.evidence.some(e=>e.type==="appointment"&&e.id===id)))return failure(call,"needs_input",copy.missing,"appointment-reference-not-verified");

@@ -30,6 +30,7 @@ import { db } from "./db";
 import { logFieldsFor } from "./errors";
 import { log } from "./log";
 import { err, ok, type Result } from "./result";
+import { sessionDetailsSchema, type SessionDetails } from '@/shared/alexa/session-details';
 
 /** Les deux valeurs de `app.consult_status` (002). Union fermée, comme partout. */
 export type ConsultationStatus = "open" | "closed";
@@ -72,6 +73,7 @@ export interface Note {
 }
 
 export interface Consultation {
+  readonly sessionDetails?: SessionDetails | null;
   readonly id: string;
   readonly status: ConsultationStatus;
   readonly startedAt: string;
@@ -310,7 +312,18 @@ export async function getConsultation(id: string): Promise<Result<Consultation |
     return ok(null);
   }
 
-  return ok(toConsultation(row));
+  const details = await db().rpc<unknown>('get_session_details', {p_id:id});
+  if(!details.ok)return err(details.error);
+  const parsed=sessionDetailsSchema.safeParse(details.data[0]);
+  return ok({...toConsultation(row),sessionDetails:parsed.success?parsed.data:null});
+}
+
+export async function saveSessionDetails(id:string,details:SessionDetails):Promise<Result<boolean>> {
+  const parsed=sessionDetailsSchema.safeParse(details);
+  if(!parsed.success)return err({code:'regle-metier',message:fr.erreurs.inattendu});
+  const result=await db().rpc<unknown>('save_session_details',{p_id:id,p_details:JSON.stringify(parsed.data)});
+  if(!result.ok)return err(result.error);
+  return ok(result.data[0]!==null && result.data[0]!==undefined);
 }
 
 /**

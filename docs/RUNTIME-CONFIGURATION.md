@@ -6,6 +6,8 @@ Sur le PC de développement, les identifiants existants se trouvent dans `G:\Fin
 
 La configuration de développement désigne la base du cabinet `127.0.0.1:55441/mindcare`. Ne pas la remplacer, la réinitialiser ni y injecter des fixtures. Aucune base Alexa d’évaluation n’est conservée comme environnement actif. Toute campagne future doit préparer une base jetable neuve et prouver sa séparation de la base du cabinet avant le premier accès en écriture. Le nettoyage du 21 octobre 2026 a supprimé l’unique patient de démonstration non relié à l’import historique et ses données liées ; les 1 558 identités reliées à l’import ont été conservées. Les deux profils actifs restent le praticien et l’assistant. Ne pas créer d’historique, de note, de traitement ou de rendez-vous clinique pour combler des données absentes.
 
+Le pool serveur accepte l’option facultative `MINDCARE_DATABASE_CONNECT_TIMEOUT_MS`, entre 5 000 et 60 000 ms au démarrage ; une valeur absente ou invalide conserve 5 000 ms. Les lanceurs de la copie d’évaluation isolée positionnent 30 000 ms pour supporter la charge du modèle local sur un PC lent. Ils ne modifient ni `.env`, ni la configuration installée, ni la taille du pool ou les contrôles d’accès.
+
 | Usage Alexa | Définition dans `src/server/alexa/model-policy.ts` |
 |---|---|
 | Raisonnement et orchestration texte | `ALEXA_CONVERSATION_MODEL = MiniCPM-V-4_7-1B-Q4_K_M.gguf`, local uniquement |
@@ -13,7 +15,7 @@ La configuration de développement désigne la base du cabinet `127.0.0.1:55441/
 | Synthèse vocale | `ALEXA_TTS_MODEL = gemini-3.8-flash-tts`, voix `Kore` |
 | Transport Live historique | `ALEXA_LIVE_MODEL = gemini-3.8-live` |
 
-MiniCPM-V 4.7 1B utilise des poids GGUF Q4_K_M épinglés par SHA-256, llama.cpp `b11429`, une seule inférence à la fois et un contexte de 4 096 tokens. Le chemin de cache historique `.cache/alexa/minicpm` est conservé pour compatibilité ; le modèle sélectionné vient de `src/server/alexa/model-policy.ts`. Les modules serveur d’un même processus partagent le processus local et son authentification. Le nombre exact de tokens est vérifié avant génération. Une synthèse trop longue retire des champs entiers et signale la couverture partielle.
+MiniCPM est rétabli sur demande de l’utilisateur avec l’artefact exact de la campagne historique : SHA-256 `588c6c94c82f756b86dba35c42ed9ba9ec187d65824eb52f039c347df563e63d`, llama.cpp `b11429`. Les essais Llama 3.2 1B Q4 et Q8 n’ont pas validé la qualité clinique française et ne sont pas sélectionnés. Le cache `.cache/alexa/minicpm`, l’inférence locale sérialisée et le contexte de 4 096 tokens sont conservés ; le modèle actif vient de `src/server/alexa/model-policy.ts`. Les vérifications SHA-256, les permissions des fichiers et l’authentification locale restent actives. Le nombre exact de tokens est vérifié avant génération ; les résumés complets paginent les consultations et passent par des synthèses intermédiaires lorsque nécessaire. La réussite de la campagne historique ne remplace pas l’acceptation clinique réelle de la version actuelle.
 
 En développement uniquement, `ALEXA_LOCAL_MODEL_ROOT` peut désigner un cache sur SSD avec un chemin local absolu (lettre de lecteur obligatoire, aucun chemin réseau). Les mêmes ACL et SHA-256 restent vérifiés. Une application empaquetée ignore cette option et utilise toujours ses ressources installées protégées.
 

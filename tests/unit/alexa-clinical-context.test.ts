@@ -27,6 +27,17 @@ function port(responses: Record<string, unknown> | ((name: string, args: RpcArgs
 }
 
 describe("ClinicalContextEngine scoped audited reads", () => {
+  it('reads the entire record beyond 100 visits when explicitly requested',async()=>{
+    let offset=0;
+    const rows=Array.from({length:107},(_,i)=>({...consultation(i+1),startedAt:new Date(Date.UTC(2026,8,30)-i*86400000).toISOString(),endedAt:new Date(Date.UTC(2026,8,30,1)-i*86400000).toISOString()}));
+    const f=port((name,args)=>{
+      if(name==='get_patient')return [{id:patientId}];
+      const page=rows.slice(offset,offset+Number(args.p_limit));offset+=page.length;
+      return [payload({consultations:page,coverage:{requested:args.p_limit,returned:page.length,complete:true,hasMore:offset<rows.length,...(offset<rows.length?{next:{startedAt:page.at(-1)!.startedAt,id:page.at(-1)!.id}}:{})}})];
+    });
+    const context=await buildClinicalContext(f.db,{patientId},{count:100,purpose:'summary',all:true});
+    expect(context.consultations).toHaveLength(107);expect(context.coverage).toMatchObject({complete:true,hasMore:false,returned:107});
+  });
   it("reads through the lower boundary of a closed month range and excludes outside consultations", async () => {
     const visit=(index:number,startedAt:string)=>({...consultation(index),startedAt,endedAt:new Date(Date.parse(startedAt)+3600000).toISOString()});
     const pages=[

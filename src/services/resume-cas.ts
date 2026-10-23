@@ -41,7 +41,8 @@ const savedSummary = z.object({
 export async function chargerResumeCas(patientId: string): Promise<Result<{ readonly resume: ResumeDernier | null }>> {
   const result = await db().rpc<unknown>("get_alexa_case_summary", { p_patient_id: patientId });
   if (!result.ok) return err(result.error);
-  if (result.data[0] === null) return ok({ resume: null });
+  // pgPort unwraps a scalar SQL NULL to []; both supported adapters mean absent.
+  if (result.data[0] === null || result.data[0] === undefined) return ok({ resume: null });
   const parsed = savedSummary.safeParse(result.data[0]);
   if (!parsed.success) return err({ code: "indisponible", message: alexa.lectureIndisponible, context: "alexa.summary.read" });
   return ok({ resume: { ...versResumeDernier(parsed.data), aJour: parsed.data.aJour } });

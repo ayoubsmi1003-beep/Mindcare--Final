@@ -3,6 +3,19 @@ import {parsePatientMention} from "./patient-mention";
 import type {RequestPart,SupportedCondition} from './agent';
 const fold=(value:string)=>value.normalize('NFKD').replace(/\p{M}/gu,'').replace(/[’‘]/gu,"'").toLocaleLowerCase();
 const frenchMonths=['janvier','fevrier','mars','avril','mai','juin','juillet','aout','septembre','octobre','novembre','decembre'] as const;
+/** One explicit civil date only; comparisons, open ranges and invalid dates stay unresolved. */
+export function explicitFrenchDayRange(text:string):{from:string;to:string}|null{
+ const plain=fold(text);
+ if(/\b(?:depuis|avant|apres|jusqu\w*|entre|a partir)\b/u.test(plain))return null;
+ const numeric=[...plain.matchAll(/(?<!\d)(\d{1,2})\/(\d{1,2})\/((?:19|20)\d{2})(?!\d)/gu)];
+ const named=[...plain.matchAll(new RegExp(`\\b(\\d{1,2})\\s+(${frenchMonths.join('|')})\\s+((?:19|20)\\d{2})\\b`,'gu'))];
+ if(numeric.length+named.length!==1)return null;
+ const match=numeric[0]??named[0]!,day=Number(match[1]),month=numeric.length?Number(match[2]):frenchMonths.indexOf(match[2] as typeof frenchMonths[number])+1,year=Number(match[3]);
+ const date=new Date(Date.UTC(year,month-1,day));
+ if(date.getUTCFullYear()!==year||date.getUTCMonth()!==month-1||date.getUTCDate()!==day)return null;
+ const from=date.toISOString().slice(0,10)+'T00:00:00+01:00';date.setUTCDate(date.getUTCDate()+1);
+ return {from,to:date.toISOString().slice(0,10)+'T00:00:00+01:00'};
+}
 /** Closed full-month ranges only; missing years and cross-year ambiguity stay on the model path. */
 export function explicitFrenchMonthRange(text:string):{from:string;to:string}|null{
  const plain=fold(text),month=frenchMonths.join('|'),pattern=new RegExp(`(?:\\bentre\\s+|\\bde\\s+|d')(${month})\\s+(?:a|et|jusqu(?:a|au)?)\\s+(${month})\\s+((?:19|20)\\d{2})\\b`,'gu');
@@ -183,15 +196,18 @@ function frenchReadTargets(text:string):FrenchReadTarget[]{
  }
  const periodText=mention.status==='named'?plain.replace(fold(mention.name),''):plain;
  const monthRange=explicitFrenchMonthRange(periodText);
+ const dayRange=explicitFrenchDayRange(periodText);
  const unboundedPeriod=!/(?<![\p{L}\p{N}_-])(?:19|20)\d{2}(?![\p{L}\p{N}_-])|(?<![\p{L}\p{N}_-])\d{1,4}[-/]\d{1,2}[-/]\d{1,4}(?![\p{L}\p{N}_-])|\ble\s+\d{1,2}\b|\b(?:depuis|entre|avant|apres|jusqu\w*|pendant|derni\w*|preced\w*|prochain\w*|mois|semaines?|annees?|jours?|janvier|fevrier|mars|avril|mai|juin|juillet|aout|septembre|octobre|novembre|decembre|aujourd.hui|hier|demain|dates?|periode)\b/u.test(periodText);
  const knowledge=/\b(?:dsm(?:\s*[- ]?5)?|cim(?:\s*[- ]?11)?|icd(?:\s*[- ]?11)?|taylor|maudsley|stahl|selon (?:la|le|les) (?:reference|livre|ouvrage|manuel)|dans (?:le|les) livres?)\b/u.test(plain);
  if(knowledge)add({tool:'search_knowledge'});
  if(/\b(?:agenda|rendez[- ]?vous|rdv)\b/u.test(plain)&&/\b(?:montre|affich|liste|donne|combien|nombre|prochain|demain|aujourd.hui|semaine|mois|jour|agenda|rendez[- ]?vous|rdv)\b/u.test(plain))add({tool:'query_agenda'});
- const summaryStyle=/\b(?:resum\w*|synthes\w*|en bref|theme recurrent|motif recurrent|element recurrent)\b/u.test(plain)&&!/\b(?:mot pour mot|texte integral|citation exacte|recopie)\b/u.test(plain);
- const notes=/\b(?:notes?|subjecti(?:f|fs|ve|ves)|objecti(?:f|fs|ve|ves)|conduites? a tenir|texte integral|soap|amendements?|rectificatifs?)\b/u.test(plain)||(/\bevaluations?\b/u.test(plain)&&/\bconsult\w*/u.test(plain)&&!/psychometri/u.test(plain));
- const areas=[['working',/\b(?:travail|brut|brute|bruts|brutes)\b/u],['subjective',/\bsubjecti(?:f|fs|ve|ves)\b/u],['objective',/\bobjecti(?:f|fs|ve|ves)\b/u],['assessment',/\bevaluations?\b/u],['plan',/\bconduites? a tenir\b/u],['amendment',/\b(?:amendements?|rectificatifs?)\b/u],['structured',/\bstructurees?\b/u]] as const;
- const requestedAreas=areas.filter(([,pattern])=>pattern.test(plain)).map(([area])=>area);
- const summaryRequested=summaryStyle&&(anchor||notes||/\b(?:consult\w*|seances?|cas)\b/u.test(plain))&&!knowledge&&requestedAreas.length===0;
+ const summaryStyle=/\b(?:resum\w*|synthes\w*|chang\w*|compar\w*|en bref|theme recurrent|motif recurrent|element recurrent)\b/u.test(plain)&&!/\b(?:mot pour mot|texte integral|citation exacte|recopie)\b/u.test(plain);
+ const olderDifficulty=/\bdifficulte\w*\b[^.!?]*\bune ancienne consultation\b/u.test(plain);
+ const notes=olderDifficulty||/\b(?:notes?|focus|mesures|subjecti(?:f|fs|ve|ves)|objecti(?:f|fs|ve|ves)|conduites? a tenir|texte integral|soap|amendements?|rectificatifs?)\b/u.test(plain)||(/\b(?:suivi|suite)(?:\s+\w+){0,2}\s+prevu\w*\b/u.test(plain))||(/\bevaluations?\b/u.test(plain)&&/\bconsult\w*/u.test(plain)&&!/psychometri/u.test(plain));
+ const areas=[['working',/\b(?:travail|brut|brute|bruts|brutes)\b/u],['subjective',/\bsubjecti(?:f|fs|ve|ves)\b/u],['objective',/\bobjecti(?:f|fs|ve|ves)\b/u],['assessment',/\bevaluations?\b/u],['plan',/\bconduites? a tenir\b|\b(?:suivi|suite)(?:\s+\w+){0,2}\s+prevu\w*\b/u],['amendment',/\b(?:amendements?|rectificatifs?)\b/u],['structured',/\b(?:structurees?|focus|mesures)\b/u]] as const;
+ const requestedAreas=olderDifficulty?['subjective' as const]:areas.filter(([,pattern])=>pattern.test(plain)).map(([area])=>area);
+ const treatmentOnly=/\b(?:traitements?|medicaments?|prescriptions?)\b/u.test(plain)&&!/\b(?:consult\w*|seances?|parcours|cas)\b/u.test(plain);
+ const summaryRequested=summaryStyle&&!treatmentOnly&&(anchor||notes||/\b(?:consult\w*|seances?|cas)\b/u.test(plain))&&!knowledge&&requestedAreas.length===0;
  const noteArea=requestedAreas.length===1?requestedAreas[0]:undefined;
  const queryMatch=text.match(/(?:\bmot|\bexpression|\bphrase|\bcode|\br[eé]f[eé]rence|\br[eé]p[èe]re)\s+[«“"]?(.+?)[»”"]?(?=\s+dans\b|$)/iu);
  const noteQuery=queryMatch?.[1]?.replace(/[»”"?.!]+$/u,'').trim();
@@ -224,7 +240,7 @@ function frenchReadTargets(text:string):FrenchReadTarget[]{
   const diagnosisStates=[...(/\bactif\w*\b/u.test(plain)?['active' as const]:[]),...(/\bresolu\w*\b/u.test(plain)?['resolved' as const]:[])];
   const diagnosisRoles=[...(/\bprincipa(?:l|le|ux|les)\b/u.test(plain)?['primary' as const]:[]),...(/\bsecondair\w*\b/u.test(plain)?['secondary' as const]:[])];
   const treatmentStates=[...(/\bactif\w*\b/u.test(plain)?['active' as const]:[]),...(/\b(?:pause|suspendu\w*)\b/u.test(plain)?['paused' as const]:[]),...(/\barrete\w*\b/u.test(plain)?['stopped' as const]:[])];
-  if(patientSection)add({tool:'get_patient_context',patientSection,unboundedPeriod,...(patientSection==='summary'&&monthRange?monthRange:{}),...(['summary','history'].includes(patientSection)&&!requestsOldestConsultations(text)&&requestedConsultationCount(text)!==null?{consultationCount:requestedConsultationCount(text)!}:{}),...(patientSection==='diagnoses'&&diagnosisStates.length===1?{diagnosisState:diagnosisStates[0]}:{}),...(patientSection==='diagnoses'&&diagnosisRoles.length===1?{diagnosisRole:diagnosisRoles[0]}:{}),...(patientSection==='treatments'&&treatmentStates.length===1?{treatmentState:treatmentStates[0]}:{}),...(patientSection==='notes'&&requestedConsultationStatus?{consultationStatus:requestedConsultationStatus}:{}),...(patientSection==='notes'&&noteArea?{noteArea}:{}),...(patientSection==='notes'&&noteQuery?{noteQuery}:{})});
+  if(patientSection)add({tool:'get_patient_context',patientSection,unboundedPeriod,...(patientSection==='summary'&&monthRange?monthRange:{}),...(patientSection==='notes'&&dayRange?dayRange:{}),...(['summary','history'].includes(patientSection)&&!requestsOldestConsultations(text)&&requestedConsultationCount(text)!==null?{consultationCount:requestedConsultationCount(text)!}:{}),...(patientSection==='diagnoses'&&diagnosisStates.length===1?{diagnosisState:diagnosisStates[0]}:{}),...(patientSection==='diagnoses'&&diagnosisRoles.length===1?{diagnosisRole:diagnosisRoles[0]}:{}),...(patientSection==='treatments'&&treatmentStates.length===1?{treatmentState:treatmentStates[0]}:{}),...(patientSection==='notes'&&requestedConsultationStatus?{consultationStatus:requestedConsultationStatus}:{}),...(patientSection==='notes'&&noteArea?{noteArea}:{}),...(patientSection==='notes'&&noteQuery?{noteQuery}:{})});
  }
  const patientQuery=/\b(?:patients|dossiers|patientele)\b/u.test(plain)&&(/\b(?:combien|nombre|total|compt\w*|liste\w*|lesquels|lesquelles|trouve\w*|recherch\w*|identifi\w*|actifs?|inactifs?|archives?|mineurs?|adultes?|enfants?|sans|aucun\w*|manquant\w*|impayes?|soldes?|dettes?)\b/u.test(plain));
  if(patientQuery)add({tool:'query_patients'});
@@ -277,6 +293,10 @@ export function constrainCompoundDeclaration(parts:RequestPart[],contract:French
 
 /** Counts explicit coordinated application requests only; it grants no domain authority or business action. */
 export function frenchRequestedOutputs(text:string):string[]|null{
+ const treatmentSuffix=/\bet\s+quels?\s+changements?\s+(?:sont\s+)?(?:document[eé]s|enregistr[eé]s)\s*[?!.]*$/iu.exec(text);
+ if(treatmentSuffix){const head=text.slice(0,treatmentSuffix.index),targets=frenchReadTargets(head);if(targets.length===1&&targets[0]?.patientSection==='treatments'&&!/\b(?:et|puis)\b|[;\n]/iu.test(head))return null;}
+ const statusSuffix=/\bet\s+quels?\s+sont\s+(?:leurs?|les)\s+statuts?\s*[?!.]*$/iu.exec(text);
+ if(statusSuffix){const head=text.slice(0,statusSuffix.index),targets=frenchReadTargets(head);if(targets.length===1&&targets[0]?.tool==='query_agenda'&&!/\b(?:et|puis)\b|[;\n]/iu.test(head))return null;}
  if(!frenchReadTargets(text).length&&!preparationTarget(text))return null;
  const markers=[...text.matchAll(/(?:^|[,;]\s*|\b(?:et|puis)\s+)((?:affich|montr|trouv|rep[èe]r|cherch|recherch|identifi|r[ée]sum|pr[ée]par|compt|donn|lis|lire|ouvr|compar|expliqu|cr[ée]|ajout|enregistr|modifi|annul|supprim|sign|encaiss|d[ée]pla|r[ée]dig|r[èe]gl)\p{L}*)\b/giu)];
  if(markers.length>=2&&markers.length<=12&&markers[0]!.index===0)return markers.map((match,index)=>text.slice(match.index+match[0].length-match[1]!.length,markers[index+1]?.index??text.length).replace(/[\s,;]+$/u,'').trim());
@@ -338,7 +358,7 @@ export function frenchReadArgumentBindings(scope:FrenchRequestAdmission,tool:str
  const values:Record<string,string|number>={};
  if(tool==='navigate'&&scope.navigationTarget)values['target']=scope.navigationTarget;
  if(tool==='prepare_action'){if(scope.preparationAction)values['action']=scope.preparationAction;if(scope.preparationDocumentType)values['documentType']=scope.preparationDocumentType;}
- if(tool==='get_patient_context'&&scope.patientSection){values['section']=scope.patientSection;if(scope.consultationCount!==undefined)values['count']=scope.consultationCount;if(scope.diagnosisState)values['diagnosisState']=scope.diagnosisState;if(scope.diagnosisRole)values['diagnosisRole']=scope.diagnosisRole;if(scope.treatmentState)values['treatmentState']=scope.treatmentState;if(scope.patientSection==='summary'&&scope.from&&scope.to){values['from']=scope.from;values['to']=scope.to;}if(scope.patientSection==='notes'){if(scope.noteArea)values['area']=scope.noteArea;else if(scope.noteQuery)values['area']='all';if(scope.noteQuery)values['query']=scope.noteQuery;if(scope.consultationStatus)values['status']=scope.consultationStatus;}}
+ if(tool==='get_patient_context'&&scope.patientSection){values['section']=scope.patientSection;if(scope.consultationCount!==undefined)values['count']=scope.consultationCount;if(scope.diagnosisState)values['diagnosisState']=scope.diagnosisState;if(scope.diagnosisRole)values['diagnosisRole']=scope.diagnosisRole;if(scope.treatmentState)values['treatmentState']=scope.treatmentState;if(['summary','notes'].includes(scope.patientSection)&&scope.from&&scope.to){values['from']=scope.from;values['to']=scope.to;}if(scope.patientSection==='notes'){if(scope.noteArea)values['area']=scope.noteArea;else if(scope.noteQuery)values['area']='all';if(scope.noteQuery)values['query']=scope.noteQuery;if(scope.consultationStatus)values['status']=scope.consultationStatus;}}
  if(tool==='query_consultations'){if(scope.consultationMode)values['mode']=scope.consultationMode;if(scope.consultationStatus)values['status']=scope.consultationStatus;}
  if(tool==='query_finance'&&scope.financeMode)values['mode']=scope.financeMode;
  if(tool==='query_app'&&scope.applicationView){values['view']=scope.applicationView;if(scope.messageKind)values['motif']=scope.messageKind;}

@@ -123,7 +123,9 @@ export function obtenirPool(): Pool {
   }
 
   const url = lireUrl(); const target = new URL(url); console.warn("[db-target]", { host: target.hostname, port: target.port, pid: process.pid });
-  const cree = new Pool({ ...REGLAGES, connectionString: url });
+  const configuredWait=Number(process.env.MINDCARE_DATABASE_CONNECT_TIMEOUT_MS);
+  const connectionTimeoutMillis=Number.isInteger(configuredWait)&&configuredWait>=5_000&&configuredWait<=60_000?configuredWait:REGLAGES.connectionTimeoutMillis;
+  const cree = new Pool({ ...REGLAGES, connectionTimeoutMillis, connectionString: url });
 
   /**
    * Une erreur sur une connexion INACTIVE (coupure réseau, redémarrage du

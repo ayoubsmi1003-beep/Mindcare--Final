@@ -112,12 +112,14 @@ import {
   noteEstVide,
   saveNote,
   saveRawNotes,
+  saveSessionDetails,
   signNote,
   tempsRestantAvantVerrou,
   type Amendment,
   type ChampSoap,
   type Consultation,
 } from "@/services/consultations";
+import { emptySessionDetails, type SessionDetails } from '@/shared/alexa/session-details';
 import { cleConfirmationApresSeance, enchainerApresSeance } from "@/services/apres-seance";
 import {
   BoutonDictee,
@@ -558,6 +560,9 @@ export default function PageConsultation(): React.JSX.Element {
         // signature ou un amendement, on recharge la séance sans toucher aux
         // champs : la praticienne peut avoir continué à écrire entre-temps.
         if (avecSaisies) {
+          const details=result.data.sessionDetails ?? emptySessionDetails();
+          detailsRef.current=details;
+          setFocusSelection(details.focus);setFocusLibre(details.focusLibre);setMesures(details.mesures);
           setBrut(result.data.rawNotes ?? "");
           // ⚠️ L'ANALYSE SE RELIT, ELLE NE SE REFAIT PAS. Avant 067 elle ne
           // vivait que dans cet état : rouvrir la consultation ne montrait
@@ -782,7 +787,7 @@ export default function PageConsultation(): React.JSX.Element {
         return false;
       }
       setEtatSoap("enregistre");
-      return true;
+      return await pendingDetails.current;
     }
 
     const r = await saveNote(id, complet);
@@ -792,7 +797,7 @@ export default function PageConsultation(): React.JSX.Element {
       return false;
     }
     setEtatSoap("enregistre");
-    return true;
+    return await pendingDetails.current;
   }
 
   function signer(): void {
@@ -982,6 +987,7 @@ export default function PageConsultation(): React.JSX.Element {
         if (!await viderLesAttentes()) { setEnAnalyse(false); return; }
       }
       if (controleur.signal.aborted) return;
+      if(!await pendingDetails.current){setEnAnalyse(false);return;}
       return analyzeSession(id, controleur.signal);
     })().then((result) => {
       if (!result) return;
@@ -1172,9 +1178,19 @@ export default function PageConsultation(): React.JSX.Element {
 
   // ── COCKPIT — état local, aucune lecture ─────────────────────────────────
   //
-  // `focusSelection`/`focusLibre` meurent avec l'écran : ce sont des aides de
-  // saisie, pas du dossier. Seule la préférence du rail survit (préférence
-  // d'affichage, comme un tiroir).
+  // Cockpit values persist separately from the five authored notes.
+  const detailsRef=useRef<SessionDetails>(emptySessionDetails());
+  const pendingDetails=useRef<Promise<boolean>>(Promise.resolve(true));
+  function enregistrerDetails(patch:Partial<SessionDetails>):void {
+    if(!noteModifiable || seanceClose || envoi)return;
+    const next={...detailsRef.current,...patch};detailsRef.current=next;
+    setEtatSoap('encours');
+    pendingDetails.current=pendingDetails.current.then(async()=>{
+      const r=await saveSessionDetails(id,next);
+      const saved=r.ok&&r.data;setEtatSoap(saved?'enregistre':'echec');
+      return saved;
+    }).catch(()=>{setEtatSoap('echec');return false;});
+  }
   const [focusSelection, setFocusSelection] = useState<readonly string[]>([]);
   const [focusLibre, setFocusLibre] = useState("");
   // Mesures 1–10 conservées dans cet écran, indépendantes des notes libres.
@@ -1258,11 +1274,12 @@ export default function PageConsultation(): React.JSX.Element {
   function appliquerMesure(cle: CleMesure, valeur: number): void {
     if (!noteModifiable || seanceClose) return;
     setMesures((m) => ({ ...m, [cle]: valeur }));
+    enregistrerDetails({mesures:{...detailsRef.current.mesures,[cle]:valeur}});
   }
 
   function enregistrerMaintenant(): void {
-    void viderLesAttentes().then((pret) => {
-      if (pret) setConfirmation(fr.feedback.enregistre);
+    void Promise.all([viderLesAttentes(),pendingDetails.current]).then(([pret,details]) => {
+      if (pret && details) setConfirmation(fr.feedback.enregistre);
     });
   }
 
@@ -1377,21 +1394,21 @@ export default function PageConsultation(): React.JSX.Element {
               </>
             )}
 
-            {noteModifiable && !seanceClose ? (
-              <>
+            {(noteModifiable && !seanceClose) || seance?.sessionDetails ? (
+              <fieldset disabled={!noteModifiable || seanceClose || envoi} className="flex min-w-0 flex-col gap-5">
                 <MesuresSeance valeurs={mesures} onMesurer={appliquerMesure} modifiable={noteModifiable && !seanceClose} />
                 <FocusSeance
                   options={fr.consultation.cockpit.focusOptions.filter(
                     (o) => o !== "Anxiété" && o !== "Sommeil" && o !== "Humeur",
                   )}
                   selection={focusSelection}
-                  onChanger={setFocusSelection}
+                  onChanger={(focus)=>{setFocusSelection(focus);enregistrerDetails({focus:[...focus]});}}
                   libre={focusLibre}
-                  onLibre={setFocusLibre}
+                  onLibre={(focusLibre)=>{setFocusLibre(focusLibre);enregistrerDetails({focusLibre});}}
                   onAppliquer={appliquerFocusSelection}
                   peutAppliquer={focusSelection.length > 0 || focusLibre.trim() !== ""}
                 />
-              </>
+              </fieldset>
             ) : null}
 
             <SectionPliable
@@ -1715,7 +1732,7 @@ export default function PageConsultation(): React.JSX.Element {
                         seules notes du jour, ou avec N notes antérieures. */}
                     {analyse.resume ? <>
                       <p className="font-ui text-body leading-relaxed text-ink-900">{analyse.resume}</p>
-                      <p className="font-ui text-label text-ink-500">{narrativeCopy.draft}{analyse.method === "source_selection" ? " " + narrativeCopy.selected : ""}{analyse.complete === false ? " " + narrativeCopy.limited : ""}</p>
+                      <p className="font-ui text-label text-ink-500">{narrativeCopy.draft}{(analyse.method === "source_selection" || analyse.method === "extractive") ? " " + narrativeCopy.selected : ""}{analyse.complete === false ? " " + narrativeCopy.limited : ""}</p>
                     </> : <PanneauInfo>{libelleSourcesAnalyse(analyse.sources.historiqueNotes)}</PanneauInfo>}
                     <details open={analyse.resume ? undefined : true}>
                       <summary className="cursor-pointer font-ui text-label text-ink-500">{narrativeCopy.details}</summary>

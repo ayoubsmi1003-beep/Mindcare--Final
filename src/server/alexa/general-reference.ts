@@ -75,7 +75,7 @@ function normalize(value: string): string {
   return value.normalize("NFKD").replace(/\p{M}/gu, "").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim();
 }
 
-/** Retrieves only a uniquely matched local fact card; unknown questions stay with MiniCPM. */
+/** Retrieves only a uniquely matched local fact card; unknown questions stay with the selected local model. */
 export function findVerifiedPublicFact(question: string): PublicFact | null {
   const normalized = ` ${normalize(question)} `;
   const matches = facts.filter(fact => fact.match.every(group => group.some(alias => normalized.includes(` ${normalize(alias)} `))));

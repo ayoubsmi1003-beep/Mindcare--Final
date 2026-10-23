@@ -42,8 +42,9 @@ it('includes the current consultation inside the requested last-N visits rather 
  const context:ClinicalContext={patientId:'a3000000-0000-4000-8000-000000000001',currentConsultation:current,consultations:[last,old],diagnoses:[],scales:[],treatments:{current:[],history:[],historyComplete:true},sourceRevision:'a'.repeat(64),coverage:{requested:2,returned:2,complete:true,hasMore:false}};
  vi.mocked(inferLocalText).mockImplementation(async messages=>{
   const body=JSON.parse(String(messages[1]!.content));
-  expect(body.sources.map((s:{id:string})=>s.id)).toEqual([current.id+':0',last.id+':0']);
-  const s=body.sources[0];return JSON.stringify({sentences:[{text:s.text,evidence:[{id:s.id,quote:s.text}]}]});
+  expect(body.sources.map((s:{id:string})=>s.id)).toEqual(['s1','s2']);
+  expect(JSON.stringify(body)).not.toContain(old.rawNotes);
+  return JSON.stringify({sentences:[{text:'Observation actuelle consignée. Observation récente consignée.',evidence:body.sources.map((s:{id:string},i:number)=>({id:s.id,quote:i===0?current.rawNotes:last.rawNotes}))}]});
  });
  const r=await summarizeClinicalContext(context,new AbortController().signal,false);
  expect(r.generated).toBe(true);expect(r.text).not.toContain(old.rawNotes);
