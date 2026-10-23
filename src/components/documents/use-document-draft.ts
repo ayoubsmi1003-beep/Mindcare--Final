@@ -68,7 +68,11 @@ export function useDocumentDraft(id:string|null){
  useEffect(()=>{const guard=(e:BeforeUnloadEvent)=>{if(stateRef.current.edit>stateRef.current.saved){e.preventDefault();e.returnValue=t.unsavedLeave;}};window.addEventListener("beforeunload",guard);return()=>window.removeEventListener("beforeunload",guard);},[]);
 
  const isCurrent=useCallback((draftId:string,revision:number)=>current.current?.id===draftId&&current.current.revision===revision&&stateRef.current.edit===stateRef.current.saved&&!invalid.current,[]);
- return {draft,error,state,recover,invalidContent:invalid.current,rejectContent:(message:string)=>{invalid.current=true;apply({type:"edit"});setError(message);},isCurrent,dirty:state.edit>state.saved,save,flush,setContent:(content:DocumentContent)=>setValue({content}),setVariables:(variables:Variables)=>setValue({variables}),setDate:(documentDate:string)=>setValue({documentDate}),saveLabel:state.conflict?t.conflict:state.saving!==null?t.saving:state.edit>state.saved?t.dirty:t.saved};
+ const setContent=useCallback((content:DocumentContent)=>setValue({content}),[setValue]);
+ const setVariables=useCallback((variables:Variables)=>setValue({variables}),[setValue]);
+ const setDate=useCallback((documentDate:string)=>setValue({documentDate}),[setValue]);
+ const setContentAndVariables=useCallback((content:DocumentContent,variables:Variables)=>setValue({content,variables}),[setValue]);
+ return {draft,error,state,recover,invalidContent:invalid.current,rejectContent:(message:string)=>{invalid.current=true;apply({type:"edit"});setError(message);},isCurrent,dirty:state.edit>state.saved,save,flush,setContent,setVariables,setDate,setContentAndVariables,saveLabel:state.conflict?t.conflict:state.saving!==null?t.saving:state.edit>state.saved?t.dirty:t.saved};
 
 }
 

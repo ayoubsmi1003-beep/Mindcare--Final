@@ -25,6 +25,7 @@ SELECT set_config('task.issue_draft',(:'created'::jsonb->>'id'),true);
 SELECT app.preview_editable_document_draft(current_setting('task.issue_draft')::uuid,1) AS preview \gset
 SELECT pg_temp.check_doc((:'preview'::jsonb#>>'{readiness,canIssue}')::boolean,'ready preview');
 SELECT pg_temp.check_doc(:'preview'::jsonb->>'html' LIKE '%DocumentTest%' AND :'preview'::jsonb->>'html' LIKE '%07/10/2026%','actual patient body before issue');
+SELECT pg_temp.check_doc(:'preview'::jsonb->>'html' NOT LIKE '%N° d%Ordre%','draft preview omits the order number instead of showing a dash');
 SELECT jsonb_build_object('contentHash',:'preview'::jsonb->>'contentHash','rendererVersion','v1','pages','[[{"path":[0],"from":0,"to":30}]]'::jsonb) AS manifest \gset
 SELECT pg_temp.check_doc(app.issue_editable_document_draft(current_setting('task.issue_draft')::uuid,1,'bad',:'preview'::jsonb->>'identityVersion',:'manifest')->>'reason'='preview-stale','stale hash refused');
 -- A manifest cannot consume a number if its coverage is invalid.
@@ -39,6 +40,7 @@ UPDATE app.profiles SET order_number='TEST-01' WHERE id='d1000000-0000-4000-8000
 SET LOCAL ROLE authenticated;
 SELECT app.issue_editable_document_draft(current_setting('task.issue_draft')::uuid,1,:'preview'::jsonb->>'contentHash',:'preview'::jsonb->>'identityVersion',:'manifest') AS issued \gset
 SELECT pg_temp.check_doc(:'issued'::jsonb->>'documentId' IS NOT NULL,'issue persisted');
+SELECT pg_temp.check_doc(:'issued'::jsonb->>'html' LIKE '%N° d%Ordre : DOC-%','issued html carries the real order number');
 SELECT pg_temp.check_doc(app.issue_editable_document_draft(current_setting('task.issue_draft')::uuid,1,:'preview'::jsonb->>'contentHash',:'preview'::jsonb->>'identityVersion',:'manifest')->>'documentId'=:'issued'::jsonb->>'documentId','retry exact same piece');
 SELECT pg_temp.check_doc(app.verify_document_hash((:'issued'::jsonb->>'documentId')::uuid),'issued HTML hash');
 SELECT app.update_document_order_number('TEST-ORDER-EDIT');

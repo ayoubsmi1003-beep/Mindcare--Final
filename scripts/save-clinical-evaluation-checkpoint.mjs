@@ -21,22 +21,22 @@ run('docker',['exec',isolation.target,'pg_restore','--list',dump]);
 run('docker',['cp',`${isolation.target}:${dump}`,path.join(destination,'evaluation.dump')]);
 run('docker',['exec',isolation.target,'pg_dumpall','-U','postgres','--roles-only','-f',roles]);
 run('docker',['cp',`${isolation.target}:${roles}`,path.join(destination,'roles.sql')]);
-// Exercise the new archive in a fresh disposable database. Compare all user
-// table row counts; the archive digest below also verifies the copied bytes.
+// Exercise the new archive in a fresh disposable database. Record its counts
+// separately: live operational tables can change after pg_dump's snapshot.
 const tableQueries=run('docker',['exec',isolation.target,'psql','-X','-U','postgres','-d',isolation.database,'-At','-c',"SELECT format('SELECT %L AS relation, count(*)::bigint AS rows FROM %I.%I',schemaname||'.'||tablename,schemaname,tablename) FROM pg_tables WHERE schemaname NOT IN ('pg_catalog','information_schema') AND schemaname NOT LIKE 'pg_%' ORDER BY schemaname,tablename;"]).trim().split('\n').filter(Boolean);
 if(!tableQueries.length)throw Error('CheckpointTablesMissing');
 const countsSql=`SELECT coalesce(jsonb_agg(to_jsonb(t) ORDER BY relation),'[]') FROM (${tableQueries.join(' UNION ALL ')}) t;`;
 const counts=database=>run('docker',['exec',isolation.target,'psql','-X','-U','postgres','-d',database,'-At','-c',countsSql]).trim();
-const sourceCounts=counts(isolation.database),verificationDatabase=`alexa_checkpoint_verify_${Date.now()}`;
-let created=false;
+const verificationDatabase=`alexa_checkpoint_verify_${Date.now()}`;
+let created=false,restoredCounts;
 try{
   run('docker',['exec',isolation.target,'createdb','-U','postgres',verificationDatabase]);created=true;
   run('docker',['exec',isolation.target,'pg_restore','-U','postgres','--exit-on-error','-d',verificationDatabase,dump]);
-  if(counts(verificationDatabase)!==sourceCounts)throw Error('CheckpointRestoredCountsMismatch');
+  restoredCounts=counts(verificationDatabase);
 }finally{
   if(created)run('docker',['exec',isolation.target,'dropdb','-U','postgres',verificationDatabase]);
 }
-writeFileSync(path.join(destination,'restored-table-counts.json'),sourceCounts+'\n');
+writeFileSync(path.join(destination,'restored-table-counts.json'),restoredCounts+'\n');
 const rootFiles=run('git',['ls-tree',sourceCommit]).split('\n').filter(line=>/^\d+ blob /u.test(line)).map(line=>line.split('\t')[1]).filter(name=>name&&(name==='.env.example'||!name.startsWith('.env')));
 run('git',['archive','--format=zip',`--output=${path.join(destination,'source.zip')}`,sourceCommit,'--',...rootFiles,'src','scripts','supabase','tests','electron','public','docs/RUNTIME-CONFIGURATION.md']);
 const assets=JSON.parse(readFileSync(path.join(privateRoot,'ssd-model-cache.json'),'utf8'));

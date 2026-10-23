@@ -6,6 +6,16 @@ export const documentsEditor = {
 
   save:"Enregistrer", saving:"Enregistrement…", saved:"Enregistré", dirty:"Modifications non enregistrées", edit:"Modifier", preview:"Aperçu",
 
+  autoFillHint:"Les valeurs déjà présentes dans le dossier sont reprises une seule fois, à la création. Elles restent toutes modifiables.",
+  autoFillPartial:"Le dossier a été lu partiellement : certaines valeurs n’ont pas pu être reprises. Complétez-les avant d’émettre.",
+  choosePatientHint:"Choisissez un dossier dans la liste pour préparer un certificat ou une ordonnance.",
+  documentDateHint:"Date portée par le document.", identityHint:"Non renseigné dans le dossier — saisissez le numéro avant d’émettre.", mairieHint:"Non renseignée dans le dossier — saisissez la mairie avant d’émettre.",
+  daysHint:"Nombre entier entre 1 et 365.", daysRange:"Entre 1 et 365 jours.", writtenHint:"Généré depuis le nombre de jours. Vous pouvez corriger cette valeur.", writtenManual:"Valeur corrigée manuellement — vérifiez la concordance avec le nombre de jours.", writtenComputing:"Calcul de la valeur en toutes lettres…",
+  dateHint:"Sélectionnez une date ; elle sera imprimée au format JJ/MM/AAAA.", birthDateHint:"Reprise du dossier. Corrigez-la si nécessaire avant d’émettre.", invalidDate:"Date attendue au format JJ/MM/AAAA.",
+  treatments:"Traitements", treatmentsHint:"Les traitements actifs du dossier sont repris. Ajoutez, retirez ou corrigez une ligne librement.", treatmentPlaceholder:"Nom du traitement tel qu’il doit apparaître", addTreatment:"Ajouter un traitement",
+  frequencyMissing:"Fréquence quotidienne non renseignée : complétez-la avant d’émettre.",
+  draftNumberPending:"Brouillon — le numéro d’ordre est attribué à l’émission.", issuedNumber:"N° d’Ordre", documentNumber:"N° de document",
+
   issueForPrint:"Émettre pour imprimer", issuing:"Émission…", printAfterIssue:"Après confirmation, le bouton Imprimer sera disponible en haut du document.", issue:"Émettre", print:"Imprimer", duplicate:"Dupliquer", newRevision:"Nouvelle version", archive:"Archiver", restore:"Restaurer", close:"Fermer",
 
   patient:"Patient", kind:"Type de document", documentDate:"Date du document", fields:"Champs du document", history:"Historique", choosePatient:"Choisir un dossier",
@@ -51,7 +61,7 @@ export const documentsEditor = {
 
   signature:"Signature et cachet", phone:"Tél.", birthDate:"Date de naissance", date:"Date", name:"Nom", firstName:"Prénom", age:"Âge", years:"ans",
 
-  revision:"Version", page:"Page", saveFailure:"L’enregistrement a échoué. Votre texte reste dans l’éditeur ; réessayez avant de quitter.",
+  revision:"Version", versionShort:"v", page:"Page", saveFailure:"L’enregistrement a échoué. Votre texte reste dans l’éditeur ; réessayez avant de quitter.",
 
 } as const;
 
@@ -84,4 +94,8 @@ export const documentFieldLabels:Readonly<Record<string,string>>={
 };
 
 export const documentFilters={search:"Rechercher un document",allKinds:"Tous les types",allStatuses:"Tous les statuts"} as const;
+
+export function treatmentLabel(index:number):string{
+  return index<=1?"Traitement — 1re ligne":`Traitement — ${String(index)}e ligne`;
+}
 
