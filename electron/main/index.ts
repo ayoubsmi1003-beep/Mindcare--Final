@@ -24,7 +24,7 @@ import { spawn } from "node:child_process";
 import { randomBytes } from "node:crypto";
 import { hostname } from 'node:os';
 import type { ChildProcess } from "node:child_process";
-import { existsSync, readFileSync } from "node:fs";
+import { accessSync, constants, existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -822,8 +822,21 @@ interface ResultatCanal {
 ipcMain.handle("mindcare:ouvrir-journaux", async (): Promise<ResultatCanal> => {
   // Étape 12 du plan : ouvre le dossier des journaux dans l'Explorateur.
   // Lecture seule côté renderer — aucun chemin arbitraire accepté.
-  const dossier = contexteCourant?.journalDir;
-  if (!dossier) return { ok: false, message: "Dossier des journaux inconnu (démarrage incomplet)." };
+  //
+  // ⚠️ SUR LE PC MÉDECIN, `journalDir` EST PROTÉGÉ (SYSTEM + Administrateurs).
+  // Une praticienne non administrateur ouvrait donc un dossier vide, ou se
+  // voyait refuser l'accès — au moment précis où elle cherche pourquoi le
+  // service ne répond pas. On retombe sur le dossier lisible par son compte,
+  // qui porte la chronologie du poste (démarrage, création de fenêtre, santé,
+  // demande de démarrage du service, refus). Le journal complet du service,
+  // lui, reste réservé à l'administrateur : il peut contenir l'URL de la base.
+  const protege = contexteCourant?.journalDir;
+  const lisible = app.getPath("userData");
+  const accessible = (candidat: string | undefined): candidat is string => {
+    if (candidat === undefined) return false;
+    try { accessSync(candidat, constants.R_OK); return true; } catch { return false; }
+  };
+  const dossier = accessible(protege) ? protege : lisible;
   const erreur = await shell.openPath(dossier);
   if (erreur !== "") return { ok: false, message: `Ouverture impossible : ${erreur.slice(0, 200)}` };
   return { ok: true, message: dossier };
