@@ -53,9 +53,45 @@ $source = '${s}'
 $cible  = '${CIBLE.replaceAll("'", "''")}'
 
 Write-Host "Installation de MindCare dans $cible ..."
+
+# ═══ 1. CE QUI VERROUILLE LES FICHIERS ═══════════════════════════════════════
+# Trouvé par échec réel : « La copie a échoué (robocopy 16) » alors que le
+# dossier était accessible. Le service du cabinet tourne sous SYSTEM et exécute
+# « MindCare OS.exe » DEPUIS ce dossier : robocopy ne peut pas remplacer un
+# exécutable en cours d'exécution. On arrête donc le service et l'application
+# avant de copier — jamais l'inverse.
+$tache = Get-ScheduledTask -TaskName 'MindCare-Clinic-Server' -ErrorAction SilentlyContinue
+if ($null -ne $tache -and $tache.State -eq 'Running') {
+  Stop-ScheduledTask -TaskName 'MindCare-Clinic-Server' -ErrorAction SilentlyContinue
+  Start-Sleep -Seconds 2
+}
+Get-Process -Name 'MindCare OS' -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue
+Start-Sleep -Seconds 1
+
+# ═══ 2. REPARTIR D'UN DOSSIER PROPRE ═════════════════════════════════════════
+# Les données du cabinet vivent dans %ProgramData%\\MindCare, jamais ici. Un
+# dossier d'application à moitié remplacé est pire qu'un dossier absent.
+if (Test-Path -LiteralPath $cible) {
+  if (Test-Path -LiteralPath (Join-Path $cible 'data\\PG_VERSION')) {
+    Write-Host "Le dossier d'installation contient une base de donnees : arret par securite."
+    Start-Sleep -Seconds 8
+    exit 1
+  }
+  Remove-Item -LiteralPath $cible -Recurse -Force -ErrorAction SilentlyContinue
+}
 New-Item -ItemType Directory -Force -Path $cible | Out-Null
-$code = (Start-Process -FilePath 'robocopy.exe' -ArgumentList @($source, $cible, '/E', '/COPY:DAT', '/DCOPY:DA', '/R:1', '/W:1') -Wait -PassThru).ExitCode
-if ($code -ge 8) { Write-Host "La copie a echoue (robocopy $code)."; Start-Sleep -Seconds 6; exit 1 }
+
+# ═══ 3. COPIER, ET DIRE POURQUOI SI ÇA ÉCHOUE ════════════════════════════════
+# L'ancienne version ne rendait qu'un code (« robocopy 16 »), sans le fichier
+# fautif : impossible à diagnostiquer depuis le cabinet.
+$journal = Join-Path $env:TEMP 'mindcare-installation.log'
+$code = (Start-Process -FilePath 'robocopy.exe' -ArgumentList @($source, $cible, '/E', '/COPY:DAT', '/DCOPY:DA', '/R:1', '/W:1', '/NP', "/LOG:$journal") -Wait -PassThru).ExitCode
+if ($code -ge 8) {
+  Write-Host "La copie a echoue (robocopy $code). Detail dans $journal"
+  Get-Content -LiteralPath $journal -Tail 20 -ErrorAction SilentlyContinue | ForEach-Object { Write-Host "   $_" }
+  Start-Sleep -Seconds 10
+  exit 1
+}
 
 icacls $cible /setowner '*S-1-5-32-544' /T /C | Out-Null
 icacls $cible /inheritance:r /grant:r '*S-1-5-32-544:(OI)(CI)F' '*S-1-5-18:(OI)(CI)F' '*S-1-5-32-545:(OI)(CI)RX' | Out-Null

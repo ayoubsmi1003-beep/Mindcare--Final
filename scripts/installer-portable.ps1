@@ -56,14 +56,32 @@ if (-not $dejaSurPlace) {
     }
 
     Write-Host "Copie de MindCare vers $Target ..."
+
+    # Le service du cabinet exécute MindCare DEPUIS ce dossier : un exécutable
+    # en cours d'exécution ne se remplace pas (robocopy 16, trouvé en cabinet).
+    $tache = Get-ScheduledTask -TaskName 'MindCare-Clinic-Server' -ErrorAction SilentlyContinue
+    if ($null -ne $tache -and $tache.State -eq 'Running') {
+        Stop-ScheduledTask -TaskName 'MindCare-Clinic-Server' -ErrorAction SilentlyContinue
+        Start-Sleep -Seconds 2
+    }
+    Get-Process -Name 'MindCare OS' -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue
+    Start-Sleep -Seconds 1
+
+    # Repartir d'un dossier propre : les données du cabinet sont ailleurs
+    # (%ProgramData%\MindCare). On refuse si une base s'y trouve.
+    if (Test-Path -LiteralPath $Target) {
+        if (Test-Path -LiteralPath (Join-Path $Target 'data\PG_VERSION')) {
+            throw "Le dossier d'installation contient une base de donnees : arret par securite."
+        }
+        Remove-Item -LiteralPath $Target -Recurse -Force -ErrorAction SilentlyContinue
+    }
     New-Item -ItemType Directory -Force -Path $Target | Out-Null
 
-    # /E : sous-dossiers vides compris. /COPY:DAT : données, attributs, dates.
-    # Pas de /COPY:S : les ACL de la source ne sont pas recopiées, le dossier
-    # cible reçoit les siennes juste après. /XF : ce script ne se recopie pas.
-    $copie = robocopy $source $Target /E /COPY:DAT /DCOPY:DA /R:1 /W:1 /XF 'Installer-Portable-MindCare.ps1' 'Installer-MindCare.cmd' /NFL /NDL /NJH /NJS
+    $journal = Join-Path $env:TEMP 'mindcare-installation.log'
+    $copie = robocopy $source $Target /E /COPY:DAT /DCOPY:DA /R:1 /W:1 /XF 'Installer-Portable-MindCare.ps1' 'Installer-MindCare.cmd' /NFL /NDL /NJH /NJS /NP "/LOG:$journal"
     if ($LASTEXITCODE -ge 8) {
-        throw "La copie a échoué (robocopy code $LASTEXITCODE). Aucune donnée du cabinet n'a été modifiée."
+        Get-Content -LiteralPath $journal -Tail 20 -ErrorAction SilentlyContinue | ForEach-Object { Write-Host "   $_" }
+        throw "La copie a échoué (robocopy code $LASTEXITCODE). Aucune donnée du cabinet n'a été modifiée. Détail : $journal"
     }
 
     Write-Host "Verrouillage des permissions ..."

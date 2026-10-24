@@ -17,13 +17,16 @@ if errorlevel 1 goto medecin
 :medecin
 echo.
 echo Installation en cours (PC medecin)...
-powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0Installer-Portable-MindCare.ps1" -ConfigureHost
+rem -Force : le script arrete d'abord le service et l'application, puis repart
+rem d'un dossier propre. Sans cela, un executable en cours d'execution fait
+rem echouer la copie (robocopy 16) — constate en cabinet.
+powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0Installer-Portable-MindCare.ps1" -Force -ConfigureHost
 goto fin
 
 :accueil
 echo.
 echo Installation en cours (PC accueil)...
-powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0Installer-Portable-MindCare.ps1"
+powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0Installer-Portable-MindCare.ps1" -Force
 goto fin
 
 :fin
