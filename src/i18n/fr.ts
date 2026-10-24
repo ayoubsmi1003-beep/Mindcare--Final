@@ -175,6 +175,12 @@ export const fr = {
   coquille: {
     /** V8 — le sous-titre de marque, sous « MindCare » dans le rail. */
     marqueSousTitre: "Cabinet de psychiatrie",
+    /** Sous le nom du compte, dans la carte du rail. */
+    role: {
+      owner: "Praticienne",
+      practitioner: "Praticienne",
+      assistant: "Poste d'accueil",
+    },
     /**
      * Écran référencé dans la navigation mais pas encore construit (I19).
      *
@@ -688,6 +694,8 @@ export const fr = {
     aujourdhui: "Aujourd'hui",
     aVenir: "À venir",
     journeeVide: "Aucun rendez-vous aujourd'hui.",
+    jourPrecedent: "Jour précédent",
+    jourSuivant: "Jour suivant",
     aucunVisible: "Aucun rendez-vous visible dans votre périmètre.",
     aucunAVenir: "Aucun rendez-vous à venir dans les trente prochains jours.",
     /** Le total est celui du périmètre de l'appelant, jamais celui du cabinet. */
@@ -790,6 +798,8 @@ export const fr = {
       seancesCetteSemaine: "Séances cette semaine",
       creneauxLibres: "Créneaux libres",
       demandesEnAttente: "Demandes en attente",
+      demandesAide: "À appeler puis confirmer le créneau convenu.",
+      traiter: "Traiter",
       /**
        * En-tête de colonne. Le français accorde à partir de DEUX : « 1 séance »,
        * « 2 séances » — et « 0 séance », au singulier, contrairement à l'anglais.
@@ -820,6 +830,25 @@ export const fr = {
 
     approuver: "Approuver la demande",
     demandeApprouvee: "Demande approuvée.",
+    demande: {
+      titre: "Demande du site web",
+      aide:
+        "Appelez la personne, enregistrez l'issue de l'appel, puis fixez le créneau convenu avant de confirmer.",
+      appel: "Issue de l'appel",
+      appeler: "Appeler",
+      telephoneAbsent: "Téléphone non renseigné.",
+      joint: "Joint",
+      sansReponse: "Sans réponse",
+      rappel: "Rappel demandé",
+      mauvaisNumero: "Mauvais numéro",
+      enregistrerAppel: "Enregistrer l'appel",
+      appelEnregistre: "Issue de l'appel enregistrée.",
+      issueRequise: "Choisissez d'abord l'issue de l'appel.",
+      confirmerDabord: "Enregistrez l'issue de l'appel avant de confirmer.",
+      enregistrerCreneauDabord: "Enregistrez le nouveau créneau avant de confirmer.",
+      modifierCreneau: "Fixer le créneau",
+      confirmer: "Confirmer le rendez-vous",
+    },
     enAttenteApprobation: "En attente d'approbation",
   },
 
@@ -1648,6 +1677,7 @@ export const fr = {
     titre: "Données fictives",
     corps:
       "Cette instance est une base de développement. Elle n'accepte que des données synthétiques et refuse toute donnée patient réelle.",
+    corpsCourt: "Aucune donnée patient réelle n'est acceptée ici.",
     reference: "ADR-016",
   },
 
@@ -2172,6 +2202,7 @@ export const fr = {
    */
   reception: {
     titre: "Poste d'accueil",
+    jourAffiche: "Journée affichée",
     pulse: {
       salleAttente: "En salle d'attente",
       retards: "Retards",
@@ -2186,11 +2217,13 @@ export const fr = {
       creneauLibre: "Créneau libre",
       nouveauRdv: "Nouveau rendez-vous",
       videJournee: "Aucun rendez-vous aujourd'hui.",
+      videJourneeAide: "Ils apparaîtront ici dès qu'un rendez-vous sera confirmé.",
+      ouvrirAgenda: "Ouvrir l'agenda",
       selectionHint: "Sélectionnez un rendez-vous pour agir : A arrivé · P paiement · R déplacer.",
     },
 
     attention: {
-      titre: "Ce qui demande attention",
+      titre: "À traiter",
       autres: "autres éléments — voir les files ci-dessous",
       vide: "Tout est à jour. Rien ne réclame votre geste.",
       voir: "Voir",
@@ -2230,7 +2263,10 @@ export const fr = {
       titre: "Notifications",
       vide: "Aucune notification. Les tarifs fixés par la praticienne y arriveront.",
       marquerLu: "Marquer comme lu",
+      recentes: "les plus récentes",
+      hier: "Hier",
       paiementDue: "Nouveau paiement à encaisser",
+      paiementDueCourt: "Paiement à encaisser",
       consultationTerminee: "Consultation terminée",
     },
 
@@ -2311,10 +2347,12 @@ export const fr = {
     },
     messagerie: {
       titre: "Messages du cabinet",
-      ouvrir: "Messages",
+      ouvrir: "Messages du cabinet",
+      ouvrirCourt: "Messages",
       fermer: "Fermer le panneau",
       vide: "Aucun message. Cette messagerie reste dans le cabinet.",
       indication: "Message interne au cabinet",
+      nouveauMessage: "Nouveau message",
       placeholder: "Écrire un message…",
       envoyer: "Envoyer",
       envoiEnCours: "Envoi…",

@@ -50,6 +50,7 @@ import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { auditElectronModules, readAsarModules, readAsarPackage, auditServerDependencies } from "./lib/electron-runtime-audit.mjs";
+import {verifyAlexaPackage} from './lib/alexa-package-integrity.mjs';
 
 const RACINE = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const CIBLE = path.resolve(process.argv[2] ?? path.join(RACINE, "dist", "win-unpacked"));
@@ -125,6 +126,7 @@ if (existsSync(cheminAsar)) {
 }
 const erreursRuntime = auditServerDependencies(path.join(CIBLE, "resources", "serveur"));
 if (erreursRuntime.length > 0) refuser("dépendances du serveur non chargeables :", erreursRuntime);
+try{verifyAlexaPackage(RACINE,CIBLE);}catch{refuser("provenance Alexa, parcours natif ou fichiers MiniCPM non conformes :",["reconstruire le paquet depuis le code courant vérifié"]);}
 
 // ── 1. Ce qui NE DOIT PAS être là ───────────────────────────────────────────
 

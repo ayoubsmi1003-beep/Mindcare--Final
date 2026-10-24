@@ -283,17 +283,16 @@ export function GrilleSemaine({
                           </span>
                         )}
                       </span>
-                      <span
-                        className={[
-                          "font-ui text-label font-regular tabular-nums",
-                          // Un jour chargé se lit d'un coup d'œil ; un jour vide
-                          // s'efface au lieu de répéter « 0 séances » en noir.
-                          nbSeances === 0 ? "text-ink-500" : "text-ink-700",
-                        ].join(" ")}
-                      >
-                        {nbSeances}{" "}
-                        {nbSeances > 1 ? fr.agenda.semaine.seances : fr.agenda.semaine.seance}
-                      </span>
+                      {/* Un jour vide n'écrit rien. Sept « 0 séance » alignés
+                          au-dessus d'une grille vide répétaient la même
+                          information sept fois ; le compteur ne reparaît que
+                          lorsqu'il compte quelque chose. */}
+                      {nbSeances > 0 ? (
+                        <span className="font-ui text-label font-regular tabular-nums text-ink-700">
+                          {nbSeances}{" "}
+                          {nbSeances > 1 ? fr.agenda.semaine.seances : fr.agenda.semaine.seance}
+                        </span>
+                      ) : null}
                     </div>
                   </th>
                 );

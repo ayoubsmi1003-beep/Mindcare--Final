@@ -156,6 +156,11 @@ export default function PageTableauDeBord(): React.JSX.Element {
       nomComplet={utilisateur.fullName}
       onDeconnexion={deconnecter}
       sansGouttiere
+      /* Le cockpit gère lui-même sa hauteur : la rangée de synthèse, la
+         grille et la pile d'actions doivent tenir dans la fenêtre, et seule la
+         pile d'actions défile. Sans cela, `h-full` se résout sur un parent de
+         hauteur automatique et la grille grandit avec les 33 notifications. */
+      sansDefilement
     >
       {/* Le cockpit se dimensionne lui-même : hauteur pleine du main, défilement
           interne par zone, zéro défilement de page à 1440×900. */}

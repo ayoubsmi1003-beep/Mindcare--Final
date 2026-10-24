@@ -306,14 +306,16 @@ export function Rail({ role, nomComplet, onDeconnexion }: RailProps): React.JSX.
                 et POUSSE LE BOUTON DE DÉCONNEXION SOUS LE BORD DE L'ÉCRAN —
                 mesuré à 1920×1080. Un nom long est la règle, pas l'exception
                 (I11). Le nom complet reste lisible en infobulle. */}
-            <span
-              title={nomComplet || fr.etats.texteAbsent}
-              className={[
-                "min-w-0 truncate font-ui text-body font-medium text-chrome-ink",
-                LIBELLE_REPLIABLE,
-              ].join(" ")}
-            >
-              {nomComplet || fr.etats.texteAbsent}
+            <span className={["flex min-w-0 flex-col", LIBELLE_REPLIABLE].join(" ")}>
+              <span
+                title={nomComplet || fr.etats.texteAbsent}
+                className="line-clamp-2 font-ui text-label font-medium leading-snug text-chrome-ink"
+              >
+                {nomComplet || fr.etats.texteAbsent}
+              </span>
+              <span className="truncate font-ui text-label text-chrome-ink-faint">
+                {fr.coquille.role[role]}
+              </span>
             </span>
           </div>
           <button

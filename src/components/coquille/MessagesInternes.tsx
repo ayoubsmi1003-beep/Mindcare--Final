@@ -170,8 +170,8 @@ export function BoutonMessagesInternes({
         deploye={ouvert}
       >
         <span className="inline-flex items-center gap-2">
-          <Icone nom="audio" taille={16} className="text-ink-500" />
-          <span className="hidden tablet:inline">{fr.collaboration.messagerie.ouvrir}</span>
+          <Icone nom="messages" taille={16} className="text-ink-500" />
+          <span className="hidden tablet:inline">{fr.collaboration.messagerie.ouvrirCourt}</span>
           {nonLus > 0 ? (
             <span className="inline-flex min-w-5 items-center justify-center rounded-full bg-attention px-1.5 font-num text-label font-semibold tabular-nums text-on-brand">
               {nonLus}
@@ -186,10 +186,10 @@ export function BoutonMessagesInternes({
         onClick={(e) => {
           if (e.target === dialogue.current) setOuvert(false);
         }}
-        className="m-auto max-h-full w-full max-w-2xl rounded-xl border border-rule bg-card p-0 shadow-lift3 backdrop:bg-voile"
+        className="fixed inset-y-0 end-0 m-0 h-full max-h-full w-full max-w-md rounded-none border-0 border-s border-rule bg-card p-0 shadow-elevee backdrop:bg-voile"
         aria-label={fr.collaboration.messagerie.titre}
       >
-        <div className="flex max-h-full min-h-0 flex-col">
+        <div className="flex h-full max-h-full min-h-0 flex-col">
           <header className="flex shrink-0 items-center gap-3 border-b border-rule px-5 py-3">
             <h2 className="m-0 font-ui text-heading font-semibold text-ink-900">
               {fr.collaboration.messagerie.titre}
@@ -211,7 +211,17 @@ export function BoutonMessagesInternes({
 
           <div ref={fil} className="flex min-h-0 flex-1 flex-col gap-2 overflow-y-auto px-5 py-4">
             {messages.length === 0 ? (
-              <p className="m-0 font-ui text-body text-ink-500">{fr.collaboration.messagerie.vide}</p>
+              <div className="flex flex-1 flex-col items-center justify-center gap-3 text-center">
+                <span
+                  aria-hidden="true"
+                  className="relative inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-tuile-menthe text-emeraude-700 shadow-douce"
+                >
+                  <Icone nom="messages" taille={24} />
+                </span>
+                <p className="m-0 max-w-form font-ui text-body text-ink-500">
+                  {fr.collaboration.messagerie.vide}
+                </p>
+              </div>
             ) : (
               messages.map((m) => {
                 const deMoi = role === m.senderRole;
@@ -245,7 +255,7 @@ export function BoutonMessagesInternes({
 
           <footer className="flex shrink-0 flex-col gap-2 border-t border-rule px-5 py-4">
             <label htmlFor="message-interne" className="font-ui text-label font-medium text-ink-700">
-              {fr.collaboration.messagerie.indication}
+              {fr.collaboration.messagerie.nouveauMessage}
             </label>
             <textarea
               id="message-interne"

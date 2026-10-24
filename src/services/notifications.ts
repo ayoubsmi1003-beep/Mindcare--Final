@@ -70,6 +70,41 @@ function versItem(row: NotificationRow): NotificationItem {
   };
 }
 
+/**
+ * Un reçu = un état de caisse, donc une ligne à l'écran.
+ *
+ * ⚠️ LA TABLE RESTE UN JOURNAL, PAS UN ÉTAT. `set_consultation_price` (029)
+ * écrit une notification à chaque correction de tarif, parce qu'une
+ * notification qui annonce un montant périmé est un défaut de caisse. Mais
+ * l'écran, lui, ne doit pas afficher trois fois le même reçu : il lit la
+ * dernière correction, et seulement elle. Le regroupement vit ici, dans la
+ * porte de lecture, pour que TOUS les consommateurs voient le même état — le
+ * cacher dans un composant ne corrigerait que cet écran.
+ *
+ * Un reçu dont la dernière ligne est lue mais qui possède une ligne non lue
+ * plus ancienne garde la ligne NON LUE : le travail n'est pas fait.
+ */
+export function etatParRecu(items: readonly NotificationItem[]): readonly NotificationItem[] {
+  const parRecu = new Map<string, NotificationItem>();
+  const sansRecu: NotificationItem[] = [];
+
+  for (const item of items) {
+    const recu = item.payload["receipt_number"];
+    if (typeof recu !== "string" || recu.trim() === "") {
+      sansRecu.push(item);
+      continue;
+    }
+    const connu = parRecu.get(recu);
+    if (connu === undefined || (connu.readAt !== null && item.readAt === null)) {
+      parRecu.set(recu, item);
+    }
+  }
+
+  return [...parRecu.values(), ...sansRecu].sort(
+    (a, b) => Date.parse(b.createdAt) - Date.parse(a.createdAt),
+  );
+}
+
 export async function listNotifications(): Promise<Result<readonly NotificationItem[]>> {
   const result = await db().select<NotificationRow>({
     relation: "notifications",
@@ -85,8 +120,9 @@ export async function listNotifications(): Promise<Result<readonly NotificationI
     return err(result.error);
   }
 
-  log.info("accueil.notifications.liste", { count: result.data.length });
-  return ok(result.data.map(versItem));
+  const etats = etatParRecu(result.data.map(versItem));
+  log.info("accueil.notifications.liste", { count: etats.length });
+  return ok(etats);
 }
 
 /**

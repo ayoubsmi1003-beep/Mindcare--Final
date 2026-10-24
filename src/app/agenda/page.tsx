@@ -39,19 +39,14 @@ import { useCallback, useEffect, useState } from "react";
 
 import { AppShell } from "@/components/AppShell";
 import { heure, jour, jourComplet, nomPatient, Statut } from "@/components/AgendaPieces";
-import { GrilleSemaine, repartition } from "@/components/GrilleSemaine";
+import { GrilleSemaine } from "@/components/GrilleSemaine";
 import {
   BandeauHorsLigne,
   BlocErreur,
-  Bouton,
-  Chiffre,
-  EtatVide,
   LienBouton,
-  Section,
   Squelette,
 } from "@/components/ui";
 import { useSessionEcran } from "@/components/useSessionEcran";
-import { Tuile } from "@/components/ui/Tuile";
 import { fr } from "@/i18n/fr";
 import {
   listAgenda,
@@ -114,7 +109,17 @@ export default function PageAgenda(): React.JSX.Element {
   const [horsLigne, setHorsLigne] = useState(false);
   const [chargement, setChargement] = useState(true);
 
-  const debut = vue === "semaine" ? ancre : minuit(0);
+  /**
+   * ⚠️ LA VUE « JOUR » SUIT L'ANCRE, ELLE N'EST PLUS FIGÉE SUR AUJOURD'HUI.
+   *
+   * La version précédente calculait `debut = minuit(0)` en vue jour : les
+   * boutons « précédent / suivant » changeaient `ancre`, mais la grille restait
+   * sur aujourd'hui. Un bouton qui ne fait rien est pire qu'un bouton absent.
+   * L'ancre est désormais la seule source de la journée affichée ; le passage
+   * semaine ↔ jour la normalise (lundi pour la semaine, jour courant pour le
+   * jour) dans les deux commandes ci-dessous.
+   */
+  const debut = ancre;
   const nbJours = vue === "semaine" ? JOURS_SEMAINE : 1;
   const fin = new Date(debut);
   fin.setDate(fin.getDate() + nbJours);
@@ -237,34 +242,27 @@ export default function PageAgenda(): React.JSX.Element {
   }
 
   const liste = entrees ?? [];
+  const pas = vue === "semaine" ? JOURS_SEMAINE : 1;
   const finSemaine = new Date(debut);
   finSemaine.setDate(finSemaine.getDate() + nbJours - 1);
 
-  // Les compteurs sortent de la MÊME fonction que la grille.
-  //
-  // Ils étaient calculés à part : « séances » comptait la liste brute et les
-  // créneaux se basaient sur une plage horaire figée. L'écran annonçait donc
-  // six séances au-dessus d'une grille qui en montrait quatre, et un commentaire
-  // affirmait juste au-dessus que ce chiffre était « ce que la grille montre
-  // réellement ». Une garantie fausse en commentaire est ce qui empêche le
-  // relecteur suivant de regarder — la garantie tient maintenant parce qu'une
-  // seule fonction produit les deux.
-  const { lignesHeures, parCase, placees } = repartition(
-    liste,
-    debut,
-    nbJours,
-    HEURE_DEBUT,
-    HEURE_FIN,
-  );
-  const creneauxTotal = lignesHeures.length * nbJours;
-  const creneauxOccupes = parCase.size;
+  /**
+   * ⚠️ LES TROIS TUILES DE LA SEMAINE ONT ÉTÉ RETIRÉES, ET CE N'EST PAS UN
+   * APPAUVRISSEMENT.
+   *
+   * « Séances cette semaine » répétait la grille, « Demandes en attente »
+   * répétait le titre de la file juste en dessous, et « Créneaux libres »
+   * affichait 11 h × 7 j — la taille du cadre, pas une disponibilité du
+   * cabinet. Aucune des trois ne portait une information que la grille ou la
+   * file ne disait déjà. Le compteur de demandes vit maintenant dans le titre
+   * de la file, à l'endroit où il déclenche l'action.
+   */
 
   return (
     <AppShell
       role={utilisateur?.role ?? "assistant"}
       nomComplet={utilisateur?.fullName ?? ""}
       onDeconnexion={deconnecter}
-      sousTitre={jourComplet(new Date().toISOString()) ?? fr.etats.texteAbsent}
       actions={
         <LienBouton href="/agenda/nouveau" rang="principal">
           {fr.agenda.nouveau}
@@ -277,71 +275,51 @@ export default function PageAgenda(): React.JSX.Element {
           ligne à lire pour rien. */}
       <div className="flex min-w-0 flex-col gap-8">
         {/* ── Période, chiffres, navigation ──────────────────────────────── */}
-        <div className="flex flex-col gap-4">
-          <h2 className="font-ui text-heading font-bold tracking-heading text-ink-900">
-            {vue === "semaine"
-              ? `${fr.agenda.semaine.titre} ${jour(debut.toISOString()) ?? ""} ${fr.agenda.semaine.au} ${jour(finSemaine.toISOString()) ?? ""}`
-              : fr.agenda.aujourdhui}
-          </h2>
+        <div className="flex flex-col gap-3">
+          <div className="flex flex-wrap items-center gap-3">
+            <h2 className="font-ui text-heading font-bold tracking-heading text-ink-900">
+              {vue === "semaine"
+                ? `${fr.agenda.semaine.titre} ${jour(debut.toISOString()) ?? ""} ${fr.agenda.semaine.au} ${jour(finSemaine.toISOString()) ?? ""}`
+                : jourComplet(debut.toISOString()) ?? fr.agenda.aujourdhui}
+            </h2>
 
-          {/*
-            V8 — LES TROIS CHIFFRES DE LA SEMAINE DEVIENNENT DES TUILES.
-            Ils vivaient en pastilles posées à la suite du titre, à la même
-            taille que le texte courant : trois nombres que l'œil devait
-            chercher au milieu d'une phrase. Ce sont les seuls agrégats de
-            l'écran, et un agrégat est ce que la tuile existe pour porter.
+            {/* Naviguer dans le temps et changer d'échelle sont deux gestes
+                différents : deux groupes, pas une file de cinq boutons où
+                l'on vise au jugé. */}
+            <div className="ms-auto flex flex-wrap items-center gap-2">
+              <div className="inline-flex items-center gap-1 rounded-full bg-sunken p-1">
+                <BoutonPeriode
+                  onClick={() => decaler(-pas)}
+                  libelle={vue === "semaine" ? fr.agenda.semaine.semainePrecedente : fr.agenda.jourPrecedent}
+                />
+                <BoutonPeriode
+                  onClick={() => setAncre(vue === "semaine" ? lundiDe(new Date()) : minuit(0))}
+                  libelle={vue === "semaine" ? fr.agenda.semaine.cetteSemaine : fr.agenda.aujourdhui}
+                />
+                <BoutonPeriode
+                  onClick={() => decaler(pas)}
+                  libelle={vue === "semaine" ? fr.agenda.semaine.semaineSuivante : fr.agenda.jourSuivant}
+                />
+              </div>
 
-            ⚠️ AUCUN CHIFFRE N'EST AJOUTÉ. Ce sont exactement les trois
-            valeurs déjà calculées par cet écran — séances placées, créneaux
-            restants, demandes en attente. Le « taux d'occupation » de la
-            référence n'apparaît pas : il supposerait une capacité de cabinet
-            qu'aucune table ne déclare.
-          */}
-          <div className="grid grid-cols-un gap-4 tablet:grid-cols-trois">
-            <Tuile
-              ton="menthe"
-              icone="agenda"
-              etiquette={fr.agenda.semaine.seancesCetteSemaine}
-              valeur={String(placees.length)}
-            />
-            <Tuile
-              ton="azur"
-              icone="horloge"
-              etiquette={fr.agenda.semaine.creneauxLibres}
-              valeur={String(Math.max(0, creneauxTotal - creneauxOccupes))}
-            />
-            {/* `ambre` et non un ton d'alerte : une demande en attente est un
-                geste à faire, pas un incident. Le rouge reste un budget
-                réservé à la perte de donnée (§4 règle 1). */}
-            <Tuile
-              ton={enAttente.length > 0 ? "ambre" : "neutre"}
-              icone="patients"
-              etiquette={fr.agenda.semaine.demandesEnAttente}
-              valeur={String(enAttente.length)}
-            />
-          </div>
-
-          {/* Naviguer dans le temps et changer d'échelle sont deux gestes
-              différents : ils sont donc dans deux groupes séparés, et non dans
-              une file de cinq boutons identiques où l'on vise au jugé. */}
-          <div className="flex flex-wrap items-center gap-4">
-            <div className="flex flex-wrap items-center gap-2">
-              <BoutonPeriode onClick={() => decaler(-JOURS_SEMAINE)} libelle={fr.agenda.semaine.semainePrecedente} />
-              <BoutonPeriode onClick={() => setAncre(lundiDe(new Date()))} libelle={fr.agenda.semaine.cetteSemaine} />
-              <BoutonPeriode onClick={() => decaler(JOURS_SEMAINE)} libelle={fr.agenda.semaine.semaineSuivante} />
-            </div>
-
-            <div className="inline-flex gap-1 rounded-md border border-rule bg-sunken p-1">
-              <BoutonPeriode
-                onClick={() => setVue("semaine")}
-                libelle={fr.agenda.semaine.vueSemaine}
-                actif={vue === "semaine"}
-              />
-              <BoutonPeriode
-                onClick={() => setVue("jour")}
-                libelle={fr.agenda.semaine.vueJour}
-                actif={vue === "jour"}
-              />
+              <div className="inline-flex items-center gap-1 rounded-full border border-rule bg-card p-1">
+                <BoutonPeriode
+                  onClick={() => {
+                    setVue("semaine");
+                    setAncre(lundiDe(ancre));
+                  }}
+                  libelle={fr.agenda.semaine.vueSemaine}
+                  actif={vue === "semaine"}
+                />
+                <BoutonPeriode
+                  onClick={() => {
+                    setVue("jour");
+                    setAncre(minuit(0));
+                  }}
+                  libelle={fr.agenda.semaine.vueJour}
+                  actif={vue === "jour"}
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -354,65 +332,77 @@ export default function PageAgenda(): React.JSX.Element {
         {chargement ? <Squelette lignes={8} /> : null}
 
         {!chargement && entrees !== undefined ? (
-          <div>
+          <div className="flex min-w-0 flex-col gap-3">
+            {/* La file d'attente est AU-DESSUS de la grille. C'était le défaut
+                de composition le plus coûteux : une demande web attendait en
+                bas d'un écran qui défile, sous 11 heures de grille vide. */}
+            {enAttente.length > 0 ? (
+              <section
+                aria-label={fr.agenda.semaine.demandesEnAttente}
+                className="rounded-xl border border-attention bg-attention-bg p-3"
+              >
+                <div className="flex flex-wrap items-center gap-2">
+                  <h3 className="font-ui text-body font-semibold text-ink-900">
+                    {fr.agenda.semaine.demandesEnAttente}
+                  </h3>
+                  <span className="rounded-full bg-card px-2 py-0.5 font-num text-label font-semibold tabular-nums text-attention-ink">
+                    {enAttente.length}
+                  </span>
+                  <p className="m-0 ms-auto font-ui text-label text-attention-ink">
+                    {fr.agenda.semaine.demandesAide}
+                  </p>
+                </div>
+                <ul className="m-0 mt-2 grid list-none gap-1.5 p-0 tablet:grid-cols-2">
+                  {enAttente.map((entree) => (
+                    <li key={entree.id}>
+                      <Link
+                        href={`/agenda/${entree.id}`}
+                        className={[
+                          "flex min-h-target-lg items-center gap-3 rounded-lg border border-rule bg-card px-3 py-2",
+                          "text-ink-900 no-underline transition duration-quick ease-soft",
+                          "hover:border-attention hover:shadow-lift1",
+                          "outline-none focus-visible:outline focus-visible:outline-action-600 focus-visible:outline-offset",
+                        ].join(" ")}
+                      >
+                        <span className="min-w-target font-num text-num font-medium tabular-nums text-ink-700">
+                          {heure(entree.startsAt) ?? fr.etats.texteAbsent}
+                        </span>
+                        <span className="min-w-0 flex-auto">
+                          <span className="block truncate font-ui text-body font-medium text-ink-900">
+                            {nomPatient(entree.lastName, entree.firstName) ?? fr.agenda.patientNonRattache}
+                          </span>
+                          <span className="block truncate font-ui text-label text-ink-500">
+                            {jour(entree.startsAt) ?? fr.etats.texteAbsent}
+                            {entree.phone !== null ? ` · ${entree.phone}` : null}
+                          </span>
+                        </span>
+                        <Statut statut={entree.status} />
+                        <span className="shrink-0 font-ui text-label font-semibold text-action-700">
+                          {fr.agenda.semaine.traiter}
+                        </span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ) : null}
+
+            {/* Une phrase, pas un bloc de 300 px : la grille reste le sujet. */}
             {liste.length === 0 ? (
-              /* État vide : une phrase --ink-500, aucune illustration (§4 règle 7).
-                 La phrase dit « rien de VISIBLE par vous », jamais « rien ». */
-              <EtatVide
-                message={vue === "semaine" ? fr.agenda.semaine.semaineVide : fr.agenda.journeeVide}
-                icone="agenda"
-                action={
-                  <LienBouton href="/agenda/nouveau" rang="principal">
-                    {fr.agenda.nouveau}
-                  </LienBouton>
-                }
-              />
-          ) : null}
+              <p className="m-0 rounded-lg bg-sunken px-3 py-2 font-ui text-body text-ink-500">
+                {vue === "semaine" ? fr.agenda.semaine.semaineVide : fr.agenda.journeeVide}
+              </p>
+            ) : null}
 
-          <GrilleSemaine
-            debutSemaine={debut}
-            jours={nbJours}
-            heureDebut={HEURE_DEBUT}
-            heureFin={HEURE_FIN}
-            entrees={liste}
-          />
-        </div>
-      ) : null}
-
-        {/* ── Demandes en attente d'approbation ───────────────────────────── */}
-        <Section titre={fr.agenda.semaine.demandesEnAttente}>
-          {enAttente.length === 0 ? (
-            <EtatVide message={fr.agenda.semaine.aucuneDemande} />
-          ) : (
-            <ul className="m-0 flex list-none flex-col gap-2 p-0">
-              {enAttente.map((entree) => (
-                <li key={entree.id}>
-                  <Link
-                    href={`/agenda/${entree.id}`}
-                    className={[
-                      "flex min-h-target-lg items-center gap-4 rounded-md border px-4 py-3",
-                      // Ton `attention` : ces lignes attendent un geste. Jamais
-                      // `critical` — rien n'est perdu (§4 règle 1).
-                      "border-attention bg-attention-bg text-ink-900 no-underline",
-                      "transition duration-quick ease-soft hover:shadow-lift2",
-                      "outline-none focus-visible:outline focus-visible:outline-action-600 focus-visible:outline-offset",
-                    ].join(" ")}
-                  >
-                    <span className="min-w-target font-num text-num font-medium tabular-nums text-ink-700">
-                      {heure(entree.startsAt) ?? fr.etats.texteAbsent}
-                    </span>
-                    <span className="min-w-0 flex-auto font-ui text-body break-words">
-                      {nomPatient(entree.lastName, entree.firstName) ?? fr.agenda.patientNonRattache}
-                      {" · "}
-                      {jour(entree.startsAt) ?? fr.etats.texteAbsent}
-                    </span>
-                    <Statut statut={entree.status} />
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          )}
-        </Section>
+            <GrilleSemaine
+              debutSemaine={debut}
+              jours={nbJours}
+              heureDebut={HEURE_DEBUT}
+              heureFin={HEURE_FIN}
+              entrees={liste}
+            />
+          </div>
+        ) : null}
       </div>
     </AppShell>
   );
@@ -427,17 +417,31 @@ function BoutonPeriode({
   readonly libelle: string;
   readonly actif?: boolean;
 }): React.JSX.Element {
+  /**
+   * ⚠️ PAS DE `Bouton` ICI, ET CE N'EST PAS UN DÉTAIL.
+   *
+   * `Bouton` est la primitive d'ACTION : elle ancre une flèche qui entre au
+   * survol, parce qu'un geste qui modifie quelque chose mérite sa
+   * chorégraphie. Sept commandes de période et de vue rendaient donc sept
+   * flèches collées aux libellés — « Semaine précédente→ » — et l'œil lisait
+   * une file de liens au lieu d'un sélecteur. Ce sont des choix de vue, pas
+   * des actions : le contrôle segmenté les porte mieux, sans flèche.
+   */
   return (
-    <Bouton
+    <button
       type="button"
-      rang="secondaire"
-      taille="compact"
       onClick={onClick}
-      /* L'état sélectionné est porté par `aria-pressed` ET par le contraste,
-         jamais par la seule couleur (§4 règle 4). */
-      enfonce={actif}
+      aria-pressed={actif}
+      className={[
+        "inline-flex min-h-target items-center justify-center rounded-full px-3 py-1.5 font-ui text-label font-medium",
+        "transition duration-quick ease-out outline-none",
+        "focus-visible:outline focus-visible:outline-action-600 focus-visible:outline-offset",
+        actif
+          ? "bg-action-600 text-on-brand shadow-douce"
+          : "bg-transparent text-ink-700 hover:bg-card hover:text-ink-900",
+      ].join(" ")}
     >
       {libelle}
-    </Bouton>
+    </button>
   );
 }

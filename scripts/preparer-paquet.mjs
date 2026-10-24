@@ -41,6 +41,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { createRequire } from "node:module";
 import { auditServerDependencies } from "./lib/electron-runtime-audit.mjs";
+import {snapshotAlexaBuildSources,enablePackagedNativeEntrypoints,finalizeAlexaBuild} from './lib/alexa-package-integrity.mjs';
 
 const RACINE = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const AUTONOME = path.join(RACINE, ".next", "standalone");
@@ -85,6 +86,7 @@ function etape(message) {
 // jonction NTFS — le mécanisme que pnpm et npm emploient déjà sous Windows
 // pour la même raison. Rien d'autre dans le dépôt n'en dépend, et un lien de
 // fichier ou une erreur d'un autre code remontent intacts.
+const alexaBuildSource=snapshotAlexaBuildSources(RACINE);
 const alexaAssets=spawnSync(process.execPath,[path.join(RACINE,"scripts/prepare-alexa-model.mjs")],{cwd:RACINE,stdio:"inherit",windowsHide:true});
 if(alexaAssets.status!==0)throw new Error("LocalModelPackagingFailed");
 etape("construction Next.js (sortie autonome)…");
@@ -102,7 +104,7 @@ const build = spawnSync(
   {
     cwd: RACINE,
     stdio: "inherit",
-    env: { ...process.env, MINDCARE_PAQUET: "1" },
+    env: { ...process.env, MINDCARE_PAQUET: "1", ALEXA_NATIVE_AGENT_ENABLED: "1" },
   },
 );
 if (build.status !== 0) {
@@ -393,6 +395,7 @@ if (erreursRuntime.length > 0) {
   process.exit(1);
 }
 etape("chargement des dépendances runtime vérifié");
+enablePackagedNativeEntrypoints(CIBLE);
 etape("preuve de démarrage du serveur assemblé…");
 {
   const { spawn } = await import("node:child_process");
@@ -418,23 +421,25 @@ etape("preuve de démarrage du serveur assemblé…");
     let sortie = "";
     let pret = false;
     let fini = false;
+    let ferme = false;
+    fils.once("close", () => { ferme = true; });
     const minuteur = setTimeout(() => {
       fils.kill();
-      console.error("[paquet] le serveur assemblé ne dit pas « Ready » sous 120 s.");
+      console.error("[paquet] le démarrage et l'arrêt contrôlés du serveur assemblé n'ont pas abouti sous 120 s.");
       console.error(sortie);
       process.exit(1);
     }, 120_000);
     const terminer = (ok, message) => {
       if (fini) return;
       fini = true;
-      clearTimeout(minuteur);
-      fils.kill();
-      if (!ok) {
-        console.error(message);
-        process.exit(1);
-      }
-      console.log(message);
-      resoudre(undefined);
+      const conclure = () => {
+        clearTimeout(minuteur);
+        if (!ok) { console.error(message); process.exit(1); }
+        console.log(message);
+        resoudre(undefined);
+      };
+      if (ferme) conclure();
+      else { fils.once("close", conclure); fils.kill(); }
     };
     const refuserManquant = () => {
       const manquant = /Cannot find module '([^']+)'/.exec(sortie);
@@ -482,4 +487,5 @@ etape("preuve de démarrage du serveur assemblé…");
   });
 }
 
+finalizeAlexaBuild(RACINE,CIBLE,alexaBuildSource);
 etape(`prêt : ${path.relative(RACINE, CIBLE)}`);

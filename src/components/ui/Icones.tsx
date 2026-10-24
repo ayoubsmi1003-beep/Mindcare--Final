@@ -58,7 +58,8 @@ export type NomIcone =
   | "fleche"
   | "horloge"
   | "alerte"
-  | "audio";
+  | "audio"
+  | "valide";
 
 /** Trait commun. Aucune icône ne le redéfinit. */
 const TRAIT = {
@@ -79,7 +80,13 @@ const TRAIT = {
  * construction. D'où des curseurs, qui disent la même chose en rond.
  */
 const TRACES: Record<NomIcone, React.JSX.Element> = {
-  // Quatre surfaces égales — la vue d'ensemble, avant qu'aucune ne domine.
+  // Un trait qui se replie : « c'est fait », sans coche fermée ni sceau.
+  valide: (
+    <>
+      <path d="M4.6 12.4l4.6 4.6L19.4 6.8" />
+    </>
+  ),
+  // Quatre surfaces égales - la vue d'ensemble, avant qu'aucune ne domine.
   tableauDeBord: (
     <>
       <rect x="3.2" y="3.2" width="7.6" height="7.6" rx="2.4" />

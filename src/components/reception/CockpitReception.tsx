@@ -10,7 +10,7 @@ import { useRouter } from "next/navigation";
 
 import { fr } from "@/i18n/fr";
 import { plage } from "@/components/AgendaPieces";
-import { BandeauHorsLigne, BlocErreur, Squelette } from "@/components/ui/Etats";
+import { BandeauHorsLigne, BlocErreur, EtatVide, Squelette } from "@/components/ui/Etats";
 import { Bouton, LienBouton } from "@/components/ui/Bouton";
 
 import { getReceptionBoard,
@@ -34,12 +34,10 @@ import { FileArrivees } from "./FileArrivees";
 import { PaiementsZone } from "./PaiementsZone";
 import { ModalEncaissement } from "./ModalEncaissement";
 import { CentreNotifications } from "./CentreNotifications";
-import { PreparationJour } from "./PreparationJour";
 import { TiroirDeplacement } from "./TiroirDeplacement";
 import { ResultatsRecherche } from "./RechercheEclair";
 import { TopbarReception } from "./TopbarReception";
 import { PulseReception } from "./PulseReception";
-import { DockActions } from "./DockActions";
 import { BandeauAppelMedecin } from "./BandeauAppelMedecin";
 
 const INTERVALLE_BOARD_MS = 120_000;
@@ -116,6 +114,8 @@ export function CockpitReception({ horsLigneSession }: CockpitReceptionProps): R
   const [notifications, setNotifications] = useState<readonly NotificationItem[]>([]);
   const [erreur, setErreur] = useState<string | undefined>(undefined);
   const [horsLigne, setHorsLigne] = useState(false);
+  /** Au-delà de 10 s sans tableau, on cesse de faire respirer un squelette. */
+  const [delaiDepasse, setDelaiDepasse] = useState(false);
 
   const [maintenant, setMaintenant] = useState<Date>(() => new Date());
   const [ancre, setAncre] = useState<string>(() => versJourIso(new Date()));
@@ -135,6 +135,7 @@ export function CockpitReception({ horsLigneSession }: CockpitReceptionProps): R
   const decalageRef = useRef(0);
 
   const rechercheRef = useRef<HTMLInputElement>(null);
+  const attentionRef = useRef<HTMLDivElement>(null);
   const attenteRef = useRef<HTMLDivElement>(null);
   const encaissementRef = useRef<HTMLDivElement>(null);
   const jourIso = ancre;
@@ -156,6 +157,7 @@ export function CockpitReception({ horsLigneSession }: CockpitReceptionProps): R
     }
     setHorsLigne(false);
     setErreur(undefined);
+    setDelaiDepasse(false);
     setBoard(result.data);
     // Instant d'observation LOCAL de la dernière synchronisation réussie. Ce
     // n'est pas un horodatage clinique : il sert uniquement à dire « voici de
@@ -216,6 +218,20 @@ export function CockpitReception({ horsLigneSession }: CockpitReceptionProps): R
     const tick = setInterval(() => setMaintenant(new Date(Date.now() + decalageRef.current)), INTERVALLE_TICK_MS);
     return () => clearInterval(tick);
   }, []);
+
+  /**
+   * 05-UX-CONTRACT §2 : au-delà de 10 s, un chargement devient une ERREUR avec
+   * le mot « délai ». Un squelette qui respire pour toujours est un spinner
+   * déguisé — et sur ce poste, il laisse croire que la salle d'attente est vide.
+   */
+  useEffect(() => {
+    if (board !== undefined) {
+      setDelaiDepasse(false);
+      return;
+    }
+    const minuteur = setTimeout(() => setDelaiDepasse(true), 10_000);
+    return () => clearTimeout(minuteur);
+  }, [board]);
 
   function apresMutation(): void {
     void rechargerBoard();
@@ -444,9 +460,18 @@ export function CockpitReception({ horsLigneSession }: CockpitReceptionProps): R
 
   const nbPraticiennes = useMemo(() => new Set(journee.map((r) => r.practitionerId)).size, [journee]);
   const useCompact = nbPraticiennes <= 1;
+  /**
+   * La file d'attention ne porte que ce qui n'a pas déjà sa propre section :
+   * les arrivées vivent dans « Salle d'attente », les paiements dans
+   * « Paiements ». Sinon le même patient apparaît deux fois à droite.
+   */
+  const journeeAttention = useMemo(
+    () => journee.filter((rdv) => rdv.status !== "arrived"),
+    [journee],
+  );
 
   return (
-    <div className="flex h-full min-h-0 flex-col gap-4">
+    <div className="flex min-h-0 flex-col gap-3 overflow-y-auto tablet:h-full tablet:overflow-hidden">
       {/* Topbar + recherche dropdown absolu */}
       <div className="relative shrink-0">
         <TopbarReception
@@ -483,7 +508,7 @@ export function CockpitReception({ horsLigneSession }: CockpitReceptionProps): R
         demandes={demandes.length}
         onFocusAttente={() => attenteRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })}
         onFocusEncaisser={() => encaissementRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })}
-        onFocusDemandes={() => attenteRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })}
+        onFocusDemandes={() => attentionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })}
       />
 
       {(degrade || horsLigneSession) && board != null ? (
@@ -526,48 +551,60 @@ export function CockpitReception({ horsLigneSession }: CockpitReceptionProps): R
               </Bouton>
             }
           />
+        ) : delaiDepasse ? (
+          <BlocErreur
+            message={fr.delaiDepasse}
+            action={
+              <Bouton rang="principal" onClick={() => void rechargerBoard()}>
+                {fr.actions.reessayer}
+              </Bouton>
+            }
+          />
         ) : (
           <Squelette lignes={8} />
         )
       ) : (
         <>
-          {/* BENTO — ligne 1 : Journée (2/3) + pile Attention/Arrivées (1/3) */}
-          <div className="grid gap-4 tablet:grid-cols-receptionMiddle">
-            <section aria-label={fr.reception.frise.titre} className="flex min-h-0 flex-col gap-3 overflow-hidden rounded-2xl border border-rule bg-card p-5 shadow-lift1">
-              <div className="flex shrink-0 items-center gap-2">
+          {/* Deux zones seulement : le fil de la journée à gauche, la pile
+              d'actions à droite. Les compteurs sont dans la rangée ci-dessus ;
+              les cartes « Paiements », « Notifications » et « Clôture » qui les
+              répétaient ont été retirées. */}
+          <div className="grid min-h-0 flex-1 gap-3 tablet:grid-cols-receptionCockpit">
+            <section
+              aria-label={fr.reception.frise.titre}
+              className="flex min-h-0 flex-col gap-3 overflow-hidden rounded-2xl border border-rule bg-card p-4 shadow-douce"
+            >
+              <div className="flex shrink-0 flex-wrap items-center gap-2">
                 <div className="flex items-center gap-2">
-                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-brand-600 text-on-brand shadow-lift1">
+                  <span className="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-brand-600 text-on-brand">
                     <span className="font-ui text-label font-bold">J</span>
                   </span>
                   <h2 className="font-ui text-heading font-semibold text-ink-900">{fr.reception.frise.titre}</h2>
-                  <span className="rounded-full bg-brand-50 px-2.5 py-0.5 font-num text-label font-semibold tabular-nums text-brand-700">{journee.length}</span>
+                  <span className="rounded-full bg-brand-50 px-2 py-0.5 font-num text-label font-semibold tabular-nums text-brand-700">{journee.length}</span>
                 </div>
-                <div className="ml-auto flex items-center gap-1 rounded-full bg-sunken p-1">
-                  <Bouton rang="discret" onClick={() => decaler(-1)}>
+                <div className="ms-auto flex items-center gap-1">
+                  <Bouton rang="discret" taille="icone" etiquette={fr.agenda.semaine.semainePrecedente} onClick={() => decaler(-1)}>
                     ‹
                   </Bouton>
-                  <Bouton rang="discret" onClick={() => setAncre(aujourdhuiIso)}>
+                  <Bouton rang="discret" taille="compact" onClick={() => setAncre(aujourdhuiIso)}>
                     {fr.agenda.aujourdhui}
                   </Bouton>
-                  <Bouton rang="discret" onClick={() => decaler(1)}>
+                  <Bouton rang="discret" taille="icone" etiquette={fr.agenda.semaine.semaineSuivante} onClick={() => decaler(1)}>
                     ›
                   </Bouton>
-                  <LienBouton href="/agenda" rang="discret">
-                    {fr.agenda.semaine.vueSemaine}
+                  <LienBouton href="/agenda" rang="discret" taille="compact">
+                    {fr.reception.frise.ouvrirAgenda}
                   </LienBouton>
                 </div>
               </div>
 
               {journee.length === 0 && demandes.length === 0 ? (
-                <div className="flex flex-1 flex-col items-center justify-center gap-4 rounded-xl border border-dashed border-rule bg-sunken px-6 py-10">
-                  <span aria-hidden="true" className="flex h-14 w-14 items-center justify-center rounded-2xl bg-card shadow-lift1">
-                    <span className="h-8 w-8 rounded-xl bg-grad-empty opacity-disabled" />
-                  </span>
-                  <p className="font-ui text-body font-medium text-ink-700">{fr.reception.frise.videJournee}</p>
-                  <p className="max-w-form text-center font-ui text-label text-ink-500">Les rendez-vous du jour apparaissent ici. Créez le premier en un clic.</p>
-                  <LienBouton href="/agenda/nouveau" rang="principal">
-                    {fr.reception.frise.nouveauRdv}
-                  </LienBouton>
+                <div className="flex flex-1 items-center justify-center rounded-xl bg-sunken">
+                  <EtatVide
+                    scene="agendaVide"
+                    titre={fr.reception.frise.videJournee}
+                    message={fr.reception.frise.videJourneeAide}
+                  />
                 </div>
               ) : useCompact ? (
                 <AgendaCompact
@@ -613,12 +650,12 @@ export function CockpitReception({ horsLigneSession }: CockpitReceptionProps): R
               )}
             </section>
 
-            <div ref={attenteRef} className="flex min-h-0 flex-col gap-4">
-              <div className="rounded-2xl border border-rule bg-card p-5 shadow-lift1">
+            <aside className="flex min-h-0 flex-col gap-3 tablet:overflow-y-auto">
+              <div ref={attentionRef} className="rounded-2xl border border-rule bg-card p-4 shadow-douce">
                 <ZoneAttention
-                  journee={journee}
+                  journee={journeeAttention}
                   demandes={demandes}
-                  paiements={paiements}
+                  paiements={[]}
                   maintenant={maintenant}
                   onFocusEncaissement={ouvrirEncaissement}
                   onArrivee={(rdv) => void confirmerArrivee(rdv)}
@@ -626,31 +663,29 @@ export function CockpitReception({ horsLigneSession }: CockpitReceptionProps): R
                   onSelectRdv={setSelectionId}
                 />
               </div>
-              <div className="rounded-2xl border border-rule bg-card p-5 shadow-lift1">
-                <FileArrivees journee={journee} maintenant={maintenant} onAbsent={(rdv) => void confirmerAbsent(rdv)} onSelectRdv={setSelectionId} />
+
+              {compteurs.attente > 0 ? (
+                <div ref={attenteRef} className="rounded-2xl border border-rule bg-card p-4 shadow-douce">
+                  <FileArrivees journee={journee} maintenant={maintenant} onAbsent={(rdv) => void confirmerAbsent(rdv)} onSelectRdv={setSelectionId} />
+                </div>
+              ) : null}
+
+              {paiements.length > 0 ? (
+                <div ref={encaissementRef} className="rounded-2xl border border-rule bg-card p-4 shadow-douce">
+                  <PaiementsZone paiements={paiements} maintenant={maintenant} onEncaisser={ouvrirEncaissement} />
+                </div>
+              ) : null}
+
+              <div className="rounded-2xl border border-rule bg-card p-4 shadow-douce">
+                <CentreNotifications
+                  notifications={notifications}
+                  paiementsDus={paiementsDus}
+                  onMarquerLu={(id) => void marquerLu(id)}
+                  onFocusEncaissement={ouvrirEncaissement}
+                />
               </div>
-            </div>
+            </aside>
           </div>
-
-          {/* BENTO — ligne 2 : Paiements | Notifications | Clôture  */}
-          <div ref={encaissementRef} className="grid gap-4 tablet:grid-cols-receptionBottom">
-            <div className="rounded-2xl border border-rule bg-card p-5 shadow-lift1">
-              <PaiementsZone paiements={paiements} maintenant={maintenant} onEncaisser={ouvrirEncaissement} />
-            </div>
-            <div className="rounded-2xl border border-rule bg-card p-5 shadow-lift1">
-              <CentreNotifications
-                notifications={notifications}
-                paiementsDus={paiementsDus}
-                onMarquerLu={(id) => void marquerLu(id)}
-                onFocusEncaissement={ouvrirEncaissement}
-              />
-            </div>
-            <div className="rounded-2xl border border-rule bg-card p-5 shadow-lift1">
-              <PreparationJour journee={journee} paiements={paiements} />
-            </div>
-          </div>
-
-          <DockActions journee={journee} paiements={paiements} onRechercheFocus={() => rechercheRef.current?.focus()} />
 
           {encaissementCible !== null ? (
             <ModalEncaissement paiement={encaissementCible} onFermer={() => setEncaissementCible(null)} apresMutation={apresMutation} />

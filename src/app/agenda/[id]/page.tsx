@@ -53,12 +53,10 @@ import {
   BlocErreur,
   Bouton,
   Carte,
-  Champ,
   ChampSelection,
   ChampTexte,
   ChampZoneTexte,
   EtatVide,
-  GrilleChamps,
   LienBouton,
 } from "@/components/ui";
 import { useSessionEcran } from "@/components/useSessionEcran";
@@ -103,6 +101,15 @@ const champStyle: React.CSSProperties = {
   width: "var(--size-full)",
 };
 
+const ISSUES_APPEL = [
+  { cle: "joint", libelle: fr.agenda.demande.joint },
+  { cle: "sans_reponse", libelle: fr.agenda.demande.sansReponse },
+  { cle: "rappel", libelle: fr.agenda.demande.rappel },
+  { cle: "mauvais_numero", libelle: fr.agenda.demande.mauvaisNumero },
+] as const;
+
+type IssueAppel = (typeof ISSUES_APPEL)[number]["cle"];
+
 const libelleStyle: React.CSSProperties = {
   fontSize: "var(--text-label-size)",
   lineHeight: "var(--text-label-leading)",
@@ -133,6 +140,10 @@ export default function PageRendezVous(): React.JSX.Element {
   const [annulationOuverte, setAnnulationOuverte] = useState(false);
   const [motif, setMotif] = useState("");
 
+  /** Issue de l'appel choisie, puis enregistrée dans `notes_admin` (journalisée). */
+  const [issueAppel, setIssueAppel] = useState<IssueAppel | "">("");
+  const [appelEnregistre, setAppelEnregistre] = useState(false);
+
   // Attend que la session soit tranchée : la porte journalise CHAQUE appel, et
   // interroger pour un visiteur qu'on redirige écrirait une trace de lecture
   // pour une consultation qui n'a pas eu lieu.
@@ -161,6 +172,16 @@ export default function PageRendezVous(): React.JSX.Element {
       annule = true;
     };
   }, [id, utilisateur]);
+
+  /**
+   * Une issue déjà écrite dans la note (rechargement, retour sur la page)
+   * autorise la confirmation sans refaire le geste. On la reconnaît au préfixe
+   * canonique « Appel », jamais à une heuristique de texte libre.
+   */
+  useEffect(() => {
+    if (rdv === undefined || rdv === null) return;
+    setAppelEnregistre((rdv.notesAdmin ?? "").includes("Appel "));
+  }, [rdv]);
 
   function recharger(): void {
     void getAppointment(id).then((result) => {
@@ -192,6 +213,61 @@ export default function PageRendezVous(): React.JSX.Element {
         return;
       }
       setConfirmation(fr.agenda.demandeApprouvee);
+      recharger();
+    });
+  }
+
+  /**
+   * Enregistre l'issue de l'appel dans la note administrative existante.
+   *
+   * ⚠️ PAS DE NOUVELLE COLONNE. Le schéma n'a pas de `contact_outcome`, et la
+   * règle 9 interdit d'en ajouter sans décision humaine. La note est déjà
+   * auditée par `trg_audit`, visible de l'accueil, et le préfixe « Appel » est
+   * le seul contrat de reconnaissance. La date est écrite en heure locale du
+   * poste, comme le reste de l'écran.
+   */
+  function enregistrerAppel(): void {
+    if (rdv === null || rdv === undefined || issueAppel === "") {
+      setMessageErreur(fr.agenda.demande.issueRequise);
+      return;
+    }
+    const libelle = ISSUES_APPEL.find((issue) => issue.cle === issueAppel)?.libelle;
+    if (libelle === undefined) {
+      setMessageErreur(fr.agenda.demande.issueRequise);
+      return;
+    }
+
+    setMessageErreur(undefined);
+    setConfirmation(undefined);
+    setEnvoi(true);
+
+    const horodatage = new Intl.DateTimeFormat("fr-FR", {
+      dateStyle: "short",
+      timeStyle: "short",
+    }).format(new Date());
+    const ligne = `Appel ${horodatage} — ${libelle}`;
+    const notesAdmin = [rdv.notesAdmin, ligne]
+      .filter((valeur): valeur is string => valeur !== null && valeur.trim() !== "")
+      .join("\n");
+
+    void updateAppointment(id, {
+      startsAt: rdv.startsAt,
+      durationMinutes: rdv.durationMinutes,
+      kind: rdv.kind,
+      notesAdmin,
+    }).then((result) => {
+      setEnvoi(false);
+      if (!result.ok) {
+        setHorsLigne(result.error.code === "hors-ligne");
+        setMessageErreur(result.error.message);
+        return;
+      }
+      if (!result.data) {
+        setMessageErreur(fr.agenda.introuvable);
+        return;
+      }
+      setAppelEnregistre(true);
+      setConfirmation(fr.agenda.demande.appelEnregistre);
       recharger();
     });
   }
@@ -352,26 +428,134 @@ export default function PageRendezVous(): React.JSX.Element {
 
           {messageErreur !== undefined && !horsLigne ? <BlocErreur message={messageErreur} /> : null}
 
+          {/* ── Demande web : appeler, consigner, fixer, confirmer ────────── */}
+          {rdv.status === "requested" ? (
+            <section
+              aria-label={fr.agenda.demande.titre}
+              className="rounded-xl border border-attention bg-attention-bg p-4"
+            >
+              <div className="flex flex-wrap items-start gap-3">
+                <div className="min-w-0 flex-1">
+                  <h2 className="m-0 font-ui text-title font-semibold tracking-title text-ink-900">
+                    {fr.agenda.demande.titre}
+                  </h2>
+                  <p className="m-0 mt-1 font-ui text-body text-ink-700">
+                    {fr.agenda.demande.aide}
+                  </p>
+                </div>
+                {rdv.phone !== null ? (
+                  <a
+                    href={`tel:${rdv.phone}`}
+                    className="inline-flex min-h-target items-center gap-2 rounded-full border border-rule bg-card px-4 font-ui text-body font-semibold text-ink-900 no-underline shadow-douce transition duration-quick ease-out hover:border-ink-300 focus-visible:outline focus-visible:outline-action-600 focus-visible:outline-offset"
+                  >
+                    {fr.agenda.demande.appeler}
+                    <span className="font-num tabular-nums">{rdv.phone}</span>
+                  </a>
+                ) : (
+                  <span className="font-ui text-label text-ink-500">
+                    {fr.agenda.demande.telephoneAbsent}
+                  </span>
+                )}
+              </div>
+
+              <div className="mt-4 flex flex-wrap items-center gap-2">
+                <span className="font-ui text-label font-medium text-ink-700">
+                  {fr.agenda.demande.appel}
+                </span>
+                {ISSUES_APPEL.map((issue) => (
+                  <button
+                    key={issue.cle}
+                    type="button"
+                    aria-pressed={issueAppel === issue.cle}
+                    onClick={() => {
+                      setIssueAppel(issue.cle);
+                      setAppelEnregistre(false);
+                    }}
+                    className={[
+                      "inline-flex min-h-target items-center justify-center rounded-full border px-3 py-1.5 font-ui text-label font-medium",
+                      "transition duration-quick ease-out outline-none",
+                      "focus-visible:outline focus-visible:outline-action-600 focus-visible:outline-offset",
+                      issueAppel === issue.cle
+                        ? "border-attention bg-card text-attention-ink shadow-douce"
+                        : "border-rule bg-transparent text-ink-700 hover:bg-card",
+                    ].join(" ")}
+                  >
+                    {issue.libelle}
+                  </button>
+                ))}
+                <Bouton
+                  rang="secondaire"
+                  taille="compact"
+                  onClick={enregistrerAppel}
+                  disabled={envoi || issueAppel === "" || appelEnregistre}
+                >
+                  {fr.agenda.demande.enregistrerAppel}
+                </Bouton>
+              </div>
+
+              <div className="mt-3 flex flex-wrap items-center gap-2 border-t border-attention pt-3">
+                <Bouton
+                  rang="secondaire"
+                  taille="compact"
+                  onClick={() => {
+                    setEdition(true);
+                    setAnnulationOuverte(false);
+                  }}
+                  disabled={envoi}
+                >
+                  {fr.agenda.demande.modifierCreneau}
+                </Bouton>
+                <Bouton
+                  rang="principal"
+                  taille="compact"
+                  onClick={approuver}
+                  disabled={envoi || !appelEnregistre || edition}
+                >
+                  {fr.agenda.demande.confirmer}
+                </Bouton>
+                {edition ? (
+                  <span className="font-ui text-label text-attention-ink">
+                    {fr.agenda.demande.enregistrerCreneauDabord}
+                  </span>
+                ) : !appelEnregistre ? (
+                  <span className="font-ui text-label text-attention-ink">
+                    {issueAppel === ""
+                      ? fr.agenda.demande.issueRequise
+                      : fr.agenda.demande.confirmerDabord}
+                  </span>
+                ) : null}
+              </div>
+            </section>
+          ) : null}
+
           {/* ── Lecture ──────────────────────────────────────────────────── */}
           {!edition ? (
             <Carte>
               <div className="p-6">
-                <GrilleChamps>
-                  <Champ libelle={fr.agenda.date} valeur={jourComplet(rdv.startsAt)} />
-                  <Champ libelle={fr.agenda.heure} valeur={plage(rdv.startsAt, rdv.endsAt)} />
-                  <Champ
+                {/* Huit champs, UNE surface. Huit cartes `bg-sunken` dans une
+                    carte blanche faisaient huit boîtes pour huit paires
+                    libellé/valeur : la hiérarchie disparaissait au profit du
+                    quadrillage. Un simple filet supérieur sépare les lignes. */}
+                <dl className="m-0 grid grid-cols-1 gap-x-8 gap-y-5 tablet:grid-cols-4">
+                  <ChampAgenda libelle={fr.agenda.date} valeur={jourComplet(rdv.startsAt)} />
+                  <ChampAgenda libelle={fr.agenda.heure} valeur={plage(rdv.startsAt, rdv.endsAt)} />
+                  <ChampAgenda
                     libelle={fr.agenda.duree}
                     valeur={`${rdv.durationMinutes} ${fr.agenda.dureeUnite}`}
                   />
-                  <Champ libelle={fr.agenda.praticienne} valeur={rdv.practitionerName} />
-                  <Champ libelle={fr.patients.numeroDossier} valeur={rdv.recordNumber} />
-                  <Champ
+                  <ChampAgenda libelle={fr.agenda.praticienne} valeur={rdv.practitionerName} />
+                  <ChampAgenda libelle={fr.patients.numeroDossier} valeur={rdv.recordNumber} />
+                  <ChampAgenda libelle={fr.patients.telephone} valeur={rdv.phone} />
+                  <ChampAgenda
                     libelle={fr.agenda.typeConsultation}
                     valeur={rdv.kind === null ? null : fr.agenda.types[rdv.kind]}
                   />
-                  <Champ libelle={fr.agenda.origine} valeur={fr.agenda.origines[rdv.source]} />
-                  <Champ libelle={fr.agenda.notesAdministratives} valeur={rdv.notesAdmin} />
-                </GrilleChamps>
+                  <ChampAgenda libelle={fr.agenda.origine} valeur={fr.agenda.origines[rdv.source]} />
+                  <ChampAgenda
+                    libelle={fr.agenda.notesAdministratives}
+                    valeur={rdv.notesAdmin}
+                  />
+                </dl>
               </div>
             </Carte>
           ) : null}
@@ -488,57 +672,42 @@ export default function PageRendezVous(): React.JSX.Element {
           {!edition && !annulationOuverte
             && rdv.status !== "cancelled" && rdv.status !== "completed" ? (
             <BarreActions>
-              {/* L'approbation n'apparaît QUE sur une demande en attente. Sur
-                  tout autre état, la porte `app.confirm_appointment` lève — et
-                  proposer un bouton qui va échouer apprend à la praticienne que
-                  les commandes de cet écran ne font pas ce qu'elles disent. */}
               {rdv.status === "requested" ? (
-                <Bouton rang="principal" onClick={approuver} disabled={envoi}>
-                  {fr.agenda.approuver}
+                /* La demande garde UNE commande basse : refuser. « Fixer le
+                   créneau » et « Confirmer » vivent dans le panneau au-dessus ;
+                   les répéter ici ferait deux chemins pour le même geste. */
+                <Bouton retrait onClick={() => setAnnulationOuverte(true)}>
+                  {fr.actions.annulerLeRendezVous}
                 </Bouton>
-              ) : null}
+              ) : (
+                <>
+                  {/* ENTRÉE VERS LA SÉANCE (S5). Jamais sur une demande non
+                      confirmée : une séance ouverte sur un créneau seulement
+                      souhaité produirait une note clinique sans rendez-vous. */}
+                  {rdv.patientId !== null && rdv.practitionerId === utilisateur?.id ? (
+                    <Bouton rang="principal" onClick={demarrerLaSeance} disabled={envoi}>
+                      {rdv.status === "in_session"
+                        ? fr.consultation.reprendre
+                        : fr.actions.demarrerLaSeance}
+                    </Bouton>
+                  ) : rdv.patientId === null ? (
+                    <span className="font-ui text-label text-ink-500">
+                      {fr.agenda.patientNonRattache}
+                    </span>
+                  ) : utilisateur === undefined ? null : (
+                    <span className="font-ui text-label text-ink-500">
+                      {fr.agenda.seanceReserveeAutrePraticien}
+                    </span>
+                  )}
 
-              {/* ENTRÉE VERS LA SÉANCE (S5).
-                  La condition porte sur la PRATICIENNE DU RENDEZ-VOUS, pas sur
-                  un rôle : `app.start_consultation` refuse d'ouvrir une séance
-                  sur le rendez-vous d'une consœur, parce qu'une séance porte le
-                  nom de qui la conduit. La même règle, écrite ici, ne fait
-                  qu'éviter de proposer un bouton qui va échouer — elle ne
-                  protège rien, et la base refuserait de toute façon.
-                  Un rendez-vous sans dossier rattaché n'ouvre pas de séance :
-                  il n'y aurait pas de patient à qui rattacher la note.
-
-                  ⚠️ LES DEUX CAUSES D'ABSENCE SONT DISTINGUÉES, PAS TAISÉES.
-                  Un bouton simplement absent est indistinguable d'une
-                  fonctionnalité manquante. `utilisateur === undefined` (session
-                  pas encore tranchée) ne rend RIEN — afficher « réservée à un
-                  autre praticien » pendant le chargement serait faux. */}
-              {rdv.patientId !== null && rdv.practitionerId === utilisateur?.id ? (
-                <Bouton
-                  rang={rdv.status === "requested" ? "secondaire" : "principal"}
-                  onClick={demarrerLaSeance}
-                  disabled={envoi}
-                >
-                  {rdv.status === "in_session"
-                    ? fr.consultation.reprendre
-                    : fr.actions.demarrerLaSeance}
-                </Bouton>
-              ) : rdv.patientId === null ? (
-                <span className="font-ui text-label text-ink-500">
-                  {fr.agenda.patientNonRattache}
-                </span>
-              ) : utilisateur === undefined ? null : (
-                <span className="font-ui text-label text-ink-500">
-                  {fr.agenda.seanceReserveeAutrePraticien}
-                </span>
+                  <Bouton rang="secondaire" onClick={() => setEdition(true)}>
+                    {fr.actions.modifierLeRendezVous}
+                  </Bouton>
+                  <Bouton retrait onClick={() => setAnnulationOuverte(true)}>
+                    {fr.actions.annulerLeRendezVous}
+                  </Bouton>
+                </>
               )}
-
-              <Bouton rang="secondaire" onClick={() => setEdition(true)}>
-                {fr.actions.modifierLeRendezVous}
-              </Bouton>
-              <Bouton retrait onClick={() => setAnnulationOuverte(true)}>
-                {fr.actions.annulerLeRendezVous}
-              </Bouton>
             </BarreActions>
           ) : null}
 
@@ -550,5 +719,29 @@ export default function PageRendezVous(): React.JSX.Element {
         </div>
       )}
     </AppShell>
+  );
+}
+
+function ChampAgenda({
+  libelle,
+  valeur,
+}: {
+  readonly libelle: string;
+  readonly valeur: string | null;
+}): React.JSX.Element {
+  const vide = valeur === null || valeur === "";
+  return (
+    <div className="flex min-w-0 flex-col gap-1">
+      <dt className="font-ui text-label font-medium text-ink-500">{libelle}</dt>
+      <dd
+        className={[
+          "m-0 font-ui text-body font-regular tabular-nums",
+          "whitespace-pre-wrap break-words",
+          vide ? "text-ink-500" : "font-medium text-ink-900",
+        ].join(" ")}
+      >
+        {vide ? fr.etats.texteAbsent : valeur}
+      </dd>
+    </div>
   );
 }

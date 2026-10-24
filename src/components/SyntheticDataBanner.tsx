@@ -94,7 +94,12 @@ export function SyntheticDataBanner(): React.JSX.Element | null {
       >
         {fr.bandeauSynthetique.titre}
       </strong>
-      <span style={{ color: "var(--ink-700)" }}>{fr.bandeauSynthetique.corps}</span>
+      <span className="hidden desktop:inline" style={{ color: "var(--ink-700)" }}>
+        {fr.bandeauSynthetique.corps}
+      </span>
+      <span className="desktop:hidden" style={{ color: "var(--ink-700)" }}>
+        {fr.bandeauSynthetique.corpsCourt}
+      </span>
       <span
         style={{
           marginLeft: "auto",

@@ -748,6 +748,9 @@ const config: Config = {
       // La hauteur au-dela de laquelle une liste de resultats defile au lieu
       // de couvrir l'ecran (recherche eclair de la reception).
       liste: "var(--liste-max)",
+      // Les notifications de caisse : une liste qui defile, pas une colonne
+      // qui pousse les autres blocs hors de l'ecran.
+      notifications: "18rem",
     },
     // Grilles fluides — aucune valeur littérale, `--card-column-min` est déjà
     // le jeton nommé pour la largeur minimale d'une colonne de carte (il
@@ -824,6 +827,7 @@ const config: Config = {
       // Bento reception
       receptionMiddle: "minmax(0, 1.85fr) minmax(0, 1fr)",
       receptionBottom: "minmax(0, 1fr) minmax(0, 1.45fr) minmax(0, 1fr)",
+      receptionCockpit: "minmax(0, 1fr) 23rem",
       // V8.1 — la rangée A du tableau de bord : fil de la journée (large) et
       // panneau Alexa. Nommée ici plutôt qu'en syntaxe arbitraire (I10), même
       // motif que `finance`/`reception`.

@@ -121,6 +121,12 @@ export interface AgendaEntry {
   readonly recordNumber: string | null;
   readonly firstName: string | null;
   readonly lastName: string | null;
+  /**
+   * Téléphone opérationnel, pour rappeler une demande web. Il vient de
+   * `app.patients.phone` via `list_agenda` (181) ; ce n'est pas une donnée
+   * clinique, et `reason` reste absent de la porte (ADR-017).
+   */
+  readonly phone: string | null;
   readonly practitionerId: string;
   readonly practitionerName: string | null;
 }
@@ -138,6 +144,7 @@ interface AgendaRow {
   readonly record_number: string | null;
   readonly first_name: string | null;
   readonly last_name: string | null;
+  readonly phone: string | null;
   readonly practitioner_id: string;
   readonly practitioner_name: string | null;
 }
@@ -210,6 +217,7 @@ function toEntry(row: AgendaRow): AgendaEntry {
     recordNumber: row.record_number,
     firstName: row.first_name,
     lastName: row.last_name,
+    phone: row.phone,
     practitionerId: row.practitioner_id,
     practitionerName: row.practitioner_name,
   };
@@ -336,21 +344,29 @@ export async function updateAppointment(
 /**
  * Approuve une demande de rendez-vous.
  *
- * `status` étant exclu de l'allowlist de `update_appointment`, c'est la seule
- * voie vers `confirmed` : aucune transition ne se fait par une modification de
- * routine. Qui a le droit d'approuver est tranché par la RLS de 006, pas ici.
+ * ⚠️ PAS `confirm_appointment` (025) : cette porte ne regarde que la demande,
+ * pas le créneau. Deux confirmations concurrentes du même horaire passent
+ * toutes les deux et produisent un double booking que personne n'a décidé.
+ * On passe par `confirmer_apres_reverification` (117), qui sérialise les
+ * concurrents sous verrou, relit le chevauchement et refuse le second.
+ *
+ * `status` est exclu de l'allowlist de `update_appointment` : c'est la seule
+ * voie vers `confirmed`. Qui a le droit d'approuver est tranché par la RLS de
+ * 006, pas ici.
  */
 export async function confirmAppointment(id: string): Promise<Result<boolean>> {
-  const result = await db().rpc<string>("confirm_appointment", { p_id: id });
+  const result = await db().rpc<boolean>("confirmer_apres_reverification", {
+    p_appointment_id: id,
+  });
 
   if (!result.ok) {
     log.error("agenda.approbation", logFieldsFor(result.error));
     return err(result.error);
   }
 
-  const touche = result.data[0] !== undefined && result.data[0] !== null;
-  log.info("agenda.approbation", { count: touche ? 1 : 0 });
-  return ok(touche);
+  const confirme = result.data[0] ?? false;
+  log.info("agenda.approbation", { count: confirme ? 1 : 0 });
+  return ok(confirme);
 }
 
 export async function cancelAppointment(
