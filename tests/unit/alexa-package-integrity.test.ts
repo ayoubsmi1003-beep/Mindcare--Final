@@ -4,6 +4,7 @@ import {tmpdir} from 'node:os';
 import {join} from 'node:path';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
+import {setImmediate as yieldToWorker} from 'node:timers/promises';
 import {withNativeBootstrap,enablePackagedNativeEntrypoints,backendInventory,assertBackendInventory,assertModelInventory,snapshotAlexaBuildSources,finalizeAlexaBuild,verifyAlexaPackage} from '../../scripts/lib/alexa-package-integrity.mjs';
 const roots:string[]=[];
 afterEach(()=>{for(const root of roots.splice(0))rmSync(root,{recursive:true,force:true});});
@@ -36,7 +37,7 @@ it('requires the pinned model, archive and complete runtime rather than only the
  expect(()=>assertModelInventory(actual,pin)).not.toThrow();
  for(const invalid of [{modelSha256:'old'},{archiveSha256:'old'},{runtimeManifestSha256:'old'},{runtimeFiles:49}])expect(()=>assertModelInventory({...actual,...invalid},pin)).toThrow('AlexaPackagedModelIntegrity');
 });
-it('checks an assembled relocated artifact against its real source receipt and rejects code/model/bootstrap drift',()=>{
+it('checks an assembled relocated artifact against its real source receipt and rejects code/model/bootstrap drift',async()=>{
  const root=fixture(),source=join(root,'source'),artifact=join(root,'unpacked'),server=join(artifact,'resources/serveur'),assets=join(artifact,'resources/alexa/local-model');
  const write=(path:string,text:string)=>{mkdirSync(join(path,'..'),{recursive:true});writeFileSync(path,text);};
  const sha=(text:string)=>createHash('sha256').update(text).digest('hex');
@@ -55,11 +56,14 @@ it('checks an assembled relocated artifact against its real source receipt and r
  write(join(server,'server.js'),'console.log("synthetic server");');write(join(server,'scripts/verifier-base.mjs'),'console.log("synthetic schema");');write(join(server,'.next/BUILD_ID'),'synthetic-build');
  enablePackagedNativeEntrypoints(server);const before=snapshotAlexaBuildSources(source);
  finalizeAlexaBuild(source,server,before);
+ await yieldToWorker();
  expect(verifyAlexaPackage(source,artifact)).toMatchObject({commit:before.commit,native:true,buildId:'synthetic-build',modelSha256:sha(model)});
- for(const input of buildInputs){write(join(source,input),'changed build input');expect(()=>verifyAlexaPackage(source,artifact)).toThrow('AlexaBuildSourceMismatch');expect(()=>finalizeAlexaBuild(source,server,before)).toThrow('AlexaBuildSourceChanged');write(join(source,input),'synthetic build input');}
+ // Let Vitest deliver worker updates between synchronous Git/hash inspections on a slow disk.
+ for(const input of buildInputs){write(join(source,input),'changed build input');expect(()=>verifyAlexaPackage(source,artifact)).toThrow('AlexaBuildSourceMismatch');expect(()=>finalizeAlexaBuild(source,server,before)).toThrow('AlexaBuildSourceChanged');write(join(source,input),'synthetic build input');await yieldToWorker();}
  write(join(assets,'TestMiniCPM.gguf'),'old model');expect(()=>verifyAlexaPackage(source,artifact)).toThrow('AlexaPackagedModelIntegrity');write(join(assets,'TestMiniCPM.gguf'),model);
  write(join(server,'.next/BUILD_ID'),'old build');expect(()=>verifyAlexaPackage(source,artifact)).toThrow('AlexaBuildIdMismatch');write(join(server,'.next/BUILD_ID'),'synthetic-build');
  const entry=readFileSync(join(server,'server.js'),'utf8');write(join(server,'server.js'),'console.log("legacy");');expect(()=>verifyAlexaPackage(source,artifact)).toThrow('AlexaPackagedNativeRequired');write(join(server,'server.js'),entry);
+ await yieldToWorker();
  write(join(source,'src/server/alexa/local-model.ts'),modelSource+'\n// changed source');expect(()=>verifyAlexaPackage(source,artifact)).toThrow('AlexaBuildSourceMismatch');expect(()=>finalizeAlexaBuild(source,server,before)).toThrow('AlexaBuildSourceChanged');write(join(source,'src/server/alexa/local-model.ts'),modelSource);
  const receipt=JSON.parse(readFileSync(join(server,'alexa-build.json'),'utf8'));receipt.commit='0'.repeat(40);write(join(server,'alexa-build.json'),JSON.stringify(receipt));expect(()=>verifyAlexaPackage(source,artifact)).toThrow('AlexaBuildSourceMismatch');
 },180000);
