@@ -29,7 +29,7 @@ function requestedDocumentKind(text: string): DocumentKind | null {
   if (/\bsuivi medical\b/u.test(text)) return "suivi_medical";
   if (/\bcertificat medical\b/u.test(text)) return "certificat_medical";
   if (/\bjustificati(?:on|f)\b/u.test(text)) return "justification";
-  if (/\bordonnances?\b/u.test(text)) return "ordonnance";
+  if (/\bordonn?ances?\b/u.test(text)) return "ordonnance";
   return null;
 }
 

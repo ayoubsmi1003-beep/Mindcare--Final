@@ -26,6 +26,11 @@ describe("impression d'un document existant",()=>{
   if(result.state==="print")expect(result.label).toContain("DOC-2026-00067");
  });
 
+ it("tolère la coquille « ordonance » la plus fréquente",async()=>{
+  const result=await prepareActionProposal({...input,text:"imprime un ordonance pour ce patient"},dbWith([{document_id:documentId,doc_type:"ordonnance",doc_number:"DOC-2026-00067",status:"issued"}]),unusedSql,signal);
+  expect(result).toMatchObject({state:"print",patientId,documentId});
+ });
+
  it("refuse d'inventer une cible quand plusieurs ordonnances existent",async()=>{
   const result=await prepareActionProposal(input,dbWith([
    {document_id:documentId,doc_type:"ordonnance",doc_number:"DOC-2026-00067",status:"issued"},

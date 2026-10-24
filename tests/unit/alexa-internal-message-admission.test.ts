@@ -21,4 +21,11 @@ describe("admission du message interne Alexa",()=>{
   expect(admission.preparationAction).toBe("create_editable_document_draft");
   expect(admission.preparationDocumentType).toBe("ordonnance");
  });
+
+ it("tolère la coquille « ordonance » la plus fréquente",()=>{
+  const admission=frenchRequestAdmission("Prépare une ordonance pour ce patient.",false);
+  expect(admission.tools).toEqual(["prepare_action"]);
+  expect(admission.preparationAction).toBe("create_editable_document_draft");
+  expect(admission.preparationDocumentType).toBe("ordonnance");
+ });
 });

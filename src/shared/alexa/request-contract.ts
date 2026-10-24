@@ -230,9 +230,9 @@ function frenchReadTargets(text:string):FrenchReadTarget[]{
  const noteArea=requestedAreas.length===1?requestedAreas[0]:undefined;
  const queryMatch=text.match(/(?:\bmot|\bexpression|\bphrase|\bcode|\br[eé]f[eé]rence|\br[eé]p[èe]re)\s+[«“"]?(.+?)[»”"]?(?=\s+dans\b|$)/iu);
  const noteQuery=queryMatch?.[1]?.replace(/[»”"?.!]+$/u,'').trim();
- const document=/\b(?:documents?|brouillons?|certificats?|ordonnances?|justificatifs?)\b/u.test(plain);
+ const document=/\b(?:documents?|brouillons?|certificats?|ordonn?ances?|justificatifs?)\b/u.test(plain);
  if(document&&!knowledge){
-  const documentKind:FrenchReadTarget['documentKind']=/\bcertificats?\s+m(?:edical|edicaux)\b/u.test(plain)?'certificat_medical':/\bordonnances?\b/u.test(plain)?'ordonnance':/\bjustificatifs?\b/u.test(plain)?'justification':/\bsuivi medical\b/u.test(plain)?'suivi_medical':/\bbonne sante mentale\b/u.test(plain)?'bonne_sante_mentale':undefined;
+  const documentKind:FrenchReadTarget['documentKind']=/\bcertificats?\s+m(?:edical|edicaux)\b/u.test(plain)?'certificat_medical':/\bordonn?ances?\b/u.test(plain)?'ordonnance':/\bjustificatifs?\b/u.test(plain)?'justification':/\bsuivi medical\b/u.test(plain)?'suivi_medical':/\bbonne sante mentale\b/u.test(plain)?'bonne_sante_mentale':undefined;
   const documentStatus:FrenchReadTarget['documentStatus']=/\b(?:emis|delivre|signes?)\b/u.test(plain)?'issued':/\b(?:brouillons?|non signes?)\b/u.test(plain)?'draft':undefined;
   add({tool:'query_documents',unboundedPeriod,documentAllKinds:!documentKind,...(documentKind?{documentKind}:{}),...(documentStatus?{documentStatus}:{})});
  }
@@ -283,8 +283,8 @@ function preparationTarget(text:string):Pick<FrenchRequestAdmission,'preparation
  const plain=fold(text);
  if(!/^(?:(?:s.il te plait|svp),?\s+)?(?:(?:peux[- ]tu|pourrais[- ]tu|pouvez[- ]vous|pourriez[- ]vous|tu peux|vous pouvez|je voudrais|j.aimerais)\s+(?:(?:me|nous)\s+)?)?(?:prepare\w*|propose\w*)\b/u.test(plain)||/\b(?:ne|pas|aucun|annule|supprime|signe|emets|delivre)\b/u.test(plain))return null;
  if(/\b(?:rendez[- ]vous|rdv)\b/u.test(plain))return {preparationAction:'create_appointment'};
- if(!/\b(?:brouillons?|certificats?|justifications?|justificatifs?|suivi medical|ordonnances?)\b/u.test(plain))return null;
- const preparationDocumentType=/\bbonne sante mentale\b/u.test(plain)?'bonne_sante_mentale':/\bsuivi medical\b/u.test(plain)?'suivi_medical':/\bcertificat medical\b/u.test(plain)?'certificat_medical':/\bjustificati(?:on|f)\b/u.test(plain)?'justification':/\bordonnances?\b/u.test(plain)?'ordonnance':undefined;
+ if(!/\b(?:brouillons?|certificats?|justifications?|justificatifs?|suivi medical|ordonn?ances?)\b/u.test(plain))return null;
+ const preparationDocumentType=/\bbonne sante mentale\b/u.test(plain)?'bonne_sante_mentale':/\bsuivi medical\b/u.test(plain)?'suivi_medical':/\bcertificat medical\b/u.test(plain)?'certificat_medical':/\bjustificati(?:on|f)\b/u.test(plain)?'justification':/\bordonn?ances?\b/u.test(plain)?'ordonnance':undefined;
  return {preparationAction:'create_editable_document_draft',...(preparationDocumentType?{preparationDocumentType}:{})};
 }
 
