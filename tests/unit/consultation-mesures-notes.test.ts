@@ -41,12 +41,19 @@ function ouvrirCallback(noteModifiable = true, seanceClose = false) {
   let mesures: Record<CleMesure, number | null> = { anxiete: null, sommeil: null, humeur: null };
   const notes = { ...notesInitiales };
   const ecritures: unknown[] = [];
+  const details = { current: { mesures: { ...mesures } } };
+  const ecrituresDetails: unknown[] = [];
   const choisir = runInNewContext(`${code}\nappliquerMesure`, {
     noteModifiable,
     seanceClose,
     LIBELLES_MESURE: { anxiete: "Anxiété", sommeil: "Sommeil", humeur: "Humeur" },
     ajouterPiste,
     soap: notes,
+    detailsRef: details,
+    enregistrerDetails: (valeur: { mesures: typeof mesures }) => {
+      details.current = valeur;
+      ecrituresDetails.push(valeur);
+    },
     setMesures: (modifier: (courant: typeof mesures) => typeof mesures) => {
       mesures = modifier(mesures);
     },
@@ -59,7 +66,7 @@ function ouvrirCallback(noteModifiable = true, seanceClose = false) {
       ecritures.push({ brut: texte });
     },
   }) as (cle: CleMesure, valeur: number) => void;
-  return { choisir, notes, ecritures, mesures: () => mesures };
+  return { choisir, notes, ecritures, ecrituresDetails, mesures: () => mesures };
 }
 
 describe("curseurs de consultation et notes libres", () => {
@@ -72,6 +79,8 @@ describe("curseurs de consultation et notes libres", () => {
     expect(page.mesures()).toEqual({ anxiete: 8, sommeil: 4, humeur: 6 });
     expect(page.notes).toEqual(notesInitiales);
     expect(page.ecritures).toEqual([]);
+    expect(page.ecrituresDetails).toHaveLength(3);
+    expect(page.ecrituresDetails.at(-1)).toEqual({ mesures: { anxiete: 8, sommeil: 4, humeur: 6 } });
   });
 
   it.each([
@@ -84,5 +93,6 @@ describe("curseurs de consultation et notes libres", () => {
     expect(page.mesures()).toEqual({ anxiete: null, sommeil: null, humeur: null });
     expect(page.notes).toEqual(notesInitiales);
     expect(page.ecritures).toEqual([]);
+    expect(page.ecrituresDetails).toEqual([]);
   });
 });

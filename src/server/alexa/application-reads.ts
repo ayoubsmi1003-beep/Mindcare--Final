@@ -10,7 +10,30 @@ type Rpc=(name:string,args:RpcArgs,signal:AbortSignal)=>Promise<unknown>;
 const text=z.string().nullable(),money=z.number().int().safe(),amount=z.number().int().nonnegative().safe();
 
 function result(callId:string,data:unknown,lines:string[],gate:string):AgentResult{return {callId,status:'ok',complete:true,data,text:lines.join('\n'),conditionKeys:[],evidence:[{id:callId,type:'query',label:gate,provenance:{gate}}]};}
-export async function readApplication(callId:string,view:string,rpc:Rpc,signal:AbortSignal,options:{asOf?:string;offset?:number;revision?:string}={}):Promise<AgentResult>{
+export async function readApplication(callId:string,view:string,rpc:Rpc,signal:AbortSignal,options:{asOf?:string;offset?:number;revision?:string;query?:string;day?:string;queue?:string}={}):Promise<AgentResult>{
+ if(view==='medication_catalog'){
+  if(!options.query||options.query.trim().length<2)throw new AgentReadError('malformed');
+  const rows=z.array(z.object({id:z.string().max(200),raw_name:z.string().max(500),inn:z.string().max(300),brand_name:text,form:text,strength:text,source:z.string().max(300)})).max(20).parse(await rpc('search_medications',{p_query:options.query,p_limit:20},signal));
+  const r=result(callId,{rows,query:options.query},rows.length?rows.map(row=>copy.extended.medication(row.raw_name,row.inn,row.form,row.strength)): [copy.extended.empty],'search_medications');
+  r.complete=rows.length<20;r.status=rows.length===20?'partial':rows.length?'ok':'empty';if(!r.complete)r.text+=' '+copy.extended.catalogueLimit;return r;
+ }
+ if(view==='reception'){
+  const day=options.day??aujourdHuiCabinet(new Date(options.asOf!)),queue=options.queue??'all';
+  const person={first_name:text.optional(),last_name:text.optional()};
+  const appointment=z.object({id:z.uuid(),status:z.string(),...person,arrived_at:text,starts_at:text.optional()});
+  const raw=z.object({journee:z.array(appointment),demandes:z.array(z.object({id:z.uuid(),...person,starts_at:text.optional()})),paiements:z.array(z.object({payment_id:z.uuid(),...person,amount_dzd:amount,collected_at:text}))}).parse(await rpc('reception_board',{p_day:day},signal));
+  const waiting=raw.journee.filter(row=>row.status==='arrived');
+  const members=queue==='waiting'?waiting:queue==='requests'?raw.demandes:queue==='payments'?raw.paiements:raw.journee;
+  const revision=createHash('md5').update(JSON.stringify({day,queue,raw})).digest('hex'),offset=options.offset??0;
+  if((offset>0&&!options.revision)||(options.revision&&options.revision!==revision))throw new AgentReadError('changed');
+  const rows=members.slice(offset,offset+20),complete=offset+rows.length>=members.length;
+  const r=result(callId,{day,queue,total:members.length,rows,revision,offset,waiting:waiting.length,requests:raw.demandes.length,payments:raw.paiements.length,applicationQuery:{view:'reception',day,queue},...(!complete?{nextOffset:offset+rows.length}:{})},[
+   copy.receptionCount(members.length,day,queue),
+   ...rows.map(row=>[row.first_name,row.last_name].filter(Boolean).join(' ')||copy.missing),
+   ...(!complete?[copy.page(offset+1,offset+rows.length,members.length),copy.extended.nextPage]:[]),
+  ],'reception_board');
+  r.status=complete?(members.length?'ok':'empty'):'partial';r.complete=complete;return r;
+ }
  if(view==='notifications'||view==='system'){
   const gate='get_alexa_office_status',raw=await rpc(gate,{p_view:view,p_offset:options.offset??0,p_revision:options.revision??null},signal);
   if(view==='system'){

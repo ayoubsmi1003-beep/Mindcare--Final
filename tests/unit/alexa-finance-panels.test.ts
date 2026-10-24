@@ -7,6 +7,11 @@ const input={text:'Lis les panneaux financiers demandés.',conversationId:'finan
 const asOf='2026-10-15T12:00:00.000Z';
 const source=()=>({du:'2026-10-01',au:'2026-10-31',composition:{revenus_par_type:[{cle:'suivi',libelle:'suivi',montant:5000,nb_seances:3,part_pct:83.3}],charges_par_categorie:[{cle:'loyer',libelle:'loyer',montant:1200,part_pct:100}]},evolution:Array.from({length:6},(_,i)=>({mois_iso:'2026-'+String(i+5).padStart(2,'0'),mois_label:'Mois fictif '+i,revenu:5000+i,charges:1200,resultat_net:3800+i})),calendrier:Array.from({length:31},(_,i)=>({jour_iso:'2026-10-'+String(i+1).padStart(2,'0'),montant:i===14?5000:0,nb_seances:i===14?3:0,a_impaye:i===15})),calendrier_par_type:{types:[{cle:'suivi',libelle:'suivi'},{cle:'autres',libelle:'autres'}],lignes:Array.from({length:31},(_,i)=>[{jour_iso:'2026-10-'+String(i+1).padStart(2,'0'),cle:'suivi',nb:i===14?2:0},{jour_iso:'2026-10-'+String(i+1).padStart(2,'0'),cle:'autres',nb:i===14?1:0}]).flat()},attention:{impayes_total:2000,impayes_count:1,plus_ancien_impaye_jours:15,echeances_a_venir:[{intitule:'Charge fictive',montant:1200,date_echeance:'2026-10-20',jours_restants:5}]}});
 function run(mode:string,raw:unknown=source(),offset=0){const rpc=scriptedAlexaRpc(async()=>({ok:true as const,data:[raw]}));return {rpc,result:agentExecutor(input,{rpc},{rpc:vi.fn()})({id:'p',name:'query_finance',args:{partIds:['p'],mode,period:'ce mois',offset}},asOf,[],new AbortController().signal)};}
+it.each(['composition','calendar'])('labels SQL payment-row counts rather than claiming distinct consultations: %s',async mode=>{
+ const r=await run(mode).result;
+ expect(r.text).toContain('3 paiements encaissés');expect(r.text).not.toMatch(/3 séance/iu);
+ if(mode==='calendar')expect(r.text).toContain('encore impayés à la date de lecture');
+});
 it('reads stored financial composition without recalculating percentages or losing categories',async()=>{
  const {result,rpc}=run('composition'),r=await result;expect(r.complete).toBe(true);expect(r.data).toMatchObject({composition:source().composition});expect(r.text).toContain('83.3 %');expect(r.text).toContain('5000 DZD');expect(r.text).toContain('1200 DZD');expect(rpc).toHaveBeenCalledExactlyOnceWith('get_finance_overview',{p_period_start:'2026-10-01',p_period_end:'2026-10-31'});
 });
@@ -29,7 +34,8 @@ it.each(['composition','evolution','calendar','attention'])('does not turn a den
 it('rejects mismatched period evidence and malformed money',async()=>{const raw=source();raw.du='2026-09-01';await expect(run('composition',raw).result).rejects.toBeDefined();const invalid=source();invalid.composition.revenus_par_type[0]!.montant=-1;await expect(run('composition',invalid).result).rejects.toBeDefined();});
 it('keeps waiting-room status and pagination in one authorized agenda query',async()=>{
  const rpc=scriptedAlexaRpc(async()=>({ok:true as const,data:[{total:23,rows:[],totals:{},complete:true,offset:20}]}));
- const r=await agentExecutor(input,{rpc},{rpc:vi.fn()})({id:'w',name:'query_agenda',args:{partIds:['w'],period:"aujourd'hui",statuses:['arrived'],offset:20}},asOf,[],new AbortController().signal);
+ const request={...input,text:'Liste les rendez-vous arrivés aujourd’hui, page 2.'};
+ const r=await agentExecutor(request,{rpc},{rpc:vi.fn()})({id:'w',name:'query_agenda',args:{partIds:['w'],period:"aujourd'hui",statuses:['arrived'],offset:20}},asOf,[],new AbortController().signal);
  expect(r.data).toMatchObject({total:23,offset:20,hasMore:true});expect(rpc.mock.calls[0]?.[0]).toBe('query_alexa_records');expect(JSON.parse(String(rpc.mock.calls[0]?.[1]?.['p_spec']))).toMatchObject({statuses:['arrived'],offset:20,from:'2026-10-15T00:00:00+01:00',to:'2026-10-16T00:00:00+01:00'});
 });
 
@@ -37,5 +43,5 @@ it('recognizes the actual PostgreSQL adapter empty-array representation of a den
 
 it('renders French financial type labels while retaining exact SQL identifiers in evidence data',async()=>{
  const raw=source();raw.composition.revenus_par_type[0]!.cle='__non_rattache__';raw.composition.revenus_par_type[0]!.libelle='__non_rattache__';raw.calendrier_par_type.types[0]!.cle='__non_rattache__';raw.calendrier_par_type.types[0]!.libelle='__non_rattache__';for(const line of raw.calendrier_par_type.lignes)if(line.cle==='suivi')line.cle='__non_rattache__';
- for(const mode of ['composition','calendar']){const r=await run(mode,raw).result;expect(r.text).toContain('Séance non rattachée');expect(r.text).not.toContain('__non_rattache__');expect(JSON.stringify(r.data)).toContain('__non_rattache__');}
+ for(const mode of ['composition','calendar']){const r=await run(mode,raw).result;expect(r.text).toContain('Paiement sans rendez-vous lié');expect(r.text).not.toContain('Séance non rattachée');expect(r.text).not.toContain('__non_rattache__');expect(JSON.stringify(r.data)).toContain('__non_rattache__');}
 });

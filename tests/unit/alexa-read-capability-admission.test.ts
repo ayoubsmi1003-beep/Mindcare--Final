@@ -1,7 +1,8 @@
+import {unfinishedNativeRequest} from '../helpers/alexa-unfinished-request';
 import { expect, it, vi } from 'vitest';
 import { constrainCompoundDeclaration, constrainCountDeclaration, countContractHints, frenchPatientCompoundContract, frenchPatientCountContract, frenchReadArgumentBindings, frenchRequestAdmission, requestedReadTool } from '@/shared/alexa/request-contract';
 import type { RequestPart } from '@/shared/alexa/agent';
-import { runAgentLoop } from '@/server/alexa/agent-loop';
+import { runAgentLoop as runNativeLoop } from '@/server/alexa/agent-loop';
 import type { LocalCompletion, LocalTextOptions } from '@/server/alexa/local-model-protocol';
 
 it.each([
@@ -286,3 +287,6 @@ it('dispatches a bound summary once without requiring the model to repeat ground
  expect(execute).toHaveBeenCalledTimes(1);
  expect(execute.mock.calls[0]?.[0]).toMatchObject({name:'get_patient_context',args:{partIds:['p'],section:'summary'}});
 });
+
+// Keep native admission assertions independent of fresh deterministic shortcuts.
+const runAgentLoop=(...args:Parameters<typeof runNativeLoop>)=>runNativeLoop(unfinishedNativeRequest(args[0],args[1].actor),args[1],args[2]);

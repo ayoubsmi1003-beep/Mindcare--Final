@@ -11,8 +11,11 @@ it("shares the single inference lease across independently loaded server route m
  vi.resetModules();
  const secondModule=await import("@/server/alexa/local-model");
  const second=secondModule.inferLocalText([{role:"user",content:"Bonjour"}],{timeoutMs:5000}).catch((e:Error)=>e.message);
+ await new Promise(resolve=>setTimeout(resolve,10));
+ expect(verify).toHaveBeenCalledTimes(1);
  unblock();
- expect(await second).toBe("LocalModelBusy");
+ expect(await second).toBe("LocalModelIntegrity");
+ expect(verify).toHaveBeenCalledTimes(2);
  expect(await first).toBe("LocalModelIntegrity");
  await firstModule.releaseLocalModel();await secondModule.releaseLocalModel();
 });

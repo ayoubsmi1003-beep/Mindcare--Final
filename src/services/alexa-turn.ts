@@ -1,7 +1,8 @@
 import { db } from "./db";
+import {validAnswerLinks,type AlexaAnswerBlock} from '@/shared/alexa/answer-links';
 import { abonnerPatientActif, patientActifCourant } from "./patient-actif";
 import { alexa } from "@/i18n/alexa";
-import { alexaNavigationSchema, alexaProposalSchema, type AlexaProposal, type AlexaEvent, type AlexaNavigation, type AlexaSource } from "@/shared/alexa/turn";
+import { validAlexaSources, alexaNavigationSchema, alexaProposalSchema, type AlexaProposal, type AlexaEvent, type AlexaNavigation, type AlexaSource } from "@/shared/alexa/turn";
 
 let conversation: string | null = null;
 let conversationPending: Promise<string> | null = null;
@@ -30,7 +31,7 @@ export async function ensureAlexaConversation(): Promise<string> {
   conversationPending = pending;
   return conversationPending;
 }
-export interface AlexaTurnResult { texte: string; sources: AlexaSource[]; patientId: string | null; limited: boolean; persiste: boolean; status?: import("@/shared/alexa/agent").AgentTerminal; parts?: import("@/shared/alexa/agent").RequestPart[]; speechAllowed?:boolean; navigation?: AlexaNavigation; proposal?:AlexaProposal }
+export interface AlexaTurnResult { texte: string; sources: AlexaSource[]; blocks?:AlexaAnswerBlock[]; patientId: string | null; limited: boolean; persiste: boolean; status?: import("@/shared/alexa/agent").AgentTerminal; parts?: import("@/shared/alexa/agent").RequestPart[]; speechAllowed?:boolean; navigation?: AlexaNavigation; proposal?:AlexaProposal }
 export class AlexaTurnError extends Error {
   constructor(message: string, readonly partial: boolean) { super(message); this.name = "AlexaTurnError"; }
 }
@@ -56,6 +57,7 @@ export async function envoyerTourAlexa(text: string, signal?: AbortSignal, callb
   let proposal: AlexaProposal | undefined;
   let status:AlexaTurnResult["status"],parts:AlexaTurnResult["parts"],speechAllowed=false;
   const sources: AlexaSource[] = [];
+  const blocks:AlexaAnswerBlock[]=[];
   const checkScope = () => {
     signal?.throwIfAborted();
     if (ownSequence !== sequence || (typeof window !== "undefined" && page !== window.location.pathname)) throw new Error(alexa.contexteChange);
@@ -66,7 +68,7 @@ export async function envoyerTourAlexa(text: string, signal?: AbortSignal, callb
       const chunk = await reader.read();
       checkScope();
       pending += decoder.decode(chunk.value, { stream: !chunk.done });
-      if (pending.length > 128_000) throw new Error(alexa.format);
+      if (pending.length > 256_000) throw new Error(alexa.format);
       let boundary: number;
       while ((boundary = pending.indexOf("\n\n")) !== -1) {
         checkScope();
@@ -74,6 +76,9 @@ export async function envoyerTourAlexa(text: string, signal?: AbortSignal, callb
         const raw = record.startsWith("data: ") ? JSON.parse(record.slice(6)) as AlexaEvent : null;
         if (!raw) continue;
         if (raw.type === "sentence" && typeof raw.text === "string" && raw.text.length <= 10_000 && Array.isArray(raw.sources)) {
+          if(!validAlexaSources(raw.sources))throw new Error(alexa.format);
+          if(raw.links!==undefined&&!validAnswerLinks(raw.text,raw.links))throw new Error(alexa.format);
+          blocks.push({text:raw.text,...(raw.links?{links:raw.links}:{})});
           answer += `${answer ? "\n" : ""}${raw.text}`;
           if (answer.length > 64_000) throw new Error(alexa.format);
           sources.push(...raw.sources); callbacks.onSentence?.(raw.text);
@@ -100,6 +105,6 @@ export async function envoyerTourAlexa(text: string, signal?: AbortSignal, callb
     checkScope();
     if (!done) throw new Error(alexa.interrompu);
     if (replacePatient) lastPatient = sourcePatientId;
-    return { texte: answer, sources, patientId: sourcePatientId, limited, persiste, ...(status?{status}:{}),...(parts?{parts}:{}),speechAllowed, ...(navigation ? { navigation } : {}),...(proposal?{proposal}:{}) };
+    return { texte: answer, sources, blocks, patientId: sourcePatientId, limited, persiste, ...(status?{status}:{}),...(parts?{parts}:{}),speechAllowed, ...(navigation ? { navigation } : {}),...(proposal?{proposal}:{}) };
   } finally { await reader.cancel().catch(() => {}); reader.releaseLock(); }
 }

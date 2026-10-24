@@ -2,6 +2,7 @@ import { LIMITES } from "@/server/knowledge/recherche";
 import { describe, expect, it } from "vitest";
 import { readKnowledge } from "@/server/alexa/knowledge-adapter";
 import type { ArgsJarvis, ClientSql } from "@/server/jarvis/client-sql";
+import {planKnowledgeQuery,matchesRequestedBook} from '@/server/alexa/knowledge-query';
 
 const DSM = "DSM-5 — Manuel diagnostique et statistique des troubles mentaux";
 const MAUDSLEY = "The Maudsley Prescribing Guidelines in Psychiatry";
@@ -23,6 +24,37 @@ function boundary(rows: unknown[]) {
 }
 
 describe("bounded Alexa lexical question planning", () => {
+  it('preserves both primary topics of a DSM comparison and rejects unrelated differentials',()=>{
+    const plan=planKnowledgeQuery('Compare les descriptions de manie et d’hypomanie selon le DSM-5.')!;
+    expect(plan.sectionFocuses).toEqual(['episode hypomaniaque','episode maniaque']);
+    for(const section of ['Épisode maniaque','Épisode hypomaniaque'])expect(matchesRequestedBook(row(DSM,'Contenu synthétique.',{section:'Section II › '+section+' › Critères diagnostiques'}),plan)).toBe(true);
+    expect(matchesRequestedBook(row(DSM,'Hypomanie mentionnée dans un autre diagnostic.',{section:'Autre trouble › Diagnostic différentiel'}),plan)).toBe(false);
+    expect(plan.queries).toContain('episode maniaque');expect(plan.queries).toContain('episode hypomaniaque');
+  });
+  it.each([
+    ['Quels critères d’hypomanie figurent dans le DSM-5 ?', 'Épisode hypomaniaque', 'Critères diagnostiques'],
+    ['Comment le DSM-5 décrit-il la manie ?', 'Épisode maniaque', 'Critères diagnostiques'],
+    ['Quels sont les principaux signes de la schizophrénie selon le DSM-5 ?', 'Schizophrénie', 'Critères diagnostiques'],
+    ['Quels signes de schizophrénie le DSM-5 distingue-t-il ?', 'Schizophrénie', 'Critères diagnostiques'],
+    ['Quels critères d’anxiété généralisée donne le DSM-5 ?', 'Anxiété généralisée', null],
+    ['Comment le DSM-5 décrit-il le trouble obsessionnel-compulsif ?', 'Trouble obsessionnel-compulsif', null],
+  ] as const)('binds the DSM topic to its primary section rather than another differential: %s',(question,focus,leaf)=>{
+    const plan=planKnowledgeQuery(question)!;
+    const primary=row(DSM,'A. Première condition synthétique documentée. B. Seconde condition synthétique documentée.',{section:['Section II',focus,leaf].filter(Boolean).join(' › ')});
+    const differential=row(DSM,'Contenu synthétique mentionnant ce concept.',{section:'Autre trouble › Diagnostic différentiel'});
+    expect(matchesRequestedBook(primary,plan)).toBe(true);
+    expect(matchesRequestedBook(differential,plan)).toBe(false);
+    expect(plan.queries.some(q=>q.includes(focus.normalize('NFD').replace(/\p{M}/gu,'').toLowerCase()))).toBe(true);
+  });
+  it('does not substitute comorbidity for requested criteria embedded in the topic section',()=>{
+    const plan=planKnowledgeQuery('Quels critères d’anxiété généralisée donne le DSM-5 ?')!;
+    expect(matchesRequestedBook(row(DSM,'A. Première condition synthétique documentée. B. Seconde condition synthétique documentée.',{section:'Section II › Anxiété généralisée'}),plan)).toBe(true);
+    expect(matchesRequestedBook(row(DSM,'Contenu synthétique.',{section:'Section II › Anxiété généralisée › Comorbidité'}),plan)).toBe(false);
+    expect(plan.queries).toContain('anxiete generalisee criteres diagnostiques');
+    expect(plan.queries).toContain('anxiete generalisee a b');
+    expect(matchesRequestedBook(row(DSM,'Anxiété généralisée — Comorbidité : les sujets peuvent remplir les critères d’autres troubles.',{section:'Section II › Anxiété généralisée'}),plan)).toBe(false);
+    expect(matchesRequestedBook(row(DSM,'Anxiété généralisée — Critères diagnostiques A. Première condition synthétique documentée. B. Seconde condition synthétique documentée.',{section:'Section II › Anxiété généralisée'}),plan)).toBe(true);
+  });
   it("retrieves a natural DSM question with its clinical terms and exact source restriction", async () => {
     const { client, calls } = boundary([
       row(MAUDSLEY, "Critères de la dépression"), row(DSM, "Critères de la dépression"),

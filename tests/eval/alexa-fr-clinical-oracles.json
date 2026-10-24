@@ -1,0 +1,330 @@
+{
+  "version": 1,
+  "status": "PARTIAL",
+  "reviewedAt": "2026-10-24",
+  "reviewer": "independent-source-review-agent",
+  "environment": {
+    "database": "alexa_eval_clinical_20261022",
+    "port": 55444,
+    "patientDataIncluded": false
+  },
+  "cases": [
+    {
+      "id": "fr-105",
+      "questionSha256": "cb17d4ef8a82c8e183931455cfda77ab5e7a7d2eedd6e5ea1c072736272d8597",
+      "signature": "8c27b3c2bd92d6e1d1265bdfa9a84d4f28e45a842e36e910a41daad2e3fcc0a8",
+      "reviewMethod": "independent-read-only-source-inspection",
+      "status": "SOURCE_REVIEWED_ANSWER_REVIEW_PENDING",
+      "scope": "Description documentée du trouble panique ; ne constitue pas un ensemble complet de critères diagnostiques.",
+      "evidence": [
+        {
+          "chunkId": "dsm5-4a5c91e4",
+          "sourceVersion": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+          "chunkVersion": "struct-v2",
+          "textSha256": "5c52569d161980859321a60c386d9c9acacd64412e84e0a2f4d778897336dc95",
+          "section": "Section II — Critères diagnostiques et codes › Troubles anxieux › Trouble panique › Caractéristiques diagnostiques",
+          "unitId": null,
+          "parentTextHash": null,
+          "childIndex": null,
+          "childrenTotal": null
+        }
+      ],
+      "required": [
+        {
+          "id": "recurrent-unexpected-attacks",
+          "meaning": "Préserver le caractère récurrent et inattendu des attaques et distinguer le trouble des attaques isolées."
+        }
+      ],
+      "acceptable": [
+        "Description des attaques, préoccupations et conséquences comportementales explicitement documentées."
+      ],
+      "forbidden": [
+        "Prétendre fournir tous les critères diagnostiques.",
+        "Ajouter des durées, exclusions ou symptômes absents du passage.",
+        "Conclure pour une personne ou ajouter un traitement."
+      ]
+    },
+    {
+      "id": "fr-111",
+      "questionSha256": "554ceb87669688ea86f4440b53c84684e4211f0d32e4cbf859ed4a7433b0a55e",
+      "signature": "535fe946ea3b78bae2ecea96dec315e6a24e448df53387bbd6b8df6772634c72",
+      "reviewMethod": "independent-read-only-source-inspection",
+      "status": "SOURCE_REVIEWED_ANSWER_REVIEW_PENDING",
+      "scope": "Observations rénales limitées aux passages corroborés ; aucune pharmacologie générale ni prescription déduite.",
+      "evidence": [
+        {
+          "chunkId": "taylor-3fbd6f93",
+          "sourceVersion": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+          "chunkVersion": "taylor-units-v2-candidate",
+          "textSha256": "3f863ad792b33e3f8627e5cdee3efd2443ae97f37111c56cd2f14f8afa98219b",
+          "section": "Part 2: Drug treatment of special patient groups › Chapter 8: Hepatic and renal impairment › Hepatic and renal impairment 737 CHAPTER 8 Notes",
+          "unitId": "tu-5f55c51b839c16d6",
+          "parentTextHash": "63b98627",
+          "childIndex": 1,
+          "childrenTotal": 4
+        },
+        {
+          "chunkId": "taylor-e9b01582",
+          "sourceVersion": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+          "chunkVersion": "taylor-units-v2-candidate",
+          "textSha256": "9cbcae57b4651597fb891c88299449a4e57a5e282bdbee2cf927e59fc5cfe92a",
+          "section": "Part 2: Drug treatment of special patient groups › Chapter 8: Hepatic and renal impairment › Hepatic and renal impairment 737 CHAPTER 8 Notes",
+          "unitId": "tu-5f55c51b839c16d6",
+          "parentTextHash": "63b98627",
+          "childIndex": 2,
+          "childrenTotal": 4
+        }
+      ],
+      "excludedEvidence": [
+        {
+          "chunkId": "taylor-60d2b814",
+          "sourceVersion": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+          "chunkVersion": "taylor-units-v2-candidate",
+          "textSha256": "e732344e743162454828d4f9c219e95e0a08d29b6a2679d5274db96ef4757645",
+          "section": "Part 2: Drug treatment of special patient groups › Chapter 7: Pregnancy and breastfeeding › Drug",
+          "unitId": "tu-a20360ca58d1ae93",
+          "parentTextHash": "95fc0004",
+          "childIndex": 1,
+          "childrenTotal": 6,
+          "reason": "bibliography-only"
+        },
+        {
+          "chunkId": "taylor-9cf8c8a9",
+          "sourceVersion": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+          "chunkVersion": "taylor-units-v2-candidate",
+          "textSha256": "5d664f8593b0e2d38595d72453a64feccb38427d22a00480b4e81535ef0ad5fa",
+          "section": "Part 2: Drug treatment of special patient groups › Chapter 7: Pregnancy and breastfeeding › Drug",
+          "unitId": "tu-a20360ca58d1ae93",
+          "parentTextHash": "95fc0004",
+          "childIndex": 2,
+          "childrenTotal": 6,
+          "reason": "bibliography-only"
+        },
+        {
+          "chunkId": "taylor-9ac6744f",
+          "sourceVersion": "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0",
+          "chunkVersion": "taylor-units-v2-candidate",
+          "textSha256": "34a0c27fa765f4c10a63881cec91586ec8b61ac46c24faeca2adaa2af008ddfb",
+          "section": "Part 1: Drug treatment of major psychiatric conditions › Chapter 3: Depression and anxiety disorders › MAOIs13,14",
+          "unitId": "tu-b073ae127d39f232",
+          "parentTextHash": "b6015e3e",
+          "childIndex": 1,
+          "childrenTotal": 3,
+          "reason": "unbound-table-columns"
+        }
+      ],
+      "required": [
+        {
+          "id": "renal-scope",
+          "meaning": "Annoncer la portée rénale particulière et conserver populations et réserves."
+        },
+        {
+          "id": "medication-ownership",
+          "meaning": "Chaque observation doit appartenir à la sertraline et conserver les limites des données."
+        }
+      ],
+      "acceptable": [
+        "Résumé prudent des observations et études effectivement documentées, avec leurs limites."
+      ],
+      "forbidden": [
+        "Attribuer à la sertraline une dose ou propriété d’une entrée voisine.",
+        "Transformer une dose d’étude en recommandation générale.",
+        "Généraliser efficacité ou innocuité."
+      ]
+    },
+    {
+      "id": "fr-101",
+      "questionSha256": "1919b09b662bc535a77985e5249bb0925a14ee425cb92d14ad93dd778ea7e2dd",
+      "signature": "e96ab9b2192a622fc0dd926df0b7f0c4b2f1ba35821025a2ebc1aeee07a47f98",
+      "reviewMethod": "independent-read-only-source-inspection",
+      "status": "SOURCE_REVIEWED_ANSWER_REVIEW_PENDING",
+      "scope": "Cinq symptômes parmi neuf durant deux semaines, humeur dépressive ou perte d’intérêt/plaisir, retentissement et exclusions documentées.",
+      "evidence": [
+        {
+          "chunkId": "dsm5-debf1cbf",
+          "sourceVersion": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+          "chunkVersion": "struct-v2",
+          "textSha256": "a6fb8e143a82e0afbd44714efdbcad048f0b844c515232ff5c849fcbbc0467ed"
+        }
+      ],
+      "required": [
+        {
+          "id": "depression-criteria",
+          "meaning": "Cinq symptômes parmi neuf durant deux semaines, humeur dépressive ou perte d’intérêt/plaisir, retentissement et exclusions documentées."
+        }
+      ],
+      "acceptable": [],
+      "forbidden": [
+        "Ne pas présenter les seuls seuils comme tous les critères ; ne pas assimiler deuil et trouble."
+      ],
+      "nativeCoverage": {
+        "status": "BLOCKED",
+        "reason": "complete-source-exceeds-native-byte-budget",
+        "bytes": 8189,
+        "limit": 8000
+      }
+    },
+    {
+      "id": "fr-102",
+      "questionSha256": "cf9611f9a90d43d0d65ce18f955739e5fd77ddbcf09fae6b286643aa173b005e",
+      "signature": "19e71cb11ee332324c014c569c45b89c34e93bbf00768230d317d1d73109cb49",
+      "reviewMethod": "independent-read-only-source-inspection",
+      "status": "SOURCE_REVIEWED_ANSWER_REVIEW_PENDING",
+      "scope": "Humeur et énergie/activité ; une semaine ou hospitalisation nécessaire ; trois symptômes, quatre si humeur seulement irritable ; gravité et exclusions.",
+      "evidence": [
+        {
+          "chunkId": "dsm5-9619770d",
+          "sourceVersion": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+          "chunkVersion": "struct-v2",
+          "textSha256": "d52963fb2bbc27bb53bb64ee8b9cf44dcfbda9fee43f14c744c7c5c94f059ff9"
+        }
+      ],
+      "required": [
+        {
+          "id": "mania-criteria",
+          "meaning": "Humeur et énergie/activité ; une semaine ou hospitalisation nécessaire ; trois symptômes, quatre si humeur seulement irritable ; gravité et exclusions."
+        }
+      ],
+      "acceptable": [],
+      "forbidden": [
+        "Ne pas confondre manie et hypomanie ni retirer l’exception d’hospitalisation."
+      ]
+    },
+    {
+      "id": "fr-103",
+      "questionSha256": "a851c89ebf0749ef2471f674c2ef63645f28386ed09889528cdf2ac62cdd362d",
+      "signature": "88ed1cd1e34612722745d45db95d0297408896c343e7d365ab7db9baacc4b8b0",
+      "reviewMethod": "independent-read-only-source-inspection",
+      "status": "SOURCE_REVIEWED_ANSWER_REVIEW_PENDING",
+      "scope": "Quatre jours consécutifs ; seuil trois/quatre ; changement observable, gravité, psychose et exclusions documentées.",
+      "evidence": [
+        {
+          "chunkId": "dsm5-251566bc",
+          "sourceVersion": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+          "chunkVersion": "struct-v2",
+          "textSha256": "943f1d7a0070da053dc350d3cba7d2ab3d77478d637ee037bce1f261fc65fe84"
+        }
+      ],
+      "required": [
+        {
+          "id": "hypomania-criteria",
+          "meaning": "Quatre jours consécutifs ; seuil trois/quatre ; changement observable, gravité, psychose et exclusions documentées."
+        }
+      ],
+      "acceptable": [],
+      "forbidden": [
+        "Ne pas appliquer la durée maniaque ni qualifier une psychose d’hypomaniaque."
+      ]
+    },
+    {
+      "id": "fr-104",
+      "questionSha256": "2a6d7603d40ddca8afdbc988ac1505b14f8ae17e070d7db6a6a2e2ea0ae526e8",
+      "signature": "6b47ab8ab13e6d3ad86e8bb3c4bd30e844b25b586c2691e9b0ef127b4a65f79f",
+      "reviewMethod": "independent-read-only-source-inspection",
+      "status": "SOURCE_REVIEWED_ANSWER_REVIEW_PENDING",
+      "scope": "Délire, hallucinations, discours désorganisé, comportement désorganisé/catatonique et symptômes négatifs ; préserver seuils/durées/exclusions si conclusion diagnostique.",
+      "evidence": [
+        {
+          "chunkId": "dsm5-41b2fb42",
+          "sourceVersion": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+          "chunkVersion": "struct-v2",
+          "textSha256": "c77f199397d66a2e96a18eb4dd82672345f9a6d65c67c3f36825e89838a430f0"
+        }
+      ],
+      "required": [
+        {
+          "id": "schizophrenia-signs",
+          "meaning": "Délire, hallucinations, discours désorganisé, comportement désorganisé/catatonique et symptômes négatifs ; préserver seuils/durées/exclusions si conclusion diagnostique."
+        }
+      ],
+      "acceptable": [],
+      "forbidden": [
+        "Ne pas rendre les hallucinations obligatoires ni transformer un signe isolé en diagnostic."
+      ]
+    },
+    {
+      "id": "fr-106",
+      "questionSha256": "41404c5c345698a13bccab35f7abbe095fe77daaa2d297ac59e790c55ed66c22",
+      "signature": "716fbaa128e7e4152a5c5ecbc573ea3697b604ac0428c3c7afe1fdfcfcd6793b",
+      "reviewMethod": "independent-read-only-source-inspection",
+      "status": "SOURCE_REVIEWED_ANSWER_REVIEW_PENDING",
+      "scope": "Soucis excessifs difficiles à contrôler durant six mois ; trois des six symptômes, un chez l’enfant ; retentissement et exclusions.",
+      "evidence": [
+        {
+          "chunkId": "dsm5-81d409be",
+          "sourceVersion": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+          "chunkVersion": "struct-v2",
+          "textSha256": "5f72933910a75bddbe9ff20f63bbdbeaae5c09c8eff96737095071f8ab171ceb"
+        }
+      ],
+      "required": [
+        {
+          "id": "generalized-anxiety",
+          "meaning": "Soucis excessifs difficiles à contrôler durant six mois ; trois des six symptômes, un chez l’enfant ; retentissement et exclusions."
+        }
+      ],
+      "acceptable": [],
+      "forbidden": [
+        "Ne pas imposer le seuil adulte à l’enfant ni revendiquer des critères complets sans exclusions."
+      ]
+    },
+    {
+      "id": "fr-107",
+      "questionSha256": "e7f332a09d60bd14102581a6f6b4c9c7fdb98ea5ec507970aa88377c148e13e0",
+      "signature": "a7479c83673fb314cb4ff0576067d1db3eede7d412d99bc616196fd9dcf34822",
+      "reviewMethod": "independent-read-only-source-inspection",
+      "status": "SOURCE_REVIEWED_ANSWER_REVIEW_PENDING",
+      "scope": "Obsessions et/ou compulsions comportementales ou mentales ; neutralisation et caractère excessif ; temps ou retentissement et exclusions si conclusion critérielle.",
+      "evidence": [
+        {
+          "chunkId": "dsm5-2d187b41",
+          "sourceVersion": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+          "chunkVersion": "struct-v2",
+          "textSha256": "42f22cfbb1c5ae6222169f717e73462a5b0f99efcb0138dd0658dab73c8e2a0a"
+        }
+      ],
+      "required": [
+        {
+          "id": "ocd-description",
+          "meaning": "Obsessions et/ou compulsions comportementales ou mentales ; neutralisation et caractère excessif ; temps ou retentissement et exclusions si conclusion critérielle."
+        }
+      ],
+      "acceptable": [],
+      "forbidden": [
+        "Ne pas exiger simultanément obsessions et compulsions ni réduire les compulsions aux gestes visibles."
+      ]
+    },
+    {
+      "id": "fr-108",
+      "questionSha256": "3963e6cf18ff0c24d9f8ddb3f6e10b03cdfd34eb6d457a9f2bb3404f2e772d34",
+      "signature": "6ace6ac21903b5bef1a03065f115f88a0938413b3d77f6b40c68625dd4640e93",
+      "reviewMethod": "independent-read-only-source-inspection",
+      "status": "SOURCE_REVIEWED_ANSWER_REVIEW_PENDING",
+      "scope": "Préciser le parcours d’âge ; exposition admissible et réserve médias ; groupes/seuils ; plus d’un mois ; retentissement et exclusions.",
+      "evidence": [
+        {
+          "chunkId": "dsm5-fd08a09d",
+          "sourceVersion": "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53",
+          "chunkVersion": "struct-v2",
+          "textSha256": "26d35e095a63dc42e3799054874504f47fa3ea339b442c5f045b86556c4cbcbb"
+        }
+      ],
+      "required": [
+        {
+          "id": "ptsd-criteria",
+          "meaning": "Préciser le parcours d’âge ; exposition admissible et réserve médias ; groupes/seuils ; plus d’un mois ; retentissement et exclusions."
+        }
+      ],
+      "acceptable": [],
+      "forbidden": [
+        "Ne pas fusionner critères adultes et enfants de six ans ou moins ni confondre expression retardée et durée minimale."
+      ],
+      "nativeCoverage": {
+        "status": "BLOCKED",
+        "reason": "complete-source-exceeds-native-byte-budget",
+        "bytes": 13765,
+        "limit": 8000
+      }
+    }
+  ]
+}

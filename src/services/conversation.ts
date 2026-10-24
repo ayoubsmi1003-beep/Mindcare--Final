@@ -112,6 +112,7 @@ export interface TourConversation {
   readonly alexaStatus?:import("@/shared/alexa/agent").AgentTerminal;
   readonly alexaParts?:readonly import("@/shared/alexa/agent").RequestPart[];
   readonly alexaSources?: readonly AlexaSource[];
+  readonly alexaBlocks?: readonly import('@/shared/alexa/answer-links').AlexaAnswerBlock[];
   readonly sourcePatientId?: string | null;
   readonly id: string;
   readonly role: "humain" | "jarvis" | "systeme";
@@ -997,10 +998,10 @@ async function envoyerAlexaUnifie(message: string): Promise<void> {
     });
     if (!ownsTurn()) return;
     controller.signal.throwIfAborted();
-    remplacerTour(tour.id, { texte: result.texte, persiste: result.persiste, porteUneIdentite: result.speechAllowed!==true, ...(result.status?{alexaStatus:result.status}:{}),...(result.parts?{alexaParts:result.parts}:{}), alexaSources: result.sources, sourcePatientId: result.patientId });
+    remplacerTour(tour.id, { texte: result.texte, persiste: result.persiste, porteUneIdentite: result.speechAllowed!==true, ...(result.status?{alexaStatus:result.status}:{}),...(result.parts?{alexaParts:result.parts}:{}), alexaSources: result.sources, ...(result.blocks?{alexaBlocks:result.blocks}:{}), sourcePatientId: result.patientId });
     interne.etat = result.proposal?"envoi":"composition";
     if (result.navigation) navigateAlexa(result.navigation);
-    if(result.proposal){const labels=await alexaProposalLabels(result.proposal,result.patientId,db());guard();await proposerEcritureRegistre(result.proposal.tool,result.proposal.args,message,null,labels,guard,result.proposal.actionId);if (ownsTurn()) interne.etat="composition";}
+    if(result.proposal){const labels=result.proposal.tool==="send_internal_message"?new Map<string,string>():await alexaProposalLabels(result.proposal,result.patientId,db());guard();await proposerEcritureRegistre(result.proposal.tool,result.proposal.args,message,null,labels,guard,result.proposal.actionId);if (ownsTurn()) interne.etat="composition";}
   } catch (error) {
     if (!ownsTurn()) return;
     if (controller.signal.aborted) {
@@ -1026,7 +1027,7 @@ const voiceTurns = new Map<string, string>();
     if(interne.carteEcriture!==null)return;
     const page=typeof window === "undefined" ? null : window.location.pathname,patientAtStart=patientActifCourant?.id??null;
     const guard=()=>{signal.throwIfAborted();if((typeof window === "undefined" ? null : window.location.pathname)!==page||(patientActifCourant?.id??null)!==patientAtStart||interne.carteEcriture!==null)throw new Error("ProposalScopeChanged");};
-    const labels=await alexaProposalLabels(proposal,patientId,db());
+    const labels=proposal.tool==="send_internal_message"?new Map<string,string>():await alexaProposalLabels(proposal,patientId,db());
     guard();
     await proposerEcritureRegistre(proposal.tool,proposal.args,text,null,labels,guard,proposal.actionId);
 });

@@ -2,7 +2,7 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 import { runAlexa } from "@/server/alexa/orchestrator";
 import { planRequest } from "@/shared/alexa/request-plan";
 import { envoyerTourAlexa, clearAlexaConversation } from "@/services/alexa-turn";
-import type { AlexaEvent, TurnInput } from "@/shared/alexa/turn";
+import { alexaNavigationPath, type AlexaEvent, type TurnInput } from "@/shared/alexa/turn";
 import type { DbPort } from "@/services/db/port";
 
 vi.mock("@/services/db", async () => {
@@ -70,5 +70,11 @@ describe("client navigation contract", () => {
   it("does not accept navigation before a complete turn", async () => {
     vi.stubGlobal("fetch", async () => new Response('data: {"type":"sentence","text":"Partiel","sources":[],"navigation":{"target":"agenda"}}\n\n'));
     await expect(envoyerTourAlexa("Ouvre l'agenda")).rejects.toThrow();
+  });
+  it("accepts a verified issued-document print navigation and builds the exact path", async () => {
+    const documentId="44444444-4444-4444-8444-444444444444";
+    vi.stubGlobal("fetch", async () => response({ target: "document", documentId, print: true }));
+    expect(await envoyerTourAlexa("Imprime l'ordonnance")).toMatchObject({ navigation: { target: "document", documentId, print: true } });
+    expect(alexaNavigationPath({ target: "document", documentId, print: true })).toBe(`/documents?document=${documentId}&print=1`);
   });
 });

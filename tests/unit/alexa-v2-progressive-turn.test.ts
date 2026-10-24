@@ -55,7 +55,7 @@ it.each(["source", "scope", "read-failure"])("publishes no private answer after 
 
 it("combines patient facts and book excerpts while retaining separate provenance", async () => {
   const events: AlexaEvent[] = [];
-  vi.mocked(readKnowledge).mockResolvedValue({ etat: "ok", preuves: [{ titre: "Book", section: "Section", version: "v1", extrait: "Approved general excerpt",
+  vi.mocked(readKnowledge).mockResolvedValue({ etat: "ok", preuves: [{ titre: "Book", section: "Section", version: "v1", extrait: "Approved general excerpt", langue: "en",
     sourceId: "source", chunkId: "chunk", versionChunk: "chunk-v1", unitId: null, parentTexteHash: null, enfantIndex: null, enfantsTotal: null }] });
   await runAlexa(input("résumé ce dossier selon le livre"), { db, knowledge, actor, build: async () => context() }, event => events.push(event), new AbortController().signal);
   const facts = events.filter(event => event.type === "sentence" && event.kind === "fact");

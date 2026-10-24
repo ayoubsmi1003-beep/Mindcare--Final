@@ -1,4 +1,5 @@
-import { expect, it } from "vitest";
+import { expect, it, vi } from "vitest";
+import {unfinishedNativeRequest} from '../helpers/alexa-unfinished-request';
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { runAgentLoop,restoreAgentTask,savedAgentTask } from "@/server/alexa/agent-loop";
@@ -204,7 +205,7 @@ it('executes an explicit recurring-theme and completed-consultation count with t
   {name:'query_consultations',args:{partIds:['requested_2'],mode:'count',status:'closed'}},
  ]);
  expect(result.status).toBe('completed');expect(result.parts.map(part=>part.status)).toEqual(['answered','answered']);
- expect(result.sentences).toEqual(['Les notes font ressortir le thème récurrent « sommeil fragmenté ».','6 consultations terminées.']);
+ expect(result.sentences).toEqual(['Les notes font ressortir le thème récurrent « sommeil fragmenté ». 6 consultations terminées.']);
 });
 it('dispatches one unbounded patient-case summary through its exact authorized read gate',async()=>{
  const text='Résume le cas de Amel Bensaid.';let inferenceCalls=0;const callsSeen:Record<string,unknown>[]=[];
@@ -435,7 +436,7 @@ it('answers a complete four-metric request through one typed read even when Mini
 it('never substitutes identity-number counts for the unsupported email field',async()=>{
  let i=0,reads=0;const steps=[calls([{name:'declare_request',args:{parts:[{id:'a',goal:'sans identité',tool:'query_patients',conditions:['identity_card:missing'],dependsOn:[]}]}}])];
  const r=await runAgentLoop({...input,text:'Combien de patients n’ont pas d’adresse électronique ?',conversationId:'unsupported-email-contract'},{actor:'unsupported-email-contract',infer:async()=>{if(i++===0)return steps[0]!;throw Error('No dispatch');},execute:async()=>{reads++;throw Error('No dispatch');}},new AbortController().signal);
- expect(reads).toBe(0);expect(r.parts[0]?.status).toBe('unsupported');expect(r.sentences.join(' ')).toContain('email');
+ expect(reads).toBe(0);expect(r.parts[0]?.status).toBe('unsupported');expect(r.sentences.join(' ')).toMatch(/courriel|adresse électronique/iu);
 });
 
 function mixedReadingTask(actor:string,bothPartial:boolean){
@@ -474,8 +475,13 @@ it('routes a whole relative agenda period with bounded dates and no invented rec
  expect(observed).toEqual([{name:'query_agenda',args:{partIds:['requested_1'],from:'2026-10-21T00:00:00+01:00',to:'2026-10-22T00:00:00+01:00'}}]);
 });
 
-it.each(['Quels sont les rendez-vous du 2026-10-01 au 2026-10-15 ?','Montre les rendez-vous de demain entre 9h et 12h.','Quels sont les rendez-vous demain dans la matinée ?','Montre les rendez-vous demain en fin de journée.'])('keeps precise bounds available for the fully specified window %s',async text=>{
+it.each(['Montre les rendez-vous de demain entre 9h et 12h.','Quels sont les rendez-vous demain dans la matinée ?','Montre les rendez-vous demain en fin de journée.'])('keeps precise bounds available for the fully specified window %s',async text=>{
  let i=0,parameters:Record<string,unknown>={};
- await runAgentLoop({...input,text,conversationId:'precise-agenda-'+text},{actor:'precise-agenda',infer:async(_m,o)=>{if(i++===0)return calls([{name:'declare_request',args:{parts:[{id:'a',goal:text,tool:'query_agenda',conditions:[],dependsOn:[]}]}}]);parameters=o.tools!.find(t=>t.function.name==='query_agenda')!.function.parameters;return calls([{name:'query_agenda',args:{partIds:['a'],from:'2026-10-16T09:00:00+01:00',to:'2026-10-16T12:00:00+01:00'}}]);},execute:async call=>({callId:call.id,status:'empty',complete:true,text:'0 rendez-vous',conditionKeys:[],evidence:[]})},new AbortController().signal);
+ await runAgentLoop(unfinishedNativeRequest({...input,text,conversationId:'precise-agenda-'+text},'precise-agenda'),{actor:'precise-agenda',infer:async(_m,o)=>{if(i++===0)return calls([{name:'declare_request',args:{parts:[{id:'a',goal:text,tool:'query_agenda',conditions:[],dependsOn:[]}]}}]);parameters=o.tools!.find(t=>t.function.name==='query_agenda')!.function.parameters;return calls([{name:'query_agenda',args:{partIds:['a'],from:'2026-10-16T09:00:00+01:00',to:'2026-10-16T12:00:00+01:00'}}]);},execute:async call=>({callId:call.id,status:'empty',complete:true,text:'0 rendez-vous',conditionKeys:[],evidence:[]})},new AbortController().signal);
  expect(parameters.properties).toHaveProperty('from');expect(parameters.properties).toHaveProperty('to');expect(parameters.required).not.toContain('period');
+});
+it('keeps explicit absolute agenda bounds on the direct path',async()=>{
+ const observed:Record<string,unknown>[]=[],infer=vi.fn(async()=>{throw Error('Unexpected model call');});
+ await runAgentLoop({...input,text:'Quels sont les rendez-vous du 2026-10-01 au 2026-10-15 ?',conversationId:'absolute-agenda'},{actor:'absolute-agenda',asOf:'2026-10-20T11:00:00Z',infer,observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'empty',complete:true,text:'0 rendez-vous',conditionKeys:[],evidence:[]})},new AbortController().signal);
+ expect(infer).not.toHaveBeenCalled();expect(observed).toEqual([{name:'query_agenda',args:{partIds:['requested_1'],from:'2026-10-01T00:00:00+01:00',to:'2026-10-16T00:00:00+01:00'}}]);
 });

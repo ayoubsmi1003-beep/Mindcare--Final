@@ -1,3 +1,4 @@
+import {unfinishedNativeRequest} from '../helpers/alexa-unfinished-request';
 import {it,expect,vi} from 'vitest';
 import {runAgentLoop,savedAgentTask,AGENT_LIMITS} from '@/server/alexa/agent-loop';
 import type {LocalCompletion} from '@/server/alexa/local-model-protocol';
@@ -14,13 +15,13 @@ it('keeps explicit cancellation effective during the longer whole-request budget
 
 it('budgets native declaration output for four explicit questions within the existing whole-turn deadline',async()=>{
  const text='Combien de patients actifs avons-nous, combien n’ont pas de numéro de carte d’identité, combien sont des enfants et combien n’ont pas eu de consultation terminée depuis six mois ?';let offered=0,maxOutput=0,timeout=0;
- const r=await runAgentLoop({text,conversationId:crypto.randomUUID(),clientTurnId:crypto.randomUUID(),appContext:{patientId:null,page:'/jarvis'}},{actor:'multi-output-budget',infer:async(_m,options)=>{offered++;maxOutput=options.maxOutputTokens??0;timeout=options.timeoutMs??0;throw Error('LocalModelUnavailable');},execute:async()=>{throw Error('No domain authority');}},new AbortController().signal);
+ const r=await runAgentLoop(unfinishedNativeRequest({text,conversationId:crypto.randomUUID(),clientTurnId:crypto.randomUUID(),appContext:{patientId:null,page:'/jarvis'}},'multi-output-budget'),{actor:'multi-output-budget',infer:async(_m,options)=>{offered++;maxOutput=options.maxOutputTokens??0;timeout=options.timeoutMs??0;throw Error('LocalModelUnavailable');},execute:async()=>{throw Error('No domain authority');}},new AbortController().signal);
  expect(offered).toBe(1);expect(maxOutput).toBe(1024);expect(timeout).toBeGreaterThan(150000);expect(r.parts).toHaveLength(4);expect(r.parts.every(p=>p.status==='failed'&&p.resultRefs.length===0)).toBe(true);expect(r.parts[1]?.conditions).toEqual([{field:'identity_card',op:'missing',value:null}]);expect(r.parts[2]?.conditions).toEqual([{field:'age',op:'lt',value:18}]);expect(r.parts[3]?.conditions).toEqual([{field:'no_completed_months',op:'eq',value:6}]);
 });
 
 it('keeps a closed failure reason in server diagnostics without logging request contents',async()=>{
  const warn=vi.spyOn(console,'warn').mockImplementation(()=>{});const execute=vi.fn();
- try{const r=await runAgentLoop({text:'Téléphone du patient FICTIF ?',conversationId:crypto.randomUUID(),clientTurnId:crypto.randomUUID(),appContext:{patientId:null,page:'/jarvis'}},{actor:'diagnostic',infer:async()=>{throw Error('LocalModelAssetAccess');},execute},new AbortController().signal);expect(r.status).toBe('failed');expect(execute).not.toHaveBeenCalled();expect(warn).toHaveBeenCalledExactlyOnceWith('[alexa-agent] failure','LocalModelAssetAccess');}
+ try{const r=await runAgentLoop(unfinishedNativeRequest({text:'Téléphone du patient FICTIF ?',conversationId:crypto.randomUUID(),clientTurnId:crypto.randomUUID(),appContext:{patientId:null,page:'/jarvis'}},'diagnostic'),{actor:'diagnostic',infer:async()=>{throw Error('LocalModelAssetAccess');},execute},new AbortController().signal);expect(r.status).toBe('failed');expect(execute).not.toHaveBeenCalled();expect(warn).toHaveBeenCalledExactlyOnceWith('[alexa-agent] failure','LocalModelAssetAccess');}
  finally{warn.mockRestore();}
 });
 

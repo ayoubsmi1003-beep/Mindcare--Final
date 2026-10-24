@@ -18,6 +18,15 @@ it('reads persisted focus and scores as attributed French facts rather than inte
  expect(measures.text).toContain('Anxiété 2/10');expect(measures.text).toContain('Difficultés de sommeil 1/10');expect(measures.text).toContain('Humeur dégradée 3/10');expect(measures.text).not.toContain('scoreConvention');
 });
 function executor(value:unknown=page){const rpc=scriptedAlexaRpc(async(name:string)=>({ok:true as const,data:[name==='get_patient'?{id:patient}:value]}));return {rpc,execute:agentExecutor(input,{rpc},{rpc:vi.fn()})};}
+it('reads available signed and draft notes together without requiring a signature choice',async()=>{
+ const rows=[{...row,area:'subjective',status:'draft',text:'Contenu fictif du brouillon.',textLength:27},{...row,sourceId:'44444444-4444-4444-8444-444444444444',area:'objective',status:'signed',signedAt:'2026-10-01T12:00:00Z',text:'Contenu fictif de la note signée.',textLength:31}];
+ const {rpc,execute}=executor({...page,total:2,rows,complete:true,next:undefined});
+ const result=await execute({id:'mixed-notes',name:'get_patient_context',args},'2026-10-15T12:00:00Z',[{callId:'known',status:'ok',complete:true,text:'Consultation connue.',evidence:[{id:consultation,type:'consultation',label:'Consultation'}],conditionKeys:[]}],new AbortController().signal);
+ expect(result.status).toBe('ok');expect(result.complete).toBe(true);
+ for(const entry of rows)expect(result.text).toContain(entry.text);
+ const gate=rpc.mock.calls.find(([name])=>name==='query_alexa_note_sections');
+ expect(JSON.parse(String(gate?.[1]?.p_spec)).status??'all').toBe('all');
+});
 it('accepts only closed note filters and paired date boundaries',()=>{
  expect(agentSchemas.get_patient_context.safeParse(args).success).toBe(true);
  for(const extra of [{area:'sql'},{textOffset:-1},{maxCharacters:9000},{from:'2026-10-01T00:00:00Z'},{status:'signed'},{where:'SELECT 1'}])expect(agentSchemas.get_patient_context.safeParse({...args,...extra}).success).toBe(false);

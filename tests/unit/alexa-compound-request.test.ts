@@ -1,6 +1,7 @@
+import {unfinishedNativeRequest} from '../helpers/alexa-unfinished-request';
 import {it,expect} from 'vitest';
 import {constrainRequestedOutputs,frenchRequestedOutputs,patientConditionsGrounded,frenchPatientCompoundContract,frenchPatientCountContract,countContractHints} from '@/shared/alexa/request-contract';
-import {runAgentLoop} from '@/server/alexa/agent-loop';
+import {runAgentLoop as runNativeLoop} from '@/server/alexa/agent-loop';
 import type {LocalCompletion} from '@/server/alexa/local-model-protocol';
 const text='Trouve les patients adultes avec au moins trois consultations terminées, un solde restant positif et aucune consultation terminée depuis 90 jours. Compte-les, liste-les et trie par solde décroissant.';
 const input={text,conversationId:'compound-guard',clientTurnId:'11111111-1111-4111-8111-111111111111',appContext:{patientId:null,page:'/jarvis'}};
@@ -59,3 +60,6 @@ it('keeps administrative review on the patient reader and binds it to the agenda
 
 it('projects each requested count into its own native tuple without losing unknown-filter reporting',async()=>{let schema:Record<string,unknown>|undefined;await runAgentLoop({...input,text:'Combien de patients actifs, combien de patients sans identité et combien sont mineurs ?',conversationId:'count-tuples'},{actor:'count-tuples',infer:async(_m,o)=>{schema=o.tools?.[0]?.function.parameters;throw Error('Capture only');},execute:async()=>{throw Error('No read');}},new AbortController().signal);const parts=(schema?.properties as Record<string,Record<string,unknown>>)?.parts;const tuple=parts?.prefixItems as {properties:Record<string,unknown>}[];expect(tuple).toHaveLength(3);expect(parts).not.toHaveProperty('items');expect(tuple[1]?.properties.conditions).toMatchObject({prefixItems:[{const:'identity_card:missing'}]});expect(tuple[1]?.properties).toHaveProperty('unsupportedConditions');});
 it('projects a count operation for a patient sub-question inside a mixed request',async()=>{let i=0,mode:unknown;await runAgentLoop({...input,text:'Compte les patients actifs et montre les rendez-vous de demain.',conversationId:'mixed-count-operation'},{actor:'mixed-count-operation',infer:async(_m,o)=>{if(i++===0)return calls('declare_request',{parts:[{id:'n',goal:'Compte les patients actifs',tool:'query_patients',conditions:[],dependsOn:[]},{id:'a',goal:'montre les rendez-vous de demain.',tool:'query_agenda',conditions:[],dependsOn:[]}]});const props=o.tools?.find(t=>t.function.name==='query_patients')?.function.parameters.properties as Record<string,unknown>;mode=props?.mode;throw Error('Capture only');},execute:async()=>{throw Error('No read');}},new AbortController().signal);expect(mode).toMatchObject({enum:['count']});});
+
+// Keep native admission assertions independent of fresh deterministic shortcuts.
+const runAgentLoop=(...args:Parameters<typeof runNativeLoop>)=>runNativeLoop(unfinishedNativeRequest(args[0],args[1].actor),args[1],args[2]);

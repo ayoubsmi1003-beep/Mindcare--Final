@@ -1,3 +1,10 @@
+import {isDeepStrictEqual} from "node:util";
+import {appendLinkedAnswerLine} from '@/shared/alexa/answer-links';
+import {randomUUID} from "node:crypto";
+import {resolveDocumentDraftInputs} from "./document-draft";
+import {prepareInternalMessage} from "./internal-message";
+import {alexaActions} from "@/i18n/alexa-actions";
+import {knowledgeSynthesisCopy} from "@/i18n/alexa-knowledge";
 import {applicationReadCopy} from "@/i18n/alexa-application";
 import {profileCopy} from "@/i18n/alexa-profile";
 import {readMessageDraft} from "./message-draft";
@@ -5,7 +12,7 @@ import {patientProfileSchema,profileAnswer,profileNeedsClarification} from "./pr
 import { extractRecurringClinicalTheme, summarizeClinicalConsultations, summarizeClinicalContext, summarizeClinicalCaseContext, relativeClinicalDate } from "./clinical-narrative";
 import { narrativeCopy } from "@/i18n/alexa-narrative";
 import {requestedConsultationCount,requestsOldestConsultations,requestsPatientScope} from "@/shared/alexa/request-plan";
-import {frenchRequestAdmission,frenchRequestedOutputs} from "@/shared/alexa/request-contract";
+import {frenchRequestAdmission,frenchRequestedOutputs,hasExplicitClockRestriction,frenchFinanceRecordState,requestedCountRead} from "@/shared/alexa/request-contract";
 import {readConsultation} from "./consultation-reads";
 import {inferNativeGeneralAlexa,canAnswerGeneralAlexa} from "./model-gateway";
 import {readApplication,readFinanceView,readAppointment} from "./application-reads";
@@ -20,20 +27,25 @@ import { z } from "zod";
 import type { DbPort, RpcArgs } from "@/services/db/port";
 import type { ClientSql } from "@/server/jarvis/client-sql";
 import type { TurnInput, AlexaSource, AlexaProposal } from "@/shared/alexa/turn";
-import { ALEXA_AGENT_LANGUAGE,cabinetFinanceModes,AgentReadError,patientListContinuation,patientMetricConditions,agentSchemas, conditionKey, type AgentCall, type AgentResult } from "@/shared/alexa/agent";
+import { ALEXA_AGENT_LANGUAGE,applicationQuerySchema,timelineQuerySchema,timelineCursorSchema,cabinetFinanceModes,AgentReadError,patientListContinuation,patientMetricConditions,agentSchemas, conditionKey, type AgentCall, type AgentResult } from "@/shared/alexa/agent";
 import { agentCopy, missingPatientFieldParagraph } from "@/i18n/alexa-agent";
 import { resolvePatient } from "./patient-resolver";
 import { buildClinicalContext } from "./clinical-context";
 import type { ClinicalContext } from "@/shared/alexa/clinical";
 import { localResponse } from "./local-response";
+import {planKnowledgeQuery} from "./knowledge-query";
 import { readKnowledge } from "./knowledge-adapter";
-import { resolveAgentPeriod,explicitAgentPeriod } from "./agent-period";
+import {synthesizeKnowledge} from './knowledge-synthesis';
+import {knowledgeSource} from './knowledge-response';
+import {patientQueryContract,patientQueryPeriod} from '@/shared/alexa/patient-query-contract';
+import { resolveAgentPeriod,explicitAgentPeriod,explicitAgendaClockWindow } from "./agent-period";
 import {parsePatientMention} from "./patient-mention";
 import {resolveListedReference} from "./conversation-state";
+import {nativeAgendaStatusContract,agendaIdentityText} from '@/shared/alexa/agenda-plan';
 
 const count = z.number().int().nonnegative().safe();
 const patientRow = z.object({id:z.uuid(),first_name:z.string().max(200),last_name:z.string().max(200),missing:z.array(z.enum(["phone","identity_card","birth_date","sex"])),completed_consultations:count.nullable(),outstanding_balance:count.nullable()}).strict();
-const patientResult = z.object({total:count,rows:z.array(patientRow).max(20),metrics:z.record(z.string(),count),unknownAge:count,revision:z.string().regex(/^[a-f0-9]{32}$/),asOf:z.string(),conditions:z.array(agentSchemas.declare_request.shape.parts.element.shape.conditions.element),complete:z.literal(true),offset:count}).strict();
+const patientResult = z.object({total:count,rows:z.array(patientRow).max(20),metrics:z.record(z.string(),count),unknownAge:count,revision:z.string().regex(/^[a-f0-9]{32}$/),asOf:z.string(),conditions:z.array(agentSchemas.declare_request.shape.parts.element.shape.conditions.element),complete:z.literal(true),offset:count,appliedSpec:z.record(z.string(),z.unknown()).optional()}).strict();
 const recordRow = z.object({id:z.uuid(),patientId:z.uuid().nullable(),label:z.string().max(500),at:z.string().nullable(),status:z.string().max(50),amount:count.nullable()}).strict();
 const recordResult = z.object({total:count,rows:z.array(recordRow).max(20),totals:z.record(z.string(),count),complete:z.literal(true),offset:count}).strict();
 
@@ -44,10 +56,11 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
  const label=(value:string)=>labels[value]??value;
  const patientSource=(patientId:string):AlexaSource=>({id:patientId,type:"patient",label:"Dossier patient"});
  const failure=(call:AgentCall,status:AgentResult["status"],text:string,code:string):AgentResult=>({callId:call.id,status,complete:false,text,evidence:[],conditionKeys:[],error:{code,retryable:false}});
- async function rpc(name:string,args:RpcArgs,signal:AbortSignal,allowEmpty=false):Promise<unknown>{
+ async function rpc(name:string,args:RpcArgs,signal:AbortSignal,allowEmpty=false,rows=false):Promise<unknown>{
   signal.throwIfAborted(); let result=await db.rpc<unknown>(name,args); signal.throwIfAborted();
   if(!result.ok&&["40001","40P01","08006","08003"].includes(result.error.technical??"")&&!signal.aborted){result=await db.rpc<unknown>(name,args);signal.throwIfAborted();}
   if(!result.ok)throw new AgentReadError(result.error.technical==="42501"?"permission":result.error.technical==="57014"?"timeout":result.error.technical==="40001"?"changed":"database");
+  if(rows)return result.data;
   if(allowEmpty&&result.data.length===0)return null;
   if(result.data.length!==1)throw new AgentReadError("malformed");
   return result.data[0];
@@ -55,11 +68,39 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
  return async function execute(call:AgentCall,asOf:string,prior:readonly AgentResult[],signal:AbortSignal,original?:string,requestedGoal?:string):Promise<AgentResult>{
   const schema=agentSchemas[call.name as keyof typeof agentSchemas];
   if(!schema||!schema.safeParse(call.args).success)return failure(call,"error",copy.unavailable,"invalid");
-  const a=call.args;
+  const a={...call.args};
   const requestText=requestedGoal??original??input.text;
+  if(call.name==='query_finance'&&!cabinetFinanceModes.some(mode=>mode===a['mode'])){
+   const state=frenchFinanceRecordState(requestText);
+   if(!state)return failure(call,'needs_input',copy.unsupported,'unresolved-payment-state');
+   if(a['state']!==undefined&&a['state']!==state)return failure(call,'needs_input',copy.unsupported,'unrequested-payment-state');
+   if(state!=='all')a['state']=state;
+  }
+  if(call.name==='query_consultations'&&!a['consultationId']){
+   const text=requestText.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase();
+   const lifecycle=/\b(?:termine\w*|clos\w*|cloture\w*|acheve\w*|ferme\w*|ouvert\w*|en cours)\b/u.test(text);
+   if(lifecycle&&/\b(?:non signe\w*|sans signature)\b/u.test(text)||/\b(?:non|pas|sans)\s+(?:encore\s+)?(?:termine\w*|clos\w*|cloture\w*|acheve\w*|ferme\w*|ouvert\w*|en cours)\b/u.test(text))return failure(call,'unsupported',copy.unsupported,'unsupported-consultation-status-combination');
+  }
+  if(call.name==='query_agenda'&&/\b(?:dernier|deuxieme|second|troisieme|2e|3e)\s+rendez[- ]vous\b/u.test(requestText.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase()))return failure(call,'unsupported',frenchAgendaCopy.orderUnavailable,'unsupported-agenda-order');
+  const agendaFirst=call.name==='query_agenda'&&/\b(?:premier|1er)\s+rendez[- ]vous\b/u.test(requestText.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase());
+  if(agendaFirst&&a['appointmentId'])return failure(call,'unsupported',frenchAgendaCopy.orderUnavailable,'unrequested-first-appointment-reference');
+  if(agendaFirst&&a['offset']!==undefined&&a['offset']!==0)return failure(call,'unsupported',frenchAgendaCopy.orderUnavailable,'unrequested-first-appointment-offset');
+  if(call.name==='query_agenda'&&!a['appointmentId']){
+   if(/\b(?:se termine\w*|finissent|(?:date|heure) (?:de )?fin)\b/u.test(requestText.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase()))return failure(call,'unsupported',frenchAgendaCopy.endAxisUnavailable,'unsupported-agenda-end-axis');
+   const contract=nativeAgendaStatusContract(requestText),proposed=a['statuses'];
+   if(!contract.complete)return failure(call,'needs_input',frenchAgendaCopy.statusClarification,'unresolved-agenda-status');
+   if(proposed!==undefined&&(!contract.statuses||!isDeepStrictEqual([...new Set(proposed as string[])].sort(),[...contract.statuses].sort())))return failure(call,'needs_input',frenchAgendaCopy.statusClarification,'unrequested-agenda-status');
+   if(contract.statuses)a['statuses']=contract.statuses;
+   if(hasExplicitClockRestriction(requestText)){
+    const clockWindow=explicitAgendaClockWindow(requestText,asOf);
+    if(!clockWindow)return failure(call,'needs_input',copy.date,'unresolved-agenda-clock');
+    if((typeof a['from']==='string'&&Date.parse(a['from'])!==Date.parse(clockWindow.from))||(typeof a['to']==='string'&&Date.parse(a['to'])!==Date.parse(clockWindow.to))||a['period']!==undefined)return failure(call,'needs_input',recordsCopy.periodConflict,'requested-period-mismatch');
+    a['from']=clockWindow.from;a['to']=clockWindow.to;
+   }
+  }
   // A multi-part task must not leak a name-like word from a sibling question into this read.
   // Each registered sub-question owns its identity scope; absent a goal, retain the original turn.
-  const identityText=requestedGoal??input.text;
+  const identityText=call.name==='query_agenda'?agendaIdentityText(requestedGoal??input.text):requestedGoal??input.text;
   if((call.name==='query_consultations'||(call.name==='get_patient_context'&&['summary','history'].includes(String(a["section"]))))&&requestsOldestConsultations(requestText))return failure(call,"unsupported",narrativeCopy.oldestUnavailable,"oldest-consultations-unsupported");
   if(call.name==='get_patient_context'&&a["section"]==='notes'&&typeof a["query"]==='string'&&!a["reusePrevious"]&&!noteContinuation(input.text)&&!noteQueryGrounded(requestText,a["query"]))return failure(call,"error",copy.unavailable,"unrequested-note-content-filter");
   if(call.name==='get_patient_context'&&a["section"]==='profile'){
@@ -70,6 +111,18 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
   if(call.name==='query_documents'&&typeof a['query']==='string'&&!a['reusePrevious']&&!noteQueryGrounded(requestText,a['query']))return failure(call,'error',copy.unavailable,'unrequested-document-filter');
   const requestedCounts=(frenchRequestedOutputs(requestText)??[requestText]).map(requestedConsultationCount).filter((n):n is number=>n!==null);
   if(call.name==='get_patient_context'&&a["section"]==='summary'&&a["count"]!==undefined&&!requestedCounts.includes(Number(a["count"])))return failure(call,"error",copy.unavailable,"unrequested-summary-count");
+  if(call.name==='get_patient_context'&&a['section']==='timeline'){
+   const timelineText=requestText.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase();
+   if(!a['reusePrevious']&&/\b(?:janvier|fevrier|mars|avril|mai|juin|juillet|aout|septembre|octobre|novembre|decembre|depuis|avant|apres|entre|hier|demain|aujourd.hui|semaine|mois|annee|ancien\w*|croissant\w*|chronologique)\b|\b(?:19|20)\d{2}\b|\b\d{1,2}[/-]\d{1,2}\b/u.test(timelineText))return failure(call,'unsupported',applicationReadCopy.timelineRestriction,'unsupported-timeline-restriction');
+   if(a['beforeAt']!==undefined||a['beforeId']!==undefined)return failure(call,'unsupported',copy.unsupported,'unrequested-timeline-cursor');
+   if(a['reusePrevious']){
+    const previous=[...prior].reverse().find(r=>r.status==='partial'&&r.data&&typeof r.data==='object'&&'timelineNext' in r.data)?.data;
+    const stored=z.object({timelineQuery:timelineQuerySchema,timelineNext:timelineCursorSchema}).safeParse(previous);
+    if(!stored.success)return failure(call,'needs_input',copy.noContinuation,'timeline-cursor-unavailable');
+    if(input.appContext.patientId&&input.appContext.patientId!==stored.data.timelineQuery.patientId)return failure(call,'needs_input',copy.patient,'timeline-patient-changed');
+    Object.assign(a,stored.data.timelineQuery,stored.data.timelineNext);
+   }
+  }
   const result:AgentResult={callId:call.id,status:"ok",complete:true,text:"",evidence:[],conditionKeys:[]};
   if(call.name==="query_patients"){
    const parsed=agentSchemas.query_patients.parse(a),{partIds:_ids,reusePrevious,...spec}=parsed;
@@ -85,7 +138,7 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
     for(const key of Object.keys(spec))delete (spec as Record<string,unknown>)[key];
     Object.assign(spec,previous.patientQuery,{mode,offset:nextOffset,...(previous.revision?{revision:previous.revision}:{})});
     if(mode!=="metrics"){
-      spec.filters=[...(previous.patientQuery.filters??[]),...(previous.patientQuery.mode==="metrics"?patientMetricConditions[previous.patientQuery.metrics![0]!]:[])];delete spec.metrics;
+      if(!previous.patientQuery.filterGroups)spec.filters=[...(previous.patientQuery.filters??[]),...(previous.patientQuery.mode==="metrics"?patientMetricConditions[previous.patientQuery.metrics![0]!]:[])];delete spec.metrics;
     }
     asOf=previous.asOf??asOf;
    }
@@ -95,8 +148,24 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
     if(!agenda||agenda.hasMore||(agenda.offset??0)!==0)return failure(call,"needs_input",recordsCopy.agendaCoverage,"agenda-coverage");
     spec.patientIds=agenda.agendaPatientIds; spec.filters=[...(spec.filters??[]).filter(condition=>condition.field!=="administrative_incomplete"),{field:"administrative_incomplete",op:"eq",value:true}];
    }
+   const contract=patientQueryContract(requestText,asOf);
+   if(!reusePrevious&&!implicitList){
+    if(spec.population&&spec.population!==contract.population)return failure(call,'unsupported',copy.unsupported,'unrequested-patient-population');
+    spec.population=contract.population;
+    if(contract.unsupported.length)return failure(call,'unsupported',copy.unsupported,'unresolved-patient-constraint');
+    if(contract.extended){
+     if(spec.mode==='metrics'||spec.mode==='review')return failure(call,'unsupported',copy.unsupported,'compound-query-mode');
+     delete spec.filters;delete spec.filterGroups;delete spec.consultationPeriod;delete spec.createdPeriod;
+     if(contract.filterGroups.some(group=>group.length))spec.filterGroups=contract.filterGroups;
+     if(contract.consultationPeriod)spec.consultationPeriod=contract.consultationPeriod;
+     if(contract.createdPeriod)spec.createdPeriod=contract.createdPeriod;
+    }else if(spec.filterGroups||spec.consultationPeriod||spec.createdPeriod)return failure(call,'unsupported',copy.unsupported,'unrequested-query-constraint');
+   }
    const raw=await rpc("search_patients",{p_spec:JSON.stringify(spec),p_as_of:asOf},signal);
    const value=patientResult.parse(raw);
+   if(spec.filterGroups||spec.consultationPeriod||spec.createdPeriod){
+    for(const key of ['filterGroups','consultationPeriod','createdPeriod'] as const)if(!isDeepStrictEqual(value.appliedSpec?.[key],spec[key]))return failure(call,'unsupported',copy.unsupported,'query-constraint-not-applied');
+   }
    if(spec.metrics?.some(metric=>value.metrics[metric]===undefined))throw new AgentReadError("malformed");
    if(value.rows.length>value.total||new Set(value.rows.map(r=>r.id)).size!==value.rows.length)throw new Error("InvalidResult");
    result.data={...value,patientQuery:spec,hasMore:spec.mode!=="count"&&spec.mode!=="metrics"&&value.offset+value.rows.length<value.total};
@@ -108,7 +177,7 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    const missingField=spec.mode==='count'&&spec.filters?.length===1&&spec.filters[0]!.op==='missing'?spec.filters[0]!.field:null;
    const paragraphCount=missingField==='phone'||missingField==='identity_card';
    if(paragraphCount)result.text=missingPatientFieldParagraph(value.total,spec.population??'active',missingField);
-   if(value.rows.length)result.text+="\n"+value.rows.map(p=>`${p.first_name} ${p.last_name}${p.outstanding_balance!==null?` — ${p.outstanding_balance} DZD`:""}${spec.mode==="review"?` — ${p.missing.map(f=>labels[f]).join(", ")}`:""}`).join("\n");
+   for(const p of value.rows)appendLinkedAnswerLine(result,`${p.first_name} ${p.last_name}`,`${p.outstanding_balance!==null?` — ${p.outstanding_balance} DZD`:""}${spec.mode==="review"?` — ${p.missing.map(f=>labels[f]).join(", ")}`:""}`,{kind:'patient',id:p.id});
    if(spec.mode==="review")result.text+=`\n${copy.fields}`;
    if(!paragraphCount)result.text+=`\n${recordsCopy.populations[spec.population??"active"]} ${copy.definition.replace(/^Actifs visibles ; |^المرضى النشطون المتاحون؛ /u,"")}`;
    if(spec.filters?.some(f=>f.field==="age"))result.text+=`\n${copy.unknownAge} : ${value.unknownAge}`;
@@ -124,12 +193,32 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    const provenance=answer.reference?{gate:"local_public_fact",provider:"local",sourceId:answer.reference.id,sourceUrl:answer.reference.sourceUrl,...(answer.reference.secondarySourceUrl?{secondarySourceUrl:answer.reference.secondarySourceUrl}:{})}:{gate:"local_model",provider:"local",model:answer.model};
    return {callId:call.id,status:"ok",complete:true,text:answer.text,data:{answer:answer.text},conditionKeys:[],evidence:[{id:call.id,type:"query",label:answer.reference?.label??copy.generalSource,provenance}]};
   }
-  if(call.name==="query_app"&&a["view"]!=="message_draft")return readApplication(call.id,String(a["view"]),rpc,signal,{asOf,...(typeof a["offset"]==='number'?{offset:a["offset"]}:{}),...(typeof a["revision"]==='string'?{revision:a["revision"]}:{})});
+  if(call.name==="query_app"&&a["view"]!=="message_draft"){
+   if(a['view']==='reception'){
+    if(a['reusePrevious']){
+     const previous=[...prior].reverse().find(r=>r.status==='partial'&&r.data&&typeof r.data==='object'&&'applicationQuery' in r.data)?.data;
+     const saved=z.object({applicationQuery:applicationQuerySchema,nextOffset:z.number().int().min(1).max(10000),revision:z.string().regex(/^[a-f0-9]{32}$/)}).safeParse(previous);
+     if(!saved.success)return failure(call,'needs_input',copy.noContinuation,'reception-cursor-unavailable');
+     Object.assign(a,saved.data.applicationQuery,{offset:saved.data.nextOffset,revision:saved.data.revision});
+    }else{
+     const period=patientQueryPeriod(requestText,asOf)??explicitAgentPeriod(requestText,asOf),day=period?.from.slice(0,10)??new Date(Date.parse(asOf)+3600000).toISOString().slice(0,10);
+     if(!period&&/\b(?:lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche|janvier|fevrier|mars|avril|mai|juin|juillet|aout|septembre|octobre|novembre|decembre|semaine|mois|annee|depuis|avant|apres|entre|\d{4})\b/u.test(requestText.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase()))return failure(call,'needs_input',copy.missing,'unresolved-reception-period');
+     if(period&&Date.parse(period.to)-Date.parse(period.from)!==86400000)return failure(call,'unsupported',copy.unsupported,'reception-requires-single-day');
+     const queue=/demandes?/iu.test(requestText)?'requests':/paiements?/iu.test(requestText)?'payments':/attente/iu.test(requestText)?'waiting':'all';
+     if((a['day']!==undefined&&a['day']!==day)||(a['queue']!==undefined&&a['queue']!==queue))return failure(call,'needs_input',copy.missing,'reception-scope-mismatch');
+     if(a['offset']!==undefined||a['revision']!==undefined)return failure(call,'unsupported',copy.unsupported,'unrequested-reception-cursor');
+     a['day']=day;a['queue']=queue;
+    }
+   }
+
+   if(a['view']==='medication_catalog'&&typeof a['query']==='string'&&!requestText.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase().includes(a['query'].normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase()))return failure(call,'unsupported',copy.unsupported,'unrequested-catalogue-query');
+   return readApplication(call.id,String(a["view"]),(name,args,signal)=>rpc(name,args,signal,false,name==='search_medications'),signal,{asOf,...(typeof a["offset"]==='number'?{offset:a["offset"]}:{}),...(typeof a["revision"]==='string'?{revision:a["revision"]}:{}),...(typeof a['query']==='string'?{query:a['query']}:{}),...(typeof a['day']==='string'?{day:a['day']}:{}),...(typeof a['queue']==='string'?{queue:a['queue']}:{})});
+  }
   let patientId:string|undefined;
   const humanMention=parsePatientMention(identityText),humanPatient=!!input.patientName||humanMention.status!=='none';
   const namedRecordScope=(humanPatient||requestsPatientScope(identityText))&&['query_consultations','query_documents','query_agenda','query_finance'].includes(call.name);
   if(call.name==='query_finance'&&namedRecordScope&&cabinetFinanceModes.some(mode=>mode===a['mode']))return failure(call,'unsupported',copy.unsupported,'CabinetOverviewCannotIgnoreNamedPatient');
-  if(namedRecordScope||a["patientId"]||a["patientName"]||call.name==="get_patient_context"||call.name==="prepare_action"||(call.name==="query_app"&&a["view"]==="message_draft")||(call.name==="navigate"&&a["target"]==="patient")){
+  if(namedRecordScope||a["patientId"]||a["patientName"]||call.name==="get_patient_context"||(call.name==="prepare_action"&&a["action"]!=="send_internal_message")||(call.name==="query_app"&&a["view"]==="message_draft")||(call.name==="navigate"&&a["target"]==="patient")){
    const mention=parsePatientMention(identityText);
    if(mention.status==="ambiguous")return failure(call,"needs_input",copy.patient,"patient-ambiguous");
    const explicitName=mention.status==="named"?mention.name:input.patientName;
@@ -157,6 +246,17 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
   }
   if(call.name==="query_app"&&a["view"]==="message_draft")return readMessageDraft(call.id,patientId!,String(a["motif"]),asOf,rpc,signal);
   if(call.name==="get_patient_context"){
+   if(a['section']==='timeline'){
+    const schema=z.array(z.object({occurred_at:z.string(),event_id:z.string().max(200),event_type:z.string(),label_key:z.string(),practitioner_name:z.string().nullable(),detail:z.record(z.string(),z.unknown())})).max(21);
+    const limit=typeof a['count']==='number'?a['count']:20;
+    const rows=schema.parse(await rpc('list_patient_timeline',{p_id:patientId!,p_before_at:typeof a['beforeAt']==='string'?a['beforeAt']:null,p_before_id:typeof a['beforeId']==='string'?a['beforeId']:null,p_limit:limit+1},signal,false,true));
+    const page=rows.slice(0,limit),more=rows.length>limit,last=page.at(-1);
+    result.data={rows:page,hasMore:more,timelineQuery:{patientId:patientId!,count:limit},...(more&&last?{timelineNext:{beforeAt:last.occurred_at,beforeId:last.event_id}}:{})};
+    result.evidence=[patientSource(patientId!),{id:call.id,type:'query',label:applicationReadCopy.extended.timeline,provenance:{gate:'list_patient_timeline',patientId:patientId!}}];
+    result.text=page.map(row=>`${new Intl.DateTimeFormat('fr-FR',{timeZone:'Africa/Algiers'}).format(new Date(row.occurred_at))} — ${applicationReadCopy.extended.events[row.event_type]??applicationReadCopy.extended.timeline}`).join('\n')||applicationReadCopy.extended.empty;
+    if(more)result.text+='\n'+applicationReadCopy.extended.timelineLimit;
+    result.complete=!more;result.status=more?'partial':page.length?'ok':'empty';return result;
+   }
    if(a["section"]==="notes"){
     const {partIds:_parts,patientName:_name,patientId:_patient,count:_count,section:_section,reusePrevious,...query}=agentSchemas.get_patient_context.parse(a);
     let spec=noteReadQuerySchema.parse({...query,patientId});
@@ -239,21 +339,54 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    result.navigation=target==="patient"?{target,patientId:patientId!}:{target};result.text=copy.navigationReady;return result;
   }
   if(call.name==="search_knowledge"){
-   const found=await readKnowledge(knowledge,String(a["query"]),signal);
+   const sourceQuestion=original??input.text,sourceParts=frenchRequestedOutputs(sourceQuestion);
+   const medicalQuestion=requestedGoal&&sourceParts?.includes(requestedGoal)?requestedGoal:sourceQuestion;
+   if(/\bstahl\b/iu.test(medicalQuestion))return failure(call,'unsupported',knowledgeSynthesisCopy.fr.unfinishedStahl,'unfinished-knowledge-source');
+   const required=planKnowledgeQuery(medicalQuestion),proposed=planKnowledgeQuery(String(a['query']));
+   if(!required||!proposed)return failure(call,'unsupported',knowledgeSynthesisCopy.fr.unsupportedSource,'unresolved-knowledge-source');
+   if(proposed.sourceTitle&&proposed.sourceTitle!==required.sourceTitle)return failure(call,'unsupported',knowledgeSynthesisCopy.fr.unsupportedSource,'unrequested-knowledge-source');
+   const retrieval=required.sourceTitle&&!proposed.sourceTitle?(required.language==='fr'?'DSM-5 ':'Taylor ')+String(a['query']):String(a['query']);
+   if(retrieval.length>500)return failure(call,'needs_input',copy.missing,'knowledge-query-budget');
+   const found=await readKnowledge(knowledge,retrieval,signal);
    result.complete=found.etat==="ok";result.status=found.etat==="panne"?"error":found.etat==="sans-preuve"?"empty":found.etat==="faible"?"partial":"ok";
-   result.data=found;result.evidence=found.preuves.map(p=>({id:p.chunkId,type:"knowledge",label:`${p.titre} — ${p.section}`,version:p.version}));
-   result.text=found.preuves.map(p=>`${p.titre} — ${p.section}\n${p.extrait}`).join("\n")||copy.unsupported;return result;
+   result.data=found;result.evidence=found.preuves.map(p=>knowledgeSource(p));
+   let synthesisComplete=false;
+   const events=await synthesizeKnowledge(found,medicalQuestion,'fr',signal,{compact:true,onCoverage:coverage=>{synthesisComplete=coverage==='supported';}});
+   const sentences=events.filter((e):e is Extract<import('@/shared/alexa/turn').AlexaEvent,{type:'sentence'}>=>e.type==='sentence');
+   result.text=sentences.map(e=>e.text).join(' ');result.evidence=sentences.flatMap(e=>e.sources);
+   const generated=sentences.some(e=>e.kind==='inference');
+   if(generated){result.presentation='inference';result.complete=result.complete&&synthesisComplete;result.status=result.complete?'ok':'partial';}
+   else if(found.etat==='ok'){result.complete=false;result.status='partial';}
+   return result;
   }
   if(call.name==="prepare_action"){
    const {action,...slots}=agentSchemas.prepare_action.parse(a); const args:AlexaProposal["args"]={};
    if(action==="create_appointment") {if(!slots.startsAt||!slots.durationMinutes)return failure(call,"needs_input",copy.date,"slots");Object.assign(args,{patientId:patientId!,startsAt:slots.startsAt,durationMinutes:slots.durationMinutes});}
-   else if(action==="create_editable_document_draft") {if(!slots.documentType)return failure(call,"needs_input",copy.type,"slots");Object.assign(args,{patientId:patientId!,documentType:slots.documentType,variables:JSON.stringify(slots.variables??{})});}
+   else if(action==="create_editable_document_draft") {
+    if(!slots.documentType)return failure(call,"needs_input",copy.type,"slots");
+    const resolved=await resolveDocumentDraftInputs(db,patientId!,slots.documentType,input.text,input.appContext.page,signal);
+    if(resolved.state==="missing")return failure(call,"needs_input",resolved.question,"document-field");
+    if(resolved.state==="unavailable")return failure(call,"error",copy.unavailable,"document-inputs-unavailable");
+    Object.assign(args,{patientId:patientId!,documentType:resolved.kind,variables:JSON.stringify(resolved.variables),content:JSON.stringify(resolved.content)});
+   }
+   else if(action==="send_internal_message") {
+    if(!slots.body)return failure(call,"needs_input",alexaActions.internalMessageMissing,"slots");
+    let guardPatient:{first_name:string;last_name:string;record_number:string|null;id_document_number:string|null}|null=null;
+    if(patientId){const p=z.object({first_name:z.string().min(1),last_name:z.string().min(1),record_number:z.string().nullable().optional(),id_document_number:z.string().nullable().optional()}).parse(await rpc("get_patient",{p_id:patientId},signal));guardPatient={first_name:p.first_name,last_name:p.last_name,record_number:p.record_number??null,id_document_number:p.id_document_number??null};}
+    const message=prepareInternalMessage(slots.body,{firstName:guardPatient?.first_name??"",lastName:guardPatient?.last_name??"",recordNumber:guardPatient?.record_number??null,idDocumentNumber:guardPatient?.id_document_number??null});
+    if(!message.ok)return failure(call,"unsupported",alexaActions.internalMessageRestricted,"internal-message-"+message.reason);
+    Object.assign(args,{clientMsgId:randomUUID(),body:message.body});
+   }
    else if(["reschedule_appointment","cancel_appointment","mark_patient_arrived"].includes(action)){
     if(!slots.appointmentId)return failure(call,"needs_input",copy.missing,"slots");
     const p=z.object({id:z.uuid(),patient_id:z.uuid()}).parse(await rpc("get_appointment",{p_id:slots.appointmentId},signal));
     if(p.patient_id!==patientId)throw new Error("ScopeChanged"); args["appointmentId"]=p.id;
     if(action==="reschedule_appointment"){if(!slots.startsAt)return failure(call,"needs_input",copy.date,"slots");args["nouveauDebut"]=slots.startsAt;if(slots.durationMinutes)args["nouvelleDureeMinutes"]=slots.durationMinutes;}
     if(action==="cancel_appointment"){if(!slots.reason)return failure(call,"needs_input",copy.missing,"slots");args["motif"]=slots.reason;}
+   }else if(action==="close_consultation"){
+    if(!slots.consultationId)return failure(call,"needs_input",copy.missing,"slots");
+    const c=z.object({id:z.uuid(),patient_id:z.uuid(),status:z.string()}).parse(await rpc("get_consultation",{p_id:slots.consultationId},signal));
+    if(c.patient_id!==patientId)throw new Error("ScopeChanged");args["consultationId"]=c.id;
    }else{
     if(!slots.consultationId)return failure(call,"needs_input",copy.missing,"slots");
     const c=z.object({id:z.uuid(),patient_id:z.uuid()}).parse(await rpc("get_consultation",{p_id:slots.consultationId},signal));
@@ -261,7 +394,7 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
     if(action==="set_consultation_price"){if(slots.amountDzd===undefined)return failure(call,"needs_input",copy.missing,"slots");args["amountDzd"]=slots.amountDzd;}
     else{const p=z.object({payment_id:z.uuid()}).parse(await rpc("get_consultation_payment",{p_consultation_id:c.id},signal));if(slots.paymentId&&slots.paymentId!==p.payment_id)throw new Error("ScopeChanged");args["paymentId"]=p.payment_id;}
    }
-   result.proposal={tool:action,args,actionId:input.clientTurnId};result.text=copy.confirmation;return result;
+   result.proposal={tool:action,args,actionId:input.clientTurnId};if(patientId)result.patientId=patientId;result.text=copy.confirmation;return result;
   }
   if(call.name==="query_consultations"&&a["view"]){
    const spec=agentSchemas.query_consultations.parse(a);
@@ -291,6 +424,16 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
   }
   if(["query_agenda","query_consultations","query_finance","query_documents"].includes(call.name)){
    const {partIds:_parts,patientName:_name,patientId:_patient,...spec}=a;
+   const absolutePeriod=patientQueryPeriod(requestText,asOf);
+   if(absolutePeriod&&!spec['reusePrevious']&&!spec['consultationId']&&!spec['documentId']&&!spec['draftId']){
+    if((typeof spec['from']==='string'&&Date.parse(spec['from'])!==Date.parse(absolutePeriod.from))||(typeof spec['to']==='string'&&Date.parse(spec['to'])!==Date.parse(absolutePeriod.to)))return failure(call,'needs_input',recordsCopy.periodConflict,'requested-period-mismatch');
+    spec['from']=absolutePeriod.from;spec['to']=absolutePeriod.to;delete spec['period'];
+   }
+   if(call.name==='query_consultations'){
+    const closure=/\bdate (?:de )?(?:cloture|fin)\b/u.test(requestText.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase());
+    if(spec['dateAxis']==='ended_at'&&!closure)return failure(call,'needs_input',recordsCopy.periodConflict,'unrequested-date-axis');
+    if(closure)spec['dateAxis']='ended_at';
+   }
    if(call.name==='query_finance'&&spec['reusePrevious']){
     const saved=[...prior].reverse().find(r=>r.data&&typeof r.data==='object'&&'financeQuery' in r.data&&'nextOffset' in r.data)?.data as {financeQuery?:unknown;nextOffset?:number;revision?:string;asOf?:string}|undefined;
     if(!saved||saved.nextOffset===undefined)return failure(call,'needs_input',copy.noContinuation,'finance-continuation-unavailable');
@@ -336,18 +479,27 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
     if(spec['mode']==='calendar'&&value.data&&typeof value.data==='object')value.data={...value.data,financeQuery:{mode:'calendar',from:spec['from'],to:spec['to']},asOf};return value;
    }
    const value=recordResult.parse(await rpc("query_alexa_records",{p_domain:call.name.slice(6),p_spec:JSON.stringify(spec),p_as_of:asOf},signal));
-   result.data={...value,...(call.name==="query_agenda"?{agendaPatientIds:[...new Set(value.rows.flatMap(r=>r.patientId?[r.patientId]:[]))],hasMore:value.offset+value.rows.length<value.total}:{})};
-   result.evidence=value.rows.map((r):AlexaSource=>({id:call.name==="query_finance"&&r.patientId?r.patientId:r.id,type:call.name==="query_agenda"?"appointment":call.name==="query_documents"?"document":call.name==="query_finance"?"patient":"consultation",label:r.label,...(r.status==="draft"?{provenance:{draftId:r.id}}:call.name==="query_finance"?{provenance:{paymentId:r.id}}:{})}));
+   if(agendaFirst&&(value.offset!==0||(value.total>0?value.rows.length===0:value.rows.length!==0)))throw new AgentReadError('malformed');
+   const visibleRows=agendaFirst?value.rows.slice(0,1):value.rows;
+   result.data={...value,...(call.name==="query_agenda"?{rows:visibleRows,agendaPatientIds:[...new Set(visibleRows.flatMap(r=>r.patientId?[r.patientId]:[]))],hasMore:!agendaFirst&&value.offset+value.rows.length<value.total}:{})};
+   result.evidence=visibleRows.map((r):AlexaSource=>({id:call.name==="query_finance"&&r.patientId?r.patientId:r.id,type:call.name==="query_agenda"?"appointment":call.name==="query_documents"?"document":call.name==="query_finance"?"patient":"consultation",label:r.label,...(r.status==="draft"?{provenance:{draftId:r.id}}:call.name==="query_finance"?{provenance:{paymentId:r.id}}:{})}));
+   const agendaCount=call.name==='query_agenda'&&requestedCountRead(requestText);
+   if(agendaCount)result.evidence=[];
    if(call.name==='query_agenda'){
-    result.text=[frenchAgendaCopy.count(value.total),...value.rows.map(r=>{
+    result.text=agendaCount?frenchAgendaCopy.countOnly(value.total,!!patientId):agendaFirst&&value.total?frenchAgendaCopy.first:frenchAgendaCopy.count(value.total);
+    if(!agendaCount)for(const r of visibleRows){
      const when=r.at?frenchAgendaCopy.when(relativeClinicalDate(r.at,asOf),new Intl.DateTimeFormat('fr-FR',{timeZone:'Africa/Algiers',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).format(new Date(r.at))):'';
-     return frenchAgendaCopy.row(label(r.label),when,label(r.status));
-    })].join('\n');
-   }else result.text=call.name==='query_consultations'&&spec['mode']==='count'?applicationReadCopy.consultationCount(value.total,spec['status']):`${value.total} ${recordsCopy.count}\n`+value.rows.map(r=>`${label(r.label)} — ${r.at?new Date(r.at).toLocaleString(language==="fr"?"fr-DZ":"ar-DZ",{timeZone:"Africa/Algiers"}):""} — ${label(r.status)}${r.amount!==null?` — ${r.amount} DZD`:""}`).join("\n");
+     const name=label(r.label),row=frenchAgendaCopy.row(name,when,label(r.status));
+     appendLinkedAnswerLine(result,name,row.slice(name.length),r.patientId?{kind:'patient',id:r.patientId}:undefined);
+    }
+   }else{
+    result.text=call.name==='query_consultations'&&spec['mode']==='count'?applicationReadCopy.consultationCount(value.total,spec['status']):`${value.total} ${recordsCopy.count}`;
+    for(const r of value.rows)appendLinkedAnswerLine(result,label(r.label),` — ${r.at?new Date(r.at).toLocaleString(language==="fr"?"fr-DZ":"ar-DZ",{timeZone:"Africa/Algiers"}):""} — ${label(r.status)}${r.amount!==null?` — ${r.amount} DZD`:""}`,call.name==='query_documents'?{kind:r.status==='draft'?'draft':'document',id:r.id}:call.name==='query_consultations'?{kind:'consultation',id:r.id}:r.patientId?{kind:'patient',id:r.patientId}:undefined);
+   }
    result.evidence.unshift({id:call.id,type:"query",label:recordsCopy.count+" : "+value.total,provenance:{gate:"query_alexa_records",domain:call.name.slice(6),asOf}});
    if(Object.keys(value.totals).length)result.text+="\n"+Object.entries(value.totals).map(([k,n])=>`${label(k)} : ${n}`).join("\n");
    if(call.name==="query_finance"&&(spec["from"]||spec["to"]))result.text+="\n"+(spec["state"]==="collected"?recordsCopy.dateCollected:recordsCopy.dateCreated);
-   if(!['count','totals'].includes(String(spec['mode']))&&value.rows.length&&value.offset+value.rows.length<value.total)result.text+=`\n${value.offset+1}–${value.offset+value.rows.length} / ${value.total}`;
+   if(!agendaCount&&!agendaFirst&&!['count','totals'].includes(String(spec['mode']))&&value.rows.length&&value.offset+value.rows.length<value.total)result.text+=`\n${value.offset+1}–${value.offset+value.rows.length} / ${value.total}`;
    result.status=value.total?"ok":"empty";
    if(call.name==='query_documents'&&documentId&&value.rows.some(r=>r.id===documentId)){
     let text:string,sourceRevision:string|number;

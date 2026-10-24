@@ -11,6 +11,7 @@ import { LOCAL_SEMANTIC_PROMPT } from "@/i18n/alexa-semantic";
 import { ALEXA_CONVERSATION_MODEL } from "./model-policy";
 import { localAssetLayout, verifyLocalAssetAccess } from "./local-model-assets";
 import { LocalModelSlot } from "./local-model-slot";
+import {measureLocalModelPhase} from './local-model-timing';
 import { assertLocalContextFits, buildLocalRequest, localModelTimeoutMs, parseLocalAnswer, parseLocalCompletion, type LocalCompletion, type LocalMessage, type LocalTextOptions } from "./local-model-protocol";
 
 export const LOCAL_MODEL_PIN = {
@@ -80,6 +81,7 @@ async function prepare(signal: AbortSignal): Promise<void> {
   if (runtimeState.child && runtimeState.child.exitCode === null && runtimeState.child.signalCode === null) return;
   const layout = localAssetLayout(), model = join(layout.root, LOCAL_MODEL_PIN.model);
   const directory = join(layout.root, "runtime-" + LOCAL_MODEL_PIN.runtime), runtime = join(directory, "llama-server.exe");
+  await measureLocalModelPhase('integrity',async()=>{
   await verifyLocalAssetAccess(layout.root, layout.packaged, signal);
   signal.throwIfAborted();
   if (await hash(model, signal) !== LOCAL_MODEL_PIN.sha256
@@ -89,6 +91,7 @@ async function prepare(signal: AbortSignal): Promise<void> {
   for (const name of files) manifest.push(name + ":" + await hash(join(directory, name), signal));
   if (files.length !== 50 || createHash("sha256").update(manifest.join("\n")).digest("hex") !== LOCAL_MODEL_PIN.runtimeManifestSha256)
     throw new Error("LocalModelIntegrity");
+  });
   signal.throwIfAborted();
   const handle = spawn(runtime, ["-m", model, "--host", "127.0.0.1", "--port", "18082", "-c", "4096", "-t", String(localModelThreadCountFor(availableParallelism())), "--gpu-layers", "0", "--batch-size", "128", "--ubatch-size", "128", "--load-mode", "none", "--parallel", "1",
     "--jinja", "--reasoning", "off", "--no-context-shift", "--no-warmup", "--api-key", runtimeState.token, "--no-webui", "--log-disable"],
@@ -97,7 +100,7 @@ async function prepare(signal: AbortSignal): Promise<void> {
   runtimeState.child = handle;
   let failed = false; handle.once("error", () => { failed = true; });
   // Integrity, startup and inference share the caller's bounded deadline.
-  for (;;) {
+  await measureLocalModelPhase('startup',async()=>{for (;;) {
     signal.throwIfAborted();
     if (failed || handle.exitCode !== null || handle.signalCode !== null) throw new Error("LocalModelUnavailable");
     try {
@@ -108,7 +111,7 @@ async function prepare(signal: AbortSignal): Promise<void> {
       }
     } catch (error) { if (error instanceof Error && error.message === "LocalModelUnavailable") throw error; /* bounded local startup */ }
     await new Promise(resolve => setTimeout(resolve, 100));
-  }
+  }});
 }
 /** Local inference only. Callers retain their privacy admission and response validators. */
 async function inferLocalRaw(messages: readonly LocalMessage[], options: LocalTextOptions = {}): Promise<string> {
@@ -116,16 +119,18 @@ async function inferLocalRaw(messages: readonly LocalMessage[], options: LocalTe
   const body = JSON.stringify(buildLocalRequest(messages, options));
   const timeout = localModelTimeoutMs(options);
   const signal = AbortSignal.any([...(options.signal ? [options.signal] : []), AbortSignal.timeout(Math.ceil(timeout))]);
-  const releaseSlot = await runtimeState.slot.acquire(signal);
+  const releaseSlot = await measureLocalModelPhase('slot',()=>runtimeState.slot.acquire(signal));
   clearTimeout(runtimeState.idle);
   try {
     await prepare(signal);
+    await measureLocalModelPhase('context',async()=>{
     const template = await loopback("/apply-template", signal, body);
     if (template.status !== 200) throw new Error("LocalModelInput");
     const rendered = z.object({ prompt: z.string().max(64000) }).parse(JSON.parse(template.body));
     const tokenized = await loopback("/tokenize", signal, JSON.stringify({ content: rendered.prompt, add_special: true }));
     assertLocalContextFits(JSON.parse(tokenized.body), options.maxOutputTokens ?? 512);
-    const response = await loopback("/v1/chat/completions", signal, body);
+    });
+    const response = await measureLocalModelPhase('generation',()=>loopback("/v1/chat/completions", signal, body));
     signal.throwIfAborted();
     if (response.status !== 200) throw new Error("LocalModelUnavailable");
     return response.body;

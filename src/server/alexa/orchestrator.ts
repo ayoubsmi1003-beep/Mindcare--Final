@@ -3,6 +3,8 @@ import { runAgentLoop, type AgentLoopDependencies } from "./agent-loop";
 import { agentExecutor } from "./agent-tools";
 import type { DbPort } from "@/services/db/port";
 import type { AlexaEvent, AlexaNavigation, TurnInput } from "@/shared/alexa/turn";
+import {validAlexaSources} from '@/shared/alexa/turn';
+import {validAnswerLinks} from '@/shared/alexa/answer-links';
 import type { ClinicalContext } from "@/shared/alexa/clinical";
 import { dialogue } from "@/i18n/alexa-dialogue";
 import { ALEXA_GENERAL_SOURCE } from "@/i18n/alexa-general";
@@ -29,9 +31,10 @@ import { planLocalSemantic } from "./local-semantic-planner";
 import { readPatientPage } from "./patient-search";
 import { semanticCopy, appHelp } from "@/i18n/alexa-semantic";
 import { readPatientRecords } from "./patient-records";
-import { prepareActionProposal } from "./action-proposal";
+import { deterministicActionRequest, prepareActionProposal } from "./action-proposal";
 import {readPatientFinance,patientFinanceSentence} from "./patient-finance";
 import {agentCopy} from "@/i18n/alexa-agent";
+import {alexaActions} from "@/i18n/alexa-actions";
 
 export interface OrchestratorDependencies {
   db: Pick<DbPort, "rpc">;
@@ -53,15 +56,19 @@ export async function runAlexa(input: TurnInput, dependencies: OrchestratorDepen
     // Courtesies use the same closed dialogue grammar as the established UI.
     // A greeting never needs patient lookup or a model inference slot.
     if (planRequest(input.text, null).intent === 'dialogue') return runAlexaSingle(input, dependencies, emit, signal);
+    // Explicit document and internal-message requests remain reachable without
+    // the local model. The model path still handles paraphrases and compounds.
+    if (deterministicActionRequest(input.text)) return runAlexaSingle(input, dependencies, emit, signal, undefined, { plan: { intent: "proposal", count: 1, language: "fr" } });
     const lease=conversationState.begin(dependencies.actor,input.conversationId,input.appContext.patientId,input.appContext.page);
     const result=await runAgentLoop(input,{actor:dependencies.actor,...(dependencies.agentAsOf?{asOf:dependencies.agentAsOf}:{}),...(dependencies.agentInfer?{infer:dependencies.agentInfer}:{}),...(dependencies.agentObserve?{observeCall:dependencies.agentObserve}:{}),...(dependencies.agentObserveResult?{observeResult:dependencies.agentObserveResult}:{}),execute:agentExecutor(input,dependencies.db,dependencies.knowledge),onStage:()=>emit({type:"stage",stage:"analysis"})},signal);
     if(!conversationState.isCurrent(lease)) {emit({type:"error",code:"stale",message:dialogue("fr").stale});return;}
     const responses=result.results.filter(r=>r.text);
+    if(!validAlexaSources(result.sources)||result.results.some(r=>!validAlexaSources(r.evidence)||r.links!==undefined&&!validAnswerLinks(r.text,r.links)))throw new Error('AlexaSourceEvidenceInvalid');
     const unresolved=new Set(result.parts.filter(p=>!p.resultRefs.length&&p.reason).map(p=>`${p.goal} — ${p.reason}`));
     for(const [index,text] of result.sentences.entries()){
       const response=responses[index]?.text===text?responses[index]:undefined;
       const synthesis=!response&&text.startsWith(agentCopy.fr.synthesis+"\n");
-      emit({type:"sentence",text,kind:response?.presentation==="inference"||synthesis?"inference":"fact",sources:response?response.evidence:synthesis&&!unresolved.has(text)?result.sources:[]});
+      emit({type:"sentence",text,kind:response?.presentation==="inference"||synthesis||(!response&&!unresolved.has(text)&&result.results.some(r=>r.presentation==="inference"))?"inference":"fact",sources:response?response.evidence:!unresolved.has(text)?result.sources:[],...(response?.links?.length?{links:response.links}:{})});
     }
     if(result.proposal)emit({type:"proposal",...result.proposal});
     emit({type:"done",patientId:result.patientId,patientScope:result.patientId?"replace":"preserve",sourceRevision:null,coverage:null,limited:result.status!=="completed",status:result.status,parts:result.parts,tokensIn:result.tokensIn,tokensOut:result.tokensOut,speechAllowed:result.status==="completed"&&!result.patientId&&!result.proposal&&result.sources.every(s=>s.type==="knowledge"||(s.type==="query"&&s.provenance?.["gate"]==="local_model"))&&classerCharge(result.sentences.join("\n"),null).decision==="AUTORISER",...(result.navigation?{navigation:result.navigation}:{})});
@@ -233,7 +240,8 @@ async function runAlexaSingle(input: TurnInput, dependencies: OrchestratorDepend
     else if (plan.intent === "proposal") {
       const result=await prepareActionProposal(input,db,dependencies.knowledge,signal);active();
       if(result.state==="ready") {patientId=result.patientId;emit({type:"proposal",...result.proposal});sentence(copy.proposal);}
-      else sentence(result.state==="unavailable"?copy.unavailable:semanticCopy[plan.language==="fr"?"fr":"ar"][result.slot]);
+      else if(result.state==="print"){patientId=result.patientId;navigation={target:"document",documentId:result.documentId,print:true};limited=false;sentence(alexaActions.printOpening(result.label));}
+      else sentence(result.state==="unavailable"?copy.unavailable:result.message??semanticCopy[plan.language==="fr"?"fr":"ar"][result.slot]);
     }
     else if (plan.intent === "navigation" && plan.navigationTarget !== "patient") {
       if (input.patientName || mention.status !== "none" || requestsPatientScope(input.text)) { rejectPatientSelection(copy.clarify); return; }

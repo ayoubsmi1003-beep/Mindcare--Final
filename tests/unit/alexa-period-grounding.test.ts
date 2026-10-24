@@ -1,10 +1,17 @@
+import {unfinishedNativeRequest} from '../helpers/alexa-unfinished-request';
 import {it,expect,vi} from 'vitest';
-import {explicitAgentPeriod} from '@/server/alexa/agent-period';
+import {explicitAgentPeriod,explicitAgendaClockWindow} from '@/server/alexa/agent-period';
 import {agentExecutor} from '@/server/alexa/agent-tools';
-import {runAgentLoop} from '@/server/alexa/agent-loop';
+import {runAgentLoop as runNativeLoop} from '@/server/alexa/agent-loop';
 import {scriptedAlexaRpc} from '../helpers/alexa-rpc';
 import type {LocalTextOptions,LocalCompletion} from '@/server/alexa/local-model-protocol';
 const clock='2026-10-15T12:00:00.000Z',input={text:'Quels sont les rendez-vous de demain ?',conversationId:'grounded-period',clientTurnId:'11111111-1111-4111-8111-111111111111',appContext:{patientId:null,page:'/agenda'}};
+it.each([
+ ['Rendez-vous demain entre 9h30 et 11h15','2026-10-16T09:30:00+01:00','2026-10-16T11:15:00+01:00'],
+ ['Rendez-vous le 16 octobre 2026 de 09:30 à 11:15','2026-10-16T09:30:00+01:00','2026-10-16T11:15:00+01:00'],
+ ['Rendez-vous demain entre 23h et 24h','2026-10-16T23:00:00+01:00','2026-10-17T00:00:00+01:00'],
+])('grounds one explicit clock interval on its source civil day: %s',(text,from,to)=>{const window=explicitAgendaClockWindow(text,clock);expect(window).toMatchObject({from,to});expect(window?.matchedText).toMatch(/^(?:entre|de)\s/u);});
+it.each(['Rendez-vous demain entre 25h et 27h','Rendez-vous demain entre 9h60 et 11h','Rendez-vous demain entre 11h et 9h','Rendez-vous demain entre 9h et 11h puis entre 14h et 16h','Rendez-vous du 16 au 17 octobre 2026 entre 9h et 11h'])('does not guess an invalid or repeated clock interval: %s',text=>{expect(explicitAgendaClockWindow(text,clock)).toBe(null);});
 it('resolves the single whole relative day from source text and the frozen cabinet clock',()=>{expect(explicitAgentPeriod(input.text,clock)).toEqual({period:'demain',from:'2026-10-16T00:00:00+01:00',to:'2026-10-17T00:00:00+01:00'});expect(explicitAgentPeriod('Quel est le chiffre d’affaires de ce mois ?','2028-02-29T12:00:00Z')).toMatchObject({from:'2028-02-01T00:00:00+01:00',to:'2028-03-01T00:00:00+01:00'});});
 it.each(['Demain entre 9h et 11h','Demain matin','Compare demain et aujourd’hui','Du 2026-10-16 au 2026-10-20','Demain à l’ouverture','Les recettes de ce mois à ce jour'])('does not constrain material ranges/windows/comparisons to a whole day: %s',text=>{expect(explicitAgentPeriod(text,clock)).toBeNull();});
 it('rejects conflicting relative and absolute date arguments before SQL',async()=>{
@@ -16,6 +23,15 @@ it('rejects an invented day that contradicts an unambiguous original request eve
 it('retains explicit intraday bounds and allows a coherent redundant period',async()=>{
  const rpc=scriptedAlexaRpc(async()=>({ok:true as const,data:[{total:0,rows:[],totals:{},complete:true,offset:0}]}));
  for(const [text,args]of [['Rendez-vous demain entre 9h et 11h',{from:'2026-10-16T09:00:00+01:00',to:'2026-10-16T11:00:00+01:00'}],[input.text,{period:'demain',from:'2026-10-16T00:00:00+01:00',to:'2026-10-17T00:00:00+01:00'}]] as const){const r=await agentExecutor({...input,text},{rpc},{rpc:vi.fn()})({id:'d',name:'query_agenda',args:{partIds:['d'],...args}},clock,[],new AbortController().signal);expect(r.complete).toBe(true);}
+});
+it.each([
+ ['Rendez-vous demain entre 9h et 11h',{from:'2026-10-16T00:00:00+01:00',to:'2026-10-17T00:00:00+01:00'}],
+ ['Rendez-vous demain entre 9h30 et 11h30',{from:'2026-10-16T00:00:00+01:00',to:'2026-10-17T00:00:00+01:00'}],
+ ['Rendez-vous le 16 octobre 2026 à 09:30',{from:'2026-10-16T00:00:00+01:00',to:'2026-10-17T00:00:00+01:00'}],
+ ['Rendez-vous demain matin',{from:'2026-10-16T00:00:00+01:00',to:'2026-10-17T00:00:00+01:00'}],
+])('refuses model broadening of a human clock restriction: %s',async(text,args)=>{
+ const rpc=vi.fn();const result=await agentExecutor({...input,text},{rpc},{rpc:vi.fn()})({id:'d',name:'query_agenda',args:{partIds:['d'],...args}},clock,[],new AbortController().signal);
+ expect(result.complete).toBe(false);expect(rpc).not.toHaveBeenCalled();
 });
 it('offers only the recognized relative period and resolves its absolute dates on the server',async()=>{
  let step=0;const options:LocalTextOptions[]=[];await runAgentLoop({...input,conversationId:crypto.randomUUID()},{actor:'dates',asOf:clock,execute:vi.fn(),infer:async(_m,o)=>{options.push(o);if(step++>0)throw Error('Capture only');const args={parts:[{id:'d',goal:'Agenda',tool:'query_agenda',conditions:[],dependsOn:[]}]};return {kind:'calls',calls:[{id:'d',name:'declare_request',args}],message:{role:'assistant',content:null,tool_calls:[{id:'d',type:'function',function:{name:'declare_request',arguments:JSON.stringify(args)}}]},tokensIn:1,tokensOut:1} satisfies LocalCompletion;}},new AbortController().signal);
@@ -34,3 +50,6 @@ it('reads the global agenda without asking for a patient named after a dependent
  expect(result.complete).toBe(true);expect(rpc).toHaveBeenCalledTimes(1);expect(rpc.mock.calls[0]?.[0]).toBe('query_alexa_records');expect(rpc.mock.calls[0]?.[1]).toMatchObject({p_domain:'agenda'});
  expect(JSON.parse(rpc.mock.calls[0]?.[1]?.p_spec as string)).not.toHaveProperty('patientId');
 });
+
+// Keep native admission assertions independent of fresh deterministic shortcuts.
+const runAgentLoop=(...args:Parameters<typeof runNativeLoop>)=>runNativeLoop(unfinishedNativeRequest(args[0],args[1].actor),args[1],args[2]);

@@ -73,7 +73,7 @@ describe("aucun nom de modèle en dur hors de la passerelle", () => {
         const summary = readFileSync(join(process.cwd(), "src/app/api/alexa/summary/route.ts"), "utf8");
         expect(summary).toContain("buildCaseSummary(context");
         expect(summary).toContain('p_model: ALEXA_CONVERSATION_MODEL');
-        expect(summary).toContain('summarizeClinicalContext(context');
+        expect(summary).toContain('summarizeClinicalCaseContext(context, signal)');
         expect(summary).not.toContain("inferAlexa(");
         return;
       }

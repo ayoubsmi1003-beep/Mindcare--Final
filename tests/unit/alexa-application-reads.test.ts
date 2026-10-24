@@ -1,9 +1,10 @@
 import {scriptedAlexaRpc} from '../helpers/alexa-rpc';
-import {expect,it,vi} from 'vitest';
-vi.mock('@/server/alexa/clinical-narrative',async original=>({...await original<object>(),summarizeClinicalContext:vi.fn()}));
-import {summarizeClinicalContext} from '@/server/alexa/clinical-narrative';
+import {afterEach,expect,it,vi} from 'vitest';
+vi.mock('@/server/alexa/clinical-narrative',async original=>({...await original<object>(),summarizeClinicalContext:vi.fn(),summarizeClinicalCaseContext:vi.fn()}));
+import {summarizeClinicalContext,summarizeClinicalCaseContext} from '@/server/alexa/clinical-narrative';
 import {agentExecutor} from '@/server/alexa/agent-tools';
 import {agentSchemas} from '@/shared/alexa/agent';
+afterEach(()=>{vi.mocked(summarizeClinicalContext).mockReset();vi.mocked(summarizeClinicalCaseContext).mockReset();});
 const patient='22222222-2222-4222-8222-222222222222',record='33333333-3333-4333-8333-333333333333';
 const input={text:'Affiche les informations demandées.',conversationId:'all-app-reads',clientTurnId:'11111111-1111-4111-8111-111111111111',appContext:{patientId:patient,page:'/patients/'+patient}};
 const asOf='2026-10-15T12:00:00.000Z';
@@ -36,6 +37,11 @@ it('uses authoritative finance period totals and keeps monthly recurring charges
  for(const mode of ['overview','charges']){
  const result=await agentExecutor({...input,appContext:{patientId:null,page:'/finances'}},{rpc},{rpc:vi.fn()})({id:mode,name:'query_finance',args:{partIds:[mode],mode,period:'ce mois'}},asOf,[],new AbortController().signal);
  expect(result.complete).toBe(true);expect(result.text).toContain(mode==='overview'?'3800':'1200');
+ if(mode==='overview'){
+  expect(result.text).toContain('Paiements encaissés de la période : 3');
+  expect(result.text).toContain('Montant moyen par paiement encaissé : 1667');
+  expect(result.text).not.toContain('Séances de la période');
+ }
  }
  expect(rpc.mock.calls[0]).toEqual(['get_finance_overview',{p_period_start:'2026-10-01',p_period_end:'2026-10-31'}]);
  expect(rpc.mock.calls[1]?.[0]).toBe('get_charges_list');
@@ -102,16 +108,17 @@ it('rejects an empty OR-status filter rather than presenting an accidental empty
 it('rejects a finance request with no explicit view before any authoritative read',()=>{expect(agentSchemas.query_finance.safeParse({partIds:['f'],period:'ce mois'}).success).toBe(false);});
 
 it('reports a model synthesis failure as an error rather than an inferred partial answer',async()=>{
- vi.mocked(summarizeClinicalContext).mockResolvedValueOnce({text:'La synthèse fiable est indisponible.',complete:false,generated:false,sourceIds:[]});
- const context={patientId:patient,consultations:[],treatments:{current:[],history:[],historyComplete:true},sourceRevision:'a'.repeat(64),coverage:{requested:5,returned:0,complete:true,hasMore:false},diagnoses:[],scales:[]};
+ vi.mocked(summarizeClinicalCaseContext).mockResolvedValueOnce({text:'La synthèse fiable est indisponible.',complete:false,generated:false,sourceIds:[]});
+ const context={patientId:patient,consultations:[{id:record,startedAt:'2026-10-01T09:00:00Z',endedAt:'2026-10-01T09:30:00Z',rawNotes:'Fait clinique fictif à synthétiser.',rawNotesVersion:'b'.repeat(64),notes:[]}],treatments:{current:[],history:[],historyComplete:true},sourceRevision:'a'.repeat(64),coverage:{requested:5,returned:1,complete:true,hasMore:false},diagnoses:[],scales:[]};
  const rpc=scriptedAlexaRpc(async(name:string)=>({ok:true as const,data:[name==='get_patient'?{id:patient}:context]}));
  const r=await agentExecutor(input,{rpc},{rpc:vi.fn()})({id:'s',name:'get_patient_context',args:{partIds:['s'],section:'summary'}},asOf,[],new AbortController().signal);
  expect(r).toMatchObject({status:'error',complete:false,error:{code:'clinical-synthesis-unavailable'}});
  expect(r.presentation).toBeUndefined();
+ expect(summarizeClinicalCaseContext).toHaveBeenCalledTimes(1);
 });
 
 it('returns authoritative empty clinical coverage as empty rather than a model outage',async()=>{
- vi.mocked(summarizeClinicalContext).mockResolvedValueOnce({text:'Aucun élément clinique renseigné.',complete:true,generated:false,sourceIds:[]});
+ vi.mocked(summarizeClinicalCaseContext).mockResolvedValueOnce({text:'Aucun élément clinique renseigné.',complete:true,generated:false,sourceIds:[]});
  const context={patientId:patient,consultations:[],treatments:{current:[],history:[],historyComplete:true},sourceRevision:'a'.repeat(64),coverage:{requested:5,returned:0,complete:true,hasMore:false},diagnoses:[],scales:[]};
  const rpc=scriptedAlexaRpc(async(name:string)=>({ok:true as const,data:[name==='get_patient'?{id:patient}:context]}));
  const result=await agentExecutor(input,{rpc},{rpc:vi.fn()})({id:'e',name:'get_patient_context',args:{partIds:['e'],section:'summary'}},asOf,[],new AbortController().signal);

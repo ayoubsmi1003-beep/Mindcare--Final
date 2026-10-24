@@ -1,0 +1,20 @@
+{
+  "synthetic": true,
+  "purpose": "Affichage local des noms autorisés et références documentaires ; aucune insertion dans la base d’évaluation principale.",
+  "patients": [
+    {"id": "e4000000-0000-4000-8000-000000000001", "firstName": "Amina", "lastName": "FICTIVE", "label": "Amina FICTIVE", "href": "/patients/e4000000-0000-4000-8000-000000000001"},
+    {"id": "e4000000-0000-4000-8000-000000000002", "firstName": "Yacine", "lastName": "DEMONSTRATION", "label": "Yacine DEMONSTRATION", "href": "/patients/e4000000-0000-4000-8000-000000000002"}
+  ],
+  "documents": [
+    {"id": "d4000000-0000-4000-8000-000000000001", "patientId": "e4000000-0000-4000-8000-000000000001", "kind": "certificat_medical", "title": "Certificat médical", "number": "DOC-2026-00042", "status": "issued", "href": "/documents?document=d4000000-0000-4000-8000-000000000001"},
+    {"id": "d4000000-0000-4000-8000-000000000002", "patientId": "e4000000-0000-4000-8000-000000000002", "kind": "ordonnance", "title": "Brouillon d’ordonnance", "number": null, "status": "draft", "href": "/documents?draft=d4000000-0000-4000-8000-000000000002"}
+  ],
+  "acceptance": [
+    "Une demande de noms ou de liste affiche les libellés autorisés, un élément par ligne, avec total, page et continuation si nécessaire.",
+    "Les noms ouvrent le bon dossier et les documents ouvrent le bon document ou brouillon sous les droits existants.",
+    "Les UUID, hachages et pseudonymes de rapport ne remplacent pas les libellés visibles dans Alexa.",
+    "Une demande de comptage seul ne déverse pas une page de noms.",
+    "Un brouillon sans numéro émis ne reçoit aucun numéro inventé.",
+    "Les noms identiques, droits refusés et changements de patient ne conduisent jamais au dossier d’une autre personne."
+  ]
+}

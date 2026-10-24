@@ -6,6 +6,18 @@ import { createRequire } from "node:module";
 import { createHash, randomUUID } from "node:crypto";
 import {finalizeAlexaAdmission} from './lib/alexa-eval-admission.mjs';
 
+if(process.argv.includes('--review-report')){
+ const {reviewRecordedCampaign}=await import('./lib/alexa-eval-clinical-review.mjs');
+ await reviewRecordedCampaign();
+ process.exit(process.exitCode??0);
+}
+
+if(process.argv.includes('--read-only')){
+ const {runReadOnlyCampaign}=await import('./lib/alexa-readonly-campaign.mjs');
+ await runReadOnlyCampaign();
+ process.exit(process.exitCode??0);
+}
+
 const invocationCwd = process.cwd();
 const root = resolve(fileURLToPath(new URL("../", import.meta.url)));
 // The production asset layout is rooted at the checkout, independently of report location.

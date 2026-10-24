@@ -73,7 +73,7 @@ export function parseLocalCompletion(raw: string): LocalCompletion {
     const decoded:unknown=JSON.parse(raw);
     const finish=z.object({choices:z.array(z.object({finish_reason:z.string()})).length(1)}).safeParse(decoded);
     if(finish.success&&finish.data.choices[0]!.finish_reason==="length"){
-      if(process.env.ALEXA_DEBUG_NARRATIVE==="1"){try{const c=(decoded as {choices?:{message?:{content?:string}}[]}).choices?.[0]?.message?.content;console.warn("[alexa-raw]",JSON.stringify(c??null).slice(0,1500));}catch{/* debug only */}}
+      if(process.env.ALEXA_DEBUG_NARRATIVE==="1"){try{const c=(decoded as {choices?:{message?:{content?:string}}[]}).choices?.[0]?.message?.content;console.warn("[alexa-raw]",{code:"LocalModelTruncated",characters:typeof c==="string"?c.length:0});}catch{/* debug only */}}
       throw new Error("LocalModelTruncated");
     }
     const value = z.object({ choices: z.array(z.object({ finish_reason: z.enum(["stop", "tool_calls"]),
@@ -102,5 +102,6 @@ export function parseLocalAnswer(raw: string): string {
 export function assertLocalContextFits(value: unknown, outputTokens: number): void {
   // The loopback transport bounds this response to 96 KB; token count must not be clipped.
   const parsed = z.object({ tokens: z.array(z.number().int()) }).parse(value);
+  if(process.env['ALEXA_LOCAL_TIMINGS']==='1')try{console.info('[alexa-local-token-budget]',{inputTokens:parsed.tokens.length,outputTokens,reservedTokens:128,contextTokens:4096});}catch{/* Diagnostics cannot change admission. */}
   if (parsed.tokens.length + outputTokens + 128 > 4096) throw new Error("LocalModelContext");
 }

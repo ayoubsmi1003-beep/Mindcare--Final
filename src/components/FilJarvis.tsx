@@ -16,6 +16,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 
 import { SiriOrb } from "@/components/ui/siri-orb";
+import {AlexaAnswerText} from './AlexaAnswerText';
 import { agentCopy } from "@/i18n/alexa-agent";
 import { fr } from "@/i18n/fr";
 import Link from "next/link";
@@ -149,9 +150,9 @@ export function FilJarvis({
               <details className="pl-1 font-ui text-label text-ink-500">
                 <summary className="cursor-pointer">{fr.patients.resume.sources}</summary>
                 <div className="mt-2 flex flex-wrap gap-2">
-                  {[...new Map(tour.alexaSources?.map(source => [source.id, source])).values()].map(source => {
+                  {[...new Map(tour.alexaSources?.map(source => [JSON.stringify([source.type,source.id,source.provenance?.['paymentId'],source.provenance?.['draftId']]), source])).values()].map(source => {
                     const href = source.provenance?.["draftId"] ? "/documents?draft="+encodeURIComponent(String(source.provenance["draftId"])) : source.type === "patient" ? "/patients/"+encodeURIComponent(source.id) : source.type==="document" ? "/documents?document="+encodeURIComponent(source.id) : source.type === "consultation" ? `/consultation/${encodeURIComponent(source.id)}` : source.type === "appointment" ? "/agenda" : (source.type === "treatment" || source.type === "diagnostic" || source.type === "scale") && tour.sourcePatientId ? `/patients/${encodeURIComponent(tour.sourcePatientId)}` : null;
-                    return href ? <Link className="underline underline-offset-4" key={source.id} href={href}>{source.label}</Link> : <span key={source.id}>{source.label}</span>;
+                    return <div key={JSON.stringify([source.type,source.id,source.provenance?.['paymentId'],source.provenance?.['draftId']])}>{href ? source.type==='document'?<a className="underline underline-offset-4" href={href}>{source.label}</a>:<Link className="underline underline-offset-4" href={href}>{source.label}</Link> : <span>{source.label}</span>}{source.excerpt ? <blockquote className="mt-1 whitespace-pre-wrap border-l border-rule pl-2">{source.excerpt}</blockquote> : null}</div>;
                   })}
                 </div>
               </details>
@@ -166,7 +167,7 @@ export function FilJarvis({
                 ].join(" ")}
                 style={{ maxWidth: compact ? "var(--bulle-jarvis-max)" : "46rem" }}
               >
-                {tour.texte}
+                <AlexaAnswerText text={tour.texte} blocks={tour.alexaBlocks}/>
                 {tour.interrompu === true && (!tour.alexaStatus || tour.alexaStatus === "cancelled") && (
                   <span className="ml-2 font-ui text-label italic text-ink-500">
                     {fr.jarvis.flux.interrompue}

@@ -4,7 +4,8 @@ import { SEUIL_FAIBLESSE, SEUIL_PERTINENCE } from "@/server/knowledge/preuve";
 import { lignePorteRecuperable, porteLexicale, validerLignePorte } from "@/server/knowledge/stockage";
 import type { RetrievedEvidence } from "@/server/knowledge/types";
 import type { ClientSql } from "@/server/jarvis/client-sql";
-import { matchesRequestedBook, planKnowledgeQuery } from "./knowledge-query";
+import { matchesRequestedBook, planKnowledgeQuery,matchesSectionFocus } from "./knowledge-query";
+import {headingOnlyEvidence,bibliographyEvidence,bibliographyTextEvidence,bibliographyRequested,unboundTableEvidence} from './knowledge-evidence-content';
 
 /** Une preuve structurée, telle que rendue par l'orchestration gouvernée. */
 type Preuve = RetrievedEvidence;
@@ -38,6 +39,7 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
       for (const candidate of batch) {
         const row = validerLignePorte(candidate);
         if (row === null || !lignePorteRecuperable(row)) continue;
+        if(headingOnlyEvidence(row.texte,row.section)||unboundTableEvidence(row.texte)||(bibliographyEvidence(row.section)||bibliographyTextEvidence(row.texte))&&!bibliographyRequested(question))continue;
         if (Buffer.byteLength(row.texte, "utf8") > LIMITES.BUDGET_OCTETS) { omittedLongPassages = true; continue; }
         complete.push(row);
       }
@@ -91,8 +93,9 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
       : preuves.some(p => p.evidence_relevance >= SEUIL_FAIBLESSE) ? "faible" as const
       : "aucune" as const;
     const result = { etat: preuves.length === 0 ? "sans-preuve" as const : issue === "faible" ? "faible" as const : "ok" as const,
+      ...(plan.sectionFocuses?.some(focus=>!preuves.some(p=>matchesSectionFocus(p.section,focus)))?{missingRequestedSections:true as const}:{}),
       ...(omittedLongPassages ? { omittedLongPassages: true as const } : {}),
-      preuves: preuves.map(e => ({ titre: e.sourceTitre, section: e.section, version: e.sourceVersion, extrait: e.texte,
+      preuves: preuves.map(e => ({ titre: e.sourceTitre, section: e.section, version: e.sourceVersion, extrait: e.texte,langue:e.langue,
         sourceId: e.sourceId, chunkId: e.chunkId, versionChunk: e.versionChunk, unitId: e.unitId, parentTexteHash: e.parentTexteHash, enfantIndex: e.enfantIndex, enfantsTotal: e.enfantsTotal })) };
     for (const proof of result.preuves) Object.freeze(proof);
     Object.freeze(result.preuves);

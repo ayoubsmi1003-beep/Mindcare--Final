@@ -8,6 +8,15 @@ vi.mock("@/services/db", async () => {
 });
 afterEach(() => { effacerPatientActif(); clearAlexaConversation(); vi.unstubAllGlobals(); });
 
+it.each(['valid','invalid','absent'] as const)('validates optional entity links in the SSE client: %s',async mode=>{
+ const text='Nom FICTIF',links=[{start:0,end:mode==='invalid'?999:text.length,label:text,target:{kind:'patient',id:'e4000000-0000-4000-8000-000000000001'}}];
+ vi.stubGlobal('window',{location:{pathname:'/jarvis'}});
+ vi.stubGlobal('fetch',async()=>new Response(`data: ${JSON.stringify({type:'sentence',text,kind:'fact',sources:[],...(mode==='absent'?{}:{links})})}\n\ndata: ${JSON.stringify({type:'done',patientId:null,limited:false})}\n\n`));
+ const result=envoyerTourAlexa('Affiche les noms');
+ if(mode==='invalid')await expect(result).rejects.toThrow();
+ else expect((await result).blocks).toEqual([{text,...(mode==='valid'?{links}:{})}]);
+});
+
 function transport(bodies: Record<string, unknown>[]) {
   vi.stubGlobal("window", { location: { pathname: "/jarvis" } });
   vi.stubGlobal("fetch", async (_url: unknown, init: RequestInit) => {

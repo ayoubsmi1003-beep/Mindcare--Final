@@ -33,7 +33,11 @@ import { z } from "zod";
 
 import { getDraft } from "./document-drafts";
 import { getPatient } from "./patients";
+import { listerMessagesInternes } from "./cabinet-collaboration";
 import { documentsEditor,documentLabels } from "@/i18n/documents-editor";
+import { alexaActions } from "@/i18n/alexa-actions";
+import { parseDocumentContent } from "@/shared/documents/content";
+import type { DocumentKind } from "@/shared/documents/types";
 import { getAppointment } from "./appointments";
 import { getCurrentUser } from "./authz";
 import { getConsultation } from "./consultations";
@@ -496,6 +500,43 @@ const fixerTarif: CapaciteEcriture<ArgsTarif> = {
   },
 };
 
+interface ArgsCloreConsultation {
+  readonly consultationId: string;
+}
+const cloturerConsultation: CapaciteEcriture<ArgsCloreConsultation> = {
+  nom: "close_consultation",
+  description:
+    "Clot une seance ouverte. Exige qu'un tarif existe deja ; ne signe jamais " +
+    "la note et ne fabrique aucun tarif.",
+  entree: z.strictObject({ consultationId: Guid }),
+  critique: true,
+  precondition: async (args) => {
+    const consultation = await getConsultation(args.consultationId);
+    if (!consultation.ok) return err(consultation.error);
+    if (consultation.data === null) return err({ code: "introuvable", message: fr.erreurs.introuvable });
+    if (consultation.data.status === "closed") {
+      return err({ code: "regle-metier", message: alexaActions.closeConsultationAlreadyClosed });
+    }
+    const payment = await getConsultationPayment(args.consultationId);
+    if (!payment.ok) return err(payment.error);
+    if (payment.data === null) {
+      return err({ code: "regle-metier", message: alexaActions.closeConsultationRequiresTariff });
+    }
+    return ok(undefined);
+  },
+  carte: (args, carte) => ({
+    titre: alexaActions.closeConsultationTitle,
+    champs: [{ libelle: alexaActions.closeConsultationPatient, valeur: carte.rendre(args.consultationId) }],
+  }),
+  verifier: async (args) => {
+    const consultation = await getConsultation(args.consultationId);
+    if (!consultation.ok) return err(consultation.error);
+    return consultation.data?.status === "closed"
+      ? ok(undefined)
+      : err({ code: "regle-metier", message: alexaActions.closeConsultationFailed });
+  },
+};
+
 interface ArgsBrouillon {
   readonly consultationId: string;
   readonly documentType: string;
@@ -568,12 +609,59 @@ const preparerBrouillonDocument: CapaciteEcriture<ArgsBrouillon> = {
  * de suppression apparait ici.
  */
 
-const editableDraft:CapaciteEcriture<{patientId:string;documentType:"bonne_sante_mentale"|"suivi_medical"|"certificat_medical"|"justification";variables:string}>={
+interface ArgsBrouillonEditable {
+ readonly patientId:string;
+ readonly documentType:DocumentKind;
+ readonly variables:string;
+ readonly content?:string|undefined;
+}
+const editableDraft:CapaciteEcriture<ArgsBrouillonEditable>={
  nom:"create_editable_document_draft",description:documentsEditor.draft,critique:true,
- entree:z.object({patientId:Guid,documentType:z.enum(["bonne_sante_mentale","suivi_medical","certificat_medical","justification"]),variables:z.string().max(500).refine(v=>{try{return z.record(z.string().max(80),z.string().max(300)).safeParse(JSON.parse(v)).success;}catch{return false;}})}).strict(),
+ entree:z.object({
+  patientId:Guid,
+  documentType:z.enum(["bonne_sante_mentale","suivi_medical","certificat_medical","justification","ordonnance"]),
+  variables:z.string().max(10_000).refine(v=>{try{return z.record(z.string().max(80),z.string().max(4000)).safeParse(JSON.parse(v)).success;}catch{return false;}}),
+  content:z.string().max(200_000).optional().refine(v=>{if(v===undefined)return true;try{parseDocumentContent(JSON.parse(v));return true;}catch{return false;}},{message:"invalid-content"}),
+ }).strict(),
  precondition:async args=>{const p=await getPatient(args.patientId);return p.ok&&p.data?ok(undefined):err({code:"introuvable",message:fr.erreurs.introuvable});},
- carte:(args,carte)=>({titre:fr.jarvis.carte.creerBrouillonDocument,champs:[{libelle:fr.jarvis.carte.champPatient,valeur:carte.rendre(args.patientId)},{libelle:fr.jarvis.carte.champTypeDocument,valeur:documentLabels[args.documentType]},{libelle:documentsEditor.draft,valeur:args.variables}]}),
- verifier:async(args,id)=>{const r=await getDraft(id);return r.ok&&r.data&&r.data.id===id&&r.data.patientId===args.patientId&&r.data.kind===args.documentType&&!r.data.issuedDocumentId&&JSON.stringify(Object.entries(r.data.variables).sort())===JSON.stringify(Object.entries(JSON.parse(args.variables) as Record<string,string>).sort())?ok(undefined):err({code:"regle-metier",message:fr.jarvis.ecriture.nonVerifiee});}
+ carte:(args,carte)=>{
+  const medicationCount=args.content===undefined?0:(()=>{try{return (JSON.parse(args.content) as {content?:readonly {type?:string}[]}).content?.filter(node=>node.type==="medication").length??0;}catch{return 0;}})();
+  return {titre:fr.jarvis.carte.creerBrouillonDocument,champs:[
+   {libelle:fr.jarvis.carte.champPatient,valeur:carte.rendre(args.patientId)},
+   {libelle:fr.jarvis.carte.champTypeDocument,valeur:documentLabels[args.documentType]},
+   ...(medicationCount>0?[{libelle:alexaActions.documentDraftMedications,valeur:String(medicationCount)}]:[]),
+   {libelle:alexaActions.documentDraftAutoFilled,valeur:args.variables},
+  ]};
+ },
+ verifier:async(args,id)=>{
+  const r=await getDraft(id);
+  if(!r.ok||!r.data||r.data.id!==id||r.data.patientId!==args.patientId||r.data.kind!==args.documentType||r.data.issuedDocumentId)return err({code:"regle-metier",message:fr.jarvis.ecriture.nonVerifiee});
+  const variablesMatch=JSON.stringify(Object.entries(r.data.variables).sort())===JSON.stringify(Object.entries(JSON.parse(args.variables) as Record<string,string>).sort());
+  if(!variablesMatch)return err({code:"regle-metier",message:fr.jarvis.ecriture.nonVerifiee});
+  if(args.content!==undefined&&JSON.stringify(r.data.content)!==JSON.stringify(parseDocumentContent(JSON.parse(args.content))))return err({code:"regle-metier",message:fr.jarvis.ecriture.nonVerifiee});
+  return ok(undefined);
+ }
+};
+
+interface ArgsMessageInterne {
+ readonly clientMsgId:string;
+ readonly body:string;
+}
+const envoyerMessageInterne:CapaciteEcriture<ArgsMessageInterne>={
+ nom:"send_internal_message",
+ description:"Envoie un message opérationnel au canal interne du cabinet. Jamais de nom de patient, de dossier ni de donnée clinique.",
+ entree:z.strictObject({clientMsgId:Guid,body:z.string().trim().min(3).max(1000)}),
+ critique:false,
+ precondition:async()=>ok(undefined),
+ carte:args=>({titre:alexaActions.internalMessageTitle,champs:[
+  {libelle:alexaActions.internalMessageRecipient,valeur:alexaActions.internalMessageRecipientValue},
+  {libelle:alexaActions.internalMessageBody,valeur:args.body},
+ ]}),
+ verifier:async(args,id)=>{
+  const listed=await listerMessagesInternes(100);
+  if(!listed.ok||!listed.data.some(message=>message.id===id&&message.corps===args.body))return err({code:"regle-metier",message:fr.jarvis.ecriture.nonVerifiee});
+  return ok(undefined);
+ }
 };
 const ECRITURES: readonly CapaciteEcritureEnregistree[] = [
   enregistrer(editableDraft),
@@ -582,8 +670,10 @@ const ECRITURES: readonly CapaciteEcritureEnregistree[] = [
   enregistrer(annulerRendezVous),
   enregistrer(marquerArrivee),
   enregistrer(fixerTarif),
+  enregistrer(cloturerConsultation),
   enregistrer(encaisserPaiement),
   enregistrer(preparerBrouillonDocument),
+  enregistrer(envoyerMessageInterne),
 ];
 
 const PAR_NOM: ReadonlyMap<string, CapaciteEcritureEnregistree> = new Map(

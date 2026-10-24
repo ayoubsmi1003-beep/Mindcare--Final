@@ -53,7 +53,7 @@ function sameContent(a:Draft["content"],b:Draft["content"]):boolean{
  return JSON.stringify(a)===JSON.stringify(b);
 }
 
-export function DocumentWorkspace({patientId:initialPatient=null,initialDocumentId=null,initialDraftId=null}:{readonly patientId?:string|null;readonly initialDocumentId?:string|null;readonly initialDraftId?:string|null}){
+export function DocumentWorkspace({patientId:initialPatient=null,initialDocumentId=null,initialDraftId=null,initialPrint=false}:{readonly patientId?:string|null;readonly initialDocumentId?:string|null;readonly initialDraftId?:string|null;readonly initialPrint?:boolean}){
 
  const [patientId,setPatientId]=useState(initialPatient),[patientName,setPatientName]=useState(""),[patientRecord,setPatientRecord]=useState(""),[draftId,setDraftId]=useState<string|null>(initialDraftId),[kind,setKind]=useState<DocumentKind>("bonne_sante_mentale");
 
@@ -68,7 +68,7 @@ export function DocumentWorkspace({patientId:initialPatient=null,initialDocument
  const [error,setError]=useState<string|null>(null),[busy,setBusy]=useState(false),[confirm,setConfirm]=useState(false),[voidReason,setVoidReason]=useState(""),[showVoid,setShowVoid]=useState(false),[issuedZoom,setIssuedZoom]=useState<IssuedZoom>(100);
 
  const [libraryTab,setLibraryTab]=useState<"drafts"|"issued">("drafts"),[view,setView]=useState<"edit"|"preview">("preview");
- const editing=useDocumentDraft(draftId),initialOpened=useRef<string|null>(null),root=useRef<HTMLDivElement>(null),issuedManualZoom=useRef(false);
+ const editing=useDocumentDraft(draftId),initialOpened=useRef<string|null>(null),initialPrintDone=useRef(false),root=useRef<HTMLDivElement>(null),issuedManualZoom=useRef(false);
 
  useEffect(()=>{const fit=()=>{if(!issuedManualZoom.current)setIssuedZoom(fitIssuedZoom());};fit();window.addEventListener("resize",fit);return()=>window.removeEventListener("resize",fit);},[]);
 
@@ -127,7 +127,10 @@ export function DocumentWorkspace({patientId:initialPatient=null,initialDocument
 
  const duplicate=async()=>{const id=editing.draft?.id??snapshot?.draftId;if(!id&&!opened)return;if(editing.dirty&&!await editing.flush())return;const r=id?await duplicateDraft(id):await reviseIssuedDocument(opened!.id);if(r.ok&&r.data){await chooseDraft(r.data);await refresh();}else if(!r.ok)setError(r.error.message);};
 
- const print=async()=>{if(!opened)return;setError(null);setBusy(true);try{if(snapshot)await printDocument(snapshot);else if(opened.renderedHtml)await printLegacyDocument(opened.renderedHtml);const r=await markDocumentPrinted(opened.id);if(!r.ok){setError(t.printAuditFailed);setAuditPending(opened.id);}else{setAuditPending(null);await openDocument(opened.id);}}catch{setError(t.printFailed);}finally{setBusy(false);}};
+ const print=useCallback(async()=>{if(!opened)return;setError(null);setBusy(true);try{if(snapshot)await printDocument(snapshot);else if(opened.renderedHtml)await printLegacyDocument(opened.renderedHtml);const r=await markDocumentPrinted(opened.id);if(!r.ok){setError(t.printAuditFailed);setAuditPending(opened.id);}else{setAuditPending(null);await openDocument(opened.id);}}catch{setError(t.printFailed);}finally{setBusy(false);}},[opened,snapshot,openDocument]);
+ // Alexa ne peut ouvrir que la pièce exacte qu'elle a relue. L'impression
+ // reste le dialogue du navigateur : aucun succès d'imprimante n'est supposé.
+ useEffect(()=>{if(!initialPrint||!initialDocumentId||initialPrintDone.current||opened?.id!==initialDocumentId||!snapshot)return;initialPrintDone.current=true;void print();},[initialPrint,initialDocumentId,opened,snapshot,print]);
 
  const changePatient=(p:{id:string;firstName:string;lastName:string;recordNumber:string})=>{if(busy)return;void(async()=>{if(editing.dirty&&!await editing.flush())return;setPatientId(p.id);setPatientName(p.lastName+" "+p.firstName);setPatientRecord(p.recordNumber);setDraftId(null);setOpened(null);setSnapshot(null);setPreview(null);setHeaderHtml("");setFieldValues({});setError(null);})();};
 

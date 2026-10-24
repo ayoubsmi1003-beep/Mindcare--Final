@@ -1,4 +1,9 @@
 export const frenchAgendaCopy={
+ first:'Premier rendez-vous de la période demandée.',
+ orderUnavailable:'Cette recherche peut donner le premier rendez-vous ou la liste chronologique de la période. La sélection demandée n’est pas disponible.',
+ countOnly:(total:number,patient:boolean)=>`${total} rendez-vous${patient?' pour ce patient':''} sur la période demandée.`,
+ endAxisUnavailable:'La recherche de rendez-vous utilise leur date de début. Le filtre sur la date de fin n’est pas disponible ; aucune lecture effectuée.',
+ statusClarification:'Les statuts de rendez-vous ne correspondent pas clairement à votre demande. Précisez les statuts à inclure ou à exclure ; aucune lecture effectuée.',
  count:(total:number)=>`${total} rendez-vous ${total===1?'prévu':'prévus'}.`,
  when:(day:string,time:string)=>`${day} à ${time.replace(/^0/u,'').replace(':00',' h').replace(':',' h ')}`,
  row:(name:string,when:string,status:string)=>`${name}${when?' : '+when:''} (${status}).`,

@@ -1,4 +1,5 @@
 import { jetoniser } from "@/server/knowledge/rerank";
+import {knowledgeComparisonRequested} from './knowledge-evidence-content';
 import { META_MOTS_LIVRE, planifierExpansionBilingue, VERSION_TERMINOLOGIE } from "@/server/knowledge/terminologie-bilingue";
 // Titles observed in the approved local corpus. Aliases never approve a source.
 const BOOKS = [
@@ -6,8 +7,6 @@ const BOOKS = [
     title: "DSM-5 — Manuel diagnostique et statistique des troubles mentaux", language: "fr" },
   { marker: /\b(?:maudsley|taylor)\b/u,
     title: "The Maudsley Prescribing Guidelines in Psychiatry", language: "en" },
-  { marker: /\bstahl\b/u,
-    title: "Prescriber's Guide (Stahl's Essential Psychopharmacology)", language: "en" },
 ] as const;
 
 // Mots-outils de la QUESTION : ils ne sont pas du contenu clinique et
@@ -16,6 +15,8 @@ const BOOKS = [
 // retires AVANT la porte, jamais du texte source.
 const SCAFFOLD = new Set([
   "quels", "quelles", "comment", "explique", "expliquer", "parle", "parler", "dit", "dis", "dire",
+  "definit", "definir", "decrit", "decrire", "decris", "donne", "donner", "presente", "presenter",
+  "resume", "resumer", "figurent", "figure", "enumere", "enumerer", "distingue", "distinguer", "precise", "preciser",
   "montre", "selon", "apres", "livre", "livres", "ouvrage", "manuel", "references", "reference",
   "sources", "source", "difference", "compare", "comparer", "entre", "chez",
   "what", "which", "how", "explain", "tell", "says", "according", "to", "the", "of", "in", "and", "book",
@@ -36,6 +37,7 @@ const ALIASES: Readonly<Record<string, readonly [string, string]>> = {
   traitement: ["traitement", "treatment"], traitements: ["traitements", "treatments"],
   trouble: ["trouble", "disorder"], troubles: ["troubles", "disorders"], bipolaire: ["bipolaire", "bipolar"],
   schizophrenie: ["schizophrenie", "schizophrenia"], anxiete: ["anxiete", "anxiety"],
+  manie: ["maniaque", "mania"], hypomanie: ["hypomaniaque", "hypomania"],
   symptomes: ["symptomes", "symptoms"], enfants: ["enfants", "children"], adulte: ["adulte", "adult"],
   contreindications: ["contre indications", "contraindications"],
   معايير: ["criteres", "criteria"], اكتياب: ["depression", "depression"], // hamza-normalized اكتئاب
@@ -57,7 +59,10 @@ export interface KnowledgeQueryPlan {
   readonly language: "fr" | "en" | "toutes";
   readonly sourceTitle: string | null;
   readonly sectionFocus?: string;
+  readonly sectionFocuses?: readonly string[];
   readonly sectionLeaf?: string;
+  /** Legacy root-section chunks may contain comorbidity under the same locator. */
+  readonly embeddedCriteriaOnly?: boolean;
   /**
    * Version de la couche de terminologie bilingue qui a produit ce plan.
    * Absent si aucune expansion n'a eu lieu. Trace d'audit de la requête.
@@ -76,6 +81,8 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
   // Never truncate away a final book, population, dose or other restriction.
   if (question.length > 500) return null;
   let normalized = normalize(question);
+  // Stahl is not yet qualified by the user. Its index and approvals remain untouched.
+  if(/\bstahl\b/u.test(normalized))return null;
   // Only DSM-5 is observed locally. A different edition or text revision must
   // fail closed before its book label can be stripped or mapped to that source.
   for (const edition of normalized.matchAll(/\bdsm\s*-?\s*(\d+|[ivx]+)(?:\s*-?\s*(tr|r))?\b/gu)) {
@@ -163,20 +170,46 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
   if (queries.some(query => query.length > 500)) return null;
   // An explicitly named diagnostic entity must not be substituted by a
   // differential diagnosis merely mentioning it in the body of another section.
-  const sectionFocus = book?.language === "fr" && /\btrouble depressif caracterise\b/u.test(normalized)
-    ? "trouble depressif caracterise" : undefined;
-  const sectionLeaf = sectionFocus && /\b(?:criteres|symptomes)\b/u.test(normalized) ? "criteres diagnostiques" : undefined;
-  return { queries, references, relevanceQuery: queries.join(" "), language, sourceTitle: book?.title ?? null, ...(sectionFocus ? { sectionFocus } : {}), ...(sectionLeaf ? { sectionLeaf } : {}), ...(bilingue.actif ? { terminologieVersion: bilingue.version } : {}) };
+  const comparison=knowledgeComparisonRequested(question);
+  const focusRules:readonly (readonly [RegExp,string])[]=[
+    [/\btrouble depressif caracterise\b/u,'trouble depressif caracterise'],
+    [/\btrouble panique\b/u,'trouble panique'],
+    [/\b(?:hypomanie|hypomaniaque)\b/u,'episode hypomaniaque'],
+    [/\b(?:manie|maniaque)\b/u,'episode maniaque'],
+    [/\bschizophrenie\b/u,'schizophrenie'],
+    [/\banxiete generalisee\b/u,'anxiete generalisee'],
+    [/\b(?:trouble obsessionnel[- ]compulsif|toc)\b/u,'trouble obsessionnel-compulsif'],
+    [/\bstress post[- ]traumatique\b/u,'trouble stress post-traumatique'],
+  ];
+  const recognizedFocuses=focusRules.filter(([pattern])=>pattern.test(normalized)).map(([,focus])=>focus);
+  const sectionFocus=book?.language==='fr'&&(!comparison||recognizedFocuses.length===1)?recognizedFocuses[0]:undefined;
+  const comparisonFocuses=book?.language==='fr'&&comparison?focusRules.filter(([pattern])=>pattern.test(normalized)).map(([,focus])=>focus):[];
+  // These two approved chapters contain their criteria directly under the topic heading.
+  const embeddedCriteria=sectionFocus==='anxiete generalisee'||sectionFocus==='trouble obsessionnel-compulsif';
+  const criteriaRequested=/\b(?:criteres|symptomes|signes)\b/u.test(normalized),descriptionRequested=/\b(?:definit|definir|definition|decrit|decrire)\b/u.test(normalized);
+  const sectionLeaf = sectionFocus ? embeddedCriteria&&(criteriaRequested||descriptionRequested)?sectionFocus:!embeddedCriteria&&criteriaRequested?'criteres diagnostiques':!embeddedCriteria&&/\b(?:definit|definir|definition)\b/u.test(normalized)?'caracteristiques diagnostiques':undefined : undefined;
+  if(sectionFocus){
+    const primary=[sectionFocus,embeddedCriteria&&criteriaRequested?'criteres diagnostiques':sectionLeaf].filter(Boolean).join(' ');
+    if(!queries.includes(primary)){queries.push(primary);references.push(primary);}
+    // In legacy root-locator chapters, common topic words can rank comorbidity
+    // ahead of the actual criteria within the lexical candidate limit.
+    if(embeddedCriteria&&criteriaRequested){const structured=sectionFocus+' a b';queries.push(structured);references.push(structured);}
+  }
+  if(comparisonFocuses.length>1)for(const primary of comparisonFocuses)if(!queries.includes(primary)){queries.push(primary);references.push(primary);}
+  return { queries, references, relevanceQuery: queries.join(" "), language, sourceTitle: book?.title ?? null, ...(sectionFocus ? { sectionFocus } : {}), ...(comparisonFocuses.length>1?{sectionFocuses:comparisonFocuses}:{}), ...(sectionLeaf ? { sectionLeaf } : {}), ...(embeddedCriteria&&criteriaRequested?{embeddedCriteriaOnly:true}:{}), ...(bilingue.actif ? { terminologieVersion: bilingue.version } : {}) };
 }
+export const matchesSectionFocus=(section:string|null,focus:string)=>!!section&&normalize(section).split('›').some(part=>part.trim()===focus);
 
 /** Requested-book matching restricts already-governed rows; it grants no access. */
 export function matchesRequestedBook(row: unknown, plan: KnowledgeQueryPlan): boolean {
   if (typeof row !== "object" || row === null || !("source_titre" in row) || typeof row.source_titre !== "string"
     || !BOOKS.some(book => normalize(book.title) === normalize(row.source_titre as string))) return false;
+  if(plan.embeddedCriteriaOnly&&(!('texte' in row)||typeof row.texte!=='string'||!/(?:^|\s)A\.\s+\p{L}[\s\S]+(?:^|\s)B\.\s+\p{L}/u.test(row.texte)))return false;
   if (plan.sectionLeaf && !(typeof row === "object" && row !== null && "section" in row && typeof row.section === "string"
     && normalize(row.section).split("›").at(-1)?.trim() === plan.sectionLeaf)) return false;
   if (plan.sectionFocus && !(typeof row === "object" && row !== null && "section" in row && typeof row.section === "string"
-    && normalize(row.section).split("›").some(section => section.trim() === plan.sectionFocus))) return false;
+    && matchesSectionFocus(row.section,plan.sectionFocus))) return false;
+  if(plan.sectionFocuses&&!("section" in row&&typeof row.section==='string'&&plan.sectionFocuses.some(focus=>matchesSectionFocus(row.section as string,focus))))return false;
   if (plan.sourceTitle === null) return true;
   return typeof row === "object" && row !== null && "source_titre" in row
     && typeof row.source_titre === "string" && normalize(row.source_titre) === normalize(plan.sourceTitle);

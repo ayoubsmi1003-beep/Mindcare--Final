@@ -30,7 +30,7 @@ describe("explicit mixed patient and approved-book requests", () => {
 });
 
 describe("separate attributed knowledge response", () => {
-  const proof = { titre: "Approved source", section: "Recorded section", version: "v2", extrait: "Source excerpt",
+  const proof = { titre: "Approved source", section: "Recorded section", version: "v2", extrait: "Source excerpt", langue: "en" as const,
     sourceId: "source", chunkId: "chunk", versionChunk: "chunk-v3", unitId: "unit", parentTexteHash: "hash",
     enfantIndex: 1, enfantsTotal: 2 };
   it("retains exact lineage and version without inventing a page or patient conclusion", () => {
