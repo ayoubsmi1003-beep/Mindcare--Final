@@ -281,7 +281,7 @@ function internalMessageTarget(text:string):Pick<FrenchRequestAdmission,'prepara
 /** A requested draft/proposal is an outcome, never authority to execute the business action. */
 function preparationTarget(text:string):Pick<FrenchRequestAdmission,'preparationAction'|'preparationDocumentType'>|null{
  const plain=fold(text);
- if(!/^(?:(?:s.il te plait|svp),?\s+)?(?:(?:peux[- ]tu|pourrais[- ]tu|pouvez[- ]vous|pourriez[- ]vous|tu peux|vous pouvez|je voudrais|j.aimerais)\s+(?:(?:me|nous)\s+)?)?(?:prepare\w*|propose\w*)\b/u.test(plain)||/\b(?:ne|pas|aucun|annule|supprime|signe|emets|delivre)\b/u.test(plain))return null;
+ if(!/^(?:(?:s.il te plait|svp),?\s+)?(?:(?:peux[- ]tu|pourrais[- ]tu|pouvez[- ]vous|pourriez[- ]vous|tu peux|vous pouvez|je voudrais|j.aimerais)\s+(?:(?:me|nous)\s+)?)?(?:prepare\w*|propose\w*|genere\w*)\b/u.test(plain)||/\b(?:ne|pas|aucun|annule|supprime|signe|emets|delivre)\b/u.test(plain))return null;
  if(/\b(?:rendez[- ]vous|rdv)\b/u.test(plain))return {preparationAction:'create_appointment'};
  if(!/\b(?:brouillons?|certificats?|justifications?|justificatifs?|suivi medical|ordonn?ances?)\b/u.test(plain))return null;
  const preparationDocumentType=/\bbonne sante mentale\b/u.test(plain)?'bonne_sante_mentale':/\bsuivi medical\b/u.test(plain)?'suivi_medical':/\bcertificat medical\b/u.test(plain)?'certificat_medical':/\bjustificati(?:on|f)\b/u.test(plain)?'justification':/\bordonn?ances?\b/u.test(plain)?'ordonnance':undefined;
@@ -293,7 +293,7 @@ export function frenchRequestAdmission(text:string,publicAllowed:boolean):French
  if(frenchRequestedOutputs(text))return {profileOnly:false};
  const messageKind=messageDraftTarget(text);if(messageKind&&!frenchRequestedOutputs(text))return {tools:['query_app'],profileOnly:false,applicationView:'message_draft',messageKind};
  const internalMessage=internalMessageTarget(text);if(internalMessage)return {tools:['prepare_action'],profileOnly:false,...internalMessage};
- const plain=fold(text),write=/\b(?:creer|cree|ajouter|ajoute|ajoutez|enregistrer|enregistrez|modifier|modifie|modifiez|annuler|annule|annulez|supprimer|supprime|supprimez|signer|signe|signez|encaisser|encaissez|deplacer|deplace|deplacez|preparer|prepare|preparez|proposer|propose|proposez|envoyer|envoie|envoyez|transmettre|transmets)\b/u.test(plain);
+ const plain=fold(text),write=/\b(?:creer|cree|ajouter|ajoute|ajoutez|enregistrer|enregistrez|modifier|modifie|modifiez|annuler|annule|annulez|supprimer|supprime|supprimez|signer|signe|signez|encaisser|encaissez|deplacer|deplace|deplacez|preparer|prepare|preparez|generer|genere|generez|proposer|propose|proposez|envoyer|envoie|envoyez|transmettre|transmets)\b/u.test(plain);
  if(write){const preparation=preparationTarget(text);return preparation?{tools:['prepare_action'],profileOnly:false,...preparation}:{profileOnly:false};}
  const clinical=/\b(?:notes?|historique|consult\w*|seances?|diagnosti\w*|traitements?|echelles?|symptom\w*|analyse\w*|ordonn\w*|certificats?|medic\w*|prescri\w*|therap\w*|stress|sommeil|risques?|humeur|sante|dsm|cim|icd|taylor|maudsley)\b/u.test(plain);
  const finance=/\b(?:chiffre d.affaires|recettes?|revenus?|depenses?|impayes?|soldes?|resultat net|paiements?|encaissements?)\b/u.test(plain);

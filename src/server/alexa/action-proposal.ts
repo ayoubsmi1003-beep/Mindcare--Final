@@ -24,6 +24,8 @@ function normalized(text: string): string {
   return text.normalize("NFKD").replace(/\p{M}/gu, "").toLowerCase().trim();
 }
 
+const negatedDocumentCommand = /^(?:ne\s+)?(?:prepare|preparer|preparez|creer|cree|redige|rediger|genere|generer|generez)\b[\s\S]*\b(?:pas|jamais|plus|aucun|aucune)\b/u;
+
 function requestedDocumentKind(text: string): DocumentKind | null {
   if (/\bbonne sante(?: mentale)?\b/u.test(text)) return "bonne_sante_mentale";
   if (/\bsuivi medical\b/u.test(text)) return "suivi_medical";
@@ -53,7 +55,8 @@ function requestedInternalMessage(text: string): string | null {
  */
 export function deterministicActionRequest(text: string): boolean {
   const plain = normalized(text);
-  const document = /\b(?:prepare|preparer|preparez|creer|cree|redige|rediger)\b/u.test(plain)
+  if (negatedDocumentCommand.test(plain)) return false;
+  const document = /^(?:prepare|preparer|preparez|creer|cree|redige|rediger|genere|generer|generez)\b/u.test(plain)
     && requestedDocumentKind(plain) !== null;
   const message = /\b(?:envoie|envoyer|transmets|transmettre|dis|dire|previens|prevenir)\b/u.test(plain)
     && /\b(?:secretaire|accueil|reception)\b/u.test(plain);
@@ -72,12 +75,13 @@ export async function prepareActionProposal(
   signal: AbortSignal,
 ): Promise<ProposalResult> {
   const text = normalized(input.text);
+  if (negatedDocumentCommand.test(text)) return { state: "missing", slot: "operation" };
   const kind = requestedDocumentKind(text);
   const messageBody = requestedInternalMessage(text);
   // Only literal imperatives are shortcuts. Quoted notes/help are not commands.
   let tool: string | null = /^(?:fixe|fixer|mets|mettre|change|changer|modifie|modifier)\b/u.test(text) && /\b(?:tarif|prix)\b/u.test(text) ? "set_consultation_price"
     : /^(?:encaisse|encaisser)\b/u.test(text) ? "record_payment_collected"
-    : kind !== null && /^(?:prepare|preparer|preparez|creer|cree|redige|rediger)\b/u.test(text) ? "create_editable_document_draft"
+    : kind !== null && /^(?:prepare|preparer|preparez|creer|cree|redige|rediger|genere|generer|generez)\b/u.test(text) ? "create_editable_document_draft"
     : /^(?:clore|cloture|ferme|fermer|termine|terminer)\b/u.test(text) && /\b(?:consultation|seance)\b/u.test(text) ? "close_consultation"
     : messageBody !== null ? "send_internal_message"
     : /^(?:prepare|preparer|cree|creer)\b/u.test(text) && /\bbrouillon\b/u.test(text) ? "create_document_draft"

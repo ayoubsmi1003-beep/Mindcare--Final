@@ -10,6 +10,7 @@
     "dev": "node scripts/garde-origine.mjs && node scripts/verifier-base.mjs && next dev",
     "build": "next build",
     "start": "node scripts/garde-origine.mjs && node scripts/verifier-base.mjs && next start",
+    "start:main": "node --env-file=.env scripts/start-main-local.mjs",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit && tsc -p tsconfig.test.json",
     "postinstall": "node scripts/sync-wakeword-runtime.mjs",
