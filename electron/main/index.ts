@@ -30,7 +30,7 @@ import { fileURLToPath } from "node:url";
 
 import { configurerOrigineCabinet, urlDepart } from "./config.js";
 import { attendreCabinet, chargerConnexionCabinet, type ConnexionCabinet } from "./connexion-cabinet.js";
-import { attendreConnexionCabinet, connecterBureauCabinet, surveillerCabinet } from "./bureau-cabinet.js";
+import { attendreConnexionCabinet, connecterBureauCabinet, reconnecterPoste, surveillerCabinet } from "./bureau-cabinet.js";
 import { dossierDonnees, fichierEnvironnement, modeCourant } from "./chemins.js";
 import { journalDesktop } from "./journal-desktop.js";
 import { garantirInstallation } from "./installation-auto.js";
@@ -47,14 +47,25 @@ const REPERTOIRE_ICI = path.dirname(fileURLToPath(import.meta.url));
 // toast est silencieusement ignoré sur un poste installé — pas d'erreur, pas de
 // notification, et l'accueil ne voit rien alors que le médecin a cliqué.
 app.setAppUserModelId("os.mindcare.cabinet");
-// Keep the pinned TLS hostname/SNI, but resolve this doctor's own service over loopback offline.
+/**
+ * Le PC médecin se joint TOUJOURS par son propre nom : le certificat est émis
+ * pour `<nom-du-PC>`, et c'est cette identité qui est épinglée.
+ *
+ * ⚠️ L'ancienne version ne posait cette règle que si `desktop.json` existait
+ * déjà en mode hôte. Au TOUT PREMIER démarrage — celui où l'on choisit «
+ * Utiliser ce PC comme PC médecin » — le fichier n'existe pas encore : aucune
+ * règle n'était posée, la résolution du nom pouvait échouer (routeur sans DNS
+ * local, LLMNR désactivé), et l'écran restait sur « Connexion interrompue »
+ * alors que le service tournait. On la pose donc dès le lancement, sans
+ * condition de configuration.
+ *
+ * Inerte sur un poste d'accueil : il ne se connecte jamais à son propre nom.
+ */
 if (app.isPackaged) {
-  try {
-    const config = chargerConnexionCabinet(path.join(process.env['ProgramData'] ?? 'C:\\ProgramData', 'MindCare', 'desktop.json'), 'clinic-host');
-    if ('origin' in config && new URL(config.origin).hostname.toLowerCase() === hostname().toLowerCase()) {
-      app.commandLine.appendSwitch('host-resolver-rules', `MAP ${hostname()} 127.0.0.1`);
-    }
-  } catch { /* First enrollment and remote workstations use their normal trusted path. */ }
+  const nomLocal = hostname();
+  if (/^[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?$/.test(nomLocal)) {
+    app.commandLine.appendSwitch('host-resolver-rules', `MAP ${nomLocal} 127.0.0.1`);
+  }
 }
 
 let fenetrePrincipale: BrowserWindow | null = null;
@@ -279,30 +290,212 @@ function echapperHtml(s: string): string {
   return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 }
 
-async function afficherEtatLocal(erreur: boolean): Promise<void> {
-  if (fermetureEnCours) return;
+type ActionEtat = "retry" | "reconnect" | "logs";
+
+interface OptionsEtatLocal {
+  readonly message?: string;
+  readonly detail?: string;
+  readonly retryLabel?: string;
+  readonly secondaire?: { readonly label: string; readonly action: ActionEtat };
+}
+
+/** Dernier état affiché : on ne recharge pas la même page toutes les 20 s. */
+let dernierEtatLocal = "";
+/** « Réessayer » pendant une attente : sonde immédiate, sans relancer le démarrage. */
+let reessaiImmediat = false;
+
+/**
+ * L'écran d'attente et l'écran de reprise, sur UNE seule fenêtre.
+ *
+ * ═══ CE QUI ÉTAIT CASSÉ, ET QUI SE VOYAIT EN CABINET ═════════════════════════
+ *
+ *   · la politique de sécurité (`default-src 'none'`) n'autorisait AUCUNE
+ *     feuille de style : la page s'affichait en texte brut, sans mise en page ;
+ *   · l'écran n'avait aucun bouton tant qu'il n'était pas en erreur — un poste
+ *     dont le médecin avait éteint le PC restait donc figé, sans issue ;
+ *   · il ne distinguait pas « je prépare le cabinet » (premier démarrage du PC
+ *     médecin, plusieurs minutes) de « je me reconnecte » (coupure réseau).
+ *
+ * Les trois sont corrigés ici : `style-src` avec nonce, bouton toujours
+ * présent, et un message choisi par l'appelant selon la situation réelle.
+ */
+async function afficherEtatLocal(erreur: boolean, options: OptionsEtatLocal = {}): Promise<void> {
+  if (fermetureEnCours || applicationPrete) return;
+  const messages = JSON.parse(readFileSync(path.join(process.resourcesPath, 'cabinet', 'messages-fr.json'), 'utf8')) as Record<string, string>;
+  const message = options.message ?? messages[erreur ? 'localUnavailable' : 'startingLocal']!;
+  const detail = options.detail ?? "";
+  const signature = `${String(erreur)}|${message}|${detail}|${options.secondaire?.action ?? ""}`;
+  if (signature === dernierEtatLocal && fenetrePrincipale !== null && !fenetrePrincipale.isDestroyed()) return;
+  dernierEtatLocal = signature;
   if (!fenetrePrincipale || fenetrePrincipale.isDestroyed()) fenetrePrincipale = creerFenetrePrincipaleCachee();
   erreurLocale = erreur;
-  const messages = JSON.parse(readFileSync(path.join(process.resourcesPath, 'cabinet', 'messages-fr.json'), 'utf8')) as Record<string, string>;
   const nonce = randomBytes(18).toString('base64');
-  const html = `<!doctype html><html lang="fr"><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'nonce-${nonce}'"><title>MindCare OS</title><h1>MindCare OS</h1><p role="status">${echapperHtml(messages[erreur ? 'localUnavailable' : 'startingLocal']!)}</p>${erreur ? `<button id="retry">${echapperHtml(messages.retryLocal!)}</button><script nonce="${nonce}">document.getElementById('retry').onclick=()=>{document.getElementById('retry').disabled=true;window.mindcare.retryStartup()}</script>` : ''}</html>`;
-  await fenetrePrincipale.loadURL(`data:text/html;charset=utf-8,${encodeURIComponent(html)}`);
+  const secondaire = options.secondaire === undefined ? "" : `<button id="secondaire" data-action="${options.secondaire.action}">${echapperHtml(options.secondaire.label)}</button>`;
+  const html = `<!doctype html><html lang="fr"><head><meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'nonce-${nonce}'; script-src 'nonce-${nonce}'">
+<title>MindCare OS</title>
+<style nonce="${nonce}">
+  *{box-sizing:border-box}
+  body{font:16px "Segoe UI",Arial,sans-serif;background:#f7f5f1;color:#1b1b1b;margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:40px}
+  main{max-width:620px;width:100%}
+  h1{font-size:24px;margin:0 0 10px;color:#1a6b63}
+  p{margin:0 0 10px;line-height:1.55}
+  p.detail{color:#555}
+  button{font:inherit;padding:10px 18px;border-radius:9px;border:1px solid #c9c9c9;background:#fff;cursor:pointer;margin:14px 10px 0 0}
+  button.primaire{background:#1a6b63;border-color:#1a6b63;color:#fff}
+  small{display:block;margin-top:22px;color:#777;font-size:13px}
+</style></head><body><main>
+  <h1>MindCare OS</h1>
+  <p role="status">${echapperHtml(message)}</p>
+  ${detail === "" ? "" : `<p class="detail">${echapperHtml(detail)}</p>`}
+  <button class="primaire" id="retry">${echapperHtml(options.retryLabel ?? messages.retryLocal!)}</button>${secondaire}
+  <small>MindCare OS — aucune donnée patient n'est affichée sur cet écran.</small>
+</main>
+<script nonce="${nonce}">
+  document.getElementById('retry').onclick = (event) => {
+    const bouton = event.currentTarget;
+    bouton.disabled = true;
+    // Le bouton se réactive toujours : une sonde immédiate peut ne rien changer
+    // à l'écran, et un bouton grisé pour toujours serait le défaut d'origine.
+    Promise.resolve(window.mindcare.retryStartup()).finally(() => { setTimeout(() => { bouton.disabled = false; }, 800); });
+  };
+  const secondaire = document.getElementById('secondaire');
+  if (secondaire) secondaire.onclick = (event) => {
+    const action = event.currentTarget.dataset.action;
+    if (action === 'reconnect') window.mindcare.reconnectClinic();
+    else if (action === 'logs') window.mindcare.openLogsFolder();
+  };
+</script></body></html>`;
+  await fenetrePrincipale.loadURL(`data:text/html;charset=utf-8,${encodeURIComponent(html)}`).catch(() => {
+    // Un écran d'attente qui ne se charge pas ne doit jamais interrompre la
+    // séquence : l'application principale prendra la main dès que le cabinet
+    // répond. Sans ce `catch`, le rejet tuait silencieusement le minuteur.
+  });
   if (!fenetrePrincipale.isDestroyed()) fenetrePrincipale.show();
 }
 
 ipcMain.handle('mindcare:retry-startup', async event => {
-  if (event.sender !== fenetrePrincipale?.webContents || !erreurLocale || !event.senderFrame?.url.startsWith('data:text/html;') || demarrageEnCours || fermetureEnCours) return;
+  if (event.sender !== fenetrePrincipale?.webContents || fermetureEnCours) return;
+  if (!event.senderFrame?.url.startsWith('data:text/html;')) return;
+  // Pendant une attente, « Réessayer » sonde TOUT DE SUITE au lieu de
+  // relancer un démarrage déjà en cours (qui serait refusé, et le bouton
+  // paraîtrait mort — exactement le défaut d'origine).
+  if (demarrageEnCours) { reessaiImmediat = true; return; }
+  if (!erreurLocale) return;
   await lancerOrchestrationEtFenetre();
 });
+
+/**
+ * Sortie de secours d'un poste d'accueil : le PC médecin a été remplacé ou son
+ * certificat a changé. On oublie l'autorisation (jamais les données) et on
+ * revient à l'écran d'invitation. Impossible sur le PC médecin.
+ */
+ipcMain.handle('mindcare:reconnecter-poste', async event => {
+  if (event.sender !== fenetrePrincipale?.webContents || fermetureEnCours) return false;
+  if (!event.senderFrame?.url.startsWith('data:text/html;')) return false;
+  if (connexionCabinet.mode === "host") return false;
+  if (!(await reconnecterPoste(fenetrePrincipale))) return false;
+  annulationDemarrage.abort();
+  app.relaunch();
+  app.exit(0);
+  return true;
+});
+
 
 function lancerOrchestrationEtFenetre(): Promise<void> {
   return travailDemarrage ??= executerOrchestrationEtFenetre().finally(() => { travailDemarrage = undefined; });
 }
 
+let messagesDesktopCache: Record<string, string> | undefined;
+function messagesDesktop(): Record<string, string> {
+  messagesDesktopCache ??= JSON.parse(readFileSync(path.join(process.resourcesPath, 'cabinet', 'messages-fr.json'), 'utf8')) as Record<string, string>;
+  return messagesDesktopCache;
+}
+
+/** Le message d'attente dépend du rôle réel de ce poste, pas du hasard. */
+function messageAttenteCabinet(): OptionsEtatLocal {
+  const messages = messagesDesktop();
+  return connexionCabinet.mode === "host"
+    ? { message: messages["preparingClinic"] ?? "", detail: messages["preparingClinicDetail"] ?? "" }
+    : { message: messages["waitingClinic"] ?? "", detail: messages["waitingClinicDetail"] ?? "" };
+}
+
+/** Pause interruptible par « Réessayer » — jamais 20 s d'attente aveugle. */
+function pauseCabinet(ms: number): Promise<void> {
+  return new Promise((resolve) => {
+    const fin = Date.now() + ms;
+    const tic = (): void => {
+      if (fermetureEnCours || reessaiImmediat || Date.now() >= fin) {
+        reessaiImmediat = false;
+        resolve();
+        return;
+      }
+      setTimeout(tic, 100);
+    };
+    tic();
+  });
+}
+
+/**
+ * Attend le cabinet SANS jamais aboutir à une impasse.
+ *
+ * Une tentative bornée (20 s), puis on recommence : le PC médecin peut mettre
+ * plusieurs minutes à préparer sa base au premier démarrage, et une coupure de
+ * secteur ne doit pas obliger l'accueil à fermer puis relancer MindCare.
+ *
+ * Après deux minutes, l'écran devient une reprise ACTIONNABLE et non plus une
+ * boucle silencieuse : « Réessayer » sonde immédiatement, et sur un poste
+ * d'accueil « Reconnecter ce poste » permet de repartir sur une invitation
+ * quand le PC médecin a été remplacé (son certificat a alors changé, et aucune
+ * reconnexion automatique n'est possible — la dire est plus honnête que de
+ * tourner indéfiniment).
+ */
+async function attendreLeCabinet(): Promise<void> {
+  const hote = connexionCabinet.mode === "host";
+  const messages = messagesDesktop();
+  const debut = Date.now();
+  let recuperation = false;
+  for (;;) {
+    annulationDemarrage.signal.throwIfAborted();
+    try {
+      await attendreConnexionCabinet(annulationDemarrage.signal, { budgetMs: 20_000 });
+      return;
+    } catch (error) {
+      annulationDemarrage.signal.throwIfAborted();
+      // Une configuration absente n'est pas une panne réseau : elle doit
+      // remonter telle quelle, sinon on masquerait un poste mal installé.
+      if (error instanceof Error && error.message === "CONFIGURATION_CABINET") throw error;
+      if (!recuperation && Date.now() - debut > 120_000) {
+        recuperation = true;
+        await afficherEtatLocal(true, hote
+          ? {
+              message: messages["hostUnreachable"] ?? "",
+              detail: messages["hostUnreachableDetail"] ?? "",
+              retryLabel: messages["retryButton"] ?? "",
+              secondaire: { label: messages["openLogs"] ?? "", action: "logs" },
+            }
+          : {
+              message: messages["clinicUnreachable"] ?? "",
+              detail: messages["clinicUnreachableDetail"] ?? "",
+              retryLabel: messages["retryButton"] ?? "",
+              secondaire: { label: messages["reconnectStation"] ?? "", action: "reconnect" },
+            });
+      } else if (!recuperation && !fermetureEnCours && !applicationPrete) {
+        // L'écran d'attente a déjà été affiché par le minuteur de 2,5 s ; on ne
+        // le réaffiche ici que pour rafraîchir un éventuel message périmé.
+        await afficherEtatLocal(false, messageAttenteCabinet());
+      }
+      await pauseCabinet(1500);
+    }
+  }
+}
+
+
 async function executerOrchestrationEtFenetre(): Promise<void> {
   // Si une fenêtre principale existe déjà et est prête (après READY), ne pas relancer
   if (demarrageEnCours || fermetureEnCours || applicationPrete) return;
   demarrageEnCours = true;
+  const debutDemarrage = Date.now();
   const contexte = construireContexte();
   contexteCourant = contexte;
   const sauterPg = !app.isPackaged;
@@ -358,9 +551,9 @@ async function executerOrchestrationEtFenetre(): Promise<void> {
         // 2,5 s (cas normal d'un poste déjà configuré), l'utilisateur voit
         // directement son application, sans écran intermédiaire. Le message
         // n'apparaît que si l'attente se prolonge réellement.
-        const attente = attendreConnexionCabinet(annulationDemarrage.signal);
+        const attente = attendreLeCabinet();
         const surAttente = setTimeout(() => {
-          if (!fermetureEnCours && !applicationPrete) void afficherEtatLocal(false);
+          if (!fermetureEnCours && !applicationPrete) void afficherEtatLocal(false, messageAttenteCabinet());
         }, 2500);
         try {
           await attente;
@@ -372,6 +565,7 @@ async function executerOrchestrationEtFenetre(): Promise<void> {
       }
       return { etat: { etat: "READY" as const, tentativesRecuperation: 0 }, backend: undefined as ChildProcess | undefined };
     })();
+
 
     processusBackend = res.backend;
     if (fermetureEnCours || !fenetrePrincipale || fenetrePrincipale.isDestroyed()) return;
@@ -389,11 +583,24 @@ async function executerOrchestrationEtFenetre(): Promise<void> {
       });
       try {
         if (deploymentAutomatique) {
+          // ⚠️ MESURÉ SUR LE PAQUET RÉEL : le chargement de l'interface prend
+          // plusieurs secondes. Pendant ce temps la fenêtre restait cachée, et
+          // la praticienne ne voyait RIEN après avoir double-cliqué. Si le
+          // démarrage a déjà dépassé 1,5 s, on affiche l'écran d'attente avant
+          // de charger : jamais de blanc, jamais de fenêtre invisible.
+          if (!fenetrePrincipale.isVisible() && Date.now() - debutDemarrage > 1500) {
+            await afficherEtatLocal(false, messageAttenteCabinet());
+          }
           await fenetrePrincipale.loadURL(urlDepart());
           if (!fenetrePrincipale || fenetrePrincipale.isDestroyed()) return;
           montre = true;
           applicationPrete = true;
           erreurLocale = false;
+          dernierEtatLocal = "";
+          // Le succès doit TOUJOURS rendre la fenêtre visible. Cette branche
+          // comptait sur l'écran d'attente pour le faire ; quand le cabinet
+          // répondait vite, l'application restait chargée mais invisible.
+          if (!fenetrePrincipale.isVisible()) fenetrePrincipale.show();
           surveillerCabinet(fenetrePrincipale);
         } else await fenetrePrincipale.loadURL(urlDepart());
       } catch (e) {

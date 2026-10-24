@@ -38,6 +38,15 @@ const API_MINDCARE = {
   retryStartup(): Promise<void> {
     return ipcRenderer.invoke("mindcare:retry-startup");
   },
+  /**
+   * Sortie de secours d'un poste d'accueil : oublier l'autorisation du cabinet
+   * et revenir à l'écran d'invitation. Le processus principal demande une
+   * confirmation Windows avant d'effacer quoi que ce soit, et refuse sur le PC
+   * médecin. Aucune donnée patient n'est concernée.
+   */
+  reconnectClinic(): Promise<boolean> {
+    return ipcRenderer.invoke("mindcare:reconnecter-poste");
+  },
   getVersion(): Promise<string> {
     return ipcRenderer.invoke("mindcare:version");
   },

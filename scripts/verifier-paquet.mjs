@@ -244,6 +244,8 @@ const REQUIS = [
   ["app.asar!/dist-electron/preload/index.cjs", "le preload"],
   ["app.asar!/dist-electron/main/serveur-cabinet.js", "le serveur cabinet indépendant"],
   ["app.asar!/dist-electron/main/bureau-cabinet.js", "la connexion automatique"],
+  ["app.asar!/dist-electron/main/ecran-cabinet.js", "l'écran d'appairage (importé par bureau-cabinet)"],
+  ["app.asar!/dist-electron/main/recherche-cabinet.js", "la cadence de recherche et la connexion par nom"],
   ["app.asar!/dist-electron/main/decouverte-cabinet.js", "la découverte locale"],
   ["app.asar!/dist-electron/preload/cabinet.cjs", "le pont de première connexion"],
   ["resources/cabinet/purge-synthetic.sql", "la finalisation sans fixtures d'une base neuve"],

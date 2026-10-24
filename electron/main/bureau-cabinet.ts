@@ -6,23 +6,64 @@ import { hostname } from 'node:os';
 import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { appairerCabinet, choisirCabinet, decouvrirCabinets, type CabinetDecouvert, type ConfianceCabinet } from './decouverte-cabinet.js';
+import {
+  appairerCabinet,
+  decouvrirCabinets,
+  PORT_DECOUVERTE,
+  type CabinetDecouvert,
+  type ConfianceCabinet,
+} from './decouverte-cabinet.js';
 import { demarrerRemappage, type Remappage } from './remappage-cabinet.js';
 import { configurerOrigineCabinet } from './config.js';
 import { attendreCabinet, creerSessionSondeCabinet, creerStabiliteSondeCabinet, validerOrigineCabinet, ErreurConnexionCabinet, appareilRevoque } from './connexion-cabinet.js';
 import { verifierCertificatCabinet } from './confiance-cabinet.js';
 import { journalDesktop } from './journal-desktop.js';
+import { htmlEcranCabinet } from './ecran-cabinet.js';
+import {
+  RECHERCHES_RAPIDES,
+  creerResolveur,
+  delaiEntreRecherches,
+  fenetreRecherche,
+  nomHoteValide,
+  proposerHote,
+} from './recherche-cabinet.js';
 
 const ICI = path.dirname(fileURLToPath(import.meta.url));
 const RACINE = path.join(process.env['ProgramData'] ?? 'C:\\ProgramData', 'MindCare');
 const messages = JSON.parse(readFileSync(app.isPackaged ? path.join(process.resourcesPath, 'cabinet', 'messages-fr.json') : path.resolve(ICI, '..', '..', 'src', 'i18n', 'cabinet-desktop.fr.json'), 'utf8')) as Record<string, string>;
+const resoudreCabinet = creerResolveur();
+
 let ecran: BrowserWindow | undefined;
 let confiance: ConfianceCabinet | undefined;
 let candidats: CabinetDecouvert[] = [];
 let actionEnCours = false;
 let arret = false;
 let sessionSonde: Session | undefined;
-let etat = { message: messages.search!, premier: false, invitation: false, detail: '' };
+/**
+ * L'état de l'écran d'appairage.
+ *
+ * `recherche` et `manuelle` s'ajoutent aux quatre champs historiques : sans
+ * eux, l'écran ne pouvait pas distinguer « je cherche » de « je suis gelé » —
+ * c'était exactement le défaut signalé en cabinet.
+ */
+interface EtatEcran {
+  message: string;
+  premier: boolean;
+  invitation: boolean;
+  detail: string;
+  manuelle: boolean;
+}
+let etat: EtatEcran = { message: messages.search!, premier: false, invitation: false, detail: messages.searchHelp!, manuelle: true };
+/** Une action « Rechercher à nouveau » interrompt la pause en cours. */
+let rechercheImmediate = false;
+/**
+ * Un cabinet trouvé par nom (unicast) ne doit pas être effacé par la
+ * découverte de diffusion suivante : sur un réseau qui bloque multicast ET
+ * broadcast, la recherche automatique rendrait une liste vide toutes les
+ * quatre secondes et l'écran d'invitation disparaîtrait sous les doigts de
+ * l'utilisatrice. On garde donc le résultat manuel jusqu'à l'appairage.
+ */
+let candidatManuel = false;
 /**
  * Remappage d'adresse (178) : activé seulement après deux échecs consécutifs,
  * quand la découverte UDP a trouvé l'adresse IPv4 courante du cabinet. Le
@@ -30,8 +71,9 @@ let etat = { message: messages.search!, premier: false, invitation: false, detai
  * vers laquelle le proxy local relaie les octets.
  */
 let remappage: Remappage | undefined;
+/** Empreinte de la confiance déjà appliquée aux sessions Electron. */
+let confianceAppliquee: string | undefined;
 let adresseForcee: string | null = null;
-let remapTente = false;
 /**
  * Message persistant affiché au-dessus de l'écran d'appairage après une
  * révocation. Sans lui, le poste verrait « cabinet trouvé » sans comprendre
@@ -44,11 +86,19 @@ function obtenirSessionSonde(): Session {
   return sessionSonde;
 }
 const posteHote = () => {
-  try { const config: unknown = JSON.parse(readFileSync(path.join(RACINE, 'desktop.json'), 'utf8')); return !!config && typeof config === 'object' && 'mode' in config && config.mode === 'host'; } catch { return false; }
+  try {
+    // Le BOM est retiré : un `desktop.json` réécrit par un outil Windows
+    // (PowerShell, éditeur) peut en porter un, et `JSON.parse` le refuse. Le
+    // poste se croirait alors « non configuré » et reproposerait de créer une
+    // base — exactement ce qui ne doit jamais arriver.
+    const texte = readFileSync(path.join(RACINE, 'desktop.json'), 'utf8').replace(/^\uFEFF/, '');
+    const config: unknown = JSON.parse(texte);
+    return !!config && typeof config === 'object' && 'mode' in config && (config as { mode?: unknown }).mode === 'host';
+  } catch { return false; }
 };
 function lireConfiance(): ConfianceCabinet | undefined {
   if (posteHote()) {
-    const identity = JSON.parse(readFileSync(path.join(RACINE, 'clinic-identity.json'), 'utf8')) as {id: string; origin: string};
+    const identity = JSON.parse(readFileSync(path.join(RACINE, 'clinic-identity.json'), 'utf8').replace(/^\uFEFF/, '')) as {id: string; origin: string};
     const certificate = new X509Certificate(readFileSync(path.join(RACINE, 'clinic-public.cer'))).toString();
     if (!verifierCertificatCabinet(certificate, identity.origin, certificate)) throw new Error('Certificat du cabinet à renouveler.');
     return { ...identity, certificate };
@@ -70,8 +120,33 @@ function lireConfiance(): ConfianceCabinet | undefined {
     ...(deviceId !== undefined && deviceToken !== undefined ? { deviceId, deviceToken } : {}),
   };
 }
-function appliquerConfiance(value: ConfianceCabinet): void {
+/**
+ * La confiance d'un POSTE D'ACCUEIL illisible ne doit pas condamner
+ * l'application : on efface l'état en mémoire et on rend la main à l'écran
+ * d'appairage, qui proposera une nouvelle invitation. Sur le PC médecin, la
+ * même anomalie reste FATALE : elle signifie que le certificat du cabinet ne
+ * correspond plus, et proposer de « réappairer » risquerait de recréer un
+ * cabinet là où il y a déjà une base.
+ */
+function lireConfianceOuReappairer(): ConfianceCabinet | undefined {
+  try {
+    return lireConfiance();
+  } catch (error) {
+    if (posteHote()) throw error;
+    journalDesktop(app.getPath('userData'), 'CLINIC_TRUST_INVALID');
+    avertissement = messages.trustInvalid;
+    return undefined;
+  }
+}
+async function appliquerConfiance(value: ConfianceCabinet): Promise<void> {
   confiance = value; configurerOrigineCabinet(validerOrigineCabinet(value.origin));
+  // La sonde et la boucle d'appairage appellent cette fonction à chaque tour :
+  // réinstaller les mêmes gestionnaires à chaque passage serait du bruit (et
+  // l'en-tête de poste serait réenregistré indéfiniment). On ne réapplique que
+  // si l'identité, l'origine, le jeton ou le certificat ont changé.
+  const empreinte = `${value.id}|${value.origin}|${value.deviceToken ?? ""}|${value.certificate}`;
+  if (empreinte === confianceAppliquee) return;
+  confianceAppliquee = empreinte;
   // Le certificat doit être épinglé ET approuvé par Chromium/Windows.
   // -3 conserve la validation normale (chaîne, nom, expiration), jamais callback(0).
   for (const cible of [session.defaultSession, obtenirSessionSonde()]) {
@@ -123,22 +198,24 @@ function libelleCabinet(cabinet: CabinetDecouvert): string {
   return cabinet.address === undefined ? nom : `${nom} (${cabinet.address})`;
 }
 
-function statut(message: string, premier = false, invitation = false, detail = ''): void {
-  etat = { message, premier, invitation, detail };
+/** Fusion partielle : un appel ne réécrit que ce qu'il change. */
+function statut(patch: Partial<EtatEcran>): void {
+  etat = { ...etat, ...patch };
   if (ecran && !ecran.isDestroyed()) ecran.webContents.send('mindcare:cabinet-etat', etat);
 }
+
 async function afficherEcran(): Promise<void> {
   if (ecran && !ecran.isDestroyed()) { ecran.show(); return; }
   const nonce = randomBytes(18).toString('base64');
-  ecran = new BrowserWindow({ width: 680, height: 540, title: 'MindCare OS', show: false, webPreferences: {
+  ecran = new BrowserWindow({ width: 760, height: 720, minWidth: 680, minHeight: 620, title: 'MindCare OS', show: false, backgroundColor: '#ffffff', webPreferences: {
     preload: path.join(ICI, '..', 'preload', 'cabinet.cjs'), sandbox: true, contextIsolation: true, nodeIntegration: false, webSecurity: true,
   } });
   ecran.setMenu(null);
   ecran.webContents.setWindowOpenHandler(() => ({action:'deny'}));
   ecran.webContents.on('will-navigate', event => event.preventDefault());
-  ecran.webContents.once('did-finish-load', () => statut(etat.message, etat.premier, etat.invitation, etat.detail));
+  ecran.webContents.once('did-finish-load', () => statut({}));
   ecran.on('closed', () => { ecran = undefined; if (!arret) app.quit(); });
-  await ecran.loadURL(`data:text/html;charset=utf-8,${encodeURIComponent(`<!doctype html><html lang="fr"><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'nonce-${nonce}'; script-src 'nonce-${nonce}'"><title>MindCare OS</title><style nonce="${nonce}">body{font:16px Segoe UI,Arial;padding:40px;line-height:1.6}h1{font-size:24px}button,input{font:inherit;padding:10px;margin-top:14px}input{width:90%}[hidden]{display:none}small{display:block;margin-top:14px}.detail{margin-top:6px;color:#1a6b63;font-weight:600;word-break:break-word}</style><h1>MindCare OS</h1><p role="status" id="message">${messages.search}</p><p id="detail" class="detail" hidden></p><div id="premier" hidden><button id="host">${messages.hostButton}</button><small>${messages.hostHelp}</small></div><div id="invitation" hidden><label for="code">${messages.invitationLabel}</label><input id="code" autocomplete="off" spellcheck="false"><button id="pair">${messages.pairButton}</button><small>${messages.pairHelp}</small></div><script nonce="${nonce}">window.cabinet.onEtat(e=>{document.getElementById('message').textContent=e.message;const d=document.getElementById('detail');d.textContent=e.detail||'';d.hidden=!e.detail;document.getElementById('premier').hidden=!e.premier;document.getElementById('invitation').hidden=!e.invitation});document.getElementById('host').onclick=()=>window.cabinet.action('host');document.getElementById('pair').onclick=()=>{const input=document.getElementById('code');const code=input.value;input.value='';window.cabinet.action('pair',code)};</script></html>`)}`);
+  await ecran.loadURL(`data:text/html;charset=utf-8,${encodeURIComponent(htmlEcranCabinet(messages, nonce, hostname()))}`);
   ecran.show();
 }
 function psQuote(value: string): string { return "'" + value.replaceAll("'", "''") + "'"; }
@@ -182,54 +259,29 @@ async function inviterPoste(): Promise<void> {
   try {
     writeFileSync(request, JSON.stringify({secret, expiresAt:Date.now()+300000}), {mode:0o600});
     await executerInstallation('Host', `-InvitationFile ${psQuote(request)}`);
-    await dialog.showMessageBox({type:'info', title:messages.inviteMenu!, message:messages.invitationTitle!, detail:`${messages.invitationBefore}\n\n${secret.match(/.{1,4}/g)!.join(' ')}\n\n${messages.invitationAfter}`, buttons:[messages.close!]});
+    await dialog.showMessageBox({
+      type:'info',
+      title: messages.inviteMenu!,
+      message: messages.invitationTitle!,
+      // Le nom du PC est affiché ici parce que c'est la seule information que
+      // l'accueil peut avoir besoin de saisir si la découverte automatique est
+      // bloquée par le routeur. Il est lisible, jamais secret.
+      detail: `${messages.invitationBefore}\n\n${secret.match(/.{1,4}/g)!.join(' ')}\n\n${messages.invitationAfter}\n\n${messages.invitationComputerName!.replace('{nom}', hostname())}`,
+      buttons:[messages.close!],
+    });
   } catch (error) {
     if (error instanceof ErreurInstallation) { await afficherRefusInstallation(); }
-    else { await dialog.showMessageBox({type:'error', message:messages.invitationFailed!}); }
+    else { await dialog.showMessageBox({type:'error', message: messages.invitationFailed!}); }
   }
   finally { rmSync(request,{force:true}); actionEnCours = false; }
 }
-ipcMain.handle('mindcare:cabinet-action', async (event, value: unknown) => {
-  if (!ecran || event.sender !== ecran.webContents || !value || typeof value !== 'object' || actionEnCours) return;
-  const input = value as Record<string, unknown>;
-  actionEnCours = true;
-  try {
-    if (input.action === 'host' && !confiance && candidats.length === 0 && etat.premier) {
-      // Confirme un choix de machine, jamais un rôle applicatif.
-      statut(messages.prepare!);
-      await executerInstallation('Host'); confiance = lireConfiance();
-    } else if (input.action === 'pair' && !confiance && typeof input.code === 'string') {
-      const code = input.code.replace(/\s/g,'');
-      if (!/^[A-Za-z0-9_-]{24}$/.test(code)) throw new Error('Invitation incorrecte.');
-      let paired: ConfianceCabinet | undefined;
-      for (const host of candidats.slice(0,10)) {
-        try { paired = await appairerCabinet(host,code,undefined,undefined,hostname()); break; } catch { /* Prochain cabinet, aucune connexion clinique. */ }
-      }
-      if (!paired || !verifierCertificatCabinet(paired.certificate,paired.origin,paired.certificate)) throw new Error('Invitation expirée ou incorrecte.');
-      const certificate = new X509Certificate(paired.certificate);
-      const certFile = path.join(app.getPath('userData'),'clinic-pairing.cer');
-      writeFileSync(certFile,certificate.raw);
-      try {
-        await executerInstallation('Client', `-Origin ${psQuote(paired.origin)} -PublicCertificate ${psQuote(certFile)} -CertificateSha256 ${psQuote(certificate.fingerprint256.replaceAll(':','').toLowerCase())}`);
-        writeFileSync(fichierConfiance(),JSON.stringify(paired),{mode:0o600}); confiance = paired; avertissement = undefined;
-      } finally { rmSync(certFile,{force:true}); }
-    }
-  } catch (error) {
-    if (error instanceof ErreurInstallation) { await afficherRefusInstallation(); }
-    statut(messages.retry!, false, true);
-  }
-  finally { actionEnCours = false; }
-});
-app.on('before-quit', () => { arret = true; });
 
 /**
- * « Diagnostic de découverte » — la question « est-ce que ce PC voit l'autre ? »,
+ * Le diagnostic de découverte — la question « est-ce que ce PC voit l'autre ? »,
  * posée sans toucher à l'appairage.
  *
- * On relance une découverte UDP et on affiche le résultat dans une boîte native.
- * Aucun écran supplémentaire, aucune fenêtre à gérer : c'est un geste de
- * vérification, pas un parcours. Sur le PC médecin, il se voit lui-même ; sur le
- * PC d'accueil, il doit voir le nom du PC médecin et son adresse.
+ * Il est désormais joignable DEPUIS l'écran d'appairage, et plus seulement par
+ * le menu : c'est l'écran où l'utilisatrice se trouve quand elle en a besoin.
  */
 async function diagnosticDecouverte(): Promise<void> {
   if (actionEnCours) return;
@@ -251,16 +303,118 @@ async function diagnosticDecouverte(): Promise<void> {
   }
 }
 
+async function confirmerDevenirHote(parent: BrowserWindow | null): Promise<boolean> {
+  const options = {
+    type: 'question' as const,
+    title: messages.hostConfirmTitle!,
+    message: messages.hostConfirmBody!,
+    detail: messages.hostConfirmDetail!,
+    buttons: [messages.hostConfirmYes!, messages.hostConfirmNo!],
+    defaultId: 1,
+    cancelId: 1,
+    noLink: true,
+  };
+  const reponse = parent === null ? await dialog.showMessageBox(options) : await dialog.showMessageBox(parent, options);
+  return reponse.response === 0;
+}
+
+ipcMain.handle('mindcare:cabinet-action', async (event, value: unknown) => {
+  if (!ecran || event.sender !== ecran.webContents || !value || typeof value !== 'object') return;
+  const input = value as Record<string, unknown>;
+
+  // Deux actions non bloquantes : elles ne modifient rien et doivent répondre
+  // même pendant qu'une installation est en cours.
+  if (input.action === 'retry') {
+    rechercheImmediate = true;
+    return;
+  }
+  if (input.action === 'diagnostic') {
+    await diagnosticDecouverte();
+    return;
+  }
+  if (actionEnCours) return;
+
+  actionEnCours = true;
+  try {
+    if (input.action === 'host' && !confiance && candidats.length === 0 && etat.premier) {
+      // Le bouton reste atteignable immédiatement, mais la conséquence est
+      // confirmée en toutes lettres : c'est ce qui empêche un poste d'accueil
+      // de créer une seconde base par curiosité.
+      if (!(await confirmerDevenirHote(BrowserWindow.fromWebContents(event.sender)))) return;
+      statut({ message: messages.prepare!, detail: '' });
+      await executerInstallation('Host'); confiance = lireConfiance();
+      avertissement = undefined;
+      statut({ message: messages.preparingClinic!, detail: messages.preparingClinicDetail!, premier: false, invitation: false, manuelle: false });
+    } else if (input.action === 'pair' && !confiance && typeof input.code === 'string') {
+      const code = input.code.replace(/\s/g,'');
+      if (!/^[A-Za-z0-9_-]{24}$/.test(code)) throw new Error('Invitation incorrecte.');
+      let paired: ConfianceCabinet | undefined;
+      for (const host of candidats.slice(0,10)) {
+        try { paired = await appairerCabinet(host,code,undefined,undefined,hostname()); break; } catch { /* Prochain cabinet, aucune connexion clinique. */ }
+      }
+      if (!paired || !verifierCertificatCabinet(paired.certificate,paired.origin,paired.certificate)) throw new Error('Invitation expirée ou incorrecte.');
+      const certificate = new X509Certificate(paired.certificate);
+      const certFile = path.join(app.getPath('userData'),'clinic-pairing.cer');
+      writeFileSync(certFile,certificate.raw);
+      try {
+        await executerInstallation('Client', `-Origin ${psQuote(paired.origin)} -PublicCertificate ${psQuote(certFile)} -CertificateSha256 ${psQuote(certificate.fingerprint256.replaceAll(':','').toLowerCase())}`);
+        writeFileSync(fichierConfiance(),JSON.stringify(paired),{mode:0o600}); confiance = paired; avertissement = undefined;
+        statut({ message: messages.waitingClinic!, detail: messages.waitingClinicDetail!, premier: false, invitation: false, manuelle: false });
+      } finally { rmSync(certFile,{force:true}); }
+    } else if (input.action === 'manual' && !confiance && typeof input.code === 'string') {
+      await connecterManuellement(input.code, etat.premier);
+    }
+  } catch (error) {
+    if (error instanceof ErreurInstallation) { await afficherRefusInstallation(); }
+    else if (input.action === 'pair') { statut({ message: messages.retry!, invitation: candidats.length > 0 }); }
+    else { statut({ message: messages.missing!, detail: messages.searchHelp!, premier: etat.premier, invitation: candidats.length > 0 }); }
+  }
+  finally { actionEnCours = false; }
+});
+
+/**
+ * « Le cabinet n'apparaît pas ? » — la connexion par nom de PC.
+ *
+ * Elle n'introduit AUCUNE nouvelle route réseau : on résout le nom, puis on
+ * envoie la requête de découverte en UNICAST à cette adresse
+ * (`decouvrirCabinets(..., [adresse])`). L'appairage qui suit est celui de
+ * toujours — chiffré, à usage unique. C'est le recours prévu pour les routeurs
+ * qui coupent multicast et broadcast ; il ne remplace jamais le parcours normal.
+ */
+async function connecterManuellement(nom: string, premier: boolean): Promise<boolean> {
+  const propre = nom.trim();
+  if (!nomHoteValide(propre)) {
+    statut({ message: messages.manualInvalid!, invitation: candidats.length > 0 });
+    return false;
+  }
+  statut({ message: messages.manualSearch!, detail: propre, premier: false });
+  const adresse = await resoudreCabinet(propre);
+  const trouves = adresse === null
+    ? []
+    : await decouvrirCabinets(1500, PORT_DECOUVERTE, [adresse]);
+  if (trouves.length === 0) {
+    statut({ message: messages.manualNotFound!, detail: '', premier, invitation: candidats.length > 0 });
+    return false;
+  }
+  candidats = trouves;
+  candidatManuel = true;
+  journalDesktop(app.getPath('userData'), 'CLINIC_MANUAL_FOUND');
+  statut({ message: messages.found!, detail: trouves.map(libelleCabinet).join(' · '), premier: false, invitation: true });
+  return true;
+}
+
+app.on('before-quit', () => { arret = true; });
+
 export async function connecterBureauCabinet(): Promise<{mode:'client'|'host'; origin:string}> {
   mkdirSync(app.getPath('userData'), {recursive:true});
-  confiance = lireConfiance();
+  confiance = lireConfianceOuReappairer();
   Menu.setApplicationMenu(Menu.buildFromTemplate([{label:'MindCare', submenu:[
     {label:messages.inviteMenu!,click:()=>{void inviterPoste();}},
     {label:messages.diagnosticMenu!,click:()=>{void diagnosticDecouverte();}},
     {role:'quit',label:messages.quit!}]}]));
   // Trusted startup belongs to the main window; discovery is enrollment only.
   if (confiance) {
-    appliquerConfiance(confiance);
+    await appliquerConfiance(confiance);
     // Un poste révoqué ne doit pas continuer à croire qu'il est associé : on
     // efface la confiance et on revient à l'écran d'invitation, avec un message
     // qui dit ce qui s'est passé. Aucune donnée n'est lue avant ce contrôle.
@@ -269,7 +423,7 @@ export async function connecterBureauCabinet(): Promise<{mode:'client'|'host'; o
       rmSync(fichierConfiance(), { force: true });
       confiance = undefined;
       avertissement = messages.appareilRevoque;
-      statut(avertissement!, false, true);
+      statut({ message: messages.appareilRevoque!, premier: false, invitation: true });
       await afficherEcran();
     } else {
       return { mode: posteHote() ? 'host' : 'client', origin: confiance.origin };
@@ -278,26 +432,83 @@ export async function connecterBureauCabinet(): Promise<{mode:'client'|'host'; o
   await afficherEcran();
   let recherches = 0;
   while (!arret) {
-    if (actionEnCours) { await new Promise(r=>setTimeout(r,500)); continue; }
-    const approuvee = lireConfiance();
-    if (approuvee) {
-      appliquerConfiance(approuvee);
-      try {
-        await attendreCabinet(approuvee.origin,(url,options)=>obtenirSessionSonde().fetch(url,options),4500);
-        ecran?.hide();
-        return {mode:posteHote()?'host':'client',origin:approuvee.origin};
-      } catch { /* Réessaie l’origine approuvée sans exiger UDP ni créer une autre base. */ }
-      statut(messages.reconnecting!);
-    } else {
-      candidats = await decouvrirCabinets(); recherches++;
-      const baseExistante = existsSync(path.join(RACINE,'data','PG_VERSION'));
-      const base = candidats.length ? messages.found! : messages.missing!;
-      statut(avertissement === undefined ? base : `${avertissement} ${base}`, recherches>=3 && candidats.length===0 && !baseExistante, candidats.length>0, candidats.map(libelleCabinet).join(' · '));
+    if (actionEnCours) { await pauseEcran(300); continue; }
+    if (rechercheImmediate) { rechercheImmediate = false; recherches = 0; candidatManuel = false; }
+
+    // Une confiance existe (hôte fraîchement configuré, ou poste qui vient
+    // d'être appairé) : on ne redécouvre rien, on attend que le service
+    // réponde. Sur le PC médecin, la première préparation prend des minutes —
+    // l'écran doit le DIRE, pas afficher « connexion interrompue ».
+    if (confiance !== undefined) {
+      // `confiance` est réaffectée par le gestionnaire IPC (appairage, hôte) :
+      // la copie locale empêche TypeScript de la figer à `undefined` après le
+      // retour anticipé ci-dessus.
+      const courante = confiance as ConfianceCabinet | undefined;
+      if (courante !== undefined) {
+        await appliquerConfiance(courante);
+        try {
+          await attendreCabinet(courante.origin,(url,options)=>obtenirSessionSonde().fetch(url,options),4000);
+          ecran?.hide();
+          return {mode:posteHote()?'host':'client',origin:courante.origin};
+        } catch {
+          statut(posteHote()
+            ? { message: messages.preparingClinic!, detail: messages.preparingClinicDetail!, premier: false, invitation: false, manuelle: false }
+            : { message: messages.reconnecting!, detail: '', premier: false, invitation: false, manuelle: false });
+          await pauseEcran(posteHote() ? 2000 : 1500);
+          continue;
+        }
+      }
     }
-    await new Promise(r=>setTimeout(r,1500));
+
+    const baseExistante = existsSync(path.join(RACINE,'data','PG_VERSION'));
+    // Un cabinet trouvé par nom reste affiché : la découverte de diffusion ne
+    // doit pas le remplacer par une liste vide.
+    if (candidatManuel && candidats.length > 0) {
+      await pauseEcran(1500);
+      continue;
+    }
+    if (recherches < RECHERCHES_RAPIDES) {
+      statut({
+        message: messages.search!,
+        detail: messages.searchCount!.replace('{n}', String(recherches + 1)).replace('{total}', String(RECHERCHES_RAPIDES)),
+        premier: false,
+        invitation: false,
+      });
+    }
+    candidats = await decouvrirCabinets(fenetreRecherche(recherches));
+    recherches += 1;
+    if (candidats.length > 0) {
+      statut({
+        message: avertissement === undefined ? messages.found! : `${avertissement} ${messages.found!}`,
+        detail: candidats.map(libelleCabinet).join(' · '),
+        premier: false,
+        invitation: true,
+      });
+    } else if (recherches >= RECHERCHES_RAPIDES) {
+      statut({
+        message: avertissement === undefined ? messages.missing! : `${avertissement} ${messages.missing!}`,
+        detail: messages.searchHelp!,
+        premier: proposerHote(recherches, 0, baseExistante),
+        invitation: false,
+      });
+    }
+    await pauseEcran(delaiEntreRecherches(recherches));
   }
   throw new Error('Application fermée.');
 }
+
+/** Pause interruptible : « Rechercher à nouveau » ne doit pas attendre 2,5 s. */
+function pauseEcran(ms: number): Promise<void> {
+  return new Promise((resolve) => {
+    const fin = Date.now() + ms;
+    const tic = (): void => {
+      if (arret || rechercheImmediate || Date.now() >= fin) { resolve(); return; }
+      setTimeout(tic, 100);
+    };
+    tic();
+  });
+}
+
 /**
  * Redécouverte et remappage après un changement d'adresse du cabinet.
  *
@@ -393,18 +604,58 @@ export function surveillerCabinet(fenetre: BrowserWindow): void {
   timer.unref(); fenetre.once('closed',()=>clearInterval(timer));
 }
 
-export async function attendreConnexionCabinet(signal?: AbortSignal): Promise<void> {
+/**
+ * UNE tentative bornée de joindre le cabinet. Lève en cas d'échec : c'est
+ * l'appelant (`index.ts`) qui décide combien de fois réessayer et ce qu'affiche
+ * l'écran. Une fonction qui boucle indéfiniment ici empêcherait l'application
+ * de proposer une sortie de secours quand le PC médecin a été remplacé.
+ */
+export async function attendreConnexionCabinet(
+  signal?: AbortSignal,
+  options: { readonly budgetMs?: number } = {},
+): Promise<void> {
   if (!confiance) throw new Error('CONFIGURATION_CABINET');
+  const budget = options.budgetMs ?? 120_000;
   if (posteHote()) {
     try {
-      await attendreCabinet(confiance.origin, (url, options) => obtenirSessionSonde().fetch(url, options), 1500, signal);
+      await attendreCabinet(confiance.origin, (url, optionsFetch) => obtenirSessionSonde().fetch(url, optionsFetch), 1500, signal);
       return;
     } catch { signal?.throwIfAborted(); }
     // Start the existing, protected host task only; never provision another database.
-    await new Promise<void>(resolve => execFile(path.join(process.env['SystemRoot'] ?? 'C:\\Windows', 'System32', 'schtasks.exe'), ['/Run', '/TN', 'MindCare-Clinic-Server'], { windowsHide: true, timeout: 5000 }, error => {
-      journalDesktop(app.getPath('userData'), error ? 'HOST_TASK_START_FAILED' : 'HOST_TASK_START_REQUESTED');
-      resolve();
-    }));
+    await demanderDemarrageTache();
   }
-  await attendreCabinet(confiance.origin, (url, options) => obtenirSessionSonde().fetch(url, options), 120000, signal);
+  await attendreCabinet(confiance.origin, (url, optionsFetch) => obtenirSessionSonde().fetch(url, optionsFetch), budget, signal);
+}
+
+let tacheDemandee = false;
+function demanderDemarrageTache(): Promise<void> {
+  if (tacheDemandee) return Promise.resolve();
+  tacheDemandee = true;
+  return new Promise<void>(resolve => execFile(path.join(process.env['SystemRoot'] ?? 'C:\\Windows', 'System32', 'schtasks.exe'), ['/Run', '/TN', 'MindCare-Clinic-Server'], { windowsHide: true, timeout: 5000 }, error => {
+    journalDesktop(app.getPath('userData'), error ? 'HOST_TASK_START_FAILED' : 'HOST_TASK_START_REQUESTED');
+    resolve();
+  }));
+}
+
+/**
+ * Sortie de secours d'un poste d'accueil : oublier l'autorisation et revenir à
+ * l'écran d'invitation. Appelée UNIQUEMENT depuis le processus principal, après
+ * confirmation native — jamais depuis le renderer.
+ */
+export async function reconnecterPoste(parent: BrowserWindow | null): Promise<boolean> {
+  const options = {
+    type: 'question' as const,
+    title: messages.reconnectConfirmTitle!,
+    message: messages.reconnectConfirmBody!,
+    detail: messages.reconnectConfirmDetail!,
+    buttons: [messages.reconnectStation!, messages.close!],
+    defaultId: 1,
+    cancelId: 1,
+    noLink: true,
+  };
+  const reponse = parent === null ? await dialog.showMessageBox(options) : await dialog.showMessageBox(parent, options);
+  if (reponse.response !== 0) return false;
+  try { rmSync(fichierConfiance(), { force: true }); } catch { /* absent = résultat voulu */ }
+  journalDesktop(app.getPath('userData'), 'DEVICE_FORGOTTEN');
+  return true;
 }

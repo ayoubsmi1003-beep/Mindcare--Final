@@ -6,14 +6,18 @@ Le PC médecin héberge un service PostgreSQL 16 en boucle locale, une tâche Wi
 
 ## Première utilisation
 
-Sur un cabinet neuf, ouvrir MindCare sur le PC médecin, puis choisir **Utiliser ce PC comme PC médecin**. L'application demande l'autorisation Windows et prépare automatiquement les services, le certificat et le pare-feu. La création du premier compte utilise l'écran existant de première configuration; aucun compte ni mot de passe universel n'est livré.
+Sur un cabinet neuf, ouvrir MindCare sur le PC médecin, puis choisir **Utiliser ce PC comme PC médecin**. L'écran affiche sa progression (« Recherche 1 sur 3… ») et propose ce choix après trois recherches réelles, soit quelques secondes. La décision est ensuite confirmée en toutes lettres : elle crée la base du cabinet, elle ne se prend pas par inadvertance. L'application demande l'autorisation Windows et prépare automatiquement les services, le certificat et le pare-feu. La création du premier compte utilise l'écran existant de première configuration; aucun compte ni mot de passe universel n'est livré.
+
+Pendant cette première préparation, l'écran indique **Préparation du cabinet sur ce PC…** et non « connexion interrompue » : le service peut mettre plusieurs minutes à créer et migrer la base. Ne pas fermer MindCare pendant ce temps.
 
 Le compte de l'accueil n'est pas créé par l'installateur. Sur une base de cabinet, les comptes de démonstration sont supprimés à l'initialisation : ouvrir **Paramètres → Cabinet & postes** sur le PC médecin, puis créer le compte de l'accueil (identifiant, nom, mot de passe). Ce compte porte le rôle `assistant` : identité, contact, rendez-vous, salle d'attente et paiements autorisés, jamais une note clinique.
 
-Sur un autre poste, ouvrir la même application. Elle trouve automatiquement le cabinet. Pour la première connexion seulement, ouvrir **Paramètres → Cabinet & postes → Connecter un autre poste** sur le PC médecin : un code à huit caractères s'affiche. Le saisir dans l'autre application.
+Sur un autre poste, ouvrir la même application. Elle trouve automatiquement le cabinet. Pour la première connexion seulement, ouvrir **Paramètres → Cabinet & postes → Connecter un autre poste** sur le PC médecin : un code de 24 caractères s'affiche, par groupes de quatre. Le recopier dans l'autre application — la saisie des espaces est tolérée.
+
+Si le cabinet n'apparaît pas — routeur qui isole les postes, réseau invité, pare-feu d'un autre produit — l'écran propose **Le cabinet n'apparaît pas ?** : saisir le nom du PC médecin, affiché sur son écran et rappelé avec le code d'invitation. La requête part alors en unicast vers ce seul poste, et l'appairage reste identique (même code, même chiffrement). C'est un recours, jamais le parcours normal.
 
 - Le code vaut **une seule fois** et expire après cinq minutes. Il est détruit dès qu'un poste l'utilise, et après cinq tentatives invalides.
-- Le poste reçoit à cette occasion un **jeton de poste**, distinct du compte utilisateur, qui autorise la machine elle-même. Il est conservé chiffré par Windows (DPAPI) et joint à chaque requête.
+- Le poste reçoit à cette occasion un **jeton de poste**, distinct du compte utilisateur, qui autorise la machine elle-même. Il est joint à chaque requête et stocké dans le profil Windows de l'utilisateur, dans un fichier lisible par ce seul compte (`clinic-trust.json`). Sa protection par DPAPI reste à faire : c'est aujourd'hui une limite connue, pas une garantie.
 - L'autorisation Windows demandée sur le poste d'accueil installe la confiance dans le certificat. C'est la seule élévation de privilèges du parcours d'appairage, et elle n'a lieu qu'une fois par poste.
 
 Ensuite, l'écran de connexion habituel apparaît. Aucun utilisateur ne copie une adresse, un certificat ou une empreinte.
@@ -29,6 +33,8 @@ Windows démarre `mindcare-postgres` automatiquement. La tâche `MindCare-Clinic
 Electron recherche le service local, vérifie l'identité déjà associée, le certificat exact et la santé HTTPS, puis charge l'application. Après connexion, `auth.verify_login`, les sessions opaques httpOnly et le profil de l'utilisateur déterminent l'interface; toutes les requêtes passent encore par les portes serveur/RLS existantes.
 
 Lors d'une interruption, la fenêtre de travail est masquée par **Connexion au cabinet interrompue. Reconnexion…**. Les sondes et la redécouverte continuent sans créer de base, changer de cabinet ou rejouer d'écriture. Au retour du service, la fenêtre existante réapparaît avec sa session et ses saisies. Une requête métier qui avait échoué reste à relancer explicitement; aucune écriture incertaine n'est répétée automatiquement.
+
+Aucune attente ne se termine sur un écran mort. Après deux minutes sans réponse, l'écran devient une reprise actionnable : **Réessayer** sonde immédiatement et la reconnexion continue en arrière-plan. Si le PC médecin a été remplacé (nouveau certificat), l'accueil dispose en plus de **Reconnecter ce poste**, qui oublie l'autorisation — jamais les données — et redemande une invitation. Cette action n'existe pas sur le PC médecin.
 
 Si le nom réseau du PC médecin ne se résout plus après un changement d'adresse, le poste d'accueil redécouvre l'adresse courante et la rejoint sans toucher au certificat épinglé : le certificat, son nom et son SAN restent vérifiés. Aucun réglage réseau n'est demandé à l'utilisateur.
 
