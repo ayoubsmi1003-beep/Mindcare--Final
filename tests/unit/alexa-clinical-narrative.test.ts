@@ -2,7 +2,7 @@ import { frenchRequestAdmission } from "@/shared/alexa/request-contract";
 import { beforeEach,describe, expect, it, vi } from "vitest";
 vi.mock("@/server/alexa/local-model", () => ({ inferLocalText: vi.fn() }));
 import { inferLocalText } from "@/server/alexa/local-model";
-import { consultationNotesDigest, consultationNarrativeSources, relativeClinicalDate, summarizeClinicalConsultations, summarizeClinicalContext, synthesizeClinicalNarrative, validateClinicalNarrative } from "@/server/alexa/clinical-narrative";
+import { consultationNotesDigest, consultationNarrativeSources, relativeClinicalDate, requestsClinicalDate, summarizeClinicalConsultations, summarizeClinicalContext, synthesizeClinicalNarrative, validateClinicalNarrative } from "@/server/alexa/clinical-narrative";
 import type { ClinicalConsultation, ClinicalContext } from "@/shared/alexa/clinical";
 import {ALEXA_CONVERSATION_MODEL} from '@/server/alexa/model-policy';
 import {NARRATIVE_HASH,sessionAnswerSchemaFor} from '@/server/alexa/clinical-narrative';
@@ -353,6 +353,11 @@ describe("French concise grounded clinical paragraphs", () => {
     expect(consultationNotesDigest(changed)).not.toBe(consultationNotesDigest(c));
   });
   it.each([["2026-10-17T23:30:00Z", "2026-10-18T01:00:00Z", "aujourd’hui"], ["2026-10-17T12:00:00Z", "2026-10-18T12:00:00Z", "hier"], ["2026-09-20T12:00:00Z", "2026-10-18T12:00:00Z", "il y a 28 jours"]])("uses cabinet-local relative dates %s", (date, now, expected) => { expect(relativeClinicalDate(date, now)).toBe(expected); });
+  it("adds a consultation date only when the doctor asks for it",()=>{
+    expect(requestsClinicalDate("Résume la dernière consultation.")).toBe(false);
+    expect(requestsClinicalDate("Quelle est la date de la dernière consultation ?")).toBe(true);
+    expect(requestsClinicalDate("Quand a eu lieu sa dernière séance ?")).toBe(true);
+  });
   it("accepts a short paragraph with exact support and no field recitation", () => { expect(validateClinicalNarrative(response("Le patient rapporte une humeur triste et des conflits familiaux avec ses parents."), [proof])).toBe(proof.text); });
   it("accepts exact cited words when only quotation punctuation differs",()=>{
     const source={id:"s1",text:"Le patient rapporte « une humeur triste »."};

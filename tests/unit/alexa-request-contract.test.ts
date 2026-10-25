@@ -38,6 +38,35 @@ it('keeps a single named month on a completed-consultation request and anchors i
  const admission=frenchRequestAdmission('Combien de consultations terminées du dossier courant en septembre ?',false,'2026-10-25T12:00:00+01:00');
  expect(admission).toMatchObject({tools:['query_consultations'],consultationMode:'count',consultationStatus:'closed',from:'2026-09-01T00:00:00+01:00',to:'2026-10-01T00:00:00+01:00',dateAxis:'started_at'});
 });
+it('routes a named last-consultation summary to exactly the latest visit',()=>{
+ const admission=frenchRequestAdmission('Résume la dernière consultation de Amel Bensaid.',false);
+ expect(admission).toMatchObject({tools:['get_patient_context'],patientSection:'summary',consultationCount:1});
+});
+it('summarizes notes from a named patient latest consultation without asking about signature state',()=>{
+ const admission=frenchRequestAdmission('Lis les notes de la dernière consultation de Amel Bensaid.',false);
+ expect(admission).toMatchObject({tools:['get_patient_context'],patientSection:'summary',consultationCount:1});
+ expect(admission).not.toHaveProperty('consultationStatus');
+});
+it('keeps full note transcription available only when the user explicitly asks for it',()=>{
+ expect(frenchRequestAdmission('Lis le texte intégral des notes de la dernière consultation de Amel Bensaid.',false)).toMatchObject({tools:['get_patient_context'],patientSection:'notes'});
+});
+it('routes a request to present clinical events chronologically as a concise patient summary',()=>{
+ expect(frenchRequestAdmission('Présente les événements cliniques dans leur ordre chronologique.',false)).toMatchObject({tools:['get_patient_context'],patientSection:'summary'});
+});
+it.each([
+ 'Présente les événements cliniques dans leur ordre chronologique et indique les échelles enregistrées pour Amel Bensaid.',
+ 'Présente les événements cliniques dans leur ordre chronologique ; indique les traitements du dossier courant.',
+])('keeps compound chronology requests on the full interpretation path: %s',text=>{
+ const admission=frenchRequestAdmission(text,false);
+ expect(admission).not.toHaveProperty('tools');
+ expect(admission).not.toHaveProperty('patientSection');
+});
+it.each([
+ 'Quelles échelles ont été enregistrées pour Amel Bensaid ?',
+ 'Quels scores sont disponibles dans le dossier courant ?',
+])('routes named or current-patient scale questions to recorded scale data: %s',text=>{
+ expect(frenchRequestAdmission(text,false)).toMatchObject({tools:['get_patient_context'],patientSection:'scales'});
+});
 it('uses the close date only when the question explicitly names that date axis',()=>{
  const admission=frenchRequestAdmission('Combien de consultations terminées du dossier courant à la date de clôture en septembre 2026 ?',false,'2026-10-25T12:00:00+01:00');
  expect(admission).toMatchObject({tools:['query_consultations'],from:'2026-09-01T00:00:00+01:00',to:'2026-10-01T00:00:00+01:00',dateAxis:'ended_at'});

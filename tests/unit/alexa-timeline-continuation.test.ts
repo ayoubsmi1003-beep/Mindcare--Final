@@ -7,16 +7,25 @@ import {restoreAgentTask,savedAgentTask,runAgentLoop} from '@/server/alexa/agent
 const patient='22222222-2222-4222-8222-222222222222';
 const event='33333333-3333-4333-8333-333333333333';
 const asOf='2026-10-23T12:00:00+01:00';
-it.each(['Montre la chronologie de septembre 2026.','Montre la chronologie du plus ancien au plus récent.'])('retains unsupported timeline restrictions before reading: %s',async text=>{
+it('retains an unsupported timeline date filter before reading',async()=>{
  let reads=0;
- const run=agentExecutor({text,conversationId:'bounded-timeline',clientTurnId:crypto.randomUUID(),appContext:{patientId:patient,page:'/jarvis'}},{rpc:async()=>{reads++;return {ok:true,data:[]};}},{rpc:async()=>({data:null,error:null})});
+ const run=agentExecutor({text:'Montre la chronologie de septembre 2026.',conversationId:'bounded-timeline',clientTurnId:crypto.randomUUID(),appContext:{patientId:patient,page:'/jarvis'}},{rpc:async()=>{reads++;return {ok:true,data:[]};}},{rpc:async()=>({data:null,error:null})});
  const result=await run({id:'x',name:'get_patient_context',args:{partIds:['p'],section:'timeline'}},asOf,[],new AbortController().signal);
  expect(result.status).toBe('unsupported');expect(reads).toBe(0);
 });
-it('declines an unsupported ascending clinical chronology before a model can route it to history',async()=>{
+it('routes a chronological clinical summary to the patient summary before model routing',async()=>{
  let reads=0,inferences=0;
- const outcome=await runAgentLoop({text:'Présente les événements cliniques dans leur ordre chronologique.',conversationId:'timeline-order-admission',clientTurnId:crypto.randomUUID(),appContext:{patientId:patient,page:'/patients/'+patient}},{actor:'timeline-order-admission',infer:async()=>{inferences++;throw new Error('UnexpectedInference');},execute:async call=>{reads++;return {callId:call.id,status:'ok',complete:true,text:'Lecture historique',conditionKeys:[],evidence:[]};}},new AbortController().signal);
- expect(outcome.status).toBe('partial');expect(outcome.sentences.join(' ')).toContain('tri inverse');expect(reads).toBe(0);expect(inferences).toBe(0);
+ let routed:unknown;
+ const outcome=await runAgentLoop({text:'Présente les événements cliniques dans leur ordre chronologique.',conversationId:'timeline-order-admission',clientTurnId:crypto.randomUUID(),appContext:{patientId:patient,page:'/patients/'+patient}},{actor:'timeline-order-admission',infer:async()=>{inferences++;throw new Error('UnexpectedInference');},execute:async call=>{reads++;routed=call.args;return {callId:call.id,status:'ok',complete:true,text:'Résumé clinique bref.',conditionKeys:[],evidence:[]};}},new AbortController().signal);
+ expect(outcome.status).toBe('completed');expect(routed).toMatchObject({section:'summary'});expect(outcome.sentences.join(' ')).toBe('Résumé clinique bref.');expect(reads).toBe(1);expect(inferences).toBe(0);
+});
+it.each([
+ 'Présente les événements cliniques dans leur ordre chronologique et indique les échelles enregistrées pour Amel Bensaid.',
+ 'Présente les événements cliniques dans leur ordre chronologique ; indique les traitements du dossier courant.',
+])('does not collapse a compound chronology request into a single summary read: %s',async text=>{
+ let reads=0,inferences=0;
+ await runAgentLoop({text,conversationId:'compound-timeline-admission',clientTurnId:crypto.randomUUID(),appContext:{patientId:patient,page:'/patients/'+patient}},{actor:'compound-timeline-admission',infer:async()=>{inferences++;throw new Error('ExpectedModelPath');},execute:async call=>{reads++;return {callId:call.id,status:'ok',complete:true,text:'Résumé clinique bref.',conditionKeys:[],evidence:[]};}},new AbortController().signal);
+ expect(inferences).toBeGreaterThan(0);expect(reads).toBe(0);
 });
 it('resumes only the verified timeline cursor and retains its patient',async()=>{
  const observed:unknown[]=[];

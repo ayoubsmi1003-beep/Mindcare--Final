@@ -21,9 +21,8 @@ export const AGENT_LIMITS = { rounds:ALEXA_NATIVE_BUDGET.rounds, calls:ALEXA_NAT
 function unsupportedClinicalTimelineRestriction(text:string):boolean {
  const normalized=text.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase();
  const timeline=/\b(?:chronologie|evenements? cliniques?|historique (?:clinique|du dossier))\b/u.test(normalized);
- const inverseOrder=/\b(?:ordre chronolog\w*|chronolog\w*|du plus ancien au plus recent|de la plus ancienne a la plus recente|tri inverse|ordre croissant)\b/u.test(normalized);
  const period=/\b(?:janvier|fevrier|mars|avril|mai|juin|juillet|aout|septembre|octobre|novembre|decembre|depuis|avant|apres|entre|hier|semaine|mois|annee)\b|\b(?:19|20)\d{2}\b|\b\d{1,2}[/-]\d{1,2}\b/u.test(normalized);
- return timeline&&(inverseOrder||period);
+ return timeline&&period;
 }
 export interface AgentTask { original: string; parts: RequestPart[]; results: AgentResult[]; at: number; patientId: string | null; page: string; }
 const tasks = new Map<string, AgentTask>();
@@ -101,8 +100,8 @@ function directRecurringThemeCountCalls(outputs:readonly string[]|null, original
 }
 function directSinglePatientReadCall(text:string,clientTurnId:string,selectedPatientId:string|null,asOf:string):{part:RequestPart;call:AgentCall}|null {
  const plain=text.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase();
- if(/\b(?:et|puis|ainsi que)\b/u.test(plain))return null;
- const tool=requestedReadTool(text,text),scope=frenchRequestAdmission(text,false,asOf);
+ if(/\b(?:et|puis|ainsi que)\b|[;\n]/u.test(plain))return null;
+ const scope=frenchRequestAdmission(text,false,asOf),tool=scope.tools?.length===1?scope.tools[0]:requestedReadTool(text,text);
  const mention=parsePatientMention(text);
  const noteScopeKnown=scope.unboundedPeriod===true||!!scope.from&&!!scope.to;
  const explicitNoteRead=!!scope.noteQuery&&noteSearchRequested(text)||(!!scope.noteArea||/\b(?:cinq|5)\s+(?:parties|notes|rubriques)\b/u.test(plain))&&!!scope.from&&!!scope.to||/\bmesures\b[^.!?]*\bevolu\w*|\bdifficulte\w*\b[^.!?]*\bune ancienne consultation\b/u.test(plain);

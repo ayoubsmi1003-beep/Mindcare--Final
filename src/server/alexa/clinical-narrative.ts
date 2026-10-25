@@ -155,6 +155,10 @@ export function relativeClinicalDate(date: string, asOf: string): string {
   if (!Number.isFinite(days)) throw Error("InvalidClinicalDate");
   return new Intl.RelativeTimeFormat("fr", { numeric: "auto" }).format(days, "day");
 }
+export function requestsClinicalDate(text:string):boolean {
+  const normalized=text.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase();
+  return /\b(?:date|quand|quel jour|jour exact|exactement quand)\b/u.test(normalized);
+}
 export function consultationNarrativeSources(c: ClinicalConsultation): { sources: NarrativeSource[]; complete: boolean } {
   const selected = consultationExcerpts(c, undefined, 30000, 100, 12000);
   const sources: NarrativeSource[] = selected.excerpts.map((e, i) => ({ id: `${c.id}:${i}`, consultationId:c.id, originalText: e.text, ...(e.amendmentAt ? {attribution: "correction" as const} : e.unsigned ? {attribution: "unsigned" as const} : e.area === "plan" ? {attribution: "plan" as const} : {}), at: c.startedAt, state: c.endedAt === null ? "open" : "closed", text: `${e.amendmentAt ? copy.correction : ""}${e.unsigned ? copy.unsigned : ""}${e.area ? copyArea[e.area] + " : " : ""}${e.text}` }));
