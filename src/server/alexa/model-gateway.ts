@@ -11,6 +11,7 @@ import { ALEXA_GENERAL_PROMPTS } from "@/i18n/alexa-general";
 import { isBoundedPublicQuestion } from "@/shared/alexa/public-question";
 import { isIssuedPublicQuestion, type PublicQuestionAdmission } from "./semantic-planner";
 import { findVerifiedPublicFact } from "./general-reference";
+import { isFrenchAlexaCapabilityQuestion, isFrenchMissingInformationPolicyQuestion } from "@/shared/alexa/request-contract";
 
 import { inferLocalText } from "./local-model";
 /** Delivered text stays on the pinned local MiniCPM engine. Gemini voice remains separate. */
@@ -136,7 +137,7 @@ function abortableUsage<T>(promise: Promise<T>, signal?: AbortSignal): Promise<T
   });
 }
 
-export type AlexaGeneralInferenceResult = { readonly ok: true; readonly text: string; readonly model: string | null;
+export type AlexaGeneralInferenceResult = { readonly ok: true; readonly text: string; readonly model: string | null; readonly localSource?: "capability"|"missing_information";
   readonly reference?: { readonly id: string; readonly label: string; readonly sourceUrl: string; readonly secondarySourceUrl?: string } }
   | { readonly ok: false; readonly code: "privacy" | "unavailable" | "invalid-response" | "cancelled" | "quota-exhausted" | "rate-limited"; readonly localFallback: true };
 
@@ -165,19 +166,32 @@ function isGeneralC4(value: unknown): boolean {
   const verdict = classerCharge(value, null);
   return verdict.classe === "C4" && verdict.decision === "AUTORISER";
 }
+function isValidFrenchGeneralAnswer(answer:string,computerExplanation:boolean):boolean{
+ return !!answer.trim()&&answer.length<=500&&!/[\p{Script=Arabic}\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Cyrillic}]/u.test(answer)&&!GENERAL_ENGLISH_OUTPUT.test(answer)
+  &&!generalTextIsUnsafe(answer,computerExplanation)&&isGeneralC4(answer);
+}
+const GENERAL_ENGLISH_OUTPUT=/\b(?:the|and|with|because|without|through|lists?|checks?|checklist|mistakes?|backup|files?|saved|exported?|steps?|tasks?|work|time|goals?|priorities|focus|deadline|workflow|schedule|before|future|systematic(?:ally)?|validation|execution)\b/iu;
 
 /** Local-only public routing: an egress name heuristic is not authority for app facts. */
-export function canAnswerGeneralAlexa(text:string):boolean {return typeof text==="string"&&text.trim().length>0&&text.length<=1000&&!generalTextIsUnsafe(text);}
+export function canAnswerGeneralAlexa(text:string):boolean {return typeof text==="string"&&text.trim().length>0&&text.length<=1000&&(isFrenchAlexaCapabilityQuestion(text)||!generalTextIsUnsafe(text));}
 export async function inferNativeGeneralAlexa(text:string,signal:AbortSignal):Promise<AlexaGeneralInferenceResult>{
  if(!canAnswerGeneralAlexa(text))return {ok:false,code:"privacy",localFallback:true};
+ if(isFrenchAlexaCapabilityQuestion(text))return {ok:true,text:"Je peux vous aider à consulter les dossiers, les consultations, l’agenda, les documents et les paiements. Je peux aussi préparer certains brouillons ; toute action qui modifie ou envoie quelque chose demande votre confirmation.",model:null,localSource:"capability"};
+ if(isFrenchMissingInformationPolicyQuestion(text))return {ok:true,text:"Si une information manque, je le signale clairement et je ne remplace pas l’absence par zéro ni par une supposition. Si ce manque empêche une lecture fiable, je précise ce qui reste à vérifier.",model:null,localSource:"missing_information"};
  const reference=findVerifiedPublicFact(text);
  if(reference){
   if(generalTextIsUnsafe(reference.answer,reference.id==="computer"))return {ok:false,code:"invalid-response",localFallback:true};
   return {ok:true,text:reference.answer,model:null,reference:{id:reference.id,label:reference.label,sourceUrl:reference.sourceUrl,...(reference.secondarySourceUrl?{secondarySourceUrl:reference.secondarySourceUrl}:{})}};
  }
- try{const answer=await inferLocalText([{role:"system",content:ALEXA_GENERAL_PROMPTS.fr},{role:"user",content:text}],{signal,timeoutMs:240000,maxOutputTokens:160});
-  if(!answer.trim()||answer.length>2000||generalTextIsUnsafe(answer,/ordinateur/iu.test(text)))return {ok:false,code:"invalid-response",localFallback:true};
-  return {ok:true,text:answer.trim(),model:ALEXA_DIRECT_MODEL};
+ try{
+  const computerExplanation=/ordinateur/iu.test(text);
+  for(let attempt=0;attempt<2;attempt++){
+   const system=attempt===0?ALEXA_GENERAL_PROMPTS.fr:`${ALEXA_GENERAL_PROMPTS.fr} Réponds en une phrase courte, avec des mots français courants. N’utilise aucun terme anglais, aucun caractère d’une autre langue, nom de médicament, nom de patient, mention de dossier, donnée personnelle, agenda ou rendez-vous, et n’affirme pas qu’une action a été exécutée. Si tu ne peux pas répondre ainsi, indique simplement la limite.`;
+   const answer=await inferLocalText([{role:"system",content:system},{role:"user",content:text}],{signal,timeoutMs:240000,maxOutputTokens:160});
+   if(signal.aborted)return {ok:false,code:"cancelled",localFallback:true};
+   if(isValidFrenchGeneralAnswer(answer,computerExplanation))return {ok:true,text:answer.trim(),model:ALEXA_DIRECT_MODEL};
+  }
+  return {ok:false,code:"invalid-response",localFallback:true};
  }catch{return {ok:false,code:signal.aborted?"cancelled":"unavailable",localFallback:true};}
 }
 

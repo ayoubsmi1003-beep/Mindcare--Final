@@ -13,6 +13,11 @@ it.each(['Montre la chronologie de septembre 2026.','Montre la chronologie du pl
  const result=await run({id:'x',name:'get_patient_context',args:{partIds:['p'],section:'timeline'}},asOf,[],new AbortController().signal);
  expect(result.status).toBe('unsupported');expect(reads).toBe(0);
 });
+it('declines an unsupported ascending clinical chronology before a model can route it to history',async()=>{
+ let reads=0,inferences=0;
+ const outcome=await runAgentLoop({text:'Présente les événements cliniques dans leur ordre chronologique.',conversationId:'timeline-order-admission',clientTurnId:crypto.randomUUID(),appContext:{patientId:patient,page:'/patients/'+patient}},{actor:'timeline-order-admission',infer:async()=>{inferences++;throw new Error('UnexpectedInference');},execute:async call=>{reads++;return {callId:call.id,status:'ok',complete:true,text:'Lecture historique',conditionKeys:[],evidence:[]};}},new AbortController().signal);
+ expect(outcome.status).toBe('partial');expect(outcome.sentences.join(' ')).toContain('tri inverse');expect(reads).toBe(0);expect(inferences).toBe(0);
+});
 it('resumes only the verified timeline cursor and retains its patient',async()=>{
  const observed:unknown[]=[];
  const db:Pick<DbPort,'rpc'>={rpc:async <T>(name:string,args:unknown)=>{

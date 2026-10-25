@@ -68,6 +68,28 @@ it('counts all consultations for the selected patient through the read gate with
  expect(inferenceCalls).toBe(0);expect(observed).toEqual([{name:'query_consultations',args:{partIds:['requested_1'],mode:'count',status:'all'}}]);
  expect(result).toMatchObject({status:'completed',parts:[{id:'requested_1',status:'answered',tools:['query_consultations']} ]});
 });
+it('keeps the selected patient and September completion status on a current-period consultation count',async()=>{
+ const text='Combien de consultations terminées du dossier courant en septembre ?';let inferenceCalls=0;const observed:Record<string,unknown>[]=[];
+ const result=await runAgentLoop({...input,text,conversationId:'selected-september-consultation-count',appContext:{patientId:id,page:'/patients/'+id}},{actor:'selected-september-consultation-count',asOf:'2026-10-25T12:00:00+01:00',infer:async()=>{inferenceCalls++;throw new Error('Unexpected model call');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,patientId:id,text:'2 consultations terminées en septembre.',evidence:[],conditionKeys:[]})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);
+ expect(observed).toEqual([{name:'query_consultations',args:{partIds:['requested_1'],mode:'count',status:'closed',from:'2026-09-01T00:00:00+01:00',to:'2026-10-01T00:00:00+01:00',dateAxis:'started_at',patientId:id}}]);
+ expect(result).toMatchObject({status:'completed',parts:[{id:'requested_1',status:'answered',tools:['query_consultations']}]});
+});
+it('compares completed consultations in two months with two bounded reads and no MiniCPM loop',async()=>{
+ const text='Compare les consultations terminées de septembre et d’octobre 2026.';let inferenceCalls=0;const observed:Record<string,unknown>[]=[];
+ const result=await runAgentLoop({...input,text,conversationId:'direct-monthly-consultation-comparison',appContext:{patientId:id,page:'/patients/'+id}},{actor:'direct-monthly-consultation-comparison',asOf:'2026-10-25T12:00:00+01:00',infer:async()=>{inferenceCalls++;throw new Error('Unexpected model call');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,patientId:id,text:(call.args.from==='2026-09-01T00:00:00+01:00'?'4':'6')+' consultations terminées.',evidence:[],conditionKeys:[]})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);expect(observed).toEqual([
+  {name:'query_consultations',args:{partIds:['requested_1'],patientId:id,from:'2026-09-01T00:00:00+01:00',to:'2026-10-01T00:00:00+01:00',dateAxis:'started_at',status:'closed',mode:'count'}},
+  {name:'query_consultations',args:{partIds:['requested_2'],patientId:id,from:'2026-10-01T00:00:00+01:00',to:'2026-11-01T00:00:00+01:00',dateAxis:'started_at',status:'closed',mode:'count'}},
+ ]);
+ expect(result.status).toBe('completed');expect(result.parts).toHaveLength(2);expect(result.sentences.join(' ')).toContain('Septembre 2026');expect(result.sentences.join(' ')).toContain('Octobre 2026');
+});
+it('answers a CNI count plus first patient-name page with one typed read and no model selection',async()=>{
+ const text='Donne le nombre de patients sans CNI, puis la liste des 20 premiers avec leurs noms.';let inferenceCalls=0;const observed:Record<string,unknown>[]=[];
+ const result=await runAgentLoop({...input,text,conversationId:'patient-cni-count-and-names',appContext:{patientId:null,page:'/patients'}},{actor:'patient-cni-count-and-names',infer:async()=>{inferenceCalls++;throw new Error('Unexpected model call');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,text:'12 patients sans CNI. Voici les premiers noms : Amel Bensaid et Amina Meziane.',evidence:[{id,type:'patient',label:'Amel Bensaid'},{id:'22222222-2222-4222-8222-222222222222',type:'patient',label:'Amina Meziane'}],conditionKeys:[conditionKey({field:'identity_card',op:'missing',value:null})]})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);expect(observed).toEqual([{name:'query_patients',args:{partIds:['count','list'],mode:'list',population:'active',filters:[{field:'identity_card',op:'missing',value:null}],limit:20}}]);
+ expect(result.status).toBe('completed');expect(result.parts).toHaveLength(2);expect(result.sentences.join(' ')).toContain('12 patients sans CNI');expect(result.sentences.join(' ')).toContain('Amel Bensaid');expect(result.sentences.join(' ')).toContain('Amina Meziane');
+});
 it.each(diagnosisCases)('routes a named diagnosis read through the patient-context gate without model selection: $id',async testCase=>{
  let inferenceCalls=0;const observed:Record<string,unknown>[]=[];
  expect(frenchRequestAdmission(testCase.input,false)).toMatchObject({tools:['get_patient_context'],patientSection:'diagnoses'});
@@ -241,6 +263,23 @@ it.each(generalCases)('routes an explicitly admitted public question to the loca
  const result=await runAgentLoop({...input,text:testCase.input,conversationId:'direct-general-'+testCase.id},{actor:'direct-general-'+testCase.id,infer:async()=>{inferenceCalls++;throw new Error('Public domain is already admitted');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,text:'Réponse générale locale.',evidence:[{id:call.id,type:'query',label:'Réponse locale',provenance:{gate:'local_model'}}],conditionKeys:[]})},new AbortController().signal);
  expect(inferenceCalls).toBe(0);expect(observed).toEqual([{name:'answer_general',args:{partIds:['requested_1'],question:testCase.input}}]);
  expect(result).toMatchObject({status:'completed',parts:[{id:'requested_1',goal:testCase.input,tools:['answer_general'],status:'answered'}]});
+});
+it('routes the natural Alexa help question directly to its local general-answer path',async()=>{
+ const text='Bonjour Alexa, comment peux-tu m’aider au cabinet ?';let inferenceCalls=0;const observed:Record<string,unknown>[]=[];
+ const result=await runAgentLoop({...input,text,conversationId:'direct-general-capability'},{actor:'direct-general-capability',infer:async()=>{inferenceCalls++;throw new Error('Should not run tool-selection inference');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,text:'Je peux vous aider à consulter les dossiers, les rendez-vous et les documents, puis préparer certains documents pour confirmation.',evidence:[{id:call.id,type:'query',label:'Réponse locale',provenance:{gate:'local_model'}}],conditionKeys:[]})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);expect(observed).toEqual([{name:'answer_general',args:{partIds:['requested_1'],question:text}}]);
+ expect(result).toMatchObject({status:'completed',parts:[{tools:['answer_general'],status:'answered'}]});
+});
+it.each([
+ 'Dis-moi en deux phrases comment tu gères une information absente.',
+ 'Quelle est la différence entre un son aigu et un son grave ?',
+ 'Pourquoi le jour et la nuit se succèdent-ils ?',
+ 'Pourquoi la glace flotte-t-elle sur l’eau ?',
+])('routes safe conversational requests directly to MiniCPM without tool-selection inference: %s',async text=>{
+ let inferenceCalls=0;const observed:Record<string,unknown>[]=[];
+ const result=await runAgentLoop({...input,text,conversationId:'direct-general-conversation-'+text.length},{actor:'direct-general-conversation-'+text.length,infer:async()=>{inferenceCalls++;throw new Error('Should use the admitted general-answer tool');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,text:'Réponse générale locale.',evidence:[{id:call.id,type:'query',label:'Réponse locale',provenance:{gate:'local_model'}}],conditionKeys:[]})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);expect(observed).toEqual([{name:'answer_general',args:{partIds:['requested_1'],question:text}}]);
+ expect(result).toMatchObject({status:'completed',parts:[{tools:['answer_general'],status:'answered'}]});
 });
 it('lets synthetic evaluations observe only the result status and safe error code',async()=>{
  const observed:unknown[]=[];const result=await runAgentLoop({...input,text:'Comment fonctionne un ordinateur ?',conversationId:'observe-direct-result'},{actor:'observe-direct-result',observeResult:value=>observed.push(value),execute:async call=>({callId:call.id,status:'error',complete:false,text:'Réponse indisponible.',evidence:[],conditionKeys:[],error:{code:'general-invalid-response',retryable:false}})},new AbortController().signal);

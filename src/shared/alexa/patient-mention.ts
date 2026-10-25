@@ -12,7 +12,7 @@ const common = new Set([
   "naissance", "numero", "carte", "piece", "identite", "cni", "cin", "telephone", "telephones", "adresse", "adresses", "coordonnees", "sexe", "administratif", "administrative", "administratifs", "administratives",
   "selectionne", "selectionnee", "selectionnes", "selectionnees", "courant", "courante", "courants", "courantes", "actuel", "actuelle", "actuels", "precedent", "precedente", "recent", "recente", "cette", "semaine", "mois", "jour", "aujourd'hui", "hier", "demain", "aujourd’hui",
   "passe", "passee", "passes", "passees", "ancien", "ancienne", "anciens", "anciennes",
-  "avant", "apres", "depuis", "entre", "avec", "sans", "et", "pour", "chez", "de", "du", "en", "au", "a", "il", "elle",
+  "avant", "apres", "depuis", "entre", "dans", "avec", "sans", "et", "pour", "chez", "de", "du", "en", "au", "a", "il", "elle",
   "selon", "dsm", "livre", "livres", "reference", "references",
   "diagnostic", "diagnostics", "note", "notes", "cliniques", "symptome", "symptomes", "anxiete", "depression", "sommeil", "humeur", "dose", "posologie", "frequence",
   "trouble", "troubles", "bipolaire", "bipolaires", "schizophrenie",

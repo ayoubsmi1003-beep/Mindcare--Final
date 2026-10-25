@@ -1,5 +1,5 @@
 import {expect,it} from 'vitest';
-import {constrainCountDeclaration,countContractHints,countContractParts,frenchPatientCountContract,frenchRequestAdmission,frenchRequestedOutputs,requestedCountRead,requestedReadTool} from '@/shared/alexa/request-contract';
+import {constrainCountDeclaration,countContractHints,countContractParts,explicitFrenchComparedMonthRanges,frenchPatientCompoundContract,frenchPatientCountContract,frenchRequestAdmission,frenchRequestedOutputs,requestedCountRead,requestedReadTool} from '@/shared/alexa/request-contract';
 import type {RequestPart,SupportedCondition} from '@/shared/alexa/agent';
 const part=(conditions:SupportedCondition[]):RequestPart=>({id:'p',goal:'Nombre',tools:['query_patients'],conditions,dependsOn:[],status:'pending',resultRefs:[]});
 it('leaves a count plus another read to native multi-output interpretation',()=>{
@@ -33,6 +33,39 @@ it('maps a six-month not-seen count to the completed-visit recency predicate',()
 it('binds an explicit French month range to a named clinical summary',()=>{
  const admission=frenchRequestAdmission('Résume en un seul paragraphe l’évolution racontée dans les six consultations d’avril à septembre 2026 de Amel Bensaid.',false);
  expect(admission).toMatchObject({tools:['get_patient_context'],patientSection:'summary',consultationCount:6,from:'2026-04-01T00:00:00+01:00',to:'2026-10-01T00:00:00+01:00'});
+});
+it('keeps a single named month on a completed-consultation request and anchors it to the cabinet year',()=>{
+ const admission=frenchRequestAdmission('Combien de consultations terminées du dossier courant en septembre ?',false,'2026-10-25T12:00:00+01:00');
+ expect(admission).toMatchObject({tools:['query_consultations'],consultationMode:'count',consultationStatus:'closed',from:'2026-09-01T00:00:00+01:00',to:'2026-10-01T00:00:00+01:00',dateAxis:'started_at'});
+});
+it('uses the close date only when the question explicitly names that date axis',()=>{
+ const admission=frenchRequestAdmission('Combien de consultations terminées du dossier courant à la date de clôture en septembre 2026 ?',false,'2026-10-25T12:00:00+01:00');
+ expect(admission).toMatchObject({tools:['query_consultations'],from:'2026-09-01T00:00:00+01:00',to:'2026-10-01T00:00:00+01:00',dateAxis:'ended_at'});
+});
+it('keeps two compared clinical months as separate periods and routes to consultation counts',()=>{
+ const text='Compare les consultations terminées de septembre et d’octobre 2026.';
+ expect(explicitFrenchComparedMonthRanges(text)).toEqual([
+  {month:'septembre',year:2026,from:'2026-09-01T00:00:00+01:00',to:'2026-10-01T00:00:00+01:00'},
+  {month:'octobre',year:2026,from:'2026-10-01T00:00:00+01:00',to:'2026-11-01T00:00:00+01:00'},
+ ]);
+ expect(frenchRequestAdmission(text,false,'2026-10-25T12:00:00+01:00')).toMatchObject({tools:['query_consultations'],consultationMode:'count',consultationStatus:'closed',dateAxis:'started_at'});
+ expect(explicitFrenchComparedMonthRanges('Compare les notes de septembre et d’octobre 2026.')).toBeNull();
+});
+it('extracts the same explicit CNI filter for a count followed by a patient-name page',()=>{
+ const contract=frenchPatientCompoundContract('Donne le nombre de patients sans CNI, puis la liste des 20 premiers avec leurs noms.');
+ expect(contract).toMatchObject({count:true,conditions:[{field:'identity_card',op:'missing',value:null}]});
+});
+it('routes a request about Alexa capabilities to the local general-answer path',()=>{
+ expect(frenchRequestAdmission('Bonjour Alexa, comment peux-tu m’aider au cabinet ?',true).tools).toEqual(['answer_general']);
+ expect(frenchRequestAdmission('Quels sont les rendez-vous de demain ?',true).tools).toEqual(['query_agenda']);
+});
+it.each([
+ 'Dis-moi en deux phrases comment tu gères une information absente.',
+ 'Quelle est la différence entre un son aigu et un son grave ?',
+ 'Pourquoi le jour et la nuit se succèdent-ils ?',
+ 'Pourquoi la glace flotte-t-elle sur l’eau ?',
+])('admits a natural safe French request phrasing for local MiniCPM: %s',text=>{
+ expect(frenchRequestAdmission(text,true).tools).toEqual(['answer_general']);
 });
 it('does not infer a year or accept reversed months in a clinical summary range',()=>{
  for(const text of ['Résume le cas de Amel Bensaid d’avril à septembre.','Résume le cas de Amel Bensaid de septembre à avril 2026.']){

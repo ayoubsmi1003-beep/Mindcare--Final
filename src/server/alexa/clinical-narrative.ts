@@ -694,7 +694,7 @@ export async function summarizeClinicalContext(context: ClinicalContext, signal:
 /** Summarizes only consultations already selected by an authorized, bounded read. */
 export async function summarizeClinicalConsultations(context:ClinicalContext,signal:AbortSignal):Promise<ClinicalNarrative>{
  const visits=[...context.consultations].filter((c,index,all)=>all.findIndex(other=>other.id===c.id)===index).sort((a,b)=>Date.parse(b.startedAt)-Date.parse(a.startedAt)||b.id.localeCompare(a.id));
- let complete=context.coverage.complete&&!context.coverage.hasMore;
+ let complete=context.coverage.complete&&(!context.coverage.hasMore||context.coverage.returned>=context.coverage.requested);
  if(!visits.length)return {text:complete?"Aucune consultation terminée n’est enregistrée pendant cette période.":copy.limited,complete,generated:false,sourceIds:[]};
  const structured=extractStructuredClinicalProgression(context);if(structured)return {...structured,complete:complete&&structured.complete};
  const sources:NarrativeSource[]=[];

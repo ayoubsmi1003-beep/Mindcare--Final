@@ -5,7 +5,7 @@ import {agendaIdentityText,nativeAgendaStatusContract} from '@/shared/alexa/agen
 import {presentAgentResults} from './answer-presentation';
 import {canAnswerGeneralAlexa} from "./model-gateway";
 import {parsePatientMention} from "@/shared/alexa/patient-mention";
-import {explicitFrenchDayRange,frenchReadArgumentBindings,requestedCountRead,isAdministrativeReview,requestedReadTool,frenchRequestedOutputs,constrainRequestedOutputs,frenchPatientCompoundContract,constrainCompoundDeclaration,compoundContractParts,compoundContractHints,frenchPatientCountContract,frenchRequestAdmission,countContractHints,countContractParts,constrainCountDeclaration,patientConditionsGrounded,explicitPatientCountFilterGroups} from "@/shared/alexa/request-contract";
+import {explicitFrenchComparedMonthRanges,explicitFrenchDayRange,frenchReadArgumentBindings,requestedCountRead,isAdministrativeReview,requestedReadTool,frenchRequestedOutputs,constrainRequestedOutputs,frenchPatientCompoundContract,constrainCompoundDeclaration,compoundContractParts,compoundContractHints,frenchPatientCountContract,frenchRequestAdmission,countContractHints,countContractParts,constrainCountDeclaration,patientConditionsGrounded,explicitPatientCountFilterGroups} from "@/shared/alexa/request-contract";
 import {noteReadQuerySchema,noteCursorSchema,noteContinuation,noteSearchRequested,noteQueryGrounded} from "@/shared/alexa/note-query";
 import { z } from "zod";
 import { ALEXA_AGENT_LANGUAGE,applicationQuerySchema,timelineQuerySchema,timelineCursorSchema,ALEXA_NATIVE_BUDGET,ALEXA_NATIVE_DEADLINE_MS,AgentReadError,patientListContinuation,patientMetricConditions,conditionSchema,partSchema,queryPatientsSchema,compactDeclarationSchema,parseDeclaration,agentSchemas, conditionKey, type AgentCall, type AgentResult, type AgentTerminal, type RequestPart } from "@/shared/alexa/agent";
@@ -18,6 +18,13 @@ import {relativeClinicalDate} from './clinical-narrative';
 import { localModelFailureCode, type LocalCompletion, type LocalMessage, type LocalTool } from "./local-model-protocol";
 
 export const AGENT_LIMITS = { rounds:ALEXA_NATIVE_BUDGET.rounds, calls:ALEXA_NATIVE_BUDGET.calls, parallel:ALEXA_NATIVE_BUDGET.parallel, deadlineMs:ALEXA_NATIVE_DEADLINE_MS, ttlMs: 900000 } as const;
+function unsupportedClinicalTimelineRestriction(text:string):boolean {
+ const normalized=text.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase();
+ const timeline=/\b(?:chronologie|evenements? cliniques?|historique (?:clinique|du dossier))\b/u.test(normalized);
+ const inverseOrder=/\b(?:ordre chronolog\w*|chronolog\w*|du plus ancien au plus recent|de la plus ancienne a la plus recente|tri inverse|ordre croissant)\b/u.test(normalized);
+ const period=/\b(?:janvier|fevrier|mars|avril|mai|juin|juillet|aout|septembre|octobre|novembre|decembre|depuis|avant|apres|entre|hier|semaine|mois|annee)\b|\b(?:19|20)\d{2}\b|\b\d{1,2}[/-]\d{1,2}\b/u.test(normalized);
+ return timeline&&(inverseOrder||period);
+}
 export interface AgentTask { original: string; parts: RequestPart[]; results: AgentResult[]; at: number; patientId: string | null; page: string; }
 const tasks = new Map<string, AgentTask>();
 export function clearAgentTask(actor: string, conversation: string): void { tasks.delete(JSON.stringify([actor, conversation])); }
@@ -92,10 +99,10 @@ function directRecurringThemeCountCalls(outputs:readonly string[]|null, original
  });
  return hasTheme&&hasCompletedCount&&prepared.every((entry):entry is NonNullable<typeof entry>=>entry!==null)?prepared:null;
 }
-function directSinglePatientReadCall(text:string,clientTurnId:string,selectedPatientId:string|null):{part:RequestPart;call:AgentCall}|null {
+function directSinglePatientReadCall(text:string,clientTurnId:string,selectedPatientId:string|null,asOf:string):{part:RequestPart;call:AgentCall}|null {
  const plain=text.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase();
  if(/\b(?:et|puis|ainsi que)\b/u.test(plain))return null;
- const tool=requestedReadTool(text,text),scope=frenchRequestAdmission(text,false);
+ const tool=requestedReadTool(text,text),scope=frenchRequestAdmission(text,false,asOf);
  const mention=parsePatientMention(text);
  const noteScopeKnown=scope.unboundedPeriod===true||!!scope.from&&!!scope.to;
  const explicitNoteRead=!!scope.noteQuery&&noteSearchRequested(text)||(!!scope.noteArea||/\b(?:cinq|5)\s+(?:parties|notes|rubriques)\b/u.test(plain))&&!!scope.from&&!!scope.to||/\bmesures\b[^.!?]*\bevolu\w*|\bdifficulte\w*\b[^.!?]*\bune ancienne consultation\b/u.test(plain);
@@ -106,8 +113,8 @@ function directSinglePatientReadCall(text:string,clientTurnId:string,selectedPat
  if(!agentSchemas[tool].safeParse(args).success)return null;
  return {part:{id,goal:text,tools:[tool],conditions:[],dependsOn:[],status:'pending',resultRefs:[]},call:{id:`direct-${clientTurnId}-${id}`,name:tool,args}};
 }
-function directPatientNoteReadCall(text:string,clientTurnId:string):{part:RequestPart;call:AgentCall}|null {
- const scope=frenchRequestAdmission(text,false);
+function directPatientNoteReadCall(text:string,clientTurnId:string,asOf:string):{part:RequestPart;call:AgentCall}|null {
+ const scope=frenchRequestAdmission(text,false,asOf);
  const explicitAreaRead=!!scope.noteArea&&scope.unboundedPeriod===true&&!scope.from&&!scope.to;
  const explicitTextSearch=!!scope.noteQuery&&noteSearchRequested(text)&&scope.unboundedPeriod===true&&!scope.from&&!scope.to;
  if(scope.tools?.length!==1||scope.tools[0]!=='get_patient_context'||scope.patientSection!=='notes'||(!explicitAreaRead&&!explicitTextSearch))return null;
@@ -174,7 +181,7 @@ function directNamedApplicationReads(text:string,clientTurnId:string,selectedPat
   return {patientId:selectedPatientId};
  };
  for(const [index,goal] of outputs.entries()){
-  const id=`requested_${index+1}`,tool=requestedReadTool(goal,text),scope=frenchRequestAdmission(goal,false);
+  const id=`requested_${index+1}`,tool=requestedReadTool(goal,text),scope=frenchRequestAdmission(goal,false,asOf);
   if(!tool||scope.tools?.length!==1||scope.tools[0]!==tool)return null;
   const normalized=goal.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase();
   if(tool==='get_patient_context'&&scope.patientSection==='profile'&&/\b(?:e[- ]?mail|courriel|adresse electronique)\b/u.test(normalized)){
@@ -268,7 +275,7 @@ function directAgendaReadCall(text:string,clientTurnId:string,selectedPatientId:
  const plain=text.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase();
  const clockWindow=explicitAgendaClockWindow(text,asOf),requestShape=agendaIdentityText(clockWindow?plain.replace(clockWindow.matchedText,''):plain);
  if(/\b(?:et|puis|ainsi que)\b|[;\n]/u.test(requestShape.replace(/\bet\s+quels?\s+sont\s+(?:leurs?|les)\s+statuts?\b/u,'')))return null;
- const scope=frenchRequestAdmission(text,false),window=clockWindow??patientQueryPeriod(text,asOf)??explicitFrenchDayRange(text)??explicitAgentPeriod(text,asOf),identityText=agendaIdentityText(text),mention=parsePatientMention(identityText),statusContract=nativeAgendaStatusContract(text);
+ const scope=frenchRequestAdmission(text,false,asOf),window=clockWindow??patientQueryPeriod(text,asOf)??explicitFrenchDayRange(text)??explicitAgentPeriod(text,asOf),identityText=agendaIdentityText(text),mention=parsePatientMention(identityText),statusContract=nativeAgendaStatusContract(text);
  const nextAppointment=/\bprochain rendez[- ]vous\b/u.test(plain);
  if(scope.tools?.length!==1||scope.tools[0]!=='query_agenda'||(!window&&!nextAppointment)||mention.status==='ambiguous'||!statusContract.complete)return null;
  const needsPatient=/\b(?:patient\w*|dossier|son|sa|ses)\b/u.test(identityText.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase());
@@ -278,15 +285,31 @@ function directAgendaReadCall(text:string,clientTurnId:string,selectedPatientId:
  if(!agentSchemas.query_agenda.safeParse(args).success)return null;
  return {part:{id,goal:text,tools:['query_agenda'],conditions:[],dependsOn:[],status:'pending',resultRefs:[]},call:{id:`direct-${clientTurnId}-${id}`,name:'query_agenda',args}};
 }
-function directConsultationCountCall(text:string,clientTurnId:string):{part:RequestPart;call:AgentCall}|null{
- const scope=frenchRequestAdmission(text,false),plain=text.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase();
- if(scope.tools?.length!==1||scope.tools[0]!=='query_consultations'||scope.consultationMode!=='count'||scope.from||scope.to||scope.unboundedPeriod!==true)return null;
- if(/\b(?:patient\w*|dossier\w*|son|sa|ses)\b/u.test(plain)||parsePatientMention(text).status!=='none')return null;
- const id='requested_1',args={partIds:[id],mode:'count' as const,status:scope.consultationStatus??'all' as const};
+function directConsultationCountCall(text:string,clientTurnId:string,selectedPatientId:string|null,asOf:string):{part:RequestPart;call:AgentCall}|null{
+ const scope=frenchRequestAdmission(text,false,asOf),plain=text.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase(),mention=parsePatientMention(text);
+ const boundedPeriod=!!scope.from&&!!scope.to;
+ if(scope.tools?.length!==1||scope.tools[0]!=='query_consultations'||scope.consultationMode!=='count'||(!boundedPeriod&&scope.unboundedPeriod!==true)||mention.status==='ambiguous')return null;
+ const patientScoped=mention.status==='named'||/\b(?:patient(?:e)?(?:\s+selectionn\w*)?|dossier(?:\s+(?:courant|selectionn\w*))?|son|sa|ses)\b/u.test(plain);
+ if(patientScoped&&!selectedPatientId&&mention.status!=='named')return null;
+ const identity=mention.status==='named'?{patientName:mention.name}:patientScoped&&selectedPatientId?{patientId:selectedPatientId}:{};
+ const id='requested_1',args={partIds:[id],...frenchReadArgumentBindings(scope,'query_consultations'),...identity,mode:'count' as const,status:scope.consultationStatus??'all' as const};
  if(!agentSchemas.query_consultations.safeParse(args).success)return null;
  return {part:{id,goal:text,tools:['query_consultations'],conditions:[],dependsOn:[],status:'pending',resultRefs:[]},call:{id:`direct-${clientTurnId}-${id}`,name:'query_consultations',args}};
 }
-interface DirectWorkflowStep {call:AgentCall;partIds:string[];goal:string;after?:string;reviewDisclaimer?:boolean}
+function directConsultationMonthComparison(text:string,clientTurnId:string,selectedPatientId:string|null,asOf:string):DirectWorkflow|null{
+ const periods=explicitFrenchComparedMonthRanges(text,asOf),mention=parsePatientMention(text);
+ if(!periods||mention.status==='ambiguous')return null;
+ const normalized=text.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase(),dateAxis=/\bdate (?:de )?(?:cloture|fin)\b/u.test(normalized)?'ended_at' as const:'started_at' as const;
+ const status=/\b(?:termine\w*|clos\w*|cloture\w*|acheve\w*|ferme\w*)\b/u.test(normalized)?'closed' as const:/\b(?:ouvert\w*|en cours)\b/u.test(normalized)?'open' as const:'all' as const;
+ const identity=mention.status==='named'?{patientName:mention.name}:selectedPatientId?{patientId:selectedPatientId}:{};
+ const parts:RequestPart[]=periods.map((period,index)=>({id:`requested_${index+1}`,goal:`Consultations ${status==='closed'?'terminées':status==='open'?'ouvertes':''} en ${period.month} ${period.year}`.replace(/\s+/gu,' ').trim(),tools:['query_consultations'],conditions:[],dependsOn:[],status:'pending',resultRefs:[]}));
+ const monthLabels:Record<typeof periods[number]['month'],string>={janvier:'Janvier',fevrier:'Février',mars:'Mars',avril:'Avril',mai:'Mai',juin:'Juin',juillet:'Juillet',aout:'Août',septembre:'Septembre',octobre:'Octobre',novembre:'Novembre',decembre:'Décembre'};
+ const plans=periods.map((period,index)=>{const part=parts[index]!;return {part,comparisonLabel:`${monthLabels[period.month]} ${period.year}`,args:{partIds:[part.id],...identity,from:period.from,to:period.to,dateAxis,status,mode:'count'}};});
+ if(plans.some(plan=>!agentSchemas.query_consultations.safeParse(plan.args).success))return null;
+ const steps:DirectWorkflowStep[]=plans.map(({part,comparisonLabel,args})=>({partIds:[part.id],goal:part.goal,comparisonLabel,call:{id:`direct-${clientTurnId}-${part.id}`,name:'query_consultations',args}}));
+ return {parts,steps};
+}
+interface DirectWorkflowStep {call:AgentCall;partIds:string[];goal:string;after?:string;reviewDisclaimer?:boolean;comparisonLabel?:string}
 interface DirectWorkflow {parts:RequestPart[];steps:DirectWorkflowStep[]}
 function directExtendedCounts(contract:NonNullable<ReturnType<typeof frenchPatientCountContract>>,clientTurnId:string,asOf:string):DirectWorkflow|null {
  if(contract.clauses.length<2||contract.clauses.length>AGENT_LIMITS.calls)return null;
@@ -336,16 +359,23 @@ const declarationSchema=compactDeclarationSchema;
 const tools: LocalTool[] = Object.entries(agentSchemas).map(([name, schema]) => ({ type: "function", function: { name, description: agentDescriptions[name as keyof typeof agentDescriptions], parameters: compact(z.toJSONSchema(name==="declare_request"?declarationSchema:schema)) as Record<string,unknown> } }));
 export async function runAgentLoop(input: TurnInput, deps: AgentLoopDependencies, externalSignal: AbortSignal): Promise<AgentOutcome> {
   const observeResult=(observation:AgentToolResultObservation)=>{try{deps.observeResult?.(observation);}catch{/* Evaluation telemetry cannot change the turn result. */}};
+  const now=Date.now(),asOf=deps.asOf?z.iso.datetime({offset:true}).parse(deps.asOf):new Date(now).toISOString();
+  if(unsupportedClinicalTimelineRestriction(input.text)){
+    const id=`restriction-${input.clientTurnId}`,text=applicationReadCopy.timelineRestriction;
+    const result:AgentResult={callId:id,status:'unsupported',complete:false,text,evidence:[],conditionKeys:[],error:{code:'unsupported-timeline-restriction',retryable:false}};
+    const part:RequestPart={id:'requested_1',goal:input.text,tools:[],conditions:[],dependsOn:[],status:'unsupported',resultRefs:[id],reason:text};
+    return {status:'partial',parts:[part],results:[result],sentences:[text],sources:[],patientId:null,tokensIn:0,tokensOut:0};
+  }
   const language = ALEXA_AGENT_LANGUAGE, copy = agentCopy[language],countContract=frenchPatientCountContract(input.text);
   const compoundContract=frenchPatientCompoundContract(input.text);
   const requestedOutputs=!countContract&&!compoundContract?frenchRequestedOutputs(input.text):null;
   const requestedTools=requestedOutputs?.map(goal=>requestedReadTool(goal,input.text));
   const knownReadTools=requestedTools?.every((tool):tool is NonNullable<typeof tool>=>!!tool)?[...new Set(requestedTools)]:null;
-  const admission=compoundContract?{tools:['query_patients'],profileOnly:false}:knownReadTools?{tools:knownReadTools,profileOnly:false}:frenchRequestAdmission(input.text,canAnswerGeneralAlexa(input.text));
+  const admission=compoundContract?{tools:['query_patients'],profileOnly:false}:knownReadTools?{tools:knownReadTools,profileOnly:false}:frenchRequestAdmission(input.text,canAnswerGeneralAlexa(input.text),asOf);
   const completePublic=admission.tools?.length===1&&admission.tools[0]==="answer_general";
   // A known read gate owns missing-slot checks; population predicates belong to patient queries, never to answer topics.
   const plainReadDeclaration=admission.tools?.length===1&&['get_patient_context','query_consultations','query_agenda','query_documents','query_finance','query_app','search_knowledge','prepare_action','navigate'].includes(admission.tools[0]!)&&!countContractHints({clauses:[input.text]})[0]!.conditions.length;
-  const now = Date.now(), asOf = deps.asOf?z.iso.datetime({offset:true}).parse(deps.asOf):new Date(now).toISOString(), key = JSON.stringify([deps.actor, input.conversationId]);
+  const key = JSON.stringify([deps.actor, input.conversationId]);
   for (const [k, task] of tasks) if (now - task.at > AGENT_LIMITS.ttlMs) tasks.delete(k);
   while (tasks.size >= 256) tasks.delete(tasks.keys().next().value!);
   const old = tasks.get(key), prior = old && old.patientId === input.appContext.patientId && old.page === input.appContext.page ? old : undefined;
@@ -399,14 +429,15 @@ export async function runAgentLoop(input: TurnInput, deps: AgentLoopDependencies
   const directCompoundRead=!declared&&freshRead&&compoundContract?directPatientCompoundReadCall(compoundContract,input.clientTurnId):null;
   const directMixedMetricAgenda=!declared&&freshRead&&!compoundContract?directMixedMetricAgendaCalls(input.text,input.clientTurnId,input.appContext.patientId,asOf):null;
   const directPublicAnswer=!declared&&freshRead&&!requestedOutputs&&!countContract&&!compoundContract&&completePublic?directPublicAnswerCall(input.text,input.clientTurnId):null;
-  const directNoteRead=!declared&&freshRead&&!requestedOutputs&&!countContract&&!compoundContract?directPatientNoteReadCall(input.text,input.clientTurnId):null;
-  const directSummaryCall=!declared&&freshRead&&!requestedOutputs&&!countContract&&!compoundContract?directSinglePatientReadCall(input.text,input.clientTurnId,input.appContext.patientId):null;
+  const directNoteRead=!declared&&freshRead&&!requestedOutputs&&!countContract&&!compoundContract?directPatientNoteReadCall(input.text,input.clientTurnId,asOf):null;
+  const directSummaryCall=!declared&&freshRead&&!requestedOutputs&&!countContract&&!compoundContract?directSinglePatientReadCall(input.text,input.clientTurnId,input.appContext.patientId,asOf):null;
   const directReadCalls=!declared&&freshRead?directRecurringThemeCountCalls(requestedOutputs,input.text,input.clientTurnId):null;
   const directOfficeReadCall=!declared&&freshRead?directNotificationsReadCall(input.text,input.clientTurnId,requestedOutputs):null;
   const directAgendaCall=!declared&&freshRead&&!requestedOutputs&&!countContract&&!compoundContract?directAgendaReadCall(input.text,input.clientTurnId,input.appContext.patientId,asOf):null;
-  const directConsultationCountRead=!declared&&freshRead&&!requestedOutputs&&!countContract&&!compoundContract?directConsultationCountCall(input.text,input.clientTurnId):null;
+  const directConsultationCountRead=!declared&&freshRead&&!requestedOutputs&&!countContract&&!compoundContract?directConsultationCountCall(input.text,input.clientTurnId,input.appContext.patientId,asOf):null;
   const directNavigationCall=!declared&&freshRead&&!requestedOutputs?directGlobalNavigationCall(input.text,input.clientTurnId):null;
-  const directWorkflow=!declared&&freshRead&&!compoundContract?(countContract?directExtendedCounts(countContract,input.clientTurnId,asOf):directAgendaAdministrativeReview(input.text,input.clientTurnId,asOf)):null;
+  const directMonthlyComparison=!declared&&freshRead&&!countContract&&!compoundContract?directConsultationMonthComparison(input.text,input.clientTurnId,input.appContext.patientId,asOf):null;
+  const directWorkflow=!declared&&freshRead&&!compoundContract?(countContract?directExtendedCounts(countContract,input.clientTurnId,asOf):directMonthlyComparison??directAgendaAdministrativeReview(input.text,input.clientTurnId,asOf)):null;
   const directNamedReads=!declared&&freshRead&&!countContract&&!compoundContract?directNamedApplicationReads(input.text,input.clientTurnId,input.appContext.patientId,asOf):null;
   const queryContract=patientQueryContract(input.text,asOf);
   const medicalOnly=admission.tools?.length===1&&admission.tools[0]==='search_knowledge';
@@ -450,6 +481,7 @@ export async function runAgentLoop(input: TurnInput, deps: AgentLoopDependencies
         let result:AgentResult;
         try{result=await deps.execute(step.call,asOf,results,signal,input.text,step.goal);}
         catch(error){const failureCode=error instanceof AgentReadError?error.code:error instanceof z.ZodError?'malformed':'database';result={callId:step.call.id,status:'error',complete:false,evidence:[],text:copy.errors[failureCode],conditionKeys:[],error:{code:failureCode,retryable:false}};}
+        if(step.comparisonLabel&&result.text)result={...result,text:`${step.comparisonLabel} : ${result.text}`};
         const missingCondition=targets.some(part=>part.conditions.some(condition=>!result.conditionKeys.includes(conditionKey(condition))));
         if(missingCondition&&['ok','empty','partial'].includes(result.status))result={callId:step.call.id,status:'unsupported',complete:false,evidence:[],text:copy.unsupported,conditionKeys:[],error:{code:'condition-not-applied',retryable:false}};
         if(step.reviewDisclaimer&&result.complete&&['ok','empty'].includes(result.status)){const priorText=result.text.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase(),savedState=/aucune correction n[’']a ete enregistree/iu.test(priorText)?'':"Aucune correction n'a été enregistrée. ";result={...result,text:result.text+`\n${savedState}Cette liste est à vérifier dans chaque dossier.`};}
@@ -550,7 +582,7 @@ export async function runAgentLoop(input: TurnInput, deps: AgentLoopDependencies
          if(input.patientName||patientMention.status==='named'){delete properties['patientName'];delete properties['patientId'];}
          else if(properties['patientName']&&patientMention.status==='none')delete properties['patientName'];
          const toolGoals=parts.filter(p=>p.status==='pending'&&p.tools?.includes(tool.function.name as NonNullable<RequestPart['tools']>[number]));
-         const goalAdmission=toolGoals.length===1?frenchRequestAdmission(toolGoals[0]!.goal,false):undefined;
+         const goalAdmission=toolGoals.length===1?frenchRequestAdmission(toolGoals[0]!.goal,false,asOf):undefined;
          const toolAdmission=goalAdmission?.tools?.includes(tool.function.name)?goalAdmission:admission;
          if(tool.function.name==='prepare_action'){
           if(toolAdmission.preparationAction)for(const field of Object.keys(properties))if(!actionArgumentKeys(toolAdmission.preparationAction).includes(field))delete properties[field];
@@ -708,7 +740,7 @@ export async function runAgentLoop(input: TurnInput, deps: AgentLoopDependencies
          call.args={...call.args,mode:'count'};
         }
         const scopedParts=parts.filter(p=>Array.isArray(call.args['partIds'])&&call.args['partIds'].includes(p.id));
-        const partScope=scopedParts.length===1?frenchRequestAdmission(scopedParts[0]!.goal,false):undefined;
+        const partScope=scopedParts.length===1?frenchRequestAdmission(scopedParts[0]!.goal,false,asOf):undefined;
         const readScope=admission.profileOnly&&admission.tools?.includes(call.name)?admission:partScope?.tools?.includes(call.name)?partScope:admission;
         if(['query_consultations','query_documents'].includes(call.name)&&readScope.unboundedPeriod&&['period','from','to'].some(field=>call.args[field]!==undefined)){replies.set(call.id,'{"error":"UnrequestedConsultationPeriod"}');continue;}
         if(call.name==='query_documents'&&readScope.documentAllKinds&&call.args['kind']!==undefined){replies.set(call.id,'{"error":"UnrequestedDocumentKind"}');continue;}

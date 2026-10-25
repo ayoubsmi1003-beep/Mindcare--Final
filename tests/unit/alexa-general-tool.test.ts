@@ -20,6 +20,17 @@ it('uses a local source to explain the processor, program instructions and data'
  if(result.ok){expect(result.text).toContain('processeur');expect(result.text).toContain('instructions');expect(result.text).toContain('données');}
  expect(inferLocalText).not.toHaveBeenCalled();
 });
+it.each([
+ ['Pourquoi le jour et la nuit se succèdent-ils ?','day-night','tourne sur son axe'],
+ ['Pourquoi la glace flotte-t-elle sur l’eau ?','ice-density','moins dense'],
+ ['Quelle est la différence entre un son aigu et un son grave ?','sound-pitch','fréquence'],
+])('uses a verified local fact for the public question %s',async(question,sourceId,phrase)=>{
+ vi.mocked(inferLocalText).mockClear();const rpc=vi.fn();
+ const result=await agentExecutor({...input,text:question},{rpc},{rpc:vi.fn()})({id:'g',name:'answer_general',args:{partIds:['g'],question}},'2026-10-15T12:00:00Z',[],new AbortController().signal);
+ expect(result).toMatchObject({status:'ok',complete:true});expect(result.text).toContain(phrase);
+ expect(result.evidence).toContainEqual(expect.objectContaining({type:'query',provenance:expect.objectContaining({gate:'local_public_fact',sourceId})}));
+ expect(rpc).not.toHaveBeenCalled();expect(inferLocalText).not.toHaveBeenCalled();
+});
 it('retains MiniCPM for a safe public question with no verified local fact',async()=>{
  vi.mocked(inferLocalText).mockClear().mockResolvedValueOnce('La buée se forme lorsque la vapeur d’eau refroidit et se condense.');
  const question='Pourquoi un miroir se couvre-t-il de buée ?',signal=new AbortController().signal;
@@ -27,10 +38,49 @@ it('retains MiniCPM for a safe public question with no verified local fact',asyn
  expect(result).toMatchObject({ok:true,model:expect.any(String)});
  expect(vi.mocked(inferLocalText)).toHaveBeenCalledWith(expect.arrayContaining([expect.objectContaining({role:'user',content:question})]),expect.objectContaining({signal}));
 });
+it('answers a narrowly matched Alexa capability question from the configured capability map',async()=>{
+ vi.mocked(inferLocalText).mockClear();const question='Bonjour Alexa, comment peux-tu m’aider au cabinet ?';
+ const result=await inferNativeGeneralAlexa(question,new AbortController().signal);
+ expect(result).toMatchObject({ok:true,model:null,localSource:'capability'});
+ if(result.ok){expect(result.text).toContain('agenda');expect(result.text).toContain('confirmation');}
+ expect(inferLocalText).not.toHaveBeenCalled();
+ const executed=await agentExecutor({...input,text:question},{rpc:vi.fn()},{rpc:vi.fn()})({id:'g',name:'answer_general',args:{partIds:['g'],question}},'2026-10-15T12:00:00Z',[],new AbortController().signal);
+ expect(executed.evidence).toContainEqual(expect.objectContaining({type:'query',label:'Capacités configurées dans MindCare',provenance:expect.objectContaining({gate:'alexa_local_contract',sourceId:'capability'})}));
+});
+it('answers the missing-information policy from the verified Alexa contract, without claiming a database lookup',async()=>{
+ vi.mocked(inferLocalText).mockClear();const question='Dis-moi en deux phrases comment tu gères une information absente.';
+ const result=await inferNativeGeneralAlexa(question,new AbortController().signal);
+ expect(result).toMatchObject({ok:true,model:null,localSource:'missing_information'});
+ if(result.ok){expect(result.text).toContain('je ne remplace pas');expect(result.text).toContain('lecture fiable');}
+ expect(inferLocalText).not.toHaveBeenCalled();
+});
 it('fails closed on a mixed-English public answer',async()=>{
- vi.mocked(inferLocalText).mockClear().mockResolvedValueOnce('Un miroir se couvre de vapeur because the temperature falls.');
+ vi.mocked(inferLocalText).mockClear().mockResolvedValueOnce('Un miroir se couvre de vapeur because the temperature falls.').mockResolvedValueOnce('Un miroir se couvre de vapeur because the temperature falls.');
  const result=await inferNativeGeneralAlexa('Pourquoi un miroir se couvre-t-il de buée ?',new AbortController().signal);
  expect(result).toMatchObject({ok:false,code:'invalid-response'});
+});
+it('shows a short human limitation instead of exposing model internals when both answers are rejected',async()=>{
+ const question='Pourquoi un miroir se couvre-t-il de buée ?';
+ vi.mocked(inferLocalText).mockClear().mockResolvedValue('La réponse mentionne un dossier patient.');
+ const execute=agentExecutor({...input,text:question},{rpc:vi.fn()},{rpc:vi.fn()});
+ const result=await execute({id:'g',name:'answer_general',args:{partIds:['g'],question}},'2026-10-15T12:00:00Z',[],new AbortController().signal);
+ expect(result.status).toBe('error');expect(result.complete).toBe(false);
+ expect(result.text).toContain('Je n’ai pas de réponse fiable');expect(result.text).not.toContain('MiniCPM');
+ expect(vi.mocked(inferLocalText)).toHaveBeenCalledTimes(2);
+});
+it('retries a rejected public answer from the original question only',async()=>{
+ const question='Pourquoi un miroir se couvre-t-il de buée ?',rejected='La réponse mentionne un agenda et ne convient pas.';
+ vi.mocked(inferLocalText).mockClear().mockResolvedValueOnce(rejected).mockResolvedValueOnce('La buée se forme lorsque la vapeur d’eau refroidit et se condense.');
+ const result=await inferNativeGeneralAlexa(question,new AbortController().signal);
+ expect(result).toMatchObject({ok:true,model:expect.any(String)});expect(vi.mocked(inferLocalText)).toHaveBeenCalledTimes(2);
+ expect(vi.mocked(inferLocalText).mock.calls[1]![0]).toEqual([expect.objectContaining({role:'system'}),{role:'user',content:question}]);
+ expect(JSON.stringify(vi.mocked(inferLocalText).mock.calls[1])).not.toContain(rejected);
+});
+it('rejects mixed English in a generated answer and retries once in French',async()=>{
+ const question='Pourquoi les listes de contrôle réduisent-elles les erreurs dans une procédure répétitive ?';
+ vi.mocked(inferLocalText).mockClear().mockResolvedValueOnce('Les lists de contrôle offrent des checks et limitent les mistakes.').mockResolvedValueOnce('Une liste de vérification rappelle les étapes importantes et réduit les oublis.');
+ const result=await inferNativeGeneralAlexa(question,new AbortController().signal);
+ expect(result).toMatchObject({ok:true,model:expect.any(String)});expect(vi.mocked(inferLocalText)).toHaveBeenCalledTimes(2);
 });
 it('uses a separate admitted local general answer without a database read',async()=>{
  vi.mocked(inferLocalText).mockClear();

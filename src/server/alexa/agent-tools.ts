@@ -194,8 +194,9 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    if(!normalize(input.text+" "+(original??"")).includes(normalize(question))||!canAnswerGeneralAlexa(question))return failure(call,"unsupported",copy.generalRestricted,"general-question-not-admitted");
    const answer=await inferNativeGeneralAlexa(question,signal);
    if(!answer.ok)return failure(call,"error",copy.modelUnavailable,"general-"+answer.code);
-   const provenance=answer.reference?{gate:"local_public_fact",provider:"local",sourceId:answer.reference.id,sourceUrl:answer.reference.sourceUrl,...(answer.reference.secondarySourceUrl?{secondarySourceUrl:answer.reference.secondarySourceUrl}:{})}:{gate:"local_model",provider:"local",model:answer.model};
-   return {callId:call.id,status:"ok",complete:true,text:answer.text,data:{answer:answer.text},conditionKeys:[],evidence:[{id:call.id,type:"query",label:answer.reference?.label??copy.generalSource,provenance}]};
+   const provenance=answer.localSource?{gate:"alexa_local_contract",provider:"local",sourceId:answer.localSource}:answer.reference?{gate:"local_public_fact",provider:"local",sourceId:answer.reference.id,sourceUrl:answer.reference.sourceUrl,...(answer.reference.secondarySourceUrl?{secondarySourceUrl:answer.reference.secondarySourceUrl}:{})}:{gate:"local_model",provider:"local",model:answer.model};
+   const sourceLabel=answer.localSource==='capability'?copy.generalCapabilitiesSource:answer.localSource==='missing_information'?copy.generalMissingInfoSource:answer.reference?.label??copy.generalSource;
+   return {callId:call.id,status:"ok",complete:true,text:answer.text,data:{answer:answer.text},conditionKeys:[],evidence:[{id:call.id,type:"query",label:sourceLabel,provenance}]};
   }
   if(call.name==="query_app"&&a["view"]!=="message_draft"){
    if(a['view']==='reception'){

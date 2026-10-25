@@ -108,6 +108,10 @@ describe("Alexa patient identity grammar stays local and explicit", () => {
   });
 });
 
+it("does not treat a French preposition after 'patient' as a patient name", () => {
+  expect(parsePatientMention("Que rapporte le patient dans les notes Subjectif ?")).toEqual({ status: "none" });
+});
+
 it.each([
   "Que disent les notes brutes du dossier courant ?",
   "Affiche les traitements actifs de la patiente sélectionnée.",

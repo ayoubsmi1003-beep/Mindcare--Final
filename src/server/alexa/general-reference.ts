@@ -69,6 +69,24 @@ const facts: readonly PublicFact[] = [
     match: [["pluie"], ["forme", "formation", "comment", "goutte", "gouttelettes"]],
     answer: "L’eau s’évapore, puis la vapeur se condense en nuages; les gouttelettes grossissent et retombent sous forme de pluie.",
   },
+  {
+    id: "day-night", label: "NASA Space Place — What Causes the Seasons?",
+    sourceUrl: "https://spaceplace.nasa.gov/seasons/en/",
+    match: [["jour"], ["nuit"], ["succèdent", "alternent", "pourquoi", "cycle", "rotation"]],
+    answer: "Le jour et la nuit se succèdent parce que la Terre tourne sur son axe : chaque lieu passe alternativement face au Soleil, puis à l’opposé.",
+  },
+  {
+    id: "ice-density", label: "U.S. Geological Survey — Water Density",
+    sourceUrl: "https://www.usgs.gov/water-science-school/science/water-density",
+    match: [["glace"], ["flotte", "flotter", "flottaison"]],
+    answer: "La glace flotte parce qu’elle est moins dense que l’eau liquide : à volume égal, sa masse est plus faible.",
+  },
+  {
+    id: "sound-pitch", label: "NASA — Speed of Sound",
+    sourceUrl: "https://www.nasa.gov/wp-content/uploads/2018/07/speed_of_sound_9-12.pdf",
+    match: [["son", "sons"], ["aigu", "aigue"], ["grave"]],
+    answer: "La hauteur d’un son dépend de sa fréquence : une fréquence plus élevée donne un son aigu, et une fréquence plus basse un son grave.",
+  },
 ];
 
 function normalize(value: string): string {

@@ -13,6 +13,9 @@ describe("findVerifiedPublicFact", () => {
     ["Quelle distinction y a-t-il entre une planète et une étoile ?", "planet-star"],
     ["À quelle condition l’eau entre-t-elle en ébullition ?", "boiling"],
     ["Comment les gouttelettes deviennent-elles de la pluie ?", "rain"],
+    ["Pourquoi le jour et la nuit se succèdent-ils ?", "day-night"],
+    ["Pourquoi la glace flotte-t-elle sur l’eau ?", "ice-density"],
+    ["Quelle est la différence entre un son aigu et un son grave ?", "sound-pitch"],
   ])("retrieves a verified local fact for a French paraphrase", (question, id) => {
     const fact = findVerifiedPublicFact(question);
     expect(fact).toMatchObject({ id, answer: expect.any(String), sourceUrl: expect.stringMatching(/^https:\/\//) });
@@ -26,6 +29,9 @@ describe("findVerifiedPublicFact", () => {
   it.each([
     ["Pourquoi le ciel paraît bleu ?", "longueurs d'onde courtes"],
     ["Pourquoi l’eau bout-elle ?", "se transforme en vapeur"],
+    ["Pourquoi le jour et la nuit se succèdent-ils ?", "tourne sur son axe"],
+    ["Pourquoi la glace flotte-t-elle sur l’eau ?", "moins dense que l’eau liquide"],
+    ["Quelle est la différence entre un son aigu et un son grave ?", "fréquence"],
   ])("keeps the key explanatory phrase in the sourced answer", (question, phrase) => {
     expect(findVerifiedPublicFact(question)?.answer).toContain(phrase);
   });

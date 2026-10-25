@@ -11,6 +11,12 @@ it('retains a zero-debt restriction in an extended patient population',()=>{
  const plan=patientQueryContract('Combien de femmes sans impayés parmi les patients actifs ?',asOf);
  expect(plan.unsupported).toEqual([]);expect(plan.filterGroups[0]).toContainEqual({field:'outstanding_balance',op:'eq',value:0});
 });
+it('keeps ID presence and phone absence together in a named patient-list read',()=>{
+ const plan=patientQueryContract('Quels dossiers ont une CNI renseignée mais aucun numéro de téléphone ?',asOf);
+ expect(plan.unsupported).toEqual([]);
+ expect(plan.filterGroups).toEqual([[{field:'identity_card',op:'present',value:null},{field:'phone',op:'missing',value:null}]]);
+ expect(plan.extended).toBe(true);
+});
 it('keeps an unresolved coordinated field instead of reading a broader population',()=>{
  const plan=patientQueryContract('Combien de patients avec téléphone et CNI ?',asOf);
  expect(plan.unsupported).toContain('Condition de présence ou d’absence non résolue : carte d’identité');
