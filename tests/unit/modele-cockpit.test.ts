@@ -7,6 +7,8 @@ import { describe, expect, it } from "vitest";
 import {
   ajouterPiste,
   appliquerFocus,
+  phraseEchelleDatee,
+  progressionNote,
   sensDelta,
   texteDelta,
 } from "../../src/components/consultation/cockpit/modele-cockpit";
@@ -41,6 +43,24 @@ describe("texteDelta", () => {
     expect(texteDelta(-3)).toBe("−3");
     expect(texteDelta(0)).toBe("0");
     expect(texteDelta(null)).toBeNull();
+  });
+});
+
+describe("phraseEchelleDatee", () => {
+  it("recopie toujours la date du résultat, jamais une date implicite", () => {
+    expect(phraseEchelleDatee(echelle(-3, true), "18/08/2026")).toBe(
+      "PHQ-9 (18/08/2026) : 12 (modéré)",
+    );
+  });
+});
+
+describe("progressionNote", () => {
+  it("compte les quatre rubriques, pas seulement trois", () => {
+    expect(progressionNote({ subjective: "a", objective: "b", assessment: "", plan: "" })).toBe(2);
+    expect(progressionNote({ subjective: "", objective: "", assessment: "", plan: "" })).toBe(0);
+    expect(
+      progressionNote({ subjective: "a", objective: "b", assessment: "c", plan: "d" }),
+    ).toBe(4);
   });
 });
 

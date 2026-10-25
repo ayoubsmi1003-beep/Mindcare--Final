@@ -586,7 +586,7 @@ function TiroirHistorique({
           <h2 className="font-ui text-heading font-semibold tracking-heading text-ink-900">
             {fr.patients.traitementsV2.historiqueTitre}
           </h2>
-          <Bouton rang="discret" onClick={onFermer} aria-label={fr.patients.traitementsV2.fermer}>
+          <Bouton rang="discret" onClick={onFermer} etiquette={fr.patients.traitementsV2.fermer}>
             ✕
           </Bouton>
         </div>

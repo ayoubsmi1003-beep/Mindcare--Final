@@ -7,49 +7,20 @@ import {
   Bouton,
   EtatVide,
   PastilleIcone,
+  SectionPliable,
 } from "@/components/ui";
 import { Icone } from "@/components/ui/Icones";
 import { PanneauHistorique } from "@/components/consultation/PanneauHistorique";
 import { CourbeEchelles } from "@/components/consultation/cockpit/CourbeEchelles";
+import { DepuisDerniere } from "@/components/consultation/cockpit/DepuisDerniere";
 import { dateCivile } from "@/components/patients/format";
 import { PanneauTraitements } from "@/components/patients/PanneauTraitements";
 import { fr } from "@/i18n/fr";
+import { frConsultationCockpit } from "@/i18n/consultation-cockpit";
 import type { PatientWorkspace } from "@/services/patients";
 
 function dateCourte(iso: string): string {
   return dateCivile(iso.slice(0, 10)) ?? iso.slice(0, 10);
-}
-
-function MiniChronologie({ dossier }: { readonly dossier: PatientWorkspace }): React.JSX.Element {
-  const cockpit = fr.consultation.cockpit;
-  const precedent = dossier.clinique?.derniereConsultation ?? null;
-  const prochain = dossier.agenda.prochainRendezVous;
-
-  return (
-    <div className="flex items-start gap-2 rounded-2xl border border-rule bg-card px-4 py-3 shadow-douce">
-      <div className="flex min-w-0 flex-1 flex-col items-center gap-1 text-center">
-        <span aria-hidden="true" className="h-2.5 w-2.5 rounded-full bg-action-600" />
-        <span className="font-ui text-label font-medium tabular-nums text-ink-900">
-          {precedent === null ? cockpit.sansPrecedente : dateCourte(precedent.startedAt)}
-        </span>
-      </div>
-      <span aria-hidden="true" className="mt-1 h-px min-w-6 flex-1 bg-rule" />
-      <div className="flex min-w-0 flex-1 flex-col items-center gap-1 text-center">
-        <span
-          aria-hidden="true"
-          className="h-2.5 w-2.5 rounded-full border-2 border-action-600 bg-card"
-        />
-        <span className="font-ui text-label font-semibold text-ink-900">{cockpit.aujourdhui}</span>
-      </div>
-      <span aria-hidden="true" className="mt-1 h-px min-w-6 flex-1 bg-rule" />
-      <div className="flex min-w-0 flex-1 flex-col items-center gap-1 text-center">
-        <span aria-hidden="true" className="h-2.5 w-2.5 rounded-full border border-ink-300" />
-        <span className="font-ui text-label font-medium tabular-nums text-ink-900">
-          {prochain === null ? cockpit.sansProchain : dateCourte(prochain.startsAt)}
-        </span>
-      </div>
-    </div>
-  );
 }
 
 function AppercuTraitement({
@@ -179,8 +150,8 @@ export function RailContexte({
               action={<Bouton onClick={onReessayer}>{fr.actions.reessayer}</Bouton>}
             />
           ) : dossier === undefined ? (
-            // UN SEUL GESTE DE CHARGEMENT : le CTA vit dans la colonne patient
-            // (état partagé) — le rail dit l'attente au lieu de la dupliquer.
+            // UN SEUL GESTE DE CHARGEMENT : la bande patient porte l'état
+            // partagé — le rail dit l'attente au lieu de la dupliquer.
             // Aucune lecture ne part d'ici (O5) : `onCharger` n'est plus appelé
             // depuis ce rail.
             <div className="flex flex-col gap-2 rounded-2xl border border-dashed border-ink-300 bg-layer-surface p-4">
@@ -190,22 +161,12 @@ export function RailContexte({
             <EtatVide message={cockpit.contexteInaccessible} icone="patients" />
           ) : (
             <>
-              <MiniChronologie dossier={dossier} />
-
               {patientId === null ? null : (
                 <div className="flex flex-col gap-3 rounded-2xl border border-rule bg-card p-4 shadow-douce">
                   <TitreRail
                     icone="horloge"
                     teinte="border-azure-100 bg-tuile-azur text-azure-700"
-                    titre={cockpit.derniereTitre}
-                    action={
-                      dossier.clinique?.derniereConsultation === null ||
-                      dossier.clinique?.derniereConsultation === undefined ? null : (
-                        <span className="font-ui text-label tabular-nums text-ink-500">
-                          {dateCourte(dossier.clinique.derniereConsultation.startedAt)}
-                        </span>
-                      )
-                    }
+                    titre={frConsultationCockpit.precedentesTitre}
                   />
                   <PanneauHistorique
                     patientId={patientId}
@@ -235,6 +196,13 @@ export function RailContexte({
                   />
                 )}
               </div>
+
+              <SectionPliable
+                titre={frConsultationCockpit.reperesDossier}
+                replieParDefaut
+              >
+                <DepuisDerniere espace={dossier} />
+              </SectionPliable>
 
               <CourbeEchelles echelles={dossier.clinique?.echelles ?? []} />
             </>

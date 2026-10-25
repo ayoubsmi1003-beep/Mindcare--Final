@@ -1,10 +1,9 @@
 "use client";
 
-import { EtatVide } from "@/components/ui";
 import { Icone } from "@/components/ui/Icones";
 import { couleurTrait, type Famille } from "@/components/ui/Graphes";
 import { dateCivile } from "@/components/patients/format";
-import { fr } from "@/i18n/fr";
+import { frConsultationCockpit } from "@/i18n/consultation-cockpit";
 import type { EchelleResume } from "@/services/patients";
 
 const SERIES: readonly Famille[] = ["emeraude", "azure", "violet"];
@@ -27,9 +26,7 @@ export function CourbeEchelles({
   echelles,
 }: {
   readonly echelles: readonly EchelleResume[];
-}): React.JSX.Element {
-  const cockpit = fr.consultation.cockpit;
-
+}): React.JSX.Element | null {
   const tracables = echelles.filter(
     (e) =>
       e.precedent !== null &&
@@ -46,9 +43,14 @@ export function CourbeEchelles({
       ? null
       : `${dateCourte(bornes[0] ?? "")} → ${dateCourte(bornes[bornes.length - 1] ?? "")}`;
 
+  // Une courbe à un seul point n'est pas une évolution. Le rail n'affiche
+  // rien plutôt qu'une carte vide : la dernière valeur est déjà dans la
+  // section « Échelles » et dans le dossier.
+  if (tracables.length === 0) return null;
+
   return (
     <section
-      aria-label={fr.consultation.evolutionTitre}
+      aria-label={frConsultationCockpit.courbeTitre}
       className="flex scroll-mt-28 flex-col gap-3 rounded-2xl border border-rule bg-card p-4 shadow-douce"
     >
       <div className="flex flex-wrap items-center justify-between gap-3">
@@ -57,7 +59,7 @@ export function CourbeEchelles({
             <Icone nom="statistiques" taille={20} />
           </span>
           <h2 className="font-ui text-heading font-bold text-ink-900">
-            {fr.consultation.evolutionTitre}
+            {frConsultationCockpit.courbeTitre}
           </h2>
         </div>
         {periode === null ? null : (
@@ -65,11 +67,8 @@ export function CourbeEchelles({
         )}
       </div>
 
-      {tracables.length === 0 ? (
-        <EtatVide message={cockpit.courbeVide} icone="statistiques" />
-      ) : (
-        <ul className="m-0 flex list-none flex-col p-0">
-          {tracables.slice(0, 3).map((e, i) => {
+      <ul className="m-0 flex list-none flex-col p-0">
+        {tracables.slice(0, 3).map((e, i) => {
             const famille = SERIES[i % SERIES.length] ?? "emeraude";
             const avant = e.precedent?.score ?? 0;
             const apres = e.dernier.score ?? 0;
@@ -120,8 +119,7 @@ export function CourbeEchelles({
               </li>
             );
           })}
-        </ul>
-      )}
+      </ul>
     </section>
   );
 }

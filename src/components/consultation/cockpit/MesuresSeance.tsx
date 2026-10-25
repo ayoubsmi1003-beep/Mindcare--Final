@@ -1,17 +1,17 @@
 "use client";
 
-import { fr } from "@/i18n/fr";
 import { frConsultationCockpit } from "@/i18n/consultation-cockpit";
 
-import { SelecteurEchelle } from "./SelecteurEchelle";
+import { SelecteurNote } from "./SelecteurNote";
 
 /**
- * Mesures de séance 1–10 — Anxiété / Sommeil / Humeur.
+ * Repères de séance 1–10 — Anxiété / Sommeil / Humeur.
  *
- * V11 : UNE carte, TROIS lignes compactes (curseur + 1-clic), UNE aide.
- * `onMesurer(cle, valeur)` met à jour les valeurs locales de l'écran.
- * Les cinq notes restent à la rédaction de la praticienne.
- * Label texte obligatoire, teinte unique verte — pas de gradient sévérité.
+ * ⚠️ CE NE SONT PAS DES ÉCHELLES VALIDÉES. Le mot « échelle » est réservé aux
+ * instruments du référentiel (PHQ-9, GAD-7…), avec leurs items et leur barème.
+ * Ces trois repères sont des impressions de séance, enregistrées dans
+ * `sessionDetails` avec la convention `difficulty-v1` ; ils ne doivent jamais
+ * être lus comme un score clinique. Le badge et l'aide le disent.
  */
 export type CleMesure = "anxiete" | "sommeil" | "humeur";
 
@@ -24,22 +24,22 @@ export function MesuresSeance({
   readonly onMesurer: (cle: CleMesure, valeur: number) => void;
   readonly modifiable: boolean;
 }): React.JSX.Element {
-  const cockpit = fr.consultation.cockpit;
   const renseignees = [valeurs.anxiete, valeurs.sommeil, valeurs.humeur].filter(
     (v) => v !== null,
   ).length;
+
   return (
     <section
-      aria-label={cockpit.mesuresTitre}
-      className="flex scroll-mt-28 flex-col gap-1 rounded-2xl border border-rule bg-card p-5 shadow-elevee"
+      aria-label={frConsultationCockpit.mesuresTitre}
+      className="flex scroll-mt-28 flex-col gap-1 rounded-2xl border border-rule bg-card p-4 shadow-douce"
     >
       <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
         <div className="flex min-w-0 items-baseline gap-3">
           <h2 className="text-balance font-ui text-title font-bold text-ink-900">
-            {cockpit.mesuresTitre}
+            {frConsultationCockpit.mesuresTitre}
           </h2>
-          <span className="shrink-0 rounded-full bg-layer-surface px-2.5 py-0.5 font-ui text-label font-semibold tabular-nums text-ink-700">
-            {cockpit.mesuresEchelle}
+          <span className="shrink-0 rounded-full bg-layer-surface px-2.5 py-0.5 font-ui text-label font-semibold text-ink-700">
+            {frConsultationCockpit.mesuresNonValidees}
           </span>
         </div>
         <p className="m-0 shrink-0 font-ui text-label font-semibold tabular-nums text-ink-500">
@@ -48,21 +48,21 @@ export function MesuresSeance({
       </div>
       <p className="m-0 font-ui text-label text-ink-500">{frConsultationCockpit.mesuresAide}</p>
       <div className="divide-y divide-rule">
-        <SelecteurEchelle
+        <SelecteurNote
           id="mesure-anxiete"
-          libelle="Anxiété"
+          libelle={frConsultationCockpit.anxiete}
           valeur={valeurs.anxiete}
           onChoisir={(v) => onMesurer("anxiete", v)}
           modifiable={modifiable}
         />
-        <SelecteurEchelle
+        <SelecteurNote
           id="mesure-sommeil"
           libelle={frConsultationCockpit.sommeil}
           valeur={valeurs.sommeil}
           onChoisir={(v) => onMesurer("sommeil", v)}
           modifiable={modifiable}
         />
-        <SelecteurEchelle
+        <SelecteurNote
           id="mesure-humeur"
           libelle={frConsultationCockpit.humeur}
           valeur={valeurs.humeur}

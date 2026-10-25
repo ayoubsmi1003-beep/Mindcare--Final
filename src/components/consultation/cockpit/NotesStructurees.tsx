@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 import { Bouton, ChampTexte, ChampZoneTexte } from "@/components/ui";
 import { fr } from "@/i18n/fr";
@@ -90,6 +90,53 @@ export function NotesStructurees({
   const [actif, setActif] = useState<ChampSoap>("subjective");
   const [favoris, setFavoris] = useState<Favoris>(lireFavoris);
   const [saisieFavori, setSaisieFavori] = useState("");
+  const refsOnglets = useRef<Record<ChampSoap, HTMLButtonElement | null>>({
+    subjective: null,
+    objective: null,
+    assessment: null,
+    plan: null,
+  });
+
+  function choisirOnglet(champ: ChampSoap, focus = true): void {
+    setActif(champ);
+    setSaisieFavori("");
+    if (focus) {
+      requestAnimationFrame(() => refsOnglets.current[champ]?.focus());
+    }
+  }
+
+  /**
+   * Navigation clavier d'un vrai tablist WAI-ARIA : flèches, Home, End.
+   * Sans elle, `role="tab"` promet un comportement que le clavier ne tient pas.
+   */
+  function surToucheOnglet(
+    event: React.KeyboardEvent<HTMLButtonElement>,
+    index: number,
+  ): void {
+    const dernier = CHAMPS_SOAP.length - 1;
+    let cible: ChampSoap | null = null;
+    switch (event.key) {
+      case "ArrowRight":
+      case "ArrowDown":
+        cible = CHAMPS_SOAP[(index + 1) % CHAMPS_SOAP.length] ?? null;
+        break;
+      case "ArrowLeft":
+      case "ArrowUp":
+        cible = CHAMPS_SOAP[(index - 1 + CHAMPS_SOAP.length) % CHAMPS_SOAP.length] ?? null;
+        break;
+      case "Home":
+        cible = CHAMPS_SOAP[0] ?? null;
+        break;
+      case "End":
+        cible = CHAMPS_SOAP[dernier] ?? null;
+        break;
+      default:
+        return;
+    }
+    if (cible === null) return;
+    event.preventDefault();
+    choisirOnglet(cible);
+  }
 
   function memoriser(): void {
     const propre = saisieFavori.trim().slice(0, LONGUEUR_MAX_FAVORI);
@@ -129,20 +176,24 @@ export function NotesStructurees({
       </div>
 
       <div role="tablist" aria-label={cockpit.notesTitre} className="flex flex-wrap gap-2">
-        {CHAMPS_SOAP.map((champ) => {
+        {CHAMPS_SOAP.map((champ, index) => {
           const onglet = ONGLETS[champ];
           const estActif = champ === actif;
           const rempli = soap[champ].trim() !== "";
           return (
             <button
               key={champ}
+              id={`onglet-${champ}`}
               type="button"
               role="tab"
               aria-selected={estActif}
-              onClick={() => {
-                setActif(champ);
-                setSaisieFavori("");
+              aria-controls={`panneau-${champ}`}
+              tabIndex={estActif ? 0 : -1}
+              ref={(element) => {
+                refsOnglets.current[champ] = element;
               }}
+              onClick={() => choisirOnglet(champ, false)}
+              onKeyDown={(event) => surToucheOnglet(event, index)}
               className={[
                 "inline-flex min-h-target items-center gap-2 rounded-xl border px-3 py-2",
                 "font-ui text-body font-semibold",
@@ -180,9 +231,11 @@ export function NotesStructurees({
       {CHAMPS_SOAP.map((champ) => (
         <div
           key={champ}
+          id={`panneau-${champ}`}
+          role="tabpanel"
+          aria-labelledby={`onglet-${champ}`}
           hidden={champ !== actif}
-          {...(champ === actif ? { role: "tabpanel" } : {})}
-          className="flex-col gap-3"
+          className={champ === actif ? "flex flex-col gap-3" : "hidden"}
         >
           <ChampZoneTexte
             libelle={libelles[champ].titre}
@@ -217,7 +270,7 @@ export function NotesStructurees({
                 <Bouton
                   rang="discret"
                   onClick={() => retirer(f)}
-                  aria-label={`${cockpit.favoriRetirer} — ${f}`}
+                  etiquette={`${cockpit.favoriRetirer} — ${f}`}
                 >
                   ×
                 </Bouton>
@@ -228,18 +281,23 @@ export function NotesStructurees({
       </div>
 
       {modifiable ? (
-        <div className="flex flex-wrap items-end gap-2 border-t border-rule pt-4">
-          <span className="min-w-40 flex-1">
-            <ChampTexte
-              libelle={`${cockpit.favorisTitre} — ${libelles[actif].titre}`}
-              valeur={saisieFavori}
-              onChange={setSaisieFavori}
-            />
-          </span>
-          <Bouton rang="discret" onClick={memoriser}>
-            {cockpit.favoriMemoriser}
-          </Bouton>
-        </div>
+        <details className="border-t border-rule pt-3">
+          <summary className="cursor-pointer font-ui text-label font-medium text-ink-500">
+            {cockpit.favorisTitre} — {libelles[actif].titre}
+          </summary>
+          <div className="mt-3 flex flex-wrap items-end gap-2">
+            <span className="min-w-40 flex-1">
+              <ChampTexte
+                libelle={libelles[actif].titre}
+                valeur={saisieFavori}
+                onChange={setSaisieFavori}
+              />
+            </span>
+            <Bouton rang="discret" onClick={memoriser}>
+              {cockpit.favoriMemoriser}
+            </Bouton>
+          </div>
+        </details>
       ) : null}
     </section>
   );

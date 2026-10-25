@@ -1,11 +1,81 @@
 // Compléments du cockpit : `fr.ts` reste gelé jusqu'à la découpe Phase 6.
 export const frConsultationCockpit = {
-  mesuresAide: "Mesures enregistrées avec la séance : 1 = difficulté minimale, 10 = difficulté maximale. Les notes restent séparées.",
+  mesuresTitre: "Repères de séance",
+  mesuresAide:
+    "Impression clinique de séance, non validée : 1 = difficulté minimale, 10 = difficulté maximale. Enregistrée avec la séance, jamais dans la note signée.",
+  anxiete: "Anxiété",
   sommeil: 'Difficultés de sommeil',
   humeur: 'Humeur dégradée',
+  mesuresNonValidees: "1–10 · non validés",
+  echelles: {
+    titre: "Échelles",
+    sousTitre:
+      "Résultats du dossier et de la séance en cours. Un résultat antérieur n'est pas une mesure d'aujourd'hui.",
+    vide:
+      "Aucune échelle enregistrée pour ce dossier. Les résultats validés apparaîtront ici.",
+    activation:
+      "La saisie d'une nouvelle échelle sera disponible lorsque le référentiel clinique sera validé. Les résultats antérieurs restent consultables.",
+    resultatAnterieur: "Résultat au dossier",
+    inscrire: "Inscrire dans Objectif",
+    erreurIndisponible:
+      "Le référentiel d'échelles est momentanément indisponible. Aucune donnée n'a été modifiée.",
+    reponseIncoherente:
+      "La réponse du référentiel d'échelles ne respecte pas le contrat attendu. Aucune donnée n'a été modifiée.",
+    enregistrementImpossible:
+      "L'échelle n'a pas pu être enregistrée. Vos réponses restent à l'écran ; réessayez.",
+    completer: "Compléter",
+    verifier: "Vérifier les réponses",
+    enregistrer: "Enregistrer l'échelle",
+    modifier: "Modifier les réponses",
+    progression: (n: number, total: number): string => `${String(n)}/${String(total)} réponses`,
+    reponsesManquantes: "Répondez à tous les items avant de vérifier.",
+    revueTitre: "Vérifier avant d'enregistrer",
+    scoreCalcule: "Score calculé par la base",
+    alertesTitre: "Point de vigilance",
+    seanceEnCours: "Séance en cours",
+    dernierResultat: "Dernier résultat au dossier",
+    inscrireAlerte: "Inscrire l'alerte dans l'évaluation",
+    aucuneReponse: "Aucune réponse enregistrée pour cette échelle.",
+    fermerSansEnregistrer:
+      "Les réponses ne sont pas enregistrées. Fermer sans enregistrer ?",
+    seanceClosee:
+      "La séance n'est plus ouverte. L'échelle n'a pas été enregistrée.",
+    enregistree: "Échelle enregistrée.",
+    scoreSur: (total: number, max: number): string => `${String(total)} / ${String(max)}`,
+    choisirOption: "Choisissez une réponse pour chaque item.",
+    historiqueTitre: "Historique complet",
+    referentielIndisponible: "Le référentiel d'échelles n'a pas pu être chargé.",
+    historiqueIndisponible: "L'historique des échelles n'a pas pu être chargé.",
+    consultationClosee: "Séance terminée : consultation seule.",
+    sansDossier: "Aucun dossier n'est rattaché à cette séance.",
+    alertePositive: "Item de risque positif",
+  },
+  progression: {
+    note: "Note clinique",
+    echelles: "Échelles",
+    signature: "Signature",
+    nonSignee: "Non signée",
+    signee: "Signée",
+    noteVide: "Note vide",
+  },
+  courbeTitre: "Évolution des échelles",
+  precedentesTitre: "Séances précédentes",
+  reperesDossier: "Repères du dossier",
+  noteFigeeTitre: "Séance terminée",
+  noteFigee:
+    "La note signée est en lecture seule. Une correction passe par un amendement.",
+  noteNonSigneeTitre: "Séance terminée sans note signée",
+  noteNonSignee:
+    "La note n'a pas été signée. Elle reste consultable, mais la séance étant terminée, elle ne peut plus être signée.",
+  focusOptionsSecondaires: ["Traitement", "Travail", "Relations", "Événement récent"],
+  aucunDiagnostic: "Aucun diagnostic actif au dossier.",
+  prochainRdv: "Prochain rendez-vous",
+  consultations: (n: number): string =>
+    `${String(n)} ${n >= 2 ? "consultations" : "consultation"}`,
+  resultats: (n: number): string => `${String(n)} ${n >= 2 ? "résultats" : "résultat"}`,
   reperes: {
     titre: "Repères pour la consultation",
-    aide: "Changements documentés et points à vérifier",
+    aide: "Points à vérifier issus du résumé du cas.",
     faits: "Données du dossier",
     derniers: "Derniers repères",
     verifier: "À vérifier",

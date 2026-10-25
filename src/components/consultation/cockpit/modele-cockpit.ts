@@ -33,6 +33,28 @@ export function texteDelta(delta: number | null): string | null {
 }
 
 /**
+ * Phrase recopiée dans Objectif quand la praticienne choisit « Inscrire ».
+ *
+ * ⚠️ LA DATE EST OBLIGATOIRE. Un score d'août recopié sans date dans la note
+ * du jour se lit comme une mesure d'aujourd'hui : c'est une falsification
+ * involontaire du dossier. Le score et l'interprétation sont ceux du dossier,
+ * jamais recalculés ici.
+ */
+export function phraseEchelleDatee(echelle: EchelleResume, date: string): string {
+  const score = echelle.dernier.score === null ? "" : ` ${String(echelle.dernier.score)}`;
+  const lecture =
+    echelle.dernier.interpretation === null ? "" : ` (${echelle.dernier.interpretation})`;
+  return `${echelle.scaleName} (${date}) :${score}${lecture}`;
+}
+
+/** Nombre de rubriques SOAP réellement remplies, pour la barre de séance. */
+export function progressionNote(soap: Readonly<Record<string, string>>): number {
+  return ["subjective", "objective", "assessment", "plan"].filter(
+    (champ) => (soap[champ] ?? "").trim() !== "",
+  ).length;
+}
+
+/**
  * Préfixe `Focus : a, b — ` au subjectif. Idempotent : un marqueur existant
  * est remplacé, jamais empilé. Sélection vide = texte inchangé (on ne
  * retire jamais une formulation du médecin par effet de bord).

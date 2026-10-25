@@ -89,9 +89,7 @@ export function TarifInline({
         className="inline-flex min-h-target items-center gap-1.5 rounded-full border border-rule bg-layer-surface px-3 py-1 font-ui text-label font-semibold tabular-nums text-ink-900"
       >
         <span aria-hidden="true" className="text-positive">✓</span>
-        <span>
-          {formaterDzd(montant)} {fr.consultation.cockpit.tarifDevise}
-        </span>
+        <span>{formaterDzd(montant)}</span>
       </span>
     );
   }

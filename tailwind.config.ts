@@ -893,6 +893,10 @@ const config: Config = {
         // 65-75ch est le plancher de lisibilité ; en dessous le texte hache,
         // au-dessus l'œil perd la ligne suivante.
         lecture: "70ch",
+        // La colonne de travail du cockpit : assez large pour la note et les
+        // mesures, assez bornée pour qu'un écran 1920 ne fasse pas une ligne
+        // de 200 caractères. 60rem = 960px, sous le seuil de lecture longue.
+        clinique: "60rem",
       },
       gridTemplateRows: {
         coquille: "var(--topbar-hauteur) minmax(0, 1fr)",
