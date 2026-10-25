@@ -16,8 +16,9 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { fr } from "@/i18n/fr";
 import { alexa } from "@/i18n/alexa";
 import { cn } from "@/lib/utils";
-import { abonnerVoixLocale, basculerVoixLocale, arreterVoixLocale } from "@/services/alexa-local";
-import type { VueVoix } from "@/services/jarvis-reveil";
+import { abonnerMainsLibres, arreterMainsLibres, demarrerMainsLibres, mainsLibresActif } from "@/services/voix-mains-libres";
+import { basculerVoixLocale, arreterVoixLocale } from "@/services/alexa-local";
+import { useVueVoixUnifiee } from "./voix-unifiee";
 import type { EtatConversationPublique } from "@/services/conversation";
 
 import { Icone } from "./ui/Icones";
@@ -76,11 +77,14 @@ export function SaisieAlexaLune({
     minHeight: 48,
     maxHeight: 150,
   });
-  const [voix, setVoix] = useState<VueVoix | null>(null);
-  useEffect(() => abonnerVoixLocale(setVoix), []);
-  const actif = voix !== null && voix.etat !== "desactive" && voix.etat !== "erreur";
-  const messageVoix = actif || voix?.etat === "erreur" ? voix?.raison ?? null : null;
+  const voix = useVueVoixUnifiee();
+  const [mainsLibres, setMainsLibres] = useState(mainsLibresActif());
+  useEffect(() => abonnerMainsLibres(setMainsLibres), []);
+  // `veille` (réveil armé, rien en cours) ne bloque pas le clavier.
+  const actif = voix.etat === "reveille" || voix.etat === "ecoute" || voix.etat === "traitement" || voix.etat === "parole" || voix.etat === "interrompu";
+  const messageVoix = actif || voix.etat === "erreur" ? voix.raison ?? null : null;
   const libelleVoix = actif ? alexa.voixArreter : alexa.voixDemarrer;
+  const libelleMainsLibres = mainsLibres ? alexa.mainsLibresArreter : alexa.mainsLibresActiver;
 
   const fluxEnCours = etat.etat === "envoi" || etat.etat === "flux";
   const bloque = fluxEnCours || etat.carteEcriture !== null || actif;
@@ -143,7 +147,7 @@ export function SaisieAlexaLune({
                 onClick={basculerVoixLocale}
                 disabled={etat.carteEcriture !== null && !actif}
                 aria-label={libelleVoix}
-                title={voix?.raison ?? libelleVoix}
+                title={voix.raison ?? libelleVoix}
                 aria-pressed={actif}
                 className={cn(
                   "inline-flex min-h-target min-w-0 select-none items-center justify-center rounded-md border px-3 font-ui text-label transition duration-quick ease-soft",
@@ -159,6 +163,25 @@ export function SaisieAlexaLune({
                 <span className="truncate pl-2">
                   {libelleVoix}
                 </span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => {
+                  if (mainsLibres) arreterMainsLibres();
+                  else void demarrerMainsLibres();
+                }}
+                aria-label={libelleMainsLibres}
+                title={libelleMainsLibres}
+                aria-pressed={mainsLibres}
+                className={cn(
+                  "inline-flex min-h-target min-w-target shrink-0 cursor-pointer items-center justify-center rounded-full border transition duration-quick ease-soft",
+                  mainsLibres
+                    ? "border-ai-500 bg-ai-50 text-ai-600"
+                    : "cursor-pointer border-night-rule bg-transparent text-night-ink-soft hover:bg-chrome-survol hover:text-night-ink",
+                )}
+              >
+                <Icone nom="jarvis" taille={16} />
               </button>
 
               {/* L'ENVOI — géométrie de la référence, émeraude quand actif. */}

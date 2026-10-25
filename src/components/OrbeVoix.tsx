@@ -30,8 +30,9 @@ import { useEffect, useRef, useState } from "react";
 
 import { fr } from "@/i18n/fr";
 import { alexa } from "@/i18n/alexa";
-import { abonnerVoixLocale, basculerVoixLocale, niveauVoixLocale } from "@/services/alexa-local";
-import type { EtatVoix, VueVoix } from "@/services/jarvis-reveil";
+import { basculerVoixLocale, niveauVoixLocale } from "@/services/alexa-local";
+import type { EtatVoix } from "@/services/jarvis-reveil";
+import { useVueVoixUnifiee } from "./voix-unifiee";
 
 import { AvatarAlexa } from "./ui/avatar-alexa";
 import { VagueAlexa, vagueDisponible } from "./ui/vague-alexa";
@@ -62,16 +63,15 @@ interface Props {
 }
 
 export function OrbeVoix({ taille = 32 }: Props): React.JSX.Element {
-  const [vue, setVue] = useState<VueVoix | null>(null);
+  const vue = useVueVoixUnifiee();
   const noyauRef = useRef<HTMLSpanElement>(null);
   const [vagueOk, setVagueOk] = useState(false);
 
-  useEffect(() => abonnerVoixLocale(setVue), []);
   useEffect(() => {
     setVagueOk(vagueDisponible());
   }, []);
 
-  const etat = vue?.etat ?? "desactive";
+  const etat = vue.etat;
 
   // La boucle d'amplitude ne tourne QUE pendant l'écoute : ailleurs, il n'y a
   // rien à mesurer, et une boucle `rAF` permanente réveillerait le processeur
@@ -92,7 +92,7 @@ export function OrbeVoix({ taille = 32 }: Props): React.JSX.Element {
 
   // The original click unlocks local capture; another click closes the microphone.
   const libelle = etat === "desactive" ? alexa.voixDemarrer : fr.jarvis.voix.reveil.etats[etat];
-  const detail = vue?.raison ?? libelle;
+  const detail = vue.raison ?? libelle;
   const apparence = APPARENCE[etat];
   // ⚠️ « désactivé » N'EST PAS « inerte ». L'orbe éteint reste cliquable —
   // c'est le geste qui allume la voix. Le désactiver vraiment enfermerait la

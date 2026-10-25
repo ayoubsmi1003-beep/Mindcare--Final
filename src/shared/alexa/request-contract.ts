@@ -110,8 +110,13 @@ export const patientConditionMentions=mentions;
 /** Predicate admission is independent of a model-generated goal or cited database value. */
 export function patientConditionsGrounded(conditions:readonly SupportedCondition[],text:string):boolean {
   const plain=fold(text),missing=/\bsans\b|\baucun\w*\b|\bpas\b|\bmanquant\w*\b|\bmanque\w*\b|\bnuls?\b|\babsences?\b|\babsent\w*\b|\binconnu\w*\b|\bnon\s+(?:renseigne\w*|enregistre\w*)\b|\bvides?\b/u.test(plain);
+ const groups=/\bou\b/u.test(plain)?explicitPatientCountFilterGroups(text):null;
+ if(/\bou\b/u.test(plain)){
+  if(!groups)return false;
+  const expected=groups.flat().map(key).sort(),actual=conditions.map(key).sort();if(expected.length!==actual.length||expected.some((value,index)=>value!==actual[index]))return false;
+ }
  const numeric=['age','completed_consultations','outstanding_balance'] as const;
- for(const field of numeric){let min=Number.NEGATIVE_INFINITY,max=Number.POSITIVE_INFINITY;for(const c of conditions.filter(item=>item.field===field&&typeof item.value==='number')){const n=c.value as number;if(c.op==='gte')min=Math.max(min,n);if(c.op==='gt')min=Math.max(min,n+1);if(c.op==='lt')max=Math.min(max,n-1);if(c.op==='eq'){min=Math.max(min,n);max=Math.min(max,n);}}if(min>max)return false;}
+ for(const group of groups??[conditions])for(const field of numeric){let min=Number.NEGATIVE_INFINITY,max=Number.POSITIVE_INFINITY;for(const c of group.filter(item=>item.field===field&&typeof item.value==='number')){const n=c.value as number;if(c.op==='gte')min=Math.max(min,n);if(c.op==='gt')min=Math.max(min,n+1);if(c.op==='lt')max=Math.min(max,n-1);if(c.op==='eq'){min=Math.max(min,n);max=Math.min(max,n);}}if(min>max)return false;}
  const explicit=explicitConditions(text)??[];
  return conditions.every(condition=>{
   if(!mentions[condition.field].test(plain)||(condition.op==='missing'&&!missing))return false;
@@ -122,16 +127,22 @@ export function patientConditionsGrounded(conditions:readonly SupportedCondition
 /** Conservative checks for the explicit count vocabulary already in the capability contract. */
 function explicitConditions(text:string):SupportedCondition[]|null {
  const numbers:Record<string,string>={zero:'0',un:'1',une:'1',deux:'2',trois:'3',quatre:'4',cinq:'5',six:'6',sept:'7',huit:'8',neuf:'9',dix:'10',onze:'11',douze:'12',treize:'13',quatorze:'14',quinze:'15',seize:'16','dix-sept':'17','dix-huit':'18','dix-huitieme':'18','dix-neuf':'19',vingt:'20'};
-  const value=fold(text).replace(/\b(?:dix[- ]huitieme|dix[- ](?:sept|huit|neuf)|zero|un|une|deux|trois|quatre|cinq|six|sept|huit|neuf|dix|onze|douze|treize|quatorze|quinze|seize|vingt)\b/gu,word=>numbers[word.replace(/ /gu,'-')]!),conditions:SupportedCondition[]=[],missing=/\bsans\b|\baucun\w*\b|\bpas\b|\bmanquant\w*\b|\bmanque\w*\b|\bnuls?\b|\babsences?\b|\babsent\w*\b|\bnon\s+(?:renseigne\w*|enregistre\w*)\b|\bvides?\b/u.test(value);
+ const value=fold(text).replace(/\b(?:dix[- ]huitieme|dix[- ](?:sept|huit|neuf)|zero|un|une|deux|trois|quatre|cinq|six|sept|huit|neuf|dix|onze|douze|treize|quatorze|quinze|seize|vingt)\b/gu,word=>numbers[word.replace(/ /gu,'-')]!),conditions:SupportedCondition[]=[],missing=/\bsans\b|\baucun\w*\b|\bpas\b|\bmanquant\w*\b|\bmanque\w*\b|\bnuls?\b|\babsences?\b|\babsent\w*\b|\bnon\s+(?:renseigne\w*|enregistre\w*)\b|\bvides?\b/u.test(value),documented=!missing&&/\b(?:avec|ayant|dont|qui\s+(?:a|ont)|possed\w*|dispos\w*)\b/u.test(value)&&/\b(?:renseigne\w*|enregistre\w*|presen\w*|indique\w*)\b/u.test(value);
  const add=(field:SupportedCondition['field'],op:SupportedCondition['op'],n:SupportedCondition['value'])=>{const condition={field,op,value:n};if(!conditions.some(existing=>key(existing)===key(condition)))conditions.push(condition);};
  if(missing&&/\b(?:identite|identification nationale|cni|carte nationale|carte d[' ]?identite|piece d[' ]?identite|document d[' ]?identite|numero national)\b/u.test(value))add('identity_card','missing',null);
+ if(documented&&/\b(?:identite|identification nationale|cni|carte nationale|carte d[' ]?identite|piece d[' ]?identite|document d[' ]?identite|numero national)\b/u.test(value))add('identity_card','present',null);
  if(missing&&/\btelephones?\b/u.test(value))add('phone','missing',null);
+ if(documented&&/\btelephones?\b/u.test(value))add('phone','present',null);
  if((missing&&/\bnaissance\b/u.test(value))||/\bage\s+(?:est\s+)?(?:inconnu|non renseigne|manquant)/u.test(value))add('birth_date','missing',null);
+ if(documented&&/\bnaissance\b/u.test(value))add('birth_date','present',null);
  if(missing&&/\bsexe\b/u.test(value))add('sex','missing',null);
+ if(documented&&/\bsexe\b/u.test(value))add('sex','present',null);
+ if(!missing&&/\bsexe\s+feminin\b/u.test(value))add('sex','eq','F');
+ if(!missing&&/\bsexe\s+masculin\b/u.test(value))add('sex','eq','M');
  if(/\b(?:enfants?|mineurs?)\b|moins de\s*18\s*ans|pas encore\s*18\s*ans|pas atteint\s+(?:leur\s+)?18\s+anniversaire/u.test(value))add('age','lt',18);
  else if(/\b(?:adultes?|majeurs?)\b|(?:au moins\s+18\s+ans?|18\s+ans?\s+ou\s+plus)/u.test(value))add('age','gte',18);
  for(const match of value.matchAll(/\b(moins de|au moins|plus de)\s*(\d+)\s*ans?\b/gu)){const age=Number(match[2]);if(age<=120)add('age',match[1]==='moins de'?'lt':match[1]==='au moins'?'gte':'gt',age);}
-  if(missing&&/\b(?:consult\w*|visites?|suivis?)\b/u.test(value)&&/(?:six|6)\s+(?:derniers?\s+)?mois/u.test(value))add('no_completed_months','eq',6);
+  if(missing&&/\b(?:consult\w*|visites?|suivis?|vus?)\b/u.test(value)&&/(?:six|6)\s+(?:derniers?\s+)?mois/u.test(value))add('no_completed_months','eq',6);
  const recent=/\b(?:aucune?|sans|pas de)\s+(?:consultations?|seances?|visites?)\s+(?:(?:termine|cloture|complete|clos|acheve)\w*\s+)?(?:depuis|dans les|au cours des)\s+(\d+)\s+(?:derniers\s+)?jours/gu;
  for(const m of value.matchAll(recent))if(Number(m[1])>0&&Number(m[1])<=3650)add('no_completed_days','eq',Number(m[1]));
  const minimum=/(?:au moins|au minimum|minimum(?: de)?|>=)\s*(\d+)\s+(?:consultations?|seances?)\s+(?:termine|cloture|complete|clos|acheve)\w*/gu;
@@ -142,6 +153,14 @@ function explicitConditions(text:string):SupportedCondition[]|null {
  return conditions.length?conditions:null;
 }
 export const explicitPatientConditions=explicitConditions;
+export function explicitPatientCountFilterGroups(text:string):SupportedCondition[][]|null {
+ const clauses=text.split(/\bou\b/iu);
+ if(clauses.length!==2)return null;
+ const threshold=/\b(?:moins de|au moins|plus de)\s*\d+\s*ans?\b/u;
+ const groups=clauses.map(clause=>explicitConditions(clause.trim()));
+ if(groups.some((group,index)=>!threshold.test(fold(clauses[index]!))||group?.length!==1||group[0]!.field!=='age'||!['lt','lte','gt','gte'].includes(group[0]!.op)||typeof group[0]!.value!=='number'))return null;
+ return groups as SupportedCondition[][];
+}
 export function countContractParts(contract:FrenchCountContract):RequestPart[]{return contract.clauses.map((goal,i)=>({id:'requested_'+(i+1),goal,tools:['query_patients'],population:requestedPopulation(goal),conditions:explicitConditions(goal)??[],dependsOn:[],status:'pending',resultRefs:[]}));}
 export function requestedPopulation(text:string):NonNullable<RequestPart['population']>{
  const plain=fold(text);

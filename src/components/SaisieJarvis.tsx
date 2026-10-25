@@ -6,8 +6,9 @@ import { useEffect, useRef, useState } from "react";
 
 import { fr } from "@/i18n/fr";
 import { alexa } from "@/i18n/alexa";
-import { abonnerVoixLocale, basculerVoixLocale } from "@/services/alexa-local";
-import type { VueVoix } from "@/services/jarvis-reveil";
+import { basculerVoixLocale } from "@/services/alexa-local";
+import { abonnerMainsLibres, arreterMainsLibres, demarrerMainsLibres, mainsLibresActif } from "@/services/voix-mains-libres";
+import { useVueVoixUnifiee } from "./voix-unifiee";
 import type { EtatConversationPublique } from "@/services/conversation";
 
 import { Icone } from "./ui/Icones";
@@ -24,11 +25,15 @@ export function SaisieJarvis({
   readonly onInterrompre: () => void;
 }): React.JSX.Element {
   const champRef = useRef<HTMLInputElement | null>(null);
-  const [voix, setVoix] = useState<VueVoix | null>(null);
-  useEffect(() => abonnerVoixLocale(setVoix), []);
-  const actif = voix !== null && voix.etat !== "desactive" && voix.etat !== "erreur";
-  const messageVoix = actif || voix?.etat === "erreur" ? voix?.raison ?? null : null;
+  const voix = useVueVoixUnifiee();
+  const [mainsLibres, setMainsLibres] = useState(mainsLibresActif());
+  useEffect(() => abonnerMainsLibres(setMainsLibres), []);
+  // `veille` (réveil armé, rien en cours) ne bloque pas le clavier : seule
+  // une voix engagée (réveil entendu, écoute, traitement, parole) le fait.
+  const actif = voix.etat === "reveille" || voix.etat === "ecoute" || voix.etat === "traitement" || voix.etat === "parole" || voix.etat === "interrompu";
+  const messageVoix = actif || voix.etat === "erreur" ? voix.raison ?? null : null;
   const libelleVoix = actif ? alexa.voixArreter : alexa.voixDemarrer;
+  const libelleMainsLibres = mainsLibres ? alexa.mainsLibresArreter : alexa.mainsLibresActiver;
 
   const fluxEnCours = etat.etat === "envoi" || etat.etat === "flux";
   const bloque = fluxEnCours || etat.carteEcriture !== null || actif;
@@ -83,7 +88,7 @@ export function SaisieJarvis({
               onClick={basculerVoixLocale}
               disabled={etat.carteEcriture !== null && !actif}
               aria-label={libelleVoix}
-              title={voix?.raison ?? libelleVoix}
+              title={voix.raison ?? libelleVoix}
               aria-pressed={actif}
               className={[
                 /*
@@ -114,6 +119,27 @@ export function SaisieJarvis({
               </span>
             </button>
 
+            {/* MAIN-LIBRES — interrupteur du réveil permanent, icône seule
+                (380 px : le libellé qui se réduit, c'est déjà la voix). */}
+            <button
+              type="button"
+              onClick={() => {
+                if (mainsLibres) arreterMainsLibres();
+                else void demarrerMainsLibres();
+              }}
+              aria-label={libelleMainsLibres}
+              title={libelleMainsLibres}
+              aria-pressed={mainsLibres}
+              className={[
+                "inline-flex min-h-target min-w-target shrink-0 cursor-pointer items-center justify-center rounded-full border transition duration-quick ease-soft",
+                mainsLibres
+                  ? "border-ai-500 bg-ai-50 text-ai-600"
+                  : "border-rule bg-paper text-ink-700 hover:bg-sunken",
+              ].join(" ")}
+            >
+              <Icone nom="jarvis" taille={16} />
+            </button>
+
             {/* L'ENVOI — la pastille pleine de marque, l'unique bouton colore. */}
             <button
               type="button"
@@ -132,7 +158,7 @@ export function SaisieJarvis({
       {/* L'erreur voix vit ici, une ligne, sans masquer la saisie — le clavier
           reste utilisable pendant qu'elle est affichee. */}
       {messageVoix !== null && (
-        <p role="status" className={`m-0 font-ui text-label ${voix?.etat === "erreur" ? "text-attention-ink" : "text-ink-500"}`}>
+        <p role="status" className={`m-0 font-ui text-label ${voix.etat === "erreur" ? "text-attention-ink" : "text-ink-500"}`}>
           {messageVoix}
         </p>
       )}

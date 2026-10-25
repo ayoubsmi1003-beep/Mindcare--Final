@@ -4,6 +4,7 @@ vi.mock("@/server/alexa/local-model", () => ({ inferLocalText: local }));
 vi.mock("@/server/egress/external-call", () => ({ llm: cloud }));
 import { synthesizeKnowledge } from "@/server/alexa/knowledge-synthesis";
 import { readKnowledge } from "@/server/alexa/knowledge-adapter";
+import { matchesSectionFocus,planKnowledgeQuery } from "@/server/alexa/knowledge-query";
 import type { ClientSql } from "@/server/jarvis/client-sql";
 const quote = "Critères de la dépression : le texte de référence décrit les critères documentés.";
 const clientFor=(text:string,language='fr',section='Synthetic'):ClientSql=>({ rpc: async <T>() => ({ data: [{
@@ -196,6 +197,70 @@ it.each(['supported','partial'] as const)('does not certify complete diagnostic 
  local.mockResolvedValue(JSON.stringify({coverage,sentences:[{text:quote,evidence:[{index:1,quoteId:'q1'}]}]}));
  await synthesizeKnowledge(result,'critères dépression selon DSM','fr',new AbortController().signal,{compact:true,onCoverage:value=>observed.push(value)});
  expect(observed).toEqual(['partial']);
+});
+it('reserves output context for compact extractive criteria answers',async()=>{
+ const question='Quels critères du trouble dépressif caractérisé sont décrits dans le DSM-5 ?';
+ const section='Section II › Troubles dépressifs › Trouble dépressif caractérisé › Critères diagnostiques';
+ const evidence='Critères diagnostiques du trouble dépressif caractérisé : les critères documentés restent incomplets dans ce passage.';
+ const result=await readKnowledge(clientFor(evidence,'fr',section),question);
+ local.mockResolvedValue(JSON.stringify({coverage:'partial',sentences:[{text:evidence,evidence:[{index:1,quoteId:'q1'}]}]}));
+ await synthesizeKnowledge(result,question,'fr',new AbortController().signal,{compact:true});
+ expect(local).toHaveBeenCalledOnce();
+ expect(local.mock.calls[0]![1].maxOutputTokens).toBe(256);
+ expect(local.mock.calls[0]![0][0]?.content).toContain('Le serveur insère le texte exact approuvé');
+});
+it('uses a literal French DSM criteria sentence rather than paraphrasing an exclusion',async()=>{
+ const sentence='Critères diagnostiques du trouble dépressif caractérisé : ce diagnostic n’est pas établi sur la seule base de ce signe clinique documenté.';
+ const section='Section II › Troubles dépressifs › Trouble dépressif caractérisé › Critères diagnostiques';
+ const question='Quels critères du trouble dépressif caractérisé sont décrits dans le DSM-5 ?';
+ const result=await readKnowledge(clientFor(sentence,'fr',section),question);
+ const plan=planKnowledgeQuery(question);
+ expect(plan).toMatchObject({sectionFocus:'trouble depressif caracterise',sectionLeaf:'criteres diagnostiques'});
+ expect(matchesSectionFocus(section,plan!.sectionFocus!)).toBe(true);
+ expect(result.preuves.map(proof=>({section:proof.section,language:proof.langue}))).toContainEqual({section,language:'fr'});
+ expect(result.etat).toBe('ok');
+ local.mockResolvedValue(JSON.stringify({coverage:'partial',sentences:[{text:sentence,evidence:[{index:1,quoteId:'q1'}]}]}));
+ const events=await synthesizeKnowledge(result,question,'fr',new AbortController().signal,{compact:true});
+ expect(events).toHaveLength(1);
+ expect(events[0]?.type==='sentence'&&events[0].kind).toBe('inference');
+ expect(events[0]?.type==='sentence'&&events[0].text).toContain(sentence);
+});
+it('restores approved French criteria text and discards generated paraphrase',async()=>{
+ const exact='Critères diagnostiques du trouble dépressif caractérisé : le diagnostic n’est pas établi sur la seule base de ce signe clinique documenté.';
+ const section='Section II › Troubles dépressifs › Trouble dépressif caractérisé › Critères diagnostiques';
+ const question='Quels critères du trouble dépressif caractérisé sont décrits dans le DSM-5 ?';
+ const result=await readKnowledge(clientFor(exact,'fr',section),question);
+ local.mockResolvedValue(JSON.stringify({coverage:'supported',sentences:[{text:'Résumé généré qui pourrait modifier une exclusion.',evidence:[{index:1,quoteId:'q1'}]}]}));
+ const events=await synthesizeKnowledge(result,question,'fr',new AbortController().signal,{compact:true});
+ const answer=events.find(event=>event.type==='sentence'&&event.kind==='inference');
+ expect(answer?.type==='sentence'&&answer.text).toContain(exact);
+ expect(answer?.type==='sentence'&&answer.text).not.toContain('Résumé généré');
+ expect(events.some(event=>event.type==='sentence'&&event.text.includes('exhaustivité'))).toBe(true);
+});
+it('does not allow a French criteria quote from the wrong diagnostic section',async()=>{
+ const sentence='Critères de dépression : le diagnostic n’est pas établi sur ce signe documenté.';
+ const question='Quels critères du trouble dépressif caractérisé sont décrits dans le DSM-5 ?';
+ const result=await readKnowledge(clientFor(sentence,'fr','Trouble dépressif persistant › Critères diagnostiques'),question);
+ local.mockResolvedValue(JSON.stringify({coverage:'partial',sentences:[{text:'Critère retenu',evidence:[{index:1,quoteId:'q1'}]}]}));
+ const events=await synthesizeKnowledge(result,question,'fr',new AbortController().signal,{compact:true});
+ expect(local).not.toHaveBeenCalled();
+ expect(events.some(event=>event.type==='sentence'&&event.kind==='inference')).toBe(false);
+});
+it('replaces a polarity-changing criteria paraphrase with the selected source sentence',async()=>{
+ const warn=vi.spyOn(console,'warn').mockImplementation(()=>{});
+ try{
+  const sentence='Critères diagnostiques du trouble dépressif caractérisé : les symptômes ne sont pas attribués à une affection documentée.';
+  const question='Quels critères du trouble dépressif caractérisé sont décrits dans le DSM-5 ?';
+  const section='Section II › Troubles dépressifs › Trouble dépressif caractérisé › Critères diagnostiques';
+  const result=await readKnowledge(clientFor(sentence,'fr',section),question);
+  local.mockResolvedValue(JSON.stringify({coverage:'partial',sentences:[{text:'Les symptômes sont attribués à une affection documentée.',evidence:[{index:1,quoteId:'q1'}]}]}));
+  const events=await synthesizeKnowledge(result,question,'fr',new AbortController().signal,{compact:true});
+  const answer=events.find(event=>event.type==='sentence'&&event.kind==='inference');
+  expect(answer?.type==='sentence'&&answer.text).toContain(sentence);
+  expect(answer?.type==='sentence'&&answer.text).not.toContain('Les symptômes sont attribués à une affection documentée.');
+  expect(warn).not.toHaveBeenCalledWith('[alexa-knowledge] source-fallback','quote-polarity');
+  expect(JSON.stringify(warn.mock.calls)).not.toContain(sentence);
+ }finally{warn.mockRestore();}
 });
 it('keeps the requested topic locally and separates supporting quotes from the compact paragraph',async()=>{
  const result=await readKnowledge(client,'critères dépression selon DSM');

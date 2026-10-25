@@ -91,8 +91,9 @@ réponse part seule puis se lit à voix haute. Aujourd'hui il faut cliquer
   textes d'erreur/interruption exclus) + refus identité inchangé.
 - Micro partagé via le courtier `micro-partage` (jamais deux
   `getUserMedia`).
-- Interrupteur défaut OFF, persistance : réutiliser la clé existante si
-  adaptée (builder tranche, sans nouvelle table).
+- Interrupteur défaut OFF, sans persistance inter-rechargement (un
+  interrupteur qui survivrait éteindrait la vérité de l'orbe : le micro
+  exige un geste à chaque visite).
 - Chaînes : `src/i18n/alexa.ts` uniquement (jamais `fr.ts`).
 
 ## 6. Laissé au builder

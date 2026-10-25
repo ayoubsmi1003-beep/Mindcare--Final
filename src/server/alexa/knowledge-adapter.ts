@@ -9,6 +9,9 @@ import {headingOnlyEvidence,bibliographyEvidence,bibliographyTextEvidence,biblio
 
 /** Une preuve structurée, telle que rendue par l'orchestration gouvernée. */
 type Preuve = RetrievedEvidence;
+// Allow a complete UTF-8 passage slightly above the 8,000-character aggregate
+// budget. `orchestrerRecherche` still enforces that unchanged aggregate cap.
+const MAX_PASSAGE_UTF8_BYTES = 8_192;
 
 const issuedKnowledgeResults = new WeakSet<object>();
 /** Only immutable evidence returned by the governed SQL retrieval can be summarized externally. */
@@ -40,7 +43,7 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
         const row = validerLignePorte(candidate);
         if (row === null || !lignePorteRecuperable(row)) continue;
         if(headingOnlyEvidence(row.texte,row.section)||unboundTableEvidence(row.texte)||(bibliographyEvidence(row.section)||bibliographyTextEvidence(row.texte))&&!bibliographyRequested(question))continue;
-        if (Buffer.byteLength(row.texte, "utf8") > LIMITES.BUDGET_OCTETS) { omittedLongPassages = true; continue; }
+        if (Buffer.byteLength(row.texte, "utf8") > MAX_PASSAGE_UTF8_BYTES) { omittedLongPassages = true; continue; }
         complete.push(row);
       }
       // Chaque lot est classé contre SA référence : c'est elle qui l'a fait

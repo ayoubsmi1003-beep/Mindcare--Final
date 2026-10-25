@@ -3,7 +3,7 @@ import { knowledgeAnswerSchema, knowledgeAnswerJsonSchema,indexedKnowledgeAnswer
 import type { AlexaEvent, AlexaSource } from "@/shared/alexa/turn";
 import type { AlexaLanguage } from "@/shared/alexa/request-plan";
 import { dialogue } from "@/i18n/alexa-dialogue";
-import { knowledgeSynthesisCopy,KNOWLEDGE_COMPACT_SYSTEM_PROMPT,KNOWLEDGE_COMPACT_CRITERIA_SYSTEM_PROMPT,KNOWLEDGE_FRENCH_REFORMULATION_PROMPT,KNOWLEDGE_COMPARISON_UNAVAILABLE,KNOWLEDGE_CRITERIA_COVERAGE } from "@/i18n/alexa-knowledge";
+import { knowledgeSynthesisCopy,KNOWLEDGE_COMPACT_SYSTEM_PROMPT,KNOWLEDGE_COMPACT_GENERAL_CRITERIA_SYSTEM_PROMPT,KNOWLEDGE_COMPACT_CRITERIA_SYSTEM_PROMPT,KNOWLEDGE_FRENCH_REFORMULATION_PROMPT,KNOWLEDGE_COMPARISON_UNAVAILABLE,KNOWLEDGE_CRITERIA_COVERAGE } from "@/i18n/alexa-knowledge";
 import {ALEXA_NATIVE_BUDGET,ALEXA_NATIVE_DEADLINE_MS} from '@/shared/alexa/agent';
 import {headingOnlyEvidence,bibliographyEvidence,bibliographyRequested,knowledgeComparisonRequested,requestedMedicationNames,medicationSpanGrounded,medicationNumericQuoteGrounded,issuedQuoteChoices,copiedEnglishProse} from './knowledge-evidence-content';
 import {isIssuedKnowledgeResult} from "./knowledge-adapter";
@@ -64,13 +64,18 @@ function focusFor(question: string): KnowledgeFocus {
   return /\bhamilton\b/u.test(text) ? "hamilton" : /\btrouble depressif caracterise\b/u.test(text) ? "major-depressive-disorder"
     : /\bdepression\b|اكتئاب/u.test(text) ? "depressive-disorders" : "retrieved-sections";
 }
+function onlyRequestsNamedCriteria(question:string,focus:string):boolean{
+ const text=numericFold(question).replace(/\bdsm\s*-?\s*5\b/gu,' ').replace(focus,' ');
+ const scaffolding=new Set(['quels','quelles','quel','quelle','criteres','les','des','du','de','d','dans','le','la','sont','est','decrits','decrit','documentes','documentees','selon','donne','donner','liste','lister','presente','presenter','enumere','enumerer']);
+ return (text.match(/\p{L}+/gu)??[]).every(word=>scaffolding.has(word));
+}
 
 /** Synthesis cannot call tools. Every emitted paragraph must cite a literal span of this turn's evidence. */
 export async function synthesizeKnowledge(result: KnowledgeResult, question: string, language: AlexaLanguage, signal: AbortSignal, options:{compact?:boolean;onCoverage?:(coverage:'supported'|'partial')=>void}={}): Promise<AlexaEvent[]> {
   const locale = language === "fr" ? "fr" : "ar";
   const copy = dialogue(language);
   const message = (text: string): AlexaEvent => ({ type: "sentence", text, kind: "knowledge", sources: [] });
-  const fallback = (reason: "provider" | "schema" | "coverage" | "insufficient-nonempty" | "empty-answer" | "heading-only" | "bibliography-only" | "language" | "entity" | "unsafe-text" | "quote" | "unicode-number" | "number" | "quantity" | "citation" | "size" | "parse" = "parse") => {
+  const fallback = (reason: "provider" | "schema" | "coverage" | "insufficient-nonempty" | "empty-answer" | "heading-only" | "bibliography-only" | "language" | "entity" | "criteria-selection" | "unsafe-text" | "quote" | "quote-span" | "quote-polarity" | "unicode-number" | "number" | "quantity" | "citation" | "size" | "parse" = "parse") => {
     console.warn("[alexa-knowledge] source-fallback", reason);
     if(options.compact)return [{type:'sentence' as const,text:knowledgeSynthesisCopy.fr.compactUnavailable,kind:'knowledge' as const,sources:isIssuedKnowledgeResult(result)?result.preuves.map(p=>knowledgeSource(p)):[]}];
     return [message(knowledgeSynthesisCopy[locale].unavailable), ...knowledgeResponseEvents(result, language)];
@@ -83,24 +88,31 @@ export async function synthesizeKnowledge(result: KnowledgeResult, question: str
   const medications=requestedMedicationNames(question);
   const maxEvidence=medications.length===1&&!knowledgeComparisonRequested(question)&&taskFor(question)==='explain'?1:5;
   const unverifiedCriteria=options.compact&&taskFor(question)==='criteria';
+  const criteriaPlan=unverifiedCriteria?planKnowledgeQuery(question):null;
+  const extractiveCriteria=unverifiedCriteria&&!!criteriaPlan?.sectionFocus&&!!criteriaPlan.sectionLeaf
+    &&onlyRequestsNamedCriteria(question,criteriaPlan.sectionFocus);
+  const isRequestedCriteriaProof=(proof:KnowledgeResult['preuves'][number])=>!extractiveCriteria||proof.langue==='fr'
+    &&(!criteriaPlan?.sectionFocus||matchesSectionFocus(proof.section,criteriaPlan.sectionFocus))
+    &&numericFold((proof.section??'').split('›').at(-1)??'')===numericFold(criteriaPlan?.sectionLeaf??'criteres diagnostiques');
   const choices=result.preuves.map((proof,index)=>{
     const quotes=issuedQuoteChoices(proof.extrait,proof.langue);
-    const allowedQuoteIds=quotes.flatMap((text,i)=>!headingOnlyEvidence(text,proof.section)&&(!bibliographyEvidence(proof.section)||bibliographyRequested(question))&&(!medications.length||medications.some(name=>requestedMedicationNames(text).includes(name)))?['q'+(i+1)]:[]);
+    const allowedQuoteIds=quotes.flatMap((text,i)=>(!extractiveCriteria||isRequestedCriteriaProof(proof))&&!headingOnlyEvidence(text,proof.section)&&(!bibliographyEvidence(proof.section)||bibliographyRequested(question))&&(!medications.length||medications.some(name=>requestedMedicationNames(text).includes(name)))?['q'+(i+1)]:[]);
     return {index:index+1,quotes,allowedQuoteIds};
   });
   const omittedQuotes=options.compact&&choices.some((row,index)=>fold(row.quotes.join(' '))!==fold(result.preuves[index]!.extrait));
   if(omittedQuotes)return fallback('coverage');
-  if(options.compact&&choices.every(row=>!row.allowedQuoteIds.length))return fallback('entity');
+  if(options.compact&&choices.every(row=>!row.allowedQuoteIds.length))return fallback(extractiveCriteria?'criteria-selection':'entity');
   const localMessages=options.compact?messages.map(m=>m.role==='user'?{...m,content:JSON.stringify({...JSON.parse(m.content),passages:result.preuves.map((proof,index)=>{
     const row=choices[index]!,spans=row.quotes.map((text,i)=>['q'+(i+1),text]);
     return {index:index+1,title:proof.titre,section:proof.section,citableQuoteIds:row.allowedQuoteIds,citations:spans.filter(span=>row.allowedQuoteIds.includes(span[0]!)),context:spans.filter(span=>!row.allowedQuoteIds.includes(span[0]!))};
-  }),question,questionConstraints:{medications,comparison:knowledgeComparisonRequested(question)}})}:{...m,content:unverifiedCriteria?KNOWLEDGE_COMPACT_CRITERIA_SYSTEM_PROMPT:KNOWLEDGE_COMPACT_SYSTEM_PROMPT}):messages;
+  }),question,questionConstraints:{medications,comparison:knowledgeComparisonRequested(question)}})}:{...m,content:extractiveCriteria?KNOWLEDGE_COMPACT_CRITERIA_SYSTEM_PROMPT:unverifiedCriteria?KNOWLEDGE_COMPACT_GENERAL_CRITERIA_SYSTEM_PROMPT:KNOWLEDGE_COMPACT_SYSTEM_PROMPT}):messages;
   signal.throwIfAborted();
   try {
     const answerSchema=options.compact?indexedKnowledgeAnswerSchema(choices,maxEvidence):knowledgeAnswerSchema;
     const completion = await inferLocalText(localMessages, { jsonSchema:options.compact?z.toJSONSchema(answerSchema,{target:'draft-7'}):knowledgeAnswerJsonSchema,
       // Direct native book reads may be the first inference of the turn, including integrity and startup.
-      timeoutMs: options.compact?ALEXA_NATIVE_DEADLINE_MS-ALEXA_NATIVE_BUDGET.marginMs:60000, maxOutputTokens: 1024, signal });
+      timeoutMs: options.compact?ALEXA_NATIVE_DEADLINE_MS-ALEXA_NATIVE_BUDGET.marginMs:60000,
+      maxOutputTokens: options.compact?(extractiveCriteria?256:unverifiedCriteria?512:1024):1024, signal });
     signal.throwIfAborted();
     const decoded:unknown=JSON.parse(completion),metadata=answerMetadata.safeParse(decoded);
     if(metadata.success&&metadata.data.coverage==='insufficient'&&metadata.data.sentences.length)return fallback('insufficient-nonempty');
@@ -117,6 +129,16 @@ export async function synthesizeKnowledge(result: KnowledgeResult, question: str
     let answer = parsed.data;
     // Leading list ordinals are presentation; doses, decimals and body quantities remain checked.
     if(options.compact)answer={...answer,sentences:answer.sentences.map(sentence=>({...sentence,text:sentence.text.replace(/^\s*\d+[.)]\s+(?=\p{L})/u,'')}))};
+    if(extractiveCriteria){
+      const sentences:typeof answer.sentences=[];
+      for(const sentence of answer.sentences){
+        if(sentence.evidence.length!==1)return fallback('criteria-selection');
+        const evidence=sentence.evidence[0]!,proof=result.preuves[evidence.index-1];
+        if(!proof||!isRequestedCriteriaProof(proof))return fallback('criteria-selection');
+        sentences.push({...sentence,text:evidence.quote});
+      }
+      answer={...answer,coverage:'partial',sentences};
+    }
     if (answer.coverage === "insufficient") return answer.sentences.length === 0 ? [message(copy.noKnowledge)] : fallback("insufficient-nonempty");
     if (!answer.sentences.length) return fallback("empty-answer");
     if(options.compact&&process.env['ALEXA_LOCAL_TIMINGS']==='1'&&answer.sentences.some(s=>copiedEnglishProse(s.text)))
@@ -166,7 +188,7 @@ export async function synthesizeKnowledge(result: KnowledgeResult, question: str
         const proof = result.preuves[evidence.index - 1];
         const quote = fold(evidence.quote);
         if (!proof || quote.length < 20 || (quote.match(/[\p{L}\p{N}]/gu)?.length ?? 0) < 12
-          || hiddenControls.test(evidence.quote) || !fold(proof.extrait).includes(quote)) return fallback("quote");
+          || hiddenControls.test(evidence.quote) || !fold(proof.extrait).includes(quote)) return fallback("quote-span");
         if(headingOnlyEvidence(evidence.quote,proof.section))return fallback('heading-only');
         if(bibliographyEvidence(proof.section)&&!bibliographyRequested(question))return fallback('bibliography-only');
         if(medications.length&&!medications.some(name=>requestedMedicationNames(evidence.quote).includes(name)))return fallback('entity');
@@ -195,7 +217,7 @@ export async function synthesizeKnowledge(result: KnowledgeResult, question: str
       if ((!negation.test(numericFold(citedText)) && !negation.test(normalizedSentence))
         || fold(citedText).includes(fold(sentence.text))) {
         events.push({ type: "sentence", text: sentence.text, kind: "inference", sources: used.map(index => ({...knowledgeSource(result.preuves[index - 1]!),...(options.compact?{excerpt:sentence.evidence.filter(e=>e.index===index).map(e=>e.quote).join(' ')}:{})})) });
-      }else if(options.compact){return fallback('quote');
+      }else if(options.compact){return fallback('quote-polarity');
       }
       if(!options.compact)for (const evidence of sentence.evidence) events.push({ type: "sentence", text: knowledgeSynthesisCopy[locale].quote(evidence.quote),
         kind: "knowledge", sources: [knowledgeSource(result.preuves[evidence.index - 1]!)] });

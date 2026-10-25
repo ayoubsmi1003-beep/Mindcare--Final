@@ -18,9 +18,15 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { AvatarAlexa } from "@/components/ui/avatar-alexa";
 import {AlexaAnswerText} from './AlexaAnswerText';
 import { agentCopy } from "@/i18n/alexa-agent";
+import { alexa } from "@/i18n/alexa";
 import { fr } from "@/i18n/fr";
 import Link from "next/link";
 import type { EtatConversationPublique } from "@/services/conversation";
+import {
+  definirPreferenceLectureAuto,
+  fautLireAuto,
+  lirePreferenceLectureAuto,
+} from "@/services/lecture-auto";
 import {
   arreterLecture,
   lireTexte,
@@ -38,6 +44,12 @@ export function FilJarvis({
 }): React.JSX.Element {
   const finRef = useRef<HTMLDivElement | null>(null);
   const [lectureId, setLectureId] = useState<string | null>(null);
+  // Lecture automatique GLOBALE (spec voix 2026-10-24 §2.4) : défaut ON,
+  // préférence persistée en localStorage (pas clinique), chaînes alexa.ts.
+  const [lectureAuto, setLectureAuto] = useState<boolean>(() => lirePreferenceLectureAuto());
+  // Tours déjà vus (jamais relus) : l'historique chargé n'est jamais lu.
+  const lusRef = useRef<Set<string>>(new Set());
+  const chargeRef = useRef(false);
 
   // Le fil suit la parole : ancré en bas à chaque tour nouveau ou fragment.
   useEffect(() => {
@@ -45,6 +57,51 @@ export function FilJarvis({
   }, [etat.tours, etat.etat]);
 
   useEffect(() => arreterLecture, []);
+
+  const basculerLectureAuto = useCallback(() => {
+    arreterLecture();
+    setLectureId(null);
+    setLectureAuto((prev) => {
+      definirPreferenceLectureAuto(!prev);
+      return !prev;
+    });
+  }, []);
+
+  // Toute nouvelle demande coupe la lecture en cours (spec §2.4).
+  const fluxEnCoursAvantLecture =
+    (etat.etat === "envoi" || etat.etat === "flux");
+  useEffect(() => {
+    if (fluxEnCoursAvantLecture) {
+      arreterLecture();
+      setLectureId(null);
+    }
+  }, [fluxEnCoursAvantLecture]);
+
+  // L'historique chargé n'est jamais lu : on scelle les tours vus avant la
+  // fin du chargement, seules les réponses arrivées après sont candidates.
+  useEffect(() => {
+    if (etat.chargementHistorique || chargeRef.current) return;
+    chargeRef.current = true;
+    for (const tour of etat.tours) lusRef.current.add(tour.id);
+  }, [etat.chargementHistorique, etat.tours]);
+
+  // Lecture automatique du dernier tour Jarvis — corps de réponse seul,
+  // refus identité inchangé (aucun nom vers le TTS tiers).
+  const dernierJarvis = [...etat.tours].reverse().find((t) => t.role === "jarvis");
+  useEffect(() => {
+    if (dernierJarvis === undefined || fluxEnCoursAvantLecture) return;
+    if (!fautLireAuto(dernierJarvis, {
+      lectureAuto,
+      dejaLu: lusRef.current.has(dernierJarvis.id),
+      conversationChargee: chargeRef.current,
+    })) return;
+    lusRef.current.add(dernierJarvis.id);
+    const id = dernierJarvis.id, texte = dernierJarvis.texte;
+    setLectureId(id);
+    void lireTexte(texte, false).then((r) => {
+      if (!r.ok) setLectureId((courant) => (courant === id ? null : courant));
+    });
+  }, [dernierJarvis, fluxEnCoursAvantLecture, lectureAuto]);
 
   /**
    * ⚠️ `porteUneIdentite` DÉCIDE DE LA ROUTE DE LA VOIX, et il n'est pas
@@ -70,6 +127,21 @@ export function FilJarvis({
     (dernierTour === undefined || dernierTour.role !== "systeme");
 
   return (
+    <>
+      {/* Interrupteur muet persistant (spec §2.4) : Alexa répond à voix haute par défaut. */}
+      <div className="flex justify-end">
+        <button
+          type="button"
+          onClick={basculerLectureAuto}
+          aria-pressed={lectureAuto}
+          aria-label={lectureAuto ? alexa.lectureAutoCouper : alexa.lectureAutoActiver}
+          title={lectureAuto ? alexa.lectureAutoCouper : alexa.lectureAutoActiver}
+          className="inline-flex min-h-target shrink-0 cursor-pointer items-center justify-center gap-2 rounded-full border-0 bg-transparent px-3 font-ui text-label text-ink-500 transition duration-quick ease-soft hover:bg-sunken hover:text-ink-900"
+        >
+          <Icone nom="audio" taille={16} />
+          <span>{lectureAuto ? alexa.lectureAutoCouper : alexa.lectureAutoActiver}</span>
+        </button>
+      </div>
     <div className="flex flex-col gap-3" role="log" aria-live="polite" aria-label={fr.jarvis.titre}>
       {etat.tours.length === 0 && !fluxEnCours && (
         <div className="grid justify-items-center gap-4 px-4 py-10 text-center">
@@ -216,6 +288,7 @@ export function FilJarvis({
 
       <div ref={finRef} />
     </div>
+    </>
   );
 }
 

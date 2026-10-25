@@ -251,7 +251,8 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
   if(call.name==="query_app"&&a["view"]==="message_draft")return readMessageDraft(call.id,patientId!,String(a["motif"]),asOf,rpc,signal);
   if(call.name==="get_patient_context"){
    if(a['section']==='timeline'){
-    const schema=z.array(z.object({occurred_at:z.string(),event_id:z.string().max(200),event_type:z.string(),label_key:z.string(),practitioner_name:z.string().nullable(),detail:z.record(z.string(),z.unknown())})).max(21);
+    const timelineDate=z.union([z.string(),z.date()]).transform(value=>value instanceof Date?value.toISOString():value);
+    const schema=z.array(z.object({occurred_at:timelineDate,event_id:z.string().max(200),event_type:z.string(),label_key:z.string(),practitioner_name:z.string().nullable(),detail:z.record(z.string(),z.unknown())})).max(21);
     const limit=typeof a['count']==='number'?a['count']:20;
     const rows=schema.parse(await rpc('list_patient_timeline',{p_id:patientId!,p_before_at:typeof a['beforeAt']==='string'?a['beforeAt']:null,p_before_id:typeof a['beforeId']==='string'?a['beforeId']:null,p_limit:limit+1},signal,false,true));
     const page=rows.slice(0,limit),more=rows.length>limit,last=page.at(-1);

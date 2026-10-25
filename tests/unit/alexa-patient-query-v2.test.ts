@@ -38,6 +38,12 @@ it('does not silently apply an unknown or ambiguous patient restriction',()=>{
 it('keeps independent OR branches and their local absence or presence semantics',()=>{
  expect(patientQueryContract('Liste les patients sans CNI ou avec un téléphone renseigné.',asOf).filterGroups).toEqual([[{field:'identity_card',op:'missing',value:null}],[{field:'phone',op:'present',value:null}]]);
 });
+it('keeps a numeric age disjunction as two bounded patient filter groups',()=>{
+ const plan=patientQueryContract('Combien de patients actifs ont moins de 18 ans ou plus de 65 ans ?',asOf);
+ expect(plan.unsupported).toEqual([]);
+ expect(plan.filterGroups).toEqual([[{field:'age',op:'lt',value:18}],[{field:'age',op:'gt',value:65}]]);
+ expect(plan.extended).toBe(true);
+});
 it('binds creation dates separately from explicit closure dates',()=>{
  expect(patientQueryContract('Compte les patients inscrits en septembre 2026.',asOf).createdPeriod).toEqual({from:'2026-09-01T00:00:00+01:00',to:'2026-10-01T00:00:00+01:00'});
  expect(patientQueryContract('Liste les patients avec au moins 2 consultations selon leur date de clôture en septembre 2026.',asOf).consultationPeriod?.axis).toBe('ended_at');

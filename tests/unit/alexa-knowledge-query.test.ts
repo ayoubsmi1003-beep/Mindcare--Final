@@ -183,6 +183,21 @@ describe("bounded Alexa lexical question planning", () => {
     expect(result.preuves[0]?.extrait).toBe(passage);
   });
 
+  it("retains the complete approved DSM criteria passage at 8,189 UTF-8 bytes", async () => {
+    const prefix = "Critères diagnostiques du trouble dépressif caractérisé. Contenu synthétique.";
+    const remainingBytes = 8189 - Buffer.byteLength(prefix, "utf8");
+    const passage = `${prefix}${"é".repeat(Math.floor(remainingBytes / 2))}${remainingBytes % 2 ? "x" : ""}`;
+    expect(Buffer.byteLength(passage, "utf8")).toBe(8189);
+    expect(passage.length).toBeLessThan(8000);
+    const { client } = boundary([row(DSM, passage, {
+      section: "Section II — Critères diagnostiques et codes › Troubles dépressifs › Trouble dépressif caractérisé › Critères diagnostiques",
+    })]);
+    const result = await readKnowledge(client, "Quels critères du trouble dépressif caractérisé sont décrits dans le DSM-5 ?");
+    expect(result.etat).toBe("ok");
+    expect(result.preuves[0]?.extrait).toBe(passage);
+    expect(result).not.toHaveProperty("omittedLongPassages");
+  });
+
   it("omits an oversized whole passage and flags the omission instead of cutting a dose or negation", async () => {
     const { client } = boundary([row(MAUDSLEY, "Dose sertraline. ".repeat(LIMITES.BUDGET_OCTETS))]);
     expect(await readKnowledge(client, "dose sertraline selon Maudsley")).toMatchObject({
@@ -216,9 +231,9 @@ describe("bounded Alexa lexical question planning", () => {
 });
 
 it("measures the whole passage budget in UTF-8 bytes for Arabic text", async () => {
-  const text = `Dose sertraline. ${"ع".repeat(Math.ceil(LIMITES.BUDGET_OCTETS / 2))}`;
+  const text = `Dose sertraline. ${"ع".repeat(Math.ceil(8192 / 2))}`;
   expect(text.length).toBeLessThan(LIMITES.BUDGET_OCTETS);
-  expect(Buffer.byteLength(text, "utf8")).toBeGreaterThan(LIMITES.BUDGET_OCTETS);
+  expect(Buffer.byteLength(text, "utf8")).toBeGreaterThan(8192);
   const { client } = boundary([row(MAUDSLEY, text)]);
   expect(await readKnowledge(client, "dose sertraline selon Maudsley")).toMatchObject({ etat: "sans-preuve", preuves: [], omittedLongPassages: true });
 });

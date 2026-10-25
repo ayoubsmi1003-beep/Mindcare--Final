@@ -61,6 +61,13 @@ it('routes a named completed-consultation count through the exact read tool with
  expect(inferenceCalls).toBe(0);expect(observed).toEqual([{name:'query_consultations',args:{partIds:['requested_1'],patientName:'Amel Bensaid',mode:'count',status:'closed'}}]);
  expect(result).toMatchObject({status:'completed',parts:[{id:'requested_1',status:'answered',tools:['query_consultations']} ]});
 });
+it('counts all consultations for the selected patient through the read gate without MiniCPM',async()=>{
+ const text='Compte toutes les consultations du dossier courant.';let inferenceCalls=0;const observed:Record<string,unknown>[]=[];
+ expect(frenchRequestAdmission(text,false)).toMatchObject({tools:['query_consultations'],consultationMode:'count',consultationStatus:'all',unboundedPeriod:true});
+ const result=await runAgentLoop({...input,text,conversationId:'direct-selected-all-consultation-count',appContext:{patientId:id,page:'/patients/'+id}},{actor:'direct-selected-all-consultation-count',infer:async()=>{inferenceCalls++;throw new Error('Unexpected model call');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,patientId:id,text:'Consultations du dossier comptées.',evidence:[],conditionKeys:[]})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);expect(observed).toEqual([{name:'query_consultations',args:{partIds:['requested_1'],mode:'count',status:'all'}}]);
+ expect(result).toMatchObject({status:'completed',parts:[{id:'requested_1',status:'answered',tools:['query_consultations']} ]});
+});
 it.each(diagnosisCases)('routes a named diagnosis read through the patient-context gate without model selection: $id',async testCase=>{
  let inferenceCalls=0;const observed:Record<string,unknown>[]=[];
  expect(frenchRequestAdmission(testCase.input,false)).toMatchObject({tools:['get_patient_context'],patientSection:'diagnoses'});
@@ -133,6 +140,51 @@ it('counts active and archived patients together only when the question explicit
  const text='Combien de patients au total, actifs et archivés ?';let inferenceCalls=0;const observed:Record<string,unknown>[]=[];
  const result=await runAgentLoop({...input,text,conversationId:'all-patient-populations-count'},{actor:'all-patient-populations-count',infer:async()=>{inferenceCalls++;throw new Error('Unexpected model call');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,text:'1 558 patients au total.',data:{total:1558},evidence:[{id:call.id,type:'query',label:'Total du cabinet'}],conditionKeys:[]})},new AbortController().signal);
  expect(inferenceCalls).toBe(0);expect(observed).toEqual([{name:'query_patients',args:{partIds:['requested_1'],mode:'count',filters:[],population:'all'}}]);
+ expect(result.status).toBe('completed');expect(result.parts).toHaveLength(1);expect(result.parts[0]).toMatchObject({status:'answered',tools:['query_patients']});
+});
+it('counts patients with a recorded birth date through the filtered patient gate without MiniCPM',async()=>{
+ const text='Compte les patients avec une date de naissance renseignée.';let inferenceCalls=0;const observed:Record<string,unknown>[]=[];
+ const result=await runAgentLoop({...input,text,conversationId:'recorded-birth-date-count'},{actor:'recorded-birth-date-count',infer:async()=>{inferenceCalls++;throw new Error('Unexpected model call');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,text:'Les patients concernés ont une date de naissance renseignée.',data:{total:42},evidence:[{id:call.id,type:'query',label:'Patients avec date de naissance'}],conditionKeys:[conditionKey({field:'birth_date',op:'present',value:null})]})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);expect(observed).toEqual([{name:'query_patients',args:{partIds:['requested_1'],mode:'count',filters:[{field:'birth_date',op:'present',value:null}],population:'active'}}]);
+ expect(result.status).toBe('completed');expect(result.parts).toHaveLength(1);expect(result.parts[0]).toMatchObject({status:'answered',tools:['query_patients']});
+});
+it('lists archived patient records through the typed patient gate without MiniCPM',async()=>{
+ const text='Liste les dossiers archivés.';let inferenceCalls=0;const observed:Record<string,unknown>[]=[];
+ const result=await runAgentLoop({...input,text,conversationId:'archived-patient-list'},{actor:'archived-patient-list',infer:async()=>{inferenceCalls++;throw new Error('Unexpected model call');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,text:'Deux dossiers archivés sont affichés.',data:{total:2,rows:[]},evidence:[{id:call.id,type:'query',label:'Dossiers archivés'}],conditionKeys:[]})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);expect(observed).toEqual([{name:'query_patients',args:{partIds:['requested_1'],mode:'list',population:'archived'}}]);
+ expect(result.status).toBe('completed');expect(result.parts).toHaveLength(1);expect(result.parts[0]).toMatchObject({status:'answered',tools:['query_patients']});
+});
+it('lists actual patient names across active and archived patients through the typed patient gate',async()=>{
+ const text='Donne les noms de tous les patients, actifs et archivés.';let inferenceCalls=0;const observed:Record<string,unknown>[]=[];
+ const result=await runAgentLoop({...input,text,conversationId:'all-patient-names'},{actor:'all-patient-names',infer:async()=>{inferenceCalls++;throw new Error('Unexpected model call');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,text:'Les noms de la première page sont affichés.',data:{total:1558,rows:[]},evidence:[{id:call.id,type:'query',label:'Patients actifs et archivés'}],conditionKeys:[]})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);expect(observed).toEqual([{name:'query_patients',args:{partIds:['requested_1'],mode:'list',population:'all'}}]);
+ expect(result.status).toBe('completed');expect(result.parts).toHaveLength(1);expect(result.parts[0]).toMatchObject({status:'answered',tools:['query_patients']});
+});
+it('reads current working notes directly without asking about signature status',async()=>{
+ const text='Lis les notes de travail du dossier courant.';let inferenceCalls=0;const observed:Record<string,unknown>[]=[];
+ const result=await runAgentLoop({...input,text,appContext:{patientId:id,page:'/patients/'+id},conversationId:'working-notes-no-signature-question'},{actor:'working-notes-no-signature-question',infer:async()=>{inferenceCalls++;throw new Error('Unexpected model call');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,text:'Les notes de travail disponibles sont affichées.',evidence:[{id:call.id,type:'query',label:'Notes de travail'}],conditionKeys:[]})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);expect(observed).toEqual([{name:'get_patient_context',args:{partIds:['requested_1'],section:'notes',area:'working'}}]);
+ expect(result.status).toBe('completed');expect(result.parts).toHaveLength(1);expect(result.parts[0]).toMatchObject({status:'answered',tools:['get_patient_context']});
+});
+it.each([['Compte les patients de sexe féminin.','F'],['Compte les patients de sexe masculin.','M']] as const)('counts patients of an explicit sex directly without MiniCPM: %s',async(text,value)=>{
+ let inferenceCalls=0;const observed:Record<string,unknown>[]=[];
+ const condition={field:'sex',op:'eq',value} as const;
+ const result=await runAgentLoop({...input,text,conversationId:'sex-count-'+value},{actor:'sex-count-'+value,infer:async()=>{inferenceCalls++;throw new Error('Unexpected model call');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,text:'Le décompte a été effectué.',data:{total:42},evidence:[{id:call.id,type:'query',label:'Décompte patients'}],conditionKeys:[conditionKey(condition)]})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);expect(observed).toEqual([{name:'query_patients',args:{partIds:['requested_1'],mode:'count',filters:[condition],population:'active'}}]);
+ expect(result.status).toBe('completed');expect(result.parts).toHaveLength(1);expect(result.parts[0]).toMatchObject({status:'answered',tools:['query_patients']});
+});
+it('keeps an explicit age disjunction as bounded OR groups in one patient count',async()=>{
+ const text='Combien de patients actifs ont moins de 18 ans ou plus de 65 ans ?';let inferenceCalls=0;const observed:Record<string,unknown>[]=[];
+ const under18={field:'age',op:'lt',value:18} as const,over65={field:'age',op:'gt',value:65} as const;
+ const result=await runAgentLoop({...input,text,conversationId:'age-disjunction-count'},{actor:'age-disjunction-count',infer:async()=>{inferenceCalls++;throw new Error('Unexpected model call');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,text:'Le décompte a été effectué.',data:{total:42},evidence:[{id:call.id,type:'query',label:'Décompte patients'}],conditionKeys:[conditionKey(under18),conditionKey(over65)]})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);expect(observed).toEqual([{name:'query_patients',args:{partIds:['requested_1'],mode:'count',filterGroups:[[under18],[over65]],population:'active'}}]);
+ expect(result.status).toBe('completed');expect(result.parts).toHaveLength(1);expect(result.parts[0]).toMatchObject({status:'answered',tools:['query_patients']});
+});
+it('counts patients not seen in six months through the completed-visit metric without MiniCPM',async()=>{
+ const text='Combien de patients n’ont pas été vus depuis six mois ?';let inferenceCalls=0;const observed:Record<string,unknown>[]=[];
+ const condition={field:'no_completed_months',op:'eq',value:6} as const;
+ const result=await runAgentLoop({...input,text,conversationId:'patients-not-seen-six-months'},{actor:'patients-not-seen-six-months',infer:async()=>{inferenceCalls++;throw new Error('Unexpected model call');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,text:'Le décompte a été effectué.',data:{total:42},evidence:[{id:call.id,type:'query',label:'Patients non vus'}],conditionKeys:[conditionKey(condition)]})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);expect(observed).toEqual([{name:'query_patients',args:{partIds:['requested_1'],mode:'count',filters:[condition],population:'active'}}]);
  expect(result.status).toBe('completed');expect(result.parts).toHaveLength(1);expect(result.parts[0]).toMatchObject({status:'answered',tools:['query_patients']});
 });
 it('runs a mixed agenda and administrative review as dependent authorized reads with a four-part ledger',async()=>{

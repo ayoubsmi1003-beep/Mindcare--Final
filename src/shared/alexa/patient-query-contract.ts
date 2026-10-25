@@ -1,7 +1,7 @@
 import type {RequestPart,SupportedCondition} from './agent';
 import {conditionKey} from './agent';
 import {patientQueryCopy as copy} from '@/i18n/alexa-patient-query';
-import {explicitPatientConditions,requestedPopulation,frenchPatientCountContract,explicitFrenchMonthRange,patientConditionMentions,hasExplicitClockRestriction} from './request-contract';
+import {explicitPatientConditions,explicitPatientCountFilterGroups,requestedPopulation,frenchPatientCountContract,explicitFrenchMonthRange,patientConditionMentions,hasExplicitClockRestriction} from './request-contract';
 
 type Period={from:string;to:string};
 export interface PatientQueryContract {population:NonNullable<RequestPart['population']>;filterGroups:SupportedCondition[][];consultationPeriod?:Period&{axis:'started_at'|'ended_at'};createdPeriod?:Period;unsupported:string[];ledger:NonNullable<RequestPart['constraintLedger']>;extended:boolean;}
@@ -43,7 +43,7 @@ export function patientQueryPeriod(text:string,asOf:string):Period|null {
 
 /** Closed additions to the existing patient grammar; unknown restrictions never broaden a read. */
 export function patientQueryContract(text:string,asOf:string):PatientQueryContract {
- const t=fold(text),unsupported:string[]=[],segments=t.split(/\s+ou\s+(?=(?:sans|avec|les |des |ayant|dont|qui ))/u),groups:SupportedCondition[][]=[];
+ const t=fold(text),unsupported:string[]=[],explicitAgeOr=explicitPatientCountFilterGroups(text),segments=explicitAgeOr?t.split(/\s+ou\s+/u):t.split(/\s+ou\s+(?=(?:sans|avec|les |des |ayant|dont|qui ))/u),groups:SupportedCondition[][]=[];
  for(const segment of segments){
   const conditions=[...(explicitPatientConditions(segment)??[])];
   // Absence is local to the field, rather than inferred from a sibling predicate.

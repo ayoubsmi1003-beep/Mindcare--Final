@@ -26,6 +26,15 @@ it('resumes only the verified timeline cursor and retains its patient',async()=>
  expect(observed).toEqual([{p_id:patient,p_before_at:'2026-09-30T12:00:00Z',p_before_id:event,p_limit:21}]);
  expect(result.status).toBe('empty');
 });
+it('normalizes PostgreSQL timestamp values before validating timeline rows',async()=>{
+ const db:Pick<DbPort,'rpc'>={rpc:async <T>(name:string)=>{
+  if(name==='get_patient')return {ok:true,data:[{id:patient,first_name:'Patient',last_name:'Synthétique',record_number:'SYN-1'}] as T[]};
+  return {ok:true,data:[{occurred_at:new Date('2026-10-22T10:00:00.000Z'),event_id:event,event_type:'consultation',label_key:'alexa.timeline.consultation',practitioner_name:null,detail:{}}] as T[]};
+ }};
+ const run=agentExecutor({text:'Affiche la chronologie du dossier courant.',conversationId:'timeline-postgres-date',clientTurnId:crypto.randomUUID(),appContext:{patientId:patient,page:'/patients/'+patient}},db,{rpc:async()=>({data:null,error:null})});
+ const result=await run({id:'timeline-date',name:'get_patient_context',args:{partIds:['p'],section:'timeline'}},asOf,[],new AbortController().signal);
+ expect(result.status).toBe('ok');expect(result.text).toContain('Consultation');
+});
 it('does not accept a model supplied timeline cursor',async()=>{
  let reads=0;
  const input={text:'Montre la chronologie.',conversationId:'timeline-invention',clientTurnId:crypto.randomUUID(),appContext:{patientId:patient,page:'/jarvis'}};

@@ -18,6 +18,18 @@ it('recognizes a single total over the explicitly requested active and archived 
  expect(contract?.clauses).toEqual(['Combien de patients au total, actifs et archivés ?']);
  expect(countContractParts(contract!)).toMatchObject([{population:'all',conditions:[],tools:['query_patients']}]);
 });
+it('converts an explicitly recorded birth date into a positive patient filter',()=>{
+ const contract=frenchPatientCountContract('Compte les patients avec une date de naissance renseignée.');
+ expect(countContractParts(contract!)).toMatchObject([{population:'active',conditions:[{field:'birth_date',op:'present',value:null}],tools:['query_patients']}]);
+});
+it.each([['Compte les patients de sexe féminin.','F'],['Compte les patients de sexe masculin.','M']])('keeps an explicit French sex filter as a typed patient predicate: %s',(text,value)=>{
+ const contract=frenchPatientCountContract(text);
+ expect(countContractParts(contract!)).toMatchObject([{conditions:[{field:'sex',op:'eq',value}],tools:['query_patients']}]);
+});
+it('maps a six-month not-seen count to the completed-visit recency predicate',()=>{
+ const contract=frenchPatientCountContract('Combien de patients n’ont pas été vus depuis six mois ?');
+ expect(countContractParts(contract!)).toMatchObject([{conditions:[{field:'no_completed_months',op:'eq',value:6}],tools:['query_patients']}]);
+});
 it('binds an explicit French month range to a named clinical summary',()=>{
  const admission=frenchRequestAdmission('Résume en un seul paragraphe l’évolution racontée dans les six consultations d’avril à septembre 2026 de Amel Bensaid.',false);
  expect(admission).toMatchObject({tools:['get_patient_context'],patientSection:'summary',consultationCount:6,from:'2026-04-01T00:00:00+01:00',to:'2026-10-01T00:00:00+01:00'});
