@@ -120,6 +120,7 @@ export default function JarvisPage(): React.JSX.Element {
       onDeconnexion={deconnecter}
       sansGouttiere
       sansDefilement
+      sansBulle
     >
       {/* La scène remplit le <main> borné (`sansDefilement` : <main> en
           `overflow-hidden` + colonne flex) — jamais `min-h-viewport` (100vh),
@@ -170,7 +171,7 @@ export default function JarvisPage(): React.JSX.Element {
                pas — rien n'est ni rogné ni recouvert. Sur grand écran le
                rendu est inchangé (héros centré, saisie en bas). */
             <div className="min-h-0 flex-1 overflow-y-auto">
-              <div className="mx-auto flex min-h-full w-full max-w-lecture flex-col items-center px-4">
+              <div className="flex min-h-full w-full flex-col items-center px-2 desktop:px-4">
                 <div className="m-auto flex flex-col items-center py-4">
                   <HeroAlexaLune etat={etat} />
                 </div>
@@ -195,16 +196,16 @@ export default function JarvisPage(): React.JSX.Element {
               {/* SEULE zone déroulante de l'écran : le fil. La saisie et la
                   barre supérieure restent fixes, le <main> ne défile jamais. */}
               <div className="min-h-0 flex-1 overflow-y-auto">
-                <div className="mx-auto w-full max-w-lecture px-4 py-4">
-                  {/* Feuille de nuit opaque : `bg-night-card` explicite, `FilJarvis`
-                      suit par le remappage de la scène (`tokens.css`) — contrastes
-                      mesurés conservés, aucune donnée sur dégradé (§4.2). */}
-                  <div className="rounded-2xl border border-night-rule bg-night-card p-4 shadow-carte desktop:p-6">
+                <div className="w-full px-2 py-4 desktop:px-4">
+                  {/* Pleine largeur : le fil occupe la scène, sans carte étroite
+                      flottant au milieu. `bg-night-card` reste opaque pour garder
+                      les contrastes mesurés des textes cliniques. */}
+                  <div className="w-full max-w-none bg-night-card p-5 shadow-carte desktop:p-8">
                     {etat.chargementHistorique ? <Squelette lignes={6} /> : <FilJarvis etat={etat} />}
                   </div>
                 </div>
               </div>
-              <div className="lune-alexa-colle mx-auto w-full max-w-lecture shrink-0 px-4 pb-6 pt-8">
+              <div className="lune-alexa-colle w-full shrink-0 px-2 pb-4 pt-6 desktop:px-4">
                 <SaisieAlexaLune
                   etat={etat}
                   onEnvoyer={soumettre}
@@ -221,7 +222,7 @@ export default function JarvisPage(): React.JSX.Element {
           {etat.carteEcriture !== null && (
             /* La carte flotte AU-DESSUS de la scène : une décision d'écriture
                n'est pas un message parmi d'autres. */
-            <div className="absolute inset-x-4 bottom-4 z-10 mx-auto max-w-lecture">
+            <div className="absolute inset-x-6 bottom-6 z-10">
               <CarteConfirmation
                 carte={etat.carteEcriture}
                 enCours={false}

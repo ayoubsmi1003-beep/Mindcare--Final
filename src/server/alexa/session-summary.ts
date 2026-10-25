@@ -15,6 +15,85 @@ const date = z.union([z.string(), z.date()]).transform(v => new Date(v).toISOStr
 const rowSchema = z.object({ id: z.uuid(), patient_id: z.uuid(), started_at: date, ended_at: date.nullable(), raw_notes: z.string().nullable(), note_id: z.uuid().nullable(), note_status: z.enum(["signed", "draft"]).nullable(), subjective: z.string().nullable(), objective: z.string().nullable(), assessment: z.string().nullable(), plan: z.string().nullable() });
 const amendmentSchema = z.object({ id: z.uuid(), body: z.string(), reason: z.string(), created_at: date });
 export class SessionSummaryError extends Error { constructor(readonly code: "empty" | "changed" | "unavailable") { super(code); } }
+
+const scaleHistorySchema = z.object({
+  id: z.string(), scale_code: z.string(), scale_name: z.string(), consultation_id: z.string().nullable(),
+  total: z.number().nullable(), interpretation: z.string().nullable(), administered_at: z.string(),
+  responses: z.record(z.string(), z.unknown()),
+}).strict();
+const scaleDefinitionSchema = z.object({
+  code: z.string(), name_fr: z.string(),
+  items: z.array(z.object({ id: z.string(), texte: z.string(), risque: z.boolean().optional(), alerte: z.string().optional() }).strict()),
+  scoring: z.object({ max: z.number() }).loose(),
+}).strict();
+
+export interface SessionEvaluation {
+  readonly scaleCode: string;
+  readonly scaleName: string;
+  readonly score: number | null;
+  readonly max: number | null;
+  readonly interpretation: string | null;
+  readonly administeredAt: string;
+  readonly risk: { readonly itemId: string; readonly itemText: string; readonly value: number; readonly message: string } | null;
+}
+
+/** Deterministic scale paragraph. Scale responses never reach the model. */
+export function buildSessionScaleFindings(
+  consultationId: string,
+  histories: readonly z.infer<typeof scaleHistorySchema>[],
+  definitions: readonly z.infer<typeof scaleDefinitionSchema>[],
+): { evaluations: readonly SessionEvaluation[]; paragraph: string | null } {
+  const byCode = new Map(definitions.map((definition) => [definition.code, definition]));
+  const rows = histories
+    .filter((row) => row.consultation_id === consultationId)
+    .sort((a, b) => a.administered_at.localeCompare(b.administered_at) || a.id.localeCompare(b.id));
+  const evaluations: SessionEvaluation[] = rows.map((row) => {
+    const definition = byCode.get(row.scale_code);
+    const riskItem = definition?.items.find((item) => item.risque === true && typeof row.responses[item.id] === "number" && Number(row.responses[item.id]) > 0);
+    return {
+      scaleCode: row.scale_code,
+      scaleName: row.scale_name,
+      score: row.total,
+      max: definition?.scoring.max ?? null,
+      interpretation: row.interpretation,
+      administeredAt: row.administered_at,
+      risk: riskItem === undefined ? null : {
+        itemId: riskItem.id,
+        itemText: riskItem.texte,
+        value: Number(row.responses[riskItem.id]),
+        message: riskItem.alerte ?? `Réponse positive à « ${riskItem.texte} » — à explorer cliniquement.`,
+      },
+    };
+  });
+  const scored = evaluations.filter((evaluation) => evaluation.score !== null).map((evaluation) => {
+    const value = `${String(evaluation.score)}${evaluation.max === null ? "" : `/${String(evaluation.max)}`}`;
+    const interpretation = evaluation.interpretation === null ? "" : ` (${evaluation.interpretation})`;
+    return `${evaluation.scaleName} ${value}${interpretation}`;
+  });
+  const sentences: string[] = [];
+  if (scored.length > 0) {
+    sentences.push(`${scored.length === 1 ? "L'évaluation réalisée pendant la séance montre" : "Les évaluations réalisées pendant la séance montrent"} ${scored.join(" ; ")}.`);
+  }
+  const risk = evaluations.find((evaluation) => evaluation.risk !== null)?.risk ?? null;
+  if (risk !== null) {
+    sentences.push(`Un item de risque positif a été relevé (${risk.itemText.toLocaleLowerCase("fr")}) ; il appelle une exploration clinique.`);
+  }
+  return { evaluations, paragraph: sentences.length === 0 ? null : sentences.join(" ") };
+}
+
+async function readSessionScales(
+  db: Pick<DbPort, "rpc">,
+  patientId: string,
+  consultationId: string,
+): Promise<{ evaluations: readonly SessionEvaluation[]; paragraph: string | null }> {
+  const history = await db.rpc("get_scale_history", { p_patient_id: patientId, p_scale_code: null });
+  if (!history.ok) return { evaluations: [], paragraph: null };
+  const parsedHistory = z.array(scaleHistorySchema).safeParse(history.data);
+  if (!parsedHistory.success) return { evaluations: [], paragraph: null };
+  const definitions = await db.rpc("list_scales", {});
+  const parsedDefinitions = definitions.ok ? z.array(scaleDefinitionSchema).safeParse(definitions.data) : null;
+  return buildSessionScaleFindings(consultationId, parsedHistory.data, parsedDefinitions?.success === true ? parsedDefinitions.data : []);
+}
 function diagnostic(stage:string,details:Record<string,unknown>={}):void {
   if(process.env.ALEXA_DEBUG_NARRATIVE==='1')console.warn('[session-summary]',JSON.stringify({stage,...details}));
 }
@@ -62,11 +141,12 @@ export async function generateSessionSummary(db: Pick<DbPort, "rpc">, consultati
   diagnostic('read-session');
   const consultation = await readSession(db, consultationId, signal);
   const input = consultationNarrativeSources(consultation);
-  if (!input.sources.length) throw new SessionSummaryError("empty");
   diagnostic('read-identity');
   const identity=await db.rpc<{patient_id:string}>('get_consultation',{p_id:consultationId});
   const patientId=identity.ok?identity.data[0]?.patient_id:undefined;
   if(!patientId)throw new SessionSummaryError('unavailable');
+  const scaleData = await readSessionScales(db, patientId, consultationId);
+  if (!input.sources.length && scaleData.evaluations.length === 0) throw new SessionSummaryError("empty");
   diagnostic('read-comparison');
   const context=await buildClinicalContext(db,{patientId},{count:1,before:{startedAt:consultation.startedAt,id:consultation.id}},signal);
   const previous=context.consultations[0];
@@ -94,7 +174,9 @@ export async function generateSessionSummary(db: Pick<DbPort, "rpc">, consultati
   // Put historical context before the current visit, with explicit temporal scope.
   input.sources=[...comparison.map(s=>({...s,scope:'previous' as const})),...input.sources.map(s=>({...s,scope:'current' as const})),...trends.map(s=>({...s,scope:'change' as const})),...medications.map(s=>({...s,scope:'current' as const})),...changes.map(s=>({...s,scope:'change' as const}))];
   input.complete&&=context.treatments.historyComplete;
-  const narrative = await synthesizeClinicalNarrative(input.sources, signal);
+  const narrative = input.sources.length === 0
+    ? { text: "", complete: true, generated: true as const, method: "structured" as const, sourceIds: [] as string[] }
+    : await synthesizeClinicalNarrative(input.sources, signal);
   diagnostic('model-return',{generated:narrative.generated,complete:narrative.complete,method:narrative.method,words:narrative.text.trim().split(/\s+/u).length});
   if (!narrative.generated || narrative.method==='source_selection') throw new SessionSummaryError("unavailable");
   const digest = consultationNotesDigest(consultation);
@@ -103,12 +185,14 @@ export async function generateSessionSummary(db: Pick<DbPort, "rpc">, consultati
   diagnostic('verify-context');
   if((await buildClinicalContext(db,{patientId},{count:1},signal)).sourceRevision!==context.sourceRevision)throw new SessionSummaryError('changed');
   const soap = consultation.notes[0];
-  const content = { resume: narrative.text, method: narrative.method ?? "reformulated", notesDigest: digest, complete: input.complete && narrative.complete, generated: true,
+  const resume = [narrative.text.trim(), scaleData.paragraph ?? ""].filter((part) => part !== "").join("\n\n");
+  const content = { resume, resumeNotes: narrative.text, method: narrative.method ?? "reformulated", notesDigest: digest, complete: input.complete && narrative.complete, generated: true,
+    evaluations: scaleData.evaluations,
     noteStructuree: { subjective: soap?.subjective ?? "", objective: soap?.objective ?? "", assessment: soap?.assessment ?? "", plan: soap?.plan ?? "" }, evolution: [], pointsNonExplores: [] };
   diagnostic('persist');
   const saved = await db.rpc<{ id: string; version: number; content: unknown }>("save_session_analysis", {
     p_consultation_id: consultationId, p_content: JSON.stringify(content),
-    p_source_state: JSON.stringify({ notes_hash: createHash("sha256").update(consultation.rawNotes ?? "").digest("hex"), notes_digest: digest, notes_snapshot: consultationNotesSnapshot(consultation), context_digest:contextDigest,previous_consultation_id:previous?.id??null,previous_raw_notes_hash:previous?createHash('sha256').update(previous.rawNotes??'').digest('hex'):null, source_revision:context.sourceRevision, note_areas: 5, historique_notes: previous?1:0, complete: content.complete }),
+    p_source_state: JSON.stringify({ notes_hash: createHash("sha256").update(consultation.rawNotes ?? "").digest("hex"), notes_digest: digest, notes_snapshot: consultationNotesSnapshot(consultation), context_digest:contextDigest,previous_consultation_id:previous?.id??null,previous_raw_notes_hash:previous?createHash('sha256').update(previous.rawNotes??'').digest('hex'):null, source_revision:context.sourceRevision, note_areas: 5, historique_notes: previous?1:0, complete: content.complete, scale_results: scaleData.evaluations.length }),
     p_model: ALEXA_CONVERSATION_MODEL, p_prompt_version: NARRATIVE_VERSION, p_prompt_hash: NARRATIVE_HASH,
   });
   const row = saved.ok ? saved.data[0] : undefined;

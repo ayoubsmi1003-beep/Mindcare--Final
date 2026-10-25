@@ -37,14 +37,15 @@ import { CarteResumeCas, type ResumeEtat } from "@/components/patients/CarteResu
 import { CarteIdentite } from "@/components/patients/CarteIdentite";
 import { ChronologiePatient } from "@/components/patients/ChronologiePatient";
 import {
-  ListeSignaux,
   PointDeSituation,
   SectionDepuisDerniere,
 } from "@/components/patients/SectionsDeterministes";
 import { EnTeteCollant, type ActionDominante } from "@/components/patients/EnTeteCollant";
 import { RetourListe } from "@/components/patients/EnTetePatient";
 import { FormulaireModification } from "@/components/patients/FormulaireModification";
-import { PanneauClinique } from "@/components/patients/PanneauClinique";
+import { EchellesPatient, ListeDiagnostics, PanneauClinique } from "@/components/patients/PanneauClinique";
+import { HistoriqueSeances } from "@/components/patients/HistoriqueSeances";
+import { PatientProfilClinique } from "@/components/patients/PatientProfilClinique";
 import {
   CarteProchaineEcheance,
   PanneauRendezVous,
@@ -57,10 +58,12 @@ import {
   EtatVide,
   Onglets,
   PanneauOnglet,
+  SectionPliable,
   Squelette,
   type Onglet,
 } from "@/components/ui";
 import { fr } from "@/i18n/fr";
+import { patientSummary } from "@/i18n/patient-summary";
 import { getSession, signOut } from "@/services/auth";
 import { getCurrentUser, type CurrentUser } from "@/services/authz";
 import {
@@ -99,8 +102,7 @@ export default function PageFichePatient(): React.JSX.Element {
   const [messageErreur, setMessageErreur] = useState<string | undefined>(undefined);
   const [horsLigne, setHorsLigne] = useState(false);
   const [onglet, setOnglet] = useState<CleOnglet>("vueDEnsemble");
-  /** L'historique se déplie dans le fil, sur geste — jamais à l'ouverture. */
-  const [historiqueOuvert, setHistoriqueOuvert] = useState(false);
+
 
   const [resumeEtat, setResumeEtat] = useState<ResumeEtat>({
     resume: null,
@@ -417,52 +419,43 @@ export default function PageFichePatient(): React.JSX.Element {
                  collant, qui la suit pendant tout le défilement, et l'échéance
                  a rejoint le fil, à sa place chronologique. Il reste une
                  lecture : qui, où en est-on, et ce qui s'est passé. */
-              <div className="mx-auto flex w-full max-w-lecture min-w-0 flex-col gap-8">
-                <CarteResumeCas
-                  etat={resumeEtat}
-                  onEtatChange={setResumeEtat}
-                  onGenerer={generer}
-                  onOuvrirSource={ouvrirSource}
-                />
-                {montrerPointSituation ? <PointDeSituation espace={espace} /> : null}
-                <SectionDepuisDerniere espace={espace} />
-                <ListeSignaux espace={{ ...espace, resume: resumeEtat.resume }} />
-                <CarteProchaineEcheance agenda={espace.agenda} documents={espace.documents} />
+              <div className="flex w-full min-w-0 flex-col gap-6">
+                  <CarteResumeCas
+                    etat={resumeEtat}
+                    onEtatChange={setResumeEtat}
+                    onGenerer={generer}
+                    onOuvrirSource={ouvrirSource}
+                    profil={<PatientProfilClinique espace={espace} onOuvrirClinique={() => setOnglet("clinique")} />}
+                  />
+                  {montrerPointSituation ? <PointDeSituation espace={espace} /> : null}
+                  <SectionDepuisDerniere espace={espace} />
 
-                {/* L'ADMINISTRATIF EN BAS, ET C'EST UN CHOIX DE HIÉRARCHIE, PAS
-                    UN OUBLI. Téléphone, adresse, pièce d'identité : on en a
-                    besoin quelques fois par mois, et cette grille de dix champs
-                    occupait la colonne de droite en permanence, à hauteur d'œil,
-                    en concurrence avec l'histoire de la patiente. Ce qui sert à
-                    chaque ouverture — nom, âge, sexe, numéro de dossier — est
-                    dans l'en-tête collant, visible pendant tout le défilement. */}
-                <CarteIdentite espace={espace} />
-
-                {/* L'HISTORIQUE FERME LE FIL, ET IL EST L'ÉPINE DORSALE :
-                    chaque consultation s'y ouvre d'un clic. Il ne se charge
-                    QUE sur demande — voir `fr.patients.actions.afficherHistorique`
-                    et l'en-tête de `ChronologiePatient`. */}
-                <section className="flex flex-col gap-4 border-t border-rule pt-6">
-                  <h2 className="font-ui text-heading font-semibold tracking-heading text-ink-900">
-                    {fr.patients.onglets.chronologie}
-                  </h2>
-                  {historiqueOuvert ? (
-                    <ChronologiePatient patientId={espace.identite.id} />
-                  ) : (
-                    <span>
-                      <Bouton rang="secondaire" onClick={() => setHistoriqueOuvert(true)}>
-                        {fr.patients.actions.afficherHistorique}
-                      </Bouton>
-                    </span>
+                  {espace.clinique === null ? null : (
+                    <>
+                      <SectionPliable titre={fr.patients.sections.diagnostics} replieParDefaut>
+                        <ListeDiagnostics diagnostics={espace.clinique.diagnostics} />
+                      </SectionPliable>
+                      <SectionPliable titre={fr.patients.sections.echelles} replieParDefaut>
+                        <EchellesPatient clinique={espace.clinique} patientId={espace.identite.id} />
+                      </SectionPliable>
+                      <SectionPliable titre={patientSummary.seancesPassees} replieParDefaut>
+                        <HistoriqueSeances patientId={espace.identite.id} />
+                      </SectionPliable>
+                    </>
                   )}
-                </section>
+
+                  <CarteProchaineEcheance agenda={espace.agenda} documents={espace.documents} />
+
+                  {/* L'ADMINISTRATIF RESTE DANS LE FIL, mais compact : il sert
+                      quelques fois par mois, pas à chaque ouverture. */}
+                  <CarteIdentite espace={espace} />
               </div>
             ) : null}
 
             {actif === "chronologie" ? <ChronologiePatient patientId={espace.identite.id} /> : null}
 
             {actif === "clinique" && espace.clinique !== null ? (
-              <PanneauClinique clinique={espace.clinique} />
+              <PanneauClinique clinique={espace.clinique} patientId={espace.identite.id} />
             ) : null}
 
             {actif === "traitements" && (espace.traitements !== null || espace.traitementsV2 !== null) ? (

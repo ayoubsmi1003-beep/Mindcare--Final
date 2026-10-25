@@ -205,6 +205,11 @@ export function DetailSeanceAccordion({
                     {/* I7 — la mention accompagne toute surface d'aide à la
                         décision, y compris relue des mois plus tard. */}
                     <p className="font-ui text-label text-ink-500">{fr.disclaimer}</p>
+                    {detail.analyse.resume === undefined || detail.analyse.resume.trim() === "" ? null : (
+                      <p className="whitespace-pre-wrap break-words font-ui text-body leading-relaxed text-ink-900">
+                        {detail.analyse.resume}
+                      </p>
+                    )}
                     {detail.analyse.evolution.length === 0 ? (
                       <EtatVide message={fr.consultation.evolutionAucune} />
                     ) : (

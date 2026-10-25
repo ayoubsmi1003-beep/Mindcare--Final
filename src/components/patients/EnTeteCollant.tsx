@@ -8,7 +8,7 @@
 import { Avatar } from "@/components/ui";
 import { Badge } from "@/components/ui";
 import { Bouton, LienBouton } from "@/components/ui";
-import { SiriOrb } from "@/components/ui/siri-orb";
+import { Icone } from "@/components/ui/Icones";
 import { fr } from "@/i18n/fr";
 import type { PatientWorkspace } from "@/services/patients";
 
@@ -82,12 +82,7 @@ export function EnTeteCollant({
           {/* Secondaires : icône + libellé accessible (jamais icône muette). */}
           <Bouton rang="secondaire" onClick={onJarvis}>
             <span className="flex items-center gap-2">
-              <span aria-hidden className="inline-flex h-5 w-5 shrink-0 items-center justify-center overflow-hidden rounded-full">
-                <SiriOrb
-                  size="20px"
-                  animationDuration={18}
-                />
-              </span>
+              <Icone nom="jarvis" taille={20} />
               {fr.jarvis.titre}
             </span>
           </Bouton>

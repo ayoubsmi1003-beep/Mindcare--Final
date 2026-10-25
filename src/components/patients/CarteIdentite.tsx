@@ -1,123 +1,79 @@
 /**
  * Identité & coordonnées — ce qu'il faut pour reconnaître et joindre.
  *
- * ⚠️ CE QUI N'EST PAS ICI, ET POURQUOI CE N'EST PAS UN OUBLI. Ni e-mail, ni
- * situation familiale, ni profession, ni adresse structurée : AUCUNE de ces
- * colonnes n'existe dans `app.patients` (004, jamais altérée). On pourrait
- * afficher six cartes « Non renseigné » pour faire riche — ce serait affirmer
- * que ces champs existent et que personne ne les remplit, alors que le produit
- * ne sait pas encore les enregistrer. Un champ absent du schéma est absent de
- * l'écran ; un champ présent mais vide dit « Non renseigné ». La distinction
- * est ce qui rend l'écran honnête.
- *
- * L'adresse a son propre bloc (`BlocAdresse`) parce qu'elle est multiligne et
- * qu'elle mérite d'être lue, pas parcourue.
+ * La carte est une lecture, pas un formulaire : chaque valeur est une ligne de
+ * définition, pas une tuile colorée. Les champs secondaires absents sont omis ;
+ * une seule phrase dit qu'il n'y en a aucun, au lieu d'aligner six « Non
+ * renseigné » qui prennent la place du clinique.
  */
 
-import { Carte, Champ, GrilleChamps } from "@/components/ui";
+import { Carte } from "@/components/ui";
 import { fr } from "@/i18n/fr";
 import type { PatientWorkspace } from "@/services/patients";
 
-import { BlocAdresse } from "./BlocAdresse";
 import { dateCivile, sexeLisible, situationLisible } from "./format";
 
-/**
- * Le contact d'urgence, en une phrase plutôt qu'en trois champs : « Nom
- * (relation) · téléphone ». Trois `Champ` séparés pour une information qu'on
- * lit d'un bloc découperaient l'attention sans rien clarifier.
- */
-function contactUrgenceLisible(
-  contact: PatientWorkspace["contact"]["emergencyContact"],
-): string | null {
-  if (contact === null) return null;
-
-  const identite =
-    contact.relation === null || contact.relation === ""
-      ? contact.name
-      : `${contact.name ?? ""} (${contact.relation})`.trim();
-
-  const morceaux = [identite, contact.phone].filter(
-    (m): m is string => m !== null && m !== "",
+function Ligne({ libelle, valeur }: { readonly libelle: string; readonly valeur: string | null }): React.JSX.Element | null {
+  if (valeur === null || valeur === "") return null;
+  return (
+    <div className="flex min-w-0 flex-col gap-0.5">
+      <dt className="font-ui text-label font-medium text-ink-500">{libelle}</dt>
+      <dd className="m-0 break-words font-ui text-body text-ink-900">{valeur}</dd>
+    </div>
   );
+}
 
+function contactUrgenceLisible(contact: PatientWorkspace["contact"]["emergencyContact"]): string | null {
+  if (contact === null) return null;
+  const identite = contact.relation === null || contact.relation === ""
+    ? contact.name
+    : `${contact.name ?? ""} (${contact.relation})`.trim();
+  const morceaux = [identite, contact.phone].filter((morceau): morceau is string => morceau !== null && morceau !== "");
   return morceaux.length === 0 ? null : morceaux.join(" · ");
 }
 
-export function CarteIdentite({
-  espace,
-}: {
-  readonly espace: PatientWorkspace;
-}): React.JSX.Element {
+export function CarteIdentite({ espace }: { readonly espace: PatientWorkspace }): React.JSX.Element {
   const { identite, contact, identification, admin } = espace;
+  const urgence = contactUrgenceLisible(contact.emergencyContact);
+  const secondaires = [contact.phoneAlt, contact.address, urgence, identification.idDocumentNumber, identification.idDocumentIssuer]
+    .filter((valeur): valeur is string => valeur !== null && valeur !== "");
 
   return (
     <Carte niveau="primaire">
-      <h2 className="mb-4 font-ui text-heading font-semibold tracking-heading text-ink-900">
-        {fr.patients.sections.identite}
-      </h2>
+      <div className="flex flex-col gap-5 p-5">
+        <h2 className="m-0 font-ui text-heading font-semibold tracking-heading text-ink-900">
+          {fr.patients.sections.identite}
+        </h2>
 
-      <GrilleChamps>
-        <Champ libelle={fr.patients.numeroDossier} valeur={identite.recordNumber} />
-        <Champ
-          libelle={fr.patients.dateNaissance}
-          valeur={dateCivile(identite.birthDate)}
-        />
-        {/* L'âge arrive calculé par la porte — jamais recalculé ici, voir
-            `format.ts`. */}
-        <Champ
-          libelle={fr.patients.age}
-          valeur={
-            identite.age === null
-              ? null
-              : `${String(identite.age)} ${fr.patients.ageAnnees}`
-          }
-        />
-        <Champ libelle={fr.patients.sexe} valeur={sexeLisible(identite.sex)} />
-        {/* 089. Affichée à côté du sexe parce que c'est de là que sort la
-            civilité imprimée sur les certificats — les lire séparément ferait
-            chercher l'explication d'un « Mlle » ailleurs dans le dossier. */}
-        <Champ
-          libelle={fr.patients.situationFamiliale}
-          valeur={situationLisible(identite.maritalStatus)}
-        />
-        <Champ libelle={fr.patients.telephone} valeur={contact.phone} />
-        <Champ libelle={fr.patients.telephoneSecondaire} valeur={contact.phoneAlt} />
-      </GrilleChamps>
+        <dl className="m-0 grid grid-cols-1 gap-x-6 gap-y-4 tablet:grid-cols-3">
+          <Ligne libelle={fr.patients.numeroDossier} valeur={identite.recordNumber} />
+          <Ligne libelle={fr.patients.dateNaissance} valeur={dateCivile(identite.birthDate)} />
+          <Ligne libelle={fr.patients.age} valeur={identite.age === null ? null : `${String(identite.age)} ${fr.patients.ageAnnees}`} />
+          <Ligne libelle={fr.patients.sexe} valeur={sexeLisible(identite.sex)} />
+          <Ligne libelle={fr.patients.situationFamiliale} valeur={situationLisible(identite.maritalStatus)} />
+          <Ligne libelle={fr.patients.telephone} valeur={contact.phone} />
+        </dl>
 
-      {/* L'adresse traverse toute la carte : une adresse sur trois lignes dans
-          une colonne d'un tiers de largeur se lit mal. */}
-      <div className="mt-6 border-t border-rule pt-6">
-        <BlocAdresse adresse={contact.address} />
+        {secondaires.length === 0 ? (
+          <p className="m-0 border-t border-rule pt-4 font-ui text-label text-ink-500">
+            Aucune coordonnée secondaire ni pièce d’identité renseignée.
+          </p>
+        ) : (
+          <dl className="m-0 grid grid-cols-1 gap-x-6 gap-y-4 border-t border-rule pt-4 tablet:grid-cols-2">
+            <Ligne libelle={fr.patients.telephoneSecondaire} valeur={contact.phoneAlt} />
+            <Ligne libelle={fr.patients.adresse} valeur={contact.address} />
+            <Ligne libelle={fr.patients.contactUrgence} valeur={urgence} />
+            <Ligne libelle={fr.patients.pieceIdentite} valeur={identification.idDocumentNumber} />
+            <Ligne libelle={fr.patients.pieceIdentiteEmetteur} valeur={identification.idDocumentIssuer} />
+          </dl>
+        )}
+
+        {admin.notesAdmin === null || admin.notesAdmin === "" ? null : (
+          <div className="border-t border-rule pt-4">
+            <Ligne libelle={fr.patients.notesAdministratives} valeur={admin.notesAdmin} />
+          </div>
+        )}
       </div>
-
-      <div className="mt-6 border-t border-rule pt-6">
-        <GrilleChamps>
-          <Champ
-            libelle={fr.patients.contactUrgence}
-            valeur={contactUrgenceLisible(contact.emergencyContact)}
-          />
-          <Champ
-            libelle={fr.patients.pieceIdentite}
-            valeur={identification.idDocumentNumber}
-          />
-          <Champ
-            libelle={fr.patients.pieceIdentiteEmetteur}
-            valeur={identification.idDocumentIssuer}
-          />
-        </GrilleChamps>
-      </div>
-
-      {/* Les notes administratives en dernier et en retrait : elles sont utiles
-          mais ne sont pas de l'identité, et rien ne doit laisser croire qu'on y
-          consigne du clinique — la colonne est explicitement non clinique (004). */}
-      {admin.notesAdmin === null || admin.notesAdmin === "" ? null : (
-        <div className="mt-6 border-t border-rule pt-6">
-          <Champ
-            libelle={fr.patients.notesAdministratives}
-            valeur={admin.notesAdmin}
-          />
-        </div>
-      )}
     </Carte>
   );
 }

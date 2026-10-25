@@ -85,8 +85,12 @@ return (
 }
 
 function referenceDernierContact(espace: PatientWorkspace): string | null {
+  // Une séance OUVERTE n'est pas une référence « depuis la dernière fois » :
+  // elle est déjà sous les yeux. Elle produisait « aucun nouvel élément depuis
+  // aujourd'hui » alors que la dernière séance close était ancienne.
+  const consultation = espace.clinique?.derniereConsultation ?? null;
   const dates = [
-    espace.clinique?.derniereConsultation?.startedAt ?? null,
+    consultation !== null && consultation.endedAt !== null ? consultation.startedAt : null,
     espace.agenda.dernierRendezVous?.startsAt ?? null,
   ].filter((d): d is string => d !== null);
   if (dates.length === 0) return null;

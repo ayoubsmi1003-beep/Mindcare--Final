@@ -291,12 +291,14 @@ describe("relecture : la portée survit à la persistance (SA-03)", () => {
     pointsNonExplores: [],
   };
 
-  it('hides a saved paragraph from an older narrative validation policy',async()=>{
+  it('keeps a saved paragraph from an older policy visible, marked as outdated',async()=>{
     const {chargerAnalyse}=await import('../../src/services/jarvis');
     const port=portLecture(CONTENU,{historique_notes:1});
     const obsolete:unknown={id:'a-obsolete',version:2,content:CONTENU,prompt_version:'alexa-narrative-fr-v15'};
     setDbPort({...port,rpc:async<T>()=>ok([obsolete] as readonly T[])});
-    expect(await chargerAnalyse('c-relue')).toEqual(ok(null));
+    const result=await chargerAnalyse('c-relue');
+    expect(result.ok).toBe(true);
+    if(result.ok)expect(result.data?.aJour).toBe(false);
   });
 
   it("`source_state` objet est relu (2 notes antérieures)", async () => {

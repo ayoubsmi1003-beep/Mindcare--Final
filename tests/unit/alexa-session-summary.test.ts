@@ -14,6 +14,8 @@ function fixture(options:{changed?:boolean;denied?:boolean;failedSave?:boolean;e
   if(name==="get_consultation"){reads++;data=[{...row,...(options.empty?{subjective:null,objective:null,assessment:null,plan:null}:{}),...(options.changed&&reads>1?{plan:"Consigne corrigée."}:{})}];}
   else if(name==="get_patient")data=options.denied?[]:[{id:patientId}];
   else if(name==="list_amendments")data=[];
+  else if(name==="get_scale_history")data=[];
+  else if(name==="list_scales")data=[];
   else if(name==='get_session_details')data=[null];
   else if(name==='get_alexa_clinical_context'){
    const state={status:'active',dose:'50',doseUnit:'mg',frequency:'quotidienne',timing:options.timingChange?['soir']:[],instructions:options.timingChange?'Avec le repas.':null,startDate:'2026-08-01',endDate:null},treatmentId='c3000000-0000-4000-8000-000000000001';

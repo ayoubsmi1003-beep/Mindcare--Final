@@ -28,8 +28,28 @@ import { log } from "./log";
 import { err, ok, type Result } from "./result";
 import { validerPreuves, type PreuveConnnaissance } from "@/shared/jarvis/preuves";
 
+export interface EvaluationSeance {
+  readonly scaleCode: string;
+  readonly scaleName: string;
+  readonly score: number | null;
+  readonly max: number | null;
+  readonly interpretation: string | null;
+  readonly administeredAt: string;
+  readonly risk: {
+    readonly itemId: string;
+    readonly itemText: string;
+    readonly value: number;
+    readonly message: string;
+  } | null;
+}
+
 export interface AnalyseSeance {
   readonly resume?: string | undefined;
+  /** Paragraphe de notes seul, sans les évaluations déterministes. */
+  readonly resumeNotes?: string | undefined;
+  /** Faux quand la synthèse a été produite par une version antérieure. */
+  readonly aJour: boolean;
+  readonly evaluations: readonly EvaluationSeance[];
   readonly method?: "reformulated" | "extractive" | "source_selection" | undefined;
   readonly complete?: boolean | undefined;
   readonly noteStructuree: NoteSoap;
@@ -75,6 +95,7 @@ interface AnalyseSeanceRow {
   };
   readonly evolution: readonly string[];
   readonly pointsNonExplores: readonly string[];
+  readonly evaluations?: readonly unknown[];
   readonly analyseId?: string | null;
   readonly version?: number | null;
   readonly persistee?: boolean;
@@ -184,6 +205,41 @@ function nouvelIdentifiantAnalyse(): string {
  * nominative légale est écrite en base par `get_consultation`, que la
  * passerelle appelle avant tout envoi au modèle (règle 1, I5).
  */
+function lireEvaluations(valeur: unknown): readonly EvaluationSeance[] {
+  if (!Array.isArray(valeur)) return [];
+  const out: EvaluationSeance[] = [];
+  for (const entry of valeur) {
+    if (typeof entry !== "object" || entry === null) continue;
+    const row = entry as Record<string, unknown>;
+    const code = typeof row["scaleCode"] === "string" ? row["scaleCode"] : null;
+    const name = typeof row["scaleName"] === "string" ? row["scaleName"] : null;
+    if (code === null || name === null) continue;
+    const riskRaw = row["risk"];
+    const risk = typeof riskRaw === "object" && riskRaw !== null
+      ? (() => {
+          const value = riskRaw as Record<string, unknown>;
+          const itemId = typeof value["itemId"] === "string" ? value["itemId"] : null;
+          const itemText = typeof value["itemText"] === "string" ? value["itemText"] : null;
+          const itemValue = typeof value["value"] === "number" ? value["value"] : null;
+          const message = typeof value["message"] === "string" ? value["message"] : null;
+          return itemId !== null && itemText !== null && itemValue !== null && message !== null
+            ? { itemId, itemText, value: itemValue, message }
+            : null;
+        })()
+      : null;
+    out.push({
+      scaleCode: code,
+      scaleName: name,
+      score: typeof row["score"] === "number" ? row["score"] : null,
+      max: typeof row["max"] === "number" ? row["max"] : null,
+      interpretation: typeof row["interpretation"] === "string" ? row["interpretation"] : null,
+      administeredAt: typeof row["administeredAt"] === "string" ? row["administeredAt"] : "",
+      risk,
+    });
+  }
+  return out;
+}
+
 export async function analyzeSession(
   consultationId: string,
   signal?: AbortSignal,
@@ -273,6 +329,9 @@ async function executerAnalyse(
 
     return ok({
       resume: result.data.resume,
+      resumeNotes: result.data.resume,
+      aJour: true,
+      evaluations: lireEvaluations(result.data.evaluations),
       method: result.data.method,
       complete: result.data.complete,
       noteStructuree: {
@@ -321,7 +380,8 @@ export async function chargerAnalyse(
   }
 
   const ligne = result.data[0];
-  if (ligne === undefined || ligne.prompt_version!==SESSION_NARRATIVE_VERSION) return ok(null);
+  if (ligne === undefined) return ok(null);
+  const aJour = ligne.prompt_version === SESSION_NARRATIVE_VERSION;
 
   // Le contenu vient de NOTRE porte, mais il a été écrit par un modèle : on le
   // lit avec la même défiance qu'une entrée réseau. Une forme inattendue rend
@@ -339,6 +399,9 @@ export async function chargerAnalyse(
   return ok({
     method: c["method"] === "source_selection" ? "source_selection" : c["method"] === "reformulated" ? "reformulated" : c["method"] === "extractive" ? "extractive" : undefined,
     resume: typeof c["resume"] === "string" ? c["resume"] : undefined,
+    resumeNotes: typeof c["resumeNotes"] === "string" ? c["resumeNotes"] : undefined,
+    aJour,
+    evaluations: lireEvaluations(c["evaluations"]),
     complete: c["complete"] === true,
     noteStructuree: {
       subjective: champ(n["subjective"]),

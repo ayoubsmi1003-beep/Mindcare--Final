@@ -47,7 +47,6 @@ import type { UserRole } from "@/services/authz";
 
 import { BandeauSeanceEnCours } from "./BandeauSeanceEnCours";
 import { BootVoix } from "./BootVoix";
-import { BulleAlexa } from "./BulleAlexa";
 import { PaletteCommande } from "./PaletteCommande";
 import { PanneauJarvis } from "./PanneauJarvis";
 import { Rail } from "./coquille/Rail";
@@ -110,6 +109,11 @@ export interface AppShellProps {
    * Opt-in par écran : les autres écrans gardent `overflow-y-auto` sur <main>.
    */
   readonly sansDefilement?: boolean;
+  /**
+   * Retire le lanceur flottant d'Alexa. L'écran /jarvis EST la conversation :
+   * un orbe posé par-dessus le fil n'ouvre rien qu'il ne montre déjà.
+   */
+  readonly sansBulle?: boolean;
   readonly children: React.ReactNode;
 }
 
@@ -146,7 +150,6 @@ export function AppShell({
    */
   const [alexaOuvert, setAlexaOuvert] = useState(false);
   const [paletteOuverte, setPaletteOuverte] = useState(false);
-  const ouvrirAlexa = useCallback(() => setAlexaOuvert(true), []);
   const changerAlexa = useCallback((v: boolean) => setAlexaOuvert(v), []);
 
   /**
@@ -232,7 +235,6 @@ export function AppShell({
       {avecAlexa ? (
         <>
           <BootVoix />
-          <BulleAlexa ouvert={alexaOuvert} onOuvrir={ouvrirAlexa} />
           <PanneauJarvis ouvert={alexaOuvert} onChangerOuvert={changerAlexa} />
           <PaletteCommande ouvert={paletteOuverte} onChangerOuvert={setPaletteOuverte} />
         </>

@@ -29,23 +29,25 @@ function Rendezvous({
 }): React.JSX.Element {
   return (
     <Carte niveau="primaire">
-      <h2 className="mb-3 font-ui text-heading font-semibold tracking-heading text-ink-900">
-        {titre}
-      </h2>
-      <div className="flex flex-wrap items-baseline justify-between gap-3">
-        <span className="font-ui text-body text-ink-900">
-          {jourEtHeure(rdv.startsAt) ?? fr.etats.texteAbsent}
-        </span>
-        {/* Le statut porte un TEXTE — jamais la couleur seule. Le libellé vient
-            du dictionnaire de l'agenda : un même statut ne doit pas se nommer
-            de deux façons selon l'écran qui l'affiche. */}
-        <Badge>{fr.agenda.statuts[rdv.status as keyof typeof fr.agenda.statuts] ?? rdv.status}</Badge>
+      <div className="flex flex-col gap-3 p-5">
+        <h2 className="m-0 font-ui text-heading font-semibold tracking-heading text-ink-900">
+          {titre}
+        </h2>
+        <div className="flex flex-wrap items-baseline justify-between gap-3">
+          <span className="font-ui text-body text-ink-900">
+            {jourEtHeure(rdv.startsAt) ?? fr.etats.texteAbsent}
+          </span>
+          {/* Le statut porte un TEXTE — jamais la couleur seule. Le libellé vient
+              du dictionnaire de l'agenda : un même statut ne doit pas se nommer
+              de deux façons selon l'écran qui l'affiche. */}
+          <Badge>{fr.agenda.statuts[rdv.status as keyof typeof fr.agenda.statuts] ?? rdv.status}</Badge>
+        </div>
+        {rdv.practitionerName === null ? null : (
+          <p className="m-0 font-ui text-label tracking-label text-ink-500">
+            {rdv.practitionerName}
+          </p>
+        )}
       </div>
-      {rdv.practitionerName === null ? null : (
-        <p className="mt-2 font-ui text-label tracking-label text-ink-500">
-          {rdv.practitionerName}
-        </p>
-      )}
     </Carte>
   );
 }
@@ -60,7 +62,7 @@ export function PanneauRendezVous({
   }
 
   return (
-    <div className="flex flex-col gap-6">
+    <div className="grid gap-5 desktop:grid-cols-2">
       {agenda.prochainRendezVous === null ? (
         <EtatVide message={fr.patients.vide.rendezVousAVenir} />
       ) : (
@@ -79,7 +81,7 @@ export function PanneauRendezVous({
 
       {/* La chronologie porte l'historique complet et daté : le répéter ici
           produirait deux listes à tenir cohérentes. */}
-      <p className="font-ui text-body text-ink-500">
+      <p className="m-0 font-ui text-body text-ink-500 desktop:col-span-2">
         {fr.patients.rendezVousTotal(agenda.nombreRendezVous)}
       </p>
     </div>

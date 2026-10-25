@@ -779,6 +779,12 @@ const config: Config = {
       // nomment les compositions retenues, une par famille d'écran.
       "espace-liste": "minmax(0, 22rem) minmax(0, 1fr)",
       "espace-travail": "minmax(0, 1fr) minmax(0, 21rem)",
+      // Cockpit large : contexte patient compact, travail, contexte de séance.
+      "cockpit-large": "minmax(0, 15rem) minmax(0, 1fr) minmax(0, 21rem)",
+      // Synthèse + profil clinique, puis diagnostic + échelles, puis dossier + repères.
+      resume: "minmax(0, 1fr) minmax(0, 18rem)",
+      clinique: "minmax(0, 1fr) minmax(0, 2fr)",
+      dossier: "minmax(0, 1fr) minmax(0, 22rem)",
       "espace-jour": "minmax(0, 1.6fr) minmax(0, 1fr)",
       "espace-document": "minmax(0, 20rem) minmax(0, 1fr) minmax(0, 26rem)",
       fiche: "repeat(auto-fit, minmax(var(--card-column-min), 1fr))",
@@ -840,6 +846,9 @@ const config: Config = {
       nav: "var(--grid-nav-width)",
       main: "var(--grid-main-max)",
       context: "var(--grid-context-width)",
+      // La feuille d'échelle : un panneau latéral, jamais un écran blanc plein
+      // largeur (défaut mesuré sur la saisie GAD-7).
+      xl: "36rem",
       // v9 — les compositions de connexion : la carte, puis la scène à deux
       // colonnes qui l'accompagne.
       form: "var(--width-form)",
