@@ -31,7 +31,7 @@ export class CanalVoixNative {
   c.recevoir(r.data);
  }
  echouer(): void { this.courante?.rejeter(new Error("runtime")); }
- demander(brut: unknown, signal?: AbortSignal, timeoutMs = 30000): Promise<ReponseVoix> {
+ demander(brut: unknown, signal?: AbortSignal, timeoutMs = 90_000): Promise<ReponseVoix> {
   if (this.courante !== null) return Promise.reject(new Error("occupe"));
   const entree = validerEntreeVoix(brut);
   if (entree === null) return Promise.reject(new Error("format"));

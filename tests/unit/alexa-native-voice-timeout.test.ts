@@ -33,10 +33,10 @@ describe("bounded native speech operation deadlines", () => {
     await vi.advanceTimersByTimeAsync(1); expect(await result).toBe("timeout"); expect(destroy).toHaveBeenCalledOnce();
   });
 
-  it("keeps the default TTS deadline at thirty seconds", async () => {
+  it("allows a slow local TTS call to use the full 90-second budget", async () => {
     vi.useFakeTimers(); const destroy = vi.fn(), canal = new CanalVoixNative(vi.fn(), destroy);
     const result = canal.demander({ ...scope, action: "tts", texte: "Bonjour.", langue: "fr" }).then(() => "unexpected-success", error => error.message);
-    await vi.advanceTimersByTimeAsync(29_999); expect(destroy).not.toHaveBeenCalled();
+    await vi.advanceTimersByTimeAsync(89_999); expect(destroy).not.toHaveBeenCalled();
     await vi.advanceTimersByTimeAsync(1); expect(await result).toBe("timeout"); expect(destroy).toHaveBeenCalledOnce();
   });
 });

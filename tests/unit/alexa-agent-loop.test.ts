@@ -214,6 +214,12 @@ it('executes a supported compound count-and-list as one atomic filtered query',a
  expect(inferenceCalls).toBe(0);expect(observed).toHaveLength(1);expect(observed[0]).toMatchObject({name:'query_patients',args:{mode:'list',population:'active',sort:'outstanding_desc',limit:20,filters:contract!.conditions}});expect((observed[0]?.args as Record<string,unknown>).partIds).toEqual(['count','list']);
  expect(result.status).toBe('completed');expect(result.parts.map(part=>part.id)).toEqual(['count','list']);expect(result.parts.every(part=>part.status==='answered')).toBe(true);
 });
+it('returns patient names directly when an interrogative list asks for their names',async()=>{
+ const text='Quels patients sont sans CNI ? Donne leurs noms.',condition={field:'identity_card',op:'missing',value:null};let inferenceCalls=0;const observed:Record<string,unknown>[]=[];
+ const result=await runAgentLoop({...input,text,conversationId:'patient-list-names'},{actor:'patient-list-names',infer:async()=>{inferenceCalls++;throw new Error('Unexpected model call');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,text:'2 patients sans carte d’identité :\nMeriem Benali\nYacine Cherif',data:{total:2,rows:[{id:'patient-1',first_name:'Meriem',last_name:'Benali'},{id:'patient-2',first_name:'Yacine',last_name:'Cherif'}],complete:true,offset:0},evidence:[{id:call.id,type:'query',label:'Liste vérifiée'}],conditionKeys:['identity_card:missing:null']})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);expect(observed).toHaveLength(1);expect(observed[0]).toMatchObject({name:'query_patients',args:{mode:'list',population:'active',filters:[condition]}});
+ expect(result.status).toBe('completed');expect(result.sentences.join('\n')).toContain('Meriem Benali');expect(result.sentences.join('\n')).toContain('Yacine Cherif');
+});
 const namedReadRouteCases=[
  {id:'mc-100-094',parts:2,calls:2,status:'completed'},
  {id:'mc-100-095',parts:2,calls:2,status:'completed'},

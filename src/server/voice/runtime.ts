@@ -91,7 +91,7 @@ export async function demanderVoixNative(entree: EntreeVoix, signal?: AbortSigna
  await preparerVoixNative(entree.sessionId, signal);
  clearTimeout(idle);
  const worker = ouvrir(entree.sessionId);
- try { return await worker.canal.demander(entree, signal, entree.action === "stt" ? 90_000 : 30_000); }
+ try { return await worker.canal.demander(entree, signal); }
  finally {
   idle = setTimeout(() => { if (courant === worker) arreterVoixNative(entree.sessionId); }, sessionContinue === entree.sessionId ? 15 * 60_000 : 60000); idle.unref();
  }

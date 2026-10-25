@@ -92,7 +92,7 @@ async function lireLocalement(text: string, signal: AbortSignal, playing: () => 
   const abort = () => { arreterLecture(); rejectEnd(new Error("cancelled")); };
   signal.addEventListener("abort", abort, { once: true });
   unsubscribe = abonnerLecture((active, source) => {
-    if (active && source === "cloud") { seen = true; playing(); }
+    if (active && source === "piper") { seen = true; playing(); }
     else if (active) { arreterLecture(); rejectEnd(new Error("local-only")); }
     else if (seen) resolveEnd();
   });
@@ -128,7 +128,7 @@ const loop = creerBoucleVoixLocale({
       : error === "tts" ? alexa.tts : error ? alexa.interrompu
       : etat === "reveille" ? alexa.voixPreparation : etat === "ecoute" ? alexa.voixEcoute
       : etat === "traitement" ? alexa.voixReflexion : etat === "parole" ? alexa.voixParole : null;
-    view = { etat, raison, reveilArme: false, sourceParole: etat === "parole" ? "cloud" : null };
+    view = { etat, raison, reveilArme: false, sourceParole: etat === "parole" ? "piper" : null };
     for (const subscriber of subscribers) subscriber(view);
   },
   tour: (turn) => {
