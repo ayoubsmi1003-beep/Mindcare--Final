@@ -201,7 +201,9 @@ function directNamedApplicationReads(text:string,clientTurnId:string,selectedPat
   if(!agentSchemas.get_patient_context.safeParse(args).success)return null;
   calls.push({part:{...groupParts[0]!,goal:requestGoal},parts:groupParts,call:{id:`direct-${clientTurnId}-profile-${calls.length+1}`,name:'get_patient_context',args}});
  }
- return {parts,calls};
+  const partOrder=new Map(parts.map((part,index)=>[part.id,index]));
+  calls.sort((left,right)=>(partOrder.get(left.part.id)??Number.MAX_SAFE_INTEGER)-(partOrder.get(right.part.id)??Number.MAX_SAFE_INTEGER));
+  return {parts,calls};
 }
 function answerLatestNoteReference(result:AgentResult,asOf:string):AgentResult {
  if(!['ok','partial'].includes(result.status))return result;

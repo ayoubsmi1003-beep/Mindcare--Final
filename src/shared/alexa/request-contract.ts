@@ -259,7 +259,8 @@ function frenchReadTargets(text:string):FrenchReadTarget[]{
  const practitionerView=!specificOffice&&/\b(?:praticien\w*|medecin|docteur|mon profil professionnel)\b/u.test(plain)?'practitioner' as const:undefined;
  if(cabinetView||practitionerView){const applicationView=cabinetView&&practitionerView?undefined:cabinetView??practitionerView;add({tool:'query_app',...(applicationView?{applicationView}:{})});}
  if(anchor||notes||summaryRequested){
-  const patientSection:FrenchReadTarget['patientSection']=summaryRequested?'summary':notes?'notes':/\bdiagnosti\w*\b/u.test(plain)?'diagnoses':/\b(?:echelles?|scores?)\b/u.test(plain)?'scales':/\b(?:traitements?|medicaments?|prescriptions?)\b/u.test(plain)?'treatments':/\b(?:seance en cours|consultation en cours|actuellement en consultation)\b/u.test(plain)?'current':/\bhistorique\b/u.test(plain)?'history':/\b(?:resume|synthese) clinique\b/u.test(plain)?'summary':/\b(?:e[- ]?mail|courriel|adresse electronique|telephones?|coordonnees?|adresses?|naissance|ages?|sexe|identite|identite nationale|identification nationale|carte nationale|cni|cin|situation familiale|contact d.urgence|numero national|numero (?:de (?:carte|piece) d.identite|d.identite|de dossier)|profil|administrati\w*)\b/u.test(plain)?'profile':undefined;
+   const selectedPatientName=/\b(?:noms?|prenoms?)\b/u.test(plain)&&/\b(?:patient\s+(?:selectionne\w*|courant)|(?:ce|cette)\s+patient(?:e)?|dossier\s+(?:ouvert|courant|actif)|son dossier)\b/u.test(plain)&&!/\b(?:agenda|rendez[- ]?vous|rdv)\b/u.test(plain);
+   const patientSection:FrenchReadTarget['patientSection']=summaryRequested?'summary':notes?'notes':/\bdiagnosti\w*\b/u.test(plain)?'diagnoses':/\b(?:echelles?|scores?)\b/u.test(plain)?'scales':/\b(?:traitements?|medicaments?|prescriptions?)\b/u.test(plain)?'treatments':/\b(?:seance en cours|consultation en cours|actuellement en consultation)\b/u.test(plain)?'current':/\bhistorique\b/u.test(plain)?'history':/\b(?:resume|synthese) clinique\b/u.test(plain)?'summary':/\b(?:e[- ]?mail|courriel|adresse electronique|telephones?|coordonnees?|adresses?|naissance|ages?|sexe|identite|identite nationale|identification nationale|carte nationale|cni|cin|situation familiale|contact d.urgence|numero national|numero (?:de (?:carte|piece) d.identite|d.identite|de dossier)|profil|administrati\w*)\b/u.test(plain)||selectedPatientName?'profile':undefined;
   const diagnosisStates=[...(/\bactif\w*\b/u.test(plain)?['active' as const]:[]),...(/\bresolu\w*\b/u.test(plain)?['resolved' as const]:[])];
   const diagnosisRoles=[...(/\bprincipa(?:l|le|ux|les)\b/u.test(plain)?['primary' as const]:[]),...(/\bsecondair\w*\b/u.test(plain)?['secondary' as const]:[])];
   const treatmentStates=[...(/\bactif\w*\b/u.test(plain)?['active' as const]:[]),...(/\b(?:pause|suspendu\w*)\b/u.test(plain)?['paused' as const]:[]),...(/\barrete\w*\b/u.test(plain)?['stopped' as const]:[])];
@@ -346,7 +347,7 @@ export function frenchRequestedOutputs(text:string):string[]|null{
    if(goals.every(goal=>requestedReadTool(goal,text)))return goals;
   }
  }
- const separators=[...text.matchAll(/\s+\b(?:et|puis)\s+(?=(?:combien|quel(?:le|s|les)?|qui|comment|pourquoi|où|quand|le\s+rep[èe]re|la\s+référence)\b)/giu)];
+  const separators=[...text.matchAll(/\s+\b(?:et|puis)\s+(?=(?:combien|quel(?:le|s|les)?|qui|comment|pourquoi|où|quand|le\s+(?:nombre|total|effectif|rep[èe]re)|l['’]effectif|la\s+référence)\b)/giu)];
  if(!separators.length||separators.length>5)return null;
  const clauses:string[]=[];let start=0;
  for(const separator of separators){clauses.push(text.slice(start,separator.index).trim().replace(/[\s,;]+$/u,''));start=separator.index+separator[0].length;}
@@ -382,7 +383,7 @@ export function requestedReadTool(goal:string,original:string):FrenchReadTool|un
  if(requestedCountRead(goal)){if(/\bpatients?\b/u.test(plain))return 'query_patients';if(/\bconsult\w*\b/u.test(plain))return 'query_consultations';}
  return undefined;
 }
-export function requestedCountRead(goal:string):boolean{return /^(?:(?:compt\w*|combien|nombre|total)\b|quel(?:le)?\s+est(?:-ce)?\s+(?:le\s+)?(?:nombre|total|effectif)\b)/u.test(fold(goal))&&!/\b(?:liste\w*|affich\w*|montr\w*|lesquels|lesquelles)\b/u.test(fold(goal));}
+export function requestedCountRead(goal:string):boolean{return /^(?:(?:compt\w*|combien|(?:le\s+)?nombre|(?:le\s+)?total|effectif)\b|quel(?:le)?\s+est(?:-ce)?\s+(?:le\s+)?(?:nombre|total|effectif)\b)/u.test(fold(goal))&&!/\b(?:liste\w*|affich\w*|montr\w*|lesquels|lesquelles)\b/u.test(fold(goal));}
 export function isAdministrativeReview(goal:string,original:string):boolean{
  const plain=fold(goal),whole=fold(original);
  return /administrati\w*[^.!?]*incomplet|incomplet[^.!?]*administrati/u.test(whole)&&!/\b(?:modifi\w*|enregistr\w*|corrige\w*|sauvegard\w*)\b/u.test(plain)&&/administrati|champs? manquant|correction\w*[^.!?]*revue/u.test(plain);

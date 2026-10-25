@@ -484,6 +484,17 @@ it('routes a selected-patient phone read directly through the patient-context ga
  expect(inferenceCalls).toBe(0);expect(observed).toEqual([{name:'get_patient_context',args:{partIds:['requested_1'],section:'profile'}}]);expect(result.status).toBe('completed');
 });
 
+it('answers a selected-patient name and completed-consultation count with grounded reads',async()=>{
+ const patient='33333333-3333-4333-8333-333333333333',observed:Record<string,unknown>[]=[];let inferenceCalls=0;
+ const result=await runAgentLoop({...input,text:'Pour le patient sélectionné, indique son nom et le nombre de consultations terminées.',conversationId:'selected-name-and-count',appContext:{patientId:patient,page:'/patients/'+patient}},{actor:'selected-name-and-count',infer:async()=>{inferenceCalls++;throw Error('Unexpected model call');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,patientId:patient,text:call.name==='get_patient_context'?'Nom vérifié.':'3 consultations terminées.',evidence:[],conditionKeys:[]})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);
+ expect(observed).toEqual([
+  {name:'get_patient_context',args:{partIds:['requested_1'],section:'profile',patientId:patient}},
+  {name:'query_consultations',args:{partIds:['requested_2'],mode:'count',status:'closed',patientId:patient}},
+ ]);
+ expect(result.status).toBe('completed');expect(result.sentences.join(' ')).toContain('Nom vérifié.');expect(result.sentences.join(' ')).toContain('3 consultations terminées.');
+});
+
 it('routes a whole relative agenda period with bounded dates and no invented record identifiers',async()=>{
  const observed:Record<string,unknown>[]=[];
  await runAgentLoop({...input,text:'Quels sont les rendez-vous de demain ?',conversationId:'grounded-agenda-catalogue'},{actor:'grounded-agenda-catalogue',asOf:'2026-10-20T11:00:00Z',infer:async()=>{throw Error('Unexpected model call');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'empty',complete:true,text:'0 rendez-vous',conditionKeys:[],evidence:[]})},new AbortController().signal);

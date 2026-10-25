@@ -53,6 +53,15 @@ it('splits a named-patient note question from its completed-consultation count',
  ]);
  expect(outputs!.map(goal=>requestedReadTool(goal,text))).toEqual(['get_patient_context','query_consultations']);
 });
+it('splits a selected-patient name and completed-consultation count into two grounded reads',()=>{
+ const text='Pour le patient sélectionné, indique son nom et le nombre de consultations terminées.';
+ const outputs=frenchRequestedOutputs(text);
+ expect(outputs).toEqual([
+  'Pour le patient sélectionné, indique son nom',
+  'le nombre de consultations terminées',
+ ]);
+ expect(outputs!.map(goal=>requestedReadTool(goal,text))).toEqual(['get_patient_context','query_consultations']);
+});
 it('splits a French shared-verb list into reads for each explicitly named patient',()=>{
  const text='Donne le téléphone de Amina Meziane, la date de naissance de Sofiane Cherif et le nombre de consultations de Amel Bensaid.';
  const outputs=frenchRequestedOutputs(text);
