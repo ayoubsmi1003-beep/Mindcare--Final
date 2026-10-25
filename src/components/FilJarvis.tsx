@@ -15,7 +15,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 
-import { SiriOrb } from "@/components/ui/siri-orb";
+import { AvatarAlexa } from "@/components/ui/avatar-alexa";
 import {AlexaAnswerText} from './AlexaAnswerText';
 import { agentCopy } from "@/i18n/alexa-agent";
 import { fr } from "@/i18n/fr";
@@ -73,10 +73,7 @@ export function FilJarvis({
     <div className="flex flex-col gap-3" role="log" aria-live="polite" aria-label={fr.jarvis.titre}>
       {etat.tours.length === 0 && !fluxEnCours && (
         <div className="grid justify-items-center gap-4 px-4 py-10 text-center">
-          <SiriOrb
-            size="132px"
-            animationDuration={18}
-          />
+          <AvatarAlexa taille="lg" diametre={132} />
           <p className="m-0 font-ui text-body text-ink-700" style={{ maxWidth: "28ch" }}>
             {fr.jarvis.invite}
           </p>
@@ -127,10 +124,7 @@ export function FilJarvis({
             {tour.registre === "connaissance-generale" && (
               <span className="inline-flex items-center gap-1 pl-1 font-ui text-label tracking-label text-ai-600">
                 <span aria-hidden className="inline-flex h-4 w-4 shrink-0 items-center justify-center overflow-hidden rounded-full">
-                  <SiriOrb
-                    size="16px"
-                    animationDuration={18}
-                  />
+                  <AvatarAlexa taille="sm" diametre={16} />
                 </span>
                 {fr.jarvis.registreConnaissance}
               </span>

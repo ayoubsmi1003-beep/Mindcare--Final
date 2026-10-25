@@ -33,7 +33,7 @@ import { alexa } from "@/i18n/alexa";
 import { abonnerVoixLocale, basculerVoixLocale, niveauVoixLocale } from "@/services/alexa-local";
 import type { EtatVoix, VueVoix } from "@/services/jarvis-reveil";
 
-import { SiriOrb } from "./ui/siri-orb";
+import { AvatarAlexa } from "./ui/avatar-alexa";
 
 /**
  * L'apparence de chaque état. Aucun hex : uniquement des jetons du design
@@ -54,33 +54,6 @@ const APPARENCE: Record<EtatVoix, { readonly noyau: string; readonly anneau: str
   erreur: { noyau: "", anneau: "ring-2 ring-attention" },
   desactive: { noyau: "", anneau: "" },
 };
-
-/**
- * Durée d'animation du SiriOrb par état vocal.
- *  - veille / interrompu : calme (22s)
- *  - reveille / ecoute   : nettement réactif (7-8s)
- *  - traitement          : lent / contrôlé, distinct de l'écoute (30s)
- *  - parole              : vivant pendant la synthèse (12s)
- *  - erreur / desactive  : traitement d'erreur/disponibilité existant, calme
- */
-const DUREE_ORB: Record<EtatVoix, number> = {
-  veille: 22,
-  reveille: 8,
-  ecoute: 7,
-  traitement: 30,
-  parole: 12,
-  interrompu: 22,
-  erreur: 22,
-  desactive: 30,
-};
-
-/** Palette sauge — jetons (jamais de littéral couleur en TSX). Calme, médical. */
-const COULEURS_CLINIQUES = {
-  bg: "var(--chart-5)",
-  c1: "var(--primary)",
-  c2: "var(--chart-2)",
-  c3: "var(--accent)",
-} as const;
 
 interface Props {
   /** Diamètre en pixels. L'en-tête en veut un plus petit que le lanceur. */
@@ -121,9 +94,13 @@ export function OrbeVoix({ taille = 32 }: Props): React.JSX.Element {
   // praticienne dans un état dont aucun clic ne sort.
   const eteint = etat === "desactive";
 
-  // SiriOrb est la couche visuelle — la même palette premium pour tous les
-  // états, seule la durée d'animation distingue écoute / réflexion / parole.
-  const duree = DUREE_ORB[etat];
+  // L'orbe vert (AvatarAlexa) est la couche visuelle ; l'anneau reste
+  // l'unique marquage d'état côté chrome, avec son libellé textuel.
+  const diametres = [16, 18, 28, 32, 56, 112, 132] as const;
+  type DiametreConnu = (typeof diametres)[number];
+  const diametre: DiametreConnu = (diametres as readonly number[]).includes(taille)
+    ? (taille as DiametreConnu)
+    : 32;
 
   return (
     <button
@@ -151,13 +128,7 @@ export function OrbeVoix({ taille = 32 }: Props): React.JSX.Element {
           transform: "scale(calc(1 + var(--niveau, 0) * 0.18))",
         }}
       >
-        <SiriOrb
-          size={`${String(taille)}px`}
-          etat={etat === "ecoute" || etat === "traitement" || etat === "parole" ? etat : etat === "reveille" ? "traitement" : "idle"}
-          animationDuration={duree}
-          colors={COULEURS_CLINIQUES}
-          className="rounded-full"
-        />
+        <AvatarAlexa taille="sm" diametre={diametre} className="rounded-full" />
       </span>
       {/* Le libellé d'état, annoncé aux lecteurs d'écran sans encombrer l'écran.
           `polite` : une transition d'orbe ne doit pas couper la parole en cours

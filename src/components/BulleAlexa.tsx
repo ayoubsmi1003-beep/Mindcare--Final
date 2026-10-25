@@ -28,7 +28,7 @@
 
 import { useEffect, useState } from "react";
 
-import { SiriOrb } from "./ui/siri-orb";
+import { AvatarAlexa } from "./ui/avatar-alexa";
 import { fr } from "@/i18n/fr";
 import { abonnerConversation } from "@/services/conversation";
 
@@ -89,11 +89,8 @@ export function BulleAlexa({
         className="pointer-events-none relative inline-flex h-14 w-14 animate-flottement-doux items-center justify-center overflow-hidden rounded-full motion-reduce:animate-none"
       >
         {/* Même orbe que le panneau qu'elle ouvre : on reconnaît où l'on va
-            avant de cliquer. Palette émeraude, état idle/ecoute. */}
-        <SiriOrb
-          size="56px"
-          etat={enAttente ? "ecoute" : "idle"}
-        />
+            avant de cliquer. Avatar vert. */}
+        <AvatarAlexa taille="md" diametre={56} />
       </span>
 
       {/* La pastille d'attente : `--attention`, jamais `--critical`. Le rouge

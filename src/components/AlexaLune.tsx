@@ -15,7 +15,7 @@ import { alexa } from "@/i18n/alexa";
 import { fr } from "@/i18n/fr";
 import type { EtatConversationPublique } from "@/services/conversation";
 
-import { SiriOrb } from "./ui/siri-orb";
+import { AvatarAlexa } from "./ui/avatar-alexa";
 import { Icone, type NomIcone } from "./ui/Icones";
 
 export function HeroAlexaLune({ etat }: { readonly etat: EtatConversationPublique }): React.JSX.Element {
@@ -30,11 +30,7 @@ export function HeroAlexaLune({ etat }: { readonly etat: EtatConversationPubliqu
       <button type="button" onClick={basculerVoixLocale} aria-label={actif ? alexa.voixArreter : alexa.voixDemarrer}
         aria-pressed={actif} disabled={etat.carteEcriture !== null && !actif}
         className="inline-flex cursor-pointer items-center justify-center overflow-hidden rounded-full border-0 bg-transparent p-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-action-600">
-        <SiriOrb
-          size="112px"
-          etat={actif ? voix.etat === "parole" ? "parole" : voix.etat === "ecoute" ? "ecoute" : "traitement"
-            : etat.carteEcriture !== null ? "ecoute" : etat.etat === "envoi" || etat.etat === "flux" ? "traitement" : "idle"}
-        />
+        <AvatarAlexa taille="lg" diametre={112} />
       </button>
       <h2 className="m-0 mt-4 font-ui text-display font-semibold tracking-display text-night-ink">
         {fr.jarvis.titre}

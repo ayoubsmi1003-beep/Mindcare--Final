@@ -1,0 +1,50 @@
+/* AvatarAlexa — preset vert. Couleurs ici (fichier CSS), jamais en TSX. */
+
+@keyframes ava-blink {
+  0%, 88%, 100% { transform: scaleY(1); }
+  93%            { transform: scaleY(0.07); }
+  97%            { transform: scaleY(0.07); }
+}
+
+.ava-orb {
+  background: radial-gradient(circle at 50% 45%, #0d6632 0%, #2a9d5f 40%, #6dd187 68%, #d1fadd 100%);
+  box-shadow:
+    0 0 4px 0px rgba(12, 168, 82, 0.35),
+    0 0 16px 6px rgba(12, 168, 82, 0.18),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.ava-iris {
+  background: linear-gradient(135deg, #ffffff 0%, #c5f5d8 100%);
+}
+
+.ava-shine {
+  background: radial-gradient(
+    ellipse at 30% 24%,
+    rgba(255, 255, 255, 0.75) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 70%
+  );
+}
+
+.ava-eye-blink {
+  animation: ava-blink 3.6s ease-in-out infinite;
+}
+
+.ava-d16 { width: 16px; height: 16px; }
+.ava-d18 { width: 18px; height: 18px; }
+.ava-d28 { width: 28px; height: 28px; }
+.ava-d32 { width: 32px; height: 32px; }
+.ava-d56 { width: 56px; height: 56px; }
+.ava-d112 { width: 112px; height: 112px; }
+.ava-d132 { width: 132px; height: 132px; }
+
+.ava-ombre {
+  background: radial-gradient(circle at 62% 68%, rgba(0, 0, 0, 0.18) 0%, transparent 55%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ava-eye-blink {
+    animation: none;
+  }
+}
