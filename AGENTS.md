@@ -72,7 +72,7 @@ Pointeurs : `ARCHITECTURE.md` · `STATE-INDEX.md` · `docs/domains/` · `docs/co
 
 ## 9. Source partagée Codex / OpenCode
 
-- Sur ce poste, le dépôt canonique est `G:\Final mindcare`. Vérifier `git status` et `git log` dans ce dépôt avant de reprendre une tâche ; ne pas recréer un changement déjà présent dans l'arbre ou dans les commits récents.
+- Sur ce poste, le dépôt canonique est `C:\MindCare\Final mindcare` par choix explicite de l'utilisateur. `G:\Final mindcare` est conservé pour les sessions déjà actives. Pour le travail Alexa destiné à l'application principale, vérifier `git status` et `git log` dans le dépôt C: avant de reprendre une tâche ; ne pas recréer un changement déjà présent dans l'arbre ou dans les commits récents.
 - Codex et OpenCode utilisent ce même `AGENTS.md`. Les définitions centrales d'Alexa sont dans ce dépôt, `src/server/alexa/model-policy.ts` ; aucun autre worktree n'est requis pour les retrouver.
 - Lire `docs/RUNTIME-CONFIGURATION.md` pour les modèles et chemins de base. Ne jamais afficher ni copier les secrets de `.env` ou `%ProgramData%\MindCare`.
 - Aucune base d'évaluation Alexa n'est gardée active. Toute future campagne part d'une base jetable identifiée comme synthétique et vérifiée isolément avant écriture. Ne jamais inventer d'historique, de note, de traitement ou de rendez-vous pour un patient réel.
