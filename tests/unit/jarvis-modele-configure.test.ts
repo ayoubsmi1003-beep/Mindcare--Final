@@ -71,9 +71,12 @@ describe("aucun nom de modèle en dur hors de la passerelle", () => {
       if (route.endsWith("jarvis-resume-cas/route.ts")) {
         expect(source).toContain('from "@/app/api/alexa/summary/route"');
         const summary = readFileSync(join(process.cwd(), "src/app/api/alexa/summary/route.ts"), "utf8");
-        expect(summary).toContain("buildCaseSummary(context");
-        expect(summary).toContain('p_model: ALEXA_CONVERSATION_MODEL');
-        expect(summary).toContain('summarizeClinicalCaseContext(context, signal)');
+        // Synthèse longitudinale DÉTERMINISTE : aucun appel modèle, aucune
+        // inférence externe — les échelles ne sont jamais envoyées à un modèle.
+        expect(summary).toContain("buildCaseSynthesis({");
+        expect(summary).toContain('p_model: "mindcare-case-synthesis"');
+        expect(summary).toContain("save_alexa_case_summary");
+        expect(summary).not.toContain("summarizeClinicalCaseContext");
         expect(summary).not.toContain("inferAlexa(");
         return;
       }

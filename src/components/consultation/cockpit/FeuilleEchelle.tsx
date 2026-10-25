@@ -149,9 +149,9 @@ export function FeuilleEchelle({
       onClick={(event) => {
         if (event.target === dialogRef.current) fermer();
       }}
-      className="m-0 ms-auto h-full max-h-full w-full max-w-xl border-0 border-s border-rule bg-card p-0 shadow-elevee"
+      className="m-0 ms-auto h-auto max-h-full w-full max-w-xl overflow-hidden border-0 border-s border-rule bg-card p-0 shadow-elevee"
     >
-      <div className="flex h-full min-h-0 flex-col">
+      <div className="flex max-h-full min-h-0 flex-col">
         <header className="flex flex-col gap-1 border-b border-rule px-5 py-4">
           <p className="m-0 font-ui text-label font-semibold uppercase tracking-label text-action-700">
             {fr.consultation.cockpit.echellesTitre}
@@ -169,7 +169,7 @@ export function FeuilleEchelle({
           </p>
         </header>
 
-        <div className="min-h-0 flex-1 overflow-y-auto px-5 py-4">
+        <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-5 py-4">
           {erreur === undefined ? null : (
             <div className="mb-3">
               <PanneauInfo ton="attention">{erreur}</PanneauInfo>
