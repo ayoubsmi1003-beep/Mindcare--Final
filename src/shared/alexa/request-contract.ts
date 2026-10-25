@@ -255,7 +255,7 @@ function frenchReadTargets(text:string):FrenchReadTarget[]{
  if(/\bnotifications?\b/u.test(plain))add({tool:'query_app',applicationView:'notifications'});
  if(/\b(?:etat|statut|environnement|heure|date)\b/u.test(plain)&&/\b(?:systeme|serveur|deploiement|cabinet)\b/u.test(plain))add({tool:'query_app',applicationView:'system'});
  const specificOffice=targets.some(t=>t.tool==='query_app'&&['notifications','system'].includes(t.applicationView??''));
- const cabinetView=!specificOffice&&!targets.some(target=>target.tool==='query_agenda')&&/\b(?:cabinet|clinique)\b/u.test(plain)?'cabinet' as const:undefined;
+ const cabinetView=!specificOffice&&!targets.length&&/\b(?:cabinet|clinique)\b/u.test(plain)?'cabinet' as const:undefined;
  const practitionerView=!specificOffice&&/\b(?:praticien\w*|medecin|docteur|mon profil professionnel)\b/u.test(plain)?'practitioner' as const:undefined;
  if(cabinetView||practitionerView){const applicationView=cabinetView&&practitionerView?undefined:cabinetView??practitionerView;add({tool:'query_app',...(applicationView?{applicationView}:{})});}
  if(anchor||notes||summaryRequested){

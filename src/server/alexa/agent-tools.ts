@@ -496,7 +496,7 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
      appendLinkedAnswerLine(result,name,row.slice(name.length),r.patientId?{kind:'patient',id:r.patientId}:undefined);
     }
    }else{
-    result.text=call.name==='query_consultations'&&spec['mode']==='count'?applicationReadCopy.consultationCount(value.total,spec['status']):`${value.total} ${recordsCopy.count}`;
+    result.text=call.name==='query_consultations'&&spec['mode']==='count'?applicationReadCopy.consultationCount(value.total,spec['status'],!!patientId):`${value.total} ${recordsCopy.count}`;
     for(const r of value.rows)appendLinkedAnswerLine(result,label(r.label),` — ${r.at?new Date(r.at).toLocaleString(language==="fr"?"fr-DZ":"ar-DZ",{timeZone:"Africa/Algiers"}):""} — ${label(r.status)}${r.amount!==null?` — ${r.amount} DZD`:""}`,call.name==='query_documents'?{kind:r.status==='draft'?'draft':'document',id:r.id}:call.name==='query_consultations'?{kind:'consultation',id:r.id}:r.patientId?{kind:'patient',id:r.patientId}:undefined);
    }
    result.evidence.unshift({id:call.id,type:"query",label:recordsCopy.count+" : "+value.total,provenance:{gate:"query_alexa_records",domain:call.name.slice(6),asOf}});

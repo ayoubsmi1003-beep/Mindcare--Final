@@ -264,6 +264,14 @@ function directAgendaReadCall(text:string,clientTurnId:string,selectedPatientId:
  if(!agentSchemas.query_agenda.safeParse(args).success)return null;
  return {part:{id,goal:text,tools:['query_agenda'],conditions:[],dependsOn:[],status:'pending',resultRefs:[]},call:{id:`direct-${clientTurnId}-${id}`,name:'query_agenda',args}};
 }
+function directConsultationCountCall(text:string,clientTurnId:string):{part:RequestPart;call:AgentCall}|null{
+ const scope=frenchRequestAdmission(text,false),plain=text.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase();
+ if(scope.tools?.length!==1||scope.tools[0]!=='query_consultations'||scope.consultationMode!=='count'||scope.from||scope.to||scope.unboundedPeriod!==true)return null;
+ if(/\b(?:patient\w*|dossier\w*|son|sa|ses)\b/u.test(plain)||parsePatientMention(text).status!=='none')return null;
+ const id='requested_1',args={partIds:[id],mode:'count' as const,status:scope.consultationStatus??'all' as const};
+ if(!agentSchemas.query_consultations.safeParse(args).success)return null;
+ return {part:{id,goal:text,tools:['query_consultations'],conditions:[],dependsOn:[],status:'pending',resultRefs:[]},call:{id:`direct-${clientTurnId}-${id}`,name:'query_consultations',args}};
+}
 interface DirectWorkflowStep {call:AgentCall;partIds:string[];goal:string;after?:string;reviewDisclaimer?:boolean}
 interface DirectWorkflow {parts:RequestPart[];steps:DirectWorkflowStep[]}
 function directExtendedCounts(contract:NonNullable<ReturnType<typeof frenchPatientCountContract>>,clientTurnId:string,asOf:string):DirectWorkflow|null {
@@ -382,6 +390,7 @@ export async function runAgentLoop(input: TurnInput, deps: AgentLoopDependencies
   const directReadCalls=!declared&&freshRead?directRecurringThemeCountCalls(requestedOutputs,input.text,input.clientTurnId):null;
   const directOfficeReadCall=!declared&&freshRead?directNotificationsReadCall(input.text,input.clientTurnId,requestedOutputs):null;
   const directAgendaCall=!declared&&freshRead&&!requestedOutputs&&!countContract&&!compoundContract?directAgendaReadCall(input.text,input.clientTurnId,input.appContext.patientId,asOf):null;
+  const directConsultationCountRead=!declared&&freshRead&&!requestedOutputs&&!countContract&&!compoundContract?directConsultationCountCall(input.text,input.clientTurnId):null;
   const directNavigationCall=!declared&&freshRead&&!requestedOutputs?directGlobalNavigationCall(input.text,input.clientTurnId):null;
   const directWorkflow=!declared&&freshRead&&!compoundContract?(countContract?directExtendedCounts(countContract,input.clientTurnId,asOf):directAgendaAdministrativeReview(input.text,input.clientTurnId,asOf)):null;
   const directNamedReads=!declared&&freshRead&&!countContract&&!compoundContract?directNamedApplicationReads(input.text,input.clientTurnId,input.appContext.patientId,asOf):null;
@@ -397,7 +406,7 @@ export async function runAgentLoop(input: TurnInput, deps: AgentLoopDependencies
   const extendedPatientQuery=!declared&&freshRead&&!requestedOutputs&&!medicalOnly&&/\b(?:patients|patientes|dossiers|patientèle)\b/iu.test(input.text)&&(queryContract.extended||queryContract.unsupported.length>0);
   const extendedPart:RequestPart={id:'requested_1',goal:input.text,tools:['query_patients'],conditions:queryContract.filterGroups.length===1?queryContract.filterGroups[0]!:[],constraintLedger:queryContract.ledger,dependsOn:[],status:'pending',resultRefs:[]};
   const extendedCall:AgentCall={id:`direct-${input.clientTurnId}-extended`,name:'query_patients',args:{partIds:[extendedPart.id],mode:requestedCountRead(input.text)?'count':'list',population:queryContract.population}};
-  const directCalls:{part:RequestPart;call:AgentCall;parts?:RequestPart[];latestNoteReference?:boolean }[]|null=directWorkflow?null:extendedPatientQuery?queryContract.unsupported.length?[]:[{part:extendedPart,call:extendedCall}]:directExtraApp?[directExtraApp]:directNamedReads?.calls??directMixedMetricAgenda??(directMetricRead?[directMetricRead]:directCompoundRead?[directCompoundRead]:directKnowledgeRead?[directKnowledgeRead]:directPublicAnswer?[directPublicAnswer]:directReadCalls??(directNoteRead?[directNoteRead]:directSummaryCall?[directSummaryCall]:directOfficeReadCall?[directOfficeReadCall]:directAgendaCall?[directAgendaCall]:directNavigationCall?[directNavigationCall]:null));
+  const directCalls:{part:RequestPart;call:AgentCall;parts?:RequestPart[];latestNoteReference?:boolean }[]|null=directWorkflow?null:extendedPatientQuery?queryContract.unsupported.length?[]:[{part:extendedPart,call:extendedCall}]:directExtraApp?[directExtraApp]:directNamedReads?.calls??directMixedMetricAgenda??(directMetricRead?[directMetricRead]:directCompoundRead?[directCompoundRead]:directKnowledgeRead?[directKnowledgeRead]:directPublicAnswer?[directPublicAnswer]:directReadCalls??(directNoteRead?[directNoteRead]:directSummaryCall?[directSummaryCall]:directOfficeReadCall?[directOfficeReadCall]:directConsultationCountRead?[directConsultationCountRead]:directAgendaCall?[directAgendaCall]:directNavigationCall?[directNavigationCall]:null));
   if(directWorkflow){parts=directWorkflow.parts;declared=true;}else if(directNamedReads){parts=directNamedReads.parts;declared=true;}else if(directCalls){parts=directCalls.flatMap(entry=>entry.parts??[entry.part]);declared=true;}
   if(extendedPatientQuery&&queryContract.unsupported.length){parts=[{...extendedPart,tools:[],status:'unsupported',reason:copy.unsupported+' '+queryContract.unsupported.join(' ; ')}];declared=true;}
   const infer = deps.infer ?? inferLocalCompletion;

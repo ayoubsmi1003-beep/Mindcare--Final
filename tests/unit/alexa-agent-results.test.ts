@@ -23,6 +23,12 @@ it('answers an empty tomorrow agenda in natural French and preserves the one-day
  expect(result.text).toBe('Aucun rendez-vous n’est prévu sur la période demandée.');
  expect(JSON.parse(rpc.mock.calls[0]![1].p_spec)).toMatchObject({from,to});
 });
+it.each([[8143,'Le cabinet compte 8 143 consultations enregistrées.'],[0,'Le cabinet ne compte aucune consultation enregistrée.']])('presents a cabinet consultation count as a natural French answer: %s',async(total,expected)=>{
+ const rpc=vi.fn().mockResolvedValue({ok:true,data:[{total,rows:[],totals:{},complete:true,offset:0}]});
+ const execute=agentExecutor({text:'Combien de consultations sont enregistrées au cabinet ?',conversationId:'natural-consultation-count',clientTurnId:crypto.randomUUID(),appContext:{patientId:null,page:'/jarvis'}},{rpc},{rpc:vi.fn()});
+ const result=await execute({id:'count',name:'query_consultations',args:{partIds:['count'],mode:'count',status:'all'}},'2026-10-25T12:00:00.000Z',[],new AbortController().signal);
+ expect(result.text).toBe(expected);expect(result.data).toMatchObject({total});expect(rpc.mock.calls[0]?.[0]).toBe('query_alexa_records');
+});
 it.each(['Affiche son profil.','Affiche son profil. ملاحظة'])('reads the full profile with French framing: %s',async text=>{
  const patientId='22222222-2222-4222-8222-222222222222';
  const profile={id:patientId,record_number:'EVAL-PROFILE',first_name:'Patiente',last_name:'Fictive',birth_date:'1988-02-03',phone:'0550000000',phone_alt:'0660000000',id_document_number:'ID-FICTIF',id_document_issuer:'Commune fictive',sex:'F',marital_status:'marie',address:'Adresse fictive à Alger',emergency_contact:{name:'Contact fictif',relation:'Sœur',phone:'0770000000'},notes_admin:'Préfère le matin',is_active:true};
