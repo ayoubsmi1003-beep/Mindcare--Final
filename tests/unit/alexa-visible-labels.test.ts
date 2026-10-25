@@ -35,6 +35,7 @@ it('lists actual patient names for an authorized missing-CNI read instead of pat
  const execute=agentExecutor({text,conversationId:'named-missing-cni-list',clientTurnId:crypto.randomUUID(),appContext:{patientId:null,page:'/jarvis'}},{rpc},{rpc:vi.fn()});
  const result=await execute({id:'patients',name:'query_patients',args:{partIds:['patients'],mode:'list',filters:[condition],population:'active',limit:20,offset:0}},asOf,[],new AbortController().signal);
  expect(result.status).toBe('ok');expect(result.text).toContain('Amina Meziane');expect(result.text).not.toContain('Patient-');expect(result.text).not.toContain(patient.id);
+ expect(result.text).toContain('Parmi les patients actifs de votre périmètre, 25 n’ont pas de numéro de carte d’identité renseigné.');expect(result.text).toContain('Voici le nom affiché sur cette page.');expect(result.text).toContain('Affichage des patients 1 à 1 sur 25.');expect(result.text).not.toMatch(/âge au jour du cabinet|valeur nulle ou vide|patient\(s\)|1–20 \/ 25/u);
  expect(result.evidence).toContainEqual(expect.objectContaining({id:patient.id,type:'patient',label:'Amina Meziane'}));
  expect(validAnswerLinks(result.text,result.links)).toBe(true);expect(answerLinkPath(result.links![0]!.target)).toBe(patient.href);
 });

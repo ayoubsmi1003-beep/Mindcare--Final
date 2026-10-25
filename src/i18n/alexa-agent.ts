@@ -3,6 +3,16 @@ export function missingPatientFieldParagraph(total:number,population:'active'|'a
  const label=field==='phone'?'numéro de téléphone':'numéro de carte d’identité';
  return total===0?`Parmi les ${scope} de votre périmètre, aucun n’a de ${label} manquant.`:`Parmi les ${scope} de votre périmètre, ${total} ${total===1?'n’a':'n’ont'} pas de ${label} renseigné.`;
 }
+export function patientListParagraph(total:number,shown:number,population:'active'|'archived'|'all',missingField?:'phone'|'identity_card'):string {
+ const noun=population==='active'?'patient actif':population==='archived'?'patient archivé':'patient',plural=total===1?'':'s',formatted=new Intl.NumberFormat('fr-DZ').format(total);
+ if(total===0)return missingField?missingPatientFieldParagraph(total,population,missingField):`Aucun ${noun} ne correspond à votre demande.`;
+ const intro=missingField?missingPatientFieldParagraph(total,population,missingField):`J’ai trouvé ${formatted} ${noun}${plural} correspondant à votre demande.`;
+ return `${intro} ${shown===1?'Voici le nom affiché sur cette page.':`Voici les ${new Intl.NumberFormat('fr-DZ').format(shown)} premiers noms.`}`;
+}
+export function patientListPageParagraph(from:number,to:number,total:number,hasMore:boolean):string {
+ const format=(value:number)=>new Intl.NumberFormat('fr-DZ').format(value);
+ return `Affichage des patients ${format(from)} à ${format(to)} sur ${format(total)}.${hasMore?' La suite est disponible sur la page suivante.':''}`;
+}
 export const agentActionDescriptions={startsAt:'Date et heure ISO 8601 avec fuseau obligatoire : +01:00 pour Alger, ou Z. Conserver la date et l’heure demandées ; ne jamais inventer une information manquante.'};
 export const agentDescriptions = {
   "declare_request": "Enregistre chaque résultat demandé, ses conditions liées par ET et ses dépendances. Une partie par résultat. Aucun résultat de données à cette étape.",
