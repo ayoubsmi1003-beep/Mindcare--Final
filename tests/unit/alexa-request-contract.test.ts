@@ -1,5 +1,5 @@
 import {expect,it} from 'vitest';
-import {constrainCountDeclaration,countContractHints,countContractParts,frenchPatientCountContract,frenchRequestAdmission,frenchRequestedOutputs,requestedReadTool} from '@/shared/alexa/request-contract';
+import {constrainCountDeclaration,countContractHints,countContractParts,frenchPatientCountContract,frenchRequestAdmission,frenchRequestedOutputs,requestedCountRead,requestedReadTool} from '@/shared/alexa/request-contract';
 import type {RequestPart,SupportedCondition} from '@/shared/alexa/agent';
 const part=(conditions:SupportedCondition[]):RequestPart=>({id:'p',goal:'Nombre',tools:['query_patients'],conditions,dependsOn:[],status:'pending',resultRefs:[]});
 it('leaves a count plus another read to native multi-output interpretation',()=>{
@@ -12,6 +12,7 @@ it('routes a named national-identity lookup through the patient profile gate',()
  expect(admission.tools).toEqual(['get_patient_context']);
  expect(admission.patientSection).toBe('profile');
 });
+it.each(['Quel est le nombre de patients sans téléphone ?','Quel est le total des patients sans carte d’identité ?'])('recognizes a natural patient total question as a count: %s',text=>expect(requestedCountRead(text)).toBe(true));
 it('binds an explicit French month range to a named clinical summary',()=>{
  const admission=frenchRequestAdmission('Résume en un seul paragraphe l’évolution racontée dans les six consultations d’avril à septembre 2026 de Amel Bensaid.',false);
  expect(admission).toMatchObject({tools:['get_patient_context'],patientSection:'summary',consultationCount:6,from:'2026-04-01T00:00:00+01:00',to:'2026-10-01T00:00:00+01:00'});

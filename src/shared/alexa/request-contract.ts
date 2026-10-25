@@ -326,6 +326,8 @@ export function constrainCompoundDeclaration(parts:RequestPart[],contract:French
 
 /** Counts explicit coordinated application requests only; it grants no domain authority or business action. */
 export function frenchRequestedOutputs(text:string):string[]|null{
+ const patientNamesSuffix=/\bet\s+(?:donne|affiche|indique)\s+(?:leurs?|les)\s+noms?\s*[?!.]*$/iu.exec(text);
+ if(patientNamesSuffix){const head=fold(text.slice(0,patientNamesSuffix.index));if(/\b(?:patients?|patientes?|dossiers?)\b/u.test(head)&&/\b(?:liste\w*|affich\w*|montr\w*|quels?|quelles?)\b/u.test(head))return null;}
  const treatmentSuffix=/\bet\s+quels?\s+changements?\s+(?:sont\s+)?(?:document[eé]s|enregistr[eé]s)\s*[?!.]*$/iu.exec(text);
  if(treatmentSuffix){const head=text.slice(0,treatmentSuffix.index),targets=frenchReadTargets(head);if(targets.length===1&&targets[0]?.patientSection==='treatments'&&!/\b(?:et|puis)\b|[;\n]/iu.test(head))return null;}
  const statusSuffix=/\bet\s+quels?\s+sont\s+(?:leurs?|les)\s+statuts?\s*[?!.]*$/iu.exec(text);
@@ -380,7 +382,7 @@ export function requestedReadTool(goal:string,original:string):FrenchReadTool|un
  if(requestedCountRead(goal)){if(/\bpatients?\b/u.test(plain))return 'query_patients';if(/\bconsult\w*\b/u.test(plain))return 'query_consultations';}
  return undefined;
 }
-export function requestedCountRead(goal:string):boolean{return /^(?:compt\w*|combien|nombre|total)\b/u.test(fold(goal))&&!/\b(?:liste\w*|affich\w*|montr\w*|lesquels|lesquelles)\b/u.test(fold(goal));}
+export function requestedCountRead(goal:string):boolean{return /^(?:(?:compt\w*|combien|nombre|total)\b|quel(?:le)?\s+est(?:-ce)?\s+(?:le\s+)?(?:nombre|total|effectif)\b)/u.test(fold(goal))&&!/\b(?:liste\w*|affich\w*|montr\w*|lesquels|lesquelles)\b/u.test(fold(goal));}
 export function isAdministrativeReview(goal:string,original:string):boolean{
  const plain=fold(goal),whole=fold(original);
  return /administrati\w*[^.!?]*incomplet|incomplet[^.!?]*administrati/u.test(whole)&&!/\b(?:modifi\w*|enregistr\w*|corrige\w*|sauvegard\w*)\b/u.test(plain)&&/administrati|champs? manquant|correction\w*[^.!?]*revue/u.test(plain);

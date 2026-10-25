@@ -11,7 +11,7 @@ const asOf='2026-10-15T12:00:00.000Z';
 it('answers a complete consultation count naturally without a fictitious empty-page range',async()=>{
  const rpc=vi.fn().mockResolvedValue({ok:true,data:[{total:26,rows:[],totals:{},complete:true,offset:0}]});
  const result=await agentExecutor({...input,text:'Compte les consultations terminées.',appContext:{patientId:null,page:'/jarvis'}},{rpc},{rpc:vi.fn()})({id:'count',name:'query_consultations',args:{partIds:['c'],mode:'count',status:'closed'}},asOf,[],new AbortController().signal);
- expect(result.text).toBe('26 consultations terminées.');expect(result).toMatchObject({status:'ok',complete:true});
+ expect(result.text).toBe('Le cabinet compte 26 consultations terminées.');expect(result).toMatchObject({status:'ok',complete:true});
 });
 it.each(['Résume les trois premières consultations de Ayoub Salmi.','Liste les premières consultations de ce patient.'])('blocks an unsupported oldest selection before reading any patient: %s',async text=>{
  const rpc=vi.fn();const result=await agentExecutor({...input,text},{rpc},{rpc:vi.fn()})({id:'oldest',name:'get_patient_context',args:{partIds:['s'],section:'summary'}},asOf,[],new AbortController().signal);

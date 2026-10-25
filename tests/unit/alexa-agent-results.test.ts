@@ -56,6 +56,19 @@ it.each([[0,'Le cabinet ne compte aucun patient actif.'],[1,'Le cabinet compte 1
  expect(result.text).toBe(expected);expect(result.data).toMatchObject({total,patientQuery:{mode:'count',population:'active'}});
  expect(rpc.mock.calls[0]?.[0]).toBe('search_patients');
 });
+it.each([
+ ['phone','Combien de patients sont sans téléphone ?','Parmi les patients actifs de votre périmètre, 25 n’ont pas de numéro de téléphone renseigné.'],
+ ['identity_card','Combien de patients sont sans carte d’identité ?','Parmi les patients actifs de votre périmètre, 25 n’ont pas de numéro de carte d’identité renseigné.'],
+])('answers a verified missing-%s count in concise French without listing patient identities',async(field,question,expected)=>{
+ const asOf='2026-10-25T12:00:00.000Z',condition={field,op:'missing',value:null};
+ const rpc=vi.fn().mockResolvedValue({ok:true,data:[{total:25,rows:[],metrics:{},unknownAge:0,revision:'b'.repeat(32),asOf,conditions:[condition],complete:true,offset:0}]});
+ const execute=agentExecutor({text:question,conversationId:'missing-patient-field-count',clientTurnId:'11111111-1111-4111-8111-111111111111',appContext:{patientId:null,page:'/jarvis'}},{rpc},{rpc:vi.fn()});
+ const result=await execute({id:'count',name:'query_patients',args:{partIds:['count'],mode:'count',filters:[condition],population:'active'}},asOf,[],new AbortController().signal);
+ expect(result.text).toBe(expected);expect(result.data).toMatchObject({total:25,patientQuery:{mode:'count',filters:[condition]}});
+ expect(result.evidence).toHaveLength(1);expect(result.evidence[0]?.type).toBe('query');
+ expect(rpc.mock.calls[0]?.[0]).toBe('search_patients');
+ expect(JSON.parse(rpc.mock.calls[0]![1].p_spec)).toMatchObject({mode:'count',filters:[condition],population:'active'});
+});
 it.each(['empty','metric','next-page'])('resumes %s with exact prior predicates and no injected model narrowing',async variant=>{
  const filters=[{field:'identity_card',op:'missing',value:null}];
  const rpc=vi.fn().mockResolvedValue({ok:true,data:[{total:variant==='empty'?0:25,rows:[],metrics:{},unknownAge:1,revision:'a'.repeat(32),asOf:'2026-10-15T12:00:00.000Z',conditions:filters,complete:true,offset:variant==='next-page'?20:0}]});

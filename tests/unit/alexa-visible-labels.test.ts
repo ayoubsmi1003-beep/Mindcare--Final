@@ -27,6 +27,17 @@ it('keeps homonymous patient labels bound to distinct verified destinations',()=
  for(const patient of fixture.patients)expect(html).toContain(`/patients/${patient.id}`);
  expect(html).not.toContain('Patient-');
 });
+it('lists actual patient names for an authorized missing-CNI read instead of patient IDs',async()=>{
+ const patient=fixture.patients[0]!,condition={field:'identity_card',op:'missing',value:null},asOf='2026-10-25T12:00:00.000Z';
+ const row={id:patient.id,first_name:'Amina',last_name:'Meziane',missing:['identity_card'],completed_consultations:3,outstanding_balance:null};
+ const rpc=scriptedAlexaRpc(async()=>({ok:true as const,data:[{total:25,rows:[row],metrics:{},unknownAge:0,revision:'c'.repeat(32),asOf,conditions:[condition],complete:true,offset:0}]}));
+ const text='Quels patients sont sans CNI ? Donne leurs noms.';
+ const execute=agentExecutor({text,conversationId:'named-missing-cni-list',clientTurnId:crypto.randomUUID(),appContext:{patientId:null,page:'/jarvis'}},{rpc},{rpc:vi.fn()});
+ const result=await execute({id:'patients',name:'query_patients',args:{partIds:['patients'],mode:'list',filters:[condition],population:'active',limit:20,offset:0}},asOf,[],new AbortController().signal);
+ expect(result.status).toBe('ok');expect(result.text).toContain('Amina Meziane');expect(result.text).not.toContain('Patient-');expect(result.text).not.toContain(patient.id);
+ expect(result.evidence).toContainEqual(expect.objectContaining({id:patient.id,type:'patient',label:'Amina Meziane'}));
+ expect(validAnswerLinks(result.text,result.links)).toBe(true);expect(answerLinkPath(result.links![0]!.target)).toBe(patient.href);
+});
 it('links issued references and unnumbered drafts without inventing a number',()=>{
  const answer:AlexaAnswerBlock={text:'2 documents'};
  for(const doc of fixture.documents)appendLinkedAnswerLine(answer,[doc.title,doc.number].filter(Boolean).join(' — '),'',{kind:doc.status==='draft'?'draft':'document',id:doc.id});
