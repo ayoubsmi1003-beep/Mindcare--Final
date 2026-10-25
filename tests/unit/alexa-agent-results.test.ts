@@ -35,6 +35,13 @@ it('refuses a successful metrics envelope that omits one requested metric', asyn
  const execute=agentExecutor({text:'Compte les actifs et les enfants.',conversationId:'test',clientTurnId:'11111111-1111-4111-8111-111111111111',appContext:{patientId:null,page:'/jarvis'}},{rpc},{rpc:vi.fn()});
  await expect(execute({id:'metrics',name:'query_patients',args:{partIds:['active','children'],mode:'metrics',metrics:['active','children']}},'2026-10-15T12:00:00.000Z',[],new AbortController().signal)).rejects.toMatchObject({code:'malformed'});
 });
+it.each([[0,'Le cabinet ne compte aucun patient actif.'],[1,'Le cabinet compte 1 patient actif.'],[1558,`Le cabinet compte ${new Intl.NumberFormat('fr-DZ').format(1558)} patients actifs.`]])('answers a plain active count as one natural French sentence: %s',async(total,expected)=>{
+ const asOf='2026-10-25T12:00:00.000Z',rpc=vi.fn().mockResolvedValue({ok:true,data:[{total,rows:[],metrics:{},unknownAge:0,revision:'a'.repeat(32),asOf,conditions:[],complete:true,offset:0}]});
+ const execute=agentExecutor({text:'Combien de patients actifs ?',conversationId:'plain-active-count',clientTurnId:'11111111-1111-4111-8111-111111111111',appContext:{patientId:null,page:'/jarvis'}},{rpc},{rpc:vi.fn()});
+ const result=await execute({id:'count',name:'query_patients',args:{partIds:['count'],mode:'count',filters:[],population:'active'}},asOf,[],new AbortController().signal);
+ expect(result.text).toBe(expected);expect(result.data).toMatchObject({total,patientQuery:{mode:'count',population:'active'}});
+ expect(rpc.mock.calls[0]?.[0]).toBe('search_patients');
+});
 it.each(['empty','metric','next-page'])('resumes %s with exact prior predicates and no injected model narrowing',async variant=>{
  const filters=[{field:'identity_card',op:'missing',value:null}];
  const rpc=vi.fn().mockResolvedValue({ok:true,data:[{total:variant==='empty'?0:25,rows:[],metrics:{},unknownAge:1,revision:'a'.repeat(32),asOf:'2026-10-15T12:00:00.000Z',conditions:filters,complete:true,offset:variant==='next-page'?20:0}]});

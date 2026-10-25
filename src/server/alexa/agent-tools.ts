@@ -173,13 +173,16 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    result.evidence=value.rows.map(p=>({id:p.id,type:"patient",label:`${p.first_name} ${p.last_name}`}));
    result.evidence.unshift({id:call.id,type:"query",label:recordsCopy.populations[spec.population??"active"]+" "+value.asOf,version:value.revision,provenance:{gate:"search_patients",asOf:value.asOf,total:value.total}});
    const labels:Record<string,string>={phone:recordsCopy.phone,identity_card:recordsCopy.id_document_number,birth_date:recordsCopy.birth_date,sex:recordsCopy.sex};
-   result.text=spec.mode==="metrics"?Object.entries(value.metrics).map(([k,n])=>`${copy.metrics[k as keyof typeof copy.metrics]??k} : ${n}`).join("\n"):`${value.total} ${copy.count}`;
+   const simpleActiveCount=spec.mode==="count"&&(spec.population??"active")==="active"&&!(spec.filters?.length)&&!spec.filterGroups&&!spec.consultationPeriod&&!spec.createdPeriod&&!spec.patientIds;
+   result.text=spec.mode==="metrics"?Object.entries(value.metrics).map(([k,n])=>`${copy.metrics[k as keyof typeof copy.metrics]??k} : ${n}`).join("\n"):simpleActiveCount
+    ?value.total===0?"Le cabinet ne compte aucun patient actif.":`Le cabinet compte ${new Intl.NumberFormat("fr-DZ").format(value.total)} patient${value.total===1?"":"s"} actif${value.total===1?"":"s"}.`
+    :`${value.total} ${copy.count}`;
    const missingField=spec.mode==='count'&&spec.filters?.length===1&&spec.filters[0]!.op==='missing'?spec.filters[0]!.field:null;
    const paragraphCount=missingField==='phone'||missingField==='identity_card';
    if(paragraphCount)result.text=missingPatientFieldParagraph(value.total,spec.population??'active',missingField);
    for(const p of value.rows)appendLinkedAnswerLine(result,`${p.first_name} ${p.last_name}`,`${p.outstanding_balance!==null?` — ${p.outstanding_balance} DZD`:""}${spec.mode==="review"?` — ${p.missing.map(f=>labels[f]).join(", ")}`:""}`,{kind:'patient',id:p.id});
    if(spec.mode==="review")result.text+=`\n${copy.fields}`;
-   if(!paragraphCount)result.text+=`\n${recordsCopy.populations[spec.population??"active"]} ${copy.definition.replace(/^Actifs visibles ; |^المرضى النشطون المتاحون؛ /u,"")}`;
+   if(!paragraphCount&&!simpleActiveCount)result.text+=`\n${recordsCopy.populations[spec.population??"active"]} ${copy.definition.replace(/^Actifs visibles ; |^المرضى النشطون المتاحون؛ /u,"")}`;
    if(spec.filters?.some(f=>f.field==="age"))result.text+=`\n${copy.unknownAge} : ${value.unknownAge}`;
    if(spec.mode!=="count"&&spec.mode!=="metrics"&&value.offset+value.rows.length<value.total)result.text+=`\n${value.offset+1}–${value.offset+value.rows.length} / ${value.total}`;
    if(!value.total)result.status="empty";
