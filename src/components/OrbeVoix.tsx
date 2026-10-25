@@ -34,6 +34,7 @@ import { abonnerVoixLocale, basculerVoixLocale, niveauVoixLocale } from "@/servi
 import type { EtatVoix, VueVoix } from "@/services/jarvis-reveil";
 
 import { AvatarAlexa } from "./ui/avatar-alexa";
+import { VagueAlexa, vagueDisponible } from "./ui/vague-alexa";
 
 /**
  * L'apparence de chaque état. Aucun hex : uniquement des jetons du design
@@ -63,8 +64,12 @@ interface Props {
 export function OrbeVoix({ taille = 32 }: Props): React.JSX.Element {
   const [vue, setVue] = useState<VueVoix | null>(null);
   const noyauRef = useRef<HTMLSpanElement>(null);
+  const [vagueOk, setVagueOk] = useState(false);
 
   useEffect(() => abonnerVoixLocale(setVue), []);
+  useEffect(() => {
+    setVagueOk(vagueDisponible());
+  }, []);
 
   const etat = vue?.etat ?? "desactive";
 
@@ -128,7 +133,11 @@ export function OrbeVoix({ taille = 32 }: Props): React.JSX.Element {
           transform: "scale(calc(1 + var(--niveau, 0) * 0.18))",
         }}
       >
-        <AvatarAlexa taille="sm" diametre={diametre} className="rounded-full" />
+        {(etat === "ecoute" || etat === "traitement") && vagueOk ? (
+          <VagueAlexa size={taille} />
+        ) : (
+          <AvatarAlexa taille="sm" diametre={diametre} className="rounded-full" />
+        )}
       </span>
       {/* Le libellé d'état, annoncé aux lecteurs d'écran sans encombrer l'écran.
           `polite` : une transition d'orbe ne doit pas couper la parole en cours

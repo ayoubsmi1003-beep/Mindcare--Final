@@ -36,6 +36,7 @@ export const alexa = {
   contexteChange: "Le contexte a changé pendant cette lecture. Répétez votre demande dans le dossier actuel.",
   voixDemarrer: "Parler à Alexa",
   voixArreter: "Arrêter le microphone",
+  vagueEcoute: "Écoute en cours",
   voixPreparation: "Préparation du microphone local…",
   voixEcoute: "Microphone actif. Parlez, puis faites une pause.",
   voixReflexion: "Alexa prépare sa réponse…",
