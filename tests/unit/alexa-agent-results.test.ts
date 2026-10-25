@@ -15,6 +15,14 @@ it.each([
  expect(result.data).toMatchObject({total:1,rows:[row]});expect(result.evidence).toContainEqual(expect.objectContaining({id:appointmentId,type:'appointment'}));
  expect(rpc.mock.calls[0]?.[0]).toBe('query_alexa_records');expect(rpc.mock.calls[0]?.[1].p_as_of).toBe(asOf);
 });
+it('answers an empty tomorrow agenda in natural French and preserves the one-day window',async()=>{
+ const asOf='2026-10-25T12:00:00.000Z',from='2026-10-26T00:00:00+01:00',to='2026-10-27T00:00:00+01:00';
+ const rpc=vi.fn().mockResolvedValue({ok:true,data:[{total:0,rows:[],totals:{},complete:true,offset:0}]});
+ const execute=agentExecutor({text:'Quels rendez-vous sont prévus demain ?',conversationId:'empty-tomorrow-agenda',clientTurnId:crypto.randomUUID(),appContext:{patientId:null,page:'/jarvis'}},{rpc},{rpc:vi.fn()});
+ const result=await execute({id:'agenda',name:'query_agenda',args:{partIds:['agenda'],from,to}},asOf,[],new AbortController().signal);
+ expect(result.text).toBe('Aucun rendez-vous n’est prévu sur la période demandée.');
+ expect(JSON.parse(rpc.mock.calls[0]![1].p_spec)).toMatchObject({from,to});
+});
 it.each(['Affiche son profil.','Affiche son profil. ملاحظة'])('reads the full profile with French framing: %s',async text=>{
  const patientId='22222222-2222-4222-8222-222222222222';
  const profile={id:patientId,record_number:'EVAL-PROFILE',first_name:'Patiente',last_name:'Fictive',birth_date:'1988-02-03',phone:'0550000000',phone_alt:'0660000000',id_document_number:'ID-FICTIF',id_document_issuer:'Commune fictive',sex:'F',marital_status:'marie',address:'Adresse fictive à Alger',emergency_contact:{name:'Contact fictif',relation:'Sœur',phone:'0770000000'},notes_admin:'Préfère le matin',is_active:true};
