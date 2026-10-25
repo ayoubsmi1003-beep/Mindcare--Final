@@ -13,6 +13,11 @@ it('routes a named national-identity lookup through the patient profile gate',()
  expect(admission.patientSection).toBe('profile');
 });
 it.each(['Quel est le nombre de patients sans téléphone ?','Quel est le total des patients sans carte d’identité ?'])('recognizes a natural patient total question as a count: %s',text=>expect(requestedCountRead(text)).toBe(true));
+it('recognizes a single total over the explicitly requested active and archived populations',()=>{
+ const contract=frenchPatientCountContract('Combien de patients au total, actifs et archivés ?');
+ expect(contract?.clauses).toEqual(['Combien de patients au total, actifs et archivés ?']);
+ expect(countContractParts(contract!)).toMatchObject([{population:'all',conditions:[],tools:['query_patients']}]);
+});
 it('binds an explicit French month range to a named clinical summary',()=>{
  const admission=frenchRequestAdmission('Résume en un seul paragraphe l’évolution racontée dans les six consultations d’avril à septembre 2026 de Amel Bensaid.',false);
  expect(admission).toMatchObject({tools:['get_patient_context'],patientSection:'summary',consultationCount:6,from:'2026-04-01T00:00:00+01:00',to:'2026-10-01T00:00:00+01:00'});

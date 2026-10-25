@@ -119,11 +119,15 @@ function directPatientMetricReadCall(contract:NonNullable<ReturnType<typeof fren
  const metrics=parts.map(metricForPart);
  if(parts.length===1){
   const part=parts[0]!,plain=isClosedPlainActivePatientCount(contract.clauses[0]!);
-  const exactPlainCount=part.conditions.length===0&&plain;
+  const countPlain=contract.clauses[0]!.normalize('NFKD').replace(/\p{M}/gu,'').replace(/[’‘]/gu,"'").toLowerCase();
+  const explicitAllCount=/^\s*combien de patients? au total,\s*actifs?\s+et\s+archives?\s*[?!.]*\s*$/u.test(countPlain);
+  const exactPlainCount=part.conditions.length===0&&(plain||explicitAllCount);
   if((part.conditions.length!==1&&!exactPlainCount)||constrainCountDeclaration(parts,contract).some(candidate=>candidate.unsupportedConditions?.length))return null;
  }
- if(parts.length<1||parts.length>7||populations.size!==1||![...populations].every(population=>population==='active')||metrics.some(metric=>!metric)||new Set(metrics).size!==parts.length||parts.some(part=>part.tools?.length!==1||part.tools[0]!=='query_patients'||part.dependsOn.length||part.literalQuery||part.unsupportedConditions?.length))return null;
- const call:AgentCall={id:`direct-${clientTurnId}-metrics`,name:'query_patients',args:parts.length===1?{partIds:[parts[0]!.id],mode:'count',filters:parts[0]!.conditions,population:'active'}:{partIds:parts.map(part=>part.id),mode:'metrics',metrics,population:'active'}};
+ const population=parts.length===1?parts[0]!.population??'active':'active';
+ const validPopulation=parts.length===1?['active','archived','all'].includes(population):populations.size===1&&[...populations].every(value=>value==='active');
+ if(parts.length<1||parts.length>7||!validPopulation||metrics.some(metric=>!metric)||new Set(metrics).size!==parts.length||parts.some(part=>part.tools?.length!==1||part.tools[0]!=='query_patients'||part.dependsOn.length||part.literalQuery||part.unsupportedConditions?.length))return null;
+ const call:AgentCall={id:`direct-${clientTurnId}-metrics`,name:'query_patients',args:parts.length===1?{partIds:[parts[0]!.id],mode:'count',filters:parts[0]!.conditions,population}:{partIds:parts.map(part=>part.id),mode:'metrics',metrics,population:'active'}};
  return {part:parts[0]!,parts,call};
 }
 function isClosedPlainActivePatientCount(text:string):boolean {

@@ -75,7 +75,8 @@ export function frenchPatientCountContract(text:string):FrenchCountContract|null
  if(/\b(?:et|puis|aussi)\s+(?:quels?|quelles?|qui|comment|pourquoi|est-ce)\b|\b(?:rendez-vous|agenda|recettes?|revenus?|charges?)\b|(?:combien|compte(?:r|z)?|nombre(?:\s+total)?|total)\s+(?:(?:de|du|des|ses|les|toutes|tous)\s+)*consult\w*\b/u.test(plain)||savedDocumentIntent)return null;
  // A single interrogative with comma-separated categories may mean several outputs.
  // Leave that ambiguous form to native interpretation instead of forcing one output.
- if(starts.length===1&&text.slice(starts[0]).includes(',')&&!/^[^,]+,\s*(?:sans inclure|en excluant|hors)\b[^,]*$/iu.test(text.slice(starts[0])))return null;
+ const explicitCombinedPopulationCount=/^\s*combien de patients? au total,\s*actifs?\s+et\s+archives?\s*[?!.]*\s*$/u.test(fold(text));
+ if(starts.length===1&&text.slice(starts[0]).includes(',')&&!explicitCombinedPopulationCount&&!/^[^,]+,\s*(?:sans inclure|en excluant|hors)\b[^,]*$/iu.test(text.slice(starts[0])))return null;
  const clauses=starts.length===1?[text.trim()]:starts.map((at,i)=>text.slice(at,starts[i+1]??text.length).replace(/[,;\s]+(?:et\s*)?$/iu,'').trim());
  return clauses.length<=12?{clauses}:null;
 }

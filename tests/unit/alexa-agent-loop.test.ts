@@ -129,6 +129,12 @@ it.each(multiMetricCases)('executes all independently requested French cabinet m
  expect((observed[0]?.args as Record<string,unknown>)['partIds']).toHaveLength(4);
  expect(result.status).toBe('completed');expect(result.parts).toHaveLength(4);expect(result.parts.every(part=>part.status==='answered')).toBe(true);
 });
+it('counts active and archived patients together only when the question explicitly requests both',async()=>{
+ const text='Combien de patients au total, actifs et archivés ?';let inferenceCalls=0;const observed:Record<string,unknown>[]=[];
+ const result=await runAgentLoop({...input,text,conversationId:'all-patient-populations-count'},{actor:'all-patient-populations-count',infer:async()=>{inferenceCalls++;throw new Error('Unexpected model call');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,text:'1 558 patients au total.',data:{total:1558},evidence:[{id:call.id,type:'query',label:'Total du cabinet'}],conditionKeys:[]})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);expect(observed).toEqual([{name:'query_patients',args:{partIds:['requested_1'],mode:'count',filters:[],population:'all'}}]);
+ expect(result.status).toBe('completed');expect(result.parts).toHaveLength(1);expect(result.parts[0]).toMatchObject({status:'answered',tools:['query_patients']});
+});
 it('runs a mixed agenda and administrative review as dependent authorized reads with a four-part ledger',async()=>{
  const text='Montre les rendez-vous de demain, repère les dossiers administratifs incomplets parmi ces patients, résume les champs manquants et prépare une liste de corrections à vérifier.';
  expect(frenchRequestedOutputs(text)).toHaveLength(4);

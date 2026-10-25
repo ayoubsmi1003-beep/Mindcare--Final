@@ -3,6 +3,16 @@ export function missingPatientFieldParagraph(total:number,population:'active'|'a
  const label=field==='phone'?'numéro de téléphone':'numéro de carte d’identité';
  return total===0?`Parmi les ${scope} de votre périmètre, aucun n’a de ${label} manquant.`:`Parmi les ${scope} de votre périmètre, ${total} ${total===1?'n’a':'n’ont'} pas de ${label} renseigné.`;
 }
+export function patientPopulationCountParagraph(total:number,population:'active'|'archived'|'all'):string {
+ const formatted=new Intl.NumberFormat('fr-DZ').format(total);
+ if(population==='all'){
+  if(total===0)return 'Aucun patient actif ou archivé n’est enregistré au cabinet.';
+  return total===1?`Le cabinet compte ${formatted} patient au total, actif ou archivé.`:`Le cabinet compte ${formatted} patients au total, actifs et archivés.`;
+ }
+ const scope=population==='active'?'actif':'archivé';
+ if(total===0)return `Le cabinet ne compte aucun patient ${scope}.`;
+ return `Le cabinet compte ${formatted} patient${total===1?'':'s'} ${scope}${total===1?'':'s'}.`;
+}
 export function patientListParagraph(total:number,shown:number,population:'active'|'archived'|'all',missingField?:'phone'|'identity_card'):string {
  const noun=population==='active'?'patient actif':population==='archived'?'patient archivé':'patient',plural=total===1?'':'s',formatted=new Intl.NumberFormat('fr-DZ').format(total);
  if(total===0)return missingField?missingPatientFieldParagraph(total,population,missingField):`Aucun ${noun} ne correspond à votre demande.`;

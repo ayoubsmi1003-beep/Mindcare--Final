@@ -29,6 +29,13 @@ it.each([[8143,'Le cabinet compte 8 143 consultations enregistrées.'],[0,'Le 
  const result=await execute({id:'count',name:'query_consultations',args:{partIds:['count'],mode:'count',status:'all'}},'2026-10-25T12:00:00.000Z',[],new AbortController().signal);
  expect(result.text).toBe(expected);expect(result.data).toMatchObject({total});expect(rpc.mock.calls[0]?.[0]).toBe('query_alexa_records');
 });
+it.each([[1558,'Le cabinet compte 1 558 patients au total, actifs et archivés.'],[1,'Le cabinet compte 1 patient au total, actif ou archivé.'],[0,'Aucun patient actif ou archivé n’est enregistré au cabinet.']])('presents a count across active and archived patients without internal scope text: %s',async(total,expected)=>{
+ const rpc=vi.fn().mockResolvedValue({ok:true,data:[{total,rows:[],metrics:{},unknownAge:0,revision:'a'.repeat(32),asOf:'2026-10-25T12:00:00.000Z',conditions:[],complete:true,offset:0}]});
+ const text='Combien de patients au total, actifs et archivés ?',execute=agentExecutor({text,conversationId:'all-populations-count',clientTurnId:crypto.randomUUID(),appContext:{patientId:null,page:'/jarvis'}},{rpc},{rpc:vi.fn()});
+ const result=await execute({id:'all-count',name:'query_patients',args:{partIds:['count'],mode:'count',filters:[],population:'all'}},'2026-10-25T12:00:00.000Z',[],new AbortController().signal);
+ expect(result.text).toBe(expected);expect(result.text).not.toMatch(/visibles|valeur nulle|âge au jour/u);
+ expect(JSON.parse(rpc.mock.calls[0]![1].p_spec)).toMatchObject({mode:'count',population:'all'});
+});
 it.each(['Affiche son profil.','Affiche son profil. ملاحظة'])('reads the full profile with French framing: %s',async text=>{
  const patientId='22222222-2222-4222-8222-222222222222';
  const profile={id:patientId,record_number:'EVAL-PROFILE',first_name:'Patiente',last_name:'Fictive',birth_date:'1988-02-03',phone:'0550000000',phone_alt:'0660000000',id_document_number:'ID-FICTIF',id_document_issuer:'Commune fictive',sex:'F',marital_status:'marie',address:'Adresse fictive à Alger',emergency_contact:{name:'Contact fictif',relation:'Sœur',phone:'0770000000'},notes_admin:'Préfère le matin',is_active:true};
