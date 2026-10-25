@@ -3,10 +3,11 @@ import {alexaRecordCopy} from '@/i18n/alexa-records';
 import {profileCopy} from '@/i18n/alexa-profile';
 const text=z.string().nullable();
 export const patientProfileSchema=z.object({id:z.uuid(),record_number:z.string(),first_name:z.string(),last_name:z.string(),birth_date:z.union([z.string(),z.date()]).nullable(),phone:text,phone_alt:text,id_document_number:text,id_document_issuer:text,sex:text,marital_status:text,address:text,emergency_contact:z.json(),notes_admin:text,is_active:z.boolean()});
-type Field=keyof typeof alexaRecordCopy.fr.profile|'age';
+type Field=keyof typeof alexaRecordCopy.fr.profile|'age'|'name';
 function requestedProfileFields(question:string):Field[]|null{
  const copy=alexaRecordCopy.fr,requested=new Set<Field>(),plain=question.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase();
  const emergencyRequested=/\burgence|personne a (?:contacter|prevenir)\b/u.test(plain);
+ if(/\b(?:nom|prenom|nom complet|identite complete)\b/u.test(plain)&&/\b(?:patient\s+(?:selectionne\w*|courant)|(?:ce|cette)\s+patient(?:e)?|dossier\s+(?:ouvert|courant|actif)|son dossier)\b/u.test(plain))requested.add('name');
  if(emergencyRequested)requested.add('emergency_contact');
  if(/\b(?:telephones?|tel|mobiles?|portables?)\b/u.test(plain)&&(!emergencyRequested||/\bet\b/u.test(plain))){
   if(/\bsecondaire|autre numero|deuxieme numero\b/u.test(plain))requested.add('phone_alt');
@@ -35,6 +36,7 @@ export function profileAnswer(p:z.infer<typeof patientProfileSchema>,question:st
  const contact=p.emergency_contact===null?copy.missing:emergency.success?Object.values(emergency.data).filter((value):value is string=>typeof value==='string'&&!!value.trim()).join(' · ')||copy.missing:JSON.stringify(p.emergency_contact);
  const fields=requestedProfileFields(question);if(!fields)return profileCopy.askField;
  const valueFor=(key:Field):string=>{
+  if(key==='name')return [p.first_name,p.last_name].map(value=>value.trim()).filter(Boolean).join(' ')||copy.missing;
   if(key==='emergency_contact')return contact;
   if(key==='is_active')return labels[p.is_active?'active':'inactive']!;
   if(key==='age'){
@@ -46,7 +48,8 @@ export function profileAnswer(p:z.infer<typeof patientProfileSchema>,question:st
   return display(p[key]);
  };
  const name=p.first_name+' '+p.last_name;
- if(fields.length===1){const field=fields[0]!;return profileCopy.singleField(name,field,field==='age'?profileCopy.ageLabel:copy.profile[field],valueFor(field),copy.missing);}
- const values=fields.map(key=>`${key==='age'?profileCopy.ageLabel:copy.profile[key]} : ${valueFor(key)}`);
+ const labelFor=(field:Field)=>field==='age'?profileCopy.ageLabel:field==='name'?profileCopy.nameLabel:copy.profile[field];
+ if(fields.length===1){const field=fields[0]!;return field==='name'?profileCopy.name(valueFor(field),copy.missing):profileCopy.singleField(name,field,labelFor(field),valueFor(field),copy.missing);}
+ const values=fields.map(key=>`${labelFor(key)} : ${valueFor(key)}`);
  return profileCopy.one(name,values.map(value=>value.replace(/\s+/gu,' ').trim()));
 }

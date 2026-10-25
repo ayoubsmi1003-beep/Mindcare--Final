@@ -1,4 +1,6 @@
 export const profileCopy={
+ nameLabel:'Nom',
+ name:(value:string,missing:string)=>value===missing?'Le nom du patient n’est pas renseigné.':`Le nom enregistré dans le dossier est ${value}.`,
  one:(name:string,fields:readonly string[])=>`Pour ${name}, ${fields.join(' ; ')}.`,
  singleField:(name:string,field:string,label:string,value:string,missing:string)=>{
   if(field==='id_document_number')return value===missing?`Pour ${name}, aucun numéro de CNI n’est renseigné dans le dossier.`:`Pour ${name}, le numéro de CNI enregistré est ${value}.`;

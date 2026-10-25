@@ -19,6 +19,12 @@ it('answers a present identity-card number in one natural sentence',()=>{
 it('answers both phone numbers in a plural question without dumping the rest',()=>{
  const text=profileAnswer(patient,'Quels sont les téléphones enregistrés de ce patient ?',asOf);expect(text).toContain('0000000001');expect(text).toContain('0000000002');expect(text).not.toMatch(/ID-FICTIF|Adresse fictive|Note administrative/);
 });
+it('answers a selected-patient name without exposing unrelated profile fields',()=>{
+ const question='Pour le patient sélectionné, indique son nom';
+ expect(frenchRequestAdmission(question,false)).toMatchObject({tools:['get_patient_context'],patientSection:'profile'});
+ expect(profileNeedsClarification(question)).toBe(false);
+ expect(profileAnswer(patient,question,asOf)).toBe('Le nom enregistré dans le dossier est Ayoub Salmi.');
+});
 it('asks for an unknown administrative field instead of silently displaying the entire profile',()=>{
  const text=profileAnswer(patient,'Quel est son renseignement spécifique ?',asOf);expect(text).not.toMatch(/ID-FICTIF|0000000001|Note administrative/);expect(text).toContain('?');
 });
