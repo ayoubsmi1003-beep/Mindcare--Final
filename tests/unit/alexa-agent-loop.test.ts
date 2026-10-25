@@ -388,7 +388,8 @@ it('retains the original task when the client adopts the patient resolved during
 
 it('recovers once from an unsupported model answer while a database part is still pending',async()=>{
  let index=0;const steps=[calls([{name:'declare_request',args:{parts:[{id:'p',goal:'Patients actifs',tools:['query_patients'],conditions:[],dependsOn:[]}]}}]),{kind:'answer' as const,text:'Il y a 999 patients.',tokensIn:1,tokensOut:1},calls([{name:'query_patients',args:{partIds:['p'],mode:'count'}}])];
- const result=await runAgentLoop({...input,text:'Combien de patients actifs ?',conversationId:'plain-recovery'},{actor:'plain-recovery',infer:async()=>steps[index++]!,execute:async call=>({callId:call.id,status:'ok',complete:true,text:'32 patients actifs vérifiés',conditionKeys:[],evidence:[]})},new AbortController().signal);
+ const request=unfinishedNativeRequest({...input,text:'Combien de patients actifs ?',conversationId:'plain-recovery'},'plain-recovery');
+ const result=await runAgentLoop(request,{actor:'plain-recovery',infer:async()=>steps[index++]!,execute:async call=>({callId:call.id,status:'ok',complete:true,text:'32 patients actifs vérifiés',conditionKeys:[],evidence:[]})},new AbortController().signal);
  expect(result.status).toBe('completed');expect(result.sentences.join(' ')).toContain('32 patients actifs');expect(result.sentences.join(' ')).not.toContain('999');
 });
 
@@ -424,7 +425,8 @@ it('keeps count and list as distinct outputs when both were explicitly requested
 });
 it('cannot coalesce two different populations into a purported single count',async()=>{
  let i=0,reads=0;const steps=[calls([{name:'declare_request',args:{parts:[{id:'a',goal:'actifs',tool:'query_patients',conditions:[],dependsOn:[]},{id:'b',goal:'enfants',tool:'query_patients',conditions:['age:lt:18'],dependsOn:[]}]}}])];
- const r=await runAgentLoop({...input,text:'Combien de patients actifs avons-nous ?',conversationId:'different-populations-contract'},{actor:'different-populations-contract',infer:async()=>{if(i++===0)return steps[0]!;throw Error('No valid repair');},execute:async()=>{reads++;throw Error('No dispatch');}},new AbortController().signal);
+ const request=unfinishedNativeRequest({...input,text:'Combien de patients actifs avons-nous ?',conversationId:'different-populations-contract'},'different-populations-contract');
+ const r=await runAgentLoop(request,{actor:'different-populations-contract',infer:async()=>{if(i++===0)return steps[0]!;throw Error('No valid repair');},execute:async()=>{reads++;throw Error('No dispatch');}},new AbortController().signal);
  expect(reads).toBe(0);expect(r.parts).toHaveLength(1);expect(r.parts[0]?.status).not.toBe('answered');
 });
 it('answers a complete four-metric request through one typed read even when MiniCPM is unavailable',async()=>{

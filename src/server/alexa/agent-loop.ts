@@ -117,10 +117,18 @@ function directPatientMetricReadCall(contract:NonNullable<ReturnType<typeof fren
  const parts=countContractParts(contract),populations=new Set(parts.map(part=>part.population??'active'));
  const metricForPart=(part:RequestPart)=>Object.entries(patientMetricConditions).find(([,conditions])=>JSON.stringify(conditions.map(conditionKey).sort())===JSON.stringify(part.conditions.map(conditionKey).sort()))?.[0];
  const metrics=parts.map(metricForPart);
- if(parts.length===1&&(parts[0]!.conditions.length!==1||constrainCountDeclaration(parts,contract).some(part=>part.unsupportedConditions?.length)))return null;
+ if(parts.length===1){
+  const part=parts[0]!,plain=isClosedPlainActivePatientCount(contract.clauses[0]!);
+  const exactPlainCount=part.conditions.length===0&&plain;
+  if((part.conditions.length!==1&&!exactPlainCount)||constrainCountDeclaration(parts,contract).some(candidate=>candidate.unsupportedConditions?.length))return null;
+ }
  if(parts.length<1||parts.length>7||populations.size!==1||![...populations].every(population=>population==='active')||metrics.some(metric=>!metric)||new Set(metrics).size!==parts.length||parts.some(part=>part.tools?.length!==1||part.tools[0]!=='query_patients'||part.dependsOn.length||part.literalQuery||part.unsupportedConditions?.length))return null;
  const call:AgentCall={id:`direct-${clientTurnId}-metrics`,name:'query_patients',args:parts.length===1?{partIds:[parts[0]!.id],mode:'count',filters:parts[0]!.conditions,population:'active'}:{partIds:parts.map(part=>part.id),mode:'metrics',metrics,population:'active'}};
  return {part:parts[0]!,parts,call};
+}
+function isClosedPlainActivePatientCount(text:string):boolean {
+ const plain=text.normalize('NFKD').replace(/\p{M}/gu,'').replace(/[’‘]/gu,"'").toLowerCase().replace(/\s+/gu,' ').trim().replace(/[.!?]+$/gu,'').trim();
+ return /^(?:combien de patients? actifs?(?: sont enregistres(?: au cabinet)?| avons[- ]nous)?|quel est le nombre de patients? actifs?(?: enregistres(?: au cabinet)?)?)$/u.test(plain);
 }
 function directPatientCompoundReadCall(contract:NonNullable<ReturnType<typeof frenchPatientCompoundContract>>,clientTurnId:string):{part:RequestPart;parts:RequestPart[];call:AgentCall}|null {
  const parts=compoundContractParts(contract);
