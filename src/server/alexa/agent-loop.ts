@@ -1,7 +1,7 @@
 import {applicationReadCopy} from "@/i18n/alexa-application";
 import {explicitAgentPeriod,explicitAgendaClockWindow} from "./agent-period";
 import {patientQueryContract,patientQueryPeriod} from '@/shared/alexa/patient-query-contract';
-import {agendaIdentityText} from '@/shared/alexa/agenda-plan';
+import {agendaIdentityText,nativeAgendaStatusContract} from '@/shared/alexa/agenda-plan';
 import {presentAgentResults} from './answer-presentation';
 import {canAnswerGeneralAlexa} from "./model-gateway";
 import {parsePatientMention} from "@/shared/alexa/patient-mention";
@@ -252,15 +252,15 @@ function directNotificationsReadCall(text:string,clientTurnId:string,requestedOu
 }
 function directAgendaReadCall(text:string,clientTurnId:string,selectedPatientId:string|null,asOf:string):{part:RequestPart;call:AgentCall}|null{
  const plain=text.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase();
- const clockWindow=explicitAgendaClockWindow(text,asOf),requestShape=clockWindow?plain.replace(clockWindow.matchedText,''):plain;
+ const clockWindow=explicitAgendaClockWindow(text,asOf),requestShape=agendaIdentityText(clockWindow?plain.replace(clockWindow.matchedText,''):plain);
  if(/\b(?:et|puis|ainsi que)\b|[;\n]/u.test(requestShape.replace(/\bet\s+quels?\s+sont\s+(?:leurs?|les)\s+statuts?\b/u,'')))return null;
- const scope=frenchRequestAdmission(text,false),window=clockWindow??patientQueryPeriod(text,asOf)??explicitFrenchDayRange(text)??explicitAgentPeriod(text,asOf),identityText=agendaIdentityText(text),mention=parsePatientMention(identityText);
+ const scope=frenchRequestAdmission(text,false),window=clockWindow??patientQueryPeriod(text,asOf)??explicitFrenchDayRange(text)??explicitAgentPeriod(text,asOf),identityText=agendaIdentityText(text),mention=parsePatientMention(identityText),statusContract=nativeAgendaStatusContract(text);
  const nextAppointment=/\bprochain rendez[- ]vous\b/u.test(plain);
- if(scope.tools?.length!==1||scope.tools[0]!=='query_agenda'||(!window&&!nextAppointment)||mention.status==='ambiguous')return null;
+ if(scope.tools?.length!==1||scope.tools[0]!=='query_agenda'||(!window&&!nextAppointment)||mention.status==='ambiguous'||!statusContract.complete)return null;
  const needsPatient=/\b(?:patient\w*|dossier|son|sa|ses)\b/u.test(identityText.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase());
  if(needsPatient&&mention.status!=='named'&&!selectedPatientId)return null;
  if(nextAppointment&&mention.status!=='named'&&!selectedPatientId)return null;
- const id='requested_1',args={partIds:[id],...(window?{from:window.from,to:window.to}:{}),...(mention.status==='named'?{patientName:mention.name}:(needsPatient||nextAppointment)&&selectedPatientId?{patientId:selectedPatientId}:{})};
+ const id='requested_1',args={partIds:[id],...(window?{from:window.from,to:window.to}:{}),...(statusContract.statuses?{statuses:statusContract.statuses}:{}),...(mention.status==='named'?{patientName:mention.name}:(needsPatient||nextAppointment)&&selectedPatientId?{patientId:selectedPatientId}:{})};
  if(!agentSchemas.query_agenda.safeParse(args).success)return null;
  return {part:{id,goal:text,tools:['query_agenda'],conditions:[],dependsOn:[],status:'pending',resultRefs:[]},call:{id:`direct-${clientTurnId}-${id}`,name:'query_agenda',args}};
 }

@@ -6,7 +6,10 @@ type AgendaStatus=NonNullable<z.infer<typeof agentSchemas.query_agenda>['statuse
 const agendaStatuses:readonly AgendaStatus[]=['requested','confirmed','arrived','in_session','completed','no_show','cancelled'];
 /** A generic status description is not the name of a patient. Explicit named scopes remain intact. */
 export function agendaIdentityText(text:string):string{
- return text.normalize('NFC').replace(/\bavec\s+(?:(?:un|des)\s+)?patients?\s+arriv[eé]s?(?![\p{L}\p{M}])/giu,'');
+ return text.normalize('NFC')
+  .replace(/\bavec\s+(?:le|les)\s+noms?\s+et\s+(?:le|les)\s+pr[ée]noms?\s+de\s+chaque\s+patients?\b/giu,'')
+  .replace(/\bavec\s+(?:les\s+)?noms?\s+(?:des|de)\s+patients?\b/giu,'')
+  .replace(/\bavec\s+(?:(?:un|des)\s+)?patients?\s+arriv[eé]s?(?![\p{L}\p{M}])/giu,'');
 }
 /** Only human status phrases authorize a native agenda filter. Unknown negations stay unresolved. */
 export function nativeAgendaStatusContract(text:string):{complete:boolean;statuses?:AgendaStatus[]}{

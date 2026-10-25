@@ -4,6 +4,7 @@ import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { runAgentLoop,restoreAgentTask,savedAgentTask } from "@/server/alexa/agent-loop";
 import {explicitAgentPeriod} from '@/server/alexa/agent-period';
+import {agendaIdentityText,nativeAgendaStatusContract} from '@/shared/alexa/agenda-plan';
 import { AgentReadError, conditionKey, patientMetricConditions, queryPatientsSchema, validateLedger } from "@/shared/alexa/agent";
 import {frenchRequestedOutputs,requestedReadTool,frenchRequestAdmission,frenchPatientCompoundContract} from '@/shared/alexa/request-contract';
 import {z} from 'zod';
@@ -66,6 +67,18 @@ it.each(diagnosisCases)('routes a named diagnosis read through the patient-conte
  const result=await runAgentLoop({...input,text:testCase.input,conversationId:'direct-diagnosis-'+testCase.id,appContext:testCase.context},{actor:'direct-diagnosis-'+testCase.id,infer:async()=>{inferenceCalls++;throw new Error('Unexpected model call');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,patientId:id,text:'Marqueur de test fictif.',evidence:[{id,type:'diagnostic',label:'Marqueur de test fictif'}],conditionKeys:[]})},new AbortController().signal);
  expect(inferenceCalls).toBe(0);expect(observed).toEqual([{name:'get_patient_context',args:{partIds:['requested_1'],section:'diagnoses'}}]);
  expect(result).toMatchObject({status:'completed',parts:[{id:'requested_1',status:'answered',tools:['get_patient_context']}]});
+});
+it('treats requested patient names as agenda display fields and keeps the requested status filter',async()=>{
+ const text='Liste les rendez-vous confirmés du 1 octobre 2026 au 31 octobre 2026 avec le nom et le prénom de chaque patient.';
+ let inferenceCalls=0;const observed:Record<string,unknown>[]=[];
+ expect(frenchRequestedOutputs(text)).toBeNull();
+ expect(frenchRequestAdmission(text,false)).toMatchObject({tools:['query_agenda']});
+ expect(agendaIdentityText(text)).not.toMatch(/patient/iu);
+ expect(nativeAgendaStatusContract(text)).toEqual({complete:true,statuses:['confirmed']});
+ const result=await runAgentLoop({...input,text,conversationId:'agenda-patient-names-display',appContext:{patientId:null,page:'/jarvis'}},{actor:'agenda-patient-names-display',asOf:'2026-10-25T12:00:00+01:00',infer:async()=>{inferenceCalls++;throw new Error('Unexpected model call');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,text:'2 rendez-vous prévus. Amina FICTIVE — 2026-10-26 09:00 — Confirmé.',evidence:[],conditionKeys:[]})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);
+ expect(observed).toEqual([{name:'query_agenda',args:{partIds:['requested_1'],from:'2026-10-01T00:00:00+01:00',to:'2026-11-01T00:00:00+01:00',statuses:['confirmed']}}]);
+ expect(result).toMatchObject({status:'completed',parts:[{id:'requested_1',status:'answered',tools:['query_agenda']}]});
 });
 it.each(agendaCases)('routes a single French tomorrow-agenda read through its bounded date gate: $id',async testCase=>{
  let inferenceCalls=0;const observed:Record<string,unknown>[]=[];
