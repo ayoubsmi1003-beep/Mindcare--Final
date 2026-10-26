@@ -10,8 +10,8 @@ import { mentionsMedication } from "@/shared/alexa/medications";
 import { ALEXA_GENERAL_PROMPTS } from "@/i18n/alexa-general";
 import { isBoundedPublicQuestion } from "@/shared/alexa/public-question";
 import { isIssuedPublicQuestion, type PublicQuestionAdmission } from "./semantic-planner";
-import { findVerifiedPublicFact } from "./general-reference";
-import { isFrenchAlexaCapabilityQuestion, isFrenchMissingInformationPolicyQuestion } from "@/shared/alexa/request-contract";
+import { findVerifiedPublicFact,publicFactAnswerMatches } from "./general-reference";
+import { isFrenchAlexaCapabilityQuestion, isFrenchClarificationCapabilityQuestion, isFrenchMissingInformationPolicyQuestion } from "@/shared/alexa/request-contract";
 
 import { inferLocalText } from "./local-model";
 /** Delivered text stays on the pinned local MiniCPM engine. Gemini voice remains separate. */
@@ -147,6 +147,11 @@ const GENERAL_MEDICAL_TERMS = /\b(?:doctors?|physician\w*|medecin\w*|soins?|illn
 const GENERAL_ENGLISH_TERMS = /\b(?:the|and|with|because|causing|creating|engines?|systems?|stability|motion|stationary|orbiting|without|through)\b/u;
 const GENERAL_ACTION_OR_SOURCE = /\b(?:ignore|instructions?|system\s+prompt|role|envoi\w*|envoie\w*|transmet\w*|execut\w*|supprim\w*|commande\w*|ecri\w*|redige\w*|ouvre\w*|fais|lance\w*|copie\w*|shell|powershell|terminal|send|emails?|delete|execute|launch|save|update|write|open\w*|livres?|ouvrages?|citations?|bibliograph\w*|taylor|maudsley|stahl)\b|\[(?:source|book|livre)\b|\bpage\s+\d|(?:j['’]ai|je\s+viens\s+de|i\s+have|we\s+have)\s+(?:lu|ouvert|ajoute|cree|enregistre|modifie|read|saved|opened|updated|created)|\bi\s+(?:read|opened|saved|updated|created)\b|donnees\s+(?:locales?|du\s+cabinet)|local\s+data|تم\s+(?:حفظ|فتح|تعديل|ارسال)|حفظت|فتحت|عدلت|نفذت|ارسلت|تجاهل|تعليمات|نفذ|احذف/u;
 
+export function isFrenchQuotedInstructionPolicyQuestion(text:string):boolean{
+ const value=text.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase();
+ return /\bphrase citee\b/u.test(value)&&/\bne\s+suffit(?:-(?:elle|il|on))?\s+pas\b/u.test(value)&&/\b(?:autoriser|autorisation)\b/u.test(value)&&/\b(?:modifier|modification|dossier)\b/u.test(value);
+}
+
 function generalTextIsUnsafe(text: string, computerExplanation = false): boolean {
   const value = text.normalize("NFKD").replace(/\p{M}/gu, "").toLowerCase();
   // A processor executing instructions describes a public topic, not an
@@ -173,14 +178,28 @@ function isValidFrenchGeneralAnswer(answer:string,computerExplanation:boolean):b
 const GENERAL_ENGLISH_OUTPUT=/\b(?:the|and|with|because|without|through|lists?|checks?|checklist|mistakes?|backup|files?|saved|exported?|steps?|tasks?|work|time|goals?|priorities|focus|deadline|workflow|schedule|before|future|systematic(?:ally)?|validation|execution)\b/iu;
 
 /** Local-only public routing: an egress name heuristic is not authority for app facts. */
-export function canAnswerGeneralAlexa(text:string):boolean {return typeof text==="string"&&text.trim().length>0&&text.length<=1000&&(isFrenchAlexaCapabilityQuestion(text)||!generalTextIsUnsafe(text));}
+export function canAnswerGeneralAlexa(text:string):boolean {return typeof text==="string"&&text.trim().length>0&&text.length<=1000&&(isFrenchAlexaCapabilityQuestion(text)||isFrenchQuotedInstructionPolicyQuestion(text)||!generalTextIsUnsafe(text));}
 export async function inferNativeGeneralAlexa(text:string,signal:AbortSignal):Promise<AlexaGeneralInferenceResult>{
  if(!canAnswerGeneralAlexa(text))return {ok:false,code:"privacy",localFallback:true};
- if(isFrenchAlexaCapabilityQuestion(text))return {ok:true,text:"Je peux vous aider à consulter les dossiers, les consultations, l’agenda, les documents et les paiements. Je peux aussi préparer certains brouillons ; toute action qui modifie ou envoie quelque chose demande votre confirmation.",model:null,localSource:"capability"};
+ if(isFrenchQuotedInstructionPolicyQuestion(text))return {ok:true,text:"La phrase citée est du contenu à analyser, pas une consigne ni une autorisation. Toute modification du dossier exige une demande explicite et votre confirmation.",model:null,localSource:"capability"};
+ if(isFrenchClarificationCapabilityQuestion(text))return {ok:true,text:"Oui. Si ta demande est ambiguë, je te demanderai de préciser le patient, la période ou l’information souhaitée avant de lire le dossier.",model:null,localSource:"capability"};
+ if(isFrenchAlexaCapabilityQuestion(text))return {ok:true,text:"Je peux consulter les patients, leurs dossiers, les consultations et leurs notes, l’agenda, les documents et les données financières du cabinet. Je peux aussi préparer certains brouillons ; toute action qui modifie ou envoie quelque chose attend votre confirmation.",model:null,localSource:"capability"};
  if(isFrenchMissingInformationPolicyQuestion(text))return {ok:true,text:"Si une information manque, je le signale clairement et je ne remplace pas l’absence par zéro ni par une supposition. Si ce manque empêche une lecture fiable, je précise ce qui reste à vérifier.",model:null,localSource:"missing_information"};
  const reference=findVerifiedPublicFact(text);
  if(reference){
   if(generalTextIsUnsafe(reference.answer,reference.id==="computer"))return {ok:false,code:"invalid-response",localFallback:true};
+  if(reference.requiredConcepts){
+   const sourcedQuestion=`Question : ${text}\nFait vérifié : ${reference.answer}`;
+   for(let attempt=0;attempt<2;attempt++){
+    const system=`${ALEXA_GENERAL_PROMPTS.fr} Reformule le fait vérifié en une phrase courte et naturelle. Conserve son phénomène et son mécanisme, n’ajoute aucun détail. Si tu hésites, reprends le fait fourni.`+(attempt?' Ne remplace pas le phénomène et ne crée pas de cause.':'');
+    try{
+     const answer=await inferLocalText([{role:"system",content:system},{role:"user",content:sourcedQuestion}],{signal,timeoutMs:240000,maxOutputTokens:160});
+     if(signal.aborted)return {ok:false,code:"cancelled",localFallback:true};
+     if(isValidFrenchGeneralAnswer(answer,false)&&publicFactAnswerMatches(answer,reference))return {ok:true,text:answer.trim(),model:ALEXA_DIRECT_MODEL,reference:{id:reference.id,label:reference.label,sourceUrl:reference.sourceUrl,...(reference.secondarySourceUrl?{secondarySourceUrl:reference.secondarySourceUrl}:{})}};
+    }catch{if(signal.aborted)return {ok:false,code:"cancelled",localFallback:true};break;}
+   }
+   return {ok:true,text:reference.answer,model:null,reference:{id:reference.id,label:reference.label,sourceUrl:reference.sourceUrl,...(reference.secondarySourceUrl?{secondarySourceUrl:reference.secondarySourceUrl}:{})}};
+  }
   return {ok:true,text:reference.answer,model:null,reference:{id:reference.id,label:reference.label,sourceUrl:reference.sourceUrl,...(reference.secondarySourceUrl?{secondarySourceUrl:reference.secondarySourceUrl}:{})}};
  }
  try{

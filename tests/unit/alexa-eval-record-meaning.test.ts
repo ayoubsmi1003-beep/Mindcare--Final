@@ -1,5 +1,15 @@
 import {expect,it} from 'vitest';
 import {recordReadMatches,recordMembershipMatches,financialRowsMatch,financialPresentationMatches,financialTotalsMatch,firstAppointmentPresented} from '../../scripts/lib/alexa-eval-record-meaning.mjs';
+it('treats the omitted record mode as the documented default list mode',()=>{
+ const observed={name:'query_alexa_records',args:{p_domain:'documents',p_spec:JSON.stringify({status:'issued',from:'1900-01-01T00:00:00+01:00',to:'1900-01-02T00:00:00+01:00',patientId:'22222222-2222-4222-8222-222222222222'})}};
+ const oracle={domain:'documents',query:{mode:'list',status:'issued',from:'1900-01-01T00:00:00+01:00',to:'1900-01-02T00:00:00+01:00',patientId:'22222222-2222-4222-8222-222222222222'}};
+ expect(recordReadMatches(observed,oracle,{})).toBe(true);
+});
+it('treats an agenda names-page limit as presentation-only while matching the bounded read',()=>{
+ const observed={name:'query_alexa_records',args:{p_domain:'agenda',p_spec:JSON.stringify({from:'2026-10-29T00:00:00+01:00',to:'2026-10-30T00:00:00+01:00'})}};
+ const oracle={domain:'agenda',query:{mode:'list',from:'2026-10-29T00:00:00+01:00',to:'2026-10-30T00:00:00+01:00',limit:5}};
+ expect(recordReadMatches(observed,oracle,{})).toBe(true);
+});
 it('requires the first ordered identity and time, rather than a later member or a list',()=>{
  const first={id:'a',name:'Amina FICTIVE',at:'2026-10-24T09:00:00+01:00',status:'confirmed'},expected={total:2,first};
  const answer='Premier rendez-vous de la période demandée.\nAmina FICTIVE : demain à 9 h (Confirmé).',sources=[{type:'appointment',id:'a'}];
@@ -39,6 +49,12 @@ it('verifies labeled financial totals in native label-before-number order withou
  expect(financialTotalsMatch(answer.replace('300','3000'),summary)).toBe(false);
  expect(financialTotalsMatch(answer+'\nEncaissements (DZD) : 500',summary)).toBe(false);
 });
+it('accepts a concise verified collected amount when the question asks only for that amount',()=>{
+ const summary={total:0,pendingDzd:0,collectedDzd:0,unpriced:80,amount:0,dateAxis:'collected_at'};
+ expect(financialTotalsMatch('Sur la période demandée, le montant encaissé est de 0 DZD.',summary,{state:'collected'})).toBe(true);
+ expect(financialTotalsMatch('Sur la période demandée, le montant encaissé est de 50 DZD.',summary,{state:'collected'})).toBe(false);
+ expect(financialTotalsMatch('Le montant total est de 0 DZD.',summary,{state:'collected'})).toBe(false);
+});
 it('requires the requested members and their own amounts in the visible answer',()=>{
  const at='2026-10-01T08:00:00Z',date=new Date(at).toLocaleString('fr-DZ',{timeZone:'Africa/Algiers'});
  const expected=[{id:'pay-a',patientId:'a',label:'FICTIF Alpha',amount:300,at,status:'collected'},{id:'pay-b',patientId:'b',label:'FICTIF Bêta',amount:500,at,status:'collected'}];
@@ -55,6 +71,7 @@ it('requires the requested members and their own amounts in the visible answer',
  expect(financialPresentationMatches(answer.replace('FICTIF Alpha','FICTIF Bêta'),expected,summary)).toBe(false);
  expect(financialPresentationMatches(answer.split('\n').slice(0,2).join('\n'),expected,summary)).toBe(false);
  expect(financialPresentationMatches('0 résultat',[],{total:0,pendingDzd:0,collectedDzd:0,unpriced:0,dateAxis:'collected_at'})).toBe(true);
+ expect(financialPresentationMatches('Aucun paiement en attente ne correspond à cette demande.',[],{total:0,pendingDzd:0,collectedDzd:0,unpriced:0,dateAxis:'created_at'})).toBe(true);
 });
 it('checks each payment amount and patient association rather than only matching the sum',()=>{
  const expected=[{id:'payment-a',patientId:'patient-a',amount:300},{id:'payment-b',patientId:'patient-b',amount:500}];

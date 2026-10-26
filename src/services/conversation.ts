@@ -26,6 +26,7 @@ import { adoptAlexaConversation, clearAlexaConversation, ensureAlexaConversation
 import { navigateAlexa } from "./alexa-navigation";
 import { abonnerTourVoixLocale, abonnerPropositionVoixLocale, arreterVoixLocale } from "./alexa-local";
 import { stageLabels } from "@/i18n/alexa-dialogue";
+import { alexaActions } from "@/i18n/alexa-actions";
 import { libelleEtape } from "@/i18n/etapes";
 import {alexaProposalLabels} from "./alexa-proposal";
 
@@ -917,7 +918,7 @@ export async function accepterCarte(): Promise<void> {
     outil: carte.outil,
     argsCanoniques: args,
   });
-  const draftDestination=issue.ok&&carte.outil==="create_editable_document_draft"?`/documents?draft=${encodeURIComponent(issue.affecteId)}`:null;
+  const draftDestination=issue.ok&&["create_editable_document_draft","update_editable_document_draft"].includes(carte.outil)?`/documents?draft=${encodeURIComponent(issue.affecteId)}`:null;
   // M09 reliquat · le constat vérifié rejoint l'anneau (liaison action +
   // issue + tour proposant), sans toucher au chemin d'exécution.
   capterApprobation({
@@ -931,9 +932,10 @@ export async function accepterCarte(): Promise<void> {
   argumentsCarte = null;
   empreinteRunCarte = null;
 
+  const verifiedText=carte.outil==="update_treatment"?alexaActions.treatmentUpdateVerified:carte.outil==="stop_treatment"?alexaActions.treatmentStopVerified:carte.outil==="update_editable_document_draft"?alexaActions.documentDraftUpdateVerified:fr.jarvis.ecriture.verifiee;
   ajouterTour(
     issue.ok
-      ? { role: "jarvis", texte: `${carte.titre} — ${fr.jarvis.ecriture.verifiee}` }
+      ? { role: "jarvis", texte: `${carte.titre} — ${verifiedText}` }
       : { role: "systeme", texte: issue.message },
   );
   publier();

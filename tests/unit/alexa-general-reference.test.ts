@@ -16,6 +16,11 @@ describe("findVerifiedPublicFact", () => {
     ["Pourquoi le jour et la nuit se succèdent-ils ?", "day-night"],
     ["Pourquoi la glace flotte-t-elle sur l’eau ?", "ice-density"],
     ["Quelle est la différence entre un son aigu et un son grave ?", "sound-pitch"],
+    ["Pourquoi un miroir se couvre-t-il de buée ?", "condensation"],
+    ["Pourquoi les feuilles changent-elles de couleur en automne ?", "autumn-leaves"],
+    ["Pourquoi les nuages paraissent-ils blancs ?", "white-clouds"],
+    ["Pourquoi le métal semble-t-il plus froid que le bois à température égale ?", "metal-and-wood"],
+    ["Quelle différence y a-t-il entre la masse et le poids ?", "mass-and-weight"],
   ])("retrieves a verified local fact for a French paraphrase", (question, id) => {
     const fact = findVerifiedPublicFact(question);
     expect(fact).toMatchObject({ id, answer: expect.any(String), sourceUrl: expect.stringMatching(/^https:\/\//) });
@@ -32,6 +37,11 @@ describe("findVerifiedPublicFact", () => {
     ["Pourquoi le jour et la nuit se succèdent-ils ?", "tourne sur son axe"],
     ["Pourquoi la glace flotte-t-elle sur l’eau ?", "moins dense que l’eau liquide"],
     ["Quelle est la différence entre un son aigu et un son grave ?", "fréquence"],
+    ["Pourquoi un miroir se couvre-t-il de buée ?", "gouttelettes"],
+    ["Pourquoi les feuilles changent-elles de couleur en automne ?", "chlorophylle"],
+    ["Pourquoi les nuages paraissent-ils blancs ?", "diffusent"],
+    ["Pourquoi le métal semble-t-il plus froid que le bois à température égale ?", "conduit"],
+    ["Quelle différence y a-t-il entre la masse et le poids ?", "force de gravité"],
   ])("keeps the key explanatory phrase in the sourced answer", (question, phrase) => {
     expect(findVerifiedPublicFact(question)?.answer).toContain(phrase);
   });

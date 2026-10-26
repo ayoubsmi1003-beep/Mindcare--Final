@@ -13,6 +13,62 @@ const c: ClinicalConsultation = { id: "a4000000-0000-4000-8000-000000000001", st
 const proof = { id: "s1", text: "Le patient rapporte une humeur triste et des conflits familiaux avec ses parents." };
 const response = (text: string, quote = proof.text, id = "s1") => ({ sentences: [{ text, evidence: [{ id, quote }] }] });
 describe("French concise grounded clinical paragraphs", () => {
+  it('requires complete grammatical French in multi-visit summaries and retries',()=>{
+    expect(narrativeCopy.multiVisitPrompt).toContain('Vérifie les accords sujet-verbe et genre-nombre');
+    expect(narrativeCopy.multiVisitRetryPrompt).toContain('Vérifie les accords sujet-verbe et genre-nombre');
+    expect(narrativeCopy.multiVisitPrompt).toContain('une proposition complète');
+  });
+  it('selects exact source sentences in chronological order without adding dates or rewriting them',()=>{
+    expect(narrativeCopy.chronologySelectionPrompt).toContain('dans l’ordre chronologique');
+    expect(narrativeCopy.chronologySelectionPrompt).toContain('sans réécrire');
+    expect(narrativeCopy.chronologySelectionPrompt).toContain('sans ajouter les dates');
+  });
+  it('builds a date-free chronological paragraph from exact recorded sentences',async()=>{
+    const visits=Array.from({length:3},(_,i)=>({...c,id:`bc100000-0000-4000-8000-${String(i+1).padStart(12,'0')}`,startedAt:`2026-0${i+1}-10T09:00:00Z`,rawNotes:null,notes:[{...c.notes[0]!,id:`bc200000-0000-4000-8000-${String(i+1).padStart(12,'0')}`,subjective:`La personne décrit une évolution documentée au temps ${i+1}. L’entretien aborde aussi un détail secondaire.`,objective:null,assessment:null,plan:null}]}));
+    const context:ClinicalContext={patientId:'a3000000-0000-4000-8000-000000000001',consultations:visits,diagnoses:[],scales:[],treatments:{current:[],history:[],historyComplete:true},sourceRevision:'a'.repeat(64),coverage:{requested:3,returned:3,complete:true,hasMore:false}};
+    let choices:{id:string;text:string}[]=[],selections:string[]=[];
+    vi.mocked(inferLocalText).mockImplementation(async(messages,options)=>{
+      const body=JSON.parse(String(messages[1]!.content)) as {choices:{id:string;text:string}[]};choices=body.choices;
+      selections=(options!.jsonSchema as {properties:{selection:{enum:string[]}}}).properties.selection.enum;
+      return JSON.stringify({selection:selections[0]});
+    });
+    const result=await summarizeClinicalContext(context,new AbortController().signal,true,true,{chronological:true,includeDates:false});
+    expect(inferLocalText).toHaveBeenCalledTimes(1);
+    expect(String(vi.mocked(inferLocalText).mock.calls[0]![0][0]!.content)).toBe(narrativeCopy.chronologySelectionPrompt);
+    expect(selections.length).toBeGreaterThan(0);
+    expect(selections.every(selection=>selection.includes('+'))).toBe(true);
+    expect(choices.every(choice=>!(choice.text.includes('La personne décrit')&&choice.text.includes('L’entretien aborde aussi un détail secondaire.')))).toBe(true);
+    expect(result).toMatchObject({generated:true,complete:true,method:'extractive'});
+    expect(result.text).toContain('La personne décrit une évolution documentée au temps 1.');
+    expect(result.text).toContain('La personne décrit une évolution documentée au temps 3.');
+    expect(result.text).not.toMatch(/2026|consultation du/iu);
+  });
+  it('keeps note signature status out of a clinical summary',async()=>{
+    const visit:ClinicalConsultation={...c,rawNotes:null,notes:[{...c.notes[0]!,status:'draft',subjective:'La personne décrit une évolution documentée au dernier entretien.',objective:null,assessment:null,plan:null}]};
+    const context:ClinicalContext={patientId:'a3000000-0000-4000-8000-000000000001',consultations:[visit],diagnoses:[],scales:[],treatments:{current:[],history:[],historyComplete:true},sourceRevision:'a'.repeat(64),coverage:{requested:1,returned:1,complete:true,hasMore:false}};
+    vi.mocked(inferLocalText).mockImplementation(async messages=>{
+      const body=JSON.parse(String(messages[1]!.content)) as {choices:{id:string}[]};
+      return JSON.stringify({selection:body.choices[0]!.id});
+    });
+    const result=await summarizeClinicalContext(context,new AbortController().signal,true,true,{chronological:true,includeDates:false});
+    expect(result.text).toContain('La personne décrit une évolution documentée au dernier entretien.');
+    expect(result.text).not.toMatch(/non sign[ée]|brouillon/iu);
+  });
+  it('does not send note signature status to the model for a bounded consultation summary',async()=>{
+    const text='La personne décrit une évolution documentée au dernier entretien.';
+    const visit:ClinicalConsultation={...c,rawNotes:null,notes:[{...c.notes[0]!,status:'draft',subjective:text,objective:null,assessment:null,plan:null}]};
+    const context:ClinicalContext={patientId:'a3000000-0000-4000-8000-000000000001',consultations:[visit],diagnoses:[],scales:[],treatments:{current:[],history:[],historyComplete:true},sourceRevision:'a'.repeat(64),coverage:{requested:1,returned:1,complete:true,hasMore:false}};
+    let sourceText='';
+    vi.mocked(inferLocalText).mockImplementation(async messages=>{
+      const body=JSON.parse(String(messages[1]!.content)) as {sources:{id:string;text:string}[]};
+      sourceText=body.sources.map(source=>source.text).join(' ');
+      return JSON.stringify({sentences:[{text,evidence:[{id:body.sources[0]!.id,quote:text}]}]});
+    });
+    const result=await summarizeClinicalConsultations(context,new AbortController().signal);
+    expect(sourceText).toContain(text);
+    expect(sourceText).not.toMatch(/non sign[ée]|brouillon/iu);
+    expect(result.text).not.toMatch(/non sign[ée]|brouillon/iu);
+  });
   it.each(['invalid-json','invalid-schema'] as const)('keeps clinical notes and model output out of debug logs on %s',async(kind)=>{
     const plan='Prévoir un échange confidentiel sur la situation familiale.';
     const warning=vi.spyOn(console,'warn').mockImplementation(()=>{});
@@ -337,7 +393,7 @@ describe("French concise grounded clinical paragraphs", () => {
     });
     expect((await synthesizeClinicalNarrative(sources,new AbortController().signal)).complete).toBe(true);
   });
-  it('covers every visit through bounded batches and a final synthesis',async()=>{
+  it('covers every visit through bounded batches without a final synthesis',async()=>{
     vi.mocked(inferLocalText).mockImplementation(async messages=>{
       const input=JSON.parse(String(messages[1]!.content)) as {sources:{id:string,text:string}[]};
       return JSON.stringify({sentences:[{text:'Le patient rapporte des difficultés de sommeil.',evidence:input.sources.map(s=>({id:s.id,quote:'Le patient rapporte des difficultés de sommeil.'}))}]});
@@ -345,7 +401,7 @@ describe("French concise grounded clinical paragraphs", () => {
     const sources=Array.from({length:7},(_,i)=>({id:`source-${i}`,consultationId:`visit-${i}`,text:'Le patient rapporte des difficultés de sommeil.'}));
     const result=await synthesizeClinicalNarrative(sources,new AbortController().signal);
     expect(result.complete).toBe(true);expect(result.sourceIds).toHaveLength(7);
-    expect(vi.mocked(inferLocalText).mock.calls.length).toBeGreaterThanOrEqual(3);
+    expect(vi.mocked(inferLocalText).mock.calls.length).toBe(2);
   });
   it("includes the five areas, retains corrections and fingerprints every note change", () => {
     const p = consultationNarrativeSources(c); expect(p.sources).toHaveLength(5); expect(p.complete).toBe(true);
@@ -366,7 +422,7 @@ describe("French concise grounded clinical paragraphs", () => {
   it("keeps the inference output budget aligned with its concise paragraph prompt", async () => {
     vi.mocked(inferLocalText).mockResolvedValue(JSON.stringify(response(proof.text)));
     await synthesizeClinicalNarrative([proof], new AbortController().signal);
-    expect(inferLocalText).toHaveBeenCalledWith(expect.any(Array), expect.objectContaining({ maxOutputTokens: 1024 }));
+    expect(inferLocalText).toHaveBeenCalledWith(expect.any(Array), expect.objectContaining({ maxOutputTokens: 220 }));
   });
   it("uses short model citation ids and maps a validated citation back to its exact clinical source",async()=>{
     const source={id:"a4000000-0000-4000-8000-000000000001:0",text:proof.text,consultationId:"a4000000-0000-4000-8000-000000000001"};
@@ -409,7 +465,7 @@ describe("French concise grounded clinical paragraphs", () => {
       return JSON.stringify({sentences:[{text:'Le patient rapporte une humeur triste.',evidence}]});
     });
     const result=await summarizeClinicalContext(context,new AbortController().signal);
-    expect(compactRequest?.maxOutputTokens).toBe(560);
+    expect(compactRequest?.maxOutputTokens).toBe(360);
     expect(compactRequest?.sources).toHaveLength(6);
     expect(compactRequest?.jsonSchema).toMatchObject({properties:{sentences:{items:{properties:{evidence:{prefixItems:Array.from({length:6},(_,index)=>({properties:{id:{const:`s${index+1}`},quote:{enum:expect.arrayContaining(['Le patient rapporte une humeur triste.'])}}}))}}}}}});
     for(const source of compactRequest!.sources){
@@ -418,9 +474,49 @@ describe("French concise grounded clinical paragraphs", () => {
       expect(source.text).toContain('Les difficultés familiales persistent.');
       expect(source.text).toContain('La dose de TEST est passée de 50 mg à 100 mg.');
     }
-    expect(compactRequest?.system).toContain('une phrase française naturelle de 30 mots maximum');
+    expect(compactRequest?.system).toContain('une phrase française naturelle, complète et grammaticalement correcte de 30 mots maximum');
+    expect(compactRequest?.system).toContain('Vérifie les accords sujet-verbe et genre-nombre');
+    expect(compactRequest?.system).toContain('une proposition complète');
     expect([...result.sourceIds].sort()).toEqual(visits.map(visit=>visit.id).sort());
     expect(result).toMatchObject({generated:true,complete:true,text:'Le patient rapporte une humeur triste.'});
+  });
+  it("keeps six medium-length visits in one bounded synthesis request",async()=>{
+    const quote='Le patient rapporte une humeur triste.';
+    const visits=Array.from({length:6},(_,i)=>({...c,id:`b8100000-0000-4000-8000-${String(i+1).padStart(12,'0')}`,startedAt:`2026-${String(i+4).padStart(2,'0')}-20T08:00:00Z`,notes:c.notes.map((note,j)=>({...note,id:`b8200000-0000-4000-8000-${String(i*5+j+1).padStart(12,'0')}`,subjective:(quote+' ').repeat(14)}))}));
+    const context:ClinicalContext={patientId:'a3000000-0000-4000-8000-000000000001',consultations:visits,diagnoses:[],scales:[],treatments:{current:[],history:[],historyComplete:true},sourceRevision:'a'.repeat(64),coverage:{requested:6,returned:6,complete:true,hasMore:false}};
+    let captured:{sources:{id:string;text:string;visit?:string}[]}|undefined;
+    vi.mocked(inferLocalText).mockImplementation(async messages=>{
+      captured=JSON.parse(String(messages[1]!.content)) as {sources:{id:string;text:string;visit?:string}[]};
+      return JSON.stringify({sentences:[{text:quote,evidence:captured.sources.map(source=>({id:source.id,quote}))}]});
+    });
+    const result=await summarizeClinicalContext(context,new AbortController().signal);
+    expect(inferLocalText).toHaveBeenCalledTimes(1);expect(captured?.sources).toHaveLength(6);
+    expect(result).toMatchObject({generated:true,complete:true,text:quote});expect(result.sourceIds).toHaveLength(6);
+  });
+  it("combines verified visit batches without another model pass",async()=>{
+    const quote='Le patient rapporte un sommeil perturbé.';
+    const sources=Array.from({length:8},(_,i)=>({id:`b9100000-0000-4000-8000-${String(i+1).padStart(12,'0')}`,consultationId:`b9200000-0000-4000-8000-${String(i+1).padStart(12,'0')}`,text:`${quote} ${'Le contact est préservé. '.repeat(60)}`}));
+    vi.mocked(inferLocalText).mockImplementation(async messages=>{
+      const body=JSON.parse(String(messages[1]!.content)) as {sources:{id:string;text:string}[]};
+      return JSON.stringify({sentences:[{text:quote,evidence:body.sources.map(source=>({id:source.id,quote}))}]});
+    });
+    const result=await synthesizeClinicalNarrative(sources,new AbortController().signal);
+    expect(inferLocalText).toHaveBeenCalledTimes(2);
+    expect(result).toMatchObject({generated:true,complete:true});
+    expect(result.sourceIds).toHaveLength(8);
+  });
+  it("keeps six visits with 42 note fields in one bounded model context",async()=>{
+    const quote='Le patient rapporte un sommeil perturbé.';
+    const sources=Array.from({length:6},(_,visit)=>Array.from({length:7},(_,field)=>({id:`ba100000-0000-4000-8000-${String(visit*7+field+1).padStart(12,'0')}`,consultationId:`ba200000-0000-4000-8000-${String(visit+1).padStart(12,'0')}`,text:`${quote} ${'Le contact est préservé. '.repeat(5)}`}))).flat();
+    vi.mocked(inferLocalText).mockImplementation(async messages=>{
+      const body=JSON.parse(String(messages[1]!.content)) as {sources:{id:string;text:string}[]};
+      expect(body.sources).toHaveLength(6);
+      return JSON.stringify({sentences:[{text:quote,evidence:body.sources.map(source=>({id:source.id,quote}))}]});
+    });
+    const result=await synthesizeClinicalNarrative(sources,new AbortController().signal);
+    expect(inferLocalText).toHaveBeenCalledTimes(1);
+    expect(result).toMatchObject({generated:true,complete:true,text:quote});
+    expect(result.sourceIds).toHaveLength(6);
   });
   it("retries a multi-visit response once when a citation is not copied from its visit",async()=>{
     const sources=[
@@ -468,14 +564,14 @@ describe("French concise grounded clinical paragraphs", () => {
   });
 });
 
-it.each(["Résume les notes des trois dernières consultations de Ayoub Salmi.", "Fais une synthèse du cas du patient sélectionné.", "Résume en bref ses consultations et ses traitements."])("routes a summary to synthesis rather than a note dump: %s", text => { const a=frenchRequestAdmission(text,false);expect(a.tools).toEqual(["get_patient_context"]);expect(a.patientSection).toBe("summary"); });
+it.each(["Résume les notes des trois dernières consultations de Nadia Test.", "Fais une synthèse du cas du patient sélectionné.", "Résume en bref ses consultations et ses traitements."])("routes a summary to synthesis rather than a note dump: %s", text => { const a=frenchRequestAdmission(text,false);expect(a.tools).toEqual(["get_patient_context"]);expect(a.patientSection).toBe("summary"); });
 it("routes a recurring-theme question through whole-case synthesis instead of returning one raw note page",()=>{const a=frenchRequestAdmission("Quel est le thème récurrent des notes de Amel Bensaid ?",false);expect(a.patientSection).toBe("summary");});
-it("retains exact quotation requests",()=>{expect(frenchRequestAdmission("Recopie mot pour mot les notes de Ayoub Salmi.",false).patientSection).toBe("notes");});
+it("retains exact quotation requests",()=>{expect(frenchRequestAdmission("Recopie mot pour mot les notes de Nadia Test.",false).patientSection).toBe("notes");});
 
 it('blocks moving a negative between independent clinical claims',()=>{const source={id:'s1',text:'Pas d’idées suicidaires. Insomnie persistante.'};expect(validateClinicalNarrative(response('Idées suicidaires, sans insomnie persistante.',source.text),[source])).toBeNull();});
 it('validates a quoted positive fact without requiring unrelated negative text from the same visit',()=>{const quote='Les notes mentionnent une concentration suivie.';const source={id:'s1',text:quote+' Aucun médicament ni changement.',originalText:quote+' Aucun médicament ni changement.'};expect(validateClinicalNarrative(response(quote,quote),[source])).toBe(quote);});
 it.each(['Résume le DSM-5.','Résume la photosynthèse.'])("does not admit clinical reads for a public/book summary: %s",text=>{expect(frenchRequestAdmission(text,false).tools??[]).not.toContain('get_patient_context');});
-it('keeps a requested note-area filter on summary wording',()=>{const a=frenchRequestAdmission('Résume les notes subjectives de Ayoub Salmi.',false);expect(a.patientSection).toBe('notes');expect(a.noteArea).toBe('subjective');});
+it('keeps a requested note-area filter on summary wording',()=>{const a=frenchRequestAdmission('Résume les notes subjectives de Nadia Test.',false);expect(a.patientSection).toBe('notes');expect(a.noteArea).toBe('subjective');});
 
 it('omits an oversized field whole instead of losing its initial or final qualifier',async()=>{const long={id:'long',text:'Cela concerne la sœur du patient. '+ 'Description détaillée. '.repeat(400)+' Aucun symptôme rapporté par le patient.'};vi.mocked(inferLocalText).mockImplementation(async messages=>{const body=JSON.parse(String(messages[1]!.content));expect(body.sources).toEqual([proof]);return JSON.stringify(response(proof.text));});const r=await synthesizeClinicalNarrative([long,proof],new AbortController().signal);expect(r.generated).toBe(true);expect(r.complete).toBe(false);});
 

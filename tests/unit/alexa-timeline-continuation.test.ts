@@ -13,11 +13,11 @@ it('retains an unsupported timeline date filter before reading',async()=>{
  const result=await run({id:'x',name:'get_patient_context',args:{partIds:['p'],section:'timeline'}},asOf,[],new AbortController().signal);
  expect(result.status).toBe('unsupported');expect(reads).toBe(0);
 });
-it('routes a chronological clinical summary to the patient summary before model routing',async()=>{
+it('routes an explicit chronological order request to the patient timeline before model routing',async()=>{
  let reads=0,inferences=0;
  let routed:unknown;
  const outcome=await runAgentLoop({text:'Présente les événements cliniques dans leur ordre chronologique.',conversationId:'timeline-order-admission',clientTurnId:crypto.randomUUID(),appContext:{patientId:patient,page:'/patients/'+patient}},{actor:'timeline-order-admission',infer:async()=>{inferences++;throw new Error('UnexpectedInference');},execute:async call=>{reads++;routed=call.args;return {callId:call.id,status:'ok',complete:true,text:'Résumé clinique bref.',conditionKeys:[],evidence:[]};}},new AbortController().signal);
- expect(outcome.status).toBe('completed');expect(routed).toMatchObject({section:'summary'});expect(outcome.sentences.join(' ')).toBe('Résumé clinique bref.');expect(reads).toBe(1);expect(inferences).toBe(0);
+ expect(outcome.status).toBe('completed');expect(routed).toMatchObject({section:'timeline'});expect(outcome.sentences.join(' ')).toBe('Résumé clinique bref.');expect(reads).toBe(1);expect(inferences).toBe(0);
 });
 it.each([
  'Présente les événements cliniques dans leur ordre chronologique et indique les échelles enregistrées pour Amel Bensaid.',
@@ -47,7 +47,7 @@ it('normalizes PostgreSQL timestamp values before validating timeline rows',asyn
  }};
  const run=agentExecutor({text:'Affiche la chronologie du dossier courant.',conversationId:'timeline-postgres-date',clientTurnId:crypto.randomUUID(),appContext:{patientId:patient,page:'/patients/'+patient}},db,{rpc:async()=>({data:null,error:null})});
  const result=await run({id:'timeline-date',name:'get_patient_context',args:{partIds:['p'],section:'timeline'}},asOf,[],new AbortController().signal);
- expect(result.status).toBe('ok');expect(result.text).toContain('Consultation');
+ expect(result.status).toBe('ok');expect(result.text).toMatch(/consultation/iu);
 });
 it('does not accept a model supplied timeline cursor',async()=>{
  let reads=0;

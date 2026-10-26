@@ -9,18 +9,18 @@ describe("Alexa patient identity grammar stays local and explicit", () => {
     ["Dossier de «Sélectionné»", "Sélectionné"],
     ["traitement du belkacem mohamed", "belkacem mohamed"],
     ["note du consultations du consultation passée du nadia belkacem", "nadia belkacem"],
-    ["notes de la consultation passée de Nadia Belkacem", "Nadia Belkacem"],
-    ["notes de la patiente Nadia Belkacem", "Nadia Belkacem"],
-    ["traitement de la Nadia Belkacem", "Nadia Belkacem"],
-    ["notes d'Inès Haddad", "Inès Haddad"],
-    ["notes d’Inès Haddad", "Inès Haddad"],
-    ["notes de l'Inès Haddad", "Inès Haddad"],
-    ["notes de l’Inès Haddad", "Inès Haddad"],
-    ["notes des consultations passées de Nadia Belkacem", "Nadia Belkacem"],
+    ["notes de la consultation passée de Nadia Test", "Nadia Test"],
+    ["notes de la patiente Nadia Test", "Nadia Test"],
+    ["traitement de la Nadia Test", "Nadia Test"],
+    ["notes d'Inès Test", "Inès Test"],
+    ["notes d’Inès Test", "Inès Test"],
+    ["notes de l'Inès Test", "Inès Test"],
+    ["notes de l’Inès Test", "Inès Test"],
+    ["notes des consultations passées de Nadia Test", "Nadia Test"],
     ["traitement du patient Lithium", "Lithium"],
-    ["traitement de «Nadia Belkacem»", "Nadia Belkacem"],
-    ["Explique le traitement selon le livre de Stahl pour Nadia Belkacem", "Nadia Belkacem"],
-    ["notes de Nadia Belkacem d'après la dernière consultation", "Nadia Belkacem"],
+    ["traitement de «Nadia Test»", "Nadia Test"],
+    ["Explique le traitement selon le livre de Stahl pour Nadia Test", "Nadia Test"],
+    ["notes de Nadia Test d'après la dernière consultation", "Nadia Test"],
     ["traitement du Jean D'Angelo", "Jean D'Angelo"],
     ["traitement Jean D’Angelo", "Jean D’Angelo"],
     ["traitement du patient D'Angelo", "D'Angelo"],
@@ -31,10 +31,11 @@ describe("Alexa patient identity grammar stays local and explicit", () => {
     ["Quels sont les symptômes du patient Nadia ?", "Nadia"],
     ["Quels sont les symptômes de «Nadia» ?", "Nadia"],
     ["traitement du Parkinson", "Parkinson"],
-    ["Lis les notes de travail de Ayoub Salmi", "Ayoub Salmi"],
+    ["Lis les notes de travail de Nadia Test", "Nadia Test"],
     ["Lis le dossier du patient «Travail»", "Travail"],
     ["Peux-tu vérifier si Samir Ferhat a un numéro de carte d’identité ?", "Samir Ferhat"],
     ["Quel est l’identifiant de la carte nationale de Sarah Boudiaf ?", "Sarah Boudiaf"],
+    ["Combien de consultations terminées compte Nadia Test ?", "Nadia Test"],
     ["Le dossier de Riad Khelifi contient-il un numéro de CNI ?", "Riad Khelifi"],
     ["Cherche la phrase « SUBJ-011-S01 » dans le Subjectif de Amina Meziane.", "Amina Meziane"],
     ["Cherche le code « SUBJ-015-S01 » dans la partie subjective de Dounia Ghani.", "Dounia Ghani"],
@@ -98,11 +99,11 @@ describe("Alexa patient identity grammar stays local and explicit", () => {
   // Consuming later introducers or selecting one of several identities would
   // bypass the local ambiguity choice that the resolver/orchestrator preserves.
   it.each([
-    "traitement du Nadia Belkacem et du Karim Haddad",
-    "notes d'Inès Haddad et de Nadia Belkacem",
-    "notes de la Nadia Belkacem pour Karim Haddad",
-    "traitement de «Nadia Belkacem» pour Karim Haddad",
-    "Quels sont les symptômes de Nadia Belkacem et de Karim Haddad ?",
+    "traitement du Nadia Test et du Karim Test",
+    "notes d'Inès Test et de Nadia Test",
+    "notes de la Nadia Test pour Karim Test",
+    "traitement de «Nadia Test» pour Karim Test",
+    "Quels sont les symptômes de Nadia Test et de Karim Test ?",
   ])("keeps multiple explicit identities ambiguous: %s", text => {
     expect(parsePatientMention(text)).toEqual({ status: "ambiguous" });
   });
@@ -125,20 +126,20 @@ it.each([
   expect(parsePatientMention(text)).toEqual({ status: 'none' });
 });
 it.each([
- ['Lis les diagnostics actifs de Ayoub Salmi.', 'Ayoub Salmi'],
- ['Affiche les certificats de suivi médical de Belkacem Nadia.', 'Belkacem Nadia'],
+ ['Lis les diagnostics actifs de Nadia Test.', 'Nadia Test'],
+ ['Affiche les certificats de suivi médical de Test Nadia.', 'Test Nadia'],
  ['Lis les notes brutes de «Principal».', 'Principal'],
 ])('preserves an explicit identity after a clinical qualifier: %s', (text, name) => {
   expect(parsePatientMention(text)).toEqual({ status: 'named', name });
 });
 it('does not choose between two explicitly named patients after qualifiers', () => {
-  expect(parsePatientMention('Lis les diagnostics actifs de Ayoub Salmi et de Belkacem Nadia.')).toEqual({ status: 'ambiguous' });
+  expect(parsePatientMention('Lis les diagnostics actifs de Nadia Test et de Test Nadia.')).toEqual({ status: 'ambiguous' });
 });
 
 it.each([
  ['Quel est le téléphone de Patient 01 Evaluation ?', 'Patient 01 Evaluation'],
  ['Lis le dossier de Patient 12 Test.', 'Patient 12 Test'],
- ['Quel est le téléphone de Ayoub Salmi ?', 'Ayoub Salmi'],
+ ['Quel est le téléphone de Nadia Test ?', 'Nadia Test'],
 ])('grounds a stated alphanumeric label or administrative lookup: %s', (text, name) => {
  expect(parsePatientMention(text)).toEqual({status:'named',name});
 });
@@ -157,25 +158,43 @@ it('keeps two named synthetic test labels ambiguous',()=>{
 it('does not promote a patient age to an alphanumeric identity', () => {
  expect(parsePatientMention('Lis les notes du patient de 18 ans.')).toEqual({status:'none'});
 });
+it('does not treat a finance concept as a patient in a cabinet-wide count', () => {
+ expect(parsePatientMention('Combien de consultations terminées n’ont pas de tarif ?')).toEqual({status:'none'});
+});
+it('does not mistake a treatment qualifier for a selected patient identity', () => {
+ expect(parsePatientMention('Quels traitements suspendus sont documentés ?')).toEqual({status:'none'});
+});
 
 
 it.each([
  ['Prépare un certificat de bonne santé mentale pour le patient sélectionné.',{status:'none'}],
- ['Prépare un certificat de bonne santé mentale pour Ayoub Salmi.',{status:'named',name:'Ayoub Salmi'}],
- ['Cherche l’expression « sommeil bleu » dans les notes de travail de Ayoub Salmi.',{status:'named',name:'Ayoub Salmi'}],
+ ['Prépare un certificat de bonne santé mentale pour Nadia Test.',{status:'named',name:'Nadia Test'}],
+ ['Cherche l’expression « sommeil bleu » dans les notes de travail de Nadia Test.',{status:'named',name:'Nadia Test'}],
  ['Cherche le mot « anxiété » dans ses notes.',{status:'none'}],
  ['Montre les notes du patient «Expression».',{status:'named',name:'Expression'}],
 ])('does not turn a document type or literal search into a patient: %s',(text,expected)=>expect(parsePatientMention(text)).toEqual(expected));
-it.each(['Quelle est la situation familiale de Ayoub Salmi ?','Quel est le sexe enregistré de Ayoub Salmi ?'])('resolves an explicit administrative field owner: %s',text=>expect(parsePatientMention(text)).toEqual({status:'named',name:'Ayoub Salmi'}));
+it.each(['Quelle est la situation familiale de Nadia Test ?','Quel est le sexe enregistré de Nadia Test ?'])('resolves an explicit administrative field owner: %s',text=>expect(parsePatientMention(text)).toEqual({status:'named',name:'Nadia Test'}));
 
-it.each(['Liste les consultations terminées de Belkacem Nadia.','Compte les consultations clôturées de Ayoub Salmi.','Montre les consultations ouvertes de Ayoub Salmi.'])('keeps a consultation state separate from the named person: %s',text=>expect(parsePatientMention(text)).toMatchObject({status:'named',name:text.includes('Belkacem')?'Belkacem Nadia':'Ayoub Salmi'}));
+it.each([
+ ['Liste les consultations terminées de Test Nadia.','Test Nadia'],
+ ['Compte les consultations clôturées de Nadia Test.','Nadia Test'],
+ ['Montre les consultations ouvertes de Nadia Test.','Nadia Test'],
+])('keeps a consultation state separate from the named person: %s',(text,name)=>expect(parsePatientMention(text)).toEqual({status:'named',name}));
 
-it.each([['Montre les brouillons de documents de Belkacem Nadia.',{status:'named',name:'Belkacem Nadia'}],['Liste les documents émis de Ayoub Salmi.',{status:'named',name:'Ayoub Salmi'}],['Liste les brouillons de documents du dossier courant.',{status:'none'}]])('keeps document nouns and states out of patient identity: %s',(text,expected)=>expect(parsePatientMention(text)).toEqual(expected));
+it.each([['Montre les brouillons de documents de Test Nadia.',{status:'named',name:'Test Nadia'}],['Liste les documents émis de Nadia Test.',{status:'named',name:'Nadia Test'}],['Liste les brouillons de documents du dossier courant.',{status:'none'}]])('keeps document nouns and states out of patient identity: %s',(text,expected)=>expect(parsePatientMention(text)).toEqual(expected));
+it.each(['Ouvre les ordonnances de Nadia Test.','Ouvre les ordonnances pour Nadia Test.'])('extracts patient identity from a plural prescription request: %s',text=>expect(parsePatientMention(text)).toEqual({status:'named',name:'Nadia Test'}));
 
-it('does not mistake a secondary diagnosis qualifier for a second patient',()=>expect(parsePatientMention('Lis les diagnostics secondaires de Ayoub Salmi.')).toEqual({status:'named',name:'Ayoub Salmi'}));
+it('does not mistake a secondary diagnosis qualifier for a second patient',()=>expect(parsePatientMention('Lis les diagnostics secondaires de Nadia Test.')).toEqual({status:'named',name:'Nadia Test'}));
 
 it.each(['revue','relecture','validation','vérification','confirmation','signature','impression'])('keeps a workflow purpose out of patient identity: %s',purpose=>{
  expect(parsePatientMention('Montre les rendez-vous de demain et prépare les corrections pour '+purpose+'.')).toEqual({status:'none'});
- expect(parsePatientMention('Lis les notes de Ayoub Salmi pour '+purpose+'.')).toEqual({status:'named',name:'Ayoub Salmi'});
+ expect(parsePatientMention('Lis les notes de Nadia Test pour '+purpose+'.')).toEqual({status:'named',name:'Nadia Test'});
 });
 it.each(['Montre le dossier du patient Revue.','Montre les rendez-vous pour Revue Martin.','Montre le dossier de «Revue».'])('preserves an actual identity despite a workflow-purpose word: %s',text=>expect(parsePatientMention(text)).toEqual({status:'named',name:text.includes('Martin')?'Revue Martin':'Revue'}));
+
+it.each([
+ ['Ajoute un rendez-vous de 30 minutes à Nadia Test le jeudi 29 octobre 2026 à 10 h 30.',{status:'named',name:'Nadia Test'}],
+ ['Planifie un rendez-vous à Nadia Test le jeudi 29 octobre 2026 à 10 h 30.',{status:'named',name:'Nadia Test'}],
+ ['Ajoute un rendez-vous à 10 h 30 jeudi.',{status:'none'}],
+ ['Montre les rendez-vous à Alger jeudi.',{status:'none'}],
+])('resolves a patient after the appointment preposition without treating time or place as a patient: %s',(text,expected)=>expect(parsePatientMention(text)).toEqual(expected));

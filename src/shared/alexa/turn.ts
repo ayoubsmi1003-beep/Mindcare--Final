@@ -10,7 +10,7 @@ export const turnInput = z.object({
 export type TurnInput = z.infer<typeof turnInput>;
 export const alexaNavigationSchema = z.union([
   z.object({ target: z.literal("patient"), patientId: z.uuid() }).strict(),
-  z.object({ target: z.literal("document"), documentId: z.uuid(), print: z.boolean().optional() }).strict(),
+  z.object({ target: z.literal("document"), patientId: z.uuid(), documentId: z.uuid(), print: z.boolean().optional() }).strict(),
   z.object({ target: z.enum(["agenda", "patients", "dashboard", "documents", "finances", "parametres", "jarvis"]) }).strict(),
 ]);
 export type AlexaNavigation = z.infer<typeof alexaNavigationSchema>;
@@ -20,7 +20,7 @@ export function alexaNavigationPath(value: unknown): string | null {
   const parsed = alexaNavigationSchema.safeParse(value);
   if (!parsed.success) return null;
   const navigation = parsed.data;
-  if (navigation.target === "document") return `/documents?document=${encodeURIComponent(navigation.documentId)}${navigation.print === true ? "&print=1" : ""}`;
+  if (navigation.target === "document") return `/documents?patient=${encodeURIComponent(navigation.patientId)}&document=${encodeURIComponent(navigation.documentId)}${navigation.print === true ? "&print=1" : ""}`;
   return navigation.target === "patient" ? `/patients/${encodeURIComponent(navigation.patientId)}` : navigation.target === "dashboard" ? "/tableauDeBord" : `/${navigation.target}`;
 }
 export interface AlexaSource { id: string; type: "patient" | "consultation" | "diagnostic" | "scale" | "treatment" | "knowledge" | "appointment" | "document" | "query"; label: string; version?: string; excerpt?:string; provenance?: Readonly<Record<string, string | number | null>> }

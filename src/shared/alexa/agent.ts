@@ -85,7 +85,9 @@ const actionSlots:Readonly<Record<string,readonly string[]>>={
  create_appointment:['startsAt','durationMinutes'],reschedule_appointment:['appointmentId','startsAt','durationMinutes'],
  cancel_appointment:['appointmentId','reason'],mark_patient_arrived:['appointmentId'],
  set_consultation_price:['consultationId','amountDzd'],record_payment_collected:['consultationId','paymentId'],close_consultation:['consultationId'],
- create_editable_document_draft:['documentType','variables'],
+ create_editable_document_draft:['documentType','variables'],print_issued_document:['documentType'],
+ update_treatment:['treatmentName','changes'],stop_treatment:['treatmentName','stopReason','notes'],
+ update_editable_document_draft:['draftId','documentType','variables'],
  send_internal_message:['body'],
 };
 export const actionArgumentKeys=(action:string):readonly string[]=>['partIds','action','patientId','patientName',...(actionSlots[action]??[])];
@@ -101,7 +103,7 @@ export const agentSchemas = {
    .refine(v=>v.view==='medication_catalog'?!!v.query:v.query===undefined,'CatalogueQueryOnly')
    .refine(v=>v.view==='reception'||[v.day,v.queue].every(x=>x===undefined),'ReceptionArgumentsOnly').refine(v=>v.view==='reception'||v.reusePrevious===undefined,'ReceptionContinuationOnly').refine(v=>!v.reusePrevious||[v.day,v.queue,v.offset,v.revision].every(x=>x===undefined),'SavedReceptionCursorOnly')
    .refine(v=>v.view==='message_draft'?!!v.motif:[v.motif,v.patientId,v.patientName].every(x=>x===undefined),'MessageDraftScopeOnly'),
-  query_agenda: z.object({ partIds, appointmentId:z.uuid().optional(), ...patient, ...period, statuses: z.array(z.enum(["requested", "confirmed", "arrived", "in_session", "completed", "no_show", "cancelled"])).min(1).max(7).optional(), offset:z.number().int().min(0).max(10000).optional() }).strict().refine(v=>!v.appointmentId||[v.from,v.to,v.period,v.statuses,v.offset].every(x=>x===undefined),"DetailCannotIgnoreFilters"),
+  query_agenda: z.object({ partIds, appointmentId:z.uuid().optional(), ...patient, ...period, statuses: z.array(z.enum(["requested", "confirmed", "arrived", "in_session", "completed", "no_show", "cancelled"])).min(1).max(7).optional(), offset:z.number().int().min(0).max(10000).optional(), limit:z.number().int().min(1).max(20).optional() }).strict().refine(v=>!v.appointmentId||[v.from,v.to,v.period,v.statuses,v.offset,v.limit].every(x=>x===undefined),"DetailCannotIgnoreFilters"),
   query_documents: z.object({ partIds, ...patient, ...period, documentId: z.uuid().optional(), draftId: z.uuid().optional(),
     kind: z.enum(["bonne_sante_mentale", "suivi_medical", "certificat_medical", "justification", "ordonnance"]).optional(), status: z.enum(["issued", "voided", "draft"]).optional(), query: z.string().max(160).optional(), offset: z.number().int().min(0).max(10000).optional(), textOffset:z.number().int().min(0).max(1000000).optional(),revision:z.string().regex(/^[a-f0-9]{64}$/).optional(),reusePrevious:z.boolean().optional() }).strict()
     .refine(v=>!(v.documentId&&v.draftId),'OneDocumentReference')
@@ -109,15 +111,24 @@ export const agentSchemas = {
     .refine(v=>(!!v.documentId||!!v.draftId)||[v.textOffset,v.revision].every(x=>x===undefined),'DocumentReferenceRequired')
     .refine(v=>!v.textOffset||!!v.revision,'DocumentRevisionRequired')
     .refine(v=>!v.reusePrevious||[v.patientId,v.patientName,v.documentId,v.draftId,v.period,v.from,v.to,v.kind,v.status,v.query,v.offset,v.textOffset,v.revision].every(x=>x===undefined),'ContinuationUsesSavedQuery'),
-  query_finance: z.object({ partIds, ...patient, ...period, state: z.enum(["all", "pending", "collected"]).describe("Filtre des lignes de paiement seulement ; omettre pour overview et les autres vues du cabinet.").optional(), mode: z.enum([...cabinetFinanceModes, "list", "totals", "group"]).describe("overview : chiffre d’affaires, recettes encaissées et bilan du cabinet sur la période ; charges/composition/evolution/calendar/attention : panneaux financiers ; list/totals/group : lignes de paiement selon leur date et état, pas le chiffre d’affaires du cabinet."), reusePrevious:z.boolean().optional(), revision:z.string().regex(/^[a-f0-9]{64}$/).optional(), offset: z.number().int().min(0).max(10000).optional() }).strict().refine(v=>!!v.from===!!v.to&&(!v.from||Date.parse(v.from)<Date.parse(v.to!)),"InvalidPeriod").refine(v=>!cabinetFinanceModes.some(mode=>mode===v.mode)||[v.patientId,v.patientName,v.state].every(x=>x===undefined),"CabinetOverviewCannotIgnorePatientOrState").refine(v=>!["composition","evolution","attention","overview"].includes(v.mode??"")||!v.offset,"ViewCannotIgnoreOffset").refine(v=>v.mode==="calendar"||[v.reusePrevious,v.revision].every(x=>x===undefined),"CalendarCursorOnly").refine(v=>!v.reusePrevious||[v.period,v.from,v.to,v.offset,v.revision].every(x=>x===undefined),"ContinuationUsesSavedQuery"),
+  query_finance: z.object({ partIds, ...patient, ...period, state: z.enum(["all", "pending", "collected"]).describe("Filtre des lignes de paiement seulement ; omettre pour overview et les autres vues du cabinet.").optional(), consultationStatus:z.enum(["closed"]).optional(), mode: z.enum([...cabinetFinanceModes, "list", "totals", "group"]).describe("overview : chiffre d’affaires, recettes encaissées et bilan du cabinet sur la période ; charges/composition/evolution/calendar/attention : panneaux financiers ; list/totals/group : lignes de paiement selon leur date et état, pas le chiffre d’affaires du cabinet."), reusePrevious:z.boolean().optional(), revision:z.string().regex(/^[a-f0-9]{64}$/).optional(), offset: z.number().int().min(0).max(10000).optional() }).strict().refine(v=>!!v.from===!!v.to&&(!v.from||Date.parse(v.from)<Date.parse(v.to!)),"InvalidPeriod").refine(v=>!v.consultationStatus||(v.mode==='totals'&&v.state==='all'),"UnpricedConsultationFilterRequiresAllTotals").refine(v=>!cabinetFinanceModes.some(mode=>mode===v.mode)||[v.patientId,v.patientName,v.state].every(x=>x===undefined),"CabinetOverviewCannotIgnorePatientOrState").refine(v=>!["composition","evolution","attention","overview"].includes(v.mode??"")||!v.offset,"ViewCannotIgnoreOffset").refine(v=>v.mode==="calendar"||[v.reusePrevious,v.revision].every(x=>x===undefined),"CalendarCursorOnly").refine(v=>!v.reusePrevious||[v.period,v.from,v.to,v.offset,v.revision].every(x=>x===undefined),"ContinuationUsesSavedQuery"),
   answer_general: z.object({partIds,question:z.string().trim().min(2).max(1000)}).strict(),
   search_knowledge: z.object({ partIds, query: z.string().trim().min(2).max(500) }).strict(),
-  prepare_action: z.object({ partIds, ...patient, action: z.enum(["create_appointment", "reschedule_appointment", "cancel_appointment", "mark_patient_arrived", "set_consultation_price", "record_payment_collected", "close_consultation", "create_editable_document_draft", "send_internal_message"]),
+  prepare_action: z.object({ partIds, ...patient, action: z.enum(["create_appointment", "reschedule_appointment", "cancel_appointment", "mark_patient_arrived", "set_consultation_price", "record_payment_collected", "close_consultation", "create_editable_document_draft", "print_issued_document", "update_treatment", "stop_treatment", "update_editable_document_draft", "send_internal_message"]),
     appointmentId: z.uuid().optional(), consultationId: z.uuid().optional(), paymentId: z.uuid().optional(),
     startsAt: z.iso.datetime({ offset: true }).optional(), durationMinutes: z.number().int().min(5).max(240).optional(), amountDzd: z.number().int().min(0).max(1000000).optional(),
     reason: z.string().trim().min(3).max(300).optional(), documentType: z.enum(["bonne_sante_mentale", "suivi_medical", "certificat_medical", "justification", "ordonnance"]).optional(), variables: z.record(z.string().max(80), z.string().max(300)).optional(),
+    treatmentName:z.string().trim().min(2).max(160).optional(),
+    changes:z.object({dose:z.string().trim().min(1).max(300).optional(),doseUnit:z.string().trim().min(1).max(80).optional(),frequency:z.string().trim().min(1).max(300).optional(),timing:z.array(z.string().trim().min(1).max(80)).max(8).optional(),instructions:z.string().trim().min(1).max(1000).optional(),startDate:z.iso.date().optional(),endDate:z.iso.date().nullable().optional()}).strict().optional(),
+    draftId:z.uuid().optional(),
+    stopReason:z.enum(["inefficacite","effets_indesirables","amelioration","decision_clinique","autre"]).optional(),
+    notes:z.string().trim().min(3).max(300).optional(),
     body: z.string().trim().min(3).max(1000).optional(),
-  }).strict().refine(v=>Object.keys(v).every(k=>actionArgumentKeys(v.action).includes(k)),'UnexpectedActionArguments'),
+  }).strict().refine(v=>Object.keys(v).every(k=>actionArgumentKeys(v.action).includes(k)),'UnexpectedActionArguments')
+    .refine(v=>v.action!=='update_treatment'||!!v.treatmentName&&!!v.changes&&Object.keys(v.changes).length>0,'TreatmentChangeRequired')
+    .refine(v=>v.action!=='stop_treatment'||!!v.treatmentName,'TreatmentNameRequired')
+    .refine(v=>v.action!=='print_issued_document'||!!v.documentType,'PrintDocumentKindRequired')
+    .refine(v=>v.action!=='update_editable_document_draft'||!!v.variables&&Object.keys(v.variables).length>0,'DraftFieldsRequired'),
   navigate: z.object({ partIds, target: z.enum(["patients", "agenda", "dashboard", "patient", "documents", "finances", "parametres", "jarvis"]), ...patient }).strict(),
   ask_doctor: z.object({ partIds, question: z.string().trim().min(1).max(500) }).strict(),
 } as const;

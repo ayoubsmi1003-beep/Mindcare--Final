@@ -5,6 +5,7 @@ type PublicFact = {
   readonly secondarySourceUrl?: string;
   readonly match: readonly (readonly string[])[];
   readonly answer: string;
+  readonly requiredConcepts?: readonly (readonly string[])[];
 };
 
 const facts: readonly PublicFact[] = [
@@ -87,6 +88,41 @@ const facts: readonly PublicFact[] = [
     match: [["son", "sons"], ["aigu", "aigue"], ["grave"]],
     answer: "La hauteur d’un son dépend de sa fréquence : une fréquence plus élevée donne un son aigu, et une fréquence plus basse un son grave.",
   },
+  {
+    id: "condensation", label: "USGS — Condensation and the Water Cycle",
+    sourceUrl: "https://www.usgs.gov/water-science-school/science/condensation-and-water-cycle",
+    match: [["miroir"], ["buee", "condensation"]],
+    answer: "La surface froide refroidit la vapeur d’eau de l’air, qui se transforme en fines gouttelettes : cette condensation forme la buée.",
+    requiredConcepts: [["buee", "buée"], ["vapeur", "eau"], ["condensation", "condense"]],
+  },
+  {
+    id: "autumn-leaves", label: "NASA Earth Observatory — Fall Colors in the Mid-Atlantic",
+    sourceUrl: "https://science.nasa.gov/earth/earth-observatory/fall-colors-in-the-mid-atlantic-79512/",
+    match: [["feuille", "feuilles"], ["couleur", "couleurs"], ["automne"]],
+    answer: "À l’automne, la chlorophylle diminue dans les feuilles : le vert s’efface et laisse apparaître d’autres pigments, jaunes ou rouges.",
+    requiredConcepts: [["automne"], ["feuille", "feuilles"], ["chlorophylle"], ["pigment", "jaune", "rouge"]],
+  },
+  {
+    id: "white-clouds", label: "NASA — Crepuscular Rays and Light Scattering",
+    sourceUrl: "https://eol.jsc.nasa.gov/Collections/EarthObservatory/articles/CrepuscularRaysandLightScattering.htm",
+    match: [["nuage", "nuages"], ["blanc", "blancs", "blanche", "blanches"], ["pourquoi", "paraissent", "sembler"]],
+    answer: "Les gouttelettes d’eau des nuages diffusent les différentes couleurs de la lumière solaire à peu près ensemble, ce qui les fait paraître blanches.",
+    requiredConcepts: [["nuage", "nuages"], ["blanc"], ["goutte", "diffus", "lumiere"]],
+  },
+  {
+    id: "metal-and-wood", label: "OpenStax College Physics 2e — Conduction",
+    sourceUrl: "https://openstax.org/books/college-physics-2e/pages/14-5-conduction",
+    match: [["metal"], ["bois"], ["froid", "froide"], ["temperature"]],
+    answer: "À température égale, le métal retire la chaleur de la main plus vite que le bois parce qu’il la conduit mieux; il paraît donc plus froid.",
+    requiredConcepts: [["metal"], ["bois"], ["chaleur"], ["conduit", "transfere", "transmet"]],
+  },
+  {
+    id: "mass-and-weight", label: "NASA Glenn — Weight Equation",
+    sourceUrl: "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/weight-equation-2/",
+    match: [["masse"], ["poids"], ["difference", "différence"]],
+    answer: "La masse mesure la quantité de matière d’un objet; son poids est la force de gravité qui agit sur lui et varie selon l’astre.",
+    requiredConcepts: [["masse"], ["poids"], ["matiere", "quantite"], ["force", "gravite"]],
+  },
 ];
 
 function normalize(value: string): string {
@@ -98,4 +134,9 @@ export function findVerifiedPublicFact(question: string): PublicFact | null {
   const normalized = ` ${normalize(question)} `;
   const matches = facts.filter(fact => fact.match.every(group => group.some(alias => normalized.includes(` ${normalize(alias)} `))));
   return matches.length === 1 ? matches[0]! : null;
+}
+
+export function publicFactAnswerMatches(answer:string,fact:PublicFact):boolean{
+  const normalized=normalize(answer);
+  return fact.requiredConcepts?.every(group=>group.some(term=>normalized.includes(normalize(term))))??true;
 }

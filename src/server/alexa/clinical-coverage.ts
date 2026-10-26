@@ -14,3 +14,10 @@ export function clinicalSectionComplete(context:ClinicalContext,section:string|u
  }
  return true;
 }
+
+export function clinicalSummaryComplete(context:ClinicalContext,narrativeComplete:boolean,requestedScope:boolean):boolean{
+ if(!narrativeComplete)return false;
+ if(requestedScope)return true;
+ if(context.coverage.hasMore)return false;
+ return ['history','treatments','current'].every(section=>clinicalSectionComplete(context,section));
+}

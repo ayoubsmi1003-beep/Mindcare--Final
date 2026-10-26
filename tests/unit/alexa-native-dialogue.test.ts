@@ -1,5 +1,6 @@
 import { expect, it } from 'vitest';
 import { runAlexa } from '@/server/alexa/orchestrator';
+import { dialogue } from '@/i18n/alexa-dialogue';
 import type { AlexaEvent } from '@/shared/alexa/turn';
 import type { ClientSql } from '@/server/jarvis/client-sql';
 
@@ -13,4 +14,8 @@ it('answers a desktop greeting without reading the selected patient or waiting f
   }, event=>events.push(event), new AbortController().signal);
   expect(events.some(e=>e.type==='sentence'&&e.text.startsWith('Bonjour'))).toBe(true);
   expect(events.find(e=>e.type==='done')).toMatchObject({limited:false});
+});
+
+it('explains that it asks only when a French question is ambiguous', () => {
+  expect(dialogue('fr').clarification.toLocaleLowerCase('fr')).toContain('ambiguë');
 });

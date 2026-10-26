@@ -21,6 +21,11 @@ it("does not label a complete treatment read partial because consultation notes 
   expect(answer.map(item => item.text)).not.toContain(dialogue("fr").partial);
 });
 
+it("answers an empty treatment lookup in a concise natural sentence", () => {
+  const answer = localResponse(context(true, true), planRequest("Quels traitements suspendus sont documentés ?", null), []);
+  expect(answer.map(item => item.text)).toContain("Je ne trouve aucun traitement correspondant dans le dossier consulté.");
+});
+
 it("still declares truncated treatment history and missing requested consultation content", () => {
   const truncated = context(true, false);
   truncated.treatments.historyComplete = false;

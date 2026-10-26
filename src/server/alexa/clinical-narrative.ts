@@ -11,10 +11,14 @@ import {dialogue} from '@/i18n/alexa-dialogue';
 import {alexaRecordCopy} from '@/i18n/alexa-records';
 
 export const NARRATIVE_VERSION = SESSION_NARRATIVE_VERSION;
-export const NARRATIVE_HASH = createHash("sha256").update(ALEXA_CONVERSATION_MODEL + NARRATIVE_VERSION + copy.prompt + copy.sessionInstruction + copy.sessionRepairPrompt + copy.multiVisitPrompt + copy.multiVisitRetryPrompt).digest("hex");
+export const NARRATIVE_HASH = createHash("sha256").update(ALEXA_CONVERSATION_MODEL + NARRATIVE_VERSION + copy.prompt + copy.sessionInstruction + copy.sessionRepairPrompt + copy.multiVisitPrompt + copy.multiVisitRetryPrompt + copy.chronologySelectionPrompt).digest("hex");
 export const CASE_NARRATIVE_VERSION='alexa-case-extractive-fr-v1';
 export const CASE_NARRATIVE_HASH=createHash('sha256').update(ALEXA_CONVERSATION_MODEL+CASE_NARRATIVE_VERSION+copy.caseSelectionPrompt).digest('hex');
-export interface NarrativeSource { id: string; text: string; at?: string; state?: "open" | "closed"; consultationId?: string; originalText?: string; attribution?: "unsigned" | "correction" | "plan"; scope?: "previous" | "current" | "change" }
+const NARRATIVE_BATCH_CHARACTER_LIMIT=12000;
+const NARRATIVE_SOURCE_COUNT_LIMIT=48;
+const EXTRACTIVE_BATCH_CHARACTER_LIMIT=4500;
+const NARRATIVE_SOURCE_CHARACTER_LIMIT=5500;
+export interface NarrativeSource { id: string; text: string; at?: string; state?: "open" | "closed"; consultationId?: string; originalText?: string; attribution?: "correction" | "plan"; scope?: "previous" | "current" | "change" }
 export interface ClinicalNarrative { text: string; complete: boolean; generated: boolean; sourceIds: string[]; method?: "reformulated" | "extractive" | "source_selection" | "structured"; selectedSentences?: {id:string;quote:string}[] }
 function requiredSessionSource(source:NarrativeSource):boolean {
   return source.scope==='change'&&!/:trend-\d+$/u.test(source.id)
@@ -161,7 +165,7 @@ export function requestsClinicalDate(text:string):boolean {
 }
 export function consultationNarrativeSources(c: ClinicalConsultation): { sources: NarrativeSource[]; complete: boolean } {
   const selected = consultationExcerpts(c, undefined, 30000, 100, 12000);
-  const sources: NarrativeSource[] = selected.excerpts.map((e, i) => ({ id: `${c.id}:${i}`, consultationId:c.id, originalText: e.text, ...(e.amendmentAt ? {attribution: "correction" as const} : e.unsigned ? {attribution: "unsigned" as const} : e.area === "plan" ? {attribution: "plan" as const} : {}), at: c.startedAt, state: c.endedAt === null ? "open" : "closed", text: `${e.amendmentAt ? copy.correction : ""}${e.unsigned ? copy.unsigned : ""}${e.area ? copyArea[e.area] + " : " : ""}${e.text}` }));
+  const sources: NarrativeSource[] = selected.excerpts.map((e, i) => ({ id: `${c.id}:${i}`, consultationId:c.id, originalText: e.text, ...(e.amendmentAt ? {attribution: "correction" as const} : e.area === "plan" ? {attribution: "plan" as const} : {}), at: c.startedAt, state: c.endedAt === null ? "open" : "closed", text: `${e.amendmentAt ? copy.correction : ""}${e.area ? copyArea[e.area] + " : " : ""}${e.text}` }));
   if(c.sessionDetails){
     const details=c.sessionDetails,focus=[...details.focus,details.focusLibre].filter(Boolean);
     if(focus.length)sources.push({id:`${c.id}:focus`,consultationId:c.id,originalText:focus.join(' ; ')+'.',text:copy.focusSource(focus)});
@@ -332,7 +336,6 @@ function recoverClinicalSelection(value: unknown, sources: readonly NarrativeSou
     // Structured domain objects must not be presented as clinical prose.
     if (!text || unsafe.test(text) || /^[{[]/u.test(text)) return null;
     const prefix = source.attribution === "correction" ? copy.recordedCorrection
-      : source.attribution === "unsigned" ? copy.recordedDraft
       : source.attribution === "plan" ? copy.recordedPlan
       : /^(?:je\b|j[’']|nous\b)/iu.test(text) ? copy.recordedAuthor : null;
     const sentence = /[.!?…]$/u.test(text) ? text : text + ".";
@@ -371,7 +374,8 @@ async function synthesizeNarrativeBatch(sources: readonly NarrativeSource[], sig
   const projected: NarrativeSource[] = []; let characters = 0;
   for (const source of available) {
     // Never remove a qualifier at either end of a recorded field.
-    if (projected.length >= 40 || characters + source.text.length > 5500) continue;
+    const characterLimit=extractiveMode?5500:NARRATIVE_BATCH_CHARACTER_LIMIT;
+    if (projected.length >= NARRATIVE_SOURCE_COUNT_LIMIT || source.text.length > NARRATIVE_SOURCE_CHARACTER_LIMIT || characters + source.text.length > characterLimit) continue;
     projected.push(source); characters += source.text.length;
   }
   let complete = projected.length === sources.length;
@@ -397,7 +401,7 @@ async function synthesizeNarrativeBatch(sources: readonly NarrativeSource[], sig
     const aliasedEvidence=multiVisitEvidence?new Map([...sourceAliases].flatMap(([alias,id])=>multiVisitEvidence!.has(id)?[[alias,multiVisitEvidence!.get(id)!] as const]:[])):undefined;
     const responseSchema=multiVisit?multiVisitAnswerSchemaFor(requiredAliases.length?requiredAliases:[...sourceAliases.keys()].slice(0,6),aliasedEvidence,validationSources):sessionAnswerSchemaFor(validationSources,sessionEvidence);
     const systemPrompt=multiVisit?(multiVisitRetries?copy.multiVisitRetryPrompt:copy.multiVisitPrompt):sessionEvidence?copy.sessionRepairPrompt:`${copy.prompt} ${copy.sessionInstruction}`;
-    const maxOutputTokens=multiVisit?Math.min(560,200+visitIds.size*70):1024;
+    const maxOutputTokens=multiVisit?Math.min(360,180+visitIds.size*30):220;
     const visitAliases=new Map([...new Set(validationSources.flatMap(source=>source.consultationId?[source.consultationId]:[]))].map((id,index)=>[id,`v${index+1}`]));
     const modelSources=validationSources.map(({originalText:_original,attribution:_attribution,consultationId,...source},index)=>({
       ...source,...(selectedEvidence?.has(source.id)?{text:selectedEvidence.get(source.id)}:{}),id:`s${index+1}`,...(consultationId?{visit:visitAliases.get(consultationId)}:{}),...(requiredSessionSource(source)?{required:true}:{}),
@@ -471,14 +475,16 @@ async function synthesizeNarrativeBatch(sources: readonly NarrativeSource[], sig
 /** Fast, evidence-only answer when separate visits explicitly label the same recurring theme. */
 export async function synthesizeClinicalNarrative(sources: readonly NarrativeSource[], signal: AbortSignal): Promise<ClinicalNarrative> {
   const extractiveMode=sources.some(source=>source.scope!==undefined&&source.originalText!==undefined);
-  if(sources.some(s=>s.text.length>5500))return synthesizeNarrativeBatch(sources,signal,extractiveMode);
+  const batchLimit=extractiveMode?EXTRACTIVE_BATCH_CHARACTER_LIMIT:NARRATIVE_BATCH_CHARACTER_LIMIT;
+  const projectionLimit=NARRATIVE_SOURCE_CHARACTER_LIMIT;
+  if(sources.some(s=>s.text.length>projectionLimit))return synthesizeNarrativeBatch(sources,signal,extractiveMode);
   const visits=new Map<string,NarrativeSource[]>();
   for(const source of sources){const key=source.consultationId??source.id;const group=visits.get(key)??[];group.push(source);visits.set(key,group);}
-  if(visits.size<=6 && sources.length<=40 && sources.reduce((n,s)=>n+s.text.length,0)<=4500)return synthesizeNarrativeBatch(sources,signal,extractiveMode);
+  if(visits.size<=6 && sources.length<=NARRATIVE_SOURCE_COUNT_LIMIT && sources.reduce((n,s)=>n+s.text.length,0)<=batchLimit)return synthesizeNarrativeBatch(sources,signal,extractiveMode);
   const chunks:NarrativeSource[][]=[];let chunk:NarrativeSource[]=[],count=0,characters=0;
   for(const group of visits.values()){
     const length=group.reduce((n,s)=>n+s.text.length,0);
-    if(chunk.length&&(count===6||characters+length>4500||chunk.length+group.length>40)){chunks.push(chunk);chunk=[];count=0;characters=0;}
+    if(chunk.length&&(count===6||characters+length>batchLimit||chunk.length+group.length>NARRATIVE_SOURCE_COUNT_LIMIT)){chunks.push(chunk);chunk=[];count=0;characters=0;}
     chunk.push(...group);characters+=length;count++;
   }
   if(chunk.length)chunks.push(chunk);
@@ -493,11 +499,15 @@ export async function synthesizeClinicalNarrative(sources: readonly NarrativeSou
     }
     return {text:copy.unavailable,complete:false,generated:false,sourceIds:[]};
   }
-  const intermediate=results.map((r,i)=>({id:`batch-${i}`,text:r.text}));
-  const final=await synthesizeClinicalNarrative(intermediate,signal);
-  if(!final.generated)return {...final,complete:false};
-  const cited=results.filter((_,i)=>final.sourceIds.includes(`batch-${i}`));
-  return {...final,sourceIds:[...new Set(cited.flatMap(r=>r.sourceIds))],complete:final.complete&&results.every(r=>r.complete)};
+  const uniqueTexts=new Map<string,string>();
+  for(const result of results)uniqueTexts.set(fold(result.text),result.text.trim());
+  return {
+    text:[...uniqueTexts.values()].join(" "),
+    sourceIds:[...new Set(results.flatMap(result=>result.sourceIds))],
+    complete:results.every(result=>result.complete),
+    generated:true,
+    method:"reformulated",
+  };
 }
 
 export function extractRecurringClinicalTheme(context: ClinicalContext): ClinicalNarrative | null {
@@ -573,9 +583,19 @@ function describeChangeValue(value: unknown, depth = 0): string {
     return `${label} ${value}`;
   }).join(", ") : "non renseigné";
 }
-interface CaseSentence {id:string;text:string;sourceIds:string[];at?:string;fact:string}
+interface CaseSentence {id:string;text:string;sourceIds:string[];at?:string;fact:string;visitId:string}
+function chronologicalSentenceUnits(text:string):string[]{
+  const segments=[...new Intl.Segmenter('fr',{granularity:'sentence'}).segment(text)].map(item=>item.segment.trim()).filter(Boolean);
+  const units:string[]=[];
+  for(const sentence of segments){
+    // Keep anaphoric or contrastive follow-ups attached to the sentence they qualify.
+    if(units.length&&/^(?:cela\b|ceci\b|ce\b|cet\b|cette\b|ces\b|cependant\b|toutefois\b|néanmoins\b|mais\b|pourtant\b|en revanche\b|au contraire\b|à l'inverse\b)/iu.test(sentence))units[units.length-1]+=` ${sentence}`;
+    else units.push(sentence);
+  }
+  return units;
+}
 /** Native selection retains exact sentence provenance at every hidden level. */
-async function synthesizeCaseSentences(sources:readonly NarrativeSource[],signal:AbortSignal):Promise<ClinicalNarrative>{
+async function synthesizeCaseSentences(sources:readonly NarrativeSource[],signal:AbortSignal,options:{chronological?:boolean;includeDates?:boolean}={}):Promise<ClinicalNarrative>{
   const unavailable:ClinicalNarrative={text:copy.unavailable,generated:false,complete:false,sourceIds:[]};
   if(!sources.length)return unavailable;
   let sequence=0;
@@ -598,17 +618,18 @@ async function synthesizeCaseSentences(sources:readonly NarrativeSource[],signal
         if(/:focus$|:measures$/u.test(source.id)&&choices.length)continue;
         // A following sentence may qualify a diagnosis, identify its subject,
         // or withdraw the preceding claim. Never detach it from its field.
-        const sentences=[(source.originalText??source.text).trim()].filter(text=>text.length>0&&!unsafe.test(text)&&!/(?:séance|consultation) précédente/iu.test(text));
+        const sourceText=(source.originalText??source.text).trim();
+        const sentences=(options.chronological?chronologicalSentenceUnits(sourceText):[sourceText]).filter(text=>text.length>0&&!unsafe.test(text)&&!/(?:séance|consultation) précédente/iu.test(text));
         for(const quote of sentences){
           const sourceContext=fold(source.originalText??source.text);
           const attribution=sourceContext.match(/\b(?:cela|ceci|cette information|cette idee|ce fait)\s+(?:concerne|se rapporte a|est attribue a)\s+[^.!?;]*/u)??sourceContext.match(/\b(?:le|la) patient(?:e)?\s+n['’]a\s+pas\s+ete\s+interroge[^.!?;]*/u);
           if(qualifiedQuotation(quote)&&attribution&&!fold(quote).includes(attribution[0]))continue;
-          const prefix=source.attribution==='unsigned'?copy.recordedDraft:source.attribution==='correction'?copy.recordedCorrection:source.attribution==='plan'?copy.recordedPlan:undefined;
+          const prefix=source.attribution==='correction'?copy.recordedCorrection:source.attribution==='plan'?copy.recordedPlan:undefined;
           const prose=/[.!?]$/u.test(quote)&&/\b(?:est|sont|rapporte|décrit|reste|convenu|dit|présente|porte|mentionne|indique|retient|constate)\b/iu.test(quote);
           let text=prefix?copy.caseQuotation(prefix,quote):prose?quote:copy.caseQuotation(copy.recordedAuthor,quote);
-          if(source.at&&source.consultationId)text=copy.caseDatedSentence(date.format(new Date(source.at)),text);
+           if(options.includeDates!==false&&source.at&&source.consultationId)text=copy.caseDatedSentence(date.format(new Date(source.at)),text);
           if(words(text)>70||seen.has(text))continue;
-          seen.add(text);choices.push({id:`c${++sequence}`,text,sourceIds:[source.id],...(source.at?{at:source.at}:{}),fact:quoteFold(quote)});
+          seen.add(text);choices.push({id:`c${++sequence}`,text,sourceIds:[source.id],...(source.at?{at:source.at}:{}),fact:quoteFold(quote),visitId:source.consultationId??source.id});
           // Each choice keeps its entire recorded field and qualifications.
           if(ordered.length>1||choices.length>=3)break;
         }
@@ -624,12 +645,14 @@ async function synthesizeCaseSentences(sources:readonly NarrativeSource[],signal
     const combinations=new Map(choices.filter(current).map(choice=>[choice.id,[choice]]));
     for(let i=0;i<choices.length;i++)for(let j=i+1;j<choices.length;j++){
       const pair=[choices[i]!,choices[j]!];
-      if(pair[0]!.fact!==pair[1]!.fact&&pair.some(current)&&words(pair.map(choice=>choice.text).join(' '))<=70)combinations.set(pair.map(choice=>choice.id).join('+'),pair);
+      if(pair[0]!.fact!==pair[1]!.fact&&(!options.chronological||pair[0]!.visitId!==pair[1]!.visitId)&&pair.some(current)&&words(pair.map(choice=>choice.text).join(' '))<=70)combinations.set(pair.map(choice=>choice.id).join('+'),pair);
     }
-    const schema=z.object({selection:z.enum([...combinations.keys()] as [string,...string[]])}).strict();
-    const raw=await inferLocalText([{role:'system',content:copy.caseSelectionPrompt},{role:'user',content:JSON.stringify({sources:entries.map((source,index)=>({id:`s${index+1}`,text:source.text,at:source.at})),choices:choices.map(({id,text})=>({id,text}))})}],{jsonSchema:z.toJSONSchema(schema),maxOutputTokens:64,timeoutMs:900000,signal});
+    const pairs=[...combinations].filter(([,selection])=>selection.length===2);
+    const selectable=options.chronological&&pairs.length?new Map(pairs):combinations;
+    const schema=z.object({selection:z.enum([...selectable.keys()] as [string,...string[]])}).strict();
+    const raw=await inferLocalText([{role:'system',content:options.chronological?copy.chronologySelectionPrompt:copy.caseSelectionPrompt},{role:'user',content:JSON.stringify({sources:entries.map((source,index)=>({id:`s${index+1}`,text:source.text,at:source.at})),choices:choices.map(({id,text})=>({id,text}))})}],{jsonSchema:z.toJSONSchema(schema),maxOutputTokens:64,timeoutMs:900000,signal});
     signal.throwIfAborted();
-    return combinations.get(schema.parse(JSON.parse(raw)).selection)!;
+    return selectable.get(schema.parse(JSON.parse(raw)).selection)!;
   };
   const readBatch=async(entries:readonly NarrativeSource[]):Promise<CaseSentence[]>=>{
     try{return await select(candidatesFor(entries),entries);}
@@ -667,7 +690,7 @@ async function synthesizeCaseSentences(sources:readonly NarrativeSource[],signal
 
 export async function summarizeClinicalCaseContext(context:ClinicalContext,signal:AbortSignal):Promise<ClinicalNarrative>{return summarizeClinicalContext(context,signal,true,true);}
 
-export async function summarizeClinicalContext(context: ClinicalContext, signal: AbortSignal, wholeRecord = true,caseSelection=false): Promise<ClinicalNarrative> {
+export async function summarizeClinicalContext(context: ClinicalContext, signal: AbortSignal, wholeRecord = true,caseSelection=false,selectionOptions:{chronological?:boolean;includeDates?:boolean}={}): Promise<ClinicalNarrative> {
   let complete = context.coverage.complete && (!wholeRecord || !context.coverage.hasMore);
   // Same deterministic progression as a ranged summary: no model call, no drift.
   const structured = extractStructuredClinicalProgression(context);
@@ -675,7 +698,7 @@ export async function summarizeClinicalContext(context: ClinicalContext, signal:
   const sources: NarrativeSource[] = [];
   const visits=[...(context.currentConsultation ? [context.currentConsultation] : []), ...context.consultations]
     .filter((c,index,all)=>all.findIndex(other=>other.id===c.id)===index)
-    .sort((a,b)=>wholeRecord?Date.parse(a.startedAt)-Date.parse(b.startedAt)||a.id.localeCompare(b.id):Date.parse(b.startedAt)-Date.parse(a.startedAt)||b.id.localeCompare(a.id));
+  .sort((a,b)=>wholeRecord||selectionOptions.chronological?Date.parse(a.startedAt)-Date.parse(b.startedAt)||a.id.localeCompare(b.id):Date.parse(b.startedAt)-Date.parse(a.startedAt)||b.id.localeCompare(a.id));
   for (const c of wholeRecord?visits:visits.slice(0,context.coverage.requested)) {
     const saved = z.object({ resume: z.string().min(1).max(1500), notesDigest: z.string(), complete: z.boolean(), generated: z.literal(true) }).safeParse(c.analysis?.content);
     // The case selector keeps original fields atomic: a derived session
@@ -690,7 +713,7 @@ export async function summarizeClinicalContext(context: ClinicalContext, signal:
   for (const t of context.treatments.current) sources.push({ id: t.id, text: `Traitement en cours : ${[t.medication, t.dose, t.doseUnit, t.frequency].filter(Boolean).join(" ")} ; état : ${dialogue('fr').states[t.status]}.` });
   for (const h of context.treatments.history) sources.push({ id: h.id, text: `Changement de traitement enregistré le ${h.occurredAt} ; précédent : ${describeChangeValue(h.previous)} ; nouveau : ${describeChangeValue(h.next)}${h.reason ? ` ; motif : ${h.reason}` : ""}.` });
   if(caseSelection&&!sources.length)return {text:complete?copy.caseEmpty:copy.unavailable,complete,generated:false,sourceIds:[]};
-  const result = caseSelection?await synthesizeCaseSentences(sources,signal):await synthesizeClinicalNarrative(sources, signal);
+  const result = caseSelection?await synthesizeCaseSentences(sources,signal,selectionOptions):await synthesizeClinicalNarrative(sources, signal);
   if(wholeRecord&&result.method==='source_selection')return {text:copy.unavailable,complete:false,generated:false,sourceIds:[]};
   return { ...result, complete: complete && result.complete };
 }

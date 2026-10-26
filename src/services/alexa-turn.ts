@@ -91,7 +91,7 @@ export async function envoyerTourAlexa(text: string, signal?: AbortSignal, callb
         else if (raw.type === "done") {
           if (raw.navigation !== undefined) {
             const parsed = alexaNavigationSchema.safeParse(raw.navigation);
-            if (!parsed.success || (parsed.data.target === "patient" && (parsed.data.patientId !== raw.patientId || raw.patientScope !== "replace"))) throw new Error(alexa.format);
+            if (!parsed.success || ((parsed.data.target === "patient" || parsed.data.target === "document") && (parsed.data.patientId !== raw.patientId || raw.patientScope !== "replace"))) throw new Error(alexa.format);
             navigation = parsed.data;
           }
           status=raw.status;parts=raw.parts;speechAllowed=raw.speechAllowed===true;

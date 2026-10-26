@@ -13,15 +13,26 @@ import { resolvePatient } from "./patient-resolver";
 import { parsePatientMention } from "./patient-mention";
 import { resolveDocumentDraftInputs } from "./document-draft";
 import { prepareInternalMessage } from "./internal-message";
+import { buildClinicalContext } from "./clinical-context";
 
 export type ProposalResult =
   | { state: "ready"; proposal: AlexaProposal; patientId: string | null }
   | { state: "print"; patientId: string; documentId: string; label: string }
   | { state: "missing"; slot: "patient" | "date" | "content" | "operation"; message?: string }
   | { state: "unavailable" };
+type PrintProposalResult = Extract<ProposalResult, { state: "print" } | { state: "missing" } | { state: "unavailable" }>;
 
 function normalized(text: string): string {
   return text.normalize("NFKD").replace(/\p{M}/gu, "").toLowerCase().trim();
+}
+
+/** Remove only a polite frame and an explicit patient prefix, never action details. */
+function commandView(text: string): string {
+  return text
+    .replace(/^(?:alexa|assistant)[, :]+/u, "")
+    .replace(/^(?:(?:pour|concernant)\s+)?(?:patiente?\s+)?[\p{L}][\p{L}'’-]*(?:\s+[\p{L}][\p{L}'’-]*){1,2}\s*,\s*/u, "")
+    .replace(/^(?:(?:s.il te plait|s.il vous plait|svp),?\s*)?(?:(?:peux[- ]tu|pourrais[- ]tu|pouvez[- ]vous|pourriez[- ]vous|tu peux|vous pouvez|je voudrais|j.aimerais|je souhaite|je veux)\s+(?:(?:me|nous)\s+|(?:que\s+)?(?:tu|vous)\s+)?)/u, "")
+    .trim();
 }
 
 const negatedDocumentCommand = /^(?:ne\s+)?(?:prepare|preparer|preparez|creer|cree|redige|rediger|genere|generer|generez)\b[\s\S]*\b(?:pas|jamais|plus|aucun|aucune)\b/u;
@@ -55,16 +66,47 @@ function requestedInternalMessage(text: string): string | null {
  */
 export function deterministicActionRequest(text: string): boolean {
   const plain = normalized(text);
+  const command = plain;
   if (negatedDocumentCommand.test(plain)) return false;
-  const document = /^(?:prepare|preparer|preparez|creer|cree|redige|rediger|genere|generer|generez)\b/u.test(plain)
+  const document = /^(?:prepare|preparer|preparez|creer|cree|redige|rediger|genere|generer|generez)\b/u.test(command)
     && requestedDocumentKind(plain) !== null;
   const message = /\b(?:envoie|envoyer|transmets|transmettre|dis|dire|previens|prevenir)\b/u.test(plain)
     && /\b(?:secretaire|accueil|reception)\b/u.test(plain);
-  const print = /^(?:imprime|imprimer|imprimes|imprimez)\b/u.test(plain) && requestedDocumentKind(plain) !== null;
-  const appointment = /^(?:planifie|planifier|cree|creer|prends|prendre|decale|decaler|deplace|deplacer|reporte|reporter|annule|annuler)\b/u.test(plain)
+  const print = /^(?:imprime|imprimer|imprimes|imprimez)\b/u.test(command) && requestedDocumentKind(plain) !== null;
+  const price = /^(?:fixe|fixer|mets|mettre|change|changer|modifie|modifier)\b/u.test(command) && /\b(?:tarif|prix)\b/u.test(plain);
+  const payment = /^(?:encaisse|encaisser)\b/u.test(command) && /\b(?:paiement|consultation|seance)\b/u.test(plain);
+  const arrival = /^(?:marque|marquer|signale|signaler)\b/u.test(command) && /\bpatient(?:e)?\b/u.test(plain) && /\barrive\w*\b/u.test(plain);
+  const appointment = /^(?:prepare|preparer|preparez|planifie|planifier|cree|creer|prends|prendre|decale|decaler|deplace|deplacer|reporte|reporter|annule|annuler)\b/u.test(command)
     && /\b(?:rendez[- ]vous|rdv)\b/u.test(plain);
-  const close = /^(?:clore|cloture|ferme|fermer|termine|terminer)\b/u.test(plain) && /\b(?:consultation|seance)\b/u.test(plain);
-  return document || message || print || appointment || close;
+  const close = /^(?:clore|cloture|ferme|fermer|termine|terminer)\b/u.test(command) && /\b(?:consultation|seance)\b/u.test(plain);
+  return document || message || print || price || payment || arrival || appointment || close;
+}
+
+/** Re-read the patient-scoped list and select one already-issued document only. */
+export async function prepareIssuedDocumentPrint(
+  db: Pick<DbPort, "rpc">,
+  patientId: string,
+  kind: DocumentKind,
+  signal: AbortSignal,
+): Promise<PrintProposalResult> {
+  let listed;
+  try { listed = await db.rpc<unknown>("list_patient_documents", { p_patient_id: patientId }); }
+  catch { return { state: "unavailable" }; }
+  signal.throwIfAborted();
+  if (!listed.ok) return { state: "unavailable" };
+  const rows = z.object({
+    document_id: z.uuid(), doc_type: z.string(), doc_number: z.string().min(1),
+    status: z.string().optional(),
+  }).passthrough();
+  const documents = listed.data.flatMap((row) => {
+    const parsed = rows.safeParse(row);
+    return parsed.success && parsed.data.doc_type === kind && (parsed.data.status ?? "issued") === "issued" ? [parsed.data] : [];
+  });
+  const label = documentLabels[kind].toLowerCase();
+  if (documents.length === 0) return { state: "missing", slot: "content", message: alexaActions.printNoDocument(label) };
+  if (documents.length > 1) return { state: "missing", slot: "content", message: alexaActions.printMultiple(label) };
+  const document = documents[0]!;
+  return { state: "print", patientId, documentId: document.document_id, label: `${documentLabels[kind]} ${document.doc_number}` };
 }
 
 /** Compile explicit bounded action arguments. Never executes, confirms or grants authority. */
@@ -75,20 +117,21 @@ export async function prepareActionProposal(
   signal: AbortSignal,
 ): Promise<ProposalResult> {
   const text = normalized(input.text);
+  const command = commandView(text);
   if (negatedDocumentCommand.test(text)) return { state: "missing", slot: "operation" };
   const kind = requestedDocumentKind(text);
   const messageBody = requestedInternalMessage(text);
   // Only literal imperatives are shortcuts. Quoted notes/help are not commands.
-  let tool: string | null = /^(?:fixe|fixer|mets|mettre|change|changer|modifie|modifier)\b/u.test(text) && /\b(?:tarif|prix)\b/u.test(text) ? "set_consultation_price"
-    : /^(?:encaisse|encaisser)\b/u.test(text) ? "record_payment_collected"
-    : kind !== null && /^(?:prepare|preparer|preparez|creer|cree|redige|rediger|genere|generer|generez)\b/u.test(text) ? "create_editable_document_draft"
-    : /^(?:clore|cloture|ferme|fermer|termine|terminer)\b/u.test(text) && /\b(?:consultation|seance)\b/u.test(text) ? "close_consultation"
+  let tool: string | null = /^(?:fixe|fixer|mets|mettre|change|changer|modifie|modifier)\b/u.test(command) && /\b(?:tarif|prix)\b/u.test(text) ? "set_consultation_price"
+    : /^(?:encaisse|encaisser)\b/u.test(command) ? "record_payment_collected"
+    : kind !== null && /^(?:prepare|preparer|preparez|creer|cree|redige|rediger|genere|generer|generez)\b/u.test(command) ? "create_editable_document_draft"
+    : /^(?:clore|cloture|ferme|fermer|termine|terminer)\b/u.test(command) && /\b(?:consultation|seance)\b/u.test(text) ? "close_consultation"
     : messageBody !== null ? "send_internal_message"
-    : /^(?:prepare|preparer|cree|creer)\b/u.test(text) && /\bbrouillon\b/u.test(text) ? "create_document_draft"
-    : /^(?:planifie|planifier|cree|creer|prends|prendre)\b/u.test(text) && /\b(?:rendez[- ]vous|rdv)\b/u.test(text) ? "create_appointment"
-    : /^(?:decale|decaler|deplace|deplacer|reporte|reporter)\b/u.test(text) && /\b(?:rendez[- ]vous|rdv)\b/u.test(text) ? "reschedule_appointment"
-    : /^(?:annule|annuler)\b/u.test(text) && /\b(?:rendez[- ]vous|rdv)\b/u.test(text) ? "cancel_appointment"
-    : /^(?:marque|marquer|signale|signaler)\b/u.test(text) && /\barrive/u.test(text) ? "mark_patient_arrived" : null;
+    : /^(?:prepare|preparer|cree|creer)\b/u.test(command) && /\bbrouillon\b/u.test(text) ? "create_document_draft"
+    : /^(?:prepare|preparer|preparez|planifie|planifier|cree|creer|prends|prendre)\b/u.test(command) && /\b(?:rendez[- ]vous|rdv)\b/u.test(text) ? "create_appointment"
+    : /^(?:decale|decaler|deplace|deplacer|reporte|reporter)\b/u.test(command) && /\b(?:rendez[- ]vous|rdv)\b/u.test(text) ? "reschedule_appointment"
+    : /^(?:annule|annuler)\b/u.test(command) && /\b(?:rendez[- ]vous|rdv)\b/u.test(text) ? "cancel_appointment"
+    : /^(?:marque|marquer|signale|signaler)\b/u.test(command) && /\barrive/u.test(text) ? "mark_patient_arrived" : null;
   const mention = parsePatientMention(input.text);
   if (mention.status === "ambiguous") return { state: "missing", slot: "patient" };
   const name = input.patientName ?? (mention.status === "named" ? mention.name : undefined);
@@ -96,26 +139,11 @@ export async function prepareActionProposal(
   // Imprimer un document DÉJÀ ÉMIS ne crée rien. On ouvre la pièce exacte et
   // l'écran existant lance le dialogue d'impression ; aucun numéro n'est
   // consommé, aucune nouvelle version n'est fabriquée.
-  if (/^(?:imprime|imprimer|imprimes|imprimez)\b/u.test(text)) {
+  if (/^(?:imprime|imprimer|imprimes|imprimez)\b/u.test(command)) {
     if (kind === null) return { state: "missing", slot: "content", message: alexaActions.printNoDocument("document") };
     const patient = await resolvePatient(db, name ? { name } : input.appContext.patientId ? { patientId: input.appContext.patientId } : {}, signal);
     if (patient.status !== "resolved") return { state: "missing", slot: "patient" };
-    const listed = await db.rpc<unknown>("list_patient_documents", { p_patient_id: patient.patientId });
-    signal.throwIfAborted();
-    if (!listed.ok) return { state: "unavailable" };
-    const rows = z.object({
-      document_id: z.uuid(), doc_type: z.string(), doc_number: z.string().min(1),
-      status: z.string().optional(),
-    }).passthrough();
-    const documents = listed.data.flatMap((row) => {
-      const parsed = rows.safeParse(row);
-      return parsed.success && parsed.data.doc_type === kind && (parsed.data.status ?? "issued") === "issued" ? [parsed.data] : [];
-    });
-    const label = documentLabels[kind].toLowerCase();
-    if (documents.length === 0) return { state: "missing", slot: "content", message: alexaActions.printNoDocument(label) };
-    if (documents.length > 1) return { state: "missing", slot: "content", message: alexaActions.printMultiple(label) };
-    const document = documents[0]!;
-    return { state: "print", patientId: patient.patientId, documentId: document.document_id, label: `${documentLabels[kind]} ${document.doc_number}` };
+    return prepareIssuedDocumentPrint(db, patient.patientId, kind, signal);
   }
 
   if (!tool || !capaciteEcriture(tool)) return { state: "missing", slot: "operation" };
@@ -182,12 +210,20 @@ export async function prepareActionProposal(
 
   const args: AlexaProposal["args"] = {};
   if (["set_consultation_price", "record_payment_collected", "create_document_draft"].includes(tool)) {
-    const match = /^\/consultation\/([0-9a-f-]{36})$/iu.exec(input.appContext.page);
-    if (!match || !z.uuid().safeParse(match[1]).success) return { state: "missing", slot: "content" };
-    const result = await db.rpc<unknown>("get_consultation", { p_id: match[1]! });
+    const pageConsultation = /^\/consultation\/([0-9a-f-]{36})$/iu.exec(input.appContext.page)?.[1];
+    let consultationId = pageConsultation;
+    if (!consultationId && /\b(?:consultation|seance)\s+(?:courante|actuelle|en cours)\b/u.test(text)) {
+      try {
+        consultationId = (await buildClinicalContext(db, { patientId: patient.patientId }, { count: 1 }, signal)).currentConsultation?.id;
+      } catch {
+        return { state: "unavailable" };
+      }
+    }
+    if (!consultationId || !z.uuid().safeParse(consultationId).success) return { state: "missing", slot: "content", message: alexaActions.currentConsultationMissing };
+    const result = await db.rpc<unknown>("get_consultation", { p_id: consultationId });
     signal.throwIfAborted();
     const parsed = result.ok ? z.object({ id: z.uuid(), patient_id: z.uuid() }).safeParse(result.data[0]) : null;
-    if (!parsed?.success || parsed.data.id !== match[1] || parsed.data.patient_id !== patient.patientId) return { state: "unavailable" };
+    if (!parsed?.success || parsed.data.id !== consultationId || parsed.data.patient_id !== patient.patientId) return { state: "unavailable" };
     args["consultationId"] = parsed.data.id;
     if (tool === "set_consultation_price") {
       if (/[+−-]\s*\d|\d\s*[.,]\s*\d/u.test(text)) return { state: "missing", slot: "content" };
@@ -208,7 +244,7 @@ export async function prepareActionProposal(
   } else {
     const selection = agendaSelection(input.text);
     if (!selection) return { state: "missing", slot: "date" };
-    const times = [...text.matchAll(/(?<!\d)([01]\d|2[0-3])[:h]([0-5]\d)(?!\d)/gu)];
+    const times = [...text.matchAll(/\b([01]\d|2[0-3])\s*(?::|h)\s*([0-5]\d)\b/gu)];
     if (tool === "create_appointment" || tool === "reschedule_appointment") {
       if (times.length !== 1) return { state: "missing", slot: "date" };
       const explicitDay = /\d{4}-\d{2}-\d{2}|aujourd|demain|lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche/u.test(text);

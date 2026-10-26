@@ -38,8 +38,15 @@ export function financialRowsMatch(actual,expected){
  });
 }
 /** Totals require their own verified labels; an unrelated occurrence of the sum is insufficient. */
-export function financialTotalsMatch(answer,summary){
+export function financialTotalsMatch(answer,summary,query={}){
  if(typeof answer!=='string'||!summary||!['total','pendingDzd','collectedDzd','unpriced','amount'].every(k=>Number.isSafeInteger(summary[k])&&summary[k]>=0)||summary.amount!==summary.pendingDzd+summary.collectedDzd)return false;
+ if(query.state==='collected'){
+  const text=answer.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase();
+  const amounts=[...text.matchAll(/(?:^|\D)(\d[\d\s\u00a0\u202f]*)\s*dzd\b/gu)];
+  if(amounts.length!==1||Number(amounts[0][1].replace(/\s/gu,''))!==summary.collectedDzd)return false;
+  const start=amounts[0].index??0,end=start+amounts[0][0].length;
+  return /\b(?:encaiss\w*|collect\w*)\b/u.test(text.slice(Math.max(0,start-120),Math.min(text.length,end+40)));
+ }
  const normalize=value=>value.normalize('NFKC').replace(/\s+/gu,' ').trim().toLowerCase();
  let rest=normalize(answer);
  const headers=[`${summary.total} Résultat(s)`,`${summary.total} résultat${summary.total<=1?'':'s'}`].map(normalize);
@@ -61,6 +68,7 @@ export function financialPresentationMatches(answer,expected,summary=null){
   ||!['total','pendingDzd','collectedDzd','unpriced'].every(k=>Number.isSafeInteger(summary[k])&&summary[k]>=0))return false;
  const normalized=value=>value.normalize('NFKC').replace(/\s+/gu,' ').trim();
  const fold=value=>normalized(value).normalize('NFKD').replace(/\p{M}/gu,'').replace(/’/gu,"'").toLowerCase();
+ if(expected.length===0&&summary.total===0&&/\baucun paiement\b/u.test(fold(answer))&&!/\b\d[\d\s.,]*\s*dzd\b/u.test(fold(answer)))return true;
  const headers=[`${summary.total} Résultat(s)`,`${summary.total} résultat${summary.total<=1?'':'s'}`].map(fold);
  const allowed=new Set([...headers,
   `Solde connu à encaisser (DZD) : ${summary.pendingDzd}`,`Encaissements (DZD) : ${summary.collectedDzd}`,
@@ -89,12 +97,13 @@ export function recordReadMatches(observed,oracle,bindings){
  let actual;try{actual=JSON.parse(observed.args.p_spec);}catch{return false;}
  const expected={...oracle.query};
  // Agenda count/list is an editorial intent; its closed SQL spec has no mode.
- if(oracle.domain==='agenda')delete expected.mode;
+ if(oracle.domain==='agenda'){delete expected.mode;delete expected.limit;}
  if(expected.patientRef){if(!bindings[expected.patientRef])return false;expected.patientId=bindings[expected.patientRef];delete expected.patientRef;}
  if(expected.axis){expected.dateAxis=expected.axis;delete expected.axis;}
  const canonical=spec=>{
   const copy={...spec};
   // These defaults cannot change the result set or its first requested page.
+  if(copy.mode==='list')delete copy.mode;
   if(copy.limit===20)delete copy.limit;if(copy.offset===0)delete copy.offset;
   if(oracle.domain==='consultations'&&(copy.dateAxis===undefined||copy.dateAxis==='started_at'))delete copy.dateAxis;
   if(oracle.domain==='consultations'&&copy.status==='all')delete copy.status;
@@ -106,4 +115,33 @@ export function recordReadMatches(observed,oracle,bindings){
  };
  const left=canonical(actual),right=canonical(expected);
  return left!==null&&right!==null&&isDeepStrictEqual(left,right);
+}
+
+/** Verifies each side of a two-period consultation comparison against its own source query. */
+export function assessRecordComparison(expected,queries,answer){
+ const failures=[];
+ if(expected?.domain!=='consultations'||!Array.isArray(expected.periods)||expected.periods.length!==2){return ['comparison-oracle-invalid'];}
+ const reads=queries.filter(query=>query.name==='query_alexa_records'&&query.args?.p_domain==='consultations');
+ if(reads.length!==expected.periods.length)failures.push('comparison-read-count');
+ const matches=[];
+ for(const period of expected.periods){
+  const oracle={domain:'consultations',query:{...(expected.patientId?{patientId:expected.patientId}:{}),from:period.from,to:period.to,dateAxis:expected.axis,status:expected.status,mode:'count'}};
+  const found=reads.filter(query=>recordReadMatches(query,oracle,{}));
+  if(found.length!==1){failures.push('comparison-month-read-missing');matches.push(null);continue;}
+  const data=found[0].response?.ok===true?found[0].response.data:null;
+  const result=Array.isArray(data)?data.length===1?data[0]:null:data;
+  if(!result||result.total!==period.total)failures.push('comparison-independent-count');
+  matches.push(result);
+ }
+ const normalized=String(answer??'').normalize('NFKD').replace(/\p{M}/gu,'').toLocaleLowerCase('fr').replace(/\s+/gu,' ');
+ const positions=expected.periods.map(period=>normalized.indexOf(String(period.label).normalize('NFKD').replace(/\p{M}/gu,'').toLocaleLowerCase('fr')));
+ for(let index=0;index<expected.periods.length;index++){
+  const period=expected.periods[index],position=positions[index];
+  if(position<0){failures.push('comparison-month-not-presented');continue;}
+  const next=positions.filter(other=>other>position).sort((a,b)=>a-b)[0]??normalized.length;
+  let segment=normalized.slice(position,next).normalize('NFKC').replace(/(?<=\p{N})\p{White_Space}+(?=\p{N})/gu,'');
+  const numeric=new RegExp('(?:^|\\D)'+period.total+'(?:\\D|$)','u').test(segment),explicitEmpty=period.total===0&&/\b(?:aucun\w*|aucune|pas de)\s+(?:consultation|seance)/u.test(segment);
+  if(!numeric&&!explicitEmpty)failures.push('comparison-count-not-presented');
+ }
+ return [...new Set(failures)];
 }

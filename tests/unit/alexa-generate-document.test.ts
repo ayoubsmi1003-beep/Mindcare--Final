@@ -21,6 +21,13 @@ it.each(['Génère une ordonnance pour ce patient','Generer une ordonance pour c
     expect(result).toMatchObject({state:'ready',proposal:{tool:'create_editable_document_draft'}});
     expect(calls.every(name=>['get_patient','get_patient_workspace','get_active_document_template'].includes(name))).toBe(true);
   });
+it.each([
+  'Encaisse le paiement de la consultation courante.',
+  'Fixe le tarif de la consultation courante à 2500 DZD.',
+  'Marque le patient sélectionné comme arrivé.',
+])('routes a direct clinical action through the confirmation proposal path: %s',text=>{
+  expect(deterministicActionRequest(text)).toBe(true);
+});
 it.each(['La note dit « génère une ordonnance ».','Comment générer une ordonnance ?','Ne génère pas une ordonnance.','Génère pas une ordonnance pour ce patient.'])(
   'does not treat quoted, educational or negated text as an action: %s',text=>{
     expect(deterministicActionRequest(text)).toBe(false);

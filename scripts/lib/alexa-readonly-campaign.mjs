@@ -3,15 +3,21 @@ import {resolve,join} from 'node:path';
 import {pathToFileURL} from 'node:url';
 import {createRequire} from 'node:module';
 import {createHash,randomUUID} from 'node:crypto';
-import {readOnlyPort,reviewManifest,semanticSignature} from './alexa-eval-readonly.mjs';
+import {readOnlyPort,reviewManifest,semanticSignature,answerContainsCount,bindEvaluationQuestion} from './alexa-eval-readonly.mjs';
 import {verifyCampaignState} from './alexa-eval-finalize.mjs';
 import {calendarOracle,calendarDataMatches,calendarPresentationMatches} from './alexa-eval-calendar-oracle.mjs';
-import {recordReadMatches,recordMembershipMatches,financialRowsMatch,financialPresentationMatches,financialTotalsMatch,firstAppointmentPresented} from './alexa-eval-record-meaning.mjs';
+import {recordReadMatches,recordMembershipMatches,financialRowsMatch,financialPresentationMatches,financialTotalsMatch,firstAppointmentPresented,assessRecordComparison} from './alexa-eval-record-meaning.mjs';
 import {effectiveOracle,missingBehaviorPrerequisite,missingDataPrerequisite,assessBehavior} from './alexa-eval-behavior.mjs';
-import {sourceInventory,campaignActors,patientBindings,businessSnapshot,auditMark,auditChanges,patientOracle,recordOracle,knowledgeOracle,applicationOracle,inspectSql,literal,evidenceHash} from './alexa-eval-oracle.mjs';
+import {sourceInventory,campaignActors,patientBindings,businessSnapshot,auditMark,auditChanges,patientOracle,patientDetailOracle,clinicalNotePageOracle,patientRecentConsultationsOracle,patientTimelineOracle,recordOracle,recordComparisonOracle,knowledgeOracle,applicationOracle,financeViewOracle,mixedAppOracle,evidenceHash} from './alexa-eval-oracle.mjs';
+import {assessFrenchGeneralAnswer,hasLocalModelEvidence} from './alexa-eval-answer-meaning.mjs';
+import {assessFinanceView} from './alexa-eval-view-meaning.mjs';
+import {assessPatientDetail} from './alexa-eval-clinical-meaning.mjs';
+import {assessMixedAppAnswer} from './alexa-eval-mixed-meaning.mjs';
 
 const hash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 const rpcValue=value=>Array.isArray(value)?value.length===1?value[0]:value:value;
+const normalizeFrench=value=>String(value??'').normalize('NFKD').replace(/\p{M}/gu,'').toLocaleLowerCase('fr').trim();
+const applicationValuePresented=(answer,value)=>value===null?/(?:non renseigne|non indique|non communique|pas renseigne|indisponible|inconnu)/u.test(normalizeFrench(answer)):normalizeFrench(answer).includes(normalizeFrench(value));
 const toDates=q=>({...q,...(q.from_?{from:q.from_}:{}),from_:undefined});
 function queryMeaning(q){const norm=c=>JSON.stringify(c);return {population:q.population??'active',mode:q.mode,query:q.query??null,sort:q.sort??'name',patientIds:q.patientIds??null,metrics:q.metrics??null,offset:q.offset??0,limit:q.limit??20,groups:(q.filterGroups??[q.filters??[]]).map(g=>g.map(norm).sort()).sort((a,b)=>JSON.stringify(a).localeCompare(JSON.stringify(b))),consultationPeriod:q.consultationPeriod??null,createdPeriod:q.createdPeriod??null};}
 
@@ -21,7 +27,7 @@ export async function runReadOnlyCampaign(argv=process.argv.slice(2)){
  const manifestPath=resolve(arg('--manifest','tests/eval/alexa-fr-200-cases.json'));
  const semanticReviewPath=arg('--semantic-review',null),semanticReview=semanticReviewPath?JSON.parse(await readFile(resolve(semanticReviewPath),'utf8')):undefined;
  const manifest=JSON.parse(await readFile(manifestPath,'utf8')),review=reviewManifest(manifest,semanticReview);
- const source=sourceInventory(),actors=campaignActors(),bindings=patientBindings();
+ const source=sourceInventory(),actors=campaignActors(),bindings=patientBindings(actors.owner,manifest.fixtureAsOf);
  if(!actors.owner||!bindings.primary||source.patients!==1558||source.generated!==8142)throw Error('EvaluationCopyDriftRequiresReview');
  const supplied=process.env.MINDCARE_ALEXA_EVAL_DATABASE_URL;
  if(!supplied)throw Error('ExplicitEvaluationApplicationUrlRequired');
@@ -32,12 +38,12 @@ export async function runReadOnlyCampaign(argv=process.argv.slice(2)){
  await mkdir(resolve(out,'..'),{recursive:true});
  if(!baseline){const require=createRequire(import.meta.url),vite=createRequire(require.resolve('vitest/package.json')),{build}=createRequire(vite.resolve('vite/package.json'))('esbuild');await build({stdin:{contents:"export {runAlexa} from '@/server/alexa/orchestrator';export {alexaDb} from '@/server/alexa/db';export {clientSql} from '@/server/jarvis/client-sql';export {inferLocalCompletion,releaseLocalModel} from '@/server/alexa/local-model';export {fermerPool} from '@/server/db/pool';export {ALEXA_NATIVE_DEADLINE_MS} from '@/shared/alexa/agent';",resolveDir:root,loader:'ts'},outfile:entry,bundle:true,platform:'node',format:'esm',packages:'external',tsconfig:join(root,'tsconfig.json'),logLevel:'silent'});}
  const api=await import(pathToFileURL(entry).href),before=businessSnapshot(),mark=before.$auditPrefix.through;
- const harnessFiles=['scripts/eval-alexa-agent.mjs','scripts/lib/alexa-readonly-campaign.mjs','scripts/lib/alexa-eval-readonly.mjs','scripts/lib/alexa-eval-oracle.mjs','scripts/lib/alexa-eval-finalize.mjs','scripts/lib/alexa-eval-inspection-rows.mjs','scripts/lib/alexa-eval-record-meaning.mjs','scripts/lib/alexa-eval-calendar-oracle.mjs','scripts/lib/alexa-eval-behavior.mjs'];
+ const harnessFiles=['scripts/eval-alexa-agent.mjs','scripts/lib/alexa-readonly-campaign.mjs','scripts/lib/alexa-eval-readonly.mjs','scripts/lib/alexa-eval-oracle.mjs','scripts/lib/alexa-eval-finalize.mjs','scripts/lib/alexa-eval-inspection-rows.mjs','scripts/lib/alexa-eval-record-meaning.mjs','scripts/lib/alexa-eval-calendar-oracle.mjs','scripts/lib/alexa-eval-behavior.mjs','scripts/lib/alexa-eval-answer-meaning.mjs','scripts/lib/alexa-eval-view-meaning.mjs','scripts/lib/alexa-eval-clinical-meaning.mjs','scripts/lib/alexa-eval-mixed-meaning.mjs'];
  const harness=Object.fromEntries(await Promise.all(harnessFiles.map(async path=>[path,createHash('sha256').update(await readFile(join(root,path))).digest('hex')])));
  const run={phase:baseline?'baseline':'after',startedAt:new Date().toISOString(),asOf:manifest.fixtureAsOf,manifestSha256:hash(manifest),bundleSha256:createHash('sha256').update(await readFile(entry)).digest('hex'),harnessSha256:hash(harness),harness,environmentSha256:hash({source,actors,bindings}),source,review,positiveAnswersInjected:false,readOnly:true};
  await writeFile(out.replace(/\.json$/u,'')+'.before.private.json',JSON.stringify({before,mark}));
  const requested=new Set(arg('--cases','all').split(',')),rows=[],privateRecords=[];
- const persist=async(final=false)=>{const tally=rows.reduce((a,r)=>(a[r.verdict]=(a[r.verdict]??0)+1,a),{});await writeFile(out,JSON.stringify({version:3,run,status:final?(tally.PASS===200&&review.accepted===200&&run.nonMutation==='PASS'?'PASS':'PARTIAL'):'RUNNING',tally,rows},null,2));};
+ const persist=async(final=false)=>{const tally=rows.reduce((a,r)=>(a[r.verdict]=(a[r.verdict]??0)+1,a),{});await writeFile(out,JSON.stringify({version:3,run,status:final?(tally.PASS===review.expectedCaseCount&&review.accepted===review.expectedCaseCount&&run.nonMutation==='PASS'?'PASS':'PARTIAL'):'RUNNING',tally,rows},null,2));};
  try{
   for(const candidate of manifest.cases){
    const spec={...candidate,oracle:effectiveOracle(candidate.oracle)};
@@ -50,16 +56,25 @@ export async function runReadOnlyCampaign(argv=process.argv.slice(2)){
     if(oracle.kind==='patients')expected=patientOracle(oracle.query,run.asOf,actor);
     else if(oracle.kind==='application')expected=applicationOracle(oracle,run.asOf,actor);
     else if(oracle.kind==='records')expected=recordOracle(oracle.domain,oracle.query,bindings,actor);
+    else if(oracle.kind==='record_comparison')expected=recordComparisonOracle(oracle,bindings,actor);
     else if(oracle.kind==='finance_calendar')expected=calendarOracle(oracle.query,actor);
+    else if(oracle.kind==='finance_view')expected=financeViewOracle(oracle,run.asOf,actor);
+    else if(oracle.kind==='mixed_app')expected=mixedAppOracle(spec,run.asOf,actor,bindings);
+    else if(oracle.kind==='format'||oracle.kind==='ui_review')expected=oracle;
     else if(oracle.kind==='knowledge'||oracle.kind==='mixed'){expected=knowledgeOracle(oracle.book,oracle.terms);if(!expected.sources.length)oracleBlocked='supporting-passage-not-found';}
     else if(oracle.kind==='patient_detail'){
      const id=bindings[oracle.patientRef];if(!id)oracleBlocked='patient-binding-unavailable';
-     else expected=inspectSql(`SELECT json_build_object('consultations',(SELECT count(*) FROM app.consultations WHERE patient_id=${literal(id)}::uuid),'closed',(SELECT count(*) FROM app.consultations WHERE patient_id=${literal(id)}::uuid AND status='closed'),'notes',(SELECT count(*) FROM app.clinical_notes WHERE patient_id=${literal(id)}::uuid));`)[0];
+     else{
+      const patient=patientDetailOracle(id,oracle,actor);expected={patient};
+       if(oracle.section==='summary')expected.recent=patientRecentConsultationsOracle(id,oracle.scope==='six'?6:['two','comparison'].includes(oracle.scope)?2:1,run.asOf,actor);
+      if(oracle.section==='timeline')expected.timeline=patientTimelineOracle(id,{p_limit:21},actor);
+     }
     }
     oracleBlocked??=missingDataPrerequisite(oracle,expected);
    }catch(error){oracleBlocked=error?.code??'oracle-unavailable';}
    if(oracleBlocked){rows.push({id:spec.id,category:spec.category,verdict:'NOT RUN',failure:oracleBlocked,signature:semanticSignature(spec)});await persist();continue;}
-   const currentPatient=spec.contextPatient===true||['patient_detail','mixed'].includes(spec.oracle.kind)||!!spec.oracle.query?.patientRef?bindings[spec.oracle.patientRef??spec.oracle.query?.patientRef??'primary']:null;
+   const namedResolution=spec.oracle.byName===true;
+   const currentPatient=!namedResolution&&(spec.contextPatient===true||['patient_detail','mixed'].includes(spec.oracle.kind)||!!spec.oracle.query?.patientRef)?bindings[spec.oracle.patientRef??spec.oracle.query?.patientRef??'primary']:null;
    const port=api.alexaDb(actor);
    let faultUsed=false;
    const underlying={rpc:async(name,args)=>{
@@ -70,7 +85,7 @@ export async function runReadOnlyCampaign(argv=process.argv.slice(2)){
    const db=readOnlyPort(underlying,q=>queries.push(q),forbidden);
    const sql=readOnlyPort(api.clientSql(actor),q=>queries.push(q),forbidden);
    try{
-    await api.runAlexa({text:spec.question,conversationId:randomUUID(),clientTurnId:randomUUID(),appContext:{patientId:currentPatient,page:currentPatient?'/patients/'+currentPatient:'/jarvis'}},{actor,db,knowledge:sql,native:true,agentAsOf:run.asOf,agentObserve:call=>calls.push(call),agentInfer:async(messages,options)=>{
+    await api.runAlexa({text:bindEvaluationQuestion(spec.question,bindings),conversationId:randomUUID(),clientTurnId:randomUUID(),appContext:{patientId:currentPatient,page:currentPatient?'/patients/'+currentPatient:'/jarvis'}},{actor,db,knowledge:sql,native:true,agentAsOf:run.asOf,agentObserve:call=>calls.push(call),agentInfer:async(messages,options)=>{
      if(['model_unavailable','model_timeout'].includes(spec.fault)){faultUsed=true;throw new Error(spec.fault==='model_timeout'?'LocalModelTimeout':'LocalModelUnavailable');}
      const t=performance.now();try{const value=await api.inferLocalCompletion(messages,options);inferences.push({ms:performance.now()-t,tokensIn:value.tokensIn,tokensOut:value.tokensOut});return value;}catch(e){inferences.push({ms:performance.now()-t,code:e?.message?.startsWith('LocalModel')?e.message:e.name});throw e;}
     }},e=>events.push(e),AbortSignal.any([caseAbort.signal,AbortSignal.timeout(api.ALEXA_NATIVE_DEADLINE_MS)]));
@@ -98,9 +113,14 @@ export async function runReadOnlyCampaign(argv=process.argv.slice(2)){
       if(expected.total>20&&!new RegExp('(?:^|\\D)1\\s*[–-]\\s*20\\s*/\\s*'+expected.total+'(?:\\D|$)').test(answer))failures.push('payment-page-not-disclosed');
      }
      if(spec.oracle.query.mode==='first'&&!firstAppointmentPresented(sentences.map(e=>e.text).join('\n'),sentences.flatMap(e=>e.sources??[]),expected,run.asOf))failures.push('independent-first-appointment');
-     if(!['totals','first'].includes(spec.oracle.query.mode)&&!answer.match(new RegExp('(?:^|\\D)'+expected.total+'(?:\\D|$)'))&&!(expected.total===0&&/aucun|aucune|0\b/iu.test(answer)))failures.push('verified-count-in-answer');
-     if(spec.oracle.query.mode==='totals'&&expected.amount!==undefined&&!financialTotalsMatch(answer,{...expected,dateAxis:spec.oracle.query.state==='collected'?'collected_at':'created_at'}))failures.push('verified-amount-in-answer');
+     if(!['totals','first'].includes(spec.oracle.query.mode)&&!answerContainsCount(answer,expected.total)&&!(expected.total===0&&/aucun|aucune|0\b/iu.test(answer)))failures.push('verified-count-in-answer');
+     if(spec.oracle.query.mode==='totals'&&expected.amount!==undefined&&!financialTotalsMatch(answer,{...expected,dateAxis:spec.oracle.query.state==='collected'?'collected_at':'created_at'},spec.oracle.query))failures.push('verified-amount-in-answer');
     }
+    if(spec.oracle.kind==='record_comparison'&&expected)failures.push(...assessRecordComparison(expected,queries,answer));
+     if(spec.oracle.kind==='finance_view'&&expected)failures.push(...assessFinanceView(spec.oracle,expected,queries,calls,answer));
+    if(spec.oracle.kind==='mixed_app'&&expected)failures.push(...assessMixedAppAnswer(spec.oracle,expected,queries,calls,sentences,answer,bindings));
+      if(spec.oracle.kind==='format'&&expected)failures.push(...assessFrenchGeneralAnswer(spec.oracle.format,answer,{usedLocalInference:hasLocalModelEvidence(sentences),usedVerifiedPublicReference:sentences.some(e=>e.sources?.some(source=>source.provenance?.gate==='local_public_fact')),readCount:queries.length}));
+      if(spec.oracle.kind==='ui_review'&&spec.semantics?.domains?.includes('general_assistant'))failures.push(...assessFrenchGeneralAnswer(spec.semantics.intent,answer,{usedLocalInference:hasLocalModelEvidence(sentences),usedVerifiedPublicReference:sentences.some(e=>e.sources?.some(source=>source.provenance?.gate==='local_public_fact')),readCount:queries.length}));
     if(spec.oracle.kind==='finance_calendar'&&expected){
      const read=queries.find(q=>q.name==='get_finance_overview'&&q.args.p_period_start===expected.du&&q.args.p_period_end===expected.au);
      if(!read||!calls.some(c=>c.name==='query_finance'&&c.args.mode==='calendar'))failures.push('calendar-read-not-grounded');
@@ -108,15 +128,30 @@ export async function runReadOnlyCampaign(argv=process.argv.slice(2)){
      if(!calendarPresentationMatches(sentences.map(e=>e.text).join('\n'),expected))failures.push('daily-calendar-not-presented');
     }
     if(spec.oracle.kind==='application'&&expected){
-     const read=queries.find(q=>q.name===expected.gate&&(expected.gate==='reception_board'?q.args.p_day===expected.day:q.args.p_query===expected.query&&q.args.p_limit===20));
+     const read=queries.find(q=>q.name===expected.gate&&(expected.gate==='reception_board'?q.args.p_day===expected.day:expected.gate==='search_medications'?q.args.p_query===expected.query&&q.args.p_limit===20:JSON.stringify(q.args??{})===JSON.stringify(expected.args)));
      if(!read)failures.push('application-read-not-grounded');
+     if(!calls.some(c=>c.name==='query_app'&&c.args.view===expected.view))failures.push('application-tool-not-admitted');
      const raw=rpcValue(read?.response?.data);
-     const allRows=expected.gate==='reception_board'?(expected.queue==='waiting'?raw?.journee?.filter(r=>r.status==='arrived'):raw?.demandes):Array.isArray(read?.response?.data)?read.response.data:[];
+     const allRows=expected.gate==='reception_board'?(expected.queue==='waiting'?raw?.journee?.filter(r=>r.status==='arrived'):raw?.demandes):expected.gate==='search_medications'?(Array.isArray(read?.response?.data)?read.response.data:[]):[];
      if(expected.gate==='search_medications'){
       if(!Array.isArray(allRows)||allRows.length!==expected.pageSize||new Set(allRows.map(r=>r.id)).size!==allRows.length||allRows.some(r=>!expected.ids.includes(r.id)||r.raw_name!==expected.names[expected.ids.indexOf(r.id)]))failures.push('independent-application-membership');
       if(Array.isArray(allRows)&&allRows.some(r=>!answer.includes(r.raw_name)))failures.push('catalogue-name-not-presented');
-     }else if(!Array.isArray(allRows)||hash(allRows.map(r=>r.id).sort())!==hash([...expected.ids].sort()))failures.push('independent-application-membership');
-     if(expected.gate==='reception_board'&&!new RegExp('(?:^|\\D)'+expected.total+'(?:\\D|$)').test(answer))failures.push('verified-count-in-answer');
+     }else if(expected.gate==='reception_board'){
+      if(!Array.isArray(allRows)||hash(allRows.map(r=>r.id).sort())!==hash([...expected.ids].sort()))failures.push('independent-application-membership');
+      if(!answerContainsCount(answer,expected.total))failures.push('verified-count-in-answer');
+     }else if(expected.view==='cabinet'||expected.view==='practitioner'){
+      if(!raw||expected.requiredFields.some(field=>raw[field]!==expected[field])||raw.id!==expected.id)failures.push('independent-application-record');
+      if(expected.requiredFields.some(field=>!applicationValuePresented(answer,expected[field])))failures.push('requested-application-value-not-presented');
+     }else if(expected.view==='notifications'){
+      if(!raw||raw.total!==expected.total||raw.unread!==expected.unread||raw.totalKinds!==expected.totalKinds)failures.push('independent-notification-count');
+      const noUnreadStatement=expected.unread===0&&/aucune notification/u.test(normalizeFrench(answer));
+      const mentionsUnread=expected.unread===0?noUnreadStatement:/notification/u.test(normalizeFrench(answer))&&/non lue/u.test(normalizeFrench(answer));
+      if(!(answerContainsCount(answer,expected.unread)||noUnreadStatement)||!mentionsUnread)failures.push('unread-notification-count-not-presented');
+     }else if(expected.view==='system'){
+      if(!raw||raw.environment!==expected.environment||raw.view!=='system')failures.push('independent-system-environment');
+      const [hour,minute]=expected.localTime.split(':');
+      if(!new RegExp(`\\b${hour}\\s*(?::|h)\\s*${minute}\\b|\\b${hour}\\s*h\\b`,'u').test(normalizeFrench(answer)))failures.push('cabinet-local-time-not-presented');
+     }
     }
     if(['knowledge','mixed'].includes(spec.oracle.kind)){
      const sources=sentences.flatMap(e=>e.sources??[]).filter(s=>s.type==='knowledge');
@@ -130,9 +165,14 @@ export async function runReadOnlyCampaign(argv=process.argv.slice(2)){
     if(spec.oracle.kind==='behavior'){
      failures.push(...assessBehavior(spec.oracle,events,queries,!!spec.fault));
     }
-    if(spec.oracle.kind==='patient_detail'&&!queries.some(q=>q.name==='get_patient'))failures.push('audited-patient-read-missing');
+    if(spec.oracle.kind==='patient_detail'&&spec.oracle.section==='notes'){
+     const noteRead=queries.find(q=>q.name==='query_alexa_note_sections'),noteSpec=noteRead?(()=>{try{return JSON.parse(noteRead.args.p_spec)}catch{return {}}})():{};
+     const id=bindings[spec.oracle.patientRef];
+     if(id)expected.notesPage=clinicalNotePageOracle({patientId:id,area:spec.oracle.area,offset:0,textOffset:0,maxCharacters:noteSpec.maxCharacters??1200},run.asOf,actor);
+    }
+    if(spec.oracle.kind==='patient_detail'&&expected)failures.push(...assessPatientDetail(spec.oracle,expected,queries,calls,sentences,answer));
     if(!answer.trim())failures.push('empty-answer');
-    const fullyAssessed=['patients','records','behavior'].includes(spec.oracle.kind)||['application','finance_calendar'].includes(spec.oracle.kind)&&!!expected;
+    const fullyAssessed=['patients','records','record_comparison','behavior','format','mixed_app'].includes(spec.oracle.kind)||['application','finance_calendar','finance_view','patient_detail'].includes(spec.oracle.kind)&&!!expected||spec.oracle.kind==='ui_review'&&spec.semantics?.domains?.includes('general_assistant');
     if(!fullyAssessed&&!failures.includes('clinical-assessment-required'))failures.push('independent-assessment-required');
     const row={id:spec.id,category:spec.category,signature:semanticSignature(spec),verdict:failures.length?'FAIL':'PASS',failures,terminal:done?.status,oracleHash:expected?evidenceHash(expected):null,actualTools:calls.map(c=>c.name),actualGates:queries.map(q=>q.name),answerHash:hash(answer),answerCharacters:answer.length,ms:performance.now()-started,inferences,simulatedFailure:!!spec.fault,readOnly:true};
     rows.push(row);privateRecords.push({id:spec.id,expected,queries,calls,events});
@@ -147,6 +187,6 @@ export async function runReadOnlyCampaign(argv=process.argv.slice(2)){
   run.finishedAt=new Date().toISOString();run.audit=verified.audit;run.beforeHash=hash(before);if(verified.after)run.afterHash=hash(verified.after);run.nonMutation=verified.nonMutation;
   if(verified.failure)rows.push({id:'non-mutation',verdict:verified.nonMutation==='FAIL'?'FAIL':'NOT RUN',failure:verified.failure});
  await persist(true);
- if(rows.filter(r=>r.verdict==='PASS').length!==200||review.accepted!==200||run.nonMutation!=='PASS')process.exitCode=1;
+ if(rows.filter(r=>r.verdict==='PASS').length!==review.expectedCaseCount||review.accepted!==review.expectedCaseCount||run.nonMutation!=='PASS')process.exitCode=1;
  }
 }

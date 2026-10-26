@@ -41,6 +41,7 @@ import type { DocumentKind } from "@/shared/documents/types";
 import { getAppointment } from "./appointments";
 import { getCurrentUser } from "./authz";
 import { getConsultation } from "./consultations";
+import { getPatientTreatments, getTreatmentHistory, type PatientTreatments, type StoppedReason, type Treatment } from "./patient-treatments";
 import { db } from "./db";
 import { formaterDzd, getConsultationPayment } from "./finance";
 import type { CarteIdentite } from "./jarvis-identite";
@@ -643,6 +644,105 @@ const editableDraft:CapaciteEcriture<ArgsBrouillonEditable>={
  }
 };
 
+const jsonObject=z.string().max(200_000).refine(value=>{try{return z.record(z.string(),z.unknown()).safeParse(JSON.parse(value)).success;}catch{return false;}});
+const traitementChangements=z.record(z.string(),z.unknown()).refine(changements=>
+ Object.keys(changements).length>0&&Object.keys(changements).every(key=>["dose","dose_unit","frequency","timing","instructions","start_date","end_date"].includes(key)),
+ "invalid-treatment-changes",
+);
+function lireObjet(value:string):Record<string,unknown>{return traitementChangements.parse(JSON.parse(value));}
+function treatmentsOf(value:PatientTreatments):readonly Treatment[]{
+ return [...value.actifs,...value.enPause,...value.arretesRecents];
+}
+function valueForTreatmentField(treatment:Treatment,key:string):unknown{
+ const values:Readonly<Record<string,unknown>>={dose:treatment.dose,dose_unit:treatment.doseUnit,frequency:treatment.frequency,timing:treatment.timing,instructions:treatment.instructions,start_date:treatment.startDate,end_date:treatment.endDate};
+ return values[key];
+}
+function areValuesEqual(left:unknown,right:unknown):boolean{return JSON.stringify(left)===JSON.stringify(right);}
+
+interface ArgsTraitementUpdate {readonly patientId:string;readonly treatmentId:string;readonly expectedVersion:number;readonly changes:string;readonly consultationId:string|null}
+const modifierTraitement:CapaciteEcriture<ArgsTraitementUpdate>={
+ nom:"update_treatment",description:"Modifie uniquement les champs explicitement demandés d'un traitement courant. La version est vérifiée à la proposition et par la porte SQL; une confirmation humaine est obligatoire.",critique:true,
+ entree:z.object({patientId:Guid,treatmentId:Guid,expectedVersion:z.number().int().positive(),changes:jsonObject,consultationId:Guid.nullable()}).strict().refine(value=>{try{return traitementChangements.safeParse(JSON.parse(value.changes)).success;}catch{return false;}}),
+ precondition:async args=>{
+  const patient=await getPatient(args.patientId);if(!patient.ok||!patient.data)return err({code:"introuvable",message:fr.erreurs.introuvable});
+  const current=await getPatientTreatments(args.patientId);if(!current.ok)return err(current.error);
+  const treatment=treatmentsOf(current.data).find(item=>item.id===args.treatmentId&&item.patientId===args.patientId);
+  if(!treatment||treatment.status==="stopped"||treatment.currentVersion!==args.expectedVersion)return err({code:"regle-metier",message:alexaActions.treatmentVersionConflict});
+  const changes=lireObjet(args.changes);
+  if(Object.entries(changes).every(([key,value])=>areValuesEqual(valueForTreatmentField(treatment,key),value)))return err({code:"regle-metier",message:alexaActions.treatmentNoChange});
+  if(args.consultationId){const consultation=await getConsultation(args.consultationId);if(!consultation.ok||!consultation.data||consultation.data.patientId!==args.patientId||consultation.data.status!=="open")return err({code:"regle-metier",message:alexaActions.treatmentConsultationChanged});}
+  return ok(undefined);
+ },
+ carte:(args,carte)=>({titre:alexaActions.treatmentUpdateTitle,champs:[
+  {libelle:fr.jarvis.carte.champPatient,valeur:carte.rendre(args.patientId)},
+  {libelle:alexaActions.treatmentName,valeur:carte.rendre(args.treatmentId)},
+  ...Object.entries(lireObjet(args.changes)).map(([key,value])=>({libelle:alexaActions.treatmentFieldLabel(key as "dose"|"dose_unit"|"frequency"|"timing"|"instructions"|"start_date"|"end_date"),valeur:Array.isArray(value)?value.join(" et "):value===null?"Sans date de fin":String(value)})),
+ ]}),
+ verifier:async(args,id)=>{
+  if(id!==args.treatmentId)return err({code:"regle-metier",message:fr.jarvis.ecriture.nonVerifiee});
+  const current=await getPatientTreatments(args.patientId);if(!current.ok)return err(current.error);
+  const treatment=treatmentsOf(current.data).find(item=>item.id===args.treatmentId&&item.patientId===args.patientId);
+  const changes=lireObjet(args.changes);
+  if(!treatment||treatment.currentVersion!==args.expectedVersion+1||treatment.status==="stopped"||Object.entries(changes).some(([key,value])=>!areValuesEqual(valueForTreatmentField(treatment,key),value)))return err({code:"regle-metier",message:fr.jarvis.ecriture.nonVerifiee});
+  return ok(undefined);
+ }
+};
+
+interface ArgsTraitementStop {readonly patientId:string;readonly treatmentId:string;readonly expectedVersion:number;readonly reason:StoppedReason|null;readonly consultationId:string|null;readonly notes?:string|undefined}
+const arreterTraitement:CapaciteEcriture<ArgsTraitementStop>={
+ nom:"stop_treatment",description:"Arrête un traitement actif ou en pause après confirmation explicite. Vérifie la version et relit l'état et l'historique avant d'annoncer le résultat.",critique:true,
+ entree:z.object({patientId:Guid,treatmentId:Guid,expectedVersion:z.number().int().positive(),reason:z.enum(["inefficacite","effets_indesirables","amelioration","decision_clinique","autre"]).nullable(),consultationId:Guid.nullable(),notes:z.string().trim().min(3).max(300).optional()}).strict(),
+ precondition:async args=>{
+  const patient=await getPatient(args.patientId);if(!patient.ok||!patient.data)return err({code:"introuvable",message:fr.erreurs.introuvable});
+  const current=await getPatientTreatments(args.patientId);if(!current.ok)return err(current.error);
+  const treatment=treatmentsOf(current.data).find(item=>item.id===args.treatmentId&&item.patientId===args.patientId);
+  if(!treatment||treatment.status==="stopped"||treatment.currentVersion!==args.expectedVersion)return err({code:"regle-metier",message:alexaActions.treatmentVersionConflict});
+  if(args.consultationId){const consultation=await getConsultation(args.consultationId);if(!consultation.ok||!consultation.data||consultation.data.patientId!==args.patientId||consultation.data.status!=="open")return err({code:"regle-metier",message:alexaActions.treatmentConsultationChanged});}
+  return ok(undefined);
+ },
+ carte:(args,carte)=>({titre:alexaActions.treatmentStopTitle,champs:[
+  {libelle:fr.jarvis.carte.champPatient,valeur:carte.rendre(args.patientId)},
+  {libelle:alexaActions.treatmentName,valeur:carte.rendre(args.treatmentId)},
+  ...(args.reason?[{libelle:alexaActions.treatmentStopReason,valeur:alexaActions.treatmentStopReasonLabel(args.reason)}]:[]),
+  ...(args.notes?[{libelle:alexaActions.treatmentStopNotes,valeur:args.notes}]:[]),
+ ]}),
+ verifier:async(args,id)=>{
+  if(id!==args.treatmentId)return err({code:"regle-metier",message:fr.jarvis.ecriture.nonVerifiee});
+  const current=await getPatientTreatments(args.patientId);if(!current.ok)return err(current.error);
+  const treatment=treatmentsOf(current.data).find(item=>item.id===args.treatmentId&&item.patientId===args.patientId);
+  if(!treatment||treatment.currentVersion!==args.expectedVersion+1||treatment.status!=="stopped"||treatment.stoppedReason!==args.reason)return err({code:"regle-metier",message:fr.jarvis.ecriture.nonVerifiee});
+  const history=await getTreatmentHistory(args.treatmentId,null,1);if(!history.ok)return err(history.error);
+  const last=history.data.entries[0];
+  if(!last||last.version!==args.expectedVersion+1||last.action!=="stopped"||last.reason!==args.reason||last.notes!==(args.notes??null))return err({code:"regle-metier",message:fr.jarvis.ecriture.nonVerifiee});
+  return ok(undefined);
+ }
+};
+
+interface ArgsBrouillonEditableMaj {readonly patientId:string;readonly draftId:string;readonly documentType:DocumentKind;readonly expectedRevision:number;readonly changes:string;readonly variables:string;readonly content:string;readonly documentDate:string}
+const modifierBrouillonEditable:CapaciteEcriture<ArgsBrouillonEditableMaj>={
+ nom:"update_editable_document_draft",description:"Modifie uniquement les champs explicitement demandés d'un brouillon non émis. La révision est vérifiée à la proposition et par la porte SQL. La prévisualisation puis la confirmation du médecin restent nécessaires pour émettre.",critique:true,
+ entree:z.object({patientId:Guid,draftId:Guid,documentType:z.enum(["bonne_sante_mentale","suivi_medical","certificat_medical","justification","ordonnance"]),expectedRevision:z.number().int().positive(),changes:jsonObject,variables:z.string().max(10_000).refine(v=>{try{return z.record(z.string().max(80),z.string().max(4000)).safeParse(JSON.parse(v)).success;}catch{return false;}}),content:z.string().max(200_000).refine(v=>{try{parseDocumentContent(JSON.parse(v));return true;}catch{return false;}},{message:"invalid-content"}),documentDate:z.iso.date()}).strict(),
+ precondition:async args=>{
+  const patient=await getPatient(args.patientId);if(!patient.ok||!patient.data)return err({code:"introuvable",message:fr.erreurs.introuvable});
+  const current=await getDraft(args.draftId);
+  if(!current.ok||!current.data||current.data.patientId!==args.patientId||current.data.kind!==args.documentType||current.data.issuedDocumentId!==null||current.data.archivedAt!==null)return err({code:"introuvable",message:fr.erreurs.introuvable});
+  if(current.data.revision!==args.expectedRevision)return err({code:"regle-metier",message:alexaActions.documentDraftRevisionConflict});
+  return ok(undefined);
+ },
+ carte:(args,carte)=>({titre:alexaActions.documentDraftUpdateTitle,champs:[
+  {libelle:fr.jarvis.carte.champPatient,valeur:carte.rendre(args.patientId)},
+  {libelle:fr.jarvis.carte.champTypeDocument,valeur:documentLabels[args.documentType]},
+  ...Object.entries(JSON.parse(args.changes) as Record<string,string>).map(([key,value])=>({libelle:alexaActions.documentDraftChangedField(key),valeur:value})),
+ ]}),
+ verifier:async(args,id)=>{
+  const r=await getDraft(id);
+  if(!r.ok||!r.data||r.data.id!==args.draftId||r.data.patientId!==args.patientId||r.data.kind!==args.documentType||r.data.issuedDocumentId!==null||r.data.archivedAt!==null||r.data.revision!==args.expectedRevision+1||r.data.documentDate!==args.documentDate)return err({code:"regle-metier",message:fr.jarvis.ecriture.nonVerifiee});
+  const variables=JSON.parse(args.variables) as Record<string,string>,content=parseDocumentContent(JSON.parse(args.content));
+  if(JSON.stringify(Object.entries(r.data.variables).sort())!==JSON.stringify(Object.entries(variables).sort())||JSON.stringify(r.data.content)!==JSON.stringify(content))return err({code:"regle-metier",message:fr.jarvis.ecriture.nonVerifiee});
+  return ok(undefined);
+ }
+};
+
 interface ArgsMessageInterne {
  readonly clientMsgId:string;
  readonly body:string;
@@ -665,6 +765,9 @@ const envoyerMessageInterne:CapaciteEcriture<ArgsMessageInterne>={
 };
 const ECRITURES: readonly CapaciteEcritureEnregistree[] = [
   enregistrer(editableDraft),
+  enregistrer(modifierTraitement),
+  enregistrer(arreterTraitement),
+  enregistrer(modifierBrouillonEditable),
   enregistrer(creerRendezVous),
   enregistrer(decalerRendezVous),
   enregistrer(annulerRendezVous),

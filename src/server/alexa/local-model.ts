@@ -6,6 +6,7 @@ import { readdir, readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { z } from "zod";
 import { request as httpRequest } from "node:http";
+import { createServer } from "node:net";
 import { semanticRequestSchema } from "@/shared/alexa/semantic-request";
 import { LOCAL_SEMANTIC_PROMPT } from "@/i18n/alexa-semantic";
 import { ALEXA_CONVERSATION_MODEL } from "./model-policy";
@@ -17,7 +18,7 @@ import { assertLocalContextFits, buildLocalRequest, localModelTimeoutMs, parseLo
 export const LOCAL_MODEL_PIN = {
   model: ALEXA_CONVERSATION_MODEL,
   sha256: "588c6c94c82f756b86dba35c42ed9ba9ec187d65824eb52f039c347df563e63d",
-  architecture: "qwen35", runtime: "b11429",
+  runtime: "b11429",
   archiveSha256: "1283323272b04cd07905816a597a0da810918102de958f4ff6f7bbaa70ed2efe",
   runtimeManifestSha256: "a57e54357f5ca5a5fa0d70de662a076fc2150232bccd183abaf5d83982694465",
 } as const;
@@ -30,6 +31,7 @@ interface LocalRuntimeState {
   slot: LocalModelSlot;
   idle: ReturnType<typeof setTimeout> | undefined;
   token: string;
+  port: number | null;
   identity: string;
   exitHookSet: boolean;
 }
@@ -37,7 +39,7 @@ interface LocalRuntimeState {
 const runtimeHost = globalThis as typeof globalThis & { mindcareAlexaLocalRuntime?: LocalRuntimeState };
 const runtimeIdentity = [LOCAL_MODEL_PIN.sha256, LOCAL_MODEL_PIN.runtimeManifestSha256, process.cwd()].join(":");
 const runtimeState = runtimeHost.mindcareAlexaLocalRuntime ??= {
-  child: null, slot: new LocalModelSlot(), idle: undefined, token: randomBytes(32).toString("hex"), identity: runtimeIdentity, exitHookSet: false,
+  child: null, slot: new LocalModelSlot(), idle: undefined, token: randomBytes(32).toString("hex"), port: null, identity: runtimeIdentity, exitHookSet: false,
 };
 /** Qualification is operational evidence, never a privacy or SQL authorization. */
 export async function localSemanticQualified(): Promise<boolean> {
@@ -48,11 +50,32 @@ export async function localSemanticQualified(): Promise<boolean> {
     return raw.length <= 2000 && receipt.safeParse(JSON.parse(raw)).success;
   } catch { return false; }
 }
-/** Fixed authenticated loopback; no DNS, redirects or configurable destination. */
+/** A free process-local endpoint, always bound to loopback and authenticated. */
+export async function allocateLoopbackPort(): Promise<number> {
+  const server = createServer();
+  try {
+    await new Promise<void>((resolve, reject) => {
+      const onError = (error: Error) => { server.off("listening", onListening); reject(error); };
+      const onListening = () => { server.off("error", onError); resolve(); };
+      server.once("error", onError);
+      server.once("listening", onListening);
+      server.listen({ host: "127.0.0.1", port: 0, exclusive: true });
+    });
+    const address = server.address();
+    if (!address || typeof address === "string" || address.port < 1) throw new Error("LocalModelUnavailable");
+    return address.port;
+  } finally {
+    if (server.listening) await new Promise<void>(resolve => server.close(() => resolve()));
+  }
+}
+
+/** Authenticated loopback only; no DNS, redirects or configurable destination. */
 function loopback(path: "/health" | "/v1/chat/completions" | "/apply-template" | "/tokenize", signal: AbortSignal, body?: string): Promise<{ status: number; body: string }> {
   return new Promise((resolve, reject) => {
     signal.throwIfAborted();
-    const req = httpRequest({ hostname: "127.0.0.1", port: 18082, path, method: body === undefined ? "GET" : "POST", signal,
+    const port = runtimeState.port;
+    if (port === null) { reject(new Error("LocalModelUnavailable")); return; }
+    const req = httpRequest({ hostname: "127.0.0.1", port, path, method: body === undefined ? "GET" : "POST", signal,
       headers: { Authorization: "Bearer " + runtimeState.token, "Content-Type": "application/json" } }, res => {
       const chunks: Buffer[] = []; let bytes = 0;
       res.on("data", (chunk: Buffer) => { bytes += chunk.length; if (bytes > 96000) { res.destroy(new Error("LocalModelOutput")); return; } chunks.push(chunk); });
@@ -75,6 +98,7 @@ export async function releaseLocalModel(): Promise<void> {
     handle.kill();
     await Promise.race([stopped, new Promise<void>(resolve => { const timer = setTimeout(resolve, 5000); timer.unref(); })]);
   }
+  runtimeState.port = null;
 }
 if (!runtimeState.exitHookSet) { runtimeState.exitHookSet = true; process.once("exit", () => { runtimeState.child?.kill(); }); }
 async function prepare(signal: AbortSignal): Promise<void> {
@@ -93,7 +117,9 @@ async function prepare(signal: AbortSignal): Promise<void> {
     throw new Error("LocalModelIntegrity");
   });
   signal.throwIfAborted();
-  const handle = spawn(runtime, ["-m", model, "--host", "127.0.0.1", "--port", "18082", "-c", "4096", "-t", String(localModelThreadCountFor(availableParallelism())), "--gpu-layers", "0", "--batch-size", "128", "--ubatch-size", "128", "--load-mode", "none", "--parallel", "1",
+  const port = await allocateLoopbackPort();
+  runtimeState.port = port;
+  const handle = spawn(runtime, ["-m", model, "--host", "127.0.0.1", "--port", String(port), "-c", "4096", "-t", String(localModelThreadCountFor(availableParallelism())), "--gpu-layers", "0", "--batch-size", "128", "--ubatch-size", "128", "--load-mode", "none", "--parallel", "1",
     "--jinja", "--reasoning", "off", "--no-context-shift", "--no-warmup", "--api-key", runtimeState.token, "--no-webui", "--log-disable"],
   { cwd: directory, windowsHide: true, stdio: "ignore",
     env: { NODE_ENV: "production", SystemRoot: process.env["SystemRoot"] ?? "C:\\Windows", WINDIR: process.env["WINDIR"] ?? "C:\\Windows", OMP_NUM_THREADS: String(localModelThreadCountFor(availableParallelism())) } });

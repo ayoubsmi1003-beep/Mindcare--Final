@@ -7,7 +7,11 @@ const input=(text:string)=>({text,conversationId:crypto.randomUUID(),clientTurnI
 const args={partIds:['p'],from:'2026-10-24T00:00:00+01:00',to:'2026-10-25T00:00:00+01:00'};
 it('presents only the first ordered appointment and its source, without offering a list continuation',async()=>{
  const rows=ids.map((id,index)=>({id,patientId:patients[index],label:index?'Yacine DEMONSTRATION':'Amina FICTIVE',at:`2026-10-24T${index?'10':'09'}:00:00+01:00`,status:'confirmed',amount:null}));
- const rpc=scriptedAlexaRpc(async()=>({ok:true as const,data:[{total:30,rows,totals:{},complete:true,offset:0}]}));
+ const rpc=scriptedAlexaRpc(async name=>name==='query_alexa_records'
+  ? {ok:true as const,data:[{total:30,rows,totals:{},complete:true,offset:0}]}
+  : name==='search_patients'
+   ? {ok:true as const,data:[{total:1,rows:[{id:patients[0],first_name:'Amina',last_name:'FICTIVE',missing:[],completed_consultations:0,outstanding_balance:0}],metrics:{},unknownAge:0,revision:'a'.repeat(32),asOf:'2026-10-23T12:00:00+01:00',conditions:[],complete:true,offset:0}]}
+   : {ok:false as const,error:{code:'introuvable',message:'unexpected'}});
  const result=await agentExecutor(input('Donne le premier rendez-vous le 24 octobre 2026.'),{rpc},{rpc:vi.fn()})({id:'first',name:'query_agenda',args},'2026-10-23T12:00:00+01:00',[],new AbortController().signal);
  expect(result.text).toContain('Premier rendez-vous');expect(result.text).toContain('Amina FICTIVE');expect(result.text).not.toContain('Yacine DEMONSTRATION');
  expect(result.text).not.toContain('/ 30');expect(result.links).toHaveLength(1);
@@ -16,7 +20,7 @@ it('presents only the first ordered appointment and its source, without offering
 it('does not turn an empty period into an invented first appointment',async()=>{
  const rpc=scriptedAlexaRpc(async()=>({ok:true as const,data:[{total:0,rows:[],totals:{},complete:true,offset:0}]}));
  const result=await agentExecutor(input('Donne le premier rendez-vous le 24 octobre 2026.'),{rpc},{rpc:vi.fn()})({id:'first',name:'query_agenda',args},'2026-10-23T12:00:00+01:00',[],new AbortController().signal);
- expect(result.status).toBe('empty');expect(result.text).toContain('0 rendez-vous');expect(result.links).toBeUndefined();
+ expect(result.status).toBe('empty');expect(result.text).toContain('Aucun rendez-vous');expect(result.links).toBeUndefined();
 });
 it('refuses an unsupported first-and-last selection before reading',async()=>{
  const rpc=vi.fn();const result=await agentExecutor(input('Donne le premier et le dernier rendez-vous le 24 octobre 2026.'),{rpc},{rpc:vi.fn()})({id:'first',name:'query_agenda',args},'2026-10-23T12:00:00+01:00',[],new AbortController().signal);

@@ -8,6 +8,7 @@ import {aujourdHuiCabinet,ajouterJours} from '@/services/finance-calendrier';
 
 type Rpc=(name:string,args:RpcArgs,signal:AbortSignal)=>Promise<unknown>;
 const text=z.string().nullable(),money=z.number().int().safe(),amount=z.number().int().nonnegative().safe();
+const databaseUuid=z.string().regex(/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/iu);
 
 function result(callId:string,data:unknown,lines:string[],gate:string):AgentResult{return {callId,status:'ok',complete:true,data,text:lines.join('\n'),conditionKeys:[],evidence:[{id:callId,type:'query',label:gate,provenance:{gate}}]};}
 export async function readApplication(callId:string,view:string,rpc:Rpc,signal:AbortSignal,options:{asOf?:string;offset?:number;revision?:string;query?:string;day?:string;queue?:string}={}):Promise<AgentResult>{
@@ -52,7 +53,7 @@ export async function readApplication(callId:string,view:string,rpc:Rpc,signal:A
  if(!['cabinet','practitioner'].includes(view))throw new AgentReadError('malformed');
  const gate=view==='cabinet'?'get_my_cabinet':'get_my_profile';
  const raw=await rpc(gate,{},signal);
- const row=view==='cabinet'?z.object({id:z.uuid(),name:z.string(),address:text,phone:text}).parse(raw):z.object({id:z.uuid(),full_name:z.string(),title:text,speciality_fr:text,speciality_ar:text,order_number:text,phone:text}).parse(raw);
+ const row=view==='cabinet'?z.object({id:databaseUuid,name:z.string(),address:text,phone:text}).parse(raw):z.object({id:databaseUuid,full_name:z.string(),title:text,speciality_fr:text,speciality_ar:text,order_number:text,phone:text}).parse(raw);
  return result(callId,row,Object.entries(row).filter(([key])=>key!=='id').map(([key,value])=>`${labels[key]??key} : ${value??copy.missing}`),gate);
 }
 export async function readFinanceView(callId:string,mode:string,from:string,to:string,offset:number,rpc:Rpc,signal:AbortSignal,revision?:string):Promise<AgentResult>{

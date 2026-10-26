@@ -1,0 +1,607 @@
+{
+  "manifestSha256": "c41be3293e2e21ded1d7ceb93f79abce95500cc1602e765fd9358befb1d1d481",
+  "method": "structured-secondary-pass",
+  "reviewer": "Codex same-agent structured secondary pass",
+  "cases": [
+    {
+      "id": "fr-006",
+      "signature": "fd222346c5dcbaf081ed9e9bfee4bb3fe3121dd44521df457fdf8a7d3e960967",
+      "decision": "accept",
+      "distinction": "patients / patients: {\"kind\":\"patients\",\"query\":{\"mode\":\"count\",\"filters\":[{\"field\":\"phone\",\"op\":\"missing\",\"value\":null}]}}"
+    },
+    {
+      "id": "fr-026",
+      "signature": "4bcd09ebc480123e19720ace737ed2f47f12c164c648fce4f6f3f7c3d693442d",
+      "decision": "accept",
+      "distinction": "patients / patients: {\"kind\":\"patients\",\"query\":{\"mode\":\"list\",\"filters\":[]}}"
+    },
+    {
+      "id": "fr-002",
+      "signature": "be8fd4a2b579bab45ecab371091d24146901abf589cfec18ffe30c0c15848263",
+      "decision": "accept",
+      "distinction": "patients / patients: {\"kind\":\"patients\",\"query\":{\"mode\":\"count\",\"filters\":[],\"population\":\"archived\"}}"
+    },
+    {
+      "id": "fr-021",
+      "signature": "1080596c650baadb3213ec71dac37ffa226a8378a21c4d22c8b7e4e49ee75439",
+      "decision": "accept",
+      "distinction": "patients / patients: {\"kind\":\"patients\",\"query\":{\"mode\":\"count\",\"filters\":[{\"field\":\"no_completed_months\",\"op\":\"eq\",\"value\":6}]}}"
+    },
+    {
+      "id": "fr-008",
+      "signature": "98731ec1e5ddd15040a002fee46296e67df5f92ac8ccfd1ba498f80e397c6ddd",
+      "decision": "accept",
+      "distinction": "patients / patients: {\"kind\":\"patients\",\"query\":{\"mode\":\"count\",\"filters\":[{\"field\":\"birth_date\",\"op\":\"missing\",\"value\":null}]}}"
+    },
+    {
+      "id": "fr-018",
+      "signature": "eba2229f969e536904b7d375cb51bfd7712e023b4c1e44c9c4b542478f7b88eb",
+      "decision": "accept",
+      "distinction": "patients / patients: {\"kind\":\"patients\",\"query\":{\"mode\":\"count\",\"filters\":[{\"field\":\"age\",\"op\":\"gt\",\"value\":80}]}}"
+    },
+    {
+      "id": "fr-001",
+      "signature": "323dc3f20546c35f8fd4299d4880dfa56b9e3485074cb70c430b582d099af4fe",
+      "decision": "accept",
+      "distinction": "patients / patients: {\"kind\":\"patients\",\"query\":{\"mode\":\"count\",\"filters\":[]}}"
+    },
+    {
+      "id": "fr-009",
+      "signature": "3106ac38c2c5e3e7472edb6becdd8bbb8831be1be505c8f7c5dfa233d001d37e",
+      "decision": "accept",
+      "distinction": "patients / patient_detail: {\"kind\":\"patient_detail\",\"section\":\"profile\",\"field\":\"phone\",\"patientRef\":\"primary\",\"byName\":true,\"identity\":\"exact-full-name\",\"output\":\"phone\"}"
+    },
+    {
+      "id": "fr-016",
+      "signature": "eeb11ada1098bec4befa0df99c9f38b88cc56a94540ac1a2dfce9aa6171df347",
+      "decision": "accept",
+      "distinction": "patients / patients: {\"kind\":\"patients\",\"query\":{\"mode\":\"count\",\"population\":\"active\",\"filters\":[{\"field\":\"age\",\"op\":\"gte\",\"value\":18},{\"field\":\"age\",\"op\":\"lte\",\"value\":30}]},\"distinction\":\"conjunctive-age-interval-unknown-excluded\"}"
+    },
+    {
+      "id": "fr-014",
+      "signature": "3d51303ba0c71841d4501b40bcd9e809dcbb502aae5ac2b8b91acf2b7b58df03",
+      "decision": "accept",
+      "distinction": "patients / patients: {\"kind\":\"patients\",\"query\":{\"mode\":\"count\",\"filters\":[{\"field\":\"age\",\"op\":\"lt\",\"value\":18}]}}"
+    },
+    {
+      "id": "fr-020",
+      "signature": "66286506ee56ef15de7dff3d5f2cd36c69e5865fb6de0adefcb5cb2b65eebb8e",
+      "decision": "accept",
+      "distinction": "patients / patients: {\"kind\":\"patients\",\"query\":{\"mode\":\"count\",\"filters\":[{\"field\":\"no_completed_days\",\"op\":\"eq\",\"value\":90}]}}"
+    },
+    {
+      "id": "fr-028",
+      "signature": "d8c3c609ec66234d589ce491c55038e4f97a8783b676036d1a73f187e0c66195",
+      "decision": "accept",
+      "distinction": "patients / patients: {\"kind\":\"patients\",\"query\":{\"mode\":\"list\",\"filters\":[],\"population\":\"all\"}}"
+    },
+    {
+      "id": "fr-010",
+      "signature": "4f5b1be4d91d77bf53b96d9c8056ab3f5a92ac5bb142d5c15d84d2d3848024a9",
+      "decision": "accept",
+      "distinction": "patients / patients: {\"kind\":\"patients\",\"query\":{\"mode\":\"count\",\"filters\":[{\"field\":\"sex\",\"op\":\"missing\",\"value\":null}]}}"
+    },
+    {
+      "id": "fr-015",
+      "signature": "6ce351deee23e68a14e3ec68d536e783af4a2092b4fc48a5f90cb511b77bebec",
+      "decision": "accept",
+      "distinction": "patients / patients: {\"kind\":\"patients\",\"query\":{\"mode\":\"count\",\"filters\":[{\"field\":\"age\",\"op\":\"gte\",\"value\":18}]}}"
+    },
+    {
+      "id": "fr-004",
+      "signature": "558b24e744d8036d2e0dd689ab1dcc4828205e95daf3d6c336c084ff2f0d3553",
+      "decision": "accept",
+      "distinction": "patients / patients: {\"kind\":\"patients\",\"query\":{\"mode\":\"count\",\"filters\":[{\"field\":\"identity_card\",\"op\":\"missing\",\"value\":null}]}}"
+    },
+    {
+      "id": "fr-022",
+      "signature": "2e9639a540800cf1c09602e2b99ef99b30ded9d81c2b43a4038f7c7fe85bc451",
+      "decision": "accept",
+      "distinction": "patients / patients: {\"kind\":\"patients\",\"query\":{\"mode\":\"count\",\"filters\":[{\"field\":\"completed_consultations\",\"op\":\"eq\",\"value\":0}]}}"
+    },
+    {
+      "id": "fr-029",
+      "signature": "260c5c49a1e8a0b8070c249c8209446451efb4fb6d89d55555f26e2c2b140a1a",
+      "decision": "accept",
+      "distinction": "patients / patients: {\"kind\":\"patients\",\"query\":{\"mode\":\"list\",\"filters\":[{\"field\":\"birth_date\",\"op\":\"missing\",\"value\":null}]}}"
+    },
+    {
+      "id": "fr-007",
+      "signature": "db1f6af3170a4b7c2995ffbd7224ce91cc795a51a5c5c3bab15ff583f07101f0",
+      "decision": "accept",
+      "distinction": "patients / patients: {\"kind\":\"patients\",\"query\":{\"mode\":\"count\",\"filters\":[{\"field\":\"phone\",\"op\":\"present\",\"value\":null}]}}"
+    },
+    {
+      "id": "fr-013",
+      "signature": "b3f366824dc2bebec8b1914c92de6f971954dfd7d75f97eb7b500c473ce54c5f",
+      "decision": "accept",
+      "distinction": "patients / patients: {\"kind\":\"patients\",\"query\":{\"mode\":\"count\",\"filters\":[{\"field\":\"sex\",\"op\":\"eq\",\"value\":\"M\"}]}}"
+    },
+    {
+      "id": "fr-050",
+      "signature": "211a3707ba4e05dc3fd832aed1c45978d6f33e7ad04cb408746f433c060fff4f",
+      "decision": "accept",
+      "distinction": "agenda / application: {\"kind\":\"application\",\"view\":\"reception\",\"queue\":\"requests\",\"output\":\"list\"}"
+    },
+    {
+      "id": "fr-045",
+      "signature": "8a9df1c58dba3df87fffbd95731a326b222c84a6952b8d444486d648a2de69b8",
+      "decision": "accept",
+      "distinction": "agenda / records: {\"kind\":\"records\",\"domain\":\"agenda\",\"query\":{\"mode\":\"list\",\"patientRef\":\"primary\",\"statuses\":[\"confirmed\"],\"from\":\"2026-10-29T00:00:00+01:00\",\"to\":\"2026-10-30T00:00:00+01:00\"},\"temporalReference\":\"relative-tomorrow\",\"logic\":\"patient-and-confirmed\",\"output\":\"list\"}"
+    },
+    {
+      "id": "fr-049",
+      "signature": "ebfce74ab9707bd0cb4e43aecd00511f69902a2d7544f18f69fd092ea7aabcfe",
+      "decision": "accept",
+      "distinction": "agenda / application: {\"kind\":\"application\",\"view\":\"reception\",\"queue\":\"requests\",\"output\":\"count\"}"
+    },
+    {
+      "id": "fr-039",
+      "signature": "d903004a248b0fff09d485142ebe3e6b51774112e8da199da98fd96010a9e869",
+      "decision": "accept",
+      "distinction": "agenda / records: {\"kind\":\"records\",\"domain\":\"agenda\",\"query\":{\"statuses\":[\"arrived\"],\"to\":\"2026-11-01T00:00:00+01:00\",\"from\":\"2026-10-01T00:00:00+01:00\"}}"
+    },
+    {
+      "id": "fr-040",
+      "signature": "696b944cf4e69b00237c734dc8a05f2867e9708a85836e7a07dcb1fffe6ac60f",
+      "decision": "accept",
+      "distinction": "agenda / records: {\"kind\":\"records\",\"domain\":\"agenda\",\"query\":{\"statuses\":[\"no_show\"],\"to\":\"2026-11-01T00:00:00+01:00\",\"from\":\"2026-10-01T00:00:00+01:00\"}}"
+    },
+    {
+      "id": "fr-035",
+      "signature": "dcf8756403d5471c761dcba23a00c3a7f19198b55ad265ea105bd57a5e83a474",
+      "decision": "accept",
+      "distinction": "agenda / records: {\"kind\":\"records\",\"domain\":\"agenda\",\"query\":{\"mode\":\"count\",\"from\":\"2026-10-26T00:00:00+01:00\",\"to\":\"2026-11-02T00:00:00+01:00\"},\"temporalReference\":\"relative-current-civil-week\",\"output\":\"count\"}"
+    },
+    {
+      "id": "fr-032",
+      "signature": "4c503bfb0d06942f0a8ac11ae8c4d63c5af8dfd362b2c5e9beb43b369f0645e0",
+      "decision": "accept",
+      "distinction": "agenda / records: {\"kind\":\"records\",\"domain\":\"agenda\",\"query\":{\"mode\":\"count\",\"from\":\"2026-10-01T00:00:00+01:00\",\"to\":\"2026-11-01T00:00:00+01:00\"},\"temporalReference\":\"relative-current-month\",\"output\":\"count\"}"
+    },
+    {
+      "id": "fr-047",
+      "signature": "8784303ae26d60b27f786b1c683d3e6742b09871e7387fa962f479139a34e498",
+      "decision": "accept",
+      "distinction": "agenda / records: {\"kind\":\"records\",\"domain\":\"agenda\",\"query\":{\"statuses\":[\"confirmed\",\"arrived\"],\"mode\":\"list\",\"to\":\"2026-10-24T00:00:00+01:00\",\"from\":\"2026-10-23T00:00:00+01:00\"}}"
+    },
+    {
+      "id": "fr-056",
+      "signature": "961677a2427480115991f81e0cc42de7eaabc09abe80d7ace8569ad436dcc999",
+      "decision": "accept",
+      "distinction": "clinical / patient_detail: {\"kind\":\"patient_detail\",\"section\":\"notes\",\"area\":\"working\",\"patientRef\":\"primary\"}"
+    },
+    {
+      "id": "fr-061",
+      "signature": "e3041830d6538a48ce5a14f5e4972d3113def370dc0c57abe7be380a72b54495",
+      "decision": "accept",
+      "distinction": "clinical / patient_detail: {\"kind\":\"patient_detail\",\"section\":\"timeline\",\"recordClass\":\"all\",\"output\":\"timeline\"}"
+    },
+    {
+      "id": "fr-059",
+      "signature": "d66c1b645b18662a7e51bb18859039b1a325e04eb708e3c22cbb1b0e9a5f4209",
+      "decision": "accept",
+      "distinction": "clinical / patient_detail: {\"kind\":\"patient_detail\",\"section\":\"notes\",\"area\":\"assessment\",\"patientRef\":\"primary\"}"
+    },
+    {
+      "id": "fr-063",
+      "signature": "f2ad36e2b04ebeb3681b371de458ebd626ba306fd40ad0b8e454c0c532890aca",
+      "decision": "accept",
+      "distinction": "clinical / patient_detail: {\"kind\":\"patient_detail\",\"domain\":\"clinical\",\"patientRef\":\"primary\",\"feature\":\"timeline\",\"order\":\"chronological\",\"output\":\"concise-date-range-and-event-count\"}"
+    },
+    {
+      "id": "fr-069",
+      "signature": "4f48c79423fd5260d3f92bc9eaefc69fe2e7565ea1414ec867b1a02ada3ef980",
+      "decision": "accept",
+      "distinction": "clinical / patient_detail: {\"kind\":\"patient_detail\",\"section\":\"diagnoses\",\"patientRef\":\"primary\",\"state\":\"resolved\"}"
+    },
+    {
+      "id": "fr-067",
+      "signature": "a689f9430520c12a333f9d34767213ebfbef5e88fd3259ec2246ede20c2f67df",
+      "decision": "accept",
+      "distinction": "clinical / patient_detail: {\"kind\":\"patient_detail\",\"section\":\"summary\",\"patientRef\":\"primary\",\"scope\":\"comparison\"}"
+    },
+    {
+      "id": "fr-057",
+      "signature": "f400311d8120f25574fecf22e3b63e6f2894addb80daa9b8b54da4dffe7b15e7",
+      "decision": "accept",
+      "distinction": "clinical / patient_detail: {\"kind\":\"patient_detail\",\"section\":\"notes\",\"area\":\"subjective\",\"patientRef\":\"primary\"}"
+    },
+    {
+      "id": "fr-062",
+      "signature": "27e966d65d0da5ba485c60108efd02bc4ce84cd3c1859bea26cec0cc876fcace",
+      "decision": "accept",
+      "distinction": "clinical / behavior: {\"kind\":\"behavior\",\"behavior\":\"unsupported_filter\",\"requiresLimitation\":true,\"domain\":\"patient-timeline\",\"patientScope\":\"current\",\"from\":\"2026-09-01T00:00:00+01:00\",\"to\":\"2026-10-01T00:00:00+01:00\",\"missingBehavior\":\"explicit-unsupported-timeline-period-before-read\"}"
+    },
+    {
+      "id": "fr-070",
+      "signature": "b57bdf3884f10bcc1344df4445014a374c4f030067a6216eeb088b58df3bc63a",
+      "decision": "accept",
+      "distinction": "clinical / patient_detail: {\"kind\":\"patient_detail\",\"section\":\"scales\",\"patientRef\":\"primary\"}"
+    },
+    {
+      "id": "fr-068",
+      "signature": "f4876453a140378014b715ad3cecf1d06bc4c9989a98f2544e308639546eb318",
+      "decision": "accept",
+      "distinction": "clinical / patient_detail: {\"kind\":\"patient_detail\",\"section\":\"diagnoses\",\"patientRef\":\"primary\",\"state\":\"active\"}"
+    },
+    {
+      "id": "fr-066",
+      "signature": "cc4121df0ac326be3da8d2a8262a25d9accb38730f223caf714cf24fa1225698",
+      "decision": "accept",
+      "distinction": "clinical / patient_detail: {\"kind\":\"patient_detail\",\"section\":\"summary\",\"patientRef\":\"primary\",\"scope\":\"six\"}"
+    },
+    {
+      "id": "fr-071",
+      "signature": "9f75a37b393193f5c6f91f566b599643e486053aa9777107db589b88c9c6a8bb",
+      "decision": "accept",
+      "distinction": "finance / records: {\"kind\":\"records\",\"domain\":\"finance\",\"query\":{\"state\":\"collected\",\"mode\":\"totals\",\"to\":\"2026-11-01T00:00:00+01:00\",\"from\":\"2026-10-01T00:00:00+01:00\"}}"
+    },
+    {
+      "id": "fr-074",
+      "signature": "8bccadf9dbfa3eabf86e1f3f06a03eee8e767f87192a7b8e4e7e50d4af9ac5b2",
+      "decision": "accept",
+      "distinction": "finance / records: {\"kind\":\"records\",\"domain\":\"finance\",\"query\":{\"patientRef\":\"primary\",\"state\":\"pending\",\"mode\":\"list\",\"from\":\"2026-10-01T00:00:00+01:00\",\"to\":\"2026-11-01T00:00:00+01:00\"},\"dateAxis\":\"created_at\",\"output\":\"payment-members-amounts-page-total\"}"
+    },
+    {
+      "id": "fr-077",
+      "signature": "32c53ed0bea397eb3cd87319edeed57bc68810f9afe789db14d99df461b0a68b",
+      "decision": "accept",
+      "distinction": "finance / finance_view: {\"kind\":\"finance_view\",\"view\":\"charges\",\"from_\":\"2026-10-01T00:00:00+01:00\",\"to\":\"2026-11-01T00:00:00+01:00\"}"
+    },
+    {
+      "id": "fr-076",
+      "signature": "21bbbc2308f3a073ef83bca4d0dc4885128310a6d246212501df8a185fcd4b27",
+      "decision": "accept",
+      "distinction": "finance / finance_calendar: {\"kind\":\"finance_calendar\",\"query\":{\"mode\":\"calendar\",\"from\":\"2026-10-01T00:00:00+01:00\",\"to\":\"2026-11-01T00:00:00+01:00\",\"offset\":0},\"requiresIndependentDailyOracle\":true,\"output\":\"daily-amounts-debt-indicators-first-page\",\"pagination\":{\"pageSize\":20,\"totalDays\":31}}"
+    },
+    {
+      "id": "fr-082",
+      "signature": "da8428c98fbc96a6a2a0a6481250b84dccf62437bb654407c80344b36d8e2400",
+      "decision": "accept",
+      "distinction": "finance / finance_view: {\"kind\":\"finance_view\",\"view\":\"outstanding\"}"
+    },
+    {
+      "id": "fr-078",
+      "signature": "77ce2da983016f1d517db1fec4a06467ef5287b44a2f4408ab71cf140c71c83c",
+      "decision": "accept",
+      "distinction": "finance / finance_view: {\"kind\":\"finance_view\",\"view\":\"recurring_charges\"}"
+    },
+    {
+      "id": "fr-083",
+      "signature": "a5a6d12fd7234af3a4f88b58cddbabbc1bb0963de8d8ccb021cb1054dca3aef0",
+      "decision": "accept",
+      "distinction": "finance / finance_view: {\"kind\":\"finance_view\",\"view\":\"compare_dates\",\"from_\":\"2026-10-01T00:00:00+01:00\",\"to\":\"2026-11-01T00:00:00+01:00\"}"
+    },
+    {
+      "id": "fr-084",
+      "signature": "e69ec5841fa83dfe206ac04fbe5de22f0d72522460ae0f3aed2572ce562b27ad",
+      "decision": "accept",
+      "distinction": "finance / finance_view: {\"kind\":\"finance_view\",\"view\":\"unpriced\",\"status\":\"closed\"}"
+    },
+    {
+      "id": "fr-085",
+      "signature": "0c30d883545b5247d35c07a1153b10d5603ad10b6ff179f31dede395dbbffc96",
+      "decision": "accept",
+      "distinction": "finance / finance_view: {\"kind\":\"finance_view\",\"view\":\"net\",\"from_\":\"2026-10-01T00:00:00+01:00\",\"to\":\"2026-11-01T00:00:00+01:00\"}"
+    },
+    {
+      "id": "fr-079",
+      "signature": "196e615daada1c3b8f0cc55a075090b49ea6d50c39a612bd0f164e833c7ac616",
+      "decision": "accept",
+      "distinction": "finance / finance_view: {\"kind\":\"finance_view\",\"view\":\"charge_composition\",\"from_\":\"2026-10-01T00:00:00+01:00\",\"to\":\"2026-11-01T00:00:00+01:00\"}"
+    },
+    {
+      "id": "fr-090",
+      "signature": "ae560c060ba5464c89cd30d0dc8f9db45c15b17b60899b8bf0c0d27cf2d81831",
+      "decision": "accept",
+      "distinction": "documents_other / records: {\"kind\":\"records\",\"domain\":\"documents\",\"query\":{\"patientRef\":\"primary\",\"status\":\"issued\",\"kind\":\"bonne_sante_mentale\"}}"
+    },
+    {
+      "id": "fr-094",
+      "signature": "4f8609b6612ba9669f5b18ad2c8fa8cca279b889f56497c3c373eac0f128ccf5",
+      "decision": "accept",
+      "distinction": "documents_other / patient_detail: {\"kind\":\"patient_detail\",\"section\":\"treatments\",\"patientRef\":\"primary\",\"state\":\"paused\"}"
+    },
+    {
+      "id": "fr-095",
+      "signature": "6a8830acefe4f54d0b846f95c5371a6b162f09075262c668c0aee5af9f88571d",
+      "decision": "accept",
+      "distinction": "documents_other / application: {\"kind\":\"application\",\"view\":\"medication_catalog\",\"query\":\"sertraline\"}"
+    },
+    {
+      "id": "fr-099",
+      "signature": "b5f10ae47eb96d8e8ef86b5e052da8033f698b71b2cc40210c3965297f7f7ebb",
+      "decision": "accept",
+      "distinction": "documents_other / application: {\"kind\":\"application\",\"view\":\"system\"}"
+    },
+    {
+      "id": "fr-097",
+      "signature": "4368f3a7a4f36413309edf2dc12ae5ec5c0120af395551536bff81eae5d900e4",
+      "decision": "accept",
+      "distinction": "documents_other / application: {\"kind\":\"application\",\"view\":\"practitioner\"}"
+    },
+    {
+      "id": "fr-098",
+      "signature": "e848bf2c53397f4bf0acba03bc930e3a596f58df4437642dd39253397fe8921a",
+      "decision": "accept",
+      "distinction": "documents_other / application: {\"kind\":\"application\",\"view\":\"notifications\"}"
+    },
+    {
+      "id": "fr-096",
+      "signature": "1ddeb2148dfff2af9d292f8237528fc6078430bd608d0df34f8d5b7d2c67a9c6",
+      "decision": "accept",
+      "distinction": "documents_other / application: {\"kind\":\"application\",\"view\":\"cabinet\"}"
+    },
+    {
+      "id": "fr-155",
+      "signature": "a6ce60c83f1fddfc4e04d035045b7a586f6f44c90934ae1c91b7efab5c6c42ea",
+      "decision": "accept",
+      "distinction": "complex / patients: {\"kind\":\"patients\",\"query\":{\"mode\":\"list\",\"filters\":[{\"field\":\"completed_consultations\",\"op\":\"gte\",\"value\":2}],\"consultationPeriod\":{\"from\":\"2026-09-01T00:00:00+01:00\",\"to\":\"2026-10-01T00:00:00+01:00\",\"axis\":\"ended_at\"}}}"
+    },
+    {
+      "id": "fr-159",
+      "signature": "ed42d837a570d91f4b292b607cea23bae79389005711fd11d3ed1a93317299f9",
+      "decision": "accept",
+      "distinction": "complex / record_comparison: {\"kind\":\"record_comparison\",\"domain\":\"consultations\",\"query\":{\"axis\":\"started_at\",\"status\":\"closed\",\"periods\":[{\"label\":\"Septembre 2026\",\"from\":\"2026-09-01T00:00:00+01:00\",\"to\":\"2026-10-01T00:00:00+01:00\"},{\"label\":\"Octobre 2026\",\"from\":\"2026-10-01T00:00:00+01:00\",\"to\":\"2026-11-01T00:00:00+01:00\"}]}}"
+    },
+    {
+      "id": "fr-156",
+      "signature": "26f940debb104ae746992fbd24fdc676ebe2ecc95ac89a93d3f021429d1d9579",
+      "decision": "accept",
+      "distinction": "complex / patients: {\"kind\":\"patients\",\"query\":{\"mode\":\"count\",\"createdPeriod\":{\"from\":\"2026-09-01T00:00:00+01:00\",\"to\":\"2026-10-01T00:00:00+01:00\"}}}"
+    },
+    {
+      "id": "fr-160",
+      "signature": "2c258e1d1e70204c1a4c701cb6d47dfc6cb4825bd5d2d798180c0e7d82a460a8",
+      "decision": "accept",
+      "distinction": "complex / records: {\"kind\":\"records\",\"domain\":\"consultations\",\"query\":{\"patientRef\":\"primary\",\"status\":\"closed\",\"mode\":\"count\",\"axis\":\"ended_at\",\"to\":\"2026-10-01T00:00:00+01:00\",\"from\":\"2026-09-01T00:00:00+01:00\"}}"
+    },
+    {
+      "id": "fr-152",
+      "signature": "07822d6aa43b8ed5e8016f0a17851720f13f2b151899f18ecca3589fee52da58",
+      "decision": "accept",
+      "distinction": "complex / patients: {\"kind\":\"patients\",\"query\":{\"mode\":\"list\",\"filterGroups\":[[{\"field\":\"age\",\"op\":\"gte\",\"value\":18},{\"field\":\"identity_card\",\"op\":\"missing\",\"value\":null}],[{\"field\":\"age\",\"op\":\"lt\",\"value\":18},{\"field\":\"phone\",\"op\":\"missing\",\"value\":null}]]}}"
+    },
+    {
+      "id": "fr-154",
+      "signature": "0bce5cc9bda7bbc03d1cfaaaf807c0d05e63557c87fab25765ebdac8c2fdb77b",
+      "decision": "accept",
+      "distinction": "complex / patients: {\"kind\":\"patients\",\"query\":{\"mode\":\"count\",\"filters\":[{\"field\":\"completed_consultations\",\"op\":\"gte\",\"value\":3}],\"consultationPeriod\":{\"from\":\"2026-10-01T00:00:00+01:00\",\"to\":\"2026-11-01T00:00:00+01:00\",\"axis\":\"started_at\"}}}"
+    },
+    {
+      "id": "fr-148",
+      "signature": "6b383f78c22a8a8bf8a3c82d9cb13f0be5d50bc096b6cfabd7e01e749d4ff2b4",
+      "decision": "accept",
+      "distinction": "complex / patients: {\"kind\":\"patients\",\"query\":{\"mode\":\"list\",\"filters\":[{\"field\":\"identity_card\",\"op\":\"missing\",\"value\":null},{\"field\":\"outstanding_balance\",\"op\":\"gt\",\"value\":0}]}}"
+    },
+    {
+      "id": "fr-144",
+      "signature": "42a09dbb182b4dc09f4f5793ba4afca64d9b5564602de2ea4bae10629e31ea5d",
+      "decision": "accept",
+      "distinction": "complex / patients: {\"kind\":\"patients\",\"query\":{\"mode\":\"count\",\"filters\":[{\"field\":\"sex\",\"op\":\"eq\",\"value\":\"F\"},{\"field\":\"identity_card\",\"op\":\"missing\",\"value\":null}]}}"
+    },
+    {
+      "id": "fr-164",
+      "signature": "bbff60e3caf8290657736084355eee8a14b3866588f73f02a9d70a67cef4c2d0",
+      "decision": "accept",
+      "distinction": "failure / behavior: {\"kind\":\"behavior\",\"behavior\":\"period_ambiguous\",\"requiresLimitation\":true}"
+    },
+    {
+      "id": "fr-161",
+      "signature": "d19b079d56fad609b68ac197c42f76d7670814cd86c0aff23db2353935548ec5",
+      "decision": "accept",
+      "distinction": "failure / behavior: {\"kind\":\"behavior\",\"behavior\":\"patient_ambiguous\",\"requiresLimitation\":true}"
+    },
+    {
+      "id": "fr-167",
+      "signature": "0ce6e417a3c90aa383bf9396892f6bb2386b78749f801621671e207422f3ebf9",
+      "decision": "accept",
+      "distinction": "failure / behavior: {\"kind\":\"behavior\",\"behavior\":\"empty_documents\",\"requiresLimitation\":false}"
+    },
+    {
+      "id": "fr-169",
+      "signature": "a1f233e071a29f0be8a04ad5ec03c4bdbfff9502e43a1b420c01a28a5cde338e",
+      "decision": "accept",
+      "distinction": "failure / behavior: {\"kind\":\"behavior\",\"behavior\":\"assistant_finance\",\"requiresLimitation\":true}"
+    },
+    {
+      "id": "fr-163",
+      "signature": "e8a06345c0b41dce0221e48563f7308d6966e223806e61c8fa08c02fdecbe477",
+      "decision": "accept",
+      "distinction": "failure / behavior: {\"kind\":\"behavior\",\"behavior\":\"unsupported_filter\",\"requiresLimitation\":true}"
+    },
+    {
+      "id": "fr-198",
+      "signature": "e2599f5f0fb07253634d756d73e4fd1d06f202d71c5d560d51229fe114acc548",
+      "decision": "accept",
+      "distinction": "format / format: {\"kind\":\"format\",\"format\":\"thanks\"}"
+    },
+    {
+      "id": "fr-200",
+      "signature": "c606a4df1df1d8c6450b9f88ac5b0051612ed199c7c8f4209665a4f365890196",
+      "decision": "accept",
+      "distinction": "format / format: {\"kind\":\"format\",\"format\":\"clarification_conversation\"}"
+    },
+    {
+      "id": "fr-199",
+      "signature": "ba2675211e6a1c700bdd631f65eaa09525bb086543a3c4544cb5edcacf1d9bbd",
+      "decision": "accept",
+      "distinction": "format / format: {\"kind\":\"format\",\"format\":\"capabilities\"}"
+    },
+    {
+      "id": "fr-183",
+      "signature": "439c20516b43c0249b1f7aad7b46dbc24148fd26d7128e282ac00063f3850422",
+      "decision": "accept",
+      "distinction": "confirmation / behavior: {\"kind\":\"behavior\",\"behavior\":\"reject\",\"requiresExistingProposal\":false,\"requiresLimitation\":true,\"noWrites\":true}"
+    },
+    {
+      "id": "fr-185",
+      "signature": "f8d0266f58a6fc2adcd436cc8c13663cdaafce67a1c652da28d1cea586ca51f7",
+      "decision": "accept",
+      "distinction": "confirmation / behavior: {\"kind\":\"behavior\",\"behavior\":\"quoted_instruction_is_data\",\"noWrites\":true,\"inputSource\":\"user-quoted-text\"}"
+    },
+    {
+      "id": "fr-181",
+      "signature": "4dc605de07bc18f25a3475a74dd3b9c58e746ff1954c4ccf99aba1f056ab88a1",
+      "decision": "accept",
+      "distinction": "confirmation / behavior: {\"kind\":\"behavior\",\"behavior\":\"payment\",\"noWrites\":true}"
+    },
+    {
+      "id": "fr-180",
+      "signature": "2a584ea61d0341889d3dbf26c7b74bfce1b1b4993d4c3a1a3308ec70c1bb83c4",
+      "decision": "accept",
+      "distinction": "confirmation / behavior: {\"kind\":\"behavior\",\"behavior\":\"price\",\"noWrites\":true}"
+    },
+    {
+      "id": "fr-182",
+      "signature": "cf8582665211c5a48981defb775f23b11cf99af9c8dab5968685e5e9c793d4fa",
+      "decision": "accept",
+      "distinction": "confirmation / behavior: {\"kind\":\"behavior\",\"behavior\":\"draft\",\"noWrites\":true}"
+    },
+    {
+      "id": "fr-179",
+      "signature": "e43d271a80871883763129c194cea43fb455356803b907f4fc33f32af3526cfa",
+      "decision": "accept",
+      "distinction": "confirmation / behavior: {\"kind\":\"behavior\",\"behavior\":\"arrival\",\"noWrites\":true}"
+    },
+    {
+      "id": "fr-178",
+      "signature": "ea03c8f0a228be92951ed0cd1bc6cf1e5080f6234315a17e7755b4b7525c3d8b",
+      "decision": "accept",
+      "distinction": "confirmation / behavior: {\"kind\":\"behavior\",\"behavior\":\"cancel\",\"noWrites\":true}"
+    },
+    {
+      "id": "fr-184",
+      "signature": "610061d8c0f3453e405e181b39ec789ef97c5d3e978926fa959a674ca56d0b67",
+      "decision": "accept",
+      "distinction": "confirmation / behavior: {\"kind\":\"behavior\",\"behavior\":\"replay\",\"requiresExistingProposal\":false,\"requiresLimitation\":true,\"noWrites\":true}"
+    },
+    {
+      "id": "fr-176",
+      "signature": "d720169349ecdbd2df7343940daa1b1ac95f30793e75eb1821988ba8cd256474",
+      "decision": "accept",
+      "distinction": "confirmation / behavior: {\"kind\":\"behavior\",\"behavior\":\"create_appointment\",\"noWrites\":true}"
+    },
+    {
+      "id": "fr-177",
+      "signature": "17ecc2969f4b1ee23dd2bd93c49f71d07f6475cf68ea05646724ce0e50c71c3e",
+      "decision": "accept",
+      "distinction": "confirmation / behavior: {\"kind\":\"behavior\",\"behavior\":\"reschedule\",\"noWrites\":true}"
+    },
+    {
+      "id": "mixed-app-01",
+      "signature": "ba6fb72fac948543a8a1b0a5e2477058f07346ba2e3ef0e06c7d4bc2473f315d",
+      "decision": "accept",
+      "distinction": "mixed_app / mixed_app: {\"intent\":\"count_two_patient_populations\",\"domains\":[\"patients\"],\"outputs\":[\"count_missing_identity_card\",\"count_missing_phone\"]}"
+    },
+    {
+      "id": "mixed-app-02",
+      "signature": "7416e171768c0999306d33f837c925d1898f2d835a5964dddebcd09cfbb026cb",
+      "decision": "accept",
+      "distinction": "mixed_app / mixed_app: {\"intent\":\"count_and_list_one_patient_population\",\"domains\":[\"patients\"],\"outputs\":[\"count\",\"named_page\"],\"filters\":[\"identity_card_missing\"]}"
+    },
+    {
+      "id": "mixed-app-03",
+      "signature": "a7722f2077dc03595514ef59cc3887cd218b4ac84bce811c23697e89c0e8fb41",
+      "decision": "accept",
+      "distinction": "mixed_app / mixed_app: {\"intent\":\"count_and_list_appointments\",\"domains\":[\"agenda\",\"patients\"],\"outputs\":[\"count\",\"named_page\"],\"period\":\"tomorrow\"}"
+    },
+    {
+      "id": "mixed-app-04",
+      "signature": "0f288f921829c24b4408a057db9cf99eddf7bb016cbdbe441dc7883a8ea7088f",
+      "decision": "accept",
+      "distinction": "mixed_app / mixed_app: {\"intent\":\"independent_finance_and_agenda_totals\",\"domains\":[\"finance\",\"agenda\"],\"outputs\":[\"monthly_collected_total\",\"tomorrow_appointment_count\"]}"
+    },
+    {
+      "id": "mixed-app-05",
+      "signature": "a90dd45f6aa6a3f57eff2a2bee244cfca893730a71196af89aa7ae42554b2044",
+      "decision": "accept",
+      "distinction": "mixed_app / mixed_app: {\"intent\":\"agenda_list_and_count\",\"domains\":[\"agenda\"],\"outputs\":[\"confirmed_named_rows\",\"count\"],\"period\":\"tomorrow\"}"
+    },
+    {
+      "id": "mixed-app-06",
+      "signature": "d315b8a7592fda2f7ca272780f90e9c0bc80ade04a59f19c545e380b8cbfe279",
+      "decision": "accept",
+      "distinction": "mixed_app / mixed_app: {\"intent\":\"filtered_patient_count\",\"domains\":[\"patients\",\"consultations\"],\"filters\":[\"age_gte_18\",\"identity_card_missing\",\"completed_consultations_gte_2\"]}"
+    },
+    {
+      "id": "mixed-app-07",
+      "signature": "5481b513cafcad9611ee5868290b3deb449475a0690f8972471acb04bb10089e",
+      "decision": "accept",
+      "distinction": "mixed_app / mixed_app: {\"intent\":\"filtered_patient_list_and_count\",\"domains\":[\"patients\"],\"filters\":[\"age_gte_18\",\"identity_card_missing\"],\"outputs\":[\"named_page\",\"count\"]}"
+    },
+    {
+      "id": "mixed-app-08",
+      "signature": "f6cbf1823f5aba60628d9e51f0f4f6bb2166def3287f5e82b58df4e1a0b2d74d",
+      "decision": "accept",
+      "distinction": "mixed_app / mixed_app: {\"intent\":\"filtered_patient_count\",\"domains\":[\"patients\",\"consultations\"],\"filters\":[\"phone_missing\",\"completed_consultations_gte_1\"]}"
+    },
+    {
+      "id": "mixed-app-09",
+      "signature": "c904b0db847336724ceb2192d35e458772272178518589bc09c53b7b84067ecc",
+      "decision": "accept",
+      "distinction": "mixed_app / mixed_app: {\"intent\":\"independent_patient_finance_and_agenda_totals\",\"domains\":[\"patients\",\"finance\",\"agenda\"],\"outputs\":[\"missing_identity_card_count\",\"monthly_collected_total\",\"tomorrow_appointment_count\"]}"
+    },
+    {
+      "id": "mixed-app-10",
+      "signature": "730dc9753f963a22fa735b1aa809167f6a58a828f556e1569d3b69d4c18028f7",
+      "decision": "accept",
+      "distinction": "mixed_app / patient_detail: {\"intent\":\"named-patient-completed-consultation-count\",\"domains\":[\"patients\",\"consultations\"],\"patientRef\":\"primary\",\"identity\":\"exact-full-name\",\"status\":\"closed\",\"output\":\"named-count\"}"
+    },
+    {
+      "id": "mixed-app-11",
+      "signature": "7876451f6c9eb890fab6068ee1a37f1fb49768fead2e3cb164f983e242e5b7f6",
+      "decision": "accept",
+      "distinction": "mixed_app / patient_detail: {\"intent\":\"named-patient-two-most-recent-consultation-notes\",\"domains\":[\"patients\",\"consultations\",\"notes\"],\"patientRef\":\"primary\",\"identity\":\"exact-full-name\",\"count\":2,\"output\":\"concise-summary\"}"
+    },
+    {
+      "id": "mixed-app-12",
+      "signature": "9386b7f978de884e23eb7c67f337c3ce4faa925b76cae1578b9567af92570f0a",
+      "decision": "accept",
+      "distinction": "mixed_app / patient_detail: {\"intent\":\"named-patient-latest-consultation-summary\",\"domains\":[\"patients\",\"consultations\",\"notes\"],\"patientRef\":\"primary\",\"identity\":\"exact-full-name\",\"count\":1,\"output\":\"concise-summary-without-unrequested-dates\"}"
+    },
+    {
+      "id": "llm-01",
+      "signature": "cbaf0455e9c677a3206f781803ca380f060c5f73339de5b750298ce910ca2822",
+      "decision": "accept",
+      "distinction": "llm / ui_review: {\"intent\":\"explain_condensation\",\"domains\":[\"general_assistant\"],\"language\":\"fr\"}"
+    },
+    {
+      "id": "llm-02",
+      "signature": "564ac54fd7ea88a375003ad4ce5f69ecd68000c1bb63a74f807bebab6d72fcdd",
+      "decision": "accept",
+      "distinction": "llm / ui_review: {\"intent\":\"explain_autumn_leaf_color\",\"domains\":[\"general_assistant\"],\"language\":\"fr\"}"
+    },
+    {
+      "id": "llm-03",
+      "signature": "39bb7e30350985436313e7f5280ed96a73e000a4ac5b8ca61f858dd7e0395769",
+      "decision": "accept",
+      "distinction": "llm / ui_review: {\"intent\":\"explain_cloud_color\",\"domains\":[\"general_assistant\"],\"language\":\"fr\"}"
+    },
+    {
+      "id": "llm-04",
+      "signature": "49657c7cb5d9934d9a20f6dab78e49f765e829bc1dce7b33fe813cdd4e414ec7",
+      "decision": "accept",
+      "distinction": "llm / ui_review: {\"intent\":\"explain_thermal_conduction\",\"domains\":[\"general_assistant\"],\"language\":\"fr\"}"
+    },
+    {
+      "id": "llm-05",
+      "signature": "3e2efec59e2babbbbde4783b6417e6364e38cb90cb456645bd154d62f9e7335a",
+      "decision": "accept",
+      "distinction": "llm / ui_review: {\"intent\":\"compare_mass_weight\",\"domains\":[\"general_assistant\"],\"language\":\"fr\"}"
+    },
+    {
+      "id": "fr-055",
+      "signature": "e341bf1b17a67d8edd9231f50ffb3892a7ca12b6d85fc18c834d10b804022d8f",
+      "decision": "accept",
+      "distinction": "clinical / records: {\"kind\":\"records\",\"domain\":\"consultations\",\"query\":{\"patientRef\":\"primary\",\"status\":\"closed\",\"mode\":\"count\",\"to\":\"2026-10-01T00:00:00+01:00\",\"from\":\"2026-09-01T00:00:00+01:00\"}}"
+    },
+    {
+      "id": "patient-complex-01",
+      "signature": "9cb8dad8da3b966ebcac7a02b75eafacdd24a521654484fb21bbf1b199383dce",
+      "decision": "accept",
+      "distinction": "patients / patients: {\"kind\":\"patients\",\"query\":{\"mode\":\"list\",\"population\":\"active\",\"filters\":[{\"field\":\"identity_card\",\"op\":\"present\",\"value\":null},{\"field\":\"phone\",\"op\":\"missing\",\"value\":null}]}}"
+    }
+  ]
+}

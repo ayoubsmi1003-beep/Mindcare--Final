@@ -2,6 +2,7 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 import { runAlexa } from "@/server/alexa/orchestrator";
 import { planRequest } from "@/shared/alexa/request-plan";
 import { envoyerTourAlexa, clearAlexaConversation } from "@/services/alexa-turn";
+import { navigateAlexa, subscribeAlexaNavigation } from "@/services/alexa-navigation";
 import { alexaNavigationPath, type AlexaEvent, type TurnInput } from "@/shared/alexa/turn";
 import type { DbPort } from "@/services/db/port";
 
@@ -71,10 +72,29 @@ describe("client navigation contract", () => {
     vi.stubGlobal("fetch", async () => new Response('data: {"type":"sentence","text":"Partiel","sources":[],"navigation":{"target":"agenda"}}\n\n'));
     await expect(envoyerTourAlexa("Ouvre l'agenda")).rejects.toThrow();
   });
-  it("accepts a verified issued-document print navigation and builds the exact path", async () => {
+  it("accepts a patient-scoped issued-document print navigation and builds the exact path", async () => {
     const documentId="44444444-4444-4444-8444-444444444444";
-    vi.stubGlobal("fetch", async () => response({ target: "document", documentId, print: true }));
-    expect(await envoyerTourAlexa("Imprime l'ordonnance")).toMatchObject({ navigation: { target: "document", documentId, print: true } });
-    expect(alexaNavigationPath({ target: "document", documentId, print: true })).toBe(`/documents?document=${documentId}&print=1`);
+    vi.stubGlobal("fetch", async () => response({ target: "document", patientId, documentId, print: true }));
+    expect(await envoyerTourAlexa("Imprime l'ordonnance")).toMatchObject({ navigation: { target: "document", patientId, documentId, print: true } });
+    expect(alexaNavigationPath({ target: "document", patientId, documentId, print: true })).toBe(`/documents?patient=${patientId}&document=${documentId}&print=1`);
+  });
+  it("gives each Alexa print a fresh route so repeated requests trigger again", () => {
+    const paths: string[] = [];
+    const unsubscribe = subscribeAlexaNavigation(path => paths.push(path));
+    try {
+      navigateAlexa({ target: "document", patientId, documentId: "44444444-4444-4444-8444-444444444444", print: true });
+      navigateAlexa({ target: "document", patientId, documentId: "44444444-4444-4444-8444-444444444444", print: true });
+      expect(paths).toHaveLength(2);
+      const first = new URL(paths[0]!, "http://localhost");
+      const second = new URL(paths[1]!, "http://localhost");
+      expect(first.searchParams.get("document")).toBe("44444444-4444-4444-8444-444444444444");
+      expect(first.searchParams.get("patient")).toBe(patientId);
+      expect(first.searchParams.get("print")).toBe("1");
+      expect(first.searchParams.get("printAttemptId")).toMatch(/^[0-9a-f-]{36}$/u);
+      expect(second.searchParams.get("printAttemptId")).toMatch(/^[0-9a-f-]{36}$/u);
+      expect(second.searchParams.get("printAttemptId")).not.toBe(first.searchParams.get("printAttemptId"));
+    } finally {
+      unsubscribe();
+    }
   });
 });

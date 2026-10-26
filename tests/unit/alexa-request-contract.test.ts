@@ -1,14 +1,26 @@
 import {expect,it} from 'vitest';
-import {constrainCountDeclaration,countContractHints,countContractParts,explicitFrenchComparedMonthRanges,frenchPatientCompoundContract,frenchPatientCountContract,frenchRequestAdmission,frenchRequestedOutputs,requestedCountRead,requestedReadTool} from '@/shared/alexa/request-contract';
+import {constrainCountDeclaration,countContractHints,countContractParts,explicitFrenchComparedMonthRanges,frenchPatientCompoundContract,frenchPatientCountContract,frenchReadArgumentBindings,frenchRequestAdmission,frenchRequestedOutputs,isFrenchAlexaCapabilityQuestion,requestedCountRead,requestedReadTool} from '@/shared/alexa/request-contract';
 import type {RequestPart,SupportedCondition} from '@/shared/alexa/agent';
 const part=(conditions:SupportedCondition[]):RequestPart=>({id:'p',goal:'Nombre',tools:['query_patients'],conditions,dependsOn:[],status:'pending',resultRefs:[]});
+it.each([
+ ['Dans le dossier de Nadia Test, ajoute uniquement une date de fin au traitement ZOLOFT 25 mg : 27/10/2026.','update_treatment'],
+ ['Pour Nadia Test, fixe uniquement la date de fin du Zoloft 25 mg au 27/10/2026.','update_treatment'],
+ ['Pour Amel Bensaid, fixe la date de fin du traitement Sertraline 50 mg au 27/10/2026.','update_treatment'],
+ ['Alexa, modifie uniquement la fréquence du traitement de Lina Test à une prise par jour.','update_treatment'],
+ ['Pour Nadia Test, supprime uniquement la date de fin du Zoloft 25 mg et remets-le sans date de fin.','update_treatment'],
+ ['Pour Amel Bensaid, retire uniquement la date de fin du traitement Sertraline 50 mg et laisse-le sans date de fin.','update_treatment'],
+ ['Pour Nadia Test, arrête le traitement Zoloft 25 mg.','stop_treatment'],
+ ['Peux-tu cesser le traitement de Lina Test ?','stop_treatment'],
+])('admits explicit French medication mutations through the confirmed action tool: %s',(text,preparationAction)=>{
+ expect(frenchRequestAdmission(text,false)).toMatchObject({tools:['prepare_action'],preparationAction});
+});
 it('leaves a count plus another read to native multi-output interpretation',()=>{
  expect(frenchPatientCountContract('Combien de patients actifs ? Lis les notes du dossier courant.')).toBeNull();
  expect(frenchPatientCountContract('Combien de patients actifs et explique leur répartition ?')).toBeNull();
  expect(frenchPatientCountContract('Combien de patients sans numéro de document d’identité et combien de recettes ?')).toBeNull();
 });
 it('routes a named national-identity lookup through the patient profile gate',()=>{
- const admission=frenchRequestAdmission('Quel numéro national est enregistré pour Lina Ziani ?',false);
+ const admission=frenchRequestAdmission('Quel numéro national est enregistré pour Lina Test ?',false);
  expect(admission.tools).toEqual(['get_patient_context']);
  expect(admission.patientSection).toBe('profile');
 });
@@ -17,6 +29,11 @@ it('recognizes a single total over the explicitly requested active and archived 
  const contract=frenchPatientCountContract('Combien de patients au total, actifs et archivés ?');
  expect(contract?.clauses).toEqual(['Combien de patients au total, actifs et archivés ?']);
  expect(countContractParts(contract!)).toMatchObject([{population:'all',conditions:[],tools:['query_patients']}]);
+});
+it('keeps separate missing-identity and missing-phone counts as two typed clauses',()=>{
+ const contract=frenchPatientCountContract('Compte les patients sans carte d’identité et ceux sans téléphone, séparément.');
+ expect(contract?.clauses).toHaveLength(2);
+ expect(countContractHints(contract!).map(item=>item.conditions)).toEqual([['identity_card:missing'],['phone:missing']]);
 });
 it('converts an explicitly recorded birth date into a positive patient filter',()=>{
  const contract=frenchPatientCountContract('Compte les patients avec une date de naissance renseignée.');
@@ -38,6 +55,39 @@ it('keeps a single named month on a completed-consultation request and anchors i
  const admission=frenchRequestAdmission('Combien de consultations terminées du dossier courant en septembre ?',false,'2026-10-25T12:00:00+01:00');
  expect(admission).toMatchObject({tools:['query_consultations'],consultationMode:'count',consultationStatus:'closed',from:'2026-09-01T00:00:00+01:00',to:'2026-10-01T00:00:00+01:00',dateAxis:'started_at'});
 });
+it('binds a selected-patient pending-payment month to payment creation dates',()=>{
+ const text='Liste les paiements en attente du patient sélectionné en octobre 2026.';
+ const admission=frenchRequestAdmission(text,false,'2026-10-25T12:00:00+01:00');
+ expect(admission).toMatchObject({tools:['query_finance'],financeState:'pending',from:'2026-10-01T00:00:00+01:00',to:'2026-11-01T00:00:00+01:00'});
+ expect(frenchReadArgumentBindings(admission,'query_finance')).toMatchObject({state:'pending',from:'2026-10-01T00:00:00+01:00',to:'2026-11-01T00:00:00+01:00'});
+});
+it('routes appointment requests awaiting treatment to the reception queue',()=>{
+ expect(frenchRequestAdmission('Combien de demandes de rendez-vous restent à traiter ?',false)).toMatchObject({tools:['query_app'],applicationView:'reception'});
+});
+it('preserves an explicit single-day range and issued status in a patient document read',()=>{
+ const text='Quels documents émis concernent le dossier courant le 1 janvier 1900 ?';
+ const admission=frenchRequestAdmission(text,false);
+ expect(admission).toMatchObject({tools:['query_documents'],documentStatus:'issued',from:'1900-01-01T00:00:00+01:00',to:'1900-01-02T00:00:00+01:00'});
+ expect(frenchReadArgumentBindings(admission,'query_documents')).toMatchObject({status:'issued',from:'1900-01-01T00:00:00+01:00',to:'1900-01-02T00:00:00+01:00'});
+});
+it('routes a daily finance calendar request to its bounded calendar mode',()=>{
+ const text='Affiche la première page du calendrier financier d’octobre 2026 avec les montants quotidiens et les indicateurs d’impayés.';
+ const admission=frenchRequestAdmission(text,false,'2026-10-25T12:00:00+01:00');
+ expect(admission).toMatchObject({tools:['query_finance'],financeMode:'calendar',from:'2026-10-01T00:00:00+01:00',to:'2026-11-01T00:00:00+01:00'});
+ expect(frenchReadArgumentBindings(admission,'query_finance')).toMatchObject({mode:'calendar',from:'2026-10-01T00:00:00+01:00',to:'2026-11-01T00:00:00+01:00'});
+});
+it.each([
+ ['Comment les charges sont-elles réparties par catégorie en octobre 2026 ?',{tools:['query_finance'],financeMode:'composition',from:'2026-10-01T00:00:00+01:00',to:'2026-11-01T00:00:00+01:00'}],
+ ['Quel est le résultat net du cabinet pour octobre 2026 ?',{tools:['query_finance'],financeMode:'overview',from:'2026-10-01T00:00:00+01:00',to:'2026-11-01T00:00:00+01:00'}],
+ ['Quel montant représentent les paiements encaissés du 1 octobre 2026 au 31 octobre 2026 ?',{tools:['query_finance'],financeMode:'totals',financeState:'collected',from:'2026-10-01T00:00:00+01:00',to:'2026-11-01T00:00:00+01:00'}],
+ ['Quel montant a été encaissé par le cabinet en octobre 2026 ?',{tools:['query_finance'],financeMode:'totals',financeState:'collected',from:'2026-10-01T00:00:00+01:00',to:'2026-11-01T00:00:00+01:00'}],
+ ['Quel solde reste à encaisser, toutes dates confondues ?',{tools:['query_finance'],financeMode:'totals',financeState:'all'}],
+ ['Quelle différence entre recettes encaissées et paiements créés en octobre 2026 ?',{tools:['query_finance'],financeMode:'totals',financeState:'all',from:'2026-10-01T00:00:00+01:00',to:'2026-11-01T00:00:00+01:00'}],
+ ['Combien de consultations terminées n’ont pas de tarif ?',{tools:['query_finance'],financeMode:'totals',financeState:'all',financeConsultationStatus:'closed'}],
+])('keeps the requested finance view and scope for %s', (text,expected)=>{
+ const admission=frenchRequestAdmission(text,false,'2026-10-25T12:00:00+01:00');
+ expect(admission).toMatchObject(expected);
+});
 it('routes a named last-consultation summary to exactly the latest visit',()=>{
  const admission=frenchRequestAdmission('Résume la dernière consultation de Amel Bensaid.',false);
  expect(admission).toMatchObject({tools:['get_patient_context'],patientSection:'summary',consultationCount:1});
@@ -50,8 +100,8 @@ it('summarizes notes from a named patient latest consultation without asking abo
 it('keeps full note transcription available only when the user explicitly asks for it',()=>{
  expect(frenchRequestAdmission('Lis le texte intégral des notes de la dernière consultation de Amel Bensaid.',false)).toMatchObject({tools:['get_patient_context'],patientSection:'notes'});
 });
-it('routes a request to present clinical events chronologically as a concise patient summary',()=>{
- expect(frenchRequestAdmission('Présente les événements cliniques dans leur ordre chronologique.',false)).toMatchObject({tools:['get_patient_context'],patientSection:'summary'});
+it('routes an explicit chronological clinical-events request to the timeline reader',()=>{
+  expect(frenchRequestAdmission('Présente les événements cliniques du patient sélectionné dans leur ordre chronologique.',false)).toMatchObject({tools:['get_patient_context'],patientSection:'timeline'});
 });
 it.each([
  'Présente les événements cliniques dans leur ordre chronologique et indique les échelles enregistrées pour Amel Bensaid.',
@@ -70,6 +120,31 @@ it.each([
 it('uses the close date only when the question explicitly names that date axis',()=>{
  const admission=frenchRequestAdmission('Combien de consultations terminées du dossier courant à la date de clôture en septembre 2026 ?',false,'2026-10-25T12:00:00+01:00');
  expect(admission).toMatchObject({tools:['query_consultations'],from:'2026-09-01T00:00:00+01:00',to:'2026-10-01T00:00:00+01:00',dateAxis:'ended_at'});
+});
+it.each([
+ ['du 1 septembre 2026 au 30 septembre 2026',{from:'2026-09-01T00:00:00+01:00',to:'2026-10-01T00:00:00+01:00'}],
+ ['entre le 1er septembre 2026 et le 30 septembre 2026',{from:'2026-09-01T00:00:00+01:00',to:'2026-10-01T00:00:00+01:00'}],
+ ['du 01/09/2026 au 30/09/2026',{from:'2026-09-01T00:00:00+01:00',to:'2026-10-01T00:00:00+01:00'}],
+])('keeps explicit civil date ranges and the requested consultation date axis: %s',(period,range)=>{
+ expect(frenchRequestAdmission(`Compte les consultations du dossier courant selon la date de clôture ${period}.`,false,'2026-10-25T12:00:00+01:00')).toMatchObject({tools:['query_consultations'],consultationMode:'count',consultationStatus:'closed',dateAxis:'ended_at',...range});
+});
+it('routes documented suspended treatments on the open patient dossier to its treatment reader',()=>{
+ expect(frenchRequestAdmission('Quels traitements suspendus sont documentés ?',false)).toMatchObject({tools:['get_patient_context'],patientSection:'treatments',treatmentState:'paused'});
+});
+it('recognizes application-capability and clarification questions as public assistant questions',()=>{
+ for(const text of ['Quelles lectures peux-tu effectuer dans MindCare ?','Peux-tu demander une précision lorsque ma question est ambiguë ?']){
+  expect(isFrenchAlexaCapabilityQuestion(text)).toBe(true);
+  expect(frenchRequestAdmission(text,true).tools).toEqual(['answer_general']);
+ }
+});
+it.each([
+ 'Pourquoi un miroir se couvre-t-il de buée ?',
+ 'Pourquoi les feuilles changent-elles de couleur en automne ?',
+ 'Pourquoi les nuages paraissent-ils blancs ?',
+ 'Pourquoi le métal semble-t-il plus froid que le bois à température égale ?',
+ 'Quelle différence y a-t-il entre la masse et le poids ?',
+])('routes an open French general question to MiniCPM without an application read: %s',text=>{
+ expect(frenchRequestAdmission(text,true).tools).toEqual(['answer_general']);
 });
 it('keeps two compared clinical months as separate periods and routes to consultation counts',()=>{
  const text='Compare les consultations terminées de septembre et d’octobre 2026.';

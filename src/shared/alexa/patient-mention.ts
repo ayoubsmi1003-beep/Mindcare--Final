@@ -4,7 +4,7 @@ const common = new Set([
   "secondaire", "secondaires", "cabinet", "rendez-vous", "rendez",
   "document", "documents", "certificat", "certificats", "justification", "justifications", "justificatif", "justificatifs", "brouillon", "brouillons", "emis", "emise", "emises", "delivre", "delivree", "delivres", "delivrees",
   "termine", "terminee", "termines", "terminees", "clos", "close", "closes", "cloture", "cloturee", "clotures", "cloturees", "ouvert", "ouverte", "ouverts", "ouvertes", "signe", "signee", "signes", "signees", "non",
-  "brut", "brute", "bruts", "brutes", "actif", "active", "actifs", "actives", "inactif", "inactive", "inactifs", "inactives", "principal", "principale", "principaux", "principales", "arrete", "arretee", "arretes", "arretees", "resolu", "resolue", "resolus", "resolues", "nouveau", "nouvelle", "nouveaux", "nouvelles", "suivi", "paiement", "paiements", "urgence",
+  "brut", "brute", "bruts", "brutes", "actif", "active", "actifs", "actives", "inactif", "inactive", "inactifs", "inactives", "principal", "principale", "principaux", "principales", "arrete", "arretee", "arretes", "arretees", "suspendu", "suspendue", "suspendus", "suspendues", "documente", "documentee", "documentes", "documentees", "resolu", "resolue", "resolus", "resolues", "nouveau", "nouvelle", "nouveaux", "nouvelles", "suivi", "paiement", "paiements", "urgence",
   "la", "le", "les", "un", "une", "du", "des", "ses", "son", "sa", "ce", "cet", "cette", "mon", "ma", "mes", "notre", "nos",
   "derniere", "dernieres", "dernier", "derniers", "patient", "patiente", "patients", "consultation", "consultations", "seance", "seances",
   "traitement", "traitements", "medicament", "medicaments", "debut", "cas", "dossier", "clinique", "synthetique", "complet", "complete", "medical", "medicale", "psychiatrique", "global", "globale",
@@ -16,10 +16,11 @@ const common = new Set([
   "selon", "dsm", "livre", "livres", "reference", "references",
   "diagnostic", "diagnostics", "note", "notes", "cliniques", "symptome", "symptomes", "anxiete", "depression", "sommeil", "humeur", "dose", "posologie", "frequence",
   "trouble", "troubles", "bipolaire", "bipolaires", "schizophrenie",
-  "sur", "concernant", "svp", "s'il", "s’il", "please", "merci", "score", "scores", "echelle", "echelles", "ordonnance", "cours",
+  "sur", "concernant", "svp", "s'il", "s’il", "please", "merci", "score", "scores", "echelle", "echelles", "ordonnance", "cours", "tarif", "tarifs", "prix", "cout", "couts",
   "est", "est-il", "est-elle", "sont", "sont-ils", "sont-elles", "ont", "ont-ils", "ont-elles", "prend", "prend-il", "prend-elle", "indique", "indiquent", "indiquent-elles", "enregistre", "enregistree", "enregistres", "enregistrees", "ete", "fait", "font", "a-t-il", "a-t-elle", "contient", "contient-il", "contient-elle", "contiennent", "comprend", "comprend-il", "comporte", "comporte-t-il", "efficace", "efficaces", "ou", "aucun", "aucune", "quel", "quelle", "quels", "quelles", "suivant", "prochain", "suivante", "prochaine", "dit", "disent", "montre", "montrent", "auquel", "auxquels",
   "retenu", "retenue", "retenus", "retenues", "consigne", "consignee", "consignes", "consignees", "renseigne", "renseignee", "renseignes", "renseignees", "rapporte", "rapportee", "rapportes", "rapportees", "mentionne", "mentionnee", "mentionnes", "mentionnees",
   "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche", "janvier", "fevrier", "mars", "avril", "mai", "juin", "juillet", "aout", "septembre", "octobre", "novembre", "decembre",
+  "alger", "oran", "constantine", "blida", "annaba", "tlemcen", "bejaia", "bejaïa", "setif", "sétif", "batna", "biskra", "mostaganem", "boumerdes", "tipaza",
   "المريض", "للمريض", "المريضة", "للمريضة", "الحالة", "العلاج", "الدواء", "الجلسة", "الجلسات", "الاخيرة", "الأخيرة", "الحالي", "آخر", "اخر", "السابق", "السابقة", "قبل", "بعد", "مع", "و",
   "هذا", "هذه", "حسب", "المراجع", "المصادر", "الكتاب", "الكتب", "الملف", "ملف", "حالة", "الكاملة", "كاملة",
   "او", "أو", "هو", "هي", "واش", "وش", "مسجل", "مسجلة", "التالي", "قال", "تاعو", "تاعها",
@@ -49,7 +50,7 @@ export function parsePatientMention(text: string): PatientMention {
   const names = new Map<string, string>();
   const normalized = folded(text);
   const explicitPatient = /\b(?:patiente?s?|dossier)\b|المريض|المريضة|ملف/u.test(normalized);
-  const localFieldPattern = /\b(?:resume|synthese|consultations?|seances?|traitements?|medicaments?|diagnostics?|notes?|subjectifs?|subjectives?|objectifs?|objectives?|dossier|patiente?s?|prend|dose|posologie|frequence|ordonnance|symptomes?|scores?|echelles?|sommeil|humeur|agenda|rdv|rendez[- ]vous|historique|documents?|certificats?|justifications?|brouillons?|telephones?|coordonnees?|adresses?|contacts?|naissance|identite|identifiants?|carte nationale|cni|cin|numero national|sexe|situation familiale|paiements?)\b|ملخص|لخص|جلس|استشار|العلاج|الدواء|الملاحظات|اعراض|الاعراض/gu;
+  const localFieldPattern = /\b(?:resume|synthese|consultations?|seances?|traitements?|medicaments?|diagnostics?|notes?|subjectifs?|subjectives?|objectifs?|objectives?|dossier|patiente?s?|prend|dose|posologie|frequence|ordonn?ances?|symptomes?|scores?|echelles?|sommeil|humeur|agenda|rdv|rendez[- ]vous|historique|documents?|certificats?|justifications?|brouillons?|telephones?|coordonnees?|adresses?|contacts?|naissance|identite|identifiants?|carte nationale|cni|cin|numero national|sexe|situation familiale|paiements?)\b|ملخص|لخص|جلس|استشار|العلاج|الدواء|الملاحظات|اعراض|الاعراض/gu;
   const localFieldRead = [...normalized.matchAll(localFieldPattern)].length > 0;
   // A single noun in a general symptom/diagnosis question is a topic.
   // Named single patients remain explicit through patient/dossier or quotes.
@@ -94,6 +95,27 @@ export function parsePatientMention(text: string): PatientMention {
     if (generalSingleTopic(candidate, text.slice(0, start))) continue;
     if (candidate && isMedicationName(candidate) && /^(?:traitements?|m[eé]dicaments?)\s/iu.test(match[0])) continue;
     add(candidate, start);
+  }
+  // In a French count question the patient can be the subject after the verb:
+  // « Combien de consultations terminées compte Nadia Test ? ».
+  const namedCountSubject = text.matchAll(/\b(?:combien|nombre|total)\b[^.!?]{0,80}\b(?:consultations?|s[eé]ances?)\b[^.!?]{0,80}\bcompte\s+/giu);
+  for (const match of namedCountSubject) {
+    const start = match.index + match[0].length;
+    const candidate = candidateName(text.slice(start, start + 100));
+    if (candidate) add(candidate, start);
+  }
+  // Appointment requests sometimes put the patient's name after "à". Keep
+  // this narrow: require a multiword identity and an explicit date plus time
+  // after it, so clock times and locations do not become patient names.
+  const appointmentAt = text.matchAll(/\b(?:rendez[- ]vous|rdv)\b[^.!?]{0,100}?(?<![\p{L}\p{N}_])à\s+/giu);
+  for (const match of appointmentAt) {
+    const start = match.index + match[0].length;
+    const candidate = candidateName(text.slice(start, start + 100));
+    if (!candidate || candidate.split(/\s+/u).length < 2) continue;
+    const after = text.slice(start + candidate.length);
+    const hasDate = /\b(?:aujourd'hui|aujourd’hui|demain|après-demain|apres-demain|(?:lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche)(?:\s+\d{1,2})?|\d{1,2}[/.\-]\d{1,2}(?:[/.\-]\d{2,4})?|\d{1,2}\s+(?:janvier|février|fevrier|mars|avril|mai|juin|juillet|août|aout|septembre|octobre|novembre|décembre|decembre))\b/iu.test(after);
+    const hasTime = /\b\d{1,2}\s*(?:h|:)\s*\d{0,2}\b/iu.test(after);
+    if (hasDate && hasTime) add(candidate, start);
   }
   // Look ahead for candidate words without consuming a later name introducer
   // (e.g. "de Hamilton pour Nadia Test" or "de Nadia pour Karim").

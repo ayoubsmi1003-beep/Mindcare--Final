@@ -3,7 +3,7 @@ import {explicitAgentPeriod,explicitAgendaClockWindow} from "./agent-period";
 import {patientQueryContract,patientQueryPeriod} from '@/shared/alexa/patient-query-contract';
 import {agendaIdentityText,nativeAgendaStatusContract} from '@/shared/alexa/agenda-plan';
 import {presentAgentResults} from './answer-presentation';
-import {canAnswerGeneralAlexa} from "./model-gateway";
+import {canAnswerGeneralAlexa,isFrenchQuotedInstructionPolicyQuestion} from "./model-gateway";
 import {parsePatientMention} from "@/shared/alexa/patient-mention";
 import {explicitFrenchComparedMonthRanges,explicitFrenchDayRange,frenchReadArgumentBindings,requestedCountRead,isAdministrativeReview,requestedReadTool,frenchRequestedOutputs,constrainRequestedOutputs,frenchPatientCompoundContract,constrainCompoundDeclaration,compoundContractParts,compoundContractHints,frenchPatientCountContract,frenchRequestAdmission,countContractHints,countContractParts,constrainCountDeclaration,patientConditionsGrounded,explicitPatientCountFilterGroups} from "@/shared/alexa/request-contract";
 import {noteReadQuerySchema,noteCursorSchema,noteContinuation,noteSearchRequested,noteQueryGrounded} from "@/shared/alexa/note-query";
@@ -20,7 +20,7 @@ import { localModelFailureCode, type LocalCompletion, type LocalMessage, type Lo
 export const AGENT_LIMITS = { rounds:ALEXA_NATIVE_BUDGET.rounds, calls:ALEXA_NATIVE_BUDGET.calls, parallel:ALEXA_NATIVE_BUDGET.parallel, deadlineMs:ALEXA_NATIVE_DEADLINE_MS, ttlMs: 900000 } as const;
 function unsupportedClinicalTimelineRestriction(text:string):boolean {
  const normalized=text.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase();
- const timeline=/\b(?:chronologie|evenements? cliniques?|historique (?:clinique|du dossier))\b/u.test(normalized);
+ const timeline=/\b(?:chronologie|evenements? (?:cliniques?|du dossier)|historique (?:clinique|du dossier))\b/u.test(normalized);
  const period=/\b(?:janvier|fevrier|mars|avril|mai|juin|juillet|aout|septembre|octobre|novembre|decembre|depuis|avant|apres|entre|hier|semaine|mois|annee)\b|\b(?:19|20)\d{2}\b|\b\d{1,2}[/-]\d{1,2}\b/u.test(normalized);
  return timeline&&period;
 }
@@ -103,12 +103,13 @@ function directSinglePatientReadCall(text:string,clientTurnId:string,selectedPat
  if(/\b(?:et|puis|ainsi que)\b|[;\n]/u.test(plain))return null;
  const scope=frenchRequestAdmission(text,false,asOf),tool=scope.tools?.length===1?scope.tools[0]:requestedReadTool(text,text);
  const mention=parsePatientMention(text);
+ if(mention.status==='ambiguous')return null;
  const noteScopeKnown=scope.unboundedPeriod===true||!!scope.from&&!!scope.to;
  const explicitNoteRead=!!scope.noteQuery&&noteSearchRequested(text)||(!!scope.noteArea||/\b(?:cinq|5)\s+(?:parties|notes|rubriques)\b/u.test(plain))&&!!scope.from&&!!scope.to||/\bmesures\b[^.!?]*\bevolu\w*|\bdifficulte\w*\b[^.!?]*\bune ancienne consultation\b/u.test(plain);
  const patientContextRead=tool==='get_patient_context'&&!!scope.patientSection&&(!!selectedPatientId||mention.status==='named')&&(scope.patientSection!=='notes'||noteScopeKnown&&explicitNoteRead);
  const consultationCount=tool==='query_consultations'&&scope.consultationMode==='count'&&['all','closed','open','unsigned'].includes(scope.consultationStatus??'')&&scope.unboundedPeriod===true&&(!!selectedPatientId||mention.status==='named');
  if(scope.tools?.length!==1||scope.tools[0]!==tool||(!patientContextRead&&!consultationCount))return null;
- const id='requested_1',args={partIds:[id],...frenchReadArgumentBindings(scope,tool),...(consultationCount&&mention.status==='named'?{patientName:mention.name}:{})};
+ const id='requested_1',args={partIds:[id],...frenchReadArgumentBindings(scope,tool),...(mention.status==='named'?{patientName:mention.name}:selectedPatientId?{patientId:selectedPatientId}:{})};
  if(!agentSchemas[tool].safeParse(args).success)return null;
  return {part:{id,goal:text,tools:[tool],conditions:[],dependsOn:[],status:'pending',resultRefs:[]},call:{id:`direct-${clientTurnId}-${id}`,name:tool,args}};
 }
@@ -237,10 +238,35 @@ function answerLatestNoteReference(result:AgentResult,asOf:string):AgentResult {
 }
 function directPublicAnswerCall(text:string,clientTurnId:string):{part:RequestPart;call:AgentCall}|null {
  const scope=frenchRequestAdmission(text,canAnswerGeneralAlexa(text));
- if(scope.tools?.length!==1||scope.tools[0]!=='answer_general')return null;
+ if(!isFrenchQuotedInstructionPolicyQuestion(text)&&(scope.tools?.length!==1||scope.tools[0]!=='answer_general'))return null;
  const id='requested_1',args={partIds:[id],question:text};
  if(!agentSchemas.answer_general.safeParse(args).success)return null;
  return {part:{id,goal:text,tools:['answer_general'],conditions:[],dependsOn:[],status:'pending',resultRefs:[]},call:{id:`direct-${clientTurnId}-${id}`,name:'answer_general',args}};
+}
+function directFinanceReadCall(text:string,clientTurnId:string,selectedPatientId:string|null,asOf:string):{part:RequestPart;call:AgentCall}|null{
+ const scope=frenchRequestAdmission(text,false,asOf);
+ if(scope.tools?.length!==1||scope.tools[0]!=='query_finance')return null;
+ const plain=text.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase();
+ const recurringCharges=scope.financeMode==='charges'&&/\bcharges?\b/u.test(plain)&&/\brecurrent\w*\b/u.test(plain);
+ const balanceAllTime=scope.financeMode==='totals'&&scope.financeState==='all';
+ const calendar=scope.financeMode==='calendar';
+ const cabinetView=!!scope.financeMode&&['overview','charges','composition','evolution','attention','calendar'].includes(scope.financeMode);
+ const unpriced=scope.financeMode==='totals'&&scope.financeState==='all'&&scope.financeConsultationStatus==='closed';
+ const outstandingBalance=balanceAllTime&&/\b(?:solde|reste a encaisser|impayes?)\b/u.test(plain);
+ const paymentList=!scope.financeMode&&!!scope.financeState&&!!scope.from&&!!scope.to&&/\b(?:liste\w*|affich\w*|montre\w*|quels?|quelles?)\b/u.test(plain)&&/\bpaiements?\b/u.test(plain);
+ const paymentTotals=scope.financeMode==='totals'&&scope.financeState==='collected'&&!!scope.from&&!!scope.to&&!unpriced;
+ if(!recurringCharges&&!balanceAllTime&&!calendar&&!cabinetView&&!paymentList&&!paymentTotals)return null;
+ const mention=parsePatientMention(text);if(mention.status==='ambiguous')return null;
+ if(cabinetView&&mention.status!=='none')return null;
+ const id='requested_1',mode=scope.financeMode??'list';
+ let from=scope.from,to=scope.to;
+ if(recurringCharges&&!from&&!to){const match=/^((?:19|20)\d{2})-(\d{2})-\d{2}/u.exec(asOf);if(!match)return null;const year=Number(match[1]),month=Number(match[2]);if(month<1||month>12)return null;const nextYear=month===12?year+1:year,nextMonth=month===12?1:month+1;from=`${year}-${String(month).padStart(2,'0')}-01T00:00:00+01:00`;to=`${nextYear}-${String(nextMonth).padStart(2,'0')}-01T00:00:00+01:00`;}
+ if((calendar||cabinetView||recurringCharges)&&(!from||!to))return null;
+ const args:Record<string,unknown>={partIds:[id],...frenchReadArgumentBindings(scope,'query_finance'),mode,...(from&&to?{from,to}:{}),...(balanceAllTime?{state:unpriced?'all' as const:outstandingBalance?'pending' as const:'all' as const}:{}),...(unpriced?{consultationStatus:'closed' as const}:{})};
+ const patientScoped=!cabinetView&&(/\b(?:patient(?:e)?|dossier|son|sa|ses|ce dossier)\b/u.test(plain)||mention.status==='named');
+ if(patientScoped&&mention.status==='named')args['patientName']=mention.name;else if(patientScoped&&selectedPatientId&&!args['patientId'])args['patientId']=selectedPatientId;
+ if(!agentSchemas.query_finance.safeParse(args).success)return null;
+ return {part:{id,goal:text,tools:['query_finance'],conditions:[],dependsOn:[],status:'pending',resultRefs:[]},call:{id:`direct-${clientTurnId}-finance-read`,name:'query_finance',args}};
 }
 function directGlobalNavigationCall(text:string,clientTurnId:string):{part:RequestPart;call:AgentCall}|null {
  const scope=frenchRequestAdmission(text,false),target=scope.navigationTarget;
@@ -261,11 +287,11 @@ function directGlobalNavigationCall(text:string,clientTurnId:string):{part:Reque
  if(!agentSchemas.navigate.safeParse(args).success)return null;
  return {part:{id,goal:text,tools:['navigate'],conditions:[],dependsOn:[],status:'pending',resultRefs:[]},call:{id:`direct-${clientTurnId}-${id}`,name:'navigate',args}};
 }
-function directNotificationsReadCall(text:string,clientTurnId:string,requestedOutputs:readonly string[]|null):{part:RequestPart;call:AgentCall}|null {
+function directOfficeReadCall(text:string,clientTurnId:string,requestedOutputs:readonly string[]|null):{part:RequestPart;call:AgentCall}|null {
  if(requestedOutputs&&requestedOutputs.length>1)return null;
  if(/\b(?:et|puis|ensuite|ou|mais)\b|[;\n]/iu.test(text))return null;
  const scope=frenchRequestAdmission(text,false);
- if(scope.tools?.length!==1||scope.tools[0]!=='query_app'||scope.applicationView!=='notifications')return null;
+ if(scope.tools?.length!==1||scope.tools[0]!=='query_app'||!['cabinet','practitioner','notifications','system'].includes(scope.applicationView??''))return null;
  const id='requested_1',args={partIds:[id],...frenchReadArgumentBindings(scope,'query_app')};
  if(!agentSchemas.query_app.safeParse(args).success)return null;
  return {part:{id,goal:text,tools:['query_app'],conditions:[],dependsOn:[],status:'pending',resultRefs:[]},call:{id:`direct-${clientTurnId}-${id}`,name:'query_app',args}};
@@ -309,15 +335,80 @@ function directConsultationMonthComparison(text:string,clientTurnId:string,selec
  return {parts,steps};
 }
 interface DirectWorkflowStep {call:AgentCall;partIds:string[];goal:string;after?:string;reviewDisclaimer?:boolean;comparisonLabel?:string}
-interface DirectWorkflow {parts:RequestPart[];steps:DirectWorkflowStep[]}
+interface DirectWorkflow {parts:RequestPart[];steps:DirectWorkflowStep[];presentation?:{kind:'created-collected-difference';from:string}}
+function directFinanceComparisonWorkflow(text:string,clientTurnId:string,asOf:string):DirectWorkflow|null{
+ const plain=text.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase(),scope=frenchRequestAdmission(text,false,asOf);
+ if(!/\b(?:difference|compar\w*)\b/u.test(plain)||!/\brecettes? encaisse\w*\b/u.test(plain)||!/\bpaiements? cree\w*\b/u.test(plain)||scope.tools?.length!==1||scope.tools[0]!=='query_finance'||scope.financeMode!=='totals'||!scope.from||!scope.to)return null;
+ const month=new Intl.DateTimeFormat('fr-FR',{month:'long',year:'numeric',timeZone:'Africa/Algiers'}).format(new Date(scope.from));
+ const parts:RequestPart[]=[
+  {id:'requested_1',goal:`Paiements créés en ${month}`,tools:['query_finance'],conditions:[],dependsOn:[],status:'pending',resultRefs:[]},
+  {id:'requested_2',goal:`Recettes encaissées en ${month}`,tools:['query_finance'],conditions:[],dependsOn:[],status:'pending',resultRefs:[]},
+ ];
+ const steps:DirectWorkflowStep[]=parts.map((part,index)=>({partIds:[part.id],goal:part.goal,call:{id:`direct-${clientTurnId}-finance-${index===0?'created':'collected'}`,name:'query_finance',args:{partIds:[part.id],mode:'totals',state:index===0?'all':'collected',from:scope.from,to:scope.to}}}));
+ if(steps.some(step=>!agentSchemas.query_finance.safeParse(step.call.args).success))return null;
+ return {parts,steps,presentation:{kind:'created-collected-difference',from:scope.from}};
+}
+function directMixedReadWorkflow(text:string,clientTurnId:string,selectedPatientId:string|null,asOf:string):DirectWorkflow|null{
+ const plain=text.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase();
+ const periodMatch=/\b(demain|aujourd'hui|aujourd’hui)\b/u.exec(plain),period=periodMatch?.[1];
+ if(!period)return null;
+ const hasAgenda=/\b(?:rendez[- ]?vous|rdv)\b/u.test(plain),hasFinance=/\b(?:encaisse\w*|recettes? encaisse\w*)\b/u.test(plain),hasPatientCount=/\b(?:nombre de|combien de|compte\w*)\s+patients?\b/u.test(plain);
+ const topNames=/\b(\d{1,2}|un|une|deux|trois|quatre|cinq|six|sept|huit|neuf|dix)\s+premier(?:s|es)?\b/u.exec(plain);
+ const agendaStatusCount=hasAgenda&&!hasFinance&&!hasPatientCount&&/\bconfirm\w*\b/u.test(plain)&&/\b(?:nombre|total)\b/u.test(plain);
+ const simpleAgendaPage=hasAgenda&&!hasFinance&&!hasPatientCount&&!!topNames&&/\b(?:total|nombre)\b/u.test(plain);
+ if(!(hasFinance&&hasAgenda||agendaStatusCount||simpleAgendaPage))return null;
+ const parts:RequestPart[]=[],steps:DirectWorkflowStep[]=[];
+ const append=(entry:{part:RequestPart;parts?:RequestPart[];call:AgentCall},goal:string)=>{
+  const sourceParts=entry.parts??[entry.part],ids=sourceParts.map((_,index)=>`requested_${parts.length+index+1}`);
+  const mapped=sourceParts.map((part,index)=>({...part,id:ids[index]!,goal:sourceParts.length===1?goal:part.goal}));
+  parts.push(...mapped);
+  const partIds=mapped.map(part=>part.id),call={...entry.call,id:`direct-${clientTurnId}-mixed-${partIds[0]}`,args:{...entry.call.args,partIds}};
+  steps.push({call,partIds,goal:sourceParts.length===1?goal:mapped.map(part=>part.goal).join(' ; ')});
+ };
+ const periodText=period==='aujourd’hui'?"aujourd’hui":period;
+ if(simpleAgendaPage){
+  const matchedPhrase=topNames[0],pageToken=topNames[1];if(!matchedPhrase||!pageToken)return null;
+  const phrase=matchedPhrase.replace(/\s+/gu,' '),query=`Montre les ${phrase} rendez-vous ${periodText}.`,baseQuery=`Montre les rendez-vous ${periodText}.`,agenda=directAgendaReadCall(baseQuery,clientTurnId,selectedPatientId,asOf);
+  const limit=/^\d+$/u.test(pageToken)?Number(pageToken):({un:1,une:1,deux:2,trois:3,quatre:4,cinq:5,six:6,sept:7,huit:8,neuf:9,dix:10} as const)[pageToken as 'un'|'une'|'deux'|'trois'|'quatre'|'cinq'|'six'|'sept'|'huit'|'neuf'|'dix'];
+  if(!agenda||!limit)return null;agenda.part={...agenda.part,goal:query};agenda.call.args={...agenda.call.args,limit};append(agenda,query);return {parts,steps};
+ }
+ if(agendaStatusCount){
+  const statusQuery=`Montre les rendez-vous confirmés ${periodText}.`,countQuery=`Combien de rendez-vous sont prévus ${periodText}?`;
+  const status=directAgendaReadCall(statusQuery,clientTurnId,selectedPatientId,asOf),countRead=directAgendaReadCall(countQuery,clientTurnId,selectedPatientId,asOf);
+  if(!status||!countRead)return null;append(status,statusQuery);append(countRead,countQuery);return {parts,steps};
+ }
+ let patient:ReturnType<typeof directPatientMetricReadCall>|null=null;
+ if(hasPatientCount){
+  const fragment=/\b(?:le\s+nombre\s+de|combien\s+de|compte\w*)\s+patients?\b[^,;.!?]*/iu.exec(text)?.[0];
+  if(!fragment)return null;
+  const patientQuestion=fragment.replace(/^\s*le\s+nombre\s+de\s+/iu,'Combien de ').replace(/[?!.]+$/u,'')+' ?';
+  const contract=frenchPatientCountContract(patientQuestion);if(!contract)return null;
+  patient=directPatientMetricReadCall(contract,clientTurnId);if(!patient)return null;
+ }
+ if(patient)append(patient,patient.part.goal);
+ if(hasFinance){
+  const monthMatch=/\bce mois\b|\b(?:janvier|fevrier|mars|avril|mai|juin|juillet|aout|septembre|octobre|novembre|decembre)\s+20\d{2}\b/u.exec(plain)?.[0];
+  if(!monthMatch)return null;
+  const monthNames=['janvier','fevrier','mars','avril','mai','juin','juillet','aout','septembre','octobre','novembre','decembre'],named=monthMatch.match(/^(janvier|fevrier|mars|avril|mai|juin|juillet|aout|septembre|octobre|novembre|decembre)\s+(20\d{2})$/u);
+  const year=named?Number(named[2]):Number(asOf.slice(0,4)),monthIndex=named?monthNames.indexOf(named[1]!):Number(asOf.slice(5,7))-1;
+  if(!Number.isInteger(year)||monthIndex<0)return null;
+  const lastDay=new Date(Date.UTC(year,monthIndex+1,0)).getUTCDate(),monthLabel=monthNames[monthIndex]!;
+  const financeQuestion=`Quel montant représentent les paiements encaissés du 1 ${monthLabel} ${year} au ${lastDay} ${monthLabel} ${year} ?`;
+  const finance=directFinanceReadCall(financeQuestion,clientTurnId,null,asOf);if(!finance)return null;append(finance,financeQuestion);
+ }
+ const agendaQuestion=`Combien de rendez-vous sont prévus ${periodText}?`,agenda=directAgendaReadCall(agendaQuestion,clientTurnId,selectedPatientId,asOf);
+ if(!agenda)return null;append(agenda,agendaQuestion);
+ return parts.length>=2&&parts.length<=AGENT_LIMITS.calls?{parts,steps}:null;
+}
 function directExtendedCounts(contract:NonNullable<ReturnType<typeof frenchPatientCountContract>>,clientTurnId:string,asOf:string):DirectWorkflow|null {
- if(contract.clauses.length<2||contract.clauses.length>AGENT_LIMITS.calls)return null;
+ if(contract.clauses.length<1||contract.clauses.length>AGENT_LIMITS.calls)return null;
  const queries=contract.clauses.map(clause=>patientQueryContract(clause,asOf));
- if(!queries.some(query=>query.extended||query.unsupported.length))return null;
+ const separateMissingIdentityAndPhone=contract.clauses.length===2&&queries.every(query=>query.filterGroups.length===1&&query.filterGroups[0]?.length===1)&&queries.flatMap(query=>query.filterGroups.flat().map(condition=>`${condition.field}:${condition.op}`)).sort().join('|')==='identity_card:missing|phone:missing';
+ if(!queries.some(query=>query.extended||query.unsupported.length)&&!separateMissingIdentityAndPhone)return null;
  const parts=countContractParts(contract).map((part,index):RequestPart=>({...part,conditions:queries[index]!.filterGroups.length===1?queries[index]!.filterGroups[0]!:[],constraintLedger:queries[index]!.ledger,...(queries[index]!.unsupported.length?{status:'unsupported',reason:agentCopy.fr.unsupported+' '+queries[index]!.unsupported.join(' ; ')}:{})}));
  const steps:DirectWorkflowStep[]=parts.flatMap((part,index)=>{
   if(part.status==='unsupported')return [];
-  const query=queries[index]!,predicates=query.extended&&query.filterGroups.some(group=>group.length)?{filterGroups:query.filterGroups}:{filters:query.filterGroups[0]??[]};
+  const query=queries[index]!,predicates=query.filterGroups.length>1?{filterGroups:query.filterGroups}:{filters:query.filterGroups[0]??[]};
   const args={partIds:[part.id],mode:'count',population:query.population,...predicates,...(query.consultationPeriod?{consultationPeriod:query.consultationPeriod}:{}),...(query.createdPeriod?{createdPeriod:query.createdPeriod}:{})};
   return [{partIds:[part.id],goal:contract.clauses[index]!,call:{id:`direct-${clientTurnId}-${part.id}`,name:'query_patients',args}}];
  });
@@ -365,12 +456,12 @@ export async function runAgentLoop(input: TurnInput, deps: AgentLoopDependencies
     const part:RequestPart={id:'requested_1',goal:input.text,tools:[],conditions:[],dependsOn:[],status:'unsupported',resultRefs:[id],reason:text};
     return {status:'partial',parts:[part],results:[result],sentences:[text],sources:[],patientId:null,tokensIn:0,tokensOut:0};
   }
-  const language = ALEXA_AGENT_LANGUAGE, copy = agentCopy[language],countContract=frenchPatientCountContract(input.text);
-  const compoundContract=frenchPatientCompoundContract(input.text);
-  const requestedOutputs=!countContract&&!compoundContract?frenchRequestedOutputs(input.text):null;
+  const language = ALEXA_AGENT_LANGUAGE, copy = agentCopy[language],quotedInstructionPolicy=isFrenchQuotedInstructionPolicyQuestion(input.text),countContract=quotedInstructionPolicy?null:frenchPatientCountContract(input.text);
+  const compoundContract=quotedInstructionPolicy?null:frenchPatientCompoundContract(input.text);
+  const requestedOutputs=!quotedInstructionPolicy&&!countContract&&!compoundContract?frenchRequestedOutputs(input.text):null;
   const requestedTools=requestedOutputs?.map(goal=>requestedReadTool(goal,input.text));
   const knownReadTools=requestedTools?.every((tool):tool is NonNullable<typeof tool>=>!!tool)?[...new Set(requestedTools)]:null;
-  const admission=compoundContract?{tools:['query_patients'],profileOnly:false}:knownReadTools?{tools:knownReadTools,profileOnly:false}:frenchRequestAdmission(input.text,canAnswerGeneralAlexa(input.text),asOf);
+  const admission=quotedInstructionPolicy?{tools:['answer_general'],profileOnly:false}:compoundContract?{tools:['query_patients'],profileOnly:false}:knownReadTools?{tools:knownReadTools,profileOnly:false}:frenchRequestAdmission(input.text,canAnswerGeneralAlexa(input.text),asOf);
   const completePublic=admission.tools?.length===1&&admission.tools[0]==="answer_general";
   // A known read gate owns missing-slot checks; population predicates belong to patient queries, never to answer topics.
   const plainReadDeclaration=admission.tools?.length===1&&['get_patient_context','query_consultations','query_agenda','query_documents','query_finance','query_app','search_knowledge','prepare_action','navigate'].includes(admission.tools[0]!)&&!countContractHints({clauses:[input.text]})[0]!.conditions.length;
@@ -390,6 +481,13 @@ export async function runAgentLoop(input: TurnInput, deps: AgentLoopDependencies
   const messages: LocalMessage[] = [{role:"system",content:agentMetadataPrompt(promptTools)+(admittedTools?"\nOutils de domaine admis pour cette demande : "+admittedTools.join(", ")+". Déclare uniquement l’un de ces outils.":"")+(countContract?"\nSorties et conditions explicites à conserver, sans donnée ni permission supplémentaire : "+JSON.stringify(countContractHints(countContract)):"")+(compoundContract?"\nSorties et conditions explicites de la population à conserver, sans donnée ni permission supplémentaire : "+JSON.stringify(compoundContractHints(compoundContract)):"")+(requestedOutputs?"\nSorties explicites : chaque goal doit reprendre exactement une clause, une fois : "+JSON.stringify(requestedOutputs):"")},{role:"user",content:input.text+"\nPatient sélectionné : "+(input.appContext.patientId?"oui":"non")+(prior?"\nDemande précédente : "+JSON.stringify(previousContext):"")}];
   let parts: RequestPart[] = [], results: AgentResult[] = [], declared = false, calls = 0, rounds = 0, steps = 0, tokensIn = 0, tokensOut = 0, finalText = "",inferenceFailed=false,resumingPatientQuery=false,resumingTimelineQuery=false,resumingApplicationQuery=false,resumingNoteQuery=false,resumingConsultationQuery=false,resumingFinanceQuery=false,resumingDocumentQuery=false,plainRecovery=0,noteContinuationBudget=0;
   const focus=input.text.normalize('NFKD').replace(/\p{M}/gu,'').replace(/[’‘]/gu,"'").toLowerCase().trim().replace(/[?!.]+$/gu,'');
+   const proposalDispositionRequest=/\b(?:refuse|rejette|repete|rejoue|relance|annule)\b[^.!?]{0,160}\bproposition\b|\bproposition\b[^.!?]{0,160}\b(?:refuse|rejette|repete|rejoue|relance|annule)\b/u.test(focus);
+   if(proposalDispositionRequest){
+    const hasPendingProposal=prior?.parts.some(part=>part.status==='proposed')??false;
+    const message=hasPendingProposal?copy.proposalUseConfirmation:copy.proposalStateMissing;
+    const part:RequestPart={id:'proposal-state',goal:input.text,tools:[],conditions:[],dependsOn:[],status:'needs_input',resultRefs:[],reason:message};
+    return {status:'needs_input',parts:[part],results:[],sentences:[message],sources:[],patientId:prior?.patientId??input.appContext.patientId,tokensIn:0,tokensOut:0};
+   }
   const continuationKind=noteContinuation(input.text)?'any':/^(?:(?:la suite|suite)(?: de l[’'])?\s+)?(?:l[’'])?accueil$/u.test(focus)?'application':/^(?:(?:la suite|suite)(?: de la)?\s+)?(?:la\s+)?chronologie$/u.test(focus)?'timeline':/^(?:(?:la suite|suite)(?: du)?\s+)?(?:le\s+)?(?:document|brouillon)$/u.test(focus)?'document':/^(?:(?:la suite|suite)(?: du)?\s+)?(?:le\s+)?calendrier(?: financier)?$/u.test(focus)?'calendar':/^(?:(?:la suite|suite)(?: de)?\s+)?(?:l'|la\s+)?analyse$/u.test(focus)?'analysis':/^(?:(?:la suite|suite)(?: des?| de la)?\s+)?(?:les?\s+)?notes$/u.test(focus)?'notes':null;
   const unfinished=continuationKind?prior?.results.flatMap(r=>{
    if(!r.data||typeof r.data!=="object"||r.complete)return [];
@@ -431,12 +529,15 @@ export async function runAgentLoop(input: TurnInput, deps: AgentLoopDependencies
   const directNoteRead=!declared&&freshRead&&!requestedOutputs&&!countContract&&!compoundContract?directPatientNoteReadCall(input.text,input.clientTurnId,asOf):null;
   const directSummaryCall=!declared&&freshRead&&!requestedOutputs&&!countContract&&!compoundContract?directSinglePatientReadCall(input.text,input.clientTurnId,input.appContext.patientId,asOf):null;
   const directReadCalls=!declared&&freshRead?directRecurringThemeCountCalls(requestedOutputs,input.text,input.clientTurnId):null;
-  const directOfficeReadCall=!declared&&freshRead?directNotificationsReadCall(input.text,input.clientTurnId,requestedOutputs):null;
+  const directOfficeRead=!declared&&freshRead?directOfficeReadCall(input.text,input.clientTurnId,requestedOutputs):null;
   const directAgendaCall=!declared&&freshRead&&!requestedOutputs&&!countContract&&!compoundContract?directAgendaReadCall(input.text,input.clientTurnId,input.appContext.patientId,asOf):null;
   const directConsultationCountRead=!declared&&freshRead&&!requestedOutputs&&!countContract&&!compoundContract?directConsultationCountCall(input.text,input.clientTurnId,input.appContext.patientId,asOf):null;
   const directNavigationCall=!declared&&freshRead&&!requestedOutputs?directGlobalNavigationCall(input.text,input.clientTurnId):null;
+   const directFinanceRead=!declared&&freshRead&&!requestedOutputs?directFinanceReadCall(input.text,input.clientTurnId,input.appContext.patientId,asOf):null;
+  const directFinanceComparison=!declared&&freshRead&&!requestedOutputs?directFinanceComparisonWorkflow(input.text,input.clientTurnId,asOf):null;
   const directMonthlyComparison=!declared&&freshRead&&!countContract&&!compoundContract?directConsultationMonthComparison(input.text,input.clientTurnId,input.appContext.patientId,asOf):null;
-  const directWorkflow=!declared&&freshRead&&!compoundContract?(countContract?directExtendedCounts(countContract,input.clientTurnId,asOf):directMonthlyComparison??directAgendaAdministrativeReview(input.text,input.clientTurnId,asOf)):null;
+   const directMixedWorkflow=!declared&&freshRead?directMixedReadWorkflow(input.text,input.clientTurnId,input.appContext.patientId,asOf):null;
+   const directWorkflow=!declared&&freshRead?(directFinanceComparison??directMixedWorkflow??(!compoundContract?(countContract?directExtendedCounts(countContract,input.clientTurnId,asOf):directMonthlyComparison??directAgendaAdministrativeReview(input.text,input.clientTurnId,asOf)):null)):null;
   const directNamedReads=!declared&&freshRead&&!countContract&&!compoundContract?directNamedApplicationReads(input.text,input.clientTurnId,input.appContext.patientId,asOf):null;
   const queryContract=patientQueryContract(input.text,asOf);
   const medicalOnly=admission.tools?.length===1&&admission.tools[0]==='search_knowledge';
@@ -449,13 +550,14 @@ export async function runAgentLoop(input: TurnInput, deps: AgentLoopDependencies
 
   const patientListVerbs=[...input.text.matchAll(/\b(?:liste\w*|affich\w*|montr\w*|donne\w*|indique\w*|enumere\w*|quels?|quelles?|qui|lesquels|lesquelles|trouv\w*)\b/giu)];
   const nameFollowup=patientListVerbs.length===2&&/^(?:donne|indique|affiche|montre|liste|enumere)/iu.test(patientListVerbs[1]![0])&&/\b(?:leurs?|les)\s+noms?\b/iu.test(input.text.slice(patientListVerbs[1]!.index));
-  const singlePatientListRequest=/^\s*(?:alexa[, :]+)?(?:liste\w*|affich\w*|montr\w*|donne\w*|indique\w*|enumere\w*|quels?|quelles?|qui|lesquels|lesquelles|trouv\w*)\b/iu.test(input.text)&&/\b(?:patients?|patientes?|dossiers?|patientèle)\b/iu.test(input.text)&&!/\b(?:combien|nombre|total|compt\w*)\b/iu.test(input.text)&&(patientListVerbs.length===1||nameFollowup);
+  const listNoun=patientListVerbs.length===2&&patientListVerbs[1]![0].toLocaleLowerCase('fr')==='liste'&&/\b(?:la|une)\s+$/iu.test(input.text.slice(0,patientListVerbs[1]!.index));
+  const singlePatientListRequest=/^\s*(?:alexa[, :]+)?(?:liste\w*|affich\w*|montr\w*|donne\w*|indique\w*|enumere\w*|quels?|quelles?|qui|lesquels|lesquelles|trouv\w*)\b/iu.test(input.text)&&/\b(?:patients?|patientes?|dossiers?|patientèle)\b/iu.test(input.text)&&!/\b(?:combien|nombre|total|compt\w*)\b/iu.test(input.text)&&(patientListVerbs.length===1||nameFollowup||listNoun);
   const explicitListPopulation=queryContract.population!=='active'||/\bactifs?\b/iu.test(input.text);
-  const structuredPatientQuery=!declared&&freshRead&&!requestedOutputs&&!medicalOnly&&!countContract&&!compoundContract&&singlePatientListRequest&&(explicitListPopulation||queryContract.extended||queryContract.unsupported.length>0||queryContract.filterGroups.some(group=>group.length>0)||!!queryContract.consultationPeriod||!!queryContract.createdPeriod);
+   const structuredPatientQuery=!declared&&freshRead&&!requestedOutputs&&!medicalOnly&&!countContract&&!compoundContract&&singlePatientListRequest&&(!admission.tools?.length||admission.tools.includes('query_patients'))&&(explicitListPopulation||queryContract.extended||queryContract.unsupported.length>0||queryContract.filterGroups.some(group=>group.length>0)||!!queryContract.consultationPeriod||!!queryContract.createdPeriod);
   const extendedPart:RequestPart={id:'requested_1',goal:input.text,tools:['query_patients'],conditions:queryContract.filterGroups.length===1?queryContract.filterGroups[0]!:[],constraintLedger:queryContract.ledger,dependsOn:[],status:'pending',resultRefs:[]};
   const simplePatientFilters=!queryContract.extended&&queryContract.filterGroups.length===1&&queryContract.filterGroups[0]!.length>0?{filters:queryContract.filterGroups[0]}:{};
-  const extendedCall:AgentCall={id:`direct-${input.clientTurnId}-patient-query`,name:'query_patients',args:{partIds:[extendedPart.id],mode:requestedCountRead(input.text)?'count':'list',population:queryContract.population,...simplePatientFilters}};
-  const directCalls:{part:RequestPart;call:AgentCall;parts?:RequestPart[];latestNoteReference?:boolean }[]|null=directWorkflow?null:directExtraApp?[directExtraApp]:directNamedReads?.calls??directMixedMetricAgenda??(directMetricRead?[directMetricRead]:directCompoundRead?[directCompoundRead]:directKnowledgeRead?[directKnowledgeRead]:directPublicAnswer?[directPublicAnswer]:directReadCalls??(directNoteRead?[directNoteRead]:directSummaryCall?[directSummaryCall]:directOfficeReadCall?[directOfficeReadCall]:directConsultationCountRead?[directConsultationCountRead]:directAgendaCall?[directAgendaCall]:directNavigationCall?[directNavigationCall]:structuredPatientQuery?(queryContract.unsupported.length?[]:[{part:extendedPart,call:extendedCall}]):null));
+  const extendedCall:AgentCall={id:`direct-${input.clientTurnId}-patient-query`,name:'query_patients',args:{partIds:[extendedPart.id],mode:requestedCountRead(input.text)?'count':'list',population:queryContract.population,...(queryContract.filterGroups.length>1?{filterGroups:queryContract.filterGroups}:queryContract.filterGroups[0]?.length?{filters:queryContract.filterGroups[0]}:simplePatientFilters),...(queryContract.consultationPeriod?{consultationPeriod:queryContract.consultationPeriod}:{}),...(queryContract.createdPeriod?{createdPeriod:queryContract.createdPeriod}:{})}};
+   const directCalls:{part:RequestPart;call:AgentCall;parts?:RequestPart[];latestNoteReference?:boolean }[]|null=directWorkflow?null:directExtraApp?[directExtraApp]:directNamedReads?.calls??directMixedMetricAgenda??(directMetricRead?[directMetricRead]:directCompoundRead?[directCompoundRead]:directKnowledgeRead?[directKnowledgeRead]:directPublicAnswer?[directPublicAnswer]:directReadCalls??(directFinanceRead?[directFinanceRead]:directNoteRead?[directNoteRead]:directSummaryCall?[directSummaryCall]:directOfficeRead?[directOfficeRead]:directConsultationCountRead?[directConsultationCountRead]:directAgendaCall?[directAgendaCall]:directNavigationCall?[directNavigationCall]:structuredPatientQuery?(queryContract.unsupported.length?[]:[{part:extendedPart,call:extendedCall}]):null));
   if(directWorkflow){parts=directWorkflow.parts;declared=true;}else if(directNamedReads){parts=directNamedReads.parts;declared=true;}else if(directCalls){parts=directCalls.flatMap(entry=>entry.parts??[entry.part]);declared=true;}
   if(structuredPatientQuery&&queryContract.unsupported.length&&!directCalls?.length){parts=[{...extendedPart,tools:[],status:'unsupported',reason:copy.unsupported+' '+queryContract.unsupported.join(' ; ')}];declared=true;}
   const infer = deps.infer ?? inferLocalCompletion;
@@ -486,6 +588,18 @@ export async function runAgentLoop(input: TurnInput, deps: AgentLoopDependencies
         if(step.reviewDisclaimer&&result.complete&&['ok','empty'].includes(result.status)){const priorText=result.text.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase(),savedState=/aucune correction n[’']a ete enregistree/iu.test(priorText)?'':"Aucune correction n'a été enregistrée. ";result={...result,text:result.text+`\n${savedState}Cette liste est à vérifier dans chaque dossier.`};}
         results.push(result);observeResult({callId:step.call.id,name:step.call.name,status:result.status,...(result.error?{errorCode:result.error.code}:{})});
         for(const part of targets){part.resultRefs.push(step.call.id);part.status=result.proposal?'proposed':result.status==='needs_input'?'needs_input':result.status==='unsupported'?'unsupported':result.status==='error'?'failed':result.complete?'answered':'budget_limited';if(!['answered','proposed'].includes(part.status))part.reason=result.text;}
+      }
+      if(directWorkflow.presentation?.kind==='created-collected-difference'){
+        const created=results.find(result=>result.callId.endsWith('-finance-created'));
+        const collected=results.find(result=>result.callId.endsWith('-finance-collected'));
+        const totals=(result:AgentResult|undefined):Record<string,unknown>|null=>result?.data&&typeof result.data==='object'&&'totals' in result.data&&result.data.totals&&typeof result.data.totals==='object'?result.data.totals as Record<string,unknown>:null;
+        const createdTotals=totals(created),collectedTotals=totals(collected);
+        const createdAmount=createdTotals?.amount??(typeof createdTotals?.pendingDzd==='number'&&typeof createdTotals?.collectedDzd==='number'?createdTotals.pendingDzd+createdTotals.collectedDzd:undefined);
+        const collectedAmount=collectedTotals?.amount??collectedTotals?.collectedDzd;
+        if(created&&collected&&['ok','empty'].includes(created.status)&&['ok','empty'].includes(collected.status)&&Number.isSafeInteger(createdAmount)&&Number.isSafeInteger(collectedAmount)){
+          const month=new Intl.DateTimeFormat('fr-FR',{month:'long',year:'numeric',timeZone:'Africa/Algiers'}).format(new Date(directWorkflow.presentation.from)),number=new Intl.NumberFormat('fr-FR');
+          created.text='';collected.text=`En ${month}, ${number.format(createdAmount as number)} DZD de paiements ont été créés et ${number.format(collectedAmount as number)} DZD encaissés. L’écart est de ${number.format((createdAmount as number)-(collectedAmount as number))} DZD, calculé comme les paiements créés moins les encaissements.`;
+        }
       }
     }else if(directCalls){
       for(let offset=0;offset<directCalls.length;offset+=AGENT_LIMITS.parallel){

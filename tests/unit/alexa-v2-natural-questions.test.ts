@@ -3,6 +3,13 @@ import { planRequest } from "@/shared/alexa/request-plan";
 import { parsePatientMention, patientMention } from "@/server/alexa/patient-mention";
 
 describe("ordinary multilingual Alexa questions", () => {
+  it.each(["Merci, c’est clair.", "Merci, c’est très clair !"]) ("recognizes a natural thanks follow-up: %s", text => {
+    expect(planRequest(text, null)).toMatchObject({ intent: "dialogue", dialogueAct: "thanks" });
+  });
+  it("answers that it can ask for a needed clarification", () => {
+    expect(planRequest("Peux-tu demander une précision lorsque ma question est ambiguë ?", null))
+      .toMatchObject({ intent: "dialogue", dialogueAct: "clarification" });
+  });
   it.each(["Bonjour Alexa", "Salut !", "Bonsoir", "السلام عليكم", "صباح الخير", "salam alaykoum"])("answers the greeting %s", text => {
     expect(planRequest(text, null)).toMatchObject({ intent: "dialogue", dialogueAct: "hello" });
   });

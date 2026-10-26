@@ -183,6 +183,7 @@ async function runAlexaSingle(input: TurnInput, dependencies: OrchestratorDepend
   let patientId: string | null = null;
   let context: ClinicalContext | null = null;
   let limited = true;
+  let terminalStatus: Extract<AlexaEvent, { type: "done" }>["status"];
   let publishedClinical = 0;
   let navigation: AlexaNavigation | undefined;
   let resultReference: import("./request-plan").WorkingReference|undefined;
@@ -239,9 +240,9 @@ async function runAlexaSingle(input: TurnInput, dependencies: OrchestratorDepend
     }
     else if (plan.intent === "proposal") {
       const result=await prepareActionProposal(input,db,dependencies.knowledge,signal);active();
-      if(result.state==="ready") {patientId=result.patientId;emit({type:"proposal",...result.proposal});sentence(copy.proposal);}
-      else if(result.state==="print"){patientId=result.patientId;navigation={target:"document",documentId:result.documentId,print:true};limited=false;sentence(alexaActions.printOpening(result.label));}
-      else sentence(result.state==="unavailable"?copy.unavailable:result.message??semanticCopy[plan.language==="fr"?"fr":"ar"][result.slot]);
+      if(result.state==="ready") {patientId=result.patientId;terminalStatus="needs_confirmation";limited=false;emit({type:"proposal",...result.proposal});sentence(copy.proposal);}
+      else if(result.state==="print"){patientId=result.patientId;navigation={target:"document",patientId:result.patientId,documentId:result.documentId,print:true};terminalStatus="completed";limited=false;sentence(alexaActions.printOpening(result.label));}
+      else {terminalStatus=result.state==="unavailable"?"failed":"needs_input";sentence(result.state==="unavailable"?copy.unavailable:result.message??semanticCopy[plan.language==="fr"?"fr":"ar"][result.slot]);}
     }
     else if (plan.intent === "navigation" && plan.navigationTarget !== "patient") {
       if (input.patientName || mention.status !== "none" || requestsPatientScope(input.text)) { rejectPatientSelection(copy.clarify); return; }
@@ -409,7 +410,7 @@ async function runAlexaSingle(input: TurnInput, dependencies: OrchestratorDepend
     // No patient used by a global answer does not mean the working dossier was
     // rejected. Explicit identity failures and next-patient reads replace scope.
     const patientScope = plan.intent === "dialogue" || (context === null && patientId === null && !input.patientName && !requestsNextPatient(input.text)) ? "preserve" : "replace";
-    emit({ type: "done", patientId, patientScope, sourceRevision: context?.sourceRevision ?? null, coverage: context?.coverage ?? null, limited, ...(navigation ? { navigation } : {}) });
+    emit({ type: "done", patientId, patientScope, sourceRevision: context?.sourceRevision ?? null, coverage: context?.coverage ?? null, limited, ...(terminalStatus ? { status: terminalStatus } : {}), ...(navigation ? { navigation } : {}) });
   } catch (error) {
     const stale = error instanceof Error && ["ScopeChanged", "StaleContext"].includes(error.message);
     const partial = publishedClinical > 0;

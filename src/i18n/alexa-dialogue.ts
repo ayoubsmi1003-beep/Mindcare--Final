@@ -5,6 +5,7 @@ const messages = {
   fr: {
     hello: "Bonjour, je vous écoute. Vous pouvez me demander les consultations, le traitement ou le résumé d’un dossier.",
     thanks: "Avec plaisir. Je vous écoute pour la suite.",
+    clarification: "Oui. Quand votre question est ambiguë parce qu’un patient, une période ou un critère manque, je vous demande seulement la précision nécessaire pour répondre correctement.",
     presence: "Oui, je suis là. Que souhaitez-vous consulter ?",
     opening: { agenda: "J’ouvre l’agenda.", patients: "J’ouvre la liste des patients.", dashboard: "J’ouvre le tableau de bord.", patient: "J’ouvre le dossier sélectionné et vérifié." },
     help: "Je peux lire les diagnostics, traitements et consultations du dossier choisi, montrer des extraits des notes, préparer une consultation, consulter le planning du jour et rechercher les références approuvées. Les actions sur le dossier demandent votre confirmation.",
@@ -35,7 +36,7 @@ const messages = {
     lastChange: (date: string, medication: string, before: string, after: string) => `${date} · ${medication}. Avant : ${before}. Après : ${after}.`,
     appointment: (time: string, status: "confirmed" | "arrived" | "in_session" | "completed" | "no_show") => `Rendez-vous à ${time} : ${{ confirmed: "attendu", arrived: "arrivé", in_session: "en consultation", completed: "terminé", no_show: "absent" }[status]}.`,
     consultations: (n: number, requested: number) => `${n} consultation(s) terminée(s) lue(s) sur ${requested} demandée(s).`,
-    treatment: (n: number) => `${n} traitement(s) enregistré(s), avec leur état actuel.`,
+    treatment: (n: number) => n === 0 ? "Je ne trouve aucun traitement correspondant dans le dossier consulté." : `${n} traitement(s) enregistré(s), avec leur état actuel.`,
     states: { active: "actif", paused: "en pause", stopped: "arrêté" },
     emptyDiagnoses: "Aucun diagnostic enregistré n’est disponible dans le dossier lu.",
     emptyScales: "Aucune échelle enregistrée n’est disponible dans le dossier lu.",
@@ -56,6 +57,7 @@ const messages = {
   ar: {
     hello: "سلام، راني نسمع فيك. تقدري تسقسي على الجلسات، العلاج أو ملخص الملف.",
     thanks: "بالصحة. راني نسمع فيك للطلب الجاي.",
+    clarification: "نعم. إذا كانت معلومة ناقصة حول المريض أو الفترة أو الشرط وتغيّر النتيجة، نسقسيك غير على اللازم قبل ما نجاوب.",
     presence: "نعم، راني هنا. واش تحبي تشوفي؟",
     opening: { agenda: "نفتح الأجندة.", patients: "نفتح قائمة المرضى.", dashboard: "نفتح لوحة المتابعة.", patient: "نفتح الملف المختار والمتحقّق منه." },
     help: "نقدر نقرا التشخيصات والعلاج والجلسات من الملف المختار، نعرض مقاطع من الملاحظات، نحضر الاستشارة، نشوف مواعيد اليوم ونبحث في المراجع المعتمدة. أي تغيير في الملف يحتاج تأكيدك.",
