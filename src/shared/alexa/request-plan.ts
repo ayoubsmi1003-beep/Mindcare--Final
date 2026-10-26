@@ -134,6 +134,17 @@ export function requestsPatientScope(text: string): boolean {
   const normalized = text.normalize("NFKD").replace(/\p{M}/gu, "").toLowerCase();
   return /\b(?:son|ses|sa|ce dossier|ce patient|cette patiente|du patient|de la patiente|dossier (?:selectionne|courant|actuel)|prend[-\s]+(?:il|elle))\b|المريض|المريضة|تاعو|تاعها|(?:مواعيد|موعد|اجندت?)(?:ه|ها|هم|هن|و)(?!\p{L})/u.test(normalized);
 }
+/** A cabinet-wide phrase opts out of the currently selected patient dossier. */
+function cabinetWideScopePattern(): RegExp {
+  return /\b(?:au cabinet|du cabinet|dans tout le cabinet|pour tout le cabinet|tout le cabinet|dans l['’‘]ensemble du cabinet|de l['’‘]ensemble du cabinet|l['’‘]ensemble du cabinet|tous les dossiers|toutes les dossiers|tous les patients|toutes les patientes|l['’‘]ensemble des dossiers|l['’‘]ensemble des patients|a l['’‘]echelle du cabinet|à l['’‘]échelle du cabinet|a l['’‘]echelle de l['’‘]ensemble du cabinet|à l['’‘]échelle de l['’‘]ensemble du cabinet)\b/giu;
+}
+export function requestsCabinetWideScope(text: string): boolean {
+  const normalized = text.normalize("NFKD").replace(/\p{M}/gu, "").replace(/[’‘]/gu, "'").toLowerCase();
+  return cabinetWideScopePattern().test(normalized);
+}
+export function withoutCabinetWideScope(text: string): string {
+  return text.replace(cabinetWideScopePattern(), " ");
+}
 const agendaRequest = /agenda|prochain patient|patient suivant|المريض التالي|مواعيد|موعد|planning|rendez[\s-]?vous|\brdv\b/u;
 /** Shared routing predicate; whitespace and Darija cannot change dossier scope. */
 export function requestsNextPatient(text: string): boolean {

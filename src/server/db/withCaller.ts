@@ -99,6 +99,8 @@ const ROLE_VISITEUR = "SET LOCAL ROLE anon";
  * entière. Posée en `SET LOCAL` pour ne pas survivre à l'emprunt.
  */
 const DELAI_REQUETE = "15s";
+/** Bounded compound Alexa patient counts may aggregate the full visit history. */
+const DELAI_RECHERCHE_PATIENTS = "45s";
 
 /**
  * Exécute `fn` dans UNE transaction, sous l'identité de `userId`.
@@ -116,6 +118,7 @@ const DELAI_REQUETE = "15s";
 export async function withCaller<T>(
   userId: string | null,
   fn: (q: Querier) => Promise<T>,
+  options: { statementTimeout?: "patient-search" } = {},
 ): Promise<T> {
   const client = await acquireConnection(() => { const pool = obtenirPool(); const started = performance.now(); return pool.connect().catch((cause: unknown) => { console.warn("[db-acquire]", { elapsedMs: Math.round(performance.now()-started), total: pool.totalCount, idle: pool.idleCount, waiting: pool.waitingCount, target: new URL(pool.options.connectionString ?? "postgres://unknown").host }); throw cause; }); });
   try {
@@ -124,7 +127,8 @@ export async function withCaller<T>(
     // `true` = SET LOCAL : la valeur disparaît avec la transaction.
     // La chaîne vide est le « personne » de `auth.uid()`, qui la ramène à NULL.
     await client.query("SELECT set_config('request.jwt.claim.sub', $1, true)", [userId ?? ""]);
-    await client.query(`SET LOCAL statement_timeout = '${DELAI_REQUETE}'`);
+    const statementTimeout=options.statementTimeout==="patient-search"?DELAI_RECHERCHE_PATIENTS:DELAI_REQUETE;
+    await client.query(`SET LOCAL statement_timeout = '${statementTimeout}'`);
 
     const resultat = await fn(faireQuerier(client));
 

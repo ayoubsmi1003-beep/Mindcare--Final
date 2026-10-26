@@ -14,7 +14,7 @@ import {readMessageDraft} from "./message-draft";
 import {patientProfileSchema,profileAnswer,profileNeedsClarification} from "./profile-answer";
 import { extractRecurringClinicalTheme, summarizeClinicalConsultations, summarizeClinicalContext, summarizeClinicalCaseContext, relativeClinicalDate, requestsClinicalDate } from "./clinical-narrative";
 import { narrativeCopy } from "@/i18n/alexa-narrative";
-import {requestedConsultationCount,requestsOldestConsultations,requestsPatientScope} from "@/shared/alexa/request-plan";
+import {requestedConsultationCount,requestsOldestConsultations,requestsPatientScope,requestsCabinetWideScope,withoutCabinetWideScope} from "@/shared/alexa/request-plan";
 import {frenchRequestAdmission,frenchRequestedOutputs,hasExplicitClockRestriction,frenchFinanceRecordState,requestedCountRead} from "@/shared/alexa/request-contract";
 import {readConsultation} from "./consultation-reads";
 import {inferNativeGeneralAlexa,canAnswerGeneralAlexa} from "./model-gateway";
@@ -23,7 +23,7 @@ import {notePageResult} from "./note-pages";
 import {noteReadQuerySchema,noteCursorSchema,noteContinuation,noteQueryGrounded,documentBodySearchRequested} from "@/shared/alexa/note-query";
 import {measureChanges} from '@/shared/alexa/session-details';
 import {clinicalSectionComplete,clinicalSummaryComplete} from "./clinical-coverage";
-import {alexaRecordCopy,frenchAgendaCopy} from "@/i18n/alexa-records";
+import {alexaRecordCopy,documentCountParagraph,frenchAgendaCopy} from "@/i18n/alexa-records";
 import {documentText,issuedDocumentText} from './document-excerpt';
 import {parseDraftResponse} from '@/services/document-drafts';
 import {documentPage} from './document-page';
@@ -42,7 +42,7 @@ import { readKnowledge } from "./knowledge-adapter";
 import {synthesizeKnowledge} from './knowledge-synthesis';
 import {knowledgeSource} from './knowledge-response';
 import {patientQueryContract,patientQueryPeriod} from '@/shared/alexa/patient-query-contract';
-import {completedConsultationCountParagraph} from '@/i18n/alexa-patient-query';
+import {completedConsultationCountParagraph,filteredPatientCountParagraph} from '@/i18n/alexa-patient-query';
 import { resolveAgentPeriod,explicitAgentPeriod,explicitAgendaClockWindow } from "./agent-period";
 import {parsePatientMention} from "./patient-mention";
 import {resolveListedReference} from "./conversation-state";
@@ -203,16 +203,16 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    const countConditions=spec.filterGroups?.length===1?spec.filterGroups[0]:spec.filters;
    const countCondition=countConditions?.length===1?countConditions[0]:undefined;
    const periodPatientCount=spec.mode==='count'&&(spec.population??'active')==='active'&&countCondition?.field==='completed_consultations'&&countCondition.op==='gte'&&typeof countCondition.value==='number'&&spec.consultationPeriod?completedConsultationCountParagraph(value.total,countCondition.value,spec.consultationPeriod):null;
+   const filteredPatientCount=spec.mode==='count'&&!simplePopulationCount?filteredPatientCountParagraph(value.total,spec.population??'active',countConditions??[]):null;
    result.text=spec.mode==="metrics"?(spec.metrics??[]).map(metric=>`${copy.metrics[metric]??metric} : ${value.metrics[metric]}`).join("\n"):periodPatientCount??(simplePopulationCount
     ?patientPopulationCountParagraph(value.total,spec.population??"active")
-    :`${value.total} ${copy.count}`);
+    :filteredPatientCount??`${value.total} ${copy.count}`);
    const missingField=(spec.mode==='count'||spec.mode==='list')&&spec.filters?.length===1&&spec.filters[0]!.op==='missing'?spec.filters[0]!.field:null;
    const paragraphCount=spec.mode==='count'&&(missingField==='phone'||missingField==='identity_card');
    if(paragraphCount)result.text=missingPatientFieldParagraph(value.total,spec.population??'active',missingField);
    if(spec.mode==='list')result.text=patientListParagraph(value.total,value.rows.length,spec.population??'active',missingField==='phone'||missingField==='identity_card'?missingField:undefined);
    for(const p of value.rows)appendLinkedAnswerLine(result,`${p.first_name} ${p.last_name}`,`${p.outstanding_balance!==null?` — ${p.outstanding_balance} DZD`:""}${spec.mode==="review"?` — ${p.missing.map(f=>labels[f]).join(", ")}`:""}`,{kind:'patient',id:p.id});
    if(spec.mode==="review")result.text+=`\n${copy.fields}`;
-   if(!paragraphCount&&!simplePopulationCount&&!periodPatientCount&&spec.mode!=="list"&&spec.mode!=="metrics")result.text+=`\n${recordsCopy.populations[spec.population??"active"]} ${copy.definition.replace(/^Actifs visibles ; |^المرضى النشطون المتاحون؛ /u,"")}`;
    if(spec.filters?.some(f=>f.field==="age"))result.text+=`\n${copy.unknownAge} : ${value.unknownAge}`;
    if(spec.mode==='list'&&value.rows.length)result.text+=`\n${patientListPageParagraph(value.offset+1,value.offset+value.rows.length,value.total,value.offset+value.rows.length<value.total)}`;
    if(!value.total)result.status="empty";
@@ -249,11 +249,14 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    return readApplication(call.id,String(a["view"]),(name,args,signal)=>rpc(name,args,signal,false,name==='search_medications'),signal,{asOf,...(typeof a["offset"]==='number'?{offset:a["offset"]}:{}),...(typeof a["revision"]==='string'?{revision:a["revision"]}:{}),...(typeof a['query']==='string'?{query:a['query']}:{}),...(typeof a['day']==='string'?{day:a['day']}:{}),...(typeof a['queue']==='string'?{queue:a['queue']}:{})});
   }
   let patientId:string|undefined;
-  const humanMention=parsePatientMention(identityText),humanPatient=!!input.patientName||humanMention.status!=='none';
-  const namedRecordScope=(humanPatient||requestsPatientScope(identityText))&&['query_consultations','query_documents','query_agenda','query_finance'].includes(call.name);
+  const cabinetWideDocumentScope=call.name==='query_documents'&&requestsCabinetWideScope(identityText),patientMentionText=cabinetWideDocumentScope?withoutCabinetWideScope(identityText):identityText;
+  const humanMention=parsePatientMention(patientMentionText),humanPatient=humanMention.status!=='none'||!!input.patientName&&!cabinetWideDocumentScope;
+  if(cabinetWideDocumentScope&&humanMention.status==='none'){delete a['patientId'];delete a['patientName'];}
+  const selectedDocumentScope=call.name==='query_documents'&&!!input.appContext.patientId&&!cabinetWideDocumentScope;
+  const namedRecordScope=(humanPatient||requestsPatientScope(identityText)||selectedDocumentScope)&&['query_consultations','query_documents','query_agenda','query_finance'].includes(call.name);
   if(call.name==='query_finance'&&namedRecordScope&&cabinetFinanceModes.some(mode=>mode===a['mode']))return failure(call,'unsupported',copy.unsupported,'CabinetOverviewCannotIgnoreNamedPatient');
   if(namedRecordScope||a["patientId"]||a["patientName"]||call.name==="get_patient_context"||(call.name==="prepare_action"&&a["action"]!=="send_internal_message")||(call.name==="query_app"&&a["view"]==="message_draft")||(call.name==="navigate"&&a["target"]==="patient")){
-   const mention=parsePatientMention(identityText);
+   const mention=parsePatientMention(patientMentionText);
    if(mention.status==="ambiguous")return failure(call,"needs_input",copy.patient,"patient-ambiguous");
    const explicitName=mention.status==="named"?mention.name:input.patientName;
    const proposedName=explicitName??(typeof a["patientName"]==="string"?a["patientName"]:undefined);
@@ -616,7 +619,7 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
      appendLinkedAnswerLine(result,name,row.slice(name.length),r.patientId?{kind:'patient',id:r.patientId}:undefined);
     }
    }else{
-    result.text=call.name==='query_consultations'&&spec['mode']==='count'?applicationReadCopy.consultationCount(value.total,spec['status'],!!patientId):`${value.total} ${recordsCopy.count}`;
+    result.text=call.name==='query_consultations'&&spec['mode']==='count'?applicationReadCopy.consultationCount(value.total,spec['status'],!!patientId):call.name==='query_documents'?documentCountParagraph(language,value.total):`${value.total} ${recordsCopy.count}`;
     for(const r of value.rows){const patientName=call.name==='query_documents'&&r.patientId?documentPatientNames.get(r.patientId):undefined,displayLabel=patientName?`${label(r.label)} — ${patientName}`:label(r.label);appendLinkedAnswerLine(result,displayLabel,` — ${r.at?new Date(r.at).toLocaleString(language==="fr"?"fr-DZ":"ar-DZ",{timeZone:"Africa/Algiers"}):""} — ${label(r.status)}${r.amount!==null?` — ${r.amount} DZD`:""}`,call.name==='query_documents'?{kind:r.status==='draft'?'draft':'document',id:r.id}:call.name==='query_consultations'?{kind:'consultation',id:r.id}:r.patientId?{kind:'patient',id:r.patientId}:undefined);}
    }
    result.evidence.unshift({id:call.id,type:"query",label:recordsCopy.count+" : "+value.total,provenance:{gate:"query_alexa_records",domain:call.name.slice(6),asOf}});
