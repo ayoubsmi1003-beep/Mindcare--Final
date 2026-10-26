@@ -133,6 +133,12 @@ export const fr = {
     champMotDePasse: "Mot de passe",
     connexionEnCours: "Connexion en cours…",
     /**
+     * Héro verre — deux lignes, SANS tiret. Le titre porte l'identité en
+     * bold, le détail porte la promesse en plus léger.
+     */
+    bienvenueTitre: "Bienvenue sur MindCare",
+    bienvenueDetail: "Travaillez plus intelligemment avec Alexa.",
+    /**
      * v9 — la promesse du panneau de marque, à côté du formulaire. Une phrase,
      * pas un slogan : elle dit ce que ce poste est, au moment de la journée où
      * la praticienne décide encore si elle ouvre le bon logiciel.

@@ -371,7 +371,7 @@
     --font-doc: var(--font-doc-emise), "Merriweather", Georgia, serif;
     --font-ar: var(--font-ar-emise), "IBM Plex Sans Arabic", "Noto Sans Arabic", sans-serif;
     --font-num: var(--font-num-emise), "Source Code Pro", ui-monospace, monospace;
-    --font-inter: var(--font-ui);
+    --font-inter: var(--font-inter-emise), "Inter", system-ui, sans-serif;
     --font-display: var(--font-display-emise), "Merriweather", Georgia, serif;
 
     --weight-regular: 400;
@@ -851,6 +851,22 @@
   .lune-alexa-ecoute {
     border-color: #4caf50;
     box-shadow: 0 0 0 1px rgba(76, 175, 80, 0.55), 0 0 28px -6px rgba(76, 175, 80, 0.55);
+  }
+  /* ── VagueBas — la vague Siri 21st.dev sort du bas, centrée ──
+     Îlot sombre flottant : fond nuit + bordure fine, le canvas WebGL ne
+     porte aucune couleur en TSX. `tokens.css` seul connaît les littéraux. */
+  .vague-bas-flottant {
+    z-index: var(--z-panneau);
+  }
+  .vague-bas-boite {
+    background: rgba(6, 13, 7, 0.88);
+    backdrop-filter: blur(16px) saturate(1.4);
+    -webkit-backdrop-filter: blur(16px) saturate(1.4);
+    border: 1px solid rgba(240, 235, 229, 0.16);
+    box-shadow: 0 18px 40px -18px rgba(0, 0, 0, 0.6), 0 0 32px -8px rgba(76, 175, 80, 0.4);
+  }
+  .vague-bas-canevas {
+    background: #060d07;
   }
   /* ── Alexa Lune — la scène remappe les jetons papier vers la nuit ──
      Même mécanisme que `.mode-seance` : les composants papier (fil, carte
@@ -1614,4 +1630,228 @@
 }
 @media (prefers-reduced-motion:reduce){
   .doc2-studio *{transition-duration:.01ms!important;animation-duration:.01ms!important}
+}
+
+/* ==========================================================================
+ * CONNEXION — fond shader vert + carte verre (21st.dev adapté)
+ * Seuls littéraux autorisés hors jetons : couleurs du fallback (même
+ * hex que les uniforms WebGL) + alphas du verre. Aucune couleur en TSX.
+ * ========================================================================== */
+@property --angle-1 { syntax: "<angle>"; inherits: false; initial-value: -75deg; }
+@property --angle-2 { syntax: "<angle>"; inherits: false; initial-value: -45deg; }
+
+.fond-shader-vert {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.fond-shader-vert[data-echec] {
+  background:
+    radial-gradient(1100px 600px at 20% 10%, #7ce577 0%, transparent 55%),
+    radial-gradient(900px 700px at 85% 80%, #0e7c5a 0%, transparent 60%),
+    linear-gradient(160deg, #03120e 0%, #0e7c5a 55%, #03120e 100%);
+}
+
+.scene-connexion {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s-6);
+  padding: var(--s-6);
+  overflow: hidden auto;
+  isolation: isolate;
+}
+
+.hero-connexion {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--s-2);
+  text-align: center;
+  animation: hero-inter-reveal 2s var(--e-out) 0.1s both;
+}
+
+.hero-connexion-titre {
+  display: block;
+  max-width: 20ch;
+  font-family: var(--font-inter);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.04;
+  font-size: clamp(34px, 5vw, 60px);
+  color: rgba(255, 255, 255, 0.97);
+  text-wrap: balance;
+  text-shadow: 0 2px 32px rgba(3, 18, 14, 0.5);
+}
+
+.hero-connexion-detail {
+  display: block;
+  max-width: 44ch;
+  font-family: var(--font-inter);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.45;
+  font-size: clamp(16px, 1.8vw, 21px);
+  color: rgba(255, 255, 255, 0.78);
+  text-shadow: 0 1px 16px rgba(3, 18, 14, 0.45);
+}
+
+@keyframes hero-inter-reveal {
+  0% { opacity: 0; filter: blur(10px); transform: translateY(10px); }
+  60% { opacity: 1; filter: blur(0); transform: translateY(0); }
+  100% { opacity: 1; filter: blur(0); transform: translateY(0); }
+}
+
+/* Médaillon cerveau — le mark de la marque dans du verre, pas un picto
+   inventé. Flottement lent + halo émeraude + parallaxe pointeur (±8° via
+   --medaillon-rx/ry posées par la page). */
+.medaillon-cerveau {
+  position: relative;  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 84px;
+  height: 84px;
+  border-radius: var(--r-full);
+  color: #fff;
+  background: linear-gradient(-75deg, rgba(255,255,255,0.16), rgba(255,255,255,0.34), rgba(255,255,255,0.16));
+  backdrop-filter: blur(12px) saturate(1.5);
+  -webkit-backdrop-filter: blur(12px) saturate(1.5);
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.55),
+    inset 0 -1px 0 rgba(3,18,14,0.15),
+    0 0 44px -6px rgba(124, 229, 119, 0.65),
+    0 18px 44px -18px rgba(3, 18, 14, 0.6);
+  transform:
+    perspective(600px)
+    rotateX(var(--medaillon-rx, 0deg))
+    rotateY(var(--medaillon-ry, 0deg));
+  transition: transform 0.35s var(--e-out);
+  animation: medaillon-flotte 7s var(--e-soft) infinite;
+}
+
+/* Le mark à 46px dans le verre : 1.5 y paraît grêle sur fond lumineux.
+   Scopé au médaillon — le rail et les documents gardent leur 1.5. */
+.medaillon-cerveau svg {
+  stroke-width: 2;
+}
+
+@keyframes medaillon-flotte {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -7px; }
+}
+
+.carte-verre-login {
+  position: relative;
+  z-index: 1;
+  width: min(420px, 100%);
+  border-radius: 28px;
+  padding: var(--s-8);
+  background: linear-gradient(-75deg, rgba(255,255,255,0.10), rgba(255,255,255,0.22), rgba(255,255,255,0.10));
+  backdrop-filter: blur(20px) saturate(1.4);
+  -webkit-backdrop-filter: blur(20px) saturate(1.4);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.45),
+    inset 0 -1px 0 rgba(3,18,14,0.18),
+    0 24px 60px -24px rgba(3,18,14,0.55);
+}
+.carte-verre-login::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: conic-gradient(from var(--angle-1) at 50% 50%, rgba(255,255,255,0.65) 0%, transparent 12% 40%, rgba(255,255,255,0.65) 50%, transparent 60% 92%, rgba(255,255,255,0.65) 100%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.champ-verre {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  width: 100%;
+  min-height: var(--target-comfort);
+  border-radius: var(--r-full);
+  padding: 4px 20px;
+  background: linear-gradient(-75deg, rgba(255,255,255,0.08), rgba(255,255,255,0.20), rgba(255,255,255,0.08));
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.35),
+    inset 0 -1px 0 rgba(3,18,14,0.15),
+    0 2px 8px -4px rgba(3,18,14,0.35);
+  border: 1px solid rgba(255,255,255,0.28);
+  transition: border-color var(--d-quick) var(--e-soft), box-shadow var(--d-quick) var(--e-soft);
+}
+.champ-verre:focus-within {
+  border-color: rgba(255,255,255,0.65);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.45),
+    0 0 0 1px rgba(255,255,255,0.25),
+    0 0 28px -8px rgba(124,229,119,0.55);
+}
+.champ-verre input {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  color: #fff;
+  font-family: var(--font-ui);
+  font-size: var(--text-body-size);
+}
+.champ-verre input::placeholder { color: rgba(255,255,255,0.60); }
+.champ-verre-label { color: rgba(255, 255, 255, 0.85); }
+.champ-verre input:-webkit-autofill {
+  -webkit-text-fill-color: #fff !important;
+  caret-color: #fff !important;
+  transition: background-color 5000s ease-in-out 0s !important;
+}
+.champ-verre-icone {
+  flex-shrink: 0;
+  display: inline-flex;
+  color: rgba(255,255,255,0.80);
+}
+.champ-verre label { color: rgba(255,255,255,0.85); }
+
+.bouton-verre {
+  position: relative;
+  width: 100%;
+  min-height: var(--target-comfort);
+  border-radius: var(--r-full);
+  border: 1px solid rgba(255,255,255,0.30);
+  background: linear-gradient(-75deg, rgba(255,255,255,0.14), rgba(255,255,255,0.30), rgba(255,255,255,0.14));
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #fff;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.50),
+    0 8px 24px -12px rgba(3,18,14,0.6);
+  transition: transform var(--d-quick) var(--e-soft), box-shadow var(--d-quick) var(--e-soft);
+}
+.bouton-verre:hover { transform: scale(0.99); }
+.bouton-verre:active { transform: scale(0.98); }
+.bouton-verre:disabled { cursor: not-allowed; opacity: 0.65; }
+.bouton-verre:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-connexion { animation: none; }
+  .medaillon-cerveau { animation: none; transform: none; }
+  .carte-verre-login::after { display: none; }
 }

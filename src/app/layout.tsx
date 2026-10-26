@@ -49,6 +49,7 @@ import type { ReactNode } from "react";
 
 import {
   IBM_Plex_Sans_Arabic,
+  Inter,
   Merriweather,
   Montserrat,
   Source_Code_Pro,
@@ -124,6 +125,19 @@ const fonteDisplay = Merriweather({
   display: "swap",
 });
 
+/**
+ * Héro connexion — Inter, transparent→blanc lent. Scopé au seul écran
+ * `/connexion` (classe `font-inter` + jeton `--font-inter`). Même pattern
+ * que les autres fontes : build-time, aucune requête runtime vers Google.
+ * Graisses 500/700/800 : le héro est bold premium, jamais light.
+ */
+const fonteInter = Inter({
+  subsets: ["latin"],
+  weight: ["500", "700", "800"],
+  variable: "--font-inter-emise",
+  display: "swap",
+});
+
 export default function RootLayout({
   children,
 }: {
@@ -146,7 +160,7 @@ export default function RootLayout({
     <html
       lang="fr"
       suppressHydrationWarning
-      className={`${fonteUi.variable} ${fonteNum.variable} ${fonteDoc.variable} ${fonteAr.variable} ${fonteDisplay.variable}`}
+      className={`${fonteUi.variable} ${fonteNum.variable} ${fonteDoc.variable} ${fonteAr.variable} ${fonteDisplay.variable} ${fonteInter.variable}`}
     >
       {/* ⚠️ COLONNE FLEX, ET CE N'EST PAS COSMÉTIQUE.
           Le bandeau ADR-016 précède la coquille. Tant que `<body>` était un bloc

@@ -348,6 +348,7 @@ const config: Config = {
     },
     fontFamily: {
       ui: ["var(--font-ui)"],
+      inter: ["var(--font-inter)"],
       // V8 — LA VOIX ÉDITORIALE. Fraunces était émise depuis V3 et n'avait
       // AUCUNE classe pour la consommer : `--font-display` existait, aucun
       // écran ne pouvait l'écrire. Elle porte désormais les trois moments où
