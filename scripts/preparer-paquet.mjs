@@ -41,7 +41,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { createRequire } from "node:module";
 import { auditServerDependencies } from "./lib/electron-runtime-audit.mjs";
-import {snapshotAlexaBuildSources,enablePackagedNativeEntrypoints,finalizeAlexaBuild} from './lib/alexa-package-integrity.mjs';
+import {snapshotAlexaBuildSources,enablePackagedNativeEntrypoints,finalizeAlexaBuild,isPlaywrightRuntimePath} from './lib/alexa-package-integrity.mjs';
 
 const RACINE = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const AUTONOME = path.join(RACINE, ".next", "standalone");
@@ -139,7 +139,8 @@ cpSync(AUTONOME, CIBLE, {
   filter: source => {
     const relatif = path.relative(AUTONOME, source);
     const nom = path.basename(source);
-    return ![".cache", "scripts", path.join("resources", "voix")].some(exclu => relatif === exclu || relatif.startsWith(exclu + path.sep))
+    return !isPlaywrightRuntimePath(relatif)
+      && ![".cache", "scripts", path.join("resources", "voix")].some(exclu => relatif === exclu || relatif.startsWith(exclu + path.sep))
       && nom !== ".env" && !nom.startsWith(".env.");
   },
 });

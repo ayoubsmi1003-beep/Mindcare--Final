@@ -5,10 +5,22 @@ import {join} from 'node:path';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {setImmediate as yieldToWorker} from 'node:timers/promises';
-import {withNativeBootstrap,enablePackagedNativeEntrypoints,backendInventory,assertBackendInventory,assertModelInventory,snapshotAlexaBuildSources,finalizeAlexaBuild,verifyAlexaPackage} from '../../scripts/lib/alexa-package-integrity.mjs';
+import {withNativeBootstrap,enablePackagedNativeEntrypoints,backendInventory,assertBackendInventory,assertModelInventory,snapshotAlexaBuildSources,finalizeAlexaBuild,verifyAlexaPackage,isPlaywrightRuntimePath} from '../../scripts/lib/alexa-package-integrity.mjs';
 const roots:string[]=[];
 afterEach(()=>{for(const root of roots.splice(0))rmSync(root,{recursive:true,force:true});});
 function fixture(){const root=mkdtempSync(join(tmpdir(),'mindcare-alexa-package-'));roots.push(root);return root;}
+it('identifies Playwright package and pnpm store paths as development-only runtime files',()=>{
+ for(const path of [
+  'node_modules/playwright/index.js',
+  'node_modules/playwright-core/bin/reinstall_chrome_beta_linux.sh',
+  'node_modules/@playwright/test/index.js',
+  'node_modules/.pnpm/playwright@1.62.1/node_modules/playwright',
+  'node_modules/.pnpm/playwright-core@1.62.1/node_modules/playwright-core',
+  'node_modules/.pnpm/@playwright+test@1.62.1/node_modules/@playwright/test',
+  'node_modules/.pnpm/node_modules/playwright-core',
+ ]) expect(isPlaywrightRuntimePath(path)).toBe(true);
+ for(const path of ['node_modules/next/server.js','node_modules/react/index.js','node_modules/some-playwright-reporter/index.js'])expect(isPlaywrightRuntimePath(path)).toBe(false);
+});
 it('activates the same native path in relocated CommonJS and ESM entries despite a conflicting inherited setting',()=>{
  const root=fixture();
  for(const suffix of ['cjs','mjs']){

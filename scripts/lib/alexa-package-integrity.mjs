@@ -33,6 +33,7 @@ export function backendInventory(root){
  }}visit(root);return files.sort(([a],[b])=>a<b?-1:a>b?1:0);
 }
 export function assertBackendInventory(root,expected){if(JSON.stringify(backendInventory(root))!==JSON.stringify(expected))throw Error('AlexaBackendIntegrity');}
+export function isPlaywrightRuntimePath(value){return value.split(/[\\/]/u).some(segment=>/^(?:@playwright(?:\+|$)|playwright(?:-core)?(?:@|$))/u.test(segment));}
 export function assertModelInventory(actual,pin){
  if(actual.runtimeFiles!==50||actual.modelSha256!==pin.sha256||actual.archiveSha256!==pin.archiveSha256||actual.runtimeManifestSha256!==pin.runtimeManifestSha256)throw Error('AlexaPackagedModelIntegrity');
 }
