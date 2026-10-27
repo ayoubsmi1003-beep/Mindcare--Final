@@ -1,12 +1,14 @@
 import { LIMITES, orchestrerRecherche } from "@/server/knowledge/recherche";
 import { CALIBRATION_A3, type RerankerLocalAsync } from "@/server/knowledge/rerank";
 import { SEUIL_FAIBLESSE, SEUIL_PERTINENCE } from "@/server/knowledge/preuve";
-import { lignePorteRecuperable, porteLexicale, porteVectorielle, validerLignePorte } from "@/server/knowledge/stockage";
+import { lignePorteRecuperable, porteLexicale, porteVectorielle, porteVectorielleV2, validerLignePorte } from "@/server/knowledge/stockage";
 import type { Langue, RetrievedEvidence } from "@/server/knowledge/types";
 import { editionDe, type EditionOuvrage } from "@/server/knowledge/editions";
 import { formaterLocalisation, localiserExtrait, localisationDeLOuvrage } from "@/server/knowledge/pages";
 import { mapLimite } from "@/server/knowledge/parallele";
 import { vecteurRequeteProduction } from "@/server/knowledge/vecteur-production";
+import { vecteurRequeteSecondaireProduction } from "@/server/knowledge/vecteur-secondaire-production";
+import { RECETTE_SECONDAIRE_GELEE } from "@/server/knowledge/embeddings-secondaires";
 import type { ClientSql } from "@/server/jarvis/client-sql";
 import { matchesRequestedBook, planKnowledgeQuery,matchesSectionFocus } from "./knowledge-query";
 import {headingOnlyEvidence,bibliographyEvidence,bibliographyTextEvidence,bibliographyRequested,indexEvidence,indexRequested,unboundTableEvidence} from './knowledge-evidence-content';
@@ -62,6 +64,10 @@ const MAX_PASSAGE_UTF8_BYTES = 8_192;
 // à une lecture clinique concurrente (voir `parallele.ts`).
 const PORTES_PARALLELES = 4;
 
+// L'index secondaire accepte jusqu'à 40 candidats ; on en demande 24 (fusion
+// hybride) pour laisser de la marge au filtre d'autorité post-KNN.
+const CANDIDATS_VECTORIELS = 24;
+
 /** Résout l'identité bibliographique d'une preuve, sans jamais la deviner. */
 export function identiteDePreuve(sourceTitre: string, sourceVersion: string): EditionOuvrage | null {
   return editionDe(sourceTitre, sourceVersion);
@@ -116,6 +122,12 @@ export interface DependancesReadKnowledge {
   readonly vecteurRequete?: (requete: string) => Promise<readonly number[] | null>;
   /** Cross-encoder optionnel ; absent = baseline heuristique (défaut). */
   readonly rerankerLocal?: RerankerLocalAsync;
+  /**
+   * Index SECONDAIRE (188) : quand il est renseigné, la branche vectorielle
+   * interroge `search_knowledge_vector_v2` avec CE couple (modele, version) —
+   * jamais l'index 1024d de production. Absent = ancienne porte (compatibilité).
+   */
+  readonly vectorielSecondaire?: { readonly modele: string; readonly version: string };
 }
 
 /** Options internes — jamais pilotées par le client. */
@@ -142,9 +154,18 @@ function sansFeuille(plan: ReturnType<typeof planKnowledgeQuery>): ReturnType<ty
 
 /** Les dépendances réelles du poste : modèle local + variable d'environnement. */
 export function dependancesReadKnowledge(): DependancesReadKnowledge {
+  // Le drapeau suffit : l'identité du modèle vient de la RECETTE épinglée
+  // (`embeddings-secondaires.ts`), jamais d'une variable d'environnement qui
+  // pourrait diverger de l'index réellement construit.
+  const actif = process.env["KNOWLEDGE_VECTOR"] === "1";
   return {
-    vectorActif: process.env["KNOWLEDGE_VECTOR"] === "1",
-    vecteurRequete: (requete: string) => vecteurRequeteProduction(requete),
+    vectorActif: actif,
+    vecteurRequete: (requete: string) => actif
+      ? vecteurRequeteSecondaireProduction(requete)
+      : vecteurRequeteProduction(requete),
+    ...(actif
+      ? { vectorielSecondaire: { modele: RECETTE_SECONDAIRE_GELEE.modele, version: RECETTE_SECONDAIRE_GELEE.version } }
+      : {}),
   };
 }
 
@@ -206,8 +227,14 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
     if (deps.vectorActif === true) {
       if (vecteur === null) vectorielIndisponible = true;
       else {
-        const gate = await client.rpc<unknown[]>("search_knowledge_vector",
-          porteVectorielle(JSON.stringify([...vecteur]), LIMITES.VECTORIEL).args);
+        const secondaire = deps.vectorielSecondaire;
+        // Deux sites d'appel LITTÉRAUX : le générateur d'allowlist refuse les
+        // noms calculés, et la porte doit rester vérifiable par pré-vol.
+        const gate = secondaire !== undefined
+          ? await client.rpc<unknown[]>("search_knowledge_vector_v2",
+              porteVectorielleV2(JSON.stringify([...vecteur]), secondaire.modele, secondaire.version, CANDIDATS_VECTORIELS).args)
+          : await client.rpc<unknown[]>("search_knowledge_vector",
+              porteVectorielle(JSON.stringify([...vecteur]), LIMITES.VECTORIEL).args);
         signal?.throwIfAborted();
         if (gate.error || !Array.isArray(gate.data)) vectorielIndisponible = true;
         else {

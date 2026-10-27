@@ -1,0 +1,36 @@
+{
+  "$comment": "Recette ÉPINGLÉE de l'index vectoriel SECONDAIRE (migration 188). Miroir de knowledge/recette-embedding-pinee.json pour BGE-M3 : tout écart (modèle, révision, dimensions, normalisation, préfixes, artefact) est un refus, jamais une coexistence silencieuse. Les empreintes viennent du manifeste écrit par scripts/telecharger-modele-book.mjs.",
+  "provider": "local-onnx",
+  "model": "intfloat/multilingual-e5-small",
+  "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+  "dimensions": 384,
+  "normalization": "l2-moyenne-masque-v1",
+  "query_prefix": "query: ",
+  "document_prefix": "passage: ",
+  "distance": "cosine",
+  "chunking_version": "multi",
+  "license": "MIT",
+  "artifact_sha256": {
+    "model_onnx": "ca456c06b3a9505ddfd9131408916dd79290368331e7d76bb621f1cba6bc8665",
+    "tokenizer_json": "0b44a9d7b51c3c62626640cda0e2c2f70fdacdc25bbbd68038369d14ebdf4c39"
+  },
+  "artifact_size_octets": {
+    "model_onnx": 470268510,
+    "tokenizer_json": 17082730
+  },
+  "graph": {
+    "entrees": ["input_ids", "attention_mask", "token_type_ids"],
+    "sortie": "last_hidden_state",
+    "pooling": "moyenne pondérée par attention_mask, puis L2",
+    "troncature": 128
+  },
+  "measured_on": {
+    "machine": "Intel Core i3-4150 (2 cœurs physiques), Windows, onnxruntime-node CPU, 2 threads",
+    "passages_par_seconde": 4.9,
+    "requete_p50_ms": 166,
+    "rss_mo": 580,
+    "note": "mesure de mise au point, pas une promesse : le poste cible est un i7 4e génération, environ 2× plus rapide."
+  },
+  "runtime_egress": "aucun — inférence 100 % locale, aucun appel réseau au runtime",
+  "status": "CANDIDAT — non promu. L'index secondaire doit être construit et comparé à la baseline lexicale avant activation."
+}

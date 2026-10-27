@@ -29,7 +29,7 @@ function clientHybride(options: {
   return {
     rpc: async <T,>(gate: string, args: ArgsJarvis = {}) => {
       options.journal?.push({ gate, args });
-      if (gate === "search_knowledge_vector") {
+      if (gate.startsWith("search_knowledge_vector")) {
         if (options.vectoriels === "panne") return { data: null, error: { code: "indisponible", message: "panne", context: "test" } };
         return { data: (options.vectoriels ?? []) as T, error: null };
       }
@@ -168,6 +168,36 @@ describe("readKnowledge : jambe vectorielle explicite et dégradation nommée", 
     const result = await readKnowledge(client, "Quels sont les critères du trouble panique selon le DSM-5 ?", undefined,
       { vectorActif: false, rerankerLocal: reranker });
     expect(result).toMatchObject({ reranker: "repli" });
+  });
+
+  it("choisit la porte SECONDAIRE quand le couple modele/version est fourni", async () => {
+    const journal: { gate: string; args: ArgsJarvis }[] = [];
+    const client = clientHybride({
+      lexicaux: [ligne("a", "Le trouble panique se caractérise par des attaques récurrentes.")],
+      vectoriels: [ligne("v", "Le trouble panique se caractérise par des attaques inattendues.", { score: 0.91 })],
+      journal,
+    });
+    const result = await readKnowledge(client, "Quels sont les critères du trouble panique selon le DSM-5 ?", undefined,
+      { vectorActif: true, vecteurRequete: async () => vecteur(),
+        vectorielSecondaire: { modele: "intfloat/multilingual-e5-small", version: "614241f" } });
+    const secondaire = journal.find((c) => c.gate === "search_knowledge_vector_v2");
+    expect(secondaire).toBeDefined();
+    expect(secondaire?.args).toMatchObject({ p_modele: "intfloat/multilingual-e5-small", p_version: "614241f", p_limite: 24 });
+    expect(journal.some((c) => c.gate === "search_knowledge_vector")).toBe(false);
+    expect(result.etat).toBe("ok");
+  });
+
+  it("garde l'ancienne porte quand aucun index secondaire n'est configuré", async () => {
+    const journal: { gate: string; args: ArgsJarvis }[] = [];
+    const client = clientHybride({
+      lexicaux: [ligne("a", "Le trouble panique se caractérise par des attaques récurrentes.")],
+      vectoriels: [],
+      journal,
+    });
+    await readKnowledge(client, "Quels sont les critères du trouble panique selon le DSM-5 ?", undefined,
+      { vectorActif: true, vecteurRequete: async () => vecteur() });
+    expect(journal.some((c) => c.gate === "search_knowledge_vector")).toBe(true);
+    expect(journal.some((c) => c.gate === "search_knowledge_vector_v2")).toBe(false);
   });
 
   it("n'injecte jamais la page d'un autre ouvrage venu de la branche vectorielle", async () => {

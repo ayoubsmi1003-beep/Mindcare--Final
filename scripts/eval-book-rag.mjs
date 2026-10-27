@@ -32,6 +32,12 @@ const option = (nom, defaut) => {
 };
 const GOLDEN = resolve(RACINE, option("--golden", join("tests", "eval", "knowledge.books-2026-10-27.json")));
 const EN_JSON = args.includes("--json");
+const URL_EXPLICITE = option("--url", "");
+const VEUT_VECTEUR = args.includes("--vector");
+const SLUG_MODELE = option("--slug", "e5-small");
+const MODELE = option("--modele", "intfloat/multilingual-e5-small");
+const VERSION_MODELE = option("--version", "614241f622f53c4eeff9890bdc4f31cfecc418b3");
+const DOSSIER_MODELE = option("--dossier", join(process.env.LOCALAPPDATA ?? process.env.TEMP, "MindCare", "modeles", SLUG_MODELE));
 
 function chargerEnv() {
   for (const nom of [".env.local", ".env"]) {
@@ -51,7 +57,9 @@ function chargerEnv() {
   }
 }
 chargerEnv();
-const url = process.env.MINDCARE_ADMIN_DATABASE_URL ?? process.env.MINDCARE_TEST_DATABASE_URL ?? process.env.MINDCARE_DATABASE_URL ?? "";
+const url = URL_EXPLICITE !== ""
+  ? URL_EXPLICITE
+  : (process.env.MINDCARE_ADMIN_DATABASE_URL ?? process.env.MINDCARE_TEST_DATABASE_URL ?? process.env.MINDCARE_DATABASE_URL ?? "");
 if (url.trim() === "") { console.error("aucune URL MINDCARE_* (lecture seule exigée)"); process.exit(1); }
 
 mkdirSync(join(RACINE, ".eval-out"), { recursive: true });
@@ -99,19 +107,40 @@ const clientSql = {
 };
 
 const normaliser = (v) => String(v ?? "").normalize("NFD").replace(/\p{M}/gu, "").toLowerCase();
-const sectionsConcernent = (section, groupes) => groupes.every((groupe) => groupe.some((mot) => normaliser(section).includes(normaliser(mot))));
+/**
+ * Le chemin de section porte TOUJOURS « Section II — Critères diagnostiques et
+ * codes » : matcher le chemin entier rendrait n'importe quelle rubrique du DSM
+ * « conforme ». On ne juge donc que les DEUX DERNIERS segments — la rubrique
+ * réellement demandée.
+ */
+const segments = (section) => normaliser(section).split(/[\u203A\u00BB]/).map((s) => s.trim()).filter(Boolean);
+const sectionsConcernent = (section, groupes) => {
+  const cible = segments(section).slice(-2).join(" › ");
+  return groupes.every((groupe) => groupe.some((mot) => cible.includes(normaliser(mot))));
+};
+const sectionExclue = (section, exclus) => (exclus ?? []).some((mot) => normaliser(section).includes(normaliser(mot)));
 const texteContient = (texte, fragments) => fragments.every((fragment) => normaliser(texte).includes(normaliser(fragment)));
 const sourceConcernent = (titre, attendu) => normaliser(titre).includes(normaliser(attendu));
-/** Un attendu est satisfait si la SOURCE correspond ET (section OU fragments du texte). */
+/** Un attendu est satisfait si la SOURCE correspond ET toutes les contraintes présentes. */
 const preuveSatisfait = (preuve, attendu) => {
   if (!sourceConcernent(preuve.titre, attendu.source)) return false;
-  if (attendu.section) return sectionsConcernent(preuve.section ?? "", attendu.section);
-  if (attendu.texteContient) return texteContient(preuve.extrait ?? "", attendu.texteContient);
+  if (sectionExclue(preuve.section ?? "", attendu.sectionExclut)) return false;
+  if (attendu.section && !sectionsConcernent(preuve.section ?? "", attendu.section)) return false;
+  if (attendu.texteContient && !texteContient(preuve.extrait ?? "", attendu.texteContient)) return false;
   return true;
 };
 
-const golden = JSON.parse(readFileSync(GOLDEN, "utf8"));
-const deps = dependancesReadKnowledge();
+const golden = JSON.parse(readFileSync(GOLDEN, "utf8").replace(/^\uFEFF/, ""));
+let deps = dependancesReadKnowledge();
+if (VEUT_VECTEUR) {
+  const { chargerEmbeddeur } = await import("./lib/embedding-livre.mjs");
+  const emb = await chargerEmbeddeur({ dossier: DOSSIER_MODELE, slug: SLUG_MODELE, maxTokens: 128, threads: 2 });
+  deps = {
+    vectorActif: true,
+    vecteurRequete: async (question) => (await emb.embed([question], "requete"))[0],
+    vectorielSecondaire: { modele: MODELE, version: VERSION_MODELE },
+  };
+}
 const resultats = [];
 for (const cas of golden.cas) {
   const t0 = performance.now();
