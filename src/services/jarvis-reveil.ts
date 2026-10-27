@@ -265,6 +265,14 @@ const SUIVI_MS = 8_000;
 const PATIENCE_REVEIL_MS = 3_000;
 const PLAFOND_CAPTURE_MS = 15_000;
 const DELAI_SUIVI_MS = 250;
+/**
+ * Délai de repli quand AUCUNE lecture n'a démarré après la réponse. La synthèse
+ * Kokoro peut préparer son premier son pendant plusieurs secondes : ouvrir le
+ * micro à 250 ms enregistrerait la réponse elle-même. On laisse donc à la
+ * lecture le temps de se manifester ; dès qu'elle publie `parole`, son minuteur
+ * est annulé et c'est sa FIN qui programmera le suivi.
+ */
+const ATTENTE_LECTURE_MS = 5_000;
 
 function effacerMinuteurSuivi(): void {
   if (minuteurSuivi !== null) {
@@ -274,7 +282,7 @@ function effacerMinuteurSuivi(): void {
 }
 
 /** Programme l'ouverture du suivi. Un seul minuteur, jamais deux. */
-function programmerSuivi(): void {
+function programmerSuivi(delaiMs = DELAI_SUIVI_MS): void {
   if (!suiviDemande) return;
   effacerMinuteurSuivi();
   const generation = generationSuivi;
@@ -282,7 +290,7 @@ function programmerSuivi(): void {
     minuteurSuivi = null;
     if (generation !== generationSuivi || !suiviDemande) return;
     void declencherEcoute({ suivi: true });
-  }, DELAI_SUIVI_MS);
+  }, delaiMs);
 }
 
 /**
@@ -426,7 +434,13 @@ async function declencherEcouteSerialise(options?: OptionsEcoute): Promise<void>
   // Un suivi annulé (envoi tapé, arrêt manuel) ne doit pas rouvrir le micro,
   // même si son minuteur a déjà été vidé. On le vérifie AVANT de couper une
   // réponse en cours : une activation annulée ne doit rien interrompre.
-  if (options?.suivi === true && !suiviDemande) return;
+  if (options?.suivi === true) {
+    if (!suiviDemande) return;
+    // ⚠️ UN SUIVI NE COUPE JAMAIS UNE RÉPONSE. S'il tombe pendant que Jarvis
+    // parle (ou prépare sa réponse), sa fin programmera elle-même la fenêtre.
+    // Le traiter comme un réveil manuel couperait la réponse en pleine phrase.
+    if (etat !== "veille") return;
+  }
 
   // Un réveil pendant la réponse coupe la lecture : c'est le « stop » naturel.
   if (etat === "parole") arreterLecture();
@@ -480,6 +494,7 @@ async function declencherEcouteSerialise(options?: OptionsEcoute): Promise<void>
   const demarrage = await demarrerDictee();
   if (!demarrage.ok) {
     if (generationDemarrage !== captureCourante) return;
+    annulerSuivi();
     detecteur?.reprendre();
     aller("erreur", demarrage.error.message);
     return;
@@ -623,7 +638,10 @@ async function acheminerTranscription(texte: string): Promise<void> {
   if (etatVoix() === "traitement") {
     detecteur?.reprendre();
     aller("veille");
-    programmerSuivi();
+    // Aucune lecture n'a démarré : on laisse malgré tout à la synthèse locale
+    // le temps de publier son premier son, sinon le suivi enregistrerait la
+    // réponse. Si elle démarre, `signalerParole` annule ce minuteur de repli.
+    programmerSuivi(ATTENTE_LECTURE_MS);
   }
 }
 
@@ -678,6 +696,10 @@ export function signalerParole(): void {
   // L'interruption est un état VISIBLE qui doit le rester : une lecture tardive
   // ne le remplace pas.
   if (etat === "interrompu") return;
+
+  // Une lecture commence : son minuteur de repli ne doit pas ouvrir le micro
+  // par-dessus elle. C'est sa FIN qui programmera le suivi.
+  effacerMinuteurSuivi();
 
   detecteur?.suspendre();
   aller("parole");
