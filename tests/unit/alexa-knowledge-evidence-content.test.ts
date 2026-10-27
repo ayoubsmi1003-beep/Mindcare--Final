@@ -13,6 +13,12 @@ it('does not treat reference records or repeated unbound column labels as clinic
  expect(bibliographyTextEvidence(bibliography)).toBe(true);
  expect(bibliographyTextEvidence('Une observation clinique documentée reste une phrase narrative.')).toBe(false);
  expect(bibliographyTextEvidence('Une observation clinique documentée. Doe et al. J Synthetic Med 2016; 11:487–489.')).toBe(false);
+ // Page de références dont le TITRE de section ne dit pas « references » :
+ // mesuré sur DSM p. 1042, section « Affections proposées… ». Le mot en tête
+ // ET plusieurs années de citation sont exigés ensemble.
+ const pageReferences = 'Page 1042 — passage non atomisé — 1042 Références Meltzer HY, Alphs L, Green AI, et al: Clozapine treatment for suicidality. Arch Gen Psychiatry 60(1):82–91, 2003 12511175 Nock MK, Borges G, Ono Y: Suicide: Global Perspectives. Cambridge University Press, 2012 Hawton K, Harriss L, Simkin S, et al: Self-cutting. Suicide Life Threat Behav 34(3):199–208, 2004';
+ expect(bibliographyTextEvidence(pageReferences)).toBe(true);
+ expect(bibliographyTextEvidence('Voir références pour les études citées. La posologie reste 25 mg le soir.')).toBe(false);
  expect(unboundTableEvidence('Drug A Drug B Drug C Metabolises: Metabolises: Metabolises:')).toBe(true);
  expect(unboundTableEvidence('Metabolises: Drug A. Monitoring: documented observations.')).toBe(false);
  expect((await readKnowledge(client(bibliography),'Explique la sertraline selon DSM-5')).preuves).toEqual([]);
