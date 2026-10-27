@@ -183,6 +183,11 @@ const recall = (k) => positifs.filter((r) => r.rang1 !== null && r.rang1 <= k).l
 const mrr = rangPremier.reduce((s, r) => s + (r === null ? 0 : 1 / r), 0) / Math.max(1, positifs.length);
 const abstention = negatifs.filter((r) => r.etat === "sans-preuve" || r.etat === "faible").length / Math.max(1, negatifs.length);
 const pages = positifs.filter((r) => r.page !== null).length / Math.max(1, positifs.length);
+// Taux de page CONDITIONNEL : parmi les preuves effectivement trouvées, combien
+// portent un folio vérifié ? C'est la métrique qui compte pour une citation :
+// une absence de page sur une question non retrouvée ne dit rien de la citation.
+const trouvees = positifs.filter((r) => r.rang1 !== null);
+const pageQuandTrouve = trouvees.filter((r) => r.page !== null).length / Math.max(1, trouvees.length);
 const latences = resultats.map((r) => r.ms).sort((a, b) => a - b);
 const p = (q) => latences[Math.min(latences.length - 1, Math.floor(q * latences.length))] ?? 0;
 
@@ -192,7 +197,7 @@ const resume = {
     deps.vectorActif ? "hybride" : "lexical-seul",
     deps.rerankerLocal !== undefined ? "rerank:actif" : "rerank:inactif",
   ].join("+"),
-  recall5: recall(5), recall1: recall(1), mrr, abstention, pageRate: pages,
+  recall5: recall(5), recall1: recall(1), recall3: recall(3), mrr, abstention, pageRate: pages, pageQuandTrouve,
   p50: p(0.5), p95: p(0.95), resultats,
 };
 if (EN_JSON) console.log(JSON.stringify(resume, null, 1));
@@ -203,6 +208,6 @@ else {
     console.log(`  ${r.id.padEnd(24)} ${String(r.etat).padEnd(11)} ${marque.padEnd(8)} ${String(r.ms).padStart(4)} ms  ${r.page ?? "-"}  ${r.edition ?? "-"}`);
   }
   console.log(`\n  Recall@1 ${(resume.recall1 * 100).toFixed(1)}%  Recall@5 ${(resume.recall5 * 100).toFixed(1)}%  MRR ${resume.mrr.toFixed(3)}`);
-  console.log(`  Abstention ${(resume.abstention * 100).toFixed(1)}%  Page présente ${(resume.pageRate * 100).toFixed(1)}%  p50 ${resume.p50} ms  p95 ${resume.p95} ms\n`);
+  console.log(`  Abstention ${(resume.abstention * 100).toFixed(1)}%  Page présente ${(resume.pageRate * 100).toFixed(1)}% (${(resume.pageQuandTrouve * 100).toFixed(1)}% des preuves trouvées)  p50 ${resume.p50} ms  p95 ${resume.p95} ms\n`);
 }
 await pool.end();
