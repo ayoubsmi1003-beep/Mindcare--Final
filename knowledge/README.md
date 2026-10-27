@@ -63,8 +63,8 @@ Résultats mesurés le 2026-10-27 :
 
 | Configuration | R@1 | R@3 | R@5 | MRR | Abstention | p50 |
 |---|---|---|---|---|---|---|
-| Lexical seul (livré) | 60 % | 75 % | 75 % | 0,675 | 100 % | 118 ms |
-| **Hybride 768, plancher + plafond + diversité** | **65 %** | **80 %** | **90 %** | **0,747** | **100 %** | 0,5–2 s |
+| Lexical seul (livré) | 60 % | 75 % | 75 % | 0,675 | 100 % | 61 ms |
+| **Hybride 768, plancher + plafond + diversité** | **65 %** | **80 %** | **90 %** | **0,747** | **100 %** | 0,35–2 s |
 
 > Le barème de section a été corrigé le 2026-10-27 : il ne regardait que les
 > DEUX derniers segments du chemin, ce qui déclarait « hors chapitre » un
