@@ -258,6 +258,12 @@ function serialiser(tache: () => Promise<void>): Promise<void> {
  */
 let suiviDemande = false;
 let minuteurSuivi: ReturnType<typeof setTimeout> | null = null;
+/**
+ * Le minuteur qui attend qu'une lecture DÉMARRE après la réponse. Il ne doit
+ * JAMAIS ouvrir le micro : il ne sert qu'à abandonner proprement le suivi si
+ * aucune lecture ne vient. Seul `signalerFinParole` ouvre une fenêtre de suivi.
+ */
+let minuteurAttenteParole: ReturnType<typeof setTimeout> | null = null;
 /** Invalide un démarrage de suivi déjà sorti du minuteur mais pas encore exécuté. */
 let generationSuivi = 0;
 
@@ -266,13 +272,12 @@ const PATIENCE_REVEIL_MS = 3_000;
 const PLAFOND_CAPTURE_MS = 15_000;
 const DELAI_SUIVI_MS = 250;
 /**
- * Délai de repli quand AUCUNE lecture n'a démarré après la réponse. La synthèse
- * Kokoro peut préparer son premier son pendant plusieurs secondes : ouvrir le
- * micro à 250 ms enregistrerait la réponse elle-même. On laisse donc à la
- * lecture le temps de se manifester ; dès qu'elle publie `parole`, son minuteur
- * est annulé et c'est sa FIN qui programmera le suivi.
+ * Fenêtre accordée à la synthèse locale pour publier son premier son après une
+ * réponse. Kokoro prépare parfois l'audio en plusieurs secondes ; passé ce
+ * délai sans `parole`, aucun suivi ne doit s'ouvrir — le docteur redira
+ * « Alexa ». Ce minuteur ne capture jamais rien.
  */
-const ATTENTE_LECTURE_MS = 5_000;
+const ATTENTE_PAROLE_MS = 5_000;
 
 function effacerMinuteurSuivi(): void {
   if (minuteurSuivi !== null) {
@@ -281,8 +286,36 @@ function effacerMinuteurSuivi(): void {
   }
 }
 
+function effacerAttenteParole(): void {
+  if (minuteurAttenteParole !== null) {
+    clearTimeout(minuteurAttenteParole);
+    minuteurAttenteParole = null;
+  }
+}
+
+/**
+ * Attend qu'une lecture démarre, sans jamais ouvrir le micro. À l'expiration,
+ * le suivi est abandonné : la machine reste en veille et le mot de réveil
+ * reste disponible.
+ */
+function attendreParole(): void {
+  effacerAttenteParole();
+  if (!suiviDemande) return;
+  const generation = generationSuivi;
+  minuteurAttenteParole = setTimeout(() => {
+    minuteurAttenteParole = null;
+    if (generation !== generationSuivi || !suiviDemande) return;
+    const courant = etatVoix();
+    // Une lecture a démarré entre-temps : sa fin programmera le suivi.
+    if (courant !== "traitement" && courant !== "veille") return;
+    annulerSuivi();
+    detecteur?.reprendre();
+    aller("veille");
+  }, ATTENTE_PAROLE_MS);
+}
+
 /** Programme l'ouverture du suivi. Un seul minuteur, jamais deux. */
-function programmerSuivi(delaiMs = DELAI_SUIVI_MS): void {
+function programmerSuivi(): void {
   if (!suiviDemande) return;
   effacerMinuteurSuivi();
   const generation = generationSuivi;
@@ -290,18 +323,24 @@ function programmerSuivi(delaiMs = DELAI_SUIVI_MS): void {
     minuteurSuivi = null;
     if (generation !== generationSuivi || !suiviDemande) return;
     void declencherEcoute({ suivi: true });
-  }, delaiMs);
+  }, DELAI_SUIVI_MS);
 }
 
 /**
  * Annule toute fenêtre de suivi. Appelé par un envoi tapé (Task 5) : une
  * question au clavier ne doit jamais hériter du micro laissé ouvert par la
  * réponse précédente.
+ *
+ * ⚠️ UN APPELANT QUI PEUT AVOIR UNE CAPTURE OUVERTE DOIT AUSSI APPELER
+ * `interrompreVoix()`. `annulerSuivi()` ne coupe pas un micro déjà ouvert : il
+ * retire seulement la fenêtre FUTURE. Sans la paire, le micro continuerait
+ * d'enregistrer derrière l'envoi tapé.
  */
 export function annulerSuivi(): void {
   suiviDemande = false;
   generationSuivi += 1;
   effacerMinuteurSuivi();
+  effacerAttenteParole();
 }
 
 /** The one in-flight arm attempt; cleared by an explicit disarm so a quick
@@ -577,7 +616,7 @@ export function cloturerCommande(jeton?: number, motif?: MotifFin): Promise<void
       return;
     }
     if (etat !== "traitement" || generation !== captureCourante) return;
-    await acheminerTranscription(transcription.data.trim());
+    await acheminerTranscription(transcription.data.trim(), generation);
   });
 }
 
@@ -591,7 +630,7 @@ export function cloturerCommande(jeton?: number, motif?: MotifFin): Promise<void
  * Vide = faux réveil (silence jeté, retour veille, sans erreur). Le détecteur
  * reste suspendu pendant la réponse, comme en réel.
  */
-async function acheminerTranscription(texte: string): Promise<void> {
+async function acheminerTranscription(texte: string, generation: number): Promise<void> {
   if (texte === "") {
     detecteur?.reprendre();
     annulerSuivi();
@@ -612,6 +651,10 @@ async function acheminerTranscription(texte: string): Promise<void> {
   try {
     await rappels?.onCommande(texte);
   } catch (cause) {
+    // ⚠️ UNE INTERRUPTION OU UN DÉMONTAGE N'EST PAS UNE PANNE. Si le docteur a
+    // cliqué « stop », démonté la voix ou si l'état a déjà quitté `traitement`,
+    // remplacer son geste par `erreur` serait lui mentir sur ce qui s'est passé.
+    if (generation !== captureCourante || etatVoix() !== "traitement") return;
     // ⚠️ AUCUNE EXCEPTION NE DOIT LAISSER LA MACHINE EN « traitement ». C'est
     // exactement l'état bloqué qu'on s'interdit : l'orbe tournerait
     // indéfiniment et plus aucun mot de réveil ne passerait.
@@ -627,21 +670,17 @@ async function acheminerTranscription(texte: string): Promise<void> {
   }
 
   // Si la réponse a déclenché une lecture, `signalerParole` a déjà fait passer
-  // la machine en « parole » — on ne l'écrase pas. Sinon, retour en veille et
-  // ouverture DIRECTE de la fenêtre de suivi : aucune lecture ne viendra
-  // rappeler `signalerFinParole`.
+  // la machine en « parole ». Sinon, retour en veille et attente BORNÉE de la
+  // première lecture : aucun suivi n'est ouvert tant qu'aucun son n'est sorti.
   //
   // ⚠️ ON RELIT PAR `etatVoix()`, PAS PAR `etat`. TypeScript garde l'affinement
   // établi plus haut (« forcément `ecoute` ») à travers l'`await`, alors que la
   // valeur réelle, elle, a changé plusieurs fois entre-temps. Passer par la
   // fonction lit le FAIT plutôt que la déduction du compilateur.
-  if (etatVoix() === "traitement") {
+  if (etatVoix() === "traitement" && generation === captureCourante) {
     detecteur?.reprendre();
     aller("veille");
-    // Aucune lecture n'a démarré : on laisse malgré tout à la synthèse locale
-    // le temps de publier son premier son, sinon le suivi enregistrerait la
-    // réponse. Si elle démarre, `signalerParole` annule ce minuteur de repli.
-    programmerSuivi(ATTENTE_LECTURE_MS);
+    attendreParole();
   }
 }
 
@@ -658,8 +697,9 @@ async function acheminerTranscription(texte: string): Promise<void> {
 export async function simulerTranscription(texte: string): Promise<boolean> {
   if (detecteur === null) return false;
   if (etat === "desactive" || etat === "erreur" || etat === "interrompu") return false;
+  const generation = captureCourante;
   aller("traitement");
-  await acheminerTranscription(texte.trim());
+  await acheminerTranscription(texte.trim(), generation);
   return true;
 }
 
@@ -697,8 +737,11 @@ export function signalerParole(): void {
   // ne le remplace pas.
   if (etat === "interrompu") return;
 
-  // Une lecture commence : son minuteur de repli ne doit pas ouvrir le micro
-  // par-dessus elle. C'est sa FIN qui programmera le suivi.
+  // Une lecture commence : ni l'attente bornée ni un suivi déjà programmé ne
+  // doivent ouvrir le micro par-dessus elle. C'est sa FIN qui programmera le
+  // suivi. L'état `traitement` est explicitement ACCEPTÉ ici : la synthèse peut
+  // démarrer après le retour de `onCommande`.
+  effacerAttenteParole();
   effacerMinuteurSuivi();
 
   detecteur?.suspendre();
@@ -721,6 +764,7 @@ export function signalerFinParole(): void {
     clearTimeout(chienDeGardeParole);
     chienDeGardeParole = null;
   }
+  effacerAttenteParole();
   if (etat !== "parole") return;
   detecteur?.reprendre();
   aller("veille");
