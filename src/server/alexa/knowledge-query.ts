@@ -19,6 +19,15 @@ const MOTS_FAIBLES_ANGLAIS: ReadonlySet<string> = new Set([
   "reported", "observed", "considered", "including", "regarding",
 ]);
 
+/** Verbes anglais génériques : ils décrivent l'intention (« stop », « avoid »),
+ * jamais le contenu clinique. Dans une porte lexicale en ET, ils éliminent des
+ * passages qui contiennent le médicament et le concept mais pas le verbe.
+ * Retirés UNIQUEMENT de la variante anglaise minimale (jamais de la requête
+ * d'origine, jamais du texte source, jamais de la synthèse). */
+const VERBES_ANGLAIS_FAIBLES: ReadonlySet<string> = new Set([
+  "stop", "avoid",
+]);
+
 /** Unités identiques en français et en anglais (jamais un mot de contenu). */
 const UNITES_INVARIANTES: ReadonlySet<string> = new Set([
   "mg", "g", "mcg", "ug", "ml", "kg", "ui", "iu", "%",
@@ -42,6 +51,10 @@ const SCAFFOLD = new Set([
   "mean", "refers", "refer", "state", "states", "list", "lists", "describe",
   "describes", "mention", "mentions", "contain", "contains", "provide",
   "provides", "there", "here", "any", "all", "some", "same", "other", "others",
+  // Mots de cadrage quantitatif français : ils demandent une quantité/durée,
+  // ils ne décrivent pas le contenu. Dans une porte lexicale en ET, « combien »
+  // ou « faut » suffit à rendre la requête introuvable (mesuré : 0 ligne).
+  "combien", "faut",
   // Mots de liaison français sans contenu clinique : ils ne doivent pas
   // empêcher la variante anglaise (l'ET de la porte est strict).
   "pendant", "faire", "cas", "selon", "concernant",
@@ -70,12 +83,14 @@ const ALIASES: Readonly<Record<string, readonly [string, string]>> = {
   interaction: ["interaction", "interaction"], interactions: ["interactions", "interactions"],
   surveillance: ["surveillance", "monitoring"], effets: ["effets", "effects"],
   indesirables: ["indesirables", "adverse"], grave: ["grave", "severe"], graves: ["graves", "severe"],
+  initiale: ["initiale", "initial"], initial: ["initial", "initial"],
   adolescent: ["adolescent", "adolescent"], adolescents: ["adolescents", "adolescents"],
   agee: ["agee", "elderly"], agees: ["agees", "elderly"],
   cible: ["cible", "level"], lithemie: ["lithemie", "lithium"], lithiemie: ["lithiemie", "lithium"],
   recommandee: ["recommandee", "recommended"], recommande: ["recommande", "recommended"],
   decrits: ["decrits", "described"], decrit: ["decrit", "described"],
-  serotoninergique: ["serotoninergique", "serotonergic"],
+  serotoninergique: ["serotoninergique", "serotonin"],
+  serotonine: ["serotonine", "serotonin"],
   arreter: ["arreter", "stop"], arret: ["arret", "discontinuation"], eviter: ["eviter", "avoid"],
   antidepresseur: ["antidepresseur", "antidepressant"], antidepresseurs: ["antidepresseurs", "antidepressants"],
   titrer: ["titrer", "titrate"], titration: ["titration", "titration"],
@@ -233,6 +248,19 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
       && !queries.includes(requeteAnglaise)) {
       queries.push(requeteAnglaise);
       references.push(requeteAnglaise);
+    }
+    // Variante « cœur » : sans les verbes génériques, pour les cas où le
+    // passage clinique nomme le médicament et le concept mais pas l'intention
+    // (« stop antidepressant avoid syndrome discontinuation » → aucun chunk ;
+    // « antidepressant syndrome discontinuation » → chapitre 3 de Taylor).
+    // Bornée, traçée comme les autres reformulations, jamais une question
+    // amputée : elle exige au moins deux termes de contenu.
+    const coeur = [...new Set([...motsAnglais.filter((t) => !VERBES_ANGLAIS_FAIBLES.has(t)), ...nombres])];
+    const requeteCoeur = coeur.join(" ");
+    if (coeur.length >= 2 && requeteCoeur !== "" && requeteCoeur !== requeteAnglaise
+      && !queries.includes(requeteCoeur)) {
+      queries.push(requeteCoeur);
+      references.push(requeteCoeur);
     }
   }
   // Expansion bilingue gouvernée : le concept clinique (FR ou EN) est remplace

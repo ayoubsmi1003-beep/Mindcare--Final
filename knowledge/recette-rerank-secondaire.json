@@ -1,0 +1,24 @@
+{
+  "$comment": "Recette ÉPINGLÉE du reranker secondaire (migration : aucune — lecture seule d'abord). Miroir du manifeste écrit par scripts/telecharger-modele-book.mjs. Tout écart (modèle, révision, empreinte) est un refus, jamais une coexistence silencieuse.",
+  "provider": "local-onnx",
+  "model": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+  "revision": "1427fd652930e4ba29e8149678df786c240d8825",
+  "licence": "Apache-2.0",
+  "parametres": 117641603,
+  "role": "rerank-only",
+  "artifact_sha256": {
+    "model_onnx": "3e9a03ed1e966f7c5288dd4230e3d6a9bf5e3a170a06f1f4241c5bca12c6487c",
+    "tokenizer_json": "62c24cdc13d4c9952d63718d6c9fa4c287974249e16b7ade6d5a85e7bbb75626"
+  },
+  "artifact_size_octets": {
+    "model_onnx": 470883696,
+    "tokenizer_json": 17082660
+  },
+  "graph": {
+    "entrees": ["input_ids", "attention_mask"],
+    "sortie": "logits",
+    "format": "paires XLM-R <s> requête </s> </s> document </s>, troncature côté document"
+  },
+  "runtime_egress": "aucun — inférence 100 % locale, aucun appel réseau au runtime",
+  "status": "CANDIDAT — non câblé. Benchmark isolé d'abord, promotion seulement après mesure."
+}

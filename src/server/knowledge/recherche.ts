@@ -210,6 +210,7 @@ export async function orchestrerRecherche(
   rerankerLocal?: RerankerLocalAsync,
   calibration: CalibrationFusion = CALIBRATION_COURANTE,
   fusion: "score" | "rang" = "score",
+  topN: number = LIMITES.FINAL,
 ): Promise<{
   readonly issue: IssueRecherche;
   readonly evidences: readonly RetrievedEvidence[];
@@ -234,11 +235,14 @@ export async function orchestrerRecherche(
     : fusionnerCandidats(lexicaux, vectoriels);
   // `CALIBRATION_COURANTE` rend exactement l'historique : défaut inchangé,
   // variants mesurés via `calibration` (M07 slice 3, jamais depuis le client).
-  let ranges = rerankerCalibre(question, fusionnes, LIMITES.FINAL, calibration);
+  // `topN` borne la liste rendue : l'appelant multi-lots demande FUSION puis
+  // refinalise lui-même à FINAL, pour ne pas couper un bon candidat trop tôt.
+  const borne = Number.isInteger(topN) && topN > 0 ? topN : LIMITES.FINAL;
+  let ranges = rerankerCalibre(question, fusionnes, borne, calibration);
   let repliReranker = false;
   if (rerankerLocal !== undefined) {
     try {
-      ranges = await rerankerLocal.rerankerAsync(question, fusionnes, LIMITES.FINAL);
+      ranges = await rerankerLocal.rerankerAsync(question, fusionnes, borne);
     } catch {
       // Repli heuristique déjà calculé ci-dessus : on le garde tel quel,
       // en le signalant (l'appelant journalise, ici jamais de log direct).

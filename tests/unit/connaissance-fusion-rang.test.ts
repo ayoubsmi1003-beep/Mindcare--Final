@@ -99,6 +99,12 @@ describe("orchestration : la fusion par rang est explicite, jamais silencieuse",
     expect(resultat.issue).toBe("pertinent");
     expect(resultat.evidences.map((e) => e.chunkId)).toEqual(["maudsley-pregnancy"]);
   });
+
+  it("rend plus que FINAL quand l'appelant multi-lots le demande", async () => {
+    const lignes = Array.from({ length: 8 }, (_, i) => ligne(`c${i + 1}`, 0.5 + i / 100));
+    const resultat = await orchestrerRecherche("trouble panique", lignes, [], undefined, undefined, "score", 8);
+    expect(resultat.evidences).toHaveLength(8);
+  });
 });
 
 describe("score d'un candidat purement dense : le RANG, pas la couverture", () => {

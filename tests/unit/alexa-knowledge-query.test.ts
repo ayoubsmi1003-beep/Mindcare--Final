@@ -145,6 +145,31 @@ describe("bounded Alexa lexical question planning", () => {
     expect(calls).toHaveLength(1);
   });
 
+  it("strips quantity scaffolding without stripping duration or clinical terms", async () => {
+    const { client, calls } = boundary([]);
+    await readKnowledge(client, "Combien de symptômes et quelle durée pour le trouble d'anxiété généralisée ?");
+    expect(calls[0]?.args["p_requete"]).toBe("symptomes duree trouble anxiete generalisee");
+  });
+
+  it("builds a complete English variant for an unnamed-book dose question", async () => {
+    const { client, calls } = boundary([]);
+    await readKnowledge(client, "Quelle est la dose initiale de la rispéridone dans la schizophrénie ?");
+    expect(calls.map(call => call.args["p_requete"])).toContain("dose initial risperidone schizophrenia");
+  });
+
+  it("maps serotoninergique to serotonin so the English variant matches the corpus", async () => {
+    const { client, calls } = boundary([]);
+    await readKnowledge(client, "Que faire en cas de syndrome sérotoninergique ?");
+    expect(calls.map(call => call.args["p_requete"])).toContain("syndrome serotonin");
+  });
+
+  it("adds a verb-stripped core variant when generic verbs would void the AND gate", async () => {
+    const { client, calls } = boundary([]);
+    await readKnowledge(client, "Comment arrêter un antidépresseur pour éviter un syndrome d'arrêt ?");
+    const requetes = calls.map(call => call.args["p_requete"]);
+    expect(requetes).toContain("antidepressant syndrome discontinuation");
+  });
+
   it.each([["5", "5"], ["2,5", "2,5"], ["-25", "-25"], ["1/2", "1/2"], ["٥", "5"], ["٢٫٥", "2.5"]])(
     "retains the numeric dose qualifier %s", async (quantity, canonical) => {
     const { client, calls } = boundary([]);

@@ -8,6 +8,7 @@ import { formaterLocalisation, localiserExtrait, localisationDeLOuvrage } from "
 import { mapLimite } from "@/server/knowledge/parallele";
 import { vecteurRequeteProduction } from "@/server/knowledge/vecteur-production";
 import { vecteurRequeteSecondaireProduction } from "@/server/knowledge/vecteur-secondaire-production";
+import { rerankerSecondaireProduction } from "@/server/knowledge/rerank-secondaire-production";
 import { RECETTE_SECONDAIRE_GELEE } from "@/server/knowledge/embeddings-secondaires";
 import type { ClientSql } from "@/server/jarvis/client-sql";
 import { matchesRequestedBook, planKnowledgeQuery,matchesSectionFocus } from "./knowledge-query";
@@ -158,6 +159,9 @@ export function dependancesReadKnowledge(): DependancesReadKnowledge {
   // (`embeddings-secondaires.ts`), jamais d'une variable d'environnement qui
   // pourrait diverger de l'index réellement construit.
   const actif = process.env["KNOWLEDGE_VECTOR"] === "1";
+  // Reranker secondaire : opt-in explicite, jamais par défaut. Modèle absent
+  // ou en panne → l'orchestrateur replie sur l'heuristique en le signalant.
+  const avecRerank = process.env["KNOWLEDGE_RERANK"] === "mmarco";
   return {
     vectorActif: actif,
     vecteurRequete: (requete: string) => actif
@@ -166,6 +170,7 @@ export function dependancesReadKnowledge(): DependancesReadKnowledge {
     ...(actif
       ? { vectorielSecondaire: { modele: RECETTE_SECONDAIRE_GELEE.modele, version: RECETTE_SECONDAIRE_GELEE.version } }
       : {}),
+    ...(avecRerank ? { rerankerLocal: rerankerSecondaireProduction() } : {}),
   };
 }
 
@@ -265,14 +270,48 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
     // deux branches ont des candidats, elles sont fusionnées PAR RANG (RRF).
     const parLot: Preuve[][] = [];
     let repliReranker = false;
-    for (const [index, lot] of lots.entries()) {
-      const vectorielsDuLot = index === 0 ? lignesVectorielles : [];
-      const search = await orchestrerRecherche(lot.reference, lot.lignes, vectorielsDuLot,
-        deps.rerankerLocal, CALIBRATION_A3,
-        vectorielsDuLot.length > 0 ? "rang" : "score");
+    if (deps.rerankerLocal !== undefined) {
+      // Voie reranker : UNE passe globale sur les candidats fusionnés, notée
+      // contre la QUESTION ORIGINALE (le cross-encoder est multilingue).
+      // Reranker chaque lot séparément multiplierait les inférences sans
+      // changer l'ordre final (les scores heuristiques sont préservés).
+      const toutesLignes: unknown[] = [];
+      const vusLignes = new Set<string>();
+      for (const lot of lots) {
+        for (const ligne of lot.lignes) {
+          const id = (ligne as { chunk_id?: unknown }).chunk_id;
+          if (typeof id === "string") {
+            if (vusLignes.has(id)) continue;
+            vusLignes.add(id);
+          }
+          toutesLignes.push(ligne);
+        }
+      }
+      for (const ligne of lignesVectorielles) {
+        const id = (ligne as { chunk_id?: unknown }).chunk_id;
+        if (typeof id === "string") {
+          if (vusLignes.has(id)) continue;
+          vusLignes.add(id);
+        }
+        toutesLignes.push(ligne);
+      }
+      const search = await orchestrerRecherche(question, toutesLignes, [],
+        deps.rerankerLocal, CALIBRATION_A3, "rang", LIMITES.FINAL);
       if (search.repliReranker) repliReranker = true;
       signal?.throwIfAborted();
       parLot.push([...search.evidences]);
+    } else {
+      for (const [index, lot] of lots.entries()) {
+        const vectorielsDuLot = index === 0 ? lignesVectorielles : [];
+        // Chaque lot rend jusqu'à FUSION : la refinalisation à FINAL a lieu UNE
+        // fois, globalement, pour ne pas couper un bon candidat dans son lot.
+        const search = await orchestrerRecherche(lot.reference, lot.lignes, vectorielsDuLot,
+          deps.rerankerLocal, CALIBRATION_A3,
+          vectorielsDuLot.length > 0 ? "rang" : "score", LIMITES.FUSION);
+        if (search.repliReranker) repliReranker = true;
+        signal?.throwIfAborted();
+        parLot.push([...search.evidences]);
+      }
     }
     // Les lots sont des REFORMULATIONS de la MÊME question (requête
     // d'origine, puis rubriques candidates). Leurs scores de pertinence sont

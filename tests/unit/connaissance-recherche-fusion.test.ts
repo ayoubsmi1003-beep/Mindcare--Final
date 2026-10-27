@@ -186,6 +186,12 @@ describe("preuve et qualification (matrice n°12/28)", () => {
     const ranges = reranker("posologie sertraline anxiété", fusion);
     expect(qualifier(ranges)).toBe("aucune");
   });
+
+  it("qualifie sur le meilleur score, pas sur le premier (ordre reranké)", () => {
+    const range = (score: number) => ({ score, candidat: null as never, apparies: [] as readonly string[] });
+    expect(qualifier([range(0.01), range(0.5)])).toBe("pertinent");
+    expect(qualifier([range(0.01), range(0.2)])).toBe("faible");
+  });
 });
 
 describe("budget d'évidence et clôture", () => {

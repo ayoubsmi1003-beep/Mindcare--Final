@@ -61,7 +61,16 @@ export function construirePreuve(range: CandidatRange): RetrievedEvidence {
  * déterministe (décision du service, constatée ici pour le seuil).
  */
 export function qualifier(ranges: readonly CandidatRange[]): IssueRecherche {
-  const meilleur = ranges[0]?.score ?? null;
+  // Le MEILLEUR score de la liste tranche, pas le premier : un réordonnancement
+  // (cross-encoder) ne change que l'ordre, jamais la qualification. Juger sur
+  // le premier élément punirait un bon candidat simplement parce que le
+  // reranker l'a placé en tête avec une échelle heuristique basse.
+  let meilleur: number | null = null;
+  for (const range of ranges) {
+    if (typeof range.score === "number" && Number.isFinite(range.score)) {
+      meilleur = meilleur === null ? range.score : Math.max(meilleur, range.score);
+    }
+  }
   if (meilleur === null) return "aucune";
   if (meilleur >= SEUIL_PERTINENCE) return "pertinent";
   if (meilleur >= SEUIL_FAIBLESSE) return "faible";
