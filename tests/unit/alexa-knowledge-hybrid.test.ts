@@ -1,6 +1,8 @@
 import { describe, expect, it, vi } from "vitest";
 
-import { readKnowledge } from "@/server/alexa/knowledge-adapter";`r`nimport type { CandidatFusionne } from "@/server/knowledge/recherche";`r`nimport type { CandidatRange, RerankerLocalAsync } from "@/server/knowledge/rerank";
+import { readKnowledge } from "@/server/alexa/knowledge-adapter";
+import type { CandidatFusionne } from "@/server/knowledge/recherche";
+import type { CandidatRange, RerankerLocalAsync } from "@/server/knowledge/rerank";
 import type { ArgsJarvis, ClientSql } from "@/server/jarvis/client-sql";
 
 const DSM = "DSM-5 — Manuel diagnostique et statistique des troubles mentaux";
@@ -142,14 +144,14 @@ describe("readKnowledge : jambe vectorielle explicite et dégradation nommée", 
       journal,
     });
     const ordre: string[] = [];
-    const reranker = {
+    const reranker: RerankerLocalAsync = {
       nom: "test-cross-encoder", version: "v-test",
       reranker: () => [],
-      rerankerAsync: async (_q: string, candidats: readonly { chunkId: string }[]) => {
+      rerankerAsync: async (_q: string, candidats: readonly CandidatFusionne[], topN = 5): Promise<CandidatRange[]> => {
         ordre.push(...candidats.map((c) => c.chunkId));
-        return candidats.map((c) => ({ candidat: c, score: 0.9, apparies: [] }));
+        return candidats.slice(0, topN).map((candidat) => ({ candidat, score: 0.9, apparies: [] }));
       },
-    } as unknown as NonNullable<NonNullable<Parameters<typeof readKnowledge>[3]>["rerankerLocal"]>;
+    };
     const result = await readKnowledge(client, "Quels sont les critères du trouble panique selon le DSM-5 ?", undefined,
       { vectorActif: false, rerankerLocal: reranker });
     expect(ordre.length).toBeGreaterThan(0);
@@ -158,11 +160,11 @@ describe("readKnowledge : jambe vectorielle explicite et dégradation nommée", 
 
   it("signale un repli de reranker au lieu de prétendre avoir reranké", async () => {
     const client = clientHybride({ lexicaux: [ligne("a", "Le trouble panique se caractérise par des attaques récurrentes.")] });
-    const reranker = {
+    const reranker: RerankerLocalAsync = {
       nom: "test-cross-encoder", version: "v-test",
       reranker: () => [],
       rerankerAsync: async () => { throw new Error("panne simulée"); },
-    } as unknown as NonNullable<NonNullable<Parameters<typeof readKnowledge>[3]>["rerankerLocal"]>;
+    };
     const result = await readKnowledge(client, "Quels sont les critères du trouble panique selon le DSM-5 ?", undefined,
       { vectorActif: false, rerankerLocal: reranker });
     expect(result).toMatchObject({ reranker: "repli" });
