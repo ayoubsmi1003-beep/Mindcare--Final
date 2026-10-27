@@ -6,6 +6,7 @@ import { readKnowledge } from "@/server/alexa/knowledge-adapter";
 import { knowledgeSource } from "@/server/alexa/knowledge-response";
 import { EDITIONS, editionDe } from "@/server/knowledge/editions";
 import {
+  carteDepuisJson,
   citationDepuisExtrait,
   formaterLocalisation,
   ligneCitation,
@@ -189,6 +190,32 @@ describe("readKnowledge : page et édition vérifiées dans la preuve d'affichag
     expect(preuve.edition?.edition).toBe("14e éd.");
     expect(preuve.page).toBeUndefined();
     expect(knowledgeSource(preuve).label).toBe(`${MAUDSLEY} · ${SECTION} · 14e éd.`);
+  });
+});
+
+describe("repli de page : carte des unités canoniques", () => {
+  it("rétablit la page de l'unité quand un fragment a perdu son marqueur", async () => {
+    // Unité RÉELLE du paquet DSM (folio 1, page PDF 60), marqueur absent du texte.
+    const { client } = clientAvec([row(DSM, "Critères diagnostiques du trouble panique : attaques de panique récurrentes et inattendues, sans marqueur de page.", { unit_id: "dsm5fr-u-1-COVER2" })]);
+    const result = await readKnowledge(client, "Quels sont les critères du trouble panique selon le DSM-5 ?");
+    const preuve = result.preuves[0]!;
+    expect(preuve.page).toEqual({ pageImprimee: 1, pagePdf: 60, libelle: "p. 1" });
+  });
+
+  it("ignore une unité inconnue plutôt que d'inventer une page", async () => {
+    const { client } = clientAvec([row(DSM, "Fragment sans page.", { unit_id: "unite-inexistante" })]);
+    const result = await readKnowledge(client, "Quels sont les critères du trouble panique selon le DSM-5 ?");
+    expect(result.preuves[0]?.page).toBeUndefined();
+  });
+
+  it("normalise le JSON brut et écarte les entrées mal formées", () => {
+    const carte = carteDepuisJson({
+      "livre-a": { u1: [12, 30], u2: [null, null], u3: [0, -4], u4: "pas-un-tableau", u5: [12] },
+      "livre-b": null,
+    });
+    expect(carte["livre-a"]).toEqual({ u1: [12, 30], u2: [null, null], u3: [null, null] });
+    expect(carte["livre-b"]).toBeUndefined();
+    expect(carteDepuisJson(null)).toEqual({});
   });
 });
 
