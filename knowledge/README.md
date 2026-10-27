@@ -152,17 +152,27 @@ livré est lexical. Toute promotion d'un espace vectoriel exige (a) la migration
 appliquée sur la base du cabinet, (b) la recette épinglée dans le runtime,
 (c) une mesure qui dépasse la baseline lexicale sur le golden ci-dessus.
 
-Pour l'espace 768 (mesuré, prêt, **non activé**) :
+Pour l'espace 768 (mesuré, table et porte installées sur le cabinet le
+2026-10-27, **non activé**) :
 
-1. `191_knowledge_chunk_vectors_768.sql` sur la base du cabinet ;
-2. backfill des 22 159 chunks actifs DSM + Maudsley (~4 h sur ce poste) ;
-3. `KNOWLEDGE_VECTOR=1` et `KNOWLEDGE_VECTOR_RECETTE=e5-base` (serveur) ;
-4. redémarrer : le premier appel charge le modèle (~15 s), les suivants sont
-   à 200–800 ms.
+1. `191_knowledge_chunk_vectors_768.sql` sur la base du cabinet — **fait**
+   (`app.knowledge_chunk_vectors_768` + `app.search_knowledge_vector_v2_768`) ;
+2. backfill des 22 159 chunks actifs DSM + Maudsley — **en cours** via
+   `scripts/remplir-vecteurs-768-docker.mjs` (~2,2 chunks/s, sans secret) ;
+3. dans `%ProgramData%\MindCare\private\runtime.env` (app installée) ou le
+   `.env` de développement, ajouter :
+   ```
+   KNOWLEDGE_VECTOR=1
+   KNOWLEDGE_VECTOR_RECETTE=e5-base
+   ```
+   Ces deux noms sont les SEULS admis par l'allowlist du serveur
+   (`electron/main/serveur-cabinet.ts`) ; un nom inconnu fait échouer le
+   démarrage, volontairement ;
+4. redémarrer : le premier appel charge le modèle (~15–20 s), les suivants sont
+   à 0,3–2 s.
 
 Sans la migration, `KNOWLEDGE_VECTOR=1` ne dégrade pas la réponse (repli
-lexical) mais paie le chargement du modèle pour rien : ne pas activer avant
-l'étape 1.
+lexical) mais paie le chargement du modèle pour rien.
 
 Deux défauts corrigés au passage (dormants tant que la branche restait
 éteinte) : le chargeur validait la recette secondaire contre le schéma BGE-M3
