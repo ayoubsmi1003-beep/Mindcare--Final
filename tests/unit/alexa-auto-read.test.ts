@@ -132,8 +132,23 @@ describe("le câblage du lecteur global", () => {
     const fil = source("src/components/FilJarvis.tsx");
     expect(fil).not.toContain("choisirTourAuto");
     expect(fil).toContain("lireTexteLong");
-    expect(fil).toContain("lectureInterdite");
+    expect(fil).not.toContain("lectureInterdite");
     expect(fil).toContain("abonnerCapture");
+  });
+
+  it("laisse remplacer une lecture par une autre bulle pendant un son, sans capture", () => {
+    const fil = source("src/components/FilJarvis.tsx");
+    // L'admission manuelle ne regarde que le micro, jamais le haut-parleur.
+    expect(fil).toMatch(/if \(captureActive\(\)\) \{\s*setErreurLecture/);
+    expect(fil).not.toMatch(/if \(lectureInterdite\(\)\)/);
+    // Le prédicat entre morceaux reste lui aussi une garde de capture.
+    expect(fil).toContain("lireTexteLong(texte, porteUneIdentite, () => captureActive())");
+    // Le bouton reste visible pendant une lecture : sa visibilité ne dépend
+    // que de la capture, jamais de `playbackBusy`.
+    const lisible = fil.match(/const lisible = ([^;]+);/)?.[1] ?? "";
+    expect(lisible).toContain("!capture");
+    expect(lisible).not.toMatch(/playback|lectureInterdite/);
+    expect(fil).toContain("abonnerActivite(() => setCapture(captureActive()))");
   });
 
   it("coupe la lecture globale quand une capture commence", () => {

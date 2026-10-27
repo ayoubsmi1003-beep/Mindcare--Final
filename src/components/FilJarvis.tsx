@@ -32,7 +32,7 @@ import {
   estLectureInterrompue,
   lireTexteLong,
 } from "@/services/jarvis-voix";
-import { abonnerActivite, abonnerCapture, captureActive, lectureInterdite } from "@/services/voice-activity";
+import { abonnerActivite, abonnerCapture, captureActive } from "@/services/voice-activity";
 
 import { Icone } from "./ui/Icones";
 
@@ -115,9 +115,10 @@ export function FilJarvis({
       return;
     }
     // ⚠️ AUCUN SON NE DÉMARRE PENDANT UNE CAPTURE. Le micro du réveil ou
-    // d'une dictée est ouvert : la synthèse s'y enregistrerait. Le refus est
-    // VISIBLE, pas un bouton muet.
-    if (lectureInterdite()) {
+    // d'une dictée est ouvert : la synthèse s'y enregistrerait. La lecture en
+    // cours, elle, n'est PAS une capture : cliquer « Relire » sur une autre
+    // bulle remplace A par B, comportement voulu de `lireTexte`.
+    if (captureActive()) {
       setErreurLecture({ id, texte, porteUneIdentite, motif: fr.jarvis.voix.dejaEnCours });
       return;
     }
