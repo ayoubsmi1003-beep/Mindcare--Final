@@ -230,12 +230,24 @@ function installerPaquets() {
   }
 }
 
+/**
+ * Inventory every bundled file. Byte-code is deliberately excluded: pip writes
+ * `.pyc` headers that embed the install-time source mtime, so keeping it would
+ * make the inventory hash change on every reinstall. `packages/` and `python/`
+ * stay in the inventory because the package verifier pins their files.
+ */
 function inventaire(directory, base = directory, result = []) {
   for (const entry of readdirSync(directory, { withFileTypes: true })) {
     const full = join(directory, entry.name);
     if (entry.isDirectory()) {
+      if (entry.name === "__pycache__") continue;
       inventaire(full, base, result);
-    } else if (entry.isFile() && entry.name !== "inventory.json" && entry.name !== "manifest.json") {
+    } else if (
+      entry.isFile() &&
+      !entry.name.endsWith(".pyc") &&
+      entry.name !== "inventory.json" &&
+      entry.name !== "manifest.json"
+    ) {
       result.push({ path: relative(base, full).replaceAll("\\", "/"), bytes: taille(full), sha256: null });
     }
   }
@@ -243,7 +255,9 @@ function inventaire(directory, base = directory, result = []) {
 }
 
 async function contenuInventaire() {
-  const rows = inventaire(VOIX);
+  // Sort before hashing: directory enumeration order is filesystem-dependent
+  // and must never leak into the manifest's inventorySha256 contract.
+  const rows = inventaire(VOIX).sort((a, b) => (a.path < b.path ? -1 : a.path > b.path ? 1 : 0));
   for (const row of rows) row.sha256 = await hash(join(VOIX, row.path));
   const inventory = rows.filter((row) => row.path !== "inventory.json");
   return { inventory, json: `${JSON.stringify(inventory, null, 2)}\n` };

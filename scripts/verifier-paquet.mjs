@@ -51,6 +51,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { auditElectronModules, readAsarModules, readAsarPackage, auditServerDependencies } from "./lib/electron-runtime-audit.mjs";
 import {verifyAlexaPackage} from './lib/alexa-package-integrity.mjs';
+import { chargerPinsInventaireVoix } from "./lib/voix-inventory-pins.mjs";
 
 const RACINE = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const CIBLE = path.resolve(process.argv[2] ?? path.join(RACINE, "dist", "win-unpacked"));
@@ -150,23 +151,14 @@ const HORS_DEPENDANCES = /(^|\/)node_modules\//;
 // Les roues Python sont conservées intégralement : le worker vérifie chaque
 // fichier de cet inventaire épinglé. Une exclusion par le seul nom packages/
 // laisserait entrer un outil du dépôt. L'exception exige le chemin connu ET
-// l'empreinte réelle, avec la même empreinte d'inventaire que le runtime voix.
-const INVENTAIRE_VOIX_SHA256 = "af3c524e64a24039c505169a1ef2c56011921b49cce8b3d747aec5f1aec40fc4";
-const pinsVoix = new Map();
+// l'empreinte réelle ; le manifeste empaqueté est l'autorité, jamais une
+// valeur figée dans ce script.
 const validationsVoix = new Map();
-const fichierInventaireVoix = path.join(CIBLE, "resources", "voix", "inventory.json");
-if (existsSync(fichierInventaireVoix)) {
-  try {
-    const contenu = readFileSync(fichierInventaireVoix);
-    if (createHash("sha256").update(contenu).digest("hex") !== INVENTAIRE_VOIX_SHA256) throw new Error("empreinte");
-    for (const entree of JSON.parse(contenu.toString("utf8"))) {
-      if (typeof entree.path === "string" && entree.path.startsWith("packages/") && /^[a-f0-9]{64}$/.test(entree.sha256)) {
-        pinsVoix.set(`resources/voix/${entree.path}`, entree.sha256);
-      }
-    }
-  } catch {
-    refuser("inventaire voix non conforme au runtime épinglé :", ["resources/voix/inventory.json"]);
-  }
+let pinsVoix = new Map();
+try {
+  pinsVoix = chargerPinsInventaireVoix(path.join(CIBLE, "resources", "voix"));
+} catch {
+  refuser("inventaire voix non conforme au runtime épinglé :", ["resources/voix/inventory.json"]);
 }
 function dependanceVoixEpinglee(relatif) {
   if (!pinsVoix.has(relatif)) return false;

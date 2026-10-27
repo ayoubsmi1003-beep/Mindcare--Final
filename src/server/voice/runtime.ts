@@ -6,7 +6,9 @@ import { resoudreCheminsVoix } from "./chemins";
 import { MODELES_VOIX, verifierDossierModele, verifierFichierModele } from "./modeles";
 import { CanalVoixNative, type EntreeVoix, type ReponseVoix } from "./protocole";
 
-const READY_TIMEOUT_MS = 120_000;
+// The first load after install scans and maps 486 MB of model files; on a cold
+// Windows cache that exceeded two minutes, while warm starts take 15-40 s.
+const READY_TIMEOUT_MS = 180_000;
 const STT_TIMEOUT_MS = 60_000;
 const TTS_TIMEOUT_MS = 120_000;
 
