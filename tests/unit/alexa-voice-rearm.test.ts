@@ -258,6 +258,51 @@ describe("mains-libres serialized cycle", () => {
     expect(faux.demarrer).toHaveBeenCalledTimes(1);
   });
 
+  it("cancels the previous speech wait when a new wake is already processing", async () => {
+    vi.useFakeTimers({ shouldAdvanceTime: true });
+    const release = retenirVoix({ onCommande: faux.commande });
+    relachements.push(release);
+    await vi.waitFor(() => expect(faux.wake).not.toBeNull());
+
+    // First command: no playback, so the 5 s speech wait is armed.
+    faux.wake!();
+    await vi.waitFor(() => expect(etatVoix()).toBe("ecoute"));
+    await cloturerCommande(undefined, "silence");
+    expect(etatVoix()).toBe("veille");
+    await vi.advanceTimersByTimeAsync(1_000);
+
+    // Second wake WITHIN the old wait: the acknowledgement fails, so no
+    // signalerFinParole will ever clear the first wait.
+    faux.lireTexte.mockResolvedValueOnce({
+      ok: false,
+      error: { code: "indisponible", message: "La voix est indisponible." },
+    });
+    let terminerCommande!: () => void;
+    faux.commande.mockImplementationOnce(
+      () =>
+        new Promise<void>((resolve) => {
+          terminerCommande = resolve;
+        }),
+    );
+
+    faux.wake!();
+    await vi.waitFor(() => expect(etatVoix()).toBe("ecoute"));
+    expect(faux.lireTexte).toHaveBeenCalledTimes(2);
+
+    const fermeture = cloturerCommande(undefined, "silence");
+    await vi.waitFor(() => expect(faux.commande).toHaveBeenCalledTimes(2));
+    expect(etatVoix()).toBe("traitement");
+
+    // Past the OLD 5 s deadline: the stale timer must not force `veille`.
+    await vi.advanceTimersByTimeAsync(5_000);
+    expect(etatVoix()).toBe("traitement");
+
+    terminerCommande();
+    await fermeture;
+    expect(etatVoix()).toBe("veille");
+    expect(faux.commande).toHaveBeenLastCalledWith("Quel est le prochain patient ?");
+  });
+
   it("keeps a manual stop as interrompu when the command rejects", async () => {
     vi.useFakeTimers({ shouldAdvanceTime: true });
     const etats: string[] = [];

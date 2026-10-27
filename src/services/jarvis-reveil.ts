@@ -305,9 +305,11 @@ function attendreParole(): void {
   minuteurAttenteParole = setTimeout(() => {
     minuteurAttenteParole = null;
     if (generation !== generationSuivi || !suiviDemande) return;
-    const courant = etatVoix();
-    // Une lecture a démarré entre-temps : sa fin programmera le suivi.
-    if (courant !== "traitement" && courant !== "veille") return;
+    // ⚠️ CE MINUTEUR N'APPARTIENT QU'À LA VEILLE. S'il survit à un nouveau
+    // réveil (accusé muet, aucun `signalerFinParole`), il ne doit pas arracher
+    // l'état d'une commande en cours : `traitement`, `parole`, `ecoute` et
+    // `reveille` appartiennent à la nouvelle activation.
+    if (etatVoix() !== "veille") return;
     annulerSuivi();
     detecteur?.reprendre();
     aller("veille");
@@ -495,9 +497,12 @@ async function declencherEcouteSerialise(options?: OptionsEcoute): Promise<void>
     return;
   }
 
-  // Une activation explicite remplace toute fenêtre de suivi en attente : deux
-  // ouvertures programmées pour la même réponse seraient un deuxième micro.
+  // Une activation explicite remplace toute fenêtre de suivi ET toute attente
+  // de lecture en cours. Sans cela, un accusé muet peut laisser le minuteur de
+  // l'ancienne réponse expirer pendant la NOUVELLE commande et la forcer en
+  // veille. Le nouveau réveil possède désormais l'attente de parole.
   effacerMinuteurSuivi();
+  effacerAttenteParole();
 
   aller("reveille");
   // Le détecteur se tait pendant la capture : la commande de la praticienne ne
