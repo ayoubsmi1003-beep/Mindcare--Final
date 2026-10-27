@@ -133,10 +133,18 @@ export interface DetecteurReveil {
 let detecteur: DetecteurReveil | null = null;
 
 /**
+ * Jeton de la reprise en cours. Toute installation ou désinstallation le
+ * périme : une boucle de relance ne doit jamais rallumer un détecteur que la
+ * praticienne vient de retirer.
+ */
+let repriseGeneration = 0;
+
+/**
  * Branche un détecteur. Appelé au démarrage de l'application SI un moteur a été
  * retenu et que sa licence a été lue.
  */
 export function installerDetecteur(d: DetecteurReveil | null): void {
+  repriseGeneration += 1;
   detecteur?.arreter();
   detecteur = d;
   publier();
@@ -420,7 +428,78 @@ export async function armerReveil(r: RappelsVoix): Promise<Result<true>> {
   return ok(true);
 }
 
+/**
+ * Délais de reprise bornés. Après le dernier, l'échec est visible : on ne
+ * prétend pas écouter quand le détecteur n'a pas pu redémarrer.
+ */
+const DELAIS_REPRISE = [250, 500, 1_000, 2_000] as const;
+
+function attendre(ms: number): Promise<void> {
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms);
+  });
+}
+
+/**
+ * ⚠️ UNE PANNE DU DÉTECTEUR NE DOIT PAS DÉSARMER LA VOIX.
+ *
+ * `reveil-vosk` signale une perte de micro ou un transport mort. La réaction
+ * évidente — `installerDetecteur(null)` / `desarmerReveil()` — transforme une
+ * panne récupérable en fonctionnalité éteinte jusqu'au prochain geste. On
+ * relance donc l'armement, borné, tant que la praticienne veut la voix :
+ * 250/500/1000/2000 ms, puis `erreur` SEULEMENT si le détecteur ne redémarre
+ * pas. Sur un `micro`, le graphe mort a déjà été fermé par le détecteur et
+ * `prendreMicro` dans `demarrer` réacquiert le périphérique.
+ */
+export async function relancerArmement(code: "micro" | "transport"): Promise<void> {
+  const jeton = (repriseGeneration += 1);
+  log.warn("jarvis.reveil.reprise", { code, count: DELAIS_REPRISE.length });
+  let dernierCode = "indisponible";
+  for (let tentative = 0; tentative < DELAIS_REPRISE.length; tentative += 1) {
+    await attendre(DELAIS_REPRISE[tentative]!);
+    if (jeton !== repriseGeneration) return;
+    const d = detecteur;
+    // La praticienne a pu arrêter la voix pendant l'attente : on ne rouvre pas
+    // le micro dans son dos.
+    if (d === null || rappels === null || references === 0 || etat === "desactive") return;
+    const resultat = await d.demarrer(() => void surReveil());
+    if (jeton !== repriseGeneration) return;
+    if (resultat.ok) {
+      // La reprise ne concerne QUE l'écoute de fond. Si une capture, un
+      // traitement ou une réponse est en cours, son état prime : le déclarer
+      // « veille » ici ferait croire que le micro de commande est fermé. La
+      // suspension appartenait à ce tour et a disparu avec l'ancien graphe —
+      // on la rétablit au lieu de laisser le détecteur écouter la commande ou
+      // la voix de Jarvis.
+      if (etat === "reveille" || etat === "ecoute" || etat === "traitement" || etat === "parole") {
+        d.suspendre();
+      } else if (etat === "veille" || etat === "erreur") {
+        aller("veille");
+      }
+      log.info("jarvis.reveil.reprise.ok", { context: d.nom, count: tentative + 1 });
+      return;
+    }
+    dernierCode = resultat.error.code;
+    log.warn("jarvis.reveil.reprise.echec", { code: resultat.error.code, count: tentative + 1 });
+  }
+  if (jeton !== repriseGeneration) return;
+  if (detecteur === null || rappels === null) return;
+  // ⚠️ NE JAMAIS ARRACHER UNE CAPTURE EN COURS. Poser `erreur` pendant
+  // `ecoute` laisserait l'enregistreur ouvert sans plus aucun chemin pour le
+  // clore (`cloturerCommande` exige l'état `ecoute`). Une panne constatée hors
+  // veille est donc journalisée, et l'état actif garde la priorité.
+  if (etat !== "veille" && etat !== "erreur") {
+    log.error("jarvis.reveil.reprise.abandon", { code: dernierCode, context: etat });
+    return;
+  }
+  aller(
+    "erreur",
+    dernierCode === "interdit" ? fr.jarvis.voix.reveil.microRefuse : fr.jarvis.voix.reveil.moteurIndisponible,
+  );
+}
+
 export function desarmerReveil(): void {
+  repriseGeneration += 1;
   captureCourante += 1; // invalide toute clôture en vol
   annulerSuivi();
   if (chienDeGardeParole !== null) {
@@ -924,7 +1003,7 @@ export function retenirVoix(r: RappelsVoix): () => void {
       // rendu serveur, ni dans le bundle initial. L'application s'affiche sans
       // attendre 16 Mio de runtime.
       const { creerDetecteurVosk } = await import("./reveil-vosk");
-      installerDetecteur(creerDetecteurVosk());
+      installerDetecteur(creerDetecteurVosk((code) => void relancerArmement(code)));
       return await armerReveil(r);
     })();
     armement = tentative;

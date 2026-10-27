@@ -21,6 +21,15 @@ import type { DetecteurReveil } from "./jarvis-reveil";
 const TAUX = 16_000;
 const ECHANTILLONS_PAR_BLOC = 8_000; // 500 ms
 const BLOC_AUDIO = 8_192;
+/** Two chunks in flight at most: a slow worker must never grow memory. */
+const MAX_EN_ATTENTE = 2;
+/** Bounded transport retries before the state machine is told to re-arm. */
+const MAX_ECHECS = 5;
+const PING_MS = 20_000;
+const PING_TIMEOUT_MS = 10_000;
+
+export type CodeErreurReveil = "micro" | "transport";
+type ActionReveil = "start" | "audio" | "reset" | "ping" | "stop";
 
 function base64(bytes: Uint8Array): string {
   let texte = "";
@@ -52,44 +61,158 @@ export function floatVersPcm16(entree: Float32Array, sourceRate: number): Uint8A
   return sortie;
 }
 
-export function creerDetecteurVosk(surErreur?: () => void): DetecteurReveil {
+export function creerDetecteurVosk(
+  surErreur?: (code: CodeErreurReveil) => void,
+): DetecteurReveil {
   let prise: PriseMicro | null = null;
   let noeud: ScriptProcessorNode | null = null;
   let muet: GainNode | null = null;
+  let revele: (() => void) | null = null;
   let actif = false;
   let suspendu = false;
   let declenche = false;
   let restes = new Uint8Array(0);
+  /**
+   * ⚠️ CHAQUE TRANSITION INVALIDE LES RÉPONSES EN VOL. Sans ce jeton, l'audio
+   * envoyé avant une suspension pouvait revenir après le réveil suivant et
+   * déclencher sur une phrase déjà consommée. La machine à états reçoit un
+   * signal qui ne correspond plus à rien.
+   */
+  let generation = 0;
   let echecs = 0;
+  let erreurSignalee = false;
+  let echecsPing = 0;
+  /** Audio en file ou en vol. Au-delà de deux, on jette le bloc entrant. */
+  let enAttente = 0;
+  let file: Promise<void> = Promise.resolve();
+  let minuteurReprise: ReturnType<typeof setTimeout> | null = null;
+  let minuteurPing: ReturnType<typeof setInterval> | null = null;
 
   const requete = async (
-    action: "start" | "audio" | "reset" | "stop",
+    action: ActionReveil,
     pcm?: string,
+    signal?: AbortSignal,
   ): Promise<{ ok: boolean; detected: boolean }> => {
+    const corps = { action, ...(pcm ? { pcmBase64: pcm } : {}) };
     try {
-      const resultat = await db().invokeFunction<{ detected?: boolean; ready?: boolean }>("jarvis-wake", {
-        action,
-        ...(pcm ? { pcmBase64: pcm } : {}),
-      });
+      const resultat =
+        signal === undefined
+          ? await db().invokeFunction<{ detected?: boolean; ready?: boolean; pong?: boolean }>("jarvis-wake", corps)
+          : await db().invokeFunction<{ detected?: boolean; ready?: boolean; pong?: boolean }>(
+              "jarvis-wake",
+              corps,
+              signal,
+            );
       if (!resultat.ok) throw new Error(resultat.error.code);
-      echecs = 0;
       return { ok: true, detected: resultat.data.detected === true };
     } catch {
-      echecs += 1;
-      // A local transport failure must not leave the mic open forever.
-      if (echecs >= 3) {
-        log.warn("reveil.vosk.transport", { code: "indisponible" });
-        arreter();
-      }
       return { ok: false, detected: false };
     }
   };
 
+  function effacerReprise(): void {
+    if (minuteurReprise !== null) {
+      clearTimeout(minuteurReprise);
+      minuteurReprise = null;
+    }
+  }
+
+  /**
+   * Une panne de transport ne ferme PLUS le micro. Le worker local peut mourir
+   * (timeout, processus tué) alors que la praticienne est en train de parler :
+   * couper le périphérique rendrait le mot de réveil inopérant jusqu'au
+   * prochain geste. On réessaie `start` avec un recul borné, micro ouvert.
+   */
+  function echecTransport(): void {
+    echecs += 1;
+    log.warn("reveil.vosk.transport", { code: "indisponible", count: echecs });
+    if (!actif) return;
+    if (echecs >= MAX_ECHECS) {
+      if (!erreurSignalee) {
+        erreurSignalee = true;
+        surErreur?.("transport");
+      }
+      // Nouvel épisode borné : la supervision peut repartir d'elle-même sans
+      // qu'un second signal soit nécessaire à chaque bloc.
+      echecs = 0;
+      return;
+    }
+    planifierReprise();
+  }
+
+  function planifierReprise(): void {
+    effacerReprise();
+    const delai = Math.min(2_000, 250 * 2 ** echecs);
+    minuteurReprise = setTimeout(() => {
+      minuteurReprise = null;
+      if (!actif) return;
+      void requete("start").then((reponse) => {
+        if (!actif) return;
+        if (!reponse.ok) {
+          echecTransport();
+          return;
+        }
+        echecs = 0;
+        erreurSignalee = false;
+        log.info("reveil.vosk.reprise", { context: "vosk-fr-FR-small" });
+      });
+    }, delai);
+  }
+
+  /** Une requête de contrôle qui ne revient pas signifie un worker figé. */
+  async function ping(): Promise<void> {
+    if (!actif) return;
+    const reponse = await requete("ping", undefined, AbortSignal.timeout(PING_TIMEOUT_MS));
+    if (!actif) return;
+    if (reponse.ok) {
+      echecsPing = 0;
+      return;
+    }
+    echecsPing += 1;
+    log.warn("reveil.vosk.ping", { code: "indisponible", count: echecsPing });
+    if (echecsPing < 2) return;
+    echecsPing = 0;
+    surErreur?.("transport");
+  }
+
+  function envoyerAudio(pcm: string): void {
+    if (enAttente >= MAX_EN_ATTENTE) {
+      // File BORNÉE : on préfère perdre un bloc de 500 ms à une file qui
+      // grossit pendant que le worker est lent ou injoignable.
+      log.warn("reveil.vosk.file", { code: "saturee" });
+      return;
+    }
+    enAttente += 1;
+    const g = generation;
+    const tache = file.then(async () => {
+      try {
+        if (g !== generation || !actif || suspendu || declenche) return;
+        const reponse = await requete("audio", pcm);
+        if (g !== generation) return;
+        if (!reponse.ok) {
+          echecTransport();
+          return;
+        }
+        echecs = 0;
+        erreurSignalee = false;
+        if (!reponse.detected || !actif || suspendu || declenche) return;
+        declenche = true;
+        log.info("reveil.detecte", { count: 1 });
+        revele?.();
+      } finally {
+        enAttente = Math.max(0, enAttente - 1);
+      }
+    });
+    file = tache.catch(() => {});
+  }
+
   function pisteTerminee(): void {
     if (!actif) return;
     log.warn("reveil.micro.perdu", { code: "indisponible" });
+    // Le graphe est mort : on le ferme avant de rendre la main à la
+    // supervision, qui rouvrira le périphérique par `prendreMicro`.
     arreter();
-    surErreur?.();
+    surErreur?.("micro");
   }
 
   function fermer(): void {
@@ -107,12 +230,38 @@ export function creerDetecteurVosk(surErreur?: () => void): DetecteurReveil {
   }
 
   function arreter(): void {
+    generation += 1;
+    effacerReprise();
+    if (minuteurPing !== null) {
+      clearInterval(minuteurPing);
+      minuteurPing = null;
+    }
+    echecsPing = 0;
     if (!actif) return;
     actif = false;
     suspendu = false;
     declenche = false;
+    revele = null;
     fermer();
     void requete("stop");
+  }
+
+  function suspendre(): void {
+    if (!actif || suspendu) return;
+    generation += 1;
+    suspendu = true;
+    restes = new Uint8Array(0);
+    void requete("reset");
+  }
+
+  function reprendre(): void {
+    if (!actif) return;
+    generation += 1;
+    declenche = false;
+    if (!suspendu) return;
+    suspendu = false;
+    restes = new Uint8Array(0);
+    void requete("reset");
   }
 
   return {
@@ -125,7 +274,23 @@ export function creerDetecteurVosk(surErreur?: () => void): DetecteurReveil {
     },
 
     demarrer: async (surReveil: () => void): Promise<Result<true>> => {
-      if (actif) return ok(true);
+      generation += 1;
+      revele = surReveil;
+      if (actif) {
+        // Ré-armement après une panne de transport : le micro est resté
+        // ouvert. `reprendre` lève le verrou de détection sans réacquérir le
+        // périphérique ni repartir de zéro.
+        if (suspendu) {
+          // ⚠️ UNE SUSPENSION APPARTIENT À LA MACHINE À ÉTATS. Elle couvre la
+          // capture de la commande ou la voix de Jarvis ; une reprise de
+          // transport ne doit pas remettre le scoring en marche par-dessus.
+          declenche = false;
+          restes = new Uint8Array(0);
+        } else {
+          reprendre();
+        }
+        return ok(true);
+      }
       const acces = await prendreMicro();
       if (!acces.ok) return err({ code: "interdit", message: fr.jarvis.voix.reveil.microRefuse });
       prise = acces.data;
@@ -150,7 +315,11 @@ export function creerDetecteurVosk(surErreur?: () => void): DetecteurReveil {
       actif = true;
       suspendu = false;
       declenche = false;
+      echecs = 0;
+      erreurSignalee = false;
+      echecsPing = 0;
       restes = new Uint8Array(0);
+      effacerReprise();
       noeud = contexte.createScriptProcessor(BLOC_AUDIO, 1, 1);
       noeud.onaudioprocess = (evenement) => {
         if (!actif || suspendu || declenche) return;
@@ -162,12 +331,7 @@ export function creerDetecteurVosk(surErreur?: () => void): DetecteurReveil {
         while (fusion.length - debut >= ECHANTILLONS_PAR_BLOC * 2) {
           const bloc = fusion.slice(debut, debut + ECHANTILLONS_PAR_BLOC * 2);
           debut += ECHANTILLONS_PAR_BLOC * 2;
-          void requete("audio", base64(bloc)).then((reponse) => {
-            if (!reponse.detected || !actif || suspendu || declenche) return;
-            declenche = true;
-            log.info("reveil.detecte", { count: 1 });
-            surReveil();
-          });
+          envoyerAudio(base64(bloc));
         }
         restes = fusion.slice(debut);
       };
@@ -176,24 +340,15 @@ export function creerDetecteurVosk(surErreur?: () => void): DetecteurReveil {
       source.connect(noeud);
       noeud.connect(muet);
       muet.connect(contexte.destination);
+      if (minuteurPing !== null) clearInterval(minuteurPing);
+      minuteurPing = setInterval(() => void ping(), PING_MS);
       log.info("reveil.demarre", { context: "vosk-fr-FR-small" });
       return ok(true);
     },
 
-    suspendre: () => {
-      if (!actif || suspendu) return;
-      suspendu = true;
-      restes = new Uint8Array(0);
-      void requete("reset");
-    },
+    suspendre,
 
-    reprendre: () => {
-      if (!actif || !suspendu) return;
-      suspendu = false;
-      declenche = false;
-      restes = new Uint8Array(0);
-      void requete("reset");
-    },
+    reprendre,
 
     arreter,
   };

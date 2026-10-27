@@ -47,11 +47,23 @@ def heard(text):
 
 
 for line in sys.stdin:
-    if len(line) > 200_000:
+    if len(line) > 300_000:
         break
-    req = None
     try:
         req = json.loads(line)
+    except Exception:
+        # Malformed input is answered, never fatal: the resident worker must
+        # survive a truncated write from a cancelled HTTP request.
+        sys.stdout.write(json.dumps({"id": "", "ok": False, "code": "json"}) + "\n")
+        sys.stdout.flush()
+        line = ""
+        continue
+    if not isinstance(req, dict):
+        sys.stdout.write(json.dumps({"id": "", "ok": False, "code": "json"}) + "\n")
+        sys.stdout.flush()
+        line = ""
+        continue
+    try:
         result = {"id": req["id"], "ok": True}
         action = req.get("action")
         if action == "audio":
@@ -71,6 +83,9 @@ for line in sys.stdin:
         elif action == "reset":
             reset()
             result["detected"] = False
+        elif action == "ping":
+            # Liveness only: the recognizer state must not move.
+            result["pong"] = True
         elif action == "stop":
             result["detected"] = False
             sys.stdout.write(json.dumps(result) + "\n")
@@ -81,8 +96,6 @@ for line in sys.stdin:
         sys.stdout.write(json.dumps(result) + "\n")
         sys.stdout.flush()
     except Exception as exc:
-        if req is None:
-            break
         err = {
             "id": req.get("id", ""),
             "ok": False,

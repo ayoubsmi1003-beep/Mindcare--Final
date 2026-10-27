@@ -12,6 +12,7 @@ const Schema = z.discriminatedUnion("action", [
   z.object({ action: z.literal("start") }).strict(),
   z.object({ action: z.literal("audio"), pcmBase64: z.string().min(4).max(128_000) }).strict(),
   z.object({ action: z.literal("reset") }).strict(),
+  z.object({ action: z.literal("ping") }).strict(),
   z.object({ action: z.literal("stop") }).strict(),
 ]);
 
@@ -38,6 +39,12 @@ export async function POST(request: Request): Promise<Response> {
     if (input.data.action === "start") {
       await preparerReveil(session, request.signal);
       return succes({ ready: true, engine: "vosk-fr-FR-small" });
+    }
+    if (input.data.action === "ping") {
+      await demanderReveil(session, "ping", undefined, request.signal);
+      // Le ping ne porte aucun audio et ne rend aucun texte : juste la preuve
+      // que le worker résident répond encore.
+      return succes({ pong: true });
     }
     const resultat = await demanderReveil(
       session,

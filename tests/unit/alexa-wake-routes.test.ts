@@ -60,6 +60,39 @@ describe("wake-word boundary", () => {
     expect(demand).toHaveBeenCalledWith("a".repeat(64), "audio", "AAAA", expect.any(AbortSignal));
   });
 
+  it("answers a ping without touching audio or returning a transcript", async () => {
+    const response = await POST(request({ action: "ping" }));
+    const body = await response.json();
+    expect(body).toEqual({ ok: true, data: { pong: true } });
+    expect(demand).toHaveBeenCalledWith("a".repeat(64), "ping", undefined, expect.any(AbortSignal));
+    expect(JSON.stringify(body)).not.toMatch(/texte|transcript/i);
+  });
+
+  it("keeps answering five detections without disarming the spotter", async () => {
+    for (let i = 0; i < 5; i += 1) {
+      expect(await (await POST(request({ action: "audio", pcmBase64: "AAAA" }))).json()).toEqual({
+        ok: true,
+        data: { detected: true },
+      });
+    }
+    expect(demand).toHaveBeenCalledTimes(5);
+    expect(stop).not.toHaveBeenCalled();
+  });
+
+  it("survives a transient worker failure and answers the next chunk", async () => {
+    demand.mockRejectedValueOnce(new Error("timeout"));
+    expect(await (await POST(request({ action: "audio", pcmBase64: "AAAA" }))).json()).toMatchObject({
+      ok: false,
+      error: { code: "configuration" },
+    });
+    demand.mockResolvedValueOnce({ detected: true });
+    expect(await (await POST(request({ action: "audio", pcmBase64: "AAAA" }))).json()).toMatchObject({
+      ok: true,
+      data: { detected: true },
+    });
+    expect(stop).not.toHaveBeenCalled();
+  });
+
   it("stops the worker for the authenticated scope", async () => {
     expect(await (await POST(request({ action: "stop" }))).json()).toMatchObject({
       ok: true,

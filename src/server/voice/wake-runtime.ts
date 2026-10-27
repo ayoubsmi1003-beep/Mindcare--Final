@@ -15,7 +15,8 @@ import { MODELES_VOIX } from "./modeles";
  */
 
 const MAX_PCM = 64_000;
-const READY_TIMEOUT_MS = 30_000;
+const READY_TIMEOUT_MS = 60_000;
+const PING_TIMEOUT_MS = 10_000;
 const DEBUG = process.env["ALEXA_WAKE_DEBUG"] === "1";
 
 interface Reponse {
@@ -23,6 +24,7 @@ interface Reponse {
   readonly ok: boolean;
   readonly detected?: boolean;
   readonly ready?: boolean;
+  readonly pong?: boolean;
   readonly code?: string;
 }
 
@@ -153,7 +155,15 @@ function ouvrir(sessionId: string): NonNullable<Etat["courant"]> {
   });
   processus.on("exit", () => {
     rejectPret(new Error("runtime"));
-    if (etat.courant?.processus === processus) detruire();
+    if (etat.courant?.processus !== processus) return;
+    // Clear the pending request and the worker slot BEFORE the shared teardown:
+    // exiting already rejects `pret`, and a timeout reject racing this handler
+    // must not reject the same caller twice.
+    etat.courant = null;
+    const attente = etat.attente;
+    etat.attente = null;
+    attente?.rejeter(new Error("runtime"));
+    detruire();
   });
   const courant = { processus, sessionId, pret };
   etat.courant = courant;
@@ -193,7 +203,7 @@ export async function preparerReveil(sessionId: string, signal?: AbortSignal): P
 
 function demanderUne(
   sessionId: string,
-  action: "audio" | "reset",
+  action: "audio" | "reset" | "ping",
   pcmBase64?: string,
   signal?: AbortSignal,
 ): Promise<Reponse> {
@@ -201,10 +211,11 @@ function demanderUne(
     if (signal?.aborted) return rejeter(new Error("annulee"));
     const processus = ouvrir(sessionId).processus;
     const id = crypto.randomUUID();
+    const delai = action === "ping" ? PING_TIMEOUT_MS : 15_000;
     const minuteur = setTimeout(() => {
       detruire();
       rejeter(new Error("timeout"));
-    }, 15_000);
+    }, delai);
     const annuler = () => {
       clearTimeout(minuteur);
       etat.attente = null;
@@ -238,10 +249,10 @@ function demanderUne(
 /** Serialised: a 500 ms chunk decodes in ~16 ms, so a queue never grows. */
 export function demanderReveil(
   sessionId: string,
-  action: "audio" | "reset",
+  action: "audio" | "reset" | "ping",
   pcmBase64?: string,
   signal?: AbortSignal,
-): Promise<{ detected: boolean }> {
+): Promise<{ detected: boolean; pong?: true }> {
   if (action === "audio" && (!pcmBase64 || pcmBase64.length > MAX_PCM * 2)) {
     return Promise.reject(new Error("volume"));
   }
@@ -249,6 +260,10 @@ export function demanderReveil(
     await preparerReveil(sessionId, signal);
     const r = await demanderUne(sessionId, action, pcmBase64, signal);
     if (DEBUG) console.info(JSON.stringify({ event: "wake.result", detected: r.detected === true }));
+    if (action === "ping") {
+      if (r.pong !== true) throw new Error("runtime");
+      return { detected: false, pong: true as const };
+    }
     return { detected: r.detected === true };
   });
   etat.chaine = tour.catch(() => {});
