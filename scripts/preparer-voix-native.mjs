@@ -4,12 +4,27 @@
  *
  * The packaged app never downloads a model. This build-time command fetches
  * only the exact recorded artifacts into the repository resource tree, checks
- * size and SHA-256, extracts Vosk, and regenerates the inventory/manifest.
+ * size and SHA-256, extracts Vosk, installs the pinned Python wheels into
+ * `resources/voix/packages`, and regenerates the inventory/manifest.
+ *
  * A failed or interrupted download stays in a `.part` file and cannot be
- * mistaken for an installed model.
+ * mistaken for an installed model. `--check` verifies the whole bundle
+ * without touching the network or rewriting a file.
  */
+import { spawnSync } from "node:child_process";
 import { createHash } from "node:crypto";
-import { createReadStream, createWriteStream, existsSync, mkdirSync, readdirSync, readFileSync, renameSync, rmSync, statSync, writeFileSync } from "node:fs";
+import {
+  createReadStream,
+  createWriteStream,
+  existsSync,
+  mkdirSync,
+  readdirSync,
+  readFileSync,
+  renameSync,
+  rmSync,
+  statSync,
+  writeFileSync,
+} from "node:fs";
 import { get } from "node:https";
 import { dirname, join, relative, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -19,21 +34,55 @@ import AdmZip from "adm-zip";
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const VOIX = join(ROOT, "resources", "voix");
 const ASSETS = join(VOIX, "assets");
+const REQUIREMENTS = join(VOIX, "requirements.txt");
+const PYTHON = join(VOIX, "python", "python.exe");
+const PACKAGES = join(VOIX, "packages");
 const JSON_OUT = process.argv.includes("--json");
 const REPAIR = process.argv.includes("--repair");
+const CHECK = process.argv.includes("--check");
+const WITH_PACKAGES = process.argv.includes("--packages");
+const PAQUETS_REQUIS = ["faster_whisper", "ctranslate2", "av", "kokoro_onnx", "vosk"];
+
+const REVISION_STT = "536b0662742c02347bc0e980a01041f333bce120";
+const BASE_STT = `https://huggingface.co/Systran/faster-whisper-small/resolve/${REVISION_STT}`;
 
 const MODELES = [
   {
-    id: "whisper-large-v3-turbo-q5_0",
-    file: "ggml-large-v3-turbo-q5_0.bin",
-    bytes: 574_041_195,
-    sha256: "394221709cd5ad1f40c46e6031ca61bce88931e6e088c188294c6d5a55ffa7e2",
-    url: "https://huggingface.co/ggerganov/whisper.cpp/resolve/5359861c739e955e79d9a303bcbc70fb988958b1/ggml-large-v3-turbo-q5_0.bin",
-    source: "https://huggingface.co/ggerganov/whisper.cpp",
-    revision: "5359861c739e955e79d9a303bcbc70fb988958b1",
+    kind: "directory",
+    id: "faster-whisper-small-int8",
+    dir: "faster-whisper-small",
+    files: [
+      {
+        path: "config.json",
+        bytes: 2370,
+        sha256: "b55496ac7940a7ae47d2c01eab40edfd8701feec1229d9cce3b40014383fb828",
+        url: `${BASE_STT}/config.json`,
+      },
+      {
+        path: "model.bin",
+        bytes: 483_546_902,
+        sha256: "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        url: `${BASE_STT}/model.bin`,
+      },
+      {
+        path: "tokenizer.json",
+        bytes: 2_203_239,
+        sha256: "fb7b63191e9bb045082c79fd742a3106a12c99513ab30df4a0d47fa6cb6fd0ab",
+        url: `${BASE_STT}/tokenizer.json`,
+      },
+      {
+        path: "vocabulary.txt",
+        bytes: 459_861,
+        sha256: "34ce3fe1c5041027b3f8d42912270993f986dbc4bb34cf27f951e34a1e453913",
+        url: `${BASE_STT}/vocabulary.txt`,
+      },
+    ],
+    source: "https://huggingface.co/Systran/faster-whisper-small",
+    revision: REVISION_STT,
     license: "MIT",
   },
   {
+    kind: "file",
     id: "kokoro-82m-v1.0",
     file: "kokoro-v1.0.fp16.onnx",
     bytes: 163_527_961,
@@ -44,6 +93,7 @@ const MODELES = [
     license: "Apache-2.0 weights; MIT ONNX export",
   },
   {
+    kind: "file",
     id: "kokoro-v1.0-voices",
     file: "voices-v1.0.bin",
     bytes: 28_214_398,
@@ -54,6 +104,7 @@ const MODELES = [
     license: "CC-BY 4.0 ff_siwis; Apache-2.0 model",
   },
   {
+    kind: "archive",
     id: "vosk-fr-FR-small",
     file: "vosk-model-small-fr-0.22.zip",
     target: "vosk-model-small-fr-0.22",
@@ -63,7 +114,6 @@ const MODELES = [
     source: "https://alphacephei.com/vosk/models",
     revision: "vosk-model-small-fr-0.22",
     license: "Apache-2.0",
-    archive: true,
   },
 ];
 
@@ -78,12 +128,33 @@ function hash(path) {
 }
 
 function taille(path) {
-  try { return statSync(path).size; } catch { return -1; }
+  try {
+    return statSync(path).size;
+  } catch {
+    return -1;
+  }
 }
 
-async function verifier(modele, path) {
-  if (taille(path) !== modele.bytes) return false;
-  return await hash(path) === modele.sha256;
+async function fichierValide(attendu, path) {
+  if (taille(path) !== attendu.bytes) return false;
+  return (await hash(path)) === attendu.sha256;
+}
+
+function cheminFichier(modele, fichier) {
+  return join(ASSETS, modele.dir, ...fichier.path.split("/"));
+}
+
+async function modelePresent(modele) {
+  if (modele.kind === "directory") {
+    for (const fichier of modele.files) {
+      if (!(await fichierValide(fichier, cheminFichier(modele, fichier)))) return false;
+    }
+    return true;
+  }
+  if (modele.kind === "archive") {
+    return existsSync(join(ASSETS, modele.target, "conf", "model.conf"));
+  }
+  return fichierValide(modele, join(ASSETS, modele.file));
 }
 
 function telecharger(url, destination, redirections = 0) {
@@ -111,25 +182,51 @@ function telecharger(url, destination, redirections = 0) {
   });
 }
 
-async function installer(modele) {
-  const archive = modele.archive === true;
-  const cible = archive ? join(ASSETS, modele.file) : join(ASSETS, modele.file);
-  const present = archive ? existsSync(join(ASSETS, modele.target, "conf", "model.conf")) : await verifier(modele, cible);
-  if (present) return;
-  if (!REPAIR) throw new Error(`absent ou corrompu : ${modele.id}`);
-  const telecharge = join(ASSETS, modele.file);
-  const partiel = `${telecharge}.part`;
-  if (existsSync(partiel)) rmSync(partiel, { force: true });
-  const obtenu = await telecharger(modele.url, telecharge);
-  if (!(await verifier(modele, obtenu))) {
+/** Download into `<cible>.part`, verify size and hash, then rename. */
+async function telechargerVerifie(url, cible, attendu, etiquette) {
+  rmSync(`${cible}.part`, { force: true });
+  const obtenu = await telecharger(url, cible);
+  if (!(await fichierValide(attendu, obtenu))) {
     rmSync(obtenu, { force: true });
-    throw new Error(`intégrité : ${modele.id}`);
+    throw new Error(`intégrité : ${etiquette}`);
   }
-  renameSync(obtenu, telecharge);
-  if (archive) {
-    const zip = new AdmZip(telecharge);
-    zip.extractAllTo(ASSETS, true);
-    rmSync(telecharge, { force: true });
+  renameSync(obtenu, cible);
+}
+
+async function installer(modele) {
+  if (await modelePresent(modele)) return;
+  if (!REPAIR) throw new Error(`absent ou corrompu : ${modele.id}`);
+  if (modele.kind === "directory") {
+    for (const fichier of modele.files) {
+      const cible = cheminFichier(modele, fichier);
+      if (await fichierValide(fichier, cible)) continue;
+      await telechargerVerifie(fichier.url, cible, fichier, `${modele.id}/${fichier.path}`);
+    }
+    return;
+  }
+  if (modele.kind === "archive") {
+    const archive = join(ASSETS, modele.file);
+    await telechargerVerifie(modele.url, archive, modele, modele.id);
+    new AdmZip(archive).extractAllTo(ASSETS, true);
+    rmSync(archive, { force: true });
+    return;
+  }
+  await telechargerVerifie(modele.url, join(ASSETS, modele.file), modele, modele.id);
+}
+
+/** Reinstall the pinned wheels with the embedded interpreter. */
+function installerPaquets() {
+  if (!existsSync(PYTHON)) throw new Error("runtime Python absent : resources/voix/python/python.exe");
+  if (!existsSync(REQUIREMENTS)) throw new Error("requirements.txt absent");
+  rmSync(PACKAGES, { recursive: true, force: true });
+  mkdirSync(PACKAGES, { recursive: true });
+  const commandes = [
+    ["-m", "ensurepip", "--upgrade"],
+    ["-m", "pip", "install", "--no-cache-dir", "--target", PACKAGES, "-r", REQUIREMENTS],
+  ];
+  for (const args of commandes) {
+    const resultat = spawnSync(PYTHON, args, { stdio: "inherit" });
+    if (resultat.status !== 0) throw new Error(`paquets : python ${args.slice(1, 3).join(" ")}`);
   }
 }
 
@@ -145,38 +242,103 @@ function inventaire(directory, base = directory, result = []) {
   return result;
 }
 
-async function main() {
-  mkdirSync(ASSETS, { recursive: true });
-  for (const modele of MODELES) await installer(modele);
-  for (const modele of MODELES) {
-    if (modele.archive) {
-      if (!existsSync(join(ASSETS, modele.target, "conf", "model.conf"))) throw new Error(`modèle Vosk absent : ${modele.id}`);
-    } else if (!(await verifier(modele, join(ASSETS, modele.file)))) {
-      throw new Error(`intégrité : ${modele.id}`);
-    }
-  }
-
-  const manifest = {
-    schema: 1,
-    generatedAt: new Date().toISOString(),
-    models: MODELES.map(({ url, ...modele }) => ({ ...modele, url })),
-  };
-  writeFileSync(join(VOIX, "manifest.json"), `${JSON.stringify(manifest, null, 2)}\n`);
-
+async function contenuInventaire() {
   const rows = inventaire(VOIX);
   for (const row of rows) row.sha256 = await hash(join(VOIX, row.path));
   const inventory = rows.filter((row) => row.path !== "inventory.json");
-  writeFileSync(join(VOIX, "inventory.json"), `${JSON.stringify(inventory, null, 2)}\n`);
-  const inventorySha = createHash("sha256").update(readFileSync(join(VOIX, "inventory.json"))).digest("hex");
+  return { inventory, json: `${JSON.stringify(inventory, null, 2)}\n` };
+}
+
+function empreinte(contenu) {
+  return createHash("sha256").update(contenu).digest("hex");
+}
+
+function resumeModele(modele) {
+  if (modele.kind === "directory") {
+    const bytes = modele.files.reduce((total, fichier) => total + fichier.bytes, 0);
+    return { id: modele.id, kind: modele.kind, dir: modele.dir, bytes, files: modele.files.length };
+  }
+  return { id: modele.id, kind: modele.kind, file: modele.file, bytes: modele.bytes, sha256: modele.sha256 };
+}
+
+/** Offline verification: never downloads and never rewrites the bundle. */
+async function controle() {
+  const echecs = [];
+  for (const modele of MODELES) {
+    if (!(await modelePresent(modele))) echecs.push(modele.id);
+  }
+  for (const paquet of PAQUETS_REQUIS) {
+    if (!existsSync(join(PACKAGES, paquet))) echecs.push(`packages/${paquet}`);
+  }
+  const { inventory, json } = await contenuInventaire();
+  const attendu = empreinte(json);
+  let manifeste = null;
+  try {
+    manifeste = JSON.parse(readFileSync(join(VOIX, "manifest.json"), "utf8"));
+  } catch {
+    manifeste = null;
+  }
+  if (manifeste?.schema !== 2 || manifeste?.inventorySha256 !== attendu) echecs.push("manifest.inventorySha256");
+  let inventaireDisque = null;
+  try {
+    inventaireDisque = empreinte(readFileSync(join(VOIX, "inventory.json")));
+  } catch {
+    inventaireDisque = null;
+  }
+  if (inventaireDisque !== attendu) echecs.push("inventory.json");
+  const result = {
+    ok: echecs.length === 0,
+    failures: echecs,
+    models: MODELES.map(resumeModele),
+    inventorySha256: attendu,
+    inventoryFiles: inventory.length,
+  };
+  if (JSON_OUT) process.stdout.write(`${JSON.stringify(result, null, 2)}\n`);
+  else {
+    for (const modele of result.models) {
+      const detail = modele.kind === "directory" ? `${modele.dir}/ — ${modele.files} fichiers — ${modele.bytes} o` : `${modele.file} — ${modele.bytes} o`;
+      console.log(`[voix] ${modele.id} — ${detail}`);
+    }
+    console.log(`[voix] inventory.json — ${inventory.length} fichiers — ${attendu}`);
+    console.log(`[voix] CONTRÔLE : ${result.ok ? "PASS" : `FAIL (${echecs.join(", ")})`}`);
+  }
+  if (!result.ok) process.exitCode = 1;
+}
+
+async function main() {
+  if (CHECK) {
+    await controle();
+    return;
+  }
+  mkdirSync(ASSETS, { recursive: true });
+  for (const modele of MODELES) await installer(modele);
+  for (const modele of MODELES) {
+    if (!(await modelePresent(modele))) throw new Error(`intégrité : ${modele.id}`);
+  }
+  if (WITH_PACKAGES) installerPaquets();
+
+  const { inventory, json } = await contenuInventaire();
+  writeFileSync(join(VOIX, "inventory.json"), json);
+  const inventorySha = empreinte(json);
+  const manifest = {
+    schema: 2,
+    generatedAt: new Date().toISOString(),
+    inventorySha256: inventorySha,
+    models: MODELES,
+  };
+  writeFileSync(join(VOIX, "manifest.json"), `${JSON.stringify(manifest, null, 2)}\n`);
   const result = {
     ok: true,
-    models: MODELES.map((m) => ({ id: m.id, file: m.file, bytes: m.bytes, sha256: m.sha256 })),
+    models: MODELES.map(resumeModele),
     inventorySha256: inventorySha,
     inventoryFiles: inventory.length,
   };
   if (JSON_OUT) process.stdout.write(`${JSON.stringify(result, null, 2)}\n`);
   else {
-    for (const m of result.models) console.log(`[voix] ${m.id} — ${m.bytes} o — ${m.sha256}`);
+    for (const modele of result.models) {
+      const detail = modele.kind === "directory" ? `${modele.dir}/ — ${modele.files} fichiers — ${modele.bytes} o` : `${modele.file} — ${modele.bytes} o — ${modele.sha256}`;
+      console.log(`[voix] ${modele.id} — ${detail}`);
+    }
     console.log(`[voix] inventory.json — ${inventory.length} fichiers — ${inventorySha}`);
   }
 }

@@ -3,12 +3,12 @@ import { isAbsolute, join } from "node:path";
 
 import { env } from "@/server/env";
 import { resoudreCheminsVoix } from "./chemins";
-import { MODELES_VOIX, verifierFichierModele } from "./modeles";
+import { MODELES_VOIX, verifierDossierModele, verifierFichierModele } from "./modeles";
 import { CanalVoixNative, type EntreeVoix, type ReponseVoix } from "./protocole";
 
-const READY_TIMEOUT_MS = 300_000;
-const STT_TIMEOUT_MS = 300_000;
-const TTS_TIMEOUT_MS = 180_000;
+const READY_TIMEOUT_MS = 120_000;
+const STT_TIMEOUT_MS = 60_000;
+const TTS_TIMEOUT_MS = 120_000;
 
 interface Travailleur {
   readonly processus: ChildProcessWithoutNullStreams;
@@ -49,7 +49,7 @@ async function verifierModeles(): Promise<void> {
   if (!isAbsolute(c.assets) || !isAbsolute(c.python) || !isAbsolute(c.packages)) {
     throw new Error("configuration: chemins");
   }
-  await verifierFichierModele(join(c.assets, MODELES_VOIX.stt.file), MODELES_VOIX.stt);
+  await verifierDossierModele(join(c.assets, MODELES_VOIX.stt.dir), MODELES_VOIX.stt);
   await verifierFichierModele(join(c.assets, MODELES_VOIX.ttsModel.file), MODELES_VOIX.ttsModel);
   await verifierFichierModele(join(c.assets, MODELES_VOIX.ttsVoices.file), MODELES_VOIX.ttsVoices);
 }
@@ -86,7 +86,7 @@ function ouvrir(sessionId: string): Travailleur {
       TMP: process.env["TMP"] ?? "",
       USERPROFILE: process.env["USERPROFILE"] ?? "",
       OMP_NUM_THREADS: "2",
-      ALEXA_VOICE_STT_MODEL: join(c.assets, MODELES_VOIX.stt.file),
+      ALEXA_VOICE_STT_MODEL: join(c.assets, MODELES_VOIX.stt.dir),
       ALEXA_KOKORO_MODEL: join(c.assets, MODELES_VOIX.ttsModel.file),
       ALEXA_KOKORO_VOICES: join(c.assets, MODELES_VOIX.ttsVoices.file),
       ALEXA_TTS_VOICE: "ff_siwis",

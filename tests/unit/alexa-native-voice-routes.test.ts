@@ -64,12 +64,12 @@ afterEach(() => {
 });
 
 describe("local voice API boundary", () => {
-  it("transcribes French PCM through the resident large-v3-turbo worker with no network", async () => {
+  it("transcribes French PCM through the resident faster-whisper small int8 worker with no network", async () => {
     const reseau = vi.fn();
     vi.stubGlobal("fetch", reseau);
     native.mockResolvedValue({
       texte: "Pas d’insomnie. Sertraline 50 mg.",
-      model: "whisper-large-v3-turbo-q5_0",
+      model: "faster-whisper-small-int8",
     });
     const response = await stt(
       request({

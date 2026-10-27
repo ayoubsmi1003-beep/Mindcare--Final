@@ -1,4 +1,5 @@
-import { mkdtempSync, rmSync, writeFileSync } from "node:fs";
+import { createHash } from "node:crypto";
+import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { tmpdir } from "node:os";
 import { describe, expect, it } from "vitest";
@@ -6,21 +7,29 @@ import { describe, expect, it } from "vitest";
 import { ALEXA_STT_MODEL, ALEXA_TTS_MODEL, ALEXA_TTS_VOICE } from "@/server/alexa/model-policy";
 import {
   MODELES_VOIX,
+  verifierDossierModele,
   verifierFichierModele,
+  type ModeleDossier,
 } from "@/server/voice/modeles";
 import { resoudreCheminsVoix } from "@/server/voice/chemins";
 
+const sha256 = (contenu: string | Buffer) => createHash("sha256").update(contenu).digest("hex");
+
 describe("canonical local voice identity", () => {
-  it("pins Whisper large-v3-turbo and Kokoro French as the only active speech models", () => {
-    expect(ALEXA_STT_MODEL).toBe("whisper-large-v3-turbo-q5_0");
+  it("pins faster-whisper small int8 and Kokoro French as the only active speech models", () => {
+    expect(ALEXA_STT_MODEL).toBe("faster-whisper-small-int8");
     expect(ALEXA_TTS_MODEL).toBe("kokoro-82m-v1.0-ff_siwis");
     expect(ALEXA_TTS_VOICE).toBe("ff_siwis");
 
     expect(MODELES_VOIX.stt).toMatchObject({
-      id: "whisper-large-v3-turbo-q5_0",
-      file: "ggml-large-v3-turbo-q5_0.bin",
-      bytes: 574_041_195,
-      sha256: "394221709cd5ad1f40c46e6031ca61bce88931e6e088c188294c6d5a55ffa7e2",
+      id: "faster-whisper-small-int8",
+      dir: "faster-whisper-small",
+      files: [
+        { path: "config.json", bytes: 2370, sha256: "b55496ac7940a7ae47d2c01eab40edfd8701feec1229d9cce3b40014383fb828" },
+        { path: "model.bin", bytes: 483546902, sha256: "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671" },
+        { path: "tokenizer.json", bytes: 2203239, sha256: "fb7b63191e9bb045082c79fd742a3106a12c99513ab30df4a0d47fa6cb6fd0ab" },
+        { path: "vocabulary.txt", bytes: 459861, sha256: "34ce3fe1c5041027b3f8d42912270993f986dbc4bb34cf27f951e34a1e453913" },
+      ],
     });
     expect(MODELES_VOIX.ttsModel).toMatchObject({
       file: "kokoro-v1.0.fp16.onnx",
@@ -46,6 +55,43 @@ describe("canonical local voice identity", () => {
           sha256: "0".repeat(64),
         }),
       ).rejects.toThrow("configuration: modele");
+    } finally {
+      rmSync(root, { recursive: true, force: true });
+    }
+  });
+
+  it("accepts a complete model directory and rejects one truncated file", async () => {
+    const root = mkdtempSync(join(tmpdir(), "mindcare-dossier-"));
+    const dossier = join(root, "faster-whisper-small");
+    mkdirSync(dossier, { recursive: true });
+    const config = JSON.stringify({ model: "synthetic" });
+    writeFileSync(join(dossier, "config.json"), config);
+    writeFileSync(join(dossier, "model.bin"), "tronque");
+
+    const modele: ModeleDossier = {
+      id: "faux-dossier",
+      dir: "faster-whisper-small",
+      files: [
+        { path: "config.json", bytes: Buffer.byteLength(config), sha256: sha256(config) },
+        { path: "model.bin", bytes: 483_546_902, sha256: "0".repeat(64) },
+      ],
+      source: "https://example.invalid/modele",
+      revision: "synthetic",
+      license: "MIT",
+    };
+
+    try {
+      await expect(verifierDossierModele(dossier, modele)).rejects.toThrow("configuration: modele");
+      const complet: ModeleDossier = {
+        ...modele,
+        files: [{ path: "config.json", bytes: Buffer.byteLength(config), sha256: sha256(config) }],
+      };
+      await expect(verifierDossierModele(dossier, complet)).resolves.toBeUndefined();
+      const evasion: ModeleDossier = {
+        ...modele,
+        files: [{ path: "../config.json", bytes: Buffer.byteLength(config), sha256: sha256(config) }],
+      };
+      await expect(verifierDossierModele(dossier, evasion)).rejects.toThrow("configuration: modele");
     } finally {
       rmSync(root, { recursive: true, force: true });
     }

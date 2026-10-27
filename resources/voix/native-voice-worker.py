@@ -1,15 +1,19 @@
-"""Pinned resident Whisper large-v3-turbo / Kokoro-82M worker.
+"""Pinned resident faster-whisper small int8 / Kokoro-82M worker.
 
 No network, no audio files written by the app, no transcript logs.
 All audio and text stay in RAM and travel only over the authenticated local
 server's stdin/stdout protocol.
 """
-import sys, os, json, base64, time, socket, logging, io, wave, re
+import sys, os, json, base64, time, socket, logging, io, wave
 from pathlib import Path
 
 sys.stdin.reconfigure(encoding="utf-8", errors="strict")
 sys.stdout.reconfigure(encoding="utf-8", errors="strict")
 sys.path.insert(0, sys.argv[1])
+# Keep the returned handle alive: dropping it removes the DLL search directory.
+DLL_DIR = None
+if sys.platform == "win32":
+    DLL_DIR = os.add_dll_directory(sys.argv[1])
 logging.disable(logging.CRITICAL)
 
 
@@ -23,19 +27,19 @@ os.environ["OMP_NUM_THREADS"] = "2"
 import numpy as np
 from importlib.metadata import version
 
-if version("pywhispercpp") != "1.5.1":
-    raise RuntimeError("runtime:pywhispercpp")
+if version("faster-whisper") != "1.2.1":
+    raise RuntimeError("runtime:faster-whisper")
 if version("kokoro-onnx") != "0.6.1":
     raise RuntimeError("runtime:kokoro-onnx")
 
-from pywhispercpp.model import Model
+from faster_whisper import WhisperModel
 from kokoro_onnx import Kokoro
 
 assets = Path(sys.argv[2]).resolve()
-whisper_path = Path(os.environ.get("ALEXA_VOICE_STT_MODEL", assets / "ggml-large-v3-turbo-q5_0.bin"))
+whisper_path = Path(os.environ.get("ALEXA_VOICE_STT_MODEL", assets / "faster-whisper-small"))
 if not whisper_path.is_absolute():
     whisper_path = assets / whisper_path
-if not whisper_path.is_file():
+if not whisper_path.is_dir() or not (whisper_path / "model.bin").is_file():
     raise RuntimeError("assets:stt")
 
 kokoro_path = Path(os.environ.get("ALEXA_KOKORO_MODEL", assets / "kokoro-v1.0.fp16.onnx"))
@@ -51,19 +55,14 @@ TTS_VOICE = os.environ.get("ALEXA_TTS_VOICE", "ff_siwis")
 TTS_LANG = os.environ.get("ALEXA_TTS_LANG", "fr-fr")
 HEALTH = os.environ.get("ALEXA_VOICE_HEALTH", "1") == "1"
 
-# Absolute paths prevent pywhispercpp's automatic downloader from ever running.
-whisper = Model(
+# The directory is pinned locally; local_files_only forbids any Hub download.
+whisper = WhisperModel(
     str(whisper_path),
-    n_threads=2,
-    no_context=True,
-    language="fr",
-    translate=False,
-    print_realtime=False,
-    print_progress=False,
-    print_special=False,
-    print_timestamps=False,
-    context_params={"use_gpu": False},
-    redirect_whispercpp_logs_to=False,
+    device="cpu",
+    compute_type="int8",
+    cpu_threads=2,
+    num_workers=1,
+    local_files_only=True,
 )
 kokoro = Kokoro(str(kokoro_path), str(voices_path))
 
@@ -117,28 +116,24 @@ def stt_from_samples(samples: np.ndarray, langue: str):
     if rms < 0.004:
         raise ValueError("silence")
     language = "ar" if langue == "ar" else "fr"
-    duration = samples.size / 16000.0
-    # Whisper pads to 30 s. Reducing the encoder context for a short utterance
-    # is the difference between a usable slow-CPU path and an unbounded wait.
-    audio_ctx = int(min(1500, max(512, round(duration / 30.0 * 1500))))
-    segments = whisper.transcribe(
+    segments, info = whisper.transcribe(
         samples,
         language=language,
-        translate=False,
-        no_context=True,
-        audio_ctx=audio_ctx,
-        extract_probability=True,
-        suppress_nst=True,
+        task="transcribe",
+        beam_size=1,
+        best_of=1,
         temperature=0.0,
+        condition_on_previous_text=False,
+        vad_filter=False,
+        without_timestamps=True,
         initial_prompt=AR_PROMPT if language == "ar" else FR_PROMPT,
     )
-    if not segments:
-        raise ValueError("confiance")
-    probabilities = [float(segment.probability) for segment in segments]
-    if min(probabilities) < 0.40:
-        raise ValueError("confiance")
+    segments = list(segments)
     text = "".join(segment.text for segment in segments).strip()
-    if not text:
+    # The old 0.40 average-probability gate discarded usable quiet speech.
+    # Only empty output, or a segment set that is entirely non-speech, is a
+    # confidence failure.
+    if not text or all(float(segment.no_speech_prob) > 0.85 for segment in segments):
         raise ValueError("confiance")
     return text
 
@@ -168,7 +163,7 @@ try:
         json.dumps(
             {
                 "ready": True,
-                "stt": "whisper-large-v3-turbo-q5_0",
+                "stt": "faster-whisper-small-int8",
                 "tts": "kokoro-82m-v1.0-ff_siwis",
                 "voice": TTS_VOICE,
                 "sampleRate": 24000,
@@ -200,7 +195,7 @@ for line in sys.stdin:
                 raise ValueError("volume")
             samples = np.frombuffer(raw, dtype="<i2").astype(np.float32) / 32768.0
             text = stt_from_samples(samples, req.get("langue", "fr"))
-            result.update(texte=text, model="whisper-large-v3-turbo-q5_0")
+            result.update(texte=text, model="faster-whisper-small-int8")
         elif req["action"] == "tts":
             audio, rate = synth(req["texte"], req.get("langue", "fr"))
             result.update(audioBase64=audio, mimeType="audio/wav", sampleRate=rate, model="kokoro-82m-v1.0-ff_siwis")

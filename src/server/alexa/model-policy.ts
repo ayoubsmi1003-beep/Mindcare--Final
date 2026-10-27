@@ -11,7 +11,7 @@ export const ALEXA_CONVERSATION_MODEL = "MiniCPM-V-4_7-1B-Q4_K_M.gguf";
 export const ALEXA_DIRECT_MODEL = "gemini-3.5-flash";
 // Delivery speech is local only. These identifiers are the ones the native
 // worker reports; no provider key or network transport exists on the voice path.
-export const ALEXA_STT_MODEL = "whisper-large-v3-turbo-q5_0";
+export const ALEXA_STT_MODEL = "faster-whisper-small-int8";
 export const ALEXA_TTS_MODEL = "kokoro-82m-v1.0-ff_siwis";
 export const ALEXA_TTS_VOICE = "ff_siwis";
 export const ALEXA_LIVE_MODEL = "gemini-3.8-live";

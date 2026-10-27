@@ -2,3 +2,4 @@ resources/voix/assets/*.onnx filter=lfs diff=lfs merge=lfs -text
 resources/voix/assets/ggml-*.bin filter=lfs diff=lfs merge=lfs -text
 resources/voix/assets/voices-v1.0.bin filter=lfs diff=lfs merge=lfs -text
 resources/voix/assets/vosk-model-small-fr-0.22/** filter=lfs diff=lfs merge=lfs -text
+resources/voix/assets/faster-whisper-small/** filter=lfs diff=lfs merge=lfs -text

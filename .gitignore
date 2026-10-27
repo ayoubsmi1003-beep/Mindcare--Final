@@ -23,6 +23,11 @@ volumes/
 *.wav
 *.ogg
 
+# Fixtures vocales suivies malgré la règle globale *.wav : sans elles, un
+# checkout neuf ne peut pas exécuter le contrôle de santé du worker.
+!resources/voix/health/fr-bonjour.wav
+!tests/fixtures/voix/*.wav
+
 # Node / build
 node_modules/
 .next/

@@ -1,7 +1,7 @@
 import { createHash } from "node:crypto";
 import { createReadStream } from "node:fs";
 import { stat } from "node:fs/promises";
-import { basename } from "node:path";
+import { basename, isAbsolute, join } from "node:path";
 
 /**
  * Immutable speech assets. The runtime never downloads a model: the packaged
@@ -18,14 +18,35 @@ export interface ModeleVocal {
   readonly license: string;
 }
 
+/** One file inside a multi-file model directory. */
+export interface ModeleFichier {
+  readonly path: string;
+  readonly bytes: number;
+  readonly sha256: string;
+}
+
+/** A model distributed as a directory of pinned files (CTranslate2 layout). */
+export interface ModeleDossier {
+  readonly id: string;
+  readonly dir: string;
+  readonly files: readonly ModeleFichier[];
+  readonly source: string;
+  readonly revision: string;
+  readonly license: string;
+}
+
 export const MODELES_VOIX = {
   stt: {
-    id: "whisper-large-v3-turbo-q5_0",
-    file: "ggml-large-v3-turbo-q5_0.bin",
-    bytes: 574_041_195,
-    sha256: "394221709cd5ad1f40c46e6031ca61bce88931e6e088c188294c6d5a55ffa7e2",
-    source: "https://huggingface.co/ggerganov/whisper.cpp",
-    revision: "5359861c739e955e79d9a303bcbc70fb988958b1",
+    id: "faster-whisper-small-int8",
+    dir: "faster-whisper-small",
+    files: [
+      { path: "config.json", bytes: 2_370, sha256: "b55496ac7940a7ae47d2c01eab40edfd8701feec1229d9cce3b40014383fb828" },
+      { path: "model.bin", bytes: 483_546_902, sha256: "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671" },
+      { path: "tokenizer.json", bytes: 2_203_239, sha256: "fb7b63191e9bb045082c79fd742a3106a12c99513ab30df4a0d47fa6cb6fd0ab" },
+      { path: "vocabulary.txt", bytes: 459_861, sha256: "34ce3fe1c5041027b3f8d42912270993f986dbc4bb34cf27f951e34a1e453913" },
+    ],
+    source: "https://huggingface.co/Systran/faster-whisper-small",
+    revision: "536b0662742c02347bc0e980a01041f333bce120",
     license: "MIT",
   },
   ttsModel: {
@@ -55,7 +76,7 @@ export const MODELES_VOIX = {
     revision: "vosk-model-small-fr-0.22",
     license: "Apache-2.0",
   },
-} as const satisfies Record<string, ModeleVocal>;
+} as const satisfies Record<string, ModeleVocal | ModeleDossier>;
 
 export type NomModeleVocal = keyof typeof MODELES_VOIX;
 
@@ -79,6 +100,35 @@ export async function verifierFichierModele(
     const taille = (await stat(path)).size;
     if (taille !== modele.bytes) throw new Error("configuration: modele");
     if ((await empreinte(path)) !== modele.sha256) throw new Error("configuration: modele");
+  } catch (cause) {
+    if (cause instanceof Error && cause.message === "configuration: modele") throw cause;
+    throw new Error("configuration: modele");
+  }
+}
+
+/**
+ * Verify a multi-file model directory before the worker loads it. Every pinned
+ * relative path must stay inside the directory: traversal, absolute paths and
+ * empty segments are configuration failures, never a reason to read elsewhere.
+ * Size is checked before the hash, and any mismatch fails closed.
+ */
+export async function verifierDossierModele(path: string, modele: ModeleDossier): Promise<void> {
+  try {
+    for (const fichier of modele.files) {
+      const relatif = fichier.path.replaceAll("\\", "/");
+      const segments = relatif.split("/");
+      if (
+        relatif.length === 0 ||
+        isAbsolute(relatif) ||
+        /^[a-zA-Z]:/u.test(relatif) ||
+        segments.some((segment) => segment === "" || segment === "." || segment === "..")
+      ) {
+        throw new Error("configuration: modele");
+      }
+      const complet = join(path, ...segments);
+      if ((await stat(complet)).size !== fichier.bytes) throw new Error("configuration: modele");
+      if ((await empreinte(complet)) !== fichier.sha256) throw new Error("configuration: modele");
+    }
   } catch (cause) {
     if (cause instanceof Error && cause.message === "configuration: modele") throw cause;
     throw new Error("configuration: modele");

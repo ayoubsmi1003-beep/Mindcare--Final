@@ -27,7 +27,7 @@
     "snapshot:production": "node scripts/snapshot-production.mjs",
     "pgsql:elaguer": "node scripts/elaguer-pgsql.mjs",
     "verifier:paquet": "node scripts/verifier-paquet.mjs",
-    "voix:preparer": "node scripts/preparer-voix-native.mjs --repair",
+    "voix:preparer": "node scripts/preparer-voix-native.mjs --repair --packages",
     "voix:verifier": "node scripts/verifier-voix-locale.mjs"
   },
   "dependencies": {
