@@ -65,6 +65,19 @@ const CANDIDATS = {
       { distant: "config.json", local: "config.json" },
     ],
   },
+  "e5-base": {
+    modele: "intfloat/multilingual-e5-base",
+    revision: "d128750597153bb5987e10b1c3493a34e5a4502a",
+    dimensions: 768,
+    licence: "MIT",
+    fichiers: [
+      { distant: "onnx/model.onnx", local: "model.onnx" },
+      { distant: "onnx/tokenizer.json", local: "tokenizer.json" },
+      { distant: "onnx/tokenizer_config.json", local: "tokenizer_config.json" },
+      { distant: "onnx/special_tokens_map.json", local: "special_tokens_map.json" },
+      { distant: "onnx/config.json", local: "config.json" },
+    ],
+  },
   "mmarco-rerank-int8": {
     modele: "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
     revision: "1427fd652930e4ba29e8149678df786c240d8825",

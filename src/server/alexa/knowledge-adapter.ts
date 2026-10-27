@@ -4,7 +4,11 @@ import { SEUIL_FAIBLESSE, SEUIL_PERTINENCE } from "@/server/knowledge/preuve";
 import { lignePorteRecuperable, porteLexicale, porteVectorielle, porteVectorielleV2, validerLignePorte } from "@/server/knowledge/stockage";
 import type { Langue, RetrievedEvidence } from "@/server/knowledge/types";
 import { editionDe, type EditionOuvrage } from "@/server/knowledge/editions";
-import { formaterLocalisation, localiserExtrait, localisationDeLOuvrage } from "@/server/knowledge/pages";
+import { carteDepuisJson, formaterLocalisation, localiserDepuisUnite, localiserExtrait, localisationDeLOuvrage, type CartePages } from "@/server/knowledge/pages";
+import pagesUnites from "@/server/knowledge/pages-unites.json";
+
+/** Carte unité→page construite une fois au chargement du module. */
+const CARTE_PAGES: CartePages = carteDepuisJson(pagesUnites);
 import { mapLimite } from "@/server/knowledge/parallele";
 import { vecteurRequeteProduction } from "@/server/knowledge/vecteur-production";
 import { vecteurRequeteSecondaireProduction } from "@/server/knowledge/vecteur-secondaire-production";
@@ -79,10 +83,15 @@ export function identiteDePreuve(sourceTitre: string, sourceVersion: string): Ed
  * localisation lue DANS l'extrait et rattachée au `book_id` de l'ouvrage.
  * Un marqueur d'un autre livre, un folio `?` ou deux pages divergentes ne
  * produisent aucune page — jamais un nombre approximatif.
+ *
+ * Repli CONTRÔLÉ : si le marqueur a disparu lors d'un découpage, la page de
+ * l'UNITÉ CANONIQUE (`unit_id`) est utilisée — même source, même livre,
+ * vérifiée à l'ingestion. Jamais un voisin, jamais un offset.
  */
-export function preuveAffichable(preuve: Preuve): PreuveAlexa {
+export function preuveAffichable(preuve: Preuve, carte: CartePages = CARTE_PAGES): PreuveAlexa {
   const ouvrage = identiteDePreuve(preuve.sourceTitre, preuve.sourceVersion);
-  const localisation = localisationDeLOuvrage(localiserExtrait(preuve.texte), ouvrage?.bookId ?? null);
+  const localisation = localisationDeLOuvrage(localiserExtrait(preuve.texte), ouvrage?.bookId ?? null)
+    ?? localiserDepuisUnite(preuve.unitId, ouvrage?.bookId ?? null, carte);
   const libelle = formaterLocalisation(localisation);
   return {
     titre: preuve.sourceTitre,
@@ -364,7 +373,7 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
       ...(vectorielIndisponible ? { vectoriel: "indisponible" as const } : {}),
       ...(repliReranker ? { reranker: "repli" as const } : {}),
       ...(options.relaxerFeuille === true ? { sectionLeafRelaxed: true as const } : {}),
-      preuves: finales.map(preuveAffichable) };
+      preuves: finales.map(p => preuveAffichable(p)) };
     for (const proof of result.preuves) Object.freeze(proof);
     Object.freeze(result.preuves);
     Object.freeze(result);

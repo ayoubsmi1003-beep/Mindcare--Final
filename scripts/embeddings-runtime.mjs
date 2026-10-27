@@ -47,6 +47,7 @@ export async function compilerConnaissance(
         moduleResolution: "node",
         strict: true,
         esModuleInterop: true,
+        resolveJsonModule: true,
         skipLibCheck: true,
         noEmitOnError: true,
         outDir: `./${nom}`,

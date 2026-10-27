@@ -9,6 +9,7 @@ import {
   citationDepuisExtrait,
   formaterLocalisation,
   ligneCitation,
+  localiserDepuisUnite,
   localiserExtrait,
   localisationDeLOuvrage,
 } from "@/server/knowledge/pages";
@@ -92,6 +93,19 @@ describe("localisation : le marqueur du chunk est la seule autorité", () => {
     expect(localisationDeLOuvrage(loc, "dsm5-fr-2015-elsevier")).toBeNull();
     expect(localisationDeLOuvrage(loc, null)).toBeNull();
     expect(localisationDeLOuvrage(loc, "stahl-prescribers-guide-7e-cup")?.pageImprimee).toBe(1029);
+  });
+
+  it("rétablit la page de l'UNITÉ quand le marqueur a disparu au découpage", () => {
+    const carte = {
+      "maudsley-prescribing-guidelines-2021-taylor-14e": { "tu-abc": [248, 269] as const },
+    };
+    const loc = localiserDepuisUnite("tu-abc", "maudsley-prescribing-guidelines-2021-taylor-14e", carte);
+    expect(loc?.pageImprimee).toBe(248);
+    expect(loc?.pagePdf).toBe(269);
+    // Mauvais livre ou unité inconnue → aucune page, jamais celle d'un autre.
+    expect(localiserDepuisUnite("tu-abc", "dsm5-fr-2015-elsevier", carte)).toBeNull();
+    expect(localiserDepuisUnite("tu-inconnu", "maudsley-prescribing-guidelines-2021-taylor-14e", carte)).toBeNull();
+    expect(localiserDepuisUnite(null, "maudsley-prescribing-guidelines-2021-taylor-14e", carte)).toBeNull();
   });
 });
 

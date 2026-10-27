@@ -107,6 +107,58 @@ export function formaterLocalisation(localisation: LocalisationPage | null): str
   return null;
 }
 
+/**
+ * Carte `book_id → unit_id → [folio imprimé, page PDF]`, construite depuis les
+ * paquets canoniques (`scripts/generer-pages-unites.mjs`). Elle sert de REPLI
+ * quand le marqueur de page a disparu du chunk lors d'un découpage : la page
+ * est celle de l'UNITÉ D'ORIGINE, jamais celle d'un voisin.
+ */
+export type CartePages = Readonly<Record<string, Readonly<Record<string, readonly [number | null, number | null]>>>>;
+
+/**
+ * Normalise le JSON brut (tableaux `number[]`) en tuples `[folio, page PDF]`.
+ * Toute entrée mal formée est IGNORÉE : mieux vaut aucune page qu'une page
+ * fabriquée à partir d'un fichier corrompu.
+ */
+export function carteDepuisJson(brut: unknown): CartePages {
+  if (typeof brut !== "object" || brut === null) return {};
+  const carte: Record<string, Record<string, readonly [number | null, number | null]>> = {};
+  for (const [bookId, unites] of Object.entries(brut as Record<string, unknown>)) {
+    if (typeof unites !== "object" || unites === null) continue;
+    const entrees: Record<string, readonly [number | null, number | null]> = {};
+    for (const [unitId, valeur] of Object.entries(unites as Record<string, unknown>)) {
+      if (!Array.isArray(valeur) || valeur.length !== 2) continue;
+      const [folio, pdf] = valeur as [unknown, unknown];
+      const propre = (n: unknown): number | null => typeof n === "number" && Number.isInteger(n) && n > 0 ? n : null;
+      entrees[unitId] = [propre(folio), propre(pdf)];
+    }
+    carte[bookId] = entrees;
+  }
+  return carte;
+}
+
+/** Page de l'unité canonique, si la carte la connaît pour CET ouvrage. */
+export function localiserDepuisUnite(
+  unitId: string | null,
+  bookId: string | null,
+  carte: CartePages,
+): LocalisationPage | null {
+  if (unitId === null || bookId === null) return null;
+  const entree = carte[bookId]?.[unitId];
+  if (entree === undefined) return null;
+  const [pageImprimee, pagePdf] = entree;
+  const imprimee = pageImprimee !== null && Number.isInteger(pageImprimee) && pageImprimee > 0 ? pageImprimee : null;
+  const pdf = pagePdf !== null && Number.isInteger(pagePdf) && pagePdf > 0 ? pagePdf : null;
+  if (imprimee === null && pdf === null) return null;
+  return {
+    bookId,
+    pageImprimee: imprimee,
+    pageImprimeeBrute: null,
+    pagePdf: pdf,
+    motif: imprimee === null ? "page-imprimee-inconnue" : "ok",
+  };
+}
+
 /** Une source citée : titre vérifié + édition vérifiée + page vérifiée. */
 export interface SourceCitation {
   readonly titre: string;
