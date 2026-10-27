@@ -1,5 +1,5 @@
 import { spawn, type ChildProcessWithoutNullStreams } from "node:child_process";
-import { readFileSync } from "node:fs";
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { randomUUID } from "node:crypto";
 
@@ -22,6 +22,23 @@ const FIXTURES = join(ROOT, "tests", "fixtures", "voix");
 const CHEMIN = resoudreCheminsVoix({ cwd: ROOT, env: process.env });
 const BLOC = 16_000; // 500 ms de PCM16 mono à 16 kHz
 const REFRACTORY_MS = 2_000;
+const TOURS = 5;
+const ARTEFACT = join(ROOT, "artifacts", "voix-reveil.json");
+
+/**
+ * The one-command proof reads this file instead of restating the wake result
+ * from memory. It is written only when all wake assertions (five detections,
+ * both variants, Bonjour negative, malformed-JSON survival) have passed.
+ */
+const preuve = {
+  wake: "vosk-fr-FR-small",
+  model: "vosk-model-small-fr-0.22",
+  repeatCycles: 0,
+  chunks: [] as number[],
+  variants: [] as string[],
+  bonjourDetected: false,
+  malformedJsonSurvived: false,
+};
 
 interface Reponse {
   readonly id?: string;
@@ -224,13 +241,20 @@ describe.skipIf(process.env["MINDCARE_VOICE_REAL"] !== "1")("real Vosk wake work
   }, 120_000);
 
   afterAll(() => {
-    worker?.fermer();
+    try {
+      if (preuve.repeatCycles === TOURS && preuve.malformedJsonSurvived) {
+        mkdirSync(join(ROOT, "artifacts"), { recursive: true });
+        writeFileSync(ARTEFACT, `${JSON.stringify(preuve, null, 2)}\n`);
+      }
+    } finally {
+      worker?.fermer();
+    }
   });
 
   it("detects five synthetic 'Alexa' utterances across resets and stays alive", async () => {
     const alexa = pcm16(join(FIXTURES, "alexa.wav"));
     const blocs: number[] = [];
-    for (let tour = 0; tour < 5; tour += 1) {
+    for (let tour = 0; tour < TOURS; tour += 1) {
       if (tour > 0) {
         // The worker deliberately ignores a second detection inside its 2 s
         // refractory window; the test respects it instead of weakening it.
@@ -245,13 +269,16 @@ describe.skipIf(process.env["MINDCARE_VOICE_REAL"] !== "1")("real Vosk wake work
       blocs.push(bloc);
       expect(await worker.envoyer("reset")).toMatchObject({ ok: true, detected: false });
     }
-    expect(blocs).toHaveLength(5);
+    expect(blocs).toHaveLength(TOURS);
     expect(blocs.every((bloc) => bloc > 0 && bloc <= 5)).toBe(true);
     expect(worker.vivant()).toBe(true);
+    preuve.repeatCycles = blocs.length;
+    preuve.chunks = blocs;
   }, 120_000);
 
   it("detects the configured pronunciation variants", async () => {
-    for (const fichier of ["alexia.wav", "eh-lexa.wav"]) {
+    const variantes = ["alexia.wav", "eh-lexa.wav"];
+    for (const fichier of variantes) {
       await attendre(REFRACTORY_MS + 100);
       const pcm = pcm16(join(FIXTURES, fichier));
       const bloc = await detecter(worker, pcm);
@@ -263,6 +290,7 @@ describe.skipIf(process.env["MINDCARE_VOICE_REAL"] !== "1")("real Vosk wake work
       expect(await worker.envoyer("reset")).toMatchObject({ ok: true, detected: false });
     }
     expect(worker.vivant()).toBe(true);
+    preuve.variants = variantes;
   }, 120_000);
 
   it("does not detect a generic 'Bonjour' and survives malformed JSON", async () => {
@@ -273,6 +301,7 @@ describe.skipIf(process.env["MINDCARE_VOICE_REAL"] !== "1")("real Vosk wake work
       const reponse = await worker.envoyer("audio", { pcmBase64: morceau.toString("base64") });
       expect(reponse).toMatchObject({ ok: true, detected: false });
     }
+    preuve.bonjourDetected = false;
 
     worker.brut("{ceci n'est pas du json\n");
     await vi.waitFor(() => expect(worker.inattendus.length).toBeGreaterThan(0), { timeout: 5_000 });
@@ -281,5 +310,6 @@ describe.skipIf(process.env["MINDCARE_VOICE_REAL"] !== "1")("real Vosk wake work
     // Still alive, and the recognizer state was not disturbed by the error.
     expect(await worker.envoyer("ping")).toMatchObject({ ok: true, pong: true });
     expect(worker.vivant()).toBe(true);
+    preuve.malformedJsonSurvived = true;
   }, 120_000);
 });

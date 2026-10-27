@@ -28,7 +28,8 @@
     "pgsql:elaguer": "node scripts/elaguer-pgsql.mjs",
     "verifier:paquet": "node scripts/verifier-paquet.mjs",
     "voix:preparer": "node scripts/preparer-voix-native.mjs --repair --packages",
-    "voix:verifier": "node scripts/verifier-voix-locale.mjs"
+    "voix:verifier": "node scripts/verifier-voix-locale.mjs",
+    "voix:preuve": "node scripts/verifier-voix-finale.mjs"
   },
   "dependencies": {
     "@composio/core": "0.22.0",
