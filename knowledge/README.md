@@ -65,12 +65,23 @@ Résultats mesurés le 2026-10-27 :
 |---|---|---|---|---|---|---|
 | Lexical seul (livré) | 50 % | 60 % | 65 % | 0,552 | 100 % | 118 ms |
 | Hybride 768 **sans plancher** | 45 % | 70 % | 70 % | 0,567 | **0 %** | 842 ms |
-| Hybride 768 **avec plancher 0,83** | 50 % | **75 %** | **75 %** | **0,608** | **100 %** | 319 ms |
+| Hybride 768, plancher 0,83 (ancien tri) | 50 % | 75 % | 75 % | 0,608 | 100 % | 319 ms |
+| **Hybride 768, plancher + plafond lexical** | **55 %** | **70 %** | **75 %** | **0,629** | **100 %** | 512 ms |
 
-Le plancher de similarité (`SEUIL_SIMILARITE_DENSE`) est **obligatoire** : sans
-lui, deux questions non cliniques (prix, menu) recevaient une « preuve » et
-l'abstention tombait à 0 %. Il ne s'applique qu'à l'espace secondaire, jamais à
-BGE-M3 (échelles différentes).
+Deux règles rendent le dense sûr :
+
+1. **plancher de similarité** (`SEUIL_SIMILARITE_DENSE = 0,83`) : sans lui, deux
+   questions non cliniques (prix, menu) recevaient une « preuve » et l'abstention
+   tombait à 0 %.
+2. **plafond lexical** : un voisin purement dense ne dépasse jamais la meilleure
+   preuve trouvée par les mots. Sans lui, un chunk DSM hors sujet (cosinus 0,83,
+   section « affections proposées pour des études supplémentaires ») prenait la
+   1re place devant le passage clozapine trouvé lexicalement, et deux questions
+   DSM perdaient leur rang 1.
+
+Résultat : DSM 9/10 au rang 1 (10/10 dans les 2 premiers), Taylor 5/10 dans les
+5 premiers (dont 2 au rang 1). Deux exécutions consécutives donnent des chiffres
+identiques ; le premier appel charge le modèle (~20 s).
 
 Le harnais reconnaît les deux noms de porte (`search_knowledge_vector_v2`,
 `search_knowledge_vector_v2_768`) : le code de production garde des sites

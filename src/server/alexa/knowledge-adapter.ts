@@ -305,6 +305,17 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
       }
     }
     void candidates;
+    // Chunks réellement trouvés par les MOTS : sert au départage et au plafond
+    // du dense. Un voisin purement dense ne doit jamais renverser une
+    // correspondance lexicale exacte (mesuré : un chunk DSM hors sujet, cosinus
+    // 0,83, prenait la 1re place devant le passage clozapine trouvé par les mots).
+    const idsLexicaux = new Set<string>();
+    for (const lot of batches) {
+      for (const ligne of lot) {
+        const id = (ligne as { chunk_id?: unknown }).chunk_id;
+        if (typeof id === "string") idsLexicaux.add(id);
+      }
+    }
     // Classement par lot : chaque lot produit ses preuves, classées contre SA
     // propre référence (celle qui l'a fait remonter). Les lots sont des
     // REFORMULATIONS de la MÊME question (requête d'origine + rubriques
@@ -380,9 +391,32 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
       plan.focusHints?.some(focus => matchesSectionFocus(preuve.section, focus)) ? 1 : 0;
     const indiceFeuille = (preuve: Preuve): number =>
       plan.leafHint !== undefined && matchesLeafHint(preuve.section, plan.leafHint) ? 1 : 0;
-    const ordonnes = [...tous].sort((a, b) => b.preuve.evidence_relevance - a.preuve.evidence_relevance
+    // À pertinence ÉGALE, la correspondance lexicale exacte passe avant un
+    // voisin purement dense. Mesuré : le bon passage de « surveillance
+    // hématologique clozapine » était rang 1 lexical, mais des voisins denses
+    // de même pertinence — tous dans le lot 0, donc départagés par `lot` —
+    // prenaient les 5 places. Un mot présent dans le texte bat un voisin.
+    const indiceLexical = (preuve: Preuve): number => idsLexicaux.has(preuve.chunkId) ? 1 : 0;
+    // Un voisin PUREMENT dense ne dépasse JAMAIS la meilleure preuve lexicale
+    // de la question. Mesuré : le rang dense était converti en pertinence 1,000,
+    // 0,917… sans regarder la similarité absolue, et un chunk DSM sans rapport
+    // (section « affections proposées pour des études supplémentaires », cosinus
+    // 0,83) prenait la 1re place devant le passage clozapine trouvé par les mots.
+    // Le dense complète donc la liste, il ne renverse pas une correspondance
+    // exacte. Sans aucune preuve lexicale (mode vectoriel pur), rien n'est
+    // plafonné : le comportement historique est conservé.
+    const lexicales = tous.filter(({ preuve }) => idsLexicaux.has(preuve.chunkId));
+    const meilleurLexical = lexicales.length === 0
+      ? null
+      : Math.max(...lexicales.map(({ preuve }) => preuve.evidence_relevance));
+    const pertinenceEffective = (preuve: Preuve): number =>
+      idsLexicaux.has(preuve.chunkId) || meilleurLexical === null
+        ? preuve.evidence_relevance
+        : Math.min(preuve.evidence_relevance, meilleurLexical);
+    const ordonnes = [...tous].sort((a, b) => pertinenceEffective(b.preuve) - pertinenceEffective(a.preuve)
       || indiceFeuille(b.preuve) - indiceFeuille(a.preuve)
       || indiceFocus(b.preuve) - indiceFocus(a.preuve)
+      || indiceLexical(b.preuve) - indiceLexical(a.preuve)
       || a.lot - b.lot || a.rang - b.rang);
     for (const { preuve } of ordonnes) {
       if (preuves.length >= LIMITES.FINAL) break;
