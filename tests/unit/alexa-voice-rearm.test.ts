@@ -1,5 +1,7 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 
+import { fr } from "@/i18n/fr";
+
 const faux = vi.hoisted(() => {
   const state = {
     wake: null as (() => void) | null,
@@ -500,5 +502,45 @@ describe("detector supervision", () => {
     await vi.waitFor(() => expect(faux.arreterDetecteur).toHaveBeenCalledTimes(3));
 
     expect(etatVoix()).toBe("desactive");
+  });
+
+  it("surfaces a deferred recovery failure after a false wake", async () => {
+    vi.useFakeTimers({ shouldAdvanceTime: true });
+    const vues: Array<{ reveilArme: boolean; raison: string | null }> = [];
+    const stopVue = abonnerVoix((vue) => vues.push({ reveilArme: vue.reveilArme, raison: vue.raison }));
+    const release = retenirVoix({ onCommande: faux.commande });
+    relachements.push(release, stopVue);
+    await vi.waitFor(() => expect(faux.wake).not.toBeNull());
+    faux.wake!();
+    await vi.waitFor(() => expect(etatVoix()).toBe("ecoute"));
+
+    for (let i = 0; i < 4; i += 1) {
+      faux.demarrerDetecteur.mockResolvedValueOnce({
+        ok: false,
+        error: { code: "interdit", message: "micro refusé" },
+      });
+    }
+    faux.erreur!("micro");
+    await vi.advanceTimersByTimeAsync(250 + 500 + 1_000 + 2_000);
+    await vi.waitFor(() => expect(faux.demarrerDetecteur).toHaveBeenCalledTimes(5));
+    expect(etatVoix()).toBe("ecoute");
+
+    await cloturerCommande(undefined, "faux-reveil");
+    expect(etatVoix()).toBe("erreur");
+    expect(vues.at(-1)).toMatchObject({
+      reveilArme: false,
+      raison: fr.jarvis.voix.reveil.microRefuse,
+    });
+  });
+
+  it("returns to veille for a normal false wake without a pending failure", async () => {
+    const release = retenirVoix({ onCommande: faux.commande });
+    relachements.push(release);
+    await vi.waitFor(() => expect(faux.wake).not.toBeNull());
+    faux.wake!();
+    await vi.waitFor(() => expect(etatVoix()).toBe("ecoute"));
+
+    await cloturerCommande(undefined, "faux-reveil");
+    expect(etatVoix()).toBe("veille");
   });
 });

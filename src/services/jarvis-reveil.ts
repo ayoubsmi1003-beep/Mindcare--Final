@@ -772,6 +772,10 @@ export function cloturerCommande(jeton?: number, motif?: MotifFin): Promise<void
       detecteur?.reprendre();
       aller("veille");
       log.info("jarvis.reveil.fauxReveil", { count: 1 });
+      // Un faux réveil est normal, mais une reprise de détecteur épuisée pendant
+      // cette écoute ne doit pas disparaître avec le silence : c'est le seul
+      // chemin de capture qui n'avait pas encore appliqué l'échec différé.
+      appliquerRepriseEchouee();
       return;
     }
 
