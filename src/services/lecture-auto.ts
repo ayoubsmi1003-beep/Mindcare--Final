@@ -24,11 +24,14 @@ export interface CandidatLectureAuto {
   readonly texte: string;
   readonly porteUneIdentite?: boolean;
   readonly interrompu?: boolean;
+  /** Statut terminal du tour natif : seul `completed` est lisible. */
+  readonly alexaStatus?: string;
   /** A voice loop already spoke this turn; the UI must not play it twice. */
   readonly dejaParlee?: boolean;
 }
 
 const CLE_PREFERENCE = "mindcare.alexa.lecture-auto";
+const abonnesPreference = new Set<(active: boolean) => void>();
 
 /** Préférence persistée. Défaut ON : Alexa répond toujours à voix haute. */
 export function lirePreferenceLectureAuto(): boolean {
@@ -41,12 +44,27 @@ export function lirePreferenceLectureAuto(): boolean {
 }
 
 export function definirPreferenceLectureAuto(active: boolean): void {
-  if (typeof window === "undefined" || typeof window.localStorage === "undefined") return;
-  try {
-    window.localStorage.setItem(CLE_PREFERENCE, active ? "1" : "0");
-  } catch {
-    // Préférence seule : un stockage indisponible ne bloque pas la lecture.
+  if (typeof window !== "undefined" && typeof window.localStorage !== "undefined") {
+    try {
+      window.localStorage.setItem(CLE_PREFERENCE, active ? "1" : "0");
+    } catch {
+      // Préférence seule : un stockage indisponible ne bloque pas la lecture.
+    }
   }
+  for (const abonne of abonnesPreference) abonne(active);
+}
+
+/**
+ * Le lecteur global vit dans `BootVoix`, le bouton muet dans `FilJarvis` :
+ * sans abonnement, couper le son dans le panneau laisserait le lecteur global
+ * parler. Le fait est publié, pas supposé.
+ */
+export function abonnerPreferenceLectureAuto(abonne: (active: boolean) => void): () => void {
+  abonnesPreference.add(abonne);
+  abonne(lirePreferenceLectureAuto());
+  return () => {
+    abonnesPreference.delete(abonne);
+  };
 }
 
 /**
@@ -64,11 +82,15 @@ export function fautLireAuto(
   if (!opts.conversationChargee) return false;
   if (tour.role !== "jarvis") return false;
   if (tour.interrompu === true) return false;
+  // Un tour partiel / en attente / échoué n'est pas une réponse complète.
+  // `conversation.ts` porte le statut terminal ; on ne le devine pas.
+  if (tour.alexaStatus !== undefined && tour.alexaStatus !== "completed") return false;
   if (tour.dejaParlee === true) return false;
   // La synthèse est locale: un nom de dossier ne franchit plus de frontière
   // fournisseur. Il n'y a donc plus de raison de rendre la réponse muette.
+  // Une réponse longue n'est plus tue non plus : `lireTexteLong` la découpe.
   const texte = tour.texte.trim();
-  if (texte === "" || texte.length > 2000) return false;
+  if (texte === "") return false;
   return true;
 }
 

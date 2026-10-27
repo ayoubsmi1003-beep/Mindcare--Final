@@ -32,13 +32,23 @@ describe("fautLireAuto", () => {
       fautLireAuto({ ...BASE, dejaParlee: true }, { lectureAuto: true, dejaLu: false, conversationChargee: true }),
     ).toBe(false);
   });
-  it("ignore l'humain, le système, l'interrompu, le vide et le trop-long", () => {
+  it("ignore l'humain, le système, l'interrompu et le vide", () => {
     const opts = { lectureAuto: true, dejaLu: false, conversationChargee: true } as const;
     expect(fautLireAuto({ ...BASE, role: "humain" }, opts)).toBe(false);
     expect(fautLireAuto({ ...BASE, role: "systeme" }, opts)).toBe(false);
     expect(fautLireAuto({ ...BASE, interrompu: true }, opts)).toBe(false);
     expect(fautLireAuto({ ...BASE, texte: "   " }, opts)).toBe(false);
-    expect(fautLireAuto({ ...BASE, texte: "x".repeat(2001) }, opts)).toBe(false);
+  });
+  it("lit une réponse longue : le découpage appartient à lireTexteLong", () => {
+    expect(
+      fautLireAuto({ ...BASE, texte: "x".repeat(2001) }, { lectureAuto: true, dejaLu: false, conversationChargee: true }),
+    ).toBe(true);
+  });
+  it("refuse une réponse dont le statut Alexa n'est pas `completed`", () => {
+    const opts = { lectureAuto: true, dejaLu: false, conversationChargee: true } as const;
+    expect(fautLireAuto({ ...BASE, alexaStatus: "partial" }, opts)).toBe(false);
+    expect(fautLireAuto({ ...BASE, alexaStatus: "needs_input" }, opts)).toBe(false);
+    expect(fautLireAuto({ ...BASE, alexaStatus: "completed" }, opts)).toBe(true);
   });
 });
 

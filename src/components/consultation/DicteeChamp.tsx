@@ -28,13 +28,14 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 import { fr } from "@/i18n/fr";
 import {
-  annulerDictee,
+  annulerDicteeSi,
   arreterEtTranscrire,
   demarrerDictee,
   detecterCapacitesVoix,
   generationDictee,
 } from "@/services/jarvis-voix";
-import { captureEnCours, reprendreDetection, suspendreDetection } from "@/services/jarvis-reveil";
+import { reprendreDetection, suspendreDetection } from "@/services/jarvis-reveil";
+import { captureActive, setFieldBusy } from "@/services/voice-activity";
 
 import {
   actionMicro,
@@ -66,20 +67,36 @@ export function dicteeAutorisee(
 /**
  * LA DÉCISION DE DÉMONTAGE — sans rendu, donc éprouvable.
  *
- * Un démarrage encore en vol (`aDemarre`) doit être INVALIDÉ même si aucun
- * enregistreur n'existe encore : il pourrait s'ouvrir APRÈS le démontage.
- * Un enregistreur déjà possédé (`aEnregistre`) ne doit être annulé que si le
- * jeton n'a pas changé — sinon un arrêt ou un abandon externe (désarmement,
- * interruption) a déjà rendu la main, et le recorder appartient désormais à
- * une capture du réveil.
+ * Un démarrage encore en vol doit être INVALIDÉ seulement si SON jeton est
+ * encore courant : un autre propriétaire a pu ouvrir un enregistreur entre
+ * l'appel et le démontage. Un enregistreur déjà possédé ne doit être annulé
+ * que si le jeton n'a pas changé — sinon un arrêt ou un abandon externe
+ * (désarmement, interruption) a déjà rendu la main, et le recorder appartient
+ * désormais à une capture du réveil.
  */
 export function doitAnnulerDictee(etat: {
   readonly aDemarre: boolean;
+  readonly genDemarrage: number;
   readonly aEnregistre: boolean;
   readonly gen: number;
   readonly courant: number;
 }): boolean {
-  if (etat.aDemarre) return true;
+  if (etat.aDemarre) return etat.genDemarrage === etat.courant;
+  return etat.aEnregistre && etat.gen === etat.courant;
+}
+
+/**
+ * L'ARRÊT PEUT-IL PRENDRE POSSESSION DE L'ENREGISTREUR ?
+ *
+ * Non si le jeton a changé : une capture du réveil a remplacé la dictée du
+ * champ. Transcrire dans ce cas enverrait la commande vocale dans une note
+ * clinique.
+ */
+export function doitArreterDictee(etat: {
+  readonly aEnregistre: boolean;
+  readonly gen: number;
+  readonly courant: number;
+}): boolean {
   return etat.aEnregistre && etat.gen === etat.courant;
 }
 
@@ -120,19 +137,28 @@ export function useDicteeChamps<C extends string>(
   // rendre un scoring qu'une AUTRE dictée avait suspendu.
   //
   //   aDemarre  : `demarrerDictee()` est parti, l'enregistreur n'est pas encore
-  //               confirmé — il FAUT l'invalider au démontage ;
+  //               confirmé — il FAUT l'invalider au démontage SI `genDemarrage`
+  //               est encore le jeton courant ;
   //   aEnregistre : CETTE dictée possède le recorder, mais seulement tant que
   //               `genRef` égale le jeton courant ;
   //   monte     : une continuation asynchrone ne doit pas ranimer un crochet
   //               démonté ;
-  //   genRef    : jeton de propriété rendu par `jarvis-voix`.
+  //   genRef    : jeton de propriété rendu par `jarvis-voix` ;
+  //   genDemarrage : jeton du démarrage encore en vol, pour ne pas annuler
+  //               l'enregistreur d'un propriétaire plus récent.
   const aSuspendu = useRef(false);
   const aDemarre = useRef(false);
   const aEnregistre = useRef(false);
   const monte = useRef(true);
   const genRef = useRef(0);
+  const genDemarrage = useRef(0);
+  const aMarqueChamp = useRef(false);
 
   const rendreDetection = useCallback((): void => {
+    if (aMarqueChamp.current) {
+      aMarqueChamp.current = false;
+      setFieldBusy(false);
+    }
     if (!aSuspendu.current) return;
     aSuspendu.current = false;
     // `reprendreDetection` porte le verrou : si une capture du réveil
@@ -154,16 +180,21 @@ export function useDicteeChamps<C extends string>(
       monte.current = false;
       const annuler = doitAnnulerDictee({
         aDemarre: aDemarre.current,
+        genDemarrage: genDemarrage.current,
         aEnregistre: aEnregistre.current,
         gen: genRef.current,
         courant: generationDictee(),
       });
+      const jeton = aEnregistre.current ? genRef.current : genDemarrage.current;
       aDemarre.current = false;
       aEnregistre.current = false;
       genRef.current = 0;
+      genDemarrage.current = 0;
       // Annuler AVANT de rendre la détection : l'enregistreur doit être
-      // refermé avant que le détecteur ne réécoute.
-      if (annuler) annulerDictee();
+      // refermé avant que le détecteur ne réécoute. Et seulement si le jeton
+      // est encore le nôtre : `annulerDicteeSi` ne touche pas une capture du
+      // réveil qui aurait pris la main entre-temps.
+      if (annuler) annulerDicteeSi(jeton);
       // `reprendreDetection` abandonne l'intention de suspension sans
       // rallumer le détecteur si une capture du réveil la possède déjà.
       rendreDetection();
@@ -178,11 +209,27 @@ export function useDicteeChamps<C extends string>(
       if (action === "arreter") {
         if (aDemarre.current) {
           // Le démarrage n'a pas encore rendu l'enregistreur : rien à
-          // transcrire. On l'invalide AVANT qu'il ne s'ouvre après coup.
+          // transcrire. On l'invalide AVANT qu'il ne s'ouvre après coup —
+          // seulement si SON jeton est encore courant.
+          const jeton = genDemarrage.current;
           aDemarre.current = false;
           aEnregistre.current = false;
           genRef.current = 0;
-          annulerDictee();
+          genDemarrage.current = 0;
+          annulerDicteeSi(jeton);
+          rendreDetection();
+          setPhase("repos");
+          setCible(null);
+          return;
+        }
+
+        // ⚠️ NE PAS TRANSCRIRE L'ENREGISTREUR D'UN AUTRE. Si une capture du
+        // réveil a pris le jeton, `arreterEtTranscrire` enverrait la commande
+        // vocale dans une note clinique. On remet seulement l'affichage local
+        // au repos, sans toucher au micro global.
+        if (!doitArreterDictee({ aEnregistre: aEnregistre.current, gen: genRef.current, courant: generationDictee() })) {
+          aEnregistre.current = false;
+          genRef.current = 0;
           rendreDetection();
           setPhase("repos");
           setCible(null);
@@ -195,6 +242,7 @@ export function useDicteeChamps<C extends string>(
         aDemarre.current = false;
         aEnregistre.current = false;
         genRef.current = 0;
+        genDemarrage.current = 0;
         setPhase("transcription");
         void arreterEtTranscrire().then((resultat) => {
           // L'enregistreur de CETTE dictée est refermé : on rend le scoring au
@@ -219,7 +267,7 @@ export function useDicteeChamps<C extends string>(
         return;
       }
 
-      if (!dicteeAutorisee(captureEnCours, signalerRef.current)) return;
+      if (!dicteeAutorisee(captureActive, signalerRef.current)) return;
 
       setCible(demandee);
       setPhase("ecoute");
@@ -227,16 +275,28 @@ export function useDicteeChamps<C extends string>(
       // dictée pourrait réveiller Jarvis au milieu de la phrase.
       suspendreDetection();
       aSuspendu.current = true;
+      // Le champ est un propriétaire du micro au même titre que le réveil.
+      setFieldBusy(true);
+      aMarqueChamp.current = true;
       aDemarre.current = true;
       const demarrage = demarrerDictee();
       // Le jeton de départ est posé SYNCHRONEMENT par `demarrerDictee` ; le
       // capturer maintenant permet de reconnaître un abandon survenu avant la
-      // résolution.
+      // résolution — et de ne pas fermer un enregistreur plus récent.
       const jetonDemarrage = generationDictee();
+      genDemarrage.current = jetonDemarrage;
       void demarrage.then((resultat) => {
-        aDemarre.current = false;
+        const courant = generationDictee();
+        // Ce démarrage est-il encore CELUI que ce crochet attend ? Un arrêt,
+        // un démontage ou un nouveau départ a pu prendre la main.
+        const mien = genDemarrage.current === jetonDemarrage;
         if (!resultat.ok) {
-          if (monte.current) rendreDetection();
+          if (mien) {
+            aDemarre.current = false;
+            genDemarrage.current = 0;
+          }
+          if (!monte.current || !mien) return;
+          rendreDetection();
           setPhase("repos");
           setCible(null);
           // Permission refusée, micro absent, passerelle non configurée : la
@@ -245,12 +305,19 @@ export function useDicteeChamps<C extends string>(
           signalerRef.current(resultat.error.message);
           return;
         }
-        const courant = generationDictee();
+        if (!mien) {
+          // L'enregistreur qui vient de s'ouvrir n'appartient plus à ce
+          // crochet. On le referme SEULEMENT s'il est encore le nôtre.
+          if (courant === jetonDemarrage) annulerDicteeSi(jetonDemarrage);
+          return;
+        }
+        aDemarre.current = false;
+        genDemarrage.current = 0;
         if (!monte.current || courant !== jetonDemarrage) {
           // Le crochet est démonté, ou un arrêt/abandon externe a déjà pris la
           // main : l'enregistreur qui vient de s'ouvrir n'appartient plus à
-          // personne. On le referme sans marquer de possession.
-          annulerDictee();
+          // personne. On le referme SEULEMENT s'il est encore le nôtre.
+          annulerDicteeSi(jetonDemarrage);
           if (monte.current) {
             setPhase("repos");
             setCible(null);

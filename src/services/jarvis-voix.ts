@@ -87,6 +87,11 @@ export function generationDictee(): number {
   return jetonDictee;
 }
 
+/** Un enregistreur de dictée (champ ou commande) est-il ouvert ? */
+export function dicteeActive(): boolean {
+  return dictee !== null;
+}
+
 /**
  * Démarre l'enregistrement. Le micro ne s'allume QUE sur un geste explicite ;
  * le flux caméra/micro est arrêté dès l'arrêt — jamais laissé ouvert derrière
@@ -239,6 +244,19 @@ export function annulerDictee(): void {
   enCours.prise.rendre();
 }
 
+/**
+ * Annule SEULEMENT si ce jeton est encore propriétaire.
+ *
+ * Un démontage ou un arrêt tardif ne doit pas fermer l'enregistreur qu'une
+ * capture du réveil — ou une dictée plus récente — vient d'ouvrir. Le jeton
+ * est la seule preuve de propriété ; `dicteeActive()` ne dit pas À QUI.
+ */
+export function annulerDicteeSi(gen: number): boolean {
+  if (gen !== jetonDictee) return false;
+  annulerDictee();
+  return true;
+}
+
 // ═══════════════════════════════════════════════════════════════════════════
 // LECTURE — un bouton par bulle, un seul son à la fois
 // ═══════════════════════════════════════════════════════════════════════════
@@ -376,6 +394,77 @@ export function arreterLecture(): void {
   enCours.audio.pause();
   URL.revokeObjectURL(enCours.url);
   publierLecture(false);
+}
+
+/**
+ * Limite du routeur de synthèse, côté client et côté passerelle.
+ */
+const LIMITE_LECTURE = 2_000;
+
+/**
+ * Découpe une réponse longue aux frontières naturelles, sans jamais dépasser
+ * la limite du synthétiseur.
+ *
+ * Une phrase se coupe après son point, un paragraphe après son saut de ligne,
+ * puis au dernier espace. Un texte sans aucun séparateur est coupé dur : mieux
+ * vaut une frontière imparfaite qu'une réponse muette.
+ */
+export function decouperTexteLecture(texte: string, limite = LIMITE_LECTURE): string[] {
+  const plafond = Math.max(1, Math.floor(limite));
+  let reste = texte.trim();
+  const morceaux: string[] = [];
+  while (reste.length > plafond) {
+    const fenetre = reste.slice(0, plafond);
+    let coupe = fenetre.lastIndexOf("\n");
+    if (coupe < plafond / 2) {
+      const phrase = Math.max(
+        fenetre.lastIndexOf(". "),
+        fenetre.lastIndexOf("! "),
+        fenetre.lastIndexOf("? "),
+        fenetre.lastIndexOf("؟ "),
+        fenetre.lastIndexOf("。"),
+      );
+      if (phrase >= coupe) coupe = phrase + 1;
+    }
+    if (coupe < plafond / 2) {
+      const espace = fenetre.lastIndexOf(" ");
+      if (espace > coupe) coupe = espace;
+    }
+    if (coupe < 1) coupe = plafond;
+    const morceau = reste.slice(0, coupe).trim();
+    if (morceau !== "") morceaux.push(morceau);
+    reste = reste.slice(coupe).trimStart();
+  }
+  if (reste !== "") morceaux.push(reste);
+  return morceaux;
+}
+
+/**
+ * Lit une réponse longue en morceaux successifs.
+ *
+ * `lireTexte` résout au PREMIER son ; enchaîner deux morceaux sans attendre la
+ * fin du précédent ferait couper le premier par le second. On attend donc la
+ * fin réelle entre deux morceaux — jamais pendant le dernier.
+ */
+export async function lireTexteLong(
+  texte: string,
+  porteUneIdentite = false,
+  annulee?: () => boolean,
+): Promise<Result<true>> {
+  const morceaux = decouperTexteLecture(texte);
+  if (morceaux.length === 0) {
+    return err({ code: "regle-metier", message: fr.jarvis.voix.indisponible });
+  }
+  for (let index = 0; index < morceaux.length; index += 1) {
+    if (annulee?.() === true) return err(erreurLectureInterrompue());
+    const resultat = await lireTexte(morceaux[index]!, porteUneIdentite);
+    if (!resultat.ok) return resultat;
+    if (index < morceaux.length - 1) {
+      await attendreFinLecture(120_000);
+      if (annulee?.() === true) return err(erreurLectureInterrompue());
+    }
+  }
+  return ok(true);
 }
 
 /**

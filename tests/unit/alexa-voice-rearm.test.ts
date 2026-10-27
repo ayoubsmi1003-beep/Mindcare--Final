@@ -3,6 +3,7 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 import { fr } from "@/i18n/fr";
 
 const faux = vi.hoisted(() => {
+  const abonnesLecture = new Set<(active: boolean, source: string | null) => void>();
   const state = {
     wake: null as (() => void) | null,
     fin: null as ((motif: string) => void) | null,
@@ -11,6 +12,7 @@ const faux = vi.hoisted(() => {
     commande: vi.fn(async () => {}),
     suspendre: vi.fn(),
     reprendre: vi.fn(),
+    annulerDictee: vi.fn(),
     lireTexte: vi.fn(
       async (): Promise<{ ok: boolean; data?: boolean; error?: { code: string; message: string } }> => ({
         ok: true,
@@ -18,6 +20,19 @@ const faux = vi.hoisted(() => {
       }),
     ),
     finLecture: vi.fn(async () => {}),
+    enLecture: false,
+    abonnesLecture,
+    abonnerLecture(abonne: (active: boolean, source: string | null) => void) {
+      abonnesLecture.add(abonne);
+      abonne(state.enLecture, state.enLecture ? "local" : null);
+      return () => {
+        abonnesLecture.delete(abonne);
+      };
+    },
+    diffuserLecture(active: boolean) {
+      state.enLecture = active;
+      for (const abonne of abonnesLecture) abonne(active, active ? "local" : null);
+    },
     options: [] as Array<{ patienceMs?: number; plafondMs?: number } | undefined>,
     demarrerDetecteur: vi.fn(
       async (
@@ -36,9 +51,12 @@ const faux = vi.hoisted(() => {
 vi.mock("@/services/jarvis-voix", () => ({
   demarrerDictee: faux.demarrer,
   arreterEtTranscrire: faux.transcrire,
-  annulerDictee: vi.fn(),
+  annulerDictee: faux.annulerDictee,
+  annulerDicteeSi: vi.fn(() => true),
+  dicteeActive: () => false,
+  generationDictee: () => 0,
   arreterLecture: vi.fn(),
-  abonnerLecture: () => () => {},
+  abonnerLecture: faux.abonnerLecture,
   lireTexte: faux.lireTexte,
   attendreFinLecture: faux.finLecture,
 }));
@@ -93,6 +111,8 @@ afterEach(() => {
   faux.fin = null;
   faux.erreur = null;
   faux.options.length = 0;
+  faux.enLecture = false;
+  faux.abonnesLecture.clear();
   vi.clearAllMocks();
   vi.useRealTimers();
 });
@@ -382,6 +402,23 @@ describe("mains-libres serialized cycle", () => {
     expect(etatVoix()).toBe("desactive");
     expect(etats).not.toContain("erreur");
   });
+
+  it("preserves parole and re-arms the detector when hands-free is armed during playback", async () => {
+    // La praticienne arme le mains-libres pendant qu'une réponse tapée est
+    // déjà en train d'être lue. L'armement ne doit ni écraser `parole` ni
+    // laisser le détecteur suspendu pour toujours.
+    faux.enLecture = true;
+    const release = retenirVoix({ onCommande: faux.commande });
+    relachements.push(release);
+
+    await vi.waitFor(() => expect(faux.demarrerDetecteur).toHaveBeenCalledTimes(1));
+    await vi.waitFor(() => expect(etatVoix()).toBe("parole"));
+    expect(faux.suspendre).toHaveBeenCalled();
+
+    faux.diffuserLecture(false);
+    await vi.waitFor(() => expect(etatVoix()).toBe("veille"));
+    expect(faux.reprendre).toHaveBeenCalled();
+  });
 });
 
 describe("detector supervision", () => {
@@ -542,5 +579,27 @@ describe("detector supervision", () => {
 
     await cloturerCommande(undefined, "faux-reveil");
     expect(etatVoix()).toBe("veille");
+  });
+
+  it("does not cancel a field recorder when recovery finally fails at veille", async () => {
+    vi.useFakeTimers({ shouldAdvanceTime: true });
+    const release = retenirVoix({ onCommande: faux.commande });
+    relachements.push(release);
+    await vi.waitFor(() => expect(faux.demarrerDetecteur).toHaveBeenCalledTimes(1));
+    faux.annulerDictee.mockClear();
+
+    for (let i = 0; i < 4; i += 1) {
+      faux.demarrerDetecteur.mockResolvedValueOnce({
+        ok: false,
+        error: { code: "interdit", message: "micro refusé" },
+      });
+    }
+    faux.erreur!("micro");
+    await vi.advanceTimersByTimeAsync(250 + 500 + 1_000 + 2_000);
+    await vi.waitFor(() => expect(etatVoix()).toBe("erreur"));
+
+    // Le réveil n'a jamais possédé de commande : l'enregistreur du champ
+    // reste au champ.
+    expect(faux.annulerDictee).not.toHaveBeenCalled();
   });
 });

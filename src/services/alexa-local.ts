@@ -11,6 +11,7 @@ import { navigateAlexa } from "./alexa-navigation";
 import { dialogue } from "@/i18n/alexa-dialogue";
 import { planRequest } from "@/shared/alexa/request-plan";
 import type { AlexaProposal } from "@/shared/alexa/turn";
+import { captureActive, setLoopBusy } from "./voice-activity";
 
 const proposalSubscribers=new Set<(proposal:AlexaProposal,text:string,patientId:string|null,signal:AbortSignal)=>Promise<void>>();
 export function abonnerPropositionVoixLocale(handler:(proposal:AlexaProposal,text:string,patientId:string|null,signal:AbortSignal)=>Promise<void>):()=>void {
@@ -127,6 +128,12 @@ const loop = creerBoucleVoixLocale({
   lire: lireLocalement,
   couper: arreterLecture,
   phase: (etat, error) => {
+    // Le registre partagé voit la boucle directe comme un propriétaire du
+    // micro : sans cela, une dictée de champ pourrait en ouvrir un second.
+    // `erreur` n'est PAS une capture : le micro est déjà refermé.
+    setLoopBusy(
+      etat === "reveille" || etat === "ecoute" || etat === "traitement" || etat === "parole",
+    );
     if (etat === "desactive") { scopeUnsubscribe?.(); scopeUnsubscribe = null; level = 0; }
     const raison = error === "capture" ? alexa.voixLocale : error === "stt" ? alexa.stt
       : error === "tts" ? alexa.tts : error ? alexa.interrompu
@@ -150,11 +157,15 @@ export function abonnerTourVoixLocale(subscriber: (turn: TourVoix) => void): () 
 }
 export function arreterVoixLocale(): void {
   const wasActive = loop.active(); captureGeneration++; preparingCapture?.abort(); preparingCapture = null;
-  loop.arreter(); if (wasActive) void controlWorker("stop");
+  loop.arreter(); setLoopBusy(false); if (wasActive) void controlWorker("stop");
 }
 export function niveauVoixLocale(): number { return level; }
 export async function demarrerVoixLocale(): Promise<void> {
   if (loop.active()) return;
+  // ⚠️ UN SEUL PROPRIÉTAIRE. Une capture du réveil ou une dictée de champ déjà
+  // ouverte interdit d'ouvrir la boucle : deux `MediaRecorder` sur le même
+  // micro corrompent la transcription.
+  if (captureActive()) return;
   const id = patientActifCourant()?.id ?? null;
   scopeUnsubscribe?.();
   scopeUnsubscribe = abonnerPatientActif((patient) => { if ((patient?.id ?? null) !== id) arreterVoixLocale(); });

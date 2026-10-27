@@ -5,10 +5,12 @@ import { usePathname, useRouter } from "next/navigation";
 import { arreterVoixLocale } from "@/services/alexa-local";
 import { subscribeAlexaNavigation } from "@/services/alexa-navigation";
 import { voixSouhaitee } from "@/services/jarvis-reveil";
-import { demarrerMainsLibres, mainsLibresActif } from "@/services/voix-mains-libres";
+import { arreterMainsLibres, demarrerMainsLibres, mainsLibresActif } from "@/services/voix-mains-libres";
+
+import { AlexaAutoRead } from "./AlexaAutoRead";
 
 /** Closes the direct loop on navigation and keeps an opted-in hands-free session armed app-wide. */
-export function BootVoix(): null {
+export function BootVoix(): React.JSX.Element {
   const pathname = usePathname();
   const router = useRouter();
   useEffect(() => subscribeAlexaNavigation(path => router.push(path)), [router]);
@@ -39,8 +41,13 @@ export function BootVoix(): null {
     return () => {
       document.removeEventListener("visibilitychange", surVisibilite);
       window.removeEventListener("pagehide", arreterVoixLocale);
+      // ⚠️ FERMER LE MAINS-LIBRES AU DÉMONTAGE (déconnexion, fermeture de
+      // l'application). `arreterVoixLocale` ne suffit pas : le détecteur Vosk
+      // garde sinon le micro et la préférence, et la session suivante
+      // rouvrirait l'écoute sans geste. `desarmerReveil` rend le périphérique.
+      arreterMainsLibres();
       arreterVoixLocale();
     };
   }, []);
-  return null;
+  return <AlexaAutoRead />;
 }

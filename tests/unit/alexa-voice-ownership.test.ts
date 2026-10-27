@@ -24,6 +24,7 @@ const faux = vi.hoisted(() => ({
   lireTexte: vi.fn(),
   finLecture: vi.fn(),
   demarrerDictee: vi.fn(),
+  annulerDictee: vi.fn(),
   micro: vi.fn(),
 }));
 
@@ -31,7 +32,9 @@ vi.mock("@/services/micro-partage", () => ({ prendreMicro: faux.micro }));
 vi.mock("@/services/jarvis-voix", () => ({
   demarrerDictee: faux.demarrerDictee,
   arreterEtTranscrire: vi.fn(async () => ({ ok: true, data: "" })),
-  annulerDictee: vi.fn(),
+  annulerDictee: faux.annulerDictee,
+  annulerDicteeSi: vi.fn(() => true),
+  dicteeActive: () => false,
   arreterLecture: vi.fn(),
   abonnerLecture: () => () => {},
   lireTexte: faux.lireTexte,
@@ -62,7 +65,7 @@ vi.mock("@/services/alexa-local", () => ({
   arreterVoixLocale: () => {},
 }));
 
-import { dicteeAutorisee, doitAnnulerDictee } from "@/components/consultation/DicteeChamp";
+import { dicteeAutorisee, doitAnnulerDictee, doitArreterDictee } from "@/components/consultation/DicteeChamp";
 import {
   captureEnCours,
   desarmerReveil,
@@ -204,27 +207,98 @@ describe("la dictée d'un champ face à l'accusé du réveil", () => {
 });
 
 describe("la décision d'annulation au démontage", () => {
-  it("annule un démarrage encore en vol, même sans enregistreur possédé", () => {
+  it("annule un démarrage encore en vol quand SON jeton est encore le courant", () => {
     // Le démarrage part : sans annulation, il ouvrirait le micro APRÈS le
     // démontage, sans plus aucun propriétaire pour le refermer.
     expect(
-      doitAnnulerDictee({ aDemarre: true, aEnregistre: false, gen: 0, courant: 7 }),
+      doitAnnulerDictee({
+        aDemarre: true,
+        genDemarrage: 7,
+        aEnregistre: false,
+        gen: 0,
+        courant: 7,
+      }),
     ).toBe(true);
+  });
+
+  it("n'annule pas un démarrage en vol qu'un propriétaire plus récent a remplacé", () => {
+    // Une capture du réveil a pris le jeton : le démontage du champ ne doit
+    // pas fermer l'enregistreur qui ne lui appartient plus.
+    expect(
+      doitAnnulerDictee({
+        aDemarre: true,
+        genDemarrage: 7,
+        aEnregistre: false,
+        gen: 0,
+        courant: 8,
+      }),
+    ).toBe(false);
   });
 
   it("n'annule un enregistreur que si CE crochet en est encore propriétaire", () => {
     // Même jeton : la dictée possède toujours le recorder.
     expect(
-      doitAnnulerDictee({ aDemarre: false, aEnregistre: true, gen: 4, courant: 4 }),
+      doitAnnulerDictee({
+        aDemarre: false,
+        genDemarrage: 0,
+        aEnregistre: true,
+        gen: 4,
+        courant: 4,
+      }),
     ).toBe(true);
     // Un arrêt ou un abandon externe a changé le jeton : le recorder ne lui
     // appartient plus, il peut être une capture du réveil.
     expect(
-      doitAnnulerDictee({ aDemarre: false, aEnregistre: true, gen: 4, courant: 5 }),
+      doitAnnulerDictee({
+        aDemarre: false,
+        genDemarrage: 0,
+        aEnregistre: true,
+        gen: 4,
+        courant: 5,
+      }),
     ).toBe(false);
     expect(
-      doitAnnulerDictee({ aDemarre: false, aEnregistre: false, gen: 4, courant: 5 }),
+      doitAnnulerDictee({
+        aDemarre: false,
+        genDemarrage: 0,
+        aEnregistre: false,
+        gen: 4,
+        courant: 5,
+      }),
     ).toBe(false);
+  });
+
+  it("n'arrête pas la dictée d'un champ quand un enregistreur plus récent a pris la main", () => {
+    expect(doitArreterDictee({ aEnregistre: true, gen: 4, courant: 4 })).toBe(true);
+    expect(doitArreterDictee({ aEnregistre: true, gen: 4, courant: 5 })).toBe(false);
+    expect(doitArreterDictee({ aEnregistre: false, gen: 4, courant: 4 })).toBe(false);
+  });
+});
+
+describe("un désarmement ne coupe jamais la dictée d'un champ", () => {
+  it("laisse l'enregistreur de champ vivant quand la voix est en veille", async () => {
+    const release = retenirVoix({ onCommande: async () => {} });
+    relachements.push(release);
+    await vi.waitFor(() => expect(etatVoix()).toBe("veille"));
+    faux.annulerDictee.mockClear();
+
+    arreterMainsLibres();
+
+    expect(etatVoix()).toBe("desactive");
+    expect(faux.annulerDictee).not.toHaveBeenCalled();
+  });
+
+  it("coupe la capture de commande quand le réveil possède réellement le micro", async () => {
+    const release = retenirVoix({ onCommande: async () => {} });
+    relachements.push(release);
+    await vi.waitFor(() => expect(faux.wake).not.toBeNull());
+    faux.wake!();
+    await vi.waitFor(() => expect(etatVoix()).toBe("ecoute"));
+    faux.annulerDictee.mockClear();
+
+    arreterMainsLibres();
+
+    expect(faux.annulerDictee).toHaveBeenCalledOnce();
   });
 });
 

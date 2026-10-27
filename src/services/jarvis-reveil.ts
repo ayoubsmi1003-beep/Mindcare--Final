@@ -45,16 +45,19 @@ import { fr } from "@/i18n/fr";
 import { creerEndpointeurEnergie, type Endpointeur, type MotifFin } from "./endpointage-voix";
 import {
   abonnerLecture,
+  annulerDictee,
+  annulerDicteeSi,
   arreterEtTranscrire,
   arreterLecture,
-  annulerDictee,
   attendreFinLecture,
   demarrerDictee,
+  generationDictee,
   lireTexte,
   type SourceLecture,
 } from "./jarvis-voix";
 import { log } from "./log";
 import { err, ok, type Result } from "./result";
+import { setWakeBusy } from "./voice-activity";
 
 // ═══════════════════════════════════════════════════════════════════════════
 // 1 · LES HUIT ÉTATS
@@ -166,8 +169,10 @@ function afficherEchecReprise(motif: string): void {
   annulerSuivi();
   endpointeur?.arreter();
   endpointeur = null;
-  // Un échec différé ne doit jamais laisser l'enregistreur de commande ouvert.
-  annulerDictee();
+  // ⚠️ NE JAMAIS FERMER UN ENREGISTREUR DE CHAMP ICI. Ce chemin part de
+  // `veille`/`erreur`, où le réveil ne possède aucune commande : appeler
+  // `annulerDictee()` couperait la dictée d'une note clinique en cours. La
+  // capture de commande, elle, est déjà close avant d'arriver ici.
   aller("erreur", motif);
   log.error("jarvis.reveil.reprise.erreur", { code: "indisponible" });
 }
@@ -234,6 +239,14 @@ function publier(): void {
 function aller(suivant: EtatVoix, motif: string | null = null): void {
   etat = suivant;
   raison = motif;
+  // Un seul registre pour les trois machines : la lecture automatique et la
+  // lecture manuelle consultent ce fait avant de demander un son.
+  setWakeBusy(
+    suivant === "reveille" ||
+      suivant === "ecoute" ||
+      suivant === "traitement" ||
+      suivant === "parole",
+  );
   publier();
 }
 
@@ -522,6 +535,21 @@ export async function armerReveil(r: RappelsVoix): Promise<Result<true>> {
     return err(demarrage.error);
   }
 
+  // ⚠️ « VEILLE » AVANT L'ABONNEMENT, JAMAIS APRÈS.
+  //
+  // `abonnerLecture` rappelle IMMÉDIATEMENT avec l'état courant. Si une
+  // réponse tapée est déjà en train d'être lue quand la praticienne arme le
+  // mains-libres, ce rappel appelle `signalerParole()` : il faut que la machine
+  // soit déjà sortie de `desactive`. Et il ne faut surtout pas republier
+  // « veille » après l'abonnement — cela écraserait `parole` sans jamais
+  // rendre le scoring au détecteur, et le mot de réveil resterait mort.
+  detecteurDefaillant = false;
+  // La dictée a pu suspendre la détection avant que ce détecteur n'existe, ou
+  // pendant qu'une reprise reconstruisait le graphe : le nouveau graphe démarre
+  // NON suspendu, on rétablit donc le silence demandé.
+  if (suspensionDictee) d.suspendre();
+  if (etat === "desactive" || etat === "erreur") aller("veille");
+
   // L'état `parole` doit refléter une LECTURE RÉELLE, pas une intention. On
   // s'abonne à ce que le navigateur rapporte vraiment (`onplaying`/`onended`),
   // jamais au fait d'avoir demandé une lecture.
@@ -533,9 +561,8 @@ export async function armerReveil(r: RappelsVoix): Promise<Result<true>> {
   });
   quitterLecture = propreQuitterLecture;
 
-  // Dernier verrou AVANT de publier « veille » : si l'époque a changé pendant
-  // les await, on retire aussi l'abonnement créé pour CET armement — jamais
-  // celui d'un successeur.
+  // Dernier verrou : si l'époque a changé pendant les await, on retire aussi
+  // l'abonnement créé pour CET armement — jamais celui d'un successeur.
   if (perime()) {
     if (quitterLecture === propreQuitterLecture) {
       propreQuitterLecture();
@@ -544,12 +571,8 @@ export async function armerReveil(r: RappelsVoix): Promise<Result<true>> {
     return annuler();
   }
 
-  detecteurDefaillant = false;
-  // La dictée a pu suspendre la détection avant que ce détecteur n'existe, ou
-  // pendant qu'une reprise reconstruisait le graphe : le nouveau graphe démarre
-  // NON suspendu, on rétablit donc le silence demandé.
-  if (suspensionDictee) d.suspendre();
-  aller("veille");
+  // `signalerParole` a pu passer la machine en `parole` de façon synchrone ;
+  // on ne la remplace pas. En `parole`, la fin de lecture rendra le scoring.
   log.info("jarvis.reveil.arme", { context: `moteur:${d.nom}` });
   return ok(true);
 }
@@ -680,6 +703,11 @@ export async function relancerArmement(code: "micro" | "transport"): Promise<voi
 }
 
 export function desarmerReveil(): void {
+  // ⚠️ AVANT DE CHANGER D'ÉTAT : le réveil ne possède un enregistreur de
+  // commande que pendant `reveille/ecoute/traitement/parole`. Depuis `veille`
+  // ou `desactive`, le seul enregistreur possible appartient à une dictée de
+  // champ (ou à la boucle directe) et ne doit PAS être fermé.
+  const commandeDuReveil = captureEnCours();
   repriseGeneration += 1;
   // Périme tout `armerReveil` encore en vol : il ne doit ni démarrer, ni
   // installer, ni publier « veille » après ce désarmement.
@@ -701,7 +729,7 @@ export function desarmerReveil(): void {
   quitterLecture?.();
   quitterLecture = null;
   detecteur?.arreter();
-  annulerDictee();
+  if (commandeDuReveil) annulerDictee();
   arreterLecture();
   rappels = null;
   aller("desactive", fr.jarvis.voix.reveil.desarme);
@@ -809,8 +837,12 @@ async function declencherEcouteSerialise(options?: OptionsEcoute): Promise<void>
     aller("erreur", demarrage.error.message);
     return;
   }
+  // Le jeton de CET enregistreur, capturé juste après son ouverture.
+  const commandeGeneration = generationDictee();
   if (generationDemarrage !== captureCourante) {
-    annulerDictee();
+    // Un autre propriétaire a pris la main pendant l'attente : ne ferme que
+    // l'enregistreur que NOUS venons d'ouvrir, jamais celui du nouveau.
+    annulerDicteeSi(commandeGeneration);
     return;
   }
 
@@ -1063,6 +1095,10 @@ export function signalerFinParole(): void {
  */
 export function interrompreVoix(): void {
   if (etat === "desactive") return;
+  // ⚠️ SEULEMENT UNE CAPTURE DU RÉVEIL. Depuis `veille` (ou une dictée de champ
+  // qui a suspendu le scoring), `annulerDictee()` fermerait l'enregistreur du
+  // champ : le « stop » de l'orbe ne doit pas jeter une note clinique.
+  const commandeDuReveil = captureEnCours();
   // Invalide toute clôture en vol : l'endpointeur de la capture qu'on coupe ne
   // doit pas conclure après coup sur la suivante.
   captureCourante += 1;
@@ -1073,7 +1109,7 @@ export function interrompreVoix(): void {
   }
   endpointeur?.arreter();
   arreterLecture();
-  annulerDictee();
+  if (commandeDuReveil) annulerDictee();
   detecteur?.reprendre();
   aller("interrompu");
   // Retour en veille après un battement : l'état `interrompu` existe pour être

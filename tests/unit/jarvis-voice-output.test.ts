@@ -1,4 +1,4 @@
-import { afterEach, expect, it, vi } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
 
 const { invokeFunctionStream } = vi.hoisted(() => ({ invokeFunctionStream: vi.fn() }));
 vi.mock("@/services/db", () => ({ db: () => ({ invokeFunctionStream }) }));
@@ -7,8 +7,10 @@ import {
   abonnerLecture,
   arreterLecture,
   attendreFinLecture,
+  decouperTexteLecture,
   estLectureInterrompue,
   lireTexte,
+  lireTexteLong,
 } from "@/services/jarvis-voix";
 
 class AudioSortieLocale {
@@ -131,4 +133,65 @@ it("resolves after the timeout when no end event arrives", async () => {
   await vi.advanceTimersByTimeAsync(1);
   await attente;
   expect(termine).toBe(true);
+});
+
+describe("les réponses plus longues que la limite du synthétiseur", () => {
+  it("découpe aux fins de phrase et ne perd aucun contenu", () => {
+    const texte = `${"Une phrase complète. ".repeat(120)}Fin.`;
+    const morceaux = decouperTexteLecture(texte);
+
+    expect(morceaux.length).toBeGreaterThan(1);
+    expect(morceaux.every((morceau) => morceau.length <= 2_000)).toBe(true);
+    expect(morceaux.join(" ").replace(/\s+/g, " ").trim()).toBe(texte.replace(/\s+/g, " ").trim());
+    expect(morceaux.some((morceau) => morceau.endsWith("."))).toBe(true);
+  });
+
+  it("coupe aussi sur un saut de ligne et finit par un morceau dur si aucun séparateur", () => {
+    const avecLignes = `${"Ligne clinique.\n".repeat(300)}`;
+    const morceaux = decouperTexteLecture(avecLignes);
+    expect(morceaux.every((morceau) => morceau.length <= 2_000)).toBe(true);
+    expect(morceaux.length).toBeGreaterThan(1);
+
+    const sansSeparateur = "x".repeat(4_500);
+    expect(decouperTexteLecture(sansSeparateur).map((morceau) => morceau.length)).toEqual([2_000, 2_000, 500]);
+  });
+
+  it("lit chaque morceau l'un après l'autre, en attendant la fin réelle du précédent", async () => {
+    invokeFunctionStream.mockImplementation(() => Promise.resolve(fluxAudioValide()));
+    vi.stubGlobal("Audio", AudioSortieLocale);
+
+    const texte = `${"Une phrase complète. ".repeat(150)}`;
+    const lecture = lireTexteLong(texte);
+
+    await vi.waitFor(() => expect(invokeFunctionStream).toHaveBeenCalledTimes(1));
+    await vi.waitFor(() => expect(AudioSortieLocale.instances[0]?.onended).toBeTypeOf("function"));
+    AudioSortieLocale.instances[0]?.onended?.();
+
+    await vi.waitFor(() => expect(invokeFunctionStream).toHaveBeenCalledTimes(2));
+    await vi.waitFor(() => expect(AudioSortieLocale.instances[1]?.onended).toBeTypeOf("function"));
+    AudioSortieLocale.instances[1]?.onended?.();
+
+    const resultat = await lecture;
+    expect(resultat.ok).toBe(true);
+    expect(invokeFunctionStream.mock.calls.every(([, corps]) => String((corps as { texte: string }).texte).length <= 2_000))
+      .toBe(true);
+  });
+
+  it("remonte un échec audible si un morceau ne peut pas être synthétisé", async () => {
+    invokeFunctionStream
+      .mockImplementationOnce(() => Promise.resolve(fluxAudioValide()))
+      .mockResolvedValueOnce({ ok: false, error: { code: "indisponible", message: "La voix est indisponible." } });
+    vi.stubGlobal("Audio", AudioSortieLocale);
+
+    const texte = `${"Une phrase complète. ".repeat(150)}`;
+    const lecture = lireTexteLong(texte);
+
+    await vi.waitFor(() => expect(invokeFunctionStream).toHaveBeenCalledTimes(1));
+    await vi.waitFor(() => expect(AudioSortieLocale.instances[0]?.onended).toBeTypeOf("function"));
+    AudioSortieLocale.instances[0]?.onended?.();
+
+    const resultat = await lecture;
+    expect(resultat.ok).toBe(false);
+    expect(invokeFunctionStream).toHaveBeenCalledTimes(2);
+  });
 });

@@ -21,20 +21,20 @@ import { agentCopy } from "@/i18n/alexa-agent";
 import { alexa } from "@/i18n/alexa";
 import { fr } from "@/i18n/fr";
 import Link from "next/link";
-import { idsHistorique, idsLues, marquerTourLu, type EtatConversationPublique } from "@/services/conversation";
+import { marquerTourLu, type EtatConversationPublique } from "@/services/conversation";
 import {
-  choisirTourAuto,
   definirPreferenceLectureAuto,
   lirePreferenceLectureAuto,
 } from "@/services/lecture-auto";
 import {
+  abonnerLecture,
   arreterLecture,
   estLectureInterrompue,
-  lireTexte,
+  lireTexteLong,
 } from "@/services/jarvis-voix";
+import { abonnerActivite, captureActive, lectureInterdite } from "@/services/voice-activity";
 
 import { Icone } from "./ui/Icones";
-import { useVueVoixUnifiee } from "./voix-unifiee";
 
 export function FilJarvis({
   etat,
@@ -48,24 +48,31 @@ export function FilJarvis({
   const [lectureId, setLectureId] = useState<string | null>(null);
   // Lecture automatique GLOBALE (spec voix 2026-10-24 §2.4) : défaut ON,
   // préférence persistée en localStorage (pas clinique), chaînes alexa.ts.
+  // ⚠️ L'AUTO-LECTURE VIT DANS `AlexaAutoRead`, MONTÉ DANS `BootVoix` : ce
+  // composant n'existe que dans le panneau, et une réponse lue seulement
+  // panneau ouvert était le défaut C1 de la revue finale.
   const [lectureAuto, setLectureAuto] = useState<boolean>(() => lirePreferenceLectureAuto());
-  // Tours déjà lus (jamais relus) : la marque vit dans `conversation.ts` pour
-  // survivre au remontage du fil. L'historique chargé n'est jamais lu.
-  const [historiqueCharge, setHistoriqueCharge] = useState(false);
+  /** Une autre machine possède le micro : le geste manuel attend son tour. */
+  const [capture, setCapture] = useState<boolean>(() => captureActive());
   /** Dernière lecture en échec — le texte et l'identité restent pour « Relire ». */
   const [erreurLecture, setErreurLecture] = useState<{
     readonly id: string;
     readonly texte: string;
     readonly porteUneIdentite: boolean;
+    readonly motif: string;
   } | null>(null);
-  const voix = useVueVoixUnifiee();
+
+  useEffect(() => abonnerActivite(() => setCapture(captureActive())), []);
+  useEffect(() => (
+    abonnerLecture((active) => {
+      if (!active) setLectureId(null);
+    })
+  ), []);
 
   // Le fil suit la parole : ancré en bas à chaque tour nouveau ou fragment.
   useEffect(() => {
     finRef.current?.scrollIntoView({ block: "end" });
   }, [etat.tours, etat.etat]);
-
-  useEffect(() => arreterLecture, []);
 
   const basculerLectureAuto = useCallback(() => {
     arreterLecture();
@@ -86,41 +93,6 @@ export function FilJarvis({
     }
   }, [fluxEnCoursAvantLecture]);
 
-  // L'historique chargé n'est jamais lu. On ne scelle PAS les tours présents à
-  // la fin du chargement : une réponse peut être arrivée pendant la requête.
-  // `idsHistorique()` nomme exactement les messages rendus par le serveur.
-  useEffect(() => {
-    if (!etat.chargementHistorique) setHistoriqueCharge(true);
-  }, [etat.chargementHistorique]);
-
-  // Lecture automatique du dernier tour Jarvis — corps de réponse seul.
-  // Kokoro est local; un nom de dossier n'est plus une raison de silence.
-  // Jamais pendant le réveil, l'écoute, le traitement ou la parole : la
-  // réponse tapée attend que la voix soit revenue en veille.
-  const voixInactive =
-    voix.etat === "reveille" ||
-    voix.etat === "ecoute" ||
-    voix.etat === "traitement" ||
-    voix.etat === "parole";
-  useEffect(() => {
-    if (voixInactive || fluxEnCoursAvantLecture) return;
-    const tour = choisirTourAuto(etat.tours, idsHistorique(), idsLues(), {
-      lectureAuto,
-      conversationChargee: historiqueCharge,
-    });
-    if (tour === null) return;
-    marquerTourLu(tour.id);
-    const id = tour.id, texte = tour.texte, porteUneIdentite = tour.porteUneIdentite === true;
-    setLectureId(id);
-    setErreurLecture(null);
-    void lireTexte(texte, porteUneIdentite).then((r) => {
-      if (r.ok) return;
-      setLectureId((courant) => (courant === id ? null : courant));
-      // Un arrêt volontaire ou un remplacement n'est pas une panne de voix.
-      if (!estLectureInterrompue(r.error)) setErreurLecture({ id, texte, porteUneIdentite });
-    });
-  }, [etat.tours, fluxEnCoursAvantLecture, historiqueCharge, lectureAuto, voixInactive]);
-
   /**
    * ⚠️ `porteUneIdentite` DÉCIDE DE LA ROUTE DE LA VOIX, et il n'est pas
    * facultatif : quand la réponse nomme un dossier, la synthèse reste LOCALE.
@@ -134,13 +106,24 @@ export function FilJarvis({
       setLectureId(null);
       return;
     }
+    // ⚠️ AUCUN SON NE DÉMARRE PENDANT UNE CAPTURE. Le micro du réveil ou
+    // d'une dictée est ouvert : la synthèse s'y enregistrerait. Le refus est
+    // VISIBLE, pas un bouton muet.
+    if (lectureInterdite()) {
+      setErreurLecture({ id, texte, porteUneIdentite, motif: fr.jarvis.voix.dejaEnCours });
+      return;
+    }
     setLectureId(id);
     setErreurLecture(null);
-    const r = await lireTexte(texte, porteUneIdentite);
+    // Une réponse lue manuellement ne sera pas relue par le lecteur global.
+    marquerTourLu(id);
+    const r = await lireTexteLong(texte, porteUneIdentite, () => lectureInterdite());
     if (!r.ok) {
       setLectureId(null);
       // Arrêt volontaire / lecture remplacée : aucune erreur à afficher.
-      if (!estLectureInterrompue(r.error)) setErreurLecture({ id, texte, porteUneIdentite });
+      if (!estLectureInterrompue(r.error)) {
+        setErreurLecture({ id, texte, porteUneIdentite, motif: fr.jarvis.voix.indisponible });
+      }
     }
   }, [lectureId]);
 
@@ -170,7 +153,7 @@ export function FilJarvis({
           role="status"
           className="flex items-center justify-end gap-2 pl-1 font-ui text-label text-attention-ink"
         >
-          <span>{fr.jarvis.voix.indisponible}</span>
+          <span>{erreurLecture.motif}</span>
           <button
             type="button"
             onClick={() => void relire(erreurLecture.id, erreurLecture.texte, erreurLecture.porteUneIdentite)}
@@ -228,7 +211,7 @@ export function FilJarvis({
 
         // ── Bulle Jarvis ──
         const enLecture = lectureId === tour.id;
-        const lisible = !tour.interrompu && !etat.erreur && tour.texte.trim().length > 0 && tour.texte.trim().length <= 2000;
+        const lisible = !tour.interrompu && !etat.erreur && !capture && tour.texte.trim().length > 0;
         return (
           <div key={tour.id} className="flex flex-col gap-1">
             {tour.registre === "connaissance-generale" && (
