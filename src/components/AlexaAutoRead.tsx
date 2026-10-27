@@ -40,7 +40,13 @@ import {
 } from "@/services/lecture-auto";
 import { arreterLecture, estLectureInterrompue, lireTexteLong } from "@/services/jarvis-voix";
 import type { EtatVoix } from "@/services/jarvis-reveil";
-import { abonnerActivite, boucleActive, captureActive } from "@/services/voice-activity";
+import {
+  abonnerActivite,
+  abonnerCapture,
+  boucleActive,
+  captureActive,
+  playbackBusy,
+} from "@/services/voice-activity";
 
 import { useVueVoixUnifiee } from "./voix-unifiee";
 
@@ -51,6 +57,7 @@ export interface OptionsLectureAutoGlobale {
   readonly etatVoix: EtatVoix;
   readonly boucleActive: boolean;
   readonly captureActive: boolean;
+  readonly playbackBusy: boolean;
 }
 
 export type DecisionLectureAuto =
@@ -90,6 +97,9 @@ export function choisirActionLectureAuto(
   // Une capture du réveil, un champ ou la préparation de la boucle : aucun
   // haut-parleur, le micro est ouvert.
   if (opts.captureActive) return null;
+  // Une synthèse établie possède déjà le haut-parleur : ne pas en démarrer
+  // une seconde par-dessus (le tour sera relu quand elle se sera tue).
+  if (opts.playbackBusy) return null;
   if (
     opts.etatVoix === "reveille" ||
     opts.etatVoix === "ecoute" ||
@@ -120,6 +130,12 @@ export function AlexaAutoRead(): React.JSX.Element | null {
   useEffect(() => abonnerConversation(setEtat), []);
   useEffect(() => abonnerPreferenceLectureAuto(setLectureAuto), []);
   useEffect(() => abonnerActivite(() => setActivite((valeur) => valeur + 1)), []);
+  // Une capture qui COMMENCE coupe la lecture en cours du lecteur global.
+  // La notification est réservée aux captures (pas à la lecture elle-même),
+  // sinon le lecteur s'arrêterait en commençant à parler.
+  useEffect(() => abonnerCapture(() => {
+    if (captureActive()) arreterLecture();
+  }), []);
   // Au démontage de l'application (déconnexion), la synthèse en cours ne doit
   // pas continuer derrière un écran de connexion.
   useEffect(() => () => {
@@ -148,6 +164,7 @@ export function AlexaAutoRead(): React.JSX.Element | null {
       etatVoix: voix.etat,
       boucleActive: boucleActive(),
       captureActive: captureActive(),
+      playbackBusy: playbackBusy(),
     });
     if (decision === null) return;
 
@@ -161,7 +178,11 @@ export function AlexaAutoRead(): React.JSX.Element | null {
     marquerTourLu(tour.id);
     enCours.current = true;
     setErreur(false);
-    void lireTexteLong(tour.texte, tour.porteUneIdentite === true, () => preference.current !== true)
+    void lireTexteLong(
+      tour.texte,
+      tour.porteUneIdentite === true,
+      () => preference.current !== true || captureActive(),
+    )
       .then((resultat) => {
         // Un arrêt volontaire n'est pas une panne de voix.
         if (!resultat.ok && !estLectureInterrompue(resultat.error)) setErreur(true);

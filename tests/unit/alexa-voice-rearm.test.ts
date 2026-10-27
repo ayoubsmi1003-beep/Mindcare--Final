@@ -99,7 +99,9 @@ import {
   retenirVoix,
   signalerFinParole,
   signalerParole,
+  suspendreDetection,
 } from "@/services/jarvis-reveil";
+import { setFieldBusy, setPlaybackBusy } from "@/services/voice-activity";
 
 const relachements: (() => void)[] = [];
 
@@ -107,6 +109,8 @@ afterEach(() => {
   for (const relacher of relachements.splice(0)) relacher();
   desarmerReveil();
   installerDetecteur(null);
+  setFieldBusy(false);
+  setPlaybackBusy(false);
   faux.wake = null;
   faux.fin = null;
   faux.erreur = null;
@@ -586,7 +590,10 @@ describe("detector supervision", () => {
     const release = retenirVoix({ onCommande: faux.commande });
     relachements.push(release);
     await vi.waitFor(() => expect(faux.demarrerDetecteur).toHaveBeenCalledTimes(1));
+    suspendreDetection();
+    setFieldBusy(true);
     faux.annulerDictee.mockClear();
+    faux.reprendre.mockClear();
 
     for (let i = 0; i < 4; i += 1) {
       faux.demarrerDetecteur.mockResolvedValueOnce({
@@ -599,7 +606,8 @@ describe("detector supervision", () => {
     await vi.waitFor(() => expect(etatVoix()).toBe("erreur"));
 
     // Le réveil n'a jamais possédé de commande : l'enregistreur du champ
-    // reste au champ.
+    // reste au champ, et sa suspension n'est pas rendue par la panne.
     expect(faux.annulerDictee).not.toHaveBeenCalled();
+    expect(faux.reprendre).not.toHaveBeenCalled();
   });
 });

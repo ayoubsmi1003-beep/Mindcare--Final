@@ -35,7 +35,7 @@ import {
   generationDictee,
 } from "@/services/jarvis-voix";
 import { reprendreDetection, suspendreDetection } from "@/services/jarvis-reveil";
-import { captureActive, setFieldBusy } from "@/services/voice-activity";
+import { lectureInterdite, setFieldBusy } from "@/services/voice-activity";
 
 import {
   actionMicro,
@@ -267,7 +267,7 @@ export function useDicteeChamps<C extends string>(
         return;
       }
 
-      if (!dicteeAutorisee(captureActive, signalerRef.current)) return;
+      if (!dicteeAutorisee(lectureInterdite, signalerRef.current)) return;
 
       setCible(demandee);
       setPhase("ecoute");

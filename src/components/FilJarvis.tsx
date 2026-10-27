@@ -32,7 +32,7 @@ import {
   estLectureInterrompue,
   lireTexteLong,
 } from "@/services/jarvis-voix";
-import { abonnerActivite, captureActive, lectureInterdite } from "@/services/voice-activity";
+import { abonnerActivite, abonnerCapture, captureActive, lectureInterdite } from "@/services/voice-activity";
 
 import { Icone } from "./ui/Icones";
 
@@ -63,6 +63,14 @@ export function FilJarvis({
   } | null>(null);
 
   useEffect(() => abonnerActivite(() => setCapture(captureActive())), []);
+  // Une capture qui commence coupe la lecture manuelle en cours. La lecture
+  // elle-même ne notifie pas `abonnerCapture` : pas d'auto-interruption.
+  useEffect(() => abonnerCapture(() => {
+    if (captureActive()) {
+      arreterLecture();
+      setLectureId(null);
+    }
+  }), []);
   useEffect(() => (
     abonnerLecture((active) => {
       if (!active) setLectureId(null);
@@ -117,7 +125,7 @@ export function FilJarvis({
     setErreurLecture(null);
     // Une réponse lue manuellement ne sera pas relue par le lecteur global.
     marquerTourLu(id);
-    const r = await lireTexteLong(texte, porteUneIdentite, () => lectureInterdite());
+    const r = await lireTexteLong(texte, porteUneIdentite, () => captureActive());
     if (!r.ok) {
       setLectureId(null);
       // Arrêt volontaire / lecture remplacée : aucune erreur à afficher.

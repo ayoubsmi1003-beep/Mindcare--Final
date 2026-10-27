@@ -24,6 +24,7 @@ const OPTS = {
   etatVoix: "veille" as const,
   boucleActive: false,
   captureActive: false,
+  playbackBusy: false,
 };
 
 describe("le lecteur automatique global", () => {
@@ -59,6 +60,13 @@ describe("le lecteur automatique global", () => {
     expect(choisirActionLectureAuto([BASE], new Set(), new Set(), {
       ...OPTS,
       captureActive: true,
+    })).toBeNull();
+  });
+
+  it("n'ouvre aucun second TTS pendant qu'une synthèse tient déjà le haut-parleur", () => {
+    expect(choisirActionLectureAuto([BASE], new Set(), new Set(), {
+      ...OPTS,
+      playbackBusy: true,
     })).toBeNull();
   });
 
@@ -125,6 +133,14 @@ describe("le câblage du lecteur global", () => {
     expect(fil).not.toContain("choisirTourAuto");
     expect(fil).toContain("lireTexteLong");
     expect(fil).toContain("lectureInterdite");
+    expect(fil).toContain("abonnerCapture");
+  });
+
+  it("coupe la lecture globale quand une capture commence", () => {
+    const global = source("src/components/AlexaAutoRead.tsx");
+    expect(global).toContain("abonnerCapture");
+    expect(global).toMatch(/abonnerCapture\(\(\) => \{[\s\S]*arreterLecture\(\)/);
+    expect(global).toContain("captureActive()");
   });
 
   it("libère le mains-libres au démontage de BootVoix", () => {

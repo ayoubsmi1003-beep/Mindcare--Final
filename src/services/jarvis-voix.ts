@@ -24,6 +24,7 @@ import { logFieldsFor, type AppError } from "./errors";
 import { log } from "./log";
 import { prendreMicro, type PriseMicro } from "./micro-partage";
 import { err, ok, type Result } from "./result";
+import { setPlaybackBusy } from "./voice-activity";
 
 /** MIME acceptés des deux côtés (allowlist commune à la passerelle). */
 const MIMES_DICTEE = [
@@ -311,9 +312,16 @@ export type SourceLecture = "cloud" | "local";
 function publierLecture(valeur: boolean, source: SourceLecture | null = null): void {
   // Pas de doublon (`pause` suit `ended`), sauf si la SOURCE change : passer du
   // cloud au local sans le publier laisserait l'écran sur l'ancienne provenance.
-  if (enLecture === valeur && sourceLecture === (valeur ? source : null)) return;
+  if (enLecture === valeur && sourceLecture === (valeur ? source : null)) {
+    setPlaybackBusy(valeur);
+    return;
+  }
   enLecture = valeur;
   sourceLecture = valeur ? source : null;
+  // La lecture est un fait observé, pas une intention : elle devient « busy »
+  // au premier son et retombe à la fin, à l'arrêt ou sur erreur. Une capture
+  // qui commence pendant ce temps est refusée par `lectureInterdite()`.
+  setPlaybackBusy(valeur);
   for (const a of abonnesLecture) a(enLecture, sourceLecture);
 }
 
@@ -456,12 +464,20 @@ export async function lireTexteLong(
     return err({ code: "regle-metier", message: fr.jarvis.voix.indisponible });
   }
   for (let index = 0; index < morceaux.length; index += 1) {
-    if (annulee?.() === true) return err(erreurLectureInterrompue());
+    if (annulee?.() === true) {
+      // Une capture (ou un mute) a pris la main : on coupe le son en cours
+      // avant de rendre la main, jamais seulement le morceau suivant.
+      arreterLecture();
+      return err(erreurLectureInterrompue());
+    }
     const resultat = await lireTexte(morceaux[index]!, porteUneIdentite);
     if (!resultat.ok) return resultat;
     if (index < morceaux.length - 1) {
       await attendreFinLecture(120_000);
-      if (annulee?.() === true) return err(erreurLectureInterrompue());
+      if (annulee?.() === true) {
+        arreterLecture();
+        return err(erreurLectureInterrompue());
+      }
     }
   }
   return ok(true);
@@ -550,7 +566,12 @@ export async function lireTexte(
         publierLecture(true, "local");
         resoudre(true);
       };
-      audio.onerror = () => resoudre(false);
+      audio.onerror = () => {
+        // Une erreur de lecture après le premier son doit retomber « busy » ;
+        // sinon une dictée resterait refusée par un fantôme sonore.
+        if (generation === generationLecture) publierLecture(false);
+        resoudre(false);
+      };
       // Un `playing` qui n'arrive jamais — flux qui cale, périphérique de sortie
       // absent — laisserait cette promesse en suspens et la machine bloquée.
       setTimeout(() => resoudre(false), DELAI_PREMIER_SON_MS);

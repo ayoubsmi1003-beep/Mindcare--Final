@@ -11,7 +11,7 @@ import { navigateAlexa } from "./alexa-navigation";
 import { dialogue } from "@/i18n/alexa-dialogue";
 import { planRequest } from "@/shared/alexa/request-plan";
 import type { AlexaProposal } from "@/shared/alexa/turn";
-import { captureActive, setLoopBusy } from "./voice-activity";
+import { lectureInterdite, setLoopBusy } from "./voice-activity";
 
 const proposalSubscribers=new Set<(proposal:AlexaProposal,text:string,patientId:string|null,signal:AbortSignal)=>Promise<void>>();
 export function abonnerPropositionVoixLocale(handler:(proposal:AlexaProposal,text:string,patientId:string|null,signal:AbortSignal)=>Promise<void>):()=>void {
@@ -162,10 +162,11 @@ export function arreterVoixLocale(): void {
 export function niveauVoixLocale(): number { return level; }
 export async function demarrerVoixLocale(): Promise<void> {
   if (loop.active()) return;
-  // ⚠️ UN SEUL PROPRIÉTAIRE. Une capture du réveil ou une dictée de champ déjà
-  // ouverte interdit d'ouvrir la boucle : deux `MediaRecorder` sur le même
-  // micro corrompent la transcription.
-  if (captureActive()) return;
+  // ⚠️ UN SEUL PROPRIÉTAIRE. Une capture du réveil, une dictée de champ ou une
+  // synthèse déjà en cours interdit d'ouvrir la boucle : deux prises sur le
+  // même micro corrompent la transcription, et la seconde enregistrerait la
+  // voix d'Alexa.
+  if (lectureInterdite()) return;
   const id = patientActifCourant()?.id ?? null;
   scopeUnsubscribe?.();
   scopeUnsubscribe = abonnerPatientActif((patient) => { if ((patient?.id ?? null) !== id) arreterVoixLocale(); });

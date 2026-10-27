@@ -11,11 +11,15 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 import { dicteeAutorisee } from "@/components/consultation/DicteeChamp";
 import { fr } from "@/i18n/fr";
 import {
+  abonnerCapture,
   boucleActive,
   captureActive,
+  fieldBusy,
   lectureInterdite,
+  playbackBusy,
   setFieldBusy,
   setLoopBusy,
+  setPlaybackBusy,
   setWakeBusy,
   wakeBusy,
 } from "@/services/voice-activity";
@@ -24,6 +28,7 @@ afterEach(() => {
   setWakeBusy(false);
   setLoopBusy(false);
   setFieldBusy(false);
+  setPlaybackBusy(false);
 });
 
 describe("le registre des captures", () => {
@@ -64,6 +69,29 @@ describe("le registre des captures", () => {
     setWakeBusy(false);
     expect(vues).toEqual([true, false]);
   });
+
+  it("distingue la lecture d'une capture, tout en interdisant le son aux deux", () => {
+    setPlaybackBusy(true);
+    expect(playbackBusy()).toBe(true);
+    expect(captureActive()).toBe(false);
+    expect(fieldBusy()).toBe(false);
+    expect(lectureInterdite()).toBe(true);
+
+    setPlaybackBusy(false);
+    expect(playbackBusy()).toBe(false);
+    expect(lectureInterdite()).toBe(false);
+  });
+
+  it("ne notifie `abonnerCapture` que lorsqu'une capture commence, jamais pour la lecture", () => {
+    const vues: boolean[] = [];
+    const stop = abonnerCapture(() => vues.push(captureActive()));
+    setPlaybackBusy(true);
+    setPlaybackBusy(false);
+    setFieldBusy(true);
+    setFieldBusy(false);
+    stop();
+    expect(vues).toEqual([true]);
+  });
 });
 
 describe("la porte de la dictée de champ", () => {
@@ -71,7 +99,7 @@ describe("la porte de la dictée de champ", () => {
     setLoopBusy(true);
     const signaler = vi.fn();
     const demarrer = vi.fn();
-    if (dicteeAutorisee(captureActive, signaler)) demarrer();
+    if (dicteeAutorisee(lectureInterdite, signaler)) demarrer();
 
     expect(demarrer).not.toHaveBeenCalled();
     expect(signaler).toHaveBeenCalledExactlyOnceWith(fr.jarvis.voix.dejaEnCours);
@@ -80,13 +108,20 @@ describe("la porte de la dictée de champ", () => {
   it("refuse un champ tant qu'une capture du réveil possède le micro", () => {
     setWakeBusy(true);
     const signaler = vi.fn();
-    expect(dicteeAutorisee(captureActive, signaler)).toBe(false);
+    expect(dicteeAutorisee(lectureInterdite, signaler)).toBe(false);
     expect(signaler).toHaveBeenCalledExactlyOnceWith(fr.jarvis.voix.dejaEnCours);
   });
 
-  it("ouvre le champ quand le registre est libre", () => {
+  it("refuse un champ pendant qu'une réponse sort du haut-parleur", () => {
+    setPlaybackBusy(true);
     const signaler = vi.fn();
-    expect(dicteeAutorisee(captureActive, signaler)).toBe(true);
+    expect(dicteeAutorisee(lectureInterdite, signaler)).toBe(false);
+    expect(signaler).toHaveBeenCalledExactlyOnceWith(fr.jarvis.voix.dejaEnCours);
+  });
+
+  it("ouvre le champ quand la capture et la lecture sont au repos", () => {
+    const signaler = vi.fn();
+    expect(dicteeAutorisee(lectureInterdite, signaler)).toBe(true);
     expect(signaler).not.toHaveBeenCalled();
   });
 });

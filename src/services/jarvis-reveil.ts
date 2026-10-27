@@ -51,13 +51,14 @@ import {
   arreterLecture,
   attendreFinLecture,
   demarrerDictee,
+  dicteeActive,
   generationDictee,
   lireTexte,
   type SourceLecture,
 } from "./jarvis-voix";
 import { log } from "./log";
 import { err, ok, type Result } from "./result";
-import { setWakeBusy } from "./voice-activity";
+import { fieldBusy, setWakeBusy } from "./voice-activity";
 
 // ═══════════════════════════════════════════════════════════════════════════
 // 1 · LES HUIT ÉTATS
@@ -239,13 +240,12 @@ function publier(): void {
 function aller(suivant: EtatVoix, motif: string | null = null): void {
   etat = suivant;
   raison = motif;
-  // Un seul registre pour les trois machines : la lecture automatique et la
-  // lecture manuelle consultent ce fait avant de demander un son.
+  // Le registre de CAPTURE ne compte que la commande : `parole` est une
+  // lecture, suivie par `setPlaybackBusy` dans `jarvis-voix`. Inclure `parole`
+  // ici ferait croire au lecteur global qu'une capture commence quand il parle
+  // lui-même — et il s'arrêterait.
   setWakeBusy(
-    suivant === "reveille" ||
-      suivant === "ecoute" ||
-      suivant === "traitement" ||
-      suivant === "parole",
+    suivant === "reveille" || suivant === "ecoute" || suivant === "traitement",
   );
   publier();
 }
@@ -281,6 +281,9 @@ export function suspendreDetection(): void {
 }
 
 export function reprendreDetection(): void {
+  // Le propriétaire du micro est encore le champ : sa suspension doit rester.
+  // `DicteeChamp` libère `fieldBusy` AVANT d'appeler cette fonction.
+  if (fieldBusy()) return;
   suspensionDictee = false;
   // ⚠️ UNE CAPTURE DU RÉVEIL POSSÈDE DÉJÀ LA SUSPENSION. C'est sa propre
   // transition qui rendra le scoring. Reprendre ici ferait écouter le
@@ -306,6 +309,17 @@ export function captureEnCours(): boolean {
     etat === "traitement" ||
     etat === "parole"
   );
+}
+
+/**
+ * Le réveil possède-t-il un ENREGISTREUR DE COMMANDE ?
+ *
+ * `parole` est exclu : la lecture ne tient pas le recorder. `reveille` compte
+ * pour l'accusé, `ecoute` et `traitement` parce que le recorder reste ouvert
+ * jusqu'à la transcription.
+ */
+function commandeDuReveil(): boolean {
+  return etat === "reveille" || etat === "ecoute" || etat === "traitement";
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -547,7 +561,7 @@ export async function armerReveil(r: RappelsVoix): Promise<Result<true>> {
   // La dictée a pu suspendre la détection avant que ce détecteur n'existe, ou
   // pendant qu'une reprise reconstruisait le graphe : le nouveau graphe démarre
   // NON suspendu, on rétablit donc le silence demandé.
-  if (suspensionDictee) d.suspendre();
+  if (suspensionDictee || fieldBusy()) d.suspendre();
   if (etat === "desactive" || etat === "erreur") aller("veille");
 
   // L'état `parole` doit refléter une LECTURE RÉELLE, pas une intention. On
@@ -661,7 +675,7 @@ export async function relancerArmement(code: "micro" | "transport"): Promise<voi
         // note dictée réveillerait Jarvis dès la première reprise.
         const captureDuReveil =
           etat === "reveille" || etat === "ecoute" || etat === "traitement" || etat === "parole";
-        if (suspensionDictee || captureDuReveil) d.suspendre();
+        if (suspensionDictee || fieldBusy() || captureDuReveil) d.suspendre();
         if (!suspensionDictee && (etat === "veille" || etat === "erreur")) {
           aller("veille");
         }
@@ -703,16 +717,19 @@ export async function relancerArmement(code: "micro" | "transport"): Promise<voi
 }
 
 export function desarmerReveil(): void {
-  // ⚠️ AVANT DE CHANGER D'ÉTAT : le réveil ne possède un enregistreur de
-  // commande que pendant `reveille/ecoute/traitement/parole`. Depuis `veille`
-  // ou `desactive`, le seul enregistreur possible appartient à une dictée de
-  // champ (ou à la boucle directe) et ne doit PAS être fermé.
-  const commandeDuReveil = captureEnCours();
+  // ⚠️ AVANT DE CHANGER D'ÉTAT : seule une capture de COMMANDE du réveil
+  // (`reveille/ecoute/traitement`) possède un enregistreur à annuler. En
+  // `parole`, le recorder est déjà fermé ; en `veille/desactive`, le seul
+  // enregistreur possible appartient à une dictée de champ.
+  const reveilPossedeCommande = commandeDuReveil();
+  const champPossedeMicro = fieldBusy();
   repriseGeneration += 1;
   // Périme tout `armerReveil` encore en vol : il ne doit ni démarrer, ni
   // installer, ni publier « veille » après ce désarmement.
   armementGeneration += 1;
-  suspensionDictee = false;
+  // La suspension d'une dictée de champ survit au désarmement : c'est le
+  // champ qui la rendra, jamais la voix qui vient d'être coupée.
+  if (!champPossedeMicro) suspensionDictee = false;
   repriseEchouee = null;
   detecteurDefaillant = false;
   captureCourante += 1; // invalide toute clôture en vol
@@ -729,7 +746,9 @@ export function desarmerReveil(): void {
   quitterLecture?.();
   quitterLecture = null;
   detecteur?.arreter();
-  if (commandeDuReveil) annulerDictee();
+  // Deuxième garde : même dans un état de commande, un recorder absent ou
+  // appartenant au champ ne doit pas être fermé.
+  if (reveilPossedeCommande && dicteeActive() && !champPossedeMicro) annulerDictee();
   arreterLecture();
   rappels = null;
   aller("desactive", fr.jarvis.voix.reveil.desarme);
@@ -1095,10 +1114,12 @@ export function signalerFinParole(): void {
  */
 export function interrompreVoix(): void {
   if (etat === "desactive") return;
-  // ⚠️ SEULEMENT UNE CAPTURE DU RÉVEIL. Depuis `veille` (ou une dictée de champ
-  // qui a suspendu le scoring), `annulerDictee()` fermerait l'enregistreur du
-  // champ : le « stop » de l'orbe ne doit pas jeter une note clinique.
-  const commandeDuReveil = captureEnCours();
+  // ⚠️ SEULEMENT UNE CAPTURE DE COMMANDE DU RÉVEIL. Depuis `veille`, `parole`
+  // ou une dictée de champ, `annulerDictee()` fermerait l'enregistreur du
+  // champ : le « stop » de l'orbe ne doit pas jeter une note clinique. Et le
+  // détecteur doit rester suspendu tant que le champ possède le micro.
+  const reveilPossedeCommande = commandeDuReveil();
+  const champPossedeMicro = fieldBusy();
   // Invalide toute clôture en vol : l'endpointeur de la capture qu'on coupe ne
   // doit pas conclure après coup sur la suivante.
   captureCourante += 1;
@@ -1109,8 +1130,8 @@ export function interrompreVoix(): void {
   }
   endpointeur?.arreter();
   arreterLecture();
-  if (commandeDuReveil) annulerDictee();
-  detecteur?.reprendre();
+  if (reveilPossedeCommande && dicteeActive() && !champPossedeMicro) annulerDictee();
+  if (!champPossedeMicro) detecteur?.reprendre();
   aller("interrompu");
   // Retour en veille après un battement : l'état `interrompu` existe pour être
   // VU, pas pour durer.

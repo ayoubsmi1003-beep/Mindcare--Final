@@ -11,7 +11,7 @@ vi.mock("@/services/alexa-turn", () => ({ envoyerTourAlexa: vi.fn() }));
 vi.mock("@/services/alexa-navigation", () => ({ navigateAlexa: vi.fn() }));
 vi.mock("@/services/patient-actif", () => ({ patientActifCourant: () => null, abonnerPatientActif: () => () => {} }));
 import * as local from "@/services/alexa-local";
-import { setFieldBusy, setWakeBusy } from "@/services/voice-activity";
+import { setFieldBusy, setPlaybackBusy, setWakeBusy } from "@/services/voice-activity";
 
 function deferred<T>() {
   let resolve!: (value: T) => void;
@@ -51,6 +51,7 @@ afterEach(async () => {
   local.arreterVoixLocale();
   setFieldBusy(false);
   setWakeBusy(false);
+  setPlaybackBusy(false);
   await flush();
   vi.unstubAllGlobals();
 });
@@ -64,6 +65,12 @@ describe("direct loop capture ownership", () => {
 
   it("refuses to open the direct loop during a wake capture", async () => {
     setWakeBusy(true);
+    await local.demarrerVoixLocale();
+    expect(boundary.acquire).not.toHaveBeenCalled();
+  });
+
+  it("refuses to open the direct loop while a synthesis is playing", async () => {
+    setPlaybackBusy(true);
     await local.demarrerVoixLocale();
     expect(boundary.acquire).not.toHaveBeenCalled();
   });

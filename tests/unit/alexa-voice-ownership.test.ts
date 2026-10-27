@@ -25,6 +25,7 @@ const faux = vi.hoisted(() => ({
   finLecture: vi.fn(),
   demarrerDictee: vi.fn(),
   annulerDictee: vi.fn(),
+  dicteeActive: vi.fn(() => false),
   micro: vi.fn(),
 }));
 
@@ -34,7 +35,7 @@ vi.mock("@/services/jarvis-voix", () => ({
   arreterEtTranscrire: vi.fn(async () => ({ ok: true, data: "" })),
   annulerDictee: faux.annulerDictee,
   annulerDicteeSi: vi.fn(() => true),
-  dicteeActive: () => false,
+  dicteeActive: faux.dicteeActive,
   arreterLecture: vi.fn(),
   abonnerLecture: () => () => {},
   lireTexte: faux.lireTexte,
@@ -71,8 +72,10 @@ import {
   desarmerReveil,
   etatVoix,
   installerDetecteur,
+  interrompreVoix,
   reprendreDetection,
   retenirVoix,
+  signalerParole,
   suspendreDetection,
 } from "@/services/jarvis-reveil";
 import {
@@ -80,6 +83,7 @@ import {
   demarrerMainsLibres,
   mainsLibresActif,
 } from "@/services/voix-mains-libres";
+import { setFieldBusy, setPlaybackBusy } from "@/services/voice-activity";
 
 const CLE_SOUHAIT = "mindcare.voix.active";
 const stockage = new Map<string, string>();
@@ -108,12 +112,18 @@ beforeEach(() => {
   faux.lireTexte.mockResolvedValue({ ok: true, data: true });
   faux.finLecture.mockResolvedValue(undefined);
   faux.demarrerDictee.mockResolvedValue({ ok: true, data: true });
+  faux.dicteeActive.mockReturnValue(false);
+  setFieldBusy(false);
+  setPlaybackBusy(false);
 });
 
 afterEach(() => {
   for (const relacher of relachements.splice(0)) relacher();
   desarmerReveil();
   installerDetecteur(null);
+  setFieldBusy(false);
+  setPlaybackBusy(false);
+  reprendreDetection();
   vi.unstubAllGlobals();
   vi.clearAllMocks();
   faux.wake = null;
@@ -280,6 +290,8 @@ describe("un désarmement ne coupe jamais la dictée d'un champ", () => {
     const release = retenirVoix({ onCommande: async () => {} });
     relachements.push(release);
     await vi.waitFor(() => expect(etatVoix()).toBe("veille"));
+    setFieldBusy(true);
+    faux.dicteeActive.mockReturnValue(true);
     faux.annulerDictee.mockClear();
 
     arreterMainsLibres();
@@ -288,17 +300,68 @@ describe("un désarmement ne coupe jamais la dictée d'un champ", () => {
     expect(faux.annulerDictee).not.toHaveBeenCalled();
   });
 
+  it("ne coupe pas un champ quand le réveil est seulement en `parole`", async () => {
+    const release = retenirVoix({ onCommande: async () => {} });
+    relachements.push(release);
+    await vi.waitFor(() => expect(etatVoix()).toBe("veille"));
+    signalerParole();
+    expect(etatVoix()).toBe("parole");
+    setFieldBusy(true);
+    faux.dicteeActive.mockReturnValue(true);
+    faux.annulerDictee.mockClear();
+
+    desarmerReveil();
+    expect(faux.annulerDictee).not.toHaveBeenCalled();
+  });
+
+  it("le « stop » de l'orbe ne coupe pas un champ et ne réécoute pas sa note", async () => {
+    const release = retenirVoix({ onCommande: async () => {} });
+    relachements.push(release);
+    await vi.waitFor(() => expect(etatVoix()).toBe("veille"));
+    signalerParole();
+    setFieldBusy(true);
+    faux.dicteeActive.mockReturnValue(true);
+    faux.annulerDictee.mockClear();
+    faux.reprendre.mockClear();
+
+    interrompreVoix();
+
+    expect(faux.annulerDictee).not.toHaveBeenCalled();
+    expect(faux.reprendre).not.toHaveBeenCalled();
+  });
+
   it("coupe la capture de commande quand le réveil possède réellement le micro", async () => {
     const release = retenirVoix({ onCommande: async () => {} });
     relachements.push(release);
     await vi.waitFor(() => expect(faux.wake).not.toBeNull());
     faux.wake!();
     await vi.waitFor(() => expect(etatVoix()).toBe("ecoute"));
+    faux.dicteeActive.mockReturnValue(true);
     faux.annulerDictee.mockClear();
 
     arreterMainsLibres();
 
     expect(faux.annulerDictee).toHaveBeenCalledOnce();
+  });
+
+  it("conserve la suspension de dictée à travers un réarmement", async () => {
+    suspendreDetection();
+    setFieldBusy(true);
+    faux.dicteeActive.mockReturnValue(true);
+
+    desarmerReveil();
+    // Le champ a rendu le micro mais n'a pas encore rendu la suspension :
+    // c'est exactement l'intervalle que `desarmerReveil` ne doit pas effacer.
+    setFieldBusy(false);
+    faux.suspendre.mockClear();
+    const release = retenirVoix({ onCommande: async () => {} });
+    relachements.push(release);
+    await vi.waitFor(() => expect(faux.demarrerDetecteur).toHaveBeenCalled());
+    await vi.waitFor(() => expect(etatVoix()).toBe("veille"));
+
+    // Le nouveau graphe ne doit pas scorer la note encore en cours.
+    expect(faux.suspendre).toHaveBeenCalled();
+    expect(captureEnCours()).toBe(false);
   });
 });
 
