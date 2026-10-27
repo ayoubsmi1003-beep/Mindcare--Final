@@ -1,8 +1,9 @@
 # Domaine Jarvis / voix (CURRENT)
 
 PURPOSE: Orchestrateur borné : intention → capacité → porte → vérification → audit.
-Jarvis N'EST PAS le modèle. Voix = boucle **entièrement locale** : Whisper
-large-v3-turbo Q5_0 (STT), Kokoro-82M `ff_siwis` (TTS), Vosk français (réveil).
+Jarvis N'EST PAS le modèle. Voix = boucle **entièrement locale** :
+faster-whisper small CTranslate2 `int8` (STT), Kokoro-82M `ff_siwis` (TTS),
+Vosk français (réveil).
 Aucun fournisseur vocal cloud ni repli automatique.
 OWNER RUNTIME: `services/jarvis-boucle.ts` (machine à états, budgets, dédup,
 fail-closed) · `services/jarvis-contexte.ts` (broker, cible unique).

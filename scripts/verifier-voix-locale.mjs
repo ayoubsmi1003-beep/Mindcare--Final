@@ -79,20 +79,24 @@ if (existsSync(join(VOIX, "inventory.json"))) {
 }
 
 const absents = [
-  ["assets/ggml-*.bin", /^ggml-.*\.bin$/u],
-  ["assets/fr_FR-*.onnx*", /^fr_FR-.*\.onnx(?:\.json)?$/u],
-  ["assets/ar_JO-*.onnx*", /^ar_JO-.*\.onnx(?:\.json)?$/u],
+  ["assets/ggml-*.bin", join(VOIX, "assets"), /^ggml-.*\.bin$/u],
+  ["assets/fr_FR-*.onnx*", join(VOIX, "assets"), /^fr_FR-.*\.onnx(?:\.json)?$/u],
+  ["assets/ar_JO-*.onnx*", join(VOIX, "assets"), /^ar_JO-.*\.onnx(?:\.json)?$/u],
+  ["packages/pywhispercpp*", join(VOIX, "packages"), /^pywhispercpp(?:[-.].*)?$/u],
 ];
-for (const [nom, motif] of absents) {
+for (const [nom, dossier, motif] of absents) {
   let restants = [];
   try {
-    restants = readdirSync(join(VOIX, "assets")).filter((fichier) => motif.test(fichier));
+    restants = readdirSync(dossier).filter((fichier) => motif.test(fichier));
   } catch {
     restants = [];
   }
   check(`retiré: ${nom}`, restants.length === 0, restants.join(", "));
 }
 check("retiré: public/wakeword", !existsSync(join(ROOT, "public", "wakeword")));
+for (const relatif of ["scripts/sync-wakeword-runtime.mjs", "src/services/reveil-openwakeword.ts"]) {
+  check(`retiré: ${relatif}`, !existsSync(join(ROOT, relatif)));
+}
 
 for (const route of ["jarvis-voice-in", "jarvis-voice-out", "jarvis-voice-session", "jarvis-wake"]) {
   const path = join(ROOT, "src", "app", "api", "jarvis", route, "route.ts");

@@ -7,7 +7,7 @@ cannot be mistaken for an installed model.
 
 | Asset | Role | License |
 |---|---|---|
-| `faster-whisper-small/` | faster-whisper small, CTranslate2 `int8`, CPU | MIT |
+| `faster-whisper-small/` | faster-whisper small, CTranslate2 `int8`, CPU — `Systran/faster-whisper-small` revision `536b0662742c02347bc0e980a01041f333bce120` | MIT |
 | `kokoro-v1.0.fp16.onnx` | Kokoro-82M v1.0 ONNX export, CPU | Apache-2.0 weights; MIT export |
 | `voices-v1.0.bin` | 54 Kokoro voices, including French `ff_siwis` | CC-BY 4.0 voice, Apache-2.0 model |
 | `vosk-model-small-fr-0.22/` | Vosk French spotter, closed grammar « alexa » | Apache-2.0 |
@@ -34,5 +34,5 @@ The packaged Electron backend supplies absolute `resources/voix` paths.
 Model metadata and integrity: `manifest.json` (schema 2, with the
 `inventorySha256` contract) and `inventory.json`. Dependency provenance:
 `lock.json`. `node scripts/preparer-voix-native.mjs --check` verifies the bundle
-offline; `pnpm voix:verifier` runs the full local check. Piper is intentionally
-absent.
+offline; `pnpm voix:verifier` runs the full local check. Retired speech engines
+are intentionally absent: only the four assets above are shipped.

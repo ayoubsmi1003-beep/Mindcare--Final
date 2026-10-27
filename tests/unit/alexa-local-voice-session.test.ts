@@ -5,7 +5,7 @@ const { prepare, stop, status, actor, config } = vi.hoisted(() => ({
   stop: vi.fn(),
   status: vi.fn().mockReturnValue({
     provider: "local",
-    stt: "whisper-large-v3-turbo-q5_0",
+    stt: "faster-whisper-small-int8",
     tts: "kokoro-82m-v1.0-ff_siwis",
     worker: "ready",
   }),
@@ -54,7 +54,7 @@ describe("local capture lifecycle", () => {
       ok: true,
       data: {
         provider: "local",
-        stt: "whisper-large-v3-turbo-q5_0",
+        stt: "faster-whisper-small-int8",
         tts: "kokoro-82m-v1.0-ff_siwis",
       },
     });

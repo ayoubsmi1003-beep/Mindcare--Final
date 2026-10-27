@@ -183,6 +183,7 @@ const INTERDITS = [
   [/(^|\/)(probe|sonde)-[^/]*$/, "une sonde de diagnostic", "dépôt"],
   [/(^|\/)docs\//, "le dossier docs/", "dépôt"],
   [/resources\/voix\/assets\/ggml-base\.bin$/, "l'ancien modèle Whisper Base", "partout"],
+  [/resources\/voix\/assets\/ggml-large-v3-turbo[^/]*$/, "l'ancien modèle Whisper large-v3-turbo", "partout"],
   [/resources\/voix\/assets\/(fr_FR|ar_JO)-.*\.onnx(?:\.json)?$/, "une voix Piper retirée", "partout"],
   [/(^|\/)public\/wakeword\//, "l'ancien modèle openWakeWord non commercial", "partout"],
 ];
@@ -204,7 +205,7 @@ for (const [motif, quoi, portee] of INTERDITS) {
 // Vérifier la liste fermée réellement assemblée, y compris un nouveau script
 // qui ne porte aucun des préfixes d'outillage connus ci-dessus.
 const SCRIPTS_LIVRES = new Set([
-  "native-voice-worker.py", "garde-origine.mjs", "verifier-base.mjs", "sauvegarde.mjs",
+  "garde-origine.mjs", "verifier-base.mjs", "sauvegarde.mjs",
   "lib/dburl.mjs", "lib/pg-env.mjs", "lib/base-locale.mjs", "lib/alexa-migrations.mjs",
 ]);
 const scriptsNonLivres = inventaire.filter((f) => {
@@ -251,7 +252,10 @@ const REQUIS = [
   ["resources/pgsql/share/extension/vector--0.8.6.sql", "le script de base pgvector 0.8.6"],
   ["resources/voix/native-voice-worker.py", "le worker STT/TTS local"],
   ["resources/voix/wake-voice-worker.py", "le worker de mot de réveil local"],
-  ["resources/voix/assets/ggml-large-v3-turbo-q5_0.bin", "Whisper large-v3-turbo Q5_0"],
+  ["resources/voix/assets/faster-whisper-small/model.bin", "faster-whisper small int8 (LFS)"],
+  ["resources/voix/assets/faster-whisper-small/config.json", "configuration faster-whisper small"],
+  ["resources/voix/assets/faster-whisper-small/tokenizer.json", "tokenizer faster-whisper small"],
+  ["resources/voix/assets/faster-whisper-small/vocabulary.txt", "vocabulaire faster-whisper small"],
   ["resources/voix/assets/kokoro-v1.0.fp16.onnx", "Kokoro-82M v1.0"],
   ["resources/voix/assets/voices-v1.0.bin", "voix Kokoro françaises"],
   ["resources/voix/assets/vosk-model-small-fr-0.22/conf/model.conf", "modèle Vosk français"],

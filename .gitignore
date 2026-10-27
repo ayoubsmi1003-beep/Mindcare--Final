@@ -159,7 +159,6 @@ knowledge/eval/
 
 # Modèles et runtime locaux téléchargeables ; la configuration de packaging
 # ne référence que les assets explicitement choisis.
-public/wakeword/ort/
 resources/alexa/local-model/*.gguf
 resources/alexa/local-model/runtime-*/
 resources/alexa/local-model/llama-*.zip

@@ -56,8 +56,10 @@ const CIBLE = path.join(RACINE, "resources", "serveur");
  * y est absent et `attendreDemon` rendra son diagnostic structuré au
  * lieu de casser l'import).
  */
+// Les workers vocaux ne sont PAS copiés ici : ils vivent une seule fois dans
+// `resources/voix` (native-voice-worker.py, wake-voice-worker.py), à côté de
+// leurs modèles et de leur runtime Python épinglé.
 const SCRIPTS_LIVRES = [
-  "native-voice-worker.py",
   "garde-origine.mjs",
   "verifier-base.mjs",
   "sauvegarde.mjs",

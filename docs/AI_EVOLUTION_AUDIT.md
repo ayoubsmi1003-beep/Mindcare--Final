@@ -1,5 +1,9 @@
 # AI Evolution Audit (M00 — read-only discovery, 2026-09-14)
 
+> **Périmé pour la voix (2026-10-27).** L'audit décrit l'ancien chemin cloud ;
+> la pile livrée est locale (faster-whisper small int8, Kokoro `ff_siwis`,
+> Vosk), voir `resources/voix/README.md`.
+
 > No code changed in this pass. Every claim below was verified by targeted reads + 2 parallel codebase probes on 2026-09-14. File references are the evidence.
 
 ## CURRENT ARCHITECTURE

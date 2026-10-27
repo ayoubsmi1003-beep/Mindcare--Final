@@ -1267,7 +1267,11 @@ export async function llmStream(req: LlmRequest, provider?: LlmProvider): Promis
 
 const TIMEOUT_VOIX_MS_DEFAUT = 15_000;
 
-/** Groq, `whisper-large-v3-turbo` par défaut (ADR-024). Surchargeable. */
+/**
+ * Identifiant du FOURNISSEUR Groq pour le chemin cloud retiré (ADR-024). Aucun
+ * fichier de modèle n'est livré : `voixCloudAutorisee()` rend toujours `false`,
+ * donc cette valeur n'est jamais transmise. Surchargeable par `STT_MODEL`.
+ */
 const STT_MODEL_DEFAUT = "whisper-large-v3-turbo";
 /** ElevenLabs. `multilingual` : la voix française est un CHOIX de voix, pas de modèle. */
 const TTS_MODEL_DEFAUT = "eleven_multilingual_v2";
@@ -1278,7 +1282,8 @@ const TTS_MODEL_DEFAUT = "eleven_multilingual_v2";
  *
  * ⚠️ AUCUN REPLI SILENCIEUX. Si `VOICE_PROVIDER` vaut `local`, cette fonction
  * REFUSE au lieu d'appeler le cloud : le mode local est une INSTALLATION
- * (whisper.cpp + Piper), pas un chemin de code de ce fichier. Se rabattre sur
+ * (faster-whisper small + Kokoro, dans `resources/voix`), pas un chemin de code
+ * de ce fichier. Se rabattre sur
  * le cloud « en attendant » serait exactement la fuite qu'ADR-024 interdit, et
  * elle serait invisible.
  */

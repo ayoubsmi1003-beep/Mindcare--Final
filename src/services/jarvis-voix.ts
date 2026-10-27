@@ -2,7 +2,7 @@
  * La voix de Jarvis — V-JARVIS-CORE.
  *
  * Dictée : `MediaRecorder` presser-pour-parler → PCM16 → route locale
- * `jarvis-voice-in` (Whisper large-v3-turbo). Lecture : bouton par bulle → API
+ * `jarvis-voice-in` (faster-whisper small int8). Lecture : bouton par bulle → API
  * locale `jarvis-voice-out` (Kokoro `ff_siwis`) → WAV en mémoire.
  *
  * ═══ FRONTIÈRES, ET ELLES NE BOUGENT PAS ═══

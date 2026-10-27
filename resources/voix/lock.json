@@ -355,8 +355,7 @@
     "kokoroVoiceFr": "CC-BY 4.0 (SIWIS / ff_siwis)",
     "vosk": "Apache-2.0",
     "espeak": "GPL-3.0-or-later",
-    "piper": "retiré — plus distribué",
-    "openWakeWordAlexaModel": "retiré — CC BY-NC-SA incompatible avec une distribution clinique commerciale",
-    "redistribution": "Retain all upstream LICENSE/COPYING/NOTICE files and provide corresponding source for GPL components (espeak-ng and phonemizer) before external distribution."
+    "redistribution": "Retain all upstream LICENSE/COPYING/NOTICE files and provide corresponding source for GPL components (espeak-ng and phonemizer) before external distribution.",
+    "retiredWakeWordModel": "retiré — licence CC BY-NC-SA incompatible avec une distribution clinique commerciale"
   }
 }

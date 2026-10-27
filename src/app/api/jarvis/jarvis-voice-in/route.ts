@@ -72,7 +72,7 @@ export async function POST(req: Request): Promise<Response> {
       texte,
       runId: v.data.runId,
       utteranceId: v.data.utteranceId,
-      model: resultat.model ?? "whisper-large-v3-turbo-q5_0",
+      model: resultat.model ?? "faster-whisper-small-int8",
     });
   } catch (cause) {
     return echecTranscription(cause);

@@ -167,12 +167,12 @@ Ceci répond directement à Loi 18-07 : registre des traitements et des transfer
 
 ---
 
-## 4. CONTRAT STT LOCAL (Whisper large-v3-turbo — ADR-024-A)
+## 4. CONTRAT STT LOCAL (faster-whisper small int8 — ADR-024-A)
 
 ### 4.1 Ce qui circule
 ```
 Micro → PCM16 16 kHz en RAM → POST /api/jarvis/jarvis-voice-in (même origine)
-      → stdin du worker Python local → Whisper large-v3-turbo Q5_0 → texte
+      → stdin du worker Python local → faster-whisper small CTranslate2 int8 → texte
 Aucun POST externe. Aucune clé fournisseur. Aucun repli cloud.
 ```
 

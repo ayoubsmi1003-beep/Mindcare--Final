@@ -1,13 +1,13 @@
 [
   {
     "path": "README.md",
-    "bytes": 2130,
-    "sha256": "938a9b2964212babcc90737ee0ee11f6019f2efe14fb1ac4887f8a3e56745320"
+    "bytes": 2275,
+    "sha256": "49e56b0b13d624b6dca1f2611477260b7923bff1b8749410c2fb48e7c2086ab8"
   },
   {
     "path": "THIRD-PARTY-NOTICES.md",
-    "bytes": 1519,
-    "sha256": "2fcc13bb7d8593bc490dcbb371c41707bfb513cf76e0f84d1cf11a737361efb9"
+    "bytes": 1786,
+    "sha256": "ed6306e7143cbcc048e7e6e135d7e9b437de8fb3d8ffeebcbe1da31c19d9ecd9"
   },
   {
     "path": "assets/faster-whisper-small/config.json",
@@ -28,11 +28,6 @@
     "path": "assets/faster-whisper-small/vocabulary.txt",
     "bytes": 459861,
     "sha256": "34ce3fe1c5041027b3f8d42912270993f986dbc4bb34cf27f951e34a1e453913"
-  },
-  {
-    "path": "assets/ggml-large-v3-turbo-q5_0.bin",
-    "bytes": 574041195,
-    "sha256": "394221709cd5ad1f40c46e6031ca61bce88931e6e088c188294c6d5a55ffa7e2"
   },
   {
     "path": "assets/kokoro-v1.0.fp16.onnx",
@@ -121,8 +116,8 @@
   },
   {
     "path": "lock.json",
-    "bytes": 16575,
-    "sha256": "90e79db114d953e2a539649b532e4006e4afdf6d910d2daf56154c6f07fbf5fe"
+    "bytes": 16537,
+    "sha256": "cee4a2e35e3f5440065dda6555dee58c38df6f3f97595c4b0d15feeb16c8f214"
   },
   {
     "path": "model-licenses/KOKORO-ff_siwis.txt",
@@ -21776,7 +21771,7 @@
   },
   {
     "path": "wake-voice-worker.py",
-    "bytes": 3026,
-    "sha256": "646cde861ac00d1f194dd78abe39bc5def3db1e972b3f6d9b74ef8291142a62b"
+    "bytes": 3702,
+    "sha256": "3259be2acea9e1e31578fe31ed9211ad2b43263e47dda6879fcd5f5fdb985930"
   }
 ]

@@ -35,3 +35,8 @@
   mesurent le vide — un vert sans base est un dispositif FAIL, pas un PASS.
 - **Secrets** : aucun script ne lit `.env` pour afficher, aucun n'imprime de clé
   (`guard-bash.sh` bloque `cat .env` et `echo $*_KEY`).
+- **Worker vocal : un seul emplacement.** `resources/voix/native-voice-worker.py`
+  (STT/TTS) et `resources/voix/wake-voice-worker.py` (réveil) sont les seuls
+  workers livrés ; `scripts/` n'en contient aucune copie. Le paquet les livre
+  avec `resources/voix`, et `benchmark-alexa-voice.mjs` les lance depuis ce
+  répertoire (`--runtime resources/voix`).

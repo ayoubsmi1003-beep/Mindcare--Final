@@ -1,8 +1,8 @@
 /**
  * `reveil-vosk.ts` — the licence-clean wake-word detector.
  *
- * The pre-trained openWakeWord "Alexa" model is CC BY-NC-SA (non-commercial)
- * and cannot ship in a commercial clinic. This detector keeps the exact same
+ * A pre-trained "Alexa" wake-word model under CC BY-NC-SA (non-commercial)
+ * cannot ship in a commercial clinic. This detector keeps the exact same
  * `DetecteurReveil` contract but uses a French Vosk model (Apache-2.0) with a
  * closed grammar containing only "alexa" and its French spelling variants.
  *

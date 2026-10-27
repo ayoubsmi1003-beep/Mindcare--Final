@@ -1,5 +1,9 @@
 # Alexa — implementation status, 2 October 2026
 
+> **Superseded for voice (2026-10-27).** Any vocal-engine figures below are
+> historical; the shipped stack is faster-whisper small int8, Kokoro
+> `ff_siwis` and Vosk (see `resources/voix/README.md`).
+
 The presentation changes are implemented in the approved v7-design working checkout, based on 738977b. This is a synthetic development demonstration, not a clinical release certificate. The newest provider choice is Gemini Free tier for test patients only; all explicit OpenRouter free families were tested under the retained real-patient privacy policy.
 
 Implemented:

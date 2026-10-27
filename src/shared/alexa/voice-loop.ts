@@ -37,17 +37,18 @@ export function creerBoucleVoixLocale(ports: PortsVoixLocale) {
   };
   const alive = (epoch: number, c: AbortController) => active && generation === epoch && control === c && !c.signal.aborted;
   const touch = () => { clearTimeout(idle); idle = setTimeout(arreter, 15 * 60_000); };
-  // A slow turn (large-v3-turbo STT + local-model inference + Kokoro) runs
-  // far past any idle budget on the delivery PC. Suspend the idle timer for
+  // A turn (faster-whisper small STT + local-model inference + Kokoro) can
+  // outlast a short idle budget on the delivery PC. Suspend the idle timer for
   // the whole turn; re-arm only when back in ecoute. Otherwise arreter()
   // fires cut() mid-turn and the transcript dies as "interrompu".
   const suspend = () => { clearTimeout(idle); idle = undefined; };
   const finish = async (samples: Float32Array, sampleRate: number) => {
     suspend(); cut(); const c = new AbortController(); control = c;
-    // Measured on the 2-core delivery PC: large-v3-turbo STT alone takes
-    // 48-175 s for a few seconds of audio, plus the local-model turn and
-    // Kokoro synthesis. A 90 s deadline aborts turns the worker would have
-    // completed; bound the whole turn at 10 min instead.
+    // Measured on the 2-core delivery PC: the first turn after launch pays the
+    // cold faster-whisper/Kokoro load (~40 s ready, ~10 s for the first
+    // transcription), plus the local-model turn and synthesis. A 90 s deadline
+    // aborts a cold first turn the worker would have completed; bound the
+    // whole turn at 10 min instead.
     const epoch = generation, deadline = setTimeout(() => c.abort(), 600_000);
     let stage: "stt" | "turn" | "tts" = "stt";
     try {

@@ -2,6 +2,10 @@
 **MindCare OS — Phase « Utilisable » · 6 sessions Claude Code**
 v1 — 2026-08-09 · remplace `SPRINT-4-DAYS.md` (archivé)
 
+> **Périmé pour la voix (2026-10-27).** Les lignes sur les moteurs vocaux
+> ci-dessous décrivent le plan v1 ; la pile livrée est faster-whisper small
+> int8 + Kokoro `ff_siwis` + Vosk, voir `resources/voix/README.md`.
+
 > Le sprint des 4 jours a livré la **base** : 30 migrations, RLS prouvée aux 3 rôles,
 > portes SQL, audit, immutabilité, finance, moteur de documents. Rien de tout cela
 > n'est à refaire.

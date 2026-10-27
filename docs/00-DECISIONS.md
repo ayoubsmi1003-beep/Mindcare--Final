@@ -571,6 +571,11 @@ Alexa ; écoute locale auto-hébergée, zéro réseau pendant l'écoute) **et AD
 
 ### ADR-024-A — Voix locale Whisper large-v3-turbo + Kokoro (2026-10-25)
 
+> **Remplacé le 2026-10-27 (V8).** La transcription active est **faster-whisper
+> small CTranslate2 `int8`** ; les mentions large-v3-turbo/Piper/openWakeWord
+> ci-dessous restent l'historique de la décision. Voir
+> `resources/voix/README.md` et `docs/RUNTIME-CONFIGURATION.md`.
+
 **Décision.** La livraison vocale n'utilise plus aucun fournisseur cloud :
 Whisper **large-v3-turbo Q5_0** est le seul modèle de transcription actif, et
 Kokoro-82M v1.0 avec la voix française `ff_siwis` est le seul modèle de

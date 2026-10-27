@@ -39,12 +39,16 @@ function wavPCM(wav) {
 async function nativeResults(corpus, corpusDirectory, root) {
   if (process.platform !== "win32") throw Error("native-platform-unavailable");
   const inventoryFile = join(root, "inventory.json");
-  if (await hash(inventoryFile) !== "9b29537de4562809a6a641c18ec7d1c7e320be8a4fa6162f24ffbbe1d78cb281") throw Error("native-inventory-unverified");
+  // `manifest.json` is the authority: it names the exact inventory bytes the
+  // runtime verifier accepts, so no stale constant can mask a changed bundle.
+  const manifest = JSON.parse(await readFile(join(root, "manifest.json"), "utf8"));
+  if (manifest?.schema !== 2 || typeof manifest.inventorySha256 !== "string") throw Error("native-manifest-unverified");
+  if (await hash(inventoryFile) !== manifest.inventorySha256) throw Error("native-inventory-unverified");
   for (const pin of JSON.parse(await readFile(inventoryFile, "utf8"))) {
     const file = resolve(root, pin.path);
     if (!file.startsWith(root + sep) || await hash(file) !== pin.sha256) throw Error("native-assets-unverified");
   }
-  const child = spawn(join(root, "python", "python.exe"), ["-I", "-B", "-u", resolve("scripts/native-voice-worker.py"), join(root, "packages"), join(root, "assets")], {
+  const child = spawn(join(root, "python", "python.exe"), ["-I", "-B", "-u", join(root, "native-voice-worker.py"), join(root, "packages"), join(root, "assets")], {
     shell: false, windowsHide: true, stdio: ["pipe", "pipe", "pipe"],
     env: { SystemRoot: process.env.SystemRoot ?? "", WINDIR: process.env.WINDIR ?? "", OMP_NUM_THREADS: "2" },
   });
@@ -90,7 +94,7 @@ async function nativeResults(corpus, corpusDirectory, root) {
         processingMs: response.durationMs ?? null, peakRssBytes: peak || null, cpuMs: cpuMs !== null && beforeCpu !== null ? Math.max(0, cpuMs - beforeCpu) : null,
         refused: !response.ok, engine: response.model ?? null });
     }
-    return { schema: 1, engine: "whisper.cpp-base-multilingual", evidenceSource: "local-native-run", hardware: { cpu: cpus()[0]?.model ?? "unknown", ramGiB: totalmem() / 2 ** 30, gpu: "not-used" }, rows };
+    return { schema: 1, engine: "faster-whisper-small-int8", evidenceSource: "local-native-run", hardware: { cpu: cpus()[0]?.model ?? "unknown", ramGiB: totalmem() / 2 ** 30, gpu: "not-used" }, rows };
   } finally { clearInterval(sampling); process.removeListener("SIGINT", stop); child.kill(); }
 }
 function report(corpus, result, source) {

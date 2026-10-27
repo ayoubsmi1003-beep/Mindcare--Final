@@ -2,7 +2,7 @@
 
 **NOT RUN : aucun corpus audio naturel de qualification fourni ; poste de la praticienne non mesuré.** Les tests du scoreur ne prouvent pas la qualité acoustique.
 
-Le 2 octobre, l'utilisateur confirme ne pas avoir de microphone. Aucun résultat acoustique ne peut être présenté comme « parfait ». Réveil implémenté : clic puis conversation continue VAD, sans ouverture automatique ou écoute de mot-clé.
+Le 2 octobre, l'utilisateur confirme ne pas avoir de microphone. Aucun résultat acoustique ne peut être présenté comme « parfait ». Réveil implémenté : clic, conversation continue VAD, et détecteur Vosk local du mot « Alexa » en mains-libres.
 
 Cible : i7 quatrième génération, 16 Go, CPU ; aucun GPU présumé. Le 1 octobre 2026, l'utilisateur confirme que le poste courant est un i3 quatrième génération avec 8 Go, et que le poste de la praticienne est l'i7/16 Go cible. Ces caractéristiques déclarées ne sont pas des mesures de performance. Le poste courant ne remplace pas la qualification sur le poste de la praticienne.
 
@@ -11,7 +11,7 @@ Corpus :240 phrases naturelles +60 silence/bruit/ambiguïté, plusieurs locuteur
 Commandes :
 
 ```powershell
-node scripts/benchmark-alexa-voice.mjs --corpus C:\corpus\qualification.jsonl --runtime resources/voix --out C:\evaluations\whisper-base.json
+node scripts/benchmark-alexa-voice.mjs --corpus C:\corpus\qualification.jsonl --runtime resources/voix --out C:\evaluations\faster-whisper-small-int8.json
 node scripts/benchmark-alexa-voice.mjs --corpus C:\corpus\qualification.jsonl --results C:\evaluations\mesures-small.json --out C:\evaluations\score-small.json
 ```
 
@@ -28,8 +28,8 @@ Le runner natif vérifie les empreintes des ressources et mesure le moteur insta
 |Naturel TTS médian|4/5 minimum|NOT RUN|
 |RAM moteurs cumulés|4Go maximum|NOT RUN|
 
-Whisper.cpp base et Piper existants sont disponibles, sans statut de gagnant. Faster-whisper int8, Whisper officiel base/small, modèle Darija Hadra et Chatterbox Multilingual restent à installer dans un environnement de benchmark après vérification des licences moteur/poids, puis à comparer sur le même jeu tenu à part. Aucune qualification Darija parfaite annoncée.
+Le moteur installé et épinglé est **faster-whisper small CTranslate2 `int8`** (`resources/voix/assets/faster-whisper-small/`, `Systran/faster-whisper-small` révision `536b0662742c02347bc0e980a01041f333bce120`), exécuté par `scripts/benchmark-alexa-voice.mjs --runtime resources/voix`. Aucun autre moteur de transcription n'est livré. Whisper officiel small, modèle Darija Hadra et Chatterbox Multilingual restent à comparer dans un environnement de benchmark après vérification des licences moteur/poids, sur le même jeu tenu à part. Aucune qualification Darija parfaite annoncée.
 
-Smoke des véritables moteurs épinglés sur i3-4150 / 7,864 Gio : Piper français/arabe → resampling RAM → Whisper local PASS pour présence de transcription ; silence numérique rejeté PASS. Français : premier TTS 12,252s avec démarrage (moteur 6,203s), STT 4,281s. Arabe : TTS 4,884s, STT 3,687s. Mesures uniques de parole synthétisée, pas WER/CER, P95, naturel vocal ou preuve microphone. Aucun audio/transcript enregistré. Trace locale : `.cache/alexa/voice-engine-smoke.json`.
+Smoke historique du 2026-10-25 — **moteurs depuis retirés**, chiffres conservés pour la traçabilité — sur i3-4150 / 7,864 Gio : synthèse française/arabe → resampling RAM → STT local PASS pour présence de transcription ; silence numérique rejeté PASS. Français : premier TTS 12,252 s avec démarrage (moteur 6,203 s), STT 4,281 s. Arabe : TTS 4,884 s, STT 3,687 s. Mesures uniques de parole synthétisée, pas WER/CER, P95, naturel vocal ou preuve microphone. Aucun audio/transcript enregistré.
 
 Les tests de cycle de capture reproduisent puis corrigent la rétention de ressources pendant une préparation annulée : arrêt immédiat des pistes/contexte, aucune installation après permission/module tardifs. Ils prouvent le contrat de nettoyage, pas la latence matérielle de barge-in ni la reconnaissance de la darija.

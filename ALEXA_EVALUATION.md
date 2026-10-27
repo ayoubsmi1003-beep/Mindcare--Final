@@ -1,5 +1,9 @@
 # Alexa — verification and acceptance
 
+> **Périmé pour la voix (2026-10-27).** Les mentions de moteurs vocaux
+> ci-dessous sont historiques ; la pile active est faster-whisper small int8,
+> Kokoro `ff_siwis` et Vosk (voir `resources/voix/README.md`).
+
 ## Continuation réelle — 5 octobre 2026
 
 Les tableaux du 2 octobre ci-dessous restent historiques. La continuation explicite du but maître est active ; login/mot de passe sont résolus et hors du travail courant. Chaque nouvel appel modèle de cette réception part du compositeur visible du navigateur, sans mock ni réponse injectée.
