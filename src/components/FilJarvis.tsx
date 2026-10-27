@@ -21,10 +21,10 @@ import { agentCopy } from "@/i18n/alexa-agent";
 import { alexa } from "@/i18n/alexa";
 import { fr } from "@/i18n/fr";
 import Link from "next/link";
-import type { EtatConversationPublique } from "@/services/conversation";
+import { idsHistorique, type EtatConversationPublique } from "@/services/conversation";
 import {
+  choisirTourAuto,
   definirPreferenceLectureAuto,
-  fautLireAuto,
   lirePreferenceLectureAuto,
 } from "@/services/lecture-auto";
 import {
@@ -33,6 +33,7 @@ import {
 } from "@/services/jarvis-voix";
 
 import { Icone } from "./ui/Icones";
+import { useVueVoixUnifiee } from "./voix-unifiee";
 
 export function FilJarvis({
   etat,
@@ -49,7 +50,14 @@ export function FilJarvis({
   const [lectureAuto, setLectureAuto] = useState<boolean>(() => lirePreferenceLectureAuto());
   // Tours déjà vus (jamais relus) : l'historique chargé n'est jamais lu.
   const lusRef = useRef<Set<string>>(new Set());
-  const chargeRef = useRef(false);
+  const [historiqueCharge, setHistoriqueCharge] = useState(false);
+  /** Dernière lecture en échec — le texte et l'identité restent pour « Relire ». */
+  const [erreurLecture, setErreurLecture] = useState<{
+    readonly id: string;
+    readonly texte: string;
+    readonly porteUneIdentite: boolean;
+  } | null>(null);
+  const voix = useVueVoixUnifiee();
 
   // Le fil suit la parole : ancré en bas à chaque tour nouveau ou fragment.
   useEffect(() => {
@@ -77,31 +85,39 @@ export function FilJarvis({
     }
   }, [fluxEnCoursAvantLecture]);
 
-  // L'historique chargé n'est jamais lu : on scelle les tours vus avant la
-  // fin du chargement, seules les réponses arrivées après sont candidates.
+  // L'historique chargé n'est jamais lu. On ne scelle PAS les tours présents à
+  // la fin du chargement : une réponse peut être arrivée pendant la requête.
+  // `idsHistorique()` nomme exactement les messages rendus par le serveur.
   useEffect(() => {
-    if (etat.chargementHistorique || chargeRef.current) return;
-    chargeRef.current = true;
-    for (const tour of etat.tours) lusRef.current.add(tour.id);
-  }, [etat.chargementHistorique, etat.tours]);
+    if (!etat.chargementHistorique) setHistoriqueCharge(true);
+  }, [etat.chargementHistorique]);
 
   // Lecture automatique du dernier tour Jarvis — corps de réponse seul.
   // Kokoro est local; un nom de dossier n'est plus une raison de silence.
-  const dernierJarvis = [...etat.tours].reverse().find((t) => t.role === "jarvis");
+  // Jamais pendant le réveil, l'écoute, le traitement ou la parole : la
+  // réponse tapée attend que la voix soit revenue en veille.
+  const voixInactive =
+    voix.etat === "reveille" ||
+    voix.etat === "ecoute" ||
+    voix.etat === "traitement" ||
+    voix.etat === "parole";
   useEffect(() => {
-    if (dernierJarvis === undefined || fluxEnCoursAvantLecture) return;
-    if (!fautLireAuto(dernierJarvis, {
+    if (voixInactive || fluxEnCoursAvantLecture) return;
+    const tour = choisirTourAuto(etat.tours, idsHistorique(), lusRef.current, {
       lectureAuto,
-      dejaLu: lusRef.current.has(dernierJarvis.id),
-      conversationChargee: chargeRef.current,
-    })) return;
-    lusRef.current.add(dernierJarvis.id);
-    const id = dernierJarvis.id, texte = dernierJarvis.texte;
-    setLectureId(id);
-    void lireTexte(texte, false).then((r) => {
-      if (!r.ok) setLectureId((courant) => (courant === id ? null : courant));
+      conversationChargee: historiqueCharge,
     });
-  }, [dernierJarvis, fluxEnCoursAvantLecture, lectureAuto]);
+    if (tour === null) return;
+    lusRef.current.add(tour.id);
+    const id = tour.id, texte = tour.texte, porteUneIdentite = tour.porteUneIdentite === true;
+    setLectureId(id);
+    setErreurLecture(null);
+    void lireTexte(texte, porteUneIdentite).then((r) => {
+      if (r.ok) return;
+      setLectureId((courant) => (courant === id ? null : courant));
+      setErreurLecture({ id, texte, porteUneIdentite });
+    });
+  }, [etat.tours, fluxEnCoursAvantLecture, historiqueCharge, lectureAuto, voixInactive]);
 
   /**
    * ⚠️ `porteUneIdentite` DÉCIDE DE LA ROUTE DE LA VOIX, et il n'est pas
@@ -117,8 +133,12 @@ export function FilJarvis({
       return;
     }
     setLectureId(id);
+    setErreurLecture(null);
     const r = await lireTexte(texte, porteUneIdentite);
-    if (!r.ok) setLectureId(null);
+    if (!r.ok) {
+      setLectureId(null);
+      setErreurLecture({ id, texte, porteUneIdentite });
+    }
   }, [lectureId]);
 
   const dernierTour = etat.tours[etat.tours.length - 1];
@@ -142,6 +162,21 @@ export function FilJarvis({
           <span>{lectureAuto ? alexa.lectureAutoCouper : alexa.lectureAutoActiver}</span>
         </button>
       </div>
+      {erreurLecture !== null && (
+        <div
+          role="status"
+          className="flex items-center justify-end gap-2 pl-1 font-ui text-label text-attention-ink"
+        >
+          <span>{fr.jarvis.voix.indisponible}</span>
+          <button
+            type="button"
+            onClick={() => void relire(erreurLecture.id, erreurLecture.texte, erreurLecture.porteUneIdentite)}
+            className="inline-flex min-h-target cursor-pointer items-center border-0 bg-transparent p-0 font-ui text-label text-action-600 underline underline-offset-4"
+          >
+            {fr.jarvis.flux.relire}
+          </button>
+        </div>
+      )}
     <div className="flex flex-col gap-3" role="log" aria-live="polite" aria-label={fr.jarvis.titre}>
       {etat.tours.length === 0 && !fluxEnCours && (
         <div className="grid justify-items-center gap-4 px-4 py-10 text-center">

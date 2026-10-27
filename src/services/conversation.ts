@@ -203,7 +203,18 @@ const interne: EtatInterne = {
 };
 
 let historyGeneration = 0;
+/**
+ * IDs des messages rendus par le serveur dans `chargerHistorique`. Sert à
+ * distinguer l'historique d'une réponse tapée pendant que la requête était en
+ * vol : la première ne se lit jamais, la seconde reste lisible.
+ */
+let historiqueIds = new Set<string>();
 const abonnes = new Set<Abonne>();
+
+/** IDs de l'historique chargé — lecture seule pour les appelants. */
+export function idsHistorique(): ReadonlySet<string> {
+  return historiqueIds;
+}
 
 function publier(): void {
   console.info("[conversation] publier", interne.etat, "abonnés:", abonnes.size);
@@ -517,6 +528,7 @@ export function definirContextePatient(
 export function purgerContexteSession(): void {
   // A late read from the previous scope must never repopulate the conversation.
   historyGeneration++;
+  historiqueIds = new Set();
   controleurEnCours?.abort();
   controleurEnCours = null;
   arreterVoixLocale();
@@ -630,10 +642,14 @@ export async function chargerHistorique(): Promise<void> {
   // erreurs eslint à la clé. Le contrat de la porte est typé ci-dessus ; la
   // valeur par défaut couvre le seul cas réel (réponse absente).
   const messages = hist?.messages ?? [];
+  const ids = new Set<string>();
   if (messages.length > 0) {
     const reconstruits: TourConversation[] = [];
     for (const m of messages) {
       const messageId = m.id ?? `${hist?.conversationId ?? "history"}:${m.rang}:${m.role}`;
+      // Seuls les messages RENDUS PAR LE SERVEUR marquent l'historique : un
+      // tour ajouté localement pendant la requête n'est jamais ici.
+      ids.add(messageId);
       reconstruits.push({
         id: messageId,
         role: m.role,
@@ -659,6 +675,7 @@ export async function chargerHistorique(): Promise<void> {
     interne.tours = reconstruits;
     interne.etat = reconstruits.length === 0 ? "vide" : "composition";
   }
+  historiqueIds = ids;
   publier();
 }
 

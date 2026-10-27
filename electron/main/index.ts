@@ -180,6 +180,9 @@ function creerFenetrePrincipaleCachee(): BrowserWindow {
       nodeIntegration: false,
       webSecurity: true,
       allowRunningInsecureContent: false,
+      // Local Kokoro answers read themselves without a click: Chromium must not
+      // silence the first auto-read of a typed answer.
+      autoplayPolicy: "no-user-gesture-required",
       // ⚠️ INDISPENSABLE À L'ALERTE D'ACCUEIL. Chromium gèle les minuteurs d'une
       // fenêtre réduite ; le flux SSE et le carillon cesseraient de fonctionner
       // dès que l'accueil réduit MindCare — c'est-à-dire exactement quand

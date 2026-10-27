@@ -1,9 +1,8 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 
-const { native, actor, admitted, config } = vi.hoisted(() => ({
+const { native, actor, config } = vi.hoisted(() => ({
   native: vi.fn(),
   actor: { id: "doctor" },
-  admitted: vi.fn().mockResolvedValue(true),
   config: { JARVIS_VOICE_ENABLED: "true", ALEXA_LOCAL_VOICE: "true" },
 }));
 
@@ -20,7 +19,6 @@ vi.mock("@/server/voice/session", async (importOriginal) => ({
   sessionVoix: async () => "a".repeat(64),
 }));
 vi.mock("@/server/voice/runtime", () => ({ demanderVoixNative: native }));
-vi.mock("@/server/alexa/speech-admission", () => ({ serverAdmittedSpeech: admitted }));
 
 import { POST as stt } from "@/app/api/jarvis/jarvis-voice-in/route";
 import { POST as tts } from "@/app/api/jarvis/jarvis-voice-out/route";
@@ -58,7 +56,6 @@ afterEach(() => {
   native.mockReset();
   vi.clearAllMocks();
   actor.id = "doctor";
-  admitted.mockResolvedValue(true);
   config.JARVIS_VOICE_ENABLED = "true";
   config.ALEXA_LOCAL_VOICE = "true";
 });
@@ -133,7 +130,7 @@ describe("local voice API boundary", () => {
     });
   });
 
-  it("synthesizes admitted text with the local Kokoro French voice at 24 kHz", async () => {
+  it("synthesizes French text with the local Kokoro French voice at 24 kHz", async () => {
     native.mockResolvedValue({
       audioBase64: wav().toString("base64"),
       mimeType: "audio/wav",
@@ -158,7 +155,7 @@ describe("local voice API boundary", () => {
     );
   });
 
-  it("speaks an authorized patient answer with names through local Kokoro", async () => {
+  it("speaks a completed patient-named answer through local Kokoro without a database admission call", async () => {
     const texte = "Ayoub Salmi a consulté la semaine dernière.";
     native.mockResolvedValue({
       audioBase64: wav().toString("base64"),
@@ -171,26 +168,10 @@ describe("local voice API boundary", () => {
 
     expect(response.status).toBe(200);
     expect(response.headers.get("X-Alexa-Voice-Provider")).toBe("local");
-    expect(response.headers.get("X-Alexa-Voice-Model")).toBe("kokoro-82m-v1.0-ff_siwis");
-    expect(admitted).toHaveBeenCalledWith("doctor", texte);
     expect(native).toHaveBeenCalledWith(expect.objectContaining({ texte }), expect.any(AbortSignal));
   });
 
-  it("keeps server admission and safe synthesis failure handling", async () => {
-    admitted.mockResolvedValueOnce(false);
-    expect(await (await tts(request({ ...ids, texte: "Bonjour." }))).json()).toMatchObject({
-      ok: false,
-      error: { code: "frontiere" },
-    });
-    expect(native).not.toHaveBeenCalled();
-
-    admitted.mockResolvedValueOnce(false);
-    expect(
-      await (await tts(request({ ...ids, texte: "Le dossier de Karim Boualem." }))).json(),
-    ).toMatchObject({ ok: false, error: { code: "frontiere" } });
-    expect(native).not.toHaveBeenCalled();
-
-    admitted.mockResolvedValue(true);
+  it("maps local synthesis failures to safe named codes", async () => {
     native.mockRejectedValueOnce(new Error("configuration: assets"));
     expect(await (await tts(request({ ...ids, texte: "Bonjour." }))).json()).toMatchObject({
       ok: false,

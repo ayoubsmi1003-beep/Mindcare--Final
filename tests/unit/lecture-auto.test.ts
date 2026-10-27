@@ -5,7 +5,7 @@
  */
 import { describe, expect, it } from "vitest";
 
-import { fautLireAuto } from "@/services/lecture-auto";
+import { choisirTourAuto, fautLireAuto } from "@/services/lecture-auto";
 
 const BASE = { id: "t1", role: "jarvis" as const, texte: "Bonjour docteur." };
 
@@ -39,5 +39,18 @@ describe("fautLireAuto", () => {
     expect(fautLireAuto({ ...BASE, interrompu: true }, opts)).toBe(false);
     expect(fautLireAuto({ ...BASE, texte: "   " }, opts)).toBe(false);
     expect(fautLireAuto({ ...BASE, texte: "x".repeat(2001) }, opts)).toBe(false);
+  });
+});
+
+describe("choisirTourAuto", () => {
+  it("reads a new typed answer that arrived while history was still loading", () => {
+    const tours = [BASE, { ...BASE, id: "t2", texte: "Réponse arrivée après le montage." }];
+    expect(choisirTourAuto(tours, new Set(["t1"]), new Set(), { lectureAuto: true, conversationChargee: true }))
+      .toMatchObject({ id: "t2" });
+  });
+
+  it("does not read a turn already present at mount", () => {
+    expect(choisirTourAuto([BASE], new Set(["t1"]), new Set(), { lectureAuto: true, conversationChargee: true }))
+      .toBeNull();
   });
 });

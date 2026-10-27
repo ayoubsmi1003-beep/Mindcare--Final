@@ -1,4 +1,3 @@
-import { classerCharge } from "@/server/egress/classification";
 import { runAgentLoop, type AgentLoopDependencies } from "./agent-loop";
 import { agentExecutor } from "./agent-tools";
 import type { DbPort } from "@/services/db/port";
@@ -71,7 +70,7 @@ export async function runAlexa(input: TurnInput, dependencies: OrchestratorDepen
       emit({type:"sentence",text,kind:response?.presentation==="inference"||synthesis||(!response&&!unresolved.has(text)&&result.results.some(r=>r.presentation==="inference"))?"inference":"fact",sources:response?response.evidence:!unresolved.has(text)?result.sources:[],...(response?.links?.length?{links:response.links}:{})});
     }
     if(result.proposal)emit({type:"proposal",...result.proposal});
-    emit({type:"done",patientId:result.patientId,patientScope:result.patientId?"replace":"preserve",sourceRevision:null,coverage:null,limited:result.status!=="completed",status:result.status,parts:result.parts,tokensIn:result.tokensIn,tokensOut:result.tokensOut,speechAllowed:result.status==="completed"&&!result.patientId&&!result.proposal&&result.sources.every(s=>s.type==="knowledge"||(s.type==="query"&&s.provenance?.["gate"]==="local_model"))&&classerCharge(result.sentences.join("\n"),null).decision==="AUTORISER",...(result.navigation?{navigation:result.navigation}:{})});
+    emit({type:"done",patientId:result.patientId,patientScope:result.patientId?"replace":"preserve",sourceRevision:null,coverage:null,limited:result.status!=="completed",status:result.status,parts:result.parts,tokensIn:result.tokensIn,tokensOut:result.tokensOut,speechAllowed: result.status === "completed",...(result.navigation?{navigation:result.navigation}:{})});
     return;
   }
   if (signal.aborted) { emit({ type: "error", code: "cancelled", message: dialogue(planRequest(input.text, null).language).stale }); return; }

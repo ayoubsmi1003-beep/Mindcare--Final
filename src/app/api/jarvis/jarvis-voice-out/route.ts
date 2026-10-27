@@ -1,7 +1,6 @@
 import { randomUUID } from "node:crypto";
 
 import { alexa as alexaCognitive } from "@/i18n/alexa";
-import { serverAdmittedSpeech } from "@/server/alexa/speech-admission";
 import { isSameOriginRequest } from "@/server/auth/same-origin";
 import { env } from "@/server/env";
 import { lireCorpsVoix } from "@/server/voice/corps";
@@ -29,7 +28,7 @@ function echecSynthese(cause: unknown): Response {
   return echec("synthese-indisponible", alexaCognitive.syntheseLocaleIndisponible);
 }
 
-/** Local Kokoro synthesis of an authenticated, server-admitted Alexa answer. */
+/** Local Kokoro synthesis of an authenticated Alexa answer. */
 export async function POST(req: Request): Promise<Response> {
   if (!isSameOriginRequest(req)) return new Response(null, { status: 403 });
   const actor = await identite();
@@ -43,9 +42,9 @@ export async function POST(req: Request): Promise<Response> {
   const v = Schema.safeParse(brut);
   if (!v.success) return echec("requete-invalide", alexaCognitive.texteInvalide);
 
-  const admitted = await serverAdmittedSpeech(actor, v.data.texte);
-  if (!admitted) return echec("frontiere", alexaCognitive.voixIndisponible);
-
+  // Kokoro runs in a local child process; this is not a provider egress. The
+  // old cloud admission gate would silence exactly the clinical answers the
+  // doctor asked to hear.
   const segments = segmenterVoix(v.data.texte);
   if (segments.length === 0 || segments.length > 32 || segments.some((segment) => segment.langue === "ar")) {
     return echec("synthese-indisponible", alexaCognitive.syntheseLocaleIndisponible);

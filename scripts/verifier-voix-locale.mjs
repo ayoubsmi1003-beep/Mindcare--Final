@@ -99,6 +99,18 @@ for (const route of ["jarvis-voice-in", "jarvis-voice-out", "jarvis-voice-sessio
   const source = existsSync(path) ? readFileSync(path, "utf8") : "";
   check(`route locale: ${route}`, source !== "" && !/gemini|groq|elevenlabs/i.test(source));
 }
+const voixSortante = join(ROOT, "src", "app", "api", "jarvis", "jarvis-voice-out", "route.ts");
+const sourceVoixSortante = existsSync(voixSortante) ? readFileSync(voixSortante, "utf8") : "";
+check(
+  "voix sortante: aucune barrière cloud",
+  sourceVoixSortante !== "" && !/classerCharge|serverAdmittedSpeech/u.test(sourceVoixSortante),
+);
+const fenetrePrincipale = join(ROOT, "electron", "main", "index.ts");
+const sourceFenetrePrincipale = existsSync(fenetrePrincipale) ? readFileSync(fenetrePrincipale, "utf8") : "";
+check(
+  "lecture automatique: politique Electron",
+  sourceFenetrePrincipale.includes('autoplayPolicy: "no-user-gesture-required"'),
+);
 
 const failed = checks.filter((entry) => !entry.ok);
 const result = { ok: failed.length === 0, voiceRoot: VOIX, checks };

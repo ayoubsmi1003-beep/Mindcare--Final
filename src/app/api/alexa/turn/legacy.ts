@@ -1,4 +1,3 @@
-import {legacySpeechAllowed} from "@/server/alexa/speech-admission";
 import { identite } from "@/app/api/jarvis/_commun";
 import { clientSql } from "@/server/jarvis/client-sql";
 import { alexaDb } from "@/server/alexa/db";
@@ -35,7 +34,8 @@ export async function legacyAlexaTurn(request: Request): Promise<Response> {
         if (event.type === "sentence") answer += `${answer ? "\n" : ""}${event.text}`;
         if(event.type!=="stage"&&event.type!=="done")events.push(event);
         if (event.type === "done") persistencePending = (async () => {
-          const speechAllowed=legacySpeechAllowed(parsed.data,answer,events,event);
+          // A completed legacy turn is speakable; a partial/limited turn is not.
+          const speechAllowed = !event.limited;
           const done={...event,status:event.limited?"partial" as const:"completed" as const,parts:[],speechAllowed};
           const saved = await persistence.rpc("complete_jarvis_turn", { p_conversation_id: parsed.data.conversationId, p_client_turn_id: parsed.data.clientTurnId, p_chemin: "patient", p_contenu: answer, p_statut: event.limited?"interrompu":"complet",p_outil:{version:1,events:[...events,done]} });
           send({ ...done, persiste: appended.error === null && appended.data === true && saved.error === null && saved.data === true });

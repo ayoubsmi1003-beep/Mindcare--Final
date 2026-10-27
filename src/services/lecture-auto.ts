@@ -71,3 +71,29 @@ export function fautLireAuto(
   if (texte === "" || texte.length > 2000) return false;
   return true;
 }
+
+/**
+ * Le dernier tour Jarvis qui n'appartient PAS à l'historique chargé et qui n'a
+ * pas encore été lu. L'historique est identifié par ses IDs — jamais par le
+ * moment où le chargement se termine : une réponse tapée pendant la requête
+ * d'historique reste donc lisible.
+ */
+export function choisirTourAuto(
+  tours: readonly CandidatLectureAuto[],
+  idsHistoriques: ReadonlySet<string>,
+  idsLus: ReadonlySet<string>,
+  opts: { readonly lectureAuto: boolean; readonly conversationChargee: boolean },
+): CandidatLectureAuto | null {
+  for (let index = tours.length - 1; index >= 0; index -= 1) {
+    const tour = tours[index];
+    if (tour === undefined) continue;
+    if (idsHistoriques.has(tour.id) || idsLus.has(tour.id)) continue;
+    if (!fautLireAuto(tour, {
+      lectureAuto: opts.lectureAuto,
+      dejaLu: false,
+      conversationChargee: opts.conversationChargee,
+    })) continue;
+    return tour;
+  }
+  return null;
+}
