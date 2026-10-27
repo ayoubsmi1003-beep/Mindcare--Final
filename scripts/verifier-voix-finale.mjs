@@ -16,7 +16,7 @@
  * `artifacts/` is git-ignored. The JSON report is evidence for the tree, HEAD
  * and instant it was produced; it is never a deliverable.
  */
-import { spawn } from "node:child_process";
+import { spawn, spawnSync } from "node:child_process";
 import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -53,6 +53,55 @@ delete env.ALEXA_VOICE_WORKER_DIR;
 delete env.ALEXA_WAKE_WORKER_DIR;
 
 const commandes = [];
+/** Every child that may still be running, so an unexpected failure can reap it. */
+const enfantsActifs = new Set();
+
+/** Resolve true when the child actually exited, false after the bounded wait. */
+function attendreExit(enfant, delaiMs = 5_000) {
+  if (enfant.exitCode !== null || enfant.signalCode !== null) return Promise.resolve(true);
+  return new Promise((resolveAttente) => {
+    let fini = false;
+    const terminer = (sorti) => {
+      if (fini) return;
+      fini = true;
+      clearTimeout(minuteur);
+      enfant.off("close", surClose);
+      enfant.off("exit", surExit);
+      resolveAttente(sorti);
+    };
+    const surClose = () => terminer(true);
+    const surExit = () => terminer(true);
+    const minuteur = setTimeout(() => terminer(false), delaiMs);
+    enfant.once("close", surClose);
+    enfant.once("exit", surExit);
+    if (enfant.exitCode !== null || enfant.signalCode !== null) terminer(true);
+  });
+}
+
+/**
+ * Kill a child and its descendants, then wait (bounded) for the direct child
+ * to exit. `taskkill /T /F` is the only reliable tree kill on Windows; a plain
+ * `child.kill()` leaves Vitest forks and the resident Python worker behind.
+ */
+async function tuerArbre(pid, enfant) {
+  if (pid === undefined) return false;
+  try {
+    if (process.platform === "win32") {
+      spawnSync("taskkill", ["/PID", String(pid), "/T", "/F"], {
+        stdio: "ignore",
+        windowsHide: true,
+        shell: false,
+      });
+    } else {
+      process.kill(pid, "SIGKILL");
+    }
+  } catch {
+    // The process may already be gone between the timeout and the kill.
+  }
+  if (enfant === undefined) return true;
+  return attendreExit(enfant, 5_000);
+}
+
 
 function sansAnsi(texte) {
   return texte.replace(/\u001b\[[0-9;]*m/gu, "");
@@ -83,11 +132,20 @@ function executer(nom, args, timeoutMs = 0) {
     let stdout = "";
     let stderr = "";
     let termine = false;
+    let delaiDepasse = false;
+    let minuteur;
     const terminer = (resultat) => {
       if (termine) return;
       termine = true;
       resolveExecution(resultat);
     };
+    const base = () => ({
+      nom,
+      command: `node ${args.join(" ")}`,
+      durationMs: Date.now() - debut,
+      stdout,
+      stderr,
+    });
     const enfant = spawn(process.execPath, args, {
       cwd: ROOT,
       env,
@@ -95,11 +153,25 @@ function executer(nom, args, timeoutMs = 0) {
       windowsHide: true,
       stdio: ["ignore", "pipe", "pipe"],
     });
-    let minuteur;
+    enfantsActifs.add(enfant);
+    const oublier = () => enfantsActifs.delete(enfant);
     if (timeoutMs > 0) {
       minuteur = setTimeout(() => {
-        stderr += `\n[voix] délai dépassé (${timeoutMs} ms) : processus arrêté\n`;
-        enfant.kill();
+        delaiDepasse = true;
+        stderr += `\n[voix] délai dépassé (${timeoutMs} ms) : arbre de processus arrêté\n`;
+        void (async () => {
+          await tuerArbre(enfant.pid, enfant);
+          if (termine) return;
+          oublier();
+          terminer({
+            ...base(),
+            ok: false,
+            exitCode: enfant.exitCode,
+            signal: enfant.signalCode,
+            timeout: true,
+            error: "timeout",
+          });
+        })();
       }, timeoutMs);
     }
     enfant.stdout.setEncoding("utf8");
@@ -114,28 +186,24 @@ function executer(nom, args, timeoutMs = 0) {
     });
     enfant.on("error", (cause) => {
       if (minuteur !== undefined) clearTimeout(minuteur);
+      oublier();
       terminer({
-        nom,
-        command: `node ${args.join(" ")}`,
+        ...base(),
         ok: false,
         exitCode: null,
-        durationMs: Date.now() - debut,
-        error: cause.message,
-        stdout,
-        stderr,
+        error: delaiDepasse ? "timeout" : cause.message,
+        timeout: delaiDepasse,
       });
     });
     enfant.on("close", (code, signal) => {
       if (minuteur !== undefined) clearTimeout(minuteur);
+      oublier();
       terminer({
-        nom,
-        command: `node ${args.join(" ")}`,
-        ok: code === 0,
+        ...base(),
+        ok: !delaiDepasse && code === 0,
         exitCode: code,
         signal,
-        durationMs: Date.now() - debut,
-        stdout,
-        stderr,
+        ...(delaiDepasse ? { timeout: true, error: "timeout" } : {}),
       });
     });
   });
@@ -183,14 +251,16 @@ async function main() {
     ["scripts/verifier-voix-locale.mjs", "--json"],
     180_000,
   );
-  verificateurOk = verificateur.ok;
-  resultatCommande(verificateur);
   try {
     verificateurJson = JSON.parse(verificateur.stdout);
-    verificateurOk = verificateurOk && verificateurJson.ok === true;
   } catch {
-    verificateurOk = false;
+    verificateurJson = null;
   }
+  // The command entry must reflect the JSON verdict, not only the exit code:
+  // a verifier that prints {"ok":false} and exits 0 is still a failed proof.
+  verificateur.ok = verificateur.exitCode === 0 && verificateurJson?.ok === true;
+  verificateurOk = verificateur.ok;
+  resultatCommande(verificateur);
   if (!verificateurOk) motif ||= "verifier-voix-locale --json a échoué";
 
   if (!existsSync(VITEST)) {
@@ -274,6 +344,12 @@ try {
 } catch (cause) {
   const message = cause instanceof Error ? cause.message : String(cause);
   console.error(`\n[voix] erreur inattendue : ${message}`);
+  // Never leave a Vitest fork or the resident Python worker behind when the
+  // orchestration itself fails outside a command's own timeout path.
+  for (const enfant of [...enfantsActifs]) {
+    await tuerArbre(enfant.pid, enfant);
+    enfantsActifs.delete(enfant);
+  }
   try {
     mkdirSync(ARTIFACTS, { recursive: true });
     writeFileSync(

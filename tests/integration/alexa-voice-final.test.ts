@@ -126,6 +126,12 @@ describe.skipIf(!REEL)("real local speech worker (faster-whisper small int8)", (
       expect(commande.texte?.toLowerCase()).toContain("patient");
       noter("STT commande");
 
+      // The committed silence fixture must itself be silent: the worker's
+      // refusal must not be the only proof. Exactly 2 s of 16 kHz PCM16 zeros.
+      const silence = Buffer.from(pcmDuFixture("silence.wav"), "base64");
+      expect(silence.length).toBe(2 * 16_000 * 2);
+      expect(silence.equals(Buffer.alloc(silence.length))).toBe(true);
+
       await expect(
         demanderVoixNative({
           id: crypto.randomUUID(),
@@ -133,7 +139,7 @@ describe.skipIf(!REEL)("real local speech worker (faster-whisper small int8)", (
           runId: RUN,
           utteranceId: UTTERANCE,
           action: "stt",
-          pcmBase64: pcmDuFixture("silence.wav"),
+          pcmBase64: silence.toString("base64"),
           sampleRate: 16_000,
           langue: "fr",
         }),
@@ -183,7 +189,10 @@ describe.skipIf(!REEL)("real local speech worker (faster-whisper small int8)", (
       const patche = spawnSync(CHEMIN.python, ["-I", "-c", sonde], {
         encoding: "utf8",
         windowsHide: true,
+        timeout: 10_000,
       });
+      expect(patche.error, patche.error?.message).toBeUndefined();
+      expect(patche.signal).toBeNull();
       expect(patche.status, patche.stderr).toBe(0);
       expect(patche.stdout.trim()).toBe("network-disabled");
       noter("sonde réseau");
@@ -205,15 +214,15 @@ describe.skipIf(!REEL)("real local speech worker (faster-whisper small int8)", (
       expect(encore.texte?.toLowerCase()).toContain("bonjour");
       noter("STT après redémarrage");
 
-      // The runtime aborts a stuck ready at 180 s. This test additionally
-      // runs two STT calls, one TTS call, the silence refusal, a stop and a
-      // fresh ready + STT. Measured end-to-end on the development PC: ~177 s
-      // warm. The budget below is 480 s so the whole proof is not reported as
-      // a timeout when the 2-core dev box is busy with an unrelated build;
-      // a hung worker still fails through the 180 s ready timeout and the
-      // fixed 60 s STT / 120 s TTS request timeouts.
-      expect(Date.now() - debut).toBeLessThan(480_000);
+      // Measured end-to-end on the reference machine: 170.9 s on the accepted
+      // final run (93.2 s quiet, 196.0 s with a concurrent build). The worker
+      // runtime keeps its own 180 s ready cap, 60 s STT cap and 120 s TTS cap.
+      // This whole-test bound is 240 s: ~69 s above the measured accepted run,
+      // and deliberately below the 300 s Vitest timeout so the assertion can
+      // actually fire. The extra 60 s of runner time only covers startup and
+      // teardown around the bounded body; it is not a model-operation budget.
+      expect(Date.now() - debut).toBeLessThan(240_000);
     },
-    480_000,
+    300_000,
   );
 });

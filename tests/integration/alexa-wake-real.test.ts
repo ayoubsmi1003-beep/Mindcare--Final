@@ -192,7 +192,13 @@ function pcm16(path: string): Buffer {
         bits: 16,
       });
     }
-    if (id === "data") return wav.subarray(offset + 8, offset + 8 + taille);
+    if (id === "data") {
+      const data = wav.subarray(offset + 8, offset + 8 + taille);
+      expect(data.length, `WAKE FIXTURE FAIL: ${path} has no audio data`).toBeGreaterThan(0);
+      const duree = data.length / (16_000 * 2);
+      expect(duree, `WAKE FIXTURE FAIL: ${path} must be under 5 s`).toBeLessThan(5);
+      return data;
+    }
     offset += 8 + taille + (taille % 2);
   }
   throw new Error(`WAKE FIXTURE FAIL: ${path} has no data chunk`);
@@ -242,7 +248,12 @@ describe.skipIf(process.env["MINDCARE_VOICE_REAL"] !== "1")("real Vosk wake work
 
   afterAll(() => {
     try {
-      if (preuve.repeatCycles === TOURS && preuve.malformedJsonSurvived) {
+      const toutPasse =
+        preuve.repeatCycles === TOURS &&
+        preuve.variants.length === 2 &&
+        preuve.bonjourDetected === false &&
+        preuve.malformedJsonSurvived;
+      if (toutPasse) {
         mkdirSync(join(ROOT, "artifacts"), { recursive: true });
         writeFileSync(ARTEFACT, `${JSON.stringify(preuve, null, 2)}\n`);
       }
@@ -296,12 +307,15 @@ describe.skipIf(process.env["MINDCARE_VOICE_REAL"] !== "1")("real Vosk wake work
   it("does not detect a generic 'Bonjour' and survives malformed JSON", async () => {
     await attendre(REFRACTORY_MS + 100);
     const bonjour = pcm16(join(FIXTURES, "bonjour.wav"));
+    let bonjourDetecte = false;
     for (let offset = 0; offset < bonjour.length; offset += BLOC) {
       const morceau = bonjour.subarray(offset, Math.min(offset + BLOC, bonjour.length));
       const reponse = await worker.envoyer("audio", { pcmBase64: morceau.toString("base64") });
       expect(reponse).toMatchObject({ ok: true, detected: false });
+      if (reponse.detected === true) bonjourDetecte = true;
     }
-    preuve.bonjourDetected = false;
+    expect(bonjourDetecte).toBe(false);
+    preuve.bonjourDetected = bonjourDetecte;
 
     worker.brut("{ceci n'est pas du json\n");
     await vi.waitFor(() => expect(worker.inattendus.length).toBeGreaterThan(0), { timeout: 5_000 });
