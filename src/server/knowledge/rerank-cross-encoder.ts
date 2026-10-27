@@ -209,9 +209,13 @@ export function reordonnerParLogits(
 /**
  * Fabrique le reranker cross-encoder : scores heuristiques (échelle
  * préservée) + ordre cross-encoder. Le scoreur lève → l'appelant (service)
- * replie sur l'heuristique ; ici, aucune capture silencieuse.
+ * replie sur l'heuristique ; ici, aucune capture silencieuse. `options`
+ * permet un second modèle versionné (mmarco) sans toucher la voie BGE.
  */
-export function creerRerankerCrossEncoder(scoreur: ScoreurCrossEncoder): RerankerLocalAsync {
+export function creerRerankerCrossEncoder(
+  scoreur: ScoreurCrossEncoder,
+  options: { readonly nom?: string; readonly version?: string } = {},
+): RerankerLocalAsync {
   const reranker = async (
     requete: string,
     candidats: readonly CandidatFusionne[],
@@ -227,8 +231,8 @@ export function creerRerankerCrossEncoder(scoreur: ScoreurCrossEncoder): Reranke
     return reordonnerParLogits(notes, logits, topN);
   };
   return {
-    nom: RERANK_CROSS_ENCODER_NOM,
-    version: RERANK_CROSS_ENCODER_VERSION,
+    nom: options.nom ?? RERANK_CROSS_ENCODER_NOM,
+    version: options.version ?? RERANK_CROSS_ENCODER_VERSION,
     reranker: (requete, candidats, topN = 5) => HeuristiqueBaseline.reranker(requete, candidats, topN),
     rerankerAsync: reranker,
   };

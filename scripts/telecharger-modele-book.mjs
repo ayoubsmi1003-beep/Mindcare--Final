@@ -20,7 +20,7 @@
  *     révision Hugging Face exacte.
  */
 import { createHash } from "node:crypto";
-import { createWriteStream, existsSync, mkdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
+import { createWriteStream, existsSync, mkdirSync, readFileSync, rm, statSync, writeFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { Readable } from "node:stream";
 import { pipeline } from "node:stream/promises";
@@ -65,6 +65,19 @@ const CANDIDATS = {
       { distant: "config.json", local: "config.json" },
     ],
   },
+  "mmarco-rerank": {
+    modele: "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+    revision: "1427fd652930e4ba29e8149678df786c240d8825",
+    dimensions: 0,
+    licence: "Apache-2.0",
+    fichiers: [
+      { distant: "onnx/model.onnx", local: "model.onnx" },
+      { distant: "tokenizer.json", local: "tokenizer.json" },
+      { distant: "tokenizer_config.json", local: "tokenizer_config.json" },
+      { distant: "special_tokens_map.json", local: "special_tokens_map.json" },
+      { distant: "config.json", local: "config.json" },
+    ],
+  },
 };
 
 const args = process.argv.slice(2);
@@ -92,17 +105,38 @@ const manifeste = { modele: candidat.modele, revision: candidat.revision, dimens
 for (const fichier of candidat.fichiers) {
   const cible = join(dossier, fichier.local);
   const url = `https://huggingface.co/${candidat.modele}/resolve/${candidat.revision}/${fichier.distant}`;
-  if (existsSync(cible) && !force) {
-    console.log(`  = ${fichier.local} déjà présent (${statSync(cible).size} o) — empreinte recalculée`);
-  } else {
-    const reponse = await fetch(url, { redirect: "follow" });
-    if (!reponse.ok || reponse.body === null) {
-      console.error(`  ROUGE ${fichier.local} : HTTP ${reponse.status}`);
-      process.exit(1);
+  if (existsSync(cible) && force) {
+    await rm(cible, { force: true });
+  }
+  // Reprise sur incident réseau : on reprend à la taille déjà écrite (le
+  // serveur HF accepte Range). 3 tentatives, puis échec explicite.
+  let telecharge = false;
+  for (let essai = 1; essai <= 3 && !telecharge; essai += 1) {
+    try {
+      const depart = existsSync(cible) ? statSync(cible).size : 0;
+      const reponse = await fetch(url, {
+        redirect: "follow",
+        headers: depart > 0 ? { Range: `bytes=${depart}-` } : {},
+      });
+      if ((reponse.status !== 200 && reponse.status !== 206) || reponse.body === null) {
+        throw new Error(`HTTP ${reponse.status}`);
+      }
+      if (depart > 0 && reponse.status === 200) {
+        // Le serveur ignore Range : on recommence à zéro plutôt que d'ajouter.
+        await rm(cible, { force: true });
+      }
+      const total = Number(reponse.headers.get("content-length") ?? 0);
+      console.log(`  ↓ ${fichier.local} (essai ${essai}, +${(total / 1_048_576).toFixed(1)} Mo)`);
+      await pipeline(Readable.fromWeb(reponse.body), createWriteStream(cible, { flags: depart > 0 && reponse.status === 206 ? "a" : "w" }));
+      telecharge = true;
+    } catch (erreur) {
+      console.error(`  … ${fichier.local} essai ${essai} interrompu : ${String(erreur?.message ?? erreur).slice(0, 120)}`);
+      if (essai === 3) {
+        console.error(`  ROUGE ${fichier.local} : téléchargement impossible après 3 essais (partiel conservé pour reprise)`);
+        process.exit(1);
+      }
+      await new Promise((resolve) => setTimeout(resolve, 2000 * essai));
     }
-    const total = Number(reponse.headers.get("content-length") ?? 0);
-    console.log(`  ↓ ${fichier.local} (${(total / 1_048_576).toFixed(1)} Mo)`);
-    await pipeline(Readable.fromWeb(reponse.body), createWriteStream(cible));
   }
   const taille = statSync(cible).size;
   manifeste.fichiers[fichier.local] = { octets: taille, sha256: sha256(cible) };
