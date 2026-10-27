@@ -65,6 +65,19 @@ const CANDIDATS = {
       { distant: "config.json", local: "config.json" },
     ],
   },
+  "mmarco-rerank-int8": {
+    modele: "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+    revision: "1427fd652930e4ba29e8149678df786c240d8825",
+    dimensions: 0,
+    licence: "Apache-2.0",
+    fichiers: [
+      { distant: "onnx/model_qint8_avx2.onnx", local: "model.onnx" },
+      { distant: "tokenizer.json", local: "tokenizer.json" },
+      { distant: "tokenizer_config.json", local: "tokenizer_config.json" },
+      { distant: "special_tokens_map.json", local: "special_tokens_map.json" },
+      { distant: "config.json", local: "config.json" },
+    ],
+  },
   "mmarco-rerank": {
     modele: "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
     revision: "1427fd652930e4ba29e8149678df786c240d8825",
