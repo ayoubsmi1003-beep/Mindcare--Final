@@ -21,7 +21,7 @@ import { agentCopy } from "@/i18n/alexa-agent";
 import { alexa } from "@/i18n/alexa";
 import { fr } from "@/i18n/fr";
 import Link from "next/link";
-import { idsHistorique, type EtatConversationPublique } from "@/services/conversation";
+import { idsHistorique, idsLues, marquerTourLu, type EtatConversationPublique } from "@/services/conversation";
 import {
   choisirTourAuto,
   definirPreferenceLectureAuto,
@@ -29,6 +29,7 @@ import {
 } from "@/services/lecture-auto";
 import {
   arreterLecture,
+  estLectureInterrompue,
   lireTexte,
 } from "@/services/jarvis-voix";
 
@@ -48,8 +49,8 @@ export function FilJarvis({
   // Lecture automatique GLOBALE (spec voix 2026-10-24 §2.4) : défaut ON,
   // préférence persistée en localStorage (pas clinique), chaînes alexa.ts.
   const [lectureAuto, setLectureAuto] = useState<boolean>(() => lirePreferenceLectureAuto());
-  // Tours déjà vus (jamais relus) : l'historique chargé n'est jamais lu.
-  const lusRef = useRef<Set<string>>(new Set());
+  // Tours déjà lus (jamais relus) : la marque vit dans `conversation.ts` pour
+  // survivre au remontage du fil. L'historique chargé n'est jamais lu.
   const [historiqueCharge, setHistoriqueCharge] = useState(false);
   /** Dernière lecture en échec — le texte et l'identité restent pour « Relire ». */
   const [erreurLecture, setErreurLecture] = useState<{
@@ -103,19 +104,20 @@ export function FilJarvis({
     voix.etat === "parole";
   useEffect(() => {
     if (voixInactive || fluxEnCoursAvantLecture) return;
-    const tour = choisirTourAuto(etat.tours, idsHistorique(), lusRef.current, {
+    const tour = choisirTourAuto(etat.tours, idsHistorique(), idsLues(), {
       lectureAuto,
       conversationChargee: historiqueCharge,
     });
     if (tour === null) return;
-    lusRef.current.add(tour.id);
+    marquerTourLu(tour.id);
     const id = tour.id, texte = tour.texte, porteUneIdentite = tour.porteUneIdentite === true;
     setLectureId(id);
     setErreurLecture(null);
     void lireTexte(texte, porteUneIdentite).then((r) => {
       if (r.ok) return;
       setLectureId((courant) => (courant === id ? null : courant));
-      setErreurLecture({ id, texte, porteUneIdentite });
+      // Un arrêt volontaire ou un remplacement n'est pas une panne de voix.
+      if (!estLectureInterrompue(r.error)) setErreurLecture({ id, texte, porteUneIdentite });
     });
   }, [etat.tours, fluxEnCoursAvantLecture, historiqueCharge, lectureAuto, voixInactive]);
 
@@ -137,7 +139,8 @@ export function FilJarvis({
     const r = await lireTexte(texte, porteUneIdentite);
     if (!r.ok) {
       setLectureId(null);
-      setErreurLecture({ id, texte, porteUneIdentite });
+      // Arrêt volontaire / lecture remplacée : aucune erreur à afficher.
+      if (!estLectureInterrompue(r.error)) setErreurLecture({ id, texte, porteUneIdentite });
     }
   }, [lectureId]);
 

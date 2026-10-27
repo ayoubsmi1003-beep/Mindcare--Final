@@ -20,7 +20,7 @@ import { encoderPCM16 } from "@/shared/jarvis/pcm";
 import { fr } from "@/i18n/fr";
 
 import { db } from "./db";
-import { logFieldsFor } from "./errors";
+import { logFieldsFor, type AppError } from "./errors";
 import { log } from "./log";
 import { prendreMicro, type PriseMicro } from "./micro-partage";
 import { err, ok, type Result } from "./result";
@@ -377,12 +377,12 @@ export async function lireTexte(
   const controle = new AbortController(); controleLecture = controle;
   const runId = crypto.randomUUID(), utteranceId = crypto.randomUUID();
   const flux = await db().invokeFunctionStream("jarvis-voice-out", { texte, runId, utteranceId }, controle.signal);
-  if (controle.signal.aborted || generation !== generationLecture) return err({ code: "indisponible", message: fr.jarvis.voix.indisponible });
+  if (controle.signal.aborted || generation !== generationLecture) return err(erreurLectureInterrompue());
   if (!flux.ok) return err(flux.error);
 
   try {
     const tampon = await new Response(flux.data).arrayBuffer();
-    if (controle.signal.aborted || generation !== generationLecture) return err({ code: "indisponible", message: fr.jarvis.voix.indisponible });
+    if (controle.signal.aborted || generation !== generationLecture) return err(erreurLectureInterrompue());
     if (tampon.byteLength === 0) {
       // ⚠️ UN FLUX VIDE N'EST PAS UNE LECTURE RÉUSSIE. Le déclarer tel quel
       // ferait dire à l'orbe que Jarvis parle alors que rien ne sortira jamais.
@@ -391,7 +391,7 @@ export async function lireTexte(
     try {
       const contexte = new OfflineAudioContext(1, 1, 16000);
       const ref = await contexte.decodeAudioData(tampon.slice(0));
-      if (generation !== generationLecture || controle.signal.aborted) return err({ code: "indisponible", message: fr.jarvis.voix.indisponible });
+      if (generation !== generationLecture || controle.signal.aborted) return err(erreurLectureInterrompue());
       referenceAudio = { samples: ref.getChannelData(0), taux: ref.sampleRate };
     } catch { referenceAudio = null; }
     const url = URL.createObjectURL(new Blob([tampon], { type: "audio/wav" }));
@@ -420,14 +420,14 @@ export async function lireTexte(
 
     await audio.play();
     if (!(await demarre) || generation !== generationLecture || controle.signal.aborted) {
-      if (generation !== generationLecture || controle.signal.aborted) return err({ code: "indisponible", message: fr.jarvis.voix.indisponible });
+      if (generation !== generationLecture || controle.signal.aborted) return err(erreurLectureInterrompue());
       arreterLecture();
       log.warn("jarvis.voix.jamaisDemarree", { code: "indisponible" });
       return err({ code: "indisponible", message: fr.jarvis.voix.indisponible });
     }
     return ok(true);
   } catch (cause) {
-    if (generation !== generationLecture || controle.signal.aborted) return err({ code: "indisponible", message: fr.jarvis.voix.indisponible });
+    if (generation !== generationLecture || controle.signal.aborted) return err(erreurLectureInterrompue());
     arreterLecture();
     // Autoplay bloqué sans geste utilisateur : erreur nommée, pas un aveu.
     if (cause instanceof DOMException && cause.name === "NotAllowedError") {
@@ -437,6 +437,23 @@ export async function lireTexte(
     log.warn("jarvis.voix.lecture", logFieldsFor(echec));
     return err(echec);
   }
+}
+
+/**
+ * Marque technique d'une lecture abandonnée : arrêt volontaire, nouvelle
+ * lecture qui remplace la précédente, ou démontage du fil. Ce n'est pas une
+ * panne de la voix — l'interface ne doit pas afficher « voix indisponible ».
+ */
+function erreurLectureInterrompue(): AppError {
+  return {
+    code: "indisponible",
+    message: fr.jarvis.voix.indisponible,
+    technical: "lecture-interrompue",
+  };
+}
+
+export function estLectureInterrompue(error: AppError): boolean {
+  return error.technical === "lecture-interrompue";
 }
 
 /** Known playback reference, aligned to the actual audio clock; missing reference fails closed. */

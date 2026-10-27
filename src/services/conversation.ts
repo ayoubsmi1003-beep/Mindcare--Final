@@ -209,11 +209,27 @@ let historyGeneration = 0;
  * vol : la première ne se lit jamais, la seconde reste lisible.
  */
 let historiqueIds = new Set<string>();
+/**
+ * IDs des réponses déjà lues à voix haute, y compris celles lues par une
+ * instance précédente de `FilJarvis`. Une réponse vivante ne doit pas être
+ * relue après un remontage du fil ; la purge de session efface la marque.
+ */
+const luesIds = new Set<string>();
 const abonnes = new Set<Abonne>();
 
 /** IDs de l'historique chargé — lecture seule pour les appelants. */
 export function idsHistorique(): ReadonlySet<string> {
   return historiqueIds;
+}
+
+/** IDs des réponses déjà lues à voix haute dans cette session. */
+export function idsLues(): ReadonlySet<string> {
+  return luesIds;
+}
+
+/** Marque une réponse comme lue — avant la lecture, pour survivre au remontage. */
+export function marquerTourLu(id: string): void {
+  luesIds.add(id);
 }
 
 function publier(): void {
@@ -529,6 +545,7 @@ export function purgerContexteSession(): void {
   // A late read from the previous scope must never repopulate the conversation.
   historyGeneration++;
   historiqueIds = new Set();
+  luesIds.clear();
   controleurEnCours?.abort();
   controleurEnCours = null;
   arreterVoixLocale();

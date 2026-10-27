@@ -3,7 +3,7 @@ import { afterEach, expect, it, vi } from "vitest";
 const { invokeFunctionStream } = vi.hoisted(() => ({ invokeFunctionStream: vi.fn() }));
 vi.mock("@/services/db", () => ({ db: () => ({ invokeFunctionStream }) }));
 
-import { abonnerLecture, arreterLecture, lireTexte } from "@/services/jarvis-voix";
+import { abonnerLecture, arreterLecture, estLectureInterrompue, lireTexte } from "@/services/jarvis-voix";
 
 class AudioSortieLocale {
   static instances: AudioSortieLocale[] = [];
@@ -43,4 +43,34 @@ it("reads an answer containing a patient name through local voice at full elemen
   expect(AudioSortieLocale.instances[0]).toMatchObject({ volume: 1, muted: false });
   expect(states).toContainEqual([true, "local"]);
   unsubscribe();
+});
+
+it("reports a deliberate stop while the synthesis is pending as an interrupted read", async () => {
+  let resolveStream!: (value: unknown) => void;
+  invokeFunctionStream.mockReturnValue(new Promise((resolve) => { resolveStream = resolve; }));
+
+  const pending = lireTexte("Bonjour docteur.", false);
+  // The user presses Stop before the voice route answers.
+  arreterLecture();
+  resolveStream({
+    ok: true,
+    data: new ReadableStream<Uint8Array>({ start(controller) { controller.enqueue(new Uint8Array(44)); controller.close(); } }),
+  });
+
+  const result = await pending;
+  expect(result.ok).toBe(false);
+  if (result.ok) throw new Error("expected a failed read");
+  expect(estLectureInterrompue(result.error)).toBe(true);
+});
+
+it("keeps a genuine synthesis failure classified as a voice failure", async () => {
+  invokeFunctionStream.mockResolvedValue({
+    ok: false,
+    error: { code: "indisponible", message: "La voix est indisponible." },
+  });
+
+  const result = await lireTexte("Bonjour docteur.", false);
+  expect(result.ok).toBe(false);
+  if (result.ok) throw new Error("expected a failed read");
+  expect(estLectureInterrompue(result.error)).toBe(false);
 });
