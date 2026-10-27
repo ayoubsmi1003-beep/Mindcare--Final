@@ -12,8 +12,9 @@ import {localModelFailureCode} from './local-model-protocol';
 import {planKnowledgeQuery,matchesSectionFocus} from './knowledge-query';
 import { classerCharge } from "@/server/egress/classification";
 import { verifierCitations } from "@/server/knowledge/citations";
+import { ligneCitation } from "@/server/knowledge/pages";
 import { ALEXA_KNOWLEDGE_TRANSFORM, knowledgeMessages, type KnowledgeTask, type KnowledgeFocus } from "./knowledge-envelope";
-import { knowledgeResponseEvents, knowledgeSource, type KnowledgeResult } from "./knowledge-response";
+import { citationDePreuve, knowledgeResponseEvents, knowledgeSource, type KnowledgeResult } from "./knowledge-response";
 
 const fold = (value: string) => value.normalize("NFC").replace(/\s+/gu, " ").trim();
 const answerMetadata=z.object({coverage:knowledgeAnswerSchema.shape.coverage,sentences:z.array(z.unknown()).max(5)});
@@ -166,6 +167,9 @@ export async function synthesizeKnowledge(result: KnowledgeResult, question: str
     const events: AlexaEvent[] = options.compact?[]:[message(knowledgeSynthesisCopy[locale].draft)];
     if(unverifiedCriteria)events.push(message(KNOWLEDGE_CRITERIA_COVERAGE));
     else if (answer.coverage === "partial") events.push(message(knowledgeSynthesisCopy[locale].partial));
+    // Indices RÉELLEMENT cités par les phrases acceptées : la ligne de sources
+    // ne mentionne que ces passages, jamais un voisin récupéré mais inutilisé.
+    const indicesUtilises = new Set<number>();
     for (const sentence of answer.sentences) {
       if(options.compact&&(copiedEnglishProse(sentence.text)||/\p{L}\d+(?:,\d+){2,}/u.test(sentence.text)))return fallback('language');
       const unsafeKind=/<\/?[a-z][^>]*>/iu.test(sentence.text)?'markup':hiddenControls.test(sentence.text)?'controls'
@@ -216,6 +220,7 @@ export async function synthesizeKnowledge(result: KnowledgeResult, question: str
       // source instead of publishing a paraphrased exclusion or its reversal.
       if ((!negation.test(numericFold(citedText)) && !negation.test(normalizedSentence))
         || fold(citedText).includes(fold(sentence.text))) {
+        for (const index of used) indicesUtilises.add(index);
         events.push({ type: "sentence", text: sentence.text, kind: "inference", sources: used.map(index => ({...knowledgeSource(result.preuves[index - 1]!),...(options.compact?{excerpt:sentence.evidence.filter(e=>e.index===index).map(e=>e.quote).join(' ')}:{})})) });
       }else if(options.compact){return fallback('quote-polarity');
       }
@@ -223,6 +228,17 @@ export async function synthesizeKnowledge(result: KnowledgeResult, question: str
         kind: "knowledge", sources: [knowledgeSource(result.preuves[evidence.index - 1]!)] });
     }
     if ("omittedLongPassages" in result && result.omittedLongPassages) events.push(message(copy.longKnowledge));
+    // La ligne de sources est ASSEMBLÉE PAR LE SERVEUR depuis les métadonnées
+    // vérifiées (titre, édition, page lue dans le chunk). Le modèle ne rédige
+    // jamais une page ni une édition : il ne peut donc pas en inventer une.
+    const citation = ligneCitation(
+      [...indicesUtilises]
+        .sort((a, b) => a - b)
+        .map(index => result.preuves[index - 1])
+        .filter((preuve): preuve is KnowledgeResult["preuves"][number] => preuve !== undefined)
+        .map(citationDePreuve),
+    );
+    if (!options.compact && citation !== null) events.push(message(citation));
     if (events.reduce((total, event) => total + (event.type === "sentence" ? event.text.length : 0), 0) > 12000) return fallback("size");
     options.onCoverage?.(unverifiedCriteria||answer.coverage==='partial'||'omittedLongPassages' in result&&result.omittedLongPassages?'partial':'supported');
     if(options.compact){
@@ -233,7 +249,7 @@ export async function synthesizeKnowledge(result: KnowledgeResult, question: str
       }
       const comparisonFocuses=planKnowledgeQuery(question)?.sectionFocuses;
       if(comparisonFocuses?.some(focus=>!result.preuves.some(p=>sources.has(p.chunkId)&&matchesSectionFocus(p.section,focus))))return fallback('coverage');
-      return [{type:'sentence',text:sentences.map(e=>e.text).join(' '),kind:'inference',sources:[...sources.values()]}];
+      return [{type:'sentence',text:[sentences.map(e=>e.text).join(' '),citation].filter((part):part is string=>!!part).join(' '),kind:'inference',sources:[...sources.values()]}];
     }
     return events;
   } catch(error) {

@@ -56,3 +56,18 @@ export const CONNAISSANCE_INDISPONIBLE =
  */
 export const HISTORIQUE_NON_DISPONIBLE =
   "La consultation de l'historique documentaire n'est pas encore disponible.";
+
+/**
+ * Assemblage de la ligne de sources (M11). Le serveur écrit cette ligne à
+ * partir des métadonnées VÉRIFIÉES : le modèle ne rédige jamais une page ni
+ * une édition, il ne peut donc pas en inventer une. Ces libellés sont fixes —
+ * aucun texte de chunk, aucun titre de livre n'entre ici.
+ */
+export const CITATION_SOURCE = "Source";
+export const CITATION_SOURCES = "Sources";
+/** Séparateur entre deux ouvrages cités. */
+export const CITATION_SEPARATEUR = " ; ";
+/** Folio imprimé vérifié. */
+export const citationPage = (page: number): string => `p. ${page}`;
+/** Page PDF/scan, seulement quand le folio imprimé est inconnu — toujours étiquetée. */
+export const citationPagePdf = (page: number): string => `PDF p. ${page}`;

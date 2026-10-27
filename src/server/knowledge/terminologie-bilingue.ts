@@ -52,9 +52,22 @@
  */
 
 import { jetoniser } from "./rerank";
+import { medicationNames } from "@/shared/alexa/medications";
+
+/** Noms de médicaments du référentiel fermé (comparaison en `string`). */
+const MEDICAMENTS_CONNUS: ReadonlySet<string> = new Set<string>(medicationNames);
+
+/** Unités identiques en français et en anglais (jamais un mot de contenu). */
+const UNITES_INVARIANTES: ReadonlySet<string> = new Set([
+  "mg", "g", "mcg", "ug", "ml", "kg", "ui", "iu", "%", "jour", "jours",
+  "semaine", "semaines", "mois", "an", "ans",
+]);
+
+/** Plafond de requêtes produites par l'expansion (portes SQL bornées). */
+const MAX_REQUETES_BILINGUES = 6;
 
 /** Version de la table de terminologie — à changer à chaque évolution. */
-export const VERSION_TERMINOLOGIE = "fr-en-clinique-v1" as const;
+export const VERSION_TERMINOLOGIE = "fr-en-clinique-v2" as const;
 
 /**
  * Interrupteur global. `false` = aucune expansion, exactement le comportement
@@ -113,7 +126,7 @@ export const CORRESPONDANCES: readonly CorrespondanceTerminologie[] = [
     id: "posologie-habituelle",
     fr: ["posologie habituelle", "posologie usuelle", "fourchette posologique",
       "fourchette de posologie", "doses usuelles"],
-    en: ["usual dosage range"],
+    en: ["usual dosage range", "dose", "dosage"],
     rubriques: ["Usual Dosage Range"],
     origine: "livre",
     note: "rubrique « Usual Dosage Range » (30 monographies) — la forme exacte "
@@ -139,7 +152,7 @@ export const CORRESPONDANCES: readonly CorrespondanceTerminologie[] = [
   {
     id: "posologie-generique",
     fr: ["posologie", "dosage"],
-    en: ["generic dose question"],
+    en: ["dose", "dosage"],
     rubriques: ["Dosing Tips", "How to Dose", "Usual Dosage Range", "Dosage Forms"],
     origine: "livre",
     note: "REPLI : le concept posologie sans precision. Les quatre rubriques "
@@ -324,11 +337,11 @@ export const CORRESPONDANCES: readonly CorrespondanceTerminologie[] = [
   },
   {
     id: "insuffisance-renale",
-    fr: ["insuffisance renale", "insuffisance renale severe"],
-    en: ["renal impairment", "renal insufficiency"],
+    fr: ["insuffisance renale", "insuffisance renale severe", "precautions renales", "fonction renale", "renal", "renale", "rein", "reins"],
+    en: ["renal impairment", "renal insufficiency", "renal"],
     rubriques: ["Renal Impairment"],
     origine: "livre",
-    note: "rubrique « Renal Impairment »",
+    note: "rubrique « Renal Impairment » + formes génériques « rénal / rein » (Taylor est en chapitres, pas en monographies)",
   },
   {
     id: "insuffisance-hepatique",
@@ -576,6 +589,7 @@ export function planifierExpansionBilingue(
 
   const consommes = new Set<string>();
   const rubriques: string[] = [];
+  const generiques: string[] = [];
   const concepts: string[] = [];
   // Le RESTE de la question : on retire les formes reconnues, ET les mots
   // META du livre. Le reste porte le contenu : médicament, population,
@@ -606,6 +620,12 @@ export function planifierExpansionBilingue(
     consommes.add(c.id);
     concepts.push(c.id);
     for (const r of c.rubriques) if (!rubriques.includes(r)) rubriques.push(r);
+    // La réalisation ANGLAISE générique (« side effects », « pregnancy ») est
+    // une seconde clé de recherche : les intitulés de rubrique mesurés
+    // appartiennent au Stahl, alors que Taylor est organisé en CHAPITRES.
+    // Sans cette clé, une question française sur Taylor ne trouve rien
+    // (mesuré : 4/4 des cas Maudsley en `sans-preuve`).
+    for (const e of c.en) if (!generiques.includes(e)) generiques.push(e);
     // La forme reconnue est RETIREE du reste.
     reste = reste.replace(motifForme(forme), " ");
   }
@@ -635,9 +655,29 @@ export function planifierExpansionBilingue(
   }
 
   const requetes: string[] = [];
-  for (const r of rubriques) {
-    const requete = [r, ...contenu].join(" ");
-    if (!requetes.includes(requete)) requetes.push(requete);
+  // Requête pleine (toutes les contraintes conservées) PUIS requête
+  // « entité + quantité » : sur un livre anglais, un seul mot français
+  // résiduel (« contre indiquee ») annule l'ET de la porte. La variante
+  // invariante ne garde que ce qui existe à l'identique dans les deux langues
+  // (nom de médicament fermé, nombre, unité) — jamais une assertion clinique,
+  // jamais une négation réécrite : elle ÉLARGIT la recherche, et la question
+  // d'origine reste celle que lit la synthèse.
+  const invariant = (jeton: string): boolean =>
+    MEDICAMENTS_CONNUS.has(jeton)
+    || /^[+-]?\d+(?:[.,]\d+)?(?:\/\d+)?$/u.test(jeton)
+    || UNITES_INVARIANTES.has(jeton);
+  const invariants = contenu.filter(invariant);
+  const variantes = (rubrique: string): string[] => {
+    const pleine = [rubrique, ...contenu].join(" ");
+    const minimale = [rubrique, ...invariants].join(" ");
+    return minimale === pleine || invariants.length === 0 ? [pleine] : [pleine, minimale];
+  };
+  for (const r of [...rubriques, ...generiques]) {
+    for (const requete of variantes(r)) {
+      if (!requetes.includes(requete)) requetes.push(requete);
+      if (requetes.length >= MAX_REQUETES_BILINGUES) break;
+    }
+    if (requetes.length >= MAX_REQUETES_BILINGUES) break;
   }
   if (requetes.length === 0) return PLAN_BILINGUE_VIDE;
   return { requetes, concepts, version: VERSION_TERMINOLOGIE, actif: true };

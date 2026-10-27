@@ -13,6 +13,13 @@ export function headingOnlyEvidence(text:string,section:string|null):boolean{
  return !!body&&!remainder;
 }
 export const bibliographyEvidence=(section:string|null)=>/\b(?:bibliograph\w*|bibliogr\w*|references)\b/u.test(leaf(section).normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase());
+/**
+ * Le sommaire alphabétique de fin d'ouvrage n'est pas une preuve clinique :
+ * il cite un sujet sans le traiter. Sans ce filtre, l'index de Taylor remonte
+ * en tête sur « side effects olanzapine » (mesuré).
+ */
+export const indexEvidence=(section:string|null)=>/^(?:index|index alphabetique|subject index|index des matieres)$/u.test(leaf(section).normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase().trim());
+export const indexRequested=(question:string)=>/r?\bindex\b/u.test(question.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase());
 export const bibliographyRequested=(question:string)=>/\b(?:bibliogr\w*|references bibliographiques|liste des references|titres des references|auteurs des references)\b/u.test(question.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase());
 /** Multiple journal records near the start identify a reference list even under a generic section label. */
 export function bibliographyTextEvidence(text:string):boolean{

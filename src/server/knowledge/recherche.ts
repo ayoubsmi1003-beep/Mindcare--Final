@@ -19,6 +19,7 @@
 import type { ChunkId, Langue, SourceId } from "./types";
 import type { IssueRecherche, RetrievedEvidence } from "./types";
 import { construirePreuve, qualifier } from "./preuve";
+import { fusionnerParRang } from "./fusion-rang";
 import { CALIBRATION_COURANTE, rerankerCalibre, type CalibrationFusion, type RerankerLocalAsync } from "./rerank";
 import { lignePorteRecuperable, validerLignePorte, type LignePorte } from "./stockage";
 
@@ -200,6 +201,7 @@ export async function orchestrerRecherche(
   brutesVectorielles: readonly unknown[],
   rerankerLocal?: RerankerLocalAsync,
   calibration: CalibrationFusion = CALIBRATION_COURANTE,
+  fusion: "score" | "rang" = "score",
 ): Promise<{
   readonly issue: IssueRecherche;
   readonly evidences: readonly RetrievedEvidence[];
@@ -214,7 +216,14 @@ export async function orchestrerRecherche(
     }
     return sorties;
   };
-  const fusionnes = fusionnerCandidats(passer(brutesLexicales), passer(brutesVectorielles));
+  const lexicaux = passer(brutesLexicales);
+  const vectoriels = passer(brutesVectorielles);
+  // Fusion PAR RANG seulement quand les DEUX branches ont des candidats : une
+  // branche seule n'a rien à calibrer, et la fusion par score reste alors le
+  // comportement historique exact (`fusionnerCandidats`).
+  const fusionnes = fusion === "rang" && lexicaux.length > 0 && vectoriels.length > 0
+    ? fusionnerParRang(lexicaux, vectoriels, { limite: LIMITES.FUSION })
+    : fusionnerCandidats(lexicaux, vectoriels);
   // `CALIBRATION_COURANTE` rend exactement l'historique : défaut inchangé,
   // variants mesurés via `calibration` (M07 slice 3, jamais depuis le client).
   let ranges = rerankerCalibre(question, fusionnes, LIMITES.FINAL, calibration);

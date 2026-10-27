@@ -17,7 +17,7 @@ const normaliser = (s: string) => s.normalize("NFD").replace(/\p{M}/gu, "").toLo
 
 describe("couche de terminologie bilingue (Stahl 7e)", () => {
   it("est versionnee et pilotable par un interrupteur global", () => {
-    expect(VERSION_TERMINOLOGIE).toBe("fr-en-clinique-v1");
+    expect(VERSION_TERMINOLOGIE).toBe("fr-en-clinique-v2");
     expect(typeof TERMINOLOGIE_BILINGUE_ACTIVE).toBe("boolean");
   });
 

@@ -1,0 +1,29 @@
+{
+  "$comment": "Golden LIVRES — jeu de questions réel, attendus au niveau SOURCE + SECTION (jamais un chunk_id dérivé du retriever). Les pages ne sont pas jugées ici : on mesure seulement leur PRÉSENCE (le folio vient du marqueur d'ingestion, non d'une vérification visuelle du livre). `answerable: false` = le système doit s'abstenir (sans-preuve/faible), pas répondre.",
+  "version": "books-2026-10-27",
+  "langues": ["fr", "en"],
+  "cas": [
+    { "id": "DSM-PANIC", "question": "Quels sont les critères diagnostiques du trouble panique selon le DSM-5 ?", "answerable": true,
+      "attendu": { "source": "DSM-5", "section": [["trouble panique"], ["critères diagnostiques"]] } },
+    { "id": "DSM-DEPRESSION", "question": "Comment le DSM-5 définit-il le trouble dépressif caractérisé ?", "answerable": true,
+      "attendu": { "source": "DSM-5", "section": [["trouble dépressif caractérisé"]] } },
+    { "id": "DSM-SCHIZO", "question": "Quels signes de la schizophrénie le DSM-5 distingue-t-il ?", "answerable": true,
+      "attendu": { "source": "DSM-5", "section": [["schizophrénie"], ["critères"]] } },
+    { "id": "DSM-TOC", "question": "Comment le DSM-5 décrit-il le trouble obsessionnel-compulsif ?", "answerable": true,
+      "attendu": { "source": "DSM-5", "section": [["obsessionnel-compulsif"]] } },
+    { "id": "DSM-BIPOLAIRE", "question": "Quels critères du trouble bipolaire type I figurent dans le DSM-5 ?", "answerable": true,
+      "attendu": { "source": "DSM-5", "section": [["bipolaire"], ["type i", "maniac"]] } },
+    { "id": "TAY-SERTRALINE-DOSE", "question": "Quelle est la posologie habituelle de la sertraline selon Maudsley ?", "answerable": true,
+      "attendu": { "source": "Maudsley", "texteContient": ["sertraline", "dos"] } },
+    { "id": "TAY-OLANZAPINE-EI", "question": "Quels effets indésirables de l'olanzapine selon Maudsley ?", "answerable": true,
+      "attendu": { "source": "Maudsley", "texteContient": ["olanzapine", "side effect"] } },
+    { "id": "TAY-SERTRALINE-GROSSESSE", "question": "La sertraline est-elle contre-indiquée pendant la grossesse selon Maudsley ?", "answerable": true,
+      "attendu": { "source": "Maudsley", "texteContient": ["sertraline", "pregnan"] } },
+    { "id": "TAY-LITHIUM-RENAL", "question": "Quelles précautions rénales avec le lithium selon Maudsley ?", "answerable": true,
+      "attendu": { "source": "Maudsley", "texteContient": ["lithium", "renal"] } },
+    { "id": "ABS-PRIX", "question": "Quel est le prix du lithium en Algérie ?", "answerable": false },
+    { "id": "ABS-COUSCOUS", "question": "Donne la recette du couscous.", "answerable": false },
+    { "id": "ABS-MULTI-LIVRES", "question": "Compare le DSM-5 et Maudsley sur la sertraline.", "answerable": false,
+      "motif": "multi-livres : aucun livre n'est choisi implicitement" }
+  ]
+}
