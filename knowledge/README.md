@@ -111,12 +111,27 @@ d'appel littéraux, aucun nom calculé.
 ```
 node scripts/telecharger-modele-book.mjs --modele e5-base      # hors dépôt, manifeste SHA-256
 node scripts/remplir-vecteurs-secondaires.mjs \
-  --url "postgresql://…" --slug e5-base --dimensions 768 \
+  --url-env MINDCARE_DATABASE_URL --slug e5-base --dimensions 768 \
   --modele intfloat/multilingual-e5-base --version d128750597153bb5987e10b1c3493a34e5a4502a
 ```
 
 Le backfill est reprenable, idempotent, et vérifie le manifeste avant le premier
-vecteur. Il n'écrit QUE la table secondaire.
+vecteur. Il n'écrit QUE la table secondaire. `--url-env` évite de mettre une
+chaîne de connexion sur la ligne de commande.
+
+### Base du cabinet : sans aucun secret
+
+Le rôle applicatif n'a aucun accès direct au corpus (RLS) et le propriétaire est
+protégé par une ACL. Le script dédié passe par la socket locale du conteneur :
+
+```
+node scripts/remplir-vecteurs-768-docker.mjs --dry-run     # inventaire, 0 écriture
+node scripts/remplir-vecteurs-768-docker.mjs --batch 48    # ~2,2 chunks/s
+```
+
+Il lit les textes et charge les vecteurs par `COPY … FROM STDIN` via
+`docker exec … psql`. Aucun mot de passe, aucun privilège accordé au rôle
+applicatif, aucune écriture hors `app.knowledge_chunk_vectors_768`.
 
 ## 6. Pages et éditions
 

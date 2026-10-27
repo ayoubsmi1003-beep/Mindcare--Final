@@ -27,7 +27,12 @@ const opt = (nom, defaut) => {
   const i = args.indexOf(nom);
   return i >= 0 && args[i + 1] !== undefined && !args[i + 1].startsWith("--") ? args[i + 1] : defaut;
 };
-const URL = opt("--url", process.env.DATABASE_URL ?? "");
+const URL = opt("--url", (() => {
+  // Jamais de chaîne de connexion sur la ligne de commande (visible dans la
+  // liste des processus) : on peut nommer la VARIABLE qui la porte.
+  const nom = opt("--url-env", "");
+  return nom !== "" ? (process.env[nom] ?? "") : (process.env.DATABASE_URL ?? "");
+})());
 const MODELE = opt("--modele", "intfloat/multilingual-e5-small");
 const VERSION = opt("--version", "");
 const SLUG = opt("--slug", "e5-small");
