@@ -21,6 +21,10 @@ describe("protected clinic host configuration", () => {
   });
   it("loads recognized server-only optional configuration and rejects process or database overrides", () => {
     expect(lireVariablesServeur('\uFEFF# example\nALEXA_HMAC_KEY="test-only"\nSTT_MODEL=local\r\n')).toEqual({ ALEXA_HMAC_KEY: "test-only", STT_MODEL: "local" });
+    // Les deux seules variables qui peuvent activer la recherche vectorielle
+    // des livres sont admises dans le fichier protégé ; rien d'autre.
+    expect(lireVariablesServeur("KNOWLEDGE_VECTOR=1\nKNOWLEDGE_VECTOR_RECETTE=e5-base"))
+      .toEqual({ KNOWLEDGE_VECTOR: "1", KNOWLEDGE_VECTOR_RECETTE: "e5-base" });
     for (const name of ["NODE_OPTIONS", "MC_HTTPS", "MINDCARE_START_URL", "MINDCARE_DATABASE_URL", "NEXT_PUBLIC_GEMINI_API_KEY", "UNKNOWN"]) {
       expect(() => lireVariablesServeur(`${name}=do-not-print-test-value`)).toThrow(/CONFIGURATION/);
     }
