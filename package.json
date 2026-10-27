@@ -13,7 +13,6 @@
     "start:main": "node --env-file=.env scripts/start-main-local.mjs",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit && tsc -p tsconfig.test.json",
-    "postinstall": "node scripts/sync-wakeword-runtime.mjs",
     "test": "vitest run",
     "test:watch": "vitest",
     "eval:jarvis": "bash scripts/checkpoint-jarvis-couche.sh",
@@ -27,7 +26,9 @@
     "build:desktop": "node scripts/preparer-paquet.mjs && node scripts/elaguer-pgsql.mjs && pnpm build:electron && electron-builder --win && node scripts/verifier-paquet.mjs",
     "snapshot:production": "node scripts/snapshot-production.mjs",
     "pgsql:elaguer": "node scripts/elaguer-pgsql.mjs",
-    "verifier:paquet": "node scripts/verifier-paquet.mjs"
+    "verifier:paquet": "node scripts/verifier-paquet.mjs",
+    "voix:preparer": "node scripts/preparer-voix-native.mjs --repair",
+    "voix:verifier": "node scripts/verifier-voix-locale.mjs"
   },
   "dependencies": {
     "@composio/core": "0.22.0",
@@ -39,7 +40,6 @@
     "@tiptap/starter-kit": "3.31.4",
     "next": "^15.1.0",
     "onnxruntime-node": "1.30.0",
-    "onnxruntime-web": "^1.29.0",
     "pg": "^8.23.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

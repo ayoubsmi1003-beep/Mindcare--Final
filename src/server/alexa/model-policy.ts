@@ -9,9 +9,11 @@ import { normaliserModeleGratuit, type ModeleGratuit } from "@/server/egress/mod
 export const ALEXA_CONVERSATION_MODEL = "MiniCPM-V-4_7-1B-Q4_K_M.gguf";
 // Retained provider pin for dormant cloud qualification; conversation uses local MiniCPM.
 export const ALEXA_DIRECT_MODEL = "gemini-3.5-flash";
-export const ALEXA_STT_MODEL = "gemini-3.5-transcribe";
-export const ALEXA_TTS_MODEL = "gemini-3.8-flash-tts";
-export const ALEXA_TTS_VOICE = "Kore";
+// Delivery speech is local only. These identifiers are the ones the native
+// worker reports; no provider key or network transport exists on the voice path.
+export const ALEXA_STT_MODEL = "whisper-large-v3-turbo-q5_0";
+export const ALEXA_TTS_MODEL = "kokoro-82m-v1.0-ff_siwis";
+export const ALEXA_TTS_VOICE = "ff_siwis";
 export const ALEXA_LIVE_MODEL = "gemini-3.8-live";
 
 // Legacy free-pool qualification policy; not Alexa's delivery transport.

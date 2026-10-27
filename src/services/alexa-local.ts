@@ -56,7 +56,10 @@ async function ouvrirCapture(receive: (frame: TrameVoix) => void): Promise<() =>
   try {
     context = new AudioContext({ latencyHint: "interactive" });
     const resume = context.resume();
-    const prepared = controlWorker("prepare", AbortSignal.any([preparing.signal, AbortSignal.timeout(30_000)]));
+    // Large-v3-turbo + first Kokoro load + real inference health can exceed
+    // two minutes on an 8 GB CPU-only machine. Do not cut the microphone off
+    // while the local worker is still legitimately initializing.
+    const prepared = controlWorker("prepare", AbortSignal.any([preparing.signal, AbortSignal.timeout(300_000)]));
     const admission=await prepared; if(!admission.ok)throw new Error("voice-admission");
     const access = await prendreMicro(); if (!access.ok) throw new Error("microphone");
     if (released) { access.data.rendre(); throw new Error("cancelled"); }
@@ -92,7 +95,8 @@ async function lireLocalement(text: string, signal: AbortSignal, playing: () => 
   const abort = () => { arreterLecture(); rejectEnd(new Error("cancelled")); };
   signal.addEventListener("abort", abort, { once: true });
   unsubscribe = abonnerLecture((active, source) => {
-    if (active && source === "piper") { seen = true; playing(); }
+    // Kokoro is local; the old cloud-only check would reject our own audio.
+    if (active && source === "local") { seen = true; playing(); }
     else if (active) { arreterLecture(); rejectEnd(new Error("local-only")); }
     else if (seen) resolveEnd();
   });
@@ -108,7 +112,7 @@ const loop = creerBoucleVoixLocale({
   transcrire: async (samples, rate, signal) => {
     const runId = crypto.randomUUID(), utteranceId = crypto.randomUUID();
     const result = await db().invokeFunction<{ texte: string; runId: string; utteranceId: string }>("jarvis-voice-in", {
-      pcmBase64: base64(encoderPCM16([samples], rate)), sampleRate: 16000, runId, utteranceId, langue: "auto",
+      pcmBase64: base64(encoderPCM16([samples], rate)), sampleRate: 16000, runId, utteranceId, langue: "fr",
     }, signal);
     if (!result.ok || result.data.runId !== runId || result.data.utteranceId !== utteranceId) throw new Error("stt");
     return {texte:result.data.texte,utteranceId};
@@ -128,7 +132,7 @@ const loop = creerBoucleVoixLocale({
       : error === "tts" ? alexa.tts : error ? alexa.interrompu
       : etat === "reveille" ? alexa.voixPreparation : etat === "ecoute" ? alexa.voixEcoute
       : etat === "traitement" ? alexa.voixReflexion : etat === "parole" ? alexa.voixParole : null;
-    view = { etat, raison, reveilArme: false, sourceParole: etat === "parole" ? "piper" : null };
+    view = { etat, raison, reveilArme: false, sourceParole: etat === "parole" ? "local" : null };
     for (const subscriber of subscribers) subscriber(view);
   },
   tour: (turn) => {

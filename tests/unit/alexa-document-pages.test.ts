@@ -6,11 +6,38 @@ import {agentExecutor} from '@/server/alexa/agent-tools';
 import {agentSchemas,type AgentResult} from '@/shared/alexa/agent';
 const id='33333333-3333-4333-8333-333333333333',patient='22222222-2222-4222-8222-222222222222',asOf='2026-10-15T12:00:00.000Z';
 const input={text:'Lis le document '+id,conversationId:'document-pages',clientTurnId:'11111111-1111-4111-8111-111111111111',appContext:{patientId:null,page:'/jarvis'}};
-function fixture(draft=false){let value='Début. '+('Texte enregistré. '.repeat(400))+'Fin.';const rpc=scriptedAlexaRpc(async(name:string,_args:RpcArgs)=>({ok:true as const,data:[name==='query_alexa_records'?{total:1,rows:[{id,patientId:patient,label:'Document fictif',at:asOf,status:draft?'draft':'issued',amount:null}],totals:{},complete:true,offset:0}:draft?{id,patientId:patient,revision:1,content:{type:'doc',content:[{type:'paragraph',content:[{type:'text',text:value}]}]}}:{document_id:id,patient_id:patient,rendered_html:'<p>'+value+'</p>'}]}));return {rpc,get text(){return value;},change(){value+=' Correction.';}};}
+function fixture(draft=false){let value='Début. '+('Texte enregistré. '.repeat(400))+'Fin.';const rpc=scriptedAlexaRpc(async(name:string,_args:RpcArgs)=>({ok:true as const,data:[name==='query_alexa_records'?{total:1,rows:[{id,patientId:patient,label:'Document fictif',at:asOf,status:draft?'draft':'issued',amount:null}],totals:{},complete:true,offset:0}:name==='search_patients'?{total:1,rows:[{id:patient,first_name:'Nadia',last_name:'Test',missing:[],completed_consultations:0,outstanding_balance:0}],metrics:{},unknownAge:0,revision:'a'.repeat(32),asOf,conditions:[],complete:true,offset:0}:draft?{id,patientId:patient,revision:1,content:{type:'doc',content:[{type:'paragraph',content:[{type:'text',text:value}]}]}}:{document_id:id,patient_id:patient,rendered_html:'<p>'+value+'</p>'}]}));return {rpc,get text(){return value;},change(){value+=' Correction.';}};}
 for(const draft of [false,true])it('reads every recorded character of a long '+(draft?'editable draft':'issued document')+' through revision-bound pages',async()=>{
  const f=fixture(draft),execute=agentExecutor(input,{rpc:f.rpc},{rpc:vi.fn()});const refs:AgentResult[]=[];let text='';
  for(let page=0;page<10;page++){const result=await execute({id:'p'+page,name:'query_documents',args:{partIds:['d'],...(page?{reusePrevious:true}:draft?{draftId:id}:{documentId:id})}},asOf,refs,new AbortController().signal);const data=result.data as {document:{excerpt:string};nextTextOffset?:number;documentQuery:unknown;revision:string};text+=data.document.excerpt;expect(data.revision).toMatch(/^[a-f0-9]{64}$/);expect(result.evidence.some(e=>e.type==='document'&&e.id===id)).toBe(true);refs.push(result);if(result.complete)break;expect(result.status).toBe('partial');expect(data.nextTextOffset).toBe(text.length);expect(JSON.parse(String(f.rpc.mock.calls.at(-2)![1]?.p_spec??'{}'))).not.toHaveProperty('textOffset');}
  expect(text).toBe(f.text);expect(refs.length).toBeGreaterThan(1);expect(refs.at(-1)?.complete).toBe(true);
+});
+it.each([
+ {label:'aucune ordonnance',rows:[],expected:{target:'documents',patientId:patient,documentKind:'ordonnance'}},
+ {label:'une ordonnance émise',rows:[{id:'44444444-4444-4444-8444-444444444444',patientId:patient,label:'DOC-2026-00001',at:asOf,status:'issued',amount:null}],expected:{target:'document',patientId:patient,documentId:'44444444-4444-4444-8444-444444444444'}},
+ {label:'plusieurs ordonnances',rows:[{id:'44444444-4444-4444-8444-444444444444',patientId:patient,label:'DOC-2026-00001',at:asOf,status:'issued',amount:null},{id:'55555555-5555-4555-8555-555555555555',patientId:patient,label:'Brouillon ordonnance',at:asOf,status:'draft',amount:null}],expected:{target:'documents',patientId:patient,documentKind:'ordonnance'}},
+])('opens the scoped documents screen for a requested prescription with $label',async testCase=>{
+ const calls=scriptedAlexaRpc(async(name:string)=>({ok:true as const,data:name==='search_patients'?[{id:patient,first_name:'Nadia',last_name:'Test',total_count:1}]:name==='get_patient'?[{id:patient,first_name:'Nadia',last_name:'Test'}]:name==='query_alexa_records'?[{total:testCase.rows.length,rows:testCase.rows,totals:{},complete:true,offset:0}]:[]}));
+ const request={...input,text:'Ordonnance pour Nadia Test.',appContext:{patientId:null,page:'/jarvis'}};
+ const execute=agentExecutor(request,{rpc:calls},{rpc:vi.fn()});
+ const result=await execute({id:'open-prescription',name:'query_documents',args:{partIds:['requested_1'],kind:'ordonnance',patientName:'Nadia Test'}},asOf,[],new AbortController().signal,request.text);
+ expect(result.navigation,JSON.stringify({result,calls:calls.mock.calls})).toMatchObject(testCase.expected);
+ expect(calls.mock.calls.some(([name])=>name==='query_alexa_records')).toBe(true);
+});
+it.each([
+ {label:'certificat de bonne santé mentale',text:'Ouvre le certificat de bonne santé mentale pour Nadia Test.',kind:'bonne_sante_mentale'},
+ {label:'suivi médical',text:'Affiche le suivi médical de Nadia Test.',kind:'suivi_medical'},
+ {label:'certificat médical',text:'Montre le certificat médical de Nadia Test.',kind:'certificat_medical'},
+ {label:'justificatif',text:'Ouvre un justificatif pour Nadia Test.',kind:'justification'},
+ {label:'justification',text:'Montre-moi la justification de Nadia Test.',kind:'justification'},
+ {label:'ordonnance après une demande polie',text:'Peux-tu consulter les ordonnances de Nadia Test ?',kind:'ordonnance'},
+])('opens the patient workspace filtered to the requested $label',async testCase=>{
+ const calls=scriptedAlexaRpc(async(name:string)=>({ok:true as const,data:name==='search_patients'?[{id:patient,first_name:'Nadia',last_name:'Test',total_count:1}]:name==='get_patient'?[{id:patient,first_name:'Nadia',last_name:'Test'}]:name==='query_alexa_records'?[{total:0,rows:[],totals:{},complete:true,offset:0}]:[]}));
+ const request={...input,text:testCase.text,appContext:{patientId:null,page:'/jarvis'}};
+ const execute=agentExecutor(request,{rpc:calls},{rpc:vi.fn()});
+ const result=await execute({id:'open-filtered-document',name:'query_documents',args:{partIds:['requested_1'],kind:testCase.kind,patientName:'Nadia Test'}},asOf,[],new AbortController().signal,request.text);
+ expect(result.navigation,JSON.stringify({result,calls:calls.mock.calls})).toEqual({target:'documents',patientId:patient,documentKind:testCase.kind});
+ expect(calls.mock.calls.some(([name])=>name==='query_alexa_records')).toBe(true);
 });
 it('rejects changed document content between pages and reauthorizes every read',async()=>{
  const f=fixture(),execute=agentExecutor(input,{rpc:f.rpc},{rpc:vi.fn()});const first=await execute({id:'first',name:'query_documents',args:{partIds:['d'],documentId:id}},asOf,[],new AbortController().signal);f.change();await expect(execute({id:'next',name:'query_documents',args:{partIds:['d'],reusePrevious:true}},asOf,[first],new AbortController().signal)).rejects.toMatchObject({code:'changed'});expect(f.rpc.mock.calls.filter(c=>c[0]==='get_document')).toHaveLength(2);

@@ -280,24 +280,24 @@ const designTokenDimensionSyntax = [
 const designTokenColorSyntax = [
   {
     // couleur hex n'importe où dans la chaîne (attribut, texte composé), 3 à 8 chiffres.
-    selector: "Literal[value=/#[0-9A-Fa-f]{3,8}/]",
+    selector: "Literal[value=/#(?!define\\b)[0-9A-Fa-f]{3,8}/]",
     message:
       "Couleur hexadécimale interdite. Utilise les tokens CSS (var(--nom-du-token)).",
   },
   {
-    selector: "TemplateElement[value.raw=/#[0-9A-Fa-f]{3,8}/]",
+    selector: "TemplateElement[value.raw=/#(?!define\\b)[0-9A-Fa-f]{3,8}/]",
     message:
       "Couleur hexadécimale interdite. Utilise les tokens CSS (var(--nom-du-token)).",
   },
   {
     // rgb()/rgba()/hsl()/hsla() n'importe où dans la chaîne — même trou que
     // le hex : la règle couleur ne cherchait que `#...`.
-    selector: "Literal[value=/(rgb|rgba|hsl|hsla)\\(/]",
+    selector: "Literal[value=/(^|[^\\w-])(rgb|rgba|hsl|hsla)\\(/]",
     message:
       "Couleur rgb()/rgba()/hsl()/hsla() interdite. Utilise les tokens CSS (var(--nom-du-token)).",
   },
   {
-    selector: "TemplateElement[value.raw=/(rgb|rgba|hsl|hsla)\\(/]",
+    selector: "TemplateElement[value.raw=/(^|[^\\w-])(rgb|rgba|hsl|hsla)\\(/]",
     message:
       "Couleur rgb()/rgba()/hsl()/hsla() interdite. Utilise les tokens CSS (var(--nom-du-token)).",
   },

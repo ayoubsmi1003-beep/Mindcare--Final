@@ -1,6 +1,7 @@
 import {unfinishedNativeRequest} from '../helpers/alexa-unfinished-request';
 import {it,expect,vi} from 'vitest';
 import {runAgentLoop,savedAgentTask,AGENT_LIMITS} from '@/server/alexa/agent-loop';
+import {frenchRequestedOutputs} from '@/shared/alexa/request-contract';
 import type {LocalCompletion} from '@/server/alexa/local-model-protocol';
 const call=(id:string,name:string,args:Record<string,unknown>):LocalCompletion=>({kind:'calls',calls:[{id,name,args}],message:{role:'assistant',content:null,tool_calls:[{id,type:'function',function:{name,arguments:JSON.stringify(args)}}]},tokensIn:1,tokensOut:1});
 it('allows a verified domain read after slow local interpretation without changing inference, call or context limits',async()=>{
@@ -26,8 +27,8 @@ it('keeps a closed failure reason in server diagnostics without logging request 
 });
 
 it('allows cold first interpretation on slow hardware without extending subsequent inference or the whole-turn cap',async()=>{
- const budgets:number[]=[];let step=0;
- const r=await runAgentLoop({text:'Combien de patients actifs ?',conversationId:crypto.randomUUID(),clientTurnId:crypto.randomUUID(),appContext:{patientId:null,page:'/jarvis'}},{actor:'cold-simple',infer:async(_m,options)=>{budgets.push(options.timeoutMs??0);return ++step===1?call('d','declare_request',{parts:[{id:'p',goal:'Patients actifs',tool:'query_patients',conditions:[],dependsOn:[]}]}):call('q','query_patients',{partIds:['p'],mode:'count'});},execute:async c=>({callId:c.id,status:'ok',complete:true,text:'2 patients',conditionKeys:[],evidence:[]})},new AbortController().signal);
+ const budgets:number[]=[];let step=0;const text='Quel est le nom du cabinet et quels rendez-vous sont prévus demain ?';
+ const r=await runAgentLoop({text,conversationId:crypto.randomUUID(),clientTurnId:crypto.randomUUID(),appContext:{patientId:null,page:'/jarvis'}},{actor:'cold-simple',asOf:'2026-10-28T12:00:00+01:00',infer:async(_m,options)=>{budgets.push(options.timeoutMs??0);const current=++step;if(current===1)return call('d','declare_request',{parts:[{id:'p1',goal:'Quel est le nom du cabinet',tool:'query_app',conditions:[],dependsOn:[]},{id:'p2',goal:'quels rendez-vous sont prévus demain ?',tool:'query_agenda',conditions:[],dependsOn:[]}]});if(current===2)return call('q1','query_app',{partIds:['p1'],view:'cabinet'});if(current===3)return call('q2','query_agenda',{partIds:['p2'],from:'2026-10-29T00:00:00+01:00',to:'2026-10-30T00:00:00+01:00'});return {kind:'answer',text:'Le cabinet et les rendez-vous ont été vérifiés.',tokensIn:1,tokensOut:1};},execute:async c=>({callId:c.id,status:'ok',complete:true,text:'Donnée vérifiée.',conditionKeys:[],evidence:[]})},new AbortController().signal);
  expect(r.status).toBe('completed');expect(budgets[0]).toBe(240000);expect(budgets[1]).toBeLessThanOrEqual(120000);expect(AGENT_LIMITS.deadlineMs).toBe(500000);expect(AGENT_LIMITS.deadlineMs).toBeLessThan(AGENT_LIMITS.ttlMs);
 });
 

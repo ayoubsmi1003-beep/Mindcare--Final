@@ -37,17 +37,26 @@ export function creerBoucleVoixLocale(ports: PortsVoixLocale) {
   };
   const alive = (epoch: number, c: AbortController) => active && generation === epoch && control === c && !c.signal.aborted;
   const touch = () => { clearTimeout(idle); idle = setTimeout(arreter, 15 * 60_000); };
+  // A slow turn (large-v3-turbo STT + local-model inference + Kokoro) runs
+  // far past any idle budget on the delivery PC. Suspend the idle timer for
+  // the whole turn; re-arm only when back in ecoute. Otherwise arreter()
+  // fires cut() mid-turn and the transcript dies as "interrompu".
+  const suspend = () => { clearTimeout(idle); idle = undefined; };
   const finish = async (samples: Float32Array, sampleRate: number) => {
-    cut(); const c = new AbortController(); control = c;
-    const epoch = generation, deadline = setTimeout(() => c.abort(), 90_000);
+    suspend(); cut(); const c = new AbortController(); control = c;
+    // Measured on the 2-core delivery PC: large-v3-turbo STT alone takes
+    // 48-175 s for a few seconds of audio, plus the local-model turn and
+    // Kokoro synthesis. A 90 s deadline aborts turns the worker would have
+    // completed; bound the whole turn at 10 min instead.
+    const epoch = generation, deadline = setTimeout(() => c.abort(), 600_000);
     let stage: "stt" | "turn" | "tts" = "stt";
     try {
       ports.phase("traitement");
       const transcribed=await ports.transcrire(samples,sampleRate,c.signal);
       const texte=(typeof transcribed==="string"?transcribed:transcribed.texte).trim();
       if (!alive(epoch, c)) return;
-      if (!texte) { ports.phase("ecoute"); return; }
-      touch(); const id = typeof transcribed==="string"?crypto.randomUUID():transcribed.utteranceId; pendingTurn = { id, texte }; ports.tour({ id, texte }); stage = "turn";
+      if (!texte) { touch(); ports.phase("ecoute"); return; }
+      const id = typeof transcribed==="string"?crypto.randomUUID():transcribed.utteranceId; pendingTurn = { id, texte }; ports.tour({ id, texte }); stage = "turn";
       let count = 0, chars = 0, audioError = false, speechLimited = false, queue = Promise.resolve();
       const enqueue = (text: string) => {
         if (!alive(epoch, c) || !text.trim()) return;
@@ -84,7 +93,7 @@ export function creerBoucleVoixLocale(ports: PortsVoixLocale) {
       }
       if (alive(epoch, c)) {
         if (audioError) fail("tts");
-        else { if (result.navigation) ports.navigate?.(result.navigation); if (alive(epoch, c)) ports.phase("ecoute"); }
+        else { if (result.navigation) ports.navigate?.(result.navigation); if (alive(epoch, c)) { touch(); ports.phase("ecoute"); } }
       }
     } catch { if (alive(epoch, c)) fail(stage); }
     finally {

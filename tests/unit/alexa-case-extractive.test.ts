@@ -30,11 +30,11 @@ describe('whole-case sentence selection',()=>{
     expect(result).toMatchObject({generated:true,complete:true,method:'extractive'});
     expect(clinicalNarrativeReferences(ctx,result.sourceIds)).toHaveLength(1);
   });
-  it('retains the draft qualification with its selected dated sentence',async()=>{
+  it('keeps the selected dated clinical sentence independent of note signature status',async()=>{
     vi.mocked(inferLocalText).mockImplementation(async messages=>{const body=JSON.parse(String(messages[1]!.content));return JSON.stringify({selection:body.choices[0].id});});
     const ctx=context(1);ctx.consultations[0]!.notes[0]!.status='draft';
     const result=await summarizeClinicalCaseContext(ctx,new AbortController().signal);
-    expect(result.generated).toBe(true);expect(result.text).toContain('notes non signées');expect(result.text).toContain('01/10/2026');
+    expect(result.generated).toBe(true);expect(result.text).toContain('01/10/2026');expect(result.text).not.toMatch(/non signées|brouillon/iu);
   });
   it('never manufactures a case paragraph when the real model is unavailable',async()=>{
     vi.mocked(inferLocalText).mockRejectedValue(Error('LocalModelUnavailable'));

@@ -1,8 +1,9 @@
 # Domaine Jarvis / voix (CURRENT)
 
 PURPOSE: Orchestrateur borné : intention → capacité → porte → vérification → audit.
-Jarvis N'EST PAS le modèle. Voix = boucle locale (wake-word ONNX) + cloud
-gated (STT/TTS/LLM).
+Jarvis N'EST PAS le modèle. Voix = boucle **entièrement locale** : Whisper
+large-v3-turbo Q5_0 (STT), Kokoro-82M `ff_siwis` (TTS), Vosk français (réveil).
+Aucun fournisseur vocal cloud ni repli automatique.
 OWNER RUNTIME: `services/jarvis-boucle.ts` (machine à états, budgets, dédup,
 fail-closed) · `services/jarvis-contexte.ts` (broker, cible unique).
 CAPACITÉS: `jarvis-capacites.ts` (22 lectures définies, `LECTURES :992`) ·
@@ -15,9 +16,10 @@ DB GATES: `confirm_jarvis_action` (`033:141`) · `execute_jarvis_action`
 (`033:249`, `063:164`) · allowlist (`033`→`063`) · conversations (`058`).
 Détail : `docs/contracts/jarvis-tools.md` + `03-JARVIS-TOOLS.md` §0+§1.
 SECURITY: modèle n'exécute rien (propose→confirm→execute→verify→log,
-`confirmed_at` avant exécution) · texte → pseudo+assert avant sortie · audio brut
-= `garderVoix()` (`VOICE_PROVIDER=cloud` ET `is_cloud_dev()`, fail-closed) ·
-résidu connu : texte libre (chat) et re-bascule cloud-dev (cf. ARCHITECTURE.md).
+`confirmed_at` avant exécution) · texte → pseudo+assert avant sortie · audio
+brut en RAM, traité par le worker local authentifié, jamais écrit ni envoyé à un
+fournisseur vocal · résidu connu : texte libre (chat) et re-bascule cloud-dev
+(cf. ARCHITECTURE.md).
 TESTS: `scripts/eval-jarvis-*.mjs` (10 : registre, routage, frontière, injection,
 boucle, reveil…) · unit `jarvis-*.test.ts` (10) · e2e `jarvis.spec.ts` ·
 J2-E manuel ROUGE (écritures non prouvées en prod).

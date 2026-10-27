@@ -167,44 +167,40 @@ Ceci répond directement à Loi 18-07 : registre des traitements et des transfer
 
 ---
 
-## 4. CONTRAT STT (Groq — ADR-002)
+## 4. CONTRAT STT LOCAL (Whisper large-v3-turbo — ADR-024-A)
 
-### 4.1 Ce qui part
+### 4.1 Ce qui circule
 ```
-POST https://api.groq.com/openai/v1/audio/transcriptions
-Authorization: Bearer <GROQ_API_KEY>        ← serveur uniquement
-
-file:            chunk.webm   (segment de 15–20 s, depuis la RAM)
-model:           whisper-large-v3-turbo
-language:        ar
-response_format: verbose_json
-prompt:          "Consultation psychiatrique. Arabe algérien (darija) mêlé de français."
+Micro → PCM16 16 kHz en RAM → POST /api/jarvis/jarvis-voice-in (même origine)
+      → stdin du worker Python local → Whisper large-v3-turbo Q5_0 → texte
+Aucun POST externe. Aucune clé fournisseur. Aucun repli cloud.
 ```
 
-**Ce qui ne part pas, jamais :** nom de fichier explicite, `patient_id`, nom, date de naissance,
-`user` header, aucune métadonnée. Le nom du fichier est le `session_token` seul.
+Le worker reçoit seulement les octets PCM, le `runId`, l'`utteranceId` et la
+langue. Aucun nom de patient, aucune métadonnée de dossier, aucun fichier
+audio. Le périmètre du worker est dérivé du cookie de session côté serveur,
+jamais choisi par le renderer.
 
 ### 4.2 Cycle de vie de l'audio (ADR-009)
 ```
-Micro → MediaRecorder → Blob RAM → POST Groq → texte → INSERT transcript_segments → Blob libéré
+Micro → PCM RAM → route locale → stdin worker → texte → tour Alexa → RAM libérée
                           ▲
                     JAMAIS de disque, JAMAIS d'IndexedDB, JAMAIS de fichier temporaire
 ```
-Contrôle : après une consultation de test, chercher tout `.webm`/`.wav`/`.ogg` sur le disque.
-**Résultat attendu : zéro.**
+Contrôle : après une consultation de test, chercher tout `.webm`/`.wav`/`.ogg`
+créé par l'application. **Résultat attendu : zéro.** Le seul WAV livré est
+l'échantillon fixe de santé vocale de `resources/voix/health/`.
 
-### 4.3 Le `prompt` améliore réellement le darija
-Whisper accepte un prompt de contexte. Y placer le vocabulaire du domaine augmente nettement
-la qualité sur le mélange darija/français. À enrichir semaine après semaine avec les termes
-qu'elle emploie réellement — c'est le levier gratuit le plus rentable du projet.
+### 4.3 Langue et qualité
+Le français est la langue par défaut. Whisper reçoit `translate=False` : une
+transcription arabe reste arabe et n'est pas traduite en français. Kokoro
+`ff_siwis` ne lit que le français ; une réponse arabe reste affichée et n'est
+pas prononcée avec des phonèmes français.
 
-### 4.4 Résilience réseau (RSK-2)
-Coupure Wi-Fi = perte de séance inacceptable.
-- Les segments non transmis restent en file **mémoire** avec `seq`
-- Rejeu automatique dès reconnexion, dans l'ordre
-- Bandeau visible : *« Transcription en attente de réseau — 3 segments »*
-- **Le chronomètre et la prise de notes manuelle continuent de fonctionner.**
-  L'IA tombe, la consultation continue. Jamais l'inverse.
+### 4.4 Résilience locale
+Une panne du worker, un modèle absent ou un disque plein produit un code
+nommé et laisse le dossier, l'agenda, la finance et les documents utilisables.
+Aucune écriture clinique n'est déclenchée par un transcript non confirmé.
 
 ---
 

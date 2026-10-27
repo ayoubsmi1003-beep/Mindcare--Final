@@ -16,6 +16,8 @@ export function isFrenchMissingInformationPolicyQuestion(text:string):boolean{
  return /^(?:dis[- ]moi(?:\s+en\s+deux\s+phrases)?\s+)?comment\s+tu\s+(?:geres|traites)\s+(?:une\s+)?information\s+(?:absente|manquante)\s*[.!?]*$/u.test(plain);
 }
 const frenchMonths=['janvier','fevrier','mars','avril','mai','juin','juillet','aout','septembre','octobre','novembre','decembre'] as const;
+const frenchDayWords:Record<string,number>={'premier':1,'premiere':1,'un':1,'une':1,'deux':2,'trois':3,'quatre':4,'cinq':5,'six':6,'sept':7,'huit':8,'neuf':9,'dix':10,'onze':11,'douze':12,'treize':13,'quatorze':14,'quinze':15,'seize':16,'dix sept':17,'dix huit':18,'dix neuf':19,'vingt':20,'vingt et un':21,'vingt et une':21,'vingt deux':22,'vingt trois':23,'vingt quatre':24,'vingt cinq':25,'vingt six':26,'vingt sept':27,'vingt huit':28,'vingt neuf':29,'trente':30,'trente et un':31,'trente et une':31};
+const frenchDayWordPattern=Object.keys(frenchDayWords).sort((a,b)=>b.length-a.length).map(word=>word.replace(/ /gu,'[- ]+')).join('|');
 export function hasExplicitClockRestriction(text:string):boolean{
  return /\b\d{1,2}\s*(?:h(?:\s*\d{1,2})?(?![\p{L}\p{N}])|:\s*\d{2}\b)|\b(?:matin\w*|soir\w*|midi|minuit|heures?|ouverture|fermeture)\b/u.test(fold(text));
 }
@@ -28,32 +30,58 @@ export function frenchFinanceRecordState(text:string):'all'|'pending'|'collected
  return pending&&collected?'all':pending?'pending':collected?'collected':'all';
 }
 /** One explicit civil date only; comparisons, open ranges and invalid dates stay unresolved. */
-export function explicitFrenchDayRange(text:string):{from:string;to:string}|null{
+export function explicitFrenchDayRange(text:string,asOf?:string):{from:string;to:string}|null{
  const plain=fold(text);
  if(hasExplicitClockRestriction(text)||/\b(?:depuis|avant|apres|jusqu\w*|entre|a partir)\b/u.test(plain))return null;
  const numeric=[...plain.matchAll(/(?<!\d)(\d{1,2})\/(\d{1,2})\/((?:19|20)\d{2})(?!\d)/gu)];
- const named=[...plain.matchAll(new RegExp(`\\b(\\d{1,2})\\s+(${frenchMonths.join('|')})\\s+((?:19|20)\\d{2})\\b`,'gu'))];
- if(numeric.length+named.length!==1)return null;
- const match=numeric[0]??named[0]!,day=Number(match[1]),month=numeric.length?Number(match[2]):frenchMonths.indexOf(match[2] as typeof frenchMonths[number])+1,year=Number(match[3]);
+ const named=[...plain.matchAll(new RegExp(`\\b(\\d{1,2})(?:er)?\\s+(${frenchMonths.join('|')})\\s+((?:19|20)\\d{2})\\b`,'gu'))];
+ const instant=asOf===undefined?NaN:Date.parse(asOf);
+ const numericWithoutYear=Number.isFinite(instant)?[...plain.matchAll(/(?<!\d)(\d{1,2})\/(\d{1,2})(?![\/\d])/gu)]:[];
+ const namedWithoutYear=Number.isFinite(instant)?[...plain.matchAll(new RegExp(`\\b(\\d{1,2})(?:er)?\\s+(${frenchMonths.join('|')})(?!\\s+(?:19|20)\\d{2})\\b`,'gu'))]:[];
+ const wordsWithoutYear=Number.isFinite(instant)?[...plain.matchAll(new RegExp(`\\b(${frenchDayWordPattern})\\s+(${frenchMonths.join('|')})(?!\\s+(?:19|20)\\d{2})\\b`,'gu'))]:[];
+ if(numeric.length+named.length+numericWithoutYear.length+namedWithoutYear.length+wordsWithoutYear.length!==1)return null;
+ const numericDate=numeric[0]??numericWithoutYear[0],namedDate=named[0]??namedWithoutYear[0]??wordsWithoutYear[0],match=numericDate??namedDate!;
+ const explicitYear=!!numeric[0]||!!named[0],spokenDay=!!namedDate&&wordsWithoutYear.includes(namedDate),day=numericDate?Number(match[1]):spokenDay?frenchDayWords[match[1]!.replace(/-/gu,' ').replace(/\s+/gu,' ')]??0:Number(match[1]),month=numericDate?Number(match[2]):frenchMonths.indexOf(match[2] as typeof frenchMonths[number])+1;
+ const year=explicitYear?Number(match[3]):new Date(instant+3_600_000).getUTCFullYear();
  const date=new Date(Date.UTC(year,month-1,day));
  if(date.getUTCFullYear()!==year||date.getUTCMonth()!==month-1||date.getUTCDate()!==day)return null;
  const from=date.toISOString().slice(0,10)+'T00:00:00+01:00';date.setUTCDate(date.getUTCDate()+1);
  return {from,to:date.toISOString().slice(0,10)+'T00:00:00+01:00'};
 }
 /** A fully stated closed civil-date range; the spoken end date is inclusive. */
-export function explicitFrenchDateRange(text:string):{from:string;to:string}|null{
+export function explicitFrenchDateRange(text:string,asOf?:string):{from:string;to:string}|null{
  const plain=fold(text),named=new RegExp(`\\b(\\d{1,2})(?:er)?\\s+(${frenchMonths.join('|')})\\s+((?:19|20)\\d{2})\\b`,'gu');
  const matches:[number,number,number,number,string][]=[];
  for(const match of plain.matchAll(/(?<!\d)(\d{1,2})\/(\d{1,2})\/((?:19|20)\d{2})(?!\d)/gu))matches.push([match.index,match[0].length,Number(match[1]),Number(match[2]),match[3]!]);
  for(const match of plain.matchAll(named))matches.push([match.index,match[0].length,Number(match[1]),frenchMonths.findIndex(month=>month===match[2])+1,match[3]!]);
  matches.sort((a,b)=>a[0]-b[0]);
- if(matches.length!==2||[...plain.matchAll(/\b(?:19|20)\d{2}\b/gu)].length!==2)return null;
- const first=matches[0]!,second=matches[1]!;
- const prefix=plain.slice(0,first[0]),between=plain.slice(first[0]+first[1],second[0]);
- if(!/\b(?:du|entre)\s+(?:le\s+)?$/u.test(prefix)||!/^\s+(?:au|et)\s+(?:le\s+)?$/u.test(between))return null;
- const [startDay,startMonth,startYear,endDay,endMonth,endYear]=[first[2],first[3],Number(first[4]),second[2],second[3],Number(second[4])];
- const start=new Date(Date.UTC(startYear,startMonth-1,startDay)),end=new Date(Date.UTC(endYear,endMonth-1,endDay));
- if(start.getUTCFullYear()!==startYear||start.getUTCMonth()!==startMonth-1||start.getUTCDate()!==startDay||end.getUTCFullYear()!==endYear||end.getUTCMonth()!==endMonth-1||end.getUTCDate()!==endDay||start>end)return null;
+ const years=[...plain.matchAll(/\b((?:19|20)\d{2})\b/gu)];
+ if(matches.length===2&&years.length===2){
+  const first=matches[0]!,second=matches[1]!,prefix=plain.slice(0,first[0]),between=plain.slice(first[0]+first[1],second[0]);
+  if(!/\b(?:du|entre)\s+(?:le\s+)?$/u.test(prefix)||!/^\s+(?:au|et)\s+(?:le\s+)?$/u.test(between))return null;
+  const [startDay,startMonth,startYear,endDay,endMonth,endYear]=[first[2],first[3],Number(first[4]),second[2],second[3],Number(second[4])];
+  const start=new Date(Date.UTC(startYear,startMonth-1,startDay)),end=new Date(Date.UTC(endYear,endMonth-1,endDay));
+  if(start.getUTCFullYear()!==startYear||start.getUTCMonth()!==startMonth-1||start.getUTCDate()!==startDay||end.getUTCFullYear()!==endYear||end.getUTCMonth()!==endMonth-1||end.getUTCDate()!==endDay||start>end)return null;
+  const from=start.toISOString().slice(0,10)+'T00:00:00+01:00';end.setUTCDate(end.getUTCDate()+1);
+  return {from,to:end.toISOString().slice(0,10)+'T00:00:00+01:00'};
+ }
+ if(years.length>1)return null;
+ const instant=asOf===undefined?NaN:Date.parse(asOf);
+ if(!years.length&&!Number.isFinite(instant))return null;
+ const day=`(?:\\d{1,2}(?:er)?|${frenchDayWordPattern})`,month=`(?:${frenchMonths.join('|')})`,year=`(?:19|20)\\d{2}`;
+ const namedRanges=[...plain.matchAll(new RegExp(`\\b(?:du|entre)\\s+(?:le\\s+)?(${day})\\s+(${month})\\s+(?:au|et)\\s+(?:le\\s+)?(${day})\\s+(${month})(?:\\s+(${year}))?\\b`,'gu'))];
+ const sharedMonthRanges=[...plain.matchAll(new RegExp(`\\b(?:du|entre)\\s+(?:le\\s+)?(${day})\\s+(?:au|et)\\s+(?:le\\s+)?(${day})\\s+(${month})(?:\\s+(${year}))?\\b`,'gu'))];
+ const numericRanges=[...plain.matchAll(new RegExp(`\\b(?:du|entre)\\s+(?:le\\s+)?(\\d{1,2})/(\\d{1,2})\\s+(?:au|et)\\s+(?:le\\s+)?(\\d{1,2})/(\\d{1,2})(?:\\s+(${year}))?\\b`,'gu'))];
+ if(namedRanges.length+sharedMonthRanges.length+numericRanges.length!==1)return null;
+ const dayValue=(value:string)=>/^\d/u.test(value)?Number.parseInt(value,10):frenchDayWords[value.replace(/-/gu,' ').replace(/\s+/gu,' ')]??0;
+ let startDay:number,endDay:number,startMonth:number,endMonth:number,rangeYear:number;
+ const namedRange=namedRanges[0],sharedMonth=sharedMonthRanges[0],numericRange=numericRanges[0];
+ if(namedRange){startDay=dayValue(namedRange[1]!);endDay=dayValue(namedRange[3]!);startMonth=frenchMonths.indexOf(namedRange[2]! as typeof frenchMonths[number])+1;endMonth=frenchMonths.indexOf(namedRange[4]! as typeof frenchMonths[number])+1;rangeYear=Number(namedRange[5]??years[0]?.[1]??new Date(instant+3_600_000).getUTCFullYear());}
+ else if(sharedMonth){startDay=dayValue(sharedMonth[1]!);endDay=dayValue(sharedMonth[2]!);startMonth=frenchMonths.indexOf(sharedMonth[3]! as typeof frenchMonths[number])+1;endMonth=startMonth;rangeYear=Number(sharedMonth[4]??years[0]?.[1]??new Date(instant+3_600_000).getUTCFullYear());}
+ else{startDay=Number(numericRange![1]);startMonth=Number(numericRange![2]);endDay=Number(numericRange![3]);endMonth=Number(numericRange![4]);rangeYear=Number(numericRange![5]??years[0]?.[1]??new Date(instant+3_600_000).getUTCFullYear());}
+ if(startMonth>endMonth)return null;
+ const start=new Date(Date.UTC(rangeYear,startMonth-1,startDay)),end=new Date(Date.UTC(rangeYear,endMonth-1,endDay));
+ if(start.getUTCFullYear()!==rangeYear||start.getUTCMonth()!==startMonth-1||start.getUTCDate()!==startDay||end.getUTCFullYear()!==rangeYear||end.getUTCMonth()!==endMonth-1||end.getUTCDate()!==endDay||start>end)return null;
  const from=start.toISOString().slice(0,10)+'T00:00:00+01:00';end.setUTCDate(end.getUTCDate()+1);
  return {from,to:end.toISOString().slice(0,10)+'T00:00:00+01:00'};
 }
@@ -293,9 +321,9 @@ function frenchReadTargets(text:string,asOf?:string):FrenchReadTarget[]{
   if(destination&&mention.status!=='named'&&!/\b(?:patient|patiente|son|sa|ses|ce dossier)\b/u.test(plain))return [{tool:'navigate',navigationTarget:destination}];
  }
  const periodText=mention.status==='named'?plain.replace(fold(mention.name),''):plain;
- const dateRange=explicitFrenchDateRange(periodText);
+ const dateRange=explicitFrenchDateRange(periodText,asOf);
  const monthRange=explicitFrenchMonthRange(periodText);
- const dayRange=explicitFrenchDayRange(periodText);
+ const dayRange=explicitFrenchDayRange(periodText,asOf);
  const unboundedPeriod=!/(?<![\p{L}\p{N}_-])(?:19|20)\d{2}(?![\p{L}\p{N}_-])|(?<![\p{L}\p{N}_-])\d{1,4}[-/]\d{1,2}[-/]\d{1,4}(?![\p{L}\p{N}_-])|\ble\s+\d{1,2}\b|\b(?:depuis|entre|avant|apres|jusqu\w*|pendant|derni\w*|preced\w*|prochain\w*|mois|semaines?|annees?|jours?|janvier|fevrier|mars|avril|mai|juin|juillet|aout|septembre|octobre|novembre|decembre|aujourd.hui|hier|demain|dates?|periode)\b/u.test(periodText);
  const chronology=/\b(?:chronologie|evenements?(?: cliniques?| du dossier))\b/u.test(plain);
  if(chronology&&!unboundedPeriod&&/\b(?:presente|resum\w*|synthetis\w*|ordre chronologique)\b/u.test(plain))return [{tool:'get_patient_context',patientSection:'summary',unboundedPeriod:true}];
@@ -304,29 +332,32 @@ function frenchReadTargets(text:string,asOf?:string):FrenchReadTarget[]{
  if(knowledge)add({tool:'search_knowledge'});
  const storedMedicalScope=/\b(?:dossiers?|ce patient|cette patiente|patients? selectionne\w*|patient courant|notes?|consultations?|quels? patients|combien de patients|liste les patients)\b/u.test(plain)||mention.status==='named'&&/\bpatient(?:e)?\b/u.test(plain);
  if(knowledge&&!storedMedicalScope)return [{tool:'search_knowledge'}];
- if(/\b(?:agenda|rendez[- ]?vous|rdv)\b/u.test(plain)&&/\b(?:montre|affich|liste|donne|combien|nombre|prochain|demain|aujourd.hui|semaine|mois|jour|agenda|rendez[- ]?vous|rdv)\b/u.test(plain))add({tool:'query_agenda'});
- const summaryStyle=/\b(?:resum\w*|synthes\w*|chang\w*|compar\w*|en bref|theme recurrent|motif recurrent|element recurrent)\b/u.test(plain)&&!/\b(?:mot pour mot|texte integral|citation exacte|recopie)\b/u.test(plain);
+ if(/\b(?:agenda|rendez[- ]?vous|rdv)\b/u.test(plain)&&(/\b(?:montre\w*|affich\w*|liste\w*|donne\w*|combien|nombre|quel(?:s|les)?|prochain|demain|aujourd.hui|semaine|mois|jour|agenda|confirme\w*|annule\w*|termine\w*|ouvert\w*|disponible\w*|libre\w*|lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche)\b/u.test(plain)||!!dateRange||!!monthRange||!!dayRange))add({tool:'query_agenda'});
+ const latestNarrativeVerb=requestedConsultationCount(text)===1&&/\b(?:decris\w*|expliqu\w*|ressort\w*|retiens\w*|compte rendu)\b/u.test(plain);
+ const summaryStyle=(/\b(?:resum\w*|synthes\w*|raconte\w*|chang\w*|compar\w*|en bref|theme recurrent|motif recurrent|element recurrent)\b/u.test(plain)||latestNarrativeVerb)&&!/\b(?:mot pour mot|texte integral|citation exacte|recopie)\b/u.test(plain);
  const olderDifficulty=/\bdifficulte\w*\b[^.!?]*\bune ancienne consultation\b/u.test(plain);
  const notes=olderDifficulty||/\b(?:notes?|focus|mesures|subjecti(?:f|fs|ve|ves)|objecti(?:f|fs|ve|ves)|conduites? a tenir|texte integral|soap|amendements?|rectificatifs?)\b/u.test(plain)||(/\b(?:suivi|suite)(?:\s+\w+){0,2}\s+prevu\w*\b/u.test(plain))||(/\bevaluations?\b/u.test(plain)&&/\bconsult\w*/u.test(plain)&&!/psychometri/u.test(plain));
  const areas=[['working',/\b(?:travail|brut|brute|bruts|brutes)\b/u],['subjective',/\bsubjecti(?:f|fs|ve|ves)\b/u],['objective',/\bobjecti(?:f|fs|ve|ves)\b/u],['assessment',/\bevaluations?\b/u],['plan',/\bconduites? a tenir\b|\b(?:suivi|suite)(?:\s+\w+){0,2}\s+prevu\w*\b/u],['amendment',/\b(?:amendements?|rectificatifs?)\b/u],['structured',/\b(?:structurees?|focus|mesures)\b/u]] as const;
  const requestedAreas=olderDifficulty?['subjective' as const]:areas.filter(([,pattern])=>pattern.test(plain)).map(([area])=>area);
  const treatmentOnly=/\b(?:traitements?|medicaments?|prescriptions?)\b/u.test(plain)&&!/\b(?:consult\w*|seances?|parcours|cas)\b/u.test(plain);
  const monthlyComparison=explicitFrenchComparedMonthRanges(text,asOf)!==null;
- const latestNotesSummary=notes&&requestedConsultationCount(text)===1&&!/\b(?:mot pour mot|texte integral|integralement|recopie)\b/u.test(plain);
- const summaryRequested=(summaryStyle||latestNotesSummary)&&!monthlyComparison&&!treatmentOnly&&(anchor||notes||/\b(?:consult\w*|seances?|cas)\b/u.test(plain))&&!knowledge&&requestedAreas.length===0;
+ const genericDossierRead=/\b(?:montre\w*|affich\w*|present\w*|ouvre\w*)\b[^.!?]{0,60}\b(?:dossiers?|fiches?)\b/u.test(plain)&&!/\b(?:documents?|brouillons?|certificats?|ordonn?ances?|justifications?)\b/u.test(plain);
+ const explicitConsultationList=/\b(?:liste\w*|historique|combien|nombre|total|compte\w*)\b[^.!?]*\b(?:consultations?|seances?)\b/u.test(plain);
+ const explicitDiagnosisRequest=/\bdiagnosti\w*\b/u.test(plain);
+ const summaryRequested=(summaryStyle||genericDossierRead)&&!monthlyComparison&&!treatmentOnly&&!explicitConsultationList&&!explicitDiagnosisRequest&&(anchor||notes||/\b(?:consult\w*|seances?|cas)\b/u.test(plain))&&!knowledge&&requestedAreas.length===0;
  const noteArea=requestedAreas.length===1?requestedAreas[0]:undefined;
  const queryMatch=text.match(/(?:\bmot|\bexpression|\bphrase|\bcode|\br[eé]f[eé]rence|\br[eé]p[èe]re)\s+[«“"]?(.+?)[»”"]?(?=\s+dans\b|$)/iu);
  const noteQuery=queryMatch?.[1]?.replace(/[»”"?.!]+$/u,'').trim();
- const document=/\b(?:documents?|brouillons?|certificats?|ordonn?ances?|justificatifs?)\b/u.test(plain);
+ const document=/\b(?:documents?|brouillons?|certificats?|ordonn?ances?|justifications?|justificatifs?|suivis?\s+medic(?:al|ale|aux|ales))\b/u.test(plain);
  if(document&&!knowledge){
-  const documentKind:FrenchReadTarget['documentKind']=/\bcertificats?\s+m(?:edical|edicaux)\b/u.test(plain)?'certificat_medical':/\bordonn?ances?\b/u.test(plain)?'ordonnance':/\bjustificatifs?\b/u.test(plain)?'justification':/\bsuivi medical\b/u.test(plain)?'suivi_medical':/\bbonne sante mentale\b/u.test(plain)?'bonne_sante_mentale':undefined;
-  const documentStatus:FrenchReadTarget['documentStatus']=/\b(?:emis|delivre|signes?)\b/u.test(plain)?'issued':/\b(?:brouillons?|non signes?)\b/u.test(plain)?'draft':undefined;
+  const documentKind:FrenchReadTarget['documentKind']=/\bcertificats?\s+medic(?:al|ale|aux|ales)\b/u.test(plain)?'certificat_medical':/\bordonn?ances?\b/u.test(plain)?'ordonnance':/\bjustificati(?:on|ons|f|fs)\b/u.test(plain)?'justification':/\bsuivis?\s+medic(?:al|ale|aux|ales)\b/u.test(plain)?'suivi_medical':/\bbonne sante mentale\b/u.test(plain)?'bonne_sante_mentale':undefined;
+  const documentStatus:FrenchReadTarget['documentStatus']=/\b(?:emis(?:e|es)?|delivre(?:e|es)?s?|signe(?:e|es)?s?)\b/u.test(plain)?'issued':/\b(?:brouillons?|non signes?)\b/u.test(plain)?'draft':undefined;
   add({tool:'query_documents',unboundedPeriod,...(dateRange??dayRange??{}),documentAllKinds:!documentKind,...(documentKind?{documentKind}:{}),...(documentStatus?{documentStatus}:{})});
  }
  const consultationText=notes&&noteQuery?plain.replace(fold(noteQuery),''):plain;
  const requestedConsultationStatus=/\b(?:termine\w*|clos\w*|cloture\w*|acheve\w*|ferme\w*)\b/u.test(consultationText)?'closed' as const:/\b(?:ouvert\w*|en cours)\b/u.test(consultationText)?'open' as const:undefined;
  const unpricedQuestion=/\bconsult\w*\b/u.test(plain)&&/\b(?:sans tarif|non tarife\w*|sans prix|(?:pas|aucun) de tarif)\b/u.test(plain);
- const consultation=/\b(?:consult\w*|seances?)\b/u.test(plain);
+ const consultation=/\b(?:consultations?|seances?)\b/u.test(plain);
  if(consultation&&!unpricedQuestion&&!notes&&!knowledge&&!summaryRequested){
   const detail=/\b(?:details?|duree|analys\w*)\b/u.test(plain);
   const consultationMode:FrenchReadTarget['consultationMode']=detail?undefined:monthlyComparison?'count':/\b(?:liste\w*|historique)\b/u.test(plain)?'list':/\b(?:combien|nombre|total|compte|comptabilise)\b/u.test(plain)?'count':'list';
@@ -380,24 +411,26 @@ function preparationTarget(text:string):Pick<FrenchRequestAdmission,'preparation
  const plain=fold(text),command=plain
   .replace(/^(?:alexa|assistant)[, :]+/u,'')
   .replace(/^(?:dans|sur)\s+(?:le\s+)?dossier\s+(?:(?:du|de)\s+|d')/u,'')
+  .replace(/^(?:(?:le|la)\s+)?(?:traitement|medicament)\s+de\s+[\p{L}][\p{L}'’-]*(?:\s+[\p{L}][\p{L}'’-]*){0,2}\s*[,;:]\s*/u,'')
   .replace(/^(?:(?:pour|concernant)\s+)?(?:patiente?\s+)?[\p{L}][\p{L}'’-]*(?:\s+[\p{L}][\p{L}'’-]*){1,2}\s*,\s*/u,'')
   .replace(/^(?:(?:s.il te plait|s.il vous plait|svp),?\s*)?(?:(?:est[- ]ce que\s+)?(?:peux[- ]tu|pourrais[- ]tu|pouvez[- ]vous|pourriez[- ]vous|tu peux|vous pouvez|je voudrais|j.aimerais|je souhaite|je veux)\s+(?:(?:me|nous)\s+|(?:que\s+)?(?:tu|vous)\s+)?)/u,'')
   .trim();
  if(/\b(?:ne|pas|annule|signe|emets|delivre)\b/u.test(plain))return null;
- const requestedDocumentType=/\bbonne sante(?: mentale)?\b/u.test(plain)?'bonne_sante_mentale':/\bsuivi medical\b/u.test(plain)?'suivi_medical':/\bcertificat medical\b/u.test(plain)?'certificat_medical':/\bjustificati(?:on|f)\b/u.test(plain)?'justification':/\bordonn?ances?\b/u.test(plain)?'ordonnance':undefined;
+ const requestedDocumentType=/\bbonne sante(?: mentale)?\b/u.test(plain)?'bonne_sante_mentale':/\bsuivis?\s+medic(?:al|ale|aux|ales)\b/u.test(plain)?'suivi_medical':/\bcertificats?\s+medic(?:al|ale|aux|ales)\b/u.test(plain)?'certificat_medical':/\bjustificati(?:on|ons|f|fs)\b/u.test(plain)?'justification':/\bordonn?ances?\b/u.test(plain)?'ordonnance':undefined;
  if(requestedDocumentType&&/^(?:imprim\w*|lance\w*\s+l.impression)\b/u.test(command))return {preparationAction:'print_issued_document',preparationDocumentType:requestedDocumentType};
+ const politeDocumentRequest=/^(?:je voudrais|j.aimerais|je souhaite|je veux)\b/u.test(plain)&&!/^\s*(?:consulte\w*|voir\b|lire\b|affiche\w*|ouvre\w*|cherche\w*|liste\w*|retrouve\w*)\b/u.test(command);
  const treatmentField=/\b(?:dose|posologie|frequence|moment de prise|consignes?|instructions?|date de (?:debut|fin))\b/u.test(plain);
  const treatmentTarget=/\b(?:traitements?|medicaments?|prescriptions?)\b/u.test(plain)||mentionsMedication(plain)||(treatmentField&&/\b\d+(?:[.,]\d+)?\s*(?:mg|g|mcg|µg|ml|l)\b/u.test(plain));
  if(treatmentTarget&&/^(?:arrete\w*|cesse\w*|interromp\w*|stoppe\w*)\b/u.test(command))return {preparationAction:'stop_treatment'};
  if(treatmentTarget&&(/^(?:modifi\w*|change\w*|ajust\w*|augment\w*|diminu\w*|passe\w*|baisse\w*|reduit\w*|fix\w*|met(?:s)?\s+a\s+jour|mettre\s+a\s+jour|retir\w*|enlev\w*|supprim\w*)\b/u.test(command)||(treatmentField&&/^ajout\w*/u.test(command))))return {preparationAction:'update_treatment'};
  if(/\b(?:aucun|supprime)\b/u.test(plain))return null;
- if(/^(?:modifi\w*|change\w*|corrige\w*|rectifi\w*|mets?\s+a\s+jour|mettre\s+a\s+jour)\b/u.test(command)&&/\bbrouillon\b/u.test(plain)&&/\b(?:documents?|certificats?|justificatifs?|ordonn?ances?|suivi medical|bonne sante)\b/u.test(plain)){
+ if(/^(?:modifi\w*|change\w*|corrige\w*|rectifi\w*|mets?\s+a\s+jour|mettre\s+a\s+jour)\b/u.test(command)&&/\bbrouillon\b/u.test(plain)&&/\b(?:documents?|certificats?|justifications?|justificatifs?|ordonn?ances?|suivis?\s+medic(?:al|ale|aux|ales)|bonne sante)\b/u.test(plain)){
   const type=requestedDocumentType;
   return {preparationAction:'update_editable_document_draft',...(type?{preparationDocumentType:type}:{})};
  }
  if(/\b(?:rendez[- ]vous|rdv)\b/u.test(plain)&&/^(?:cre\w*|ajout\w*|prepar\w*|propos\w*|gener\w*|fix\w*|planifi\w*|programm\w*|prend\w*|reserv\w*|organis\w*)\b/u.test(command))return {preparationAction:'create_appointment'};
- if(!/^(?:cre\w*|ajout\w*|prepar\w*|propos\w*|gener\w*|fix\w*|planifi\w*|programm\w*|prend\w*|reserv\w*|organis\w*|redig\w*|fais?\b)/u.test(command))return null;
- if(!/\b(?:brouillons?|certificats?|justifications?|justificatifs?|suivi medical|ordonn?ances?)\b/u.test(plain))return null;
+ if(!/^(?:cre\w*|ajout\w*|prepar\w*|propos\w*|gener\w*|fix\w*|planifi\w*|programm\w*|prend\w*|reserv\w*|organis\w*|redig\w*|fais?\b)/u.test(command)&&!(requestedDocumentType&&politeDocumentRequest))return null;
+ if(!/\b(?:brouillons?|certificats?|justifications?|justificatifs?|suivis?\s+medic(?:al|ale|aux|ales)|ordonn?ances?)\b/u.test(plain))return null;
  const preparationDocumentType=requestedDocumentType;
  return {preparationAction:'create_editable_document_draft',...(preparationDocumentType?{preparationDocumentType}:{})};
 }
@@ -407,10 +440,14 @@ export function frenchRequestAdmission(text:string,publicAllowed:boolean,asOf?:s
  const plain=fold(text),chronology=/\b(?:chronologie|evenements?(?: cliniques?| du dossier))\b/u.test(plain)&&/\b(?:presente|resum\w*|synthetis\w*|ordre chronologique)\b/u.test(plain),chronologicalOrder=/\b(?:ordre chronologique|chronologiquement|du plus ancien au plus recent)\b/u.test(plain);
  const compoundChronology=/\b(?:et|puis|ainsi que)\b|[;\n]/u.test(plain);
  if(chronology)return compoundChronology?{profileOnly:false}:{tools:['get_patient_context'],profileOnly:false,patientSection:chronologicalOrder?'timeline':'summary',unboundedPeriod:true};
- if(frenchRequestedOutputs(text))return {profileOnly:false};
+ const requestedOutputs=frenchRequestedOutputs(text),preparation=preparationTarget(text);
+ if(requestedOutputs){
+  if(requestedOutputs.length===1&&preparation?.preparationAction&&['update_treatment','stop_treatment'].includes(preparation.preparationAction))return {tools:['prepare_action'],profileOnly:false,...preparation};
+  return {profileOnly:false};
+ }
  const messageKind=messageDraftTarget(text);if(messageKind&&!frenchRequestedOutputs(text))return {tools:['query_app'],profileOnly:false,applicationView:'message_draft',messageKind};
  const internalMessage=internalMessageTarget(text);if(internalMessage)return {tools:['prepare_action'],profileOnly:false,...internalMessage};
- const preparation=preparationTarget(text);if(preparation)return {tools:['prepare_action'],profileOnly:false,...preparation};
+ if(preparation)return {tools:['prepare_action'],profileOnly:false,...preparation};
  const receivableRead=/\b(?:reste|restant|solde|impayes?)\s+a\s+encaisser\b/u.test(plain);
  const comparisonQuestion=/^\s*(?:alexa[, :]\s*)?qu['’]est[- ]ce qui a chang\w*\b/u.test(plain);
  const write=!receivableRead&&!comparisonQuestion&&/\b(?:creer|cree|ajouter|ajoute|ajoutez|enregistrer|enregistrez|modifier|modifie|modifiez|changer|change|changez|ajuster|ajuste|ajustez|augmenter|augmente|augmentez|diminuer|diminue|diminuez|arreter|arrete|arretez|cesser|cesse|cessez|interrompre|interrompt|interrompez|stopper|stoppe|stoppez|corriger|corrige|corrigez|rectifier|rectifie|rectifiez|passer|passe|passez|annuler|annule|annulez|supprimer|supprime|supprimez|signer|signe|signez|encaisser|encaissez|deplacer|deplace|deplacez|preparer|prepare|preparez|generer|genere|generez|proposer|propose|proposez|envoyer|envoie|envoyez|transmettre|transmets)\b/u.test(plain);
@@ -419,6 +456,8 @@ export function frenchRequestAdmission(text:string,publicAllowed:boolean,asOf?:s
  const finance=/\b(?:chiffre d.affaires|recettes?|revenus?|depenses?|impayes?|soldes?|resultat net|paiements?|encaissements?)\b/u.test(plain);
  if(clinical&&finance)return {profileOnly:false};
  const targets=frenchReadTargets(text,asOf),domains=[...new Set(targets.map(target=>target.tool))];
+ const mixedFinanceAndCabinetContact=domains.includes('query_finance')&&/\b(?:cabinet|clinique)\b/u.test(plain)&&/\b(?:telephone|tel|numero|coordonnees?|adresse|e[- ]?mail|courriel|nom)\b/u.test(plain);
+ if(mixedFinanceAndCabinetContact)return {profileOnly:false};
  if(publicAllowed&&isFrenchAlexaCapabilityQuestion(text)&&targets.every(target=>target.tool==='query_app'&&target.applicationView==='cabinet'))return {tools:['answer_general'],profileOnly:false};
  if(domains.length===1){const scopes=targets.filter(target=>target.tool===domains[0]);const common=Object.fromEntries(['messageKind','navigationTarget','consultationCount','applicationView','financeMode','financeState','financeConsultationStatus','patientSection','consultationMode','consultationStatus','dateAxis','unboundedPeriod','from','to','noteArea','noteQuery','diagnosisState','diagnosisRole','treatmentState','documentKind','documentStatus','documentAllKinds'].flatMap(key=>{const values=new Set(scopes.map(target=>target[key as keyof FrenchReadTarget]).filter(value=>value!==undefined));return values.size===1?[[key,[...values][0]]]:[]}));return {tools:domains,profileOnly:scopes.length===1&&scopes[0]?.tool==='get_patient_context'&&scopes[0].patientSection==='profile',...common};}
  const appReference=/\b(?:mindcare|alexa|application|logiciel|systeme|serveur|notifications?|messages?|factures?|recus?|frais|caisse|mois|semaine|periode|aujourd.hui|hier|demain|ceci|cela|ca)\b/u.test(plain);
@@ -457,6 +496,29 @@ export function frenchRequestedOutputs(text:string):string[]|null{
  const statusSuffix=/\bet\s+quels?\s+sont\s+(?:leurs?|les)\s+statuts?\s*[?!.]*$/iu.exec(text);
  if(statusSuffix){const head=text.slice(0,statusSuffix.index),targets=frenchReadTargets(head);if(targets.length===1&&targets[0]?.tool==='query_agenda'&&!/\b(?:et|puis)\b|[;\n]/iu.test(head))return null;}
  if(!frenchReadTargets(text).length&&!preparationTarget(text))return null;
+ const documentKinds:[string,RegExp,string][]=[
+  ['bonne_sante_mentale',/\bcertificats?\s+(?:de\s+)?bonne\s+sant[ée]\s+mentale\b/giu,'le certificat de bonne santé mentale'],
+  ['suivi_medical',/\bsuivis?\s+m[ée]dic(?:al|ale|aux|ales)\b/giu,'le certificat de suivi médical'],
+  ['certificat_medical',/\bcertificats?\s+m[ée]dic(?:al|ale|aux|ales)\b/giu,'le certificat médical'],
+  ['justification',/\bjustific(?:ation|ations|atif|atifs|ative|atives)\b/giu,'la justification'],
+  ['ordonnance',/\bordonnances?\b/giu,'l’ordonnance'],
+ ];
+ const documentMentions=documentKinds.flatMap(([kind,pattern,label])=>[...text.matchAll(pattern)].map(match=>({kind,label,start:match.index,end:match.index+match[0].length}))).sort((left,right)=>left.start-right.start);
+ if(new Set(documentMentions.map(mention=>mention.kind)).size>=2&&/\b(?:montre|affich|list|trouv|cherch|recherch|ouvr|consult)\w*\b/iu.test(text)&&! /\b(?:sans|aucun|aucune|ni|ou|pas\s+de|sauf)\b/iu.test(fold(text))){
+  const identity=parsePatientMention(text);
+  const connected=documentMentions.slice(1).every((mention,index)=>/\b(?:et|puis)\b|,/iu.test(text.slice(documentMentions[index]!.end,mention.start)));
+  if(identity.status!=='ambiguous'&&connected){
+   const patientPrefix=identity.status==='named'?`Pour ${identity.name}, `:'';
+   const uniqueMentions=[...new Map(documentMentions.map(mention=>[mention.kind,mention])).values()];
+   const tail=text.slice(documentMentions.at(-1)!.end),otherClause=tail.match(/^\s*[,;]?\s*puis\s+(.+?)\s*[?؟!.]*\s*$/iu)?.[1]?.trim();
+   const tailWithoutIdentity=fold(tail).replace(identity.status==='named'?fold(identity.name):/(?!)/u,'').replace(/\b(?:de|du|des|pour|chez)\b/gu,'').replace(/[?؟!.,;]+/gu,'').trim();
+   if(!tailWithoutIdentity||otherClause){
+    const goals=uniqueMentions.map(mention=>`${patientPrefix}montre ${mention.label}.`);
+    if(otherClause){const extra=`${patientPrefix}${otherClause}.`;if(!requestedReadTool(extra,text))return null;goals.push(extra);}
+    if(goals.length>=2&&goals.every(goal=>requestedReadTool(goal,text)))return goals;
+   }
+  }
+ }
  const markers=[...text.matchAll(/(?:^|[,;]\s*|\b(?:et|puis)\s+)((?:affich|montr|trouv|rep[èe]r|cherch|recherch|identifi|r[ée]sum|pr[ée]par|compt|donn|lis|lire|ouvr|compar|expliqu|cr[ée]|ajout|enregistr|modifi|annul|supprim|sign|encaiss|d[ée]pla|r[ée]dig|r[èe]gl)\p{L}*)\b/giu)];
  if(markers.length>=2&&markers.length<=12&&markers[0]!.index===0)return markers.map((match,index)=>text.slice(match.index+match[0].length-match[1]!.length,markers[index+1]?.index??text.length).replace(/[\s,;]+$/u,'').trim());
  const sharedVerb=text.match(/^\s*(?:alexa[, :]\s*)?((?:affich|montr|trouv|rep[èe]r|cherch|recherch|identifi|r[ée]sum|pr[ée]par|compt|donn|lis|lire|ouvr|compar|expliqu|cr[ée]|ajout|enregistr|modifi|annul|supprim|sign|encaiss|d[ée]pla|r[èe]dig)\p{L}*)\s+/iu);
@@ -470,8 +532,14 @@ export function frenchRequestedOutputs(text:string):string[]|null{
    if(goals.every(goal=>requestedReadTool(goal,text)))return goals;
   }
  }
+ const listWithExactTotal=/\b(?:liste\w*|affich\w*|montr\w*)\b[^.!?]{0,120}\b(?:consultations?|seances?)\b[^.!?]{0,100}\b(?:total|nombre)(?:\s+exact)?\b/u.test(fold(text));
+ if(listWithExactTotal&&requestedReadTool(text,text)==='query_consultations')return null;
   const separators=[...text.matchAll(/\s+\b(?:et|puis)\s+(?=(?:combien|quel(?:le|s|les)?|qui|comment|pourquoi|où|quand|le\s+(?:nombre|total|effectif|rep[èe]re)|l['’]effectif|la\s+référence)\b)/giu)];
- if(!separators.length||separators.length>5)return null;
+ if(!separators.length||separators.length>5){
+  const action=preparationTarget(text),targets=frenchReadTargets(text);
+  if(action?.preparationAction&&['update_treatment','stop_treatment'].includes(action.preparationAction)&&targets.length<=1&&!/\b(?:et|puis|ensuite|ou|mais)\b|[;\n]/iu.test(text))return [text.trim()];
+  return null;
+ }
  const clauses:string[]=[];let start=0;
  for(const separator of separators){clauses.push(text.slice(start,separator.index).trim().replace(/[\s,;]+$/u,''));start=separator.index+separator[0].length;}
  clauses.push(text.slice(start).trim());

@@ -7,7 +7,7 @@ const common = new Set([
   "brut", "brute", "bruts", "brutes", "actif", "active", "actifs", "actives", "inactif", "inactive", "inactifs", "inactives", "principal", "principale", "principaux", "principales", "arrete", "arretee", "arretes", "arretees", "suspendu", "suspendue", "suspendus", "suspendues", "documente", "documentee", "documentes", "documentees", "resolu", "resolue", "resolus", "resolues", "nouveau", "nouvelle", "nouveaux", "nouvelles", "suivi", "paiement", "paiements", "urgence",
   "la", "le", "les", "un", "une", "du", "des", "ses", "son", "sa", "ce", "cet", "cette", "mon", "ma", "mes", "notre", "nos",
   "derniere", "dernieres", "dernier", "derniers", "patient", "patiente", "patients", "consultation", "consultations", "seance", "seances",
-  "traitement", "traitements", "medicament", "medicaments", "debut", "cas", "dossier", "clinique", "synthetique", "complet", "complete", "medical", "medicale", "psychiatrique", "global", "globale",
+  "traitement", "traitements", "medicament", "medicaments", "debut", "fin", "cas", "dossier", "clinique", "synthetique", "complet", "complete", "medical", "medicale", "psychiatrique", "global", "globale",
   "travail", "subjectif", "subjective", "subjectifs", "subjectives", "objectif", "objective", "objectifs", "objectives", "evaluation", "plan", "conduite", "anamnese", "rectificatif", "rectificatifs",
   "naissance", "numero", "carte", "piece", "identite", "cni", "cin", "telephone", "telephones", "adresse", "adresses", "coordonnees", "sexe", "administratif", "administrative", "administratifs", "administratives",
   "selectionne", "selectionnee", "selectionnes", "selectionnees", "courant", "courante", "courants", "courantes", "actuel", "actuelle", "actuels", "precedent", "precedente", "recent", "recente", "cette", "semaine", "mois", "jour", "aujourd'hui", "hier", "demain", "aujourd’hui",
@@ -28,6 +28,7 @@ const common = new Set([
   "المكتملة", "المكتملتان", "المكتملتين", "المكتملات", "الماضي", "الماضية", "الماضيتين", "من", "عن", "على", "في", "يوم", "اليوم",
   "النوم", "القلق", "الاعراض", "اعراض", "الملاحظات", "ملاحظات", "المزاج", "تاع",
 ]);
+for(const word of ['premier','premiere','deux','trois','quatre','cinq','six','sept','huit','neuf','dix','onze','douze','treize','quatorze','quinze','seize','dix-sept','dix-huit','dix-neuf','vingt','vingt-et-un','vingt-et-une','vingt-deux','vingt-trois','vingt-quatre','vingt-cinq','vingt-six','vingt-sept','vingt-huit','vingt-neuf','trente','trente-et-un','trente-et-une'])common.add(word);
 const folded = (value: string) => value.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase();
 const scaleNames = new Set(["hamilton", "madrs"]);
 function candidateName(value: string | undefined): string | undefined {
@@ -50,7 +51,7 @@ export function parsePatientMention(text: string): PatientMention {
   const names = new Map<string, string>();
   const normalized = folded(text);
   const explicitPatient = /\b(?:patiente?s?|dossier)\b|المريض|المريضة|ملف/u.test(normalized);
-  const localFieldPattern = /\b(?:resume|synthese|consultations?|seances?|traitements?|medicaments?|diagnostics?|notes?|subjectifs?|subjectives?|objectifs?|objectives?|dossier|patiente?s?|prend|dose|posologie|frequence|ordonn?ances?|symptomes?|scores?|echelles?|sommeil|humeur|agenda|rdv|rendez[- ]vous|historique|documents?|certificats?|justifications?|brouillons?|telephones?|coordonnees?|adresses?|contacts?|naissance|identite|identifiants?|carte nationale|cni|cin|numero national|sexe|situation familiale|paiements?)\b|ملخص|لخص|جلس|استشار|العلاج|الدواء|الملاحظات|اعراض|الاعراض/gu;
+  const localFieldPattern = /\b(?:resume|synthese|consultations?|seances?|traitements?|medicaments?|diagnostics?|notes?|subjectifs?|subjectives?|objectifs?|objectives?|dossier|patiente?s?|prend|dose|posologie|frequence|ordonn?ances?|symptomes?|scores?|echelles?|sommeil|humeur|agenda|rdv|rendez[- ]vous|historique|documents?|certificats?|justifications?|justificatifs?|brouillons?|suivis?\s+medic(?:al|ale|aux|ales)|telephones?|coordonnees?|adresses?|contacts?|naissance|identite|identifiants?|carte nationale|cni|cin|numero national|sexe|situation familiale|paiements?)\b|ملخص|لخص|جلس|استشار|العلاج|الدواء|الملاحظات|اعراض|الاعراض/gu;
   const localFieldRead = [...normalized.matchAll(localFieldPattern)].length > 0;
   // A single noun in a general symptom/diagnosis question is a topic.
   // Named single patients remain explicit through patient/dossier or quotes.

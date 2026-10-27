@@ -9,16 +9,16 @@
  *
  * ⚠️ CE FICHIER NE SAIT PAS QUEL MOT RÉVEILLE JARVIS, ET C'EST VOULU. Il ne
  * connaît que le CONTRAT `DetecteurReveil` ; le mot, le moteur et le modèle
- * vivent derrière, dans `reveil-openwakeword.ts`. C'est ce qui a permis de
- * passer de « Hey Jarvis » à « Alexa » sans toucher une ligne ici.
+ * vivent derrière, dans `reveil-vosk.ts`. C'est ce qui a permis de
+ * remplacer le modèle non commercial sans toucher à la machine à états.
  *
  *   Assistant .......... JARVIS — c'est lui qu'on réveille.
  *   Mot de réveil ...... ALEXA — l'étiquette sonore, rien de plus.
- *   Moteur ............. openWakeWord, ONNX, exécuté en WASM, hors ligne.
+ *   Moteur ............. Vosk français, modèle local Apache-2.0, hors ligne.
  *
- * Le détecteur livré (`creerDetecteurOpenWakeWord`) est LOCAL : ses modèles et
- * son runtime sont servis depuis `public/wakeword/`, et rien ne part sur le
- * réseau pendant l'écoute. Les alternatives ont été écartées pour cette raison
+ * Le détecteur livré (`creerDetecteurVosk`) est LOCAL : son modèle vit dans
+ * `resources/voix`, et rien ne part sur le réseau pendant l'écoute. Les
+ * alternatives ont été écartées pour cette raison
  * précise : l'API Web Speech de Chrome écoute en continu et expédie l'audio
  * chez Google — la règle 1 tombe, et elle tombe sur le flux le plus intime qui
  * soit, celui d'un cabinet de psychiatrie au repos ; les moteurs sous licence
@@ -144,6 +144,11 @@ export function detecteurInstalle(): DetecteurReveil | null {
   return detecteur;
 }
 
+/** The in-flight explicit arm attempt, so the UI cannot claim success early. */
+export function promesseArmement(): Promise<Result<true>> | null {
+  return armement;
+}
+
 // ═══════════════════════════════════════════════════════════════════════════
 // 3 · L'ÉTAT
 // ═══════════════════════════════════════════════════════════════════════════
@@ -223,6 +228,10 @@ let quitterLecture: (() => void) | null = null;
  */
 let captureCourante = 0;
 
+/** The one in-flight arm attempt; cleared by an explicit disarm so a quick
+ * stop/start cannot reuse a resolved promise and leave the detector off. */
+let armement: Promise<Result<true>> | null = null;
+
 /**
  * Plafond de l'état `parole`. Une lecture qui cale n'émet ni `ended` ni
  * `error` — sans ce chien de garde, l'orbe resterait « parle » indéfiniment.
@@ -296,6 +305,9 @@ export async function armerReveil(r: RappelsVoix): Promise<Result<true>> {
 
 export function desarmerReveil(): void {
   captureCourante += 1; // invalide toute clôture en vol
+  // A resolved arm promise is not a state. If the caller disarms, the next
+  // explicit start must spawn/arm again rather than reuse this old result.
+  armement = null;
   endpointeur?.arreter();
   endpointeur = null;
   quitterLecture?.();
@@ -568,7 +580,6 @@ export function niveauEcoute(): number {
 
 let references = 0;
 let demontage: ReturnType<typeof setTimeout> | null = null;
-let armement: Promise<Result<true>> | null = null;
 
 /**
  * Le délai de grâce avant démontage. React en mode strict monte, démonte et
@@ -647,8 +658,8 @@ export function retenirVoix(r: RappelsVoix): () => void {
       // Import dynamique : l'ONNX et son WASM ne doivent entrer ni dans le
       // rendu serveur, ni dans le bundle initial. L'application s'affiche sans
       // attendre 16 Mio de runtime.
-      const { creerDetecteurOpenWakeWord } = await import("./reveil-openwakeword");
-      installerDetecteur(creerDetecteurOpenWakeWord());
+      const { creerDetecteurVosk } = await import("./reveil-vosk");
+      installerDetecteur(creerDetecteurVosk());
       return await armerReveil(r);
     })();
     void armement.then((resultat) => {

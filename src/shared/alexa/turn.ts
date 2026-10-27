@@ -11,7 +11,8 @@ export type TurnInput = z.infer<typeof turnInput>;
 export const alexaNavigationSchema = z.union([
   z.object({ target: z.literal("patient"), patientId: z.uuid() }).strict(),
   z.object({ target: z.literal("document"), patientId: z.uuid(), documentId: z.uuid(), print: z.boolean().optional() }).strict(),
-  z.object({ target: z.enum(["agenda", "patients", "dashboard", "documents", "finances", "parametres", "jarvis"]) }).strict(),
+  z.object({ target: z.literal("documents"), patientId: z.uuid().optional(), documentKind: z.enum(["bonne_sante_mentale", "suivi_medical", "certificat_medical", "justification", "ordonnance"]).optional() }).strict(),
+  z.object({ target: z.enum(["agenda", "patients", "dashboard", "finances", "parametres", "jarvis"]) }).strict(),
 ]);
 export type AlexaNavigation = z.infer<typeof alexaNavigationSchema>;
 export const alexaProposalSchema = z.object({actionId:z.uuid().optional(),tool:z.string().min(1).max(80),args:z.record(z.string().max(80),z.union([z.string().max(200_000),z.number().finite(),z.boolean(),z.null()]))}).strict();
@@ -21,6 +22,7 @@ export function alexaNavigationPath(value: unknown): string | null {
   if (!parsed.success) return null;
   const navigation = parsed.data;
   if (navigation.target === "document") return `/documents?patient=${encodeURIComponent(navigation.patientId)}&document=${encodeURIComponent(navigation.documentId)}${navigation.print === true ? "&print=1" : ""}`;
+  if (navigation.target === "documents" && navigation.patientId) return `/documents?patient=${encodeURIComponent(navigation.patientId)}${navigation.documentKind ? `&kind=${encodeURIComponent(navigation.documentKind)}` : ""}`;
   return navigation.target === "patient" ? `/patients/${encodeURIComponent(navigation.patientId)}` : navigation.target === "dashboard" ? "/tableauDeBord" : `/${navigation.target}`;
 }
 export interface AlexaSource { id: string; type: "patient" | "consultation" | "diagnostic" | "scale" | "treatment" | "knowledge" | "appointment" | "document" | "query"; label: string; version?: string; excerpt?:string; provenance?: Readonly<Record<string, string | number | null>> }

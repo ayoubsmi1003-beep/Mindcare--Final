@@ -1,11 +1,11 @@
-/**
+﻿/**
  * `micro-partage.ts` — LE COURTIER DU MICROPHONE. UNE SEULE ACQUISITION.
  *
  * ═══ POURQUOI CE MODULE EXISTE ═══
  *
  * Trois consommateurs veulent le micro EN MÊME TEMPS :
  *
- *   · le détecteur de mot de réveil  (`reveil-openwakeword.ts`) — en continu ;
+ *   · le détecteur de mot de réveil  (`reveil-vosk.ts`) — en continu ;
  *   · l'endpointeur de fin de parole (`endpointage-voix.ts`)    — pendant l'écoute ;
  *   · l'enregistreur de la commande  (`jarvis-voix.ts`)         — pendant l'écoute.
  *
@@ -36,7 +36,7 @@ import { fr } from "@/i18n/fr";
 import { log } from "./log";
 import { err, ok, type Result } from "./result";
 
-/** La fréquence des modèles openWakeWord. Imposée au contexte, jamais au micro. */
+/** La fréquence du modèle Vosk. Imposée au contexte, jamais au micro. */
 const TAUX = 16_000;
 
 /**

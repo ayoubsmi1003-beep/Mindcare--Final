@@ -159,7 +159,7 @@ const SUITES_SIMULATION = [
   ["eval-knowledge-db", ["scripts/eval-knowledge-db.mjs", "--db", "mindcare"], 900000, true],
 ];
 const NOT_RUN_ENV = [
-  ["eval-reveil-pipeline", "modele ONNX public/wakeword absent ou voix humaine NON MESUREE", "modele ONNX + voix humaine"],
+
   ["eval-contexte-seance", "source supabase/functions/_shared/contexte-seance.ts absente (pre-existant)", "source vivante src/server/jarvis/ (re-cablage hors perimetre M09)"],
   ["eval-resume-cas", "source supabase/functions/_shared/resume-cas.ts absente (pre-existant)", "source vivante src/server/jarvis/resume-cas.ts (re-cablage hors perimetre M09)"],
   ["live-model-quality", "aucun modele pine pour la qualite live (variance free-tier 5s-180s)", "modele pine ou runtime local M13"],

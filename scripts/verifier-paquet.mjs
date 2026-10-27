@@ -151,7 +151,7 @@ const HORS_DEPENDANCES = /(^|\/)node_modules\//;
 // fichier de cet inventaire épinglé. Une exclusion par le seul nom packages/
 // laisserait entrer un outil du dépôt. L'exception exige le chemin connu ET
 // l'empreinte réelle, avec la même empreinte d'inventaire que le runtime voix.
-const INVENTAIRE_VOIX_SHA256 = "9b29537de4562809a6a641c18ec7d1c7e320be8a4fa6162f24ffbbe1d78cb281";
+const INVENTAIRE_VOIX_SHA256 = "af3c524e64a24039c505169a1ef2c56011921b49cce8b3d747aec5f1aec40fc4";
 const pinsVoix = new Map();
 const validationsVoix = new Map();
 const fichierInventaireVoix = path.join(CIBLE, "resources", "voix", "inventory.json");
@@ -202,6 +202,9 @@ const INTERDITS = [
   [/(^|\/)eval-[^/]*$/, "un script d'évaluation", "dépôt"],
   [/(^|\/)(probe|sonde)-[^/]*$/, "une sonde de diagnostic", "dépôt"],
   [/(^|\/)docs\//, "le dossier docs/", "dépôt"],
+  [/resources\/voix\/assets\/ggml-base\.bin$/, "l'ancien modèle Whisper Base", "partout"],
+  [/resources\/voix\/assets\/(fr_FR|ar_JO)-.*\.onnx(?:\.json)?$/, "une voix Piper retirée", "partout"],
+  [/(^|\/)public\/wakeword\//, "l'ancien modèle openWakeWord non commercial", "partout"],
 ];
 
 for (const [motif, quoi, portee] of INTERDITS) {
@@ -266,6 +269,13 @@ const REQUIS = [
   ["resources/pgsql/lib/vector.dll", "l'extension pgvector (M07, RAG)"],
   ["resources/pgsql/share/extension/vector.control", "le contrôle d'extension pgvector"],
   ["resources/pgsql/share/extension/vector--0.8.6.sql", "le script de base pgvector 0.8.6"],
+  ["resources/voix/native-voice-worker.py", "le worker STT/TTS local"],
+  ["resources/voix/wake-voice-worker.py", "le worker de mot de réveil local"],
+  ["resources/voix/assets/ggml-large-v3-turbo-q5_0.bin", "Whisper large-v3-turbo Q5_0"],
+  ["resources/voix/assets/kokoro-v1.0.fp16.onnx", "Kokoro-82M v1.0"],
+  ["resources/voix/assets/voices-v1.0.bin", "voix Kokoro françaises"],
+  ["resources/voix/assets/vosk-model-small-fr-0.22/conf/model.conf", "modèle Vosk français"],
+  ["resources/voix/health/fr-bonjour.wav", "échantillon de santé vocale"],
 ];
 
 const manquants = REQUIS.filter(([f]) => !inventaire.includes(f));

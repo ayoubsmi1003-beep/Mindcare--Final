@@ -82,7 +82,11 @@ export function SaisieAlexaLune({
   useEffect(() => abonnerMainsLibres(setMainsLibres), []);
   // `veille` (réveil armé, rien en cours) ne bloque pas le clavier.
   const actif = voix.etat === "reveille" || voix.etat === "ecoute" || voix.etat === "traitement" || voix.etat === "parole" || voix.etat === "interrompu";
-  const messageVoix = actif || voix.etat === "erreur" ? voix.raison ?? null : null;
+  const messageVoix = actif || voix.etat === "erreur"
+    ? voix.raison ?? null
+    : mainsLibres && voix.etat === "veille"
+      ? alexa.voixVeille
+      : null;
   const libelleVoix = actif ? alexa.voixArreter : alexa.voixDemarrer;
   const libelleMainsLibres = mainsLibres ? alexa.mainsLibresArreter : alexa.mainsLibresActiver;
 
@@ -175,13 +179,14 @@ export function SaisieAlexaLune({
                 title={libelleMainsLibres}
                 aria-pressed={mainsLibres}
                 className={cn(
-                  "inline-flex min-h-target min-w-target shrink-0 cursor-pointer items-center justify-center rounded-full border transition duration-quick ease-soft",
+                  "inline-flex min-h-target shrink-0 cursor-pointer items-center justify-center gap-2 rounded-md border px-3 transition duration-quick ease-soft",
                   mainsLibres
                     ? "border-ai-500 bg-ai-50 text-ai-600"
                     : "cursor-pointer border-night-rule bg-transparent text-night-ink-soft hover:bg-chrome-survol hover:text-night-ink",
                 )}
               >
                 <Icone nom="jarvis" taille={16} />
+                <span className="font-ui text-label">{libelleMainsLibres}</span>
               </button>
 
               {/* L'ENVOI — géométrie de la référence, émeraude quand actif. */}

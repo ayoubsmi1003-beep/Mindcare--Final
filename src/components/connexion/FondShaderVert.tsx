@@ -289,7 +289,7 @@ export function FondShaderVert(): React.JSX.Element {
       depth: false,
       stencil: false,
       powerPreference: "low-power",
-    }) as WebGLRenderingContext | null;
+    });
     if (gl === null) {
       canvas.dataset["echec"] = "webgl";
       return;

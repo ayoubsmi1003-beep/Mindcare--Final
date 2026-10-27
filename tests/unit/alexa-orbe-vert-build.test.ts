@@ -29,7 +29,7 @@ describe("orbe vert servi", () => {
   it("le CSS servi contient la classe ava-orb (preset vert)", async () => {
     if (!(await reachable())) return;
     const html = await (await fetch(`${BASE}/jarvis`, { signal: AbortSignal.timeout(60_000) })).text();
-    const hrefs = [...html.matchAll(/href="([^"]+\.css)"/g)]
+    const hrefs = [...html.matchAll(/href="([^"]+\.css(?:\?[^\"]*)?)"/g)]
       .map((m) => m[1])
       .filter((h): h is string => typeof h === "string");
     expect(hrefs.length).toBeGreaterThan(0);

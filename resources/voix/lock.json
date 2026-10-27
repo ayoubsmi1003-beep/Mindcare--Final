@@ -1,12 +1,11 @@
 {
-  "schema": 1,
+  "schema": 2,
   "platform": "win32",
   "architecture": "x64",
   "python": {
     "version": "3.12.14",
     "origin": "Codex bundled CPython runtime; PSF license retained; independently qualify distribution",
-    "exe": "372c2eae555b344520bf147be0096e009069aeca4e7f78d6aecea6d53158056a",
-    "dll": "c1ce6d603041759061139f482c4b90c4ac9db676e30abf52fda66a794aab1bd0"
+    "exe": "372c2eae555b344520bf147be0096e009069aeca4e7f78d6aecea6d53158056a"
   },
   "wheels": [
     {
@@ -15,13 +14,6 @@
       "url": "https://files.pythonhosted.org/packages/5c/cf/fd94fe40ad555906528fcc93b571674cab79a40251d20694aaa8b4a17ecb/pywhispercpp-1.5.1-cp312-cp312-win_amd64.whl",
       "sha256": "73a7233a462926ef86aa8d943e1071c2a087a21f78feff16c629385385ab475a",
       "license": "MIT"
-    },
-    {
-      "name": "piper-tts",
-      "version": "1.8.0",
-      "url": "https://files.pythonhosted.org/packages/12/9c/c736d1961cf9ce0655278731b9430df41892ca2ded7b09dabcb340612158/piper_tts-1.8.0-cp39-abi3-win_amd64.whl",
-      "sha256": "5da9bfdb05dfe15da3536859d422e605483ffa6d2b3ec2c5b9593bae6b5aa6a4",
-      "license": "GPL-3.0-or-later"
     },
     {
       "name": "onnxruntime",
@@ -120,55 +112,142 @@
       "url": "https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl",
       "sha256": "4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6",
       "license": null
+    },
+    {
+      "name": "kokoro-onnx",
+      "version": "0.6.1",
+      "url": "https://files.pythonhosted.org/packages/60/e1/a27e5a70a525a5ee1fd5357596f07b724d02ff317f134e86cb6e3d9db968/kokoro_onnx-0.6.1-py3-none-any.whl",
+      "sha256": "50c8de4950d601df41428ee5462a48c8a78bef441bf671f2492e070ef44d8a32",
+      "license": "MIT"
+    },
+    {
+      "name": "espeakng-loader",
+      "version": "0.2.4",
+      "url": "https://files.pythonhosted.org/packages/9d/ed/a3d872fbad4f3a3f3db0e8c31768ab14e77cd77306de16b8b20b1e1df7ea/espeakng_loader-0.2.4-py3-none-win_amd64.whl",
+      "sha256": "41f1e08ac9deda2efd1ea9de0b81dab9f5ae3c4b24284f76533d0a7b1dd7abd7",
+      "license": "GPL-3.0-or-later (espeak-ng runtime)"
+    },
+    {
+      "name": "phonemizer",
+      "version": "3.4.0",
+      "url": "https://files.pythonhosted.org/packages/37/41/09bafd0ccf4f4ddd1530c9f9d10e75a24056e10e120b9daa97f691fcabc3/phonemizer-3.4.0-py3-none-any.whl",
+      "sha256": "5ff1215d0efa3606dd1b92449f6d71b5c1741efcc84c6d40c17bfaf64f6ded5f",
+      "license": "GPL-3.0-or-later"
+    },
+    {
+      "name": "joblib",
+      "version": "1.6.0",
+      "url": "https://files.pythonhosted.org/packages/18/53/84099323c2ec4be98d935f63c033ac4151ee83836ca1050ede3b3aadf155/joblib-1.6.0-py3-none-any.whl",
+      "sha256": "3dbbf9f6e4b592a2357b854608e980fe6390d131d7a82f011a377ef2ebef7aba",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "name": "cloudpickle",
+      "version": "3.1.2",
+      "url": "https://files.pythonhosted.org/packages/88/39/799be3f2f0f38cc727ee3b4f1445fe6d5e4133064ec2e4115069418a5bb6/cloudpickle-3.1.2-py3-none-any.whl",
+      "sha256": "9acb47f6afd73f60dc1df93bb801b472f05ff42fa6c84167d25cb206be1fbf4a",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "name": "attrs",
+      "version": "26.1.0",
+      "url": "https://files.pythonhosted.org/packages/64/b4/17d4b0b2a2dc85a6df63d1157e028ed19f90d4cd97c36717afef2bc2f395/attrs-26.1.0-py3-none-any.whl",
+      "sha256": "c647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309",
+      "license": "MIT"
+    },
+    {
+      "name": "dlinfo",
+      "version": "2.0.0",
+      "url": "https://files.pythonhosted.org/packages/da/90/022c79d6e5e6f843268c10b84d4a021ee3afba0621d3c176d3ff2024bfc8/dlinfo-2.0.0-py3-none-any.whl",
+      "sha256": "b32cc18e3ea67c0ca9ca409e5b41eed863bd1363dbc9dd3de90fedf11b61e7bc",
+      "license": "MIT"
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.16.0",
+      "url": "https://files.pythonhosted.org/packages/49/d3/b8441a820a491ddfc024b0b0cf0393375b75ea13866d9c66727e54c2fc80/typing_extensions-4.16.0-py3-none-any.whl",
+      "sha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8",
+      "license": "PSF-2.0"
+    },
+    {
+      "name": "vosk",
+      "version": "0.3.45",
+      "url": "https://files.pythonhosted.org/packages/c0/4c/deb0861f7da9696f8a255f1731bb73e9412cca29c4b3888a3fcb2a930a59/vosk-0.3.45-py3-none-win_amd64.whl",
+      "sha256": "6994ddc68556c7e5730c3b6f6bad13320e3519b13ce3ed2aa25a86724e7c10ac",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "cffi",
+      "version": "2.1.1",
+      "url": "https://files.pythonhosted.org/packages/d9/79/615cc094e2fb508cade7de88d3b4f6c4ec2bab695c97bce9153dc65aadf5/cffi-2.1.1-cp312-cp312-win_amd64.whl",
+      "sha256": "f53e442b08449d42821fa4a4fba000095af9f62742a500f978a9f557ec44339a",
+      "license": "MIT"
+    },
+    {
+      "name": "pycparser",
+      "version": "3.12",
+      "url": "https://files.pythonhosted.org/packages/b6/ae/315bbeee126a769cbde43cf4908acb4b40408d8bf8bbf334dd7368d8dadf/pycparser-3.12-py3-none-any.whl",
+      "sha256": "a076f3f489b39b43ed13563a1dafe42447445bec2e294154ec5c57fcdda4c85e",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "name": "srt",
+      "version": "3.5.3",
+      "url": "https://files.pythonhosted.org/packages/66/b7/4a1bc231e0681ebf339337b0cd05b91dc6a0d701fa852bb812e244b7a030/srt-3.5.3.tar.gz",
+      "sha256": "4884315043a4f0740fd1f878ed6caa376ac06d70e135f306a6dc44632eed0cc0",
+      "license": "MIT"
+    },
+    {
+      "name": "websockets",
+      "version": "17.3",
+      "url": "https://files.pythonhosted.org/packages/f7/e8/e52953a8280a1e51cb9307218443f68c8f4dc4b9952db6021d5c12d03c0f/websockets-17.3-cp312-cp312-win_amd64.whl",
+      "sha256": "6644eecd99c4e8cdf72e646e17b391bb70b054f44becde37dcdc48cbec7e1527",
+      "license": "BSD-3-Clause"
     }
   ],
   "assets": [
     {
       "repository": "ggerganov/whisper.cpp",
       "revision": "5359861c739e955e79d9a303bcbc70fb988958b1",
-      "path": "ggml-base.bin",
-      "sha256": "60ed5bc3dd14eea856493d334349b405782ddcaf0028d4b5df4088345fba2efe",
-      "bytes": 147951465
+      "path": "ggml-large-v3-turbo-q5_0.bin",
+      "sha256": "394221709cd5ad1f40c46e6031ca61bce88931e6e088c188294c6d5a55ffa7e2",
+      "bytes": 574041195,
+      "license": "MIT"
     },
     {
-      "repository": "rhasspy/piper-voices",
-      "revision": "c10ece1aade47bb51c153c893d14e5bf8e5b7117",
-      "path": "fr/fr_FR/siwis/medium/fr_FR-siwis-medium.onnx",
-      "sha256": "641d1ab097da2b81128c076810edb052b385decc8be3381814802a64a73baf99",
-      "bytes": 63201294
+      "repository": "thewh1teagle/kokoro-onnx",
+      "revision": "model-files-v1.1",
+      "path": "kokoro-v1.0.fp16.onnx",
+      "sha256": "f3a290d384fbb27966d462905c71a46cef9e5fd00516b40df32a0b4afe77ac96",
+      "bytes": 163527961,
+      "license": "Apache-2.0 (weights); MIT (export)"
     },
     {
-      "repository": "rhasspy/piper-voices",
-      "revision": "c10ece1aade47bb51c153c893d14e5bf8e5b7117",
-      "path": "ar/ar_JO/kareem/low/ar_JO-kareem-low.onnx",
-      "sha256": "2887e9d68b125965c747e1371fa21e1cef19555ea98d0795a0d5d71188b13890",
-      "bytes": 63201294
+      "repository": "thewh1teagle/kokoro-onnx",
+      "revision": "model-files-v1.1",
+      "path": "voices-v1.0.bin",
+      "sha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d",
+      "bytes": 28214398,
+      "license": "CC-BY 4.0 ff_siwis"
     },
     {
-      "repository": "rhasspy/piper-voices",
-      "revision": "c10ece1aade47bb51c153c893d14e5bf8e5b7117",
-      "path": "fr/fr_FR/siwis/medium/fr_FR-siwis-medium.onnx.json",
-      "blob": "ecb3b00cc2fc9e72ba9c5dcc5edeb717a05fa9aa",
-      "sha256": "39479916c2db192b5ac9764daddd0c744d83e023ad890c6976c0633ae4df8959",
-      "bytes": 4875
-    },
-    {
-      "repository": "rhasspy/piper-voices",
-      "revision": "c10ece1aade47bb51c153c893d14e5bf8e5b7117",
-      "path": "ar/ar_JO/kareem/low/ar_JO-kareem-low.onnx.json",
-      "blob": "a7bc6151531951e493369c83039be831c313595e",
-      "sha256": "da328e52896826135508f797c1c77b45b35117e967c71befc377d654f100f328",
-      "bytes": 5022
+      "repository": "alphacep/vosk-api",
+      "revision": "vosk-model-small-fr-0.22",
+      "path": "vosk-model-small-fr-0.22.zip",
+      "sha256": "cabf6180e177eb9b3a9a9d43a437bd5e549f3a7d09525e5d69a3fed787be12ad",
+      "bytes": 42233323,
+      "license": "Apache-2.0"
     }
   ],
   "licenses": {
     "whisper": "MIT",
     "binding": "MIT",
-    "piper": "GPL-3.0-or-later",
-    "frVoice": "https://huggingface.co/rhasspy/piper-voices/blob/c10ece1aade47bb51c153c893d14e5bf8e5b7117/fr/fr_FR/siwis/medium/MODEL_CARD",
-    "arVoice": "https://huggingface.co/rhasspy/piper-voices/blob/c10ece1aade47bb51c153c893d14e5bf8e5b7117/ar/ar_JO/kareem/low/MODEL_CARD",
-    "piperSource": "https://github.com/OHF-Voice/piper1-gpl/tree/v1.8.0",
-    "bindingSource": "https://github.com/absadiki/pywhispercpp/tree/v1.5.1",
-    "redistribution": "Retain all upstream LICENSE/COPYING/NOTICE files and provide corresponding source for GPL components before external distribution."
+    "kokoroWeights": "Apache-2.0",
+    "kokoroVoiceFr": "CC-BY 4.0 (SIWIS / ff_siwis)",
+    "vosk": "Apache-2.0",
+    "espeak": "GPL-3.0-or-later",
+    "piper": "retiré — plus distribué",
+    "openWakeWordAlexaModel": "retiré — CC BY-NC-SA incompatible avec une distribution clinique commerciale",
+    "redistribution": "Retain all upstream LICENSE/COPYING/NOTICE files and provide corresponding source for GPL components (espeak-ng and phonemizer) before external distribution."
   }
 }

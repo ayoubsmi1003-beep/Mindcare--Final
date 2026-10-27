@@ -11,7 +11,8 @@ it('answers quoted treatment instructions as a safety question before any action
  const general=vi.fn<typeof inferGeneralAlexa>(async()=>({ok:false,code:'unavailable',localFallback:true}));
  const calls:string[]=[],events:AlexaEvent[]=[];
  const input:TurnInput={text,conversationId:'native-quoted-policy',clientTurnId:crypto.randomUUID(),appContext:{patientId:null,page:'/jarvis'}};
- const dependencies:OrchestratorDependencies={actor:'native-quoted-policy',db:{rpc},knowledge:{rpc} as unknown as ClientSql,native:true,agentInfer:infer,general,agentObserve:call=>calls.push(call.name)};
+  const knowledgeRpc: ClientSql['rpc'] = async () => { throw new Error('A quoted safety question must not read the database'); };
+  const dependencies:OrchestratorDependencies={actor:'native-quoted-policy',db:{rpc},knowledge:{rpc:knowledgeRpc},native:true,agentInfer:infer,general,agentObserve:call=>calls.push(call.name)};
  await runAlexa(input,dependencies,event=>events.push(event),new AbortController().signal);
  const answer=events.filter(event=>event.type==='sentence').map(event=>event.text).join(' ');
  expect(infer).not.toHaveBeenCalled();expect(general).not.toHaveBeenCalled();expect(rpc).not.toHaveBeenCalled();

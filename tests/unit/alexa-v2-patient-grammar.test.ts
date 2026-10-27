@@ -39,6 +39,14 @@ describe("Alexa patient identity grammar stays local and explicit", () => {
     ["Le dossier de Riad Khelifi contient-il un numéro de CNI ?", "Riad Khelifi"],
     ["Cherche la phrase « SUBJ-011-S01 » dans le Subjectif de Amina Meziane.", "Amina Meziane"],
     ["Cherche le code « SUBJ-015-S01 » dans la partie subjective de Dounia Ghani.", "Dounia Ghani"],
+    ["Dans le dossier d’Ayoub Salmi, ajoute uniquement une date de fin au traitement ZOLOFT 25 mg : 27/10/2026.", "Ayoub Salmi"],
+    ["Pour Amel Bensaid, retire la date de fin du traitement Sertraline.", "Amel Bensaid"],
+    ["Le traitement de Lina Ziani : fixe la fréquence de Sertraline à une fois par jour.", "Lina Ziani"],
+    ["Pour Saliha Abdelkarim, fixe la dose de Sertraline à 50 mg.", "Saliha Abdelkarim"],
+    ["Pour Salah Eddine Abassi, change uniquement la date de fin du traitement Zoloft au 27/10/2026.", "Salah Eddine Abassi"],
+    ["Le traitement de Tassadit Aguelmin : arrête la Sertraline.", "Tassadit Aguelmin"],
+    ["Pour Wafa Aksas, retire uniquement la date de fin du Zoloft.", "Wafa Aksas"],
+    ["Stoppe uniquement le traitement Sertraline de Khalil Ait Said.", "Khalil Ait Said"],
   ])("extracts only the stated patient name: %s", (text, name) => {
     expect(parsePatientMention(text)).toEqual({ status: "named", name });
   });

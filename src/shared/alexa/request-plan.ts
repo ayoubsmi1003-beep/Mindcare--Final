@@ -39,7 +39,10 @@ export interface RequestPlan extends WorkingReference {
 
 export function requestedConsultationCount(text: string): number | null {
   const normalized = text.normalize("NFKD").replace(/\p{M}/gu, "").toLowerCase();
-  return requestedCount(normalized) ?? (/\b(?:la|une)\s+(?:toute\s+)?(?:derniere|premiere)\s+(?:consultation|seance)\b/u.test(normalized) ? 1 : null);
+  const explicit = requestedCount(normalized);
+  if (explicit !== null) return explicit;
+  const latestVisit = /\b(?:(?:la|le|sa|son|une)\s+)?(?:toute\s+)?(?:derniere?|premiere?)\s+(?:consultation|seance|visite|rendez[- ]?vous|rdv)\b|\b(?:(?:consultation|seance|visite|rendez[- ]?vous|rdv)\s+(?:la\s+)?plus\s+recente|(?:la|le|sa|son)\s+plus\s+recente\s+(?:consultation|seance|visite|rendez[- ]?vous|rdv))\b/u;
+  return latestVisit.test(normalized) ? 1 : null;
 }
 export function requestsOldestConsultations(text: string): boolean {
   return /\b(?:premieres?|premiers?)\s+(?:consultations?|seances?)\b/u.test(text.normalize("NFKD").replace(/\p{M}/gu, "").toLowerCase());

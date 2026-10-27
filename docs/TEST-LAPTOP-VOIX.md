@@ -1,76 +1,78 @@
 # Tester Alexa voix sur le laptop (micro) — 2026-10-25
 
-But : récupérer ce dépôt sur le laptop et tester la voix complète :
-mot de réveil « Alexa », réponse MiniCPM locale, transcription Whisper,
-synthèse Piper/Cloud, lecture automatique des réponses.
+But : tester la chaîne vocale **entièrement locale** : transcription Whisper
+large-v3-turbo, lecture Kokoro `ff_siwis`, mot de réveil Vosk « Alexa ».
+Aucun Gemini, Groq, ElevenLabs ou service cloud n'est utilisé pour la voix.
 
 ## 1. Récupérer le dépôt
 
 ```powershell
 git clone https://github.com/ayoubsmi1003-beep/Mindcare--Final.git
 cd Mindcare--Final
-git checkout v7-design
-git lfs pull   # OBLIGATOIRE : Whisper (~148 Mo) + Piper FR/AR (~63 Mo x2)
+git checkout codex/voice-kokoro-large-v3-turbo
+git lfs pull   # modèles Whisper/Kokoro/Vosk si le dépôt les stocke en LFS
 ```
 
-Sans `git lfs pull`, `resources/voix/assets/` est vide et la voix locale
-refuse de démarrer (`configuration: assets`) — c'est un garde-fou, pas une panne.
+Les modèles peuvent aussi être préparés avec :
+
+```powershell
+node scripts/preparer-voix-native.mjs --repair
+```
+
+Cette commande vérifie les tailles et SHA-256 avant d'activer un fichier. Un
+téléchargement interrompu reste en `.part` et n'est jamais considéré comme
+installé.
 
 ## 2. Installer
 
 ```powershell
-pnpm install   # postinstall : runtime openWakeWord -> public/wakeword/ort/
-node scripts/sync-wakeword-runtime.mjs   # repli si postinstall sauté
-node scripts/preparer-voix-native.mjs --check   # vérifie SHA-256 du bundle
+pnpm install
+node scripts/preparer-voix-native.mjs --check
+node scripts/verifier-voix-locale.mjs
 ```
 
-Modèles épinglés (ne jamais remplacer sans décision humaine) :
-- Raisonnement : `MiniCPM-V-4_7-1B-Q4_K_M.gguf` (`src/server/alexa/model-policy.ts`)
-- STT local : `ggml-base.bin` (Whisper, `resources/voix/assets/`)
-- TTS local : `fr_FR-siwis-medium.onnx` + `ar_JO-kareem-low.onnx` (Piper)
-- Réveil : openWakeWord `alexa` (`public/wakeword/`, régénéré par postinstall)
-- Référence : `docs/RUNTIME-CONFIGURATION.md` (SHA-256, recettes)
+Modèles actifs :
 
-## 3. Configurer (serveur uniquement, jamais `NEXT_PUBLIC_*`)
+- STT : `ggml-large-v3-turbo-q5_0.bin` (574 041 195 o)
+- TTS : `kokoro-v1.0.fp16.onnx` + `voices-v1.0.bin`, voix `ff_siwis`
+- Réveil : `vosk-model-small-fr-0.22` (Apache-2.0)
+- Runtime : CPython 3.12.14 embarqué, `pywhispercpp 1.5.1`, `kokoro-onnx 0.6.1`,
+  `vosk 0.3.45`
 
-Ne copiez JAMAIS le `.env` du poste principal. Sur le laptop, base locale
-vide ou jetable + clés personnelles uniquement :
+## 3. Configurer (serveur uniquement, aucun secret voix)
 
 ```powershell
-$env:MINDCARE_DATABASE_URL="postgres://..."
 $env:ALEXA_LOCAL_VOICE="true"
-$env:ALEXA_NATIVE_AGENT_ENABLED="1"
+$env:MINDCARE_DATABASE_URL="postgres://..."   # base jetable uniquement
 ```
 
-`ALEXA_LOCAL_VOICE=true` est aussi le défaut du code : l'omettre garde la
-voix locale active. Détails : `.env.example`, `docs/RUNTIME-CONFIGURATION.md`.
+Ne copiez jamais le `.env` du poste principal. Aucune clé voix n'est requise.
 
 ## 4. Lancer et tester au micro
 
 ```powershell
 pnpm dev
-# ouvrir http://localhost:3000/jarvis
+# http://localhost:3000/jarvis
 ```
 
-1. Autoriser le micro (icône navigateur) — sans geste, le navigateur bloque l'audio.
-2. Cliquer **« Parler à Alexa »** : parler, faire une pause → transcription → réponse.
-3. Cliquer **« Mains-libres »** : dire « Alexa » → accusé « Oui docteur… » →
-   parler → envoi instantané → réponse lue à voix haute.
-4. **Lecture automatique** : chaque réponse texte se lit seule (bouton
-   « Couper la lecture automatique » en haut du fil pour muet persistant).
-   Les réponses nommant un dossier ne sont JAMAIS lues via le cloud
-   (bouton lecture par bulle = synthèse locale/refus, règle 18-07).
-5. Nouvelle demande ou **Stop** coupe la lecture en cours.
+1. Autoriser le micro.
+2. Cliquer **« Parler à Alexa »** : la première préparation peut prendre
+   plusieurs minutes sur un CPU lent (chargement du grand modèle + test réel).
+3. Parler, faire une pause → transcription locale → réponse Kokoro.
+4. Cliquer **« Mains-libres »** : dire « Alexa » → Vosk détecte → capture →
+   Whisper → réponse Kokoro.
+5. Le bouton de lecture reste explicite ; les réponses sont lues à voix haute
+   par défaut.
 
-## 5. Pannes connues (pas des bugs)
+## 5. Pannes connues
 
 | Symptôme | Cause | Action |
 |---|---|---|
-| `configuration: assets/hash` | LFS non tiré | `git lfs pull` |
-| Orbe « voix locale indisponible » | `ALEXA_VOICE_*` faux chemin | chemins absolus, lettre de lecteur, pas réseau |
-| `lectureBloquee` / silence après clic | autoplay sans geste | cliquer une fois dans la page d'abord |
-| Transcription vide | micro pris par une autre app | fermer l'autre app, réarmer |
-| 15 min sans voix → arrêt | économie micro, normal | réactiver Mains-libres |
+| Préparation très longue | grand modèle sur CPU lent | attendre ; ne pas cliquer plusieurs fois |
+| `configuration: modele` | modèle absent/corrompu | `node scripts/preparer-voix-native.mjs --repair` puis vérifier |
+| `La voix locale est indisponible` | worker non initialisé, chemin packaged ou asset invalide | consulter `jarvis-voice-session` action `status` et les logs locaux |
+| Le mot de réveil ne part pas | micro refusé/débranché, Vosk absent | vérifier la confidentialité Windows, le statut Mains-libres, relancer |
+| Réponse arabe non lue | Kokoro v1.0 n'a pas de voix arabe | le texte reste affiché ; aucune voix française ne doit lire l'arabe |
 
-Aucune donnée patient réelle sur le laptop : base jetable uniquement
-(voir `AGENTS.md` §9). Micro : témoin orbe + interrupteur OFF toujours visible.
+Aucune transcription ni audio patient n'est journalisé. Base jetable
+uniquement sur le laptop (AGENTS.md §9).

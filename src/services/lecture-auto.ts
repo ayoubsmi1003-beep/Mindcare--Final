@@ -8,8 +8,8 @@
  * · le corps de réponse seul est lisible (preuves, sources, cartes,
  *   statuts, erreurs et interruptions exclus — décidé par l'appelant via
  *   le texte qu'il passe, comme la lecture manuelle par bulle) ;
- * · un texte à identité (`porteUneIdentite`) n'est JAMAIS envoyé au TTS
- *   tiers — refus silencieux ici, motif affiché par l'appelant existant ;
+ * · la voix est locale: un texte à identité est lu comme les autres, sans
+ *   franchir de fournisseur tiers ;
  * · jamais de lecture d'historique au chargement : seules les réponses
  *   arrivées APRÈS le montage sont candidates ;
  * · toute nouvelle demande coupe la lecture en cours (appelant : sur
@@ -24,6 +24,8 @@ export interface CandidatLectureAuto {
   readonly texte: string;
   readonly porteUneIdentite?: boolean;
   readonly interrompu?: boolean;
+  /** A voice loop already spoke this turn; the UI must not play it twice. */
+  readonly dejaParlee?: boolean;
 }
 
 const CLE_PREFERENCE = "mindcare.alexa.lecture-auto";
@@ -62,8 +64,9 @@ export function fautLireAuto(
   if (!opts.conversationChargee) return false;
   if (tour.role !== "jarvis") return false;
   if (tour.interrompu === true) return false;
-  // Identité : refus inchangé — aucun nom de dossier vers le TTS tiers.
-  if (tour.porteUneIdentite === true) return false;
+  if (tour.dejaParlee === true) return false;
+  // La synthèse est locale: un nom de dossier ne franchit plus de frontière
+  // fournisseur. Il n'y a donc plus de raison de rendre la réponse muette.
   const texte = tour.texte.trim();
   if (texte === "" || texte.length > 2000) return false;
   return true;

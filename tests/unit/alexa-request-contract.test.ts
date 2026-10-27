@@ -1,5 +1,6 @@
 import {expect,it} from 'vitest';
-import {constrainCountDeclaration,countContractHints,countContractParts,explicitFrenchComparedMonthRanges,frenchPatientCompoundContract,frenchPatientCountContract,frenchReadArgumentBindings,frenchRequestAdmission,frenchRequestedOutputs,isFrenchAlexaCapabilityQuestion,requestedCountRead,requestedReadTool} from '@/shared/alexa/request-contract';
+import {constrainCountDeclaration,countContractHints,countContractParts,explicitFrenchComparedMonthRanges,explicitFrenchDayRange,explicitFrenchDateRange,frenchPatientCompoundContract,frenchPatientCountContract,frenchReadArgumentBindings,frenchRequestAdmission,frenchRequestedOutputs,isFrenchAlexaCapabilityQuestion,requestedCountRead,requestedReadTool} from '@/shared/alexa/request-contract';
+import {parsePatientMention} from '@/shared/alexa/patient-mention';
 import type {RequestPart,SupportedCondition} from '@/shared/alexa/agent';
 const part=(conditions:SupportedCondition[]):RequestPart=>({id:'p',goal:'Nombre',tools:['query_patients'],conditions,dependsOn:[],status:'pending',resultRefs:[]});
 it.each([
@@ -92,9 +93,28 @@ it('routes a named last-consultation summary to exactly the latest visit',()=>{
  const admission=frenchRequestAdmission('Résume la dernière consultation de Amel Bensaid.',false);
  expect(admission).toMatchObject({tools:['get_patient_context'],patientSection:'summary',consultationCount:1});
 });
-it('summarizes notes from a named patient latest consultation without asking about signature state',()=>{
+it('reads the requested note sections from a named patient latest consultation without asking about signature state',()=>{
  const admission=frenchRequestAdmission('Lis les notes de la dernière consultation de Amel Bensaid.',false);
- expect(admission).toMatchObject({tools:['get_patient_context'],patientSection:'summary',consultationCount:1});
+ expect(admission).toMatchObject({tools:['get_patient_context'],patientSection:'notes'});
+ expect(admission).not.toHaveProperty('consultationCount');
+ expect(admission).not.toHaveProperty('consultationStatus');
+});
+it.each([
+ ['Résume la dernière consultation de Salmi Ayoub.','Salmi Ayoub'],
+ ['Fais-moi un résumé du dernier rendez-vous de Ayoub Salmi.','Ayoub Salmi'],
+ ['Peux-tu me résumer sa consultation la plus récente, dossier de Belkacem Nadia ?','Belkacem Nadia'],
+ ['Donne-moi les notes de la dernière consultation de Belkacem Nadia.','Belkacem Nadia'],
+ ['Qu’est-ce qui a été noté pendant la séance la plus récente de Nadia Belkacem ?','Nadia Belkacem'],
+ ['Raconte-moi brièvement la dernière séance du patient Ayoub Salmi.','Ayoub Salmi'],
+ ['Un petit résumé de la dernière visite de Salmi Ayoub, s’il te plaît.','Salmi Ayoub'],
+ ['Qu’est-ce qui ressort de la dernière consultation de Salmi Ayoub ?','Salmi Ayoub'],
+ ['Peux-tu m’expliquer la séance la plus récente de Ayoub Salmi ?','Ayoub Salmi'],
+ ['Fais le compte rendu du dernier rendez-vous de Belkacem Nadia.','Belkacem Nadia'],
+])('understands varied French requests for the latest patient visit without a signature question: %s',(text,name)=>{
+ const admission=frenchRequestAdmission(text,false);
+ expect(parsePatientMention(text)).toEqual({status:'named',name});
+ const notesRequested=/\bnotes?\b/u.test(text.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase());
+ expect(admission).toMatchObject({tools:['get_patient_context'],patientSection:notesRequested?'notes':'summary',...(notesRequested?{}:{consultationCount:1})});
  expect(admission).not.toHaveProperty('consultationStatus');
 });
 it('keeps full note transcription available only when the user explicitly asks for it',()=>{
@@ -127,6 +147,33 @@ it.each([
  ['du 01/09/2026 au 30/09/2026',{from:'2026-09-01T00:00:00+01:00',to:'2026-10-01T00:00:00+01:00'}],
 ])('keeps explicit civil date ranges and the requested consultation date axis: %s',(period,range)=>{
  expect(frenchRequestAdmission(`Compte les consultations du dossier courant selon la date de clôture ${period}.`,false,'2026-10-25T12:00:00+01:00')).toMatchObject({tools:['query_consultations'],consultationMode:'count',consultationStatus:'closed',dateAxis:'ended_at',...range});
+});
+it.each([
+ 'Les consultations du 15 octobre.',
+ 'Montre les consultations le 15 octobre.',
+ 'Liste les séances de 15 octobre.',
+ 'Les consultations du 15/10.',
+ 'Les consultations du quinze octobre.',
+])('binds a day and month without a year to one cabinet date for %s',text=>{
+ if(text.includes('quinze'))expect(explicitFrenchDayRange(text,'2026-10-26T12:00:00+01:00')).toEqual({from:'2026-10-15T00:00:00+01:00',to:'2026-10-16T00:00:00+01:00'});
+ expect(parsePatientMention(text)).toEqual({status:'none'});
+ expect(frenchRequestAdmission(text,false,'2026-10-26T12:00:00+01:00')).toMatchObject({tools:['query_consultations'],from:'2026-10-15T00:00:00+01:00',to:'2026-10-16T00:00:00+01:00',dateAxis:'started_at'});
+});
+it.each([
+ 'Compte les consultations entre le 15 octobre et le 20 octobre.',
+ 'Compte les consultations du quinze octobre au vingt octobre.',
+ 'Compte les consultations entre le 15/10 et le 20/10.',
+ 'Liste les séances du 15 au 20 octobre.',
+ 'Compte les consultations entre le quinze et le vingt octobre.',
+])('preserves both ends of a closed consultation date range: %s',text=>{
+ expect(explicitFrenchDateRange(text,'2026-10-26T12:00:00+01:00')).toEqual({from:'2026-10-15T00:00:00+01:00',to:'2026-10-21T00:00:00+01:00'});
+ expect(frenchRequestAdmission(text,false,'2026-10-26T12:00:00+01:00')).toMatchObject({tools:['query_consultations'],consultationMode:text.startsWith('Compte')?'count':'list',from:'2026-10-15T00:00:00+01:00',to:'2026-10-21T00:00:00+01:00',dateAxis:'started_at'});
+});
+it('keeps a year-crossing day range unresolved instead of guessing its year',()=>{
+ const text='Compte les consultations du 15 décembre au 20 janvier.';
+ expect(explicitFrenchDateRange(text,'2026-10-26T12:00:00+01:00')).toBeNull();
+ expect(frenchRequestAdmission(text,false,'2026-10-26T12:00:00+01:00')).toMatchObject({tools:['query_consultations'],unboundedPeriod:false});
+ expect(frenchRequestAdmission(text,false,'2026-10-26T12:00:00+01:00')).not.toHaveProperty('from');
 });
 it('routes documented suspended treatments on the open patient dossier to its treatment reader',()=>{
  expect(frenchRequestAdmission('Quels traitements suspendus sont documentés ?',false)).toMatchObject({tools:['get_patient_context'],patientSection:'treatments',treatmentState:'paused'});
@@ -226,6 +273,26 @@ it('splits a French shared-verb list into reads for each explicitly named patien
  ]);
  expect(outputs!.map(goal=>requestedReadTool(goal,text))).toEqual(['get_patient_context','get_patient_context','query_consultations']);
  expect(frenchRequestedOutputs('Donne le téléphone et la date de naissance de Amel Bensaid.')).toBeNull();
+});
+it.each([
+ ['Pour Ayoub Salmi, montre les ordonnances et les certificats médicaux, puis résume ses traitements en cours.',[
+  'Pour Ayoub Salmi, montre l’ordonnance.',
+  'Pour Ayoub Salmi, montre le certificat médical.',
+  'Pour Ayoub Salmi, résume ses traitements en cours.',
+ ],['query_documents','query_documents','get_patient_context']],
+ ['Peux-tu ouvrir l’ordonnance et le certificat médical de Ghizlene Abaci ?',[
+  'Pour Ghizlene Abaci, montre l’ordonnance.',
+  'Pour Ghizlene Abaci, montre le certificat médical.',
+ ],['query_documents','query_documents']],
+ ['Affiche les certificats médicaux, les justificatifs et les suivis médicaux pour Wafa Aksas.',[
+  'Pour Wafa Aksas, montre le certificat médical.',
+  'Pour Wafa Aksas, montre la justification.',
+  'Pour Wafa Aksas, montre le certificat de suivi médical.',
+ ],['query_documents','query_documents','query_documents']],
+])('separates each requested document type from other requested results without losing the patient: %s',(text,expected,tools)=>{
+ const outputs=frenchRequestedOutputs(text);
+ expect(outputs).toEqual(expected);
+ expect(outputs!.map(goal=>requestedReadTool(goal,text))).toEqual(tools);
 });
 it('preserves additional requested compound predicates beyond a recognized missing-field hint',()=>{
  const conditions:SupportedCondition[]=[{field:'identity_card',op:'missing',value:null},{field:'completed_consultations',op:'gte',value:3}];

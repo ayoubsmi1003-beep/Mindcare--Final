@@ -9,7 +9,7 @@ import {agendaIdentityText,nativeAgendaStatusContract} from '@/shared/alexa/agen
 import { AgentReadError, conditionKey, patientMetricConditions, queryPatientsSchema, validateLedger } from "@/shared/alexa/agent";
 import {frenchRequestedOutputs,requestedReadTool,frenchRequestAdmission,frenchPatientCompoundContract,frenchPatientCountContract} from '@/shared/alexa/request-contract';
 import {z} from 'zod';
-import type {SupportedCondition} from '@/shared/alexa/agent';
+import type {AgentCall,AgentResult,SupportedCondition} from '@/shared/alexa/agent';
 import type { LocalCompletion } from "@/server/alexa/local-model-protocol";
 
 const id = "11111111-1111-4111-8111-111111111111";
@@ -23,6 +23,90 @@ const noteCases=evalCases.filter(testCase=>testCase.family==="notes_cliniques");
 const generalCases=evalCases.filter(testCase=>testCase.family==="question_generale_llm");
 const diagnosisCases=evalCases.filter(testCase=>testCase.family==="diagnostics_fictifs");
 const agendaCases=evalCases.filter(testCase=>testCase.family==="agenda");
+
+it.each([
+ ['Dans le dossier d’Ayoub Salmi, ajoute uniquement une date de fin au traitement ZOLOFT 25 mg : 27/10/2026.','update_treatment',{treatmentName:'ZOLOFT 25 mg',changes:{endDate:'2026-10-27'}}],
+ ['Pour Amel Bensaid, retire la date de fin du traitement Sertraline.','update_treatment',{treatmentName:'Sertraline',changes:{endDate:null}}],
+ ['Le traitement de Lina Ziani : fixe la fréquence de Sertraline à une fois par jour.','update_treatment',{treatmentName:'Sertraline',changes:{frequency:'une fois par jour'}}],
+ ['Cesse le Zoloft de Samir Ferhat.','stop_treatment',{treatmentName:'Zoloft'}],
+ ['Pour Saliha Abdelkarim, fixe la dose de Sertraline à 50 mg.','update_treatment',{treatmentName:'Sertraline',changes:{dose:'50 mg'}}],
+ ['Pour Salah Eddine Abassi, change uniquement la date de fin du traitement Zoloft au 27/10/2026.','update_treatment',{treatmentName:'Zoloft',changes:{endDate:'2026-10-27'}}],
+ ['Le traitement de Tassadit Aguelmin : arrête la Sertraline.','stop_treatment',{treatmentName:'Sertraline'}],
+ ['Pour Wafa Aksas, retire uniquement la date de fin du Zoloft.','update_treatment',{treatmentName:'Zoloft',changes:{endDate:null}}],
+ ['Stoppe uniquement le traitement Sertraline de Khalil Ait Said.','stop_treatment',{treatmentName:'Sertraline'}],
+] as const)('lets MiniCPM prepare one grounded treatment action in one call across patients and phrasing: %s',async(text,action,slots)=>{
+ let offered:string[]=[],systemPrompt='';
+ const infer=vi.fn(async(messages:unknown,options:{tools?:readonly {function:{name:string;parameters:Record<string,unknown>}}[];toolChoice?:string;maxOutputTokens?:number})=>{
+  const system=Array.isArray(messages)?messages[0] as {content?:unknown}|undefined:undefined;systemPrompt=typeof system?.content==='string'?system.content:'';
+  offered=options.tools?.map(tool=>tool.function.name)??[];
+  expect(options.toolChoice).toBe('required');
+  expect(options.maxOutputTokens).toBe(1024);
+  const schema=options.tools?.find(tool=>tool.function.name==='prepare_action')?.function.parameters;
+  expect((schema?.['properties'] as Record<string,unknown>)?.['action']).toMatchObject({enum:[action]});
+  return calls([{name:'prepare_action',args:{partIds:['requested_1'],action,...slots}}]);
+ });
+ const execute=vi.fn(async(call:{id:string;name:string;args:Record<string,unknown>})=>({callId:call.id,status:'needs_input' as const,complete:false,patientId:id,text:'Question de vérification avant la proposition.',evidence:[],conditionKeys:[]}));
+ const result=await runAgentLoop({...input,text,conversationId:'single-treatment-tool-'+text.slice(0,14),appContext:{patientId:null,page:'/jarvis'}},{actor:'single-treatment-tool',infer,execute},new AbortController().signal);
+ expect(infer).toHaveBeenCalledTimes(1);
+ expect(systemPrompt).toContain('appelle immédiatement prepare_action');expect(systemPrompt).toContain('aucune écriture');expect(systemPrompt).not.toContain('declare_request');
+ expect(offered).toContain('prepare_action');expect(offered).toContain('ask_doctor');expect(offered).not.toContain('declare_request');
+ expect(execute).toHaveBeenCalledTimes(1);
+ expect(execute.mock.calls[0]?.[0]).toMatchObject({name:'prepare_action',args:{partIds:['requested_1'],action,...slots}});
+ expect(result.status).toBe('needs_input');expect(result.sentences.join(' ')).toContain('Question de vérification');
+});
+
+it('lets MiniCPM ask for a missing treatment value instead of inventing one',async()=>{
+ const text='Pour Ayoub Salmi, change la fréquence du Zoloft.';let offered:string[]=[];
+  const infer=vi.fn(async(_messages:unknown,options:{tools?:readonly {function:{name:string}}[];toolChoice?:string})=>{offered=options.tools?.map(tool=>tool.function.name)??[];expect(options.toolChoice).toBe('required');return calls([{name:'ask_doctor',args:{partIds:['requested_1'],question:'Quelle fréquence souhaitez-vous inscrire ?'}}]);});
+ const execute=vi.fn();
+ const result=await runAgentLoop({...input,text,conversationId:'treatment-missing-slot',appContext:{patientId:null,page:'/jarvis'}},{actor:'treatment-missing-slot',infer,execute},new AbortController().signal);
+ expect(offered).toContain('ask_doctor');expect(offered).toContain('prepare_action');expect(execute).not.toHaveBeenCalled();expect(result.status).toBe('needs_input');expect(result.sentences.join(' ')).toContain('Quelle fréquence');
+});
+
+it('asks which patient before preparing a treatment action when identity is absent',async()=>{
+ const text='Arrête le Zoloft.';let offered:string[]=[];
+  const infer=vi.fn(async(_messages:unknown,options:{tools?:readonly {function:{name:string}}[];toolChoice?:string})=>{offered=options.tools?.map(tool=>tool.function.name)??[];expect(options.toolChoice).toBe('required');return calls([{name:'ask_doctor',args:{partIds:['requested_1'],question:'De quel patient s’agit-il ?'}}]);});
+ const execute=vi.fn();
+ const result=await runAgentLoop({...input,text,conversationId:'treatment-missing-patient'},{actor:'treatment-missing-patient',infer,execute},new AbortController().signal);
+ expect(offered).toContain('ask_doctor');expect(execute).not.toHaveBeenCalled();expect(result.status).toBe('needs_input');expect(result.sentences.join(' ')).toContain('De quel patient');
+});
+
+it('keeps the original patient and treatment action when a missing value arrives in the next turn',async()=>{
+ const text='Pour Ayoub Salmi, change la fréquence du Zoloft.',conversationId='treatment-follow-up-context',actor='treatment-follow-up-context';
+ const ask=await runAgentLoop({...input,text,conversationId},{actor,infer:async()=>calls([{name:'ask_doctor',args:{partIds:['requested_1'],question:'Quelle fréquence souhaitez-vous inscrire ?'}}]),execute:vi.fn()},new AbortController().signal);
+ expect(ask.status).toBe('needs_input');expect(savedAgentTask(actor,conversationId)).toMatchObject({original:text,parts:[{status:'needs_input'}],patientId:null,page:'/jarvis'});
+ let step=0,actionSchema:Record<string,unknown>|undefined,originalSeen:string|undefined,followupContext='';
+ const execute=vi.fn(async(call:AgentCall,_asOf:string,_prior:readonly AgentResult[],_signal:AbortSignal,original?:string):Promise<AgentResult>=>{originalSeen=original;return {callId:call.id,status:'needs_input',complete:false,text:'La fréquence est vérifiée, mais la proposition reste en attente.',evidence:[],conditionKeys:[]};});
+ const result=await runAgentLoop({...input,text:'Une fois par jour',conversationId},{actor,infer:async(messages,options)=>{
+  followupContext=messages.map(message=>message.content??'').join('\n');
+  if(step++===0)return calls([{name:'declare_request',args:{parts:[{id:'p',goal:text,tool:'prepare_action',conditions:[],dependsOn:[]}]}}]);
+  actionSchema=options.tools?.find(tool=>tool.function.name==='prepare_action')?.function.parameters;
+  return calls([{name:'prepare_action',args:{partIds:['p'],action:'update_treatment',treatmentName:'Zoloft',changes:{frequency:'une fois par jour'}}}]);
+ },execute},new AbortController().signal);
+ expect(step).toBe(2);expect((actionSchema?.['properties'] as Record<string,unknown>)?.['action']).toMatchObject({enum:['update_treatment']});
+ expect(execute).toHaveBeenCalledTimes(1);expect(execute.mock.calls[0]?.[0].name).toBe('prepare_action');expect(followupContext).toContain(text);expect(originalSeen).toBeDefined();expect(originalSeen).toContain(text);expect(originalSeen).toContain('Une fois par jour');expect(result.status).toBe('needs_input');
+});
+
+it('uses the selected patient for a natural document follow-up without another model/tool-selection turn',async()=>{
+ const patientId='22222222-2222-4222-8222-222222222222',conversationId='document-follow-up-context',actor='document-follow-up-context';
+ const infer=vi.fn(async()=>calls([{name:'query_documents',args:{partIds:['requested_1'],kind:'ordonnance',patientName:'Ayoub Salmi'}}]));
+ const execute=vi.fn(async(call:AgentCall):Promise<AgentResult>=>({callId:call.id,status:'ok',complete:true,text:'Document vérifié.',patientId,evidence:[],conditionKeys:[],...(call.args['kind']==='certificat_medical'?{navigation:{target:'documents' as const,patientId,documentKind:'certificat_medical' as const}}:{})}));
+ const first=await runAgentLoop({...input,text:'Ordonnance pour Ayoub Salmi.',conversationId,appContext:{patientId:null,page:'/documents'}},{actor,infer,execute},new AbortController().signal);
+ expect(first.patientId).toBe(patientId);
+ const followup=await runAgentLoop({...input,text:'Ouvre aussi son certificat médical.',conversationId,clientTurnId:'22222222-2222-4222-8222-222222222222',appContext:{patientId,page:'/documents'}},{actor,infer,execute},new AbortController().signal);
+ expect(infer).not.toHaveBeenCalled();expect(execute).toHaveBeenCalledTimes(2);
+ expect(execute.mock.calls[1]?.[0]).toMatchObject({name:'query_documents',args:{partIds:['requested_1'],kind:'certificat_medical',patientId}});
+ expect(followup).toMatchObject({status:'completed',navigation:{target:'documents',patientId,documentKind:'certificat_medical'}});
+});
+
+it('keeps compound treatment requests in the normal model-declared ledger flow',async()=>{
+ const text='Cesse le Zoloft de Samir Ferhat et modifie la fréquence de Sertraline chez Lina Ziani.';
+ let offered:string[]=[];
+  const infer=vi.fn(async(_messages:unknown,options:{tools?:readonly {function:{name:string}}[]} )=>{offered=options.tools?.map(tool=>tool.function.name)??[];throw new Error('Stop after checking compound admission');});
+ const execute=vi.fn();
+ await runAgentLoop({...input,text,conversationId:'compound-treatment-not-shortcut'},{actor:'compound-treatment-not-shortcut',infer,execute},new AbortController().signal);
+ expect(infer).toHaveBeenCalledTimes(1);expect(offered).toContain('declare_request');expect(execute).not.toHaveBeenCalled();
+});
 
 it('admits the separate French agenda and finance clauses and recognizes a CNI count',()=>{
  const asOf='2026-10-28T12:00:00+01:00';
@@ -104,14 +188,11 @@ it('serializes reads that synthesize with the one-slot local model',async()=>{
  }},new AbortController().signal);
  expect(result.status).toBe('completed');expect(peak).toBe(1);
 });
-it('does not let a model-chosen count silently narrow a whole-case summary',async()=>{
- let step=0,countOffered=true,executed=0;
- const steps=[calls([{name:'declare_request',args:{parts:[{id:'s',goal:'Résume le cas du patient sélectionné.',tools:['get_patient_context'],conditions:[],dependsOn:[]}]}}]),calls([{name:'get_patient_context',args:{partIds:['s'],section:'summary',count:5}}]),{kind:'answer' as const,text:'',tokensIn:0,tokensOut:0}];
- const result=await runAgentLoop({...input,text:'Résume le cas du patient sélectionné.',conversationId:'whole-case-count'},{actor:'whole-case-count',infer:async(_messages,options)=>{
-  if(step===1){const schema=options.tools?.find(t=>t.function.name==='get_patient_context')?.function.parameters as {properties?:Record<string,unknown>};countOffered=!!schema.properties?.count;}
-  return steps[step++]??{kind:'answer',text:'',tokensIn:0,tokensOut:0};
- },execute:async call=>{executed++;return {callId:call.id,status:'ok',complete:true,text:'Résumé',evidence:[],conditionKeys:[]};}},new AbortController().signal);
- expect(countOffered).toBe(false);expect(executed).toBe(0);expect(result.status).not.toBe('completed');
+it('reads a whole-case summary without exposing an arbitrary consultation limit',async()=>{
+ let inferenceCalls=0;const observed:Record<string,unknown>[]=[];let executed=0;
+ const text='Résume le cas du patient sélectionné.';
+ const result=await runAgentLoop({...input,text,conversationId:'whole-case-count',appContext:{patientId:id,page:'/patients/'+id}},{actor:'whole-case-count',infer:async()=>{inferenceCalls++;throw new Error('The patient summary route is deterministic');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>{executed++;return {callId:call.id,status:'ok',complete:true,text:'Résumé',patientId:id,evidence:[],conditionKeys:[]};}},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);expect(executed).toBe(1);expect(observed).toHaveLength(1);expect(observed[0]).toMatchObject({name:'get_patient_context',args:{section:'summary',patientId:id}});expect(observed[0]?.['args']).not.toHaveProperty('count');expect(result.status).toBe('completed');
 });
 it.each([
  'Quel numéro national est enregistré pour Lina Test ?',
@@ -155,6 +236,58 @@ it('keeps the selected patient and September completion status on a current-peri
  expect(inferenceCalls).toBe(0);
  expect(observed).toEqual([{name:'query_consultations',args:{partIds:['requested_1'],mode:'count',status:'closed',from:'2026-09-01T00:00:00+01:00',to:'2026-10-01T00:00:00+01:00',dateAxis:'started_at',patientId:id}}]);
  expect(result).toMatchObject({status:'completed',parts:[{id:'requested_1',status:'answered',tools:['query_consultations']}]});
+});
+it.each(['Les consultations du 15 octobre.','Montre les consultations le quinze octobre.','Liste les séances de 15/10.'])('reads a one-day consultation list across French date forms: %s',async text=>{
+ let inferenceCalls=0;const observed:Record<string,unknown>[]=[];
+ const result=await runAgentLoop({...input,text,conversationId:'consultations-15-octobre-'+text.slice(0,8),appContext:{patientId:null,page:'/jarvis'}},{actor:'consultations-15-octobre',asOf:'2026-10-26T12:00:00+01:00',infer:async()=>{inferenceCalls++;throw new Error('The bounded read should not require MiniCPM tool selection');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,text:'Le 15 octobre, deux consultations ont été enregistrées : Amel Bensaid et Amina Meziane.',evidence:[{id:'22222222-2222-4222-8222-222222222222',type:'consultation',label:'Amel Bensaid'},{id:'33333333-3333-4333-8333-333333333333',type:'consultation',label:'Amina Meziane'}],conditionKeys:[]})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);
+ expect(observed).toEqual([{name:'query_consultations',args:{partIds:['requested_1'],from:'2026-10-15T00:00:00+01:00',to:'2026-10-16T00:00:00+01:00',dateAxis:'started_at',mode:'list',status:'all'}}]);
+ expect(result).toMatchObject({status:'completed',parts:[{id:'requested_1',status:'answered',tools:['query_consultations']}]});
+ expect(result.sentences.join(' ')).toContain('Amel Bensaid');
+});
+it.each([
+ 'Compte les consultations entre le 15 octobre et le 20 octobre.',
+ 'Combien de consultations du quinze octobre au vingt octobre ?',
+ 'Nombre de séances entre le 15/10 et le 20/10.',
+ 'Combien de consultations du 15 au 20 octobre ?',
+ 'Combien de consultations entre le quinze et le vingt octobre ?',
+])('counts a closed date range with the same exact bounds across French forms: %s',async text=>{
+ let inferenceCalls=0;const observed:Record<string,unknown>[]=[];
+ const result=await runAgentLoop({...input,text,conversationId:'consultation-range-count-'+text.slice(0,8),appContext:{patientId:null,page:'/jarvis'}},{actor:'consultation-range-count',asOf:'2026-10-26T12:00:00+01:00',infer:async()=>{inferenceCalls++;throw new Error('The bounded read should not require MiniCPM tool selection');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,text:'Deux consultations enregistrées.',evidence:[],conditionKeys:[]})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);
+ expect(observed).toEqual([{name:'query_consultations',args:{partIds:['requested_1'],from:'2026-10-15T00:00:00+01:00',to:'2026-10-21T00:00:00+01:00',dateAxis:'started_at',mode:'count',status:'all'}}]);
+ expect(result).toMatchObject({status:'completed',parts:[{id:'requested_1',status:'answered',tools:['query_consultations']}]});
+});
+it('lists a closed consultation date range with a bounded native read and patient names',async()=>{
+ const text='Liste les séances du 15 au 20 octobre.';let inferenceCalls=0;const observed:Record<string,unknown>[]=[];
+ const result=await runAgentLoop({...input,text,conversationId:'consultation-range-list',appContext:{patientId:null,page:'/jarvis'}},{actor:'consultation-range-list',asOf:'2026-10-26T12:00:00+01:00',infer:async()=>{inferenceCalls++;throw new Error('The bounded read should not require MiniCPM tool selection');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,text:'2 consultations : Amel Bensaid et Amina Meziane.',evidence:[{id:'22222222-2222-4222-8222-222222222222',type:'consultation',label:'Amel Bensaid'},{id:'33333333-3333-4333-8333-333333333333',type:'consultation',label:'Amina Meziane'}],conditionKeys:[]})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);
+ expect(observed).toEqual([{name:'query_consultations',args:{partIds:['requested_1'],from:'2026-10-15T00:00:00+01:00',to:'2026-10-21T00:00:00+01:00',dateAxis:'started_at',mode:'list',status:'all'}}]);
+ expect(result.sentences.join(' ')).toContain('Amel Bensaid');expect(result.sentences.join(' ')).toContain('Amina Meziane');
+});
+it('reads an empty selected-patient document period through its exact document gate without MiniCPM',async()=>{
+ const text='Quels documents émis concernent le dossier courant le 1 janvier 1900 ?';let inferenceCalls=0;const observed:Record<string,unknown>[]=[];
+ const result=await runAgentLoop({...input,text,conversationId:'empty-documents-deterministic',appContext:{patientId:id,page:'/patients/'+id}},{actor:'empty-documents-deterministic',asOf:'2026-10-28T12:00:00+01:00',infer:async()=>{inferenceCalls++;throw new Error('A bounded document list should not require MiniCPM tool selection');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'empty',complete:true,patientId:id,text:'Aucun document émis ne correspond à cette date.',data:{total:0,rows:[]},evidence:[],conditionKeys:[]})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);
+ expect(observed).toEqual([{name:'query_documents',args:{partIds:['requested_1'],patientId:id,status:'issued',from:'1900-01-01T00:00:00+01:00',to:'1900-01-02T00:00:00+01:00'}}]);
+ expect(result).toMatchObject({status:'completed',parts:[{id:'requested_1',status:'answered',tools:['query_documents']}]});
+ expect(result.sentences.join(' ')).toContain('Aucun document');
+});
+it.each([
+ ['Quels certificats de bonne santé mentale ont été émis ?',id],
+ ['Quels certificats de bonne santé mentale ont été émis au cabinet ?',null],
+])('uses the selected dossier for an unqualified document list unless the doctor asks cabinet-wide: %s',async(text,patientId)=>{
+ const observed:Record<string,unknown>[]=[];
+ const result=await runAgentLoop({...input,text,conversationId:'document-scope-'+(patientId?'selected':'cabinet'),appContext:{patientId:id,page:'/patients/'+id}},{actor:'document-scope',asOf:'2026-10-28T12:00:00+01:00',infer:async()=>{throw new Error('A bounded document list should not require MiniCPM');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'empty',complete:true,text:'Aucun document ne correspond à cette demande.',data:{total:0,rows:[]},evidence:[],conditionKeys:[]})},new AbortController().signal);
+ expect(observed).toEqual([{name:'query_documents',args:{partIds:['requested_1'],...(patientId?{patientId}:{}),kind:'bonne_sante_mentale',status:'issued'}}]);
+ expect(result.status).toBe('completed');
+});
+it('asks for the year instead of silently reading all consultations for an unresolved range',async()=>{
+ const text='Compte les consultations du 15 décembre au 20 janvier.';const infer=vi.fn(),execute=vi.fn();
+ const result=await runAgentLoop({...input,text,conversationId:'unresolved-date-range',appContext:{patientId:null,page:'/jarvis'}},{actor:'unresolved-date-range',asOf:'2026-10-26T12:00:00+01:00',infer,execute},new AbortController().signal);
+ expect(infer).not.toHaveBeenCalled();expect(execute).not.toHaveBeenCalled();
+ expect(result.status).toBe('needs_input');expect(result.sentences.join(' ')).toMatch(/préciser|dates|année/iu);
+ expect(savedAgentTask('unresolved-date-range','unresolved-date-range')).toMatchObject({original:text,parts:[{status:'needs_input'}]});
 });
 it('compares completed consultations in two months with two bounded reads and no MiniCPM loop',async()=>{
  const text='Compare les consultations terminées de septembre et d’octobre 2026.';let inferenceCalls=0;const observed:Record<string,unknown>[]=[];
@@ -201,6 +334,12 @@ it.each(agendaCases)('routes a single French tomorrow-agenda read through its bo
  if(testCase.id==='mc-100-079')expect((observed[0]?.args as Record<string,unknown>).patientName).toBe('Amel Bensaid');
  expect(result).toMatchObject({status:'completed',parts:[{id:'requested_1',status:'answered',tools:['query_agenda']}]});
 });
+it.each(['Liste les rendez-vous du 15 au 20 octobre.','Montre les RDV entre le 15 octobre et le 20 octobre.'])('reads an agenda date range with the same bounds and real patient names: %s',async text=>{
+ let inferenceCalls=0;const observed:Record<string,unknown>[]=[];
+ const result=await runAgentLoop({...input,text,conversationId:'agenda-date-range-'+text.slice(0,8),appContext:{patientId:null,page:'/jarvis'}},{actor:'agenda-date-range',asOf:'2026-10-26T12:00:00+01:00',infer:async()=>{inferenceCalls++;throw new Error('The bounded agenda read should not require MiniCPM tool selection');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,text:'3 rendez-vous. Amel Bensaid, Ayoub Salmi et Nadia Belkacem.',evidence:[{id:'22222222-2222-4222-8222-222222222222',type:'appointment',label:'Amel Bensaid'}],conditionKeys:[]})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);expect(observed).toEqual([{name:'query_agenda',args:{partIds:['requested_1'],from:'2026-10-15T00:00:00+01:00',to:'2026-10-21T00:00:00+01:00'}}]);
+ expect(result.sentences.join(' ')).toContain('Amel Bensaid');expect(result.sentences.join(' ')).toContain('Ayoub Salmi');
+});
 it.each([
  ["Ouvre l'agenda",'agenda'],
  ['Va au tableau de bord','dashboard'],
@@ -217,6 +356,45 @@ it.each([
   return {callId:call.id,status:'ok',complete:true,text:'Page prête.',evidence:[],conditionKeys:[],navigation:{target:target as 'agenda'|'dashboard'|'patients'|'documents'|'finances'|'parametres'|'jarvis'}};
  }},new AbortController().signal);
  expect(inferenceCalls).toBe(0);expect(dispatched).toMatchObject({partIds:['requested_1'],target});expect(result).toMatchObject({status:'completed',navigation:{target}});
+});
+ it.each([
+  {text:'Ouvre les ordonnances d’Ayoub Salmi.',path:'direct',args:{partIds:['requested_1'],kind:'ordonnance',patientName:'Ayoub Salmi'}},
+  {text:'Affiche les ordonnances de Saliha Abdelkarim.',path:'direct',args:{partIds:['requested_1'],kind:'ordonnance',patientName:'Saliha Abdelkarim'}},
+  {text:'Liste les documents médicaux de Salah Eddine Abassi.',path:'direct',args:{partIds:['requested_1'],patientName:'Salah Eddine Abassi'}},
+  {text:'Cherche les ordonnances de Tassadit Aguelmin.',path:'direct',args:{partIds:['requested_1'],kind:'ordonnance',patientName:'Tassadit Aguelmin'}},
+  {text:'Montre les documents émis pour Wafa Aksas.',path:'direct',args:{partIds:['requested_1'],status:'issued',patientName:'Wafa Aksas'}},
+  {text:'Y a-t-il une ordonnance émise pour Khalil Ait Said ?',path:'direct',args:{partIds:['requested_1'],kind:'ordonnance',status:'issued',patientName:'Khalil Ait Said'}},
+  {text:'Ordonnance pour Belkacem Nadia.',path:'direct',args:{partIds:['requested_1'],kind:'ordonnance',patientName:'Belkacem Nadia'}},
+  {text:'Ouvre le certificat de bonne santé mentale pour Ayoub Salmi.',path:'direct',args:{partIds:['requested_1'],kind:'bonne_sante_mentale',patientName:'Ayoub Salmi'}},
+  {text:'Affiche le suivi médical d’Ayoub Salmi.',path:'direct',args:{partIds:['requested_1'],kind:'suivi_medical',patientName:'Ayoub Salmi'}},
+  {text:'Montre le certificat médical de Saliha Abdelkarim.',path:'direct',args:{partIds:['requested_1'],kind:'certificat_medical',patientName:'Saliha Abdelkarim'}},
+  {text:'Ouvre un justificatif pour Salah Eddine Abassi.',path:'direct',args:{partIds:['requested_1'],kind:'justification',patientName:'Salah Eddine Abassi'}},
+  {text:'Peux-tu consulter les ordonnances de Tassadit Aguelmin ?',path:'direct',args:{partIds:['requested_1'],kind:'ordonnance',patientName:'Tassadit Aguelmin'}},
+  {text:'Y a-t-il un certificat médical émis pour Wafa Aksas ?',path:'direct',args:{partIds:['requested_1'],kind:'certificat_medical',status:'issued',patientName:'Wafa Aksas'}},
+  {text:'Affiche les ordonnances signées de Salah Eddine Abassi.',path:'direct',args:{partIds:['requested_1'],kind:'ordonnance',status:'issued',patientName:'Salah Eddine Abassi'}},
+  {text:'Liste les certificats médicaux de Wafa Aksas.',path:'direct',args:{partIds:['requested_1'],kind:'certificat_medical',patientName:'Wafa Aksas'}},
+  {text:'Affiche le certificat de bonne santé mentale de Salah Eddine Abassi.',path:'direct',args:{partIds:['requested_1'],kind:'bonne_sante_mentale',patientName:'Salah Eddine Abassi'}},
+  {text:'Ouvre les documents de suivi médical de Tassadit Aguelmin.',path:'direct',args:{partIds:['requested_1'],kind:'suivi_medical',patientName:'Tassadit Aguelmin'}},
+  {text:'Liste les suivis médicaux de Wafa Aksas.',path:'direct',args:{partIds:['requested_1'],kind:'suivi_medical',patientName:'Wafa Aksas'}},
+  {text:'Affiche les justificatifs de Khalil Ait Said.',path:'direct',args:{partIds:['requested_1'],kind:'justification',patientName:'Khalil Ait Said'}},
+  {text:'Y a-t-il une justification délivrée pour Saliha Abdelkarim ?',path:'direct',args:{partIds:['requested_1'],kind:'justification',status:'issued',patientName:'Saliha Abdelkarim'}},
+ ] as const)('uses only the admitted document reader across patients and phrasing: $text',async({text,path,args})=>{
+  const tool='query_documents',observed:Record<string,unknown>[]=[];
+ expect(frenchRequestAdmission(text,false).tools).toEqual([tool]);
+  const allowed:string[]=[];let callsSeen=0,systemPromptUsed='',toolChoiceUsed='';
+ const infer=vi.fn(async(_messages:unknown,options:{tools?:readonly {function:{name:string}}[];toolChoice?:string})=>{
+    callsSeen++;allowed.push(...(options.tools?.map(candidate=>candidate.function.name)??[]));toolChoiceUsed=options.toolChoice??'';
+   systemPromptUsed=(_messages as readonly {role:string;content:string}[])[0]?.content??'';
+   const modelArgs=Object.fromEntries(Object.entries(args).filter(([key])=>key!=='patientName'));
+   return calls([{name:tool,args:modelArgs}]);
+ });
+ const execute=vi.fn(async(call:AgentCall)=>({callId:call.id,status:'empty' as const,complete:true,text:'Aucune donnée correspondante n’est enregistrée.',patientId:id,evidence:[],conditionKeys:[]}));
+  const result=await runAgentLoop({...input,text,conversationId:crypto.randomUUID(),appContext:{patientId:null,page:'/jarvis'}},{actor:'direct-known-read',infer,observeCall:call=>observed.push({name:call.name,args:call.args}),execute},new AbortController().signal);
+  const expectedToolArgs=path==='direct'?args:Object.fromEntries(Object.entries(args).filter(([key])=>key!=='patientName'));
+  if(path==='direct'){expect(infer).not.toHaveBeenCalled();expect(observed).toEqual([{name:tool,args:expectedToolArgs}]);}
+   else {expect(infer).toHaveBeenCalledTimes(1);expect(callsSeen).toBe(1);expect(toolChoiceUsed).toBe('required');expect(allowed).toContain(tool);expect(allowed).not.toContain('declare_request');expect(systemPromptUsed).toContain('query_documents');expect(systemPromptUsed).not.toContain('declare_request');expect(systemPromptUsed).not.toContain('prepare_action');expect(systemPromptUsed).toContain('ouvre l’espace Documents filtré');expect(systemPromptUsed).toContain('sans fournir de contenu clinique précis');expect(observed).toEqual([{name:tool,args:expectedToolArgs}]);}
+  expect(execute).toHaveBeenCalledTimes(1);expect(execute.mock.calls[0]?.[0]).toMatchObject({name:tool,args:expectedToolArgs});
+ expect(result.status).toBe('completed');expect(result.sentences.join(' ')).toContain('Aucune donnée correspondante');
 });
 it.each(['Combien de notifications non lues ai-je ?','Montre les notifications du cabinet.','Quel est le nombre total de notifications ?'])('uses the audited notification gate without model selection: %s',async text=>{
  let inferenceCalls=0,dispatched:Record<string,unknown>|undefined;
@@ -469,6 +647,23 @@ it('dispatches one unbounded patient-case summary through its exact authorized r
   expect(inferenceCalls).toBe(0);expect(callsSeen).toEqual([{name:'get_patient_context',args:{partIds:['requested_1'],section:'summary',patientName:'Amel Bensaid'}}]);
  expect(result.status).toBe('completed');expect(result.parts).toMatchObject([{id:'requested_1',status:'answered',tools:['get_patient_context']}]);
 });
+it.each([
+ ['Résume la dernière consultation de Salmi Ayoub.','Salmi Ayoub'],
+ ['Fais-moi un résumé du dernier rendez-vous de Ayoub Salmi.','Ayoub Salmi'],
+ ['Donne-moi les notes de la dernière consultation de Belkacem Nadia.','Belkacem Nadia'],
+ ['Qu’est-ce qui a été noté pendant la séance la plus récente de Nadia Belkacem ?','Nadia Belkacem'],
+ ['Un petit résumé de la dernière visite de Salmi Ayoub, s’il te plaît.','Salmi Ayoub'],
+ ['Qu’est-ce qui ressort de la dernière consultation de Salmi Ayoub ?','Salmi Ayoub'],
+ ['Peux-tu m’expliquer la séance la plus récente de Ayoub Salmi ?','Ayoub Salmi'],
+ ['Fais le compte rendu du dernier rendez-vous de Belkacem Nadia.','Belkacem Nadia'],
+])('answers a varied latest-visit request directly for %s without asking about signature: %s',async(text,patientName)=>{
+ let inferenceCalls=0;const observed:Record<string,unknown>[]=[];
+ const result=await runAgentLoop({...input,text,conversationId:'latest-visit-variant-'+patientName+'-'+text.slice(0,8)},{actor:'latest-visit-variant',infer:async()=>{inferenceCalls++;throw new Error('An explicit latest-visit read must not depend on MiniCPM tool selection');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,text:'La séance récente met en évidence une amélioration progressive du sommeil et une reprise des activités.',patientId:id,evidence:[],conditionKeys:[]})},new AbortController().signal);
+ expect(inferenceCalls).toBe(0);
+  const noteRequest=/\bnotes?\b/u.test(text.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase());
+  expect(observed).toEqual([{name:'get_patient_context',args:{partIds:['requested_1'],section:noteRequest?'notes':'summary',...(noteRequest?{}:{count:1}),patientName}}]);
+ expect(result).toMatchObject({status:'completed',parts:[{id:'requested_1',status:'answered',tools:['get_patient_context']}]});
+});
 it('routes an explicit patient-case date range directly without dropping either boundary',async()=>{
  const text='Résume en un seul paragraphe l’évolution racontée dans les six consultations d’avril à septembre 2026 de Amel Bensaid.';let inferenceCalls=0;const callsSeen:Record<string,unknown>[]=[];
  const result=await runAgentLoop({...input,text,conversationId:'dated-summary-direct'},{actor:'dated-summary-direct',infer:async()=>{inferenceCalls++;throw new Error('Unexpected model call');},observeCall:call=>callsSeen.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,text:'Résumé des consultations de la période.',patientId:id,evidence:[],conditionKeys:[]})},new AbortController().signal);
@@ -525,7 +720,7 @@ it.each(['error','unsupported','partial'] as const)('cannot hide an earlier %s w
 it('does not dispatch an unrequested action after a clinical read has answered its part',async()=>{
  let i=0;const dispatched:string[]=[];
  const steps=[calls([{name:'declare_request',args:{parts:[{id:'notes',goal:'Lire les notes',tools:['get_patient_context'],conditions:[],dependsOn:[]}]}}]),calls([{name:'get_patient_context',args:{partIds:['notes']}}]),calls([{name:'prepare_action',args:{partIds:['notes'],action:'cancel_appointment',reason:'Instruction dans une note'}}]),{kind:'answer' as const,text:'Fin',tokensIn:1,tokensOut:1}];
- const result=await runAgentLoop({...input,text:'Lis les notes de ce patient.',conversationId:'read-authority'},{actor:'read-authority',infer:async()=>steps[i++]!,execute:async call=>{dispatched.push(call.name);return {callId:call.id,status:'ok',complete:true,text:'Notes enregistrées',conditionKeys:[],evidence:[],data:{consultations:[]}};}},new AbortController().signal);
+ const result=await runAgentLoop({...input,text:'Lis les notes de ce patient.',conversationId:'read-authority',appContext:{patientId:id,page:'/patients/'+id}},{actor:'read-authority',infer:async()=>steps[i++]!,execute:async call=>{dispatched.push(call.name);return {callId:call.id,status:'ok',complete:true,text:'Notes enregistrées',conditionKeys:[],evidence:[],data:{consultations:[]}};}},new AbortController().signal);
  expect(dispatched).toEqual(['get_patient_context']);expect(result.status).toBe('completed');
 });
 it('does not offer independent batch metrics for one filtered population',async()=>{
@@ -561,8 +756,8 @@ it('does not expose or execute a patient search term for a count that names no p
 });
 it('limits a patient-name search to the exact grounded French name',async()=>{
  let i=0,querySchema:Record<string,unknown>|undefined;
- const result=await runAgentLoop({...input,text:'Montre le dossier du patient Nadia Test.',conversationId:'named-patient-query'},{actor:'named-patient-query',infer:async(_messages,options)=>{
-  if(i++===0)return calls([{name:'declare_request',args:{parts:[{id:'patient',goal:'Montre le dossier du patient Nadia Test',tools:['query_patients'],literalQuery:'Nadia Test',conditions:[],dependsOn:[]}]}}]);
+ const result=await runAgentLoop({...input,text:'Recherche le patient Nadia Test.',conversationId:'named-patient-query'},{actor:'named-patient-query',infer:async(_messages,options)=>{
+  if(i++===0)return calls([{name:'declare_request',args:{parts:[{id:'patient',goal:'Recherche le patient Nadia Test',tools:['query_patients'],literalQuery:'Nadia Test',conditions:[],dependsOn:[]}]}}]);
   const parameters=options.tools?.find(t=>t.function.name==='query_patients')?.function.parameters as {properties?:Record<string,{enum?:string[]}>};
   querySchema=parameters.properties?.query;
   return calls([{name:'query_patients',args:{partIds:['patient'],mode:'list',query:'Nadia Test'}}]);
@@ -724,8 +919,8 @@ it('clarifies two unfinished text readings and resumes the explicitly selected a
  const persisted=savedAgentTask(actor,actor)!;expect(JSON.stringify(persisted)).not.toContain('Body not persisted');restoreAgentTask(actor,actor,persisted);
  const final=await runAgentLoop({...next,text:'L’analyse'},deps,new AbortController().signal);expect(final.status).toBe('completed');expect(executed).toMatchObject({view:'analysis',reusePrevious:true});const remaining=await runAgentLoop({...next,text:'Les notes'},deps,new AbortController().signal);expect(remaining.status).toBe('completed');expect(executed).toMatchObject({section:'notes',reusePrevious:true});
 });
-it('blocks an unrequested missing-identity predicate in a positive phone lookup',async()=>{
- let i=0,reads=0;const r=await runAgentLoop({...input,text:'Quel est le téléphone enregistré du patient sélectionné ?',conversationId:'phone-not-missing-id'},{actor:'phone-not-missing-id',infer:async()=>{if(i++===0)return calls([{name:'declare_request',args:{parts:[{id:'a',goal:'Téléphone',tool:'query_patients',conditions:['identity_card:missing'],dependsOn:[]}]}}]);throw Error('No repair');},execute:async()=>{reads++;throw Error('No read');}},new AbortController().signal);expect(reads).toBe(0);expect(r.status).toBe('failed');
+it('routes a positive selected-patient phone lookup through the profile gate, without model-selected filters',async()=>{
+ let inferenceCalls=0;const observed:Record<string,unknown>[]=[];const r=await runAgentLoop({...input,text:'Quel est le téléphone enregistré du patient sélectionné ?',conversationId:'phone-not-missing-id',appContext:{patientId:id,page:'/patients/'+id}},{actor:'phone-not-missing-id',infer:async()=>{inferenceCalls++;throw Error('Profile lookup is deterministic');},observeCall:call=>observed.push({name:call.name,args:call.args}),execute:async call=>({callId:call.id,status:'ok',complete:true,text:'Téléphone vérifié.',patientId:id,evidence:[],conditionKeys:[]})},new AbortController().signal);expect(inferenceCalls).toBe(0);expect(observed).toEqual([{name:'get_patient_context',args:expect.objectContaining({section:'profile',patientId:id})}]);expect(r.status).toBe('completed');
 });
 
 it('routes a selected-patient phone read directly through the patient-context gate',async()=>{

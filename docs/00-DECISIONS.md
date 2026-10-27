@@ -569,6 +569,29 @@ aucun flag ne l'éteint).
 Alexa ; écoute locale auto-hébergée, zéro réseau pendant l'écoute) **et ADR-035**
 (la voix comme canal du même runtime).
 
+### ADR-024-A — Voix locale Whisper large-v3-turbo + Kokoro (2026-10-25)
+
+**Décision.** La livraison vocale n'utilise plus aucun fournisseur cloud :
+Whisper **large-v3-turbo Q5_0** est le seul modèle de transcription actif, et
+Kokoro-82M v1.0 avec la voix française `ff_siwis` est le seul modèle de
+synthèse actif. Le mot de réveil est un Vosk français local (Apache-2.0) ;
+l'ancien modèle openWakeWord « Alexa » (CC BY-NC-SA) et Piper sont retirés.
+Aucune clé Gemini/Groq/ElevenLabs n'est requise pour la voix et aucun repli
+cloud automatique n'existe.
+
+**Portée.** Les chemins `jarvis-voice-in`, `jarvis-voice-out`,
+`jarvis-voice-session`, `jarvis-wake` et le worker Python de
+`resources/voix/` ; les identifiants actifs sont dans
+`src/server/alexa/model-policy.ts`. Les portes d'authentification, de
+même-origine, d'admission de texte et C4 restent en place. L'audio reste en
+RAM, jamais sur disque.
+
+**Limites mesurées.** Sur le poste de développement i3-4150/8 Go, le grand
+modèle CPU est lent (48–175 s pour un clip de 5 s selon le contexte audio) et
+Kokoro demande plusieurs secondes par phrase. Ces valeurs sont des mesures,
+pas des promesses ; elles doivent être revalidées sur le laptop du cabinet.
+Kokoro v1.0 n'a pas de voix arabe : la synthèse arabe n'est pas revendiquée.
+
 ---
 
 
@@ -773,6 +796,14 @@ modèles « Hey Jarvis » et « Alexa » ont la même forme `[1,16,96]` mais des
 d'entrée différents (`x.1` contre `onnx::Flatten_0`), donc un nom en dur
 transforme un remplacement de fichier en panne. Et la plomberie prouvée n'est
 pas l'oreille prouvée : aucune voix humaine n'a encore été mesurée.
+
+> **Amendement du 2026-10-25 — ADR-024-A.** Le détecteur openWakeWord et son
+> modèle « Alexa » (CC BY-NC-SA) sont retirés de la distribution clinique.
+> `reveil-vosk.ts` utilise Vosk français (Apache-2.0), via le route locale
+> `jarvis-wake` et `resources/voix/wake-voice-worker.py`. L'écoute reste
+> entièrement locale ; la machine à huit états et le contrat de détecteur
+> restent inchangés. La licence, les assets et la mesure réelle sont dans le
+> rapport de livraison voix du 2026-10-25.
 
 #### Amendement du 2026-09-05 — valeurs mesurées des budgets (le runtime porte la politique)
 

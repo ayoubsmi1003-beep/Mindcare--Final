@@ -14,6 +14,7 @@ import { parsePatientMention } from "./patient-mention";
 import { resolveDocumentDraftInputs } from "./document-draft";
 import { prepareInternalMessage } from "./internal-message";
 import { buildClinicalContext } from "./clinical-context";
+import { frenchRequestAdmission } from "@/shared/alexa/request-contract";
 
 export type ProposalResult =
   | { state: "ready"; proposal: AlexaProposal; patientId: string | null }
@@ -68,6 +69,8 @@ export function deterministicActionRequest(text: string): boolean {
   const plain = normalized(text);
   const command = plain;
   if (negatedDocumentCommand.test(plain)) return false;
+  const admission=frenchRequestAdmission(text,false);
+  if(admission.tools?.length===1&&admission.tools[0]==="query_documents"&&admission.documentKind==="ordonnance")return false;
   const document = /^(?:prepare|preparer|preparez|creer|cree|redige|rediger|genere|generer|generez)\b/u.test(command)
     && requestedDocumentKind(plain) !== null;
   const message = /\b(?:envoie|envoyer|transmets|transmettre|dis|dire|previens|prevenir)\b/u.test(plain)

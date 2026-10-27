@@ -3,7 +3,8 @@
 import { useEffect, useState } from "react";
 
 import { abonnerVoixLocale } from "@/services/alexa-local";
-import { abonnerVoix } from "@/services/jarvis-reveil";
+import { abonnerVoix, voixSouhaitee } from "@/services/jarvis-reveil";
+import { demarrerMainsLibres, mainsLibresActif } from "@/services/voix-mains-libres";
 import type { VueVoix } from "@/services/jarvis-reveil";
 
 /**
@@ -19,6 +20,11 @@ export function useVueVoixUnifiee(): VueVoix {
 
   useEffect(() => abonnerVoixLocale(setBoucle), []);
   useEffect(() => abonnerVoix(setReveil), []);
+  useEffect(() => {
+    // The microphone is opened only after an explicit opt-in. Once chosen,
+    // replay it at launch so saying "Alexa" works without another click.
+    if (voixSouhaitee() && !mainsLibresActif()) void demarrerMainsLibres();
+  }, []);
 
   const b = boucle ?? ETEINTE;
   if (b.etat !== "desactive") return b;

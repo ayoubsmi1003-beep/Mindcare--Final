@@ -22,9 +22,14 @@ describe("fautLireAuto", () => {
   it("respecte l'interrupteur muet", () => {
     expect(fautLireAuto(BASE, { lectureAuto: false, dejaLu: false, conversationChargee: true })).toBe(false);
   });
-  it("refuse l'identité (aucun nom vers le TTS tiers)", () => {
+  it("lit une réponse qui nomme un dossier, car la voix est locale", () => {
     expect(
       fautLireAuto({ ...BASE, porteUneIdentite: true }, { lectureAuto: true, dejaLu: false, conversationChargee: true }),
+    ).toBe(true);
+  });
+  it("ne rejoue jamais une réponse déjà lue par la boucle vocale", () => {
+    expect(
+      fautLireAuto({ ...BASE, dejaParlee: true }, { lectureAuto: true, dejaLu: false, conversationChargee: true }),
     ).toBe(false);
   });
   it("ignore l'humain, le système, l'interrompu, le vide et le trop-long", () => {

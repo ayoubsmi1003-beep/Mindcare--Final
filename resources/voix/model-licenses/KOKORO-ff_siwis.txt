@@ -1,0 +1,12 @@
+Kokoro-82M v1.0 — French voice ff_siwis
+
+Model weights: Apache License 2.0
+Upstream: https://huggingface.co/hexgrad/Kokoro-82M
+Official checkpoint SHA-256: 496dba118d1a58f5f3db2efc88dbdc216e0483fc89fe6e47ee1f2c53f18ad1e4
+ONNX export: https://github.com/thewh1teagle/kokoro-onnx/releases/tag/model-files-v1.1
+Export SHA-256: f3a290d384fbb27966d462905c71a46cef9e5fd00516b40df32a0b4afe77ac96
+
+Voice ff_siwis: CC-BY 4.0, trained using the SIWIS corpus.
+Upstream voice page: https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md#french
+The voice card must be retained with the distributed model. Kokoro v1.0 has
+no Arabic voice; no Arabic pronunciation is claimed by this bundle.

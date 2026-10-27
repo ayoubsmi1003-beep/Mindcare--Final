@@ -5,15 +5,17 @@ import {AppShell} from "@/components/AppShell";
 import {useSessionEcran} from "@/components/useSessionEcran";
 import {Squelette,BlocErreur} from "@/components/ui";
 import {DocumentWorkspace} from "@/components/documents/DocumentWorkspace";
-import {documentsEditor as t} from "@/i18n/documents-editor";
+import {documentLabels,documentsEditor as t} from "@/i18n/documents-editor";
+import type {DocumentKind} from "@/shared/documents/types";
 import {fr} from "@/i18n/fr";
 function DocumentsContent(){
  const {utilisateur,deconnecter}=useSessionEcran();
  const params=useSearchParams();
- const route={patientId:params.get("patient"),initialDocumentId:params.get("document"),initialDraftId:params.get("draft"),initialPrint:params.get("print")==="1"};
+ const requestedKind=params.get("kind"),initialKind=requestedKind&&Object.hasOwn(documentLabels,requestedKind)?requestedKind as DocumentKind:null;
+ const route={patientId:params.get("patient"),initialDocumentId:params.get("document"),initialDraftId:params.get("draft"),initialPrint:params.get("print")==="1",initialKind};
  if(utilisateur===undefined)return <main className="p-8"><Squelette lignes={4}/></main>;
  if(utilisateur===null)return <main className="p-8"><BlocErreur message={fr.erreurs["non-authentifie"]}/></main>;
- const workspaceKey=[route.patientId,route.initialDocumentId,route.initialDraftId,params.get("printAttemptId")].join(":");
+ const workspaceKey=[route.patientId,route.initialDocumentId,route.initialDraftId,route.initialKind,params.get("printAttemptId")].join(":");
  return <AppShell role={utilisateur.role} nomComplet={utilisateur.fullName} onDeconnexion={deconnecter} titre={t.title} sousTitre={t.subtitle}><DocumentWorkspace key={workspaceKey} {...route}/></AppShell>;
 }
 export default function DocumentsPage(){

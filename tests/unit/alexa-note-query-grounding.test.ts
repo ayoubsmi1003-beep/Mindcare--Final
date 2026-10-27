@@ -29,15 +29,10 @@ it.each([
  expect(result.status).toBe(status);expect(rpc).not.toHaveBeenCalled();
 });
 it('does not offer free-text search for an unfiltered note-area read, and recovers without that filter',async()=>{
- const call=(name:string,args:Record<string,unknown>):LocalCompletion=>({kind:'calls',calls:[{id:'c'+name+step,name,args}],message:{role:'assistant',content:null,tool_calls:[]},tokensIn:1,tokensOut:1});
- let step=0,offered=true,executed=0;
+ let inferenceCalls=0,executed=0;
  const text='Montre les subjectifs enregistrés dans les consultations de Ayoub Salmi.';
- const result=await runAgentLoop({text,conversationId:'note-filter-native',clientTurnId:'11111111-1111-4111-8111-111111111111',appContext:{patientId:null,page:'/jarvis'}},{actor:'note-filter-native',infer:async(_m,options)=>{
-  if(step++===0)return call('declare_request',{parts:[{id:'n',goal:text,tool:'get_patient_context',conditions:[],dependsOn:[]}]});
-  const schema=options.tools?.find(t=>t.function.name==='get_patient_context')?.function.parameters as {properties?:Record<string,unknown>};offered=!!schema.properties?.query;
-  return call('get_patient_context',step===2?{partIds:['n'],query:'Ayoub Salmi'}:{partIds:['n']});
- },execute:async c=>{executed++;expect(c.args).toMatchObject({section:'notes',area:'subjective'});expect(c.args).not.toHaveProperty('query');return {callId:c.id,status:'ok',complete:true,text:'Subjectif enregistré.',conditionKeys:[],evidence:[]};}},new AbortController().signal);
- expect(result.status).toBe('completed');expect(offered).toBe(false);expect(executed).toBe(1);
+ const result=await runAgentLoop({text,conversationId:'note-filter-native',clientTurnId:'11111111-1111-4111-8111-111111111111',appContext:{patientId:null,page:'/jarvis'}},{actor:'note-filter-native',infer:async()=>{inferenceCalls++;throw Error('A grounded note-area read is deterministic');},execute:async c=>{executed++;expect(c.args).toMatchObject({section:'notes',area:'subjective'});expect(c.args).not.toHaveProperty('query');return {callId:c.id,status:'ok',complete:true,text:'Subjectif enregistré.',conditionKeys:[],evidence:[]};}},new AbortController().signal);
+ expect(result.status).toBe('completed');expect(inferenceCalls).toBe(0);expect(executed).toBe(1);
 });
 it('does not offer note date or status filters unless the request includes them',async()=>{
  const text='Cherche la référence « REPERE-001-S06 » dans les notes de Amel Bensaid.';let step=0,offered:string[]=[];

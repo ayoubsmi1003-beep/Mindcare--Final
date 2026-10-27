@@ -11,9 +11,17 @@ Le pool serveur accepte l’option facultative `MINDCARE_DATABASE_CONNECT_TIMEOU
 | Usage Alexa | Définition dans `src/server/alexa/model-policy.ts` |
 |---|---|
 | Raisonnement et orchestration texte | `ALEXA_CONVERSATION_MODEL = MiniCPM-V-4_7-1B-Q4_K_M.gguf`, local uniquement |
-| Transcription | `ALEXA_STT_MODEL = gemini-3.5-transcribe` |
-| Synthèse vocale | `ALEXA_TTS_MODEL = gemini-3.8-flash-tts`, voix `Kore` |
-| Transport Live historique | `ALEXA_LIVE_MODEL = gemini-3.8-live` |
+| Transcription | `ALEXA_STT_MODEL = whisper-large-v3-turbo-q5_0`, worker local uniquement |
+| Synthèse vocale | `ALEXA_TTS_MODEL = kokoro-82m-v1.0-ff_siwis`, Kokoro local, voix française `ff_siwis` |
+| Transport Live historique | retiré (`geminiLiveAutorise()` = `false`) |
+
+Les modèles vocaux actifs et leurs empreintes sont dans
+`resources/voix/manifest.json` et `resources/voix/inventory.json`. Le worker
+local est décrit dans `resources/voix/README.md` ; les dépendances Python sont
+épinglées dans `resources/voix/lock.json`. Aucun fournisseur vocal cloud,
+aucune clé Gemini/Groq/ElevenLabs et aucun repli automatique ne sont utilisés
+pour la parole. Kokoro v1.0 ne fournit pas de voix arabe : la synthèse arabe
+n'est pas revendiquée et reste du texte affiché.
 
 MiniCPM est rétabli sur demande de l’utilisateur avec l’artefact exact de la campagne historique : SHA-256 `588c6c94c82f756b86dba35c42ed9ba9ec187d65824eb52f039c347df563e63d`, llama.cpp `b11429`. Les essais Llama 3.2 1B Q4 et Q8 n’ont pas validé la qualité clinique française et ne sont pas sélectionnés. Le cache `.cache/alexa/minicpm`, l’inférence locale sérialisée et le contexte de 4 096 tokens sont conservés ; le modèle actif vient de `src/server/alexa/model-policy.ts`. Les vérifications SHA-256, les permissions des fichiers et l’authentification locale restent actives. Le nombre exact de tokens est vérifié avant génération ; les résumés complets paginent les consultations et passent par des synthèses intermédiaires lorsque nécessaire. La réussite de la campagne historique ne remplace pas l’acceptation clinique réelle de la version actuelle.
 

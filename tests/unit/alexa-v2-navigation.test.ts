@@ -78,6 +78,9 @@ describe("client navigation contract", () => {
     expect(await envoyerTourAlexa("Imprime l'ordonnance")).toMatchObject({ navigation: { target: "document", patientId, documentId, print: true } });
     expect(alexaNavigationPath({ target: "document", patientId, documentId, print: true })).toBe(`/documents?patient=${patientId}&document=${documentId}&print=1`);
   });
+  it("opens the documents workspace filtered to the verified patient and prescription type", () => {
+    expect(alexaNavigationPath({ target: "documents", patientId, documentKind: "ordonnance" })).toBe(`/documents?patient=${patientId}&kind=ordonnance`);
+  });
   it("gives each Alexa print a fresh route so repeated requests trigger again", () => {
     const paths: string[] = [];
     const unsubscribe = subscribeAlexaNavigation(path => paths.push(path));

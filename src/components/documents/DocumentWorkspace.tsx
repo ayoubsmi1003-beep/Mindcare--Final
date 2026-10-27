@@ -53,11 +53,11 @@ function sameContent(a:Draft["content"],b:Draft["content"]):boolean{
  return JSON.stringify(a)===JSON.stringify(b);
 }
 
-export function DocumentWorkspace({patientId:initialPatient=null,initialDocumentId=null,initialDraftId=null,initialPrint=false}:{readonly patientId?:string|null;readonly initialDocumentId?:string|null;readonly initialDraftId?:string|null;readonly initialPrint?:boolean}){
+export function DocumentWorkspace({patientId:initialPatient=null,initialDocumentId=null,initialDraftId=null,initialPrint=false,initialKind=null}:{readonly patientId?:string|null;readonly initialDocumentId?:string|null;readonly initialDraftId?:string|null;readonly initialPrint?:boolean;readonly initialKind?:DocumentKind|null}){
 
- const [patientId,setPatientId]=useState(initialPatient),[patientName,setPatientName]=useState(""),[patientRecord,setPatientRecord]=useState(""),[draftId,setDraftId]=useState<string|null>(initialDraftId),[kind,setKind]=useState<DocumentKind>("bonne_sante_mentale");
+ const [patientId,setPatientId]=useState(initialPatient),[patientName,setPatientName]=useState(""),[patientRecord,setPatientRecord]=useState(""),[draftId,setDraftId]=useState<string|null>(initialDraftId),[kind,setKind]=useState<DocumentKind>(initialKind??"bonne_sante_mentale");
 
- const [search,setSearch]=useState(""),[query,setQuery]=useState(""),[filterKind,setFilterKind]=useState<DocumentKind|null>(null),[filterStatus,setFilterStatus]=useState<"issued"|"voided"|null>(null),listGeneration=useRef(0);
+ const [search,setSearch]=useState(""),[query,setQuery]=useState(""),[filterKind,setFilterKind]=useState<DocumentKind|null>(initialKind),[filterStatus,setFilterStatus]=useState<"issued"|"voided"|null>(null),listGeneration=useRef(0);
 
  const [drafts,setDrafts]=useState<readonly Draft[]>([]),[documents,setDocuments]=useState<readonly Document[]>([]),[archived,setArchived]=useState(false);
 

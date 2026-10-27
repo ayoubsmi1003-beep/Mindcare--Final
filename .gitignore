@@ -58,11 +58,6 @@ scripts/.mesures/
 .eval-out/
 .eval-tsconfig.json
 
-# Runtime ONNX du mot de reveil : 41 Mio regeneres depuis node_modules par
-# scripts/sync-wakeword-runtime.mjs (postinstall). Les MODELES .onnx, eux,
-# sont suivis : ce sont des choix de produit, pas une dependance.
-public/wakeword/ort/
-
 # Sortie compilee du processus principal/preload Electron (pnpm build:electron)
 # — regeneree depuis electron/*.ts, jamais un livrable source.
 dist-electron/
@@ -159,6 +154,7 @@ knowledge/eval/
 
 # Modèles et runtime locaux téléchargeables ; la configuration de packaging
 # ne référence que les assets explicitement choisis.
+public/wakeword/ort/
 resources/alexa/local-model/*.gguf
 resources/alexa/local-model/runtime-*/
 resources/alexa/local-model/llama-*.zip

@@ -85,8 +85,8 @@ export function FilJarvis({
     for (const tour of etat.tours) lusRef.current.add(tour.id);
   }, [etat.chargementHistorique, etat.tours]);
 
-  // Lecture automatique du dernier tour Jarvis — corps de réponse seul,
-  // refus identité inchangé (aucun nom vers le TTS tiers).
+  // Lecture automatique du dernier tour Jarvis — corps de réponse seul.
+  // Kokoro est local; un nom de dossier n'est plus une raison de silence.
   const dernierJarvis = [...etat.tours].reverse().find((t) => t.role === "jarvis");
   useEffect(() => {
     if (dernierJarvis === undefined || fluxEnCoursAvantLecture) return;

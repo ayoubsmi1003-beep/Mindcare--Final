@@ -1,22 +1,28 @@
-import { abonnerVoix, desarmerReveil, retenirVoix, type EtatVoix, type RappelsVoix } from "./jarvis-reveil";
+import {
+  abonnerVoix,
+  desarmerReveil,
+  definirVoixSouhaitee,
+  promesseArmement,
+  retenirVoix,
+  type EtatVoix,
+  type RappelsVoix,
+} from "./jarvis-reveil";
 import { envoyer } from "./conversation";
 import { abonnerLecture, lireTexte } from "./jarvis-voix";
 import { alexa } from "@/i18n/alexa";
-import { ok, type Result } from "./result";
+import { err, ok, type Result } from "./result";
 import { log } from "./log";
 
 /**
  * Voix mains-libres — le pont entre le réveil local et la conversation.
  *
- * ON : le détecteur openWakeWord (local, déjà livré) écoute le mot « Alexa ».
- * Au réveil : accusé « Oui docteur » (TTS, phrase fixe sans identité),
- * capture → STT → le texte part aussitôt (`envoyer`, envoi instantané choisi).
- * Après chaque tour le détecteur reste armé (veille) pour les questions
- * enchaînées ; 15 min sans rien → arrêt. Le détecteur se suspend/reprend
- * dans `jarvis-reveil` (inchangé) ; le micro vient du courtier (inchangé).
+ * ON : le détecteur Vosk local écoute le mot « Alexa ». Au réveil : accusé
+ * « Oui docteur » (TTS local), capture → STT local → le texte part aussitôt.
+ * Après chaque tour le détecteur reste armé ; 15 min sans rien → arrêt.
  *
- * RIEN d'écrit au dossier ici : `envoyer` ne fait que parler. Les cartes de
- * confirmation restent l'unique voie d'écriture, tapées par la praticienne.
+ * ⚠️ LE BOUTON NE PASSE PAS À « ACTIF » AVANT LE DÉTECTEUR. On attend le
+ * résultat réel de l'armement ; un micro refusé ou un modèle absent reste une
+ * erreur visible, jamais un faux voyant vert.
  */
 
 /** L'accusé ne part qu'au réveil — jamais deux fois, jamais sur parole. */
@@ -90,6 +96,35 @@ export async function demarrerMainsLibres(
   actif = true;
   toucher();
   publier();
+
+  // `retenirVoix` starts the arm asynchronously. Wait for that exact promise
+  // instead of reporting success from the button click.
+  const armement = promesseArmement();
+  if (armement !== null) {
+    const pret = await armement;
+    if (!pret.ok) {
+      actif = false;
+      try {
+        liberation();
+      } finally {
+        liberation = null;
+      }
+      if (minuteur !== null) {
+        clearTimeout(minuteur);
+        minuteur = null;
+      }
+      stopEtat?.();
+      stopEtat = null;
+      stopLecture?.();
+      stopLecture = null;
+      desarmerReveil();
+      definirVoixSouhaitee(false);
+      publier();
+      return err(pret.error);
+    }
+  }
+
+  definirVoixSouhaitee(true);
   return ok(true);
 }
 
@@ -114,5 +149,6 @@ export function arreterMainsLibres(): void {
     actif = false;
     publier();
   }
+  definirVoixSouhaitee(false);
   desarmerReveil();
 }

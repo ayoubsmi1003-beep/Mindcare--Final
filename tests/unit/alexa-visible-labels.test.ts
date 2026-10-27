@@ -9,12 +9,12 @@ import {presentAgentResults} from '@/server/alexa/answer-presentation';
 import {agentExecutor} from '@/server/alexa/agent-tools';
 import {scriptedAlexaRpc} from '../helpers/alexa-rpc';
 
-it.each(['agenda','documents'] as const)('assembles clickable %s rows from the authorized executor response',async domain=>{
+it.each(['agenda','documents'] as const)('assembles clickable %s rows after verifying patient labels',async domain=>{
  const patient=fixture.patients[0]!,doc=fixture.documents[0]!,row={id:doc.id,patientId:patient.id,label:domain==='agenda'?patient.label:`${patient.label} — ${doc.title} — ${doc.number}`,at:'2026-10-24T09:00:00+01:00',status:domain==='agenda'?'confirmed':'issued',amount:null};
- const rpc=scriptedAlexaRpc(async()=>({ok:true as const,data:[{total:25,rows:[row],totals:{},complete:true,offset:0}]}));
+ const rpc=scriptedAlexaRpc(async(name)=>name==='query_alexa_records'?({ok:true as const,data:[{total:25,rows:[row],totals:{},complete:true,offset:0}]}):name==='search_patients'?({ok:true as const,data:[{total:1,rows:[{id:patient.id,first_name:patient.label.split(' ')[0]!,last_name:patient.label.split(' ').slice(1).join(' '),missing:[],completed_consultations:0,outstanding_balance:0}],metrics:{},unknownAge:0,revision:'a'.repeat(32),asOf:'2026-10-24T12:00:00+01:00',conditions:[],complete:true,offset:0}]}):({ok:true as const,data:[]}));
  const input={text:domain==='agenda'?'Affiche les rendez-vous du 24 octobre 2026.':'Liste les documents.',conversationId:crypto.randomUUID(),clientTurnId:crypto.randomUUID(),appContext:{patientId:null,page:'/jarvis'}};
  const result=await agentExecutor(input,{rpc},{rpc:vi.fn()})({id:'visible',name:domain==='agenda'?'query_agenda':'query_documents',args:{partIds:['p'],...(domain==='agenda'?{from:'2026-10-24T00:00:00+01:00',to:'2026-10-25T00:00:00+01:00'}:{})}},'2026-10-24T12:00:00+01:00',[],new AbortController().signal);
- expect(result.status).toBe('ok');expect(result.text).toContain(patient.label);expect(result.text).toContain('1–1 / 25');
+  expect(result.status).toBe('ok');expect(result.text).toContain(patient.label);expect(result.text).toContain('1–1 / 25');
  expect(validAnswerLinks(result.text,result.links)).toBe(true);expect(answerLinkPath(result.links![0]!.target)).toBe(domain==='agenda'?patient.href:doc.href);
 });
 

@@ -90,6 +90,22 @@ import type { AppError } from "./errors";
 import type { PatientActif } from "./patient-actif";
 import type { AlexaSource } from "@/shared/alexa/turn";
 
+// Ces actions sont explicites depuis la surface Alexa authentifiée.
+// Elles gardent le cycle audité ; la commande vocale remplace seulement le clic.
+const ACTIONS_ALEXA_SANS_CLIC_CONFIRMATION = new Set([
+  "create_appointment",
+  "reschedule_appointment",
+  "cancel_appointment",
+  "mark_patient_arrived",
+  "set_consultation_price",
+  "record_payment_collected",
+  "close_consultation",
+  "create_document_draft",
+  "create_editable_document_draft",
+  "update_editable_document_draft",
+  "send_internal_message",
+]);
+
 // ═══════════════════════════════════════════════════════════════════════════
 // ÉTAT PUBLIC
 // ═══════════════════════════════════════════════════════════════════════════
@@ -753,6 +769,7 @@ async function proposerEcritureRegistre(
   labels?:ReadonlyMap<string,string>,
   guard?:()=>void,
   actionId?:string,
+  confirmerParCommandeVocale=false,
 ): Promise<boolean> {
   guard?.();
   const capacite = capaciteEcriture(nom);
@@ -811,6 +828,10 @@ async function proposerEcritureRegistre(
   // M09 reliquat · liaison tour→approbation : l'empreinte seule (jamais le
   // runId brut), purgée avec la carte. `null` = carte sans tour d'origine.
   empreinteRunCarte = runId === null ? null : hacherFnv1a(`m09-live-v1:${runId}`);
+  if(confirmerParCommandeVocale&&ACTIONS_ALEXA_SANS_CLIC_CONFIRMATION.has(nom)){
+    await accepterCarte();
+    return true;
+  }
   publier();
   return true;
 }
@@ -1003,7 +1024,7 @@ async function envoyerAlexaUnifie(message: string): Promise<void> {
     remplacerTour(tour.id, { texte: result.texte, persiste: result.persiste, porteUneIdentite: result.speechAllowed!==true, ...(result.status?{alexaStatus:result.status}:{}),...(result.parts?{alexaParts:result.parts}:{}), alexaSources: result.sources, ...(result.blocks?{alexaBlocks:result.blocks}:{}), sourcePatientId: result.patientId });
     interne.etat = result.proposal?"envoi":"composition";
     if (result.navigation) navigateAlexa(result.navigation);
-    if(result.proposal){const labels=result.proposal.tool==="send_internal_message"?new Map<string,string>():await alexaProposalLabels(result.proposal,result.patientId,db());guard();await proposerEcritureRegistre(result.proposal.tool,result.proposal.args,message,null,labels,guard,result.proposal.actionId);if (ownsTurn()) interne.etat="composition";}
+    if(result.proposal){const labels=result.proposal.tool==="send_internal_message"?new Map<string,string>():await alexaProposalLabels(result.proposal,result.patientId,db());guard();await proposerEcritureRegistre(result.proposal.tool,result.proposal.args,message,null,labels,guard,result.proposal.actionId,true);if (ownsTurn()) interne.etat="composition";}
   } catch (error) {
     if (!ownsTurn()) return;
     if (controller.signal.aborted) {
@@ -1031,7 +1052,7 @@ const voiceTurns = new Map<string, string>();
     const guard=()=>{signal.throwIfAborted();if((typeof window === "undefined" ? null : window.location.pathname)!==page||(patientActifCourant?.id??null)!==patientAtStart||interne.carteEcriture!==null)throw new Error("ProposalScopeChanged");};
     const labels=proposal.tool==="send_internal_message"?new Map<string,string>():await alexaProposalLabels(proposal,patientId,db());
     guard();
-    await proposerEcritureRegistre(proposal.tool,proposal.args,text,null,labels,guard,proposal.actionId);
+    await proposerEcritureRegistre(proposal.tool,proposal.args,text,null,labels,guard,proposal.actionId,true);
 });
 abonnerTourVoixLocale(event => {
   if (!voiceTurns.has(event.id)) {

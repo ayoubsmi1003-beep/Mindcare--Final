@@ -1,9 +1,9 @@
 /**
  * La voix de Jarvis — V-JARVIS-CORE.
  *
- * Dictée : `MediaRecorder` presser-pour-parler → base64 → Edge
- * `jarvis-voice-in` (Gemini Transcribe). Lecture : réponse admise → API
- * `jarvis-voice-out` (Piper local) en flux WAV → Blob URL → élément audio.
+ * Dictée : `MediaRecorder` presser-pour-parler → PCM16 → route locale
+ * `jarvis-voice-in` (Whisper large-v3-turbo). Lecture : bouton par bulle → API
+ * locale `jarvis-voice-out` (Kokoro `ff_siwis`) → WAV en mémoire.
  *
  * ═══ FRONTIÈRES, ET ELLES NE BOUGENT PAS ═══
  * · Le transport passe PAR LE PORT (`invokeFunction`/`invokeFunctionStream`)
@@ -11,9 +11,9 @@
  * · AUCUN AUDIO SUR DISQUE : ni cache, ni IndexedDB, ni fichier (contrôle 3 du
  *   préflight). Les blobs vivent en mémoire et sont révoqués à la fin.
  * · Les capacités se DÉCOUVRENT par les codes d'erreur de la passerelle :
- *   `configuration` = moteur local indisponible (erreur visible, aucun repli),
- *   `frontiere` = réponse non admise pour la parole. L'interface ne devine
- *   jamais une capacité, elle la constate.
+ *   `configuration` = non activée pour ce déploiement (bouton inerte nommé),
+ *   `frontiere` = navigateur sans API requise. L'interface ne devine jamais
+ *   une capacité, elle la constate.
  */
 
 import { encoderPCM16 } from "@/shared/jarvis/pcm";
@@ -195,7 +195,7 @@ export async function arreterEtTranscrire(): Promise<Result<string>> {
   }
   if (controle.signal.aborted || enCours.generation !== generationDictee) return err({ code: "indisponible", message: fr.jarvis.voix.indisponible });
   const resultat = await db().invokeFunction<{ texte: string; runId: string; utteranceId: string }>("jarvis-voice-in", {
-    pcmBase64, sampleRate: 16000, runId: enCours.runId, utteranceId: enCours.utteranceId, langue: "auto",
+    pcmBase64, sampleRate: 16000, runId: enCours.runId, utteranceId: enCours.utteranceId, langue: "fr",
   }, controle.signal);
   if (controleTranscription === controle) controleTranscription = null;
   if (controle.signal.aborted || enCours.generation !== generationDictee) return err({ code: "indisponible", message: fr.jarvis.voix.indisponible });
@@ -259,9 +259,8 @@ let sourceLecture: SourceLecture | null = null;
 /**
  * QUI a parlé — et pourquoi cette distinction n'est pas cosmétique.
  *
- * `piper` : synthèse locale épinglée, utilisée par Alexa et les réponses avec
- * identité. `cloud` reste réservé à d'anciens parcours et n'est pas un repli.
- * `local` désigne la synthèse du navigateur.
+ * `local` : Kokoro-82M, le seul synthétiseur actif. L'ancien chemin `cloud`
+ * (ElevenLabs/Gemini) est retiré du produit.
  *
  * ⚠️ SANS CETTE DISTINCTION, UN DIAGNOSTIC FAUX DEVIENT INÉVITABLE. Mesuré le
  * 2026-08-30 : la passerelle vocale était injoignable depuis le navigateur
@@ -272,7 +271,7 @@ let sourceLecture: SourceLecture | null = null;
  * la même porte. Une lecture locale n'est pas une lecture cloud réussie : le
  * dire, c'est rendre la panne visible au lieu de la maquiller.
  */
-export type SourceLecture = "cloud" | "local" | "piper";
+export type SourceLecture = "cloud" | "local";
 
 function publierLecture(valeur: boolean, source: SourceLecture | null = null): void {
   // Pas de doublon (`pause` suit `ended`), sauf si la SOURCE change : passer du
@@ -329,23 +328,40 @@ export function arreterLecture(): void {
 }
 
 /**
- * ═══ LA SYNTHÈSE LOCALE PIPER — SEULE VOIE DE SORTIE ACTUELLE ═══
+ * ═══ LA SYNTHÈSE LOCALE — ET POURQUOI ELLE N'EST PAS UN REPLI DE CONFORT ═══
  *
- * Les noms peuvent être lus, car la route de synthèse est locale Piper et
- * échoue fermée sans basculer vers un fournisseur externe. La route conserve
- * l'admission serveur de la réponse avant de générer la voix.
+ * ⚠️ FUITE RÉELLE, CORRIGÉE ICI. Jusqu'à cette passe, `lireTexte` recevait le
+ * texte DÉJÀ RÉHYDRATÉ — donc portant les vrais noms — et l'envoyait à
+ * ElevenLabs. Le franchissement était journalisé sous `voix-sortie`, mais la
+ * pseudonymisation, elle, n'intervenait nulle part sur ce chemin. Toute
+ * l'architecture de jetons protégeait le modèle de raisonnement et laissait le
+ * synthétiseur vocal recevoir « BELKACEM Nadia » en clair.
+ *
+ * La bascule est STRUCTURELLE, pas heuristique : on regarde si le texte porte
+ * un `{{JETON}}` AVANT rendu. Une heuristique sur le contenu (« est-ce que ça
+ * ressemble à un nom ? ») se tromperait en silence ; la présence d'un jeton est
+ * un fait, pas une estimation.
+ *
+ * ⚠️ EN CAS DE DOUTE, LOCAL. La voix locale est moins belle. Une voix moins
+ * belle est un inconvénient ; un nom de patiente chez un fournisseur tiers est
+ * une infraction à la règle 1. Le sens du défaut n'est pas discutable.
  */
 /**
  * Lit un texte à voix haute.
  *
- * `porteUneIdentite` reste fourni par l'appelant pour préserver le contrat.
- * L'identité est autorisée ici uniquement parce que la sortie est Piper local.
+ * `porteUneIdentite` est décidé par l'APPELANT, qui seul sait si le texte
+ * provenait d'une réponse à jetons (voir `CarteIdentite.porteUneReference`).
+ * Ce fichier ne devine pas : deviner ici serait remettre une décision de
+ * frontière à une heuristique de chaîne de caractères.
  */
 export async function lireTexte(
   texte: string,
-  _porteUneIdentite = false,
+  porteUneIdentite = false,
 ): Promise<Result<true>> {
   arreterLecture(); // un seul son à la fois — relire A remplace B, sans doublon
+  // TTS is local now. A patient-named answer no longer crosses a provider
+  // boundary, so it must be spoken like any other answer.
+  void porteUneIdentite;
 
   // Plafond côté client, aligné sur la passerelle (2000 car.) : refus immédiat
   // lisible plutôt qu'un aller-retour voué à l'échec.
@@ -380,7 +396,10 @@ export async function lireTexte(
     } catch { referenceAudio = null; }
     const url = URL.createObjectURL(new Blob([tampon], { type: "audio/wav" }));
     const audio = new Audio(url);
-    audio.volume = 1; audio.muted = false;
+    // The local worker normalizes its PCM; keep the player at unity so a
+    // previous muted element or inherited default cannot silence the reply.
+    audio.volume = 1;
+    audio.muted = false;
     lectureEnCours = { audio, url };
 
     // On attend le PREMIER SON, pas l'acceptation de la requête. Voir le
@@ -388,7 +407,7 @@ export async function lireTexte(
     const demarre = new Promise<boolean>((resoudre) => {
       audio.onplaying = () => {
         if (generation !== generationLecture || controle.signal.aborted) { resoudre(false); return; }
-        publierLecture(true, "piper");
+        publierLecture(true, "local");
         resoudre(true);
       };
       audio.onerror = () => resoudre(false);

@@ -25,7 +25,7 @@ afterEach(() => {
   vi.unstubAllGlobals();
 });
 
-it("reads an answer containing a patient name through local Piper at full element volume", async () => {
+it("reads an answer containing a patient name through local voice at full element volume", async () => {
   invokeFunctionStream.mockResolvedValue({
     ok: true,
     data: new ReadableStream<Uint8Array>({ start(controller) { controller.enqueue(new Uint8Array(44)); controller.close(); } }),
@@ -41,6 +41,6 @@ it("reads an answer containing a patient name through local Piper at full elemen
   expect(invokeFunctionStream).toHaveBeenCalledWith("jarvis-voice-out", expect.objectContaining({ texte: text }), expect.any(AbortSignal));
   expect(AudioSortieLocale.instances).toHaveLength(1);
   expect(AudioSortieLocale.instances[0]).toMatchObject({ volume: 1, muted: false });
-  expect(states).toContainEqual([true, "piper"]);
+  expect(states).toContainEqual([true, "local"]);
   unsubscribe();
 });

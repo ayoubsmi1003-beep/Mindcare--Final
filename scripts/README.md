@@ -14,7 +14,7 @@
 | `checkpoint-*.sql` + `test-chemin-*` | Jeux et clôtures de fixtures **synthétiques** (`is_synthetic`, `*.invalid.local`) | Oui sur base de dev, JAMAIS contre des données réelles |
 | `db-migrate.sh`, `verify-migrations.sh`, `s0-provision.sh`, `preflight.sh` | Chaîne de migration / provisionnement | Lire avant d'exécuter (écrit en base) |
 | `compte-*.sh`, `dev-account*.sh` | Comptes de dev | Lire avant (écrit en base) |
-| `preparer-paquet.mjs`, `elaguer-pgsql.mjs`, `verifier-paquet.mjs`, `dev-electron.mjs`, `generer-icone.mjs`, `sync-wakeword-runtime.mjs`, `installer-windows.ps1`, `backup.sh`, `sauvegarde.mjs` | Empaquetage / bureau / sauvegarde | Lire avant (artefacts lourds, effets de bord) |
+| `preparer-paquet.mjs`, `preparer-voix-native.mjs`, `verifier-voix-locale.mjs`, `verifier-paquet.mjs`, `elaguer-pgsql.mjs`, `dev-electron.mjs`, `generer-icone.mjs`, `installer-windows.ps1`, `backup.sh`, `sauvegarde.mjs` | Empaquetage / voix locale / bureau / sauvegarde | Lire avant (artefacts lourds, effets de bord) |
 | `sonde-*.mjs`, `qa-*.mjs`, `apercu-*.mjs`, `attendre-*.mjs`, `preuve-*.mjs`, `audit-*.mjs` | Sondes et QA ponctuelles | Cas par cas, préférer `mesure-*` |
 | `import-medicaments.mjs` | Import catalogue (prend `--file`) | Lire avant (écrit en base) |
 

@@ -26,17 +26,17 @@ describe("bounded native speech operation deadlines", () => {
     await expect(canal.demander(stt, controller.signal, 90_000)).rejects.toThrow("annulee");
   });
 
-  it("enforces the 90-second ceiling even when a caller requests an unbounded wait", async () => {
+  it("caps a request at five minutes even when a caller requests an unbounded wait", async () => {
     vi.useFakeTimers(); const destroy = vi.fn(), canal = new CanalVoixNative(vi.fn(), destroy);
     const result = canal.demander(stt, undefined, 900_000).then(() => "unexpected-success", error => error.message);
-    await vi.advanceTimersByTimeAsync(89_999); expect(destroy).not.toHaveBeenCalled();
+    await vi.advanceTimersByTimeAsync(299_999); expect(destroy).not.toHaveBeenCalled();
     await vi.advanceTimersByTimeAsync(1); expect(await result).toBe("timeout"); expect(destroy).toHaveBeenCalledOnce();
   });
 
-  it("allows a slow local TTS call to use the full 90-second budget", async () => {
+  it("allows Kokoro to use its full three-minute TTS budget", async () => {
     vi.useFakeTimers(); const destroy = vi.fn(), canal = new CanalVoixNative(vi.fn(), destroy);
-    const result = canal.demander({ ...scope, action: "tts", texte: "Bonjour.", langue: "fr" }).then(() => "unexpected-success", error => error.message);
-    await vi.advanceTimersByTimeAsync(89_999); expect(destroy).not.toHaveBeenCalled();
+    const result = canal.demander({ ...scope, action: "tts", texte: "Bonjour.", langue: "fr" }, undefined, 180_000).then(() => "unexpected-success", error => error.message);
+    await vi.advanceTimersByTimeAsync(179_999); expect(destroy).not.toHaveBeenCalled();
     await vi.advanceTimersByTimeAsync(1); expect(await result).toBe("timeout"); expect(destroy).toHaveBeenCalledOnce();
   });
 });

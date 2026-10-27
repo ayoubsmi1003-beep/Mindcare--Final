@@ -61,8 +61,12 @@ function requestedAgendaPageSize(text:string):number|undefined {
 }
 function requestsDocumentOpen(text:string):boolean {
  const plain=text.normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase();
- return /\b(?:ouvre|ouvrir|affiche|afficher|montre|montrer|consulte|consulter|visualise|visualiser)\b/u.test(plain)
-  && /\b(?:documents?|ordonn?ances?|certificats?|justificatifs?)\b/u.test(plain);
+ const document=/\b(?:documents?|ordonn?ances?|certificats?|justifications?|justificatifs?|suivi medical)\b/u.test(plain);
+ if(!document)return false;
+ const directOpen=/\b(?:ouvre|ouvrir|affiche|afficher|montre|montrer|consulte|consulter|visualise|visualiser|creer|cree|redige|rediger)\b/u.test(plain);
+ const patientLinked=parsePatientMention(text).status==='named'||/\b(?:pour|de|du|concernant)\s+[\p{L}]/u.test(plain);
+ const namedWorkspace=patientLinked&&!/\b(?:liste|cherche|recherche|trouve|combien|nombre|quel(?:le)?s?|est-ce|y a-t-il)\b/u.test(plain);
+ return directOpen||namedWorkspace;
 }
 
 /** Only this closed catalogue reaches server-side, actor-bound SQL doors. No browser service imports. */
@@ -321,7 +325,7 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
       evidence:[patientSource(patientId!),{id:call.id,type:'query',label:copy.clinicalRead,version:context.sourceRevision,provenance:{gate:'get_alexa_clinical_context',section:'sessionDetails',consultations:visits.length}},...visits.map(v=>({id:v.id,type:'consultation' as const,label:date(v.startedAt)}))],
       data:{patientId,sourceRevision:context.sourceRevision,coverage:context.coverage,measureEvolution:visits.map(v=>({consultationId:v.id,startedAt:v.startedAt,sessionDetails:v.sessionDetails??null}))}};
     }
-    const olderDifficulty=/\bdifficulte\w*\b[^.!?]*\bune ancienne consultation\b/u.test(requested),followUp=spec.area==='plan'&&/\b(?:suivi|suite)(?:\s+\w+){0,2}\s+prevu\w*\b/u.test(requested),latestConsultation=/\b(?:derniere|plus recente)\s+(?:consultation|seance)\b/u.test(requested);
+    const olderDifficulty=/\bdifficulte\w*\b[^.!?]*\bune ancienne consultation\b/u.test(requested),followUp=spec.area==='plan'&&/\b(?:suivi|suite)(?:\s+\w+){0,2}\s+prevu\w*\b/u.test(requested),latestConsultation=/\b(?:derniere|plus recente)\s+(?:consultation|seance)\b|\b(?:consultation|seance)\s+(?:la\s+)?(?:plus\s+)?recente\b/u.test(requested);
     if(!spec.consultationId&&!spec.from&&!spec.to&&(olderDifficulty||followUp||latestConsultation)){
      const context=await buildClinicalContext(db,{patientId:patientId!},{count:2},signal);
      const visits=[...context.consultations,...(context.currentConsultation?[context.currentConsultation]:[])].sort((a,b)=>b.startedAt.localeCompare(a.startedAt)||b.id.localeCompare(a.id));
@@ -630,7 +634,9 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
    result.status=value.total||hasRequestedUnpricedConsultations?"ok":"empty";
    const requestedDocumentKind=frenchRequestAdmission(requestText,false).documentKind;
    const soleRequestedIssuedDocument=call.name==='query_documents'&&requestsDocumentOpen(requestText)&&patientId&&spec['patientId']===patientId&&requestedDocumentKind&&spec['kind']===requestedDocumentKind&&value.total===1&&visibleRows.length===1&&visibleRows[0]?.patientId===patientId&&visibleRows[0]?.status==='issued'?visibleRows[0]:undefined;
-   if(soleRequestedIssuedDocument&&patientId)result.navigation={target:'document',patientId,documentId:soleRequestedIssuedDocument.id};
+   if(call.name==='query_documents'&&requestsDocumentOpen(requestText)&&patientId&&spec['patientId']===patientId&&requestedDocumentKind&&spec['kind']===requestedDocumentKind){
+    result.navigation=soleRequestedIssuedDocument?{target:'document',patientId,documentId:soleRequestedIssuedDocument.id}:{target:'documents',patientId,documentKind:requestedDocumentKind};
+   }
    if(call.name==='query_documents'&&documentId&&value.rows.some(r=>r.id===documentId)){
     let text:string,sourceRevision:string|number;
     if(spec['draftId']){

@@ -507,10 +507,15 @@ function spawnBackend(serveurDir: string, fichierEnv: string, journalDir: string
   (env as Record<string, string>)["NODE_ENV"] = "production";
   (env as Record<string, string>)["MINDCARE_ENV_FILE"] = fichierEnv;
   const voixDir = isStandalone ? path.join(serveurDir, "..", "voix") : path.join(serveurDir, "resources", "voix");
+  // Packaged: absolute resources outside app.asar. The worker lives next to
+  // its assets and helper scripts, not in the server's copied scripts folder.
+  env["MINDCARE_PACKAGED"] ??= isStandalone ? "1" : "0";
+  env["ALEXA_VOICE_ROOT"] ??= voixDir;
   env["ALEXA_VOICE_ASSETS"] ??= path.join(voixDir, "assets");
   env["ALEXA_VOICE_PYTHON"] ??= path.join(voixDir, "python", "python.exe");
   env["ALEXA_VOICE_PACKAGES"] ??= path.join(voixDir, "packages");
-  env["ALEXA_VOICE_WORKER_DIR"] ??= path.join(serveurDir, "scripts");
+  env["ALEXA_VOICE_WORKER_DIR"] ??= voixDir;
+  env["ALEXA_WAKE_WORKER_DIR"] ??= voixDir;
   // Propager MINDCARE_DATABASE_URL si MINDCARE_ENV_FILE contient déjà la variable
   // (le serveur Next ne lit pas MINDCARE_ENV_FILE lui-même — voir src/server/db/pool.ts)
   const urlFichier = lireUrlDepuisFichier(fichierEnv);

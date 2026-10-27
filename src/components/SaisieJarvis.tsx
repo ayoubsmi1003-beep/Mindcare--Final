@@ -31,7 +31,11 @@ export function SaisieJarvis({
   // `veille` (réveil armé, rien en cours) ne bloque pas le clavier : seule
   // une voix engagée (réveil entendu, écoute, traitement, parole) le fait.
   const actif = voix.etat === "reveille" || voix.etat === "ecoute" || voix.etat === "traitement" || voix.etat === "parole" || voix.etat === "interrompu";
-  const messageVoix = actif || voix.etat === "erreur" ? voix.raison ?? null : null;
+  const messageVoix = actif || voix.etat === "erreur"
+    ? voix.raison ?? null
+    : mainsLibres && voix.etat === "veille"
+      ? alexa.voixVeille
+      : null;
   const libelleVoix = actif ? alexa.voixArreter : alexa.voixDemarrer;
   const libelleMainsLibres = mainsLibres ? alexa.mainsLibresArreter : alexa.mainsLibresActiver;
 

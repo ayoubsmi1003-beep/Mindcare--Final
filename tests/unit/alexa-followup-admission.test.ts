@@ -2,6 +2,8 @@ import {expect,it,vi} from 'vitest';
 import {agentExecutor} from '@/server/alexa/agent-tools';
 import {runAgentLoop} from '@/server/alexa/agent-loop';
 import {scriptedAlexaRpc} from '../helpers/alexa-rpc';
+import {explicitAgendaClockWindow} from '@/server/alexa/agent-period';
+import {frenchRequestAdmission,frenchRequestedOutputs} from '@/shared/alexa/request-contract';
 const clock='2026-10-23T12:00:00+01:00',range={from:'2026-10-01T00:00:00+01:00',to:'2026-11-01T00:00:00+01:00'};
 const input=(text:string)=>({text,conversationId:crypto.randomUUID(),clientTurnId:crypto.randomUUID(),appContext:{patientId:null,page:'/jarvis'}});
 const empty=()=>scriptedAlexaRpc(async()=>({ok:true as const,data:[{total:0,rows:[],totals:{pendingDzd:0,collectedDzd:0,unpriced:0},complete:true,offset:0}]}));
@@ -32,6 +34,8 @@ it.each([
 });
 it('routes an independently parsed single clock interval without routing inference',async()=>{
  const request=input('Affiche les rendez-vous du 23 octobre 2026 entre 9 h et 11 h.'),rpc=empty(),infer=vi.fn(async()=>{throw Error('Unexpected inference');});
+ expect(frenchRequestedOutputs(request.text)).toBeNull();expect(frenchRequestAdmission(request.text,false,clock).tools).toEqual(['query_agenda']);
+ expect(explicitAgendaClockWindow(request.text,clock)).toEqual({from:'2026-10-23T09:00:00+01:00',to:'2026-10-23T11:00:00+01:00',matchedText:'entre 9 h et 11 h'});
  const result=await runAgentLoop(request,{actor:'exact-clock-direct',asOf:clock,infer,execute:agentExecutor(request,{rpc},{rpc:vi.fn()})},new AbortController().signal);
  expect(infer).not.toHaveBeenCalled();expect(result.status).toBe('completed');
  expect(JSON.parse(String(rpc.mock.calls[0]?.[1]?.p_spec))).toEqual({from:'2026-10-23T09:00:00+01:00',to:'2026-10-23T11:00:00+01:00'});

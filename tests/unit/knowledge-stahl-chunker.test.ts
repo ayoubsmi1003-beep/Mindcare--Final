@@ -19,8 +19,9 @@ import { join } from "node:path";
  * de la suite vitest.
  */
 
+const RACINE_FIXTURES = process.env.MINDCARE_KNOWLEDGE_FIXTURE_ROOT ?? process.cwd();
 const DOSSIER = join(
-  process.cwd(),
+  RACINE_FIXTURES,
   "knowledge",
   "canonical-v2",
   "stahl-prescribers-guide-7e-cup",

@@ -198,7 +198,7 @@ it('lets the admitted gate report missing patient identity without reading a gue
     : call('q', 'get_patient_context', { partIds: ['p'], section: 'notes' })
   }, new AbortController().signal);
   expect(result.status).toBe('needs_input');
-  expect(execute).toHaveBeenCalledTimes(1);
+  expect(execute).not.toHaveBeenCalled();
   expect(result.patientId).toBeNull();
 });
 

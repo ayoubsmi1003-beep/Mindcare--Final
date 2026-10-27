@@ -3,7 +3,7 @@ export const medicationNames = ["sertraline", "escitalopram", "citalopram", "flu
   "mirtazapine", "amitriptyline", "clomipramine", "trazodone", "vortioxetine", "bupropion", "agomelatine", "quetiapine",
   "olanzapine", "risperidone", "aripiprazole", "haloperidol", "clozapine", "amisulpride", "lithium", "valproate", "lamotrigine",
   "carbamazepine", "diazepam", "lorazepam", "alprazolam", "clonazepam", "bromazepam", "hydroxyzine", "pregabalin",
-  "gabapentin", "zolpidem", "zopiclone", "melatonine", "methylphenidate", "atomoxetine"] as const;
+  "gabapentin", "zolpidem", "zopiclone", "melatonine", "methylphenidate", "atomoxetine", "zoloft"] as const;
 
 export function isMedicationName(text: string): boolean {
   return medicationNames.some(name => name === text.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase());

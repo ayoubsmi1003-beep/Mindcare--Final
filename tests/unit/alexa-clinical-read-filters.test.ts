@@ -17,6 +17,13 @@ it.each([
  ['Lis les traitements en pause du dossier courant.',{section:'treatments',treatmentState:'paused'}],
  ['Montre les traitements actifs du dossier courant.',{section:'treatments',treatmentState:'active'}],
 ])('preserves the explicit clinical filter: %s',(text,expected)=>expect(frenchReadArgumentBindings(frenchRequestAdmission(text,false),'get_patient_context')).toMatchObject(expected));
+it.each([
+ ['Montre les diagnostics résolus du dossier courant.',{section:'diagnoses',diagnosisState:'resolved'}],
+ ['Montre le diagnostic principal du dossier courant.',{section:'diagnoses',diagnosisRole:'primary'}],
+])('does not turn a specific diagnosis query into a dossier summary: %s',(text,expected)=>{
+ expect(frenchRequestAdmission(text,false)).toMatchObject({tools:['get_patient_context'],patientSection:'diagnoses'});
+ expect(frenchReadArgumentBindings(frenchRequestAdmission(text,false),'get_patient_context')).toMatchObject(expected);
+});
 it('binds a quoted consultation reference as a note-content search filter',()=>{
  const text='Cherche la référence « REPERE-001-S06 » dans les notes de Amel Bensaid.';
  const scope=frenchRequestAdmission(text,false);

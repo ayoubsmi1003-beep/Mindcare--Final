@@ -218,20 +218,16 @@ const EVALS = [
   ["eval-intentions", ["scripts/eval-jarvis-intentions.mjs", ".eval-out/intentions", FRONT], 120000],
   ["eval-conversation", ["scripts/eval-jarvis-conversation.mjs", ".eval-out"], 180000],
   ["eval-knowledge-fixture", ["scripts/eval-knowledge-retrieval.mjs", ".eval-out"], 180000],
-  ["eval-reveil-pipeline", ["scripts/eval-reveil-pipeline.mjs", "alexa.onnx"], 300000],
 ];
 if (!compileOk) {
-  for (const [nom] of EVALS.filter(([n]) => n !== "eval-reveil-pipeline"))
+  for (const [nom] of EVALS)
     push({ name: nom, status: "NOT RUN", case_count: null, pass_count: 0, fail_count: 0, not_run_count: 1, failed_case_ids: [], not_run_reason: "compilation en echec (structurel)", required_environment: "compilateur tsc + sources", detail: null });
-  await suiteCommand({ name: "eval-reveil-pipeline", cmd: "node", args: ["scripts/eval-reveil-pipeline.mjs", "alexa.onnx"], timeout: 300000 });
 } else {
   for (const [nom, argv, timeout] of EVALS) {
     await suiteCommand({
       name: nom, cmd: "node", args: argv, timeout,
       requiredFiles: [argv[0]],
-      parse: nom === "eval-reveil-pipeline"
-        ? (out, code, c) => ({ pass_count: c.pass, fail_count: code === 0 ? 0 : Math.max(c.failLines, 1), detail: "voix humaine : NON MESUREE par la passe elle-meme (plumbing 11/11)" })
-        : nom === "eval-knowledge-fixture"
+      parse: nom === "eval-knowledge-fixture"
           ? (out, code, c) => {
             const m = out.match(/Recall@5\s+hybride=([0-9.]+%)/);
             return { pass_count: c.pass, fail_count: code === 0 ? 0 : Math.max(c.failLines, 1), detail: m ? `recall@5-hybride(proxy lexical)=${m[1]} ; portes SQL + embeddings reels + cross-encoder : NOT RUN` : "portes SQL + embeddings reels + cross-encoder : NOT RUN" };
@@ -442,7 +438,7 @@ const rapport = {
   suites,
   totaux: { suites: suites.length, PASS: passN, FAIL: failN, "NOT RUN": notRunN },
   ...couverture(),
-  environment_requirements: ["node>=20", "tsc+eslint+vitest locaux", "MINDCARE_TEST_DATABASE_URL (integration)", "app demarree (e2e)", "modeles ONNX public/wakeword (pipeline)", "base M07 + embeddings + cross-encoder (retrieval DB)", "modele pine (qualite live)"],
+  environment_requirements: ["node>=20", "tsc+eslint+vitest locaux", "MINDCARE_TEST_DATABASE_URL (integration)", "app demarree (e2e)", "base M07 + embeddings + cross-encoder (retrieval DB)", "modele pine (qualite live)"],
   not_run_reasons: notRuns.map((s) => ({ suite: s.name, reason: s.not_run_reason, required_environment: s.required_environment ?? null })),
   mutation_proof: suites.find((s) => s.name === "preuve-mutation")?.status ?? "ABSENTE",
   pii_scan: suites.find((s) => s.name === "scan-pii")?.status ?? "ABSENT",

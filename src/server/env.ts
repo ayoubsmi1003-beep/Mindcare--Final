@@ -63,10 +63,15 @@ const Schema = z.object({
   JARVIS_STREAMING: z.string().optional(),
   JARVIS_VOICE_ENABLED: z.string().optional(),
   ALEXA_LOCAL_VOICE: z.enum(["true", "false"]).default("true"),
+  MINDCARE_PACKAGED: z.enum(["0", "1", "true", "false"]).optional(),
+  ALEXA_VOICE_ROOT: z.string().optional(),
   ALEXA_VOICE_ASSETS: z.string().optional(),
   ALEXA_VOICE_PYTHON: z.string().optional(),
   ALEXA_VOICE_PACKAGES: z.string().optional(),
+  ALEXA_VOICE_WORKER: z.string().optional(),
   ALEXA_VOICE_WORKER_DIR: z.string().optional(),
+  ALEXA_WAKE_WORKER: z.string().optional(),
+  ALEXA_WAKE_WORKER_DIR: z.string().optional(),
   // Audit Slice 1 — pré-routage JEV (modèle de décision TypeSafe via
   // l'API Decisions, voir `decisions()` dans la passerelle). OFF par défaut :
   // le classifieur LLM existant reste le chemin nominal tant que cet

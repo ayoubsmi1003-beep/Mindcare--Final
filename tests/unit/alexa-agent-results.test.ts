@@ -144,6 +144,22 @@ it.each([[0,'Le cabinet ne compte aucun patient actif.'],[1,'Le cabinet compte 1
  expect(result.text).toBe(expected);expect(result.data).toMatchObject({total,patientQuery:{mode:'count',population:'active'}});
  expect(rpc.mock.calls[0]?.[0]).toBe('search_patients');
 });
+it('describes a six-month consultation absence count naturally and includes never-seen patients',async()=>{
+ const asOf='2026-10-25T12:00:00.000Z',condition={field:'no_completed_months',op:'eq',value:6};
+ const rpc=vi.fn().mockResolvedValue({ok:true,data:[{total:1221,rows:[],metrics:{},unknownAge:0,revision:'d'.repeat(32),asOf,conditions:[condition],complete:true,offset:0,appliedSpec:{filters:[condition]}}]});
+ const execute=agentExecutor({text:'Combien de patients n’ont pas été vus depuis six mois ?',conversationId:'natural-not-seen-count',clientTurnId:'11111111-1111-4111-8111-111111111111',appContext:{patientId:null,page:'/jarvis'}},{rpc},{rpc:vi.fn()});
+ const result=await execute({id:'count',name:'query_patients',args:{partIds:['count'],mode:'count',filters:[condition],population:'active'}},asOf,[],new AbortController().signal);
+ expect(result.text).toBe('Parmi les patients actifs, 1 221 n’ont pas eu de consultation terminée depuis 6 mois, y compris ceux qui n’en ont jamais eu.');
+ expect(result.text).not.toMatch(/patient\(s\)|visibles|valeur nulle|âge au jour/u);
+});
+it('states every filter in a combined patient count without internal schema definitions',async()=>{
+ const asOf='2026-10-25T12:00:00.000Z',filters=[{field:'phone',op:'missing',value:null},{field:'completed_consultations',op:'gte',value:1}];
+ const rpc=vi.fn().mockResolvedValue({ok:true,data:[{total:5,rows:[],metrics:{},unknownAge:0,revision:'e'.repeat(32),asOf,conditions:filters,complete:true,offset:0,appliedSpec:{filters}}]});
+ const execute=agentExecutor({text:'Combien de patients sans téléphone ont au moins une consultation terminée ?',conversationId:'natural-combined-patient-count',clientTurnId:'11111111-1111-4111-8111-111111111111',appContext:{patientId:null,page:'/jarvis'}},{rpc},{rpc:vi.fn()});
+ const result=await execute({id:'count',name:'query_patients',args:{partIds:['count'],mode:'count',filters,population:'active'}},asOf,[],new AbortController().signal);
+ expect(result.text).toBe('Parmi les patients actifs, 5 répondent aux critères : sans numéro de téléphone et avec au moins une consultation terminée.');
+ expect(result.text).not.toMatch(/patient\(s\)|visibles|valeur nulle|âge au jour/u);
+});
 it.each([[5,'En octobre 2026, 5 patients actifs ont eu au moins 3 consultations commencées dans le mois et terminées.'],[0,'En octobre 2026, aucun patient actif n’a eu au moins 3 consultations commencées dans le mois et terminées.']])('summarizes a verified patient count for completed consultations in a month: %s',async(total,expected)=>{
  const asOf='2026-10-25T12:00:00.000Z',condition={field:'completed_consultations',op:'gte',value:3},consultationPeriod={from:'2026-10-01T00:00:00+01:00',to:'2026-11-01T00:00:00+01:00',axis:'started_at'};
  const rpc=vi.fn().mockResolvedValue({ok:true,data:[{total,rows:[],metrics:{},unknownAge:0,revision:'c'.repeat(32),asOf,conditions:[condition],complete:true,offset:0,appliedSpec:{filterGroups:[[condition]],consultationPeriod}}]});
@@ -194,6 +210,24 @@ it('resolves a name supplied by the doctor even when the model omits patient arg
  const result=await execute({id:'read',name:'query_consultations',args:{partIds:['read'],mode:'list',status:'all'}},'2026-10-15T12:00:00Z',[],new AbortController().signal);
  expect(result.patientId).toBe(patientId);expect(result.text).toContain('Nadia Test');expect(rpc.mock.calls[0]?.[0]).toBe('search_patients');const query=rpc.mock.calls.find(c=>c[0]==='query_alexa_records');expect(JSON.parse(query?.[1].p_spec)).toMatchObject({patientId});
 });
+it.each([
+ ['Quels certificats de bonne santé mentale ont été émis ?', '22222222-2222-4222-8222-222222222222'],
+ ['Quels certificats de bonne santé mentale ont été émis au cabinet ?', null],
+])('binds implicit document reads to the selected patient unless the question is cabinet-wide: %s',async(text,expectedPatientId)=>{
+ const patientId='22222222-2222-4222-8222-222222222222',asOf='2026-10-15T12:00:00.000Z';
+ const profile={id:patientId,first_name:'Nadia',last_name:'Test',total_count:1};
+ const rpc=vi.fn().mockImplementation(async(name:string,args:Record<string,unknown>)=>name==='get_patient'?{ok:true,data:[profile]}:name==='query_alexa_records'?{ok:true,data:[{total:0,rows:[],totals:{},complete:true,offset:0}]}:name==='search_patients'?{ok:true,data:[{total:0,rows:[],metrics:{},unknownAge:0,revision:'a'.repeat(32),asOf,conditions:[],complete:true,offset:0,appliedSpec:JSON.parse(String(args.p_spec))}]}:{ok:false,error:{technical:'unexpected'}});
+ const execute=agentExecutor({text,conversationId:'implicit-document-patient-scope',clientTurnId:crypto.randomUUID(),appContext:{patientId,page:'/patients/'+patientId}},{rpc},{rpc:vi.fn()});
+ await execute({id:'documents',name:'query_documents',args:{partIds:['documents'],kind:'bonne_sante_mentale',status:'issued'}},asOf,[],new AbortController().signal);
+ const query=rpc.mock.calls.find(call=>call[0]==='query_alexa_records');expect(query).toBeDefined();
+ expect(JSON.parse(String(query?.[1].p_spec)).patientId??null).toBe(expectedPatientId);
+});
+it('answers an empty document search in natural French instead of exposing the generic result label',async()=>{
+ const rpc=vi.fn().mockResolvedValue({ok:true,data:[{total:0,rows:[],totals:{},complete:true,offset:0}]});
+ const execute=agentExecutor({text:'Quels documents ont été émis au cabinet ?',conversationId:'empty-document-list',clientTurnId:crypto.randomUUID(),appContext:{patientId:null,page:'/jarvis'}},{rpc},{rpc:vi.fn()});
+ const result=await execute({id:'documents',name:'query_documents',args:{partIds:['documents'],status:'issued'}},'2026-10-15T12:00:00.000Z',[],new AbortController().signal);
+ expect(result.text).toBe('Aucun document ne correspond à votre demande.');expect(result.status).toBe('empty');
+});
 it('opens the sole issued ordonnance for the explicitly named patient',async()=>{
  const patientId='22222222-2222-4222-8222-222222222222',documentId='44444444-4444-4444-8444-444444444444',asOf='2026-10-15T12:00:00.000Z';
  const profile={id:patientId,first_name:'Nadia',last_name:'Test',total_count:1};
@@ -217,7 +251,11 @@ it('opens an ordonnance only for a unique explicit open request',async()=>{
   const rpc=vi.fn().mockImplementation(async(name:string,args:Record<string,unknown>)=>name==='search_patients'&&typeof args.p_query==='string'?{ok:true,data:[profile]}:name==='get_patient'?{ok:true,data:[profile]}:name==='query_alexa_records'?{ok:true,data:[record]}:{ok:false,error:{technical:'unexpected'}});
   const execute=agentExecutor({text:scenario.text,conversationId:`no-unrequested-document-open-${index}`,clientTurnId:crypto.randomUUID(),appContext:{patientId:null,page:'/jarvis'}},{rpc},{rpc:vi.fn()});
   const result=await execute({id:'documents',name:'query_documents',args:{partIds:['documents'],kind:'ordonnance',status:'issued'}},asOf,[],new AbortController().signal);
-  expect(result.navigation).toBeUndefined();
+  if(index===0)expect(result.navigation).toBeUndefined();
+  else {
+   expect(result.navigation).toEqual({target:'documents',patientId,documentKind:'ordonnance'});
+   expect(result.navigation).not.toHaveProperty('documentId');
+  }
  }
 });
 it('does not broaden a two-name document request when the model omits identity arguments',async()=>{const rpc=vi.fn();const execute=agentExecutor({text:'Liste les documents de Nadia Test et de Test Nadia.',conversationId:'ambiguous-record-scope',clientTurnId:crypto.randomUUID(),appContext:{patientId:null,page:'/jarvis'}},{rpc},{rpc:vi.fn()});const result=await execute({id:'r',name:'query_documents',args:{partIds:['r'],status:'issued'}},'2026-10-15T12:00:00Z',[],new AbortController().signal);expect(result.status).toBe('needs_input');expect(rpc).not.toHaveBeenCalled();});
@@ -250,37 +288,31 @@ it('keeps a document detail partial when its associated patient name cannot be r
 });
 
 it.each([['Liste ses consultations.','22222222-2222-4222-8222-222222222222'],['Compte les consultations du dossier sélectionné.','22222222-2222-4222-8222-222222222222'],['Liste les consultations du dossier courant.','22222222-2222-4222-8222-222222222222'],['Liste les consultations du cabinet.',null]])('grounds selected-patient scope only when requested: %s',async(text,wanted)=>{const patientId='22222222-2222-4222-8222-222222222222';const rpc=vi.fn().mockImplementation(async(name:string)=>({ok:true,data:name==='get_patient'?[{id:patientId,first_name:'Amel',last_name:'Bensaid'}]:[{total:0,rows:[],totals:{},complete:true,offset:0}]}));const execute=agentExecutor({text,conversationId:'selected-record-scope',clientTurnId:crypto.randomUUID(),appContext:{patientId,page:'/patients/'+patientId}},{rpc},{rpc:vi.fn()});const result=await execute({id:'r',name:'query_consultations',args:{partIds:['r'],mode:'list',status:'all'}},'2026-10-15T12:00:00Z',[],new AbortController().signal);const query=rpc.mock.calls.find(c=>c[0]==='query_alexa_records');expect(JSON.parse(query?.[1].p_spec).patientId??null).toBe(wanted);if(wanted){expect(result.patientId).toBe(wanted);expect(result.text).toContain('Amel Bensaid');}});
-it('describes a six-month consultation absence count naturally and includes never-seen patients',async()=>{
- const asOf='2026-10-25T12:00:00.000Z',condition={field:'no_completed_months',op:'eq',value:6};
- const rpc=vi.fn().mockResolvedValue({ok:true,data:[{total:1221,rows:[],metrics:{},unknownAge:0,revision:'d'.repeat(32),asOf,conditions:[condition],complete:true,offset:0,appliedSpec:{filters:[condition]}}]});
- const execute=agentExecutor({text:'Combien de patients n’ont pas été vus depuis six mois ?',conversationId:'natural-not-seen-count',clientTurnId:'11111111-1111-4111-8111-111111111111',appContext:{patientId:null,page:'/jarvis'}},{rpc},{rpc:vi.fn()});
- const result=await execute({id:'count',name:'query_patients',args:{partIds:['count'],mode:'count',filters:[condition],population:'active'}},asOf,[],new AbortController().signal);
- expect(result.text).toBe('Parmi les patients actifs, 1 221 n’ont pas eu de consultation terminée depuis 6 mois, y compris ceux qui n’en ont jamais eu.');
- expect(result.text).not.toMatch(/patient\(s\)|visibles|valeur nulle|âge au jour/u);
-});
-it('states every filter in a combined patient count without internal schema definitions',async()=>{
- const asOf='2026-10-25T12:00:00.000Z',filters=[{field:'phone',op:'missing',value:null},{field:'completed_consultations',op:'gte',value:1}];
- const rpc=vi.fn().mockResolvedValue({ok:true,data:[{total:5,rows:[],metrics:{},unknownAge:0,revision:'e'.repeat(32),asOf,conditions:filters,complete:true,offset:0,appliedSpec:{filters}}]});
- const execute=agentExecutor({text:'Combien de patients sans téléphone ont au moins une consultation terminée ?',conversationId:'natural-combined-patient-count',clientTurnId:'11111111-1111-4111-8111-111111111111',appContext:{patientId:null,page:'/jarvis'}},{rpc},{rpc:vi.fn()});
- const result=await execute({id:'count',name:'query_patients',args:{partIds:['count'],mode:'count',filters,population:'active'}},asOf,[],new AbortController().signal);
- expect(result.text).toBe('Parmi les patients actifs, 5 répondent aux critères : sans numéro de téléphone et avec au moins une consultation terminée.');
- expect(result.text).not.toMatch(/patient\(s\)|visibles|valeur nulle|âge au jour/u);
-});
+
 it.each([
- ['Quels certificats de bonne santé mentale ont été émis ?', '22222222-2222-4222-8222-222222222222'],
- ['Quels certificats de bonne santé mentale ont été émis au cabinet ?', null],
-])('binds implicit document reads to the selected patient unless the question is cabinet-wide: %s',async(text,expectedPatientId)=>{
- const patientId='22222222-2222-4222-8222-222222222222',asOf='2026-10-15T12:00:00.000Z';
- const profile={id:patientId,first_name:'Nadia',last_name:'Test',total_count:1};
- const rpc=vi.fn().mockImplementation(async(name:string,args:Record<string,unknown>)=>name==='get_patient'?{ok:true,data:[profile]}:name==='query_alexa_records'?{ok:true,data:[{total:0,rows:[],totals:{},complete:true,offset:0}]}:name==='search_patients'?{ok:true,data:[{total:0,rows:[],metrics:{},unknownAge:0,revision:'a'.repeat(32),asOf,conditions:[],complete:true,offset:0,appliedSpec:JSON.parse(String(args.p_spec))}]}:{ok:false,error:{technical:'unexpected'}});
- const execute=agentExecutor({text,conversationId:'implicit-document-patient-scope',clientTurnId:crypto.randomUUID(),appContext:{patientId,page:'/patients/'+patientId}},{rpc},{rpc:vi.fn()});
- await execute({id:'documents',name:'query_documents',args:{partIds:['documents'],kind:'bonne_sante_mentale',status:'issued'}},asOf,[],new AbortController().signal);
- const query=rpc.mock.calls.find(call=>call[0]==='query_alexa_records');expect(query).toBeDefined();
- expect(JSON.parse(String(query?.[1].p_spec)).patientId??null).toBe(expectedPatientId);
+ ['eq',0,'avec un solde de 0 DZD'],
+ ['gt',0,'avec un solde impayé'],
+ ['gt',100,'avec un solde supérieur à 100 DZD'],
+ ['gte',100,'avec un solde supérieur ou égal à 100 DZD'],
+ ['lt',100,'avec un solde inférieur à 100 DZD'],
+ ['lte',100,'avec un solde inférieur ou égal à 100 DZD'],
+])('describes an outstanding-balance %s filter with its actual operator',async(op,value,criterion)=>{
+ const asOf='2026-10-25T12:00:00.000Z',filter={field:'outstanding_balance',op,value};
+ const rpc=vi.fn().mockResolvedValue({ok:true,data:[{total:5,rows:[],metrics:{},unknownAge:0,revision:'f'.repeat(32),asOf,conditions:[filter],complete:true,offset:0,appliedSpec:{filters:[filter]}}]});
+ const execute=agentExecutor({text:'Compte les patients selon leur solde.',conversationId:`balance-count-${op}-${value}`,clientTurnId:crypto.randomUUID(),appContext:{patientId:null,page:'/jarvis'}},{rpc},{rpc:vi.fn()});
+ const result=await execute({id:'count',name:'query_patients',args:{partIds:['count'],mode:'count',filters:[filter],population:'active'}},asOf,[],new AbortController().signal);
+ expect(result.text).toBe(`Parmi les patients actifs, 5 répondent aux critères : ${criterion}.`);
 });
-it('answers an empty document search in natural French instead of exposing the generic result label',async()=>{
- const rpc=vi.fn().mockResolvedValue({ok:true,data:[{total:0,rows:[],totals:{},complete:true,offset:0}]});
- const execute=agentExecutor({text:'Quels documents ont été émis au cabinet ?',conversationId:'empty-document-list',clientTurnId:crypto.randomUUID(),appContext:{patientId:null,page:'/jarvis'}},{rpc},{rpc:vi.fn()});
- const result=await execute({id:'documents',name:'query_documents',args:{partIds:['documents'],status:'issued'}},'2026-10-15T12:00:00.000Z',[],new AbortController().signal);
- expect(result.text).toBe('Aucun document ne correspond à votre demande.');expect(result.status).toBe('empty');
+
+it.each([
+ 'Quels certificats ont été émis dans l’ensemble du cabinet ?',
+ 'Quels certificats ont été émis à l’échelle de l’ensemble du cabinet ?',
+ 'Quels certificats ont été émis pour tout le cabinet ?',
+])('keeps explicit whole-cabinet document requests out of selected-patient scope: %s',async text=>{
+ const patientId='22222222-2222-4222-8222-222222222222';
+ const rpc=vi.fn().mockImplementation(async(name:string,args:Record<string,unknown>)=>name==='get_patient'?{ok:true,data:[{id:patientId,first_name:'Nadia',last_name:'Test'}]}:name==='query_alexa_records'?{ok:true,data:[{total:0,rows:[],totals:{},complete:true,offset:0}]}:name==='search_patients'?{ok:true,data:[{total:0,rows:[],metrics:{},unknownAge:0,revision:'a'.repeat(32),asOf:'2026-10-15T12:00:00.000Z',conditions:[],complete:true,offset:0,appliedSpec:JSON.parse(String(args.p_spec))}]}:{ok:false,error:{technical:'unexpected'}});
+ const execute=agentExecutor({text,conversationId:'cabinet-document-scope',clientTurnId:crypto.randomUUID(),appContext:{patientId,page:'/patients/'+patientId}},{rpc},{rpc:vi.fn()});
+ await execute({id:'documents',name:'query_documents',args:{partIds:['documents'],status:'issued'}},'2026-10-15T12:00:00.000Z',[],new AbortController().signal);
+ const query=rpc.mock.calls.find(call=>call[0]==='query_alexa_records');expect(query).toBeDefined();
+ expect(JSON.parse(String(query?.[1].p_spec)).patientId??null).toBeNull();
 });

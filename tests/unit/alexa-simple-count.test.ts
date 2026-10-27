@@ -33,5 +33,8 @@ it.each(['Combien de consultations sont enregistrées pour Ayoub Salmi ?','Combi
  'does not broaden a named-patient or period consultation count: %s',async text=>{
   const infer=vi.fn(async()=>{throw Error('ModelUnavailable');}),calls:AgentCall[]=[];
   await runAgentLoop(input(text),{actor:'consultation-count-scope',infer,execute:async call=>{calls.push(call);return {callId:call.id,status:'error',complete:false,text:'Lecture indisponible.',conditionKeys:[],evidence:[]};}},new AbortController().signal);
-  expect(calls.some(call=>call.name==='query_consultations'&&call.args['mode']==='count'&&!call.args['patientId']&&!call.args['from']&&!call.args['to'])).toBe(false);
+  const countCall=calls.find(call=>call.name==='query_consultations'&&call.args['mode']==='count');
+  expect(countCall).toBeDefined();
+  if(text.includes('Ayoub Salmi'))expect(countCall?.args).toMatchObject({patientName:'Ayoub Salmi'});
+  else expect(countCall?.args).toMatchObject({from:expect.any(String),to:expect.any(String)});
  });

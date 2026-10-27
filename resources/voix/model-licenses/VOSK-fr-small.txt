@@ -1,0 +1,8 @@
+Vosk French small model 0.22
+License: Apache License 2.0
+Upstream: https://alphacephei.com/vosk/models
+Archive: https://alphacephei.com/vosk/models/vosk-model-small-fr-0.22.zip
+SHA-256: cabf6180e177eb9b3a9a9d43a437bd5e549f3a7d09525e5d69a3fed787be12ad
+
+The model is used as a closed-grammar keyword spotter for "alexa" only.
+No transcript leaves the detector route; only a boolean is returned.
