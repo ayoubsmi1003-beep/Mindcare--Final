@@ -25,7 +25,6 @@ import { join } from "node:path";
 
 import {
   chargerSessionLocale,
-  extraireEmpreintes,
   resoudreDossierModele,
   verifierEmpreintesParFlux,
   type FabriqueSession,
@@ -44,8 +43,20 @@ import type { ConfigFournisseurLocal } from "./embeddings";
 /** Variable d'environnement du dossier modèle secondaire (serveur uniquement). */
 export const ENV_DOSSIER_SECONDAIRE = "MINDCARE_E5_DIR" as const;
 
-/** Fichier recette (jamais édité : nouvelle mesure = nouvelle version). */
-export const CHEMIN_RECETTE_SECONDAIRE = ["knowledge", "recette-embedding-secondaire.json"] as const;
+/** Variable d'environnement qui choisit l'ESPACE secondaire (384 ou 768). */
+export const ENV_RECETTE_SECONDAIRE = "KNOWLEDGE_VECTOR_RECETTE" as const;
+
+/** Espace par défaut : 384d (historique). Le 768d est opt-in explicite. */
+export const SLUG_RECETTE_SECONDAIRE_DEFAUT = "e5-small" as const;
+
+/** Un chemin de recette par espace approuvé — jamais un chemin calculé. */
+export const CHEMINS_RECETTE_SECONDAIRE: Readonly<Record<string, readonly string[]>> = {
+  "e5-small": ["knowledge", "recette-embedding-secondaire.json"],
+  "e5-base": ["knowledge", "recette-embedding-secondaire-768.json"],
+};
+
+/** Fichier recette de l'espace 384d (compatibilité : l'historique). */
+export const CHEMIN_RECETTE_SECONDAIRE = CHEMINS_RECETTE_SECONDAIRE["e5-small"] as readonly string[];
 
 /** Nom de dossier stable, partagé par le téléchargeur et le paquetage. */
 export const SLUG_MODELE_SECONDAIRE = "e5-small" as const;
@@ -86,24 +97,32 @@ export function creerChargeurSecondaire(deps: DependancesChargeurSecondaire): Ch
 
   const initialiser = async (): Promise<FnVecteurSecondaire | null> => {
     try {
-      const brut = deps.lireFichier(join(deps.racine, ...CHEMIN_RECETTE_SECONDAIRE));
+      // L'espace est choisi par un SLUG fermé : ni chemin ni nom de modèle
+      // calculés. Un slug inconnu est un refus explicite (repli lexical).
+      const slug = deps.lireEnv(ENV_RECETTE_SECONDAIRE)?.trim() || SLUG_RECETTE_SECONDAIRE_DEFAUT;
+      const cheminRecette = CHEMINS_RECETTE_SECONDAIRE[slug];
+      if (cheminRecette === undefined) throw new Error("recette-inconnue : espace secondaire non approuvé.");
+      const brut = deps.lireFichier(join(deps.racine, ...cheminRecette));
       const recette = JSON.parse(brut) as unknown;
       const config: ConfigFournisseurLocal = configSecondaireDepuisRecette(recette);
       const envModele = deps.lireEnv(ENV_DOSSIER_SECONDAIRE);
       const cacheDev = deps.dossierLocalAppData === undefined
         ? undefined
-        : join(deps.dossierLocalAppData, "MindCare", "modeles", SLUG_MODELE_SECONDAIRE);
+        : join(deps.dossierLocalAppData, "MindCare", "modeles", slug);
       const dossier = resoudreDossierModele(
         {
           ...(envModele === undefined || envModele.trim() === "" ? {} : { env: envModele }),
-          ressources: join(deps.racine, "resources", "models", SLUG_MODELE_SECONDAIRE),
+          ressources: join(deps.racine, "resources", "models", slug),
           ...(cacheDev === undefined ? {} : { cache: cacheDev }),
         },
         deps.existe,
       );
-      // Deux empreintes seulement (le reste est optionnel) : on ne vérifie
-      // jamais un fichier absent de la recette, et on vérifie celui qui la porte.
-      const empreintes = { ...extraireEmpreintes(recette), ...extraireEmpreintesSecondaires(recette) };
+      // Deux empreintes seulement (model.onnx + tokenizer.json) : le schéma
+      // BGE-M3 (`extraireEmpreintes`) exige un `model.onnx_data` externe que
+      // les modèles E5 n'ont PAS. L'appliquer ici rendait tout l'espace
+      // secondaire `indisponible` — défaut dormant tant que la branche
+      // vectorielle restait éteinte.
+      const empreintes = extraireEmpreintesSecondaires(recette);
       await verifierEmpreintesParFlux(dossier, empreintes, deps.ouvrirLecture);
       const binaires = await deps.importerBinaires();
       const prete: SessionLocalePrete = await chargerSessionLocale(

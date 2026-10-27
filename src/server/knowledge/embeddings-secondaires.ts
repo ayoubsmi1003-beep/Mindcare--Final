@@ -22,7 +22,7 @@ import { normaliserL2 } from "./embeddings-local";
 /** Dimension de l'index secondaire (miroir de la migration 188). */
 export const DIMENSION_VECTEUR_SECONDAIRE = 384 as const;
 
-/** Recette gelée du candidat E5-small (miroir du JSON épinglé). */
+/** Recette gelée du candidat E5-small (miroir du JSON épinglé, 384d). */
 export const RECETTE_SECONDAIRE_GELEE = {
   modele: "intfloat/multilingual-e5-small",
   version: "614241f622f53c4eeff9890bdc4f31cfecc418b3",
@@ -32,6 +32,36 @@ export const RECETTE_SECONDAIRE_GELEE = {
   instruction_document: "passage: ",
   distance: "cosine",
 } as const;
+
+/** Recette gelée de l'espace 768d (miroir de `recette-embedding-secondaire-768.json`). */
+export const RECETTE_SECONDAIRE_768_GELEE = {
+  modele: "intfloat/multilingual-e5-base",
+  version: "d128750597153bb5987e10b1c3493a34e5a4502a",
+  dimensions: 768,
+  normalisation: "l2-moyenne-masque-v1",
+  instruction_requete: "query: ",
+  instruction_document: "passage: ",
+  distance: "cosine",
+} as const;
+
+/**
+ * Les DEUX espaces épinglés, indexés par leur slug de dossier modèle. Aucun
+ * autre n'est admis : une recette inconnue est un refus, jamais un chargement
+ * « au plus proche ».
+ */
+export const RECETTES_SECONDAIRES_GELEES = {
+  "e5-small": RECETTE_SECONDAIRE_GELEE,
+  "e5-base": RECETTE_SECONDAIRE_768_GELEE,
+} as const;
+
+export type SlugRecetteSecondaire = keyof typeof RECETTES_SECONDAIRES_GELEES;
+
+/** Recette épinglée d'un slug, ou `null` si le slug n'est pas approuvé. */
+export function recetteSecondaireGelee(slug: string): (typeof RECETTES_SECONDAIRES_GELEES)[SlugRecetteSecondaire] | null {
+  return Object.hasOwn(RECETTES_SECONDAIRES_GELEES, slug)
+    ? RECETTES_SECONDAIRES_GELEES[slug as SlugRecetteSecondaire]
+    : null;
+}
 
 /** Troncature des passages : 128 tokens (mesuré sur le corpus réel). */
 export const TRONCATURE_SECONDAIRE = 128 as const;
@@ -78,24 +108,32 @@ export function configSecondaireDepuisRecette(recette: unknown): ConfigFournisse
     return valeur;
   };
   const ecarts: string[] = [];
-  if (texte("model") !== RECETTE_SECONDAIRE_GELEE.modele) ecarts.push("model");
-  if (texte("revision") !== RECETTE_SECONDAIRE_GELEE.version) ecarts.push("revision");
-  if (json["dimensions"] !== RECETTE_SECONDAIRE_GELEE.dimensions) ecarts.push("dimensions");
-  if (texte("normalization") !== RECETTE_SECONDAIRE_GELEE.normalisation) ecarts.push("normalization");
-  if (texte("query_prefix") !== RECETTE_SECONDAIRE_GELEE.instruction_requete) ecarts.push("query_prefix");
-  if (texte("document_prefix") !== RECETTE_SECONDAIRE_GELEE.instruction_document) ecarts.push("document_prefix");
-  if (texte("distance") !== RECETTE_SECONDAIRE_GELEE.distance) ecarts.push("distance");
+  // La dimension CHOISIT la recette épinglée : deux espaces vectoriels ne se
+  // mélangent jamais. Une dimension sans recette approuvée est un refus.
+  const dimensions = json["dimensions"];
+  const gelee = Object.values(RECETTES_SECONDAIRES_GELEES)
+    .find((candidate) => candidate.dimensions === dimensions);
+  if (gelee === undefined) {
+    throw new Error("Recette secondaire dérivée : recette-inconnue (dimensions).");
+  }
+  if (texte("model") !== gelee.modele) ecarts.push("model");
+  if (texte("revision") !== gelee.version) ecarts.push("revision");
+  if (json["dimensions"] !== gelee.dimensions) ecarts.push("dimensions");
+  if (texte("normalization") !== gelee.normalisation) ecarts.push("normalization");
+  if (texte("query_prefix") !== gelee.instruction_requete) ecarts.push("query_prefix");
+  if (texte("document_prefix") !== gelee.instruction_document) ecarts.push("document_prefix");
+  if (texte("distance") !== gelee.distance) ecarts.push("distance");
   if (ecarts.length > 0) {
     throw new Error(`Recette secondaire dérivée : recette-derive (${ecarts.join(", ")}).`);
   }
   return {
-    modele: RECETTE_SECONDAIRE_GELEE.modele,
-    version: RECETTE_SECONDAIRE_GELEE.version,
-    dimensions: RECETTE_SECONDAIRE_GELEE.dimensions,
-    normalisation: RECETTE_SECONDAIRE_GELEE.normalisation,
-    instruction_requete: RECETTE_SECONDAIRE_GELEE.instruction_requete,
-    instruction_document: RECETTE_SECONDAIRE_GELEE.instruction_document,
-    distance: RECETTE_SECONDAIRE_GELEE.distance,
+    modele: gelee.modele,
+    version: gelee.version,
+    dimensions: gelee.dimensions,
+    normalisation: gelee.normalisation,
+    instruction_requete: gelee.instruction_requete,
+    instruction_document: gelee.instruction_document,
+    distance: gelee.distance,
     versionChunk: "multi",
   };
 }

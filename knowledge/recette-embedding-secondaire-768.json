@@ -29,5 +29,5 @@
   "table": "app.knowledge_chunk_vectors_768",
   "porte": "app.search_knowledge_vector_v2_768",
   "runtime_egress": "aucun — inférence 100 % locale, aucun appel réseau au runtime",
-  "status": "EN ÉVALUATION — backfill en cours sur la copie bac à sable uniquement. Aucune activation, aucun changement de la production (BGE-M3 1024d intact). Promotion seulement si le golden v3 progresse au-delà de Recall@1 50 % / Recall@5 65 %."
+  "status": "MESURÉ — CANDIDAT RETENU (gain sûr, non activé). Golden v3 (20 questions réelles) : Recall@1 50 % (= baseline), Recall@3 60 % → 75 %, Recall@5 65 % → 75 %, MRR 0,552 → 0,608, abstention 100 % maintenue, page vérifiée sur 100 % des preuves trouvées, p50 319 ms / p95 797 ms (hors 1er appel : chargement du modèle ~15 s). Plancher de similarité 0,83 obligatoire pour l'abstention. Non activé : la table 768 n'existe que dans le bac à sable et les deux variables ci-dessous restent absentes du poste."
 }

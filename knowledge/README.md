@@ -49,17 +49,32 @@ sur mesure réelle : Recall@1 50 % → 30 %, p50 118 ms → 1 144 ms
 node scripts/eval-book-rag.mjs --golden tests/eval/knowledge.books-v3-2026-10-27.json
 ```
 
-Avec l'espace 768 (sandbox uniquement) :
+Avec l'espace 768 (bac à sable) — chemin de PRODUCTION piloté par l'environnement
+(le chargement réel du modèle et la porte 768 sont exercés) :
 
 ```
-node scripts/eval-book-rag.mjs --golden tests/eval/knowledge.books-v3-2026-10-27.json \
-  --vector --slug e5-base --modele intfloat/multilingual-e5-base \
-  --version d128750597153bb5987e10b1c3493a34e5a4502a --dimensions 768
+KNOWLEDGE_VECTOR=1 KNOWLEDGE_VECTOR_RECETTE=e5-base \
+node scripts/eval-book-rag.mjs \
+  --url "postgresql://…:55446/mindcare" \
+  --golden tests/eval/knowledge.books-v3-2026-10-27.json
 ```
 
-Le harnais route `search_knowledge_vector_v2` vers la porte 768 quand
-`--dimensions 768` est passé. Le code de production, lui, garde son site d'appel
-littéral : aucun nom de porte calculé.
+Résultats mesurés le 2026-10-27 :
+
+| Configuration | R@1 | R@3 | R@5 | MRR | Abstention | p50 |
+|---|---|---|---|---|---|---|
+| Lexical seul (livré) | 50 % | 60 % | 65 % | 0,552 | 100 % | 118 ms |
+| Hybride 768 **sans plancher** | 45 % | 70 % | 70 % | 0,567 | **0 %** | 842 ms |
+| Hybride 768 **avec plancher 0,83** | 50 % | **75 %** | **75 %** | **0,608** | **100 %** | 319 ms |
+
+Le plancher de similarité (`SEUIL_SIMILARITE_DENSE`) est **obligatoire** : sans
+lui, deux questions non cliniques (prix, menu) recevaient une « preuve » et
+l'abstention tombait à 0 %. Il ne s'applique qu'à l'espace secondaire, jamais à
+BGE-M3 (échelles différentes).
+
+Le harnais reconnaît les deux noms de porte (`search_knowledge_vector_v2`,
+`search_knowledge_vector_v2_768`) : le code de production garde des sites
+d'appel littéraux, aucun nom calculé.
 
 ## 5. Construire un espace (bac à sable seulement)
 
@@ -91,3 +106,25 @@ vecteur. Il n'écrit QUE la table secondaire.
 livré est lexical. Toute promotion d'un espace vectoriel exige (a) la migration
 appliquée sur la base du cabinet, (b) la recette épinglée dans le runtime,
 (c) une mesure qui dépasse la baseline lexicale sur le golden ci-dessus.
+
+Pour l'espace 768 (mesuré, prêt, **non activé**) :
+
+1. `191_knowledge_chunk_vectors_768.sql` sur la base du cabinet ;
+2. backfill des 22 159 chunks actifs DSM + Maudsley (~4 h sur ce poste) ;
+3. `KNOWLEDGE_VECTOR=1` et `KNOWLEDGE_VECTOR_RECETTE=e5-base` (serveur) ;
+4. redémarrer : le premier appel charge le modèle (~15 s), les suivants sont
+   à 200–800 ms.
+
+Sans la migration, `KNOWLEDGE_VECTOR=1` ne dégrade pas la réponse (repli
+lexical) mais paie le chargement du modèle pour rien : ne pas activer avant
+l'étape 1.
+
+Deux défauts corrigés au passage (dormants tant que la branche restait
+éteinte) : le chargeur validait la recette secondaire contre le schéma BGE-M3
+(`model.onnx_data`), et le nom de dossier modèle était figé sur `e5-small`.
+
+## 8. Reranker (rejeté)
+
+`cross-encoder/mmarco-mMiniLMv2-L12-H384-v1` — mesuré sur le même golden :
+Recall@1 50 % → 30 %, p50 118 ms → 1 144 ms. Ne pas activer
+(`knowledge/recette-rerank-secondaire.json`).

@@ -10,7 +10,7 @@ import { mapLimite } from "@/server/knowledge/parallele";
 import { vecteurRequeteProduction } from "@/server/knowledge/vecteur-production";
 import { vecteurRequeteSecondaireProduction } from "@/server/knowledge/vecteur-secondaire-production";
 import { rerankerSecondaireProduction } from "@/server/knowledge/rerank-secondaire-production";
-import { RECETTE_SECONDAIRE_GELEE } from "@/server/knowledge/embeddings-secondaires";
+import { recetteSecondaireGelee } from "@/server/knowledge/embeddings-secondaires";
 import type { ClientSql } from "@/server/jarvis/client-sql";
 import { matchesLeafHint, matchesRequestedBook, planKnowledgeQuery,matchesSectionFocus } from "./knowledge-query";
 import {headingOnlyEvidence,bibliographyEvidence,bibliographyTextEvidence,bibliographyRequested,indexEvidence,indexRequested,unboundTableEvidence} from './knowledge-evidence-content';
@@ -73,6 +73,17 @@ const PORTES_PARALLELES = 4;
 // hybride) pour laisser de la marge au filtre d'autorité post-KNN.
 const CANDIDATS_VECTORIELS = 24;
 
+/**
+ * Plancher de similarité cosinus pour un voisin PUREMENT dense de l'espace
+ * secondaire (e5-base, 768d). Il ne juge pas la pertinence clinique : il écarte
+ * les voisins qui ne sont proches que par la forme. Mesuré sur le golden réel
+ * (2026-10-27) : questions hors sujet 0,807–0,819 ; questions cliniques
+ * 0,841–0,906 — sauf une question clinique à 0,822, dont la preuve reste
+ * trouvée par la branche lexicale. Sans ce plancher, l'abstention tombait de
+ * 100 % à 0 % (deux questions non cliniques recevaient une « preuve »).
+ */
+const SEUIL_SIMILARITE_DENSE = 0.83;
+
 /** Résout l'identité bibliographique d'une preuve, sans jamais la deviner. */
 export function identiteDePreuve(sourceTitre: string, sourceVersion: string): EditionOuvrage | null {
   return editionDe(sourceTitre, sourceVersion);
@@ -133,11 +144,17 @@ export interface DependancesReadKnowledge {
   /** Cross-encoder optionnel ; absent = baseline heuristique (défaut). */
   readonly rerankerLocal?: RerankerLocalAsync;
   /**
-   * Index SECONDAIRE (188) : quand il est renseigné, la branche vectorielle
-   * interroge `search_knowledge_vector_v2` avec CE couple (modele, version) —
-   * jamais l'index 1024d de production. Absent = ancienne porte (compatibilité).
+   * Index SECONDAIRE (188/191) : quand il est renseigné, la branche vectorielle
+   * interroge la porte de CET espace avec ce triplet (modele, version,
+   * dimensions) — jamais l'index 1024d de production. Absent = ancienne porte
+   * (compatibilité). La dimension choisit la PORTE (384 → v2, 768 → v2_768) :
+   * deux espaces vectoriels ne se mélangent jamais.
    */
-  readonly vectorielSecondaire?: { readonly modele: string; readonly version: string };
+  readonly vectorielSecondaire?: {
+    readonly modele: string;
+    readonly version: string;
+    readonly dimensions: number;
+  };
 }
 
 /** Options internes — jamais pilotées par le client. */
@@ -166,8 +183,12 @@ function sansFeuille(plan: ReturnType<typeof planKnowledgeQuery>): ReturnType<ty
 export function dependancesReadKnowledge(): DependancesReadKnowledge {
   // Le drapeau suffit : l'identité du modèle vient de la RECETTE épinglée
   // (`embeddings-secondaires.ts`), jamais d'une variable d'environnement qui
-  // pourrait diverger de l'index réellement construit.
-  const actif = process.env["KNOWLEDGE_VECTOR"] === "1";
+  // pourrait diverger de l'index réellement construit. Le SLUG choisit
+  // l'espace (384 ou 768) parmi les recettes APPROUVÉES uniquement ; un slug
+  // inconnu désactive la branche vectorielle (repli lexical explicite).
+  const slugRecette = process.env["KNOWLEDGE_VECTOR_RECETTE"]?.trim() || "e5-small";
+  const recette = recetteSecondaireGelee(slugRecette);
+  const actif = process.env["KNOWLEDGE_VECTOR"] === "1" && recette !== null;
   // Reranker secondaire : opt-in explicite, jamais par défaut. Modèle absent
   // ou en panne → l'orchestrateur replie sur l'heuristique en le signalant.
   const avecRerank = process.env["KNOWLEDGE_RERANK"] === "mmarco";
@@ -176,8 +197,8 @@ export function dependancesReadKnowledge(): DependancesReadKnowledge {
     vecteurRequete: (requete: string) => actif
       ? vecteurRequeteSecondaireProduction(requete)
       : vecteurRequeteProduction(requete),
-    ...(actif
-      ? { vectorielSecondaire: { modele: RECETTE_SECONDAIRE_GELEE.modele, version: RECETTE_SECONDAIRE_GELEE.version } }
+    ...(actif && recette !== null
+      ? { vectorielSecondaire: { modele: recette.modele, version: recette.version, dimensions: recette.dimensions } }
       : {}),
     ...(avecRerank ? { rerankerLocal: rerankerSecondaireProduction() } : {}),
   };
@@ -242,17 +263,34 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
       if (vecteur === null) vectorielIndisponible = true;
       else {
         const secondaire = deps.vectorielSecondaire;
-        // Deux sites d'appel LITTÉRAUX : le générateur d'allowlist refuse les
-        // noms calculés, et la porte doit rester vérifiable par pré-vol.
-        const gate = secondaire !== undefined
-          ? await client.rpc<unknown[]>("search_knowledge_vector_v2",
-              porteVectorielleV2(JSON.stringify([...vecteur]), secondaire.modele, secondaire.version, CANDIDATS_VECTORIELS).args)
-          : await client.rpc<unknown[]>("search_knowledge_vector",
-              porteVectorielle(JSON.stringify([...vecteur]), LIMITES.VECTORIEL).args);
+        // Trois sites d'appel LITTÉRAUX : le générateur d'allowlist refuse les
+        // noms calculés, et chaque porte doit rester vérifiable par pré-vol.
+        // La dimension CHOISIT l'espace (768 → v2_768) ; elle ne le calcule pas.
+        const gate = secondaire === undefined
+          ? await client.rpc<unknown[]>("search_knowledge_vector",
+              porteVectorielle(JSON.stringify([...vecteur]), LIMITES.VECTORIEL).args)
+          : secondaire.dimensions === 768
+            ? await client.rpc<unknown[]>("search_knowledge_vector_v2_768",
+                porteVectorielleV2(JSON.stringify([...vecteur]), secondaire.modele, secondaire.version, CANDIDATS_VECTORIELS).args)
+            : await client.rpc<unknown[]>("search_knowledge_vector_v2",
+                porteVectorielleV2(JSON.stringify([...vecteur]), secondaire.modele, secondaire.version, CANDIDATS_VECTORIELS).args);
         signal?.throwIfAborted();
         if (gate.error || !Array.isArray(gate.data)) vectorielIndisponible = true;
         else {
+          // PLANCHER DE SIMILARITÉ (espace secondaire seulement). Un rang dense
+          // ne dit pas si le voisin est PERTINENT : le 1er voisin d'une question
+          // hors sujet reste le 1er. Mesuré sur golden réel : les questions non
+          // cliniques (prix, menu) atteignent 0,807–0,819 de cosinus, les
+          // questions cliniques 0,822+ — sans plancher, la recherche dense
+          // répondait à des questions sans réponse (abstention 100 % → 0 %).
+          // Le plancher est propre au modèle épinglé (cosinus e5-base), jamais
+          // appliqué à l'index BGE-M3 dont l'échelle diffère.
+          const plancher = secondaire === undefined ? null : SEUIL_SIMILARITE_DENSE;
           for (const candidate of gate.data.filter(row => matchesRequestedBook(row, plan))) {
+            if (plancher !== null) {
+              const score = Number((candidate as { score?: unknown }).score);
+              if (!Number.isFinite(score) || score < plancher) continue;
+            }
             const row = retenir(candidate);
             if (row !== null) lignesVectorielles.push(row);
           }

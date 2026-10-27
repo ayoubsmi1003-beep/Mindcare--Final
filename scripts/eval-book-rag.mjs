@@ -94,6 +94,13 @@ const clientSql = {
           return { data: r.rows, error: null };
         });
       }
+      if (nom === "search_knowledge_vector_v2_768") {
+        return await avecRole(async (client) => {
+          const r = await client.query("SELECT * FROM app.search_knowledge_vector_v2_768($1,$2,$3,$4)",
+            [params.p_embedding_json, params.p_modele, params.p_version, params.p_limite]);
+          return { data: r.rows, error: null };
+        });
+      }
       if (nom === "search_knowledge_vector_v2") {
         // Un espace vectoriel par dimension (HNSW exige une dimension fixe).
         // Le harnais route vers la porte de l'espace MESURÉ ; le code de
@@ -168,6 +175,7 @@ for (const cas of golden.cas) {
     : -1;
   resultats.push({
     id: cas.id, answerable: cas.answerable !== false, etat: resultat.etat, ms: Math.round(ms),
+    vectoriel: resultat.vectoriel ?? null,
     preuves: resultat.preuves.length, rang1: rang >= 0 ? rang + 1 : null,
     page: rang >= 0 ? resultat.preuves[rang]?.page?.libelle ?? null : null,
     edition: rang >= 0 ? resultat.preuves[rang]?.edition?.edition ?? null : null,
