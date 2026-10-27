@@ -18,6 +18,7 @@ import { alexa } from "@/i18n/alexa";
 import { cn } from "@/lib/utils";
 import { abonnerMainsLibres, arreterMainsLibres, demarrerMainsLibres, mainsLibresActif } from "@/services/voix-mains-libres";
 import { basculerVoixLocale, arreterVoixLocale } from "@/services/alexa-local";
+import { annulerSuivi, etatVoix, interrompreVoix } from "@/services/jarvis-reveil";
 import { useVueVoixUnifiee } from "./voix-unifiee";
 import type { EtatConversationPublique } from "@/services/conversation";
 
@@ -82,16 +83,31 @@ export function SaisieAlexaLune({
   useEffect(() => abonnerMainsLibres(setMainsLibres), []);
   // `veille` (réveil armé, rien en cours) ne bloque pas le clavier.
   const actif = voix.etat === "reveille" || voix.etat === "ecoute" || voix.etat === "traitement" || voix.etat === "parole" || voix.etat === "interrompu";
-  const messageVoix = actif || voix.etat === "erreur"
-    ? voix.raison ?? null
-    : mainsLibres && voix.etat === "veille"
-      ? alexa.voixVeille
-      : null;
+  // La fenêtre de suivi ouvre le micro SANS redire « Alexa » : la machine
+  // porte ce fait dans `raison` (voir `declencherEcoute`), et l'écran le dit.
+  const suivi = voix.etat === "ecoute" && voix.raison === fr.jarvis.voix.reveil.voixSuivi;
+  const messageVoix = suivi
+    ? alexa.voixSuivi
+    : actif || voix.etat === "erreur"
+      ? voix.raison ?? null
+      : mainsLibres && voix.etat === "veille"
+        ? alexa.voixVeille
+        : null;
   const libelleVoix = actif ? alexa.voixArreter : alexa.voixDemarrer;
   const libelleMainsLibres = mainsLibres ? alexa.mainsLibresArreter : alexa.mainsLibresActiver;
 
   const fluxEnCours = etat.etat === "envoi" || etat.etat === "flux";
   const bloque = fluxEnCours || etat.carteEcriture !== null || actif;
+
+  // ⚠️ UN ENVOI TAPÉ N'HÉRITE JAMAIS DE LA FENÊTRE DE SUIVI. `annulerSuivi()`
+  // retire le démarrage FUTUR ; `interrompreVoix()` referme la capture déjà
+  // ouverte, sinon le micro continuerait d'enregistrer la frappe derrière
+  // l'envoi. Les deux ensemble, jamais l'un sans l'autre.
+  const envoyerTexte = useCallback(() => {
+    annulerSuivi();
+    if (etatVoix() === "ecoute" || etatVoix() === "reveille") interrompreVoix();
+    onEnvoyer();
+  }, [onEnvoyer]);
 
   // Une amorce remplit le champ depuis le parent : la hauteur suit.
   useEffect(() => {
@@ -111,7 +127,7 @@ export function SaisieAlexaLune({
           onKeyDown={(e) => {
             if (e.key === "Enter" && !e.shiftKey && !bloque && etat.saisie.trim() !== "") {
               e.preventDefault();
-              onEnvoyer();
+              envoyerTexte();
             }
             if (e.key === "Escape" && actif) arreterVoixLocale();
           }}
@@ -148,7 +164,11 @@ export function SaisieAlexaLune({
               {/* Continuous local session, identical to the side panel. */}
               <button
                 type="button"
-                onClick={basculerVoixLocale}
+                onClick={() => {
+                  // Les deux voix ne tiennent jamais le micro ensemble.
+                  if (mainsLibresActif()) arreterMainsLibres();
+                  basculerVoixLocale();
+                }}
                 disabled={etat.carteEcriture !== null && !actif}
                 aria-label={libelleVoix}
                 title={voix.raison ?? libelleVoix}
@@ -173,7 +193,12 @@ export function SaisieAlexaLune({
                 type="button"
                 onClick={() => {
                   if (mainsLibres) arreterMainsLibres();
-                  else void demarrerMainsLibres();
+                  else {
+                    // Une boucle directe encore ouverte posséderait le micro :
+                    // on la ferme avant d'armer le réveil.
+                    arreterVoixLocale();
+                    void demarrerMainsLibres();
+                  }
                 }}
                 aria-label={libelleMainsLibres}
                 title={libelleMainsLibres}
@@ -192,7 +217,7 @@ export function SaisieAlexaLune({
               {/* L'ENVOI — géométrie de la référence, émeraude quand actif. */}
               <button
                 type="button"
-                onClick={onEnvoyer}
+                onClick={envoyerTexte}
                 disabled={bloque || etat.saisie.trim() === ""}
                 aria-label={fr.jarvis.envoyer}
                 title={fr.jarvis.envoyer}

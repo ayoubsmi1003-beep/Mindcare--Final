@@ -2,12 +2,13 @@
 
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 import { fr } from "@/i18n/fr";
 import { alexa } from "@/i18n/alexa";
-import { basculerVoixLocale } from "@/services/alexa-local";
+import { basculerVoixLocale, arreterVoixLocale } from "@/services/alexa-local";
 import { abonnerMainsLibres, arreterMainsLibres, demarrerMainsLibres, mainsLibresActif } from "@/services/voix-mains-libres";
+import { annulerSuivi, etatVoix, interrompreVoix } from "@/services/jarvis-reveil";
 import { useVueVoixUnifiee } from "./voix-unifiee";
 import type { EtatConversationPublique } from "@/services/conversation";
 
@@ -31,16 +32,31 @@ export function SaisieJarvis({
   // `veille` (réveil armé, rien en cours) ne bloque pas le clavier : seule
   // une voix engagée (réveil entendu, écoute, traitement, parole) le fait.
   const actif = voix.etat === "reveille" || voix.etat === "ecoute" || voix.etat === "traitement" || voix.etat === "parole" || voix.etat === "interrompu";
-  const messageVoix = actif || voix.etat === "erreur"
-    ? voix.raison ?? null
-    : mainsLibres && voix.etat === "veille"
-      ? alexa.voixVeille
-      : null;
+  // La fenêtre de suivi ouvre le micro SANS redire « Alexa » : la machine
+  // porte ce fait dans `raison` (voir `declencherEcoute`), et l'écran le dit.
+  const suivi = voix.etat === "ecoute" && voix.raison === fr.jarvis.voix.reveil.voixSuivi;
+  const messageVoix = suivi
+    ? alexa.voixSuivi
+    : actif || voix.etat === "erreur"
+      ? voix.raison ?? null
+      : mainsLibres && voix.etat === "veille"
+        ? alexa.voixVeille
+        : null;
   const libelleVoix = actif ? alexa.voixArreter : alexa.voixDemarrer;
   const libelleMainsLibres = mainsLibres ? alexa.mainsLibresArreter : alexa.mainsLibresActiver;
 
   const fluxEnCours = etat.etat === "envoi" || etat.etat === "flux";
   const bloque = fluxEnCours || etat.carteEcriture !== null || actif;
+
+  // ⚠️ UN ENVOI TAPÉ N'HÉRITE JAMAIS DE LA FENÊTRE DE SUIVI. `annulerSuivi()`
+  // retire le démarrage FUTUR ; `interrompreVoix()` referme la capture déjà
+  // ouverte, sinon le micro continuerait d'enregistrer la frappe derrière
+  // l'envoi. Les deux ensemble, jamais l'un sans l'autre.
+  const envoyerTexte = useCallback(() => {
+    annulerSuivi();
+    if (etatVoix() === "ecoute" || etatVoix() === "reveille") interrompreVoix();
+    onEnvoyer();
+  }, [onEnvoyer]);
 
   return (
     /*
@@ -63,7 +79,7 @@ export function SaisieJarvis({
           value={etat.saisie}
           onChange={(e) => onChangerSaisie(e.target.value)}
           onKeyDown={(e) => {
-            if (e.key === "Enter" && !bloque && etat.saisie.trim() !== "") onEnvoyer();
+            if (e.key === "Enter" && !bloque && etat.saisie.trim() !== "") envoyerTexte();
           }}
           disabled={bloque}
           placeholder={fr.jarvis.invite}
@@ -89,7 +105,11 @@ export function SaisieJarvis({
             {/* A click starts a continuous session; the same button stops it. */}
             <button
               type="button"
-              onClick={basculerVoixLocale}
+              onClick={() => {
+                // Les deux voix ne tiennent jamais le micro ensemble.
+                if (mainsLibresActif()) arreterMainsLibres();
+                basculerVoixLocale();
+              }}
               disabled={etat.carteEcriture !== null && !actif}
               aria-label={libelleVoix}
               title={voix.raison ?? libelleVoix}
@@ -129,7 +149,12 @@ export function SaisieJarvis({
               type="button"
               onClick={() => {
                 if (mainsLibres) arreterMainsLibres();
-                else void demarrerMainsLibres();
+                else {
+                  // Une boucle directe encore ouverte posséderait le micro :
+                  // on la ferme avant d'armer le réveil.
+                  arreterVoixLocale();
+                  void demarrerMainsLibres();
+                }
               }}
               aria-label={libelleMainsLibres}
               title={libelleMainsLibres}
@@ -147,7 +172,7 @@ export function SaisieJarvis({
             {/* L'ENVOI — la pastille pleine de marque, l'unique bouton colore. */}
             <button
               type="button"
-              onClick={onEnvoyer}
+              onClick={envoyerTexte}
               disabled={bloque || etat.saisie.trim() === ""}
               aria-label={fr.jarvis.envoyer}
               title={fr.jarvis.envoyer}

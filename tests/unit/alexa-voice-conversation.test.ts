@@ -1,12 +1,25 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 import type { TourVoix } from "@/shared/alexa/voice-loop";
 import type { EtatConversationPublique } from "@/services/conversation";
-const { voice } = vi.hoisted(() => ({ voice: { callback: null as ((event: TourVoix) => void) | null } }));
+const { voice, wake } = vi.hoisted(() => ({
+  voice: { callback: null as ((event: TourVoix) => void) | null },
+  wake: { commande: null as ((texte: string) => Promise<void>) | null },
+}));
 vi.mock("@/services/alexa-local", () => ({ abonnerPropositionVoixLocale: () => () => {}, abonnerTourVoixLocale: (callback: (event: TourVoix) => void) => { voice.callback = callback; return () => {}; }, arreterVoixLocale: () => {} }));
+// The wake path goes through `envoyer()`; the network edge is the only thing
+// simulated, exactly like a typed turn.
+vi.mock("@/services/alexa-turn", () => ({
+  adoptAlexaConversation: () => {},
+  clearAlexaConversation: () => {},
+  ensureAlexaConversation: async () => "conversation-reveil",
+  envoyerTourAlexa: async (texte: string) => ({ texte: `Réponse à : ${texte}`, sources: [], patientId: null, limited: false, persiste: false }),
+  AlexaTurnError: class AlexaTurnError extends Error {},
+}));
 import { abonnerConversation, idsLues, marquerTourLu, purgerContexteSession } from "@/services/conversation";
 import { choisirTourAuto } from "@/services/lecture-auto";
+import { arreterMainsLibres, demarrerMainsLibres } from "@/services/voix-mains-libres";
 const subscriptions: (() => void)[] = [];
-afterEach(() => { for (const unsubscribe of subscriptions.splice(0)) unsubscribe(); purgerContexteSession(); });
+afterEach(() => { arreterMainsLibres(); for (const unsubscribe of subscriptions.splice(0)) unsubscribe(); purgerContexteSession(); });
 describe("voice answer conversation integration", () => {
   it("stores the same source links and patient scope as a typed answer", () => {
     let snapshot: EtatConversationPublique | undefined;
@@ -37,5 +50,26 @@ describe("voice answer conversation integration", () => {
     purgerContexteSession();
     expect(idsLues().size).toBe(0);
     expect(choisirTourAuto([t1, t2], new Set<string>(), idsLues(), opts)).toMatchObject({ id: "t2" });
+  });
+  it("shows the recognized sentence as the doctor's bubble before the answer", async () => {
+    await demarrerMainsLibres({
+      retenir: (rappels) => {
+        wake.commande = rappels.onCommande;
+        return () => {};
+      },
+    });
+    const commande = wake.commande;
+    if (commande === null) throw new Error("la commande du réveil n'a pas été retenue");
+    let snapshot: EtatConversationPublique | undefined;
+    const unsubscribe = abonnerConversation(state => { snapshot = state; });
+    subscriptions.push(unsubscribe);
+    const tour = commande("Quel est le prochain patient ?");
+    // La phrase reconnue est un tour HUMAIN, posé avant la bulle de réponse.
+    expect(snapshot?.tours.at(-2)).toMatchObject({ role: "humain", texte: "Quel est le prochain patient ?" });
+    expect(snapshot?.tours.at(-1)).toMatchObject({ role: "jarvis", texte: "" });
+    expect(snapshot?.etat).toBe("envoi");
+    await tour;
+    expect(snapshot?.tours.at(-1)).toMatchObject({ role: "jarvis", texte: "Réponse à : Quel est le prochain patient ?" });
+    expect(snapshot?.tours.at(-2)).toMatchObject({ role: "humain", texte: "Quel est le prochain patient ?" });
   });
 });

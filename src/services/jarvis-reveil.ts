@@ -236,6 +236,35 @@ export function etatVoix(): EtatVoix {
   return etat;
 }
 
+/**
+ * SUSPENDRE / REPRENDRE LA DÉTECTION SANS TOUCHER À LA MACHINE À ÉTATS.
+ *
+ * La dictée d'un champ ouvre le micro pour elle-même. Laisser le détecteur
+ * scorer cet audio ferait réveiller Jarvis par la note qu'on dicte — ou par la
+ * praticienne qui se parle à elle-même. `suspendre()` ignore le scoring SANS
+ * lâcher le micro (le courtier ne rend pas de seconde acquisition), et
+ * `reprendre()` le rétablit quand l'enregistreur est refermé.
+ */
+export function suspendreDetection(): void {
+  detecteur?.suspendre();
+}
+
+export function reprendreDetection(): void {
+  detecteur?.reprendre();
+}
+
+/**
+ * Une capture du réveil possède-t-elle déjà le micro ?
+ *
+ * `ecoute`, `traitement` et `parole` comptent : l'enregistreur de commande
+ * reste ouvert jusqu'à la transcription, et la réponse est lue à voix haute
+ * dans le même microphone. `veille` et `reveille` non — en veille le micro de
+ * commande est fermé, et pendant l'accusé il n'est pas encore ouvert.
+ */
+export function captureEnCours(): boolean {
+  return etat === "ecoute" || etat === "traitement" || etat === "parole";
+}
+
 // ═══════════════════════════════════════════════════════════════════════════
 // 4 · LE CYCLE
 // ═══════════════════════════════════════════════════════════════════════════

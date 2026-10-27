@@ -33,6 +33,7 @@ import {
   demarrerDictee,
   detecterCapacitesVoix,
 } from "@/services/jarvis-voix";
+import { captureEnCours, reprendreDetection, suspendreDetection } from "@/services/jarvis-reveil";
 
 import {
   actionMicro,
@@ -42,6 +43,24 @@ import {
 } from "./regles-dictee";
 
 export type { PhaseDictee };
+
+/**
+ * LA PORTE DE LA DICTÉE. Une capture du réveil possède déjà le micro : ouvrir
+ * l'enregistreur d'un champ produirait deux prises concurrentes, ou
+ * enregistrerait la praticienne en train de taper sa note.
+ *
+ * Rend `true` quand le micro est libre. Sinon le refus est SIGNALÉ avec le
+ * message déjà porté par `jarvis-voix` — un bouton muet se lirait comme une
+ * panne.
+ */
+export function dicteeAutorisee(
+  capture: () => boolean,
+  signaler: (message: string) => void,
+): boolean {
+  if (!capture()) return true;
+  signaler(fr.jarvis.voix.dejaEnCours);
+  return false;
+}
 
 export interface Dictee<C extends string> {
   /** Le champ actuellement en dictée, ou `null` au repos. */
@@ -84,6 +103,9 @@ export function useDicteeChamps<C extends string>(
       // Un micro allumé dans un cabinet de psychiatrie, sans que rien à
       // l'écran ne le dise, est un incident — pas une fuite de ressource.
       annulerDictee();
+      // La dictée avait suspendu le scoring du réveil : on le rend à la
+      // machine, sinon le mot de réveil resterait muet après la consultation.
+      reprendreDetection();
     };
   }, []);
 
@@ -95,6 +117,9 @@ export function useDicteeChamps<C extends string>(
       if (action === "arreter") {
         setPhase("transcription");
         void arreterEtTranscrire().then((resultat) => {
+          // L'enregistreur est refermé : le détecteur de réveil reprend le
+          // scoring, quelle que soit l'issue de la transcription.
+          reprendreDetection();
           setPhase("repos");
           setCible(null);
           if (!resultat.ok) {
@@ -114,10 +139,16 @@ export function useDicteeChamps<C extends string>(
         return;
       }
 
+      if (!dicteeAutorisee(captureEnCours, signalerRef.current)) return;
+
       setCible(demandee);
       setPhase("ecoute");
+      // Le détecteur se tait AVANT l'ouverture du micro : sans cela, la note
+      // dictée pourrait réveiller Jarvis au milieu de la phrase.
+      suspendreDetection();
       void demarrerDictee().then((resultat) => {
         if (!resultat.ok) {
+          reprendreDetection();
           setPhase("repos");
           setCible(null);
           // Permission refusée, micro absent, passerelle non configurée : la
