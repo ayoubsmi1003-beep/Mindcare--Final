@@ -95,6 +95,14 @@ extraResources:
     to: cabinet/deploiement-cabinet.md
   - from: resources/voix
     to: voix
+    # Le byte-code Python (.pyc/__pycache__) n'est pas inventorié : son en-tête
+    # porte l'heure d'installation. Le livrer ferait échouer le vérificateur de
+    # paquet sur des fichiers non épinglés. Le préparateur les supprime ; ce
+    # filtre empêche un arbre sale de les livrer malgré tout.
+    filter:
+      - "**/*"
+      - "!**/__pycache__/**"
+      - "!**/*.pyc"
   # `resources/serveur` est assemblé par `scripts/preparer-paquet.mjs` : la
   # sortie autonome de Next, `public/`, `supabase/{bootstrap,migrations}` et
   # les trois seuls scripts livrés. Une racine unique, parce que le serveur,

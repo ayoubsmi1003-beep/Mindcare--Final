@@ -36,6 +36,7 @@ const VOIX = join(ROOT, "resources", "voix");
 const ASSETS = join(VOIX, "assets");
 const REQUIREMENTS = join(VOIX, "requirements.txt");
 const PYTHON = join(VOIX, "python", "python.exe");
+const DOSSIER_PYTHON = join(VOIX, "python");
 const PACKAGES = join(VOIX, "packages");
 const JSON_OUT = process.argv.includes("--json");
 const REPAIR = process.argv.includes("--repair");
@@ -231,6 +232,53 @@ function installerPaquets() {
 }
 
 /**
+ * Remove every byte-code cache under one tree. `.pyc` headers embed the
+ * install-time source mtime, so they cannot be pinned by the inventory and
+ * must never be shipped. `-B` keeps the worker from recreating them at runtime.
+ */
+function supprimerBytecode(dossier, retires = []) {
+  if (!existsSync(dossier)) return retires;
+  for (const entry of readdirSync(dossier, { withFileTypes: true })) {
+    const complet = join(dossier, entry.name);
+    if (entry.isDirectory()) {
+      if (entry.name === "__pycache__") {
+        rmSync(complet, { recursive: true, force: true });
+        retires.push(complet);
+      } else {
+        supprimerBytecode(complet, retires);
+      }
+    } else if (entry.isFile() && entry.name.endsWith(".pyc")) {
+      rmSync(complet, { force: true });
+      retires.push(complet);
+    }
+  }
+  return retires;
+}
+
+function nettoyerBytecode() {
+  const retires = [];
+  supprimerBytecode(PACKAGES, retires);
+  supprimerBytecode(DOSSIER_PYTHON, retires);
+  if (retires.length > 0 && !JSON_OUT) console.log(`[voix] bytecode retiré — ${retires.length} entrée(s)`);
+  return retires.length;
+}
+
+/** Read-only byte-code scan: `--check` must never mutate a bundle. */
+function listerBytecode(dossier, trouves = []) {
+  if (!existsSync(dossier)) return trouves;
+  for (const entry of readdirSync(dossier, { withFileTypes: true })) {
+    const complet = join(dossier, entry.name);
+    if (entry.isDirectory()) {
+      if (entry.name === "__pycache__") trouves.push(complet);
+      else listerBytecode(complet, trouves);
+    } else if (entry.isFile() && entry.name.endsWith(".pyc")) {
+      trouves.push(complet);
+    }
+  }
+  return trouves;
+}
+
+/**
  * Inventory every bundled file. Byte-code is deliberately excluded: pip writes
  * `.pyc` headers that embed the install-time source mtime, so keeping it would
  * make the inventory hash change on every reinstall. `packages/` and `python/`
@@ -284,6 +332,10 @@ async function controle() {
   for (const paquet of PAQUETS_REQUIS) {
     if (!existsSync(join(PACKAGES, paquet))) echecs.push(`packages/${paquet}`);
   }
+  const bytecode = [...listerBytecode(PACKAGES), ...listerBytecode(DOSSIER_PYTHON)];
+  if (bytecode.length > 0) {
+    echecs.push(`bytecode (${bytecode.length} entrée(s), ex. ${bytecode[0]})`);
+  }
   const { inventory, json } = await contenuInventaire();
   const attendu = empreinte(json);
   let manifeste = null;
@@ -330,6 +382,7 @@ async function main() {
     if (!(await modelePresent(modele))) throw new Error(`intégrité : ${modele.id}`);
   }
   if (WITH_PACKAGES) installerPaquets();
+  nettoyerBytecode();
 
   const { inventory, json } = await contenuInventaire();
   writeFileSync(join(VOIX, "inventory.json"), json);
