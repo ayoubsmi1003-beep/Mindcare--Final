@@ -10,7 +10,6 @@ import {
   abonnerMainsLibres,
   arreterMainsLibres,
   demarrerMainsLibres,
-  fautAccuser,
   mainsLibresActif,
 } from "@/services/voix-mains-libres";
 
@@ -24,18 +23,6 @@ describe("etat reveil observable", () => {
     await Promise.resolve();
     expect(vus).toContain("desactive");
     stop();
-  });
-});
-
-describe("fautAccuser", () => {
-  it("accuse uniquement au réveil", () => {
-    expect(fautAccuser("reveille")).toBe(true);
-  });
-  it("n'accuse pas pendant la parole (pas de double ack)", () => {
-    expect(fautAccuser("parole")).toBe(false);
-    expect(fautAccuser("ecoute")).toBe(false);
-    expect(fautAccuser("traitement")).toBe(false);
-    expect(fautAccuser("veille")).toBe(false);
   });
 });
 

@@ -3,7 +3,13 @@ import { afterEach, expect, it, vi } from "vitest";
 const { invokeFunctionStream } = vi.hoisted(() => ({ invokeFunctionStream: vi.fn() }));
 vi.mock("@/services/db", () => ({ db: () => ({ invokeFunctionStream }) }));
 
-import { abonnerLecture, arreterLecture, estLectureInterrompue, lireTexte } from "@/services/jarvis-voix";
+import {
+  abonnerLecture,
+  arreterLecture,
+  attendreFinLecture,
+  estLectureInterrompue,
+  lireTexte,
+} from "@/services/jarvis-voix";
 
 class AudioSortieLocale {
   static instances: AudioSortieLocale[] = [];
@@ -23,7 +29,20 @@ afterEach(() => {
   invokeFunctionStream.mockReset();
   AudioSortieLocale.instances = [];
   vi.unstubAllGlobals();
+  vi.useRealTimers();
 });
+
+function fluxAudioValide(): { ok: true; data: ReadableStream<Uint8Array> } {
+  return {
+    ok: true,
+    data: new ReadableStream<Uint8Array>({
+      start(controller) {
+        controller.enqueue(new Uint8Array(44));
+        controller.close();
+      },
+    }),
+  };
+}
 
 it("reads an answer containing a patient name through local voice at full element volume", async () => {
   invokeFunctionStream.mockResolvedValue({
@@ -73,4 +92,43 @@ it("keeps a genuine synthesis failure classified as a voice failure", async () =
   expect(result.ok).toBe(false);
   if (result.ok) throw new Error("expected a failed read");
   expect(estLectureInterrompue(result.error)).toBe(false);
+});
+
+it("waits for the published end of playback, not for the first sound", async () => {
+  invokeFunctionStream.mockResolvedValue(fluxAudioValide());
+  vi.stubGlobal("Audio", AudioSortieLocale);
+
+  const lecture = await lireTexte("Bonjour docteur.", false);
+  expect(lecture.ok).toBe(true);
+
+  let termine = false;
+  const attente = attendreFinLecture(10_000).then(() => {
+    termine = true;
+  });
+  await Promise.resolve();
+  expect(termine).toBe(false);
+
+  AudioSortieLocale.instances[0]?.onended?.();
+  await attente;
+  expect(termine).toBe(true);
+});
+
+it("resolves after the timeout when no end event arrives", async () => {
+  vi.useFakeTimers();
+  invokeFunctionStream.mockResolvedValue(fluxAudioValide());
+  vi.stubGlobal("Audio", AudioSortieLocale);
+
+  const lecture = await lireTexte("Bonjour docteur.", false);
+  expect(lecture.ok).toBe(true);
+
+  let termine = false;
+  const attente = attendreFinLecture(5_000).then(() => {
+    termine = true;
+  });
+
+  await vi.advanceTimersByTimeAsync(4_999);
+  expect(termine).toBe(false);
+  await vi.advanceTimersByTimeAsync(1);
+  await attente;
+  expect(termine).toBe(true);
 });

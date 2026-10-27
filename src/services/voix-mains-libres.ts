@@ -1,41 +1,34 @@
 import {
-  abonnerVoix,
+  annulerSuivi,
   desarmerReveil,
   definirVoixSouhaitee,
   promesseArmement,
   retenirVoix,
-  type EtatVoix,
   type RappelsVoix,
 } from "./jarvis-reveil";
 import { envoyer } from "./conversation";
-import { abonnerLecture, lireTexte } from "./jarvis-voix";
-import { alexa } from "@/i18n/alexa";
+import { abonnerLecture } from "./jarvis-voix";
 import { err, ok, type Result } from "./result";
-import { log } from "./log";
 
 /**
  * Voix mains-libres — le pont entre le réveil local et la conversation.
  *
- * ON : le détecteur Vosk local écoute le mot « Alexa ». Au réveil : accusé
- * « Oui docteur » (TTS local), capture → STT local → le texte part aussitôt.
- * Après chaque tour le détecteur reste armé ; 15 min sans rien → arrêt.
+ * ON : le détecteur Vosk local écoute le mot « Alexa ». Au réveil, la machine
+ * à états joue elle-même l'accusé AVANT d'ouvrir le micro de commande (voir
+ * `declencherEcoute` dans `jarvis-reveil.ts`), puis capture → STT local → le
+ * texte part aussitôt. Après chaque tour le détecteur reste armé ; 15 min sans
+ * rien → arrêt.
  *
  * ⚠️ LE BOUTON NE PASSE PAS À « ACTIF » AVANT LE DÉTECTEUR. On attend le
  * résultat réel de l'armement ; un micro refusé ou un modèle absent reste une
  * erreur visible, jamais un faux voyant vert.
  */
 
-/** L'accusé ne part qu'au réveil — jamais deux fois, jamais sur parole. */
-export function fautAccuser(etat: EtatVoix): boolean {
-  return etat === "reveille";
-}
-
 const INACTIVITE_MS = 15 * 60_000;
 
 let actif = false;
 let liberation: (() => void) | null = null;
 let minuteur: ReturnType<typeof setTimeout> | null = null;
-let stopEtat: (() => void) | null = null;
 let stopLecture: (() => void) | null = null;
 const abonnes = new Set<(actif: boolean) => void>();
 
@@ -72,15 +65,6 @@ export async function demarrerMainsLibres(
   if (actif) return ok(true);
   const tenir = deps?.retenir ?? retenirVoix;
 
-  stopEtat?.();
-  stopEtat = abonnerVoix((vue) => {
-    if (!actif) return;
-    if (!fautAccuser(vue.etat)) return;
-    toucher();
-    void lireTexte(alexa.reveilAccuse).then((r) => {
-      if (!r.ok) log.warn("voix.mains-libres.accuse", { code: r.error.code });
-    });
-  });
   stopLecture?.();
   stopLecture = abonnerLecture(() => {
     if (actif) toucher();
@@ -113,8 +97,6 @@ export async function demarrerMainsLibres(
         clearTimeout(minuteur);
         minuteur = null;
       }
-      stopEtat?.();
-      stopEtat = null;
       stopLecture?.();
       stopLecture = null;
       desarmerReveil();
@@ -141,14 +123,13 @@ export function arreterMainsLibres(): void {
     clearTimeout(minuteur);
     minuteur = null;
   }
-  stopEtat?.();
-  stopEtat = null;
   stopLecture?.();
   stopLecture = null;
   if (actif) {
     actif = false;
     publier();
   }
+  annulerSuivi();
   definirVoixSouhaitee(false);
   desarmerReveil();
 }

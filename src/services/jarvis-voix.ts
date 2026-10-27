@@ -290,6 +290,40 @@ export function abonnerLecture(abonne: AbonneLecture): () => void {
   };
 }
 
+/**
+ * Attend la FIN réelle d'une lecture (ou `timeoutMs`).
+ *
+ * `lireTexte` résout au PREMIER son, pas à la fin : c'est ce qu'il faut pour
+ * afficher « Alexa parle » tôt, mais pas pour enchaîner deux réponses ni pour
+ * ouvrir le micro d'une commande après l'accusé de réveil. Sans cette attente,
+ * l'accusé serait enregistré, et deux réponses successives se couperaient.
+ *
+ * ⚠️ Appelée seulement APRÈS un `lireTexte` réussi, donc un `playing` a déjà
+ * été publié. Si la lecture est déjà finie, `abonnerLecture` rappelle
+ * immédiatement avec `false` et la promesse se résout tout de suite.
+ */
+export function attendreFinLecture(timeoutMs = 5_000): Promise<void> {
+  return new Promise((resolve) => {
+    let done = false;
+    let unsubscribe: (() => void) | null = null;
+    const finish = () => {
+      if (done) return;
+      done = true;
+      clearTimeout(timer);
+      unsubscribe?.();
+      resolve();
+    };
+    const timer = setTimeout(finish, timeoutMs);
+    const stop = abonnerLecture((active) => {
+      if (!active) finish();
+    });
+    unsubscribe = stop;
+    // La source peut déjà être silencieuse au moment de l'abonnement : le
+    // rappel synchrone a résolu la promesse avant que `stop` soit connu.
+    if (done) stop();
+  });
+}
+
 /** Une lecture est-elle réellement en cours ? Un FAIT, pas une supposition. */
 export function lectureActive(): boolean {
   return enLecture;

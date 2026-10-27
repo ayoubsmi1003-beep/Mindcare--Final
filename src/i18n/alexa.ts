@@ -39,6 +39,7 @@ export const alexa = {
   mainsLibresActiver: "Mains-libres",
   mainsLibresArreter: "Couper le mains-libres",
   reveilAccuse: "Oui docteur, je vous écoute.",
+  voixSuivi: "Je vous écoute. Parlez sans dire Alexa.",
   vagueEcoute: "Écoute en cours",
   voixPreparation: "Préparation de la voix locale (le grand modèle peut prendre plusieurs minutes)…",
   voixVeille: "Mains-libres en veille. Dites « Alexa » pour me réveiller.",

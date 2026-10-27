@@ -39,6 +39,7 @@
  *   parole               texte sans jeton → TTS externe ; à jeton → LOCAL
  */
 
+import { alexa } from "@/i18n/alexa";
 import { fr } from "@/i18n/fr";
 
 import { creerEndpointeurEnergie, type Endpointeur, type MotifFin } from "./endpointage-voix";
@@ -47,7 +48,9 @@ import {
   arreterEtTranscrire,
   arreterLecture,
   annulerDictee,
+  attendreFinLecture,
   demarrerDictee,
+  lireTexte,
   type SourceLecture,
 } from "./jarvis-voix";
 import { log } from "./log";
@@ -228,6 +231,71 @@ let quitterLecture: (() => void) | null = null;
  */
 let captureCourante = 0;
 
+/**
+ * ⚠️ UNE SEULE TRANSITION ASYNCHRONE À LA FOIS.
+ *
+ * Un réveil joue l'accusé puis ouvre le micro ; une clôture transcrit puis
+ * répond. Ces deux séquences attendent le réseau et le TTS. Sans file, la fin
+ * d'une réponse pouvait atterrir au milieu du réveil suivant — c'est le défaut
+ * qui rendait « Alexa » efficace une fois sur deux. La file ne sérialise que
+ * les séquences ASYNCHRONES ; les signaux `parole`/`fin de parole` restent
+ * synchrones parce qu'ils rapportent un fait observé (voir `signalerParole`).
+ */
+let operation: Promise<void> = Promise.resolve();
+
+function serialiser(tache: () => Promise<void>): Promise<void> {
+  const suivant = operation.then(tache, tache);
+  // La file ne doit jamais rester rejetée : une transition en échec est déjà
+  // traduite en état `erreur` par la tâche elle-même.
+  operation = suivant.catch(() => {});
+  return suivant;
+}
+
+/**
+ * Le docteur a demandé une commande au mot de réveil : après la réponse, le
+ * micro se rouvre 8 s SANS redire « Alexa ». Ce drapeau ne survit ni à un
+ * arrêt manuel ni à un faux réveil.
+ */
+let suiviDemande = false;
+let minuteurSuivi: ReturnType<typeof setTimeout> | null = null;
+/** Invalide un démarrage de suivi déjà sorti du minuteur mais pas encore exécuté. */
+let generationSuivi = 0;
+
+const SUIVI_MS = 8_000;
+const PATIENCE_REVEIL_MS = 3_000;
+const PLAFOND_CAPTURE_MS = 15_000;
+const DELAI_SUIVI_MS = 250;
+
+function effacerMinuteurSuivi(): void {
+  if (minuteurSuivi !== null) {
+    clearTimeout(minuteurSuivi);
+    minuteurSuivi = null;
+  }
+}
+
+/** Programme l'ouverture du suivi. Un seul minuteur, jamais deux. */
+function programmerSuivi(): void {
+  if (!suiviDemande) return;
+  effacerMinuteurSuivi();
+  const generation = generationSuivi;
+  minuteurSuivi = setTimeout(() => {
+    minuteurSuivi = null;
+    if (generation !== generationSuivi || !suiviDemande) return;
+    void declencherEcoute({ suivi: true });
+  }, DELAI_SUIVI_MS);
+}
+
+/**
+ * Annule toute fenêtre de suivi. Appelé par un envoi tapé (Task 5) : une
+ * question au clavier ne doit jamais hériter du micro laissé ouvert par la
+ * réponse précédente.
+ */
+export function annulerSuivi(): void {
+  suiviDemande = false;
+  generationSuivi += 1;
+  effacerMinuteurSuivi();
+}
+
 /** The one in-flight arm attempt; cleared by an explicit disarm so a quick
  * stop/start cannot reuse a resolved promise and leave the detector off. */
 let armement: Promise<Result<true>> | null = null;
@@ -305,6 +373,11 @@ export async function armerReveil(r: RappelsVoix): Promise<Result<true>> {
 
 export function desarmerReveil(): void {
   captureCourante += 1; // invalide toute clôture en vol
+  annulerSuivi();
+  if (chienDeGardeParole !== null) {
+    clearTimeout(chienDeGardeParole);
+    chienDeGardeParole = null;
+  }
   // A resolved arm promise is not a state. If the caller disarms, the next
   // explicit start must spawn/arm again rather than reuse this old result.
   armement = null;
@@ -340,40 +413,106 @@ async function surReveil(): Promise<void> {
  * l'endpointeur, et le défaut ne se manifeste que sur l'un des deux gestes —
  * donc au pire moment, une fois sur deux.
  */
-export async function declencherEcoute(): Promise<void> {
+export interface OptionsEcoute {
+  /** Fenêtre de suivi ouverte APRÈS une réponse : pas d'accusé, patience 8 s. */
+  readonly suivi?: boolean;
+}
+
+export function declencherEcoute(options?: OptionsEcoute): Promise<void> {
+  return serialiser(() => declencherEcouteSerialise(options));
+}
+
+async function declencherEcouteSerialise(options?: OptionsEcoute): Promise<void> {
+  // Un suivi annulé (envoi tapé, arrêt manuel) ne doit pas rouvrir le micro,
+  // même si son minuteur a déjà été vidé. On le vérifie AVANT de couper une
+  // réponse en cours : une activation annulée ne doit rien interrompre.
+  if (options?.suivi === true && !suiviDemande) return;
+
+  // Un réveil pendant la réponse coupe la lecture : c'est le « stop » naturel.
   if (etat === "parole") arreterLecture();
   // Une activation pendant l'écoute ou le traitement est IGNORÉE : la commande
   // en cours a la priorité, sinon deux captures se chevaucheraient sur un seul
   // micro et la seconde échouerait en « déjà en cours ».
-  if (etat === "ecoute" || etat === "traitement" || etat === "desactive") return;
+  if (
+    etat === "ecoute" ||
+    etat === "traitement" ||
+    etat === "reveille" ||
+    etat === "desactive"
+  ) {
+    return;
+  }
+
+  // Une activation explicite remplace toute fenêtre de suivi en attente : deux
+  // ouvertures programmées pour la même réponse seraient un deuxième micro.
+  effacerMinuteurSuivi();
 
   aller("reveille");
   // Le détecteur se tait pendant la capture : la commande de la praticienne ne
   // doit pas se réveiller elle-même.
   detecteur?.suspendre();
 
+  const generationDemarrage = captureCourante;
+
+  // ⚠️ L'ACCUSÉ EST PRONONCÉ AVANT D'OUVRIR LE MICRO, JAMAIS DEDANS. Il ne
+  // part pas sur un suivi : le docteur vient d'entendre la réponse et sait
+  // qu'il peut parler. Un échec de l'accusé est journalisé et IGNORÉ — un
+  // haut-parleur muet ne doit pas empêcher la consultation.
+  if (options?.suivi !== true) {
+    try {
+      const accuse = await lireTexte(alexa.reveilAccuse);
+      if (accuse.ok) {
+        await attendreFinLecture(5_000);
+      } else {
+        log.warn("jarvis.reveil.accuse", { code: accuse.error.code });
+      }
+    } catch (cause) {
+      log.warn("jarvis.reveil.accuse", {
+        code: "indisponible",
+        causeName: cause instanceof Error ? cause.name : "inconnue",
+      });
+    }
+  }
+
+  // Un arrêt, un démontage ou une interruption a pu changer l'état pendant
+  // l'accusé. On ne rouvre pas le micro dans le dos de la praticienne.
+  if (etatVoix() !== "reveille" || generationDemarrage !== captureCourante) return;
+
   const demarrage = await demarrerDictee();
   if (!demarrage.ok) {
+    if (generationDemarrage !== captureCourante) return;
     detecteur?.reprendre();
     aller("erreur", demarrage.error.message);
     return;
   }
+  if (generationDemarrage !== captureCourante) {
+    annulerDictee();
+    return;
+  }
 
   const jeton = (captureCourante += 1);
-  aller("ecoute");
+  aller(
+    "ecoute",
+    options?.suivi === true ? fr.jarvis.voix.reveil.voixSuivi : null,
+  );
 
   // ⚠️ SANS CECI, L'ENREGISTREMENT NE S'ARRÊTE JAMAIS. C'était le maillon
   // manquant de toute la boucle vocale : `cloturerCommande` existait sans
   // appelant, et le contrat du détecteur ne porte aucun signal de fin de parole.
   endpointeur ??= creerEndpointeurEnergie();
-  const mesure = endpointeur.demarrer((motif: MotifFin) => {
-    void cloturerCommande(jeton, motif);
-  });
+  const mesure = endpointeur.demarrer(
+    (motif: MotifFin) => {
+      void cloturerCommande(jeton, motif);
+    },
+    {
+      patienceMs: options?.suivi === true ? SUIVI_MS : PATIENCE_REVEIL_MS,
+      plafondMs: PLAFOND_CAPTURE_MS,
+    },
+  );
   if (!mesure.ok) {
     // Pas de mesure d'énergie : on ne laisse PAS un micro ouvert sans horizon.
     // Le plafond dur reste, porté par un minuteur simple.
     log.warn("voix.endpointIndisponible", { code: mesure.error.code });
-    setTimeout(() => void cloturerCommande(jeton, "plafond"), 15_000);
+    setTimeout(() => void cloturerCommande(jeton, "plafond"), PLAFOND_CAPTURE_MS);
   }
 }
 
@@ -381,40 +520,50 @@ export async function declencherEcoute(): Promise<void> {
  * Clôt la capture et transmet la commande. Appelé par la détection de fin de
  * parole du détecteur, ou par un geste de l'interface.
  */
-export async function cloturerCommande(jeton?: number, motif?: MotifFin): Promise<void> {
+export function cloturerCommande(jeton?: number, motif?: MotifFin): Promise<void> {
   // ── LES TROIS VERROUS D'IDEMPOTENCE ──
   // 1 · un appel d'une capture PÉRIMÉE ne clôt pas la capture courante ;
-  if (jeton !== undefined && jeton !== captureCourante) return;
+  if (jeton !== undefined && jeton !== captureCourante) return Promise.resolve();
   // 2 · on ne clôt que ce qui est en cours d'écoute ;
-  if (etat !== "ecoute") return;
+  if (etat !== "ecoute") return Promise.resolve();
   // 3 · la transition est SYNCHRONE et précède tout `await` : un second appelant
   //     arrivé dans le même tour de boucle voit déjà « traitement » et repart.
   aller("traitement");
 
   endpointeur?.arreter();
+  const generation = captureCourante;
 
-  // Un faux réveil n'a produit aucune parole. On JETTE l'audio au lieu de payer
-  // une transcription pour du silence — et on ne montre aucune erreur : afficher
-  // un échec ferait croire à une panne à chaque claquement de porte.
-  if (motif === "faux-reveil") {
-    annulerDictee();
-    detecteur?.reprendre();
-    aller("veille");
-    log.info("jarvis.reveil.fauxReveil", { count: 1 });
-    return;
-  }
+  return serialiser(async () => {
+    // Une interruption a pu vider la capture entre-temps : on ne transcrit pas
+    // un audio que la praticienne a déjà arrêté.
+    if (etat !== "traitement" || generation !== captureCourante) return;
 
-  // `arreterEtTranscrire` porte le contrat de finalisation : arrêt du recorder,
-  // attente du dernier fragment ET de `onstop`, assemblage, validation du
-  // non-vide, puis UNE seule requête. Voir `jarvis-voix.ts`.
-  const transcription = await arreterEtTranscrire();
-  if (!transcription.ok) {
-    detecteur?.reprendre();
-    aller("erreur", transcription.error.message);
-    return;
-  }
-  const texte = transcription.data.trim();
-  await acheminerTranscription(texte);
+    // Un faux réveil n'a produit aucune parole. On JETTE l'audio au lieu de
+    // payer une transcription pour du silence — et on ne montre aucune erreur :
+    // afficher un échec ferait croire à une panne à chaque claquement de porte.
+    if (motif === "faux-reveil") {
+      annulerDictee();
+      annulerSuivi();
+      detecteur?.reprendre();
+      aller("veille");
+      log.info("jarvis.reveil.fauxReveil", { count: 1 });
+      return;
+    }
+
+    // `arreterEtTranscrire` porte le contrat de finalisation : arrêt du
+    // recorder, attente du dernier fragment ET de `onstop`, assemblage,
+    // validation du non-vide, puis UNE seule requête. Voir `jarvis-voix.ts`.
+    const transcription = await arreterEtTranscrire();
+    if (!transcription.ok) {
+      if (etat !== "traitement" || generation !== captureCourante) return;
+      annulerSuivi();
+      detecteur?.reprendre();
+      aller("erreur", transcription.error.message);
+      return;
+    }
+    if (etat !== "traitement" || generation !== captureCourante) return;
+    await acheminerTranscription(transcription.data.trim());
+  });
 }
 
 /**
@@ -430,10 +579,17 @@ export async function cloturerCommande(jeton?: number, motif?: MotifFin): Promis
 async function acheminerTranscription(texte: string): Promise<void> {
   if (texte === "") {
     detecteur?.reprendre();
+    annulerSuivi();
     aller("veille");
     log.info("jarvis.reveil.fauxReveil", { count: 1 });
     return;
   }
+
+  // ⚠️ LE SUIVI EST DEMANDÉ AVANT LA RÉPONSE, PAS APRÈS. La boucle peut lire la
+  // réponse et publier `parole` avant que `onCommande` ne rende la main ; si le
+  // drapeau était posé ensuite, `signalerFinParole` aurait déjà décidé de ne
+  // rien programmer. Un envoi tapé l'annule par `annulerSuivi()`.
+  suiviDemande = true;
 
   // ⚠️ LE DÉTECTEUR RESTE SUSPENDU PENDANT LA RÉPONSE. Il reprendra à la fin de
   // `parole` (voir `signalerFinParole`) ou ici même si rien n'est lu. Le
@@ -449,13 +605,16 @@ async function acheminerTranscription(texte: string): Promise<void> {
       context: "onCommande",
       causeName: cause instanceof Error ? cause.name : "inconnue",
     });
+    annulerSuivi();
     detecteur?.reprendre();
     aller("erreur", fr.jarvis.voix.indisponible);
     return;
   }
 
   // Si la réponse a déclenché une lecture, `signalerParole` a déjà fait passer
-  // la machine en « parole » — on ne l'écrase pas. Sinon, retour en veille.
+  // la machine en « parole » — on ne l'écrase pas. Sinon, retour en veille et
+  // ouverture DIRECTE de la fenêtre de suivi : aucune lecture ne viendra
+  // rappeler `signalerFinParole`.
   //
   // ⚠️ ON RELIT PAR `etatVoix()`, PAS PAR `etat`. TypeScript garde l'affinement
   // établi plus haut (« forcément `ecoute` ») à travers l'`await`, alors que la
@@ -464,6 +623,7 @@ async function acheminerTranscription(texte: string): Promise<void> {
   if (etatVoix() === "traitement") {
     detecteur?.reprendre();
     aller("veille");
+    programmerSuivi();
   }
 }
 
@@ -498,6 +658,27 @@ export async function simulerTranscription(texte: string): Promise<boolean> {
  */
 export function signalerParole(): void {
   if (etat === "desactive") return;
+
+  // ⚠️ LA PAROLE DE L'ACCUSÉ N'EST PAS UNE RÉPONSE. Elle précède l'ouverture
+  // du micro ; la prendre pour un tour de parole ferait basculer l'orbe en
+  // `parole` puis en `veille` PENDANT la capture. On l'ignore explicitement.
+  if (etat === "reveille") {
+    log.info("jarvis.voix.paroleIgnoree", { context: "accuse" });
+    return;
+  }
+
+  // ⚠️ AUCUN TTS NE DOIT DÉMARRER PENDANT LA CAPTURE. Le micro de commande est
+  // ouvert : sa propre voix de synthèse s'y enregistrerait, et l'état `parole`
+  // masquerait l'écoute en cours.
+  if (etat === "ecoute") {
+    log.info("jarvis.voix.paroleIgnoree", { context: "capture" });
+    return;
+  }
+
+  // L'interruption est un état VISIBLE qui doit le rester : une lecture tardive
+  // ne le remplace pas.
+  if (etat === "interrompu") return;
+
   detecteur?.suspendre();
   aller("parole");
 
@@ -521,6 +702,10 @@ export function signalerFinParole(): void {
   if (etat !== "parole") return;
   detecteur?.reprendre();
   aller("veille");
+
+  // La réponse est finie : le docteur peut enchaîner sans redire « Alexa ».
+  // `annulerSuivi()` (envoi tapé, arrêt manuel) a déjà posé le drapeau à faux.
+  programmerSuivi();
 }
 
 /**
@@ -536,6 +721,7 @@ export function interrompreVoix(): void {
   // Invalide toute clôture en vol : l'endpointeur de la capture qu'on coupe ne
   // doit pas conclure après coup sur la suivante.
   captureCourante += 1;
+  annulerSuivi();
   if (chienDeGardeParole !== null) {
     clearTimeout(chienDeGardeParole);
     chienDeGardeParole = null;
@@ -653,8 +839,16 @@ export function retenirVoix(r: RappelsVoix): () => void {
     demontage = null;
   }
 
-  if (references === 1 && armement === null) {
-    armement = (async (): Promise<Result<true>> => {
+  // ⚠️ `armement` N'EST QUE LA TENTATIVE EN VOL, PAS UN ÉTAT ACQUIS. Une fois
+  // résolue, elle doit disparaître : sinon un remontage (ou un arrêt/relance)
+  // réutilise une promesse déjà tenue, le détecteur reste éteint, et le mot de
+  // réveil ne marche plus qu'une fois. On ré-arme donc aussi quand le détecteur
+  // a disparu ou que la machine est explicitement désactivée.
+  const doitArmer = references === 1 && armement === null &&
+    (detecteur === null || etat === "desactive");
+
+  if (doitArmer) {
+    const tentative = (async (): Promise<Result<true>> => {
       // Import dynamique : l'ONNX et son WASM ne doivent entrer ni dans le
       // rendu serveur, ni dans le bundle initial. L'application s'affiche sans
       // attendre 16 Mio de runtime.
@@ -662,8 +856,11 @@ export function retenirVoix(r: RappelsVoix): () => void {
       installerDetecteur(creerDetecteurVosk());
       return await armerReveil(r);
     })();
-    void armement.then((resultat) => {
+    armement = tentative;
+    void tentative.then((resultat) => {
       if (!resultat.ok) log.warn("jarvis.reveil.armementEchoue", { code: resultat.error.code });
+    }).finally(() => {
+      if (armement === tentative) armement = null;
     });
   }
 

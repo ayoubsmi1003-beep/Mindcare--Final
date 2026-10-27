@@ -72,13 +72,23 @@ const LISSAGE = 0.25;
 
 export type MotifFin = "silence" | "plafond" | "faux-reveil";
 
+/**
+ * La fenêtre d'écoute. Le réveil attend 3 s une première parole ; le suivi
+ * laisse 8 s au docteur pour enchaîner sans redire « Alexa ». Le plafond dur
+ * reste le même dans les deux cas : aucune capture ne peut durer sans horizon.
+ */
+export interface OptionsEndpointage {
+  readonly patienceMs?: number;
+  readonly plafondMs?: number;
+}
+
 export interface Endpointeur {
   /**
    * Démarre la mesure. `surFin` est appelé AU PLUS UNE FOIS par démarrage —
    * l'endpointeur s'arrête lui-même avant de rappeler, pour qu'un plafond et un
    * silence simultanés ne produisent pas deux clôtures.
    */
-  readonly demarrer: (surFin: (motif: MotifFin) => void) => Result<true>;
+  readonly demarrer: (surFin: (motif: MotifFin) => void, options?: OptionsEndpointage) => Result<true>;
   readonly arreter: () => void;
   /** 0..1, lissé. Lu par `rAF` pour l'animation, JAMAIS publié dans un état React. */
   readonly niveau: () => number;
@@ -117,8 +127,11 @@ export function creerEndpointeurEnergie(): Endpointeur {
   }
 
   return {
-    demarrer: (surFin: (motif: MotifFin) => void): Result<true> => {
+    demarrer: (surFin: (motif: MotifFin) => void, options?: OptionsEndpointage): Result<true> => {
       arreter(); // repartir propre : un démarrage sur un état sale doublerait les minuteurs
+
+      const patienceMs = options?.patienceMs ?? PATIENCE_INITIALE_MS;
+      const plafondMs = options?.plafondMs ?? PLAFOND_MS;
 
       const source = sourcePartagee();
       if (source === null) {
@@ -152,7 +165,7 @@ export function creerEndpointeurEnergie(): Endpointeur {
         surFin(motif);
       }
 
-      plafond = setTimeout(() => conclure("plafond"), PLAFOND_MS);
+      plafond = setTimeout(() => conclure("plafond"), plafondMs);
 
       minuteur = setInterval(() => {
         const a = analyseur;
@@ -182,7 +195,7 @@ export function creerEndpointeurEnergie(): Endpointeur {
         // Jamais parlé. Un bruit a réveillé le détecteur — porte, chaise,
         // raclement de gorge. On rend la main SANS erreur : afficher un échec
         // ferait croire à une panne à chaque claquement de porte.
-        if (maintenant - debut >= PATIENCE_INITIALE_MS) conclure("faux-reveil");
+        if (maintenant - debut >= patienceMs) conclure("faux-reveil");
       }, PAS_MS);
 
       return ok(true);

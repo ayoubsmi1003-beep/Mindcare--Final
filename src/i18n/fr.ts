@@ -1900,6 +1900,7 @@ export const fr = {
          * un mot que le détecteur ne reconnaît pas serait pire que se taire.
          */
         motAPrononcer: "Dites « Alexa » pour me réveiller.",
+        voixSuivi: "Je vous écoute. Parlez sans dire Alexa.",
         desarme: "Mot de réveil désactivé.",
         /**
          * Dit à voix haute ce qui était jusqu'ici indevinable : le son sort de
