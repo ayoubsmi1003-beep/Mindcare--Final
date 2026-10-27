@@ -84,6 +84,10 @@ const CANDIDATS_VECTORIELS = 24;
  */
 const SEUIL_SIMILARITE_DENSE = 0.83;
 
+/** Normalisation de comparaison (accents, casse, espaces) — jamais affichée. */
+const normaliserTexte = (valeur: string): string =>
+  valeur.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase().replace(/\s+/gu, " ").trim();
+
 /** Résout l'identité bibliographique d'une preuve, sans jamais la deviner. */
 export function identiteDePreuve(sourceTitre: string, sourceVersion: string): EditionOuvrage | null {
   return editionDe(sourceTitre, sourceVersion);
@@ -420,32 +424,52 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
       || a.lot - b.lot || a.rang - b.rang);
     // DIVERSITÉ DES SOURCES (livre non nommé uniquement) : une question sans
     // livre explicite ne doit pas recevoir 5 extraits du même ouvrage quand
-    // l'autre en a un aussi pertinent. Mesuré : « syndrome sérotoninergique »
+    // l'autre en a un AUSSI pertinent. Mesuré : « syndrome sérotoninergique »
     // et « arrêter un antidépresseur » avaient leur passage au rang 1 de leur
-    // propre reformulation anglaise, puis perdaient la fusion parce que cinq
-    // chunks DSM remplissaient les 5 places. Plafond de 3 par livre, puis
-    // COMPLÉMENT sans plafond si la liste n'est pas pleine (jamais de liste
-    // courte à cause de la règle).
+    // propre reformulation, puis perdaient la fusion parce que cinq chunks DSM
+    // remplissaient les places.
+    //
+    // Règle : on remplit normalement, puis — si les 5 viennent d'un seul livre
+    // — on remplace la DERNIÈRE preuve par la meilleure de l'autre livre,
+    // uniquement si elle atteint 80 % de la meilleure pertinence. Un plafond
+    // symétrique avait été essayé : il forçait des chunks DSM hors sujet
+    // (p. 730) dans une réponse clozapine. Pas de diversité au prix du hors-sujet.
     const livre = (preuve: Preuve): string =>
       identiteDePreuve(preuve.sourceTitre, preuve.sourceVersion)?.bookId ?? preuve.sourceTitre;
-    const plafond = plan.sourceTitle === null ? 3 : LIMITES.FINAL;
-    const compte = new Map<string, number>();
-    const restants: Preuve[] = [];
+    const empreinte = (preuve: Preuve): string =>
+      normaliserTexte(preuve.texte.replace(/\[[^\]]*\]/gu, ""));
+    const textesVus: string[] = [];
+    // Deux chunks peuvent couvrir le MÊME passage (l'un contenu dans l'autre) :
+    // ils prenaient deux places pour une seule information. La contenance est
+    // vérifiée sur le texte normalisé, jamais sur le chunkId.
+    const dejaCouvert = (texte: string): boolean => texte.length >= 80
+      && textesVus.some((connu) => connu.includes(texte) || texte.includes(connu));
     for (const { preuve } of ordonnes) {
       if (preuves.length >= LIMITES.FINAL) break;
       if (vus.has(preuve.chunkId)) continue;
-      const cle = livre(preuve);
-      const pris = compte.get(cle) ?? 0;
-      if (pris >= plafond) { restants.push(preuve); continue; }
-      compte.set(cle, pris + 1);
+      const marque = empreinte(preuve);
+      if (dejaCouvert(marque)) continue;
       vus.add(preuve.chunkId);
+      textesVus.push(marque);
       preuves.push(preuve);
     }
-    for (const preuve of restants) {
-      if (preuves.length >= LIMITES.FINAL) break;
-      if (vus.has(preuve.chunkId)) continue;
-      vus.add(preuve.chunkId);
-      preuves.push(preuve);
+    if (plan.sourceTitle === null && preuves.length > 0) {
+      const livres = new Set(preuves.map(livre));
+      if (livres.size === 1) {
+        const meilleure = Math.max(...preuves.map((p) => p.evidence_relevance));
+        const autre = ordonnes
+          .map(({ preuve }) => preuve)
+          .find((preuve) => !vus.has(preuve.chunkId)
+            && !livres.has(livre(preuve))
+            && preuve.evidence_relevance >= SEUIL_PERTINENCE
+            && preuve.evidence_relevance >= meilleure * 0.6);
+        if (autre !== undefined) {
+          const retiree = preuves.pop();
+          if (retiree !== undefined) vus.delete(retiree.chunkId);
+          vus.add(autre.chunkId);
+          preuves.push(autre);
+        }
+      }
     }
     // Budget d'évidence appliqué UNE seule fois, après la sélection finale.
     // L'appliquer par lot tronquait chaque liste avant la fusion (mesuré : le

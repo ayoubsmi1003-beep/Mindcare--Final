@@ -24,7 +24,15 @@ export const bibliographyRequested=(question:string)=>/\b(?:bibliogr\w*|referenc
 /** Multiple journal records near the start identify a reference list even under a generic section label. */
 export function bibliographyTextEvidence(text:string):boolean{
  const references=[...text.matchAll(/\b(?:19|20)\d{2};\s*\d+(?:\s+Suppl\s+\d+)?\s*:\s*\d+/giu)];
- return references.length>=2&&references[0]!.index<240;
+ if(references.length>=2&&references[0]!.index<240)return true;
+ // Page de références dont le TITRE de section ne dit pas « references » (mesuré :
+ // DSM p. 1042, section « Affections proposées pour des études supplémentaires »,
+ // texte « … 1042 Références Meltzer HY, Alphs L, Green AI, et al: … »). On exige
+ // le mot en TÊTE **et** plusieurs années de citation : une phrase clinique qui
+ // mentionne « voir références » ne peut pas réunir les deux.
+ const tete=text.slice(0,140).normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase();
+ if(/\breferences?\b/u.test(tete)&&(text.match(/\b(?:19|20)\d{2}\b/gu)??[]).length>=3)return true;
+ return false;
 }
 /** Repeated empty column labels cannot establish relationships in a flattened table. */
 export const unboundTableEvidence=(text:string)=>/(?:^|\s)([\p{L}][\p{L} ]{0,35}:)\s*(?:\1\s*){2,}$/iu.test(text.trim());

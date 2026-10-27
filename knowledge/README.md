@@ -64,7 +64,7 @@ Résultats mesurés le 2026-10-27 :
 | Configuration | R@1 | R@3 | R@5 | MRR | Abstention | p50 |
 |---|---|---|---|---|---|---|
 | Lexical seul (livré) | 60 % | 75 % | 75 % | 0,675 | 100 % | 61 ms |
-| **Hybride 768, plancher + plafond + diversité** | **65 %** | **80 %** | **90 %** | **0,747** | **100 %** | 0,35–2 s |
+| **Hybride 768, plancher + plafond + diversité** | **65 %** | **80 %** | **85 %** | **0,738** | **100 %** | 0,35–2 s |
 
 > Le barème de section a été corrigé le 2026-10-27 : il ne regardait que les
 > DEUX derniers segments du chemin, ce qui déclarait « hors chapitre » un
@@ -83,10 +83,12 @@ Deux règles rendent le dense sûr :
    section « affections proposées pour des études supplémentaires ») prenait la
    1re place devant le passage clozapine trouvé lexicalement, et deux questions
    DSM perdaient leur rang 1.
-3. **diversité des sources** (livre non nommé) : au plus 3 extraits par ouvrage,
-   puis complément sans plafond si la liste n'est pas pleine. Sans elle, cinq
-   chunks DSM remplissaient les 5 places alors que le passage Taylor était rang 1
-   de sa propre reformulation.
+3. **diversité des sources** (livre non nommé) : si les 5 preuves viennent d'un
+   seul ouvrage, la dernière est remplacée par la meilleure de l'autre ouvrage —
+   seulement si elle atteint 60 % de la meilleure pertinence. Un plafond
+   symétrique avait été essayé (Recall@5 90 %) mais il forçait des extraits hors
+   sujet (DSM p. 730 dans une réponse clozapine) : 85 % sans extrait hors sujet
+   vaut mieux que 90 % avec.
 
 Résultat : DSM 9/10 au rang 1 (10/10 dans les 2 premiers), Taylor 8/10 dans les
 5 premiers (4 au rang 1). Les deux questions Taylor restantes (syndrome
@@ -94,6 +96,11 @@ sérotoninergique, agitation aiguë) échouent pour une raison de DONNÉES : leu
 occurrences de bonne rubrique sont des listes de références (écartées à raison)
 et le contenu clinique est dans des tableaux. Cela demande un autre découpage,
 pas un réglage de classement.
+
+Contrôle de bout en bout (chemin déterministe, sans modèle de rédaction) : la
+question clozapine rend cinq passages Taylor pertinents (p. 237, 237, 778, 224)
+avec la ligne de sources vérifiée — plus aucune page de références (DSM p. 1042)
+ni doublon de chunk.
 
 Le harnais reconnaît les deux noms de porte (`search_knowledge_vector_v2`,
 `search_knowledge_vector_v2_768`) : le code de production garde des sites
