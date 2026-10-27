@@ -219,6 +219,26 @@ describe("repli de page : carte des unités canoniques", () => {
   });
 });
 
+describe("diversité des sources : un seul livre ne remplit pas toutes les places", () => {
+  it("réserve au moins une place à l'autre ouvrage quand aucun livre n'est nommé", async () => {
+    const dsmRows = Array.from({ length: 5 }, (_, i) =>
+      row(DSM, `Prise en charge de l'agitation aiguë, extrait ${i + 1}. [dsm5-fr-2015-elsevier p.${200 + i}|src:${260 + i}]`,
+        { chunk_id: `dsm-chunk-${i}`, section: `Section II — Critères diagnostiques et codes › Troubles anxieux › Trouble panique › Critères diagnostiques` }));
+    const taylor = row(MAUDSLEY, "Management of acute agitation: antipsychotics and benzodiazepines. [maudsley-prescribing-guidelines-2021-taylor-14e p.42|src:60]",
+      { chunk_id: "taylor-chunk", section: "Part 1: Drug treatment of major psychiatric conditions › Chapter 1: Schizophrenia and related psychoses › Acute agitation" });
+    const { client } = clientAvec([...dsmRows, taylor]);
+    const result = await readKnowledge(client, "Quelle est la prise en charge de l'agitation aiguë ?");
+    expect(result.etat).toBe("ok");
+    expect(result.preuves).toHaveLength(5);
+    const titres = result.preuves.map((p) => p.titre);
+    // Le plafond de 3 s'applique à la première passe ; le complément remplit
+    // ensuite les places restantes. Le contrat observable est donc : jamais
+    // cinq extraits du même livre quand l'autre en a un, et l'autre est présent.
+    expect(titres.filter((t) => t === DSM).length).toBeLessThanOrEqual(4);
+    expect(titres).toContain(MAUDSLEY);
+  });
+});
+
 describe("portes lexicales : parallèles, bornées, ordre préservé", () => {
   it("démarre la seconde porte avant la fin de la première et restitue l'ordre du plan", async () => {
     let premiereFinie = false;
