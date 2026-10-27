@@ -46,6 +46,7 @@ import { fr, type NomEcran } from "@/i18n/fr";
 import type { UserRole } from "@/services/authz";
 
 import { BandeauSeanceEnCours } from "./BandeauSeanceEnCours";
+import { BulleAlexa } from "./BulleAlexa";
 import { BootVoix } from "./BootVoix";
 import { PaletteCommande } from "./PaletteCommande";
 import { PanneauJarvis } from "./PanneauJarvis";
@@ -140,13 +141,12 @@ export function AppShell({
   modeSeance = false,
   sansRail = false,
   sansDefilement = false,
+  sansBulle = false,
   children,
 }: AppShellProps): React.JSX.Element {
   /**
-   * L'ouverture de l'assistant vit ICI parce que deux enfants la partagent :
-   * le champ de commande de la barre l'ouvre, le panneau la referme. Un store
-   * de plus serait disproportionné pour un booléen dont les deux seuls
-   * lecteurs sont frères.
+   * L'ouverture vit ici parce que la bulle lance le panneau et que le panneau
+   * peut le refermer. Un store de plus serait disproportionné pour ce booléen.
    */
   const [alexaOuvert, setAlexaOuvert] = useState(false);
   const [paletteOuverte, setPaletteOuverte] = useState(false);
@@ -234,6 +234,7 @@ export function AppShell({
           vit ici pour durer autant que l'application, pas autant qu'un écran. */}
       {avecAlexa ? (
         <>
+          {sansBulle ? null : <BulleAlexa ouvert={alexaOuvert} onOuvrir={() => changerAlexa(true)} />}
           <BootVoix />
           <PanneauJarvis ouvert={alexaOuvert} onChangerOuvert={changerAlexa} />
           <PaletteCommande ouvert={paletteOuverte} onChangerOuvert={setPaletteOuverte} />

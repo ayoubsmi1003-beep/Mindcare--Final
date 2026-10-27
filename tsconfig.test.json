@@ -28,6 +28,6 @@
     "noEmit": true,
     "types": ["node"]
   },
-  "include": ["tests/**/*.ts", "src/server/jarvis/resume-cas.ts", "src/server/jarvis/contrat-workspace.ts", "src/server/jarvis/resume-chronologie.ts", "src/server/jarvis/contexte-seance.ts"],
+  "include": ["tests/**/*.ts", "tests/**/*.tsx", "src/server/jarvis/resume-cas.ts", "src/server/jarvis/contrat-workspace.ts", "src/server/jarvis/resume-chronologie.ts", "src/server/jarvis/contexte-seance.ts"],
   "exclude": ["node_modules"]
 }

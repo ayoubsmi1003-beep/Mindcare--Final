@@ -379,7 +379,8 @@ export async function proposerAction<N extends ToolEcriture>(
 export async function confirmerAction(actionId: string): Promise<Result<string>> {
   const resultat = await db().rpc<string>("confirm_jarvis_action", { p_id: actionId });
   if (!resultat.ok) {
-    log.error("jarvis.action.confirmation", logFieldsFor(resultat.error));
+    const journaliser = resultat.error.code === "regle-metier" ? log.warn : log.error;
+    journaliser("jarvis.action.confirmation", logFieldsFor(resultat.error));
     return err(resultat.error);
   }
 

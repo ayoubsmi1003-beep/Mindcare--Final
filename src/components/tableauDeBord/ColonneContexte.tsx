@@ -196,7 +196,9 @@ export function CartePropositions({
     const confirmation = await confirmerAction(id);
     if (!confirmation.ok) {
       setEnCours(undefined);
-      setMessage(confirmation.error.message);
+      const propositionPerimee = confirmation.error.code === "regle-metier";
+      setMessage(propositionPerimee ? fr.jarvis.propositionIntrouvable : confirmation.error.message);
+      if (propositionPerimee) onMutation();
       return;
     }
 
