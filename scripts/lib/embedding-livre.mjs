@@ -90,16 +90,16 @@ export async function chargerEmbeddeur({ dossier, slug, maxTokens = 128, threads
     const sortie = [];
     for (let i = 0; i < n; i++) {
       const vecteur = new Float64Array(dimensions);
-      let total = 0;
       for (let j = 0; j < longueur; j++) {
         const poids = Number(masque[i * longueur + j]);
         if (poids === 0) continue;
-        total += poids;
         for (let d = 0; d < dimensions; d++) vecteur[d] += data[(i * longueur + j) * dimensions + d] * poids;
       }
       const norme = Math.sqrt(vecteur.reduce((s, v) => s + v * v, 0));
       if (!(norme > 0) || !Number.isFinite(norme)) throw new Error("vecteur nul ou non fini");
-      sortie.push(Float32Array.from(vecteur, (v) => v / (total * norme)));
+      // Moyenne = somme / total ; puis L2 de la MOYENNE. Diviser en plus par
+      // `total` donnait une norme de 1/total (bug mesuré : 0,008–0,111).
+      sortie.push(Float32Array.from(vecteur, (v) => v / norme));
     }
     return sortie;
   };

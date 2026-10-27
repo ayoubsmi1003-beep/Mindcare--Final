@@ -1,4 +1,5 @@
 import { jetoniser } from "@/server/knowledge/rerank";
+import { medicationNames } from "@/shared/alexa/medications";
 import {knowledgeComparisonRequested} from './knowledge-evidence-content';
 import { META_MOTS_LIVRE, planifierExpansionBilingue, VERSION_TERMINOLOGIE } from "@/server/knowledge/terminologie-bilingue";
 // Titles observed in the approved local corpus. Aliases never approve a source.
@@ -8,6 +9,20 @@ const BOOKS = [
   { marker: /\b(?:maudsley|taylor)\b/u,
     title: "The Maudsley Prescribing Guidelines in Psychiatry", language: "en" },
 ] as const;
+
+// Fermé : noms de médicaments du référentiel (jamais une invention).
+const MEDICAMENTS_CONNUS: ReadonlySet<string> = new Set<string>(medicationNames);
+
+/** Adjectifs/participes anglais sans valeur de recherche (jamais du contenu). */
+const MOTS_FAIBLES_ANGLAIS: ReadonlySet<string> = new Set([
+  "recommended", "described", "required", "used", "given", "performed",
+  "reported", "observed", "considered", "including", "regarding",
+]);
+
+/** Unités identiques en français et en anglais (jamais un mot de contenu). */
+const UNITES_INVARIANTES: ReadonlySet<string> = new Set([
+  "mg", "g", "mcg", "ug", "ml", "kg", "ui", "iu", "%",
+]);
 
 // Mots-outils de la QUESTION : ils ne sont pas du contenu clinique et
 // n'existent pas dans le corpus indexe. La porte lexicale est un ET : un seul
@@ -27,6 +42,9 @@ const SCAFFOLD = new Set([
   "mean", "refers", "refer", "state", "states", "list", "lists", "describe",
   "describes", "mention", "mentions", "contain", "contains", "provide",
   "provides", "there", "here", "any", "all", "some", "same", "other", "others",
+  // Mots de liaison français sans contenu clinique : ils ne doivent pas
+  // empêcher la variante anglaise (l'ET de la porte est strict).
+  "pendant", "faire", "cas", "selon", "concernant",
   "واش", "يقول", "حسب", "اشرح", "شرح", "شنو", "وش", "كتاب", "مرجع", "مراجع", "chno", "wach", "3la",
 ]);
 
@@ -40,6 +58,38 @@ const ALIASES: Readonly<Record<string, readonly [string, string]>> = {
   manie: ["maniaque", "mania"], hypomanie: ["hypomaniaque", "hypomania"],
   symptomes: ["symptomes", "symptoms"], enfants: ["enfants", "children"], adulte: ["adulte", "adult"],
   contreindications: ["contre indications", "contraindications"],
+  // Termes de contenu fréquents : sans eux, une question française garde des
+  // mots français dans la requête ANGLAISE et l'ET de la porte ne matche
+  // jamais (mesuré : « risques ISRS grossesse » → 0 ligne chez Taylor).
+  risque: ["risque", "risk"], risques: ["risques", "risks"],
+  isrs: ["isrs", "ssri"], imao: ["imao", "maoi"],
+  grossesse: ["grossesse", "pregnancy"], allaitement: ["allaitement", "breastfeeding"],
+  posologie: ["posologie", "dosage"], dose: ["dose", "dose"], doses: ["doses", "doses"],
+  renal: ["renal", "renal"], renale: ["renale", "renal"], rein: ["rein", "kidney"], reins: ["reins", "kidneys"],
+  hepatique: ["hepatique", "hepatic"], sevrage: ["sevrage", "withdrawal"],
+  interaction: ["interaction", "interaction"], interactions: ["interactions", "interactions"],
+  surveillance: ["surveillance", "monitoring"], effets: ["effets", "effects"],
+  indesirables: ["indesirables", "adverse"], grave: ["grave", "severe"], graves: ["graves", "severe"],
+  adolescent: ["adolescent", "adolescent"], adolescents: ["adolescents", "adolescents"],
+  agee: ["agee", "elderly"], agees: ["agees", "elderly"],
+  cible: ["cible", "level"], lithemie: ["lithemie", "lithium"], lithiemie: ["lithiemie", "lithium"],
+  recommandee: ["recommandee", "recommended"], recommande: ["recommande", "recommended"],
+  decrits: ["decrits", "described"], decrit: ["decrit", "described"],
+  serotoninergique: ["serotoninergique", "serotonergic"],
+  arreter: ["arreter", "stop"], arret: ["arret", "discontinuation"], eviter: ["eviter", "avoid"],
+  antidepresseur: ["antidepresseur", "antidepressant"], antidepresseurs: ["antidepresseurs", "antidepressants"],
+  titrer: ["titrer", "titrate"], titration: ["titration", "titration"],
+  schizophrene: ["schizophrene", "schizophrenia"], antipsychotiques: ["antipsychotiques", "antipsychotics"],
+  precautions: ["precautions", "precautions"], renales: ["renales", "renal"],
+  agitation: ["agitation", "agitation"], aigue: ["aigue", "acute"], aigu: ["aigu", "acute"],
+  syndrome: ["syndrome", "syndrome"], patient: ["patient", "patient"], patients: ["patients", "patients"],
+  qt: ["qt", "qt"], prise: ["prise", "management"], charge: ["charge", "management"],
+  frequence: ["frequence", "frequency"], signes: ["signes", "signs"], signe: ["signe", "sign"],
+  mecanisme: ["mecanisme", "mechanism"], mecanismes: ["mecanismes", "mechanism"],
+  metabolique: ["metabolique", "metabolic"], metaboliques: ["metaboliques", "metabolic"],
+  cardiaque: ["cardiaque", "cardiac"], cardiaques: ["cardiaques", "cardiac"],
+  sanguin: ["sanguin", "blood"], sanguine: ["sanguine", "blood"],
+  hematologique: ["hematologique", "haematological"], hematologiques: ["hematologiques", "haematological"],
   معايير: ["criteres", "criteria"], اكتياب: ["depression", "depression"], // hamza-normalized اكتئاب
   علاج: ["traitement", "treatment"], جرعة: ["dose", "dose"],
   اعراض: ["symptomes", "symptoms"], فصام: ["schizophrenie", "schizophrenia"], قلق: ["anxiete", "anxiety"],
@@ -121,9 +171,25 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
   // Preserve their exact numeric lexemes at the SQL query boundary.
   const lexemes = normalized.match(/[+-]?\d+(?:[.,]\d+)?(?:\/\d+)?|[\p{L}]+/gu) ?? [];
   const terms = lexemes.flatMap(token => /^[+-]?\d/u.test(token) ? [token] : jetoniser(token));
-  const tokens = [...new Set(terms.filter(token => !SCAFFOLD.has(token))
-    .map(token => ALIASES[token]?.[english ? 1 : 0] ?? token))];
+  const termes = [...new Set(terms.filter(token => !SCAFFOLD.has(token) && !MOTS_FAIBLES_ANGLAIS.has(token)))];
+  const tokens = [...new Set(termes.map(token => ALIASES[token]?.[english ? 1 : 0] ?? token))]
+    .filter((token) => !MOTS_FAIBLES_ANGLAIS.has(token));
   if (tokens.length === 0) return null;
+  // Pour un livre ANGLAIS, un seul mot français résiduel annule l'ET de la
+  // porte. On ne garde que les réalisations anglaises CONNUES et les
+  // invariants (médicament fermé, nombre, unité) ; si le filtre vide tout, on
+  // conserve la requête d'origine plutôt que de chercher dans le vide.
+  const anglaisConnus = new Set([
+    ...Object.values(ALIASES).flatMap(([, en]) => en.split(/\s+/u)),
+    ...MEDICAMENTS_CONNUS,
+  ]);
+  const invariant = (token: string): boolean =>
+    anglaisConnus.has(token)
+    || /^[+-]?\d+(?:[.,]\d+)?(?:\/\d+)?$/u.test(token)
+    || UNITES_INVARIANTES.has(token);
+  const tokensRequete = english
+    ? (() => { const gardes = tokens.filter(invariant); return gardes.length > 0 ? gardes : tokens; })()
+    : tokens;
   // Une question qui ne porte QUE des mots META du livre (« que dit le livre
   // du tableau de la page 1109 ? ») n'a aucun terme de contenu : la porte
   // lexicale (un ET) ne peut rien matcher. On rend alors l'ANCRE DE PAGE
@@ -136,12 +202,39 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
     if (pages.length === 0) return null;
     tokens.push(...pages);
   }
-  let queries = [tokens.join(" ")];
+  let queries = [tokensRequete.join(" ")];
   // Référence de classement PAR LOT : chaque requête est classée contre sa
   // PROPRE référence (celle qui l'a fait remonter). Sans cela, un lot anglais
   // serait mesuré contre une référence française : couverture ~0, score ~0,
   // et la preuve ne remonterait jamais.
   let references: string[] = [queries[0] as string];
+  // Aucun livre nommé : on cherche dans les DEUX ouvrages. La requête
+  // française ne peut pas matcher Taylor (anglais). On ajoute donc UNE
+  // variante anglaise bornée, construite des seules réalisations connues +
+  // invariants (médicament, nombre, unité). Jamais pour un livre français
+  // nommé (là, la requête d'origine est la bonne).
+  if (book === undefined) {
+    // Traduction des SEULES formes dont une réalisation anglaise est connue ;
+    // le reste (français inconnu) est écarté plutôt que de casser l'ET.
+    const motsAnglais = termes
+      .map((token) => ALIASES[token]?.[1] ?? token)
+      .filter((token) => anglaisConnus.has(token) && !MOTS_FAIBLES_ANGLAIS.has(token));
+    const nombres = tokens.filter((token) => /^[+-]?\d/u.test(token) || UNITES_INVARIANTES.has(token));
+    // GARDE D'INTÉGRALITÉ : si un mot de CONTENU reste intraduisible, la
+    // variante anglaise serait une question amputée (« prix lithium Algérie »
+    // → « lithium »), et répondrait à côté. On ne l'ajoute pas.
+    const nonTraduits = termes.filter((token) =>
+      ALIASES[token] === undefined
+      && !anglaisConnus.has(token)
+      && !UNITES_INVARIANTES.has(token)
+      && !/^[+-]?\d/u.test(token));
+    const requeteAnglaise = [...new Set([...motsAnglais, ...nombres])].join(" ");
+    if (nonTraduits.length === 0 && motsAnglais.length > 0 && requeteAnglaise !== ""
+      && !queries.includes(requeteAnglaise)) {
+      queries.push(requeteAnglaise);
+      references.push(requeteAnglaise);
+    }
+  }
   // Expansion bilingue gouvernée : le concept clinique (FR ou EN) est remplace
   // par les INTITULÉS DE RUBRIQUES REELS du corpus — le seul vocabulaire qui
   // existe dans l'index. Les requetes d'origine sont conservees : la couche

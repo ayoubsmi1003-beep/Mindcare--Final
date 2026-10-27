@@ -186,6 +186,16 @@ function noterCalibre(
 ): CandidatRange {
   const jetonsChunk = new Set(jetoniser(candidat.texte));
   const apparies = jetonsRequete.filter((jeton) => jetonsChunk.has(jeton));
+  // Candidat PUREMENT vectoriel issu d'une fusion PAR RANG : sa pertinence est
+  // son RANG dans la branche dense. Juger une correspondance FR→EN par une
+  // couverture de mots la condamne à zéro (aucun jeton commun) — mesuré : les
+  // 4 questions Maudsley restaient `sans-preuve` malgré un bon voisin dense.
+  // Ce score est un RANG de récupération, jamais une confiance clinique.
+  const rangVectoriel = candidat.rangVectoriel ?? null;
+  if (candidat.scoreLexical === null && rangVectoriel !== null && rangVectoriel > 0) {
+    const score = Math.min(1, Math.max(0, 1 - (rangVectoriel - 1) / 12));
+    return { candidat, score, apparies };
+  }
   // Porte de majorité (A3) : voisin purement vectoriel sous la majorité
   // stricte → silence (score 0). Comparaison entière (pas de flottant) :
   // 2·appariés > jetons ⟺ couverture > 1/2. Monotone (un apport de couverture

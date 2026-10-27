@@ -35,7 +35,13 @@ export interface OptionsFusionRang {
 }
 
 /** Projette un candidat brut en candidat fusionné, scores natifs conservés. */
-function versFusionne(candidat: CandidatBrut, scoreLexical: number | null, scoreVectoriel: number | null): CandidatFusionne {
+function versFusionne(
+  candidat: CandidatBrut,
+  scoreLexical: number | null,
+  scoreVectoriel: number | null,
+  rangLexical: number | null,
+  rangVectoriel: number | null,
+): CandidatFusionne {
   return {
     chunkId: candidat.chunkId,
     sourceId: candidat.sourceId,
@@ -47,6 +53,8 @@ function versFusionne(candidat: CandidatBrut, scoreLexical: number | null, score
     texte: candidat.texte,
     scoreLexical,
     scoreVectoriel,
+    rangLexical,
+    rangVectoriel,
     unitId: candidat.unitId,
     parentTexteHash: candidat.parentTexteHash,
     enfantIndex: candidat.enfantIndex,
@@ -104,7 +112,7 @@ export function fusionnerParRang(
     // Le score natif de CHAQUE branche reste porté par le candidat : la
     // gouvernance et les seuils aval ne dépendent jamais de la fusion.
     notes.push({
-      candidat: versFusionne(entree.candidat, entree.scoreLexical, entree.scoreVectoriel),
+      candidat: versFusionne(entree.candidat, entree.scoreLexical, entree.scoreVectoriel, entree.lexical, entree.vectoriel),
       rang,
     });
   }

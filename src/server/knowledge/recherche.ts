@@ -68,6 +68,14 @@ export interface CandidatFusionne {
   readonly texte: string;
   readonly scoreLexical: number | null;
   readonly scoreVectoriel: number | null;
+  /**
+   * Rang dans chaque branche, renseigné UNIQUEMENT par la fusion par rang
+   * (RRF). Permet de juger un candidat purement vectoriel sur son rang dense,
+   * et non sur une couverture de mots qui n'existe pas entre deux langues.
+   * Absent = fusion par score (comportement historique).
+   */
+  readonly rangLexical?: number | null;
+  readonly rangVectoriel?: number | null;
   /** D3-A : lignée — `null` = inconnue (identique des deux branches, même chunk). */
   readonly unitId: string | null;
   readonly parentTexteHash: string | null;
@@ -218,10 +226,10 @@ export async function orchestrerRecherche(
   };
   const lexicaux = passer(brutesLexicales);
   const vectoriels = passer(brutesVectorielles);
-  // Fusion PAR RANG seulement quand les DEUX branches ont des candidats : une
-  // branche seule n'a rien à calibrer, et la fusion par score reste alors le
-  // comportement historique exact (`fusionnerCandidats`).
-  const fusionnes = fusion === "rang" && lexicaux.length > 0 && vectoriels.length > 0
+  // Fusion PAR RANG dès que la voie hybride est demandée ET qu'au moins une
+  // branche a des candidats. Une branche lexicale VIDE ne doit pas annuler le
+  // classement dense : c'est précisément le cas FR→EN (aucun mot commun).
+  const fusionnes = fusion === "rang" && (lexicaux.length > 0 || vectoriels.length > 0)
     ? fusionnerParRang(lexicaux, vectoriels, { limite: LIMITES.FUSION })
     : fusionnerCandidats(lexicaux, vectoriels);
   // `CALIBRATION_COURANTE` rend exactement l'historique : défaut inchangé,

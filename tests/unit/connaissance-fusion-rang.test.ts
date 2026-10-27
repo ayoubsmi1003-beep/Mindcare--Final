@@ -3,6 +3,7 @@ import { describe, expect, it } from "vitest";
 import { fusionnerParRang } from "@/server/knowledge/fusion-rang";
 import { LIMITES } from "@/server/knowledge/recherche";
 import { orchestrerRecherche } from "@/server/knowledge/recherche";
+import { CALIBRATION_A3, rerankerCalibre } from "@/server/knowledge/rerank";
 import type { CandidatBrut } from "@/server/knowledge/recherche";
 
 function candidat(chunkId: string, score: number): CandidatBrut {
@@ -84,5 +85,46 @@ describe("orchestration : la fusion par rang est explicite, jamais silencieuse",
       [], undefined, undefined, "rang");
     expect(resultat.evidences.map((e) => e.chunkId)).toEqual(["lexical"]);
     expect(LIMITES.FUSION).toBeGreaterThan(0);
+  });
+
+  it("ne perd pas un candidat dense quand la branche lexicale est VIDE (cas FR→EN)", async () => {
+    const resultat = await orchestrerRecherche(
+      "Quels risques des ISRS pendant la grossesse ?",
+      [],
+      [ligne("maudsley-pregnancy", 0.91, { langue: "en", texte: "SSRIs in pregnancy: risks and monitoring." })],
+      undefined,
+      CALIBRATION_A3,
+      "rang",
+    );
+    expect(resultat.issue).toBe("pertinent");
+    expect(resultat.evidences.map((e) => e.chunkId)).toEqual(["maudsley-pregnancy"]);
+  });
+});
+
+describe("score d'un candidat purement dense : le RANG, pas la couverture", () => {
+  it("note le rang dense et ignore la couverture lexicale (langue différente)", () => {
+    const fusion = fusionnerParRang([], [candidat("dense-1", 0.91)], { limite: 10 });
+    const ranges = rerankerCalibre("Quels risques des ISRS pendant la grossesse ?", fusion, 5, CALIBRATION_A3);
+    expect(ranges[0]?.score).toBe(1);
+    expect(ranges[0]?.apparies).toEqual([]);
+  });
+
+  it("décroît avec le rang et s'annule au-delà de la douzième position", () => {
+    const liste = Array.from({ length: 13 }, (_, i) => candidat(`d${i + 1}`, 0.9));
+    const fusion = fusionnerParRang([], liste, { limite: 20 });
+    const ranges = rerankerCalibre("question", fusion, 20, CALIBRATION_A3);
+    const parRang = new Map(ranges.map((r) => [r.candidat.chunkId, r.score]));
+    expect(parRang.get("d1")).toBe(1);
+    expect(parRang.get("d5")).toBeCloseTo(1 - 4 / 12, 6);
+    expect(parRang.get("d13")).toBe(0);
+  });
+
+  it("n'applique pas le rang dense à un candidat corroboré par le lexical", () => {
+    const fusion = fusionnerParRang([candidat("deux", 0.5)], [candidat("deux", 0.5)], { limite: 10 });
+    const ranges = rerankerCalibre("trouble panique criteres", fusion, 5, CALIBRATION_A3);
+    // Le candidat est rang 1 des DEUX branches, mais son texte ne couvre aucun
+    // jeton de la question : la formule historique rend 0. Si le rang dense
+    // s'appliquait, il rendrait 1 — c'est précisément ce qu'on interdit ici.
+    expect(ranges[0]?.score).toBe(0);
   });
 });
