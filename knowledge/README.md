@@ -63,10 +63,15 @@ Résultats mesurés le 2026-10-27 :
 
 | Configuration | R@1 | R@3 | R@5 | MRR | Abstention | p50 |
 |---|---|---|---|---|---|---|
-| Lexical seul (livré) | 50 % | 60 % | 65 % | 0,552 | 100 % | 118 ms |
-| Hybride 768 **sans plancher** | 45 % | 70 % | 70 % | 0,567 | **0 %** | 842 ms |
-| Hybride 768, plancher 0,83 (ancien tri) | 50 % | 75 % | 75 % | 0,608 | 100 % | 319 ms |
-| **Hybride 768, plancher + plafond lexical** | **55 %** | **70 %** | **75 %** | **0,629** | **100 %** | 512 ms |
+| Lexical seul (livré) | 60 % | 75 % | 75 % | 0,675 | 100 % | 118 ms |
+| **Hybride 768, plancher + plafond lexical** | **65 %** | **80 %** | **85 %** | **0,738** | **100 %** | 0,5–2 s |
+
+> Le barème de section a été corrigé le 2026-10-27 : il ne regardait que les
+> DEUX derniers segments du chemin, ce qui déclarait « hors chapitre » un
+> passage situé sous `Chapter 3: Depression › Antidepressant withdrawal ›
+> Background`. Les deux configurations ont été re-mesurées avec le même barème
+> (segments réels, conteneur de tête écarté) — les chiffres ci-dessus sont
+> comparables entre eux. Taylor : 7/10 dans les 5 premiers, dont 4 au rang 1.
 
 Deux règles rendent le dense sûr :
 
@@ -79,9 +84,10 @@ Deux règles rendent le dense sûr :
    1re place devant le passage clozapine trouvé lexicalement, et deux questions
    DSM perdaient leur rang 1.
 
-Résultat : DSM 9/10 au rang 1 (10/10 dans les 2 premiers), Taylor 5/10 dans les
-5 premiers (dont 2 au rang 1). Deux exécutions consécutives donnent des chiffres
-identiques ; le premier appel charge le modèle (~20 s).
+Résultat : DSM 9/10 au rang 1 (10/10 dans les 2 premiers), Taylor 7/10 dans les
+5 premiers (4 au rang 1, dont clozapine hématologique p. 237, titration p. 42,
+rispéridone p. 72, lithium/rénal p. 250). Deux exécutions consécutives donnent
+des chiffres identiques ; le premier appel charge le modèle (~20 s).
 
 Le harnais reconnaît les deux noms de porte (`search_knowledge_vector_v2`,
 `search_knowledge_vector_v2_768`) : le code de production garde des sites

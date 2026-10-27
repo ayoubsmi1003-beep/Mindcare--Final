@@ -130,15 +130,22 @@ const clientSql = {
 
 const normaliser = (v) => String(v ?? "").normalize("NFD").replace(/\p{M}/gu, "").toLowerCase();
 /**
- * Le chemin de section porte TOUJOURS « Section II — Critères diagnostiques et
- * codes » : matcher le chemin entier rendrait n'importe quelle rubrique du DSM
- * « conforme ». On ne juge donc que les DEUX DERNIERS segments — la rubrique
- * réellement demandée.
+ * Le chemin de section commence TOUJOURS par un conteneur générique
+ * (« Section II — Critères diagnostiques et codes » pour le DSM, « Part 1: … »
+ * pour Taylor). Ce conteneur rendrait n'importe quelle rubrique « conforme » à
+ * une question de critères, donc il est ÉCARTÉ. On juge ensuite sur les
+ * segments RÉELS du chemin : le trouble demandé ou le chapitre nommé peut
+ * vivre à n'importe quelle profondeur (« Chapter 3: Depression › Antidepressant
+ * withdrawal › Background »). L'ancien matcher ne regardait que les deux
+ * derniers segments et déclarait « absent » un passage pourtant situé dans le
+ * bon chapitre — la règle mesurait la profondeur de l'arborescence, pas la
+ * pertinence.
  */
 const segments = (section) => normaliser(section).split(/[\u203A\u00BB]/).map((s) => s.trim()).filter(Boolean);
+const cheminUtile = (section) => segments(section).slice(1);
 const sectionsConcernent = (section, groupes) => {
-  const cible = segments(section).slice(-2).join(" › ");
-  return groupes.every((groupe) => groupe.some((mot) => cible.includes(normaliser(mot))));
+  const chemin = cheminUtile(section);
+  return groupes.every((groupe) => groupe.some((mot) => chemin.some((segment) => segment.includes(normaliser(mot)))));
 };
 const sectionExclue = (section, exclus) => (exclus ?? []).some((mot) => normaliser(section).includes(normaliser(mot)));
 const texteContient = (texte, fragments) => fragments.every((fragment) => normaliser(texte).includes(normaliser(fragment)));
