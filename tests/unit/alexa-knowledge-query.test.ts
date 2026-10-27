@@ -170,6 +170,19 @@ describe("bounded Alexa lexical question planning", () => {
     expect(requetes).toContain("antidepressant syndrome discontinuation");
   });
 
+  it("expose les entités diagnostiques comme indices de départage, jamais comme filtres", () => {
+    const plan = planKnowledgeQuery("Combien de symptômes et quelle durée pour le trouble d'anxiété généralisée ?")!;
+    expect(plan.focusHints).toContain("anxiete generalisee");
+    expect(plan.sectionFocus).toBeUndefined();
+    // Un indice ne filtre pas : Taylor reste admis.
+    expect(matchesRequestedBook({ source_titre: "The Maudsley Prescribing Guidelines in Psychiatry" }, plan)).toBe(true);
+  });
+
+  it("reconnaît un épisode dépressif caractérisé comme le trouble correspondant", () => {
+    const plan = planKnowledgeQuery("Combien de symptômes faut-il pour un épisode dépressif caractérisé ?")!;
+    expect(plan.focusHints).toContain("trouble depressif caracterise");
+  });
+
   it.each([["5", "5"], ["2,5", "2,5"], ["-25", "-25"], ["1/2", "1/2"], ["٥", "5"], ["٢٫٥", "2.5"]])(
     "retains the numeric dose qualifier %s", async (quantity, canonical) => {
     const { client, calls } = boundary([]);

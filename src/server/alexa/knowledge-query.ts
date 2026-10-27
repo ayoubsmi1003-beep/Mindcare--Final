@@ -126,6 +126,20 @@ export interface KnowledgeQueryPlan {
   readonly sectionFocus?: string;
   readonly sectionFocuses?: readonly string[];
   readonly sectionLeaf?: string;
+  /**
+   * Entités diagnostiques reconnues dans la question, MÊME quand aucun livre
+   * n'est nommé. Ce ne sont PAS des filtres : elles servent au départage des
+   * preuves à pertinence égale (mesuré : sections à couverture 5/5 ex æquo,
+   * le gagnant sortait du hash du chunkId, pas de la question).
+   */
+  readonly focusHints?: readonly string[];
+  /**
+   * Rubrique FEUILLE attendue (« critères diagnostiques ») quand la question
+   * demande des critères. Jamais un filtre ici : un départage. Mesuré : le lot
+   * ciblé remontait la bonne rubrique, mais les 5 places étaient déjà prises
+   * par le lot générique à score égal.
+   */
+  readonly leafHint?: string;
   /** Legacy root-section chunks may contain comorbidity under the same locator. */
   readonly embeddedCriteriaOnly?: boolean;
   /**
@@ -294,6 +308,7 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
   const comparison=knowledgeComparisonRequested(question);
   const focusRules:readonly (readonly [RegExp,string])[]=[
     [/\btrouble depressif caracterise\b/u,'trouble depressif caracterise'],
+    [/\bepisode depressif caracterise\b/u,'trouble depressif caracterise'],
     [/\btrouble panique\b/u,'trouble panique'],
     [/\b(?:hypomanie|hypomaniaque)\b/u,'episode hypomaniaque'],
     [/\b(?:manie|maniaque)\b/u,'episode maniaque'],
@@ -301,14 +316,43 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
     [/\banxiete generalisee\b/u,'anxiete generalisee'],
     [/\b(?:trouble obsessionnel[- ]compulsif|toc)\b/u,'trouble obsessionnel-compulsif'],
     [/\bstress post[- ]traumatique\b/u,'trouble stress post-traumatique'],
+    [/\bdysphorique premenstruel\b/u,'trouble dysphorique premenstruel'],
+    [/\b(?:trouble lie a l'usage|trouble de l'usage|usage d'une substance)\b/u,'trouble de l usage'],
   ];
   const recognizedFocuses=focusRules.filter(([pattern])=>pattern.test(normalized)).map(([,focus])=>focus);
   const sectionFocus=book?.language==='fr'&&(!comparison||recognizedFocuses.length===1)?recognizedFocuses[0]:undefined;
   const comparisonFocuses=book?.language==='fr'&&comparison?focusRules.filter(([pattern])=>pattern.test(normalized)).map(([,focus])=>focus):[];
+  // Aucun livre nommé + entité diagnostique reconnue : on AJOUTE les requêtes
+  // de rubrique (concept + « critères diagnostiques ») SANS poser
+  // `sectionFocus`. Sans filtre, Taylor reste interrogeable ; avec la requête,
+  // la rubrique DSM remonte au lieu de perdre un départage arbitraire entre
+  // sections à couverture égale (mesuré : 5/5 partout, gagnant par hash).
+  if (book === undefined && recognizedFocuses.length === 1 && !comparison) {
+    const focus = recognizedFocuses[0] as string;
+    const criteres = /\b(?:criteres|symptomes|signes|duree|combien)\b/u.test(normalized);
+    for (const requete of [focus, criteres ? `${focus} criteres diagnostiques` : null]) {
+      if (requete !== null && requete !== "" && !queries.includes(requete)) {
+        queries.push(requete);
+        references.push(requete);
+      }
+    }
+  }
   // These two approved chapters contain their criteria directly under the topic heading.
   const embeddedCriteria=sectionFocus==='anxiete generalisee'||sectionFocus==='trouble obsessionnel-compulsif';
   const criteriaRequested=/\b(?:criteres|symptomes|signes)\b/u.test(normalized),descriptionRequested=/\b(?:definit|definir|definition|decrit|decrire)\b/u.test(normalized);
   const sectionLeaf = sectionFocus ? embeddedCriteria&&(criteriaRequested||descriptionRequested)?sectionFocus:!embeddedCriteria&&criteriaRequested?'criteres diagnostiques':!embeddedCriteria&&/\b(?:definit|definir|definition)\b/u.test(normalized)?'caracteristiques diagnostiques':undefined : undefined;
+  // Indice de feuille pour un livre NON nommé : même logique, sans filtre.
+  const leafHint = sectionLeaf !== undefined
+    ? sectionLeaf
+    : (recognizedFocuses.length === 1 && !comparison
+      ? (() => {
+          const focus = recognizedFocuses[0] as string;
+          const criteresSousLeSujet = focus === 'anxiete generalisee' || focus === 'trouble obsessionnel-compulsif';
+          if (criteresSousLeSujet) return criteresSousLeSujet && (criteriaRequested || descriptionRequested) ? focus : undefined;
+          if (criteriaRequested) return 'criteres diagnostiques';
+          return /\b(?:definit|definir|definition)\b/u.test(normalized) ? 'caracteristiques diagnostiques' : undefined;
+        })()
+      : undefined);
   if(sectionFocus){
     const primary=[sectionFocus,embeddedCriteria&&criteriaRequested?'criteres diagnostiques':sectionLeaf].filter(Boolean).join(' ');
     if(!queries.includes(primary)){queries.push(primary);references.push(primary);}
@@ -317,9 +361,12 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
     if(embeddedCriteria&&criteriaRequested){const structured=sectionFocus+' a b';queries.push(structured);references.push(structured);}
   }
   if(comparisonFocuses.length>1)for(const primary of comparisonFocuses)if(!queries.includes(primary)){queries.push(primary);references.push(primary);}
-  return { queries, references, relevanceQuery: queries.join(" "), language, sourceTitle: book?.title ?? null, ...(sectionFocus ? { sectionFocus } : {}), ...(comparisonFocuses.length>1?{sectionFocuses:comparisonFocuses}:{}), ...(sectionLeaf ? { sectionLeaf } : {}), ...(embeddedCriteria&&criteriaRequested?{embeddedCriteriaOnly:true}:{}), ...(bilingue.actif ? { terminologieVersion: bilingue.version } : {}) };
+  return { queries, references, relevanceQuery: queries.join(" "), language, sourceTitle: book?.title ?? null, ...(recognizedFocuses.length > 0 ? { focusHints: recognizedFocuses } : {}), ...(leafHint !== undefined ? { leafHint } : {}), ...(sectionFocus ? { sectionFocus } : {}), ...(comparisonFocuses.length>1?{sectionFocuses:comparisonFocuses}:{}), ...(sectionLeaf ? { sectionLeaf } : {}), ...(embeddedCriteria&&criteriaRequested?{embeddedCriteriaOnly:true}:{}), ...(bilingue.actif ? { terminologieVersion: bilingue.version } : {}) };
 }
 export const matchesSectionFocus=(section:string|null,focus:string)=>!!section&&normalize(section).split('›').some(part=>part.trim()===focus);
+
+/** La feuille de section correspond-elle exactement à l'indice attendu ? */
+export const matchesLeafHint=(section:string|null,leaf:string)=>!!section&&normalize(section).split('›').at(-1)?.trim()===leaf;
 
 /** Requested-book matching restricts already-governed rows; it grants no access. */
 export function matchesRequestedBook(row: unknown, plan: KnowledgeQueryPlan): boolean {

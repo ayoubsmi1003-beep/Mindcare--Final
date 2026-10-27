@@ -1,4 +1,4 @@
-import { LIMITES, orchestrerRecherche } from "@/server/knowledge/recherche";
+import { LIMITES, appliquerBudgetOctets, orchestrerRecherche } from "@/server/knowledge/recherche";
 import { CALIBRATION_A3, type RerankerLocalAsync } from "@/server/knowledge/rerank";
 import { SEUIL_FAIBLESSE, SEUIL_PERTINENCE } from "@/server/knowledge/preuve";
 import { lignePorteRecuperable, porteLexicale, porteVectorielle, porteVectorielleV2, validerLignePorte } from "@/server/knowledge/stockage";
@@ -11,7 +11,7 @@ import { vecteurRequeteSecondaireProduction } from "@/server/knowledge/vecteur-s
 import { rerankerSecondaireProduction } from "@/server/knowledge/rerank-secondaire-production";
 import { RECETTE_SECONDAIRE_GELEE } from "@/server/knowledge/embeddings-secondaires";
 import type { ClientSql } from "@/server/jarvis/client-sql";
-import { matchesRequestedBook, planKnowledgeQuery,matchesSectionFocus } from "./knowledge-query";
+import { matchesLeafHint, matchesRequestedBook, planKnowledgeQuery,matchesSectionFocus } from "./knowledge-query";
 import {headingOnlyEvidence,bibliographyEvidence,bibliographyTextEvidence,bibliographyRequested,indexEvidence,indexRequested,unboundTableEvidence} from './knowledge-evidence-content';
 
 /** Une preuve structurée, telle que rendue par l'orchestration gouvernée. */
@@ -307,7 +307,7 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
         // fois, globalement, pour ne pas couper un bon candidat dans son lot.
         const search = await orchestrerRecherche(lot.reference, lot.lignes, vectorielsDuLot,
           deps.rerankerLocal, CALIBRATION_A3,
-          vectorielsDuLot.length > 0 ? "rang" : "score", LIMITES.FUSION);
+          vectorielsDuLot.length > 0 ? "rang" : "score", LIMITES.FUSION, false);
         if (search.repliReranker) repliReranker = true;
         signal?.throwIfAborted();
         parLot.push([...search.evidences]);
@@ -325,7 +325,17 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
     });
     const vus = new Set<string>();
     const preuves: Preuve[] = [];
+    // Départage (jamais filtre) : à pertinence ÉGALE, la preuve dont la
+    // rubrique porte le diagnostic nommé passe devant. Sans cela, deux
+    // sections à couverture identique étaient départagées par le hash du
+    // chunkId — la question ne décidait plus rien.
+    const indiceFocus = (preuve: Preuve): number =>
+      plan.focusHints?.some(focus => matchesSectionFocus(preuve.section, focus)) ? 1 : 0;
+    const indiceFeuille = (preuve: Preuve): number =>
+      plan.leafHint !== undefined && matchesLeafHint(preuve.section, plan.leafHint) ? 1 : 0;
     const ordonnes = [...tous].sort((a, b) => b.preuve.evidence_relevance - a.preuve.evidence_relevance
+      || indiceFeuille(b.preuve) - indiceFeuille(a.preuve)
+      || indiceFocus(b.preuve) - indiceFocus(a.preuve)
       || a.lot - b.lot || a.rang - b.rang);
     for (const { preuve } of ordonnes) {
       if (preuves.length >= LIMITES.FINAL) break;
@@ -333,24 +343,28 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
       vus.add(preuve.chunkId);
       preuves.push(preuve);
     }
-    const issue = preuves.length === 0 ? "aucune" as const
-      : preuves.some(p => p.evidence_relevance >= SEUIL_PERTINENCE) ? "pertinent" as const
-      : preuves.some(p => p.evidence_relevance >= SEUIL_FAIBLESSE) ? "faible" as const
+    // Budget d'évidence appliqué UNE seule fois, après la sélection finale.
+    // L'appliquer par lot tronquait chaque liste avant la fusion (mesuré : le
+    // bon passage d'un lot ciblé tombait au 3e rang de son propre lot).
+    const finales = appliquerBudgetOctets(preuves).retenues;
+    const issue = finales.length === 0 ? "aucune" as const
+      : finales.some(p => p.evidence_relevance >= SEUIL_PERTINENCE) ? "pertinent" as const
+      : finales.some(p => p.evidence_relevance >= SEUIL_FAIBLESSE) ? "faible" as const
       : "aucune" as const;
     // Une feuille de section est une préférence, pas une condition : si la
     // passe stricte ne rend AUCUNE preuve exploitable (feuille absente ou
     // chunk trop long), on rejoue UNE fois sans la feuille. Le focus de
     // diagnostic reste, donc aucun autre trouble ne peut être substitué.
-    if (preuves.length === 0 && plan.sectionLeaf !== undefined && options.relaxerFeuille !== true) {
+    if (finales.length === 0 && plan.sectionLeaf !== undefined && options.relaxerFeuille !== true) {
       return readKnowledge(client, question, signal, deps, { relaxerFeuille: true });
     }
-    const result = { etat: preuves.length === 0 ? "sans-preuve" as const : issue === "faible" ? "faible" as const : "ok" as const,
-      ...(plan.sectionFocuses?.some(focus=>!preuves.some(p=>matchesSectionFocus(p.section,focus)))?{missingRequestedSections:true as const}:{}),
+    const result = { etat: finales.length === 0 ? "sans-preuve" as const : issue === "faible" ? "faible" as const : "ok" as const,
+      ...(plan.sectionFocuses?.some(focus=>!finales.some(p=>matchesSectionFocus(p.section,focus)))?{missingRequestedSections:true as const}:{}),
       ...(omittedLongPassages ? { omittedLongPassages: true as const } : {}),
       ...(vectorielIndisponible ? { vectoriel: "indisponible" as const } : {}),
       ...(repliReranker ? { reranker: "repli" as const } : {}),
       ...(options.relaxerFeuille === true ? { sectionLeafRelaxed: true as const } : {}),
-      preuves: preuves.map(preuveAffichable) };
+      preuves: finales.map(preuveAffichable) };
     for (const proof of result.preuves) Object.freeze(proof);
     Object.freeze(result.preuves);
     Object.freeze(result);

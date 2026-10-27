@@ -211,6 +211,7 @@ export async function orchestrerRecherche(
   calibration: CalibrationFusion = CALIBRATION_COURANTE,
   fusion: "score" | "rang" = "score",
   topN: number = LIMITES.FINAL,
+  appliquerBudget: boolean = true,
 ): Promise<{
   readonly issue: IssueRecherche;
   readonly evidences: readonly RetrievedEvidence[];
@@ -251,6 +252,14 @@ export async function orchestrerRecherche(
   }
   const issue = qualifier(ranges);
   const evidences: RetrievedEvidence[] = ranges.map((range) => construirePreuve(range));
+  // Le budget est une contrainte de PRÉSENTATION, pas de sélection. Un appelant
+  // multi-lots doit l'appliquer UNE fois après la fusion finale : l'appliquer
+  // par lot tronquait chaque liste avant la fusion (mesuré : le bon passage
+  // d'un lot ciblé tombait au 3e rang de son propre lot et disparaissait).
+  if (!appliquerBudget) {
+    if (issue === "aucune") return { issue, evidences: [], repliReranker };
+    return { issue, evidences, repliReranker };
+  }
   const { retenues } = appliquerBudgetOctets(evidences);
   if (issue === "aucune") return { issue, evidences: [], repliReranker };
   return { issue, evidences: retenues, repliReranker };
