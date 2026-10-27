@@ -45,6 +45,8 @@ import type { Langue } from "./types";
 export const TABLES = {
   SOURCES: "app.knowledge_sources",
   CHUNKS: "app.knowledge_chunks",
+  /** 188 : index secondaire versionné par (modele, version). */
+  VECTEURS: "app.knowledge_chunk_vectors",
 } as const;
 
 /** Portes proposées — `SECURITY DEFINER`, `EXECUTE` au rôle applicatif. */
@@ -53,7 +55,20 @@ export const PORTES = {
   // que des littéraux nus, verifierAllowlist matche le proname nu.
   LEXICALE: "search_knowledge_lexical",
   VECTORIELLE: "search_knowledge_vector",
+  /**
+   * Index SECONDAIRE (migration 188, décision D1/A) : même sémantique
+   * d'autorité, mais vecteurs d'un modèle < 300 M en 384 dimensions, isolés
+   * par `modele` + `version`. L'index 1024d de production reste intact.
+   */
+  VECTORIELLE_V2: "search_knowledge_vector_v2",
 } as const;
+
+/**
+ * Dimension de l'index secondaire : 384 pour les trois candidats éligibles
+ * (E5-small, Horizon-Labs multilingual-embedding-small, bekko-a25m). Un autre
+ * modèle exige une NOUVELLE migration, jamais une édition de 188.
+ */
+export const DIMENSION_VECTEUR_SECONDAIRE = 384 as const;
 
 /**
  * Index vectoriel proposé : HNSW cosine. `m = 16`, `ef_construction = 64` —
@@ -186,6 +201,32 @@ export function porteVectorielle(
 }
 
 /**
+ * Porte vectorielle SECONDAIRE (188) : mêmes garanties, plus `modele` +
+ * `version` EXACTS. Deux espaces vectoriels ne se mélangent jamais, et
+ * l'appelant ne peut pas demander « n'importe quel modèle ». La borne monte à
+ * 40 candidats (fusion hybride), l'ancienne reste à 20.
+ */
+export function porteVectorielleV2(
+  embeddingJson: string,
+  modele: string,
+  version: string,
+  limite: number,
+): AppelPorte {
+  if (modele.trim() === "" || version.trim() === "") {
+    throw new Error("PORTE_VECTORIELLE_V2_IDENTITE_MANQUANTE");
+  }
+  return {
+    porte: PORTES.VECTORIELLE_V2,
+    args: {
+      p_embedding_json: embeddingJson,
+      p_modele: modele,
+      p_version: version,
+      p_limite: Math.max(1, Math.min(40, Math.floor(limite))),
+    },
+  };
+}
+
+/**
  * Le SQL PROPOSÉ pour la porte A — documentation exécutable : les tests
  * assertent que le filtre d'autorité y figure tel quel. La migration
  * appliquée (`092_knowledge_rag.sql`) fait foi ; en cas d'écart, c'est CE
@@ -231,6 +272,36 @@ export function sqlPorteVectoriellePropose(): string {
     "  AND c.embedding IS NOT NULL",
     "ORDER BY c.embedding OPERATOR(public.<=>) p.q",
     "LIMIT LEAST(GREATEST($2::int, 1), 20);",
+  ].join("\n");
+}
+
+/** Même contrat, branche vectorielle secondaire (188).
+ *
+ *  DEUX garanties supplémentaires, et c'est tout l'intérêt :
+ *    1. `modele` + `version` sont ÉGAUX, dans la requête : un index E5-small ne
+ *       peut pas répondre à une question vectorisée par un autre modèle ;
+ *    2. le KNN s'exécute AVANT le filtre d'autorité (`MATERIALIZED`), donc
+ *       l'index HNSW est utilisable — la cause mesurée du seq scan de 092
+ *       (idx_scan = 0 sur 48 760 lignes) est éliminée par construction.
+ */
+export function sqlPorteVVectorielleV2Propose(): string {
+  return [
+    "WITH voisins AS MATERIALIZED (",
+    "  SELECT v.chunk_id AS id, (v.embedding OPERATOR(public.<=>) p.q) AS distance",
+    `    FROM ${TABLES.VECTEURS} v`,
+    "    CROSS JOIN (SELECT $1::public.vector AS q OFFSET 0) AS p",
+    "   WHERE v.modele = $2 AND v.version = $3",
+    "   ORDER BY v.embedding OPERATOR(public.<=>) p.q",
+    "   LIMIT LEAST(GREATEST($4::int, 1), 40) * 4",
+    ")",
+    `SELECT ${COLONNES_CHUNK.map((c) => `c.${c}`).join(", ")}, ${COLONNES_ATTESTATION_SQL},`,
+    `  ${COLONNES_LIGNEE.map((c) => `c.${c}`).join(", ")},`,
+    "  (1 - voisins.distance)::double precision AS score",
+    `  FROM voisins JOIN ${TABLES.CHUNKS} c ON c.id = voisins.id`,
+    `  JOIN ${TABLES.SOURCES} s ON s.id = c.source_id`,
+    ` WHERE ${FILTRE_AUTORITE_SQL}`,
+    " ORDER BY voisins.distance",
+    " LIMIT LEAST(GREATEST($4::int, 1), 40);",
   ].join("\n");
 }
 
