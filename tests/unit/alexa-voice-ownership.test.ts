@@ -24,8 +24,10 @@ const faux = vi.hoisted(() => ({
   lireTexte: vi.fn(),
   finLecture: vi.fn(),
   demarrerDictee: vi.fn(),
+  micro: vi.fn(),
 }));
 
+vi.mock("@/services/micro-partage", () => ({ prendreMicro: faux.micro }));
 vi.mock("@/services/jarvis-voix", () => ({
   demarrerDictee: faux.demarrerDictee,
   arreterEtTranscrire: vi.fn(async () => ({ ok: true, data: "" })),
@@ -35,6 +37,7 @@ vi.mock("@/services/jarvis-voix", () => ({
   lireTexte: faux.lireTexte,
   attendreFinLecture: faux.finLecture,
   detecterCapacitesVoix: () => ({ dicteePossible: false, mimeDictée: null }),
+  generationDictee: () => 0,
 }));
 vi.mock("@/services/endpointage-voix", () => ({
   creerEndpointeurEnergie: () => ({
@@ -59,7 +62,7 @@ vi.mock("@/services/alexa-local", () => ({
   arreterVoixLocale: () => {},
 }));
 
-import { dicteeAutorisee } from "@/components/consultation/DicteeChamp";
+import { dicteeAutorisee, doitAnnulerDictee } from "@/components/consultation/DicteeChamp";
 import {
   captureEnCours,
   desarmerReveil,
@@ -197,5 +200,86 @@ describe("la dictée d'un champ face à l'accusé du réveil", () => {
 
     terminerAccuse();
     await vi.waitFor(() => expect(etatVoix()).toBe("ecoute"));
+  });
+});
+
+describe("la décision d'annulation au démontage", () => {
+  it("annule un démarrage encore en vol, même sans enregistreur possédé", () => {
+    // Le démarrage part : sans annulation, il ouvrirait le micro APRÈS le
+    // démontage, sans plus aucun propriétaire pour le refermer.
+    expect(
+      doitAnnulerDictee({ aDemarre: true, aEnregistre: false, gen: 0, courant: 7 }),
+    ).toBe(true);
+  });
+
+  it("n'annule un enregistreur que si CE crochet en est encore propriétaire", () => {
+    // Même jeton : la dictée possède toujours le recorder.
+    expect(
+      doitAnnulerDictee({ aDemarre: false, aEnregistre: true, gen: 4, courant: 4 }),
+    ).toBe(true);
+    // Un arrêt ou un abandon externe a changé le jeton : le recorder ne lui
+    // appartient plus, il peut être une capture du réveil.
+    expect(
+      doitAnnulerDictee({ aDemarre: false, aEnregistre: true, gen: 4, courant: 5 }),
+    ).toBe(false);
+    expect(
+      doitAnnulerDictee({ aDemarre: false, aEnregistre: false, gen: 4, courant: 5 }),
+    ).toBe(false);
+  });
+});
+
+describe("un démarrage annulé pendant l'acquisition du micro", () => {
+  it("n'ouvre aucun enregistreur et ne possède aucune dictée", async () => {
+    // Le code RÉEL de `jarvis-voix`, avec le seul courtier micro simulé :
+    // l'annulation doit périmer le jeton avant que le recorder ne s'ouvre.
+    const reel = await vi.importActual<typeof import("@/services/jarvis-voix")>(
+      "@/services/jarvis-voix",
+    );
+
+    class FauxEnregistreur {
+      static instances: FauxEnregistreur[] = [];
+      readonly mimeType = "audio/webm";
+      ondataavailable: ((evenement: { data: Blob }) => void) | null = null;
+      onstop: (() => void) | null = null;
+      constructor(readonly flux: unknown) {
+        FauxEnregistreur.instances.push(this);
+      }
+      start(): void {}
+      stop(): void {
+        this.onstop?.();
+      }
+    }
+    vi.stubGlobal("MediaRecorder", FauxEnregistreur);
+    reel.annulerDictee(); // état propre, comme un écran neuf
+
+    let livrer!: (valeur: unknown) => void;
+    const acces = { flux: { piste: "fausse" }, rendre: vi.fn() };
+    faux.micro.mockImplementation(
+      () =>
+        new Promise((resolve) => {
+          livrer = resolve;
+        }),
+    );
+
+    const avant = reel.generationDictee();
+    const demarrage = reel.demarrerDictee();
+    expect(reel.generationDictee()).toBe(avant + 1);
+
+    // Le crochet est démonté pendant `prendreMicro` : `annulerDictee()` change
+    // le jeton, donc la continuation doit abandonner avant `new MediaRecorder`.
+    reel.annulerDictee();
+    expect(reel.generationDictee()).toBe(avant + 2);
+
+    livrer({ ok: true, data: acces });
+    const resultat = await demarrage;
+
+    expect(resultat.ok).toBe(false);
+    expect(FauxEnregistreur.instances).toHaveLength(0);
+    expect(acces.rendre).toHaveBeenCalledTimes(1);
+
+    // Aucun enregistreur possédé : l'arrêt dit « aucune dictée ».
+    const arret = await reel.arreterEtTranscrire();
+    expect(arret.ok).toBe(false);
+    if (!arret.ok) expect(arret.error.message).toBe(fr.jarvis.voix.aucuneDictee);
   });
 });

@@ -63,17 +63,29 @@ interface DicteeEnCours {
   fragments: Blob[];
   /** Horodatage de départ — sert la seule métrique de durée, jamais l'audio. */
   debut: number;
-  generation: number;
   runId: string;
   utteranceId: string;
 }
 
 let dictee: DicteeEnCours | null = null;
-let generationDictee = 0;
+let jetonDictee = 0;
 let controleTranscription: AbortController | null = null;
 let generationLecture = 0;
 let referenceAudio: { samples: Float32Array; taux: number } | null = null;
 let controleLecture: AbortController | null = null;
+
+/**
+ * LE JETON DE PROPRIÉTÉ DE L'ENREGISTREUR.
+ *
+ * Il change à chaque prise (`demarrerDictee`), à chaque arrêt qui prend
+ * possession du recorder (`arreterEtTranscrire`) et à chaque abandon
+ * (`annulerDictee`). Un appelant qui a capturé un jeton ne possède donc plus
+ * rien dès qu'un autre chemin a touché l'enregistreur — c'est ce qui permet au
+ * démontage d'un écran de ne pas annuler une capture du réveil.
+ */
+export function generationDictee(): number {
+  return jetonDictee;
+}
 
 /**
  * Démarre l'enregistrement. Le micro ne s'allume QUE sur un geste explicite ;
@@ -87,7 +99,7 @@ export async function demarrerDictee(): Promise<Result<true>> {
   }
 
   controleTranscription?.abort();
-  const generation = ++generationDictee;
+  const generation = ++jetonDictee;
   // ⚠️ LE MICRO VIENT DU COURTIER. Ouvrir un second `getUserMedia` pendant que
   // le détecteur de mot de réveil tient déjà le sien fait redemander la
   // permission sous Firefox et peut échouer sous Safari — au moment précis où
@@ -95,7 +107,7 @@ export async function demarrerDictee(): Promise<Result<true>> {
   const acces = await prendreMicro();
   if (!acces.ok) return err(acces.error);
   const prise = acces.data;
-  if (generation !== generationDictee) { prise.rendre(); return err({ code: "indisponible", message: fr.jarvis.voix.indisponible }); }
+  if (generation !== jetonDictee) { prise.rendre(); return err({ code: "indisponible", message: fr.jarvis.voix.indisponible }); }
 
   const capacites = detecterCapacitesVoix();
   let recorder: MediaRecorder;
@@ -116,7 +128,7 @@ export async function demarrerDictee(): Promise<Result<true>> {
   };
   recorder.start(250); // fragment toutes les 250 ms — stop net, pas de queue perdue
 
-  dictee = { recorder, prise, fragments, debut: Date.now(), generation, runId: crypto.randomUUID(), utteranceId: crypto.randomUUID() };
+  dictee = { recorder, prise, fragments, debut: Date.now(), runId: crypto.randomUUID(), utteranceId: crypto.randomUUID() };
 
   // ⚠️ DIAGNOSTIC : DES MÉTADONNÉES, JAMAIS UN ÉCHANTILLON.
   // Ce qui a manqué le 2026-08-27 n'était pas l'audio — c'était de savoir si
@@ -133,6 +145,11 @@ export async function arreterEtTranscrire(): Promise<Result<string>> {
   const enCours = dictee;
   if (enCours === null) return err({ code: "regle-metier", message: fr.jarvis.voix.aucuneDictee });
   dictee = null;
+
+  // ⚠️ PRENDRE POSSESSION PÉRIME LE JETON DE DÉMARRAGE. Un démontage qui a
+  // capturé le jeton d'avant l'arrêt ne doit plus pouvoir annuler cette
+  // transcription — et une continuation de `demarrerDictee` doit abandonner.
+  const generation = ++jetonDictee;
 
   // ═══ LE CONTRAT DE FINALISATION ═══
   //
@@ -193,12 +210,12 @@ export async function arreterEtTranscrire(): Promise<Result<string>> {
   } catch {
     return err({ code: "transcription", message: fr.jarvis.voix.indisponible });
   }
-  if (controle.signal.aborted || enCours.generation !== generationDictee) return err({ code: "indisponible", message: fr.jarvis.voix.indisponible });
+  if (controle.signal.aborted || generation !== jetonDictee) return err({ code: "indisponible", message: fr.jarvis.voix.indisponible });
   const resultat = await db().invokeFunction<{ texte: string; runId: string; utteranceId: string }>("jarvis-voice-in", {
     pcmBase64, sampleRate: 16000, runId: enCours.runId, utteranceId: enCours.utteranceId, langue: "fr",
   }, controle.signal);
   if (controleTranscription === controle) controleTranscription = null;
-  if (controle.signal.aborted || enCours.generation !== generationDictee) return err({ code: "indisponible", message: fr.jarvis.voix.indisponible });
+  if (controle.signal.aborted || generation !== jetonDictee) return err({ code: "indisponible", message: fr.jarvis.voix.indisponible });
 
   if (!resultat.ok) {
     log.warn("jarvis.voix.dictation", logFieldsFor(resultat.error));
@@ -210,7 +227,7 @@ export async function arreterEtTranscrire(): Promise<Result<string>> {
 
 /** Annule sans envoyer : le fragment jeté, le micro rendu. */
 export function annulerDictee(): void {
-  generationDictee += 1; controleTranscription?.abort(); controleTranscription = null;
+  jetonDictee += 1; controleTranscription?.abort(); controleTranscription = null;
   const enCours = dictee;
   if (enCours === null) return;
   dictee = null;

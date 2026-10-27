@@ -32,6 +32,7 @@ import {
   arreterEtTranscrire,
   demarrerDictee,
   detecterCapacitesVoix,
+  generationDictee,
 } from "@/services/jarvis-voix";
 import { captureEnCours, reprendreDetection, suspendreDetection } from "@/services/jarvis-reveil";
 
@@ -60,6 +61,26 @@ export function dicteeAutorisee(
   if (!capture()) return true;
   signaler(fr.jarvis.voix.dejaEnCours);
   return false;
+}
+
+/**
+ * LA DÉCISION DE DÉMONTAGE — sans rendu, donc éprouvable.
+ *
+ * Un démarrage encore en vol (`aDemarre`) doit être INVALIDÉ même si aucun
+ * enregistreur n'existe encore : il pourrait s'ouvrir APRÈS le démontage.
+ * Un enregistreur déjà possédé (`aEnregistre`) ne doit être annulé que si le
+ * jeton n'a pas changé — sinon un arrêt ou un abandon externe (désarmement,
+ * interruption) a déjà rendu la main, et le recorder appartient désormais à
+ * une capture du réveil.
+ */
+export function doitAnnulerDictee(etat: {
+  readonly aDemarre: boolean;
+  readonly aEnregistre: boolean;
+  readonly gen: number;
+  readonly courant: number;
+}): boolean {
+  if (etat.aDemarre) return true;
+  return etat.aEnregistre && etat.gen === etat.courant;
 }
 
 export interface Dictee<C extends string> {
@@ -96,10 +117,20 @@ export function useDicteeChamps<C extends string>(
 
   // ⚠️ LA PROPRIÉTÉ EST LOCALE, PAS GLOBALE. Le démontage d'un écran de
   // consultation ne doit ni annuler l'enregistreur d'une capture du réveil, ni
-  // rendre un scoring qu'une AUTRE dictée avait suspendu. Ces deux drapeaux ne
-  // passent à vrai que si CE crochet a réellement suspendu / enregistré.
+  // rendre un scoring qu'une AUTRE dictée avait suspendu.
+  //
+  //   aDemarre  : `demarrerDictee()` est parti, l'enregistreur n'est pas encore
+  //               confirmé — il FAUT l'invalider au démontage ;
+  //   aEnregistre : CETTE dictée possède le recorder, mais seulement tant que
+  //               `genRef` égale le jeton courant ;
+  //   monte     : une continuation asynchrone ne doit pas ranimer un crochet
+  //               démonté ;
+  //   genRef    : jeton de propriété rendu par `jarvis-voix`.
   const aSuspendu = useRef(false);
+  const aDemarre = useRef(false);
   const aEnregistre = useRef(false);
+  const monte = useRef(true);
+  const genRef = useRef(0);
 
   const rendreDetection = useCallback((): void => {
     if (!aSuspendu.current) return;
@@ -111,27 +142,33 @@ export function useDicteeChamps<C extends string>(
     reprendreDetection();
   }, []);
 
-  const oublierEnregistreur = useCallback((): void => {
-    if (!aEnregistre.current) return;
-    aEnregistre.current = false;
-    annulerDictee();
-  }, []);
-
   useEffect(() => {
     // `MediaRecorder` n'existe pas au rendu serveur : la capacité se constate
     // une fois, au montage, sinon le bouton clignoterait à l'hydratation.
+    monte.current = true;
     setPossible(detecterCapacitesVoix().dicteePossible);
     return () => {
       // ⚠️ LE MICRO NE RESTE JAMAIS OUVERT DERRIÈRE UN ÉCRAN QU'ON QUITTE.
       // Un micro allumé dans un cabinet de psychiatrie, sans que rien à
       // l'écran ne le dise, est un incident — pas une fuite de ressource.
-      // Seulement si CETTE dictée possède l'enregistreur.
-      oublierEnregistreur();
+      monte.current = false;
+      const annuler = doitAnnulerDictee({
+        aDemarre: aDemarre.current,
+        aEnregistre: aEnregistre.current,
+        gen: genRef.current,
+        courant: generationDictee(),
+      });
+      aDemarre.current = false;
+      aEnregistre.current = false;
+      genRef.current = 0;
+      // Annuler AVANT de rendre la détection : l'enregistreur doit être
+      // refermé avant que le détecteur ne réécoute.
+      if (annuler) annulerDictee();
       // `reprendreDetection` abandonne l'intention de suspension sans
       // rallumer le détecteur si une capture du réveil la possède déjà.
       rendreDetection();
     };
-  }, [oublierEnregistreur, rendreDetection]);
+  }, [rendreDetection]);
 
   const basculer = useCallback(
     (demandee: C): void => {
@@ -139,11 +176,29 @@ export function useDicteeChamps<C extends string>(
       if (action === "ignorer") return;
 
       if (action === "arreter") {
+        if (aDemarre.current) {
+          // Le démarrage n'a pas encore rendu l'enregistreur : rien à
+          // transcrire. On l'invalide AVANT qu'il ne s'ouvre après coup.
+          aDemarre.current = false;
+          aEnregistre.current = false;
+          genRef.current = 0;
+          annulerDictee();
+          rendreDetection();
+          setPhase("repos");
+          setCible(null);
+          return;
+        }
+
+        // L'arrêt PREND possession de l'enregistreur : cette dictée n'en est
+        // plus propriétaire, une continuation ou un démontage ne doit plus
+        // l'annuler.
+        aDemarre.current = false;
+        aEnregistre.current = false;
+        genRef.current = 0;
         setPhase("transcription");
         void arreterEtTranscrire().then((resultat) => {
           // L'enregistreur de CETTE dictée est refermé : on rend le scoring au
           // détecteur, sans jamais toucher à celui d'une capture du réveil.
-          oublierEnregistreur();
           rendreDetection();
           setPhase("repos");
           setCible(null);
@@ -172,9 +227,16 @@ export function useDicteeChamps<C extends string>(
       // dictée pourrait réveiller Jarvis au milieu de la phrase.
       suspendreDetection();
       aSuspendu.current = true;
-      void demarrerDictee().then((resultat) => {
+      aDemarre.current = true;
+      const demarrage = demarrerDictee();
+      // Le jeton de départ est posé SYNCHRONEMENT par `demarrerDictee` ; le
+      // capturer maintenant permet de reconnaître un abandon survenu avant la
+      // résolution.
+      const jetonDemarrage = generationDictee();
+      void demarrage.then((resultat) => {
+        aDemarre.current = false;
         if (!resultat.ok) {
-          rendreDetection();
+          if (monte.current) rendreDetection();
           setPhase("repos");
           setCible(null);
           // Permission refusée, micro absent, passerelle non configurée : la
@@ -183,12 +245,25 @@ export function useDicteeChamps<C extends string>(
           signalerRef.current(resultat.error.message);
           return;
         }
-        // Seulement maintenant cette dictée POSSÈDE l'enregistreur : un arrêt
-        // ou un démontage ne doit annuler que ce qu'elle a réellement ouvert.
+        const courant = generationDictee();
+        if (!monte.current || courant !== jetonDemarrage) {
+          // Le crochet est démonté, ou un arrêt/abandon externe a déjà pris la
+          // main : l'enregistreur qui vient de s'ouvrir n'appartient plus à
+          // personne. On le referme sans marquer de possession.
+          annulerDictee();
+          if (monte.current) {
+            setPhase("repos");
+            setCible(null);
+            rendreDetection();
+          }
+          return;
+        }
+        // Seulement maintenant cette dictée POSSÈDE l'enregistreur.
         aEnregistre.current = true;
+        genRef.current = courant;
       });
     },
-    [phase, cible, oublierEnregistreur, rendreDetection],
+    [phase, cible, rendreDetection],
   );
 
   return { cible, phase, possible, basculer };
