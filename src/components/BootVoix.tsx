@@ -7,7 +7,7 @@ import { subscribeAlexaNavigation } from "@/services/alexa-navigation";
 import { voixSouhaitee } from "@/services/jarvis-reveil";
 import { demarrerMainsLibres, mainsLibresActif } from "@/services/voix-mains-libres";
 
-/** The microphone starts only on the doctor's click and closes with the app. */
+/** Closes the direct loop on navigation and keeps an opted-in hands-free session armed app-wide. */
 export function BootVoix(): null {
   const pathname = usePathname();
   const router = useRouter();
@@ -16,10 +16,11 @@ export function BootVoix(): null {
   // du mot de réveil vaut pour toute l'application, pas pour un écran.
   useEffect(() => { arreterVoixLocale(); }, [pathname]);
   useEffect(() => {
-    // ⚠️ LE MOT DE RÉVEIL SURVIT À LA NAVIGATION ET AU REMONTAGE. Le choix est
-    // mémorisé sur ce poste ; le réarmer ici le rend vrai partout. Rien n'est
-    // demandé au premier lancement : `voixSouhaitee()` reste faux tant que la
-    // praticienne n'a pas opté une première fois.
+    // ⚠️ LE MOT DE RÉVEIL EST RÉARMÉ À CHAQUE MONTAGE D'APPSHELL — pas
+    // seulement au clic qui a mémorisé le choix. `mainsLibresActif()` rend
+    // l'appel idempotent : un remontage pendant que la voix tourne déjà ne
+    // rouvre rien. `voixSouhaitee()` reste faux au premier lancement, donc
+    // aucun micro n'est demandé avant l'opt-in explicite.
     if (voixSouhaitee() && !mainsLibresActif()) void demarrerMainsLibres();
   }, []);
   useEffect(() => {
@@ -29,7 +30,8 @@ export function BootVoix(): null {
         return;
       }
       // Un onglet caché peut avoir suspendu la détection : on réarme au
-      // retour, mais seulement si la praticienne l'avait demandé.
+      // retour SI elle n'est pas déjà active — jamais une seconde prise du
+      // micro en parallèle.
       if (voixSouhaitee() && !mainsLibresActif()) void demarrerMainsLibres();
     };
     document.addEventListener("visibilitychange", surVisibilite);

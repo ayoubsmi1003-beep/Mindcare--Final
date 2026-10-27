@@ -94,6 +94,29 @@ export function useDicteeChamps<C extends string>(
   insererRef.current = inserer;
   signalerRef.current = signaler;
 
+  // ⚠️ LA PROPRIÉTÉ EST LOCALE, PAS GLOBALE. Le démontage d'un écran de
+  // consultation ne doit ni annuler l'enregistreur d'une capture du réveil, ni
+  // rendre un scoring qu'une AUTRE dictée avait suspendu. Ces deux drapeaux ne
+  // passent à vrai que si CE crochet a réellement suspendu / enregistré.
+  const aSuspendu = useRef(false);
+  const aEnregistre = useRef(false);
+
+  const rendreDetection = useCallback((): void => {
+    if (!aSuspendu.current) return;
+    aSuspendu.current = false;
+    // `reprendreDetection` porte le verrou : si une capture du réveil
+    // (`reveille`, `ecoute`, `traitement`, `parole`) possède déjà la
+    // suspension, c'est SA transition qui rendra le scoring. On lui abandonne
+    // l'intention sans rallumer le détecteur par-dessus elle.
+    reprendreDetection();
+  }, []);
+
+  const oublierEnregistreur = useCallback((): void => {
+    if (!aEnregistre.current) return;
+    aEnregistre.current = false;
+    annulerDictee();
+  }, []);
+
   useEffect(() => {
     // `MediaRecorder` n'existe pas au rendu serveur : la capacité se constate
     // une fois, au montage, sinon le bouton clignoterait à l'hydratation.
@@ -102,12 +125,13 @@ export function useDicteeChamps<C extends string>(
       // ⚠️ LE MICRO NE RESTE JAMAIS OUVERT DERRIÈRE UN ÉCRAN QU'ON QUITTE.
       // Un micro allumé dans un cabinet de psychiatrie, sans que rien à
       // l'écran ne le dise, est un incident — pas une fuite de ressource.
-      annulerDictee();
-      // La dictée avait suspendu le scoring du réveil : on le rend à la
-      // machine, sinon le mot de réveil resterait muet après la consultation.
-      reprendreDetection();
+      // Seulement si CETTE dictée possède l'enregistreur.
+      oublierEnregistreur();
+      // `reprendreDetection` abandonne l'intention de suspension sans
+      // rallumer le détecteur si une capture du réveil la possède déjà.
+      rendreDetection();
     };
-  }, []);
+  }, [oublierEnregistreur, rendreDetection]);
 
   const basculer = useCallback(
     (demandee: C): void => {
@@ -117,9 +141,10 @@ export function useDicteeChamps<C extends string>(
       if (action === "arreter") {
         setPhase("transcription");
         void arreterEtTranscrire().then((resultat) => {
-          // L'enregistreur est refermé : le détecteur de réveil reprend le
-          // scoring, quelle que soit l'issue de la transcription.
-          reprendreDetection();
+          // L'enregistreur de CETTE dictée est refermé : on rend le scoring au
+          // détecteur, sans jamais toucher à celui d'une capture du réveil.
+          oublierEnregistreur();
+          rendreDetection();
           setPhase("repos");
           setCible(null);
           if (!resultat.ok) {
@@ -146,19 +171,24 @@ export function useDicteeChamps<C extends string>(
       // Le détecteur se tait AVANT l'ouverture du micro : sans cela, la note
       // dictée pourrait réveiller Jarvis au milieu de la phrase.
       suspendreDetection();
+      aSuspendu.current = true;
       void demarrerDictee().then((resultat) => {
         if (!resultat.ok) {
-          reprendreDetection();
+          rendreDetection();
           setPhase("repos");
           setCible(null);
           // Permission refusée, micro absent, passerelle non configurée : la
           // passerelle nomme déjà la cause en français, on la relaie telle
           // quelle plutôt que d'en fabriquer une approximation.
           signalerRef.current(resultat.error.message);
+          return;
         }
+        // Seulement maintenant cette dictée POSSÈDE l'enregistreur : un arrêt
+        // ou un démontage ne doit annuler que ce qu'elle a réellement ouvert.
+        aEnregistre.current = true;
       });
     },
-    [phase, cible],
+    [phase, cible, oublierEnregistreur, rendreDetection],
   );
 
   return { cible, phase, possible, basculer };

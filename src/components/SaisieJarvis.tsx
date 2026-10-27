@@ -148,7 +148,9 @@ export function SaisieJarvis({
             <button
               type="button"
               onClick={() => {
-                if (mainsLibres) arreterMainsLibres();
+                // Décision sur l'état RÉEL du module, pas sur un rendu local
+                // qui peut être en retard d'un clic.
+                if (mainsLibresActif()) arreterMainsLibres();
                 else {
                   // Une boucle directe encore ouverte posséderait le micro :
                   // on la ferme avant d'armer le réveil.

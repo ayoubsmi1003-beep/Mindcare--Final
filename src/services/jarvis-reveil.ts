@@ -144,6 +144,19 @@ let repriseGeneration = 0;
 let repriseEnCours: number | null = null;
 /** Motif d'une reprise épuisée pendant un tour actif, appliqué au retour veille. */
 let repriseEchouee: string | null = null;
+/**
+ * Époque de l'armement EXPLICITE. Un désarmement la périme : un `armerReveil`
+ * encore en vol ne doit ni rallumer le détecteur ni poser « veille » après que
+ * la praticienne a coupé la voix.
+ */
+let armementGeneration = 0;
+/**
+ * Suspension demandée par une dictée de champ. Elle vit HORS du détecteur :
+ * une dictée peut commencer avant tout armement, et une reprise (panne, nouvel
+ * armement) repart d'un graphe NEUF, donc non suspendu. Sans ce drapeau, la
+ * note dictée serait scorée dès la première reprise.
+ */
+let suspensionDictee = false;
 
 function motifReprise(code: string): string {
   return code === "interdit" ? fr.jarvis.voix.reveil.microRefuse : fr.jarvis.voix.reveil.moteurIndisponible;
@@ -244,25 +257,42 @@ export function etatVoix(): EtatVoix {
  * praticienne qui se parle à elle-même. `suspendre()` ignore le scoring SANS
  * lâcher le micro (le courtier ne rend pas de seconde acquisition), et
  * `reprendre()` le rétablit quand l'enregistreur est refermé.
+ *
+ * ⚠️ LA SUSPENSION SURVIT À L'ABSENCE DE DÉTECTEUR. Une dictée peut commencer
+ * avant tout armement, ou pendant qu'une reprise reconstruit le graphe ; le
+ * drapeau est donc mémorisé et réappliqué à chaque démarrage réussi.
  */
 export function suspendreDetection(): void {
+  suspensionDictee = true;
   detecteur?.suspendre();
 }
 
 export function reprendreDetection(): void {
+  suspensionDictee = false;
+  // ⚠️ UNE CAPTURE DU RÉVEIL POSSÈDE DÉJÀ LA SUSPENSION. C'est sa propre
+  // transition qui rendra le scoring. Reprendre ici ferait écouter le
+  // détecteur par-dessus l'accusé, la commande ou la voix de Jarvis.
+  if (etat === "reveille" || captureEnCours()) return;
   detecteur?.reprendre();
 }
 
 /**
  * Une capture du réveil possède-t-elle déjà le micro ?
  *
- * `ecoute`, `traitement` et `parole` comptent : l'enregistreur de commande
- * reste ouvert jusqu'à la transcription, et la réponse est lue à voix haute
- * dans le même microphone. `veille` et `reveille` non — en veille le micro de
- * commande est fermé, et pendant l'accusé il n'est pas encore ouvert.
+ * `reveille` compte : l'accusé est prononcé AVANT d'ouvrir le micro de
+ * commande, et rouvrir un enregistreur de champ pendant cet intervalle ferait
+ * échouer la capture du réveil en « déjà en cours ». `ecoute`, `traitement` et
+ * `parole` comptent aussi : l'enregistreur de commande reste ouvert jusqu'à la
+ * transcription, et la réponse est lue à voix haute dans le même microphone.
+ * `veille` non — le micro de commande y est fermé.
  */
 export function captureEnCours(): boolean {
-  return etat === "ecoute" || etat === "traitement" || etat === "parole";
+  return (
+    etat === "reveille" ||
+    etat === "ecoute" ||
+    etat === "traitement" ||
+    etat === "parole"
+  );
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -438,22 +468,38 @@ export async function armerReveil(r: RappelsVoix): Promise<Result<true>> {
   rappels = r;
   repriseEchouee = null;
 
-  if (detecteur === null) {
+  const d = detecteur;
+  if (d === null) {
     aller("desactive", fr.jarvis.voix.reveil.aucunDetecteur);
     return err({ code: "regle-metier", message: fr.jarvis.voix.reveil.aucunDetecteur });
   }
 
+  // ⚠️ L'ARMEMENT APPARTIENT À UNE ÉPOQUE. `desarmerReveil` la périme ;
+  // `installerDetecteur` remplace le moteur. Une continuation tardive ne doit
+  // ni démarrer, ni installer, ni déclarer « veille » dans le dos de la
+  // praticienne — sinon couper le mains-libres pendant le chargement du modèle
+  // rallume le micro une seconde plus tard.
+  const generation = armementGeneration;
+  const perime = (): boolean => generation !== armementGeneration || detecteur !== d;
+  const annuler = (): Result<true> => {
+    d.arreter();
+    return err({ code: "indisponible", message: fr.jarvis.voix.reveil.desarme });
+  };
+
   // « Disponible » se CONSTATE — assets présents, WASM chargeable — jamais ne
   // se suppose. Un détecteur déclaré mais sans modèle échouerait au premier mot.
-  if (!(await detecteur.disponible())) {
+  if (!(await d.disponible())) {
+    if (perime()) return annuler();
     detecteurDefaillant = true;
     aller("desactive", fr.jarvis.voix.reveil.moteurIndisponible);
     return err({ code: "indisponible", message: fr.jarvis.voix.reveil.moteurIndisponible });
   }
+  if (perime()) return annuler();
 
-  const demarrage = await detecteur.demarrer(() => {
+  const demarrage = await d.demarrer(() => {
     void surReveil();
   });
+  if (perime()) return annuler();
   if (!demarrage.ok) {
     detecteurDefaillant = true;
     // ⚠️ NE PAS ACCUSER LE MICRO DE TOUT CE QUI RATE ICI.
@@ -480,15 +526,31 @@ export async function armerReveil(r: RappelsVoix): Promise<Result<true>> {
   // s'abonne à ce que le navigateur rapporte vraiment (`onplaying`/`onended`),
   // jamais au fait d'avoir demandé une lecture.
   quitterLecture?.();
-  quitterLecture = abonnerLecture((enLecture, source) => {
+  const propreQuitterLecture = abonnerLecture((enLecture, source) => {
     sourceParole = source;
     if (enLecture) signalerParole();
     else signalerFinParole();
   });
+  quitterLecture = propreQuitterLecture;
+
+  // Dernier verrou AVANT de publier « veille » : si l'époque a changé pendant
+  // les await, on retire aussi l'abonnement créé pour CET armement — jamais
+  // celui d'un successeur.
+  if (perime()) {
+    if (quitterLecture === propreQuitterLecture) {
+      propreQuitterLecture();
+      quitterLecture = null;
+    }
+    return annuler();
+  }
 
   detecteurDefaillant = false;
+  // La dictée a pu suspendre la détection avant que ce détecteur n'existe, ou
+  // pendant qu'une reprise reconstruisait le graphe : le nouveau graphe démarre
+  // NON suspendu, on rétablit donc le silence demandé.
+  if (suspensionDictee) d.suspendre();
   aller("veille");
-  log.info("jarvis.reveil.arme", { context: `moteur:${detecteur.nom}` });
+  log.info("jarvis.reveil.arme", { context: `moteur:${d.nom}` });
   return ok(true);
 }
 
@@ -570,9 +632,14 @@ export async function relancerArmement(code: "micro" | "transport"): Promise<voi
         // suspension appartenait à ce tour et a disparu avec l'ancien graphe —
         // on la rétablit au lieu de laisser le détecteur écouter la commande ou
         // la voix de Jarvis.
-        if (etat === "reveille" || etat === "ecoute" || etat === "traitement" || etat === "parole") {
-          d.suspendre();
-        } else if (etat === "veille" || etat === "erreur") {
+        //
+        // Une dictée de champ est une AUTRE suspension, qui n'appartient pas à
+        // ce tour : `suspensionDictee` la réapplique au graphe neuf, sinon la
+        // note dictée réveillerait Jarvis dès la première reprise.
+        const captureDuReveil =
+          etat === "reveille" || etat === "ecoute" || etat === "traitement" || etat === "parole";
+        if (suspensionDictee || captureDuReveil) d.suspendre();
+        if (!suspensionDictee && (etat === "veille" || etat === "erreur")) {
           aller("veille");
         }
         log.info("jarvis.reveil.reprise.ok", { context: d.nom, count: tentative + 1 });
@@ -614,6 +681,10 @@ export async function relancerArmement(code: "micro" | "transport"): Promise<voi
 
 export function desarmerReveil(): void {
   repriseGeneration += 1;
+  // Périme tout `armerReveil` encore en vol : il ne doit ni démarrer, ni
+  // installer, ni publier « veille » après ce désarmement.
+  armementGeneration += 1;
+  suspensionDictee = false;
   repriseEchouee = null;
   detecteurDefaillant = false;
   captureCourante += 1; // invalide toute clôture en vol
@@ -1124,11 +1195,19 @@ export function retenirVoix(r: RappelsVoix): () => void {
     (detecteur === null || etat === "desactive");
 
   if (doitArmer) {
+    const generation = armementGeneration;
     const tentative = (async (): Promise<Result<true>> => {
       // Import dynamique : l'ONNX et son WASM ne doivent entrer ni dans le
       // rendu serveur, ni dans le bundle initial. L'application s'affiche sans
       // attendre 16 Mio de runtime.
       const { creerDetecteurVosk } = await import("./reveil-vosk");
+      // ⚠️ NE PAS INSTALLER APRÈS UN DÉSARMEMENT. Couper le mains-libres
+      // pendant le chargement du modèle doit rendre la main SANS laisser un
+      // détecteur armé derrière soi. L'époque est celle du moment où le
+      // maintien a été demandé, pas celle de la fin de l'import.
+      if (generation !== armementGeneration) {
+        return err({ code: "indisponible", message: fr.jarvis.voix.reveil.desarme });
+      }
       installerDetecteur(creerDetecteurVosk((code) => void relancerArmement(code)));
       return await armerReveil(r);
     })();

@@ -64,12 +64,17 @@ describe("voice answer conversation integration", () => {
     const unsubscribe = abonnerConversation(state => { snapshot = state; });
     subscriptions.push(unsubscribe);
     const tour = commande("Quel est le prochain patient ?");
-    // La phrase reconnue est un tour HUMAIN, posé avant la bulle de réponse.
+    // La phrase reconnue est UN SEUL tour humain, posé avant la bulle de réponse.
+    const humains = () =>
+      snapshot?.tours.filter(t => t.role === "humain" && t.texte === "Quel est le prochain patient ?") ?? [];
+    expect(humains()).toHaveLength(1);
     expect(snapshot?.tours.at(-2)).toMatchObject({ role: "humain", texte: "Quel est le prochain patient ?" });
     expect(snapshot?.tours.at(-1)).toMatchObject({ role: "jarvis", texte: "" });
     expect(snapshot?.etat).toBe("envoi");
     await tour;
     expect(snapshot?.tours.at(-1)).toMatchObject({ role: "jarvis", texte: "Réponse à : Quel est le prochain patient ?" });
     expect(snapshot?.tours.at(-2)).toMatchObject({ role: "humain", texte: "Quel est le prochain patient ?" });
+    // Aucun doublon après la réponse : la bulle humaine n'est pas rejouée.
+    expect(humains()).toHaveLength(1);
   });
 });

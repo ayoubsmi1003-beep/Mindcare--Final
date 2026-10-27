@@ -2,11 +2,13 @@ import {
   annulerSuivi,
   desarmerReveil,
   definirVoixSouhaitee,
+  installerDetecteur,
   promesseArmement,
   retenirVoix,
   type RappelsVoix,
 } from "./jarvis-reveil";
 import { envoyer } from "./conversation";
+import { fr } from "@/i18n/fr";
 import { abonnerLecture } from "./jarvis-voix";
 import { err, ok, type Result } from "./result";
 
@@ -30,6 +32,14 @@ let actif = false;
 let liberation: (() => void) | null = null;
 let minuteur: ReturnType<typeof setTimeout> | null = null;
 let stopLecture: (() => void) | null = null;
+/**
+ * ⚠️ CHAQUE DÉMARRAGE APPARTIENT À UNE ÉPOQUE. L'armement du détecteur attend
+ * un import dynamique puis le chargement du modèle ; un arrêt pendant cette
+ * attente ne doit pas laisser la continuation écrire `voixSouhaitee(true)` ou
+ * déclarer « veille » après coup. L'incrément d'`arreterMainsLibres` périme
+ * tous les départs en vol.
+ */
+let demarrageGeneration = 0;
 const abonnes = new Set<(actif: boolean) => void>();
 
 function publier(): void {
@@ -62,55 +72,94 @@ export interface DependancesMainsLibres {
 export async function demarrerMainsLibres(
   deps?: DependancesMainsLibres,
 ): Promise<Result<true>> {
+  // Un second clic pendant l'armement ne crée pas une seconde époque : le
+  // premier départ est déjà `actif` et reste propriétaire de son attente.
   if (actif) return ok(true);
+  const generation = ++demarrageGeneration;
   const tenir = deps?.retenir ?? retenirVoix;
 
+  const eteint = (): boolean => generation !== demarrageGeneration || !actif;
+
   stopLecture?.();
-  stopLecture = abonnerLecture(() => {
+  const mienStopLecture = abonnerLecture(() => {
     if (actif) toucher();
   });
+  stopLecture = mienStopLecture;
 
-  liberation = tenir({
+  const mienLiberation = tenir({
     onCommande: async (texte: string) => {
       if (!actif) return;
       toucher();
       await envoyer(texte);
     },
   });
+  liberation = mienLiberation;
   actif = true;
   toucher();
+  const mienMinuteur = minuteur;
   publier();
+
+  /** Ne rendre que CE démarrage — jamais les ressources d'un successeur. */
+  const rendreLesMiennes = (): void => {
+    if (liberation === mienLiberation) {
+      try {
+        mienLiberation();
+      } finally {
+        liberation = null;
+      }
+    }
+    if (stopLecture === mienStopLecture) {
+      mienStopLecture();
+      stopLecture = null;
+    }
+    if (minuteur !== null && minuteur === mienMinuteur) {
+      clearTimeout(minuteur);
+      minuteur = null;
+    }
+  };
+
+  const annuler = (): Result<true> => {
+    rendreLesMiennes();
+    if (generation === demarrageGeneration) {
+      actif = false;
+      publier();
+    }
+    // Un successeur possède déjà l'antenne : on ne le désarme pas. Sinon plus
+    // personne n'est propriétaire et l'on s'assure qu'aucun détecteur ne reste
+    // installé/armé derrière l'arrêt.
+    if (generation === demarrageGeneration || !actif) {
+      desarmerReveil();
+      installerDetecteur(null);
+    }
+    return err({ code: "indisponible", message: fr.jarvis.voix.indisponible });
+  };
 
   // `retenirVoix` starts the arm asynchronously. Wait for that exact promise
   // instead of reporting success from the button click.
   const armement = promesseArmement();
   if (armement !== null) {
     const pret = await armement;
+    if (eteint()) return annuler();
     if (!pret.ok) {
+      rendreLesMiennes();
       actif = false;
-      try {
-        liberation();
-      } finally {
-        liberation = null;
-      }
-      if (minuteur !== null) {
-        clearTimeout(minuteur);
-        minuteur = null;
-      }
-      stopLecture?.();
-      stopLecture = null;
-      desarmerReveil();
-      definirVoixSouhaitee(false);
       publier();
+      desarmerReveil();
+      installerDetecteur(null);
+      definirVoixSouhaitee(false);
       return err(pret.error);
     }
   }
+  if (eteint()) return annuler();
 
   definirVoixSouhaitee(true);
   return ok(true);
 }
 
 export function arreterMainsLibres(): void {
+  // Périme tout démarrage en vol AVANT de rendre les ressources : sa
+  // continuation verra l'époque changée et ne rallumera pas le détecteur.
+  demarrageGeneration += 1;
   if (liberation !== null) {
     try {
       liberation();
