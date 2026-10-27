@@ -71,7 +71,7 @@ const CANDIDATS = {
     dimensions: 0,
     licence: "Apache-2.0",
     fichiers: [
-      { distant: "onnx/model_qint8_avx2.onnx", local: "model.onnx" },
+      { distant: "onnx/model_quint8_avx2.onnx", local: "model.onnx" },
       { distant: "tokenizer.json", local: "tokenizer.json" },
       { distant: "tokenizer_config.json", local: "tokenizer_config.json" },
       { distant: "special_tokens_map.json", local: "special_tokens_map.json" },
