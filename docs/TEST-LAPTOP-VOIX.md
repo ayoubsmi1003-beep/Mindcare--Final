@@ -134,7 +134,7 @@ n'a **pas** été exécutée et ne doit jamais être présentée comme PASS.
 |---|---|---|
 | 1 | Démarrer l'app sur le laptop, se connecter, cliquer **Mains-libres**, autoriser le micro | **NOT RUN** |
 | 2 | Dire « Alexa » dix fois en dix minutes : attendre « Oui docteur, je vous écoute », parler ; bulle humaine, réponse Kokoro, réarmement ; l'accusé n'est pas transcrit | **NOT RUN** |
-| 3 | Après chaque réponse, enchaîner une question **sans** dire « Alexa » en moins de 8 s : capture sans rejouer l'accusé | **NOT RUN** |
+| 3 | Après chaque réponse, enchaîner une question **sans** dire « Alexa » dans les 8 s (≤ 8 s) : capture sans rejouer l'accusé | **NOT RUN** |
 | 4 | Attendre 8 s en silence, dire « Alexa » : le réveil doit fonctionner | **NOT RUN** |
 | 5 | Taper une question et l'envoyer : la réponse doit être lue à voix haute | **NOT RUN** |
 | 6 | Cliquer Stop/orbe pendant la lecture : la parole s'arrête et l'app se réarme (pas de barge-in vocal, hors périmètre) | **NOT RUN** |
@@ -143,8 +143,12 @@ n'a **pas** été exécutée et ne doit jamais être présentée comme PASS.
 | 9 | Redémarrer l'app : Mains-libres s'arme automatiquement car la préférence est ON | **NOT RUN** |
 | 10 | Ouvrir une consultation, utiliser le micro de champ : le texte s'insère au curseur mémorisé et n'écrase jamais l'existant | **NOT RUN** |
 
-Référence : `.superpowers/sdd/2026-10-27-alexa-v8-local-voice-final/task-8-brief.md`
-(étape 4, checklist originale).
+État de la preuve : `pnpm voix:preuve` est **PASS** (STT/TTS/Vosk, sans
+microphone) ; la checklist micro ci-dessus est **NOT RUN**. L'installateur
+final sera produit plus tard, une fois le travail applicatif terminé ;
+l'artefact de build actuel est une preuve non signée, pas une release et pas une
+installation. La pile vocale est prête pour l'installateur une fois le travail
+applicatif finalisé ; installateur différé.
 
 ## 5. Pannes connues
 

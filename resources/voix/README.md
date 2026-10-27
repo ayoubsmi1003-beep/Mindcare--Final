@@ -1,9 +1,18 @@
 # Local native voice bundle
 
-Build with `pnpm voix:preparer` (`node scripts/preparer-voix-native.mjs --repair
---packages`) from the pinned upstream artifacts. The packaged application never
-downloads a model. A failed or interrupted download stays in a `.part` file and
-cannot be mistaken for an installed model.
+Prepare the pinned model assets and Python packages with `pnpm voix:preparer`
+(`node scripts/preparer-voix-native.mjs --repair --packages`). The packaged
+application never downloads a model. A failed or interrupted download stays in
+a `.part` file and cannot be mistaken for an installed model.
+
+**Prerequisite:** the embedded runtime `python/python.exe` (CPython 3.12.14)
+must already be provisioned. `pnpm voix:preparer` installs the pinned wheels
+into the git-ignored `packages/` directory with that interpreter and repairs
+the model assets; it does not create the interpreter and does not build the
+whole bundle from a bare clone. A fresh clone contains neither `python/` nor
+`packages/`; copy or provision the embedded runtime first, then run the
+command. Without it, the command stops with
+`runtime Python absent : resources/voix/python/python.exe`.
 
 | Asset | Role | License |
 |---|---|---|
@@ -15,8 +24,9 @@ cannot be mistaken for an installed model.
 Runtime: pinned CPython 3.12.14, `faster-whisper 1.2.1`, `ctranslate2 4.8.4`,
 `av 19.0.2`, `tokenizers 0.23.3`, `huggingface-hub 2.3.0`,
 `onnxruntime 1.30.0`, `kokoro-onnx 0.6.1`, `vosk 0.3.45`, ONNX Runtime CPU.
-Exact pins live in `requirements.txt`; `pnpm voix:preparer` installs them into
-the git-ignored `packages/` directory with the embedded interpreter. No network
+Exact pins live in `requirements.txt`; `pnpm voix:preparer --packages` installs
+them into the git-ignored `packages/` directory with the provisioned embedded
+interpreter. No network
 occurs inside either worker: `local_files_only=True` and a blocked
 `socket.socket.connect` forbid any Hub or provider call.
 
