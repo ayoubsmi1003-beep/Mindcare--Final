@@ -173,7 +173,10 @@ const p = (q) => latences[Math.min(latences.length - 1, Math.floor(q * latences.
 
 const resume = {
   golden: GOLDEN.split(/[\\/]/).pop(), cas: resultats.length, positifs: positifs.length, negatifs: negatifs.length,
-  mode: deps.vectorActif ? "hybride" : "lexical-seul",
+  mode: [
+    deps.vectorActif ? "hybride" : "lexical-seul",
+    deps.rerankerLocal !== undefined ? "rerank:actif" : "rerank:inactif",
+  ].join("+"),
   recall5: recall(5), recall1: recall(1), mrr, abstention, pageRate: pages,
   p50: p(0.5), p95: p(0.95), resultats,
 };
