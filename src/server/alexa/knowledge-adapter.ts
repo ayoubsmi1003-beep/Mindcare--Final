@@ -418,7 +418,30 @@ export async function readKnowledge(client: ClientSql, question: string, signal?
       || indiceFocus(b.preuve) - indiceFocus(a.preuve)
       || indiceLexical(b.preuve) - indiceLexical(a.preuve)
       || a.lot - b.lot || a.rang - b.rang);
+    // DIVERSITÉ DES SOURCES (livre non nommé uniquement) : une question sans
+    // livre explicite ne doit pas recevoir 5 extraits du même ouvrage quand
+    // l'autre en a un aussi pertinent. Mesuré : « syndrome sérotoninergique »
+    // et « arrêter un antidépresseur » avaient leur passage au rang 1 de leur
+    // propre reformulation anglaise, puis perdaient la fusion parce que cinq
+    // chunks DSM remplissaient les 5 places. Plafond de 3 par livre, puis
+    // COMPLÉMENT sans plafond si la liste n'est pas pleine (jamais de liste
+    // courte à cause de la règle).
+    const livre = (preuve: Preuve): string =>
+      identiteDePreuve(preuve.sourceTitre, preuve.sourceVersion)?.bookId ?? preuve.sourceTitre;
+    const plafond = plan.sourceTitle === null ? 3 : LIMITES.FINAL;
+    const compte = new Map<string, number>();
+    const restants: Preuve[] = [];
     for (const { preuve } of ordonnes) {
+      if (preuves.length >= LIMITES.FINAL) break;
+      if (vus.has(preuve.chunkId)) continue;
+      const cle = livre(preuve);
+      const pris = compte.get(cle) ?? 0;
+      if (pris >= plafond) { restants.push(preuve); continue; }
+      compte.set(cle, pris + 1);
+      vus.add(preuve.chunkId);
+      preuves.push(preuve);
+    }
+    for (const preuve of restants) {
       if (preuves.length >= LIMITES.FINAL) break;
       if (vus.has(preuve.chunkId)) continue;
       vus.add(preuve.chunkId);
