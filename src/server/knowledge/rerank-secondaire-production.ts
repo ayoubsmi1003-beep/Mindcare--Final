@@ -47,6 +47,18 @@ export const CHEMIN_RECETTE_RERANK_SECONDAIRE = ["knowledge", "recette-rerank-se
 /** Nom de dossier stable, partagé par le téléchargeur et le paquetage. */
 export const SLUG_RERANK_SECONDAIRE = "mmarco-rerank" as const;
 
+/**
+ * Budget de coût mesuré sur le corpus réel (i3-4150, 2 threads) :
+ *   · 8 paires × 173 tokens = 1 336 ms ; 6 paires × 109 = 540 ms.
+ *   · Poste cible (i7 5e gén., 4 cœurs) ≈ moitié : 8 paires ≈ 670 ms.
+ * On borne donc à 8 passages ET 160 tokens, et on SAUTE le cross-encoder
+ * quand l'heuristique a déjà tranché (score ≥ 0,55) : la dépense n'a lieu que
+ * sur les questions réellement ambiguës (FR→EN, paraphrases).
+ */
+export const CANDIDATS_RERANK = 8 as const;
+export const TRONCATURE_RERANK_SECONDAIRE = 160 as const;
+export const SEUIL_RERANK_INUTILE = 0.55 as const;
+
 export interface StatutRerankSecondaire {
   readonly etat: "non-initialise" | "pret" | "indisponible";
   readonly motif?: string;
@@ -150,9 +162,15 @@ async function initialiser(deps: DependancesChargeurRerank): Promise<RerankerLoc
       { Tensor: binaires.ort.Tensor },
       prete.session,
       prete.tokenizer,
+      { maxLongueur: TRONCATURE_RERANK_SECONDAIRE },
     );
     statut = { etat: "pret" };
-    return creerRerankerCrossEncoder(scoreur, { nom: "mmarco-mMiniLMv2", version: recette.revision });
+    return creerRerankerCrossEncoder(scoreur, {
+      nom: "mmarco-mMiniLMv2",
+      version: recette.revision,
+      maxCandidats: CANDIDATS_RERANK,
+      skipIfScoreAtLeast: SEUIL_RERANK_INUTILE,
+    });
   } catch (erreur) {
     const message = erreur instanceof Error ? erreur.message : String(erreur);
     const motif = message.split(":")[0] ?? "indisponible";

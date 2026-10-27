@@ -143,7 +143,12 @@ export function noterPairesDepuisSession(
   ort: OrtCrossEncoderMinimal,
   session: SessionCrossEncoderMinimale,
   tokenizer: TokenizerPairesMinimal,
+  options: { readonly maxLongueur?: number } = {},
 ): ScoreurCrossEncoder {
+  const maxLongueur = options.maxLongueur ?? TRONCATURE_PAIRE_MAX;
+  if (!Number.isInteger(maxLongueur) || maxLongueur < 8) {
+    throw new Error("Session cross-encoder inattendue : longueur max invalide.");
+  }
   if (
     !session.inputNames.includes("input_ids") ||
     !session.inputNames.includes("attention_mask")
@@ -156,7 +161,7 @@ export function noterPairesDepuisSession(
   }
   return async (requete, documents) => {
     if (documents.length === 0) return [];
-    const enc = encoderPaires(tokenizer, requete, documents);
+    const enc = encoderPaires(tokenizer, requete, documents, maxLongueur);
     const n = documents.length;
     const L = enc.ids[0]?.length ?? 0;
     const ids = new BigInt64Array(n * L);
@@ -214,8 +219,20 @@ export function reordonnerParLogits(
  */
 export function creerRerankerCrossEncoder(
   scoreur: ScoreurCrossEncoder,
-  options: { readonly nom?: string; readonly version?: string } = {},
+  options: {
+    readonly nom?: string;
+    readonly version?: string;
+    /** Nombre maximal de passages soumis au cross-encoder (borne de coût). */
+    readonly maxCandidats?: number;
+    /**
+     * Seuil de confiance heuristique : au-dessus, le cross-encoder est INUTILE
+     * (le lexical a déjà tranché) et n'est pas appelé. Ce n'est pas un repli :
+     * c'est une politique de routage explicite, mesurée sur le corpus.
+     */
+    readonly skipIfScoreAtLeast?: number;
+  } = {},
 ): RerankerLocalAsync {
+  const maxCandidats = options.maxCandidats ?? Number.POSITIVE_INFINITY;
   const reranker = async (
     requete: string,
     candidats: readonly CandidatFusionne[],
@@ -224,11 +241,15 @@ export function creerRerankerCrossEncoder(
     // Échelle heuristique sur la liste COMPLÈTE (jamais tronquée avant
     // réordonnancement : le cross-encoder voit les ≤20 fusionnés).
     const notes = HeuristiqueBaseline.reranker(requete, candidats, candidats.length);
+    if (options.skipIfScoreAtLeast !== undefined && (notes[0]?.score ?? 0) >= options.skipIfScoreAtLeast) {
+      return notes.slice(0, Math.max(0, topN));
+    }
+    const retenus = notes.slice(0, maxCandidats);
     const logits = await scoreur(
       requete,
-      notes.map((r) => r.candidat.texte),
+      retenus.map((r) => r.candidat.texte),
     );
-    return reordonnerParLogits(notes, logits, topN);
+    return reordonnerParLogits(retenus, logits, topN);
   };
   return {
     nom: options.nom ?? RERANK_CROSS_ENCODER_NOM,

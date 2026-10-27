@@ -177,6 +177,27 @@ describe("creerRerankerCrossEncoder : contrat async + repli", () => {
     expect(r.reranker("q", c, 5)).toEqual(HeuristiqueBaseline.reranker("q", c, 5));
   });
 
+  it("ne dépasse jamais le budget de candidats et saute l'inférence si l'heuristique tranche", async () => {
+    const vus: string[][] = [];
+    const r = creerRerankerCrossEncoder(async (_q, docs) => { vus.push([...docs]); return docs.map(() => 0); },
+      { maxCandidats: 3 });
+    const candidats = Array.from({ length: 10 }, (_, i) => fusionne({ chunkId: `c${i}` }));
+    await r.rerankerAsync("sertraline", candidats, 5);
+    expect(vus[0]).toHaveLength(3);
+
+    const appele: string[][] = [];
+    const saute = creerRerankerCrossEncoder(async (_q, docs) => { appele.push([...docs]); return docs.map(() => 0); },
+      { skipIfScoreAtLeast: 0.5 });
+    const fort = creerRerankerCrossEncoder(async (_q, docs) => { appele.push([...docs]); return docs.map(() => 0); });
+    // Un candidat corroboré lexicalement couvre 1/1 → score 0.55 + bonus ≥ 0.5.
+    const corrobore = [fusionne({ chunkId: "fort", texte: "sertraline", scoreLexical: 0.9 })];
+    const ranges = await saute.rerankerAsync("sertraline", corrobore, 5);
+    expect(ranges[0]?.candidat.chunkId).toBe("fort");
+    expect(appele).toHaveLength(0);
+    await fort.rerankerAsync("sertraline", corrobore, 5);
+    expect(appele).toHaveLength(1);
+  });
+
   it("la voie async voit les ≤20 fusionnés et réordonne", async () => {
     const vus: string[][] = [];
     const r = creerRerankerCrossEncoder(async (_q, docs) => {
