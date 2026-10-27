@@ -3,6 +3,7 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 const { prepare, stop, status, actor, config } = vi.hoisted(() => ({
   prepare: vi.fn().mockResolvedValue(undefined),
   stop: vi.fn(),
+  // Fixture only: the real worker label is asserted in voice-runtime-contract / alexa-native-voice-routes.
   status: vi.fn().mockReturnValue({
     provider: "local",
     stt: "faster-whisper-small-int8",

@@ -537,9 +537,6 @@ Modèle passé à `qwen/qwen3-next-80b-a3b-instruct` (1,6 s) — l'ancien `nemot
    l'écriture a eu lieu mais que son résultat n'a pas été vérifié.
 
 ### NON livré, et pourquoi — à arbitrer par l'utilisatrice
-> **Périmé le 2026-10-27.** Le paragraphe suivant décrit l'ancien détecteur,
-> retiré avec `public/wakeword/` ; le réveil actif est `reveil-vosk.ts` + Vosk
-> local (`resources/voix/wake-voice-worker.py`).
 - **Le mot de réveil : moteur LIVRÉ, oreille NON MESURÉE (2026-08-26).**
   Assistant = **Jarvis** ; mot prononcé = **Alexa**. Le détecteur
   (`src/services/reveil-openwakeword.ts`) fait tourner openWakeWord en ONNX via

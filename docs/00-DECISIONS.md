@@ -548,8 +548,16 @@ source), `pnpm eval:jarvis` et, pour le dernier, la contrainte `jarvis_must_conf
 ---
 
 ### ADR-024 — La voix bascule par un flag, jamais par le navigateur
-**Statut. ACTIVE. Section rédigée le 2026-09-05 — jamais rédigée comme section
-autonome, contenu préservé depuis ses sources, rien d'inventé.**
+
+> **Remplacé pour la voix le 2026-10-27 (V8).** La pile active est
+> **faster-whisper small CTranslate2 `int8`** (STT), **Kokoro `ff_siwis`**
+> (TTS) et **Vosk français** (réveil). Voir `resources/voix/README.md` et
+> `docs/RUNTIME-CONFIGURATION.md`. Le contenu ci-dessous reste l'historique de
+> la décision, pas la configuration courante.
+
+**Statut. ACTIVE pour la décision historique ; REMPLACÉE pour la voix le
+2026-10-27.** Section rédigée le 2026-09-05 — jamais rédigée comme section
+autonome, contenu préservé depuis ses sources, rien d'inventé.
 
 **Sources.** D-21 (`DOC-AUTHORITY.md` §3bis) · `SPRINT-V1.md` §V2.4 et §6 ·
 `MODULE-MAP.md:88,111` · `SESSION-CONTRACTS.md:66,68` · implémentation :

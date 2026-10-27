@@ -13,15 +13,18 @@ git checkout v8-alexa-final
 git lfs pull   # faster-whisper small, Kokoro et Vosk sont stockés en LFS
 ```
 
-Les modèles peuvent aussi être préparés avec :
+Les modèles et le runtime Python peuvent aussi être préparés avec :
 
 ```powershell
-node scripts/preparer-voix-native.mjs --repair
+pnpm voix:preparer
 ```
 
-Cette commande vérifie les tailles et SHA-256 avant d'activer un fichier. Un
-téléchargement interrompu reste en `.part` et n'est jamais considéré comme
-installé.
+Cette commande (`node scripts/preparer-voix-native.mjs --repair --packages`)
+vérifie les tailles et SHA-256 avant d'activer un fichier, installe les roues
+épinglées et prépare le runtime. `resources/voix/python/` et
+`resources/voix/packages/` sont **git-ignorés** : un clone neuf ne les contient
+pas, et c'est cette commande qui les produit. Un téléchargement interrompu reste
+en `.part` et n'est jamais considéré comme installé.
 
 ## 2. Installer
 
@@ -63,8 +66,9 @@ pnpm dev
 
 1. Autoriser le micro.
 2. Cliquer **« Parler à Alexa »**. La première préparation à froid charge le
-   modèle : compter environ 40 s sur le laptop, et 80–120 s pour le premier
-   essai réel complet. Les démarrages suivants sont plus courts.
+   modèle : compter environ 40 s mesuré sur le PC de développement i3 ; à
+   revalider sur le laptop, ainsi que 80–120 s pour le premier essai réel
+   complet. Les démarrages suivants sont plus courts.
 3. Parler, faire une pause → transcription locale → réponse Kokoro.
 4. **Suivi à 8 s** : enchaîner immédiatement une seconde question. La première
    phrase audio de la réponse doit démarrer en **8 s ou moins** ; mesurer le
@@ -80,7 +84,7 @@ pnpm dev
 | Symptôme | Cause | Action |
 |---|---|---|
 | Première préparation longue | chargement à froid du modèle sur CPU | attendre ; ne pas cliquer plusieurs fois |
-| `configuration: modele` | modèle absent/corrompu | `node scripts/preparer-voix-native.mjs --repair` puis vérifier |
+| `configuration: modele` | modèle absent/corrompu | `pnpm voix:preparer` puis vérifier |
 | `La voix locale est indisponible` | worker non initialisé, chemin packaged ou asset invalide | consulter `jarvis-voice-session` action `status` et les logs locaux |
 | Le mot de réveil ne part pas | micro refusé/débranché, Vosk absent | vérifier la confidentialité Windows, le statut Mains-libres, relancer |
 | Réponse arabe non lue | Kokoro v1.0 n'a pas de voix arabe | le texte reste affiché ; aucune voix française ne doit lire l'arabe |

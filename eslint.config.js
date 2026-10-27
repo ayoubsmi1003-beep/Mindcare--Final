@@ -155,13 +155,11 @@ const isSupabasePackage = (name) => name === "@supabase/supabase-js" || name ===
 //
 // On ferme donc par le CHEMIN DU FICHIER plutôt que par la forme de l'argument,
 // ce qui est la seule chose qu'un contrôle statique peut réellement décider.
-// Trois fichiers seulement peuvent appeler `fetch` :
+// Deux fichiers seulement peuvent appeler `fetch` :
 //   · `src/server/egress/external-call.ts` — la passerelle, seul endroit
 //     autorisé à parler au monde extérieur (règle 1) ;
 //   · `src/services/db/http.ts` — le port navigateur, qui n'appelle QUE des
-//     chemins relatifs de la même origine ;
-//   · `src/services/reveil-openwakeword.ts` — vérifie la présence d'un fichier
-//     ONNX servi localement, aucune sortie réseau.
+//     chemins relatifs de la même origine.
 //
 // `scripts/preflight.sh` (contrôle 1) redouble cette règle en grep ET vérifie
 // que la passerelle EXISTE : on ne doit pas pouvoir désarmer le garde-fou en
@@ -169,7 +167,6 @@ const isSupabasePackage = (name) => name === "@supabase/supabase-js" || name ===
 const FICHIERS_FETCH_AUTORISES = [
   "src/server/egress/external-call.ts",
   "src/services/db/http.ts",
-  "src/services/reveil-openwakeword.ts",
 ];
 
 function makeNoFetchRule() {

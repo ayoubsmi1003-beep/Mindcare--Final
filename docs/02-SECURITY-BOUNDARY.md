@@ -167,7 +167,7 @@ Ceci répond directement à Loi 18-07 : registre des traitements et des transfer
 
 ---
 
-## 4. CONTRAT STT LOCAL (faster-whisper small int8 — ADR-024-A)
+## 4. CONTRAT STT LOCAL (faster-whisper small int8 — `resources/voix/README.md`, `docs/RUNTIME-CONFIGURATION.md`)
 
 ### 4.1 Ce qui circule
 ```
