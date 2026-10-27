@@ -4,7 +4,7 @@
  *
  *   node scripts/remplir-vecteurs-secondaires.mjs \
  *     --url "postgresql://…" --modele intfloat/multilingual-e5-small \
- *     --version 614241f… --dossier <chemin> [--max 128] [--batch 8] [--dry-run]
+ *     --version 614241f… --dossier <chemin> [--dimensions 768] [--max 128] [--batch 8] [--dry-run]
  *
  * ═══ GARANTIES ═══
  *   · Idempotent et REPRENABLE : ne sélectionne que les chunks actifs des
@@ -39,6 +39,14 @@ const THREADS = Number(opt("--threads", "2"));
 const LIMITE = Number(opt("--limite", "0"));
 const DRY = args.includes("--dry-run");
 const NORMALISATION = "l2-moyenne-masque-v1";
+// Un espace vectoriel par dimension (HNSW exige une dimension fixe). La table
+// est DÉDUITE de la dimension : impossible d'écrire un 768 dans l'index 384,
+// le CHECK de la table le refuserait de toute façon.
+const DIMENSIONS = Number(opt("--dimensions", "384"));
+const TABLES = new Map([[384, "app.knowledge_chunk_vectors"], [768, "app.knowledge_chunk_vectors_768"]]);
+const TABLE = opt("--table", TABLES.get(DIMENSIONS) ?? "");
+if (TABLE === "") { console.error(`--dimensions ${DIMENSIONS} inconnu : aucune table d'accueil`); process.exit(1); }
+if (!/^app\.knowledge_chunk_vectors(_\d+)?$/u.test(TABLE)) { console.error("--table doit être app.knowledge_chunk_vectors[_<dim>]"); process.exit(1); }
 
 if (URL === "") { console.error("--url requis (rôle propriétaire, jamais le rôle applicatif)"); process.exit(1); }
 if (VERSION === "") { console.error("--version requis (révision du modèle, jamais une valeur devinée)"); process.exit(1); }
@@ -55,15 +63,14 @@ const autorite = `s.classification = 'C4' AND s.statut = 'active'
 const attendus = (await client.query(`SELECT count(*)::int n
   FROM app.knowledge_chunks c JOIN app.knowledge_sources s ON s.id = c.source_id WHERE ${autorite}`)).rows[0].n;
 
-const deja = (await client.query(`SELECT count(*)::int n FROM app.knowledge_chunk_vectors
-  WHERE modele = $1 AND version = $2`, [MODELE, VERSION])).rows[0].n;
+const deja = (await client.query(`SELECT count(*)::int n FROM ${TABLE} WHERE modele = $1 AND version = $2`, [MODELE, VERSION])).rows[0].n;
 
 console.log(JSON.stringify({ etape: "inventaire", attendus, deja, modele: MODELE, version: VERSION.slice(0, 12) }));
 
 if (DRY) {
   const restants = await client.query(`SELECT count(*)::int n
     FROM app.knowledge_chunks c JOIN app.knowledge_sources s ON s.id = c.source_id
-    WHERE ${autorite} AND NOT EXISTS (SELECT 1 FROM app.knowledge_chunk_vectors v
+    WHERE ${autorite} AND NOT EXISTS (SELECT 1 FROM ${TABLE} v
       WHERE v.chunk_id = c.id AND v.modele = $1 AND v.version = $2)`, [MODELE, VERSION]);
   console.log(JSON.stringify({ etape: "dry-run", restants: restants.rows[0].n }));
   await client.end();
@@ -75,7 +82,7 @@ const { embed, dimensions } = await chargerEmbeddeur({ dossier: DOSSIER, slug: S
 const { rows: chunks } = await client.query(`
   SELECT c.id, c.texte
   FROM app.knowledge_chunks c JOIN app.knowledge_sources s ON s.id = c.source_id
-  WHERE ${autorite} AND NOT EXISTS (SELECT 1 FROM app.knowledge_chunk_vectors v
+  WHERE ${autorite} AND NOT EXISTS (SELECT 1 FROM ${TABLE} v
     WHERE v.chunk_id = c.id AND v.modele = $1 AND v.version = $2)
   ORDER BY c.id ${LIMITE > 0 ? `LIMIT ${LIMITE}` : ""}`, [MODELE, VERSION]);
 
@@ -93,7 +100,7 @@ const vider = async () => {
     valeurs.push(`($${base + 5}, $1, $2, $3, $4, 'cosine', $${base + 6}::public.vector)`);
     params.push(ligne.id, ligne.vecteur);
   });
-  await client.query(`INSERT INTO app.knowledge_chunk_vectors
+  await client.query(`INSERT INTO ${TABLE}
       (chunk_id, modele, version, dimensions, normalisation, distance, embedding)
     VALUES ${valeurs.join(",")} ON CONFLICT (chunk_id, modele, version) DO NOTHING`, params);
   ecrits += tampon.length;
@@ -116,11 +123,11 @@ await vider();
 // ── Vérification finale : la seule qui autorise à dire « terminé » ─────────
 const controle = (await client.query(`
   SELECT
-    (SELECT count(*)::int FROM app.knowledge_chunk_vectors WHERE modele=$1 AND version=$2) AS presents,
-    (SELECT count(*)::int FROM app.knowledge_chunk_vectors WHERE modele=$1 AND version=$2 AND public.vector_dims(embedding) <> 384) AS mauvaises_dimensions,
-    (SELECT count(*)::int FROM app.knowledge_chunk_vectors v JOIN app.knowledge_chunks c ON c.id=v.chunk_id
+    (SELECT count(*)::int FROM ${TABLE} WHERE modele=$1 AND version=$2) AS presents,
+    (SELECT count(*)::int FROM ${TABLE} WHERE modele=$1 AND version=$2 AND public.vector_dims(embedding) <> ${DIMENSIONS}) AS mauvaises_dimensions,
+    (SELECT count(*)::int FROM ${TABLE} v JOIN app.knowledge_chunks c ON c.id=v.chunk_id
        WHERE v.modele=$1 AND v.version=$2 AND c.statut <> 'active') AS chunks_inactifs,
-    (SELECT count(*)::int FROM app.knowledge_chunk_vectors v JOIN app.knowledge_chunks c ON c.id=v.chunk_id
+    (SELECT count(*)::int FROM ${TABLE} v JOIN app.knowledge_chunks c ON c.id=v.chunk_id
        JOIN app.knowledge_sources s ON s.id=c.source_id
        WHERE v.modele=$1 AND v.version=$2 AND NOT (${autorite})) AS hors_perimetre
 `, [MODELE, VERSION])).rows[0];

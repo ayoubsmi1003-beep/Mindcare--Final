@@ -34,6 +34,9 @@ export function verifierManifeste(dossier) {
 const PREFIXES = {
   "e5-small": { requete: "query: ", passage: "passage: " },
   "e5-small-int8": { requete: "query: ", passage: "passage: " },
+  // e5-base suit la MÊME convention E5 que e5-small : sans ces préfixes, le
+  // modèle est utilisé hors de son entraînement et les vecteurs sont faux.
+  "e5-base": { requete: "query: ", passage: "passage: " },
   "horizon-small": { requete: "", passage: "" },
 };
 

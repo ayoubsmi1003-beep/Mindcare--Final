@@ -37,6 +37,8 @@ const VEUT_VECTEUR = args.includes("--vector");
 const SLUG_MODELE = option("--slug", "e5-small");
 const MODELE = option("--modele", "intfloat/multilingual-e5-small");
 const VERSION_MODELE = option("--version", "614241f622f53c4eeff9890bdc4f31cfecc418b3");
+const DIMENSIONS_MODELE = Number(option("--dimensions", "384"));
+const TRONCATURE = Number(option("--truncature", "128"));
 const DOSSIER_MODELE = option("--dossier", join(process.env.LOCALAPPDATA ?? process.env.TEMP, "MindCare", "modeles", SLUG_MODELE));
 
 function chargerEnv() {
@@ -92,6 +94,19 @@ const clientSql = {
           return { data: r.rows, error: null };
         });
       }
+      if (nom === "search_knowledge_vector_v2") {
+        // Un espace vectoriel par dimension (HNSW exige une dimension fixe).
+        // Le harnais route vers la porte de l'espace MESURÉ ; le code de
+        // production, lui, garde son site d'appel littéral.
+        const porte = DIMENSIONS_MODELE === 768
+          ? "app.search_knowledge_vector_v2_768"
+          : "app.search_knowledge_vector_v2";
+        return await avecRole(async (client) => {
+          const r = await client.query(`SELECT * FROM ${porte}($1,$2,$3,$4)`,
+            [params.p_embedding_json, params.p_modele, params.p_version, params.p_limite]);
+          return { data: r.rows, error: null };
+        });
+      }
       if (nom === "search_knowledge_vector") {
         return await avecRole(async (client) => {
           const r = await client.query("SELECT * FROM app.search_knowledge_vector($1,$2)",
@@ -134,7 +149,7 @@ const golden = JSON.parse(readFileSync(GOLDEN, "utf8").replace(/^\uFEFF/, ""));
 let deps = dependancesReadKnowledge();
 if (VEUT_VECTEUR) {
   const { chargerEmbeddeur } = await import("./lib/embedding-livre.mjs");
-  const emb = await chargerEmbeddeur({ dossier: DOSSIER_MODELE, slug: SLUG_MODELE, maxTokens: 128, threads: 2 });
+  const emb = await chargerEmbeddeur({ dossier: DOSSIER_MODELE, slug: SLUG_MODELE, maxTokens: TRONCATURE, threads: 2 });
   deps = {
     vectorActif: true,
     vecteurRequete: async (question) => (await emb.embed([question], "requete"))[0],

@@ -6,9 +6,6 @@ import type { Langue, RetrievedEvidence } from "@/server/knowledge/types";
 import { editionDe, type EditionOuvrage } from "@/server/knowledge/editions";
 import { carteDepuisJson, formaterLocalisation, localiserDepuisUnite, localiserExtrait, localisationDeLOuvrage, type CartePages } from "@/server/knowledge/pages";
 import pagesUnites from "@/server/knowledge/pages-unites.json";
-
-/** Carte unité→page construite une fois au chargement du module. */
-const CARTE_PAGES: CartePages = carteDepuisJson(pagesUnites);
 import { mapLimite } from "@/server/knowledge/parallele";
 import { vecteurRequeteProduction } from "@/server/knowledge/vecteur-production";
 import { vecteurRequeteSecondaireProduction } from "@/server/knowledge/vecteur-secondaire-production";
@@ -20,6 +17,9 @@ import {headingOnlyEvidence,bibliographyEvidence,bibliographyTextEvidence,biblio
 
 /** Une preuve structurée, telle que rendue par l'orchestration gouvernée. */
 type Preuve = RetrievedEvidence;
+
+/** Carte `unit_id → page` construite UNE fois au chargement du module. */
+const CARTE_PAGES: CartePages = carteDepuisJson(pagesUnites);
 
 /**
  * L'identité bibliographique VÉRIFIÉE d'une preuve. Absente quand le titre ou

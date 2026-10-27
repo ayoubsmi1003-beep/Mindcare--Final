@@ -1,0 +1,33 @@
+{
+  "$comment": "Recette de l'ESPACE D'ÉVALUATION 768 dimensions (migration 191). Sœur de recette-embedding-secondaire.json (384d), pas un remplacement : tant que le golden réel n'a pas tranché, cet espace reste vide ou non lu par la production. Tout écart (modèle, révision, dimensions, normalisation, préfixes, empreinte) est un refus, jamais une coexistence silencieuse. Empreintes = manifeste écrit par scripts/telecharger-modele-book.mjs.",
+  "provider": "local-onnx",
+  "model": "intfloat/multilingual-e5-base",
+  "revision": "d128750597153bb5987e10b1c3493a34e5a4502a",
+  "dimensions": 768,
+  "normalization": "l2-moyenne-masque-v1",
+  "query_prefix": "query: ",
+  "document_prefix": "passage: ",
+  "distance": "cosine",
+  "chunking_version": "multi",
+  "license": "MIT",
+  "parametres": 278044162,
+  "plafond_parametres": 300000000,
+  "artifact_sha256": {
+    "model_onnx": "84a4d426f7e87a6bf5bf195f0bae2c4a7d15f675b23ca96f42fab8326d7a77aa",
+    "tokenizer_json": "62c24cdc13d4c9952d63718d6c9fa4c287974249e16b7ade6d5a85e7bbb75626"
+  },
+  "artifact_size_octets": {
+    "model_onnx": 1110059084,
+    "tokenizer_json": 17082660
+  },
+  "graph": {
+    "entrees": ["input_ids", "attention_mask", "token_type_ids"],
+    "sortie": "last_hidden_state",
+    "pooling": "moyenne pondérée par attention_mask, puis L2",
+    "troncature": 128
+  },
+  "table": "app.knowledge_chunk_vectors_768",
+  "porte": "app.search_knowledge_vector_v2_768",
+  "runtime_egress": "aucun — inférence 100 % locale, aucun appel réseau au runtime",
+  "status": "EN ÉVALUATION — backfill en cours sur la copie bac à sable uniquement. Aucune activation, aucun changement de la production (BGE-M3 1024d intact). Promotion seulement si le golden v3 progresse au-delà de Recall@1 50 % / Recall@5 65 %."
+}
