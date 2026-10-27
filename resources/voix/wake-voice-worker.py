@@ -28,7 +28,7 @@ if not model_dir.is_dir():
 
 # The grammar keeps the decoder inside a closed vocabulary. The model is
 # French; "alexa" is the configured wake word and the brand is spoken as-is.
-GRAMMAR = '["alexa", "eh lexa", "[unk]"]'
+GRAMMAR = '["alexa", "alexia", "eh lexa", "[unk]"]'
 model = Model(str(model_dir))
 recognizer = KaldiRecognizer(model, 16000, GRAMMAR)
 last = 0.0
@@ -43,7 +43,8 @@ def reset():
 
 
 def heard(text):
-    return re.search(r"\balexa\b", text.lower()) is not None
+    # The same variants as GRAMMAR; "eh lexa" is two acoustic words.
+    return re.search(r"\b(?:alexa|alexia|eh\s+lexa)\b", text.lower()) is not None
 
 
 for line in sys.stdin:

@@ -67,6 +67,12 @@ export function creerDetecteurVosk(
   let prise: PriseMicro | null = null;
   let noeud: ScriptProcessorNode | null = null;
   let muet: GainNode | null = null;
+  /**
+   * Les écouteurs `ended` du graphe PUBLIÉ, avec leur rappel propre à ce
+   * démarrage. Deux démarrages peuvent partager la même piste : retirer le
+   * rappel d'un ancien démarrage ne doit jamais retirer celui du nouveau.
+   */
+  let ecouteursPistes: Array<{ piste: MediaStreamTrack; rappel: () => void }> = [];
   let revele: (() => void) | null = null;
   let actif = false;
   let suspendu = false;
@@ -87,6 +93,20 @@ export function creerDetecteurVosk(
   let file: Promise<void> = Promise.resolve();
   let minuteurReprise: ReturnType<typeof setTimeout> | null = null;
   let minuteurPing: ReturnType<typeof setInterval> | null = null;
+  /** Un seul démarrage à la fois : les appels concurrents partagent la promesse. */
+  let demarrage: Promise<Result<true>> | null = null;
+  /**
+   * Libère la prise et le graphe LOCAL d'un démarrage encore en vol. Séparé du
+   * graphe partagé : tant que le démarrage n'a pas été publié, `arreter()` ne
+   * doit pas toucher `prise`/`noeud` d'une instance précédente.
+   */
+  let libererDemarrage: (() => void) | null = null;
+  /** Une piste a été vue « ended » même hors état actif (pendant `start`). */
+  let perteMicro = false;
+  /** Évite de signaler deux fois la même perte de micro. */
+  let microSignale = false;
+  /** Stop en vol : un redémarrage immédiat doit le laisser partir avant `start`. */
+  let arretEnVol: Promise<void> | null = null;
 
   const requete = async (
     action: ActionReveil,
@@ -143,11 +163,12 @@ export function creerDetecteurVosk(
   function planifierReprise(): void {
     effacerReprise();
     const delai = Math.min(2_000, 250 * 2 ** echecs);
+    const g = generation;
     minuteurReprise = setTimeout(() => {
       minuteurReprise = null;
-      if (!actif) return;
+      if (g !== generation || !actif) return;
       void requete("start").then((reponse) => {
-        if (!actif) return;
+        if (g !== generation || !actif) return;
         if (!reponse.ok) {
           echecTransport();
           return;
@@ -162,8 +183,11 @@ export function creerDetecteurVosk(
   /** Une requête de contrôle qui ne revient pas signifie un worker figé. */
   async function ping(): Promise<void> {
     if (!actif) return;
+    const g = generation;
     const reponse = await requete("ping", undefined, AbortSignal.timeout(PING_TIMEOUT_MS));
-    if (!actif) return;
+    // Un ping parti avant un ré-armement ne doit jamais condamner le nouveau
+    // graphe : le jeton de génération le rend inoffensif.
+    if (g !== generation || !actif) return;
     if (reponse.ok) {
       echecsPing = 0;
       return;
@@ -206,13 +230,24 @@ export function creerDetecteurVosk(
     file = tache.catch(() => {});
   }
 
+  function signalerMicroPerdu(): void {
+    if (microSignale) return;
+    microSignale = true;
+    surErreur?.("micro");
+  }
+
+  function pisteMorte(acces: PriseMicro): boolean {
+    if (perteMicro) return true;
+    return acces.flux.getTracks().some((piste) => piste.readyState === "ended");
+  }
+
   function pisteTerminee(): void {
-    if (!actif) return;
+    perteMicro = true;
     log.warn("reveil.micro.perdu", { code: "indisponible" });
     // Le graphe est mort : on le ferme avant de rendre la main à la
     // supervision, qui rouvrira le périphérique par `prendreMicro`.
     arreter();
-    surErreur?.("micro");
+    signalerMicroPerdu();
   }
 
   function fermer(): void {
@@ -223,7 +258,8 @@ export function creerDetecteurVosk(
     }
     muet?.disconnect();
     muet = null;
-    for (const piste of prise?.flux.getTracks() ?? []) piste.removeEventListener("ended", pisteTerminee);
+    for (const { piste, rappel } of ecouteursPistes) piste.removeEventListener("ended", rappel);
+    ecouteursPistes = [];
     prise?.rendre();
     prise = null;
     restes = new Uint8Array(0);
@@ -231,6 +267,12 @@ export function creerDetecteurVosk(
 
   function arreter(): void {
     generation += 1;
+    // Un démarrage en vol n'est pas encore publié : on l'invalide et on libère
+    // SA prise locale. Sans cela, `arreter()` pendant `prendreMicro`/`start`
+    // laissait le démarrage installer un micro fantôme après le désarmement.
+    demarrage = null;
+    libererDemarrage?.();
+    libererDemarrage = null;
     effacerReprise();
     if (minuteurPing !== null) {
       clearInterval(minuteurPing);
@@ -243,7 +285,11 @@ export function creerDetecteurVosk(
     declenche = false;
     revele = null;
     fermer();
-    void requete("stop");
+    const stop = requete("stop", undefined, AbortSignal.timeout(5_000)).then(() => undefined);
+    arretEnVol = stop;
+    void stop.then(() => {
+      if (arretEnVol === stop) arretEnVol = null;
+    });
   }
 
   function suspendre(): void {
@@ -264,64 +310,123 @@ export function creerDetecteurVosk(
     void requete("reset");
   }
 
-  return {
-    nom: "vosk/fr-FR-small",
+  function demarrer(surReveil: () => void): Promise<Result<true>> {
+    // ⚠️ UN SEUL DÉMARRAGE À LA FOIS. Une reprise qui appelle `demarrer` pendant
+    // qu'un démarrage est encore en vol doit attendre le même résultat, jamais
+    // ouvrir un second micro en parallèle.
+    if (demarrage !== null) return demarrage;
+    const promesse: Promise<Result<true>> = demarrerInterne(surReveil).catch(() =>
+      err<true>({ code: "indisponible", message: fr.jarvis.voix.reveil.moteurIndisponible }),
+    );
+    demarrage = promesse;
+    const nettoyer = () => {
+      if (demarrage === promesse) demarrage = null;
+    };
+    void promesse.then(nettoyer, nettoyer);
+    return promesse;
+  }
 
-    disponible: async () => {
-      if (typeof window === "undefined") return false;
-      if (typeof navigator?.mediaDevices?.getUserMedia !== "function") return false;
-      return typeof AudioContext !== "undefined";
-    },
-
-    demarrer: async (surReveil: () => void): Promise<Result<true>> => {
-      generation += 1;
-      revele = surReveil;
-      if (actif) {
-        // Ré-armement après une panne de transport : le micro est resté
-        // ouvert. `reprendre` lève le verrou de détection sans réacquérir le
-        // périphérique ni repartir de zéro.
-        if (suspendu) {
-          // ⚠️ UNE SUSPENSION APPARTIENT À LA MACHINE À ÉTATS. Elle couvre la
-          // capture de la commande ou la voix de Jarvis ; une reprise de
-          // transport ne doit pas remettre le scoring en marche par-dessus.
-          declenche = false;
-          restes = new Uint8Array(0);
-        } else {
-          reprendre();
-        }
-        return ok(true);
+  async function demarrerInterne(surReveil: () => void): Promise<Result<true>> {
+    const jeton = (generation += 1);
+    revele = surReveil;
+    if (actif) {
+      // Ré-armement d'un détecteur déjà actif : pas de second micro. Une
+      // suspension appartient à la machine à états (capture ou parole) et ne
+      // doit pas être levée par une reprise technique.
+      if (suspendu) {
+        declenche = false;
+        restes = new Uint8Array(0);
+      } else {
+        reprendre();
       }
+      return ok(true);
+    }
+
+    perteMicro = false;
+    microSignale = false;
+    let maPrise: PriseMicro | null = null;
+    let monNoeud: ScriptProcessorNode | null = null;
+    let monMuet: GainNode | null = null;
+    let mesEcouteurs: Array<{ piste: MediaStreamTrack; rappel: () => void }> = [];
+    let libere = false;
+    let engage = false;
+    const rappelFin = () => pisteTerminee();
+
+    const liberer = () => {
+      if (libere || engage) return;
+      libere = true;
+      if (monNoeud !== null) {
+        monNoeud.onaudioprocess = null;
+        monNoeud.disconnect();
+      }
+      monMuet?.disconnect();
+      for (const { piste, rappel } of mesEcouteurs) piste.removeEventListener("ended", rappel);
+      mesEcouteurs = [];
+      if (maPrise !== null) maPrise.rendre();
+      if (libererDemarrage === liberer) libererDemarrage = null;
+    };
+
+    try {
       const acces = await prendreMicro();
+      // Un désarmement a pu tomber pendant `getUserMedia` : on rend la prise
+      // immédiatement, sans publier de graphe.
+      if (jeton !== generation) {
+        if (acces.ok) acces.data.rendre();
+        return err({ code: "indisponible", message: fr.jarvis.voix.reveil.moteurIndisponible });
+      }
       if (!acces.ok) return err({ code: "interdit", message: fr.jarvis.voix.reveil.microRefuse });
-      prise = acces.data;
-      for (const piste of prise.flux.getTracks()) piste.addEventListener("ended", pisteTerminee);
+      maPrise = acces.data;
+      libererDemarrage = liberer;
+      // L'écouteur est posé AVANT `start` : une piste qui meurt pendant les
+      // 60 s de préparation doit être vue, pas attendue. Chaque démarrage a son
+      // propre rappel : un ancien nettoyage ne retire pas celui du nouveau.
+      mesEcouteurs = maPrise.flux.getTracks().map((piste) => ({ piste, rappel: rappelFin }));
+      for (const { piste, rappel } of mesEcouteurs) piste.addEventListener("ended", rappel);
+      if (pisteMorte(maPrise)) {
+        signalerMicroPerdu();
+        liberer();
+        return err({ code: "indisponible", message: fr.jarvis.voix.reveil.microRefuse });
+      }
       const contexte = contexteAudioPartage();
       const source = sourcePartagee();
       if (contexte === null || source === null) {
-        fermer();
+        liberer();
         return err({ code: "indisponible", message: fr.jarvis.voix.reveil.moteurIndisponible });
       }
       if (contexte.sampleRate < 8_000 || contexte.sampleRate > 96_000) {
-        fermer();
+        liberer();
         return err({ code: "indisponible", message: fr.jarvis.voix.reveil.frequenceIncompatible });
       }
       const sourceRate = contexte.sampleRate;
       void contexte.resume().catch(() => {});
-      if (!(await requete("start")).ok) {
-        fermer();
+      // Une reprise ferme l'ancien worker : laisser le `stop` partir avant le
+      // `start` évite qu'il tue le worker tout juste réarmé.
+      const arret = arretEnVol;
+      if (arret !== null) {
+        await arret;
+        if (jeton !== generation) {
+          liberer();
+          return err({ code: "indisponible", message: fr.jarvis.voix.reveil.moteurIndisponible });
+        }
+      }
+      const reponse = await requete("start");
+      // Le démarrage doit encore être propriétaire APRÈS chaque attente.
+      if (jeton !== generation) {
+        liberer();
         return err({ code: "indisponible", message: fr.jarvis.voix.reveil.moteurIndisponible });
       }
+      if (!reponse.ok) {
+        liberer();
+        return err({ code: "indisponible", message: fr.jarvis.voix.reveil.moteurIndisponible });
+      }
+      if (pisteMorte(maPrise)) {
+        signalerMicroPerdu();
+        liberer();
+        return err({ code: "indisponible", message: fr.jarvis.voix.reveil.microRefuse });
+      }
 
-      actif = true;
-      suspendu = false;
-      declenche = false;
-      echecs = 0;
-      erreurSignalee = false;
-      echecsPing = 0;
-      restes = new Uint8Array(0);
-      effacerReprise();
-      noeud = contexte.createScriptProcessor(BLOC_AUDIO, 1, 1);
-      noeud.onaudioprocess = (evenement) => {
+      monNoeud = contexte.createScriptProcessor(BLOC_AUDIO, 1, 1);
+      monNoeud.onaudioprocess = (evenement) => {
         if (!actif || suspendu || declenche) return;
         const entrant = floatVersPcm16(evenement.inputBuffer.getChannelData(0), sourceRate);
         const fusion = new Uint8Array(restes.length + entrant.length);
@@ -335,16 +440,53 @@ export function creerDetecteurVosk(
         }
         restes = fusion.slice(debut);
       };
-      muet = contexte.createGain();
-      muet.gain.value = 0;
-      source.connect(noeud);
-      noeud.connect(muet);
-      muet.connect(contexte.destination);
+      monMuet = contexte.createGain();
+      monMuet.gain.value = 0;
+      source.connect(monNoeud);
+      monNoeud.connect(monMuet);
+      monMuet.connect(contexte.destination);
+
+      // Dernier verrou d'appartenance : rien ne s'intercale entre ce contrôle
+      // et la publication synchrone ci-dessous.
+      if (jeton !== generation) {
+        liberer();
+        return err({ code: "indisponible", message: fr.jarvis.voix.reveil.moteurIndisponible });
+      }
+
+      engage = true;
+      prise = maPrise;
+      noeud = monNoeud;
+      muet = monMuet;
+      ecouteursPistes = mesEcouteurs;
+      if (libererDemarrage === liberer) libererDemarrage = null;
+      actif = true;
+      suspendu = false;
+      declenche = false;
+      echecs = 0;
+      erreurSignalee = false;
+      echecsPing = 0;
+      restes = new Uint8Array(0);
+      effacerReprise();
       if (minuteurPing !== null) clearInterval(minuteurPing);
       minuteurPing = setInterval(() => void ping(), PING_MS);
       log.info("reveil.demarre", { context: "vosk-fr-FR-small" });
       return ok(true);
+    } catch {
+      liberer();
+      return err({ code: "indisponible", message: fr.jarvis.voix.reveil.moteurIndisponible });
+    }
+  }
+
+  return {
+    nom: "vosk/fr-FR-small",
+
+    disponible: async () => {
+      if (typeof window === "undefined") return false;
+      if (typeof navigator?.mediaDevices?.getUserMedia !== "function") return false;
+      return typeof AudioContext !== "undefined";
     },
+
+    demarrer,
 
     suspendre,
 

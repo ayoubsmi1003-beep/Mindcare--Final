@@ -131,6 +131,8 @@ export interface DetecteurReveil {
 }
 
 let detecteur: DetecteurReveil | null = null;
+/** Le détecteur a épuisé sa reprise : ne pas prétendre qu'il écoute. */
+let detecteurDefaillant = false;
 
 /**
  * Jeton de la reprise en cours. Toute installation ou désinstallation le
@@ -138,6 +140,33 @@ let detecteur: DetecteurReveil | null = null;
  * praticienne vient de retirer.
  */
 let repriseGeneration = 0;
+/** Jeton de la boucle de reprise active, pour ne pas en lancer deux. */
+let repriseEnCours: number | null = null;
+/** Motif d'une reprise épuisée pendant un tour actif, appliqué au retour veille. */
+let repriseEchouee: string | null = null;
+
+function motifReprise(code: string): string {
+  return code === "interdit" ? fr.jarvis.voix.reveil.microRefuse : fr.jarvis.voix.reveil.moteurIndisponible;
+}
+
+function afficherEchecReprise(motif: string): void {
+  annulerSuivi();
+  endpointeur?.arreter();
+  endpointeur = null;
+  // Un échec différé ne doit jamais laisser l'enregistreur de commande ouvert.
+  annulerDictee();
+  aller("erreur", motif);
+  log.error("jarvis.reveil.reprise.erreur", { code: "indisponible" });
+}
+
+/** Applique l'échec mémorisé si la machine revient à `veille`. */
+function appliquerRepriseEchouee(): boolean {
+  if (repriseEchouee === null) return false;
+  const motif = repriseEchouee;
+  repriseEchouee = null;
+  afficherEchecReprise(motif);
+  return true;
+}
 
 /**
  * Branche un détecteur. Appelé au démarrage de l'application SI un moteur a été
@@ -145,6 +174,8 @@ let repriseGeneration = 0;
  */
 export function installerDetecteur(d: DetecteurReveil | null): void {
   repriseGeneration += 1;
+  repriseEchouee = null;
+  detecteurDefaillant = false;
   detecteur?.arreter();
   detecteur = d;
   publier();
@@ -177,7 +208,7 @@ function vue(): VueVoix {
   return {
     etat,
     raison,
-    reveilArme: detecteur !== null && etat !== "desactive",
+    reveilArme: detecteur !== null && etat !== "desactive" && !detecteurDefaillant,
     sourceParole: etat === "parole" ? sourceParole : null,
   };
 }
@@ -376,6 +407,7 @@ let chienDeGardeParole: ReturnType<typeof setTimeout> | null = null;
  */
 export async function armerReveil(r: RappelsVoix): Promise<Result<true>> {
   rappels = r;
+  repriseEchouee = null;
 
   if (detecteur === null) {
     aller("desactive", fr.jarvis.voix.reveil.aucunDetecteur);
@@ -385,6 +417,7 @@ export async function armerReveil(r: RappelsVoix): Promise<Result<true>> {
   // « Disponible » se CONSTATE — assets présents, WASM chargeable — jamais ne
   // se suppose. Un détecteur déclaré mais sans modèle échouerait au premier mot.
   if (!(await detecteur.disponible())) {
+    detecteurDefaillant = true;
     aller("desactive", fr.jarvis.voix.reveil.moteurIndisponible);
     return err({ code: "indisponible", message: fr.jarvis.voix.reveil.moteurIndisponible });
   }
@@ -393,6 +426,7 @@ export async function armerReveil(r: RappelsVoix): Promise<Result<true>> {
     void surReveil();
   });
   if (!demarrage.ok) {
+    detecteurDefaillant = true;
     // ⚠️ NE PAS ACCUSER LE MICRO DE TOUT CE QUI RATE ICI.
     //
     // DÉFAUT MESURÉ LE 2026-08-27 : le runtime ONNX manquait (404 sur le
@@ -423,6 +457,7 @@ export async function armerReveil(r: RappelsVoix): Promise<Result<true>> {
     else signalerFinParole();
   });
 
+  detecteurDefaillant = false;
   aller("veille");
   log.info("jarvis.reveil.arme", { context: `moteur:${detecteur.nom}` });
   return ok(true);
@@ -452,54 +487,106 @@ function attendre(ms: number): Promise<void> {
  * `prendreMicro` dans `demarrer` réacquiert le périphérique.
  */
 export async function relancerArmement(code: "micro" | "transport"): Promise<void> {
-  const jeton = (repriseGeneration += 1);
+  // Une boucle est déjà propriétaire de cette époque : les erreurs suivantes
+  // n'ouvrent pas une seconde boucle concurrente. Un changement d'époque
+  // (désarmement ou nouveau détecteur) autorise, lui, une nouvelle boucle.
+  if (repriseEnCours === repriseGeneration) return;
+  const jeton = repriseGeneration;
+  repriseEnCours = jeton;
   log.warn("jarvis.reveil.reprise", { code, count: DELAIS_REPRISE.length });
-  let dernierCode = "indisponible";
-  for (let tentative = 0; tentative < DELAIS_REPRISE.length; tentative += 1) {
-    await attendre(DELAIS_REPRISE[tentative]!);
-    if (jeton !== repriseGeneration) return;
-    const d = detecteur;
-    // La praticienne a pu arrêter la voix pendant l'attente : on ne rouvre pas
-    // le micro dans son dos.
-    if (d === null || rappels === null || references === 0 || etat === "desactive") return;
-    const resultat = await d.demarrer(() => void surReveil());
-    if (jeton !== repriseGeneration) return;
-    if (resultat.ok) {
-      // La reprise ne concerne QUE l'écoute de fond. Si une capture, un
-      // traitement ou une réponse est en cours, son état prime : le déclarer
-      // « veille » ici ferait croire que le micro de commande est fermé. La
-      // suspension appartenait à ce tour et a disparu avec l'ancien graphe —
-      // on la rétablit au lieu de laisser le détecteur écouter la commande ou
-      // la voix de Jarvis.
-      if (etat === "reveille" || etat === "ecoute" || etat === "traitement" || etat === "parole") {
-        d.suspendre();
-      } else if (etat === "veille" || etat === "erreur") {
-        aller("veille");
+  let dernierCode = code === "micro" ? "interdit" : "indisponible";
+  try {
+    for (let tentative = 0; tentative < DELAIS_REPRISE.length; tentative += 1) {
+      await attendre(DELAIS_REPRISE[tentative]!);
+      if (jeton !== repriseGeneration) return;
+      const d = detecteur;
+      // La praticienne a pu arrêter la voix pendant l'attente : on ne rouvre
+      // pas le micro dans son dos.
+      if (d === null || rappels === null || references === 0 || etat === "desactive") return;
+
+      // ⚠️ REPRISE = VRAI REDÉMARRAGE, PAS UN SIMULACRE. `demarrer` sur un
+      // détecteur actif rendrait `ok` sans rien éprouver. On ferme donc le
+      // graphe et le worker, puis on repart par `prendreMicro` + `start`.
+      d.arreter();
+      let resultat: Result<true>;
+      try {
+        resultat = await d.demarrer(() => void surReveil());
+      } catch (cause) {
+        if (jeton !== repriseGeneration) {
+          d.arreter();
+          return;
+        }
+        d.arreter();
+        dernierCode = "indisponible";
+        log.warn("jarvis.reveil.reprise.echec", {
+          code: "exception",
+          count: tentative + 1,
+          causeName: cause instanceof Error ? cause.name : "inconnue",
+        });
+        continue;
       }
-      log.info("jarvis.reveil.reprise.ok", { context: d.nom, count: tentative + 1 });
+      if (jeton !== repriseGeneration) {
+        // L'époque a changé pendant l'attente : le démarrage n'a plus de
+        // propriétaire. On referme pour garantir l'absence de micro fantôme.
+        d.arreter();
+        return;
+      }
+      if (resultat.ok) {
+        repriseEchouee = null;
+        detecteurDefaillant = false;
+        publier();
+        // La reprise ne concerne QUE l'écoute de fond. Si une capture, un
+        // traitement ou une réponse est en cours, son état prime : le déclarer
+        // « veille » ici ferait croire que le micro de commande est fermé. La
+        // suspension appartenait à ce tour et a disparu avec l'ancien graphe —
+        // on la rétablit au lieu de laisser le détecteur écouter la commande ou
+        // la voix de Jarvis.
+        if (etat === "reveille" || etat === "ecoute" || etat === "traitement" || etat === "parole") {
+          d.suspendre();
+        } else if (etat === "veille" || etat === "erreur") {
+          aller("veille");
+        }
+        log.info("jarvis.reveil.reprise.ok", { context: d.nom, count: tentative + 1 });
+        return;
+      }
+      dernierCode = resultat.error.code;
+      log.warn("jarvis.reveil.reprise.echec", { code: resultat.error.code, count: tentative + 1 });
+    }
+    if (jeton !== repriseGeneration) return;
+    if (detecteur === null || rappels === null) return;
+
+    const motif = motifReprise(dernierCode);
+    detecteurDefaillant = true;
+    publier();
+    if (etat === "veille" || etat === "erreur") {
+      repriseEchouee = null;
+      afficherEchecReprise(motif);
       return;
     }
-    dernierCode = resultat.error.code;
-    log.warn("jarvis.reveil.reprise.echec", { code: resultat.error.code, count: tentative + 1 });
-  }
-  if (jeton !== repriseGeneration) return;
-  if (detecteur === null || rappels === null) return;
-  // ⚠️ NE JAMAIS ARRACHER UNE CAPTURE EN COURS. Poser `erreur` pendant
-  // `ecoute` laisserait l'enregistreur ouvert sans plus aucun chemin pour le
-  // clore (`cloturerCommande` exige l'état `ecoute`). Une panne constatée hors
-  // veille est donc journalisée, et l'état actif garde la priorité.
-  if (etat !== "veille" && etat !== "erreur") {
+    // ⚠️ NE JAMAIS ARRACHER UNE CAPTURE EN COURS. Poser `erreur` pendant
+    // `ecoute` laisserait l'enregistreur ouvert sans plus aucun chemin pour le
+    // clore. On mémorise l'échec et on l'applique au prochain retour en veille.
+    if (
+      etat === "reveille" ||
+      etat === "ecoute" ||
+      etat === "traitement" ||
+      etat === "parole" ||
+      etat === "interrompu"
+    ) {
+      repriseEchouee = motif;
+      log.error("jarvis.reveil.reprise.differee", { code: dernierCode, context: etat });
+      return;
+    }
     log.error("jarvis.reveil.reprise.abandon", { code: dernierCode, context: etat });
-    return;
+  } finally {
+    if (repriseEnCours === jeton) repriseEnCours = null;
   }
-  aller(
-    "erreur",
-    dernierCode === "interdit" ? fr.jarvis.voix.reveil.microRefuse : fr.jarvis.voix.reveil.moteurIndisponible,
-  );
 }
 
 export function desarmerReveil(): void {
   repriseGeneration += 1;
+  repriseEchouee = null;
+  detecteurDefaillant = false;
   captureCourante += 1; // invalide toute clôture en vol
   annulerSuivi();
   if (chienDeGardeParole !== null) {
@@ -720,6 +807,7 @@ async function acheminerTranscription(texte: string, generation: number): Promis
     annulerSuivi();
     aller("veille");
     log.info("jarvis.reveil.fauxReveil", { count: 1 });
+    appliquerRepriseEchouee();
     return;
   }
 
@@ -764,7 +852,7 @@ async function acheminerTranscription(texte: string, generation: number): Promis
   if (etatVoix() === "traitement" && generation === captureCourante) {
     detecteur?.reprendre();
     aller("veille");
-    attendreParole();
+    if (!appliquerRepriseEchouee()) attendreParole();
   }
 }
 
@@ -852,6 +940,9 @@ export function signalerFinParole(): void {
   if (etat !== "parole") return;
   detecteur?.reprendre();
   aller("veille");
+  // Une reprise de détecteur épuisée pendant la réponse devient visible ici,
+  // quand plus aucune lecture ni capture ne possède l'état.
+  if (appliquerRepriseEchouee()) return;
 
   // La réponse est finie : le docteur peut enchaîner sans redire « Alexa ».
   // `annulerSuivi()` (envoi tapé, arrêt manuel) a déjà posé le drapeau à faux.
@@ -884,18 +975,20 @@ export function interrompreVoix(): void {
   // Retour en veille après un battement : l'état `interrompu` existe pour être
   // VU, pas pour durer.
   setTimeout(() => {
-    if (etat === "interrompu") aller("veille");
+    if (etat === "interrompu") {
+      aller("veille");
+      appliquerRepriseEchouee();
+    }
   }, 800);
 }
 
 /** Remet la machine au repos après une erreur, sans la désarmer. */
 export function acquitterErreur(): void {
   if (etat !== "erreur") return;
-  detecteur?.reprendre();
-  aller(
-    detecteur === null ? "desactive" : "veille",
-    detecteur === null ? fr.jarvis.voix.reveil.aucunDetecteur : null,
-  );
+  const d = detecteur;
+  d?.reprendre();
+  aller(d === null ? "desactive" : "veille", d === null ? fr.jarvis.voix.reveil.aucunDetecteur : null);
+  if (d !== null) appliquerRepriseEchouee();
 }
 
 /**

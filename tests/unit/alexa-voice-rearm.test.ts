@@ -72,6 +72,7 @@ import {
   abonnerVoix,
   cloturerCommande,
   desarmerReveil,
+  detecteurInstalle,
   etatVoix,
   installerDetecteur,
   interrompreVoix,
@@ -397,8 +398,31 @@ describe("detector supervision", () => {
 
     expect(etatVoix()).toBe("veille");
     // The recovery never routes through installerDetecteur(null) or
-    // desarmerReveil: the microphone is re-acquired inside demarrer.
-    expect(faux.arreterDetecteur).not.toHaveBeenCalled();
+    // desarmerReveil; it forces a fresh graph: arreter() then demarrer().
+    expect(detecteurInstalle()).not.toBeNull();
+    expect(faux.arreterDetecteur).toHaveBeenCalledTimes(1);
+    expect(faux.arreterDetecteur.mock.invocationCallOrder[0]).toBeLessThan(
+      faux.demarrerDetecteur.mock.invocationCallOrder[0]!,
+    );
+  });
+
+  it("forces a real restart probe on transport failure", async () => {
+    vi.useFakeTimers({ shouldAdvanceTime: true });
+    const release = retenirVoix({ onCommande: faux.commande });
+    relachements.push(release);
+    await vi.waitFor(() => expect(faux.demarrerDetecteur).toHaveBeenCalledTimes(1));
+    faux.demarrerDetecteur.mockClear();
+    faux.arreterDetecteur.mockClear();
+
+    faux.erreur!("transport");
+    await vi.advanceTimersByTimeAsync(250);
+    await vi.waitFor(() => expect(faux.demarrerDetecteur).toHaveBeenCalledTimes(1));
+
+    expect(faux.arreterDetecteur).toHaveBeenCalledTimes(1);
+    expect(faux.arreterDetecteur.mock.invocationCallOrder[0]).toBeLessThan(
+      faux.demarrerDetecteur.mock.invocationCallOrder[0]!,
+    );
+    expect(etatVoix()).toBe("veille");
   });
 
   it("surfaces an error only after four failed restarts", async () => {
@@ -406,6 +430,7 @@ describe("detector supervision", () => {
     const release = retenirVoix({ onCommande: faux.commande });
     relachements.push(release);
     await vi.waitFor(() => expect(faux.demarrerDetecteur).toHaveBeenCalledTimes(1));
+    faux.arreterDetecteur.mockClear();
 
     for (let i = 0; i < 4; i += 1) {
       faux.demarrerDetecteur.mockResolvedValueOnce({
@@ -421,6 +446,59 @@ describe("detector supervision", () => {
     await vi.advanceTimersByTimeAsync(500 + 1_000 + 2_000);
     await vi.waitFor(() => expect(etatVoix()).toBe("erreur"));
     expect(faux.demarrerDetecteur).toHaveBeenCalledTimes(5);
-    expect(faux.arreterDetecteur).not.toHaveBeenCalled();
+    expect(faux.arreterDetecteur).toHaveBeenCalledTimes(4);
+  });
+
+  it("shows a deferred recovery failure when playback ends", async () => {
+    vi.useFakeTimers({ shouldAdvanceTime: true });
+    const vues: boolean[] = [];
+    const stopVue = abonnerVoix((vue) => vues.push(vue.reveilArme));
+    const release = retenirVoix({ onCommande: faux.commande });
+    relachements.push(release, stopVue);
+    await vi.waitFor(() => expect(faux.demarrerDetecteur).toHaveBeenCalledTimes(1));
+    signalerParole();
+    expect(etatVoix()).toBe("parole");
+
+    for (let i = 0; i < 4; i += 1) {
+      faux.demarrerDetecteur.mockResolvedValueOnce({
+        ok: false,
+        error: { code: "interdit", message: "micro refusé" },
+      });
+    }
+    faux.erreur!("micro");
+    await vi.advanceTimersByTimeAsync(250 + 500 + 1_000 + 2_000);
+    await vi.waitFor(() => expect(faux.demarrerDetecteur).toHaveBeenCalledTimes(5));
+    expect(etatVoix()).toBe("parole");
+
+    signalerFinParole();
+    expect(etatVoix()).toBe("erreur");
+    expect(vues.at(-1)).toBe(false);
+    expect(faux.demarrerDetecteur).toHaveBeenCalledTimes(5);
+  });
+
+  it("closes a start that resolves after the voice was disarmed", async () => {
+    vi.useFakeTimers({ shouldAdvanceTime: true });
+    const release = retenirVoix({ onCommande: faux.commande });
+    relachements.push(release);
+    await vi.waitFor(() => expect(faux.demarrerDetecteur).toHaveBeenCalledTimes(1));
+    faux.arreterDetecteur.mockClear();
+
+    let resoudre!: (resultat: { ok: boolean; data?: boolean }) => void;
+    faux.demarrerDetecteur.mockImplementationOnce(
+      () =>
+        new Promise((resolve) => {
+          resoudre = resolve;
+        }),
+    );
+    faux.erreur!("micro");
+    await vi.advanceTimersByTimeAsync(250);
+    await vi.waitFor(() => expect(faux.demarrerDetecteur).toHaveBeenCalledTimes(2));
+
+    desarmerReveil();
+    resoudre({ ok: true, data: true });
+    await vi.advanceTimersByTimeAsync(0);
+    await vi.waitFor(() => expect(faux.arreterDetecteur).toHaveBeenCalledTimes(3));
+
+    expect(etatVoix()).toBe("desactive");
   });
 });

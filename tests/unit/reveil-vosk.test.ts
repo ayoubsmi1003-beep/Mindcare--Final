@@ -3,6 +3,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 const { invoke, detected, priseRendre, noeud, piste } = vi.hoisted(() => {
   const node = { onaudioprocess: null as ((e: unknown) => void) | null, connect: vi.fn(), disconnect: vi.fn() };
   const track = {
+    readyState: "live" as MediaStreamTrackState,
     ecouteurs: new Map<string, () => void>(),
     addEventListener: vi.fn((type: string, cb: () => void) => {
       track.ecouteurs.set(type, cb);
@@ -10,7 +11,10 @@ const { invoke, detected, priseRendre, noeud, piste } = vi.hoisted(() => {
     removeEventListener: vi.fn((type: string) => {
       track.ecouteurs.delete(type);
     }),
-    fin: () => track.ecouteurs.get("ended")?.(),
+    fin: () => {
+      track.readyState = "ended";
+      track.ecouteurs.get("ended")?.();
+    },
   };
   return { invoke: vi.fn(), detected: { value: false }, priseRendre: vi.fn(), noeud: node, piste: track };
 });
@@ -50,6 +54,7 @@ beforeEach(() => {
   });
   detected.value = false;
   noeud.onaudioprocess = null;
+  piste.readyState = "live";
   piste.ecouteurs.clear();
   vi.clearAllMocks();
 });
@@ -66,6 +71,14 @@ function frame(value = 0.1): void {
 
 function audioCalls(): number {
   return invoke.mock.calls.filter(([, body]) => (body as { action: string }).action === "audio").length;
+}
+
+function differe<T>(): { promesse: Promise<T>; resoudre: (valeur: T) => void } {
+  let resoudre!: (valeur: T) => void;
+  const promesse = new Promise<T>((resolve) => {
+    resoudre = resolve;
+  });
+  return { promesse, resoudre };
 }
 
 async function unBloc(): Promise<void> {
@@ -124,7 +137,7 @@ describe("Vosk wake-word detector", () => {
     detecteur.arreter();
     expect(priseRendre).toHaveBeenCalledTimes(1);
     expect(noeud.disconnect).toHaveBeenCalled();
-    expect(invoke).toHaveBeenCalledWith("jarvis-wake", { action: "stop" });
+    expect(invoke).toHaveBeenCalledWith("jarvis-wake", { action: "stop" }, expect.anything());
   });
 
   it("fires five wake words with resets between them and never disarms the microphone", async () => {
@@ -141,7 +154,7 @@ describe("Vosk wake-word detector", () => {
       detecteur.reprendre();
     }
     expect(priseRendre).not.toHaveBeenCalled();
-    expect(invoke).not.toHaveBeenCalledWith("jarvis-wake", { action: "stop" });
+    expect(invoke).not.toHaveBeenCalledWith("jarvis-wake", { action: "stop" }, expect.anything());
   });
 
   it("keeps the microphone open through three transport failures and retries the worker", async () => {
@@ -162,7 +175,7 @@ describe("Vosk wake-word detector", () => {
     }
 
     expect(priseRendre).not.toHaveBeenCalled();
-    expect(invoke).not.toHaveBeenCalledWith("jarvis-wake", { action: "stop" });
+    expect(invoke).not.toHaveBeenCalledWith("jarvis-wake", { action: "stop" }, expect.anything());
 
     // Three failures schedule the 2 s retry; a later `start` must succeed and
     // leave the detector able to fire again.
@@ -182,6 +195,42 @@ describe("Vosk wake-word detector", () => {
     frame();
     frame();
     await vi.waitFor(() => expect(reveil).toHaveBeenCalledTimes(1));
+  });
+
+  it("signals transport after five failures and can be restarted for real", async () => {
+    const erreurs: string[] = [];
+    const detecteur = creer((code) => erreurs.push(code));
+    const reveil = vi.fn();
+    await detecteur.demarrer(reveil);
+    const demarrages = invoke.mock.calls.filter(([, body]) => (body as { action: string }).action === "start").length;
+
+    invoke.mockImplementation(async (_name: string, body: { action: string }) => {
+      if (body.action === "audio") return { ok: false, error: { code: "indisponible" } };
+      return { ok: true, data: { ready: true } };
+    });
+
+    for (let i = 0; i < 5; i += 1) {
+      await unBloc();
+      await vi.waitFor(() => expect(audioCalls()).toBe(i + 1));
+      await new Promise((resolve) => setTimeout(resolve, 0));
+      if (i < 4) expect(erreurs).toEqual([]);
+    }
+
+    expect(erreurs).toEqual(["transport"]);
+    expect(priseRendre).not.toHaveBeenCalled();
+
+    // The state machine's recovery closes then starts a fresh graph; that must
+    // issue a real `start`, not a cosmetic `ok` on the still-active detector.
+    detecteur.arreter();
+    invoke.mockImplementation(async (_name: string, body: { action: string }) => {
+      if (body.action === "audio") return { ok: true, data: { detected: false } };
+      return { ok: true, data: { ready: true } };
+    });
+    expect(await detecteur.demarrer(reveil)).toMatchObject({ ok: true });
+    const redemarrages = invoke.mock.calls.filter(
+      ([, body]) => (body as { action: string }).action === "start",
+    ).length;
+    expect(redemarrages).toBeGreaterThan(demarrages);
   });
 
   it("pings while active and reports transport after two unanswered pings", async () => {
@@ -212,8 +261,9 @@ describe("Vosk wake-word detector", () => {
     piste.fin();
     expect(erreurs).toEqual(["micro"]);
     expect(priseRendre).toHaveBeenCalledTimes(1);
-    expect(invoke).toHaveBeenCalledWith("jarvis-wake", { action: "stop" });
+    expect(invoke).toHaveBeenCalledWith("jarvis-wake", { action: "stop" }, expect.anything());
 
+    piste.readyState = "live";
     expect(await detecteur.demarrer(vi.fn())).toMatchObject({ ok: true });
     expect(invoke).toHaveBeenCalledWith("jarvis-wake", { action: "start" });
   });
@@ -236,5 +286,78 @@ describe("Vosk wake-word detector", () => {
     frame();
     await vi.waitFor(() => expect(reveil).toHaveBeenCalledTimes(2));
     expect(priseRendre).not.toHaveBeenCalled();
+  });
+
+  it("shares one in-flight start between concurrent callers", async () => {
+    const start = differe<unknown>();
+    invoke.mockImplementation(async (_name: string, body: { action: string }) => {
+      if (body.action === "start") return start.promesse;
+      return { ok: true, data: { detected: false } };
+    });
+    const detecteur = creer();
+    const premier = detecteur.demarrer(vi.fn());
+    const second = detecteur.demarrer(vi.fn());
+    expect(second).toBe(premier);
+    start.resoudre({ ok: true, data: { ready: true } });
+    expect(await premier).toMatchObject({ ok: true });
+  });
+
+  it("cancels an in-flight start when stopped, leaving no microphone or graph", async () => {
+    const start = differe<unknown>();
+    invoke.mockImplementation(async (_name: string, body: { action: string }) => {
+      if (body.action === "start") return start.promesse;
+      return { ok: true, data: { detected: false } };
+    });
+    const detecteur = creer();
+    const demarrage = detecteur.demarrer(vi.fn());
+    await vi.waitFor(() => expect(invoke).toHaveBeenCalledWith("jarvis-wake", { action: "start" }));
+
+    detecteur.arreter();
+    start.resoudre({ ok: true, data: { ready: true } });
+
+    expect(await demarrage).toMatchObject({ ok: false });
+    expect(priseRendre).toHaveBeenCalledTimes(1);
+    expect(noeud.connect).not.toHaveBeenCalled();
+  });
+
+  it("never commits an active graph when the track ends during a deferred start", async () => {
+    const start = differe<unknown>();
+    let appels = 0;
+    invoke.mockImplementation(async (_name: string, body: { action: string }) => {
+      if (body.action === "start") {
+        appels += 1;
+        if (appels === 1) return start.promesse;
+        return { ok: true, data: { ready: true } };
+      }
+      return { ok: true, data: { detected: false } };
+    });
+    const erreurs: string[] = [];
+    const detecteur = creer((code) => erreurs.push(code));
+    const demarrage = detecteur.demarrer(vi.fn());
+    await vi.waitFor(() => expect(appels).toBe(1));
+
+    piste.fin();
+    start.resoudre({ ok: true, data: { ready: true } });
+
+    expect(await demarrage).toMatchObject({ ok: false });
+    expect(erreurs).toEqual(["micro"]);
+    expect(priseRendre).toHaveBeenCalledTimes(1);
+    expect(noeud.connect).not.toHaveBeenCalled();
+
+    // A fresh start re-acquires the device instead of reusing the dead graph.
+    piste.readyState = "live";
+    expect(await detecteur.demarrer(vi.fn())).toMatchObject({ ok: true });
+    expect(appels).toBe(2);
+  });
+
+  it("refuses an already-ended track before calling start", async () => {
+    piste.readyState = "ended";
+    const erreurs: string[] = [];
+    const detecteur = creer((code) => erreurs.push(code));
+
+    expect(await detecteur.demarrer(vi.fn())).toMatchObject({ ok: false });
+    expect(erreurs).toEqual(["micro"]);
+    expect(priseRendre).toHaveBeenCalledTimes(1);
+    expect(invoke).not.toHaveBeenCalledWith("jarvis-wake", { action: "start" });
   });
 });

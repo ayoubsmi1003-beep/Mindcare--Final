@@ -34,8 +34,12 @@ interface Reponse {
 
 class WorkerVosk {
   private readonly processus: ChildProcessWithoutNullStreams;
-  private readonly attentes = new Map<string, (r: Reponse) => void>();
+  private readonly attentes = new Map<
+    string,
+    { resoudre: (r: Reponse) => void; rejeter: (cause: Error) => void }
+  >();
   private resoudrePret: (() => void) | null = null;
+  private rejeterPret: ((cause: Error) => void) | null = null;
   private tampon = "";
   readonly pret: Promise<void>;
   readonly inattendus: Reponse[] = [];
@@ -55,10 +59,16 @@ class WorkerVosk {
         },
       },
     );
-    this.pret = new Promise<void>((resolve) => {
+    this.pret = new Promise<void>((resolve, reject) => {
       this.resoudrePret = resolve;
+      this.rejeterPret = reject;
     });
     this.processus.stderr.resume();
+    // A killed child can make a late write fail on the stream itself; tests
+    // must report that through `envoyer`, never as an unhandled 'error' event.
+    this.processus.stdin.on("error", () => {});
+    this.processus.stdout.on("error", () => {});
+    this.processus.stderr.on("error", () => {});
     this.processus.stdout.setEncoding("utf8");
     this.processus.stdout.on("data", (fragment: string) => {
       this.tampon += fragment;
@@ -80,12 +90,26 @@ class WorkerVosk {
         const attente = reponse.id === undefined ? undefined : this.attentes.get(reponse.id);
         if (attente !== undefined) {
           this.attentes.delete(reponse.id!);
-          attente(reponse);
+          attente.resoudre(reponse);
         } else {
           this.inattendus.push(reponse);
         }
       }
     });
+    // A missing Python/model must fail with a named cause, never hang until the
+    // 120 s test timeout.
+    this.processus.on("error", (cause: Error) => {
+      this.echouer(new Error(`wake-worker spawn/error: ${cause.message}`));
+    });
+    this.processus.on("exit", (code: number | null, signal: NodeJS.Signals | null) => {
+      this.echouer(new Error(`wake-worker exited before ready (code=${code}, signal=${signal})`));
+    });
+  }
+
+  private echouer(cause: Error): void {
+    this.rejeterPret?.(cause);
+    for (const attente of this.attentes.values()) attente.rejeter(cause);
+    this.attentes.clear();
   }
 
   async envoyer(action: string, extra: Record<string, unknown> = {}, delai = 20_000): Promise<Reponse> {
@@ -95,9 +119,15 @@ class WorkerVosk {
         this.attentes.delete(id);
         reject(new Error(`timeout:${action}`));
       }, delai);
-      this.attentes.set(id, (r) => {
-        clearTimeout(minuteur);
-        resolve(r);
+      this.attentes.set(id, {
+        resoudre: (r) => {
+          clearTimeout(minuteur);
+          resolve(r);
+        },
+        rejeter: (cause) => {
+          clearTimeout(minuteur);
+          reject(cause);
+        },
       });
     });
     this.processus.stdin.write(`${JSON.stringify({ id, action, ...extra })}\n`);
@@ -133,11 +163,13 @@ function pcm16(path: string): Buffer {
     const taille = wav.readUInt32LE(offset + 4);
     if (id === "fmt ") {
       const format = {
+        codec: wav.readUInt16LE(offset + 8),
         canaux: wav.readUInt16LE(offset + 10),
         taux: wav.readUInt32LE(offset + 12),
         bits: wav.readUInt16LE(offset + 22),
       };
       expect(format, `WAKE FIXTURE FAIL: ${path} must be 16 kHz mono PCM16`).toEqual({
+        codec: 1,
         canaux: 1,
         taux: 16_000,
         bits: 16,
@@ -166,12 +198,29 @@ function attendre(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+async function attendrePret(worker: WorkerVosk, delai = 60_000): Promise<void> {
+  let minuteur: ReturnType<typeof setTimeout> | undefined;
+  try {
+    await Promise.race([
+      worker.pret,
+      new Promise<never>((_, reject) => {
+        minuteur = setTimeout(
+          () => reject(new Error("wake-worker: no ready line within 60 s (model, packages or Python missing)")),
+          delai,
+        );
+      }),
+    ]);
+  } finally {
+    if (minuteur !== undefined) clearTimeout(minuteur);
+  }
+}
+
 describe.skipIf(process.env["MINDCARE_VOICE_REAL"] !== "1")("real Vosk wake worker", () => {
   let worker: WorkerVosk;
 
   beforeAll(async () => {
     worker = new WorkerVosk();
-    await worker.pret;
+    await attendrePret(worker);
   }, 120_000);
 
   afterAll(() => {
@@ -198,6 +247,21 @@ describe.skipIf(process.env["MINDCARE_VOICE_REAL"] !== "1")("real Vosk wake work
     }
     expect(blocs).toHaveLength(5);
     expect(blocs.every((bloc) => bloc > 0 && bloc <= 5)).toBe(true);
+    expect(worker.vivant()).toBe(true);
+  }, 120_000);
+
+  it("detects the configured pronunciation variants", async () => {
+    for (const fichier of ["alexia.wav", "eh-lexa.wav"]) {
+      await attendre(REFRACTORY_MS + 100);
+      const pcm = pcm16(join(FIXTURES, fichier));
+      const bloc = await detecter(worker, pcm);
+      expect(
+        bloc,
+        `WAKE FIXTURE FAIL: ${fichier} was not detected in five 500 ms chunks ` +
+          `(grammar '["alexa", "alexia", "eh lexa", "[unk]"]')`,
+      ).toBeGreaterThan(0);
+      expect(await worker.envoyer("reset")).toMatchObject({ ok: true, detected: false });
+    }
     expect(worker.vivant()).toBe(true);
   }, 120_000);
 
