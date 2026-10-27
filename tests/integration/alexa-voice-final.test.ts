@@ -214,13 +214,13 @@ describe.skipIf(!REEL)("real local speech worker (faster-whisper small int8)", (
       expect(encore.texte?.toLowerCase()).toContain("bonjour");
       noter("STT après redémarrage");
 
-      // Measured end-to-end on the reference machine: 170.9 s on the accepted
-      // final run (93.2 s quiet, 196.0 s with a concurrent build). The worker
-      // runtime keeps its own 180 s ready cap, 60 s STT cap and 120 s TTS cap.
-      // This whole-test bound is 240 s: ~69 s above the measured accepted run,
-      // and deliberately below the 300 s Vitest timeout so the assertion can
-      // actually fire. The extra 60 s of runner time only covers startup and
-      // teardown around the bounded body; it is not a model-operation budget.
+      // Measured end-to-end at normal process priority on the reference
+      // machine: 208.9 s, i.e. ~31 s of headroom under the 240 s bound below.
+      // The worker runtime keeps its own 180 s ready cap, 60 s STT cap and
+      // 120 s TTS cap. This whole-test bound is deliberately below the 300 s
+      // Vitest timeout so the assertion can actually fire instead of the
+      // runner killing the test; the extra runner time only covers startup and
+      // teardown around the bounded body, not a model-operation budget.
       expect(Date.now() - debut).toBeLessThan(240_000);
     },
     300_000,
