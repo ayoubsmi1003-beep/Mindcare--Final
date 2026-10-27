@@ -1,5 +1,5 @@
 import { createHash } from "node:crypto";
-import { readdirSync, readFileSync } from "node:fs";
+import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 
@@ -15,24 +15,6 @@ function inventaire(): LigneInventaire[] {
   return JSON.parse(readFileSync(join(VOIX, "inventory.json"), "utf8")) as LigneInventaire[];
 }
 
-/**
- * Walk the real tree, not the inventory: byte-code that exists on disk but is
- * excluded from the inventory ships unpinned through extraResources and makes
- * the package verifier reject a correct package.
- */
-function bytecodeSurDisque(dossier: string, trouves: string[] = []): string[] {
-  for (const entry of readdirSync(dossier, { withFileTypes: true })) {
-    const complet = join(dossier, entry.name);
-    if (entry.isDirectory()) {
-      if (entry.name === "__pycache__") trouves.push(complet);
-      else bytecodeSurDisque(complet, trouves);
-    } else if (entry.isFile() && entry.name.endsWith(".pyc")) {
-      trouves.push(complet);
-    }
-  }
-  return trouves;
-}
-
 describe("voice bundle inventory", () => {
   it("never records byte-code whose .pyc headers embed the install time", () => {
     const lignes = inventaire();
@@ -41,10 +23,6 @@ describe("voice bundle inventory", () => {
       (ligne) => ligne.path.endsWith(".pyc") || ligne.path.split("/").includes("__pycache__"),
     );
     expect(bytecode).toEqual([]);
-  });
-
-  it("leaves no byte-code on disk that the inventory could not pin", () => {
-    expect(bytecodeSurDisque(VOIX)).toEqual([]);
   });
 
   it("sorts every path deterministically so the hash does not depend on readdir order", () => {
@@ -70,5 +48,16 @@ describe("voice bundle inventory", () => {
     expect([...chemins].some((chemin) => chemin.startsWith("packages/faster_whisper/"))).toBe(true);
     expect([...chemins].some((chemin) => chemin.startsWith("packages/ctranslate2/"))).toBe(true);
     expect([...chemins].some((chemin) => chemin.startsWith("python/"))).toBe(true);
+  });
+
+  it("filters byte-code out of the packaged voice tree", () => {
+    const yaml = readFileSync(join(process.cwd(), "electron-builder.yml"), "utf8");
+    const debut = yaml.indexOf("- from: resources/voix");
+    expect(debut).toBeGreaterThan(-1);
+    const suivant = yaml.indexOf("\n  - ", debut + 1);
+    const bloc = yaml.slice(debut, suivant === -1 ? undefined : suivant);
+    expect(bloc).toContain("to: voix");
+    expect(bloc).toContain('"!**/__pycache__/**"');
+    expect(bloc).toContain('"!**/*.pyc"');
   });
 });

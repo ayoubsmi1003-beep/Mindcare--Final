@@ -333,8 +333,11 @@ async function controle() {
     if (!existsSync(join(PACKAGES, paquet))) echecs.push(`packages/${paquet}`);
   }
   const bytecode = [...listerBytecode(PACKAGES), ...listerBytecode(DOSSIER_PYTHON)];
-  if (bytecode.length > 0) {
-    echecs.push(`bytecode (${bytecode.length} entrée(s), ex. ${bytecode[0]})`);
+  if (bytecode.length > 0 && !JSON_OUT) {
+    console.warn(
+      `[voix] avertissement — ${bytecode.length} entrée(s) de byte-code ignorée(s) : ` +
+        `exclues de l'inventaire et retirées par le filtre de paquetage (ex. ${bytecode[0]})`,
+    );
   }
   const { inventory, json } = await contenuInventaire();
   const attendu = empreinte(json);
@@ -355,6 +358,7 @@ async function controle() {
   const result = {
     ok: echecs.length === 0,
     failures: echecs,
+    bytecodeExcluded: bytecode.length,
     models: MODELES.map(resumeModele),
     inventorySha256: attendu,
     inventoryFiles: inventory.length,

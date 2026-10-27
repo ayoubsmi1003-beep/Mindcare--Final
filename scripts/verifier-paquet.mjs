@@ -52,6 +52,7 @@ import { fileURLToPath } from "node:url";
 import { auditElectronModules, readAsarModules, readAsarPackage, auditServerDependencies } from "./lib/electron-runtime-audit.mjs";
 import {verifyAlexaPackage} from './lib/alexa-package-integrity.mjs';
 import { chargerPinsInventaireVoix } from "./lib/voix-inventory-pins.mjs";
+import { parcourirPaquet } from "./lib/paquet-inventaire.mjs";
 
 const RACINE = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const CIBLE = path.resolve(process.argv[2] ?? path.join(RACINE, "dist", "win-unpacked"));
@@ -71,19 +72,7 @@ if (!existsSync(CIBLE)) {
 
 // ── Inventaire : arborescence sur disque + contenu de app.asar ───────────────
 
-function parcourir(racine) {
-  const trouves = [];
-  const pile = [racine];
-  while (pile.length > 0) {
-    const courant = pile.pop();
-    for (const entree of readdirSync(courant, { withFileTypes: true })) {
-      const complet = path.join(courant, entree.name);
-      if (entree.isDirectory()) pile.push(complet);
-      else trouves.push(path.relative(racine, complet).split(path.sep).join("/"));
-    }
-  }
-  return trouves;
-}
+const surDisque = parcourirPaquet(CIBLE);
 
 /**
  * L'en-tête d'une archive asar est un « pickle » Chromium : quatre entiers
@@ -107,7 +96,6 @@ function fichiersAsar(cheminAsar) {
   return trouves;
 }
 
-const surDisque = parcourir(CIBLE);
 const cheminAsar = path.join(CIBLE, "resources", "app.asar");
 const dansAsar = existsSync(cheminAsar) ? fichiersAsar(cheminAsar).map((f) => `app.asar!/${f}`) : [];
 const inventaire = [...surDisque, ...dansAsar];
