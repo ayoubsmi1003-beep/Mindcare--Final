@@ -1,7 +1,7 @@
 import {expect,it} from "vitest";
-import {planKnowledgeQuery,matchesRequestedBook} from "@/server/alexa/knowledge-query";
+import {planKnowledgeQuery,matchesRequestedBook,requetePourLivreRequis} from "@/server/alexa/knowledge-query";
 
-// Only DSM-5 and Taylor are qualified for Alexa. Stahl remains unfinished.
+// ADR-041 : trois livres approuves (DSM-5, Maudsley, Stahl 7e).
 // La propriete de securite est INCHANGEE : une source qui n'est pas dans la
 // liste fermee reste refusee, et un livre nomme dans la question cible
 // UNIQUEMENT ce livre.
@@ -28,12 +28,12 @@ it('retains population and dose qualifiers after removing question scaffolding',
  expect(plan.queries.join(' ')).toMatch(/adult/u);
 });
 
-it("une question non qualifiee admet uniquement les deux livres qualifies", () => {
+it("une question non qualifiee admet les trois livres approuves", () => {
   const plan = planKnowledgeQuery("Quels sont les criteres du trouble panique ?")!;
   expect(plan.sourceTitle).toBeNull();
   expect(matchesRequestedBook({ source_titre: DSM5 }, plan)).toBe(true);
   expect(matchesRequestedBook({ source_titre: MAUDSLEY }, plan)).toBe(true);
-  expect(matchesRequestedBook({ source_titre: STAHL }, plan)).toBe(false);
+  expect(matchesRequestedBook({ source_titre: STAHL }, plan)).toBe(true);
 });
 
 it("une source hors liste fermee reste refusee", () => {
@@ -48,4 +48,27 @@ it("un livre nomme dans la question cible UNIQUEMENT ce livre qualifie", () => {
   expect(matchesRequestedBook({ source_titre: STAHL }, plan)).toBe(false);
   expect(matchesRequestedBook({ source_titre: DSM5 }, plan)).toBe(false);
   expect(matchesRequestedBook({ source_titre: MAUDSLEY }, plan)).toBe(true);
+});
+
+it("Stahl est adressable par son nom et ne cible que Stahl", () => {
+  const plan = planKnowledgeQuery("Selon Stahl, quelle est la posologie de la clozapine ?")!;
+  expect(plan.sourceTitle).toBe(STAHL);
+  expect(plan.sourceLabel).toBe("Stahl");
+  expect(plan.language).toBe("en");
+  expect(matchesRequestedBook({ source_titre: STAHL }, plan)).toBe(true);
+  expect(matchesRequestedBook({ source_titre: DSM5 }, plan)).toBe(false);
+  expect(matchesRequestedBook({ source_titre: MAUDSLEY }, plan)).toBe(false);
+  // Le titre doit rester identique a celui ecrit en base (comparaison normalisee).
+  expect(matchesRequestedBook({ source_titre: "Prescriber's Guide (Stahl's Essential Psychopharmacology) " }, plan)).toBe(true);
+});
+
+it("reinjecte le libelle du livre requis, jamais un prefixe code en dur", () => {
+  const stahl = planKnowledgeQuery("Selon Stahl, quelle est la posologie de la clozapine ?")!;
+  const taylor = planKnowledgeQuery("Selon Taylor, quelles précautions pour la sertraline ?")!;
+  const dsm = planKnowledgeQuery("Selon le DSM-5, quels critères pour le trouble panique ?")!;
+  const generic = planKnowledgeQuery("Quels sont les criteres du trouble panique ?")!;
+  expect(requetePourLivreRequis(stahl, "posologie clozapine")).toBe("Stahl posologie clozapine");
+  expect(requetePourLivreRequis(taylor, "precautions sertraline")).toBe("Taylor precautions sertraline");
+  expect(requetePourLivreRequis(dsm, "criteres trouble panique")).toBe("DSM-5 criteres trouble panique");
+  expect(requetePourLivreRequis(generic, "criteres trouble panique")).toBe("criteres trouble panique");
 });

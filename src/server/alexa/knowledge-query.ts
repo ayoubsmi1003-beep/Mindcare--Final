@@ -4,10 +4,14 @@ import {knowledgeComparisonRequested} from './knowledge-evidence-content';
 import { META_MOTS_LIVRE, planifierExpansionBilingue, VERSION_TERMINOLOGIE } from "@/server/knowledge/terminologie-bilingue";
 // Titles observed in the approved local corpus. Aliases never approve a source.
 const BOOKS = [
-  { marker: /\bdsm(?:\s*-?\s*5)?\b/u,
+  { marker: /\bdsm(?:\s*-?\s*5)?\b/u, label: "DSM-5",
     title: "DSM-5 — Manuel diagnostique et statistique des troubles mentaux", language: "fr" },
-  { marker: /\b(?:maudsley|taylor)\b/u,
+  { marker: /\b(?:maudsley|taylor)\b/u, label: "Taylor",
     title: "The Maudsley Prescribing Guidelines in Psychiatry", language: "en" },
+  // ADR-041 : troisième livre approuvé. Le titre doit rester IDENTIQUE à celui
+  // écrit en base par le chargeur (la comparaison est normalisée des deux côtés).
+  { marker: /\bstahl\b/u, label: "Stahl",
+    title: "Prescriber's Guide (Stahl's Essential Psychopharmacology)", language: "en" },
 ] as const;
 
 // Fermé : noms de médicaments du référentiel (jamais une invention).
@@ -123,6 +127,12 @@ export interface KnowledgeQueryPlan {
   readonly relevanceQuery: string;
   readonly language: "fr" | "en" | "toutes";
   readonly sourceTitle: string | null;
+  /**
+   * Libellé court du livre requis (`DSM-5`, `Taylor`, `Stahl`) : il sert à
+   * réinjecter le bon marqueur quand l'outil appelant omet le nom du livre.
+   * `null` = aucun livre nommé (recherche tous les livres approuvés).
+   */
+  readonly sourceLabel: string | null;
   readonly sectionFocus?: string;
   readonly sectionFocuses?: readonly string[];
   readonly sectionLeaf?: string;
@@ -160,8 +170,6 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
   // Never truncate away a final book, population, dose or other restriction.
   if (question.length > 500) return null;
   let normalized = normalize(question);
-  // Stahl is not yet qualified by the user. Its index and approvals remain untouched.
-  if(/\bstahl\b/u.test(normalized))return null;
   // Only DSM-5 is observed locally. A different edition or text revision must
   // fail closed before its book label can be stripped or mapped to that source.
   for (const edition of normalized.matchAll(/\bdsm\s*-?\s*(\d+|[ivx]+)(?:\s*-?\s*(tr|r))?\b/gu)) {
@@ -361,12 +369,20 @@ export function planKnowledgeQuery(question: string): KnowledgeQueryPlan | null 
     if(embeddedCriteria&&criteriaRequested){const structured=sectionFocus+' a b';queries.push(structured);references.push(structured);}
   }
   if(comparisonFocuses.length>1)for(const primary of comparisonFocuses)if(!queries.includes(primary)){queries.push(primary);references.push(primary);}
-  return { queries, references, relevanceQuery: queries.join(" "), language, sourceTitle: book?.title ?? null, ...(recognizedFocuses.length > 0 ? { focusHints: recognizedFocuses } : {}), ...(leafHint !== undefined ? { leafHint } : {}), ...(sectionFocus ? { sectionFocus } : {}), ...(comparisonFocuses.length>1?{sectionFocuses:comparisonFocuses}:{}), ...(sectionLeaf ? { sectionLeaf } : {}), ...(embeddedCriteria&&criteriaRequested?{embeddedCriteriaOnly:true}:{}), ...(bilingue.actif ? { terminologieVersion: bilingue.version } : {}) };
+  return { queries, references, relevanceQuery: queries.join(" "), language, sourceTitle: book?.title ?? null, sourceLabel: book?.label ?? null, ...(recognizedFocuses.length > 0 ? { focusHints: recognizedFocuses } : {}), ...(leafHint !== undefined ? { leafHint } : {}), ...(sectionFocus ? { sectionFocus } : {}), ...(comparisonFocuses.length>1?{sectionFocuses:comparisonFocuses}:{}), ...(sectionLeaf ? { sectionLeaf } : {}), ...(embeddedCriteria&&criteriaRequested?{embeddedCriteriaOnly:true}:{}), ...(bilingue.actif ? { terminologieVersion: bilingue.version } : {}) };
 }
 export const matchesSectionFocus=(section:string|null,focus:string)=>!!section&&normalize(section).split('›').some(part=>part.trim()===focus);
-
 /** La feuille de section correspond-elle exactement à l'indice attendu ? */
 export const matchesLeafHint=(section:string|null,leaf:string)=>!!section&&normalize(section).split('›').at(-1)?.trim()===leaf;
+
+/**
+ * Réinjecte le marqueur du livre requis quand l'outil appelant l'a omis.
+ * Le libellé vient de `BOOKS` (jamais d'une liste recopiée) : DSM-5, Taylor
+ * ou Stahl. Sans livre requis, la requête est rendue inchangée.
+ */
+export function requetePourLivreRequis(plan: KnowledgeQueryPlan, query: string): string {
+  return plan.sourceLabel === null ? query : `${plan.sourceLabel} ${query}`;
+}
 
 /** Requested-book matching restricts already-governed rows; it grants no access. */
 export function matchesRequestedBook(row: unknown, plan: KnowledgeQueryPlan): boolean {

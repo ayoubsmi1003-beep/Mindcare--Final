@@ -164,10 +164,17 @@ let deps = dependancesReadKnowledge();
 if (VEUT_VECTEUR) {
   const { chargerEmbeddeur } = await import("./lib/embedding-livre.mjs");
   const emb = await chargerEmbeddeur({ dossier: DOSSIER_MODELE, slug: SLUG_MODELE, maxTokens: TRONCATURE, threads: 2 });
+  // La dimension DÉCLARÉE choisit la porte (384 → v2, 768 → v2_768) et le
+  // plancher de similarité. Sans elle, l'adaptateur refuse de calibrer et
+  // n'utilise aucun voisin dense : la mesure serait lexicale déguisée.
+  if (emb.dimensions !== DIMENSIONS_MODELE) {
+    throw new Error(`dimension du modèle ${emb.dimensions} ≠ --dimensions ${DIMENSIONS_MODELE}`);
+  }
   deps = {
+    ...deps,
     vectorActif: true,
     vecteurRequete: async (question) => (await emb.embed([question], "requete"))[0],
-    vectorielSecondaire: { modele: MODELE, version: VERSION_MODELE },
+    vectorielSecondaire: { modele: MODELE, version: VERSION_MODELE, dimensions: DIMENSIONS_MODELE },
   };
 }
 const resultats = [];

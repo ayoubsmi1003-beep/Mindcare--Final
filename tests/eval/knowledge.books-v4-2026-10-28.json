@@ -1,0 +1,677 @@
+{
+  "$comment": "Golden LIVRES v4 — v3 (DSM-5, Maudsley) + 11 cas Stahl 7e + 3 abstentions. Chaque attendu Stahl a été vérifié dans le corpus (section + fragments) avant écriture ; aucun attendu n'est dérivé d'une connaissance médicale externe.",
+  "version": "books-v4-2026-10-28",
+  "langues": [
+    "fr",
+    "en"
+  ],
+  "cas": [
+    {
+      "id": "DSM-MDD-SEUIL",
+      "question": "Combien de symptômes faut-il présenter pour un épisode dépressif caractérisé, et sur quelle durée ?",
+      "answerable": true,
+      "attendu": {
+        "source": "DSM-5",
+        "sectionExclut": [
+          "index",
+          "references",
+          "bibliograph"
+        ],
+        "section": [
+          [
+            "trouble depressif caracterise"
+          ],
+          [
+            "criteres diagnostiques"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "DSM-PANIC-DUREE",
+      "question": "Quels sont les critères de durée du trouble panique ?",
+      "answerable": true,
+      "attendu": {
+        "source": "DSM-5",
+        "sectionExclut": [
+          "index",
+          "references",
+          "bibliograph"
+        ],
+        "section": [
+          [
+            "trouble panique"
+          ],
+          [
+            "criteres diagnostiques"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "DSM-MANIE-DUREE",
+      "question": "Quelle est la durée minimale d'un épisode maniaque selon le DSM-5 ?",
+      "answerable": true,
+      "attendu": {
+        "source": "DSM-5",
+        "sectionExclut": [
+          "index",
+          "references",
+          "bibliograph"
+        ],
+        "section": [
+          [
+            "episode maniaque"
+          ],
+          [
+            "criteres diagnostiques"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "DSM-GAD",
+      "question": "Combien de symptômes et quelle durée pour le trouble d'anxiété généralisée ?",
+      "answerable": true,
+      "attendu": {
+        "source": "DSM-5",
+        "sectionExclut": [
+          "index",
+          "references",
+          "bibliograph"
+        ],
+        "section": [
+          [
+            "anxiete generalisee"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "DSM-AGORAPHOBIE",
+      "question": "Le DSM-5 sépare-t-il le trouble panique de l'agoraphobie ?",
+      "answerable": true,
+      "attendu": {
+        "source": "DSM-5",
+        "sectionExclut": [
+          "index",
+          "references",
+          "bibliograph"
+        ],
+        "texteContient": [
+          "agoraphobie"
+        ]
+      }
+    },
+    {
+      "id": "DSM-PTSD",
+      "question": "Quels sont les groupes de symptômes du trouble de stress post-traumatique ?",
+      "answerable": true,
+      "attendu": {
+        "source": "DSM-5",
+        "sectionExclut": [
+          "index",
+          "references",
+          "bibliograph"
+        ],
+        "texteContient": [
+          "stress post-traumatique"
+        ]
+      }
+    },
+    {
+      "id": "DSM-TDPM",
+      "question": "Quels sont les critères du trouble dysphorique prémenstruel ?",
+      "answerable": true,
+      "attendu": {
+        "source": "DSM-5",
+        "sectionExclut": [
+          "index",
+          "references",
+          "bibliograph"
+        ],
+        "section": [
+          [
+            "dysphorique premenstruel"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "DSM-BIPOLAIRE-I-II",
+      "question": "Quels critères distinguent le trouble bipolaire I du trouble bipolaire II ?",
+      "answerable": true,
+      "attendu": {
+        "source": "DSM-5",
+        "sectionExclut": [
+          "index",
+          "references",
+          "bibliograph"
+        ],
+        "texteContient": [
+          "hypomaniaque"
+        ]
+      }
+    },
+    {
+      "id": "DSM-SUBSTANCE",
+      "question": "Combien de critères et sur quelle période pour le trouble lié à l'usage d'une substance ?",
+      "answerable": true,
+      "attendu": {
+        "source": "DSM-5",
+        "sectionExclut": [
+          "index",
+          "references",
+          "bibliograph"
+        ],
+        "section": [
+          [
+            "substance"
+          ]
+        ],
+        "texteContient": [
+          "substance"
+        ]
+      }
+    },
+    {
+      "id": "DSM-TOC",
+      "question": "Quels sont les critères du trouble obsessionnel-compulsif ?",
+      "answerable": true,
+      "attendu": {
+        "source": "DSM-5",
+        "sectionExclut": [
+          "index",
+          "references",
+          "bibliograph"
+        ],
+        "section": [
+          [
+            "obsessionnel-compulsif"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TAY-LITHIUM-CIBLE",
+      "question": "Quelle est la cible de lithémie recommandée par Maudsley ?",
+      "answerable": true,
+      "attendu": {
+        "source": "Maudsley",
+        "sectionExclut": [
+          "reference",
+          "bibliograph",
+          "miscellany",
+          "index"
+        ],
+        "section": [
+          [
+            "chapter 2: bipolar"
+          ]
+        ],
+        "texteContient": [
+          "lithium"
+        ]
+      }
+    },
+    {
+      "id": "TAY-OLANZAPINE-METAB",
+      "question": "Quels effets métaboliques de l'olanzapine sont décrits ?",
+      "answerable": true,
+      "attendu": {
+        "source": "Maudsley",
+        "sectionExclut": [
+          "reference",
+          "bibliograph",
+          "miscellany",
+          "index"
+        ],
+        "section": [
+          [
+            "chapter 1: schizophrenia"
+          ]
+        ],
+        "texteContient": [
+          "olanzapine",
+          "weight"
+        ]
+      }
+    },
+    {
+      "id": "TAY-CLOZAPINE-HEMA",
+      "question": "Quelle surveillance hématologique pour la clozapine ?",
+      "answerable": true,
+      "attendu": {
+        "source": "Maudsley",
+        "sectionExclut": [
+          "reference",
+          "bibliograph",
+          "miscellany",
+          "index"
+        ],
+        "section": [
+          [
+            "chapter 1: schizophrenia"
+          ]
+        ],
+        "texteContient": [
+          "clozapine",
+          "neutrophil"
+        ]
+      }
+    },
+    {
+      "id": "TAY-SEROTONIN",
+      "question": "Que faire en cas de syndrome sérotoninergique ?",
+      "answerable": true,
+      "attendu": {
+        "source": "Maudsley",
+        "sectionExclut": [
+          "reference",
+          "bibliograph",
+          "miscellany",
+          "index"
+        ],
+        "section": [
+          [
+            "chapter 3: depression"
+          ]
+        ],
+        "texteContient": [
+          "serotonin syndrome"
+        ]
+      }
+    },
+    {
+      "id": "TAY-DISCONTINUATION",
+      "question": "Comment arrêter un antidépresseur pour éviter un syndrome d'arrêt ?",
+      "answerable": true,
+      "attendu": {
+        "source": "Maudsley",
+        "sectionExclut": [
+          "reference",
+          "bibliograph",
+          "miscellany",
+          "index"
+        ],
+        "section": [
+          [
+            "chapter 3: depression"
+          ]
+        ],
+        "texteContient": [
+          "antidepressant",
+          "discontinu"
+        ]
+      }
+    },
+    {
+      "id": "TAY-RISPERIDONE-DOSE",
+      "question": "Quelle est la dose initiale de la rispéridone dans la schizophrénie ?",
+      "answerable": true,
+      "attendu": {
+        "source": "Maudsley",
+        "sectionExclut": [
+          "reference",
+          "bibliograph",
+          "miscellany",
+          "index"
+        ],
+        "section": [
+          [
+            "chapter 1: schizophrenia"
+          ]
+        ],
+        "texteContient": [
+          "risperidone",
+          "dose"
+        ]
+      }
+    },
+    {
+      "id": "TAY-CLOZAPINE-TITRATION",
+      "question": "Comment titrer la clozapine chez un patient schizophrène ?",
+      "answerable": true,
+      "attendu": {
+        "source": "Maudsley",
+        "sectionExclut": [
+          "reference",
+          "bibliograph",
+          "miscellany",
+          "index"
+        ],
+        "section": [
+          [
+            "chapter 1: schizophrenia"
+          ]
+        ],
+        "texteContient": [
+          "clozapine",
+          "dose"
+        ]
+      }
+    },
+    {
+      "id": "TAY-LITHIUM-RENAL",
+      "question": "Quelles précautions rénales avec le lithium ?",
+      "answerable": true,
+      "attendu": {
+        "source": "Maudsley",
+        "sectionExclut": [
+          "reference",
+          "bibliograph",
+          "miscellany",
+          "index"
+        ],
+        "section": [
+          [
+            "chapter 2: bipolar"
+          ]
+        ],
+        "texteContient": [
+          "lithium",
+          "renal"
+        ]
+      }
+    },
+    {
+      "id": "TAY-AGITATION",
+      "question": "Quelle est la prise en charge de l'agitation aiguë ?",
+      "answerable": true,
+      "attendu": {
+        "source": "Maudsley",
+        "sectionExclut": [
+          "reference",
+          "bibliograph",
+          "miscellany",
+          "index"
+        ],
+        "section": [
+          [
+            "chapter 1: schizophrenia"
+          ]
+        ],
+        "texteContient": [
+          "agitation"
+        ]
+      }
+    },
+    {
+      "id": "TAY-QT",
+      "question": "Quels sont les effets cardiaques des antipsychotiques sur le QT ?",
+      "answerable": true,
+      "attendu": {
+        "source": "Maudsley",
+        "sectionExclut": [
+          "reference",
+          "bibliograph",
+          "miscellany",
+          "index"
+        ],
+        "section": [
+          [
+            "chapter 1: schizophrenia"
+          ]
+        ],
+        "texteContient": [
+          "QT"
+        ]
+      }
+    },
+    {
+      "id": "ABS-PRIX",
+      "question": "Quel est le prix du lithium en Algérie ?",
+      "answerable": false
+    },
+    {
+      "id": "ABS-MENU",
+      "question": "Quel est le menu de la cantine de l'hôpital ?",
+      "answerable": false
+    },
+    {
+      "id": "STH-CLOZ-MOA",
+      "question": "Quel est le mécanisme d'action de la clozapine au niveau des récepteurs ?",
+      "answerable": true,
+      "attendu": {
+        "source": "Prescriber's Guide",
+        "sectionExclut": [
+          "index",
+          "references",
+          "bibliograph"
+        ],
+        "section": [
+          [
+            "how the drug works"
+          ]
+        ],
+        "texteContient": [
+          "clozapine"
+        ]
+      }
+    },
+    {
+      "id": "STH-LAMO-MOA",
+      "question": "Quel est le mécanisme d'action de la lamotrigine sur les canaux sodiques ?",
+      "answerable": true,
+      "attendu": {
+        "source": "Prescriber's Guide",
+        "sectionExclut": [
+          "index",
+          "references",
+          "bibliograph"
+        ],
+        "section": [
+          [
+            "how the drug works"
+          ]
+        ],
+        "texteContient": [
+          "lamotrigine",
+          "sodium channels"
+        ]
+      }
+    },
+    {
+      "id": "STH-LITH-MOA",
+      "question": "Quel est le mécanisme d'action du lithium sur les messagers intracellulaires ?",
+      "answerable": true,
+      "attendu": {
+        "source": "Prescriber's Guide",
+        "sectionExclut": [
+          "index",
+          "references",
+          "bibliograph"
+        ],
+        "section": [
+          [
+            "how the drug works"
+          ]
+        ],
+        "texteContient": [
+          "lithium",
+          "second messenger"
+        ]
+      }
+    },
+    {
+      "id": "STH-SERT-DOSE",
+      "question": "Quelle est la posologie de la sertraline dans la dépression ?",
+      "answerable": true,
+      "attendu": {
+        "source": "Prescriber's Guide",
+        "sectionExclut": [
+          "index",
+          "references",
+          "bibliograph"
+        ],
+        "section": [
+          [
+            "dosing tips"
+          ]
+        ],
+        "texteContient": [
+          "sertraline",
+          "50 mg"
+        ]
+      }
+    },
+    {
+      "id": "STH-VALP-DOSE",
+      "question": "Quelle est la posologie du valproate dans la manie aiguë ?",
+      "answerable": true,
+      "attendu": {
+        "source": "Prescriber's Guide",
+        "sectionExclut": [
+          "index",
+          "references",
+          "bibliograph"
+        ],
+        "section": [
+          [
+            "dosing tips"
+          ]
+        ],
+        "texteContient": [
+          "valproate",
+          "mg/kg"
+        ]
+      }
+    },
+    {
+      "id": "STH-LAMO-RASH",
+      "question": "Quels sont les effets indésirables graves de la lamotrigine ?",
+      "answerable": true,
+      "attendu": {
+        "source": "Prescriber's Guide",
+        "sectionExclut": [
+          "index",
+          "references",
+          "bibliograph"
+        ],
+        "section": [
+          [
+            "life-threatening or dangerous side effects"
+          ]
+        ],
+        "texteContient": [
+          "lamotrigine",
+          "rash"
+        ]
+      }
+    },
+    {
+      "id": "STH-OLANZ-METAB",
+      "question": "Quels sont les effets indésirables notables de l'olanzapine ?",
+      "answerable": true,
+      "attendu": {
+        "source": "Prescriber's Guide",
+        "sectionExclut": [
+          "index",
+          "references",
+          "bibliograph"
+        ],
+        "section": [
+          [
+            "notable side effects"
+          ]
+        ],
+        "texteContient": [
+          "olanzapine",
+          "diabetes"
+        ]
+      }
+    },
+    {
+      "id": "STH-CLOZ-PREC",
+      "question": "Quelles précautions d'emploi avec la clozapine ?",
+      "answerable": true,
+      "attendu": {
+        "source": "Prescriber's Guide",
+        "sectionExclut": [
+          "index",
+          "references",
+          "bibliograph"
+        ],
+        "section": [
+          [
+            "other warnings"
+          ]
+        ],
+        "texteContient": [
+          "clozapine",
+          "neutropenia"
+        ]
+      }
+    },
+    {
+      "id": "STH-ARIP-MOA",
+      "question": "Comment agit l'aripiprazole ?",
+      "answerable": true,
+      "attendu": {
+        "source": "Prescriber's Guide",
+        "sectionExclut": [
+          "index",
+          "references",
+          "bibliograph"
+        ],
+        "section": [
+          [
+            "how the drug works"
+          ]
+        ],
+        "texteContient": [
+          "aripiprazole"
+        ]
+      }
+    },
+    {
+      "id": "STH-HALO-EPS",
+      "question": "Quels sont les effets indésirables notables de l'halopéridol ?",
+      "answerable": true,
+      "attendu": {
+        "source": "Prescriber's Guide",
+        "sectionExclut": [
+          "index",
+          "references",
+          "bibliograph"
+        ],
+        "section": [
+          [
+            "notable side effects"
+          ]
+        ],
+        "texteContient": [
+          "haloperidol",
+          "parkinsonism"
+        ]
+      }
+    },
+    {
+      "id": "STH-LITH-TESTS",
+      "question": "Quelle surveillance pour le lithium ?",
+      "answerable": true,
+      "attendu": {
+        "source": "Prescriber's Guide",
+        "sectionExclut": [
+          "index",
+          "references",
+          "bibliograph"
+        ],
+        "section": [
+          [
+            "tests"
+          ]
+        ],
+        "texteContient": [
+          "lithium",
+          "kidney function tests"
+        ]
+      }
+    },
+    {
+      "id": "ABS-STAHL-PRIX",
+      "question": "Quel est le prix de la clozapine en Algérie ?",
+      "answerable": false
+    }
+  ]
+}

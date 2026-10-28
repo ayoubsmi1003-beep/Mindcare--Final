@@ -19,8 +19,10 @@ import type { ArgsJarvis, ClientSql } from "@/server/jarvis/client-sql";
 
 const DSM = "DSM-5 — Manuel diagnostique et statistique des troubles mentaux";
 const MAUDSLEY = "The Maudsley Prescribing Guidelines in Psychiatry";
+const STAHL = "Prescriber's Guide (Stahl's Essential Psychopharmacology)";
 const DSM_VERSION = "sha256:be145e65aa8291dcb59e56ad61b86bcc41d4145ab2344a1c50f10582dcfa1d53";
 const MAUDSLEY_VERSION = "sha256:14072b5bf1a74cd5aa754d7fbbfb8a9fd146cd77a49996676c5b5094c16cd9d0";
+const STAHL_VERSION = "sha256:cf23ef7b70e7c6e099a5a43d994adb2f34ef06718643932611f5e91eeba180e3";
 const SECTION = "Section II — Critères diagnostiques et codes › Troubles anxieux › Trouble panique › Critères diagnostiques";
 
 function row(titre: string, texte: string, extra: Record<string, unknown> = {}) {
@@ -94,6 +96,10 @@ describe("localisation : le marqueur du chunk est la seule autorité", () => {
     expect(localisationDeLOuvrage(loc, "dsm5-fr-2015-elsevier")).toBeNull();
     expect(localisationDeLOuvrage(loc, null)).toBeNull();
     expect(localisationDeLOuvrage(loc, "stahl-prescribers-guide-7e-cup")?.pageImprimee).toBe(1029);
+    // Chaîne réellement utilisée par `preuveAffichable` : identité → book_id → page.
+    const ouvrage = editionDe(STAHL, STAHL_VERSION);
+    expect(ouvrage?.bookId).toBe("stahl-prescribers-guide-7e-cup");
+    expect(formaterLocalisation(localisationDeLOuvrage(loc, ouvrage?.bookId ?? null))).toBe("p. 1029");
   });
 
   it("rétablit la page de l'UNITÉ quand le marqueur a disparu au découpage", () => {
@@ -111,10 +117,13 @@ describe("localisation : le marqueur du chunk est la seule autorité", () => {
 });
 
 describe("édition : vérifiée contre les paquets canoniques", () => {
-  it("résout les deux ouvrages qualifiés et refuse une version dérivée", () => {
+  it("résout les trois ouvrages qualifiés et refuse une version dérivée", () => {
     expect(editionDe(DSM, DSM_VERSION)?.edition).toBe("5e éd.");
     expect(editionDe(MAUDSLEY, MAUDSLEY_VERSION)?.edition).toBe("14e éd.");
+    expect(editionDe(STAHL, STAHL_VERSION)?.edition).toBe("7e éd.");
+    expect(editionDe(STAHL, STAHL_VERSION)?.bookId).toBe("stahl-prescribers-guide-7e-cup");
     expect(editionDe(DSM, "sha256:0000")).toBeNull();
+    expect(editionDe(STAHL, "sha256:0000")).toBeNull();
     expect(editionDe("Un autre livre", DSM_VERSION)).toBeNull();
   });
 
@@ -124,9 +133,13 @@ describe("édition : vérifiée contre les paquets canoniques", () => {
       const dossier = readdirSync(racine).find((nom) => nom.startsWith("sha256-"));
       expect(dossier, `${ouvrage.bookId} : paquet canonique absent`).toBeDefined();
       const book = JSON.parse(readFileSync(join(racine, dossier as string, "book.json"), "utf8")) as {
-        title: string; edition: string; language: string; source_version: string;
+        title: string; subtitle?: string; edition: string; language: string; source_version: string;
       };
-      expect(book.title).toBe(ouvrage.titre);
+      // Certains paquets portent `title` + `subtitle` séparés ; le chargeur
+      // compose alors le titre stocké en base. Les deux formes sont admises,
+      // toute autre divergence échoue.
+      const titreCompose = book.subtitle === undefined ? book.title : `${book.title} (${book.subtitle})`;
+      expect([book.title, titreCompose]).toContain(ouvrage.titre);
       expect(book.edition).toBe(ouvrage.editionCle);
       expect(book.language).toBe(ouvrage.langue);
       expect(book.source_version).toBe(ouvrage.version);
@@ -148,6 +161,11 @@ describe("ligne de sources : assemblée par le serveur, jamais par le modèle", 
     expect(ligneCitation([{ titre: DSM, edition: "5e éd.", annee: 2015, pageImprimee: null, pagePdf: null }]))
       .toBe(`Source : ${DSM} (5e éd., 2015).`);
     expect(ligneCitation([])).toBeNull();
+  });
+
+  it("cite Stahl avec son édition et sa page vérifiée", () => {
+    expect(ligneCitation([{ titre: STAHL, edition: "7e éd.", annee: 2021, pageImprimee: 2073, pagePdf: 2073 }]))
+      .toBe(`Source : ${STAHL} (7e éd., 2021), p. 2073.`);
   });
 
   it("ne cite pas une page si l'extrait n'en porte pas", () => {

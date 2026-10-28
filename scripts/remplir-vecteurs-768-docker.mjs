@@ -52,10 +52,21 @@ function psql(sql) {
   ).toString("utf8");
 }
 
+/**
+ * Perimetre des livres qualifies pour Alexa (ADR-041), EXPLICITE.
+ *
+ * Le 2026-10-27, un filtre code sur deux titres avait laisse Stahl hors de
+ * l'index 768 alors que la source etait deja active et approuvee. La liste
+ * reste fermee : toute extension est une decision humaine, jamais un `LIKE '%'`.
+ * Les quotes SQL sont doublees (`''`) : le titre Stahl contient une apostrophe.
+ */
+const TITRES_QUALIFIES = ["DSM-5%", "The Maudsley%", "Prescriber''s Guide%"];
+const PERIMETRE_LIVRES = TITRES_QUALIFIES.map((titre) => `s.titre LIKE '${titre}'`).join(" OR ");
+
 const autorite = `s.classification = 'C4' AND s.statut = 'active'
   AND s.approved_at IS NOT NULL AND s.approved_by IS NOT NULL
   AND (s.review_due_at IS NULL OR s.review_due_at > now()) AND s.superseded_by IS NULL
-  AND c.statut = 'active' AND (s.titre LIKE 'DSM-5%' OR s.titre LIKE 'The Maudsley%')`;
+  AND c.statut = 'active' AND (${PERIMETRE_LIVRES})`;
 
 const attendus = Number(psql(`SELECT count(*) FROM app.knowledge_chunks c
   JOIN app.knowledge_sources s ON s.id = c.source_id WHERE ${autorite};`).trim());

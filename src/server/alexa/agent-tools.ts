@@ -45,7 +45,7 @@ export function isolatePreviousClinicalConsultation(context:ClinicalContext):Cli
  return selected.endedAt===null?{...scoped,currentConsultation:selected}:scoped;
 }
 import { localResponse } from "./local-response";
-import {planKnowledgeQuery} from "./knowledge-query";
+import {planKnowledgeQuery,requetePourLivreRequis} from "./knowledge-query";
 import { readKnowledge } from "./knowledge-adapter";
 import {synthesizeKnowledge} from './knowledge-synthesis';
 import {knowledgeSource} from './knowledge-response';
@@ -481,11 +481,10 @@ export function agentExecutor(input:TurnInput, db:Pick<DbPort,"rpc">, knowledge:
   if(call.name==="search_knowledge"){
    const sourceQuestion=original??input.text,sourceParts=frenchRequestedOutputs(sourceQuestion);
    const medicalQuestion=requestedGoal&&sourceParts?.includes(requestedGoal)?requestedGoal:sourceQuestion;
-   if(/\bstahl\b/iu.test(medicalQuestion))return failure(call,'unsupported',knowledgeSynthesisCopy.fr.unfinishedStahl,'unfinished-knowledge-source');
    const required=planKnowledgeQuery(medicalQuestion),proposed=planKnowledgeQuery(String(a['query']));
    if(!required||!proposed)return failure(call,'unsupported',knowledgeSynthesisCopy.fr.unsupportedSource,'unresolved-knowledge-source');
    if(proposed.sourceTitle&&proposed.sourceTitle!==required.sourceTitle)return failure(call,'unsupported',knowledgeSynthesisCopy.fr.unsupportedSource,'unrequested-knowledge-source');
-   const retrieval=required.sourceTitle&&!proposed.sourceTitle?(required.language==='fr'?'DSM-5 ':'Taylor ')+String(a['query']):String(a['query']);
+   const retrieval=required.sourceTitle&&!proposed.sourceTitle?requetePourLivreRequis(required,String(a['query'])):String(a['query']);
    if(retrieval.length>500)return failure(call,'needs_input',copy.missing,'knowledge-query-budget');
    const found=await readKnowledge(knowledge,retrieval,signal);
    result.complete=found.etat==="ok";result.status=found.etat==="panne"?"error":found.etat==="sans-preuve"?"empty":found.etat==="faible"?"partial":"ok";
