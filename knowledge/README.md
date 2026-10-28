@@ -192,7 +192,29 @@ Deux défauts corrigés au passage (dormants tant que la branche restait
 éteinte) : le chargeur validait la recette secondaire contre le schéma BGE-M3
 (`model.onnx_data`), et le nom de dossier modèle était figé sur `e5-small`.
 
-## 8. Reranker (rejeté)
+## 8. Tester sur localhost
+
+Le `.env` de développement (`G:\Final mindcare\.env`) pointe sur
+`alexa_eval_v8_intelligence_20261027` (port 55445), **pas** sur la base du
+cabinet (55441). Les 22 159 vecteurs y ont été copiés le 2026-10-28 : les deux
+bases ont exactement les mêmes `chunk_id` (empreinte MD5 identique), donc la
+copie est fidèle et évite un nouveau calcul de 3 h.
+
+```
+$env:KNOWLEDGE_VECTOR="1"; $env:KNOWLEDGE_VECTOR_RECETTE="e5-base"
+node --env-file="G:\Final mindcare\.env" node_modules\next\dist\bin\next dev -p 3000
+```
+
+Ne pas passer par `pnpm dev` sur cette copie : son garde-fou de schéma refuse
+car d'autres migrations (188–194, hors périmètre livres) n'y sont pas
+appliquées. Le serveur Next seul sert l'interface et le chemin Alexa.
+
+Vérification : ouvrir http://localhost:3000, se connecter, poser
+« Quels sont les critères de durée du trouble panique ? » (attendu : DSM-5,
+p. 260) puis « Quelle surveillance hématologique pour la clozapine ? »
+(attendu : Taylor, p. 237). Le premier appel charge le modèle (~15–35 s).
+
+## 9. Reranker (rejeté)
 
 `cross-encoder/mmarco-mMiniLMv2-L12-H384-v1` — mesuré sur le même golden :
 Recall@1 50 % → 30 %, p50 118 ms → 1 144 ms. Ne pas activer
