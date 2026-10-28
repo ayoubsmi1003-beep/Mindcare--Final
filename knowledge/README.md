@@ -194,16 +194,22 @@ Deux défauts corrigés au passage (dormants tant que la branche restait
 
 ## 8. Tester sur localhost
 
-Le `.env` de développement (`G:\Final mindcare\.env`) pointe sur
-`alexa_eval_v8_intelligence_20261027` (port 55445), **pas** sur la base du
-cabinet (55441). Les 22 159 vecteurs y ont été copiés le 2026-10-28 : les deux
-bases ont exactement les mêmes `chunk_id` (empreinte MD5 identique), donc la
-copie est fidèle et évite un nouveau calcul de 3 h.
+Le `.env` de développement (`G:\Final mindcare\.env`) pointe sur la base du
+cabinet `mc-p3` (port 55441, 1 558 patients) — **pas** sur une copie
+d'évaluation. L'index 768 y vit nativement (22 159 vecteurs) : aucun transfert
+n'est nécessaire pour tester.
 
 ```
 $env:KNOWLEDGE_VECTOR="1"; $env:KNOWLEDGE_VECTOR_RECETTE="e5-base"
 node --env-file="G:\Final mindcare\.env" node_modules\next\dist\bin\next dev -p 3000
 ```
+
+Ne pas passer par `pnpm dev` si le garde-fou de schéma refuse : il compare les
+migrations du dépôt au journal de la base. Les 8 migrations 188–194 ont été
+appliquées au cabinet le 2026-10-28 (additives, vérifiées sans ordre destructeur)
+précisément pour lever ce refus ; si d'autres fichiers de migration apparaissent
+sur le disque, il faudra les appliquer de la même façon (`docker exec … psql`,
+jamais de rôle applicatif).
 
 Ne pas passer par `pnpm dev` sur cette copie : son garde-fou de schéma refuse
 car d'autres migrations (188–194, hors périmètre livres) n'y sont pas
